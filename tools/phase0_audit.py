@@ -26,7 +26,7 @@ import argparse
 import json
 import sys
 
-from engine.audit import audit_workbook
+from engine.audit import audit_file, is_takeoff_workbook
 from engine.audit.report_text import render
 from engine.audit.excel_loader import load_rows
 from pipeline.phase0 import (
@@ -45,7 +45,7 @@ def main(argv=None) -> int:
     ap.add_argument("--approver", default="", help="name of the human approver")
     args = ap.parse_args(argv)
 
-    report = audit_workbook(args.workbook)
+    report = audit_file(args.workbook)
 
     if args.json:
         print(json.dumps(report.to_dict(), ensure_ascii=False, indent=2))
@@ -55,7 +55,13 @@ def main(argv=None) -> int:
     if not args.write_sandbox:
         return 0 if report.approved else 1
 
-    # Build + approve.
+    if is_takeoff_workbook(args.workbook):
+        print("\nℹ️  Sandbox write for dimension-takeoff files is not wired yet — "
+              "the takeoff→structured-BOQ mapping is the next step. Audit only for now.",
+              file=sys.stderr)
+        return 0 if report.approved else 1
+
+    # Build + approve (priced-BOQ format).
     rows = load_rows(args.workbook)
     candidate = build_candidate_boq(rows)
     try:

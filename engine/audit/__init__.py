@@ -16,6 +16,19 @@ somewhere other than Excel).
 from .model import BoqRow, Issue, Severity, AuditReport
 from .auditor import audit_rows, audit_workbook
 from .rules import AuditConfig
+from .takeoff import audit_takeoff, is_takeoff_workbook
+
+
+def audit_file(path: str):
+    """Audit an .xlsx, auto-detecting its shape.
+
+    Dimension-based takeoff (حصر) workbooks go to the takeoff auditor; priced
+    BOQ workbooks go to the row/rule auditor.
+    """
+    if is_takeoff_workbook(path):
+        return audit_takeoff(path)
+    return audit_workbook(path)
+
 
 __all__ = [
     "BoqRow",
@@ -25,4 +38,7 @@ __all__ = [
     "AuditConfig",
     "audit_rows",
     "audit_workbook",
+    "audit_takeoff",
+    "is_takeoff_workbook",
+    "audit_file",
 ]

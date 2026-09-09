@@ -47,6 +47,39 @@ A key distinction the auditor draws: summing the **money** column across
 different-unit lines is normal (that's what a BOQ total is); summing the
 **quantity** column across different units is the meaningless-total defect.
 
+## Two workbook shapes, auto-detected
+
+`audit_file()` (and the CLI) auto-detect which auditor to use:
+
+- **Priced BOQ** (description · unit · quantity · rate · amount) → the rule
+  auditor above (`engine/audit/rules.py`).
+- **Dimension takeoff (حصر)** (width × length × height → volume, or count ×
+  length × height → area; concrete, aluminium, blockwork) → the takeoff auditor
+  (`engine/audit/takeoff.py`).
+
+### Takeoff (حصر) checks
+
+Because these sheets are formula-driven and auto-recompute, deterministic
+auditing reliably confirms **arithmetic integrity** but cannot verify a
+*measurement* against the drawing — that is Phase 1 (A1/A2 extract from the
+drawing, the engine compares). The takeoff auditor checks:
+
+| Rule | Defect | Severity |
+|------|--------|----------|
+| T02 | `#REF!` / Excel error in a cell | 🔴 |
+| T04 | a SUM whose value ≠ the sum of its range | 🔴 |
+| T05 | cover total ≠ sum of the section values | 🔴 |
+| T06 | steel-to-concrete ratio out of band | 🟡/🔴 |
+| T07 | lean/plain concrete (العاديه) excluded from the RC total | 🟡 |
+| T08 | opening-deduction (خصم فراغات) columns present but unused | 🟡 |
+| T00 | a data sheet whose layout wasn't recognised — never a silent pass | 🟡 |
+
+It never reports GREEN on a sheet it did not actually parse (T00), and it does
+**not** guess at wrong measurements (which it cannot know deterministically).
+
+Legacy `.xls` files should be re-saved as `.xlsx` (one click in Excel, keeps the
+formulas) so formula-level checks apply.
+
 ## Run it
 
 Audit a workbook (human-readable):
