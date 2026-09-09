@@ -35,6 +35,10 @@ docs/       Architecture and onboarding.
   one total. Reproduces and blocks the real "295.44" defect from the audit.
 - **Unit algebra core** (`engine/units.py`) — every quantity carries its unit and
   only combines lawfully.
+- **E14 PM Sync** (`engine/pm_sync.py`) — writes an approved BOQ into the Urban
+  Projects Manager web app's Firestore, in the exact document shape the app reads.
+  `engine/boq_formula.py` mirrors the app's quantity formulas to the decimal.
+  See **`docs/INTEGRATION.md`**.
 
 50 tests pass with no API key and no network:
 

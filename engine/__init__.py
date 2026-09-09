@@ -7,6 +7,15 @@ here calls an AI.
 
 from .units import Quantity, Unit, UnitError
 from .unit_guard import TakeoffRecord, GuardResult, check, check_batch
+from .boq_formula import compute_quantity, FIELDS_FOR
+from .pm_sync import (
+    ApprovedBoqLine,
+    measurement_to_formula,
+    to_boq_item_doc,
+    expected_quantity,
+    sync_boq,
+    firestore_writer,
+)
 
 __all__ = [
     "Quantity",
@@ -16,4 +25,12 @@ __all__ = [
     "GuardResult",
     "check",
     "check_batch",
+    "compute_quantity",
+    "FIELDS_FOR",
+    "ApprovedBoqLine",
+    "measurement_to_formula",
+    "to_boq_item_doc",
+    "expected_quantity",
+    "sync_boq",
+    "firestore_writer",
 ]

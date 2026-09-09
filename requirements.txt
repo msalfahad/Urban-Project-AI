@@ -2,3 +2,7 @@
 # The engine and agent scaffolding are intentionally dependency-free so the
 # core runs anywhere. Dev/test only for now:
 pytest>=8.0
+
+# Optional, installed only when running agents/sync live (not needed for tests):
+#   anthropic>=0.39     # calling the Claude API (agents/base.py)
+#   firebase-admin>=6   # writing to the app's Firestore (engine/pm_sync.py)
