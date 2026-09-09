@@ -17,6 +17,11 @@ from .preliminaries import preliminaries, PrelimRate
 from .finance import FinanceReport, CostLine
 from .estimate_actual import OutturnReport, TradeOutturn
 from .bbs_steel import Bar, steel_from_bars, ratio_check
+from .calculator import QtyRecord, calculate, priced_total
+from .funnel import Lead, analyse
+from .revision_delta import BoqSnapshotLine, diff
+from .benchmark import ScheduleBenchmark, aggregate_rates, confidence
+from .subcontractor import Subcontractor, price_score_from_quotes, rank
 from .pm_sync import (
     ApprovedBoqLine,
     measurement_to_formula,
@@ -60,6 +65,19 @@ __all__ = [
     "Bar",
     "steel_from_bars",
     "ratio_check",
+    "QtyRecord",
+    "calculate",
+    "priced_total",
+    "Lead",
+    "analyse",
+    "BoqSnapshotLine",
+    "diff",
+    "ScheduleBenchmark",
+    "aggregate_rates",
+    "confidence",
+    "Subcontractor",
+    "price_score_from_quotes",
+    "rank",
     "ApprovedBoqLine",
     "measurement_to_formula",
     "to_boq_item_doc",
