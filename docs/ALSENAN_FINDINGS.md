@@ -45,6 +45,39 @@ Reading ST7757 page 1 (Column & Axis Plan) and comparing to the takeoff:
    *linear* metres with landing/courtyard *areas*. Separate steps (m.l) from
    areas (m²).
 
+## Drawing extraction — Schedule of Footings (ST7757 p9) vs takeoff
+
+Extracted the footing schedule straight from the structural drawing and
+cross-checked against the `القواعد` takeoff — **every footing matches**:
+
+| Footing | Drawing (L×W×H cm) | Takeoff (m) |
+|---------|--------------------|-------------|
+| F | 90×80×30 | 0.9×0.8×0.3 ✓ |
+| F2 | 190×170×35 | 1.9×1.7×0.35 ✓ |
+| F5 | 240×210×40 | 2.4×2.1×0.4 ✓ |
+| F8 | 400×360×50 | 4.0×3.6×0.5 ✓ |
+| F9 | 340×270×55 | 3.4×2.7×0.55 ✓ |
+| FF (lift, قاعدة مصعد) | 460×450×55 | 4.5×4.6×0.55 ✓ |
+| FN | 100×100×30 | 1.0×1.0×0.3 ✓ |
+
+Design data on the same sheet: bearing capacity 2.20 kg/cm², excavation ≥1.5 m,
+groundwater at 4.5 m, designed for ground+1st+2nd floors; every footing's rebar
+is scheduled (feeds E2 BBS steel).
+
+## End-to-end trace (drawing → takeoff → audit → priced → web app)
+
+Priced with the owner's own rates (from the Cost-By-Category export):
+
+| Trade | Drawing | Takeoff | Priced | Rate | Amount | Var |
+|-------|---------|---------|--------|------|--------|-----|
+| RC concrete | p9 footings | 352.44 m³ | 380 m³ | 27.5/m³ | 10,450 | +7.8% |
+| Lean concrete | p9 notes | 47.06 m³ | 50 m³ | 27.5/m³ | 1,375 | +6.2% |
+| Steel | p9 rebar | 44.19 t | 45 t | 206/t | 9,270 | +1.8% |
+| Aluminium | arch | 128.9 m² | 1 lump | 5,000 | 5,000 | lump |
+
+Insight: concrete over-ordered ~8% (waste), steel spot-on, aluminium priced as a
+lump rather than per-m². All now visible and traceable.
+
 ## Still needed
 
 - **Pricing/units** for Alsenan from Urban Projects Manager (owner will export
