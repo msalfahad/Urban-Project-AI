@@ -23,6 +23,15 @@ tests/      Engine tests.
 docs/       Architecture and onboarding.
 ```
 
+## Engine modules built
+
+E1 Unit Guard · E2 BBS Steel · E4 Rate Library · E5 Audit Log · E6 Alert
+Thresholds · E7 Phase 0 Auditor (priced + حصر takeoffs) · E8 Waste Logic ·
+E9 Cooling Load · E12 Schedule Engine · E14 PM Sync · E15 Finance & Cost
+Control · E17 Preliminaries · E20 Estimate vs Actual. Plus the cost-export
+parser and the boq-formula mirror. All deterministic, no model. Remaining:
+E3, E10, E11, E13, E16, E18, E19.
+
 ## What's built so far
 
 - **Phase 0 — the deterministic BOQ/Excel Auditor** (`engine/audit/`, no LLM):
