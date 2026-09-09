@@ -25,19 +25,26 @@ docs/       Architecture and onboarding.
 
 ## What's built so far
 
+- **All 13 AI agents** (`agents/a1_extractor/` … `agents/a13_contract_reader/`) —
+  each a real prompt + validated schema + thin runner + offline tests. First
+  versions, ready to upgrade by editing prompts. See `agents/README.md`.
+- **Shared agent framework** (`agents/base.py`) — one place that calls the Claude
+  API (`claude-opus-5`), with the model injectable so the whole roster runs
+  offline in tests.
 - **E1 Unit Guard** (`engine/unit_guard.py`) — refuses to mix m² / m / count into
   one total. Reproduces and blocks the real "295.44" defect from the audit.
 - **Unit algebra core** (`engine/units.py`) — every quantity carries its unit and
   only combines lawfully.
-- **Agent template** (`agents/_template/`) — the four-file pattern, runnable
-  offline with a fake model.
 
-Run the tests:
+50 tests pass with no API key and no network:
 
 ```bash
 pip install -r requirements.txt
 python3 -m pytest
 ```
+
+To run an agent **live**, set `ANTHROPIC_API_KEY` in the environment (never in
+code or chat) and call its `run()` without a `model` argument.
 
 ## Where to read next
 

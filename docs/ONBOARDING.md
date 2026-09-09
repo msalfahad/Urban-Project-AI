@@ -1,5 +1,12 @@
 # What I need from you
 
+> **Status (updated):** All 13 agents and the core engine are now built and
+> tested offline. To turn them from tested scaffolding into something running on
+> your real jobs and your real WhatsApp, the two things that unblock the most are
+> **(1)** an `ANTHROPIC_API_KEY` in the environment, and **(2)** one real job's
+> drawings + takeoff Excel. Details below.
+
+
 You said you're clueless and want to give me "full access." Thank you — but the
 honest truth is I don't need broad access to *everything*. I need a few specific
 things, and some of them should **never** be pasted into a chat. This page lists
