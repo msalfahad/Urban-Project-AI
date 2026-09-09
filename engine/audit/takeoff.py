@@ -17,6 +17,8 @@ formula-driven takeoff sheets:
   T06  steel-to-concrete ratio out of band ............................ YELLOW/RED
   T07  lean/plain concrete (العاديه) excluded from the total .......... YELLOW
   T08  opening-deduction (خصم فراغات) columns present but unused ....... YELLOW
+  T09  an area (مسطحات) total that mixes area rows with linear
+       (count×length) rows — the 295.44 pattern ...................... RED
   T00  a data sheet nothing recognised (never a silent pass) .......... YELLOW
 
 An important honesty note: because these formulas auto-recompute, deterministic
@@ -177,6 +179,82 @@ def _audit_sheet(wv, wf, sheet: str) -> tuple[list[Issue], bool]:
     return issues, recognised
 
 
+def _audit_area_mix(wv, wf, sheet: str) -> list[Issue]:
+    """T09 — an 'areas' (مسطحات) total that mixes area rows with linear rows.
+
+    The finishing takeoffs put an item's total in an 'اجمالي مسطحات' (areas, م²)
+    column, but derive it in two different ways: landings/courtyards from the
+    *area* column (مسطحات), and steps (درج) from the *length* column (طولي) via
+    count × tread-length — which is a LINEAR quantity, not an area. Summing both
+    into one 'areas' total is the documented 295.44 defect.
+
+    Deterministic signal: within one SUM over the area-output column, some
+    contributing cells' formulas reference the length column and others the area
+    column. If both appear, the total mixes measures.
+    """
+    v = wv[sheet]
+    f = wf[sheet]
+    issues: list[Issue] = []
+
+    # Find blocks: a subheader row that names both طولي (length) and مسطحات (area).
+    length_col = area_col = out_col = None
+    for r in range(1, v.max_row + 1):
+        labels = {c: _strip(v.cell(r, c).value) for c in range(1, v.max_column + 1)
+                  if v.cell(r, c).value is not None}
+        joined = " ".join(labels.values())
+        if "طولي" in joined and "مسطحات" in joined:
+            for c, t in labels.items():
+                if "طولي" in t and length_col is None:
+                    length_col = c
+                elif "مسطحات" in t and area_col is None:
+                    area_col = c
+            # the output "اجمالي مسطحات" column sits in the header row above
+            above = {c: _strip(v.cell(r - 1, c).value) for c in range(1, v.max_column + 1)
+                     if v.cell(r - 1, c).value is not None}
+            for c, t in above.items():
+                if "اجمالي" in t and "مسطحات" in t:
+                    out_col = c
+            break
+    if not (length_col and area_col and out_col):
+        return issues
+
+    lcol = get_column_letter(length_col)
+    acol = get_column_letter(area_col)
+
+    # For each SUM over the output column, classify contributing rows.
+    for r in range(1, v.max_row + 1):
+        fc = f.cell(r, out_col).value
+        if not (isinstance(fc, str) and "SUM(" in fc.upper()):
+            continue
+        for m in _RANGE_RE.finditer(fc):
+            c1, r1, c2, r2 = m.group(1), int(m.group(2)), m.group(3), int(m.group(4))
+            if column_index_from_string(c1) != out_col:
+                continue
+            from_length, from_area = [], []
+            for rr in range(min(r1, r2), max(r1, r2) + 1):
+                cell_f = f.cell(rr, out_col).value
+                if not (isinstance(cell_f, str) and cell_f.startswith("=")):
+                    continue
+                refs_cols = {mm.group(1) for mm in _CELL_RE.finditer(cell_f)}
+                if lcol in refs_cols and acol not in refs_cols:
+                    from_length.append(rr)
+                elif acol in refs_cols and lcol not in refs_cols:
+                    from_area.append(rr)
+            if from_length and from_area:
+                stated = v.cell(r, out_col).value
+                issues.append(Issue(
+                    rule="T09_area_mixes_linear", severity=Severity.RED,
+                    message=(f"'اجمالي مسطحات' total {get_column_letter(out_col)}{r}"
+                             + (f" = {stated:g}" if _num(stated) else "")
+                             + " sums area rows (from the مسطحات column) together with linear rows "
+                             "(steps computed as count × length) — square metres and linear metres "
+                             "in one area total (the 295.44 defect)."),
+                    row_index=r, sheet=sheet,
+                    detail={"area_rows": from_area, "linear_rows": from_length},
+                ))
+    return issues
+
+
 def _check_sum(issues, v, sheet, r, c, formula):
     for m in _RANGE_RE.finditer(formula):
         c1, r1, c2, r2 = m.group(1), int(m.group(2)), m.group(3), int(m.group(4))
@@ -298,6 +376,7 @@ def audit_takeoff(path: str) -> AuditReport:
         for sheet in wv.sheetnames:
             sheet_issues, _ = _audit_sheet(wv, wf, sheet)
             issues.extend(sheet_issues)
+            issues.extend(_audit_area_mix(wv, wf, sheet))
             rows_checked += wv[sheet].max_row
         issues.extend(_audit_cover(wv, wf))
         issues.sort(key=lambda i: (-i.severity.rank, i.sheet, i.row_index or 0, i.rule))

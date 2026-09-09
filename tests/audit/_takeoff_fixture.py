@@ -40,3 +40,28 @@ def build_concrete_takeoff(path: str, *, with_ref_error: bool = True) -> str:
 
     wb.save(path)
     return path
+
+
+def build_finishing_area_mix(path: str) -> str:
+    """A finishing sheet reproducing the 295.44 mixed-measure defect.
+
+    The output column 'اجمالي مسطحات' (areas) is fed from the area column for
+    landings/courtyard and from the length column for steps (count × tread) —
+    square metres and linear metres summed into one area total.
+    """
+    wb = Workbook()
+    ws = wb.active
+    ws.title = "رخام+حوش"
+    ws.append([None] * 8)                                              # 1
+    # header row 2 (اجمالي مسطحات in column H = col 8)
+    ws.append(["البيان", "عدد", "الأبعاد ( م )", None, None, None, "اجمالي النعلات", "اجمالي مسطحات"])
+    # subheader row 3: طولي in C (3), مسطحات in D (4)
+    ws.append([None, None, "طولي", "مسطحات", None, None, None, None])
+    ws["A4"] = "الحوش"; ws["B4"] = 1; ws["D4"] = 151.8; ws["H4"] = "=D4"           # area
+    ws["A5"] = "بسطه"; ws["B5"] = 1; ws["D5"] = 12.74; ws["H5"] = "=D5"            # area
+    ws["A6"] = "درج"; ws["B6"] = 63; ws["C6"] = 1.2; ws["H6"] = "=B6*C6"          # LINEAR (steps)
+    ws["A7"] = "درج2"; ws["B7"] = 28; ws["C7"] = 1.2; ws["H7"] = "=B7*C7"         # LINEAR
+    ws["A8"] = "اجمالي مسطحات الدرج"; ws["H8"] = "=SUM(H4:H7)"                     # mixes both → T09
+
+    wb.save(path)
+    return path

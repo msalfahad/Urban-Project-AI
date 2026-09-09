@@ -3,7 +3,7 @@
 import pytest
 
 from engine.audit import audit_file, is_takeoff_workbook, Severity
-from ._takeoff_fixture import build_concrete_takeoff
+from ._takeoff_fixture import build_concrete_takeoff, build_finishing_area_mix
 
 
 @pytest.fixture
@@ -43,6 +43,15 @@ def test_clean_takeoff_has_no_red(tmp_path):
     report = audit_file(path)
     assert report.status is not Severity.RED  # only the lean YELLOW remains
     assert "T02_excel_error" not in _rules(report)
+
+
+def test_area_total_mixing_linear_is_red(tmp_path):
+    # The documented 295.44 defect: an area total summing area + linear rows.
+    path = build_finishing_area_mix(str(tmp_path / "finish.xlsx"))
+    report = audit_file(path)
+    rules = {i.rule for i in report.issues}
+    assert "T09_area_mixes_linear" in rules
+    assert report.status is Severity.RED
 
 
 def test_volume_formulas_not_false_flagged(tmp_path):
