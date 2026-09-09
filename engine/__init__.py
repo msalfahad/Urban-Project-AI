@@ -9,6 +9,7 @@ from .units import Quantity, Unit, UnitError
 from .unit_guard import TakeoffRecord, GuardResult, check, check_batch
 from .boq_formula import compute_quantity, FIELDS_FOR
 from .rate_library import RateLibrary, RateCategory, RateItem
+from .audit_log import AuditLog, AuditEntry
 from .pm_sync import (
     ApprovedBoqLine,
     measurement_to_formula,
@@ -31,6 +32,8 @@ __all__ = [
     "RateLibrary",
     "RateCategory",
     "RateItem",
+    "AuditLog",
+    "AuditEntry",
     "ApprovedBoqLine",
     "measurement_to_formula",
     "to_boq_item_doc",
