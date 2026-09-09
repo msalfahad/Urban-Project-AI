@@ -6,5 +6,5 @@ openpyxl>=3.1   # reading .xlsx takeoff/BOQ workbooks (Phase 0 auditor)
 
 # Optional, installed only when running agents/sync live (not needed for tests):
 #   anthropic>=0.39     # calling the Claude API (agents/base.py)
-#   firebase-admin>=6   # writing to the app's Firestore (engine/pm_sync.py)
+#   firebase-admin>=7   # reading/writing the app's Firestore (tools/connect_firestore.py)
 #   pymupdf>=1.24       # parsing pricing PDFs + rendering drawings (tools/)
