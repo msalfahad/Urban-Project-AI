@@ -1,0 +1,4 @@
+# Core runtime deps are added phase by phase as modules need them.
+# The engine and agent scaffolding are intentionally dependency-free so the
+# core runs anywhere. Dev/test only for now:
+pytest>=8.0

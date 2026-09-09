@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+*.egg-info/
+
+# Secrets — never commit these
+.env
+*.key
+*-service-account.json
+firebase-credentials.json
+serviceAccountKey.json
+
+# Client data — drawings, takeoffs, contracts stay out of git
+/data/
+*.dwg
+*.dxf
+*.xlsx
+!tests/**/*.xlsx
+
+# OS
+.DS_Store
