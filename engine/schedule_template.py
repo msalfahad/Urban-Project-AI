@@ -31,6 +31,11 @@ RATES = {
     "paint_m2": 90.0,          # primer + putty + coats
 }
 
+# Minimum weeks a concrete floor holds before the next loads it / formwork is
+# struck — the ST7757 drawings require ≥ 21 days (3 weeks). A hard rule, honoured
+# on every project because the drawing says so.
+FORMWORK_CURE_WEEKS = 3
+
 TEMPLATE_QTY = {
     "footings_m3": 78.0,
     "blockwork_m2": 1260.0,
@@ -63,10 +68,17 @@ def reference_programme(quantities: dict | None = None) -> list[Activity]:
                  production_rate=fr, depends_on=["lean"]),
         Activity("backfill", "Backfill & under-slab", "Foundations", fixed_weeks=2,
                  depends_on=["footings"]),
-        Activity("frame_g", "Frame — ground", "Structure", fixed_weeks=3, depends_on=["backfill"]),
-        Activity("frame_1", "Frame — first floor", "Structure", fixed_weeks=3, depends_on=["frame_g"]),
-        Activity("frame_2", "Frame — second floor", "Structure", fixed_weeks=3, depends_on=["frame_1"]),
-        Activity("frame_r", "Frame — roof rooms", "Structure", fixed_weeks=3, depends_on=["frame_2"]),
+        # Each floor is a 3-week cycle (form, rebar, pour, then the 21-day
+        # cure before the floor above loads it or formwork is struck). This
+        # enforces the ST7757 drawing note: do not strike formwork < 21 days.
+        Activity("frame_g", "Frame — ground", "Structure", fixed_weeks=FORMWORK_CURE_WEEKS,
+                 depends_on=["backfill"], notes="21-day formwork/cure rule (ST7757)"),
+        Activity("frame_1", "Frame — first floor", "Structure", fixed_weeks=FORMWORK_CURE_WEEKS,
+                 depends_on=["frame_g"], notes="21-day formwork/cure rule (ST7757)"),
+        Activity("frame_2", "Frame — second floor", "Structure", fixed_weeks=FORMWORK_CURE_WEEKS,
+                 depends_on=["frame_1"], notes="21-day formwork/cure rule (ST7757)"),
+        Activity("frame_r", "Frame — roof rooms", "Structure", fixed_weeks=FORMWORK_CURE_WEEKS,
+                 depends_on=["frame_2"], notes="21-day formwork/cure rule (ST7757)"),
         # blockwork starts on finished floors while the frame still rises
         Activity("block", "Blockwork & partitions", "Envelope", quantity=bq, unit="m2",
                  production_rate=br, overlaps=[("frame_g", 1.0)], depends_on=["frame_1"],
