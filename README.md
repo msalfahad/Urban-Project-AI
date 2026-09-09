@@ -25,6 +25,13 @@ docs/       Architecture and onboarding.
 
 ## What's built so far
 
+- **Phase 0 — the deterministic BOQ/Excel Auditor** (`engine/audit/`, no LLM):
+  Excel in → RED/YELLOW/GREEN report → approve (zero RED) → structured BOQ →
+  **test-sandbox** Firestore write. Catches formula errors, skipped SUM rows,
+  mixed-unit quantity totals (the 295.44 case), wrong concrete classifications,
+  rounded-rate discrepancies, blank prices, `#REF!`, steel-ratio anomalies and
+  missing waste. Run: `python3 -m tools.phase0_audit workbook.xlsx`. See
+  **`docs/PHASE0.md`**.
 - **All 13 AI agents** (`agents/a1_extractor/` … `agents/a13_contract_reader/`) —
   each a real prompt + validated schema + thin runner + offline tests. First
   versions, ready to upgrade by editing prompts. See `agents/README.md`.
