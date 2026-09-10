@@ -22,3 +22,4 @@ serviceAccountKey.json
 
 # OS
 .DS_Store
+.secrets/
