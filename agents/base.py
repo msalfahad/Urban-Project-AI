@@ -55,18 +55,26 @@ def anthropic_model(
     if effort:
         kwargs["output_config"] = {"effort": effort}
 
+    # Large output budgets must stream (the SDK refuses non-streaming calls that
+    # could exceed ~10 minutes). Collect the text the same way either path.
+    def _call(kw: dict[str, Any]):
+        if kw.get("max_tokens", 0) > 20000:
+            with client.messages.stream(**kw) as stream:
+                text = "".join(stream.text_stream)
+            return text
+        resp = client.messages.create(**kw)
+        return "".join(b.text for b in resp.content if b.type == "text")
+
     try:
-        response = client.messages.create(**kwargs)
+        return _call(kwargs)
     except anthropic.BadRequestError as exc:
         # Cheaper/faster models (e.g. Haiku) don't accept output_config effort.
         # Retry once without it rather than forcing every caller to know which
         # models support the knob — the text-in/records-out contract is unchanged.
         if "output_config" in kwargs and "effort" in str(exc).lower():
             kwargs.pop("output_config", None)
-            response = client.messages.create(**kwargs)
-        else:
-            raise
-    return "".join(b.text for b in response.content if b.type == "text")
+            return _call(kwargs)
+        raise
 
 
 def extract_json(raw: str) -> Any:
