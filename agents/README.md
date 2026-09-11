@@ -23,7 +23,7 @@ to the engine (`../engine`), which is plain code.
 So an extractor agent emits *records* — "this window is 2.4 m x 1.6 m, from
 sheet A-04 rev C" — and never a sum. The engine does the summing.
 
-## The roster — all 13 scaffolded
+## The roster — all 17 scaffolded
 
 Every agent below exists as a folder with a real prompt, a validated schema, a
 thin runner, and offline tests. They are first versions, ready to be upgraded
@@ -36,6 +36,25 @@ thin runner, and offline tests. They are first versions, ready to be upgraded
 | 3 | A6 Planner · A7 Quotation · A8 Briefer · A9 Orchestrator | `a6_planner/` `a7_quotation/` `a8_briefer/` `a9_orchestrator/` |
 | 4 | A10 Content | `a10_content/` |
 | 5 | A11 Site Progress · A12 Call Summariser · A13 Contract Reader | `a11_site_progress/` `a12_call_summariser/` `a13_contract_reader/` |
+| 6 | A14 IG Analyst · A15 Marketing Strategist · A16 Post Designer · A17 Campaign Manager | `a14_ig_analyst/` `a15_marketing/` `a16_post_designer/` `a17_campaign/` |
+
+### The marketing chain
+
+The phase-6 agents are meant to run in order, each feeding the next:
+
+```
+A14 (what actually worked)  ──▶  A15 (the account's posting plan)
+                             └─▶  A17 (one project's campaign)  ──▶  A16 / A10 (each post)
+```
+
+A15 plans the **account** — the ongoing calendar. A17 plans **one build**: an
+objective, phases tied to the construction stage (you cannot film a finished
+kitchen at foundations), a week-by-week schedule, and a review date. A17 emits
+channel *weights*, never dinars — `engine/campaign.py` turns them into KWD.
+
+Run a campaign with `python -m tools.campaign` (see `--help`); each review
+writes a new version under `campaigns/<slug>/`, so the record of what changed
+and why survives.
 
 Copy `_template/` to start a new one.
 

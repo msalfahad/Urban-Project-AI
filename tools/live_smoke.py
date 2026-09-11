@@ -1,7 +1,12 @@
-"""Usage: ANTHROPIC_API_KEY=... URBAN_SCRATCH=<dir with st_all_09.png + Alsenan_Quotation_AR.md> python3 -m tools.live_smoke
 """LIVE smoke test of every agent on real Urban Projects inputs. Cheap models for
 chat/classification, reasoning models where it matters, vision for the drawing.
-Writes results + timing + errors to smoke_results.json. Never prints secrets."""
+Writes results + timing + errors to smoke_results.json. Never prints secrets.
+
+Usage:
+    ANTHROPIC_API_KEY=... \\
+    URBAN_SCRATCH=<dir with st_all_09.png + Alsenan_Quotation_AR.md> \\
+    python3 -m tools.live_smoke
+"""
 import json, time, base64, os, sys, traceback
 sys.path.insert(0,"/home/user/Urban-Project-AI")
 import anthropic
@@ -48,6 +53,7 @@ from agents.a13_contract_reader.agent import run as a13; from agents.a13_contrac
 from agents.a14_ig_analyst.agent import run as a14; from agents.a14_ig_analyst.schema import IGAnalysisInput
 from agents.a15_marketing.agent import run as a15; from agents.a15_marketing.schema import MarketingInput
 from agents.a16_post_designer.agent import run as a16; from agents.a16_post_designer.schema import PostBrief
+from agents.a17_campaign.agent import run as a17; from agents.a17_campaign.schema import CampaignInput, Project
 
 # quick cheap ones first
 step("a5",CHEAP,lambda: a5(FAQInput(question="كم تستغرق مدة بناء شاليه هيكل أسود ٤٠٠ متر؟",language="ar"),model=m(CHEAP)))
@@ -69,6 +75,10 @@ step("a13",MID,lambda: a13(ContractInput(text=open(f"{SP}/Alsenan_Quotation_AR.m
 step("a8",MID,lambda: a8(BriefInput(period="weekly",snapshot={"projects":[{"name":"Alsenan Chalet","value_kwd":131221,"progress":0,"stage":"foundations"},{"name":"Fahad AlAsousi Apartment","value_kwd":19500,"progress":85,"remaining_kwd":2627},{"name":"Almasaad Villah","value_kwd":2773,"progress":0},{"name":"شاليه القديري","value_kwd":0,"progress":0,"stage":"planning"}],
    "quotes":[{"client":"Alsenan","total_kwd":121626,"status":"awaiting owner approval","open_items":4}],"leads":[{"source":"WhatsApp","summary":"Khairan chalet 500m2 2 floors pool"}],"alerts":["Firebase billing closed: project photos unavailable"]}),model=m(MID,"medium")))
 step("a15",MID,lambda: a15(MarketingInput(date_range="Oct 2026",goal="more turnkey villa enquiries in Kuwait",analysis=R.get("a14",{}).get("out",{})),model=m(MID,"medium")))
+step("a17",MID,lambda: a17(CampaignInput(project=Project(name="Alsenan Chalet",type="chalet",location="Khairan",stage="foundations",
+   usps=["black structure specialist","17 footings poured on schedule","dome roof detail"],photo_refs=["alsenan_render.jpg","alsenan_pour_01.jpg"]),
+   window="Oct-Dec 2026",objective="10+ qualified chalet enquiries from Khairan landowners",channels=["instagram","whatsapp","tiktok"],
+   evidence=R.get("a14",{}).get("out",{})),model=m(MID,"medium")))
 # vision second reader on the real drawing
 step("a2",TOP,lambda: a2(ExtractInput(drawing_number="ST7757",sheet="p9 — Schedule of Columns & Footings",revision="May 2026",trade="structure"),drawing_text="(image attached — read the schedules)",model=vision(TOP,f"{SP}/st_all_09.png")))
 json.dump(R,open(f"{SP}/smoke_results.json","w"),ensure_ascii=False,indent=1)
