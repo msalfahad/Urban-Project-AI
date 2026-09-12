@@ -14,7 +14,11 @@ firebase-credentials.json
 serviceAccountKey.json
 
 # Client data — drawings, takeoffs, contracts stay out of git
-/data/
+/data/*
+# ...except the trade rule library: that is Urban Projects' own policy about
+# what each trade does to a room, not a client document, and the engine cannot
+# run without it. Space maps stay out — they carry a client's room dimensions.
+!/data/trade_rules/
 *.dwg
 *.dxf
 *.xlsx

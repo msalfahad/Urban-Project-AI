@@ -1,0 +1,26 @@
+{
+  "project": "23010 Adailiya - Private Villa",
+  "trade": "ceramic",
+  "height_m": "3.00",
+  "_height_source": "Owner rule, Urban Projects. NOT read from a section on AR-00.",
+  "rules": {
+    "BEDROOM":   {"floor_finish": "ceramic", "wall_finish": null},
+    "SALOON":    {"floor_finish": "ceramic", "wall_finish": null},
+    "DINING":    {"floor_finish": "ceramic", "wall_finish": null},
+    "CORRIDOR":  {"floor_finish": "ceramic", "wall_finish": null},
+    "DRESS":     {"floor_finish": "ceramic", "wall_finish": null},
+    "STORE":     {"floor_finish": "ceramic", "wall_finish": null},
+    "MAID_ROOM": {"floor_finish": "ceramic", "wall_finish": null},
+    "BATHROOM":  {"floor_finish": "ceramic", "wall_finish": "ceramic"},
+    "WASHROOM":  {"floor_finish": "ceramic", "wall_finish": "ceramic"},
+    "IRON_ROOM": {"floor_finish": "ceramic", "wall_finish": "ceramic",
+                  "notes": "Wall ceramic confirmed for this project by owner."},
+    "KITCHEN":   {"floor_finish": "ceramic", "wall_finish": "ceramic",
+                  "notes": "PROJECT-DEFINED. Confirm before pricing."},
+    "TERRACE":   {"floor_finish": null, "wall_finish": null,
+                  "notes": "Outside internal ceramic. External tile + waterproofing are separate trades."},
+    "STAIR":     {"floor_finish": null, "wall_finish": null, "notes": "Measured as stair, not as floor."},
+    "LIFT_SHAFT":{"floor_finish": null, "wall_finish": null},
+    "SHAFT":     {"floor_finish": null, "wall_finish": null}
+  }
+}
