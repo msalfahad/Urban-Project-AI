@@ -56,6 +56,13 @@ Run a campaign with `python -m tools.campaign` (see `--help`); each review
 writes a new version under `campaigns/<slug>/`, so the record of what changed
 and why survives.
 
+A16 also has a **grid mode**: `run_grid` designs a whole block of tiles
+together (a launch grid, a campaign block) — no photo reused, no fact not
+supplied by the owner, and a list of questions back. `social/` renders the
+tiles to 1080×1080 PNGs with the real logo, Cairo and the brand orange;
+`python -m tools.grid plan | render` drives it, and a tile whose photo has not
+arrived renders the shoot instructions in its place.
+
 Copy `_template/` to start a new one.
 
 ## Running an agent
