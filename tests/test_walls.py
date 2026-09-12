@@ -171,3 +171,16 @@ def test_wall_length_excludes_open_but_perimeter_does_not():
     ]
     assert sw.perimeter_m == D('5') and sw.wall_length_m == D('3')
     assert sw.open_length_m == D('2') and not sw.is_closed
+
+
+# ------------------------------------------------------- hole filling matters
+def test_a_fixture_inside_a_room_does_not_become_wall():
+    """A WC drawn inside a bathroom must not be traced as part of its boundary."""
+    wall, lab = room(11, 11, (1, 9, 1, 9))
+    fixture = (5, 5)
+    lab[fixture] = 0                       # a fixture punches a hole in the region
+    sw_filled = space_walls('RM', lab, 7, wall, np.zeros_like(wall), PX, outside_id=0)
+    sw_raw = space_walls('RM', lab, 7, wall, np.zeros_like(wall), PX,
+                         outside_id=0, fill_region=False)
+    assert sw_filled.perimeter_m == D('28')          # 7 m x 7 m interior
+    assert sw_raw.perimeter_m > sw_filled.perimeter_m

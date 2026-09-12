@@ -138,6 +138,21 @@ def label_regions(free: np.ndarray) -> np.ndarray:
     return inv.reshape(lab.shape).astype(np.int32)
 
 
+def fill_holes(mask: np.ndarray) -> np.ndarray:
+    """`mask` with every enclosed hole filled.
+
+    A room's boundary is its walls. Fixtures, furniture symbols, its name and
+    its dimension numerals are all printed inside it, and flood fill goes round
+    every one of them — so tracing the raw region walks around a WC and reports
+    a bathroom with 39 wall segments and twice its real perimeter. Filling the
+    holes first is what makes a traced boundary mean "wall".
+    """
+    pad = np.ones((mask.shape[0] + 2, mask.shape[1] + 2), bool)
+    pad[1:-1, 1:-1] = ~mask
+    out = label_regions(pad)
+    return mask | ((out != out[0, 0]) & pad)[1:-1, 1:-1]
+
+
 def _fill_text_holes(mask: np.ndarray, max_hole_px: int) -> int:
     """Pixel count of `mask` with only glyph-sized holes filled.
 
@@ -146,7 +161,11 @@ def _fill_text_holes(mask: np.ndarray, max_hole_px: int) -> int:
     holes are added back. A *large* enclosed void is not a glyph — it is a shaft,
     a column, a stair core — and is left subtracted, which is why the cap exists.
     """
-    pad = np.zeros((mask.shape[0] + 2, mask.shape[1] + 2), bool)
+    # The border must be part of the OUTSIDE, not background: pad with True so
+    # the flood from the corner reaches every cell outside the mask. Padding
+    # with False leaves the real outside looking like just another enclosed
+    # region, and a tight bbox makes it small enough to be mistaken for a glyph.
+    pad = np.ones((mask.shape[0] + 2, mask.shape[1] + 2), bool)
     pad[1:-1, 1:-1] = ~mask
     out = label_regions(pad)
     outside = out[0, 0]

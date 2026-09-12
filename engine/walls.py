@@ -195,11 +195,21 @@ def space_walls(space_id: str, labels: np.ndarray, region_id: int,
                 wall: np.ndarray, bridges: np.ndarray, px_mm: Decimal,
                 outside_id: int | None = None, *, drawing: str = "",
                 revision: str = "", id_to_space: dict[int, str] | None = None,
-                min_run_mm: int = 100, max_opening_mm: int = 0) -> SpaceWalls:
-    """Decompose one space's boundary into wall segments with provenance."""
+                min_run_mm: int = 100, max_opening_mm: int = 0,
+                fill_region: bool = True) -> SpaceWalls:
+    """Decompose one space's boundary into wall segments with provenance.
+
+    `fill_region` closes the holes that printed fixtures, text and dimension
+    numerals punch in the region before tracing. Without it the boundary walks
+    around every WC and glyph and the perimeter roughly doubles — measuring the
+    furniture, not the room. Turn it off only when the holes ARE the subject.
+    """
     R = labels == region_id
     if not R.any():
         raise WallError(f"{space_id}: region {region_id} is not in the label map")
+    if fill_region:
+        from engine.geometry import fill_holes
+        R = fill_holes(R)
     sw = SpaceWalls(space_id=space_id)
     id_to_space = id_to_space or {}
     n_open = 0
