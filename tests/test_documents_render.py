@@ -160,6 +160,19 @@ def test_letterhead_lives_in_a_repeating_thead():
     assert "position: fixed" not in html
 
 
+def test_logo_and_instagram_on_letterhead():
+    company = dict(COMPANY, logo="assets/logo.svg", instagram="@Upc.kw")
+    html = render.render_html(_doc(), _body(), company)
+    head = html.split("</thead>")[0]
+    assert 'class="logo"' in head and head.count("<svg") == 2      # logo + barcode
+    assert "Instagram @Upc.kw" in head
+
+
+def test_no_logo_configured_renders_without_one():
+    html = render.render_html(_doc(), _body(), COMPANY)
+    assert 'class="logo"' not in html and html.count("<svg") == 1  # barcode only
+
+
 def test_contract_html_has_parties_and_witnesses():
     html = render.render_html(_doc("contract"), _body(), COMPANY)
     assert "الطرف الأول (المالك)" in html and "الطرف الثاني (المقاول)" in html

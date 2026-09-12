@@ -56,6 +56,16 @@ def load_company(path: Path | None = None) -> dict:
     return data
 
 
+def logo_svg(company: dict) -> str:
+    """The company logo as inline SVG, or '' when none is configured."""
+    rel = company.get("logo")
+    if not rel:
+        return ""
+    path = Path(rel) if Path(rel).is_absolute() else ROOT / rel
+    raw = path.read_text(encoding="utf-8")
+    return raw[raw.find("<svg"):]
+
+
 def barcode_svg(text: str) -> str:
     """A Code 128 barcode of the reference, as inline SVG."""
     import barcode
@@ -199,6 +209,7 @@ def build_context(doc: DocumentInput, body: DocumentOutput, company: dict) -> di
         "payment": payment,
         "validity": validity,
         "barcode": Markup(barcode_svg(doc.reference)),
+        "logo": Markup(logo_svg(company)),
         "font_regular": (FONT_DIR / "Amiri-Regular.ttf").as_uri(),
         "font_bold": (FONT_DIR / "Amiri-Bold.ttf").as_uri(),
     }

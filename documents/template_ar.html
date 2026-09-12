@@ -9,6 +9,7 @@
   /* Margins must be set here, not by the printer: Chromium lets @page win, and
      a zero CSS margin runs body text into the page-number footer. */
   @page { size: A4; margin: 12mm 16mm 25mm 16mm; }
+  :root { --brand: #fbad46; --ink: #1f2a37; }
   html, body { margin: 0; padding: 0; }
   body { font-family: "Amiri", serif; font-size: 12.5pt; line-height: 1.75; color: #111; }
 
@@ -19,39 +20,41 @@
   table.page > thead > tr > td, table.page > tbody > tr > td { padding: 0; vertical-align: top; }
 
   .letterhead {
-    display: flex; justify-content: space-between; align-items: flex-start;
-    border-bottom: 1.2pt solid #1d3557; padding: 0 0 2mm; margin-bottom: 7mm;
+    display: flex; justify-content: space-between; align-items: center;
+    border-bottom: 1.6pt solid var(--brand); padding: 0 0 2mm; margin-bottom: 7mm;
     font-size: 10pt; line-height: 1.5;
   }
-  .letterhead .brand { text-align: right; }
-  .letterhead .brand .name { font-size: 15pt; font-weight: bold; color: #1d3557; }
-  .letterhead .brand .name-en { font-size: 9pt; color: #444; direction: ltr; }
+  .letterhead .brand { display: flex; align-items: center; gap: 4mm; text-align: right; }
+  .letterhead .brand .logo svg { height: 22mm; width: auto; display: block; }
+  .letterhead .brand .name { font-size: 14pt; font-weight: bold; color: var(--ink); }
+  .letterhead .brand .name-en { font-size: 8.5pt; color: #555; direction: ltr; }
   .letterhead .contact { text-align: left; direction: ltr; color: #333; }
   .letterhead .code { text-align: center; }
   .letterhead .code svg { height: 12mm; width: auto; }
   .letterhead .code .ref { font-size: 9pt; letter-spacing: .5px; direction: ltr; }
 
-  h1 { text-align: center; font-size: 22pt; margin: 0 0 6mm; color: #1d3557; }
-  h1 small { display: block; font-size: 11pt; color: #555; direction: ltr; }
-  h2 { font-size: 14pt; margin: 8mm 0 2mm; color: #1d3557; page-break-after: avoid; }
+  h1 { text-align: center; font-size: 22pt; margin: 0 0 6mm; color: var(--ink); }
+  h1 small { display: block; font-size: 11pt; color: #666; direction: ltr; letter-spacing: 2px; }
+  h2 { font-size: 14pt; margin: 8mm 0 2mm; color: var(--ink); page-break-after: avoid;
+       border-right: 3pt solid var(--brand); padding-right: 3mm; }
   h3 { font-size: 12.5pt; margin: 4mm 0 1mm; page-break-after: avoid; }
-  h3::before { content: "• "; color: #1d3557; }
+  h3::before { content: "• "; color: var(--brand); }
   p { margin: 0 0 2.5mm; }
   ol { margin: 0 0 3mm; padding-right: 8mm; }
   ol li { margin-bottom: 1mm; }
   .salutation { display: flex; justify-content: space-between; margin-bottom: 1mm; }
   .facts { width: 100%; border-collapse: collapse; margin: 4mm 0 6mm; }
   .facts td { padding: 1.2mm 3mm; border-bottom: .4pt solid #ccc; vertical-align: top; }
-  .facts td.k { width: 34mm; font-weight: bold; color: #1d3557; }
+  .facts td.k { width: 34mm; font-weight: bold; color: var(--ink); }
   table.money { width: 100%; border-collapse: collapse; margin: 2mm 0 3mm; page-break-inside: avoid; }
   table.money th, table.money td { border: .6pt solid #555; padding: 2mm 3mm; }
-  table.money th { background: #eef2f7; }
+  table.money th { background: #fff3e0; }
   table.money td.n { direction: ltr; text-align: right; white-space: nowrap; }
   table.money tr.total td { font-weight: bold; background: #f7f7f7; }
   .words { font-weight: bold; margin: 2mm 0 4mm; }
   .parties { display: flex; gap: 8mm; margin: 3mm 0 5mm; }
   .parties .party { flex: 1; border: .6pt solid #999; padding: 3mm 4mm; page-break-inside: avoid; }
-  .parties .party .role { font-weight: bold; color: #1d3557; }
+  .parties .party .role { font-weight: bold; color: var(--ink); }
   .closing { margin-top: 8mm; }
   .sign { display: flex; justify-content: space-between; gap: 10mm; margin-top: 14mm; page-break-inside: avoid; }
   .sign .block { flex: 1; text-align: center; }
@@ -64,10 +67,13 @@
 <thead><tr><td>
 <div class="letterhead">
   <div class="brand">
-    <div class="name">{{ company.name_ar }}</div>
-    {% if company.name_en %}<div class="name-en">{{ company.name_en }}</div>{% endif %}
-    {% if capital_line %}<div>{{ capital_line }}</div>{% endif %}
-    {% if company.commercial_register %}<div>سجل تجاري: {{ company.commercial_register }}</div>{% endif %}
+    {% if logo %}<div class="logo">{{ logo }}</div>{% endif %}
+    <div>
+      <div class="name">{{ company.name_ar }}</div>
+      {% if company.name_en %}<div class="name-en">{{ company.name_en }}</div>{% endif %}
+      {% if capital_line %}<div>{{ capital_line }}</div>{% endif %}
+      {% if company.commercial_register %}<div>سجل تجاري: {{ company.commercial_register }}</div>{% endif %}
+    </div>
   </div>
   <div class="code">
     {{ barcode }}
@@ -76,6 +82,7 @@
   <div class="contact">
     {% for phone in company.phones %}<div>{{ phone }}</div>{% endfor %}
     {% if company.email %}<div>{{ company.email }}</div>{% endif %}
+    {% if company.instagram %}<div>Instagram {{ company.instagram }}</div>{% endif %}
     {% if company.address_en %}<div>{{ company.address_en }}</div>{% endif %}
   </div>
 </div>
