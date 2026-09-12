@@ -49,7 +49,7 @@ read, write    calculates      owner + 2 engineers
 | A4 | Follow-up | Re-engages silent leads at 2/5/10 days with approved templates. | 2 |
 | A5 | FAQ | Consistent answers on permits, timelines, finishing options. | 2 |
 | A6 | Planner | Builds the work breakdown; hands durations to the schedule engine. | 3 |
-| A7 | Quotation Writer | Approved BOQ → branded Arabic quotation + draft contract. | 3 |
+| A7 | Quotation & Contract Writer | Writes the Arabic clauses of a quotation or contract per scope, from Urban's clause library. Never a figure — prices, durations, dates and the payment schedule are placed by code (E22 + `documents/`). | 3 |
 | A8 | Briefer | Daily/weekly brief (set up in Cowork, not built). | 3 |
 | A9 | Orchestrator | Routes events, sets priority, escalates. Never recalculates. | 3 |
 | A10 | Content | Instagram captions/hooks, aware of the Kuwait calendar. | 4 |
@@ -84,6 +84,8 @@ time.
 | E18 | Subcontractor Scoring | Price vs market, reliability, quality, responsiveness. | 5 |
 | E19 | Productivity Benchmarks | Your real production rates, measured from your own sites. | 5 |
 | E20 | Estimate vs Actual | The learning loop: estimated vs actual per project. | 5 |
+| E21 | Campaign Budget & KPIs | Channel weights → KWD that sums exactly; cost per lead. **Built.** | 4 |
+| E22 | Document Numbers | Reference numbers, price totals, payment splits, validity dates, amounts in Arabic words for quotations and contracts. **Built.** | 3 |
 
 ## Why this split
 

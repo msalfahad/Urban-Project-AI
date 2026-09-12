@@ -1,0 +1,15 @@
+{
+  "name_ar": "شركة إيربن بروجكتس لتشييد المباني",
+  "name_en": "Urban Projects Building Construction Co.",
+  "paid_capital_kwd": null,
+  "commercial_register": "",
+  "license_number": "",
+  "phones": ["+965 XXXXXXXX"],
+  "email": "info@urbanprojects.example",
+  "website": "",
+  "address_ar": "الكويت — (العنوان)",
+  "address_en": "Kuwait — (address)",
+  "signatory_name": "",
+  "signatory_title": "المدير العام",
+  "_todo": "Fill every field before a document goes to a client. paid_capital_kwd is a number; leave null to omit the line."
+}

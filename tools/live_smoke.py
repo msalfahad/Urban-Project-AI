@@ -44,6 +44,9 @@ from agents.a3_client.agent import run as a3; from agents.a3_client.schema impor
 from agents.a4_followup.agent import run as a4; from agents.a4_followup.schema import FollowupInput
 from agents.a5_faq.agent import run as a5; from agents.a5_faq.schema import FAQInput
 from agents.a6_planner.agent import run as a6; from agents.a6_planner.schema import PlanInput
+from agents.a7_quotation.agent import run as a7; from agents.a7_quotation.schema import DocumentInput, Party, ProjectFacts, OwnerMaterial
+from engine.documents import PriceLine
+from datetime import date as _date
 from agents.a8_briefer.agent import run as a8; from agents.a8_briefer.schema import BriefInput
 from agents.a9_orchestrator.agent import run as a9; from agents.a9_orchestrator.schema import Event
 from agents.a10_content.agent import run as a10; from agents.a10_content.schema import ContentInput
@@ -71,6 +74,12 @@ step("a14",CHEAP,lambda: a14(IGAnalysisInput(period="last_30_days",account={"fol
 step("a16",CHEAP,lambda: a16(PostBrief(type="poll",topic="Which chalet façade style: modern white, stone, or wood accents?",goal="engagement + enquiries",cta="صوّت واكتب لنا",photo_refs=["alsenan_render.jpg"]),model=m(CHEAP)))
 # reasoning
 step("a6",MID,lambda: a6(PlanInput(contract_form="black_structure",area_m2=420,floors=2,pool=True,lift=False,notes="Khairan chalet, 17 footings, pool pit, dome roof detail"),model=m(MID,"medium")))
+step("a7",MID,lambda: a7(DocumentInput(kind="quotation",reference="UP/2026-9-001-R01",issued=_date(2026,9,12),
+   client=Party(name="فاطمة السنيان",title="السيدة"),
+   project=ProjectFacts(name="شاليه السنيان",description="شاليه",location="الخيران",scopes=["black_structure","plumbing"],floors=["أرضي","أول"],built_area_m2=420),
+   price_lines=[PriceLine("أعمال الهيكل الأسود",121626.0,"بالإضافة إلى المواد المدعومة")],
+   owner_materials=[OwnerMaterial("حديد تسليح كويتي","30 طن")],
+   special_requests=["قبة خرسانية بالسطح حسب المنظور","مسبح مع غرفة ماكينات"]),model=m(MID,"medium")))
 step("a13",MID,lambda: a13(ContractInput(text=open(f"{SP}/Alsenan_Quotation_AR.md",encoding="utf-8").read()[:9000]),model=m(MID,"medium")))
 step("a8",MID,lambda: a8(BriefInput(period="weekly",snapshot={"projects":[{"name":"Alsenan Chalet","value_kwd":131221,"progress":0,"stage":"foundations"},{"name":"Fahad AlAsousi Apartment","value_kwd":19500,"progress":85,"remaining_kwd":2627},{"name":"Almasaad Villah","value_kwd":2773,"progress":0},{"name":"شاليه القديري","value_kwd":0,"progress":0,"stage":"planning"}],
    "quotes":[{"client":"Alsenan","total_kwd":121626,"status":"awaiting owner approval","open_items":4}],"leads":[{"source":"WhatsApp","summary":"Khairan chalet 500m2 2 floors pool"}],"alerts":["Firebase billing closed: project photos unavailable"]}),model=m(MID,"medium")))

@@ -33,7 +33,7 @@ thin runner, and offline tests. They are first versions, ready to be upgraded
 |-------|--------|--------|
 | 1 | A1 Extractor · A2 Reviewer | `a1_extractor/` `a2_reviewer/` |
 | 2 | A3 Client · A4 Follow-up · A5 FAQ | `a3_client/` `a4_followup/` `a5_faq/` |
-| 3 | A6 Planner · A7 Quotation · A8 Briefer · A9 Orchestrator | `a6_planner/` `a7_quotation/` `a8_briefer/` `a9_orchestrator/` |
+| 3 | A6 Planner · A7 Quotation & Contracts · A8 Briefer · A9 Orchestrator | `a6_planner/` `a7_quotation/` `a8_briefer/` `a9_orchestrator/` |
 | 4 | A10 Content | `a10_content/` |
 | 5 | A11 Site Progress · A12 Call Summariser · A13 Contract Reader | `a11_site_progress/` `a12_call_summariser/` `a13_contract_reader/` |
 | 6 | A14 IG Analyst · A15 Marketing Strategist · A16 Post Designer · A17 Campaign Manager | `a14_ig_analyst/` `a15_marketing/` `a16_post_designer/` `a17_campaign/` |
