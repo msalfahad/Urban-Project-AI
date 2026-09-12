@@ -10,10 +10,10 @@ from __future__ import annotations
 from pathlib import Path
 
 from agents.base import ModelFn, run_json_agent
+from agents.a1_extractor.agent import DRAWING_MODEL
 from agents.a1_extractor.schema import ExtractInput, ExtractOutput
 
 PROMPT_PATH = Path(__file__).parent / "prompt.md"
-MODEL = "claude-opus-5"
 
 
 def run(payload: ExtractInput, drawing_text: str, model: ModelFn | None = None) -> ExtractOutput:
@@ -24,4 +24,4 @@ def run(payload: ExtractInput, drawing_text: str, model: ModelFn | None = None) 
         f"Trade in focus: {payload.trade or 'all'}\n\n"
         f"--- drawing content ---\n{drawing_text}\n"
     )
-    return run_json_agent(PROMPT_PATH, user, ExtractOutput.from_dict, model=model)
+    return run_json_agent(PROMPT_PATH, user, ExtractOutput.from_dict, model=model or DRAWING_MODEL())

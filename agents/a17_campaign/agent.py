@@ -5,16 +5,10 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from agents.base import ModelFn, anthropic_model, run_json_agent
+from agents.base import ModelFn, run_json_agent
 from .schema import Campaign, CampaignInput
 
 PROMPT_PATH = Path(__file__).parent / "prompt.md"
-MODEL = "claude-opus-5"
-EFFORT = "medium"
-
-
-def _default_model(system: str, user: str) -> str:
-    return anthropic_model(system, user, model=MODEL, effort=EFFORT)
 
 
 def _block(label: str, payload: dict) -> str:
@@ -38,4 +32,4 @@ def run(payload: CampaignInput, model: ModelFn | None = None) -> Campaign:
         + _block("Instagram evidence (A14)", payload.evidence)
         + _block("Progress since the last review — correct the campaign", payload.progress)
     )
-    return run_json_agent(PROMPT_PATH, user, Campaign.from_dict, model=model or _default_model)
+    return run_json_agent(PROMPT_PATH, user, Campaign.from_dict, model=model)

@@ -11,6 +11,19 @@ The model call is a single injectable seam:
 
 The one rule holds here too: this module moves text in and structured records
 out. It never computes a total or applies a rate — that is the engine's job.
+
+## Model policy
+
+Three tiers, chosen by what a mistake costs:
+
+- `BEST` (Claude Fable 5.1) for the work where a wrong number costs thousands —
+  reading drawings (A1, A2) and writing the client's quotation or contract
+  (A7). Always, never escalated to: a plausible wrong dimension passes every
+  validator, so "try cheap first" cannot protect this work.
+- `CHEAP` (Claude Haiku 4.5) for everything else, at a tenth of the price.
+- `REASONING` (Claude Sonnet 5) as the automatic second try when the cheap
+  model's output fails to parse or validate — `ladder()` does this, so an
+  agent pays for the stronger model only on the calls that turned out hard.
 """
 
 from __future__ import annotations
@@ -18,14 +31,20 @@ from __future__ import annotations
 import json
 import re
 from pathlib import Path
-from typing import Any, Callable
+from typing import Any, Callable, Sequence
 
 # A model function takes (system_prompt, user_text) and returns raw text.
 ModelFn = Callable[[str, str], str]
 
-# Default model for every agent. Per-agent files may override via MODEL.
-# See docs: default to claude-opus-5 unless a specific agent needs otherwise.
-DEFAULT_MODEL = "claude-opus-5"
+CHEAP = "claude-haiku-4-5"
+REASONING = "claude-sonnet-5"
+BEST = "claude-fable-5-1"
+
+DEFAULT_MODEL = CHEAP
+
+
+class ModelRefused(RuntimeError):
+    """The model declined the request (stop_reason 'refusal') — not an empty answer."""
 
 
 def anthropic_model(
@@ -34,7 +53,7 @@ def anthropic_model(
     *,
     model: str = DEFAULT_MODEL,
     max_tokens: int = 16000,
-    effort: str | None = "high",
+    effort: str | None = None,
 ) -> str:
     """Call Claude and return the concatenated text of the response.
 
@@ -60,21 +79,43 @@ def anthropic_model(
     def _call(kw: dict[str, Any]):
         if kw.get("max_tokens", 0) > 20000:
             with client.messages.stream(**kw) as stream:
-                text = "".join(stream.text_stream)
-            return text
-        resp = client.messages.create(**kw)
+                resp = stream.get_final_message()
+        else:
+            resp = client.messages.create(**kw)
+        if resp.stop_reason == "refusal":
+            details = getattr(resp, "stop_details", None)
+            raise ModelRefused(f"{model} refused: {getattr(details, 'category', None)}")
         return "".join(b.text for b in resp.content if b.type == "text")
 
     try:
         return _call(kwargs)
     except anthropic.BadRequestError as exc:
-        # Cheaper/faster models (e.g. Haiku) don't accept output_config effort.
-        # Retry once without it rather than forcing every caller to know which
-        # models support the knob — the text-in/records-out contract is unchanged.
+        # The cheap tier does not accept output_config effort. Retry once
+        # without it rather than forcing every caller to know which models
+        # support the knob — the text-in/records-out contract is unchanged.
         if "output_config" in kwargs and "effort" in str(exc).lower():
             kwargs.pop("output_config", None)
             return _call(kwargs)
         raise
+
+
+def tiered(model: str, *, effort: str | None = None, max_tokens: int = 16000) -> ModelFn:
+    """A ModelFn bound to one tier."""
+    return lambda system, user: anthropic_model(
+        system, user, model=model, max_tokens=max_tokens, effort=effort)
+
+
+def ladder(*, max_tokens: int = 16000) -> list[ModelFn]:
+    """Cheap first; the reasoning tier only if the cheap output is unusable."""
+    return [
+        tiered(CHEAP, max_tokens=max_tokens),
+        tiered(REASONING, effort="medium", max_tokens=max_tokens),
+    ]
+
+
+def best(*, effort: str = "high", max_tokens: int = 16000) -> ModelFn:
+    """The strongest model, for work where a wrong number costs real money."""
+    return tiered(BEST, effort=effort, max_tokens=max_tokens)
 
 
 def extract_json(raw: str) -> Any:
@@ -118,16 +159,33 @@ def run_json_agent(
     prompt_path: str | Path,
     user_text: str,
     parse: Callable[[Any], Any],
-    model: ModelFn | None = None,
+    model: ModelFn | Sequence[ModelFn] | None = None,
 ) -> Any:
     """The shared agent loop: prompt in, validated structured output out.
 
     `parse` turns the raw JSON into the agent's typed Output and validates it,
-    raising if the model returned something malformed. `model` defaults to the
-    real Anthropic call but is injected in tests.
+    raising if the model returned something malformed. `model` is one function
+    (injected in tests) or a ladder of them: each is tried in turn, and the
+    next only runs if the previous answer failed to parse or validate. The
+    default ladder is cheap-then-reasoning.
     """
     system = Path(prompt_path).read_text(encoding="utf-8")
-    model = model or anthropic_model
-    raw = model(system, user_text)
-    data = extract_json(raw)
-    return parse(data)
+    models: Sequence[ModelFn]
+    if model is None:
+        models = ladder()
+    elif callable(model):
+        models = [model]
+    else:
+        models = list(model)
+    if not models:
+        raise ValueError("run_json_agent needs at least one model")
+
+    last: Exception | None = None
+    for fn in models:
+        raw = fn(system, user_text)
+        try:
+            return parse(extract_json(raw))
+        except ValueError as exc:
+            last = exc
+    assert last is not None
+    raise last

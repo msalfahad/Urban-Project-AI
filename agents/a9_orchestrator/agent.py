@@ -9,7 +9,6 @@ from agents.base import ModelFn, run_json_agent
 from .schema import Event, Routing
 
 PROMPT_PATH = Path(__file__).parent / "prompt.md"
-MODEL = "claude-opus-5"
 
 
 def run(payload: Event, model: ModelFn | None = None) -> Routing:

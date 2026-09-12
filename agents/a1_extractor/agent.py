@@ -8,11 +8,14 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from agents.base import ModelFn, run_json_agent
+from agents.base import ModelFn, best, run_json_agent
 from .schema import ExtractInput, ExtractOutput
 
 PROMPT_PATH = Path(__file__).parent / "prompt.md"
-MODEL = "claude-opus-5"  # drawing reading benefits from the strongest model
+
+# A misread dimension becomes a wrong quantity, a wrong price, a wrong order —
+# the strongest model at high effort, never the cheap ladder.
+DRAWING_MODEL = lambda: best(effort="xhigh")
 
 
 def run(payload: ExtractInput, drawing_text: str, model: ModelFn | None = None) -> ExtractOutput:
@@ -29,4 +32,4 @@ def run(payload: ExtractInput, drawing_text: str, model: ModelFn | None = None) 
         f"Trade in focus: {payload.trade or 'all'}\n\n"
         f"--- drawing content ---\n{drawing_text}\n"
     )
-    return run_json_agent(PROMPT_PATH, user, ExtractOutput.from_dict, model=model)
+    return run_json_agent(PROMPT_PATH, user, ExtractOutput.from_dict, model=model or DRAWING_MODEL())

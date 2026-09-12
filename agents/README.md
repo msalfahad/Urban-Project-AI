@@ -79,7 +79,9 @@ reply = run(Message("ابغى ابني بيت"))                    # live: need
 ```
 
 Live calls use the shared runner in `base.py`, which calls the Claude API
-(`claude-opus-5` by default; per-agent `MODEL`/`EFFORT` constants tune cost).
+(Haiku first, Sonnet automatically if the cheap answer fails validation; A1, A2
+and A7 are pinned to Fable because a wrong number there costs real money — see
+the model policy in `base.py`).
 Credentials come from the environment (`ANTHROPIC_API_KEY` or an `ant auth
 login` profile) — never hard-coded.
 

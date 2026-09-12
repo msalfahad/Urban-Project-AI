@@ -22,7 +22,7 @@ from agents.base import anthropic_model
 from .bridge import handle_inbound
 
 # Cheap, fast model for high-volume chat (extraction/classification tier).
-DEFAULT_MODEL = os.environ.get("WHATSAPP_MODEL", "claude-haiku-4-5-20251001")
+DEFAULT_MODEL = os.environ.get("WHATSAPP_MODEL", "claude-haiku-4-5")
 
 
 def _model(system: str, user: str) -> str:

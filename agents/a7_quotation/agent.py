@@ -11,19 +11,18 @@ import json
 from dataclasses import asdict
 from pathlib import Path
 
-from agents.base import ModelFn, anthropic_model, extract_json
+from agents.base import ModelFn, best, extract_json
 from .schema import DocumentInput, DocumentOutput
 
 HERE = Path(__file__).parent
 PROMPT_PATH = HERE / "prompt.md"
 CLAUSES_PATH = HERE / "references" / "clauses_ar.md"
 EXAMPLES_DIR = HERE / "references" / "examples"
-MODEL = "claude-opus-5"
-EFFORT = "medium"
 
 
 def _default_model(system: str, user: str) -> str:
-    return anthropic_model(system, user, model=MODEL, effort=EFFORT, max_tokens=24000)
+    # The client signs this. Strongest model; the figures are code's anyway.
+    return best(effort="high", max_tokens=24000)(system, user)
 
 
 def system_prompt() -> str:

@@ -24,7 +24,7 @@ Firebase/Google Cloud project your data already lives in.
 | `ANTHROPIC_API_KEY` | model key — store in Secret Manager, not in code |
 | `TWILIO_AUTH_TOKEN` | account Auth Token — verifies inbound signatures |
 | `WHATSAPP_PUBLIC_URL` | the exact public URL Twilio POSTs to (used in the signature) |
-| `WHATSAPP_MODEL` | optional model id (default `claude-haiku-4-5-20251001`, the cheap tier) |
+| `WHATSAPP_MODEL` | optional model id (default `claude-haiku-4-5`, the cheap tier) |
 | `WHATSAPP_VALIDATE` | `0` disables signature checks — local testing only |
 
 > Sending replies via TwiML uses your API key implicitly through Twilio; if you later

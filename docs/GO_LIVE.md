@@ -31,7 +31,14 @@ the live test used (`likes, comments, saves, shares, reach, posted`).
 6. **Permits & Documents** — licence/insurance/permit expiry; municipality file per project.
 7. **Workforce** — contractor scorecards, attendance from daily reports, pay-vs-progress.
 
-## Model policy in force
-Haiku 4.5 for chat/classification (A3, A4, A5, A9, A10, A11, A12, A14, A16); Sonnet 5 for
-reasoning (A6, A8, A13, A15); Opus 5 for drawing vision (A1, A2) and the client-facing
-quotation (A7). The costing engine never calls a model.
+## Model policy in force (`agents/base.py`)
+Chosen by what a mistake costs, not by how clever the task sounds:
+
+| Tier | Model | Used by | Why |
+|------|-------|---------|-----|
+| **BEST** | Claude Fable 5.1 | A1, A2 (drawings), A7 (quotation & contract) | A misread dimension or a wrong clause costs thousands. Always this model; never escalated *to*, because a plausible wrong number passes every validator. |
+| **CHEAP** | Claude Haiku 4.5 | every other agent, first try | A tenth of the price. Chat, captions, summaries, routing, plans. |
+| **REASONING** | Claude Sonnet 5 | automatic second try | Only runs when the cheap answer fails to parse or validate (`ladder()`), so the stronger model is paid for on the calls that turned out hard. |
+
+The costing engine never calls a model. A refusal from any model raises
+`ModelRefused` rather than reading as an empty answer.

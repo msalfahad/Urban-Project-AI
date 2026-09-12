@@ -13,7 +13,7 @@ import anthropic
 from agents.base import anthropic_model
 SP=os.environ.get("URBAN_SCRATCH","data/smoke")
 client=anthropic.Anthropic()
-CHEAP="claude-haiku-4-5-20251001"; MID="claude-sonnet-5"; TOP="claude-opus-5"
+from agents.base import CHEAP, REASONING as MID, BEST as TOP
 def m(model,effort=None):
     return lambda s,u: anthropic_model(s,u,model=model,effort=effort)
 def vision(model, img_path):
@@ -74,12 +74,12 @@ step("a14",CHEAP,lambda: a14(IGAnalysisInput(period="last_30_days",account={"fol
 step("a16",CHEAP,lambda: a16(PostBrief(type="poll",topic="Which chalet façade style: modern white, stone, or wood accents?",goal="engagement + enquiries",cta="صوّت واكتب لنا",photo_refs=["alsenan_render.jpg"]),model=m(CHEAP)))
 # reasoning
 step("a6",MID,lambda: a6(PlanInput(contract_form="black_structure",area_m2=420,floors=2,pool=True,lift=False,notes="Khairan chalet, 17 footings, pool pit, dome roof detail"),model=m(MID,"medium")))
-step("a7",MID,lambda: a7(DocumentInput(kind="quotation",reference="UP/2026-9-001-R01",issued=_date(2026,9,12),
+step("a7",TOP,lambda: a7(DocumentInput(kind="quotation",reference="UP/2026-9-001-R01",issued=_date(2026,9,12),
    client=Party(name="فاطمة السنيان",title="السيدة"),
    project=ProjectFacts(name="شاليه السنيان",description="شاليه",location="الخيران",scopes=["black_structure","plumbing"],floors=["أرضي","أول"],built_area_m2=420),
    price_lines=[PriceLine("أعمال الهيكل الأسود",121626.0,"بالإضافة إلى المواد المدعومة")],
    owner_materials=[OwnerMaterial("حديد تسليح كويتي","30 طن")],
-   special_requests=["قبة خرسانية بالسطح حسب المنظور","مسبح مع غرفة ماكينات"]),model=m(MID,"medium")))
+   special_requests=["قبة خرسانية بالسطح حسب المنظور","مسبح مع غرفة ماكينات"]),model=m(TOP,"high")))
 step("a13",MID,lambda: a13(ContractInput(text=open(f"{SP}/Alsenan_Quotation_AR.md",encoding="utf-8").read()[:9000]),model=m(MID,"medium")))
 step("a8",MID,lambda: a8(BriefInput(period="weekly",snapshot={"projects":[{"name":"Alsenan Chalet","value_kwd":131221,"progress":0,"stage":"foundations"},{"name":"Fahad AlAsousi Apartment","value_kwd":19500,"progress":85,"remaining_kwd":2627},{"name":"Almasaad Villah","value_kwd":2773,"progress":0},{"name":"شاليه القديري","value_kwd":0,"progress":0,"stage":"planning"}],
    "quotes":[{"client":"Alsenan","total_kwd":121626,"status":"awaiting owner approval","open_items":4}],"leads":[{"source":"WhatsApp","summary":"Khairan chalet 500m2 2 floors pool"}],"alerts":["Firebase billing closed: project photos unavailable"]}),model=m(MID,"medium")))
