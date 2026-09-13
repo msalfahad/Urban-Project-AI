@@ -110,9 +110,13 @@ def test_space_function_carries_a_real_subtype():
 
 
 # ------------------------------------------ matcher safety (no substring mode)
-@pytest.mark.parametrize("generic", ["room", "hall", "area", "service", "غرفة", "صالة"])
+@pytest.mark.parametrize("generic", ["room", "hall", "area", "service", "غرفة"])
 def test_a_dangerous_generic_word_matches_nothing_on_its_own(generic):
-    """"room" sits inside BEDROOM, MAID_ROOM, IRON_ROOM and SERVICE_ROOM."""
+    """"room" sits inside BEDROOM, MAID_ROOM, IRON_ROOM and SERVICE_ROOM.
+
+    صالة is NOT in this list: it is a real room label, handled by an anchored
+    pattern rather than thrown away.
+    """
     from engine.trades import match_label
     assert match_label(generic).canonical_label == "UNKNOWN"
 
@@ -233,3 +237,54 @@ def test_those_same_words_still_resolve_as_a_whole_label(raw, expected):
     from engine.trades import match_label
     m = match_label(raw)
     assert m.canonical_label == expected and m.match_method == "EXACT_ALIAS"
+
+
+# ------------------------ صالة: a real label, matched only on the whole phrase
+@pytest.mark.parametrize("raw", ["صالة", "صاله", "صالة شقة 1", "صالة شقة 2",
+                                 "صالة شقة 12"])
+def test_sala_alone_or_with_a_unit_number_is_a_salon(raw):
+    from engine.trades import match_label
+    m = match_label(raw)
+    assert m.canonical_label == "SALON"
+    assert m.match_method in ("EXACT_ALIAS", "ANCHORED_PATTERN")
+
+
+def test_a_qualified_sala_is_not_a_salon():
+    """صالة رياضية is a gym. A qualifier can change the room entirely."""
+    from engine.trades import match_label
+    assert match_label("صالة رياضية").canonical_label != "SALON"
+    assert match_label("صالة رياضية").canonical_label == "UNKNOWN"
+
+
+def test_sala_taam_is_dining_not_salon():
+    from engine.trades import match_label
+    m = match_label("صالة طعام")
+    assert m.canonical_label == "DINING" and m.canonical_label != "SALON"
+
+
+def test_sala_istiqbal_is_not_forced_into_an_existing_label():
+    """No RECEPTION label exists, so this routes to review rather than guessing."""
+    from engine.trades import match_label
+    assert match_label("صالة استقبال").canonical_label == "UNKNOWN"
+
+
+def test_an_anchored_pattern_names_the_rule_that_matched():
+    from engine.trades import match_label
+    m = match_label("صالة شقة 1", source="PDF_TEXT")
+    assert m.matched_alias == "AR_SALA_APARTMENT_HALL"
+    assert m.input_text == "صالة شقة 1"        # raw label preserved exactly
+
+
+@pytest.mark.parametrize("raw,expected", [
+    ("IRON", "IRON_ROOM"), ("ROOF", "ROOF_AREA"), ("BATH", "BATHROOM"),
+])
+def test_a_bare_element_word_resolves_only_as_the_whole_label(raw, expected):
+    from engine.trades import match_label
+    assert match_label(raw).canonical_label == expected
+
+
+@pytest.mark.parametrize("raw", ["IRON RAILING", "ROOF DRAIN", "BATH TUB SCHEDULE",
+                                 "IRON MONGERY", "ROOF PARAPET"])
+def test_the_same_word_inside_a_phrase_is_never_a_room(raw):
+    from engine.trades import match_label
+    assert match_label(raw).canonical_label == "UNKNOWN"

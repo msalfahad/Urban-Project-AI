@@ -139,6 +139,26 @@ class LabelMatch:
         return self.canonical_label not in (UNKNOWN_LABEL, AMBIGUOUS_LABEL)
 
 
+@dataclass(frozen=True)
+class AnchoredPattern:
+    """A whole-label pattern, for stems whose meaning a qualifier can change.
+
+    صالة is a real room. صالة رياضية is a gym and صالة طعام is a dining hall. A
+    stem like that cannot be matched loosely, but throwing it away loses a label
+    the drawings actually use — so it is matched against the ENTIRE normalised
+    label and nothing less.
+    """
+
+    pattern: str
+    canonical_label: str
+    rule_id: str
+    language: str = ""
+
+    @property
+    def compiled(self):
+        return re.compile(self.pattern)
+
+
 @lru_cache(maxsize=1)
 def _aliases(path: str | None = None) -> tuple[tuple[Alias, ...], str]:
     data = json.loads(Path(path or ALIAS_PATH).read_text(encoding="utf-8"))
@@ -147,6 +167,13 @@ def _aliases(path: str | None = None) -> tuple[tuple[Alias, ...], str]:
         out.append(Alias(entry["alias"], entry["canonical_label"], entry["language"],
                          entry["match_mode"], entry.get("priority", 100)))
     return tuple(out), data["alias_version"]
+
+
+@lru_cache(maxsize=1)
+def _patterns(path: str | None = None) -> tuple[AnchoredPattern, ...]:
+    data = json.loads(Path(path or ALIAS_PATH).read_text(encoding="utf-8"))
+    return tuple(AnchoredPattern(p["pattern"], p["canonical_label"], p["rule_id"],
+                                 p.get("language", "")) for p in data.get("patterns", []))
 
 
 def alias_version() -> str:
@@ -180,6 +207,17 @@ def match_label(raw: str, *, source: str = "") -> LabelMatch:
     if len(exact) > 1:
         return LabelMatch(raw, norm, AMBIGUOUS_LABEL, "EXACT_ALIAS", "VERY_LOW",
                           source=source, candidates=tuple(sorted(exact)))
+
+    # Anchored patterns sit between exact and token matching: they are still
+    # whole-label matches, just ones that allow a controlled qualifier.
+    pat_hits = {p.canonical_label: p for p in _patterns() if p.compiled.match(norm)}
+    if len(pat_hits) == 1:
+        label, pat = next(iter(pat_hits.items()))
+        return LabelMatch(raw, norm, label, "ANCHORED_PATTERN", "HIGH",
+                          pat.rule_id, source)
+    if len(pat_hits) > 1:
+        return LabelMatch(raw, norm, AMBIGUOUS_LABEL, "ANCHORED_PATTERN", "VERY_LOW",
+                          source=source, candidates=tuple(sorted(pat_hits)))
 
     toks = _tokens(norm)
     hits: dict[str, Alias] = {}
