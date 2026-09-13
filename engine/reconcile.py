@@ -88,12 +88,27 @@ def sanity(variance: Decimal | None) -> str:
 
 @dataclass
 class Quantities:
-    """One space's numbers on one basis."""
+    """One space's numbers on one basis.
+
+    `basis` is not decoration. Comparing a clear-internal area against a
+    printed-dimension area and calling the difference an error is the mistake
+    this field exists to prevent.
+    """
 
     area_m2: Decimal | None = None
     perimeter_m: Decimal | None = None
     source: str = ""
+    basis: str = "UNKNOWN"
     note: str = ""
+
+    def __post_init__(self) -> None:
+        from engine.geometry import check_basis
+        check_basis(self.basis)
+
+    def comparable_with(self, other: "Quantities") -> bool:
+        """Two quantities on different bases are not directly comparable."""
+        return (self.basis == other.basis
+                and self.basis != "UNKNOWN")
 
 
 @dataclass

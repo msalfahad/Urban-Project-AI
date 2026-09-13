@@ -216,3 +216,32 @@ def test_choosing_between_nothing_raises():
     from engine.geometry import choose_geometry, GeometryError
     with pytest.raises(GeometryError, match="nothing to choose"):
         choose_geometry([])
+
+
+# ------------------------------------------- raster erosion correction
+def test_snapping_moves_region_edges_out_onto_the_wall_faces():
+    from engine.geometry import snap_to_wall_faces
+    v = [(100.0, 0.0, 300.0), (200.0, 0.0, 300.0)]     # left and right faces
+    h = [(50.0, 0.0, 300.0), (250.0, 0.0, 300.0)]      # top and bottom faces
+    # a region eroded 5 px inside each face
+    (x0, x1, y0, y1), complete = snap_to_wall_faces(105, 195, 55, 245, v, h)
+    assert (x0, x1, y0, y1) == (100.0, 200.0, 50.0, 250.0)
+    assert complete
+
+
+def test_an_edge_with_no_wall_face_keeps_its_raster_value_and_is_flagged():
+    from engine.geometry import snap_to_wall_faces
+    v = [(100.0, 0.0, 300.0)]                          # only the left face
+    h = [(50.0, 0.0, 300.0), (250.0, 0.0, 300.0)]
+    (x0, x1, _, _), complete = snap_to_wall_faces(105, 195, 55, 245, v, h)
+    assert x0 == 100.0 and x1 == 195      # right edge untouched
+    assert not complete
+
+
+def test_a_far_away_face_is_not_snapped_to():
+    """Snapping must correct erosion, never jump to the next room's wall."""
+    from engine.geometry import snap_to_wall_faces
+    v = [(0.0, 0.0, 300.0), (500.0, 0.0, 300.0)]
+    h = [(50.0, 0.0, 300.0), (250.0, 0.0, 300.0)]
+    (x0, x1, _, _), complete = snap_to_wall_faces(105, 195, 55, 245, v, h)
+    assert (x0, x1) == (105, 195) and not complete

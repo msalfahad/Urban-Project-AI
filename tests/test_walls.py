@@ -249,3 +249,53 @@ def test_a_short_dashed_run_is_not_a_boundary():
     px = D("10")
     dashes = [("H", 10.0, float(x), float(x + 10)) for x in range(0, 40, 20)]
     assert dashed_runs(dashes, px) == []
+
+
+# --------------------------------------------- walls versus fixtures
+def test_a_single_line_is_not_a_wall():
+    """The BTH-07 defect: a lone fixture line got a doorway inserted in it."""
+    from engine.walls import paired_wall_faces
+    px = D("10")                                   # 1 px = 10 mm
+    wall_a = ("V", 100.0, 0.0, 300.0)
+    wall_b = ("V", 110.0, 0.0, 300.0)              # its other face, 100 mm away
+    fixture = ("V", 200.0, 50.0, 140.0)            # a lone shower line
+    kept = paired_wall_faces([wall_a, wall_b, fixture], px)
+    assert wall_a in kept and wall_b in kept
+    assert fixture not in kept
+
+
+def test_faces_too_far_apart_are_not_one_wall():
+    from engine.walls import paired_wall_faces
+    px = D("10")
+    far = [("V", 0.0, 0.0, 300.0), ("V", 100.0, 0.0, 300.0)]   # 1 m apart
+    assert paired_wall_faces(far, px) == []
+
+
+def test_parallel_lines_that_do_not_overlap_are_not_one_wall():
+    from engine.walls import paired_wall_faces
+    px = D("10")
+    offset = [("V", 100.0, 0.0, 20.0), ("V", 110.0, 200.0, 300.0)]
+    assert paired_wall_faces(offset, px) == []
+
+
+def test_a_reconstructed_run_must_land_on_walls_at_both_ends():
+    """A threshold spans an opening; tub hatching ends in mid-air."""
+    from engine.walls import anchored_runs
+    px = D("10")
+    walls = [("V", 0.0, 0.0, 200.0), ("V", 100.0, 0.0, 200.0)]
+    threshold = ("H", 100.0, 0.0, 100.0)        # wall to wall
+    hatching = ("H", 50.0, 30.0, 70.0)          # floating inside the room
+    kept = anchored_runs([threshold, hatching], walls, px)
+    assert threshold in kept and hatching not in kept
+
+
+def test_a_fixture_near_a_real_wall_does_not_borrow_its_partner():
+    """x=2580 sat 227 mm from the BTH-06 partition and pretended to be a wall."""
+    from engine.walls import paired_wall_faces
+    px = D("10")
+    face_a = ("V", 260.0, 0.0, 300.0)          # partition face
+    face_b = ("V", 275.0, 0.0, 300.0)          # its other face, 150 mm away
+    fixture = ("V", 237.0, 10.0, 100.0)        # 230 mm from face_a — plausible, but
+    kept = paired_wall_faces([face_a, face_b, fixture], px)
+    assert face_a in kept and face_b in kept
+    assert fixture not in kept, "fixture borrowed the partition as its partner"

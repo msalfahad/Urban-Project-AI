@@ -428,3 +428,93 @@ def dashed_runs(segments: list[tuple[str, float, float, float]],
             if n >= 3 and run_end - run_start >= min_run:
                 out.append((ori, float(fixed), run_start, run_end))
     return out
+
+
+# -------------------------------------------------- telling walls from fixtures
+def paired_wall_faces(lines: list[tuple[str, float, float, float]], px_mm: Decimal,
+                      *, min_thickness_mm: int = 60, max_thickness_mm: int = 400,
+                      min_overlap_mm: int = 300) -> list[tuple[str, float, float, float]]:
+    """Keep only lines that are one face of a two-faced wall.
+
+    A wall on an architectural plan is drawn as a PAIR of parallel lines a wall
+    thickness apart. A shower tray, a door leaf, a wardrobe and a bath tub are
+    drawn as single lines. Nothing else about them is different — same weight,
+    same colour, often the same length — so pairing is what separates them.
+
+    This matters because an unpaired line can otherwise masquerade as a wall and
+    get a doorway inserted between its ends. On AR-00 that happened at x=2580
+    inside BTH-07: two 906 mm fixture lines with a door-width gap between them
+    were closed into a virtual wall, clipping 249 mm off the room and dropping
+    it 25.7% below its printed area.
+
+    `lines` and the return value are (orientation, fixed, start, end) in pixels.
+    """
+    lo = float(Decimal(min_thickness_mm) / px_mm)
+    hi = float(Decimal(max_thickness_mm) / px_mm)
+    need = float(Decimal(min_overlap_mm) / px_mm)
+    by_ori: dict[str, list[tuple[str, float, float, float]]] = {"H": [], "V": []}
+    for ln in lines:
+        by_ori[ln[0]].append(ln)
+
+    def nearest(group, ln):
+        """The closest parallel line that could be this one's other face."""
+        _, fixed, a, b = ln
+        best, best_gap = None, None
+        for cand in group:
+            _, f2, a2, b2 = cand
+            gap = abs(f2 - fixed)
+            if not (lo <= gap <= hi):
+                continue
+            if min(b, b2) - max(a, a2) < need:
+                continue
+            if best_gap is None or gap < best_gap:
+                best, best_gap = cand, gap
+        return best
+
+    kept: list[tuple[str, float, float, float]] = []
+    for group in by_ori.values():
+        near = {ln: nearest(group, ln) for ln in group}
+        for ln, partner in near.items():
+            if partner is None:
+                continue
+            # Mutual nearest. A fixture line sitting a plausible wall-thickness
+            # away from a real wall face would otherwise pair with it — which is
+            # exactly what x=2580 did with the BTH-06 partition at x=2601, 227 mm
+            # away. The partition's own nearest face is its other side at 151 mm,
+            # so the pairing is not mutual and the fixture is rejected.
+            back = near.get(partner)
+            if back is not None and abs(back[1] - ln[1]) < 1e-6:
+                kept.append(ln)
+    return kept
+
+
+def anchored_runs(runs: list[tuple[str, float, float, float]],
+                  walls: list[tuple[str, float, float, float]], px_mm: Decimal,
+                  *, tol_mm: int = 250) -> list[tuple[str, float, float, float]]:
+    """Keep only reconstructed runs whose BOTH ends land on wall geometry.
+
+    A threshold spans an opening, so it starts at one wall and finishes at
+    another. Hatching inside a shower tray starts and ends in mid-air. Without
+    this test the tub hatching in BTH-07 reconstructs into three "thresholds"
+    lying across the middle of the room.
+    """
+    tol = float(Decimal(tol_mm) / px_mm)
+    perp = {"H": "V", "V": "H"}
+    out = []
+    for ori, fixed, a, b in runs:
+        ends_hit = 0
+        for end in (a, b):
+            for o2, f2, a2, b2 in walls:
+                if o2 == perp[ori]:
+                    # a perpendicular wall crossing this run's end
+                    if abs(f2 - end) <= tol and a2 - tol <= fixed <= b2 + tol:
+                        ends_hit += 1
+                        break
+                else:
+                    # a collinear wall continuing past this run's end
+                    if abs(f2 - fixed) <= tol and (abs(b2 - end) <= tol or abs(a2 - end) <= tol):
+                        ends_hit += 1
+                        break
+        if ends_hit == 2:
+            out.append((ori, fixed, a, b))
+    return out

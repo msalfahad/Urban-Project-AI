@@ -38,6 +38,35 @@ class GeometryError(RuntimeError):
     """The geometry could not be established — never a reason to estimate."""
 
 
+# --------------------------------------------------------- measurement basis
+# A quantity without a basis is not a quantity, it is a number. 19.65 m2 of what
+# — the floor you can walk on, the slab, the space between wall centrelines?
+# Different trades need different answers from the same room: floor tile follows
+# the finish face, blockwork follows wall geometry, waterproofing follows the
+# treated surface. So every area and length carries the physical reference it
+# was taken from, and a converted value carries the basis it was converted TO.
+CLEAR_INTERNAL_FINISH_FACE = "CLEAR_INTERNAL_FINISH_FACE"
+STRUCTURAL_WALL_FACE = "STRUCTURAL_WALL_FACE"
+WALL_CENTERLINE = "WALL_CENTERLINE"
+EXTERNAL_FACE = "EXTERNAL_FACE"
+PRINTED_DIMENSION_REFERENCE = "PRINTED_DIMENSION_REFERENCE"
+SITE_MEASURED_FACE = "SITE_MEASURED_FACE"
+UNKNOWN_BASIS = "UNKNOWN"
+
+MEASUREMENT_BASES = frozenset({
+    CLEAR_INTERNAL_FINISH_FACE, STRUCTURAL_WALL_FACE, WALL_CENTERLINE,
+    EXTERNAL_FACE, PRINTED_DIMENSION_REFERENCE, SITE_MEASURED_FACE, UNKNOWN_BASIS,
+})
+
+
+def check_basis(basis: str) -> str:
+    if basis not in MEASUREMENT_BASES:
+        raise GeometryError(
+            f"unknown measurement basis {basis!r} — a quantity must say what "
+            f"physical reference it measures; known: {sorted(MEASUREMENT_BASES)}")
+    return basis
+
+
 @dataclass(frozen=True)
 class Region:
     """One enclosed area of floor, measured in the drawing's own units."""
@@ -49,6 +78,9 @@ class Region:
     centroid_px: tuple[int, int]
     width_mm: int
     height_mm: int
+    # Flood fill stops at the wall ink, so what it measures is the floor you can
+    # stand on — not the slab and not the centreline grid.
+    basis: str = CLEAR_INTERNAL_FINISH_FACE
 
     @property
     def is_rectangleish(self) -> Decimal:
@@ -316,3 +348,46 @@ def choose_geometry(candidates: list[GeometryCandidate], *,
         elif pct > review_pct and status == "PASS":
             status = "REVIEW"
     return GeometryChoice(chosen=best, rejected=tuple(rejected), status=status)
+
+
+# ------------------------------------------------- correcting raster erosion
+def snap_to_wall_faces(x0: int, x1: int, y0: int, y1: int,
+                       v_faces: list[tuple[float, float, float]],
+                       h_faces: list[tuple[float, float, float]],
+                       *, max_snap_px: float = 12.0
+                       ) -> tuple[tuple[float, float, float, float], bool]:
+    """Move a raster region's edges out onto the wall faces that bound it.
+
+    Flood fill stops at the OUTERMOST INK PIXEL of a wall line, so it loses the
+    line's stroke width plus its anti-aliased fringe on every side. Measured on
+    AR-00 that loss is exactly 5.0 px on one axis and 3.0 px on the other, in a
+    3250 mm kitchen and a 1500 mm bathroom alike — a constant, which is what
+    proves it is an artefact of the raster and not a property of the walls.
+
+    Over the same four rooms the vector wall faces sit within 8 mm of the
+    printed dimensions, so snapping the region out to those faces measures the
+    same thing the engineer dimensioned, from the stronger source.
+
+    Returns the snapped edges and whether all four were found. When an edge has
+    no bounding face the original is kept and the flag is False, because a
+    partly-snapped box is not a measurement anyone should quietly use.
+    """
+    def nearest(target: float, lo: float, hi: float,
+                faces: list[tuple[float, float, float]]) -> float | None:
+        best, dist = None, None
+        for pos, a, b in faces:
+            if a > hi or b < lo:
+                continue
+            d = abs(pos - target)
+            if d <= max_snap_px and (dist is None or d < dist):
+                best, dist = pos, d
+        return best
+
+    nx0 = nearest(x0, y0, y1, v_faces)
+    nx1 = nearest(x1, y0, y1, v_faces)
+    ny0 = nearest(y0, x0, x1, h_faces)
+    ny1 = nearest(y1, x0, x1, h_faces)
+    complete = None not in (nx0, nx1, ny0, ny1)
+    return ((nx0 if nx0 is not None else x0, nx1 if nx1 is not None else x1,
+             ny0 if ny0 is not None else y0, ny1 if ny1 is not None else y1),
+            complete)
