@@ -33,6 +33,27 @@ class RoomRule:
     wall_finish: str | None
     notes: str = ""
 
+    # Provenance. A trade decision without a traceable rule is an assumption
+    # wearing a number's clothes, so every applied rule can name itself.
+    rule_id: str = ""
+    source: str = ""                  # where the decision comes from
+    measurement_basis: str = ""       # which physical face the quantity follows
+
+    def applied(self, rule_set: "TradeRuleSet", decision: str) -> dict:
+        """A record of this rule being applied — what an audit can read back."""
+        return {
+            "rule_id": self.rule_id or f"{rule_set.trade}:{self.room_type}",
+            "project_id": rule_set.project,
+            "rule_set_version": rule_set.version,
+            "effective_from": rule_set.effective_from,
+            "source": self.source or rule_set.source,
+            "space_type": self.room_type,
+            "trade": rule_set.trade,
+            "decision": decision,
+            "measurement_basis": self.measurement_basis or rule_set.measurement_basis,
+            "height_m": str(rule_set.height_m),
+        }
+
 
 @dataclass
 class TradeRuleSet:
@@ -42,6 +63,11 @@ class TradeRuleSet:
     height_m: Decimal
     rules: dict[str, RoomRule] = field(default_factory=dict)
     project: str = ""
+    version: str = "1.0"
+    effective_from: str = ""
+    source: str = ""
+    measurement_basis: str = ""
+    height_source: str = ""           # never a default; always says where it came from
 
     def rule_for(self, room_type: str) -> RoomRule:
         key = room_type.strip().upper()
@@ -77,14 +103,38 @@ class TradeRuleSet:
                 floor_finish=v.get("floor_finish"),
                 wall_finish=v.get("wall_finish"),
                 notes=v.get("notes", ""),
+                rule_id=v.get("rule_id", ""),
+                source=v.get("source", ""),
+                measurement_basis=v.get("measurement_basis", ""),
             )
             for k, v in data.get("rules", {}).items()
         }
+        # A rule keyed on a word that is not a semantic label can never fire —
+        # it would sit in the file looking authoritative while every lookup for
+        # that space type raised "no rule". SALOON vs SALON cost exactly this.
+        from agents.a1_extractor.semantic import SEMANTIC_LABELS
+        unknown = sorted(set(rs) - SEMANTIC_LABELS)
+        if unknown:
+            raise TradeRuleError(
+                f"{data.get('trade')}: rule(s) for {unknown} are not semantic labels. "
+                "Trade rules are keyed on the canonical vocabulary so a spelling "
+                "difference cannot silently change a quantity.")
+        if not data.get("_height_source") and not data.get("height_source"):
+            raise TradeRuleError(
+                f"{data.get('trade')}: height {data.get('height_m')} has no stated "
+                "source. A trade height is a project decision, never a default — "
+                "the Test 1 takeoff applied 3.30 m to everything for exactly this "
+                "reason.")
         return cls(
             trade=data["trade"],
             height_m=Decimal(str(data["height_m"])),
             rules=rs,
             project=data.get("project", ""),
+            version=data.get("version", "1.0"),
+            effective_from=data.get("effective_from", ""),
+            source=data.get("source", ""),
+            measurement_basis=data.get("measurement_basis", ""),
+            height_source=data.get("_height_source", data.get("height_source", "")),
         )
 
     @classmethod

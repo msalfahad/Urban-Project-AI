@@ -1,0 +1,74 @@
+{
+ "project": "23010 Adailiya - Private Villa",
+ "trade": "plaster",
+ "height_m": "3.20",
+ "rules": {
+  "BEDROOM": {
+   "floor_finish": null,
+   "wall_finish": "plaster"
+  },
+  "SALON": {
+   "floor_finish": null,
+   "wall_finish": "plaster"
+  },
+  "DINING": {
+   "floor_finish": null,
+   "wall_finish": "plaster"
+  },
+  "CORRIDOR": {
+   "floor_finish": null,
+   "wall_finish": "plaster"
+  },
+  "DRESS": {
+   "floor_finish": null,
+   "wall_finish": "plaster"
+  },
+  "STORE": {
+   "floor_finish": null,
+   "wall_finish": "plaster"
+  },
+  "MAID_ROOM": {
+   "floor_finish": null,
+   "wall_finish": "plaster"
+  },
+  "BATHROOM": {
+   "floor_finish": null,
+   "wall_finish": null,
+   "notes": "tiled full height; no plaster finish coat"
+  },
+  "WASHROOM": {
+   "floor_finish": null,
+   "wall_finish": null
+  },
+  "IRON_ROOM": {
+   "floor_finish": null,
+   "wall_finish": null
+  },
+  "KITCHEN": {
+   "floor_finish": null,
+   "wall_finish": null,
+   "notes": "PROJECT-DEFINED"
+  },
+  "TERRACE": {
+   "floor_finish": null,
+   "wall_finish": null
+  },
+  "STAIR": {
+   "floor_finish": null,
+   "wall_finish": "plaster"
+  },
+  "LIFT_SHAFT": {
+   "floor_finish": null,
+   "wall_finish": null
+  },
+  "SHAFT": {
+   "floor_finish": null,
+   "wall_finish": null
+  }
+ },
+ "version": "1.0",
+ "effective_from": "2026-09-13",
+ "source": "Urban Projects owner rule, project 23010",
+ "measurement_basis": "CLEAR_INTERNAL_FINISH_FACE",
+ "_height_source": "Owner rule, Urban Projects. Distinct from the ceramic height by design."
+}
