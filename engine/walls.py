@@ -281,6 +281,17 @@ def space_walls(space_id: str, labels: np.ndarray, region_id: int,
         def look(arr, step=1):
             return np.roll(np.roll(arr, -dy * step, 0), -dx * step, 1)
 
+        def peek(arr, rc, step):
+            """`look(arr, step)[rc]` for a single cell, without rolling the array.
+
+            The march below reads one pixel at a time, up to ~55 times per
+            segment. Rolling a 17-megapixel label map to read one value made a
+            real sheet take hours; the same value is two index arithmetic
+            operations. Modulo keeps `roll`'s wrap-around semantics identical.
+            """
+            h, w = arr.shape
+            return arr[(rc[0] + dy * step) % h, (rc[1] + dx * step) % w]
+
         edge = R & ~look(R)                  # cells of R whose neighbour leaves R
         far_wall, far_bridge, far_lab = look(wall), look(bridges), look(labels)
 
@@ -315,8 +326,8 @@ def space_walls(space_id: str, labels: np.ndarray, region_id: int,
                     reach = max(2, int(Decimal(600) / px_mm))
                     beyond_id = None
                     for step in range(1, reach + 1):
-                        v = int(look(labels, step)[mid_rc])
-                        if not look(wall, step)[mid_rc]:
+                        v = int(peek(labels, mid_rc, step))
+                        if not peek(wall, mid_rc, step):
                             beyond_id = v
                             break
                     if beyond_id == outside_id:

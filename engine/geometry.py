@@ -30,6 +30,7 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Iterable
+from pathlib import Path
 
 import numpy as np
 
@@ -255,6 +256,75 @@ class VectorPdfSource:
             ))
         out.sort(key=lambda r: -r.area_m2)
         return out
+
+    def segmentation(self, page: int = 0, *, drawing_id: str = "",
+                     revision: str = "") -> "Segmentation":
+        """The same label map `regions()` builds, exposed so E25 can use it.
+
+        Identical inputs and identical thresholds, so a segmentation and the
+        region list from the same source describe the same pixels. The outside
+        is identified by reading the label at the sheet corner rather than by
+        assuming the largest region: on a plan with a big open terrace the
+        largest free region is not always the paper.
+        """
+        import hashlib
+
+        img = self._render(page)
+        free = img > self.ink_threshold
+        lab = label_regions(free)
+        wall = ~free
+        outside = int(lab[0, 0])
+        for a in (lab, wall):
+            a.setflags(write=False)
+        return Segmentation(
+            labels=lab, wall_mask=wall, px_mm=self.px_mm, outside_id=outside,
+            drawing_id=drawing_id, revision=revision, source_path=self.path,
+            source_sha256=hashlib.sha256(
+                Path(self.path).read_bytes()).hexdigest(),
+            dpi=self.dpi, ink_threshold=self.ink_threshold,
+        )
+
+
+@dataclass(frozen=True)
+class Segmentation:
+    """The label map and ink mask a render produced, handed out read-only.
+
+    `regions()` computed both of these and threw them away, which is why E25's
+    per-space wall model — which has existed and been tested for months — had
+    never once run on a real drawing. The only thing missing was a way to reach
+    them.
+
+    The arrays are frozen with `setflags(write=False)`. A downstream module that
+    could edit the label map could move a wall without anything recording that it
+    had, and the whole provenance chain would still look intact.
+    """
+
+    labels: "np.ndarray"              # region id per pixel; 0 is ink
+    wall_mask: "np.ndarray"           # True where the sheet has ink
+    px_mm: Decimal
+    outside_id: int                   # the region the paper margin belongs to
+    drawing_id: str = ""
+    revision: str = ""
+    source_path: str = ""
+    source_sha256: str = ""
+    dpi: int = 300
+    ink_threshold: int = 200
+
+    @property
+    def shape(self) -> tuple[int, int]:
+        return self.labels.shape
+
+    def region_ids(self) -> list[int]:
+        return [int(i) for i in np.unique(self.labels) if i != 0]
+
+    def provenance(self) -> dict:
+        return {
+            "source": self.source_path, "sha256": self.source_sha256,
+            "drawing_id": self.drawing_id, "revision": self.revision,
+            "dpi": self.dpi, "ink_threshold": self.ink_threshold,
+            "px_mm": str(self.px_mm), "outside_id": self.outside_id,
+            "shape": list(self.shape),
+        }
 
 
 class DxfSource:
