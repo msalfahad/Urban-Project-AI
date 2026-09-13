@@ -51,6 +51,14 @@ OPEN_TRANSITION = "OPEN_TRANSITION"
 VALIDATED = "VALIDATED"
 UNRESOLVED = "UNRESOLVED"
 
+# Which side of the building a run is on. UNRESOLVED is a real answer and the
+# default one: before border connectivity was used, every AR-00 segment came back
+# INTERNAL because the march landed in a dimension-line sliver that was neither a
+# known room nor the corner pixel's region. "Not proven outside" is not "inside".
+INTERNAL = "INTERNAL"
+EXTERNAL_FACE = "EXTERNAL"
+CLASSIFICATION_UNRESOLVED = "EXTERNAL_CLASSIFICATION_UNRESOLVED"
+
 
 class WallError(RuntimeError):
     """A boundary could not be established — flagged, never invented."""
@@ -84,7 +92,8 @@ class WallSegment:
     length_mm: int
     far_side: str                  # WALL / OPENING / OPEN / EXTERNAL
     adjoining_space: str | None
-    classification: str            # INTERNAL / EXTERNAL
+    classification: str            # INTERNAL / EXTERNAL / ..._UNRESOLVED
+    classification_basis: str = ""  # how that was established, in words
     opening_ids: tuple[str, ...] = ()
     source_drawing: str = ""
     source_revision: str = ""
@@ -254,8 +263,9 @@ def _runs(cells: np.ndarray, horizontal: bool) -> list[tuple[int, int, int]]:
 
 def space_walls(space_id: str, labels: np.ndarray, region_id: int,
                 wall: np.ndarray, bridges: np.ndarray, px_mm: Decimal,
-                outside_id: int | None = None, *, drawing: str = "",
-                revision: str = "", id_to_space: dict[int, str] | None = None,
+                outside_id: "int | set[int] | frozenset[int] | None" = None, *,
+                drawing: str = "", revision: str = "",
+                id_to_space: dict[int, str] | None = None,
                 min_run_mm: int = 100, max_opening_mm: int = 0,
                 fill_region: bool = True) -> SpaceWalls:
     """Decompose one space's boundary into wall segments with provenance.
@@ -265,6 +275,10 @@ def space_walls(space_id: str, labels: np.ndarray, region_id: int,
     around every WC and glyph and the perimeter roughly doubles — measuring the
     furniture, not the room. Turn it off only when the holes ARE the subject.
     """
+    outside_ids: frozenset[int] = frozenset()
+    if outside_id is not None:
+        outside_ids = frozenset({outside_id} if isinstance(outside_id, int)
+                                else outside_id)
     R = labels == region_id
     if not R.any():
         raise WallError(f"{space_id}: region {region_id} is not in the label map")
@@ -282,15 +296,23 @@ def space_walls(space_id: str, labels: np.ndarray, region_id: int,
             return np.roll(np.roll(arr, -dy * step, 0), -dx * step, 1)
 
         def peek(arr, rc, step):
-            """`look(arr, step)[rc]` for a single cell, without rolling the array.
+            """One cell `step` away along this side, or None past the sheet edge.
 
             The march below reads one pixel at a time, up to ~55 times per
             segment. Rolling a 17-megapixel label map to read one value made a
-            real sheet take hours; the same value is two index arithmetic
-            operations. Modulo keeps `roll`'s wrap-around semantics identical.
+            real sheet take hours; the same value is two index operations.
+
+            It deliberately does NOT reproduce `np.roll`'s wrap-around. Wrapping
+            was an artefact of reaching for roll, not a decision: a march that
+            runs off the edge of the drawing would reappear on the far side and
+            report whatever room happens to sit there. Off the sheet is None, and
+            the caller treats that as unresolved.
             """
+            y, x = rc[0] + dy * step, rc[1] + dx * step
             h, w = arr.shape
-            return arr[(rc[0] + dy * step) % h, (rc[1] + dx * step) % w]
+            if not (0 <= y < h and 0 <= x < w):
+                return None
+            return arr[y, x]
 
         edge = R & ~look(R)                  # cells of R whose neighbour leaves R
         far_wall, far_bridge, far_lab = look(wall), look(bridges), look(labels)
@@ -315,25 +337,61 @@ def space_walls(space_id: str, labels: np.ndarray, region_id: int,
                     a, b = (fixed, s), (fixed, e)
 
                 adj = None
-                classification = "INTERNAL"
+                classification = CLASSIFICATION_UNRESOLVED
+                basis = "not established"
                 if kind == OPEN:
                     adj = id_to_space.get(int(far_lab[mid_rc]),
                                           f"region-{int(far_lab[mid_rc])}")
-                elif kind in (WALL, OPENING) and outside_id is not None:
-                    # march past the wall body; whatever space is on the other
-                    # side decides internal vs external. Never guessed from
-                    # position on the sheet.
+                    classification, basis = INTERNAL, "open transition into a space"
+                elif kind in (WALL, OPENING) and outside_ids:
+                    # march past the wall body; whatever the wall opens onto
+                    # decides the classification. Never guessed from position on
+                    # the sheet, and never defaulted to INTERNAL: a march that
+                    # lands somewhere unrecognised is unresolved, because "not
+                    # proven outside" and "inside" are different claims.
                     reach = max(2, int(Decimal(600) / px_mm))
                     beyond_id = None
+                    off_sheet = False
+                    crossed: list[int] = []
                     for step in range(1, reach + 1):
-                        v = int(peek(labels, mid_rc, step))
-                        if not peek(wall, mid_rc, step):
+                        lab_v = peek(labels, mid_rc, step)
+                        if lab_v is None:
+                            off_sheet = True
+                            break
+                        if peek(wall, mid_rc, step):
+                            continue                     # still in the wall body
+                        v = int(lab_v)
+                        # A double-line wall has a cavity between its two faces,
+                        # and the cavity is not ink. Stopping at the first
+                        # non-ink pixel stops INSIDE the wall: on AR-00 that is
+                        # where 542 of 703 segments ended, in regions the space
+                        # map itself lists as wall cavities. Keep going until the
+                        # march reaches something that is either a known space or
+                        # the sheet border; anything else is still wall.
+                        if v in outside_ids or v in id_to_space:
                             beyond_id = v
                             break
-                    if beyond_id == outside_id:
-                        classification = "EXTERNAL"
-                    elif beyond_id is not None and beyond_id != 0:
-                        adj = id_to_space.get(beyond_id, f"region-{beyond_id}")
+                        if v != 0:
+                            crossed.append(v)
+                    if off_sheet:
+                        basis = ("the march ran off the edge of the sheet before "
+                                 "crossing the wall body")
+                    elif beyond_id is None:
+                        basis = (f"nothing recognised within {reach} px (~600 mm): "
+                                 f"crossed {len(crossed)} unmapped region(s) and "
+                                 f"reached neither a known space nor the border")
+                    else:
+                        through = (f" through {len(crossed)} cavity region(s) "
+                                   f"{crossed[:3]}" if crossed else "")
+                        if beyond_id in outside_ids:
+                            classification = EXTERNAL_FACE
+                            basis = (f"beyond the wall{through} is region "
+                                     f"{beyond_id}, which connects to the sheet "
+                                     f"border")
+                        else:
+                            classification = INTERNAL
+                            adj = id_to_space[beyond_id]
+                            basis = f"beyond the wall{through} is {adj}, a mapped space"
 
                 ids: tuple[str, ...] = ()
                 if kind == OPENING:
@@ -349,7 +407,7 @@ def space_walls(space_id: str, labels: np.ndarray, region_id: int,
                     wall_id=f"{space_id}-{side}{len(sw.segments) + 1:02d}",
                     space_id=space_id, side=side, start_px=a, end_px=b,
                     length_mm=length, far_side=kind, adjoining_space=adj,
-                    classification=classification,
+                    classification=classification, classification_basis=basis,
                     opening_ids=ids, source_drawing=drawing, source_revision=revision,
                     validation=VALIDATED if kind != OPEN else UNRESOLVED,
                     note="" if kind != OPEN else "open-plan transition — not a wall",

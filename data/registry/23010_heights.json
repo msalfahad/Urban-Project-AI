@@ -1,0 +1,22 @@
+{
+  "project": "23010",
+  "version": "1.0",
+  "effective_from": "2026-09-13",
+  "_note": "Only heights with a real citation appear here. A height that is absent is HEIGHT_REQUIRED, which routes to the owner. It is never filled in with a plausible number to remove the warning.",
+  "heights": {
+    "ceramic_height": {
+      "height_id": "23010:ceramic_height",
+      "value_m": "3.00",
+      "source_type": "OWNER_RULE",
+      "source": "Owner rule for Project 23010, recorded in data/trade_rules/23010_ceramic.json. NOT read from a section on AR-00.",
+      "validation_status": "VALIDATED"
+    },
+    "plaster_height": {
+      "height_id": "23010:plaster_height",
+      "value_m": "3.20",
+      "source_type": "OWNER_RULE",
+      "source": "Owner rule for Project 23010, recorded in data/trade_rules/23010_plaster.json. NOT read from a section on AR-00.",
+      "validation_status": "VALIDATED"
+    }
+  }
+}

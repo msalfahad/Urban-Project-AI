@@ -28,7 +28,8 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from decimal import Decimal
 
-from engine.walls import SpaceWalls, WallError, space_walls
+from engine.walls import (CLASSIFICATION_UNRESOLVED, EXTERNAL_FACE, INTERNAL,
+                          SpaceWalls, WallError, space_walls)
 
 # Why a space's wall model is or is not usable as a quantity input.
 VALIDATED = "VALIDATED"
@@ -103,6 +104,26 @@ class SpaceWallRecord:
     def segment_count(self) -> int:
         return len(self.walls.segments)
 
+    def _count(self, value: str) -> int:
+        return sum(1 for s in self.walls.segments if s.classification == value)
+
+    @property
+    def external_segments(self) -> int:
+        return self._count(EXTERNAL_FACE)
+
+    @property
+    def internal_segments(self) -> int:
+        return self._count(INTERNAL)
+
+    @property
+    def unclassified_segments(self) -> int:
+        return self._count(CLASSIFICATION_UNRESOLVED)
+
+    @property
+    def external_length_m(self) -> Decimal:
+        return sum((s.length_m for s in self.walls.segments
+                    if s.classification == EXTERNAL_FACE), Decimal(0))
+
     @property
     def releasable(self) -> bool:
         """Only a closed, validated boundary may feed a PERIMETER quantity."""
@@ -146,6 +167,9 @@ class SpaceWallRecord:
             "status_reason": self.status_reason,
             "opening_status": self.opening_status,
             "classification_status": self.classification_status,
+            "external_segments": self.external_segments,
+            "internal_segments": self.internal_segments,
+            "unclassified_segments": self.unclassified_segments,
             "geometry_source": self.geometry_source,
             "measurement_basis": self.measurement_basis,
             "drawing_id": self.drawing_id,
@@ -161,6 +185,7 @@ class SpaceWallRecord:
             "side": s.side,
             "boundary_type": s.segment_type,
             "classification": s.classification,
+            "classification_basis": s.classification_basis,
             "start_px": list(s.start_px), "end_px": list(s.end_px),
             "start_mm": [int(Decimal(s.start_px[0]) * self.px_mm),
                          int(Decimal(s.start_px[1]) * self.px_mm)],
@@ -243,7 +268,7 @@ def run_wall_model(seg, space_regions: dict[str, int], *,
         try:
             sw = space_walls(
                 space_id, seg.labels, int(region_id), seg.wall_mask, bridges,
-                seg.px_mm, outside_id=seg.outside_id,
+                seg.px_mm, outside_id=(seg.outside_ids or seg.outside_id),
                 drawing=seg.drawing_id, revision=seg.revision,
                 id_to_space=id_to_space, min_run_mm=min_run_mm,
                 max_opening_mm=max_opening_mm)
@@ -277,14 +302,17 @@ def run_wall_model(seg, space_regions: dict[str, int], *,
                 "opening detection ran and found none — possible for an interior "
                 "space, but unverified")
 
-        externals = sum(1 for s in sw.segments if s.classification == "EXTERNAL")
-        if externals:
+        unresolved_cl = [s for s in sw.segments
+                         if s.classification == CLASSIFICATION_UNRESOLVED]
+        if not sw.segments:
+            cl_status, cl_reason = UNRESOLVED, "no segments"
+        elif not unresolved_cl:
             cl_status, cl_reason = VALIDATED, ""
         else:
-            cl_status, cl_reason = UNRESOLVED, (
-                "no segment resolved to EXTERNAL: the march past the wall body "
-                "never reached the region identified as outside. Internal/external "
-                "is therefore a default here, not a measurement.")
+            cl_status, cl_reason = BOUNDED_ERROR, (
+                f"{len(unresolved_cl)} of {len(sw.segments)} segments could not be "
+                "classified internal or external. Those are unresolved, not "
+                "assumed internal.")
 
         result.records.append(SpaceWallRecord(
             space_id=space_id, region_id=int(region_id), walls=sw,

@@ -231,16 +231,53 @@ def test_masonry_is_held_when_no_opening_detection_ran():
     assert "by default" in rec.opening_status_reason
 
 
-def test_an_external_split_is_held_when_nothing_resolved_to_external():
+def test_an_external_split_is_held_when_a_segment_cannot_be_classified():
+    """"Not proven outside" and "inside" are different claims."""
     g = np.zeros((7, 7), np.int32)
     g[2:5, 2:5] = 2                       # one room, no reachable outside
     wall = ~(g > 0)
     for a in (g, wall):
         a.setflags(write=False)
-    seg = Segmentation(labels=g, wall_mask=wall, px_mm=PX, outside_id=99)
+    seg = Segmentation(labels=g, wall_mask=wall, px_mm=PX, outside_id=99,
+                       outside_ids=frozenset({99}))
     rec = run_wall_model(seg, {"ROOM": 2}).by_id()["ROOM"]
     ok, why = rec.releasable_for("EXTERNAL_SPLIT")
-    assert not ok and "never reached the region identified as outside" in why
+    assert not ok and "unresolved, not" in why
+    assert rec.unclassified_segments == rec.segment_count
+    assert rec.internal_segments == 0
+
+
+def test_a_segment_is_never_classified_internal_merely_by_falling_through():
+    """Every one of AR-00's 703 segments came back INTERNAL this way."""
+    from engine.walls import CLASSIFICATION_UNRESOLVED
+    g = np.zeros((7, 7), np.int32)
+    g[2:5, 2:5] = 2
+    wall = ~(g > 0)
+    for a in (g, wall):
+        a.setflags(write=False)
+    seg = Segmentation(labels=g, wall_mask=wall, px_mm=PX, outside_id=99,
+                       outside_ids=frozenset({99}))
+    rec = run_wall_model(seg, {"ROOM": 2}).by_id()["ROOM"]
+    for s in rec.walls.segments:
+        assert s.classification == CLASSIFICATION_UNRESOLVED
+        assert s.classification_basis and s.classification_basis != "not established"
+
+
+def test_the_outside_set_is_border_connectivity_not_one_corner_pixel():
+    from engine.geometry import outside_region_ids
+    g = np.zeros((7, 9), np.int32)
+    g[1:6, 1:8] = 5
+    g[3, 4] = 7                      # an island enclosed by the room
+    g[0, :] = 1; g[-1, :] = 1; g[:, 0] = 2; g[:, -1] = 1
+    ids = outside_region_ids(g)
+    assert ids == frozenset({1, 2})  # two margin regions, both border-connected
+    assert 7 not in ids              # an enclosed island is never outside
+
+
+def test_an_external_face_names_the_region_that_reaches_the_border():
+    rec = run_wall_model(toy(), SPACES).by_id()["LEFT"]
+    ext = [s for s in rec.walls.segments if s.classification == "EXTERNAL"]
+    assert ext and "connects to the sheet border" in ext[0].classification_basis
 
 
 def test_an_unknown_use_is_refused_rather_than_defaulting_to_allowed():

@@ -274,15 +274,38 @@ class VectorPdfSource:
         lab = label_regions(free)
         wall = ~free
         outside = int(lab[0, 0])
+        outside_ids = outside_region_ids(lab)
         for a in (lab, wall):
             a.setflags(write=False)
         return Segmentation(
             labels=lab, wall_mask=wall, px_mm=self.px_mm, outside_id=outside,
+            outside_ids=outside_ids,
             drawing_id=drawing_id, revision=revision, source_path=self.path,
             source_sha256=hashlib.sha256(
                 Path(self.path).read_bytes()).hexdigest(),
             dpi=self.dpi, ink_threshold=self.ink_threshold,
         )
+
+
+def outside_region_ids(labels: "np.ndarray") -> frozenset[int]:
+    """Free regions that touch the sheet border — the paper, not the building.
+
+    Reading one corner pixel was not enough. On a real sheet the space between
+    the building and the paper margin is carved up by dimension lines, hatching
+    and the title block, so a wall's outward march lands in one of those slivers
+    rather than in the region the corner happens to sit in. Every one of AR-00's
+    703 traced segments came back INTERNAL because of it.
+
+    Connectivity to the border is the honest test: an enclosed courtyard never
+    touches the border, and the paper always does. What this deliberately does
+    NOT do is treat "not a known room" as "outside" — an annotation island in the
+    middle of the sheet touches nothing, and the caller is expected to report
+    that as unresolved rather than guess.
+    """
+    border = np.concatenate([
+        labels[0, :].ravel(), labels[-1, :].ravel(),
+        labels[:, 0].ravel(), labels[:, -1].ravel()])
+    return frozenset(int(i) for i in np.unique(border) if i != 0)
 
 
 @dataclass(frozen=True)
@@ -302,7 +325,11 @@ class Segmentation:
     labels: "np.ndarray"              # region id per pixel; 0 is ink
     wall_mask: "np.ndarray"           # True where the sheet has ink
     px_mm: Decimal
-    outside_id: int                   # the region the paper margin belongs to
+    outside_id: int                   # the region the sheet corner sits in
+    # Every region touching the sheet border. The corner is one of them and is
+    # kept for callers written before this existed, but classification uses the
+    # whole set: the margin is not one region on a dimensioned sheet.
+    outside_ids: frozenset = frozenset()
     drawing_id: str = ""
     revision: str = ""
     source_path: str = ""
@@ -323,6 +350,8 @@ class Segmentation:
             "drawing_id": self.drawing_id, "revision": self.revision,
             "dpi": self.dpi, "ink_threshold": self.ink_threshold,
             "px_mm": str(self.px_mm), "outside_id": self.outside_id,
+            "outside_ids": sorted(self.outside_ids),
+            "outside_basis": "free regions connected to the sheet border",
             "shape": list(self.shape),
         }
 
