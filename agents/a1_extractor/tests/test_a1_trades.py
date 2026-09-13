@@ -197,3 +197,39 @@ def test_an_unwired_trade_never_silently_becomes_a_default():
                      floor_area_m2=D("4.5"))
     with pytest.raises(RuleEngineNotAvailable):
         floor_quantity("23010", sp, stub)
+
+
+def test_two_canonical_labels_matching_is_ambiguous_not_a_coin_flip():
+    """The first match is never simply taken."""
+    from engine.trades import Alias, match_label
+    import engine.trades as T
+    original = T._aliases.__wrapped__
+    fake = ((Alias("زاوية", "STORE", "ar", "TOKEN", 10),
+             Alias("زاوية", "SERVICE_ROOM", "ar", "TOKEN", 10)), "test")
+    T._aliases.cache_clear()
+    T._aliases = lambda path=None: fake        # type: ignore[assignment]
+    try:
+        m = match_label("زاوية")
+        assert m.canonical_label == "AMBIGUOUS"
+        assert set(m.candidates) == {"STORE", "SERVICE_ROOM"}
+        assert not m.resolved
+    finally:
+        T._aliases = original                  # type: ignore[assignment]
+        T._aliases = __import__("functools").lru_cache(maxsize=1)(original)
+        T._aliases.cache_clear()
+
+
+@pytest.mark.parametrize("raw", ["IRON RAILING", "ROOF DRAIN", "BATH TUB SCHEDULE"])
+def test_a_short_english_word_naming_a_material_is_not_a_room(raw):
+    """"iron" is a room only as the whole label, never as a loose token."""
+    from engine.trades import match_label
+    assert match_label(raw).canonical_label == "UNKNOWN"
+
+
+@pytest.mark.parametrize("raw,expected", [
+    ("iron", "IRON_ROOM"), ("bath", "BATHROOM"), ("store", "STORE"),
+])
+def test_those_same_words_still_resolve_as_a_whole_label(raw, expected):
+    from engine.trades import match_label
+    m = match_label(raw)
+    assert m.canonical_label == expected and m.match_method == "EXACT_ALIAS"

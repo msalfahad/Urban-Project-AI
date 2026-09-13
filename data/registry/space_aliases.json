@@ -1,6 +1,6 @@
 {
  "alias_version": "2.0",
- "note": "Canonical space aliases. Matching is normalise -> EXACT -> TOKEN/PHRASE, unique match required; two different canonical labels matching is AMBIGUOUS, zero is UNKNOWN. There is NO substring mode: 'room' sits inside BEDROOM, MAID_ROOM, IRON_ROOM and SERVICE_ROOM. The raw drawing label is never destroyed. EXACT means 'exactly and nothing else' and is reserved for the dangerous generics; every alias can still match a whole normalised string. A dangerous generic (room, hall, area, service, غرفة, صالة) is held as LEGACY_ONLY: it is recorded but can never classify a space alone. 'صالة طعام' still resolves, because the phrase carries the meaning the bare word does not.",
+ "note": "Canonical space aliases. Matching is normalise -> EXACT -> TOKEN/PHRASE, unique match required; two different canonical labels matching is AMBIGUOUS, zero is UNKNOWN. There is NO substring mode: 'room' sits inside BEDROOM, MAID_ROOM, IRON_ROOM and SERVICE_ROOM. The raw drawing label is never destroyed. EXACT means 'exactly and nothing else' and is reserved for the dangerous generics; every alias can still match a whole normalised string. A dangerous generic (room, hall, area, service, غرفة, صالة) is held as LEGACY_ONLY: it is recorded but can never classify a space alone. 'صالة طعام' still resolves, because the phrase carries the meaning the bare word does not. Short English words that name a material or element as well as a room (iron, roof, bath, shaft...) are EXACT: they resolve only as the whole label, so 'IRON RAILING' is not an iron room.",
  "dangerous_generics": [
   "room",
   "hall",
@@ -36,7 +36,7 @@
    "alias": "bed",
    "canonical_label": "BEDROOM",
    "language": "en",
-   "match_mode": "TOKEN",
+   "match_mode": "EXACT",
    "priority": 60
   },
   {
@@ -162,7 +162,7 @@
    "alias": "bath",
    "canonical_label": "BATHROOM",
    "language": "en",
-   "match_mode": "TOKEN",
+   "match_mode": "EXACT",
    "priority": 15
   },
   {
@@ -176,7 +176,7 @@
    "alias": "toilet",
    "canonical_label": "BATHROOM",
    "language": "en",
-   "match_mode": "TOKEN",
+   "match_mode": "EXACT",
    "priority": 20
   },
   {
@@ -211,7 +211,7 @@
    "alias": "wash",
    "canonical_label": "WASHROOM",
    "language": "en",
-   "match_mode": "TOKEN",
+   "match_mode": "EXACT",
    "priority": 15
   },
   {
@@ -246,7 +246,7 @@
    "alias": "dress",
    "canonical_label": "DRESSING_ROOM",
    "language": "en",
-   "match_mode": "TOKEN",
+   "match_mode": "EXACT",
    "priority": 15
   },
   {
@@ -274,7 +274,7 @@
    "alias": "closet",
    "canonical_label": "DRESSING_ROOM",
    "language": "en",
-   "match_mode": "TOKEN",
+   "match_mode": "EXACT",
    "priority": 20
   },
   {
@@ -288,21 +288,21 @@
    "alias": "iron",
    "canonical_label": "IRON_ROOM",
    "language": "en",
-   "match_mode": "TOKEN",
+   "match_mode": "EXACT",
    "priority": 15
   },
   {
    "alias": "ironing",
    "canonical_label": "IRON_ROOM",
    "language": "en",
-   "match_mode": "TOKEN",
+   "match_mode": "EXACT",
    "priority": 15
   },
   {
    "alias": "utility",
    "canonical_label": "IRON_ROOM",
    "language": "en",
-   "match_mode": "TOKEN",
+   "match_mode": "EXACT",
    "priority": 25
   },
   {
@@ -344,14 +344,14 @@
    "alias": "store",
    "canonical_label": "STORE",
    "language": "en",
-   "match_mode": "TOKEN",
+   "match_mode": "EXACT",
    "priority": 10
   },
   {
    "alias": "storage",
    "canonical_label": "STORE",
    "language": "en",
-   "match_mode": "TOKEN",
+   "match_mode": "EXACT",
    "priority": 15
   },
   {
@@ -372,7 +372,7 @@
    "alias": "passage",
    "canonical_label": "CORRIDOR",
    "language": "en",
-   "match_mode": "TOKEN",
+   "match_mode": "EXACT",
    "priority": 15
   },
   {
@@ -414,7 +414,7 @@
    "alias": "entry",
    "canonical_label": "ENTRANCE",
    "language": "en",
-   "match_mode": "TOKEN",
+   "match_mode": "EXACT",
    "priority": 15
   },
   {
@@ -442,7 +442,7 @@
    "alias": "maid",
    "canonical_label": "MAID_ROOM",
    "language": "en",
-   "match_mode": "TOKEN",
+   "match_mode": "EXACT",
    "priority": 15
   },
   {
@@ -512,14 +512,14 @@
    "alias": "stair",
    "canonical_label": "STAIR",
    "language": "en",
-   "match_mode": "TOKEN",
+   "match_mode": "EXACT",
    "priority": 10
   },
   {
    "alias": "stairs",
    "canonical_label": "STAIR",
    "language": "en",
-   "match_mode": "TOKEN",
+   "match_mode": "EXACT",
    "priority": 10
   },
   {
@@ -582,14 +582,14 @@
    "alias": "elevator",
    "canonical_label": "ELEVATOR_SHAFT",
    "language": "en",
-   "match_mode": "TOKEN",
+   "match_mode": "EXACT",
    "priority": 15
   },
   {
    "alias": "lift",
    "canonical_label": "ELEVATOR_SHAFT",
    "language": "en",
-   "match_mode": "TOKEN",
+   "match_mode": "EXACT",
    "priority": 15
   },
   {
@@ -617,14 +617,14 @@
    "alias": "shaft",
    "canonical_label": "SHAFT",
    "language": "en",
-   "match_mode": "TOKEN",
+   "match_mode": "EXACT",
    "priority": 15
   },
   {
    "alias": "duct",
    "canonical_label": "SHAFT",
    "language": "en",
-   "match_mode": "TOKEN",
+   "match_mode": "EXACT",
    "priority": 20
   },
   {
@@ -645,7 +645,7 @@
    "alias": "void",
    "canonical_label": "VOID",
    "language": "en",
-   "match_mode": "TOKEN",
+   "match_mode": "EXACT",
    "priority": 15
   },
   {
@@ -722,7 +722,7 @@
    "alias": "roof",
    "canonical_label": "ROOF_AREA",
    "language": "en",
-   "match_mode": "TOKEN",
+   "match_mode": "EXACT",
    "priority": 15
   },
   {
@@ -750,7 +750,7 @@
    "alias": "parking",
    "canonical_label": "PARKING",
    "language": "en",
-   "match_mode": "TOKEN",
+   "match_mode": "EXACT",
    "priority": 10
   },
   {

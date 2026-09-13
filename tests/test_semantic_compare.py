@@ -131,3 +131,46 @@ def test_a_space_only_one_agent_saw_still_appears():
 def test_comparing_nothing_raises():
     with pytest.raises(ValueError, match="nothing to compare"):
         compare_space(None, None)
+
+
+# ------------------------------------------------- a label never moves geometry
+def test_a_semantic_disagreement_does_not_recalculate_the_polygon():
+    """SPACE-021 is 3.59 m2. A1 says WASHROOM, A2 says SERVICE_ROOM.
+
+    That is a SEMANTIC_CONFLICT and nothing else. The area is established by
+    E23 from the drawing's vector geometry and no label can move it.
+    """
+    from decimal import Decimal as D
+
+    from engine.quantities import SpaceInputs, assemble
+    from engine.release import apply, route
+
+    geometry = D("3.59")
+    sp = SpaceInputs("SPACE-021", "2F", "WASHROOM", "A1", "DISPUTED",
+                     floor_area_m2=geometry, gross_wall_perimeter_m=D("10.53"),
+                     geometry_source="E23", geometry_basis="CLEAR_INTERNAL_FINISH_FACE",
+                     drawing="AR-00", drawing_revision="MAR.2023")
+    before = assemble("23010", [sp], [RULES])
+    floor_before = next(q.value for q in before if q.element == "FLOOR")
+
+    conflict = compare_space(s(space_id="SPACE-021", semantic_label="WASHROOM"),
+                             s(space_id="SPACE-021", semantic_label="SERVICE_ROOM"),
+                             rules=RULES)
+    assert conflict.verdict == DISAGREE
+    assert not conflict.is_pass_candidate
+
+    after = apply(before, route(before, comparisons={"SPACE-021": conflict}))
+    floor_after = next(q.value for q in after if q.element == "FLOOR")
+    assert floor_before == floor_after == geometry, "a label moved the geometry"
+    # the conflict stops the quantity being released, it does not change it
+    assert all(not q.releasable for q in after)
+
+
+def test_label_does_not_imply_scope_or_finish():
+    """TERRACE is a space type. Whether it is excluded is scope_status' job."""
+    included = s(semantic_label="TERRACE", scope_status="IN_SCOPE")
+    excluded = s(space_id="X", semantic_label="TERRACE", scope_status="OUT_OF_SCOPE")
+    c = compare_space(included, excluded, rules=RULES)
+    assert c.verdict == DISAGREE and c.materiality == CRITICAL
+    # the label agreed; only the scope differed
+    assert [d.field_name for d in c.diffs] == ["scope_status"]
