@@ -250,3 +250,69 @@ def shoelace_m2(points: Iterable[tuple[Decimal, Decimal]]) -> Decimal:
     for (x0, y0), (x1, y1) in zip(pts, pts[1:]):
         total += x0 * y1 - x1 * y0
     return abs(total) / 2
+
+
+# --------------------------------------------------------- source hierarchy
+# Raster tracing is the WEAKEST deterministic source, not the strongest. On
+# AR-00 a door leaf drawn inside a bathroom is ink, so a trace that treats all
+# ink as wall follows it and reports 14.29 m for a room whose printed perimeter
+# is 8.70 m. Where a stronger source exists and the two materially disagree,
+# the raster result is rejected — never averaged in, because averaging a wrong
+# number with a right one produces a third number that is also wrong.
+SOURCE_RANK = {
+    "CAD_ENTITY": 1,        # DWG/DXF geometry
+    "VECTOR_PDF": 2,        # validated vector geometry
+    "PRINTED_DIMENSION": 3,  # a dimension string the engineer wrote on the sheet
+    "RASTER_TRACE": 4,       # deterministic, but the weakest of the four
+    "HUMAN_REVIEW": 5,
+}
+
+
+@dataclass(frozen=True)
+class GeometryCandidate:
+    source: str
+    value: Decimal
+    note: str = ""
+
+    @property
+    def rank(self) -> int:
+        if self.source not in SOURCE_RANK:
+            raise GeometryError(f"unknown geometry source {self.source!r}")
+        return SOURCE_RANK[self.source]
+
+
+@dataclass(frozen=True)
+class GeometryChoice:
+    chosen: GeometryCandidate
+    rejected: tuple[tuple[GeometryCandidate, str], ...] = ()
+    status: str = "PASS"          # PASS / REVIEW / CHALLENGE
+
+    @property
+    def value(self) -> Decimal:
+        return self.chosen.value
+
+
+def choose_geometry(candidates: list[GeometryCandidate], *,
+                    review_pct: Decimal = Decimal("2"),
+                    challenge_pct: Decimal = Decimal("5")) -> GeometryChoice:
+    """Take the strongest source, and say what was rejected and why.
+
+    A weaker source that agrees is corroboration. A weaker source that disagrees
+    by more than `challenge_pct` is rejected outright and named, so the conflict
+    appears in the record instead of disappearing into an average.
+    """
+    if not candidates:
+        raise GeometryError("no geometry candidates — nothing to choose between")
+    ordered = sorted(candidates, key=lambda c: c.rank)
+    best = ordered[0]
+    if best.value <= 0:
+        raise GeometryError(f"{best.source} gave a non-physical value {best.value}")
+    rejected, status = [], "PASS"
+    for c in ordered[1:]:
+        pct = abs((c.value - best.value) / best.value * 100)
+        if pct > challenge_pct:
+            rejected.append((c, f"differs from {best.source} by {pct:.1f}% — rejected"))
+            status = "CHALLENGE"
+        elif pct > review_pct and status == "PASS":
+            status = "REVIEW"
+    return GeometryChoice(chosen=best, rejected=tuple(rejected), status=status)

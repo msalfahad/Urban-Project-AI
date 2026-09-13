@@ -171,3 +171,48 @@ def test_text_hole_filling_never_inflates_a_room(regions):
     for r in regions.values():
         if r.raw_area_m2 > D('5'):
             assert r.area_m2 <= r.raw_area_m2 * D('1.15')
+
+
+# ------------------------------------------------------- source hierarchy
+def test_the_stronger_source_wins_and_the_weaker_is_named():
+    """The real BTH-04 case: raster 14.29 m against a printed 8.70 m."""
+    from engine.geometry import GeometryCandidate, choose_geometry
+    ch = choose_geometry([
+        GeometryCandidate("RASTER_TRACE", D("14.29")),
+        GeometryCandidate("PRINTED_DIMENSION", D("8.70")),
+    ])
+    assert ch.value == D("8.70")
+    assert ch.chosen.source == "PRINTED_DIMENSION"
+    assert ch.status == "CHALLENGE"
+    assert ch.rejected and "rejected" in ch.rejected[0][1]
+
+
+def test_a_corroborating_weaker_source_is_not_rejected():
+    from engine.geometry import GeometryCandidate, choose_geometry
+    ch = choose_geometry([
+        GeometryCandidate("RASTER_TRACE", D("7.96")),
+        GeometryCandidate("PRINTED_DIMENSION", D("7.80")),
+    ])
+    assert ch.value == D("7.80") and ch.status == "REVIEW" and not ch.rejected
+
+
+def test_cad_outranks_everything():
+    from engine.geometry import GeometryCandidate, choose_geometry
+    ch = choose_geometry([
+        GeometryCandidate("PRINTED_DIMENSION", D("8.70")),
+        GeometryCandidate("CAD_ENTITY", D("8.62")),
+        GeometryCandidate("RASTER_TRACE", D("14.29")),
+    ])
+    assert ch.chosen.source == "CAD_ENTITY"
+
+
+def test_an_unknown_source_is_refused():
+    from engine.geometry import GeometryCandidate, choose_geometry, GeometryError
+    with pytest.raises(GeometryError, match="unknown geometry source"):
+        choose_geometry([GeometryCandidate("VIBES", D("9"))])
+
+
+def test_choosing_between_nothing_raises():
+    from engine.geometry import choose_geometry, GeometryError
+    with pytest.raises(GeometryError, match="nothing to choose"):
+        choose_geometry([])
