@@ -72,8 +72,15 @@ def test_shaft_versus_a_room_is_critical():
 
 
 def test_labels_with_identical_trade_consequences_are_low_materiality():
-    mat, note = label_materiality("BEDROOM", "SALOON", RULES)
+    """BEDROOM and SALON both take ceramic floor and no ceramic wall."""
+    mat, note = label_materiality("BEDROOM", "SALON", RULES)
     assert mat == LOW and "identical trade consequences" in note
+
+
+def test_a_label_with_no_trade_rule_is_high_not_low():
+    """Unknown consequence is not the same as no consequence."""
+    mat, note = label_materiality("BEDROOM", "ROOF_ROOM", RULES)
+    assert mat == HIGH and "consequence unknown" in note
 
 
 def test_labels_with_different_trade_consequences_are_high():
