@@ -184,3 +184,40 @@ def test_a_fixture_inside_a_room_does_not_become_wall():
                          outside_id=0, fill_region=False)
     assert sw_filled.perimeter_m == D('28')          # 7 m x 7 m interior
     assert sw_raw.perimeter_m > sw_filled.perimeter_m
+
+
+# --------------------------------- topology / gross / net kept separate
+def test_a_doorway_closure_is_not_a_physical_wall():
+    from engine.walls import (PHYSICAL_WALL, VIRTUAL_OPENING_CLOSURE,
+                              OPEN_TRANSITION, WallSegment)
+    wall, lab = room()
+    wall[6, 4] = False
+    _, bridges = bridge_openings(wall, 2)
+    sw = space_walls('RM', lab, 7, wall, bridges, PX, outside_id=0, max_opening_mm=2000)
+    v = [s for s in sw.segments if s.segment_type == VIRTUAL_OPENING_CLOSURE]
+    assert len(v) == 1
+    assert not v[0].physical_wall
+    assert v[0].counts_for_gross_perimeter and v[0].counts_for_gross_wall
+    assert v[0].deductible_from_net_finish
+
+
+def test_gross_wall_includes_the_doorway_and_net_deducts_it():
+    """The qiyal measures gross; only a trade rule may take the opening off."""
+    wall, lab = room()
+    wall[6, 4] = False
+    _, bridges = bridge_openings(wall, 2)
+    sw = space_walls('RM', lab, 7, wall, bridges, PX, outside_id=0, max_opening_mm=2000)
+    assert sw.gross_wall_perimeter_m == D('12')
+    assert sw.physical_wall_m == D('11')          # masonry only
+    assert sw.net_wall_perimeter_m() == D('11')   # gross minus the 1 m opening
+    assert sw.net_wall_perimeter_m(deduct_openings=False) == D('12')
+
+
+def test_an_open_side_is_in_the_room_outline_but_not_in_gross_wall():
+    from engine.walls import OPEN_TRANSITION
+    wall, lab = room()
+    wall[6, 3:6] = False
+    sw = space_walls('RM', lab, 7, wall, np.zeros_like(wall), PX, outside_id=0)
+    assert sw.gross_room_perimeter_m == D('12')   # the closed outline
+    assert sw.gross_wall_perimeter_m == D('9')    # no wall on the open side
+    assert any(s.segment_type == OPEN_TRANSITION for s in sw.segments)

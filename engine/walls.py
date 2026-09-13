@@ -34,6 +34,20 @@ OPENING = "OPENING"           # proven jamb pair: a door or window
 OPEN = "OPEN"                 # open-plan transition into another space
 EXTERNAL = "EXTERNAL"         # the outside of the building
 
+# Segment types. These keep three things apart that are easy to confuse and
+# expensive to mix:
+#
+#   ROOM TOPOLOGY       — what closes a room, physical or not
+#   GROSS WALL PERIMETER— what a qiyal measures: wall plus doorway, undeducted
+#   NET FINISH QUANTITY — gross minus the openings the trade rule deducts
+#
+# A doorway closure is NOT a wall. It exists so the room polygon closes and so
+# the gross perimeter matches how the quantity is actually taken. The opening
+# stays on the books separately, and only the trade engine may deduct it.
+PHYSICAL_WALL = "PHYSICAL_WALL"
+VIRTUAL_OPENING_CLOSURE = "VIRTUAL_OPENING_CLOSURE"
+OPEN_TRANSITION = "OPEN_TRANSITION"
+
 VALIDATED = "VALIDATED"
 UNRESOLVED = "UNRESOLVED"
 
@@ -82,9 +96,37 @@ class WallSegment:
         return Decimal(self.length_mm) / 1000
 
     @property
+    def segment_type(self) -> str:
+        if self.far_side == OPENING:
+            return VIRTUAL_OPENING_CLOSURE
+        if self.far_side == OPEN:
+            return OPEN_TRANSITION
+        return PHYSICAL_WALL
+
+    @property
+    def physical_wall(self) -> bool:
+        """A doorway closure holds the polygon shut; it is not masonry."""
+        return self.segment_type == PHYSICAL_WALL
+
+    @property
+    def counts_for_gross_perimeter(self) -> bool:
+        """Everything on the closed outline counts toward the room perimeter."""
+        return True
+
+    @property
+    def counts_for_gross_wall(self) -> bool:
+        """What a qiyal measures: wall and doorway, but not an open side."""
+        return self.segment_type != OPEN_TRANSITION
+
+    @property
+    def deductible_from_net_finish(self) -> bool:
+        """Only an opening is ever deducted, and only by the trade rule."""
+        return self.segment_type == VIRTUAL_OPENING_CLOSURE
+
+    @property
     def is_measurable_wall(self) -> bool:
-        """Only a real wall face carries a wall finish."""
-        return self.far_side in (WALL, OPENING, EXTERNAL)
+        """Kept for callers written before the segment types existed."""
+        return self.counts_for_gross_wall
 
 
 @dataclass
@@ -100,10 +142,29 @@ class SpaceWalls:
         """Every boundary run, open transitions included — the closed outline."""
         return sum((s.length_m for s in self.segments), Decimal(0))
 
+    gross_room_perimeter_m = perimeter_m
+
+    @property
+    def gross_wall_perimeter_m(self) -> Decimal:
+        """Wall plus doorway closures, undeducted — what a qiyal row measures."""
+        return sum((s.length_m for s in self.segments if s.counts_for_gross_wall),
+                   Decimal(0))
+
+    @property
+    def physical_wall_m(self) -> Decimal:
+        """Masonry only: doorway closures excluded."""
+        return sum((s.length_m for s in self.segments if s.physical_wall), Decimal(0))
+
     @property
     def wall_length_m(self) -> Decimal:
-        """Only runs that are actually wall. This is what a wall finish follows."""
-        return sum((s.length_m for s in self.segments if s.is_measurable_wall), Decimal(0))
+        """Alias of the gross wall perimeter, for callers that predate the split."""
+        return self.gross_wall_perimeter_m
+
+    def net_wall_perimeter_m(self, deduct_openings: bool = True) -> Decimal:
+        """Gross minus openings. Only a trade rule decides whether to call this."""
+        if not deduct_openings:
+            return self.gross_wall_perimeter_m
+        return self.gross_wall_perimeter_m - self.opening_deduction_m
 
     @property
     def open_length_m(self) -> Decimal:
