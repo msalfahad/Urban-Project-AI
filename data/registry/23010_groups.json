@@ -1,0 +1,22 @@
+{
+  "project": "23010",
+  "version": "1.0",
+  "effective_from": "2026-09-13",
+  "source": "Owner scope brief for Project 23010 second floor, read against approved drawing AR-00 rev MAR.2023.",
+  "apartments": {
+    "APT-001": {
+      "definition": "The dwelling unit occupying the main body of the second floor: its bedrooms, salon, dining, kitchen and the circulation that serves them, entered from the main stair landing.",
+      "provenance": "OWNER_SCOPE_BRIEF",
+      "member_space_ids": null,
+      "note": "Membership is deliberately NOT listed. Which spaces belong to this unit is part of what the acceptance test measures; handing the agents the list would be handing them the answer."
+    },
+    "APT-002": {
+      "definition": "The domestic-staff accommodation block at the western end of the floor: the staff rooms, their bathrooms, and the service corridor that serves them, reached from that corridor rather than from the main stair landing.",
+      "provenance": "OWNER_SCOPE_BRIEF",
+      "member_space_ids": null,
+      "note": "Defined by how it is served, not by whether it is in scope. Scope is a separate field and a separate question."
+    }
+  },
+  "zones": "NOT_DEFINED",
+  "zone_not_defined_reason": "Project 23010 has no approved zone ontology. In Run 0 A1 segmented the floor into BEDROOM_WING / LIVING_CORE / PRIVATE_WING while A2 used EAST_RESIDENTIAL — different granularity rather than contradiction. There is no definition that says which of those is the zone level, so the field cannot be assigned honestly or scored fairly. Inventing ZONE-001..ZONE-003 to give the metric something to compare would make the test pass by making it meaningless."
+}

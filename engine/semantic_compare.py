@@ -15,6 +15,17 @@ are outvoted. So:
 Materiality is attached to prioritise review, and ONLY to prioritise review. A
 wrong answer stays wrong when it is cheap; materiality changes the queue order,
 never the verdict.
+
+Run 0 added a fourth rule the hard way: A FIELD THAT CANNOT BE COMPARED MUST NOT
+BE SCORED. `apartment_id` and `zone_id` were free text, compared by string
+equality, and returned 0% agreement on 36 of 36 spaces — a number about the
+schema, not about the agents. Identifiers now come from a canonical registry, and
+where a registry cannot exist (Project 23010 has no approved zone ontology) the
+field is excluded by name, with the reason recorded in the report rather than
+quietly folded into an average.
+
+`trade_relevance` left this comparison for the same reason. It was never A1's
+decision to make: E27 owns it, and E27 is scored against the project rule set.
 """
 
 from __future__ import annotations
@@ -46,8 +57,11 @@ FIELD_MATERIALITY = {
     "floor_id": CRITICAL,
     "zone_id": HIGH,
     "semantic_label": None,          # decided by trade consequence
-    "trade_relevance": HIGH,
 }
+
+# Fields whose comparability depends on the project registry rather than on the
+# answers. `kind` is what group_registry.scorable() is asked about.
+REGISTRY_GATED = {"apartment_id": "APARTMENT", "zone_id": "ZONE"}
 
 
 @dataclass
@@ -68,6 +82,7 @@ class SpaceComparison:
     source_conflict: str = ""
     a1_confidence: str = ""
     a2_confidence: str = ""
+    excluded: dict[str, str] = field(default_factory=dict)
 
     @property
     def agreed(self) -> bool:
@@ -111,19 +126,44 @@ def label_materiality(a1_label: str, a2_label: str, rules=None) -> tuple[str, st
     return HIGH, f"trade consequences differ: {ca} vs {cb}"
 
 
-def compare_space(a1, a2, *, rules=None, schedule_label: str | None = None) -> SpaceComparison:
+def comparable_fields(registry=None) -> tuple[dict[str, str], dict[str, str]]:
+    """Which fields this project may be scored on, and why the rest may not.
+
+    A field is excluded when the project cannot define what a correct answer
+    would look like. That is a property of the project, not of the run, so it is
+    decided once here and reported by name — never averaged away.
+    """
+    fields, excluded = {}, {}
+    for name, mat in FIELD_MATERIALITY.items():
+        kind = REGISTRY_GATED.get(name)
+        if kind is None:
+            fields[name] = mat
+            continue
+        if registry is None:
+            excluded[name] = (
+                "no canonical group registry was supplied, so this identifier "
+                "would be free text compared by string equality — the Run 0 defect")
+            continue
+        ok, why = registry.scorable(kind)
+        (fields if ok else excluded)[name] = mat if ok else why
+    return fields, excluded
+
+
+def compare_space(a1, a2, *, rules=None, schedule_label: str | None = None,
+                  registry=None) -> SpaceComparison:
     """Compare one space's semantics field by field."""
     if a1 is None and a2 is None:
         raise ValueError("nothing to compare")
     if a1 is None:
         return SpaceComparison(a2.space_id, MISSING_A1, CRITICAL,
-                               a2_confidence=a2.label_confidence)
+                               a2_confidence=a2.semantic_label_confidence)
     if a2 is None:
         return SpaceComparison(a1.space_id, MISSING_A2, CRITICAL,
-                               a1_confidence=a1.label_confidence)
+                               a1_confidence=a1.semantic_label_confidence)
 
+    fields, excluded = comparable_fields(registry)
     diffs: list[FieldDiff] = []
-    for name, mat in FIELD_MATERIALITY.items():
+    for name, mat in fields.items():
         va, vb = getattr(a1, name), getattr(a2, name)
         if isinstance(va, list):
             va, vb = sorted(va), sorted(vb)
@@ -136,8 +176,9 @@ def compare_space(a1, a2, *, rules=None, schedule_label: str | None = None) -> S
         diffs.append(FieldDiff(name, va, vb, mat, note))
 
     cmp = SpaceComparison(a1.space_id, DISAGREE, LOW, diffs,
-                          a1_confidence=a1.label_confidence,
-                          a2_confidence=a2.label_confidence)
+                          a1_confidence=a1.semantic_label_confidence,
+                          a2_confidence=a2.semantic_label_confidence,
+                          excluded=dict(excluded))
 
     # A schedule is a third source. Two agents agreeing against it are outvoted,
     # not corroborated — this is exactly the BATHROOM/BATHROOM/STORE case.
@@ -156,8 +197,8 @@ def compare_space(a1, a2, *, rules=None, schedule_label: str | None = None) -> S
         return cmp
 
     # Identical. Whether that is worth anything depends on the evidence behind it.
-    strong = (a1.label_confidence in STRONG_CONFIDENCE
-              and a2.label_confidence in STRONG_CONFIDENCE)
+    strong = (a1.semantic_label_confidence in STRONG_CONFIDENCE
+              and a2.semantic_label_confidence in STRONG_CONFIDENCE)
     unresolved = bool(a1.semantic_conflicts or a2.semantic_conflicts)
     if strong and not unresolved:
         cmp.verdict = AGREE_HIGH_CONFIDENCE
@@ -171,8 +212,52 @@ def compare_space(a1, a2, *, rules=None, schedule_label: str | None = None) -> S
 
 
 @dataclass
+class MembershipDiff:
+    """Two groupings of the same spaces, compared as SETS rather than as names.
+
+    This is the migration diagnostic. Run 0's A1 said APT-EAST and A2 said
+    APT-01; had this existed then, identical member sets would have shown at a
+    glance that the two agents agreed about the apartment and disagreed only
+    about what to call it. Production compares canonical ids — but when a
+    canonical id changes meaning, only the sets will say so.
+    """
+
+    kind: str
+    identical_sets: list[tuple[str, str]] = field(default_factory=list)
+    a1_only: dict[str, set[str]] = field(default_factory=dict)
+    a2_only: dict[str, set[str]] = field(default_factory=dict)
+
+    @property
+    def same_partition(self) -> bool:
+        """Do both agents carve the floor into the same groups of spaces?"""
+        return not self.a1_only and not self.a2_only
+
+
+def membership_diff(a1_out, a2_out, kind: str) -> MembershipDiff:
+    """Compare group membership as sets of space ids, ignoring the names."""
+    from engine.group_registry import membership
+    m1, m2 = membership(a1_out.spaces, kind), membership(a2_out.spaces, kind)
+    identical, used2 = [], set()
+    for g1, s1 in sorted(m1.items()):
+        for g2, s2 in sorted(m2.items()):
+            if g2 not in used2 and s1 == s2:
+                identical.append((g1, g2))
+                used2.add(g2)
+                break
+    matched1 = {g for g, _ in identical}
+    return MembershipDiff(
+        kind=kind,
+        identical_sets=identical,
+        a1_only={g: s for g, s in m1.items() if g not in matched1},
+        a2_only={g: s for g, s in m2.items() if g not in used2},
+    )
+
+
+@dataclass
 class ComparisonReport:
     rows: list[SpaceComparison] = field(default_factory=list)
+    excluded_fields: dict[str, str] = field(default_factory=dict)
+    membership: dict[str, MembershipDiff] = field(default_factory=dict)
 
     def by_verdict(self, verdict: str) -> list[SpaceComparison]:
         return [r for r in self.rows if r.verdict == verdict]
@@ -194,15 +279,21 @@ class ComparisonReport:
         return sorted(need, key=lambda r: -_RANK[r.materiality])
 
 
-def compare(a1_out, a2_out, *, rules=None, schedule: dict[str, str] | None = None
-            ) -> ComparisonReport:
+def compare(a1_out, a2_out, *, rules=None, schedule: dict[str, str] | None = None,
+            registry=None) -> ComparisonReport:
     """Compare two semantic passes over the same spaces."""
     schedule = schedule or {}
     a1_map = {s.space_id: s for s in a1_out.spaces}
     a2_map = {s.space_id: s for s in a2_out.spaces}
     rows = [
         compare_space(a1_map.get(sid), a2_map.get(sid), rules=rules,
-                      schedule_label=schedule.get(sid))
+                      schedule_label=schedule.get(sid), registry=registry)
         for sid in sorted(set(a1_map) | set(a2_map))
     ]
-    return ComparisonReport(rows)
+    _, excluded = comparable_fields(registry)
+    return ComparisonReport(
+        rows,
+        excluded_fields=excluded,
+        membership={k: membership_diff(a1_out, a2_out, k)
+                    for k in ("APARTMENT", "ZONE")},
+    )

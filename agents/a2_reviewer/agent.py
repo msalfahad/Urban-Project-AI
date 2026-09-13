@@ -66,6 +66,12 @@ def run_blind(payload: SemanticInput, model: ModelFn | None = None,
             raise BlindIsolationError(
                 f"SemanticInput carries {field_name!r}, which would answer the "
                 "question this pass exists to ask independently.")
+    # No registry means apartment_id would be free text again — the defect that
+    # made Run 0 unscorable. The pass does not start without one.
+    if payload.groups is None:
+        raise BlindIsolationError(
+            "SemanticInput carries no group registry, so apartment_id and zone_id "
+            "would be free text. Run 0 was rerun for exactly this.")
     lines = [
         f"Project: {payload.project_id}",
         f"Drawing: {payload.drawing_id}  revision {payload.drawing_revision}",
@@ -76,6 +82,43 @@ def run_blind(payload: SemanticInput, model: ModelFn | None = None,
     ]
     for sid, geo in payload.geometry.items():
         lines.append(f"{sid}: " + ", ".join(f"{k}={v}" for k, v in geo.items()))
+    lines += ["", *canonical_group_brief(payload.groups)]
     user = "\n".join(lines) + "\n"
-    return run_json_agent(BLIND_PROMPT_PATH, user, SemanticOutput.from_dict,
-                          model=model or DRAWING_MODEL())
+    return run_json_agent(
+        BLIND_PROMPT_PATH, user,
+        lambda d: SemanticOutput.from_dict(d, registry=payload.groups),
+        model=model or DRAWING_MODEL())
+
+
+def canonical_group_brief(registry) -> list[str]:
+    """The exact vocabulary an agent may use for apartment_id and zone_id.
+
+    Written from the registry rather than typed into a prompt, so the words the
+    agent is offered and the words the validator accepts cannot drift apart. The
+    first live A1 run invented 23 trade ids because the prompt named a registry
+    it never showed.
+    """
+    out = ["--- CANONICAL APARTMENT IDS (choose one per space; no other value) ---"]
+    for gid, g in sorted(registry.apartments.items()):
+        out.append(f"{gid}: {g.definition}")
+    out += [
+        "UNKNOWN: the evidence does not place this space in either unit.",
+        "AMBIGUOUS: the evidence places it in more than one and cannot choose.",
+        "Do not invent an identifier. Put any description in apartment_description.",
+        "",
+    ]
+    if registry.zone_ontology_defined:
+        out.append("--- CANONICAL ZONE IDS (choose one per space; no other value) ---")
+        for gid, g in sorted(registry.zones.items()):
+            out.append(f"{gid}: {g.definition}")
+        out.append("UNKNOWN / AMBIGUOUS are also valid answers.")
+    else:
+        out += [
+            "--- ZONES ---",
+            f"Project {registry.project} has NO approved zone ontology, so zone_id "
+            "must be UNKNOWN on every space and zone_membership_confidence must be "
+            "NOT_ESTABLISHED. Segmenting the floor yourself would invent a "
+            "hierarchy nobody approved. Use zone_description if you want to "
+            "record what you saw.",
+        ]
+    return out

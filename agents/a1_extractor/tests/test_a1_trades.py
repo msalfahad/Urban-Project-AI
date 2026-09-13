@@ -6,56 +6,46 @@ import pytest
 
 from agents.a1_extractor.semantic import (SEMANTIC_SCHEMA_VERSION, SemanticError,
                                           SemanticOutput)
+from agents.a1_extractor.tests.registry_fixture import parse
 from engine.trades import (RULE_REQUIRED, TradeError, alias_version,
                            normalize_label, registry, registry_version, resolve)
 
 
 def rec(**kw):
     base = dict(space_id="S1", semantic_label="BEDROOM", label_source="PDF_TEXT",
-                label_confidence="HIGH", confidence_basis="text + polygon + schedule",
-                scope_status="IN_SCOPE")
+                semantic_label_confidence="HIGH",
+                confidence_basis="drawing text entity inside the polygon",
+                scope_status="IN_SCOPE", scope_confidence="HIGH",
+                scope_basis="the owner's brief names this unit",
+                apartment_id="APT-001", apartment_membership_confidence="HIGH",
+                apartment_basis="reached from the main stair landing only")
     base.update(kw)
     return base
 
 
-def test_a_canonical_trade_is_accepted():
-    out = SemanticOutput.from_dict({"spaces": [rec(
-        trade_relevance=["ARCHITECTURAL_FLOOR_FINISH", "PAINT"])]})
-    assert out.spaces[0].trade_relevance == ["ARCHITECTURAL_FLOOR_FINISH", "PAINT"]
+def test_a_challenge_may_name_a_canonical_trade():
+    out = parse({"spaces": [rec(trade_challenges=[
+        {"kind": "TRADE_RULE_CHALLENGE", "trade": "ARCHITECTURAL_FLOOR_FINISH",
+         "note": "no rule covers this space type"}])]})
+    assert out.spaces[0].trade_challenges[0].trade == "ARCHITECTURAL_FLOOR_FINISH"
 
 
-def test_an_invented_trade_string_is_refused():
+def test_an_invented_trade_string_is_refused_even_in_a_challenge():
     """"ceramic" is not a trade id; the rules speak ARCHITECTURAL_FLOOR_FINISH."""
     with pytest.raises(SemanticError, match="not a canonical trade"):
-        SemanticOutput.from_dict({"spaces": [rec(trade_relevance=["ceramic"])]})
+        parse({"spaces": [rec(trade_challenges=[
+            {"kind": "TRADE_RULE_CHALLENGE", "trade": "ceramic", "note": "x"}])]})
 
 
-def test_rule_required_needs_a_machine_readable_rule_id():
-    """Prose in trade_notes cannot be grouped, counted or routed."""
-    with pytest.raises(SemanticError, match="machine-readable"):
-        SemanticOutput.from_dict({"spaces": [rec(
-            trade_relevance=[RULE_REQUIRED],
-            trade_notes="someone should decide about terraces")]})
-
-
-def test_a_missing_rule_id_without_rule_required_is_refused():
-    with pytest.raises(SemanticError, match="claim a decision it does not have"):
-        SemanticOutput.from_dict({"spaces": [rec(
-            missing_rule_id="CERAMIC_WALL_FINISH_IRON_ROOM")]})
-
-
-def test_rule_required_with_an_id_is_a_routed_question_not_an_error():
-    out = SemanticOutput.from_dict({"spaces": [rec(
-        semantic_label="TERRACE", trade_relevance=[RULE_REQUIRED],
-        missing_rule_id="EXTERNAL_FINISH_TERRACE",
-        missing_rule_description="No project rule defines terrace external tile "
-                                 "or waterproofing applicability.",
-        missing_required_fields=["external_finish_scope", "waterproofing_height"],
-        trade_notes="no finish schedule supplied")]})
-    s = out.spaces[0]
-    assert RULE_REQUIRED in s.trade_relevance
-    assert s.missing_rule_id == "EXTERNAL_FINISH_TERRACE"
-    assert s.missing_required_fields == ["external_finish_scope", "waterproofing_height"]
+def test_a_missing_rule_is_now_e27s_to_name():
+    """A1 raises the question; E27 issues the routable id."""
+    from engine.trade_rules import RULE_REQUIRED as E27_RULE_REQUIRED
+    from engine.trade_rules import TradeRuleSet, decide_trade
+    rules = TradeRuleSet.load("data/trade_rules/23010_ceramic.json")
+    d = decide_trade(rules, "PARKING", "WALL", scope_status="IN_SCOPE")
+    assert d.status == E27_RULE_REQUIRED
+    assert d.missing_rule_id == "CERAMIC_WALL_PARKING"
+    assert not d.applies
 
 
 def test_the_registry_carries_names_units_and_a_version():
@@ -66,9 +56,10 @@ def test_the_registry_carries_names_units_and_a_version():
 
 
 def test_unknown_trade_falls_back_to_other_rather_than_a_new_string():
-    out = SemanticOutput.from_dict({"spaces": [rec(
-        trade_relevance=["OTHER"], trade_notes="shading pergola, no trade yet")]})
-    assert out.spaces[0].trade_relevance == ["OTHER"]
+    out = parse({"spaces": [rec(trade_challenges=[
+        {"kind": "TRADE_RULE_CHALLENGE", "trade": "OTHER",
+         "note": "shading pergola, no trade yet"}])]})
+    assert out.spaces[0].trade_challenges[0].trade == "OTHER"
 
 
 @pytest.mark.parametrize("raw,expected", [
@@ -86,25 +77,25 @@ def test_an_unrecognised_label_returns_nothing_rather_than_guessing():
 
 
 def test_normalising_never_replaces_the_original_drawing_label():
-    out = SemanticOutput.from_dict({"spaces": [rec(
+    out = parse({"spaces": [rec(
         space_id="IRN-01", semantic_label="IRON_ROOM", original_drawing_label="كوي")]})
     assert out.spaces[0].original_drawing_label == "كوي"
     assert out.spaces[0].semantic_label == "IRON_ROOM"
 
 
 def test_records_carry_the_schema_version_they_were_written_under():
-    out = SemanticOutput.from_dict({"spaces": [rec()]})
-    assert out.spaces[0].semantic_schema_version == SEMANTIC_SCHEMA_VERSION == "2.0"
+    out = parse({"spaces": [rec()]})
+    assert out.spaces[0].semantic_schema_version == SEMANTIC_SCHEMA_VERSION == "3.0"
     assert alias_version() == "2.0"
 
 
 def test_space_function_must_not_just_repeat_the_label():
     with pytest.raises(SemanticError, match="repeats semantic_label"):
-        SemanticOutput.from_dict({"spaces": [rec(space_function="BEDROOM")]})
+        parse({"spaces": [rec(space_function="BEDROOM")]})
 
 
 def test_space_function_carries_a_real_subtype():
-    out = SemanticOutput.from_dict({"spaces": [rec(
+    out = parse({"spaces": [rec(
         semantic_label="SERVICE_ROOM", space_function="Water pump room")]})
     assert out.spaces[0].space_function == "Water pump room"
 
@@ -162,9 +153,10 @@ def test_legacy_aliases_never_match_new_input():
     assert match_label("قيال").canonical_label == "UNKNOWN"
 
 
-def test_the_taxonomy_is_frozen_at_v2_with_the_approved_labels():
+def test_the_taxonomy_is_frozen_with_the_approved_labels():
+    """The LABEL vocabulary did not move in schema 3.0 — only what surrounds it."""
     from agents.a1_extractor.semantic import SEMANTIC_LABELS, SEMANTIC_SCHEMA_VERSION
-    assert SEMANTIC_SCHEMA_VERSION == "2.0"
+    assert SEMANTIC_SCHEMA_VERSION == "3.0"
     assert len(SEMANTIC_LABELS) == 38
     for owner_label in ("WC", "LIVING_ROOM", "OPEN_PLAN_LIVING", "DRESSING_ROOM",
                         "LAUNDRY_ROOM", "ELEVATOR_SHAFT", "SERVICE_SHAFT",
@@ -178,7 +170,7 @@ def test_the_taxonomy_is_frozen_at_v2_with_the_approved_labels():
 def test_not_a_space_must_use_the_list_not_the_label():
     """Two places to record the same thing is two sources of truth."""
     with pytest.raises(SemanticError, match="use the not_a_space"):
-        SemanticOutput.from_dict({"spaces": [rec(semantic_label="NOT_A_SPACE")]})
+        parse({"spaces": [rec(semantic_label="NOT_A_SPACE")]})
 
 
 # ------------------------------------------------- unwired rules fail closed

@@ -13,7 +13,14 @@ from agents.a2_reviewer.challenge import (BLOCK, CHALLENGE_HIGH, CHALLENGE_LOW,
 from engine.quantities import (AUTO_VALIDATED, BLOCKED, REVIEW_REQUIRED,
                                SpaceInputs, assemble, total)
 from engine.release import apply, decide, route
-from engine.semantic_compare import compare_space
+from agents.a1_extractor.tests.registry_fixture import REG
+from engine.semantic_compare import compare_space as _compare_space
+
+
+def compare_space(a1, a2, **kw):
+    """Always against the canonical registry — see E32."""
+    kw.setdefault("registry", REG)
+    return _compare_space(a1, a2, **kw)
 from engine.trade_rules import TradeRuleSet
 
 CERAMIC = TradeRuleSet.load("data/trade_rules/23010_ceramic.json")
@@ -21,8 +28,12 @@ CERAMIC = TradeRuleSet.load("data/trade_rules/23010_ceramic.json")
 
 def sem(**kw) -> SpaceSemantics:
     base = dict(space_id="BTH-03", semantic_label="BATHROOM", label_source="PDF_TEXT",
-                label_confidence="HIGH", confidence_basis="text + polygon + schedule",
-                scope_status="IN_SCOPE")
+                semantic_label_confidence="HIGH",
+                confidence_basis="drawing text entity inside the polygon",
+                scope_status="IN_SCOPE", scope_confidence="HIGH",
+                scope_basis="named in the owner brief",
+                apartment_id="APT-001", apartment_membership_confidence="HIGH",
+                apartment_basis="access from the main landing")
     base.update(kw)
     return SpaceSemantics(**base)
 
@@ -78,13 +89,14 @@ def test_high_and_block_stop_release_and_low_does_not():
 # ---------------------------------------------------------------- release
 def test_a_clean_quantity_auto_validates():
     q = assemble("23010", [space()], [CERAMIC])[0]
-    d = decide(q, comparison=compare_space(sem(), sem()), approved_revision="MAR.2023")
+    d = decide(q, comparison=compare_space(sem(), sem()), rule_exists=True,
+               approved_revision="MAR.2023")
     assert d.status == AUTO_VALIDATED and d.released
 
 
 def test_weak_agreement_does_not_auto_validate():
     """AGREE_LOW_CONFIDENCE is exactly the case that must not slip through."""
-    weak = dict(label_confidence="LOW", label_source="VISION_MODEL")
+    weak = dict(semantic_label_confidence="LOW", label_source="VISION_MODEL")
     q = assemble("23010", [space()], [CERAMIC])[0]
     d = decide(q, comparison=compare_space(sem(**weak), sem(**weak)),
                approved_revision="MAR.2023")
@@ -99,7 +111,8 @@ def test_a_missing_comparison_blocks():
 
 def test_the_wrong_revision_blocks():
     q = assemble("23010", [space(drawing_revision="JAN.2023")], [CERAMIC])[0]
-    d = decide(q, comparison=compare_space(sem(), sem()), approved_revision="MAR.2023")
+    d = decide(q, comparison=compare_space(sem(), sem()), rule_exists=True,
+               approved_revision="MAR.2023")
     assert d.status == BLOCKED and "off revision" in d.reasons[0]
 
 
@@ -126,7 +139,7 @@ def test_a_blocking_challenge_stops_the_quantity():
 
 def test_unreleased_quantities_never_reach_the_boq():
     qs = assemble("23010", [space()], [CERAMIC])
-    weak = dict(label_confidence="LOW", label_source="VISION_MODEL")
+    weak = dict(semantic_label_confidence="LOW", label_source="VISION_MODEL")
     q = route(qs, comparisons={"BTH-03": compare_space(sem(**weak), sem(**weak))},
               approved_revision="MAR.2023")
     assert total(apply(qs, q)) == D(0)
@@ -134,7 +147,7 @@ def test_unreleased_quantities_never_reach_the_boq():
 
 def test_the_queue_is_ordered_worst_first_and_reports_a_review_rate():
     qs = assemble("23010", [space(), space(space_id="BTH-04")], [CERAMIC])
-    q = route(qs, comparisons={
+    q = route(qs, rules_present={"BTH-03": True, "BTH-04": True}, comparisons={
         "BTH-03": compare_space(sem(), sem()),
         "BTH-04": compare_space(sem(space_id="BTH-04", scope_status="IN_SCOPE"),
                                 sem(space_id="BTH-04", scope_status="OUT_OF_SCOPE")),
@@ -147,3 +160,19 @@ def test_routing_never_changes_a_value():
     qs = assemble("23010", [space()], [CERAMIC])
     stamped = apply(qs, route(qs, comparisons={"BTH-03": None}))
     assert [q.value for q in stamped] == [q.value for q in qs]
+
+
+def test_an_unestablished_trade_rule_is_not_a_rule():
+    """Run-0 audit: rule presence defaulted to True, so a quantity could be
+    released on a rule nobody ever looked up."""
+    q = assemble("23010", [space()], [CERAMIC])[0]
+    d = decide(q, comparison=compare_space(sem(), sem()), approved_revision="MAR.2023")
+    assert d.status == REVIEW_REQUIRED
+    assert any("never established" in r for r in d.reasons)
+
+
+def test_route_does_not_invent_rule_presence_for_a_space_it_was_not_told_about():
+    qs = assemble("23010", [space()], [CERAMIC])
+    queue = route(qs, comparisons={"BTH-03": compare_space(sem(), sem())},
+                  rules_present={}, approved_revision="MAR.2023")
+    assert not queue.auto_validated

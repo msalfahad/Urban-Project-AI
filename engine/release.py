@@ -72,7 +72,8 @@ class ExceptionQueue:
         return len([d for d in self.decisions if not d.released]) / len(self.decisions)
 
 
-def decide(q: Quantity, *, comparison=None, challenges=(), rule_exists: bool = True,
+def decide(q: Quantity, *, comparison=None, challenges=(),
+           rule_exists: bool | None = None,
            approved_revision: str | None = None) -> ReleaseDecision:
     """Decide one quantity's release status. Every refusal names itself."""
     reasons: list[str] = []
@@ -92,7 +93,15 @@ def decide(q: Quantity, *, comparison=None, challenges=(), rule_exists: bool = T
         if comparison.materiality == CRITICAL:
             blocked = True
 
-    if not rule_exists:
+    # Tri-state on purpose. `None` is "nobody established whether a rule exists",
+    # which used to default to True — a quantity could be released on a trade
+    # rule that was never looked up. Not knowing is not the same as knowing yes.
+    if rule_exists is None:
+        reasons.append(
+            f"whether a {q.trade} trade rule covers this space type was never "
+            "established — E27 must answer before this is released")
+        materiality = max(materiality, HIGH, key=lambda m: _RANK[m])
+    elif not rule_exists:
         reasons.append(f"no {q.trade} trade rule covers this space type")
         materiality = max(materiality, HIGH, key=lambda m: _RANK[m])
 
@@ -135,7 +144,7 @@ def route(quantities: list[Quantity], *, comparisons=None, challenges=None,
         decide(q,
                comparison=comparisons.get(q.space_id),
                challenges=challenges.get(q.quantity_id, ()),
-               rule_exists=rules_present.get(q.space_id, True),
+               rule_exists=rules_present.get(q.space_id),
                approved_revision=approved_revision)
         for q in quantities
     ])

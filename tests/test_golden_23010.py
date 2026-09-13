@@ -23,8 +23,16 @@ from engine.geometry import (GeometryCandidate, calibrate, choose_geometry,
                              snap_to_wall_faces)
 from engine.quantities import AUTO_VALIDATED, SpaceInputs, assemble, total
 from engine.release import apply, route
+from agents.a1_extractor.tests.registry_fixture import REG
 from engine.semantic_compare import (AGREE_HIGH_CONFIDENCE, AGREE_LOW_CONFIDENCE,
-                                     CRITICAL, SOURCE_CONFLICT, compare_space)
+                                     CRITICAL, SOURCE_CONFLICT)
+from engine.semantic_compare import compare_space as _compare_space
+
+
+def compare_space(a1, a2, **kw):
+    """Always against the canonical registry — see E32."""
+    kw.setdefault("registry", REG)
+    return _compare_space(a1, a2, **kw)
 from engine.trade_rules import TradeRuleSet
 
 CERAMIC = TradeRuleSet.load("data/trade_rules/23010_ceramic.json")
@@ -33,8 +41,12 @@ PLASTER = TradeRuleSet.load("data/trade_rules/23010_plaster.json")
 
 def sem(**kw) -> SpaceSemantics:
     base = dict(space_id="X", semantic_label="BEDROOM", label_source="PDF_TEXT",
-                label_confidence="HIGH", confidence_basis="text + polygon + schedule",
-                scope_status="IN_SCOPE")
+                semantic_label_confidence="HIGH",
+                confidence_basis="drawing text entity inside the polygon",
+                scope_status="IN_SCOPE", scope_confidence="HIGH",
+                scope_basis="named in the owner brief",
+                apartment_id="APT-001", apartment_membership_confidence="HIGH",
+                apartment_basis="access from the main landing")
     base.update(kw)
     return SpaceSemantics(**base)
 
@@ -86,7 +98,7 @@ def test_4_design_and_site_topology_do_not_overwrite_each_other():
 
 # 5 ── the wrong apartment
 def test_5_a_cross_apartment_disagreement_is_critical():
-    c = compare_space(sem(apartment_id="RIGHT"), sem(apartment_id="LEFT"))
+    c = compare_space(sem(apartment_id="APT-001"), sem(apartment_id="APT-002"))
     assert c.materiality == CRITICAL and not c.is_pass_candidate
 
 
@@ -94,10 +106,14 @@ def test_5_a_cross_apartment_disagreement_is_critical():
 def test_6_open_plan_is_one_space_and_needs_no_invented_boundaries():
     out = SemanticOutput.from_dict({"spaces": [{
         "space_id": "OPEN-01", "semantic_label": "OPEN_PLAN_LIVING",
-        "label_source": "PDF_TEXT", "label_confidence": "MEDIUM",
+        "label_source": "PDF_TEXT", "semantic_label_confidence": "MEDIUM",
         "confidence_basis": "geometry shows one continuous region",
-        "scope_status": "IN_SCOPE",
-        "drawing_notes": "dining, east salon and the 12400 corridor are continuous"}]})
+        "scope_status": "IN_SCOPE", "scope_confidence": "HIGH",
+        "scope_basis": "the owner brief covers this unit",
+        "apartment_id": "APT-001", "apartment_membership_confidence": "HIGH",
+        "apartment_basis": "reached from the main landing",
+        "drawing_notes": "dining, east salon and the 12400 corridor are continuous"}]},
+        registry=REG)
     assert out.spaces[0].semantic_label == "OPEN_PLAN_LIVING"
     assert not out.spaces[0].geometry_challenge
 
@@ -180,7 +196,8 @@ def test_a_bathroom_releases_only_when_every_condition_is_met():
     good = compare_space(sem(space_id="BTH-03", semantic_label="BATHROOM"),
                          sem(space_id="BTH-03", semantic_label="BATHROOM"))
     assert good.verdict == AGREE_HIGH_CONFIDENCE
-    q = route(qs, comparisons={"BTH-03": good}, approved_revision="MAR.2023")
+    q = route(qs, comparisons={"BTH-03": good}, rules_present={"BTH-03": True},
+              approved_revision="MAR.2023")
     assert len(q.auto_validated) == 2
     assert total(apply(qs, q)) == D("4.53") + D("8.60") * D("3.00")
 
