@@ -69,6 +69,12 @@ and NOT_ESTABLISHED is its honest value when no schedule was supplied. A
 vision-only label is never HIGH. Where the brief does not reach a space,
 `scope_confidence` is NOT_ESTABLISHED and `scope_status` must be AMBIGUOUS.
 
+**`space_function` must add information or be left empty.** It is an optional
+human subtype — "Guest bedroom", "Water pump room", "Ensuite to the master".
+Restating the label in words is rejected: `semantic_label: KITCHEN` with
+`space_function: "Kitchen"` says the same thing twice and creates a second place
+to look. If you have nothing to add beyond the label, omit the field or send "".
+
 **A printed label is one signal.** Classify from position, adjacency,
 connectivity, size and schedule as well as the word. Where a name and the
 geometry disagree, record it in `semantic_conflicts`.

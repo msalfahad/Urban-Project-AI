@@ -100,6 +100,12 @@ stays HIGH. Confidence names its evidence:
   unit only. Claiming HIGH or MEDIUM while answering UNKNOWN is a contradiction
   and is rejected.
 
+**`space_function` must add information or be left empty.** It is an optional
+human subtype — "Guest bedroom", "Water pump room", "Ensuite to the master".
+Restating the label in words is rejected: `semantic_label: KITCHEN` with
+`space_function: "Kitchen"` says the same thing twice and creates a second place
+to look. If you have nothing to add beyond the label, omit the field or send "".
+
 **A label is one signal, never the mapping.** On this project the room labelled
 كوي / IRON on the approved drawing is the same physical space an older manual
 takeoff calls مطبخ. Follow the approved drawing and the geometry — position,
