@@ -41,7 +41,7 @@ def sem(**kw) -> SpaceSemantics:
 
 # 1 ── the IRON_ROOM trap
 def test_1_the_drawing_label_wins_over_the_historical_takeoff_name():
-    """AR-00 says كوي IRON; the old qiyal calls the same space مطبخ."""
+    """AR-00 says كوي IRON; the old MEASURER calls the same space مطبخ."""
     from engine.trades import normalize_label
     assert normalize_label("كوي") == "IRON_ROOM"
     a1 = sem(space_id="IRN-01", semantic_label="IRON_ROOM",
@@ -77,7 +77,7 @@ def test_4_design_and_site_topology_do_not_overwrite_each_other():
         space_id="BTH-M",
         design=Quantities(D("15.15"), D("16.10"), "AR-00 split: 3450x3000 + 1600x3000",
                           basis="PRINTED_DIMENSION_REFERENCE"),
-        site=Quantities(D("15.34"), D("16.30"), "qiyal: one combined bathroom",
+        site=Quantities(D("15.34"), D("16.30"), "MEASURER: one combined bathroom",
                         basis="SITE_MEASURED_FACE"),
         classification=DESIGN_VS_SITE)
     assert r.design.area_m2 != r.site.area_m2
@@ -93,12 +93,12 @@ def test_5_a_cross_apartment_disagreement_is_critical():
 # 6 ── open plan
 def test_6_open_plan_is_one_space_and_needs_no_invented_boundaries():
     out = SemanticOutput.from_dict({"spaces": [{
-        "space_id": "OPEN-01", "semantic_label": "OPEN_PLAN",
+        "space_id": "OPEN-01", "semantic_label": "OPEN_PLAN_LIVING",
         "label_source": "PDF_TEXT", "label_confidence": "MEDIUM",
         "confidence_basis": "geometry shows one continuous region",
         "scope_status": "IN_SCOPE",
         "drawing_notes": "dining, east salon and the 12400 corridor are continuous"}]})
-    assert out.spaces[0].semantic_label == "OPEN_PLAN"
+    assert out.spaces[0].semantic_label == "OPEN_PLAN_LIVING"
     assert not out.spaces[0].geometry_challenge
 
 
@@ -155,7 +155,7 @@ def test_12_an_unmatched_benchmark_row_is_not_forced_onto_a_room():
     from engine.reconcile import UNRESOLVED, BenchmarkReport, Quantities, Reconciliation
     rep = BenchmarkReport(rows=[Reconciliation(
         space_id="DRY-ROW-04",
-        site=Quantities(D("61.55"), None, "qiyal row 4", basis="SITE_MEASURED_FACE"),
+        site=Quantities(D("61.55"), None, "MEASURER row 4", basis="SITE_MEASURED_FACE"),
         classification=UNRESOLVED,
         explanation="61.55 m2 has no single design counterpart; largest is 52.14")])
     assert not rep.ready_for_agents          # unresolved blocks, as designed

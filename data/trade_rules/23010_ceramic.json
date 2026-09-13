@@ -20,7 +20,7 @@
    "floor_finish": "ceramic",
    "wall_finish": null
   },
-  "DRESS": {
+  "DRESSING_ROOM": {
    "floor_finish": "ceramic",
    "wall_finish": null
   },
@@ -60,7 +60,7 @@
    "wall_finish": null,
    "notes": "Measured as stair, not as floor."
   },
-  "LIFT_SHAFT": {
+  "ELEVATOR_SHAFT": {
    "floor_finish": null,
    "wall_finish": null
   },
@@ -72,5 +72,6 @@
  "version": "1.0",
  "effective_from": "2026-09-13",
  "source": "Urban Projects owner rule, project 23010",
- "measurement_basis": "CLEAR_INTERNAL_FINISH_FACE"
+ "measurement_basis": "CLEAR_INTERNAL_FINISH_FACE",
+ "trade_rule_status": "WIRED"
 }

@@ -38,7 +38,7 @@ def test_a_blind_pass_runs_on_drawing_and_geometry_alone():
 
 @pytest.mark.parametrize("leak", [
     "a1_output", "a1_result", "a1_record", "semantic_comparison", "comparison",
-    "qiyal", "benchmark", "ground_truth", "manual_takeoff", "site_measured",
+    "measurer", "qiyal", "benchmark", "ground_truth", "manual_takeoff", "site_measured",
     "expected",
 ])
 def test_every_answer_leaking_input_is_refused(leak):
@@ -49,7 +49,7 @@ def test_every_answer_leaking_input_is_refused(leak):
 def test_a_leak_hidden_inside_the_payload_is_also_refused():
     """Smuggling it into the input object must fail the same way."""
     payload = geometry_input()
-    payload.qiyal_total = 395.67          # type: ignore[attr-defined]
+    payload.measurer_total = 395.67          # type: ignore[attr-defined]
     with pytest.raises(BlindIsolationError, match="answer the question"):
         run_blind(payload, model=stub)
 

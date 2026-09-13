@@ -202,7 +202,7 @@ def test_a_doorway_closure_is_not_a_physical_wall():
 
 
 def test_gross_wall_includes_the_doorway_and_net_deducts_it():
-    """The qiyal measures gross; only a trade rule may take the opening off."""
+    """The MEASURER measures gross; only a trade rule may take the opening off."""
     wall, lab = room()
     wall[6, 4] = False
     _, bridges = bridge_openings(wall, 2)

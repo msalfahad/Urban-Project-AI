@@ -18,9 +18,12 @@ PROMPT_PATH = Path(__file__).parent / "prompt.md"
 BLIND_PROMPT_PATH = Path(__file__).parent / "prompt_blind.md"
 
 # Anything that would leak the answer into a "blind" pass.
+# Compared against a LOWERCASED field name, so every entry must be lowercase.
+# "measurer" and the legacy "qiyal" both appear: old records still carry the old
+# word, and a leak does not stop being a leak because the vocabulary moved.
 FORBIDDEN_BLIND_INPUTS = ("a1", "a1_output", "a1_result", "a1_record",
-                          "semantic_comparison", "comparison", "qiyal",
-                          "benchmark", "ground_truth", "manual_takeoff",
+                          "semantic_comparison", "comparison", "measurer",
+                          "qiyal", "benchmark", "ground_truth", "manual_takeoff",
                           "site_measured", "expected")
 
 
@@ -45,7 +48,7 @@ def run_blind(payload: SemanticInput, model: ModelFn | None = None,
 
     The isolation is structural, not a promise in the prompt: this function
     takes a SemanticInput and a model, and NOTHING ELSE. Any extra keyword —
-    a1_output, the comparison result, the qiyal benchmark, expected answers —
+    a1_output, the comparison result, the MEASURER benchmark, expected answers —
     raises rather than being quietly ignored, because a "blind" review that
     silently saw the answer is worse than no review at all.
 

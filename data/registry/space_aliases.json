@@ -1,150 +1,792 @@
 {
- "alias_version": "1.0",
- "note": "raw drawing label -> normalized semantic label. The raw label is NEVER destroyed; it is kept on the record as original_drawing_label. Matching is case-insensitive and ignores surrounding words.",
- "aliases": {
-  "IRON_ROOM": [
-   "كوي",
-   "غرفة كوي",
-   "غرفه كوي",
-   "IRON",
-   "IRONING",
-   "UTILITY"
-  ],
-  "WASHROOM": [
-   "مغاسل",
-   "مغسلة",
-   "WASH",
-   "WASH AREA",
-   "WASHROOM"
-  ],
-  "BATHROOM": [
-   "حمام",
-   "حمّام",
-   "BATH",
-   "BATHROOM",
-   "TOILET",
-   "WC"
-  ],
-  "BEDROOM": [
-   "غرفة نوم",
-   "غرفه نوم",
-   "BED ROOM",
-   "BEDROOM",
-   "BED"
-  ],
-  "MASTER_BEDROOM": [
-   "غرفة نوم ماستر",
-   "MASTER BED",
-   "MASTER BEDROOM"
-  ],
-  "DRESS": [
-   "ملابس",
-   "غرفة ملابس",
-   "DRESS",
-   "DRESSING",
-   "WARDROBE",
-   "CLOSET"
-  ],
-  "KITCHEN": [
-   "مطبخ",
-   "KITCHEN"
-  ],
-  "SALON": [
-   "صالون",
-   "صاله",
-   "صالة",
-   "SALOON",
-   "SALON",
-   "HALL"
-  ],
-  "DINING": [
-   "طعام",
-   "صالة طعام",
-   "DINNING",
-   "DINING"
-  ],
-  "CORRIDOR": [
-   "ممر",
-   "PASSAGE",
-   "CORRIDOR",
-   "HALLWAY"
-  ],
-  "STORE": [
-   "مخزن",
-   "STORE",
-   "STORAGE"
-  ],
-  "MAID_ROOM": [
-   "غرفة خادمة",
-   "غرفه خادمه",
-   "MAID ROOM",
-   "MAID"
-  ],
-  "DRIVER_ROOM": [
-   "غرفة سائق",
-   "DRIVER ROOM",
-   "DRIVER"
-  ],
-  "LAUNDRY": [
-   "غسيل",
-   "مغسلة ملابس",
-   "LAUNDRY"
-  ],
-  "TERRACE": [
-   "تراس",
-   "TERRACE"
-  ],
-  "BALCONY": [
-   "بلكونة",
-   "شرفة",
-   "BALCONY"
-  ],
-  "STAIR": [
-   "سلم",
-   "درج",
-   "STAIR",
-   "STAIRS",
-   "STAIRCASE"
-  ],
-  "LIFT_SHAFT": [
-   "منور مصعد",
-   "مصعد",
-   "LIFT",
-   "ELEVATOR",
-   "ELEVATOR SHAFT"
-  ],
-  "SHAFT": [
-   "منور",
-   "شافت",
-   "SHAFT",
-   "DUCT"
-  ],
-  "VOID": [
-   "فراغ",
-   "VOID",
-   "OPEN TO BELOW"
-  ],
-  "LOBBY": [
-   "بهو",
-   "LOBBY"
-  ],
-  "ENTRANCE": [
-   "مدخل",
-   "ENTRANCE",
-   "ENTRY",
-   "FOYER"
-  ],
-  "SERVICE_ROOM": [
-   "غرفة خدمة",
-   "SERVICE",
-   "SERVICE ROOM",
-   "MECHANICAL",
-   "ELECTRICAL ROOM",
-   "PUMP ROOM"
-  ],
-  "ROOF_ROOM": [
-   "غرفة السطح",
-   "ROOF ROOM"
-  ]
- }
+ "alias_version": "2.0",
+ "note": "Canonical space aliases. Matching is normalise -> EXACT -> TOKEN/PHRASE, unique match required; two different canonical labels matching is AMBIGUOUS, zero is UNKNOWN. There is NO substring mode: 'room' sits inside BEDROOM, MAID_ROOM, IRON_ROOM and SERVICE_ROOM. The raw drawing label is never destroyed. EXACT means 'exactly and nothing else' and is reserved for the dangerous generics; every alias can still match a whole normalised string. A dangerous generic (room, hall, area, service, غرفة, صالة) is held as LEGACY_ONLY: it is recorded but can never classify a space alone. 'صالة طعام' still resolves, because the phrase carries the meaning the bare word does not.",
+ "dangerous_generics": [
+  "room",
+  "hall",
+  "area",
+  "service",
+  "غرفة",
+  "صالة",
+  "صاله"
+ ],
+ "aliases": [
+  {
+   "alias": "bedroom",
+   "canonical_label": "BEDROOM",
+   "language": "en",
+   "match_mode": "TOKEN",
+   "priority": 10
+  },
+  {
+   "alias": "bed room",
+   "canonical_label": "BEDROOM",
+   "language": "en",
+   "match_mode": "PHRASE",
+   "priority": 10
+  },
+  {
+   "alias": "غرفة نوم",
+   "canonical_label": "BEDROOM",
+   "language": "ar",
+   "match_mode": "PHRASE",
+   "priority": 10
+  },
+  {
+   "alias": "bed",
+   "canonical_label": "BEDROOM",
+   "language": "en",
+   "match_mode": "TOKEN",
+   "priority": 60
+  },
+  {
+   "alias": "master bedroom",
+   "canonical_label": "MASTER_BEDROOM",
+   "language": "en",
+   "match_mode": "PHRASE",
+   "priority": 5
+  },
+  {
+   "alias": "master bed",
+   "canonical_label": "MASTER_BEDROOM",
+   "language": "en",
+   "match_mode": "PHRASE",
+   "priority": 8
+  },
+  {
+   "alias": "غرفة نوم ماستر",
+   "canonical_label": "MASTER_BEDROOM",
+   "language": "ar",
+   "match_mode": "PHRASE",
+   "priority": 5
+  },
+  {
+   "alias": "salon",
+   "canonical_label": "SALON",
+   "language": "en",
+   "match_mode": "TOKEN",
+   "priority": 10
+  },
+  {
+   "alias": "saloon",
+   "canonical_label": "SALON",
+   "language": "en",
+   "match_mode": "TOKEN",
+   "priority": 10
+  },
+  {
+   "alias": "صالون",
+   "canonical_label": "SALON",
+   "language": "ar",
+   "match_mode": "TOKEN",
+   "priority": 10
+  },
+  {
+   "alias": "صاله",
+   "canonical_label": "SALON",
+   "language": "ar",
+   "match_mode": "LEGACY_ONLY",
+   "priority": 999
+  },
+  {
+   "alias": "صالة",
+   "canonical_label": "SALON",
+   "language": "ar",
+   "match_mode": "LEGACY_ONLY",
+   "priority": 999
+  },
+  {
+   "alias": "living room",
+   "canonical_label": "LIVING_ROOM",
+   "language": "en",
+   "match_mode": "PHRASE",
+   "priority": 10
+  },
+  {
+   "alias": "معيشة",
+   "canonical_label": "LIVING_ROOM",
+   "language": "ar",
+   "match_mode": "TOKEN",
+   "priority": 10
+  },
+  {
+   "alias": "dining",
+   "canonical_label": "DINING",
+   "language": "en",
+   "match_mode": "TOKEN",
+   "priority": 10
+  },
+  {
+   "alias": "dinning",
+   "canonical_label": "DINING",
+   "language": "en",
+   "match_mode": "TOKEN",
+   "priority": 10
+  },
+  {
+   "alias": "طعام",
+   "canonical_label": "DINING",
+   "language": "ar",
+   "match_mode": "TOKEN",
+   "priority": 10
+  },
+  {
+   "alias": "صالة طعام",
+   "canonical_label": "DINING",
+   "language": "ar",
+   "match_mode": "PHRASE",
+   "priority": 8
+  },
+  {
+   "alias": "kitchen",
+   "canonical_label": "KITCHEN",
+   "language": "en",
+   "match_mode": "TOKEN",
+   "priority": 10
+  },
+  {
+   "alias": "مطبخ",
+   "canonical_label": "KITCHEN",
+   "language": "ar",
+   "match_mode": "TOKEN",
+   "priority": 10
+  },
+  {
+   "alias": "bathroom",
+   "canonical_label": "BATHROOM",
+   "language": "en",
+   "match_mode": "TOKEN",
+   "priority": 10
+  },
+  {
+   "alias": "bath",
+   "canonical_label": "BATHROOM",
+   "language": "en",
+   "match_mode": "TOKEN",
+   "priority": 15
+  },
+  {
+   "alias": "حمام",
+   "canonical_label": "BATHROOM",
+   "language": "ar",
+   "match_mode": "TOKEN",
+   "priority": 10
+  },
+  {
+   "alias": "toilet",
+   "canonical_label": "BATHROOM",
+   "language": "en",
+   "match_mode": "TOKEN",
+   "priority": 20
+  },
+  {
+   "alias": "wc",
+   "canonical_label": "WC",
+   "language": "en",
+   "match_mode": "TOKEN",
+   "priority": 10
+  },
+  {
+   "alias": "w c",
+   "canonical_label": "WC",
+   "language": "en",
+   "match_mode": "PHRASE",
+   "priority": 10
+  },
+  {
+   "alias": "دورة مياه",
+   "canonical_label": "WC",
+   "language": "ar",
+   "match_mode": "PHRASE",
+   "priority": 10
+  },
+  {
+   "alias": "washroom",
+   "canonical_label": "WASHROOM",
+   "language": "en",
+   "match_mode": "TOKEN",
+   "priority": 10
+  },
+  {
+   "alias": "wash",
+   "canonical_label": "WASHROOM",
+   "language": "en",
+   "match_mode": "TOKEN",
+   "priority": 15
+  },
+  {
+   "alias": "wash area",
+   "canonical_label": "WASHROOM",
+   "language": "en",
+   "match_mode": "PHRASE",
+   "priority": 10
+  },
+  {
+   "alias": "مغاسل",
+   "canonical_label": "WASHROOM",
+   "language": "ar",
+   "match_mode": "TOKEN",
+   "priority": 10
+  },
+  {
+   "alias": "مغسلة",
+   "canonical_label": "WASHROOM",
+   "language": "ar",
+   "match_mode": "TOKEN",
+   "priority": 15
+  },
+  {
+   "alias": "dressing room",
+   "canonical_label": "DRESSING_ROOM",
+   "language": "en",
+   "match_mode": "PHRASE",
+   "priority": 10
+  },
+  {
+   "alias": "dress",
+   "canonical_label": "DRESSING_ROOM",
+   "language": "en",
+   "match_mode": "TOKEN",
+   "priority": 15
+  },
+  {
+   "alias": "ملابس",
+   "canonical_label": "DRESSING_ROOM",
+   "language": "ar",
+   "match_mode": "TOKEN",
+   "priority": 10
+  },
+  {
+   "alias": "غرفة ملابس",
+   "canonical_label": "DRESSING_ROOM",
+   "language": "ar",
+   "match_mode": "PHRASE",
+   "priority": 8
+  },
+  {
+   "alias": "wardrobe",
+   "canonical_label": "DRESSING_ROOM",
+   "language": "en",
+   "match_mode": "TOKEN",
+   "priority": 20
+  },
+  {
+   "alias": "closet",
+   "canonical_label": "DRESSING_ROOM",
+   "language": "en",
+   "match_mode": "TOKEN",
+   "priority": 20
+  },
+  {
+   "alias": "iron room",
+   "canonical_label": "IRON_ROOM",
+   "language": "en",
+   "match_mode": "PHRASE",
+   "priority": 8
+  },
+  {
+   "alias": "iron",
+   "canonical_label": "IRON_ROOM",
+   "language": "en",
+   "match_mode": "TOKEN",
+   "priority": 15
+  },
+  {
+   "alias": "ironing",
+   "canonical_label": "IRON_ROOM",
+   "language": "en",
+   "match_mode": "TOKEN",
+   "priority": 15
+  },
+  {
+   "alias": "utility",
+   "canonical_label": "IRON_ROOM",
+   "language": "en",
+   "match_mode": "TOKEN",
+   "priority": 25
+  },
+  {
+   "alias": "كوي",
+   "canonical_label": "IRON_ROOM",
+   "language": "ar",
+   "match_mode": "TOKEN",
+   "priority": 10
+  },
+  {
+   "alias": "غرفة كوي",
+   "canonical_label": "IRON_ROOM",
+   "language": "ar",
+   "match_mode": "PHRASE",
+   "priority": 8
+  },
+  {
+   "alias": "laundry",
+   "canonical_label": "LAUNDRY_ROOM",
+   "language": "en",
+   "match_mode": "TOKEN",
+   "priority": 10
+  },
+  {
+   "alias": "laundry room",
+   "canonical_label": "LAUNDRY_ROOM",
+   "language": "en",
+   "match_mode": "PHRASE",
+   "priority": 8
+  },
+  {
+   "alias": "غسيل",
+   "canonical_label": "LAUNDRY_ROOM",
+   "language": "ar",
+   "match_mode": "TOKEN",
+   "priority": 10
+  },
+  {
+   "alias": "store",
+   "canonical_label": "STORE",
+   "language": "en",
+   "match_mode": "TOKEN",
+   "priority": 10
+  },
+  {
+   "alias": "storage",
+   "canonical_label": "STORE",
+   "language": "en",
+   "match_mode": "TOKEN",
+   "priority": 15
+  },
+  {
+   "alias": "مخزن",
+   "canonical_label": "STORE",
+   "language": "ar",
+   "match_mode": "TOKEN",
+   "priority": 10
+  },
+  {
+   "alias": "corridor",
+   "canonical_label": "CORRIDOR",
+   "language": "en",
+   "match_mode": "TOKEN",
+   "priority": 10
+  },
+  {
+   "alias": "passage",
+   "canonical_label": "CORRIDOR",
+   "language": "en",
+   "match_mode": "TOKEN",
+   "priority": 15
+  },
+  {
+   "alias": "hallway",
+   "canonical_label": "CORRIDOR",
+   "language": "en",
+   "match_mode": "TOKEN",
+   "priority": 15
+  },
+  {
+   "alias": "ممر",
+   "canonical_label": "CORRIDOR",
+   "language": "ar",
+   "match_mode": "TOKEN",
+   "priority": 10
+  },
+  {
+   "alias": "lobby",
+   "canonical_label": "LOBBY",
+   "language": "en",
+   "match_mode": "TOKEN",
+   "priority": 10
+  },
+  {
+   "alias": "بهو",
+   "canonical_label": "LOBBY",
+   "language": "ar",
+   "match_mode": "TOKEN",
+   "priority": 10
+  },
+  {
+   "alias": "entrance",
+   "canonical_label": "ENTRANCE",
+   "language": "en",
+   "match_mode": "TOKEN",
+   "priority": 10
+  },
+  {
+   "alias": "entry",
+   "canonical_label": "ENTRANCE",
+   "language": "en",
+   "match_mode": "TOKEN",
+   "priority": 15
+  },
+  {
+   "alias": "foyer",
+   "canonical_label": "ENTRANCE",
+   "language": "en",
+   "match_mode": "TOKEN",
+   "priority": 15
+  },
+  {
+   "alias": "مدخل",
+   "canonical_label": "ENTRANCE",
+   "language": "ar",
+   "match_mode": "TOKEN",
+   "priority": 10
+  },
+  {
+   "alias": "maid room",
+   "canonical_label": "MAID_ROOM",
+   "language": "en",
+   "match_mode": "PHRASE",
+   "priority": 8
+  },
+  {
+   "alias": "maid",
+   "canonical_label": "MAID_ROOM",
+   "language": "en",
+   "match_mode": "TOKEN",
+   "priority": 15
+  },
+  {
+   "alias": "غرفة خادمة",
+   "canonical_label": "MAID_ROOM",
+   "language": "ar",
+   "match_mode": "PHRASE",
+   "priority": 8
+  },
+  {
+   "alias": "خادمة",
+   "canonical_label": "MAID_ROOM",
+   "language": "ar",
+   "match_mode": "TOKEN",
+   "priority": 15
+  },
+  {
+   "alias": "driver room",
+   "canonical_label": "DRIVER_ROOM",
+   "language": "en",
+   "match_mode": "PHRASE",
+   "priority": 8
+  },
+  {
+   "alias": "سائق",
+   "canonical_label": "DRIVER_ROOM",
+   "language": "ar",
+   "match_mode": "TOKEN",
+   "priority": 15
+  },
+  {
+   "alias": "service room",
+   "canonical_label": "SERVICE_ROOM",
+   "language": "en",
+   "match_mode": "PHRASE",
+   "priority": 8
+  },
+  {
+   "alias": "mechanical",
+   "canonical_label": "SERVICE_ROOM",
+   "language": "en",
+   "match_mode": "TOKEN",
+   "priority": 20
+  },
+  {
+   "alias": "electrical room",
+   "canonical_label": "SERVICE_ROOM",
+   "language": "en",
+   "match_mode": "PHRASE",
+   "priority": 20
+  },
+  {
+   "alias": "pump room",
+   "canonical_label": "SERVICE_ROOM",
+   "language": "en",
+   "match_mode": "PHRASE",
+   "priority": 20
+  },
+  {
+   "alias": "غرفة خدمة",
+   "canonical_label": "SERVICE_ROOM",
+   "language": "ar",
+   "match_mode": "PHRASE",
+   "priority": 10
+  },
+  {
+   "alias": "stair",
+   "canonical_label": "STAIR",
+   "language": "en",
+   "match_mode": "TOKEN",
+   "priority": 10
+  },
+  {
+   "alias": "stairs",
+   "canonical_label": "STAIR",
+   "language": "en",
+   "match_mode": "TOKEN",
+   "priority": 10
+  },
+  {
+   "alias": "staircase",
+   "canonical_label": "STAIR",
+   "language": "en",
+   "match_mode": "TOKEN",
+   "priority": 10
+  },
+  {
+   "alias": "سلم",
+   "canonical_label": "STAIR",
+   "language": "ar",
+   "match_mode": "TOKEN",
+   "priority": 10
+  },
+  {
+   "alias": "درج",
+   "canonical_label": "STAIR",
+   "language": "ar",
+   "match_mode": "TOKEN",
+   "priority": 10
+  },
+  {
+   "alias": "stair landing",
+   "canonical_label": "STAIR_LANDING",
+   "language": "en",
+   "match_mode": "PHRASE",
+   "priority": 8
+  },
+  {
+   "alias": "بسطة",
+   "canonical_label": "STAIR_LANDING",
+   "language": "ar",
+   "match_mode": "TOKEN",
+   "priority": 10
+  },
+  {
+   "alias": "stair void",
+   "canonical_label": "STAIR_VOID",
+   "language": "en",
+   "match_mode": "PHRASE",
+   "priority": 8
+  },
+  {
+   "alias": "elevator shaft",
+   "canonical_label": "ELEVATOR_SHAFT",
+   "language": "en",
+   "match_mode": "PHRASE",
+   "priority": 5
+  },
+  {
+   "alias": "lift shaft",
+   "canonical_label": "ELEVATOR_SHAFT",
+   "language": "en",
+   "match_mode": "PHRASE",
+   "priority": 5
+  },
+  {
+   "alias": "elevator",
+   "canonical_label": "ELEVATOR_SHAFT",
+   "language": "en",
+   "match_mode": "TOKEN",
+   "priority": 15
+  },
+  {
+   "alias": "lift",
+   "canonical_label": "ELEVATOR_SHAFT",
+   "language": "en",
+   "match_mode": "TOKEN",
+   "priority": 15
+  },
+  {
+   "alias": "مصعد",
+   "canonical_label": "ELEVATOR_SHAFT",
+   "language": "ar",
+   "match_mode": "TOKEN",
+   "priority": 10
+  },
+  {
+   "alias": "منور مصعد",
+   "canonical_label": "ELEVATOR_SHAFT",
+   "language": "ar",
+   "match_mode": "PHRASE",
+   "priority": 8
+  },
+  {
+   "alias": "service shaft",
+   "canonical_label": "SERVICE_SHAFT",
+   "language": "en",
+   "match_mode": "PHRASE",
+   "priority": 8
+  },
+  {
+   "alias": "shaft",
+   "canonical_label": "SHAFT",
+   "language": "en",
+   "match_mode": "TOKEN",
+   "priority": 15
+  },
+  {
+   "alias": "duct",
+   "canonical_label": "SHAFT",
+   "language": "en",
+   "match_mode": "TOKEN",
+   "priority": 20
+  },
+  {
+   "alias": "منور",
+   "canonical_label": "SHAFT",
+   "language": "ar",
+   "match_mode": "TOKEN",
+   "priority": 10
+  },
+  {
+   "alias": "شافت",
+   "canonical_label": "SHAFT",
+   "language": "ar",
+   "match_mode": "TOKEN",
+   "priority": 10
+  },
+  {
+   "alias": "void",
+   "canonical_label": "VOID",
+   "language": "en",
+   "match_mode": "TOKEN",
+   "priority": 15
+  },
+  {
+   "alias": "فراغ",
+   "canonical_label": "VOID",
+   "language": "ar",
+   "match_mode": "TOKEN",
+   "priority": 10
+  },
+  {
+   "alias": "open to below",
+   "canonical_label": "VOID",
+   "language": "en",
+   "match_mode": "PHRASE",
+   "priority": 10
+  },
+  {
+   "alias": "double height void",
+   "canonical_label": "DOUBLE_HEIGHT_VOID",
+   "language": "en",
+   "match_mode": "PHRASE",
+   "priority": 5
+  },
+  {
+   "alias": "balcony",
+   "canonical_label": "BALCONY",
+   "language": "en",
+   "match_mode": "TOKEN",
+   "priority": 10
+  },
+  {
+   "alias": "بلكونة",
+   "canonical_label": "BALCONY",
+   "language": "ar",
+   "match_mode": "TOKEN",
+   "priority": 10
+  },
+  {
+   "alias": "شرفة",
+   "canonical_label": "BALCONY",
+   "language": "ar",
+   "match_mode": "TOKEN",
+   "priority": 10
+  },
+  {
+   "alias": "terrace",
+   "canonical_label": "TERRACE",
+   "language": "en",
+   "match_mode": "TOKEN",
+   "priority": 10
+  },
+  {
+   "alias": "تراس",
+   "canonical_label": "TERRACE",
+   "language": "ar",
+   "match_mode": "TOKEN",
+   "priority": 10
+  },
+  {
+   "alias": "roof room",
+   "canonical_label": "ROOF_ROOM",
+   "language": "en",
+   "match_mode": "PHRASE",
+   "priority": 8
+  },
+  {
+   "alias": "غرفة السطح",
+   "canonical_label": "ROOF_ROOM",
+   "language": "ar",
+   "match_mode": "PHRASE",
+   "priority": 8
+  },
+  {
+   "alias": "roof",
+   "canonical_label": "ROOF_AREA",
+   "language": "en",
+   "match_mode": "TOKEN",
+   "priority": 15
+  },
+  {
+   "alias": "سطح",
+   "canonical_label": "ROOF_AREA",
+   "language": "ar",
+   "match_mode": "TOKEN",
+   "priority": 15
+  },
+  {
+   "alias": "garage",
+   "canonical_label": "GARAGE",
+   "language": "en",
+   "match_mode": "TOKEN",
+   "priority": 10
+  },
+  {
+   "alias": "كراج",
+   "canonical_label": "GARAGE",
+   "language": "ar",
+   "match_mode": "TOKEN",
+   "priority": 10
+  },
+  {
+   "alias": "parking",
+   "canonical_label": "PARKING",
+   "language": "en",
+   "match_mode": "TOKEN",
+   "priority": 10
+  },
+  {
+   "alias": "مواقف",
+   "canonical_label": "PARKING",
+   "language": "ar",
+   "match_mode": "TOKEN",
+   "priority": 10
+  },
+  {
+   "alias": "open plan",
+   "canonical_label": "OPEN_PLAN_LIVING",
+   "language": "en",
+   "match_mode": "PHRASE",
+   "priority": 8
+  },
+  {
+   "alias": "external area",
+   "canonical_label": "EXTERNAL_AREA",
+   "language": "en",
+   "match_mode": "PHRASE",
+   "priority": 8
+  },
+  {
+   "alias": "كيال",
+   "canonical_label": "MEASURER_LEGACY",
+   "language": "ar",
+   "match_mode": "LEGACY_ONLY",
+   "priority": 999
+  },
+  {
+   "alias": "MEASURER",
+   "canonical_label": "MEASURER_LEGACY",
+   "language": "en",
+   "match_mode": "LEGACY_ONLY",
+   "priority": 999
+  }
+ ]
 }

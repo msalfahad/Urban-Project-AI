@@ -38,7 +38,7 @@ EXTERNAL = "EXTERNAL"         # the outside of the building
 # expensive to mix:
 #
 #   ROOM TOPOLOGY       — what closes a room, physical or not
-#   GROSS WALL PERIMETER— what a qiyal measures: wall plus doorway, undeducted
+#   GROSS WALL PERIMETER— what a MEASURER measures: wall plus doorway, undeducted
 #   NET FINISH QUANTITY — gross minus the openings the trade rule deducts
 #
 # A doorway closure is NOT a wall. It exists so the room polygon closes and so
@@ -115,7 +115,7 @@ class WallSegment:
 
     @property
     def counts_for_gross_wall(self) -> bool:
-        """What a qiyal measures: wall and doorway, but not an open side."""
+        """What a MEASURER measures: wall and doorway, but not an open side."""
         return self.segment_type != OPEN_TRANSITION
 
     @property
@@ -146,7 +146,7 @@ class SpaceWalls:
 
     @property
     def gross_wall_perimeter_m(self) -> Decimal:
-        """Wall plus doorway closures, undeducted — what a qiyal row measures."""
+        """Wall plus doorway closures, undeducted — what a MEASURER row measures."""
         return sum((s.length_m for s in self.segments if s.counts_for_gross_wall),
                    Decimal(0))
 

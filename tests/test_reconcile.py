@@ -18,7 +18,7 @@ from engine.reconcile import (AMBIGUOUS, CONFIRMED, DESIGN_VS_SITE, ENGINE_ERROR
                               variance_pct)
 
 
-def test_derived_sides_solves_the_real_qiyal_rows():
+def test_derived_sides_solves_the_real_MEASURER_rows():
     assert [round(x, 3) for x in derived_sides(D("4.44"), D("8.50"))] == [D("2.400"), D("1.850")]
     assert [round(x, 3) for x in derived_sides(D("15.34"), D("16.30"))] == [D("5.200"), D("2.950")]
     assert [round(x, 3) for x in derived_sides(D("4.35"), D("8.80"))] == [D("2.900"), D("1.500")]
@@ -51,7 +51,7 @@ def kit() -> Reconciliation:
     return Reconciliation(
         space_id="KIT-01",
         design=Quantities(D("20.3125"), D("19.00"), "printed 3250x6250"),
-        site=Quantities(D("19.22"), D("18.50"), "qiyal row 1"),
+        site=Quantities(D("19.22"), D("18.50"), "MEASURER row 1"),
         engine=Quantities(D("19.668"), None, "E23 raster"),
     )
 
@@ -72,7 +72,7 @@ def test_engine_status_takes_the_worse_of_area_and_perimeter():
 
 
 def test_the_uniform_offset_that_would_explain_a_site_area():
-    """If the qiyal measured to centrelines, one t should explain every room."""
+    """If the MEASURER measured to centrelines, one t should explain every room."""
     r = Reconciliation(
         space_id="BTH-05",
         design=Quantities(D("3.60"), D("7.80")),

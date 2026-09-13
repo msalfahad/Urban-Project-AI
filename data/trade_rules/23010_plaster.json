@@ -19,7 +19,7 @@
    "floor_finish": null,
    "wall_finish": "plaster"
   },
-  "DRESS": {
+  "DRESSING_ROOM": {
    "floor_finish": null,
    "wall_finish": "plaster"
   },
@@ -57,7 +57,7 @@
    "floor_finish": null,
    "wall_finish": "plaster"
   },
-  "LIFT_SHAFT": {
+  "ELEVATOR_SHAFT": {
    "floor_finish": null,
    "wall_finish": null
   },
@@ -70,5 +70,6 @@
  "effective_from": "2026-09-13",
  "source": "Urban Projects owner rule, project 23010",
  "measurement_basis": "CLEAR_INTERNAL_FINISH_FACE",
- "_height_source": "Owner rule, Urban Projects. Distinct from the ceramic height by design."
+ "_height_source": "Owner rule, Urban Projects. Distinct from the ceramic height by design.",
+ "trade_rule_status": "WIRED"
 }

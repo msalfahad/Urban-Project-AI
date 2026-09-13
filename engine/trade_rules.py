@@ -22,8 +22,19 @@ from decimal import Decimal
 from pathlib import Path
 
 
+# A rule set that has not been wired yet. NULL NEVER MEANS DEFAULT: a trade with
+# no rules must fail closed, because "no rule" silently becoming "yes, at 3.0 m"
+# is precisely how the first takeoff applied one height to the whole floor.
+NOT_WIRED = "NOT_WIRED"
+WIRED = "WIRED"
+
+
 class TradeRuleError(RuntimeError):
     """No rule covers this — an engineer decides, the engine does not guess."""
+
+
+class RuleEngineNotAvailable(TradeRuleError):
+    """A quantity was requested from a trade whose rules are not wired yet."""
 
 
 @dataclass(frozen=True)
@@ -68,8 +79,14 @@ class TradeRuleSet:
     source: str = ""
     measurement_basis: str = ""
     height_source: str = ""           # never a default; always says where it came from
+    trade_rule_status: str = WIRED
 
     def rule_for(self, room_type: str) -> RoomRule:
+        if self.trade_rule_status != WIRED or not self.rules:
+            raise RuleEngineNotAvailable(
+                f"{self.trade}: rule set is {self.trade_rule_status} for project "
+                f"{self.project or '<unnamed>'} — RULE_ENGINE_NOT_AVAILABLE. "
+                "No default is applied; the quantity is not calculable yet.")
         key = room_type.strip().upper()
         if key not in self.rules:
             raise TradeRuleError(
@@ -134,6 +151,7 @@ class TradeRuleSet:
             effective_from=data.get("effective_from", ""),
             source=data.get("source", ""),
             measurement_basis=data.get("measurement_basis", ""),
+            trade_rule_status=data.get("trade_rule_status", WIRED),
             height_source=data.get("_height_source", data.get("height_source", "")),
         )
 

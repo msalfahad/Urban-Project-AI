@@ -9,7 +9,7 @@ reporting what the approved drawing actually contains.
 The three truths are kept apart on purpose:
 
     DESIGN       what the approved drawings say
-    SITE         what the qiyal / as-built survey says
+    SITE         what the MEASURER / as-built survey says
     COMMERCIAL   what Urban Projects agreed to charge or pay
 
 A difference between them is information, not an error.
@@ -30,6 +30,13 @@ from dataclasses import dataclass, field
 from decimal import Decimal, InvalidOperation
 
 # Classifications. Only ENGINE_ERROR is the engine's fault and blocks release.
+# Canonical terminology: MEASURER / كيال for the site survey. "qiyal"/"قيال"
+# remain only as LEGACY_ALIASES on historical records.
+MEASURER = "MEASURER"
+MEASURER_SITE_QUANTITY = "MEASURER_SITE_QUANTITY"
+MEASURER_BENCHMARK = "MEASURER_BENCHMARK"
+LEGACY_ALIASES = {"qiyal": MEASURER, "قيال": MEASURER}
+
 MATCH = "MATCH"
 ENGINE_ERROR = "ENGINE_ERROR"
 DESIGN_VS_SITE = "DESIGN_VS_SITE"
@@ -159,7 +166,7 @@ class Reconciliation:
     def implied_uniform_offset_m(self) -> Decimal | None:
         """The t that would make (L+t)(W+t) equal the site area.
 
-        If the qiyal measured to wall centrelines or outer faces, one constant t
+        If the MEASURER measured to wall centrelines or outer faces, one constant t
         should explain every room. Whether it also explains the perimeters is
         the test of that hypothesis — and on this project it does not, which is
         why the hypothesis stays a hypothesis.

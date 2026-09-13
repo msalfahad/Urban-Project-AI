@@ -70,7 +70,7 @@ def test_covers_reports_the_spaces_left_semantically_invisible():
 
 
 def test_the_iron_room_trap_records_the_conflict_rather_than_following_the_old_name():
-    """AR-00 says كوي IRON; the old qiyal calls the same space مطبخ."""
+    """AR-00 says كوي IRON; the old MEASURER calls the same space مطبخ."""
     out = SemanticOutput.from_dict({"spaces": [rec(
         space_id="IRN-01", semantic_label="IRON_ROOM",
         original_drawing_label="كوي IRON",

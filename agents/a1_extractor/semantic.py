@@ -14,7 +14,7 @@ When A1 believes the geometry is wrong it raises a GEOMETRY_CHALLENGE, which is
 a message to the engine, not an edit.
 
 One lesson from this project is baked into the label handling: on AR-00 the room
-labelled كوي / IRON is the same physical space the old qiyal calls مطبخ. A label
+labelled كوي / IRON is the same physical space the old MEASURER calls مطبخ. A label
 is one signal among several, never the mapping itself — so `label_source` and
 `confidence_basis` are required, and confidence must name the evidence that
 supports it rather than expressing a feeling.
@@ -32,22 +32,38 @@ from engine.trades import RULE_REQUIRED, TradeError, validate_all
 # MECHANICAL_ROOM, ELECTRICAL_ROOM and PUMP_ROOM. Every record carries the
 # version it was written under so an old project stays interpretable instead of
 # silently depending on a enum that moved underneath it.
-SEMANTIC_SCHEMA_VERSION = "1.0"
+SEMANTIC_SCHEMA_VERSION = "2.0"
 
+# FROZEN canonical taxonomy v2.0, approved by the owner 13 Sep 2026.
+# Space FUNCTION only. A label never implies a finish and never implies scope:
+# BATHROOM does not mean wall ceramic (E27 decides), TERRACE does not mean
+# excluded (scope_status decides). Synonyms live in the alias registry, which is
+# large on purpose so this list can stay small.
 SEMANTIC_LABELS = {
-    "BEDROOM", "MASTER_BEDROOM", "SALON", "DINING", "KITCHEN", "BATHROOM",
-    "WASHROOM", "DRESS", "IRON_ROOM", "STORE", "CORRIDOR", "LOBBY", "ENTRANCE",
-    "STAIR", "STAIR_LANDING", "LIFT_SHAFT", "SHAFT", "VOID", "TERRACE",
-    "BALCONY", "MAID_ROOM", "DRIVER_ROOM", "LAUNDRY", "SERVICE_ROOM",
-    "ROOF_ROOM", "EXTERNAL_AREA", "OPEN_PLAN", "UNKNOWN",
+    "BEDROOM", "MASTER_BEDROOM",
+    "SALON", "LIVING_ROOM", "DINING", "OPEN_PLAN_LIVING",
+    "KITCHEN",
+    "BATHROOM", "WC", "WASHROOM",
+    "DRESSING_ROOM", "IRON_ROOM", "LAUNDRY_ROOM", "STORE",
+    "CORRIDOR", "LOBBY", "ENTRANCE",
+    "MAID_ROOM", "DRIVER_ROOM", "SERVICE_ROOM",
+    "STAIR", "STAIR_LANDING", "STAIR_VOID",
+    "ELEVATOR_SHAFT", "SHAFT", "SERVICE_SHAFT",
+    "VOID", "DOUBLE_HEIGHT_VOID",
+    "BALCONY", "TERRACE",
+    "ROOF_ROOM", "ROOF_AREA",
+    "GARAGE", "PARKING",
+    "EXTERNAL_AREA",
+    "UNKNOWN", "AMBIGUOUS", "NOT_A_SPACE",
 }
 
 # Spaces a takeoff loses most often. A1 is asked to account for these by name so
 # that "we did not see one" is a statement rather than an omission.
 COMMONLY_MISSED = {
-    "STORE", "SHAFT", "TERRACE", "BALCONY", "STAIR_LANDING", "VOID", "CORRIDOR",
-    "SERVICE_ROOM", "MAID_ROOM", "LAUNDRY", "IRON_ROOM", "ROOF_ROOM",
-    "LIFT_SHAFT", "EXTERNAL_AREA", "OPEN_PLAN",
+    "STORE", "SHAFT", "SERVICE_SHAFT", "TERRACE", "BALCONY", "STAIR_LANDING",
+    "STAIR_VOID", "VOID", "DOUBLE_HEIGHT_VOID", "CORRIDOR", "SERVICE_ROOM",
+    "MAID_ROOM", "LAUNDRY_ROOM", "IRON_ROOM", "ROOF_ROOM", "ROOF_AREA",
+    "ELEVATOR_SHAFT", "EXTERNAL_AREA", "OPEN_PLAN_LIVING",
 }
 
 LABEL_SOURCES = {"DWG_TEXT_ENTITY", "PDF_TEXT", "VISION_MODEL", "HUMAN_VERIFIED", "UNKNOWN"}
@@ -107,6 +123,11 @@ class SpaceSemantics:
     semantic_conflicts: list[str] = field(default_factory=list)
     geometry_challenge: str = ""          # a message to the engine, not an edit
     trade_notes: str = ""                 # free text ABOUT trades, never a trade id
+    # When a trade cannot be decided, name the rule that is missing in a form a
+    # router can act on. Prose alone cannot be grouped, counted or assigned.
+    missing_rule_id: str = ""
+    missing_rule_description: str = ""
+    missing_required_fields: list[str] = field(default_factory=list)
     semantic_schema_version: str = SEMANTIC_SCHEMA_VERSION
 
     def validate(self) -> None:
@@ -153,10 +174,15 @@ class SpaceSemantics:
             raise SemanticError(f"{self.space_id}: {exc}") from exc
         # Applicability that depends on a finish schedule nobody supplied is a
         # routed question. Generic construction knowledge is not project scope.
-        if RULE_REQUIRED in self.trade_relevance and not self.trade_notes.strip():
+        if RULE_REQUIRED in self.trade_relevance and not self.missing_rule_id.strip():
             raise SemanticError(
-                f"{self.space_id}: RULE_REQUIRED must say which rule or schedule "
-                "is missing, in trade_notes")
+                f"{self.space_id}: RULE_REQUIRED needs a machine-readable "
+                "missing_rule_id (e.g. CERAMIC_WALL_FINISH_IRON_ROOM). Free text in "
+                "trade_notes cannot be grouped, counted or routed.")
+        if self.missing_rule_id and RULE_REQUIRED not in self.trade_relevance:
+            raise SemanticError(
+                f"{self.space_id}: missing_rule_id is set but the trade is not marked "
+                "RULE_REQUIRED — the record would claim a decision it does not have.")
 
 
 @dataclass
@@ -176,6 +202,14 @@ class SemanticOutput:
         for sid in self.not_a_space:
             if sid in seen:
                 raise SemanticError(f"{sid} is both classified and marked not-a-space")
+        # NOT_A_SPACE exists in the taxonomy AND as a list. Using both for one
+        # space is the duplication that creates two sources of truth, so a
+        # NOT_A_SPACE record must live in the list instead.
+        for s in self.spaces:
+            if s.semantic_label == "NOT_A_SPACE":
+                raise SemanticError(
+                    f"{s.space_id}: use the not_a_space[] list rather than the "
+                    "NOT_A_SPACE label, so there is one place to look.")
 
     def covers(self, detected: list[str]) -> list[str]:
         """Detected spaces A1 left semantically invisible."""
@@ -212,6 +246,9 @@ class SemanticOutput:
                     semantic_conflicts=list(r.get("semantic_conflicts", [])),
                     geometry_challenge=r.get("geometry_challenge", ""),
                     trade_notes=r.get("trade_notes", ""),
+                    missing_rule_id=r.get("missing_rule_id", ""),
+                    missing_rule_description=r.get("missing_rule_description", ""),
+                    missing_required_fields=list(r.get("missing_required_fields", [])),
                     semantic_schema_version=r.get("semantic_schema_version",
                                                   SEMANTIC_SCHEMA_VERSION),
                 )
