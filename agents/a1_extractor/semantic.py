@@ -26,6 +26,14 @@ import re
 from dataclasses import dataclass, field
 from typing import Any
 
+from engine.trades import RULE_REQUIRED, TradeError, validate_all
+
+# The vocabulary will change — SERVICE_ROOM will one day split into
+# MECHANICAL_ROOM, ELECTRICAL_ROOM and PUMP_ROOM. Every record carries the
+# version it was written under so an old project stays interpretable instead of
+# silently depending on a enum that moved underneath it.
+SEMANTIC_SCHEMA_VERSION = "1.0"
+
 SEMANTIC_LABELS = {
     "BEDROOM", "MASTER_BEDROOM", "SALON", "DINING", "KITCHEN", "BATHROOM",
     "WASHROOM", "DRESS", "IRON_ROOM", "STORE", "CORRIDOR", "LOBBY", "ENTRANCE",
@@ -98,8 +106,15 @@ class SpaceSemantics:
     special_conditions: str = ""
     semantic_conflicts: list[str] = field(default_factory=list)
     geometry_challenge: str = ""          # a message to the engine, not an edit
+    trade_notes: str = ""                 # free text ABOUT trades, never a trade id
+    semantic_schema_version: str = SEMANTIC_SCHEMA_VERSION
 
     def validate(self) -> None:
+        if self.space_function.strip().upper().replace(" ", "_") == self.semantic_label:
+            raise SemanticError(
+                f"{self.space_id}: space_function repeats semantic_label. The label "
+                "is the functional CLASS; space_function is an optional human "
+                "subtype such as 'Guest Bedroom' or 'Water pump room'.")
         if not self.space_id.strip():
             raise SemanticError("space_id must not be empty")
         if self.semantic_label not in SEMANTIC_LABELS:
@@ -130,6 +145,18 @@ class SpaceSemantics:
             raise SemanticError(
                 f"{self.space_id}: no label source, so confidence cannot be "
                 f"{self.label_confidence}")
+        # Trades are a registry, not prose: they feed rules, quantities and a
+        # BOQ, so an invented string breaks the chain at the money end.
+        try:
+            validate_all(self.trade_relevance)
+        except TradeError as exc:
+            raise SemanticError(f"{self.space_id}: {exc}") from exc
+        # Applicability that depends on a finish schedule nobody supplied is a
+        # routed question. Generic construction knowledge is not project scope.
+        if RULE_REQUIRED in self.trade_relevance and not self.trade_notes.strip():
+            raise SemanticError(
+                f"{self.space_id}: RULE_REQUIRED must say which rule or schedule "
+                "is missing, in trade_notes")
 
 
 @dataclass
@@ -137,6 +164,7 @@ class SemanticOutput:
     spaces: list[SpaceSemantics] = field(default_factory=list)
     not_a_space: list[str] = field(default_factory=list)
     notes: str = ""
+    semantic_schema_version: str = SEMANTIC_SCHEMA_VERSION
 
     def validate(self) -> None:
         seen: set[str] = set()
@@ -183,11 +211,16 @@ class SemanticOutput:
                     special_conditions=r.get("special_conditions", ""),
                     semantic_conflicts=list(r.get("semantic_conflicts", [])),
                     geometry_challenge=r.get("geometry_challenge", ""),
+                    trade_notes=r.get("trade_notes", ""),
+                    semantic_schema_version=r.get("semantic_schema_version",
+                                                  SEMANTIC_SCHEMA_VERSION),
                 )
                 for r in raw
             ],
             not_a_space=list(data.get("not_a_space", [])),
             notes=data.get("notes", ""),
+            semantic_schema_version=data.get("semantic_schema_version",
+                                             SEMANTIC_SCHEMA_VERSION),
         )
         out.validate()
         return out

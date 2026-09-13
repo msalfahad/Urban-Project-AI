@@ -19,6 +19,9 @@ serviceAccountKey.json
 # what each trade does to a room, not a client document, and the engine cannot
 # run without it. Space maps stay out — they carry a client's room dimensions.
 !/data/trade_rules/
+# ...and the canonical registries: trade ids and space-label aliases are Urban
+# Projects vocabulary, not client documents, and the schema validates against them.
+!/data/registry/
 *.dwg
 *.dxf
 *.xlsx

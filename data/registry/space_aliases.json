@@ -1,0 +1,150 @@
+{
+ "alias_version": "1.0",
+ "note": "raw drawing label -> normalized semantic label. The raw label is NEVER destroyed; it is kept on the record as original_drawing_label. Matching is case-insensitive and ignores surrounding words.",
+ "aliases": {
+  "IRON_ROOM": [
+   "كوي",
+   "غرفة كوي",
+   "غرفه كوي",
+   "IRON",
+   "IRONING",
+   "UTILITY"
+  ],
+  "WASHROOM": [
+   "مغاسل",
+   "مغسلة",
+   "WASH",
+   "WASH AREA",
+   "WASHROOM"
+  ],
+  "BATHROOM": [
+   "حمام",
+   "حمّام",
+   "BATH",
+   "BATHROOM",
+   "TOILET",
+   "WC"
+  ],
+  "BEDROOM": [
+   "غرفة نوم",
+   "غرفه نوم",
+   "BED ROOM",
+   "BEDROOM",
+   "BED"
+  ],
+  "MASTER_BEDROOM": [
+   "غرفة نوم ماستر",
+   "MASTER BED",
+   "MASTER BEDROOM"
+  ],
+  "DRESS": [
+   "ملابس",
+   "غرفة ملابس",
+   "DRESS",
+   "DRESSING",
+   "WARDROBE",
+   "CLOSET"
+  ],
+  "KITCHEN": [
+   "مطبخ",
+   "KITCHEN"
+  ],
+  "SALON": [
+   "صالون",
+   "صاله",
+   "صالة",
+   "SALOON",
+   "SALON",
+   "HALL"
+  ],
+  "DINING": [
+   "طعام",
+   "صالة طعام",
+   "DINNING",
+   "DINING"
+  ],
+  "CORRIDOR": [
+   "ممر",
+   "PASSAGE",
+   "CORRIDOR",
+   "HALLWAY"
+  ],
+  "STORE": [
+   "مخزن",
+   "STORE",
+   "STORAGE"
+  ],
+  "MAID_ROOM": [
+   "غرفة خادمة",
+   "غرفه خادمه",
+   "MAID ROOM",
+   "MAID"
+  ],
+  "DRIVER_ROOM": [
+   "غرفة سائق",
+   "DRIVER ROOM",
+   "DRIVER"
+  ],
+  "LAUNDRY": [
+   "غسيل",
+   "مغسلة ملابس",
+   "LAUNDRY"
+  ],
+  "TERRACE": [
+   "تراس",
+   "TERRACE"
+  ],
+  "BALCONY": [
+   "بلكونة",
+   "شرفة",
+   "BALCONY"
+  ],
+  "STAIR": [
+   "سلم",
+   "درج",
+   "STAIR",
+   "STAIRS",
+   "STAIRCASE"
+  ],
+  "LIFT_SHAFT": [
+   "منور مصعد",
+   "مصعد",
+   "LIFT",
+   "ELEVATOR",
+   "ELEVATOR SHAFT"
+  ],
+  "SHAFT": [
+   "منور",
+   "شافت",
+   "SHAFT",
+   "DUCT"
+  ],
+  "VOID": [
+   "فراغ",
+   "VOID",
+   "OPEN TO BELOW"
+  ],
+  "LOBBY": [
+   "بهو",
+   "LOBBY"
+  ],
+  "ENTRANCE": [
+   "مدخل",
+   "ENTRANCE",
+   "ENTRY",
+   "FOYER"
+  ],
+  "SERVICE_ROOM": [
+   "غرفة خدمة",
+   "SERVICE",
+   "SERVICE ROOM",
+   "MECHANICAL",
+   "ELECTRICAL ROOM",
+   "PUMP ROOM"
+  ],
+  "ROOF_ROOM": [
+   "غرفة السطح",
+   "ROOF ROOM"
+  ]
+ }
+}
