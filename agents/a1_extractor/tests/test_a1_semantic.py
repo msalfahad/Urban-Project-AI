@@ -201,3 +201,16 @@ def test_a_challenge_with_no_note_is_not_actionable():
     with pytest.raises(SemanticError, match="not actionable"):
         parse({"spaces": [rec(trade_challenges=[
             {"kind": "DRAWING_NOTE_CONFLICT", "note": ""}])]})
+
+
+@pytest.mark.parametrize("echo", ["BEDROOM", "Bedroom", "bedroom", "bed room",
+                                  "  Bedroom  "])
+def test_space_function_echoing_the_label_in_any_casing_is_refused(echo):
+    """Both Run 1 agents tripped on exactly this: KITCHEN / "Kitchen"."""
+    with pytest.raises(SemanticError, match="repeats semantic_label"):
+        parse({"spaces": [rec(space_function=echo)]})
+
+
+def test_an_empty_space_function_is_the_right_answer_when_there_is_nothing_to_add():
+    out = parse({"spaces": [rec(space_function="")]})
+    assert out.spaces[0].space_function == ""

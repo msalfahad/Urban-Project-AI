@@ -219,7 +219,13 @@ class SpaceSemantics:
     semantic_schema_version: str = SEMANTIC_SCHEMA_VERSION
 
     def validate(self, registry: GroupRegistry | None = None) -> None:
-        if self.space_function.strip().upper().replace(" ", "_") == self.semantic_label:
+        # Compared with every separator and case difference stripped, so
+        # "Kitchen", "KITCHEN", "bed room" and "Bed-Room" are all caught. Both
+        # Run 1 agents wrote the title-case form.
+        def _squash(s: str) -> str:
+            return re.sub(r"[^A-Z0-9]", "", s.upper())
+        if self.space_function.strip() and _squash(self.space_function) == _squash(
+                self.semantic_label):
             raise SemanticError(
                 f"{self.space_id}: space_function repeats semantic_label. The label "
                 "is the functional CLASS; space_function is an optional human "
