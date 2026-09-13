@@ -221,3 +221,31 @@ def test_an_open_side_is_in_the_room_outline_but_not_in_gross_wall():
     assert sw.gross_room_perimeter_m == D('12')   # the closed outline
     assert sw.gross_wall_perimeter_m == D('9')    # no wall on the open side
     assert any(s.segment_type == OPEN_TRANSITION for s in sw.segments)
+
+
+# ------------------------------------------------------------ dashed lines
+def test_a_dashed_line_is_rebuilt_as_one_boundary():
+    """The مغاسل case: a threshold drawn as dashes is a boundary, not a gap."""
+    from engine.walls import dashed_runs
+    px = D("10")                       # 1 px = 10 mm
+    dashes = [("H", 100.0, float(x), float(x + 20)) for x in range(0, 120, 30)]
+    runs = dashed_runs(dashes, px, max_dash_mm=350, max_gap_mm=200, min_run_mm=600)
+    assert len(runs) == 1
+    ori, fixed, a, b = runs[0]
+    assert ori == "H" and fixed == 100.0
+    assert D(str(b - a)) * px >= D("600")
+
+
+def test_two_ordinary_walls_are_not_joined_into_a_dashed_run():
+    """Long collinear pieces are walls with a door between them, not dashes."""
+    from engine.walls import dashed_runs
+    px = D("10")
+    walls = [("H", 50.0, 0.0, 200.0), ("H", 50.0, 300.0, 500.0)]   # 2 m pieces
+    assert dashed_runs(walls, px) == []
+
+
+def test_a_short_dashed_run_is_not_a_boundary():
+    from engine.walls import dashed_runs
+    px = D("10")
+    dashes = [("H", 10.0, float(x), float(x + 10)) for x in range(0, 40, 20)]
+    assert dashed_runs(dashes, px) == []

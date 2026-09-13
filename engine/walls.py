@@ -382,3 +382,49 @@ def duplicate_walls(all_walls: Iterable[SpaceWalls], px_mm: Decimal,
                 continue
             pairs.append((a.wall_id, b.wall_id, overlap))
     return pairs
+
+
+# ------------------------------------------------------------- dashed lines
+def dashed_runs(segments: list[tuple[str, float, float, float]],
+                px_mm: Decimal, *, max_dash_mm: int = 350,
+                max_gap_mm: int = 200, min_run_mm: int = 600
+                ) -> list[tuple[str, float, float, float]]:
+    """Rebuild the continuous boundaries that a dashed line represents.
+
+    A threshold, a shower kerb, an opening under a bulkhead — these are drawn
+    as a dashed line, which is a real boundary the engineer drew, not an
+    absence. Raster flood fill runs straight through the gaps between dashes,
+    which is how مغاسل ended up merged into the dining area.
+
+    A run qualifies only when its pieces are short enough to be dashes, close
+    enough together to be one line, and long enough overall to be a boundary.
+    Joining two ordinary walls that happen to be collinear is exactly what the
+    length caps are there to prevent.
+
+    `segments` and the return value are (orientation, fixed, start, end) with
+    orientation "H" or "V", in pixel units.
+    """
+    out: list[tuple[str, float, float, float]] = []
+    max_dash = float(Decimal(max_dash_mm) / px_mm)
+    max_gap = float(Decimal(max_gap_mm) / px_mm)
+    min_run = float(Decimal(min_run_mm) / px_mm)
+    for ori in ("H", "V"):
+        bands: dict[int, list[tuple[float, float]]] = {}
+        for o, fixed, a, b in segments:
+            if o != ori or (b - a) > max_dash or b <= a:
+                continue
+            bands.setdefault(int(round(fixed)), []).append((a, b))
+        for fixed, pieces in bands.items():
+            pieces.sort()
+            run_start, run_end, n = pieces[0][0], pieces[0][1], 1
+            for a, b in pieces[1:]:
+                if a - run_end <= max_gap:
+                    run_end = max(run_end, b)
+                    n += 1
+                else:
+                    if n >= 3 and run_end - run_start >= min_run:
+                        out.append((ori, float(fixed), run_start, run_end))
+                    run_start, run_end, n = a, b, 1
+            if n >= 3 and run_end - run_start >= min_run:
+                out.append((ori, float(fixed), run_start, run_end))
+    return out
