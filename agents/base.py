@@ -47,6 +47,15 @@ class ModelRefused(RuntimeError):
     """The model declined the request (stop_reason 'refusal') — not an empty answer."""
 
 
+class ModelTruncated(RuntimeError):
+    """The answer hit max_tokens and stopped mid-sentence.
+
+    Worth its own error because the symptom is a JSON parse failure several
+    layers away, which reads like a malformed model response when the real
+    cause is a budget that was too small. Raising here says so directly.
+    """
+
+
 def anthropic_model(
     system: str,
     user: str,
@@ -85,6 +94,11 @@ def anthropic_model(
         if resp.stop_reason == "refusal":
             details = getattr(resp, "stop_details", None)
             raise ModelRefused(f"{model} refused: {getattr(details, 'category', None)}")
+        if resp.stop_reason == "max_tokens":
+            raise ModelTruncated(
+                f"{model} hit max_tokens={kw.get('max_tokens')} and stopped mid-answer. "
+                "The output is incomplete, not malformed — raise the budget rather "
+                "than trying to parse what came back.")
         return "".join(b.text for b in resp.content if b.type == "text")
 
     try:

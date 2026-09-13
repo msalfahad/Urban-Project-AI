@@ -161,3 +161,42 @@ def test_text_blocks_are_joined(fake_anthropic):
     resp.content.append(SimpleNamespace(type="text", text="b"))
     fake_anthropic["client"] = _FakeClient([resp])
     assert base.anthropic_model("s", "u") == "ab"
+
+
+def test_a_truncated_answer_says_so_instead_of_failing_to_parse():
+    """Hitting max_tokens surfaces as a parse error three layers away otherwise."""
+    import pytest
+
+    from agents.base import ModelTruncated
+
+    class Resp:
+        stop_reason = "max_tokens"
+        stop_details = None
+        content = []
+
+    import anthropic  # noqa: F401  (only to confirm the import path exists)
+
+    # exercise the branch directly through the helper's contract
+    from agents import base
+
+    class FakeMessages:
+        def create(self, **kw):
+            return Resp()
+
+        def stream(self, **kw):
+            raise AssertionError("small budgets must not stream")
+
+    class FakeClient:
+        messages = FakeMessages()
+
+    real = base.anthropic_model
+    import types
+    mod = types.SimpleNamespace(Anthropic=lambda: FakeClient(),
+                                BadRequestError=Exception)
+    import sys
+    sys.modules["anthropic"] = mod
+    try:
+        with pytest.raises(ModelTruncated, match="hit max_tokens"):
+            real("sys", "user", model="m", max_tokens=100)
+    finally:
+        del sys.modules["anthropic"]
