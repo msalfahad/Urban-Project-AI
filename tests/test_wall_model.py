@@ -135,8 +135,10 @@ def test_openings_are_not_given_an_invented_height():
 def test_reconciliation_names_the_prior_figure_as_a_prior_output_not_a_target():
     res = run_wall_model(toy(), SPACES)
     lines = reconcile_against_prior(
-        res, prior_total_m=res.total("gross_wall_perimeter_m"),
-        prior_basis="toy", known_defects={})
+        res, prior_total_m=res.by_id()["LEFT"].gross_wall_perimeter_m,
+        prior_basis="toy", known_defects={},
+        applicable_space_ids={"LEFT"},
+        applicable_definition="LEFT only, gross wall perimeter")
     assert lines[0].classification == SAME
     assert "not an authority and not a target" in lines[0].note
 
@@ -145,9 +147,34 @@ def test_a_known_defect_is_classified_rather_than_counted_against_the_new_model(
     res = run_wall_model(toy(), SPACES)
     lines = reconcile_against_prior(
         res, prior_total_m=D("1.00"), prior_basis="toy",
-        known_defects={"LEFT": "the prior trace measured the wrong polygon"})
+        known_defects={"LEFT": "the prior trace measured the wrong polygon"},
+        applicable_space_ids={"LEFT"}, applicable_definition="LEFT only")
     defects = [l for l in lines if l.classification == KNOWN_DEFECT]
     assert [l.label for l in defects] == ["LEFT (recorded defect)"]
+
+
+def test_reconciling_without_a_scope_definition_is_refused():
+    """The defect this parameter exists to prevent: comparing all 36 traced
+    spaces (734.57 m) against an aggregate that covered nine (95.42 m), and
+    reporting +639.15 m as if something had gone wrong."""
+    from engine.wall_model import WallModelError
+    res = run_wall_model(toy(), SPACES)
+    with pytest.raises(WallModelError, match="has a scope and a boundary definition"):
+        reconcile_against_prior(res, prior_total_m=D("1.00"), prior_basis="toy",
+                                known_defects={})
+    with pytest.raises(WallModelError, match="nobody can read back"):
+        reconcile_against_prior(res, prior_total_m=D("1.00"), prior_basis="toy",
+                                known_defects={}, applicable_space_ids={"LEFT"})
+
+
+def test_a_wider_scope_is_recorded_but_never_subtracted_from_a_narrower_one():
+    res = run_wall_model(toy(), SPACES)
+    lines = reconcile_against_prior(
+        res, prior_total_m=res.by_id()["LEFT"].gross_wall_perimeter_m,
+        prior_basis="toy", known_defects={}, applicable_space_ids={"LEFT"},
+        applicable_definition="LEFT only")
+    wider = [l for l in lines if "all traced spaces" in l.label][0]
+    assert wider.prior_m is None and wider.delta_m is None
 
 
 # --- the segmentation pipe ---------------------------------------------------
@@ -182,3 +209,42 @@ def test_the_internal_external_march_does_not_roll_the_whole_array():
     src = inspect.getsource(walls.space_walls)
     march = src[src.index("march past the wall body"):]
     assert "peek(labels" in march and "look(labels" not in march
+
+
+# --- one status is too coarse ------------------------------------------------
+
+def test_a_closed_outline_is_usable_as_a_perimeter_but_not_as_masonry():
+    """Skirting and blockwork depend on different things. A boundary can be a
+    perfectly good room perimeter while every doorway in it is still untyped."""
+    rec = run_wall_model(toy(), SPACES).by_id()["LEFT"]
+    ok, _ = rec.releasable_for("PERIMETER")
+    assert ok
+    ok, why = rec.releasable_for("MASONRY")
+    assert not ok and "doorway" in why
+
+
+def test_masonry_is_held_when_no_opening_detection_ran():
+    """max_opening_mm=0 means every segment types PHYSICAL_WALL by construction.
+    That is a default, not a finding."""
+    rec = run_wall_model(toy(), SPACES, max_opening_mm=0).by_id()["LEFT"]
+    assert rec.opening_status == UNRESOLVED
+    assert "by default" in rec.opening_status_reason
+
+
+def test_an_external_split_is_held_when_nothing_resolved_to_external():
+    g = np.zeros((7, 7), np.int32)
+    g[2:5, 2:5] = 2                       # one room, no reachable outside
+    wall = ~(g > 0)
+    for a in (g, wall):
+        a.setflags(write=False)
+    seg = Segmentation(labels=g, wall_mask=wall, px_mm=PX, outside_id=99)
+    rec = run_wall_model(seg, {"ROOM": 2}).by_id()["ROOM"]
+    ok, why = rec.releasable_for("EXTERNAL_SPLIT")
+    assert not ok and "never reached the region identified as outside" in why
+
+
+def test_an_unknown_use_is_refused_rather_than_defaulting_to_allowed():
+    from engine.wall_model import WallModelError
+    rec = run_wall_model(toy(), SPACES).by_id()["LEFT"]
+    with pytest.raises(WallModelError, match="unknown use"):
+        rec.releasable_for("CEILING")

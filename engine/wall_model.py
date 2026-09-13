@@ -65,6 +65,16 @@ class SpaceWallRecord:
     status: str
     status_reason: str = ""
 
+    # A single status is too coarse. A traced boundary can be perfectly good as a
+    # room perimeter and useless as a masonry length, because those depend on
+    # different things: one needs the outline to close, the other needs doorways
+    # to have been found. Recording one verdict for both is how a doorway ends up
+    # priced as blockwork.
+    opening_status: str = UNRESOLVED
+    opening_status_reason: str = ""
+    classification_status: str = UNRESOLVED
+    classification_status_reason: str = ""
+
     # --- the numbers a trade asks for ------------------------------------
     @property
     def gross_room_perimeter_m(self) -> Decimal:
@@ -95,8 +105,31 @@ class SpaceWallRecord:
 
     @property
     def releasable(self) -> bool:
-        """Only a closed, validated boundary may feed a quantity unreviewed."""
+        """Only a closed, validated boundary may feed a PERIMETER quantity."""
         return self.status == VALIDATED
+
+    def releasable_for(self, use: str) -> tuple[bool, str]:
+        """May this record feed that particular kind of quantity, and if not, why.
+
+        PERIMETER      — skirting, ceramic wall, plaster, paint: needs a closed
+                         outline, and the doorway question is the trade rule's.
+        MASONRY        — blockwork: additionally needs doorways identified, or
+                         every door width is counted as wall.
+        EXTERNAL_SPLIT — anything priced differently inside and out: needs the
+                         internal/external classification to have been established.
+        """
+        if self.status != VALIDATED:
+            return False, self.status_reason
+        if use == "PERIMETER":
+            return True, ""
+        if use == "MASONRY":
+            return (self.opening_status == VALIDATED,
+                    self.opening_status_reason or "openings not established")
+        if use == "EXTERNAL_SPLIT":
+            return (self.classification_status == VALIDATED,
+                    self.classification_status_reason
+                    or "internal/external not established")
+        raise WallModelError(f"unknown use {use!r}")
 
     def row(self) -> dict:
         """One line of the per-space report."""
@@ -111,6 +144,8 @@ class SpaceWallRecord:
             "segments": self.segment_count,
             "status": self.status,
             "status_reason": self.status_reason,
+            "opening_status": self.opening_status,
+            "classification_status": self.classification_status,
             "geometry_source": self.geometry_source,
             "measurement_basis": self.measurement_basis,
             "drawing_id": self.drawing_id,
@@ -226,12 +261,39 @@ def run_wall_model(seg, space_regions: dict[str, int], *,
         else:
             status, reason = VALIDATED, ""
 
+        # Openings were not looked for unless bridging was enabled. Every segment
+        # then types PHYSICAL_WALL by construction, which is a default, not a
+        # finding — so masonry stays unresolved rather than quietly counting the
+        # doorways.
+        if max_opening_mm <= 0:
+            op_status, op_reason = UNRESOLVED, (
+                "no opening detection ran (max_opening_mm=0), so every segment "
+                "types PHYSICAL_WALL by default. Masonry taken from this would "
+                "count each doorway as wall.")
+        elif sw.openings:
+            op_status, op_reason = VALIDATED, ""
+        else:
+            op_status, op_reason = BOUNDED_ERROR, (
+                "opening detection ran and found none — possible for an interior "
+                "space, but unverified")
+
+        externals = sum(1 for s in sw.segments if s.classification == "EXTERNAL")
+        if externals:
+            cl_status, cl_reason = VALIDATED, ""
+        else:
+            cl_status, cl_reason = UNRESOLVED, (
+                "no segment resolved to EXTERNAL: the march past the wall body "
+                "never reached the region identified as outside. Internal/external "
+                "is therefore a default here, not a measurement.")
+
         result.records.append(SpaceWallRecord(
             space_id=space_id, region_id=int(region_id), walls=sw,
             drawing_id=seg.drawing_id, revision=seg.revision,
             source_path=seg.source_path, source_sha256=seg.source_sha256,
             px_mm=seg.px_mm, measurement_basis=measurement_basis,
-            geometry_source=geometry_source, status=status, status_reason=reason))
+            geometry_source=geometry_source, status=status, status_reason=reason,
+            opening_status=op_status, opening_status_reason=op_reason,
+            classification_status=cl_status, classification_status_reason=cl_reason))
     return result
 
 
@@ -250,24 +312,53 @@ class ReconciliationLine:
 
 def reconcile_against_prior(result: WallModelResult, *, prior_total_m: Decimal,
                             prior_basis: str, known_defects: dict[str, str],
+                            applicable_space_ids: "set[str] | None" = None,
+                            applicable_definition: str = "",
+                            tolerance_m: Decimal = Decimal("0.5"),
                             ) -> list[ReconciliationLine]:
     """Compare the new per-space model against a PRIOR ENGINE OUTPUT.
 
-    Not against the manual site figure, and not as a pass/fail. Both numbers are
-    wall lengths in metres, which is the only reason they can be subtracted at
-    all — and even then only if they share a measurement basis, a scope and a
-    boundary definition. Where the prior figure is known to be wrong, the
-    difference is classified KNOWN_DEFECT rather than counted against the new
-    model.
+    Not against the manual site figure, and not as a pass/fail.
+
+    `applicable_space_ids` is REQUIRED, and that requirement is the whole point.
+    Two wall lengths can both be in metres and still be answers to different
+    questions. The first run of this function compared all 36 traced spaces
+    (734.57 m) against project 23010's prior 95.42 m aggregate and reported
+    +639.15 m UNEXPLAINED. Nothing was wrong with either number: 95.42 m is the
+    subset of IN_SCOPE spaces the ceramic rule set gives a wall finish — nine
+    rooms — and the correct comparison is 95.39 m against 95.420 m. Subtracting
+    incompatible definitions because both are metres is exactly the error this
+    parameter exists to make impossible.
+
+    Where the prior figure is known to be wrong, the difference is classified
+    KNOWN_DEFECT rather than counted against the new model.
     """
+    if applicable_space_ids is None:
+        raise WallModelError(
+            "reconcile_against_prior needs the set of spaces the prior aggregate "
+            "actually covered. A wall total has a scope and a boundary definition; "
+            "two figures in metres are not comparable without them.")
+    if not applicable_definition.strip():
+        raise WallModelError(
+            "state in words which spaces the prior aggregate covered and on what "
+            "basis — a reconciliation nobody can read back is not evidence.")
+
+    by_id = result.by_id()
+    missing = sorted(applicable_space_ids - set(by_id))
     lines: list[ReconciliationLine] = []
-    new_total = result.total("gross_wall_perimeter_m")
+    applicable = [by_id[s] for s in sorted(applicable_space_ids) if s in by_id]
+    new_total = sum((r.gross_wall_perimeter_m for r in applicable), Decimal(0))
     lines.append(ReconciliationLine(
-        f"all mapped spaces, gross wall perimeter ({prior_basis})",
-        new_total, prior_total_m,
-        SAME if abs(new_total - prior_total_m) < Decimal("0.5") else UNEXPLAINED,
-        "the prior aggregate is a previous engine output with recorded defects, "
-        "not an authority and not a target"))
+        applicable_definition, new_total, prior_total_m,
+        SAME if abs(new_total - prior_total_m) <= tolerance_m else UNEXPLAINED,
+        f"{len(applicable)} of {len(applicable_space_ids)} applicable spaces traced"
+        + (f"; MISSING {missing}" if missing else "")
+        + ". The prior aggregate is a previous engine output with recorded "
+          "defects, not an authority and not a target."))
+    lines.append(ReconciliationLine(
+        "all traced spaces (NOT comparable to the prior figure — wider scope)",
+        result.total("gross_wall_perimeter_m"), None, NEW_BOUNDARY_RESOLVED,
+        "recorded so the wider number exists, never subtracted from a narrower one"))
     lines.append(ReconciliationLine(
         "validated spaces only", result.total("gross_wall_perimeter_m",
                                               validated_only=True),
