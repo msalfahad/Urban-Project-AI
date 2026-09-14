@@ -24,66 +24,19 @@ import json
 from collections import Counter
 from decimal import Decimal
 
+from engine.e31a_gate import evaluate
+from engine.connectivity import (classify_termini, components, end_caps,
+                                 summarise)
 from engine.topology import merge_collinear, wall_pairs
+from engine.vector_source import read
 from engine.wall_graph import build
 from engine.wall_noding import (CLUSTER_AMBIGUOUS, CLUSTER_REJECTED,
                                 CLUSTER_VALID, node_and_split)
+from engine.wall_stitching import candidates
+from engine.wall_stitching import summary as stitch_summary
 
 # The audited input, pinned by content hash in data/golden/23010.
 DEFAULT_PDF = "data/golden/23010/inputs/AR-00_MAR2023.pdf"
-
-# The sheet's own scale. A plotted 1:100 sheet at 72 pt/inch.
-MM_PER_PT = 45.0542
-
-# A segment is axis-aligned when its off-axis extent is below this. Plotted CAD
-# output is exact; this catches float noise, not slanted walls.
-AXIS_TOL_PT = 0.05
-
-
-def axis_lines(path: str, page: int = 0, *, mm_per_pt: float = MM_PER_PT):
-    """Axis-aligned vector segments, in millimetres, with nothing inferred.
-
-    Rectangles are expanded into their four sides: a wall face drawn as a thin
-    filled rectangle is two faces and two ends, and dropping it would lose a
-    wall the architect drew.
-    """
-    import pymupdf
-
-    doc = pymupdf.open(path)
-    pg = doc[page]
-    out: list[tuple[str, float, float, float]] = []
-    skipped = Counter()
-
-    def add(x0, y0, x1, y1):
-        dx, dy = abs(x1 - x0), abs(y1 - y0)
-        if dy <= AXIS_TOL_PT and dx > AXIS_TOL_PT:
-            out.append(("H", y0 * mm_per_pt,
-                        min(x0, x1) * mm_per_pt, max(x0, x1) * mm_per_pt))
-        elif dx <= AXIS_TOL_PT and dy > AXIS_TOL_PT:
-            out.append(("V", x0 * mm_per_pt,
-                        min(y0, y1) * mm_per_pt, max(y0, y1) * mm_per_pt))
-        elif dx <= AXIS_TOL_PT and dy <= AXIS_TOL_PT:
-            skipped["degenerate_point"] += 1
-        else:
-            skipped["not_axis_aligned"] += 1
-
-    for d in pg.get_drawings():
-        for item in d["items"]:
-            kind = item[0]
-            if kind == "l":
-                (x0, y0), (x1, y1) = item[1], item[2]
-                add(x0, y0, x1, y1)
-            elif kind == "re":
-                r = item[1]
-                add(r.x0, r.y0, r.x1, r.y0)
-                add(r.x0, r.y1, r.x1, r.y1)
-                add(r.x0, r.y0, r.x0, r.y1)
-                add(r.x1, r.y0, r.x1, r.y1)
-            elif kind == "qu":
-                skipped["quad"] += 1
-            else:
-                skipped[f"curve_{kind}"] += 1
-    return out, dict(skipped)
 
 
 def length_histogram(lines) -> dict[str, int]:
@@ -95,19 +48,50 @@ def length_histogram(lines) -> dict[str, int]:
 
 
 def run(pdf: str = DEFAULT_PDF, *, join_mm: float = 25.0) -> dict:
-    raw, skipped = axis_lines(pdf)
+    """Read, pair, node, then EXPLAIN — in that order.
+
+    The explanation is the point of this round. 115 components and 228 termini
+    is not a diagnosis; it is the number that needs one.
+    """
+    drawing = read(pdf)
+    segs = drawing.axis_aligned()
+    raw = [s.as_line() for s in segs]
     merged = merge_collinear(raw, tol_mm=2.0, join_mm=join_mm)
     pairs = wall_pairs(merged, Decimal(1))
     graph = build(pairs)
     noded = node_and_split(graph)
     noded.assert_length_preserved()
 
+    caps = end_caps(segs)
+    terms = classify_termini(noded)
+    comps = components(noded)
+    stitches = candidates(noded.edges, caps=caps,
+                          junction_nodes=[n for n in noded.nodes
+                                          if n.degree >= 2])
     micro = noded.micro_edge_policy()
-    return {
-        "input": {"pdf": pdf, "mm_per_pt": MM_PER_PT},
+
+    report = {
+        "input": {"pdf": pdf, "page_rotation": drawing.page_rotation},
+        "source": {
+            "paths": len(drawing.paths),
+            "segments": len(drawing.segments),
+            "axis_aligned": len(segs),
+            "not_linearised": drawing.skipped,
+            "population_bands": drawing.population_bands()[:12],
+            "angle_bands": drawing.angle_bands(),
+            "path_fragmentation": drawing.path_fragmentation(),
+        },
+        "end_caps": {
+            "found": len(caps),
+            "separation_bands_mm": dict(Counter(
+                ("<60" if c.separation_mm < 60 else
+                 "60-120" if c.separation_mm < 120 else
+                 "120-180" if c.separation_mm < 180 else
+                 "180-260" if c.separation_mm < 260 else "260-400")
+                for c in caps)),
+            "pen_weights": dict(Counter(c.stroke_width_pt for c in caps)),
+        },
         "extraction": {
-            "axis_aligned_segments": len(raw),
-            "skipped": skipped,
             "after_collinear_merge": len(merged),
             "collinear_join_mm": join_mm,
             "raw_length_bands_mm": length_histogram(raw),
@@ -119,6 +103,10 @@ def run(pdf: str = DEFAULT_PDF, *, join_mm: float = 25.0) -> dict:
         },
         "pre_split_graph": graph.counts(),
         "noded_graph": noded.health(),
+        "connectivity": summarise(comps, terms),
+        "components": [c.record() for c in comps[:20]],
+        "termini_sample": [t.record() for t in terms[:20]],
+        "stitching": stitch_summary(stitches),
         "clusters": {
             "valid": sum(1 for n in noded.nodes if n.status == CLUSTER_VALID),
             "ambiguous": sum(1 for n in noded.nodes
@@ -126,8 +114,6 @@ def run(pdf: str = DEFAULT_PDF, *, join_mm: float = 25.0) -> dict:
             "rejected": sum(1 for n in noded.nodes
                             if n.status == CLUSTER_REJECTED),
             "subdivided": sum(1 for n in noded.nodes if n.subdivision_depth > 0),
-            "max_subdivision_depth": max(
-                (n.subdivision_depth for n in noded.nodes), default=0),
             "merged_by_incidence": len(noded.node_merges),
         },
         "micro_edges": {
@@ -136,6 +122,10 @@ def run(pdf: str = DEFAULT_PDF, *, join_mm: float = 25.0) -> dict:
             "deleted": 0,
         },
     }
+    # Scored last, on the report just built, so the gate can never be graded
+    # against anything but the numbers this run actually produced.
+    report["e31a_gate"] = evaluate(report)
+    return report
 
 
 def main() -> None:

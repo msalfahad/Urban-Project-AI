@@ -21,6 +21,9 @@ from pathlib import Path
 
 from engine.qa_workbook import build_workbook
 from engine.qa_writer import write
+from engine.quantity_trace import QuantityTrace, TraceLedger, quantity_id
+from engine.revision_entities import compare
+from engine.templates import TemplateLibrary
 from engine.release_matrix import (CEILING_GEOMETRY, CLOSED_BOUNDARY,
                                    EXTERNAL_SPLIT, FLOOR_AREA, HEIGHT,
                                    OPENING_RULE, OPENINGS,
@@ -119,6 +122,12 @@ def bundle(space_map_path: Path = DEFAULT_SPACE_MAP,
         provenance["segmentation"] = json.dumps(seg.provenance(), sort_keys=True)
 
     for s in spaces:
+        # Who named this room. On 23010 a person read every name off the
+        # rendered sheet, because the vector PDF carries no text layer. The
+        # workbook must say so rather than let a reader assume extraction.
+        s["semantic_source"] = ("HUMAN_VERIFIED"
+                                if "HUMAN_VERIFIED" in sm.get("label_source", "")
+                                else None)
         a = areas.get(s.get("region"))
         s["floor_area_m2"] = None if a is None else float(round(a, 3))
         s["area_source"] = "VECTOR_PDF_RASTER_REGION" if a is not None else None
@@ -176,7 +185,9 @@ def bundle(space_map_path: Path = DEFAULT_SPACE_MAP,
         })
 
     known_gaps = [{
-        "subject": g.get("item", "")[:60],
+        "subject": g.get("item", "")[:60], "affected_spaces": 1,
+        "affected_uses": 2, "coverage_unlocked": "ceramic wall for this room",
+        "owner_action": "review the flagged geometry",
         "item": g.get("item"), "cause": g.get("cause"), "effect": g.get("effect"),
         "status": g.get("status"),
         "resolution": g.get("e25_update") or "Named in the space map known_gaps.",
@@ -184,6 +195,9 @@ def bundle(space_map_path: Path = DEFAULT_SPACE_MAP,
 
     scope_exceptions = [{
         "subject": s["space_id"], "issue": "Scope not decided",
+        "affected_spaces": 1, "affected_uses": len(USES),
+        "coverage_unlocked": "every use for this space",
+        "owner_action": "decide whether this space is in the contract",
         "cause": "The owner's markup does not settle this space.",
         "effect": "Every quantity for it is withheld: SCOPE gates all uses.",
         "status": "AWAITING OWNER DECISION",
@@ -192,14 +206,21 @@ def bundle(space_map_path: Path = DEFAULT_SPACE_MAP,
 
     space_exceptions = [{
         "subject": sid, "issue": f"No quantity released ({row['primary_blocker']})",
+        "affected_spaces": 1,
+        "owner_action": f"establish {row['primary_blocker']}",
         "cause": "The dependency named is not established for this space.",
         "effect": "No figure for this space may be used in a takeoff.",
         "status": "BLOCKED",
         "resolution": f"Establish {row['primary_blocker']}.",
     } for sid, row in sorted(releases.items()) if row.get("primary_blocker")]
 
+    n_spaces = len(spaces)
     graph_exceptions = [{
         "severity": "BLOCKING", "subject": "Vector wall graph (AR-00)",
+        "affected_spaces": n_spaces, "affected_uses": len(USES),
+        "affected_boq_sections": "all wall and finish sections",
+        "coverage_unlocked": "every net quantity on the project",
+        "owner_action": "supply the DXF/DWG of AR-00",
         "issue": "The wall graph is in 115 disconnected components; 228 of 342 "
                  "nodes are wall ends meeting nothing.",
         "cause": "Wall faces are drawn as thousands of short segments and most "
@@ -211,6 +232,13 @@ def bundle(space_map_path: Path = DEFAULT_SPACE_MAP,
                       "disconnected graph would produce no faces.",
     }, {
         "severity": "BLOCKING", "subject": "Openings (E34)",
+        "affected_spaces": n_spaces,
+        "affected_uses": sum(1 for u in USES if u.startswith("NET_")
+                             or u in ("SKIRTING", "PAINT", "BLOCKWORK")),
+        "affected_boq_sections": "all net wall quantities",
+        "coverage_unlocked": "NET ceramic, NET plaster, paint, skirting, "
+                             "blockwork",
+        "owner_action": "supply the door/window schedule",
         "issue": "No opening has been validated on this drawing.",
         "cause": "No candidate reached two independent evidence families.",
         "effect": "Every wall figure in this workbook is GROSS. There are no "
@@ -245,8 +273,48 @@ def bundle(space_map_path: Path = DEFAULT_SPACE_MAP,
             "quantity_released": ready if ready else 0,
         })
 
+    # One trace per quantity the engine actually established. A trace is not a
+    # calculation: it records what was decided and what it was decided from.
+    ledger = TraceLedger(project_id=sm["project_id"],
+                         revision_id=sm["drawing_revision"])
+    floor = sm.get("floor_id", "")
+    for rec in wall_records:
+        sid = rec["space_id"]
+        v = rec.get("gross_room_perimeter_m")
+        rel = releases.get(sid, {})
+        status = rel.get("GROSS_PERIMETER", "")
+        ledger.add(QuantityTrace(
+            quantity_id=quantity_id(sm["project_id"], floor, sid, "PERIM",
+                                    "GROSS"),
+            space_id=sid, use="GROSS_PERIMETER", unit="m",
+            value=v if status == "READY" else None,
+            drawing_id=sm["drawing_id"], revision_id=sm["drawing_revision"],
+            geometry_source="VECTOR_PDF_RASTER_REGION",
+            boundary_edge_ids=(f"space:{sid}",),
+            calculation_reference="engine.wall_model.run_wall_model",
+            validation_status=(
+                "VALIDATED" if wall_rows.get(sid, {}).get("status")
+                == "VALIDATED" else "DRAFT"),
+            release_status=status or "NOT_ASSESSED",
+            primary_blocker=rel.get("primary_blocker", "")))
+
+    # No template or assembly has been approved on this project. The library is
+    # EMPTY on purpose — an empty Rules sheet says "nobody signed one", which is
+    # the truth, and there is no default to fall back to.
+    library = TemplateLibrary()
+
     return {
         "project_id": sm["project_id"],
+        "revision_id": sm["drawing_revision"],
+        "run_id": f"{sm['project_id']}-{sm['drawing_id']}-"
+                  f"{sm['drawing_revision']}".replace(" ", "_"),
+        "quantity_traces": [t.record() | {"floor": floor}
+                            for t in ledger.traces],
+        "room_templates": [t.record() for t in library.rooms],
+        "assemblies": [a.record() for a in library.assemblies],
+        # One analysed revision. compare(None, ...) returns
+        # NO_PRIOR_REVISION_AVAILABLE rather than an empty change list.
+        "revision_delta": compare(None, {"revision_id": sm["drawing_revision"]}),
         "title": (f"QA workbook — project {sm['project_id']} "
                   f"{sm['drawing_id']} {sm.get('floor_id', '')}".strip()),
         "spaces": spaces, "quantities": quantities, "releases": releases,

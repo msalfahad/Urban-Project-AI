@@ -85,9 +85,21 @@ def test_the_writer_adds_no_values_of_its_own():
 
 
 def test_no_materials_no_recipes_no_pricing_anywhere():
-    src = Path(qa_workbook_path := qw.__file__).read_text().lower()
-    for forbidden in ("price", "rate_kd", "cost", "material_recipe", "kwd"):
-        assert forbidden not in src, (forbidden, qa_workbook_path)
+    """Scanned as identifiers, not prose. The module is allowed to explain WHY
+    it carries no cost column; it is not allowed to carry one."""
+    import ast
+
+    tree = ast.parse(Path(qw.__file__).read_text())
+    names = {n.id for n in ast.walk(tree) if isinstance(n, ast.Name)}
+    names |= {n.arg for n in ast.walk(tree) if isinstance(n, ast.arg)}
+    names |= {n.value for n in ast.walk(tree)
+              if isinstance(n, ast.Constant) and isinstance(n.value, str)
+              and "\n" not in n.value and len(n.value) < 40}
+    for n in names:
+        low = str(n).lower()
+        for forbidden in ("price", "rate_kd", "cost_", "material_recipe",
+                          "kwd", "unit_rate"):
+            assert forbidden not in low, (forbidden, n)
 
 
 # --- zero is not unknown ------------------------------------------------------
@@ -146,7 +158,7 @@ def test_a_supplied_manual_count_is_compared_and_can_disagree():
     by_type = {r["room_type"]: r for r in s.rows}
     assert by_type["BATHROOM"]["verdict"] == AGREES
     assert by_type["BEDROOM"]["verdict"] == DIFFERS
-    assert by_type["BEDROOM"]["difference"] == -1
+    assert by_type["BEDROOM"]["total_difference"] == -1
     assert by_type["WASHROOM"]["verdict"] == NOT_COMPARED
 
 
@@ -155,8 +167,9 @@ def test_the_manual_columns_exist_even_with_no_manual_data():
     always there: a project that HAS a manual count must be able to use it
     without the workbook changing shape."""
     s = room_count_summary(SPACES)
-    assert "manual_expected_count" in s.columns
-    assert "manual_expected_count" in s.human_columns
+    assert "manual_expected_total" in s.columns
+    assert "manual_expected_in_scope" in s.columns
+    assert "manual_expected_total" in s.human_columns
 
 
 # --- the sample ---------------------------------------------------------------
@@ -175,12 +188,14 @@ def test_two_projects_do_not_draw_the_same_rooms():
 
 
 def test_the_sample_is_stratified_so_it_cannot_land_all_on_bathrooms():
-    many = [dict(s, space_id=f"{s['space_id']}-{i}")
+    from engine.qa_workbook import QA_IN_SCOPE
+    many = [dict(s, space_id=f"{s['space_id']}-{i}", scope="IN_SCOPE")
             for i in range(6) for s in SPACES]
     s = random_qa_sample(many, {}, {}, project_id="23010", per_stratum=2)
     counts = {}
     for r in s.rows:
-        counts[r["stratum"]] = counts.get(r["stratum"], 0) + 1
+        if r["qa_type"] == QA_IN_SCOPE:
+            counts[r["stratum"]] = counts.get(r["stratum"], 0) + 1
     assert counts == {"BEDROOM": 2, "BATHROOM": 2, "WASHROOM": 2}
 
 
@@ -236,10 +251,9 @@ def test_an_unresolved_space_is_listed_not_dropped():
 
 # --- structure ----------------------------------------------------------------
 
-def test_the_workbook_has_the_seven_sheets_in_order():
+def test_the_workbook_sheets_come_out_in_the_declared_order():
     wb = build_workbook(BUNDLE)
     assert [s.name for s in wb.sheets] == list(SHEET_ORDER)
-    assert len(SHEET_ORDER) == 7
 
 
 def test_the_workbook_will_not_describe_a_project_it_cannot_name():
@@ -289,3 +303,145 @@ def test_an_unknown_use_is_refused_rather_than_dropped():
     from tools.export_qa_workbook import _release_row
     with pytest.raises(KeyError, match="not a release-matrix use"):
         _release_row("BED-01", {}, ("FLOORING",))
+
+
+# --- the upgraded workbook ----------------------------------------------------
+
+def test_the_workbook_has_eleven_sheets_with_the_dashboard_first():
+    from engine.qa_workbook import SHEET_DASHBOARD
+    wb = build_workbook(BUNDLE)
+    assert len(SHEET_ORDER) == 11
+    assert wb.sheets[0].name == SHEET_DASHBOARD
+
+
+def test_the_dashboard_derives_no_quantity_of_its_own():
+    """It counts sheets that already own their numbers. If it computed, it
+    would be a second source of truth sitting in front of the first."""
+    import inspect
+
+    from engine import qa_workbook
+    src = inspect.getsource(qa_workbook.dashboard)
+    for forbidden in (" * ", " / ", "round("):
+        assert forbidden not in src, forbidden
+
+
+def test_the_dashboard_says_blocked_when_nothing_is_released():
+    from engine.qa_workbook import STATUS_BLOCKED
+    wb = build_workbook(dict(BUNDLE, coverage=[]))
+    dash = {r["measure"]: r["value"] for r in wb.by_name()["Dashboard"].rows}
+    assert dash["TAKEOFF STATUS"] == STATUS_BLOCKED
+
+
+def test_a_workbook_with_human_labels_says_so_on_the_front_page():
+    """Project 23010's room names were read off the sheet by a person. A
+    workbook that hides that reads as proof of automatic extraction."""
+    spaces = [dict(s, semantic_source="HUMAN_VERIFIED") for s in SPACES]
+    wb = build_workbook(dict(BUNDLE, spaces=spaces))
+    rows = wb.by_name()["Dashboard"].rows
+    hv = [r for r in rows if r["measure"] == "HUMAN_VERIFIED labels"]
+    assert hv and hv[0]["value"] == 3
+    assert "NOT evidence" in hv[0]["note"]
+
+
+def test_the_register_records_who_named_each_room():
+    from engine.qa_workbook import SEMANTIC_SOURCES
+    assert "HUMAN_VERIFIED" in SEMANTIC_SOURCES and "AI_INFERRED" in SEMANTIC_SOURCES
+    reg = room_register([dict(SPACES[0], semantic_source="AI_INFERRED")])
+    assert reg.values("semantic_source") == ["AI_INFERRED"]
+
+
+def test_the_count_summary_separates_the_drawing_from_the_contract():
+    """"What rooms exist?" and "what rooms are in the job?" are different
+    questions and a single count agrees with neither."""
+    s = room_count_summary(SPACES, {"BATHROOM": {"total": 1, "in_scope": 1}})
+    row = {r["room_type"]: r for r in s.rows}["BATHROOM"]
+    assert row["system_total_count"] == 1 and row["system_in_scope_count"] == 1
+    assert row["verdict"] == AGREES
+
+
+def test_a_manual_total_that_is_right_but_scope_that_is_wrong_still_differs():
+    s = room_count_summary(SPACES, {"BATHROOM": {"total": 1, "in_scope": 0}})
+    assert {r["room_type"]: r for r in s.rows}["BATHROOM"]["verdict"] == DIFFERS
+
+
+def test_the_qa_samples_are_three_populations_not_one():
+    from engine.qa_workbook import QA_IN_SCOPE, QA_RISK, QA_SCOPE_AUDIT
+    from engine.qa_workbook import random_qa_sample, risk_flags
+    flags = risk_flags(SPACES, BUNDLE["quantities"], {})
+    s = random_qa_sample(SPACES, {}, {}, project_id="23010", risk_flags=flags)
+    kinds = {r["qa_type"] for r in s.rows}
+    assert QA_IN_SCOPE in kinds and QA_RISK in kinds and QA_SCOPE_AUDIT in kinds
+
+
+def test_the_in_scope_sample_does_not_spend_the_owners_time_on_excluded_rooms():
+    from engine.qa_workbook import QA_IN_SCOPE, random_qa_sample
+    s = random_qa_sample(SPACES, {}, {}, project_id="23010")
+    a = [r for r in s.rows if r["qa_type"] == QA_IN_SCOPE]
+    assert a and all(r["scope"] == "IN_SCOPE" for r in a)
+
+
+def test_every_risk_row_says_why_it_was_chosen():
+    """"Largest area on the sheet" tells a surveyor what to bring a tape for.
+    A risk score would not."""
+    from engine.qa_workbook import QA_RISK, random_qa_sample, risk_flags
+    flags = risk_flags(SPACES, {}, {})
+    s = random_qa_sample(SPACES, {}, {}, project_id="23010", risk_flags=flags)
+    risk = [r for r in s.rows if r["qa_type"] == QA_RISK]
+    assert risk and all(r["why_selected"] for r in risk)
+
+
+def test_the_scope_audit_checks_what_was_excluded():
+    """A wrong exclusion is invisible in every other sheet."""
+    from engine.qa_workbook import QA_SCOPE_AUDIT, random_qa_sample
+    s = random_qa_sample(SPACES, {}, {}, project_id="23010")
+    audit = [r for r in s.rows if r["qa_type"] == QA_SCOPE_AUDIT]
+    assert audit and all(r["scope"] in ("OUT_OF_SCOPE", "AMBIGUOUS")
+                         for r in audit)
+
+
+def test_exceptions_are_ranked_by_what_fixing_them_unlocks():
+    s = exceptions(
+        space_exceptions=[{"subject": "BTH-01", "issue": "no rule",
+                           "affected_spaces": 1, "affected_uses": 2}],
+        graph_exceptions=[{"subject": "graph", "issue": "115 components",
+                           "severity": "BLOCKING", "affected_spaces": 36,
+                           "affected_uses": 13}])
+    assert s.rows[0]["subject"] == "graph"
+    assert s.rows[0]["priority"] == 1
+    assert s.rows[1]["priority"] == 2
+
+
+def test_no_exception_carries_a_financial_impact():
+    """A cost on an unvalidated quantity gets quoted long before the quantity
+    does."""
+    from engine.qa_workbook import EXCEPTION_COLUMNS
+    for col in EXCEPTION_COLUMNS:
+        assert "cost" not in col and "value_kd" not in col and "price" not in col
+
+
+def test_the_quantity_trace_sheet_shows_the_id():
+    from engine.qa_workbook import quantity_trace
+    s = quantity_trace([{"quantity_id": "Q-23010-2F-BTH03-CER-GROSS-001",
+                         "space_id": "BTH-03", "use": "GROSS_CERAMIC_WALL"}])
+    assert s.values("quantity_id") == ["Q-23010-2F-BTH03-CER-GROSS-001"]
+    assert "drawing_preview_reference" in s.columns
+
+
+def test_an_empty_rules_sheet_means_nobody_signed_one():
+    from engine.qa_workbook import rules_and_assemblies
+    s = rules_and_assemblies()
+    assert s.rows == ()
+    assert any("no defaults" in n for n in s.notes)
+
+
+def test_the_revision_sheet_says_there_is_no_baseline_not_no_changes():
+    from engine.qa_workbook import revision_delta
+    s = revision_delta({"status": "NO_PRIOR_REVISION_AVAILABLE",
+                        "why": "only one revision has been analysed"})
+    assert s.rows == ()
+    assert any("not because" in n for n in s.notes)
+
+
+def test_manual_entries_are_declared_validation_evidence_only():
+    wb = build_workbook(BUNDLE)
+    assert any("VALIDATION EVIDENCE ONLY" in w for w in wb.warnings)
