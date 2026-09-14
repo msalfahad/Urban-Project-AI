@@ -65,7 +65,23 @@ def test_the_exterior_is_not_chosen_by_being_largest():
     from engine import planar
     doc = inspect.getdoc(planar.resolve_unbounded)
     assert "DO NOT ASSUME THE LARGEST FACE IS THE EXTERIOR" in doc
-    assert "Counting is not a convention" in doc
+    assert "do not count walks" in doc
+
+
+def test_a_component_containing_islands_keeps_all_its_faces():
+    """A rule of "exactly one clockwise walk per component" refused a whole
+    component of 10 walks because it had 4 — which is exactly what a component
+    with three islands inside it looks like. Every island has its own outer
+    boundary."""
+    outer = box(0, 0, 20000, 20000)
+    islands = (box(3000, 3000, 6000, 6000) + box(9000, 3000, 12000, 6000)
+               + box(3000, 9000, 6000, 12000))
+    res = faces_of(outer + islands)
+    bounded = res.bounded()
+    assert len(bounded) >= 4, [f.record() for f in res.faces]
+    # the big room, and the three island interiors
+    assert max(f.area_m2 for f in bounded) > 300
+    assert sum(1 for f in bounded if 5 < f.area_m2 < 15) == 3
 
 
 def test_a_single_room_gives_one_bounded_and_one_unbounded_face():

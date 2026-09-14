@@ -62,10 +62,12 @@ SHEET_TRACE = "Quantity Trace"
 SHEET_RULES = "Rules and Assemblies"
 SHEET_REVISION = "Revision Delta"
 SHEET_TOPOLOGY = "Topology QA"
+SHEET_WALL_QA = "Wall Extraction QA"
 
 SHEET_ORDER = (SHEET_DASHBOARD, SHEET_ROOM_REGISTER, SHEET_ROOM_COUNTS,
                SHEET_TRACE, SHEET_FLOORING, SHEET_WALLS, SHEET_EXCEPTIONS,
-               SHEET_SAMPLE, SHEET_TOPOLOGY, SHEET_RULES, SHEET_COVERAGE,
+               SHEET_SAMPLE, SHEET_WALL_QA, SHEET_TOPOLOGY, SHEET_RULES,
+               SHEET_COVERAGE,
                SHEET_REVISION)
 
 # Takeoff status, kept blunt on purpose. A workbook that opens cleanly must not
@@ -977,6 +979,91 @@ def rules_and_assemblies(rules=(), assemblies=(), usage=None,
         ))
 
 
+# --------------------------------------------------- wall extraction QA
+
+WALL_QA_COLUMNS = ("space_or_region", "side_or_candidate", "wall_band_id",
+                   "representation_type", "face_a", "face_b", "end_caps",
+                   "pen_style_evidence", "raster_support_pct",
+                   "junction_evidence", "pairing_status", "rejection_reason",
+                   "validation_status", "affected_space_ids", "notes")
+
+
+def wall_extraction_qa(bands=(), rejections=(), sides=()) -> Sheet:
+    """Why a wall is or is not in the graph, without reading a log.
+
+    This sheet exists because the answer to "why does this room not close"
+    turned out to be a single ranking choice buried in a pairing function:
+    candidate mates were ranked by GAP, so a 100 mm scrap of fixture linework
+    105 mm away beat the actual other face of the wall 151 mm away with 2400 mm
+    of overlap. That was invisible in every report until someone went looking
+    at raw vectors.
+
+    DIAGNOSTIC ONLY. Nothing here releases a quantity.
+    """
+    rows = []
+    for b in bands:
+        pen = ("WALL_PEN" if "DRAWN_WITH_THE_SHEET_WALL_PEN"
+               in b.get("supporting_evidence", ()) else "")
+        rows.append(OrderedDict(
+            space_or_region=cell(None), side_or_candidate="band",
+            wall_band_id=b["wall_band_id"],
+            representation_type=b["representation_type"],
+            face_a=cell(", ".join(b.get("face_a_ids", ()))),
+            face_b=cell(", ".join(b.get("face_b_ids", ()))),
+            end_caps=len(b.get("cap_ids", ())),
+            pen_style_evidence=cell(pen or None),
+            raster_support_pct=cell(
+                None if b.get("raster_support_ratio") is None
+                else round(b["raster_support_ratio"] * 100, 1)),
+            junction_evidence=cell(None),
+            pairing_status="PAIRED",
+            rejection_reason=cell(None),
+            validation_status=b.get("validation_status"),
+            affected_space_ids=cell(None),
+            notes=cell(b.get("why"))))
+    for r in rejections:
+        rows.append(OrderedDict(
+            space_or_region=cell(None), side_or_candidate="unpaired face",
+            wall_band_id=cell(None),
+            representation_type=cell(None),
+            face_a=r["segment_id"], face_b=cell(None), end_caps=0,
+            pen_style_evidence=cell(None), raster_support_pct=cell(None),
+            junction_evidence=cell(r.get("candidates_in_window")),
+            pairing_status="NOT_PAIRED",
+            rejection_reason=r["reason"],
+            validation_status=cell(None),
+            affected_space_ids=cell(None),
+            notes=cell(f"best mate seen: gap {r.get('best_gap_mm')} mm, "
+                       f"overlap {r.get('best_overlap_mm')} mm")))
+    for sd in sides:
+        rows.append(OrderedDict(
+            space_or_region=sd.get("space_id"),
+            side_or_candidate=sd.get("side"),
+            wall_band_id=cell(None), representation_type=cell(None),
+            face_a=cell(sd.get("nearest_edge_id")), face_b=cell(None),
+            end_caps=0, pen_style_evidence=cell(None),
+            raster_support_pct=cell(None),
+            junction_evidence=cell(sd.get("nearest_stitch_id")),
+            pairing_status=sd.get("status"),
+            rejection_reason=cell(sd.get("likely_cause")),
+            validation_status=cell(None),
+            affected_space_ids=cell(sd.get("space_id")),
+            notes=cell(sd.get("likely_cause"))))
+    return Sheet(
+        name=SHEET_WALL_QA, columns=WALL_QA_COLUMNS, rows=tuple(rows),
+        notes=(
+            "DIAGNOSTIC ONLY. Nothing on this sheet releases a quantity.",
+            "A wall is a BAND, and it is not always two parallel strokes. "
+            "representation_type says how the architect drew it; a drawing "
+            "that uses filled bands or single lines must not fail for it.",
+            "rejection_reason says why a probable wall face found no mate. "
+            "The mate is the face a wall runs ALONGSIDE — ranking candidates "
+            "by distance is what let a 100 mm scrap beat a 2400 mm wall face.",
+            "A single face is never mirrored by an assumed thickness: its "
+            "separation reads NOT_ESTABLISHED.",
+        ))
+
+
 # ------------------------------------------------------------ topology QA
 
 TOPOLOGY_COLUMNS = ("face_id", "component", "status", "area_m2", "perimeter_m",
@@ -1117,6 +1204,9 @@ def build_workbook(bundle: dict) -> Workbook:
         SHEET_RULES: rules_and_assemblies(
             bundle.get("room_templates", ()), bundle.get("assemblies", ()),
             bundle.get("rule_usage"), bundle.get("project_trade_rules", ())),
+        SHEET_WALL_QA: wall_extraction_qa(
+            bundle.get("wall_bands", ()), bundle.get("wall_rejections", ()),
+            bundle.get("wall_sides", ())),
         SHEET_TOPOLOGY: topology_qa(bundle.get("faces", ()),
                                     bundle.get("face_correspondence", ())),
         SHEET_COVERAGE: takeoff_coverage(bundle.get("coverage", ())),

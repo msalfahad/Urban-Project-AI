@@ -209,6 +209,17 @@ def _release_row(space_id: str, established: dict, uses, *,
 
 
 E31A_REPORT = Path("runs/graph/AR-00_e31a.json")
+WALL_V2_REPORT = Path("runs/graph/AR-00_wall_v2.json")
+
+
+def _wall_v2() -> dict:
+    """The wall extraction V2 run, if one exists. Read-only and optional."""
+    if not WALL_V2_REPORT.exists():
+        return {}
+    try:
+        return json.loads(WALL_V2_REPORT.read_text())
+    except Exception:
+        return {}
 
 
 def _e31a() -> dict:
@@ -605,6 +616,11 @@ def bundle(space_map_path: Path = DEFAULT_SPACE_MAP,
         "assemblies": [],
         "faces": _faces(),
         "face_correspondence": _face_correspondence(),
+        "wall_bands": _wall_v2().get("band_sample", []),
+        "wall_rejections": _wall_v2().get("rejection_sample", []),
+        "wall_sides": [dict(sd, space_id=sid)
+                       for sid, h in _wall_v2().get("hard_cases", {}).items()
+                       for sd in h.get("sides", [])],
         "revision_delta": compare(
             None, {"revision_id": sm["drawing_revision"]}),
         "provenance": provenance,

@@ -353,29 +353,35 @@ def walk_faces(half_edges: dict, *, component_of=None,
 
 
 def resolve_unbounded(res: PlanarResult) -> PlanarResult:
-    """Mark each component's outer walk, from ORIENTATION — not from size.
+    """Mark outer walks from ORIENTATION. The convention alone decides.
 
-    The convention is fixed by construction, not by counting: with
-    `next` = clockwise-from-twin, an interior face is traversed
-    COUNTERCLOCKWISE (positive signed area) and the unbounded walk CLOCKWISE
+    With `next` = clockwise-from-twin, an interior face is traversed
+    COUNTERCLOCKWISE (positive signed area) and an outer boundary CLOCKWISE
     (negative). Verified on a two-room fixture where the answer is unambiguous
-    because the outer walk's area equals the sum of the two interiors, and
-    asserted by a test so the convention cannot drift.
+    because the outer walk's area equals the sum of the two interiors.
 
-    DO NOT ASSUME THE LARGEST FACE IS THE EXTERIOR. On a plan with a courtyard
-    the largest bounded face can rival its own outer walk, and a first attempt
-    here used "the minority orientation in this component" — which read a
-    984 m² outer walk as a room because that component happened to hold more
-    clockwise walks than counterclockwise ones. Counting is not a convention.
+    That is the whole rule. Two earlier attempts added arithmetic on top of it
+    and both were wrong:
 
-    A component with no negative-area walk, or with more than one, reports
-    UNBOUNDED_FACE_UNRESOLVED rather than guessing.
+      "the minority orientation in this component"  read a 984 m2 outer walk
+                                                    as a room, because that
+                                                    component held more
+                                                    clockwise walks than
+                                                    counterclockwise ones.
+      "exactly one clockwise walk per component"    refused a whole component
+                                                    of 10 walks because it had
+                                                    4 — which is exactly what a
+                                                    component containing three
+                                                    islands looks like. Every
+                                                    island has its own outer
+                                                    boundary.
+
+    DO NOT ASSUME THE LARGEST FACE IS THE EXTERIOR, and do not count walks
+    either. A clockwise walk is an outer boundary — of the component or of an
+    island inside it — and a counterclockwise walk is a face. A component whose
+    walks are all degenerate is a tree and reports UNBOUNDED_FACE_UNRESOLVED,
+    because a tree has no exterior to identify.
     """
-    # Group faces into planar components from the graph itself: two faces
-    # sharing a wall edge are on the same component. Relying on a
-    # caller-supplied map meant that with none supplied every face on the sheet
-    # landed in one group, and two separate buildings then had two clockwise
-    # walks between them and neither could name its exterior.
     parent: dict[str, str] = {f.face_id: f.face_id for f in res.faces}
 
     def find(a):
@@ -400,23 +406,27 @@ def resolve_unbounded(res: PlanarResult) -> PlanarResult:
     out: list[Face] = []
     for root, faces in groups.items():
         comp = faces[0].component_id or root
-        outer = [f for f in faces if f.orientation == ORIENT_CW]
-        if len(outer) != 1:
-            why = ("no clockwise walk, so this component has no identifiable "
-                   "exterior" if not outer else
-                   f"{len(outer)} clockwise walks, so exactly one exterior "
-                   "cannot be identified")
+        real = [f for f in faces if f.orientation != ORIENT_DEGENERATE]
+        if not real:
             for f in faces:
                 out.append(Face(**{**f.__dict__, "component_id": comp,
                                    "kind": UNBOUNDED_UNRESOLVED,
-                                   "blockers": f.blockers + (why,)}))
+                                   "blockers": f.blockers + (
+                                       "every walk in this component has zero "
+                                       "area: it is a tree and has no "
+                                       "exterior to identify",)}))
             continue
-        outer_id = outer[0].face_id
         for f in faces:
-            out.append(Face(**{**f.__dict__,
-                               "component_id": comp,
-                               "kind": UNBOUNDED if f.face_id == outer_id
-                               else BOUNDED}))
+            if f.orientation == ORIENT_DEGENERATE:
+                kind = UNBOUNDED_UNRESOLVED
+                extra = ("a zero-area walk bounds nothing; it is a spur "
+                         "traversed out and back",)
+            elif f.orientation == ORIENT_CW:
+                kind, extra = UNBOUNDED, ()
+            else:
+                kind, extra = BOUNDED, ()
+            out.append(Face(**{**f.__dict__, "component_id": comp,
+                               "kind": kind, "blockers": f.blockers + extra}))
     res.faces = out
     return res
 
