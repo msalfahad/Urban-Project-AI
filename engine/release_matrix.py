@@ -168,3 +168,145 @@ def matrix(established: dict[str, bool], *,
 def gross_alternatives(use: str) -> list[str]:
     """Gross forms that could be released now while `use` waits for deductions."""
     return sorted(u.name for u in USES.values() if u.gross_of == use)
+
+
+# ---------------------------------------------------------------------------
+# Per space, per use.
+#
+# A project-level "GROSS_CERAMIC_WALL: READY" is too coarse to be true. On
+# project 23010 the region labelled WSH-01 is not the washroom, BED-04 is still
+# merged with a bathroom, and 31 of 36 spaces are BOUNDED_ERROR on external
+# classification. Reporting one verdict for the villa means either one defect
+# blocks every room, or the defect disappears into an average. Neither is the
+# answer: the defect should block exactly the rooms it affects.
+#
+# So readiness is a fact about a (space, use) pair, and the project figure is a
+# count of those pairs rather than a judgement of its own.
+
+NOT_APPLICABLE = "NOT_APPLICABLE"
+
+# Which missing dependency to name when several are missing. A caller wants the
+# headline, and "region identity" is a more useful headline than "opening rule"
+# when both are absent — you cannot meaningfully discuss a trade rule for a
+# polygon that is not the room you think it is.
+_BLOCKER_PRIORITY = (
+    REGION_IDENTITY, SCOPE, CLOSED_BOUNDARY, PHYSICAL_WALL_SPLIT, EXTERNAL_SPLIT,
+    FLOOR_AREA, WALL_THICKNESS, OPENINGS, HEIGHT, TRADE_RULE, OPENING_RULE,
+)
+
+
+@dataclass
+class SpaceUseStatus:
+    space_id: str
+    use: str
+    status: str
+    missing: list[str] = field(default_factory=list)
+    reasons: dict[str, str] = field(default_factory=dict)
+
+    @property
+    def ready(self) -> bool:
+        return self.status == READY
+
+    @property
+    def applicable(self) -> bool:
+        return self.status != NOT_APPLICABLE
+
+    @property
+    def primary_blocker(self) -> str:
+        for dep in _BLOCKER_PRIORITY:
+            if dep in self.missing:
+                return dep
+        return self.missing[0] if self.missing else ""
+
+    def explain(self) -> str:
+        if self.ready:
+            return f"{self.space_id} / {self.use}: READY"
+        if not self.applicable:
+            return f"{self.space_id} / {self.use}: {NOT_APPLICABLE}"
+        blocker = self.primary_blocker
+        why = self.reasons.get(blocker, "not established")
+        extra = (f" (+{len(self.missing) - 1} more)" if len(self.missing) > 1 else "")
+        return f"{self.space_id} / {self.use}: {self.status} — {why}{extra}"
+
+
+def assess_space(space_id: str, use: str, established: dict[str, bool], *,
+                 reasons: dict[str, str] | None = None,
+                 applicable: bool = True) -> SpaceUseStatus:
+    """Readiness of one quantity for one space.
+
+    `applicable=False` is not a block. A bedroom has no ceramic wall on this
+    project, and reporting that as BLOCKED would put it in the same queue as a
+    room whose geometry is broken. They are different facts and they are counted
+    separately.
+    """
+    if use not in USES:
+        raise ReleaseMatrixError(
+            f"unknown use {use!r}. Known: {sorted(USES)}. A quantity whose "
+            "dependencies nobody has written down cannot be released.")
+    if not applicable:
+        return SpaceUseStatus(space_id, use, NOT_APPLICABLE)
+    base = assess(use, established, reasons=reasons)
+    if base.ready:
+        return SpaceUseStatus(space_id, use, READY, [], base.reasons)
+    status = f"BLOCKED_{SpaceUseStatus(space_id, use, NOT_READY, base.missing).primary_blocker.upper()}"
+    return SpaceUseStatus(space_id, use, status, base.missing, base.reasons)
+
+
+@dataclass
+class UseTally:
+    use: str
+    ready: int = 0
+    blocked: int = 0
+    not_applicable: int = 0
+    blocked_spaces: dict[str, str] = field(default_factory=dict)
+
+    @property
+    def total(self) -> int:
+        return self.ready + self.blocked + self.not_applicable
+
+    def row(self) -> dict:
+        return {"use": self.use, "ready": self.ready, "blocked": self.blocked,
+                "not_applicable": self.not_applicable, "total": self.total,
+                "blocked_spaces": dict(self.blocked_spaces)}
+
+
+def project_matrix(per_space: dict[str, dict[str, bool]], *,
+                   reasons: dict[str, dict[str, str]] | None = None,
+                   applicable: dict[str, set[str]] | None = None,
+                   uses: "tuple[str, ...] | None" = None,
+                   ) -> dict[str, UseTally]:
+    """Aggregate every (space, use) pair into per-use counts.
+
+    `per_space` maps space id -> the dependencies established for it.
+    `applicable` maps space id -> the set of uses that apply to that space; a
+    space absent from it is treated as applicable for everything, because
+    guessing that a trade does not apply is the same kind of error as guessing
+    that it does.
+    """
+    reasons = reasons or {}
+    names = uses or tuple(USES)
+    out = {u: UseTally(u) for u in names}
+    for space_id, established in sorted(per_space.items()):
+        allowed = applicable.get(space_id) if applicable else None
+        for use in names:
+            st = assess_space(space_id, use, established,
+                              reasons=reasons.get(space_id),
+                              applicable=(allowed is None or use in allowed))
+            tally = out[use]
+            if st.ready:
+                tally.ready += 1
+            elif not st.applicable:
+                tally.not_applicable += 1
+            else:
+                tally.blocked += 1
+                tally.blocked_spaces[space_id] = st.status
+    return out
+
+
+def render_matrix(tallies: dict[str, UseTally]) -> str:
+    """The counts table, worst coverage first."""
+    lines = [f"{'USE':26} {'READY':>6} {'BLOCKED':>8} {'N/A':>5} {'TOTAL':>6}"]
+    for t in sorted(tallies.values(), key=lambda t: (-t.ready, t.use)):
+        lines.append(f"{t.use:26} {t.ready:6d} {t.blocked:8d} "
+                     f"{t.not_applicable:5d} {t.total:6d}")
+    return "\n".join(lines)

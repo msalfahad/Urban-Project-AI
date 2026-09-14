@@ -11,18 +11,19 @@ from decimal import Decimal as D
 
 import pytest
 
-from engine.heights import (ASSUMED, CERAMIC, HEIGHT_NAMES, HEIGHT_REQUIRED,
-                            OWNER_RULE, PAINT, PLASTER, REJECTED,
-                            REVIEW_REQUIRED, SECTION_DRAWING, SITE_MEASURED,
-                            SPECIFICATION, VALIDATED, Height, HeightError,
-                            HeightRegistry)
+from engine.heights import (APPROVED, APPROVED_PROJECT_RULE, AS_BUILT_SURVEY,
+                            ASSUMED, CERAMIC, COMMERCIAL, DESIGN, DOMAIN_SOURCES,
+                            DOMAINS, HEIGHT_NAMES, HEIGHT_REQUIRED, PAINT,
+                            PLASTER, PROPOSED, REJECTED, REVIEW_REQUIRED,
+                            SECTION_DRAWING, SITE, SITE_MEASURED, SPECIFICATION,
+                            VALIDATED, Height, HeightError, HeightRegistry)
 
 REAL = HeightRegistry.load("data/registry/23010_heights.json")
 
 
 def h(**kw) -> Height:
     base = dict(height_id="T:ceramic", name=CERAMIC, value_m=D("3.00"),
-                source_type=OWNER_RULE, source="owner rule for the test project",
+                source_type=SPECIFICATION, source="spec clause 09.30",
                 validation_status=VALIDATED)
     base.update(kw)
     return Height(**base)
@@ -71,7 +72,7 @@ def test_the_registry_reports_what_every_trade_would_find():
     status = REAL.status()
     assert status[CERAMIC] == "RELEASABLE"
     assert status[PAINT] == HEIGHT_REQUIRED
-    assert len(REAL.missing) == 6
+    assert len(REAL.missing()) == 6
 
 
 # --- ASSUMED may be recorded and may never be released -----------------------
@@ -90,7 +91,7 @@ def test_an_assumed_height_can_be_recorded_honestly():
 def test_an_assumed_height_never_releases_a_quantity():
     reg = HeightRegistry("T", {CERAMIC: h(source_type=ASSUMED,
                                           source="typical storey height",
-                                          validation_status=REVIEW_REQUIRED)})
+                                          validation_status=REVIEW_REQUIRED)})  # noqa
     with pytest.raises(HeightError, match="may never produce a released quantity"):
         reg.for_release(CERAMIC)
 
@@ -142,17 +143,94 @@ def test_a_non_physical_height_is_refused():
 
 # --- the source hierarchy is ordered ------------------------------------------
 
-def test_the_source_hierarchy_ranks_drawings_above_assumptions():
+def test_the_hierarchy_is_within_a_domain_and_never_across_domains():
+    """Comparing a section drawing to a site tape is a category error."""
     from engine.heights import SOURCE_RANK
     assert SOURCE_RANK[SECTION_DRAWING] < SOURCE_RANK[SPECIFICATION]
-    assert SOURCE_RANK[SPECIFICATION] < SOURCE_RANK[OWNER_RULE]
-    assert SOURCE_RANK[OWNER_RULE] < SOURCE_RANK[SITE_MEASURED]
-    assert SOURCE_RANK[SITE_MEASURED] < SOURCE_RANK[ASSUMED]
+    assert SOURCE_RANK[SPECIFICATION] < SOURCE_RANK[APPROVED_PROJECT_RULE]
+    # SITE has its own ladder starting again at 0 — the two are not comparable
+    assert SOURCE_RANK[SITE_MEASURED] < SOURCE_RANK[AS_BUILT_SURVEY]
+    assert SOURCE_RANK[SITE_MEASURED] == SOURCE_RANK[SECTION_DRAWING]
 
 
-def test_the_real_project_records_that_its_heights_are_owner_rules_not_sections():
+def test_the_real_project_records_that_its_heights_are_project_rules_not_sections():
     """23010's 3.00 and 3.20 were never read from a drawing, and say so."""
     for name in (CERAMIC, PLASTER):
         got = REAL.get(name)
-        assert got.source_type == OWNER_RULE
+        assert got.source_type == APPROVED_PROJECT_RULE
         assert "NOT read from a section" in got.source
+
+
+# --- truth domains ------------------------------------------------------------
+
+def test_design_and_site_are_separate_facts_not_two_sources_for_one():
+    reg = HeightRegistry("T", {
+        (DESIGN, PLASTER): h(name=PLASTER, value_m=D("3.20")),
+        (SITE, PLASTER): h(name=PLASTER, value_m=D("3.15"),
+                           source_type=SITE_MEASURED,
+                           source="site tape, 14 Sep 2026"),
+    })
+    assert reg.get(PLASTER, DESIGN).value_m == D("3.20")
+    assert reg.get(PLASTER, SITE).value_m == D("3.15")
+
+
+def test_a_site_measurement_never_overwrites_the_design_height():
+    reg = HeightRegistry("T", {
+        (DESIGN, PLASTER): h(name=PLASTER, value_m=D("3.20")),
+        (SITE, PLASTER): h(name=PLASTER, value_m=D("3.15"),
+                           source_type=SITE_MEASURED, source="site tape"),
+    })
+    v = reg.variance(PLASTER)
+    assert v["design"] == "3.20" and v["site"] == "3.15"
+    assert v["variance_m"] == "-0.05"            # both preserved, neither corrected
+
+
+def test_production_reads_design_by_default():
+    assert REAL.get(CERAMIC).domain == DESIGN
+
+
+def test_a_site_source_cannot_be_filed_under_design():
+    with pytest.raises(HeightError, match="not a design height"):
+        HeightRegistry("T", {(DESIGN, PLASTER): h(
+            name=PLASTER, source_type=SITE_MEASURED, source="site tape")})
+
+
+def test_every_source_belongs_to_exactly_one_domain():
+    seen = [s for ss in DOMAIN_SOURCES.values() for s in ss]
+    assert len(seen) == len(set(seen))
+    assert ASSUMED not in seen               # an assumption is in no domain
+    assert h(source_type=ASSUMED, source="typical",
+             validation_status=REVIEW_REQUIRED).domain == ""
+
+
+def test_an_unknown_domain_is_refused():
+    with pytest.raises(HeightError, match="is not one of"):
+        REAL.get(CERAMIC, "PROBABLY")
+
+
+# --- a project rule is a human decision ---------------------------------------
+
+def test_a_project_rule_without_an_approver_cannot_exist():
+    """A model may propose a project rule; it may not sign one."""
+    with pytest.raises(HeightError, match="may not sign one"):
+        h(source_type=APPROVED_PROJECT_RULE, source="owner said so")
+
+
+def test_a_proposed_project_rule_is_refused_until_approved():
+    with pytest.raises(HeightError, match="may not sign one"):
+        h(source_type=APPROVED_PROJECT_RULE, source="owner said so",
+          approved_by="someone", approved_on="2026-09-14", rule_version="1.0",
+          approval_status=PROPOSED)
+
+
+def test_an_approved_project_rule_carries_who_and_when():
+    got = REAL.get(CERAMIC)
+    assert got.approval_status == APPROVED
+    assert got.approved_by and got.approved_on and got.rule_version
+
+
+def test_approval_fields_appear_in_the_provenance():
+    p = REAL.get(CERAMIC).provenance()
+    for field in ("domain", "approved_by", "approval_status", "approved_on",
+                  "rule_version"):
+        assert field in p

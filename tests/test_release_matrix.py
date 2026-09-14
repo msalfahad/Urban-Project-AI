@@ -115,3 +115,93 @@ def test_the_matrix_assesses_every_use_against_one_set_of_facts():
     assert set(m) == set(USES)
     ready = sorted(n for n, r in m.items() if r.ready)
     assert "GROSS_CERAMIC_WALL" in ready and "BLOCKWORK" not in ready
+
+
+# --- per space, per use -------------------------------------------------------
+
+from engine.release_matrix import (NOT_APPLICABLE, assess_space, project_matrix,
+                                   render_matrix)
+
+GOOD = dict(GEOMETRY_ONLY)
+BROKEN_REGION = {**GEOMETRY_ONLY, REGION_IDENTITY: False}
+
+
+def test_readiness_is_a_fact_about_a_space_and_a_use_not_a_project():
+    """One defect should block the rooms it affects, not the villa."""
+    ok = assess_space("BTH-03", "GROSS_CERAMIC_WALL", GOOD)
+    bad = assess_space("WSH-01", "GROSS_CERAMIC_WALL", BROKEN_REGION)
+    assert ok.ready and not bad.ready
+
+
+def test_a_block_is_named_after_the_dependency_that_caused_it():
+    s = assess_space("WSH-01", "GROSS_CERAMIC_WALL", BROKEN_REGION)
+    assert s.status == "BLOCKED_REGION_IDENTITY"
+    s2 = assess_space("BTH-03", "NET_CERAMIC_WALL", GOOD)
+    assert s2.status == "BLOCKED_OPENINGS"
+
+
+def test_region_identity_outranks_later_dependencies_as_the_headline():
+    """You cannot discuss a trade rule for a polygon that is not the room."""
+    s = assess_space("WSH-01", "BLOCKWORK", {SCOPE: True, REGION_IDENTITY: False})
+    assert s.primary_blocker == REGION_IDENTITY
+    assert len(s.missing) > 1                  # others are missing too
+    assert "+" in s.explain()                  # and the count is shown
+
+
+def test_not_applicable_is_not_a_block():
+    """A bedroom has no ceramic wall. That is not the same queue as a broken
+    polygon, and counting them together would hide both."""
+    s = assess_space("BED-01", "NET_CERAMIC_WALL", GOOD, applicable=False)
+    assert s.status == NOT_APPLICABLE
+    assert not s.ready and not s.applicable
+
+
+def test_a_reason_survives_into_the_explanation():
+    s = assess_space("WSH-01", "GROSS_CERAMIC_WALL", BROKEN_REGION,
+                     reasons={REGION_IDENTITY: "polygon is a duct, not the washroom"})
+    assert "duct" in s.explain()
+
+
+# --- aggregation --------------------------------------------------------------
+
+def test_the_project_figure_is_a_count_of_pairs_not_a_verdict():
+    m = project_matrix({"BTH-03": GOOD, "WSH-01": BROKEN_REGION},
+                       uses=("GROSS_CERAMIC_WALL",))
+    t = m["GROSS_CERAMIC_WALL"]
+    assert (t.ready, t.blocked, t.not_applicable, t.total) == (1, 1, 0, 2)
+
+
+def test_the_tally_names_which_spaces_are_blocked_and_why():
+    m = project_matrix({"BTH-03": GOOD, "WSH-01": BROKEN_REGION},
+                       uses=("GROSS_CERAMIC_WALL",))
+    assert m["GROSS_CERAMIC_WALL"].blocked_spaces == {
+        "WSH-01": "BLOCKED_REGION_IDENTITY"}
+
+
+def test_not_applicable_uses_are_counted_separately_from_blocked():
+    m = project_matrix({"BED-01": GOOD, "BTH-03": GOOD},
+                       applicable={"BED-01": {"GROSS_PLASTER"}},
+                       uses=("GROSS_CERAMIC_WALL", "GROSS_PLASTER"))
+    assert m["GROSS_CERAMIC_WALL"].not_applicable == 1
+    assert m["GROSS_CERAMIC_WALL"].ready == 1
+    assert m["GROSS_CERAMIC_WALL"].blocked == 0
+    assert m["GROSS_PLASTER"].ready == 2
+
+
+def test_a_space_with_no_applicability_stated_is_assessed_for_everything():
+    """Guessing a trade does not apply is the same error as guessing it does."""
+    m = project_matrix({"X": GOOD}, uses=("GROSS_CERAMIC_WALL",))
+    assert m["GROSS_CERAMIC_WALL"].not_applicable == 0
+
+
+def test_every_tally_row_adds_up():
+    m = project_matrix({"A": GOOD, "B": BROKEN_REGION, "C": GOOD},
+                       applicable={"C": set()})
+    for t in m.values():
+        assert t.ready + t.blocked + t.not_applicable == t.total == 3
+
+
+def test_the_rendered_table_shows_counts_rather_than_a_single_word():
+    text = render_matrix(project_matrix({"A": GOOD, "B": BROKEN_REGION}))
+    assert "READY" in text and "BLOCKED" in text and "N/A" in text
+    assert "GROSS_CERAMIC_WALL" in text
