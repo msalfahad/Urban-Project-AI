@@ -2,14 +2,44 @@
   "band_sample": [
     {
       "axis": "H",
+      "both_faces_interval": [
+        8696.36187649231,
+        33298.65890596924
+      ],
       "cap_ids": [],
       "centreline_mm": 6874.4,
       "conflicting_evidence": [],
+      "extensions": [
+        {
+          "end": "start",
+          "extension_reason": "JUNCTION_OVERHANG",
+          "length_mm": 200.0,
+          "note": "200 mm is within one wall thickness: the longer face runs to the far side of the wall it meets"
+        },
+        {
+          "end": "end",
+          "extension_reason": "JUNCTION_OVERHANG",
+          "length_mm": 200.0,
+          "note": "200 mm is within one wall thickness: the longer face runs to the far side of the wall it meets"
+        }
+      ],
       "face_a_ids": [
         "VS-000005"
       ],
+      "face_a_intervals": [
+        [
+          8496.321118496704,
+          33498.69966396484
+        ]
+      ],
       "face_b_ids": [
         "VS-000119"
+      ],
+      "face_b_intervals": [
+        [
+          8696.36187649231,
+          33298.65890596924
+        ]
       ],
       "families": [
         "FACE_GEOMETRY"
@@ -29,14 +59,44 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        8696.362563964844,
+        33298.65890596924
+      ],
       "cap_ids": [],
       "centreline_mm": 46674.4,
       "conflicting_evidence": [],
+      "extensions": [
+        {
+          "end": "start",
+          "extension_reason": "JUNCTION_OVERHANG",
+          "length_mm": 200.0,
+          "note": "200 mm is within one wall thickness: the longer face runs to the far side of the wall it meets"
+        },
+        {
+          "end": "end",
+          "extension_reason": "JUNCTION_OVERHANG",
+          "length_mm": 200.0,
+          "note": "200 mm is within one wall thickness: the longer face runs to the far side of the wall it meets"
+        }
+      ],
       "face_a_ids": [
         "VS-000194"
       ],
+      "face_a_intervals": [
+        [
+          8696.362563964844,
+          33298.65890596924
+        ]
+      ],
       "face_b_ids": [
         "VS-000198"
+      ],
+      "face_b_intervals": [
+        [
+          8496.321805969239,
+          33498.69966396484
+        ]
       ],
       "families": [
         "FACE_GEOMETRY"
@@ -56,14 +116,31 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        10696.768768975831,
+        16946.687447973633
+      ],
       "cap_ids": [],
       "centreline_mm": 22099.1,
       "conflicting_evidence": [],
+      "extensions": [],
       "face_a_ids": [
         "VS-004944"
       ],
+      "face_a_intervals": [
+        [
+          10696.768768975831,
+          16946.687447973633
+        ]
+      ],
       "face_b_ids": [
         "VS-004945"
+      ],
+      "face_b_intervals": [
+        [
+          10696.768768975831,
+          16946.687447973633
+        ]
       ],
       "families": [
         "FACE_GEOMETRY",
@@ -85,14 +162,44 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        26148.55681599121,
+        31298.251326013185
+      ],
       "cap_ids": [],
       "centreline_mm": 9823.7,
       "conflicting_evidence": [],
+      "extensions": [
+        {
+          "end": "start",
+          "extension_reason": "JUNCTION_OVERHANG",
+          "length_mm": 400.1,
+          "note": "400 mm is within one wall thickness: the longer face runs to the far side of the wall it meets"
+        },
+        {
+          "end": "end",
+          "extension_reason": "JUNCTION_OVERHANG",
+          "length_mm": 200.0,
+          "note": "200 mm is within one wall thickness: the longer face runs to the far side of the wall it meets"
+        }
+      ],
       "face_a_ids": [
         "VS-004616"
       ],
+      "face_a_intervals": [
+        [
+          25748.475300000002,
+          31498.29208400879
+        ]
+      ],
       "face_b_ids": [
         "VS-004619"
+      ],
+      "face_b_intervals": [
+        [
+          26148.55681599121,
+          31298.251326013185
+        ]
       ],
       "families": [
         "FACE_GEOMETRY",
@@ -114,6 +221,10 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        26148.55681599121,
+        31298.251326013185
+      ],
       "cap_ids": [
         "EC-00006",
         "EC-00080",
@@ -123,11 +234,31 @@
       ],
       "centreline_mm": 13873.1,
       "conflicting_evidence": [],
+      "extensions": [
+        {
+          "end": "start",
+          "extension_reason": "END_CAP_SUPPORTED",
+          "length_mm": 1251.6,
+          "note": "an end cap closes the band over this extension"
+        }
+      ],
       "face_a_ids": [
         "VS-000041"
       ],
+      "face_a_intervals": [
+        [
+          26148.55681599121,
+          31298.251326013185
+        ]
+      ],
       "face_b_ids": [
         "VS-000268"
+      ],
+      "face_b_intervals": [
+        [
+          24896.949820043945,
+          31298.251326013185
+        ]
       ],
       "families": [
         "CLOSURE",
@@ -151,6 +282,10 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        26297.235126013184,
+        31298.251326013185
+      ],
       "cap_ids": [
         "EC-00076",
         "EC-00077",
@@ -159,11 +294,31 @@
       ],
       "centreline_mm": 18874.2,
       "conflicting_evidence": [],
+      "extensions": [
+        {
+          "end": "start",
+          "extension_reason": "JUNCTION_OVERHANG",
+          "length_mm": 270.3,
+          "note": "270 mm is within one wall thickness: the longer face runs to the far side of the wall it meets"
+        }
+      ],
       "face_a_ids": [
         "VS-000270"
       ],
+      "face_a_intervals": [
+        [
+          26026.909926013184,
+          31298.251326013185
+        ]
+      ],
       "face_b_ids": [
         "VS-000272"
+      ],
+      "face_b_intervals": [
+        [
+          26297.235126013184,
+          31298.251326013185
+        ]
       ],
       "families": [
         "CLOSURE",
@@ -187,17 +342,34 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        10696.768768975831,
+        15197.683073986816
+      ],
       "cap_ids": [
         "EC-00007",
         "EC-00008"
       ],
       "centreline_mm": 12448.5,
       "conflicting_evidence": [],
+      "extensions": [],
       "face_a_ids": [
         "VS-000025"
       ],
+      "face_a_intervals": [
+        [
+          10696.768768975831,
+          15197.683073986816
+        ]
+      ],
       "face_b_ids": [
         "VS-000026"
+      ],
+      "face_b_intervals": [
+        [
+          10696.768768975831,
+          15197.683073986816
+        ]
       ],
       "families": [
         "CLOSURE",
@@ -221,6 +393,10 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        20798.8229229187,
+        24748.274259912112
+      ],
       "cap_ids": [
         "EC-00009",
         "EC-00045",
@@ -230,11 +406,31 @@
       ],
       "centreline_mm": 19374.2,
       "conflicting_evidence": [],
+      "extensions": [
+        {
+          "end": "end",
+          "extension_reason": "JUNCTION_OVERHANG",
+          "length_mm": 148.7,
+          "note": "149 mm is within one wall thickness: the longer face runs to the far side of the wall it meets"
+        }
+      ],
       "face_a_ids": [
         "VS-000038"
       ],
+      "face_a_intervals": [
+        [
+          20798.8229229187,
+          24748.274259912112
+        ]
+      ],
       "face_b_ids": [
         "VS-000039"
+      ],
+      "face_b_intervals": [
+        [
+          20798.8229229187,
+          24896.95256993408
+        ]
       ],
       "families": [
         "CLOSURE",
@@ -258,16 +454,40 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        13646.014941046144,
+        17046.706452026367
+      ],
       "cap_ids": [
         "EC-00018"
       ],
       "centreline_mm": 17273.8,
       "conflicting_evidence": [],
+      "extensions": [
+        {
+          "end": "end",
+          "extension_reason": "JUNCTION_OVERHANG",
+          "length_mm": 51.4,
+          "note": "51 mm is within one wall thickness: the longer face runs to the far side of the wall it meets"
+        }
+      ],
       "face_a_ids": [
         "VS-000135"
       ],
+      "face_a_intervals": [
+        [
+          13646.014941046144,
+          17046.706452026367
+        ]
+      ],
       "face_b_ids": [
         "VS-000134"
+      ],
+      "face_b_intervals": [
+        [
+          13646.014941046144,
+          17098.067525054932
+        ]
       ],
       "families": [
         "CLOSURE",
@@ -289,17 +509,41 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        20147.334076123047,
+        23448.00520810547
+      ],
       "cap_ids": [
         "EC-00274",
         "EC-00275"
       ],
       "centreline_mm": 12522.9,
       "conflicting_evidence": [],
+      "extensions": [
+        {
+          "end": "start",
+          "extension_reason": "JUNCTION_OVERHANG",
+          "length_mm": 248.7,
+          "note": "249 mm is within one wall thickness: the longer face runs to the far side of the wall it meets"
+        }
+      ],
       "face_a_ids": [
         "VS-028589"
       ],
+      "face_a_intervals": [
+        [
+          20147.334076123047,
+          23448.00520810547
+        ]
+      ],
       "face_b_ids": [
         "VS-028586"
+      ],
+      "face_b_intervals": [
+        [
+          19898.635387103273,
+          23448.00520810547
+        ]
       ],
       "families": [
         "CLOSURE",
@@ -323,6 +567,10 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        13697.377389019775,
+        16946.686073028566
+      ],
       "cap_ids": [
         "EC-00037",
         "EC-00038",
@@ -332,11 +580,31 @@
       ],
       "centreline_mm": 18674.1,
       "conflicting_evidence": [],
+      "extensions": [
+        {
+          "end": "end",
+          "extension_reason": "END_CAP_SUPPORTED",
+          "length_mm": 551.5,
+          "note": "an end cap closes the band over this extension"
+        }
+      ],
       "face_a_ids": [
         "VS-000127"
       ],
+      "face_a_intervals": [
+        [
+          13697.377389019775,
+          17498.15041599121
+        ]
+      ],
       "face_b_ids": [
         "VS-000129"
+      ],
+      "face_b_intervals": [
+        [
+          13697.377389019775,
+          16946.686073028566
+        ]
       ],
       "families": [
         "CLOSURE",
@@ -360,17 +628,41 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        13846.057073986816,
+        16946.687447973633
+      ],
       "cap_ids": [
         "EC-00093",
         "EC-00148"
       ],
       "centreline_mm": 26448.7,
       "conflicting_evidence": [],
+      "extensions": [
+        {
+          "end": "start",
+          "extension_reason": "END_CAP_SUPPORTED",
+          "length_mm": 1949.0,
+          "note": "an end cap closes the band over this extension"
+        }
+      ],
       "face_a_ids": [
         "VS-004946"
       ],
+      "face_a_intervals": [
+        [
+          11897.011942004396,
+          16946.687447973633
+        ]
+      ],
       "face_b_ids": [
         "VS-004948"
+      ],
+      "face_b_intervals": [
+        [
+          13846.057073986816,
+          16946.687447973633
+        ]
       ],
       "families": [
         "CLOSURE",
@@ -394,16 +686,33 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        10696.768768975831,
+        13697.378763964844
+      ],
       "cap_ids": [
         "EC-00143"
       ],
       "centreline_mm": 28199.0,
       "conflicting_evidence": [],
+      "extensions": [],
       "face_a_ids": [
         "VS-004953"
       ],
+      "face_a_intervals": [
+        [
+          10696.768768975831,
+          13697.378763964844
+        ]
+      ],
       "face_b_ids": [
         "VS-004954"
+      ],
+      "face_b_intervals": [
+        [
+          10696.768768975831,
+          13697.378763964844
+        ]
       ],
       "families": [
         "CLOSURE",
@@ -427,16 +736,40 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        10696.768768975831,
+        13697.378763964844
+      ],
       "cap_ids": [
         "EC-00091"
       ],
       "centreline_mm": 31799.7,
       "conflicting_evidence": [],
+      "extensions": [
+        {
+          "end": "end",
+          "extension_reason": "JUNCTION_OVERHANG",
+          "length_mm": 148.7,
+          "note": "149 mm is within one wall thickness: the longer face runs to the far side of the wall it meets"
+        }
+      ],
       "face_a_ids": [
         "VS-004955"
       ],
+      "face_a_intervals": [
+        [
+          10696.768768975831,
+          13697.378763964844
+        ]
+      ],
       "face_b_ids": [
         "VS-004956"
+      ],
+      "face_b_intervals": [
+        [
+          10696.768768975831,
+          13846.057073986816
+        ]
       ],
       "families": [
         "CLOSURE",
@@ -460,16 +793,40 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        22199.10685394287,
+        24748.274259912112
+      ],
       "cap_ids": [
         "EC-00099"
       ],
       "centreline_mm": 29649.3,
       "conflicting_evidence": [],
+      "extensions": [
+        {
+          "end": "end",
+          "extension_reason": "JUNCTION_OVERHANG",
+          "length_mm": 148.7,
+          "note": "149 mm is within one wall thickness: the longer face runs to the far side of the wall it meets"
+        }
+      ],
       "face_a_ids": [
         "VS-005032"
       ],
+      "face_a_intervals": [
+        [
+          22199.10685394287,
+          24896.95256993408
+        ]
+      ],
       "face_b_ids": [
         "VS-005033"
+      ],
+      "face_b_intervals": [
+        [
+          22199.10685394287,
+          24748.274259912112
+        ]
       ],
       "families": [
         "CLOSURE",
@@ -493,16 +850,40 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        28797.745975903323,
+        31298.25407590332
+      ],
       "cap_ids": [
         "EC-00014"
       ],
       "centreline_mm": 23049.3,
       "conflicting_evidence": [],
+      "extensions": [
+        {
+          "end": "start",
+          "extension_reason": "JUNCTION_OVERHANG",
+          "length_mm": 448.7,
+          "note": "449 mm is within one wall thickness: the longer face runs to the far side of the wall it meets"
+        }
+      ],
       "face_a_ids": [
         "VS-004988"
       ],
+      "face_a_intervals": [
+        [
+          28349.00515394287,
+          31298.25407590332
+        ]
+      ],
       "face_b_ids": [
         "VS-004991"
+      ],
+      "face_b_intervals": [
+        [
+          28797.745975903323,
+          31298.25407590332
+        ]
       ],
       "families": [
         "CLOSURE",
@@ -526,17 +907,34 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        28797.745975903323,
+        31298.25407590332
+      ],
       "cap_ids": [
         "EC-00112",
         "EC-00183"
       ],
       "centreline_mm": 25048.4,
       "conflicting_evidence": [],
+      "extensions": [],
       "face_a_ids": [
         "VS-004995"
       ],
+      "face_a_intervals": [
+        [
+          28797.745975903323,
+          31298.25407590332
+        ]
+      ],
       "face_b_ids": [
         "VS-004999"
+      ],
+      "face_b_intervals": [
+        [
+          28797.745975903323,
+          31298.25407590332
+        ]
       ],
       "families": [
         "CLOSURE",
@@ -560,16 +958,40 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        28797.745975903323,
+        31298.25407590332
+      ],
       "cap_ids": [
         "EC-00015"
       ],
       "centreline_mm": 27048.8,
       "conflicting_evidence": [],
+      "extensions": [
+        {
+          "end": "start",
+          "extension_reason": "JUNCTION_OVERHANG",
+          "length_mm": 448.7,
+          "note": "449 mm is within one wall thickness: the longer face runs to the far side of the wall it meets"
+        }
+      ],
       "face_a_ids": [
         "VS-005003"
       ],
+      "face_a_intervals": [
+        [
+          28797.745975903323,
+          31298.25407590332
+        ]
+      ],
       "face_b_ids": [
         "VS-005008"
+      ],
+      "face_b_intervals": [
+        [
+          28349.00515394287,
+          31298.25407590332
+        ]
       ],
       "families": [
         "CLOSURE",
@@ -593,14 +1015,44 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        22347.786538909913,
+        24748.274259912112
+      ],
       "cap_ids": [],
       "centreline_mm": 27949.0,
       "conflicting_evidence": [],
+      "extensions": [
+        {
+          "end": "start",
+          "extension_reason": "JUNCTION_OVERHANG",
+          "length_mm": 148.7,
+          "note": "149 mm is within one wall thickness: the longer face runs to the far side of the wall it meets"
+        },
+        {
+          "end": "end",
+          "extension_reason": "JUNCTION_OVERHANG",
+          "length_mm": 148.7,
+          "note": "149 mm is within one wall thickness: the longer face runs to the far side of the wall it meets"
+        }
+      ],
       "face_a_ids": [
         "VS-005006"
       ],
+      "face_a_intervals": [
+        [
+          22347.786538909913,
+          24748.274259912112
+        ]
+      ],
       "face_b_ids": [
         "VS-005010"
+      ],
+      "face_b_intervals": [
+        [
+          22199.10685394287,
+          24896.95256993408
+        ]
       ],
       "families": [
         "FACE_GEOMETRY",
@@ -622,14 +1074,31 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        22347.786538909913,
+        24748.274259912112
+      ],
       "cap_ids": [],
       "centreline_mm": 23699.5,
       "conflicting_evidence": [],
+      "extensions": [],
       "face_a_ids": [
         "VS-004990"
       ],
+      "face_a_intervals": [
+        [
+          22347.786538909913,
+          24748.274259912112
+        ]
+      ],
       "face_b_ids": [
         "VS-004994"
+      ],
+      "face_b_intervals": [
+        [
+          22347.786538909913,
+          24748.274259912112
+        ]
       ],
       "families": [
         "FACE_GEOMETRY",
@@ -651,16 +1120,33 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        26297.23787590332,
+        28649.06766588135
+      ],
       "cap_ids": [
         "EC-00301"
       ],
       "centreline_mm": 25048.4,
       "conflicting_evidence": [],
+      "extensions": [],
       "face_a_ids": [
         "VS-004996"
       ],
+      "face_a_intervals": [
+        [
+          26297.23787590332,
+          28649.06766588135
+        ]
+      ],
       "face_b_ids": [
         "VS-005000"
+      ],
+      "face_b_intervals": [
+        [
+          26297.23787590332,
+          28649.06766588135
+        ]
       ],
       "families": [
         "CLOSURE",
@@ -684,14 +1170,44 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        21866.603888061523,
+        24148.14923603516
+      ],
       "cap_ids": [],
       "centreline_mm": 13959.6,
       "conflicting_evidence": [],
+      "extensions": [
+        {
+          "end": "start",
+          "extension_reason": "UNRESOLVED_EXTENSION",
+          "length_mm": 2119.3,
+          "note": "2119 mm of single-face extension with no junction or cap to explain it. This band's extent beyond the paired interval is NOT established material"
+        },
+        {
+          "end": "end",
+          "extension_reason": "JUNCTION_OVERHANG",
+          "length_mm": 151.4,
+          "note": "151 mm is within one wall thickness: the longer face runs to the far side of the wall it meets"
+        }
+      ],
       "face_a_ids": [
         "VS-043190"
       ],
+      "face_a_intervals": [
+        [
+          21866.603888061523,
+          24148.14923603516
+        ]
+      ],
       "face_b_ids": [
         "VS-000034"
+      ],
+      "face_b_intervals": [
+        [
+          19747.25805991211,
+          24299.53343795166
+        ]
       ],
       "families": [
         "FACE_GEOMETRY"
@@ -711,14 +1227,38 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        10696.768081503296,
+        12948.576805010987
+      ],
       "cap_ids": [],
       "centreline_mm": 15873.5,
       "conflicting_evidence": [],
+      "extensions": [
+        {
+          "end": "end",
+          "extension_reason": "UNRESOLVED_EXTENSION",
+          "length_mm": 797.5,
+          "note": "797 mm of single-face extension with no junction or cap to explain it. This band's extent beyond the paired interval is NOT established material"
+        }
+      ],
       "face_a_ids": [
         "VS-000121"
       ],
+      "face_a_intervals": [
+        [
+          10696.768081503296,
+          13746.036694989014
+        ]
+      ],
       "face_b_ids": [
         "VS-000122"
+      ],
+      "face_b_intervals": [
+        [
+          10696.768081503296,
+          12948.576805010987
+        ]
       ],
       "families": [
         "FACE_GEOMETRY",
@@ -740,6 +1280,10 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        26272.906847973634,
+        28273.31442792969
+      ],
       "cap_ids": [
         "EC-00163",
         "EC-00164",
@@ -750,11 +1294,24 @@
       ],
       "centreline_mm": 38224.0,
       "conflicting_evidence": [],
+      "extensions": [],
       "face_a_ids": [
         "VS-013588"
       ],
+      "face_a_intervals": [
+        [
+          26272.906847973634,
+          28273.31442792969
+        ]
+      ],
       "face_b_ids": [
         "VS-013587"
+      ],
+      "face_b_intervals": [
+        [
+          26272.906847973634,
+          28273.31442792969
+        ]
       ],
       "families": [
         "CLOSURE",
@@ -778,6 +1335,10 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        11945.669873028564,
+        13946.076078039552
+      ],
       "cap_ids": [
         "EC-00061",
         "EC-00062",
@@ -786,11 +1347,24 @@
       ],
       "centreline_mm": 8973.5,
       "conflicting_evidence": [],
+      "extensions": [],
       "face_a_ids": [
         "VS-004551"
       ],
+      "face_a_intervals": [
+        [
+          11945.669873028564,
+          13946.076078039552
+        ]
+      ],
       "face_b_ids": [
         "VS-004550"
+      ],
+      "face_b_intervals": [
+        [
+          11945.669873028564,
+          13946.076078039552
+        ]
       ],
       "families": [
         "CLOSURE",
@@ -812,6 +1386,10 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        21223.232716949464,
+        23223.63892196045
+      ],
       "cap_ids": [
         "EC-00278",
         "EC-00279",
@@ -822,11 +1400,24 @@
       ],
       "centreline_mm": 9823.7,
       "conflicting_evidence": [],
+      "extensions": [],
       "face_a_ids": [
         "VS-043931"
       ],
+      "face_a_intervals": [
+        [
+          21223.232716949464,
+          23223.63892196045
+        ]
+      ],
       "face_b_ids": [
         "VS-043930"
+      ],
+      "face_b_intervals": [
+        [
+          21223.231342004394,
+          23223.63892196045
+        ]
       ],
       "families": [
         "CLOSURE",
@@ -850,6 +1441,10 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        13621.686663006592,
+        15622.092868017578
+      ],
       "cap_ids": [
         "EC-00190",
         "EC-00191",
@@ -860,11 +1455,24 @@
       ],
       "centreline_mm": 38224.0,
       "conflicting_evidence": [],
+      "extensions": [],
       "face_a_ids": [
         "VS-025836"
       ],
+      "face_a_intervals": [
+        [
+          13621.686663006592,
+          15622.092868017578
+        ]
+      ],
       "face_b_ids": [
         "VS-025835"
+      ],
+      "face_b_intervals": [
+        [
+          13621.686663006592,
+          15622.092868017578
+        ]
       ],
       "families": [
         "CLOSURE",
@@ -888,6 +1496,10 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        17346.767589019775,
+        19347.17379403076
+      ],
       "cap_ids": [
         "EC-00169",
         "EC-00170",
@@ -898,11 +1510,24 @@
       ],
       "centreline_mm": 38224.0,
       "conflicting_evidence": [],
+      "extensions": [],
       "face_a_ids": [
         "VS-013599"
       ],
+      "face_a_intervals": [
+        [
+          17346.767589019775,
+          19347.17379403076
+        ]
+      ],
       "face_b_ids": [
         "VS-013598"
+      ],
+      "face_b_intervals": [
+        [
+          17346.767589019775,
+          19347.17379403076
+        ]
       ],
       "families": [
         "CLOSURE",
@@ -926,6 +1551,10 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        21098.88268496704,
+        23099.288889978026
+      ],
       "cap_ids": [
         "EC-00175",
         "EC-00176",
@@ -936,11 +1565,24 @@
       ],
       "centreline_mm": 38224.0,
       "conflicting_evidence": [],
+      "extensions": [],
       "face_a_ids": [
         "VS-013610"
       ],
+      "face_a_intervals": [
+        [
+          21098.88268496704,
+          23099.288889978026
+        ]
+      ],
       "face_b_ids": [
         "VS-013609"
+      ],
+      "face_b_intervals": [
+        [
+          21098.881310021974,
+          23099.288889978026
+        ]
       ],
       "families": [
         "CLOSURE",
@@ -964,14 +1606,44 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        27300.142057995607,
+        29297.846495947266
+      ],
       "cap_ids": [],
       "centreline_mm": 31449.7,
       "conflicting_evidence": [],
+      "extensions": [
+        {
+          "end": "start",
+          "extension_reason": "UNRESOLVED_EXTENSION",
+          "length_mm": 951.5,
+          "note": "952 mm of single-face extension with no junction or cap to explain it. This band's extent beyond the paired interval is NOT established material"
+        },
+        {
+          "end": "end",
+          "extension_reason": "UNRESOLVED_EXTENSION",
+          "length_mm": 2000.4,
+          "note": "2000 mm of single-face extension with no junction or cap to explain it. This band's extent beyond the paired interval is NOT established material"
+        }
+      ],
       "face_a_ids": [
         "VS-005011"
       ],
+      "face_a_intervals": [
+        [
+          26348.600323876955,
+          31298.25407590332
+        ]
+      ],
       "face_b_ids": [
         "VS-005015"
+      ],
+      "face_b_intervals": [
+        [
+          27300.142057995607,
+          29297.846495947266
+        ]
       ],
       "families": [
         "FACE_GEOMETRY",
@@ -993,17 +1665,34 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        15046.30162196045,
+        16946.687447973633
+      ],
       "cap_ids": [
         "EC-00094",
         "EC-00142"
       ],
       "centreline_mm": 30849.6,
       "conflicting_evidence": [],
+      "extensions": [],
       "face_a_ids": [
         "VS-004951"
       ],
+      "face_a_intervals": [
+        [
+          15046.30162196045,
+          16946.687447973633
+        ]
+      ],
       "face_b_ids": [
         "VS-004952"
+      ],
+      "face_b_intervals": [
+        [
+          15046.30162196045,
+          16946.687447973633
+        ]
       ],
       "families": [
         "CLOSURE",
@@ -1027,16 +1716,40 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        29449.23069786377,
+        31298.25407590332
+      ],
       "cap_ids": [
         "EC-00016"
       ],
       "centreline_mm": 34048.9,
       "conflicting_evidence": [],
+      "extensions": [
+        {
+          "end": "start",
+          "extension_reason": "END_CAP_SUPPORTED",
+          "length_mm": 651.5,
+          "note": "an end cap closes the band over this extension"
+        }
+      ],
       "face_a_ids": [
         "VS-005018"
       ],
+      "face_a_intervals": [
+        [
+          29449.23069786377,
+          31298.25407590332
+        ]
+      ],
       "face_b_ids": [
         "VS-005021"
+      ],
+      "face_b_intervals": [
+        [
+          28797.745975903323,
+          31298.25407590332
+        ]
       ],
       "families": [
         "CLOSURE",
@@ -1060,14 +1773,44 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        17498.15179093628,
+        19298.517237951663
+      ],
       "cap_ids": [],
       "centreline_mm": 26998.8,
       "conflicting_evidence": [],
+      "extensions": [
+        {
+          "end": "start",
+          "extension_reason": "JUNCTION_OVERHANG",
+          "length_mm": 151.4,
+          "note": "151 mm is within one wall thickness: the longer face runs to the far side of the wall it meets"
+        },
+        {
+          "end": "end",
+          "extension_reason": "JUNCTION_OVERHANG",
+          "length_mm": 148.7,
+          "note": "149 mm is within one wall thickness: the longer face runs to the far side of the wall it meets"
+        }
+      ],
       "face_a_ids": [
         "VS-009981"
       ],
+      "face_a_intervals": [
+        [
+          17346.768963964845,
+          19447.195547973635
+        ]
+      ],
       "face_b_ids": [
         "VS-009982"
+      ],
+      "face_b_intervals": [
+        [
+          17498.15179093628,
+          19298.517237951663
+        ]
       ],
       "families": [
         "FACE_GEOMETRY",
@@ -1089,14 +1832,44 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        17498.15041599121,
+        19298.515863006593
+      ],
       "cap_ids": [],
       "centreline_mm": 27798.9,
       "conflicting_evidence": [],
+      "extensions": [
+        {
+          "end": "start",
+          "extension_reason": "JUNCTION_OVERHANG",
+          "length_mm": 151.4,
+          "note": "151 mm is within one wall thickness: the longer face runs to the far side of the wall it meets"
+        },
+        {
+          "end": "end",
+          "extension_reason": "JUNCTION_OVERHANG",
+          "length_mm": 148.7,
+          "note": "149 mm is within one wall thickness: the longer face runs to the far side of the wall it meets"
+        }
+      ],
       "face_a_ids": [
         "VS-009977"
       ],
+      "face_a_intervals": [
+        [
+          17498.15041599121,
+          19298.515863006593
+        ]
+      ],
       "face_b_ids": [
         "VS-009998"
+      ],
+      "face_b_intervals": [
+        [
+          17346.768963964845,
+          19447.195547973635
+        ]
       ],
       "families": [
         "FACE_GEOMETRY",
@@ -1118,14 +1891,44 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        18798.41396801758,
+        20598.77941503296
+      ],
       "cap_ids": [],
       "centreline_mm": 19574.3,
       "conflicting_evidence": [],
+      "extensions": [
+        {
+          "end": "start",
+          "extension_reason": "JUNCTION_OVERHANG",
+          "length_mm": 200.0,
+          "note": "200 mm is within one wall thickness: the longer face runs to the far side of the wall it meets"
+        },
+        {
+          "end": "end",
+          "extension_reason": "JUNCTION_OVERHANG",
+          "length_mm": 200.0,
+          "note": "200 mm is within one wall thickness: the longer face runs to the far side of the wall it meets"
+        }
+      ],
       "face_a_ids": [
         "VS-000140"
       ],
+      "face_a_intervals": [
+        [
+          18798.41396801758,
+          20598.77941503296
+        ]
+      ],
       "face_b_ids": [
         "VS-000141"
+      ],
+      "face_b_intervals": [
+        [
+          18598.373210021975,
+          20798.820173028565
+        ]
       ],
       "families": [
         "FACE_GEOMETRY",
@@ -1147,16 +1950,46 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        18798.415342962646,
+        20598.780789978027
+      ],
       "cap_ids": [
         "EC-00127"
       ],
       "centreline_mm": 21574.7,
       "conflicting_evidence": [],
+      "extensions": [
+        {
+          "end": "start",
+          "extension_reason": "JUNCTION_OVERHANG",
+          "length_mm": 200.0,
+          "note": "200 mm is within one wall thickness: the longer face runs to the far side of the wall it meets"
+        },
+        {
+          "end": "end",
+          "extension_reason": "JUNCTION_OVERHANG",
+          "length_mm": 348.7,
+          "note": "349 mm is within one wall thickness: the longer face runs to the far side of the wall it meets"
+        }
+      ],
       "face_a_ids": [
         "VS-007060"
       ],
+      "face_a_intervals": [
+        [
+          18798.415342962646,
+          20598.780789978027
+        ]
+      ],
       "face_b_ids": [
         "VS-007063"
+      ],
+      "face_b_intervals": [
+        [
+          18598.37458496704,
+          20947.499857995605
+        ]
       ],
       "families": [
         "CLOSURE",
@@ -1180,14 +2013,44 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        22799.22775298462,
+        24596.890057995606
+      ],
       "cap_ids": [],
       "centreline_mm": 26998.8,
       "conflicting_evidence": [],
+      "extensions": [
+        {
+          "end": "start",
+          "extension_reason": "JUNCTION_OVERHANG",
+          "length_mm": 151.4,
+          "note": "151 mm is within one wall thickness: the longer face runs to the far side of the wall it meets"
+        },
+        {
+          "end": "end",
+          "extension_reason": "JUNCTION_OVERHANG",
+          "length_mm": 151.4,
+          "note": "151 mm is within one wall thickness: the longer face runs to the far side of the wall it meets"
+        }
+      ],
       "face_a_ids": [
         "VS-006434"
       ],
+      "face_a_intervals": [
+        [
+          22647.844926013186,
+          24748.271510021972
+        ]
+      ],
       "face_b_ids": [
         "VS-009962"
+      ],
+      "face_b_intervals": [
+        [
+          22799.22775298462,
+          24596.890057995606
+        ]
       ],
       "families": [
         "FACE_GEOMETRY",
@@ -1209,14 +2072,44 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        22799.22775298462,
+        24596.890057995606
+      ],
       "cap_ids": [],
       "centreline_mm": 26998.8,
       "conflicting_evidence": [],
+      "extensions": [
+        {
+          "end": "start",
+          "extension_reason": "JUNCTION_OVERHANG",
+          "length_mm": 151.4,
+          "note": "151 mm is within one wall thickness: the longer face runs to the far side of the wall it meets"
+        },
+        {
+          "end": "end",
+          "extension_reason": "JUNCTION_OVERHANG",
+          "length_mm": 151.4,
+          "note": "151 mm is within one wall thickness: the longer face runs to the far side of the wall it meets"
+        }
+      ],
       "face_a_ids": [
         "VS-009961"
       ],
+      "face_a_intervals": [
+        [
+          22647.844926013186,
+          24748.271510021972
+        ]
+      ],
       "face_b_ids": [
         "VS-006435"
+      ],
+      "face_b_intervals": [
+        [
+          22799.22775298462,
+          24596.890057995606
+        ]
       ],
       "families": [
         "FACE_GEOMETRY",
@@ -1238,14 +2131,44 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        16697.986009063723,
+        18398.3310770813
+      ],
       "cap_ids": [],
       "centreline_mm": 14198.9,
       "conflicting_evidence": [],
+      "extensions": [
+        {
+          "end": "start",
+          "extension_reason": "JUNCTION_OVERHANG",
+          "length_mm": 151.4,
+          "note": "151 mm is within one wall thickness: the longer face runs to the far side of the wall it meets"
+        },
+        {
+          "end": "end",
+          "extension_reason": "JUNCTION_OVERHANG",
+          "length_mm": 348.7,
+          "note": "349 mm is within one wall thickness: the longer face runs to the far side of the wall it meets"
+        }
+      ],
       "face_a_ids": [
         "VS-000015"
       ],
+      "face_a_intervals": [
+        [
+          16697.986009063723,
+          18398.3310770813
+        ]
+      ],
       "face_b_ids": [
         "VS-000035"
+      ],
+      "face_b_intervals": [
+        [
+          16546.60730692749,
+          18747.054269934084
+        ]
       ],
       "families": [
         "FACE_GEOMETRY",
@@ -1267,6 +2190,10 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        23099.291639868166,
+        24748.274259912112
+      ],
       "cap_ids": [
         "EC-00175",
         "EC-00176",
@@ -1274,11 +2201,31 @@
       ],
       "centreline_mm": 38224.0,
       "conflicting_evidence": [],
+      "extensions": [
+        {
+          "end": "end",
+          "extension_reason": "END_CAP_SUPPORTED",
+          "length_mm": 1524.6,
+          "note": "an end cap closes the band over this extension"
+        }
+      ],
       "face_a_ids": [
         "VS-005026"
       ],
+      "face_a_intervals": [
+        [
+          23099.291639868166,
+          24748.274259912112
+        ]
+      ],
       "face_b_ids": [
         "VS-005036"
+      ],
+      "face_b_intervals": [
+        [
+          23099.291639868166,
+          26272.90959786377
+        ]
       ],
       "families": [
         "CLOSURE",
@@ -1302,6 +2249,10 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        10745.426012527467,
+        12245.731010021973
+      ],
       "cap_ids": [
         "EC-00184",
         "EC-00185",
@@ -1312,11 +2263,24 @@
       ],
       "centreline_mm": 38224.0,
       "conflicting_evidence": [],
+      "extensions": [],
       "face_a_ids": [
         "VS-025825"
       ],
+      "face_a_intervals": [
+        [
+          10745.426012527467,
+          12245.731010021973
+        ]
+      ],
       "face_b_ids": [
         "VS-025824"
+      ],
+      "face_b_intervals": [
+        [
+          10745.426012527467,
+          12245.731010021973
+        ]
       ],
       "families": [
         "CLOSURE",
@@ -1340,6 +2304,10 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        29649.26870596924,
+        31149.573015991213
+      ],
       "cap_ids": [
         "EC-00157",
         "EC-00158",
@@ -1350,11 +2318,24 @@
       ],
       "centreline_mm": 38224.0,
       "conflicting_evidence": [],
+      "extensions": [],
       "face_a_ids": [
         "VS-013577"
       ],
+      "face_a_intervals": [
+        [
+          29649.26870596924,
+          31149.573015991213
+        ]
+      ],
       "face_b_ids": [
         "VS-013576"
+      ],
+      "face_b_intervals": [
+        [
+          29649.26870596924,
+          31149.573015991213
+        ]
       ],
       "families": [
         "CLOSURE",
@@ -1378,6 +2359,10 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        13697.378763964844,
+        15197.683073986816
+      ],
       "cap_ids": [
         "EC-00041",
         "EC-00042",
@@ -1386,11 +2371,31 @@
       ],
       "centreline_mm": 15873.5,
       "conflicting_evidence": [],
+      "extensions": [
+        {
+          "end": "end",
+          "extension_reason": "END_CAP_SUPPORTED",
+          "length_mm": 3400.7,
+          "note": "an end cap closes the band over this extension"
+        }
+      ],
       "face_a_ids": [
         "VS-004620"
       ],
+      "face_a_intervals": [
+        [
+          13697.378763964844,
+          15197.683073986816
+        ]
+      ],
       "face_b_ids": [
         "VS-000126"
+      ],
+      "face_b_intervals": [
+        [
+          13697.377389019775,
+          18598.373210021975
+        ]
       ],
       "families": [
         "CLOSURE",
@@ -1414,14 +2419,44 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        18947.09502792969,
+        20447.39933795166
+      ],
       "cap_ids": [],
       "centreline_mm": 19556.7,
       "conflicting_evidence": [],
+      "extensions": [
+        {
+          "end": "start",
+          "extension_reason": "JUNCTION_OVERHANG",
+          "length_mm": 348.7,
+          "note": "349 mm is within one wall thickness: the longer face runs to the far side of the wall it meets"
+        },
+        {
+          "end": "end",
+          "extension_reason": "JUNCTION_OVERHANG",
+          "length_mm": 351.4,
+          "note": "351 mm is within one wall thickness: the longer face runs to the far side of the wall it meets"
+        }
+      ],
       "face_a_ids": [
         "VS-047900"
       ],
+      "face_a_intervals": [
+        [
+          18947.09502792969,
+          20447.39933795166
+        ]
+      ],
       "face_b_ids": [
         "VS-000142"
+      ],
+      "face_b_intervals": [
+        [
+          18598.373210021975,
+          20798.820173028565
+        ]
       ],
       "families": [
         "FACE_GEOMETRY"
@@ -1441,6 +2476,10 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        10796.78708555603,
+        12197.071704052734
+      ],
       "cap_ids": [
         "EC-00184",
         "EC-00185",
@@ -1451,11 +2490,37 @@
       ],
       "centreline_mm": 38149.7,
       "conflicting_evidence": [],
+      "extensions": [
+        {
+          "end": "start",
+          "extension_reason": "JUNCTION_OVERHANG",
+          "length_mm": 100.0,
+          "note": "100 mm is within one wall thickness: the longer face runs to the far side of the wall it meets"
+        },
+        {
+          "end": "end",
+          "extension_reason": "END_CAP_SUPPORTED",
+          "length_mm": 500.1,
+          "note": "an end cap closes the band over this extension"
+        }
+      ],
       "face_a_ids": [
         "VS-000123"
       ],
+      "face_a_intervals": [
+        [
+          10696.768081503296,
+          12697.174973986817
+        ]
+      ],
       "face_b_ids": [
         "VS-025828"
+      ],
+      "face_b_intervals": [
+        [
+          10796.78708555603,
+          12197.071704052734
+        ]
       ],
       "families": [
         "CLOSURE",
@@ -1477,6 +2542,10 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        28273.317177819827,
+        29649.271455859376
+      ],
       "cap_ids": [
         "EC-00159",
         "EC-00160",
@@ -1487,11 +2556,24 @@
       ],
       "centreline_mm": 38224.0,
       "conflicting_evidence": [],
+      "extensions": [],
       "face_a_ids": [
         "VS-005024"
       ],
+      "face_a_intervals": [
+        [
+          28273.317177819827,
+          29649.271455859376
+        ]
+      ],
       "face_b_ids": [
         "VS-005035"
+      ],
+      "face_b_intervals": [
+        [
+          28273.317177819827,
+          29649.271455859376
+        ]
       ],
       "families": [
         "CLOSURE",
@@ -1515,6 +2597,10 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        10845.446391525269,
+        12145.71063102417
+      ],
       "cap_ids": [
         "EC-00184",
         "EC-00185",
@@ -1525,11 +2611,37 @@
       ],
       "centreline_mm": 38379.5,
       "conflicting_evidence": [],
+      "extensions": [
+        {
+          "end": "start",
+          "extension_reason": "END_CAP_SUPPORTED",
+          "length_mm": 648.8,
+          "note": "an end cap closes the band over this extension"
+        },
+        {
+          "end": "end",
+          "extension_reason": "JUNCTION_OVERHANG",
+          "length_mm": 51.4,
+          "note": "51 mm is within one wall thickness: the longer face runs to the far side of the wall it meets"
+        }
+      ],
       "face_a_ids": [
         "VS-025827"
       ],
+      "face_a_intervals": [
+        [
+          10845.446391525269,
+          12145.71063102417
+        ]
+      ],
       "face_b_ids": [
         "VS-000124"
+      ],
+      "face_b_intervals": [
+        [
+          10196.666186514283,
+          12197.073078997802
+        ]
       ],
       "families": [
         "CLOSURE",
@@ -1551,6 +2663,10 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        23458.82327590332,
+        24748.274259912112
+      ],
       "cap_ids": [
         "EC-00122",
         "EC-00123",
@@ -1558,11 +2674,31 @@
       ],
       "centreline_mm": 25348.4,
       "conflicting_evidence": [],
+      "extensions": [
+        {
+          "end": "start",
+          "extension_reason": "JUNCTION_OVERHANG",
+          "length_mm": 10.8,
+          "note": "11 mm is within one wall thickness: the longer face runs to the far side of the wall it meets"
+        }
+      ],
       "face_a_ids": [
         "VS-004997"
       ],
+      "face_a_intervals": [
+        [
+          23458.82327590332,
+          24748.274259912112
+        ]
+      ],
       "face_b_ids": [
         "VS-005001"
+      ],
+      "face_b_intervals": [
+        [
+          23448.010707885744,
+          24748.274259912112
+        ]
       ],
       "families": [
         "CLOSURE",
@@ -1586,17 +2722,41 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        13946.07745298462,
+        15197.683073986816
+      ],
       "cap_ids": [
         "EC-00063",
         "EC-00064"
       ],
       "centreline_mm": 9023.5,
       "conflicting_evidence": [],
+      "extensions": [
+        {
+          "end": "end",
+          "extension_reason": "JUNCTION_OVERHANG",
+          "length_mm": 248.7,
+          "note": "249 mm is within one wall thickness: the longer face runs to the far side of the wall it meets"
+        }
+      ],
       "face_a_ids": [
         "VS-000030"
       ],
+      "face_a_intervals": [
+        [
+          13946.07745298462,
+          15446.381763006593
+        ]
+      ],
       "face_b_ids": [
         "VS-000024"
+      ],
+      "face_b_intervals": [
+        [
+          13946.07745298462,
+          15197.683073986816
+        ]
       ],
       "families": [
         "CLOSURE",
@@ -1620,17 +2780,41 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        10696.768768975831,
+        11945.671247973632
+      ],
       "cap_ids": [
         "EC-00061",
         "EC-00062"
       ],
       "centreline_mm": 9023.5,
       "conflicting_evidence": [],
+      "extensions": [
+        {
+          "end": "start",
+          "extension_reason": "JUNCTION_OVERHANG",
+          "length_mm": 200.0,
+          "note": "200 mm is within one wall thickness: the longer face runs to the far side of the wall it meets"
+        }
+      ],
       "face_a_ids": [
         "VS-000029"
       ],
+      "face_a_intervals": [
+        [
+          10496.728010980225,
+          11945.671247973632
+        ]
+      ],
       "face_b_ids": [
         "VS-000023"
+      ],
+      "face_b_intervals": [
+        [
+          10696.768768975831,
+          11945.671247973632
+        ]
       ],
       "families": [
         "CLOSURE",
@@ -1654,6 +2838,10 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        19098.473730065918,
+        20298.718278039552
+      ],
       "cap_ids": [
         "EC-00302",
         "EC-00303",
@@ -1670,11 +2858,37 @@
       ],
       "centreline_mm": 17928.0,
       "conflicting_evidence": [],
+      "extensions": [
+        {
+          "end": "start",
+          "extension_reason": "JUNCTION_OVERHANG",
+          "length_mm": 151.4,
+          "note": "151 mm is within one wall thickness: the longer face runs to the far side of the wall it meets"
+        },
+        {
+          "end": "end",
+          "extension_reason": "JUNCTION_OVERHANG",
+          "length_mm": 148.7,
+          "note": "149 mm is within one wall thickness: the longer face runs to the far side of the wall it meets"
+        }
+      ],
       "face_a_ids": [
         "VS-047899"
       ],
+      "face_a_intervals": [
+        [
+          18947.09502792969,
+          20447.39933795166
+        ]
+      ],
       "face_b_ids": [
         "VS-047845"
+      ],
+      "face_b_intervals": [
+        [
+          19098.473730065918,
+          20298.718278039552
+        ]
       ],
       "families": [
         "CLOSURE",
@@ -1696,17 +2910,47 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        19136.321842962647,
+        20258.171147973633
+      ],
       "cap_ids": [
         "EC-00304",
         "EC-00305"
       ],
       "centreline_mm": 19060.7,
       "conflicting_evidence": [],
+      "extensions": [
+        {
+          "end": "start",
+          "extension_reason": "JUNCTION_OVERHANG",
+          "length_mm": 37.8,
+          "note": "38 mm is within one wall thickness: the longer face runs to the far side of the wall it meets"
+        },
+        {
+          "end": "end",
+          "extension_reason": "JUNCTION_OVERHANG",
+          "length_mm": 40.5,
+          "note": "41 mm is within one wall thickness: the longer face runs to the far side of the wall it meets"
+        }
+      ],
       "face_a_ids": [
         "VS-047883"
       ],
+      "face_a_intervals": [
+        [
+          19136.321842962647,
+          20258.171147973633
+        ]
+      ],
       "face_b_ids": [
         "VS-047879"
+      ],
+      "face_b_intervals": [
+        [
+          19098.476479956054,
+          20298.71965298462
+        ]
       ],
       "families": [
         "CLOSURE",
@@ -1728,17 +2972,34 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        19147.133036035157,
+        20247.357205010987
+      ],
       "cap_ids": [
         "EC-00304",
         "EC-00305"
       ],
       "centreline_mm": 19214.8,
       "conflicting_evidence": [],
+      "extensions": [],
       "face_a_ids": [
         "VS-047839"
       ],
+      "face_a_intervals": [
+        [
+          19147.133036035157,
+          20247.357205010987
+        ]
+      ],
       "face_b_ids": [
         "VS-047840"
+      ],
+      "face_b_intervals": [
+        [
+          19147.133036035157,
+          20247.357205010987
+        ]
       ],
       "families": [
         "CLOSURE",
@@ -1760,6 +3021,10 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        20147.335451068117,
+        21223.229967059327
+      ],
       "cap_ids": [
         "EC-00280",
         "EC-00281",
@@ -1767,11 +3032,31 @@
       ],
       "centreline_mm": 9823.7,
       "conflicting_evidence": [],
+      "extensions": [
+        {
+          "end": "start",
+          "extension_reason": "JUNCTION_OVERHANG",
+          "length_mm": 348.7,
+          "note": "349 mm is within one wall thickness: the longer face runs to the far side of the wall it meets"
+        }
+      ],
       "face_a_ids": [
         "VS-000009"
       ],
+      "face_a_intervals": [
+        [
+          19798.61638305054,
+          21223.229967059327
+        ]
+      ],
       "face_b_ids": [
         "VS-000013"
+      ],
+      "face_b_intervals": [
+        [
+          20147.335451068117,
+          21223.229967059327
+        ]
       ],
       "families": [
         "CLOSURE",
@@ -1795,6 +3080,10 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        23223.636172070313,
+        24299.530688061524
+      ],
       "cap_ids": [
         "EC-00278",
         "EC-00279",
@@ -1802,11 +3091,31 @@
       ],
       "centreline_mm": 9823.7,
       "conflicting_evidence": [],
+      "extensions": [
+        {
+          "end": "end",
+          "extension_reason": "JUNCTION_OVERHANG",
+          "length_mm": 197.3,
+          "note": "197 mm is within one wall thickness: the longer face runs to the far side of the wall it meets"
+        }
+      ],
       "face_a_ids": [
         "VS-000010"
       ],
+      "face_a_intervals": [
+        [
+          23223.636172070313,
+          24496.868304052736
+        ]
+      ],
       "face_b_ids": [
         "VS-000014"
+      ],
+      "face_b_intervals": [
+        [
+          23223.636172070313,
+          24299.530688061524
+        ]
       ],
       "families": [
         "CLOSURE",
@@ -1830,17 +3139,41 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        11897.011942004396,
+        12948.576805010987
+      ],
       "cap_ids": [
         "EC-00152",
         "EC-00153"
       ],
       "centreline_mm": 18674.1,
       "conflicting_evidence": [],
+      "extensions": [
+        {
+          "end": "end",
+          "extension_reason": "END_CAP_SUPPORTED",
+          "length_mm": 797.5,
+          "note": "an end cap closes the band over this extension"
+        }
+      ],
       "face_a_ids": [
         "VS-004622"
       ],
+      "face_a_intervals": [
+        [
+          11897.011942004396,
+          12948.576805010987
+        ]
+      ],
       "face_b_ids": [
         "VS-004625"
+      ],
+      "face_b_intervals": [
+        [
+          11897.011942004396,
+          13746.036694989014
+        ]
       ],
       "families": [
         "CLOSURE",
@@ -1864,6 +3197,10 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        17371.09999189453,
+        18371.30378187256
+      ],
       "cap_ids": [
         "EC-00294",
         "EC-00295",
@@ -1872,11 +3209,37 @@
       ],
       "centreline_mm": 11172.6,
       "conflicting_evidence": [],
+      "extensions": [
+        {
+          "end": "start",
+          "extension_reason": "END_CAP_SUPPORTED",
+          "length_mm": 673.1,
+          "note": "an end cap closes the band over this extension"
+        },
+        {
+          "end": "end",
+          "extension_reason": "JUNCTION_OVERHANG",
+          "length_mm": 27.0,
+          "note": "27 mm is within one wall thickness: the longer face runs to the far side of the wall it meets"
+        }
+      ],
       "face_a_ids": [
         "VS-043961"
       ],
+      "face_a_intervals": [
+        [
+          17371.09999189453,
+          18371.30378187256
+        ]
+      ],
       "face_b_ids": [
         "VS-000020"
+      ],
+      "face_b_intervals": [
+        [
+          16697.98738400879,
+          18398.332452026367
+        ]
       ],
       "families": [
         "CLOSURE",
@@ -1900,6 +3263,10 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        24748.271510021972,
+        25748.475300000002
+      ],
       "cap_ids": [
         "EC-00284",
         "EC-00285",
@@ -1910,11 +3277,24 @@
       ],
       "centreline_mm": 9823.7,
       "conflicting_evidence": [],
+      "extensions": [],
       "face_a_ids": [
         "VS-043941"
       ],
+      "face_a_intervals": [
+        [
+          24748.271510021972,
+          25748.475300000002
+        ]
+      ],
       "face_b_ids": [
         "VS-043942"
+      ],
+      "face_b_intervals": [
+        [
+          24748.271510021972,
+          25748.475300000002
+        ]
       ],
       "families": [
         "CLOSURE",
@@ -1938,6 +3318,10 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        17371.09999189453,
+        18371.30378187256
+      ],
       "cap_ids": [
         "EC-00294",
         "EC-00295",
@@ -1946,11 +3330,37 @@
       ],
       "centreline_mm": 11172.6,
       "conflicting_evidence": [],
+      "extensions": [
+        {
+          "end": "start",
+          "extension_reason": "JUNCTION_OVERHANG",
+          "length_mm": 24.3,
+          "note": "24 mm is within one wall thickness: the longer face runs to the far side of the wall it meets"
+        },
+        {
+          "end": "end",
+          "extension_reason": "JUNCTION_OVERHANG",
+          "length_mm": 27.0,
+          "note": "27 mm is within one wall thickness: the longer face runs to the far side of the wall it meets"
+        }
+      ],
       "face_a_ids": [
         "VS-000032"
       ],
+      "face_a_intervals": [
+        [
+          17346.768963964845,
+          18398.333826971437
+        ]
+      ],
       "face_b_ids": [
         "VS-043962"
+      ],
+      "face_b_intervals": [
+        [
+          17371.09999189453,
+          18371.30378187256
+        ]
       ],
       "families": [
         "CLOSURE",
@@ -1976,17 +3386,41 @@
     },
     {
       "axis": "H",
+      "both_faces_interval": [
+        26348.59757398682,
+        27348.801363964845
+      ],
       "cap_ids": [
         "EC-00017",
         "EC-00108"
       ],
       "centreline_mm": 27048.8,
       "conflicting_evidence": [],
+      "extensions": [
+        {
+          "end": "start",
+          "extension_reason": "JUNCTION_OVERHANG",
+          "length_mm": 51.4,
+          "note": "51 mm is within one wall thickness: the longer face runs to the far side of the wall it meets"
+        }
+      ],
       "face_a_ids": [
         "VS-005005"
       ],
+      "face_a_intervals": [
+        [
+          26297.23787590332,
+          27348.80411385498
+        ]
+      ],
       "face_b_ids": [
         "VS-005009"
+      ],
+      "face_b_intervals": [
+        [
+          26348.59757398682,
+          27348.801363964845
+        ]
       ],
       "families": [
         "CLOSURE",
@@ -2779,11 +4213,401 @@
       "topology_boundary_candidate_ids": []
     }
   ],
+  "length_reconciliation": {
+    "BED-01": {
+      "coverage": {
+        "HOST_WALL_GROSS_LENGTH": {
+          "basis": "HOST_WALL_GROSS_LENGTH",
+          "complete": true,
+          "established": 8,
+          "intervals": 8,
+          "not_established": 0,
+          "total_m": 22.268
+        },
+        "MATERIAL_PRESENT_LENGTH": {
+          "basis": "MATERIAL_PRESENT_LENGTH",
+          "complete": true,
+          "established": 8,
+          "intervals": 8,
+          "not_established": 0,
+          "total_m": 20.919
+        },
+        "OPENING_LENGTH": {
+          "basis": "OPENING_LENGTH",
+          "complete": true,
+          "established": 8,
+          "intervals": 8,
+          "not_established": 0,
+          "total_m": 1.349
+        },
+        "SPACE_BOUNDARY_LENGTH": {
+          "basis": "SPACE_BOUNDARY_LENGTH",
+          "complete": true,
+          "established": 8,
+          "intervals": 8,
+          "not_established": 0,
+          "total_m": 22.268
+        }
+      },
+      "host_wall_gross_length_m": 22.268,
+      "identity": "HOST_WALL_GROSS = MATERIAL_PRESENT + HOST_WALL_OPENINGS. It does not apply to open-plan edges, which carry no host wall",
+      "identity_holds": true,
+      "identity_residual_m": 0.0,
+      "material_present_length_m": 20.919,
+      "opening_length_m": 1.349,
+      "space_boundary_length_m": 22.268
+    },
+    "BED-04": {
+      "coverage": {
+        "HOST_WALL_GROSS_LENGTH": {
+          "basis": "HOST_WALL_GROSS_LENGTH",
+          "complete": true,
+          "established": 9,
+          "intervals": 9,
+          "not_established": 0,
+          "total_m": 30.009
+        },
+        "MATERIAL_PRESENT_LENGTH": {
+          "basis": "MATERIAL_PRESENT_LENGTH",
+          "complete": true,
+          "established": 9,
+          "intervals": 9,
+          "not_established": 0,
+          "total_m": 30.009
+        },
+        "OPENING_LENGTH": {
+          "basis": "OPENING_LENGTH",
+          "complete": true,
+          "established": 9,
+          "intervals": 9,
+          "not_established": 0,
+          "total_m": 0.0
+        },
+        "SPACE_BOUNDARY_LENGTH": {
+          "basis": "SPACE_BOUNDARY_LENGTH",
+          "complete": false,
+          "established": 6,
+          "intervals": 9,
+          "not_established": 3,
+          "total_m": 30.009
+        }
+      },
+      "host_wall_gross_length_m": 30.009,
+      "identity": "HOST_WALL_GROSS = MATERIAL_PRESENT + HOST_WALL_OPENINGS. It does not apply to open-plan edges, which carry no host wall",
+      "identity_holds": true,
+      "identity_residual_m": 0.0,
+      "material_present_length_m": 30.009,
+      "opening_length_m": 0.0,
+      "space_boundary_length_m": 30.009
+    },
+    "BTH-01": {
+      "coverage": {
+        "HOST_WALL_GROSS_LENGTH": {
+          "basis": "HOST_WALL_GROSS_LENGTH",
+          "complete": true,
+          "established": 5,
+          "intervals": 5,
+          "not_established": 0,
+          "total_m": 8.522
+        },
+        "MATERIAL_PRESENT_LENGTH": {
+          "basis": "MATERIAL_PRESENT_LENGTH",
+          "complete": true,
+          "established": 5,
+          "intervals": 5,
+          "not_established": 0,
+          "total_m": 7.397
+        },
+        "OPENING_LENGTH": {
+          "basis": "OPENING_LENGTH",
+          "complete": true,
+          "established": 5,
+          "intervals": 5,
+          "not_established": 0,
+          "total_m": 1.125
+        },
+        "SPACE_BOUNDARY_LENGTH": {
+          "basis": "SPACE_BOUNDARY_LENGTH",
+          "complete": true,
+          "established": 5,
+          "intervals": 5,
+          "not_established": 0,
+          "total_m": 8.522
+        }
+      },
+      "host_wall_gross_length_m": 8.522,
+      "identity": "HOST_WALL_GROSS = MATERIAL_PRESENT + HOST_WALL_OPENINGS. It does not apply to open-plan edges, which carry no host wall",
+      "identity_holds": true,
+      "identity_residual_m": 0.0,
+      "material_present_length_m": 7.397,
+      "opening_length_m": 1.125,
+      "space_boundary_length_m": 8.522
+    },
+    "BTH-02": {
+      "coverage": {
+        "HOST_WALL_GROSS_LENGTH": {
+          "basis": "HOST_WALL_GROSS_LENGTH",
+          "complete": true,
+          "established": 6,
+          "intervals": 6,
+          "not_established": 0,
+          "total_m": 8.802
+        },
+        "MATERIAL_PRESENT_LENGTH": {
+          "basis": "MATERIAL_PRESENT_LENGTH",
+          "complete": true,
+          "established": 6,
+          "intervals": 6,
+          "not_established": 0,
+          "total_m": 7.57
+        },
+        "OPENING_LENGTH": {
+          "basis": "OPENING_LENGTH",
+          "complete": true,
+          "established": 6,
+          "intervals": 6,
+          "not_established": 0,
+          "total_m": 1.232
+        },
+        "SPACE_BOUNDARY_LENGTH": {
+          "basis": "SPACE_BOUNDARY_LENGTH",
+          "complete": true,
+          "established": 6,
+          "intervals": 6,
+          "not_established": 0,
+          "total_m": 8.802
+        }
+      },
+      "host_wall_gross_length_m": 8.802,
+      "identity": "HOST_WALL_GROSS = MATERIAL_PRESENT + HOST_WALL_OPENINGS. It does not apply to open-plan edges, which carry no host wall",
+      "identity_holds": true,
+      "identity_residual_m": 0.0,
+      "material_present_length_m": 7.57,
+      "opening_length_m": 1.232,
+      "space_boundary_length_m": 8.802
+    },
+    "BTH-03": {
+      "coverage": {
+        "HOST_WALL_GROSS_LENGTH": {
+          "basis": "HOST_WALL_GROSS_LENGTH",
+          "complete": true,
+          "established": 5,
+          "intervals": 5,
+          "not_established": 0,
+          "total_m": 8.392
+        },
+        "MATERIAL_PRESENT_LENGTH": {
+          "basis": "MATERIAL_PRESENT_LENGTH",
+          "complete": true,
+          "established": 5,
+          "intervals": 5,
+          "not_established": 0,
+          "total_m": 7.284
+        },
+        "OPENING_LENGTH": {
+          "basis": "OPENING_LENGTH",
+          "complete": true,
+          "established": 5,
+          "intervals": 5,
+          "not_established": 0,
+          "total_m": 1.108
+        },
+        "SPACE_BOUNDARY_LENGTH": {
+          "basis": "SPACE_BOUNDARY_LENGTH",
+          "complete": true,
+          "established": 5,
+          "intervals": 5,
+          "not_established": 0,
+          "total_m": 8.392
+        }
+      },
+      "host_wall_gross_length_m": 8.392,
+      "identity": "HOST_WALL_GROSS = MATERIAL_PRESENT + HOST_WALL_OPENINGS. It does not apply to open-plan edges, which carry no host wall",
+      "identity_holds": true,
+      "identity_residual_m": 0.0,
+      "material_present_length_m": 7.284,
+      "opening_length_m": 1.108,
+      "space_boundary_length_m": 8.392
+    },
+    "BTH-05": {
+      "coverage": {
+        "HOST_WALL_GROSS_LENGTH": {
+          "basis": "HOST_WALL_GROSS_LENGTH",
+          "complete": true,
+          "established": 5,
+          "intervals": 5,
+          "not_established": 0,
+          "total_m": 7.592
+        },
+        "MATERIAL_PRESENT_LENGTH": {
+          "basis": "MATERIAL_PRESENT_LENGTH",
+          "complete": true,
+          "established": 5,
+          "intervals": 5,
+          "not_established": 0,
+          "total_m": 6.538
+        },
+        "OPENING_LENGTH": {
+          "basis": "OPENING_LENGTH",
+          "complete": true,
+          "established": 5,
+          "intervals": 5,
+          "not_established": 0,
+          "total_m": 1.054
+        },
+        "SPACE_BOUNDARY_LENGTH": {
+          "basis": "SPACE_BOUNDARY_LENGTH",
+          "complete": true,
+          "established": 5,
+          "intervals": 5,
+          "not_established": 0,
+          "total_m": 7.592
+        }
+      },
+      "host_wall_gross_length_m": 7.592,
+      "identity": "HOST_WALL_GROSS = MATERIAL_PRESENT + HOST_WALL_OPENINGS. It does not apply to open-plan edges, which carry no host wall",
+      "identity_holds": true,
+      "identity_residual_m": 0.0,
+      "material_present_length_m": 6.538,
+      "opening_length_m": 1.054,
+      "space_boundary_length_m": 7.592
+    },
+    "OPEN-01": {
+      "coverage": {
+        "HOST_WALL_GROSS_LENGTH": {
+          "basis": "HOST_WALL_GROSS_LENGTH",
+          "complete": true,
+          "established": 18,
+          "intervals": 18,
+          "not_established": 0,
+          "total_m": 37.19
+        },
+        "MATERIAL_PRESENT_LENGTH": {
+          "basis": "MATERIAL_PRESENT_LENGTH",
+          "complete": true,
+          "established": 18,
+          "intervals": 18,
+          "not_established": 0,
+          "total_m": 37.19
+        },
+        "OPENING_LENGTH": {
+          "basis": "OPENING_LENGTH",
+          "complete": true,
+          "established": 18,
+          "intervals": 18,
+          "not_established": 0,
+          "total_m": 0.0
+        },
+        "SPACE_BOUNDARY_LENGTH": {
+          "basis": "SPACE_BOUNDARY_LENGTH",
+          "complete": false,
+          "established": 9,
+          "intervals": 18,
+          "not_established": 9,
+          "total_m": 37.19
+        }
+      },
+      "host_wall_gross_length_m": 37.19,
+      "identity": "HOST_WALL_GROSS = MATERIAL_PRESENT + HOST_WALL_OPENINGS. It does not apply to open-plan edges, which carry no host wall",
+      "identity_holds": true,
+      "identity_residual_m": 0.0,
+      "material_present_length_m": 37.19,
+      "opening_length_m": 0.0,
+      "space_boundary_length_m": 37.19
+    },
+    "STR-01": {
+      "coverage": {
+        "HOST_WALL_GROSS_LENGTH": {
+          "basis": "HOST_WALL_GROSS_LENGTH",
+          "complete": true,
+          "established": 5,
+          "intervals": 5,
+          "not_established": 0,
+          "total_m": 5.674
+        },
+        "MATERIAL_PRESENT_LENGTH": {
+          "basis": "MATERIAL_PRESENT_LENGTH",
+          "complete": true,
+          "established": 5,
+          "intervals": 5,
+          "not_established": 0,
+          "total_m": 5.674
+        },
+        "OPENING_LENGTH": {
+          "basis": "OPENING_LENGTH",
+          "complete": true,
+          "established": 5,
+          "intervals": 5,
+          "not_established": 0,
+          "total_m": 0.0
+        },
+        "SPACE_BOUNDARY_LENGTH": {
+          "basis": "SPACE_BOUNDARY_LENGTH",
+          "complete": false,
+          "established": 3,
+          "intervals": 5,
+          "not_established": 2,
+          "total_m": 5.674
+        }
+      },
+      "host_wall_gross_length_m": 5.674,
+      "identity": "HOST_WALL_GROSS = MATERIAL_PRESENT + HOST_WALL_OPENINGS. It does not apply to open-plan edges, which carry no host wall",
+      "identity_holds": true,
+      "identity_residual_m": 0.0,
+      "material_present_length_m": 5.674,
+      "opening_length_m": 0.0,
+      "space_boundary_length_m": 5.674
+    },
+    "WSH-01": {
+      "coverage": {
+        "HOST_WALL_GROSS_LENGTH": {
+          "basis": "HOST_WALL_GROSS_LENGTH",
+          "complete": true,
+          "established": 4,
+          "intervals": 4,
+          "not_established": 0,
+          "total_m": 4.606
+        },
+        "MATERIAL_PRESENT_LENGTH": {
+          "basis": "MATERIAL_PRESENT_LENGTH",
+          "complete": true,
+          "established": 4,
+          "intervals": 4,
+          "not_established": 0,
+          "total_m": 4.606
+        },
+        "OPENING_LENGTH": {
+          "basis": "OPENING_LENGTH",
+          "complete": true,
+          "established": 4,
+          "intervals": 4,
+          "not_established": 0,
+          "total_m": 0.0
+        },
+        "SPACE_BOUNDARY_LENGTH": {
+          "basis": "SPACE_BOUNDARY_LENGTH",
+          "complete": true,
+          "established": 4,
+          "intervals": 4,
+          "not_established": 0,
+          "total_m": 4.606
+        }
+      },
+      "host_wall_gross_length_m": 4.606,
+      "identity": "HOST_WALL_GROSS = MATERIAL_PRESENT + HOST_WALL_OPENINGS. It does not apply to open-plan edges, which carry no host wall",
+      "identity_holds": true,
+      "identity_residual_m": 0.0,
+      "material_present_length_m": 4.606,
+      "opening_length_m": 0.0,
+      "space_boundary_length_m": 4.606
+    }
+  },
   "manifest": {
     "coherent": true,
     "drawing_id": "AR-00",
     "drawing_revision": "MAR.2023 (as plotted)",
     "drawing_source_hash": "bddb175c39834594",
+    "measurement_basis_version": "LENGTH_ONTOLOGY_V1",
     "problems": [],
     "project_id": "23010",
     "rule_set_versions": {
@@ -2806,9 +4630,25 @@
           ]
         ],
         "note": "",
-        "output_hash": "a7a3e3717d8d3bd3",
+        "output_hash": "c11d53c4f58e1d91",
         "run_id": "V2",
         "stage": "opening_detection"
+      },
+      "space_boundary_graph": {
+        "consumed": [
+          [
+            "wall_graph",
+            "5f42987bc1c94996"
+          ],
+          [
+            "opening_detection",
+            "c11d53c4f58e1d91"
+          ]
+        ],
+        "note": "",
+        "output_hash": "f2da26a9bae010e3",
+        "run_id": "V2",
+        "stage": "space_boundary_graph"
       },
       "topology": {
         "consumed": [
@@ -2817,8 +4657,8 @@
             "5f42987bc1c94996"
           ],
           [
-            "opening_detection",
-            "a7a3e3717d8d3bd3"
+            "space_boundary_graph",
+            "f2da26a9bae010e3"
           ]
         ],
         "note": "",
@@ -2851,7 +4691,7 @@
         "stage": "wall_graph"
       }
     },
-    "workbook_generated_at": "2026-09-14T20:28:30+00:00"
+    "workbook_generated_at": "2026-09-14T20:54:59+00:00"
   },
   "material_faces": {
     "bounded_faces": 14,
@@ -2879,9 +4719,8 @@
       "UNRESOLVED": 10
     },
     "by_status": {
-      "PORTAL_CANDIDATE": 10,
-      "PORTAL_PROBABLE": 7,
-      "PORTAL_UNRESOLVED": 4
+      "PORTAL_CANDIDATE": 14,
+      "PORTAL_PROBABLE": 7
     },
     "detail": [
       {
@@ -2902,7 +4741,7 @@
         "space_id": "BTH-05",
         "span_mm": 1054.2,
         "status": "PORTAL_PROBABLE",
-        "why": "1054 mm gap with 2 independent evidence families: GEOMETRY, TOPOLOGY"
+        "why": "1054 mm gap. GEOMETRY+TOPOLOGY is an approved combination \u2014 but GEOMETRY and TOPOLOGY are correlated on one gap, so it caps at PROBABLE"
       },
       {
         "evidence": [
@@ -2921,7 +4760,7 @@
         "space_id": "BED-01",
         "span_mm": 148.7,
         "status": "PORTAL_PROBABLE",
-        "why": "149 mm gap with 2 independent evidence families: GEOMETRY, TOPOLOGY"
+        "why": "149 mm gap. GEOMETRY+TOPOLOGY is an approved combination \u2014 but GEOMETRY and TOPOLOGY are correlated on one gap, so it caps at PROBABLE"
       },
       {
         "evidence": [
@@ -2941,7 +4780,7 @@
         "space_id": "BED-01",
         "span_mm": 1200.2,
         "status": "PORTAL_PROBABLE",
-        "why": "1200 mm gap with 2 independent evidence families: GEOMETRY, TOPOLOGY"
+        "why": "1200 mm gap. GEOMETRY+TOPOLOGY is an approved combination \u2014 but GEOMETRY and TOPOLOGY are correlated on one gap, so it caps at PROBABLE"
       },
       {
         "evidence": [
@@ -2959,7 +4798,7 @@
         "space_id": "STR-01",
         "span_mm": 1148.2,
         "status": "PORTAL_CANDIDATE",
-        "why": "one evidence family only. A gap this size is equally a doorway and a wall the extractor missed"
+        "why": "1148 mm gap. GEOMETRY alone. Span alone is never sufficient, topology alone is never sufficient, and semantic alone is never sufficient"
       },
       {
         "evidence": [
@@ -2974,8 +4813,8 @@
         "side": "east",
         "space_id": "STR-01",
         "span_mm": 2606,
-        "status": "PORTAL_UNRESOLVED",
-        "why": "2606 mm is far wider than a doorway. This is an open-plan transition or a missing wall, and it is not closed on a portal hypothesis"
+        "status": "PORTAL_CANDIDATE",
+        "why": "2606 mm is wider than a typical doorway, so span supports no door hypothesis here. Large openings exist and width is evidence only: GEOMETRY alone. Span alone is never sufficient, topology alone is never sufficient, and semantic alone is never sufficient"
       },
       {
         "evidence": [
@@ -2992,7 +4831,7 @@
         "space_id": "OPEN-01",
         "span_mm": 1600.3,
         "status": "PORTAL_CANDIDATE",
-        "why": "one evidence family only. A gap this size is equally a doorway and a wall the extractor missed"
+        "why": "1600 mm gap. GEOMETRY alone. Span alone is never sufficient, topology alone is never sufficient, and semantic alone is never sufficient"
       },
       {
         "evidence": [
@@ -3008,8 +4847,8 @@
         "side": "north",
         "space_id": "OPEN-01",
         "span_mm": 6053.1,
-        "status": "PORTAL_UNRESOLVED",
-        "why": "6053 mm is far wider than a doorway. This is an open-plan transition or a missing wall, and it is not closed on a portal hypothesis"
+        "status": "PORTAL_CANDIDATE",
+        "why": "6053 mm is wider than a typical doorway, so span supports no door hypothesis here. Large openings exist and width is evidence only: GEOMETRY alone. Span alone is never sufficient, topology alone is never sufficient, and semantic alone is never sufficient"
       },
       {
         "evidence": [
@@ -3026,7 +4865,7 @@
         "space_id": "OPEN-01",
         "span_mm": 1585.0,
         "status": "PORTAL_CANDIDATE",
-        "why": "one evidence family only. A gap this size is equally a doorway and a wall the extractor missed"
+        "why": "1585 mm gap. GEOMETRY alone. Span alone is never sufficient, topology alone is never sufficient, and semantic alone is never sufficient"
       },
       {
         "evidence": [
@@ -3044,7 +4883,7 @@
         "space_id": "OPEN-01",
         "span_mm": 1000.2,
         "status": "PORTAL_CANDIDATE",
-        "why": "one evidence family only. A gap this size is equally a doorway and a wall the extractor missed"
+        "why": "1000 mm gap. GEOMETRY alone. Span alone is never sufficient, topology alone is never sufficient, and semantic alone is never sufficient"
       },
       {
         "evidence": [
@@ -3062,7 +4901,7 @@
         "space_id": "OPEN-01",
         "span_mm": 897.5,
         "status": "PORTAL_CANDIDATE",
-        "why": "one evidence family only. A gap this size is equally a doorway and a wall the extractor missed"
+        "why": "897 mm gap. GEOMETRY alone. Span alone is never sufficient, topology alone is never sufficient, and semantic alone is never sufficient"
       },
       {
         "evidence": [
@@ -3080,7 +4919,7 @@
         "space_id": "OPEN-01",
         "span_mm": 636.2,
         "status": "PORTAL_CANDIDATE",
-        "why": "one evidence family only. A gap this size is equally a doorway and a wall the extractor missed"
+        "why": "636 mm gap. GEOMETRY alone. Span alone is never sufficient, topology alone is never sufficient, and semantic alone is never sufficient"
       },
       {
         "evidence": [
@@ -3098,7 +4937,7 @@
         "space_id": "OPEN-01",
         "span_mm": 1000.2,
         "status": "PORTAL_CANDIDATE",
-        "why": "one evidence family only. A gap this size is equally a doorway and a wall the extractor missed"
+        "why": "1000 mm gap. GEOMETRY alone. Span alone is never sufficient, topology alone is never sufficient, and semantic alone is never sufficient"
       },
       {
         "evidence": [
@@ -3116,7 +4955,7 @@
         "space_id": "OPEN-01",
         "span_mm": 1200.2,
         "status": "PORTAL_CANDIDATE",
-        "why": "one evidence family only. A gap this size is equally a doorway and a wall the extractor missed"
+        "why": "1200 mm gap. GEOMETRY alone. Span alone is never sufficient, topology alone is never sufficient, and semantic alone is never sufficient"
       },
       {
         "evidence": [
@@ -3132,8 +4971,8 @@
         "side": "east",
         "space_id": "OPEN-01",
         "span_mm": 6731.0,
-        "status": "PORTAL_UNRESOLVED",
-        "why": "6731 mm is far wider than a doorway. This is an open-plan transition or a missing wall, and it is not closed on a portal hypothesis"
+        "status": "PORTAL_CANDIDATE",
+        "why": "6731 mm is wider than a typical doorway, so span supports no door hypothesis here. Large openings exist and width is evidence only: GEOMETRY alone. Span alone is never sufficient, topology alone is never sufficient, and semantic alone is never sufficient"
       },
       {
         "evidence": [
@@ -3153,7 +4992,7 @@
         "space_id": "BTH-01",
         "span_mm": 1125.2,
         "status": "PORTAL_PROBABLE",
-        "why": "1125 mm gap with 2 independent evidence families: GEOMETRY, TOPOLOGY"
+        "why": "1125 mm gap. GEOMETRY+TOPOLOGY is an approved combination \u2014 but GEOMETRY and TOPOLOGY are correlated on one gap, so it caps at PROBABLE"
       },
       {
         "evidence": [
@@ -3172,7 +5011,7 @@
         "space_id": "BTH-02",
         "span_mm": 120.9,
         "status": "PORTAL_PROBABLE",
-        "why": "121 mm gap with 2 independent evidence families: GEOMETRY, TOPOLOGY"
+        "why": "121 mm gap. GEOMETRY+TOPOLOGY is an approved combination \u2014 but GEOMETRY and TOPOLOGY are correlated on one gap, so it caps at PROBABLE"
       },
       {
         "evidence": [
@@ -3192,7 +5031,7 @@
         "space_id": "BTH-02",
         "span_mm": 1110.8,
         "status": "PORTAL_PROBABLE",
-        "why": "1111 mm gap with 2 independent evidence families: GEOMETRY, TOPOLOGY"
+        "why": "1111 mm gap. GEOMETRY+TOPOLOGY is an approved combination \u2014 but GEOMETRY and TOPOLOGY are correlated on one gap, so it caps at PROBABLE"
       },
       {
         "evidence": [
@@ -3212,7 +5051,7 @@
         "space_id": "BTH-03",
         "span_mm": 1108.1,
         "status": "PORTAL_PROBABLE",
-        "why": "1108 mm gap with 2 independent evidence families: GEOMETRY, TOPOLOGY"
+        "why": "1108 mm gap. GEOMETRY+TOPOLOGY is an approved combination \u2014 but GEOMETRY and TOPOLOGY are correlated on one gap, so it caps at PROBABLE"
       },
       {
         "evidence": [
@@ -3230,7 +5069,7 @@
         "space_id": "BED-04",
         "span_mm": 1170.2,
         "status": "PORTAL_CANDIDATE",
-        "why": "one evidence family only. A gap this size is equally a doorway and a wall the extractor missed"
+        "why": "1170 mm gap. GEOMETRY alone. Span alone is never sufficient, topology alone is never sufficient, and semantic alone is never sufficient"
       },
       {
         "evidence": [
@@ -3246,8 +5085,8 @@
         "side": "west",
         "space_id": "BED-04",
         "span_mm": 3457.5,
-        "status": "PORTAL_UNRESOLVED",
-        "why": "3457 mm is far wider than a doorway. This is an open-plan transition or a missing wall, and it is not closed on a portal hypothesis"
+        "status": "PORTAL_CANDIDATE",
+        "why": "3457 mm is wider than a typical doorway, so span supports no door hypothesis here. Large openings exist and width is evidence only: GEOMETRY alone. Span alone is never sufficient, topology alone is never sufficient, and semantic alone is never sufficient"
       },
       {
         "evidence": [
@@ -3265,7 +5104,7 @@
         "space_id": "BED-04",
         "span_mm": 897.5,
         "status": "PORTAL_CANDIDATE",
-        "why": "one evidence family only. A gap this size is equally a doorway and a wall the extractor missed"
+        "why": "897 mm gap. GEOMETRY alone. Span alone is never sufficient, topology alone is never sufficient, and semantic alone is never sufficient"
       }
     ],
     "total": 21
@@ -3862,19 +5701,67 @@
   ],
   "space_boundaries": {
     "BED-01": {
+      "bbox_fill_ratio": 0.773,
       "by_boundary_type": {
-        "PHYSICAL_WALL": 6,
-        "VIRTUAL_SPACE_BOUNDARY": 2
+        "HOST_WALL_OPENING_BOUNDARY": 2,
+        "PHYSICAL_WALL": 6
       },
       "closes": true,
+      "coverage": {
+        "HOST_WALL_GROSS_LENGTH": {
+          "basis": "HOST_WALL_GROSS_LENGTH",
+          "complete": true,
+          "established": 8,
+          "intervals": 8,
+          "not_established": 0,
+          "total_m": 22.268
+        },
+        "MATERIAL_PRESENT_LENGTH": {
+          "basis": "MATERIAL_PRESENT_LENGTH",
+          "complete": true,
+          "established": 8,
+          "intervals": 8,
+          "not_established": 0,
+          "total_m": 20.919
+        },
+        "OPENING_LENGTH": {
+          "basis": "OPENING_LENGTH",
+          "complete": true,
+          "established": 8,
+          "intervals": 8,
+          "not_established": 0,
+          "total_m": 1.349
+        },
+        "SPACE_BOUNDARY_LENGTH": {
+          "basis": "SPACE_BOUNDARY_LENGTH",
+          "complete": true,
+          "established": 8,
+          "intervals": 8,
+          "not_established": 0,
+          "total_m": 22.268
+        }
+      },
+      "expected_boundary_caveat": "this region fills only 77% of its bounding box, so the bbox is NOT its outline: sides measured against it may cut through open space",
+      "host_wall_gross_length_m": 22.268,
+      "identity": "HOST_WALL_GROSS = MATERIAL_PRESENT + HOST_WALL_OPENINGS. It does not apply to open-plan edges, which carry no host wall",
+      "identity_holds": true,
+      "identity_residual_m": 0.0,
       "intervals": [
         {
           "boundary_type": "PHYSICAL_WALL",
+          "closure_basis": "",
+          "host_wall_band_id": "",
+          "host_wall_gross_mm": 2308.241417317451,
           "interval_id": "BI-BED-01-001",
           "is_virtual": false,
-          "material_length_mm": 2308.2,
+          "jamb_ids": [],
+          "material_present_mm": 2308.241417317451,
+          "opening_mm": 0.0,
           "portal_id": "",
           "side": "north",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": 2308.241417317451,
           "space_id": "BED-01",
           "span_mm": 2308.2,
           "wall_band_ids": [
@@ -3885,11 +5772,19 @@
         },
         {
           "boundary_type": "PHYSICAL_WALL",
+          "closure_basis": "",
+          "host_wall_band_id": "",
+          "host_wall_gross_mm": 2496.080272660576,
           "interval_id": "BI-BED-01-002",
           "is_virtual": false,
-          "material_length_mm": 2496.1,
+          "jamb_ids": [],
+          "material_present_mm": 2496.080272660576,
+          "opening_mm": 0.0,
           "portal_id": "",
           "side": "north",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": 2496.080272660576,
           "space_id": "BED-01",
           "span_mm": 2496.1,
           "wall_band_ids": [
@@ -3899,24 +5794,44 @@
           "why": "a wall band covers this interval"
         },
         {
-          "boundary_type": "VIRTUAL_SPACE_BOUNDARY",
+          "boundary_type": "HOST_WALL_OPENING_BOUNDARY",
+          "closure_basis": "CLEAR_INTERNAL_FINISH_FACE",
+          "host_wall_band_id": "WB-00017",
+          "host_wall_gross_mm": 148.67831002197272,
           "interval_id": "BI-BED-01-003",
           "is_virtual": true,
-          "material_length_mm": 0.0,
+          "jamb_ids": [
+            "PAIRED_BANDS_TERMINATE_FACING_EACH_OTHER",
+            "END_CAPS_AT_BOTH_JAMBS",
+            "GAP_CLOSES_AN_OTHERWISE_COMPLETE_BOUNDARY"
+          ],
+          "material_present_mm": 0.0,
+          "opening_mm": 148.67831002197272,
           "portal_id": "PT-BED-01-north-28649",
           "side": "north",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": 148.67831002197272,
           "space_id": "BED-01",
           "span_mm": 148.7,
           "wall_band_ids": [],
-          "why": "a probable doorway. This interval closes the room and carries NO wall material: zero blockwork, zero plaster, zero physical wall length"
+          "why": "a supported opening in a host wall. Zero material stands here; the room closes across it; and the gross host-wall line runs through it"
         },
         {
           "boundary_type": "PHYSICAL_WALL",
+          "closure_basis": "",
+          "host_wall_band_id": "",
+          "host_wall_gross_mm": 4945.2259246869435,
           "interval_id": "BI-BED-01-004",
           "is_virtual": false,
-          "material_length_mm": 4945.2,
+          "jamb_ids": [],
+          "material_present_mm": 4945.2259246869435,
+          "opening_mm": 0.0,
           "portal_id": "",
           "side": "south",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": 4945.2259246869435,
           "space_id": "BED-01",
           "span_mm": 4945.2,
           "wall_band_ids": [
@@ -3927,11 +5842,19 @@
         },
         {
           "boundary_type": "PHYSICAL_WALL",
+          "closure_basis": "",
+          "host_wall_band_id": "",
+          "host_wall_gross_mm": 1973.4763261718763,
           "interval_id": "BI-BED-01-005",
           "is_virtual": false,
-          "material_length_mm": 1973.5,
+          "jamb_ids": [],
+          "material_present_mm": 1973.4763261718763,
+          "opening_mm": 0.0,
           "portal_id": "",
           "side": "west",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": 1973.4763261718763,
           "space_id": "BED-01",
           "span_mm": 1973.5,
           "wall_band_ids": [
@@ -3942,11 +5865,19 @@
         },
         {
           "boundary_type": "PHYSICAL_WALL",
+          "closure_basis": "",
+          "host_wall_band_id": "",
+          "host_wall_gross_mm": 3011.2818757446294,
           "interval_id": "BI-BED-01-006",
           "is_virtual": false,
-          "material_length_mm": 3011.3,
+          "jamb_ids": [],
+          "material_present_mm": 3011.2818757446294,
+          "opening_mm": 0.0,
           "portal_id": "",
           "side": "west",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": 3011.2818757446294,
           "space_id": "BED-01",
           "span_mm": 3011.3,
           "wall_band_ids": [
@@ -3956,24 +5887,45 @@
           "why": "a wall band covers this interval"
         },
         {
-          "boundary_type": "VIRTUAL_SPACE_BOUNDARY",
+          "boundary_type": "HOST_WALL_OPENING_BOUNDARY",
+          "closure_basis": "CLEAR_INTERNAL_FINISH_FACE",
+          "host_wall_band_id": "WB-00136",
+          "host_wall_gross_mm": 1200.2417980834944,
           "interval_id": "BI-BED-01-007",
           "is_virtual": true,
-          "material_length_mm": 0.0,
+          "jamb_ids": [
+            "SPAN_IN_THE_DOOR_RANGE",
+            "PAIRED_BANDS_TERMINATE_FACING_EACH_OTHER",
+            "END_CAPS_AT_BOTH_JAMBS",
+            "GAP_CLOSES_AN_OTHERWISE_COMPLETE_BOUNDARY"
+          ],
+          "material_present_mm": 0.0,
+          "opening_mm": 1200.2417980834944,
           "portal_id": "PT-BED-01-west-27124",
           "side": "west",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": 1200.2417980834944,
           "space_id": "BED-01",
           "span_mm": 1200.2,
           "wall_band_ids": [],
-          "why": "a probable doorway. This interval closes the room and carries NO wall material: zero blockwork, zero plaster, zero physical wall length"
+          "why": "a supported opening in a host wall. Zero material stands here; the room closes across it; and the gross host-wall line runs through it"
         },
         {
           "boundary_type": "PHYSICAL_WALL",
+          "closure_basis": "",
+          "host_wall_band_id": "",
+          "host_wall_gross_mm": 6185,
           "interval_id": "BI-BED-01-008",
           "is_virtual": false,
-          "material_length_mm": 6185,
+          "jamb_ids": [],
+          "material_present_mm": 6185,
+          "opening_mm": 0.0,
           "portal_id": "",
           "side": "east",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": 6185,
           "space_id": "BED-01",
           "span_mm": 6185,
           "wall_band_ids": [
@@ -3989,8 +5941,9 @@
           "why": "a wall band covers this interval"
         }
       ],
-      "material_length_m": 20.92,
+      "material_present_length_m": 20.919,
       "note": "virtual boundaries carry ZERO material length. The virtual SPAN is reported so it can be audited; it is never a quantity",
+      "opening_length_m": 1.349,
       "portals": 2,
       "portals_by_gap_class": {
         "DOOR_OR_PORTAL_GAP": 2
@@ -3998,23 +5951,72 @@
       "portals_by_status": {
         "PORTAL_PROBABLE": 2
       },
-      "virtual_length_m": 1.35,
-      "virtual_material_length_m": 0.0
+      "space_boundary_length_m": 22.268,
+      "virtual_material_length_m": 0.0,
+      "virtual_span_m": 1.35
     },
     "BED-04": {
+      "bbox_fill_ratio": 0.712,
       "by_boundary_type": {
-        "OPEN_PLAN_TRANSITION": 3,
+        "OPEN_PLAN_VIRTUAL_BOUNDARY": 3,
         "PHYSICAL_WALL": 6
       },
       "closes": false,
+      "coverage": {
+        "HOST_WALL_GROSS_LENGTH": {
+          "basis": "HOST_WALL_GROSS_LENGTH",
+          "complete": true,
+          "established": 9,
+          "intervals": 9,
+          "not_established": 0,
+          "total_m": 30.009
+        },
+        "MATERIAL_PRESENT_LENGTH": {
+          "basis": "MATERIAL_PRESENT_LENGTH",
+          "complete": true,
+          "established": 9,
+          "intervals": 9,
+          "not_established": 0,
+          "total_m": 30.009
+        },
+        "OPENING_LENGTH": {
+          "basis": "OPENING_LENGTH",
+          "complete": true,
+          "established": 9,
+          "intervals": 9,
+          "not_established": 0,
+          "total_m": 0.0
+        },
+        "SPACE_BOUNDARY_LENGTH": {
+          "basis": "SPACE_BOUNDARY_LENGTH",
+          "complete": false,
+          "established": 6,
+          "intervals": 9,
+          "not_established": 3,
+          "total_m": 30.009
+        }
+      },
+      "expected_boundary_caveat": "this region fills only 71% of its bounding box, so the bbox is NOT its outline: sides measured against it may cut through open space",
+      "host_wall_gross_length_m": 30.009,
+      "identity": "HOST_WALL_GROSS = MATERIAL_PRESENT + HOST_WALL_OPENINGS. It does not apply to open-plan edges, which carry no host wall",
+      "identity_holds": true,
+      "identity_residual_m": 0.0,
       "intervals": [
         {
           "boundary_type": "PHYSICAL_WALL",
+          "closure_basis": "",
+          "host_wall_band_id": "",
+          "host_wall_gross_mm": 5047.814306559503,
           "interval_id": "BI-BED-04-001",
           "is_virtual": false,
-          "material_length_mm": 5047.8,
+          "jamb_ids": [],
+          "material_present_mm": 5047.814306559503,
+          "opening_mm": 0.0,
           "portal_id": "",
           "side": "north",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": 5047.814306559503,
           "space_id": "BED-04",
           "span_mm": 5047.8,
           "wall_band_ids": [
@@ -4023,24 +6025,40 @@
           "why": "a wall band covers this interval"
         },
         {
-          "boundary_type": "OPEN_PLAN_TRANSITION",
+          "boundary_type": "OPEN_PLAN_VIRTUAL_BOUNDARY",
+          "closure_basis": "",
+          "host_wall_band_id": "",
+          "host_wall_gross_mm": 0.0,
           "interval_id": "BI-BED-04-002",
           "is_virtual": true,
-          "material_length_mm": 0.0,
+          "jamb_ids": [],
+          "material_present_mm": 0.0,
+          "opening_mm": 0.0,
           "portal_id": "PT-BED-04-north-10726",
           "side": "north",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": null,
           "space_id": "BED-04",
           "span_mm": 1170.2,
           "wall_band_ids": [],
-          "why": "one evidence family only. A gap this size is equally a doorway and a wall the extractor missed"
+          "why": "1170 mm gap. GEOMETRY alone. Span alone is never sufficient, topology alone is never sufficient, and semantic alone is never sufficient"
         },
         {
           "boundary_type": "PHYSICAL_WALL",
+          "closure_basis": "",
+          "host_wall_band_id": "",
+          "host_wall_gross_mm": 6218.0,
           "interval_id": "BI-BED-04-003",
           "is_virtual": false,
-          "material_length_mm": 6218.0,
+          "jamb_ids": [],
+          "material_present_mm": 6218.0,
+          "opening_mm": 0.0,
           "portal_id": "",
           "side": "south",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": 6218.0,
           "space_id": "BED-04",
           "span_mm": 6218.0,
           "wall_band_ids": [
@@ -4055,11 +6073,19 @@
         },
         {
           "boundary_type": "PHYSICAL_WALL",
+          "closure_basis": "",
+          "host_wall_band_id": "",
+          "host_wall_gross_mm": 3942.1350421630887,
           "interval_id": "BI-BED-04-004",
           "is_virtual": false,
-          "material_length_mm": 3942.1,
+          "jamb_ids": [],
+          "material_present_mm": 3942.1350421630887,
+          "opening_mm": 0.0,
           "portal_id": "",
           "side": "west",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": 3942.1350421630887,
           "space_id": "BED-04",
           "span_mm": 3942.1,
           "wall_band_ids": [
@@ -4075,11 +6101,19 @@
         },
         {
           "boundary_type": "PHYSICAL_WALL",
+          "closure_basis": "",
+          "host_wall_band_id": "",
+          "host_wall_gross_mm": 4149.406089819335,
           "interval_id": "BI-BED-04-005",
           "is_virtual": false,
-          "material_length_mm": 4149.4,
+          "jamb_ids": [],
+          "material_present_mm": 4149.406089819335,
+          "opening_mm": 0.0,
           "portal_id": "",
           "side": "west",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": 4149.406089819335,
           "space_id": "BED-04",
           "span_mm": 4149.4,
           "wall_band_ids": [
@@ -4094,24 +6128,40 @@
           "why": "a wall band covers this interval"
         },
         {
-          "boundary_type": "OPEN_PLAN_TRANSITION",
+          "boundary_type": "OPEN_PLAN_VIRTUAL_BOUNDARY",
+          "closure_basis": "",
+          "host_wall_band_id": "",
+          "host_wall_gross_mm": 0.0,
           "interval_id": "BI-BED-04-006",
           "is_virtual": true,
-          "material_length_mm": 0.0,
+          "jamb_ids": [],
+          "material_present_mm": 0.0,
+          "opening_mm": 0.0,
           "portal_id": "PT-BED-04-west-30498",
           "side": "west",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": null,
           "space_id": "BED-04",
           "span_mm": 3457.5,
           "wall_band_ids": [],
-          "why": "3457 mm is far wider than a doorway. This is an open-plan transition or a missing wall, and it is not closed on a portal hypothesis"
+          "why": "3457 mm is wider than a typical doorway, so span supports no door hypothesis here. Large openings exist and width is evidence only: GEOMETRY alone. Span alone is never sufficient, topology alone is never sufficient, and semantic alone is never sufficient"
         },
         {
           "boundary_type": "PHYSICAL_WALL",
+          "closure_basis": "",
+          "host_wall_band_id": "",
+          "host_wall_gross_mm": 4569.285986303712,
           "interval_id": "BI-BED-04-007",
           "is_virtual": false,
-          "material_length_mm": 4569.3,
+          "jamb_ids": [],
+          "material_present_mm": 4569.285986303712,
+          "opening_mm": 0.0,
           "portal_id": "",
           "side": "east",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": 4569.285986303712,
           "space_id": "BED-04",
           "span_mm": 4569.3,
           "wall_band_ids": [
@@ -4123,11 +6173,19 @@
         },
         {
           "boundary_type": "PHYSICAL_WALL",
+          "closure_basis": "",
+          "host_wall_band_id": "",
+          "host_wall_gross_mm": 6082.235119665525,
           "interval_id": "BI-BED-04-008",
           "is_virtual": false,
-          "material_length_mm": 6082.2,
+          "jamb_ids": [],
+          "material_present_mm": 6082.235119665525,
+          "opening_mm": 0.0,
           "portal_id": "",
           "side": "east",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": 6082.235119665525,
           "space_id": "BED-04",
           "span_mm": 6082.2,
           "wall_band_ids": [
@@ -4138,46 +6196,103 @@
           "why": "a wall band covers this interval"
         },
         {
-          "boundary_type": "OPEN_PLAN_TRANSITION",
+          "boundary_type": "OPEN_PLAN_VIRTUAL_BOUNDARY",
+          "closure_basis": "",
+          "host_wall_band_id": "",
+          "host_wall_gross_mm": 0.0,
           "interval_id": "BI-BED-04-009",
           "is_virtual": true,
-          "material_length_mm": 0.0,
+          "jamb_ids": [],
+          "material_present_mm": 0.0,
+          "opening_mm": 0.0,
           "portal_id": "PT-BED-04-east-31125",
           "side": "east",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": null,
           "space_id": "BED-04",
           "span_mm": 897.5,
           "wall_band_ids": [],
-          "why": "one evidence family only. A gap this size is equally a doorway and a wall the extractor missed"
+          "why": "897 mm gap. GEOMETRY alone. Span alone is never sufficient, topology alone is never sufficient, and semantic alone is never sufficient"
         }
       ],
-      "material_length_m": 30.01,
+      "material_present_length_m": 30.009,
       "note": "virtual boundaries carry ZERO material length. The virtual SPAN is reported so it can be audited; it is never a quantity",
+      "opening_length_m": 0.0,
       "portals": 3,
       "portals_by_gap_class": {
         "OPEN_PLAN_TRANSITION": 1,
         "UNRESOLVED": 2
       },
       "portals_by_status": {
-        "PORTAL_CANDIDATE": 2,
-        "PORTAL_UNRESOLVED": 1
+        "PORTAL_CANDIDATE": 3
       },
-      "virtual_length_m": 5.53,
-      "virtual_material_length_m": 0.0
+      "space_boundary_length_m": 30.009,
+      "virtual_material_length_m": 0.0,
+      "virtual_span_m": 5.53
     },
     "BTH-01": {
+      "bbox_fill_ratio": 0.885,
       "by_boundary_type": {
-        "PHYSICAL_WALL": 4,
-        "VIRTUAL_SPACE_BOUNDARY": 1
+        "HOST_WALL_OPENING_BOUNDARY": 1,
+        "PHYSICAL_WALL": 4
       },
       "closes": true,
+      "coverage": {
+        "HOST_WALL_GROSS_LENGTH": {
+          "basis": "HOST_WALL_GROSS_LENGTH",
+          "complete": true,
+          "established": 5,
+          "intervals": 5,
+          "not_established": 0,
+          "total_m": 8.522
+        },
+        "MATERIAL_PRESENT_LENGTH": {
+          "basis": "MATERIAL_PRESENT_LENGTH",
+          "complete": true,
+          "established": 5,
+          "intervals": 5,
+          "not_established": 0,
+          "total_m": 7.397
+        },
+        "OPENING_LENGTH": {
+          "basis": "OPENING_LENGTH",
+          "complete": true,
+          "established": 5,
+          "intervals": 5,
+          "not_established": 0,
+          "total_m": 1.125
+        },
+        "SPACE_BOUNDARY_LENGTH": {
+          "basis": "SPACE_BOUNDARY_LENGTH",
+          "complete": true,
+          "established": 5,
+          "intervals": 5,
+          "not_established": 0,
+          "total_m": 8.522
+        }
+      },
+      "expected_boundary_caveat": null,
+      "host_wall_gross_length_m": 8.522,
+      "identity": "HOST_WALL_GROSS = MATERIAL_PRESENT + HOST_WALL_OPENINGS. It does not apply to open-plan edges, which carry no host wall",
+      "identity_holds": true,
+      "identity_residual_m": 0.0,
       "intervals": [
         {
           "boundary_type": "PHYSICAL_WALL",
+          "closure_basis": "",
+          "host_wall_band_id": "",
+          "host_wall_gross_mm": 2477.0,
           "interval_id": "BI-BTH-01-001",
           "is_virtual": false,
-          "material_length_mm": 2477.0,
+          "jamb_ids": [],
+          "material_present_mm": 2477.0,
+          "opening_mm": 0.0,
           "portal_id": "",
           "side": "north",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": 2477.0,
           "space_id": "BTH-01",
           "span_mm": 2477.0,
           "wall_band_ids": [
@@ -4187,11 +6302,19 @@
         },
         {
           "boundary_type": "PHYSICAL_WALL",
+          "closure_basis": "",
+          "host_wall_band_id": "",
+          "host_wall_gross_mm": 2477.0,
           "interval_id": "BI-BTH-01-002",
           "is_virtual": false,
-          "material_length_mm": 2477.0,
+          "jamb_ids": [],
+          "material_present_mm": 2477.0,
+          "opening_mm": 0.0,
           "portal_id": "",
           "side": "south",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": 2477.0,
           "space_id": "BTH-01",
           "span_mm": 2477.0,
           "wall_band_ids": [
@@ -4201,11 +6324,19 @@
         },
         {
           "boundary_type": "PHYSICAL_WALL",
+          "closure_basis": "",
+          "host_wall_band_id": "",
+          "host_wall_gross_mm": 658.75359173584,
           "interval_id": "BI-BTH-01-003",
           "is_virtual": false,
-          "material_length_mm": 658.8,
+          "jamb_ids": [],
+          "material_present_mm": 658.75359173584,
+          "opening_mm": 0.0,
           "portal_id": "",
           "side": "west",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": 658.75359173584,
           "space_id": "BTH-01",
           "span_mm": 658.8,
           "wall_band_ids": [
@@ -4214,24 +6345,45 @@
           "why": "a wall band covers this interval"
         },
         {
-          "boundary_type": "VIRTUAL_SPACE_BOUNDARY",
+          "boundary_type": "HOST_WALL_OPENING_BOUNDARY",
+          "closure_basis": "CLEAR_INTERNAL_FINISH_FACE",
+          "host_wall_band_id": "WB-00198",
+          "host_wall_gross_mm": 1125.24640826416,
           "interval_id": "BI-BTH-01-004",
           "is_virtual": true,
-          "material_length_mm": 0.0,
+          "jamb_ids": [
+            "SPAN_IN_THE_DOOR_RANGE",
+            "PAIRED_BANDS_TERMINATE_FACING_EACH_OTHER",
+            "END_CAPS_AT_BOTH_JAMBS",
+            "GAP_CLOSES_AN_OTHERWISE_COMPLETE_BOUNDARY"
+          ],
+          "material_present_mm": 0.0,
+          "opening_mm": 1125.24640826416,
           "portal_id": "PT-BTH-01-west-23150",
           "side": "west",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": 1125.24640826416,
           "space_id": "BTH-01",
           "span_mm": 1125.2,
           "wall_band_ids": [],
-          "why": "a probable doorway. This interval closes the room and carries NO wall material: zero blockwork, zero plaster, zero physical wall length"
+          "why": "a supported opening in a host wall. Zero material stands here; the room closes across it; and the gross host-wall line runs through it"
         },
         {
           "boundary_type": "PHYSICAL_WALL",
+          "closure_basis": "",
+          "host_wall_band_id": "",
+          "host_wall_gross_mm": 1784,
           "interval_id": "BI-BTH-01-005",
           "is_virtual": false,
-          "material_length_mm": 1784,
+          "jamb_ids": [],
+          "material_present_mm": 1784,
+          "opening_mm": 0.0,
           "portal_id": "",
           "side": "east",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": 1784,
           "space_id": "BTH-01",
           "span_mm": 1784,
           "wall_band_ids": [
@@ -4245,8 +6397,9 @@
           "why": "a wall band covers this interval"
         }
       ],
-      "material_length_m": 7.4,
+      "material_present_length_m": 7.397,
       "note": "virtual boundaries carry ZERO material length. The virtual SPAN is reported so it can be audited; it is never a quantity",
+      "opening_length_m": 1.125,
       "portals": 1,
       "portals_by_gap_class": {
         "DOOR_OR_PORTAL_GAP": 1
@@ -4254,23 +6407,72 @@
       "portals_by_status": {
         "PORTAL_PROBABLE": 1
       },
-      "virtual_length_m": 1.13,
-      "virtual_material_length_m": 0.0
+      "space_boundary_length_m": 8.522,
+      "virtual_material_length_m": 0.0,
+      "virtual_span_m": 1.13
     },
     "BTH-02": {
+      "bbox_fill_ratio": 0.863,
       "by_boundary_type": {
-        "PHYSICAL_WALL": 4,
-        "VIRTUAL_SPACE_BOUNDARY": 2
+        "HOST_WALL_OPENING_BOUNDARY": 2,
+        "PHYSICAL_WALL": 4
       },
       "closes": true,
+      "coverage": {
+        "HOST_WALL_GROSS_LENGTH": {
+          "basis": "HOST_WALL_GROSS_LENGTH",
+          "complete": true,
+          "established": 6,
+          "intervals": 6,
+          "not_established": 0,
+          "total_m": 8.802
+        },
+        "MATERIAL_PRESENT_LENGTH": {
+          "basis": "MATERIAL_PRESENT_LENGTH",
+          "complete": true,
+          "established": 6,
+          "intervals": 6,
+          "not_established": 0,
+          "total_m": 7.57
+        },
+        "OPENING_LENGTH": {
+          "basis": "OPENING_LENGTH",
+          "complete": true,
+          "established": 6,
+          "intervals": 6,
+          "not_established": 0,
+          "total_m": 1.232
+        },
+        "SPACE_BOUNDARY_LENGTH": {
+          "basis": "SPACE_BOUNDARY_LENGTH",
+          "complete": true,
+          "established": 6,
+          "intervals": 6,
+          "not_established": 0,
+          "total_m": 8.802
+        }
+      },
+      "expected_boundary_caveat": null,
+      "host_wall_gross_length_m": 8.802,
+      "identity": "HOST_WALL_GROSS = MATERIAL_PRESENT + HOST_WALL_OPENINGS. It does not apply to open-plan edges, which carry no host wall",
+      "identity_holds": true,
+      "identity_residual_m": 0.0,
       "intervals": [
         {
           "boundary_type": "PHYSICAL_WALL",
+          "closure_basis": "",
+          "host_wall_band_id": "",
+          "host_wall_gross_mm": 2496.080272660576,
           "interval_id": "BI-BTH-02-001",
           "is_virtual": false,
-          "material_length_mm": 2496.1,
+          "jamb_ids": [],
+          "material_present_mm": 2496.080272660576,
+          "opening_mm": 0.0,
           "portal_id": "",
           "side": "north",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": 2496.080272660576,
           "space_id": "BTH-02",
           "span_mm": 2496.1,
           "wall_band_ids": [
@@ -4279,24 +6481,44 @@
           "why": "a wall band covers this interval"
         },
         {
-          "boundary_type": "VIRTUAL_SPACE_BOUNDARY",
+          "boundary_type": "HOST_WALL_OPENING_BOUNDARY",
+          "closure_basis": "CLEAR_INTERNAL_FINISH_FACE",
+          "host_wall_band_id": "WB-00017",
+          "host_wall_gross_mm": 120.91972733942384,
           "interval_id": "BI-BTH-02-002",
           "is_virtual": true,
-          "material_length_mm": 0.0,
+          "jamb_ids": [
+            "PAIRED_BANDS_TERMINATE_FACING_EACH_OTHER",
+            "END_CAPS_AT_BOTH_JAMBS",
+            "GAP_CLOSES_AN_OTHERWISE_COMPLETE_BOUNDARY"
+          ],
+          "material_present_mm": 0.0,
+          "opening_mm": 120.91972733942384,
           "portal_id": "PT-BTH-02-north-28676",
           "side": "north",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": 120.91972733942384,
           "space_id": "BTH-02",
           "span_mm": 120.9,
           "wall_band_ids": [],
-          "why": "a probable doorway. This interval closes the room and carries NO wall material: zero blockwork, zero plaster, zero physical wall length"
+          "why": "a supported opening in a host wall. Zero material stands here; the room closes across it; and the gross host-wall line runs through it"
         },
         {
           "boundary_type": "PHYSICAL_WALL",
+          "closure_basis": "",
+          "host_wall_band_id": "",
+          "host_wall_gross_mm": 2617.0,
           "interval_id": "BI-BTH-02-003",
           "is_virtual": false,
-          "material_length_mm": 2617.0,
+          "jamb_ids": [],
+          "material_present_mm": 2617.0,
+          "opening_mm": 0.0,
           "portal_id": "",
           "side": "south",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": 2617.0,
           "space_id": "BTH-02",
           "span_mm": 2617.0,
           "wall_band_ids": [
@@ -4306,11 +6528,19 @@
         },
         {
           "boundary_type": "PHYSICAL_WALL",
+          "closure_basis": "",
+          "host_wall_band_id": "",
+          "host_wall_gross_mm": 673.2100242553715,
           "interval_id": "BI-BTH-02-004",
           "is_virtual": false,
-          "material_length_mm": 673.2,
+          "jamb_ids": [],
+          "material_present_mm": 673.2100242553715,
+          "opening_mm": 0.0,
           "portal_id": "",
           "side": "west",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": 673.2100242553715,
           "space_id": "BTH-02",
           "span_mm": 673.2,
           "wall_band_ids": [
@@ -4319,24 +6549,45 @@
           "why": "a wall band covers this interval"
         },
         {
-          "boundary_type": "VIRTUAL_SPACE_BOUNDARY",
+          "boundary_type": "HOST_WALL_OPENING_BOUNDARY",
+          "closure_basis": "CLEAR_INTERNAL_FINISH_FACE",
+          "host_wall_band_id": "WB-00197",
+          "host_wall_gross_mm": 1110.7899757446285,
           "interval_id": "BI-BTH-02-005",
           "is_virtual": true,
-          "material_length_mm": 0.0,
+          "jamb_ids": [
+            "SPAN_IN_THE_DOOR_RANGE",
+            "PAIRED_BANDS_TERMINATE_FACING_EACH_OTHER",
+            "END_CAPS_AT_BOTH_JAMBS",
+            "GAP_CLOSES_AN_OTHERWISE_COMPLETE_BOUNDARY"
+          ],
+          "material_present_mm": 0.0,
+          "opening_mm": 1110.7899757446285,
           "portal_id": "PT-BTH-02-west-25824",
           "side": "west",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": 1110.7899757446285,
           "space_id": "BTH-02",
           "span_mm": 1110.8,
           "wall_band_ids": [],
-          "why": "a probable doorway. This interval closes the room and carries NO wall material: zero blockwork, zero plaster, zero physical wall length"
+          "why": "a supported opening in a host wall. Zero material stands here; the room closes across it; and the gross host-wall line runs through it"
         },
         {
           "boundary_type": "PHYSICAL_WALL",
+          "closure_basis": "",
+          "host_wall_band_id": "",
+          "host_wall_gross_mm": 1784,
           "interval_id": "BI-BTH-02-006",
           "is_virtual": false,
-          "material_length_mm": 1784,
+          "jamb_ids": [],
+          "material_present_mm": 1784,
+          "opening_mm": 0.0,
           "portal_id": "",
           "side": "east",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": 1784,
           "space_id": "BTH-02",
           "span_mm": 1784,
           "wall_band_ids": [
@@ -4350,8 +6601,9 @@
           "why": "a wall band covers this interval"
         }
       ],
-      "material_length_m": 7.57,
+      "material_present_length_m": 7.57,
       "note": "virtual boundaries carry ZERO material length. The virtual SPAN is reported so it can be audited; it is never a quantity",
+      "opening_length_m": 1.232,
       "portals": 2,
       "portals_by_gap_class": {
         "DOOR_OR_PORTAL_GAP": 2
@@ -4359,23 +6611,72 @@
       "portals_by_status": {
         "PORTAL_PROBABLE": 2
       },
-      "virtual_length_m": 1.23,
-      "virtual_material_length_m": 0.0
+      "space_boundary_length_m": 8.802,
+      "virtual_material_length_m": 0.0,
+      "virtual_span_m": 1.23
     },
     "BTH-03": {
+      "bbox_fill_ratio": 0.889,
       "by_boundary_type": {
-        "PHYSICAL_WALL": 4,
-        "VIRTUAL_SPACE_BOUNDARY": 1
+        "HOST_WALL_OPENING_BOUNDARY": 1,
+        "PHYSICAL_WALL": 4
       },
       "closes": true,
+      "coverage": {
+        "HOST_WALL_GROSS_LENGTH": {
+          "basis": "HOST_WALL_GROSS_LENGTH",
+          "complete": true,
+          "established": 5,
+          "intervals": 5,
+          "not_established": 0,
+          "total_m": 8.392
+        },
+        "MATERIAL_PRESENT_LENGTH": {
+          "basis": "MATERIAL_PRESENT_LENGTH",
+          "complete": true,
+          "established": 5,
+          "intervals": 5,
+          "not_established": 0,
+          "total_m": 7.284
+        },
+        "OPENING_LENGTH": {
+          "basis": "OPENING_LENGTH",
+          "complete": true,
+          "established": 5,
+          "intervals": 5,
+          "not_established": 0,
+          "total_m": 1.108
+        },
+        "SPACE_BOUNDARY_LENGTH": {
+          "basis": "SPACE_BOUNDARY_LENGTH",
+          "complete": true,
+          "established": 5,
+          "intervals": 5,
+          "not_established": 0,
+          "total_m": 8.392
+        }
+      },
+      "expected_boundary_caveat": null,
+      "host_wall_gross_length_m": 8.392,
+      "identity": "HOST_WALL_GROSS = MATERIAL_PRESENT + HOST_WALL_OPENINGS. It does not apply to open-plan edges, which carry no host wall",
+      "identity_holds": true,
+      "identity_residual_m": 0.0,
       "intervals": [
         {
           "boundary_type": "PHYSICAL_WALL",
+          "closure_basis": "",
+          "host_wall_band_id": "",
+          "host_wall_gross_mm": 1817.0,
           "interval_id": "BI-BTH-03-001",
           "is_virtual": false,
-          "material_length_mm": 1817.0,
+          "jamb_ids": [],
+          "material_present_mm": 1817.0,
+          "opening_mm": 0.0,
           "portal_id": "",
           "side": "north",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": 1817.0,
           "space_id": "BTH-03",
           "span_mm": 1817.0,
           "wall_band_ids": [
@@ -4386,11 +6687,19 @@
         },
         {
           "boundary_type": "PHYSICAL_WALL",
+          "closure_basis": "",
+          "host_wall_band_id": "",
+          "host_wall_gross_mm": 1817.0,
           "interval_id": "BI-BTH-03-002",
           "is_virtual": false,
-          "material_length_mm": 1817.0,
+          "jamb_ids": [],
+          "material_present_mm": 1817.0,
+          "opening_mm": 0.0,
           "portal_id": "",
           "side": "south",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": 1817.0,
           "space_id": "BTH-03",
           "span_mm": 1817.0,
           "wall_band_ids": [
@@ -4400,11 +6709,19 @@
         },
         {
           "boundary_type": "PHYSICAL_WALL",
+          "closure_basis": "",
+          "host_wall_band_id": "",
+          "host_wall_gross_mm": 1270.9279123168963,
           "interval_id": "BI-BTH-03-003",
           "is_virtual": false,
-          "material_length_mm": 1270.9,
+          "jamb_ids": [],
+          "material_present_mm": 1270.9279123168963,
+          "opening_mm": 0.0,
           "portal_id": "",
           "side": "west",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": 1270.9279123168963,
           "space_id": "BTH-03",
           "span_mm": 1270.9,
           "wall_band_ids": [
@@ -4413,24 +6730,45 @@
           "why": "a wall band covers this interval"
         },
         {
-          "boundary_type": "VIRTUAL_SPACE_BOUNDARY",
+          "boundary_type": "HOST_WALL_OPENING_BOUNDARY",
+          "closure_basis": "CLEAR_INTERNAL_FINISH_FACE",
+          "host_wall_band_id": "WB-00171",
+          "host_wall_gross_mm": 1108.0720876831037,
           "interval_id": "BI-BTH-03-004",
           "is_virtual": true,
-          "material_length_mm": 0.0,
+          "jamb_ids": [
+            "SPAN_IN_THE_DOOR_RANGE",
+            "PAIRED_BANDS_TERMINATE_FACING_EACH_OTHER",
+            "END_CAPS_AT_BOTH_JAMBS",
+            "GAP_CLOSES_AN_OTHERWISE_COMPLETE_BOUNDARY"
+          ],
+          "material_present_mm": 0.0,
+          "opening_mm": 1108.0720876831037,
           "portal_id": "PT-BTH-03-west-32822",
           "side": "west",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": 1108.0720876831037,
           "space_id": "BTH-03",
           "span_mm": 1108.1,
           "wall_band_ids": [],
-          "why": "a probable doorway. This interval closes the room and carries NO wall material: zero blockwork, zero plaster, zero physical wall length"
+          "why": "a supported opening in a host wall. Zero material stands here; the room closes across it; and the gross host-wall line runs through it"
         },
         {
           "boundary_type": "PHYSICAL_WALL",
+          "closure_basis": "",
+          "host_wall_band_id": "",
+          "host_wall_gross_mm": 2379,
           "interval_id": "BI-BTH-03-005",
           "is_virtual": false,
-          "material_length_mm": 2379,
+          "jamb_ids": [],
+          "material_present_mm": 2379,
+          "opening_mm": 0.0,
           "portal_id": "",
           "side": "east",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": 2379,
           "space_id": "BTH-03",
           "span_mm": 2379,
           "wall_band_ids": [
@@ -4444,8 +6782,9 @@
           "why": "a wall band covers this interval"
         }
       ],
-      "material_length_m": 7.28,
+      "material_present_length_m": 7.284,
       "note": "virtual boundaries carry ZERO material length. The virtual SPAN is reported so it can be audited; it is never a quantity",
+      "opening_length_m": 1.108,
       "portals": 1,
       "portals_by_gap_class": {
         "DOOR_OR_PORTAL_GAP": 1
@@ -4453,23 +6792,72 @@
       "portals_by_status": {
         "PORTAL_PROBABLE": 1
       },
-      "virtual_length_m": 1.11,
-      "virtual_material_length_m": 0.0
+      "space_boundary_length_m": 8.392,
+      "virtual_material_length_m": 0.0,
+      "virtual_span_m": 1.11
     },
     "BTH-05": {
+      "bbox_fill_ratio": 0.894,
       "by_boundary_type": {
-        "PHYSICAL_WALL": 4,
-        "VIRTUAL_SPACE_BOUNDARY": 1
+        "HOST_WALL_OPENING_BOUNDARY": 1,
+        "PHYSICAL_WALL": 4
       },
       "closes": true,
+      "coverage": {
+        "HOST_WALL_GROSS_LENGTH": {
+          "basis": "HOST_WALL_GROSS_LENGTH",
+          "complete": true,
+          "established": 5,
+          "intervals": 5,
+          "not_established": 0,
+          "total_m": 7.592
+        },
+        "MATERIAL_PRESENT_LENGTH": {
+          "basis": "MATERIAL_PRESENT_LENGTH",
+          "complete": true,
+          "established": 5,
+          "intervals": 5,
+          "not_established": 0,
+          "total_m": 6.538
+        },
+        "OPENING_LENGTH": {
+          "basis": "OPENING_LENGTH",
+          "complete": true,
+          "established": 5,
+          "intervals": 5,
+          "not_established": 0,
+          "total_m": 1.054
+        },
+        "SPACE_BOUNDARY_LENGTH": {
+          "basis": "SPACE_BOUNDARY_LENGTH",
+          "complete": true,
+          "established": 5,
+          "intervals": 5,
+          "not_established": 0,
+          "total_m": 7.592
+        }
+      },
+      "expected_boundary_caveat": null,
+      "host_wall_gross_length_m": 7.592,
+      "identity": "HOST_WALL_GROSS = MATERIAL_PRESENT + HOST_WALL_OPENINGS. It does not apply to open-plan edges, which carry no host wall",
+      "identity_holds": true,
+      "identity_residual_m": 0.0,
       "intervals": [
         {
           "boundary_type": "PHYSICAL_WALL",
+          "closure_basis": "",
+          "host_wall_band_id": "",
+          "host_wall_gross_mm": 2336.0,
           "interval_id": "BI-BTH-05-001",
           "is_virtual": false,
-          "material_length_mm": 2336.0,
+          "jamb_ids": [],
+          "material_present_mm": 2336.0,
+          "opening_mm": 0.0,
           "portal_id": "",
           "side": "north",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": 2336.0,
           "space_id": "BTH-05",
           "span_mm": 2336.0,
           "wall_band_ids": [
@@ -4479,11 +6867,19 @@
         },
         {
           "boundary_type": "PHYSICAL_WALL",
+          "closure_basis": "",
+          "host_wall_band_id": "",
+          "host_wall_gross_mm": 1281.8155406781552,
           "interval_id": "BI-BTH-05-002",
           "is_virtual": false,
-          "material_length_mm": 1281.8,
+          "jamb_ids": [],
+          "material_present_mm": 1281.8155406781552,
+          "opening_mm": 0.0,
           "portal_id": "",
           "side": "south",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": 1281.8155406781552,
           "space_id": "BTH-05",
           "span_mm": 1281.8,
           "wall_band_ids": [
@@ -4492,24 +6888,45 @@
           "why": "a wall band covers this interval"
         },
         {
-          "boundary_type": "VIRTUAL_SPACE_BOUNDARY",
+          "boundary_type": "HOST_WALL_OPENING_BOUNDARY",
+          "closure_basis": "CLEAR_INTERNAL_FINISH_FACE",
+          "host_wall_band_id": "WB-00048",
+          "host_wall_gross_mm": 1054.1844593218448,
           "interval_id": "BI-BTH-05-003",
           "is_virtual": true,
-          "material_length_mm": 0.0,
+          "jamb_ids": [
+            "SPAN_IN_THE_DOOR_RANGE",
+            "PAIRED_BANDS_TERMINATE_FACING_EACH_OTHER",
+            "END_CAPS_AT_BOTH_JAMBS",
+            "GAP_CLOSES_AN_OTHERWISE_COMPLETE_BOUNDARY"
+          ],
+          "material_present_mm": 0.0,
+          "opening_mm": 1054.1844593218448,
           "portal_id": "PT-BTH-05-south-22393",
           "side": "south",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": 1054.1844593218448,
           "space_id": "BTH-05",
           "span_mm": 1054.2,
           "wall_band_ids": [],
-          "why": "a probable doorway. This interval closes the room and carries NO wall material: zero blockwork, zero plaster, zero physical wall length"
+          "why": "a supported opening in a host wall. Zero material stands here; the room closes across it; and the gross host-wall line runs through it"
         },
         {
           "boundary_type": "PHYSICAL_WALL",
+          "closure_basis": "",
+          "host_wall_band_id": "",
+          "host_wall_gross_mm": 1460,
           "interval_id": "BI-BTH-05-004",
           "is_virtual": false,
-          "material_length_mm": 1460,
+          "jamb_ids": [],
+          "material_present_mm": 1460,
+          "opening_mm": 0.0,
           "portal_id": "",
           "side": "west",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": 1460,
           "space_id": "BTH-05",
           "span_mm": 1460,
           "wall_band_ids": [
@@ -4520,11 +6937,19 @@
         },
         {
           "boundary_type": "PHYSICAL_WALL",
+          "closure_basis": "",
+          "host_wall_band_id": "",
+          "host_wall_gross_mm": 1460,
           "interval_id": "BI-BTH-05-005",
           "is_virtual": false,
-          "material_length_mm": 1460,
+          "jamb_ids": [],
+          "material_present_mm": 1460,
+          "opening_mm": 0.0,
           "portal_id": "",
           "side": "east",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": 1460,
           "space_id": "BTH-05",
           "span_mm": 1460,
           "wall_band_ids": [
@@ -4534,8 +6959,9 @@
           "why": "a wall band covers this interval"
         }
       ],
-      "material_length_m": 6.54,
+      "material_present_length_m": 6.538,
       "note": "virtual boundaries carry ZERO material length. The virtual SPAN is reported so it can be audited; it is never a quantity",
+      "opening_length_m": 1.054,
       "portals": 1,
       "portals_by_gap_class": {
         "DOOR_OR_PORTAL_GAP": 1
@@ -4543,23 +6969,72 @@
       "portals_by_status": {
         "PORTAL_PROBABLE": 1
       },
-      "virtual_length_m": 1.05,
-      "virtual_material_length_m": 0.0
+      "space_boundary_length_m": 7.592,
+      "virtual_material_length_m": 0.0,
+      "virtual_span_m": 1.05
     },
     "OPEN-01": {
+      "bbox_fill_ratio": 0.694,
       "by_boundary_type": {
-        "OPEN_PLAN_TRANSITION": 9,
+        "OPEN_PLAN_VIRTUAL_BOUNDARY": 9,
         "PHYSICAL_WALL": 9
       },
       "closes": false,
+      "coverage": {
+        "HOST_WALL_GROSS_LENGTH": {
+          "basis": "HOST_WALL_GROSS_LENGTH",
+          "complete": true,
+          "established": 18,
+          "intervals": 18,
+          "not_established": 0,
+          "total_m": 37.19
+        },
+        "MATERIAL_PRESENT_LENGTH": {
+          "basis": "MATERIAL_PRESENT_LENGTH",
+          "complete": true,
+          "established": 18,
+          "intervals": 18,
+          "not_established": 0,
+          "total_m": 37.19
+        },
+        "OPENING_LENGTH": {
+          "basis": "OPENING_LENGTH",
+          "complete": true,
+          "established": 18,
+          "intervals": 18,
+          "not_established": 0,
+          "total_m": 0.0
+        },
+        "SPACE_BOUNDARY_LENGTH": {
+          "basis": "SPACE_BOUNDARY_LENGTH",
+          "complete": false,
+          "established": 9,
+          "intervals": 18,
+          "not_established": 9,
+          "total_m": 37.19
+        }
+      },
+      "expected_boundary_caveat": "this region fills only 69% of its bounding box, so the bbox is NOT its outline: sides measured against it may cut through open space",
+      "host_wall_gross_length_m": 37.19,
+      "identity": "HOST_WALL_GROSS = MATERIAL_PRESENT + HOST_WALL_OPENINGS. It does not apply to open-plan edges, which carry no host wall",
+      "identity_holds": true,
+      "identity_residual_m": 0.0,
       "intervals": [
         {
           "boundary_type": "PHYSICAL_WALL",
+          "closure_basis": "",
+          "host_wall_band_id": "",
+          "host_wall_gross_mm": 326.3241674273122,
           "interval_id": "BI-OPEN-01-001",
           "is_virtual": false,
-          "material_length_mm": 326.3,
+          "jamb_ids": [],
+          "material_present_mm": 326.3241674273122,
+          "opening_mm": 0.0,
           "portal_id": "",
           "side": "north",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": 326.3241674273122,
           "space_id": "OPEN-01",
           "span_mm": 326.3,
           "wall_band_ids": [
@@ -4573,11 +7048,19 @@
         },
         {
           "boundary_type": "PHYSICAL_WALL",
+          "closure_basis": "",
+          "host_wall_band_id": "",
+          "host_wall_gross_mm": 1200.2459229187007,
           "interval_id": "BI-OPEN-01-002",
           "is_virtual": false,
-          "material_length_mm": 1200.2,
+          "jamb_ids": [],
+          "material_present_mm": 1200.2459229187007,
+          "opening_mm": 0.0,
           "portal_id": "",
           "side": "north",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": 1200.2459229187007,
           "space_id": "OPEN-01",
           "span_mm": 1200.2,
           "wall_band_ids": [
@@ -4590,36 +7073,60 @@
           "why": "a wall band covers this interval"
         },
         {
-          "boundary_type": "OPEN_PLAN_TRANSITION",
+          "boundary_type": "OPEN_PLAN_VIRTUAL_BOUNDARY",
+          "closure_basis": "",
+          "host_wall_band_id": "",
+          "host_wall_gross_mm": 0.0,
           "interval_id": "BI-OPEN-01-003",
           "is_virtual": true,
-          "material_length_mm": 0.0,
+          "jamb_ids": [],
+          "material_present_mm": 0.0,
+          "opening_mm": 0.0,
           "portal_id": "PT-OPEN-01-north-17498",
           "side": "north",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": null,
           "space_id": "OPEN-01",
           "span_mm": 1600.3,
           "wall_band_ids": [],
-          "why": "one evidence family only. A gap this size is equally a doorway and a wall the extractor missed"
+          "why": "1600 mm gap. GEOMETRY alone. Span alone is never sufficient, topology alone is never sufficient, and semantic alone is never sufficient"
         },
         {
-          "boundary_type": "OPEN_PLAN_TRANSITION",
+          "boundary_type": "OPEN_PLAN_VIRTUAL_BOUNDARY",
+          "closure_basis": "",
+          "host_wall_band_id": "",
+          "host_wall_gross_mm": 0.0,
           "interval_id": "BI-OPEN-01-004",
           "is_virtual": true,
-          "material_length_mm": 0.0,
+          "jamb_ids": [],
+          "material_present_mm": 0.0,
+          "opening_mm": 0.0,
           "portal_id": "PT-OPEN-01-north-20298",
           "side": "north",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": null,
           "space_id": "OPEN-01",
           "span_mm": 6053.1,
           "wall_band_ids": [],
-          "why": "6053 mm is far wider than a doorway. This is an open-plan transition or a missing wall, and it is not closed on a portal hypothesis"
+          "why": "6053 mm is wider than a typical doorway, so span supports no door hypothesis here. Large openings exist and width is evidence only: GEOMETRY alone. Span alone is never sufficient, topology alone is never sufficient, and semantic alone is never sufficient"
         },
         {
           "boundary_type": "PHYSICAL_WALL",
+          "closure_basis": "",
+          "host_wall_band_id": "",
+          "host_wall_gross_mm": 9180.0,
           "interval_id": "BI-OPEN-01-005",
           "is_virtual": false,
-          "material_length_mm": 9180.0,
+          "jamb_ids": [],
+          "material_present_mm": 9180.0,
+          "opening_mm": 0.0,
           "portal_id": "",
           "side": "south",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": 9180.0,
           "space_id": "OPEN-01",
           "span_mm": 9180.0,
           "wall_band_ids": [
@@ -4634,11 +7141,19 @@
         },
         {
           "boundary_type": "PHYSICAL_WALL",
+          "closure_basis": "",
+          "host_wall_band_id": "",
+          "host_wall_gross_mm": 5301.078711938477,
           "interval_id": "BI-OPEN-01-006",
           "is_virtual": false,
-          "material_length_mm": 5301.1,
+          "jamb_ids": [],
+          "material_present_mm": 5301.078711938477,
+          "opening_mm": 0.0,
           "portal_id": "",
           "side": "west",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": 5301.078711938477,
           "space_id": "OPEN-01",
           "span_mm": 5301.1,
           "wall_band_ids": [
@@ -4652,11 +7167,19 @@
         },
         {
           "boundary_type": "PHYSICAL_WALL",
+          "closure_basis": "",
+          "host_wall_band_id": "",
+          "host_wall_gross_mm": 4900.997195947264,
           "interval_id": "BI-OPEN-01-007",
           "is_virtual": false,
-          "material_length_mm": 4901.0,
+          "jamb_ids": [],
+          "material_present_mm": 4900.997195947264,
+          "opening_mm": 0.0,
           "portal_id": "",
           "side": "west",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": 4900.997195947264,
           "space_id": "OPEN-01",
           "span_mm": 4901.0,
           "wall_band_ids": [
@@ -4670,11 +7193,19 @@
         },
         {
           "boundary_type": "PHYSICAL_WALL",
+          "closure_basis": "",
+          "host_wall_band_id": "",
+          "host_wall_gross_mm": 6082.235119665525,
           "interval_id": "BI-OPEN-01-008",
           "is_virtual": false,
-          "material_length_mm": 6082.2,
+          "jamb_ids": [],
+          "material_present_mm": 6082.235119665525,
+          "opening_mm": 0.0,
           "portal_id": "",
           "side": "west",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": 6082.235119665525,
           "space_id": "OPEN-01",
           "span_mm": 6082.2,
           "wall_band_ids": [
@@ -4687,48 +7218,80 @@
           "why": "a wall band covers this interval"
         },
         {
-          "boundary_type": "OPEN_PLAN_TRANSITION",
+          "boundary_type": "OPEN_PLAN_VIRTUAL_BOUNDARY",
+          "closure_basis": "",
+          "host_wall_band_id": "",
+          "host_wall_gross_mm": 0.0,
           "interval_id": "BI-OPEN-01-009",
           "is_virtual": true,
-          "material_length_mm": 0.0,
+          "jamb_ids": [],
+          "material_present_mm": 0.0,
+          "opening_mm": 0.0,
           "portal_id": "PT-OPEN-01-west-18338",
           "side": "west",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": null,
           "space_id": "OPEN-01",
           "span_mm": 1585.0,
           "wall_band_ids": [],
-          "why": "one evidence family only. A gap this size is equally a doorway and a wall the extractor missed"
+          "why": "1585 mm gap. GEOMETRY alone. Span alone is never sufficient, topology alone is never sufficient, and semantic alone is never sufficient"
         },
         {
-          "boundary_type": "OPEN_PLAN_TRANSITION",
+          "boundary_type": "OPEN_PLAN_VIRTUAL_BOUNDARY",
+          "closure_basis": "",
+          "host_wall_band_id": "",
+          "host_wall_gross_mm": 0.0,
           "interval_id": "BI-OPEN-01-010",
           "is_virtual": true,
-          "material_length_mm": 0.0,
+          "jamb_ids": [],
+          "material_present_mm": 0.0,
+          "opening_mm": 0.0,
           "portal_id": "PT-OPEN-01-west-25224",
           "side": "west",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": null,
           "space_id": "OPEN-01",
           "span_mm": 1000.2,
           "wall_band_ids": [],
-          "why": "one evidence family only. A gap this size is equally a doorway and a wall the extractor missed"
+          "why": "1000 mm gap. GEOMETRY alone. Span alone is never sufficient, topology alone is never sufficient, and semantic alone is never sufficient"
         },
         {
-          "boundary_type": "OPEN_PLAN_TRANSITION",
+          "boundary_type": "OPEN_PLAN_VIRTUAL_BOUNDARY",
+          "closure_basis": "",
+          "host_wall_band_id": "",
+          "host_wall_gross_mm": 0.0,
           "interval_id": "BI-OPEN-01-011",
           "is_virtual": true,
-          "material_length_mm": 0.0,
+          "jamb_ids": [],
+          "material_present_mm": 0.0,
+          "opening_mm": 0.0,
           "portal_id": "PT-OPEN-01-west-31125",
           "side": "west",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": null,
           "space_id": "OPEN-01",
           "span_mm": 897.5,
           "wall_band_ids": [],
-          "why": "one evidence family only. A gap this size is equally a doorway and a wall the extractor missed"
+          "why": "897 mm gap. GEOMETRY alone. Span alone is never sufficient, topology alone is never sufficient, and semantic alone is never sufficient"
         },
         {
           "boundary_type": "PHYSICAL_WALL",
+          "closure_basis": "",
+          "host_wall_band_id": "",
+          "host_wall_gross_mm": 2849.22716801758,
           "interval_id": "BI-OPEN-01-012",
           "is_virtual": false,
-          "material_length_mm": 2849.2,
+          "jamb_ids": [],
+          "material_present_mm": 2849.22716801758,
+          "opening_mm": 0.0,
           "portal_id": "",
           "side": "east",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": 2849.22716801758,
           "space_id": "OPEN-01",
           "span_mm": 2849.2,
           "wall_band_ids": [
@@ -4740,11 +7303,19 @@
         },
         {
           "boundary_type": "PHYSICAL_WALL",
+          "closure_basis": "",
+          "host_wall_band_id": "",
+          "host_wall_gross_mm": 4300.874921960451,
           "interval_id": "BI-OPEN-01-013",
           "is_virtual": false,
-          "material_length_mm": 4300.9,
+          "jamb_ids": [],
+          "material_present_mm": 4300.874921960451,
+          "opening_mm": 0.0,
           "portal_id": "",
           "side": "east",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": 4300.874921960451,
           "space_id": "OPEN-01",
           "span_mm": 4300.9,
           "wall_band_ids": [
@@ -4756,11 +7327,19 @@
         },
         {
           "boundary_type": "PHYSICAL_WALL",
+          "closure_basis": "",
+          "host_wall_band_id": "",
+          "host_wall_gross_mm": 3049.2679260131845,
           "interval_id": "BI-OPEN-01-014",
           "is_virtual": false,
-          "material_length_mm": 3049.3,
+          "jamb_ids": [],
+          "material_present_mm": 3049.2679260131845,
+          "opening_mm": 0.0,
           "portal_id": "",
           "side": "east",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": 3049.2679260131845,
           "space_id": "OPEN-01",
           "span_mm": 3049.3,
           "wall_band_ids": [
@@ -4771,82 +7350,163 @@
           "why": "a wall band covers this interval"
         },
         {
-          "boundary_type": "OPEN_PLAN_TRANSITION",
+          "boundary_type": "OPEN_PLAN_VIRTUAL_BOUNDARY",
+          "closure_basis": "",
+          "host_wall_band_id": "",
+          "host_wall_gross_mm": 0.0,
           "interval_id": "BI-OPEN-01-015",
           "is_virtual": true,
-          "material_length_mm": 0.0,
+          "jamb_ids": [],
+          "material_present_mm": 0.0,
+          "opening_mm": 0.0,
           "portal_id": "PT-OPEN-01-east-18338",
           "side": "east",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": null,
           "space_id": "OPEN-01",
           "span_mm": 636.2,
           "wall_band_ids": [],
-          "why": "one evidence family only. A gap this size is equally a doorway and a wall the extractor missed"
+          "why": "636 mm gap. GEOMETRY alone. Span alone is never sufficient, topology alone is never sufficient, and semantic alone is never sufficient"
         },
         {
-          "boundary_type": "OPEN_PLAN_TRANSITION",
+          "boundary_type": "OPEN_PLAN_VIRTUAL_BOUNDARY",
+          "closure_basis": "",
+          "host_wall_band_id": "",
+          "host_wall_gross_mm": 0.0,
           "interval_id": "BI-OPEN-01-016",
           "is_virtual": true,
-          "material_length_mm": 0.0,
+          "jamb_ids": [],
+          "material_present_mm": 0.0,
+          "opening_mm": 0.0,
           "portal_id": "PT-OPEN-01-east-21823",
           "side": "east",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": null,
           "space_id": "OPEN-01",
           "span_mm": 1000.2,
           "wall_band_ids": [],
-          "why": "one evidence family only. A gap this size is equally a doorway and a wall the extractor missed"
+          "why": "1000 mm gap. GEOMETRY alone. Span alone is never sufficient, topology alone is never sufficient, and semantic alone is never sufficient"
         },
         {
-          "boundary_type": "OPEN_PLAN_TRANSITION",
+          "boundary_type": "OPEN_PLAN_VIRTUAL_BOUNDARY",
+          "closure_basis": "",
+          "host_wall_band_id": "",
+          "host_wall_gross_mm": 0.0,
           "interval_id": "BI-OPEN-01-017",
           "is_virtual": true,
-          "material_length_mm": 0.0,
+          "jamb_ids": [],
+          "material_present_mm": 0.0,
+          "opening_mm": 0.0,
           "portal_id": "PT-OPEN-01-east-27124",
           "side": "east",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": null,
           "space_id": "OPEN-01",
           "span_mm": 1200.2,
           "wall_band_ids": [],
-          "why": "one evidence family only. A gap this size is equally a doorway and a wall the extractor missed"
+          "why": "1200 mm gap. GEOMETRY alone. Span alone is never sufficient, topology alone is never sufficient, and semantic alone is never sufficient"
         },
         {
-          "boundary_type": "OPEN_PLAN_TRANSITION",
+          "boundary_type": "OPEN_PLAN_VIRTUAL_BOUNDARY",
+          "closure_basis": "",
+          "host_wall_band_id": "",
+          "host_wall_gross_mm": 0.0,
           "interval_id": "BI-OPEN-01-018",
           "is_virtual": true,
-          "material_length_mm": 0.0,
+          "jamb_ids": [],
+          "material_present_mm": 0.0,
+          "opening_mm": 0.0,
           "portal_id": "PT-OPEN-01-east-31373",
           "side": "east",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": null,
           "space_id": "OPEN-01",
           "span_mm": 6731.0,
           "wall_band_ids": [],
-          "why": "6731 mm is far wider than a doorway. This is an open-plan transition or a missing wall, and it is not closed on a portal hypothesis"
+          "why": "6731 mm is wider than a typical doorway, so span supports no door hypothesis here. Large openings exist and width is evidence only: GEOMETRY alone. Span alone is never sufficient, topology alone is never sufficient, and semantic alone is never sufficient"
         }
       ],
-      "material_length_m": 37.19,
+      "material_present_length_m": 37.19,
       "note": "virtual boundaries carry ZERO material length. The virtual SPAN is reported so it can be audited; it is never a quantity",
+      "opening_length_m": 0.0,
       "portals": 9,
       "portals_by_gap_class": {
         "OPEN_PLAN_TRANSITION": 2,
         "UNRESOLVED": 7
       },
       "portals_by_status": {
-        "PORTAL_CANDIDATE": 7,
-        "PORTAL_UNRESOLVED": 2
+        "PORTAL_CANDIDATE": 9
       },
-      "virtual_length_m": 20.7,
-      "virtual_material_length_m": 0.0
+      "space_boundary_length_m": 37.19,
+      "virtual_material_length_m": 0.0,
+      "virtual_span_m": 20.7
     },
     "STR-01": {
+      "bbox_fill_ratio": 0.676,
       "by_boundary_type": {
-        "OPEN_PLAN_TRANSITION": 2,
+        "OPEN_PLAN_VIRTUAL_BOUNDARY": 2,
         "PHYSICAL_WALL": 3
       },
       "closes": false,
+      "coverage": {
+        "HOST_WALL_GROSS_LENGTH": {
+          "basis": "HOST_WALL_GROSS_LENGTH",
+          "complete": true,
+          "established": 5,
+          "intervals": 5,
+          "not_established": 0,
+          "total_m": 5.674
+        },
+        "MATERIAL_PRESENT_LENGTH": {
+          "basis": "MATERIAL_PRESENT_LENGTH",
+          "complete": true,
+          "established": 5,
+          "intervals": 5,
+          "not_established": 0,
+          "total_m": 5.674
+        },
+        "OPENING_LENGTH": {
+          "basis": "OPENING_LENGTH",
+          "complete": true,
+          "established": 5,
+          "intervals": 5,
+          "not_established": 0,
+          "total_m": 0.0
+        },
+        "SPACE_BOUNDARY_LENGTH": {
+          "basis": "SPACE_BOUNDARY_LENGTH",
+          "complete": false,
+          "established": 3,
+          "intervals": 5,
+          "not_established": 2,
+          "total_m": 5.674
+        }
+      },
+      "expected_boundary_caveat": "this region fills only 68% of its bounding box, so the bbox is NOT its outline: sides measured against it may cut through open space",
+      "host_wall_gross_length_m": 5.674,
+      "identity": "HOST_WALL_GROSS = MATERIAL_PRESENT + HOST_WALL_OPENINGS. It does not apply to open-plan edges, which carry no host wall",
+      "identity_holds": true,
+      "identity_residual_m": 0.0,
       "intervals": [
         {
           "boundary_type": "PHYSICAL_WALL",
+          "closure_basis": "",
+          "host_wall_band_id": "",
+          "host_wall_gross_mm": 2108.0,
           "interval_id": "BI-STR-01-001",
           "is_virtual": false,
-          "material_length_mm": 2108.0,
+          "jamb_ids": [],
+          "material_present_mm": 2108.0,
+          "opening_mm": 0.0,
           "portal_id": "",
           "side": "north",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": 2108.0,
           "space_id": "STR-01",
           "span_mm": 2108.0,
           "wall_band_ids": [
@@ -4856,11 +7516,19 @@
         },
         {
           "boundary_type": "PHYSICAL_WALL",
+          "closure_basis": "",
+          "host_wall_band_id": "",
+          "host_wall_gross_mm": 959.8143065595032,
           "interval_id": "BI-STR-01-002",
           "is_virtual": false,
-          "material_length_mm": 959.8,
+          "jamb_ids": [],
+          "material_present_mm": 959.8143065595032,
+          "opening_mm": 0.0,
           "portal_id": "",
           "side": "south",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": 959.8143065595032,
           "space_id": "STR-01",
           "span_mm": 959.8,
           "wall_band_ids": [
@@ -4869,24 +7537,40 @@
           "why": "a wall band covers this interval"
         },
         {
-          "boundary_type": "OPEN_PLAN_TRANSITION",
+          "boundary_type": "OPEN_PLAN_VIRTUAL_BOUNDARY",
+          "closure_basis": "",
+          "host_wall_band_id": "",
+          "host_wall_gross_mm": 0.0,
           "interval_id": "BI-STR-01-003",
           "is_virtual": true,
-          "material_length_mm": 0.0,
+          "jamb_ids": [],
+          "material_present_mm": 0.0,
+          "opening_mm": 0.0,
           "portal_id": "PT-STR-01-south-10748",
           "side": "south",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": null,
           "space_id": "STR-01",
           "span_mm": 1148.2,
           "wall_band_ids": [],
-          "why": "one evidence family only. A gap this size is equally a doorway and a wall the extractor missed"
+          "why": "1148 mm gap. GEOMETRY alone. Span alone is never sufficient, topology alone is never sufficient, and semantic alone is never sufficient"
         },
         {
           "boundary_type": "PHYSICAL_WALL",
+          "closure_basis": "",
+          "host_wall_band_id": "",
+          "host_wall_gross_mm": 2606,
           "interval_id": "BI-STR-01-004",
           "is_virtual": false,
-          "material_length_mm": 2606,
+          "jamb_ids": [],
+          "material_present_mm": 2606,
+          "opening_mm": 0.0,
           "portal_id": "",
           "side": "west",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": 2606,
           "space_id": "STR-01",
           "span_mm": 2606,
           "wall_band_ids": [
@@ -4897,45 +7581,102 @@
           "why": "a wall band covers this interval"
         },
         {
-          "boundary_type": "OPEN_PLAN_TRANSITION",
+          "boundary_type": "OPEN_PLAN_VIRTUAL_BOUNDARY",
+          "closure_basis": "",
+          "host_wall_band_id": "",
+          "host_wall_gross_mm": 0.0,
           "interval_id": "BI-STR-01-005",
           "is_virtual": true,
-          "material_length_mm": 0.0,
+          "jamb_ids": [],
+          "material_present_mm": 0.0,
+          "opening_mm": 0.0,
           "portal_id": "PT-STR-01-east-16003",
           "side": "east",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": null,
           "space_id": "STR-01",
           "span_mm": 2606,
           "wall_band_ids": [],
-          "why": "2606 mm is far wider than a doorway. This is an open-plan transition or a missing wall, and it is not closed on a portal hypothesis"
+          "why": "2606 mm is wider than a typical doorway, so span supports no door hypothesis here. Large openings exist and width is evidence only: GEOMETRY alone. Span alone is never sufficient, topology alone is never sufficient, and semantic alone is never sufficient"
         }
       ],
-      "material_length_m": 5.67,
+      "material_present_length_m": 5.674,
       "note": "virtual boundaries carry ZERO material length. The virtual SPAN is reported so it can be audited; it is never a quantity",
+      "opening_length_m": 0.0,
       "portals": 2,
       "portals_by_gap_class": {
         "OPEN_PLAN_TRANSITION": 1,
         "UNRESOLVED": 1
       },
       "portals_by_status": {
-        "PORTAL_CANDIDATE": 1,
-        "PORTAL_UNRESOLVED": 1
+        "PORTAL_CANDIDATE": 2
       },
-      "virtual_length_m": 3.75,
-      "virtual_material_length_m": 0.0
+      "space_boundary_length_m": 5.674,
+      "virtual_material_length_m": 0.0,
+      "virtual_span_m": 3.75
     },
     "WSH-01": {
+      "bbox_fill_ratio": 0.942,
       "by_boundary_type": {
         "PHYSICAL_WALL": 4
       },
       "closes": true,
+      "coverage": {
+        "HOST_WALL_GROSS_LENGTH": {
+          "basis": "HOST_WALL_GROSS_LENGTH",
+          "complete": true,
+          "established": 4,
+          "intervals": 4,
+          "not_established": 0,
+          "total_m": 4.606
+        },
+        "MATERIAL_PRESENT_LENGTH": {
+          "basis": "MATERIAL_PRESENT_LENGTH",
+          "complete": true,
+          "established": 4,
+          "intervals": 4,
+          "not_established": 0,
+          "total_m": 4.606
+        },
+        "OPENING_LENGTH": {
+          "basis": "OPENING_LENGTH",
+          "complete": true,
+          "established": 4,
+          "intervals": 4,
+          "not_established": 0,
+          "total_m": 0.0
+        },
+        "SPACE_BOUNDARY_LENGTH": {
+          "basis": "SPACE_BOUNDARY_LENGTH",
+          "complete": true,
+          "established": 4,
+          "intervals": 4,
+          "not_established": 0,
+          "total_m": 4.606
+        }
+      },
+      "expected_boundary_caveat": null,
+      "host_wall_gross_length_m": 4.606,
+      "identity": "HOST_WALL_GROSS = MATERIAL_PRESENT + HOST_WALL_OPENINGS. It does not apply to open-plan edges, which carry no host wall",
+      "identity_holds": true,
+      "identity_residual_m": 0.0,
       "intervals": [
         {
           "boundary_type": "PHYSICAL_WALL",
+          "closure_basis": "",
+          "host_wall_band_id": "",
+          "host_wall_gross_mm": 1730.0,
           "interval_id": "BI-WSH-01-001",
           "is_virtual": false,
-          "material_length_mm": 1730.0,
+          "jamb_ids": [],
+          "material_present_mm": 1730.0,
+          "opening_mm": 0.0,
           "portal_id": "",
           "side": "north",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": 1730.0,
           "space_id": "WSH-01",
           "span_mm": 1730.0,
           "wall_band_ids": [
@@ -4946,11 +7687,19 @@
         },
         {
           "boundary_type": "PHYSICAL_WALL",
+          "closure_basis": "",
+          "host_wall_band_id": "",
+          "host_wall_gross_mm": 1730.0,
           "interval_id": "BI-WSH-01-002",
           "is_virtual": false,
-          "material_length_mm": 1730.0,
+          "jamb_ids": [],
+          "material_present_mm": 1730.0,
+          "opening_mm": 0.0,
           "portal_id": "",
           "side": "south",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": 1730.0,
           "space_id": "WSH-01",
           "span_mm": 1730.0,
           "wall_band_ids": [
@@ -4960,11 +7709,19 @@
         },
         {
           "boundary_type": "PHYSICAL_WALL",
+          "closure_basis": "",
+          "host_wall_band_id": "",
+          "host_wall_gross_mm": 573,
           "interval_id": "BI-WSH-01-003",
           "is_virtual": false,
-          "material_length_mm": 573,
+          "jamb_ids": [],
+          "material_present_mm": 573,
+          "opening_mm": 0.0,
           "portal_id": "",
           "side": "west",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": 573,
           "space_id": "WSH-01",
           "span_mm": 573,
           "wall_band_ids": [
@@ -4975,11 +7732,19 @@
         },
         {
           "boundary_type": "PHYSICAL_WALL",
+          "closure_basis": "",
+          "host_wall_band_id": "",
+          "host_wall_gross_mm": 573,
           "interval_id": "BI-WSH-01-004",
           "is_virtual": false,
-          "material_length_mm": 573,
+          "jamb_ids": [],
+          "material_present_mm": 573,
+          "opening_mm": 0.0,
           "portal_id": "",
           "side": "east",
+          "skirting_basis": "RULE_REQUIRED",
+          "skirting_eligible_mm": null,
+          "space_boundary_mm": 573,
           "space_id": "WSH-01",
           "span_mm": 573,
           "wall_band_ids": [
@@ -4988,13 +7753,15 @@
           "why": "a wall band covers this interval"
         }
       ],
-      "material_length_m": 4.61,
+      "material_present_length_m": 4.606,
       "note": "virtual boundaries carry ZERO material length. The virtual SPAN is reported so it can be audited; it is never a quantity",
+      "opening_length_m": 0.0,
       "portals": 0,
       "portals_by_gap_class": {},
       "portals_by_status": {},
-      "virtual_length_m": 0.0,
-      "virtual_material_length_m": 0.0
+      "space_boundary_length_m": 4.606,
+      "virtual_material_length_m": 0.0,
+      "virtual_span_m": 0.0
     }
   },
   "space_boundary_faces": {
@@ -5508,6 +8275,18 @@
     "components_eligible": 3,
     "components_hypothesis_only": 5,
     "why": "every face this engine produces is unreleasable by construction; migration to a measurement basis is explicit and has not happened"
+  },
+  "union_extension_audit": {
+    "bands_with_extensions": 152,
+    "by_reason": {
+      "END_CAP_SUPPORTED": 47,
+      "JUNCTION_OVERHANG": 173,
+      "UNRESOLVED_EXTENSION": 21
+    },
+    "extensions": 241,
+    "extensions_crossing_a_supported_portal": [],
+    "invariant": "no union extension may cross a PORTAL_PROBABLE or PORTAL_VALIDATED interval as continuous material",
+    "invariant_holds": true
   },
   "wall_extraction": {
     "bands": 243,

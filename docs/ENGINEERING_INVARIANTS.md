@@ -100,3 +100,52 @@ room is there, that says **where to look**, never **what to find**.
 
 A printed dimension validates a candidate **after** generation. It is never an
 input to the search.
+
+---
+
+## 5 · A LENGTH WITHOUT A BASIS IS NOT A LENGTH
+
+A doorway is **four facts at once**:
+
+| | BTH-05 |
+|---|---|
+| material present | **0 m** |
+| opening | 1.054 m |
+| space boundary | 1.054 m |
+| host wall gross | 1.054 m |
+
+Collapsing them into one number makes at least three trades wrong. The
+previous round's *"material_length_mm is the only length a quantity engine may
+read"* was one such collapse: 23010's own manual benchmark measures **gross**
+perimeter and deducts openings later, so the door span belongs to the gross
+line.
+
+Every quantity engine declares which basis it consumes (`engine/lengths.py`),
+and asking for an unestablished basis **raises** rather than returning zero —
+an unestablished basis and a measured zero are different facts.
+
+**Never compare unlike bases.** The 102.70 m site benchmark is a gross
+perimeter; comparing it against a length that already removed doors compares
+two different measurements that happen to share a unit.
+
+---
+
+## 6 · MATERIALS COME FROM APPROVED RECIPES, NEVER FROM AREA
+
+Recorded now, implemented later:
+
+```
+VALIDATED QUANTITY
+  → APPROVED CONSTRUCTION RECIPE
+    → MATERIAL REQUIREMENT
+      → PROCUREMENT ALLOWANCE
+        → COST
+```
+
+Never: *AI infers materials directly from a drawing area.* The owner supplies
+and approves construction recipes before they become active — block dimensions,
+blocks per m², mortar, connector spacing, lintel logic, waste factor.
+
+**CALCULATED QUANTITY and PROCUREMENT QUANTITY are always shown separately.**
+A waste or safety allowance is its own approved field, never folded into a
+measurement.

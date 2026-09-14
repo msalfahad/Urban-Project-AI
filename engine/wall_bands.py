@@ -43,6 +43,23 @@ REPRESENTATIONS = (DOUBLE_FACE_WALL, SINGLE_LINE_WALL, FILLED_WALL_BAND,
                    RECTANGULAR_WALL_OBJECT, COMPOSITE_WALL_GEOMETRY,
                    CURVED_WALL, UNKNOWN_WALL_REPRESENTATION)
 
+# WHY A BAND EXTENDS BEYOND WHERE BOTH FACES RUN TOGETHER. Taking the union of
+# the faces was necessary — at an L corner the inner face stops a wall
+# thickness early because the perpendicular wall occupies that corner — but an
+# unexamined union can bridge a real opening, which is exactly the thing this
+# engine exists to find.
+JUNCTION_OVERHANG = "JUNCTION_OVERHANG"
+END_CAP_SUPPORTED = "END_CAP_SUPPORTED"
+FRAGMENTED_MATE_EXTENSION = "FRAGMENTED_MATE"
+UNRESOLVED_EXTENSION = "UNRESOLVED_EXTENSION"
+
+EXTENSION_REASONS = (JUNCTION_OVERHANG, END_CAP_SUPPORTED,
+                     FRAGMENTED_MATE_EXTENSION, UNRESOLVED_EXTENSION)
+
+# An overhang no longer than this is explained by the wall it meets: a
+# centreline runs to the far face of the perpendicular wall and stops.
+MAX_JUNCTION_OVERHANG_MM = 450.0
+
 VALIDATED = "VALIDATED"
 PROBABLE = "PROBABLE"
 AMBIGUOUS = "AMBIGUOUS"
@@ -121,6 +138,14 @@ class WallBandCandidate:
     raster_support_ratio: float | None = None
     validation_status: str = AMBIGUOUS
     why: str = ""
+    # The intervals each face actually occupies, so a union can be audited.
+    # Reducing face A [0,3000] and face B [0,1000]+[2000,3000] to a band
+    # [0,3000] without recording the 1000 mm discontinuity is how a union
+    # silently bridges an opening.
+    face_a_intervals: tuple[tuple[float, float], ...] = ()
+    face_b_intervals: tuple[tuple[float, float], ...] = ()
+    both_faces_interval: tuple[float, float] | None = None
+    extensions: tuple[dict, ...] = ()
 
     @property
     def length_mm(self) -> float:
@@ -150,6 +175,11 @@ class WallBandCandidate:
                 "raster_support_ratio": (
                     None if self.raster_support_ratio is None
                     else round(self.raster_support_ratio, 3)),
+                "face_a_intervals": [list(i) for i in self.face_a_intervals],
+                "face_b_intervals": [list(i) for i in self.face_b_intervals],
+                "both_faces_interval": (list(self.both_faces_interval)
+                                        if self.both_faces_interval else None),
+                "extensions": [dict(e) for e in self.extensions],
                 "validation_status": self.validation_status, "why": self.why}
 
 
@@ -299,6 +329,31 @@ def build_bands(faces, *, caps=(), wall_pen: float | None = None,
                 status = PROBABLE
                 why = ("two faces pair cleanly but only one evidence family "
                        "supports the band")
+            # THE UNION AUDIT. Each end beyond the both-faces interval is an
+            # extension, and each one must say why it is there.
+            exts = []
+            for label, at, other_end in (("start", lo, overlap_lo),
+                                         ("end", hi, overlap_hi)):
+                run = abs(other_end - at)
+                if run < 1.0:
+                    continue
+                if run <= MAX_JUNCTION_OVERHANG_MM:
+                    reason = JUNCTION_OVERHANG
+                    note = (f"{run:.0f} mm is within one wall thickness: the "
+                            "longer face runs to the far side of the wall it "
+                            "meets")
+                elif cap_ids:
+                    reason = END_CAP_SUPPORTED
+                    note = "an end cap closes the band over this extension"
+                else:
+                    reason = UNRESOLVED_EXTENSION
+                    note = (f"{run:.0f} mm of single-face extension with no "
+                            "junction or cap to explain it. This band's extent "
+                            "beyond the paired interval is NOT established "
+                            "material")
+                exts.append({"end": label, "length_mm": round(run, 1),
+                             "extension_reason": reason, "note": note})
+
             n += 1
             bands.append(WallBandCandidate(
                 wall_band_id=f"WB-{n:05d}",
@@ -311,6 +366,10 @@ def build_bands(faces, *, caps=(), wall_pen: float | None = None,
                 separation_basis="MEASURED_BETWEEN_TWO_DRAWN_FACES",
                 supporting_evidence=tuple(ev),
                 raster_support_ratio=ratio_r,
+                face_a_intervals=((a_lo, a_hi),),
+                face_b_intervals=((b_lo, b_hi),),
+                both_faces_interval=(overlap_lo, overlap_hi),
+                extensions=tuple(exts),
                 validation_status=status, why=why))
 
         for a in group:
@@ -390,4 +449,51 @@ def summary(bands, rejections) -> dict:
             e for b in bands for e in b.supporting_evidence)),
         "rejections": len(rejections),
         "rejection_reasons": dict(Counter(r.reason for r in rejections)),
+    }
+
+
+def audit_extensions(bands, portals=()) -> dict:
+    """Does any band extension bridge a supported opening?
+
+    THE HARD INVARIANT: a union extension may not cross a PORTAL_PROBABLE or
+    PORTAL_VALIDATED interval unless it is represented as a host-wall opening
+    with zero material present. A band that quietly spans a doorway puts
+    blockwork and plaster where there is a door.
+    """
+    from collections import Counter
+    crossing = []
+    supported = [p for p in portals
+                 if getattr(p, "status", "") in ("PORTAL_PROBABLE",
+                                                 "PORTAL_VALIDATED")]
+    for b in bands:
+        for e in b.extensions:
+            lo, hi = ((b.start_mm, b.both_faces_interval[0])
+                      if e["end"] == "start"
+                      else (b.both_faces_interval[1], b.end_mm)) \
+                if b.both_faces_interval else (b.start_mm, b.end_mm)
+            for p in supported:
+                if p.axis != b.axis:
+                    continue
+                if abs(p.fixed_mm - b.centreline_mm) > 400:
+                    continue
+                if min(hi, max(p.start_mm, p.end_mm)) - max(
+                        lo, min(p.start_mm, p.end_mm)) > 50:
+                    crossing.append({
+                        "wall_band_id": b.wall_band_id,
+                        "portal_id": p.portal_id,
+                        "extension_reason": e["extension_reason"],
+                        "extension_mm": e["length_mm"],
+                        "why": ("this band's single-face extension spans a "
+                                "supported opening. It must be represented as "
+                                "a host-wall opening with zero material "
+                                "present, not as continuous wall")})
+    return {
+        "bands_with_extensions": sum(1 for b in bands if b.extensions),
+        "extensions": sum(len(b.extensions) for b in bands),
+        "by_reason": dict(Counter(e["extension_reason"] for b in bands
+                                  for e in b.extensions)),
+        "extensions_crossing_a_supported_portal": crossing,
+        "invariant_holds": not crossing,
+        "invariant": ("no union extension may cross a PORTAL_PROBABLE or "
+                      "PORTAL_VALIDATED interval as continuous material"),
     }

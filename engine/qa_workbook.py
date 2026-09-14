@@ -996,6 +996,9 @@ WALL_QA_COLUMNS = ("space_or_region", "side_or_candidate", "wall_band_id",
                    "representation_type", "face_a", "face_b", "end_caps",
                    "pen_style_evidence", "raster_support_pct",
                    "junction_evidence", "pairing_status", "rejection_reason",
+                   "extension_reasons", "space_boundary_length_m",
+                   "host_wall_gross_length_m", "material_present_length_m",
+                   "opening_length_m",
                    "validation_status", "affected_space_ids", "notes")
 
 
@@ -1029,6 +1032,13 @@ def wall_extraction_qa(bands=(), rejections=(), sides=()) -> Sheet:
             junction_evidence=cell(None),
             pairing_status="PAIRED",
             rejection_reason=cell(None),
+            extension_reasons=cell(", ".join(
+                sorted({e["extension_reason"]
+                        for e in b.get("extensions", ())})) or None),
+            space_boundary_length_m=cell(None),
+            host_wall_gross_length_m=cell(None),
+            material_present_length_m=cell(None),
+            opening_length_m=cell(None),
             validation_status=b.get("validation_status"),
             affected_space_ids=cell(None),
             notes=cell(b.get("why"))))
@@ -1041,7 +1051,11 @@ def wall_extraction_qa(bands=(), rejections=(), sides=()) -> Sheet:
             pen_style_evidence=cell(None), raster_support_pct=cell(None),
             junction_evidence=cell(r.get("candidates_in_window")),
             pairing_status="NOT_PAIRED",
-            rejection_reason=r["reason"],
+            rejection_reason=r["reason"], extension_reasons=cell(None),
+            space_boundary_length_m=cell(None),
+            host_wall_gross_length_m=cell(None),
+            material_present_length_m=cell(None),
+            opening_length_m=cell(None),
             validation_status=cell(None),
             affected_space_ids=cell(None),
             notes=cell(f"best mate seen: gap {r.get('best_gap_mm')} mm, "
@@ -1057,6 +1071,12 @@ def wall_extraction_qa(bands=(), rejections=(), sides=()) -> Sheet:
             junction_evidence=cell(sd.get("nearest_stitch_id")),
             pairing_status=sd.get("status"),
             rejection_reason=cell(sd.get("likely_cause")),
+            extension_reasons=cell(None),
+            space_boundary_length_m=cell(sd.get("space_boundary_length_m")),
+            host_wall_gross_length_m=cell(sd.get("host_wall_gross_length_m")),
+            material_present_length_m=cell(
+                sd.get("material_present_length_m")),
+            opening_length_m=cell(sd.get("opening_length_m")),
             validation_status=cell(None),
             affected_space_ids=cell(sd.get("space_id")),
             notes=cell(sd.get("likely_cause"))))
@@ -1072,6 +1092,13 @@ def wall_extraction_qa(bands=(), rejections=(), sides=()) -> Sheet:
             "by distance is what let a 100 mm scrap beat a 2400 mm wall face.",
             "A single face is never mirrored by an assumed thickness: its "
             "separation reads NOT_ESTABLISHED.",
+            "FOUR LENGTH COLUMNS, because a doorway is four facts: zero "
+            "material present, a real opening, a valid space closure, and "
+            "part of the gross host-wall line. Every quantity engine declares "
+            "which one it consumes — see engine/lengths.py.",
+            "extension_reasons says why a band runs past the interval where "
+            "both its faces are drawn. No extension may cross a supported "
+            "opening as continuous material.",
         ))
 
 

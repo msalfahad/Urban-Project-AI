@@ -667,6 +667,12 @@ def bundle(space_map_path: Path = DEFAULT_SPACE_MAP,
         "wall_rejections": _run().get("rejection_sample", []),
         "wall_sides": [
             {"space_id": sid, "side": side,
+             **{k: _run().get("length_reconciliation", {})
+                .get(sid, {}).get(k)
+                for k in ("space_boundary_length_m",
+                          "host_wall_gross_length_m",
+                          "material_present_length_m",
+                          "opening_length_m")},
              "status": ("PHYSICAL_WALL_PRESENT" if v["coverage_pct"] >= 95
                         else "GAP"),
              "likely_cause": (f"{v['coverage_pct']}% covered"

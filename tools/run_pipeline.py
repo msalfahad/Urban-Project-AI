@@ -32,10 +32,12 @@ from engine.planar import (attach_holes, build_half_edges, resolve_unbounded,
 from engine.run_manifest import RunManifest
 from engine.space_boundary import (build_space_boundary, classify_gap,
                                    material_length_m, space_closes)
+from engine.space_boundary import reconcile
 from engine.space_boundary import summary as boundary_summary
 from engine.topology import WallPair
 from engine.vector_source import read
-from engine.wall_bands import build_bands, single_face_candidates
+from engine.wall_bands import (audit_extensions, build_bands,
+                               single_face_candidates)
 from engine.wall_bands import summary as band_summary
 from engine.wall_graph import build
 from engine.wall_noding import node_and_split
@@ -196,11 +198,14 @@ def run(pdf: str = PDF) -> dict:
     sb_noded = node_and_split(build(sb_pairs))
     space_faces = attach_holes(resolve_unbounded(walk_faces(
         build_half_edges(sb_noded))))
+    sb_rec = man.add("space_boundary_graph", RUN_ID, sb_noded.health(),
+                     consumed=[("wall_graph", g_rec.output_hash),
+                               ("opening_detection", o_rec.output_hash)])
     t_rec = man.add("topology", RUN_ID,
                     {"material": material.health(),
                      "space_boundary": space_faces.health()},
                     consumed=[("wall_graph", g_rec.output_hash),
-                              ("opening_detection", o_rec.output_hash)])
+                              ("space_boundary_graph", sb_rec.output_hash)])
 
     # --- envelope --------------------------------------------------------
     unbounded_edges = {e for f in material.faces
@@ -217,7 +222,27 @@ def run(pdf: str = PDF) -> dict:
                              length_drift_mm=noded.health()[
                                  "length_difference_mm"])
 
+    # §8 — every band extension audited against the supported portals.
+    ext_audit = audit_extensions(bands, portals)
+
+    # How much of each region actually fills its own bounding box. A room that
+    # fills 68% of its bbox is L-shaped, and using the bbox as its expected
+    # boundary invents sides that were never meant to be walls.
+    import numpy as np
+    fill = {}
+    for sid, r in by_space.items():
+        rid = next((k for k, v in regions.items()
+                    if v["space_id"] == sid), None)
+        if rid is None:
+            continue
+        ys, xs = np.where(seg.labels == rid)
+        if len(xs) == 0:
+            continue
+        bbox_px = (xs.max() - xs.min() + 1) * (ys.max() - ys.min() + 1)
+        fill[sid] = round(len(xs) / bbox_px, 3)
+
     man.rule_set_versions = {"23010_ceramic": "1.0", "23010_plaster": "1.0"}
+    man.measurement_basis_version = "LENGTH_ONTOLOGY_V1"
     man.assert_coherent()
 
     return {
@@ -248,9 +273,17 @@ def run(pdf: str = PDF) -> dict:
             sid: {**boundary_summary(iv, [p for p in portals
                                           if p.space_id == sid]),
                   "closes": space_closes(iv),
-                  "material_length_m": round(material_length_m(iv), 2),
+                  "bbox_fill_ratio": fill.get(sid),
+                  "expected_boundary_caveat": (
+                      None if (fill.get(sid) or 1.0) >= 0.85 else
+                      f"this region fills only {100*fill.get(sid):.0f}% of its "
+                      "bounding box, so the bbox is NOT its outline: sides "
+                      "measured against it may cut through open space"),
                   "intervals": [i.record() for i in iv]}
             for sid, iv in boundaries.items()},
+        "union_extension_audit": ext_audit,
+        "length_reconciliation": {
+            sid: reconcile(iv) for sid, iv in boundaries.items()},
         "material_faces": material.health(),
         "space_boundary_faces": space_faces.health(),
         "envelope": envelope_summary(env),

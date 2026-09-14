@@ -33,7 +33,7 @@ LINEAGE_CLASSES = (CURRENT_RUN, PRIOR_RUN, SUPERSEDED)
 
 # The stages a workbook depends on, in the order each consumes the last.
 STAGES = ("frame", "wall_extraction", "wall_graph", "opening_detection",
-          "topology", "semantic", "release_matrix")
+          "space_boundary_graph", "topology", "semantic", "release_matrix")
 
 
 class ManifestError(RuntimeError):
@@ -78,6 +78,10 @@ class RunManifest:
     drawing_source_hash: str
     stages: dict = field(default_factory=dict)
     rule_set_versions: dict = field(default_factory=dict)
+    # Which length ontology the quantities in this run were measured on. A
+    # workbook built before the bases existed measured different things under
+    # the same column names.
+    measurement_basis_version: str = ""
     generated_at: str = ""
 
     def add(self, stage: str, run_id: str, payload, *, consumed=(),
@@ -137,6 +141,7 @@ class RunManifest:
             "drawing_source_hash": self.drawing_source_hash,
             "stages": {s: r.record() for s, r in sorted(self.stages.items())},
             "rule_set_versions": dict(self.rule_set_versions),
+            "measurement_basis_version": self.measurement_basis_version,
             "workbook_generated_at": self.generated_at
             or datetime.now(timezone.utc).isoformat(timespec="seconds"),
             "coherent": not self.check(),
