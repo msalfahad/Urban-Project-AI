@@ -725,7 +725,14 @@ def risk_flags(spaces, quantities: dict, releases: dict, *,
 
 # ---------------------------------------------------- 7 takeoff coverage
 
-COVERAGE_COLUMNS = ("use", "basis", "spaces_applicable", "spaces_ready",
+# QUANTITY_STAGE and MEASUREMENT_BASIS are different facts and the old single
+# "basis" column held only the first. GROSS/NET/DIRECT is where a number sits
+# in the deduction chain; SPACE_BOUNDARY_LENGTH / HOST_WALL_GROSS_LENGTH /
+# MATERIAL_PRESENT_LENGTH / OPENING_LENGTH / SKIRTING_ELIGIBLE_LENGTH is WHAT
+# WAS MEASURED. A reader needs both: GROSS_PLASTER is a gross quantity
+# measured on the host-wall line THROUGH the door.
+COVERAGE_COLUMNS = ("use", "quantity_stage", "measurement_basis",
+                    "spaces_applicable", "spaces_ready",
                     "spaces_blocked", "spaces_not_applicable",
                     "commonest_blocker", "quantity_released")
 
@@ -741,7 +748,9 @@ def takeoff_coverage(tallies) -> Sheet:
     rows = []
     for t in tallies:
         rows.append(OrderedDict(
-            use=t["use"], basis=cell(t.get("basis")),
+            use=t["use"],
+            quantity_stage=cell(t.get("quantity_stage") or t.get("basis")),
+            measurement_basis=cell(t.get("measurement_basis")),
             spaces_applicable=cell(t.get("applicable")),
             spaces_ready=cell(t.get("ready")),
             spaces_blocked=cell(t.get("blocked")),
@@ -756,6 +765,13 @@ def takeoff_coverage(tallies) -> Sheet:
             "be quoted from.",
             "GROSS and NET are different uses. A ready gross figure is not a "
             "ready quantity for a net one.",
+            "QUANTITY_STAGE (GROSS / NET / DIRECT) and MEASUREMENT_BASIS are "
+            "different facts. GROSS_PLASTER is a gross quantity measured on "
+            "HOST_WALL_GROSS_LENGTH — the line that runs THROUGH a doorway.",
+            "SKIRTING is measured on SKIRTING_ELIGIBLE_LENGTH, which is "
+            "RULE_REQUIRED: no signed project rule says which stretches carry "
+            "skirting, so the length is NOT_ESTABLISHED — not zero, and not "
+            "the material length.",
         ))
 
 
@@ -827,18 +843,30 @@ def dashboard(bundle: dict, sheets: dict) -> Sheet:
         # said 36 ready / 0 unresolved while the same workbook recorded WSH-01
         # as UNRESOLVED, because "a raster region exists" was being printed as
         # "the physical space is validated".
-        row("GEOMETRY", "Raster region available",
+        row("GEOMETRY", "RASTER_REGION_AVAILABLE",
             layers.get("RASTER_REGION_AVAILABLE"),
-            "A polygon exists and can be measured."),
-        row("GEOMETRY", "Wall geometry available",
+            "A raster polygon exists and can be measured. RASTER, not "
+            "vector."),
+        row("GEOMETRY", "WALL_GEOMETRY_AVAILABLE",
             layers.get("WALL_GEOMETRY_AVAILABLE"),
             "Its boundary was traced and closed."),
-        row("GEOMETRY", "Region identity validated",
+        row("GEOMETRY", "RASTER_REGION_IDENTITY_VALIDATED",
             layers.get("REGION_IDENTITY_VALIDATED"),
-            "The polygon IS the space we named."),
-        row("GEOMETRY", "Physical topology validated",
+            "The RASTER region IS the space we named."),
+        row("GEOMETRY", "RASTER_SPACE_COMPLETENESS_VALIDATED",
             layers.get("PHYSICAL_TOPOLOGY_VALIDATED"),
-            "It is the WHOLE of that space and ONLY that space."),
+            "The RASTER region is the WHOLE of that space and ONLY that "
+            "space. This is a segmentation fact: it does NOT mean a vector "
+            "face has been reconstructed for it."),
+        row("GEOMETRY", "VECTOR_SPACE_FACE_VALIDATED",
+            layers.get("VECTOR_SPACE_FACE_VALIDATED"),
+            "Planar faces on the SPACE_BOUNDARY_GRAPH that enclose exactly "
+            "one labelled room. This is the vector geometry count, and it is "
+            "the one that is small."),
+        row("GEOMETRY", "VECTOR_SPACE_FACES_GENERATED",
+            layers.get("VECTOR_SPACE_FACES_GENERATED"),
+            "Every bounded face the space graph produced, including faces "
+            "holding several rooms and faces holding none."),
         row("GEOMETRY", "VALIDATED PHYSICAL SPACES",
             layers.get("validated_physical_spaces"),
             "Only these may carry a released quantity."),
@@ -1058,8 +1086,14 @@ def wall_extraction_qa(bands=(), rejections=(), sides=()) -> Sheet:
             opening_length_m=cell(None),
             validation_status=cell(None),
             affected_space_ids=cell(None),
-            notes=cell(f"best mate seen: gap {r.get('best_gap_mm')} mm, "
-                       f"overlap {r.get('best_overlap_mm')} mm")))
+            # §18 — a rejection with no best mate has no gap and no overlap
+            # to report. "gap None mm" reads as a measurement that was taken.
+            notes=cell(
+                f"best mate seen: gap {r['best_gap_mm']} mm, "
+                f"overlap {r['best_overlap_mm']} mm"
+                if r.get("best_gap_mm") is not None
+                and r.get("best_overlap_mm") is not None
+                else "no candidate mate was found for this face at all")))
     for sd in sides:
         rows.append(OrderedDict(
             space_or_region=sd.get("space_id"),
@@ -1104,13 +1138,20 @@ def wall_extraction_qa(bands=(), rejections=(), sides=()) -> Sheet:
 
 # ------------------------------------------------------------ topology QA
 
-TOPOLOGY_COLUMNS = ("face_id", "component", "status", "area_m2", "perimeter_m",
+# graph_type and topology_run_id are first on purpose. A material-graph face
+# and a space-boundary face are produced by DIFFERENT GRAPHS, and a stale
+# material face sitting unlabelled in this sheet would read as the new space
+# topology result with nothing looking wrong.
+TOPOLOGY_COLUMNS = ("face_id", "graph_type", "topology_run_id", "component",
+                    "status", "area_m2", "perimeter_m",
+                    "labelled_rooms_inside", "containment_verdict",
+                    "portal_edges",
                     "raster_regions", "raster_spaces", "relationship",
                     "overlap_pct", "dependent_probable_edges", "micro_class",
                     "candidate_space_match", "holes", "blocker", "notes")
 
 
-def topology_qa(faces=(), correspondence=()) -> Sheet:
+def topology_qa(faces=(), correspondence=(), containment=()) -> Sheet:
     """The diagnostic face engine's output, where it can be inspected safely.
 
     Faces appear here and NOWHERE ELSE in the workbook. They do not touch a
@@ -1120,13 +1161,23 @@ def topology_qa(faces=(), correspondence=()) -> Sheet:
     validated -> PHYSICAL_SPACE_GEOMETRY_ACCEPTED.
     """
     corr = {c["face_id"]: c for c in correspondence}
+    # Joined by face id. ORDER IS NEVER IDENTITY.
+    held = {c["space_face_id"]: c for c in containment}
     rows = []
     for f in faces:
-        c = corr.get(f["face_id"], {})
+        fid = f.get("face_id") or f.get("space_face_id")
+        c = corr.get(fid, {})
+        h = held.get(fid, {})
         probable = f.get("edge_validation_summary", {}).get("PROBABLE")
         rows.append(OrderedDict(
-            face_id=f["face_id"], component=cell(f.get("component_id")),
-            status=cell(f.get("status")),
+            face_id=fid,
+            graph_type=cell(f.get("graph_type")),
+            topology_run_id=cell(f.get("topology_run_id")),
+            component=cell(f.get("component_id")),
+            status=cell(f.get("status") or f.get("geometry_status")),
+            labelled_rooms_inside=cell(h.get("labelled_regions_contained")),
+            containment_verdict=cell(h.get("verdict")),
+            portal_edges=cell(h.get("portal_edges")),
             area_m2=cell(f.get("area_m2")),
             perimeter_m=cell(f.get("perimeter_m")),
             raster_regions=cell(", ".join(
@@ -1153,6 +1204,14 @@ def topology_qa(faces=(), correspondence=()) -> Sheet:
             "VECTOR_SPLITS_RASTER is the class worth reading first: it may "
             "expose an under-segmented space, and it is equally where a false "
             "split would hide.",
+            "GRAPH_TYPE says which graph produced the face. MATERIAL_WALL_GRAPH "
+            "is open at every doorway; SPACE_BOUNDARY_GRAPH adds zero-material "
+            "closures across geometry-supported openings. They are different "
+            "answers to different questions and must never be read as one set.",
+            "LABELLED_ROOMS_INSIDE is containment of a labelled region's "
+            "centroid in the face POLYGON — not bounding-box overlap. A face "
+            "holding more than one labelled room is a group of rooms whose "
+            "dividing walls are still missing from extraction.",
         ))
 
 
@@ -1183,6 +1242,51 @@ def revision_delta(delta: dict) -> Sheet:
                      "nothing changed.")
     return Sheet(name=SHEET_REVISION, columns=REVISION_COLUMNS, rows=rows,
                  notes=tuple(notes))
+
+
+# §18 — narrative cells may not carry a missing value as if it were a fact.
+#
+# The last workbook read: "source-path fragmentation is NOT the cause — only
+# None of None short marks share a path with a long run." A structured field
+# had been formatted straight into prose, and the sentence still read as a
+# confident measurement. The number was absent; the claim was not.
+#
+# Checked at export, on the columns that carry sentences rather than values.
+NARRATIVE_COLUMNS = ("issue", "cause", "effect", "why", "notes", "note",
+                     "engineering_next_action", "owner_input_required",
+                     "owner_input_helpful_if_available", "resolution",
+                     "current_diagnostic", "detail", "blocker",
+                     "commonest_blocker", "verdict")
+
+FORBIDDEN_IN_PROSE = ("None", "null", "NaN", "nan of", "undefined")
+
+
+def assert_no_missing_value_prose(sheets) -> None:
+    """Refuse to export a workbook whose sentences contain missing values.
+
+    A deliberate quotation is not what this catches: the check is on whole
+    words in narrative columns, and a value that is genuinely absent belongs in
+    an empty cell — where `cell()` already puts it — not inside a sentence.
+    """
+    bad = []
+    for sh in sheets:
+        for i, row in enumerate(sh.rows, 1):
+            for col in NARRATIVE_COLUMNS:
+                v = row.get(col)
+                if not isinstance(v, str):
+                    continue
+                words = v.replace(",", " ").replace(".", " ").split()
+                for token in FORBIDDEN_IN_PROSE:
+                    if token in words or (" " in token and token in v):
+                        bad.append(f"{sh.name} row {i} column {col!r}: "
+                                   f"{v[:120]!r}")
+    if bad:
+        raise QaWorkbookError(
+            "a narrative cell formatted a missing value into prose:\n  - "
+            + "\n  - ".join(bad[:20])
+            + "\nA structured field that is absent belongs in an EMPTY CELL. "
+              "Inside a sentence it still reads as a measurement, and the "
+              "reader has no way to tell that the number was never taken.")
 
 
 @dataclass(frozen=True)
@@ -1265,7 +1369,8 @@ def build_workbook(bundle: dict) -> Workbook:
             bundle.get("wall_bands", ()), bundle.get("wall_rejections", ()),
             bundle.get("wall_sides", ())),
         SHEET_TOPOLOGY: topology_qa(bundle.get("faces", ()),
-                                    bundle.get("face_correspondence", ())),
+                                    bundle.get("face_correspondence", ()),
+                                    bundle.get("face_containment", ())),
         SHEET_COVERAGE: takeoff_coverage(bundle.get("coverage", ())),
         SHEET_REVISION: revision_delta(bundle.get("revision_delta", {})),
     }
@@ -1274,6 +1379,7 @@ def build_workbook(bundle: dict) -> Workbook:
     built[SHEET_DASHBOARD] = dashboard(bundle, built)
 
     sheets = tuple(built[name] for name in SHEET_ORDER)
+    assert_no_missing_value_prose(sheets)
     return Workbook(
         project_id=bundle["project_id"],
         title=bundle.get("title", f"QA workbook — project {bundle['project_id']}"),

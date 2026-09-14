@@ -71,6 +71,32 @@ def test_the_invariants_are_written_down_where_someone_will_read_them():
     assert "ORDER IS NEVER IDENTITY" in text
     assert "DO NOT PROMOTE A PROXY INTO PHYSICAL TRUTH" in text.upper()
     assert "NEVER INVENT THE MISSING HALF" in text.upper()
+    assert "A LENGTH WITHOUT A BASIS IS NOT A LENGTH" in text.upper()
+    assert "BBOX IS NEVER PHYSICAL GEOMETRY" in text.upper()
+
+
+def test_no_module_derives_room_geometry_from_a_bounding_box():
+    """BBOX IS NEVER PHYSICAL GEOMETRY.
+
+    STR-01's 2606 mm "missing wall" was the east edge of a bounding box
+    crossing open space in an L-shaped room. A box may index and localise; the
+    moment it supplies a side, a perimeter, a closure or an area, it is
+    claiming a shape nobody proved.
+    """
+    from engine.bbox import PHYSICAL_USES, BoundingBox, BoundingBoxError
+    box = BoundingBox("STR-01", 0.0, 0.0, 4000.0, 3000.0, fill_ratio=0.676)
+    for use in PHYSICAL_USES:
+        with pytest.raises(BoundingBoxError):
+            box.physical(use)
+    # and the permitted use is still permitted, without ceremony
+    assert box.index_extent()
+
+
+def test_a_raster_outline_may_not_replace_the_retired_bounding_box():
+    """The obvious next move, and the one WSH-01 rules out."""
+    from engine.bbox import RASTER_MAY, RASTER_MAY_NOT
+    assert any("localise" in m for m in RASTER_MAY)
+    assert any("construct" in m for m in RASTER_MAY_NOT)
 
 
 def test_every_module_that_validates_requires_two_evidence_families():

@@ -149,3 +149,92 @@ blocks per m², mortar, connector spacing, lintel logic, waste factor.
 **CALCULATED QUANTITY and PROCUREMENT QUANTITY are always shown separately.**
 A waste or safety allowance is its own approved field, never folded into a
 measurement.
+
+---
+
+## 7 · BBOX IS NEVER PHYSICAL GEOMETRY
+
+A bounding box **contains** a space. It is not the space.
+
+| space | fills its own bounding box |
+|---|---|
+| STR-01 | **67.6 %** |
+| OPEN-01 | 69.4 % |
+| BED-04 | 71.2 % |
+| BED-01 | 77.3 % |
+| BTH-05 | 89.4 % |
+
+STR-01's "2606 mm missing wall" was never a missing wall. STR-01 is L-shaped,
+and the east edge of its box runs through open space the building never
+enclosed. The engine measured a room against a rectangle it is not, then
+reported the difference as a construction fact.
+
+A bounding box may **index, localise and debug**. It may never produce a room
+side, room perimeter, room closure, room area, or a missing-wall conclusion —
+unless that space has been *independently proven rectangular*, which is a
+separate fact with its own evidence (`engine/bbox.py`). A fill ratio is not a
+proof: the missing few percent is exactly where a notch or a stub wall lives.
+
+**And the raster outline is not the replacement.** WSH-01 proves a raster
+region can carry the wrong physical identity. A raster outline localises a
+search and compares against a result. It never constructs one:
+
+```
+WALL BANDS + SUPPORTED PORTALS + PLANAR TOPOLOGY  →  physical space polygon
+```
+
+---
+
+## 8 · EXISTENCE AND GEOMETRY ARE TWO QUESTIONS
+
+*"Is there a door here?"* and *"do we know where its jambs are?"* have
+different answers and different evidence.
+
+`SYMBOL + DOCUMENT` — the schedule says D-04 and a swing symbol is drawn — can
+prove a door **exists** beyond argument while saying nothing about where it
+falls on the wall line. A space-boundary edge is a piece of geometry, so
+`PORTAL_GEOMETRY_STATUS` gates it, not `PORTAL_EXISTENCE_STATUS`. No family
+without coordinates may fix a closure line.
+
+Evidence is also **monotonic**: adding an observation may never lower a status.
+Exact-match combination lookup broke this — a swing arc added to an approved
+`GEOMETRY + SYMBOL` pair produced a three-family set that matched no row and
+fell through to a lower cap. The answer is now the strongest approved
+combination *contained in* the evidence.
+
+---
+
+## 9 · AN OPENING BELONGS TO A NAMED WALL, OR TO NO GROSS LINE
+
+Before an opening may join `HOST_WALL_GROSS_LENGTH` it must say which wall it
+is a hole in: `portal_id`, `host_wall_band_id`, both jambs, the width, the
+closure line and its basis.
+
+An opening floating between two unrelated walls closes a space perfectly well
+and belongs to **no** wall's gross measurement — because there is no wall there
+whose gross line it could be part of. Its host-wall length is
+`NOT_ESTABLISHED`, which is not zero.
+
+An invariant must also know **when it applies**. `HOST_WALL_GROSS =
+MATERIAL_PRESENT + HOSTED OPENINGS` holds for simple hosted openings on
+axis-aligned boundaries measured on one basis. It does not apply to open-plan
+transitions, curved geometry, mixed closure bases, or non-hosted virtual
+boundaries — and reporting `holds: True` for a room the rule never covered is
+a vacuous pass presented as evidence of correctness.
+
+---
+
+## 10 · A STRUCTURED FIELD MAY NOT BECOME PROSE AS `None`
+
+The workbook carried:
+
+> "source-path fragmentation is NOT the cause — only **None** of **None**
+> short marks share a path with a long run"
+
+A missing value had been formatted straight into a sentence, and the sentence
+still read as a confident measurement. The number was absent; the claim was
+not.
+
+A narrative clause is emitted only when every value it needs exists, and the
+export **refuses** a workbook whose narrative columns contain `None`, `null`
+or `NaN`. An absent value belongs in an empty cell.

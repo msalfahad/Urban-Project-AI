@@ -70,10 +70,37 @@ def test_a_solid_stroke_is_not_read_as_dashed():
 
 def test_curves_are_counted_not_linearised():
     """A flattened curve is a different object from a drawn line and must not
-    enter the same pool pretending otherwise."""
+    enter the same pool pretending otherwise.
+
+    A curve is now KEPT — as a curve, in its own list, with its extent — so a
+    door swing arc can corroborate an opening. What it still may never do is
+    become a VectorSegment: nothing turns an arc into line work.
+    """
+    import ast
     src = Path(vs.__file__).read_text()
-    assert "skipped[CURVE]" in src
-    assert "bezier" not in src.lower()
+    assert "skipped[CURVE" in src
+    # The curve branch must not call add() — add() is what makes a segment.
+    tree = ast.parse(src)
+    for node in ast.walk(tree):
+        if not isinstance(node, ast.If):
+            continue
+        test = ast.unparse(node.test)
+        if "kind" in test and ("'c'" in test or '"c"' in test):
+            body = ast.unparse(node.body)
+            assert "add(" not in body, (
+                "a curve was turned into line work: nothing may flatten an "
+                "arc into the segment pool")
+
+
+@pytest.mark.slow
+@pytest.mark.skipif(not PDF.exists(), reason="audited input not present")
+def test_a_curve_is_kept_as_a_curve_and_never_as_a_segment():
+    d = read(str(PDF))
+    assert d.curves, "curves are kept so a swing arc can be read as a symbol"
+    assert d.skipped.get("CURVE"), "and still counted as not-a-line"
+    ids = {c.curve_id for c in d.curves}
+    assert not ids & {s.segment_id for s in d.segments}
+    assert all(c.curve_id.startswith("VC-") for c in d.curves)
 
 
 @pytest.mark.slow

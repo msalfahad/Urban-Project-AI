@@ -46,6 +46,13 @@ HEIGHT = "height"                            # a releasable height for this trad
 TRADE_RULE = "trade_rule"                    # a rule covering this space type
 OPENING_RULE = "opening_rule"                # how THIS trade deducts openings
 SCOPE = "scope"                              # the space is in the job
+# Which stretches of boundary carry skirting at all. SKIRTING_ELIGIBLE_LENGTH
+# is RULE_REQUIRED in the length ontology and nothing derives it: a door
+# threshold, a fitted wardrobe, a kitchen run and a ceramic dado may each
+# remove skirting, and only a signed project rule says which. Until one
+# exists the length is NOT_ESTABLISHED — which is not zero and not the
+# material length.
+SKIRTING_ELIGIBILITY_RULE = "skirting_eligibility_rule"
 
 READY = "READY"
 BLOCKED = "BLOCKED"
@@ -78,9 +85,11 @@ USES: dict[str, Use] = {u.name: u for u in (
         "applicable wall length x a trade height, before any deduction"),
 
     Use("SKIRTING", (SCOPE, REGION_IDENTITY, PHYSICAL_TOPOLOGY,
-                     CLOSED_BOUNDARY, OPENINGS,
+                     CLOSED_BOUNDARY, SKIRTING_ELIGIBILITY_RULE, OPENINGS,
                      TRADE_RULE, OPENING_RULE),
-        "linear metres along applicable boundary, never derived from floor area"),
+        "linear metres along the SKIRTING-ELIGIBLE boundary, never derived "
+        "from floor area and never from the space boundary: the eligible "
+        "length needs a signed rule before it exists at all"),
 
     Use("GROSS_CERAMIC_WALL", (SCOPE, REGION_IDENTITY, PHYSICAL_TOPOLOGY,
                                CLOSED_BOUNDARY, HEIGHT, TRADE_RULE),
@@ -213,7 +222,12 @@ NOT_APPLICABLE = "NOT_APPLICABLE"
 # polygon that is not the room you think it is.
 _BLOCKER_PRIORITY = (
     REGION_IDENTITY, PHYSICAL_TOPOLOGY, SCOPE, CLOSED_BOUNDARY, PHYSICAL_WALL_SPLIT, EXTERNAL_SPLIT,
-    FLOOR_AREA, CEILING_GEOMETRY, WALL_THICKNESS, OPENINGS, HEIGHT, TRADE_RULE,
+    FLOOR_AREA, CEILING_GEOMETRY, WALL_THICKNESS,
+    # Ahead of OPENINGS on purpose. The workbook reported skirting as blocked
+    # on "openings", which reads as "find the doors and skirting is ready".
+    # It is not: without the eligibility rule there is no skirting length to
+    # deduct a door from.
+    SKIRTING_ELIGIBILITY_RULE, OPENINGS, HEIGHT, TRADE_RULE,
     OPENING_RULE,
 )
 

@@ -15,11 +15,9 @@ import argparse
 import hashlib
 import json
 from collections import Counter
-from decimal import Decimal
 from pathlib import Path
 
-from engine.connectivity import (classify_termini, components, cycle_capacity,
-                                 end_caps)
+from engine.connectivity import classify_termini, components, end_caps
 from engine.envelope import classify as classify_envelope
 from engine.envelope import summary as envelope_summary
 from engine.face_eligibility import (assess_components,
@@ -27,12 +25,22 @@ from engine.face_eligibility import (assess_components,
                                      project_release_status)
 from engine.frames import fit as fit_frame
 from engine.geometry import VectorPdfSource, calibrate
-from engine.planar import (attach_holes, build_half_edges, resolve_unbounded,
-                           walk_faces)
 from engine.run_manifest import RunManifest
-from engine.space_boundary import (build_space_boundary, classify_gap,
-                                   material_length_m, space_closes)
+from engine.area_accuracy import (ADJ_HALF_THICKNESS, CLEAR_INTERNAL,
+                                  WALL_CENTRELINE, RoomAccuracy, distribution)
+from engine.bbox import BoundingBox, raster_outline_refusal
+from engine.face_qa import correspond
+from engine.space_boundary import (CLEAR_INTERNAL_FINISH_FACE,
+                                   build_space_boundary, classify_gap,
+                                   closure_grade, material_length_m,
+                                   space_closes)
 from engine.space_boundary import reconcile
+from engine.space_graph import (MATERIAL_WALL_GRAPH, SPACE_BOUNDARY_GRAPH,
+                                build_space_boundary_graph, compare,
+                                assign_spaces, containment,
+                                global_portals, material_edges,
+                                swing_arcs)
+from engine.space_graph import walk as walk_space
 from engine.space_boundary import summary as boundary_summary
 from engine.topology import WallPair
 from engine.vector_source import read
@@ -92,6 +100,24 @@ def side_coverage(bands, axis, fixed, lo, hi, *, tol: float = 350.0):
     return ([tuple(m) for m in merged], gaps, tuple(ids))
 
 
+def host_band_for(bands, axis, fixed, lo, hi, *, tol: float = 350.0,
+                  reach: float = 400.0) -> str:
+    """Which wall band is this gap a hole IN? By geometry, never by position.
+
+    A gap is hosted when a band on the same line runs up to one of its jambs.
+    If nothing does, the gap is between two unrelated walls — it may still
+    close a space, and it belongs to no wall's gross line.
+    """
+    best, bd = "", 1e18
+    for b in bands:
+        if b.axis != axis or abs(b.centreline_mm - fixed) > tol:
+            continue
+        d = min(abs(b.end_mm - lo), abs(b.start_mm - hi))
+        if d <= reach and d < bd:
+            best, bd = b.wall_band_id, d
+    return best
+
+
 def run(pdf: str = PDF) -> dict:
     src_hash = hashlib.sha256(Path(pdf).read_bytes()).hexdigest()[:16]
     sm = json.loads(Path(SPACE_MAP).read_text(encoding="utf-8"))
@@ -127,11 +153,16 @@ def run(pdf: str = PDF) -> dict:
                     consumed=[("frame", f_rec.output_hash)])
 
     # --- 3 wall graph (MATERIAL) ----------------------------------------
-    graph = build(bands_to_pairs(bands))
+    # Edge identity is the BAND ID. The old WP-0001 numbering was positional,
+    # and ORDER IS NEVER IDENTITY: a face could not say which band it walked.
+    mat_edges = material_edges(bands)
+    mat_index = {e.edge_id: e for e in mat_edges}
+    graph = build([e.to_pair() for e in mat_edges])
     noded = node_and_split(graph)
     noded.assert_length_preserved()
     comps = components(noded)
     terms = classify_termini(noded)
+    split_owner = {e.edge_id: e.pair_id for e in noded.edges}
     g_rec = man.add("wall_graph", RUN_ID, noded.health(),
                     consumed=[("wall_extraction", w_rec.output_hash)])
 
@@ -169,50 +200,78 @@ def run(pdf: str = PDF) -> dict:
         complete = sum(1 for d in sides.values() if d["coverage_pct"] >= 95)
         for name, d in sides.items():
             for a, b in d["gaps"]:
+                # §12 — the host is the band whose run this gap interrupts,
+                # found by geometry on THIS side, not by list position.
+                host = host_band_for(bands, d["axis"], d["fixed"], a, b)
                 p = classify_gap(
                     sid, name, d["axis"], d["fixed"], a, b, caps=caps,
                     bands_face_each_other=bool(d["covered"]),
-                    other_sides_complete=complete >= 3)
+                    other_sides_complete=complete >= 3,
+                    host_wall_band_id=host,
+                    closure_basis=CLEAR_INTERNAL_FINISH_FACE)
                 portals.append(p)
         gap_maps[sid] = {n: {"coverage_pct": d["coverage_pct"],
                              "gaps_mm": [round(b - a) for a, b in d["gaps"]]}
                          for n, d in sides.items()}
         boundaries[sid] = build_space_boundary(
             sid, sides, [p for p in portals if p.space_id == sid])
-    o_rec = man.add("opening_detection", RUN_ID,
-                    [p.record() for p in portals],
+    # The per-space detector above can only find doors on the four sides a
+    # bounding box happens to have. This one walks WALL LINES across the whole
+    # sheet and knows nothing about rooms — §1 and §2 in one step.
+    arcs = swing_arcs(drawing)
+    comp_of = {}
+    for c in comps:
+        for eid in c.edge_ids:
+            band = split_owner.get(eid)
+            if band:
+                comp_of[band] = c.component_id
+    sheet_portals = global_portals(
+        bands, caps=caps, arcs=arcs, component_of=comp_of,
+        closure_basis=CLEAR_INTERNAL_FINISH_FACE)
+    all_portals = portals + sheet_portals
+    o_rec = man.add("portal_detection", RUN_ID,
+                    [p.record() for p in all_portals],
                     consumed=[("wall_graph", g_rec.output_hash)])
 
-    # --- 5 topology: MATERIAL faces, then SPACE BOUNDARY faces ------------
-    material = attach_holes(resolve_unbounded(walk_faces(
-        build_half_edges(noded),
-        edge_status={e.edge_id: e.validation_status for e in noded.edges})))
-
-    # The space-boundary graph adds a zero-material edge across each probable
-    # portal. It is a SEPARATE graph; the material graph is untouched.
-    virtual = [p for p in portals if p.may_close_a_space]
-    sb_pairs = bands_to_pairs(bands) + [
-        WallPair(f"VP-{i:04d}", p.axis, p.fixed_mm - 1.0, p.fixed_mm + 1.0,
-                 p.start_mm, p.end_mm)
-        for i, p in enumerate(virtual, 1)]
-    sb_noded = node_and_split(build(sb_pairs))
-    space_faces = attach_holes(resolve_unbounded(walk_faces(
-        build_half_edges(sb_noded))))
-    sb_rec = man.add("space_boundary_graph", RUN_ID, sb_noded.health(),
+    # --- 5 topology: the SAME walker over TWO graphs ----------------------
+    # §4 — the face walker is not touched. Only the input graph differs, which
+    # is the entire experiment: if rooms close on the space graph and stay open
+    # on the material graph, the portal closures are what closed them.
+    material_res, material_faces = walk_space(
+        noded, mat_index, graph_type=MATERIAL_WALL_GRAPH, run_id=RUN_ID)
+    sb_noded, sb_index, portal_refusals = build_space_boundary_graph(
+        bands, all_portals)
+    space_res, space_face_list = walk_space(
+        sb_noded, sb_index, graph_type=SPACE_BOUNDARY_GRAPH, run_id=RUN_ID)
+    sb_rec = man.add("space_boundary_graph", RUN_ID,
+                     {"graph": sb_noded.health(),
+                      "edges": len(sb_index),
+                      "portal_edges_admitted": sum(
+                          1 for e in sb_index.values() if e.is_virtual),
+                      "portal_edges_refused": portal_refusals},
                      consumed=[("wall_graph", g_rec.output_hash),
-                               ("opening_detection", o_rec.output_hash)])
-    t_rec = man.add("topology", RUN_ID,
-                    {"material": material.health(),
-                     "space_boundary": space_faces.health()},
-                    consumed=[("wall_graph", g_rec.output_hash),
-                              ("space_boundary_graph", sb_rec.output_hash)])
+                               ("portal_detection", o_rec.output_hash)])
+    man.add("topology", RUN_ID,
+            {"material": material_res.health()},
+            consumed=[("wall_graph", g_rec.output_hash)])
+    man.add("space_topology", RUN_ID,
+            {"space_boundary": space_res.health(),
+             "faces": [f.record() for f in space_face_list]},
+            consumed=[("space_boundary_graph", sb_rec.output_hash)])
+
+    # §6 — identity AFTER geometry. The faces above were generated without any
+    # raster input; this is the first moment the two representations meet.
+    space_correspondence = correspond(space_face_list, regions)
+    # Which face a labelled region actually falls INSIDE — containment, not
+    # box overlap. Overlap put every room inside the 989 m2 building face.
+    face_for_space = assign_spaces(space_face_list, regions)
 
     # --- envelope --------------------------------------------------------
-    unbounded_edges = {e for f in material.faces
+    unbounded_edges = {e for f in material_res.faces
                        if f.kind == "UNBOUNDED_FACE"
                        for e in f.source_wall_edge_ids}
     bounded_counts: dict = {}
-    for f in material.bounded():
+    for f in material_res.bounded():
         for e in f.source_wall_edge_ids:
             bounded_counts[e] = bounded_counts.get(e, 0) + 1
     env = classify_envelope(noded.edges, unbounded_edge_ids=unbounded_edges,
@@ -223,23 +282,80 @@ def run(pdf: str = PDF) -> dict:
                                  "length_difference_mm"])
 
     # §8 — every band extension audited against the supported portals.
-    ext_audit = audit_extensions(bands, portals)
+    ext_audit = audit_extensions(bands, all_portals)
 
-    # How much of each region actually fills its own bounding box. A room that
-    # fills 68% of its bbox is L-shaped, and using the bbox as its expected
-    # boundary invents sides that were never meant to be walls.
+    # How much of each region actually fills its own bounding box, and the
+    # region's own staircase perimeter. The fill ratio is why the bbox model is
+    # retired: a room that fills 68% of its box is L-shaped, and the box's
+    # sides are walls the building never had.
     import numpy as np
-    fill = {}
+    fill, raster_perimeter_m = {}, {}
     for sid, r in by_space.items():
         rid = next((k for k, v in regions.items()
                     if v["space_id"] == sid), None)
         if rid is None:
             continue
-        ys, xs = np.where(seg.labels == rid)
+        mask = seg.labels == rid
+        ys, xs = np.where(mask)
         if len(xs) == 0:
             continue
         bbox_px = (xs.max() - xs.min() + 1) * (ys.max() - ys.min() + 1)
         fill[sid] = round(len(xs) / bbox_px, 3)
+        # Boundary pixel edges x pixel size. Exact for axis-aligned outlines,
+        # which is what AR-00's rooms are; it would overstate a diagonal.
+        pad = np.pad(mask, 1)
+        edges = (int(np.sum(pad[1:-1, 1:-1] & ~pad[:-2, 1:-1]))
+                 + int(np.sum(pad[1:-1, 1:-1] & ~pad[2:, 1:-1]))
+                 + int(np.sum(pad[1:-1, 1:-1] & ~pad[1:-1, :-2]))
+                 + int(np.sum(pad[1:-1, 1:-1] & ~pad[1:-1, 2:])))
+        raster_perimeter_m[sid] = round(edges * px / 1000, 2)
+
+    # A bounding box per space, as an INDEX. `engine.bbox` refuses to let any
+    # of these supply a room side, perimeter, closure or area.
+    boxes = {sid: BoundingBox(sid, *r["bbox_mm"], fill_ratio=fill.get(sid))
+             for sid, r in by_space.items()}
+
+    # §7 / §22 — per-room accuracy, against every reference that exists. The
+    # site benchmark is sealed and is NOT read here; where it is absent the
+    # field stays None rather than becoming a comparison that did not happen.
+    accuracy = []
+    # Every space the geometry produced a face for, PLUS the named controls —
+    # so a control that got no face appears as a row saying exactly that,
+    # rather than dropping out of the table and out of the average with it.
+    for sid in sorted(set(CONTROLS) | set(HARD) | set(face_for_space)):
+        if sid not in by_space:
+            continue
+        fid = face_for_space.get(sid, "")
+        face = next((f for f in space_face_list if f.space_face_id == fid),
+                    None)
+        # Bring the centreline face onto the raster's clear-internal basis, so
+        # the percentage is accuracy rather than a basis difference. The
+        # thickness comes from the face's own physical edges.
+        adj = adj_area = None
+        if face is not None:
+            th = [sb_index[e].separation_mm for e in face.physical_wall_edge_ids
+                  if e in sb_index and sb_index[e].separation_mm]
+            if th:
+                adj = face.perimeter_m * (sum(th) / len(th) / 2) / 1000
+                adj_area = face.area_m2 - adj
+        accuracy.append(RoomAccuracy(
+            space_id=sid, space_face_id=fid,
+            measurement_basis="SPACE_BOUNDARY_LENGTH / VECTOR_PLANAR_FACE",
+            vector_area_m2=(face.area_m2 if face else None),
+            vector_perimeter_m=(face.perimeter_m if face else None),
+            raster_area_m2=by_space[sid]["area_m2"],
+            raster_perimeter_m=raster_perimeter_m.get(sid),
+            printed_area_m2=None, site_area_m2=None,
+            vector_basis=WALL_CENTRELINE, reference_basis=CLEAR_INTERNAL,
+            vector_area_basis_adjusted_m2=adj_area,
+            basis_adjustment_m2=adj,
+            basis_adjustment_method=(ADJ_HALF_THICKNESS if adj else ""),
+            why=("a vector planar face on the SPACE_BOUNDARY_GRAPH, compared "
+                 "against the raster region AFTER it was generated"
+                 if face else
+                 "no vector face was generated for this space: there is "
+                 "nothing to compare, and the raster outline may not stand in "
+                 "for one — " + raster_outline_refusal(sid))))
 
     man.rule_set_versions = {"23010_ceramic": "1.0", "23010_plaster": "1.0"}
     man.measurement_basis_version = "LENGTH_ONTOLOGY_V1"
@@ -248,6 +364,10 @@ def run(pdf: str = PDF) -> dict:
     return {
         "manifest": man.record(),
         "frame": frame.record(),
+        # Measured facts the Exceptions narrative needs. Absent, they were
+        # being formatted into sentences as `None` — see §18.
+        "source": {"path_fragmentation": drawing.path_fragmentation()},
+        "end_caps": {"found": len(caps)},
         "wall_extraction": {**band_summary(bands, rejections),
                             "single_face_candidates": len(singles)},
         "graph": noded.health(),
@@ -264,16 +384,34 @@ def run(pdf: str = PDF) -> dict:
                        {"failed": [], "not_measured": []}, elig)},
         "gap_map": gap_maps,
         "portals": {
-            "total": len(portals),
-            "by_status": dict(Counter(p.status for p in portals)),
-            "by_gap_class": dict(Counter(p.gap_class for p in portals)),
-            "detail": [p.record() for p in portals],
+            "total": len(all_portals),
+            "per_space_detector": len(portals),
+            "whole_sheet_detector": len(sheet_portals),
+            "swing_arcs_found": len(arcs),
+            "by_status": dict(Counter(p.status for p in all_portals)),
+            "by_gap_class": dict(Counter(p.gap_class for p in all_portals)),
+            # §11 — existence and geometry answered separately.
+            "by_existence_status": dict(Counter(
+                p.existence_status for p in all_portals)),
+            "by_geometry_status": dict(Counter(
+                p.geometry_status for p in all_portals)),
+            "exists_but_geometry_unresolved": sum(
+                1 for p in all_portals if p.exists and not p.geometry_known),
+            # §12 — how many openings know which wall they are a hole in.
+            "with_named_host_wall": sum(
+                1 for p in all_portals
+                if p.hosted and p.hosted.has_host),
+            "detail": [p.record() for p in all_portals],
         },
         "space_boundaries": {
             sid: {**boundary_summary(iv, [p for p in portals
                                           if p.space_id == sid]),
+                  # §8 — "closes" was always a statement about the MODEL. The
+                  # grade says which kind of closure this is.
+                  **closure_grade(iv, vector_face_id=face_for_space.get(sid, "")),
                   "closes": space_closes(iv),
                   "bbox_fill_ratio": fill.get(sid),
+                  "bbox": boxes[sid].record() if sid in boxes else None,
                   "expected_boundary_caveat": (
                       None if (fill.get(sid) or 1.0) >= 0.85 else
                       f"this region fills only {100*fill.get(sid):.0f}% of its "
@@ -284,13 +422,68 @@ def run(pdf: str = PDF) -> dict:
         "union_extension_audit": ext_audit,
         "length_reconciliation": {
             sid: reconcile(iv) for sid, iv in boundaries.items()},
-        "material_faces": material.health(),
-        "space_boundary_faces": space_faces.health(),
+        # §4 — the two graphs side by side, walked by the same engine.
+        "graph_comparison": compare(material_res, material_faces,
+                                    space_res, space_face_list),
+        "space_boundary_graph": {
+            "graph": sb_noded.health(),
+            "edges": len(sb_index),
+            "physical_edges": sum(1 for e in sb_index.values()
+                                  if not e.is_virtual),
+            "portal_edges": sum(1 for e in sb_index.values() if e.is_virtual),
+            "portal_edges_refused": portal_refusals,
+            "edge_sample": [e.record() for e in list(sb_index.values())[:40]],
+        },
+        "material_faces": material_res.health(),
+        "space_boundary_faces": space_res.health(),
         "envelope": envelope_summary(env),
-        "largest_faces": [f.record() for f in sorted(
-            material.bounded(), key=lambda f: -f.area_m2)[:15]],
-        "space_boundary_largest_faces": [f.record() for f in sorted(
-            space_faces.bounded(), key=lambda f: -f.area_m2)[:15]],
+        "largest_faces": [f.record() for f in material_faces[:15]],
+        "space_boundary_largest_faces": [f.record()
+                                         for f in space_face_list[:15]],
+        # §6 — established AFTER the geometry, and allowed to disagree.
+        "space_face_correspondence": [c.record()
+                                      for c in space_correspondence],
+        # What each generated face actually encloses, by containment.
+        "space_face_containment": containment(space_face_list, regions),
+        # §7 / §22 — per room, with the distribution and no acceptance bar.
+        "per_room_accuracy": {
+            "rooms": [a.record() for a in accuracy],
+            "distribution": distribution(accuracy),
+        },
+        # §9 / §10 — the two controls that must NOT be forced.
+        "irregular_and_open_plan_controls": {
+            "STR-01": {
+                "role": "FIRST_REAL_CONCAVE_CONTROL",
+                "vector_face_id": face_for_space.get("STR-01", ""),
+                "recovered": bool(face_for_space.get("STR-01")),
+                "bbox_fill_ratio": fill.get("STR-01"),
+                "expected_shape": "NONE — no rectangle is expected of it",
+                "why": ("the 2606 mm 'missing wall' was the east edge of a "
+                        "bounding box crossing open space in an L-shaped room. "
+                        "That wall is NOT repaired. The test is whether the "
+                        "space boundary graph produces the concave polygon on "
+                        "its own"
+                        if not face_for_space.get("STR-01") else
+                        "the space boundary graph produced a face for STR-01 "
+                        "without being told what shape to expect"),
+                "raster_outline_rule": raster_outline_refusal("STR-01"),
+            },
+            "OPEN-01": {
+                "role": "OPEN_PLAN_CONTROL",
+                "vector_face_id": face_for_space.get("OPEN-01", ""),
+                "one_physical_space": True,
+                "functional_zones_creating_faces": 0,
+                "open_plan_edges_refused_entry": sum(
+                    1 for r in portal_refusals
+                    if r["refused"].startswith("OPEN_PLAN")),
+                "why": ("one physical open-plan space with dining, saloon and "
+                        "circulation zones inside it. A functional zone "
+                        "carries zero material AND zero host wall, and no "
+                        "zone boundary was admitted to the physical topology: "
+                        "a face invented between saloon and dining would be "
+                        "fiction"),
+            },
+        },
         "positive_control_verdicts": {
             sid: {
                 "material_wall": (
@@ -298,6 +491,8 @@ def run(pdf: str = PDF) -> dict:
                     f" of 4 sides at 100% physical wall"),
                 "gaps_mm": [g for v in gap_maps[sid].values()
                             for g in v["gaps_mm"]],
+                **closure_grade(boundaries[sid],
+                                vector_face_id=face_for_space.get(sid, "")),
                 "space_topology_closes": space_closes(boundaries[sid]),
                 "material_length_m": round(
                     material_length_m(boundaries[sid]), 2),

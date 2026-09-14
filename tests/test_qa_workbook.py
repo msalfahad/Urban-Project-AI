@@ -9,6 +9,7 @@ contract is enforced here, not merely written in a docstring.
 from __future__ import annotations
 
 import ast
+from collections import OrderedDict
 import inspect
 from pathlib import Path
 
@@ -421,18 +422,33 @@ def test_the_dashboard_carries_two_statuses_not_one():
     assert dash["FINAL_BOQ_STATUS"] == BLOCKED_FOR_FINAL_BOQ
 
 
-def test_the_dashboard_reports_four_geometry_layers_separately():
+def test_the_dashboard_reports_the_geometry_layers_separately():
     """"Geometry ready = 36 / unresolved = 0" was true only of the first layer
     and was printed as though it were the last."""
     wb = build_workbook(dict(BUNDLE, geometry_layers={
         "RASTER_REGION_AVAILABLE": 36, "WALL_GEOMETRY_AVAILABLE": 36,
         "REGION_IDENTITY_VALIDATED": 35, "PHYSICAL_TOPOLOGY_VALIDATED": 33,
+        "VECTOR_SPACE_FACES_GENERATED": 19, "VECTOR_SPACE_FACE_VALIDATED": 5,
         "validated_physical_spaces": 33}))
     dash = {r["measure"]: r["value"] for r in wb.by_name()["Dashboard"].rows}
-    assert dash["Raster region available"] == 36
-    assert dash["Region identity validated"] == 35
-    assert dash["Physical topology validated"] == 33
+    assert dash["RASTER_REGION_AVAILABLE"] == 36
+    assert dash["RASTER_REGION_IDENTITY_VALIDATED"] == 35
+    assert dash["RASTER_SPACE_COMPLETENESS_VALIDATED"] == 33
     assert dash["VALIDATED PHYSICAL SPACES"] == 33
+
+
+def test_a_geometry_kpi_says_which_geometry_it_means():
+    """§20 — "physical topology validated = 33" was read as 33 reconstructed
+    vector faces. Five vector faces enclose exactly one labelled room."""
+    wb = build_workbook(dict(BUNDLE, geometry_layers={
+        "RASTER_REGION_AVAILABLE": 36, "PHYSICAL_TOPOLOGY_VALIDATED": 33,
+        "VECTOR_SPACE_FACES_GENERATED": 19, "VECTOR_SPACE_FACE_VALIDATED": 5,
+        "validated_physical_spaces": 33}))
+    rows = {r["measure"]: r for r in wb.by_name()["Dashboard"].rows}
+    assert rows["VECTOR_SPACE_FACE_VALIDATED"]["value"] == 5
+    assert rows["VECTOR_SPACE_FACES_GENERATED"]["value"] == 19
+    assert "segmentation fact" in rows[
+        "RASTER_SPACE_COMPLETENESS_VALIDATED"]["note"]
 
 
 def test_a_workbook_with_human_labels_says_so_on_the_front_page():
@@ -552,3 +568,73 @@ def test_the_revision_sheet_says_there_is_no_baseline_not_no_changes():
 def test_manual_entries_are_declared_validation_evidence_only():
     wb = build_workbook(BUNDLE)
     assert any("VALIDATION EVIDENCE ONLY" in w for w in wb.warnings)
+
+
+# --- §18 a structured field may not become prose as `None` -------------------
+
+def test_a_narrative_cell_carrying_None_refuses_the_export():
+    """The workbook read: 'only None of None short marks share a path with a
+    long run'. The number was absent; the claim was not."""
+    from engine.qa_workbook import (QaWorkbookError, Sheet,
+                                    assert_no_missing_value_prose)
+    sh = Sheet(name="X", columns=("cause",), rows=(
+        OrderedDict(cause="fragmentation is NOT the cause — only None of "
+                          "None short marks share a path with a long run"),))
+    with pytest.raises(QaWorkbookError, match="EMPTY CELL"):
+        assert_no_missing_value_prose([sh])
+
+
+def test_a_narrative_cell_with_real_values_exports():
+    from engine.qa_workbook import Sheet, assert_no_missing_value_prose
+    sh = Sheet(name="X", columns=("cause",), rows=(
+        OrderedDict(cause="only 993 of 55144 short marks share a path with a "
+                          "long run"),))
+    assert_no_missing_value_prose([sh])
+
+
+def test_an_empty_cell_is_fine_because_it_claims_nothing():
+    from engine.qa_workbook import Sheet, assert_no_missing_value_prose
+    sh = Sheet(name="X", columns=("cause",), rows=(OrderedDict(cause=None),))
+    assert_no_missing_value_prose([sh])
+
+
+# --- §15 quantity stage and measurement basis are different columns ---------
+
+def test_the_coverage_sheet_carries_both_stage_and_basis():
+    from engine.qa_workbook import takeoff_coverage
+    sh = takeoff_coverage([
+        {"use": "GROSS_PLASTER", "quantity_stage": "GROSS",
+         "measurement_basis": "HOST_WALL_GROSS_LENGTH", "applicable": 23,
+         "ready": 0, "blocked": 23, "not_applicable": 13,
+         "commonest_blocker": "height", "quantity_released": 0},
+        {"use": "SKIRTING", "quantity_stage": "DIRECT",
+         "measurement_basis": "SKIRTING_ELIGIBLE_LENGTH (RULE_REQUIRED)",
+         "applicable": 23, "ready": 0, "blocked": 23, "not_applicable": 13,
+         "commonest_blocker": "skirting_eligibility_rule",
+         "quantity_released": 0}])
+    rows = {r["use"]: r for r in sh.rows}
+    assert rows["GROSS_PLASTER"]["quantity_stage"] == "GROSS"
+    assert rows["GROSS_PLASTER"]["measurement_basis"] == (
+        "HOST_WALL_GROSS_LENGTH")
+    # §16 — skirting is not blocked on openings. Without the eligibility rule
+    # there is no skirting length for a door to be deducted from.
+    assert rows["SKIRTING"]["commonest_blocker"] == "skirting_eligibility_rule"
+    assert "RULE_REQUIRED" in rows["SKIRTING"]["measurement_basis"]
+
+
+# --- §19 a face must say which graph produced it ----------------------------
+
+def test_topology_qa_labels_every_face_with_its_graph_and_run():
+    from engine.qa_workbook import topology_qa
+    sh = topology_qa(
+        faces=[{"space_face_id": "SF-V2-0002",
+                "graph_type": "SPACE_BOUNDARY_GRAPH", "topology_run_id": "V2",
+                "component_id": "FACE-0003", "area_m2": 33.285,
+                "perimeter_m": 28.299, "geometry_status": "CLOSED"}],
+        containment=[{"space_face_id": "SF-V2-0002",
+                      "labelled_regions_contained": 1,
+                      "verdict": "SINGLE_ROOM_CANDIDATE", "portal_edges": 1}])
+    row = sh.rows[0]
+    assert row["graph_type"] == "SPACE_BOUNDARY_GRAPH"
+    assert row["topology_run_id"] == "V2"
+    assert row["containment_verdict"] == "SINGLE_ROOM_CANDIDATE"

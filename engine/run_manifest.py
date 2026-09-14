@@ -32,8 +32,15 @@ SUPERSEDED = "SUPERSEDED"
 LINEAGE_CLASSES = (CURRENT_RUN, PRIOR_RUN, SUPERSEDED)
 
 # The stages a workbook depends on, in the order each consumes the last.
-STAGES = ("frame", "wall_extraction", "wall_graph", "opening_detection",
-          "space_boundary_graph", "topology", "semantic", "release_matrix")
+#
+# `portal_detection` and `space_topology` are named separately from
+# `wall_graph` and `topology` on purpose. A space face is produced by a
+# DIFFERENT GRAPH from a material face, and a workbook that cannot tell which
+# stage a face came from can show a stale material-graph face as the new space
+# topology result without anything looking wrong.
+STAGES = ("frame", "wall_extraction", "wall_graph", "portal_detection",
+          "opening_detection", "space_boundary_graph", "space_topology",
+          "topology", "semantic", "release_matrix")
 
 
 class ManifestError(RuntimeError):

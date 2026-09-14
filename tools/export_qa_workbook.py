@@ -104,6 +104,23 @@ USE_TRADE = {
 }
 
 
+def _measurement_basis(use: str) -> str:
+    """Which LENGTH BASIS this use consumes, from the ontology itself.
+
+    Read from `engine.lengths.USE_BASIS` rather than restated here, so the
+    workbook cannot drift from the engine: the sheet said SKIRTING was a
+    DIRECT quantity blocked on openings, while the ontology said its length is
+    RULE_REQUIRED and does not exist yet.
+    """
+    from engine.lengths import (SKIRTING_ELIGIBLE_LENGTH, USE_BASIS)
+    basis = USE_BASIS.get(use)
+    if basis is None:
+        return "NOT_ESTABLISHED"
+    if basis == SKIRTING_ELIGIBLE_LENGTH:
+        return f"{basis} (RULE_REQUIRED — NOT_ESTABLISHED)"
+    return basis
+
+
 def _trade_rule_covers(space, use: str) -> bool:
     """Does THIS TRADE's signed E27 project rule cover this room type?
 
@@ -248,12 +265,24 @@ def _e31a() -> dict:
 
 
 def _faces() -> list:
-    """Faces from the CURRENT run. An older E31A file is not consulted."""
-    return _run().get("largest_faces", [])
+    """Faces from the CURRENT run, BOTH graphs, each labelled with its own.
+
+    Material-graph faces and space-boundary faces answer different questions.
+    They appear together so a reader can compare them, and never without
+    graph_type — an unlabelled material face would read as the space result.
+    """
+    cur = _run()
+    return (list(cur.get("space_boundary_largest_faces", []))
+            + list(cur.get("largest_faces", [])))
 
 
 def _face_correspondence() -> list:
-    return _run().get("correspondence", [])
+    return _run().get("space_face_correspondence",
+                      _run().get("correspondence", []))
+
+
+def _face_containment() -> list:
+    return _run().get("space_face_containment", [])
 
 
 def _space_model(spaces, wall_rows, areas) -> SpaceModel:
@@ -450,15 +479,28 @@ def bundle(space_map_path: Path = DEFAULT_SPACE_MAP,
                 "share_of_length_in_major_components_pct": None,
             },
             "noded_graph": cur["graph"],
-            "source": {"path_fragmentation": {
-                "short_segments": None,
-                "short_in_a_path_that_also_has_a_long_run": None}},
-            "end_caps": {"found": None},
+            # Measured this run. They used to be None and were formatted
+            # into the Exceptions prose as the word "None" — §18.
+            "source": cur.get("source", {}),
+            "end_caps": cur.get("end_caps", {}),
             "stitching": {},
-            "e31a_gate": {"ready_for_e31a": False,
-                          "verdict": "NOT READY",
-                          "failed": ["POSITIVE_CONTROLS"],
-                          "not_measured": []},
+            # §17 — the gate reports LIVE structured state about the space
+            # topology run, so the Exceptions sheet can no longer say planar
+            # extraction has not started after it has.
+            "e31a_gate": {
+                "ready_for_e31a": False,
+                "verdict": "NOT READY",
+                "failed": ["POSITIVE_CONTROLS"],
+                "not_measured": [],
+                "space_boundary_run": bool(
+                    cur.get("manifest", {}).get("stages", {})
+                    .get("space_topology")),
+                "space_boundary_bounded_faces": cur.get(
+                    "space_boundary_faces", {}).get("bounded_faces"),
+                "single_room_faces": sum(
+                    1 for c in cur.get("space_face_containment", ())
+                    if c.get("verdict") == "SINGLE_ROOM_CANDIDATE"),
+            },
         }
         run_id = cur["manifest"]["stages"]["wall_graph"]["run_id"]
         findings = from_graph_diagnostic(
@@ -578,6 +620,12 @@ def bundle(space_map_path: Path = DEFAULT_SPACE_MAP,
                     st.primary_blocker, 0) + 1
         coverage.append({
             "use": use,
+            # §15 — two different facts, two columns. Where a number sits in
+            # the deduction chain is not what was measured to get it.
+            "quantity_stage": ("GROSS" if use.startswith("GROSS_")
+                               else "NET" if use.startswith("NET_")
+                               else "DIRECT"),
+            "measurement_basis": _measurement_basis(use),
             "basis": ("GROSS" if use.startswith("GROSS_")
                       else "NET" if use.startswith("NET_") else "DIRECT"),
             "applicable": ready + blocked, "ready": ready, "blocked": blocked,
@@ -623,7 +671,17 @@ def bundle(space_map_path: Path = DEFAULT_SPACE_MAP,
         "spaces": spaces,
         "space_model": model,
         "room_counts": model.room_counts(),
-        "geometry_layers": model.geometry_summary(),
+        # §20 — the vector-space counts sit beside the raster ones, so
+        # "physical topology validated = 33" can no longer be read as 33
+        # reconstructed vector faces.
+        "geometry_layers": {
+            **model.geometry_summary(),
+            "VECTOR_SPACE_FACES_GENERATED": _run().get(
+                "space_boundary_faces", {}).get("bounded_faces"),
+            "VECTOR_SPACE_FACE_VALIDATED": sum(
+                1 for c in _face_containment()
+                if c.get("verdict") == "SINGLE_ROOM_CANDIDATE"),
+        },
         "zones": [z.record() for z in model.zones],
         "quantities": {s["space_id"]: {
             "floor_area_m2": s["floor_area_m2"],
@@ -662,6 +720,7 @@ def bundle(space_map_path: Path = DEFAULT_SPACE_MAP,
         "assemblies": [],
         "faces": _faces(),
         "face_correspondence": _face_correspondence(),
+        "face_containment": _face_containment(),
         "manifest": _run().get("manifest"),
         "wall_bands": _run().get("band_sample", []),
         "wall_rejections": _run().get("rejection_sample", []),

@@ -143,12 +143,47 @@ class VectorSegment:
                 "angle_deg": round(self.angle_deg, 1)}
 
 
+@dataclass(frozen=True)
+class VectorCurve:
+    """A bezier or quad the page draws, kept as its extent.
+
+    Curves were counted and discarded because a flattened curve must never
+    join the line pool pretending to be a drawn line. They are still not
+    linearised — but a door swing arc is a SYMBOL, and a symbol that is never
+    read cannot corroborate anything. So the arc is kept as what it is.
+    """
+
+    curve_id: str
+    path_id: str
+    kind: str
+    x0_mm: float
+    y0_mm: float
+    x1_mm: float
+    y1_mm: float
+    stroke_width_pt: float = 0.0
+
+    @property
+    def centre_mm(self) -> tuple[float, float]:
+        return ((self.x0_mm + self.x1_mm) / 2, (self.y0_mm + self.y1_mm) / 2)
+
+    @property
+    def span_mm(self) -> float:
+        return max(abs(self.x1_mm - self.x0_mm), abs(self.y1_mm - self.y0_mm))
+
+    def record(self) -> dict:
+        return {"curve_id": self.curve_id, "path_id": self.path_id,
+                "kind": self.kind, "span_mm": round(self.span_mm, 1),
+                "centre_mm": [round(v, 1) for v in self.centre_mm],
+                "stroke_width_pt": self.stroke_width_pt}
+
+
 @dataclass
 class VectorDrawing:
     """Everything the PDF page contains, with nothing dropped."""
 
     paths: list[VectorPath] = field(default_factory=list)
     segments: list[VectorSegment] = field(default_factory=list)
+    curves: list = field(default_factory=list)
     skipped: dict = field(default_factory=dict)
     page_rotation: int = 0
 
@@ -254,6 +289,7 @@ def read(path: str, page: int = 0, *, mm_per_pt: float = MM_PER_PT
     out = VectorDrawing(page_rotation=pg.rotation)
     skipped: Counter = Counter()
     n = 0
+    nc = 0
 
     for i, d in enumerate(pg.get_drawings()):
         ptype = STROKE if d.get("type") == "s" else FILL
@@ -307,10 +343,19 @@ def read(path: str, page: int = 0, *, mm_per_pt: float = MM_PER_PT
                 add(j, r.x0, r.y1, r.x1, r.y1)
                 add(j, r.x0, r.y0, r.x0, r.y1)
                 add(j, r.x1, r.y0, r.x1, r.y1)
-            elif kind == "c":
-                skipped[CURVE] += 1
-            elif kind == "qu":
-                skipped[QUAD] += 1
+            elif kind in ("c", "qu"):
+                skipped[CURVE if kind == "c" else QUAD] += 1
+                pts = [q for q in item[1:] if hasattr(q, "x")]
+                if pts:
+                    xs = [q.x * mm_per_pt for q in pts]
+                    ys = [q.y * mm_per_pt for q in pts]
+                    nc += 1
+                    out.curves.append(VectorCurve(
+                        curve_id=f"VC-{nc:06d}", path_id=vp.path_id,
+                        kind=CURVE if kind == "c" else QUAD,
+                        x0_mm=min(xs), y0_mm=min(ys),
+                        x1_mm=max(xs), y1_mm=max(ys),
+                        stroke_width_pt=vp.stroke_width_pt))
             else:
                 skipped[f"UNHANDLED_{kind}"] += 1
 

@@ -160,6 +160,58 @@ class Finding:
                 "superseded_because": self.superseded_because}
 
 
+# §18 — A STRUCTURED FIELD MUST NEVER BE FORMATTED INTO PROSE AS `None`.
+#
+# The workbook carried: "source-path fragmentation is NOT the cause — only
+# None of None short marks share a path with a long run". A missing value had
+# been f-stringed straight into a sentence, and the sentence still read as a
+# confident finding. The number was absent; the claim was not.
+#
+# So a narrative clause is emitted only when every value it needs exists, and
+# when none of them do the finding says the cause is not established instead
+# of asserting one.
+
+
+def _clauses(*parts, lead: str = "", missing: str = "") -> str:
+    """Join only the clauses whose values are all present.
+
+    `parts` are (template, values) pairs. A clause with any None value is
+    dropped whole — a half-filled sentence is worse than a missing one,
+    because it still reads as a measurement.
+    """
+    kept = [t.format(**v) for t, v in parts
+            if all(x is not None for x in v.values())]
+    if not kept:
+        return missing or "not established in this diagnostic run."
+    return " ".join(([lead] if lead else []) + kept)
+
+
+# What the E31A gate actually blocks, stated from live structured state.
+# "SPACE_BOUNDARY_E31A_NOT_RUN" is the only phrasing allowed for the case
+# where the space-boundary run is genuinely absent.
+SPACE_BOUNDARY_E31A_NOT_RUN = "SPACE_BOUNDARY_E31A_NOT_RUN"
+
+
+def _e31a_effect(gate: dict) -> str:
+    """The real consequence of a failing gate, on the current engine state."""
+    if not gate.get("space_boundary_run", False):
+        return (f"{SPACE_BOUNDARY_E31A_NOT_RUN}. The face walker exists and "
+                "has run diagnostically on the material wall graph; no run "
+                "over the SPACE_BOUNDARY_GRAPH is recorded in this analysis "
+                "state, so no space face can be read from it.")
+    faces = gate.get("space_boundary_bounded_faces")
+    single = gate.get("single_room_faces")
+    if faces is None or single is None:
+        return ("The space-boundary run is recorded but its face counts are "
+                "not in this diagnostic, so what it produced is NOT "
+                "established here.")
+    return (f"Space-boundary E31A produced {faces} bounded faces, of which "
+            f"{single} enclose exactly one labelled room. The remainder are "
+            "faces spanning several rooms or holding none, so a per-room "
+            "polygon does not yet exist for most spaces and no net quantity "
+            "may be built on them.")
+
+
 def from_graph_diagnostic(diagnostic: dict, *, run_id: str,
                           reference: str, space_count: int,
                           use_count: int) -> list[Finding]:
@@ -196,14 +248,19 @@ def from_graph_diagnostic(diagnostic: dict, *, run_id: str,
                    + (f"; {major} of them hold {share}% of the wall length."
                       if share is not None else
                       f", {major} of which contain closed cycles.")),
-            cause=(f"Measured this run: source-path fragmentation is NOT the "
-                   f"cause — only "
-                   f"{frag.get('short_in_a_path_that_also_has_a_long_run')} of "
-                   f"{frag.get('short_segments')} short marks share a path with "
-                   f"a long run. {caps.get('found')} wall end caps were "
-                   "recovered, a representation the pairing engine previously "
-                   "had no way to express, and a wall end it cannot see is a "
-                   "break in the graph."),
+            cause=_clauses(
+                ("source-path fragmentation is NOT the cause — only {a} of "
+                 "{b} short marks share a path with a long run.",
+                 {"a": frag.get("short_in_a_path_that_also_has_a_long_run"),
+                  "b": frag.get("short_segments")}),
+                ("{n} wall end caps were recovered, a representation the "
+                 "pairing engine previously had no way to express, and a wall "
+                 "end it cannot see is a break in the graph.",
+                 {"n": caps.get("found")}),
+                lead="Measured this run:",
+                missing=("the source-path fragmentation and end-cap "
+                         "measurements are not in this diagnostic run, so the "
+                         "cause is NOT established here.")),
             effect=("Planar face extraction cannot reconstruct room polygons "
                     "from a graph whose cycles are incomplete, so no net "
                     "quantity can be built on it."),
@@ -228,10 +285,14 @@ def from_graph_diagnostic(diagnostic: dict, *, run_id: str,
             issue=(f"{unres} of {conn.get('termini')} termini are unresolved; "
                    f"{hist.get('LIKELY_MISSING_CONNECTION')} have a likely "
                    "missing connection."),
-            cause=(f"{hist.get('EXTERIOR_END')} termini are classified as "
-                   "exterior ends because the building-envelope classifier "
-                   "does not exist yet, so every genuinely external wall end "
-                   "falls through to UNRESOLVED."),
+            cause=_clauses(
+                ("{n} termini are classified as exterior ends because the "
+                 "building-envelope classifier does not exist yet, so every "
+                 "genuinely external wall end falls through to UNRESOLVED.",
+                 {"n": hist.get("EXTERIOR_END")}),
+                missing=("the exterior-end count is not in this diagnostic "
+                         "run, so the split between genuinely external ends "
+                         "and unresolved ones is NOT established here.")),
             effect=("An unclassified wall end is an open face boundary of "
                     "unknown cause: the walk cannot tell a doorway from a "
                     "missing wall, and one closes a room while the other "
@@ -272,9 +333,12 @@ def from_graph_diagnostic(diagnostic: dict, *, run_id: str,
             cause=("Failing gates: " + ", ".join(gate.get("failed", []))
                    + ". Not yet measurable: "
                    + ", ".join(gate.get("not_measured", []))),
-            effect=("Planar face extraction is not started. Building it on "
-                    "this graph would prove the face walker runs and produce "
-                    "no faces."),
+            # §17 — this said "planar face extraction is not started" long
+            # after E31A existed and had run. The gate is about whether the
+            # PROJECT may release from faces, not about whether the engine
+            # exists, and conflating the two made the workbook report a
+            # capability the repository already had as missing.
+            effect=_e31a_effect(gate),
             engineering_next_action=(
                 "Clear the failing gates: "
                 + (", ".join(gate.get("failed", [])) or "none")
