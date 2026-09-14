@@ -192,8 +192,10 @@ def from_graph_diagnostic(diagnostic: dict, *, run_id: str,
     if comps:
         add(severity=BLOCKING, area="TOPOLOGY",
             subject="Vector wall graph connectivity",
-            issue=(f"The wall graph is in {comps} components; {major} of them "
-                   f"hold {share}% of the wall length."),
+            issue=(f"The wall graph is in {comps} components"
+                   + (f"; {major} of them hold {share}% of the wall length."
+                      if share is not None else
+                      f", {major} of which contain closed cycles.")),
             cause=(f"Measured this run: source-path fragmentation is NOT the "
                    f"cause — only "
                    f"{frag.get('short_in_a_path_that_also_has_a_long_run')} of "

@@ -1,0 +1,5544 @@
+{
+  "band_sample": [
+    {
+      "axis": "H",
+      "cap_ids": [],
+      "centreline_mm": 6874.4,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-000005"
+      ],
+      "face_b_ids": [
+        "VS-000119"
+      ],
+      "families": [
+        "FACE_GEOMETRY"
+      ],
+      "length_mm": 25002.4,
+      "raster_support_ratio": 0.071,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH"
+      ],
+      "validation_status": "PROBABLE",
+      "wall_band_id": "WB-00001",
+      "wall_face_separation_mm": 200.0,
+      "why": "two faces pair cleanly but only one evidence family supports the band"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [],
+      "centreline_mm": 46674.4,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-000194"
+      ],
+      "face_b_ids": [
+        "VS-000198"
+      ],
+      "families": [
+        "FACE_GEOMETRY"
+      ],
+      "length_mm": 25002.4,
+      "raster_support_ratio": 0.071,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH"
+      ],
+      "validation_status": "PROBABLE",
+      "wall_band_id": "WB-00002",
+      "wall_face_separation_mm": 200.0,
+      "why": "two faces pair cleanly but only one evidence family supports the band"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [],
+      "centreline_mm": 22099.1,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-004944"
+      ],
+      "face_b_ids": [
+        "VS-004945"
+      ],
+      "families": [
+        "FACE_GEOMETRY",
+        "SOURCE_STYLE"
+      ],
+      "length_mm": 6249.9,
+      "raster_support_ratio": 0.0,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH",
+        "DRAWN_WITH_THE_SHEET_WALL_PEN"
+      ],
+      "validation_status": "VALIDATED",
+      "wall_band_id": "WB-00003",
+      "wall_face_separation_mm": 151.4,
+      "why": "two faces running together over 100% of their length, and 2 independent evidence families agree"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [],
+      "centreline_mm": 9823.7,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-004616"
+      ],
+      "face_b_ids": [
+        "VS-004619"
+      ],
+      "families": [
+        "FACE_GEOMETRY",
+        "SOURCE_STYLE"
+      ],
+      "length_mm": 5749.8,
+      "raster_support_ratio": 0.0,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH",
+        "DRAWN_WITH_THE_SHEET_WALL_PEN"
+      ],
+      "validation_status": "VALIDATED",
+      "wall_band_id": "WB-00004",
+      "wall_face_separation_mm": 200.0,
+      "why": "two faces running together over 100% of their length, and 2 independent evidence families agree"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [
+        "EC-00006",
+        "EC-00080",
+        "EC-00081",
+        "EC-00082",
+        "EC-00083"
+      ],
+      "centreline_mm": 13873.1,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-000041"
+      ],
+      "face_b_ids": [
+        "VS-000268"
+      ],
+      "families": [
+        "CLOSURE",
+        "FACE_GEOMETRY",
+        "SOURCE_STYLE"
+      ],
+      "length_mm": 6401.3,
+      "raster_support_ratio": 0.071,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH",
+        "DRAWN_WITH_THE_SHEET_WALL_PEN",
+        "END_CAP_CLOSES_THE_BAND"
+      ],
+      "validation_status": "VALIDATED",
+      "wall_band_id": "WB-00005",
+      "wall_face_separation_mm": 200.0,
+      "why": "two faces running together over 100% of their length, and 3 independent evidence families agree"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [
+        "EC-00076",
+        "EC-00077",
+        "EC-00078",
+        "EC-00079"
+      ],
+      "centreline_mm": 18874.2,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-000270"
+      ],
+      "face_b_ids": [
+        "VS-000272"
+      ],
+      "families": [
+        "CLOSURE",
+        "FACE_GEOMETRY",
+        "SOURCE_STYLE"
+      ],
+      "length_mm": 5271.3,
+      "raster_support_ratio": 0.071,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH",
+        "DRAWN_WITH_THE_SHEET_WALL_PEN",
+        "END_CAP_CLOSES_THE_BAND"
+      ],
+      "validation_status": "VALIDATED",
+      "wall_band_id": "WB-00006",
+      "wall_face_separation_mm": 200.0,
+      "why": "two faces running together over 100% of their length, and 3 independent evidence families agree"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [
+        "EC-00007",
+        "EC-00008"
+      ],
+      "centreline_mm": 12448.5,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-000025"
+      ],
+      "face_b_ids": [
+        "VS-000026"
+      ],
+      "families": [
+        "CLOSURE",
+        "FACE_GEOMETRY",
+        "SOURCE_STYLE"
+      ],
+      "length_mm": 4500.9,
+      "raster_support_ratio": 0.0,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH",
+        "DRAWN_WITH_THE_SHEET_WALL_PEN",
+        "END_CAP_CLOSES_THE_BAND"
+      ],
+      "validation_status": "VALIDATED",
+      "wall_band_id": "WB-00007",
+      "wall_face_separation_mm": 151.4,
+      "why": "two faces running together over 100% of their length, and 3 independent evidence families agree"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [
+        "EC-00009",
+        "EC-00045",
+        "EC-00046",
+        "EC-00047",
+        "EC-00048"
+      ],
+      "centreline_mm": 19374.2,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-000038"
+      ],
+      "face_b_ids": [
+        "VS-000039"
+      ],
+      "families": [
+        "CLOSURE",
+        "FACE_GEOMETRY",
+        "SOURCE_STYLE"
+      ],
+      "length_mm": 4098.1,
+      "raster_support_ratio": 0.071,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH",
+        "DRAWN_WITH_THE_SHEET_WALL_PEN",
+        "END_CAP_CLOSES_THE_BAND"
+      ],
+      "validation_status": "VALIDATED",
+      "wall_band_id": "WB-00008",
+      "wall_face_separation_mm": 200.0,
+      "why": "two faces running together over 100% of their length, and 3 independent evidence families agree"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [
+        "EC-00018"
+      ],
+      "centreline_mm": 17273.8,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-000135"
+      ],
+      "face_b_ids": [
+        "VS-000134"
+      ],
+      "families": [
+        "CLOSURE",
+        "FACE_GEOMETRY"
+      ],
+      "length_mm": 3452.1,
+      "raster_support_ratio": 0.0,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH",
+        "END_CAP_CLOSES_THE_BAND"
+      ],
+      "validation_status": "VALIDATED",
+      "wall_band_id": "WB-00009",
+      "wall_face_separation_mm": 151.4,
+      "why": "two faces running together over 100% of their length, and 2 independent evidence families agree"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [
+        "EC-00274",
+        "EC-00275"
+      ],
+      "centreline_mm": 12522.9,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-028589"
+      ],
+      "face_b_ids": [
+        "VS-028586"
+      ],
+      "families": [
+        "CLOSURE",
+        "FACE_GEOMETRY",
+        "SOURCE_STYLE"
+      ],
+      "length_mm": 3549.4,
+      "raster_support_ratio": 0.0,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH",
+        "DRAWN_WITH_THE_SHEET_WALL_PEN",
+        "END_CAP_CLOSES_THE_BAND"
+      ],
+      "validation_status": "VALIDATED",
+      "wall_band_id": "WB-00010",
+      "wall_face_separation_mm": 100.0,
+      "why": "two faces running together over 100% of their length, and 3 independent evidence families agree"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [
+        "EC-00037",
+        "EC-00038",
+        "EC-00039",
+        "EC-00040",
+        "EC-00092"
+      ],
+      "centreline_mm": 18674.1,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-000127"
+      ],
+      "face_b_ids": [
+        "VS-000129"
+      ],
+      "families": [
+        "CLOSURE",
+        "FACE_GEOMETRY",
+        "SOURCE_STYLE"
+      ],
+      "length_mm": 3800.8,
+      "raster_support_ratio": 0.143,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH",
+        "DRAWN_WITH_THE_SHEET_WALL_PEN",
+        "END_CAP_CLOSES_THE_BAND"
+      ],
+      "validation_status": "VALIDATED",
+      "wall_band_id": "WB-00011",
+      "wall_face_separation_mm": 200.0,
+      "why": "two faces running together over 100% of their length, and 3 independent evidence families agree"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [
+        "EC-00093",
+        "EC-00148"
+      ],
+      "centreline_mm": 26448.7,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-004946"
+      ],
+      "face_b_ids": [
+        "VS-004948"
+      ],
+      "families": [
+        "CLOSURE",
+        "FACE_GEOMETRY",
+        "SOURCE_STYLE"
+      ],
+      "length_mm": 5049.7,
+      "raster_support_ratio": 0.0,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH",
+        "DRAWN_WITH_THE_SHEET_WALL_PEN",
+        "END_CAP_CLOSES_THE_BAND"
+      ],
+      "validation_status": "VALIDATED",
+      "wall_band_id": "WB-00012",
+      "wall_face_separation_mm": 151.4,
+      "why": "two faces running together over 100% of their length, and 3 independent evidence families agree"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [
+        "EC-00143"
+      ],
+      "centreline_mm": 28199.0,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-004953"
+      ],
+      "face_b_ids": [
+        "VS-004954"
+      ],
+      "families": [
+        "CLOSURE",
+        "FACE_GEOMETRY",
+        "SOURCE_STYLE"
+      ],
+      "length_mm": 3000.6,
+      "raster_support_ratio": 0.0,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH",
+        "DRAWN_WITH_THE_SHEET_WALL_PEN",
+        "END_CAP_CLOSES_THE_BAND"
+      ],
+      "validation_status": "VALIDATED",
+      "wall_band_id": "WB-00013",
+      "wall_face_separation_mm": 148.7,
+      "why": "two faces running together over 100% of their length, and 3 independent evidence families agree"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [
+        "EC-00091"
+      ],
+      "centreline_mm": 31799.7,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-004955"
+      ],
+      "face_b_ids": [
+        "VS-004956"
+      ],
+      "families": [
+        "CLOSURE",
+        "FACE_GEOMETRY",
+        "SOURCE_STYLE"
+      ],
+      "length_mm": 3149.3,
+      "raster_support_ratio": 0.0,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH",
+        "DRAWN_WITH_THE_SHEET_WALL_PEN",
+        "END_CAP_CLOSES_THE_BAND"
+      ],
+      "validation_status": "VALIDATED",
+      "wall_band_id": "WB-00014",
+      "wall_face_separation_mm": 148.7,
+      "why": "two faces running together over 100% of their length, and 3 independent evidence families agree"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [
+        "EC-00099"
+      ],
+      "centreline_mm": 29649.3,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-005032"
+      ],
+      "face_b_ids": [
+        "VS-005033"
+      ],
+      "families": [
+        "CLOSURE",
+        "FACE_GEOMETRY",
+        "SOURCE_STYLE"
+      ],
+      "length_mm": 2697.8,
+      "raster_support_ratio": 0.0,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH",
+        "DRAWN_WITH_THE_SHEET_WALL_PEN",
+        "END_CAP_CLOSES_THE_BAND"
+      ],
+      "validation_status": "VALIDATED",
+      "wall_band_id": "WB-00015",
+      "wall_face_separation_mm": 151.4,
+      "why": "two faces running together over 100% of their length, and 3 independent evidence families agree"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [
+        "EC-00014"
+      ],
+      "centreline_mm": 23049.3,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-004988"
+      ],
+      "face_b_ids": [
+        "VS-004991"
+      ],
+      "families": [
+        "CLOSURE",
+        "FACE_GEOMETRY",
+        "SOURCE_STYLE"
+      ],
+      "length_mm": 2949.2,
+      "raster_support_ratio": 0.0,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH",
+        "DRAWN_WITH_THE_SHEET_WALL_PEN",
+        "END_CAP_CLOSES_THE_BAND"
+      ],
+      "validation_status": "VALIDATED",
+      "wall_band_id": "WB-00016",
+      "wall_face_separation_mm": 148.7,
+      "why": "two faces running together over 100% of their length, and 3 independent evidence families agree"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [
+        "EC-00112",
+        "EC-00183"
+      ],
+      "centreline_mm": 25048.4,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-004995"
+      ],
+      "face_b_ids": [
+        "VS-004999"
+      ],
+      "families": [
+        "CLOSURE",
+        "FACE_GEOMETRY",
+        "SOURCE_STYLE"
+      ],
+      "length_mm": 2500.5,
+      "raster_support_ratio": 0.0,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH",
+        "DRAWN_WITH_THE_SHEET_WALL_PEN",
+        "END_CAP_CLOSES_THE_BAND"
+      ],
+      "validation_status": "VALIDATED",
+      "wall_band_id": "WB-00017",
+      "wall_face_separation_mm": 151.4,
+      "why": "two faces running together over 100% of their length, and 3 independent evidence families agree"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [
+        "EC-00015"
+      ],
+      "centreline_mm": 27048.8,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-005003"
+      ],
+      "face_b_ids": [
+        "VS-005008"
+      ],
+      "families": [
+        "CLOSURE",
+        "FACE_GEOMETRY",
+        "SOURCE_STYLE"
+      ],
+      "length_mm": 2949.2,
+      "raster_support_ratio": 0.0,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH",
+        "DRAWN_WITH_THE_SHEET_WALL_PEN",
+        "END_CAP_CLOSES_THE_BAND"
+      ],
+      "validation_status": "VALIDATED",
+      "wall_band_id": "WB-00018",
+      "wall_face_separation_mm": 151.4,
+      "why": "two faces running together over 100% of their length, and 3 independent evidence families agree"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [],
+      "centreline_mm": 27949.0,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-005006"
+      ],
+      "face_b_ids": [
+        "VS-005010"
+      ],
+      "families": [
+        "FACE_GEOMETRY",
+        "SOURCE_STYLE"
+      ],
+      "length_mm": 2697.8,
+      "raster_support_ratio": 0.0,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH",
+        "DRAWN_WITH_THE_SHEET_WALL_PEN"
+      ],
+      "validation_status": "VALIDATED",
+      "wall_band_id": "WB-00019",
+      "wall_face_separation_mm": 151.4,
+      "why": "two faces running together over 100% of their length, and 2 independent evidence families agree"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [],
+      "centreline_mm": 23699.5,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-004990"
+      ],
+      "face_b_ids": [
+        "VS-004994"
+      ],
+      "families": [
+        "FACE_GEOMETRY",
+        "SOURCE_STYLE"
+      ],
+      "length_mm": 2400.5,
+      "raster_support_ratio": 0.0,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH",
+        "DRAWN_WITH_THE_SHEET_WALL_PEN"
+      ],
+      "validation_status": "VALIDATED",
+      "wall_band_id": "WB-00020",
+      "wall_face_separation_mm": 151.4,
+      "why": "two faces running together over 100% of their length, and 2 independent evidence families agree"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [
+        "EC-00301"
+      ],
+      "centreline_mm": 25048.4,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-004996"
+      ],
+      "face_b_ids": [
+        "VS-005000"
+      ],
+      "families": [
+        "CLOSURE",
+        "FACE_GEOMETRY",
+        "SOURCE_STYLE"
+      ],
+      "length_mm": 2351.8,
+      "raster_support_ratio": 0.0,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH",
+        "DRAWN_WITH_THE_SHEET_WALL_PEN",
+        "END_CAP_CLOSES_THE_BAND"
+      ],
+      "validation_status": "VALIDATED",
+      "wall_band_id": "WB-00021",
+      "wall_face_separation_mm": 151.4,
+      "why": "two faces running together over 100% of their length, and 3 independent evidence families agree"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [],
+      "centreline_mm": 13959.6,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-043190"
+      ],
+      "face_b_ids": [
+        "VS-000034"
+      ],
+      "families": [
+        "FACE_GEOMETRY"
+      ],
+      "length_mm": 4552.3,
+      "raster_support_ratio": 0.071,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH"
+      ],
+      "validation_status": "PROBABLE",
+      "wall_band_id": "WB-00022",
+      "wall_face_separation_mm": 329.8,
+      "why": "two faces pair cleanly but only one evidence family supports the band"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [],
+      "centreline_mm": 15873.5,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-000121"
+      ],
+      "face_b_ids": [
+        "VS-000122"
+      ],
+      "families": [
+        "FACE_GEOMETRY",
+        "SOURCE_STYLE"
+      ],
+      "length_mm": 3049.3,
+      "raster_support_ratio": 0.0,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH",
+        "DRAWN_WITH_THE_SHEET_WALL_PEN"
+      ],
+      "validation_status": "VALIDATED",
+      "wall_band_id": "WB-00023",
+      "wall_face_separation_mm": 200.0,
+      "why": "two faces running together over 100% of their length, and 2 independent evidence families agree"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [
+        "EC-00163",
+        "EC-00164",
+        "EC-00165",
+        "EC-00166",
+        "EC-00167",
+        "EC-00168"
+      ],
+      "centreline_mm": 38224.0,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-013588"
+      ],
+      "face_b_ids": [
+        "VS-013587"
+      ],
+      "families": [
+        "CLOSURE",
+        "FACE_GEOMETRY",
+        "RASTER"
+      ],
+      "length_mm": 2000.4,
+      "raster_support_ratio": 1.0,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH",
+        "END_CAP_CLOSES_THE_BAND",
+        "RASTER_WALL_MASK_SUPPORTS_THE_BAND"
+      ],
+      "validation_status": "VALIDATED",
+      "wall_band_id": "WB-00024",
+      "wall_face_separation_mm": 200.0,
+      "why": "two faces running together over 100% of their length, and 3 independent evidence families agree"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [
+        "EC-00061",
+        "EC-00062",
+        "EC-00063",
+        "EC-00064"
+      ],
+      "centreline_mm": 8973.5,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-004551"
+      ],
+      "face_b_ids": [
+        "VS-004550"
+      ],
+      "families": [
+        "CLOSURE",
+        "FACE_GEOMETRY"
+      ],
+      "length_mm": 2000.4,
+      "raster_support_ratio": 0.0,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH",
+        "END_CAP_CLOSES_THE_BAND"
+      ],
+      "validation_status": "VALIDATED",
+      "wall_band_id": "WB-00025",
+      "wall_face_separation_mm": 100.0,
+      "why": "two faces running together over 100% of their length, and 2 independent evidence families agree"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [
+        "EC-00278",
+        "EC-00279",
+        "EC-00280",
+        "EC-00281",
+        "EC-00282",
+        "EC-00283"
+      ],
+      "centreline_mm": 9823.7,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-043931"
+      ],
+      "face_b_ids": [
+        "VS-043930"
+      ],
+      "families": [
+        "CLOSURE",
+        "FACE_GEOMETRY",
+        "RASTER"
+      ],
+      "length_mm": 2000.4,
+      "raster_support_ratio": 1.0,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH",
+        "END_CAP_CLOSES_THE_BAND",
+        "RASTER_WALL_MASK_SUPPORTS_THE_BAND"
+      ],
+      "validation_status": "VALIDATED",
+      "wall_band_id": "WB-00026",
+      "wall_face_separation_mm": 200.0,
+      "why": "two faces running together over 100% of their length, and 3 independent evidence families agree"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [
+        "EC-00190",
+        "EC-00191",
+        "EC-00192",
+        "EC-00193",
+        "EC-00194",
+        "EC-00195"
+      ],
+      "centreline_mm": 38224.0,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-025836"
+      ],
+      "face_b_ids": [
+        "VS-025835"
+      ],
+      "families": [
+        "CLOSURE",
+        "FACE_GEOMETRY",
+        "RASTER"
+      ],
+      "length_mm": 2000.4,
+      "raster_support_ratio": 1.0,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH",
+        "END_CAP_CLOSES_THE_BAND",
+        "RASTER_WALL_MASK_SUPPORTS_THE_BAND"
+      ],
+      "validation_status": "VALIDATED",
+      "wall_band_id": "WB-00027",
+      "wall_face_separation_mm": 200.0,
+      "why": "two faces running together over 100% of their length, and 3 independent evidence families agree"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [
+        "EC-00169",
+        "EC-00170",
+        "EC-00171",
+        "EC-00172",
+        "EC-00173",
+        "EC-00174"
+      ],
+      "centreline_mm": 38224.0,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-013599"
+      ],
+      "face_b_ids": [
+        "VS-013598"
+      ],
+      "families": [
+        "CLOSURE",
+        "FACE_GEOMETRY",
+        "RASTER"
+      ],
+      "length_mm": 2000.4,
+      "raster_support_ratio": 1.0,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH",
+        "END_CAP_CLOSES_THE_BAND",
+        "RASTER_WALL_MASK_SUPPORTS_THE_BAND"
+      ],
+      "validation_status": "VALIDATED",
+      "wall_band_id": "WB-00028",
+      "wall_face_separation_mm": 200.0,
+      "why": "two faces running together over 100% of their length, and 3 independent evidence families agree"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [
+        "EC-00175",
+        "EC-00176",
+        "EC-00177",
+        "EC-00178",
+        "EC-00179",
+        "EC-00180"
+      ],
+      "centreline_mm": 38224.0,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-013610"
+      ],
+      "face_b_ids": [
+        "VS-013609"
+      ],
+      "families": [
+        "CLOSURE",
+        "FACE_GEOMETRY",
+        "RASTER"
+      ],
+      "length_mm": 2000.4,
+      "raster_support_ratio": 1.0,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH",
+        "END_CAP_CLOSES_THE_BAND",
+        "RASTER_WALL_MASK_SUPPORTS_THE_BAND"
+      ],
+      "validation_status": "VALIDATED",
+      "wall_band_id": "WB-00029",
+      "wall_face_separation_mm": 200.0,
+      "why": "two faces running together over 100% of their length, and 3 independent evidence families agree"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [],
+      "centreline_mm": 31449.7,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-005011"
+      ],
+      "face_b_ids": [
+        "VS-005015"
+      ],
+      "families": [
+        "FACE_GEOMETRY",
+        "SOURCE_STYLE"
+      ],
+      "length_mm": 4949.7,
+      "raster_support_ratio": 0.0,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH",
+        "DRAWN_WITH_THE_SHEET_WALL_PEN"
+      ],
+      "validation_status": "VALIDATED",
+      "wall_band_id": "WB-00030",
+      "wall_face_separation_mm": 151.4,
+      "why": "two faces running together over 100% of their length, and 2 independent evidence families agree"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [
+        "EC-00094",
+        "EC-00142"
+      ],
+      "centreline_mm": 30849.6,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-004951"
+      ],
+      "face_b_ids": [
+        "VS-004952"
+      ],
+      "families": [
+        "CLOSURE",
+        "FACE_GEOMETRY",
+        "SOURCE_STYLE"
+      ],
+      "length_mm": 1900.4,
+      "raster_support_ratio": 0.0,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH",
+        "DRAWN_WITH_THE_SHEET_WALL_PEN",
+        "END_CAP_CLOSES_THE_BAND"
+      ],
+      "validation_status": "VALIDATED",
+      "wall_band_id": "WB-00031",
+      "wall_face_separation_mm": 151.4,
+      "why": "two faces running together over 100% of their length, and 3 independent evidence families agree"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [
+        "EC-00016"
+      ],
+      "centreline_mm": 34048.9,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-005018"
+      ],
+      "face_b_ids": [
+        "VS-005021"
+      ],
+      "families": [
+        "CLOSURE",
+        "FACE_GEOMETRY",
+        "SOURCE_STYLE"
+      ],
+      "length_mm": 2500.5,
+      "raster_support_ratio": 0.0,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH",
+        "DRAWN_WITH_THE_SHEET_WALL_PEN",
+        "END_CAP_CLOSES_THE_BAND"
+      ],
+      "validation_status": "VALIDATED",
+      "wall_band_id": "WB-00032",
+      "wall_face_separation_mm": 148.7,
+      "why": "two faces running together over 100% of their length, and 3 independent evidence families agree"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [],
+      "centreline_mm": 26998.8,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-009981"
+      ],
+      "face_b_ids": [
+        "VS-009982"
+      ],
+      "families": [
+        "FACE_GEOMETRY",
+        "SOURCE_STYLE"
+      ],
+      "length_mm": 2100.4,
+      "raster_support_ratio": 0.0,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH",
+        "DRAWN_WITH_THE_SHEET_WALL_PEN"
+      ],
+      "validation_status": "VALIDATED",
+      "wall_band_id": "WB-00033",
+      "wall_face_separation_mm": 148.7,
+      "why": "two faces running together over 100% of their length, and 2 independent evidence families agree"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [],
+      "centreline_mm": 27798.9,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-009977"
+      ],
+      "face_b_ids": [
+        "VS-009998"
+      ],
+      "families": [
+        "FACE_GEOMETRY",
+        "SOURCE_STYLE"
+      ],
+      "length_mm": 2100.4,
+      "raster_support_ratio": 0.0,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH",
+        "DRAWN_WITH_THE_SHEET_WALL_PEN"
+      ],
+      "validation_status": "VALIDATED",
+      "wall_band_id": "WB-00034",
+      "wall_face_separation_mm": 148.7,
+      "why": "two faces running together over 100% of their length, and 2 independent evidence families agree"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [],
+      "centreline_mm": 19574.3,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-000140"
+      ],
+      "face_b_ids": [
+        "VS-000141"
+      ],
+      "families": [
+        "FACE_GEOMETRY",
+        "SOURCE_STYLE"
+      ],
+      "length_mm": 2200.4,
+      "raster_support_ratio": 0.0,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH",
+        "DRAWN_WITH_THE_SHEET_WALL_PEN"
+      ],
+      "validation_status": "VALIDATED",
+      "wall_band_id": "WB-00035",
+      "wall_face_separation_mm": 200.0,
+      "why": "two faces running together over 100% of their length, and 2 independent evidence families agree"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [
+        "EC-00127"
+      ],
+      "centreline_mm": 21574.7,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-007060"
+      ],
+      "face_b_ids": [
+        "VS-007063"
+      ],
+      "families": [
+        "CLOSURE",
+        "FACE_GEOMETRY",
+        "SOURCE_STYLE"
+      ],
+      "length_mm": 2349.1,
+      "raster_support_ratio": 0.0,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH",
+        "DRAWN_WITH_THE_SHEET_WALL_PEN",
+        "END_CAP_CLOSES_THE_BAND"
+      ],
+      "validation_status": "VALIDATED",
+      "wall_band_id": "WB-00036",
+      "wall_face_separation_mm": 200.0,
+      "why": "two faces running together over 100% of their length, and 3 independent evidence families agree"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [],
+      "centreline_mm": 26998.8,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-006434"
+      ],
+      "face_b_ids": [
+        "VS-009962"
+      ],
+      "families": [
+        "FACE_GEOMETRY",
+        "SOURCE_STYLE"
+      ],
+      "length_mm": 2100.4,
+      "raster_support_ratio": 0.0,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH",
+        "DRAWN_WITH_THE_SHEET_WALL_PEN"
+      ],
+      "validation_status": "VALIDATED",
+      "wall_band_id": "WB-00037",
+      "wall_face_separation_mm": 148.7,
+      "why": "two faces running together over 100% of their length, and 2 independent evidence families agree"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [],
+      "centreline_mm": 26998.8,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-009961"
+      ],
+      "face_b_ids": [
+        "VS-006435"
+      ],
+      "families": [
+        "FACE_GEOMETRY",
+        "SOURCE_STYLE"
+      ],
+      "length_mm": 2100.4,
+      "raster_support_ratio": 0.0,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH",
+        "DRAWN_WITH_THE_SHEET_WALL_PEN"
+      ],
+      "validation_status": "VALIDATED",
+      "wall_band_id": "WB-00038",
+      "wall_face_separation_mm": 148.7,
+      "why": "two faces running together over 100% of their length, and 2 independent evidence families agree"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [],
+      "centreline_mm": 14198.9,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-000015"
+      ],
+      "face_b_ids": [
+        "VS-000035"
+      ],
+      "families": [
+        "FACE_GEOMETRY",
+        "SOURCE_STYLE"
+      ],
+      "length_mm": 2200.4,
+      "raster_support_ratio": 0.0,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH",
+        "DRAWN_WITH_THE_SHEET_WALL_PEN"
+      ],
+      "validation_status": "VALIDATED",
+      "wall_band_id": "WB-00039",
+      "wall_face_separation_mm": 148.7,
+      "why": "two faces running together over 100% of their length, and 2 independent evidence families agree"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [
+        "EC-00175",
+        "EC-00176",
+        "EC-00180"
+      ],
+      "centreline_mm": 38224.0,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-005026"
+      ],
+      "face_b_ids": [
+        "VS-005036"
+      ],
+      "families": [
+        "CLOSURE",
+        "FACE_GEOMETRY",
+        "SOURCE_STYLE"
+      ],
+      "length_mm": 3173.6,
+      "raster_support_ratio": 0.0,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH",
+        "DRAWN_WITH_THE_SHEET_WALL_PEN",
+        "END_CAP_CLOSES_THE_BAND"
+      ],
+      "validation_status": "VALIDATED",
+      "wall_band_id": "WB-00040",
+      "wall_face_separation_mm": 200.0,
+      "why": "two faces running together over 100% of their length, and 3 independent evidence families agree"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [
+        "EC-00184",
+        "EC-00185",
+        "EC-00186",
+        "EC-00187",
+        "EC-00188",
+        "EC-00189"
+      ],
+      "centreline_mm": 38224.0,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-025825"
+      ],
+      "face_b_ids": [
+        "VS-025824"
+      ],
+      "families": [
+        "CLOSURE",
+        "FACE_GEOMETRY",
+        "RASTER"
+      ],
+      "length_mm": 1500.3,
+      "raster_support_ratio": 1.0,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH",
+        "END_CAP_CLOSES_THE_BAND",
+        "RASTER_WALL_MASK_SUPPORTS_THE_BAND"
+      ],
+      "validation_status": "VALIDATED",
+      "wall_band_id": "WB-00041",
+      "wall_face_separation_mm": 200.0,
+      "why": "two faces running together over 100% of their length, and 3 independent evidence families agree"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [
+        "EC-00157",
+        "EC-00158",
+        "EC-00159",
+        "EC-00160",
+        "EC-00161",
+        "EC-00162"
+      ],
+      "centreline_mm": 38224.0,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-013577"
+      ],
+      "face_b_ids": [
+        "VS-013576"
+      ],
+      "families": [
+        "CLOSURE",
+        "FACE_GEOMETRY",
+        "RASTER"
+      ],
+      "length_mm": 1500.3,
+      "raster_support_ratio": 1.0,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH",
+        "END_CAP_CLOSES_THE_BAND",
+        "RASTER_WALL_MASK_SUPPORTS_THE_BAND"
+      ],
+      "validation_status": "VALIDATED",
+      "wall_band_id": "WB-00042",
+      "wall_face_separation_mm": 200.0,
+      "why": "two faces running together over 100% of their length, and 3 independent evidence families agree"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [
+        "EC-00041",
+        "EC-00042",
+        "EC-00043",
+        "EC-00044"
+      ],
+      "centreline_mm": 15873.5,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-004620"
+      ],
+      "face_b_ids": [
+        "VS-000126"
+      ],
+      "families": [
+        "CLOSURE",
+        "FACE_GEOMETRY",
+        "SOURCE_STYLE"
+      ],
+      "length_mm": 4901.0,
+      "raster_support_ratio": 0.429,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH",
+        "DRAWN_WITH_THE_SHEET_WALL_PEN",
+        "END_CAP_CLOSES_THE_BAND"
+      ],
+      "validation_status": "VALIDATED",
+      "wall_band_id": "WB-00043",
+      "wall_face_separation_mm": 200.0,
+      "why": "two faces running together over 100% of their length, and 3 independent evidence families agree"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [],
+      "centreline_mm": 19556.7,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-047900"
+      ],
+      "face_b_ids": [
+        "VS-000142"
+      ],
+      "families": [
+        "FACE_GEOMETRY"
+      ],
+      "length_mm": 2200.4,
+      "raster_support_ratio": 0.0,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH"
+      ],
+      "validation_status": "PROBABLE",
+      "wall_band_id": "WB-00044",
+      "wall_face_separation_mm": 235.2,
+      "why": "two faces pair cleanly but only one evidence family supports the band"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [
+        "EC-00184",
+        "EC-00185",
+        "EC-00186",
+        "EC-00187",
+        "EC-00188",
+        "EC-00189"
+      ],
+      "centreline_mm": 38149.7,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-000123"
+      ],
+      "face_b_ids": [
+        "VS-025828"
+      ],
+      "families": [
+        "CLOSURE",
+        "FACE_GEOMETRY"
+      ],
+      "length_mm": 2000.4,
+      "raster_support_ratio": 0.0,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH",
+        "END_CAP_CLOSES_THE_BAND"
+      ],
+      "validation_status": "VALIDATED",
+      "wall_band_id": "WB-00045",
+      "wall_face_separation_mm": 148.7,
+      "why": "two faces running together over 100% of their length, and 2 independent evidence families agree"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [
+        "EC-00159",
+        "EC-00160",
+        "EC-00161",
+        "EC-00163",
+        "EC-00164",
+        "EC-00167"
+      ],
+      "centreline_mm": 38224.0,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-005024"
+      ],
+      "face_b_ids": [
+        "VS-005035"
+      ],
+      "families": [
+        "CLOSURE",
+        "FACE_GEOMETRY",
+        "SOURCE_STYLE"
+      ],
+      "length_mm": 1376.0,
+      "raster_support_ratio": 0.0,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH",
+        "DRAWN_WITH_THE_SHEET_WALL_PEN",
+        "END_CAP_CLOSES_THE_BAND"
+      ],
+      "validation_status": "VALIDATED",
+      "wall_band_id": "WB-00046",
+      "wall_face_separation_mm": 200.0,
+      "why": "two faces running together over 100% of their length, and 3 independent evidence families agree"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [
+        "EC-00184",
+        "EC-00185",
+        "EC-00186",
+        "EC-00187",
+        "EC-00188",
+        "EC-00189"
+      ],
+      "centreline_mm": 38379.5,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-025827"
+      ],
+      "face_b_ids": [
+        "VS-000124"
+      ],
+      "families": [
+        "CLOSURE",
+        "FACE_GEOMETRY"
+      ],
+      "length_mm": 2000.4,
+      "raster_support_ratio": 0.0,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH",
+        "END_CAP_CLOSES_THE_BAND"
+      ],
+      "validation_status": "VALIDATED",
+      "wall_band_id": "WB-00047",
+      "wall_face_separation_mm": 392.0,
+      "why": "two faces running together over 100% of their length, and 2 independent evidence families agree"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [
+        "EC-00122",
+        "EC-00123",
+        "EC-00124"
+      ],
+      "centreline_mm": 25348.4,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-004997"
+      ],
+      "face_b_ids": [
+        "VS-005001"
+      ],
+      "families": [
+        "CLOSURE",
+        "FACE_GEOMETRY",
+        "SOURCE_STYLE"
+      ],
+      "length_mm": 1300.3,
+      "raster_support_ratio": 0.0,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH",
+        "DRAWN_WITH_THE_SHEET_WALL_PEN",
+        "END_CAP_CLOSES_THE_BAND"
+      ],
+      "validation_status": "VALIDATED",
+      "wall_band_id": "WB-00048",
+      "wall_face_separation_mm": 151.4,
+      "why": "two faces running together over 100% of their length, and 3 independent evidence families agree"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [
+        "EC-00063",
+        "EC-00064"
+      ],
+      "centreline_mm": 9023.5,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-000030"
+      ],
+      "face_b_ids": [
+        "VS-000024"
+      ],
+      "families": [
+        "CLOSURE",
+        "FACE_GEOMETRY",
+        "SOURCE_STYLE"
+      ],
+      "length_mm": 1500.3,
+      "raster_support_ratio": 0.0,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH",
+        "DRAWN_WITH_THE_SHEET_WALL_PEN",
+        "END_CAP_CLOSES_THE_BAND"
+      ],
+      "validation_status": "VALIDATED",
+      "wall_band_id": "WB-00049",
+      "wall_face_separation_mm": 200.0,
+      "why": "two faces running together over 100% of their length, and 3 independent evidence families agree"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [
+        "EC-00061",
+        "EC-00062"
+      ],
+      "centreline_mm": 9023.5,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-000029"
+      ],
+      "face_b_ids": [
+        "VS-000023"
+      ],
+      "families": [
+        "CLOSURE",
+        "FACE_GEOMETRY",
+        "SOURCE_STYLE"
+      ],
+      "length_mm": 1448.9,
+      "raster_support_ratio": 0.0,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH",
+        "DRAWN_WITH_THE_SHEET_WALL_PEN",
+        "END_CAP_CLOSES_THE_BAND"
+      ],
+      "validation_status": "VALIDATED",
+      "wall_band_id": "WB-00050",
+      "wall_face_separation_mm": 200.0,
+      "why": "two faces running together over 100% of their length, and 3 independent evidence families agree"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [
+        "EC-00302",
+        "EC-00303",
+        "EC-00306",
+        "EC-00307",
+        "EC-00308",
+        "EC-00309",
+        "EC-00310",
+        "EC-00311",
+        "EC-00312",
+        "EC-00313",
+        "EC-00314",
+        "EC-00315"
+      ],
+      "centreline_mm": 17928.0,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-047899"
+      ],
+      "face_b_ids": [
+        "VS-047845"
+      ],
+      "families": [
+        "CLOSURE",
+        "FACE_GEOMETRY"
+      ],
+      "length_mm": 1500.3,
+      "raster_support_ratio": 0.071,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH",
+        "END_CAP_CLOSES_THE_BAND"
+      ],
+      "validation_status": "VALIDATED",
+      "wall_band_id": "WB-00051",
+      "wall_face_separation_mm": 173.0,
+      "why": "two faces running together over 100% of their length, and 2 independent evidence families agree"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [
+        "EC-00304",
+        "EC-00305"
+      ],
+      "centreline_mm": 19060.7,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-047883"
+      ],
+      "face_b_ids": [
+        "VS-047879"
+      ],
+      "families": [
+        "CLOSURE",
+        "FACE_GEOMETRY"
+      ],
+      "length_mm": 1200.2,
+      "raster_support_ratio": 0.0,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH",
+        "END_CAP_CLOSES_THE_BAND"
+      ],
+      "validation_status": "VALIDATED",
+      "wall_band_id": "WB-00052",
+      "wall_face_separation_mm": 81.1,
+      "why": "two faces running together over 100% of their length, and 2 independent evidence families agree"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [
+        "EC-00304",
+        "EC-00305"
+      ],
+      "centreline_mm": 19214.8,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-047839"
+      ],
+      "face_b_ids": [
+        "VS-047840"
+      ],
+      "families": [
+        "CLOSURE",
+        "FACE_GEOMETRY"
+      ],
+      "length_mm": 1100.2,
+      "raster_support_ratio": 0.286,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH",
+        "END_CAP_CLOSES_THE_BAND"
+      ],
+      "validation_status": "VALIDATED",
+      "wall_band_id": "WB-00053",
+      "wall_face_separation_mm": 151.4,
+      "why": "two faces running together over 100% of their length, and 2 independent evidence families agree"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [
+        "EC-00280",
+        "EC-00281",
+        "EC-00283"
+      ],
+      "centreline_mm": 9823.7,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-000009"
+      ],
+      "face_b_ids": [
+        "VS-000013"
+      ],
+      "families": [
+        "CLOSURE",
+        "FACE_GEOMETRY",
+        "SOURCE_STYLE"
+      ],
+      "length_mm": 1424.6,
+      "raster_support_ratio": 0.0,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH",
+        "DRAWN_WITH_THE_SHEET_WALL_PEN",
+        "END_CAP_CLOSES_THE_BAND"
+      ],
+      "validation_status": "VALIDATED",
+      "wall_band_id": "WB-00054",
+      "wall_face_separation_mm": 200.0,
+      "why": "two faces running together over 100% of their length, and 3 independent evidence families agree"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [
+        "EC-00278",
+        "EC-00279",
+        "EC-00282"
+      ],
+      "centreline_mm": 9823.7,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-000010"
+      ],
+      "face_b_ids": [
+        "VS-000014"
+      ],
+      "families": [
+        "CLOSURE",
+        "FACE_GEOMETRY",
+        "SOURCE_STYLE"
+      ],
+      "length_mm": 1273.2,
+      "raster_support_ratio": 0.0,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH",
+        "DRAWN_WITH_THE_SHEET_WALL_PEN",
+        "END_CAP_CLOSES_THE_BAND"
+      ],
+      "validation_status": "VALIDATED",
+      "wall_band_id": "WB-00055",
+      "wall_face_separation_mm": 200.0,
+      "why": "two faces running together over 100% of their length, and 3 independent evidence families agree"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [
+        "EC-00152",
+        "EC-00153"
+      ],
+      "centreline_mm": 18674.1,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-004622"
+      ],
+      "face_b_ids": [
+        "VS-004625"
+      ],
+      "families": [
+        "CLOSURE",
+        "FACE_GEOMETRY",
+        "SOURCE_STYLE"
+      ],
+      "length_mm": 1849.0,
+      "raster_support_ratio": 0.0,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH",
+        "DRAWN_WITH_THE_SHEET_WALL_PEN",
+        "END_CAP_CLOSES_THE_BAND"
+      ],
+      "validation_status": "VALIDATED",
+      "wall_band_id": "WB-00056",
+      "wall_face_separation_mm": 200.0,
+      "why": "two faces running together over 100% of their length, and 3 independent evidence families agree"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [
+        "EC-00294",
+        "EC-00295",
+        "EC-00296",
+        "EC-00297"
+      ],
+      "centreline_mm": 11172.6,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-043961"
+      ],
+      "face_b_ids": [
+        "VS-000020"
+      ],
+      "families": [
+        "CLOSURE",
+        "FACE_GEOMETRY",
+        "RASTER"
+      ],
+      "length_mm": 1700.3,
+      "raster_support_ratio": 1.0,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH",
+        "END_CAP_CLOSES_THE_BAND",
+        "RASTER_WALL_MASK_SUPPORTS_THE_BAND"
+      ],
+      "validation_status": "VALIDATED",
+      "wall_band_id": "WB-00057",
+      "wall_face_separation_mm": 200.0,
+      "why": "two faces running together over 100% of their length, and 3 independent evidence families agree"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [
+        "EC-00284",
+        "EC-00285",
+        "EC-00286",
+        "EC-00287",
+        "EC-00288",
+        "EC-00289"
+      ],
+      "centreline_mm": 9823.7,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-043941"
+      ],
+      "face_b_ids": [
+        "VS-043942"
+      ],
+      "families": [
+        "CLOSURE",
+        "FACE_GEOMETRY",
+        "RASTER"
+      ],
+      "length_mm": 1000.2,
+      "raster_support_ratio": 1.0,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH",
+        "END_CAP_CLOSES_THE_BAND",
+        "RASTER_WALL_MASK_SUPPORTS_THE_BAND"
+      ],
+      "validation_status": "VALIDATED",
+      "wall_band_id": "WB-00058",
+      "wall_face_separation_mm": 200.0,
+      "why": "two faces running together over 100% of their length, and 3 independent evidence families agree"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [
+        "EC-00294",
+        "EC-00295",
+        "EC-00296",
+        "EC-00297"
+      ],
+      "centreline_mm": 11172.6,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-000032"
+      ],
+      "face_b_ids": [
+        "VS-043962"
+      ],
+      "families": [
+        "CLOSURE",
+        "FACE_GEOMETRY",
+        "RASTER",
+        "SOURCE_STYLE"
+      ],
+      "length_mm": 1051.6,
+      "raster_support_ratio": 1.0,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH",
+        "DRAWN_WITH_THE_SHEET_WALL_PEN",
+        "END_CAP_CLOSES_THE_BAND",
+        "RASTER_WALL_MASK_SUPPORTS_THE_BAND"
+      ],
+      "validation_status": "VALIDATED",
+      "wall_band_id": "WB-00059",
+      "wall_face_separation_mm": 200.0,
+      "why": "two faces running together over 100% of their length, and 4 independent evidence families agree"
+    },
+    {
+      "axis": "H",
+      "cap_ids": [
+        "EC-00017",
+        "EC-00108"
+      ],
+      "centreline_mm": 27048.8,
+      "conflicting_evidence": [],
+      "face_a_ids": [
+        "VS-005005"
+      ],
+      "face_b_ids": [
+        "VS-005009"
+      ],
+      "families": [
+        "CLOSURE",
+        "FACE_GEOMETRY",
+        "SOURCE_STYLE"
+      ],
+      "length_mm": 1051.6,
+      "raster_support_ratio": 0.0,
+      "representation_type": "DOUBLE_FACE_WALL",
+      "separation_basis": "MEASURED_BETWEEN_TWO_DRAWN_FACES",
+      "supporting_evidence": [
+        "TWO_PARALLEL_FACES",
+        "FACES_OVERLAP_MOST_OF_THEIR_LENGTH",
+        "DRAWN_WITH_THE_SHEET_WALL_PEN",
+        "END_CAP_CLOSES_THE_BAND"
+      ],
+      "validation_status": "VALIDATED",
+      "wall_band_id": "WB-00060",
+      "wall_face_separation_mm": 151.4,
+      "why": "two faces running together over 100% of their length, and 3 independent evidence families agree"
+    }
+  ],
+  "connectivity": {
+    "components": 42,
+    "components_with_cycles": 8,
+    "independent_cycles": 62,
+    "termini": 145,
+    "terminus_histogram": {
+      "DRAWING_FRAGMENT": 28,
+      "EXPECTED_OPENING_END": 26,
+      "LIKELY_MISSING_CONNECTION": 6,
+      "UNRESOLVED": 85
+    }
+  },
+  "envelope": {
+    "by_classification": {
+      "EXTERNAL": 29,
+      "INTERNAL": 5,
+      "UNRESOLVED": 335
+    },
+    "by_family_count": {
+      "0": 68,
+      "1": 258,
+      "2": 43
+    },
+    "edges": 369,
+    "no_evidence": 68,
+    "note": "EXTERNAL requires two independent evidence families. Raster free space never classifies alone: a terrace, a light well and an unclosed room all reach the sheet border, and a courtyard reaches nothing while being outside",
+    "single_family_only": 258,
+    "validated": 29
+  },
+  "frame": {
+    "fit": 1.0,
+    "frame": "SWAP_FLIP_Y",
+    "raster_h_mm": 37942.8,
+    "raster_w_mm": 53664.9,
+    "runner_up": 0.226
+  },
+  "gap_map": {
+    "BED-01": {
+      "east": {
+        "coverage_pct": 100.0,
+        "gaps_mm": []
+      },
+      "north": {
+        "coverage_pct": 97.0,
+        "gaps_mm": [
+          149
+        ]
+      },
+      "south": {
+        "coverage_pct": 99.8,
+        "gaps_mm": []
+      },
+      "west": {
+        "coverage_pct": 80.6,
+        "gaps_mm": [
+          1200
+        ]
+      }
+    },
+    "BED-04": {
+      "east": {
+        "coverage_pct": 92.2,
+        "gaps_mm": [
+          897
+        ]
+      },
+      "north": {
+        "coverage_pct": 81.2,
+        "gaps_mm": [
+          1170
+        ]
+      },
+      "south": {
+        "coverage_pct": 100.0,
+        "gaps_mm": []
+      },
+      "west": {
+        "coverage_pct": 70.1,
+        "gaps_mm": [
+          3457
+        ]
+      }
+    },
+    "BTH-01": {
+      "east": {
+        "coverage_pct": 100.0,
+        "gaps_mm": []
+      },
+      "north": {
+        "coverage_pct": 100.0,
+        "gaps_mm": []
+      },
+      "south": {
+        "coverage_pct": 100.0,
+        "gaps_mm": []
+      },
+      "west": {
+        "coverage_pct": 36.9,
+        "gaps_mm": [
+          1125
+        ]
+      }
+    },
+    "BTH-02": {
+      "east": {
+        "coverage_pct": 100.0,
+        "gaps_mm": []
+      },
+      "north": {
+        "coverage_pct": 95.4,
+        "gaps_mm": [
+          121
+        ]
+      },
+      "south": {
+        "coverage_pct": 100.0,
+        "gaps_mm": []
+      },
+      "west": {
+        "coverage_pct": 37.7,
+        "gaps_mm": [
+          1111
+        ]
+      }
+    },
+    "BTH-03": {
+      "east": {
+        "coverage_pct": 100.0,
+        "gaps_mm": []
+      },
+      "north": {
+        "coverage_pct": 100.0,
+        "gaps_mm": []
+      },
+      "south": {
+        "coverage_pct": 100.0,
+        "gaps_mm": []
+      },
+      "west": {
+        "coverage_pct": 53.4,
+        "gaps_mm": [
+          1108
+        ]
+      }
+    },
+    "BTH-05": {
+      "east": {
+        "coverage_pct": 100.0,
+        "gaps_mm": []
+      },
+      "north": {
+        "coverage_pct": 100.0,
+        "gaps_mm": []
+      },
+      "south": {
+        "coverage_pct": 54.9,
+        "gaps_mm": [
+          1054
+        ]
+      },
+      "west": {
+        "coverage_pct": 100.0,
+        "gaps_mm": []
+      }
+    },
+    "OPEN-01": {
+      "east": {
+        "coverage_pct": 51.6,
+        "gaps_mm": [
+          636,
+          1000,
+          1200,
+          6731
+        ]
+      },
+      "north": {
+        "coverage_pct": 16.6,
+        "gaps_mm": [
+          1600,
+          6053
+        ]
+      },
+      "south": {
+        "coverage_pct": 100.0,
+        "gaps_mm": []
+      },
+      "west": {
+        "coverage_pct": 82.4,
+        "gaps_mm": [
+          1585,
+          1000,
+          897
+        ]
+      }
+    },
+    "STR-01": {
+      "east": {
+        "coverage_pct": 0.0,
+        "gaps_mm": [
+          2606
+        ]
+      },
+      "north": {
+        "coverage_pct": 100.0,
+        "gaps_mm": []
+      },
+      "south": {
+        "coverage_pct": 45.5,
+        "gaps_mm": [
+          1148
+        ]
+      },
+      "west": {
+        "coverage_pct": 100.0,
+        "gaps_mm": []
+      }
+    },
+    "WSH-01": {
+      "east": {
+        "coverage_pct": 100.0,
+        "gaps_mm": []
+      },
+      "north": {
+        "coverage_pct": 100.0,
+        "gaps_mm": []
+      },
+      "south": {
+        "coverage_pct": 100.0,
+        "gaps_mm": []
+      },
+      "west": {
+        "coverage_pct": 100.0,
+        "gaps_mm": []
+      }
+    }
+  },
+  "graph": {
+    "COMPLEX_JUNCTION": 49,
+    "CONTINUATION": 59,
+    "CORNER_OVERLAP": 24,
+    "CROSS_JUNCTION": 0,
+    "L_JUNCTION": 15,
+    "TERMINUS": 145,
+    "TRUE_CROSS_JUNCTION": 4,
+    "T_JUNCTION": 53,
+    "UNRESOLVED_JUNCTION": 0,
+    "ambiguous_clusters": 0,
+    "duplicate_removed_length_mm": 9789.3,
+    "duplicate_resolutions": 37,
+    "edge_splits_performed": 217,
+    "edges": 369,
+    "graph_components": 42,
+    "length_accounted_mm": 615097.9,
+    "length_difference_mm": -0.1,
+    "micro_edges": 66,
+    "micro_edges_collapsible": 5,
+    "node_merges": 177,
+    "nodes": 349,
+    "over_spread_clusters": 0,
+    "post_split_total_length_mm": 605308.6,
+    "pre_split_total_length_mm": 615098.0,
+    "rejected_clusters": 0,
+    "subdivided_clusters": 0
+  },
+  "largest_faces": [
+    {
+      "area_m2": 989.159,
+      "blockers": [],
+      "boundary_half_edges": [
+        "HE-WE-0001-B-F",
+        "HE-WE-0129-B-F",
+        "HE-WE-0002-B-R",
+        "HE-WE-0128-D-R",
+        "HE-WE-0128-C-R",
+        "HE-WE-0128-B-R"
+      ],
+      "component_id": "FACE-0001",
+      "edge_validation_summary": {
+        "PROBABLE": 6
+      },
+      "face_id": "FACE-0001",
+      "geometry_confidence": "",
+      "half_edges": 6,
+      "holes": [
+        "FACE-0006",
+        "FACE-0007",
+        "FACE-0008",
+        "FACE-0009",
+        "FACE-0010",
+        "FACE-0011",
+        "FACE-0015",
+        "FACE-0016",
+        "FACE-0017",
+        "FACE-0018",
+        "FACE-0023",
+        "FACE-0024",
+        "FACE-0029"
+      ],
+      "kind": "BOUNDED_FACE",
+      "micro_class": "",
+      "orientation": "COUNTERCLOCKWISE",
+      "perimeter_m": 129.47,
+      "provenance": {},
+      "releasable": false,
+      "source_wall_edge_ids": [
+        "WE-0001-B",
+        "WE-0002-B",
+        "WE-0128-B",
+        "WE-0128-C",
+        "WE-0128-D",
+        "WE-0129-B"
+      ],
+      "status": "CANDIDATE",
+      "topology_boundary_candidate_ids": []
+    },
+    {
+      "area_m2": 1.981,
+      "blockers": [],
+      "boundary_half_edges": [
+        "HE-WE-0019-B-R",
+        "HE-WE-0201-R",
+        "HE-WE-0037-F",
+        "HE-WE-0144-D-F"
+      ],
+      "component_id": "FACE-0014",
+      "edge_validation_summary": {
+        "PROBABLE": 4
+      },
+      "face_id": "FACE-0015",
+      "geometry_confidence": "",
+      "half_edges": 4,
+      "holes": [],
+      "kind": "BOUNDED_FACE",
+      "micro_class": "",
+      "orientation": "COUNTERCLOCKWISE",
+      "perimeter_m": 6.25,
+      "provenance": {},
+      "releasable": false,
+      "source_wall_edge_ids": [
+        "WE-0019-B",
+        "WE-0037",
+        "WE-0144-D",
+        "WE-0201"
+      ],
+      "status": "CANDIDATE",
+      "topology_boundary_candidate_ids": []
+    },
+    {
+      "area_m2": 1.777,
+      "blockers": [],
+      "boundary_half_edges": [
+        "HE-WE-0033-F",
+        "HE-WE-0200-F",
+        "HE-WE-0034-R",
+        "HE-WE-0202-R"
+      ],
+      "component_id": "FACE-0018",
+      "edge_validation_summary": {
+        "PROBABLE": 4
+      },
+      "face_id": "FACE-0018",
+      "geometry_confidence": "",
+      "half_edges": 4,
+      "holes": [],
+      "kind": "BOUNDED_FACE",
+      "micro_class": "",
+      "orientation": "COUNTERCLOCKWISE",
+      "perimeter_m": 6.1,
+      "provenance": {},
+      "releasable": false,
+      "source_wall_edge_ids": [
+        "WE-0033",
+        "WE-0034",
+        "WE-0200",
+        "WE-0202"
+      ],
+      "status": "CANDIDATE",
+      "topology_boundary_candidate_ids": []
+    },
+    {
+      "area_m2": 1.74,
+      "blockers": [],
+      "boundary_half_edges": [
+        "HE-WE-0069-R",
+        "HE-WE-0149-B-R",
+        "HE-WE-0070-F",
+        "HE-WE-0161-F"
+      ],
+      "component_id": "FACE-0013",
+      "edge_validation_summary": {
+        "PROBABLE": 4
+      },
+      "face_id": "FACE-0023",
+      "geometry_confidence": "",
+      "half_edges": 4,
+      "holes": [],
+      "kind": "BOUNDED_FACE",
+      "micro_class": "",
+      "orientation": "COUNTERCLOCKWISE",
+      "perimeter_m": 5.94,
+      "provenance": {},
+      "releasable": false,
+      "source_wall_edge_ids": [
+        "WE-0069",
+        "WE-0070",
+        "WE-0149-B",
+        "WE-0161"
+      ],
+      "status": "CANDIDATE",
+      "topology_boundary_candidate_ids": []
+    },
+    {
+      "area_m2": 1.204,
+      "blockers": [],
+      "boundary_half_edges": [
+        "HE-WE-0009-F-R",
+        "HE-WE-0175-R",
+        "HE-WE-0043-F-F",
+        "HE-WE-0173-F",
+        "HE-WE-0009-G-R"
+      ],
+      "component_id": "FACE-0003",
+      "edge_validation_summary": {
+        "PROBABLE": 5
+      },
+      "face_id": "FACE-0010",
+      "geometry_confidence": "",
+      "half_edges": 5,
+      "holes": [],
+      "kind": "BOUNDED_FACE",
+      "micro_class": "",
+      "orientation": "COUNTERCLOCKWISE",
+      "perimeter_m": 4.25,
+      "provenance": {},
+      "releasable": false,
+      "source_wall_edge_ids": [
+        "WE-0009-F",
+        "WE-0009-G",
+        "WE-0043-F",
+        "WE-0173",
+        "WE-0175"
+      ],
+      "status": "CANDIDATE",
+      "topology_boundary_candidate_ids": []
+    },
+    {
+      "area_m2": 1.204,
+      "blockers": [],
+      "boundary_half_edges": [
+        "HE-WE-0009-C-F",
+        "HE-WE-0009-D-F",
+        "HE-WE-0177-F",
+        "HE-WE-0011-C-R",
+        "HE-WE-0179-R"
+      ],
+      "component_id": "FACE-0003",
+      "edge_validation_summary": {
+        "PROBABLE": 5
+      },
+      "face_id": "FACE-0007",
+      "geometry_confidence": "",
+      "half_edges": 5,
+      "holes": [],
+      "kind": "BOUNDED_FACE",
+      "micro_class": "",
+      "orientation": "COUNTERCLOCKWISE",
+      "perimeter_m": 4.3,
+      "provenance": {},
+      "releasable": false,
+      "source_wall_edge_ids": [
+        "WE-0009-C",
+        "WE-0009-D",
+        "WE-0011-C",
+        "WE-0177",
+        "WE-0179"
+      ],
+      "status": "CANDIDATE",
+      "topology_boundary_candidate_ids": []
+    },
+    {
+      "area_m2": 0.818,
+      "blockers": [],
+      "boundary_half_edges": [
+        "HE-WE-0009-C-R",
+        "HE-WE-0174-R",
+        "HE-WE-0043-C-F",
+        "HE-WE-0172-F"
+      ],
+      "component_id": "FACE-0003",
+      "edge_validation_summary": {
+        "PROBABLE": 4
+      },
+      "face_id": "FACE-0008",
+      "geometry_confidence": "",
+      "half_edges": 4,
+      "holes": [],
+      "kind": "BOUNDED_FACE",
+      "micro_class": "",
+      "orientation": "COUNTERCLOCKWISE",
+      "perimeter_m": 3.7,
+      "provenance": {},
+      "releasable": false,
+      "source_wall_edge_ids": [
+        "WE-0009-C",
+        "WE-0043-C",
+        "WE-0172",
+        "WE-0174"
+      ],
+      "status": "CANDIDATE",
+      "topology_boundary_candidate_ids": []
+    },
+    {
+      "area_m2": 0.799,
+      "blockers": [],
+      "boundary_half_edges": [
+        "HE-WE-0009-E-F",
+        "HE-WE-0009-F-F",
+        "HE-WE-0181-F",
+        "HE-WE-0011-D-R",
+        "HE-WE-0177-R"
+      ],
+      "component_id": "FACE-0003",
+      "edge_validation_summary": {
+        "PROBABLE": 5
+      },
+      "face_id": "FACE-0009",
+      "geometry_confidence": "",
+      "half_edges": 5,
+      "holes": [],
+      "kind": "BOUNDED_FACE",
+      "micro_class": "",
+      "orientation": "COUNTERCLOCKWISE",
+      "perimeter_m": 3.65,
+      "provenance": {},
+      "releasable": false,
+      "source_wall_edge_ids": [
+        "WE-0009-E",
+        "WE-0009-F",
+        "WE-0011-D",
+        "WE-0177",
+        "WE-0181"
+      ],
+      "status": "CANDIDATE",
+      "topology_boundary_candidate_ids": []
+    },
+    {
+      "area_m2": 0.788,
+      "blockers": [],
+      "boundary_half_edges": [
+        "HE-WE-0009-G-F",
+        "HE-WE-0178-F",
+        "HE-WE-0011-E-R",
+        "HE-WE-0181-R"
+      ],
+      "component_id": "FACE-0003",
+      "edge_validation_summary": {
+        "PROBABLE": 4
+      },
+      "face_id": "FACE-0011",
+      "geometry_confidence": "",
+      "half_edges": 4,
+      "holes": [],
+      "kind": "BOUNDED_FACE",
+      "micro_class": "",
+      "orientation": "COUNTERCLOCKWISE",
+      "perimeter_m": 3.65,
+      "provenance": {},
+      "releasable": false,
+      "source_wall_edge_ids": [
+        "WE-0009-G",
+        "WE-0011-E",
+        "WE-0178",
+        "WE-0181"
+      ],
+      "status": "CANDIDATE",
+      "topology_boundary_candidate_ids": []
+    },
+    {
+      "area_m2": 0.342,
+      "blockers": [],
+      "boundary_half_edges": [
+        "HE-WE-0030-C-F",
+        "HE-WE-0221-A-F",
+        "HE-WE-0094-A-R",
+        "HE-WE-0171-A-R"
+      ],
+      "component_id": "FACE-0004",
+      "edge_validation_summary": {
+        "PROBABLE": 4
+      },
+      "face_id": "FACE-0016",
+      "geometry_confidence": "",
+      "half_edges": 4,
+      "holes": [],
+      "kind": "BOUNDED_FACE",
+      "micro_class": "",
+      "orientation": "COUNTERCLOCKWISE",
+      "perimeter_m": 3.85,
+      "provenance": {},
+      "releasable": false,
+      "source_wall_edge_ids": [
+        "WE-0030-C",
+        "WE-0094-A",
+        "WE-0171-A",
+        "WE-0221-A"
+      ],
+      "status": "CANDIDATE",
+      "topology_boundary_candidate_ids": []
+    },
+    {
+      "area_m2": 0.281,
+      "blockers": [],
+      "boundary_half_edges": [
+        "HE-WE-0008-F",
+        "HE-WE-0190-C-R",
+        "HE-WE-0190-B-R",
+        "HE-WE-0124-R",
+        "HE-WE-0124-F",
+        "HE-WE-0190-B-F",
+        "HE-WE-0078-R",
+        "HE-WE-0078-F",
+        "HE-WE-0190-C-F",
+        "HE-WE-0079-R",
+        "HE-WE-0079-F",
+        "HE-WE-0008-R",
+        "HE-WE-0185-A-R",
+        "HE-WE-0185-A-F",
+        "HE-WE-0154-B-R",
+        "HE-WE-0154-A-R",
+        "HE-WE-0154-A-F",
+        "HE-WE-0154-B-F",
+        "HE-WE-0185-B-F",
+        "HE-WE-0044-D-R",
+        "HE-WE-0035-D-F",
+        "HE-WE-0165-F",
+        "HE-WE-0036-A-R",
+        "HE-WE-0036-A-F",
+        "HE-WE-0036-B-F",
+        "HE-WE-0036-B-R",
+        "HE-WE-0165-R",
+        "HE-WE-0185-B-R"
+      ],
+      "component_id": "FACE-0006",
+      "edge_validation_summary": {
+        "PROBABLE": 15
+      },
+      "face_id": "FACE-0006",
+      "geometry_confidence": "",
+      "half_edges": 28,
+      "holes": [],
+      "kind": "BOUNDED_FACE",
+      "micro_class": "",
+      "orientation": "COUNTERCLOCKWISE",
+      "perimeter_m": 46.85,
+      "provenance": {},
+      "releasable": false,
+      "source_wall_edge_ids": [
+        "WE-0008",
+        "WE-0035-D",
+        "WE-0036-A",
+        "WE-0036-B",
+        "WE-0044-D",
+        "WE-0078",
+        "WE-0079",
+        "WE-0124",
+        "WE-0154-A",
+        "WE-0154-B",
+        "WE-0165",
+        "WE-0185-A",
+        "WE-0185-B",
+        "WE-0190-B",
+        "WE-0190-C"
+      ],
+      "status": "CANDIDATE",
+      "topology_boundary_candidate_ids": []
+    },
+    {
+      "area_m2": 0.112,
+      "blockers": [],
+      "boundary_half_edges": [
+        "HE-WE-0032-A-F",
+        "HE-WE-0240-R",
+        "HE-WE-0215-F",
+        "HE-WE-0032-A-R"
+      ],
+      "component_id": "FACE-0017",
+      "edge_validation_summary": {
+        "PROBABLE": 3
+      },
+      "face_id": "FACE-0017",
+      "geometry_confidence": "",
+      "half_edges": 4,
+      "holes": [],
+      "kind": "BOUNDED_FACE",
+      "micro_class": "",
+      "orientation": "COUNTERCLOCKWISE",
+      "perimeter_m": 6.24,
+      "provenance": {},
+      "releasable": false,
+      "source_wall_edge_ids": [
+        "WE-0032-A",
+        "WE-0215",
+        "WE-0240"
+      ],
+      "status": "CANDIDATE",
+      "topology_boundary_candidate_ids": []
+    },
+    {
+      "area_m2": 0.028,
+      "blockers": [],
+      "boundary_half_edges": [
+        "HE-WE-0153-F",
+        "HE-WE-0207-A-F",
+        "HE-WE-0206-A-R",
+        "HE-WE-0159-R"
+      ],
+      "component_id": "FACE-0003",
+      "edge_validation_summary": {
+        "PROBABLE": 4
+      },
+      "face_id": "FACE-0029",
+      "geometry_confidence": "",
+      "half_edges": 4,
+      "holes": [],
+      "kind": "BOUNDED_FACE",
+      "micro_class": "",
+      "orientation": "COUNTERCLOCKWISE",
+      "perimeter_m": 4.3,
+      "provenance": {},
+      "releasable": false,
+      "source_wall_edge_ids": [
+        "WE-0153",
+        "WE-0159",
+        "WE-0206-A",
+        "WE-0207-A"
+      ],
+      "status": "CANDIDATE",
+      "topology_boundary_candidate_ids": []
+    },
+    {
+      "area_m2": 0.027,
+      "blockers": [],
+      "boundary_half_edges": [
+        "HE-WE-0083-F",
+        "HE-WE-0127-F",
+        "HE-WE-0127-R",
+        "HE-WE-0083-R"
+      ],
+      "component_id": "FACE-0024",
+      "edge_validation_summary": {
+        "PROBABLE": 2
+      },
+      "face_id": "FACE-0024",
+      "geometry_confidence": "",
+      "half_edges": 4,
+      "holes": [],
+      "kind": "BOUNDED_FACE",
+      "micro_class": "",
+      "orientation": "COUNTERCLOCKWISE",
+      "perimeter_m": 2.28,
+      "provenance": {},
+      "releasable": false,
+      "source_wall_edge_ids": [
+        "WE-0083",
+        "WE-0127"
+      ],
+      "status": "CANDIDATE",
+      "topology_boundary_candidate_ids": []
+    }
+  ],
+  "manifest": {
+    "coherent": true,
+    "drawing_id": "AR-00",
+    "drawing_revision": "MAR.2023 (as plotted)",
+    "drawing_source_hash": "bddb175c39834594",
+    "problems": [],
+    "project_id": "23010",
+    "rule_set_versions": {
+      "23010_ceramic": "1.0",
+      "23010_plaster": "1.0"
+    },
+    "stages": {
+      "frame": {
+        "consumed": [],
+        "note": "FRAME_ALIGNMENT_VALIDATED only. The raster is rendered from the same drawing, so vector-raster agreement is NOT independent physical evidence that an object is a wall",
+        "output_hash": "b5bbbf83711715b0",
+        "run_id": "V2",
+        "stage": "frame"
+      },
+      "opening_detection": {
+        "consumed": [
+          [
+            "wall_graph",
+            "5f42987bc1c94996"
+          ]
+        ],
+        "note": "",
+        "output_hash": "a7a3e3717d8d3bd3",
+        "run_id": "V2",
+        "stage": "opening_detection"
+      },
+      "topology": {
+        "consumed": [
+          [
+            "wall_graph",
+            "5f42987bc1c94996"
+          ],
+          [
+            "opening_detection",
+            "a7a3e3717d8d3bd3"
+          ]
+        ],
+        "note": "",
+        "output_hash": "6e54e3bf018cb22b",
+        "run_id": "V2",
+        "stage": "topology"
+      },
+      "wall_extraction": {
+        "consumed": [
+          [
+            "frame",
+            "b5bbbf83711715b0"
+          ]
+        ],
+        "note": "",
+        "output_hash": "1e27ea06411ee695",
+        "run_id": "V2",
+        "stage": "wall_extraction"
+      },
+      "wall_graph": {
+        "consumed": [
+          [
+            "wall_extraction",
+            "1e27ea06411ee695"
+          ]
+        ],
+        "note": "",
+        "output_hash": "5f42987bc1c94996",
+        "run_id": "V2",
+        "stage": "wall_graph"
+      }
+    },
+    "workbook_generated_at": "2026-09-14T20:28:30+00:00"
+  },
+  "material_faces": {
+    "bounded_faces": 14,
+    "by_orientation": {
+      "CLOCKWISE": 12,
+      "COUNTERCLOCKWISE": 14,
+      "DEGENERATE_ZERO_AREA": 4
+    },
+    "by_status": {
+      "CANDIDATE": 30
+    },
+    "faces": 30,
+    "faces_with_holes": 1,
+    "half_edges": 654,
+    "micro_faces": 0,
+    "total_bounded_area_m2": 1000.26,
+    "unbounded_faces": 12,
+    "unbounded_unresolved": 4,
+    "unclosed_walks": 48
+  },
+  "portals": {
+    "by_gap_class": {
+      "DOOR_OR_PORTAL_GAP": 7,
+      "OPEN_PLAN_TRANSITION": 4,
+      "UNRESOLVED": 10
+    },
+    "by_status": {
+      "PORTAL_CANDIDATE": 10,
+      "PORTAL_PROBABLE": 7,
+      "PORTAL_UNRESOLVED": 4
+    },
+    "detail": [
+      {
+        "evidence": [
+          "SPAN_IN_THE_DOOR_RANGE",
+          "PAIRED_BANDS_TERMINATE_FACING_EACH_OTHER",
+          "END_CAPS_AT_BOTH_JAMBS",
+          "GAP_CLOSES_AN_OTHERWISE_COMPLETE_BOUNDARY"
+        ],
+        "families": [
+          "GEOMETRY",
+          "TOPOLOGY"
+        ],
+        "gap_class": "DOOR_OR_PORTAL_GAP",
+        "may_close_a_space": true,
+        "portal_id": "PT-BTH-05-south-22393",
+        "side": "south",
+        "space_id": "BTH-05",
+        "span_mm": 1054.2,
+        "status": "PORTAL_PROBABLE",
+        "why": "1054 mm gap with 2 independent evidence families: GEOMETRY, TOPOLOGY"
+      },
+      {
+        "evidence": [
+          "PAIRED_BANDS_TERMINATE_FACING_EACH_OTHER",
+          "END_CAPS_AT_BOTH_JAMBS",
+          "GAP_CLOSES_AN_OTHERWISE_COMPLETE_BOUNDARY"
+        ],
+        "families": [
+          "GEOMETRY",
+          "TOPOLOGY"
+        ],
+        "gap_class": "DOOR_OR_PORTAL_GAP",
+        "may_close_a_space": true,
+        "portal_id": "PT-BED-01-north-28649",
+        "side": "north",
+        "space_id": "BED-01",
+        "span_mm": 148.7,
+        "status": "PORTAL_PROBABLE",
+        "why": "149 mm gap with 2 independent evidence families: GEOMETRY, TOPOLOGY"
+      },
+      {
+        "evidence": [
+          "SPAN_IN_THE_DOOR_RANGE",
+          "PAIRED_BANDS_TERMINATE_FACING_EACH_OTHER",
+          "END_CAPS_AT_BOTH_JAMBS",
+          "GAP_CLOSES_AN_OTHERWISE_COMPLETE_BOUNDARY"
+        ],
+        "families": [
+          "GEOMETRY",
+          "TOPOLOGY"
+        ],
+        "gap_class": "DOOR_OR_PORTAL_GAP",
+        "may_close_a_space": true,
+        "portal_id": "PT-BED-01-west-27124",
+        "side": "west",
+        "space_id": "BED-01",
+        "span_mm": 1200.2,
+        "status": "PORTAL_PROBABLE",
+        "why": "1200 mm gap with 2 independent evidence families: GEOMETRY, TOPOLOGY"
+      },
+      {
+        "evidence": [
+          "SPAN_IN_THE_DOOR_RANGE",
+          "PAIRED_BANDS_TERMINATE_FACING_EACH_OTHER",
+          "END_CAPS_AT_BOTH_JAMBS"
+        ],
+        "families": [
+          "GEOMETRY"
+        ],
+        "gap_class": "UNRESOLVED",
+        "may_close_a_space": false,
+        "portal_id": "PT-STR-01-south-10748",
+        "side": "south",
+        "space_id": "STR-01",
+        "span_mm": 1148.2,
+        "status": "PORTAL_CANDIDATE",
+        "why": "one evidence family only. A gap this size is equally a doorway and a wall the extractor missed"
+      },
+      {
+        "evidence": [
+          "END_CAPS_AT_BOTH_JAMBS"
+        ],
+        "families": [
+          "GEOMETRY"
+        ],
+        "gap_class": "OPEN_PLAN_TRANSITION",
+        "may_close_a_space": false,
+        "portal_id": "PT-STR-01-east-16003",
+        "side": "east",
+        "space_id": "STR-01",
+        "span_mm": 2606,
+        "status": "PORTAL_UNRESOLVED",
+        "why": "2606 mm is far wider than a doorway. This is an open-plan transition or a missing wall, and it is not closed on a portal hypothesis"
+      },
+      {
+        "evidence": [
+          "PAIRED_BANDS_TERMINATE_FACING_EACH_OTHER",
+          "END_CAPS_AT_BOTH_JAMBS"
+        ],
+        "families": [
+          "GEOMETRY"
+        ],
+        "gap_class": "UNRESOLVED",
+        "may_close_a_space": false,
+        "portal_id": "PT-OPEN-01-north-17498",
+        "side": "north",
+        "space_id": "OPEN-01",
+        "span_mm": 1600.3,
+        "status": "PORTAL_CANDIDATE",
+        "why": "one evidence family only. A gap this size is equally a doorway and a wall the extractor missed"
+      },
+      {
+        "evidence": [
+          "PAIRED_BANDS_TERMINATE_FACING_EACH_OTHER",
+          "END_CAPS_AT_BOTH_JAMBS"
+        ],
+        "families": [
+          "GEOMETRY"
+        ],
+        "gap_class": "OPEN_PLAN_TRANSITION",
+        "may_close_a_space": false,
+        "portal_id": "PT-OPEN-01-north-20298",
+        "side": "north",
+        "space_id": "OPEN-01",
+        "span_mm": 6053.1,
+        "status": "PORTAL_UNRESOLVED",
+        "why": "6053 mm is far wider than a doorway. This is an open-plan transition or a missing wall, and it is not closed on a portal hypothesis"
+      },
+      {
+        "evidence": [
+          "PAIRED_BANDS_TERMINATE_FACING_EACH_OTHER",
+          "END_CAPS_AT_BOTH_JAMBS"
+        ],
+        "families": [
+          "GEOMETRY"
+        ],
+        "gap_class": "UNRESOLVED",
+        "may_close_a_space": false,
+        "portal_id": "PT-OPEN-01-west-18338",
+        "side": "west",
+        "space_id": "OPEN-01",
+        "span_mm": 1585.0,
+        "status": "PORTAL_CANDIDATE",
+        "why": "one evidence family only. A gap this size is equally a doorway and a wall the extractor missed"
+      },
+      {
+        "evidence": [
+          "SPAN_IN_THE_DOOR_RANGE",
+          "PAIRED_BANDS_TERMINATE_FACING_EACH_OTHER",
+          "END_CAPS_AT_BOTH_JAMBS"
+        ],
+        "families": [
+          "GEOMETRY"
+        ],
+        "gap_class": "UNRESOLVED",
+        "may_close_a_space": false,
+        "portal_id": "PT-OPEN-01-west-25224",
+        "side": "west",
+        "space_id": "OPEN-01",
+        "span_mm": 1000.2,
+        "status": "PORTAL_CANDIDATE",
+        "why": "one evidence family only. A gap this size is equally a doorway and a wall the extractor missed"
+      },
+      {
+        "evidence": [
+          "SPAN_IN_THE_DOOR_RANGE",
+          "PAIRED_BANDS_TERMINATE_FACING_EACH_OTHER",
+          "END_CAPS_AT_BOTH_JAMBS"
+        ],
+        "families": [
+          "GEOMETRY"
+        ],
+        "gap_class": "UNRESOLVED",
+        "may_close_a_space": false,
+        "portal_id": "PT-OPEN-01-west-31125",
+        "side": "west",
+        "space_id": "OPEN-01",
+        "span_mm": 897.5,
+        "status": "PORTAL_CANDIDATE",
+        "why": "one evidence family only. A gap this size is equally a doorway and a wall the extractor missed"
+      },
+      {
+        "evidence": [
+          "SPAN_IN_THE_DOOR_RANGE",
+          "PAIRED_BANDS_TERMINATE_FACING_EACH_OTHER",
+          "END_CAPS_AT_BOTH_JAMBS"
+        ],
+        "families": [
+          "GEOMETRY"
+        ],
+        "gap_class": "UNRESOLVED",
+        "may_close_a_space": false,
+        "portal_id": "PT-OPEN-01-east-18338",
+        "side": "east",
+        "space_id": "OPEN-01",
+        "span_mm": 636.2,
+        "status": "PORTAL_CANDIDATE",
+        "why": "one evidence family only. A gap this size is equally a doorway and a wall the extractor missed"
+      },
+      {
+        "evidence": [
+          "SPAN_IN_THE_DOOR_RANGE",
+          "PAIRED_BANDS_TERMINATE_FACING_EACH_OTHER",
+          "END_CAPS_AT_BOTH_JAMBS"
+        ],
+        "families": [
+          "GEOMETRY"
+        ],
+        "gap_class": "UNRESOLVED",
+        "may_close_a_space": false,
+        "portal_id": "PT-OPEN-01-east-21823",
+        "side": "east",
+        "space_id": "OPEN-01",
+        "span_mm": 1000.2,
+        "status": "PORTAL_CANDIDATE",
+        "why": "one evidence family only. A gap this size is equally a doorway and a wall the extractor missed"
+      },
+      {
+        "evidence": [
+          "SPAN_IN_THE_DOOR_RANGE",
+          "PAIRED_BANDS_TERMINATE_FACING_EACH_OTHER",
+          "END_CAPS_AT_BOTH_JAMBS"
+        ],
+        "families": [
+          "GEOMETRY"
+        ],
+        "gap_class": "UNRESOLVED",
+        "may_close_a_space": false,
+        "portal_id": "PT-OPEN-01-east-27124",
+        "side": "east",
+        "space_id": "OPEN-01",
+        "span_mm": 1200.2,
+        "status": "PORTAL_CANDIDATE",
+        "why": "one evidence family only. A gap this size is equally a doorway and a wall the extractor missed"
+      },
+      {
+        "evidence": [
+          "PAIRED_BANDS_TERMINATE_FACING_EACH_OTHER",
+          "END_CAPS_AT_BOTH_JAMBS"
+        ],
+        "families": [
+          "GEOMETRY"
+        ],
+        "gap_class": "OPEN_PLAN_TRANSITION",
+        "may_close_a_space": false,
+        "portal_id": "PT-OPEN-01-east-31373",
+        "side": "east",
+        "space_id": "OPEN-01",
+        "span_mm": 6731.0,
+        "status": "PORTAL_UNRESOLVED",
+        "why": "6731 mm is far wider than a doorway. This is an open-plan transition or a missing wall, and it is not closed on a portal hypothesis"
+      },
+      {
+        "evidence": [
+          "SPAN_IN_THE_DOOR_RANGE",
+          "PAIRED_BANDS_TERMINATE_FACING_EACH_OTHER",
+          "END_CAPS_AT_BOTH_JAMBS",
+          "GAP_CLOSES_AN_OTHERWISE_COMPLETE_BOUNDARY"
+        ],
+        "families": [
+          "GEOMETRY",
+          "TOPOLOGY"
+        ],
+        "gap_class": "DOOR_OR_PORTAL_GAP",
+        "may_close_a_space": true,
+        "portal_id": "PT-BTH-01-west-23150",
+        "side": "west",
+        "space_id": "BTH-01",
+        "span_mm": 1125.2,
+        "status": "PORTAL_PROBABLE",
+        "why": "1125 mm gap with 2 independent evidence families: GEOMETRY, TOPOLOGY"
+      },
+      {
+        "evidence": [
+          "PAIRED_BANDS_TERMINATE_FACING_EACH_OTHER",
+          "END_CAPS_AT_BOTH_JAMBS",
+          "GAP_CLOSES_AN_OTHERWISE_COMPLETE_BOUNDARY"
+        ],
+        "families": [
+          "GEOMETRY",
+          "TOPOLOGY"
+        ],
+        "gap_class": "DOOR_OR_PORTAL_GAP",
+        "may_close_a_space": true,
+        "portal_id": "PT-BTH-02-north-28676",
+        "side": "north",
+        "space_id": "BTH-02",
+        "span_mm": 120.9,
+        "status": "PORTAL_PROBABLE",
+        "why": "121 mm gap with 2 independent evidence families: GEOMETRY, TOPOLOGY"
+      },
+      {
+        "evidence": [
+          "SPAN_IN_THE_DOOR_RANGE",
+          "PAIRED_BANDS_TERMINATE_FACING_EACH_OTHER",
+          "END_CAPS_AT_BOTH_JAMBS",
+          "GAP_CLOSES_AN_OTHERWISE_COMPLETE_BOUNDARY"
+        ],
+        "families": [
+          "GEOMETRY",
+          "TOPOLOGY"
+        ],
+        "gap_class": "DOOR_OR_PORTAL_GAP",
+        "may_close_a_space": true,
+        "portal_id": "PT-BTH-02-west-25824",
+        "side": "west",
+        "space_id": "BTH-02",
+        "span_mm": 1110.8,
+        "status": "PORTAL_PROBABLE",
+        "why": "1111 mm gap with 2 independent evidence families: GEOMETRY, TOPOLOGY"
+      },
+      {
+        "evidence": [
+          "SPAN_IN_THE_DOOR_RANGE",
+          "PAIRED_BANDS_TERMINATE_FACING_EACH_OTHER",
+          "END_CAPS_AT_BOTH_JAMBS",
+          "GAP_CLOSES_AN_OTHERWISE_COMPLETE_BOUNDARY"
+        ],
+        "families": [
+          "GEOMETRY",
+          "TOPOLOGY"
+        ],
+        "gap_class": "DOOR_OR_PORTAL_GAP",
+        "may_close_a_space": true,
+        "portal_id": "PT-BTH-03-west-32822",
+        "side": "west",
+        "space_id": "BTH-03",
+        "span_mm": 1108.1,
+        "status": "PORTAL_PROBABLE",
+        "why": "1108 mm gap with 2 independent evidence families: GEOMETRY, TOPOLOGY"
+      },
+      {
+        "evidence": [
+          "SPAN_IN_THE_DOOR_RANGE",
+          "PAIRED_BANDS_TERMINATE_FACING_EACH_OTHER",
+          "END_CAPS_AT_BOTH_JAMBS"
+        ],
+        "families": [
+          "GEOMETRY"
+        ],
+        "gap_class": "UNRESOLVED",
+        "may_close_a_space": false,
+        "portal_id": "PT-BED-04-north-10726",
+        "side": "north",
+        "space_id": "BED-04",
+        "span_mm": 1170.2,
+        "status": "PORTAL_CANDIDATE",
+        "why": "one evidence family only. A gap this size is equally a doorway and a wall the extractor missed"
+      },
+      {
+        "evidence": [
+          "PAIRED_BANDS_TERMINATE_FACING_EACH_OTHER",
+          "END_CAPS_AT_BOTH_JAMBS"
+        ],
+        "families": [
+          "GEOMETRY"
+        ],
+        "gap_class": "OPEN_PLAN_TRANSITION",
+        "may_close_a_space": false,
+        "portal_id": "PT-BED-04-west-30498",
+        "side": "west",
+        "space_id": "BED-04",
+        "span_mm": 3457.5,
+        "status": "PORTAL_UNRESOLVED",
+        "why": "3457 mm is far wider than a doorway. This is an open-plan transition or a missing wall, and it is not closed on a portal hypothesis"
+      },
+      {
+        "evidence": [
+          "SPAN_IN_THE_DOOR_RANGE",
+          "PAIRED_BANDS_TERMINATE_FACING_EACH_OTHER",
+          "END_CAPS_AT_BOTH_JAMBS"
+        ],
+        "families": [
+          "GEOMETRY"
+        ],
+        "gap_class": "UNRESOLVED",
+        "may_close_a_space": false,
+        "portal_id": "PT-BED-04-east-31125",
+        "side": "east",
+        "space_id": "BED-04",
+        "span_mm": 897.5,
+        "status": "PORTAL_CANDIDATE",
+        "why": "one evidence family only. A gap this size is equally a doorway and a wall the extractor missed"
+      }
+    ],
+    "total": 21
+  },
+  "positive_control_verdicts": {
+    "BED-01": {
+      "gaps_mm": [
+        149,
+        1200
+      ],
+      "material_length_m": 20.92,
+      "material_wall": "3 of 4 sides at 100% physical wall",
+      "space_topology_closes": true,
+      "virtual_material_length_m": 0.0
+    },
+    "BTH-05": {
+      "gaps_mm": [
+        1054
+      ],
+      "material_length_m": 6.54,
+      "material_wall": "3 of 4 sides at 100% physical wall",
+      "space_topology_closes": true,
+      "virtual_material_length_m": 0.0
+    },
+    "OPEN-01": {
+      "gaps_mm": [
+        1600,
+        6053,
+        1585,
+        1000,
+        897,
+        636,
+        1000,
+        1200,
+        6731
+      ],
+      "material_length_m": 37.19,
+      "material_wall": "1 of 4 sides at 100% physical wall",
+      "space_topology_closes": false,
+      "virtual_material_length_m": 0.0
+    },
+    "STR-01": {
+      "gaps_mm": [
+        1148,
+        2606
+      ],
+      "material_length_m": 5.67,
+      "material_wall": "2 of 4 sides at 100% physical wall",
+      "space_topology_closes": false,
+      "virtual_material_length_m": 0.0
+    }
+  },
+  "rejection_sample": [
+    {
+      "axis": "H",
+      "best_gap_mm": null,
+      "best_overlap_mm": null,
+      "candidates_in_window": 0,
+      "length_mm": 1248.9,
+      "reason": "NO_PARALLEL_FACE",
+      "segment_id": "VS-049863"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": null,
+      "best_overlap_mm": null,
+      "candidates_in_window": 0,
+      "length_mm": 1248.9,
+      "reason": "NO_PARALLEL_FACE",
+      "segment_id": "VS-055313"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": null,
+      "best_overlap_mm": null,
+      "candidates_in_window": 0,
+      "length_mm": 34623.3,
+      "reason": "NO_PARALLEL_FACE",
+      "segment_id": "VS-049858"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": 162.2,
+      "best_overlap_mm": -4511.7,
+      "candidates_in_window": 2,
+      "length_mm": 29043.7,
+      "reason": "INSUFFICIENT_OVERLAP",
+      "segment_id": "VS-073506"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": 162.2,
+      "best_overlap_mm": -4511.7,
+      "candidates_in_window": 1,
+      "length_mm": 310.9,
+      "reason": "INSUFFICIENT_OVERLAP",
+      "segment_id": "VS-050861"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": 175.7,
+      "best_overlap_mm": -4511.7,
+      "candidates_in_window": 1,
+      "length_mm": 310.9,
+      "reason": "INSUFFICIENT_OVERLAP",
+      "segment_id": "VS-050864"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": null,
+      "best_overlap_mm": null,
+      "candidates_in_window": 0,
+      "length_mm": 310.9,
+      "reason": "NO_PARALLEL_FACE",
+      "segment_id": "VS-050895"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": null,
+      "best_overlap_mm": null,
+      "candidates_in_window": 0,
+      "length_mm": 310.9,
+      "reason": "NO_PARALLEL_FACE",
+      "segment_id": "VS-050898"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": null,
+      "best_overlap_mm": null,
+      "candidates_in_window": 0,
+      "length_mm": 310.9,
+      "reason": "NO_PARALLEL_FACE",
+      "segment_id": "VS-050921"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": null,
+      "best_overlap_mm": null,
+      "candidates_in_window": 0,
+      "length_mm": 310.9,
+      "reason": "NO_PARALLEL_FACE",
+      "segment_id": "VS-050980"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": null,
+      "best_overlap_mm": null,
+      "candidates_in_window": 0,
+      "length_mm": 310.9,
+      "reason": "NO_PARALLEL_FACE",
+      "segment_id": "VS-051106"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": null,
+      "best_overlap_mm": null,
+      "candidates_in_window": 0,
+      "length_mm": 310.9,
+      "reason": "NO_PARALLEL_FACE",
+      "segment_id": "VS-051221"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": 448.7,
+      "best_overlap_mm": 500.1,
+      "candidates_in_window": 5,
+      "length_mm": 14951.7,
+      "reason": "FRAGMENTED_MATE",
+      "segment_id": "VS-000006"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": 148.7,
+      "best_overlap_mm": -200.0,
+      "candidates_in_window": 11,
+      "length_mm": 13951.5,
+      "reason": "INSUFFICIENT_OVERLAP",
+      "segment_id": "VS-000007"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": 151.4,
+      "best_overlap_mm": 1900.4,
+      "candidates_in_window": 10,
+      "length_mm": 1900.4,
+      "reason": "FRAGMENTED_MATE",
+      "segment_id": "VS-004549"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": 200.0,
+      "best_overlap_mm": 2000.4,
+      "candidates_in_window": 12,
+      "length_mm": 2000.4,
+      "reason": "FRAGMENTED_MATE",
+      "segment_id": "VS-004548"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": 270.3,
+      "best_overlap_mm": 305.5,
+      "candidates_in_window": 22,
+      "length_mm": 305.5,
+      "reason": "FRAGMENTED_MATE",
+      "segment_id": "VS-042380"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": 270.3,
+      "best_overlap_mm": 370.3,
+      "candidates_in_window": 22,
+      "length_mm": 370.3,
+      "reason": "FRAGMENTED_MATE",
+      "segment_id": "VS-042400"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": 200.0,
+      "best_overlap_mm": 0.0,
+      "candidates_in_window": 17,
+      "length_mm": 400.1,
+      "reason": "INSUFFICIENT_OVERLAP",
+      "segment_id": "VS-000008"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": 159.5,
+      "best_overlap_mm": 1800.4,
+      "candidates_in_window": 14,
+      "length_mm": 1800.4,
+      "reason": "FRAGMENTED_MATE",
+      "segment_id": "VS-043932"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": 140.6,
+      "best_overlap_mm": 1800.4,
+      "candidates_in_window": 14,
+      "length_mm": 1800.4,
+      "reason": "FRAGMENTED_MATE",
+      "segment_id": "VS-043933"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": 100.0,
+      "best_overlap_mm": 1900.4,
+      "candidates_in_window": 18,
+      "length_mm": 1900.4,
+      "reason": "FRAGMENTED_MATE",
+      "segment_id": "VS-043934"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": 100.0,
+      "best_overlap_mm": 900.2,
+      "candidates_in_window": 18,
+      "length_mm": 900.2,
+      "reason": "FRAGMENTED_MATE",
+      "segment_id": "VS-043956"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": 100.0,
+      "best_overlap_mm": 900.2,
+      "candidates_in_window": 18,
+      "length_mm": 900.2,
+      "reason": "FRAGMENTED_MATE",
+      "segment_id": "VS-043945"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": 140.6,
+      "best_overlap_mm": 800.2,
+      "candidates_in_window": 10,
+      "length_mm": 800.2,
+      "reason": "FRAGMENTED_MATE",
+      "segment_id": "VS-043955"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": 140.6,
+      "best_overlap_mm": 800.2,
+      "candidates_in_window": 10,
+      "length_mm": 800.2,
+      "reason": "FRAGMENTED_MATE",
+      "segment_id": "VS-043944"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": 159.5,
+      "best_overlap_mm": 800.2,
+      "candidates_in_window": 10,
+      "length_mm": 800.2,
+      "reason": "FRAGMENTED_MATE",
+      "segment_id": "VS-043954"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": 159.5,
+      "best_overlap_mm": 800.2,
+      "candidates_in_window": 10,
+      "length_mm": 800.2,
+      "reason": "FRAGMENTED_MATE",
+      "segment_id": "VS-043943"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": 313.6,
+      "best_overlap_mm": -16700.7,
+      "candidates_in_window": 17,
+      "length_mm": 310.9,
+      "reason": "INSUFFICIENT_OVERLAP",
+      "segment_id": "VS-051433"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": 170.3,
+      "best_overlap_mm": -18101.0,
+      "candidates_in_window": 1,
+      "length_mm": 373.0,
+      "reason": "INSUFFICIENT_OVERLAP",
+      "segment_id": "VS-028895"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": 170.3,
+      "best_overlap_mm": -18201.0,
+      "candidates_in_window": 1,
+      "length_mm": 1478.7,
+      "reason": "INSUFFICIENT_OVERLAP",
+      "segment_id": "VS-028857"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": 170.3,
+      "best_overlap_mm": -20569.0,
+      "candidates_in_window": 1,
+      "length_mm": 1481.4,
+      "reason": "INSUFFICIENT_OVERLAP",
+      "segment_id": "VS-028856"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": 170.3,
+      "best_overlap_mm": -21777.4,
+      "candidates_in_window": 1,
+      "length_mm": 370.3,
+      "reason": "INSUFFICIENT_OVERLAP",
+      "segment_id": "VS-028876"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": 140.6,
+      "best_overlap_mm": 800.2,
+      "candidates_in_window": 3,
+      "length_mm": 800.2,
+      "reason": "FRAGMENTED_MATE",
+      "segment_id": "VS-043964"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": 213.6,
+      "best_overlap_mm": 638.0,
+      "candidates_in_window": 11,
+      "length_mm": 694.7,
+      "reason": "FRAGMENTED_MATE",
+      "segment_id": "VS-000485"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": 175.7,
+      "best_overlap_mm": 638.0,
+      "candidates_in_window": 12,
+      "length_mm": 694.7,
+      "reason": "FRAGMENTED_MATE",
+      "segment_id": "VS-000494"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": 410.9,
+      "best_overlap_mm": -6450.0,
+      "candidates_in_window": 13,
+      "length_mm": 310.9,
+      "reason": "INSUFFICIENT_OVERLAP",
+      "segment_id": "VS-051560"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": 397.4,
+      "best_overlap_mm": -6450.0,
+      "candidates_in_window": 13,
+      "length_mm": 310.9,
+      "reason": "INSUFFICIENT_OVERLAP",
+      "segment_id": "VS-051563"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": 129.8,
+      "best_overlap_mm": -1211.1,
+      "candidates_in_window": 13,
+      "length_mm": 694.7,
+      "reason": "INSUFFICIENT_OVERLAP",
+      "segment_id": "VS-000407"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": 167.6,
+      "best_overlap_mm": -1213.8,
+      "candidates_in_window": 18,
+      "length_mm": 692.0,
+      "reason": "INSUFFICIENT_OVERLAP",
+      "segment_id": "VS-000398"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": 329.8,
+      "best_overlap_mm": 638.0,
+      "candidates_in_window": 17,
+      "length_mm": 694.7,
+      "reason": "FRAGMENTED_MATE",
+      "segment_id": "VS-000465"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": 367.6,
+      "best_overlap_mm": 638.0,
+      "candidates_in_window": 17,
+      "length_mm": 694.7,
+      "reason": "FRAGMENTED_MATE",
+      "segment_id": "VS-000456"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": 432.5,
+      "best_overlap_mm": -1776.0,
+      "candidates_in_window": 11,
+      "length_mm": 373.0,
+      "reason": "INSUFFICIENT_OVERLAP",
+      "segment_id": "VS-001086"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": 432.5,
+      "best_overlap_mm": -1643.6,
+      "candidates_in_window": 11,
+      "length_mm": 405.5,
+      "reason": "INSUFFICIENT_OVERLAP",
+      "segment_id": "VS-001048"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": 432.5,
+      "best_overlap_mm": -351.4,
+      "candidates_in_window": 11,
+      "length_mm": 405.5,
+      "reason": "INSUFFICIENT_OVERLAP",
+      "segment_id": "VS-001047"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": 432.5,
+      "best_overlap_mm": -251.4,
+      "candidates_in_window": 11,
+      "length_mm": 373.0,
+      "reason": "INSUFFICIENT_OVERLAP",
+      "segment_id": "VS-001067"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": 102.7,
+      "best_overlap_mm": -6450.0,
+      "candidates_in_window": 7,
+      "length_mm": 310.9,
+      "reason": "INSUFFICIENT_OVERLAP",
+      "segment_id": "VS-051577"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": 189.2,
+      "best_overlap_mm": 919.1,
+      "candidates_in_window": 11,
+      "length_mm": 919.1,
+      "reason": "FRAGMENTED_MATE",
+      "segment_id": "VS-043724"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": 189.2,
+      "best_overlap_mm": 919.1,
+      "candidates_in_window": 11,
+      "length_mm": 919.1,
+      "reason": "FRAGMENTED_MATE",
+      "segment_id": "VS-043839"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": 170.3,
+      "best_overlap_mm": 370.3,
+      "candidates_in_window": 13,
+      "length_mm": 370.3,
+      "reason": "FRAGMENTED_MATE",
+      "segment_id": "VS-000646"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": 200.0,
+      "best_overlap_mm": 1100.2,
+      "candidates_in_window": 12,
+      "length_mm": 1500.3,
+      "reason": "FRAGMENTED_MATE",
+      "segment_id": "VS-000040"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": 329.8,
+      "best_overlap_mm": -200.0,
+      "candidates_in_window": 12,
+      "length_mm": 373.0,
+      "reason": "INSUFFICIENT_OVERLAP",
+      "segment_id": "VS-043229"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": 329.8,
+      "best_overlap_mm": 1230.0,
+      "candidates_in_window": 12,
+      "length_mm": 2278.8,
+      "reason": "FRAGMENTED_MATE",
+      "segment_id": "VS-043191"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": 329.8,
+      "best_overlap_mm": 370.3,
+      "candidates_in_window": 12,
+      "length_mm": 370.3,
+      "reason": "FRAGMENTED_MATE",
+      "segment_id": "VS-043210"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": 308.2,
+      "best_overlap_mm": 370.3,
+      "candidates_in_window": 12,
+      "length_mm": 370.3,
+      "reason": "FRAGMENTED_MATE",
+      "segment_id": "VS-042164"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": 308.2,
+      "best_overlap_mm": 370.3,
+      "candidates_in_window": 12,
+      "length_mm": 370.3,
+      "reason": "FRAGMENTED_MATE",
+      "segment_id": "VS-042145"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": 370.3,
+      "best_overlap_mm": 400.1,
+      "candidates_in_window": 24,
+      "length_mm": 400.1,
+      "reason": "FRAGMENTED_MATE",
+      "segment_id": "VS-004589"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": 148.7,
+      "best_overlap_mm": 851.5,
+      "candidates_in_window": 8,
+      "length_mm": 851.5,
+      "reason": "FRAGMENTED_MATE",
+      "segment_id": "VS-000036"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": 394.7,
+      "best_overlap_mm": 310.9,
+      "candidates_in_window": 10,
+      "length_mm": 310.9,
+      "reason": "FRAGMENTED_MATE",
+      "segment_id": "VS-051717"
+    },
+    {
+      "axis": "H",
+      "best_gap_mm": 437.9,
+      "best_overlap_mm": 924.5,
+      "candidates_in_window": 9,
+      "length_mm": 924.5,
+      "reason": "FRAGMENTED_MATE",
+      "segment_id": "VS-000302"
+    }
+  ],
+  "space_boundaries": {
+    "BED-01": {
+      "by_boundary_type": {
+        "PHYSICAL_WALL": 6,
+        "VIRTUAL_SPACE_BOUNDARY": 2
+      },
+      "closes": true,
+      "intervals": [
+        {
+          "boundary_type": "PHYSICAL_WALL",
+          "interval_id": "BI-BED-01-001",
+          "is_virtual": false,
+          "material_length_mm": 2308.2,
+          "portal_id": "",
+          "side": "north",
+          "space_id": "BED-01",
+          "span_mm": 2308.2,
+          "wall_band_ids": [
+            "WB-00017",
+            "WB-00021"
+          ],
+          "why": "a wall band covers this interval"
+        },
+        {
+          "boundary_type": "PHYSICAL_WALL",
+          "interval_id": "BI-BED-01-002",
+          "is_virtual": false,
+          "material_length_mm": 2496.1,
+          "portal_id": "",
+          "side": "north",
+          "space_id": "BED-01",
+          "span_mm": 2496.1,
+          "wall_band_ids": [
+            "WB-00017",
+            "WB-00021"
+          ],
+          "why": "a wall band covers this interval"
+        },
+        {
+          "boundary_type": "VIRTUAL_SPACE_BOUNDARY",
+          "interval_id": "BI-BED-01-003",
+          "is_virtual": true,
+          "material_length_mm": 0.0,
+          "portal_id": "PT-BED-01-north-28649",
+          "side": "north",
+          "space_id": "BED-01",
+          "span_mm": 148.7,
+          "wall_band_ids": [],
+          "why": "a probable doorway. This interval closes the room and carries NO wall material: zero blockwork, zero plaster, zero physical wall length"
+        },
+        {
+          "boundary_type": "PHYSICAL_WALL",
+          "interval_id": "BI-BED-01-004",
+          "is_virtual": false,
+          "material_length_mm": 4945.2,
+          "portal_id": "",
+          "side": "south",
+          "space_id": "BED-01",
+          "span_mm": 4945.2,
+          "wall_band_ids": [
+            "WB-00030",
+            "WB-00094"
+          ],
+          "why": "a wall band covers this interval"
+        },
+        {
+          "boundary_type": "PHYSICAL_WALL",
+          "interval_id": "BI-BED-01-005",
+          "is_virtual": false,
+          "material_length_mm": 1973.5,
+          "portal_id": "",
+          "side": "west",
+          "space_id": "BED-01",
+          "span_mm": 1973.5,
+          "wall_band_ids": [
+            "WB-00136",
+            "WB-00160"
+          ],
+          "why": "a wall band covers this interval"
+        },
+        {
+          "boundary_type": "PHYSICAL_WALL",
+          "interval_id": "BI-BED-01-006",
+          "is_virtual": false,
+          "material_length_mm": 3011.3,
+          "portal_id": "",
+          "side": "west",
+          "space_id": "BED-01",
+          "span_mm": 3011.3,
+          "wall_band_ids": [
+            "WB-00136",
+            "WB-00160"
+          ],
+          "why": "a wall band covers this interval"
+        },
+        {
+          "boundary_type": "VIRTUAL_SPACE_BOUNDARY",
+          "interval_id": "BI-BED-01-007",
+          "is_virtual": true,
+          "material_length_mm": 0.0,
+          "portal_id": "PT-BED-01-west-27124",
+          "side": "west",
+          "space_id": "BED-01",
+          "span_mm": 1200.2,
+          "wall_band_ids": [],
+          "why": "a probable doorway. This interval closes the room and carries NO wall material: zero blockwork, zero plaster, zero physical wall length"
+        },
+        {
+          "boundary_type": "PHYSICAL_WALL",
+          "interval_id": "BI-BED-01-008",
+          "is_virtual": false,
+          "material_length_mm": 6185,
+          "portal_id": "",
+          "side": "east",
+          "space_id": "BED-01",
+          "span_mm": 6185,
+          "wall_band_ids": [
+            "WB-00150",
+            "WB-00182",
+            "WB-00186",
+            "WB-00212",
+            "WB-00213",
+            "WB-00223",
+            "WB-00234",
+            "WB-00242"
+          ],
+          "why": "a wall band covers this interval"
+        }
+      ],
+      "material_length_m": 20.92,
+      "note": "virtual boundaries carry ZERO material length. The virtual SPAN is reported so it can be audited; it is never a quantity",
+      "portals": 2,
+      "portals_by_gap_class": {
+        "DOOR_OR_PORTAL_GAP": 2
+      },
+      "portals_by_status": {
+        "PORTAL_PROBABLE": 2
+      },
+      "virtual_length_m": 1.35,
+      "virtual_material_length_m": 0.0
+    },
+    "BED-04": {
+      "by_boundary_type": {
+        "OPEN_PLAN_TRANSITION": 3,
+        "PHYSICAL_WALL": 6
+      },
+      "closes": false,
+      "intervals": [
+        {
+          "boundary_type": "PHYSICAL_WALL",
+          "interval_id": "BI-BED-04-001",
+          "is_virtual": false,
+          "material_length_mm": 5047.8,
+          "portal_id": "",
+          "side": "north",
+          "space_id": "BED-04",
+          "span_mm": 5047.8,
+          "wall_band_ids": [
+            "WB-00012"
+          ],
+          "why": "a wall band covers this interval"
+        },
+        {
+          "boundary_type": "OPEN_PLAN_TRANSITION",
+          "interval_id": "BI-BED-04-002",
+          "is_virtual": true,
+          "material_length_mm": 0.0,
+          "portal_id": "PT-BED-04-north-10726",
+          "side": "north",
+          "space_id": "BED-04",
+          "span_mm": 1170.2,
+          "wall_band_ids": [],
+          "why": "one evidence family only. A gap this size is equally a doorway and a wall the extractor missed"
+        },
+        {
+          "boundary_type": "PHYSICAL_WALL",
+          "interval_id": "BI-BED-04-003",
+          "is_virtual": false,
+          "material_length_mm": 6218.0,
+          "portal_id": "",
+          "side": "south",
+          "space_id": "BED-04",
+          "span_mm": 6218.0,
+          "wall_band_ids": [
+            "WB-00027",
+            "WB-00041",
+            "WB-00045",
+            "WB-00047",
+            "WB-00120",
+            "WB-00122"
+          ],
+          "why": "a wall band covers this interval"
+        },
+        {
+          "boundary_type": "PHYSICAL_WALL",
+          "interval_id": "BI-BED-04-004",
+          "is_virtual": false,
+          "material_length_mm": 3942.1,
+          "portal_id": "",
+          "side": "west",
+          "space_id": "BED-04",
+          "span_mm": 3942.1,
+          "wall_band_ids": [
+            "WB-00148",
+            "WB-00151",
+            "WB-00183",
+            "WB-00194",
+            "WB-00195",
+            "WB-00228",
+            "WB-00229"
+          ],
+          "why": "a wall band covers this interval"
+        },
+        {
+          "boundary_type": "PHYSICAL_WALL",
+          "interval_id": "BI-BED-04-005",
+          "is_virtual": false,
+          "material_length_mm": 4149.4,
+          "portal_id": "",
+          "side": "west",
+          "space_id": "BED-04",
+          "span_mm": 4149.4,
+          "wall_band_ids": [
+            "WB-00148",
+            "WB-00151",
+            "WB-00183",
+            "WB-00194",
+            "WB-00195",
+            "WB-00228",
+            "WB-00229"
+          ],
+          "why": "a wall band covers this interval"
+        },
+        {
+          "boundary_type": "OPEN_PLAN_TRANSITION",
+          "interval_id": "BI-BED-04-006",
+          "is_virtual": true,
+          "material_length_mm": 0.0,
+          "portal_id": "PT-BED-04-west-30498",
+          "side": "west",
+          "space_id": "BED-04",
+          "span_mm": 3457.5,
+          "wall_band_ids": [],
+          "why": "3457 mm is far wider than a doorway. This is an open-plan transition or a missing wall, and it is not closed on a portal hypothesis"
+        },
+        {
+          "boundary_type": "PHYSICAL_WALL",
+          "interval_id": "BI-BED-04-007",
+          "is_virtual": false,
+          "material_length_mm": 4569.3,
+          "portal_id": "",
+          "side": "east",
+          "space_id": "BED-04",
+          "span_mm": 4569.3,
+          "wall_band_ids": [
+            "WB-00130",
+            "WB-00132",
+            "WB-00164"
+          ],
+          "why": "a wall band covers this interval"
+        },
+        {
+          "boundary_type": "PHYSICAL_WALL",
+          "interval_id": "BI-BED-04-008",
+          "is_virtual": false,
+          "material_length_mm": 6082.2,
+          "portal_id": "",
+          "side": "east",
+          "space_id": "BED-04",
+          "span_mm": 6082.2,
+          "wall_band_ids": [
+            "WB-00130",
+            "WB-00132",
+            "WB-00164"
+          ],
+          "why": "a wall band covers this interval"
+        },
+        {
+          "boundary_type": "OPEN_PLAN_TRANSITION",
+          "interval_id": "BI-BED-04-009",
+          "is_virtual": true,
+          "material_length_mm": 0.0,
+          "portal_id": "PT-BED-04-east-31125",
+          "side": "east",
+          "space_id": "BED-04",
+          "span_mm": 897.5,
+          "wall_band_ids": [],
+          "why": "one evidence family only. A gap this size is equally a doorway and a wall the extractor missed"
+        }
+      ],
+      "material_length_m": 30.01,
+      "note": "virtual boundaries carry ZERO material length. The virtual SPAN is reported so it can be audited; it is never a quantity",
+      "portals": 3,
+      "portals_by_gap_class": {
+        "OPEN_PLAN_TRANSITION": 1,
+        "UNRESOLVED": 2
+      },
+      "portals_by_status": {
+        "PORTAL_CANDIDATE": 2,
+        "PORTAL_UNRESOLVED": 1
+      },
+      "virtual_length_m": 5.53,
+      "virtual_material_length_m": 0.0
+    },
+    "BTH-01": {
+      "by_boundary_type": {
+        "PHYSICAL_WALL": 4,
+        "VIRTUAL_SPACE_BOUNDARY": 1
+      },
+      "closes": true,
+      "intervals": [
+        {
+          "boundary_type": "PHYSICAL_WALL",
+          "interval_id": "BI-BTH-01-001",
+          "is_virtual": false,
+          "material_length_mm": 2477.0,
+          "portal_id": "",
+          "side": "north",
+          "space_id": "BTH-01",
+          "span_mm": 2477.0,
+          "wall_band_ids": [
+            "WB-00016"
+          ],
+          "why": "a wall band covers this interval"
+        },
+        {
+          "boundary_type": "PHYSICAL_WALL",
+          "interval_id": "BI-BTH-01-002",
+          "is_virtual": false,
+          "material_length_mm": 2477.0,
+          "portal_id": "",
+          "side": "south",
+          "space_id": "BTH-01",
+          "span_mm": 2477.0,
+          "wall_band_ids": [
+            "WB-00017"
+          ],
+          "why": "a wall band covers this interval"
+        },
+        {
+          "boundary_type": "PHYSICAL_WALL",
+          "interval_id": "BI-BTH-01-003",
+          "is_virtual": false,
+          "material_length_mm": 658.8,
+          "portal_id": "",
+          "side": "west",
+          "space_id": "BTH-01",
+          "span_mm": 658.8,
+          "wall_band_ids": [
+            "WB-00198"
+          ],
+          "why": "a wall band covers this interval"
+        },
+        {
+          "boundary_type": "VIRTUAL_SPACE_BOUNDARY",
+          "interval_id": "BI-BTH-01-004",
+          "is_virtual": true,
+          "material_length_mm": 0.0,
+          "portal_id": "PT-BTH-01-west-23150",
+          "side": "west",
+          "space_id": "BTH-01",
+          "span_mm": 1125.2,
+          "wall_band_ids": [],
+          "why": "a probable doorway. This interval closes the room and carries NO wall material: zero blockwork, zero plaster, zero physical wall length"
+        },
+        {
+          "boundary_type": "PHYSICAL_WALL",
+          "interval_id": "BI-BTH-01-005",
+          "is_virtual": false,
+          "material_length_mm": 1784,
+          "portal_id": "",
+          "side": "east",
+          "space_id": "BTH-01",
+          "span_mm": 1784,
+          "wall_band_ids": [
+            "WB-00187",
+            "WB-00188",
+            "WB-00212",
+            "WB-00222",
+            "WB-00235",
+            "WB-00243"
+          ],
+          "why": "a wall band covers this interval"
+        }
+      ],
+      "material_length_m": 7.4,
+      "note": "virtual boundaries carry ZERO material length. The virtual SPAN is reported so it can be audited; it is never a quantity",
+      "portals": 1,
+      "portals_by_gap_class": {
+        "DOOR_OR_PORTAL_GAP": 1
+      },
+      "portals_by_status": {
+        "PORTAL_PROBABLE": 1
+      },
+      "virtual_length_m": 1.13,
+      "virtual_material_length_m": 0.0
+    },
+    "BTH-02": {
+      "by_boundary_type": {
+        "PHYSICAL_WALL": 4,
+        "VIRTUAL_SPACE_BOUNDARY": 2
+      },
+      "closes": true,
+      "intervals": [
+        {
+          "boundary_type": "PHYSICAL_WALL",
+          "interval_id": "BI-BTH-02-001",
+          "is_virtual": false,
+          "material_length_mm": 2496.1,
+          "portal_id": "",
+          "side": "north",
+          "space_id": "BTH-02",
+          "span_mm": 2496.1,
+          "wall_band_ids": [
+            "WB-00017"
+          ],
+          "why": "a wall band covers this interval"
+        },
+        {
+          "boundary_type": "VIRTUAL_SPACE_BOUNDARY",
+          "interval_id": "BI-BTH-02-002",
+          "is_virtual": true,
+          "material_length_mm": 0.0,
+          "portal_id": "PT-BTH-02-north-28676",
+          "side": "north",
+          "space_id": "BTH-02",
+          "span_mm": 120.9,
+          "wall_band_ids": [],
+          "why": "a probable doorway. This interval closes the room and carries NO wall material: zero blockwork, zero plaster, zero physical wall length"
+        },
+        {
+          "boundary_type": "PHYSICAL_WALL",
+          "interval_id": "BI-BTH-02-003",
+          "is_virtual": false,
+          "material_length_mm": 2617.0,
+          "portal_id": "",
+          "side": "south",
+          "space_id": "BTH-02",
+          "span_mm": 2617.0,
+          "wall_band_ids": [
+            "WB-00018"
+          ],
+          "why": "a wall band covers this interval"
+        },
+        {
+          "boundary_type": "PHYSICAL_WALL",
+          "interval_id": "BI-BTH-02-004",
+          "is_virtual": false,
+          "material_length_mm": 673.2,
+          "portal_id": "",
+          "side": "west",
+          "space_id": "BTH-02",
+          "span_mm": 673.2,
+          "wall_band_ids": [
+            "WB-00197"
+          ],
+          "why": "a wall band covers this interval"
+        },
+        {
+          "boundary_type": "VIRTUAL_SPACE_BOUNDARY",
+          "interval_id": "BI-BTH-02-005",
+          "is_virtual": true,
+          "material_length_mm": 0.0,
+          "portal_id": "PT-BTH-02-west-25824",
+          "side": "west",
+          "space_id": "BTH-02",
+          "span_mm": 1110.8,
+          "wall_band_ids": [],
+          "why": "a probable doorway. This interval closes the room and carries NO wall material: zero blockwork, zero plaster, zero physical wall length"
+        },
+        {
+          "boundary_type": "PHYSICAL_WALL",
+          "interval_id": "BI-BTH-02-006",
+          "is_virtual": false,
+          "material_length_mm": 1784,
+          "portal_id": "",
+          "side": "east",
+          "space_id": "BTH-02",
+          "span_mm": 1784,
+          "wall_band_ids": [
+            "WB-00186",
+            "WB-00212",
+            "WB-00213",
+            "WB-00223",
+            "WB-00234",
+            "WB-00242"
+          ],
+          "why": "a wall band covers this interval"
+        }
+      ],
+      "material_length_m": 7.57,
+      "note": "virtual boundaries carry ZERO material length. The virtual SPAN is reported so it can be audited; it is never a quantity",
+      "portals": 2,
+      "portals_by_gap_class": {
+        "DOOR_OR_PORTAL_GAP": 2
+      },
+      "portals_by_status": {
+        "PORTAL_PROBABLE": 2
+      },
+      "virtual_length_m": 1.23,
+      "virtual_material_length_m": 0.0
+    },
+    "BTH-03": {
+      "by_boundary_type": {
+        "PHYSICAL_WALL": 4,
+        "VIRTUAL_SPACE_BOUNDARY": 1
+      },
+      "closes": true,
+      "intervals": [
+        {
+          "boundary_type": "PHYSICAL_WALL",
+          "interval_id": "BI-BTH-03-001",
+          "is_virtual": false,
+          "material_length_mm": 1817.0,
+          "portal_id": "",
+          "side": "north",
+          "space_id": "BTH-03",
+          "span_mm": 1817.0,
+          "wall_band_ids": [
+            "WB-00030",
+            "WB-00094"
+          ],
+          "why": "a wall band covers this interval"
+        },
+        {
+          "boundary_type": "PHYSICAL_WALL",
+          "interval_id": "BI-BTH-03-002",
+          "is_virtual": false,
+          "material_length_mm": 1817.0,
+          "portal_id": "",
+          "side": "south",
+          "space_id": "BTH-03",
+          "span_mm": 1817.0,
+          "wall_band_ids": [
+            "WB-00032"
+          ],
+          "why": "a wall band covers this interval"
+        },
+        {
+          "boundary_type": "PHYSICAL_WALL",
+          "interval_id": "BI-BTH-03-003",
+          "is_virtual": false,
+          "material_length_mm": 1270.9,
+          "portal_id": "",
+          "side": "west",
+          "space_id": "BTH-03",
+          "span_mm": 1270.9,
+          "wall_band_ids": [
+            "WB-00171"
+          ],
+          "why": "a wall band covers this interval"
+        },
+        {
+          "boundary_type": "VIRTUAL_SPACE_BOUNDARY",
+          "interval_id": "BI-BTH-03-004",
+          "is_virtual": true,
+          "material_length_mm": 0.0,
+          "portal_id": "PT-BTH-03-west-32822",
+          "side": "west",
+          "space_id": "BTH-03",
+          "span_mm": 1108.1,
+          "wall_band_ids": [],
+          "why": "a probable doorway. This interval closes the room and carries NO wall material: zero blockwork, zero plaster, zero physical wall length"
+        },
+        {
+          "boundary_type": "PHYSICAL_WALL",
+          "interval_id": "BI-BTH-03-005",
+          "is_virtual": false,
+          "material_length_mm": 2379,
+          "portal_id": "",
+          "side": "east",
+          "space_id": "BTH-03",
+          "span_mm": 2379,
+          "wall_band_ids": [
+            "WB-00182",
+            "WB-00189",
+            "WB-00215",
+            "WB-00221",
+            "WB-00239",
+            "WB-00240"
+          ],
+          "why": "a wall band covers this interval"
+        }
+      ],
+      "material_length_m": 7.28,
+      "note": "virtual boundaries carry ZERO material length. The virtual SPAN is reported so it can be audited; it is never a quantity",
+      "portals": 1,
+      "portals_by_gap_class": {
+        "DOOR_OR_PORTAL_GAP": 1
+      },
+      "portals_by_status": {
+        "PORTAL_PROBABLE": 1
+      },
+      "virtual_length_m": 1.11,
+      "virtual_material_length_m": 0.0
+    },
+    "BTH-05": {
+      "by_boundary_type": {
+        "PHYSICAL_WALL": 4,
+        "VIRTUAL_SPACE_BOUNDARY": 1
+      },
+      "closes": true,
+      "intervals": [
+        {
+          "boundary_type": "PHYSICAL_WALL",
+          "interval_id": "BI-BTH-05-001",
+          "is_virtual": false,
+          "material_length_mm": 2336.0,
+          "portal_id": "",
+          "side": "north",
+          "space_id": "BTH-05",
+          "span_mm": 2336.0,
+          "wall_band_ids": [
+            "WB-00020"
+          ],
+          "why": "a wall band covers this interval"
+        },
+        {
+          "boundary_type": "PHYSICAL_WALL",
+          "interval_id": "BI-BTH-05-002",
+          "is_virtual": false,
+          "material_length_mm": 1281.8,
+          "portal_id": "",
+          "side": "south",
+          "space_id": "BTH-05",
+          "span_mm": 1281.8,
+          "wall_band_ids": [
+            "WB-00048"
+          ],
+          "why": "a wall band covers this interval"
+        },
+        {
+          "boundary_type": "VIRTUAL_SPACE_BOUNDARY",
+          "interval_id": "BI-BTH-05-003",
+          "is_virtual": true,
+          "material_length_mm": 0.0,
+          "portal_id": "PT-BTH-05-south-22393",
+          "side": "south",
+          "space_id": "BTH-05",
+          "span_mm": 1054.2,
+          "wall_band_ids": [],
+          "why": "a probable doorway. This interval closes the room and carries NO wall material: zero blockwork, zero plaster, zero physical wall length"
+        },
+        {
+          "boundary_type": "PHYSICAL_WALL",
+          "interval_id": "BI-BTH-05-004",
+          "is_virtual": false,
+          "material_length_mm": 1460,
+          "portal_id": "",
+          "side": "west",
+          "space_id": "BTH-05",
+          "span_mm": 1460,
+          "wall_band_ids": [
+            "WB-00140",
+            "WB-00193"
+          ],
+          "why": "a wall band covers this interval"
+        },
+        {
+          "boundary_type": "PHYSICAL_WALL",
+          "interval_id": "BI-BTH-05-005",
+          "is_virtual": false,
+          "material_length_mm": 1460,
+          "portal_id": "",
+          "side": "east",
+          "space_id": "BTH-05",
+          "span_mm": 1460,
+          "wall_band_ids": [
+            "WB-00144",
+            "WB-00146"
+          ],
+          "why": "a wall band covers this interval"
+        }
+      ],
+      "material_length_m": 6.54,
+      "note": "virtual boundaries carry ZERO material length. The virtual SPAN is reported so it can be audited; it is never a quantity",
+      "portals": 1,
+      "portals_by_gap_class": {
+        "DOOR_OR_PORTAL_GAP": 1
+      },
+      "portals_by_status": {
+        "PORTAL_PROBABLE": 1
+      },
+      "virtual_length_m": 1.05,
+      "virtual_material_length_m": 0.0
+    },
+    "OPEN-01": {
+      "by_boundary_type": {
+        "OPEN_PLAN_TRANSITION": 9,
+        "PHYSICAL_WALL": 9
+      },
+      "closes": false,
+      "intervals": [
+        {
+          "boundary_type": "PHYSICAL_WALL",
+          "interval_id": "BI-OPEN-01-001",
+          "is_virtual": false,
+          "material_length_mm": 326.3,
+          "portal_id": "",
+          "side": "north",
+          "space_id": "OPEN-01",
+          "span_mm": 326.3,
+          "wall_band_ids": [
+            "WB-00011",
+            "WB-00066",
+            "WB-00080",
+            "WB-00081",
+            "WB-00085"
+          ],
+          "why": "a wall band covers this interval"
+        },
+        {
+          "boundary_type": "PHYSICAL_WALL",
+          "interval_id": "BI-OPEN-01-002",
+          "is_virtual": false,
+          "material_length_mm": 1200.2,
+          "portal_id": "",
+          "side": "north",
+          "space_id": "OPEN-01",
+          "span_mm": 1200.2,
+          "wall_band_ids": [
+            "WB-00011",
+            "WB-00066",
+            "WB-00080",
+            "WB-00081",
+            "WB-00085"
+          ],
+          "why": "a wall band covers this interval"
+        },
+        {
+          "boundary_type": "OPEN_PLAN_TRANSITION",
+          "interval_id": "BI-OPEN-01-003",
+          "is_virtual": true,
+          "material_length_mm": 0.0,
+          "portal_id": "PT-OPEN-01-north-17498",
+          "side": "north",
+          "space_id": "OPEN-01",
+          "span_mm": 1600.3,
+          "wall_band_ids": [],
+          "why": "one evidence family only. A gap this size is equally a doorway and a wall the extractor missed"
+        },
+        {
+          "boundary_type": "OPEN_PLAN_TRANSITION",
+          "interval_id": "BI-OPEN-01-004",
+          "is_virtual": true,
+          "material_length_mm": 0.0,
+          "portal_id": "PT-OPEN-01-north-20298",
+          "side": "north",
+          "space_id": "OPEN-01",
+          "span_mm": 6053.1,
+          "wall_band_ids": [],
+          "why": "6053 mm is far wider than a doorway. This is an open-plan transition or a missing wall, and it is not closed on a portal hypothesis"
+        },
+        {
+          "boundary_type": "PHYSICAL_WALL",
+          "interval_id": "BI-OPEN-01-005",
+          "is_virtual": false,
+          "material_length_mm": 9180.0,
+          "portal_id": "",
+          "side": "south",
+          "space_id": "OPEN-01",
+          "span_mm": 9180.0,
+          "wall_band_ids": [
+            "WB-00024",
+            "WB-00028",
+            "WB-00029",
+            "WB-00040",
+            "WB-00119",
+            "WB-00120"
+          ],
+          "why": "a wall band covers this interval"
+        },
+        {
+          "boundary_type": "PHYSICAL_WALL",
+          "interval_id": "BI-OPEN-01-006",
+          "is_virtual": false,
+          "material_length_mm": 5301.1,
+          "portal_id": "",
+          "side": "west",
+          "space_id": "OPEN-01",
+          "span_mm": 5301.1,
+          "wall_band_ids": [
+            "WB-00130",
+            "WB-00132",
+            "WB-00137",
+            "WB-00164",
+            "WB-00202"
+          ],
+          "why": "a wall band covers this interval"
+        },
+        {
+          "boundary_type": "PHYSICAL_WALL",
+          "interval_id": "BI-OPEN-01-007",
+          "is_virtual": false,
+          "material_length_mm": 4901.0,
+          "portal_id": "",
+          "side": "west",
+          "space_id": "OPEN-01",
+          "span_mm": 4901.0,
+          "wall_band_ids": [
+            "WB-00130",
+            "WB-00132",
+            "WB-00137",
+            "WB-00164",
+            "WB-00202"
+          ],
+          "why": "a wall band covers this interval"
+        },
+        {
+          "boundary_type": "PHYSICAL_WALL",
+          "interval_id": "BI-OPEN-01-008",
+          "is_virtual": false,
+          "material_length_mm": 6082.2,
+          "portal_id": "",
+          "side": "west",
+          "space_id": "OPEN-01",
+          "span_mm": 6082.2,
+          "wall_band_ids": [
+            "WB-00130",
+            "WB-00132",
+            "WB-00137",
+            "WB-00164",
+            "WB-00202"
+          ],
+          "why": "a wall band covers this interval"
+        },
+        {
+          "boundary_type": "OPEN_PLAN_TRANSITION",
+          "interval_id": "BI-OPEN-01-009",
+          "is_virtual": true,
+          "material_length_mm": 0.0,
+          "portal_id": "PT-OPEN-01-west-18338",
+          "side": "west",
+          "space_id": "OPEN-01",
+          "span_mm": 1585.0,
+          "wall_band_ids": [],
+          "why": "one evidence family only. A gap this size is equally a doorway and a wall the extractor missed"
+        },
+        {
+          "boundary_type": "OPEN_PLAN_TRANSITION",
+          "interval_id": "BI-OPEN-01-010",
+          "is_virtual": true,
+          "material_length_mm": 0.0,
+          "portal_id": "PT-OPEN-01-west-25224",
+          "side": "west",
+          "space_id": "OPEN-01",
+          "span_mm": 1000.2,
+          "wall_band_ids": [],
+          "why": "one evidence family only. A gap this size is equally a doorway and a wall the extractor missed"
+        },
+        {
+          "boundary_type": "OPEN_PLAN_TRANSITION",
+          "interval_id": "BI-OPEN-01-011",
+          "is_virtual": true,
+          "material_length_mm": 0.0,
+          "portal_id": "PT-OPEN-01-west-31125",
+          "side": "west",
+          "space_id": "OPEN-01",
+          "span_mm": 897.5,
+          "wall_band_ids": [],
+          "why": "one evidence family only. A gap this size is equally a doorway and a wall the extractor missed"
+        },
+        {
+          "boundary_type": "PHYSICAL_WALL",
+          "interval_id": "BI-OPEN-01-012",
+          "is_virtual": false,
+          "material_length_mm": 2849.2,
+          "portal_id": "",
+          "side": "east",
+          "space_id": "OPEN-01",
+          "span_mm": 2849.2,
+          "wall_band_ids": [
+            "WB-00136",
+            "WB-00138",
+            "WB-00160"
+          ],
+          "why": "a wall band covers this interval"
+        },
+        {
+          "boundary_type": "PHYSICAL_WALL",
+          "interval_id": "BI-OPEN-01-013",
+          "is_virtual": false,
+          "material_length_mm": 4300.9,
+          "portal_id": "",
+          "side": "east",
+          "space_id": "OPEN-01",
+          "span_mm": 4300.9,
+          "wall_band_ids": [
+            "WB-00136",
+            "WB-00138",
+            "WB-00160"
+          ],
+          "why": "a wall band covers this interval"
+        },
+        {
+          "boundary_type": "PHYSICAL_WALL",
+          "interval_id": "BI-OPEN-01-014",
+          "is_virtual": false,
+          "material_length_mm": 3049.3,
+          "portal_id": "",
+          "side": "east",
+          "space_id": "OPEN-01",
+          "span_mm": 3049.3,
+          "wall_band_ids": [
+            "WB-00136",
+            "WB-00138",
+            "WB-00160"
+          ],
+          "why": "a wall band covers this interval"
+        },
+        {
+          "boundary_type": "OPEN_PLAN_TRANSITION",
+          "interval_id": "BI-OPEN-01-015",
+          "is_virtual": true,
+          "material_length_mm": 0.0,
+          "portal_id": "PT-OPEN-01-east-18338",
+          "side": "east",
+          "space_id": "OPEN-01",
+          "span_mm": 636.2,
+          "wall_band_ids": [],
+          "why": "one evidence family only. A gap this size is equally a doorway and a wall the extractor missed"
+        },
+        {
+          "boundary_type": "OPEN_PLAN_TRANSITION",
+          "interval_id": "BI-OPEN-01-016",
+          "is_virtual": true,
+          "material_length_mm": 0.0,
+          "portal_id": "PT-OPEN-01-east-21823",
+          "side": "east",
+          "space_id": "OPEN-01",
+          "span_mm": 1000.2,
+          "wall_band_ids": [],
+          "why": "one evidence family only. A gap this size is equally a doorway and a wall the extractor missed"
+        },
+        {
+          "boundary_type": "OPEN_PLAN_TRANSITION",
+          "interval_id": "BI-OPEN-01-017",
+          "is_virtual": true,
+          "material_length_mm": 0.0,
+          "portal_id": "PT-OPEN-01-east-27124",
+          "side": "east",
+          "space_id": "OPEN-01",
+          "span_mm": 1200.2,
+          "wall_band_ids": [],
+          "why": "one evidence family only. A gap this size is equally a doorway and a wall the extractor missed"
+        },
+        {
+          "boundary_type": "OPEN_PLAN_TRANSITION",
+          "interval_id": "BI-OPEN-01-018",
+          "is_virtual": true,
+          "material_length_mm": 0.0,
+          "portal_id": "PT-OPEN-01-east-31373",
+          "side": "east",
+          "space_id": "OPEN-01",
+          "span_mm": 6731.0,
+          "wall_band_ids": [],
+          "why": "6731 mm is far wider than a doorway. This is an open-plan transition or a missing wall, and it is not closed on a portal hypothesis"
+        }
+      ],
+      "material_length_m": 37.19,
+      "note": "virtual boundaries carry ZERO material length. The virtual SPAN is reported so it can be audited; it is never a quantity",
+      "portals": 9,
+      "portals_by_gap_class": {
+        "OPEN_PLAN_TRANSITION": 2,
+        "UNRESOLVED": 7
+      },
+      "portals_by_status": {
+        "PORTAL_CANDIDATE": 7,
+        "PORTAL_UNRESOLVED": 2
+      },
+      "virtual_length_m": 20.7,
+      "virtual_material_length_m": 0.0
+    },
+    "STR-01": {
+      "by_boundary_type": {
+        "OPEN_PLAN_TRANSITION": 2,
+        "PHYSICAL_WALL": 3
+      },
+      "closes": false,
+      "intervals": [
+        {
+          "boundary_type": "PHYSICAL_WALL",
+          "interval_id": "BI-STR-01-001",
+          "is_virtual": false,
+          "material_length_mm": 2108.0,
+          "portal_id": "",
+          "side": "north",
+          "space_id": "STR-01",
+          "span_mm": 2108.0,
+          "wall_band_ids": [
+            "WB-00023"
+          ],
+          "why": "a wall band covers this interval"
+        },
+        {
+          "boundary_type": "PHYSICAL_WALL",
+          "interval_id": "BI-STR-01-002",
+          "is_virtual": false,
+          "material_length_mm": 959.8,
+          "portal_id": "",
+          "side": "south",
+          "space_id": "STR-01",
+          "span_mm": 959.8,
+          "wall_band_ids": [
+            "WB-00056"
+          ],
+          "why": "a wall band covers this interval"
+        },
+        {
+          "boundary_type": "OPEN_PLAN_TRANSITION",
+          "interval_id": "BI-STR-01-003",
+          "is_virtual": true,
+          "material_length_mm": 0.0,
+          "portal_id": "PT-STR-01-south-10748",
+          "side": "south",
+          "space_id": "STR-01",
+          "span_mm": 1148.2,
+          "wall_band_ids": [],
+          "why": "one evidence family only. A gap this size is equally a doorway and a wall the extractor missed"
+        },
+        {
+          "boundary_type": "PHYSICAL_WALL",
+          "interval_id": "BI-STR-01-004",
+          "is_virtual": false,
+          "material_length_mm": 2606,
+          "portal_id": "",
+          "side": "west",
+          "space_id": "STR-01",
+          "span_mm": 2606,
+          "wall_band_ids": [
+            "WB-00139",
+            "WB-00206",
+            "WB-00207"
+          ],
+          "why": "a wall band covers this interval"
+        },
+        {
+          "boundary_type": "OPEN_PLAN_TRANSITION",
+          "interval_id": "BI-STR-01-005",
+          "is_virtual": true,
+          "material_length_mm": 0.0,
+          "portal_id": "PT-STR-01-east-16003",
+          "side": "east",
+          "space_id": "STR-01",
+          "span_mm": 2606,
+          "wall_band_ids": [],
+          "why": "2606 mm is far wider than a doorway. This is an open-plan transition or a missing wall, and it is not closed on a portal hypothesis"
+        }
+      ],
+      "material_length_m": 5.67,
+      "note": "virtual boundaries carry ZERO material length. The virtual SPAN is reported so it can be audited; it is never a quantity",
+      "portals": 2,
+      "portals_by_gap_class": {
+        "OPEN_PLAN_TRANSITION": 1,
+        "UNRESOLVED": 1
+      },
+      "portals_by_status": {
+        "PORTAL_CANDIDATE": 1,
+        "PORTAL_UNRESOLVED": 1
+      },
+      "virtual_length_m": 3.75,
+      "virtual_material_length_m": 0.0
+    },
+    "WSH-01": {
+      "by_boundary_type": {
+        "PHYSICAL_WALL": 4
+      },
+      "closes": true,
+      "intervals": [
+        {
+          "boundary_type": "PHYSICAL_WALL",
+          "interval_id": "BI-WSH-01-001",
+          "is_virtual": false,
+          "material_length_mm": 1730.0,
+          "portal_id": "",
+          "side": "north",
+          "space_id": "WSH-01",
+          "span_mm": 1730.0,
+          "wall_band_ids": [
+            "WB-00037",
+            "WB-00038"
+          ],
+          "why": "a wall band covers this interval"
+        },
+        {
+          "boundary_type": "PHYSICAL_WALL",
+          "interval_id": "BI-WSH-01-002",
+          "is_virtual": false,
+          "material_length_mm": 1730.0,
+          "portal_id": "",
+          "side": "south",
+          "space_id": "WSH-01",
+          "span_mm": 1730.0,
+          "wall_band_ids": [
+            "WB-00019"
+          ],
+          "why": "a wall band covers this interval"
+        },
+        {
+          "boundary_type": "PHYSICAL_WALL",
+          "interval_id": "BI-WSH-01-003",
+          "is_virtual": false,
+          "material_length_mm": 573,
+          "portal_id": "",
+          "side": "west",
+          "space_id": "WSH-01",
+          "span_mm": 573,
+          "wall_band_ids": [
+            "WB-00201",
+            "WB-00203"
+          ],
+          "why": "a wall band covers this interval"
+        },
+        {
+          "boundary_type": "PHYSICAL_WALL",
+          "interval_id": "BI-WSH-01-004",
+          "is_virtual": false,
+          "material_length_mm": 573,
+          "portal_id": "",
+          "side": "east",
+          "space_id": "WSH-01",
+          "span_mm": 573,
+          "wall_band_ids": [
+            "WB-00144"
+          ],
+          "why": "a wall band covers this interval"
+        }
+      ],
+      "material_length_m": 4.61,
+      "note": "virtual boundaries carry ZERO material length. The virtual SPAN is reported so it can be audited; it is never a quantity",
+      "portals": 0,
+      "portals_by_gap_class": {},
+      "portals_by_status": {},
+      "virtual_length_m": 0.0,
+      "virtual_material_length_m": 0.0
+    }
+  },
+  "space_boundary_faces": {
+    "bounded_faces": 14,
+    "by_orientation": {
+      "CLOCKWISE": 13,
+      "COUNTERCLOCKWISE": 14,
+      "DEGENERATE_ZERO_AREA": 4
+    },
+    "by_status": {
+      "CANDIDATE": 31
+    },
+    "faces": 31,
+    "faces_with_holes": 1,
+    "half_edges": 670,
+    "micro_faces": 0,
+    "total_bounded_area_m2": 1000.214,
+    "unbounded_faces": 13,
+    "unbounded_unresolved": 4,
+    "unclosed_walks": 48
+  },
+  "space_boundary_largest_faces": [
+    {
+      "area_m2": 989.159,
+      "blockers": [],
+      "boundary_half_edges": [
+        "HE-WE-0001-B-F",
+        "HE-WE-0129-B-F",
+        "HE-WE-0002-B-R",
+        "HE-WE-0128-D-R",
+        "HE-WE-0128-C-R",
+        "HE-WE-0128-B-R"
+      ],
+      "component_id": "FACE-0001",
+      "edge_validation_summary": {},
+      "face_id": "FACE-0001",
+      "geometry_confidence": "",
+      "half_edges": 6,
+      "holes": [
+        "FACE-0006",
+        "FACE-0007",
+        "FACE-0008",
+        "FACE-0009",
+        "FACE-0010",
+        "FACE-0011",
+        "FACE-0015",
+        "FACE-0016",
+        "FACE-0018",
+        "FACE-0022",
+        "FACE-0024",
+        "FACE-0025",
+        "FACE-0030"
+      ],
+      "kind": "BOUNDED_FACE",
+      "micro_class": "",
+      "orientation": "COUNTERCLOCKWISE",
+      "perimeter_m": 129.47,
+      "provenance": {},
+      "releasable": false,
+      "source_wall_edge_ids": [
+        "WE-0001-B",
+        "WE-0002-B",
+        "WE-0128-B",
+        "WE-0128-C",
+        "WE-0128-D",
+        "WE-0129-B"
+      ],
+      "status": "CANDIDATE",
+      "topology_boundary_candidate_ids": []
+    },
+    {
+      "area_m2": 1.981,
+      "blockers": [],
+      "boundary_half_edges": [
+        "HE-WE-0019-B-R",
+        "HE-WE-0201-R",
+        "HE-WE-0037-F",
+        "HE-WE-0144-D-F"
+      ],
+      "component_id": "FACE-0014",
+      "edge_validation_summary": {},
+      "face_id": "FACE-0015",
+      "geometry_confidence": "",
+      "half_edges": 4,
+      "holes": [],
+      "kind": "BOUNDED_FACE",
+      "micro_class": "",
+      "orientation": "COUNTERCLOCKWISE",
+      "perimeter_m": 6.25,
+      "provenance": {},
+      "releasable": false,
+      "source_wall_edge_ids": [
+        "WE-0019-B",
+        "WE-0037",
+        "WE-0144-D",
+        "WE-0201"
+      ],
+      "status": "CANDIDATE",
+      "topology_boundary_candidate_ids": []
+    },
+    {
+      "area_m2": 1.777,
+      "blockers": [],
+      "boundary_half_edges": [
+        "HE-WE-0033-F",
+        "HE-WE-0200-F",
+        "HE-WE-0034-R",
+        "HE-WE-0202-R"
+      ],
+      "component_id": "FACE-0018",
+      "edge_validation_summary": {},
+      "face_id": "FACE-0018",
+      "geometry_confidence": "",
+      "half_edges": 4,
+      "holes": [],
+      "kind": "BOUNDED_FACE",
+      "micro_class": "",
+      "orientation": "COUNTERCLOCKWISE",
+      "perimeter_m": 6.1,
+      "provenance": {},
+      "releasable": false,
+      "source_wall_edge_ids": [
+        "WE-0033",
+        "WE-0034",
+        "WE-0200",
+        "WE-0202"
+      ],
+      "status": "CANDIDATE",
+      "topology_boundary_candidate_ids": []
+    },
+    {
+      "area_m2": 1.74,
+      "blockers": [],
+      "boundary_half_edges": [
+        "HE-WE-0069-R",
+        "HE-WE-0149-B-R",
+        "HE-WE-0070-F",
+        "HE-WE-0161-F"
+      ],
+      "component_id": "FACE-0013",
+      "edge_validation_summary": {},
+      "face_id": "FACE-0024",
+      "geometry_confidence": "",
+      "half_edges": 4,
+      "holes": [],
+      "kind": "BOUNDED_FACE",
+      "micro_class": "",
+      "orientation": "COUNTERCLOCKWISE",
+      "perimeter_m": 5.94,
+      "provenance": {},
+      "releasable": false,
+      "source_wall_edge_ids": [
+        "WE-0069",
+        "WE-0070",
+        "WE-0149-B",
+        "WE-0161"
+      ],
+      "status": "CANDIDATE",
+      "topology_boundary_candidate_ids": []
+    },
+    {
+      "area_m2": 1.204,
+      "blockers": [],
+      "boundary_half_edges": [
+        "HE-WE-0009-F-R",
+        "HE-WE-0175-R",
+        "HE-WE-0043-F-F",
+        "HE-WE-0173-F",
+        "HE-WE-0009-G-R"
+      ],
+      "component_id": "FACE-0003",
+      "edge_validation_summary": {},
+      "face_id": "FACE-0010",
+      "geometry_confidence": "",
+      "half_edges": 5,
+      "holes": [],
+      "kind": "BOUNDED_FACE",
+      "micro_class": "",
+      "orientation": "COUNTERCLOCKWISE",
+      "perimeter_m": 4.25,
+      "provenance": {},
+      "releasable": false,
+      "source_wall_edge_ids": [
+        "WE-0009-F",
+        "WE-0009-G",
+        "WE-0043-F",
+        "WE-0173",
+        "WE-0175"
+      ],
+      "status": "CANDIDATE",
+      "topology_boundary_candidate_ids": []
+    },
+    {
+      "area_m2": 1.204,
+      "blockers": [],
+      "boundary_half_edges": [
+        "HE-WE-0009-C-F",
+        "HE-WE-0009-D-F",
+        "HE-WE-0177-F",
+        "HE-WE-0011-C-R",
+        "HE-WE-0179-R"
+      ],
+      "component_id": "FACE-0003",
+      "edge_validation_summary": {},
+      "face_id": "FACE-0007",
+      "geometry_confidence": "",
+      "half_edges": 5,
+      "holes": [],
+      "kind": "BOUNDED_FACE",
+      "micro_class": "",
+      "orientation": "COUNTERCLOCKWISE",
+      "perimeter_m": 4.3,
+      "provenance": {},
+      "releasable": false,
+      "source_wall_edge_ids": [
+        "WE-0009-C",
+        "WE-0009-D",
+        "WE-0011-C",
+        "WE-0177",
+        "WE-0179"
+      ],
+      "status": "CANDIDATE",
+      "topology_boundary_candidate_ids": []
+    },
+    {
+      "area_m2": 0.818,
+      "blockers": [],
+      "boundary_half_edges": [
+        "HE-WE-0009-C-R",
+        "HE-WE-0174-R",
+        "HE-WE-0043-C-F",
+        "HE-WE-0172-F"
+      ],
+      "component_id": "FACE-0003",
+      "edge_validation_summary": {},
+      "face_id": "FACE-0008",
+      "geometry_confidence": "",
+      "half_edges": 4,
+      "holes": [],
+      "kind": "BOUNDED_FACE",
+      "micro_class": "",
+      "orientation": "COUNTERCLOCKWISE",
+      "perimeter_m": 3.7,
+      "provenance": {},
+      "releasable": false,
+      "source_wall_edge_ids": [
+        "WE-0009-C",
+        "WE-0043-C",
+        "WE-0172",
+        "WE-0174"
+      ],
+      "status": "CANDIDATE",
+      "topology_boundary_candidate_ids": []
+    },
+    {
+      "area_m2": 0.799,
+      "blockers": [],
+      "boundary_half_edges": [
+        "HE-WE-0009-E-F",
+        "HE-WE-0009-F-F",
+        "HE-WE-0181-F",
+        "HE-WE-0011-D-R",
+        "HE-WE-0177-R"
+      ],
+      "component_id": "FACE-0003",
+      "edge_validation_summary": {},
+      "face_id": "FACE-0009",
+      "geometry_confidence": "",
+      "half_edges": 5,
+      "holes": [],
+      "kind": "BOUNDED_FACE",
+      "micro_class": "",
+      "orientation": "COUNTERCLOCKWISE",
+      "perimeter_m": 3.65,
+      "provenance": {},
+      "releasable": false,
+      "source_wall_edge_ids": [
+        "WE-0009-E",
+        "WE-0009-F",
+        "WE-0011-D",
+        "WE-0177",
+        "WE-0181"
+      ],
+      "status": "CANDIDATE",
+      "topology_boundary_candidate_ids": []
+    },
+    {
+      "area_m2": 0.788,
+      "blockers": [],
+      "boundary_half_edges": [
+        "HE-WE-0009-G-F",
+        "HE-WE-0178-F",
+        "HE-WE-0011-E-R",
+        "HE-WE-0181-R"
+      ],
+      "component_id": "FACE-0003",
+      "edge_validation_summary": {},
+      "face_id": "FACE-0011",
+      "geometry_confidence": "",
+      "half_edges": 4,
+      "holes": [],
+      "kind": "BOUNDED_FACE",
+      "micro_class": "",
+      "orientation": "COUNTERCLOCKWISE",
+      "perimeter_m": 3.65,
+      "provenance": {},
+      "releasable": false,
+      "source_wall_edge_ids": [
+        "WE-0009-G",
+        "WE-0011-E",
+        "WE-0178",
+        "WE-0181"
+      ],
+      "status": "CANDIDATE",
+      "topology_boundary_candidate_ids": []
+    },
+    {
+      "area_m2": 0.342,
+      "blockers": [],
+      "boundary_half_edges": [
+        "HE-WE-0030-C-F",
+        "HE-WE-0221-A-F",
+        "HE-WE-0094-A-R",
+        "HE-WE-0171-A-R"
+      ],
+      "component_id": "FACE-0004",
+      "edge_validation_summary": {},
+      "face_id": "FACE-0016",
+      "geometry_confidence": "",
+      "half_edges": 4,
+      "holes": [],
+      "kind": "BOUNDED_FACE",
+      "micro_class": "",
+      "orientation": "COUNTERCLOCKWISE",
+      "perimeter_m": 3.85,
+      "provenance": {},
+      "releasable": false,
+      "source_wall_edge_ids": [
+        "WE-0030-C",
+        "WE-0094-A",
+        "WE-0171-A",
+        "WE-0221-A"
+      ],
+      "status": "CANDIDATE",
+      "topology_boundary_candidate_ids": []
+    },
+    {
+      "area_m2": 0.281,
+      "blockers": [],
+      "boundary_half_edges": [
+        "HE-WE-0008-F",
+        "HE-WE-0190-C-R",
+        "HE-WE-0190-B-R",
+        "HE-WE-0124-R",
+        "HE-WE-0124-F",
+        "HE-WE-0190-B-F",
+        "HE-WE-0078-R",
+        "HE-WE-0078-F",
+        "HE-WE-0190-C-F",
+        "HE-WE-0079-R",
+        "HE-WE-0079-F",
+        "HE-WE-0008-R",
+        "HE-WE-0185-A-R",
+        "HE-WE-0185-A-F",
+        "HE-WE-0154-B-R",
+        "HE-WE-0154-A-R",
+        "HE-WE-0154-A-F",
+        "HE-WE-0154-B-F",
+        "HE-WE-0185-B-F",
+        "HE-WE-0044-D-R",
+        "HE-WE-0035-D-F",
+        "HE-WE-0165-F",
+        "HE-WE-0036-A-R",
+        "HE-WE-0036-A-F",
+        "HE-WE-0036-B-F",
+        "HE-WE-0036-B-R",
+        "HE-WE-0165-R",
+        "HE-WE-0185-B-R"
+      ],
+      "component_id": "FACE-0006",
+      "edge_validation_summary": {},
+      "face_id": "FACE-0006",
+      "geometry_confidence": "",
+      "half_edges": 28,
+      "holes": [],
+      "kind": "BOUNDED_FACE",
+      "micro_class": "",
+      "orientation": "COUNTERCLOCKWISE",
+      "perimeter_m": 46.85,
+      "provenance": {},
+      "releasable": false,
+      "source_wall_edge_ids": [
+        "WE-0008",
+        "WE-0035-D",
+        "WE-0036-A",
+        "WE-0036-B",
+        "WE-0044-D",
+        "WE-0078",
+        "WE-0079",
+        "WE-0124",
+        "WE-0154-A",
+        "WE-0154-B",
+        "WE-0165",
+        "WE-0185-A",
+        "WE-0185-B",
+        "WE-0190-B",
+        "WE-0190-C"
+      ],
+      "status": "CANDIDATE",
+      "topology_boundary_candidate_ids": []
+    },
+    {
+      "area_m2": 0.066,
+      "blockers": [],
+      "boundary_half_edges": [
+        "HE-WE-0060-F",
+        "HE-WE-0060-R",
+        "HE-WE-0246-F",
+        "HE-WE-0246-R"
+      ],
+      "component_id": "FACE-0022",
+      "edge_validation_summary": {},
+      "face_id": "FACE-0022",
+      "geometry_confidence": "",
+      "half_edges": 4,
+      "holes": [],
+      "kind": "BOUNDED_FACE",
+      "micro_class": "",
+      "orientation": "COUNTERCLOCKWISE",
+      "perimeter_m": 4.5,
+      "provenance": {},
+      "releasable": false,
+      "source_wall_edge_ids": [
+        "WE-0060",
+        "WE-0246"
+      ],
+      "status": "CANDIDATE",
+      "topology_boundary_candidate_ids": []
+    },
+    {
+      "area_m2": 0.028,
+      "blockers": [],
+      "boundary_half_edges": [
+        "HE-WE-0153-F",
+        "HE-WE-0207-A-F",
+        "HE-WE-0206-A-R",
+        "HE-WE-0159-R"
+      ],
+      "component_id": "FACE-0003",
+      "edge_validation_summary": {},
+      "face_id": "FACE-0030",
+      "geometry_confidence": "",
+      "half_edges": 4,
+      "holes": [],
+      "kind": "BOUNDED_FACE",
+      "micro_class": "",
+      "orientation": "COUNTERCLOCKWISE",
+      "perimeter_m": 4.3,
+      "provenance": {},
+      "releasable": false,
+      "source_wall_edge_ids": [
+        "WE-0153",
+        "WE-0159",
+        "WE-0206-A",
+        "WE-0207-A"
+      ],
+      "status": "CANDIDATE",
+      "topology_boundary_candidate_ids": []
+    },
+    {
+      "area_m2": 0.027,
+      "blockers": [],
+      "boundary_half_edges": [
+        "HE-WE-0083-F",
+        "HE-WE-0127-F",
+        "HE-WE-0127-R",
+        "HE-WE-0083-R"
+      ],
+      "component_id": "FACE-0025",
+      "edge_validation_summary": {},
+      "face_id": "FACE-0025",
+      "geometry_confidence": "",
+      "half_edges": 4,
+      "holes": [],
+      "kind": "BOUNDED_FACE",
+      "micro_class": "",
+      "orientation": "COUNTERCLOCKWISE",
+      "perimeter_m": 2.28,
+      "provenance": {},
+      "releasable": false,
+      "source_wall_edge_ids": [
+        "WE-0083",
+        "WE-0127"
+      ],
+      "status": "CANDIDATE",
+      "topology_boundary_candidate_ids": []
+    }
+  ],
+  "status": {
+    "E31A_ENGINE_DEVELOPMENT_STATUS": "READY_FOR_DIAGNOSTIC_RUN",
+    "PROJECT_TOPOLOGY_RELEASE_STATUS": "BLOCKED",
+    "blockers": [
+      "5 component(s) can only produce hypothesis faces"
+    ],
+    "by_verdict": {
+      "FACE_BLOCKED": 34,
+      "FACE_ELIGIBLE": 3,
+      "FACE_HYPOTHESIS_ONLY": 5
+    },
+    "components_blocked": 34,
+    "components_eligible": 3,
+    "components_hypothesis_only": 5,
+    "why": "every face this engine produces is unreleasable by construction; migration to a measurement basis is explicit and has not happened"
+  },
+  "wall_extraction": {
+    "bands": 243,
+    "by_representation": {
+      "DOUBLE_FACE_WALL": 243
+    },
+    "by_status": {
+      "PROBABLE": 53,
+      "VALIDATED": 190
+    },
+    "evidence_histogram": {
+      "DRAWN_WITH_THE_SHEET_WALL_PEN": 116,
+      "END_CAP_CLOSES_THE_BAND": 148,
+      "FACES_OVERLAP_MOST_OF_THEIR_LENGTH": 241,
+      "RASTER_WALL_MASK_SUPPORTS_THE_BAND": 42,
+      "TWO_PARALLEL_FACES": 243
+    },
+    "rejection_reasons": {
+      "FRAGMENTED_MATE": 259,
+      "INSUFFICIENT_OVERLAP": 154,
+      "NO_PARALLEL_FACE": 49
+    },
+    "rejections": 462,
+    "separation_bands_mm": {
+      "120-180": 62,
+      "180-260": 109,
+      "260-400": 33,
+      "60-120": 26,
+      ">400": 13
+    },
+    "single_face_candidates": 49,
+    "total_length_m": 615.1
+  }
+}

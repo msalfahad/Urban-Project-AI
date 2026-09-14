@@ -34,7 +34,22 @@ SPACES = [
      "geometry_type": "UNRESOLVED", "floor_area_m2": None},
 ]
 
+def _manifest():
+    """A coherent one-run manifest. Every workbook needs one now: a workbook
+    that cannot prove its sheets describe one analysis state may not be
+    built."""
+    from engine.run_manifest import RunManifest
+    m = RunManifest("23010", "AR-00", "MAR.2023", "abc123")
+    f = m.add("frame", "V2", {"frame": "SWAP_FLIP_Y"})
+    w = m.add("wall_extraction", "V2", {"bands": 243},
+              consumed=[("frame", f.output_hash)])
+    m.add("wall_graph", "V2", {"edges": 369},
+          consumed=[("wall_extraction", w.output_hash)])
+    return m.record()
+
+
 BUNDLE = {
+    "manifest": _manifest(),
     "project_id": "23010",
     "spaces": SPACES,
     "quantities": {"BED-01": {"floor_area_m2": 21.4},

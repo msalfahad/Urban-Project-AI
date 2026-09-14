@@ -796,6 +796,17 @@ def dashboard(bundle: dict, sheets: dict) -> Sheet:
         row("RUN", "Drawing", bundle.get("provenance", {}).get("drawing")),
         row("RUN", "Revision", bundle.get("revision_id")),
         row("RUN", "Run id", bundle.get("run_id")),
+        row("RUN", "Analysis state", "COHERENT — one run",
+            "Every sheet in this workbook describes the same analysis state. "
+            "The export fails rather than mixing runs."),
+        row("RUN", "Wall extraction", (bundle.get("manifest", {})
+                                       .get("stages", {})
+                                       .get("wall_extraction", {})
+                                       .get("output_hash"))),
+        row("RUN", "Wall graph", (bundle.get("manifest", {}).get("stages", {})
+                                  .get("wall_graph", {}).get("output_hash"))),
+        row("RUN", "Topology", (bundle.get("manifest", {}).get("stages", {})
+                                .get("topology", {}).get("output_hash"))),
 
         # TWO statuses, because one word was answering two questions. Progress
         # on coverage is not permission to bill.
@@ -1171,6 +1182,25 @@ def build_workbook(bundle: dict) -> Workbook:
             raise QaWorkbookError(
                 f"the bundle has no {required!r}; a QA workbook without it "
                 "would describe a project it cannot name")
+
+    # ONE WORKBOOK, ONE ANALYSIS STATE. The previous export carried a V2 wall
+    # extraction beside V1 exceptions reporting 115 components and 228 termini,
+    # and said planar extraction had not started after it had. Every sheet was
+    # internally correct and the workbook as a whole was false — the worst
+    # shape a report can take, because nothing in it looks wrong.
+    manifest = bundle.get("manifest")
+    if manifest is None:
+        raise QaWorkbookError(
+            "this bundle carries no run manifest. A workbook that cannot "
+            "prove its sheets describe one analysis state may not be built: "
+            "freshness must be a property of the data, not of which files "
+            "happened to be on disk")
+    problems = manifest.get("problems") or []
+    if problems or not manifest.get("coherent", False):
+        raise QaWorkbookError(
+            "the workbook would mix analysis runs:\n  - "
+            + "\n  - ".join(problems or ["the manifest reports incoherent"])
+            + "\nRe-run the stale stages before exporting.")
 
     spaces = bundle["spaces"]
     quantities = bundle.get("quantities", {})

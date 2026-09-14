@@ -208,18 +208,33 @@ def _release_row(space_id: str, established: dict, uses, *,
     return out
 
 
+# THE SINGLE SOURCE OF TRUTH for a workbook. One file, written by one
+# pipeline run, carrying the manifest the exporter must check. Reading several
+# per-stage files off disk is what let a V2 extraction sit beside V1
+# exceptions.
+CURRENT_RUN = Path("runs/current/23010.json")
 E31A_REPORT = Path("runs/graph/AR-00_e31a.json")
 WALL_V2_REPORT = Path("runs/graph/AR-00_wall_v2.json")
 
 
+_RUN_CACHE: dict = {}
+
+
+def _run() -> dict:
+    """The current pipeline run. Read once, and it carries its own manifest."""
+    if _RUN_CACHE:
+        return _RUN_CACHE
+    if CURRENT_RUN.exists():
+        try:
+            _RUN_CACHE.update(json.loads(CURRENT_RUN.read_text()))
+        except Exception:
+            pass
+    return _RUN_CACHE
+
+
 def _wall_v2() -> dict:
-    """The wall extraction V2 run, if one exists. Read-only and optional."""
-    if not WALL_V2_REPORT.exists():
-        return {}
-    try:
-        return json.loads(WALL_V2_REPORT.read_text())
-    except Exception:
-        return {}
+    """Wall extraction, from the current run only."""
+    return _run()
 
 
 def _e31a() -> dict:
@@ -233,11 +248,12 @@ def _e31a() -> dict:
 
 
 def _faces() -> list:
-    return _e31a().get("largest_faces", [])
+    """Faces from the CURRENT run. An older E31A file is not consulted."""
+    return _run().get("largest_faces", [])
 
 
 def _face_correspondence() -> list:
-    return _e31a().get("correspondence", [])
+    return _run().get("correspondence", [])
 
 
 def _space_model(spaces, wall_rows, areas) -> SpaceModel:
@@ -417,8 +433,38 @@ def bundle(space_map_path: Path = DEFAULT_SPACE_MAP,
     diagnostic, findings = {}, []
     run_id = (f"{sm['project_id']}-{sm['drawing_id']}-"
               f"{sm['drawing_revision']}".replace(" ", "_"))
-    dp = Path(diagnostic_path)
-    if dp.exists():
+    cur = _run()
+    if cur:
+        # Findings are generated from the CURRENT run's numbers. Reading an
+        # older diagnostic file is exactly how 115 components and 228 termini
+        # survived into a V2 workbook.
+        diagnostic = {
+            "connectivity": {
+                "components": cur["connectivity"]["components"],
+                "termini": cur["connectivity"]["termini"],
+                "terminus_histogram": cur["connectivity"][
+                    "terminus_histogram"],
+                "cause_histogram": {},
+                "major_components": cur["connectivity"][
+                    "components_with_cycles"],
+                "share_of_length_in_major_components_pct": None,
+            },
+            "noded_graph": cur["graph"],
+            "source": {"path_fragmentation": {
+                "short_segments": None,
+                "short_in_a_path_that_also_has_a_long_run": None}},
+            "end_caps": {"found": None},
+            "stitching": {},
+            "e31a_gate": {"ready_for_e31a": False,
+                          "verdict": "NOT READY",
+                          "failed": ["POSITIVE_CONTROLS"],
+                          "not_measured": []},
+        }
+        run_id = cur["manifest"]["stages"]["wall_graph"]["run_id"]
+        findings = from_graph_diagnostic(
+            diagnostic, run_id=run_id, reference=str(CURRENT_RUN),
+            space_count=len(spaces), use_count=len(USES))
+    elif (dp := Path(diagnostic_path)).exists():
         diagnostic = json.loads(dp.read_text())
         findings = from_graph_diagnostic(
             diagnostic, run_id=run_id, reference=str(dp),
@@ -616,11 +662,18 @@ def bundle(space_map_path: Path = DEFAULT_SPACE_MAP,
         "assemblies": [],
         "faces": _faces(),
         "face_correspondence": _face_correspondence(),
-        "wall_bands": _wall_v2().get("band_sample", []),
-        "wall_rejections": _wall_v2().get("rejection_sample", []),
-        "wall_sides": [dict(sd, space_id=sid)
-                       for sid, h in _wall_v2().get("hard_cases", {}).items()
-                       for sd in h.get("sides", [])],
+        "manifest": _run().get("manifest"),
+        "wall_bands": _run().get("band_sample", []),
+        "wall_rejections": _run().get("rejection_sample", []),
+        "wall_sides": [
+            {"space_id": sid, "side": side,
+             "status": ("PHYSICAL_WALL_PRESENT" if v["coverage_pct"] >= 95
+                        else "GAP"),
+             "likely_cause": (f"{v['coverage_pct']}% covered"
+                              + (f", gaps {v['gaps_mm']} mm" if v["gaps_mm"]
+                                 else ""))}
+            for sid, sides in _run().get("gap_map", {}).items()
+            for side, v in sides.items()],
         "revision_delta": compare(
             None, {"revision_id": sm["drawing_revision"]}),
         "provenance": provenance,
