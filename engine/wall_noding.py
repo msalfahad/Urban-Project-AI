@@ -13,6 +13,20 @@ through-edge divided at the node, and every consequence of dividing it handled:
   degree       only the POST-SPLIT graph owns an authoritative degree
 
 Nothing here decides what a wall means. It decides where walls meet.
+
+THE PRINCIPLE THIS MODULE IS BUILT UNDER, learned from four reversals:
+
+    DO NOT PROMOTE A PROXY INTO PHYSICAL TRUTH.
+
+    same raster region            is not   "not a doorway"
+    60-120 mm separation          is not   "not masonry"
+    same region on both sides     is not   "validated doorway"
+    three correlated observations are not  three independent proofs
+    degree 4                      is not   "a four-way crossing"
+
+The chain is OBSERVATION -> EVIDENCE -> HYPOTHESIS -> INDEPENDENT VALIDATION ->
+PHYSICAL INTERPRETATION -> QUANTITY, and every step in it is somewhere a proxy
+can be mistaken for the thing itself.
 """
 
 from __future__ import annotations
@@ -24,6 +38,15 @@ from engine.wall_graph import (COMPLEX_JUNCTION, CONTINUATION, CROSS_JUNCTION,
                                L_JUNCTION, TERMINUS, T_JUNCTION, WallEdge,
                                WallGraph)
 
+# Two wall representations overlapping at a building corner is mathematically a
+# degree-4 node and physically an L. Calling it a cross gives planar extraction
+# four outgoing half-edges where there are two, and false half-edges make false
+# faces. The test is which SECTORS around the node are actually occupied: a true
+# crossing occupies all four, a corner overlap only two adjacent ones.
+TRUE_CROSS_JUNCTION = "TRUE_CROSS_JUNCTION"
+CORNER_OVERLAP = "CORNER_OVERLAP"
+UNRESOLVED_JUNCTION = "UNRESOLVED_JUNCTION"
+
 # Why a node exists. Endpoint-on-edge is the one the source file does not give us.
 NODE_ENDPOINT = "EDGE_ENDPOINT"
 NODE_CROSSING = "PERPENDICULAR_CROSSING"
@@ -32,16 +55,43 @@ NODE_ENDPOINT_ON_EDGE = "ENDPOINT_ON_EDGE_INTERIOR"
 # Why an edge was divided.
 SPLIT_AT_NODE = "SPLIT_AT_INTERIOR_NODE"
 
-# Cluster health. An over-spread cluster is refused rather than collapsed.
-CLUSTER_OK = "OK"
-CLUSTER_OVER_SPREAD = "OVER_SPREAD"
+# Cluster health. A cluster that is too spread out to be one point is
+# SUBDIVIDED first — refusal is the last answer, not the first one. Only a
+# cluster that stays one dense smear after subdivision is refused, and a
+# borderline one is held as AMBIGUOUS rather than forced either way.
+CLUSTER_VALID = "VALID_CLUSTER"
+CLUSTER_AMBIGUOUS = "AMBIGUOUS_CLUSTER"
+CLUSTER_REJECTED = "REJECTED_CLUSTER"
+
+# Older readers of this module used these two names. They are the same states.
+CLUSTER_OK = CLUSTER_VALID
+CLUSTER_OVER_SPREAD = CLUSTER_REJECTED
+
+# Subdivision halves the tolerance until the sub-clusters fit, but it stops
+# here. Below this, "separate nodes" stops meaning anything physical: no CAD
+# file distinguishes two wall ends 4 mm apart on purpose.
+MIN_CLUSTER_TOL_MM = 5.0
 
 # Duplicate handling.
 DUP_EXACT = "EXACT_DUPLICATE_MERGED"
 DUP_PARTIAL = "PARTIAL_OVERLAP_RECORDED"
 
-# An edge short enough to be suspicious. Tracked, never silently dropped.
+# An edge short enough to be suspicious. This is a REVIEW TRIGGER, never a
+# deletion threshold: a flagged edge may be a real narrow feature, a numerical
+# artefact, duplicate geometry or a tolerance artefact, and only the four are
+# told apart by topology, not by length. The trigger is local — a fragment
+# shorter than the wall it belongs to is thick is not a wall run — with this
+# floor for thin partitions.
 MICRO_EDGE_MM = 50.0
+
+# What to do about a flagged fragment. A recommendation, not an action: nothing
+# in this module deletes an edge.
+MICRO_KEEP = "KEEP_REAL_OR_UNPROVEN_FEATURE"
+MICRO_COLLAPSIBLE = "COLLAPSIBLE_WITHOUT_TOPOLOGY_CHANGE"
+MICRO_UNRESOLVED = "MICRO_EDGE_UNRESOLVED"
+
+# Why two coordinate clusters turned out to be one junction.
+MERGE_TRUNCATED_END = "TRUNCATED_END_AT_EXISTING_JUNCTION"
 
 PROBABLE = "PROBABLE"
 UNRESOLVED = "UNRESOLVED"
@@ -62,13 +112,20 @@ class Node:
     member_count: int
     diameter_mm: float
     max_displacement_mm: float
-    status: str = CLUSTER_OK
+    status: str = CLUSTER_VALID
     edge_ids: tuple[str, ...] = ()
     kind: str = UNRESOLVED
+    subdivision_depth: int = 0
+    merged_node_ids: tuple[str, ...] = ()
 
     @property
     def degree(self) -> int:
         return len(self.edge_ids)
+
+    @property
+    def usable(self) -> bool:
+        """Only a VALID node may cut a wall. Fail closed on the other two."""
+        return self.status == CLUSTER_VALID
 
     def record(self) -> dict:
         return {"node_id": self.node_id, "x_mm": round(self.x_mm, 1),
@@ -77,7 +134,9 @@ class Node:
                 "member_count": self.member_count,
                 "diameter_mm": round(self.diameter_mm, 1),
                 "max_displacement_mm": round(self.max_displacement_mm, 1),
-                "status": self.status, "edge_ids": list(self.edge_ids)}
+                "status": self.status, "edge_ids": list(self.edge_ids),
+                "subdivision_depth": self.subdivision_depth,
+                "merged_node_ids": list(self.merged_node_ids)}
 
 
 @dataclass(frozen=True)
@@ -108,8 +167,15 @@ class SplitEdge:
         return abs(self.end_mm - self.start_mm)
 
     @property
+    def micro_threshold_mm(self) -> float:
+        """Local, not global. A fragment shorter than its own wall is thick is
+        not a wall run, whatever an absolute millimetre figure would say."""
+        return max(MICRO_EDGE_MM, self.wall_face_separation_mm)
+
+    @property
     def is_micro(self) -> bool:
-        return self.length_mm < MICRO_EDGE_MM
+        """Flagged for review. Nothing here deletes it — see micro_edge_policy."""
+        return self.length_mm < self.micro_threshold_mm
 
     def record(self) -> dict:
         return {"edge_id": self.edge_id, "parent_edge_id": self.parent_edge_id,
@@ -126,6 +192,7 @@ class SplitEdge:
                 "split_node_ids": list(self.split_node_ids),
                 "merged_from": list(self.merged_from),
                 "is_micro": self.is_micro,
+                "micro_threshold_mm": round(self.micro_threshold_mm, 1),
                 "validation_status": self.validation_status}
 
 
@@ -136,6 +203,8 @@ class NodedGraph:
     duplicates: list[dict] = field(default_factory=list)
     pre_split_total_length_mm: float = 0.0
     over_spread_clusters: list[str] = field(default_factory=list)
+    ambiguous_clusters: list[str] = field(default_factory=list)
+    node_merges: list[dict] = field(default_factory=list)
 
     @property
     def post_split_total_length_mm(self) -> float:
@@ -168,6 +237,47 @@ class NodedGraph:
                 stack.extend(by_edge.get(cur, ()))
         return comps
 
+    def micro_edge_policy(self) -> list[dict]:
+        """Classify each flagged fragment. Recommend; never delete.
+
+        The question is not "is it short" — it is "would removing it change the
+        topology". A fragment between two junctions that each carry a third wall
+        is load-bearing for the graph: collapsing it would fuse two distinct
+        junctions into one and silently move a wall. Only a fragment whose two
+        ends carry nothing but the fragment and its own collinear continuation
+        can be collapsed without changing what meets what, and even then the
+        decision is recorded for a human, not applied here.
+        """
+        deg: dict[str, list[Node]] = {}
+        for n in self.nodes:
+            for eid in n.edge_ids:
+                deg.setdefault(eid, []).append(n)
+        out: list[dict] = []
+        for e in self.micro_edges:
+            ends = [n for n in deg.get(e.edge_id, ())
+                    if min(abs(_along(n, e.axis) - e.start_mm),
+                           abs(_along(n, e.axis) - e.end_mm))
+                    <= e.micro_threshold_mm + 1.0]
+            junction_ends = [n for n in ends if n.degree >= 3]
+            if junction_ends:
+                decision, why = MICRO_KEEP, (
+                    "both ends or one end is a junction carrying a third wall; "
+                    "collapsing would fuse two distinct junctions")
+            elif len(ends) >= 2 and all(n.degree <= 2 for n in ends):
+                decision, why = MICRO_COLLAPSIBLE, (
+                    "no third wall at either end, so collapsing changes no "
+                    "incidence — recommendation only, not applied")
+            else:
+                decision, why = MICRO_UNRESOLVED, (
+                    "the fragment's ends are not both resolved to nodes, so the "
+                    "topology consequence of collapsing it is unknown")
+            out.append({"edge_id": e.edge_id, "parent_edge_id": e.parent_edge_id,
+                        "length_mm": round(e.length_mm, 1),
+                        "threshold_mm": round(e.micro_threshold_mm, 1),
+                        "end_degrees": sorted(n.degree for n in ends),
+                        "decision": decision, "reason": why})
+        return out
+
     def health(self) -> dict:
         from collections import Counter
         kinds = Counter(n.kind for n in self.nodes)
@@ -176,12 +286,22 @@ class NodedGraph:
             "nodes": len(self.nodes), "edges": len(self.edges),
             **{k: kinds.get(k, 0) for k in (TERMINUS, CONTINUATION, L_JUNCTION,
                                             T_JUNCTION, CROSS_JUNCTION,
+                                            TRUE_CROSS_JUNCTION, CORNER_OVERLAP,
+                                            UNRESOLVED_JUNCTION,
                                             COMPLEX_JUNCTION)},
             "edge_splits_performed": sum(1 for e in self.edges
                                          if e.split_reason == SPLIT_AT_NODE),
             "duplicate_resolutions": len(self.duplicates),
+            "node_merges": len(self.node_merges),
+            "subdivided_clusters": sum(1 for n in self.nodes
+                                       if n.subdivision_depth > 0),
+            "ambiguous_clusters": len(self.ambiguous_clusters),
+            "rejected_clusters": len(self.over_spread_clusters),
             "over_spread_clusters": len(self.over_spread_clusters),
             "micro_edges": len(self.micro_edges),
+            "micro_edges_collapsible": sum(
+                1 for m in self.micro_edge_policy()
+                if m["decision"] == MICRO_COLLAPSIBLE),
             "graph_components": self.components(),
             "pre_split_total_length_mm": round(pre, 1),
             "post_split_total_length_mm": round(post, 1),
@@ -237,17 +357,9 @@ def candidate_nodes(edges: list[WallEdge], *, tol_mm: float = 60.0):
     return pts
 
 
-def cluster(points, *, tol_mm: float = 60.0, max_diameter_mm: float = 150.0):
-    """Union-find on distance, with a guard against transitive over-clustering.
-
-    A within tolerance of B, and B of C, does not make A and C one point. Naive
-    chaining walks geometry across the sheet, so each cluster's diameter is
-    measured and one that exceeds `max_diameter_mm` is marked OVER_SPREAD rather
-    than collapsed. Edges are not split at an over-spread cluster: moving a wall
-    end by more than a wall thickness to tidy a graph is how a room changes size.
-    """
-    n = len(points)
-    parent = list(range(n))
+def _groups(points, idxs, tol_mm: float) -> list[list[int]]:
+    """Union-find on distance over a subset of candidate points."""
+    parent = {i: i for i in idxs}
 
     def find(i):
         while parent[i] != i:
@@ -255,7 +367,7 @@ def cluster(points, *, tol_mm: float = 60.0, max_diameter_mm: float = 150.0):
             i = parent[i]
         return i
 
-    order = sorted(range(n), key=lambda i: points[i][0])
+    order = sorted(idxs, key=lambda i: points[i][0])
     for pos, i in enumerate(order):
         xi, yi = points[i][0], points[i][1]
         for j in order[pos + 1:]:
@@ -267,31 +379,152 @@ def cluster(points, *, tol_mm: float = 60.0, max_diameter_mm: float = 150.0):
                 if a != b:
                     parent[b] = a
 
-    groups: dict[int, list[int]] = {}
-    for i in range(n):
-        groups.setdefault(find(i), []).append(i)
+    out: dict[int, list[int]] = {}
+    for i in idxs:
+        out.setdefault(find(i), []).append(i)
+    return list(out.values())
+
+
+def _spread(points, idxs) -> tuple[float, float, float, float]:
+    xs = [points[i][0] for i in idxs]
+    ys = [points[i][1] for i in idxs]
+    cx, cy = sum(xs) / len(xs), sum(ys) / len(ys)
+    diameter = max(
+        (math.hypot(points[a][0] - points[b][0], points[a][1] - points[b][1])
+         for a in idxs for b in idxs), default=0.0)
+    disp = max((math.hypot(x - cx, y - cy) for x, y in zip(xs, ys)), default=0.0)
+    return cx, cy, diameter, disp
+
+
+def _resolve(points, idxs, tol_mm: float, max_diameter_mm: float, depth: int):
+    """Subdivide an over-spread cluster before refusing it.
+
+    A within tolerance of B, and B of C, does not make A and C one point — but
+    neither does it make the whole chain unusable. Halve the tolerance and ask
+    again: five wall ends 50 mm apart in a line are five nodes, not one refusal.
+    Refusal is reserved for a smear that stays one blob all the way down to
+    MIN_CLUSTER_TOL_MM, where "two separate nodes" has stopped meaning anything
+    physical. Yields (idxs, status, depth) triples.
+    """
+    _, _, diameter, _ = _spread(points, idxs)
+    if diameter <= max_diameter_mm:
+        yield idxs, CLUSTER_VALID, depth
+        return
+    finer = tol_mm / 2
+    if finer >= MIN_CLUSTER_TOL_MM:
+        parts = _groups(points, idxs, finer)
+        if len(parts) > 1:
+            for part in parts:
+                yield from _resolve(points, part, finer, max_diameter_mm,
+                                    depth + 1)
+            return
+        # One group at half the tolerance too: keep halving rather than refuse.
+        yield from _resolve(points, idxs, finer, max_diameter_mm, depth)
+        return
+    # Dense all the way down and still wider than one node may be. Held, not
+    # forced: AMBIGUOUS is reviewable, REJECTED is beyond argument.
+    yield idxs, (CLUSTER_AMBIGUOUS if diameter <= max_diameter_mm * 2
+                 else CLUSTER_REJECTED), depth
+
+
+def cluster(points, *, tol_mm: float = 60.0, max_diameter_mm: float = 150.0):
+    """Group candidate points into nodes, subdividing before refusing.
+
+    This answers ONE question: are these two candidate points the same physical
+    location? That is a coordinate question and it takes a coordinate tolerance.
+    Whether a wall reaches the node it produced is a different question with a
+    different allowance, and it is asked in `classify_nodes`. Conflating the two
+    is how a 400 mm external wall came to loosen node detection around every
+    100 mm partition on the sheet.
+    """
+    n = len(points)
+    resolved: list[tuple[list[int], str, int]] = []
+    for g in _groups(points, list(range(n)), tol_mm):
+        resolved.extend(_resolve(points, g, tol_mm, max_diameter_mm, 0))
 
     out: list[Node] = []
-    for k, (_, idxs) in enumerate(sorted(
-            groups.items(),
-            key=lambda kv: (min(points[i][0] for i in kv[1]),
-                            min(points[i][1] for i in kv[1]))), 1):
-        xs = [points[i][0] for i in idxs]
-        ys = [points[i][1] for i in idxs]
-        cx, cy = sum(xs) / len(xs), sum(ys) / len(ys)
-        diameter = max(
-            (math.hypot(points[a][0] - points[b][0], points[a][1] - points[b][1])
-             for a in idxs for b in idxs), default=0.0)
-        disp = max((math.hypot(x - cx, y - cy) for x, y in zip(xs, ys)),
-                   default=0.0)
+    for k, (idxs, status, depth) in enumerate(sorted(
+            resolved,
+            key=lambda r: (min(points[i][0] for i in r[0]),
+                           min(points[i][1] for i in r[0]))), 1):
+        cx, cy, diameter, disp = _spread(points, idxs)
         out.append(Node(
             node_id=f"WN-{k:05d}", x_mm=cx, y_mm=cy,
             reasons=tuple(sorted({points[i][3] for i in idxs})),
             member_count=len(idxs), diameter_mm=diameter,
-            max_displacement_mm=disp,
-            status=CLUSTER_OK if diameter <= max_diameter_mm else CLUSTER_OVER_SPREAD,
+            max_displacement_mm=disp, status=status, subdivision_depth=depth,
             edge_ids=tuple(sorted({points[i][2] for i in idxs}))))
     return out
+
+
+def consolidate(nodes: list[Node], edges: list[WallEdge], *,
+                tol_mm: float = 60.0):
+    """Ask the WALL question the coordinate question could not answer.
+
+    A stem's centreline stops at the through-wall's face, half a separation
+    short of the through-wall's centreline, so the stem's endpoint and the
+    computed crossing are two coordinate clusters of one junction. Merging them
+    by loosening the coordinate tolerance would loosen it everywhere; the test
+    instead is incidence: one cluster's walls are a SUBSET of the other's, and
+    it lies within the separation those same walls imply.
+
+    Two stems 100 mm apart on one through-wall each carry a wall the other does
+    not, so neither is a subset and they stay two junctions. Proximity alone
+    never merges anything.
+    """
+    sep = {e.edge_id: e.wall_face_separation_mm for e in edges}
+    order = sorted(nodes, key=lambda n: (-len(n.edge_ids), n.node_id))
+    absorbed: dict[str, str] = {}
+    members: dict[str, list[Node]] = {n.node_id: [n] for n in nodes}
+    notes: list[dict] = []
+
+    for host in order:
+        if host.node_id in absorbed:
+            continue
+        for other in order:
+            if other.node_id == host.node_id or other.node_id in absorbed:
+                continue
+            small, big = set(other.edge_ids), set(host.edge_ids)
+            # Subset, not proximity. `order` puts the larger incidence set (then
+            # the lower id) first, so the survivor is deterministic.
+            if not small or not small <= big:
+                continue
+            local = max([sep.get(x, 0.0) for x in small | big], default=0.0)
+            reach = tol_mm + local / 2
+            d = math.hypot(other.x_mm - host.x_mm, other.y_mm - host.y_mm)
+            if d > reach:
+                continue
+            absorbed[other.node_id] = host.node_id
+            members[host.node_id].append(other)
+            notes.append({"kind": MERGE_TRUNCATED_END, "kept": host.node_id,
+                          "merged": other.node_id, "distance_mm": round(d, 1),
+                          "allowance_mm": round(reach, 1)})
+
+    out: list[Node] = []
+    for n in nodes:
+        if n.node_id in absorbed:
+            continue
+        group = members[n.node_id]
+        if len(group) == 1:
+            out.append(n)
+            continue
+        xs = [g.x_mm for g in group]
+        ys = [g.y_mm for g in group]
+        cx, cy = sum(xs) / len(xs), sum(ys) / len(ys)
+        diameter = max(math.hypot(a.x_mm - b.x_mm, a.y_mm - b.y_mm)
+                       for a in group for b in group)
+        out.append(replace(
+            n, x_mm=cx, y_mm=cy,
+            reasons=tuple(sorted({r for g in group for r in g.reasons})),
+            member_count=sum(g.member_count for g in group),
+            diameter_mm=max(diameter, max(g.diameter_mm for g in group)),
+            max_displacement_mm=max(
+                [g.max_displacement_mm for g in group]
+                + [math.hypot(g.x_mm - cx, g.y_mm - cy) for g in group]),
+            edge_ids=tuple(sorted({e for g in group for e in g.edge_ids})),
+            merged_node_ids=tuple(sorted(g.node_id for g in group
+                                         if g.node_id != n.node_id))))
+    return out, notes
 
 
 # ------------------------------------------------------------------ splitting
@@ -303,7 +536,7 @@ def _along(node: Node, axis: str) -> float:
 def split_edges(edges: list[WallEdge], nodes: list[Node], *,
                 tol_mm: float = 60.0) -> list[SplitEdge]:
     """Divide each edge at every usable interior node, keeping lineage."""
-    usable = [n for n in nodes if n.status == CLUSTER_OK]
+    usable = [n for n in nodes if n.usable]
     out: list[SplitEdge] = []
     for e in edges:
         lo, hi = min(e.start_mm, e.end_mm), max(e.start_mm, e.end_mm)
@@ -373,71 +606,129 @@ def normalise(edges: list[SplitEdge], *, tol_mm: float = 12.0):
     return kept, notes
 
 
+def _sectors(node: Node, inc: list[SplitEdge], tol_mm: float) -> set[str]:
+    """Which of N/S/E/W the incident edges actually extend into — as ARMS.
+
+    This is what separates a true crossing from a corner overlap, and the word
+    that does the work is "arms". At a building corner the two wall
+    representations run past each other to the far FACE of the wall they meet,
+    so each centreline overhangs the node by half the other wall's separation.
+    That overhang is not an arm of a crossing. It is the same geometry that
+    makes a centreline stop short at a T — read from the other end.
+
+    So the allowance is local and derived: a sector counts as occupied only when
+    the edge extends past the node by more than the CROSSING wall's own half
+    separation. A real four-way crossing has arms far longer than that; a corner
+    overlap has nothing but the overhang. Degree cannot tell them apart, which
+    is the whole point — degree 4 is not "a four-way crossing".
+    """
+    out: set[str] = set()
+    for e in inc:
+        # The wall this one crosses is the one on the other axis. Its half
+        # separation is exactly how far a centreline legitimately runs past.
+        crossing = [f.wall_face_separation_mm for f in inc if f.axis != e.axis]
+        stub = tol_mm + (max(crossing) / 2 if crossing else 0.0)
+        at = _along(node, e.axis)
+        lo, hi = min(e.start_mm, e.end_mm), max(e.start_mm, e.end_mm)
+        if hi - at > stub:
+            out.add("E" if e.axis == "H" else "S")
+        if at - lo > stub:
+            out.add("W" if e.axis == "H" else "N")
+    return out
+
+
+def _kind_from(node: Node, inc: list[SplitEdge], tol_mm: float) -> str:
+    """Degree, orientation AND occupied sectors — never degree alone."""
+    d = len(inc)
+    axes = {e.axis for e in inc}
+    if d <= 1:
+        return TERMINUS
+    sec = _sectors(node, inc, tol_mm)
+    if d == 2:
+        return CONTINUATION if len(axes) == 1 else L_JUNCTION
+    if d == 3:
+        if len(axes) != 2:
+            return COMPLEX_JUNCTION
+        return T_JUNCTION if len(sec) >= 3 else CORNER_OVERLAP
+    if d == 4 and len(axes) == 2:
+        if len(sec) == 4:
+            return TRUE_CROSS_JUNCTION
+        if len(sec) == 2:
+            return CORNER_OVERLAP          # two walls crossing past each other
+        return T_JUNCTION if len(sec) == 3 else UNRESOLVED_JUNCTION
+    return COMPLEX_JUNCTION
+
+
 def classify_nodes(nodes: list[Node], edges: list[SplitEdge], *,
                    tol_mm: float = 60.0) -> list[Node]:
-    """Degree AND orientation, computed on the POST-SPLIT graph only.
+    """Degree, orientation and occupied sectors, on the POST-SPLIT graph only.
 
     Pre-split labels were diagnostic: an unsplit through-wall gave a T-junction
     degree 2. Incidence is recomputed here from the child edges that actually
     end at each node.
-    """
-    # An edge's end can legitimately stop half a wall's separation short of the
-    # node, because a centreline finishes at the neighbouring wall's FACE. Using
-    # the plain tolerance here missed the stem of every T-junction and reported
-    # it as a CONTINUATION. The allowance is bounded by real geometry — half the
-    # widest wall on the sheet — rather than chosen.
-    widest = max((e.wall_face_separation_mm for e in edges), default=0.0)
-    reach = tol_mm + widest / 2
 
+    The incidence allowance is LOCAL. It was half the widest wall on the whole
+    sheet, which let one 400 mm external wall loosen detection around every
+    100 mm partition. It is now derived per relationship, from the separations of
+    the edges being tested, so a thin partition is judged by thin-partition
+    geometry.
+    """
+    by_id = {e.edge_id: e for e in edges}
     out: list[Node] = []
     for n in nodes:
-        inc = [e for e in edges
-               if (abs(_along(n, e.axis) - e.start_mm) <= reach
-                   or abs(_along(n, e.axis) - e.end_mm) <= reach)
-               and abs((e.centreline_mm - (n.y_mm if e.axis == "H" else n.x_mm)))
-               <= reach]
+        inc = []
+        for e in edges:
+            # Local allowance: this edge's own separation, plus the separation of
+            # whatever else already reaches this node. Never the sheet maximum.
+            local = max([e.wall_face_separation_mm]
+                        + [by_id[x].wall_face_separation_mm
+                           for x in n.edge_ids if x in by_id], default=0.0)
+            reach = tol_mm + local / 2
+            at = _along(n, e.axis)
+            cross = n.y_mm if e.axis == "H" else n.x_mm
+            if abs(e.centreline_mm - cross) > reach:
+                continue
+            if min(abs(at - e.start_mm), abs(at - e.end_mm)) <= reach:
+                inc.append(e)
         eids = tuple(sorted(e.edge_id for e in inc))
-        axes = {e.axis for e in inc}
-        d = len(eids)
-        if d <= 1:
-            kind = TERMINUS
-        elif d == 2:
-            kind = CONTINUATION if len(axes) == 1 else L_JUNCTION
-        elif d == 3:
-            kind = T_JUNCTION if len(axes) == 2 else COMPLEX_JUNCTION
-        elif d == 4:
-            kind = CROSS_JUNCTION if len(axes) == 2 else COMPLEX_JUNCTION
-        else:
-            kind = COMPLEX_JUNCTION
-        out.append(replace(n, edge_ids=eids, kind=kind))
+        out.append(replace(n, edge_ids=eids, kind=_kind_from(n, inc, tol_mm)))
     return out
 
 
 def node_and_split(graph: WallGraph, *, tol_mm: float = 60.0,
-                   max_diameter_mm: float = 150.0) -> NodedGraph:
+                   max_diameter_mm: float = 150.0,
+                   coord_tol_mm: float | None = None) -> NodedGraph:
     """The whole pipeline, in the order the review specified.
 
-    candidates -> cluster (with over-spread guard) -> split -> normalise ->
-    incidence -> classify. Degree is computed last, on the split graph, because
-    only the split graph knows it.
+    candidates -> cluster (coordinate identity, subdividing before refusing) ->
+    consolidate (wall incidence, local) -> split -> normalise -> incidence ->
+    classify. Degree is computed last, on the split graph, because only the
+    split graph knows it.
     """
-    # Clustering and incidence must use the SAME allowance. With clustering at
-    # the plain tolerance and incidence at the wider separation-derived reach,
-    # two candidate points 100 mm apart on one wall line stayed two nodes while
-    # both saw the same edges — producing a duplicate T-junction a wall-thickness
-    # away from the real one. The allowance is half the widest wall on the sheet,
-    # which is the distance a centreline can legitimately stop short.
-    widest = max((e.wall_face_separation_mm for e in graph.edges), default=0.0)
-    reach = tol_mm + widest / 2
+    # TWO DIFFERENT QUESTIONS, TWO DIFFERENT ALLOWANCES.
+    #
+    #   coordinate clustering  are these two candidate points the same place?
+    #   wall incidence         does this wall actually reach that place?
+    #
+    # These were one allowance — half the widest wall on the whole sheet — and
+    # that let one 400 mm external wall loosen node detection around every
+    # 100 mm partition in the building. Clustering now uses a plain coordinate
+    # tolerance. The gap it leaves (a stem's centreline stops at the through
+    # wall's FACE, so its endpoint and the crossing are two clusters) is closed
+    # by `consolidate`, which asks the wall question with LOCAL geometry, and
+    # only for clusters that share walls.
+    coord = tol_mm if coord_tol_mm is None else coord_tol_mm
     pts = candidate_nodes(graph.edges, tol_mm=tol_mm)
-    nodes = cluster(pts, tol_mm=reach,
-                    max_diameter_mm=max(max_diameter_mm, reach * 2))
+    nodes = cluster(pts, tol_mm=coord, max_diameter_mm=max_diameter_mm)
+    nodes, merges = consolidate(nodes, graph.edges, tol_mm=tol_mm)
     children = split_edges(graph.edges, nodes, tol_mm=tol_mm)
     kept, dup_notes = normalise(children)
     classified = classify_nodes(nodes, kept, tol_mm=tol_mm)
     g = NodedGraph(
-        nodes=classified, edges=kept, duplicates=dup_notes,
+        nodes=classified, edges=kept, duplicates=dup_notes, node_merges=merges,
         pre_split_total_length_mm=sum(e.length_mm for e in graph.edges),
         over_spread_clusters=[n.node_id for n in nodes
-                              if n.status == CLUSTER_OVER_SPREAD])
+                              if n.status == CLUSTER_REJECTED],
+        ambiguous_clusters=[n.node_id for n in nodes
+                            if n.status == CLUSTER_AMBIGUOUS])
     return g
