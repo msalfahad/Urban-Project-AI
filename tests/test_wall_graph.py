@@ -17,9 +17,18 @@ import pytest
 
 from engine.topology import wall_pairs
 from engine.wall_graph import (BREAK_JUNCTION, BREAK_OPENING, BREAK_UNRESOLVED,
-                               CROSS_JUNCTION, JUNCTION_KINDS, L_JUNCTION,
-                               TERMINUS, T_JUNCTION, WallEdge, build,
-                               classify_break, perpendicular_at)
+                               COMPLEX_JUNCTION, CONTINUATION, CROSS_JUNCTION,
+                               JUNCTION_KINDS, L_JUNCTION, TERMINUS,
+                               T_JUNCTION, WallEdge, build, classify_break,
+                               perpendicular_at)
+
+# An L corner: an H wall meeting a V wall. Their CENTRELINES never touch — each
+# stops at the other's face, half a separation short.
+L_CORNER = [("H", 0.0, 0.0, 3000.0), ("H", 200.0, 0.0, 3000.0),
+            ("V", 3000.0, 0.0, 3000.0), ("V", 3200.0, 0.0, 3000.0)]
+# One straight wall drawn as two collinear pieces.
+STRAIGHT_IN_TWO = [("V", 0.0, 0.0, 2000.0), ("V", 200.0, 0.0, 2000.0),
+                   ("V", 0.0, 2010.0, 4000.0), ("V", 200.0, 2010.0, 4000.0)]
 
 # An H wall from 0 to 5000 at centreline 1100, broken between 2000 and 2900.
 H_BROKEN = [("H", 1000.0, 0.0, 2000.0), ("H", 1200.0, 0.0, 2000.0),
@@ -136,3 +145,72 @@ def test_an_edge_never_claims_to_know_the_wall_type():
     e = graph(H_BROKEN).edges[0]
     assert "BLOCK" not in e.separation_basis
     assert e.validation_status != "VALIDATED"      # a pair alone does not prove a wall
+
+
+# --- geometric noding, not grid snapping --------------------------------------
+
+def test_two_endpoints_within_tolerance_become_one_node_whatever_the_grid():
+    """Grid snapping put points 10 mm apart in different cells, which E31A would
+    have read as a false terminus, an open loop and a missing face."""
+    near = [("V", 0.0, 0.0, 2000.0), ("V", 200.0, 0.0, 2000.0),
+            ("V", 0.0, 2010.0, 4000.0), ("V", 200.0, 2010.0, 4000.0)]
+    g = graph(near)
+    assert g.counts()["junctions"] == 3      # two outer ends, one shared middle
+
+
+def test_a_corner_is_found_even_though_the_centrelines_never_touch():
+    """Each centreline stops at the other wall's FACE, half a separation short.
+    Testing containment without allowing for that turned every corner into two
+    termini."""
+    c = graph(L_CORNER).counts()
+    assert c[L_JUNCTION] == 1
+
+
+def test_the_corner_reach_is_derived_from_the_wall_rather_than_picked():
+    import inspect
+    from engine import wall_graph
+    src = inspect.getsource(wall_graph.build)
+    assert "wall_face_separation_mm / 2" in src
+
+
+def test_clustering_is_union_find_and_not_a_grid():
+    import inspect
+    from engine import wall_graph
+    src = inspect.getsource(wall_graph._cluster)
+    assert "union" in src and "int(round(" not in src
+
+
+# --- degree alone is not the junction type ------------------------------------
+
+def test_a_straight_run_drawn_in_two_pieces_is_a_continuation_not_a_corner():
+    """Degree 2 with one axis is one wall, not two meeting."""
+    c = graph(STRAIGHT_IN_TWO).counts()
+    assert c[CONTINUATION] == 1 and c[L_JUNCTION] == 0
+
+
+def test_two_walls_of_different_axes_meeting_is_an_l_junction():
+    assert graph(L_CORNER).counts()[L_JUNCTION] == 1
+
+
+def test_continuation_and_l_junction_are_distinct_kinds():
+    assert CONTINUATION in JUNCTION_KINDS and L_JUNCTION in JUNCTION_KINDS
+    assert CONTINUATION != L_JUNCTION
+
+
+def test_a_t_junction_reads_as_l_because_edges_are_not_split_yet():
+    """Recorded rather than hidden. A T is a through-wall plus a stem, so in an
+    unsplit graph the meeting point has degree 2. The node is found and
+    positioned correctly; only the degree is understated. Edge splitting at
+    interior nodes is the remaining prerequisite for E31A."""
+    tee = [("H", 0.0, 0.0, 6000.0), ("H", 200.0, 0.0, 6000.0),
+           ("V", 3000.0, 200.0, 4000.0), ("V", 3200.0, 200.0, 4000.0)]
+    c = graph(tee).counts()
+    assert c[L_JUNCTION] == 1 and c[T_JUNCTION] == 0
+
+
+def test_the_limitation_is_documented_where_someone_will_read_it():
+    import inspect
+    from engine import wall_graph
+    doc = inspect.getdoc(wall_graph.build)
+    assert "edges are not" in doc.lower() and "split" in doc.lower()
+    assert "E31A" in doc

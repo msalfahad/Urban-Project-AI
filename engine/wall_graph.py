@@ -28,9 +28,12 @@ from decimal import Decimal
 L_JUNCTION = "L_JUNCTION"
 T_JUNCTION = "T_JUNCTION"
 CROSS_JUNCTION = "CROSS_JUNCTION"
+COMPLEX_JUNCTION = "COMPLEX_JUNCTION"
+CONTINUATION = "CONTINUATION"
 TERMINUS = "TERMINUS"
 OPENING_EDGE = "OPENING_EDGE"
-JUNCTION_KINDS = (L_JUNCTION, T_JUNCTION, CROSS_JUNCTION, TERMINUS, OPENING_EDGE)
+JUNCTION_KINDS = (TERMINUS, CONTINUATION, L_JUNCTION, T_JUNCTION,
+                  CROSS_JUNCTION, COMPLEX_JUNCTION, OPENING_EDGE)
 
 # Why a break in a wall run exists. The distinction the graph adds.
 BREAK_JUNCTION = "BREAK_AT_JUNCTION"
@@ -130,13 +133,85 @@ class WallGraph:
         return dict(Counter(band(e.wall_face_separation_mm) for e in self.edges))
 
 
-def build(pairs, *, tol_mm: float = 60.0) -> WallGraph:
-    """Turn wall pairs into edges, then find where those edges meet.
+def _cluster(points: list[tuple[float, float, str]], tol_mm: float):
+    """Group points by proximity with union-find, not by snapping to a grid.
 
-    A junction is a point where a wall's end lies within `tol_mm` of another
-    wall's body. Degree decides the kind: two walls meeting is an L, three a T,
-    four a cross, and one is a terminus — a wall that ends at nothing, which is
-    itself informative.
+    Grid snapping was adequate for diagnostics and is not adequate for planar
+    topology. Two endpoints 10 mm apart can fall either side of a cell boundary
+    and become two junctions, and E31A would then see a false terminus, an open
+    loop and a missing face where there is a perfectly good corner. Distance
+    decides membership here, so two points within the tolerance are always one
+    node however they sit relative to any grid.
+    """
+    n = len(points)
+    parent = list(range(n))
+
+    def find(i):
+        while parent[i] != i:
+            parent[i] = parent[parent[i]]
+            i = parent[i]
+        return i
+
+    def union(i, j):
+        a, b = find(i), find(j)
+        if a != b:
+            parent[b] = a
+
+    # Sort by x so the sweep only compares points that can be close enough.
+    order = sorted(range(n), key=lambda i: points[i][0])
+    for a_pos, i in enumerate(order):
+        xi, yi, _ = points[i]
+        for j in order[a_pos + 1:]:
+            xj, yj, _ = points[j]
+            if xj - xi > tol_mm:
+                break
+            if math.hypot(xj - xi, yj - yi) <= tol_mm:
+                union(i, j)
+
+    groups: dict[int, list[int]] = {}
+    for i in range(n):
+        groups.setdefault(find(i), []).append(i)
+    return groups
+
+
+def _junction_kind(edges_at: list[WallEdge], *, collinear_tol_deg: float = 15.0
+                   ) -> str:
+    """Degree AND orientation. Degree alone calls a straight run a corner.
+
+    Two walls meeting at a node may be an L — or they may be one wall drawn as
+    two collinear pieces, which is a CONTINUATION and not a corner at all. E31A
+    treats those differently: a continuation does not bound a face, a corner
+    does.
+    """
+    d = len(edges_at)
+    if d <= 1:
+        return TERMINUS
+    axes = {e.axis for e in edges_at}
+    if d == 2:
+        return CONTINUATION if len(axes) == 1 else L_JUNCTION
+    if d == 3:
+        return T_JUNCTION if len(axes) == 2 else COMPLEX_JUNCTION
+    if d == 4:
+        return CROSS_JUNCTION if len(axes) == 2 else COMPLEX_JUNCTION
+    return COMPLEX_JUNCTION
+
+
+def build(pairs, *, tol_mm: float = 60.0) -> WallGraph:
+    """Turn wall pairs into edges, then node them geometrically.
+
+    Nodes come from three places, and the third is the one planar topology needs:
+    edge endpoints, perpendicular crossings, and endpoints that land on another
+    edge's BODY rather than on its end. Relying on original vector endpoints
+    alone leaves a T-junction unnoded, and an unnoded T leaves a face open.
+
+    NOT YET DONE, and it is the remaining prerequisite for E31A: edges are not
+    SPLIT at interior nodes. A true T-junction is a through-wall plus a stem, so
+    in an unsplit graph the meeting point has degree 2 and `_junction_kind`
+    reports L_JUNCTION rather than T_JUNCTION. The node itself is found and
+    positioned correctly; only the degree is understated. Planar face
+    construction needs the through-edge divided in two at that node, and until
+    that exists the L/T/CROSS labels should be read as "walls meet here", not as
+    a reliable count of how many.
     """
     g = WallGraph()
     for i, p in enumerate(pairs, 1):
@@ -146,46 +221,51 @@ def build(pairs, *, tol_mm: float = 60.0) -> WallGraph:
             face_a_mm=p.face_a_mm, face_b_mm=p.face_b_mm, pair_id=p.pair_id,
             wall_face_separation_mm=p.thickness_mm))
 
-    # Candidate junction points: every edge end, plus every crossing.
-    #
-    # Known limitation, recorded rather than hidden: points are grouped by
-    # snapping to a `tol_mm` grid, so two points closer than the tolerance can
-    # still fall either side of a cell boundary and be counted as two junctions
-    # instead of one. That inflates TERMINUS and deflates L/T counts. It does NOT
-    # affect `classify_break`, which is what separates a corner from a doorway
-    # and asks about perpendicular walls directly rather than through the grid.
-    # Proper clustering is a later refinement.
-    pts: dict[tuple[int, int], set[str]] = {}
-
-    def add(x, y, eid):
-        pts.setdefault((int(round(x / tol_mm)), int(round(y / tol_mm))), set()).add(eid)
-
+    pts: list[tuple[float, float, str]] = []
     for e in g.edges:
         for at in (e.start_mm, e.end_mm):
-            add(*e.point(at), e.edge_id)
+            x, y = e.point(at)
+            pts.append((x, y, e.edge_id))
+
+    # Perpendicular crossings, and endpoints landing on another edge's body.
+    # Both must become nodes or planarization leaves faces open.
+    for e in g.edges:
         for f in g.edges:
-            if f.axis == e.axis:
+            if f.axis == e.axis or f.edge_id == e.edge_id:
                 continue
-            # perpendicular: does f's centreline cross e's run?
             if e.axis == "H":
                 x, y = f.centreline_mm, e.centreline_mm
             else:
                 x, y = e.centreline_mm, f.centreline_mm
             along_e = x if e.axis == "H" else y
             along_f = y if e.axis == "H" else x
-            if (min(e.start_mm, e.end_mm) - tol_mm <= along_e
-                    <= max(e.start_mm, e.end_mm) + tol_mm
-                    and min(f.start_mm, f.end_mm) - tol_mm <= along_f
-                    <= max(f.start_mm, f.end_mm) + tol_mm):
-                add(x, y, e.edge_id)
-                add(x, y, f.edge_id)
+            # A centreline legitimately stops at the NEIGHBOUR'S FACE, which sits
+            # half that wall's separation short of its centreline. Two walls
+            # meeting at a corner therefore have centrelines that never touch,
+            # and testing containment without allowing for it turned every corner
+            # on the test fixture into two termini. The reach is derived from the
+            # geometry rather than picked: half the other wall's separation.
+            reach_e = tol_mm + f.wall_face_separation_mm / 2
+            reach_f = tol_mm + e.wall_face_separation_mm / 2
+            on_e = (min(e.start_mm, e.end_mm) - reach_e <= along_e
+                    <= max(e.start_mm, e.end_mm) + reach_e)
+            on_f = (min(f.start_mm, f.end_mm) - reach_f <= along_f
+                    <= max(f.start_mm, f.end_mm) + reach_f)
+            if on_e and on_f:
+                pts.append((x, y, e.edge_id))
+                pts.append((x, y, f.edge_id))
 
-    for n, ((kx, ky), eids) in enumerate(sorted(pts.items()), 1):
-        d = len(eids)
-        kind = (TERMINUS if d == 1 else L_JUNCTION if d == 2 else
-                T_JUNCTION if d == 3 else CROSS_JUNCTION)
-        g.junctions.append(Junction(f"WJ-{n:04d}", kx * tol_mm, ky * tol_mm,
-                                    kind, tuple(sorted(eids))))
+    by_edge = g.by_edge()
+    for n, (_, idxs) in enumerate(sorted(
+            _cluster(pts, tol_mm).items(),
+            key=lambda kv: (points_key := (min(pts[i][0] for i in kv[1]),
+                                           min(pts[i][1] for i in kv[1])))), 1):
+        xs = [pts[i][0] for i in idxs]
+        ys = [pts[i][1] for i in idxs]
+        eids = tuple(sorted({pts[i][2] for i in idxs}))
+        kind = _junction_kind([by_edge[e] for e in eids])
+        g.junctions.append(Junction(f"WJ-{n:04d}", sum(xs) / len(xs),
+                                    sum(ys) / len(ys), kind, eids))
     return g
 
 
