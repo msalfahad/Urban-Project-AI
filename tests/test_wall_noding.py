@@ -144,6 +144,40 @@ def test_splitting_never_creates_or_destroys_wall_length(lines):
     assert g.health()["length_difference_mm"] == 0.0
 
 
+def test_duplicate_removal_is_accounted_for_not_absorbed_into_a_tolerance():
+    """Merging a coincident edge legitimately takes length out of the graph — it
+    was in twice. The invariant stays strict and the removal stays itemised;
+    widening the tolerance to swallow it would hide real length loss too.
+
+    On the real sheet this is 23.2 m of 387 m, which is exactly the size of
+    thing a loosened invariant would have let through unnoticed.
+    """
+    g = noded(TEE)
+    dupe = g.edges[0]
+    kept, notes = normalise(list(g.edges) + [dupe])
+    removed = [n for n in notes if n["kind"] == DUP_EXACT]
+    assert removed and removed[0]["removed_length_mm"] == round(dupe.length_mm, 1)
+
+    # The source carried the wall twice, so pre-split counted it twice.
+    g.pre_split_total_length_mm += dupe.length_mm
+    g.edges = kept
+    g.duplicates = notes
+    assert g.duplicate_removed_length_mm == round(dupe.length_mm, 1)
+    g.assert_length_preserved()
+    h = g.health()
+    assert h["duplicate_removed_length_mm"] == round(dupe.length_mm, 1)
+    assert h["length_accounted_mm"] == h["pre_split_total_length_mm"]
+    assert h["length_difference_mm"] == 0.0
+
+
+def test_length_lost_without_a_duplicate_to_explain_it_still_fails():
+    """The accounting must not become a licence. Unexplained loss is a failure."""
+    g = noded(TEE)
+    g.edges = list(g.edges)[:-1]
+    with pytest.raises(NodingError, match="never lengthens or shortens"):
+        g.assert_length_preserved()
+
+
 def test_a_length_change_is_reported_as_a_failure_not_absorbed():
     g = noded(TEE)
     g.pre_split_total_length_mm += 500.0
@@ -377,5 +411,6 @@ def test_health_reports_what_a_reviewer_would_ask_for():
                 "rejected_clusters", "over_spread_clusters", "micro_edges",
                 "micro_edges_collapsible", "graph_components",
                 "pre_split_total_length_mm", "post_split_total_length_mm",
+                "duplicate_removed_length_mm", "length_accounted_mm",
                 "length_difference_mm"):
         assert key in h

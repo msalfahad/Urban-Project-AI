@@ -204,14 +204,17 @@ def build(pairs, *, tol_mm: float = 60.0) -> WallGraph:
     edge's BODY rather than on its end. Relying on original vector endpoints
     alone leaves a T-junction unnoded, and an unnoded T leaves a face open.
 
-    NOT YET DONE, and it is the remaining prerequisite for E31A: edges are not
-    SPLIT at interior nodes. A true T-junction is a through-wall plus a stem, so
-    in an unsplit graph the meeting point has degree 2 and `_junction_kind`
-    reports L_JUNCTION rather than T_JUNCTION. The node itself is found and
-    positioned correctly; only the degree is understated. Planar face
-    construction needs the through-edge divided in two at that node, and until
-    that exists the L/T/CROSS labels should be read as "walls meet here", not as
-    a reliable count of how many.
+    THIS GRAPH IS NOT SPLIT, and it stays that way on purpose. A true
+    T-junction is a through-wall plus a stem, so here the meeting point has
+    degree 2 and `_junction_kind` reports L_JUNCTION rather than T_JUNCTION. The
+    node is found and positioned correctly; only the degree is understated. Read
+    the L/T/CROSS labels from this function as "walls meet here", never as a
+    count of how many.
+
+    `engine.wall_noding.node_and_split` does the splitting and owns the
+    authoritative degree, junction kind and length invariant. Anything that
+    needs to know what meets what — planar face extraction above all — must use
+    that graph, not this one.
     """
     g = WallGraph()
     for i, p in enumerate(pairs, 1):

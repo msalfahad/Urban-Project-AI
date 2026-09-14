@@ -209,8 +209,15 @@ def test_a_t_junction_reads_as_l_because_edges_are_not_split_yet():
 
 
 def test_the_limitation_is_documented_where_someone_will_read_it():
+    """This graph is unsplit and its degrees are understated. Saying so in the
+    docstring is not decoration: the next reader will otherwise take L_JUNCTION
+    for a count. It must also name the graph that IS authoritative, or the
+    warning leaves them with nowhere to go."""
     import inspect
+
     from engine import wall_graph
     doc = inspect.getdoc(wall_graph.build)
-    assert "edges are not" in doc.lower() and "split" in doc.lower()
-    assert "E31A" in doc
+    assert "not split" in doc.lower()
+    assert "only the degree is understated" in doc.lower()
+    assert '"walls meet here"' in doc.lower()
+    assert "wall_noding.node_and_split" in doc

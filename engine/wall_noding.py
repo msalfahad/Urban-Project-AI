@@ -211,6 +211,18 @@ class NodedGraph:
         return sum(e.length_mm for e in self.edges)
 
     @property
+    def duplicate_removed_length_mm(self) -> float:
+        """Length that left the graph because it was counted twice.
+
+        Merging a coincident edge is not splitting, and the length invariant
+        must not be allowed to absorb it silently in either direction: the
+        length is accounted for here, edge by edge, with the pair that was
+        merged named in `duplicates`.
+        """
+        return sum(n.get("removed_length_mm", 0.0) for n in self.duplicates
+                   if n["kind"] == DUP_EXACT)
+
+    @property
     def micro_edges(self) -> list[SplitEdge]:
         return [e for e in self.edges if e.is_micro]
 
@@ -281,7 +293,9 @@ class NodedGraph:
     def health(self) -> dict:
         from collections import Counter
         kinds = Counter(n.kind for n in self.nodes)
-        pre, post = self.pre_split_total_length_mm, self.post_split_total_length_mm
+        pre = self.pre_split_total_length_mm
+        post = self.post_split_total_length_mm
+        removed = self.duplicate_removed_length_mm
         return {
             "nodes": len(self.nodes), "edges": len(self.edges),
             **{k: kinds.get(k, 0) for k in (TERMINUS, CONTINUATION, L_JUNCTION,
@@ -292,6 +306,7 @@ class NodedGraph:
             "edge_splits_performed": sum(1 for e in self.edges
                                          if e.split_reason == SPLIT_AT_NODE),
             "duplicate_resolutions": len(self.duplicates),
+            "duplicate_removed_length_mm": round(removed, 1),
             "node_merges": len(self.node_merges),
             "subdivided_clusters": sum(1 for n in self.nodes
                                        if n.subdivision_depth > 0),
@@ -305,18 +320,29 @@ class NodedGraph:
             "graph_components": self.components(),
             "pre_split_total_length_mm": round(pre, 1),
             "post_split_total_length_mm": round(post, 1),
-            "length_difference_mm": round(post - pre, 1),
+            # post + removed, which is what the invariant is stated over.
+            "length_accounted_mm": round(post + removed, 1),
+            "length_difference_mm": round(post + removed - pre, 1),
         }
 
     def assert_length_preserved(self, tol_mm: float = 1.0) -> None:
-        """Noding changes topology. It must not create or destroy wall length."""
-        d = abs(self.post_split_total_length_mm - self.pre_split_total_length_mm)
+        """Noding changes topology. It must not create or destroy wall length.
+
+        Splitting is held to this exactly. Duplicate removal is the one thing
+        that legitimately takes length out of the graph — it was in twice — so
+        it is added back here rather than widened into the tolerance: the
+        invariant stays strict and the removal stays visible and itemised.
+        """
+        accounted = (self.post_split_total_length_mm
+                     + self.duplicate_removed_length_mm)
+        d = abs(accounted - self.pre_split_total_length_mm)
         if d > tol_mm:
             raise NodingError(
                 f"noding changed total wall length by {d:.1f} mm "
                 f"({self.pre_split_total_length_mm:.1f} -> "
-                f"{self.post_split_total_length_mm:.1f}). Splitting divides a "
-                "wall; it never lengthens or shortens one.")
+                f"{self.post_split_total_length_mm:.1f} plus "
+                f"{self.duplicate_removed_length_mm:.1f} removed as duplicate). "
+                "Splitting divides a wall; it never lengthens or shortens one.")
 
 
 # --------------------------------------------------------------- candidates
@@ -602,7 +628,8 @@ def normalise(edges: list[SplitEdge], *, tol_mm: float = 12.0):
             kept[i] = replace(dup, merged_from=tuple(
                 sorted(set(dup.merged_from) | {dup.edge_id, e.edge_id})))
             notes.append({"kind": DUP_EXACT, "kept": dup.edge_id,
-                          "merged": e.edge_id})
+                          "merged": e.edge_id,
+                          "removed_length_mm": round(e.length_mm, 1)})
     return kept, notes
 
 

@@ -1,0 +1,97 @@
+{
+  "clusters": {
+    "ambiguous": 0,
+    "max_subdivision_depth": 2,
+    "merged_by_incidence": 86,
+    "rejected": 0,
+    "subdivided": 26,
+    "valid": 342
+  },
+  "extraction": {
+    "after_collinear_merge": 23066,
+    "axis_aligned_segments": 35835,
+    "collinear_join_mm": 25.0,
+    "merged_length_bands_mm": {
+      "100-300": 3096,
+      "1000-3000": 332,
+      "300-1000": 904,
+      "50-100": 3219,
+      "<50": 15396,
+      ">=3000": 119
+    },
+    "raw_length_bands_mm": {
+      "100-300": 4824,
+      "1000-3000": 502,
+      "300-1000": 1611,
+      "50-100": 5211,
+      "<50": 23589,
+      ">=3000": 98
+    },
+    "skipped": {
+      "curve_c": 2399,
+      "degenerate_point": 48,
+      "not_axis_aligned": 38313,
+      "quad": 105
+    }
+  },
+  "input": {
+    "mm_per_pt": 45.0542,
+    "pdf": "data/golden/23010/inputs/AR-00_MAR2023.pdf"
+  },
+  "micro_edges": {
+    "by_decision": {
+      "COLLAPSIBLE_WITHOUT_TOPOLOGY_CHANGE": 2,
+      "KEEP_REAL_OR_UNPROVEN_FEATURE": 4
+    },
+    "deleted": 0,
+    "flagged": 6
+  },
+  "noded_graph": {
+    "COMPLEX_JUNCTION": 45,
+    "CONTINUATION": 22,
+    "CORNER_OVERLAP": 4,
+    "CROSS_JUNCTION": 0,
+    "L_JUNCTION": 34,
+    "TERMINUS": 228,
+    "TRUE_CROSS_JUNCTION": 1,
+    "T_JUNCTION": 8,
+    "UNRESOLVED_JUNCTION": 0,
+    "ambiguous_clusters": 0,
+    "duplicate_removed_length_mm": 23210.3,
+    "duplicate_resolutions": 85,
+    "edge_splits_performed": 25,
+    "edges": 264,
+    "graph_components": 115,
+    "length_accounted_mm": 387057.3,
+    "length_difference_mm": 0.2,
+    "micro_edges": 6,
+    "micro_edges_collapsible": 2,
+    "node_merges": 86,
+    "nodes": 342,
+    "over_spread_clusters": 0,
+    "post_split_total_length_mm": 363847.0,
+    "pre_split_total_length_mm": 387057.1,
+    "rejected_clusters": 0,
+    "subdivided_clusters": 26
+  },
+  "pairing": {
+    "separation_bands_mm": {
+      "120-180": 61,
+      "180-260": 30,
+      "260-400": 15,
+      "60-120": 190
+    },
+    "wall_pairs": 296
+  },
+  "pre_split_graph": {
+    "COMPLEX_JUNCTION": 20,
+    "CONTINUATION": 12,
+    "CROSS_JUNCTION": 5,
+    "L_JUNCTION": 43,
+    "OPENING_EDGE": 0,
+    "TERMINUS": 320,
+    "T_JUNCTION": 2,
+    "edges": 296,
+    "junctions": 402
+  }
+}
