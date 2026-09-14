@@ -24,9 +24,21 @@ from engine.qa_writer import write
 from engine.quantity_trace import QuantityTrace, TraceLedger, quantity_id
 from engine.revision_entities import compare
 from engine.templates import TemplateLibrary
+from engine.findings import from_graph_diagnostic
+from engine.space_model import (AI_INFERRED, HUMAN_VERIFIED,
+                                IDENTITY_WRONG_REGION, NOT_RECOVERED,
+                                PHYSICAL_TOPOLOGY_VALIDATED,
+                                RASTER_REGION_AVAILABLE,
+                                REGION_IDENTITY_VALIDATED, TOPOLOGY_MERGED,
+                                TOPOLOGY_SPLIT, WALL_GEOMETRY_AVAILABLE,
+                                FunctionalZone, PhysicalSpace,
+                                SemanticObservation, SpaceModel)
+from engine.takeoff_status import assess as assess_status
+from engine.quantity_trace import (CANDIDATE, OBSERVATION, RELEASABLE_QUANTITY)
 from engine.release_matrix import (CEILING_GEOMETRY, CLOSED_BOUNDARY,
                                    EXTERNAL_SPLIT, FLOOR_AREA, HEIGHT,
                                    OPENING_RULE, OPENINGS,
+                                   PHYSICAL_TOPOLOGY,
                                    PHYSICAL_WALL_SPLIT, REGION_IDENTITY, SCOPE,
                                    TRADE_RULE, USES, WALL_THICKNESS,
                                    assess_space)
@@ -34,6 +46,12 @@ from engine.release_matrix import (CEILING_GEOMETRY, CLOSED_BOUNDARY,
 GOLDEN = Path("data/golden/23010")
 DEFAULT_PDF = GOLDEN / "inputs/AR-00_MAR2023.pdf"
 DEFAULT_SPACE_MAP = GOLDEN / "inputs/space_map_23010_2f.json"
+# Topology facts live OUTSIDE the frozen space map. The space map is an audited
+# input pinned by sha256 and Run 1 was scored against that hash — editing it
+# retroactively would break the acceptance run's reproducibility, and the
+# golden fixture test caught exactly that attempt. The overlay makes prose the
+# space map already carries machine-readable; it adds no new judgement.
+DEFAULT_TOPOLOGY_OVERLAY = GOLDEN / "topology_overlay.json"
 DEFAULT_OUT = "runs/qa/23010_QA_workbook.xlsx"
 
 # The uses the QA sheets name explicitly, with the engine's own names — not
@@ -45,59 +63,228 @@ WALL_USES = ("GROSS_PERIMETER", "GROSS_WALL_AREA", "BLOCKWORK",
              "EXTERNAL_FINISH")
 
 
-def _established(space, rec, area) -> dict[str, bool]:
+def _established(space, rec, area, use: str = "") -> dict[str, bool]:
     """What is actually established for one space — nothing assumed true.
 
-    Every value here is False unless something upstream proved it. A dependency
-    absent from the dict is also not established: the release matrix blocks on
-    a missing key rather than passing one, and `trade_rule` stays False because
-    nobody has looked a rule up per space.
+    REGION_IDENTITY and PHYSICAL_TOPOLOGY are read from the space map's own
+    structured fields. They are separate questions: WSH-01's region is the
+    shaft beside the washroom (identity fails), while BED-04's region is a real
+    bedroom with an unseparated bathroom inside it (identity holds, topology
+    fails). The previous export released a READY quantity for both.
     """
     traced = rec is not None and rec.get("status") == "VALIDATED"
     return {
-        # The space map maps this space to a region the engine actually found.
-        REGION_IDENTITY: rec is not None,
-        # The traced boundary closed. An UNRESOLVED trace has not.
+        REGION_IDENTITY: (rec is not None
+                          and space.get("region_identity") == "VALIDATED"),
+        PHYSICAL_TOPOLOGY: space.get("physical_topology") == "VALIDATED",
         CLOSED_BOUNDARY: traced,
         SCOPE: space.get("scope") == "IN_SCOPE",
         FLOOR_AREA: area is not None,
-        # None of the following is established anywhere on this project yet,
-        # and each one is written out rather than omitted so the blocker names
-        # itself instead of reading as an absent key.
         OPENINGS: False,               # no opening has been validated at all
         OPENING_RULE: False,           # no trade's deduction rule is signed
         PHYSICAL_WALL_SPLIT: False,    # masonry vs doorway closure unknown
         EXTERNAL_SPLIT: (rec is not None
                          and rec.get("classification_status") == "RESOLVED"),
-        WALL_THICKNESS: False,         # proven per space, not assumed
+        WALL_THICKNESS: False,
         HEIGHT: False,                 # six heights still missing from sections
-        CEILING_GEOMETRY: False,       # never independently established
-        TRADE_RULE: False,             # not looked up per space in this export
+        CEILING_GEOMETRY: False,
+        TRADE_RULE: _trade_rule_covers(space, use),
     }
 
 
-def _release_row(space_id: str, established: dict, uses) -> dict:
+# Which trade each use belongs to. A use whose trade has no signed rule set
+# cannot have TRADE_RULE established, however many OTHER trades are signed.
+USE_TRADE = {
+    "GROSS_CERAMIC_WALL": "ceramic", "NET_CERAMIC_WALL": "ceramic",
+    "GROSS_PLASTER": "plaster", "NET_PLASTER": "plaster",
+    "PAINT": "paint", "SKIRTING": "skirting", "CEILING": "ceiling",
+    "EXTERNAL_FINISH": "external_finish",
+    "WATERPROOFING_HORIZONTAL": "waterproofing",
+    "WATERPROOFING_VERTICAL": "waterproofing",
+}
+
+
+def _trade_rule_covers(space, use: str) -> bool:
+    """Does THIS TRADE's signed E27 project rule cover this room type?
+
+    Two mirror-image errors are both guarded here.
+
+    The first export hard-coded False for every space, which UNDERSTATED what
+    exists: 23010 has two approved owner rule sets covering fifteen room types
+    each, and a signed rule the workbook ignores is a real rule thrown away.
+
+    The fix then OVER-released: asking "does any rule cover this room type"
+    made waterproofing releasable on the strength of the ceramic rule. A
+    ceramic rule saying a bedroom has a ceramic floor says nothing whatever
+    about waterproofing, and thirteen spaces briefly read READY because of it.
+
+    The question is per trade AND per room type, and a trade with no signed
+    rule set is simply not established. NULL RULE SET MUST NEVER MEAN DEFAULT
+    RULE.
+    """
+    trade = USE_TRADE.get(use)
+    if trade is None:
+        return False
+    rt = (space.get("room_type") or "").strip().upper()
+    if not rt:
+        return False
+    for rs in _rule_sets().values():
+        if rs.trade.strip().lower() != trade:
+            continue
+        try:
+            rs.rule_for(rt)
+            return True
+        except Exception:
+            return False
+    return False
+
+
+_RULE_CACHE: dict = {}
+
+
+def _rule_sets() -> dict:
+    """The approved E27 project rules, loaded once.
+
+    AUTHORITY ORDER, and the template layer did not change it:
+
+        1  APPROVED PROJECT TRADE RULE   (E27, data/trade_rules/*.json)
+        2  approved room/trade template  (E45, reusable structure)
+        3  nothing
+
+    A template is reusable structure a project rule may reference. It never
+    replaces a project-specific approved rule, and an empty template library
+    does not erase one. NULL TEMPLATE must never mean NULL PROJECT RULE.
+    """
+    if _RULE_CACHE:
+        return _RULE_CACHE
+    from engine.trade_rules import TradeRuleSet
+    for path in sorted(Path("data/trade_rules").glob("*.json")):
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+            _RULE_CACHE[path.stem] = TradeRuleSet.from_dict(data)
+        except Exception:
+            continue
+    return _RULE_CACHE
+
+
+def _release_row(space_id: str, established: dict, uses, *,
+                 scope: str = "IN_SCOPE") -> dict:
+    """One space's status for each use, with the blocker belonging to that use.
+
+    TWO BUGS THE WORKBOOK EXPOSED, both fixed here:
+
+      1  A single `primary_blocker` was computed across all uses and stamped on
+         every row, so rows read READY beside a blocker. The blocker now
+         belongs to the use it blocks.
+      2  OUT_OF_SCOPE spaces were counted as BLOCKED. They are N/A: Urban
+         Projects is not measuring them, so there is no work queued and nothing
+         to unblock. AMBIGUOUS stays BLOCKED_SCOPE — that one IS work, and the
+         work is an owner decision.
+    """
     out: dict[str, str] = {}
-    worst = ""
+    blockers: dict[str, str] = {}
     for use in uses:
         if use not in USES:
             raise KeyError(
                 f"{use!r} is not a release-matrix use. Known: {sorted(USES)}. "
                 "Skipping it silently is how an export came out with no "
                 "release statuses at all.")
-        st = assess_space(space_id, use, established)
+        st = assess_space(
+            space_id, use, established(use) if callable(established)
+            else established,
+            applicable=(scope != "OUT_OF_SCOPE"),
+            not_applicable_reason=(
+                "" if scope != "OUT_OF_SCOPE"
+                else "OUT_OF_SCOPE: excluded from this contract by owner "
+                     "instruction, so nothing is measured or released"))
         out[use] = st.status
-        if not st.ready and st.applicable and not worst:
-            worst = st.primary_blocker
-    out["primary_blocker"] = worst or ""
+        blockers[use] = "" if st.ready else st.primary_blocker
+    out["blockers"] = blockers
+    # Kept for the sheets that show one blocker per SPACE. It is the blocker of
+    # the space's best use, and it is empty when that use is ready.
+    first = next((u for u in uses if out.get(u) == "READY"), None)
+    out["primary_blocker"] = "" if first else next(
+        (b for b in blockers.values() if b), "")
     return out
 
 
+def _space_model(spaces, wall_rows, areas) -> SpaceModel:
+    """The three layers, built from the space map's own structured fields."""
+    model = SpaceModel()
+    for i, sp in enumerate(spaces, 1):
+        sid = sp["space_id"]
+        rec = wall_rows.get(sid)
+        area = sp.get("floor_area_m2")
+
+        layers = set()
+        if area is not None:
+            layers.add(RASTER_REGION_AVAILABLE)
+        if rec is not None and rec.get("status") == "VALIDATED":
+            layers.add(WALL_GEOMETRY_AVAILABLE)
+        if sp.get("region_identity") == "VALIDATED" and rec is not None:
+            layers.add(REGION_IDENTITY_VALIDATED)
+        if sp.get("physical_topology") == "VALIDATED":
+            layers.add(PHYSICAL_TOPOLOGY_VALIDATED)
+
+        reason = ""
+        if sp.get("region_identity") != "VALIDATED":
+            reason = IDENTITY_WRONG_REGION
+        elif sp.get("physical_topology") == "MERGED":
+            reason = TOPOLOGY_MERGED
+        elif sp.get("physical_topology") == "SPLIT":
+            reason = TOPOLOGY_SPLIT
+        elif sp.get("physical_topology") != "VALIDATED":
+            reason = "UNRESOLVED"
+        elif rec is None:
+            reason = NOT_RECOVERED
+
+        model.spaces.append(PhysicalSpace(
+            space_id=sid, region_id=sp.get("region"), scope=sp.get("scope", ""),
+            layers=frozenset(layers), unresolved_reason=reason,
+            room_type=sp.get("room_type", ""), area_m2=area))
+
+        # The LABEL is a separate record from the polygon. That separation is
+        # the whole point: WSH-01's label is real and its polygon is the shaft.
+        model.observations.append(SemanticObservation(
+            observation_id=f"SO-{i:03d}", room_type=sp.get("room_type", ""),
+            name_en=sp.get("name_en", ""), name_ar=sp.get("name_ar", ""),
+            source=sp.get("semantic_source") or AI_INFERRED,
+            seen_at_region=sp.get("region")))
+
+        for z in sp.get("functional_zones", ()):
+            model.zones.append(FunctionalZone(
+                zone_id=z["zone_id"], physical_space_id=sid,
+                function=z["function"], basis=z.get("basis", "")))
+    return model
+
+
 def bundle(space_map_path: Path = DEFAULT_SPACE_MAP,
-           pdf: Path = DEFAULT_PDF, *, measure: bool = True) -> dict:
+           pdf: Path = DEFAULT_PDF, *, measure: bool = True,
+           diagnostic_path: Path = Path(
+               "runs/graph/AR-00_graph_diagnostic.json")) -> dict:
     """Everything the workbook needs, and not one value it does not."""
     sm = json.loads(Path(space_map_path).read_text(encoding="utf-8"))
     spaces = [dict(s) for s in sm["spaces"]]
+
+    # Merge the overlay. An absent overlay does NOT mean "everything is
+    # validated": a space with no entry gets UNRESOLVED, so a missing file
+    # fails closed rather than releasing every quantity on the sheet.
+    overlay = {}
+    if Path(DEFAULT_TOPOLOGY_OVERLAY).exists():
+        overlay = json.loads(
+            Path(DEFAULT_TOPOLOGY_OVERLAY).read_text(encoding="utf-8")
+        ).get("spaces", {})
+    for sp in spaces:
+        o = overlay.get(sp["space_id"])
+        if o is None:
+            sp["region_identity"] = "UNRESOLVED"
+            sp["region_identity_reason"] = (
+                "no topology overlay entry for this space; absence is not "
+                "validation")
+            sp["physical_topology"] = "UNRESOLVED"
+            sp["physical_topology_reason"] = sp["region_identity_reason"]
+        else:
+            sp.update(o)
 
     areas: dict[int, Decimal] = {}
     wall_rows: dict[str, dict] = {}
@@ -121,68 +308,89 @@ def bundle(space_map_path: Path = DEFAULT_SPACE_MAP,
         wall_rows = {r.space_id: r.row() for r in res.records}
         provenance["segmentation"] = json.dumps(seg.provenance(), sort_keys=True)
 
-    for s in spaces:
-        # Who named this room. On 23010 a person read every name off the
-        # rendered sheet, because the vector PDF carries no text layer. The
-        # workbook must say so rather than let a reader assume extraction.
-        s["semantic_source"] = ("HUMAN_VERIFIED"
-                                if "HUMAN_VERIFIED" in sm.get("label_source", "")
-                                else None)
-        a = areas.get(s.get("region"))
-        s["floor_area_m2"] = None if a is None else float(round(a, 3))
-        s["area_source"] = "VECTOR_PDF_RASTER_REGION" if a is not None else None
-        s["measurement_basis"] = ("CLEAR_INTERNAL_FINISH_FACE" if a is not None
-                                  else None)
-        rec = wall_rows.get(s["space_id"])
-        s["geometry_status"] = rec.get("status") if rec else None
-        s["apartment_id"] = s.get("apartment_id")
+    for sp in spaces:
+        sp["semantic_source"] = (HUMAN_VERIFIED
+                                 if "HUMAN_VERIFIED" in sm.get("label_source", "")
+                                 else None)
+        a = areas.get(sp.get("region"))
+        sp["floor_area_m2"] = None if a is None else float(round(a, 3))
+        sp["area_source"] = "VECTOR_PDF_RASTER_REGION" if a is not None else None
+        sp["measurement_basis"] = ("CLEAR_INTERNAL_FINISH_FACE" if a is not None
+                                   else None)
+        rec = wall_rows.get(sp["space_id"])
+        sp["geometry_status"] = rec.get("status") if rec else None
 
-    established = {s["space_id"]: _established(
-        s, wall_rows.get(s["space_id"]), s["floor_area_m2"]) for s in spaces}
+    model = _space_model(spaces, wall_rows, areas)
+    by_space = {s.space_id: s for s in model.spaces}
+    for sp in spaces:
+        ps = by_space[sp["space_id"]]
+        sp["physical_space_validated"] = ps.validated
+        sp["unresolved_reason"] = ps.unresolved_reason
 
-    releases: dict[str, dict] = {}
-    for s in spaces:
-        sid = s["space_id"]
-        row = _release_row(sid, established[sid], FLOOR_USES + WALL_USES)
-        releases[sid] = row
+    # Establishment is per (space, USE), because TRADE_RULE is a question about
+    # a trade and asking it without naming one is how waterproofing came to be
+    # released on the strength of the ceramic rule.
+    def established_for(sid):
+        sp = next(x for x in spaces if x["space_id"] == sid)
+        return lambda use: _established(
+            sp, wall_rows.get(sid), sp["floor_area_m2"], use)
 
-    quantities = {
-        s["space_id"]: {
-            "floor_area_m2": s["floor_area_m2"],
-            "floor_area_basis": s["measurement_basis"],
-            # Gross traced wall length. NOT a ceramic quantity: it is here
-            # because it is what was measured, and its release status beside it
-            # says it may not be used as one.
-            "ceramic_wall_length_m": None,
-            "ceramic_wall_height_m": None,       # six heights still missing
-            "height_source": None,
-            "height_truth_domain": None,
-            "ceramic_wall_area_m2": None,        # never derived here
-        } for s in spaces
-    }
+    established = {s["space_id"]: established_for(s["space_id"])
+                   for s in spaces}
 
-    wall_records = []
-    by_id = {s["space_id"]: s for s in spaces}
+    releases = {s["space_id"]: _release_row(
+        s["space_id"], established[s["space_id"]], FLOOR_USES + WALL_USES,
+        scope=s.get("scope", "")) for s in spaces}
+
+    # --- quantity traces, with a ROLE ------------------------------------
+    ledger = TraceLedger(project_id=sm["project_id"],
+                         revision_id=sm["drawing_revision"])
+    floor = sm.get("floor_id", "")
     for sid, rec in sorted(wall_rows.items()):
-        s = by_id.get(sid, {})
+        sp = next(x for x in spaces if x["space_id"] == sid)
+        ps = by_space[sid]
+        rel = releases.get(sid, {})
+        status = rel.get("GROSS_PERIMETER", "")
+        blocker = rel.get("blockers", {}).get("GROSS_PERIMETER", "")
+        v = rec.get("gross_room_perimeter_m")
+        v = None if v is None else float(v)
 
-        def num(key):
-            v = rec.get(key)
-            return None if v is None else float(v)
+        # THE DISTINCTION THE WORKBOOK WAS MISSING. WSH-01's 4.19 m is a real
+        # measurement of raster region 361 and is NOT a washroom perimeter.
+        # Deleting it loses useful geometry; releasing it puts a shaft into a
+        # bathroom's takeoff. It is an OBSERVATION and it keeps its value.
+        if ps.validated and status == "READY":
+            role, obs_of = RELEASABLE_QUANTITY, ""
+        elif ps.validated:
+            role, obs_of = CANDIDATE, ""
+        else:
+            role = OBSERVATION
+            obs_of = (f"the traced boundary of raster region {ps.region_id}, "
+                      f"which is not a validated {sp.get('room_type', 'space')} "
+                      f"({ps.unresolved_reason})")
+        ledger.add(QuantityTrace(
+            quantity_id=quantity_id(sm["project_id"], floor, sid, "PERIM",
+                                    "GROSS"),
+            space_id=sid, use="GROSS_PERIMETER", unit="m", value=v,
+            quantity_role=role, observation_of=obs_of,
+            drawing_id=sm["drawing_id"], revision_id=sm["drawing_revision"],
+            geometry_source="VECTOR_PDF_RASTER_REGION",
+            boundary_edge_ids=(f"space:{sid}",),
+            calculation_reference="engine.wall_model.run_wall_model",
+            validation_status=("VALIDATED" if ps.validated else "DRAFT"),
+            release_status=status or "NOT_ASSESSED",
+            primary_blocker=blocker))
 
-        wall_records.append({
-            "space_id": sid, "room_type": s.get("room_type"),
-            "scope": s.get("scope"),
-            "gross_room_perimeter_m": num("gross_room_perimeter_m"),
-            "gross_wall_perimeter_m": num("gross_wall_perimeter_m"),
-            "physical_wall_m": num("physical_wall_m"),
-            "open_length_m": num("open_length_m"),
-            "opening_count": rec.get("openings"),
-            "segment_count": rec.get("segments"),
-            "internal_segments": rec.get("internal_segments"),
-            "external_segments": rec.get("external_segments"),
-            "unclassified_segments": rec.get("unclassified_segments"),
-        })
+    # --- findings, generated from the CURRENT diagnostic ------------------
+    diagnostic, findings = {}, []
+    run_id = (f"{sm['project_id']}-{sm['drawing_id']}-"
+              f"{sm['drawing_revision']}".replace(" ", "_"))
+    dp = Path(diagnostic_path)
+    if dp.exists():
+        diagnostic = json.loads(dp.read_text())
+        findings = from_graph_diagnostic(
+            diagnostic, run_id=run_id, reference=str(dp),
+            space_count=len(spaces), use_count=len(USES))
 
     known_gaps = [{
         "subject": g.get("item", "")[:60], "affected_spaces": 1,
@@ -204,55 +412,31 @@ def bundle(space_map_path: Path = DEFAULT_SPACE_MAP,
         "resolution": "A written scope decision for this space.",
     } for s in spaces if s.get("scope") == "AMBIGUOUS"]
 
-    space_exceptions = [{
-        "subject": sid, "issue": f"No quantity released ({row['primary_blocker']})",
-        "affected_spaces": 1,
-        "owner_action": f"establish {row['primary_blocker']}",
-        "cause": "The dependency named is not established for this space.",
-        "effect": "No figure for this space may be used in a takeoff.",
-        "status": "BLOCKED",
-        "resolution": f"Establish {row['primary_blocker']}.",
-    } for sid, row in sorted(releases.items()) if row.get("primary_blocker")]
+    topology_exceptions = [{
+        "subject": s["space_id"],
+        "issue": f"Physical space not validated ({s['unresolved_reason']})",
+        "affected_spaces": 1, "affected_uses": len(USES),
+        "cause": (s.get("region_identity_reason")
+                  or s.get("physical_topology_reason") or ""),
+        "effect": ("Every quantity for this space is an OBSERVATION of a "
+                   "raster region, not a quantity attributed to the room."),
+        "status": "BLOCKED", "coverage_unlocked": "every use for this space",
+        "owner_action": "",
+        "resolution": "Recover the physical space geometry.",
+    } for s in spaces if not s["physical_space_validated"]]
 
-    n_spaces = len(spaces)
-    graph_exceptions = [{
-        "severity": "BLOCKING", "subject": "Vector wall graph (AR-00)",
-        "affected_spaces": n_spaces, "affected_uses": len(USES),
-        "affected_boq_sections": "all wall and finish sections",
-        "coverage_unlocked": "every net quantity on the project",
-        "owner_action": "supply the DXF/DWG of AR-00",
-        "issue": "The wall graph is in 115 disconnected components; 228 of 342 "
-                 "nodes are wall ends meeting nothing.",
-        "cause": "Wall faces are drawn as thousands of short segments and most "
-                 "runs do not close into cycles.",
-        "effect": "Planar face extraction (E31A) cannot derive room polygons "
-                  "from this graph, so no net quantity can be built on it.",
-        "status": "OPEN — see runs/graph/AR-00_graph_diagnostic.json",
-        "resolution": "Connectivity repair before E31A. A DCEL over a "
-                      "disconnected graph would produce no faces.",
-    }, {
-        "severity": "BLOCKING", "subject": "Openings (E34)",
-        "affected_spaces": n_spaces,
-        "affected_uses": sum(1 for u in USES if u.startswith("NET_")
-                             or u in ("SKIRTING", "PAINT", "BLOCKWORK")),
-        "affected_boq_sections": "all net wall quantities",
-        "coverage_unlocked": "NET ceramic, NET plaster, paint, skirting, "
-                             "blockwork",
-        "owner_action": "supply the door/window schedule",
-        "issue": "No opening has been validated on this drawing.",
-        "cause": "No candidate reached two independent evidence families.",
-        "effect": "Every wall figure in this workbook is GROSS. There are no "
-                  "net quantities at all.",
-        "status": "OPEN",
-        "resolution": "A door/window schedule, or a DXF/DWG of AR-00.",
-    }]
-
+    # --- coverage, with OUT_OF_SCOPE as N/A -------------------------------
     coverage = []
     for use in sorted(USES):
         ready = blocked = na = 0
         blockers: dict[str, int] = {}
-        for s in spaces:
-            st = assess_space(s["space_id"], use, established[s["space_id"]])
+        for sp in spaces:
+            st = assess_space(
+                sp["space_id"], use, established[sp["space_id"]](use),
+                applicable=(sp.get("scope") != "OUT_OF_SCOPE"),
+                not_applicable_reason=(
+                    "" if sp.get("scope") != "OUT_OF_SCOPE"
+                    else "OUT_OF_SCOPE: excluded from this contract"))
             if st.ready:
                 ready += 1
             elif not st.applicable:
@@ -261,69 +445,91 @@ def bundle(space_map_path: Path = DEFAULT_SPACE_MAP,
                 blocked += 1
                 blockers[st.primary_blocker] = blockers.get(
                     st.primary_blocker, 0) + 1
-        commonest = max(blockers, key=blockers.get) if blockers else None
-        # The basis IS established for every use — it is in the release matrix.
-        # Printing NOT_ESTABLISHED here would claim otherwise.
-        basis = ("GROSS" if use.startswith("GROSS_") else
-                 "NET" if use.startswith("NET_") else "DIRECT")
         coverage.append({
-            "use": use, "basis": basis,
+            "use": use,
+            "basis": ("GROSS" if use.startswith("GROSS_")
+                      else "NET" if use.startswith("NET_") else "DIRECT"),
             "applicable": ready + blocked, "ready": ready, "blocked": blocked,
-            "not_applicable": na, "commonest_blocker": commonest,
-            "quantity_released": ready if ready else 0,
+            "not_applicable": na,
+            "commonest_blocker": (max(blockers, key=blockers.get)
+                                  if blockers else None),
+            "quantity_released": ready,
         })
 
-    # One trace per quantity the engine actually established. A trace is not a
-    # calculation: it records what was decided and what it was decided from.
-    ledger = TraceLedger(project_id=sm["project_id"],
-                         revision_id=sm["drawing_revision"])
-    floor = sm.get("floor_id", "")
-    for rec in wall_records:
-        sid = rec["space_id"]
-        v = rec.get("gross_room_perimeter_m")
-        rel = releases.get(sid, {})
-        status = rel.get("GROSS_PERIMETER", "")
-        ledger.add(QuantityTrace(
-            quantity_id=quantity_id(sm["project_id"], floor, sid, "PERIM",
-                                    "GROSS"),
-            space_id=sid, use="GROSS_PERIMETER", unit="m",
-            value=v if status == "READY" else None,
-            drawing_id=sm["drawing_id"], revision_id=sm["drawing_revision"],
-            geometry_source="VECTOR_PDF_RASTER_REGION",
-            boundary_edge_ids=(f"space:{sid}",),
-            calculation_reference="engine.wall_model.run_wall_model",
-            validation_status=(
-                "VALIDATED" if wall_rows.get(sid, {}).get("status")
-                == "VALIDATED" else "DRAFT"),
-            release_status=status or "NOT_ASSESSED",
-            primary_blocker=rel.get("primary_blocker", "")))
+    # --- the two top-level statuses ---------------------------------------
+    status = assess_status(
+        uses_total=len(USES),
+        uses_with_ready_spaces=sum(1 for c in coverage if c["ready"]),
+        net_uses_ready=sum(1 for c in coverage
+                           if c["ready"] and c["use"].startswith("NET_")),
+        validated_physical_spaces=sum(
+            1 for s in model.spaces if s.validated and s.scope == "IN_SCOPE"),
+        total_in_scope_spaces=sum(1 for s in spaces
+                                  if s.get("scope") == "IN_SCOPE"),
+        openings_validated=0,
+        signed_trade_rules=len(_rule_sets()),
+        unresolved_topology_spaces=sum(
+            1 for s in model.spaces if not s.validated),
+        graph_gate_passed=bool(
+            diagnostic.get("e31a_gate", {}).get("ready_for_e31a")))
 
-    # No template or assembly has been approved on this project. The library is
-    # EMPTY on purpose — an empty Rules sheet says "nobody signed one", which is
-    # the truth, and there is no default to fall back to.
-    library = TemplateLibrary()
+    rules = [{
+        "template_id": name, "version": rs.version,
+        "room_type": rs.trade.upper() + " (E27 project rule)",
+        "approval_status": "APPROVED", "approved_by": "Urban Projects (owner)",
+        "approved_on": rs.effective_from, "source": rs.source,
+    } for name, rs in sorted(_rule_sets().items())]
 
     return {
         "project_id": sm["project_id"],
         "revision_id": sm["drawing_revision"],
-        "run_id": f"{sm['project_id']}-{sm['drawing_id']}-"
-                  f"{sm['drawing_revision']}".replace(" ", "_"),
-        "quantity_traces": [t.record() | {"floor": floor}
-                            for t in ledger.traces],
-        "room_templates": [t.record() for t in library.rooms],
-        "assemblies": [a.record() for a in library.assemblies],
-        # One analysed revision. compare(None, ...) returns
-        # NO_PRIOR_REVISION_AVAILABLE rather than an empty change list.
-        "revision_delta": compare(None, {"revision_id": sm["drawing_revision"]}),
+        "run_id": run_id,
+        "diagnostic_run_id": run_id,
         "title": (f"QA workbook — project {sm['project_id']} "
                   f"{sm['drawing_id']} {sm.get('floor_id', '')}".strip()),
-        "spaces": spaces, "quantities": quantities, "releases": releases,
-        "wall_records": wall_records, "known_gaps": known_gaps,
-        "space_exceptions": space_exceptions,
+        "spaces": spaces,
+        "space_model": model,
+        "room_counts": model.room_counts(),
+        "geometry_layers": model.geometry_summary(),
+        "zones": [z.record() for z in model.zones],
+        "quantities": {s["space_id"]: {
+            "floor_area_m2": s["floor_area_m2"],
+            "floor_area_basis": s["measurement_basis"],
+            "ceramic_wall_length_m": None, "ceramic_wall_height_m": None,
+            "height_source": None, "height_truth_domain": None,
+            "ceramic_wall_area_m2": None,
+        } for s in spaces},
+        "releases": releases,
+        "wall_records": [{
+            "space_id": sid, "room_type": next(
+                (x.get("room_type") for x in spaces if x["space_id"] == sid),
+                None),
+            "scope": next((x.get("scope") for x in spaces
+                           if x["space_id"] == sid), None),
+            "gross_room_perimeter_m": float(rec["gross_room_perimeter_m"]),
+            "gross_wall_perimeter_m": float(rec["gross_wall_perimeter_m"]),
+            "physical_wall_m": float(rec["physical_wall_m"]),
+            "open_length_m": float(rec["open_length_m"]),
+            "opening_count": rec.get("openings"),
+            "segment_count": rec.get("segments"),
+            "internal_segments": rec.get("internal_segments"),
+            "external_segments": rec.get("external_segments"),
+            "unclassified_segments": rec.get("unclassified_segments"),
+        } for sid, rec in sorted(wall_rows.items())],
+        "quantity_traces": [t.record() | {"floor": floor}
+                            for t in ledger.traces],
+        "findings": [f.record() for f in findings],
+        "known_gaps": known_gaps,
         "scope_exceptions": scope_exceptions,
-        "graph_exceptions": graph_exceptions, "coverage": coverage,
+        "space_exceptions": topology_exceptions,
+        "coverage": coverage,
+        "top_level_status": status.record(),
+        "room_templates": rules,
+        "assemblies": [],
+        "revision_delta": compare(
+            None, {"revision_id": sm["drawing_revision"]}),
         "provenance": provenance,
-        "manual_expected_counts": None,   # nobody has supplied a manual count
+        "manual_expected_counts": None,
     }
 
 

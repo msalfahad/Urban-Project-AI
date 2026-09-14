@@ -181,44 +181,66 @@ def room_register(spaces) -> Sheet:
 # ------------------------------------------------- 2 room count summary
 
 ROOM_COUNT_COLUMNS = (
-    "room_type", "system_total_count", "system_in_scope_count",
-    "engine_out_of_scope", "engine_ambiguous", "manual_expected_total",
-    "manual_expected_in_scope", "total_difference", "in_scope_difference",
-    "verdict", "checker_note")
+    "room_type", "semantic_observations", "validated_physical_spaces",
+    "unresolved_physical_spaces", "functional_zones", "system_total_count",
+    "system_in_scope_count", "engine_out_of_scope", "engine_ambiguous",
+    "manual_expected_total", "manual_expected_in_scope",
+    "manual_expected_functional", "total_difference", "in_scope_difference",
+    "verdict", "unresolved_reasons", "checker_note")
 
 
-def room_count_summary(spaces, manual_expected: dict | None = None) -> Sheet:
-    """Counts by room type, against TWO separate manual checks.
+def room_count_summary(spaces, manual_expected: dict | None = None,
+                       room_counts=None) -> Sheet:
+    """Counts the owner can trust, because they say what kind of count they are.
 
-    They answer two different questions and a single count agrees with neither:
+    THE WORKBOOK SAID `WASHROOM = 1`. A human had verified that label, so the
+    count looked solid. But the region it is attached to is the hatched shaft
+    beside the washroom: geometrically the engine has recovered ZERO validated
+    washroom polygons. "1 washroom detected" was being told to an owner who
+    would reasonably read it as "we measured a washroom".
 
-        what rooms EXIST on the drawing   -> a drawing question
-        what rooms are in the CONTRACT    -> a commercial question
+    So three counts, not one, because they are three different facts:
 
-    The manual columns are here whether or not anybody has filled them in, and
-    while they are empty the verdict is NOT_COMPARED. An empty expectation is
-    not agreement: a workbook that prints AGREES against a blank column has
-    invented a confirmation.
+        semantic observations       the name was read on the drawing
+        validated physical spaces   a polygon is the whole of that room, and
+                                    only that room
+        unresolved physical spaces  a polygon exists and is not that room
+
+    Plus functional zones, so an open-plan villa can be counted honestly: one
+    physical space may hold a dining zone, a saloon zone and a circulation
+    zone, and the owner wants all three counted without any of them inventing
+    a wall.
+
+    And two manual columns, because "what rooms EXIST on the drawing" and
+    "what rooms are in the CONTRACT" are different questions that one count
+    agrees with neither of.
 
     Counting rows is not recalculating a quantity. No area or length is derived.
     """
     expected = manual_expected or {}
+    counts = {c["room_type"]: c for c in (room_counts or ())}
+
     by_type: dict[str, list] = {}
     for sp in spaces:
         by_type.setdefault(sp.get("room_type") or UNKNOWN, []).append(sp)
+    for rt in counts:
+        by_type.setdefault(rt, [])
 
     rows = []
     for rt in sorted(by_type):
         group = by_type[rt]
         scopes = Counter(sp.get("scope") for sp in group)
         in_scope = scopes.get("IN_SCOPE", 0)
+        c = counts.get(rt, {})
         exp = expected.get(rt)
         if isinstance(exp, dict):
-            exp_total, exp_scope = exp.get("total"), exp.get("in_scope")
+            exp_total = exp.get("total")
+            exp_scope = exp.get("in_scope")
+            exp_func = exp.get("functional")
         elif exp is None:
-            exp_total = exp_scope = None
+            exp_total = exp_scope = exp_func = None
         else:
-            exp_total, exp_scope = exp, None
+            exp_total, exp_scope, exp_func = exp, None, None
 
         d_total = UNKNOWN if exp_total is None else len(group) - exp_total
         d_scope = UNKNOWN if exp_scope is None else in_scope - exp_scope
@@ -231,22 +253,36 @@ def room_count_summary(spaces, manual_expected: dict | None = None) -> Sheet:
             verdict = DIFFERS
 
         rows.append(OrderedDict(
-            room_type=rt, system_total_count=len(group),
-            system_in_scope_count=in_scope,
+            room_type=rt,
+            semantic_observations=cell(c.get("semantic_observations")),
+            validated_physical_spaces=cell(c.get("validated_physical_spaces")),
+            unresolved_physical_spaces=cell(
+                c.get("unresolved_physical_spaces")),
+            functional_zones=cell(c.get("functional_zones")),
+            system_total_count=len(group), system_in_scope_count=in_scope,
             engine_out_of_scope=scopes.get("OUT_OF_SCOPE", 0),
             engine_ambiguous=scopes.get("AMBIGUOUS", 0),
             manual_expected_total=cell(exp_total),
             manual_expected_in_scope=cell(exp_scope),
+            manual_expected_functional=cell(exp_func),
             total_difference=d_total, in_scope_difference=d_scope,
-            verdict=verdict, checker_note=FOR_THE_CHECKER))
+            verdict=verdict,
+            unresolved_reasons=cell(", ".join(c.get("unresolved_reasons", []))),
+            checker_note=FOR_THE_CHECKER))
     return Sheet(
         name=SHEET_ROOM_COUNTS, columns=ROOM_COUNT_COLUMNS, rows=tuple(rows),
         human_columns=("manual_expected_total", "manual_expected_in_scope",
-                       "checker_note"),
+                       "manual_expected_functional", "checker_note"),
         notes=(
-            "Two manual columns, because they answer two questions: what rooms "
-            "EXIST on the drawing, and what rooms are in the CONTRACT.",
-            "While both are empty the verdict is NOT_COMPARED — never AGREES.",
+            "A LABEL IS NOT A ROOM. semantic_observations counts names read "
+            "off the drawing; validated_physical_spaces counts polygons proved "
+            "to be that room. Where they differ, the difference is the finding.",
+            "functional_zones counts uses of space. One open-plan polygon may "
+            "hold a dining zone, a saloon zone and a circulation zone — and a "
+            "zone never creates a wall boundary.",
+            "Two manual columns: what rooms EXIST on the drawing, and what "
+            "rooms are in the CONTRACT. While both are empty the verdict is "
+            "NOT_COMPARED — never AGREES.",
             "A count is not a quantity. Nothing on this sheet is measured.",
         ))
 
@@ -358,8 +394,11 @@ def wall_quantities(records, releases: dict) -> Sheet:
 EXCEPTION_COLUMNS = ("priority", "severity", "scope_of_issue", "subject",
                      "issue", "cause", "effect", "affected_spaces",
                      "affected_uses", "affected_boq_sections",
-                     "potential_coverage_unlocked", "owner_action_required",
-                     "status", "what_would_resolve_it")
+                     "potential_coverage_unlocked",
+                     "engineering_next_action", "owner_input_required",
+                     "owner_input_helpful_if_available",
+                     "status", "finding_id", "diagnostic_run_id",
+                     "evidence_reference")
 
 # Severity is about consequence, not about how loud the message is.
 BLOCKING = "BLOCKING"
@@ -367,8 +406,8 @@ UNDERSTATED = "UNDERSTATES_A_QUANTITY"
 ADVISORY = "ADVISORY"
 
 
-def exceptions(*, space_exceptions=(), known_gaps=(), graph_exceptions=(),
-               scope_exceptions=()) -> Sheet:
+def exceptions(*, space_exceptions=(), known_gaps=(), findings=(),
+               graph_exceptions=(), scope_exceptions=()) -> Sheet:
     """Everything that is not right, ranked by what fixing it would unlock.
 
     A list of forty blockers in arbitrary order is not actionable. Ranked by
@@ -381,22 +420,35 @@ def exceptions(*, space_exceptions=(), known_gaps=(), graph_exceptions=(),
     """
     rows = []
 
-    def add(severity, area, e, default_resolution=""):
-        spaces = e.get("affected_spaces")
-        uses = e.get("affected_uses")
+    def add(severity, area, e):
         rows.append(OrderedDict(
             priority=0,                       # filled in below, once sorted
             severity=severity, scope_of_issue=area,
-            subject=cell(e.get("subject")), issue=cell(e.get("issue") or e.get("item")),
+            subject=cell(e.get("subject")),
+            issue=cell(e.get("issue") or e.get("item")),
             cause=cell(e.get("cause")), effect=cell(e.get("effect")),
-            affected_spaces=cell(spaces), affected_uses=cell(uses),
+            affected_spaces=cell(e.get("affected_spaces")),
+            affected_uses=cell(e.get("affected_uses")),
             affected_boq_sections=cell(e.get("affected_boq_sections")),
             potential_coverage_unlocked=cell(e.get("coverage_unlocked")),
-            owner_action_required=cell(e.get("owner_action")),
+            # THREE separate actions. Making a stronger source look mandatory
+            # when we still have work to do is how the PDF pipeline quietly
+            # became optional in a reader's mind.
+            engineering_next_action=cell(
+                e.get("engineering_next_action") or e.get("resolution")),
+            owner_input_required=cell(
+                e.get("owner_input_required") or e.get("owner_action")),
+            owner_input_helpful_if_available=cell(
+                e.get("owner_input_helpful_if_available")),
             status=cell(e.get("status")),
-            what_would_resolve_it=cell(e.get("resolution") or default_resolution
-                                       or None)))
+            finding_id=cell(e.get("finding_id")),
+            diagnostic_run_id=cell(e.get("diagnostic_run_id")),
+            evidence_reference=cell(e.get("evidence_reference"))))
 
+    # Findings first: they are generated from the current diagnostic run and
+    # carry the run id that proves it.
+    for f in findings:
+        add(f.get("severity") or ADVISORY, f.get("area") or "TOPOLOGY", f)
     for g in known_gaps:
         add(UNDERSTATED, "GEOMETRY", g)
     for e in scope_exceptions:
@@ -429,6 +481,13 @@ def exceptions(*, space_exceptions=(), known_gaps=(), graph_exceptions=(),
             "Ranked by spaces and uses unlocked, never by money. No financial "
             "impact is estimated: a cost on an unvalidated quantity gets "
             "quoted long before the quantity does.",
+            "finding_id and diagnostic_run_id tie a row to the run that "
+            "measured it. A row whose run id is not this run's is stale, and "
+            "a superseded explanation must never survive into a new workbook.",
+            "THREE action columns. engineering_next_action is what WE do next "
+            "and is always present. owner_input_required is what only the "
+            "owner can decide. owner_input_helpful_if_available is never a "
+            "blocker — the PDF pipeline continues without it.",
         ))
 
 
@@ -630,8 +689,8 @@ def dashboard(bundle: dict, sheets: dict) -> Sheet:
     """
     spaces = bundle.get("spaces", ())
     scopes = Counter(s.get("scope") for s in spaces)
-    geom = Counter(s.get("geometry_status") or UNKNOWN for s in spaces)
     sem = Counter(s.get("semantic_source") or UNKNOWN for s in spaces)
+    layers = bundle.get("geometry_layers", {})
     cov = bundle.get("coverage", ())
     ready_uses = [c for c in cov if c.get("ready")]
     net_ready = [c for c in cov if c.get("ready")
@@ -640,13 +699,7 @@ def dashboard(bundle: dict, sheets: dict) -> Sheet:
     mismatches = sum(1 for r in (counts.rows if counts else ())
                      if r.get("verdict") == DIFFERS)
     exc = sheets.get(SHEET_EXCEPTIONS)
-
-    if net_ready:
-        status = STATUS_COMPLETE if len(net_ready) == len(cov) else STATUS_PARTIAL
-    elif ready_uses:
-        status = STATUS_PARTIAL
-    else:
-        status = STATUS_BLOCKED
+    status = bundle.get("top_level_status", {})
 
     def row(section, measure, value, note=""):
         return OrderedDict(section=section, measure=measure, value=cell(value),
@@ -657,25 +710,47 @@ def dashboard(bundle: dict, sheets: dict) -> Sheet:
         row("RUN", "Drawing", bundle.get("provenance", {}).get("drawing")),
         row("RUN", "Revision", bundle.get("revision_id")),
         row("RUN", "Run id", bundle.get("run_id")),
-        row("RUN", "TAKEOFF STATUS", status,
-            "BLOCKED means no quantity may be used. It is the state of the "
-            "measurement, not a delay."),
+
+        # TWO statuses, because one word was answering two questions. Progress
+        # on coverage is not permission to bill.
+        row("STATUS", "TAKEOFF_COVERAGE_STATUS",
+            status.get("TAKEOFF_COVERAGE_STATUS"),
+            status.get("coverage_reason", "")),
+        row("STATUS", "FINAL_BOQ_STATUS", status.get("FINAL_BOQ_STATUS"),
+            "; ".join(status.get("boq_blockers", ())) or ""),
 
         row("SPACES", "Spaces on the drawing", len(spaces)),
         row("SPACES", "IN_SCOPE", scopes.get("IN_SCOPE", 0)),
-        row("SPACES", "OUT_OF_SCOPE", scopes.get("OUT_OF_SCOPE", 0)),
+        row("SPACES", "OUT_OF_SCOPE", scopes.get("OUT_OF_SCOPE", 0),
+            "Not measured and not blocked: N/A. There is no work queued."),
         row("SPACES", "AMBIGUOUS", scopes.get("AMBIGUOUS", 0),
-            "Scope gates every use. An undecided space releases nothing."),
+            "Blocked on an owner scope decision."),
 
-        row("GEOMETRY", "Geometry ready", geom.get("VALIDATED", 0)),
-        row("GEOMETRY", "Geometry unresolved",
-            len(spaces) - geom.get("VALIDATED", 0)),
+        # FOUR LAYERS, never one "geometry ready" number. The old dashboard
+        # said 36 ready / 0 unresolved while the same workbook recorded WSH-01
+        # as UNRESOLVED, because "a raster region exists" was being printed as
+        # "the physical space is validated".
+        row("GEOMETRY", "Raster region available",
+            layers.get("RASTER_REGION_AVAILABLE"),
+            "A polygon exists and can be measured."),
+        row("GEOMETRY", "Wall geometry available",
+            layers.get("WALL_GEOMETRY_AVAILABLE"),
+            "Its boundary was traced and closed."),
+        row("GEOMETRY", "Region identity validated",
+            layers.get("REGION_IDENTITY_VALIDATED"),
+            "The polygon IS the space we named."),
+        row("GEOMETRY", "Physical topology validated",
+            layers.get("PHYSICAL_TOPOLOGY_VALIDATED"),
+            "It is the WHOLE of that space and ONLY that space."),
+        row("GEOMETRY", "VALIDATED PHYSICAL SPACES",
+            layers.get("validated_physical_spaces"),
+            "Only these may carry a released quantity."),
 
         row("SEMANTICS", "HUMAN_VERIFIED labels", sem.get("HUMAN_VERIFIED", 0),
             "Read off the rendered sheet by a person. NOT evidence of "
-            "automatic semantic extraction."),
+            "automatic semantic extraction, and NOT evidence that the label "
+            "belongs to the polygon it sits on."),
         row("SEMANTICS", "AI_INFERRED labels", sem.get("AI_INFERRED", 0)),
-        row("SEMANTICS", "Unresolved labels", sem.get(UNKNOWN, 0)),
 
         row("QUANTITIES", "Uses with any space ready", len(ready_uses)),
         row("QUANTITIES", "NET quantities released", len(net_ready),
@@ -692,6 +767,9 @@ def dashboard(bundle: dict, sheets: dict) -> Sheet:
         notes=(
             "Every number here is counted from a sheet that owns it. The "
             "dashboard derives no quantity of its own.",
+            "GEOMETRY is four separate layers. \"A raster region exists\" is "
+            "not \"the physical space is validated\", and collapsing them once "
+            "reported 36 ready spaces while a space was recorded UNRESOLVED.",
             "A workbook that opens cleanly is not a finished BOQ.",
         ))
 
@@ -699,7 +777,8 @@ def dashboard(bundle: dict, sheets: dict) -> Sheet:
 # --------------------------------------------------------- quantity trace
 
 TRACE_COLUMNS = (
-    "quantity_id", "floor", "space_id", "room_type", "use", "value", "unit",
+    "quantity_id", "floor", "space_id", "room_type", "use", "quantity_role",
+    "observation_of", "value", "unit",
     "drawing_id", "revision_id", "geometry_source", "boundary_edge_ids",
     "height_source", "opening_ids", "trade_rule_id", "trade_rule_version",
     "assembly_id", "assembly_version", "calculation_reference",
@@ -720,7 +799,9 @@ def quantity_trace(records, spaces=()) -> Sheet:
         rows.append(OrderedDict(
             quantity_id=r["quantity_id"], floor=cell(r.get("floor")),
             space_id=r["space_id"], room_type=cell(room.get(r["space_id"])),
-            use=r.get("use"), value=cell(r.get("value")),
+            use=r.get("use"), quantity_role=cell(r.get("quantity_role")),
+            observation_of=cell(r.get("observation_of")),
+            value=cell(r.get("value")),
             unit=cell(r.get("unit")), drawing_id=cell(r.get("drawing_id")),
             revision_id=cell(r.get("revision_id")),
             geometry_source=cell(r.get("geometry_source")),
@@ -740,6 +821,12 @@ def quantity_trace(records, spaces=()) -> Sheet:
     return Sheet(
         name=SHEET_TRACE, columns=TRACE_COLUMNS, rows=tuple(rows),
         notes=(
+            "quantity_role decides what a number may be USED for. An "
+            "OBSERVATION is a real measurement of a raster region attributed "
+            "to no room — it keeps its value and may never be released. Only "
+            "a RELEASABLE_QUANTITY belongs in a takeoff.",
+            "READY never carries a blocker. If you see one, the export is "
+            "broken — the type refuses to construct such a row.",
             "One row per quantity record. Nothing here is recalculated — every "
             "cell is copied from the trace the engine wrote.",
             "A NOT_ESTABLISHED in a provenance column is a real gap in the "
@@ -854,14 +941,16 @@ def build_workbook(bundle: dict) -> Workbook:
     built = {
         SHEET_ROOM_REGISTER: room_register(spaces),
         SHEET_ROOM_COUNTS: room_count_summary(
-            spaces, bundle.get("manual_expected_counts")),
+            spaces, bundle.get("manual_expected_counts"),
+            bundle.get("room_counts")),
         SHEET_TRACE: quantity_trace(bundle.get("quantity_traces", ()), spaces),
         SHEET_FLOORING: flooring_ceramic_qa(spaces, quantities, releases),
         SHEET_WALLS: wall_quantities(wall_records, releases),
         SHEET_EXCEPTIONS: exceptions(
             space_exceptions=bundle.get("space_exceptions", ()),
             known_gaps=bundle.get("known_gaps", ()),
-            graph_exceptions=bundle.get("graph_exceptions", ()),
+            # Generated from the CURRENT diagnostic run, never hand-written.
+            findings=bundle.get("findings", ()),
             scope_exceptions=bundle.get("scope_exceptions", ())),
         SHEET_SAMPLE: random_qa_sample(
             spaces, quantities, releases, project_id=bundle["project_id"],

@@ -552,20 +552,169 @@
       "UNRESOLVED": 109
     }
   },
+  "cycle_capacity": [
+    {
+      "bbox_mm": [
+        4275.193010501099,
+        38683.58176817627,
+        4783.40450337143,
+        39589.17008822021
+      ],
+      "component_index": 96,
+      "edges": 31,
+      "independent_cycles": 17,
+      "nodes": 15,
+      "total_length_m": 15.15
+    },
+    {
+      "bbox_mm": [
+        3648.038628997803,
+        38867.403674145506,
+        3956.2093638725282,
+        40148.74523214112
+      ],
+      "component_index": 97,
+      "edges": 22,
+      "independent_cycles": 12,
+      "nodes": 11,
+      "total_length_m": 14.91
+    },
+    {
+      "bbox_mm": [
+        4229.237705876923,
+        39232.34159418946,
+        4272.489868496705,
+        39572.95123619385
+      ],
+      "component_index": 109,
+      "edges": 4,
+      "independent_cycles": 3,
+      "nodes": 2,
+      "total_length_m": 1.3
+    },
+    {
+      "bbox_mm": [
+        4409.004039498901,
+        49691.22424216309,
+        4545.518210501099,
+        50353.518782250976
+      ],
+      "component_index": 102,
+      "edges": 5,
+      "independent_cycles": 2,
+      "nodes": 4,
+      "total_length_m": 2.87
+    },
+    {
+      "bbox_mm": [
+        4265.731669749451,
+        46485.165830224614,
+        4311.686974373627,
+        47150.166262207036
+      ],
+      "component_index": 107,
+      "edges": 3,
+      "independent_cycles": 2,
+      "nodes": 2,
+      "total_length_m": 1.95
+    },
+    {
+      "bbox_mm": [
+        8155.71147649231,
+        6874.414604211426,
+        33398.679284967046,
+        46674.39402020264
+      ],
+      "component_index": 1,
+      "edges": 8,
+      "independent_cycles": 1,
+      "nodes": 8,
+      "total_length_m": 129.0
+    },
+    {
+      "bbox_mm": [
+        13697.377389019775,
+        13424.394420202638,
+        18598.373210021975,
+        18574.08893022461
+      ],
+      "component_index": 14,
+      "edges": 21,
+      "independent_cycles": 1,
+      "nodes": 21,
+      "total_length_m": 22.1
+    },
+    {
+      "bbox_mm": [
+        17422.45968997803,
+        26998.774723187256,
+        19372.855705490114,
+        27798.93775516968
+      ],
+      "component_index": 32,
+      "edges": 4,
+      "independent_cycles": 1,
+      "nodes": 4,
+      "total_length_m": 4.9
+    },
+    {
+      "bbox_mm": [
+        3376.3618579956055,
+        44373.926678198244,
+        3784.5528,
+        44836.183210180665
+      ],
+      "component_index": 75,
+      "edges": 6,
+      "independent_cycles": 1,
+      "nodes": 6,
+      "total_length_m": 1.69
+    },
+    {
+      "bbox_mm": [
+        3376.3618579956055,
+        44933.499072229,
+        3789.9594277450565,
+        46523.015318066406
+      ],
+      "component_index": 76,
+      "edges": 7,
+      "independent_cycles": 1,
+      "nodes": 7,
+      "total_length_m": 1.75
+    }
+  ],
+  "cycles_over_regions": {
+    "basis": "NECESSARY_CONDITION_ONLY",
+    "components_with_cycles": 12,
+    "regions_tested": 17,
+    "regions_with_a_possible_enclosing_cycle": 14,
+    "regions_with_no_possible_enclosing_cycle": 3,
+    "total_independent_cycles": 43,
+    "uncovered": [
+      "BTH-01",
+      "BTH-02",
+      "BTH-03"
+    ],
+    "why": "a region inside a cyclic component's bounding box MIGHT be enclosed by a face; one outside every such box certainly is not. Only face extraction can upgrade this to proof"
+  },
   "e31a_gate": {
+    "diagnostic_only": [
+      "G4-CONCENTRATION"
+    ],
     "failed": [
       "G3-TERMINI",
-      "G4-MAJOR-CONNECTIVITY",
-      "G5-EXPLAINED-DISCONNECTS"
+      "G5-EXPLAINED-DISCONNECTS",
+      "G8-CYCLES-IN-REAL-ROOMS"
     ],
     "gates": [
       {
         "gate_id": "G1-LENGTH",
         "note": "",
-        "observed": "0.2 mm",
-        "question": "Is unexplained wall-length drift exactly zero?",
+        "observed": "0.2 mm (epsilon 1.0 mm, absolute)",
+        "question": "Is unexplained wall-length drift within numerical epsilon?",
         "status": "PASS",
-        "threshold": "drift == 0.0 mm, with duplicate removal itemised separately",
+        "threshold": "abs(drift) <= 1.0 mm (ABSOLUTE, never a percentage), with duplicate removal itemised",
         "why": "A face walk sums edges. Length that vanished without a reason is geometry the walk will not find, and a percentage tolerance would hide exactly the loss that matters."
       },
       {
@@ -587,13 +736,13 @@
         "why": "An unclassified wall end is an open face boundary of unknown cause. The walk cannot tell a doorway from a missing wall, and one closes a room while the other leaves it open."
       },
       {
-        "gate_id": "G4-MAJOR-CONNECTIVITY",
-        "note": "the cycle half of this gate is not yet measured",
+        "gate_id": "G4-CONCENTRATION",
+        "note": "diagnostic only \u2014 does not gate, and a low value is not a failure",
         "observed": "57.9% of wall length in 7 major components",
-        "question": "Do the major components hold most of the wall length, and is each internally connected enough to contain cycles?",
-        "status": "FAIL",
-        "threshold": "major components hold >= 80% of wall length AND each has at least one closed cycle",
-        "why": "A face needs a cycle. A component with no cycle contributes no room however much wall it holds."
+        "question": "Where is the wall length concentrated?",
+        "status": "DIAGNOSTIC_ONLY",
+        "threshold": "DIAGNOSTIC ONLY \u2014 reported, never gating",
+        "why": "80% was a number I chose, not one the building justifies. Length concentration does not decide whether a face can be walked: a component holding 90% of the metres and no cycle bounds nothing, and one holding 3% around a shaft bounds a real room. The question that matters is G8's. This stays visible as a diagnostic so a regression is noticeable, and it does not gate."
       },
       {
         "gate_id": "G5-EXPLAINED-DISCONNECTS",
@@ -624,20 +773,18 @@
       },
       {
         "gate_id": "G8-CYCLES-IN-REAL-ROOMS",
-        "note": "not yet implemented: needs the raster correspondence step",
-        "observed": null,
+        "note": "NECESSARY_CONDITION_ONLY",
+        "observed": "14 of 17 regions could be enclosed; 43 independent cycles in 12 components",
         "question": "Do closed cycles exist where the raster says rooms are?",
-        "status": "NOT_MEASURED",
-        "threshold": ">= 1 closed cycle coincident with each IN_SCOPE mapped region",
-        "why": "This is the only gate that checks the graph against the building rather than against itself. A graph can satisfy every other gate and still describe no rooms."
+        "status": "FAIL",
+        "threshold": "every IN_SCOPE mapped region has at least one possibly-enclosing cycle (a NECESSARY condition; failure is conclusive, passing is not proof)",
+        "why": "This is the only gate that checks the graph against the building rather than against itself. A graph can satisfy every other gate and still describe no rooms. It is the most meaningful gate here and it now carries the weight G4 was wrongly given."
       }
     ],
-    "not_measured": [
-      "G8-CYCLES-IN-REAL-ROOMS"
-    ],
+    "not_measured": [],
     "passed": 4,
     "ready_for_e31a": false,
-    "verdict": "NOT READY \u2014 3 gate(s) failing, 1 not yet measurable"
+    "verdict": "NOT READY \u2014 3 gate(s) failing, 0 not yet measurable"
   },
   "end_caps": {
     "found": 333,

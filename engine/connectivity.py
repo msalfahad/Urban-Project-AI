@@ -407,3 +407,243 @@ def summarise(comps: list[ComponentReport], terms: list[TerminusReport]) -> dict
         "repairable_termini": sum(1 for t in terms
                                   if t.kind == TERM_MISSING_CONNECTION),
     }
+
+
+def cycle_capacity(noded) -> list[dict]:
+    """Can each component hold a face at all? The cyclomatic number says so.
+
+    For a connected component, independent cycles = E - V + 1. Zero means the
+    component is a tree: it has no closed loop, so it bounds no face however
+    much wall length it carries. This is the measurement gate G8 needs and it
+    was previously unimplemented, which is why G8 read NOT_MEASURED.
+    """
+    node_of: dict[str, list] = {}
+    adj: dict[str, set] = {e.edge_id: set() for e in noded.edges}
+    for n in noded.nodes:
+        for a in n.edge_ids:
+            node_of.setdefault(a, []).append(n)
+            for b in n.edge_ids:
+                if a != b and a in adj:
+                    adj[a].add(b)
+
+    by_id = {e.edge_id: e for e in noded.edges}
+    seen: set = set()
+    out: list[dict] = []
+    i = 0
+    for e in noded.edges:
+        if e.edge_id in seen:
+            continue
+        stack, grp = [e.edge_id], []
+        while stack:
+            cur = stack.pop()
+            if cur in seen:
+                continue
+            seen.add(cur)
+            grp.append(cur)
+            stack.extend(adj.get(cur, ()))
+        i += 1
+        nodes = {n.node_id for x in grp for n in node_of.get(x, ())}
+        edges = len(grp)
+        verts = len(nodes)
+        # E - V + 1 for one connected component.
+        cycles = max(0, edges - verts + 1)
+        xs, ys = [], []
+        for x in grp:
+            f = by_id[x]
+            for at in (f.start_mm, f.end_mm):
+                if f.axis == "H":
+                    xs.append(at)
+                    ys.append(f.centreline_mm)
+                else:
+                    xs.append(f.centreline_mm)
+                    ys.append(at)
+        out.append({
+            "component_index": i, "edges": edges, "nodes": verts,
+            "independent_cycles": cycles,
+            "total_length_m": round(
+                sum(by_id[x].length_mm for x in grp) / 1000, 2),
+            "bbox_mm": (min(xs), min(ys), max(xs), max(ys)) if xs else None,
+        })
+    out.sort(key=lambda c: -c["independent_cycles"])
+    return out
+
+
+def cycles_over_regions(noded, region_points: dict) -> dict:
+    """Do closed cycles exist WHERE the raster says rooms are?
+
+    This is the only check that tests the graph against the building rather
+    than against itself.
+
+    IT MEASURES A NECESSARY CONDITION, NOT A SUFFICIENT ONE. A region point
+    inside the bounding box of a component that has at least one independent
+    cycle is not proof that a face encloses that room — proving that needs the
+    face extraction this gate exists to authorise. So the result is reported as
+    NECESSARY_CONDITION_ONLY and a region that FAILS it is conclusive (no cycle
+    can possibly enclose it) while one that passes is merely not yet excluded.
+    """
+    caps = [c for c in cycle_capacity(noded) if c["independent_cycles"] > 0
+            and c["bbox_mm"]]
+    covered, uncovered = [], []
+    for space_id, (x, y) in sorted(region_points.items()):
+        hit = any(bb[0] <= x <= bb[2] and bb[1] <= y <= bb[3]
+                  for bb in (c["bbox_mm"] for c in caps))
+        (covered if hit else uncovered).append(space_id)
+    return {
+        "basis": "NECESSARY_CONDITION_ONLY",
+        "why": ("a region inside a cyclic component's bounding box MIGHT be "
+                "enclosed by a face; one outside every such box certainly is "
+                "not. Only face extraction can upgrade this to proof"),
+        "regions_tested": len(region_points),
+        "regions_with_a_possible_enclosing_cycle": len(covered),
+        "regions_with_no_possible_enclosing_cycle": len(uncovered),
+        "uncovered": uncovered[:20],
+        "components_with_cycles": len(caps),
+        "total_independent_cycles": sum(c["independent_cycles"] for c in caps),
+    }
+
+
+# --------------------------------------------------------------- dashed runs
+
+# A dashed run is a TOPOLOGY_BOUNDARY_CANDIDATE and nothing more. It is not a
+# door, not a wall, and not an opening. It is a place the architect drew a
+# boundary that is not a solid wall, and it may close a cycle the graph cannot
+# otherwise close.
+TOPOLOGY_BOUNDARY_CANDIDATE = "TOPOLOGY_BOUNDARY_CANDIDATE"
+
+# A dash sequence needs at least this many marks. Two collinear short segments
+# are two segments; a pattern needs repetition to be a pattern.
+MIN_DASHES = 3
+# A dash mark longer than this is a wall fragment, not a dash.
+MAX_DASH_MM = 700.0
+# Gap between marks, as a multiple of the marks' own median length. A regular
+# linetype keeps this roughly constant, which is what separates an exploded
+# dashed line from a row of unrelated short marks.
+MAX_GAP_RATIO = 3.0
+# How much the gaps may vary and still be called regular.
+GAP_REGULARITY = 0.6
+
+
+@dataclass(frozen=True)
+class DashedRun:
+    """A sequence of collinear short marks that reads as a drawn dashed line.
+
+    On AR-00 there are ZERO PDF-level dash patterns: every stroke path is
+    solid ("[] 0"). The dashed thresholds the space map describes were exported
+    as exploded linetypes — individual short solid segments — so a dash
+    pattern has to be recovered from geometry, and `VectorPath.is_dashed`
+    correctly reports nothing to find.
+    """
+
+    run_id: str
+    axis: str
+    centreline_mm: float
+    start_mm: float
+    end_mm: float
+    marks: int
+    median_mark_mm: float
+    median_gap_mm: float
+    gap_regularity: float
+    stroke_width_pt: float
+    segment_ids: tuple[str, ...]
+    classification: str = TOPOLOGY_BOUNDARY_CANDIDATE
+
+    @property
+    def span_mm(self) -> float:
+        return abs(self.end_mm - self.start_mm)
+
+    def record(self) -> dict:
+        return {"run_id": self.run_id, "axis": self.axis,
+                "centreline_mm": round(self.centreline_mm, 1),
+                "span_mm": round(self.span_mm, 1), "marks": self.marks,
+                "median_mark_mm": round(self.median_mark_mm, 1),
+                "median_gap_mm": round(self.median_gap_mm, 1),
+                "gap_regularity": round(self.gap_regularity, 2),
+                "stroke_width_pt": self.stroke_width_pt,
+                "classification": self.classification,
+                "boundary_type": "UNKNOWN"}
+
+
+def dashed_runs(segments, *, tol_mm: float = 3.0) -> list[DashedRun]:
+    """Recover exploded dashed lines from collinear short marks.
+
+    Grouped by axis, pen weight and centreline — a dashed line is drawn with
+    one pen on one line — then split wherever the gap stops being regular. The
+    regularity test is what keeps a row of unrelated fixture ticks from being
+    called a boundary.
+    """
+    import statistics
+
+    groups: dict[tuple, list] = {}
+    for s in segments:
+        if not s.is_axis_aligned or s.length_mm > MAX_DASH_MM:
+            continue
+        # A FILL path is a glyph outline or a hatch body, not a drawn line. Its
+        # short marks are regularly spaced by construction, so admitting them
+        # would fill this list with text. Excluding them is not tuning: a fill
+        # is a different kind of object from a stroke and the PDF says which.
+        if s.path_type != "STROKE" or s.stroke_width_pt <= 0.0:
+            continue
+        key = (s.axis, round(s.stroke_width_pt, 2),
+               round(s.fixed_mm / tol_mm))
+        groups.setdefault(key, []).append(s)
+
+    out: list[DashedRun] = []
+    n = 0
+    for (axis, pen, _), marks in groups.items():
+        marks.sort(key=lambda s: min(s.start_mm, s.end_mm))
+        run: list = []
+
+        def flush(run):
+            nonlocal n
+            if len(run) < MIN_DASHES:
+                return
+            lens = [m.length_mm for m in run]
+            gaps = [min(b.start_mm, b.end_mm) - max(a.start_mm, a.end_mm)
+                    for a, b in zip(run, run[1:])]
+            gaps = [g for g in gaps if g > 0]
+            if not gaps:
+                return
+            med_gap = statistics.median(gaps)
+            spread = (statistics.pstdev(gaps) / med_gap) if med_gap else 99.0
+            if spread > GAP_REGULARITY:
+                return
+            n += 1
+            out.append(DashedRun(
+                run_id=f"DR-{n:04d}", axis=axis,
+                centreline_mm=statistics.median([m.fixed_mm for m in run]),
+                start_mm=min(min(m.start_mm, m.end_mm) for m in run),
+                end_mm=max(max(m.start_mm, m.end_mm) for m in run),
+                marks=len(run), median_mark_mm=statistics.median(lens),
+                median_gap_mm=med_gap, gap_regularity=spread,
+                stroke_width_pt=pen,
+                segment_ids=tuple(m.segment_id for m in run)))
+
+        for m in marks:
+            if not run:
+                run = [m]
+                continue
+            prev = run[-1]
+            gap = min(m.start_mm, m.end_mm) - max(prev.start_mm, prev.end_mm)
+            limit = MAX_GAP_RATIO * max(prev.length_mm, m.length_mm)
+            if 0 < gap <= limit:
+                run.append(m)
+            else:
+                flush(run)
+                run = [m]
+        flush(run)
+    return out
+
+
+def dashed_summary(runs: list[DashedRun]) -> dict:
+    from collections import Counter
+    return {
+        "runs": len(runs),
+        "total_span_m": round(sum(r.span_mm for r in runs) / 1000, 1),
+        "by_pen": dict(Counter(r.stroke_width_pt for r in runs)),
+        "by_axis": dict(Counter(r.axis for r in runs)),
+        "span_bands_mm": dict(Counter(
+            ("<300" if r.span_mm < 300 else "300-900" if r.span_mm < 900
+             else "900-1800" if r.span_mm < 1800 else "1800+") for r in runs)),
+        "classification": TOPOLOGY_BOUNDARY_CANDIDATE,
+        "boundary_type": "UNKNOWN — a dashed run is NOT a door and NOT a wall",
+    }

@@ -56,12 +56,21 @@ def test_a_value_without_a_release_status_is_refused():
 
 
 def test_a_value_with_a_status_is_accepted():
-    t = q(value=8.6, release_status="READY")
+    t = q(value=8.6, release_status="READY",
+          quantity_role="RELEASABLE_QUANTITY")
     assert t.is_released
 
 
+def test_a_ready_candidate_is_not_yet_a_released_quantity():
+    """READY says the dependencies are met. RELEASABLE_QUANTITY says the
+    number may go in a takeoff. A candidate has the first and not the second."""
+    t = q(value=8.6, release_status="READY")
+    assert t.quantity_role == "CANDIDATE"
+    assert not t.is_released
+
+
 def test_a_blocked_quantity_is_not_released_even_with_a_value():
-    t = q(value=8.6, release_status="BLOCKED_HEIGHT")
+    t = q(value=8.6, release_status="BLOCKED_HEIGHT", primary_blocker="height")
     assert not t.is_released
 
 

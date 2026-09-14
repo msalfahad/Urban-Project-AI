@@ -11,14 +11,16 @@ from __future__ import annotations
 
 import pytest
 
-from engine.release_matrix import (CLOSED_BOUNDARY, EXTERNAL_SPLIT, FLOOR_AREA,
+from engine.release_matrix import (PHYSICAL_TOPOLOGY,  # noqa: F401
+                                   CLOSED_BOUNDARY, EXTERNAL_SPLIT, FLOOR_AREA,
                                    HEIGHT, NOT_READY, OPENING_RULE, OPENINGS,
                                    PHYSICAL_WALL_SPLIT, READY, REGION_IDENTITY,
                                    SCOPE, TRADE_RULE, USES, WALL_THICKNESS,
                                    ReleaseMatrixError, assess,
                                    gross_alternatives, matrix)
 
-GEOMETRY_ONLY = {SCOPE: True, REGION_IDENTITY: True, CLOSED_BOUNDARY: True,
+GEOMETRY_ONLY = {SCOPE: True, REGION_IDENTITY: True, PHYSICAL_TOPOLOGY: True,
+                 CLOSED_BOUNDARY: True,
                  HEIGHT: True, TRADE_RULE: True}
 
 
@@ -82,16 +84,42 @@ def test_a_dependency_nobody_mentioned_counts_as_missing():
     """Silence is the commonest way a default sneaks in."""
     r = assess("GROSS_PERIMETER", {SCOPE: True})
     assert not r.ready
-    assert set(r.missing) == {REGION_IDENTITY, CLOSED_BOUNDARY}
+    assert set(r.missing) == {REGION_IDENTITY, PHYSICAL_TOPOLOGY,
+                              CLOSED_BOUNDARY}
     assert "never established" in r.reasons[REGION_IDENTITY]
 
 
 def test_an_explicitly_false_dependency_blocks_and_keeps_its_reason():
     r = assess("GROSS_PERIMETER",
-               {SCOPE: True, REGION_IDENTITY: False, CLOSED_BOUNDARY: True},
+               {SCOPE: True, REGION_IDENTITY: False, PHYSICAL_TOPOLOGY: True,
+                CLOSED_BOUNDARY: True},
                reasons={REGION_IDENTITY: "WSH-01 may be the shaft, not the washroom"})
     assert r.missing == [REGION_IDENTITY]
     assert "shaft" in r.explain()
+
+
+def test_identity_and_topology_are_different_questions():
+    """WSH-01's region is the shaft BESIDE the washroom: identity fails.
+    BED-04's region is a real bedroom with an unseparated bathroom inside it:
+    identity holds and topology fails. One dependency cannot express both, and
+    the workbook released quantities for both spaces while it tried to."""
+    identity_bad = assess("GROSS_PERIMETER",
+                          {SCOPE: True, REGION_IDENTITY: False,
+                           PHYSICAL_TOPOLOGY: True, CLOSED_BOUNDARY: True})
+    topology_bad = assess("GROSS_PERIMETER",
+                          {SCOPE: True, REGION_IDENTITY: True,
+                           PHYSICAL_TOPOLOGY: False, CLOSED_BOUNDARY: True})
+    assert identity_bad.missing == [REGION_IDENTITY]
+    assert topology_bad.missing == [PHYSICAL_TOPOLOGY]
+    assert not identity_bad.ready and not topology_bad.ready
+
+
+def test_every_use_that_names_a_physical_space_requires_its_topology():
+    """A quantity attributed to a room is a claim about that room. If the
+    polygon is not the whole of that room and only that room, the claim is
+    false however well the polygon was measured."""
+    for name, use in USES.items():
+        assert PHYSICAL_TOPOLOGY in use.requires, name
 
 
 def test_an_unknown_use_raises_rather_than_being_allowed():
@@ -228,6 +256,7 @@ def test_a_ceiling_is_blocked_when_only_floor_area_is_known():
 def test_a_ceiling_releases_once_its_geometry_is_established():
     from engine.release_matrix import CEILING_GEOMETRY
     assert assess("CEILING", {SCOPE: True, REGION_IDENTITY: True,
+                              PHYSICAL_TOPOLOGY: True,
                               CEILING_GEOMETRY: True, TRADE_RULE: True}).ready
 
 

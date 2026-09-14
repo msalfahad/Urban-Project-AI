@@ -26,6 +26,21 @@ import re
 from collections import Counter
 from dataclasses import dataclass, field
 
+# WHAT A NUMBER IS ALLOWED TO BE USED FOR. This is the distinction the
+# workbook was missing: WSH-01's 4.19 m is a perfectly real measurement of a
+# raster region, and it is NOT a washroom perimeter. Deleting it would lose
+# useful geometry; releasing it would put a shaft into a bathroom's takeoff.
+#
+#   OBSERVATION           measured, attributed to nothing. May carry a value
+#                         and may NEVER be released.
+#   CANDIDATE             attributed to a physical space, pending validation.
+#   RELEASABLE_QUANTITY   validated, attributable, and usable in a takeoff.
+OBSERVATION = "OBSERVATION"
+CANDIDATE = "CANDIDATE"
+RELEASABLE_QUANTITY = "RELEASABLE_QUANTITY"
+
+QUANTITY_ROLES = (OBSERVATION, CANDIDATE, RELEASABLE_QUANTITY)
+
 # Where a quantity is in its life. Not a quality score — a gate.
 DRAFT = "DRAFT"
 VALIDATED = "VALIDATED"
@@ -85,6 +100,12 @@ class QuantityTrace:
     use: str
     unit: str
     value: float | None = None
+    # CANDIDATE is the default because a trace names a space_id: it is already
+    # attributed, and attribution pending validation is what CANDIDATE means.
+    # OBSERVATION is the deliberate downgrade for a number measured on geometry
+    # that is NOT the space it was hoped to be, and it must say what it measured.
+    quantity_role: str = CANDIDATE
+    observation_of: str = ""      # what an OBSERVATION actually measured
 
     drawing_id: str = ""
     revision_id: str = ""
@@ -121,20 +142,57 @@ class QuantityTrace:
                 f"{self.quantity_id!r} is not a well-formed quantity id; a "
                 "quantity without a stable identity cannot be compared across "
                 "revisions, which is the only reason the id exists")
+        if self.quantity_role not in QUANTITY_ROLES:
+            raise TraceError(
+                f"{self.quantity_id}: quantity_role {self.quantity_role!r} must "
+                f"be one of {QUANTITY_ROLES}. A number with no stated role gets "
+                "used for whatever the reader needs it for")
         if self.value is not None and not self.release_status:
             raise TraceError(
                 f"{self.quantity_id} carries a value with no release status. A "
                 "figure printed without the status that governs it gets quoted")
+        if self.quantity_role == RELEASABLE_QUANTITY and (
+                self.release_status != "READY"):
+            raise TraceError(
+                f"{self.quantity_id} claims to be a RELEASABLE_QUANTITY while "
+                f"its release status is {self.release_status!r}. Releasable and "
+                "blocked cannot both be true")
+        if self.quantity_role == OBSERVATION and self.release_status == "READY":
+            raise TraceError(
+                f"{self.quantity_id} is an OBSERVATION reported as READY. An "
+                "observation is attributed to no physical space, so there is "
+                "nothing for it to be ready FOR")
+        if self.quantity_role == OBSERVATION and not self.observation_of:
+            raise TraceError(
+                f"{self.quantity_id} is an OBSERVATION that does not say what "
+                "it measured. 'the perimeter of raster region 441' is useful; "
+                "an unattributed number is not")
+        # THE INVARIANT THE WORKBOOK BROKE. Rows read READY beside
+        # primary_blocker = trade_rule. A reader cannot tell which half to
+        # believe, and the contradiction devalues every other READY row.
+        if self.release_status == "READY" and self.primary_blocker:
+            raise TraceError(
+                f"{self.quantity_id} is READY and blocked by "
+                f"{self.primary_blocker!r} at the same time. One of the two is "
+                "wrong and a reader has no way to tell which")
+        if self.release_status.startswith("BLOCKED") and not self.primary_blocker:
+            raise TraceError(
+                f"{self.quantity_id} is {self.release_status} but names no "
+                "blocker. A block that cannot name its cause cannot be cleared")
 
     @property
     def is_released(self) -> bool:
-        return self.release_status == "READY" and self.value is not None
+        """Usable in a takeoff. Role AND status AND a value — all three."""
+        return (self.quantity_role == RELEASABLE_QUANTITY
+                and self.release_status == "READY" and self.value is not None)
 
     def record(self) -> dict:
         """Every field, including the empty ones. An absent key hides a gap."""
         return {
             "quantity_id": self.quantity_id, "space_id": self.space_id,
             "use": self.use, "value": self.value, "unit": self.unit,
+            "quantity_role": self.quantity_role,
+            "observation_of": self.observation_of,
             "drawing_id": self.drawing_id, "revision_id": self.revision_id,
             "geometry_source": self.geometry_source,
             "boundary_edge_ids": list(self.boundary_edge_ids),
@@ -190,6 +248,7 @@ class TraceLedger:
         return {
             "quantities": len(self.traces),
             "released": sum(1 for t in self.traces if t.is_released),
+            "by_role": dict(Counter(t.quantity_role for t in self.traces)),
             "with_a_value": sum(1 for t in self.traces if t.value is not None),
             "by_validation_status": dict(Counter(
                 t.validation_status for t in self.traces)),

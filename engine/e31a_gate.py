@@ -33,9 +33,19 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
+# An ABSOLUTE numerical tolerance, in millimetres. Floating-point summation
+# over thousands of edges does not land on exactly zero, and a gate that claims
+# "= 0" while the implementation accepts 0.2 mm is lying about its own rule.
+# This is NOT a percentage: it does not grow with the drawing, so it can never
+# hide a proportional loss.
+ABSOLUTE_NUMERICAL_EPSILON_MM = 1.0
+
 PASS = "PASS"
 FAIL = "FAIL"
 NOT_MEASURED = "NOT_MEASURED"
+# Reported so a regression is visible, but never gating. A number I chose is
+# not a physical truth, and G4 was one.
+DIAGNOSTIC = "DIAGNOSTIC_ONLY"
 
 
 @dataclass(frozen=True)
@@ -50,8 +60,9 @@ class Gate:
 
 GATES = (
     Gate("G1-LENGTH",
-         "Is unexplained wall-length drift exactly zero?",
-         "drift == 0.0 mm, with duplicate removal itemised separately",
+         "Is unexplained wall-length drift within numerical epsilon?",
+         f"abs(drift) <= {ABSOLUTE_NUMERICAL_EPSILON_MM} mm "
+         "(ABSOLUTE, never a percentage), with duplicate removal itemised",
          "A face walk sums edges. Length that vanished without a reason is "
          "geometry the walk will not find, and a percentage tolerance would "
          "hide exactly the loss that matters."),
@@ -66,13 +77,15 @@ GATES = (
          "An unclassified wall end is an open face boundary of unknown cause. "
          "The walk cannot tell a doorway from a missing wall, and one closes "
          "a room while the other leaves it open."),
-    Gate("G4-MAJOR-CONNECTIVITY",
-         "Do the major components hold most of the wall length, and is each "
-         "internally connected enough to contain cycles?",
-         "major components hold >= 80% of wall length AND each has at least "
-         "one closed cycle",
-         "A face needs a cycle. A component with no cycle contributes no room "
-         "however much wall it holds."),
+    Gate("G4-CONCENTRATION",
+         "Where is the wall length concentrated?",
+         "DIAGNOSTIC ONLY — reported, never gating",
+         "80% was a number I chose, not one the building justifies. Length "
+         "concentration does not decide whether a face can be walked: a "
+         "component holding 90% of the metres and no cycle bounds nothing, "
+         "and one holding 3% around a shaft bounds a real room. The question "
+         "that matters is G8's. This stays visible as a diagnostic so a "
+         "regression is noticeable, and it does not gate."),
     Gate("G5-EXPLAINED-DISCONNECTS",
          "Is every disconnect either valid or explicitly unresolved?",
          "components with cause J_UNRESOLVED == 0",
@@ -94,10 +107,13 @@ GATES = (
          "unrelated geometry. The walk depends on which is true."),
     Gate("G8-CYCLES-IN-REAL-ROOMS",
          "Do closed cycles exist where the raster says rooms are?",
-         ">= 1 closed cycle coincident with each IN_SCOPE mapped region",
+         "every IN_SCOPE mapped region has at least one possibly-enclosing "
+         "cycle (a NECESSARY condition; failure is conclusive, passing is not "
+         "proof)",
          "This is the only gate that checks the graph against the building "
          "rather than against itself. A graph can satisfy every other gate and "
-         "still describe no rooms."),
+         "still describe no rooms. It is the most meaningful gate here and it "
+         "now carries the weight G4 was wrongly given."),
 )
 
 
@@ -122,8 +138,9 @@ def evaluate(diagnostic: dict) -> dict:
 
     drift = h.get("length_difference_mm")
     add(g["G1-LENGTH"], NOT_MEASURED if drift is None
-        else PASS if abs(drift) <= 1.0 else FAIL,
-        f"{drift} mm" if drift is not None else None)
+        else PASS if abs(drift) <= ABSOLUTE_NUMERICAL_EPSILON_MM else FAIL,
+        f"{drift} mm (epsilon {ABSOLUTE_NUMERICAL_EPSILON_MM} mm, absolute)"
+        if drift is not None else None)
 
     rej = h.get("rejected_clusters")
     add(g["G2-CLUSTERS"], NOT_MEASURED if rej is None
@@ -136,11 +153,10 @@ def evaluate(diagnostic: dict) -> dict:
         f"{unres} of {conn.get('termini')} termini unresolved")
 
     share = conn.get("share_of_length_in_major_components_pct")
-    add(g["G4-MAJOR-CONNECTIVITY"], NOT_MEASURED if share is None
-        else PASS if share >= 80.0 else FAIL,
+    add(g["G4-CONCENTRATION"], DIAGNOSTIC,
         f"{share}% of wall length in {conn.get('major_components')} major "
         "components",
-        "the cycle half of this gate is not yet measured")
+        "diagnostic only — does not gate, and a low value is not a failure")
 
     causes = conn.get("cause_histogram", {})
     unexplained = causes.get("J_UNRESOLVED")
@@ -160,15 +176,27 @@ def evaluate(diagnostic: dict) -> dict:
                   f"{frag['short_segments']} short marks share a path with a "
                   "long run"))
 
-    add(g["G8-CYCLES-IN-REAL-ROOMS"], NOT_MEASURED, None,
-        "not yet implemented: needs the raster correspondence step")
+    cyc = diagnostic.get("cycles_over_regions")
+    if not cyc:
+        add(g["G8-CYCLES-IN-REAL-ROOMS"], NOT_MEASURED, None,
+            "no region correspondence supplied to this run")
+    else:
+        bad = cyc.get("regions_with_no_possible_enclosing_cycle")
+        add(g["G8-CYCLES-IN-REAL-ROOMS"], PASS if bad == 0 else FAIL,
+            f"{cyc.get('regions_with_a_possible_enclosing_cycle')} of "
+            f"{cyc.get('regions_tested')} regions could be enclosed; "
+            f"{cyc.get('total_independent_cycles')} independent cycles in "
+            f"{cyc.get('components_with_cycles')} components",
+            cyc.get("basis"))
 
     passed = sum(1 for r in results if r["status"] == PASS)
     failed = [r["gate_id"] for r in results if r["status"] == FAIL]
     unmeasured = [r["gate_id"] for r in results if r["status"] == NOT_MEASURED]
+    diagnostics = [r["gate_id"] for r in results if r["status"] == DIAGNOSTIC]
     return {
         "gates": results,
         "passed": passed, "failed": failed, "not_measured": unmeasured,
+        "diagnostic_only": diagnostics,
         "ready_for_e31a": not failed and not unmeasured,
         "verdict": (
             "READY" if not failed and not unmeasured else

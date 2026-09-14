@@ -129,3 +129,72 @@ def test_the_real_sheet_has_wall_end_caps_at_real_wall_thicknesses():
     assert len(caps) > 100
     at_wall_pen = [c for c in caps if c.stroke_width_pt == 1.14]
     assert len(at_wall_pen) > 50
+
+
+# --- dashed topology (§15) ----------------------------------------------------
+
+def test_this_sheet_has_no_pdf_level_dash_patterns_at_all():
+    """A NEGATIVE RESULT worth recording. Every stroke path on AR-00 is solid
+    ("[] 0") and every fill path has no dash array. The dashed thresholds the
+    space map describes were exported as EXPLODED linetypes — rows of short
+    solid segments — so `VectorPath.is_dashed` is correct and finds nothing,
+    and a dash pattern has to be recovered from geometry instead."""
+    from engine.vector_source import read
+    if not PDF.exists():
+        pytest.skip("audited input not present")
+    d = read(str(PDF))
+    assert [s for s in d.segments if s.is_dashed] == []
+    assert any(p.dashes == "[] 0" for p in d.paths)
+
+
+def test_a_dashed_run_needs_repetition_not_just_two_short_marks():
+    from engine.connectivity import MIN_DASHES, dashed_runs
+    two = [s("A", AXIS_H, 0.0, 0.0, 100.0, 0.3),
+           s("B", AXIS_H, 0.0, 200.0, 300.0, 0.3)]
+    assert MIN_DASHES == 3
+    assert dashed_runs(two) == []
+
+
+def test_a_regular_sequence_of_short_marks_is_a_boundary_candidate():
+    from engine.connectivity import (TOPOLOGY_BOUNDARY_CANDIDATE, dashed_runs)
+    marks = [s(f"M{i}", AXIS_H, 0.0, i * 300.0, i * 300.0 + 150.0, 0.3)
+             for i in range(6)]
+    runs = dashed_runs(marks)
+    assert len(runs) == 1
+    assert runs[0].marks == 6
+    assert runs[0].classification == TOPOLOGY_BOUNDARY_CANDIDATE
+    assert runs[0].record()["boundary_type"] == "UNKNOWN"
+
+
+def test_a_dashed_run_is_never_a_door_or_a_wall():
+    """It is a place the architect drew a boundary that is not a solid wall.
+    What kind of boundary is a separate question with its own evidence."""
+    from engine.connectivity import dashed_runs
+    marks = [s(f"M{i}", AXIS_H, 0.0, i * 300.0, i * 300.0 + 150.0, 0.3)
+             for i in range(6)]
+    r = dashed_runs(marks)[0].record()
+    assert r["classification"] == "TOPOLOGY_BOUNDARY_CANDIDATE"
+    assert r["boundary_type"] == "UNKNOWN"
+    assert "door" not in str(r).lower() or r["boundary_type"] == "UNKNOWN"
+
+
+def test_fill_paths_are_excluded_because_a_hatch_is_regular_by_construction():
+    """Admitting fills filled the candidate list with glyph outlines: 197 of
+    733 candidates came from paths with no stroke width at all."""
+    from engine.connectivity import dashed_runs
+    from engine.vector_source import FILL, VectorSegment
+    fills = [VectorSegment(f"F{i}", "VP-1", 0, AXIS_H, 0.0, i * 300.0,
+                           i * 300.0 + 150.0, FILL, 0.0, False, 0.0,
+                           i * 300.0, 0.0, i * 300.0 + 150.0, 0.0)
+             for i in range(6)]
+    assert dashed_runs(fills) == []
+
+
+def test_irregular_gaps_are_not_a_pattern():
+    """A row of unrelated fixture ticks must not read as a drawn boundary."""
+    from engine.connectivity import dashed_runs
+    marks = [s("A", AXIS_H, 0.0, 0.0, 100.0, 0.3),
+             s("B", AXIS_H, 0.0, 120.0, 220.0, 0.3),
+             s("C", AXIS_H, 0.0, 480.0, 580.0, 0.3),
+             s("D", AXIS_H, 0.0, 600.0, 700.0, 0.3)]
+    assert all(r.marks < 4 for r in dashed_runs(marks))

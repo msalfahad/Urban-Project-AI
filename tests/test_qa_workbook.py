@@ -240,7 +240,41 @@ def test_the_exceptions_sheet_carries_the_known_gaps_and_what_would_fix_them():
                                 "status": "REVIEW REQUIRED",
                                 "resolution": "E25 ownership"}])
     assert s.rows[0]["severity"] == qw.UNDERSTATED
-    assert s.rows[0]["what_would_resolve_it"] == "E25 ownership"
+    assert s.rows[0]["engineering_next_action"] == "E25 ownership"
+
+
+def test_an_exception_row_names_the_run_that_measured_it():
+    """The workbook carried a causal explanation the same round's diagnostic
+    had disproved. It survived because it was prose in a list with nothing
+    tying it to a measurement."""
+    s = exceptions(findings=[{
+        "severity": "BLOCKING", "area": "TOPOLOGY", "subject": "wall graph",
+        "issue": "in pieces", "cause": "measured this run: ...",
+        "effect": "no faces", "finding_id": "F-R9-001",
+        "diagnostic_run_id": "R9",
+        "evidence_reference": "runs/graph/AR-00_graph_diagnostic.json",
+        "engineering_next_action": "reduce unexplained components",
+        "affected_spaces": 36, "affected_uses": 13}])
+    assert s.rows[0]["finding_id"] == "F-R9-001"
+    assert s.rows[0]["diagnostic_run_id"] == "R9"
+    assert s.rows[0]["evidence_reference"].endswith(".json")
+    assert any("stale" in n for n in s.notes)
+
+
+def test_engineering_action_is_separate_from_owner_input():
+    """"supply DXF/DWG of AR-00" as the owner action quietly said the PDF
+    pipeline cannot proceed. It can, and it must."""
+    s = exceptions(findings=[{
+        "severity": "BLOCKING", "area": "TOPOLOGY", "subject": "g",
+        "issue": "i", "cause": "c", "effect": "e", "finding_id": "F-1",
+        "diagnostic_run_id": "R9", "evidence_reference": "x.json",
+        "engineering_next_action": "repair PDF wall connectivity",
+        "owner_input_helpful_if_available": "a DWG would help. NOT required."}])
+    r = s.rows[0]
+    assert r["engineering_next_action"] == "repair PDF wall connectivity"
+    assert r["owner_input_required"] == UNKNOWN
+    assert "NOT required" in r["owner_input_helpful_if_available"]
+    assert "owner_action_required" not in s.columns
 
 
 def test_an_unresolved_space_is_listed_not_dropped():
@@ -321,15 +355,41 @@ def test_the_dashboard_derives_no_quantity_of_its_own():
 
     from engine import qa_workbook
     src = inspect.getsource(qa_workbook.dashboard)
-    for forbidden in (" * ", " / ", "round("):
-        assert forbidden not in src, forbidden
+    body = "\n".join(ln for ln in src.splitlines()
+                     if not ln.strip().startswith("#"))
+    for forbidden in (" * ", "round(", "sum(c."):
+        assert forbidden not in body, forbidden
 
 
-def test_the_dashboard_says_blocked_when_nothing_is_released():
-    from engine.qa_workbook import STATUS_BLOCKED
-    wb = build_workbook(dict(BUNDLE, coverage=[]))
+def test_the_dashboard_carries_two_statuses_not_one():
+    """One word was answering two questions: how much has been validated, and
+    may a BOQ be produced. The report said BLOCKED while the dashboard said
+    VALIDATED_PARTIAL, and both were defensible readings of one field."""
+    from engine.takeoff_status import (BLOCKED_FOR_FINAL_BOQ,
+                                       NO_VALIDATED_OUTPUT, assess)
+    status = assess(uses_total=13, uses_with_ready_spaces=0, net_uses_ready=0,
+                    validated_physical_spaces=0, total_in_scope_spaces=17,
+                    openings_validated=0, signed_trade_rules=0,
+                    unresolved_topology_spaces=3, graph_gate_passed=False)
+    wb = build_workbook(dict(BUNDLE, coverage=[],
+                             top_level_status=status.record()))
     dash = {r["measure"]: r["value"] for r in wb.by_name()["Dashboard"].rows}
-    assert dash["TAKEOFF STATUS"] == STATUS_BLOCKED
+    assert dash["TAKEOFF_COVERAGE_STATUS"] == NO_VALIDATED_OUTPUT
+    assert dash["FINAL_BOQ_STATUS"] == BLOCKED_FOR_FINAL_BOQ
+
+
+def test_the_dashboard_reports_four_geometry_layers_separately():
+    """"Geometry ready = 36 / unresolved = 0" was true only of the first layer
+    and was printed as though it were the last."""
+    wb = build_workbook(dict(BUNDLE, geometry_layers={
+        "RASTER_REGION_AVAILABLE": 36, "WALL_GEOMETRY_AVAILABLE": 36,
+        "REGION_IDENTITY_VALIDATED": 35, "PHYSICAL_TOPOLOGY_VALIDATED": 33,
+        "validated_physical_spaces": 33}))
+    dash = {r["measure"]: r["value"] for r in wb.by_name()["Dashboard"].rows}
+    assert dash["Raster region available"] == 36
+    assert dash["Region identity validated"] == 35
+    assert dash["Physical topology validated"] == 33
+    assert dash["VALIDATED PHYSICAL SPACES"] == 33
 
 
 def test_a_workbook_with_human_labels_says_so_on_the_front_page():

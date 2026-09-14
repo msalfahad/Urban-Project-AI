@@ -2,7 +2,8 @@
 
 from __future__ import annotations
 
-from engine.e31a_gate import (FAIL, GATES, NOT_MEASURED, PASS, evaluate)
+from engine.e31a_gate import (ABSOLUTE_NUMERICAL_EPSILON_MM, DIAGNOSTIC, FAIL,
+                              GATES, NOT_MEASURED, PASS, evaluate)
 
 
 def test_the_gates_are_measurable_not_aspirational():
@@ -46,12 +47,57 @@ def test_a_failing_gate_blocks_readiness():
     assert not out["ready_for_e31a"]
 
 
-def test_the_length_gate_admits_no_percentage_tolerance():
-    """A percentage would hide exactly the loss that matters."""
-    assert any("== 0.0 mm" in g.threshold for g in GATES)
+def test_the_length_gate_states_the_tolerance_it_actually_applies():
+    """The gate said "= 0" while the implementation accepted 0.2 mm. It now
+    names an ABSOLUTE epsilon — which does not grow with the drawing, so it can
+    never hide a proportional loss the way a percentage would."""
+    g1 = next(g for g in GATES if g.gate_id == "G1-LENGTH")
+    assert "ABSOLUTE, never a percentage" in g1.threshold
+    assert str(ABSOLUTE_NUMERICAL_EPSILON_MM) in g1.threshold
+    assert "%" not in g1.threshold
     out = evaluate({"noded_graph": {"length_difference_mm": 0.2}})
     assert [g for g in out["gates"] if g["gate_id"] == "G1-LENGTH"][0][
         "status"] == PASS
+    out = evaluate({"noded_graph": {"length_difference_mm": 50.0}})
+    assert [g for g in out["gates"] if g["gate_id"] == "G1-LENGTH"][0][
+        "status"] == FAIL
+
+
+def test_length_concentration_is_a_diagnostic_not_a_gate():
+    """80% was a number I chose, not one the building justifies. A component
+    holding 90% of the metres and no cycle bounds nothing; one holding 3%
+    around a shaft bounds a real room."""
+    g4 = next(g for g in GATES if g.gate_id == "G4-CONCENTRATION")
+    assert "DIAGNOSTIC ONLY" in g4.threshold
+    out = evaluate({"connectivity": {
+        "share_of_length_in_major_components_pct": 12.0,
+        "major_components": 2}})
+    row = next(g for g in out["gates"] if g["gate_id"] == "G4-CONCENTRATION")
+    assert row["status"] == DIAGNOSTIC
+    assert "G4-CONCENTRATION" not in out["failed"]
+    assert "G4-CONCENTRATION" not in out["not_measured"]
+
+
+def test_g8_is_measured_and_a_region_with_no_possible_cycle_fails_it():
+    """The gate that checks the graph against the building rather than against
+    itself. It now carries the weight G4 was wrongly given."""
+    out = evaluate({"cycles_over_regions": {
+        "regions_tested": 17, "regions_with_a_possible_enclosing_cycle": 14,
+        "regions_with_no_possible_enclosing_cycle": 3,
+        "total_independent_cycles": 43, "components_with_cycles": 12,
+        "basis": "NECESSARY_CONDITION_ONLY"}})
+    row = next(g for g in out["gates"]
+               if g["gate_id"] == "G8-CYCLES-IN-REAL-ROOMS")
+    assert row["status"] == FAIL
+    assert "NECESSARY_CONDITION_ONLY" in row["note"]
+
+
+def test_g8_passing_is_explicitly_not_proof():
+    """A necessary condition met is not a face proved. Only extraction can
+    upgrade it."""
+    g8 = next(g for g in GATES if g.gate_id == "G8-CYCLES-IN-REAL-ROOMS")
+    assert "NECESSARY" in g8.threshold
+    assert "passing is not" in g8.threshold
 
 
 def test_the_verdict_names_what_is_failing_and_what_is_unmeasured():
@@ -75,7 +121,14 @@ def test_the_real_sheet_does_not_pass_the_gates():
         "source": {"path_fragmentation": {
             "short_segments": 55144,
             "short_in_a_path_that_also_has_a_long_run": 993}},
+        "cycles_over_regions": {
+            "regions_tested": 17,
+            "regions_with_a_possible_enclosing_cycle": 14,
+            "regions_with_no_possible_enclosing_cycle": 3,
+            "total_independent_cycles": 43, "components_with_cycles": 12,
+            "basis": "NECESSARY_CONDITION_ONLY"},
     })
     assert not out["ready_for_e31a"]
-    assert set(out["failed"]) == {"G3-TERMINI", "G4-MAJOR-CONNECTIVITY",
-                                 "G5-EXPLAINED-DISCONNECTS"}
+    assert set(out["failed"]) == {"G3-TERMINI", "G5-EXPLAINED-DISCONNECTS",
+                                 "G8-CYCLES-IN-REAL-ROOMS"}
+    assert out["diagnostic_only"] == ["G4-CONCENTRATION"]

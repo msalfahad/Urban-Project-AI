@@ -25,8 +25,9 @@ from collections import Counter
 from decimal import Decimal
 
 from engine.e31a_gate import evaluate
-from engine.connectivity import (classify_termini, components, end_caps,
-                                 summarise)
+from engine.connectivity import (classify_termini, components,
+                                 cycle_capacity, cycles_over_regions,
+                                 end_caps, summarise)
 from engine.topology import merge_collinear, wall_pairs
 from engine.vector_source import read
 from engine.wall_graph import build
@@ -47,7 +48,40 @@ def length_histogram(lines) -> dict[str, int]:
     return dict(Counter(band(abs(b - a)) for _, _, a, b in lines))
 
 
-def run(pdf: str = DEFAULT_PDF, *, join_mm: float = 25.0) -> dict:
+def region_points(space_map: str = "data/golden/23010/inputs/"
+                               "space_map_23010_2f.json",
+                  pdf: str = DEFAULT_PDF) -> dict:
+    """A point inside each IN_SCOPE mapped region, in the graph's own frame.
+
+    Used only by gate G8, to ask whether a cycle could possibly enclose each
+    room the raster found. The centroid is taken from the segmentation, not
+    invented, and a region the segmentation did not find contributes nothing.
+    """
+    import json
+
+    from engine.geometry import VectorPdfSource, calibrate
+
+    sm = json.loads(open(space_map, encoding="utf-8").read())
+    src = VectorPdfSource(pdf, calibrate(887.82, 40000, 554.94, 25000))
+    px_mm = float(src.px_mm)
+    by_region = {r.id: r for r in src.regions(0, min_m2=0.3)}
+    out = {}
+    for sp in sm["spaces"]:
+        if sp.get("scope") != "IN_SCOPE":
+            continue
+        r = by_region.get(sp.get("region"))
+        if r is None:
+            continue
+        cx, cy = r.centroid_px
+        # The vector frame is the unrotated page; the raster is the rendered
+        # page. On a 270-degree rotation the axes swap, which is why this is
+        # written out rather than assumed.
+        out[sp["space_id"]] = (cy * px_mm, cx * px_mm)
+    return out
+
+
+def run(pdf: str = DEFAULT_PDF, *, join_mm: float = 25.0,
+        regions: dict | None = None) -> dict:
     """Read, pair, node, then EXPLAIN — in that order.
 
     The explanation is the point of this round. 115 components and 228 termini
@@ -124,6 +158,9 @@ def run(pdf: str = DEFAULT_PDF, *, join_mm: float = 25.0) -> dict:
     }
     # Scored last, on the report just built, so the gate can never be graded
     # against anything but the numbers this run actually produced.
+    report["cycle_capacity"] = cycle_capacity(noded)[:10]
+    if regions:
+        report["cycles_over_regions"] = cycles_over_regions(noded, regions)
     report["e31a_gate"] = evaluate(report)
     return report
 
@@ -133,8 +170,11 @@ def main() -> None:
     ap.add_argument("--pdf", default=DEFAULT_PDF)
     ap.add_argument("--json", default="")
     ap.add_argument("--join-mm", type=float, default=25.0)
+    ap.add_argument("--no-regions", action="store_true",
+                    help="skip the slow raster pass that gate G8 needs")
     a = ap.parse_args()
-    rep = run(a.pdf, join_mm=a.join_mm)
+    rep = run(a.pdf, join_mm=a.join_mm,
+              regions=None if a.no_regions else region_points(pdf=a.pdf))
     text = json.dumps(rep, indent=2, sort_keys=True)
     print(text)
     if a.json:

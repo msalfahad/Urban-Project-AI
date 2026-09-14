@@ -23,6 +23,13 @@ from dataclasses import dataclass, field
 # The things a quantity can depend on. Each is established elsewhere and asked
 # about here.
 REGION_IDENTITY = "region_identity"          # is this polygon the space we think?
+# Is this polygon the WHOLE of that space, and ONLY that space? Region identity
+# and physical topology are different questions and the workbook proved it:
+# WSH-01's region is the shaft beside the washroom (identity fails), while
+# BED-04's region is a real bedroom with an unseparated bathroom inside it
+# (identity holds, topology fails). Both must block a quantity ATTRIBUTED TO A
+# PHYSICAL SPACE, and neither may block a raw region observation.
+PHYSICAL_TOPOLOGY = "physical_topology"
 CLOSED_BOUNDARY = "closed_boundary"          # does the outline close?
 PHYSICAL_WALL_SPLIT = "physical_wall_split"  # masonry vs doorway closure known?
 EXTERNAL_SPLIT = "external_split"            # internal vs external established?
@@ -62,57 +69,65 @@ class Use:
 # The dependency graph. A GROSS use deliberately omits OPENINGS and OPENING_RULE:
 # that is the whole reason it exists as a separate, releasable answer.
 USES: dict[str, Use] = {u.name: u for u in (
-    Use("GROSS_PERIMETER", (SCOPE, REGION_IDENTITY, CLOSED_BOUNDARY),
+    Use("GROSS_PERIMETER", (SCOPE, REGION_IDENTITY, PHYSICAL_TOPOLOGY,
+                            CLOSED_BOUNDARY),
         "the closed outline of a space, open transitions included"),
 
-    Use("GROSS_WALL_AREA", (SCOPE, REGION_IDENTITY, CLOSED_BOUNDARY, HEIGHT),
+    Use("GROSS_WALL_AREA", (SCOPE, REGION_IDENTITY, PHYSICAL_TOPOLOGY,
+                            CLOSED_BOUNDARY, HEIGHT),
         "applicable wall length x a trade height, before any deduction"),
 
-    Use("SKIRTING", (SCOPE, REGION_IDENTITY, CLOSED_BOUNDARY, OPENINGS,
+    Use("SKIRTING", (SCOPE, REGION_IDENTITY, PHYSICAL_TOPOLOGY,
+                     CLOSED_BOUNDARY, OPENINGS,
                      TRADE_RULE, OPENING_RULE),
         "linear metres along applicable boundary, never derived from floor area"),
 
-    Use("GROSS_CERAMIC_WALL", (SCOPE, REGION_IDENTITY, CLOSED_BOUNDARY, HEIGHT,
-                               TRADE_RULE),
+    Use("GROSS_CERAMIC_WALL", (SCOPE, REGION_IDENTITY, PHYSICAL_TOPOLOGY,
+                               CLOSED_BOUNDARY, HEIGHT, TRADE_RULE),
         "wet-room wall area before opening deductions",
         gross_of="NET_CERAMIC_WALL"),
 
-    Use("NET_CERAMIC_WALL", (SCOPE, REGION_IDENTITY, CLOSED_BOUNDARY, HEIGHT,
-                             TRADE_RULE, OPENINGS, OPENING_RULE),
+    Use("NET_CERAMIC_WALL", (SCOPE, REGION_IDENTITY, PHYSICAL_TOPOLOGY,
+                             CLOSED_BOUNDARY, HEIGHT, TRADE_RULE, OPENINGS,
+                             OPENING_RULE),
         "ceramic wall area after this trade's opening rule"),
 
-    Use("GROSS_PLASTER", (SCOPE, REGION_IDENTITY, CLOSED_BOUNDARY, HEIGHT,
-                          TRADE_RULE),
+    Use("GROSS_PLASTER", (SCOPE, REGION_IDENTITY, PHYSICAL_TOPOLOGY,
+                          CLOSED_BOUNDARY, HEIGHT, TRADE_RULE),
         "plaster area before deductions", gross_of="NET_PLASTER"),
 
-    Use("NET_PLASTER", (SCOPE, REGION_IDENTITY, CLOSED_BOUNDARY, HEIGHT,
-                        TRADE_RULE, OPENINGS, OPENING_RULE),
+    Use("NET_PLASTER", (SCOPE, REGION_IDENTITY, PHYSICAL_TOPOLOGY,
+                        CLOSED_BOUNDARY, HEIGHT, TRADE_RULE, OPENINGS,
+                        OPENING_RULE),
         "plaster area after this trade's opening rule"),
 
-    Use("PAINT", (SCOPE, REGION_IDENTITY, CLOSED_BOUNDARY, HEIGHT, TRADE_RULE,
-                  OPENINGS, OPENING_RULE),
+    Use("PAINT", (SCOPE, REGION_IDENTITY, PHYSICAL_TOPOLOGY, CLOSED_BOUNDARY,
+                  HEIGHT, TRADE_RULE, OPENINGS, OPENING_RULE),
         "computed independently of plaster: ceramic, stone or cladding may "
         "cover surfaces plaster covered"),
 
-    Use("BLOCKWORK", (SCOPE, REGION_IDENTITY, CLOSED_BOUNDARY,
-                      PHYSICAL_WALL_SPLIT, EXTERNAL_SPLIT, HEIGHT, OPENINGS,
-                      OPENING_RULE, WALL_THICKNESS),
+    Use("BLOCKWORK", (SCOPE, REGION_IDENTITY, PHYSICAL_TOPOLOGY,
+                      CLOSED_BOUNDARY, PHYSICAL_WALL_SPLIT, EXTERNAL_SPLIT,
+                      HEIGHT, OPENINGS, OPENING_RULE, WALL_THICKNESS),
         "masonry only: a doorway closure is not a wall, and thickness decides "
         "the block type"),
 
-    Use("EXTERNAL_FINISH", (SCOPE, REGION_IDENTITY, CLOSED_BOUNDARY,
-                            EXTERNAL_SPLIT, HEIGHT, TRADE_RULE),
+    Use("EXTERNAL_FINISH", (SCOPE, REGION_IDENTITY, PHYSICAL_TOPOLOGY,
+                            CLOSED_BOUNDARY, EXTERNAL_SPLIT, HEIGHT,
+                            TRADE_RULE),
         "anything priced differently outside than in"),
 
-    Use("WATERPROOFING_HORIZONTAL", (SCOPE, REGION_IDENTITY, FLOOR_AREA,
+    Use("WATERPROOFING_HORIZONTAL", (SCOPE, REGION_IDENTITY,
+                                     PHYSICAL_TOPOLOGY, FLOOR_AREA,
                                      TRADE_RULE),
         "wet floors, terraces, roofs — an area, not a wall run"),
 
-    Use("WATERPROOFING_VERTICAL", (SCOPE, REGION_IDENTITY, CLOSED_BOUNDARY,
-                                   HEIGHT, TRADE_RULE),
+    Use("WATERPROOFING_VERTICAL", (SCOPE, REGION_IDENTITY, PHYSICAL_TOPOLOGY,
+                                   CLOSED_BOUNDARY, HEIGHT, TRADE_RULE),
         "upstand height x applicable boundary, from the project specification"),
 
-    Use("CEILING", (SCOPE, REGION_IDENTITY, CEILING_GEOMETRY, TRADE_RULE),
+    Use("CEILING", (SCOPE, REGION_IDENTITY, PHYSICAL_TOPOLOGY,
+                    CEILING_GEOMETRY, TRADE_RULE),
         "requires an established ceiling geometry source. Floor area is NOT a "
         "substitute: a void, shaft, double-height room, drop or bulkhead breaks "
         "the equality, and nothing may assume it silently"),
@@ -197,7 +212,7 @@ NOT_APPLICABLE = "NOT_APPLICABLE"
 # when both are absent — you cannot meaningfully discuss a trade rule for a
 # polygon that is not the room you think it is.
 _BLOCKER_PRIORITY = (
-    REGION_IDENTITY, SCOPE, CLOSED_BOUNDARY, PHYSICAL_WALL_SPLIT, EXTERNAL_SPLIT,
+    REGION_IDENTITY, PHYSICAL_TOPOLOGY, SCOPE, CLOSED_BOUNDARY, PHYSICAL_WALL_SPLIT, EXTERNAL_SPLIT,
     FLOOR_AREA, CEILING_GEOMETRY, WALL_THICKNESS, OPENINGS, HEIGHT, TRADE_RULE,
     OPENING_RULE,
 )
@@ -205,11 +220,47 @@ _BLOCKER_PRIORITY = (
 
 @dataclass
 class SpaceUseStatus:
+    """One (space, use) verdict, with the invariant that makes it readable.
+
+    THE WORKBOOK CAUGHT THIS: rows read `release_status = READY` beside
+    `primary_blocker = trade_rule`. Both cannot be true. A reader who sees a
+    blocker on a READY row does not know which half to believe, and the safe
+    half is the one that stops them using the number — so the contradiction
+    quietly destroys the value of every READY row on the sheet.
+
+    The three states now each have a required shape, checked on construction:
+
+        READY           no missing dependency, and no blocker
+        BLOCKED_*       at least one missing dependency
+        NOT_APPLICABLE  a stated reason for not applying
+
+    `not_applicable_reason` is required because "this trade does not apply
+    here" and "nobody looked" are different facts and N/A was being used for
+    both.
+    """
+
     space_id: str
     use: str
     status: str
     missing: list[str] = field(default_factory=list)
     reasons: dict[str, str] = field(default_factory=dict)
+    not_applicable_reason: str = ""
+
+    def __post_init__(self):
+        if self.status == READY and self.missing:
+            raise ReleaseMatrixError(
+                f"{self.space_id}/{self.use}: READY with {self.missing} still "
+                "missing. A row that is ready and blocked at the same time "
+                "makes every other ready row unreadable")
+        if self.status.startswith(BLOCKED) and not self.missing:
+            raise ReleaseMatrixError(
+                f"{self.space_id}/{self.use}: {self.status} with nothing "
+                "missing. A block that cannot name its cause cannot be cleared")
+        if self.status == NOT_APPLICABLE and not self.not_applicable_reason:
+            raise ReleaseMatrixError(
+                f"{self.space_id}/{self.use}: NOT_APPLICABLE with no reason. "
+                "\"this trade does not apply here\" and \"nobody looked\" are "
+                "different facts and N/A must say which one it is")
 
     @property
     def ready(self) -> bool:
@@ -221,6 +272,11 @@ class SpaceUseStatus:
 
     @property
     def primary_blocker(self) -> str:
+        """The headline blocker, or "" when there is nothing blocking.
+
+        A READY row returns "" because it has no missing dependency — the
+        invariant above guarantees it, rather than this property hoping so.
+        """
         for dep in _BLOCKER_PRIORITY:
             if dep in self.missing:
                 return dep
@@ -239,20 +295,29 @@ class SpaceUseStatus:
 
 def assess_space(space_id: str, use: str, established: dict[str, bool], *,
                  reasons: dict[str, str] | None = None,
-                 applicable: bool = True) -> SpaceUseStatus:
+                 applicable: bool = True,
+                 not_applicable_reason: str = "") -> SpaceUseStatus:
     """Readiness of one quantity for one space.
 
     `applicable=False` is not a block. A bedroom has no ceramic wall on this
-    project, and reporting that as BLOCKED would put it in the same queue as a
-    room whose geometry is broken. They are different facts and they are counted
+    project, and a space outside the contract is not a space whose geometry is
+    broken — reporting either as BLOCKED puts it in a queue of work to do, and
+    there is no work to do. They are different facts and they are counted
     separately.
+
+    A reason is required with `applicable=False`, because N/A was being used
+    both for "the trade does not apply" and for "we are not measuring this",
+    and a reader cannot tell those apart from the word alone.
     """
     if use not in USES:
         raise ReleaseMatrixError(
             f"unknown use {use!r}. Known: {sorted(USES)}. A quantity whose "
             "dependencies nobody has written down cannot be released.")
     if not applicable:
-        return SpaceUseStatus(space_id, use, NOT_APPLICABLE)
+        return SpaceUseStatus(
+            space_id, use, NOT_APPLICABLE,
+            not_applicable_reason=not_applicable_reason
+            or "not applicable on this project, reason not stated")
     base = assess(use, established, reasons=reasons)
     if base.ready:
         return SpaceUseStatus(space_id, use, READY, [], base.reasons)
