@@ -251,8 +251,14 @@ def _inside_gap(seg, ori: str, fixed: float, a: float, b: float,
 
 
 def _arc_near(arc, ori: str, fixed: float, mid: float,
-              tol_mm: float = 1500.0) -> bool:
-    """A bezier whose chord starts near the middle of the gap."""
+              tol_mm: float = 400.0) -> bool:
+    """A bezier whose chord starts near the middle of the gap.
+
+    The tolerance is tight on purpose. At 1500 mm this signal fired on 82 of 94
+    candidates on AR-00 — with 2,399 arcs scattered across a villa floor, almost
+    every gap has one within a metre and a half. A signal that fires on 87% of
+    candidates is not evidence about any of them.
+    """
     x1, y1, x2, y2 = arc
     px, py = ((mid, fixed) if ori == "H" else (fixed, mid))
     return min(math.hypot(x1 - px, y1 - py), math.hypot(x2 - px, y2 - py)) <= tol_mm
