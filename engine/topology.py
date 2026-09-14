@@ -98,6 +98,40 @@ class WallPair:
         return abs(self.end_mm - self.start_mm)
 
 
+def merge_collinear(lines, *, tol_mm: float = 2.0, join_mm: float = 25.0):
+    """Join fragments of one drawn line back into the line the architect drew.
+
+    This is input preparation, not a loosened tolerance, and the diagnostic is
+    what made it necessary. Of AR-00's 35,355 axis-aligned segments, 28,566 are
+    shorter than 100 mm, and 95.6% of all lines were rejected for
+    INSUFFICIENT_OVERLAP against a 300 mm minimum. A 40 mm fragment cannot
+    overlap anything by 300 mm — but forty such fragments in a row are a wall
+    face several metres long, and the pairing test should see the face rather
+    than the forty pieces.
+
+    Fragments are joined when they lie on the same line within `tol_mm` and the
+    end-to-end gap between them is at most `join_mm`. That gap has to stay small:
+    joining across a doorway would erase the very break this module exists to
+    find.
+    """
+    groups: dict[tuple[str, int], list] = {}
+    for ori, fixed, a, b in lines:
+        groups.setdefault((ori, int(round(fixed / tol_mm))), []).append(
+            (min(a, b), max(a, b), fixed))
+    out = []
+    for (ori, _), runs in groups.items():
+        runs.sort()
+        cur_a, cur_b, cur_f = runs[0]
+        for a, b, f in runs[1:]:
+            if a - cur_b <= join_mm:
+                cur_b = max(cur_b, b)
+            else:
+                out.append((ori, cur_f, cur_a, cur_b))
+                cur_a, cur_b, cur_f = a, b, f
+        out.append((ori, cur_f, cur_a, cur_b))
+    return out
+
+
 def pairing_diagnostic(lines, px_mm: Decimal, *, min_thickness_mm: int = 60,
                        max_thickness_mm: int = 400, min_overlap_mm: int = 300
                        ) -> dict[str, int]:

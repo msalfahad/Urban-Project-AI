@@ -185,3 +185,49 @@ def test_a_dashed_boundary_is_not_typed_as_a_door_on_detection():
     s = SplitCandidate("TC-2", 400, "BED-04", "H", 5000.0, 1000.0, 2600.0,
                        evidence=["DASHED_RUN"])
     assert s.boundary_kind == TOPOLOGY_BOUNDARY
+
+
+# --- fragment merging ---------------------------------------------------------
+
+from engine.topology import merge_collinear
+
+
+def test_fragments_of_one_drawn_line_are_rejoined():
+    """The diagnostic's finding: 28,566 of 35,355 segments are under 100 mm, and
+    95.6% of lines were rejected for insufficient overlap against a 300 mm
+    minimum. A 40 mm fragment cannot overlap anything by 300 mm; forty of them in
+    a row are a wall face two metres long."""
+    frag = [("V", 1000.0, i * 40.0, i * 40.0 + 38.0) for i in range(50)]
+    merged = merge_collinear(frag)
+    assert len(merged) == 1
+    assert merged[0][3] - merged[0][2] > 1900
+
+
+def test_merging_never_joins_across_a_doorway():
+    """Joining across the break would erase the thing this module looks for."""
+    door = [("V", 1000.0, 0.0, 2000.0), ("V", 1000.0, 2900.0, 5000.0)]
+    assert len(merge_collinear(door)) == 2
+
+
+def test_merging_respects_the_join_limit_exactly():
+    near = [("V", 0.0, 0.0, 100.0), ("V", 0.0, 120.0, 200.0)]     # 20 mm apart
+    far = [("V", 0.0, 0.0, 100.0), ("V", 0.0, 200.0, 300.0)]      # 100 mm apart
+    assert len(merge_collinear(near, join_mm=25.0)) == 1
+    assert len(merge_collinear(far, join_mm=25.0)) == 2
+
+
+def test_lines_on_different_lines_are_never_merged():
+    assert len(merge_collinear([("V", 0.0, 0.0, 100.0),
+                                ("V", 500.0, 0.0, 100.0)])) == 2
+
+
+def test_merging_keeps_orientations_apart():
+    assert len(merge_collinear([("V", 0.0, 0.0, 100.0),
+                                ("H", 0.0, 0.0, 100.0)])) == 2
+
+
+def test_merging_is_input_preparation_not_a_loosened_tolerance():
+    """The pairing thresholds are untouched; the input is assembled first."""
+    import inspect
+    src = inspect.getsource(merge_collinear)
+    assert "min_thickness" not in src and "min_overlap" not in src
