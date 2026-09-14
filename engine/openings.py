@@ -69,7 +69,13 @@ E_WIDTH = "PLAUSIBLE_WIDTH"
 
 # Signals strong enough to count toward validation. A width band on its own is
 # not evidence of anything — every wall has gaps of some width.
-STRONG = frozenset({E_PAIRED_GAP, E_JAMB_BOTH, E_LEAF, E_SWING, E_TWO_SPACES})
+#
+# E_SAME_REGION is here deliberately, alongside E_TWO_SPACES. A gap with one
+# region on both sides is evidence of an opening inside an under-segmented
+# region, which on this drawing is the most valuable class there is.
+E_SAME_REGION = "SAME_REGION_BOTH_SIDES"
+STRONG = frozenset({E_PAIRED_GAP, E_JAMB_BOTH, E_LEAF, E_SWING, E_TWO_SPACES,
+                    E_SAME_REGION})
 
 
 class OpeningError(RuntimeError):
@@ -105,14 +111,21 @@ class OpeningCandidate:
     def confidence_status(self) -> str:
         """Accumulated evidence decides. No single signal can.
 
-        VALIDATED needs three strong signals AND two different mapped spaces:
-        an opening between a room and something unmapped may be a duct hatch,
-        and this project has four such slots.
+        Two different mapped spaces either side is STRONG evidence and used to
+        be a REQUIREMENT for validation. That was circular: the raster
+        segmentation is already known to merge real rooms — the washroom has no
+        polygon of its own and BED-04 contains an unseparated bathroom — so
+        demanding two mapped spaces demanded that segmentation had already solved
+        the problem this detector exists to solve. A true opening inside an
+        under-segmented region has the SAME region on both sides, and requiring
+        otherwise made those candidates unreachable.
+
+        So three strong signals validate, whatever supplies them.
         """
         n = len(self.strong_evidence)
         if not self.width_plausible:
             return REJECTED
-        if n >= 3 and E_TWO_SPACES in self.evidence:
+        if n >= 3:
             return VALIDATED
         if n >= 2:
             return PROBABLE
@@ -221,6 +234,11 @@ def find_candidates(faces, *, jambs=None, leaves=None, arcs=None,
             c.adjacent_space_ids = sides
             if left and right and left != right:
                 c.evidence.append(E_TWO_SPACES)
+            elif left and right and left == right:
+                c.evidence.append(E_SAME_REGION)
+                c.note = (f"the same space ({left}) on both sides — an opening "
+                          "inside an under-segmented region looks exactly like "
+                          "this, so this is a topology candidate, not a phantom")
             elif len(sides) < 2:
                 c.note = ("only one side is a mapped space — may open onto a "
                           "duct, a shaft or unmapped area")

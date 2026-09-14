@@ -73,18 +73,28 @@ def test_two_strong_signals_reach_probable_only():
     assert c.confidence_status == PROBABLE
 
 
-def test_three_strong_signals_without_two_spaces_stay_probable():
-    """An opening between a room and a duct is not a door. This project has
-    four duct slots that would otherwise qualify."""
+def test_three_strong_signals_validate_whatever_supplies_them():
+    """Requiring two mapped spaces was circular: it demanded that the raster
+    segmentation had already solved the problem this detector exists to solve."""
     c = cand(evidence=[E_PAIRED_GAP, E_JAMB_BOTH, E_SWING, E_WIDTH])
     assert E_TWO_SPACES not in c.evidence
-    assert c.confidence_status == PROBABLE
+    assert c.confidence_status == VALIDATED
 
 
-def test_validation_needs_three_strong_signals_and_two_mapped_spaces():
+def test_validation_also_reached_via_two_mapped_spaces():
     c = cand(evidence=[E_PAIRED_GAP, E_JAMB_BOTH, E_TWO_SPACES, E_WIDTH],
              adjacent_space_ids=("BTH-03", "COR-03"))
     assert c.confidence_status == VALIDATED
+
+
+def test_the_same_region_both_sides_is_strong_evidence_not_a_disqualifier():
+    """The washroom and BED-04's bathroom are inside merged regions. A gap there
+    has one region on both sides, and that is the signal, not a defect."""
+    from engine.openings import E_SAME_REGION
+    assert E_SAME_REGION in STRONG
+    c = find_candidates(FACES, space_at=lambda *a: "BED-04")[0]
+    assert E_SAME_REGION in c.evidence
+    assert "under-segmented" in c.note
 
 
 def test_a_width_band_is_not_strong_evidence_on_its_own():
@@ -163,8 +173,10 @@ def test_two_different_mapped_spaces_produce_the_two_spaces_signal():
 
 
 def test_the_same_space_on_both_sides_is_not_two_spaces():
+    from engine.openings import E_SAME_REGION
     c = find_candidates(FACES, space_at=lambda *a: "BTH-03")[0]
     assert E_TWO_SPACES not in c.evidence
+    assert E_SAME_REGION in c.evidence      # a different claim, not nothing
 
 
 def test_the_summary_counts_statuses_and_evidence():
