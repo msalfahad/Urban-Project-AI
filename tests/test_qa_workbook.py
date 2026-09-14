@@ -145,6 +145,20 @@ def test_no_quantity_is_derived_from_another():
 
 # --- manual comparison --------------------------------------------------------
 
+ROOM_COUNTS = [
+    {"room_type": "BEDROOM", "semantic_observations": 1,
+     "validated_physical_spaces": 1, "unresolved_physical_spaces": 0,
+     "functional_zones": 0, "in_scope_validated": 1, "unresolved_reasons": []},
+    {"room_type": "BATHROOM", "semantic_observations": 1,
+     "validated_physical_spaces": 1, "unresolved_physical_spaces": 0,
+     "functional_zones": 0, "in_scope_validated": 1, "unresolved_reasons": []},
+    {"room_type": "WASHROOM", "semantic_observations": 1,
+     "validated_physical_spaces": 0, "unresolved_physical_spaces": 1,
+     "functional_zones": 0, "in_scope_validated": 0,
+     "unresolved_reasons": ["REGION_IS_NOT_THIS_SPACE"]},
+]
+
+
 def test_an_empty_manual_column_is_not_agreement():
     """A workbook that prints AGREES against a blank column has invented a
     confirmation."""
@@ -154,12 +168,24 @@ def test_an_empty_manual_column_is_not_agreement():
 
 
 def test_a_supplied_manual_count_is_compared_and_can_disagree():
-    s = room_count_summary(SPACES, {"BATHROOM": 1, "BEDROOM": 2})
+    s = room_count_summary(SPACES, {"BATHROOM": 1, "BEDROOM": 2}, ROOM_COUNTS)
     by_type = {r["room_type"]: r for r in s.rows}
     assert by_type["BATHROOM"]["verdict"] == AGREES
     assert by_type["BEDROOM"]["verdict"] == DIFFERS
-    assert by_type["BEDROOM"]["total_difference"] == -1
+    assert by_type["BEDROOM"]["physical_difference"] == -1
     assert by_type["WASHROOM"]["verdict"] == NOT_COMPARED
+
+
+def test_a_manual_count_is_compared_against_the_matching_basis():
+    """A manual PHYSICAL count must never be compared against a LABEL count.
+    WASHROOM has one label and zero validated polygons: an owner expecting one
+    washroom disagrees with the engine, and saying AGREES would hide that."""
+    s = room_count_summary(SPACES, {"WASHROOM": {"physical": 1}}, ROOM_COUNTS)
+    row = {r["room_type"]: r for r in s.rows}["WASHROOM"]
+    assert row["observed_label_count"] == 1
+    assert row["validated_physical_count"] == 0
+    assert row["physical_difference"] == -1
+    assert row["verdict"] == DIFFERS
 
 
 def test_the_manual_columns_exist_even_with_no_manual_data():
@@ -167,9 +193,11 @@ def test_the_manual_columns_exist_even_with_no_manual_data():
     always there: a project that HAS a manual count must be able to use it
     without the workbook changing shape."""
     s = room_count_summary(SPACES)
-    assert "manual_expected_total" in s.columns
+    assert "manual_expected_physical_total" in s.columns
     assert "manual_expected_in_scope" in s.columns
-    assert "manual_expected_total" in s.human_columns
+    assert "manual_expected_functional" in s.columns
+    assert "manual_expected_physical_total" in s.human_columns
+    assert "system_total_count" not in s.columns   # basis must be explicit
 
 
 # --- the sample ---------------------------------------------------------------
@@ -341,11 +369,11 @@ def test_an_unknown_use_is_refused_rather_than_dropped():
 
 # --- the upgraded workbook ----------------------------------------------------
 
-def test_the_workbook_has_eleven_sheets_with_the_dashboard_first():
-    from engine.qa_workbook import SHEET_DASHBOARD
+def test_the_workbook_leads_with_the_dashboard():
+    from engine.qa_workbook import SHEET_DASHBOARD, SHEET_TOPOLOGY
     wb = build_workbook(BUNDLE)
-    assert len(SHEET_ORDER) == 11
     assert wb.sheets[0].name == SHEET_DASHBOARD
+    assert SHEET_TOPOLOGY in SHEET_ORDER
 
 
 def test_the_dashboard_derives_no_quantity_of_its_own():
@@ -411,16 +439,20 @@ def test_the_register_records_who_named_each_room():
 
 
 def test_the_count_summary_separates_the_drawing_from_the_contract():
-    """"What rooms exist?" and "what rooms are in the job?" are different
-    questions and a single count agrees with neither."""
-    s = room_count_summary(SPACES, {"BATHROOM": {"total": 1, "in_scope": 1}})
+    """"What rooms exist?", "what is validated?" and "what is in the job?" are
+    three questions and a single count agrees with none of them."""
+    s = room_count_summary(
+        SPACES, {"BATHROOM": {"physical": 1, "in_scope": 1}}, ROOM_COUNTS)
     row = {r["room_type"]: r for r in s.rows}["BATHROOM"]
-    assert row["system_total_count"] == 1 and row["system_in_scope_count"] == 1
+    assert row["observed_label_count"] == 1
+    assert row["validated_physical_count"] == 1
+    assert row["validated_in_scope_count"] == 1
     assert row["verdict"] == AGREES
 
 
 def test_a_manual_total_that_is_right_but_scope_that_is_wrong_still_differs():
-    s = room_count_summary(SPACES, {"BATHROOM": {"total": 1, "in_scope": 0}})
+    s = room_count_summary(
+        SPACES, {"BATHROOM": {"physical": 1, "in_scope": 0}}, ROOM_COUNTS)
     assert {r["room_type"]: r for r in s.rows}["BATHROOM"]["verdict"] == DIFFERS
 
 

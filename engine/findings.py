@@ -34,6 +34,26 @@ from __future__ import annotations
 from collections import Counter
 from dataclasses import dataclass, field
 
+# WHERE A FINDING COMES FROM. The Exceptions sheet defaults to
+# CURRENT_DIAGNOSTIC plus unresolved GOLDEN_KNOWN_DEFECTs; a LEGACY_HYPOTHESIS
+# may be kept for history but must never be presented as a current cause.
+#
+# This exists because a sentence survived two rounds after being disproved:
+# "the wash room's south edge is a dashed threshold" was still being printed as
+# the cause after this project measured ZERO dashed strokes on the sheet and
+# found the nearby marks to be shaft hatch.
+CURRENT_DIAGNOSTIC = "CURRENT_DIAGNOSTIC"
+GOLDEN_KNOWN_DEFECT = "GOLDEN_KNOWN_DEFECT"
+LEGACY_HYPOTHESIS = "LEGACY_HYPOTHESIS"
+HUMAN_NOTE = "HUMAN_NOTE"
+SUPERSEDED = "SUPERSEDED"
+
+PROVENANCE_CLASSES = (CURRENT_DIAGNOSTIC, GOLDEN_KNOWN_DEFECT,
+                      LEGACY_HYPOTHESIS, HUMAN_NOTE, SUPERSEDED)
+
+# Which classes may appear as a CURRENT cause.
+CURRENT_CLASSES = (CURRENT_DIAGNOSTIC, GOLDEN_KNOWN_DEFECT, HUMAN_NOTE)
+
 BLOCKING = "BLOCKING"
 UNDERSTATED = "UNDERSTATES_A_QUANTITY"
 ADVISORY = "ADVISORY"
@@ -66,8 +86,21 @@ class Finding:
     affected_boq_sections: str = ""
     coverage_unlocked: str = ""
     status: str = "OPEN"
+    provenance_class: str = CURRENT_DIAGNOSTIC
+    superseded_by: str = ""
+    superseded_because: str = ""
 
     def __post_init__(self):
+        if self.provenance_class not in PROVENANCE_CLASSES:
+            raise FindingError(
+                f"{self.finding_id}: provenance_class "
+                f"{self.provenance_class!r} must be one of "
+                f"{PROVENANCE_CLASSES}")
+        if self.provenance_class == SUPERSEDED and not self.superseded_because:
+            raise FindingError(
+                f"{self.finding_id} is SUPERSEDED without saying why. A "
+                "retired explanation that does not say what retired it reads "
+                "exactly like a current one")
         if not self.diagnostic_run_id:
             raise FindingError(
                 f"{self.finding_id} names no diagnostic run. A cause with no "
@@ -85,8 +118,24 @@ class Finding:
             raise FindingError(f"{self.finding_id}: unknown severity "
                                f"{self.severity!r}")
 
+    @property
+    def is_current_cause(self) -> bool:
+        """May this be presented as a CURRENT cause?
+
+        A superseded hypothesis may be kept for history. It may not be printed
+        where a reader will take it for the reason something is broken.
+        """
+        return self.provenance_class in CURRENT_CLASSES
+
     def stale_against(self, run_id: str) -> bool:
-        """Was this finding measured by a different run than the current one?"""
+        """Measured by a different run than the current one?
+
+        A GOLDEN_KNOWN_DEFECT is not stale for having an older run id: it is a
+        standing defect recorded against the golden fixture, not a measurement
+        of this run.
+        """
+        if self.provenance_class in (GOLDEN_KNOWN_DEFECT, HUMAN_NOTE):
+            return False
         return self.diagnostic_run_id != run_id
 
     def record(self) -> dict:
@@ -104,7 +153,11 @@ class Finding:
                 "affected_uses": self.affected_uses,
                 "affected_boq_sections": self.affected_boq_sections,
                 "coverage_unlocked": self.coverage_unlocked,
-                "status": self.status}
+                "status": self.status,
+                "provenance_class": self.provenance_class,
+                "is_current_cause": self.is_current_cause,
+                "superseded_by": self.superseded_by,
+                "superseded_because": self.superseded_because}
 
 
 def from_graph_diagnostic(diagnostic: dict, *, run_id: str,
@@ -221,8 +274,11 @@ def from_graph_diagnostic(diagnostic: dict, *, run_id: str,
                     "this graph would prove the face walker runs and produce "
                     "no faces."),
             engineering_next_action=(
-                "Clear the failing gates and implement the G8 measurement "
-                "(cycles coincident with mapped regions)."),
+                "Clear the failing gates: "
+                + (", ".join(gate.get("failed", [])) or "none")
+                + (". Still unmeasured: " + ", ".join(gate["not_measured"])
+                   if gate.get("not_measured") else
+                   ". Every gate is now measurable.")),
             affected_spaces=space_count, affected_uses=use_count,
             coverage_unlocked="room polygon reconstruction")
 
@@ -246,6 +302,10 @@ def summary(findings: list[Finding], *, current_run_id: str) -> dict:
         "findings": len(findings),
         "by_severity": dict(Counter(f.severity for f in findings)),
         "by_area": dict(Counter(f.area for f in findings)),
+        "by_provenance_class": dict(Counter(f.provenance_class
+                                            for f in findings)),
+        "presentable_as_current_cause": sum(1 for f in findings
+                                            if f.is_current_cause),
         "stale": [f.finding_id for f in findings
                   if f.stale_against(current_run_id)],
         "needing_owner_input": sum(1 for f in findings

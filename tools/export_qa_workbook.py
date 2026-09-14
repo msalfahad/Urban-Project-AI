@@ -208,6 +208,27 @@ def _release_row(space_id: str, established: dict, uses, *,
     return out
 
 
+E31A_REPORT = Path("runs/graph/AR-00_e31a.json")
+
+
+def _e31a() -> dict:
+    """The diagnostic face run, if one exists. Read-only and optional."""
+    if not E31A_REPORT.exists():
+        return {}
+    try:
+        return json.loads(E31A_REPORT.read_text())
+    except Exception:
+        return {}
+
+
+def _faces() -> list:
+    return _e31a().get("largest_faces", [])
+
+
+def _face_correspondence() -> list:
+    return _e31a().get("correspondence", [])
+
+
 def _space_model(spaces, wall_rows, areas) -> SpaceModel:
     """The three layers, built from the space map's own structured fields."""
     model = SpaceModel()
@@ -392,6 +413,18 @@ def bundle(space_map_path: Path = DEFAULT_SPACE_MAP,
             diagnostic, run_id=run_id, reference=str(dp),
             space_count=len(spaces), use_count=len(USES))
 
+    # §16 — the space map's known_gaps carry PRIOR causal prose. One of them
+    # still said the wash room's south edge is a dashed threshold, and this
+    # project has since measured ZERO dashed strokes on the sheet and found the
+    # nearby marks to be shaft hatch. It is kept for history and labelled, and
+    # the CURRENT supported fact is stated separately.
+    superseded = {
+        "WSH-01": ("no dashed stroke exists anywhere on this sheet (every "
+                   "stroke path is solid) and the repeated short marks beside "
+                   "WSH-01 are the shaft symbol's hatch fill, 8 mm marks with "
+                   "8 mm gaps. Geometric dashed-run recovery found no "
+                   "threshold here."),
+    }
     known_gaps = [{
         "subject": g.get("item", "")[:60], "affected_spaces": 1,
         "affected_uses": 2, "coverage_unlocked": "ceramic wall for this room",
@@ -399,7 +432,48 @@ def bundle(space_map_path: Path = DEFAULT_SPACE_MAP,
         "item": g.get("item"), "cause": g.get("cause"), "effect": g.get("effect"),
         "status": g.get("status"),
         "resolution": g.get("e25_update") or "Named in the space map known_gaps.",
+        "provenance_class": ("LEGACY_HYPOTHESIS"
+                             if "dashed" in (g.get("cause") or "").lower()
+                             else "GOLDEN_KNOWN_DEFECT"),
+        "superseded_because": next(
+            (v for k, v in superseded.items() if k in (g.get("item") or "")),
+            "" if "dashed" not in (g.get("cause") or "").lower()
+            else superseded["WSH-01"]),
     } for g in sm.get("known_gaps", ())]
+
+    # The CURRENT supported facts about the two hard spaces, stated without
+    # any cause that this round's measurements did not support.
+    current_hard_cases = [{
+        "subject": "WSH-01", "severity": "UNDERSTATES_A_QUANTITY",
+        "area": "GEOMETRY", "provenance_class": "CURRENT_DIAGNOSTIC",
+        "issue": "The physical washroom geometry is unresolved.",
+        "cause": ("No validated boundary currently separates the wash floor "
+                  "from OPEN-01. The region carrying the label is the hatched "
+                  "shaft beside it. Dashed-run recovery ran on this sheet and "
+                  "found no supporting threshold — that hypothesis is retired, "
+                  "not pending."),
+        "effect": ("No washroom polygon exists, so no washroom quantity "
+                   "exists. The 4.19 m perimeter is an OBSERVATION of the "
+                   "shaft region."),
+        "engineering_next_action": (
+            "General topology recovery only. The printed 1500 x 2400 is used "
+            "to validate a candidate, never to generate one."),
+        "affected_spaces": 1, "affected_uses": 13,
+        "status": "WASHROOM_GEOMETRY_UNRESOLVED",
+    }, {
+        "subject": "BED-04", "severity": "UNDERSTATES_A_QUANTITY",
+        "area": "GEOMETRY", "provenance_class": "CURRENT_DIAGNOSTIC",
+        "issue": "The bedroom's bathroom has not separated from the bedroom.",
+        "cause": ("Local topology analysis this run: 0 of 4 sides of the "
+                  "merged region have a wall run covering them. North covers "
+                  "1798 mm of 6218; south has no wall pair within 2 m; east "
+                  "and west end at unresolved termini."),
+        "effect": "The merged perimeter is an OBSERVATION, not a bedroom.",
+        "engineering_next_action": (
+            "Recover the missing wall pairs. The printed 1600 x 3000 is used "
+            "only to validate a candidate face after generation."),
+        "affected_spaces": 1, "affected_uses": 13, "status": "BLOCKED",
+    }]
 
     scope_exceptions = [{
         "subject": s["space_id"], "issue": "Scope not decided",
@@ -473,9 +547,11 @@ def bundle(space_map_path: Path = DEFAULT_SPACE_MAP,
         graph_gate_passed=bool(
             diagnostic.get("e31a_gate", {}).get("ready_for_e31a")))
 
-    rules = [{
+    # §18 — these are E27 APPROVED PROJECT TRADE RULES. They are not room
+    # templates and must not be filed as such.
+    project_rules = [{
         "template_id": name, "version": rs.version,
-        "room_type": rs.trade.upper() + " (E27 project rule)",
+        "room_type": rs.trade.upper(),
         "approval_status": "APPROVED", "approved_by": "Urban Projects (owner)",
         "approved_on": rs.effective_from, "source": rs.source,
     } for name, rs in sorted(_rule_sets().items())]
@@ -519,13 +595,16 @@ def bundle(space_map_path: Path = DEFAULT_SPACE_MAP,
         "quantity_traces": [t.record() | {"floor": floor}
                             for t in ledger.traces],
         "findings": [f.record() for f in findings],
-        "known_gaps": known_gaps,
+        "known_gaps": known_gaps + current_hard_cases,
         "scope_exceptions": scope_exceptions,
         "space_exceptions": topology_exceptions,
         "coverage": coverage,
         "top_level_status": status.record(),
-        "room_templates": rules,
+        "project_trade_rules": project_rules,
+        "room_templates": [],      # none approved: a template is not a rule
         "assemblies": [],
+        "faces": _faces(),
+        "face_correspondence": _face_correspondence(),
         "revision_delta": compare(
             None, {"revision_id": sm["drawing_revision"]}),
         "provenance": provenance,

@@ -61,10 +61,12 @@ SHEET_COVERAGE = "Takeoff Coverage"
 SHEET_TRACE = "Quantity Trace"
 SHEET_RULES = "Rules and Assemblies"
 SHEET_REVISION = "Revision Delta"
+SHEET_TOPOLOGY = "Topology QA"
 
 SHEET_ORDER = (SHEET_DASHBOARD, SHEET_ROOM_REGISTER, SHEET_ROOM_COUNTS,
                SHEET_TRACE, SHEET_FLOORING, SHEET_WALLS, SHEET_EXCEPTIONS,
-               SHEET_SAMPLE, SHEET_RULES, SHEET_COVERAGE, SHEET_REVISION)
+               SHEET_SAMPLE, SHEET_TOPOLOGY, SHEET_RULES, SHEET_COVERAGE,
+               SHEET_REVISION)
 
 # Takeoff status, kept blunt on purpose. A workbook that opens cleanly must not
 # read as a finished BOQ.
@@ -180,12 +182,17 @@ def room_register(spaces) -> Sheet:
 
 # ------------------------------------------------- 2 room count summary
 
+# §19 — every count column names its BASIS. A generic "system total" that
+# duplicated the label count sat beside "validated = 0" for WASHROOM, which is
+# easy to read as "1 washroom, one of which failed validation" rather than
+# "a label was seen and no washroom was measured".
 ROOM_COUNT_COLUMNS = (
-    "room_type", "semantic_observations", "validated_physical_spaces",
-    "unresolved_physical_spaces", "functional_zones", "system_total_count",
-    "system_in_scope_count", "engine_out_of_scope", "engine_ambiguous",
-    "manual_expected_total", "manual_expected_in_scope",
-    "manual_expected_functional", "total_difference", "in_scope_difference",
+    "room_type", "observed_label_count", "validated_physical_count",
+    "validated_in_scope_count", "unresolved_physical_count",
+    "functional_zone_count", "out_of_scope_count", "ambiguous_scope_count",
+    "manual_expected_physical_total", "manual_expected_in_scope",
+    "manual_expected_functional",
+    "physical_difference", "in_scope_difference", "functional_difference",
     "verdict", "unresolved_reasons", "checker_note")
 
 
@@ -230,21 +237,33 @@ def room_count_summary(spaces, manual_expected: dict | None = None,
     for rt in sorted(by_type):
         group = by_type[rt]
         scopes = Counter(sp.get("scope") for sp in group)
-        in_scope = scopes.get("IN_SCOPE", 0)
         c = counts.get(rt, {})
         exp = expected.get(rt)
         if isinstance(exp, dict):
-            exp_total = exp.get("total")
-            exp_scope = exp.get("in_scope")
-            exp_func = exp.get("functional")
+            e_phys = exp.get("physical", exp.get("total"))
+            e_scope = exp.get("in_scope")
+            e_func = exp.get("functional")
         elif exp is None:
-            exp_total = exp_scope = exp_func = None
+            e_phys = e_scope = e_func = None
         else:
-            exp_total, exp_scope, exp_func = exp, None, None
+            e_phys, e_scope, e_func = exp, None, None
 
-        d_total = UNKNOWN if exp_total is None else len(group) - exp_total
-        d_scope = UNKNOWN if exp_scope is None else in_scope - exp_scope
-        compared = [d for d in (d_total, d_scope) if d != UNKNOWN]
+        # Each difference is computed against the count with the SAME basis.
+        # Comparing a manual physical count against a label count is the
+        # mismatch this sheet exists to prevent.
+        validated = c.get("validated_physical_spaces")
+        in_scope_validated = c.get("in_scope_validated")
+        zones = c.get("functional_zones")
+
+        def diff(expected_value, actual):
+            if expected_value is None or actual is None:
+                return UNKNOWN
+            return actual - expected_value
+
+        d_phys = diff(e_phys, validated)
+        d_scope = diff(e_scope, in_scope_validated)
+        d_func = diff(e_func, zones)
+        compared = [d for d in (d_phys, d_scope, d_func) if d != UNKNOWN]
         if not compared:
             verdict = NOT_COMPARED
         elif all(d == 0 for d in compared):
@@ -254,35 +273,37 @@ def room_count_summary(spaces, manual_expected: dict | None = None,
 
         rows.append(OrderedDict(
             room_type=rt,
-            semantic_observations=cell(c.get("semantic_observations")),
-            validated_physical_spaces=cell(c.get("validated_physical_spaces")),
-            unresolved_physical_spaces=cell(
+            observed_label_count=cell(c.get("semantic_observations")),
+            validated_physical_count=cell(validated),
+            validated_in_scope_count=cell(in_scope_validated),
+            unresolved_physical_count=cell(
                 c.get("unresolved_physical_spaces")),
-            functional_zones=cell(c.get("functional_zones")),
-            system_total_count=len(group), system_in_scope_count=in_scope,
-            engine_out_of_scope=scopes.get("OUT_OF_SCOPE", 0),
-            engine_ambiguous=scopes.get("AMBIGUOUS", 0),
-            manual_expected_total=cell(exp_total),
-            manual_expected_in_scope=cell(exp_scope),
-            manual_expected_functional=cell(exp_func),
-            total_difference=d_total, in_scope_difference=d_scope,
-            verdict=verdict,
+            functional_zone_count=cell(zones),
+            out_of_scope_count=scopes.get("OUT_OF_SCOPE", 0),
+            ambiguous_scope_count=scopes.get("AMBIGUOUS", 0),
+            manual_expected_physical_total=cell(e_phys),
+            manual_expected_in_scope=cell(e_scope),
+            manual_expected_functional=cell(e_func),
+            physical_difference=d_phys, in_scope_difference=d_scope,
+            functional_difference=d_func, verdict=verdict,
             unresolved_reasons=cell(", ".join(c.get("unresolved_reasons", []))),
             checker_note=FOR_THE_CHECKER))
     return Sheet(
         name=SHEET_ROOM_COUNTS, columns=ROOM_COUNT_COLUMNS, rows=tuple(rows),
-        human_columns=("manual_expected_total", "manual_expected_in_scope",
+        human_columns=("manual_expected_physical_total",
+                       "manual_expected_in_scope",
                        "manual_expected_functional", "checker_note"),
         notes=(
-            "A LABEL IS NOT A ROOM. semantic_observations counts names read "
-            "off the drawing; validated_physical_spaces counts polygons proved "
-            "to be that room. Where they differ, the difference is the finding.",
-            "functional_zones counts uses of space. One open-plan polygon may "
-            "hold a dining zone, a saloon zone and a circulation zone — and a "
-            "zone never creates a wall boundary.",
-            "Two manual columns: what rooms EXIST on the drawing, and what "
-            "rooms are in the CONTRACT. While both are empty the verdict is "
-            "NOT_COMPARED — never AGREES.",
+            "EVERY COUNT NAMES ITS BASIS. observed_label_count is names read "
+            "off the drawing. validated_physical_count is polygons proved to "
+            "be that room. functional_zone_count is uses of space. They are "
+            "three different questions and they routinely disagree — the "
+            "disagreement is the finding.",
+            "Each manual column is compared against the count with the SAME "
+            "basis. A manual physical count is never compared to a label "
+            "count.",
+            "A LABEL IS NOT A ROOM. WASHROOM reading 1 observed / 0 validated "
+            "means a name was seen and no washroom was measured.",
             "A count is not a quantity. Nothing on this sheet is measured.",
         ))
 
@@ -397,8 +418,8 @@ EXCEPTION_COLUMNS = ("priority", "severity", "scope_of_issue", "subject",
                      "potential_coverage_unlocked",
                      "engineering_next_action", "owner_input_required",
                      "owner_input_helpful_if_available",
-                     "status", "finding_id", "diagnostic_run_id",
-                     "evidence_reference")
+                     "status", "provenance_class", "superseded_because",
+                     "finding_id", "diagnostic_run_id", "evidence_reference")
 
 # Severity is about consequence, not about how loud the message is.
 BLOCKING = "BLOCKING"
@@ -441,6 +462,12 @@ def exceptions(*, space_exceptions=(), known_gaps=(), findings=(),
             owner_input_helpful_if_available=cell(
                 e.get("owner_input_helpful_if_available")),
             status=cell(e.get("status")),
+            # §17 — a superseded hypothesis may be kept for history. It may
+            # never sit unlabelled where a reader takes it for the reason
+            # something is broken.
+            provenance_class=cell(e.get("provenance_class")
+                                  or "CURRENT_DIAGNOSTIC"),
+            superseded_because=cell(e.get("superseded_because")),
             finding_id=cell(e.get("finding_id")),
             diagnostic_run_id=cell(e.get("diagnostic_run_id")),
             evidence_reference=cell(e.get("evidence_reference"))))
@@ -463,10 +490,18 @@ def exceptions(*, space_exceptions=(), known_gaps=(), findings=(),
     # whose impact nobody has established cannot be argued to be urgent.
     order = {BLOCKING: 0, UNDERSTATED: 1, ADVISORY: 2}
 
+    # A legacy or superseded row sinks below every current one, whatever its
+    # impact count. It is history, and history does not compete for attention
+    # with a live defect.
+    current_first = {"CURRENT_DIAGNOSTIC": 0, "GOLDEN_KNOWN_DEFECT": 0,
+                     "HUMAN_NOTE": 1, "LEGACY_HYPOTHESIS": 2,
+                     "SUPERSEDED": 2}
+
     def key(r):
         spaces = r["affected_spaces"]
         uses = r["affected_uses"]
-        return (-(spaces if isinstance(spaces, int) else 0),
+        return (current_first.get(r["provenance_class"], 0),
+                -(spaces if isinstance(spaces, int) else 0),
                 -(uses if isinstance(uses, int) else 0),
                 order.get(r["severity"], 9))
 
@@ -481,6 +516,11 @@ def exceptions(*, space_exceptions=(), known_gaps=(), findings=(),
             "Ranked by spaces and uses unlocked, never by money. No financial "
             "impact is estimated: a cost on an unvalidated quantity gets "
             "quoted long before the quantity does.",
+            "provenance_class says whether a row is a CURRENT cause. A "
+            "LEGACY_HYPOTHESIS is kept for history and sorted below every "
+            "current row — the washroom's dashed-threshold explanation is one: "
+            "this project measured zero dashed strokes on the sheet and found "
+            "the nearby marks to be shaft hatch.",
             "finding_id and diagnostic_run_id tie a row to the run that "
             "measured it. A row whose run id is not this run's is stale, and "
             "a superseded explanation must never survive into a new workbook.",
@@ -493,10 +533,24 @@ def exceptions(*, space_exceptions=(), known_gaps=(), findings=(),
 
 # ------------------------------------------------- 6 random QA sample
 
+# §20 — one "engine_status" column was answering three questions and so
+# printed NOT_ESTABLISHED beside a perfectly good 4.174 m2. The three are:
+#
+#   measurement_role           what KIND of number this is
+#   geometry_validation_status how far the polygon behind it is validated
+#   quantity_release_status    whether it is a released BOQ quantity at all
+#
+# Floor area is not one of the thirteen release uses, so its release status is
+# NOT_A_RELEASED_BOQ_USE — which is a fact about the use, not a defect in the
+# measurement.
+NOT_A_RELEASED_BOQ_USE = "NOT_A_RELEASED_BOQ_USE"
+
 SAMPLE_COLUMNS = ("qa_type", "stratum", "why_selected", "space_id",
                   "room_type", "scope", "what_to_check", "engine_value",
-                  "engine_unit", "engine_status", "checker_measurement",
-                  "checker_agrees", "checker_note")
+                  "engine_unit", "engine_source", "measurement_role",
+                  "geometry_validation_status", "quantity_release_status",
+                  "checker_measurement", "difference", "difference_pct",
+                  "checker_verdict", "checker_note")
 
 # The seed is part of the record. A sample nobody can reproduce is an anecdote.
 DEFAULT_SAMPLE_SEED = 23010
@@ -509,15 +563,35 @@ def _seed_for(project_id: str, seed: int) -> int:
 
 
 def _sample_row(qa_type, stratum, why, s, quantities, releases, check, unit):
+    """One QA line, with the three status questions kept apart.
+
+    The `difference` columns are left EMPTY for the checker's spreadsheet to
+    fill once a measurement is entered. They are QA-only arithmetic on QA-only
+    inputs: a manual measurement typed here never reaches a production
+    quantity, in either direction.
+    """
     sid = s["space_id"]
+    validated = s.get("physical_space_validated")
+    if validated is True:
+        role = "VALIDATED_GEOMETRY_MEASUREMENT"
+        geo = "PHYSICAL_SPACE_VALIDATED"
+    elif validated is False:
+        role = "OBSERVATION"
+        geo = s.get("unresolved_reason") or "UNRESOLVED"
+    else:
+        role = "CANDIDATE_GEOMETRY_MEASUREMENT"
+        geo = UNKNOWN
     return OrderedDict(
         qa_type=qa_type, stratum=stratum, why_selected=why, space_id=sid,
         room_type=cell(s.get("room_type")), scope=cell(s.get("scope")),
         what_to_check=check,
         engine_value=cell(quantities.get(sid, {}).get(check)),
         engine_unit=unit,
-        engine_status=cell(releases.get(sid, {}).get("primary_blocker")),
-        checker_measurement=FOR_THE_CHECKER, checker_agrees=FOR_THE_CHECKER,
+        engine_source=cell(s.get("area_source")),
+        measurement_role=role, geometry_validation_status=geo,
+        quantity_release_status=NOT_A_RELEASED_BOQ_USE,
+        checker_measurement=FOR_THE_CHECKER, difference=FOR_THE_CHECKER,
+        difference_pct=FOR_THE_CHECKER, checker_verdict=FOR_THE_CHECKER,
         checker_note=FOR_THE_CHECKER)
 
 
@@ -587,8 +661,18 @@ def random_qa_sample(spaces, quantities: dict, releases: dict, *,
 
     return Sheet(
         name=SHEET_SAMPLE, columns=SAMPLE_COLUMNS, rows=tuple(rows),
-        human_columns=("checker_measurement", "checker_agrees", "checker_note"),
+        human_columns=("checker_measurement", "difference", "difference_pct",
+                       "checker_verdict", "checker_note"),
         notes=(
+            "THREE STATUS COLUMNS, not one. measurement_role says what kind of "
+            "number this is; geometry_validation_status says how far the "
+            "polygon behind it is validated; quantity_release_status says "
+            "whether it is a released BOQ quantity at all. Floor area is not "
+            "one of the thirteen release uses, so NOT_A_RELEASED_BOQ_USE is a "
+            "fact about the use, not a defect in the measurement.",
+            "difference and difference % are yours to compute once you enter a "
+            "measurement. That arithmetic is QA-only: nothing typed on this "
+            "sheet reaches a production quantity.",
             f"Seed {seed} on project {project_id}. The same drawing draws the "
             "same rooms every run, so a disagreement cannot be exported away.",
             "A: contracted work, stratified. B: chosen because something is "
@@ -838,19 +922,35 @@ def quantity_trace(records, spaces=()) -> Sheet:
 
 # ------------------------------------------------------ rules & assemblies
 
+# §18 — a project-specific ceramic rule is NOT a room template. The taxonomy
+# will matter the moment reusable templates actually exist, and calling an E27
+# approved project rule a ROOM_TEMPLATE would make the two indistinguishable
+# exactly when telling them apart starts to matter.
+KIND_PROJECT_TRADE_RULE = "PROJECT_TRADE_RULE"
+KIND_ROOM_TEMPLATE = "ROOM_TEMPLATE"
+KIND_TRADE_ASSEMBLY = "TRADE_ASSEMBLY"
+KIND_HEIGHT_RULE = "HEIGHT_RULE"
+KIND_OPENING_RULE = "OPENING_RULE"
+
+RULE_KINDS = (KIND_PROJECT_TRADE_RULE, KIND_ROOM_TEMPLATE,
+              KIND_TRADE_ASSEMBLY, KIND_HEIGHT_RULE, KIND_OPENING_RULE)
+
 RULES_COLUMNS = ("kind", "id", "version", "applies_to", "approval_status",
                  "approved_by", "approved_on", "source", "used_by_spaces",
                  "blocked_spaces")
 
 
-def rules_and_assemblies(rules=(), assemblies=(), usage=None) -> Sheet:
+def rules_and_assemblies(rules=(), assemblies=(), usage=None,
+                        project_rules=()) -> Sheet:
     """Every rule and assembly the run used, with its version and approval.
 
     Rule coverage is auditable only if the absent ones are visible too.
     """
     usage = usage or {}
     rows = []
-    for kind, items in (("ROOM_TEMPLATE", rules), ("TRADE_ASSEMBLY", assemblies)):
+    for kind, items in ((KIND_PROJECT_TRADE_RULE, project_rules),
+                        (KIND_ROOM_TEMPLATE, rules),
+                        (KIND_TRADE_ASSEMBLY, assemblies)):
         for r in items:
             key = r.get("template_id") or r.get("assembly_id")
             u = usage.get(key, {})
@@ -871,6 +971,63 @@ def rules_and_assemblies(rules=(), assemblies=(), usage=None) -> Sheet:
             "defaults.",
             "An LLM may propose a rule. Only a person approves one, and the "
             "approval carries their name and the date.",
+            "PROJECT_TRADE_RULE and ROOM_TEMPLATE are different things. A "
+            "project's signed ceramic rule is not a reusable room template, "
+            "and a template never replaces one.",
+        ))
+
+
+# ------------------------------------------------------------ topology QA
+
+TOPOLOGY_COLUMNS = ("face_id", "component", "status", "area_m2", "perimeter_m",
+                    "raster_regions", "raster_spaces", "relationship",
+                    "overlap_pct", "dependent_probable_edges", "micro_class",
+                    "candidate_space_match", "holes", "blocker", "notes")
+
+
+def topology_qa(faces=(), correspondence=()) -> Sheet:
+    """The diagnostic face engine's output, where it can be inspected safely.
+
+    Faces appear here and NOWHERE ELSE in the workbook. They do not touch a
+    quantity, a coverage count or a release status, because a diagnostic face
+    that quietly became the measurement basis would be the worst outcome
+    available. Migration is explicit: E31A_CANDIDATE -> independently
+    validated -> PHYSICAL_SPACE_GEOMETRY_ACCEPTED.
+    """
+    corr = {c["face_id"]: c for c in correspondence}
+    rows = []
+    for f in faces:
+        c = corr.get(f["face_id"], {})
+        probable = f.get("edge_validation_summary", {}).get("PROBABLE")
+        rows.append(OrderedDict(
+            face_id=f["face_id"], component=cell(f.get("component_id")),
+            status=cell(f.get("status")),
+            area_m2=cell(f.get("area_m2")),
+            perimeter_m=cell(f.get("perimeter_m")),
+            raster_regions=cell(", ".join(
+                str(r) for r in c.get("raster_region_ids", ()))),
+            raster_spaces=cell(", ".join(c.get("raster_space_ids", ()))),
+            relationship=cell(c.get("relationship")),
+            overlap_pct=cell(None if c.get("overlap_ratio") is None
+                             else round(c["overlap_ratio"] * 100, 1)),
+            dependent_probable_edges=cell(probable),
+            micro_class=cell(f.get("micro_class")),
+            candidate_space_match=cell(
+                (c.get("raster_space_ids") or (None,))[0]),
+            holes=len(f.get("holes", ())),
+            blocker=cell("; ".join(f.get("blockers", ())) or None),
+            notes=cell(c.get("why"))))
+    return Sheet(
+        name=SHEET_TOPOLOGY, columns=TOPOLOGY_COLUMNS, rows=tuple(rows),
+        notes=(
+            "DIAGNOSTIC ONLY. Every face here is a hypothesis produced by the "
+            "vector wall graph alone. None releases a quantity and none has "
+            "replaced the current geometry source.",
+            "The raster columns are a COMPARISON made after the face was "
+            "generated. The region map was not an input to generating it.",
+            "VECTOR_SPLITS_RASTER is the class worth reading first: it may "
+            "expose an under-segmented space, and it is equally where a false "
+            "split would hide.",
         ))
 
 
@@ -959,7 +1116,9 @@ def build_workbook(bundle: dict) -> Workbook:
             risk_flags=flags),
         SHEET_RULES: rules_and_assemblies(
             bundle.get("room_templates", ()), bundle.get("assemblies", ()),
-            bundle.get("rule_usage")),
+            bundle.get("rule_usage"), bundle.get("project_trade_rules", ())),
+        SHEET_TOPOLOGY: topology_qa(bundle.get("faces", ()),
+                                    bundle.get("face_correspondence", ())),
         SHEET_COVERAGE: takeoff_coverage(bundle.get("coverage", ())),
         SHEET_REVISION: revision_delta(bundle.get("revision_delta", {})),
     }

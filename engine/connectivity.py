@@ -160,6 +160,12 @@ class ComponentReport:
     size_class: str
     likely_cause: str
     share_of_length: float
+    # A component's own cycle count, computed here rather than joined from a
+    # separately-sorted list by position. `cycle_capacity` sorts by cycles and
+    # `components` by length: matching them on index silently paired every
+    # component with another component's numbers.
+    independent_cycles: int = 0
+    node_count: int = 0
 
     def record(self) -> dict:
         return {"component_id": self.component_id,
@@ -171,7 +177,9 @@ class ComponentReport:
                 "separation_bands": self.separation_bands,
                 "source_object_count": self.source_object_count,
                 "size_class": self.size_class,
-                "likely_cause": self.likely_cause}
+                "likely_cause": self.likely_cause,
+                "independent_cycles": self.independent_cycles,
+                "nodes": self.node_count}
 
 
 def _band(s: float) -> str:
@@ -371,7 +379,11 @@ def components(noded) -> list[ComponentReport]:
             cause = CAUSE_SEPARATE_GEOMETRY
         else:
             cause = CAUSE_UNRESOLVED
+        # Independent cycles for one connected component: E - V + 1. Zero
+        # means a tree, which bounds no face however much wall it holds.
+        cycles = max(0, len(grp) - len(nodes) + 1)
         out.append(ComponentReport(
+            independent_cycles=cycles, node_count=len(nodes),
             component_id=f"GC-{i:04d}", edge_ids=tuple(grp),
             total_length_mm=length,
             bbox_mm=(min(xs), min(ys), max(xs), max(ys)) if xs else (0, 0, 0, 0),
