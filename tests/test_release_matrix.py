@@ -73,7 +73,7 @@ def test_waterproofing_splits_horizontal_from_vertical():
 
 
 def test_a_ceiling_is_not_assumed_equal_to_the_floor():
-    assert "never assumed equal to floor area" in USES["CEILING"].description
+    assert "Floor area is NOT a substitute" in USES["CEILING"].description
 
 
 # --- nothing defaults ---------------------------------------------------------
@@ -205,3 +205,33 @@ def test_the_rendered_table_shows_counts_rather_than_a_single_word():
     text = render_matrix(project_matrix({"A": GOOD, "B": BROKEN_REGION}))
     assert "READY" in text and "BLOCKED" in text and "N/A" in text
     assert "GROSS_CERAMIC_WALL" in text
+
+
+# --- the ceiling audit --------------------------------------------------------
+
+def test_ceiling_requires_its_own_geometry_not_floor_area():
+    """The audit that found this: CEILING reported READY on 15 spaces while
+    ceiling_height was HEIGHT_REQUIRED and no ceiling geometry existed at all.
+    The use was silently reading floor area."""
+    from engine.release_matrix import CEILING_GEOMETRY
+    assert CEILING_GEOMETRY in USES["CEILING"].requires
+    assert FLOOR_AREA not in USES["CEILING"].requires
+
+
+def test_a_ceiling_is_blocked_when_only_floor_area_is_known():
+    from engine.release_matrix import CEILING_GEOMETRY
+    r = assess("CEILING", {SCOPE: True, REGION_IDENTITY: True, FLOOR_AREA: True,
+                           TRADE_RULE: True})
+    assert not r.ready and CEILING_GEOMETRY in r.missing
+
+
+def test_a_ceiling_releases_once_its_geometry_is_established():
+    from engine.release_matrix import CEILING_GEOMETRY
+    assert assess("CEILING", {SCOPE: True, REGION_IDENTITY: True,
+                              CEILING_GEOMETRY: True, TRADE_RULE: True}).ready
+
+
+def test_the_description_names_what_breaks_the_floor_equality():
+    d = USES["CEILING"].description
+    for case in ("void", "shaft", "double-height", "drop", "bulkhead"):
+        assert case in d

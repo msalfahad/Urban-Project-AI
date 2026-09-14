@@ -29,6 +29,12 @@ EXTERNAL_SPLIT = "external_split"            # internal vs external established?
 OPENINGS = "openings"                        # openings identified and typed?
 WALL_THICKNESS = "wall_thickness"            # proven, not assumed
 FLOOR_AREA = "floor_area"
+# A ceiling is not a floor seen from below. A void, a shaft, a double-height
+# room, a drop or a bulkhead all break the equality, and the audit that found
+# this had CEILING reporting READY on 15 spaces while ceiling_height was
+# HEIGHT_REQUIRED and no ceiling geometry existed at all. Nothing in the engine
+# had ever established ceiling area; the use was simply reading floor area.
+CEILING_GEOMETRY = "ceiling_geometry"
 HEIGHT = "height"                            # a releasable height for this trade
 TRADE_RULE = "trade_rule"                    # a rule covering this space type
 OPENING_RULE = "opening_rule"                # how THIS trade deducts openings
@@ -106,9 +112,10 @@ USES: dict[str, Use] = {u.name: u for u in (
                                    HEIGHT, TRADE_RULE),
         "upstand height x applicable boundary, from the project specification"),
 
-    Use("CEILING", (SCOPE, REGION_IDENTITY, FLOOR_AREA, TRADE_RULE),
-        "never assumed equal to floor area where a void, shaft, drop or double "
-        "height exists"),
+    Use("CEILING", (SCOPE, REGION_IDENTITY, CEILING_GEOMETRY, TRADE_RULE),
+        "requires an established ceiling geometry source. Floor area is NOT a "
+        "substitute: a void, shaft, double-height room, drop or bulkhead breaks "
+        "the equality, and nothing may assume it silently"),
 )}
 
 
@@ -191,7 +198,8 @@ NOT_APPLICABLE = "NOT_APPLICABLE"
 # polygon that is not the room you think it is.
 _BLOCKER_PRIORITY = (
     REGION_IDENTITY, SCOPE, CLOSED_BOUNDARY, PHYSICAL_WALL_SPLIT, EXTERNAL_SPLIT,
-    FLOOR_AREA, WALL_THICKNESS, OPENINGS, HEIGHT, TRADE_RULE, OPENING_RULE,
+    FLOOR_AREA, CEILING_GEOMETRY, WALL_THICKNESS, OPENINGS, HEIGHT, TRADE_RULE,
+    OPENING_RULE,
 )
 
 

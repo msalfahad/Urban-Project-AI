@@ -67,15 +67,37 @@ E_SWING = "SWING_ARC"
 E_TWO_SPACES = "TWO_MAPPED_SPACES"
 E_WIDTH = "PLAUSIBLE_WIDTH"
 
-# Signals strong enough to count toward validation. A width band on its own is
-# not evidence of anything — every wall has gaps of some width.
-#
-# E_SAME_REGION is here deliberately, alongside E_TWO_SPACES. A gap with one
-# region on both sides is evidence of an opening inside an under-segmented
-# region, which on this drawing is the most valuable class there is.
+# SAME_REGION_BOTH_SIDES is topology evidence, NOT opening evidence. I had it in
+# STRONG, which conflated two different claims: "the raster may be
+# under-segmented here" and "there is a door here". The first is true and
+# valuable; the second does not follow. The same observation is equally
+# consistent with a missing wall boundary, an open transition, a threshold, a
+# false vector gap, or fixture linework.
 E_SAME_REGION = "SAME_REGION_BOTH_SIDES"
-STRONG = frozenset({E_PAIRED_GAP, E_JAMB_BOTH, E_LEAF, E_SWING, E_TWO_SPACES,
-                    E_SAME_REGION})
+TOPOLOGY_SPLIT_EVIDENCE = frozenset({E_SAME_REGION})
+
+# EVIDENCE FAMILIES. Counting signals is not enough, because several signals can
+# be different measurements of ONE underlying construction: a paired-face gap,
+# jambs at its ends and the wall-pair interruption all come out of the same
+# vector pairing. Three correlated observations are not three independent
+# proofs, so validation is judged by how many FAMILIES agree.
+GEOMETRY, TOPOLOGY, SYMBOL, DOCUMENT, SEMANTIC = (
+    "GEOMETRY", "TOPOLOGY", "SYMBOL", "DOCUMENT", "SEMANTIC")
+
+EVIDENCE_FAMILY = {
+    E_PAIRED_GAP: GEOMETRY,
+    E_JAMB_BOTH: GEOMETRY,
+    E_JAMB_ONE: GEOMETRY,
+    E_LEAF: SYMBOL,
+    E_SWING: SYMBOL,
+    E_TWO_SPACES: TOPOLOGY,
+    E_SAME_REGION: TOPOLOGY,
+    E_WIDTH: None,                  # a width band is not evidence of anything
+}
+
+# A production opening needs corroboration from a second family. Geometry alone,
+# however much of it, is one construction seen several ways.
+MIN_FAMILIES_FOR_VALIDATED = 2
 
 
 class OpeningError(RuntimeError):
@@ -105,27 +127,44 @@ class OpeningCandidate:
 
     @property
     def strong_evidence(self) -> list[str]:
-        return [e for e in self.evidence if e in STRONG]
+        return [e for e in self.evidence if EVIDENCE_FAMILY.get(e)]
+
+    @property
+    def families(self) -> set[str]:
+        """Which independent kinds of evidence support this candidate."""
+        return {f for f in (EVIDENCE_FAMILY.get(e) for e in self.evidence) if f}
+
+    @property
+    def topology_split_evidence(self) -> list[str]:
+        """Evidence that a REGION may need splitting — a separate question."""
+        return [e for e in self.evidence if e in TOPOLOGY_SPLIT_EVIDENCE]
+
+    @property
+    def suggests_region_split(self) -> bool:
+        """Should this region be split? Asked and answered separately from
+        whether the connecting feature is a door."""
+        return bool(self.topology_split_evidence)
 
     @property
     def confidence_status(self) -> str:
         """Accumulated evidence decides. No single signal can.
 
-        Two different mapped spaces either side is STRONG evidence and used to
-        be a REQUIREMENT for validation. That was circular: the raster
-        segmentation is already known to merge real rooms — the washroom has no
-        polygon of its own and BED-04 contains an unseparated bathroom — so
-        demanding two mapped spaces demanded that segmentation had already solved
-        the problem this detector exists to solve. A true opening inside an
-        under-segmented region has the SAME region on both sides, and requiring
-        otherwise made those candidates unreachable.
+        Requiring two different mapped spaces was circular and is gone: the
+        segmentation is known to merge real rooms, so a true opening inside one
+        has the same region on both sides and was unreachable by construction.
 
-        So three strong signals validate, whatever supplies them.
+        Counting signals was also wrong, in the opposite direction. A paired-face
+        gap, jambs at its ends and the wall-pair interruption are one vector
+        construction observed three ways, and three correlated observations are
+        not three proofs. So VALIDATED needs evidence from at least two
+        independent FAMILIES; evidence concentrated in one family, however much
+        of it, stops at PROBABLE.
         """
-        n = len(self.strong_evidence)
         if not self.width_plausible:
             return REJECTED
-        if n >= 3:
+        fams = self.families
+        n = len(self.strong_evidence)
+        if len(fams) >= MIN_FAMILIES_FOR_VALIDATED and n >= 3:
             return VALIDATED
         if n >= 2:
             return PROBABLE
@@ -154,6 +193,9 @@ class OpeningCandidate:
             "height_mm": self.height_mm,
             "evidence": list(self.evidence),
             "strong_evidence_count": len(self.strong_evidence),
+            "evidence_families": sorted(self.families),
+            "suggests_region_split": self.suggests_region_split,
+            "topology_split_evidence": self.topology_split_evidence,
             "geometry_sources": list(self.geometry_sources),
             "confidence_status": self.confidence_status,
             "note": self.note,

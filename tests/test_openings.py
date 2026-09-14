@@ -16,7 +16,9 @@ import pytest
 from engine.openings import (AMBIGUOUS, DOOR, DOUBLE_DOOR, E_JAMB_BOTH,
                              E_JAMB_ONE, E_LEAF, E_PAIRED_GAP, E_SWING,
                              E_TWO_SPACES, E_WIDTH, OPEN_TRANSITION, PROBABLE,
-                             REJECTED, STRONG, UNCLASSIFIED, VALIDATED,
+                             EVIDENCE_FAMILY, GEOMETRY, REJECTED, SYMBOL,
+                             TOPOLOGY, TOPOLOGY_SPLIT_EVIDENCE, UNCLASSIFIED,
+                             VALIDATED,
                              OpeningCandidate, find_candidates,
                              gaps_in_paired_faces, summarise)
 
@@ -73,32 +75,55 @@ def test_two_strong_signals_reach_probable_only():
     assert c.confidence_status == PROBABLE
 
 
-def test_three_strong_signals_validate_whatever_supplies_them():
-    """Requiring two mapped spaces was circular: it demanded that the raster
-    segmentation had already solved the problem this detector exists to solve."""
+def test_three_signals_from_one_family_do_not_validate():
+    """A paired-face gap, jambs at its ends and the wall-pair interruption are
+    ONE vector construction observed three ways. Three correlated observations
+    are not three proofs."""
+    c = cand(evidence=[E_PAIRED_GAP, E_JAMB_BOTH, E_JAMB_ONE, E_WIDTH])
+    assert c.families == {GEOMETRY}
+    assert c.confidence_status == PROBABLE
+
+
+def test_two_independent_families_validate():
     c = cand(evidence=[E_PAIRED_GAP, E_JAMB_BOTH, E_SWING, E_WIDTH])
-    assert E_TWO_SPACES not in c.evidence
+    assert c.families == {GEOMETRY, SYMBOL}
     assert c.confidence_status == VALIDATED
 
 
-def test_validation_also_reached_via_two_mapped_spaces():
+def test_validation_also_reached_via_geometry_plus_topology():
     c = cand(evidence=[E_PAIRED_GAP, E_JAMB_BOTH, E_TWO_SPACES, E_WIDTH],
              adjacent_space_ids=("BTH-03", "COR-03"))
+    assert c.families == {GEOMETRY, TOPOLOGY}
     assert c.confidence_status == VALIDATED
 
 
-def test_the_same_region_both_sides_is_strong_evidence_not_a_disqualifier():
-    """The washroom and BED-04's bathroom are inside merged regions. A gap there
-    has one region on both sides, and that is the signal, not a defect."""
+def test_a_width_band_belongs_to_no_family():
+    """Every wall has gaps of some width."""
+    assert EVIDENCE_FAMILY[E_WIDTH] is None
+    assert cand(evidence=[E_WIDTH]).families == set()
+
+
+def test_the_same_region_both_sides_is_topology_evidence_not_door_evidence():
+    """It says the raster may be under-segmented. It does not say there is a
+    door: a missing wall, an open transition, a threshold or a false vector gap
+    all produce the same observation."""
     from engine.openings import E_SAME_REGION
-    assert E_SAME_REGION in STRONG
+    assert E_SAME_REGION in TOPOLOGY_SPLIT_EVIDENCE
     c = find_candidates(FACES, space_at=lambda *a: "BED-04")[0]
-    assert E_SAME_REGION in c.evidence
+    assert c.suggests_region_split
+    assert c.confidence_status != VALIDATED
     assert "under-segmented" in c.note
 
 
+def test_should_this_region_split_and_is_it_a_door_are_separate_questions():
+    """A room split must not require successful door classification."""
+    c = find_candidates(FACES, space_at=lambda *a: "BED-04")[0]
+    assert c.suggests_region_split            # question A: yes, worth examining
+    assert c.confidence_status == PROBABLE    # question B: not established
+
+
 def test_a_width_band_is_not_strong_evidence_on_its_own():
-    assert E_WIDTH not in STRONG
+    assert EVIDENCE_FAMILY[E_WIDTH] is None
     c = cand(evidence=[E_WIDTH])
     assert c.confidence_status == REJECTED
 
