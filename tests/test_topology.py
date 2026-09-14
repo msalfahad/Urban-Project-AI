@@ -231,3 +231,23 @@ def test_merging_is_input_preparation_not_a_loosened_tolerance():
     import inspect
     src = inspect.getsource(merge_collinear)
     assert "min_thickness" not in src and "min_overlap" not in src
+
+
+def test_a_wide_gap_is_flagged_as_a_probable_wall_termination():
+    """21 of 45 intra-region candidates on AR-00 were wider than 2 m. A wall
+    ending at a corner interrupts both faces in exactly the same way a doorway
+    does, and perpendicular junction detection is not built."""
+    from engine.topology import WALL_TERMINATION_SUSPECT_MM
+    pairs = wall_pairs(WALL, D(1))
+    runs = {("V", round(1000.0 / 12)): [(0.0, 2000.0), (5000.0, 8000.0)],
+            ("V", round(1200.0 / 12)): [(0.0, 2000.0), (5000.0, 8000.0)]}
+    g = gaps_along_pairs(pairs, runs)[0]
+    assert g.width_mm > WALL_TERMINATION_SUSPECT_MM
+    assert "corner or junction" in g.note
+
+
+def test_a_door_scale_gap_carries_no_termination_warning():
+    pairs = wall_pairs(WALL, D(1))
+    runs = {("V", round(1000.0 / 12)): [(0.0, 2000.0), (2900.0, 5000.0)],
+            ("V", round(1200.0 / 12)): [(0.0, 2000.0), (2900.0, 5000.0)]}
+    assert gaps_along_pairs(pairs, runs)[0].note == ""

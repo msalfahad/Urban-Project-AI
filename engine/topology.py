@@ -285,6 +285,14 @@ class GapCandidate:
                 "suggests_split": self.suggests_split, "note": self.note}
 
 
+# A gap at the END of a wall run is a corner or a junction, not an opening. On
+# AR-00 this is the dominant confound: of 45 INTRA_REGION candidates, 21 were
+# wider than 2 m, which is a wall terminating rather than a doorway. Perpendicular
+# junction detection is NOT yet implemented, so callers must treat wide
+# candidates with suspicion and the width bands below are the only filter.
+WALL_TERMINATION_SUSPECT_MM = 1200.0
+
+
 def gaps_along_pairs(pairs: list[WallPair], face_runs, *,
                      min_gap_mm: float = 500, max_gap_mm: float = 6000,
                      tol_mm: float = 12.0) -> list[GapCandidate]:
@@ -309,7 +317,11 @@ def gaps_along_pairs(pairs: list[WallPair], face_runs, *,
                 out.append(GapCandidate(
                     f"GC-{n:04d}", p.pair_id, p.axis, p.centreline_mm, lo, hi,
                     p.thickness_mm,
-                    evidence=["BOTH_FACES_INTERRUPTED_AT_THE_SAME_PLACE"]))
+                    evidence=["BOTH_FACES_INTERRUPTED_AT_THE_SAME_PLACE"],
+                    note=("" if hi - lo <= WALL_TERMINATION_SUSPECT_MM else
+                          f"{hi - lo:.0f} mm is wide for an opening — more likely "
+                          "the wall run ending at a corner or junction. "
+                          "Perpendicular junction detection is not implemented.")))
     return out
 
 
