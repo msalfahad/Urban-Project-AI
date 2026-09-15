@@ -652,3 +652,178 @@ def test_topology_qa_labels_every_face_with_its_graph_and_run():
     assert row["graph_type"] == "SPACE_BOUNDARY_GRAPH"
     assert row["topology_run_id"] == "V2"
     assert row["containment_verdict"] == "SINGLE_ROOM_CANDIDATE"
+
+
+# --- §12/§14/§15 — one authority, one sheet, four statuses ----------------
+
+def test_the_workbook_names_one_geometry_authority():
+    # MIXED AUTHORITY was the defect: two sheets carried areas for the same
+    # rooms and nothing said which one a quantity would be measured from.
+    from engine.qa_workbook import (AUTHORITY_NOTE, GEOMETRY_AUTHORITY,
+                                    GEOMETRY_DIAGNOSTIC_PATH)
+    assert GEOMETRY_AUTHORITY == "FREE_SPACE_PATH"
+    assert GEOMETRY_DIAGNOSTIC_PATH == "PLANAR_GRAPH_FACE_PATH"
+    assert "may not release geometry" in AUTHORITY_NOTE
+
+
+def test_the_topology_sheet_says_its_areas_are_not_the_project_s():
+    from engine.qa_workbook import AUTHORITY_NOTE, topology_qa
+    notes = topology_qa().notes
+    assert AUTHORITY_NOTE in notes
+    assert any("MIXED AUTHORITY" in n for n in notes)
+
+
+def test_free_space_qa_comes_before_topology_qa():
+    from engine.qa_workbook import (SHEET_FREE_SPACE, SHEET_ORDER,
+                                    SHEET_TOPOLOGY)
+    assert SHEET_ORDER.index(SHEET_FREE_SPACE) < \
+        SHEET_ORDER.index(SHEET_TOPOLOGY)
+
+
+def _cand(gid="SG-1", **kw):
+    base = {"space_geometry_id": gid,
+            "geometry_role": "OCCUPIABLE_SPACE_CANDIDATE",
+            "geometry_status": "GEOMETRY_CANDIDATE",
+            "measurement_basis": "CLEAR_INTERNAL_FINISH_FACE",
+            "clear_internal_area_m2": 21.03,
+            "clear_internal_perimeter_m": 18.4,
+            "holes": 0, "min_extent_mm": 3200.0, "aspect": 1.3,
+            "bounding_band_ids": ["WB-1", "WB-2"],
+            "bounding_portal_ids": ["PT-1"],
+            "touches_envelope_boundary": False,
+            "blockers": [], "releasable": False,
+            "provenance": {"run_id": "V2"}, "why": "a hole in the wall solid"}
+    base.update(kw)
+    return base
+
+
+def test_free_space_qa_carries_the_basis_on_every_row():
+    from engine.qa_workbook import free_space_qa
+    sheet = free_space_qa([_cand(), _cand("SG-2")])
+    assert all(r["measurement_basis"] == "CLEAR_INTERNAL_FINISH_FACE"
+               for r in sheet.rows)
+
+
+def test_a_multi_room_component_is_reported_as_not_a_room():
+    from engine.qa_workbook import free_space_qa
+    sheet = free_space_qa(
+        [_cand("SG-1", clear_internal_area_m2=738.0)],
+        labels_inside={"SG-1": ["BED-02", "BTH-03", "KIT-01"]})
+    row = sheet.rows[0]
+    assert row["labelled_rooms_inside"] == 3
+    assert "BED-02" in row["labelled_room_ids"]
+    # The area is still shown: hiding it would hide the problem.
+    assert row["clear_internal_area_m2"] == 738.0
+    assert any("is NOT a room" in n for n in sheet.notes)
+
+
+def test_the_sheet_shows_the_leaks_that_merged_a_component():
+    from engine.qa_workbook import free_space_qa
+    sheet = free_space_qa(
+        [_cand("SG-1")],
+        leaks=[{"space_geometry_id": "SG-1", "passage_width_mm": 50.0,
+                "hairline_junction_gap": True},
+               {"space_geometry_id": "SG-1", "passage_width_mm": 900.0,
+                "hairline_junction_gap": False}])
+    row = sheet.rows[0]
+    assert row["leaks_into_other_rooms"] == 2
+    assert row["widest_open_passage_mm"] == 900.0
+    assert row["hairline_junction_gaps"] == 1
+
+
+def test_release_class_sits_beside_the_geometry_status():
+    # A polygon can be geometrically sound and still rest on a portal whose
+    # existence only one evidence family supports.
+    from engine.qa_workbook import free_space_qa
+    sheet = free_space_qa(
+        [_cand("SG-1")],
+        release={"space_geometries": [
+            {"space_geometry_id": "SG-1",
+             "release_class": "DIAGNOSTIC_PARTITION_BARRIER",
+             "barriers_that_cannot_release": ["PT-1"]}]})
+    row = sheet.rows[0]
+    assert row["barrier_release_class"] == "DIAGNOSTIC_PARTITION_BARRIER"
+    assert row["barriers_that_cannot_release"] == "PT-1"
+
+
+def test_a_proven_mechanism_is_not_a_measured_project():
+    from engine.takeoff_status import (MECHANISM_PROVEN, RECALL_PARTIAL,
+                                       assess)
+    got = assess(
+        uses_total=4, uses_with_ready_spaces=1, net_uses_ready=0,
+        validated_physical_spaces=5, total_in_scope_spaces=36,
+        openings_validated=2, signed_trade_rules=1,
+        unresolved_topology_spaces=3,
+        free_space_invariants_hold=True, controls_frozen=3,
+        controls_accepted=3, single_room_space_geometries=4)
+    r = got.record()
+    assert r["GEOMETRY_MECHANISM_PROVEN"] == MECHANISM_PROVEN
+    assert r["PROJECT_SPACE_RECALL"] == RECALL_PARTIAL
+    assert r["FINAL_BOQ_STATUS"] == "BLOCKED_FOR_FINAL_BOQ"
+    assert "4 of 36" in r["recall_reason"]
+    assert "says nothing about how much of this floor it resolved" in \
+        r["mechanism_reason"]
+
+
+def test_invariants_that_were_never_run_leave_the_mechanism_unproven():
+    from engine.takeoff_status import MECHANISM_NOT_PROVEN, assess
+    got = assess(
+        uses_total=4, uses_with_ready_spaces=1, net_uses_ready=0,
+        validated_physical_spaces=5, total_in_scope_spaces=36,
+        openings_validated=2, signed_trade_rules=1,
+        unresolved_topology_spaces=0, single_room_space_geometries=4)
+    assert got.mechanism_status == MECHANISM_NOT_PROVEN
+    assert "unproven — not failed, unproven" in got.mechanism_reason
+
+
+def test_a_frozen_control_nobody_accepted_does_not_prove_the_mechanism():
+    from engine.takeoff_status import MECHANISM_NOT_PROVEN, assess
+    got = assess(
+        uses_total=4, uses_with_ready_spaces=1, net_uses_ready=0,
+        validated_physical_spaces=5, total_in_scope_spaces=36,
+        openings_validated=2, signed_trade_rules=1,
+        unresolved_topology_spaces=0, free_space_invariants_hold=True,
+        controls_frozen=3, controls_accepted=0,
+        single_room_space_geometries=4)
+    assert got.mechanism_status == MECHANISM_NOT_PROVEN
+    assert "none was accepted" in got.mechanism_reason
+
+
+def test_failing_free_space_invariants_block_the_boq():
+    from engine.takeoff_status import assess
+    got = assess(
+        uses_total=4, uses_with_ready_spaces=1, net_uses_ready=1,
+        validated_physical_spaces=36, total_in_scope_spaces=36,
+        openings_validated=2, openings_deduction_ready=True,
+        signed_trade_rules=1, unresolved_topology_spaces=0,
+        free_space_invariants_hold=False, controls_frozen=1,
+        controls_accepted=1, single_room_space_geometries=36)
+    assert any("invariants do not hold" in b for b in got.boq_blockers)
+
+
+def test_the_graph_gate_no_longer_blocks_the_boq():
+    # Room polygons come from the free-space path. Blocking the BOQ on a
+    # diagnostic's gate held the project on a condition nothing downstream
+    # depends on, while leaving the condition that matters unstated.
+    from engine.takeoff_status import assess
+    got = assess(
+        uses_total=4, uses_with_ready_spaces=4, net_uses_ready=1,
+        validated_physical_spaces=36, total_in_scope_spaces=36,
+        openings_validated=2, openings_deduction_ready=True,
+        signed_trade_rules=1, unresolved_topology_spaces=0,
+        graph_gate_passed=False, free_space_invariants_hold=True,
+        controls_frozen=1, controls_accepted=1,
+        single_room_space_geometries=36)
+    assert not any("E31A" in b for b in got.boq_blockers)
+    assert got.boq_status == "READY_FOR_FINAL_BOQ"
+
+
+def test_the_four_statuses_say_they_are_four_questions():
+    from engine.takeoff_status import assess
+    r = assess(
+        uses_total=4, uses_with_ready_spaces=1, net_uses_ready=0,
+        validated_physical_spaces=5, total_in_scope_spaces=36,
+        openings_validated=0, signed_trade_rules=0,
+        unresolved_topology_spaces=3).record()
+    assert "a proven MECHANISM is not a measured PROJECT" in \
+        r["these_are_four_questions"]

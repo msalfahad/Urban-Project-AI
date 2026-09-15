@@ -91,6 +91,13 @@ class WallPolygon:
     validation_status: str = ""
     evidence: tuple[str, ...] = ()
     occupied_intervals: tuple = ()
+    # Kept APART, not concatenated. Material is defensible where BOTH faces
+    # were drawn; where only one was, the other side is unknown; where
+    # neither was, the ring spans something nobody drew. Merging the two
+    # face lists into one makes those three cases indistinguishable.
+    face_a_intervals: tuple = ()
+    face_b_intervals: tuple = ()
+    both_faces_interval: tuple | None = None
     extensions: tuple = ()
     unresolved_reason: str = ""
     why: str = ""
@@ -153,8 +160,15 @@ def wall_polygons(bands, *, drawing_id: str = "", revision: str = "",
             drawing_id=drawing_id, drawing_revision=revision,
             validation_status=b.validation_status,
             evidence=tuple(b.supporting_evidence),
-            occupied_intervals=(tuple(b.face_a_intervals)
-                                + tuple(b.face_b_intervals)),
+            occupied_intervals=(tuple(getattr(b, "face_a_intervals", ()))
+                                + tuple(getattr(b, "face_b_intervals", ()))),
+            # Read defensively: a band that records no interval provenance
+            # must not crash the polygonizer. engine.interval_fidelity then
+            # reports the absence as an audit that COULD NOT RUN, which is
+            # not the same as a pass.
+            face_a_intervals=tuple(getattr(b, "face_a_intervals", ())),
+            face_b_intervals=tuple(getattr(b, "face_b_intervals", ())),
+            both_faces_interval=getattr(b, "both_faces_interval", None),
             extensions=tuple(b.extensions))
 
         def refuse(reason: str, why: str):

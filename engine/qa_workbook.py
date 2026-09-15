@@ -37,7 +37,7 @@ from __future__ import annotations
 import hashlib
 import random
 from collections import Counter, OrderedDict
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 
 # The one sentinel. It is a string on purpose: a reader must not be able to
 # mistake it for a number, sum a column containing it, or coerce it to 0.0.
@@ -64,12 +64,30 @@ SHEET_REVISION = "Revision Delta"
 SHEET_TOPOLOGY = "Topology QA"
 SHEET_WALL_QA = "Wall Extraction QA"
 SHEET_PATHS = "Topology Path Comparison"
+SHEET_FREE_SPACE = "Free Space QA"
 
+# Free Space QA sits BEFORE Topology QA, because it is the geometry
+# authority and the sheet after it is a diagnostic. A reader who scrolls
+# top to bottom meets the authority first.
 SHEET_ORDER = (SHEET_DASHBOARD, SHEET_ROOM_REGISTER, SHEET_ROOM_COUNTS,
                SHEET_TRACE, SHEET_FLOORING, SHEET_WALLS, SHEET_EXCEPTIONS,
-               SHEET_SAMPLE, SHEET_WALL_QA, SHEET_TOPOLOGY, SHEET_PATHS,
-               SHEET_RULES, SHEET_COVERAGE,
+               SHEET_SAMPLE, SHEET_WALL_QA, SHEET_FREE_SPACE, SHEET_TOPOLOGY,
+               SHEET_PATHS, SHEET_RULES, SHEET_COVERAGE,
                SHEET_REVISION)
+
+# Which path owns the geometry numbers in this workbook. Stated once, here,
+# and quoted on every sheet that carries geometry — because MIXED AUTHORITY
+# was the defect: the workbook reported the graph path's faces and the
+# free-space path's components side by side without saying which one a
+# quantity would be measured from.
+GEOMETRY_AUTHORITY = "FREE_SPACE_PATH"
+GEOMETRY_DIAGNOSTIC_PATH = "PLANAR_GRAPH_FACE_PATH"
+AUTHORITY_NOTE = (
+    "GEOMETRY AUTHORITY: the free-space path (wall polygons -> wall solid "
+    "-> envelope minus barriers -> connected components). The planar graph "
+    "face path is retained as a DIAGNOSTIC and may not release geometry: "
+    "its six invariants are falsified on this drawing and the proof is on "
+    "the Topology Path Comparison sheet.")
 
 # Takeoff status, kept blunt on purpose. A workbook that opens cleanly must not
 # read as a finished BOQ.
@@ -886,8 +904,21 @@ def dashboard(bundle: dict, sheets: dict) -> Sheet:
         row("RUN", "Topology", (bundle.get("manifest", {}).get("stages", {})
                                 .get("topology", {}).get("output_hash"))),
 
-        # TWO statuses, because one word was answering two questions. Progress
-        # on coverage is not permission to bill.
+        row("RUN", "Geometry authority", GEOMETRY_AUTHORITY, AUTHORITY_NOTE),
+        row("RUN", "Diagnostic path", GEOMETRY_DIAGNOSTIC_PATH,
+            "Retained for comparison. Its invariants are falsified on this "
+            "drawing and it may not release geometry."),
+
+        # FOUR statuses, because one word was answering four questions.
+        # "The mechanism works" and "the project is measured" are different
+        # claims, and conflating them is how a proven method gets read as a
+        # finished floor.
+        row("STATUS", "GEOMETRY_MECHANISM_PROVEN",
+            status.get("GEOMETRY_MECHANISM_PROVEN"),
+            status.get("mechanism_reason", "")),
+        row("STATUS", "PROJECT_SPACE_RECALL",
+            status.get("PROJECT_SPACE_RECALL"),
+            status.get("recall_reason", "")),
         row("STATUS", "TAKEOFF_COVERAGE_STATUS",
             status.get("TAKEOFF_COVERAGE_STATUS"),
             status.get("coverage_reason", "")),
@@ -1214,6 +1245,112 @@ def wall_extraction_qa(bands=(), rejections=(), sides=()) -> Sheet:
         ))
 
 
+# ----------------------------------------------------------- free space QA
+
+# space_geometry_id first, then the two status axes, then the BASIS — because
+# a number without its basis is not a measurement. The release columns come
+# before the areas on purpose: a reader should know whether a figure may be
+# used before they read it.
+FREE_SPACE_COLUMNS = (
+    "space_geometry_id", "geometry_role", "geometry_status",
+    "measurement_basis", "releasable", "barrier_release_class",
+    "clear_internal_area_m2", "clear_internal_perimeter_m",
+    "labelled_rooms_inside", "labelled_room_ids",
+    "bounding_wall_bands", "bounding_portals",
+    "barriers_that_cannot_release", "holes", "min_extent_mm", "aspect",
+    "touches_envelope_boundary", "leaks_into_other_rooms",
+    "widest_open_passage_mm", "hairline_junction_gaps",
+    "blockers", "provenance", "notes")
+
+
+def free_space_qa(candidates=(), labels_inside=None, release=None,
+                  leaks=()) -> Sheet:
+    """The geometry authority's own output, with its release state beside it.
+
+    This sheet and the Topology QA sheet both carry areas, and until now
+    neither said which one a quantity would be measured from. That was MIXED
+    AUTHORITY: two sets of numbers for the same rooms, both plausible, with
+    the reader left to guess. This is the authority; that one is a
+    diagnostic.
+
+    A component holding more than one labelled room is NOT a room. Its area
+    is reported because hiding it would hide the problem, and every such row
+    carries the leak that merged it.
+    """
+    inside = dict(labels_inside or {})
+    by_geom = {r["space_geometry_id"]: r
+               for r in (release or {}).get("space_geometries", ())}
+    leaks_by_geom: dict = {}
+    for lk in leaks:
+        leaks_by_geom.setdefault(lk.get("space_geometry_id"), []).append(lk)
+
+    rows = []
+    for c in candidates:
+        gid = c.get("space_geometry_id")
+        ids = tuple(inside.get(gid, ()))
+        rel = by_geom.get(gid, {})
+        mine = leaks_by_geom.get(gid, [])
+        widest = max([lk.get("passage_width_mm") or 0.0 for lk in mine]
+                     or [0.0])
+        hairlines = sum(1 for lk in mine
+                        if lk.get("hairline_junction_gap"))
+        rows.append(OrderedDict(
+            space_geometry_id=gid,
+            geometry_role=cell(c.get("geometry_role")),
+            geometry_status=cell(c.get("geometry_status")),
+            measurement_basis=cell(c.get("measurement_basis")),
+            releasable=c.get("releasable", False),
+            barrier_release_class=cell(rel.get("release_class")),
+            clear_internal_area_m2=cell(c.get("clear_internal_area_m2")),
+            clear_internal_perimeter_m=cell(
+                c.get("clear_internal_perimeter_m")),
+            labelled_rooms_inside=len(ids),
+            labelled_room_ids=cell(", ".join(ids[:24])),
+            bounding_wall_bands=len(c.get("bounding_band_ids", ())),
+            bounding_portals=cell(", ".join(
+                c.get("bounding_portal_ids", ()))),
+            barriers_that_cannot_release=cell(", ".join(
+                rel.get("barriers_that_cannot_release", ()))),
+            holes=c.get("holes", 0),
+            min_extent_mm=cell(c.get("min_extent_mm")),
+            aspect=cell(c.get("aspect")),
+            touches_envelope_boundary=c.get("touches_envelope_boundary",
+                                            False),
+            leaks_into_other_rooms=len(mine),
+            widest_open_passage_mm=cell(widest or None),
+            hairline_junction_gaps=hairlines,
+            blockers=cell(", ".join(c.get("blockers", ()))),
+            provenance=cell(", ".join(
+                f"{k}={v}" for k, v in sorted(
+                    (c.get("provenance") or {}).items()))),
+            notes=cell(c.get("why"))))
+    return Sheet(
+        name=SHEET_FREE_SPACE, columns=FREE_SPACE_COLUMNS, rows=tuple(rows),
+        notes=(
+            AUTHORITY_NOTE,
+            "A ROOM IS A HOLE IN THE WALL SOLID. Every polygon here is a "
+            "connected component of ENVELOPE minus (WALL SOLID union PORTAL "
+            "BARRIERS) — no offset, no wall-side ownership, no corner "
+            "correction, and no closure rule.",
+            "measurement_basis is on every row because a number without its "
+            "basis is not a measurement. These are clear internal "
+            "finish-face polygons and nothing else.",
+            "labelled_rooms_inside > 1 means this component is NOT a room: "
+            "two or more spaces merged into one polygon. Its area is real "
+            "and it is not a room's area. The leak columns say where it "
+            "merged and how wide the passage was.",
+            "hairline_junction_gaps counts passages where accepted wall "
+            "bands run along the WHOLE opening and free space crossed "
+            "anyway. Nothing is missing from the drawing there: two wall "
+            "polygons fail to meet, and the repair is in the extractor.",
+            "releasable and barrier_release_class are separate questions. A "
+            "polygon can be geometrically sound and still rest on a portal "
+            "whose existence only one evidence family supports.",
+            "DIAGNOSTIC UNTIL RELEASED. No row here has produced a "
+            "quantity, and a multi-room row must never produce one.",
+        ))
+
+
 # ------------------------------------------------------------ topology QA
 
 # graph_type and topology_run_id are first on purpose. A material-graph face
@@ -1281,6 +1418,11 @@ def topology_qa(faces=(), correspondence=(), containment=()) -> Sheet:
     return Sheet(
         name=SHEET_TOPOLOGY, columns=TOPOLOGY_COLUMNS, rows=tuple(rows),
         notes=(
+            AUTHORITY_NOTE,
+            "So the areas on THIS sheet are not the project's areas. The "
+            "Free Space QA sheet carries those. Two sheets quoting areas for "
+            "the same rooms with nothing saying which one counts was MIXED "
+            "AUTHORITY, and it is the defect this note exists to close.",
             "DIAGNOSTIC ONLY. Every face here is a hypothesis produced by the "
             "vector wall graph alone. None releases a quantity and none has "
             "replaced the current geometry source.",
@@ -1459,6 +1601,11 @@ def build_workbook(bundle: dict) -> Workbook:
         SHEET_WALL_QA: wall_extraction_qa(
             bundle.get("wall_bands", ()), bundle.get("wall_rejections", ()),
             bundle.get("wall_sides", ())),
+        SHEET_FREE_SPACE: free_space_qa(
+            bundle.get("free_space_candidates", ()),
+            bundle.get("labels_inside"),
+            bundle.get("barrier_release"),
+            bundle.get("space_leaks", ())),
         SHEET_TOPOLOGY: topology_qa(bundle.get("faces", ()),
                                     bundle.get("face_correspondence", ()),
                                     bundle.get("face_containment", ())),

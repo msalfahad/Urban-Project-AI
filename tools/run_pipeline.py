@@ -24,7 +24,21 @@ from engine.control_freeze import summary as freeze_summary
 from engine.document_observations import readiness as document_readiness
 from engine.free_space import (OCCUPIABLE_SPACE_CANDIDATE,
                                assert_non_overlapping, build_free_space,
+                               envelope_barrier_sensitivity,
                                envelope_from_wall_solid, partition_barriers)
+from engine.disagreement_map import build as build_disagreement
+from engine.disagreement_map import polygon_from_mask
+from engine.free_space import release_policy
+from engine.reference_mapping import ReferenceRow, refuse_if_sealed
+from engine.reference_mapping import resolve as resolve_references
+from engine.free_space_invariants import falsify as falsify_free
+from engine.leak_map import build as build_leaks
+from engine.leak_map import summary as leak_summary
+from engine.unpaired_strokes import classify as classify_strokes
+from engine.unpaired_strokes import summary as stroke_summary
+from engine.interval_fidelity import audit as interval_audit
+from engine.snap_tolerance import compare_to_the_grid_in_use as compare_snap
+from engine.snap_tolerance import measure as measure_snap
 from engine.planar import build_half_edges
 from engine.planar_falsifiers import falsify
 from engine.source_audit import audit_drawing, cad_oracle
@@ -279,7 +293,17 @@ def run(pdf: str = PDF) -> dict:
     bands, rejections = build_bands(faces, caps=caps, wall_pen=pen,
                                     raster_support=support)
     singles = single_face_candidates(rejections, faces, raster_support=support)
-    w_rec = man.add("wall_extraction", RUN_ID, band_summary(bands, rejections),
+    # §2 — the unpaired wall-pen population, classified on evidence. Its
+    # LENGTH was previously reported as SINGLE_LINE_WALL, which was a guess
+    # dressed as a measurement.
+    paired_face_ids = {i for b in bands
+                       for i in tuple(b.face_a_ids) + tuple(b.face_b_ids)}
+    strokes = classify_strokes(
+        [f for f in faces if f.segment_id not in paired_face_ids],
+        bands, raster_support=support, wall_pen=pen)
+    w_rec = man.add("wall_extraction", RUN_ID,
+                    {**band_summary(bands, rejections),
+                     "unpaired_wall_style_strokes": stroke_summary(strokes)},
                     consumed=[("frame", f_rec.output_hash)])
 
     # --- 3 wall graph (MATERIAL) ----------------------------------------
@@ -518,16 +542,56 @@ def run(pdf: str = PDF) -> dict:
         envelope, solid, barriers, wall_polys, run_id=RUN_ID)
     assert_non_overlapping(free_cands)
 
-    ws_rec = man.add("wall_solid", RUN_ID,
+    # §3 — the eight free-space invariants, run on the real result. Nothing
+    # downstream may quote an area from a construction that does not hold.
+    free_invariants = falsify_free(
+        wall_polys, solid, barriers, envelope, free_cands).record()
+    # §4 — an internal doorway must not move the floor's outer extent.
+    envelope_sensitivity = envelope_barrier_sensitivity(
+        solid, barriers, wall_polys)
+    # §10 — does each polygon span only what the drawing drew?
+    fidelity = interval_audit(wall_polys, portals=all_portals,
+                              established=lambda q: q.exists).record()
+    # §11 — the snap grid, measured on THIS drawing's coordinates.
+    snap_evidence = measure_snap([w.ring for w in wall_polys
+                                  if w.is_resolved])
+    snap_audit = {
+        **snap_evidence.record(),
+        "grid_actually_used": compare_snap(snap_evidence, solid.snap_grid_mm),
+    }
+
+    # §13 — the replacement spine is SIX stages, and the manifest says so.
+    # Collapsing them into "wall_solid" and "free_space" hid where an area
+    # came from: a reader could not tell whether an envelope was derived
+    # before or after the barriers, and lineage is the whole point.
+    wp_rec = man.add("wall_polygon_run", RUN_ID,
                      {"wall_polygons": [w.record() for w in wall_polys],
-                      "solid": solid.record()},
+                      "interval_fidelity": fidelity},
                      consumed=[("wall_extraction", w_rec.output_hash)])
-    fs_rec = man.add("free_space", RUN_ID,
-                     {"envelope": envelope.record(),
-                      "barriers": [b.record() for b in barriers],
-                      "candidates": [c.record() for c in free_cands]},
-                     consumed=[("wall_solid", ws_rec.output_hash),
+    ws_rec = man.add("wall_solid_run", RUN_ID,
+                     {"solid": solid.record(),
+                      "numerical_snap_tolerance": snap_audit},
+                     consumed=[("wall_polygon_run", wp_rec.output_hash)])
+    pp_rec = man.add("portal_partition_run", RUN_ID,
+                     {"barriers": [b.record() for b in barriers],
+                      "material_role": "TOPOLOGY_ONLY_NOT_MATERIAL"},
+                     consumed=[("wall_polygon_run", wp_rec.output_hash),
                                ("portal_detection", o_rec.output_hash)])
+    be_rec = man.add("building_envelope_run", RUN_ID,
+                     {"envelope": envelope.record(),
+                      "internal_barrier_sensitivity": envelope_sensitivity},
+                     consumed=[("wall_solid_run", ws_rec.output_hash),
+                               ("portal_partition_run",
+                                pp_rec.output_hash)])
+    fs_rec = man.add("free_space_run", RUN_ID,
+                     {"candidates": [c.record() for c in free_cands],
+                      "health": free_health,
+                      "invariants": free_invariants},
+                     consumed=[("building_envelope_run",
+                                be_rec.output_hash),
+                               ("wall_solid_run", ws_rec.output_hash),
+                               ("portal_partition_run",
+                                pp_rec.output_hash)])
 
     # §9 — raster challenges the vector result and supplies no millimetre.
     from shapely.geometry import Point
@@ -553,13 +617,50 @@ def run(pdf: str = PDF) -> dict:
                     if x.geometry_role == OCCUPIABLE_SPACE_CANDIDATE],
             run_id=RUN_ID))
 
+    # §8 / §9 — WHERE the merged components leaked, and what is drawn
+    # there. Two localisers, because the raster one is provably incomplete
+    # on its own; see engine.leak_map.build.
+    rid_of = {r["space_id"]: k for k, r in regions.items()
+              if r.get("space_id")}
+
+    def _region_of(space_id):
+        return seg.labels == rid_of[space_id] if space_id in rid_of else None
+
+    thickest = max([w.thickness_mm for w in wall_polys
+                    if w.thickness_mm is not None] or [0.0])
+    leaks, leak_pairs = build_leaks(
+        free_cands, labels_in, region_of=_region_of, px_mm=px,
+        to_vector=frame.to_vector, bands=bands, strokes=strokes,
+        portals=all_portals, controls=[c.space_id for c in controls],
+        max_wall_thickness_mm=thickest,
+        seeds={r["space_id"]: r["centroid_mm"] for r in regions.values()
+               if r.get("space_id")})
+    leaks_rec = leak_summary(leaks, candidates=free_cands, audit=leak_pairs)
+
+    # §13 — resolution is its own stage: this is where a free-space
+    # component acquires a label, and where a control is frozen against it.
+    sr_rec = man.add("space_resolution_run", RUN_ID,
+                     {"labels_inside": labels_in,
+                      "raster_vector_topology": topo_compare,
+        # §8 / §9 — where the merged components actually leaked.
+        "space_leak_maps": leaks_rec,
+        # §2 — the unpaired population, classified. NOT 851 m of wall.
+        "unpaired_wall_style_strokes": stroke_summary(strokes),
+                      "frozen_controls": [f.record() for f in frozen],
+                      "leak_maps": leaks_rec},
+                     consumed=[("free_space_run",
+                                fs_rec.output_hash)])
+
     # §17 — what the sheet is MADE OF. Safe to run on an unseen project.
+    # The unpaired stroke classification goes in, so the audit reports a
+    # classified population rather than 851 m called SINGLE_LINE_WALL.
     audit = audit_drawing(drawing, drawing_id=sm["drawing_id"],
                           revision=sm["drawing_revision"],
                           source_hash=src_hash, bands=bands,
-                          rejections=rejections)
+                          rejections=rejections, unpaired_strokes=strokes)
     man.add("source_audit", RUN_ID, audit.record(),
-            consumed=[("wall_extraction", w_rec.output_hash)])
+            consumed=[("wall_extraction", w_rec.output_hash),
+                      ("space_resolution_run", sr_rec.output_hash)])
 
     # §18 — fragility, not tuning: does the answer move when the tolerances do?
     sensitivity = tolerance_sensitivity(bands, all_portals)
@@ -618,6 +719,72 @@ def run(pdf: str = PDF) -> dict:
             reference_basis=CLEAR_INTERNAL,
             reference_name="RASTER_SEGMENTATION_REGION")
         for f in frozen]
+
+    # §6 — WHY a frozen control differs from its raster reference, cut into
+    # causes A-G. Nothing here corrects the geometry and nothing is tuned:
+    # several of the causes are the REFERENCE's error.
+    def _raster_polygon(space_id):
+        rid = next((k for k, r in regions.items()
+                    if r.get("space_id") == space_id), None)
+        if rid is None:
+            return None
+        return polygon_from_mask(seg.labels == rid, px_mm=px,
+                                 to_vector=frame.to_vector)
+
+    other_polys = {r["space_id"]: _raster_polygon(r["space_id"])
+                   for r in regions.values() if r.get("space_id")}
+    disagreements = []
+    for f in frozen:
+        holder = next((c for c in free_cands
+                       if f.space_id in labels_in.get(c.space_geometry_id,
+                                                      ())), None)
+        disagreements.append(build_disagreement(
+            f.space_id,
+            holder.geometry if holder is not None else None,
+            other_polys.get(f.space_id), solid=solid, barriers=barriers,
+            other_regions=other_polys,
+            max_wall_thickness_mm=thickest).record())
+
+    # §5 — which spaces rest on a barrier that may not release a quantity.
+    barrier_release = release_policy(barriers, free_cands)
+
+    # §7 — other references may be opened AFTER the freeze, and only where
+    # the mapping and the basis are both unambiguous. On this project the
+    # space map carries names and types but no areas, so every row resolves
+    # to a space and then stops at NO_VALUE: the mapping is recorded, the
+    # comparison is not. The sealed site benchmark is refused by name.
+    ref_rows = [ReferenceRow(row_id=f"SM-{i:03d}",
+                             label=s.get("name_en") or s.get("space_id", ""),
+                             value=None, basis="",
+                             source="SPACE_MAP_LABEL_ROW")
+                for i, s in enumerate(sm.get("spaces", ()), 1)]
+    ref_spaces = {s["space_id"]: {"name_en": s.get("name_en", ""),
+                                  "name_ar": s.get("name_ar", ""),
+                                  "room_type": s.get("room_type", "")}
+                  for s in sm.get("spaces", ()) if s.get("space_id")}
+    reference_mapping = {
+        **resolve_references(ref_rows, ref_spaces,
+                             compatible_bases=(CLEAR_INTERNAL,)).record(),
+        "references_available_on_this_project": {
+            "RASTER_SEGMENTATION_REGION": (
+                "opened, after the freeze, and decomposed by cause in "
+                "frozen_controls.disagreement_maps. It is a second signal, "
+                "not ground truth"),
+            "SPACE_MAP_LABEL_ROWS": (
+                "names and room types only. Every row maps to a space and "
+                "carries NO area, so the mapping is recorded and no "
+                "comparison is made"),
+            "TOPOLOGY_OVERLAY": (
+                "human validation states, not measurements. Counted "
+                "separately from automatic output and never quoted as "
+                "evidence that the algorithm is accurate"),
+            "SEALED_SITE_BENCHMARK": (
+                "NOT OPENED. It is the only honest test this project has of "
+                "whether the engine measures a real building, and reading it "
+                "here would spend it"),
+        },
+    }
+    refuse_if_sealed(str(SPACE_MAP))
 
     # A bounding box per space, as an INDEX. `engine.bbox` refuses to let any
     # of these supply a room side, perimeter, closure or area.
@@ -773,14 +940,33 @@ def run(pdf: str = PDF) -> dict:
             "rejected": free_health["barriers_rejected"],
             "unresolved": free_health["barriers_unresolved"],
             "material_role": "TOPOLOGY_ONLY_NOT_MATERIAL",
+            # §5 — accepted is not releasable. A PORTAL_PROBABLE may make a
+            # space hypothesis and may NOT make that space releasable.
+            "release_policy": barrier_release,
             "detail": [b.record() for b in barriers],
         },
-        "building_envelope": envelope.record(),
+        "building_envelope": {
+            **envelope.record(),
+            # §4 — the audit, not an assurance. It is reported whether it
+            # passes or fails, and a vacuous pass is visible: if every
+            # barrier classified external there would be nothing to test.
+            "internal_barrier_sensitivity": envelope_sensitivity,
+        },
         "free_space": {
             **free_health,
             "candidates": [c.record() for c in free_cands],
         },
+        # §3 — the invariants that make the free-space areas quotable.
+        "free_space_invariants": free_invariants,
+        # §10 — what the polygons span against what the drawing drew.
+        "wall_polygon_interval_fidelity": fidelity,
+        # §11 — a measured tolerance, and the constant it audits.
+        "numerical_snap_tolerance": snap_audit,
         "raster_vector_topology": topo_compare,
+        # §8 / §9 — where the merged components actually leaked.
+        "space_leak_maps": leaks_rec,
+        # §2 — the unpaired population, classified. NOT 851 m of wall.
+        "unpaired_wall_style_strokes": stroke_summary(strokes),
         "raster_output_vs_validated_state": segmentation_vs_validated(
             auto_regions=len(regions),
             auto_labelled=sum(1 for r in regions.values()
@@ -796,6 +982,10 @@ def run(pdf: str = PDF) -> dict:
             **freeze_summary(frozen),
             "frozen": [f.record() for f in frozen],
             "comparison_after_freeze": control_comparisons,
+            # §6 — the delta decomposed. An area delta is not an error rate.
+            "disagreement_maps": disagreements,
+            # §7 — which other references may be opened at all.
+            "reference_mapping": reference_mapping,
         },
         "source_audit": audit.record(),
         "tolerance_sensitivity": sensitivity,

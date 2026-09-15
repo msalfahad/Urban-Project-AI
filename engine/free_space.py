@@ -57,6 +57,28 @@ REJECT_NO_HOST = "PORTAL_HAS_NO_HOSTED_JAMB_GEOMETRY"
 # Topology-only geometry, never material. The name is deliberately awkward.
 TOPOLOGY_ONLY_NOT_MATERIAL = "TOPOLOGY_ONLY_NOT_MATERIAL"
 
+# A barrier is accepted geometrically long before it is trustworthy enough to
+# let a quantity out of the door. These two classes keep that apart.
+#
+# A PORTAL_PROBABLE may generate a space HYPOTHESIS: closing it produces a
+# component someone can look at, name and argue about, and that is useful.
+# What it may NOT do is make the resulting space releasable, because the
+# entire space depends on an opening that only one evidence family supports.
+# If the portal is not really there, the space is not really there — and a
+# released quantity carries no memory of which portal it rested on.
+DIAGNOSTIC_PARTITION_BARRIER = "DIAGNOSTIC_PARTITION_BARRIER"
+RELEASABLE_PARTITION_BARRIER = "RELEASABLE_PARTITION_BARRIER"
+BARRIER_RELEASE_UNRESOLVED = "BARRIER_RELEASE_UNRESOLVED"
+
+# A component no barrier bounds. The policy is silent about it, and silence
+# is not a clearance.
+NOT_CONSTRAINED_BY_A_BARRIER = "NOT_CONSTRAINED_BY_A_BARRIER"
+
+RELEASE_CLASSES = (DIAGNOSTIC_PARTITION_BARRIER,
+                   RELEASABLE_PARTITION_BARRIER,
+                   BARRIER_RELEASE_UNRESOLVED,
+                   NOT_CONSTRAINED_BY_A_BARRIER)
+
 
 @dataclass(frozen=True)
 class PortalPartitionBarrier:
@@ -83,6 +105,42 @@ class PortalPartitionBarrier:
     def opening_width_mm(self) -> float:
         return abs(self.jamb_b_mm - self.jamb_a_mm)
 
+    @property
+    def release_class(self) -> str:
+        """May a space that depends on this barrier be released?
+
+        Only if the portal's EXISTENCE is validated — two independent
+        evidence families, not one family twice. Geometry being sufficient
+        is necessary and nowhere near enough: a barrier can be drawn to the
+        millimetre across an opening that is not there.
+        """
+        from engine.space_boundary import (EXISTENCE_VALIDATED,
+                                           GEOMETRY_SUFFICIENT)
+        if self.status != BARRIER_ACCEPTED:
+            return BARRIER_RELEASE_UNRESOLVED
+        if (self.existence_status == EXISTENCE_VALIDATED
+                and self.geometry_status in GEOMETRY_SUFFICIENT):
+            return RELEASABLE_PARTITION_BARRIER
+        return DIAGNOSTIC_PARTITION_BARRIER
+
+    @property
+    def release_blocker(self) -> str:
+        from engine.space_boundary import (EXISTENCE_VALIDATED,
+                                           GEOMETRY_SUFFICIENT)
+        if self.status != BARRIER_ACCEPTED:
+            return f"the barrier itself is {self.status}"
+        if self.existence_status != EXISTENCE_VALIDATED:
+            return (f"portal existence is {self.existence_status}: "
+                    f"{len(self.existence_evidence)} evidence item(s), and "
+                    "no SECOND INDEPENDENT FAMILY confirms the opening is "
+                    "real. Four geometric observations of the same gap are "
+                    "one family, not four proofs")
+        if self.geometry_status not in GEOMETRY_SUFFICIENT:
+            return (f"portal geometry is {self.geometry_status}: the jambs "
+                    "are not established, so the barrier's own extent is a "
+                    "hypothesis")
+        return ""
+
     def record(self) -> dict:
         return {"portal_id": self.portal_id, "status": self.status,
                 "host_wall_band_id": self.host_wall_band_id,
@@ -98,8 +156,83 @@ class PortalPartitionBarrier:
                 "drawing_id": self.drawing_id,
                 "drawing_revision": self.drawing_revision,
                 "material_role": self.material_role,
+                "release_class": self.release_class,
+                "release_blocker": self.release_blocker,
+                "may_release_a_space": (
+                    self.release_class == RELEASABLE_PARTITION_BARRIER),
                 "vertices": len(self.ring),
                 "why": self.why}
+
+
+def release_policy(barriers, candidates=(), bounding_of=None) -> dict:
+    """Which space geometries rest on a barrier that cannot release.
+
+    A component's boundary may run through several barriers. It is only
+    releasable if EVERY barrier it depends on is, because one unproven
+    opening is enough to make the whole component the wrong shape.
+    """
+    accepted = [b for b in barriers if b.status == BARRIER_ACCEPTED]
+    by_id = {b.portal_id: b for b in accepted}
+    rows = []
+    for c in candidates:
+        ids = list(bounding_of(c) if bounding_of is not None
+                   else getattr(c, "bounding_portal_ids", ()))
+        mine = [by_id[i] for i in ids if i in by_id]
+        blocking = [b for b in mine
+                    if b.release_class != RELEASABLE_PARTITION_BARRIER]
+        if not mine:
+            # This policy has nothing to say about a component that no
+            # barrier bounds. Calling it releasable would turn silence into
+            # a clearance — and most of AR-00's components are merged blobs
+            # that no barrier touches.
+            cls = NOT_CONSTRAINED_BY_A_BARRIER
+            why = ("no accepted barrier bounds this component, so the "
+                   "barrier release policy does not apply to it. That is "
+                   "NOT a clearance: whatever else blocks this geometry "
+                   "blocks it still")
+        elif blocking:
+            cls = DIAGNOSTIC_PARTITION_BARRIER
+            why = (f"{len(blocking)} of {len(mine)} barrier(s) rest on "
+                   "portal existence that is not validated, so this "
+                   "component's shape depends on an opening nobody has "
+                   "confirmed")
+        else:
+            cls = RELEASABLE_PARTITION_BARRIER
+            why = ("every barrier this component's boundary runs through "
+                   "has validated portal existence")
+        rows.append({
+            "space_geometry_id": c.space_geometry_id,
+            "barriers_depended_on": len(mine),
+            "barriers_that_cannot_release": [b.portal_id for b in blocking],
+            "release_class": cls,
+            "why": why,
+        })
+    return {
+        "policy": ("a PORTAL_PROBABLE may generate a space HYPOTHESIS. It "
+                   "may NOT make the resulting space releasable: if the "
+                   "portal is not there the space is not there, and a "
+                   "released quantity carries no memory of which portal it "
+                   "rested on"),
+        "accepted_barriers": len(accepted),
+        "releasable_barriers": sum(
+            1 for b in accepted
+            if b.release_class == RELEASABLE_PARTITION_BARRIER),
+        "diagnostic_barriers": sum(
+            1 for b in accepted
+            if b.release_class == DIAGNOSTIC_PARTITION_BARRIER),
+        "blockers_by_reason": dict(Counter(
+            b.release_blocker for b in accepted if b.release_blocker)),
+        "space_geometries": rows,
+        "releasable_space_geometries": sum(
+            1 for r in rows
+            if r["release_class"] == RELEASABLE_PARTITION_BARRIER),
+        "space_geometries_no_barrier_bounds": sum(
+            1 for r in rows
+            if r["release_class"] == NOT_CONSTRAINED_BY_A_BARRIER),
+        "space_geometries_blocked_by_a_barrier": sum(
+            1 for r in rows
+            if r["release_class"] == DIAGNOSTIC_PARTITION_BARRIER),
+    }
 
 
 def partition_barriers(portals, wall_polys, *, drawing_id: str = "",
@@ -228,9 +361,27 @@ class BuildingEnvelope:
     caveat: str = ""
     why: str = ""
 
+    validation_status: str = ""
+
     @property
     def is_resolved(self) -> bool:
         return self.geometry is not None and self.basis in ENVELOPE_BASES
+
+    @property
+    def status(self) -> str:
+        """What may be claimed about this envelope.
+
+        An envelope built from the external ring with nothing left over is a
+        different object from one built beside unexplained exterior geometry,
+        and an area quoted from the second should carry that with it.
+        """
+        if self.validation_status:
+            return self.validation_status
+        if not self.is_resolved:
+            return "ENVELOPE_UNRESOLVED"
+        if self.unresolved_exterior:
+            return "ENVELOPE_GEOMETRY_ACCEPTED_WITH_UNRESOLVED_EXTERIOR"
+        return "ENVELOPE_GEOMETRY_ACCEPTED"
 
     @property
     def area_m2(self) -> float:
@@ -242,6 +393,7 @@ class BuildingEnvelope:
 
     def record(self) -> dict:
         return {"basis": self.basis, "is_resolved": self.is_resolved,
+                "validation_status": self.status,
                 "area_m2": round(self.area_m2, 3),
                 "perimeter_m": round(self.perimeter_m, 3),
                 "evidence": list(self.evidence),
@@ -257,6 +409,113 @@ class BuildingEnvelope:
                 "bbox_used": False, "convex_hull_used": False,
                 "internal_components_filled": False,
                 "caveat": self.caveat, "why": self.why}
+
+
+# The envelope must not move by more than this when internal barriers are
+# removed. ABSOLUTE: a percentage on a 1000 m2 floor would wave through a
+# square metre of footprint invented by an internal doorway.
+ENVELOPE_SENSITIVITY_TOLERANCE_MM2 = 10_000.0
+
+# How close a barrier must lie to the envelope's boundary to count as
+# closing an EXTERNAL opening rather than an internal one.
+ENVELOPE_BOUNDARY_REACH_MM = 1.0
+
+ENVELOPE_SENSITIVITY_PASS = "INTERNAL_BARRIERS_DO_NOT_MOVE_THE_FOOTPRINT"
+ENVELOPE_SENSITIVITY_FAIL = "INTERNAL_BARRIERS_ALTER_THE_FOOTPRINT"
+ENVELOPE_SENSITIVITY_NA = "NO_INTERNAL_BARRIERS_TO_TEST"
+
+
+def envelope_barrier_sensitivity(solid, barriers, wall_polys) -> dict:
+    """Does an INTERNAL doorway change the floor's outer extent?
+
+    It must not. A portal barrier exists to stop free space leaking between
+    two rooms; a barrier inside the building cannot add or remove floor. If
+    removing the internal barriers moves the envelope, then the envelope is
+    being derived from internal geometry somewhere, and every area computed
+    against it is wrong by an amount nobody can see.
+
+    So the envelope is rebuilt three ways and the areas compared:
+
+      ALL       every accepted barrier, as the run uses it
+      EXTERNAL  only barriers hosted on the external wall ring
+      NONE      no barriers at all
+
+    ALL vs EXTERNAL is the test, and it is a hard one. NONE is reported for
+    context and is EXPECTED to differ: a ring of external wall with a
+    doorway in it is not closed, so its own outer ring is a C-shape. That
+    difference is the barriers doing their job on the envelope's boundary,
+    which is a different thing from internal geometry moving it.
+    """
+    from shapely.geometry import Polygon
+
+    all_env = envelope_from_wall_solid(solid, barriers, wall_polys)
+    accepted = [b for b in barriers
+                if b.status == BARRIER_ACCEPTED and b.ring]
+
+    # A barrier is EXTERNAL if it sits ON the envelope's boundary — that is
+    # what closing a doorway in the external wall looks like. Membership of
+    # the ring COMPONENT is not the test: on AR-00 that component carries 197
+    # of the bands, because every internal wall touching the external ring
+    # belongs to the same connected solid, and classifying by it made the
+    # test vacuous by finding no internal barriers at all.
+    ext, internal = [], []
+    boundary = (None if all_env.geometry is None
+                else all_env.geometry.boundary)
+    for b in accepted:
+        poly = Polygon(list(b.ring))
+        on_boundary = (boundary is not None
+                       and poly.distance(boundary)
+                       <= ENVELOPE_BOUNDARY_REACH_MM)
+        (ext if on_boundary else internal).append(b)
+
+    ext_env = envelope_from_wall_solid(solid, ext, wall_polys)
+    none_env = envelope_from_wall_solid(solid, (), wall_polys)
+
+    a_all = all_env.geometry.area if all_env.geometry is not None else 0.0
+    a_ext = ext_env.geometry.area if ext_env.geometry is not None else 0.0
+    a_none = none_env.geometry.area if none_env.geometry is not None else 0.0
+    delta = a_all - a_ext
+
+    if not internal:
+        status = ENVELOPE_SENSITIVITY_NA
+    elif abs(delta) <= ENVELOPE_SENSITIVITY_TOLERANCE_MM2:
+        status = ENVELOPE_SENSITIVITY_PASS
+    else:
+        status = ENVELOPE_SENSITIVITY_FAIL
+
+    return {
+        "status": status,
+        "accepted_barriers": len(accepted),
+        "external_barriers": len(ext),
+        "internal_barriers": len(internal),
+        "internal_barrier_portal_ids": [b.portal_id for b in internal][:20],
+        "external_barrier_portal_ids": [b.portal_id for b in ext][:20],
+        "how_external_was_decided": (
+            "a barrier lying within "
+            f"{ENVELOPE_BOUNDARY_REACH_MM} mm of the envelope's own boundary "
+            "closes an external opening. Membership of the wall solid's ring "
+            "COMPONENT is not the test: that component carries almost every "
+            "band, because internal walls touching the external ring are "
+            "part of the same connected solid"),
+        "envelope_with_all_barriers_m2": round(a_all / 1e6, 4),
+        "envelope_with_external_barriers_only_m2": round(a_ext / 1e6, 4),
+        "envelope_with_no_barriers_m2": round(a_none / 1e6, 4),
+        "delta_from_internal_barriers_m2": round(delta / 1e6, 6),
+        "delta_from_internal_barriers_mm2": round(delta, 1),
+        "tolerance_mm2": ENVELOPE_SENSITIVITY_TOLERANCE_MM2,
+        "basis_with_all_barriers": all_env.basis,
+        "basis_with_external_only": ext_env.basis,
+        "basis_with_no_barriers": none_env.basis,
+        "the_test": ("ALL vs EXTERNAL must agree to within an absolute "
+                     "tolerance. NONE is context and is expected to differ, "
+                     "because an external ring with an unclosed doorway is a "
+                     "C-shape rather than a ring"),
+        "why_it_matters": (
+            "a barrier inside the building cannot add or remove floor. If "
+            "removing the internal ones moves the envelope, the envelope is "
+            "being derived from internal geometry and every area measured "
+            "against it is wrong by an amount nobody can see"),
+    }
 
 
 def envelope_from_wall_solid(solid, barriers=(), wall_polys=()

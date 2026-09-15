@@ -643,7 +643,23 @@ def bundle(space_map_path: Path = DEFAULT_SPACE_MAP,
             "quantity_released": ready,
         })
 
-    # --- the two top-level statuses ---------------------------------------
+    # --- the four top-level statuses --------------------------------------
+    # Read from THIS run rather than asserted. The free-space path is the
+    # geometry authority, so its invariants and its controls are what decide
+    # whether the MECHANISM is proven, and its single-room component count is
+    # what decides PROJECT_SPACE_RECALL. The graph path's E31A gate decides
+    # neither, and passing it as a BOQ blocker is what made the workbook's
+    # authority mixed: it held the project on a diagnostic's condition.
+    _r = _run()
+    _fs_inv = _r.get("free_space_invariants", {})
+    _frozen = _r.get("frozen_controls", {})
+    _cands = _r.get("free_space", {}).get("candidates", ())
+    _labels_in = _r.get("raster_vector_topology", {})
+    _single = sum(
+        1 for row in _labels_in.get("rows", ())
+        if len(row.get("labelled_space_ids", ())) == 1
+        and row.get("space_geometry_id"))
+
     status = assess_status(
         uses_total=len(USES),
         uses_with_ready_spaces=sum(1 for c in coverage if c["ready"]),
@@ -663,8 +679,13 @@ def bundle(space_map_path: Path = DEFAULT_SPACE_MAP,
         signed_trade_rules=len(_rule_sets()),
         unresolved_topology_spaces=sum(
             1 for s in model.spaces if not s.validated),
-        graph_gate_passed=bool(
-            diagnostic.get("e31a_gate", {}).get("ready_for_e31a")))
+        free_space_invariants_hold=_fs_inv.get("holds"),
+        controls_frozen=_frozen.get("frozen_controls",
+                                    len(_frozen.get("frozen", ()))),
+        controls_accepted=sum(
+            1 for f in _frozen.get("frozen", ())
+            if f.get("status") == "GEOMETRY_ACCEPTED_AND_FROZEN"),
+        single_room_space_geometries=_single)
 
     # §18 — these are E27 APPROVED PROJECT TRADE RULES. They are not room
     # templates and must not be filed as such.
@@ -684,6 +705,18 @@ def bundle(space_map_path: Path = DEFAULT_SPACE_MAP,
                   f"{sm['drawing_id']} {sm.get('floor_id', '')}".strip()),
         "spaces": spaces,
         "space_model": model,
+        # §14 — the Free Space QA sheet's own rows, from the geometry
+        # authority. Nothing on that sheet is derived here.
+        "free_space_candidates": _cands,
+        "labels_inside": {
+            row["space_geometry_id"]: row.get("labelled_space_ids", ())
+            for row in _labels_in.get("rows", ())
+            if row.get("space_geometry_id")},
+        "barrier_release": _r.get("portal_partition_barriers", {}).get(
+            "release_policy"),
+        "space_leaks": (
+            _r.get("space_leak_maps", {}).get("top_ranked", ())
+            + _r.get("space_leak_maps", {}).get("hairline_junction_gaps", ())),
         "room_counts": model.room_counts(),
         # §20 — the vector-space counts sit beside the raster ones, so
         # "physical topology validated = 33" can no longer be read as 33

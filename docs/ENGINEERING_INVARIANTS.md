@@ -537,3 +537,47 @@ junction gaps are 50, 50, 100, 150 and 300 mm — **5,000 to 30,000 times** the
 grid. They are not numerical artefacts and will not yield to a larger
 tolerance. Raising the grid to reach them would close every genuine 50 mm gap
 too, which is how a wall appears between two rooms that were drawn open.
+
+---
+
+## 24 · FOUR QUESTIONS, FOUR STATUSES
+
+The workbook reported geometry from two paths at once. The planar graph
+face path and the free-space path both produced areas for the same rooms,
+both plausible, with nothing saying which one a quantity would be measured
+from. That is **mixed authority**, and it is worse than either path being
+wrong, because a reader cannot tell that anything is undecided.
+
+The free-space path is the **geometry authority**, stated once in
+`engine/qa_workbook.GEOMETRY_AUTHORITY` and quoted on every sheet that
+carries geometry. The graph path is a `DIAGNOSTIC` whose six invariants are
+falsified on this drawing, and it may not release geometry. A **Free Space
+QA** sheet carries the authority's own rows, and it sits *before* Topology QA
+so a reader meets the authority first.
+
+The same conflation had reached the status line. `FINAL_BOQ_STATUS` was
+blocked, among other things, because *"the wall graph does not pass its E31A
+gates, so room polygons cannot be reconstructed"* — a condition nothing
+downstream depends on any more, standing in for the condition that actually
+matters. So there are now four:
+
+| Status | Question | AR-00 |
+|---|---|---|
+| `GEOMETRY_MECHANISM_PROVEN` | Does the **method** work? | **PASS** |
+| `PROJECT_SPACE_RECALL` | How many of **this floor's** rooms came out as their own polygon? | **PARTIAL** |
+| `TAKEOFF_COVERAGE_STATUS` | How much has been validated so far? | `VALIDATED_PARTIAL` |
+| `FINAL_BOQ_STATUS` | May a bill of quantities be produced? | `BLOCKED` |
+
+The first two are the pair that matters, and the confusion runs one way: a
+round that proves the method reads as a round that measured the building. It
+did not. `PASS` is earned by the free-space invariants holding and controls
+being frozen and accepted *before* any reference was opened — it says the
+mechanism works and **says nothing about how much of this floor it
+resolved**. `PARTIAL` says nine of seventeen in-scope spaces came out as
+their own polygon; the rest sit inside components holding several merged
+rooms, and a merged component's area is not a room's area.
+
+A mechanism that is proven and unproven are not the only two states. Where
+the invariants were never run, the status reads `FAIL` with the reason
+*"unproven — not failed, unproven"*, because a check nobody ran is not a
+check that passed.

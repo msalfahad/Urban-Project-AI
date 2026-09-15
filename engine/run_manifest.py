@@ -41,11 +41,26 @@ LINEAGE_CLASSES = (CURRENT_RUN, PRIOR_RUN, SUPERSEDED)
 STAGES = ("frame", "wall_extraction", "wall_graph", "portal_detection",
           "opening_detection", "space_boundary_graph", "space_topology",
           "topology",
-          # The replacement spine. `wall_solid` and `free_space` are the
-          # production geometry path; the graph stages above are demoted to
-          # DIAGNOSTIC_TOPOLOGY_PATH and may not release geometry.
-          "wall_solid", "free_space", "source_audit",
-          "semantic", "release_matrix")
+          # The replacement spine, one stage per step. The graph stages
+          # above are demoted to DIAGNOSTIC_TOPOLOGY_PATH and may not
+          # release geometry.
+          #
+          # These six are separate on purpose. Collapsing them into
+          # "wall_solid" and "free_space" hid where an area came from: a
+          # reader could not tell whether an envelope was derived before or
+          # after the barriers were applied, and lineage is the point.
+          "wall_polygon_run", "wall_solid_run", "portal_partition_run",
+          "building_envelope_run", "free_space_run", "space_resolution_run",
+          "source_audit", "semantic", "release_matrix")
+
+# Retired stage names, kept so an old manifest can still be read and so a
+# reader who greps for them finds out what replaced them rather than
+# nothing.
+SUPERSEDED_STAGES = {
+    "wall_solid": ("wall_polygon_run", "wall_solid_run"),
+    "free_space": ("portal_partition_run", "building_envelope_run",
+                   "free_space_run", "space_resolution_run"),
+}
 
 
 class ManifestError(RuntimeError):
