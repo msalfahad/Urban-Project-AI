@@ -266,9 +266,26 @@ class WallSolid:
             "area_change_from_snap_m2": round(
                 self.area_change_from_snap_m2, 6),
             "included_band_ids": len(self.included_band_ids),
-            "source_coverage_pct": (
+            # NOT "source coverage". This is the share of the bands that
+            # WERE ACCEPTED which became a polygon — a statement about this
+            # stage's own yield, with the accepted band set as its
+            # denominator. It says nothing about how much of the drawing's
+            # wall is in that set, and 100% here is compatible with a
+            # drawing whose walls are largely missing from it.
+            "accepted_band_polygonization_coverage_pct": (
                 round(100 * self.valid / self.input_polygons, 1)
                 if self.input_polygons else None),
+            "coverage_denominator": "ACCEPTED_WALL_BANDS_ONLY",
+            # The metric that would license a claim about the drawing does
+            # not exist yet, so it is named and left unestablished rather
+            # than substituted by the one above.
+            "drawing_wall_representation_coverage": "NOT_ESTABLISHED",
+            "why_not_established": (
+                "it requires knowing what share of the DRAWING's wall length "
+                "reached the accepted band set, and the unpaired wall-style "
+                "stroke population (engine.unpaired_strokes) is where that "
+                "denominator has to come from. Until it is classified, no "
+                "percentage here may be read as walls captured"),
             "note": ("GEOS union. Nothing is deleted: an invalid ring is "
                      "repaired and reported, and an unresolved band is listed "
                      "rather than dropped"),

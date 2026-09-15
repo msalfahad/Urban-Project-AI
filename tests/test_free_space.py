@@ -8,7 +8,7 @@ import pytest
 
 from engine.free_space import (BARRIER_ACCEPTED, BARRIER_REJECTED,
                                BARRIER_UNRESOLVED, CLEAR_INTERNAL_FINISH_FACE,
-                               ENVELOPE_FROM_WALL_SOLID_HULL,
+                               ENVELOPE_FROM_EXTERNAL_WALL_RING,
                                ENVELOPE_UNRESOLVED, EXTERNAL_FREE_SPACE,
                                GEOMETRY_VALID, OCCUPIABLE_SPACE_CANDIDATE,
                                SHAFT_CANDIDATE, TOPOLOGY_ONLY_NOT_MATERIAL,
@@ -70,7 +70,7 @@ def spaces_of(bands, portals=()):
     wps = wall_polygons(bands, drawing_id="TEST", revision="R1")
     solid = build_solid(wps)
     bars = partition_barriers(list(portals), wps, drawing_id="TEST")
-    env = envelope_from_wall_solid(solid, bars)
+    env = envelope_from_wall_solid(solid, bars, wps)
     cands, health = build_free_space(env, solid, bars, wps, run_id="T")
     return cands, health, wps, solid, bars, env
 
@@ -260,11 +260,35 @@ def test_an_unresolved_envelope_refuses_to_produce_free_space():
     assert "bounding rectangle" in health["why"]
 
 
-def test_the_wall_solid_envelope_states_its_own_caveat():
+def test_the_envelope_comes_from_the_external_ring_and_names_it():
     _, _, _, solid, _, env = spaces_of(rect(0, 0, 4000, 3000))
-    assert env.basis == ENVELOPE_FROM_WALL_SOLID_HULL
+    assert env.basis == ENVELOPE_FROM_EXTERNAL_WALL_RING
     assert env.is_resolved
-    assert "where MATERIAL is" in env.caveat
+    assert env.enclosure_ratio > 1.0
+    assert env.external_band_ids
+    assert env.record()["internal_components_filled"] is False
+    assert env.record()["bbox_used"] is False
+    assert env.record()["convex_hull_used"] is False
+
+
+def test_a_component_that_is_not_a_ring_produces_no_envelope():
+    """A solid partition is not a floor boundary, and no hull may stand in."""
+    from engine.wall_solid import wall_polygons as wp_of
+    solid = build_solid(wp_of([Band("SOLID", "H", 0.0, 0.0, 1000.0, 900.0)]))
+    env = envelope_from_wall_solid(solid, [], [])
+    assert not env.is_resolved
+    assert "no wall-solid component is a ring" in env.why
+    assert "solid body of geometry" in env.why
+
+
+def test_wall_geometry_outside_the_ring_is_reported_not_filled():
+    """Round 1 filled every component's hull and added 2.19 m2 of non-floor."""
+    bands = rect(0, 0, 4000, 3000, prefix="IN") + [
+        Band("OUT-1", "H", 20000.0, 20000.0, 22000.0, 200.0)]
+    _, _, _, _, _, env = spaces_of(bands)
+    assert env.unresolved_exterior
+    assert any("NOT filled into the floor envelope" in u["why"]
+               for u in env.unresolved_exterior)
 
 
 # --- geometry roles, not semantics -----------------------------------------

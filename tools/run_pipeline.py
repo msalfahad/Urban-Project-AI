@@ -512,7 +512,7 @@ def run(pdf: str = PDF) -> dict:
                                  drawing_id=sm["drawing_id"],
                                  revision=sm["drawing_revision"])
     # §6 — an envelope with a stated basis. Never a bounding rectangle.
-    envelope = envelope_from_wall_solid(solid, barriers)
+    envelope = envelope_from_wall_solid(solid, barriers, wall_polys)
     # §7 — FREE_SPACE = ENVELOPE - BARRIERS, and its components are spaces.
     free_cands, free_health = build_free_space(
         envelope, solid, barriers, wall_polys, run_id=RUN_ID)

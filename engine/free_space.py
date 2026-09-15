@@ -28,6 +28,22 @@ from dataclasses import dataclass, field
 
 CLEAR_INTERNAL_FINISH_FACE = "CLEAR_INTERNAL_FINISH_FACE"
 
+
+def _on_grid(geom, grid: float):
+    """Put a barrier on the SAME coordinate grid as the wall solid.
+
+    The audit caught this: wall polygons were snapped before the union and
+    barriers were not, so `solid - barriers` left slivers of 2-25 mm2 and free
+    space overlapped the very barriers meant to exclude it. The fix is a
+    coherent obstacle set, not a wider tolerance — an invariant one may widen
+    to pass is not an invariant.
+    """
+    if not grid:
+        return geom
+    from shapely import set_precision
+    return set_precision(geom, grid)
+
+
 # ------------------------------------------------------------ the barriers
 
 BARRIER_ACCEPTED = "BARRIER_ACCEPTED"
@@ -156,30 +172,59 @@ def partition_barriers(portals, wall_polys, *, drawing_id: str = "",
 # ------------------------------------------------------------ the envelope
 
 ENVELOPE_UNRESOLVED = "BUILDING_ENVELOPE_UNRESOLVED"
-ENVELOPE_FROM_WALL_SOLID_HULL = "OUTER_BOUNDARY_OF_THE_WALL_SOLID"
+ENVELOPE_FROM_EXTERNAL_WALL_RING = "EXTERNAL_WALL_RING_INNER_EXTENT"
 ENVELOPE_FROM_CAD = "CAD_FLOOR_BOUNDARY"
 ENVELOPE_FROM_PRINTED = "PRINTED_OVERALL_DIMENSIONS"
 
-ENVELOPE_BASES = (ENVELOPE_FROM_WALL_SOLID_HULL, ENVELOPE_FROM_CAD,
+ENVELOPE_BASES = (ENVELOPE_FROM_EXTERNAL_WALL_RING, ENVELOPE_FROM_CAD,
                   ENVELOPE_FROM_PRINTED)
+
+# Kept so an older reader does not silently get the new meaning: Round 1's
+# envelope filled EVERY wall-solid component's outer ring and unioned them.
+ENVELOPE_FROM_WALL_SOLID_HULL = "OUTER_BOUNDARY_OF_THE_WALL_SOLID_SUPERSEDED"
+
+# A component qualifies as an external wall ring only if filling its outer
+# ring creates INTERIOR that its own material does not occupy. A solid
+# rectangle of wall has hull == material, so its ratio is exactly 1.0; any
+# genuine ring is above it.
+#
+# The threshold is deliberately just above 1.0 rather than "large", because
+# the ratio is SIZE-DEPENDENT and a large threshold would reject small
+# buildings: AR-00's external ring scores 38.7, a 4 x 3 m room's scores 4.8,
+# and a 1 x 1 m closet's scores 1.5. Excluding a small building for being
+# small would be a bug, not a safeguard.
+MIN_RING_ENCLOSURE_RATIO = 1.2
 
 
 @dataclass(frozen=True)
 class BuildingEnvelope:
     """The floor's outer extent, with the basis it was established on.
 
-    The wall solid's outer boundary is NOT the usable floor envelope — it is
-    where material is. Using it as the envelope is a stated approximation, and
-    the free-space result carries that caveat rather than hiding it.
+    ROUND 1 GOT THIS WRONG, and the audit found it. It filled the outer ring
+    of every wall-solid component and unioned the lot. On AR-00 that produced
+    1002.290 m2 — but only 18 of the 46 filled hulls lie inside the external
+    ring at all, so the other 28 contributed 2.19 m2 of envelope that is not
+    floor. Filling a disconnected INTERNAL partition's hull and calling it
+    footprint is exactly what a floor envelope must not be built from.
 
-    A bounding rectangle is never acceptable here. BBOX IS NEVER PHYSICAL
-    GEOMETRY, and an envelope invented that way would put free space where the
-    building has none.
+    The envelope now comes from the EXTERNAL WALL RING and nothing else: the
+    component whose own outer ring encloses far more area than its material,
+    which is what a ring of external wall looks like. Components whose hulls
+    fall outside it are reported as unresolved exterior geometry, not absorbed.
+
+    A bounding rectangle and a convex hull are both refused. BBOX IS NEVER
+    PHYSICAL GEOMETRY, and a hull would bridge every re-entrant corner of the
+    footprint.
     """
 
     geometry: object = None
     basis: str = ENVELOPE_UNRESOLVED
     evidence: tuple[str, ...] = ()
+    external_band_ids: tuple[str, ...] = ()
+    external_portal_ids: tuple[str, ...] = ()
+    unresolved_exterior: tuple = ()
+    ring_component_material_m2: float | None = None
+    enclosure_ratio: float | None = None
     caveat: str = ""
     why: str = ""
 
@@ -191,51 +236,133 @@ class BuildingEnvelope:
     def area_m2(self) -> float:
         return 0.0 if self.geometry is None else self.geometry.area / 1e6
 
+    @property
+    def perimeter_m(self) -> float:
+        return 0.0 if self.geometry is None else self.geometry.length / 1000
+
     def record(self) -> dict:
         return {"basis": self.basis, "is_resolved": self.is_resolved,
                 "area_m2": round(self.area_m2, 3),
+                "perimeter_m": round(self.perimeter_m, 3),
                 "evidence": list(self.evidence),
+                "external_wall_band_ids": len(self.external_band_ids),
+                "external_wall_band_sample": list(self.external_band_ids[:12]),
+                "external_portal_closures": list(self.external_portal_ids),
+                "unresolved_exterior": list(self.unresolved_exterior),
+                "ring_component_material_m2": (
+                    None if self.ring_component_material_m2 is None
+                    else round(self.ring_component_material_m2, 3)),
+                "enclosure_ratio": (None if self.enclosure_ratio is None
+                                    else round(self.enclosure_ratio, 1)),
+                "bbox_used": False, "convex_hull_used": False,
+                "internal_components_filled": False,
                 "caveat": self.caveat, "why": self.why}
 
 
-def envelope_from_wall_solid(solid, barriers=()) -> BuildingEnvelope:
-    """The filled outer boundary of the barrier set, as a stated approximation.
+def envelope_from_wall_solid(solid, barriers=(), wall_polys=()
+                             ) -> BuildingEnvelope:
+    """The external wall ring's own interior. One component, named.
 
-    The BARRIERS matter here, not just the wall solid. A ring of walls with a
-    doorway in it is not a closed ring: its union is a C-shape, and filling a
-    C's exterior returns the C, not the floor it encloses. Plugging the
-    doorways first is what makes the outline closed — which is the same
-    geometry the free-space subtraction uses, so the two cannot disagree.
-
-    EVERY component is kept. Taking only the largest silently discards a
-    second structure on the same sheet, and a drawing legitimately contains
-    more than one.
+    `barriers` are accepted only where an EXTERNAL stretch needs closing;
+    internal portal barriers must not move the footprint, and a sensitivity
+    test in the pipeline checks that they do not.
     """
     from shapely.geometry import Polygon
     from shapely.ops import unary_union
-    parts = [g for g in ([solid.geometry] if solid.geometry is not None
-                         else []) if g is not None and not g.is_empty]
-    parts += [Polygon(list(b.ring)) for b in barriers
-              if b.status == BARRIER_ACCEPTED and b.ring]
-    if not parts:
+    if solid.geometry is None or solid.geometry.is_empty:
         return BuildingEnvelope(
             basis=ENVELOPE_UNRESOLVED,
             why=("no wall solid, so no envelope. Space extraction must say "
                  "so: a bounding rectangle is NOT an acceptable substitute"))
-    closed = unary_union(parts)
+    # Ring detection runs on the CLOSED obstacle set — wall solid plus the
+    # accepted barriers — because that is the geometry free space is computed
+    # against, and because a ring of wall with a doorway in it is not closed:
+    # its union is a C-shape whose hull is the C itself. Internal barriers sit
+    # inside the ring and cannot move its hull, which is what the pipeline's
+    # sensitivity test verifies rather than assumes.
+    grid = getattr(solid, "snap_grid_mm", 0.0)
+    accepted = [_on_grid(Polygon(list(b.ring)), grid) for b in barriers
+                if b.status == BARRIER_ACCEPTED and b.ring]
+    closed = unary_union([solid.geometry] + accepted)
     geoms = (list(closed.geoms) if closed.geom_type == "MultiPolygon"
              else [closed])
-    filled = unary_union([Polygon(g.exterior) for g in geoms])
+
+    # EVERY component that qualifies as a ring is kept — a sheet legitimately
+    # holds more than one structure. What is NOT kept is a component that is
+    # merely large: Round 1 filled all 46 and added 2.19 m2 of non-floor.
+    rings, rejected = [], []
+    for g in sorted(geoms, key=lambda g: -Polygon(g.exterior).area):
+        hull = Polygon(g.exterior)
+        ratio = (hull.area / g.area) if g.area else 0.0
+        interior = hull.difference(g)
+        if ratio >= MIN_RING_ENCLOSURE_RATIO and \
+                interior.area / 1e6 >= MIN_ROOM_AREA_M2:
+            rings.append((hull, g, ratio))
+        else:
+            rejected.append((hull, g, ratio))
+    if not rings:
+        big = max(geoms, key=lambda g: Polygon(g.exterior).area)
+        hull = Polygon(big.exterior)
+        ratio = (hull.area / big.area) if big.area else 0.0
+        return BuildingEnvelope(
+            basis=ENVELOPE_UNRESOLVED, enclosure_ratio=ratio,
+            why=(f"no wall-solid component is a ring: the largest encloses "
+                 f"{ratio:.2f}x its own material and leaves "
+                 f"{hull.difference(big).area / 1e6:.3f} m2 of interior. It "
+                 "is a solid body of geometry, not a boundary. Neither a "
+                 "bounding box nor a convex hull may stand in for one"))
+
+    ring_union = unary_union([h for h, _, _ in rings])
+    # Anything whose hull falls outside every ring is unresolved exterior
+    # geometry: a terrace, an adjacent structure, or extraction noise.
+    outside = []
+    for hull, g, ratio in rejected:
+        if ring_union.buffer(1.0).contains(hull):
+            continue
+        outside.append({
+            "material_m2": round(g.area / 1e6, 3),
+            "hull_m2": round(hull.area / 1e6, 3),
+            "enclosure_ratio": round(ratio, 2),
+            "centroid_mm": [round(v, 1) for v in (g.centroid.x, g.centroid.y)],
+            "why": ("this wall geometry lies outside every external ring: a "
+                    "terrace, an adjacent structure, or extraction noise. It "
+                    "is NOT filled into the floor envelope")})
+
+    material = sum(g.area for _, g, _ in rings) / 1e6
+    ratio = max(r for _, _, r in rings)
+    band_ids = tuple(sorted(
+        wp.wall_band_id for wp in wall_polys
+        if wp.is_resolved
+        and any(g.intersects(Polygon(list(wp.ring))) for _, g, _ in rings)))
+    # An accepted barrier that touches a ring's own boundary is closing an
+    # EXTERNAL stretch; one wholly inside is internal and changes nothing.
+    ext_portals = tuple(
+        b.portal_id for b in barriers
+        if b.status == BARRIER_ACCEPTED and b.ring
+        and ring_union.exterior.distance(
+            Polygon(list(b.ring))) < 1.0
+        if ring_union.geom_type == "Polygon")
+    geometry = ring_union
+
     return BuildingEnvelope(
-        geometry=filled, basis=ENVELOPE_FROM_WALL_SOLID_HULL,
-        evidence=("the filled outer rings of the wall solid plus the accepted "
-                  "portal partition barriers",),
-        caveat=("this is where MATERIAL is, not a surveyed floor boundary. An "
-                "unclosed run of external wall makes it too small, and free "
-                "space outside a genuine external wall would be included by "
-                "it. Every candidate carries that caveat"),
-        why=("derived, not assumed. An independent envelope from CAD or from "
-             "printed overall dimensions would replace it and is preferred"))
+        geometry=geometry, basis=ENVELOPE_FROM_EXTERNAL_WALL_RING,
+        evidence=(f"{len(rings)} ring component(s) holding "
+                  f"{material:.3f} m2 of material and enclosing "
+                  f"{geometry.area / 1e6:.3f} m2 — a best enclosure ratio of "
+                  f"{ratio:.1f}, which is what a ring of external wall looks "
+                  "like. {n} component(s) outside were NOT filled".format(
+                      n=len(outside)),),
+        external_band_ids=band_ids, external_portal_ids=ext_portals,
+        unresolved_exterior=tuple(outside),
+        ring_component_material_m2=material, enclosure_ratio=ratio,
+        caveat=("the OUTER face of the external wall ring bounds this, so the "
+                "envelope includes the external wall's own thickness. Free "
+                "space is measured after that wall is subtracted, so a room "
+                "is unaffected — but the envelope area is not a floor area"),
+        why=("derived from ONE named component, not from filling every "
+             "disconnected partition. An independent envelope from CAD or "
+             "from printed overall dimensions would replace it and is "
+             "preferred"))
 
 
 # ---------------------------------------------------------- the free space
@@ -378,7 +505,8 @@ def build_free_space(envelope, solid, barriers, wall_polys, *,
             "computed. It is NOT approximated by a bounding rectangle")
         return [], health
 
-    accepted = [Polygon(list(b.ring)) for b in barriers
+    grid = getattr(solid, "snap_grid_mm", 0.0)
+    accepted = [_on_grid(Polygon(list(b.ring)), grid) for b in barriers
                 if b.status == BARRIER_ACCEPTED and b.ring]
     parts = ([solid.geometry] if solid.geometry is not None else []) + accepted
     obstacles = unary_union(parts) if parts else None
@@ -389,7 +517,8 @@ def build_free_space(envelope, solid, barriers, wall_polys, *,
              else ([free] if not free.is_empty else []))
     by_band = {wp.wall_band_id: Polygon(list(wp.ring))
                for wp in wall_polys if wp.is_resolved}
-    by_portal = {b.portal_id: Polygon(list(b.ring)) for b in barriers
+    by_portal = {b.portal_id: _on_grid(Polygon(list(b.ring)), grid)
+                 for b in barriers
                  if b.status == BARRIER_ACCEPTED and b.ring}
     # The envelope may be several structures on one sheet, so its boundary is
     # the union of their outlines rather than one exterior ring.

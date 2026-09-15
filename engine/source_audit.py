@@ -25,12 +25,16 @@ from dataclasses import dataclass, field
 # How walls appear on a sheet. The engine currently handles the first well.
 DOUBLE_LINE_WALL = "DOUBLE_LINE_WALL"
 SINGLE_LINE_WALL = "SINGLE_LINE_WALL"
+# The unclassified population. A wall-pen stroke that did not pair is a
+# stroke drawn with the wall pen — not a wall — until evidence says more.
+UNPAIRED_WALL_STYLE_STROKE = "UNPAIRED_WALL_STYLE_STROKE"
 FILLED_POCHE_WALL = "FILLED_OR_POCHE_WALL"
 HATCHED_WALL = "HATCHED_WALL"
 REPRESENTATION_UNKNOWN = "REPRESENTATION_UNKNOWN"
 
 WALL_REPRESENTATIONS = (DOUBLE_LINE_WALL, SINGLE_LINE_WALL,
                         FILLED_POCHE_WALL, HATCHED_WALL,
+                        UNPAIRED_WALL_STYLE_STROKE,
                         REPRESENTATION_UNKNOWN)
 
 SUPPORTED_REPRESENTATIONS = (DOUBLE_LINE_WALL,)
@@ -63,12 +67,56 @@ class SourceAudit:
     stroke_width_histogram: dict = field(default_factory=dict)
     heavy_pen_pt: float | None = None
     paired_face_length_m: float | None = None
-    single_face_length_m: float | None = None
+    # NOT "single line wall length". The stroke weight says a mark was drawn
+    # with the wall pen and nothing more, so this is the length of the
+    # population and the classification of it is separate.
+    unpaired_wall_style_stroke_length_m: float | None = None
+    unpaired_stroke_classification: dict = field(default_factory=dict)
     wall_representation_mix: dict = field(default_factory=dict)
     dimension_representation: str = ""
     block_or_symbol_paths: int = 0
     verdict: str = REPRESENTATION_UNKNOWN
     why: str = ""
+
+    def _coverage_claim(self) -> dict:
+        """What share of the DRAWING's wall reached the accepted band set.
+
+        This is the figure a reader will want and the one most easily
+        overclaimed. It is only meaningful once the unpaired wall-style
+        stroke population has been classified, because until then the
+        denominator is unknown: an unpaired stroke may be a missing wall or
+        a fixture outline that was never a wall at all.
+        """
+        cls = self.unpaired_stroke_classification
+        if not cls or self.paired_face_length_m is None:
+            return {"status": "NOT_ESTABLISHED",
+                    "why": ("the unpaired wall-style stroke population is "
+                            "not classified, so the denominator is unknown. "
+                            "No percentage here may be read as walls "
+                            "captured")}
+        wall_like = cls.get("wall_like_length_m")
+        if wall_like is None:
+            return {"status": "NOT_ESTABLISHED",
+                    "why": "the classification reports no wall-like length"}
+        denom = self.paired_face_length_m + wall_like
+        return {
+            "status": "ESTABLISHED_AGAINST_A_CLASSIFIED_POPULATION",
+            "paired_into_bands_m": round(self.paired_face_length_m, 1),
+            "wall_like_but_unpaired_m": round(wall_like, 1),
+            "pct": (None if not denom
+                    else round(100 * self.paired_face_length_m / denom, 1)),
+            "why": ("the denominator counts only the unpaired strokes that "
+                    "evidence says could be wall. Strokes classified as "
+                    "fixture, duplicate, annotation or non-wall geometry are "
+                    "excluded, because counting them would understate "
+                    "capture by blaming the engine for marks that are not "
+                    "walls"),
+            "still_not_a_claim_that": (
+                "this share of the ARCHITECTURAL walls is captured. It is a "
+                "share of wall-pen stroke length, and a wall drawn in a "
+                "representation this engine does not read at all would not "
+                "appear in either term"),
+        }
 
     def record(self) -> dict:
         return {"drawing_id": self.drawing_id, "revision": self.revision,
@@ -82,8 +130,13 @@ class SourceAudit:
                 "stroke_width_histogram": dict(self.stroke_width_histogram),
                 "heavy_pen_pt": self.heavy_pen_pt,
                 "paired_face_length_m": self.paired_face_length_m,
-                "single_face_length_m": self.single_face_length_m,
+                "unpaired_wall_style_stroke_length_m":
+                    self.unpaired_wall_style_stroke_length_m,
+                "unpaired_stroke_classification": dict(
+                    self.unpaired_stroke_classification),
                 "wall_representation_mix": dict(self.wall_representation_mix),
+                "drawing_wall_representation_coverage": (
+                    self._coverage_claim()),
                 "dimension_representation": self.dimension_representation,
                 "block_or_symbol_paths": self.block_or_symbol_paths,
                 "verdict": self.verdict, "why": self.why,
@@ -93,8 +146,8 @@ class SourceAudit:
 
 
 def audit_drawing(drawing, *, drawing_id: str, revision: str,
-                  source_hash: str, bands=None, rejections=None
-                  ) -> SourceAudit:
+                  source_hash: str, bands=None, rejections=None,
+                  unpaired_strokes=None) -> SourceAudit:
     """Count what the sheet is made of. Nothing here measures a room."""
     segs = drawing.segments
     axis = [s for s in segs if s.is_axis_aligned]
@@ -118,11 +171,30 @@ def audit_drawing(drawing, *, drawing_id: str, revision: str,
         paired = sum(abs(b.end_mm - b.start_mm) for b in bands
                      if b.wall_face_separation_mm is not None) / 1000
         mix[DOUBLE_LINE_WALL] = round(paired, 1)
+    stroke_cls: dict = {}
     if rejections is not None:
         single = sum(getattr(r, "length_mm", 0.0) for r in rejections) / 1000
-        mix[SINGLE_LINE_WALL] = round(single, 1)
+        # The population, named for what is known about it. Calling this
+        # length SINGLE_LINE_WALL was a guess dressed as a measurement.
+        mix[UNPAIRED_WALL_STYLE_STROKE] = round(single, 1)
+    if unpaired_strokes is not None:
+        from engine.unpaired_strokes import (CONFIRMED_SINGLE_LINE_WALL,
+                                              summary as stroke_summary)
+        stroke_cls = dict(stroke_summary(unpaired_strokes))
+        per = stroke_cls.get("by_class", {})
+        # Only the class evidence actually confirmed enters the
+        # representation mix as single-line wall. The rest of the population
+        # stays in UNPAIRED_WALL_STYLE_STROKE, which is what is known.
+        mix[SINGLE_LINE_WALL] = per.get(
+            CONFIRMED_SINGLE_LINE_WALL, {}).get("length_m", 0.0)
 
-    total = (paired or 0.0) + (single or 0.0)
+    # The support share is judged against WALL-LIKE unpaired length when the
+    # population has been classified, and against the whole population when
+    # it has not — a drawing whose unpaired strokes turn out to be fixtures
+    # is not a drawing this engine cannot read.
+    unpaired_term = (stroke_cls.get("wall_like_length_m")
+                     if stroke_cls else single)
+    total = (paired or 0.0) + (unpaired_term or 0.0)
     share = (paired or 0.0) / total if total else 0.0
     if bands is None or rejections is None:
         verdict, why = REPRESENTATION_UNKNOWN, (
@@ -133,12 +205,25 @@ def audit_drawing(drawing, *, drawing_id: str, revision: str,
             f"{share * 100:.0f}% of wall-pen face length pairs into two-face "
             "bands, which is the representation this engine reads")
     elif share >= 0.3:
-        verdict, why = PARTIALLY_SUPPORTABLE, (
-            f"only {share * 100:.0f}% of wall-pen face length pairs into a "
-            "two-face band. The unpaired remainder is either single-line "
-            "wall, filled wall, or wall-pen marks that are not walls — and "
-            "the three need telling apart before more measurement is built "
-            "on the paired population alone")
+        if stroke_cls:
+            per = stroke_cls.get("by_class", {})
+            named = ", ".join(
+                f"{k} {v['length_m']:.0f} m"
+                for k, v in list(per.items())[:4])
+            why = (f"{share * 100:.0f}% of WALL-LIKE wall-pen face length "
+                   "pairs into a two-face band. The unpaired remainder has "
+                   f"been classified — {named} — so the shortfall is not a "
+                   "mystery: it is mostly wall that IS drawn and did not "
+                   "pair, which is a different repair from wall that is not "
+                   "drawn at all")
+        else:
+            why = (f"only {share * 100:.0f}% of wall-pen face length pairs "
+                   "into a two-face band. The unpaired remainder is either "
+                   "single-line wall, filled wall, or wall-pen marks that "
+                   "are not walls — and the three need telling apart before "
+                   "more measurement is built on the paired population "
+                   "alone")
+        verdict = PARTIALLY_SUPPORTABLE
     else:
         verdict, why = UNSUPPORTED, (
             f"{share * 100:.0f}% pairs into two-face bands. This drawing is "
@@ -156,7 +241,9 @@ def audit_drawing(drawing, *, drawing_id: str, revision: str,
         stroke_width_histogram={str(k): v for k, v in widths.most_common(10)},
         heavy_pen_pt=heavy,
         paired_face_length_m=(None if paired is None else round(paired, 1)),
-        single_face_length_m=(None if single is None else round(single, 1)),
+        unpaired_wall_style_stroke_length_m=(
+            None if single is None else round(single, 1)),
+        unpaired_stroke_classification=stroke_cls,
         wall_representation_mix=mix,
         dimension_representation=("NOT_EXTRACTED — see "
                                   "engine.document_observations"),

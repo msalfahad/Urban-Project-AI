@@ -428,3 +428,112 @@ WSH-01 error in a new costume: geometry agreeing, name still wrong.
 
 The roles are fixed in code before any extraction exists, because that is where
 the temptation lies.
+
+---
+
+## 22 · AN INSTRUMENT MUST KNOW WHAT IT CANNOT SEE
+
+A diagnostic that cannot fail looks exactly like one that is working.
+
+The first space leak map classified **27 of 30** expected separations as
+`NO_VECTOR_SEPARATOR` on a drawing whose walls are largely drawn. Three
+separate defects produced that number, and none of them was visible from the
+output:
+
+1. **A metres-long frontier was probed at one point.** A 6.8 m frontier asked
+   whether a wall bracketed its midpoint. Walls running along its other six
+   metres were invisible. Coverage is now an interval union over the whole
+   frontier, and the cause is read at the **aperture** — the stretch the
+   accepted wall material leaves open — because that is where free space
+   crossed.
+2. **The frontier's axis was read in raster space.** AR-00's frame transform
+   is `SWAP_FLIP_Y`, so every frontier was transposed and the engine searched
+   for walls *along* the line the two spaces divide. The axis, the extent and
+   the dividing line are now all measured after the transform.
+3. **The dividing line was a tolerance around a biased point.** A raster
+   region stops short of the wall face it abuts by an unknown amount, so a
+   fixed ±300 mm around the touch band's centre missed bands 500–850 mm away.
+   The window between two spaces is now **measured** from the gap between
+   them, and a pair further apart than the drawing's thickest wall is not a
+   candidate separation at all.
+
+The deeper failure was structural, and no amount of tuning would have reached
+it. **Raster region adjacency finds only where two rooms face each other**,
+and free space also leaks *around* structure. It localised 8 open apertures
+inside a component holding 22 labels — and 8 passages cannot join 22 rooms,
+because a spanning tree needs 21. The instrument was provably incomplete and
+its own output looked complete.
+
+So the merged polygon is asked directly. Eroding it and watching which labels
+fall apart finds every passage by construction, and the radius at which a
+pair separates **measures** the passage. Two things are then kept apart that
+are easy to conflate:
+
+- **Where it was cut**, proven by removing the channel and checking the two
+  sides actually fall into different components;
+- **How far it extends**, which only exists while the rooms either side are
+  wider than the erosion. Beyond that the removed material is one connected
+  sheet, and reading the drawing over it would return every band on the sheet
+  and look like a confident answer. That case is **refused**, keeping the
+  measured width and dropping the classification.
+
+A `partition_complete` check states, for every component, how many passages
+its label count requires and how many were reported. On AR-00 it still reads
+`complete: false` for the 22-label component. That is the point: the map says
+so itself.
+
+What the corrected instrument found was not what the broken one claimed. The
+largest single cause is **five hairline junction gaps of 50–300 mm** where
+accepted wall bands run along the whole passage and free space crossed
+anyway. Nothing is missing from the drawing there. Two wall polygons fail to
+meet, and no better reading of the source will ever close it.
+
+**A passage width measures the channel's narrow dimension.** A doorway is a
+channel as deep as the wall is thick and as long as the door is wide, and the
+erosion closes the depth first. A 200 mm passage is a wall's thickness, not a
+200 mm door.
+
+---
+
+## 23 · A TOLERANCE NOBODY MEASURED CANNOT BE WRONG
+
+The wall solid snapped vertices onto a 0.05 mm grid, justified as "one
+two-thousandth of the thinnest wall". That is a ratio to a wall, not a
+measurement of the coordinates being snapped, so it could be neither
+confirmed nor refuted — and the next sheet is produced by different software
+with different precision.
+
+So it is measured (`engine/snap_tolerance.py`). Vertices that ought to be one
+node are separated either by representation noise or by a real gap between
+two walls that do not meet, and a decade histogram of near-coincidence
+distances shows whether those two populations separate. On AR-00's 972
+wall-polygon vertices, 235 pairs from different rings lie within a
+millimetre:
+
+```
+<=1e-09 : 56      exactly coincident nodes
+<=1e-03 :  6
+<=0.01  : 173     representation noise, largest 0.0087 mm
+<=0.1   :  0   ┐
+<=1     :  0   ┘  EMPTY — nothing anybody drew comes this close
+```
+
+Two empty decades separate the noise from anything drawn. The measured
+recommendation is **0.01 mm**; the 0.05 mm in use is 5× larger, still an
+order of magnitude below the empty band, and is now reported as
+`SAFE_AND_WITHIN_AN_ORDER_OF_THE_MEASUREMENT` rather than asserted.
+
+Three rules survive any measurement:
+
+- a recommendation may **never** exceed `MAX_DEFENSIBLE_SNAP_MM` (1.0 mm);
+- a drawing whose near-coincidences run continuously to the ceiling gets
+  **no** recommendation — `NOISE_AND_GAPS_NOT_SEPARABLE`, snap nothing and
+  report the gaps;
+- the result is recorded **per run** and must not be promoted to a project
+  or engine default.
+
+This immediately settled a question the leak map raised. The five hairline
+junction gaps are 50, 50, 100, 150 and 300 mm — **5,000 to 30,000 times** the
+grid. They are not numerical artefacts and will not yield to a larger
+tolerance. Raising the grid to reach them would close every genuine 50 mm gap
+too, which is how a wall appears between two rooms that were drawn open.
