@@ -130,18 +130,46 @@ class SourceCoverage:
                 UNACCOUNTED: self._pct(self.unaccounted_mm),
             },
             "source_stroke_capture": {
-                "used_in_accepted_bands_pct": self._pct(
-                    self.used_in_bands_mm),
-                "of_wall_like_source_stroke_pct": (
+                # NAMES, not slogans. The first figure was being read as
+                # "55.5% of physical walls captured", which it is not and
+                # cannot be: no independent source establishes what the
+                # physical walls are.
+                "ACCEPTED_SHARE_OF_DEFINED_SOURCE_STROKE_POPULATION_PCT":
+                    self._pct(self.used_in_bands_mm),
+                "ACCEPTED_SHARE_OF_CLASSIFIED_WALL_LIKE_SOURCE_STROKES_PCT": (
                     None if self.wall_like_mm <= 0.0 else
                     round(100.0 * self.used_in_bands_mm / self.wall_like_mm,
                           2)),
-                "wall_like_source_stroke_m": round(
-                    self.wall_like_mm / 1000, 1),
-                "basis": ("both terms are SOURCE STROKE LENGTH. The second "
-                          "figure excludes strokes evidence says were never "
-                          "wall, and leaves UNRESOLVED out of both terms "
-                          "rather than choosing a side for it"),
+                "denominators": {
+                    "DEFINED_SOURCE_STROKE_POPULATION_M": round(
+                        self.total_mm / 1000, 1),
+                    "DEFINED_SOURCE_STROKE_POPULATION_IS": (
+                        "every wall-style source face considered by the "
+                        "extractor on this sheet, paired and unpaired"),
+                    "CLASSIFIED_WALL_LIKE_SOURCE_STROKES_M": round(
+                        self.wall_like_mm / 1000, 1),
+                    "CLASSIFIED_WALL_LIKE_SOURCE_STROKES_IS": (
+                        "the strokes consumed by accepted bands, plus the "
+                        "unpaired strokes evidence places in a wall-like "
+                        "class. Strokes classified non-wall or duplicate "
+                        "are excluded, and UNRESOLVED is in NEITHER term"),
+                },
+                "basis": ("both terms are SOURCE STROKE LENGTH"),
+                "what_these_do_not_mean": (
+                    "neither figure is physical-wall recall. They describe "
+                    "what share of a DEFINED POPULATION OF MARKS reached an "
+                    "accepted band. Whether those marks are the building's "
+                    "walls is not established by anything here, and no "
+                    "independent source on this project has been opened to "
+                    "establish it"),
+            },
+            "PHYSICAL_WALL_RECALL": {
+                "status": "NOT_INDEPENDENTLY_ESTABLISHED",
+                "why": ("it would require knowing the building's actual "
+                        "walls from a source outside this drawing. The "
+                        "sealed site benchmark is not opened, no CAD model "
+                        "is available, and a drawing cannot measure its own "
+                        "completeness"),
             },
             "accounting_identity": {
                 "closes": self.identity_closes,

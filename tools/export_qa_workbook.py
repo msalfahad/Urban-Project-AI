@@ -717,6 +717,23 @@ def bundle(space_map_path: Path = DEFAULT_SPACE_MAP,
         # §16 — the workbook must expose the two truths separately.
         "space_geometry_recall": _r.get("space_geometry_recall"),
         "geometry_source": "DIAGNOSTIC_AUGMENTED",
+        # What the fragmented-mate round actually established, carried as
+        # measured recovery rather than as a new geometry claim: the wall
+        # authority still decides what is ESTABLISHED, and the workbook
+        # reports it rather than re-deriving it.
+        "wall_authority": _r.get("wall_authority"),
+        "fragment_recovery": _r.get("fragment_recovery"),
+        "fragment_recovery_counterfactual": _r.get(
+            "fragment_recovery_counterfactual"),
+        # Which dependency holds release at zero, and which portals. A
+        # release recall of 0/17 is a true statement and a useless
+        # instruction without these.
+        "release_blockers": _r.get("release_blockers"),
+        # The UNRESOLVED population, ranked by measured separation
+        # failures and NOT by length. Nothing here is a wall.
+        "unresolved_stroke_impact": _r.get("unresolved_stroke_impact"),
+        # The frozen control, asserted rather than assumed.
+        "freeze_guard": _frozen.get("freeze_guard"),
         "space_leaks": (
             _r.get("space_leak_maps", {}).get("top_ranked", ())
             + _r.get("space_leak_maps", {}).get("hairline_junction_gaps", ())),

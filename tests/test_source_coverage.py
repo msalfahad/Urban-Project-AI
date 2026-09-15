@@ -143,9 +143,21 @@ def test_capture_against_wall_like_excludes_unresolved_from_both_terms():
     r = sc.measure(*_fixture()).record()
     cap = r["source_stroke_capture"]
     # 8000 of 9000 wall-like, not 8000 of 9300.
-    assert cap["of_wall_like_source_stroke_pct"] == pytest.approx(88.89,
-                                                                  abs=0.01)
-    assert "leaves UNRESOLVED out of both terms" in cap["basis"]
+    got = cap["ACCEPTED_SHARE_OF_CLASSIFIED_WALL_LIKE_SOURCE_STROKES_PCT"]
+    assert got == pytest.approx(88.89, abs=0.01)
+    assert "UNRESOLVED is in NEITHER term" in cap["denominators"][
+        "CLASSIFIED_WALL_LIKE_SOURCE_STROKES_IS"]
+
+
+def test_neither_capture_figure_is_named_as_physical_wall_coverage():
+    """§2: the number may not be readable as "55.5% of physical walls"."""
+    cap = sc.measure(*_fixture()).record()["source_stroke_capture"]
+    for key in cap:
+        if key.endswith("_PCT"):
+            assert "SOURCE_STROKE" in key, (
+                f"{key} does not name the population it divides by")
+    assert "neither figure is physical-wall recall" in cap[
+        "what_these_do_not_mean"]
 
 
 # --- what the audit refuses to compute -----------------------------------

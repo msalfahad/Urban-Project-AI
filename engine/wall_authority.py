@@ -41,6 +41,10 @@ BOTH_FACES_DRAWN = "BOTH_FACES_DRAWN"
 ONE_FACE_CAP_CLOSED = "ONE_FACE_WITH_AN_END_CAP"
 ONE_FACE_JUNCTION_CLOSED = "ONE_FACE_WITH_A_JUNCTION_OVERHANG"
 VALIDATED_JUNCTION_PATCH = "VALIDATED_JUNCTION_PATCH"
+# A stretch the band engine refused, where the second face turned out to be
+# drawn as collinear fragments on its own line. Nothing is invented here:
+# the face was there and the reason for refusing the stretch no longer holds.
+RECOVERED_FRAGMENTED_MATE = "RECOVERED_FRAGMENTED_MATE"
 
 # Why an interval is diagnostic only.
 UNRESOLVED_EXTENSION = "UNRESOLVED_SINGLE_FACE_EXTENSION"
@@ -49,7 +53,8 @@ NO_FACE_INTERVALS = "NO_FACE_INTERVAL_PROVENANCE"
 UNVALIDATED_PATCH = "UNVALIDATED_JUNCTION_PATCH"
 
 ESTABLISHED_GROUNDS = (BOTH_FACES_DRAWN, ONE_FACE_CAP_CLOSED,
-                       ONE_FACE_JUNCTION_CLOSED, VALIDATED_JUNCTION_PATCH)
+                       ONE_FACE_JUNCTION_CLOSED, VALIDATED_JUNCTION_PATCH,
+                       RECOVERED_FRAGMENTED_MATE)
 DIAGNOSTIC_GROUNDS = (UNRESOLVED_EXTENSION, UNDECLARED_EXTENSION,
                       NO_FACE_INTERVALS, UNVALIDATED_PATCH)
 
@@ -181,6 +186,32 @@ def _intersect(a_runs, b_runs) -> list:
     return _union(out)
 
 
+def _subtract(a_runs, b_runs) -> list:
+    """What `a_runs` covers and `b_runs` does not."""
+    out = []
+    for lo, hi in a_runs:
+        cur = lo
+        for s, e in _union(b_runs):
+            s, e = max(s, lo), min(e, hi)
+            # Clamping a b-run that lies wholly outside [lo, hi] leaves an
+            # INVERTED range. Using it appended a span reaching all the way
+            # to that distant run's start, which silently overlapped a
+            # neighbouring interval — a paired stretch was re-emitted as an
+            # unpaired one and the interval total stopped adding up.
+            if e <= s:
+                continue
+            if e <= cur:
+                continue
+            if s > cur:
+                out.append((cur, s))
+            cur = max(cur, e)
+            if cur >= hi:
+                break
+        if cur < hi:
+            out.append((cur, hi))
+    return _union(out)
+
+
 def _complement(runs, lo: float, hi: float) -> list:
     out, cur = [], lo
     for s, e in runs:
@@ -201,12 +232,24 @@ def _covering_extension(wp, s: float, e: float, lo: float,
     return shared(wp, s, e, lo, hi)
 
 
-def classify_intervals(wall_polys, *, patches=(),
+def classify_intervals(wall_polys, *, patches=(), recoveries=(),
                        min_interval_mm: float = MIN_INTERVAL_MM
                        ) -> AuthorityReport:
-    """Decide, per interval, which solid it may enter. Repairs nothing."""
+    """Decide, per interval, which solid it may enter. Repairs nothing.
+
+    `recoveries` are fragmented-mate recoveries: stretches this module
+    previously refused, where the opposite face turned out to be drawn as
+    collinear fragments. Those become ESTABLISHED because the reason for
+    refusing them no longer holds — not because a rule was relaxed.
+    """
     rep = AuthorityReport()
     by_patch = {p.patch_id: p for p in patches}
+    recovered: dict = {}
+    for r in recoveries:
+        if getattr(r, "is_recovered", False):
+            recovered.setdefault(r.wall_band_id, []).extend(
+                r.recovered_intervals)
+    recovered = {k: _union(v) for k, v in recovered.items()}
 
     for wp in wall_polys:
         if not wp.is_resolved:
@@ -243,26 +286,19 @@ def classify_intervals(wall_polys, *, patches=(),
                 f"{e - s:.0f} mm with BOTH faces drawn: material presence "
                 "is established by the drawing itself")
 
-        for s, e in _complement(both, lo, hi):
-            reason = _covering_extension(wp, s, e, lo, hi)
-            ground = CAP_REASONS.get(reason)
-            if ground:
-                add(s, e, ground, (ESTABLISHED, DIAGNOSTIC),
-                    f"{e - s:.0f} mm with one face drawn and the band "
-                    f"recording {reason}. The second face's position is an "
-                    "extrapolation, but a physical cap or junction closes "
-                    "the band over it")
-            elif reason:
-                add(s, e, UNRESOLVED_EXTENSION, (DIAGNOSTIC,),
-                    f"{e - s:.0f} mm the band itself records as {reason}: "
-                    "by its own note this extent beyond the paired interval "
-                    "is NOT established material. It is refused from the "
-                    "established solid and kept here with provenance")
-            else:
-                add(s, e, UNDECLARED_EXTENSION, (DIAGNOSTIC,),
-                    f"{e - s:.0f} mm with one face drawn and NO extension "
-                    "record covering it. Nothing says why the polygon "
-                    "extends here")
+        got = recovered.get(wp.wall_band_id, [])
+        for s0, e0 in _complement(both, lo, hi):
+            # A recovered stretch is established and the rest of the same
+            # extension is still not. Split it, rather than deciding the
+            # whole stretch on the strength of the recovered part.
+            for rs, re_ in _intersect([(s0, e0)], got):
+                add(rs, re_, RECOVERED_FRAGMENTED_MATE,
+                    (ESTABLISHED, DIAGNOSTIC),
+                    f"{re_ - rs:.0f} mm the band engine refused, where the "
+                    "opposite face IS drawn as collinear fragments on its "
+                    "own line at the band's own separation")
+            for s, e in _subtract([(s0, e0)], got):
+                _classify_single_face(wp, s, e, lo, hi, add)
 
     for p in patches:
         solids = ((ESTABLISHED, DIAGNOSTIC) if p.is_validated
@@ -278,7 +314,31 @@ def classify_intervals(wall_polys, *, patches=(),
     rep.notes["junction_patches"] = len(by_patch)
     rep.notes["validated_junction_patches"] = sum(
         1 for p in patches if p.is_validated)
+    rep.notes["fragmented_mate_recoveries"] = sum(
+        1 for r in recoveries if getattr(r, "is_recovered", False))
     return rep
+
+
+def _classify_single_face(wp, s: float, e: float, lo: float, hi: float,
+                          add) -> None:
+    """Classify a one-face stretch that no recovery covers."""
+    reason = _covering_extension(wp, s, e, lo, hi)
+    ground = CAP_REASONS.get(reason)
+    if ground:
+        add(s, e, ground, (ESTABLISHED, DIAGNOSTIC),
+            f"{e - s:.0f} mm with one face drawn and the band recording "
+            f"{reason}. The second face's position is an extrapolation, but "
+            "a physical cap or junction closes the band over it")
+    elif reason:
+        add(s, e, UNRESOLVED_EXTENSION, (DIAGNOSTIC,),
+            f"{e - s:.0f} mm the band itself records as {reason}: by its "
+            "own note this extent beyond the paired interval is NOT "
+            "established material. It is refused from the established "
+            "solid and kept here with provenance")
+    else:
+        add(s, e, UNDECLARED_EXTENSION, (DIAGNOSTIC,),
+            f"{e - s:.0f} mm with one face drawn and NO extension record "
+            "covering it. Nothing says why the polygon extends here")
 
 
 def build(wall_polys, *, patches=(), solid=ESTABLISHED, snap_grid_mm=None,

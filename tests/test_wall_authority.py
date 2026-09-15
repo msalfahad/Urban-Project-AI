@@ -176,21 +176,51 @@ def test_a_patch_needs_two_walls_to_join():
     assert p.polygon is None
 
 
-def test_two_evidence_families_validate_a_junction():
-    # Distinct source paths, so the families are GEOMETRY and RASTER only.
+def test_geometry_plus_raster_is_one_source_not_two():
+    # THE CORRECTION. This project's raster is RENDERED FROM THE SAME PDF
+    # as the vector geometry, so agreement between them is one observation
+    # of one artefact in two encodings. A rendering cannot witness masonry
+    # the drawing does not contain.
     bands = [_Band("WB-1", "H", 2000.0, 0.0, 1000.0, paths=("P-1",)),
              _Band("WB-2", "V", 1050.0, 1500.0, 2500.0, paths=("P-2",))]
     p = jp.propose(_gap(), bands, max_wall_thickness_mm=440.0,
                    raster_support=lambda *a: 0.95, patch_id="JP-1")
-    assert p.validation_status == jp.PATCH_VALIDATED
-    assert p.is_material
-    assert p.junction_type == jp.JUNCTION_T
     assert p.families == {"GEOMETRY", "RASTER"}
+    assert p.independence_classes == {"SAME_DRAWING"}
+    assert not p.has_an_independent_material_witness
+    assert p.validation_status == jp.PATCH_PROBABLE
+    assert not p.is_material
+    assert "RENDERED FROM THE SAME PDF" in p.why
+    # The junction reading itself is still correct — only its status changed.
+    assert p.junction_type == jp.JUNCTION_T
     assert p.gap_repair_class == jp.REPAIR_JUNCTION
+
+
+def test_only_a_witness_outside_the_drawing_validates_material():
+    from shapely.geometry import box
+    same = jp.JunctionPatch(
+        patch_id="JP-A", wall_band_ids=("WB-1",), source_face_ids=(),
+        polygon=box(0, 0, 100, 100),
+        evidence=(jp.EV_AXES_MEET, jp.EV_RASTER_SOLID, jp.EV_END_CAP))
+    assert same.independence_classes == {"SAME_DRAWING"}
+    assert not same.has_an_independent_material_witness
+
+    outside = jp.JunctionPatch(
+        patch_id="JP-B", wall_band_ids=("WB-1",), source_face_ids=(),
+        polygon=box(0, 0, 100, 100),
+        evidence=(jp.EV_AXES_MEET,))
+    assert not outside.has_an_independent_material_witness
+    # …and the class table says which families would count.
+    assert jp.SOURCE_INDEPENDENCE_CLASS["CAD"] == \
+        "INDEPENDENT_OF_THE_DRAWING"
+    assert jp.SOURCE_INDEPENDENCE_CLASS["RASTER"] == "SAME_DRAWING"
+    assert "SAME_DRAWING" not in jp.MATERIAL_WITNESS_CLASSES
 
 
 def test_one_family_gives_a_probable_patch_that_cannot_be_material():
     # Distinct source paths and no raster: GEOMETRY alone.
+    # (Two families from ONE source is also PROBABLE — see the
+    # independence test above.)
     bands = [_Band("WB-1", "H", 2000.0, 0.0, 1000.0, paths=("P-1",)),
              _Band("WB-2", "V", 1050.0, 1500.0, 2500.0, paths=("P-2",))]
     p = jp.propose(_gap(), bands, max_wall_thickness_mm=440.0,
@@ -208,6 +238,14 @@ def test_a_patch_may_not_extend_a_wall_past_the_drawing_s_thickest():
                    raster_support=lambda *a: 0.95, patch_id="JP-1")
     assert p.validation_status == jp.PATCH_REFUSED
     assert "not a junction" in p.why
+
+
+def test_no_patch_on_this_drawing_can_be_material():
+    # A consequence worth stating: every evidence family propose() can emit
+    # derives from this PDF, so on AR-00 no junction patch reaches
+    # VALIDATED and none enters the established solid.
+    for fam in ("GEOMETRY", "DRAWN_SYMBOL", "SOURCE_STRUCTURE", "RASTER"):
+        assert jp.SOURCE_INDEPENDENCE_CLASS[fam] == "SAME_DRAWING"
 
 
 def test_an_empty_raster_contradicts_a_junction_and_names_the_real_repair():

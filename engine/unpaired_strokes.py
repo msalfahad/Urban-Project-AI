@@ -378,6 +378,28 @@ def summary(strokes) -> dict:
                 "sits in neither the wall-like nor the non-wall figure on "
                 "purpose"),
         },
+        # §3 — what each class may be USED for. AR-00's single-line
+        # population survives basic evidence checks at 58.1 m in 2 runs
+        # that lie outside the building, so on this drawing the class is
+        # not the dominant problem and no material comes from it.
+        "permitted_use": {
+            SINGLE_LINE_EXISTENCE_SUPPORTED: TOPOLOGY_SEPARATOR_HYPOTHESIS,
+            FRAGMENTED_MATE: "FRAGMENTED_MATE_RECOVERY_CANDIDATE",
+            DIFFERENT_WALL_REPRESENTATION: TOPOLOGY_SEPARATOR_HYPOTHESIS,
+            STROKE_UNRESOLVED: "NO_USE_UNTIL_CLASSIFIED",
+            FIXTURE_OR_SYMBOL: "NO_USE",
+            ANNOTATION_OR_DETAIL: "NO_USE",
+            NON_WALL_GEOMETRY: "NO_USE",
+            DUPLICATE: "NO_USE",
+        },
+        "no_material_from_single_line_on_this_drawing": (
+            "a single stroke establishes no thickness and no finish-face "
+            "position, so it may generate a topology hypothesis and may "
+            "never create wall material. On AR-00 the class is 58.1 m in "
+            "two runs that lie outside the building's extent, which is "
+            "enough to say it is not the dominant problem here — and not a "
+            "reason to add further rules aimed at making those two "
+            "disappear"),
         "note": ("classified on evidence. Pen weight alone says a mark was "
                  "drawn with the wall pen and nothing about whether it is a "
                  "wall — and only the wall-like classes are candidates for "

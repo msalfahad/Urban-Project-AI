@@ -53,6 +53,7 @@ class SpaceEligibility:
     blocks: tuple[str, ...] = ()
     unestablished_m: float = 0.0
     barrier_release_class: str = ""
+    blocking_portal_ids: tuple[str, ...] = ()
     why: str = ""
 
     @property
@@ -67,6 +68,10 @@ class SpaceEligibility:
                 "blocks": list(self.blocks),
                 "unestablished_boundary_m": round(self.unestablished_m, 3),
                 "barrier_release_class": self.barrier_release_class,
+                # Named, not counted: a bottleneck report that says "4
+                # spaces need a portal" cannot be acted on. WHICH portal
+                # is the part the next round is chosen on.
+                "blocking_portal_ids": list(self.blocking_portal_ids),
                 "why": self.why}
 
 
@@ -149,15 +154,19 @@ def assess(candidates, *, labels_inside, dependency_of=None,
             dep_m = dep.get("unestablished_boundary_length_m") or 0.0
 
         rel = release_of(c) if release_of is not None else None
+        blocking_portals: tuple = ()
         if rel:
             rel_class = rel.get("release_class", "")
             if rel_class == "DIAGNOSTIC_PARTITION_BARRIER":
                 blocks.append(BLOCK_DIAGNOSTIC_BARRIER)
+                blocking_portals = tuple(
+                    rel.get("barriers_that_cannot_release", ()))
 
         rep.rows.append(SpaceEligibility(
             space_geometry_id=gid, space_ids=ids, area_m2=c.area_m2,
             blocks=tuple(blocks), unestablished_m=dep_m,
             barrier_release_class=rel_class,
+            blocking_portal_ids=blocking_portals,
             why=("every boundary contributor satisfies production-level "
                  "evidence" if not blocks else
                  "blocked by " + ", ".join(blocks))))

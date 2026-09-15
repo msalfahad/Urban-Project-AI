@@ -44,7 +44,19 @@ from engine.wall_authority import classify_intervals as classify_admissions
 from engine.wall_authority import compare as compare_solids
 from engine.wall_authority import unestablished_dependency
 from engine.reference_mapping import ReferenceRow, refuse_if_sealed
+from engine.release_blocker import assess as assess_blockers
+from engine.release_blocker import portal_bottleneck
+from engine.unresolved_impact import assess as assess_unresolved
+from engine.freeze_guard import check as check_freeze
 from engine.reference_mapping import resolve as resolve_references
+from engine.fragment_recovery import extension_summary
+from engine.fragment_recovery import polygons as fragment_polygons
+from engine.fragment_recovery import recover_extensions
+from engine.fragment_recovery import resolve as resolve_fragments
+from engine.fragment_recovery import summary as fragment_summary
+from engine.fragment_selftest import cases as selftest_cases
+from engine.fragment_selftest import report as selftest_report
+from engine.fragment_selftest import run as run_selftest
 from engine.free_space_invariants import falsify as falsify_free
 from engine.leak_map import build as build_leaks
 from engine.leak_map import summary as leak_summary
@@ -795,15 +807,53 @@ def run(pdf: str = PDF) -> dict:
             key=lambda x: x.passage_width_mm), 1)]
     validated_patches = [p for p in patches if p.is_validated]
 
+    # --- FRAGMENTED WALL RECOVERY -------------------------------------
+    # §7 — the known-answer test runs FIRST, on real accepted bands with
+    # one face artificially cut up. If the resolver cannot put those back
+    # it has no business touching the real population.
+    consumed_faces = {i for b in bands
+                      for i in tuple(b.face_a_ids) + tuple(b.face_b_ids)}
+    selftest = selftest_report([run_selftest(c)
+                                for c in selftest_cases(bands, limit=3)])
+
+    # §4 / §5 — 1-to-N grouping among faces no band consumed.
+    fragment_groups = resolve_fragments(
+        faces, portals=all_portals, caps=caps, bands=bands,
+        used_face_ids=consumed_faces, drawing_id=sm["drawing_id"],
+        revision=sm["drawing_revision"])
+
     # §3 / §4 — per-interval admission, then the two solids. The
     # unestablished extensions never enter the established one.
-    authority = classify_admissions(wall_polys, patches=patches)
-    established_solid = build_authority_solid(
+    pre_authority = classify_admissions(wall_polys, patches=patches)
+    # The case the round is really about: an UNRESOLVED_EXTENSION stretch
+    # where the second face turns out to be drawn as collinear fragments.
+    extension_recoveries = recover_extensions(
+        pre_authority.admissions, wall_polys, faces, portals=all_portals,
+        used_face_ids=consumed_faces, drawing_id=sm["drawing_id"],
+        revision=sm["drawing_revision"])
+    authority = classify_admissions(wall_polys, patches=patches,
+                                    recoveries=extension_recoveries)
+    from shapely.ops import unary_union as _u
+    # §9 — a recovered multi-fragment wall enters the established solid
+    # only where its polygon is fully supported; everything else is
+    # diagnostic. The old pattern where an unresolved extension quietly
+    # became masonry is not revived.
+    recovered_polys = fragment_polygons(fragment_groups)
+    recovered_diag_polys = fragment_polygons(fragment_groups,
+                                             validated_only=False)
+    _s0 = build_authority_solid(
         wall_polys, patches=validated_patches, solid=ESTABLISHED_SOLID,
-        report=authority, snap_grid_mm=measured_grid)
-    diagnostic_solid = build_authority_solid(
-        wall_polys, patches=patches, solid=DIAGNOSTIC_SOLID,
-        report=authority, snap_grid_mm=measured_grid)
+        report=pre_authority, snap_grid_mm=measured_grid)
+    established_solid = _u(
+        [build_authority_solid(
+            wall_polys, patches=validated_patches, solid=ESTABLISHED_SOLID,
+            report=authority, snap_grid_mm=measured_grid)]
+        + recovered_polys)
+    diagnostic_solid = _u(
+        [build_authority_solid(
+            wall_polys, patches=patches, solid=DIAGNOSTIC_SOLID,
+            report=authority, snap_grid_mm=measured_grid)]
+        + recovered_diag_polys)
     solid_comparison = compare_solids(established_solid, diagnostic_solid)
 
     # §13 — two free spaces. RELEASE uses the established solid and only
@@ -835,6 +885,30 @@ def run(pdf: str = PDF) -> dict:
             snap_grid_mm=measured_grid),
             barriers=barriers, run_id="CFB", **_arm),
         repairs=[p.patch_id for p in validated_patches])
+
+    # §10 — S0, S1, S2. The ONLY difference between S0 and S1 is the
+    # validated fragmented-mate recovery.
+    _arm2 = dict(wall_polys=wall_polys, portals=all_portals,
+                 regions=regions, contains=_holds,
+                 controls=tuple(CONTROLS), barriers=barriers)
+    _a0 = observe_arm("S0_CURRENT_ESTABLISHED", _s0, run_id="S0", **_arm2)
+    _a1 = observe_arm("S1_PLUS_VALIDATED_FRAGMENT_RECOVERY",
+                      established_solid, run_id="S1", **_arm2)
+    _a2 = observe_arm("S2_PLUS_DIAGNOSTIC_HYPOTHESES", diagnostic_solid,
+                      run_id="S2", **_arm2)
+    solid_arms = {
+        **compare_arms(_a0, _a1, repairs=["VALIDATED_FRAGMENT_RECOVERY"]),
+        "S2_plus_diagnostic_hypotheses": _a2.record(),
+        "what_S2_adds": (
+            "every hypothesis: unresolved extensions, unvalidated junction "
+            "patches and diagnostic fragment groups. A space that appears "
+            "only in S2 exists because a hypothesis was treated as fact"),
+        "geometry_recovered_vs_partition_improved": (
+            "S1 minus S0 is what VALIDATED recovery bought. Geometry "
+            "recovered with no topology effect is a real gain in the wall "
+            "solid and no gain in the partition, and the two are reported "
+            "apart because only the second unlocks a room"),
+    }
 
     # §11 — the release audit. DIAGNOSTIC_GEOMETRY_ACCEPTED and
     # PRODUCTION_GEOMETRY_RELEASED are different verdicts: a room whose
@@ -914,6 +988,31 @@ def run(pdf: str = PDF) -> dict:
             c, authority.admissions, wall_polys),
         release_of=lambda c: by_release.get(c.space_geometry_id, {})
     ).record()
+
+    # §12 — which dependency holds release at zero. Zero because the
+    # walls are not established is a different project from zero because
+    # the portals are not validated.
+    _blocked = []
+    for row in recall.get("single_label_but_blocked", ()):
+        gid = row.get("space_geometry_id")
+        rel = by_release.get(gid, {})
+        _blocked.append({**row, "blocking_portal_ids":
+                         rel.get("barriers_that_cannot_release", ())})
+    blockers = assess_blockers(
+        {**recall, "single_label_but_blocked": _blocked},
+        in_scope_spaces=in_scope)
+    blocker_report = {
+        **blockers.record(),
+        # §15 — preparation for the document round, not extraction.
+        "portal_bottleneck": portal_bottleneck(
+            blockers.record()["rows"], barriers, portals=all_portals),
+    }
+
+    # §14 — the UNRESOLVED population, ranked by the separation failures
+    # it sits in. NOT by length: a long stroke in site hatching is worth
+    # nothing, and none of these is resolved this round.
+    unresolved_impact = assess_unresolved(
+        strokes, leaks, controls=tuple(CONTROLS)).record()
 
     # §14 — one work list per merged component, ranked by what it unlocks.
     blob_table = build_blob_causes(
@@ -1151,6 +1250,20 @@ def run(pdf: str = PDF) -> dict:
         "merged_component_causes": blob_table,
         # §6 — and the proof that the named repairs are or are not causal.
         "junction_patch_counterfactual": counterfactual,
+        # §7 — the known-answer test, run before the real population.
+        "fragment_recovery_selftest": selftest,
+        # §4 / §5 / §8 — the real recovery, both modes.
+        "fragment_recovery": {
+            "new_groups": fragment_summary(fragment_groups),
+            "band_extension_recoveries": extension_summary(
+                extension_recoveries),
+        },
+        # §10 — S0 vs S1 vs S2. What validated recovery actually buys.
+        "fragment_recovery_counterfactual": solid_arms,
+        # §12 / §15 — which dependency is holding release at zero, and
+        # which portals would be next to validate.
+        "release_blockers": blocker_report,
+        "unresolved_stroke_impact": unresolved_impact,
         # §13 — what we KNOW against what we can plausibly hypothesise.
         "release_vs_diagnostic_free_space": {
             "release": release_arm.record(),
@@ -1184,6 +1297,10 @@ def run(pdf: str = PDF) -> dict:
         "frozen_controls": {
             **freeze_summary(frozen),
             "frozen": [f.record() for f in frozen],
+            # §13 — the freeze is asserted, not assumed. A pin that lives
+            # only in a directive is not a pin.
+            "freeze_guard": check_freeze(
+                [f.record() for f in frozen]).record(),
             "comparison_after_freeze": control_comparisons,
             # §6 — the delta decomposed. An area delta is not an error rate.
             "disagreement_maps": disagreements,

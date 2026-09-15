@@ -6419,6 +6419,1638 @@
       "why": "47 mm across at its narrowest: too narrow to be occupied floor at any scale a house uses"
     }
   ],
+  "fragment_recovery": {
+    "band_extension_recoveries": {
+      "by_status": {
+        "EXTENSION_STILL_UNRESOLVED": 13,
+        "UNRESOLVED_EXTENSION_NOW_PAIRED": 8
+      },
+      "fragments_used": 11,
+      "intervals_recovered": 8,
+      "recovered_length_m": 7.931,
+      "recoveries": [
+        {
+          "axis": "H",
+          "drawing_id": "AR-00",
+          "drawing_revision": "MAR.2023 (as plotted)",
+          "evidence": [
+            "THE_SECOND_FACE_IS_DRAWN_HERE_AS_COLLINEAR_FRAGMENTS",
+            "SEPARATION_MATCHES_THE_BANDS_OWN_THICKNESS"
+          ],
+          "fragment_source_ids": [
+            "VS-043191"
+          ],
+          "opening_conflicts": [],
+          "recovered_intervals": [
+            [
+              19747.3,
+              20977.2
+            ]
+          ],
+          "recovered_mm": 1230.0,
+          "recovery_id": "XR-0001",
+          "separation_mean_mm": 329.79,
+          "separation_spread_mm": 0.0,
+          "status": "UNRESOLVED_EXTENSION_NOW_PAIRED",
+          "still_unresolved_intervals": [
+            [
+              20977.2,
+              21866.6
+            ]
+          ],
+          "unresolved_interval": [
+            19747.3,
+            21866.6
+          ],
+          "wall_band_id": "WB-00022",
+          "why": "1 collinear fragment(s) on the band's own second-face line cover 1230 mm of this 2119 mm unresolved stretch at a stable 330 mm separation. The second face was drawn all along; nothing is invented, no face moves, and the remaining 889 mm stays unresolved"
+        },
+        {
+          "axis": "H",
+          "drawing_id": "AR-00",
+          "drawing_revision": "MAR.2023 (as plotted)",
+          "evidence": [],
+          "fragment_source_ids": [],
+          "opening_conflicts": [],
+          "recovered_intervals": [],
+          "recovered_mm": 0,
+          "recovery_id": "XR-0002",
+          "separation_mean_mm": 0.0,
+          "separation_spread_mm": 0.0,
+          "status": "EXTENSION_STILL_UNRESOLVED",
+          "still_unresolved_intervals": [
+            [
+              12948.6,
+              13746.0
+            ]
+          ],
+          "unresolved_interval": [
+            12948.6,
+            13746.0
+          ],
+          "wall_band_id": "WB-00023",
+          "why": "the band's second face is not drawn anywhere along this 797 mm stretch, so nothing establishes material here. NEVER INVENT THE MISSING HALF"
+        },
+        {
+          "axis": "H",
+          "drawing_id": "AR-00",
+          "drawing_revision": "MAR.2023 (as plotted)",
+          "evidence": [
+            "THE_SECOND_FACE_IS_DRAWN_HERE_AS_COLLINEAR_FRAGMENTS",
+            "SEPARATION_MATCHES_THE_BANDS_OWN_THICKNESS"
+          ],
+          "fragment_source_ids": [
+            "VS-005016"
+          ],
+          "opening_conflicts": [],
+          "recovered_intervals": [
+            [
+              26348.6,
+              27100.1
+            ]
+          ],
+          "recovered_mm": 751.5,
+          "recovery_id": "XR-0003",
+          "separation_mean_mm": 151.38,
+          "separation_spread_mm": 0.0,
+          "status": "UNRESOLVED_EXTENSION_NOW_PAIRED",
+          "still_unresolved_intervals": [
+            [
+              27100.1,
+              27300.1
+            ]
+          ],
+          "unresolved_interval": [
+            26348.6,
+            27300.1
+          ],
+          "wall_band_id": "WB-00030",
+          "why": "1 collinear fragment(s) on the band's own second-face line cover 752 mm of this 952 mm unresolved stretch at a stable 151 mm separation. The second face was drawn all along; nothing is invented, no face moves, and the remaining 200 mm stays unresolved"
+        },
+        {
+          "axis": "H",
+          "drawing_id": "AR-00",
+          "drawing_revision": "MAR.2023 (as plotted)",
+          "evidence": [],
+          "fragment_source_ids": [],
+          "opening_conflicts": [],
+          "recovered_intervals": [],
+          "recovered_mm": 0,
+          "recovery_id": "XR-0004",
+          "separation_mean_mm": 0.0,
+          "separation_spread_mm": 0.0,
+          "status": "EXTENSION_STILL_UNRESOLVED",
+          "still_unresolved_intervals": [
+            [
+              29297.8,
+              31298.3
+            ]
+          ],
+          "unresolved_interval": [
+            29297.8,
+            31298.3
+          ],
+          "wall_band_id": "WB-00030",
+          "why": "the band's second face is not drawn anywhere along this 2000 mm stretch, so nothing establishes material here. NEVER INVENT THE MISSING HALF"
+        },
+        {
+          "axis": "H",
+          "drawing_id": "AR-00",
+          "drawing_revision": "MAR.2023 (as plotted)",
+          "evidence": [
+            "THE_SECOND_FACE_IS_DRAWN_HERE_AS_COLLINEAR_FRAGMENTS",
+            "SEPARATION_MATCHES_THE_BANDS_OWN_THICKNESS"
+          ],
+          "fragment_source_ids": [
+            "VS-010021",
+            "VS-010022",
+            "VS-010041"
+          ],
+          "opening_conflicts": [],
+          "recovered_intervals": [
+            [
+              30817.1,
+              31246.9
+            ]
+          ],
+          "recovered_mm": 429.8,
+          "recovery_id": "XR-0005",
+          "separation_mean_mm": 310.88,
+          "separation_spread_mm": 0.0,
+          "status": "UNRESOLVED_EXTENSION_NOW_PAIRED",
+          "still_unresolved_intervals": [
+            [
+              29870.9,
+              30817.1
+            ],
+            [
+              31246.9,
+              31298.3
+            ]
+          ],
+          "unresolved_interval": [
+            29870.9,
+            31298.3
+          ],
+          "wall_band_id": "WB-00094",
+          "why": "3 collinear fragment(s) on the band's own second-face line cover 430 mm of this 1427 mm unresolved stretch at a stable 311 mm separation. The second face was drawn all along; nothing is invented, no face moves, and the remaining 998 mm stays unresolved"
+        },
+        {
+          "axis": "H",
+          "drawing_id": "AR-00",
+          "drawing_revision": "MAR.2023 (as plotted)",
+          "evidence": [],
+          "fragment_source_ids": [],
+          "opening_conflicts": [],
+          "recovered_intervals": [],
+          "recovered_mm": 0,
+          "recovery_id": "XR-0006",
+          "separation_mean_mm": 0.0,
+          "separation_spread_mm": 0.0,
+          "status": "EXTENSION_STILL_UNRESOLVED",
+          "still_unresolved_intervals": [
+            [
+              16546.6,
+              17146.7
+            ]
+          ],
+          "unresolved_interval": [
+            16546.6,
+            17146.7
+          ],
+          "wall_band_id": "WB-00114",
+          "why": "the band's second face is not drawn anywhere along this 600 mm stretch, so nothing establishes material here. NEVER INVENT THE MISSING HALF"
+        },
+        {
+          "axis": "V",
+          "drawing_id": "AR-00",
+          "drawing_revision": "MAR.2023 (as plotted)",
+          "evidence": [],
+          "fragment_source_ids": [],
+          "opening_conflicts": [],
+          "recovered_intervals": [],
+          "recovered_mm": 0,
+          "recovery_id": "XR-0007",
+          "separation_mean_mm": 0.0,
+          "separation_spread_mm": 0.0,
+          "status": "EXTENSION_STILL_UNRESOLVED",
+          "still_unresolved_intervals": [
+            [
+              15673.5,
+              30498.1
+            ]
+          ],
+          "unresolved_interval": [
+            15673.5,
+            30498.1
+          ],
+          "wall_band_id": "WB-00133",
+          "why": "the band's second face is not drawn anywhere along this 14825 mm stretch, so nothing establishes material here. NEVER INVENT THE MISSING HALF"
+        },
+        {
+          "axis": "V",
+          "drawing_id": "AR-00",
+          "drawing_revision": "MAR.2023 (as plotted)",
+          "evidence": [],
+          "fragment_source_ids": [],
+          "opening_conflicts": [],
+          "recovered_intervals": [],
+          "recovered_mm": 0,
+          "recovery_id": "XR-0008",
+          "separation_mean_mm": 0.0,
+          "separation_spread_mm": 0.0,
+          "status": "EXTENSION_STILL_UNRESOLVED",
+          "still_unresolved_intervals": [
+            [
+              33955.6,
+              38575.5
+            ]
+          ],
+          "unresolved_interval": [
+            33955.6,
+            38575.5
+          ],
+          "wall_band_id": "WB-00133",
+          "why": "the band's second face is not drawn anywhere along this 4620 mm stretch, so nothing establishes material here. NEVER INVENT THE MISSING HALF"
+        },
+        {
+          "axis": "V",
+          "drawing_id": "AR-00",
+          "drawing_revision": "MAR.2023 (as plotted)",
+          "evidence": [
+            "THE_SECOND_FACE_IS_DRAWN_HERE_AS_COLLINEAR_FRAGMENTS",
+            "SEPARATION_MATCHES_THE_BANDS_OWN_THICKNESS"
+          ],
+          "fragment_source_ids": [
+            "VS-044249"
+          ],
+          "opening_conflicts": [],
+          "recovered_intervals": [
+            [
+              25294.4,
+              25572.8
+            ]
+          ],
+          "recovered_mm": 278.4,
+          "recovery_id": "XR-0009",
+          "separation_mean_mm": 181.12,
+          "separation_spread_mm": 0.0,
+          "status": "UNRESOLVED_EXTENSION_NOW_PAIRED",
+          "still_unresolved_intervals": [
+            [
+              24405.0,
+              25294.4
+            ]
+          ],
+          "unresolved_interval": [
+            24405.0,
+            25572.8
+          ],
+          "wall_band_id": "WB-00140",
+          "why": "1 collinear fragment(s) on the band's own second-face line cover 278 mm of this 1168 mm unresolved stretch at a stable 181 mm separation. The second face was drawn all along; nothing is invented, no face moves, and the remaining 889 mm stays unresolved"
+        },
+        {
+          "axis": "V",
+          "drawing_id": "AR-00",
+          "drawing_revision": "MAR.2023 (as plotted)",
+          "evidence": [
+            "THE_SECOND_FACE_IS_DRAWN_HERE_AS_COLLINEAR_FRAGMENTS",
+            "SEPARATION_MATCHES_THE_BANDS_OWN_THICKNESS"
+          ],
+          "fragment_source_ids": [
+            "VS-005343",
+            "VS-005344"
+          ],
+          "opening_conflicts": [],
+          "recovered_intervals": [
+            [
+              22823.6,
+              23623.8
+            ],
+            [
+              23775.1,
+              25272.7
+            ]
+          ],
+          "recovered_mm": 2297.8,
+          "recovery_id": "XR-0010",
+          "separation_mean_mm": 148.68,
+          "separation_spread_mm": 0.0,
+          "status": "UNRESOLVED_EXTENSION_NOW_PAIRED",
+          "still_unresolved_intervals": [
+            [
+              23623.8,
+              23775.1
+            ],
+            [
+              25272.7,
+              25424.1
+            ]
+          ],
+          "unresolved_interval": [
+            22823.6,
+            25424.1
+          ],
+          "wall_band_id": "WB-00144",
+          "why": "2 collinear fragment(s) on the band's own second-face line cover 2298 mm of this 2601 mm unresolved stretch at a stable 149 mm separation. The second face was drawn all along; nothing is invented, no face moves, and the remaining 303 mm stays unresolved"
+        },
+        {
+          "axis": "V",
+          "drawing_id": "AR-00",
+          "drawing_revision": "MAR.2023 (as plotted)",
+          "evidence": [],
+          "fragment_source_ids": [],
+          "opening_conflicts": [],
+          "recovered_intervals": [],
+          "recovered_mm": 0,
+          "recovery_id": "XR-0011",
+          "separation_mean_mm": 0.0,
+          "separation_spread_mm": 0.0,
+          "status": "EXTENSION_STILL_UNRESOLVED",
+          "still_unresolved_intervals": [
+            [
+              21823.4,
+              24656.4
+            ]
+          ],
+          "unresolved_interval": [
+            21823.4,
+            24656.4
+          ],
+          "wall_band_id": "WB-00146",
+          "why": "the band's second face is not drawn anywhere along this 2833 mm stretch, so nothing establishes material here. NEVER INVENT THE MISSING HALF"
+        },
+        {
+          "axis": "V",
+          "drawing_id": "AR-00",
+          "drawing_revision": "MAR.2023 (as plotted)",
+          "evidence": [],
+          "fragment_source_ids": [],
+          "opening_conflicts": [],
+          "recovered_intervals": [],
+          "recovered_mm": 0,
+          "recovery_id": "XR-0012",
+          "separation_mean_mm": 0.0,
+          "separation_spread_mm": 0.0,
+          "status": "EXTENSION_STILL_UNRESOLVED",
+          "still_unresolved_intervals": [
+            [
+              31525.4,
+              32998.6
+            ]
+          ],
+          "unresolved_interval": [
+            31525.4,
+            32998.6
+          ],
+          "wall_band_id": "WB-00149",
+          "why": "the band's second face is not drawn anywhere along this 1473 mm stretch, so nothing establishes material here. NEVER INVENT THE MISSING HALF"
+        },
+        {
+          "axis": "V",
+          "drawing_id": "AR-00",
+          "drawing_revision": "MAR.2023 (as plotted)",
+          "evidence": [],
+          "fragment_source_ids": [],
+          "opening_conflicts": [],
+          "recovered_intervals": [],
+          "recovered_mm": 0,
+          "recovery_id": "XR-0013",
+          "separation_mean_mm": 0.0,
+          "separation_spread_mm": 0.0,
+          "status": "EXTENSION_STILL_UNRESOLVED",
+          "still_unresolved_intervals": [
+            [
+              35096.4,
+              38124.0
+            ]
+          ],
+          "unresolved_interval": [
+            35096.4,
+            38124.0
+          ],
+          "wall_band_id": "WB-00149",
+          "why": "the band's second face is not drawn anywhere along this 3028 mm stretch, so nothing establishes material here. NEVER INVENT THE MISSING HALF"
+        },
+        {
+          "axis": "V",
+          "drawing_id": "AR-00",
+          "drawing_revision": "MAR.2023 (as plotted)",
+          "evidence": [
+            "THE_SECOND_FACE_IS_DRAWN_HERE_AS_COLLINEAR_FRAGMENTS",
+            "SEPARATION_MATCHES_THE_BANDS_OWN_THICKNESS"
+          ],
+          "fragment_source_ids": [
+            "VS-000165"
+          ],
+          "opening_conflicts": [],
+          "recovered_intervals": [
+            [
+              25124.1,
+              26973.1
+            ]
+          ],
+          "recovered_mm": 1849.0,
+          "recovery_id": "XR-0014",
+          "separation_mean_mm": 148.68,
+          "separation_spread_mm": 0.0,
+          "status": "UNRESOLVED_EXTENSION_NOW_PAIRED",
+          "still_unresolved_intervals": [
+            [
+              24972.7,
+              25124.1
+            ],
+            [
+              26973.1,
+              27124.5
+            ]
+          ],
+          "unresolved_interval": [
+            24972.7,
+            27124.5
+          ],
+          "wall_band_id": "WB-00160",
+          "why": "1 collinear fragment(s) on the band's own second-face line cover 1849 mm of this 2152 mm unresolved stretch at a stable 149 mm separation. The second face was drawn all along; nothing is invented, no face moves, and the remaining 303 mm stays unresolved"
+        },
+        {
+          "axis": "V",
+          "drawing_id": "AR-00",
+          "drawing_revision": "MAR.2023 (as plotted)",
+          "evidence": [],
+          "fragment_source_ids": [],
+          "opening_conflicts": [],
+          "recovered_intervals": [],
+          "recovered_mm": 0,
+          "recovery_id": "XR-0015",
+          "separation_mean_mm": 0.0,
+          "separation_spread_mm": 0.0,
+          "status": "EXTENSION_STILL_UNRESOLVED",
+          "still_unresolved_intervals": [
+            [
+              29725.0,
+              33147.3
+            ]
+          ],
+          "unresolved_interval": [
+            29725.0,
+            33147.3
+          ],
+          "wall_band_id": "WB-00163",
+          "why": "the band's second face is not drawn anywhere along this 3422 mm stretch, so nothing establishes material here. NEVER INVENT THE MISSING HALF"
+        },
+        {
+          "axis": "V",
+          "drawing_id": "AR-00",
+          "drawing_revision": "MAR.2023 (as plotted)",
+          "evidence": [],
+          "fragment_source_ids": [],
+          "opening_conflicts": [],
+          "recovered_intervals": [],
+          "recovered_mm": 0,
+          "recovery_id": "XR-0016",
+          "separation_mean_mm": 0.0,
+          "separation_spread_mm": 0.0,
+          "status": "EXTENSION_STILL_UNRESOLVED",
+          "still_unresolved_intervals": [
+            [
+              34947.7,
+              38124.0
+            ]
+          ],
+          "unresolved_interval": [
+            34947.7,
+            38124.0
+          ],
+          "wall_band_id": "WB-00163",
+          "why": "the band's second face is not drawn anywhere along this 3176 mm stretch, so nothing establishes material here. NEVER INVENT THE MISSING HALF"
+        },
+        {
+          "axis": "V",
+          "drawing_id": "AR-00",
+          "drawing_revision": "MAR.2023 (as plotted)",
+          "evidence": [],
+          "fragment_source_ids": [],
+          "opening_conflicts": [],
+          "recovered_intervals": [],
+          "recovered_mm": 0,
+          "recovery_id": "XR-0017",
+          "separation_mean_mm": 0.0,
+          "separation_spread_mm": 0.0,
+          "status": "EXTENSION_STILL_UNRESOLVED",
+          "still_unresolved_intervals": [
+            [
+              26948.8,
+              27443.5
+            ]
+          ],
+          "unresolved_interval": [
+            26948.8,
+            27443.5
+          ],
+          "wall_band_id": "WB-00216",
+          "why": "the band's second face is not drawn anywhere along this 495 mm stretch, so nothing establishes material here. NEVER INVENT THE MISSING HALF"
+        },
+        {
+          "axis": "V",
+          "drawing_id": "AR-00",
+          "drawing_revision": "MAR.2023 (as plotted)",
+          "evidence": [
+            "THE_SECOND_FACE_IS_DRAWN_HERE_AS_COLLINEAR_FRAGMENTS",
+            "SEPARATION_MATCHES_THE_BANDS_OWN_THICKNESS"
+          ],
+          "fragment_source_ids": [
+            "VS-029934"
+          ],
+          "opening_conflicts": [],
+          "recovered_intervals": [
+            [
+              12051.1,
+              12421.5
+            ]
+          ],
+          "recovered_mm": 370.3,
+          "recovery_id": "XR-0018",
+          "separation_mean_mm": 197.34,
+          "separation_spread_mm": 0.0,
+          "status": "UNRESOLVED_EXTENSION_NOW_PAIRED",
+          "still_unresolved_intervals": [
+            [
+              10348.1,
+              12051.1
+            ],
+            [
+              12421.5,
+              12472.8
+            ]
+          ],
+          "unresolved_interval": [
+            10348.1,
+            12472.8
+          ],
+          "wall_band_id": "WB-00217",
+          "why": "1 collinear fragment(s) on the band's own second-face line cover 370 mm of this 2125 mm unresolved stretch at a stable 197 mm separation. The second face was drawn all along; nothing is invented, no face moves, and the remaining 1754 mm stays unresolved"
+        },
+        {
+          "axis": "V",
+          "drawing_id": "AR-00",
+          "drawing_revision": "MAR.2023 (as plotted)",
+          "evidence": [
+            "THE_SECOND_FACE_IS_DRAWN_HERE_AS_COLLINEAR_FRAGMENTS",
+            "SEPARATION_MATCHES_THE_BANDS_OWN_THICKNESS"
+          ],
+          "fragment_source_ids": [
+            "VS-040770"
+          ],
+          "opening_conflicts": [],
+          "recovered_intervals": [
+            [
+              12948.6,
+              13673.1
+            ]
+          ],
+          "recovered_mm": 724.5,
+          "recovery_id": "XR-0019",
+          "separation_mean_mm": 335.2,
+          "separation_spread_mm": 0.0,
+          "status": "UNRESOLVED_EXTENSION_NOW_PAIRED",
+          "still_unresolved_intervals": [],
+          "unresolved_interval": [
+            12948.6,
+            13673.1
+          ],
+          "wall_band_id": "WB-00218",
+          "why": "1 collinear fragment(s) on the band's own second-face line cover 724 mm of this 724 mm unresolved stretch at a stable 335 mm separation. The second face was drawn all along; nothing is invented, no face moves, and the remaining 0 mm stays unresolved"
+        },
+        {
+          "axis": "V",
+          "drawing_id": "AR-00",
+          "drawing_revision": "MAR.2023 (as plotted)",
+          "evidence": [],
+          "fragment_source_ids": [],
+          "opening_conflicts": [],
+          "recovered_intervals": [],
+          "recovered_mm": 0,
+          "recovery_id": "XR-0020",
+          "separation_mean_mm": 0.0,
+          "separation_spread_mm": 0.0,
+          "status": "EXTENSION_STILL_UNRESOLVED",
+          "still_unresolved_intervals": [
+            [
+              22096.4,
+              23623.8
+            ]
+          ],
+          "unresolved_interval": [
+            22096.4,
+            23623.8
+          ],
+          "wall_band_id": "WB-00219",
+          "why": "the band's second face is not drawn anywhere along this 1527 mm stretch, so nothing establishes material here. NEVER INVENT THE MISSING HALF"
+        },
+        {
+          "axis": "V",
+          "drawing_id": "AR-00",
+          "drawing_revision": "MAR.2023 (as plotted)",
+          "evidence": [],
+          "fragment_source_ids": [],
+          "opening_conflicts": [],
+          "recovered_intervals": [],
+          "recovered_mm": 0,
+          "recovery_id": "XR-0021",
+          "separation_mean_mm": 0.0,
+          "separation_spread_mm": 0.0,
+          "status": "EXTENSION_STILL_UNRESOLVED",
+          "still_unresolved_intervals": [
+            [
+              25691.8,
+              29573.6
+            ]
+          ],
+          "unresolved_interval": [
+            25691.8,
+            29573.6
+          ],
+          "wall_band_id": "WB-00238",
+          "why": "the band's second face is not drawn anywhere along this 3882 mm stretch, so nothing establishes material here. NEVER INVENT THE MISSING HALF"
+        }
+      ],
+      "refused_for_opening_conflict": 0,
+      "still_unresolved_length_m": 48.015,
+      "unresolved_intervals_examined": 21,
+      "what_this_converts": "an UNRESOLVED_EXTENSION interval \u2014 material the band engine itself says is not established \u2014 into established material, by finding that the second face was drawn there as fragments all along. Nothing is invented and no face moves"
+    },
+    "new_groups": {
+      "by_group_kind": {
+        "ONE_FACE_TO_MANY_FRAGMENTS": 9
+      },
+      "by_reject_reason": {
+        "THE_GROUP_WOULD_BRIDGE_A_SUPPORTED_OPENING": 1,
+        "TOO_LITTLE_OF_THE_RUN_IS_ACTUALLY_PAIRED": 1
+      },
+      "diagnostic_only": 1,
+      "diagnostic_paired_length_m": 3.006,
+      "groups": [
+        {
+          "axis": "H",
+          "conflicts": [],
+          "drawing_id": "AR-00",
+          "drawing_revision": "MAR.2023 (as plotted)",
+          "evidence": [
+            "FRAGMENTS_ARE_COLLINEAR_WITHIN_TOLERANCE",
+            "FACE_SEPARATION_IS_STABLE_ALONG_THE_RUN",
+            "67_PCT_OF_THE_RUN_IS_PAIRED"
+          ],
+          "fragment_group_id": "FG-0001",
+          "group_kind": "ONE_FACE_TO_MANY_FRAGMENTS",
+          "material_occupies": "the paired intervals ONLY. An unpaired interval is one side drawn and the other unknown, and a gap is not bridged whether or not something explains it",
+          "paired_interval_length_mm": 700.1,
+          "paired_intervals": [
+            [
+              26400.0,
+              27100.1
+            ]
+          ],
+          "provenance": {
+            "fragments": 2,
+            "seed_face": "VS-005016",
+            "seed_run_mm": [
+              26048.5,
+              27100.1
+            ]
+          },
+          "reject_reason": "",
+          "separation_mean_mm": 551.46,
+          "separation_spread_mm": 0.0,
+          "side_a_mm": 31525.4,
+          "side_a_source_ids": [
+            "VS-005016"
+          ],
+          "side_b_mm": 30973.9,
+          "side_b_source_ids": [
+            "VS-045032",
+            "VS-045052"
+          ],
+          "supported_fragment_gaps": [],
+          "supported_gap_length_mm": 0,
+          "thickness_mm": 551.5,
+          "unpaired_interval_length_mm": 351.4,
+          "unpaired_intervals": [
+            [
+              26048.5,
+              26400.0
+            ]
+          ],
+          "unsupported_fragment_gaps": [],
+          "unsupported_gap_length_mm": 0,
+          "validation_status": "FRAGMENT_RECOVERY_VALIDATED",
+          "why": "2 collinear fragments at a stable 551 mm separation, 67% of the run paired, and every gap between fragments explained by the drawing. Material occupies the paired intervals only"
+        },
+        {
+          "axis": "H",
+          "conflicts": [
+            "WOULD_BRIDGE_SUPPORTED_OPENING_PT-GH17573-line-19198"
+          ],
+          "drawing_id": "AR-00",
+          "drawing_revision": "MAR.2023 (as plotted)",
+          "evidence": [
+            "FRAGMENTS_ARE_COLLINEAR_WITHIN_TOLERANCE",
+            "FACE_SEPARATION_IS_STABLE_ALONG_THE_RUN"
+          ],
+          "fragment_group_id": "FG-0002",
+          "group_kind": "ONE_FACE_TO_MANY_FRAGMENTS",
+          "material_occupies": "the paired intervals ONLY. An unpaired interval is one side drawn and the other unknown, and a gap is not bridged whether or not something explains it",
+          "paired_interval_length_mm": 154.1,
+          "paired_intervals": [
+            [
+              19098.5,
+              19252.6
+            ]
+          ],
+          "provenance": {
+            "fragments": 2,
+            "seed_face": "VS-047857",
+            "seed_run_mm": [
+              19098.5,
+              19447.2
+            ]
+          },
+          "reject_reason": "THE_GROUP_WOULD_BRIDGE_A_SUPPORTED_OPENING",
+          "separation_mean_mm": 337.91,
+          "separation_spread_mm": 0.0,
+          "side_a_mm": 17990.2,
+          "side_a_source_ids": [
+            "VS-047857"
+          ],
+          "side_b_mm": 18328.1,
+          "side_b_source_ids": [
+            "VS-001670",
+            "VS-001690"
+          ],
+          "supported_fragment_gaps": [],
+          "supported_gap_length_mm": 0,
+          "thickness_mm": 337.9,
+          "unpaired_interval_length_mm": 194.6,
+          "unpaired_intervals": [
+            [
+              19252.6,
+              19447.2
+            ]
+          ],
+          "unsupported_fragment_gaps": [],
+          "unsupported_gap_length_mm": 0,
+          "validation_status": "FRAGMENT_RECOVERY_REJECTED",
+          "why": "this group's paired material would cover supported opening(s) PT-GH17573-line-19198. A fragmented-mate resolver that closes doors is worse than no resolver, so the group is refused outright rather than trimmed"
+        },
+        {
+          "axis": "V",
+          "conflicts": [],
+          "drawing_id": "AR-00",
+          "drawing_revision": "MAR.2023 (as plotted)",
+          "evidence": [
+            "FRAGMENTS_ARE_COLLINEAR_WITHIN_TOLERANCE",
+            "FACE_SEPARATION_IS_STABLE_ALONG_THE_RUN"
+          ],
+          "fragment_group_id": "FG-0003",
+          "group_kind": "ONE_FACE_TO_MANY_FRAGMENTS",
+          "material_occupies": "the paired intervals ONLY. An unpaired interval is one side drawn and the other unknown, and a gap is not bridged whether or not something explains it",
+          "paired_interval_length_mm": 3006.0,
+          "paired_intervals": [
+            [
+              34177.3,
+              35680.3
+            ],
+            [
+              36569.6,
+              38072.6
+            ]
+          ],
+          "provenance": {
+            "fragments": 4,
+            "seed_face": "VS-000087",
+            "seed_run_mm": [
+              34123.2,
+              43025.0
+            ]
+          },
+          "reject_reason": "TOO_LITTLE_OF_THE_RUN_IS_ACTUALLY_PAIRED",
+          "separation_mean_mm": 456.85,
+          "separation_spread_mm": 0.0,
+          "side_a_mm": 31298.3,
+          "side_a_source_ids": [
+            "VS-000087"
+          ],
+          "side_b_mm": 30841.4,
+          "side_b_source_ids": [
+            "VS-024453",
+            "VS-024454",
+            "VS-024473",
+            "VS-024492"
+          ],
+          "supported_fragment_gaps": [],
+          "supported_gap_length_mm": 0,
+          "thickness_mm": 456.9,
+          "unpaired_interval_length_mm": 5895.8,
+          "unpaired_intervals": [
+            [
+              34123.2,
+              34177.3
+            ],
+            [
+              35680.3,
+              36569.6
+            ],
+            [
+              38072.6,
+              43025.0
+            ]
+          ],
+          "unsupported_fragment_gaps": [
+            {
+              "evidence_ids": [],
+              "from_mm": 35680.3,
+              "length_mm": 889.4,
+              "reason": "NOTHING_EXPLAINS_THIS_GAP",
+              "supported": false,
+              "to_mm": 36569.6
+            }
+          ],
+          "unsupported_gap_length_mm": 889.4,
+          "validation_status": "FRAGMENT_RECOVERY_REJECTED",
+          "why": "only 34% of the continuous face is actually paired. Most of this 'wall' is gap, and the group is an assertion rather than a reading"
+        },
+        {
+          "axis": "V",
+          "conflicts": [],
+          "drawing_id": "AR-00",
+          "drawing_revision": "MAR.2023 (as plotted)",
+          "evidence": [
+            "FRAGMENTS_ARE_COLLINEAR_WITHIN_TOLERANCE",
+            "FACE_SEPARATION_IS_STABLE_ALONG_THE_RUN",
+            "75_PCT_OF_THE_RUN_IS_PAIRED"
+          ],
+          "fragment_group_id": "FG-0004",
+          "group_kind": "ONE_FACE_TO_MANY_FRAGMENTS",
+          "material_occupies": "the paired intervals ONLY. An unpaired interval is one side drawn and the other unknown, and a gap is not bridged whether or not something explains it",
+          "paired_interval_length_mm": 3006.0,
+          "paired_intervals": [
+            [
+              34177.3,
+              35680.3
+            ],
+            [
+              36569.6,
+              38072.6
+            ]
+          ],
+          "provenance": {
+            "fragments": 4,
+            "seed_face": "VS-000161",
+            "seed_run_mm": [
+              34123.2,
+              38124.0
+            ]
+          },
+          "reject_reason": "",
+          "separation_mean_mm": 456.85,
+          "separation_spread_mm": 0.0,
+          "side_a_mm": 31298.3,
+          "side_a_source_ids": [
+            "VS-000161"
+          ],
+          "side_b_mm": 30841.4,
+          "side_b_source_ids": [
+            "VS-024453",
+            "VS-024454",
+            "VS-024473",
+            "VS-024492"
+          ],
+          "supported_fragment_gaps": [],
+          "supported_gap_length_mm": 0,
+          "thickness_mm": 456.9,
+          "unpaired_interval_length_mm": 994.8,
+          "unpaired_intervals": [
+            [
+              34123.2,
+              34177.3
+            ],
+            [
+              35680.3,
+              36569.6
+            ],
+            [
+              38072.6,
+              38124.0
+            ]
+          ],
+          "unsupported_fragment_gaps": [
+            {
+              "evidence_ids": [],
+              "from_mm": 35680.3,
+              "length_mm": 889.4,
+              "reason": "NOTHING_EXPLAINS_THIS_GAP",
+              "supported": false,
+              "to_mm": 36569.6
+            }
+          ],
+          "unsupported_gap_length_mm": 889.4,
+          "validation_status": "FRAGMENT_RECOVERY_DIAGNOSTIC_ONLY",
+          "why": "4 collinear fragments at a stable 457 mm separation, 75% paired \u2014 but 1 gap(s) totalling 889 mm have nothing to explain them (largest 889 mm). The paired intervals are real; the gaps are NOT bridged, and until something accounts for them this group is diagnostic"
+        },
+        {
+          "axis": "V",
+          "conflicts": [],
+          "drawing_id": "AR-00",
+          "drawing_revision": "MAR.2023 (as plotted)",
+          "evidence": [
+            "FRAGMENTS_ARE_COLLINEAR_WITHIN_TOLERANCE",
+            "FACE_SEPARATION_IS_STABLE_ALONG_THE_RUN",
+            "76_PCT_OF_THE_RUN_IS_PAIRED"
+          ],
+          "fragment_group_id": "FG-0005",
+          "group_kind": "ONE_FACE_TO_MANY_FRAGMENTS",
+          "material_occupies": "the paired intervals ONLY. An unpaired interval is one side drawn and the other unknown, and a gap is not bridged whether or not something explains it",
+          "paired_interval_length_mm": 1932.8,
+          "paired_intervals": [
+            [
+              32022.8,
+              33955.6
+            ]
+          ],
+          "provenance": {
+            "fragments": 2,
+            "seed_face": "VS-007776",
+            "seed_run_mm": [
+              32022.8,
+              34555.7
+            ]
+          },
+          "reject_reason": "",
+          "separation_mean_mm": 462.26,
+          "separation_spread_mm": 0.0,
+          "side_a_mm": 11159.0,
+          "side_a_source_ids": [
+            "VS-007776"
+          ],
+          "side_b_mm": 10696.8,
+          "side_b_source_ids": [
+            "VS-000095",
+            "VS-004971"
+          ],
+          "supported_fragment_gaps": [],
+          "supported_gap_length_mm": 0,
+          "thickness_mm": 462.3,
+          "unpaired_interval_length_mm": 600.1,
+          "unpaired_intervals": [
+            [
+              33955.6,
+              34555.7
+            ]
+          ],
+          "unsupported_fragment_gaps": [],
+          "unsupported_gap_length_mm": 0,
+          "validation_status": "FRAGMENT_RECOVERY_VALIDATED",
+          "why": "2 collinear fragments at a stable 462 mm separation, 76% of the run paired, and every gap between fragments explained by the drawing. Material occupies the paired intervals only"
+        },
+        {
+          "axis": "V",
+          "conflicts": [],
+          "drawing_id": "AR-00",
+          "drawing_revision": "MAR.2023 (as plotted)",
+          "evidence": [
+            "FRAGMENTS_ARE_COLLINEAR_WITHIN_TOLERANCE",
+            "FACE_SEPARATION_IS_STABLE_ALONG_THE_RUN",
+            "100_PCT_OF_THE_RUN_IS_PAIRED"
+          ],
+          "fragment_group_id": "FG-0006",
+          "group_kind": "ONE_FACE_TO_MANY_FRAGMENTS",
+          "material_occupies": "the paired intervals ONLY. An unpaired interval is one side drawn and the other unknown, and a gap is not bridged whether or not something explains it",
+          "paired_interval_length_mm": 2116.6,
+          "paired_intervals": [
+            [
+              35956.0,
+              38072.6
+            ]
+          ],
+          "provenance": {
+            "fragments": 2,
+            "seed_face": "VS-000094",
+            "seed_run_mm": [
+              35956.0,
+              38075.4
+            ]
+          },
+          "reject_reason": "",
+          "separation_mean_mm": 462.26,
+          "separation_spread_mm": 0.0,
+          "side_a_mm": 10696.8,
+          "side_a_source_ids": [
+            "VS-000094"
+          ],
+          "side_b_mm": 11159.0,
+          "side_b_source_ids": [
+            "VS-007775",
+            "VS-007795"
+          ],
+          "supported_fragment_gaps": [],
+          "supported_gap_length_mm": 0,
+          "thickness_mm": 462.3,
+          "unpaired_interval_length_mm": 2.7,
+          "unpaired_intervals": [
+            [
+              38072.6,
+              38075.4
+            ]
+          ],
+          "unsupported_fragment_gaps": [],
+          "unsupported_gap_length_mm": 0,
+          "validation_status": "FRAGMENT_RECOVERY_VALIDATED",
+          "why": "2 collinear fragments at a stable 462 mm separation, 100% of the run paired, and every gap between fragments explained by the drawing. Material occupies the paired intervals only"
+        },
+        {
+          "axis": "V",
+          "conflicts": [],
+          "drawing_id": "AR-00",
+          "drawing_revision": "MAR.2023 (as plotted)",
+          "evidence": [
+            "FRAGMENTS_ARE_COLLINEAR_WITHIN_TOLERANCE",
+            "FACE_SEPARATION_IS_STABLE_ALONG_THE_RUN",
+            "100_PCT_OF_THE_RUN_IS_PAIRED"
+          ],
+          "fragment_group_id": "FG-0007",
+          "group_kind": "ONE_FACE_TO_MANY_FRAGMENTS",
+          "material_occupies": "the paired intervals ONLY. An unpaired interval is one side drawn and the other unknown, and a gap is not bridged whether or not something explains it",
+          "paired_interval_length_mm": 1405.7,
+          "paired_intervals": [
+            [
+              34274.6,
+              35680.3
+            ]
+          ],
+          "provenance": {
+            "fragments": 2,
+            "seed_face": "VS-024454",
+            "seed_run_mm": [
+              34274.6,
+              35680.3
+            ]
+          },
+          "reject_reason": "",
+          "separation_mean_mm": 456.85,
+          "separation_spread_mm": 0.0,
+          "side_a_mm": 30841.4,
+          "side_a_source_ids": [
+            "VS-024454"
+          ],
+          "side_b_mm": 31298.3,
+          "side_b_source_ids": [
+            "VS-000087",
+            "VS-000161"
+          ],
+          "supported_fragment_gaps": [],
+          "supported_gap_length_mm": 0,
+          "thickness_mm": 456.9,
+          "unpaired_interval_length_mm": 0,
+          "unpaired_intervals": [],
+          "unsupported_fragment_gaps": [],
+          "unsupported_gap_length_mm": 0,
+          "validation_status": "FRAGMENT_RECOVERY_VALIDATED",
+          "why": "2 collinear fragments at a stable 457 mm separation, 100% of the run paired, and every gap between fragments explained by the drawing. Material occupies the paired intervals only"
+        },
+        {
+          "axis": "V",
+          "conflicts": [],
+          "drawing_id": "AR-00",
+          "drawing_revision": "MAR.2023 (as plotted)",
+          "evidence": [
+            "FRAGMENTS_ARE_COLLINEAR_WITHIN_TOLERANCE",
+            "FACE_SEPARATION_IS_STABLE_ALONG_THE_RUN",
+            "96_PCT_OF_THE_RUN_IS_PAIRED"
+          ],
+          "fragment_group_id": "FG-0008",
+          "group_kind": "ONE_FACE_TO_MANY_FRAGMENTS",
+          "material_occupies": "the paired intervals ONLY. An unpaired interval is one side drawn and the other unknown, and a gap is not bridged whether or not something explains it",
+          "paired_interval_length_mm": 1173.2,
+          "paired_intervals": [
+            [
+              30498.1,
+              31671.3
+            ]
+          ],
+          "provenance": {
+            "fragments": 2,
+            "seed_face": "VS-000096",
+            "seed_run_mm": [
+              30498.1,
+              31725.4
+            ]
+          },
+          "reject_reason": "",
+          "separation_mean_mm": 462.26,
+          "separation_spread_mm": 0.0,
+          "side_a_mm": 10696.8,
+          "side_a_source_ids": [
+            "VS-000096"
+          ],
+          "side_b_mm": 11159.0,
+          "side_b_source_ids": [
+            "VS-008018",
+            "VS-008038"
+          ],
+          "supported_fragment_gaps": [],
+          "supported_gap_length_mm": 0,
+          "thickness_mm": 462.3,
+          "unpaired_interval_length_mm": 54.1,
+          "unpaired_intervals": [
+            [
+              31671.3,
+              31725.4
+            ]
+          ],
+          "unsupported_fragment_gaps": [],
+          "unsupported_gap_length_mm": 0,
+          "validation_status": "FRAGMENT_RECOVERY_VALIDATED",
+          "why": "2 collinear fragments at a stable 462 mm separation, 96% of the run paired, and every gap between fragments explained by the drawing. Material occupies the paired intervals only"
+        },
+        {
+          "axis": "V",
+          "conflicts": [],
+          "drawing_id": "AR-00",
+          "drawing_revision": "MAR.2023 (as plotted)",
+          "evidence": [
+            "FRAGMENTS_ARE_COLLINEAR_WITHIN_TOLERANCE",
+            "FACE_SEPARATION_IS_STABLE_ALONG_THE_RUN",
+            "96_PCT_OF_THE_RUN_IS_PAIRED"
+          ],
+          "fragment_group_id": "FG-0009",
+          "group_kind": "ONE_FACE_TO_MANY_FRAGMENTS",
+          "material_occupies": "the paired intervals ONLY. An unpaired interval is one side drawn and the other unknown, and a gap is not bridged whether or not something explains it",
+          "paired_interval_length_mm": 1173.2,
+          "paired_intervals": [
+            [
+              28324.7,
+              29497.9
+            ]
+          ],
+          "provenance": {
+            "fragments": 2,
+            "seed_face": "VS-000097",
+            "seed_run_mm": [
+              28273.4,
+              29497.9
+            ]
+          },
+          "reject_reason": "",
+          "separation_mean_mm": 462.26,
+          "separation_spread_mm": 0.0,
+          "side_a_mm": 10696.8,
+          "side_a_source_ids": [
+            "VS-000097"
+          ],
+          "side_b_mm": 11159.0,
+          "side_b_source_ids": [
+            "VS-008019",
+            "VS-008057"
+          ],
+          "supported_fragment_gaps": [],
+          "supported_gap_length_mm": 0,
+          "thickness_mm": 462.3,
+          "unpaired_interval_length_mm": 51.4,
+          "unpaired_intervals": [
+            [
+              28273.4,
+              28324.7
+            ]
+          ],
+          "unsupported_fragment_gaps": [],
+          "unsupported_gap_length_mm": 0,
+          "validation_status": "FRAGMENT_RECOVERY_VALIDATED",
+          "why": "2 collinear fragments at a stable 462 mm separation, 96% of the run paired, and every gap between fragments explained by the drawing. Material occupies the paired intervals only"
+        }
+      ],
+      "groups_attempted": 9,
+      "hard_invariant": "NO RECOVERED WALL INTERVAL MAY OVERLAP A SUPPORTED OPENING INTERVAL. A group that would is refused outright, not trimmed to fit",
+      "openings_protected": 1,
+      "rejected": 2,
+      "source_faces_consumed": 18,
+      "supported_gap_length_m": 0.0,
+      "unsupported_gap_length_m": 1.779,
+      "validated": 6,
+      "validated_paired_length_m": 8.502,
+      "what_decided_acceptance": "axis, collinearity, separation stability, paired coverage, pen consistency, gap explanation and opening conflict. NOT room area, room count, a benchmark or a raster millimetre \u2014 none of which this module can see"
+    }
+  },
+  "fragment_recovery_counterfactual": {
+    "S2_plus_diagnostic_hypotheses": {
+      "arm": "S2_PLUS_DIAGNOSTIC_HYPOTHESES",
+      "control_holder_label_counts": {
+        "BED-01": 1,
+        "BTH-05": 23,
+        "OPEN-01": 23,
+        "STR-01": 23
+      },
+      "free_space_area_m2": 878.182,
+      "free_space_components": 20,
+      "labels_placed_in_a_component": 36,
+      "largest_blob_area_m2": 740.377,
+      "largest_blob_labels": 23,
+      "multi_room_blob_label_counts": [
+        23,
+        3,
+        2
+      ],
+      "multi_room_candidates": 3,
+      "occupiable_candidates": 7,
+      "single_room_candidates": 8,
+      "wall_solid_area_m2": 121.2379,
+      "wall_solid_components": 54
+    },
+    "delta": {
+      "free_space_area_m2": -5.408,
+      "free_space_components": 1,
+      "largest_blob_area_m2": -13.622,
+      "largest_blob_labels": -1,
+      "multi_room_candidates": 0,
+      "single_room_candidates": 1,
+      "wall_solid_area_m2": 5.407988
+    },
+    "geometry_recovered_vs_partition_improved": "S1 minus S0 is what VALIDATED recovery bought. Geometry recovered with no topology effect is a real gain in the wall solid and no gain in the partition, and the two are reported apart because only the second unlocks a room",
+    "repairs_applied": [
+      "VALIDATED_FRAGMENT_RECOVERY"
+    ],
+    "repairs_applied_count": 1,
+    "run_a": {
+      "arm": "S0_CURRENT_ESTABLISHED",
+      "control_holder_label_counts": {
+        "BED-01": 32,
+        "BTH-05": 32,
+        "OPEN-01": 32,
+        "STR-01": 32
+      },
+      "free_space_area_m2": 894.9949,
+      "free_space_components": 13,
+      "labels_placed_in_a_component": 36,
+      "largest_blob_area_m2": 886.385,
+      "largest_blob_labels": 32,
+      "multi_room_blob_label_counts": [
+        32
+      ],
+      "multi_room_candidates": 1,
+      "occupiable_candidates": 1,
+      "single_room_candidates": 4,
+      "wall_solid_area_m2": 104.425,
+      "wall_solid_components": 68
+    },
+    "run_b": {
+      "arm": "S1_PLUS_VALIDATED_FRAGMENT_RECOVERY",
+      "control_holder_label_counts": {
+        "BED-01": 31,
+        "BTH-05": 31,
+        "OPEN-01": 31,
+        "STR-01": 31
+      },
+      "free_space_area_m2": 889.587,
+      "free_space_components": 14,
+      "labels_placed_in_a_component": 36,
+      "largest_blob_area_m2": 872.763,
+      "largest_blob_labels": 31,
+      "multi_room_blob_label_counts": [
+        31
+      ],
+      "multi_room_candidates": 1,
+      "occupiable_candidates": 2,
+      "single_room_candidates": 5,
+      "wall_solid_area_m2": 109.8329,
+      "wall_solid_components": 77
+    },
+    "verdict": "REPAIRS_ARE_CAUSAL_BUT_NOT_DOMINANT",
+    "what_S2_adds": "every hypothesis: unresolved extensions, unvalidated junction patches and diagnostic fragment groups. A space that appears only in S2 exists because a hypothesis was treated as fact",
+    "what_changed_between_the_arms": "the named repairs and nothing else. Same envelope construction, same barriers, same snap grid, same labels",
+    "what_is_not_compared": "wall-solid component count as a quality target. A disconnected wall component is not automatically defective, and the measure here is SPACE PARTITIONING",
+    "why": "1 repair(s) produced 1 more single-room candidate(s) and reduced the largest component by 1 label(s). Real, and not the dominant cause of the merging"
+  },
+  "fragment_recovery_selftest": {
+    "by_scenario": {
+      "FIVE_EQUAL_FRAGMENTS": 3,
+      "FRAGMENTS_AROUND_A_REAL_OPENING": 3,
+      "FRAGMENTS_AT_AN_L_JUNCTION": 3,
+      "FRAGMENTS_AT_A_T_JUNCTION": 3,
+      "THREE_EQUAL_FRAGMENTS": 3,
+      "TWO_EQUAL_FRAGMENTS": 3,
+      "UNEQUAL_FRAGMENTS": 3
+    },
+    "by_validation_status": {
+      "FRAGMENT_RECOVERY_DIAGNOSTIC_ONLY": 6,
+      "FRAGMENT_RECOVERY_VALIDATED": 15
+    },
+    "cases": 21,
+    "detail": [
+      {
+        "case_id": "SC-0001",
+        "failures": [],
+        "fragments": 2,
+        "paired_length_mm": 40000.0,
+        "passed": true,
+        "reconstructed": true,
+        "scenario": "TWO_EQUAL_FRAGMENTS",
+        "thickness_mm": 200.0,
+        "true_paired_length_mm": 40000.0,
+        "true_thickness_mm": 200.0,
+        "validation_status": "FRAGMENT_RECOVERY_VALIDATED",
+        "why": "2 collinear fragments at a stable 200 mm separation, 100% of the run paired, and every gap between fragments explained by the drawing. Material occupies the paired intervals only"
+      },
+      {
+        "case_id": "SC-0002",
+        "failures": [],
+        "fragments": 3,
+        "paired_length_mm": 40000.0,
+        "passed": true,
+        "reconstructed": true,
+        "scenario": "THREE_EQUAL_FRAGMENTS",
+        "thickness_mm": 200.0,
+        "true_paired_length_mm": 40000.0,
+        "true_thickness_mm": 200.0,
+        "validation_status": "FRAGMENT_RECOVERY_VALIDATED",
+        "why": "3 collinear fragments at a stable 200 mm separation, 100% of the run paired, and every gap between fragments explained by the drawing. Material occupies the paired intervals only"
+      },
+      {
+        "case_id": "SC-0003",
+        "failures": [],
+        "fragments": 5,
+        "paired_length_mm": 40000.0,
+        "passed": true,
+        "reconstructed": true,
+        "scenario": "FIVE_EQUAL_FRAGMENTS",
+        "thickness_mm": 200.0,
+        "true_paired_length_mm": 40000.0,
+        "true_thickness_mm": 200.0,
+        "validation_status": "FRAGMENT_RECOVERY_VALIDATED",
+        "why": "5 collinear fragments at a stable 200 mm separation, 100% of the run paired, and every gap between fragments explained by the drawing. Material occupies the paired intervals only"
+      },
+      {
+        "case_id": "SC-0004",
+        "failures": [],
+        "fragments": 4,
+        "paired_length_mm": 40000.0,
+        "passed": true,
+        "reconstructed": true,
+        "scenario": "UNEQUAL_FRAGMENTS",
+        "thickness_mm": 200.0,
+        "true_paired_length_mm": 40000.0,
+        "true_thickness_mm": 200.0,
+        "validation_status": "FRAGMENT_RECOVERY_VALIDATED",
+        "why": "4 collinear fragments at a stable 200 mm separation, 100% of the run paired, and every gap between fragments explained by the drawing. Material occupies the paired intervals only"
+      },
+      {
+        "case_id": "SC-0005",
+        "failures": [],
+        "fragments": 2,
+        "paired_length_mm": 39100.0,
+        "passed": true,
+        "reconstructed": true,
+        "scenario": "FRAGMENTS_AROUND_A_REAL_OPENING",
+        "thickness_mm": 200.0,
+        "true_paired_length_mm": 39100.0,
+        "true_thickness_mm": 200.0,
+        "validation_status": "FRAGMENT_RECOVERY_VALIDATED",
+        "why": "2 collinear fragments at a stable 200 mm separation, 98% of the run paired, and every gap between fragments explained by the drawing. Material occupies the paired intervals only"
+      },
+      {
+        "case_id": "SC-0006",
+        "failures": [],
+        "fragments": 2,
+        "paired_length_mm": 39800.0,
+        "passed": true,
+        "reconstructed": true,
+        "scenario": "FRAGMENTS_AT_A_T_JUNCTION",
+        "thickness_mm": 200.0,
+        "true_paired_length_mm": 39800.0,
+        "true_thickness_mm": 200.0,
+        "validation_status": "FRAGMENT_RECOVERY_DIAGNOSTIC_ONLY",
+        "why": "2 collinear fragments at a stable 200 mm separation, 100% paired \u2014 but 1 gap(s) totalling 200 mm have nothing to explain them (largest 200 mm). The paired intervals are real; the gaps are NOT bridged, and until something accounts for them this group is diagnostic"
+      },
+      {
+        "case_id": "SC-0007",
+        "failures": [],
+        "fragments": 2,
+        "paired_length_mm": 39800.0,
+        "passed": true,
+        "reconstructed": true,
+        "scenario": "FRAGMENTS_AT_AN_L_JUNCTION",
+        "thickness_mm": 200.0,
+        "true_paired_length_mm": 39800.0,
+        "true_thickness_mm": 200.0,
+        "validation_status": "FRAGMENT_RECOVERY_DIAGNOSTIC_ONLY",
+        "why": "2 collinear fragments at a stable 200 mm separation, 100% paired \u2014 but 1 gap(s) totalling 200 mm have nothing to explain them (largest 200 mm). The paired intervals are real; the gaps are NOT bridged, and until something accounts for them this group is diagnostic"
+      },
+      {
+        "case_id": "SC-0008",
+        "failures": [],
+        "fragments": 2,
+        "paired_length_mm": 40000.0,
+        "passed": true,
+        "reconstructed": true,
+        "scenario": "TWO_EQUAL_FRAGMENTS",
+        "thickness_mm": 200.0,
+        "true_paired_length_mm": 40000.0,
+        "true_thickness_mm": 200.0,
+        "validation_status": "FRAGMENT_RECOVERY_VALIDATED",
+        "why": "2 collinear fragments at a stable 200 mm separation, 100% of the run paired, and every gap between fragments explained by the drawing. Material occupies the paired intervals only"
+      },
+      {
+        "case_id": "SC-0009",
+        "failures": [],
+        "fragments": 3,
+        "paired_length_mm": 40000.0,
+        "passed": true,
+        "reconstructed": true,
+        "scenario": "THREE_EQUAL_FRAGMENTS",
+        "thickness_mm": 200.0,
+        "true_paired_length_mm": 40000.0,
+        "true_thickness_mm": 200.0,
+        "validation_status": "FRAGMENT_RECOVERY_VALIDATED",
+        "why": "3 collinear fragments at a stable 200 mm separation, 100% of the run paired, and every gap between fragments explained by the drawing. Material occupies the paired intervals only"
+      },
+      {
+        "case_id": "SC-0010",
+        "failures": [],
+        "fragments": 5,
+        "paired_length_mm": 40000.0,
+        "passed": true,
+        "reconstructed": true,
+        "scenario": "FIVE_EQUAL_FRAGMENTS",
+        "thickness_mm": 200.0,
+        "true_paired_length_mm": 40000.0,
+        "true_thickness_mm": 200.0,
+        "validation_status": "FRAGMENT_RECOVERY_VALIDATED",
+        "why": "5 collinear fragments at a stable 200 mm separation, 100% of the run paired, and every gap between fragments explained by the drawing. Material occupies the paired intervals only"
+      },
+      {
+        "case_id": "SC-0011",
+        "failures": [],
+        "fragments": 4,
+        "paired_length_mm": 40000.0,
+        "passed": true,
+        "reconstructed": true,
+        "scenario": "UNEQUAL_FRAGMENTS",
+        "thickness_mm": 200.0,
+        "true_paired_length_mm": 40000.0,
+        "true_thickness_mm": 200.0,
+        "validation_status": "FRAGMENT_RECOVERY_VALIDATED",
+        "why": "4 collinear fragments at a stable 200 mm separation, 100% of the run paired, and every gap between fragments explained by the drawing. Material occupies the paired intervals only"
+      },
+      {
+        "case_id": "SC-0012",
+        "failures": [],
+        "fragments": 2,
+        "paired_length_mm": 39100.0,
+        "passed": true,
+        "reconstructed": true,
+        "scenario": "FRAGMENTS_AROUND_A_REAL_OPENING",
+        "thickness_mm": 200.0,
+        "true_paired_length_mm": 39100.0,
+        "true_thickness_mm": 200.0,
+        "validation_status": "FRAGMENT_RECOVERY_VALIDATED",
+        "why": "2 collinear fragments at a stable 200 mm separation, 98% of the run paired, and every gap between fragments explained by the drawing. Material occupies the paired intervals only"
+      },
+      {
+        "case_id": "SC-0013",
+        "failures": [],
+        "fragments": 2,
+        "paired_length_mm": 39800.0,
+        "passed": true,
+        "reconstructed": true,
+        "scenario": "FRAGMENTS_AT_A_T_JUNCTION",
+        "thickness_mm": 200.0,
+        "true_paired_length_mm": 39800.0,
+        "true_thickness_mm": 200.0,
+        "validation_status": "FRAGMENT_RECOVERY_DIAGNOSTIC_ONLY",
+        "why": "2 collinear fragments at a stable 200 mm separation, 100% paired \u2014 but 1 gap(s) totalling 200 mm have nothing to explain them (largest 200 mm). The paired intervals are real; the gaps are NOT bridged, and until something accounts for them this group is diagnostic"
+      },
+      {
+        "case_id": "SC-0014",
+        "failures": [],
+        "fragments": 2,
+        "paired_length_mm": 39800.0,
+        "passed": true,
+        "reconstructed": true,
+        "scenario": "FRAGMENTS_AT_AN_L_JUNCTION",
+        "thickness_mm": 200.0,
+        "true_paired_length_mm": 39800.0,
+        "true_thickness_mm": 200.0,
+        "validation_status": "FRAGMENT_RECOVERY_DIAGNOSTIC_ONLY",
+        "why": "2 collinear fragments at a stable 200 mm separation, 100% paired \u2014 but 1 gap(s) totalling 200 mm have nothing to explain them (largest 200 mm). The paired intervals are real; the gaps are NOT bridged, and until something accounts for them this group is diagnostic"
+      },
+      {
+        "case_id": "SC-0015",
+        "failures": [],
+        "fragments": 2,
+        "paired_length_mm": 35050.4,
+        "passed": true,
+        "reconstructed": true,
+        "scenario": "TWO_EQUAL_FRAGMENTS",
+        "thickness_mm": 300.1,
+        "true_paired_length_mm": 35050.4,
+        "true_thickness_mm": 300.1,
+        "validation_status": "FRAGMENT_RECOVERY_VALIDATED",
+        "why": "2 collinear fragments at a stable 300 mm separation, 100% of the run paired, and every gap between fragments explained by the drawing. Material occupies the paired intervals only"
+      },
+      {
+        "case_id": "SC-0016",
+        "failures": [],
+        "fragments": 3,
+        "paired_length_mm": 35050.4,
+        "passed": true,
+        "reconstructed": true,
+        "scenario": "THREE_EQUAL_FRAGMENTS",
+        "thickness_mm": 300.1,
+        "true_paired_length_mm": 35050.4,
+        "true_thickness_mm": 300.1,
+        "validation_status": "FRAGMENT_RECOVERY_VALIDATED",
+        "why": "3 collinear fragments at a stable 300 mm separation, 100% of the run paired, and every gap between fragments explained by the drawing. Material occupies the paired intervals only"
+      },
+      {
+        "case_id": "SC-0017",
+        "failures": [],
+        "fragments": 5,
+        "paired_length_mm": 35050.4,
+        "passed": true,
+        "reconstructed": true,
+        "scenario": "FIVE_EQUAL_FRAGMENTS",
+        "thickness_mm": 300.1,
+        "true_paired_length_mm": 35050.4,
+        "true_thickness_mm": 300.1,
+        "validation_status": "FRAGMENT_RECOVERY_VALIDATED",
+        "why": "5 collinear fragments at a stable 300 mm separation, 100% of the run paired, and every gap between fragments explained by the drawing. Material occupies the paired intervals only"
+      },
+      {
+        "case_id": "SC-0018",
+        "failures": [],
+        "fragments": 4,
+        "paired_length_mm": 35050.4,
+        "passed": true,
+        "reconstructed": true,
+        "scenario": "UNEQUAL_FRAGMENTS",
+        "thickness_mm": 300.1,
+        "true_paired_length_mm": 35050.4,
+        "true_thickness_mm": 300.1,
+        "validation_status": "FRAGMENT_RECOVERY_VALIDATED",
+        "why": "4 collinear fragments at a stable 300 mm separation, 100% of the run paired, and every gap between fragments explained by the drawing. Material occupies the paired intervals only"
+      },
+      {
+        "case_id": "SC-0019",
+        "failures": [],
+        "fragments": 2,
+        "paired_length_mm": 34150.4,
+        "passed": true,
+        "reconstructed": true,
+        "scenario": "FRAGMENTS_AROUND_A_REAL_OPENING",
+        "thickness_mm": 300.1,
+        "true_paired_length_mm": 34150.4,
+        "true_thickness_mm": 300.1,
+        "validation_status": "FRAGMENT_RECOVERY_VALIDATED",
+        "why": "2 collinear fragments at a stable 300 mm separation, 97% of the run paired, and every gap between fragments explained by the drawing. Material occupies the paired intervals only"
+      },
+      {
+        "case_id": "SC-0020",
+        "failures": [],
+        "fragments": 2,
+        "paired_length_mm": 34850.4,
+        "passed": true,
+        "reconstructed": true,
+        "scenario": "FRAGMENTS_AT_A_T_JUNCTION",
+        "thickness_mm": 300.1,
+        "true_paired_length_mm": 34850.4,
+        "true_thickness_mm": 300.1,
+        "validation_status": "FRAGMENT_RECOVERY_DIAGNOSTIC_ONLY",
+        "why": "2 collinear fragments at a stable 300 mm separation, 99% paired \u2014 but 1 gap(s) totalling 200 mm have nothing to explain them (largest 200 mm). The paired intervals are real; the gaps are NOT bridged, and until something accounts for them this group is diagnostic"
+      },
+      {
+        "case_id": "SC-0021",
+        "failures": [],
+        "fragments": 2,
+        "paired_length_mm": 34850.4,
+        "passed": true,
+        "reconstructed": true,
+        "scenario": "FRAGMENTS_AT_AN_L_JUNCTION",
+        "thickness_mm": 300.1,
+        "true_paired_length_mm": 34850.4,
+        "true_thickness_mm": 300.1,
+        "validation_status": "FRAGMENT_RECOVERY_DIAGNOSTIC_ONLY",
+        "why": "2 collinear fragments at a stable 300 mm separation, 99% paired \u2014 but 1 gap(s) totalling 200 mm have nothing to explain them (largest 200 mm). The paired intervals are real; the gaps are NOT bridged, and until something accounts for them this group is diagnostic"
+      }
+    ],
+    "failed": 0,
+    "failed_detail": [],
+    "failures_by_kind": {},
+    "passed": 21,
+    "the_answer_is": "the band the pairing engine already accepted, before one of its faces was cut up. NOT a room, an area, or a count of walls anybody expected",
+    "what_must_hold": [
+      "must not bridge the synthetic opening",
+      "must not invent material the fragments do not cover",
+      "must not change the wall's thickness",
+      "must not move either face"
+    ]
+  },
   "frame": {
     "fit": 1.0,
     "frame": "SWAP_FLIP_Y",
@@ -7720,6 +9352,7 @@
     "controls": 3,
     "disagreement_maps": [
       {
+        "adjudication": "CORRECTNESS_NOT_YET_ADJUDICATED_BY_AN_INDEPENDENT_SOURCE",
         "area_delta_pct": 613.34,
         "by_cause": {
           "A_MEASUREMENT_BASIS_DIFFERS_RASTER_BOUNDARY_IN_THE_WALL": {
@@ -7735,9 +9368,9 @@
             "pieces": 1
           }
         },
-        "disagreement_area_by_blame": {
-          "THE_ENGINE": 24.5871,
-          "THE_REFERENCE": 0.8721
+        "disagreement_area_by_attribution": {
+          "EXPLAINED_BY_THE_ENGINE_S_CONSTRUCTION": 24.5871,
+          "EXPLAINED_BY_THE_REFERENCE_S_CONSTRUCTION": 0.8721
         },
         "intersection_m2": 3.3102,
         "iou": 0.1149,
@@ -7755,10 +9388,10 @@
         "pieces": [
           {
             "area_m2": 24.5871,
+            "attributed_to": "EXPLAINED_BY_THE_ENGINE_S_CONSTRUCTION",
             "barrier_ids": [
               "PT-BTH-01-west-23150"
             ],
-            "blame": "THE_ENGINE",
             "cause": "E_VECTOR_LEAKED_PAST_A_MISSING_SEPARATOR",
             "centroid_mm": [
               28797.8,
@@ -7771,14 +9404,14 @@
             "piece_id": "DG-0001",
             "share_inside_wall_solid": 0.0,
             "side": "VECTOR_ONLY",
-            "why": "92% of this 24.5871 m2 lies inside the raster region(s) for BED-NW. The vector space reached past separators that are missing from the wall solid, so this piece belongs to other rooms. THIS ONE IS THE ENGINE"
+            "why": "92% of this 24.5871 m2 lies inside the raster region(s) for BED-NW. The vector space reached past separators that are missing from the wall solid, so this piece is explained by the ENGINE's construction rather than the reference's"
           },
           {
             "area_m2": 0.6383,
+            "attributed_to": "EXPLAINED_BY_THE_REFERENCE_S_CONSTRUCTION",
             "barrier_ids": [
               "PT-GV31091-line-23604"
             ],
-            "blame": "THE_REFERENCE",
             "cause": "A_MEASUREMENT_BASIS_DIFFERS_RASTER_BOUNDARY_IN_THE_WALL",
             "centroid_mm": [
               31088.7,
@@ -7793,8 +9426,8 @@
           },
           {
             "area_m2": 0.0467,
+            "attributed_to": "EXPLAINED_BY_THE_REFERENCE_S_CONSTRUCTION",
             "barrier_ids": [],
-            "blame": "THE_REFERENCE",
             "cause": "D_SEGMENTATION_CARVED_AROUND_A_FIXTURE",
             "centroid_mm": [
               30141.2,
@@ -7809,8 +9442,8 @@
           },
           {
             "area_m2": 0.041,
+            "attributed_to": "EXPLAINED_BY_THE_REFERENCE_S_CONSTRUCTION",
             "barrier_ids": [],
-            "blame": "THE_REFERENCE",
             "cause": "D_SEGMENTATION_CARVED_AROUND_A_FIXTURE",
             "centroid_mm": [
               30406.2,
@@ -7825,8 +9458,8 @@
           },
           {
             "area_m2": 0.0215,
+            "attributed_to": "EXPLAINED_BY_THE_REFERENCE_S_CONSTRUCTION",
             "barrier_ids": [],
-            "blame": "THE_REFERENCE",
             "cause": "D_SEGMENTATION_CARVED_AROUND_A_FIXTURE",
             "centroid_mm": [
               30276.4,
@@ -7841,8 +9474,8 @@
           },
           {
             "area_m2": 0.021,
+            "attributed_to": "EXPLAINED_BY_THE_REFERENCE_S_CONSTRUCTION",
             "barrier_ids": [],
-            "blame": "THE_REFERENCE",
             "cause": "D_SEGMENTATION_CARVED_AROUND_A_FIXTURE",
             "centroid_mm": [
               30135.8,
@@ -7857,8 +9490,8 @@
           },
           {
             "area_m2": 0.0171,
+            "attributed_to": "EXPLAINED_BY_THE_REFERENCE_S_CONSTRUCTION",
             "barrier_ids": [],
-            "blame": "THE_REFERENCE",
             "cause": "D_SEGMENTATION_CARVED_AROUND_A_FIXTURE",
             "centroid_mm": [
               30173.7,
@@ -7873,8 +9506,8 @@
           },
           {
             "area_m2": 0.0165,
+            "attributed_to": "EXPLAINED_BY_THE_REFERENCE_S_CONSTRUCTION",
             "barrier_ids": [],
-            "blame": "THE_REFERENCE",
             "cause": "D_SEGMENTATION_CARVED_AROUND_A_FIXTURE",
             "centroid_mm": [
               30152.1,
@@ -7889,8 +9522,8 @@
           },
           {
             "area_m2": 0.0143,
+            "attributed_to": "EXPLAINED_BY_THE_REFERENCE_S_CONSTRUCTION",
             "barrier_ids": [],
-            "blame": "THE_REFERENCE",
             "cause": "D_SEGMENTATION_CARVED_AROUND_A_FIXTURE",
             "centroid_mm": [
               29287.0,
@@ -7905,8 +9538,8 @@
           },
           {
             "area_m2": 0.012,
+            "attributed_to": "EXPLAINED_BY_THE_REFERENCE_S_CONSTRUCTION",
             "barrier_ids": [],
-            "blame": "THE_REFERENCE",
             "cause": "D_SEGMENTATION_CARVED_AROUND_A_FIXTURE",
             "centroid_mm": [
               29989.9,
@@ -7921,8 +9554,8 @@
           },
           {
             "area_m2": 0.0116,
+            "attributed_to": "EXPLAINED_BY_THE_REFERENCE_S_CONSTRUCTION",
             "barrier_ids": [],
-            "blame": "THE_REFERENCE",
             "cause": "D_SEGMENTATION_CARVED_AROUND_A_FIXTURE",
             "centroid_mm": [
               30829.2,
@@ -7937,8 +9570,8 @@
           },
           {
             "area_m2": 0.0115,
+            "attributed_to": "EXPLAINED_BY_THE_REFERENCE_S_CONSTRUCTION",
             "barrier_ids": [],
-            "blame": "THE_REFERENCE",
             "cause": "D_SEGMENTATION_CARVED_AROUND_A_FIXTURE",
             "centroid_mm": [
               30141.2,
@@ -7953,8 +9586,8 @@
           },
           {
             "area_m2": 0.0104,
+            "attributed_to": "EXPLAINED_BY_THE_REFERENCE_S_CONSTRUCTION",
             "barrier_ids": [],
-            "blame": "THE_REFERENCE",
             "cause": "D_SEGMENTATION_CARVED_AROUND_A_FIXTURE",
             "centroid_mm": [
               30829.2,
@@ -7969,8 +9602,8 @@
           },
           {
             "area_m2": 0.0102,
+            "attributed_to": "EXPLAINED_BY_THE_REFERENCE_S_CONSTRUCTION",
             "barrier_ids": [],
-            "blame": "THE_REFERENCE",
             "cause": "D_SEGMENTATION_CARVED_AROUND_A_FIXTURE",
             "centroid_mm": [
               29838.5,
@@ -7988,12 +9621,16 @@
         "raster_only_m2": 0.6383,
         "raster_reference_area_m2": 3.9485,
         "space_id": "BTH-01",
+        "spatially_attributed_pct": 100.0,
+        "the_control_remains_frozen": "this comparison ran after the polygon's hash was taken, nothing here corrects the geometry, and no tuning followed from it",
         "this_control_is_not_tuned": "nothing here corrects the vector geometry and nothing is adjusted to make the delta smaller. If the map shows the engine is wrong, the engine is fixed and the control is measured again from scratch",
         "union_m2": 28.8047,
         "vector_area_m2": 28.1664,
-        "vector_only_m2": 24.8208
+        "vector_only_m2": 24.8208,
+        "what_attribution_is_and_is_not": "every square metre of disagreement is placed and given the construction that explains it. That is NOT a finding that one side is right: there is no independent ground truth on this project, the sealed site benchmark is not opened, and a vector polygon agreeing with itself proves nothing"
       },
       {
+        "adjudication": "CORRECTNESS_NOT_YET_ADJUDICATED_BY_AN_INDEPENDENT_SOURCE",
         "area_delta_pct": -11.56,
         "by_cause": {
           "A_MEASUREMENT_BASIS_DIFFERS_RASTER_BOUNDARY_IN_THE_WALL": {
@@ -8009,8 +9646,8 @@
             "pieces": 1
           }
         },
-        "disagreement_area_by_blame": {
-          "THE_REFERENCE": 4.89
+        "disagreement_area_by_attribution": {
+          "EXPLAINED_BY_THE_REFERENCE_S_CONSTRUCTION": 4.89
         },
         "intersection_m2": 19.9468,
         "iou": 0.802,
@@ -8028,11 +9665,11 @@
         "pieces": [
           {
             "area_m2": 3.837,
+            "attributed_to": "EXPLAINED_BY_THE_REFERENCE_S_CONSTRUCTION",
             "barrier_ids": [
               "PT-BTH-02-west-25824",
               "PT-GH27048-line-27348"
             ],
-            "blame": "THE_REFERENCE",
             "cause": "F_RASTER_REGION_CLAIMS_FLOOR_THE_VECTOR_DOES_NOT",
             "centroid_mm": [
               27032.5,
@@ -8047,11 +9684,11 @@
           },
           {
             "area_m2": 0.5671,
+            "attributed_to": "EXPLAINED_BY_THE_REFERENCE_S_CONSTRUCTION",
             "barrier_ids": [
               "PT-BED-01-west-27124",
               "PT-GH27048-line-27348"
             ],
-            "blame": "THE_REFERENCE",
             "cause": "A_MEASUREMENT_BASIS_DIFFERS_RASTER_BOUNDARY_IN_THE_WALL",
             "centroid_mm": [
               26366.2,
@@ -8066,8 +9703,8 @@
           },
           {
             "area_m2": 0.0438,
+            "attributed_to": "EXPLAINED_BY_THE_REFERENCE_S_CONSTRUCTION",
             "barrier_ids": [],
-            "blame": "THE_REFERENCE",
             "cause": "D_SEGMENTATION_CARVED_AROUND_A_FIXTURE",
             "centroid_mm": [
               29027.5,
@@ -8082,8 +9719,8 @@
           },
           {
             "area_m2": 0.0371,
+            "attributed_to": "EXPLAINED_BY_THE_REFERENCE_S_CONSTRUCTION",
             "barrier_ids": [],
-            "blame": "THE_REFERENCE",
             "cause": "D_SEGMENTATION_CARVED_AROUND_A_FIXTURE",
             "centroid_mm": [
               30909.0,
@@ -8098,8 +9735,8 @@
           },
           {
             "area_m2": 0.0339,
+            "attributed_to": "EXPLAINED_BY_THE_REFERENCE_S_CONSTRUCTION",
             "barrier_ids": [],
-            "blame": "THE_REFERENCE",
             "cause": "D_SEGMENTATION_CARVED_AROUND_A_FIXTURE",
             "centroid_mm": [
               28827.5,
@@ -8114,8 +9751,8 @@
           },
           {
             "area_m2": 0.0337,
+            "attributed_to": "EXPLAINED_BY_THE_REFERENCE_S_CONSTRUCTION",
             "barrier_ids": [],
-            "blame": "THE_REFERENCE",
             "cause": "D_SEGMENTATION_CARVED_AROUND_A_FIXTURE",
             "centroid_mm": [
               28827.5,
@@ -8130,8 +9767,8 @@
           },
           {
             "area_m2": 0.0322,
+            "attributed_to": "EXPLAINED_BY_THE_REFERENCE_S_CONSTRUCTION",
             "barrier_ids": [],
-            "blame": "THE_REFERENCE",
             "cause": "D_SEGMENTATION_CARVED_AROUND_A_FIXTURE",
             "centroid_mm": [
               28832.9,
@@ -8146,8 +9783,8 @@
           },
           {
             "area_m2": 0.0303,
+            "attributed_to": "EXPLAINED_BY_THE_REFERENCE_S_CONSTRUCTION",
             "barrier_ids": [],
-            "blame": "THE_REFERENCE",
             "cause": "D_SEGMENTATION_CARVED_AROUND_A_FIXTURE",
             "centroid_mm": [
               28832.9,
@@ -8162,8 +9799,8 @@
           },
           {
             "area_m2": 0.0267,
+            "attributed_to": "EXPLAINED_BY_THE_REFERENCE_S_CONSTRUCTION",
             "barrier_ids": [],
-            "blame": "THE_REFERENCE",
             "cause": "D_SEGMENTATION_CARVED_AROUND_A_FIXTURE",
             "centroid_mm": [
               29092.4,
@@ -8178,8 +9815,8 @@
           },
           {
             "area_m2": 0.0254,
+            "attributed_to": "EXPLAINED_BY_THE_REFERENCE_S_CONSTRUCTION",
             "barrier_ids": [],
-            "blame": "THE_REFERENCE",
             "cause": "D_SEGMENTATION_CARVED_AROUND_A_FIXTURE",
             "centroid_mm": [
               29087.0,
@@ -8194,8 +9831,8 @@
           },
           {
             "area_m2": 0.0242,
+            "attributed_to": "EXPLAINED_BY_THE_REFERENCE_S_CONSTRUCTION",
             "barrier_ids": [],
-            "blame": "THE_REFERENCE",
             "cause": "D_SEGMENTATION_CARVED_AROUND_A_FIXTURE",
             "centroid_mm": [
               28870.7,
@@ -8210,8 +9847,8 @@
           },
           {
             "area_m2": 0.0239,
+            "attributed_to": "EXPLAINED_BY_THE_REFERENCE_S_CONSTRUCTION",
             "barrier_ids": [],
-            "blame": "THE_REFERENCE",
             "cause": "D_SEGMENTATION_CARVED_AROUND_A_FIXTURE",
             "centroid_mm": [
               28757.2,
@@ -8226,8 +9863,8 @@
           },
           {
             "area_m2": 0.0215,
+            "attributed_to": "EXPLAINED_BY_THE_REFERENCE_S_CONSTRUCTION",
             "barrier_ids": [],
-            "blame": "THE_REFERENCE",
             "cause": "D_SEGMENTATION_CARVED_AROUND_A_FIXTURE",
             "centroid_mm": [
               29054.5,
@@ -8242,8 +9879,8 @@
           },
           {
             "area_m2": 0.021,
+            "attributed_to": "EXPLAINED_BY_THE_REFERENCE_S_CONSTRUCTION",
             "barrier_ids": [],
-            "blame": "THE_REFERENCE",
             "cause": "D_SEGMENTATION_CARVED_AROUND_A_FIXTURE",
             "centroid_mm": [
               30898.2,
@@ -8258,8 +9895,8 @@
           },
           {
             "area_m2": 0.0206,
+            "attributed_to": "EXPLAINED_BY_THE_REFERENCE_S_CONSTRUCTION",
             "barrier_ids": [],
-            "blame": "THE_REFERENCE",
             "cause": "D_SEGMENTATION_CARVED_AROUND_A_FIXTURE",
             "centroid_mm": [
               27443.4,
@@ -8274,8 +9911,8 @@
           },
           {
             "area_m2": 0.0167,
+            "attributed_to": "EXPLAINED_BY_THE_REFERENCE_S_CONSTRUCTION",
             "barrier_ids": [],
-            "blame": "THE_REFERENCE",
             "cause": "D_SEGMENTATION_CARVED_AROUND_A_FIXTURE",
             "centroid_mm": [
               30909.0,
@@ -8290,8 +9927,8 @@
           },
           {
             "area_m2": 0.0166,
+            "attributed_to": "EXPLAINED_BY_THE_REFERENCE_S_CONSTRUCTION",
             "barrier_ids": [],
-            "blame": "THE_REFERENCE",
             "cause": "D_SEGMENTATION_CARVED_AROUND_A_FIXTURE",
             "centroid_mm": [
               28832.9,
@@ -8306,8 +9943,8 @@
           },
           {
             "area_m2": 0.0157,
+            "attributed_to": "EXPLAINED_BY_THE_REFERENCE_S_CONSTRUCTION",
             "barrier_ids": [],
-            "blame": "THE_REFERENCE",
             "cause": "D_SEGMENTATION_CARVED_AROUND_A_FIXTURE",
             "centroid_mm": [
               28757.2,
@@ -8322,8 +9959,8 @@
           },
           {
             "area_m2": 0.0144,
+            "attributed_to": "EXPLAINED_BY_THE_REFERENCE_S_CONSTRUCTION",
             "barrier_ids": [],
-            "blame": "THE_REFERENCE",
             "cause": "D_SEGMENTATION_CARVED_AROUND_A_FIXTURE",
             "centroid_mm": [
               30914.4,
@@ -8338,8 +9975,8 @@
           },
           {
             "area_m2": 0.0141,
+            "attributed_to": "EXPLAINED_BY_THE_REFERENCE_S_CONSTRUCTION",
             "barrier_ids": [],
-            "blame": "THE_REFERENCE",
             "cause": "D_SEGMENTATION_CARVED_AROUND_A_FIXTURE",
             "centroid_mm": [
               28611.2,
@@ -8354,8 +9991,8 @@
           },
           {
             "area_m2": 0.012,
+            "attributed_to": "EXPLAINED_BY_THE_REFERENCE_S_CONSTRUCTION",
             "barrier_ids": [],
-            "blame": "THE_REFERENCE",
             "cause": "D_SEGMENTATION_CARVED_AROUND_A_FIXTURE",
             "centroid_mm": [
               28908.6,
@@ -8370,8 +10007,8 @@
           },
           {
             "area_m2": 0.0119,
+            "attributed_to": "EXPLAINED_BY_THE_REFERENCE_S_CONSTRUCTION",
             "barrier_ids": [],
-            "blame": "THE_REFERENCE",
             "cause": "D_SEGMENTATION_CARVED_AROUND_A_FIXTURE",
             "centroid_mm": [
               30973.8,
@@ -8386,8 +10023,8 @@
           },
           {
             "area_m2": 0.0102,
+            "attributed_to": "EXPLAINED_BY_THE_REFERENCE_S_CONSTRUCTION",
             "barrier_ids": [],
-            "blame": "THE_REFERENCE",
             "cause": "D_SEGMENTATION_CARVED_AROUND_A_FIXTURE",
             "centroid_mm": [
               30979.3,
@@ -8405,12 +10042,16 @@
         "raster_only_m2": 3.837,
         "raster_reference_area_m2": 23.7838,
         "space_id": "BED-01",
+        "spatially_attributed_pct": 100.0,
+        "the_control_remains_frozen": "this comparison ran after the polygon's hash was taken, nothing here corrects the geometry, and no tuning followed from it",
         "this_control_is_not_tuned": "nothing here corrects the vector geometry and nothing is adjusted to make the delta smaller. If the map shows the engine is wrong, the engine is fixed and the control is measured again from scratch",
         "union_m2": 24.8708,
         "vector_area_m2": 21.0338,
-        "vector_only_m2": 1.0529
+        "vector_only_m2": 1.0529,
+        "what_attribution_is_and_is_not": "every square metre of disagreement is placed and given the construction that explains it. That is NOT a finding that one side is right: there is no independent ground truth on this project, the sealed site benchmark is not opened, and a vector polygon agreeing with itself proves nothing"
       },
       {
+        "adjudication": "CORRECTNESS_NOT_YET_ADJUDICATED_BY_AN_INDEPENDENT_SOURCE",
         "area_delta_pct": 19572.89,
         "by_cause": {
           "D_SEGMENTATION_CARVED_AROUND_A_FIXTURE": {
@@ -8422,9 +10063,9 @@
             "pieces": 1
           }
         },
-        "disagreement_area_by_blame": {
-          "THE_ENGINE": 733.9206,
-          "THE_REFERENCE": 0.3016
+        "disagreement_area_by_attribution": {
+          "EXPLAINED_BY_THE_ENGINE_S_CONSTRUCTION": 733.9206,
+          "EXPLAINED_BY_THE_REFERENCE_S_CONSTRUCTION": 0.3016
         },
         "intersection_m2": 3.7514,
         "iou": 0.0051,
@@ -8442,12 +10083,12 @@
         "pieces": [
           {
             "area_m2": 733.9206,
+            "attributed_to": "EXPLAINED_BY_THE_ENGINE_S_CONSTRUCTION",
             "barrier_ids": [
               "PT-BTH-03-west-32822",
               "PT-BTH-05-south-22393",
               "PT-GH12522-line-19198"
             ],
-            "blame": "THE_ENGINE",
             "cause": "E_VECTOR_LEAKED_PAST_A_MISSING_SEPARATOR",
             "centroid_mm": [
               19672.9,
@@ -8480,12 +10121,12 @@
             "piece_id": "DG-0001",
             "share_inside_wall_solid": 0.0,
             "side": "VECTOR_ONLY",
-            "why": "60% of this 733.9206 m2 lies inside the raster region(s) for OPEN-01, TRC-01, BED-04, BED-02, SAL-NW, KIT-01, MAID-01, MAID-03 and 13 more. The vector space reached past separators that are missing from the wall solid, so this piece belongs to other rooms. THIS ONE IS THE ENGINE"
+            "why": "60% of this 733.9206 m2 lies inside the raster region(s) for OPEN-01, TRC-01, BED-04, BED-02, SAL-NW, KIT-01, MAID-01, MAID-03 and 13 more. The vector space reached past separators that are missing from the wall solid, so this piece is explained by the ENGINE's construction rather than the reference's"
           },
           {
             "area_m2": 0.0642,
+            "attributed_to": "EXPLAINED_BY_THE_REFERENCE_S_CONSTRUCTION",
             "barrier_ids": [],
-            "blame": "THE_REFERENCE",
             "cause": "D_SEGMENTATION_CARVED_AROUND_A_FIXTURE",
             "centroid_mm": [
               11867.3,
@@ -8500,8 +10141,8 @@
           },
           {
             "area_m2": 0.0333,
+            "attributed_to": "EXPLAINED_BY_THE_REFERENCE_S_CONSTRUCTION",
             "barrier_ids": [],
-            "blame": "THE_REFERENCE",
             "cause": "D_SEGMENTATION_CARVED_AROUND_A_FIXTURE",
             "centroid_mm": [
               11542.9,
@@ -8516,8 +10157,8 @@
           },
           {
             "area_m2": 0.0246,
+            "attributed_to": "EXPLAINED_BY_THE_REFERENCE_S_CONSTRUCTION",
             "barrier_ids": [],
-            "blame": "THE_REFERENCE",
             "cause": "D_SEGMENTATION_CARVED_AROUND_A_FIXTURE",
             "centroid_mm": [
               11586.1,
@@ -8532,8 +10173,8 @@
           },
           {
             "area_m2": 0.0215,
+            "attributed_to": "EXPLAINED_BY_THE_REFERENCE_S_CONSTRUCTION",
             "barrier_ids": [],
-            "blame": "THE_REFERENCE",
             "cause": "D_SEGMENTATION_CARVED_AROUND_A_FIXTURE",
             "centroid_mm": [
               10948.2,
@@ -8548,8 +10189,8 @@
           },
           {
             "area_m2": 0.0212,
+            "attributed_to": "EXPLAINED_BY_THE_REFERENCE_S_CONSTRUCTION",
             "barrier_ids": [],
-            "blame": "THE_REFERENCE",
             "cause": "D_SEGMENTATION_CARVED_AROUND_A_FIXTURE",
             "centroid_mm": [
               10948.2,
@@ -8564,8 +10205,8 @@
           },
           {
             "area_m2": 0.0206,
+            "attributed_to": "EXPLAINED_BY_THE_REFERENCE_S_CONSTRUCTION",
             "barrier_ids": [],
-            "blame": "THE_REFERENCE",
             "cause": "D_SEGMENTATION_CARVED_AROUND_A_FIXTURE",
             "centroid_mm": [
               12413.3,
@@ -8580,8 +10221,8 @@
           },
           {
             "area_m2": 0.0166,
+            "attributed_to": "EXPLAINED_BY_THE_REFERENCE_S_CONSTRUCTION",
             "barrier_ids": [],
-            "blame": "THE_REFERENCE",
             "cause": "D_SEGMENTATION_CARVED_AROUND_A_FIXTURE",
             "centroid_mm": [
               11456.4,
@@ -8596,8 +10237,8 @@
           },
           {
             "area_m2": 0.0165,
+            "attributed_to": "EXPLAINED_BY_THE_REFERENCE_S_CONSTRUCTION",
             "barrier_ids": [],
-            "blame": "THE_REFERENCE",
             "cause": "D_SEGMENTATION_CARVED_AROUND_A_FIXTURE",
             "centroid_mm": [
               11548.3,
@@ -8612,8 +10253,8 @@
           },
           {
             "area_m2": 0.0158,
+            "attributed_to": "EXPLAINED_BY_THE_REFERENCE_S_CONSTRUCTION",
             "barrier_ids": [],
-            "blame": "THE_REFERENCE",
             "cause": "D_SEGMENTATION_CARVED_AROUND_A_FIXTURE",
             "centroid_mm": [
               10910.3,
@@ -8628,8 +10269,8 @@
           },
           {
             "area_m2": 0.0137,
+            "attributed_to": "EXPLAINED_BY_THE_REFERENCE_S_CONSTRUCTION",
             "barrier_ids": [],
-            "blame": "THE_REFERENCE",
             "cause": "D_SEGMENTATION_CARVED_AROUND_A_FIXTURE",
             "centroid_mm": [
               10959.0,
@@ -8644,8 +10285,8 @@
           },
           {
             "area_m2": 0.012,
+            "attributed_to": "EXPLAINED_BY_THE_REFERENCE_S_CONSTRUCTION",
             "barrier_ids": [],
-            "blame": "THE_REFERENCE",
             "cause": "D_SEGMENTATION_CARVED_AROUND_A_FIXTURE",
             "centroid_mm": [
               11797.0,
@@ -8660,8 +10301,8 @@
           },
           {
             "area_m2": 0.0109,
+            "attributed_to": "EXPLAINED_BY_THE_REFERENCE_S_CONSTRUCTION",
             "barrier_ids": [],
-            "blame": "THE_REFERENCE",
             "cause": "D_SEGMENTATION_CARVED_AROUND_A_FIXTURE",
             "centroid_mm": [
               11542.9,
@@ -8676,8 +10317,8 @@
           },
           {
             "area_m2": 0.0103,
+            "attributed_to": "EXPLAINED_BY_THE_REFERENCE_S_CONSTRUCTION",
             "barrier_ids": [],
-            "blame": "THE_REFERENCE",
             "cause": "D_SEGMENTATION_CARVED_AROUND_A_FIXTURE",
             "centroid_mm": [
               11661.8,
@@ -8692,8 +10333,8 @@
           },
           {
             "area_m2": 0.0103,
+            "attributed_to": "EXPLAINED_BY_THE_REFERENCE_S_CONSTRUCTION",
             "barrier_ids": [],
-            "blame": "THE_REFERENCE",
             "cause": "D_SEGMENTATION_CARVED_AROUND_A_FIXTURE",
             "centroid_mm": [
               11359.1,
@@ -8708,8 +10349,8 @@
           },
           {
             "area_m2": 0.0101,
+            "attributed_to": "EXPLAINED_BY_THE_REFERENCE_S_CONSTRUCTION",
             "barrier_ids": [],
-            "blame": "THE_REFERENCE",
             "cause": "D_SEGMENTATION_CARVED_AROUND_A_FIXTURE",
             "centroid_mm": [
               11029.3,
@@ -8727,14 +10368,37 @@
         "raster_only_m2": 0,
         "raster_reference_area_m2": 3.7514,
         "space_id": "STR-01",
+        "spatially_attributed_pct": 100.0,
+        "the_control_remains_frozen": "this comparison ran after the polygon's hash was taken, nothing here corrects the geometry, and no tuning followed from it",
         "this_control_is_not_tuned": "nothing here corrects the vector geometry and nothing is adjusted to make the delta smaller. If the map shows the engine is wrong, the engine is fixed and the control is measured again from scratch",
         "union_m2": 738.0109,
         "vector_area_m2": 738.0109,
-        "vector_only_m2": 734.2221
+        "vector_only_m2": 734.2221,
+        "what_attribution_is_and_is_not": "every square metre of disagreement is placed and given the construction that explains it. That is NOT a finding that one side is right: there is no independent ground truth on this project, the sealed site benchmark is not opened, and a vector polygon agreeing with itself proves nothing"
       }
     ],
     "exit_gate": "PASS",
     "exit_gate_rule": "at least one frozen control has an independently generated, valid, non-overlapping clear-internal polygon with no bbox and no raster millimetre edge",
+    "freeze_guard": {
+      "FROZEN_RESULT_STATUS": "FROZEN_RESULT_HELD",
+      "accepted_geometry_hashes": [
+        "6ef3d4fc44a410d0fb1f2452",
+        "415a3d1f0b56188cdd2c9ff4"
+      ],
+      "hash_history": {
+        "as_originally_frozen": "6ef3d4fc44a410d0fb1f2452",
+        "since_round_1_5": "415a3d1f0b56188cdd2c9ff4",
+        "superseded_at_commit": "162a7de",
+        "why_two_hashes": "the polygon was re-derived through one geometry authority at the Round 1.5 unification. The AREA did not move, so the result is the same result under a re-expressed geometry \u2014 not a tuned one"
+      },
+      "holds": true,
+      "observed_area_m2": 21.034,
+      "observed_geometry_hash": "415a3d1f0b56188cdd2c9ff4",
+      "pinned_area_m2": 21.034,
+      "space_id": "BED-01",
+      "what_a_new_polygon_requires": "if independently supported recovery ever produces a different BED-01 polygon, it becomes a NEW geometry record with a NEW hash. The frozen one is not mutated, and this check is not widened to accept it",
+      "why": "21.034 m\u00b2 under a known geometry hash. Nothing this round touched the frozen control"
+    },
     "frozen": [
       {
         "clear_internal_area_m2": 28.166,
@@ -9279,7 +10943,7 @@
         "frozen_area_m2": 28.166382037499993,
         "geometry_hash": "",
         "release_blockers": [
-          "its boundary rests on 2.152 m of wall material whose physical presence is NOT established",
+          "its boundary rests on 0.151 m of wall material whose physical presence is NOT established",
           "its partition depends on a barrier whose portal existence is not validated: PT-BTH-01-west-23150, PT-GV26222-line-21823, PT-GV31091-line-23604",
           "the component holding it also holds 1 other labelled space(s), so it is not this room's polygon"
         ],
@@ -9294,7 +10958,7 @@
               "from_mm": 24972.7,
               "grounds": "UNRESOLVED_SINGLE_FACE_EXTENSION",
               "junction_patch_id": "",
-              "length_mm": 2151.8,
+              "length_mm": 151.4,
               "may_enter": [
                 "DIAGNOSTIC_AUGMENTED_WALL_SOLID"
               ],
@@ -9302,16 +10966,16 @@
                 "VS-000167",
                 "VS-000164"
               ],
-              "to_mm": 27124.5,
+              "to_mm": 25124.1,
               "wall_band_id": "WB-00160",
-              "why": "2152 mm the band itself records as UNRESOLVED_EXTENSION: by its own note this extent beyond the paired interval is NOT established material. It is refused from the established solid and kept here with provenance"
+              "why": "151 mm the band itself records as UNRESOLVED_EXTENSION: by its own note this extent beyond the paired interval is NOT established material. It is refused from the established solid and kept here with provenance"
             }
           ],
-          "unestablished_boundary_length_m": 2.152,
+          "unestablished_boundary_length_m": 0.151,
           "unestablished_intervals_on_its_boundary": 1,
           "why": "this space's boundary runs along material whose physical presence is not established, so the space exists as drawn only because a hypothesis was treated as masonry"
         },
-        "why": "its boundary rests on 2.152 m of wall material whose physical presence is NOT established; its partition depends on a barrier whose portal existence is not validated: PT-BTH-01-west-23150, PT-GV26222-line-21823, PT-GV31091-line-23604; the component holding it also holds 1 other labelled space(s), so it is not this room's polygon"
+        "why": "its boundary rests on 0.151 m of wall material whose physical presence is NOT established; its partition depends on a barrier whose portal existence is not validated: PT-BTH-01-west-23150, PT-GV26222-line-21823, PT-GV31091-line-23604; the component holding it also holds 1 other labelled space(s), so it is not this room's polygon"
       },
       {
         "DIAGNOSTIC_GEOMETRY_ACCEPTED": true,
@@ -9320,7 +10984,7 @@
         "frozen_area_m2": 21.033787725,
         "geometry_hash": "415a3d1f0b56188cdd2c9ff4",
         "release_blockers": [
-          "its boundary rests on 5.104 m of wall material whose physical presence is NOT established",
+          "its boundary rests on 2.352 m of wall material whose physical presence is NOT established",
           "its partition depends on a barrier whose portal existence is not validated: PT-BED-01-west-27124, PT-GH27048-line-27348"
         ],
         "space_geometry_id": "SG-V2-0005",
@@ -9328,24 +10992,6 @@
         "unestablished_wall_dependency": {
           "depends_on_unestablished_material": true,
           "intervals": [
-            {
-              "axis": "V",
-              "established": false,
-              "from_mm": 24972.7,
-              "grounds": "UNRESOLVED_SINGLE_FACE_EXTENSION",
-              "junction_patch_id": "",
-              "length_mm": 2151.8,
-              "may_enter": [
-                "DIAGNOSTIC_AUGMENTED_WALL_SOLID"
-              ],
-              "source_face_ids": [
-                "VS-000167",
-                "VS-000164"
-              ],
-              "to_mm": 27124.5,
-              "wall_band_id": "WB-00160",
-              "why": "2152 mm the band itself records as UNRESOLVED_EXTENSION: by its own note this extent beyond the paired interval is NOT established material. It is refused from the established solid and kept here with provenance"
-            },
             {
               "axis": "H",
               "established": false,
@@ -9367,10 +11013,10 @@
             {
               "axis": "H",
               "established": false,
-              "from_mm": 26348.6,
+              "from_mm": 27100.1,
               "grounds": "UNRESOLVED_SINGLE_FACE_EXTENSION",
               "junction_patch_id": "",
-              "length_mm": 951.5,
+              "length_mm": 200.0,
               "may_enter": [
                 "DIAGNOSTIC_AUGMENTED_WALL_SOLID"
               ],
@@ -9380,14 +11026,32 @@
               ],
               "to_mm": 27300.1,
               "wall_band_id": "WB-00030",
-              "why": "952 mm the band itself records as UNRESOLVED_EXTENSION: by its own note this extent beyond the paired interval is NOT established material. It is refused from the established solid and kept here with provenance"
+              "why": "200 mm the band itself records as UNRESOLVED_EXTENSION: by its own note this extent beyond the paired interval is NOT established material. It is refused from the established solid and kept here with provenance"
+            },
+            {
+              "axis": "V",
+              "established": false,
+              "from_mm": 26973.1,
+              "grounds": "UNRESOLVED_SINGLE_FACE_EXTENSION",
+              "junction_patch_id": "",
+              "length_mm": 151.4,
+              "may_enter": [
+                "DIAGNOSTIC_AUGMENTED_WALL_SOLID"
+              ],
+              "source_face_ids": [
+                "VS-000167",
+                "VS-000164"
+              ],
+              "to_mm": 27124.5,
+              "wall_band_id": "WB-00160",
+              "why": "151 mm the band itself records as UNRESOLVED_EXTENSION: by its own note this extent beyond the paired interval is NOT established material. It is refused from the established solid and kept here with provenance"
             }
           ],
-          "unestablished_boundary_length_m": 5.104,
+          "unestablished_boundary_length_m": 2.352,
           "unestablished_intervals_on_its_boundary": 3,
           "why": "this space's boundary runs along material whose physical presence is not established, so the space exists as drawn only because a hypothesis was treated as masonry"
         },
-        "why": "its boundary rests on 5.104 m of wall material whose physical presence is NOT established; its partition depends on a barrier whose portal existence is not validated: PT-BED-01-west-27124, PT-GH27048-line-27348"
+        "why": "its boundary rests on 2.352 m of wall material whose physical presence is NOT established; its partition depends on a barrier whose portal existence is not validated: PT-BED-01-west-27124, PT-GH27048-line-27348"
       },
       {
         "DIAGNOSTIC_GEOMETRY_ACCEPTED": false,
@@ -9396,7 +11060,7 @@
         "frozen_area_m2": 738.0108933050001,
         "geometry_hash": "",
         "release_blockers": [
-          "its boundary rests on 54.127 m of wall material whose physical presence is NOT established",
+          "its boundary rests on 46.869 m of wall material whose physical presence is NOT established",
           "the component holding it also holds 21 other labelled space(s), so it is not this room's polygon"
         ],
         "space_geometry_id": "SG-V2-0001",
@@ -9531,78 +11195,6 @@
               "why": "2833 mm the band itself records as UNRESOLVED_EXTENSION: by its own note this extent beyond the paired interval is NOT established material. It is refused from the established solid and kept here with provenance"
             },
             {
-              "axis": "V",
-              "established": false,
-              "from_mm": 22823.6,
-              "grounds": "UNRESOLVED_SINGLE_FACE_EXTENSION",
-              "junction_patch_id": "",
-              "length_mm": 2600.5,
-              "may_enter": [
-                "DIAGNOSTIC_AUGMENTED_WALL_SOLID"
-              ],
-              "source_face_ids": [
-                "VS-005345",
-                "VS-005340"
-              ],
-              "to_mm": 25424.1,
-              "wall_band_id": "WB-00144",
-              "why": "2601 mm the band itself records as UNRESOLVED_EXTENSION: by its own note this extent beyond the paired interval is NOT established material. It is refused from the established solid and kept here with provenance"
-            },
-            {
-              "axis": "V",
-              "established": false,
-              "from_mm": 24972.7,
-              "grounds": "UNRESOLVED_SINGLE_FACE_EXTENSION",
-              "junction_patch_id": "",
-              "length_mm": 2151.8,
-              "may_enter": [
-                "DIAGNOSTIC_AUGMENTED_WALL_SOLID"
-              ],
-              "source_face_ids": [
-                "VS-000167",
-                "VS-000164"
-              ],
-              "to_mm": 27124.5,
-              "wall_band_id": "WB-00160",
-              "why": "2152 mm the band itself records as UNRESOLVED_EXTENSION: by its own note this extent beyond the paired interval is NOT established material. It is refused from the established solid and kept here with provenance"
-            },
-            {
-              "axis": "V",
-              "established": false,
-              "from_mm": 10348.1,
-              "grounds": "UNRESOLVED_SINGLE_FACE_EXTENSION",
-              "junction_patch_id": "",
-              "length_mm": 2124.8,
-              "may_enter": [
-                "DIAGNOSTIC_AUGMENTED_WALL_SOLID"
-              ],
-              "source_face_ids": [
-                "VS-000056",
-                "VS-029915"
-              ],
-              "to_mm": 12472.8,
-              "wall_band_id": "WB-00217",
-              "why": "2125 mm the band itself records as UNRESOLVED_EXTENSION: by its own note this extent beyond the paired interval is NOT established material. It is refused from the established solid and kept here with provenance"
-            },
-            {
-              "axis": "H",
-              "established": false,
-              "from_mm": 19747.3,
-              "grounds": "UNRESOLVED_SINGLE_FACE_EXTENSION",
-              "junction_patch_id": "",
-              "length_mm": 2119.3,
-              "may_enter": [
-                "DIAGNOSTIC_AUGMENTED_WALL_SOLID"
-              ],
-              "source_face_ids": [
-                "VS-043190",
-                "VS-000034"
-              ],
-              "to_mm": 21866.6,
-              "wall_band_id": "WB-00022",
-              "why": "2119 mm the band itself records as UNRESOLVED_EXTENSION: by its own note this extent beyond the paired interval is NOT established material. It is refused from the established solid and kept here with provenance"
-            },
-            {
               "axis": "H",
               "established": false,
               "from_mm": 29297.8,
@@ -9619,13 +11211,85 @@
               "to_mm": 31298.3,
               "wall_band_id": "WB-00030",
               "why": "2000 mm the band itself records as UNRESOLVED_EXTENSION: by its own note this extent beyond the paired interval is NOT established material. It is refused from the established solid and kept here with provenance"
+            },
+            {
+              "axis": "V",
+              "established": false,
+              "from_mm": 10348.1,
+              "grounds": "UNRESOLVED_SINGLE_FACE_EXTENSION",
+              "junction_patch_id": "",
+              "length_mm": 1703.0,
+              "may_enter": [
+                "DIAGNOSTIC_AUGMENTED_WALL_SOLID"
+              ],
+              "source_face_ids": [
+                "VS-000056",
+                "VS-029915"
+              ],
+              "to_mm": 12051.1,
+              "wall_band_id": "WB-00217",
+              "why": "1703 mm the band itself records as UNRESOLVED_EXTENSION: by its own note this extent beyond the paired interval is NOT established material. It is refused from the established solid and kept here with provenance"
+            },
+            {
+              "axis": "V",
+              "established": false,
+              "from_mm": 22096.4,
+              "grounds": "UNRESOLVED_SINGLE_FACE_EXTENSION",
+              "junction_patch_id": "",
+              "length_mm": 1527.3,
+              "may_enter": [
+                "DIAGNOSTIC_AUGMENTED_WALL_SOLID"
+              ],
+              "source_face_ids": [
+                "VS-044288",
+                "VS-005347"
+              ],
+              "to_mm": 23623.8,
+              "wall_band_id": "WB-00219",
+              "why": "1527 mm the band itself records as UNRESOLVED_EXTENSION: by its own note this extent beyond the paired interval is NOT established material. It is refused from the established solid and kept here with provenance"
+            },
+            {
+              "axis": "V",
+              "established": false,
+              "from_mm": 31525.4,
+              "grounds": "UNRESOLVED_SINGLE_FACE_EXTENSION",
+              "junction_patch_id": "",
+              "length_mm": 1473.3,
+              "may_enter": [
+                "DIAGNOSTIC_AUGMENTED_WALL_SOLID"
+              ],
+              "source_face_ids": [
+                "VS-010020",
+                "VS-000187"
+              ],
+              "to_mm": 32998.6,
+              "wall_band_id": "WB-00149",
+              "why": "1473 mm the band itself records as UNRESOLVED_EXTENSION: by its own note this extent beyond the paired interval is NOT established material. It is refused from the established solid and kept here with provenance"
+            },
+            {
+              "axis": "H",
+              "established": false,
+              "from_mm": 29870.9,
+              "grounds": "UNRESOLVED_SINGLE_FACE_EXTENSION",
+              "junction_patch_id": "",
+              "length_mm": 946.1,
+              "may_enter": [
+                "DIAGNOSTIC_AUGMENTED_WALL_SOLID"
+              ],
+              "source_face_ids": [
+                "VS-005014",
+                "VS-010060"
+              ],
+              "to_mm": 30817.1,
+              "wall_band_id": "WB-00094",
+              "why": "946 mm the band itself records as UNRESOLVED_EXTENSION: by its own note this extent beyond the paired interval is NOT established material. It is refused from the established solid and kept here with provenance"
             }
           ],
-          "unestablished_boundary_length_m": 54.127,
-          "unestablished_intervals_on_its_boundary": 18,
+          "unestablished_boundary_length_m": 46.869,
+          "unestablished_intervals_on_its_boundary": 21,
           "why": "this space's boundary runs along material whose physical presence is not established, so the space exists as drawn only because a hypothesis was treated as masonry"
         },
-        "why": "its boundary rests on 54.127 m of wall material whose physical presence is NOT established; the component holding it also holds 21 other labelled space(s), so it is not this room's polygon"
+        "why": "its boundary rests on 46.869 m of wall material whose physical presence is NOT established; the component holding it also holds 21 other labelled space(s), so it is not this room's polygon"
       }
     ]
   },
@@ -9930,18 +11594,16 @@
   },
   "junction_patch_counterfactual": {
     "delta": {
-      "free_space_area_m2": -0.0017,
+      "free_space_area_m2": 0.0,
       "free_space_components": 0,
-      "largest_blob_area_m2": -0.002,
+      "largest_blob_area_m2": 0.0,
       "largest_blob_labels": 0,
       "multi_room_candidates": 0,
       "single_room_candidates": 0,
-      "wall_solid_area_m2": 0.00167
+      "wall_solid_area_m2": 0.0
     },
-    "repairs_applied": [
-      "JP-0003"
-    ],
-    "repairs_applied_count": 1,
+    "repairs_applied": [],
+    "repairs_applied_count": 0,
     "run_a": {
       "arm": "ESTABLISHED_SOLID_ONLY",
       "control_holder_label_counts": {
@@ -9972,10 +11634,10 @@
         "OPEN-01": 32,
         "STR-01": 32
       },
-      "free_space_area_m2": 894.9933,
+      "free_space_area_m2": 894.9949,
       "free_space_components": 13,
       "labels_placed_in_a_component": 36,
-      "largest_blob_area_m2": 886.384,
+      "largest_blob_area_m2": 886.385,
       "largest_blob_labels": 32,
       "multi_room_blob_label_counts": [
         32
@@ -9983,13 +11645,13 @@
       "multi_room_candidates": 1,
       "occupiable_candidates": 1,
       "single_room_candidates": 4,
-      "wall_solid_area_m2": 104.4266,
-      "wall_solid_components": 67
+      "wall_solid_area_m2": 104.425,
+      "wall_solid_components": 68
     },
     "verdict": "REPAIRS_CHANGED_NOTHING_IN_THE_PARTITION",
     "what_changed_between_the_arms": "the named repairs and nothing else. Same envelope construction, same barriers, same snap grid, same labels",
     "what_is_not_compared": "wall-solid component count as a quality target. A disconnected wall component is not automatically defective, and the measure here is SPACE PARTITIONING",
-    "why": "applying 1 repair(s) changed neither the number of single-room candidates nor the size of the largest merged component. Whatever merges those rooms, it is not these gaps \u2014 and the localiser pointing at them is not evidence that it is"
+    "why": "applying 0 repair(s) changed neither the number of single-room candidates nor the size of the largest merged component. Whatever merges those rooms, it is not these gaps \u2014 and the localiser pointing at them is not evidence that it is"
   },
   "junction_patches": {
     "by_gap_repair_class": {
@@ -10015,6 +11677,7 @@
         "extension_mm": 0.0,
         "gap_closed_mm": 50.0,
         "gap_repair_class": "REPAIR_IS_IN_WALL_FACE_PAIRING",
+        "has_an_independent_material_witness": false,
         "is_physical_material": false,
         "junction_patch_id": "JP-0001",
         "junction_type": "JUNCTION_UNRESOLVED",
@@ -10028,11 +11691,13 @@
         "provenance": {},
         "raster_support_across_the_gap": 0.429,
         "source_face_ids": [],
+        "source_independence_classes": [],
         "unpaired_strokes_at_the_gap": [
           "VS-005019"
         ],
         "validation_status": "JUNCTION_PATCH_REFUSED",
-        "why": "only 1 accepted band(s) reach this gap. A junction needs at least two walls to join, and inventing the second is what this module exists to refuse. 1 wall-like unpaired stroke(s) lie at this gap with raster support, and only 1 accepted band reaches it. A wall IS drawn here and never became a band: the repair is in FACE PAIRING, not in junction assembly, and a patch here would paper over an extraction failure"
+        "why": "only 1 accepted band(s) reach this gap. A junction needs at least two walls to join, and inventing the second is what this module exists to refuse. 1 wall-like unpaired stroke(s) lie at this gap with raster support, and only 1 accepted band reaches it. A wall IS drawn here and never became a band: the repair is in FACE PAIRING, not in junction assembly, and a patch here would paper over an extraction failure",
+        "why_raster_is_not_independent_here": "this project's raster is rendered from the same PDF as the vector geometry. It corroborates and LOCALISES; it cannot independently establish that material is present, because a rendering only redraws what the drawing already contains"
       },
       {
         "axis": "H",
@@ -10044,6 +11709,7 @@
         "extension_mm": 0.0,
         "gap_closed_mm": 50.0,
         "gap_repair_class": "REPAIR_IS_IN_WALL_FACE_PAIRING",
+        "has_an_independent_material_witness": false,
         "is_physical_material": false,
         "junction_patch_id": "JP-0002",
         "junction_type": "JUNCTION_UNRESOLVED",
@@ -10057,11 +11723,13 @@
         "provenance": {},
         "raster_support_across_the_gap": 0.5,
         "source_face_ids": [],
+        "source_independence_classes": [],
         "unpaired_strokes_at_the_gap": [
           "VS-004992"
         ],
         "validation_status": "JUNCTION_PATCH_REFUSED",
-        "why": "only 1 accepted band(s) reach this gap. A junction needs at least two walls to join, and inventing the second is what this module exists to refuse. 1 wall-like unpaired stroke(s) lie at this gap with raster support, and only 1 accepted band reaches it. A wall IS drawn here and never became a band: the repair is in FACE PAIRING, not in junction assembly, and a patch here would paper over an extraction failure"
+        "why": "only 1 accepted band(s) reach this gap. A junction needs at least two walls to join, and inventing the second is what this module exists to refuse. 1 wall-like unpaired stroke(s) lie at this gap with raster support, and only 1 accepted band reaches it. A wall IS drawn here and never became a band: the repair is in FACE PAIRING, not in junction assembly, and a patch here would paper over an extraction failure",
+        "why_raster_is_not_independent_here": "this project's raster is rendered from the same PDF as the vector geometry. It corroborates and LOCALISES; it cannot independently establish that material is present, because a rendering only redraws what the drawing already contains"
       },
       {
         "axis": "V",
@@ -10080,7 +11748,8 @@
         "extension_mm": 13.1,
         "gap_closed_mm": 100.0,
         "gap_repair_class": "REPAIR_IS_JUNCTION_ASSEMBLY",
-        "is_physical_material": true,
+        "has_an_independent_material_witness": false,
+        "is_physical_material": false,
         "junction_patch_id": "JP-0003",
         "junction_type": "T_JUNCTION",
         "maximum_extension_distance_mm": 440.6,
@@ -10095,7 +11764,7 @@
           "end_caps": [],
           "leak_id": "LK-0002",
           "located_by": "FREE_SPACE_NECK",
-          "repair_class_why": "two walls meet here and the solid does not join them"
+          "repair_class_why": "two walls meet here and the solid does not join them. The reading is supported only by this drawing, so the patch is diagnostic until something outside it agrees"
         },
         "raster_support_across_the_gap": 1.0,
         "source_face_ids": [
@@ -10104,14 +11773,18 @@
           "VS-043952",
           "VS-043953"
         ],
+        "source_independence_classes": [
+          "SAME_DRAWING"
+        ],
         "unpaired_strokes_at_the_gap": [
           "VS-000008",
           "VS-000060",
           "VS-043954",
           "VS-043955"
         ],
-        "validation_status": "JUNCTION_PATCH_VALIDATED",
-        "why": "2 independent evidence families (GEOMETRY, RASTER) agree a physical junction is here, and closing it extends a band by 13 mm against a ceiling of 441 mm"
+        "validation_status": "JUNCTION_PATCH_PROBABLE",
+        "why": "2 evidence families (GEOMETRY, RASTER) support this junction, but all of them are SAME_DRAWING: this project's raster is RENDERED FROM THE SAME PDF as the vector geometry, so agreement between them is one observation of one artefact in two encodings. A rendering cannot witness masonry the drawing does not contain. Diagnostic solid only, until something outside this drawing says material is here",
+        "why_raster_is_not_independent_here": "this project's raster is rendered from the same PDF as the vector geometry. It corroborates and LOCALISES; it cannot independently establish that material is present, because a rendering only redraws what the drawing already contains"
       },
       {
         "axis": "V",
@@ -10129,6 +11802,7 @@
         "extension_mm": 326.7,
         "gap_closed_mm": 150.0,
         "gap_repair_class": "NOT_ONE_WALL_TWO_DIFFERENT_WALLS_MEET_HERE",
+        "has_an_independent_material_witness": false,
         "is_physical_material": false,
         "junction_patch_id": "JP-0004",
         "junction_type": "CROSSING",
@@ -10156,11 +11830,15 @@
           "VS-007097",
           "VS-044767"
         ],
+        "source_independence_classes": [
+          "SAME_DRAWING"
+        ],
         "unpaired_strokes_at_the_gap": [
           "VS-005341"
         ],
         "validation_status": "JUNCTION_PATCH_REFUSED",
-        "why": "conflicting evidence: wall separations differ by 251 mm, so these are not two stretches of one wall. A patch is not created where the drawing argues with itself"
+        "why": "conflicting evidence: wall separations differ by 251 mm, so these are not two stretches of one wall. A patch is not created where the drawing argues with itself",
+        "why_raster_is_not_independent_here": "this project's raster is rendered from the same PDF as the vector geometry. It corroborates and LOCALISES; it cannot independently establish that material is present, because a rendering only redraws what the drawing already contains"
       },
       {
         "axis": "V",
@@ -10179,6 +11857,7 @@
         "extension_mm": 94.5,
         "gap_closed_mm": 300.0,
         "gap_repair_class": "NOTHING_IS_DRAWN_HERE_THE_OPENING_IS_REAL",
+        "has_an_independent_material_witness": false,
         "is_physical_material": false,
         "junction_patch_id": "JP-0005",
         "junction_type": "CROSSING",
@@ -10209,20 +11888,42 @@
           "VS-043941",
           "VS-043942"
         ],
+        "source_independence_classes": [
+          "SAME_DRAWING"
+        ],
         "unpaired_strokes_at_the_gap": [
           "VS-043943",
           "VS-043944"
         ],
         "validation_status": "JUNCTION_PATCH_REFUSED",
-        "why": "conflicting evidence: raster support 0.00 across this gap: nothing solid is drawn here, so a physical junction is contradicted. A patch is not created where the drawing argues with itself"
+        "why": "conflicting evidence: raster support 0.00 across this gap: nothing solid is drawn here, so a physical junction is contradicted. A patch is not created where the drawing argues with itself",
+        "why_raster_is_not_independent_here": "this project's raster is rendered from the same PDF as the vector geometry. It corroborates and LOCALISES; it cannot independently establish that material is present, because a rendering only redraws what the drawing already contains"
       }
     ],
     "patches_proposed": 5,
-    "probable": 0,
+    "patches_with_an_independent_material_witness": 0,
+    "probable": 1,
     "refused": 4,
-    "the_rule": "a patch is physical material only where its evidence supports that: two INDEPENDENT families. A probable patch may enter the diagnostic solid and may not enter the established one",
-    "validated": 1,
-    "validated_material_m2": 0.002627
+    "source_independence": {
+      "classes": {
+        "CAD": "INDEPENDENT_OF_THE_DRAWING",
+        "DOCUMENT": "SAME_DOCUMENT_SET",
+        "DRAWN_SYMBOL": "SAME_DRAWING",
+        "GEOMETRY": "SAME_DRAWING",
+        "HUMAN": "INDEPENDENT_OF_THE_DRAWING",
+        "RASTER": "SAME_DRAWING",
+        "SITE": "INDEPENDENT_OF_THE_DRAWING",
+        "SOURCE_STRUCTURE": "SAME_DRAWING"
+      },
+      "material_witness_classes": [
+        "SAME_DOCUMENT_SET",
+        "INDEPENDENT_OF_THE_DRAWING"
+      ],
+      "why": "the raster is rendered from the same PDF as the vector geometry, so GEOMETRY + RASTER is one observation in two encodings and not two witnesses"
+    },
+    "the_rule": "a patch is physical material only where its evidence supports that: two families from two INDEPENDENT SOURCES. Two families that both derive from this drawing are one source, however much they agree",
+    "validated": 0,
+    "validated_material_m2": 0
   },
   "largest_faces": [
     {
@@ -11375,15 +13076,15 @@
         "consumed": [
           [
             "wall_extraction",
-            "c13f5ce73aa88092"
+            "3fb1f69780d0adfa"
           ],
           [
             "space_resolution_run",
-            "f1cceb3cc5cfa20d"
+            "46d5d06cc717dd34"
           ]
         ],
         "note": "",
-        "output_hash": "72e4c23e379fd394",
+        "output_hash": "4aedae501c907348",
         "run_id": "V2",
         "stage": "source_audit"
       },
@@ -11411,7 +13112,7 @@
           ]
         ],
         "note": "",
-        "output_hash": "f1cceb3cc5cfa20d",
+        "output_hash": "46d5d06cc717dd34",
         "run_id": "V2",
         "stage": "space_resolution_run"
       },
@@ -11447,7 +13148,7 @@
           ]
         ],
         "note": "",
-        "output_hash": "c13f5ce73aa88092",
+        "output_hash": "3fb1f69780d0adfa",
         "run_id": "V2",
         "stage": "wall_extraction"
       },
@@ -11455,7 +13156,7 @@
         "consumed": [
           [
             "wall_extraction",
-            "c13f5ce73aa88092"
+            "3fb1f69780d0adfa"
           ]
         ],
         "note": "",
@@ -11467,7 +13168,7 @@
         "consumed": [
           [
             "wall_extraction",
-            "c13f5ce73aa88092"
+            "3fb1f69780d0adfa"
           ]
         ],
         "note": "",
@@ -11488,7 +13189,7 @@
         "stage": "wall_solid_run"
       }
     },
-    "workbook_generated_at": "2026-09-15T14:09:56+00:00"
+    "workbook_generated_at": "2026-09-15T15:27:28+00:00"
   },
   "material_faces": {
     "bounded_faces": 14,
@@ -11511,8 +13212,7 @@
   },
   "merged_component_causes": {
     "by_confidence": {
-      "HIGH": 1,
-      "LOW": 37,
+      "LOW": 38,
       "MEDIUM": 2
     },
     "by_repair_class": {
@@ -11526,7 +13226,7 @@
       "PORTAL_CANDIDATE": 2
     },
     "effect_column": "a measured counterfactual where one has been run, and NOT_MEASURED where it has not. A predicted effect presented as a measured one is how a work list becomes a wish list",
-    "junction_patches_needed": 1,
+    "junction_patches_needed": 0,
     "notes": {
       "leaks_examined": 40
     },
@@ -12022,13 +13722,13 @@
         "why": "nothing available raises this above a guess"
       },
       {
-        "confidence": "HIGH",
+        "confidence": "LOW",
         "current_representation": "ACCEPTED_TWO_FACE_BAND",
-        "effect_when_repaired": "MEASURED: single-room candidates +0, largest component +0 label(s) (REPAIRS_CHANGED_NOTHING_IN_THE_PARTITION)",
+        "effect_when_repaired": "NOT_MEASURED",
         "fragmented_mate_involved": false,
         "frozen_controls_unlocked": [],
         "junction_patch_id": "JP-0003",
-        "junction_patch_needed": true,
+        "junction_patch_needed": false,
         "passage_width_mm": 100.0,
         "portal_involved": false,
         "repair_class": "REPAIR_IS_JUNCTION_ASSEMBLY",
@@ -12043,7 +13743,7 @@
         "wall_evidence": [
           "WB-00217"
         ],
-        "why": "two independent evidence families support a physical junction here, and the patch that would close it is named"
+        "why": "nothing available raises this above a guess"
       },
       {
         "confidence": "LOW",
@@ -17377,6 +19077,404 @@
       "segment_id": "VS-000302"
     }
   ],
+  "release_blockers": {
+    "DOMINANT_REMAINING_RELEASE_BLOCKER": "WALL_GEOMETRY",
+    "blocked_space_geometries": 9,
+    "dependencies": [
+      "WALL_GEOMETRY",
+      "PORTAL_VALIDATION",
+      "IDENTITY",
+      "ENVELOPE",
+      "OTHER"
+    ],
+    "in_scope_spaces": 17,
+    "notes": {
+      "blocks_seen": {
+        "BOUNDARY_RESTS_ON_UNESTABLISHED_WALL_MATERIAL": 6,
+        "GEOMETRY_ROLE_IS_NOT_AN_OCCUPIABLE_SPACE": 4,
+        "PARTITION_DEPENDS_ON_A_DIAGNOSTIC_PORTAL": 4
+      }
+    },
+    "portal_bottleneck": {
+      "portals": [
+        {
+          "evidence_families_present": [
+            "DRAWN_SYMBOL",
+            "GEOMETRY"
+          ],
+          "evidence_present": [
+            "SPAN_IN_THE_DOOR_RANGE",
+            "PAIRED_BANDS_TERMINATE_FACING_EACH_OTHER",
+            "END_CAPS_AT_BOTH_JAMBS",
+            "GAP_CLOSES_AN_OTHERWISE_COMPLETE_BOUNDARY"
+          ],
+          "gap_class": "DOOR_OR_PORTAL_GAP",
+          "host_wall_band_id": "WB-00137",
+          "missing_evidence_needed": [
+            "a DOOR OR WINDOW SCHEDULE row naming an opening at this location or on this wall",
+            "a door/window SYMBOL block identified as such rather than as anonymous geometry",
+            "a PRINTED DIMENSION for the opening width",
+            "a CAD entity from the originating model, or a site observation"
+          ],
+          "opening_width_mm": 1000.2,
+          "portal_existence_status": "PORTAL_EXISTENCE_PROBABLE",
+          "portal_geometry_status": "PORTAL_GEOMETRY_PROBABLE",
+          "portal_id": "PT-GV17046-line-25224",
+          "source_independence_of_present_evidence": "SAME_DRAWING \u2014 every item above is read off this sheet's own geometry",
+          "space_ids": [
+            "BED-03"
+          ],
+          "why_this_blocks_release": "the opening's existence rests on this drawing's geometry alone. If the opening is not there the space is not there, and a released quantity carries no memory of which portal it rested on"
+        },
+        {
+          "evidence_families_present": [
+            "DRAWN_SYMBOL",
+            "GEOMETRY"
+          ],
+          "evidence_present": [
+            "SPAN_IN_THE_DOOR_RANGE",
+            "PAIRED_BANDS_TERMINATE_FACING_EACH_OTHER",
+            "END_CAPS_AT_BOTH_JAMBS",
+            "GAP_CLOSES_AN_OTHERWISE_COMPLETE_BOUNDARY"
+          ],
+          "gap_class": "DOOR_OR_PORTAL_GAP",
+          "host_wall_band_id": "WB-00136",
+          "missing_evidence_needed": [
+            "a DOOR OR WINDOW SCHEDULE row naming an opening at this location or on this wall",
+            "a door/window SYMBOL block identified as such rather than as anonymous geometry",
+            "a PRINTED DIMENSION for the opening width",
+            "a CAD entity from the originating model, or a site observation"
+          ],
+          "opening_width_mm": 1200.2,
+          "portal_existence_status": "PORTAL_EXISTENCE_PROBABLE",
+          "portal_geometry_status": "PORTAL_GEOMETRY_PROBABLE",
+          "portal_id": "PT-BED-01-west-27124",
+          "source_independence_of_present_evidence": "SAME_DRAWING \u2014 every item above is read off this sheet's own geometry",
+          "space_ids": [
+            "BED-01"
+          ],
+          "why_this_blocks_release": "the opening's existence rests on this drawing's geometry alone. If the opening is not there the space is not there, and a released quantity carries no memory of which portal it rested on"
+        },
+        {
+          "evidence_families_present": [
+            "DRAWN_SYMBOL",
+            "GEOMETRY"
+          ],
+          "evidence_present": [
+            "SPAN_IN_THE_DOOR_RANGE",
+            "PAIRED_BANDS_TERMINATE_FACING_EACH_OTHER",
+            "END_CAPS_AT_BOTH_JAMBS",
+            "GAP_CLOSES_AN_OTHERWISE_COMPLETE_BOUNDARY"
+          ],
+          "gap_class": "DOOR_OR_PORTAL_GAP",
+          "host_wall_band_id": "WB-00060",
+          "missing_evidence_needed": [
+            "a DOOR OR WINDOW SCHEDULE row naming an opening at this location or on this wall",
+            "a door/window SYMBOL block identified as such rather than as anonymous geometry",
+            "a PRINTED DIMENSION for the opening width",
+            "a CAD entity from the originating model, or a site observation"
+          ],
+          "opening_width_mm": 1000.2,
+          "portal_existence_status": "PORTAL_EXISTENCE_PROBABLE",
+          "portal_geometry_status": "PORTAL_GEOMETRY_PROBABLE",
+          "portal_id": "PT-GH27048-line-27348",
+          "source_independence_of_present_evidence": "SAME_DRAWING \u2014 every item above is read off this sheet's own geometry",
+          "space_ids": [
+            "BED-01"
+          ],
+          "why_this_blocks_release": "the opening's existence rests on this drawing's geometry alone. If the opening is not there the space is not there, and a released quantity carries no memory of which portal it rested on"
+        },
+        {
+          "evidence_families_present": [
+            "DRAWN_SYMBOL",
+            "GEOMETRY"
+          ],
+          "evidence_present": [
+            "SPAN_IN_THE_DOOR_RANGE",
+            "PAIRED_BANDS_TERMINATE_FACING_EACH_OTHER",
+            "END_CAPS_AT_BOTH_JAMBS",
+            "GAP_CLOSES_AN_OTHERWISE_COMPLETE_BOUNDARY"
+          ],
+          "gap_class": "DOOR_OR_PORTAL_GAP",
+          "host_wall_band_id": "WB-00197",
+          "missing_evidence_needed": [
+            "a DOOR OR WINDOW SCHEDULE row naming an opening at this location or on this wall",
+            "a door/window SYMBOL block identified as such rather than as anonymous geometry",
+            "a PRINTED DIMENSION for the opening width",
+            "a CAD entity from the originating model, or a site observation"
+          ],
+          "opening_width_mm": 1110.8,
+          "portal_existence_status": "PORTAL_EXISTENCE_PROBABLE",
+          "portal_geometry_status": "PORTAL_GEOMETRY_PROBABLE",
+          "portal_id": "PT-BTH-02-west-25824",
+          "source_independence_of_present_evidence": "SAME_DRAWING \u2014 every item above is read off this sheet's own geometry",
+          "space_ids": [
+            "BTH-02"
+          ],
+          "why_this_blocks_release": "the opening's existence rests on this drawing's geometry alone. If the opening is not there the space is not there, and a released quantity carries no memory of which portal it rested on"
+        },
+        {
+          "evidence_families_present": [
+            "DRAWN_SYMBOL",
+            "GEOMETRY"
+          ],
+          "evidence_present": [
+            "SPAN_IN_THE_DOOR_RANGE",
+            "PAIRED_BANDS_TERMINATE_FACING_EACH_OTHER",
+            "END_CAPS_AT_BOTH_JAMBS",
+            "GAP_CLOSES_AN_OTHERWISE_COMPLETE_BOUNDARY"
+          ],
+          "gap_class": "DOOR_OR_PORTAL_GAP",
+          "host_wall_band_id": "WB-00060",
+          "missing_evidence_needed": [
+            "a DOOR OR WINDOW SCHEDULE row naming an opening at this location or on this wall",
+            "a door/window SYMBOL block identified as such rather than as anonymous geometry",
+            "a PRINTED DIMENSION for the opening width",
+            "a CAD entity from the originating model, or a site observation"
+          ],
+          "opening_width_mm": 1000.2,
+          "portal_existence_status": "PORTAL_EXISTENCE_PROBABLE",
+          "portal_geometry_status": "PORTAL_GEOMETRY_PROBABLE",
+          "portal_id": "PT-GH27048-line-27348",
+          "source_independence_of_present_evidence": "SAME_DRAWING \u2014 every item above is read off this sheet's own geometry",
+          "space_ids": [
+            "BTH-02"
+          ],
+          "why_this_blocks_release": "the opening's existence rests on this drawing's geometry alone. If the opening is not there the space is not there, and a released quantity carries no memory of which portal it rested on"
+        },
+        {
+          "evidence_families_present": [
+            "DRAWN_SYMBOL",
+            "GEOMETRY"
+          ],
+          "evidence_present": [
+            "SPAN_IN_THE_DOOR_RANGE",
+            "PAIRED_BANDS_TERMINATE_FACING_EACH_OTHER",
+            "END_CAPS_AT_BOTH_JAMBS",
+            "GAP_CLOSES_AN_OTHERWISE_COMPLETE_BOUNDARY"
+          ],
+          "gap_class": "DOOR_OR_PORTAL_GAP",
+          "host_wall_band_id": "WB-00242",
+          "missing_evidence_needed": [
+            "a DOOR OR WINDOW SCHEDULE row naming an opening at this location or on this wall",
+            "a door/window SYMBOL block identified as such rather than as anonymous geometry",
+            "a PRINTED DIMENSION for the opening width",
+            "a CAD entity from the originating model, or a site observation"
+          ],
+          "opening_width_mm": 943.4,
+          "portal_existence_status": "PORTAL_EXISTENCE_PROBABLE",
+          "portal_geometry_status": "PORTAL_GEOMETRY_PROBABLE",
+          "portal_id": "PT-GV31091-line-25605",
+          "source_independence_of_present_evidence": "SAME_DRAWING \u2014 every item above is read off this sheet's own geometry",
+          "space_ids": [
+            "BTH-02"
+          ],
+          "why_this_blocks_release": "the opening's existence rests on this drawing's geometry alone. If the opening is not there the space is not there, and a released quantity carries no memory of which portal it rested on"
+        },
+        {
+          "evidence_families_present": [
+            "DRAWN_SYMBOL",
+            "GEOMETRY"
+          ],
+          "evidence_present": [
+            "SPAN_IN_THE_DOOR_RANGE",
+            "PAIRED_BANDS_TERMINATE_FACING_EACH_OTHER",
+            "END_CAPS_AT_BOTH_JAMBS",
+            "GAP_CLOSES_AN_OTHERWISE_COMPLETE_BOUNDARY"
+          ],
+          "gap_class": "DOOR_OR_PORTAL_GAP",
+          "host_wall_band_id": "WB-00048",
+          "missing_evidence_needed": [
+            "a DOOR OR WINDOW SCHEDULE row naming an opening at this location or on this wall",
+            "a door/window SYMBOL block identified as such rather than as anonymous geometry",
+            "a PRINTED DIMENSION for the opening width",
+            "a CAD entity from the originating model, or a site observation"
+          ],
+          "opening_width_mm": 1054.2,
+          "portal_existence_status": "PORTAL_EXISTENCE_PROBABLE",
+          "portal_geometry_status": "PORTAL_GEOMETRY_PROBABLE",
+          "portal_id": "PT-BTH-05-south-22393",
+          "source_independence_of_present_evidence": "SAME_DRAWING \u2014 every item above is read off this sheet's own geometry",
+          "space_ids": [
+            "BTH-05"
+          ],
+          "why_this_blocks_release": "the opening's existence rests on this drawing's geometry alone. If the opening is not there the space is not there, and a released quantity carries no memory of which portal it rested on"
+        }
+      ],
+      "portals_blocking_release": 6,
+      "spaces_they_block": 4,
+      "this_is_preparation_not_extraction": "no document is read here. The list says which portals would need a second independent evidence family and what kind of source could supply it, so the next round can be chosen rather than guessed"
+    },
+    "rows": [
+      {
+        "blocking_portal_ids": [
+          "PT-GV17046-line-25224"
+        ],
+        "blocks": [
+          "BOUNDARY_RESTS_ON_UNESTABLISHED_WALL_MATERIAL",
+          "PARTITION_DEPENDS_ON_A_DIAGNOSTIC_PORTAL"
+        ],
+        "dependencies": [
+          "WALL_GEOMETRY",
+          "PORTAL_VALIDATION"
+        ],
+        "space_geometry_id": "SG-V2-0003",
+        "space_ids": [
+          "BED-03"
+        ],
+        "unestablished_boundary_m": 0.495
+      },
+      {
+        "blocking_portal_ids": [
+          "PT-BED-01-west-27124",
+          "PT-GH27048-line-27348"
+        ],
+        "blocks": [
+          "BOUNDARY_RESTS_ON_UNESTABLISHED_WALL_MATERIAL",
+          "PARTITION_DEPENDS_ON_A_DIAGNOSTIC_PORTAL"
+        ],
+        "dependencies": [
+          "WALL_GEOMETRY",
+          "PORTAL_VALIDATION"
+        ],
+        "space_geometry_id": "SG-V2-0005",
+        "space_ids": [
+          "BED-01"
+        ],
+        "unestablished_boundary_m": 2.352
+      },
+      {
+        "blocking_portal_ids": [
+          "PT-BTH-02-west-25824",
+          "PT-GH27048-line-27348",
+          "PT-GV31091-line-25605"
+        ],
+        "blocks": [
+          "BOUNDARY_RESTS_ON_UNESTABLISHED_WALL_MATERIAL",
+          "PARTITION_DEPENDS_ON_A_DIAGNOSTIC_PORTAL"
+        ],
+        "dependencies": [
+          "WALL_GEOMETRY",
+          "PORTAL_VALIDATION"
+        ],
+        "space_geometry_id": "SG-V2-0006",
+        "space_ids": [
+          "BTH-02"
+        ],
+        "unestablished_boundary_m": 0.303
+      },
+      {
+        "blocking_portal_ids": [],
+        "blocks": [
+          "BOUNDARY_RESTS_ON_UNESTABLISHED_WALL_MATERIAL"
+        ],
+        "dependencies": [
+          "WALL_GEOMETRY"
+        ],
+        "space_geometry_id": "SG-V2-0007",
+        "space_ids": [
+          "MBTH-03"
+        ],
+        "unestablished_boundary_m": 0.6
+      },
+      {
+        "blocking_portal_ids": [
+          "PT-BTH-05-south-22393"
+        ],
+        "blocks": [
+          "BOUNDARY_RESTS_ON_UNESTABLISHED_WALL_MATERIAL",
+          "PARTITION_DEPENDS_ON_A_DIAGNOSTIC_PORTAL"
+        ],
+        "dependencies": [
+          "WALL_GEOMETRY",
+          "PORTAL_VALIDATION"
+        ],
+        "space_geometry_id": "SG-V2-0008",
+        "space_ids": [
+          "BTH-05"
+        ],
+        "unestablished_boundary_m": 0.303
+      },
+      {
+        "blocking_portal_ids": [],
+        "blocks": [
+          "GEOMETRY_ROLE_IS_NOT_AN_OCCUPIABLE_SPACE"
+        ],
+        "dependencies": [
+          "OTHER"
+        ],
+        "space_geometry_id": "SG-V2-0010",
+        "space_ids": [
+          "WSH-01"
+        ],
+        "unestablished_boundary_m": 0.0
+      },
+      {
+        "blocking_portal_ids": [],
+        "blocks": [
+          "GEOMETRY_ROLE_IS_NOT_AN_OCCUPIABLE_SPACE",
+          "BOUNDARY_RESTS_ON_UNESTABLISHED_WALL_MATERIAL"
+        ],
+        "dependencies": [
+          "OTHER",
+          "WALL_GEOMETRY"
+        ],
+        "space_geometry_id": "SG-V2-0011",
+        "space_ids": [
+          "REC-01"
+        ],
+        "unestablished_boundary_m": 6.599
+      },
+      {
+        "blocking_portal_ids": [],
+        "blocks": [
+          "GEOMETRY_ROLE_IS_NOT_AN_OCCUPIABLE_SPACE"
+        ],
+        "dependencies": [
+          "OTHER"
+        ],
+        "space_geometry_id": "SG-V2-0012",
+        "space_ids": [
+          "SHF-01"
+        ],
+        "unestablished_boundary_m": 0.0
+      },
+      {
+        "blocking_portal_ids": [],
+        "blocks": [
+          "GEOMETRY_ROLE_IS_NOT_AN_OCCUPIABLE_SPACE"
+        ],
+        "dependencies": [
+          "OTHER"
+        ],
+        "space_geometry_id": "SG-V2-0013",
+        "space_ids": [
+          "REC-02"
+        ],
+        "unestablished_boundary_m": 0.0
+      }
+    ],
+    "spaces_blocked_SOLELY_by": {
+      "OTHER": [
+        "REC-02",
+        "SHF-01",
+        "WSH-01"
+      ],
+      "WALL_GEOMETRY": [
+        "MBTH-03"
+      ]
+    },
+    "spaces_blocked_by_dependency": {
+      "OTHER": 4,
+      "PORTAL_VALIDATION": 4,
+      "WALL_GEOMETRY": 6
+    },
+    "what_each_would_unlock": {
+      "OTHER": 3,
+      "WALL_GEOMETRY": 1
+    },
+    "why_sole_blocks_matter_more": "a space blocked by two dependencies is unlocked by neither on its own. The rooms a single dependency would actually release are the ones blocked by it ALONE, and that is the number the next round should be chosen on"
+  },
   "release_vs_diagnostic_free_space": {
     "accepted_barriers": 19,
     "diagnostic": {
@@ -17387,10 +19485,10 @@
         "OPEN-01": 23,
         "STR-01": 23
       },
-      "free_space_area_m2": 882.7919,
+      "free_space_area_m2": 878.182,
       "free_space_components": 20,
       "labels_placed_in_a_component": 36,
-      "largest_blob_area_m2": 744.707,
+      "largest_blob_area_m2": 740.377,
       "largest_blob_labels": 23,
       "multi_room_blob_label_counts": [
         23,
@@ -17400,8 +19498,8 @@
       "multi_room_candidates": 3,
       "occupiable_candidates": 7,
       "single_room_candidates": 8,
-      "wall_solid_area_m2": 116.628,
-      "wall_solid_components": 50
+      "wall_solid_area_m2": 121.2379,
+      "wall_solid_components": 54
     },
     "release": {
       "arm": "RELEASE_FREE_SPACE",
@@ -17411,10 +19509,10 @@
         "OPEN-01": 32,
         "STR-01": 32
       },
-      "free_space_area_m2": 897.7237,
+      "free_space_area_m2": 892.3174,
       "free_space_components": 13,
       "labels_placed_in_a_component": 36,
-      "largest_blob_area_m2": 889.114,
+      "largest_blob_area_m2": 883.708,
       "largest_blob_labels": 32,
       "multi_room_blob_label_counts": [
         32
@@ -17422,8 +19520,8 @@
       "multi_room_candidates": 1,
       "occupiable_candidates": 1,
       "single_room_candidates": 4,
-      "wall_solid_area_m2": 104.4266,
-      "wall_solid_components": 67
+      "wall_solid_area_m2": 109.8329,
+      "wall_solid_components": 77
     },
     "release_eligible_barriers": 2,
     "what_the_pair_shows": "the RELEASE arm is built only from material whose physical presence is established and barriers whose portals are validated. The DIAGNOSTIC arm adds every hypothesis. A space that appears only in the diagnostic arm exists because a hypothesis was treated as fact"
@@ -17630,7 +19728,7 @@
     "joins": 2,
     "notes": {
       "input_shapes": 243,
-      "validated_patches_considered": 1
+      "validated_patches_considered": 0
     },
     "verdict": "every join the coarser grid creates is either recorded coordinate noise or a place an explicit junction patch already justifies",
     "why_area_is_not_the_test": "a connection is a topological event with no area cost, so an area-based safety argument cannot see it. A microscopic change can still decide which rooms exist"
@@ -17701,10 +19799,16 @@
         "SOURCE_STROKE_LENGTH_USED_IN_ACCEPTED_BANDS": 55.5
       },
       "source_stroke_capture": {
-        "basis": "both terms are SOURCE STROKE LENGTH. The second figure excludes strokes evidence says were never wall, and leaves UNRESOLVED out of both terms rather than choosing a side for it",
-        "of_wall_like_source_stroke_pct": 75.36,
-        "used_in_accepted_bands_pct": 55.5,
-        "wall_like_source_stroke_m": 1408.5
+        "ACCEPTED_SHARE_OF_CLASSIFIED_WALL_LIKE_SOURCE_STROKES_PCT": 75.36,
+        "ACCEPTED_SHARE_OF_DEFINED_SOURCE_STROKE_POPULATION_PCT": 55.5,
+        "basis": "both terms are SOURCE STROKE LENGTH",
+        "denominators": {
+          "CLASSIFIED_WALL_LIKE_SOURCE_STROKES_IS": "the strokes consumed by accepted bands, plus the unpaired strokes evidence places in a wall-like class. Strokes classified non-wall or duplicate are excluded, and UNRESOLVED is in NEITHER term",
+          "CLASSIFIED_WALL_LIKE_SOURCE_STROKES_M": 1408.5,
+          "DEFINED_SOURCE_STROKE_POPULATION_IS": "every wall-style source face considered by the extractor on this sheet, paired and unpaired",
+          "DEFINED_SOURCE_STROKE_POPULATION_M": 1912.5
+        },
+        "what_these_do_not_mean": "neither figure is physical-wall recall. They describe what share of a DEFINED POPULATION OF MARKS reached an accepted band. Whether those marks are the building's walls is not established by anything here, and no independent source on this project has been opened to establish it"
       },
       "status": "ESTABLISHED_IN_SOURCE_STROKE_LENGTH",
       "still_not_a_claim_that": "this share of the ARCHITECTURAL walls is captured. It is a share of wall-pen STROKE length, and a wall drawn in a representation this engine does not read at all appears in no term of it"
@@ -17718,6 +19822,10 @@
     "segments": 74148,
     "source_hash": "bddb175c39834594",
     "source_normalised_coverage": {
+      "PHYSICAL_WALL_RECALL": {
+        "status": "NOT_INDEPENDENTLY_ESTABLISHED",
+        "why": "it would require knowing the building's actual walls from a source outside this drawing. The sealed site benchmark is not opened, no CAD model is available, and a drawing cannot measure its own completeness"
+      },
       "accounting_identity": {
         "accounted_mm": 1912456.2,
         "closes": true,
@@ -17762,10 +19870,16 @@
         "SOURCE_STROKE_LENGTH_USED_IN_ACCEPTED_BANDS": 55.5
       },
       "source_stroke_capture": {
-        "basis": "both terms are SOURCE STROKE LENGTH. The second figure excludes strokes evidence says were never wall, and leaves UNRESOLVED out of both terms rather than choosing a side for it",
-        "of_wall_like_source_stroke_pct": 75.36,
-        "used_in_accepted_bands_pct": 55.5,
-        "wall_like_source_stroke_m": 1408.5
+        "ACCEPTED_SHARE_OF_CLASSIFIED_WALL_LIKE_SOURCE_STROKES_PCT": 75.36,
+        "ACCEPTED_SHARE_OF_DEFINED_SOURCE_STROKE_POPULATION_PCT": 55.5,
+        "basis": "both terms are SOURCE STROKE LENGTH",
+        "denominators": {
+          "CLASSIFIED_WALL_LIKE_SOURCE_STROKES_IS": "the strokes consumed by accepted bands, plus the unpaired strokes evidence places in a wall-like class. Strokes classified non-wall or duplicate are excluded, and UNRESOLVED is in NEITHER term",
+          "CLASSIFIED_WALL_LIKE_SOURCE_STROKES_M": 1408.5,
+          "DEFINED_SOURCE_STROKE_POPULATION_IS": "every wall-style source face considered by the extractor on this sheet, paired and unpaired",
+          "DEFINED_SOURCE_STROKE_POPULATION_M": 1912.5
+        },
+        "what_these_do_not_mean": "neither figure is physical-wall recall. They describe what share of a DEFINED POPULATION OF MARKS reached an accepted band. Whether those marks are the building's walls is not established by anything here, and no independent source on this project has been opened to establish it"
       },
       "why_one_primitive": "a two-face wall contributes about two source-face lengths and one band length. Dividing a band length by a source length is not a coverage figure: it understates capture by roughly a factor of two on the very population it claims to measure"
     },
@@ -17802,12 +19916,23 @@
           "length_m": 214.5
         }
       },
+      "no_material_from_single_line_on_this_drawing": "a single stroke establishes no thickness and no finish-face position, so it may generate a topology hypothesis and may never create wall material. On AR-00 the class is 58.1 m in two runs that lie outside the building's extent, which is enough to say it is not the dominant problem here \u2014 and not a reason to add further rules aimed at making those two disappear",
       "not_wall_like_length_m": {
         "classified_non_wall": 266.7,
         "duplicate": 22.6,
         "unresolved": 214.5
       },
       "note": "classified on evidence. Pen weight alone says a mark was drawn with the wall pen and nothing about whether it is a wall \u2014 and only the wall-like classes are candidates for recovery",
+      "permitted_use": {
+        "ANNOTATION_OR_DETAIL": "NO_USE",
+        "DIFFERENT_WALL_REPRESENTATION": "TOPOLOGY_SEPARATOR_HYPOTHESIS",
+        "DUPLICATE": "NO_USE",
+        "FIXTURE_OR_SYMBOL": "NO_USE",
+        "FRAGMENTED_MATE": "FRAGMENTED_MATE_RECOVERY_CANDIDATE",
+        "NON_WALL_GEOMETRY": "NO_USE",
+        "SINGLE_LINE_WALL_EXISTENCE_SUPPORTED": "TOPOLOGY_SEPARATOR_HYPOTHESIS",
+        "UNRESOLVED": "NO_USE_UNTIL_CLASSIFIED"
+      },
       "population": "UNPAIRED_WALL_STYLE_STROKE",
       "strokes": 462,
       "total_length_m": 851.0,
@@ -17821,13 +19946,13 @@
       }
     },
     "unpaired_wall_style_stroke_length_m": 851.0,
-    "verdict": "SUPPORTABLE_BY_THE_CURRENT_ENGINE",
+    "verdict": "UNSUPPORTED_REPRESENTATION",
     "wall_representation_mix": {
       "DOUBLE_LINE_WALL": 615.1,
       "SINGLE_LINE_WALL": 58.1,
       "UNPAIRED_WALL_STYLE_STROKE": 851.0
     },
-    "why": "75% of WALL-LIKE SOURCE STROKE LENGTH reached an accepted two-face band, which is the representation this engine reads. Both terms are source-stroke length"
+    "why": "0% pairs into two-face bands. This drawing is probably not double-line, and measuring it with the current engine would produce confident nonsense"
   },
   "space_boundaries": {
     "BED-01": {
@@ -24036,6 +26161,9 @@
     "single_label_but_blocked": [
       {
         "barrier_release_class": "DIAGNOSTIC_PARTITION_BARRIER",
+        "blocking_portal_ids": [
+          "PT-GV17046-line-25224"
+        ],
         "blocks": [
           "BOUNDARY_RESTS_ON_UNESTABLISHED_WALL_MATERIAL",
           "PARTITION_DEPENDS_ON_A_DIAGNOSTIC_PORTAL"
@@ -24051,6 +26179,10 @@
       },
       {
         "barrier_release_class": "DIAGNOSTIC_PARTITION_BARRIER",
+        "blocking_portal_ids": [
+          "PT-BED-01-west-27124",
+          "PT-GH27048-line-27348"
+        ],
         "blocks": [
           "BOUNDARY_RESTS_ON_UNESTABLISHED_WALL_MATERIAL",
           "PARTITION_DEPENDS_ON_A_DIAGNOSTIC_PORTAL"
@@ -24061,11 +26193,16 @@
         "space_ids": [
           "BED-01"
         ],
-        "unestablished_boundary_m": 5.104,
+        "unestablished_boundary_m": 2.352,
         "why": "blocked by BOUNDARY_RESTS_ON_UNESTABLISHED_WALL_MATERIAL, PARTITION_DEPENDS_ON_A_DIAGNOSTIC_PORTAL"
       },
       {
         "barrier_release_class": "DIAGNOSTIC_PARTITION_BARRIER",
+        "blocking_portal_ids": [
+          "PT-BTH-02-west-25824",
+          "PT-GH27048-line-27348",
+          "PT-GV31091-line-25605"
+        ],
         "blocks": [
           "BOUNDARY_RESTS_ON_UNESTABLISHED_WALL_MATERIAL",
           "PARTITION_DEPENDS_ON_A_DIAGNOSTIC_PORTAL"
@@ -24076,11 +26213,12 @@
         "space_ids": [
           "BTH-02"
         ],
-        "unestablished_boundary_m": 2.152,
+        "unestablished_boundary_m": 0.303,
         "why": "blocked by BOUNDARY_RESTS_ON_UNESTABLISHED_WALL_MATERIAL, PARTITION_DEPENDS_ON_A_DIAGNOSTIC_PORTAL"
       },
       {
         "barrier_release_class": "RELEASABLE_PARTITION_BARRIER",
+        "blocking_portal_ids": [],
         "blocks": [
           "BOUNDARY_RESTS_ON_UNESTABLISHED_WALL_MATERIAL"
         ],
@@ -24095,6 +26233,9 @@
       },
       {
         "barrier_release_class": "DIAGNOSTIC_PARTITION_BARRIER",
+        "blocking_portal_ids": [
+          "PT-BTH-05-south-22393"
+        ],
         "blocks": [
           "BOUNDARY_RESTS_ON_UNESTABLISHED_WALL_MATERIAL",
           "PARTITION_DEPENDS_ON_A_DIAGNOSTIC_PORTAL"
@@ -24105,11 +26246,12 @@
         "space_ids": [
           "BTH-05"
         ],
-        "unestablished_boundary_m": 2.601,
+        "unestablished_boundary_m": 0.303,
         "why": "blocked by BOUNDARY_RESTS_ON_UNESTABLISHED_WALL_MATERIAL, PARTITION_DEPENDS_ON_A_DIAGNOSTIC_PORTAL"
       },
       {
         "barrier_release_class": "NOT_CONSTRAINED_BY_A_BARRIER",
+        "blocking_portal_ids": [],
         "blocks": [
           "GEOMETRY_ROLE_IS_NOT_AN_OCCUPIABLE_SPACE"
         ],
@@ -24124,6 +26266,7 @@
       },
       {
         "barrier_release_class": "NOT_CONSTRAINED_BY_A_BARRIER",
+        "blocking_portal_ids": [],
         "blocks": [
           "GEOMETRY_ROLE_IS_NOT_AN_OCCUPIABLE_SPACE",
           "BOUNDARY_RESTS_ON_UNESTABLISHED_WALL_MATERIAL"
@@ -24139,6 +26282,7 @@
       },
       {
         "barrier_release_class": "NOT_CONSTRAINED_BY_A_BARRIER",
+        "blocking_portal_ids": [],
         "blocks": [
           "GEOMETRY_ROLE_IS_NOT_AN_OCCUPIABLE_SPACE"
         ],
@@ -24153,6 +26297,7 @@
       },
       {
         "barrier_release_class": "NOT_CONSTRAINED_BY_A_BARRIER",
+        "blocking_portal_ids": [],
         "blocks": [
           "GEOMETRY_ROLE_IS_NOT_AN_OCCUPIABLE_SPACE"
         ],
@@ -26670,12 +28815,23 @@
         "length_m": 214.5
       }
     },
+    "no_material_from_single_line_on_this_drawing": "a single stroke establishes no thickness and no finish-face position, so it may generate a topology hypothesis and may never create wall material. On AR-00 the class is 58.1 m in two runs that lie outside the building's extent, which is enough to say it is not the dominant problem here \u2014 and not a reason to add further rules aimed at making those two disappear",
     "not_wall_like_length_m": {
       "classified_non_wall": 266.7,
       "duplicate": 22.6,
       "unresolved": 214.5
     },
     "note": "classified on evidence. Pen weight alone says a mark was drawn with the wall pen and nothing about whether it is a wall \u2014 and only the wall-like classes are candidates for recovery",
+    "permitted_use": {
+      "ANNOTATION_OR_DETAIL": "NO_USE",
+      "DIFFERENT_WALL_REPRESENTATION": "TOPOLOGY_SEPARATOR_HYPOTHESIS",
+      "DUPLICATE": "NO_USE",
+      "FIXTURE_OR_SYMBOL": "NO_USE",
+      "FRAGMENTED_MATE": "FRAGMENTED_MATE_RECOVERY_CANDIDATE",
+      "NON_WALL_GEOMETRY": "NO_USE",
+      "SINGLE_LINE_WALL_EXISTENCE_SUPPORTED": "TOPOLOGY_SEPARATOR_HYPOTHESIS",
+      "UNRESOLVED": "NO_USE_UNTIL_CLASSIFIED"
+    },
     "population": "UNPAIRED_WALL_STYLE_STROKE",
     "strokes": 462,
     "total_length_m": 851.0,
@@ -26688,22 +28844,248 @@
       "unresolved": "not enough evidence to classify. This length is NOT proven non-wall and must never be added to the non-wall total. It sits in neither the wall-like nor the non-wall figure on purpose"
     }
   },
+  "unresolved_stroke_impact": {
+    "by_impact": {
+      "LIES_ON_A_FRONTIER_THAT_DID_NOT_SEPARATE": 7,
+      "LIES_ON_A_FRONTIER_THAT_DID_NOT_SEPARATE_A_FROZEN_CONTROL": 2,
+      "NOT_AT_ANY_MEASURED_SEPARATION_FAILURE": 195
+    },
+    "length_at_a_measured_separation_failure_m": 7.08,
+    "length_by_impact_m": {
+      "LIES_ON_A_FRONTIER_THAT_DID_NOT_SEPARATE": 5.242,
+      "LIES_ON_A_FRONTIER_THAT_DID_NOT_SEPARATE_A_FROZEN_CONTROL": 1.838,
+      "NOT_AT_ANY_MEASURED_SEPARATION_FAILURE": 207.456
+    },
+    "notes": {
+      "controls_in_scope": [
+        "BED-01",
+        "BTH-05",
+        "OPEN-01",
+        "STR-01"
+      ],
+      "leaks_examined": 40
+    },
+    "population_length_m": 214.5,
+    "ranked_by": "whether the stroke sits where a separation the drawing expects did not happen, strongest first: an aperture that merges a frozen control, then any aperture between two labelled spaces, then a frozen control's frontier, then any frontier. NOT by length",
+    "scope": "this round resolves none of them. The population is reported so the next round can be chosen on measured topology rather than on the size of the number",
+    "strokes_at_a_measured_separation_failure": 9,
+    "strokes_in_population": 204,
+    "tiers_with_no_members_here": [
+      "SITS_IN_AN_APERTURE_BETWEEN_TWO_LABELLED_SPACES",
+      "SITS_IN_AN_APERTURE_THAT_MERGES_A_FROZEN_CONTROL"
+    ],
+    "what_a_place_on_this_list_is_not": "it is NOT evidence that the stroke is a wall. Every stroke here remains UNRESOLVED, with no thickness, no finish-face position and no admission to any wall solid. The list says where to look next, and nothing about what will be found",
+    "what_an_empty_aperture_tier_means": "no UNRESOLVED stroke on this sheet lies inside the widest unwalled stretch of any failed separation. The missing separators are not sitting there unrecognised as stray wall-pen marks \u2014 where the partition is open, nothing is drawn at all",
+    "why_not_length": "a long stroke in site hatching is worth nothing and a 300 mm stroke in the aperture between two bedrooms is worth a room. Ranking the unresolved population by length would spend the next round on the wrong 200 m",
+    "work_list": [
+      {
+        "frozen_controls_affected": [
+          "OPEN-01",
+          "STR-01"
+        ],
+        "impact": "LIES_ON_A_FRONTIER_THAT_DID_NOT_SEPARATE_A_FROZEN_CONTROL",
+        "leak_ids": [
+          "LK-0001"
+        ],
+        "length_m": 0.919,
+        "spaces_separated": [
+          "BED-02",
+          "BED-04",
+          "BTH-03",
+          "BTH-04",
+          "BTH-06",
+          "COR-02",
+          "COR-03",
+          "IRN-01",
+          "KIT-01",
+          "MAID-01",
+          "MAID-02",
+          "MAID-03",
+          "MBTH-01",
+          "MBTH-02",
+          "MCOR-01",
+          "OPEN-01",
+          "SAL-NW",
+          "SRV-01",
+          "STA-01",
+          "STR-01",
+          "TRC-01",
+          "TRC-02"
+        ],
+        "stroke_class": "UNRESOLVED",
+        "stroke_id": "VS-005748",
+        "why": "this stroke lies along a frontier that failed to separate OPEN-01, STR-01, though not inside the widest hole. Weaker than an aperture hit, and still the strongest signal this sheet offers",
+        "widest_aperture_here_mm": null
+      },
+      {
+        "frozen_controls_affected": [
+          "OPEN-01",
+          "STR-01"
+        ],
+        "impact": "LIES_ON_A_FRONTIER_THAT_DID_NOT_SEPARATE_A_FROZEN_CONTROL",
+        "leak_ids": [
+          "LK-0001"
+        ],
+        "length_m": 0.919,
+        "spaces_separated": [
+          "BED-02",
+          "BED-04",
+          "BTH-03",
+          "BTH-04",
+          "BTH-06",
+          "COR-02",
+          "COR-03",
+          "IRN-01",
+          "KIT-01",
+          "MAID-01",
+          "MAID-02",
+          "MAID-03",
+          "MBTH-01",
+          "MBTH-02",
+          "MCOR-01",
+          "OPEN-01",
+          "SAL-NW",
+          "SRV-01",
+          "STA-01",
+          "STR-01",
+          "TRC-01",
+          "TRC-02"
+        ],
+        "stroke_class": "UNRESOLVED",
+        "stroke_id": "VS-005749",
+        "why": "this stroke lies along a frontier that failed to separate OPEN-01, STR-01, though not inside the widest hole. Weaker than an aperture hit, and still the strongest signal this sheet offers",
+        "widest_aperture_here_mm": null
+      },
+      {
+        "frozen_controls_affected": [],
+        "impact": "LIES_ON_A_FRONTIER_THAT_DID_NOT_SEPARATE",
+        "leak_ids": [
+          "LK-0038"
+        ],
+        "length_m": 0.695,
+        "spaces_separated": [
+          "MAID-04",
+          "MAID-05"
+        ],
+        "stroke_class": "UNRESOLVED",
+        "stroke_id": "VS-000456",
+        "why": "this stroke lies along a frontier that did not separate, but not in the hole itself. It may be part of the separator or beside it",
+        "widest_aperture_here_mm": null
+      },
+      {
+        "frozen_controls_affected": [],
+        "impact": "LIES_ON_A_FRONTIER_THAT_DID_NOT_SEPARATE",
+        "leak_ids": [
+          "LK-0038"
+        ],
+        "length_m": 0.695,
+        "spaces_separated": [
+          "MAID-04",
+          "MAID-05"
+        ],
+        "stroke_class": "UNRESOLVED",
+        "stroke_id": "VS-000465",
+        "why": "this stroke lies along a frontier that did not separate, but not in the hole itself. It may be part of the separator or beside it",
+        "widest_aperture_here_mm": null
+      },
+      {
+        "frozen_controls_affected": [],
+        "impact": "LIES_ON_A_FRONTIER_THAT_DID_NOT_SEPARATE",
+        "leak_ids": [
+          "LK-0038"
+        ],
+        "length_m": 0.695,
+        "spaces_separated": [
+          "MAID-04",
+          "MAID-05"
+        ],
+        "stroke_class": "UNRESOLVED",
+        "stroke_id": "VS-000485",
+        "why": "this stroke lies along a frontier that did not separate, but not in the hole itself. It may be part of the separator or beside it",
+        "widest_aperture_here_mm": null
+      },
+      {
+        "frozen_controls_affected": [],
+        "impact": "LIES_ON_A_FRONTIER_THAT_DID_NOT_SEPARATE",
+        "leak_ids": [
+          "LK-0038"
+        ],
+        "length_m": 0.695,
+        "spaces_separated": [
+          "MAID-04",
+          "MAID-05"
+        ],
+        "stroke_class": "UNRESOLVED",
+        "stroke_id": "VS-000494",
+        "why": "this stroke lies along a frontier that did not separate, but not in the hole itself. It may be part of the separator or beside it",
+        "widest_aperture_here_mm": null
+      },
+      {
+        "frozen_controls_affected": [],
+        "impact": "LIES_ON_A_FRONTIER_THAT_DID_NOT_SEPARATE",
+        "leak_ids": [
+          "LK-0040"
+        ],
+        "length_m": 0.922,
+        "spaces_separated": [
+          "BED-NW",
+          "BTH-01"
+        ],
+        "stroke_class": "UNRESOLVED",
+        "stroke_id": "VS-006108",
+        "why": "this stroke lies along a frontier that did not separate, but not in the hole itself. It may be part of the separator or beside it",
+        "widest_aperture_here_mm": null
+      },
+      {
+        "frozen_controls_affected": [],
+        "impact": "LIES_ON_A_FRONTIER_THAT_DID_NOT_SEPARATE",
+        "leak_ids": [
+          "LK-0040"
+        ],
+        "length_m": 0.922,
+        "spaces_separated": [
+          "BED-NW",
+          "BTH-01"
+        ],
+        "stroke_class": "UNRESOLVED",
+        "stroke_id": "VS-006109",
+        "why": "this stroke lies along a frontier that did not separate, but not in the hole itself. It may be part of the separator or beside it",
+        "widest_aperture_here_mm": null
+      },
+      {
+        "frozen_controls_affected": [],
+        "impact": "LIES_ON_A_FRONTIER_THAT_DID_NOT_SEPARATE",
+        "leak_ids": [
+          "LK-0027"
+        ],
+        "length_m": 0.619,
+        "spaces_separated": [
+          "MAID-02",
+          "MBTH-02"
+        ],
+        "stroke_class": "UNRESOLVED",
+        "stroke_id": "VS-029573",
+        "why": "this stroke lies along a frontier that did not separate, but not in the hole itself. It may be part of the separator or beside it",
+        "widest_aperture_here_mm": null
+      }
+    ]
+  },
   "wall_authority": {
     "by_grounds_count": {
       "BOTH_FACES_DRAWN": 243,
       "ONE_FACE_WITH_AN_END_CAP": 47,
       "ONE_FACE_WITH_A_JUNCTION_OVERHANG": 142,
-      "UNRESOLVED_SINGLE_FACE_EXTENSION": 21,
-      "UNVALIDATED_JUNCTION_PATCH": 4,
-      "VALIDATED_JUNCTION_PATCH": 1
+      "RECOVERED_FRAGMENTED_MATE": 9,
+      "UNRESOLVED_SINGLE_FACE_EXTENSION": 24,
+      "UNVALIDATED_JUNCTION_PATCH": 5
     },
     "by_grounds_m": {
       "BOTH_FACES_DRAWN": 446.383,
       "ONE_FACE_WITH_AN_END_CAP": 87.877,
       "ONE_FACE_WITH_A_JUNCTION_OVERHANG": 24.024,
-      "UNRESOLVED_SINGLE_FACE_EXTENSION": 55.946,
-      "UNVALIDATED_JUNCTION_PATCH": 0.421,
-      "VALIDATED_JUNCTION_PATCH": 0.013
+      "RECOVERED_FRAGMENTED_MATE": 7.931,
+      "UNRESOLVED_SINGLE_FACE_EXTENSION": 48.015,
+      "UNVALIDATED_JUNCTION_PATCH": 0.434
     },
     "diagnostic_only_detail": [
       {
@@ -26833,78 +29215,6 @@
         "why": "2833 mm the band itself records as UNRESOLVED_EXTENSION: by its own note this extent beyond the paired interval is NOT established material. It is refused from the established solid and kept here with provenance"
       },
       {
-        "axis": "V",
-        "established": false,
-        "from_mm": 22823.6,
-        "grounds": "UNRESOLVED_SINGLE_FACE_EXTENSION",
-        "junction_patch_id": "",
-        "length_mm": 2600.5,
-        "may_enter": [
-          "DIAGNOSTIC_AUGMENTED_WALL_SOLID"
-        ],
-        "source_face_ids": [
-          "VS-005345",
-          "VS-005340"
-        ],
-        "to_mm": 25424.1,
-        "wall_band_id": "WB-00144",
-        "why": "2601 mm the band itself records as UNRESOLVED_EXTENSION: by its own note this extent beyond the paired interval is NOT established material. It is refused from the established solid and kept here with provenance"
-      },
-      {
-        "axis": "V",
-        "established": false,
-        "from_mm": 24972.7,
-        "grounds": "UNRESOLVED_SINGLE_FACE_EXTENSION",
-        "junction_patch_id": "",
-        "length_mm": 2151.8,
-        "may_enter": [
-          "DIAGNOSTIC_AUGMENTED_WALL_SOLID"
-        ],
-        "source_face_ids": [
-          "VS-000167",
-          "VS-000164"
-        ],
-        "to_mm": 27124.5,
-        "wall_band_id": "WB-00160",
-        "why": "2152 mm the band itself records as UNRESOLVED_EXTENSION: by its own note this extent beyond the paired interval is NOT established material. It is refused from the established solid and kept here with provenance"
-      },
-      {
-        "axis": "V",
-        "established": false,
-        "from_mm": 10348.1,
-        "grounds": "UNRESOLVED_SINGLE_FACE_EXTENSION",
-        "junction_patch_id": "",
-        "length_mm": 2124.8,
-        "may_enter": [
-          "DIAGNOSTIC_AUGMENTED_WALL_SOLID"
-        ],
-        "source_face_ids": [
-          "VS-000056",
-          "VS-029915"
-        ],
-        "to_mm": 12472.8,
-        "wall_band_id": "WB-00217",
-        "why": "2125 mm the band itself records as UNRESOLVED_EXTENSION: by its own note this extent beyond the paired interval is NOT established material. It is refused from the established solid and kept here with provenance"
-      },
-      {
-        "axis": "H",
-        "established": false,
-        "from_mm": 19747.3,
-        "grounds": "UNRESOLVED_SINGLE_FACE_EXTENSION",
-        "junction_patch_id": "",
-        "length_mm": 2119.3,
-        "may_enter": [
-          "DIAGNOSTIC_AUGMENTED_WALL_SOLID"
-        ],
-        "source_face_ids": [
-          "VS-043190",
-          "VS-000034"
-        ],
-        "to_mm": 21866.6,
-        "wall_band_id": "WB-00022",
-        "why": "2119 mm the band itself records as UNRESOLVED_EXTENSION: by its own note this extent beyond the paired interval is NOT established material. It is refused from the established solid and kept here with provenance"
-      },
-      {
         "axis": "H",
         "established": false,
         "from_mm": 29297.8,
@@ -26921,6 +29231,24 @@
         "to_mm": 31298.3,
         "wall_band_id": "WB-00030",
         "why": "2000 mm the band itself records as UNRESOLVED_EXTENSION: by its own note this extent beyond the paired interval is NOT established material. It is refused from the established solid and kept here with provenance"
+      },
+      {
+        "axis": "V",
+        "established": false,
+        "from_mm": 10348.1,
+        "grounds": "UNRESOLVED_SINGLE_FACE_EXTENSION",
+        "junction_patch_id": "",
+        "length_mm": 1703.0,
+        "may_enter": [
+          "DIAGNOSTIC_AUGMENTED_WALL_SOLID"
+        ],
+        "source_face_ids": [
+          "VS-000056",
+          "VS-029915"
+        ],
+        "to_mm": 12051.1,
+        "wall_band_id": "WB-00217",
+        "why": "1703 mm the band itself records as UNRESOLVED_EXTENSION: by its own note this extent beyond the paired interval is NOT established material. It is refused from the established solid and kept here with provenance"
       },
       {
         "axis": "V",
@@ -26964,7 +29292,7 @@
         "from_mm": 29870.9,
         "grounds": "UNRESOLVED_SINGLE_FACE_EXTENSION",
         "junction_patch_id": "",
-        "length_mm": 1427.3,
+        "length_mm": 946.1,
         "may_enter": [
           "DIAGNOSTIC_AUGMENTED_WALL_SOLID"
         ],
@@ -26972,9 +29300,27 @@
           "VS-005014",
           "VS-010060"
         ],
-        "to_mm": 31298.3,
+        "to_mm": 30817.1,
         "wall_band_id": "WB-00094",
-        "why": "1427 mm the band itself records as UNRESOLVED_EXTENSION: by its own note this extent beyond the paired interval is NOT established material. It is refused from the established solid and kept here with provenance"
+        "why": "946 mm the band itself records as UNRESOLVED_EXTENSION: by its own note this extent beyond the paired interval is NOT established material. It is refused from the established solid and kept here with provenance"
+      },
+      {
+        "axis": "H",
+        "established": false,
+        "from_mm": 20977.2,
+        "grounds": "UNRESOLVED_SINGLE_FACE_EXTENSION",
+        "junction_patch_id": "",
+        "length_mm": 889.4,
+        "may_enter": [
+          "DIAGNOSTIC_AUGMENTED_WALL_SOLID"
+        ],
+        "source_face_ids": [
+          "VS-043190",
+          "VS-000034"
+        ],
+        "to_mm": 21866.6,
+        "wall_band_id": "WB-00022",
+        "why": "889 mm the band itself records as UNRESOLVED_EXTENSION: by its own note this extent beyond the paired interval is NOT established material. It is refused from the established solid and kept here with provenance"
       },
       {
         "axis": "V",
@@ -26982,7 +29328,7 @@
         "from_mm": 24405.0,
         "grounds": "UNRESOLVED_SINGLE_FACE_EXTENSION",
         "junction_patch_id": "",
-        "length_mm": 1167.8,
+        "length_mm": 889.4,
         "may_enter": [
           "DIAGNOSTIC_AUGMENTED_WALL_SOLID"
         ],
@@ -26990,27 +29336,9 @@
           "VS-044250",
           "VS-005353"
         ],
-        "to_mm": 25572.8,
+        "to_mm": 25294.4,
         "wall_band_id": "WB-00140",
-        "why": "1168 mm the band itself records as UNRESOLVED_EXTENSION: by its own note this extent beyond the paired interval is NOT established material. It is refused from the established solid and kept here with provenance"
-      },
-      {
-        "axis": "H",
-        "established": false,
-        "from_mm": 26348.6,
-        "grounds": "UNRESOLVED_SINGLE_FACE_EXTENSION",
-        "junction_patch_id": "",
-        "length_mm": 951.5,
-        "may_enter": [
-          "DIAGNOSTIC_AUGMENTED_WALL_SOLID"
-        ],
-        "source_face_ids": [
-          "VS-005011",
-          "VS-005015"
-        ],
-        "to_mm": 27300.1,
-        "wall_band_id": "WB-00030",
-        "why": "952 mm the band itself records as UNRESOLVED_EXTENSION: by its own note this extent beyond the paired interval is NOT established material. It is refused from the established solid and kept here with provenance"
+        "why": "889 mm the band itself records as UNRESOLVED_EXTENSION: by its own note this extent beyond the paired interval is NOT established material. It is refused from the established solid and kept here with provenance"
       },
       {
         "axis": "H",
@@ -27029,24 +29357,6 @@
         "to_mm": 13746.0,
         "wall_band_id": "WB-00023",
         "why": "797 mm the band itself records as UNRESOLVED_EXTENSION: by its own note this extent beyond the paired interval is NOT established material. It is refused from the established solid and kept here with provenance"
-      },
-      {
-        "axis": "V",
-        "established": false,
-        "from_mm": 12948.6,
-        "grounds": "UNRESOLVED_SINGLE_FACE_EXTENSION",
-        "junction_patch_id": "",
-        "length_mm": 724.5,
-        "may_enter": [
-          "DIAGNOSTIC_AUGMENTED_WALL_SOLID"
-        ],
-        "source_face_ids": [
-          "VS-000196",
-          "VS-040808"
-        ],
-        "to_mm": 13673.1,
-        "wall_band_id": "WB-00218",
-        "why": "724 mm the band itself records as UNRESOLVED_EXTENSION: by its own note this extent beyond the paired interval is NOT established material. It is refused from the established solid and kept here with provenance"
       },
       {
         "axis": "H",
@@ -27107,6 +29417,96 @@
         "why": "conflicting evidence: wall separations differ by 251 mm, so these are not two stretches of one wall. A patch is not created where the drawing argues with itself"
       },
       {
+        "axis": "H",
+        "established": false,
+        "from_mm": 27100.1,
+        "grounds": "UNRESOLVED_SINGLE_FACE_EXTENSION",
+        "junction_patch_id": "",
+        "length_mm": 200.0,
+        "may_enter": [
+          "DIAGNOSTIC_AUGMENTED_WALL_SOLID"
+        ],
+        "source_face_ids": [
+          "VS-005011",
+          "VS-005015"
+        ],
+        "to_mm": 27300.1,
+        "wall_band_id": "WB-00030",
+        "why": "200 mm the band itself records as UNRESOLVED_EXTENSION: by its own note this extent beyond the paired interval is NOT established material. It is refused from the established solid and kept here with provenance"
+      },
+      {
+        "axis": "V",
+        "established": false,
+        "from_mm": 23623.8,
+        "grounds": "UNRESOLVED_SINGLE_FACE_EXTENSION",
+        "junction_patch_id": "",
+        "length_mm": 151.4,
+        "may_enter": [
+          "DIAGNOSTIC_AUGMENTED_WALL_SOLID"
+        ],
+        "source_face_ids": [
+          "VS-005345",
+          "VS-005340"
+        ],
+        "to_mm": 23775.1,
+        "wall_band_id": "WB-00144",
+        "why": "151 mm the band itself records as UNRESOLVED_EXTENSION: by its own note this extent beyond the paired interval is NOT established material. It is refused from the established solid and kept here with provenance"
+      },
+      {
+        "axis": "V",
+        "established": false,
+        "from_mm": 26973.1,
+        "grounds": "UNRESOLVED_SINGLE_FACE_EXTENSION",
+        "junction_patch_id": "",
+        "length_mm": 151.4,
+        "may_enter": [
+          "DIAGNOSTIC_AUGMENTED_WALL_SOLID"
+        ],
+        "source_face_ids": [
+          "VS-000167",
+          "VS-000164"
+        ],
+        "to_mm": 27124.5,
+        "wall_band_id": "WB-00160",
+        "why": "151 mm the band itself records as UNRESOLVED_EXTENSION: by its own note this extent beyond the paired interval is NOT established material. It is refused from the established solid and kept here with provenance"
+      },
+      {
+        "axis": "V",
+        "established": false,
+        "from_mm": 24972.7,
+        "grounds": "UNRESOLVED_SINGLE_FACE_EXTENSION",
+        "junction_patch_id": "",
+        "length_mm": 151.4,
+        "may_enter": [
+          "DIAGNOSTIC_AUGMENTED_WALL_SOLID"
+        ],
+        "source_face_ids": [
+          "VS-000167",
+          "VS-000164"
+        ],
+        "to_mm": 25124.1,
+        "wall_band_id": "WB-00160",
+        "why": "151 mm the band itself records as UNRESOLVED_EXTENSION: by its own note this extent beyond the paired interval is NOT established material. It is refused from the established solid and kept here with provenance"
+      },
+      {
+        "axis": "V",
+        "established": false,
+        "from_mm": 25272.7,
+        "grounds": "UNRESOLVED_SINGLE_FACE_EXTENSION",
+        "junction_patch_id": "",
+        "length_mm": 151.4,
+        "may_enter": [
+          "DIAGNOSTIC_AUGMENTED_WALL_SOLID"
+        ],
+        "source_face_ids": [
+          "VS-005345",
+          "VS-005340"
+        ],
+        "to_mm": 25424.1,
+        "wall_band_id": "WB-00144",
+        "why": "151 mm the band itself records as UNRESOLVED_EXTENSION: by its own note this extent beyond the paired interval is NOT established material. It is refused from the established solid and kept here with provenance"
+      },
+      {
         "axis": "V",
         "established": false,
         "from_mm": 0.0,
@@ -27129,6 +29529,62 @@
         "to_mm": 94.5,
         "wall_band_id": "WB-00055,WB-00058,WB-00143,WB-00208",
         "why": "conflicting evidence: raster support 0.00 across this gap: nothing solid is drawn here, so a physical junction is contradicted. A patch is not created where the drawing argues with itself"
+      },
+      {
+        "axis": "H",
+        "established": false,
+        "from_mm": 31246.9,
+        "grounds": "UNRESOLVED_SINGLE_FACE_EXTENSION",
+        "junction_patch_id": "",
+        "length_mm": 51.4,
+        "may_enter": [
+          "DIAGNOSTIC_AUGMENTED_WALL_SOLID"
+        ],
+        "source_face_ids": [
+          "VS-005014",
+          "VS-010060"
+        ],
+        "to_mm": 31298.3,
+        "wall_band_id": "WB-00094",
+        "why": "51 mm the band itself records as UNRESOLVED_EXTENSION: by its own note this extent beyond the paired interval is NOT established material. It is refused from the established solid and kept here with provenance"
+      },
+      {
+        "axis": "V",
+        "established": false,
+        "from_mm": 12421.5,
+        "grounds": "UNRESOLVED_SINGLE_FACE_EXTENSION",
+        "junction_patch_id": "",
+        "length_mm": 51.4,
+        "may_enter": [
+          "DIAGNOSTIC_AUGMENTED_WALL_SOLID"
+        ],
+        "source_face_ids": [
+          "VS-000056",
+          "VS-029915"
+        ],
+        "to_mm": 12472.8,
+        "wall_band_id": "WB-00217",
+        "why": "51 mm the band itself records as UNRESOLVED_EXTENSION: by its own note this extent beyond the paired interval is NOT established material. It is refused from the established solid and kept here with provenance"
+      },
+      {
+        "axis": "V",
+        "established": false,
+        "from_mm": 0.0,
+        "grounds": "UNVALIDATED_JUNCTION_PATCH",
+        "junction_patch_id": "JP-0003",
+        "length_mm": 13.1,
+        "may_enter": [
+          "DIAGNOSTIC_AUGMENTED_WALL_SOLID"
+        ],
+        "source_face_ids": [
+          "VS-000056",
+          "VS-029915",
+          "VS-043952",
+          "VS-043953"
+        ],
+        "to_mm": 13.1,
+        "wall_band_id": "WB-00061,WB-00217",
+        "why": "2 evidence families (GEOMETRY, RASTER) support this junction, but all of them are SAME_DRAWING: this project's raster is RENDERED FROM THE SAME PDF as the vector geometry, so agreement between them is one observation of one artefact in two encodings. A rendering cannot witness masonry the drawing does not contain. Diagnostic solid only, until something outside this drawing says material is here"
       },
       {
         "axis": "H",
@@ -27161,22 +29617,23 @@
         "why": "only 1 accepted band(s) reach this gap. A junction needs at least two walls to join, and inventing the second is what this module exists to refuse. 1 wall-like unpaired stroke(s) lie at this gap with raster support, and only 1 accepted band reaches it. A wall IS drawn here and never became a band: the repair is in FACE PAIRING, not in junction assembly, and a patch here would paper over an extraction failure"
       }
     ],
-    "diagnostic_only_intervals": 25,
-    "diagnostic_only_length_m": 56.368,
-    "established_intervals": 433,
-    "established_length_m": 558.297,
-    "intervals": 458,
+    "diagnostic_only_intervals": 29,
+    "diagnostic_only_length_m": 48.449,
+    "established_intervals": 441,
+    "established_length_m": 566.215,
+    "intervals": 470,
     "notes": {
+      "fragmented_mate_recoveries": 8,
       "junction_patches": 5,
-      "validated_junction_patches": 1
+      "validated_junction_patches": 0
     },
     "solid_comparison": {
-      "added_by_hypothesis_m2": 12.2014,
-      "added_share_of_diagnostic_pct": 10.46,
-      "diagnostic_augmented_area_m2": 116.628,
-      "diagnostic_components": 50,
-      "established_area_m2": 104.4266,
-      "established_components": 67,
+      "added_by_hypothesis_m2": 11.405,
+      "added_share_of_diagnostic_pct": 9.41,
+      "diagnostic_augmented_area_m2": 121.2379,
+      "diagnostic_components": 54,
+      "established_area_m2": 109.8329,
+      "established_components": 77,
       "why_components_are_not_a_target": "a disconnected wall component is not automatically defective. The target is correct SPACE PARTITIONING, and component count is reported only so the two solids can be told apart"
     },
     "solids": [

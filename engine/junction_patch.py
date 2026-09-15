@@ -57,6 +57,41 @@ EVIDENCE_FAMILY = {
     EV_RASTER_SOLID: "RASTER",
 }
 
+# WHERE A FAMILY'S EVIDENCE PHYSICALLY COMES FROM.
+#
+# The correction that prompted this: JP-0003 was VALIDATED on GEOMETRY +
+# RASTER and reported as two independent families. It is not. This project's
+# raster is RENDERED FROM THE SAME PDF as the vector geometry, so the two
+# are one observation of one artefact in two encodings. A rendering cannot
+# witness masonry the drawing does not contain — it can only redraw what is
+# already there.
+#
+#     SAME_DRAWING     derived from this PDF and nothing else. However many
+#                      such observations agree, they are ONE source.
+#     SAME_DOCUMENT_SET  another sheet, schedule or table from the same
+#                      issue: a different author's statement, still the
+#                      same project record.
+#     INDEPENDENT_OF_THE_DRAWING  a CAD entity from the originating model,
+#                      a site measurement, a human inspection.
+#
+# Only families in different independence classes count as independent for
+# establishing PHYSICAL MATERIAL.
+SOURCE_INDEPENDENCE_CLASS = {
+    "GEOMETRY": "SAME_DRAWING",
+    "DRAWN_SYMBOL": "SAME_DRAWING",
+    "SOURCE_STRUCTURE": "SAME_DRAWING",
+    # Rendered from the same PDF. Corroborates and LOCALISES; never
+    # independently establishes that material is present.
+    "RASTER": "SAME_DRAWING",
+    "DOCUMENT": "SAME_DOCUMENT_SET",
+    "CAD": "INDEPENDENT_OF_THE_DRAWING",
+    "SITE": "INDEPENDENT_OF_THE_DRAWING",
+    "HUMAN": "INDEPENDENT_OF_THE_DRAWING",
+}
+
+MATERIAL_WITNESS_CLASSES = ("SAME_DOCUMENT_SET",
+                            "INDEPENDENT_OF_THE_DRAWING")
+
 # Where a gap turns out NOT to be a junction, the gap still has a cause and
 # a repair, and they are not the same repair. Naming them stops the next
 # round from reaching for a patch again.
@@ -118,6 +153,18 @@ class JunctionPatch:
                 if e in EVIDENCE_FAMILY}
 
     @property
+    def independence_classes(self) -> set:
+        """How many genuinely separate SOURCES support this patch."""
+        return {SOURCE_INDEPENDENCE_CLASS[f] for f in self.families
+                if f in SOURCE_INDEPENDENCE_CLASS}
+
+    @property
+    def has_an_independent_material_witness(self) -> bool:
+        """Does anything outside this drawing say material is here?"""
+        return bool(self.independence_classes
+                    & set(MATERIAL_WITNESS_CLASSES))
+
+    @property
     def is_validated(self) -> bool:
         return self.validation_status == PATCH_VALIDATED
 
@@ -147,6 +194,15 @@ class JunctionPatch:
             "maximum_extension_distance_mm": round(self.max_extension_mm, 1),
             "evidence": list(self.evidence),
             "evidence_families": sorted(self.families),
+            "source_independence_classes": sorted(self.independence_classes),
+            "has_an_independent_material_witness": (
+                self.has_an_independent_material_witness),
+            "why_raster_is_not_independent_here": (
+                "this project's raster is rendered from the same PDF as the "
+                "vector geometry. It corroborates and LOCALISES; it cannot "
+                "independently establish that material is present, because "
+                "a rendering only redraws what the drawing already "
+                "contains"),
             "conflicting_evidence": list(self.conflicting_evidence),
             "validation_status": self.validation_status,
             "gap_repair_class": self.gap_repair_class,
@@ -167,6 +223,8 @@ class JunctionPatch:
 
 def _status(families: set, extension: float, ceiling: float,
             conflicts: tuple) -> tuple[str, str]:
+    classes = {SOURCE_INDEPENDENCE_CLASS[f] for f in families
+               if f in SOURCE_INDEPENDENCE_CLASS}
     if conflicts:
         return PATCH_REFUSED, (
             f"conflicting evidence: {', '.join(conflicts)}. A patch is not "
@@ -177,12 +235,24 @@ def _status(families: set, extension: float, ceiling: float,
             f"the {ceiling:.0f} mm ceiling taken from the drawing's own "
             "thickest accepted wall. A gap wider than a wall is thick is "
             "not a junction")
-    if len(families) >= MIN_FAMILIES_FOR_VALIDATED:
+    if (len(families) >= MIN_FAMILIES_FOR_VALIDATED
+            and len(classes) >= MIN_FAMILIES_FOR_VALIDATED):
         return PATCH_VALIDATED, (
-            f"{len(families)} independent evidence families "
-            f"({', '.join(sorted(families))}) agree a physical junction is "
-            f"here, and closing it extends a band by {extension:.0f} mm "
-            f"against a ceiling of {ceiling:.0f} mm")
+            f"{len(families)} evidence families "
+            f"({', '.join(sorted(families))}) from {len(classes)} "
+            f"INDEPENDENT sources ({', '.join(sorted(classes))}) agree a "
+            f"physical junction is here, and closing it extends a band by "
+            f"{extension:.0f} mm against a ceiling of {ceiling:.0f} mm")
+    if len(families) >= MIN_FAMILIES_FOR_VALIDATED:
+        return PATCH_PROBABLE, (
+            f"{len(families)} evidence families "
+            f"({', '.join(sorted(families))}) support this junction, but "
+            f"all of them are {', '.join(sorted(classes))}: this project's "
+            "raster is RENDERED FROM THE SAME PDF as the vector geometry, "
+            "so agreement between them is one observation of one artefact "
+            "in two encodings. A rendering cannot witness masonry the "
+            "drawing does not contain. Diagnostic solid only, until "
+            "something outside this drawing says material is here")
     if families:
         return PATCH_PROBABLE, (
             f"only the {', '.join(sorted(families))} family supports this "
@@ -196,9 +266,16 @@ def _repair_class(*, bands_reaching: int, conflicts: tuple,
                   wall_like_strokes: tuple, ratio, status: str
                   ) -> tuple[str, str]:
     """What would actually fix this gap, given what is at it."""
-    if status == PATCH_VALIDATED:
+    if status in (PATCH_VALIDATED, PATCH_PROBABLE):
+        # The repair class answers "what would fix this gap", which is a
+        # different question from "may we build material here". A junction
+        # supported only by this drawing is still a junction; what it lacks
+        # is an independent witness, not a diagnosis.
         return REPAIR_JUNCTION, (
-            "two walls meet here and the solid does not join them")
+            "two walls meet here and the solid does not join them"
+            + ("" if status == PATCH_VALIDATED else
+               ". The reading is supported only by this drawing, so the "
+               "patch is diagnostic until something outside it agrees"))
     if ratio is not None and ratio <= RASTER_EMPTY_SUPPORT:
         return REPAIR_GENUINE_OPENING, (
             f"raster support {ratio:.2f}: nothing solid is drawn across this "
@@ -410,8 +487,18 @@ def summary(patches) -> dict:
         "patches": [p.record() for p in patches],
         "the_rule": (
             "a patch is physical material only where its evidence supports "
-            "that: two INDEPENDENT families. A probable patch may enter the "
-            "diagnostic solid and may not enter the established one"),
+            "that: two families from two INDEPENDENT SOURCES. Two families "
+            "that both derive from this drawing are one source, however "
+            "much they agree"),
+        "source_independence": {
+            "classes": dict(SOURCE_INDEPENDENCE_CLASS),
+            "material_witness_classes": list(MATERIAL_WITNESS_CLASSES),
+            "why": ("the raster is rendered from the same PDF as the "
+                    "vector geometry, so GEOMETRY + RASTER is one "
+                    "observation in two encodings and not two witnesses"),
+        },
+        "patches_with_an_independent_material_witness": sum(
+            1 for p in patches if p.has_an_independent_material_witness),
         "never_used": (
             "larger snap tolerance, buffer, morphological closing, generic "
             "gap filling"),

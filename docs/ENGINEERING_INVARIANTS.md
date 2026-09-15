@@ -765,3 +765,96 @@ measured noise floor. The coarser grid is defensible here — but now it is
 Production still builds the established solid on the **measured** tolerance,
 and physical junctions are repaired by an explicit `JUNCTION_PATCH` that can
 be listed, reviewed and removed. A tolerance cannot be.
+
+---
+
+## 30 · A DRAWN FRAGMENT IS MATERIAL; A MISSING FRAGMENT IS NOT
+
+A draughtsman routinely draws one continuous wall face opposite several
+collinear fragments — the mate is cut by a crossing wall, a door jamb, a
+junction. The pairing engine assumed one face meets one face, so 289.0 m of
+AR-00's wall-pen strokes were classified `FRAGMENTED_MATE` and dropped.
+
+Recovering them is legitimate and bounded. **The material occupies the
+intervals where both faces are actually drawn, and nowhere else.** Where one
+face is drawn and the other is not, nothing is recovered: the gap is
+reported, classified by what the drawing says accounts for it, and left
+open.
+
+```
+PAIRED interval      both faces drawn      -> material, admissible
+GAP, explained       a portal, a crossing wall, an end cap
+                     accounts for the break in the face
+                     -> still no material there, and the
+                        GROUP may be VALIDATED
+GAP, unexplained     nothing in the drawing accounts for it
+                     -> the group is DIAGNOSTIC ONLY
+```
+
+Four refusals are absolute, and the self-test asserts each on a known
+answer before the resolver is allowed near the real sheet: it may not
+**bridge an opening**, **invent the missing half**, **change the wall
+thickness**, or **move a wall face**. A fragmented-mate resolver that closes
+doors is worse than no resolver, so a group whose paired material would
+cover a supported opening is refused **outright, not trimmed to fit**.
+
+Collinearity is decided by **proximity, not by a bucket**. `round(fixed /
+tolerance)` splits two fragments 0.6 mm apart when they straddle a bucket
+edge and keeps two 0.9 mm apart inside one, which makes the drawing's
+geometry depend on where an arbitrary boundary fell. Single linkage asks the
+only question the drawing can answer — is this fragment within tolerance of
+the last one on this line — and because linkage can chain, separation
+stability is still measured across the whole run: a chain of drifting
+fragments is not one wall.
+
+Room topology is **downstream evidence only**. Nothing in the resolver can
+see a room, an area, a label or a benchmark, and no group is accepted
+because it would close one.
+
+---
+
+## 31 · LENGTH IS NOT IMPORTANCE
+
+214.5 m of AR-00's wall-pen strokes remain `UNRESOLVED`. Ranking them by
+length and working down the list would spend a round on site hatching: a
+long stroke outside the building is worth nothing, and a 300 mm stroke in
+the aperture between two bedrooms is worth a room.
+
+So the unresolved population is ranked by **where it sits relative to
+measured separation failures** — an aperture that merges a frozen control,
+then any aperture between two labelled spaces, then a frozen control's
+frontier, then any frontier — and the tiers that have no members are
+**declared**, not quietly omitted. On AR-00 both aperture tiers are empty
+and only **7.08 m of the 214.5 m** lies at any measured separation failure
+at all. Where the partition is open, nothing is drawn there to recover.
+
+A place on that work list is **not evidence that the stroke is a wall**. It
+carries no thickness, no finish-face position, and no admission to any wall
+solid.
+
+---
+
+## 32 · A FREEZE THAT NOTHING CHECKS IS A HOPE
+
+BED-01's diagnostic result is frozen at 21.034 m². A freeze recorded only
+in a directive and a docs table is not enforced by anything, so the pin
+lives in code and is asserted on **every run**.
+
+The pin keeps two hashes, because the geometry hash changed once — at the
+Round 1.5 geometry-authority unification, when the clear-internal polygon
+was re-derived through one authority instead of two paths. **The area did
+not move.** That distinction is the whole point:
+
+```
+area unchanged, known hash      FROZEN_RESULT_HELD
+area unchanged, unknown hash    HELD_UNDER_A_RE_EXPRESSED_GEOMETRY
+                                — needs a stated reason before the
+                                  new hash joins the pin
+area changed                    FROZEN_RESULT_MOVED — refused
+control absent from the run     NOT a pass: a failure to check
+```
+
+The **area** is the invariant, because the area is the measurement. And if
+independently supported recovery ever produces a different BED-01 polygon,
+it becomes a **new geometry record with a new hash** — the frozen one is not
+mutated, and the check is not widened to accept it.
