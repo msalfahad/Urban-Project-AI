@@ -60,6 +60,7 @@ from engine import enclosure_selftest as enclosure_tests
 from engine import evidence_tiers as ev_tiers
 from engine import recall_matrix as recalls
 from engine import space_enclosure as enclosure
+from engine import space_topologies as topologies
 from engine import topology_metrics as hybrid_metrics
 from engine.dimension_check import assess as assess_dimensions
 from engine.space_objects import (MEASUREMENT_COMPLETE_DIAGNOSTIC,
@@ -141,6 +142,10 @@ from tools.wall_v2_diagnostic import (probable_wall_faces, raster_ratio,
 
 PDF = "data/golden/23010/inputs/AR-00_MAR2023.pdf"
 DOC_CACHE = "data/golden/23010/doc_read_cache"
+# How near a graded barrier must be to a candidate opening to be
+# the portal on that frontier. One pixel pitch at 300 dpi is
+# 10.8 mm; this is a locating reach, never a measurement.
+HYBRID_PORTAL_REACH_MM = 60.0
 SPACE_MAP = "data/golden/23010/inputs/space_map_23010_2f.json"
 TOPOLOGY_OVERLAY = "data/golden/23010/topology_overlay.json"
 RUN_ID = "V2"
@@ -1380,6 +1385,163 @@ def run(pdf: str = PDF) -> dict:
         },
         "RECALL_MATRIX": recall_record,
         "ROUND_3_DECISION": enclosure_decision,
+    }
+
+    # ====== THREE TOPOLOGY MODELS (Round 4) ========================
+    # A doorway means three different things and gets three answers. The
+    # region localiser may keep using ink to PROPOSE spaces; the ROOM
+    # PARTITION is answered from wall material and supported portals only,
+    # because a door leaf that closes pixels in one office and floats
+    # clear in another cannot be allowed to decide room topology.
+    _ppb = [topologies.boundary_from_portal(_b, _grade_of[_b.portal_id].grade)
+            for _b in barriers]
+    _ppb_by_portal = {b.portal_id: b for b in _ppb}
+
+    # Which portal, if any, sits on the frontier between two regions. The
+    # candidate openings give the place; the graded barriers give the
+    # evidence. An adjacency with no candidate opening is separated by a
+    # barrier too thick to be a doorway — that is material.
+    from shapely.geometry import Point as _Pt
+
+    _open_by_pair: dict = {}
+    for _o in hybrid_topology.openings:
+        _open_by_pair.setdefault(
+            tuple(sorted((_o.region_a, _o.region_b))), []).append(_o)
+
+    _pairs, _partition_of = [], {}
+    for _a in hybrid_topology.adjacencies:
+        _key = tuple(sorted((_a.region_a, _a.region_b)))
+        _here = _open_by_pair.get(_key, ())
+        _portal = None
+        for _o in _here:
+            _pt = _Pt(*_o.centroid_mm)
+            for _b in barriers:
+                _poly = _b.polygon
+                if _poly is None:
+                    continue
+                if _poly.buffer(HYBRID_PORTAL_REACH_MM).contains(_pt):
+                    _portal = _ppb_by_portal.get(_b.portal_id)
+                    break
+            if _portal is not None:
+                break
+        _material = not _here
+        _pairs.append((_a.region_a, _a.region_b, _portal, _material))
+        _row = topologies.answer_pair(_a.region_a, _a.region_b,
+                                      portal=_portal,
+                                      material_between=_material)
+        _status = _row[topologies.ROOM_PARTITION_TOPOLOGY]["status"]
+        for _r in (_a.region_a, _a.region_b):
+            _cur = _partition_of.get(_r)
+            _rank = {topologies.PARTITION_RELEASABLE: 2,
+                     topologies.PARTITION_DIAGNOSTIC: 1,
+                     topologies.PARTITION_UNRESOLVED: 0}
+            if _cur is None or _rank[_status] < _rank[_cur]:
+                _partition_of[_r] = _status
+
+    three_topology = topologies.build(
+        _pairs, boundaries=_ppb,
+        notes={"door_ink_used_as_a_boundary": 0,
+               "how_the_partition_was_decided": (
+                   "wall material where the frontier carries no candidate "
+                   "opening, and a graded PORTAL_PARTITION_BOUNDARY where "
+                   "it does. The render's ink located the frontier and "
+                   "decided nothing about it")}).record()
+
+    # Each labelled space's partition status, weakest frontier wins.
+    _partition_rows = []
+    for _x in sm["spaces"]:
+        _sid = _x["space_id"]
+        _rid = _region_of_space.get(_sid, "")
+        _partition_rows.append({
+            "space_id": _sid,
+            "in_scope": _scope.get(_sid, False),
+            "region_id": _rid,
+            "PARTITION_STATUS": (
+                _partition_of.get(_rid, topologies.PARTITION_RELEASABLE)
+                if _rid else "NO_REGION"),
+        })
+    three_topology["labelled_space_partition_status"] = {
+        "by_status": dict(Counter(
+            r["PARTITION_STATUS"] for r in _partition_rows)),
+        "by_status_in_scope": dict(Counter(
+            r["PARTITION_STATUS"] for r in _partition_rows
+            if r["in_scope"])),
+        "rows": _partition_rows,
+        "basis": ("the weakest frontier a space has. A space whose every "
+                  "frontier is material or a validated portal is "
+                  "RELEASABLE; one frontier resting on an unvalidated "
+                  "portal makes it DIAGNOSTIC; a frontier with neither "
+                  "makes it UNRESOLVED"),
+    }
+
+    # §10 — why each complete room is not release eligible, split by cause
+    # rather than hidden behind one BLOCKED.
+    _blocker_rows = []
+    for _row in recall_record["rows"]:
+        if not _row["measured_complete"]:
+            continue
+        _enc3 = _enc_by_region.get(_row["region_id"])
+        _diag_len = sum(
+            hi - lo for a, f, lo, hi, oid, src in (_enc3.edges if _enc3
+                                                   else ())
+            if src not in ("VECTOR_WALL_FACE", "VECTOR_OPENING_JAMB",
+                           "VECTOR_EXTERNAL_BOUNDARY",
+                           "RECOVERED_FRAGMENTED_VECTOR_GEOMETRY"))
+        _jambs = [oid for a, f, lo, hi, oid, src in (_enc3.edges if _enc3
+                                                     else ())
+                  if src == "VECTOR_OPENING_JAMB"]
+        _portal_block = [
+            pid for pid in {j.split("-J")[0] for j in _jambs}
+            if pid in _grade_of and not _grade_of[pid].may_release]
+        _dims = [r["verdict"] for r in hybrid_dimension_check["rows"]
+                 if str(r["subject"]).startswith(f"{_row['space_id']}/")]
+        _blocker_rows.append({
+            "space_id": _row["space_id"],
+            "in_scope": _row["in_scope"],
+            "area_m2": _row["area_m2"],
+            "vector_support_pct": _row["vector_support_pct"],
+            "production_eligible_support_pct": (
+                _enc3.production_support_pct if _enc3 else 0.0),
+            "BLOCKERS": {
+                "WALL_GEOMETRY": {
+                    "blocking": _diag_len > 0.5,
+                    "diagnostic_boundary_length_m": round(
+                        _diag_len / 1000, 3),
+                    "why": ("part of this boundary rests on DIAGNOSTIC "
+                            "vector geometry rather than established wall "
+                            "material"
+                            if _diag_len > 0.5 else
+                            "every boundary interval is established"),
+                },
+                "PORTAL_EVIDENCE": {
+                    "blocking": bool(_portal_block),
+                    "portals_not_releasable": sorted(_portal_block),
+                    "why": ("this room's boundary crosses an opening whose "
+                            "evidence grade is below the releasable one"
+                            if _portal_block else
+                            "no opening on this boundary is below grade"),
+                },
+                "IDENTITY": {
+                    "blocking": False,
+                    "why": ("exactly one labelled space lies in this "
+                            "region and its physical role is occupiable"),
+                },
+                "DOCUMENT_CONSISTENCY": {
+                    "blocking": "DISAGREE" in _dims,
+                    "verdicts": sorted(set(_dims)),
+                    "why": ("the printed dimensions agree with the "
+                            "measured extents"
+                            if "DISAGREE" not in _dims else
+                            "a printed dimension disagrees materially"),
+                },
+                "OTHER": {"blocking": False, "why": ""},
+            },
+        })
+
+    hybrid_record = {
+        **hybrid_record,
+        "THREE_TOPOLOGY_MODEL": three_topology,
+        "COMPLETE_ROOM_RELEASE_BLOCKERS": _blocker_rows,
     }
 
     # §14 — one work list per merged component, ranked by what it unlocks.

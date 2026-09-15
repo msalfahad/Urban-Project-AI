@@ -1078,3 +1078,63 @@ cavities, outside areas and fixture gaps, never claimed to be rooms.
 **Classification comes after segmentation**, so ROOM_CANDIDATE_PRECISION is
 measured among the regions that hold a label, and UNCLASSIFIED_REGION_COUNT
 is reported as a count — not as a penalty.
+
+---
+
+## 40 · A DOORWAY MEANS THREE DIFFERENT THINGS
+
+"Reopening every portal dropped topology recall from 75% to 58.3%" was not
+a tuning problem. It was the symptom of one binary portal operation being
+asked to serve three questions that have different answers:
+
+```
+MATERIAL_GEOMETRY        is there wall material across the opening?
+                         NO. Zero. Blockwork, plaster, deductions.
+ROOM_PARTITION_TOPOLOGY  are these two distinct physical spaces?
+                         YES. The doorway closes the ROOM boundary
+                         VIRTUALLY, still with zero material.
+NAVIGABLE_FREE_SPACE     can a person walk through?
+                         YES. Open. Circulation only.
+```
+
+A bedroom and its ensuite are **one opening, two rooms and one navigable
+connection simultaneously**, and a system that holds only one of those keeps
+trading it for another. Navigability may never define QS room identity:
+treating an unproven doorway as navigable and calling the result one space
+is what merged a bedroom with a bathroom.
+
+`PORTAL_PARTITION_BOUNDARY` carries the room boundary across the opening
+with `MATERIAL_PRESENT_LENGTH = 0` — not unknown, not small. It participates
+in the room partition and may never enter a wall solid or a material
+quantity.
+
+**Uncertainty makes the partition diagnostic; it never merges the rooms.** A
+gap with a portal nobody validated still separates two rooms — as
+`ROOM_PARTITION_DIAGNOSTIC`. Only a gap with no portal evidence at all is
+`ROOM_PARTITION_UNRESOLVED`, releasable as neither one space nor two.
+
+---
+
+## 41 · DRAWN DOOR INK IS EVIDENCE, NEVER A BOUNDARY
+
+A leaf, a swing arc, a threshold or a jamb symbol may support the claim that
+a portal exists. None of them may become the room's boundary because
+rasterising the sheet turned its ink into a barrier.
+
+This is the generalisation rule. One architect hatches thresholds and draws
+leaves across both jambs; another leaves the leaf floating clear. A room
+topology that depends on which is a room topology that does not travel
+between offices — and the synthetic pair
+`DOOR_LEAF_INK_THAT_TOUCHES_BOTH_JAMBS` and
+`DOOR_GRAPHICS_THAT_DO_NOT_TOUCH` assert that both produce the identical
+partition.
+
+So the render's ink may LOCATE a frontier and decides nothing about it. The
+room partition is built from wall material plus explicit graded portal
+boundaries, and `answer_pair` has nowhere for a pixel to enter: its whole
+signature is `(space_a, space_b, portal, material_between)`.
+
+Measured on AR-00 under this rule: the localiser still finds 27 of 36 spaces,
+and only **1** of them has a partition resting entirely on material or
+validated portals. That is a reduction in what may be claimed, and it is the
+honest number.
