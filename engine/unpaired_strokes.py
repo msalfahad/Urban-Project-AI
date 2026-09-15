@@ -19,12 +19,35 @@ apart from a fixture outline that was never a wall at all.
 
 from __future__ import annotations
 
-from collections import Counter
 from dataclasses import dataclass
 
 POPULATION = "UNPAIRED_WALL_STYLE_STROKE"
 
-CONFIRMED_SINGLE_LINE_WALL = "CONFIRMED_SINGLE_LINE_WALL"
+# RENAMED. "CONFIRMED_SINGLE_LINE_WALL" claimed more than the evidence
+# carries: a single vector stroke cannot establish a wall's THICKNESS, the
+# location of either finish face, or a material polygon. What the evidence
+# does support is that a separator EXISTS along that line.
+#
+#     SINGLE_LINE_WALL_EXISTENCE_SUPPORTED
+#         a lone wall-pen run, solid in the raster, with no mate anywhere
+#         on its line. Something is drawn there and it is probably a wall.
+#         It may become a TOPOLOGY_SEPARATOR_HYPOTHESIS.
+#
+#     SINGLE_LINE_WALL_GEOMETRY_COMPLETE
+#         the above PLUS an independently established thickness and both
+#         face positions. Only this may create material geometry, and
+#         nothing in this engine produces it yet.
+#
+# NEVER INVENT THE MISSING HALF.
+SINGLE_LINE_EXISTENCE_SUPPORTED = "SINGLE_LINE_WALL_EXISTENCE_SUPPORTED"
+SINGLE_LINE_GEOMETRY_COMPLETE = "SINGLE_LINE_WALL_GEOMETRY_COMPLETE"
+# The old name, kept as an alias so no caller silently reads a different
+# population, and deliberately equal to the EXISTENCE class so that any
+# code still using it gets the weaker, correct claim.
+CONFIRMED_SINGLE_LINE_WALL = SINGLE_LINE_EXISTENCE_SUPPORTED
+
+# What a supported single line may be used FOR.
+TOPOLOGY_SEPARATOR_HYPOTHESIS = "TOPOLOGY_SEPARATOR_HYPOTHESIS"
 FRAGMENTED_MATE = "FRAGMENTED_MATE"
 DIFFERENT_WALL_REPRESENTATION = "DIFFERENT_WALL_REPRESENTATION"
 FIXTURE_OR_SYMBOL = "FIXTURE_OR_SYMBOL"
@@ -33,14 +56,28 @@ DUPLICATE = "DUPLICATE"
 NON_WALL_GEOMETRY = "NON_WALL_GEOMETRY"
 STROKE_UNRESOLVED = "UNRESOLVED"
 
-CLASSES = (CONFIRMED_SINGLE_LINE_WALL, FRAGMENTED_MATE,
+CLASSES = (SINGLE_LINE_EXISTENCE_SUPPORTED, FRAGMENTED_MATE,
            DIFFERENT_WALL_REPRESENTATION, FIXTURE_OR_SYMBOL,
            ANNOTATION_OR_DETAIL, DUPLICATE, NON_WALL_GEOMETRY,
            STROKE_UNRESOLVED)
 
 # Only these classes are candidates for a missing wall worth recovering.
-WALL_LIKE_CLASSES = (CONFIRMED_SINGLE_LINE_WALL, FRAGMENTED_MATE,
+WALL_LIKE_CLASSES = (SINGLE_LINE_EXISTENCE_SUPPORTED, FRAGMENTED_MATE,
                      DIFFERENT_WALL_REPRESENTATION)
+
+# Classes that support a separator's EXISTENCE without establishing its
+# geometry. These may generate a topology hypothesis and may never become
+# material.
+EXISTENCE_ONLY_CLASSES = (SINGLE_LINE_EXISTENCE_SUPPORTED,)
+
+# What it takes to move from existence to geometry. None of these is
+# produced by this engine yet, which is why the geometry class is empty.
+GEOMETRY_REQUIREMENTS = (
+    "an independently established wall THICKNESS for this line — from a "
+    "printed dimension, a CAD entity, a wall schedule or a human decision",
+    "the position of BOTH finish faces, not one face and an assumption",
+    "a stated measurement basis for the resulting polygon",
+)
 
 # A stroke this short is a detail mark, whatever pen drew it: no wall in a
 # villa is 150 mm long.
@@ -52,6 +89,22 @@ DUPLICATE_TOL_MM = 2.0
 FRAGMENT_REACH_MM = 60.0
 # Raster support below this means nothing solid is drawn there at all.
 MIN_RASTER_SUPPORT = 0.5
+# A parallel face closer than this on a nearby line is a candidate MATE, so
+# the run is not single-line at all — whatever the band engine did with the
+# pair. The old test asked only for collinear neighbours on the SAME line
+# and so never looked for the mate a single-line wall is defined by not
+# having.
+PARALLEL_FACE_REACH_MM = 500.0
+# A single vector run this long is not a room's wall on a villa floor: it is
+# a grid line, a section marker or a sheet border. The blind sample found a
+# 50 m stroke classified as a single-line wall.
+MAX_WALL_RUN_MM = 30_000.0
+# A WALL IS PART OF A WALL NETWORK. A partition runs between other walls and
+# something meets it at each end; a sheet border, a grid line and a section
+# marker meet nothing. This is what finally separated the two 29 m frame
+# lines at the top and bottom of the sheet from the building's geometry —
+# and it is evidence about the drawing, not a length chosen to exclude them.
+NETWORK_REACH_MM = 300.0
 
 
 @dataclass(frozen=True)
@@ -145,9 +198,49 @@ def classify(faces, bands, *, raster_support=None, wall_pen: float | None = None
         if peers:
             ev.append("COLLINEAR_NEIGHBOURS_ON_THIS_LINE")
 
+        # The nearest PARALLEL face on a different line whose run overlaps
+        # this one: the mate a single-line wall is defined by not having.
+        par = None
+        for g in faces:
+            if g is f or g.axis != f.axis:
+                continue
+            d = abs(g.fixed_mm - f.fixed_mm)
+            if d < 1e-6:
+                continue
+            g_lo = min(g.start_mm, g.end_mm)
+            g_hi = max(g.start_mm, g.end_mm)
+            if g_hi < lo or g_lo > hi:
+                continue
+            if par is None or d < par:
+                par = d
+        if par is not None and par <= PARALLEL_FACE_REACH_MM:
+            ev.append(f"A_PARALLEL_FACE_LIES_{par:.0f}_MM_AWAY")
+        pen_match = (None if wall_pen is None else
+                     abs((f.stroke_width_pt or 0.0) - wall_pen) < 1e-6)
+        # Does anything MEET this run? A perpendicular face crossing it, or
+        # a band ending at it. A wall is part of a wall network.
+        meets = 0
+        for g in faces:
+            if g is f:
+                continue
+            if g.axis == f.axis:
+                continue
+            g_lo = min(g.start_mm, g.end_mm)
+            g_hi = max(g.start_mm, g.end_mm)
+            if (g_lo - NETWORK_REACH_MM <= f.fixed_mm
+                    <= g_hi + NETWORK_REACH_MM
+                    and lo - NETWORK_REACH_MM <= g.fixed_mm
+                    <= hi + NETWORK_REACH_MM):
+                meets += 1
+                if meets >= 2:
+                    break
+        if meets:
+            ev.append(f"{meets}_PERPENDICULAR_FACE_S_MEET_THIS_RUN")
+
         cls, why = _classify_one(
             length=length, dup=dup, near_gap=near_gap, support=support,
-            peers=len(peers))
+            peers=len(peers), pen_match=pen_match,
+            pen_pt=f.stroke_width_pt, parallel_mm=par, meets=meets)
         out.append(UnpairedStroke(
             stroke_id=getattr(f, "segment_id", "") or getattr(f, "face_id", ""),
             axis=f.axis, fixed_mm=f.fixed_mm, start_mm=lo, end_mm=hi,
@@ -159,9 +252,18 @@ def classify(faces, bands, *, raster_support=None, wall_pen: float | None = None
     return out
 
 
-def _classify_one(*, length: float, dup: bool, near_gap, support, peers: int
+def _classify_one(*, length: float, dup: bool, near_gap, support, peers: int,
+                  pen_match: bool | None = None, pen_pt=None,
+                  parallel_mm=None, meets: int | None = None
                   ) -> tuple[str, str]:
-    """The decision, in the order the evidence actually settles it."""
+    """The decision, in the order the evidence actually settles it.
+
+    Two requirements were missing and a blind sample of the population
+    exposed both. Of 434.8 m once called CONFIRMED_SINGLE_LINE_WALL, only
+    155.6 m was drawn with this drawing's wall pen, and several members had
+    a parallel face 40-250 mm away — which is the one thing a single-line
+    wall is defined by not having.
+    """
     if dup:
         return DUPLICATE, (
             "another stroke on this line has the same extent: one mark found "
@@ -179,12 +281,40 @@ def _classify_one(*, length: float, dup: bool, near_gap, support, peers: int
         return NON_WALL_GEOMETRY, (
             f"raster support {support:.2f}: nothing solid is drawn along this "
             "line, so the stroke outlines something other than masonry")
+    if length > MAX_WALL_RUN_MM:
+        return ANNOTATION_OR_DETAIL, (
+            f"{length / 1000:.1f} m as ONE unbroken run. No wall on a villa "
+            "floor is drawn that way: this is a grid line, a section marker "
+            "or a sheet border")
+    if parallel_mm is not None and parallel_mm <= PARALLEL_FACE_REACH_MM:
+        return STROKE_UNRESOLVED, (
+            f"a parallel face lies {parallel_mm:.0f} mm away along this run, "
+            "so this is not a single-line wall — it is one side of a "
+            "candidate PAIR the band engine did not accept. Why it did not "
+            "is a pairing question, and guessing the answer here would put "
+            "the stroke in the wrong population")
+    if pen_match is False:
+        return STROKE_UNRESOLVED, (
+            f"drawn at {pen_pt} pt, and this drawing's wall pen is not that. "
+            "A mark in a different pen may still be a wall in some "
+            "conventions, so this is UNRESOLVED and not non-wall — but it "
+            "does not support the EXISTENCE of a wall on its own")
+    if meets == 0:
+        return NON_WALL_GEOMETRY, (
+            f"a {length / 1000:.1f} m run that NOTHING meets: no wall face "
+            "and no accepted band terminates at it or crosses it anywhere "
+            "along its length. A wall is part of a wall network — a "
+            "partition runs between other walls. This is a sheet border, a "
+            "grid line or a section marker")
     if support is not None and support >= MIN_RASTER_SUPPORT and peers == 0:
-        return CONFIRMED_SINGLE_LINE_WALL, (
+        return SINGLE_LINE_EXISTENCE_SUPPORTED, (
             f"a lone run of {length:.0f} mm with raster support "
             f"{support:.2f} and no mate anywhere on its line: drawn as ONE "
-            "line and solid on the sheet. This is the class the band engine "
-            "cannot express")
+            "line and solid on the sheet. That supports the EXISTENCE of a "
+            "separator along this line and nothing more — a single stroke "
+            "establishes no thickness and no finish-face position, so this "
+            "may become a TOPOLOGY_SEPARATOR_HYPOTHESIS and may NOT create "
+            "material geometry")
     if peers >= 2:
         return FIXTURE_OR_SYMBOL, (
             f"{peers} other strokes share this line: a fixture outline, a "
@@ -218,6 +348,36 @@ def summary(strokes) -> dict:
             sum(s.length_mm for s in wall_like) / 1000, 1),
         "unresolved": sum(1 for s in strokes
                           if s.stroke_class == STROKE_UNRESOLVED),
+        # THREE groups, kept apart. An earlier report added them together
+        # and called the sum "never a wall", which silently converted
+        # UNRESOLVED from unknown into false. Unknown is not a verdict.
+        "not_wall_like_length_m": {
+            "classified_non_wall": round(sum(
+                s.length_mm for s in strokes
+                if s.stroke_class in (FIXTURE_OR_SYMBOL,
+                                      ANNOTATION_OR_DETAIL,
+                                      NON_WALL_GEOMETRY)) / 1000, 1),
+            "duplicate": round(sum(
+                s.length_mm for s in strokes
+                if s.stroke_class == DUPLICATE) / 1000, 1),
+            "unresolved": round(sum(
+                s.length_mm for s in strokes
+                if s.stroke_class == STROKE_UNRESOLVED) / 1000, 1),
+        },
+        "what_each_group_means": {
+            "classified_non_wall": (
+                "evidence says this mark outlines something that is not "
+                "masonry"),
+            "duplicate": (
+                "one mark found twice. NOT a statement that it is not a "
+                "wall — it is a statement that it is not an ADDITIONAL "
+                "wall"),
+            "unresolved": (
+                "not enough evidence to classify. This length is NOT proven "
+                "non-wall and must never be added to the non-wall total. It "
+                "sits in neither the wall-like nor the non-wall figure on "
+                "purpose"),
+        },
         "note": ("classified on evidence. Pen weight alone says a mark was "
                  "drawn with the wall pen and nothing about whether it is a "
                  "wall — and only the wall-like classes are candidates for "

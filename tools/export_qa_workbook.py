@@ -714,6 +714,9 @@ def bundle(space_map_path: Path = DEFAULT_SPACE_MAP,
             if row.get("space_geometry_id")},
         "barrier_release": _r.get("portal_partition_barriers", {}).get(
             "release_policy"),
+        # §16 — the workbook must expose the two truths separately.
+        "space_geometry_recall": _r.get("space_geometry_recall"),
+        "geometry_source": "DIAGNOSTIC_AUGMENTED",
         "space_leaks": (
             _r.get("space_leak_maps", {}).get("top_ranked", ())
             + _r.get("space_leak_maps", {}).get("hairline_junction_gaps", ())),

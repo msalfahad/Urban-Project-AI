@@ -36,12 +36,26 @@ CAUSES = (CAUSE_WALL_BASIS, CAUSE_DOORWAY, CAUSE_QUANTISATION,
           CAUSE_FIXTURE, CAUSE_VECTOR_LEAK, CAUSE_RASTER_OVERREACH,
           CAUSE_UNEXPLAINED)
 
-# Causes that are the REFERENCE's error, not the engine's. Naming them is the
-# point: a disagreement driven by where the segmentation put its boundary is
-# not evidence that the measurement is wrong.
+# Which SIDE each cause explains the disagreement from. This is spatial
+# attribution, not adjudication.
+#
+# The earlier wording said "100% of the disagreement is THE REFERENCE'S",
+# which asserts the vector result is right and the raster reference is
+# wrong. Nothing here establishes that. There is no independent ground
+# truth on this project — the sealed site benchmark is not opened — so what
+# can be said is WHERE every square metre of disagreement comes from and
+# WHICH side's construction explains it. Who is correct is a separate
+# question that no available source can settle.
 REFERENCE_SIDE_CAUSES = (CAUSE_WALL_BASIS, CAUSE_QUANTISATION,
                          CAUSE_FIXTURE, CAUSE_RASTER_OVERREACH)
 ENGINE_SIDE_CAUSES = (CAUSE_VECTOR_LEAK,)
+
+ATTR_REFERENCE_SIDE = "EXPLAINED_BY_THE_REFERENCE_S_CONSTRUCTION"
+ATTR_ENGINE_SIDE = "EXPLAINED_BY_THE_ENGINE_S_CONSTRUCTION"
+ATTR_NONE = "NOT_ATTRIBUTED"
+
+NOT_ADJUDICATED = (
+    "CORRECTNESS_NOT_YET_ADJUDICATED_BY_AN_INDEPENDENT_SOURCE")
 
 # A piece smaller than this is not a finding. One square centimetre.
 MIN_PIECE_MM2 = 10_000.0
@@ -83,17 +97,23 @@ class Piece:
     why: str = ""
 
     @property
-    def blame(self) -> str:
+    def attributed_to(self) -> str:
+        """Which side's CONSTRUCTION explains this piece. Not a verdict."""
         if self.cause in REFERENCE_SIDE_CAUSES:
-            return "THE_REFERENCE"
+            return ATTR_REFERENCE_SIDE
         if self.cause in ENGINE_SIDE_CAUSES:
-            return "THE_ENGINE"
-        return "NOT_ATTRIBUTED"
+            return ATTR_ENGINE_SIDE
+        return ATTR_NONE
+
+    @property
+    def blame(self) -> str:
+        """Deprecated alias. Attribution is not blame."""
+        return self.attributed_to
 
     def record(self) -> dict:
         return {"piece_id": self.piece_id, "side": self.side,
                 "area_m2": round(self.area_m2, 4),
-                "cause": self.cause, "blame": self.blame,
+                "cause": self.cause, "attributed_to": self.attributed_to,
                 "max_width_mm": round(self.max_width_mm, 1),
                 "share_inside_wall_solid": round(
                     self.share_inside_wall_solid, 3),
@@ -130,9 +150,12 @@ class DisagreementMap:
             d = by_cause.setdefault(p.cause, {"pieces": 0, "area_m2": 0.0})
             d["pieces"] += 1
             d["area_m2"] = round(d["area_m2"] + p.area_m2, 4)
-        blamed: dict = {}
+        attributed: dict = {}
         for p in self.pieces:
-            blamed[p.blame] = round(blamed.get(p.blame, 0.0) + p.area_m2, 4)
+            attributed[p.attributed_to] = round(
+                attributed.get(p.attributed_to, 0.0) + p.area_m2, 4)
+        total = sum(p.area_m2 for p in self.pieces)
+        unattributed = attributed.get(ATTR_NONE, 0.0)
         return {
             "space_id": self.space_id,
             "vector_area_m2": round(self.vector_area_m2, 4),
@@ -149,7 +172,21 @@ class DisagreementMap:
                 if p.side == "RASTER_ONLY"), 4),
             "by_cause": dict(sorted(by_cause.items(),
                                     key=lambda kv: -kv[1]["area_m2"])),
-            "disagreement_area_by_blame": blamed,
+            "disagreement_area_by_attribution": attributed,
+            "spatially_attributed_pct": (
+                None if total <= 0.0 else
+                round(100.0 * (total - unattributed) / total, 2)),
+            "adjudication": NOT_ADJUDICATED,
+            "what_attribution_is_and_is_not": (
+                "every square metre of disagreement is placed and given the "
+                "construction that explains it. That is NOT a finding that "
+                "one side is right: there is no independent ground truth on "
+                "this project, the sealed site benchmark is not opened, and "
+                "a vector polygon agreeing with itself proves nothing"),
+            "the_control_remains_frozen": (
+                "this comparison ran after the polygon's hash was taken, "
+                "nothing here corrects the geometry, and no tuning followed "
+                "from it"),
             "pieces": [p.record() for p in sorted(
                 self.pieces, key=lambda p: -p.area_m2)][:40],
             "minimum_piece_mm2": MIN_PIECE_MM2,
@@ -359,8 +396,8 @@ def _cause(*, side: str, area: float, width: float, in_wall: float,
             f"{other_share * 100:.0f}% of this {area / 1e6:.4f} m2 lies "
             f"inside the raster region(s) for {named}{more}. The vector "
             "space reached past separators that are missing from the wall "
-            "solid, so this piece belongs to other rooms. THIS ONE IS THE "
-            "ENGINE")
+            "solid, so this piece is explained by the ENGINE's construction "
+            "rather than the reference's")
     if in_a_raster_hole and in_wall < IN_WALL_SHARE:
         return CAUSE_FIXTURE, (
             f"{area / 1e6:.4f} m2 inside the raster region's outer ring and "
@@ -373,8 +410,9 @@ def _cause(*, side: str, area: float, width: float, in_wall: float,
             f"{in_wall * 100:.0f}% of this {area / 1e6:.4f} m2 lies INSIDE "
             "the wall solid. The two shapes are on different measurement "
             "bases: the vector polygon stops at the clear internal finish "
-            "face, the segmentation boundary sits within the masonry. That "
-            "is the reference's basis, not an engine error")
+            "face, the segmentation boundary sits within the masonry. The two "
+            "are measuring different quantities; which is correct here is "
+            "not adjudicated")
     if near_wall and width <= max_wall_mm:
         return CAUSE_WALL_BASIS, (
             f"a {width:.0f} mm strip against the wall solid, "

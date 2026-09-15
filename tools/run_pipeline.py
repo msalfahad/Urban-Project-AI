@@ -28,7 +28,21 @@ from engine.free_space import (OCCUPIABLE_SPACE_CANDIDATE,
                                envelope_from_wall_solid, partition_barriers)
 from engine.disagreement_map import build as build_disagreement
 from engine.disagreement_map import polygon_from_mask
+from engine.counterfactual import RUN_A, RUN_B
+from engine.counterfactual import compare as compare_arms
+from engine.counterfactual import observe as observe_arm
+from engine.free_space import RELEASABLE_PARTITION_BARRIER as \
+    RELEASABLE_BARRIER
 from engine.free_space import release_policy
+from engine.blob_causes import build as build_blob_causes
+from engine.junction_patch import propose as propose_patch
+from engine.junction_patch import summary as patch_summary
+from engine.wall_authority import DIAGNOSTIC as DIAGNOSTIC_SOLID
+from engine.wall_authority import ESTABLISHED as ESTABLISHED_SOLID
+from engine.wall_authority import build as build_authority_solid
+from engine.wall_authority import classify_intervals as classify_admissions
+from engine.wall_authority import compare as compare_solids
+from engine.wall_authority import unestablished_dependency
 from engine.reference_mapping import ReferenceRow, refuse_if_sealed
 from engine.reference_mapping import resolve as resolve_references
 from engine.free_space_invariants import falsify as falsify_free
@@ -39,6 +53,10 @@ from engine.unpaired_strokes import summary as stroke_summary
 from engine.interval_fidelity import audit as interval_audit
 from engine.snap_tolerance import compare_to_the_grid_in_use as compare_snap
 from engine.snap_tolerance import measure as measure_snap
+from engine.snap_topology import diff as snap_diff
+from engine.space_recall import assess as assess_recall
+from engine.stroke_sample import draw as draw_sample
+from engine.unpaired_strokes import SINGLE_LINE_EXISTENCE_SUPPORTED
 from engine.planar import build_half_edges
 from engine.planar_falsifiers import falsify
 from engine.source_audit import audit_drawing, cad_oracle
@@ -555,9 +573,20 @@ def run(pdf: str = PDF) -> dict:
     # §11 — the snap grid, measured on THIS drawing's coordinates.
     snap_evidence = measure_snap([w.ring for w in wall_polys
                                   if w.is_resolved])
+    # §7 — production uses the MEASURED tolerance. A larger global snap is
+    # not proven safe by a small area change: it can alter connectivity,
+    # and physical junctions are repaired by JUNCTION_PATCH instead.
+    measured_grid = (snap_evidence.recommended_grid_mm
+                     if snap_evidence.is_usable else 0.0)
     snap_audit = {
         **snap_evidence.record(),
         "grid_actually_used": compare_snap(snap_evidence, solid.snap_grid_mm),
+        "grid_used_for_the_established_solid_mm": measured_grid,
+        "why_the_measured_grid_for_production": (
+            "topology, not area, decides whether a tolerance is safe. A "
+            "microscopic change can still create a connection, so the "
+            "established solid is built on the measured noise floor and "
+            "physical junctions are closed by an explicit JUNCTION_PATCH"),
     }
 
     # §13 — the replacement spine is SIX stages, and the manifest says so.
@@ -657,7 +686,8 @@ def run(pdf: str = PDF) -> dict:
     audit = audit_drawing(drawing, drawing_id=sm["drawing_id"],
                           revision=sm["drawing_revision"],
                           source_hash=src_hash, bands=bands,
-                          rejections=rejections, unpaired_strokes=strokes)
+                          rejections=rejections, unpaired_strokes=strokes,
+                          faces=faces)
     man.add("source_audit", RUN_ID, audit.record(),
             consumed=[("wall_extraction", w_rec.output_hash),
                       ("space_resolution_run", sr_rec.output_hash)])
@@ -747,6 +777,148 @@ def run(pdf: str = PDF) -> dict:
 
     # §5 — which spaces rest on a barrier that may not release a quantity.
     barrier_release = release_policy(barriers, free_cands)
+
+    # --- CONSERVATIVE GEOMETRY TRUTH -----------------------------------
+    # §5 — a junction is closed by EVIDENCE or not at all. Every refused
+    # gap still names the repair it actually needs.
+    patches = [propose_patch(
+        {"axis": lk.frontier_axis, "fixed_mm": lk.frontier_fixed_mm,
+         "along_mm": lk.frontier_along_mm,
+         "passage_width_mm": lk.passage_width_mm,
+         "leak_id": lk.leak_id, "located_by": lk.localiser},
+        bands, wall_polys=wall_polys, caps=caps, raster_support=support,
+        strokes=strokes, max_wall_thickness_mm=thickest,
+        drawing_id=sm["drawing_id"], revision=sm["drawing_revision"],
+        patch_id=f"JP-{i:04d}")
+        for i, lk in enumerate(sorted(
+            (x for x in leaks if x.hairline_junction_gap),
+            key=lambda x: x.passage_width_mm), 1)]
+    validated_patches = [p for p in patches if p.is_validated]
+
+    # §3 / §4 — per-interval admission, then the two solids. The
+    # unestablished extensions never enter the established one.
+    authority = classify_admissions(wall_polys, patches=patches)
+    established_solid = build_authority_solid(
+        wall_polys, patches=validated_patches, solid=ESTABLISHED_SOLID,
+        report=authority, snap_grid_mm=measured_grid)
+    diagnostic_solid = build_authority_solid(
+        wall_polys, patches=patches, solid=DIAGNOSTIC_SOLID,
+        report=authority, snap_grid_mm=measured_grid)
+    solid_comparison = compare_solids(established_solid, diagnostic_solid)
+
+    # §13 — two free spaces. RELEASE uses the established solid and only
+    # release-eligible barriers; DIAGNOSTIC uses the augmented solid and
+    # every accepted barrier. The pair is the honest picture of what we
+    # KNOW against what we can plausibly hypothesise.
+    releasable_barriers = [b for b in barriers
+                           if b.release_class == RELEASABLE_BARRIER]
+    _arm = dict(wall_polys=wall_polys, portals=all_portals,
+                regions=regions, contains=_holds, controls=tuple(CONTROLS))
+    release_arm = observe_arm("RELEASE_FREE_SPACE", established_solid,
+                              barriers=releasable_barriers, run_id="REL",
+                              **_arm)
+    diagnostic_arm = observe_arm("DIAGNOSTIC_FREE_SPACE", diagnostic_solid,
+                                 barriers=barriers, run_id="DIA", **_arm)
+
+    # §6 — the counterfactual. Same established solid; the ONLY difference
+    # is the validated junction patches.
+    counterfactual = compare_arms(
+        observe_arm(RUN_A, build_authority_solid(
+            wall_polys, patches=[], solid=ESTABLISHED_SOLID,
+            report=classify_admissions(wall_polys, patches=[]),
+            snap_grid_mm=measured_grid),
+            barriers=barriers, run_id="CFA", **_arm),
+        observe_arm(RUN_B, build_authority_solid(
+            wall_polys, patches=validated_patches, solid=ESTABLISHED_SOLID,
+            report=classify_admissions(wall_polys,
+                                       patches=validated_patches),
+            snap_grid_mm=measured_grid),
+            barriers=barriers, run_id="CFB", **_arm),
+        repairs=[p.patch_id for p in validated_patches])
+
+    # §11 — the release audit. DIAGNOSTIC_GEOMETRY_ACCEPTED and
+    # PRODUCTION_GEOMETRY_RELEASED are different verdicts: a room whose
+    # partition needs a merely diagnostic portal, or whose boundary rests on
+    # unestablished wall material, cannot become production geometry
+    # because the resulting polygon happens to be valid.
+    by_release = {r["space_geometry_id"]: r
+                  for r in barrier_release["space_geometries"]}
+    control_release_audit = []
+    for f in frozen:
+        holder = next((c for c in free_cands
+                       if f.space_id in labels_in.get(c.space_geometry_id,
+                                                      ())), None)
+        dep = (unestablished_dependency(holder, authority.admissions,
+                                        wall_polys)
+               if holder is not None else
+               {"depends_on_unestablished_material": None,
+                "why": "no free-space component holds this control"})
+        rel = by_release.get(
+            getattr(holder, "space_geometry_id", ""), {})
+        labels_here = labels_in.get(
+            getattr(holder, "space_geometry_id", ""), ())
+        blockers = []
+        if holder is None:
+            blockers.append("no free-space component holds this control")
+        if dep.get("depends_on_unestablished_material"):
+            blockers.append(
+                f"its boundary rests on "
+                f"{dep['unestablished_boundary_length_m']} m of wall "
+                "material whose physical presence is NOT established")
+        if rel.get("release_class") == "DIAGNOSTIC_PARTITION_BARRIER":
+            blockers.append(
+                "its partition depends on a barrier whose portal existence "
+                "is not validated: "
+                + ", ".join(rel.get("barriers_that_cannot_release", ())))
+        if len(labels_here) > 1:
+            blockers.append(
+                f"the component holding it also holds {len(labels_here) - 1} "
+                "other labelled space(s), so it is not this room's polygon")
+        control_release_audit.append({
+            "space_id": f.space_id,
+            "space_geometry_id": getattr(holder, "space_geometry_id", ""),
+            "frozen_area_m2": f.area_m2,
+            "geometry_hash": f.geometry_hash,
+            "DIAGNOSTIC_GEOMETRY_ACCEPTED": (
+                f.status == "GEOMETRY_ACCEPTED_AND_FROZEN"),
+            "PRODUCTION_GEOMETRY_RELEASED": not blockers,
+            "release_blockers": blockers,
+            "unestablished_wall_dependency": dep,
+            "barrier_release_class": rel.get("release_class"),
+            "why": ("every boundary contributor satisfies production-level "
+                    "evidence" if not blockers else
+                    "; ".join(blockers)),
+        })
+
+    # §7 — topology, not area, decides whether a coarser grid is safe.
+    from shapely.geometry import Polygon
+    snap_topology = snap_diff(
+        [Polygon(list(w.ring)) for w in wall_polys if w.is_resolved],
+        fine_mm=measured_grid or 0.01, coarse_mm=NODE_SNAP_GRID_MM,
+        noise_floor_mm=snap_evidence.recommended_grid_mm,
+        patches=validated_patches).record()
+
+    # §9 — a deterministic BLIND sample of the single-line population, with
+    # each member's raw evidence and no verdict.
+    single_line_sample = draw_sample(
+        strokes, population_class=SINGLE_LINE_EXISTENCE_SUPPORTED,
+        bands=bands, faces=faces, regions=regions,
+        seed=f"{sm['drawing_id']}-{sm['drawing_revision']}").record()
+
+    # §12 — two recalls. A hypothesis must not inflate the production one.
+    in_scope = sum(1 for s in sm.get("spaces", ())
+                   if s.get("scope") == "IN_SCOPE")
+    recall = assess_recall(
+        free_cands, labels_inside=labels_in, in_scope_spaces=in_scope,
+        dependency_of=lambda c: unestablished_dependency(
+            c, authority.admissions, wall_polys),
+        release_of=lambda c: by_release.get(c.space_geometry_id, {})
+    ).record()
+
+    # §14 — one work list per merged component, ranked by what it unlocks.
+    blob_table = build_blob_causes(
+        leaks, labels_inside=labels_in, patches=patches, strokes=strokes,
+        controls=CONTROLS, counterfactual=counterfactual).record()
 
     # §7 — other references may be opened AFTER the freeze, and only where
     # the mapping and the basis are both unambiguous. On this project the
@@ -962,6 +1134,37 @@ def run(pdf: str = PDF) -> dict:
         "wall_polygon_interval_fidelity": fidelity,
         # §11 — a measured tolerance, and the constant it audits.
         "numerical_snap_tolerance": snap_audit,
+        # §3 / §4 — two wall solids, and what the hypothesis adds.
+        "wall_authority": {
+            **authority.record(),
+            "solid_comparison": solid_comparison,
+        },
+        # §5 — junctions closed by evidence, never by a tolerance.
+        "junction_patches": patch_summary(patches),
+        # §7 — every connection the coarser grid creates, classified.
+        "snap_grid_topology_diff": snap_topology,
+        # §9 — the blind sample of the single-line population.
+        "single_line_wall_blind_sample": single_line_sample,
+        # §12 — diagnostic recall beside release-eligible recall.
+        "space_geometry_recall": recall,
+        # §14 — the ranked work list for the merged components.
+        "merged_component_causes": blob_table,
+        # §6 — and the proof that the named repairs are or are not causal.
+        "junction_patch_counterfactual": counterfactual,
+        # §13 — what we KNOW against what we can plausibly hypothesise.
+        "release_vs_diagnostic_free_space": {
+            "release": release_arm.record(),
+            "diagnostic": diagnostic_arm.record(),
+            "release_eligible_barriers": len(releasable_barriers),
+            "accepted_barriers": len([
+                b for b in barriers if b.status == "BARRIER_ACCEPTED"]),
+            "what_the_pair_shows": (
+                "the RELEASE arm is built only from material whose physical "
+                "presence is established and barriers whose portals are "
+                "validated. The DIAGNOSTIC arm adds every hypothesis. A "
+                "space that appears only in the diagnostic arm exists "
+                "because a hypothesis was treated as fact"),
+        },
         "raster_vector_topology": topo_compare,
         # §8 / §9 — where the merged components actually leaked.
         "space_leak_maps": leaks_rec,
@@ -986,6 +1189,9 @@ def run(pdf: str = PDF) -> dict:
             "disagreement_maps": disagreements,
             # §7 — which other references may be opened at all.
             "reference_mapping": reference_mapping,
+            # §11 — diagnostic acceptance and production release are two
+            # different verdicts, and a valid polygon earns only the first.
+            "release_audit": control_release_audit,
         },
         "source_audit": audit.record(),
         "tolerance_sensitivity": sensitivity,

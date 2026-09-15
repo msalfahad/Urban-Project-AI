@@ -11,6 +11,8 @@ is actually open.
 import pytest
 
 from engine import leak_map as lm
+from engine.unpaired_strokes import (FRAGMENTED_MATE,
+                                     SINGLE_LINE_EXISTENCE_SUPPORTED)
 
 
 # --- intervals: coverage is a union, and a gap is a gap -------------------
@@ -100,7 +102,7 @@ def test_the_cause_is_read_at_the_aperture_not_anywhere_on_the_frontier():
     lk = _leak(_frontier(),
                bands=[_Band("WB-1", "H", 1000.0, 0.0, 4000.0)],
                strokes=[_Stroke("VS-1", "H", 1000.0, 100.0, 900.0,
-                                "CONFIRMED_SINGLE_LINE_WALL")])
+                                SINGLE_LINE_EXISTENCE_SUPPORTED)])
     assert lk.cause == lm.NO_VECTOR_SEPARATOR
     assert lk.strokes_at_aperture == ()
     # The stroke is still reported as being on the frontier: it is real.
@@ -111,7 +113,7 @@ def test_a_stroke_in_the_aperture_does_explain_the_leak():
     lk = _leak(_frontier(),
                bands=[_Band("WB-1", "H", 1000.0, 0.0, 4000.0)],
                strokes=[_Stroke("VS-1", "H", 1000.0, 4200.0, 5800.0,
-                                "CONFIRMED_SINGLE_LINE_WALL")])
+                                SINGLE_LINE_EXISTENCE_SUPPORTED)])
     assert lk.cause == lm.SINGLE_LINE_WALL_CANDIDATE
     assert lk.strokes_at_aperture == ("VS-1",)
 

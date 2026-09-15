@@ -862,6 +862,20 @@ def path_comparison(old: dict | None, new: dict | None,
 DASHBOARD_COLUMNS = ("section", "measure", "value", "note")
 
 
+def _recall_cell(bundle: dict, key: str):
+    """One of the two recall figures, as "n / m", or empty if not supplied."""
+    got = (bundle.get("space_geometry_recall") or {}).get(key)
+    if not got:
+        return None
+    n = (got.get("spaces_with_their_own_polygon")
+         if "spaces_with_their_own_polygon" in got
+         else got.get("spaces_with_a_releasable_polygon"))
+    total = got.get("in_scope_spaces")
+    if n is None or not total:
+        return None
+    return f"{n} / {total}"
+
+
 def dashboard(bundle: dict, sheets: dict) -> Sheet:
     """The page that must be understandable in under a minute.
 
@@ -916,6 +930,19 @@ def dashboard(bundle: dict, sheets: dict) -> Sheet:
         row("STATUS", "GEOMETRY_MECHANISM_PROVEN",
             status.get("GEOMETRY_MECHANISM_PROVEN"),
             status.get("mechanism_reason", "")),
+        # TWO recalls. A diagnostic hypothesis must not inflate the
+        # production figure, and one number cannot hold both.
+        row("STATUS", "DIAGNOSTIC_SPACE_RECALL",
+            _recall_cell(bundle, "DIAGNOSTIC_SPACE_GEOMETRY_RECALL"),
+            "Rooms the engine can produce a plausible polygon for. Says "
+            "how much of the floor is within reach, not how much is "
+            "measured."),
+        row("STATUS", "RELEASE_ELIGIBLE_SPACE_RECALL",
+            _recall_cell(bundle, "RELEASE_ELIGIBLE_SPACE_GEOMETRY_RECALL"),
+            "Rooms every boundary contributor of which satisfies "
+            "production-level evidence: established wall material, "
+            "releasable portal geometry, a validated basis, one label "
+            "inside. This is the number a quantity may be built on."),
         row("STATUS", "PROJECT_SPACE_RECALL",
             status.get("PROJECT_SPACE_RECALL"),
             status.get("recall_reason", "")),
@@ -1252,8 +1279,11 @@ def wall_extraction_qa(bands=(), rejections=(), sides=()) -> Sheet:
 # before the areas on purpose: a reader should know whether a figure may be
 # used before they read it.
 FREE_SPACE_COLUMNS = (
-    "space_geometry_id", "geometry_role", "geometry_status",
-    "measurement_basis", "releasable", "barrier_release_class",
+    "space_geometry_id", "geometry_source", "release_eligible",
+    "geometry_role", "geometry_status",
+    "measurement_basis", "portal_minimum_status",
+    "unestablished_wall_dependency_m", "releasable",
+    "barrier_release_class",
     "clear_internal_area_m2", "clear_internal_perimeter_m",
     "labelled_rooms_inside", "labelled_room_ids",
     "bounding_wall_bands", "bounding_portals",
@@ -1263,8 +1293,15 @@ FREE_SPACE_COLUMNS = (
     "blockers", "provenance", "notes")
 
 
+# Which solid a polygon came from. A polygon built on hypothesis material
+# is not production-ready however valid it is.
+SOURCE_ESTABLISHED = "ESTABLISHED"
+SOURCE_DIAGNOSTIC = "DIAGNOSTIC_AUGMENTED"
+
+
 def free_space_qa(candidates=(), labels_inside=None, release=None,
-                  leaks=()) -> Sheet:
+                  leaks=(), recall=None,
+                  geometry_source=SOURCE_DIAGNOSTIC) -> Sheet:
     """The geometry authority's own output, with its release state beside it.
 
     This sheet and the Topology QA sheet both carry areas, and until now
@@ -1284,11 +1321,21 @@ def free_space_qa(candidates=(), labels_inside=None, release=None,
     for lk in leaks:
         leaks_by_geom.setdefault(lk.get("space_geometry_id"), []).append(lk)
 
+    elig = {r["space_geometry_id"]: r
+            for r in (recall or {}).get("single_label_but_blocked", ())}
     rows = []
     for c in candidates:
         gid = c.get("space_geometry_id")
         ids = tuple(inside.get(gid, ()))
         rel = by_geom.get(gid, {})
+        blocked = elig.get(gid)
+        dep_m = (blocked or {}).get("unestablished_boundary_m", 0.0)
+        # Release-eligible only where EVERY boundary contributor satisfies
+        # production-level evidence. A single-label component that is
+        # blocked appears in the recall report; one that is not blocked and
+        # holds one label is eligible.
+        eligible = (len(ids) == 1 and blocked is None
+                    and recall is not None)
         mine = leaks_by_geom.get(gid, [])
         widest = max([lk.get("passage_width_mm") or 0.0 for lk in mine]
                      or [0.0])
@@ -1296,9 +1343,16 @@ def free_space_qa(candidates=(), labels_inside=None, release=None,
                         if lk.get("hairline_junction_gap"))
         rows.append(OrderedDict(
             space_geometry_id=gid,
+            geometry_source=geometry_source,
+            release_eligible=eligible,
             geometry_role=cell(c.get("geometry_role")),
             geometry_status=cell(c.get("geometry_status")),
             measurement_basis=cell(c.get("measurement_basis")),
+            portal_minimum_status=cell(
+                rel.get("release_class")
+                or ("NO_BARRIER_BOUNDS_THIS_COMPONENT"
+                    if release is not None else None)),
+            unestablished_wall_dependency_m=cell(dep_m or None),
             releasable=c.get("releasable", False),
             barrier_release_class=cell(rel.get("release_class")),
             clear_internal_area_m2=cell(c.get("clear_internal_area_m2")),
@@ -1346,6 +1400,20 @@ def free_space_qa(candidates=(), labels_inside=None, release=None,
             "releasable and barrier_release_class are separate questions. A "
             "polygon can be geometrically sound and still rest on a portal "
             "whose existence only one evidence family supports.",
+            "GEOMETRY_SOURCE says which wall solid the polygon was cut "
+            "from. ESTABLISHED holds only material whose physical presence "
+            "the drawing establishes; DIAGNOSTIC_AUGMENTED adds "
+            "unresolved extensions and unvalidated patches. A polygon from "
+            "the augmented solid is NOT production-ready however valid it "
+            "is, and on AR-00 several rooms exist only there.",
+            "UNESTABLISHED_WALL_DEPENDENCY_M is how much of this polygon's "
+            "boundary runs along material whose presence is not "
+            "established. Any figure above zero means the room exists as "
+            "drawn because a hypothesis was treated as masonry.",
+            "PORTAL_MINIMUM_STATUS is the weakest barrier the component's "
+            "boundary depends on. A room partitioned by a merely "
+            "diagnostic portal cannot become production geometry because "
+            "the polygon happens to be valid.",
             "DIAGNOSTIC UNTIL RELEASED. No row here has produced a "
             "quantity, and a multi-room row must never produce one.",
         ))
@@ -1605,7 +1673,9 @@ def build_workbook(bundle: dict) -> Workbook:
             bundle.get("free_space_candidates", ()),
             bundle.get("labels_inside"),
             bundle.get("barrier_release"),
-            bundle.get("space_leaks", ())),
+            bundle.get("space_leaks", ()),
+            bundle.get("space_geometry_recall"),
+            bundle.get("geometry_source", SOURCE_DIAGNOSTIC)),
         SHEET_TOPOLOGY: topology_qa(bundle.get("faces", ()),
                                     bundle.get("face_correspondence", ()),
                                     bundle.get("face_containment", ())),

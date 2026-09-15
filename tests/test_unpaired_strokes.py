@@ -121,15 +121,36 @@ def test_raster_support_is_recorded_as_evidence_when_it_is_measured():
     got = us.classify(faces, [], raster_support=lambda *a: 0.92)
     assert "RASTER_SHOWS_SOLID_HERE" in got[0].evidence
     assert got[0].raster_support == 0.92
-    assert got[0].stroke_class == us.CONFIRMED_SINGLE_LINE_WALL
+    # …and raster support ALONE no longer supports a wall's existence. A
+    # run nothing meets is not part of a wall network.
+    assert got[0].stroke_class == us.NON_WALL_GEOMETRY
+
+
+def test_raster_support_plus_a_wall_network_supports_existence():
+    # A perpendicular face meets the run, so it is part of a network.
+    faces = [_Face("VS-1", "H", 5000.0, 0.0, 3000.0),
+             _Face("VS-2", "V", 1500.0, 4000.0, 6000.0)]
+    got = {g.stroke_id: g for g in us.classify(
+        faces, [], raster_support=lambda *a: 0.92, wall_pen=1.14)}
+    assert got["VS-1"].stroke_class == us.SINGLE_LINE_EXISTENCE_SUPPORTED
 
 
 def test_the_wall_pen_is_evidence_but_not_a_classification():
-    faces = [_Face("VS-1", "H", 5000.0, 0.0, 3000.0, w=1.14)]
-    got = us.classify(faces, [], wall_pen=1.14)
-    assert "DRAWN_WITH_THE_WALL_PEN" in got[0].evidence
-    # …and with no other evidence it still is not called a wall.
-    assert got[0].stroke_class == us.STROKE_UNRESOLVED
+    faces = [_Face("VS-1", "H", 5000.0, 0.0, 3000.0, w=1.14),
+             _Face("VS-2", "V", 1500.0, 4000.0, 6000.0, w=1.14)]
+    got = {g.stroke_id: g for g in us.classify(faces, [], wall_pen=1.14)}
+    assert "DRAWN_WITH_THE_WALL_PEN" in got["VS-1"].evidence
+    # …and with no raster measurement it still is not called a wall.
+    assert got["VS-1"].stroke_class == us.STROKE_UNRESOLVED
+
+
+def test_the_wrong_pen_leaves_a_stroke_unresolved_not_non_wall():
+    faces = [_Face("VS-1", "H", 5000.0, 0.0, 3000.0, w=0.36),
+             _Face("VS-2", "V", 1500.0, 4000.0, 6000.0, w=0.36)]
+    got = {g.stroke_id: g for g in us.classify(
+        faces, [], raster_support=lambda *a: 0.92, wall_pen=1.14)}
+    assert got["VS-1"].stroke_class == us.STROKE_UNRESOLVED
+    assert "UNRESOLVED and not non-wall" in got["VS-1"].why
 
 
 def test_the_summary_never_totals_the_population_as_wall():
@@ -149,25 +170,17 @@ def test_the_audit_names_the_population_not_the_guess():
     assert not hasattr(sa.SourceAudit("d", "r", "h"), "single_face_length_m")
 
 
-def test_drawing_wall_coverage_is_not_established_without_a_classification():
+def test_drawing_wall_coverage_is_refused_without_source_normalised_totals():
+    # The retired figure divided a BAND length by a SOURCE-STROKE length.
+    # It is not repaired, it is refused; engine.source_coverage computes
+    # the real thing from one primitive.
     from engine.source_audit import SourceAudit
     got = SourceAudit("AR-00", "r1", "h", paired_face_length_m=615.1
                       )._coverage_claim()
     assert got["status"] == "NOT_ESTABLISHED"
-    assert "denominator is unknown" in got["why"]
-
-
-def test_drawing_wall_coverage_excludes_strokes_that_are_not_walls():
-    # Counting a fixture outline against the engine would understate capture
-    # by blaming it for marks that were never walls.
-    from engine.source_audit import SourceAudit
-    got = SourceAudit(
-        "AR-00", "r1", "h", paired_face_length_m=600.0,
-        unpaired_stroke_classification={"wall_like_length_m": 600.0,
-                                        "by_class": {}})._coverage_claim()
-    assert got["pct"] == pytest.approx(50.0)
-    assert got["wall_like_but_unpaired_m"] == pytest.approx(600.0)
-    assert "ARCHITECTURAL walls" in got["still_not_a_claim_that"]
+    assert "same primitive on" in got["why"]
+    assert "band length over source-stroke length" in \
+        got["never_compute_here"]
 
 
 def test_the_polygonization_metric_names_its_own_denominator():

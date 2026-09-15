@@ -72,7 +72,7 @@ def test_a_piece_inside_the_wall_solid_is_the_reference_s_basis():
     rep = dm.build("X", vec, ras, solid=solid)
     p = rep.pieces[0]
     assert p.cause == dm.CAUSE_WALL_BASIS
-    assert p.blame == "THE_REFERENCE"
+    assert p.attributed_to == dm.ATTR_REFERENCE_SIDE
 
 
 def test_a_thin_strip_hugging_the_wall_is_the_same_basis_difference():
@@ -119,7 +119,7 @@ def test_a_big_lobe_that_merely_touches_a_barrier_is_not_a_threshold():
                    barriers=bars)
     p = max(rep.pieces, key=lambda p: p.area_m2)
     assert p.cause == dm.CAUSE_RASTER_OVERREACH
-    assert p.blame == "THE_REFERENCE"
+    assert p.attributed_to == dm.ATTR_REFERENCE_SIDE
     assert "through the doorway, not across a threshold" in p.why
 
 
@@ -140,7 +140,7 @@ def test_a_hole_carved_around_a_fixture_does_not_remove_floor():
     rep = dm.build("X", vec, ras)
     p = rep.pieces[0]
     assert p.cause == dm.CAUSE_FIXTURE
-    assert p.blame == "THE_REFERENCE"
+    assert p.attributed_to == dm.ATTR_REFERENCE_SIDE
     assert "does not remove floor area" in p.why
 
 
@@ -163,7 +163,7 @@ def test_a_vector_piece_inside_another_room_s_region_is_the_engine():
     rep = dm.build("BED-01", vec, ras, other_regions={"BTH-01": other})
     p = max(rep.pieces, key=lambda p: p.area_m2)
     assert p.cause == dm.CAUSE_VECTOR_LEAK
-    assert p.blame == "THE_ENGINE"
+    assert p.attributed_to == dm.ATTR_ENGINE_SIDE
     assert p.other_space_ids == ("BTH-01",)
 
 
@@ -172,7 +172,7 @@ def test_nothing_available_to_explain_a_piece_is_said_plainly():
     rep = dm.build("X", vec, _rect(0, 0, 4000, 3000))
     p = rep.pieces[0]
     assert p.cause == dm.CAUSE_UNEXPLAINED
-    assert p.blame == "NOT_ATTRIBUTED"
+    assert p.attributed_to == dm.ATTR_NONE
     assert "a guess here would become a correction" in p.why
 
 
@@ -192,6 +192,21 @@ def test_the_report_says_the_raster_is_not_ground_truth():
         "raster_is_not_ground_truth"]
     assert "nothing is adjusted to make the delta smaller" in r[
         "this_control_is_not_tuned"]
+
+
+def test_attribution_is_not_adjudication():
+    # "100% of the disagreement is the reference's" asserts the vector
+    # result is right. Nothing establishes that: there is no independent
+    # ground truth and the sealed benchmark is not opened.
+    vec = _rect(0, 0, 4000, 3000)
+    r = dm.build("X", vec, _rect(0, 0, 4000, 2990)).record()
+    assert r["adjudication"] == dm.NOT_ADJUDICATED
+    assert r["spatially_attributed_pct"] == pytest.approx(100.0)
+    assert "NOT a finding that" in r["what_attribution_is_and_is_not"]
+    assert "no independent ground truth" in \
+        r["what_attribution_is_and_is_not"]
+    assert "nothing here corrects the geometry" in \
+        r["the_control_remains_frozen"]
 
 
 def test_reference_side_and_engine_side_causes_do_not_overlap():

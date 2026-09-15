@@ -581,3 +581,187 @@ A mechanism that is proven and unproven are not the only two states. Where
 the invariants were never run, the status reads `FAIL` with the reason
 *"unproven — not failed, unproven"*, because a check nobody ran is not a
 check that passed.
+
+---
+
+## 25 · PRODUCTION GEOMETRY MAY NOT REST ON A HYPOTHESIS
+
+There were two wall solids' worth of material in one object. 446 m where
+both faces were drawn, and 55.9 m the band engine itself records as
+`UNRESOLVED_EXTENSION` — *"NOT established material"* — and every quantity
+was measured against the union.
+
+Now there are two, and admission is **per interval**, not per polygon,
+because a band is usually part established and part not:
+
+```
+ESTABLISHED_WALL_SOLID            558.3 m   104.43 m2   432 intervals
+DIAGNOSTIC_AUGMENTED_WALL_SOLID   614.2 m   116.63 m2   453 intervals
+   the hypothesis adds                      12.20 m2   10.5%
+```
+
+Then the same free-space path ran on both, and the result is the reason this
+invariant exists:
+
+| | ESTABLISHED | DIAGNOSTIC_AUGMENTED |
+|---|---|---|
+| single-room candidates | 4 | 8 |
+| largest merged component | **32 labels** | 23 labels |
+| BED-01 | inside the 32-label blob | **its own 21.034 m² polygon** |
+
+**BED-01 has a polygon of its own only because unestablished wall material
+was treated as masonry.** Its boundary runs along 5.104 m of
+`UNRESOLVED_SINGLE_FACE_EXTENSION` across three intervals (WB-00160,
+WB-00030 ×2). The polygon is geometrically perfect and it is not a measured
+room.
+
+So `DIAGNOSTIC_GEOMETRY_ACCEPTED` and `PRODUCTION_GEOMETRY_RELEASED` are
+separate verdicts, and a valid polygon earns only the first. On AR-00:
+
+```
+DIAGNOSTIC_SPACE_GEOMETRY_RECALL          9 / 17
+RELEASE_ELIGIBLE_SPACE_GEOMETRY_RECALL    0 / 17
+```
+
+Nine rooms have a plausible polygon. **None** has one every boundary
+contributor of which satisfies production-level evidence. The gap between
+those two numbers is the size of the hypothesis, and reporting only the
+first would let a guess count as a measured room.
+
+---
+
+## 26 · A LOCALISER POINTING AT SOMETHING IS NOT EVIDENCE IT MATTERS
+
+Last round found five hairline gaps of 50–300 mm where accepted wall bands
+run along the whole passage, and reported them as the dominant cause of the
+merged components. That was asserted from the localiser's output. It is
+wrong, and two instruments built this round say so.
+
+**Junction patches, on evidence.** A gap is closed only by an explicit
+`JUNCTION_PATCH` where local vector geometry proves a physical junction —
+never by a larger snap, a buffer, morphological closing or generic gap
+filling, each of which closes every gap of that size in the drawing and
+leaves no record of where or why. Of the five:
+
+| gap | width | verdict | the repair it actually needs |
+|---|---|---|---|
+| BTH-03/BED-02 | 50 mm | REFUSED | `REPAIR_IS_IN_WALL_FACE_PAIRING` |
+| BTH-01/BED-NW | 50 mm | REFUSED | `REPAIR_IS_IN_WALL_FACE_PAIRING` |
+| MBTH-02/BED-02 | 100 mm | **VALIDATED** | `REPAIR_IS_JUNCTION_ASSEMBLY` |
+| BTH-04/BED-02 | 150 mm | REFUSED | `NOT_ONE_WALL_TWO_DIFFERENT_WALLS_MEET_HERE` |
+| BED-04/BED-02 | 300 mm | REFUSED | `NOTHING_IS_DRAWN_HERE_THE_OPENING_IS_REAL` |
+
+At two of them only ONE accepted band is anywhere within 800 mm, while the
+raster shows solid (0.43, 0.50) and wall-like unpaired strokes lie right at
+the gap. A wall **is** drawn there and never became a band: that is a
+**pairing** failure, and a patch would have papered over an extraction bug.
+At one, raster support across the gap is **0.00** — nothing is drawn, the
+opening is real, and closing it would have invented a wall.
+
+**The counterfactual.** The one validated patch was applied to the
+established solid with nothing else changed:
+
+```
+single-room candidates   4 -> 4     (+0)
+largest component       32 -> 32    (+0 labels)
+verdict: REPAIRS_CHANGED_NOTHING_IN_THE_PARTITION
+```
+
+So the five gaps are not the dominant cause. They were never shown to be —
+they were pointed at, and pointing is not proof. Every row of the merged
+component work list now carries `NOT_MEASURED` until a counterfactual has
+actually been run for it.
+
+---
+
+## 27 · A COVERAGE FIGURE MUST DIVIDE LIKE BY LIKE
+
+`DRAWING_WALL_REPRESENTATION_COVERAGE = 45.9%` divided a **wall-band**
+length by a **source-stroke** length. A two-face wall contributes about two
+source-face lengths and one band length, so the numerator was deduplicated
+and the denominator was not: the figure understated capture by roughly a
+factor of two on exactly the population it claimed to measure, and it looked
+like a careful number.
+
+Every term is now source-stroke length, the parts must add to the total, and
+the residual is reported rather than absorbed:
+
+```
+SOURCE_WALL_STYLE_STROKE_LENGTH_TOTAL        1912.5 m
+  USED_IN_ACCEPTED_BANDS                     1061.5 m   55.5%
+  FRAGMENTED_MATE                             289.0 m   15.1%
+  NON_WALL                                    266.7 m   14.0%
+  UNRESOLVED                                  214.5 m   11.2%
+  CLASSIFIED_SINGLE_LINE                       58.1 m    3.0%
+  DUPLICATE                                    22.6 m    1.2%
+  UNACCOUNTED                                   0.0 m    0.0%
+```
+
+A deduplicated PHYSICAL length is reported separately (615.1 m from 243
+accepted bands) and the two may never be divided into one another. No
+physical length is derived for the unpaired population at all: a single
+stroke establishes no thickness and no face positions, and **NEVER INVENT
+THE MISSING HALF** applies to length as much as to thickness.
+
+**Unknown stays unknown.** An earlier report added non-wall, duplicate and
+unresolved together and called the sum "never a wall", which silently turned
+214.5 m of UNRESOLVED from unknown into false. The three are reported apart,
+and UNRESOLVED sits in neither the wall-like nor the non-wall figure on
+purpose.
+
+---
+
+## 28 · "CONFIRMED" MUST NAME WHAT IT CONFIRMED
+
+434.8 m carried the label `CONFIRMED_SINGLE_LINE_WALL`. A deterministic
+blind sample — the manual expected-wall list not consulted — showed the
+classifier had overreached by about **7.5×**.
+
+The evidence rule had two holes. It never checked the **pen**: of 434.8 m,
+only 155.6 m was drawn with this drawing's measured 1.14 pt wall pen, the
+rest at 0.12–0.72 pt. And it never looked for a **parallel face** — the one
+thing a single-line wall is defined by not having — because its "no mate"
+test asked only for collinear neighbours on the *same* line. Sample members
+had parallel faces 40–250 mm away. The longest "single-line wall" on the
+sheet was a **50 m** stroke at 0.72 pt.
+
+With pen, parallel-face, over-length and wall-network tests added,
+`SINGLE_LINE_WALL_EXISTENCE_SUPPORTED` falls to **58.1 m in 2 strokes** —
+and those two are 29 m runs at y = 2452 and y = 51200, outside the
+building's own extent, almost certainly the sheet frame. The defensible
+reading is that this drawing has **no established single-line wall
+convention at all**. They are reported with that caveat rather than removed
+by another rule chosen to remove them.
+
+The claim is also split, because one stroke cannot support both halves:
+
+```
+SINGLE_LINE_WALL_EXISTENCE_SUPPORTED   a separator is probably there.
+                                       May become a
+                                       TOPOLOGY_SEPARATOR_HYPOTHESIS.
+SINGLE_LINE_WALL_GEOMETRY_COMPLETE     thickness and both face positions
+                                       independently established. Only
+                                       this may create material geometry,
+                                       and nothing produces it yet.
+```
+
+---
+
+## 29 · SAFETY IS TOPOLOGICAL, NOT AREAL
+
+The 0.05 mm snap grid was called safe because it changed the wall solid's
+area by 0.0003 m². That is the wrong test. Snapping merges two vertices onto
+one grid node, which **connects** two pieces of geometry — a topological
+event with no area cost at all, so an area argument cannot see it. A
+connection created by rounding is a wall the drawing does not have, and it
+closes a space the drawing leaves open.
+
+So both grids are run and every connection present at the coarser grid and
+absent at the finer one is found and classified. On AR-00: 49 components at
+0.01 mm, 46 at 0.05 mm, **2 joins**, both `NUMERICAL_NOISE_JOIN` within the
+measured noise floor. The coarser grid is defensible here — but now it is
+*proven* rather than inferred from an area that barely moved.
+
+Production still builds the established solid on the **measured** tolerance,
+and physical junctions are repaired by an explicit `JUNCTION_PATCH` that can
+be listed, reviewed and removed. A tolerance cannot be.

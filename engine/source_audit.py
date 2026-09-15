@@ -72,6 +72,9 @@ class SourceAudit:
     # population and the classification of it is separate.
     unpaired_wall_style_stroke_length_m: float | None = None
     unpaired_stroke_classification: dict = field(default_factory=dict)
+    # engine.source_coverage's record, computed in source-stroke length on
+    # both sides of every division.
+    source_coverage: dict = field(default_factory=dict)
     wall_representation_mix: dict = field(default_factory=dict)
     dimension_representation: str = ""
     block_or_symbol_paths: int = 0
@@ -79,43 +82,40 @@ class SourceAudit:
     why: str = ""
 
     def _coverage_claim(self) -> dict:
-        """What share of the DRAWING's wall reached the accepted band set.
+        """Coverage, in ONE primitive, or not at all.
 
-        This is the figure a reader will want and the one most easily
-        overclaimed. It is only meaningful once the unpaired wall-style
-        stroke population has been classified, because until then the
-        denominator is unknown: an unpaired stroke may be a missing wall or
-        a fixture outline that was never a wall at all.
+        The previous version of this computed 45.9% by dividing a WALL-BAND
+        length by a SOURCE-STROKE length. A two-face wall contributes about
+        two source-face lengths and one band length, so the numerator was
+        deduplicated and the denominator was not: the figure understated
+        capture by roughly a factor of two on exactly the population it
+        claimed to measure. It is not repaired here — it is refused, and
+        engine.source_coverage computes the real thing from source-stroke
+        length on both sides.
         """
-        cls = self.unpaired_stroke_classification
-        if not cls or self.paired_face_length_m is None:
-            return {"status": "NOT_ESTABLISHED",
-                    "why": ("the unpaired wall-style stroke population is "
-                            "not classified, so the denominator is unknown. "
-                            "No percentage here may be read as walls "
-                            "captured")}
-        wall_like = cls.get("wall_like_length_m")
-        if wall_like is None:
-            return {"status": "NOT_ESTABLISHED",
-                    "why": "the classification reports no wall-like length"}
-        denom = self.paired_face_length_m + wall_like
+        if not self.source_coverage:
+            return {
+                "status": "NOT_ESTABLISHED",
+                "why": ("no source-normalised coverage was supplied. A "
+                        "coverage figure requires the same primitive on "
+                        "both sides of the division, and this audit has no "
+                        "source-stroke totals of its own"),
+                "never_compute_here": (
+                    "band length over source-stroke length. That ratio is "
+                    "not a coverage: it divides a deduplicated length by a "
+                    "duplicated one"),
+            }
         return {
-            "status": "ESTABLISHED_AGAINST_A_CLASSIFIED_POPULATION",
-            "paired_into_bands_m": round(self.paired_face_length_m, 1),
-            "wall_like_but_unpaired_m": round(wall_like, 1),
-            "pct": (None if not denom
-                    else round(100 * self.paired_face_length_m / denom, 1)),
-            "why": ("the denominator counts only the unpaired strokes that "
-                    "evidence says could be wall. Strokes classified as "
-                    "fixture, duplicate, annotation or non-wall geometry are "
-                    "excluded, because counting them would understate "
-                    "capture by blaming the engine for marks that are not "
-                    "walls"),
+            "status": "ESTABLISHED_IN_SOURCE_STROKE_LENGTH",
+            **{k: v for k, v in self.source_coverage.items()
+               if k in ("lengths_m", "share_of_source_stroke_length_pct",
+                        "source_stroke_capture", "accounting_identity",
+                        "physical_wall_length", "primitive")},
             "still_not_a_claim_that": (
                 "this share of the ARCHITECTURAL walls is captured. It is a "
-                "share of wall-pen stroke length, and a wall drawn in a "
-                "representation this engine does not read at all would not "
-                "appear in either term"),
+                "share of wall-pen STROKE length, and a wall drawn in a "
+                "representation this engine does not read at all appears in "
+                "no term of it"),
         }
 
     def record(self) -> dict:
@@ -134,6 +134,7 @@ class SourceAudit:
                     self.unpaired_wall_style_stroke_length_m,
                 "unpaired_stroke_classification": dict(
                     self.unpaired_stroke_classification),
+                "source_normalised_coverage": dict(self.source_coverage),
                 "wall_representation_mix": dict(self.wall_representation_mix),
                 "drawing_wall_representation_coverage": (
                     self._coverage_claim()),
@@ -147,7 +148,7 @@ class SourceAudit:
 
 def audit_drawing(drawing, *, drawing_id: str, revision: str,
                   source_hash: str, bands=None, rejections=None,
-                  unpaired_strokes=None) -> SourceAudit:
+                  unpaired_strokes=None, faces=None) -> SourceAudit:
     """Count what the sheet is made of. Nothing here measures a room."""
     segs = drawing.segments
     axis = [s for s in segs if s.is_axis_aligned]
@@ -188,34 +189,43 @@ def audit_drawing(drawing, *, drawing_id: str, revision: str,
         mix[SINGLE_LINE_WALL] = per.get(
             CONFIRMED_SINGLE_LINE_WALL, {}).get("length_m", 0.0)
 
-    # The support share is judged against WALL-LIKE unpaired length when the
-    # population has been classified, and against the whole population when
-    # it has not — a drawing whose unpaired strokes turn out to be fixtures
-    # is not a drawing this engine cannot read.
-    unpaired_term = (stroke_cls.get("wall_like_length_m")
-                     if stroke_cls else single)
-    total = (paired or 0.0) + (unpaired_term or 0.0)
-    share = (paired or 0.0) / total if total else 0.0
-    if bands is None or rejections is None:
+    # Coverage in ONE primitive: source-stroke length on both sides.
+    coverage: dict = {}
+    share = 0.0
+    if faces is not None and bands is not None and unpaired_strokes is not None:
+        from engine.source_coverage import measure as measure_coverage
+        cov = measure_coverage(faces, bands, unpaired_strokes)
+        coverage = cov.record()
+        cap = coverage["source_stroke_capture"]
+        pct = cap.get("of_wall_like_source_stroke_pct")
+        share = 0.0 if pct is None else pct / 100.0
+    if bands is None or rejections is None or not coverage:
         verdict, why = REPRESENTATION_UNKNOWN, (
             "no wall extraction was run, so the representation mix is not "
             "established. The counts above still say what the sheet contains")
     elif share >= 0.7:
         verdict, why = SUPPORTABLE, (
-            f"{share * 100:.0f}% of wall-pen face length pairs into two-face "
-            "bands, which is the representation this engine reads")
+            f"{share * 100:.0f}% of WALL-LIKE SOURCE STROKE LENGTH reached "
+            "an accepted two-face band, which is the representation this "
+            "engine reads. Both terms are source-stroke length")
     elif share >= 0.3:
         if stroke_cls:
             per = stroke_cls.get("by_class", {})
             named = ", ".join(
                 f"{k} {v['length_m']:.0f} m"
                 for k, v in list(per.items())[:4])
-            why = (f"{share * 100:.0f}% of WALL-LIKE wall-pen face length "
-                   "pairs into a two-face band. The unpaired remainder has "
-                   f"been classified — {named} — so the shortfall is not a "
+            unres = stroke_cls.get("not_wall_like_length_m", {}).get(
+                "unresolved")
+            why = (f"{share * 100:.0f}% of WALL-LIKE SOURCE STROKE LENGTH "
+                   "reached an accepted two-face band — both terms in "
+                   "source-stroke millimetres. The remainder has been "
+                   f"classified: {named}. So the shortfall is not a "
                    "mystery: it is mostly wall that IS drawn and did not "
                    "pair, which is a different repair from wall that is not "
-                   "drawn at all")
+                   "drawn at all"
+                   + ("" if not unres else
+                      f". {unres} m remains UNRESOLVED and is counted as "
+                      "neither wall nor non-wall"))
         else:
             why = (f"only {share * 100:.0f}% of wall-pen face length pairs "
                    "into a two-face band. The unpaired remainder is either "
@@ -244,6 +254,7 @@ def audit_drawing(drawing, *, drawing_id: str, revision: str,
         unpaired_wall_style_stroke_length_m=(
             None if single is None else round(single, 1)),
         unpaired_stroke_classification=stroke_cls,
+        source_coverage=coverage,
         wall_representation_mix=mix,
         dimension_representation=("NOT_EXTRACTED — see "
                                   "engine.document_observations"),
