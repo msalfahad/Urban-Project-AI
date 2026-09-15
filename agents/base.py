@@ -203,3 +203,83 @@ def run_json_agent(
             last = exc
     assert last is not None
     raise last
+
+
+# --------------------------------------------------------------- vision
+
+# A vision model function takes (system_prompt, user_text, images) and
+# returns raw text. Images are (media_type, bytes) pairs.
+VisionFn = Callable[[str, str, Sequence[tuple]], str]
+
+
+def anthropic_vision(
+    system: str,
+    user: str,
+    images: Sequence[tuple],
+    *,
+    model: str = BEST,
+    max_tokens: int = 8000,
+    effort: str | None = "high",
+) -> str:
+    """Call Claude with images and return the concatenated text.
+
+    Same seam and the same rules as `anthropic_model`: text and pictures in,
+    text out. Nothing here computes a quantity.
+
+    The tier default is BEST deliberately. This is used to read printed
+    dimensions and room labels off a drawing — the work where a plausible
+    wrong number passes every validator — which is the same reason A1, A2
+    and A7 are pinned to BEST rather than laddered up from cheap.
+    """
+    import anthropic
+
+    client = anthropic.Anthropic()
+    content: list[dict[str, Any]] = []
+    for media_type, data in images:
+        import base64
+        content.append({
+            "type": "image",
+            "source": {
+                "type": "base64",
+                "media_type": media_type,
+                "data": base64.standard_b64encode(data).decode("ascii"),
+            },
+        })
+    content.append({"type": "text", "text": user})
+
+    kwargs: dict[str, Any] = {
+        "model": model,
+        "max_tokens": max_tokens,
+        "system": system,
+        "messages": [{"role": "user", "content": content}],
+    }
+    if effort:
+        kwargs["output_config"] = {"effort": effort}
+
+    def _call(kw: dict[str, Any]):
+        resp = client.messages.create(**kw)
+        if resp.stop_reason == "refusal":
+            details = getattr(resp, "stop_details", None)
+            raise ModelRefused(
+                f"{model} refused: {getattr(details, 'category', None)}")
+        if resp.stop_reason == "max_tokens":
+            raise ModelTruncated(
+                f"{model} hit max_tokens={kw.get('max_tokens')} and stopped "
+                "mid-answer. The output is incomplete, not malformed.")
+        return "".join(b.text for b in resp.content if b.type == "text")
+
+    try:
+        return _call(kwargs)
+    except anthropic.BadRequestError as exc:
+        if "output_config" in kwargs and "effort" in str(exc).lower():
+            kwargs.pop("output_config", None)
+            return _call(kwargs)
+        raise
+
+
+def vision(*, model: str = BEST, effort: str = "high",
+           max_tokens: int = 8000) -> VisionFn:
+    """A VisionFn bound to one tier."""
+    return lambda system, user, images: anthropic_vision(
+        system, user, images, model=model, max_tokens=max_tokens,
+        effort=effort)

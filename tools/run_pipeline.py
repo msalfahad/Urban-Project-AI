@@ -48,6 +48,20 @@ from engine.release_blocker import assess as assess_blockers
 from engine.release_blocker import portal_bottleneck
 from engine.unresolved_impact import assess as assess_unresolved
 from engine.freeze_guard import check as check_freeze
+from engine import boundary_match as hybrid_match
+from engine import hybrid_path
+from engine import raster_topology as raster_topo
+from engine.document_reader import read_runs as read_document
+from engine.glyph_text import locate as glyph_locate
+from engine.region_boundary import simplify as simplify_ring
+from engine.region_boundary import trace as trace_ring
+from engine import space_role as hybrid_role
+from engine import topology_metrics as hybrid_metrics
+from engine.dimension_check import assess as assess_dimensions
+from engine.space_objects import (MEASUREMENT_COMPLETE_DIAGNOSTIC,
+                                  MEASUREMENT_COMPLETE_PRODUCTION,
+                                  SRC_DIAGNOSTIC_VECTOR,
+                                  SRC_VECTOR_WALL_FACE)
 from engine.reference_mapping import resolve as resolve_references
 from engine.fragment_recovery import extension_summary
 from engine.fragment_recovery import polygons as fragment_polygons
@@ -122,6 +136,7 @@ from tools.wall_v2_diagnostic import (probable_wall_faces, raster_ratio,
                                       wall_pen_of)
 
 PDF = "data/golden/23010/inputs/AR-00_MAR2023.pdf"
+DOC_CACHE = "data/golden/23010/doc_read_cache"
 SPACE_MAP = "data/golden/23010/inputs/space_map_23010_2f.json"
 TOPOLOGY_OVERLAY = "data/golden/23010/topology_overlay.json"
 RUN_ID = "V2"
@@ -353,8 +368,11 @@ def run(pdf: str = PDF) -> dict:
     # --- regions, for comparison only ------------------------------------
     by_region = {s["region"]: s for s in sm["spaces"]}
     regions = {}
+    space_centroid_px = {}
     for r in src.regions(0, min_m2=0.3):
         sp = by_region.get(r.id, {})
+        if sp.get("space_id"):
+            space_centroid_px[sp["space_id"]] = r.centroid_px
         cx, cy = frame.to_vector(r.centroid_px[0] * px, r.centroid_px[1] * px)
         regions[r.id] = {"bbox_mm": frame.bbox_to_vector(r.bbox_mm),
                          "area_m2": float(r.area_m2), "centroid_mm": (cx, cy),
@@ -1014,6 +1032,169 @@ def run(pdf: str = PDF) -> dict:
     unresolved_impact = assess_unresolved(
         strokes, leaks, controls=tuple(CONTROLS)).record()
 
+    # ================= HYBRID PDF TOPOLOGY =========================
+    # Raster/vision finds the space; vector geometry supplies every
+    # released millimetre. The automatic topology is built from the render
+    # and the ESTABLISHED solid only — no golden region, no overlay, no
+    # room list — and it is HASHED before anything human is read.
+    hybrid_topology = raster_topo.build(
+        seg, frame, established_solid=established_solid,
+        diagnostic_solid=diagnostic_solid, portal_barriers=barriers,
+        drawing_id=sm["drawing_id"], revision=sm["drawing_revision"])
+    hybrid_topology_hash = hybrid_topology.output_hash
+
+    # A face interval is production-eligible only where the wall authority
+    # admits established material over that span. Everything else is
+    # diagnostic vector geometry, which may complete a polygon and may
+    # never release one.
+    _est_by_band: dict = {}
+    for _a in authority.admissions:
+        if _a.is_established:
+            _est_by_band.setdefault(_a.wall_band_id, []).append(
+                (min(_a.start_mm, _a.end_mm), max(_a.start_mm, _a.end_mm)))
+
+    def _classify_face(wp, side, lo, hi):
+        spans = _est_by_band.get(wp.wall_band_id, ())
+        lo, hi = min(lo, hi), max(lo, hi)
+        covered = any(a <= lo + 1.0 and b >= hi - 1.0 for a, b in spans)
+        return ((SRC_VECTOR_WALL_FACE, "ESTABLISHED") if covered
+                else (SRC_DIAGNOSTIC_VECTOR, "DIAGNOSTIC"))
+
+    # Where each labelled space sits in the AUTOMATIC regions. This is the
+    # only place a label enters, and it enters after the hash above.
+    _lab = np.asarray(hybrid_topology.labels)
+    _region_of_label = {v: k for k, v in
+                        hybrid_topology.region_label_of.items()}
+    hybrid_labels_in: dict = {}
+    hybrid_labels_unplaced = []
+    for _sid, (_cx, _cy) in sorted(space_centroid_px.items()):
+        _rid = _region_of_label.get(int(_lab[int(_cy), int(_cx)]))
+        if _rid is None:
+            hybrid_labels_unplaced.append(_sid)
+        else:
+            hybrid_labels_in.setdefault(_rid, []).append(_sid)
+
+    hybrid = hybrid_path.run(
+        hybrid_topology, wall_polys=wall_polys, caps=caps,
+        barriers=barriers, frame=frame, px_mm=px,
+        classify=_classify_face, labels_inside=hybrid_labels_in)
+
+    # §16 — topology scored against the FROZEN automatic output.
+    hybrid_topology_score = hybrid_metrics.score_topology(
+        hybrid_topology, labels_in_region=hybrid_labels_in,
+        expected_spaces=[x["space_id"] for x in sm["spaces"]]).record()
+
+    # §17 — measurement, for the regions holding exactly one labelled space.
+    _by_region = hybrid.by_region
+    _single = [r for r in hybrid_topology.regions
+               if len(hybrid_labels_in.get(r.region_id, ())) == 1]
+    hybrid_measurement_score = hybrid_metrics.score_measurement(
+        [(r, _by_region[r.region_id]) for r in _single
+         if r.region_id in _by_region]).record()
+
+    # §7 / §18 — the document read, from its cache. Reading is a separate
+    # tool (tools/read_document_text.py) so the pipeline stays free and
+    # offline; absent a cache this reports NOT_READ rather than "no text".
+    _runs = glyph_locate(PDF)
+    doc_read = read_document(
+        PDF, _runs.runs, cache_dir=DOC_CACHE,
+        drawing_id=sm["drawing_id"], revision=sm["drawing_revision"])
+    doc_record = doc_read.record()
+
+    # §18 — printed dimension against vector measurement, for the controls
+    # and every other region holding one labelled space. Never averaged.
+    hybrid_dimension_check = assess_dimensions(
+        [(hybrid_labels_in[r.region_id][0], _by_region[r.region_id])
+         for r in _single if r.region_id in _by_region],
+        doc_read.dimensions).record()
+
+    # §20 / §21 — the controls through the hybrid path. A NEW record with a
+    # NEW hash: the historical diagnostic results are not mutated, and the
+    # result closest to the raster is NOT the one chosen.
+    hybrid_controls = []
+    for _cid in CONTROLS:
+        _rid = next((k for k, v in hybrid_labels_in.items()
+                     if _cid in v), "")
+        _cand = _by_region.get(_rid)
+        _role = next((x for x in hybrid.roles if x.region_id == _rid), None)
+        _reg = next((r for r in hybrid_topology.regions
+                     if r.region_id == _rid), None)
+        hybrid_controls.append({
+            "space_id": _cid,
+            "found_by_raster_topology": bool(_rid),
+            "automatic_region_id": _rid,
+            "labels_sharing_the_region": sorted(
+                hybrid_labels_in.get(_rid, ())),
+            "raster_APPROXIMATE_area_m2": (
+                None if _reg is None
+                else round(_reg.approximate_area_m2, 3)),
+            "physical_role": None if _role is None else _role.role,
+            "HYBRID_RESULT": (None if _cand is None else {
+                "candidate_id": _cand.candidate_id,
+                "measurement_status": _cand.measurement_status,
+                "boundary_measured_pct": _cand.measured_pct,
+                "boundary_production_eligible_pct": _cand.production_pct,
+                "unresolved_intervals": len(_cand.unresolved_intervals),
+                "area_m2": (None if _cand.area_m2 is None
+                            else round(_cand.area_m2, 3)),
+                "NEW_geometry_hash": _cand.geometry_hash,
+                "polygon_closed": _cand.polygon_closed,
+            }),
+            "historical_results_are_not_mutated": (
+                "the frozen diagnostic BED-01 result keeps its own hash and "
+                "its 21.034 m². This is a separate record of a separate "
+                "measurement by a different path"),
+            "how_the_result_was_chosen": (
+                "by the boundary matcher's own priority order. NOT by which "
+                "answer came closest to the raster mask or to any "
+                "reference"),
+        })
+
+    # §24 — the gate.
+    _complete = [c for c in hybrid.candidates
+                 if c.measurement_status in (
+                     MEASUREMENT_COMPLETE_PRODUCTION,
+                     MEASUREMENT_COMPLETE_DIAGNOSTIC)]
+    _ctrl_complete = [x for x in hybrid_controls
+                      if x["HYBRID_RESULT"]
+                      and x["HYBRID_RESULT"]["polygon_closed"]]
+    _mean_measured = (
+        hybrid_measurement_score["boundary_source_coverage_pct"][
+            "measured_mean"] or 0.0)
+    hybrid_gate = hybrid_path.gate(
+        controls_complete=bool(_ctrl_complete),
+        complete_measured_spaces=len([
+            c for c in _complete
+            if len(hybrid_labels_in.get(c.region_id, ())) == 1]),
+        deterministic_complete_spaces=0,
+        topology_recall_pct=hybrid_topology_score["REGION_RECALL_PCT"],
+        deterministic_single_room_spaces=_a1.single_room,
+        expected_spaces=len(sm["spaces"]),
+        mean_boundary_measured_pct=_mean_measured)
+
+    hybrid_record = {
+        **hybrid.record(),
+        "labels_placed_in_an_automatic_region": sum(
+            len(v) for v in hybrid_labels_in.values()),
+        "labels_not_placed": hybrid_labels_unplaced,
+        "TOPOLOGY_SCORE_can_it_find_the_room": hybrid_topology_score,
+        "MEASUREMENT_SCORE_can_it_measure_the_room":
+            hybrid_measurement_score,
+        "zones": hybrid_role.zones(
+            hybrid_topology.regions,
+            labels_inside=hybrid_labels_in).record(),
+        "frozen_controls_through_the_hybrid_path": hybrid_controls,
+        "document_dimension_vs_vector": hybrid_dimension_check,
+        "GATE": hybrid_gate,
+        "search_window_sensitivity": (
+            {} if not _single else hybrid_match.sensitivity(
+                simplify_ring(trace_ring(
+                    hybrid_topology.labels,
+                    hybrid_topology.region_label_of[_single[0].region_id],
+                    frame, px, min_run_px=1)),
+                hybrid.pool)),
+    }
+
     # §14 — one work list per merged component, ranked by what it unlocks.
     blob_table = build_blob_causes(
         leaks, labels_inside=labels_in, patches=patches, strokes=strokes,
@@ -1264,6 +1445,8 @@ def run(pdf: str = PDF) -> dict:
         # which portals would be next to validate.
         "release_blockers": blocker_report,
         "unresolved_stroke_impact": unresolved_impact,
+        "hybrid_pdf_topology": hybrid_record,
+        "document_observations_read": doc_record,
         # §13 — what we KNOW against what we can plausibly hypothesise.
         "release_vs_diagnostic_free_space": {
             "release": release_arm.record(),

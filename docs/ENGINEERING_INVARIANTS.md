@@ -858,3 +858,119 @@ The **area** is the invariant, because the area is the measurement. And if
 independently supported recovery ever produces a different BED-01 polygon,
 it becomes a **new geometry record with a new hash** — the frozen one is not
 mutated, and the check is not widened to accept it.
+
+---
+
+## 33 · RASTER FINDS THE ROOM; VECTOR MEASURES IT
+
+Global vector topology could not discover this floor: 32 of 36 labelled
+rooms sat in one merged blob, because a wall solid built from drawn faces is
+porous at every hairline gap and unestablished extension. A rendered image
+does not care about a 0.3 mm gap in a polyline — ink is ink — so
+segmentation separates rooms the solid merges. On AR-00 it finds **27 of 36
+spaces as exactly one region each, with zero splits and zero merges**.
+
+That does not make pixels a measuring instrument. The two roles are split
+and the split is enforced by types, not by convention:
+
+```
+TOPOLOGY_REGION           where a connected space is.
+                          Its area is named APPROXIMATE. No released mm.
+MEASURED_SPACE_CANDIDATE  what its boundary measures, interval by
+                          interval, each naming its source.
+RELEASED_PHYSICAL_SPACE   whether a quantity may be built on it.
+```
+
+A pixel coordinate may become a drawing coordinate only as a **search
+window**. The final polygon is built from the chosen vector faces, jambs and
+end caps — the raster outline is never scaled, warped, offset or smoothed
+into place, and a run with no match stays UNRESOLVED rather than taking its
+coordinate from the pixels. A polygon that mixed the two would look
+complete and measure the wrong building.
+
+Selection is **local and priority-led, never global-nearest**. The nearest
+line to a room's north wall can be the south face of the wall above it; an
+established face beats a nearer diagnostic one. Every interval records the
+candidates it saw, the one it chose, the distance, the shared extent and
+every alternative with the reason it lost, because a QS quantity must be
+traceable to the exact drawn geometry.
+
+---
+
+## 34 · FINDING A ROOM AND MEASURING IT ARE TWO SCORES
+
+Mixing them is how a system reports "78% accurate" while unable to produce a
+single releasable polygon. So there are two metric families that share no
+term:
+
+```
+§16  CAN IT FIND THE ROOM?     region recall and precision, splits,
+                               merges, adjacency accuracy
+§17  CAN IT MEASURE THE ROOM?  boundary-source coverage, complete /
+                               diagnostic / release-eligible counts,
+                               area agreement
+```
+
+On AR-00 the honest pair is **75.0% topology recall and 0 complete measured
+polygons** — a real advance on finding rooms and no advance at all on
+measuring them. One number would have hidden whichever half the reader
+cared about.
+
+Topology is scored only **after the automatic output is hashed**. The human
+overlay and golden regions may score the result; they may never build it, or
+the metric measures itself.
+
+---
+
+## 35 · A COMPARISON MUST PAIR LIKE WITH LIKE
+
+The printed-dimension cross-check first reported **137 material
+disagreements** on AR-00. Every one was an artefact: it compared each
+printed dimension against each matched boundary INTERVAL, and a room's side
+is routinely drawn as three separate intervals, so a printed 3850 was
+checked against three ~1283 mm pieces.
+
+What a dimension on a plan dimensions is the **clear extent between two
+opposite finish faces**. Comparing that instead, and treating a string more
+than half the extent away as dimensioning something else, leaves a real
+check: AGREE / DISAGREE / AMBIGUOUS / NOT_PRESENT, never an average, and a
+material disagreement BLOCKS release rather than being split down the
+middle.
+
+The same discipline killed a second false signal: inferring CIRCULATION from
+adjacency count put **47 of 63 regions** — BED-01 among them — into
+circulation, because a bedroom beside a bathroom, a corridor and a dressing
+room connects three regions too. Adjacency is recorded as evidence and
+decides no role; whether a space functions as circulation is a functional
+zone question, not a physical property.
+
+---
+
+## 36 · A DRAWING WITH NO TEXT OBJECTS IS NOT A DRAWING WITH NO TEXT
+
+AR-00 contains **zero** PDF text objects, no fonts and no images. Every room
+name, printed dimension and door tag on it is a cluster of vector outlines,
+and a naive extractor reports an empty sheet.
+
+The text is therefore found geometrically, and the discriminator is the
+drawing's own pen convention, measured rather than assumed: **a glyph is a
+small BLACK FILLED path**. Letters come back as `fill=(0,0,0)`, dimension
+arrowheads as `fill=(0.54,0,0)`, and walls and dimension lines as
+zero-thickness strokes. Without the colour and thickness tests, a cluster of
+red arrowheads scored as a room label — and the reader was paid to answer
+"no text".
+
+Two mechanics that cost real debugging time, recorded so they are not
+rediscovered:
+
+- `get_drawings()` returns **unrotated mediabox** coordinates while
+  `get_pixmap(clip=…)` expects the page's **rotated** coordinates. On this
+  270° sheet the two differ, and clipping with the raw rect renders blank
+  paper. The page's own rotation matrix is the conversion.
+- Localising and reading are separate stages. The localiser is
+  deterministic, free and offline; only transcription needs a model. So
+  "no text found" and "nobody looked" are different statuses, and a run
+  reads `LOCATED_NOT_READ` until something reads it.
+
+What the reader may do is transcribe characters. It is never asked how big
+anything is, where a wall runs, or which room it is looking at.

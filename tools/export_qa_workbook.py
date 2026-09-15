@@ -343,6 +343,55 @@ def _space_model(spaces, wall_rows, areas) -> SpaceModel:
     return model
 
 
+def _hybrid_rows(run: dict) -> list:
+    """§23 — one HYBRID SPACE QA row per region, four answers kept apart.
+
+    Nothing is derived here. Every value is read from the stage that owns
+    it, so the workbook cannot disagree with the run it reports.
+    """
+    hyb = run.get("hybrid_pdf_topology") or {}
+    regions = {r["region_id"]: r for r in
+               hyb.get("boundary_matching", {}).get("candidate_rows", ())}
+    roles = {r["region_id"]: r for r in
+             hyb.get("roles", {}).get("quarantine_hits", ())}
+    topo = hyb.get("TOPOLOGY_SCORE_can_it_find_the_room") or {}
+    per_region = topo.get("per_region") or {}
+    dims = {}
+    for row in (hyb.get("document_dimension_vs_vector") or {}).get(
+            "rows", ()):
+        dims.setdefault(str(row.get("subject", "")).split("/")[0], []
+                        ).append(row.get("verdict"))
+
+    out = []
+    for rid, cand in sorted(regions.items()):
+        held = (per_region.get(rid) or {}).get("expected_spaces", [])
+        cov = cand.get("boundary_source_coverage", {})
+        out.append({
+            "space_candidate": cand.get("candidate_id"),
+            "region_id": rid,
+            "semantic_label": ", ".join(held),
+            "topology_status": (per_region.get(rid) or {}).get(
+                "verdict", "NOT_SCORED"),
+            "identity_status": ("ONE_LABELLED_SPACE" if len(held) == 1
+                                else "SEVERAL_LABELLED_SPACES"
+                                if held else "NO_LABELLED_SPACE"),
+            "boundary_source_coverage_pct": cov.get("measured_pct"),
+            "vector_measured_pct": cov.get("production_eligible_pct"),
+            "unresolved_pct": cov.get("unresolved_pct"),
+            "portal_dependencies": (
+                "every portal on this sheet is SAME_DRAWING evidence only"),
+            "document_dimension_agreement": sorted(set(
+                dims.get(held[0], ()) if len(held) == 1 else ())) or None,
+            "diagnostic_or_release": cand.get("measurement_status"),
+            "area_m2": cand.get("area_m2"),
+            "blocker": (None if cand.get("polygon_closed") else
+                        f"{cov.get('unresolved_intervals')} boundary "
+                        "run(s) found no source geometry"),
+            "identity_quarantine": rid in roles,
+        })
+    return out
+
+
 def bundle(space_map_path: Path = DEFAULT_SPACE_MAP,
            pdf: Path = DEFAULT_PDF, *, measure: bool = True,
            diagnostic_path: Path = Path(
@@ -734,6 +783,18 @@ def bundle(space_map_path: Path = DEFAULT_SPACE_MAP,
         "unresolved_stroke_impact": _r.get("unresolved_stroke_impact"),
         # The frozen control, asserted rather than assumed.
         "freeze_guard": _frozen.get("freeze_guard"),
+        # §23 — HYBRID SPACE QA. One row per topology region / matched
+        # space, with the four answers kept apart: was it FOUND, what does
+        # it MEASURE, what IS it, and may it be RELEASED. The owner-facing
+        # workbook shows none of the pixel masks or algorithm details
+        # below; this is the diagnostics workbook.
+        "hybrid_space_qa": _hybrid_rows(_r),
+        "hybrid_topology_score": _r.get("hybrid_pdf_topology", {}).get(
+            "TOPOLOGY_SCORE_can_it_find_the_room"),
+        "hybrid_measurement_score": _r.get("hybrid_pdf_topology", {}).get(
+            "MEASUREMENT_SCORE_can_it_measure_the_room"),
+        "hybrid_gate": _r.get("hybrid_pdf_topology", {}).get("GATE"),
+        "document_observations": _r.get("document_observations_read"),
         "space_leaks": (
             _r.get("space_leak_maps", {}).get("top_ranked", ())
             + _r.get("space_leak_maps", {}).get("hairline_junction_gaps", ())),
