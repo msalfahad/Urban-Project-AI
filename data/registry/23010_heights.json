@@ -1,0 +1,34 @@
+{
+  "project": "23010",
+  "version": "2.0",
+  "effective_from": "2026-09-14",
+  "_note": "Keyed by truth domain. DESIGN is what production quantities read. SITE is kept separately and never overwrites DESIGN; E30 reports the variance between them. A height that is absent is HEIGHT_REQUIRED, which routes to the owner — it is never filled in with a plausible number to remove the warning.",
+  "domains": {
+    "DESIGN": {
+      "ceramic_height": {
+        "height_id": "23010:DESIGN:ceramic_height",
+        "value_m": "3.00",
+        "source_type": "APPROVED_PROJECT_RULE",
+        "source": "Urban Projects owner rule for Project 23010, recorded in data/trade_rules/23010_ceramic.json. NOT read from a section on AR-00.",
+        "validation_status": "VALIDATED",
+        "approval_status": "APPROVED",
+        "approved_by": "Urban Projects owner",
+        "approved_on": "2026-09-13",
+        "rule_version": "1.0"
+      },
+      "plaster_height": {
+        "height_id": "23010:DESIGN:plaster_height",
+        "value_m": "3.20",
+        "source_type": "APPROVED_PROJECT_RULE",
+        "source": "Urban Projects owner rule for Project 23010, recorded in data/trade_rules/23010_plaster.json. NOT read from a section on AR-00.",
+        "validation_status": "VALIDATED",
+        "approval_status": "APPROVED",
+        "approved_by": "Urban Projects owner",
+        "approved_on": "2026-09-13",
+        "rule_version": "1.0"
+      }
+    },
+    "SITE": {},
+    "COMMERCIAL": {}
+  }
+}

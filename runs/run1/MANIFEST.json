@@ -1,0 +1,136 @@
+{
+  "run_label": "RUN 1 — OFFICIAL BLIND ACCEPTANCE RUN",
+  "project_id": "23010",
+  "drawing_id": "AR-00",
+  "drawing_revision": "MAR.2023",
+  "floor_id": "2F",
+  "semantic_schema_version": "3.0",
+  "acceptance_status": "SCORED",
+  "verdict": "READY_WITH_RESTRICTIONS",
+  "benchmark_seal": "opened at scoring, after every output was frozen and the geometry re-hashed",
+  "geometry_sha256_before": "83fc1037cff6154072be02e7f1b6d271cbca6cd394a5002dd43f02621d48a583",
+  "geometry_sha256_after": "83fc1037cff6154072be02e7f1b6d271cbca6cd394a5002dd43f02621d48a583",
+  "geometry_identical": true,
+  "runs": {
+    "a1": {
+      "run_id": "a1-b2043a74",
+      "model": "claude-fable-5-1",
+      "effort": "high",
+      "max_tokens": 96000,
+      "timestamp": "2026-09-13T20:26:32Z",
+      "seconds": 284.6,
+      "schema_valid": true
+    },
+    "a2blind": {
+      "run_id": "a2blind-3e7721b4",
+      "model": "claude-fable-5-1",
+      "effort": "high",
+      "max_tokens": 96000,
+      "timestamp": "2026-09-13T20:28:01Z",
+      "seconds": 364.6,
+      "schema_valid": true
+    },
+    "a2_challenger": {
+      "run_id": "a2chal-50f1f983",
+      "model": "claude-fable-5-1",
+      "timestamp": "2026-09-13T20:31:25Z",
+      "seconds": 142.1,
+      "schema_valid": true,
+      "verdict": "CHALLENGE_HIGH",
+      "blocking_count": 2
+    }
+  },
+  "attempt_1": {
+    "outcome": "REJECTED AT THE SCHEMA BOUNDARY",
+    "reason": "both agents wrote space_function as the label restated in title case (\"Bathroom\" under BATHROOM); 3 records of 72",
+    "action": "both prompts clarified on that format rule only; fresh contexts; attempt 1 output was never fed to attempt 2",
+    "archived": "data/runs/run1/attempt1/"
+  },
+  "headline": {
+    "semantic_label_accuracy": {
+      "a1_strict": 0.8889,
+      "a1_with_alternatives": 1.0,
+      "a2_strict": 0.8611,
+      "a2_with_alternatives": 0.9722
+    },
+    "scope_accuracy": {
+      "a1": 0.8333,
+      "a2": 0.6944
+    },
+    "false_IN_SCOPE": {
+      "a1": 0,
+      "a2": 9,
+      "a2_m2": 114.32
+    },
+    "apartment_accuracy": {
+      "a1": 0.9259,
+      "a2": 0.963,
+      "scored": 27,
+      "excluded": 9
+    },
+    "zone_accuracy": "NOT_MEASURED",
+    "same_model_blind_agreement": 0.9722,
+    "false_agreement": 0,
+    "false_disagreement": 0
+  },
+  "safety_counters_all_must_be_zero": {
+    "geometry_mutation_attempts": {
+      "a1": 0,
+      "a2": 0
+    },
+    "accepted_geometry_mutations": 0,
+    "geometry_sha256_before": "83fc1037cff6154072be02e7f1b6d271cbca6cd394a5002dd43f02621d48a583",
+    "benchmark_leakage_in_input": {
+      "395.67": false,
+      "397.30": false,
+      "322.50": false,
+      "102.70": false,
+      "qiyal": false,
+      "measurer": false,
+      "كيال": false,
+      "benchmark": false,
+      "ground truth": false,
+      "ground_truth": false
+    },
+    "benchmark_leakage_count": 0,
+    "agent_mentioned_a_benchmark": {},
+    "geometry_challenges": {},
+    "unsupported_assumption_count": 0,
+    "default_fallback_violations": 0,
+    "quantity_released_despite_semantic_conflict": 0
+  },
+  "artifacts_sha256": {
+    "a1_raw.txt": "368ace09931fe5831b92eca11568e075a8dca63bbd3e4cef9d72cf215c568843",
+    "a1_result.json": "182ba930c3eb74847f50e709af7ff276ecbcdbf7ab59ae6a648e10d7cb2482cd",
+    "a1_user.txt": "9c2ca1bf1d5d742ee579ddfc091033d54d9e7446a148210b10a545a03f71b7f3",
+    "a2blind_raw.txt": "652eda88866c7b93b25ae534a065400c236f65d312af6bc44b5aa13193313b69",
+    "a2blind_result.json": "adab95cfc93b02df67537633e79f8510ee7b18e719d213a413744e8cdaee7385",
+    "a2blind_user.txt": "9c2ca1bf1d5d742ee579ddfc091033d54d9e7446a148210b10a545a03f71b7f3",
+    "alias_private.json": "ae6363234ede10f7fb6cb6a78dc9acae2deba58a29204ed92e3d1b4c1d8aeb61",
+    "attempt1/a1_raw.txt": "1494389815d2081cfdb4ab6c3af21a0a9d2c4e4c5a247e86c5d488a1d49b91d9",
+    "attempt1/a1_result.json": "73590b46871637a294cd75458fc830da017924e53b3fc0c0fc16d70f55a2eec8",
+    "attempt1/a1_user.txt": "9c2ca1bf1d5d742ee579ddfc091033d54d9e7446a148210b10a545a03f71b7f3",
+    "attempt1/a2blind_raw.txt": "8c71b4448fe1c360cfa71b6155a2983ee50f349bed9792272eaa203a124c3bd6",
+    "attempt1/a2blind_result.json": "3ca89f9a0773ce5a9d09055992cf3c57f933ad690e326a11ff816439d59be8ad",
+    "attempt1/a2blind_user.txt": "9c2ca1bf1d5d742ee579ddfc091033d54d9e7446a148210b10a545a03f71b7f3",
+    "challenger.py": "924a189230ea85132c4bbea47631d0e853b9bab10e1a3e06bef4bfaa327c2d2a",
+    "challenger_raw.txt": "c78af4e486d91e2444abd53eff14fb498811201d82e52811a9241bc61b0343dc",
+    "challenger_result.json": "e78ea8f48b22d5f93007941a2ba20b4cf3c940d478ee67ddbdc2863b14ddb3bb",
+    "challenger_user.txt": "9db861b24a5cef0a0bac39132ebc09f59de45a63aff141bba9537496d4ffb3de",
+    "compare.py": "7b96e8f8990b83adaf52283e06e9ad7bab1335644d91d5b0801d9d44e07394e4",
+    "e27_assemble.py": "d48ef039f32a4dc3bb8e0d0726c699328b3b2fbdea674aa29803ab881194c7fe",
+    "e27_result.json": "ef7c6f1d1090d53d2a62d3114934ab6b0c0e8ddbd937d6160af04d7e2a13afec",
+    "e32_result.json": "f90afdffcb42c43fe76c56bc3857ab2dbb93562a38a4517092c3c8925aaf84ff",
+    "freeze.py": "efb8a04af6170ca4d68a7e113498d6e981289ded1cd6345a0c127571cf101304",
+    "frozen.json": "c21df0cf62e4b30432f53caa526747d7978d39decdcd70b425cbac57120911f0",
+    "frozen_after.json": "c21df0cf62e4b30432f53caa526747d7978d39decdcd70b425cbac57120911f0",
+    "key.py": "6a2dc6eec0abb19d7ab589ada42cd98f972c7e721413ed7bc829b21fbfd2bb26",
+    "package.json": "077f0b59879fd6666b0e0a6fb1aa6dedb97b9fa1a2a9a000093b6afbadb5260b",
+    "package.py": "06cc19849fdc1a0bc1df58e4444cb7bdfa5e811966f2b0a9a59e74efe8f573fb",
+    "rehash.py": "30aeb7abbcb8bcb1d9e23c16be7b4ee4060432a57373ce869d0c1c56f6104cc5",
+    "run1_score.json": "7eed248499c8c66a419881b7ec0f1a80269a59f40530b98ea8d44a6e2501703c",
+    "run_agent.py": "1540824b215b16822b3a1404254230c5ced059565bc3cc600df028262fd34c04",
+    "score.py": "06bebb41e9bf1764b1e2f325308dec6d0fe3acebe87f63c07c349c0e4b845f15"
+  },
+  "artifacts_location": "data/runs/run1/ (gitignored — carries client room dimensions)"
+}

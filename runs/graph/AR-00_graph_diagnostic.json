@@ -1,0 +1,1417 @@
+{
+  "clusters": {
+    "ambiguous": 0,
+    "merged_by_incidence": 86,
+    "rejected": 0,
+    "subdivided": 26,
+    "valid": 342
+  },
+  "components": [
+    {
+      "bbox_mm": [
+        8156,
+        6874,
+        33399,
+        46674
+      ],
+      "component_id": "GC-0001",
+      "edges": 8,
+      "junctions": 6,
+      "likely_cause": "A_GENUINE_SEPARATE_PHYSICAL_GEOMETRY",
+      "separation_bands": {
+        "180-260": 6,
+        "60-120": 2
+      },
+      "share_of_length_pct": 35.46,
+      "size_class": "MAJOR_BUILDING_COMPONENT",
+      "source_object_count": 6,
+      "termini": 2,
+      "total_length_m": 129.0
+    },
+    {
+      "bbox_mm": [
+        13697,
+        13424,
+        18598,
+        18574
+      ],
+      "component_id": "GC-0002",
+      "edges": 21,
+      "junctions": 13,
+      "likely_cause": "A_GENUINE_SEPARATE_PHYSICAL_GEOMETRY",
+      "separation_bands": {
+        "120-180": 1,
+        "180-260": 2,
+        "260-400": 8,
+        "60-120": 10
+      },
+      "share_of_length_pct": 6.07,
+      "size_class": "MAJOR_BUILDING_COMPONENT",
+      "source_object_count": 12,
+      "termini": 8,
+      "total_length_m": 22.1
+    },
+    {
+      "bbox_mm": [
+        4275,
+        38684,
+        4783,
+        39589
+      ],
+      "component_id": "GC-0003",
+      "edges": 31,
+      "junctions": 15,
+      "likely_cause": "A_GENUINE_SEPARATE_PHYSICAL_GEOMETRY",
+      "separation_bands": {
+        "60-120": 31
+      },
+      "share_of_length_pct": 4.16,
+      "size_class": "MAJOR_BUILDING_COMPONENT",
+      "source_object_count": 31,
+      "termini": 0,
+      "total_length_m": 15.15
+    },
+    {
+      "bbox_mm": [
+        3648,
+        38867,
+        3956,
+        40149
+      ],
+      "component_id": "GC-0004",
+      "edges": 22,
+      "junctions": 11,
+      "likely_cause": "A_GENUINE_SEPARATE_PHYSICAL_GEOMETRY",
+      "separation_bands": {
+        "60-120": 22
+      },
+      "share_of_length_pct": 4.1,
+      "size_class": "MAJOR_BUILDING_COMPONENT",
+      "source_object_count": 22,
+      "termini": 0,
+      "total_length_m": 14.91
+    },
+    {
+      "bbox_mm": [
+        26297,
+        23049,
+        31298,
+        27049
+      ],
+      "component_id": "GC-0005",
+      "edges": 6,
+      "junctions": 3,
+      "likely_cause": "A_GENUINE_SEPARATE_PHYSICAL_GEOMETRY",
+      "separation_bands": {
+        "120-180": 6
+      },
+      "share_of_length_pct": 3.17,
+      "size_class": "MAJOR_BUILDING_COMPONENT",
+      "source_object_count": 6,
+      "termini": 4,
+      "total_length_m": 11.52
+    },
+    {
+      "bbox_mm": [
+        26223,
+        18874,
+        31298,
+        23049
+      ],
+      "component_id": "GC-0006",
+      "edges": 3,
+      "junctions": 2,
+      "likely_cause": "A_GENUINE_SEPARATE_PHYSICAL_GEOMETRY",
+      "separation_bands": {
+        "120-180": 2,
+        "180-260": 1
+      },
+      "share_of_length_pct": 2.81,
+      "size_class": "MAJOR_BUILDING_COMPONENT",
+      "source_object_count": 3,
+      "termini": 2,
+      "total_length_m": 10.22
+    },
+    {
+      "bbox_mm": [
+        10697,
+        26449,
+        13772,
+        28199
+      ],
+      "component_id": "GC-0007",
+      "edges": 3,
+      "junctions": 2,
+      "likely_cause": "A_GENUINE_SEPARATE_PHYSICAL_GEOMETRY",
+      "separation_bands": {
+        "120-180": 3
+      },
+      "share_of_length_pct": 2.09,
+      "size_class": "MAJOR_BUILDING_COMPONENT",
+      "source_object_count": 3,
+      "termini": 2,
+      "total_length_m": 7.6
+    },
+    {
+      "bbox_mm": [
+        10697,
+        22099,
+        16947,
+        22099
+      ],
+      "component_id": "GC-0008",
+      "edges": 1,
+      "junctions": 0,
+      "likely_cause": "G_JUNCTION_NOT_STITCHED",
+      "separation_bands": {
+        "120-180": 1
+      },
+      "share_of_length_pct": 1.72,
+      "size_class": "SMALL_ISOLATED_COMPONENT",
+      "source_object_count": 1,
+      "termini": 2,
+      "total_length_m": 6.25
+    },
+    {
+      "bbox_mm": [
+        3351,
+        39081,
+        3453,
+        41533
+      ],
+      "component_id": "GC-0009",
+      "edges": 9,
+      "junctions": 11,
+      "likely_cause": "J_UNRESOLVED",
+      "separation_bands": {
+        "60-120": 9
+      },
+      "share_of_length_pct": 1.7,
+      "size_class": "SMALL_ISOLATED_COMPONENT",
+      "source_object_count": 9,
+      "termini": 3,
+      "total_length_m": 6.2
+    },
+    {
+      "bbox_mm": [
+        22199,
+        29649,
+        26149,
+        31450
+      ],
+      "component_id": "GC-0010",
+      "edges": 3,
+      "junctions": 2,
+      "likely_cause": "J_UNRESOLVED",
+      "separation_bands": {
+        "120-180": 3
+      },
+      "share_of_length_pct": 1.5,
+      "size_class": "SMALL_ISOLATED_COMPONENT",
+      "source_object_count": 3,
+      "termini": 2,
+      "total_length_m": 5.45
+    },
+    {
+      "bbox_mm": [
+        24300,
+        14273,
+        24897,
+        18774
+      ],
+      "component_id": "GC-0011",
+      "edges": 3,
+      "junctions": 1,
+      "likely_cause": "J_UNRESOLVED",
+      "separation_bands": {
+        "120-180": 2,
+        "180-260": 1
+      },
+      "share_of_length_pct": 1.4,
+      "size_class": "SMALL_ISOLATED_COMPONENT",
+      "source_object_count": 2,
+      "termini": 3,
+      "total_length_m": 5.1
+    },
+    {
+      "bbox_mm": [
+        17422,
+        26999,
+        19373,
+        27799
+      ],
+      "component_id": "GC-0012",
+      "edges": 4,
+      "junctions": 4,
+      "likely_cause": "J_UNRESOLVED",
+      "separation_bands": {
+        "120-180": 4
+      },
+      "share_of_length_pct": 1.35,
+      "size_class": "SMALL_ISOLATED_COMPONENT",
+      "source_object_count": 4,
+      "termini": 0,
+      "total_length_m": 4.9
+    },
+    {
+      "bbox_mm": [
+        10697,
+        12449,
+        15198,
+        12449
+      ],
+      "component_id": "GC-0013",
+      "edges": 1,
+      "junctions": 0,
+      "likely_cause": "G_JUNCTION_NOT_STITCHED",
+      "separation_bands": {
+        "120-180": 1
+      },
+      "share_of_length_pct": 1.24,
+      "size_class": "SMALL_ISOLATED_COMPONENT",
+      "source_object_count": 1,
+      "termini": 2,
+      "total_length_m": 4.5
+    },
+    {
+      "bbox_mm": [
+        22273,
+        21675,
+        24748,
+        23699
+      ],
+      "component_id": "GC-0014",
+      "edges": 2,
+      "junctions": 1,
+      "likely_cause": "J_UNRESOLVED",
+      "separation_bands": {
+        "120-180": 2
+      },
+      "share_of_length_pct": 1.2,
+      "size_class": "SMALL_ISOLATED_COMPONENT",
+      "source_object_count": 2,
+      "termini": 2,
+      "total_length_m": 4.35
+    },
+    {
+      "bbox_mm": [
+        22724,
+        26999,
+        24597,
+        27799
+      ],
+      "component_id": "GC-0015",
+      "edges": 3,
+      "junctions": 2,
+      "likely_cause": "J_UNRESOLVED",
+      "separation_bands": {
+        "120-180": 3
+      },
+      "share_of_length_pct": 1.17,
+      "size_class": "SMALL_ISOLATED_COMPONENT",
+      "source_object_count": 3,
+      "termini": 2,
+      "total_length_m": 4.25
+    },
+    {
+      "bbox_mm": [
+        18547,
+        9924,
+        20097,
+        12523
+      ],
+      "component_id": "GC-0016",
+      "edges": 2,
+      "junctions": 1,
+      "likely_cause": "J_UNRESOLVED",
+      "separation_bands": {
+        "60-120": 2
+      },
+      "share_of_length_pct": 1.11,
+      "size_class": "SMALL_ISOLATED_COMPONENT",
+      "source_object_count": 2,
+      "termini": 2,
+      "total_length_m": 4.05
+    },
+    {
+      "bbox_mm": [
+        20799,
+        14199,
+        24300,
+        14199
+      ],
+      "component_id": "GC-0017",
+      "edges": 1,
+      "junctions": 0,
+      "likely_cause": "G_JUNCTION_NOT_STITCHED",
+      "separation_bands": {
+        "120-180": 1
+      },
+      "share_of_length_pct": 0.96,
+      "size_class": "SMALL_ISOLATED_COMPONENT",
+      "source_object_count": 1,
+      "termini": 2,
+      "total_length_m": 3.5
+    },
+    {
+      "bbox_mm": [
+        29398,
+        38324,
+        29398,
+        41646
+      ],
+      "component_id": "GC-0018",
+      "edges": 1,
+      "junctions": 0,
+      "likely_cause": "G_JUNCTION_NOT_STITCHED",
+      "separation_bands": {
+        "180-260": 1
+      },
+      "share_of_length_pct": 0.91,
+      "size_class": "SMALL_ISOLATED_COMPONENT",
+      "source_object_count": 1,
+      "termini": 2,
+      "total_length_m": 3.32
+    },
+    {
+      "bbox_mm": [
+        28627,
+        31525,
+        29374,
+        34049
+      ],
+      "component_id": "GC-0019",
+      "edges": 2,
+      "junctions": 1,
+      "likely_cause": "J_UNRESOLVED",
+      "separation_bands": {
+        "120-180": 2
+      },
+      "share_of_length_pct": 0.86,
+      "size_class": "SMALL_ISOLATED_COMPONENT",
+      "source_object_count": 2,
+      "termini": 2,
+      "total_length_m": 3.12
+    },
+    {
+      "bbox_mm": [
+        27200,
+        31525,
+        27971,
+        34049
+      ],
+      "component_id": "GC-0020",
+      "edges": 2,
+      "junctions": 1,
+      "likely_cause": "J_UNRESOLVED",
+      "separation_bands": {
+        "120-180": 1,
+        "180-260": 1
+      },
+      "share_of_length_pct": 0.86,
+      "size_class": "SMALL_ISOLATED_COMPONENT",
+      "source_object_count": 2,
+      "termini": 2,
+      "total_length_m": 3.12
+    }
+  ],
+  "connectivity": {
+    "by_size_class": {
+      "MAJOR_BUILDING_COMPONENT": 7,
+      "MICRO_OR_NOISE_COMPONENT": 59,
+      "SMALL_ISOLATED_COMPONENT": 49
+    },
+    "cause_histogram": {
+      "A_GENUINE_SEPARATE_PHYSICAL_GEOMETRY": 7,
+      "G_JUNCTION_NOT_STITCHED": 26,
+      "I_PROBABLE_NON_WALL_GEOMETRY": 59,
+      "J_UNRESOLVED": 23
+    },
+    "components": 115,
+    "largest_components": [
+      {
+        "bbox_mm": [
+          8156,
+          6874,
+          33399,
+          46674
+        ],
+        "component_id": "GC-0001",
+        "edges": 8,
+        "junctions": 6,
+        "likely_cause": "A_GENUINE_SEPARATE_PHYSICAL_GEOMETRY",
+        "separation_bands": {
+          "180-260": 6,
+          "60-120": 2
+        },
+        "share_of_length_pct": 35.46,
+        "size_class": "MAJOR_BUILDING_COMPONENT",
+        "source_object_count": 6,
+        "termini": 2,
+        "total_length_m": 129.0
+      },
+      {
+        "bbox_mm": [
+          13697,
+          13424,
+          18598,
+          18574
+        ],
+        "component_id": "GC-0002",
+        "edges": 21,
+        "junctions": 13,
+        "likely_cause": "A_GENUINE_SEPARATE_PHYSICAL_GEOMETRY",
+        "separation_bands": {
+          "120-180": 1,
+          "180-260": 2,
+          "260-400": 8,
+          "60-120": 10
+        },
+        "share_of_length_pct": 6.07,
+        "size_class": "MAJOR_BUILDING_COMPONENT",
+        "source_object_count": 12,
+        "termini": 8,
+        "total_length_m": 22.1
+      },
+      {
+        "bbox_mm": [
+          4275,
+          38684,
+          4783,
+          39589
+        ],
+        "component_id": "GC-0003",
+        "edges": 31,
+        "junctions": 15,
+        "likely_cause": "A_GENUINE_SEPARATE_PHYSICAL_GEOMETRY",
+        "separation_bands": {
+          "60-120": 31
+        },
+        "share_of_length_pct": 4.16,
+        "size_class": "MAJOR_BUILDING_COMPONENT",
+        "source_object_count": 31,
+        "termini": 0,
+        "total_length_m": 15.15
+      },
+      {
+        "bbox_mm": [
+          3648,
+          38867,
+          3956,
+          40149
+        ],
+        "component_id": "GC-0004",
+        "edges": 22,
+        "junctions": 11,
+        "likely_cause": "A_GENUINE_SEPARATE_PHYSICAL_GEOMETRY",
+        "separation_bands": {
+          "60-120": 22
+        },
+        "share_of_length_pct": 4.1,
+        "size_class": "MAJOR_BUILDING_COMPONENT",
+        "source_object_count": 22,
+        "termini": 0,
+        "total_length_m": 14.91
+      },
+      {
+        "bbox_mm": [
+          26297,
+          23049,
+          31298,
+          27049
+        ],
+        "component_id": "GC-0005",
+        "edges": 6,
+        "junctions": 3,
+        "likely_cause": "A_GENUINE_SEPARATE_PHYSICAL_GEOMETRY",
+        "separation_bands": {
+          "120-180": 6
+        },
+        "share_of_length_pct": 3.17,
+        "size_class": "MAJOR_BUILDING_COMPONENT",
+        "source_object_count": 6,
+        "termini": 4,
+        "total_length_m": 11.52
+      }
+    ],
+    "length_m_by_size_class": {
+      "MAJOR_BUILDING_COMPONENT": 210.5,
+      "MICRO_OR_NOISE_COMPONENT": 26.7,
+      "SMALL_ISOLATED_COMPONENT": 126.6
+    },
+    "major_components": 7,
+    "repairable_termini": 31,
+    "share_of_length_in_major_components_pct": 57.9,
+    "termini": 228,
+    "terminus_histogram": {
+      "DRAWING_FRAGMENT": 56,
+      "EXPECTED_OPENING_END": 32,
+      "EXTERIOR_END": 0,
+      "LIKELY_MISSING_CONNECTION": 31,
+      "PROBABLE_NON_WALL": 0,
+      "UNRESOLVED": 109
+    }
+  },
+  "cycle_capacity": [
+    {
+      "bbox_mm": [
+        4275.193010501099,
+        38683.58176817627,
+        4783.40450337143,
+        39589.17008822021
+      ],
+      "component_index": 96,
+      "edges": 31,
+      "independent_cycles": 17,
+      "nodes": 15,
+      "total_length_m": 15.15
+    },
+    {
+      "bbox_mm": [
+        3648.038628997803,
+        38867.403674145506,
+        3956.2093638725282,
+        40148.74523214112
+      ],
+      "component_index": 97,
+      "edges": 22,
+      "independent_cycles": 12,
+      "nodes": 11,
+      "total_length_m": 14.91
+    },
+    {
+      "bbox_mm": [
+        4229.237705876923,
+        39232.34159418946,
+        4272.489868496705,
+        39572.95123619385
+      ],
+      "component_index": 109,
+      "edges": 4,
+      "independent_cycles": 3,
+      "nodes": 2,
+      "total_length_m": 1.3
+    },
+    {
+      "bbox_mm": [
+        4409.004039498901,
+        49691.22424216309,
+        4545.518210501099,
+        50353.518782250976
+      ],
+      "component_index": 102,
+      "edges": 5,
+      "independent_cycles": 2,
+      "nodes": 4,
+      "total_length_m": 2.87
+    },
+    {
+      "bbox_mm": [
+        4265.731669749451,
+        46485.165830224614,
+        4311.686974373627,
+        47150.166262207036
+      ],
+      "component_index": 107,
+      "edges": 3,
+      "independent_cycles": 2,
+      "nodes": 2,
+      "total_length_m": 1.95
+    },
+    {
+      "bbox_mm": [
+        8155.71147649231,
+        6874.414604211426,
+        33398.679284967046,
+        46674.39402020264
+      ],
+      "component_index": 1,
+      "edges": 8,
+      "independent_cycles": 1,
+      "nodes": 8,
+      "total_length_m": 129.0
+    },
+    {
+      "bbox_mm": [
+        13697.377389019775,
+        13424.394420202638,
+        18598.373210021975,
+        18574.08893022461
+      ],
+      "component_index": 14,
+      "edges": 21,
+      "independent_cycles": 1,
+      "nodes": 21,
+      "total_length_m": 22.1
+    },
+    {
+      "bbox_mm": [
+        17422.45968997803,
+        26998.774723187256,
+        19372.855705490114,
+        27798.93775516968
+      ],
+      "component_index": 32,
+      "edges": 4,
+      "independent_cycles": 1,
+      "nodes": 4,
+      "total_length_m": 4.9
+    },
+    {
+      "bbox_mm": [
+        3376.3618579956055,
+        44373.926678198244,
+        3784.5528,
+        44836.183210180665
+      ],
+      "component_index": 75,
+      "edges": 6,
+      "independent_cycles": 1,
+      "nodes": 6,
+      "total_length_m": 1.69
+    },
+    {
+      "bbox_mm": [
+        3376.3618579956055,
+        44933.499072229,
+        3789.9594277450565,
+        46523.015318066406
+      ],
+      "component_index": 76,
+      "edges": 7,
+      "independent_cycles": 1,
+      "nodes": 7,
+      "total_length_m": 1.75
+    }
+  ],
+  "cycles_over_regions": {
+    "basis": "NECESSARY_CONDITION_ONLY",
+    "components_with_cycles": 12,
+    "regions_tested": 17,
+    "regions_with_a_possible_enclosing_cycle": 14,
+    "regions_with_no_possible_enclosing_cycle": 3,
+    "total_independent_cycles": 43,
+    "uncovered": [
+      "BTH-01",
+      "BTH-02",
+      "BTH-03"
+    ],
+    "why": "a region inside a cyclic component's bounding box MIGHT be enclosed by a face; one outside every such box certainly is not. Only face extraction can upgrade this to proof"
+  },
+  "e31a_gate": {
+    "diagnostic_only": [
+      "G4-CONCENTRATION"
+    ],
+    "failed": [
+      "G3-TERMINI",
+      "G5-EXPLAINED-DISCONNECTS",
+      "G8-CYCLES-IN-REAL-ROOMS"
+    ],
+    "gates": [
+      {
+        "gate_id": "G1-LENGTH",
+        "note": "",
+        "observed": "0.2 mm (epsilon 1.0 mm, absolute)",
+        "question": "Is unexplained wall-length drift within numerical epsilon?",
+        "status": "PASS",
+        "threshold": "abs(drift) <= 1.0 mm (ABSOLUTE, never a percentage), with duplicate removal itemised",
+        "why": "A face walk sums edges. Length that vanished without a reason is geometry the walk will not find, and a percentage tolerance would hide exactly the loss that matters."
+      },
+      {
+        "gate_id": "G2-CLUSTERS",
+        "note": "",
+        "observed": 0,
+        "question": "Is every over-spread cluster resolved or explicitly refused?",
+        "status": "PASS",
+        "threshold": "rejected_clusters == 0, or every one named in the exceptions",
+        "why": "An unresolved node is a place where the walk does not know which edges meet. It will either skip a turn or invent one."
+      },
+      {
+        "gate_id": "G3-TERMINI",
+        "note": "",
+        "observed": "109 of 228 termini unresolved",
+        "question": "Is every terminus classified?",
+        "status": "FAIL",
+        "threshold": "UNRESOLVED termini == 0",
+        "why": "An unclassified wall end is an open face boundary of unknown cause. The walk cannot tell a doorway from a missing wall, and one closes a room while the other leaves it open."
+      },
+      {
+        "gate_id": "G4-CONCENTRATION",
+        "note": "diagnostic only \u2014 does not gate, and a low value is not a failure",
+        "observed": "57.9% of wall length in 7 major components",
+        "question": "Where is the wall length concentrated?",
+        "status": "DIAGNOSTIC_ONLY",
+        "threshold": "DIAGNOSTIC ONLY \u2014 reported, never gating",
+        "why": "80% was a number I chose, not one the building justifies. Length concentration does not decide whether a face can be walked: a component holding 90% of the metres and no cycle bounds nothing, and one holding 3% around a shaft bounds a real room. The question that matters is G8's. This stays visible as a diagnostic so a regression is noticeable, and it does not gate."
+      },
+      {
+        "gate_id": "G5-EXPLAINED-DISCONNECTS",
+        "note": "",
+        "observed": "23 components with no explanation",
+        "question": "Is every disconnect either valid or explicitly unresolved?",
+        "status": "FAIL",
+        "threshold": "components with cause J_UNRESOLVED == 0",
+        "why": "An unexplained disconnect is an unknown: it may be a real separate structure or a wall the extractor lost. The walk gives a different answer for each and cannot tell which it is looking at."
+      },
+      {
+        "gate_id": "G6-JUNCTIONS",
+        "note": "",
+        "observed": "0 unresolved junctions, 4 corner overlaps, 1 true crossings",
+        "question": "Is there any systematic junction failure?",
+        "status": "PASS",
+        "threshold": "UNRESOLVED_JUNCTION == 0 and CORNER_OVERLAP correctly separated from TRUE_CROSS_JUNCTION",
+        "why": "Degree decides how many half-edges leave a node. A corner read as a crossing gives the walk four exits where there are two, and false half-edges make false rooms."
+      },
+      {
+        "gate_id": "G7-FRAGMENTATION",
+        "note": "",
+        "observed": "993 of 55144 short marks share a path with a long run",
+        "question": "Is source-path fragmentation understood?",
+        "status": "PASS",
+        "threshold": "measured and reported, whatever the answer",
+        "why": "If flattening broke architectural paths, the fragments must be reassembled before pairing; if it did not, reassembly would join unrelated geometry. The walk depends on which is true."
+      },
+      {
+        "gate_id": "G8-CYCLES-IN-REAL-ROOMS",
+        "note": "NECESSARY_CONDITION_ONLY",
+        "observed": "14 of 17 regions could be enclosed; 43 independent cycles in 12 components",
+        "question": "Do closed cycles exist where the raster says rooms are?",
+        "status": "FAIL",
+        "threshold": "every IN_SCOPE mapped region has at least one possibly-enclosing cycle (a NECESSARY condition; failure is conclusive, passing is not proof)",
+        "why": "This is the only gate that checks the graph against the building rather than against itself. A graph can satisfy every other gate and still describe no rooms. It is the most meaningful gate here and it now carries the weight G4 was wrongly given."
+      }
+    ],
+    "not_measured": [],
+    "passed": 4,
+    "ready_for_e31a": false,
+    "verdict": "NOT READY \u2014 3 gate(s) failing, 0 not yet measurable"
+  },
+  "end_caps": {
+    "found": 333,
+    "pen_weights": {
+      "0.0": 31,
+      "0.12": 19,
+      "0.24": 1,
+      "0.3": 140,
+      "0.36": 34,
+      "1.14": 108
+    },
+    "separation_bands_mm": {
+      "120-180": 62,
+      "180-260": 169,
+      "260-400": 16,
+      "60-120": 86
+    }
+  },
+  "extraction": {
+    "after_collinear_merge": 23066,
+    "collinear_join_mm": 25.0,
+    "merged_length_bands_mm": {
+      "100-300": 3096,
+      "1000-3000": 332,
+      "300-1000": 904,
+      "50-100": 3219,
+      "<50": 15396,
+      ">=3000": 119
+    },
+    "raw_length_bands_mm": {
+      "100-300": 4824,
+      "1000-3000": 502,
+      "300-1000": 1611,
+      "50-100": 5211,
+      "<50": 23589,
+      ">=3000": 98
+    }
+  },
+  "input": {
+    "page_rotation": 270,
+    "pdf": "data/golden/23010/inputs/AR-00_MAR2023.pdf"
+  },
+  "micro_edges": {
+    "by_decision": {
+      "COLLAPSIBLE_WITHOUT_TOPOLOGY_CHANGE": 2,
+      "KEEP_REAL_OR_UNPROVEN_FEATURE": 4
+    },
+    "deleted": 0,
+    "flagged": 6
+  },
+  "noded_graph": {
+    "COMPLEX_JUNCTION": 45,
+    "CONTINUATION": 22,
+    "CORNER_OVERLAP": 4,
+    "CROSS_JUNCTION": 0,
+    "L_JUNCTION": 34,
+    "TERMINUS": 228,
+    "TRUE_CROSS_JUNCTION": 1,
+    "T_JUNCTION": 8,
+    "UNRESOLVED_JUNCTION": 0,
+    "ambiguous_clusters": 0,
+    "duplicate_removed_length_mm": 23210.3,
+    "duplicate_resolutions": 85,
+    "edge_splits_performed": 25,
+    "edges": 264,
+    "graph_components": 115,
+    "length_accounted_mm": 387057.3,
+    "length_difference_mm": 0.2,
+    "micro_edges": 6,
+    "micro_edges_collapsible": 2,
+    "node_merges": 86,
+    "nodes": 342,
+    "over_spread_clusters": 0,
+    "post_split_total_length_mm": 363847.0,
+    "pre_split_total_length_mm": 387057.1,
+    "rejected_clusters": 0,
+    "subdivided_clusters": 26
+  },
+  "pairing": {
+    "separation_bands_mm": {
+      "120-180": 61,
+      "180-260": 30,
+      "260-400": 15,
+      "60-120": 190
+    },
+    "wall_pairs": 296
+  },
+  "pre_split_graph": {
+    "COMPLEX_JUNCTION": 20,
+    "CONTINUATION": 12,
+    "CROSS_JUNCTION": 5,
+    "L_JUNCTION": 43,
+    "OPENING_EDGE": 0,
+    "TERMINUS": 320,
+    "T_JUNCTION": 2,
+    "edges": 296,
+    "junctions": 402
+  },
+  "source": {
+    "angle_bands": {
+      "0": {
+        "segments": 16127,
+        "total_length_m": 1704.6
+      },
+      "10": {
+        "segments": 682,
+        "total_length_m": 29.1
+      },
+      "15": {
+        "segments": 757,
+        "total_length_m": 46.5
+      },
+      "20": {
+        "segments": 2255,
+        "total_length_m": 87.7
+      },
+      "25": {
+        "segments": 6372,
+        "total_length_m": 64.6
+      },
+      "30": {
+        "segments": 1360,
+        "total_length_m": 140.4
+      },
+      "35": {
+        "segments": 935,
+        "total_length_m": 33.6
+      },
+      "40": {
+        "segments": 492,
+        "total_length_m": 34.1
+      },
+      "45": {
+        "segments": 6891,
+        "total_length_m": 76.2
+      },
+      "5": {
+        "segments": 776,
+        "total_length_m": 37.3
+      },
+      "50": {
+        "segments": 470,
+        "total_length_m": 32.1
+      },
+      "55": {
+        "segments": 1372,
+        "total_length_m": 25.3
+      },
+      "60": {
+        "segments": 1302,
+        "total_length_m": 119.8
+      },
+      "65": {
+        "segments": 6477,
+        "total_length_m": 61.4
+      },
+      "70": {
+        "segments": 2734,
+        "total_length_m": 42.5
+      },
+      "75": {
+        "segments": 801,
+        "total_length_m": 43.2
+      },
+      "80": {
+        "segments": 929,
+        "total_length_m": 52.7
+      },
+      "85": {
+        "segments": 2017,
+        "total_length_m": 157.2
+      },
+      "90": {
+        "segments": 21399,
+        "total_length_m": 3809.0
+      }
+    },
+    "axis_aligned": 35835,
+    "not_linearised": {
+      "CURVE": 2399,
+      "DEGENERATE": 48,
+      "QUAD": 105
+    },
+    "path_fragmentation": {
+      "items_per_path": {
+        "1": 8048,
+        "2": 7825,
+        "3": 366,
+        "4": 304,
+        "5": 279,
+        "6": 201,
+        "7": 193,
+        "11": 220
+      },
+      "paths_with_segments": 19111,
+      "short_in_a_path_that_also_has_a_long_run": 993,
+      "short_in_a_path_with_no_long_run": 54151,
+      "short_segments": 55144
+    },
+    "paths": 19257,
+    "population_bands": [
+      {
+        "axis": "DIAGONAL",
+        "dashed": 0,
+        "mean_length_mm": 75.1,
+        "over_1000mm": 122,
+        "path_type": "FILL",
+        "paths": 6899,
+        "segments": 25608,
+        "stroke_width_pt": 0.0,
+        "total_length_m": 1923.2,
+        "under_50mm": 21042
+      },
+      {
+        "axis": "V",
+        "dashed": 0,
+        "mean_length_mm": 112.7,
+        "over_1000mm": 138,
+        "path_type": "FILL",
+        "paths": 8444,
+        "segments": 13369,
+        "stroke_width_pt": 0.0,
+        "total_length_m": 1506.5,
+        "under_50mm": 5770
+      },
+      {
+        "axis": "H",
+        "dashed": 0,
+        "mean_length_mm": 49.4,
+        "over_1000mm": 15,
+        "path_type": "STROKE",
+        "paths": 2105,
+        "segments": 8087,
+        "stroke_width_pt": 0.36,
+        "total_length_m": 399.7,
+        "under_50mm": 6959
+      },
+      {
+        "axis": "V",
+        "dashed": 0,
+        "mean_length_mm": 1696.5,
+        "over_1000mm": 102,
+        "path_type": "STROKE",
+        "paths": 228,
+        "segments": 229,
+        "stroke_width_pt": 1.14,
+        "total_length_m": 388.5,
+        "under_50mm": 0
+      },
+      {
+        "axis": "H",
+        "dashed": 0,
+        "mean_length_mm": 1504.7,
+        "over_1000mm": 104,
+        "path_type": "STROKE",
+        "paths": 231,
+        "segments": 233,
+        "stroke_width_pt": 1.14,
+        "total_length_m": 350.6,
+        "under_50mm": 4
+      },
+      {
+        "axis": "V",
+        "dashed": 0,
+        "mean_length_mm": 304.1,
+        "over_1000mm": 53,
+        "path_type": "STROKE",
+        "paths": 897,
+        "segments": 1024,
+        "stroke_width_pt": 0.3,
+        "total_length_m": 311.4,
+        "under_50mm": 801
+      },
+      {
+        "axis": "H",
+        "dashed": 0,
+        "mean_length_mm": 379.0,
+        "over_1000mm": 57,
+        "path_type": "STROKE",
+        "paths": 550,
+        "segments": 677,
+        "stroke_width_pt": 0.3,
+        "total_length_m": 256.6,
+        "under_50mm": 424
+      },
+      {
+        "axis": "V",
+        "dashed": 0,
+        "mean_length_mm": 54.9,
+        "over_1000mm": 47,
+        "path_type": "STROKE",
+        "paths": 1812,
+        "segments": 4661,
+        "stroke_width_pt": 0.36,
+        "total_length_m": 255.7,
+        "under_50mm": 4118
+      },
+      {
+        "axis": "DIAGONAL",
+        "dashed": 0,
+        "mean_length_mm": 27.0,
+        "over_1000mm": 2,
+        "path_type": "STROKE",
+        "paths": 4193,
+        "segments": 9088,
+        "stroke_width_pt": 0.36,
+        "total_length_m": 245.8,
+        "under_50mm": 8202
+      },
+      {
+        "axis": "H",
+        "dashed": 0,
+        "mean_length_mm": 31.4,
+        "over_1000mm": 0,
+        "path_type": "FILL",
+        "paths": 2789,
+        "segments": 6550,
+        "stroke_width_pt": 0.0,
+        "total_length_m": 205.7,
+        "under_50mm": 5222
+      },
+      {
+        "axis": "DIAGONAL",
+        "dashed": 0,
+        "mean_length_mm": 79.9,
+        "over_1000mm": 0,
+        "path_type": "STROKE",
+        "paths": 1326,
+        "segments": 2544,
+        "stroke_width_pt": 0.12,
+        "total_length_m": 203.3,
+        "under_50mm": 1456
+      },
+      {
+        "axis": "V",
+        "dashed": 0,
+        "mean_length_mm": 15087.5,
+        "over_1000mm": 8,
+        "path_type": "STROKE",
+        "paths": 7,
+        "segments": 8,
+        "stroke_width_pt": 0.72,
+        "total_length_m": 120.7,
+        "under_50mm": 0
+      }
+    ],
+    "segments": 74148
+  },
+  "stitching": {
+    "STITCH_AMBIGUOUS": 93,
+    "STITCH_PROBABLE": 2,
+    "STITCH_REJECTED": 19,
+    "STITCH_VALIDATED": 17,
+    "ambiguous_because_door_sized": 18,
+    "candidates": 131,
+    "evidence_histogram": {
+      "COLLINEAR_WITHIN_TOLERANCE": 131,
+      "COMPATIBLE_FACE_SEPARATION": 117,
+      "END_CAP_CLOSES_THIS_WALL": 12,
+      "GAP_BELOW_OPENING_SIZE": 102,
+      "JUNCTION_EXPLAINS_THE_BREAK": 7,
+      "SAME_AXIS": 131,
+      "SAME_WALL_PAIR_IDENTITY": 25
+    },
+    "rejected_by_end_cap": 12,
+    "validated_length_recovered_mm": 1200.2
+  },
+  "termini_sample": [
+    {
+      "angle_difference_deg": 0.0,
+      "edge_id": "WE-0074",
+      "gap_mm": 1184.2,
+      "kind": "UNRESOLVED",
+      "nearest_id": "WE-0078",
+      "node_id": "WN-00001",
+      "same_source_path": false,
+      "separation_difference_mm": 167.6,
+      "why_not_joined": "nearest neighbour has a different wall separation (168 mm apart), so it is not obviously the same wall",
+      "x_mm": 1786.8,
+      "y_mm": 5495.8
+    },
+    {
+      "angle_difference_deg": null,
+      "edge_id": "WE-0076",
+      "gap_mm": null,
+      "kind": "DRAWING_FRAGMENT",
+      "nearest_id": "",
+      "node_id": "WN-00002",
+      "same_source_path": false,
+      "separation_difference_mm": null,
+      "why_not_joined": "nothing else in the graph within 1200 mm: this run stands alone",
+      "x_mm": 1786.8,
+      "y_mm": 17880.7
+    },
+    {
+      "angle_difference_deg": null,
+      "edge_id": "WE-0077",
+      "gap_mm": null,
+      "kind": "DRAWING_FRAGMENT",
+      "nearest_id": "",
+      "node_id": "WN-00003",
+      "same_source_path": false,
+      "separation_difference_mm": null,
+      "why_not_joined": "nothing else in the graph within 1200 mm: this run stands alone",
+      "x_mm": 1786.8,
+      "y_mm": 21536.9
+    },
+    {
+      "angle_difference_deg": null,
+      "edge_id": "WE-0062",
+      "gap_mm": null,
+      "kind": "DRAWING_FRAGMENT",
+      "nearest_id": "",
+      "node_id": "WN-00004",
+      "same_source_path": false,
+      "separation_difference_mm": null,
+      "why_not_joined": "nothing else in the graph within 1200 mm: this run stands alone",
+      "x_mm": 1786.8,
+      "y_mm": 22750.6
+    },
+    {
+      "angle_difference_deg": 0.0,
+      "edge_id": "WE-0060",
+      "gap_mm": 642.0,
+      "kind": "UNRESOLVED",
+      "nearest_id": "WE-0075",
+      "node_id": "WN-00005",
+      "same_source_path": false,
+      "separation_difference_mm": 73.0,
+      "why_not_joined": "nearest neighbour has a different wall separation (73 mm apart), so it is not obviously the same wall",
+      "x_mm": 1786.8,
+      "y_mm": 14857.1
+    },
+    {
+      "angle_difference_deg": 0.0,
+      "edge_id": "WE-0075",
+      "gap_mm": 642.0,
+      "kind": "UNRESOLVED",
+      "nearest_id": "WE-0060",
+      "node_id": "WN-00006",
+      "same_source_path": false,
+      "separation_difference_mm": 73.0,
+      "why_not_joined": "nearest neighbour has a different wall separation (73 mm apart), so it is not obviously the same wall",
+      "x_mm": 1786.8,
+      "y_mm": 15499.1
+    },
+    {
+      "angle_difference_deg": 0.0,
+      "edge_id": "WE-0074",
+      "gap_mm": 873.4,
+      "kind": "UNRESOLVED",
+      "nearest_id": "WE-0078",
+      "node_id": "WN-00007",
+      "same_source_path": false,
+      "separation_difference_mm": 167.6,
+      "why_not_joined": "nearest neighbour has a different wall separation (168 mm apart), so it is not obviously the same wall",
+      "x_mm": 2097.7,
+      "y_mm": 5495.8
+    },
+    {
+      "angle_difference_deg": 0.0,
+      "edge_id": "WE-0060",
+      "gap_mm": 642.0,
+      "kind": "UNRESOLVED",
+      "nearest_id": "WE-0075",
+      "node_id": "WN-00008",
+      "same_source_path": false,
+      "separation_difference_mm": 73.0,
+      "why_not_joined": "nearest neighbour has a different wall separation (73 mm apart), so it is not obviously the same wall",
+      "x_mm": 2097.7,
+      "y_mm": 14857.1
+    },
+    {
+      "angle_difference_deg": null,
+      "edge_id": "WE-0076",
+      "gap_mm": null,
+      "kind": "DRAWING_FRAGMENT",
+      "nearest_id": "",
+      "node_id": "WN-00009",
+      "same_source_path": false,
+      "separation_difference_mm": null,
+      "why_not_joined": "nothing else in the graph within 1200 mm: this run stands alone",
+      "x_mm": 2097.7,
+      "y_mm": 17880.7
+    },
+    {
+      "angle_difference_deg": null,
+      "edge_id": "WE-0077",
+      "gap_mm": null,
+      "kind": "DRAWING_FRAGMENT",
+      "nearest_id": "",
+      "node_id": "WN-00010",
+      "same_source_path": false,
+      "separation_difference_mm": null,
+      "why_not_joined": "nothing else in the graph within 1200 mm: this run stands alone",
+      "x_mm": 2097.7,
+      "y_mm": 21536.9
+    },
+    {
+      "angle_difference_deg": null,
+      "edge_id": "WE-0062",
+      "gap_mm": null,
+      "kind": "DRAWING_FRAGMENT",
+      "nearest_id": "",
+      "node_id": "WN-00011",
+      "same_source_path": false,
+      "separation_difference_mm": null,
+      "why_not_joined": "nothing else in the graph within 1200 mm: this run stands alone",
+      "x_mm": 2097.7,
+      "y_mm": 22750.6
+    },
+    {
+      "angle_difference_deg": 0.0,
+      "edge_id": "WE-0075",
+      "gap_mm": 642.0,
+      "kind": "UNRESOLVED",
+      "nearest_id": "WE-0060",
+      "node_id": "WN-00012",
+      "same_source_path": false,
+      "separation_difference_mm": 73.0,
+      "why_not_joined": "nearest neighbour has a different wall separation (73 mm apart), so it is not obviously the same wall",
+      "x_mm": 2097.7,
+      "y_mm": 15499.1
+    },
+    {
+      "angle_difference_deg": null,
+      "edge_id": "WE-0061",
+      "gap_mm": null,
+      "kind": "DRAWING_FRAGMENT",
+      "nearest_id": "",
+      "node_id": "WN-00013",
+      "same_source_path": false,
+      "separation_difference_mm": null,
+      "why_not_joined": "nothing else in the graph within 1200 mm: this run stands alone",
+      "x_mm": 2492.4,
+      "y_mm": 9854.8
+    },
+    {
+      "angle_difference_deg": null,
+      "edge_id": "WE-0058",
+      "gap_mm": null,
+      "kind": "DRAWING_FRAGMENT",
+      "nearest_id": "",
+      "node_id": "WN-00014",
+      "same_source_path": false,
+      "separation_difference_mm": null,
+      "why_not_joined": "nothing else in the graph within 1200 mm: this run stands alone",
+      "x_mm": 2492.4,
+      "y_mm": 11094.2
+    },
+    {
+      "angle_difference_deg": null,
+      "edge_id": "WE-0024",
+      "gap_mm": null,
+      "kind": "DRAWING_FRAGMENT",
+      "nearest_id": "",
+      "node_id": "WN-00015",
+      "same_source_path": false,
+      "separation_difference_mm": null,
+      "why_not_joined": "nothing else in the graph within 1200 mm: this run stands alone",
+      "x_mm": 2492.4,
+      "y_mm": 13571.7
+    },
+    {
+      "angle_difference_deg": null,
+      "edge_id": "WE-0073",
+      "gap_mm": null,
+      "kind": "DRAWING_FRAGMENT",
+      "nearest_id": "",
+      "node_id": "WN-00016",
+      "same_source_path": false,
+      "separation_difference_mm": null,
+      "why_not_joined": "nothing else in the graph within 1200 mm: this run stands alone",
+      "x_mm": 2746.5,
+      "y_mm": 19117.4
+    },
+    {
+      "angle_difference_deg": null,
+      "edge_id": "WE-0061",
+      "gap_mm": null,
+      "kind": "DRAWING_FRAGMENT",
+      "nearest_id": "",
+      "node_id": "WN-00017",
+      "same_source_path": false,
+      "separation_difference_mm": null,
+      "why_not_joined": "nothing else in the graph within 1200 mm: this run stands alone",
+      "x_mm": 2806.0,
+      "y_mm": 9854.8
+    },
+    {
+      "angle_difference_deg": null,
+      "edge_id": "WE-0058",
+      "gap_mm": null,
+      "kind": "DRAWING_FRAGMENT",
+      "nearest_id": "",
+      "node_id": "WN-00018",
+      "same_source_path": false,
+      "separation_difference_mm": null,
+      "why_not_joined": "nothing else in the graph within 1200 mm: this run stands alone",
+      "x_mm": 2806.0,
+      "y_mm": 11094.2
+    },
+    {
+      "angle_difference_deg": null,
+      "edge_id": "WE-0024",
+      "gap_mm": null,
+      "kind": "DRAWING_FRAGMENT",
+      "nearest_id": "",
+      "node_id": "WN-00019",
+      "same_source_path": false,
+      "separation_difference_mm": null,
+      "why_not_joined": "nothing else in the graph within 1200 mm: this run stands alone",
+      "x_mm": 2806.0,
+      "y_mm": 13571.7
+    },
+    {
+      "angle_difference_deg": 0.0,
+      "edge_id": "WE-0078",
+      "gap_mm": 816.4,
+      "kind": "EXPECTED_OPENING_END",
+      "nearest_id": "WE-0079",
+      "node_id": "WN-00020",
+      "same_source_path": false,
+      "separation_difference_mm": 0.0,
+      "why_not_joined": "same wall continues beyond a gap of doorway size, which is what a doorway looks like and also what a missing run looks like \u2014 not decided here",
+      "x_mm": 2970.9,
+      "y_mm": 5474.1
+    }
+  ]
+}

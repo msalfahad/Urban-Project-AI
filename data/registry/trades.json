@@ -1,0 +1,318 @@
+{
+ "registry_version": "1.0",
+ "note": "Canonical trade IDs. A1 may only attach IDs from this registry; anything else is OTHER plus a trade_note. New recurring trades are added HERE, never invented in a prompt.",
+ "trades": [
+  {
+   "trade_id": "ARCHITECTURAL_FLOOR_FINISH",
+   "display_name_ar": "تشطيب أرضيات",
+   "display_name_en": "Floor finish",
+   "active": true,
+   "quantity_unit": "m2",
+   "rule_set_id": null
+  },
+  {
+   "trade_id": "ARCHITECTURAL_WALL_FINISH",
+   "display_name_ar": "تشطيب حوائط",
+   "display_name_en": "Wall finish",
+   "active": true,
+   "quantity_unit": "m2",
+   "rule_set_id": null
+  },
+  {
+   "trade_id": "SKIRTING_PROFILE",
+   "display_name_ar": "نعلة وبروفايل",
+   "display_name_en": "Skirting / profile",
+   "active": true,
+   "quantity_unit": "m",
+   "rule_set_id": null
+  },
+  {
+   "trade_id": "CEILING",
+   "display_name_ar": "أسقف",
+   "display_name_en": "Ceiling",
+   "active": true,
+   "quantity_unit": "m2",
+   "rule_set_id": null
+  },
+  {
+   "trade_id": "GYPSUM",
+   "display_name_ar": "جبس بورد",
+   "display_name_en": "Gypsum board",
+   "active": true,
+   "quantity_unit": "m2",
+   "rule_set_id": null
+  },
+  {
+   "trade_id": "PAINT",
+   "display_name_ar": "دهانات",
+   "display_name_en": "Paint",
+   "active": true,
+   "quantity_unit": "m2",
+   "rule_set_id": null
+  },
+  {
+   "trade_id": "PLASTER_INTERNAL",
+   "display_name_ar": "لياسة داخلية",
+   "display_name_en": "Internal plaster",
+   "active": true,
+   "quantity_unit": "m2",
+   "rule_set_id": null
+  },
+  {
+   "trade_id": "PLASTER_EXTERNAL",
+   "display_name_ar": "لياسة خارجية",
+   "display_name_en": "External plaster",
+   "active": true,
+   "quantity_unit": "m2",
+   "rule_set_id": null
+  },
+  {
+   "trade_id": "BLOCKWORK",
+   "display_name_ar": "بلوك",
+   "display_name_en": "Blockwork",
+   "active": true,
+   "quantity_unit": "m2",
+   "rule_set_id": null
+  },
+  {
+   "trade_id": "WATERPROOFING",
+   "display_name_ar": "عزل مائي",
+   "display_name_en": "Waterproofing",
+   "active": true,
+   "quantity_unit": "m2",
+   "rule_set_id": null
+  },
+  {
+   "trade_id": "THERMAL_INSULATION",
+   "display_name_ar": "عزل حراري",
+   "display_name_en": "Thermal insulation",
+   "active": true,
+   "quantity_unit": "m2",
+   "rule_set_id": null
+  },
+  {
+   "trade_id": "ROOFING",
+   "display_name_ar": "أعمال السطح",
+   "display_name_en": "Roofing",
+   "active": true,
+   "quantity_unit": "m2",
+   "rule_set_id": null
+  },
+  {
+   "trade_id": "MARBLE_STONE",
+   "display_name_ar": "رخام وحجر",
+   "display_name_en": "Marble / stone",
+   "active": true,
+   "quantity_unit": "m2",
+   "rule_set_id": null
+  },
+  {
+   "trade_id": "DOORS",
+   "display_name_ar": "أبواب",
+   "display_name_en": "Doors",
+   "active": true,
+   "quantity_unit": "count",
+   "rule_set_id": null
+  },
+  {
+   "trade_id": "WINDOWS_ALUMINIUM",
+   "display_name_ar": "نوافذ وألمنيوم",
+   "display_name_en": "Windows / aluminium",
+   "active": true,
+   "quantity_unit": "m2",
+   "rule_set_id": null
+  },
+  {
+   "trade_id": "GLASS",
+   "display_name_ar": "زجاج",
+   "display_name_en": "Glass",
+   "active": true,
+   "quantity_unit": "m2",
+   "rule_set_id": null
+  },
+  {
+   "trade_id": "JOINERY",
+   "display_name_ar": "نجارة",
+   "display_name_en": "Joinery",
+   "active": true,
+   "quantity_unit": "m2",
+   "rule_set_id": null
+  },
+  {
+   "trade_id": "HANDRAIL",
+   "display_name_ar": "درابزين",
+   "display_name_en": "Handrail",
+   "active": true,
+   "quantity_unit": "m",
+   "rule_set_id": null
+  },
+  {
+   "trade_id": "STAIRS_FINISH",
+   "display_name_ar": "تشطيب الدرج",
+   "display_name_en": "Stairs finish",
+   "active": true,
+   "quantity_unit": "m2",
+   "rule_set_id": null
+  },
+  {
+   "trade_id": "STRUCTURAL_CONCRETE",
+   "display_name_ar": "خرسانة إنشائية",
+   "display_name_en": "Structural concrete",
+   "active": true,
+   "quantity_unit": "m3",
+   "rule_set_id": null
+  },
+  {
+   "trade_id": "REBAR",
+   "display_name_ar": "حديد تسليح",
+   "display_name_en": "Rebar",
+   "active": true,
+   "quantity_unit": "kg",
+   "rule_set_id": null
+  },
+  {
+   "trade_id": "EXCAVATION",
+   "display_name_ar": "حفر",
+   "display_name_en": "Excavation",
+   "active": true,
+   "quantity_unit": "m3",
+   "rule_set_id": null
+  },
+  {
+   "trade_id": "BACKFILL",
+   "display_name_ar": "ردم",
+   "display_name_en": "Backfill",
+   "active": true,
+   "quantity_unit": "m3",
+   "rule_set_id": null
+  },
+  {
+   "trade_id": "PLUMBING",
+   "display_name_ar": "سباكة",
+   "display_name_en": "Plumbing",
+   "active": true,
+   "quantity_unit": "count",
+   "rule_set_id": null
+  },
+  {
+   "trade_id": "DRAINAGE",
+   "display_name_ar": "صرف صحي",
+   "display_name_en": "Drainage",
+   "active": true,
+   "quantity_unit": "m",
+   "rule_set_id": null
+  },
+  {
+   "trade_id": "SANITARY_FIXTURES",
+   "display_name_ar": "أطقم صحية",
+   "display_name_en": "Sanitary fixtures",
+   "active": true,
+   "quantity_unit": "count",
+   "rule_set_id": null
+  },
+  {
+   "trade_id": "ELECTRICAL",
+   "display_name_ar": "كهرباء",
+   "display_name_en": "Electrical",
+   "active": true,
+   "quantity_unit": "count",
+   "rule_set_id": null
+  },
+  {
+   "trade_id": "LIGHTING",
+   "display_name_ar": "إنارة",
+   "display_name_en": "Lighting",
+   "active": true,
+   "quantity_unit": "count",
+   "rule_set_id": null
+  },
+  {
+   "trade_id": "LOW_CURRENT",
+   "display_name_ar": "تيار خفيف",
+   "display_name_en": "Low current",
+   "active": true,
+   "quantity_unit": "count",
+   "rule_set_id": null
+  },
+  {
+   "trade_id": "FIRE_ALARM",
+   "display_name_ar": "إنذار حريق",
+   "display_name_en": "Fire alarm",
+   "active": true,
+   "quantity_unit": "count",
+   "rule_set_id": null
+  },
+  {
+   "trade_id": "FIRE_FIGHTING",
+   "display_name_ar": "مكافحة حريق",
+   "display_name_en": "Fire fighting",
+   "active": true,
+   "quantity_unit": "count",
+   "rule_set_id": null
+  },
+  {
+   "trade_id": "HVAC",
+   "display_name_ar": "تكييف",
+   "display_name_en": "HVAC",
+   "active": true,
+   "quantity_unit": "count",
+   "rule_set_id": null
+  },
+  {
+   "trade_id": "VENTILATION",
+   "display_name_ar": "تهوية",
+   "display_name_en": "Ventilation",
+   "active": true,
+   "quantity_unit": "count",
+   "rule_set_id": null
+  },
+  {
+   "trade_id": "ELEVATOR",
+   "display_name_ar": "مصعد",
+   "display_name_en": "Elevator",
+   "active": true,
+   "quantity_unit": "item",
+   "rule_set_id": null
+  },
+  {
+   "trade_id": "EXTERNAL_WORKS",
+   "display_name_ar": "أعمال خارجية",
+   "display_name_en": "External works",
+   "active": true,
+   "quantity_unit": "m2",
+   "rule_set_id": null
+  },
+  {
+   "trade_id": "LANDSCAPING",
+   "display_name_ar": "تنسيق حدائق",
+   "display_name_en": "Landscaping",
+   "active": true,
+   "quantity_unit": "m2",
+   "rule_set_id": null
+  },
+  {
+   "trade_id": "SWIMMING_POOL",
+   "display_name_ar": "مسبح",
+   "display_name_en": "Swimming pool",
+   "active": true,
+   "quantity_unit": "item",
+   "rule_set_id": null
+  },
+  {
+   "trade_id": "SMART_HOME",
+   "display_name_ar": "منزل ذكي",
+   "display_name_en": "Smart home",
+   "active": true,
+   "quantity_unit": "count",
+   "rule_set_id": null
+  },
+  {
+   "trade_id": "OTHER",
+   "display_name_ar": "أخرى",
+   "display_name_en": "Other",
+   "active": true,
+   "quantity_unit": "item",
+   "rule_set_id": null
+  }
+ ]
+}
