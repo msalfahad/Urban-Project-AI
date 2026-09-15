@@ -1181,3 +1181,59 @@ two distinct spaces and **108 have an unresolved relation**; of the 27
 labelled spaces found, **1** rests on an established partition. Those 108
 are overwhelmingly thin places in the render, not 108 doorways — which is
 exactly why none of them may assert a room relationship.
+
+## 43 · A SOURCE THE READER CANNOT SEE IS NOT A DRAWING WITH NO WALLS
+
+Project 2 arrived as a **400 dpi scan of a stamped municipality
+submission**: ten architectural sheets, `0` vector paths and `0` text
+objects on every one of them. The pipeline stopped at stage 1, where
+`engine/frames.py` refused to fit a frame:
+
+```
+no segments to fit with; a frame asserted without a measurement
+is the assumption this module exists to replace
+```
+
+That refusal is the invariant. An empty stroke population is an
+**UNREADABLE SOURCE**, and every reading of it as a fact about the building
+is false:
+
+| the empty input | the false reading | the true one |
+|---|---|---|
+| 0 wall-pen segments | "this sheet has no walls" | the reader cannot see this sheet |
+| 0 bands | "no double-line wall construction" | nothing was read to pair |
+| 0 supported lines | `A_WHOLE_SIDE_HAS_NO_DRAWN_LINE` | the side was never looked at |
+| 0 spaces measured | `COMPLETE_MEASUREMENT_RECALL = 0%` | recall is NOT_ESTABLISHED |
+
+The last row is the dangerous one, because `0 / n` is a number and prints
+like a result. A run that STOPPED and a run that FOUND NOTHING are different
+facts, and a stopped run therefore writes `run_outcome =
+STOPPED_BEFORE_COMPLETION` with every metric `NOT_ESTABLISHED` — never a
+zero.
+
+The same rule covers the human label set. `load_space_map` returns a
+`NoSpaceMap`, not an empty dict, because `0 of 0 labelled spaces found` is
+not 100% recall and is not 0% recall — **it is no measurement of recall at
+all**, and a plain empty list loses that distinction silently.
+
+**What decides readability is which copy of the drawing you were handed, not
+which office drew it.** The same project P7757 supplied, in one folder, a
+scanned architectural set with no vector content and a structural set
+plotted from CAD (`pdfplot11.hdi`) carrying full linework **and real PDF
+text objects**. Representation is a property of the FILE. It must be
+established per source, before anything reads it, by
+`tools/audit_submission_set.py` — which is why that census reports
+per page and not per document.
+
+## 44 · AN ARCHITECT'S PRINTED AREA TABLE IS A KNOWN TOTAL
+
+Project 2's submission set carries its own take-off on two sheets: floor
+areas, deductions, totals and percentage-of-plot figures. That is the same
+kind of object as a previous BOQ, a contractor quantity or a manual كيال —
+a **KNOWN TOTAL** — and on a second project it is the only independent check
+of whether the engine measured a real building.
+
+So the set is split BEFORE anything reads it
+(`tools/split_submission_set.py`), and the take-off part is registered in
+`engine.reference_mapping.SEALED` so `refuse_if_sealed` refuses it **by
+name**, from any path. A seal kept in memory is not a seal.

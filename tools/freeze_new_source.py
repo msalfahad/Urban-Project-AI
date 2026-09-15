@@ -78,7 +78,7 @@ def freeze(pdf: str, *, project_id: str, drawing_id: str,
             "until the drawing is supplied — and until it is, nothing here "
             "says anything about whether the engine generalises")
 
-    from engine.vector_pdf import read
+    from engine.vector_source import read
 
     src_hash = _hash(path)
     drawing = read(path)

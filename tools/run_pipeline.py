@@ -14,6 +14,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import traceback
 from collections import Counter
 from pathlib import Path
 
@@ -142,12 +143,23 @@ from tools.wall_v2_diagnostic import (probable_wall_faces, raster_ratio,
 
 PDF = "data/golden/23010/inputs/AR-00_MAR2023.pdf"
 DOC_CACHE = "data/golden/23010/doc_read_cache"
+# WHICH SOURCE THIS RUN READS. These are INPUT PATHS, not parameters of the
+# method: every threshold, tolerance and rule below is unchanged whichever
+# source is named here. They exist because a second project cannot be run
+# by a pipeline that names one file, and the gate requires the second
+# project to be read by THE SAME pipeline, not by a copy of it.
+INPUTS = {"pdf": PDF, "doc_cache": DOC_CACHE,
+          "space_map": "", "topology_overlay": "",
+          "project_id": "23010", "drawing_id": "AR-00",
+          "revision": "MAR.2023 (as plotted)", "floor_id": "2F"}
 # How near a graded barrier must be to a candidate opening to be
 # the portal on that frontier. One pixel pitch at 300 dpi is
 # 10.8 mm; this is a locating reach, never a measurement.
 HYBRID_PORTAL_REACH_MM = 60.0
 SPACE_MAP = "data/golden/23010/inputs/space_map_23010_2f.json"
 TOPOLOGY_OVERLAY = "data/golden/23010/topology_overlay.json"
+INPUTS["space_map"] = SPACE_MAP
+INPUTS["topology_overlay"] = TOPOLOGY_OVERLAY
 RUN_ID = "V2"
 
 CONTROLS = ("BTH-05", "BED-01", "STR-01", "OPEN-01")
@@ -344,9 +356,53 @@ def _grade_barrier(barrier):
         opening_width_mm=float(getattr(barrier, "opening_width_mm", 0.0)))
 
 
-def run(pdf: str = PDF) -> dict:
+class NoSpaceMap(dict):
+    """A space map that was never supplied, and says so on every read.
+
+    An unlabelled source is not a source whose rooms are all missing. The
+    difference matters at exactly one place — the recall denominators — and
+    it matters absolutely: 0 labelled spaces found out of 0 expected is NOT
+    0% recall, it is NO MEASUREMENT OF RECALL AT ALL. A dict of empty lists
+    would let that distinction be lost silently, so this type carries the
+    reason with it and the metrics read `labels_supplied` rather than
+    counting an empty list.
+    """
+
+    labels_supplied = False
+    why = ("no space map was supplied for this source. Room names, room "
+           "types and IN_SCOPE marks are HUMAN REFERENCE, and the gate "
+           "reads the automatic result before any human reference is "
+           "opened. Every label-denominated metric is NOT_ESTABLISHED here "
+           "— not zero")
+
+
+def load_space_map(path: str) -> dict:
+    """The human label set, or an explicit absence of one."""
+    if path and Path(path).exists():
+        sm = json.loads(Path(path).read_text(encoding="utf-8"))
+        sm["labels_supplied"] = True
+        return sm
+    sm = NoSpaceMap({
+        "project_id": INPUTS["project_id"],
+        "drawing_id": INPUTS["drawing_id"],
+        "drawing_revision": INPUTS["revision"],
+        "drawing_type": "ARCHITECTURAL",
+        "floor_id": INPUTS["floor_id"],
+        "source_file": Path(INPUTS["pdf"]).name,
+        "geometry_source": "AUTOMATIC ONLY",
+        "label_source": "NOT_SUPPLIED",
+        "scope_source": "NOT_SUPPLIED",
+        "spaces": [], "not_a_space": {"regions": []},
+        "known_gaps": [], "e25": {},
+        "labels_supplied": False,
+    })
+    return sm
+
+
+def run(pdf: str = "") -> dict:
+    pdf = pdf or INPUTS["pdf"]
     src_hash = hashlib.sha256(Path(pdf).read_bytes()).hexdigest()[:16]
-    sm = json.loads(Path(SPACE_MAP).read_text(encoding="utf-8"))
+    sm = load_space_map(INPUTS["space_map"])
     man = RunManifest(sm["project_id"], sm["drawing_id"],
                       sm["drawing_revision"], src_hash)
 
@@ -526,7 +582,12 @@ def run(pdf: str = PDF) -> dict:
 
     # §1-§3 — geometry and identity, as two answers. The overlay's stated
     # defects may only REJECT after the candidate exists, never build it.
-    overlay = json.loads(Path(TOPOLOGY_OVERLAY).read_text(encoding="utf-8"))
+    # An overlay is a HUMAN STATEMENT OF KNOWN DEFECTS. Absent one, there
+    # are no stated defects to reject with — which is not the same as a
+    # clean sheet, and nothing below may read it as one.
+    _ov = INPUTS["topology_overlay"]
+    overlay = (json.loads(Path(_ov).read_text(encoding="utf-8"))
+               if _ov and Path(_ov).exists() else {})
     by_face_space = {v: k for k, v in face_for_space.items()}
     identities = []
     for f in space_face_list:
@@ -1147,9 +1208,9 @@ def run(pdf: str = PDF) -> dict:
     # §7 / §18 — the document read, from its cache. Reading is a separate
     # tool (tools/read_document_text.py) so the pipeline stays free and
     # offline; absent a cache this reports NOT_READ rather than "no text".
-    _runs = glyph_locate(PDF)
+    _runs = glyph_locate(pdf)
     doc_read = read_document(
-        PDF, _runs.runs, cache_dir=DOC_CACHE,
+        pdf, _runs.runs, cache_dir=INPUTS["doc_cache"],
         drawing_id=sm["drawing_id"], revision=sm["drawing_revision"])
     doc_record = doc_read.record()
 
@@ -1837,7 +1898,7 @@ def run(pdf: str = PDF) -> dict:
             human_topology_validated=sum(
                 1 for v in overlay.get("spaces", {}).values()
                 if v.get("physical_topology") == "VALIDATED"),
-            validation_source=TOPOLOGY_OVERLAY),
+            validation_source=INPUTS["topology_overlay"]),
         "frozen_controls": {
             **freeze_summary(frozen),
             "frozen": [f.record() for f in frozen],
@@ -2002,12 +2063,56 @@ def run(pdf: str = PDF) -> dict:
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--json", default="runs/current/23010.json")
+    # Input selection only. Nothing here is a parameter of the method: the
+    # defaults reproduce the 23010 run exactly, and pointing the same code
+    # at another source is what the Project-2 gate requires.
+    ap.add_argument("--pdf", default=PDF)
+    ap.add_argument("--space-map", default=SPACE_MAP,
+                    help="human label set. Pass NONE to run with no labels")
+    ap.add_argument("--doc-cache", default=DOC_CACHE)
+    ap.add_argument("--topology-overlay", default=TOPOLOGY_OVERLAY,
+                    help="stated defects. Pass NONE to run with none")
+    ap.add_argument("--project-id", default="23010")
+    ap.add_argument("--drawing-id", default="AR-00")
+    ap.add_argument("--revision", default="MAR.2023 (as plotted)")
+    ap.add_argument("--floor-id", default="2F")
     a = ap.parse_args()
-    rep = run()
+    INPUTS.update(
+        pdf=a.pdf, doc_cache=a.doc_cache,
+        space_map=("" if a.space_map == "NONE" else a.space_map),
+        topology_overlay=("" if a.topology_overlay == "NONE"
+                          else a.topology_overlay),
+        project_id=a.project_id, drawing_id=a.drawing_id,
+        revision=a.revision, floor_id=a.floor_id)
+    # A run that stops is still a RESULT, and it is the result that matters
+    # most on an unseen source: it names the stage that could not proceed and
+    # the input it did not have. A traceback on the terminal is not a record,
+    # and "no output" is indistinguishable from "no rooms" once the terminal
+    # is closed. Nothing in `run` is caught — this wraps it from outside, so
+    # a successful run's report is byte-for-byte what it always was.
+    try:
+        rep = run()
+    except Exception as exc:  # noqa: BLE001 - recorded, not hidden
+        rep = {
+            "run_outcome": "STOPPED_BEFORE_COMPLETION",
+            "stopped_with": f"{type(exc).__name__}: {exc}",
+            "traceback": traceback.format_exc(),
+            "inputs": dict(INPUTS),
+            "what_this_is_not": (
+                "this is NOT a measurement of zero. No room was measured, no "
+                "topology was built and no metric below was computed. A "
+                "stopped run and a run that found nothing are different "
+                "facts, and reporting either as the other would be the same "
+                "error as calling an unestablished basis a measured zero"),
+            "every_metric_here": "NOT_ESTABLISHED",
+        }
     text = json.dumps(rep, indent=2, sort_keys=True, default=str)
     Path(a.json).parent.mkdir(parents=True, exist_ok=True)
     Path(a.json).write_text(text + "\n")
     print(f"wrote {a.json}")
+    if rep.get("run_outcome") == "STOPPED_BEFORE_COMPLETION":
+        print(rep["stopped_with"])
+        return
     print(json.dumps({k: rep[k] for k in
                       ("frame", "connectivity", "material_faces",
                        "space_boundary_faces")}, indent=1, default=str))

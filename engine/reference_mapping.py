@@ -45,7 +45,14 @@ REASONS = (AMBIGUOUS_NAME, NO_MATCH, DUPLICATE_CLAIM, BASIS_NOT_STATED,
            BASIS_INCOMPATIBLE, NO_VALUE)
 
 # Files this module refuses to open, whatever it is asked.
-SEALED = ("site_benchmark.json",)
+#
+# A sealed file is one that carries a KNOWN TOTAL for a project the engine
+# is being tested on: a site benchmark, a manual qiyal, a previous BOQ, or
+# an architect's own printed area take-off. Each is the only independent
+# check its project has, and a check that has been read is spent. The seal
+# is BY NAME because a rule kept in memory is not a rule.
+SEALED = ("site_benchmark.json",
+          "P7757_area_takeoff_benchmark.pdf")
 
 
 class SealedReferenceError(RuntimeError):

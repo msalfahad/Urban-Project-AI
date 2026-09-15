@@ -1,5 +1,12 @@
 # Project 2 — the gate, and what runs unchanged when it arrives
 
+> **STATUS: the gate has been run, and it neither passed nor failed — it did
+> not execute.** Project 2 arrived on 2026-09-15 as a 400 dpi scan of a
+> stamped municipality submission (VILLA P7757), with zero vector content on
+> every page. The pipeline stopped at stage 1. The frozen result and the
+> full audit are in **`docs/PROJECT_2_RESULT.md`**; the generalisation
+> questions below still have no second data point.
+
 AR-00 development is **stopped**. No further AR-00-specific improvement is
 permitted; the next automatic geometry capability waits for a second
 project.
