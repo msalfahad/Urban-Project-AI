@@ -133,7 +133,22 @@ def test_two_disconnected_blocks_each_get_their_own_exterior():
     res = faces_of(lines)
     assert len(res.bounded()) == 2
     assert sum(1 for f in res.faces if f.kind == UNBOUNDED) == 2
-    assert len({f.component_id for f in res.bounded()}) == 2
+    # PLANAR components: the two blocks share no edge. This used to be
+    # asserted on `component_id`, which passed only because that field was
+    # holding a face id — the §26 confusion.
+    assert len({f.planar_component_id for f in res.bounded()}) == 2
+    assert all(f.planar_component_id.startswith("PC-") for f in res.faces)
+
+
+def test_a_face_id_never_occupies_the_component_field():
+    """§26 — `component` held FACE-0003. A graph component and a planar walk
+    are different things and must not share a namespace."""
+    res = faces_of(box(0, 0, 4000, 4000))
+    for f in res.faces:
+        assert not f.component_id.startswith("FACE-")
+        assert not f.planar_component_id.startswith("FACE-")
+    # no graph component was supplied, so the graph field stays honestly empty
+    assert all(f.component_id == "" for f in res.faces)
 
 
 def test_a_door_sized_gap_leaves_the_face_open_rather_than_inventing_a_wall():

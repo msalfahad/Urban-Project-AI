@@ -238,3 +238,86 @@ not.
 A narrative clause is emitted only when every value it needs exists, and the
 export **refuses** a workbook whose narrative columns contain `None`, `null`
 or `NaN`. An absent value belongs in an empty cell.
+
+---
+
+## 11 · A CLOSED POLYGON IS NOT A ROOM
+
+The regression: `WSH-01 → VALIDATED_PHYSICAL_FACE`, for a genuinely sound
+1.981 m² cycle around the **hatched shaft beside the washroom**.
+
+Nothing about the geometry was wrong. One field was answering two questions,
+and they fail independently:
+
+| | |
+|---|---|
+| `VECTOR_FACE_GEOMETRY_STATUS` | is this a valid closed face? |
+| `PHYSICAL_SPACE_IDENTITY_STATUS` | is this face the room we named? |
+
+`PHYSICAL_SPACE_GEOMETRY_ACCEPTED` requires **both** and is unreachable from
+either alone. A shaft can have perfect geometry and a rejected identity; a
+bedroom can have a supported identity and no sound polygon to attribute to it.
+
+**One label inside one cycle is a candidate, never a validation.** A face
+holding exactly one semantic label can still be a shaft, a closet, an adjacent
+enclosure, a wrongly nested cycle, or the wrong side of a wall. And a *stated
+contradiction* outranks any amount of supporting evidence — the support is
+exactly what was mistaken.
+
+---
+
+## 12 · A SUM OF CYCLES IS NOT AN AREA
+
+`bounded area = 1102.64 m²` added a 989 m² cycle to the cycles inside it. That
+is not an arithmetic slip; it is a category error.
+
+**Not every counterclockwise bounded walk is one occupiable room.** A cycle can
+be the building envelope, a room, a shaft, a wall cavity, a sliver, or a
+nesting artefact — told apart by CONTAINMENT and by what they hold, never by
+size or orientation.
+
+Only the ATOMIC set is additive, and only after it is checked for overlap and
+for atoms nested inside atoms. `assert_additive` refuses any other total.
+
+---
+
+## 13 · A MEASUREMENT BASIS IS CONSTRUCTED, NOT CONVERTED
+
+```
+CLEAR ≈ CENTRELINE − PERIMETER × MEAN_HALF_THICKNESS
+```
+
+has no corner term, and inside and outside corners contribute with opposite
+sign. On the L-shaped fixture it is out by exactly 0.04 m² — five outside
+corners at +0.01 and one inside corner at −0.01. Mixed wall thicknesses break
+it again: there is no single thickness to halve.
+
+A clear-internal boundary is **walked** along the actual room-facing wall
+faces, and its corners are the intersections of consecutive offset lines. The
+room-facing face is chosen on evidence, never by being nearer; a single-face
+band is `OWNERSHIP_AMBIGUOUS`. A portal closes on the **same basis as the walls
+it joins**.
+
+---
+
+## 14 · A CONTROL CHOSEN AFTER SEEING THE ERROR IS NOT A CONTROL
+
+The control set is defined by a rule in committed code, applied to the space
+map alone, and the selector **raises** if it is handed an area, an error, a
+face id or an IoU. A control that produced no geometry stays in the set as a
+row saying so — dropping it would quietly turn the set back into "the ones
+that worked".
+
+---
+
+## 15 · AN ID BELONGS TO ITS OWN NAMESPACE
+
+Topology QA showed `component = FACE-0003`. A GRAPH component (`GC-`), a
+PLANAR component (`PC-`) and a FACE (`FACE-` / `SF-`) are three different
+objects; an id in the wrong column is a diagnostic quietly pointing at the
+wrong thing. An empty graph component stays empty and says so rather than
+falling back to whatever id is in reach.
+
+And **do not generate an action item from a zero.** "Reduce the 0 unexplained
+components and the 85 unresolved termini" asks for work that is already
+finished, which makes a reader distrust the half that is real.

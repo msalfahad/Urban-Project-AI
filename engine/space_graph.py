@@ -97,6 +97,12 @@ class SpaceBoundaryEdge:
     host_wall_band_id: str = ""
     evidence: tuple[str, ...] = ()
     validation_status: str = ""
+    # The two drawn faces of the host wall, so the clear-internal engine can
+    # name the room-facing one instead of recomputing an offset.
+    face_a_mm: float | None = None
+    face_b_mm: float | None = None
+    face_a_ids: tuple[str, ...] = ()
+    face_b_ids: tuple[str, ...] = ()
     geometry_status: str = ""
     existence_status: str = ""
     closure_basis: str = ""
@@ -131,6 +137,9 @@ class SpaceBoundaryEdge:
                 "length_mm": round(self.length_mm, 1),
                 "is_virtual": self.is_virtual,
                 "separation_mm": round(self.separation_mm, 1),
+                "face_a_mm": self.face_a_mm, "face_b_mm": self.face_b_mm,
+                "face_a_ids": list(self.face_a_ids),
+                "face_b_ids": list(self.face_b_ids),
                 "source_wall_band_ids": list(self.source_wall_band_ids),
                 "source_object_ids": list(self.source_object_ids),
                 "portal_id": self.portal_id,
@@ -161,6 +170,8 @@ def material_edges(bands) -> list[SpaceBoundaryEdge]:
             lengths=LengthSet(space_boundary_mm=L, host_wall_gross_mm=L,
                               material_present_mm=L, opening_mm=0.0),
             source_wall_band_ids=(b.wall_band_id,),
+            face_a_mm=b.face_a_mm, face_b_mm=b.face_b_mm,
+            face_a_ids=tuple(b.face_a_ids), face_b_ids=tuple(b.face_b_ids),
             source_object_ids=tuple(b.source_object_ids),
             evidence=tuple(b.supporting_evidence),
             validation_status=b.validation_status,
@@ -355,12 +366,20 @@ class SpaceFace:
     space_face_id: str
     graph_type: str
     topology_run_id: str
+    # The GRAPH component (GC-) and the PLANAR component (PC-) are different
+    # objects. §26 found a FACE id sitting in a component field; each now has
+    # its own namespace and its own column.
     component_id: str
     polygon_mm: tuple
     area_m2: float
     perimeter_m: float
+    planar_component_id: str = ""
     hole_face_ids: tuple[str, ...] = ()
     boundary_edge_ids: tuple[str, ...] = ()
+    # The same edges IN WALK ORDER, one per polygon segment. The sorted set
+    # above is for membership; a boundary has to be walked in order or its
+    # corners come out meaningless.
+    boundary_edges_in_order: tuple[str, ...] = ()
     physical_wall_edge_ids: tuple[str, ...] = ()
     portal_edge_ids: tuple[str, ...] = ()
     material_wall_length_m: float = 0.0
@@ -397,11 +416,13 @@ class SpaceFace:
         return {"space_face_id": self.space_face_id,
                 "graph_type": self.graph_type,
                 "topology_run_id": self.topology_run_id,
-                "component_id": self.component_id,
+                "component_id": self.component_id or "",
+                "planar_component_id": self.planar_component_id,
                 "area_m2": round(self.area_m2, 3),
                 "perimeter_m": round(self.perimeter_m, 3),
                 "holes": list(self.hole_face_ids),
                 "boundary_edges": list(self.boundary_edge_ids),
+                "boundary_edges_in_order": list(self.boundary_edges_in_order),
                 "physical_wall_edges": list(self.physical_wall_edge_ids),
                 "portal_edges": list(self.portal_edge_ids),
                 "material_wall_length_m": round(self.material_wall_length_m, 3),
@@ -432,6 +453,15 @@ def walk(noded, index, *, graph_type: str, run_id: str):
         mat = opening = space = 0.0
         host: float | None = 0.0
         phys, ports, ids = [], [], []
+        # WALK ORDER, from the half-edge chain the face closed on. The set
+        # below is the same edges without order; both are kept because they
+        # answer different questions.
+        ordered = []
+        for hid in f.half_edge_ids:
+            he = res.half_edges.get(hid)
+            split = by_split.get(he.source_edge_id) if he else None
+            owner = index.get(split.pair_id) if split else None
+            ordered.append(owner.edge_id if owner else "")
         for sid in f.source_wall_edge_ids:
             split = by_split.get(sid)
             if split is None:
@@ -468,9 +498,11 @@ def walk(noded, index, *, graph_type: str, run_id: str):
         faces.append(SpaceFace(
             space_face_id=f"SF-{run_id}-{i:04d}", graph_type=graph_type,
             topology_run_id=run_id, component_id=f.component_id,
+            planar_component_id=f.planar_component_id,
             polygon_mm=f.polygon_mm, area_m2=f.area_m2,
             perimeter_m=f.perimeter_m, hole_face_ids=f.hole_face_ids,
             boundary_edge_ids=tuple(sorted(set(ids))),
+            boundary_edges_in_order=tuple(ordered),
             physical_wall_edge_ids=tuple(sorted(set(phys))),
             portal_edge_ids=tuple(sorted(set(ports))),
             material_wall_length_m=mat, host_wall_gross_length_m=host,
@@ -556,6 +588,75 @@ def containment(faces, regions) -> list[dict]:
                         "NO_LABELLED_ROOM_INSIDE"),
         })
     return sorted(out, key=lambda d: -d["area_m2"])
+
+
+def portal_over_closure_audit(faces, index, nested=(), *, regions=None,
+                              adjacency=None) -> list[dict]:
+    """Every portal a multi-space cycle leaned on, and whether it earned it.
+
+    A portal closure is allowed to close a doorway. A FALSE portal does
+    something else entirely: it merges two spaces into one cycle, or it
+    creates a cycle that has no room behind it. Three of this run's cycles
+    close across several portals at once, which is exactly the shape a
+    false closure produces — so each one is audited rather than trusted for
+    being PROBABLE.
+
+    `removing_it_changes_the_face` is the question that matters. A portal the
+    face does not need is a portal whose correctness has not been tested by
+    anything.
+    """
+    klass = {n.space_face_id: n.cycle_class for n in nested}
+    holders = {n.space_face_id: n.labelled_space_ids for n in nested}
+    adjacency = dict(adjacency or {})
+    out = []
+    for f in faces:
+        cls = klass.get(f.space_face_id, "")
+        if not f.portal_edge_ids:
+            continue
+        spaces = holders.get(f.space_face_id, ())
+        for pid in f.portal_edge_ids:
+            e = index.get(pid)
+            if e is None:
+                continue
+            expected = adjacency.get(e.portal_id or pid)
+            connects = (None if expected is None
+                        else bool(set(expected) & set(spaces)))
+            out.append({
+                "space_face_id": f.space_face_id,
+                "cycle_class": cls,
+                "portal_id": e.portal_id or pid,
+                "edge_id": pid,
+                "existence_status": e.existence_status,
+                "geometry_status": e.geometry_status,
+                "host_wall_band_id": e.host_wall_band_id or "HOST_UNRESOLVED",
+                "evidence": list(e.evidence),
+                "opening_mm": round(e.lengths.opening_mm or 0.0, 1),
+                # Removing ANY single boundary edge opens the walk: a closed
+                # cycle has no spare edges. Stated rather than recomputed, so
+                # nobody reads a tautology as a test.
+                "removing_it_changes_the_face": True,
+                "removal_note": ("every edge of a closed cycle is load-"
+                                 "bearing, so this alone proves nothing. The "
+                                 "informative columns are the two statuses "
+                                 "and whether it joins the expected spaces"),
+                "labelled_spaces_in_this_face": list(spaces),
+                "connects_expected_adjacent_spaces": connects,
+                "risk": _portal_risk(cls, e, len(spaces)),
+            })
+    return out
+
+
+def _portal_risk(cycle_class: str, edge, label_count: int) -> str:
+    """How much this portal is being asked to carry."""
+    if cycle_class == "ENCLOSURE_CYCLE" and label_count > 1:
+        return ("OVER_CLOSURE_SUSPECT: this closure helps merge "
+                f"{label_count} labelled rooms into one cycle")
+    if edge.geometry_status == "PORTAL_GEOMETRY_VALIDATED":
+        return "GEOMETRY_VALIDATED: an independent symbol or document agrees"
+    if not edge.host_wall_band_id:
+        return ("HOST_UNRESOLVED: a closure between two unrelated walls is "
+                "not a hole in either of them")
+    return "GEOMETRY_PROBABLE: correlated families only"
 
 
 def compare(material_res, material_faces, space_res, space_faces) -> dict:

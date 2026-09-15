@@ -28,6 +28,19 @@ from engine.geometry import VectorPdfSource, calibrate
 from engine.run_manifest import RunManifest
 from engine.area_accuracy import (ADJ_HALF_THICKNESS, CLEAR_INTERNAL,
                                   WALL_CENTRELINE, RoomAccuracy, distribution)
+from engine.clear_internal import build as build_clear
+from engine.clear_internal import summary as clear_summary
+from engine.controls import manifest as control_manifest
+from engine.controls import select as select_controls
+from engine.face_nesting import (atomic_set, diagnose_enclosures,
+                                 hierarchy)
+from engine.space_identity import (EVIDENCE_FAMILY as ID_FAMILY,
+                                   E_ADJACENCY, E_LABEL_ANCHOR,
+                                   E_RASTER_CORRESPONDENCE,
+                                   VALIDATED_GEOMETRIC_FACE,
+                                   AMBIGUOUS_GEOMETRIC_FACE, SpaceIdentity,
+                                   identity_status)
+from engine.space_identity import summary as identity_summary
 from engine.bbox import BoundingBox, raster_outline_refusal
 from engine.face_qa import correspond
 from engine.space_boundary import (CLEAR_INTERNAL_FINISH_FACE,
@@ -39,7 +52,7 @@ from engine.space_graph import (MATERIAL_WALL_GRAPH, SPACE_BOUNDARY_GRAPH,
                                 build_space_boundary_graph, compare,
                                 assign_spaces, containment,
                                 global_portals, material_edges,
-                                swing_arcs)
+                                portal_over_closure_audit, swing_arcs)
 from engine.space_graph import walk as walk_space
 from engine.space_boundary import summary as boundary_summary
 from engine.topology import WallPair
@@ -54,6 +67,7 @@ from tools.wall_v2_diagnostic import (probable_wall_faces, raster_ratio,
 
 PDF = "data/golden/23010/inputs/AR-00_MAR2023.pdf"
 SPACE_MAP = "data/golden/23010/inputs/space_map_23010_2f.json"
+TOPOLOGY_OVERLAY = "data/golden/23010/topology_overlay.json"
 RUN_ID = "V2"
 
 CONTROLS = ("BTH-05", "BED-01", "STR-01", "OPEN-01")
@@ -116,6 +130,66 @@ def host_band_for(bands, axis, fixed, lo, hi, *, tol: float = 350.0,
         if d <= reach and d < bd:
             best, bd = b.wall_band_id, d
     return best
+
+
+def raster_overlap(poly_mm, mask, frame, px: float) -> dict:
+    """IoU of a vector polygon against a raster region, on the PIXEL GRID.
+
+    The region is a set of pixels, not a clean polygon, so the honest exact
+    answer is at pixel resolution and the resolution is stated. It measures
+    the thing area alone cannot: a polygon of the right SIZE in the wrong
+    PLACE scores near zero here and perfectly on an area comparison.
+    """
+    import numpy as np
+    h, w = mask.shape
+    ys, xs = np.nonzero(mask)
+    if len(xs) == 0:
+        return {"comparable": False,
+                "why": "the raster region is empty on this grid"}
+    # Rasterise the polygon by testing each pixel centre of the region's
+    # neighbourhood — bounded work, and exact to one pixel.
+    x0, x1 = int(xs.min()) - 4, int(xs.max()) + 5
+    y0, y1 = int(ys.min()) - 4, int(ys.max()) + 5
+    x0, y0 = max(0, x0), max(0, y0)
+    x1, y1 = min(w, x1), min(h, y1)
+    poly = list(poly_mm)
+    inter = vec_only = 0
+    vec_total = 0
+    for py in range(y0, y1):
+        for pxl in range(x0, x1):
+            vx, vy = frame.to_vector((pxl + 0.5) * px, (py + 0.5) * px)
+            inside = _pt_in(poly, vx, vy)
+            if inside:
+                vec_total += 1
+                if mask[py, pxl]:
+                    inter += 1
+                else:
+                    vec_only += 1
+    ras_total = int(mask.sum())
+    union = vec_total + ras_total - inter
+    cell = (px * px) / 1_000_000
+    return {
+        "comparable": True,
+        "pixel_size_mm": round(px, 3),
+        "intersection_m2": round(inter * cell, 3),
+        "union_m2": round(union * cell, 3),
+        "vector_only_m2": round(vec_only * cell, 3),
+        "raster_only_m2": round((ras_total - inter) * cell, 3),
+        "iou": round(inter / union, 4) if union else 0.0,
+        "basis": "CLEAR_INTERNAL_FINISH_FACE on both sides",
+        "why": ("measured on the pixel grid at the stated resolution. Area "
+                "alone can agree while the shape is wrong; this cannot"),
+    }
+
+
+def _pt_in(poly, x: float, y: float) -> bool:
+    inside = False
+    for (x0, y0), (x1, y1) in zip(poly, poly[1:] + poly[:1]):
+        if (y0 > y) != (y1 > y):
+            xt = x0 + (y - y0) * (x1 - x0) / (y1 - y0)
+            if x < xt:
+                inside = not inside
+    return inside
 
 
 def run(pdf: str = PDF) -> dict:
@@ -266,6 +340,102 @@ def run(pdf: str = PDF) -> dict:
     # box overlap. Overlap put every room inside the 989 m2 building face.
     face_for_space = assign_spaces(space_face_list, regions)
 
+    # §9-§13 — the containment hierarchy, BEFORE anything is summed or named.
+    nested = hierarchy(space_face_list, regions)
+    atoms = atomic_set(nested)
+    nest_by_id = {n.space_face_id: n for n in nested}
+
+    # §13 — why each multi-room cycle holds more than one room.
+    enclosure_diagnostics = diagnose_enclosures(
+        nested, space_face_list, regions,
+        rejections=[r.record() for r in rejections], index=sb_index)
+
+    # §13 — why each multi-room cycle holds more than one room.
+    enclosure_diagnostics = diagnose_enclosures(
+        nested, space_face_list, regions,
+        rejections=[r.record() for r in rejections], index=sb_index)
+
+    # §14 — every portal a multi-space cycle leaned on.
+    over_closure = portal_over_closure_audit(
+        space_face_list, sb_index, nested, regions=regions)
+
+    # §1-§3 — geometry and identity, as two answers. The overlay's stated
+    # defects may only REJECT after the candidate exists, never build it.
+    overlay = json.loads(Path(TOPOLOGY_OVERLAY).read_text(encoding="utf-8"))
+    by_face_space = {v: k for k, v in face_for_space.items()}
+    identities = []
+    for f in space_face_list:
+        n = nest_by_id.get(f.space_face_id)
+        claimed = by_face_space.get(f.space_face_id, "")
+        ev = []
+        if claimed:
+            ev.append(E_LABEL_ANCHOR)
+        corr = next((c for c in space_correspondence
+                     if c.face_id == f.space_face_id
+                     and c.relationship == "ONE_TO_ONE"), None)
+        if corr is not None and claimed in (corr.raster_space_ids or ()):
+            ev.append(E_RASTER_CORRESPONDENCE)
+        if f.portal_edge_ids and n is not None and len(
+                n.labelled_space_ids) == 1:
+            ev.append(E_ADJACENCY)
+        ov = overlay.get("spaces", {}).get(claimed, {}) if claimed else {}
+        rejected = ("" if ov.get("region_identity") != "FAILED"
+                    else ov.get("region_identity_reason", "region identity "
+                                "FAILED in the topology overlay"))
+        st, why = identity_status({ID_FAMILY[e] for e in ev},
+                                  rejected_by=rejected)
+        geo = (VALIDATED_GEOMETRIC_FACE
+               if n is not None and n.cycle_class == "ATOMIC_SPACE_FACE"
+               else AMBIGUOUS_GEOMETRIC_FACE)
+        identities.append(SpaceIdentity(
+            space_face_id=f.space_face_id, claimed_space_id=claimed,
+            geometry_status=geo, identity_status=st,
+            identity_evidence=tuple(ev), rejected_by=rejected,
+            why_geometry=(n.why if n is not None else ""), why_identity=why))
+
+    # §5 — the clear-internal polygon, measured rather than adjusted.
+    clear_polys, clear_failures = [], []
+    for f in space_face_list:
+        n = nest_by_id.get(f.space_face_id)
+        if n is None or n.cycle_class != "ATOMIC_SPACE_FACE":
+            continue
+        try:
+            clear_polys.append(build_clear(f.space_face_id, f, sb_index))
+        except Exception as exc:                      # refused, not silent
+            clear_failures.append({"space_face_id": f.space_face_id,
+                                   "why": str(exc)})
+    clear_by_face = {c.space_face_id: c for c in clear_polys}
+
+    # §17 — a real geometric comparison, but ONLY where both sides are on the
+    # clear-internal basis. A room with no complete polygon gets a row saying
+    # so rather than a percentage from the scalar conversion.
+    shape_rows = []
+    for c in clear_polys:
+        sid = by_face_space.get(c.space_face_id, "")
+        rid = next((k for k, v in regions.items()
+                    if v.get("space_id") == sid), None)
+        row = {"space_id": sid, "space_face_id": c.space_face_id,
+               "clear_polygon_complete": c.is_complete,
+               "vector_clear_area_m2": round(c.area_m2, 3),
+               "vector_clear_perimeter_m": round(c.perimeter_m, 3)}
+        if not c.is_complete:
+            row["comparable"] = False
+            row["why"] = ("the clear-internal boundary is incomplete: "
+                          f"{len(c.unresolved_edges)} segment(s) have no "
+                          "room-facing face, so this is not the room's "
+                          "outline and must not be scored")
+        elif rid is None:
+            row["comparable"] = False
+            row["why"] = "no raster region is associated with this face"
+        else:
+            row.update(raster_overlap(c.polygon_mm, seg.labels == rid,
+                                      frame, px))
+        shape_rows.append(row)
+
+    # §21 — the control set, by RULE, from the space map alone.
+    controls = select_controls(sm["spaces"])
+    control_ids = [c.space_id for c in controls]
+
     # --- envelope --------------------------------------------------------
     unbounded_edges = {e for f in material_res.faces
                        if f.kind == "UNBOUNDED_FACE"
@@ -322,7 +492,8 @@ def run(pdf: str = PDF) -> dict:
     # Every space the geometry produced a face for, PLUS the named controls —
     # so a control that got no face appears as a row saying exactly that,
     # rather than dropping out of the table and out of the average with it.
-    for sid in sorted(set(CONTROLS) | set(HARD) | set(face_for_space)):
+    for sid in sorted(set(control_ids) | set(CONTROLS) | set(HARD)
+                      | set(face_for_space)):
         if sid not in by_space:
             continue
         fid = face_for_space.get(sid, "")
@@ -350,6 +521,17 @@ def run(pdf: str = PDF) -> dict:
             vector_area_basis_adjusted_m2=adj_area,
             basis_adjustment_m2=adj,
             basis_adjustment_method=(ADJ_HALF_THICKNESS if adj else ""),
+            # §16 — a MEASURED clear-internal polygon where one exists. The
+            # scalar conversion above stays in its own columns, labelled
+            # DIAGNOSTIC_APPROXIMATE_BASIS_CONVERSION, and is not accuracy.
+            clear_internal_area_m2=(
+                clear_by_face[fid].area_m2
+                if fid in clear_by_face and clear_by_face[fid].is_complete
+                else None),
+            clear_internal_perimeter_m=(
+                clear_by_face[fid].perimeter_m
+                if fid in clear_by_face and clear_by_face[fid].is_complete
+                else None),
             why=("a vector planar face on the SPACE_BOUNDARY_GRAPH, compared "
                  "against the raster region AFTER it was generated"
                  if face else
@@ -436,6 +618,47 @@ def run(pdf: str = PDF) -> dict:
         },
         "material_faces": material_res.health(),
         "space_boundary_faces": space_res.health(),
+        # §9-§12 — containment first, then a class, then what may be added.
+        "face_nesting": [n.record() for n in nested],
+        "atomic_spaces": atoms,
+        "enclosure_diagnostics": enclosure_diagnostics,
+        # §1-§3 — two answers, never collapsed into one.
+        "space_identity": {
+            **identity_summary(identities),
+            "verdicts": [v.record() for v in identities],
+        },
+        # §5 — measured polygons, and the ones the engine refused to build.
+        "clear_internal": {
+            **clear_summary(clear_polys),
+            "refused": clear_failures,
+            "polygons": [c.record() for c in clear_polys],
+        },
+        # §14 — every portal a multi-space cycle leaned on.
+        "portal_over_closure_audit": over_closure,
+        # §17 — geometric comparison where, and only where, bases match.
+        "shape_comparison": {
+            "rows": shape_rows,
+            "compared": sum(1 for r in shape_rows if r.get("comparable")),
+            "not_comparable": sum(1 for r in shape_rows
+                                  if not r.get("comparable")),
+            "acceptance_threshold": None,
+            "note": ("IoU and the area/perimeter variances, on the "
+                     "CLEAR_INTERNAL_FINISH_FACE basis on BOTH sides. Rows "
+                     "that are not comparable say why instead of scoring"),
+        },
+        # §21 — the control set, by rule, frozen before any comparison.
+        "control_set": {
+            **control_manifest(controls),
+            "outcome": [{
+                "space_id": c.space_id, "room_type": c.room_type,
+                "vector_face_id": face_for_space.get(c.space_id, ""),
+                "clear_internal_polygon": (
+                    face_for_space.get(c.space_id, "") in clear_by_face),
+                "comparable_on_clear_basis": any(
+                    r.get("comparable") and r["space_id"] == c.space_id
+                    for r in shape_rows),
+            } for c in controls],
+        },
         "envelope": envelope_summary(env),
         "largest_faces": [f.record() for f in material_faces[:15]],
         "space_boundary_largest_faces": [f.record()

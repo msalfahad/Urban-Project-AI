@@ -212,6 +212,23 @@ def _e31a_effect(gate: dict) -> str:
             "may be built on them.")
 
 
+# §25 — DO NOT GENERATE AN ACTION FROM A ZERO.
+#
+# The workbook read: "Reduce the 0 unexplained components and the 85
+# unresolved termini...". Half the sentence asked for work that was already
+# finished, which makes a reader distrust the other half.
+
+
+def _actions(*parts, tail: str = "", none: str = "") -> str:
+    """An action list built only from the blockers that are actually there."""
+    live = [t.format(n=n) for n, t in parts if n]
+    if not live:
+        return none or "nothing measured here is currently blocking."
+    head = "; ".join(live)
+    tail = (tail[0].upper() + tail[1:]) if tail else ""
+    return (head[0].upper() + head[1:] + ". " + tail).strip()
+
+
 def from_graph_diagnostic(diagnostic: dict, *, run_id: str,
                           reference: str, space_count: int,
                           use_count: int) -> list[Finding]:
@@ -264,11 +281,19 @@ def from_graph_diagnostic(diagnostic: dict, *, run_id: str,
             effect=("Planar face extraction cannot reconstruct room polygons "
                     "from a graph whose cycles are incomplete, so no net "
                     "quantity can be built on it."),
-            engineering_next_action=(
-                f"Reduce the {unexplained} unexplained components and the "
-                f"{conn.get('terminus_histogram', {}).get('UNRESOLVED')} "
-                "unresolved termini: integrate dashed topology candidates and "
-                "build the building-envelope classifier."),
+            # §25 — an action generated from every counter regardless of its
+            # value produced "Reduce the 0 unexplained components...". An
+            # action item is built ONLY from blockers that are actually
+            # non-zero; when none are, it says the work is elsewhere.
+            engineering_next_action=_actions(
+                (unexplained, "reduce the {n} unexplained component(s)"),
+                (conn.get("terminus_histogram", {}).get("UNRESOLVED"),
+                 "classify the {n} unresolved terminus/termini"),
+                tail=("integrate dashed topology candidates and build the "
+                      "building-envelope classifier."),
+                none=("no unexplained component or unresolved terminus "
+                      "remains: connectivity work is not what is blocking "
+                      "this.")),
             owner_input_helpful_if_available=(
                 "An architectural DWG/DXF of AR-00 would make wall "
                 "connectivity exact rather than reconstructed. It is NOT "

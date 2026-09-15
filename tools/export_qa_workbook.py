@@ -282,7 +282,15 @@ def _face_correspondence() -> list:
 
 
 def _face_containment() -> list:
-    return _run().get("space_face_containment", [])
+    """Containment plus the cycle class, joined BY FACE ID."""
+    cur = _run()
+    nest = {n["space_face_id"]: n for n in cur.get("face_nesting", ())}
+    out = []
+    for c in cur.get("space_face_containment", []):
+        n = nest.get(c["space_face_id"], {})
+        out.append({**c, "cycle_class": n.get("cycle_class"),
+                    "depth": n.get("depth"), "parent": n.get("parent")})
+    return out
 
 
 def _space_model(spaces, wall_rows, areas) -> SpaceModel:
@@ -645,7 +653,13 @@ def bundle(space_map_path: Path = DEFAULT_SPACE_MAP,
             1 for s in model.spaces if s.validated and s.scope == "IN_SCOPE"),
         total_in_scope_spaces=sum(1 for s in spaces
                                   if s.get("scope") == "IN_SCOPE"),
-        openings_validated=0,
+        # §22 — counted from THIS run, not hard-coded to zero. Deduction
+        # readiness is a separate fact and is still False: no trade's opening
+        # rule is signed, so validated portals release nothing on their own.
+        openings_validated=sum(
+            1 for p in _run().get("portals", {}).get("detail", ())
+            if p.get("geometry_status") == "PORTAL_GEOMETRY_VALIDATED"),
+        openings_deduction_ready=False,
         signed_trade_rules=len(_rule_sets()),
         unresolved_topology_spaces=sum(
             1 for s in model.spaces if not s.validated),
@@ -678,9 +692,18 @@ def bundle(space_map_path: Path = DEFAULT_SPACE_MAP,
             **model.geometry_summary(),
             "VECTOR_SPACE_FACES_GENERATED": _run().get(
                 "space_boundary_faces", {}).get("bounded_faces"),
-            "VECTOR_SPACE_FACE_VALIDATED": sum(
+            # §23 — these are single-label CANDIDATES. Both axes must pass
+            # before a face is a validated physical space, and the identity
+            # axis rejected one of them outright.
+            "VECTOR_SINGLE_LABEL_FACE_CANDIDATES": sum(
                 1 for c in _face_containment()
                 if c.get("verdict") == "SINGLE_ROOM_CANDIDATE"),
+            "VECTOR_PHYSICAL_SPACE_VALIDATED": _run().get(
+                "space_identity", {}).get("physical_space_geometry_accepted"),
+            "VECTOR_SPACE_IDENTITY_REJECTED": _run().get(
+                "space_identity", {}).get("identity_rejected"),
+            "CLEAR_INTERNAL_POLYGONS_COMPLETE": _run().get(
+                "clear_internal", {}).get("complete_clear_internal_polygons"),
         },
         "zones": [z.record() for z in model.zones],
         "quantities": {s["space_id"]: {

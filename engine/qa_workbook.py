@@ -858,18 +858,34 @@ def dashboard(bundle: dict, sheets: dict) -> Sheet:
             "The RASTER region is the WHOLE of that space and ONLY that "
             "space. This is a segmentation fact: it does NOT mean a vector "
             "face has been reconstructed for it."),
-        row("GEOMETRY", "VECTOR_SPACE_FACE_VALIDATED",
-            layers.get("VECTOR_SPACE_FACE_VALIDATED"),
-            "Planar faces on the SPACE_BOUNDARY_GRAPH that enclose exactly "
-            "one labelled room. This is the vector geometry count, and it is "
-            "the one that is small."),
         row("GEOMETRY", "VECTOR_SPACE_FACES_GENERATED",
             layers.get("VECTOR_SPACE_FACES_GENERATED"),
-            "Every bounded face the space graph produced, including faces "
-            "holding several rooms and faces holding none."),
-        row("GEOMETRY", "VALIDATED PHYSICAL SPACES",
+            "Every bounded cycle the space graph produced, including the "
+            "building envelope, faces holding several rooms, and faces "
+            "holding none. NOT additive: the envelope contains the rest."),
+        row("GEOMETRY", "VECTOR_SINGLE_LABEL_FACE_CANDIDATES",
+            layers.get("VECTOR_SINGLE_LABEL_FACE_CANDIDATES"),
+            "Cycles enclosing exactly one labelled room. CANDIDATES: a face "
+            "holding one label can still be a shaft, a closet, an adjacent "
+            "enclosure or the wrong side of a wall."),
+        row("GEOMETRY", "VECTOR_PHYSICAL_SPACE_VALIDATED",
+            layers.get("VECTOR_PHYSICAL_SPACE_VALIDATED"),
+            "Faces whose GEOMETRY and whose SPACE IDENTITY both pass. This "
+            "is the only vector count that may ever carry a quantity."),
+        row("GEOMETRY", "VECTOR_SPACE_IDENTITY_REJECTED",
+            layers.get("VECTOR_SPACE_IDENTITY_REJECTED"),
+            "Sound polygons whose claim to be the named room is CONTRADICTED "
+            "by a stated defect. A valid cycle around a shaft is not the "
+            "washroom."),
+        row("GEOMETRY", "CLEAR_INTERNAL_POLYGONS_COMPLETE",
+            layers.get("CLEAR_INTERNAL_POLYGONS_COMPLETE"),
+            "Rooms whose boundary was built from actual room-facing wall "
+            "faces. Only these have a measured clear-internal area."),
+        row("GEOMETRY", "RASTER_RELEASE_SPACE_RECORDS_VALIDATED",
             layers.get("validated_physical_spaces"),
-            "Only these may carry a released quantity."),
+            "From the RASTER region and topology overlay layers. It is NOT a "
+            "count of reconstructed vector rooms, and the vector counts "
+            "above are the ones to read for that."),
 
         row("SEMANTICS", "HUMAN_VERIFIED labels", sem.get("HUMAN_VERIFIED", 0),
             "Read off the rendered sheet by a person. NOT evidence of "
@@ -1142,8 +1158,13 @@ def wall_extraction_qa(bands=(), rejections=(), sides=()) -> Sheet:
 # and a space-boundary face are produced by DIFFERENT GRAPHS, and a stale
 # material face sitting unlabelled in this sheet would read as the new space
 # topology result with nothing looking wrong.
-TOPOLOGY_COLUMNS = ("face_id", "graph_type", "topology_run_id", "component",
-                    "status", "area_m2", "perimeter_m",
+# §26 — `component` held FACE-0003. A GRAPH component (GC-), a PLANAR
+# component (PC-) and a FACE (FACE-/SF-) are three different things, so each
+# gets its own column and its own namespace. An id in the wrong column is a
+# diagnostic that quietly points at the wrong object.
+TOPOLOGY_COLUMNS = ("face_id", "graph_type", "topology_run_id",
+                    "graph_component", "planar_component",
+                    "cycle_class", "status", "area_m2", "perimeter_m",
                     "labelled_rooms_inside", "containment_verdict",
                     "portal_edges",
                     "raster_regions", "raster_spaces", "relationship",
@@ -1173,7 +1194,9 @@ def topology_qa(faces=(), correspondence=(), containment=()) -> Sheet:
             face_id=fid,
             graph_type=cell(f.get("graph_type")),
             topology_run_id=cell(f.get("topology_run_id")),
-            component=cell(f.get("component_id")),
+            graph_component=cell(f.get("component_id")),
+            planar_component=cell(f.get("planar_component_id")),
+            cycle_class=cell(h.get("cycle_class")),
             status=cell(f.get("status") or f.get("geometry_status")),
             labelled_rooms_inside=cell(h.get("labelled_regions_contained")),
             containment_verdict=cell(h.get("verdict")),
@@ -1210,8 +1233,14 @@ def topology_qa(faces=(), correspondence=(), containment=()) -> Sheet:
             "answers to different questions and must never be read as one set.",
             "LABELLED_ROOMS_INSIDE is containment of a labelled region's "
             "centroid in the face POLYGON — not bounding-box overlap. A face "
-            "holding more than one labelled room is a group of rooms whose "
-            "dividing walls are still missing from extraction.",
+            "holding more than one labelled room is an ENCLOSURE_CYCLE, and "
+            "the cause is not always a missing wall.",
+            "GRAPH_COMPONENT (GC-) and PLANAR_COMPONENT (PC-) are different "
+            "objects and neither is a face. A blank graph component means no "
+            "graph component was supplied, not that there is none.",
+            "CYCLE_CLASS is the only column that says whether a cycle is a "
+            "room. A BUILDING_ENVELOPE, a HOLE and a WALL_CAVITY are all "
+            "bounded counterclockwise walks, and none of them is floor.",
         ))
 
 

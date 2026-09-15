@@ -55,7 +55,8 @@ def test_everything_clear_reaches_ready_for_final_boq():
     s = assess(uses_total=13, uses_with_ready_spaces=13, net_uses_ready=4,
                validated_physical_spaces=17, total_in_scope_spaces=17,
                openings_validated=40, signed_trade_rules=8,
-               unresolved_topology_spaces=0, graph_gate_passed=True)
+               unresolved_topology_spaces=0, graph_gate_passed=True,
+               openings_deduction_ready=True)
     assert s.coverage_status == COMPLETE
     assert s.boq_status == READY_FOR_FINAL_BOQ
     assert s.boq_blockers == ()
@@ -73,3 +74,36 @@ def test_no_arithmetic_connects_coverage_to_boq_readiness():
     body = src.split("blockers = []", 1)[1].split("return TopLevelStatus", 1)[0]
     for forbidden in ("coverage", "creason"):
         assert forbidden not in body, forbidden
+
+
+# --- §22 the opening blocker must state what is actually true ---------------
+
+def test_validated_openings_do_not_produce_no_opening_validated():
+    """Two portals reached GEOMETRY_VALIDATED and the workbook still said 'no
+    opening validated'. The sentence was simply false."""
+    s = assess(uses_total=13, uses_with_ready_spaces=2, net_uses_ready=0,
+               validated_physical_spaces=2, total_in_scope_spaces=23,
+               openings_validated=2, signed_trade_rules=2,
+               unresolved_topology_spaces=3, graph_gate_passed=False,
+               openings_deduction_ready=False)
+    joined = " | ".join(s.boq_blockers)
+    assert "no opening is validated anywhere" not in joined
+    assert "2 opening(s) are validated" in joined
+    assert "deductions are not complete or production-approved" in joined
+
+
+def test_zero_validated_openings_still_says_so_plainly():
+    s = assess(uses_total=13, uses_with_ready_spaces=1, net_uses_ready=0,
+               validated_physical_spaces=1, total_in_scope_spaces=23,
+               openings_validated=0, signed_trade_rules=2,
+               unresolved_topology_spaces=1, graph_gate_passed=False)
+    assert any("no opening is validated anywhere" in b for b in s.boq_blockers)
+
+
+def test_validated_openings_with_approved_deductions_raise_no_opening_blocker():
+    s = assess(uses_total=13, uses_with_ready_spaces=13, net_uses_ready=4,
+               validated_physical_spaces=17, total_in_scope_spaces=17,
+               openings_validated=40, signed_trade_rules=8,
+               unresolved_topology_spaces=0, graph_gate_passed=True,
+               openings_deduction_ready=True)
+    assert not any("opening" in b for b in s.boq_blockers)

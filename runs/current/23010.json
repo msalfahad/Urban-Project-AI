@@ -1,4 +1,44 @@
 {
+  "atomic_spaces": {
+    "atomic_area_m2": 42.47,
+    "atomic_net_area_by_face": {
+      "SF-V2-0002": 33.285,
+      "SF-V2-0005": 3.687,
+      "SF-V2-0006": 1.981,
+      "SF-V2-0007": 1.777,
+      "SF-V2-0008": 1.74
+    },
+    "atomic_space_candidates": 5,
+    "atoms_nested_inside_other_atoms": [],
+    "building_envelope_candidates": [
+      "SF-V2-0001"
+    ],
+    "by_cycle_class": {
+      "ATOMIC_SPACE_FACE": 5,
+      "BUILDING_ENVELOPE": 1,
+      "ENCLOSURE_CYCLE": 2,
+      "HOLE": 3,
+      "MICRO_FACE": 1,
+      "UNRESOLVED_NESTED_FACE": 3,
+      "WALL_CAVITY": 4
+    },
+    "enclosure_cycles": [
+      "SF-V2-0003",
+      "SF-V2-0004"
+    ],
+    "excluded_from_the_total": {
+      "BUILDING_ENVELOPE": 989.159,
+      "ENCLOSURE_CYCLE": 64.18,
+      "HOLE": 2.791,
+      "MICRO_FACE": 0.281,
+      "UNRESOLVED_NESTED_FACE": 2.8,
+      "WALL_CAVITY": 0.955
+    },
+    "holes_deducted_m2": 0.0,
+    "non_overlapping": true,
+    "note": "the sum of bounded cycles is NOT a project area: it adds the building envelope to the rooms inside it. Only the atomic set is additive, and it is additive only because it was checked for overlap and nesting",
+    "overlapping_atoms": []
+  },
   "band_sample": [
     {
       "axis": "H",
@@ -32,6 +72,7 @@
           33498.69966396484
         ]
       ],
+      "face_a_mm": 6774.4,
       "face_b_ids": [
         "VS-000119"
       ],
@@ -41,6 +82,7 @@
           33298.65890596924
         ]
       ],
+      "face_b_mm": 6974.4,
       "families": [
         "FACE_GEOMETRY"
       ],
@@ -89,6 +131,7 @@
           33298.65890596924
         ]
       ],
+      "face_a_mm": 46574.4,
       "face_b_ids": [
         "VS-000198"
       ],
@@ -98,6 +141,7 @@
           33498.69966396484
         ]
       ],
+      "face_b_mm": 46774.4,
       "families": [
         "FACE_GEOMETRY"
       ],
@@ -133,6 +177,7 @@
           16946.687447973633
         ]
       ],
+      "face_a_mm": 22023.4,
       "face_b_ids": [
         "VS-004945"
       ],
@@ -142,6 +187,7 @@
           16946.687447973633
         ]
       ],
+      "face_b_mm": 22174.8,
       "families": [
         "FACE_GEOMETRY",
         "SOURCE_STYLE"
@@ -192,6 +238,7 @@
           31498.29208400879
         ]
       ],
+      "face_a_mm": 9723.6,
       "face_b_ids": [
         "VS-004619"
       ],
@@ -201,6 +248,7 @@
           31298.251326013185
         ]
       ],
+      "face_b_mm": 9923.7,
       "families": [
         "FACE_GEOMETRY",
         "SOURCE_STYLE"
@@ -251,6 +299,7 @@
           31298.251326013185
         ]
       ],
+      "face_a_mm": 13773.1,
       "face_b_ids": [
         "VS-000268"
       ],
@@ -260,6 +309,7 @@
           31298.251326013185
         ]
       ],
+      "face_b_mm": 13973.2,
       "families": [
         "CLOSURE",
         "FACE_GEOMETRY",
@@ -311,6 +361,7 @@
           31298.251326013185
         ]
       ],
+      "face_a_mm": 18774.1,
       "face_b_ids": [
         "VS-000272"
       ],
@@ -320,6 +371,7 @@
           31298.251326013185
         ]
       ],
+      "face_b_mm": 18974.2,
       "families": [
         "CLOSURE",
         "FACE_GEOMETRY",
@@ -362,6 +414,7 @@
           15197.683073986816
         ]
       ],
+      "face_a_mm": 12372.8,
       "face_b_ids": [
         "VS-000026"
       ],
@@ -371,6 +424,7 @@
           15197.683073986816
         ]
       ],
+      "face_b_mm": 12524.2,
       "families": [
         "CLOSURE",
         "FACE_GEOMETRY",
@@ -423,6 +477,7 @@
           24748.274259912112
         ]
       ],
+      "face_a_mm": 19274.2,
       "face_b_ids": [
         "VS-000039"
       ],
@@ -432,6 +487,7 @@
           24896.95256993408
         ]
       ],
+      "face_b_mm": 19474.3,
       "families": [
         "CLOSURE",
         "FACE_GEOMETRY",
@@ -480,6 +536,7 @@
           17046.706452026367
         ]
       ],
+      "face_a_mm": 17198.1,
       "face_b_ids": [
         "VS-000134"
       ],
@@ -489,6 +546,7 @@
           17098.067525054932
         ]
       ],
+      "face_b_mm": 17349.5,
       "families": [
         "CLOSURE",
         "FACE_GEOMETRY"
@@ -536,6 +594,7 @@
           23448.00520810547
         ]
       ],
+      "face_a_mm": 12472.9,
       "face_b_ids": [
         "VS-028586"
       ],
@@ -545,6 +604,7 @@
           23448.00520810547
         ]
       ],
+      "face_b_mm": 12572.9,
       "families": [
         "CLOSURE",
         "FACE_GEOMETRY",
@@ -597,6 +657,7 @@
           17498.15041599121
         ]
       ],
+      "face_a_mm": 18574.1,
       "face_b_ids": [
         "VS-000129"
       ],
@@ -606,6 +667,7 @@
           16946.686073028566
         ]
       ],
+      "face_b_mm": 18774.1,
       "families": [
         "CLOSURE",
         "FACE_GEOMETRY",
@@ -655,6 +717,7 @@
           16946.687447973633
         ]
       ],
+      "face_a_mm": 26373.0,
       "face_b_ids": [
         "VS-004948"
       ],
@@ -664,6 +727,7 @@
           16946.687447973633
         ]
       ],
+      "face_b_mm": 26524.4,
       "families": [
         "CLOSURE",
         "FACE_GEOMETRY",
@@ -705,6 +769,7 @@
           13697.378763964844
         ]
       ],
+      "face_a_mm": 28124.7,
       "face_b_ids": [
         "VS-004954"
       ],
@@ -714,6 +779,7 @@
           13697.378763964844
         ]
       ],
+      "face_b_mm": 28273.4,
       "families": [
         "CLOSURE",
         "FACE_GEOMETRY",
@@ -762,6 +828,7 @@
           13697.378763964844
         ]
       ],
+      "face_a_mm": 31725.4,
       "face_b_ids": [
         "VS-004956"
       ],
@@ -771,6 +838,7 @@
           13846.057073986816
         ]
       ],
+      "face_b_mm": 31874.1,
       "families": [
         "CLOSURE",
         "FACE_GEOMETRY",
@@ -819,6 +887,7 @@
           24896.95256993408
         ]
       ],
+      "face_a_mm": 29573.6,
       "face_b_ids": [
         "VS-005033"
       ],
@@ -828,6 +897,7 @@
           24748.274259912112
         ]
       ],
+      "face_b_mm": 29725.0,
       "families": [
         "CLOSURE",
         "FACE_GEOMETRY",
@@ -876,6 +946,7 @@
           31298.25407590332
         ]
       ],
+      "face_a_mm": 22975.0,
       "face_b_ids": [
         "VS-004991"
       ],
@@ -885,6 +956,7 @@
           31298.25407590332
         ]
       ],
+      "face_b_mm": 23123.7,
       "families": [
         "CLOSURE",
         "FACE_GEOMETRY",
@@ -927,6 +999,7 @@
           31298.25407590332
         ]
       ],
+      "face_a_mm": 24972.7,
       "face_b_ids": [
         "VS-004999"
       ],
@@ -936,6 +1009,7 @@
           31298.25407590332
         ]
       ],
+      "face_b_mm": 25124.1,
       "families": [
         "CLOSURE",
         "FACE_GEOMETRY",
@@ -984,6 +1058,7 @@
           31298.25407590332
         ]
       ],
+      "face_a_mm": 26973.1,
       "face_b_ids": [
         "VS-005008"
       ],
@@ -993,6 +1068,7 @@
           31298.25407590332
         ]
       ],
+      "face_b_mm": 27124.5,
       "families": [
         "CLOSURE",
         "FACE_GEOMETRY",
@@ -1045,6 +1121,7 @@
           24748.274259912112
         ]
       ],
+      "face_a_mm": 27873.3,
       "face_b_ids": [
         "VS-005010"
       ],
@@ -1054,6 +1131,7 @@
           24896.95256993408
         ]
       ],
+      "face_b_mm": 28024.7,
       "families": [
         "FACE_GEOMETRY",
         "SOURCE_STYLE"
@@ -1091,6 +1169,7 @@
           24748.274259912112
         ]
       ],
+      "face_a_mm": 23623.8,
       "face_b_ids": [
         "VS-004994"
       ],
@@ -1100,6 +1179,7 @@
           24748.274259912112
         ]
       ],
+      "face_b_mm": 23775.1,
       "families": [
         "FACE_GEOMETRY",
         "SOURCE_STYLE"
@@ -1139,6 +1219,7 @@
           28649.06766588135
         ]
       ],
+      "face_a_mm": 24972.7,
       "face_b_ids": [
         "VS-005000"
       ],
@@ -1148,6 +1229,7 @@
           28649.06766588135
         ]
       ],
+      "face_b_mm": 25124.1,
       "families": [
         "CLOSURE",
         "FACE_GEOMETRY",
@@ -1200,6 +1282,7 @@
           24148.14923603516
         ]
       ],
+      "face_a_mm": 13794.7,
       "face_b_ids": [
         "VS-000034"
       ],
@@ -1209,6 +1292,7 @@
           24299.53343795166
         ]
       ],
+      "face_b_mm": 14124.5,
       "families": [
         "FACE_GEOMETRY"
       ],
@@ -1251,6 +1335,7 @@
           13746.036694989014
         ]
       ],
+      "face_a_mm": 15773.5,
       "face_b_ids": [
         "VS-000122"
       ],
@@ -1260,6 +1345,7 @@
           12948.576805010987
         ]
       ],
+      "face_b_mm": 15973.6,
       "families": [
         "FACE_GEOMETRY",
         "SOURCE_STYLE"
@@ -1304,6 +1390,7 @@
           28273.31442792969
         ]
       ],
+      "face_a_mm": 38124.0,
       "face_b_ids": [
         "VS-013587"
       ],
@@ -1313,6 +1400,7 @@
           28273.31442792969
         ]
       ],
+      "face_b_mm": 38324.0,
       "families": [
         "CLOSURE",
         "FACE_GEOMETRY",
@@ -1357,6 +1445,7 @@
           13946.076078039552
         ]
       ],
+      "face_a_mm": 8923.5,
       "face_b_ids": [
         "VS-004550"
       ],
@@ -1366,6 +1455,7 @@
           13946.076078039552
         ]
       ],
+      "face_b_mm": 9023.5,
       "families": [
         "CLOSURE",
         "FACE_GEOMETRY"
@@ -1410,6 +1500,7 @@
           23223.63892196045
         ]
       ],
+      "face_a_mm": 9723.6,
       "face_b_ids": [
         "VS-043930"
       ],
@@ -1419,6 +1510,7 @@
           23223.63892196045
         ]
       ],
+      "face_b_mm": 9923.7,
       "families": [
         "CLOSURE",
         "FACE_GEOMETRY",
@@ -1465,6 +1557,7 @@
           15622.092868017578
         ]
       ],
+      "face_a_mm": 38124.0,
       "face_b_ids": [
         "VS-025835"
       ],
@@ -1474,6 +1567,7 @@
           15622.092868017578
         ]
       ],
+      "face_b_mm": 38324.0,
       "families": [
         "CLOSURE",
         "FACE_GEOMETRY",
@@ -1520,6 +1614,7 @@
           19347.17379403076
         ]
       ],
+      "face_a_mm": 38124.0,
       "face_b_ids": [
         "VS-013598"
       ],
@@ -1529,6 +1624,7 @@
           19347.17379403076
         ]
       ],
+      "face_b_mm": 38324.0,
       "families": [
         "CLOSURE",
         "FACE_GEOMETRY",
@@ -1575,6 +1671,7 @@
           23099.288889978026
         ]
       ],
+      "face_a_mm": 38124.0,
       "face_b_ids": [
         "VS-013609"
       ],
@@ -1584,6 +1681,7 @@
           23099.288889978026
         ]
       ],
+      "face_b_mm": 38324.0,
       "families": [
         "CLOSURE",
         "FACE_GEOMETRY",
@@ -1636,6 +1734,7 @@
           31298.25407590332
         ]
       ],
+      "face_a_mm": 31374.0,
       "face_b_ids": [
         "VS-005015"
       ],
@@ -1645,6 +1744,7 @@
           29297.846495947266
         ]
       ],
+      "face_b_mm": 31525.4,
       "families": [
         "FACE_GEOMETRY",
         "SOURCE_STYLE"
@@ -1685,6 +1785,7 @@
           16946.687447973633
         ]
       ],
+      "face_a_mm": 30773.9,
       "face_b_ids": [
         "VS-004952"
       ],
@@ -1694,6 +1795,7 @@
           16946.687447973633
         ]
       ],
+      "face_b_mm": 30925.2,
       "families": [
         "CLOSURE",
         "FACE_GEOMETRY",
@@ -1742,6 +1844,7 @@
           31298.25407590332
         ]
       ],
+      "face_a_mm": 33974.5,
       "face_b_ids": [
         "VS-005021"
       ],
@@ -1751,6 +1854,7 @@
           31298.25407590332
         ]
       ],
+      "face_b_mm": 34123.2,
       "families": [
         "CLOSURE",
         "FACE_GEOMETRY",
@@ -1803,6 +1907,7 @@
           19447.195547973635
         ]
       ],
+      "face_a_mm": 26924.4,
       "face_b_ids": [
         "VS-009982"
       ],
@@ -1812,6 +1917,7 @@
           19298.517237951663
         ]
       ],
+      "face_b_mm": 27073.1,
       "families": [
         "FACE_GEOMETRY",
         "SOURCE_STYLE"
@@ -1862,6 +1968,7 @@
           19298.515863006593
         ]
       ],
+      "face_a_mm": 27724.6,
       "face_b_ids": [
         "VS-009998"
       ],
@@ -1871,6 +1978,7 @@
           19447.195547973635
         ]
       ],
+      "face_b_mm": 27873.3,
       "families": [
         "FACE_GEOMETRY",
         "SOURCE_STYLE"
@@ -1921,6 +2029,7 @@
           20598.77941503296
         ]
       ],
+      "face_a_mm": 19474.3,
       "face_b_ids": [
         "VS-000141"
       ],
@@ -1930,6 +2039,7 @@
           20798.820173028565
         ]
       ],
+      "face_b_mm": 19674.3,
       "families": [
         "FACE_GEOMETRY",
         "SOURCE_STYLE"
@@ -1982,6 +2092,7 @@
           20598.780789978027
         ]
       ],
+      "face_a_mm": 21474.7,
       "face_b_ids": [
         "VS-007063"
       ],
@@ -1991,6 +2102,7 @@
           20947.499857995605
         ]
       ],
+      "face_b_mm": 21674.7,
       "families": [
         "CLOSURE",
         "FACE_GEOMETRY",
@@ -2043,6 +2155,7 @@
           24748.271510021972
         ]
       ],
+      "face_a_mm": 26924.4,
       "face_b_ids": [
         "VS-009962"
       ],
@@ -2052,6 +2165,7 @@
           24596.890057995606
         ]
       ],
+      "face_b_mm": 27073.1,
       "families": [
         "FACE_GEOMETRY",
         "SOURCE_STYLE"
@@ -2102,6 +2216,7 @@
           24748.271510021972
         ]
       ],
+      "face_a_mm": 26924.4,
       "face_b_ids": [
         "VS-006435"
       ],
@@ -2111,6 +2226,7 @@
           24596.890057995606
         ]
       ],
+      "face_b_mm": 27073.1,
       "families": [
         "FACE_GEOMETRY",
         "SOURCE_STYLE"
@@ -2161,6 +2277,7 @@
           18398.3310770813
         ]
       ],
+      "face_a_mm": 14124.5,
       "face_b_ids": [
         "VS-000035"
       ],
@@ -2170,6 +2287,7 @@
           18747.054269934084
         ]
       ],
+      "face_b_mm": 14273.2,
       "families": [
         "FACE_GEOMETRY",
         "SOURCE_STYLE"
@@ -2218,6 +2336,7 @@
           24748.274259912112
         ]
       ],
+      "face_a_mm": 38124.0,
       "face_b_ids": [
         "VS-005036"
       ],
@@ -2227,6 +2346,7 @@
           26272.90959786377
         ]
       ],
+      "face_b_mm": 38324.0,
       "families": [
         "CLOSURE",
         "FACE_GEOMETRY",
@@ -2273,6 +2393,7 @@
           12245.731010021973
         ]
       ],
+      "face_a_mm": 38124.0,
       "face_b_ids": [
         "VS-025824"
       ],
@@ -2282,6 +2403,7 @@
           12245.731010021973
         ]
       ],
+      "face_b_mm": 38324.0,
       "families": [
         "CLOSURE",
         "FACE_GEOMETRY",
@@ -2328,6 +2450,7 @@
           31149.573015991213
         ]
       ],
+      "face_a_mm": 38124.0,
       "face_b_ids": [
         "VS-013576"
       ],
@@ -2337,6 +2460,7 @@
           31149.573015991213
         ]
       ],
+      "face_b_mm": 38324.0,
       "families": [
         "CLOSURE",
         "FACE_GEOMETRY",
@@ -2388,6 +2512,7 @@
           15197.683073986816
         ]
       ],
+      "face_a_mm": 15773.5,
       "face_b_ids": [
         "VS-000126"
       ],
@@ -2397,6 +2522,7 @@
           18598.373210021975
         ]
       ],
+      "face_b_mm": 15973.6,
       "families": [
         "CLOSURE",
         "FACE_GEOMETRY",
@@ -2449,6 +2575,7 @@
           20447.39933795166
         ]
       ],
+      "face_a_mm": 19439.1,
       "face_b_ids": [
         "VS-000142"
       ],
@@ -2458,6 +2585,7 @@
           20798.820173028565
         ]
       ],
+      "face_b_mm": 19674.3,
       "families": [
         "FACE_GEOMETRY"
       ],
@@ -2513,6 +2641,7 @@
           12697.174973986817
         ]
       ],
+      "face_a_mm": 38075.4,
       "face_b_ids": [
         "VS-025828"
       ],
@@ -2522,6 +2651,7 @@
           12197.071704052734
         ]
       ],
+      "face_b_mm": 38224.0,
       "families": [
         "CLOSURE",
         "FACE_GEOMETRY"
@@ -2566,6 +2696,7 @@
           29649.271455859376
         ]
       ],
+      "face_a_mm": 38124.0,
       "face_b_ids": [
         "VS-005035"
       ],
@@ -2575,6 +2706,7 @@
           29649.271455859376
         ]
       ],
+      "face_b_mm": 38324.0,
       "families": [
         "CLOSURE",
         "FACE_GEOMETRY",
@@ -2634,6 +2766,7 @@
           12145.71063102417
         ]
       ],
+      "face_a_mm": 38183.5,
       "face_b_ids": [
         "VS-000124"
       ],
@@ -2643,6 +2776,7 @@
           12197.073078997802
         ]
       ],
+      "face_b_mm": 38575.5,
       "families": [
         "CLOSURE",
         "FACE_GEOMETRY"
@@ -2691,6 +2825,7 @@
           24748.274259912112
         ]
       ],
+      "face_a_mm": 25272.7,
       "face_b_ids": [
         "VS-005001"
       ],
@@ -2700,6 +2835,7 @@
           24748.274259912112
         ]
       ],
+      "face_b_mm": 25424.1,
       "families": [
         "CLOSURE",
         "FACE_GEOMETRY",
@@ -2749,6 +2885,7 @@
           15446.381763006593
         ]
       ],
+      "face_a_mm": 8923.5,
       "face_b_ids": [
         "VS-000024"
       ],
@@ -2758,6 +2895,7 @@
           15197.683073986816
         ]
       ],
+      "face_b_mm": 9123.5,
       "families": [
         "CLOSURE",
         "FACE_GEOMETRY",
@@ -2807,6 +2945,7 @@
           11945.671247973632
         ]
       ],
+      "face_a_mm": 8923.5,
       "face_b_ids": [
         "VS-000023"
       ],
@@ -2816,6 +2955,7 @@
           11945.671247973632
         ]
       ],
+      "face_b_mm": 9123.5,
       "families": [
         "CLOSURE",
         "FACE_GEOMETRY",
@@ -2881,6 +3021,7 @@
           20447.39933795166
         ]
       ],
+      "face_a_mm": 17841.5,
       "face_b_ids": [
         "VS-047845"
       ],
@@ -2890,6 +3031,7 @@
           20298.718278039552
         ]
       ],
+      "face_b_mm": 18014.5,
       "families": [
         "CLOSURE",
         "FACE_GEOMETRY"
@@ -2943,6 +3085,7 @@
           20258.171147973633
         ]
       ],
+      "face_a_mm": 19020.1,
       "face_b_ids": [
         "VS-047879"
       ],
@@ -2952,6 +3095,7 @@
           20298.71965298462
         ]
       ],
+      "face_b_mm": 19101.2,
       "families": [
         "CLOSURE",
         "FACE_GEOMETRY"
@@ -2992,6 +3136,7 @@
           20247.357205010987
         ]
       ],
+      "face_a_mm": 19139.1,
       "face_b_ids": [
         "VS-047840"
       ],
@@ -3001,6 +3146,7 @@
           20247.357205010987
         ]
       ],
+      "face_b_mm": 19290.5,
       "families": [
         "CLOSURE",
         "FACE_GEOMETRY"
@@ -3049,6 +3195,7 @@
           21223.229967059327
         ]
       ],
+      "face_a_mm": 9723.6,
       "face_b_ids": [
         "VS-000013"
       ],
@@ -3058,6 +3205,7 @@
           21223.229967059327
         ]
       ],
+      "face_b_mm": 9923.7,
       "families": [
         "CLOSURE",
         "FACE_GEOMETRY",
@@ -3108,6 +3256,7 @@
           24496.868304052736
         ]
       ],
+      "face_a_mm": 9723.6,
       "face_b_ids": [
         "VS-000014"
       ],
@@ -3117,6 +3266,7 @@
           24299.530688061524
         ]
       ],
+      "face_b_mm": 9923.7,
       "families": [
         "CLOSURE",
         "FACE_GEOMETRY",
@@ -3166,6 +3316,7 @@
           12948.576805010987
         ]
       ],
+      "face_a_mm": 18574.1,
       "face_b_ids": [
         "VS-004625"
       ],
@@ -3175,6 +3326,7 @@
           13746.036694989014
         ]
       ],
+      "face_b_mm": 18774.1,
       "families": [
         "CLOSURE",
         "FACE_GEOMETRY",
@@ -3232,6 +3384,7 @@
           18371.30378187256
         ]
       ],
+      "face_a_mm": 11072.6,
       "face_b_ids": [
         "VS-000020"
       ],
@@ -3241,6 +3394,7 @@
           18398.332452026367
         ]
       ],
+      "face_b_mm": 11272.6,
       "families": [
         "CLOSURE",
         "FACE_GEOMETRY",
@@ -3287,6 +3441,7 @@
           25748.475300000002
         ]
       ],
+      "face_a_mm": 9723.6,
       "face_b_ids": [
         "VS-043942"
       ],
@@ -3296,6 +3451,7 @@
           25748.475300000002
         ]
       ],
+      "face_b_mm": 9923.7,
       "families": [
         "CLOSURE",
         "FACE_GEOMETRY",
@@ -3353,6 +3509,7 @@
           18398.333826971437
         ]
       ],
+      "face_a_mm": 11072.6,
       "face_b_ids": [
         "VS-043962"
       ],
@@ -3362,6 +3519,7 @@
           18371.30378187256
         ]
       ],
+      "face_b_mm": 11272.6,
       "families": [
         "CLOSURE",
         "FACE_GEOMETRY",
@@ -3413,6 +3571,7 @@
           27348.80411385498
         ]
       ],
+      "face_a_mm": 26973.1,
       "face_b_ids": [
         "VS-005009"
       ],
@@ -3422,6 +3581,7 @@
           27348.801363964845
         ]
       ],
+      "face_b_mm": 27124.5,
       "families": [
         "CLOSURE",
         "FACE_GEOMETRY",
@@ -3443,6 +3603,566 @@
       "why": "two faces running together over 100% of their length, and 3 independent evidence families agree"
     }
   ],
+  "clear_internal": {
+    "candidates": 5,
+    "complete_clear_internal_polygons": 2,
+    "geometry_basis": "CLEAR_INTERNAL_FINISH_FACE",
+    "incomplete": 3,
+    "note": "areas here are measured FROM THE POLYGON. No scalar centreline-to-clear conversion is used, and the corner terms the old formula was missing are just intersections",
+    "ownership_by_status": {
+      "OWNERSHIP_UNRESOLVED": 8,
+      "OWNERSHIP_VALIDATED": 23
+    },
+    "polygons": [
+      {
+        "blockers": [
+          "4 of 14 boundary segments could not be resolved to a room-facing face, so this polygon is NOT the clear-internal boundary of the whole room"
+        ],
+        "clear_internal_area_m2": 31.559,
+        "clear_internal_perimeter_m": 24.4,
+        "geometry_basis": "CLEAR_INTERNAL_FINISH_FACE",
+        "is_complete": false,
+        "ownership": [
+          {
+            "measurement_basis": "CLEAR_INTERNAL_FINISH_FACE",
+            "opposite_face_id": "VS-004944",
+            "opposite_mm": 22023.4,
+            "ownership_status": "OWNERSHIP_VALIDATED",
+            "room_facing_face_id": "VS-004945",
+            "room_facing_mm": 22174.8,
+            "space_face_id": "SF-V2-0002",
+            "space_face_side": "FACE_B",
+            "wall_band_id": "WB-00003",
+            "why": "the room lies on the positive side of this wall line, so FACE_B is the room-facing face"
+          },
+          {
+            "measurement_basis": "CLEAR_INTERNAL_FINISH_FACE",
+            "opposite_face_id": "VS-004985",
+            "opposite_mm": 17146.7,
+            "ownership_status": "OWNERSHIP_VALIDATED",
+            "room_facing_face_id": "VS-007656",
+            "room_facing_mm": 16946.7,
+            "space_face_id": "SF-V2-0002",
+            "space_face_side": "FACE_A",
+            "wall_band_id": "WB-00137",
+            "why": "the room lies on the negative side of this wall line, so FACE_A is the room-facing face"
+          },
+          {
+            "measurement_basis": "CLEAR_INTERNAL_FINISH_FACE",
+            "opposite_face_id": "VS-004986",
+            "opposite_mm": 17146.7,
+            "ownership_status": "OWNERSHIP_UNRESOLVED",
+            "room_facing_face_id": "VS-004981",
+            "room_facing_mm": 16946.7,
+            "space_face_id": "SF-V2-0002",
+            "space_face_side": "FACE_A",
+            "wall_band_id": "WB-00132",
+            "why": "neither side of this wall tests as inside the face, or both do. The room-facing face is not chosen by being nearer"
+          },
+          {
+            "measurement_basis": "CLEAR_INTERNAL_FINISH_FACE",
+            "opposite_face_id": "VS-004948",
+            "opposite_mm": 26524.4,
+            "ownership_status": "OWNERSHIP_VALIDATED",
+            "room_facing_face_id": "VS-004946",
+            "room_facing_mm": 26373.0,
+            "space_face_id": "SF-V2-0002",
+            "space_face_side": "FACE_A",
+            "wall_band_id": "WB-00012",
+            "why": "the room lies on the negative side of this wall line, so FACE_A is the room-facing face"
+          },
+          {
+            "measurement_basis": "CLEAR_INTERNAL_FINISH_FACE",
+            "opposite_face_id": "VS-004948",
+            "opposite_mm": 26524.4,
+            "ownership_status": "OWNERSHIP_VALIDATED",
+            "room_facing_face_id": "VS-004946",
+            "room_facing_mm": 26373.0,
+            "space_face_id": "SF-V2-0002",
+            "space_face_side": "FACE_A",
+            "wall_band_id": "WB-00012",
+            "why": "the room lies on the negative side of this wall line, so FACE_A is the room-facing face"
+          },
+          {
+            "measurement_basis": "CLEAR_INTERNAL_FINISH_FACE",
+            "opposite_face_id": "VS-004948",
+            "opposite_mm": 26524.4,
+            "ownership_status": "OWNERSHIP_VALIDATED",
+            "room_facing_face_id": "VS-004946",
+            "room_facing_mm": 26373.0,
+            "space_face_id": "SF-V2-0002",
+            "space_face_side": "FACE_A",
+            "wall_band_id": "WB-00012",
+            "why": "the room lies on the negative side of this wall line, so FACE_A is the room-facing face"
+          },
+          {
+            "measurement_basis": "CLEAR_INTERNAL_FINISH_FACE",
+            "opposite_face_id": "VS-004976",
+            "opposite_mm": 13846.1,
+            "ownership_status": "OWNERSHIP_UNRESOLVED",
+            "room_facing_face_id": "VS-004974",
+            "room_facing_mm": 13697.4,
+            "space_face_id": "SF-V2-0002",
+            "space_face_side": "FACE_A",
+            "wall_band_id": "WB-00147",
+            "why": "neither side of this wall tests as inside the face, or both do. The room-facing face is not chosen by being nearer"
+          },
+          {
+            "measurement_basis": "CLEAR_INTERNAL_FINISH_FACE",
+            "opposite_face_id": "VS-004954",
+            "opposite_mm": 28273.4,
+            "ownership_status": "OWNERSHIP_VALIDATED",
+            "room_facing_face_id": "VS-004953",
+            "room_facing_mm": 28124.7,
+            "space_face_id": "SF-V2-0002",
+            "space_face_side": "FACE_A",
+            "wall_band_id": "WB-00013",
+            "why": "the room lies on the negative side of this wall line, so FACE_A is the room-facing face"
+          },
+          {
+            "measurement_basis": "CLEAR_INTERNAL_FINISH_FACE",
+            "opposite_face_id": "VS-004968",
+            "opposite_mm": 10696.8,
+            "ownership_status": "OWNERSHIP_UNRESOLVED",
+            "room_facing_face_id": "VS-004960",
+            "room_facing_mm": 10496.7,
+            "space_face_id": "SF-V2-0002",
+            "space_face_side": "FACE_A",
+            "wall_band_id": "WB-00229",
+            "why": "neither side of this wall tests as inside the face, or both do. The room-facing face is not chosen by being nearer"
+          },
+          {
+            "measurement_basis": "CLEAR_INTERNAL_FINISH_FACE",
+            "opposite_face_id": "VS-025883",
+            "opposite_mm": 10596.7,
+            "ownership_status": "OWNERSHIP_VALIDATED",
+            "room_facing_face_id": "VS-025879",
+            "room_facing_mm": 10696.8,
+            "space_face_id": "SF-V2-0002",
+            "space_face_side": "FACE_B",
+            "wall_band_id": "WB-00194",
+            "why": "the room lies on the positive side of this wall line, so FACE_B is the room-facing face"
+          },
+          {
+            "measurement_basis": "CLEAR_INTERNAL_FINISH_FACE",
+            "opposite_face_id": "VS-004959",
+            "opposite_mm": 10496.7,
+            "ownership_status": "OWNERSHIP_VALIDATED",
+            "room_facing_face_id": "VS-004966",
+            "room_facing_mm": 10696.8,
+            "space_face_id": "SF-V2-0002",
+            "space_face_side": "FACE_B",
+            "wall_band_id": "WB-00183",
+            "why": "the room lies on the positive side of this wall line, so FACE_B is the room-facing face"
+          },
+          {
+            "measurement_basis": "CLEAR_INTERNAL_FINISH_FACE",
+            "opposite_face_id": "VS-025861",
+            "opposite_mm": 10596.7,
+            "ownership_status": "OWNERSHIP_VALIDATED",
+            "room_facing_face_id": "VS-025857",
+            "room_facing_mm": 10696.8,
+            "space_face_id": "SF-V2-0002",
+            "space_face_side": "FACE_B",
+            "wall_band_id": "WB-00158",
+            "why": "the room lies on the positive side of this wall line, so FACE_B is the room-facing face"
+          },
+          {
+            "measurement_basis": "CLEAR_INTERNAL_FINISH_FACE",
+            "opposite_face_id": "VS-004964",
+            "opposite_mm": 10696.8,
+            "ownership_status": "OWNERSHIP_UNRESOLVED",
+            "room_facing_face_id": "VS-004958",
+            "room_facing_mm": 10496.7,
+            "space_face_id": "SF-V2-0002",
+            "space_face_side": "FACE_A",
+            "wall_band_id": "WB-00204",
+            "why": "neither side of this wall tests as inside the face, or both do. The room-facing face is not chosen by being nearer"
+          }
+        ],
+        "portal_closures": [
+          {
+            "closure_basis": "CLEAR_INTERNAL_FINISH_FACE",
+            "closure_line_mm": 16946.7,
+            "edge_id": "PT-GV17046-line-25224",
+            "host_wall_band_id": "WB-00137",
+            "jamb_a_mm": 25224.1,
+            "jamb_b_mm": 26224.3,
+            "portal_id": "PT-GV17046-line-25224",
+            "why": "closed between the two clear-finish jamb points on the host wall's room-facing face"
+          }
+        ],
+        "provenance": {
+          "built_from": "wall band faces + portal closures",
+          "centreline_face_id": "SF-V2-0002",
+          "raster_used": false,
+          "scalar_conversion_used": false
+        },
+        "space_face_id": "SF-V2-0002",
+        "steps_inserted": 1,
+        "unresolved_edges": [
+          {
+            "edge_id": "WB-00132",
+            "ownership_status": "OWNERSHIP_UNRESOLVED",
+            "why": "neither side of this wall tests as inside the face, or both do. The room-facing face is not chosen by being nearer"
+          },
+          {
+            "edge_id": "WB-00147",
+            "ownership_status": "OWNERSHIP_UNRESOLVED",
+            "why": "neither side of this wall tests as inside the face, or both do. The room-facing face is not chosen by being nearer"
+          },
+          {
+            "edge_id": "WB-00229",
+            "ownership_status": "OWNERSHIP_UNRESOLVED",
+            "why": "neither side of this wall tests as inside the face, or both do. The room-facing face is not chosen by being nearer"
+          },
+          {
+            "edge_id": "WB-00204",
+            "ownership_status": "OWNERSHIP_UNRESOLVED",
+            "why": "neither side of this wall tests as inside the face, or both do. The room-facing face is not chosen by being nearer"
+          }
+        ],
+        "vertices": 6
+      },
+      {
+        "blockers": [
+          "3 of 7 boundary segments could not be resolved to a room-facing face, so this polygon is NOT the clear-internal boundary of the whole room"
+        ],
+        "clear_internal_area_m2": 3.378,
+        "clear_internal_perimeter_m": 7.749,
+        "geometry_basis": "CLEAR_INTERNAL_FINISH_FACE",
+        "is_complete": false,
+        "ownership": [
+          {
+            "measurement_basis": "CLEAR_INTERNAL_FINISH_FACE",
+            "opposite_face_id": "VS-028586",
+            "opposite_mm": 12572.9,
+            "ownership_status": "OWNERSHIP_UNRESOLVED",
+            "room_facing_face_id": "VS-028589",
+            "room_facing_mm": 12472.9,
+            "space_face_id": "SF-V2-0005",
+            "space_face_side": "FACE_A",
+            "wall_band_id": "WB-00010",
+            "why": "neither side of this wall tests as inside the face, or both do. The room-facing face is not chosen by being nearer"
+          },
+          {
+            "measurement_basis": "CLEAR_INTERNAL_FINISH_FACE",
+            "opposite_face_id": "VS-028587",
+            "opposite_mm": 12572.9,
+            "ownership_status": "OWNERSHIP_VALIDATED",
+            "room_facing_face_id": "VS-028591",
+            "room_facing_mm": 12472.9,
+            "space_face_id": "SF-V2-0005",
+            "space_face_side": "FACE_A",
+            "wall_band_id": "WB-00071",
+            "why": "the room lies on the negative side of this wall line, so FACE_A is the room-facing face"
+          },
+          {
+            "measurement_basis": "CLEAR_INTERNAL_FINISH_FACE",
+            "opposite_face_id": "VS-029915",
+            "opposite_mm": 18744.3,
+            "ownership_status": "OWNERSHIP_UNRESOLVED",
+            "room_facing_face_id": "VS-000056",
+            "room_facing_mm": 18547.0,
+            "space_face_id": "SF-V2-0005",
+            "space_face_side": "FACE_A",
+            "wall_band_id": "WB-00217",
+            "why": "neither side of this wall tests as inside the face, or both do. The room-facing face is not chosen by being nearer"
+          },
+          {
+            "measurement_basis": "CLEAR_INTERNAL_FINISH_FACE",
+            "opposite_face_id": "VS-043952",
+            "opposite_mm": 9723.6,
+            "ownership_status": "OWNERSHIP_VALIDATED",
+            "room_facing_face_id": "VS-043953",
+            "room_facing_mm": 9923.7,
+            "space_face_id": "SF-V2-0005",
+            "space_face_side": "FACE_B",
+            "wall_band_id": "WB-00061",
+            "why": "the room lies on the positive side of this wall line, so FACE_B is the room-facing face"
+          },
+          {
+            "measurement_basis": "CLEAR_INTERNAL_FINISH_FACE",
+            "opposite_face_id": "VS-000013",
+            "opposite_mm": 9923.7,
+            "ownership_status": "OWNERSHIP_UNRESOLVED",
+            "room_facing_face_id": "VS-000009",
+            "room_facing_mm": 9723.6,
+            "space_face_id": "SF-V2-0005",
+            "space_face_side": "FACE_A",
+            "wall_band_id": "WB-00054",
+            "why": "neither side of this wall tests as inside the face, or both do. The room-facing face is not chosen by being nearer"
+          },
+          {
+            "measurement_basis": "CLEAR_INTERNAL_FINISH_FACE",
+            "opposite_face_id": "VS-000059",
+            "opposite_mm": 20147.3,
+            "ownership_status": "OWNERSHIP_VALIDATED",
+            "room_facing_face_id": "VS-000058",
+            "room_facing_mm": 20047.3,
+            "space_face_id": "SF-V2-0005",
+            "space_face_side": "FACE_A",
+            "wall_band_id": "WB-00142",
+            "why": "the room lies on the negative side of this wall line, so FACE_A is the room-facing face"
+          }
+        ],
+        "portal_closures": [
+          {
+            "closure_basis": "CLEAR_INTERNAL_FINISH_FACE",
+            "closure_line_mm": 12472.9,
+            "edge_id": "PT-GH12522-line-19198",
+            "host_wall_band_id": "WB-00071",
+            "jamb_a_mm": 19198.5,
+            "jamb_b_mm": 19898.6,
+            "portal_id": "PT-GH12522-line-19198",
+            "why": "closed between the two clear-finish jamb points on the host wall's room-facing face"
+          }
+        ],
+        "provenance": {
+          "built_from": "wall band faces + portal closures",
+          "centreline_face_id": "SF-V2-0005",
+          "raster_used": false,
+          "scalar_conversion_used": false
+        },
+        "space_face_id": "SF-V2-0005",
+        "steps_inserted": 1,
+        "unresolved_edges": [
+          {
+            "edge_id": "WB-00010",
+            "ownership_status": "OWNERSHIP_UNRESOLVED",
+            "why": "neither side of this wall tests as inside the face, or both do. The room-facing face is not chosen by being nearer"
+          },
+          {
+            "edge_id": "WB-00217",
+            "ownership_status": "OWNERSHIP_UNRESOLVED",
+            "why": "neither side of this wall tests as inside the face, or both do. The room-facing face is not chosen by being nearer"
+          },
+          {
+            "edge_id": "WB-00054",
+            "ownership_status": "OWNERSHIP_UNRESOLVED",
+            "why": "neither side of this wall tests as inside the face, or both do. The room-facing face is not chosen by being nearer"
+          }
+        ],
+        "vertices": 4
+      },
+      {
+        "blockers": [
+          "1 of 4 boundary segments could not be resolved to a room-facing face, so this polygon is NOT the clear-internal boundary of the whole room"
+        ],
+        "clear_internal_area_m2": 1.649,
+        "clear_internal_perimeter_m": 5.721,
+        "geometry_basis": "CLEAR_INTERNAL_FINISH_FACE",
+        "is_complete": false,
+        "ownership": [
+          {
+            "measurement_basis": "CLEAR_INTERNAL_FINISH_FACE",
+            "opposite_face_id": "VS-005010",
+            "opposite_mm": 28024.7,
+            "ownership_status": "OWNERSHIP_VALIDATED",
+            "room_facing_face_id": "VS-005006",
+            "room_facing_mm": 27873.3,
+            "space_face_id": "SF-V2-0006",
+            "space_face_side": "FACE_A",
+            "wall_band_id": "WB-00019",
+            "why": "the room lies on the negative side of this wall line, so FACE_A is the room-facing face"
+          },
+          {
+            "measurement_basis": "CLEAR_INTERNAL_FINISH_FACE",
+            "opposite_face_id": "VS-005351",
+            "opposite_mm": 22647.8,
+            "ownership_status": "OWNERSHIP_VALIDATED",
+            "room_facing_face_id": "VS-009960",
+            "room_facing_mm": 22799.2,
+            "space_face_id": "SF-V2-0006",
+            "space_face_side": "FACE_B",
+            "wall_band_id": "WB-00201",
+            "why": "the room lies on the positive side of this wall line, so FACE_B is the room-facing face"
+          },
+          {
+            "measurement_basis": "CLEAR_INTERNAL_FINISH_FACE",
+            "opposite_face_id": "VS-006434",
+            "opposite_mm": 26924.4,
+            "ownership_status": "OWNERSHIP_VALIDATED",
+            "room_facing_face_id": "VS-009962",
+            "room_facing_mm": 27073.1,
+            "space_face_id": "SF-V2-0006",
+            "space_face_side": "FACE_B",
+            "wall_band_id": "WB-00037",
+            "why": "the room lies on the positive side of this wall line, so FACE_B is the room-facing face"
+          },
+          {
+            "measurement_basis": "CLEAR_INTERNAL_FINISH_FACE",
+            "opposite_face_id": "VS-005340",
+            "opposite_mm": 24896.9,
+            "ownership_status": "OWNERSHIP_UNRESOLVED",
+            "room_facing_face_id": "VS-005345",
+            "room_facing_mm": 24748.3,
+            "space_face_id": "SF-V2-0006",
+            "space_face_side": "FACE_A",
+            "wall_band_id": "WB-00144",
+            "why": "neither side of this wall tests as inside the face, or both do. The room-facing face is not chosen by being nearer"
+          }
+        ],
+        "portal_closures": [],
+        "provenance": {
+          "built_from": "wall band faces + portal closures",
+          "centreline_face_id": "SF-V2-0006",
+          "raster_used": false,
+          "scalar_conversion_used": false
+        },
+        "space_face_id": "SF-V2-0006",
+        "steps_inserted": 1,
+        "unresolved_edges": [
+          {
+            "edge_id": "WB-00144",
+            "ownership_status": "OWNERSHIP_UNRESOLVED",
+            "why": "neither side of this wall tests as inside the face, or both do. The room-facing face is not chosen by being nearer"
+          }
+        ],
+        "vertices": 4
+      },
+      {
+        "blockers": [],
+        "clear_internal_area_m2": 1.173,
+        "clear_internal_perimeter_m": 4.904,
+        "geometry_basis": "CLEAR_INTERNAL_FINISH_FACE",
+        "is_complete": true,
+        "ownership": [
+          {
+            "measurement_basis": "CLEAR_INTERNAL_FINISH_FACE",
+            "opposite_face_id": "VS-009981",
+            "opposite_mm": 26924.4,
+            "ownership_status": "OWNERSHIP_VALIDATED",
+            "room_facing_face_id": "VS-009982",
+            "room_facing_mm": 27073.1,
+            "space_face_id": "SF-V2-0007",
+            "space_face_side": "FACE_B",
+            "wall_band_id": "WB-00033",
+            "why": "the room lies on the positive side of this wall line, so FACE_B is the room-facing face"
+          },
+          {
+            "measurement_basis": "CLEAR_INTERNAL_FINISH_FACE",
+            "opposite_face_id": "VS-009997",
+            "opposite_mm": 19447.2,
+            "ownership_status": "OWNERSHIP_VALIDATED",
+            "room_facing_face_id": "VS-009978",
+            "room_facing_mm": 19298.5,
+            "space_face_id": "SF-V2-0007",
+            "space_face_side": "FACE_A",
+            "wall_band_id": "WB-00200",
+            "why": "the room lies on the negative side of this wall line, so FACE_A is the room-facing face"
+          },
+          {
+            "measurement_basis": "CLEAR_INTERNAL_FINISH_FACE",
+            "opposite_face_id": "VS-009998",
+            "opposite_mm": 27873.3,
+            "ownership_status": "OWNERSHIP_VALIDATED",
+            "room_facing_face_id": "VS-009977",
+            "room_facing_mm": 27724.6,
+            "space_face_id": "SF-V2-0007",
+            "space_face_side": "FACE_A",
+            "wall_band_id": "WB-00034",
+            "why": "the room lies on the negative side of this wall line, so FACE_A is the room-facing face"
+          },
+          {
+            "measurement_basis": "CLEAR_INTERNAL_FINISH_FACE",
+            "opposite_face_id": "VS-009979",
+            "opposite_mm": 17346.8,
+            "ownership_status": "OWNERSHIP_VALIDATED",
+            "room_facing_face_id": "VS-009980",
+            "room_facing_mm": 17498.2,
+            "space_face_id": "SF-V2-0007",
+            "space_face_side": "FACE_B",
+            "wall_band_id": "WB-00202",
+            "why": "the room lies on the positive side of this wall line, so FACE_B is the room-facing face"
+          }
+        ],
+        "portal_closures": [],
+        "provenance": {
+          "built_from": "wall band faces + portal closures",
+          "centreline_face_id": "SF-V2-0007",
+          "raster_used": false,
+          "scalar_conversion_used": false
+        },
+        "space_face_id": "SF-V2-0007",
+        "steps_inserted": 0,
+        "unresolved_edges": [],
+        "vertices": 4
+      },
+      {
+        "blockers": [],
+        "clear_internal_area_m2": 1.173,
+        "clear_internal_perimeter_m": 4.904,
+        "geometry_basis": "CLEAR_INTERNAL_FINISH_FACE",
+        "is_complete": true,
+        "ownership": [
+          {
+            "measurement_basis": "CLEAR_INTERNAL_FINISH_FACE",
+            "opposite_face_id": "VS-010019",
+            "opposite_mm": 35096.4,
+            "ownership_status": "OWNERSHIP_VALIDATED",
+            "room_facing_face_id": "VS-010000",
+            "room_facing_mm": 34947.7,
+            "space_face_id": "SF-V2-0008",
+            "space_face_side": "FACE_A",
+            "wall_band_id": "WB-00069",
+            "why": "the room lies on the negative side of this wall line, so FACE_A is the room-facing face"
+          },
+          {
+            "measurement_basis": "CLEAR_INTERNAL_FINISH_FACE",
+            "opposite_face_id": "VS-010020",
+            "opposite_mm": 24748.3,
+            "ownership_status": "OWNERSHIP_VALIDATED",
+            "room_facing_face_id": "VS-000187",
+            "room_facing_mm": 24896.9,
+            "space_face_id": "SF-V2-0008",
+            "space_face_side": "FACE_B",
+            "wall_band_id": "WB-00149",
+            "why": "the room lies on the positive side of this wall line, so FACE_B is the room-facing face"
+          },
+          {
+            "measurement_basis": "CLEAR_INTERNAL_FINISH_FACE",
+            "opposite_face_id": "VS-010001",
+            "opposite_mm": 32998.6,
+            "ownership_status": "OWNERSHIP_VALIDATED",
+            "room_facing_face_id": "VS-010002",
+            "room_facing_mm": 33147.3,
+            "space_face_id": "SF-V2-0008",
+            "space_face_side": "FACE_B",
+            "wall_band_id": "WB-00070",
+            "why": "the room lies on the positive side of this wall line, so FACE_B is the room-facing face"
+          },
+          {
+            "measurement_basis": "CLEAR_INTERNAL_FINISH_FACE",
+            "opposite_face_id": "VS-010003",
+            "opposite_mm": 25697.1,
+            "ownership_status": "OWNERSHIP_VALIDATED",
+            "room_facing_face_id": "VS-010004",
+            "room_facing_mm": 25548.4,
+            "space_face_id": "SF-V2-0008",
+            "space_face_side": "FACE_A",
+            "wall_band_id": "WB-00161",
+            "why": "the room lies on the negative side of this wall line, so FACE_A is the room-facing face"
+          }
+        ],
+        "portal_closures": [],
+        "provenance": {
+          "built_from": "wall band faces + portal closures",
+          "centreline_face_id": "SF-V2-0008",
+          "raster_used": false,
+          "scalar_conversion_used": false
+        },
+        "space_face_id": "SF-V2-0008",
+        "steps_inserted": 0,
+        "unresolved_edges": [],
+        "vertices": 4
+      }
+    ],
+    "portal_closures_on_clear_face": 2,
+    "refused": [],
+    "steps_inserted": 3,
+    "total_unresolved_edges": 8
+  },
   "connectivity": {
     "components": 42,
     "components_with_cycles": 8,
@@ -3455,6 +4175,131 @@
       "UNRESOLVED": 85
     }
   },
+  "control_set": {
+    "controls": [
+      {
+        "room_type": "BATHROOM",
+        "space_id": "BTH-01",
+        "why_selected": "lowest-numbered IN_SCOPE BATHROOM of 6 available (BTH-01, BTH-02, BTH-03, BTH-04, BTH-05, BTH-06)"
+      },
+      {
+        "room_type": "BEDROOM",
+        "space_id": "BED-01",
+        "why_selected": "lowest-numbered IN_SCOPE BEDROOM of 4 available (BED-01, BED-02, BED-03, BED-NW)"
+      },
+      {
+        "room_type": "STORE",
+        "space_id": "STR-01",
+        "why_selected": "lowest-numbered IN_SCOPE STORE of 1 available (STR-01)"
+      }
+    ],
+    "covered_types": [
+      "BATHROOM",
+      "BEDROOM",
+      "STORE"
+    ],
+    "excluded_with_reasons": {
+      "BED-04": "physical topology MERGED: the printed 1600 x 3000 bathroom never separates from the bedroom",
+      "STA-01": "stairs must not be measured as floor",
+      "WSH-01": "region identity FAILED: the associated region is the hatched shaft beside the wash room, not the wash floor"
+    },
+    "frozen_before_comparison": true,
+    "missing_types": [],
+    "note": "chosen from the space map alone. No area, error, face or cycle took part in the selection, and a control that produced no geometry stays in the set as a row saying so",
+    "outcome": [
+      {
+        "clear_internal_polygon": false,
+        "comparable_on_clear_basis": false,
+        "room_type": "BATHROOM",
+        "space_id": "BTH-01",
+        "vector_face_id": ""
+      },
+      {
+        "clear_internal_polygon": false,
+        "comparable_on_clear_basis": false,
+        "room_type": "BEDROOM",
+        "space_id": "BED-01",
+        "vector_face_id": ""
+      },
+      {
+        "clear_internal_polygon": false,
+        "comparable_on_clear_basis": false,
+        "room_type": "STORE",
+        "space_id": "STR-01",
+        "vector_face_id": ""
+      }
+    ],
+    "required_room_types": [
+      "BATHROOM",
+      "BEDROOM",
+      "STORE"
+    ],
+    "selection_rule": "the lowest-numbered IN_SCOPE space of each required room type, excluding spaces with a stated prior defect"
+  },
+  "enclosure_diagnostics": [
+    {
+      "area_m2": 32.658,
+      "candidate_dividing_wall": {
+        "at_mm": 27383.9,
+        "axis": "H",
+        "between": [
+          "BED-01",
+          "BTH-02"
+        ],
+        "separation_mm": 2670.8
+      },
+      "contained_semantic_observations": [
+        "BED-01",
+        "BTH-02"
+      ],
+      "divider_cause": "FACE_NESTING_ARTIFACT",
+      "overlaps_without_containment": [
+        "SF-V2-0004"
+      ],
+      "portal_candidates_on_this_face": [
+        "PT-BED-01-west-27124",
+        "PT-BTH-02-west-25824",
+        "PT-GH27048-line-27348",
+        "PT-GV26235-line-27124",
+        "PT-GV31091-line-25605"
+      ],
+      "portals_with_no_host": [],
+      "space_face_id": "SF-V2-0003",
+      "unpaired_faces_near_divider": 0,
+      "wall_band_evidence_near_divider": [],
+      "why": "this cycle overlaps 1 other cycle(s) without containing them. The walk itself is suspect before any wall is blamed"
+    },
+    {
+      "area_m2": 31.523,
+      "candidate_dividing_wall": {
+        "at_mm": 22756.0,
+        "axis": "H",
+        "between": [
+          "BED-NW",
+          "BTH-01"
+        ],
+        "separation_mm": 2541.1
+      },
+      "contained_semantic_observations": [
+        "BED-NW",
+        "BTH-01"
+      ],
+      "divider_cause": "FACE_NESTING_ARTIFACT",
+      "overlaps_without_containment": [
+        "SF-V2-0003"
+      ],
+      "portal_candidates_on_this_face": [
+        "PT-BTH-01-west-23150",
+        "PT-GV26222-line-21823",
+        "PT-GV31091-line-23604"
+      ],
+      "portals_with_no_host": [],
+      "space_face_id": "SF-V2-0004",
+      "unpaired_faces_near_divider": 0,
+      "wall_band_evidence_near_divider": [],
+      "why": "this cycle overlaps 1 other cycle(s) without containing them. The walk itself is suspect before any wall is blamed"
+    }
+  ],
   "end_caps": {
     "found": 333
   },
@@ -3475,6 +4320,748 @@
     "single_family_only": 258,
     "validated": 29
   },
+  "face_nesting": [
+    {
+      "area_m2": 989.159,
+      "aspect": 1.6,
+      "children": [
+        "SF-V2-0002",
+        "SF-V2-0003",
+        "SF-V2-0004",
+        "SF-V2-0005",
+        "SF-V2-0006",
+        "SF-V2-0007",
+        "SF-V2-0008",
+        "SF-V2-0009",
+        "SF-V2-0010",
+        "SF-V2-0011",
+        "SF-V2-0012",
+        "SF-V2-0013",
+        "SF-V2-0014",
+        "SF-V2-0015",
+        "SF-V2-0016",
+        "SF-V2-0017",
+        "SF-V2-0018",
+        "SF-V2-0019"
+      ],
+      "cycle_class": "BUILDING_ENVELOPE",
+      "depth": 0,
+      "is_atomic_space": false,
+      "labelled_rooms_inside": 27,
+      "labelled_space_ids": [
+        "BED-02",
+        "BED-04",
+        "BTH-03",
+        "BTH-04",
+        "BTH-05",
+        "BTH-06",
+        "COR-02",
+        "COR-03",
+        "IRN-01",
+        "KIT-01",
+        "MAID-01",
+        "MAID-02",
+        "MAID-03",
+        "MAID-04",
+        "MAID-05",
+        "MBTH-01",
+        "MBTH-03",
+        "MBTH-04",
+        "MCOR-01",
+        "OPEN-01",
+        "REC-02",
+        "SAL-NW",
+        "SRV-01",
+        "STA-01",
+        "STR-01",
+        "TRC-01",
+        "TRC-02"
+      ],
+      "min_extent_mm": 24869.0,
+      "overlaps_without_containment": [],
+      "parent": "",
+      "perimeter_m": 129.471,
+      "portal_edges": 0,
+      "siblings": [],
+      "space_face_id": "SF-V2-0001",
+      "why": "a depth-0 cycle containing 36 labelled rooms. This is the external boundary of the floor, NOT a room whose dividing walls are missing"
+    },
+    {
+      "area_m2": 33.285,
+      "aspect": 1.06,
+      "children": [],
+      "cycle_class": "ATOMIC_SPACE_FACE",
+      "depth": 1,
+      "is_atomic_space": true,
+      "labelled_rooms_inside": 1,
+      "labelled_space_ids": [
+        "BED-03"
+      ],
+      "min_extent_mm": 6099.9,
+      "overlaps_without_containment": [],
+      "parent": "SF-V2-0001",
+      "perimeter_m": 28.299,
+      "portal_edges": 1,
+      "siblings": [
+        "SF-V2-0003",
+        "SF-V2-0004",
+        "SF-V2-0005",
+        "SF-V2-0006",
+        "SF-V2-0007",
+        "SF-V2-0008",
+        "SF-V2-0009",
+        "SF-V2-0010",
+        "SF-V2-0011",
+        "SF-V2-0012",
+        "SF-V2-0013",
+        "SF-V2-0014",
+        "SF-V2-0015",
+        "SF-V2-0016",
+        "SF-V2-0017",
+        "SF-V2-0018",
+        "SF-V2-0019"
+      ],
+      "space_face_id": "SF-V2-0002",
+      "why": "one labelled room (BED-03) and nothing nested that holds another. ATOMIC CANDIDATE \u2014 its identity is a separate question"
+    },
+    {
+      "area_m2": 32.658,
+      "aspect": 1.24,
+      "children": [],
+      "cycle_class": "ENCLOSURE_CYCLE",
+      "depth": 1,
+      "is_atomic_space": false,
+      "labelled_rooms_inside": 2,
+      "labelled_space_ids": [
+        "BED-01",
+        "BTH-02"
+      ],
+      "min_extent_mm": 5175.4,
+      "overlaps_without_containment": [
+        "SF-V2-0004"
+      ],
+      "parent": "SF-V2-0001",
+      "perimeter_m": 43.1,
+      "portal_edges": 5,
+      "siblings": [
+        "SF-V2-0002",
+        "SF-V2-0004",
+        "SF-V2-0005",
+        "SF-V2-0006",
+        "SF-V2-0007",
+        "SF-V2-0008",
+        "SF-V2-0009",
+        "SF-V2-0010",
+        "SF-V2-0011",
+        "SF-V2-0012",
+        "SF-V2-0013",
+        "SF-V2-0014",
+        "SF-V2-0015",
+        "SF-V2-0016",
+        "SF-V2-0017",
+        "SF-V2-0018",
+        "SF-V2-0019"
+      ],
+      "space_face_id": "SF-V2-0003",
+      "why": "2 labelled rooms inside one cycle (BED-01, BTH-02): an enclosure of several spaces, so a dividing boundary is missing or a portal over-closed. It also overlaps another cycle without containing it"
+    },
+    {
+      "area_m2": 31.523,
+      "aspect": 1.19,
+      "children": [],
+      "cycle_class": "ENCLOSURE_CYCLE",
+      "depth": 1,
+      "is_atomic_space": false,
+      "labelled_rooms_inside": 2,
+      "labelled_space_ids": [
+        "BED-NW",
+        "BTH-01"
+      ],
+      "min_extent_mm": 5175.4,
+      "overlaps_without_containment": [
+        "SF-V2-0003"
+      ],
+      "parent": "SF-V2-0001",
+      "perimeter_m": 40.473,
+      "portal_edges": 3,
+      "siblings": [
+        "SF-V2-0002",
+        "SF-V2-0003",
+        "SF-V2-0005",
+        "SF-V2-0006",
+        "SF-V2-0007",
+        "SF-V2-0008",
+        "SF-V2-0009",
+        "SF-V2-0010",
+        "SF-V2-0011",
+        "SF-V2-0012",
+        "SF-V2-0013",
+        "SF-V2-0014",
+        "SF-V2-0015",
+        "SF-V2-0016",
+        "SF-V2-0017",
+        "SF-V2-0018",
+        "SF-V2-0019"
+      ],
+      "space_face_id": "SF-V2-0004",
+      "why": "2 labelled rooms inside one cycle (BED-NW, BTH-01): an enclosure of several spaces, so a dividing boundary is missing or a portal over-closed. It also overlaps another cycle without containing it"
+    },
+    {
+      "area_m2": 3.687,
+      "aspect": 1.86,
+      "children": [],
+      "cycle_class": "ATOMIC_SPACE_FACE",
+      "depth": 1,
+      "is_atomic_space": true,
+      "labelled_rooms_inside": 1,
+      "labelled_space_ids": [
+        "MBTH-02"
+      ],
+      "min_extent_mm": 1451.6,
+      "overlaps_without_containment": [],
+      "parent": "SF-V2-0001",
+      "perimeter_m": 7.849,
+      "portal_edges": 1,
+      "siblings": [
+        "SF-V2-0002",
+        "SF-V2-0003",
+        "SF-V2-0004",
+        "SF-V2-0006",
+        "SF-V2-0007",
+        "SF-V2-0008",
+        "SF-V2-0009",
+        "SF-V2-0010",
+        "SF-V2-0011",
+        "SF-V2-0012",
+        "SF-V2-0013",
+        "SF-V2-0014",
+        "SF-V2-0015",
+        "SF-V2-0016",
+        "SF-V2-0017",
+        "SF-V2-0018",
+        "SF-V2-0019"
+      ],
+      "space_face_id": "SF-V2-0005",
+      "why": "one labelled room (MBTH-02) and nothing nested that holds another. ATOMIC CANDIDATE \u2014 its identity is a separate question"
+    },
+    {
+      "area_m2": 1.981,
+      "aspect": 2.37,
+      "children": [],
+      "cycle_class": "ATOMIC_SPACE_FACE",
+      "depth": 1,
+      "is_atomic_space": true,
+      "labelled_rooms_inside": 1,
+      "labelled_space_ids": [
+        "WSH-01"
+      ],
+      "min_extent_mm": 950.2,
+      "overlaps_without_containment": [],
+      "parent": "SF-V2-0001",
+      "perimeter_m": 6.249,
+      "portal_edges": 0,
+      "siblings": [
+        "SF-V2-0002",
+        "SF-V2-0003",
+        "SF-V2-0004",
+        "SF-V2-0005",
+        "SF-V2-0007",
+        "SF-V2-0008",
+        "SF-V2-0009",
+        "SF-V2-0010",
+        "SF-V2-0011",
+        "SF-V2-0012",
+        "SF-V2-0013",
+        "SF-V2-0014",
+        "SF-V2-0015",
+        "SF-V2-0016",
+        "SF-V2-0017",
+        "SF-V2-0018",
+        "SF-V2-0019"
+      ],
+      "space_face_id": "SF-V2-0006",
+      "why": "one labelled room (WSH-01) and nothing nested that holds another. ATOMIC CANDIDATE \u2014 its identity is a separate question"
+    },
+    {
+      "area_m2": 1.777,
+      "aspect": 2.21,
+      "children": [],
+      "cycle_class": "ATOMIC_SPACE_FACE",
+      "depth": 1,
+      "is_atomic_space": true,
+      "labelled_rooms_inside": 1,
+      "labelled_space_ids": [
+        "SHF-01"
+      ],
+      "min_extent_mm": 948.8,
+      "overlaps_without_containment": [],
+      "parent": "SF-V2-0001",
+      "perimeter_m": 6.099,
+      "portal_edges": 0,
+      "siblings": [
+        "SF-V2-0002",
+        "SF-V2-0003",
+        "SF-V2-0004",
+        "SF-V2-0005",
+        "SF-V2-0006",
+        "SF-V2-0008",
+        "SF-V2-0009",
+        "SF-V2-0010",
+        "SF-V2-0011",
+        "SF-V2-0012",
+        "SF-V2-0013",
+        "SF-V2-0014",
+        "SF-V2-0015",
+        "SF-V2-0016",
+        "SF-V2-0017",
+        "SF-V2-0018",
+        "SF-V2-0019"
+      ],
+      "space_face_id": "SF-V2-0007",
+      "why": "one labelled room (SHF-01) and nothing nested that holds another. ATOMIC CANDIDATE \u2014 its identity is a separate question"
+    },
+    {
+      "area_m2": 1.74,
+      "aspect": 2.13,
+      "children": [],
+      "cycle_class": "ATOMIC_SPACE_FACE",
+      "depth": 1,
+      "is_atomic_space": true,
+      "labelled_rooms_inside": 1,
+      "labelled_space_ids": [
+        "REC-01"
+      ],
+      "min_extent_mm": 948.8,
+      "overlaps_without_containment": [],
+      "parent": "SF-V2-0001",
+      "perimeter_m": 5.944,
+      "portal_edges": 0,
+      "siblings": [
+        "SF-V2-0002",
+        "SF-V2-0003",
+        "SF-V2-0004",
+        "SF-V2-0005",
+        "SF-V2-0006",
+        "SF-V2-0007",
+        "SF-V2-0009",
+        "SF-V2-0010",
+        "SF-V2-0011",
+        "SF-V2-0012",
+        "SF-V2-0013",
+        "SF-V2-0014",
+        "SF-V2-0015",
+        "SF-V2-0016",
+        "SF-V2-0017",
+        "SF-V2-0018",
+        "SF-V2-0019"
+      ],
+      "space_face_id": "SF-V2-0008",
+      "why": "one labelled room (REC-01) and nothing nested that holds another. ATOMIC CANDIDATE \u2014 its identity is a separate question"
+    },
+    {
+      "area_m2": 1.204,
+      "aspect": 1.56,
+      "children": [],
+      "cycle_class": "UNRESOLVED_NESTED_FACE",
+      "depth": 1,
+      "is_atomic_space": false,
+      "labelled_rooms_inside": 0,
+      "labelled_space_ids": [],
+      "min_extent_mm": 900.2,
+      "overlaps_without_containment": [
+        "SF-V2-0011"
+      ],
+      "parent": "SF-V2-0001",
+      "perimeter_m": 4.256,
+      "portal_edges": 0,
+      "siblings": [
+        "SF-V2-0002",
+        "SF-V2-0003",
+        "SF-V2-0004",
+        "SF-V2-0005",
+        "SF-V2-0006",
+        "SF-V2-0007",
+        "SF-V2-0008",
+        "SF-V2-0010",
+        "SF-V2-0011",
+        "SF-V2-0012",
+        "SF-V2-0013",
+        "SF-V2-0014",
+        "SF-V2-0015",
+        "SF-V2-0016",
+        "SF-V2-0017",
+        "SF-V2-0018",
+        "SF-V2-0019"
+      ],
+      "space_face_id": "SF-V2-0009",
+      "why": "this cycle overlaps another without containing it or being contained by it, and holds no labelled room of its own"
+    },
+    {
+      "area_m2": 1.204,
+      "aspect": 1.56,
+      "children": [],
+      "cycle_class": "HOLE",
+      "depth": 1,
+      "is_atomic_space": false,
+      "labelled_rooms_inside": 0,
+      "labelled_space_ids": [],
+      "min_extent_mm": 900.2,
+      "overlaps_without_containment": [],
+      "parent": "SF-V2-0001",
+      "perimeter_m": 4.3,
+      "portal_edges": 0,
+      "siblings": [
+        "SF-V2-0002",
+        "SF-V2-0003",
+        "SF-V2-0004",
+        "SF-V2-0005",
+        "SF-V2-0006",
+        "SF-V2-0007",
+        "SF-V2-0008",
+        "SF-V2-0009",
+        "SF-V2-0011",
+        "SF-V2-0012",
+        "SF-V2-0013",
+        "SF-V2-0014",
+        "SF-V2-0015",
+        "SF-V2-0016",
+        "SF-V2-0017",
+        "SF-V2-0018",
+        "SF-V2-0019"
+      ],
+      "space_face_id": "SF-V2-0010",
+      "why": "a cycle wholly inside another with no labelled room of its own: a shaft or a void. Its parent's floor area must exclude it"
+    },
+    {
+      "area_m2": 0.808,
+      "aspect": 2.33,
+      "children": [],
+      "cycle_class": "UNRESOLVED_NESTED_FACE",
+      "depth": 1,
+      "is_atomic_space": false,
+      "labelled_rooms_inside": 0,
+      "labelled_space_ids": [],
+      "min_extent_mm": 600.1,
+      "overlaps_without_containment": [
+        "SF-V2-0009",
+        "SF-V2-0014"
+      ],
+      "parent": "SF-V2-0001",
+      "perimeter_m": 3.649,
+      "portal_edges": 0,
+      "siblings": [
+        "SF-V2-0002",
+        "SF-V2-0003",
+        "SF-V2-0004",
+        "SF-V2-0005",
+        "SF-V2-0006",
+        "SF-V2-0007",
+        "SF-V2-0008",
+        "SF-V2-0009",
+        "SF-V2-0010",
+        "SF-V2-0012",
+        "SF-V2-0013",
+        "SF-V2-0014",
+        "SF-V2-0015",
+        "SF-V2-0016",
+        "SF-V2-0017",
+        "SF-V2-0018",
+        "SF-V2-0019"
+      ],
+      "space_face_id": "SF-V2-0011",
+      "why": "this cycle overlaps another without containing it or being contained by it, and holds no labelled room of its own"
+    },
+    {
+      "area_m2": 0.799,
+      "aspect": 2.33,
+      "children": [],
+      "cycle_class": "HOLE",
+      "depth": 1,
+      "is_atomic_space": false,
+      "labelled_rooms_inside": 0,
+      "labelled_space_ids": [],
+      "min_extent_mm": 600.1,
+      "overlaps_without_containment": [],
+      "parent": "SF-V2-0001",
+      "perimeter_m": 3.649,
+      "portal_edges": 0,
+      "siblings": [
+        "SF-V2-0002",
+        "SF-V2-0003",
+        "SF-V2-0004",
+        "SF-V2-0005",
+        "SF-V2-0006",
+        "SF-V2-0007",
+        "SF-V2-0008",
+        "SF-V2-0009",
+        "SF-V2-0010",
+        "SF-V2-0011",
+        "SF-V2-0013",
+        "SF-V2-0014",
+        "SF-V2-0015",
+        "SF-V2-0016",
+        "SF-V2-0017",
+        "SF-V2-0018",
+        "SF-V2-0019"
+      ],
+      "space_face_id": "SF-V2-0012",
+      "why": "a cycle wholly inside another with no labelled room of its own: a shaft or a void. Its parent's floor area must exclude it"
+    },
+    {
+      "area_m2": 0.788,
+      "aspect": 2.33,
+      "children": [],
+      "cycle_class": "HOLE",
+      "depth": 1,
+      "is_atomic_space": false,
+      "labelled_rooms_inside": 0,
+      "labelled_space_ids": [],
+      "min_extent_mm": 600.1,
+      "overlaps_without_containment": [],
+      "parent": "SF-V2-0001",
+      "perimeter_m": 3.649,
+      "portal_edges": 0,
+      "siblings": [
+        "SF-V2-0002",
+        "SF-V2-0003",
+        "SF-V2-0004",
+        "SF-V2-0005",
+        "SF-V2-0006",
+        "SF-V2-0007",
+        "SF-V2-0008",
+        "SF-V2-0009",
+        "SF-V2-0010",
+        "SF-V2-0011",
+        "SF-V2-0012",
+        "SF-V2-0014",
+        "SF-V2-0015",
+        "SF-V2-0016",
+        "SF-V2-0017",
+        "SF-V2-0018",
+        "SF-V2-0019"
+      ],
+      "space_face_id": "SF-V2-0013",
+      "why": "a cycle wholly inside another with no labelled room of its own: a shaft or a void. Its parent's floor area must exclude it"
+    },
+    {
+      "area_m2": 0.788,
+      "aspect": 2.33,
+      "children": [],
+      "cycle_class": "UNRESOLVED_NESTED_FACE",
+      "depth": 1,
+      "is_atomic_space": false,
+      "labelled_rooms_inside": 0,
+      "labelled_space_ids": [],
+      "min_extent_mm": 600.1,
+      "overlaps_without_containment": [
+        "SF-V2-0011"
+      ],
+      "parent": "SF-V2-0001",
+      "perimeter_m": 3.649,
+      "portal_edges": 0,
+      "siblings": [
+        "SF-V2-0002",
+        "SF-V2-0003",
+        "SF-V2-0004",
+        "SF-V2-0005",
+        "SF-V2-0006",
+        "SF-V2-0007",
+        "SF-V2-0008",
+        "SF-V2-0009",
+        "SF-V2-0010",
+        "SF-V2-0011",
+        "SF-V2-0012",
+        "SF-V2-0013",
+        "SF-V2-0015",
+        "SF-V2-0016",
+        "SF-V2-0017",
+        "SF-V2-0018",
+        "SF-V2-0019"
+      ],
+      "space_face_id": "SF-V2-0014",
+      "why": "this cycle overlaps another without containing it or being contained by it, and holds no labelled room of its own"
+    },
+    {
+      "area_m2": 0.559,
+      "aspect": 4.66,
+      "children": [],
+      "cycle_class": "WALL_CAVITY",
+      "depth": 1,
+      "is_atomic_space": false,
+      "labelled_rooms_inside": 0,
+      "labelled_space_ids": [],
+      "min_extent_mm": 354.1,
+      "overlaps_without_containment": [],
+      "parent": "SF-V2-0001",
+      "perimeter_m": 3.735,
+      "portal_edges": 1,
+      "siblings": [
+        "SF-V2-0002",
+        "SF-V2-0003",
+        "SF-V2-0004",
+        "SF-V2-0005",
+        "SF-V2-0006",
+        "SF-V2-0007",
+        "SF-V2-0008",
+        "SF-V2-0009",
+        "SF-V2-0010",
+        "SF-V2-0011",
+        "SF-V2-0012",
+        "SF-V2-0013",
+        "SF-V2-0014",
+        "SF-V2-0016",
+        "SF-V2-0017",
+        "SF-V2-0018",
+        "SF-V2-0019"
+      ],
+      "space_face_id": "SF-V2-0015",
+      "why": "354 mm across at its narrowest: too narrow to be occupied floor at any scale a house uses"
+    },
+    {
+      "area_m2": 0.342,
+      "aspect": 7.9,
+      "children": [],
+      "cycle_class": "WALL_CAVITY",
+      "depth": 1,
+      "is_atomic_space": false,
+      "labelled_rooms_inside": 0,
+      "labelled_space_ids": [],
+      "min_extent_mm": 231.1,
+      "overlaps_without_containment": [],
+      "parent": "SF-V2-0001",
+      "perimeter_m": 3.854,
+      "portal_edges": 0,
+      "siblings": [
+        "SF-V2-0002",
+        "SF-V2-0003",
+        "SF-V2-0004",
+        "SF-V2-0005",
+        "SF-V2-0006",
+        "SF-V2-0007",
+        "SF-V2-0008",
+        "SF-V2-0009",
+        "SF-V2-0010",
+        "SF-V2-0011",
+        "SF-V2-0012",
+        "SF-V2-0013",
+        "SF-V2-0014",
+        "SF-V2-0015",
+        "SF-V2-0017",
+        "SF-V2-0018",
+        "SF-V2-0019"
+      ],
+      "space_face_id": "SF-V2-0016",
+      "why": "231 mm across at its narrowest: too narrow to be occupied floor at any scale a house uses"
+    },
+    {
+      "area_m2": 0.281,
+      "aspect": 1.14,
+      "children": [],
+      "cycle_class": "MICRO_FACE",
+      "depth": 1,
+      "is_atomic_space": false,
+      "labelled_rooms_inside": 0,
+      "labelled_space_ids": [],
+      "min_extent_mm": 6308.0,
+      "overlaps_without_containment": [],
+      "parent": "SF-V2-0001",
+      "perimeter_m": 46.854,
+      "portal_edges": 0,
+      "siblings": [
+        "SF-V2-0002",
+        "SF-V2-0003",
+        "SF-V2-0004",
+        "SF-V2-0005",
+        "SF-V2-0006",
+        "SF-V2-0007",
+        "SF-V2-0008",
+        "SF-V2-0009",
+        "SF-V2-0010",
+        "SF-V2-0011",
+        "SF-V2-0012",
+        "SF-V2-0013",
+        "SF-V2-0014",
+        "SF-V2-0015",
+        "SF-V2-0016",
+        "SF-V2-0018",
+        "SF-V2-0019"
+      ],
+      "space_face_id": "SF-V2-0017",
+      "why": "0.281 m2 needs classifying before use. NOTHING here deletes it"
+    },
+    {
+      "area_m2": 0.028,
+      "aspect": 29.07,
+      "children": [],
+      "cycle_class": "WALL_CAVITY",
+      "depth": 1,
+      "is_atomic_space": false,
+      "labelled_rooms_inside": 0,
+      "labelled_space_ids": [],
+      "min_extent_mm": 75.7,
+      "overlaps_without_containment": [],
+      "parent": "SF-V2-0001",
+      "perimeter_m": 4.301,
+      "portal_edges": 0,
+      "siblings": [
+        "SF-V2-0002",
+        "SF-V2-0003",
+        "SF-V2-0004",
+        "SF-V2-0005",
+        "SF-V2-0006",
+        "SF-V2-0007",
+        "SF-V2-0008",
+        "SF-V2-0009",
+        "SF-V2-0010",
+        "SF-V2-0011",
+        "SF-V2-0012",
+        "SF-V2-0013",
+        "SF-V2-0014",
+        "SF-V2-0015",
+        "SF-V2-0016",
+        "SF-V2-0017",
+        "SF-V2-0019"
+      ],
+      "space_face_id": "SF-V2-0018",
+      "why": "76 mm across at its narrowest: too narrow to be occupied floor at any scale a house uses"
+    },
+    {
+      "area_m2": 0.027,
+      "aspect": 23.83,
+      "children": [],
+      "cycle_class": "WALL_CAVITY",
+      "depth": 1,
+      "is_atomic_space": false,
+      "labelled_rooms_inside": 0,
+      "labelled_space_ids": [],
+      "min_extent_mm": 47.3,
+      "overlaps_without_containment": [],
+      "parent": "SF-V2-0001",
+      "perimeter_m": 2.282,
+      "portal_edges": 0,
+      "siblings": [
+        "SF-V2-0002",
+        "SF-V2-0003",
+        "SF-V2-0004",
+        "SF-V2-0005",
+        "SF-V2-0006",
+        "SF-V2-0007",
+        "SF-V2-0008",
+        "SF-V2-0009",
+        "SF-V2-0010",
+        "SF-V2-0011",
+        "SF-V2-0012",
+        "SF-V2-0013",
+        "SF-V2-0014",
+        "SF-V2-0015",
+        "SF-V2-0016",
+        "SF-V2-0017",
+        "SF-V2-0018"
+      ],
+      "space_face_id": "SF-V2-0019",
+      "why": "47 mm across at its narrowest: too narrow to be occupied floor at any scale a house uses"
+    }
+  ],
   "frame": {
     "fit": 1.0,
     "frame": "SWAP_FLIP_Y",
@@ -3791,7 +5378,15 @@
         "WB-00128",
         "WB-00129"
       ],
-      "component_id": "FACE-0001",
+      "boundary_edges_in_order": [
+        "WB-00001",
+        "WB-00129",
+        "WB-00002",
+        "WB-00128",
+        "WB-00128",
+        "WB-00128"
+      ],
+      "component_id": "",
       "geometry_status": "SPACE_FACE_CLOSED",
       "graph_type": "MATERIAL_WALL_GRAPH",
       "holes": [
@@ -3819,6 +5414,7 @@
         "WB-00128",
         "WB-00129"
       ],
+      "planar_component_id": "PC-0001",
       "portal_edges": [],
       "provenance": {
         "graph_type": "MATERIAL_WALL_GRAPH",
@@ -3840,7 +5436,13 @@
         "WB-00144",
         "WB-00201"
       ],
-      "component_id": "FACE-0014",
+      "boundary_edges_in_order": [
+        "WB-00019",
+        "WB-00201",
+        "WB-00037",
+        "WB-00144"
+      ],
+      "component_id": "",
       "geometry_status": "SPACE_FACE_CLOSED",
       "graph_type": "MATERIAL_WALL_GRAPH",
       "holes": [],
@@ -3854,6 +5456,7 @@
         "WB-00144",
         "WB-00201"
       ],
+      "planar_component_id": "PC-0006",
       "portal_edges": [],
       "provenance": {
         "graph_type": "MATERIAL_WALL_GRAPH",
@@ -3875,7 +5478,13 @@
         "WB-00200",
         "WB-00202"
       ],
-      "component_id": "FACE-0018",
+      "boundary_edges_in_order": [
+        "WB-00033",
+        "WB-00200",
+        "WB-00034",
+        "WB-00202"
+      ],
+      "component_id": "",
       "geometry_status": "SPACE_FACE_CLOSED",
       "graph_type": "MATERIAL_WALL_GRAPH",
       "holes": [],
@@ -3889,6 +5498,7 @@
         "WB-00200",
         "WB-00202"
       ],
+      "planar_component_id": "PC-0008",
       "portal_edges": [],
       "provenance": {
         "graph_type": "MATERIAL_WALL_GRAPH",
@@ -3910,7 +5520,13 @@
         "WB-00149",
         "WB-00161"
       ],
-      "component_id": "FACE-0013",
+      "boundary_edges_in_order": [
+        "WB-00069",
+        "WB-00149",
+        "WB-00070",
+        "WB-00161"
+      ],
+      "component_id": "",
       "geometry_status": "SPACE_FACE_CLOSED",
       "graph_type": "MATERIAL_WALL_GRAPH",
       "holes": [],
@@ -3924,6 +5540,7 @@
         "WB-00149",
         "WB-00161"
       ],
+      "planar_component_id": "PC-0005",
       "portal_edges": [],
       "provenance": {
         "graph_type": "MATERIAL_WALL_GRAPH",
@@ -3945,7 +5562,14 @@
         "WB-00173",
         "WB-00175"
       ],
-      "component_id": "FACE-0003",
+      "boundary_edges_in_order": [
+        "WB-00009",
+        "WB-00175",
+        "WB-00043",
+        "WB-00173",
+        "WB-00009"
+      ],
+      "component_id": "",
       "geometry_status": "SPACE_FACE_CLOSED",
       "graph_type": "MATERIAL_WALL_GRAPH",
       "holes": [],
@@ -3959,6 +5583,7 @@
         "WB-00173",
         "WB-00175"
       ],
+      "planar_component_id": "PC-0002",
       "portal_edges": [],
       "provenance": {
         "graph_type": "MATERIAL_WALL_GRAPH",
@@ -3980,7 +5605,14 @@
         "WB-00177",
         "WB-00179"
       ],
-      "component_id": "FACE-0003",
+      "boundary_edges_in_order": [
+        "WB-00009",
+        "WB-00009",
+        "WB-00177",
+        "WB-00011",
+        "WB-00179"
+      ],
+      "component_id": "",
       "geometry_status": "SPACE_FACE_CLOSED",
       "graph_type": "MATERIAL_WALL_GRAPH",
       "holes": [],
@@ -3994,6 +5626,7 @@
         "WB-00177",
         "WB-00179"
       ],
+      "planar_component_id": "PC-0002",
       "portal_edges": [],
       "provenance": {
         "graph_type": "MATERIAL_WALL_GRAPH",
@@ -4015,7 +5648,13 @@
         "WB-00172",
         "WB-00174"
       ],
-      "component_id": "FACE-0003",
+      "boundary_edges_in_order": [
+        "WB-00009",
+        "WB-00174",
+        "WB-00043",
+        "WB-00172"
+      ],
+      "component_id": "",
       "geometry_status": "SPACE_FACE_CLOSED",
       "graph_type": "MATERIAL_WALL_GRAPH",
       "holes": [],
@@ -4029,6 +5668,7 @@
         "WB-00172",
         "WB-00174"
       ],
+      "planar_component_id": "PC-0002",
       "portal_edges": [],
       "provenance": {
         "graph_type": "MATERIAL_WALL_GRAPH",
@@ -4050,7 +5690,14 @@
         "WB-00177",
         "WB-00181"
       ],
-      "component_id": "FACE-0003",
+      "boundary_edges_in_order": [
+        "WB-00009",
+        "WB-00009",
+        "WB-00181",
+        "WB-00011",
+        "WB-00177"
+      ],
+      "component_id": "",
       "geometry_status": "SPACE_FACE_CLOSED",
       "graph_type": "MATERIAL_WALL_GRAPH",
       "holes": [],
@@ -4064,6 +5711,7 @@
         "WB-00177",
         "WB-00181"
       ],
+      "planar_component_id": "PC-0002",
       "portal_edges": [],
       "provenance": {
         "graph_type": "MATERIAL_WALL_GRAPH",
@@ -4085,7 +5733,13 @@
         "WB-00178",
         "WB-00181"
       ],
-      "component_id": "FACE-0003",
+      "boundary_edges_in_order": [
+        "WB-00009",
+        "WB-00178",
+        "WB-00011",
+        "WB-00181"
+      ],
+      "component_id": "",
       "geometry_status": "SPACE_FACE_CLOSED",
       "graph_type": "MATERIAL_WALL_GRAPH",
       "holes": [],
@@ -4099,6 +5753,7 @@
         "WB-00178",
         "WB-00181"
       ],
+      "planar_component_id": "PC-0002",
       "portal_edges": [],
       "provenance": {
         "graph_type": "MATERIAL_WALL_GRAPH",
@@ -4120,7 +5775,13 @@
         "WB-00171",
         "WB-00221"
       ],
-      "component_id": "FACE-0004",
+      "boundary_edges_in_order": [
+        "WB-00030",
+        "WB-00221",
+        "WB-00094",
+        "WB-00171"
+      ],
+      "component_id": "",
       "geometry_status": "SPACE_FACE_CLOSED",
       "graph_type": "MATERIAL_WALL_GRAPH",
       "holes": [],
@@ -4134,6 +5795,7 @@
         "WB-00171",
         "WB-00221"
       ],
+      "planar_component_id": "PC-0003",
       "portal_edges": [],
       "provenance": {
         "graph_type": "MATERIAL_WALL_GRAPH",
@@ -4162,7 +5824,37 @@
         "WB-00185",
         "WB-00190"
       ],
-      "component_id": "FACE-0006",
+      "boundary_edges_in_order": [
+        "WB-00008",
+        "WB-00190",
+        "WB-00190",
+        "WB-00124",
+        "WB-00124",
+        "WB-00190",
+        "WB-00078",
+        "WB-00078",
+        "WB-00190",
+        "WB-00079",
+        "WB-00079",
+        "WB-00008",
+        "WB-00185",
+        "WB-00185",
+        "WB-00154",
+        "WB-00154",
+        "WB-00154",
+        "WB-00154",
+        "WB-00185",
+        "WB-00044",
+        "WB-00035",
+        "WB-00165",
+        "WB-00036",
+        "WB-00036",
+        "WB-00036",
+        "WB-00036",
+        "WB-00165",
+        "WB-00185"
+      ],
+      "component_id": "",
       "geometry_status": "SPACE_FACE_CLOSED",
       "graph_type": "MATERIAL_WALL_GRAPH",
       "holes": [],
@@ -4183,6 +5875,7 @@
         "WB-00185",
         "WB-00190"
       ],
+      "planar_component_id": "PC-0004",
       "portal_edges": [],
       "provenance": {
         "graph_type": "MATERIAL_WALL_GRAPH",
@@ -4203,7 +5896,13 @@
         "WB-00215",
         "WB-00240"
       ],
-      "component_id": "FACE-0017",
+      "boundary_edges_in_order": [
+        "WB-00032",
+        "WB-00240",
+        "WB-00215",
+        "WB-00032"
+      ],
+      "component_id": "",
       "geometry_status": "SPACE_FACE_CLOSED",
       "graph_type": "MATERIAL_WALL_GRAPH",
       "holes": [],
@@ -4216,6 +5915,7 @@
         "WB-00215",
         "WB-00240"
       ],
+      "planar_component_id": "PC-0007",
       "portal_edges": [],
       "provenance": {
         "graph_type": "MATERIAL_WALL_GRAPH",
@@ -4237,7 +5937,13 @@
         "WB-00206",
         "WB-00207"
       ],
-      "component_id": "FACE-0003",
+      "boundary_edges_in_order": [
+        "WB-00153",
+        "WB-00207",
+        "WB-00206",
+        "WB-00159"
+      ],
+      "component_id": "",
       "geometry_status": "SPACE_FACE_CLOSED",
       "graph_type": "MATERIAL_WALL_GRAPH",
       "holes": [],
@@ -4251,6 +5957,7 @@
         "WB-00206",
         "WB-00207"
       ],
+      "planar_component_id": "PC-0002",
       "portal_edges": [],
       "provenance": {
         "graph_type": "MATERIAL_WALL_GRAPH",
@@ -4270,7 +5977,13 @@
         "WB-00083",
         "WB-00127"
       ],
-      "component_id": "FACE-0024",
+      "boundary_edges_in_order": [
+        "WB-00083",
+        "WB-00127",
+        "WB-00127",
+        "WB-00083"
+      ],
+      "component_id": "",
       "geometry_status": "SPACE_FACE_CLOSED",
       "graph_type": "MATERIAL_WALL_GRAPH",
       "holes": [],
@@ -4282,6 +5995,7 @@
         "WB-00083",
         "WB-00127"
       ],
+      "planar_component_id": "PC-0010",
       "portal_edges": [],
       "provenance": {
         "graph_type": "MATERIAL_WALL_GRAPH",
@@ -4773,7 +6487,7 @@
           ]
         ],
         "note": "",
-        "output_hash": "05b634dcac26f051",
+        "output_hash": "0ff1d76ea1f6e7ae",
         "run_id": "V2",
         "stage": "space_topology"
       },
@@ -4814,7 +6528,7 @@
         "stage": "wall_graph"
       }
     },
-    "workbook_generated_at": "2026-09-14T22:32:03+00:00"
+    "workbook_generated_at": "2026-09-15T00:34:37+00:00"
   },
   "material_faces": {
     "bounded_faces": 14,
@@ -4839,22 +6553,26 @@
     "distribution": {
       "acceptance_note": "no production acceptance threshold is defined from one project. A threshold chosen from this run would be a number chosen to pass",
       "acceptance_threshold": null,
+      "approximation_warning": "rows whose conversion_kind is DIAGNOSTIC_APPROXIMATE_BASIS_CONVERSION are NOT per-room accuracy. They are a scalar centreline-to-clear conversion with no corner term, kept only to compare against the measured polygon",
       "by_reference": {
         "PRINTED_DESIGN_DIMENSION": 0,
         "RASTER_SEGMENTATION": 5,
         "SITE_MEASURED_QIYAL": 0
       },
       "max_abs_pct": 50.33,
-      "median_abs_pct": 26.75,
+      "measured_median_abs_pct": 14.56,
+      "median_abs_pct": 14.56,
       "p90_abs_pct": 50.33,
       "rooms_compared": 5,
       "rooms_compared_on_unlike_bases": 0,
+      "rooms_measured_from_a_polygon": 2,
+      "rooms_on_a_scalar_approximation": 3,
       "rooms_with_a_vector_face": 5,
       "rooms_without_any_reference": 0,
       "secondary_total_diagnostic": {
         "reference_total_m2": 36.65,
-        "total_pct": 4.22,
-        "vector_total_m2": 38.2,
+        "total_pct": 3.47,
+        "vector_total_m2": 37.93,
         "why": "SECONDARY. Over- and under-measurements cancel in a total, so this figure can look excellent while individual rooms are wrong. Read the distribution above first"
       },
       "worst_room": {
@@ -4873,8 +6591,12 @@
         "basis_adjustment_m2": null,
         "basis_adjustment_method": "",
         "best_reference": "RASTER_SEGMENTATION",
+        "clear_internal_area_m2": null,
+        "clear_internal_perimeter_m": null,
         "comparable_vector_area_m2": null,
+        "conversion_kind": "DIAGNOSTIC_APPROXIMATE_BASIS_CONVERSION",
         "headline_abs_pct": null,
+        "is_measured_not_converted": false,
         "measurement_basis": "SPACE_BOUNDARY_LENGTH / VECTOR_PLANAR_FACE",
         "pct_vs_printed": null,
         "pct_vs_raster": null,
@@ -4883,6 +6605,7 @@
         "raster_area_m2": 24.642,
         "raster_perimeter_m": 92.39,
         "reference_basis": "CLEAR_INTERNAL_FINISH_FACE",
+        "shape": null,
         "site_area_m2": null,
         "space_face_id": "",
         "space_id": "BED-01",
@@ -4900,8 +6623,12 @@
         "basis_adjustment_m2": 2.316,
         "basis_adjustment_method": "MINUS_PERIMETER_X_MEAN_HALF_WALL_THICKNESS",
         "best_reference": "RASTER_SEGMENTATION",
+        "clear_internal_area_m2": null,
+        "clear_internal_perimeter_m": null,
         "comparable_vector_area_m2": 30.969,
+        "conversion_kind": "DIAGNOSTIC_APPROXIMATE_BASIS_CONVERSION",
         "headline_abs_pct": 2.825,
+        "is_measured_not_converted": false,
         "measurement_basis": "SPACE_BOUNDARY_LENGTH / VECTOR_PLANAR_FACE",
         "pct_vs_printed": null,
         "pct_vs_raster": 2.825,
@@ -4910,6 +6637,7 @@
         "raster_area_m2": 30.119,
         "raster_perimeter_m": 101.08,
         "reference_basis": "CLEAR_INTERNAL_FINISH_FACE",
+        "shape": null,
         "site_area_m2": null,
         "space_face_id": "SF-V2-0002",
         "space_id": "BED-03",
@@ -4927,8 +6655,12 @@
         "basis_adjustment_m2": null,
         "basis_adjustment_method": "",
         "best_reference": "RASTER_SEGMENTATION",
+        "clear_internal_area_m2": null,
+        "clear_internal_perimeter_m": null,
         "comparable_vector_area_m2": null,
+        "conversion_kind": "DIAGNOSTIC_APPROXIMATE_BASIS_CONVERSION",
         "headline_abs_pct": null,
+        "is_measured_not_converted": false,
         "measurement_basis": "SPACE_BOUNDARY_LENGTH / VECTOR_PLANAR_FACE",
         "pct_vs_printed": null,
         "pct_vs_raster": null,
@@ -4937,6 +6669,7 @@
         "raster_area_m2": 52.142,
         "raster_perimeter_m": 116.87,
         "reference_basis": "CLEAR_INTERNAL_FINISH_FACE",
+        "shape": null,
         "site_area_m2": null,
         "space_face_id": "",
         "space_id": "BED-04",
@@ -4954,8 +6687,12 @@
         "basis_adjustment_m2": null,
         "basis_adjustment_method": "",
         "best_reference": "RASTER_SEGMENTATION",
+        "clear_internal_area_m2": null,
+        "clear_internal_perimeter_m": null,
         "comparable_vector_area_m2": null,
+        "conversion_kind": "DIAGNOSTIC_APPROXIMATE_BASIS_CONVERSION",
         "headline_abs_pct": null,
+        "is_measured_not_converted": false,
         "measurement_basis": "SPACE_BOUNDARY_LENGTH / VECTOR_PLANAR_FACE",
         "pct_vs_printed": null,
         "pct_vs_raster": null,
@@ -4964,6 +6701,7 @@
         "raster_area_m2": 4.263,
         "raster_perimeter_m": 33.93,
         "reference_basis": "CLEAR_INTERNAL_FINISH_FACE",
+        "shape": null,
         "site_area_m2": null,
         "space_face_id": "",
         "space_id": "BTH-01",
@@ -4981,8 +6719,12 @@
         "basis_adjustment_m2": null,
         "basis_adjustment_method": "",
         "best_reference": "RASTER_SEGMENTATION",
+        "clear_internal_area_m2": null,
+        "clear_internal_perimeter_m": null,
         "comparable_vector_area_m2": null,
+        "conversion_kind": "DIAGNOSTIC_APPROXIMATE_BASIS_CONVERSION",
         "headline_abs_pct": null,
+        "is_measured_not_converted": false,
         "measurement_basis": "SPACE_BOUNDARY_LENGTH / VECTOR_PLANAR_FACE",
         "pct_vs_printed": null,
         "pct_vs_raster": null,
@@ -4991,6 +6733,7 @@
         "raster_area_m2": 4.4,
         "raster_perimeter_m": 36.09,
         "reference_basis": "CLEAR_INTERNAL_FINISH_FACE",
+        "shape": null,
         "site_area_m2": null,
         "space_face_id": "",
         "space_id": "BTH-02",
@@ -5008,8 +6751,12 @@
         "basis_adjustment_m2": null,
         "basis_adjustment_method": "",
         "best_reference": "RASTER_SEGMENTATION",
+        "clear_internal_area_m2": null,
+        "clear_internal_perimeter_m": null,
         "comparable_vector_area_m2": null,
+        "conversion_kind": "DIAGNOSTIC_APPROXIMATE_BASIS_CONVERSION",
         "headline_abs_pct": null,
+        "is_measured_not_converted": false,
         "measurement_basis": "SPACE_BOUNDARY_LENGTH / VECTOR_PLANAR_FACE",
         "pct_vs_printed": null,
         "pct_vs_raster": null,
@@ -5018,6 +6765,7 @@
         "raster_area_m2": 4.174,
         "raster_perimeter_m": 33.46,
         "reference_basis": "CLEAR_INTERNAL_FINISH_FACE",
+        "shape": null,
         "site_area_m2": null,
         "space_face_id": "",
         "space_id": "BTH-03",
@@ -5035,8 +6783,12 @@
         "basis_adjustment_m2": null,
         "basis_adjustment_method": "",
         "best_reference": "RASTER_SEGMENTATION",
+        "clear_internal_area_m2": null,
+        "clear_internal_perimeter_m": null,
         "comparable_vector_area_m2": null,
+        "conversion_kind": "DIAGNOSTIC_APPROXIMATE_BASIS_CONVERSION",
         "headline_abs_pct": null,
+        "is_measured_not_converted": false,
         "measurement_basis": "SPACE_BOUNDARY_LENGTH / VECTOR_PLANAR_FACE",
         "pct_vs_printed": null,
         "pct_vs_raster": null,
@@ -5045,6 +6797,7 @@
         "raster_area_m2": 3.295,
         "raster_perimeter_m": 24.16,
         "reference_basis": "CLEAR_INTERNAL_FINISH_FACE",
+        "shape": null,
         "site_area_m2": null,
         "space_face_id": "",
         "space_id": "BTH-05",
@@ -5062,8 +6815,12 @@
         "basis_adjustment_m2": 0.587,
         "basis_adjustment_method": "MINUS_PERIMETER_X_MEAN_HALF_WALL_THICKNESS",
         "best_reference": "RASTER_SEGMENTATION",
+        "clear_internal_area_m2": null,
+        "clear_internal_perimeter_m": null,
         "comparable_vector_area_m2": 3.1,
+        "conversion_kind": "DIAGNOSTIC_APPROXIMATE_BASIS_CONVERSION",
         "headline_abs_pct": 10.984,
+        "is_measured_not_converted": false,
         "measurement_basis": "SPACE_BOUNDARY_LENGTH / VECTOR_PLANAR_FACE",
         "pct_vs_printed": null,
         "pct_vs_raster": 10.984,
@@ -5072,6 +6829,7 @@
         "raster_area_m2": 3.483,
         "raster_perimeter_m": 30.08,
         "reference_basis": "CLEAR_INTERNAL_FINISH_FACE",
+        "shape": null,
         "site_area_m2": null,
         "space_face_id": "SF-V2-0005",
         "space_id": "MBTH-02",
@@ -5089,8 +6847,12 @@
         "basis_adjustment_m2": null,
         "basis_adjustment_method": "",
         "best_reference": "RASTER_SEGMENTATION",
+        "clear_internal_area_m2": null,
+        "clear_internal_perimeter_m": null,
         "comparable_vector_area_m2": null,
+        "conversion_kind": "DIAGNOSTIC_APPROXIMATE_BASIS_CONVERSION",
         "headline_abs_pct": null,
+        "is_measured_not_converted": false,
         "measurement_basis": "SPACE_BOUNDARY_LENGTH / VECTOR_PLANAR_FACE",
         "pct_vs_printed": null,
         "pct_vs_raster": null,
@@ -5099,6 +6861,7 @@
         "raster_area_m2": 127.723,
         "raster_perimeter_m": 246.95,
         "reference_basis": "CLEAR_INTERNAL_FINISH_FACE",
+        "shape": null,
         "site_area_m2": null,
         "space_face_id": "",
         "space_id": "OPEN-01",
@@ -5110,22 +6873,27 @@
       },
       {
         "abs_diff_vs_printed_m2": null,
-        "abs_diff_vs_raster_m2": 0.274,
+        "abs_diff_vs_raster_m2": 0.149,
         "abs_diff_vs_site_m2": null,
         "bases_match": true,
         "basis_adjustment_m2": 0.442,
         "basis_adjustment_method": "MINUS_PERIMETER_X_MEAN_HALF_WALL_THICKNESS",
         "best_reference": "RASTER_SEGMENTATION",
-        "comparable_vector_area_m2": 1.298,
-        "headline_abs_pct": 26.754,
+        "clear_internal_area_m2": 1.173,
+        "clear_internal_perimeter_m": 4.904,
+        "comparable_vector_area_m2": 1.173,
+        "conversion_kind": "MEASURED_FROM_CLEAR_INTERNAL_POLYGON",
+        "headline_abs_pct": 14.556,
+        "is_measured_not_converted": true,
         "measurement_basis": "SPACE_BOUNDARY_LENGTH / VECTOR_PLANAR_FACE",
         "pct_vs_printed": null,
-        "pct_vs_raster": 26.754,
+        "pct_vs_raster": 14.556,
         "pct_vs_site": null,
         "printed_area_m2": null,
         "raster_area_m2": 1.024,
         "raster_perimeter_m": 10.99,
         "reference_basis": "CLEAR_INTERNAL_FINISH_FACE",
+        "shape": null,
         "site_area_m2": null,
         "space_face_id": "SF-V2-0008",
         "space_id": "REC-01",
@@ -5137,22 +6905,27 @@
       },
       {
         "abs_diff_vs_printed_m2": null,
-        "abs_diff_vs_raster_m2": 0.298,
+        "abs_diff_vs_raster_m2": 0.149,
         "abs_diff_vs_site_m2": null,
         "bases_match": true,
         "basis_adjustment_m2": 0.455,
         "basis_adjustment_method": "MINUS_PERIMETER_X_MEAN_HALF_WALL_THICKNESS",
         "best_reference": "RASTER_SEGMENTATION",
-        "comparable_vector_area_m2": 1.321,
-        "headline_abs_pct": 29.057,
+        "clear_internal_area_m2": 1.173,
+        "clear_internal_perimeter_m": 4.904,
+        "comparable_vector_area_m2": 1.173,
+        "conversion_kind": "MEASURED_FROM_CLEAR_INTERNAL_POLYGON",
+        "headline_abs_pct": 14.556,
+        "is_measured_not_converted": true,
         "measurement_basis": "SPACE_BOUNDARY_LENGTH / VECTOR_PLANAR_FACE",
         "pct_vs_printed": null,
-        "pct_vs_raster": 29.057,
+        "pct_vs_raster": 14.556,
         "pct_vs_site": null,
         "printed_area_m2": null,
         "raster_area_m2": 1.024,
         "raster_perimeter_m": 10.92,
         "reference_basis": "CLEAR_INTERNAL_FINISH_FACE",
+        "shape": null,
         "site_area_m2": null,
         "space_face_id": "SF-V2-0007",
         "space_id": "SHF-01",
@@ -5170,8 +6943,12 @@
         "basis_adjustment_m2": null,
         "basis_adjustment_method": "",
         "best_reference": "RASTER_SEGMENTATION",
+        "clear_internal_area_m2": null,
+        "clear_internal_perimeter_m": null,
         "comparable_vector_area_m2": null,
+        "conversion_kind": "DIAGNOSTIC_APPROXIMATE_BASIS_CONVERSION",
         "headline_abs_pct": null,
+        "is_measured_not_converted": false,
         "measurement_basis": "SPACE_BOUNDARY_LENGTH / VECTOR_PLANAR_FACE",
         "pct_vs_printed": null,
         "pct_vs_raster": null,
@@ -5180,6 +6957,7 @@
         "raster_area_m2": 4.09,
         "raster_perimeter_m": 37.09,
         "reference_basis": "CLEAR_INTERNAL_FINISH_FACE",
+        "shape": null,
         "site_area_m2": null,
         "space_face_id": "",
         "space_id": "STR-01",
@@ -5197,8 +6975,12 @@
         "basis_adjustment_m2": 0.469,
         "basis_adjustment_method": "MINUS_PERIMETER_X_MEAN_HALF_WALL_THICKNESS",
         "best_reference": "RASTER_SEGMENTATION",
+        "clear_internal_area_m2": null,
+        "clear_internal_perimeter_m": null,
         "comparable_vector_area_m2": 1.512,
+        "conversion_kind": "DIAGNOSTIC_APPROXIMATE_BASIS_CONVERSION",
         "headline_abs_pct": 50.33,
+        "is_measured_not_converted": false,
         "measurement_basis": "SPACE_BOUNDARY_LENGTH / VECTOR_PLANAR_FACE",
         "pct_vs_printed": null,
         "pct_vs_raster": 50.33,
@@ -5207,6 +6989,7 @@
         "raster_area_m2": 1.006,
         "raster_perimeter_m": 10.81,
         "reference_basis": "CLEAR_INTERNAL_FINISH_FACE",
+        "shape": null,
         "site_area_m2": null,
         "space_face_id": "SF-V2-0006",
         "space_id": "WSH-01",
@@ -5218,6 +7001,268 @@
       }
     ]
   },
+  "portal_over_closure_audit": [
+    {
+      "connects_expected_adjacent_spaces": null,
+      "cycle_class": "ATOMIC_SPACE_FACE",
+      "edge_id": "PT-GV17046-line-25224",
+      "evidence": [
+        "SPAN_IN_THE_DOOR_RANGE",
+        "PAIRED_BANDS_TERMINATE_FACING_EACH_OTHER",
+        "END_CAPS_AT_BOTH_JAMBS",
+        "GAP_CLOSES_AN_OTHERWISE_COMPLETE_BOUNDARY"
+      ],
+      "existence_status": "PORTAL_EXISTENCE_PROBABLE",
+      "geometry_status": "PORTAL_GEOMETRY_PROBABLE",
+      "host_wall_band_id": "WB-00137",
+      "labelled_spaces_in_this_face": [
+        "BED-03"
+      ],
+      "opening_mm": 1000.2,
+      "portal_id": "PT-GV17046-line-25224",
+      "removal_note": "every edge of a closed cycle is load-bearing, so this alone proves nothing. The informative columns are the two statuses and whether it joins the expected spaces",
+      "removing_it_changes_the_face": true,
+      "risk": "GEOMETRY_PROBABLE: correlated families only",
+      "space_face_id": "SF-V2-0002"
+    },
+    {
+      "connects_expected_adjacent_spaces": null,
+      "cycle_class": "ENCLOSURE_CYCLE",
+      "edge_id": "PT-BED-01-west-27124",
+      "evidence": [
+        "SPAN_IN_THE_DOOR_RANGE",
+        "PAIRED_BANDS_TERMINATE_FACING_EACH_OTHER",
+        "END_CAPS_AT_BOTH_JAMBS",
+        "GAP_CLOSES_AN_OTHERWISE_COMPLETE_BOUNDARY"
+      ],
+      "existence_status": "PORTAL_EXISTENCE_PROBABLE",
+      "geometry_status": "PORTAL_GEOMETRY_PROBABLE",
+      "host_wall_band_id": "WB-00136",
+      "labelled_spaces_in_this_face": [
+        "BED-01",
+        "BTH-02"
+      ],
+      "opening_mm": 1200.2,
+      "portal_id": "PT-BED-01-west-27124",
+      "removal_note": "every edge of a closed cycle is load-bearing, so this alone proves nothing. The informative columns are the two statuses and whether it joins the expected spaces",
+      "removing_it_changes_the_face": true,
+      "risk": "OVER_CLOSURE_SUSPECT: this closure helps merge 2 labelled rooms into one cycle",
+      "space_face_id": "SF-V2-0003"
+    },
+    {
+      "connects_expected_adjacent_spaces": null,
+      "cycle_class": "ENCLOSURE_CYCLE",
+      "edge_id": "PT-BTH-02-west-25824",
+      "evidence": [
+        "SPAN_IN_THE_DOOR_RANGE",
+        "PAIRED_BANDS_TERMINATE_FACING_EACH_OTHER",
+        "END_CAPS_AT_BOTH_JAMBS",
+        "GAP_CLOSES_AN_OTHERWISE_COMPLETE_BOUNDARY"
+      ],
+      "existence_status": "PORTAL_EXISTENCE_PROBABLE",
+      "geometry_status": "PORTAL_GEOMETRY_PROBABLE",
+      "host_wall_band_id": "WB-00197",
+      "labelled_spaces_in_this_face": [
+        "BED-01",
+        "BTH-02"
+      ],
+      "opening_mm": 1110.8,
+      "portal_id": "PT-BTH-02-west-25824",
+      "removal_note": "every edge of a closed cycle is load-bearing, so this alone proves nothing. The informative columns are the two statuses and whether it joins the expected spaces",
+      "removing_it_changes_the_face": true,
+      "risk": "OVER_CLOSURE_SUSPECT: this closure helps merge 2 labelled rooms into one cycle",
+      "space_face_id": "SF-V2-0003"
+    },
+    {
+      "connects_expected_adjacent_spaces": null,
+      "cycle_class": "ENCLOSURE_CYCLE",
+      "edge_id": "PT-GH27048-line-27348",
+      "evidence": [
+        "SPAN_IN_THE_DOOR_RANGE",
+        "PAIRED_BANDS_TERMINATE_FACING_EACH_OTHER",
+        "END_CAPS_AT_BOTH_JAMBS",
+        "GAP_CLOSES_AN_OTHERWISE_COMPLETE_BOUNDARY"
+      ],
+      "existence_status": "PORTAL_EXISTENCE_PROBABLE",
+      "geometry_status": "PORTAL_GEOMETRY_PROBABLE",
+      "host_wall_band_id": "WB-00060",
+      "labelled_spaces_in_this_face": [
+        "BED-01",
+        "BTH-02"
+      ],
+      "opening_mm": 1000.2,
+      "portal_id": "PT-GH27048-line-27348",
+      "removal_note": "every edge of a closed cycle is load-bearing, so this alone proves nothing. The informative columns are the two statuses and whether it joins the expected spaces",
+      "removing_it_changes_the_face": true,
+      "risk": "OVER_CLOSURE_SUSPECT: this closure helps merge 2 labelled rooms into one cycle",
+      "space_face_id": "SF-V2-0003"
+    },
+    {
+      "connects_expected_adjacent_spaces": null,
+      "cycle_class": "ENCLOSURE_CYCLE",
+      "edge_id": "PT-GV26235-line-27124",
+      "evidence": [
+        "SPAN_IN_THE_DOOR_RANGE",
+        "PAIRED_BANDS_TERMINATE_FACING_EACH_OTHER",
+        "END_CAPS_AT_BOTH_JAMBS",
+        "GAP_CLOSES_AN_OTHERWISE_COMPLETE_BOUNDARY"
+      ],
+      "existence_status": "PORTAL_EXISTENCE_PROBABLE",
+      "geometry_status": "PORTAL_GEOMETRY_PROBABLE",
+      "host_wall_band_id": "WB-00160",
+      "labelled_spaces_in_this_face": [
+        "BED-01",
+        "BTH-02"
+      ],
+      "opening_mm": 1200.2,
+      "portal_id": "PT-GV26235-line-27124",
+      "removal_note": "every edge of a closed cycle is load-bearing, so this alone proves nothing. The informative columns are the two statuses and whether it joins the expected spaces",
+      "removing_it_changes_the_face": true,
+      "risk": "OVER_CLOSURE_SUSPECT: this closure helps merge 2 labelled rooms into one cycle",
+      "space_face_id": "SF-V2-0003"
+    },
+    {
+      "connects_expected_adjacent_spaces": null,
+      "cycle_class": "ENCLOSURE_CYCLE",
+      "edge_id": "PT-GV31091-line-25605",
+      "evidence": [
+        "SPAN_IN_THE_DOOR_RANGE",
+        "PAIRED_BANDS_TERMINATE_FACING_EACH_OTHER",
+        "END_CAPS_AT_BOTH_JAMBS",
+        "GAP_CLOSES_AN_OTHERWISE_COMPLETE_BOUNDARY"
+      ],
+      "existence_status": "PORTAL_EXISTENCE_PROBABLE",
+      "geometry_status": "PORTAL_GEOMETRY_PROBABLE",
+      "host_wall_band_id": "WB-00242",
+      "labelled_spaces_in_this_face": [
+        "BED-01",
+        "BTH-02"
+      ],
+      "opening_mm": 943.4,
+      "portal_id": "PT-GV31091-line-25605",
+      "removal_note": "every edge of a closed cycle is load-bearing, so this alone proves nothing. The informative columns are the two statuses and whether it joins the expected spaces",
+      "removing_it_changes_the_face": true,
+      "risk": "OVER_CLOSURE_SUSPECT: this closure helps merge 2 labelled rooms into one cycle",
+      "space_face_id": "SF-V2-0003"
+    },
+    {
+      "connects_expected_adjacent_spaces": null,
+      "cycle_class": "ENCLOSURE_CYCLE",
+      "edge_id": "PT-BTH-01-west-23150",
+      "evidence": [
+        "SPAN_IN_THE_DOOR_RANGE",
+        "PAIRED_BANDS_TERMINATE_FACING_EACH_OTHER",
+        "END_CAPS_AT_BOTH_JAMBS",
+        "GAP_CLOSES_AN_OTHERWISE_COMPLETE_BOUNDARY"
+      ],
+      "existence_status": "PORTAL_EXISTENCE_PROBABLE",
+      "geometry_status": "PORTAL_GEOMETRY_PROBABLE",
+      "host_wall_band_id": "WB-00198",
+      "labelled_spaces_in_this_face": [
+        "BED-NW",
+        "BTH-01"
+      ],
+      "opening_mm": 1125.2,
+      "portal_id": "PT-BTH-01-west-23150",
+      "removal_note": "every edge of a closed cycle is load-bearing, so this alone proves nothing. The informative columns are the two statuses and whether it joins the expected spaces",
+      "removing_it_changes_the_face": true,
+      "risk": "OVER_CLOSURE_SUSPECT: this closure helps merge 2 labelled rooms into one cycle",
+      "space_face_id": "SF-V2-0004"
+    },
+    {
+      "connects_expected_adjacent_spaces": null,
+      "cycle_class": "ENCLOSURE_CYCLE",
+      "edge_id": "PT-GV26222-line-21823",
+      "evidence": [
+        "SPAN_IN_THE_DOOR_RANGE",
+        "PAIRED_BANDS_TERMINATE_FACING_EACH_OTHER",
+        "END_CAPS_AT_BOTH_JAMBS",
+        "GAP_CLOSES_AN_OTHERWISE_COMPLETE_BOUNDARY"
+      ],
+      "existence_status": "PORTAL_EXISTENCE_PROBABLE",
+      "geometry_status": "PORTAL_GEOMETRY_PROBABLE",
+      "host_wall_band_id": "WB-00138",
+      "labelled_spaces_in_this_face": [
+        "BED-NW",
+        "BTH-01"
+      ],
+      "opening_mm": 1000.2,
+      "portal_id": "PT-GV26222-line-21823",
+      "removal_note": "every edge of a closed cycle is load-bearing, so this alone proves nothing. The informative columns are the two statuses and whether it joins the expected spaces",
+      "removing_it_changes_the_face": true,
+      "risk": "OVER_CLOSURE_SUSPECT: this closure helps merge 2 labelled rooms into one cycle",
+      "space_face_id": "SF-V2-0004"
+    },
+    {
+      "connects_expected_adjacent_spaces": null,
+      "cycle_class": "ENCLOSURE_CYCLE",
+      "edge_id": "PT-GV31091-line-23604",
+      "evidence": [
+        "SPAN_IN_THE_DOOR_RANGE",
+        "PAIRED_BANDS_TERMINATE_FACING_EACH_OTHER",
+        "END_CAPS_AT_BOTH_JAMBS",
+        "GAP_CLOSES_AN_OTHERWISE_COMPLETE_BOUNDARY"
+      ],
+      "existence_status": "PORTAL_EXISTENCE_PROBABLE",
+      "geometry_status": "PORTAL_GEOMETRY_PROBABLE",
+      "host_wall_band_id": "WB-00243",
+      "labelled_spaces_in_this_face": [
+        "BED-NW",
+        "BTH-01"
+      ],
+      "opening_mm": 943.4,
+      "portal_id": "PT-GV31091-line-23604",
+      "removal_note": "every edge of a closed cycle is load-bearing, so this alone proves nothing. The informative columns are the two statuses and whether it joins the expected spaces",
+      "removing_it_changes_the_face": true,
+      "risk": "OVER_CLOSURE_SUSPECT: this closure helps merge 2 labelled rooms into one cycle",
+      "space_face_id": "SF-V2-0004"
+    },
+    {
+      "connects_expected_adjacent_spaces": null,
+      "cycle_class": "ATOMIC_SPACE_FACE",
+      "edge_id": "PT-GH12522-line-19198",
+      "evidence": [
+        "SPAN_IN_THE_DOOR_RANGE",
+        "PAIRED_BANDS_TERMINATE_FACING_EACH_OTHER",
+        "END_CAPS_AT_BOTH_JAMBS",
+        "GAP_CLOSES_AN_OTHERWISE_COMPLETE_BOUNDARY"
+      ],
+      "existence_status": "PORTAL_EXISTENCE_PROBABLE",
+      "geometry_status": "PORTAL_GEOMETRY_PROBABLE",
+      "host_wall_band_id": "WB-00071",
+      "labelled_spaces_in_this_face": [
+        "MBTH-02"
+      ],
+      "opening_mm": 700.1,
+      "portal_id": "PT-GH12522-line-19198",
+      "removal_note": "every edge of a closed cycle is load-bearing, so this alone proves nothing. The informative columns are the two statuses and whether it joins the expected spaces",
+      "removing_it_changes_the_face": true,
+      "risk": "GEOMETRY_PROBABLE: correlated families only",
+      "space_face_id": "SF-V2-0005"
+    },
+    {
+      "connects_expected_adjacent_spaces": null,
+      "cycle_class": "WALL_CAVITY",
+      "edge_id": "PT-GH17573-line-19198",
+      "evidence": [
+        "SPAN_IN_THE_DOOR_RANGE",
+        "PAIRED_BANDS_TERMINATE_FACING_EACH_OTHER",
+        "END_CAPS_AT_BOTH_JAMBS",
+        "DOOR_SWING_ARC_NEARBY",
+        "GAP_CLOSES_AN_OTHERWISE_COMPLETE_BOUNDARY"
+      ],
+      "existence_status": "PORTAL_EXISTENCE_VALIDATED",
+      "geometry_status": "PORTAL_GEOMETRY_VALIDATED",
+      "host_wall_band_id": "WB-00092",
+      "labelled_spaces_in_this_face": [],
+      "opening_mm": 1000.2,
+      "portal_id": "PT-GH17573-line-19198",
+      "removal_note": "every edge of a closed cycle is load-bearing, so this alone proves nothing. The informative columns are the two statuses and whether it joins the expected spaces",
+      "removing_it_changes_the_face": true,
+      "risk": "GEOMETRY_VALIDATED: an independent symbol or document agrees",
+      "space_face_id": "SF-V2-0015"
+    }
+  ],
   "portals": {
     "by_existence_status": {
       "PORTAL_EXISTENCE_CANDIDATE": 19,
@@ -7590,6 +9635,73 @@
       "segment_id": "VS-000302"
     }
   ],
+  "shape_comparison": {
+    "acceptance_threshold": null,
+    "compared": 2,
+    "not_comparable": 3,
+    "note": "IoU and the area/perimeter variances, on the CLEAR_INTERNAL_FINISH_FACE basis on BOTH sides. Rows that are not comparable say why instead of scoring",
+    "rows": [
+      {
+        "clear_polygon_complete": false,
+        "comparable": false,
+        "space_face_id": "SF-V2-0002",
+        "space_id": "BED-03",
+        "vector_clear_area_m2": 31.559,
+        "vector_clear_perimeter_m": 24.4,
+        "why": "the clear-internal boundary is incomplete: 4 segment(s) have no room-facing face, so this is not the room's outline and must not be scored"
+      },
+      {
+        "clear_polygon_complete": false,
+        "comparable": false,
+        "space_face_id": "SF-V2-0005",
+        "space_id": "MBTH-02",
+        "vector_clear_area_m2": 3.378,
+        "vector_clear_perimeter_m": 7.749,
+        "why": "the clear-internal boundary is incomplete: 3 segment(s) have no room-facing face, so this is not the room's outline and must not be scored"
+      },
+      {
+        "clear_polygon_complete": false,
+        "comparable": false,
+        "space_face_id": "SF-V2-0006",
+        "space_id": "WSH-01",
+        "vector_clear_area_m2": 1.649,
+        "vector_clear_perimeter_m": 5.721,
+        "why": "the clear-internal boundary is incomplete: 1 segment(s) have no room-facing face, so this is not the room's outline and must not be scored"
+      },
+      {
+        "basis": "CLEAR_INTERNAL_FINISH_FACE on both sides",
+        "clear_polygon_complete": true,
+        "comparable": true,
+        "intersection_m2": 0.981,
+        "iou": 0.837,
+        "pixel_size_mm": 10.813,
+        "raster_only_m2": 0.0,
+        "space_face_id": "SF-V2-0007",
+        "space_id": "SHF-01",
+        "union_m2": 1.172,
+        "vector_clear_area_m2": 1.173,
+        "vector_clear_perimeter_m": 4.904,
+        "vector_only_m2": 0.191,
+        "why": "measured on the pixel grid at the stated resolution. Area alone can agree while the shape is wrong; this cannot"
+      },
+      {
+        "basis": "CLEAR_INTERNAL_FINISH_FACE on both sides",
+        "clear_polygon_complete": true,
+        "comparable": true,
+        "intersection_m2": 0.981,
+        "iou": 0.8422,
+        "pixel_size_mm": 10.813,
+        "raster_only_m2": 0.0,
+        "space_face_id": "SF-V2-0008",
+        "space_id": "REC-01",
+        "union_m2": 1.165,
+        "vector_clear_area_m2": 1.173,
+        "vector_clear_perimeter_m": 4.904,
+        "vector_only_m2": 0.184,
+        "why": "measured on the pixel grid at the stated resolution. Area alone can agree while the shape is wrong; this cannot"
+      }
+    ]
+  },
   "source": {
     "path_fragmentation": {
       "items_per_path": {
@@ -9928,6 +12040,14 @@
           "FACES_OVERLAP_MOST_OF_THEIR_LENGTH"
         ],
         "existence_status": "",
+        "face_a_ids": [
+          "VS-000005"
+        ],
+        "face_a_mm": 6774.392850268555,
+        "face_b_ids": [
+          "VS-000119"
+        ],
+        "face_b_mm": 6974.4363581542975,
         "geometry_status": "",
         "host_wall_band_id": "",
         "host_wall_gross_mm": 25002.37854546814,
@@ -9963,6 +12083,14 @@
           "FACES_OVERLAP_MOST_OF_THEIR_LENGTH"
         ],
         "existence_status": "",
+        "face_a_ids": [
+          "VS-000194"
+        ],
+        "face_a_mm": 46574.372266259765,
+        "face_b_ids": [
+          "VS-000198"
+        ],
+        "face_b_mm": 46774.41577414551,
         "geometry_status": "",
         "host_wall_band_id": "",
         "host_wall_gross_mm": 25002.377857995605,
@@ -9999,6 +12127,14 @@
           "DRAWN_WITH_THE_SHEET_WALL_PEN"
         ],
         "existence_status": "",
+        "face_a_ids": [
+          "VS-004944"
+        ],
+        "face_a_mm": 22023.438372229004,
+        "face_b_ids": [
+          "VS-004945"
+        ],
+        "face_b_mm": 22174.819824255374,
         "geometry_status": "",
         "host_wall_band_id": "",
         "host_wall_gross_mm": 6249.918678997801,
@@ -10035,6 +12171,14 @@
           "DRAWN_WITH_THE_SHEET_WALL_PEN"
         ],
         "existence_status": "",
+        "face_a_ids": [
+          "VS-004616"
+        ],
+        "face_a_mm": 9723.641772229004,
+        "face_b_ids": [
+          "VS-004619"
+        ],
+        "face_b_mm": 9923.682530224609,
         "geometry_status": "",
         "host_wall_band_id": "",
         "host_wall_gross_mm": 5749.816784008788,
@@ -10072,6 +12216,14 @@
           "END_CAP_CLOSES_THE_BAND"
         ],
         "existence_status": "",
+        "face_a_ids": [
+          "VS-000041"
+        ],
+        "face_a_mm": 13773.110738330079,
+        "face_b_ids": [
+          "VS-000268"
+        ],
+        "face_b_mm": 13973.154246215821,
         "geometry_status": "",
         "host_wall_band_id": "",
         "host_wall_gross_mm": 6401.301505969241,
@@ -10109,6 +12261,14 @@
           "END_CAP_CLOSES_THE_BAND"
         ],
         "existence_status": "",
+        "face_a_ids": [
+          "VS-000270"
+        ],
+        "face_a_mm": 18774.129688220215,
+        "face_b_ids": [
+          "VS-000272"
+        ],
+        "face_b_mm": 18974.17044621582,
         "geometry_status": "",
         "host_wall_band_id": "",
         "host_wall_gross_mm": 5271.341400000001,
@@ -10146,6 +12306,14 @@
           "END_CAP_CLOSES_THE_BAND"
         ],
         "existence_status": "",
+        "face_a_ids": [
+          "VS-000025"
+        ],
+        "face_a_mm": 12372.828182250976,
+        "face_b_ids": [
+          "VS-000026"
+        ],
+        "face_b_mm": 12524.209634277344,
         "geometry_status": "",
         "host_wall_band_id": "",
         "host_wall_gross_mm": 4500.914305010985,
@@ -10183,6 +12351,14 @@
           "END_CAP_CLOSES_THE_BAND"
         ],
         "existence_status": "",
+        "face_a_ids": [
+          "VS-000038"
+        ],
+        "face_a_mm": 19274.22883331909,
+        "face_b_ids": [
+          "VS-000039"
+        ],
+        "face_b_mm": 19474.269591314696,
         "geometry_status": "",
         "host_wall_band_id": "",
         "host_wall_gross_mm": 4098.129647015379,
@@ -10219,6 +12395,14 @@
           "END_CAP_CLOSES_THE_BAND"
         ],
         "existence_status": "",
+        "face_a_ids": [
+          "VS-000135"
+        ],
+        "face_a_mm": 17198.136027130127,
+        "face_b_ids": [
+          "VS-000134"
+        ],
+        "face_b_mm": 17349.517479156493,
         "geometry_status": "",
         "host_wall_band_id": "",
         "host_wall_gross_mm": 3452.0525840087885,
@@ -10256,6 +12440,14 @@
           "END_CAP_CLOSES_THE_BAND"
         ],
         "existence_status": "",
+        "face_a_ids": [
+          "VS-028589"
+        ],
+        "face_a_mm": 12472.851311138917,
+        "face_b_ids": [
+          "VS-028586"
+        ],
+        "face_b_mm": 12572.871690136719,
         "geometry_status": "",
         "host_wall_band_id": "",
         "host_wall_gross_mm": 3549.3698210021976,
@@ -10293,6 +12485,14 @@
           "END_CAP_CLOSES_THE_BAND"
         ],
         "existence_status": "",
+        "face_a_ids": [
+          "VS-000127"
+        ],
+        "face_a_mm": 18574.090305169677,
+        "face_b_ids": [
+          "VS-000129"
+        ],
+        "face_b_mm": 18774.131063165285,
         "geometry_status": "",
         "host_wall_band_id": "",
         "host_wall_gross_mm": 3800.7730269714357,
@@ -10330,6 +12530,14 @@
           "END_CAP_CLOSES_THE_BAND"
         ],
         "existence_status": "",
+        "face_a_ids": [
+          "VS-004946"
+        ],
+        "face_a_mm": 26372.969850268557,
+        "face_b_ids": [
+          "VS-004948"
+        ],
+        "face_b_mm": 26524.351302294923,
         "geometry_status": "",
         "host_wall_band_id": "",
         "host_wall_gross_mm": 5049.675505969237,
@@ -10367,6 +12575,14 @@
           "END_CAP_CLOSES_THE_BAND"
         ],
         "existence_status": "",
+        "face_a_ids": [
+          "VS-004953"
+        ],
+        "face_a_mm": 28124.677366259766,
+        "face_b_ids": [
+          "VS-004954"
+        ],
+        "face_b_mm": 28273.35567628174,
         "geometry_status": "",
         "host_wall_band_id": "",
         "host_wall_gross_mm": 3000.609994989012,
@@ -10404,6 +12620,14 @@
           "END_CAP_CLOSES_THE_BAND"
         ],
         "existence_status": "",
+        "face_a_ids": [
+          "VS-004955"
+        ],
+        "face_a_mm": 31725.40826029053,
+        "face_b_ids": [
+          "VS-004956"
+        ],
+        "face_b_mm": 31874.086570312502,
         "geometry_status": "",
         "host_wall_band_id": "",
         "host_wall_gross_mm": 3149.288305010985,
@@ -10441,6 +12665,14 @@
           "END_CAP_CLOSES_THE_BAND"
         ],
         "existence_status": "",
+        "face_a_ids": [
+          "VS-005032"
+        ],
+        "face_a_mm": 29573.61647841797,
+        "face_b_ids": [
+          "VS-005033"
+        ],
+        "face_b_mm": 29724.997930444337,
         "geometry_status": "",
         "host_wall_band_id": "",
         "host_wall_gross_mm": 2697.8457159912105,
@@ -10478,6 +12710,14 @@
           "END_CAP_CLOSES_THE_BAND"
         ],
         "existence_status": "",
+        "face_a_ids": [
+          "VS-004988"
+        ],
+        "face_a_mm": 22974.980106347655,
+        "face_b_ids": [
+          "VS-004991"
+        ],
+        "face_b_mm": 23123.661166259768,
         "geometry_status": "",
         "host_wall_band_id": "",
         "host_wall_gross_mm": 2949.2489219604504,
@@ -10515,6 +12755,14 @@
           "END_CAP_CLOSES_THE_BAND"
         ],
         "existence_status": "",
+        "face_a_ids": [
+          "VS-004995"
+        ],
+        "face_a_mm": 24972.687294189454,
+        "face_b_ids": [
+          "VS-004999"
+        ],
+        "face_b_mm": 25124.06874621582,
         "geometry_status": "",
         "host_wall_band_id": "",
         "host_wall_gross_mm": 2500.508099999999,
@@ -10552,6 +12800,14 @@
           "END_CAP_CLOSES_THE_BAND"
         ],
         "existence_status": "",
+        "face_a_ids": [
+          "VS-005003"
+        ],
+        "face_a_mm": 26973.09212425537,
+        "face_b_ids": [
+          "VS-005008"
+        ],
+        "face_b_mm": 27124.47357628174,
         "geometry_status": "",
         "host_wall_band_id": "",
         "host_wall_gross_mm": 2949.2489219604504,
@@ -10588,6 +12844,14 @@
           "DRAWN_WITH_THE_SHEET_WALL_PEN"
         ],
         "existence_status": "",
+        "face_a_ids": [
+          "VS-005006"
+        ],
+        "face_a_mm": 27873.27416029053,
+        "face_b_ids": [
+          "VS-005010"
+        ],
+        "face_b_mm": 28024.655612316896,
         "geometry_status": "",
         "host_wall_band_id": "",
         "host_wall_gross_mm": 2697.8457159912105,
@@ -10624,6 +12888,14 @@
           "DRAWN_WITH_THE_SHEET_WALL_PEN"
         ],
         "existence_status": "",
+        "face_a_ids": [
+          "VS-004990"
+        ],
+        "face_a_mm": 23623.76168630371,
+        "face_b_ids": [
+          "VS-004994"
+        ],
+        "face_b_mm": 23775.145888220217,
         "geometry_status": "",
         "host_wall_band_id": "",
         "host_wall_gross_mm": 2400.4877210021987,
@@ -10661,6 +12933,14 @@
           "END_CAP_CLOSES_THE_BAND"
         ],
         "existence_status": "",
+        "face_a_ids": [
+          "VS-004996"
+        ],
+        "face_a_mm": 24972.687294189454,
+        "face_b_ids": [
+          "VS-005000"
+        ],
+        "face_b_mm": 25124.06874621582,
         "geometry_status": "",
         "host_wall_band_id": "",
         "host_wall_gross_mm": 2351.82978997803,
@@ -10696,6 +12976,14 @@
           "FACES_OVERLAP_MOST_OF_THEIR_LENGTH"
         ],
         "existence_status": "",
+        "face_a_ids": [
+          "VS-043190"
+        ],
+        "face_a_mm": 13794.741374145508,
+        "face_b_ids": [
+          "VS-000034"
+        ],
+        "face_b_mm": 14124.534323297119,
         "geometry_status": "",
         "host_wall_band_id": "",
         "host_wall_gross_mm": 4552.275378039551,
@@ -10732,6 +13020,14 @@
           "DRAWN_WITH_THE_SHEET_WALL_PEN"
         ],
         "existence_status": "",
+        "face_a_ids": [
+          "VS-000121"
+        ],
+        "face_a_mm": 15773.52106817627,
+        "face_b_ids": [
+          "VS-000122"
+        ],
+        "face_b_mm": 15973.561826171876,
         "geometry_status": "",
         "host_wall_band_id": "",
         "host_wall_gross_mm": 3049.2686134857177,
@@ -10769,6 +13065,14 @@
           "RASTER_WALL_MASK_SUPPORTS_THE_BAND"
         ],
         "existence_status": "",
+        "face_a_ids": [
+          "VS-013588"
+        ],
+        "face_a_mm": 38124.00662425537,
+        "face_b_ids": [
+          "VS-013587"
+        ],
+        "face_b_mm": 38324.04738225098,
         "geometry_status": "",
         "host_wall_band_id": "",
         "host_wall_gross_mm": 2000.407579956056,
@@ -10805,6 +13109,14 @@
           "END_CAP_CLOSES_THE_BAND"
         ],
         "existence_status": "",
+        "face_a_ids": [
+          "VS-004551"
+        ],
+        "face_a_mm": 8923.478740246583,
+        "face_b_ids": [
+          "VS-004550"
+        ],
+        "face_b_mm": 9023.499119244385,
         "geometry_status": "",
         "host_wall_band_id": "",
         "host_wall_gross_mm": 2000.4062050109878,
@@ -10842,6 +13154,14 @@
           "RASTER_WALL_MASK_SUPPORTS_THE_BAND"
         ],
         "existence_status": "",
+        "face_a_ids": [
+          "VS-043931"
+        ],
+        "face_a_mm": 9723.641772229004,
+        "face_b_ids": [
+          "VS-043930"
+        ],
+        "face_b_mm": 9923.682530224609,
         "geometry_status": "",
         "host_wall_band_id": "",
         "host_wall_gross_mm": 2000.407579956056,
@@ -10879,6 +13199,14 @@
           "RASTER_WALL_MASK_SUPPORTS_THE_BAND"
         ],
         "existence_status": "",
+        "face_a_ids": [
+          "VS-025836"
+        ],
+        "face_a_mm": 38124.00662425537,
+        "face_b_ids": [
+          "VS-025835"
+        ],
+        "face_b_mm": 38324.04738225098,
         "geometry_status": "",
         "host_wall_band_id": "",
         "host_wall_gross_mm": 2000.406205010986,
@@ -10916,6 +13244,14 @@
           "RASTER_WALL_MASK_SUPPORTS_THE_BAND"
         ],
         "existence_status": "",
+        "face_a_ids": [
+          "VS-013599"
+        ],
+        "face_a_mm": 38124.00662425537,
+        "face_b_ids": [
+          "VS-013598"
+        ],
+        "face_b_mm": 38324.04738225098,
         "geometry_status": "",
         "host_wall_band_id": "",
         "host_wall_gross_mm": 2000.406205010986,
@@ -10953,6 +13289,14 @@
           "RASTER_WALL_MASK_SUPPORTS_THE_BAND"
         ],
         "existence_status": "",
+        "face_a_ids": [
+          "VS-013610"
+        ],
+        "face_a_mm": 38124.00662425537,
+        "face_b_ids": [
+          "VS-013609"
+        ],
+        "face_b_mm": 38324.04738225098,
         "geometry_status": "",
         "host_wall_band_id": "",
         "host_wall_gross_mm": 2000.4075799560524,
@@ -10989,6 +13333,14 @@
           "DRAWN_WITH_THE_SHEET_WALL_PEN"
         ],
         "existence_status": "",
+        "face_a_ids": [
+          "VS-005011"
+        ],
+        "face_a_mm": 31373.986050268555,
+        "face_b_ids": [
+          "VS-005015"
+        ],
+        "face_b_mm": 31525.367502294925,
         "geometry_status": "",
         "host_wall_band_id": "",
         "host_wall_gross_mm": 4949.653752026366,
@@ -11026,6 +13378,14 @@
           "END_CAP_CLOSES_THE_BAND"
         ],
         "existence_status": "",
+        "face_a_ids": [
+          "VS-004951"
+        ],
+        "face_a_mm": 30773.863776281738,
+        "face_b_ids": [
+          "VS-004952"
+        ],
+        "face_b_mm": 30925.245228308107,
         "geometry_status": "",
         "host_wall_band_id": "",
         "host_wall_gross_mm": 1900.385826013182,
@@ -11063,6 +13423,14 @@
           "END_CAP_CLOSES_THE_BAND"
         ],
         "existence_status": "",
+        "face_a_ids": [
+          "VS-005018"
+        ],
+        "face_a_mm": 33974.51315432129,
+        "face_b_ids": [
+          "VS-005021"
+        ],
+        "face_b_mm": 34123.19146434326,
         "geometry_status": "",
         "host_wall_band_id": "",
         "host_wall_gross_mm": 2500.508099999999,
@@ -11099,6 +13467,14 @@
           "DRAWN_WITH_THE_SHEET_WALL_PEN"
         ],
         "existence_status": "",
+        "face_a_ids": [
+          "VS-009981"
+        ],
+        "face_a_mm": 26924.43556817627,
+        "face_b_ids": [
+          "VS-009982"
+        ],
+        "face_b_mm": 27073.113878198244,
         "geometry_status": "",
         "host_wall_band_id": "",
         "host_wall_gross_mm": 2100.42658400879,
@@ -11135,6 +13511,14 @@
           "DRAWN_WITH_THE_SHEET_WALL_PEN"
         ],
         "existence_status": "",
+        "face_a_ids": [
+          "VS-009977"
+        ],
+        "face_a_mm": 27724.598600158693,
+        "face_b_ids": [
+          "VS-009998"
+        ],
+        "face_b_mm": 27873.276910180666,
         "geometry_status": "",
         "host_wall_band_id": "",
         "host_wall_gross_mm": 2100.42658400879,
@@ -11171,6 +13555,14 @@
           "DRAWN_WITH_THE_SHEET_WALL_PEN"
         ],
         "existence_status": "",
+        "face_a_ids": [
+          "VS-000140"
+        ],
+        "face_a_mm": 19474.272341204836,
+        "face_b_ids": [
+          "VS-000141"
+        ],
+        "face_b_mm": 19674.31309920044,
         "geometry_status": "",
         "host_wall_band_id": "",
         "host_wall_gross_mm": 2200.4469630065905,
@@ -11208,6 +13600,14 @@
           "END_CAP_CLOSES_THE_BAND"
         ],
         "existence_status": "",
+        "face_a_ids": [
+          "VS-007060"
+        ],
+        "face_a_mm": 21474.677171270752,
+        "face_b_ids": [
+          "VS-007063"
+        ],
+        "face_b_mm": 21674.717929266357,
         "geometry_status": "",
         "host_wall_band_id": "",
         "host_wall_gross_mm": 2349.1252730285632,
@@ -11244,6 +13644,14 @@
           "DRAWN_WITH_THE_SHEET_WALL_PEN"
         ],
         "existence_status": "",
+        "face_a_ids": [
+          "VS-006434"
+        ],
+        "face_a_mm": 26924.43556817627,
+        "face_b_ids": [
+          "VS-009962"
+        ],
+        "face_b_mm": 27073.111128308108,
         "geometry_status": "",
         "host_wall_band_id": "",
         "host_wall_gross_mm": 2100.4265840087864,
@@ -11280,6 +13688,14 @@
           "DRAWN_WITH_THE_SHEET_WALL_PEN"
         ],
         "existence_status": "",
+        "face_a_ids": [
+          "VS-009961"
+        ],
+        "face_a_mm": 26924.432818286135,
+        "face_b_ids": [
+          "VS-006435"
+        ],
+        "face_b_mm": 27073.113878198244,
         "geometry_status": "",
         "host_wall_band_id": "",
         "host_wall_gross_mm": 2100.4265840087864,
@@ -11316,6 +13732,14 @@
           "DRAWN_WITH_THE_SHEET_WALL_PEN"
         ],
         "existence_status": "",
+        "face_a_ids": [
+          "VS-000015"
+        ],
+        "face_a_mm": 14124.535698242187,
+        "face_b_ids": [
+          "VS-000035"
+        ],
+        "face_b_mm": 14273.212633319092,
         "geometry_status": "",
         "host_wall_band_id": "",
         "host_wall_gross_mm": 2200.446963006594,
@@ -11353,6 +13777,14 @@
           "END_CAP_CLOSES_THE_BAND"
         ],
         "existence_status": "",
+        "face_a_ids": [
+          "VS-005026"
+        ],
+        "face_a_mm": 38124.00387436523,
+        "face_b_ids": [
+          "VS-005036"
+        ],
+        "face_b_mm": 38324.0418824707,
         "geometry_status": "",
         "host_wall_band_id": "",
         "host_wall_gross_mm": 3173.6179579956042,
@@ -11554,7 +13986,15 @@
         "WB-00128",
         "WB-00129"
       ],
-      "component_id": "FACE-0001",
+      "boundary_edges_in_order": [
+        "WB-00001",
+        "WB-00129",
+        "WB-00002",
+        "WB-00128",
+        "WB-00128",
+        "WB-00128"
+      ],
+      "component_id": "",
       "geometry_status": "SPACE_FACE_CLOSED",
       "graph_type": "SPACE_BOUNDARY_GRAPH",
       "holes": [
@@ -11587,6 +14027,7 @@
         "WB-00128",
         "WB-00129"
       ],
+      "planar_component_id": "PC-0001",
       "portal_edges": [],
       "provenance": {
         "graph_type": "SPACE_BOUNDARY_GRAPH",
@@ -11618,7 +14059,23 @@
         "WB-00204",
         "WB-00229"
       ],
-      "component_id": "FACE-0003",
+      "boundary_edges_in_order": [
+        "WB-00003",
+        "WB-00137",
+        "PT-GV17046-line-25224",
+        "WB-00132",
+        "WB-00012",
+        "WB-00012",
+        "WB-00012",
+        "WB-00147",
+        "WB-00013",
+        "WB-00229",
+        "WB-00194",
+        "WB-00183",
+        "WB-00158",
+        "WB-00204"
+      ],
+      "component_id": "",
       "geometry_status": "SPACE_FACE_CLOSED_VIA_PORTAL_CLOSURE",
       "graph_type": "SPACE_BOUNDARY_GRAPH",
       "holes": [],
@@ -11639,6 +14096,7 @@
         "WB-00204",
         "WB-00229"
       ],
+      "planar_component_id": "PC-0002",
       "portal_edges": [
         "PT-GV17046-line-25224"
       ],
@@ -11681,7 +14139,50 @@
         "WB-00234",
         "WB-00242"
       ],
-      "component_id": "FACE-0005",
+      "boundary_edges_in_order": [
+        "WB-00017",
+        "WB-00242",
+        "WB-00234",
+        "WB-00017",
+        "WB-00212",
+        "WB-00186",
+        "WB-00213",
+        "WB-00018",
+        "WB-00223",
+        "PT-GV31091-line-25605",
+        "WB-00242",
+        "WB-00234",
+        "PT-GV31091-line-25605",
+        "WB-00223",
+        "WB-00018",
+        "PT-BTH-02-west-25824",
+        "WB-00197",
+        "WB-00197",
+        "PT-BTH-02-west-25824",
+        "WB-00018",
+        "PT-GH27048-line-27348",
+        "WB-00060",
+        "PT-BED-01-west-27124",
+        "PT-BED-01-west-27124",
+        "WB-00060",
+        "PT-GH27048-line-27348",
+        "WB-00018",
+        "WB-00018",
+        "WB-00018",
+        "WB-00213",
+        "WB-00150",
+        "WB-00182",
+        "WB-00030",
+        "WB-00030",
+        "WB-00030",
+        "WB-00030",
+        "WB-00136",
+        "PT-GV26235-line-27124",
+        "WB-00160",
+        "WB-00160",
+        "WB-00021"
+      ],
+      "component_id": "",
       "geometry_status": "SPACE_FACE_CLOSED_VIA_PORTAL_CLOSURE",
       "graph_type": "SPACE_BOUNDARY_GRAPH",
       "holes": [],
@@ -11707,6 +14208,7 @@
         "WB-00234",
         "WB-00242"
       ],
+      "planar_component_id": "PC-0003",
       "portal_edges": [
         "PT-BED-01-west-27124",
         "PT-BTH-02-west-25824",
@@ -11752,7 +14254,45 @@
         "WB-00235",
         "WB-00243"
       ],
-      "component_id": "FACE-0005",
+      "boundary_edges_in_order": [
+        "WB-00006",
+        "WB-00231",
+        "WB-00156",
+        "WB-00187",
+        "WB-00016",
+        "WB-00016",
+        "WB-00016",
+        "WB-00016",
+        "PT-BTH-01-west-23150",
+        "PT-BTH-01-west-23150",
+        "WB-00016",
+        "WB-00243",
+        "WB-00235",
+        "WB-00016",
+        "WB-00187",
+        "WB-00188",
+        "WB-00212",
+        "WB-00017",
+        "WB-00222",
+        "PT-GV31091-line-23604",
+        "WB-00243",
+        "WB-00235",
+        "PT-GV31091-line-23604",
+        "WB-00222",
+        "WB-00017",
+        "WB-00198",
+        "WB-00198",
+        "WB-00021",
+        "WB-00160",
+        "WB-00123",
+        "WB-00123",
+        "WB-00160",
+        "WB-00062",
+        "WB-00062",
+        "PT-GV26222-line-21823",
+        "WB-00138"
+      ],
+      "component_id": "",
       "geometry_status": "SPACE_FACE_CLOSED_VIA_PORTAL_CLOSURE",
       "graph_type": "SPACE_BOUNDARY_GRAPH",
       "holes": [],
@@ -11779,6 +14319,7 @@
         "WB-00235",
         "WB-00243"
       ],
+      "planar_component_id": "PC-0003",
       "portal_edges": [
         "PT-BTH-01-west-23150",
         "PT-GV26222-line-21823",
@@ -11809,7 +14350,16 @@
         "WB-00142",
         "WB-00217"
       ],
-      "component_id": "FACE-0003",
+      "boundary_edges_in_order": [
+        "WB-00010",
+        "PT-GH12522-line-19198",
+        "WB-00071",
+        "WB-00217",
+        "WB-00061",
+        "WB-00054",
+        "WB-00142"
+      ],
+      "component_id": "",
       "geometry_status": "SPACE_FACE_CLOSED_VIA_PORTAL_CLOSURE",
       "graph_type": "SPACE_BOUNDARY_GRAPH",
       "holes": [],
@@ -11825,6 +14375,7 @@
         "WB-00142",
         "WB-00217"
       ],
+      "planar_component_id": "PC-0002",
       "portal_edges": [
         "PT-GH12522-line-19198"
       ],
@@ -11848,7 +14399,13 @@
         "WB-00144",
         "WB-00201"
       ],
-      "component_id": "FACE-0016",
+      "boundary_edges_in_order": [
+        "WB-00019",
+        "WB-00201",
+        "WB-00037",
+        "WB-00144"
+      ],
+      "component_id": "",
       "geometry_status": "SPACE_FACE_CLOSED",
       "graph_type": "SPACE_BOUNDARY_GRAPH",
       "holes": [],
@@ -11862,6 +14419,7 @@
         "WB-00144",
         "WB-00201"
       ],
+      "planar_component_id": "PC-0005",
       "portal_edges": [],
       "provenance": {
         "graph_type": "SPACE_BOUNDARY_GRAPH",
@@ -11883,7 +14441,13 @@
         "WB-00200",
         "WB-00202"
       ],
-      "component_id": "FACE-0021",
+      "boundary_edges_in_order": [
+        "WB-00033",
+        "WB-00200",
+        "WB-00034",
+        "WB-00202"
+      ],
+      "component_id": "",
       "geometry_status": "SPACE_FACE_CLOSED",
       "graph_type": "SPACE_BOUNDARY_GRAPH",
       "holes": [],
@@ -11897,6 +14461,7 @@
         "WB-00200",
         "WB-00202"
       ],
+      "planar_component_id": "PC-0007",
       "portal_edges": [],
       "provenance": {
         "graph_type": "SPACE_BOUNDARY_GRAPH",
@@ -11918,7 +14483,13 @@
         "WB-00149",
         "WB-00161"
       ],
-      "component_id": "FACE-0016",
+      "boundary_edges_in_order": [
+        "WB-00069",
+        "WB-00149",
+        "WB-00070",
+        "WB-00161"
+      ],
+      "component_id": "",
       "geometry_status": "SPACE_FACE_CLOSED",
       "graph_type": "SPACE_BOUNDARY_GRAPH",
       "holes": [],
@@ -11932,6 +14503,7 @@
         "WB-00149",
         "WB-00161"
       ],
+      "planar_component_id": "PC-0005",
       "portal_edges": [],
       "provenance": {
         "graph_type": "SPACE_BOUNDARY_GRAPH",
@@ -11953,7 +14525,14 @@
         "WB-00173",
         "WB-00175"
       ],
-      "component_id": "FACE-0003",
+      "boundary_edges_in_order": [
+        "WB-00009",
+        "WB-00175",
+        "WB-00043",
+        "WB-00173",
+        "WB-00009"
+      ],
+      "component_id": "",
       "geometry_status": "SPACE_FACE_CLOSED",
       "graph_type": "SPACE_BOUNDARY_GRAPH",
       "holes": [],
@@ -11967,6 +14546,7 @@
         "WB-00173",
         "WB-00175"
       ],
+      "planar_component_id": "PC-0002",
       "portal_edges": [],
       "provenance": {
         "graph_type": "SPACE_BOUNDARY_GRAPH",
@@ -11988,7 +14568,14 @@
         "WB-00177",
         "WB-00179"
       ],
-      "component_id": "FACE-0003",
+      "boundary_edges_in_order": [
+        "WB-00009",
+        "WB-00009",
+        "WB-00177",
+        "WB-00011",
+        "WB-00179"
+      ],
+      "component_id": "",
       "geometry_status": "SPACE_FACE_CLOSED",
       "graph_type": "SPACE_BOUNDARY_GRAPH",
       "holes": [],
@@ -12002,6 +14589,7 @@
         "WB-00177",
         "WB-00179"
       ],
+      "planar_component_id": "PC-0002",
       "portal_edges": [],
       "provenance": {
         "graph_type": "SPACE_BOUNDARY_GRAPH",
@@ -12023,7 +14611,15 @@
         "WB-00172",
         "WB-00175"
       ],
-      "component_id": "FACE-0003",
+      "boundary_edges_in_order": [
+        "WB-00009",
+        "WB-00172",
+        "WB-00043",
+        "WB-00043",
+        "WB-00175",
+        "WB-00009"
+      ],
+      "component_id": "",
       "geometry_status": "SPACE_FACE_CLOSED",
       "graph_type": "SPACE_BOUNDARY_GRAPH",
       "holes": [],
@@ -12037,6 +14633,7 @@
         "WB-00172",
         "WB-00175"
       ],
+      "planar_component_id": "PC-0002",
       "portal_edges": [],
       "provenance": {
         "graph_type": "SPACE_BOUNDARY_GRAPH",
@@ -12058,7 +14655,14 @@
         "WB-00177",
         "WB-00181"
       ],
-      "component_id": "FACE-0003",
+      "boundary_edges_in_order": [
+        "WB-00009",
+        "WB-00009",
+        "WB-00181",
+        "WB-00011",
+        "WB-00177"
+      ],
+      "component_id": "",
       "geometry_status": "SPACE_FACE_CLOSED",
       "graph_type": "SPACE_BOUNDARY_GRAPH",
       "holes": [],
@@ -12072,6 +14676,7 @@
         "WB-00177",
         "WB-00181"
       ],
+      "planar_component_id": "PC-0002",
       "portal_edges": [],
       "provenance": {
         "graph_type": "SPACE_BOUNDARY_GRAPH",
@@ -12093,7 +14698,13 @@
         "WB-00178",
         "WB-00181"
       ],
-      "component_id": "FACE-0003",
+      "boundary_edges_in_order": [
+        "WB-00009",
+        "WB-00178",
+        "WB-00011",
+        "WB-00181"
+      ],
+      "component_id": "",
       "geometry_status": "SPACE_FACE_CLOSED",
       "graph_type": "SPACE_BOUNDARY_GRAPH",
       "holes": [],
@@ -12107,6 +14718,7 @@
         "WB-00178",
         "WB-00181"
       ],
+      "planar_component_id": "PC-0002",
       "portal_edges": [],
       "provenance": {
         "graph_type": "SPACE_BOUNDARY_GRAPH",
@@ -12128,7 +14740,13 @@
         "WB-00172",
         "WB-00174"
       ],
-      "component_id": "FACE-0003",
+      "boundary_edges_in_order": [
+        "WB-00009",
+        "WB-00174",
+        "WB-00043",
+        "WB-00172"
+      ],
+      "component_id": "",
       "geometry_status": "SPACE_FACE_CLOSED",
       "graph_type": "SPACE_BOUNDARY_GRAPH",
       "holes": [],
@@ -12142,6 +14760,7 @@
         "WB-00172",
         "WB-00174"
       ],
+      "planar_component_id": "PC-0002",
       "portal_edges": [],
       "provenance": {
         "graph_type": "SPACE_BOUNDARY_GRAPH",
@@ -12167,7 +14786,15 @@
         "WB-00166",
         "WB-00167"
       ],
-      "component_id": "FACE-0008",
+      "boundary_edges_in_order": [
+        "WB-00051",
+        "WB-00166",
+        "WB-00092",
+        "PT-GH17573-line-19198",
+        "WB-00091",
+        "WB-00167"
+      ],
+      "component_id": "",
       "geometry_status": "SPACE_FACE_CLOSED_VIA_PORTAL_CLOSURE",
       "graph_type": "SPACE_BOUNDARY_GRAPH",
       "holes": [],
@@ -12182,6 +14809,7 @@
         "WB-00166",
         "WB-00167"
       ],
+      "planar_component_id": "PC-0004",
       "portal_edges": [
         "PT-GH17573-line-19198"
       ],
@@ -13275,6 +15903,333 @@
       "why": "the segmentation found this region and the vector graph produced no face over it"
     }
   ],
+  "space_identity": {
+    "by_geometry_status": {
+      "AMBIGUOUS_GEOMETRIC_FACE": 14,
+      "VALIDATED_GEOMETRIC_FACE": 5
+    },
+    "by_identity_status": {
+      "IDENTITY_AMBIGUOUS": 2,
+      "IDENTITY_PROBABLE": 2,
+      "IDENTITY_REJECTED": 1,
+      "IDENTITY_UNRESOLVED": 14
+    },
+    "geometry_sound_identity_not": 3,
+    "identity_rejected": 1,
+    "note": "a closed polygon plus a nearby label is NOT a validated physical space. Both axes must pass, and they fail independently",
+    "physical_space_geometry_accepted": 2,
+    "verdicts": [
+      {
+        "acceptance": "NOT_ACCEPTED",
+        "claimed_space_id": "",
+        "geometry_blockers": [],
+        "identity_blockers": [],
+        "identity_evidence": [],
+        "identity_families": [],
+        "physical_space_identity_status": "IDENTITY_UNRESOLVED",
+        "rejected_by": "",
+        "space_face_id": "SF-V2-0001",
+        "vector_face_geometry_status": "AMBIGUOUS_GEOMETRIC_FACE",
+        "why_geometry": "a depth-0 cycle containing 36 labelled rooms. This is the external boundary of the floor, NOT a room whose dividing walls are missing",
+        "why_identity": "no identity evidence of any kind",
+        "why_not_accepted": "neither axis is sufficient: geometry AMBIGUOUS_GEOMETRIC_FACE, identity IDENTITY_UNRESOLVED"
+      },
+      {
+        "acceptance": "PHYSICAL_SPACE_GEOMETRY_ACCEPTED",
+        "claimed_space_id": "BED-03",
+        "geometry_blockers": [],
+        "identity_blockers": [],
+        "identity_evidence": [
+          "SEMANTIC_LABEL_ANCHORED_INSIDE_THE_FACE",
+          "WALL_AND_PORTAL_ADJACENCY_MATCHES_THE_EXPECTED_NEIGHBOURS"
+        ],
+        "identity_families": [
+          "SEMANTIC",
+          "TOPOLOGY"
+        ],
+        "physical_space_identity_status": "IDENTITY_PROBABLE",
+        "rejected_by": "",
+        "space_face_id": "SF-V2-0002",
+        "vector_face_geometry_status": "VALIDATED_GEOMETRIC_FACE",
+        "why_geometry": "one labelled room (BED-03) and nothing nested that holds another. ATOMIC CANDIDATE \u2014 its identity is a separate question",
+        "why_identity": "SEMANTIC+TOPOLOGY is an approved identity combination",
+        "why_not_accepted": ""
+      },
+      {
+        "acceptance": "NOT_ACCEPTED",
+        "claimed_space_id": "",
+        "geometry_blockers": [],
+        "identity_blockers": [],
+        "identity_evidence": [],
+        "identity_families": [],
+        "physical_space_identity_status": "IDENTITY_UNRESOLVED",
+        "rejected_by": "",
+        "space_face_id": "SF-V2-0003",
+        "vector_face_geometry_status": "AMBIGUOUS_GEOMETRIC_FACE",
+        "why_geometry": "2 labelled rooms inside one cycle (BED-01, BTH-02): an enclosure of several spaces, so a dividing boundary is missing or a portal over-closed. It also overlaps another cycle without containing it",
+        "why_identity": "no identity evidence of any kind",
+        "why_not_accepted": "neither axis is sufficient: geometry AMBIGUOUS_GEOMETRIC_FACE, identity IDENTITY_UNRESOLVED"
+      },
+      {
+        "acceptance": "NOT_ACCEPTED",
+        "claimed_space_id": "",
+        "geometry_blockers": [],
+        "identity_blockers": [],
+        "identity_evidence": [],
+        "identity_families": [],
+        "physical_space_identity_status": "IDENTITY_UNRESOLVED",
+        "rejected_by": "",
+        "space_face_id": "SF-V2-0004",
+        "vector_face_geometry_status": "AMBIGUOUS_GEOMETRIC_FACE",
+        "why_geometry": "2 labelled rooms inside one cycle (BED-NW, BTH-01): an enclosure of several spaces, so a dividing boundary is missing or a portal over-closed. It also overlaps another cycle without containing it",
+        "why_identity": "no identity evidence of any kind",
+        "why_not_accepted": "neither axis is sufficient: geometry AMBIGUOUS_GEOMETRIC_FACE, identity IDENTITY_UNRESOLVED"
+      },
+      {
+        "acceptance": "PHYSICAL_SPACE_GEOMETRY_ACCEPTED",
+        "claimed_space_id": "MBTH-02",
+        "geometry_blockers": [],
+        "identity_blockers": [],
+        "identity_evidence": [
+          "SEMANTIC_LABEL_ANCHORED_INSIDE_THE_FACE",
+          "WALL_AND_PORTAL_ADJACENCY_MATCHES_THE_EXPECTED_NEIGHBOURS"
+        ],
+        "identity_families": [
+          "SEMANTIC",
+          "TOPOLOGY"
+        ],
+        "physical_space_identity_status": "IDENTITY_PROBABLE",
+        "rejected_by": "",
+        "space_face_id": "SF-V2-0005",
+        "vector_face_geometry_status": "VALIDATED_GEOMETRIC_FACE",
+        "why_geometry": "one labelled room (MBTH-02) and nothing nested that holds another. ATOMIC CANDIDATE \u2014 its identity is a separate question",
+        "why_identity": "SEMANTIC+TOPOLOGY is an approved identity combination",
+        "why_not_accepted": ""
+      },
+      {
+        "acceptance": "NOT_ACCEPTED",
+        "claimed_space_id": "WSH-01",
+        "geometry_blockers": [],
+        "identity_blockers": [],
+        "identity_evidence": [
+          "SEMANTIC_LABEL_ANCHORED_INSIDE_THE_FACE"
+        ],
+        "identity_families": [
+          "SEMANTIC"
+        ],
+        "physical_space_identity_status": "IDENTITY_REJECTED",
+        "rejected_by": "The region picked up is the hatched shaft beside the wash room, not the wash floor. The space map's own flag says 'Area NOT trusted'; e25.residual_components says the same.",
+        "space_face_id": "SF-V2-0006",
+        "vector_face_geometry_status": "VALIDATED_GEOMETRIC_FACE",
+        "why_geometry": "one labelled room (WSH-01) and nothing nested that holds another. ATOMIC CANDIDATE \u2014 its identity is a separate question",
+        "why_identity": "rejected: The region picked up is the hatched shaft beside the wash room, not the wash floor. The space map's own flag says 'Area NOT trusted'; e25.residual_components says the same.. A contradiction outranks accumulated support \u2014 the support is what was mistaken",
+        "why_not_accepted": "the geometry is sound and the identity is not: this is a valid face whose claim to be WSH-01 is IDENTITY_REJECTED"
+      },
+      {
+        "acceptance": "NOT_ACCEPTED",
+        "claimed_space_id": "SHF-01",
+        "geometry_blockers": [],
+        "identity_blockers": [],
+        "identity_evidence": [
+          "SEMANTIC_LABEL_ANCHORED_INSIDE_THE_FACE"
+        ],
+        "identity_families": [
+          "SEMANTIC"
+        ],
+        "physical_space_identity_status": "IDENTITY_AMBIGUOUS",
+        "rejected_by": "",
+        "space_face_id": "SF-V2-0007",
+        "vector_face_geometry_status": "VALIDATED_GEOMETRIC_FACE",
+        "why_geometry": "one labelled room (SHF-01) and nothing nested that holds another. ATOMIC CANDIDATE \u2014 its identity is a separate question",
+        "why_identity": "SEMANTIC alone. A face holding one semantic label can still be a shaft, a closet, an adjacent enclosure, a wrongly nested cycle or the wrong side of a wall",
+        "why_not_accepted": "the geometry is sound and the identity is not: this is a valid face whose claim to be SHF-01 is IDENTITY_AMBIGUOUS"
+      },
+      {
+        "acceptance": "NOT_ACCEPTED",
+        "claimed_space_id": "REC-01",
+        "geometry_blockers": [],
+        "identity_blockers": [],
+        "identity_evidence": [
+          "SEMANTIC_LABEL_ANCHORED_INSIDE_THE_FACE"
+        ],
+        "identity_families": [
+          "SEMANTIC"
+        ],
+        "physical_space_identity_status": "IDENTITY_AMBIGUOUS",
+        "rejected_by": "",
+        "space_face_id": "SF-V2-0008",
+        "vector_face_geometry_status": "VALIDATED_GEOMETRIC_FACE",
+        "why_geometry": "one labelled room (REC-01) and nothing nested that holds another. ATOMIC CANDIDATE \u2014 its identity is a separate question",
+        "why_identity": "SEMANTIC alone. A face holding one semantic label can still be a shaft, a closet, an adjacent enclosure, a wrongly nested cycle or the wrong side of a wall",
+        "why_not_accepted": "the geometry is sound and the identity is not: this is a valid face whose claim to be REC-01 is IDENTITY_AMBIGUOUS"
+      },
+      {
+        "acceptance": "NOT_ACCEPTED",
+        "claimed_space_id": "",
+        "geometry_blockers": [],
+        "identity_blockers": [],
+        "identity_evidence": [],
+        "identity_families": [],
+        "physical_space_identity_status": "IDENTITY_UNRESOLVED",
+        "rejected_by": "",
+        "space_face_id": "SF-V2-0009",
+        "vector_face_geometry_status": "AMBIGUOUS_GEOMETRIC_FACE",
+        "why_geometry": "this cycle overlaps another without containing it or being contained by it, and holds no labelled room of its own",
+        "why_identity": "no identity evidence of any kind",
+        "why_not_accepted": "neither axis is sufficient: geometry AMBIGUOUS_GEOMETRIC_FACE, identity IDENTITY_UNRESOLVED"
+      },
+      {
+        "acceptance": "NOT_ACCEPTED",
+        "claimed_space_id": "",
+        "geometry_blockers": [],
+        "identity_blockers": [],
+        "identity_evidence": [],
+        "identity_families": [],
+        "physical_space_identity_status": "IDENTITY_UNRESOLVED",
+        "rejected_by": "",
+        "space_face_id": "SF-V2-0010",
+        "vector_face_geometry_status": "AMBIGUOUS_GEOMETRIC_FACE",
+        "why_geometry": "a cycle wholly inside another with no labelled room of its own: a shaft or a void. Its parent's floor area must exclude it",
+        "why_identity": "no identity evidence of any kind",
+        "why_not_accepted": "neither axis is sufficient: geometry AMBIGUOUS_GEOMETRIC_FACE, identity IDENTITY_UNRESOLVED"
+      },
+      {
+        "acceptance": "NOT_ACCEPTED",
+        "claimed_space_id": "",
+        "geometry_blockers": [],
+        "identity_blockers": [],
+        "identity_evidence": [],
+        "identity_families": [],
+        "physical_space_identity_status": "IDENTITY_UNRESOLVED",
+        "rejected_by": "",
+        "space_face_id": "SF-V2-0011",
+        "vector_face_geometry_status": "AMBIGUOUS_GEOMETRIC_FACE",
+        "why_geometry": "this cycle overlaps another without containing it or being contained by it, and holds no labelled room of its own",
+        "why_identity": "no identity evidence of any kind",
+        "why_not_accepted": "neither axis is sufficient: geometry AMBIGUOUS_GEOMETRIC_FACE, identity IDENTITY_UNRESOLVED"
+      },
+      {
+        "acceptance": "NOT_ACCEPTED",
+        "claimed_space_id": "",
+        "geometry_blockers": [],
+        "identity_blockers": [],
+        "identity_evidence": [],
+        "identity_families": [],
+        "physical_space_identity_status": "IDENTITY_UNRESOLVED",
+        "rejected_by": "",
+        "space_face_id": "SF-V2-0012",
+        "vector_face_geometry_status": "AMBIGUOUS_GEOMETRIC_FACE",
+        "why_geometry": "a cycle wholly inside another with no labelled room of its own: a shaft or a void. Its parent's floor area must exclude it",
+        "why_identity": "no identity evidence of any kind",
+        "why_not_accepted": "neither axis is sufficient: geometry AMBIGUOUS_GEOMETRIC_FACE, identity IDENTITY_UNRESOLVED"
+      },
+      {
+        "acceptance": "NOT_ACCEPTED",
+        "claimed_space_id": "",
+        "geometry_blockers": [],
+        "identity_blockers": [],
+        "identity_evidence": [],
+        "identity_families": [],
+        "physical_space_identity_status": "IDENTITY_UNRESOLVED",
+        "rejected_by": "",
+        "space_face_id": "SF-V2-0013",
+        "vector_face_geometry_status": "AMBIGUOUS_GEOMETRIC_FACE",
+        "why_geometry": "a cycle wholly inside another with no labelled room of its own: a shaft or a void. Its parent's floor area must exclude it",
+        "why_identity": "no identity evidence of any kind",
+        "why_not_accepted": "neither axis is sufficient: geometry AMBIGUOUS_GEOMETRIC_FACE, identity IDENTITY_UNRESOLVED"
+      },
+      {
+        "acceptance": "NOT_ACCEPTED",
+        "claimed_space_id": "",
+        "geometry_blockers": [],
+        "identity_blockers": [],
+        "identity_evidence": [],
+        "identity_families": [],
+        "physical_space_identity_status": "IDENTITY_UNRESOLVED",
+        "rejected_by": "",
+        "space_face_id": "SF-V2-0014",
+        "vector_face_geometry_status": "AMBIGUOUS_GEOMETRIC_FACE",
+        "why_geometry": "this cycle overlaps another without containing it or being contained by it, and holds no labelled room of its own",
+        "why_identity": "no identity evidence of any kind",
+        "why_not_accepted": "neither axis is sufficient: geometry AMBIGUOUS_GEOMETRIC_FACE, identity IDENTITY_UNRESOLVED"
+      },
+      {
+        "acceptance": "NOT_ACCEPTED",
+        "claimed_space_id": "",
+        "geometry_blockers": [],
+        "identity_blockers": [],
+        "identity_evidence": [],
+        "identity_families": [],
+        "physical_space_identity_status": "IDENTITY_UNRESOLVED",
+        "rejected_by": "",
+        "space_face_id": "SF-V2-0015",
+        "vector_face_geometry_status": "AMBIGUOUS_GEOMETRIC_FACE",
+        "why_geometry": "354 mm across at its narrowest: too narrow to be occupied floor at any scale a house uses",
+        "why_identity": "no identity evidence of any kind",
+        "why_not_accepted": "neither axis is sufficient: geometry AMBIGUOUS_GEOMETRIC_FACE, identity IDENTITY_UNRESOLVED"
+      },
+      {
+        "acceptance": "NOT_ACCEPTED",
+        "claimed_space_id": "",
+        "geometry_blockers": [],
+        "identity_blockers": [],
+        "identity_evidence": [],
+        "identity_families": [],
+        "physical_space_identity_status": "IDENTITY_UNRESOLVED",
+        "rejected_by": "",
+        "space_face_id": "SF-V2-0016",
+        "vector_face_geometry_status": "AMBIGUOUS_GEOMETRIC_FACE",
+        "why_geometry": "231 mm across at its narrowest: too narrow to be occupied floor at any scale a house uses",
+        "why_identity": "no identity evidence of any kind",
+        "why_not_accepted": "neither axis is sufficient: geometry AMBIGUOUS_GEOMETRIC_FACE, identity IDENTITY_UNRESOLVED"
+      },
+      {
+        "acceptance": "NOT_ACCEPTED",
+        "claimed_space_id": "",
+        "geometry_blockers": [],
+        "identity_blockers": [],
+        "identity_evidence": [],
+        "identity_families": [],
+        "physical_space_identity_status": "IDENTITY_UNRESOLVED",
+        "rejected_by": "",
+        "space_face_id": "SF-V2-0017",
+        "vector_face_geometry_status": "AMBIGUOUS_GEOMETRIC_FACE",
+        "why_geometry": "0.281 m2 needs classifying before use. NOTHING here deletes it",
+        "why_identity": "no identity evidence of any kind",
+        "why_not_accepted": "neither axis is sufficient: geometry AMBIGUOUS_GEOMETRIC_FACE, identity IDENTITY_UNRESOLVED"
+      },
+      {
+        "acceptance": "NOT_ACCEPTED",
+        "claimed_space_id": "",
+        "geometry_blockers": [],
+        "identity_blockers": [],
+        "identity_evidence": [],
+        "identity_families": [],
+        "physical_space_identity_status": "IDENTITY_UNRESOLVED",
+        "rejected_by": "",
+        "space_face_id": "SF-V2-0018",
+        "vector_face_geometry_status": "AMBIGUOUS_GEOMETRIC_FACE",
+        "why_geometry": "76 mm across at its narrowest: too narrow to be occupied floor at any scale a house uses",
+        "why_identity": "no identity evidence of any kind",
+        "why_not_accepted": "neither axis is sufficient: geometry AMBIGUOUS_GEOMETRIC_FACE, identity IDENTITY_UNRESOLVED"
+      },
+      {
+        "acceptance": "NOT_ACCEPTED",
+        "claimed_space_id": "",
+        "geometry_blockers": [],
+        "identity_blockers": [],
+        "identity_evidence": [],
+        "identity_families": [],
+        "physical_space_identity_status": "IDENTITY_UNRESOLVED",
+        "rejected_by": "",
+        "space_face_id": "SF-V2-0019",
+        "vector_face_geometry_status": "AMBIGUOUS_GEOMETRIC_FACE",
+        "why_geometry": "47 mm across at its narrowest: too narrow to be occupied floor at any scale a house uses",
+        "why_identity": "no identity evidence of any kind",
+        "why_not_accepted": "neither axis is sufficient: geometry AMBIGUOUS_GEOMETRIC_FACE, identity IDENTITY_UNRESOLVED"
+      }
+    ]
+  },
   "status": {
     "E31A_ENGINE_DEVELOPMENT_STATUS": "READY_FOR_DIAGNOSTIC_RUN",
     "PROJECT_TOPOLOGY_RELEASE_STATUS": "BLOCKED",

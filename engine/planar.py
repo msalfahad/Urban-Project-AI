@@ -119,6 +119,10 @@ class Face:
     """
 
     face_id: str
+    # The GRAPH component this face's edges belong to (GC-xxxx from
+    # engine.connectivity), or empty when the caller did not supply one.
+    # IT IS NEVER A FACE ID: §26 found FACE-0003 sitting in this field,
+    # because an earlier fallback used the union-find root — which is a face.
     component_id: str
     half_edge_ids: tuple[str, ...]
     polygon_mm: tuple[tuple[float, float], ...]
@@ -126,6 +130,10 @@ class Face:
     perimeter_mm: float
     orientation: str
     kind: str
+    # The PLANAR component: the group of faces reachable through shared
+    # edges (PC-xxxx). A different question from the graph component, and it
+    # gets its own namespace so the two can never be confused again.
+    planar_component_id: str = ""
     source_wall_edge_ids: tuple[str, ...] = ()
     topology_boundary_candidate_ids: tuple[str, ...] = ()
     hole_face_ids: tuple[str, ...] = ()
@@ -162,6 +170,7 @@ class Face:
 
     def record(self) -> dict:
         return {"face_id": self.face_id, "component_id": self.component_id,
+                "planar_component_id": self.planar_component_id,
                 "status": self.status, "kind": self.kind,
                 "orientation": self.orientation,
                 "area_m2": round(self.area_m2, 3),
@@ -403,13 +412,22 @@ def resolve_unbounded(res: PlanarResult) -> PlanarResult:
     for f in res.faces:
         groups.setdefault(find(f.face_id), []).append(f)
 
+    # PC- is its own namespace. Numbered by the group's smallest face id so
+    # the label is stable across runs rather than dictionary-ordered.
+    pc_of = {root: f"PC-{i:04d}" for i, root in enumerate(
+        sorted(groups, key=lambda r: min(f.face_id for f in groups[r])), 1)}
+
     out: list[Face] = []
     for root, faces in groups.items():
-        comp = faces[0].component_id or root
+        pc = pc_of[root]
+        # The GRAPH component, when the caller supplied one. Never a face id:
+        # an empty graph component stays empty and says so.
+        comp = faces[0].component_id
         real = [f for f in faces if f.orientation != ORIENT_DEGENERATE]
         if not real:
             for f in faces:
                 out.append(Face(**{**f.__dict__, "component_id": comp,
+                                   "planar_component_id": pc,
                                    "kind": UNBOUNDED_UNRESOLVED,
                                    "blockers": f.blockers + (
                                        "every walk in this component has zero "
@@ -426,6 +444,7 @@ def resolve_unbounded(res: PlanarResult) -> PlanarResult:
             else:
                 kind, extra = BOUNDED, ()
             out.append(Face(**{**f.__dict__, "component_id": comp,
+                               "planar_component_id": pc,
                                "kind": kind, "blockers": f.blockers + extra}))
     res.faces = out
     return res

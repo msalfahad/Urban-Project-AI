@@ -73,6 +73,26 @@ def test_the_invariants_are_written_down_where_someone_will_read_them():
     assert "NEVER INVENT THE MISSING HALF" in text.upper()
     assert "A LENGTH WITHOUT A BASIS IS NOT A LENGTH" in text.upper()
     assert "BBOX IS NEVER PHYSICAL GEOMETRY" in text.upper()
+    assert "A CLOSED POLYGON IS NOT A ROOM" in text.upper()
+    assert "A SUM OF CYCLES IS NOT AN AREA" in text.upper()
+
+
+def test_no_module_accepts_a_physical_space_on_one_axis_alone():
+    """A shaft with perfect geometry is not the washroom."""
+    from engine.space_identity import (AMBIGUOUS_GEOMETRIC_FACE,
+                                       IDENTITY_PROBABLE, IDENTITY_REJECTED,
+                                       NOT_ACCEPTED,
+                                       PHYSICAL_SPACE_GEOMETRY_ACCEPTED,
+                                       VALIDATED_GEOMETRIC_FACE, SpaceIdentity)
+    geo_only = SpaceIdentity("SF-1", "WSH-01", VALIDATED_GEOMETRIC_FACE,
+                             IDENTITY_REJECTED)
+    id_only = SpaceIdentity("SF-2", "BED-01", AMBIGUOUS_GEOMETRIC_FACE,
+                            IDENTITY_PROBABLE)
+    both = SpaceIdentity("SF-3", "BED-03", VALIDATED_GEOMETRIC_FACE,
+                         IDENTITY_PROBABLE)
+    assert geo_only.acceptance == NOT_ACCEPTED
+    assert id_only.acceptance == NOT_ACCEPTED
+    assert both.acceptance == PHYSICAL_SPACE_GEOMETRY_ACCEPTED
 
 
 def test_no_module_derives_room_geometry_from_a_bounding_box():

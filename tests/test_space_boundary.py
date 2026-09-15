@@ -442,3 +442,67 @@ def test_one_family_never_validates_a_portal_whatever_family_it_is():
     assert status_for(paired)[0] == PORTAL_VALIDATED
     assert existence_status_for(paired)[0] == EXISTENCE_VALIDATED
     assert geometry_status_for(paired)[0] == GEOMETRY_VALIDATED
+
+
+# --- §15 the two axes must not be aliases of one calculation ----------------
+
+def test_existence_can_be_validated_while_geometry_stays_unresolved():
+    """A door schedule and a swing symbol prove a door is there. Neither
+    carries a coordinate, so the closure line is still unknown."""
+    from engine.space_boundary import (EXISTENCE_VALIDATED, FAMILY_DOCUMENT,
+                                       FAMILY_SYMBOL, GEOMETRY_UNRESOLVED,
+                                       existence_status_for,
+                                       geometry_status_for)
+    fams = {FAMILY_SYMBOL, FAMILY_DOCUMENT}
+    assert existence_status_for(fams)[0] == EXISTENCE_VALIDATED
+    assert geometry_status_for(fams)[0] == GEOMETRY_UNRESOLVED
+
+
+def test_geometry_can_outrank_existence_on_a_measured_gap():
+    """A measured gap between two facing bands locates a boundary line
+    without proving anybody put a door in it."""
+    from engine.space_boundary import (EXISTENCE_CANDIDATE, FAMILY_GEOMETRY,
+                                       GEOMETRY_CANDIDATE,
+                                       existence_status_for,
+                                       geometry_status_for)
+    fams = {FAMILY_GEOMETRY}
+    assert existence_status_for(fams)[0] == EXISTENCE_CANDIDATE
+    assert geometry_status_for(fams)[0] == GEOMETRY_CANDIDATE
+
+
+def test_the_two_axes_disagree_on_at_least_one_family_combination():
+    """If every combination produced the same pair, the fields would be one
+    calculation under two names and the split would buy nothing."""
+    from itertools import combinations
+
+    from engine.space_boundary import (EXISTENCE_STATUSES, FAMILY_CAD,
+                                       FAMILY_DOCUMENT, FAMILY_GEOMETRY,
+                                       FAMILY_SEMANTIC, FAMILY_SYMBOL,
+                                       FAMILY_TOPOLOGY, GEOMETRY_STATUSES,
+                                       existence_status_for,
+                                       geometry_status_for)
+    fams = (FAMILY_GEOMETRY, FAMILY_SYMBOL, FAMILY_DOCUMENT, FAMILY_TOPOLOGY,
+            FAMILY_SEMANTIC, FAMILY_CAD)
+    disagreements = 0
+    for n in range(1, 4):
+        for combo in combinations(fams, n):
+            e = EXISTENCE_STATUSES.index(existence_status_for(set(combo))[0])
+            g = GEOMETRY_STATUSES.index(geometry_status_for(set(combo))[0])
+            if e != g:
+                disagreements += 1
+    assert disagreements > 0, (
+        "existence and geometry returned the same rank for every combination: "
+        "they are aliases, not two questions")
+
+
+def test_no_family_without_coordinates_can_fix_a_closure_line():
+    from engine.space_boundary import (FAMILY_DOCUMENT, FAMILY_SEMANTIC,
+                                       FAMILY_SYMBOL, FAMILY_TOPOLOGY,
+                                       GEOMETRY_UNRESOLVED,
+                                       geometry_status_for)
+    non_geometric = (FAMILY_SYMBOL, FAMILY_DOCUMENT, FAMILY_TOPOLOGY,
+                     FAMILY_SEMANTIC)
+    for n in range(1, len(non_geometric) + 1):
+        from itertools import combinations
+        for combo in combinations(non_geometric, n):
+            assert geometry_status_for(set(combo))[0] == GEOMETRY_UNRESOLVED

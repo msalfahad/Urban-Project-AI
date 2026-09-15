@@ -428,27 +428,41 @@ def test_the_dashboard_reports_the_geometry_layers_separately():
     wb = build_workbook(dict(BUNDLE, geometry_layers={
         "RASTER_REGION_AVAILABLE": 36, "WALL_GEOMETRY_AVAILABLE": 36,
         "REGION_IDENTITY_VALIDATED": 35, "PHYSICAL_TOPOLOGY_VALIDATED": 33,
-        "VECTOR_SPACE_FACES_GENERATED": 19, "VECTOR_SPACE_FACE_VALIDATED": 5,
+        "VECTOR_SPACE_FACES_GENERATED": 19,
+        "VECTOR_SINGLE_LABEL_FACE_CANDIDATES": 5,
         "validated_physical_spaces": 33}))
     dash = {r["measure"]: r["value"] for r in wb.by_name()["Dashboard"].rows}
     assert dash["RASTER_REGION_AVAILABLE"] == 36
     assert dash["RASTER_REGION_IDENTITY_VALIDATED"] == 35
     assert dash["RASTER_SPACE_COMPLETENESS_VALIDATED"] == 33
-    assert dash["VALIDATED PHYSICAL SPACES"] == 33
+    assert dash["RASTER_RELEASE_SPACE_RECORDS_VALIDATED"] == 33
 
 
 def test_a_geometry_kpi_says_which_geometry_it_means():
-    """§20 — "physical topology validated = 33" was read as 33 reconstructed
-    vector faces. Five vector faces enclose exactly one labelled room."""
+    """§20 / §23 / §24 — "physical topology validated = 33" was read as 33
+    reconstructed vector faces, and the five single-label cycles were
+    reported as validated when one of them is a shaft."""
     wb = build_workbook(dict(BUNDLE, geometry_layers={
         "RASTER_REGION_AVAILABLE": 36, "PHYSICAL_TOPOLOGY_VALIDATED": 33,
-        "VECTOR_SPACE_FACES_GENERATED": 19, "VECTOR_SPACE_FACE_VALIDATED": 5,
+        "VECTOR_SPACE_FACES_GENERATED": 19,
+        "VECTOR_SINGLE_LABEL_FACE_CANDIDATES": 5,
+        "VECTOR_PHYSICAL_SPACE_VALIDATED": 2,
+        "VECTOR_SPACE_IDENTITY_REJECTED": 1,
+        "CLEAR_INTERNAL_POLYGONS_COMPLETE": 2,
         "validated_physical_spaces": 33}))
     rows = {r["measure"]: r for r in wb.by_name()["Dashboard"].rows}
-    assert rows["VECTOR_SPACE_FACE_VALIDATED"]["value"] == 5
+    assert rows["VECTOR_SINGLE_LABEL_FACE_CANDIDATES"]["value"] == 5
+    assert "CANDIDATES" in rows["VECTOR_SINGLE_LABEL_FACE_CANDIDATES"]["note"]
+    assert rows["VECTOR_PHYSICAL_SPACE_VALIDATED"]["value"] == 2
+    assert rows["VECTOR_SPACE_IDENTITY_REJECTED"]["value"] == 1
     assert rows["VECTOR_SPACE_FACES_GENERATED"]["value"] == 19
+    assert "NOT additive" in rows["VECTOR_SPACE_FACES_GENERATED"]["note"]
     assert "segmentation fact" in rows[
         "RASTER_SPACE_COMPLETENESS_VALIDATED"]["note"]
+    # §24 — the 33 must name its own provenance
+    assert "RASTER" in rows["RASTER_RELEASE_SPACE_RECORDS_VALIDATED"]["note"]
+    assert "NOT a count of reconstructed vector rooms" in rows[
+        "RASTER_RELEASE_SPACE_RECORDS_VALIDATED"]["note"]
 
 
 def test_a_workbook_with_human_labels_says_so_on_the_front_page():

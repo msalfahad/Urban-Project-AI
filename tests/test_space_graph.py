@@ -29,6 +29,16 @@ class Band:
     source_object_ids: tuple = ()
     supporting_evidence: tuple = ()
     validation_status: str = "VALIDATED"
+    face_a_ids: tuple = ("FA",)
+    face_b_ids: tuple = ("FB",)
+
+    @property
+    def face_a_mm(self) -> float:
+        return self.centreline_mm - self.wall_face_separation_mm / 2
+
+    @property
+    def face_b_mm(self) -> float:
+        return self.centreline_mm + self.wall_face_separation_mm / 2
 
 
 def room(prefix="R", x0=0.0, y0=0.0, x1=4000.0, y1=3000.0, door=None):

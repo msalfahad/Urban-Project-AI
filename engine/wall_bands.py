@@ -129,6 +129,10 @@ class WallBandCandidate:
     end_mm: float
     face_a_ids: tuple[str, ...] = ()
     face_b_ids: tuple[str, ...] = ()
+    # The two faces' own constant coordinates, so ownership can name a real
+    # drawn face rather than "centreline plus half the thickness".
+    face_a_mm: float | None = None
+    face_b_mm: float | None = None
     cap_ids: tuple[str, ...] = ()
     source_object_ids: tuple[str, ...] = ()
     wall_face_separation_mm: float | None = None
@@ -164,6 +168,10 @@ class WallBandCandidate:
                 "length_mm": round(self.length_mm, 1),
                 "face_a_ids": list(self.face_a_ids),
                 "face_b_ids": list(self.face_b_ids),
+                "face_a_mm": (None if self.face_a_mm is None
+                              else round(self.face_a_mm, 1)),
+                "face_b_mm": (None if self.face_b_mm is None
+                              else round(self.face_b_mm, 1)),
                 "cap_ids": list(self.cap_ids),
                 "wall_face_separation_mm": (
                     None if self.wall_face_separation_mm is None
@@ -360,6 +368,7 @@ def build_bands(faces, *, caps=(), wall_pen: float | None = None,
                 representation_type=DOUBLE_FACE_WALL, axis=axis,
                 centreline_mm=centre, start_mm=lo, end_mm=hi,
                 face_a_ids=(a.segment_id,), face_b_ids=(b.segment_id,),
+                face_a_mm=a.fixed_mm, face_b_mm=b.fixed_mm,
                 cap_ids=cap_ids,
                 source_object_ids=(a.path_id, b.path_id),
                 wall_face_separation_mm=gap,
@@ -418,6 +427,7 @@ def single_face_candidates(rejections, faces, *, caps=(),
             representation_type=SINGLE_LINE_WALL, axis=s.axis,
             centreline_mm=s.fixed_mm, start_mm=lo, end_mm=hi,
             face_a_ids=(s.segment_id,), face_b_ids=(),
+            face_a_mm=s.fixed_mm, face_b_mm=None,
             source_object_ids=(s.path_id,),
             wall_face_separation_mm=None,
             separation_basis="NOT_ESTABLISHED — only one face is drawn",

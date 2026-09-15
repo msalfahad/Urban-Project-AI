@@ -70,7 +70,8 @@ def assess(*, uses_total: int, uses_with_ready_spaces: int,
            net_uses_ready: int, validated_physical_spaces: int,
            total_in_scope_spaces: int, openings_validated: int,
            signed_trade_rules: int, unresolved_topology_spaces: int,
-           graph_gate_passed: bool) -> TopLevelStatus:
+           graph_gate_passed: bool,
+           openings_deduction_ready: bool = False) -> TopLevelStatus:
     """Both statuses, from the states that actually determine each.
 
     Coverage is a proportion. BOQ readiness is a conjunction. They are computed
@@ -97,9 +98,21 @@ def assess(*, uses_total: int, uses_with_ready_spaces: int,
                    f"{total_in_scope_spaces} in-scope spaces are validated")
 
     blockers = []
+    # §22 — "no opening validated" became FALSE the moment two portals reached
+    # GEOMETRY_VALIDATED, and the sentence was still being printed. The real
+    # blocker was never the count: it is that opening DEDUCTIONS are not
+    # complete or approved, which no number of validated portals fixes on its
+    # own. So the blocker states the actual condition and carries the count.
     if openings_validated == 0:
-        blockers.append("no opening validated: every wall figure is GROSS and "
-                        "no net quantity exists")
+        blockers.append(
+            "no opening is validated anywhere, so every wall figure is GROSS "
+            "and no net quantity exists")
+    elif openings_deduction_ready is False:
+        blockers.append(
+            f"{openings_validated} opening(s) are validated, but opening "
+            "deductions are not complete or production-approved: no trade's "
+            "deduction rule is signed, so no NET quantity may be released "
+            "from them")
     if net_uses_ready == 0:
         blockers.append("no NET quantity is ready for any use")
     if signed_trade_rules == 0:

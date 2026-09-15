@@ -50,10 +50,23 @@ NOT_AVAILABLE = "NOT_AVAILABLE"
 WALL_CENTRELINE = "WALL_CENTRELINE"
 CLEAR_INTERNAL = "CLEAR_INTERNAL_FINISH_FACE"
 
-# How a centreline area was brought onto the clear-internal basis. Stated, and
-# approximate: exact for a rectilinear room of uniform thickness, and it is
-# reported as an adjustment rather than folded silently into the area.
+# How a centreline area was brought onto the clear-internal basis.
+#
+# RETIRED AS A MEASUREMENT BASIS. It is exact only for a single rectangle of
+# uniform thickness: it has NO CORNER TERM, and inside and outside corners
+# contribute with opposite sign, so on the L-shaped fixture it is out by
+# exactly 0.04 m2 — five outside corners at +0.01 and one inside corner at
+# -0.01. Mixed 100/150/200 mm walls break it again, because there is no single
+# thickness to halve. Holes, shafts, T-junctions and bands with unequal face
+# extents break it further.
+#
+# It survives ONLY as a diagnostic to compare against engine.clear_internal,
+# which measures the polygon instead of adjusting a number.
 ADJ_HALF_THICKNESS = "MINUS_PERIMETER_X_MEAN_HALF_WALL_THICKNESS"
+DIAGNOSTIC_APPROXIMATION = "DIAGNOSTIC_APPROXIMATE_BASIS_CONVERSION"
+MEASURED_POLYGON = "MEASURED_FROM_CLEAR_INTERNAL_POLYGON"
+
+CONVERSION_KINDS = (DIAGNOSTIC_APPROXIMATION, MEASURED_POLYGON)
 
 
 class AccuracyError(RuntimeError):
@@ -83,6 +96,13 @@ class RoomAccuracy:
     vector_area_basis_adjusted_m2: float | None = None
     basis_adjustment_m2: float | None = None
     basis_adjustment_method: str = ""
+    # Which kind of number `comparable_vector_area_m2` is. A scalar conversion
+    # is NOT per-room accuracy and must never be quoted as one.
+    conversion_kind: str = DIAGNOSTIC_APPROXIMATION
+    # Set when a real clear-internal polygon exists for this room.
+    clear_internal_area_m2: float | None = None
+    clear_internal_perimeter_m: float | None = None
+    shape: dict | None = None
     why: str = ""
 
     @property
@@ -93,6 +113,8 @@ class RoomAccuracy:
         happened, so a percentage is never read as accuracy when it is really
         a basis difference.
         """
+        if self.clear_internal_area_m2 is not None:
+            return self.clear_internal_area_m2
         if self.vector_basis == self.reference_basis:
             return self.vector_area_m2
         return (self.vector_area_basis_adjusted_m2
@@ -101,8 +123,17 @@ class RoomAccuracy:
 
     @property
     def bases_match(self) -> bool:
-        return (self.vector_basis == self.reference_basis
+        return (self.clear_internal_area_m2 is not None
+                or self.vector_basis == self.reference_basis
                 or self.vector_area_basis_adjusted_m2 is not None)
+
+    @property
+    def is_measured(self) -> bool:
+        """Is the comparable area MEASURED, or converted with a scalar?
+
+        Only a measured one may be called per-room accuracy. §16.
+        """
+        return self.clear_internal_area_m2 is not None
 
     def _diff(self, other: float | None) -> tuple[float | None, float | None]:
         v = self.comparable_vector_area_m2
@@ -157,6 +188,12 @@ class RoomAccuracy:
                 self.vector_area_basis_adjusted_m2),
             "basis_adjustment_m2": _r(self.basis_adjustment_m2),
             "basis_adjustment_method": self.basis_adjustment_method,
+            "conversion_kind": (MEASURED_POLYGON if self.is_measured
+                                else DIAGNOSTIC_APPROXIMATION),
+            "is_measured_not_converted": self.is_measured,
+            "clear_internal_area_m2": _r(self.clear_internal_area_m2),
+            "clear_internal_perimeter_m": _r(self.clear_internal_perimeter_m),
+            "shape": self.shape,
             "comparable_vector_area_m2": _r(self.comparable_vector_area_m2),
             "raster_area_m2": _r(self.raster_area_m2),
             "raster_perimeter_m": _r(self.raster_perimeter_m),
@@ -205,6 +242,19 @@ def distribution(rooms) -> dict:
             1 for r in rooms if r.best_reference == NOT_AVAILABLE),
         "rooms_compared_on_unlike_bases": sum(
             1 for r in scored if not r.bases_match),
+        # §16 — the two kinds of row must never be averaged together, and the
+        # approximate ones are not accuracy at all.
+        "rooms_measured_from_a_polygon": sum(
+            1 for r in scored if r.is_measured),
+        "rooms_on_a_scalar_approximation": sum(
+            1 for r in scored if not r.is_measured),
+        "measured_median_abs_pct": _r(_percentile(
+            [r.headline_abs_pct for r in scored if r.is_measured], 50), 2),
+        "approximation_warning": (
+            "rows whose conversion_kind is "
+            f"{DIAGNOSTIC_APPROXIMATION} are NOT per-room accuracy. They are "
+            "a scalar centreline-to-clear conversion with no corner term, "
+            "kept only to compare against the measured polygon"),
         "median_abs_pct": _r(_percentile(pcts, 50), 2),
         "p90_abs_pct": _r(_percentile(pcts, 90), 2),
         "max_abs_pct": _r(max(pcts), 2) if pcts else None,
