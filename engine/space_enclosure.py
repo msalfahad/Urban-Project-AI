@@ -316,8 +316,13 @@ def _by_coordinate(lines) -> dict:
         grouped.setdefault(key, []).append(c)
     out: dict = {}
     for key, group in grouped.items():
-        spans = sorted((min(c.start_mm, c.end_mm), max(c.start_mm, c.end_mm),
-                        c) for c in group)
+        # Keyed on the interval only: two candidates can share an exact
+        # span (a band's face and a cap's line, say), and sorting tuples
+        # that end in a dataclass then tries to compare the dataclasses.
+        spans = sorted(
+            ((min(c.start_mm, c.end_mm), max(c.start_mm, c.end_mm), c)
+             for c in group),
+            key=lambda t: (t[0], t[1], t[2].object_id))
         out[key] = (group[0].fixed_mm, spans)
     return out
 

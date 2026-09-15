@@ -106,6 +106,26 @@ class PortalPartitionBarrier:
         return abs(self.jamb_b_mm - self.jamb_a_mm)
 
     @property
+    def polygon(self):
+        """The barrier's ring as a polygon.
+
+        Added because three separate consumers asked for `.polygon`, got
+        None from `getattr`, and silently did nothing: no opening jamb ever
+        entered the boundary-candidate pool, no portal was ever reopened in
+        the segmentation mask, and every portal graded UNVALIDATED for
+        "geometry not from source lines". The synthetic fixtures supplied a
+        `.polygon` attribute, so the tests passed while the real path was
+        inert — which is the argument for the geometry living HERE, on the
+        object that owns the ring, rather than in each caller's getattr.
+        """
+        from shapely.geometry import Polygon
+
+        if not self.ring or len(self.ring) < 3:
+            return None
+        got = Polygon(self.ring)
+        return got if got.is_valid else got.buffer(0)
+
+    @property
     def release_class(self) -> str:
         """May a space that depends on this barrier be released?
 

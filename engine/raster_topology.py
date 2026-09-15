@@ -163,9 +163,12 @@ class Topology:
                 "reported as soft proposals and NOT burned into the barrier "
                 "mask. A hypothesis may not create a separation"),
             "portals_were": (
-                "left PASSABLE. A doorway is how two rooms connect, and "
-                "closing it would manufacture the separation this stage "
-                "exists to detect"),
+                "handled on their evidence grade. A portal whose existence "
+                "is supported CLOSES the partition between the two spaces "
+                "it connects — that is what a partition barrier is for. A "
+                "portal that is only a hypothesis is left PASSABLE, "
+                "because closing it would manufacture the separation this "
+                "stage exists to detect"),
             "what_this_may_not_supply": (
                 "a wall coordinate, a wall thickness, an opening width, a "
                 "released area or a released perimeter. Pixel coordinates "
@@ -186,7 +189,8 @@ def _confidence_band(c: float | None) -> str:
 # ----------------------------------------------------------- the pipeline
 
 def build(seg, frame, *, established_solid=None, diagnostic_solid=None,
-          portal_barriers=(), min_region_m2: float = MIN_REGION_M2,
+          portal_barriers=(), closing_barriers=(),
+          min_region_m2: float = MIN_REGION_M2,
           drawing_id: str = "", revision: str = "") -> Topology:
     """Segment the render into connected spaces, reinforced by vector walls.
 
@@ -208,8 +212,27 @@ def build(seg, frame, *, established_solid=None, diagnostic_solid=None,
         solid_px = int(solid_mask.sum())
         barrier |= solid_mask
 
-    # Portals stay passable: carve accepted barrier openings back OUT of the
-    # mask so a doorway cannot separate two rooms in the image.
+    # A portal whose EXISTENCE is supported may close the partition
+    # between the two spaces it connects — that is what a partition
+    # barrier is for. A portal that is only a hypothesis may not, because
+    # closing it would manufacture the separation this stage exists to
+    # detect. So the two sets are handled oppositely and the caller says
+    # which is which, on the evidence grade rather than on convenience.
+    closed_px = 0
+    for b in closing_barriers:
+        poly = getattr(b, "polygon", None)
+        if poly is None or getattr(poly, "is_empty", True):
+            continue
+        shut = _rasterise(poly, frame, px, (h, w))
+        closed_px += int((shut & ~barrier).sum())
+        barrier |= shut
+
+    # REOPENING is a separate, stronger act than declining to close, and
+    # the caller must ask for it explicitly. Carving a barrier out of the
+    # mask DELETES ink the drawing actually contains — a door leaf, a
+    # threshold — on the strength of a portal nobody has validated. That
+    # is editing the evidence. Declining to ADD a barrier is not, so an
+    # unvalidated portal is simply left alone and the render speaks.
     reopened_px = 0
     for b in portal_barriers:
         poly = getattr(b, "polygon", None)
@@ -296,6 +319,7 @@ def build(seg, frame, *, established_solid=None, diagnostic_solid=None,
             "min_region_m2": min_region_m2,
             "established_solid_barrier_px": solid_px,
             "portal_pixels_reopened": reopened_px,
+            "validated_portal_pixels_closed": closed_px,
         },
         notes={
             "regions_below_min_area_dropped": int(sum(

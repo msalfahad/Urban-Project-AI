@@ -795,6 +795,19 @@ def bundle(space_map_path: Path = DEFAULT_SPACE_MAP,
             "MEASUREMENT_SCORE_can_it_measure_the_room"),
         "hybrid_gate": _r.get("hybrid_pdf_topology", {}).get("GATE"),
         "document_observations": _r.get("document_observations_read"),
+        # Round 3 — the enclosure is the measured object now, so the
+        # workbook reports its verdict, its support and, where it refused,
+        # exactly which side of the room the drawing does not carry.
+        "space_enclosures": [
+            row for row in (_r.get("hybrid_pdf_topology", {})
+                            .get("LOCAL_SPACE_ENCLOSURES", {})
+                            .get("rows", ()))],
+        "enclosure_freeze": _r.get("hybrid_pdf_topology", {}).get(
+            "ENCLOSURE_FREEZE"),
+        "recall_matrix": _r.get("hybrid_pdf_topology", {}).get(
+            "RECALL_MATRIX"),
+        "portal_evidence_grades": _r.get("hybrid_pdf_topology", {}).get(
+            "PORTAL_EVIDENCE_GRADES"),
         "space_leaks": (
             _r.get("space_leak_maps", {}).get("top_ranked", ())
             + _r.get("space_leak_maps", {}).get("hairline_junction_gaps", ())),

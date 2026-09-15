@@ -260,3 +260,67 @@ def test_the_output_hash_covers_the_openings_too():
     seg2.wall_mask[50:59, 80:82] = False         # adds a thin place
     b = rt.build(seg2, frame, min_region_m2=0.5)
     assert a.output_hash != b.output_hash
+
+
+# --- §9 a graded portal closes; a hypothesis stays passable --------------
+
+def test_a_supported_portal_closes_the_partition():
+    """A partition barrier exists to separate the spaces it connects.
+
+    Reopening EVERY portal merged rooms through their doorways. A portal
+    whose existence is supported is evidence, not a hypothesis, so it may
+    close — while an unvalidated one must still stay passable.
+    """
+    seg = _two_rooms(gap_at=50, gap_width=9)
+    frame = _frame(seg)
+    px = seg.px_mm
+    door = _Barrier(box(78 * px, 50 * px, 83 * px, 59 * px))
+
+    merged = rt.build(seg, frame, min_region_m2=0.5)
+    assert len(merged.regions) == 1
+
+    closed = rt.build(seg, frame, closing_barriers=[door],
+                      min_region_m2=0.5)
+    assert len(closed.regions) == 2
+    assert closed.provenance["validated_portal_pixels_closed"] > 0
+
+
+def test_a_hypothesis_portal_still_may_not_manufacture_a_separation():
+    seg = _two_rooms(gap_at=50, gap_width=9)
+    frame = _frame(seg)
+    px = seg.px_mm
+    door = _Barrier(box(78 * px, 50 * px, 83 * px, 59 * px))
+    got = rt.build(seg, frame, portal_barriers=[door], min_region_m2=0.5)
+    assert len(got.regions) == 1
+    assert got.provenance["validated_portal_pixels_closed"] == 0
+
+
+def test_the_record_explains_the_two_portal_treatments():
+    seg = _two_rooms()
+    rec = rt.build(seg, _frame(seg), min_region_m2=0.5).record()
+    assert "evidence grade" in rec["portals_were"]
+    assert "only a hypothesis is left PASSABLE" in rec["portals_were"]
+
+
+def test_declining_to_close_is_not_the_same_as_reopening():
+    """Three distinct treatments, and the difference matters.
+
+    Carving a barrier out of the mask DELETES ink the drawing contains — a
+    door leaf, a threshold. Declining to ADD an unsupported barrier does
+    not. So an unvalidated portal is left alone by default, and reopening
+    is a separate act a caller must ask for explicitly.
+    """
+    seg = _two_rooms()                      # a solid wall, no gap in the ink
+    frame = _frame(seg)
+    px = seg.px_mm
+    door = _Barrier(box(78 * px, 40 * px, 83 * px, 70 * px))
+
+    left_alone = rt.build(seg, frame, min_region_m2=0.5)
+    assert len(left_alone.regions) == 2
+    assert left_alone.provenance["portal_pixels_reopened"] == 0
+
+    reopened = rt.build(seg, frame, portal_barriers=[door],
+                        min_region_m2=0.5)
+    assert reopened.provenance["portal_pixels_reopened"] > 0
+    assert len(reopened.regions) == 1, (
+        "reopening must actually delete the ink when asked")

@@ -56,6 +56,10 @@ from engine.glyph_text import locate as glyph_locate
 from engine.region_boundary import simplify as simplify_ring
 from engine.region_boundary import trace as trace_ring
 from engine import space_role as hybrid_role
+from engine import enclosure_selftest as enclosure_tests
+from engine import evidence_tiers as ev_tiers
+from engine import recall_matrix as recalls
+from engine import space_enclosure as enclosure
 from engine import topology_metrics as hybrid_metrics
 from engine.dimension_check import assess as assess_dimensions
 from engine.space_objects import (MEASUREMENT_COMPLETE_DIAGNOSTIC,
@@ -305,6 +309,34 @@ def tolerance_sensitivity(bands, portals, *, perturb=(0.8, 1.0, 1.2)) -> dict:
                  "upstream are unchanged from previous rounds and their "
                  "sensitivity is reported by the wall extraction stage"),
     }
+
+
+def _grade_barrier(barrier):
+    """One portal's evidence, sorted into differently authored channels."""
+    from engine import evidence_tiers as ev
+
+    obs = [ev.Observation(f"{barrier.portal_id}-GEOM",
+                          "opening gap between wall faces", ev.CH_GEOMETRY)]
+    items = [str(x).upper()
+             for x in getattr(barrier, "existence_evidence", ())]
+    if any("SYMBOL" in x or "ARC" in x or "SWING" in x or "CAP" in x
+           for x in items):
+        obs.append(ev.Observation(f"{barrier.portal_id}-SYM",
+                                  "drawn door symbol or end cap",
+                                  ev.CH_SYMBOL))
+    if any("DIMENSION" in x or "TAG" in x for x in items):
+        obs.append(ev.Observation(f"{barrier.portal_id}-ANN",
+                                  "printed opening annotation",
+                                  ev.CH_ANNOTATION))
+    if any("SCHEDULE" in x for x in items):
+        obs.append(ev.Observation(f"{barrier.portal_id}-DOC",
+                                  "schedule row", ev.CH_STRUCTURE,
+                                  source=ev.SRC_SAME_DOCUMENT_SET))
+    return ev.grade_portal(
+        barrier.portal_id, obs,
+        geometry_exact=barrier.polygon is not None,
+        host_compatible=bool(getattr(barrier, "host_wall_band_id", "")),
+        opening_width_mm=float(getattr(barrier, "opening_width_mm", 0.0)))
 
 
 def run(pdf: str = PDF) -> dict:
@@ -1037,9 +1069,24 @@ def run(pdf: str = PDF) -> dict:
     # released millimetre. The automatic topology is built from the render
     # and the ESTABLISHED solid only — no golden region, no overlay, no
     # room list — and it is HASHED before anything human is read.
+    # §9 — grade every portal FIRST, because the grade decides whether a
+    # doorway closes the partition or stays passable.
+    _portal_grades = [_grade_barrier(_b) for _b in barriers]
+    _grade_of = {g.portal_id: g for g in _portal_grades}
+    _closing = [b for b in barriers
+                if _grade_of[b.portal_id].grade
+                != ev_tiers.PORTAL_UNVALIDATED]
+    # An unvalidated portal is LEFT ALONE — not reopened. Carving it out
+    # would delete the door leaf and threshold ink the drawing actually
+    # contains, on the strength of a portal nobody has validated, and
+    # deleting drawn evidence is a stronger act than declining to add a
+    # barrier. So nothing is passed to `portal_barriers` here.
+    _passable = []
+
     hybrid_topology = raster_topo.build(
         seg, frame, established_solid=established_solid,
-        diagnostic_solid=diagnostic_solid, portal_barriers=barriers,
+        diagnostic_solid=diagnostic_solid, portal_barriers=_passable,
+        closing_barriers=_closing,
         drawing_id=sm["drawing_id"], revision=sm["drawing_revision"])
     hybrid_topology_hash = hybrid_topology.output_hash
 
@@ -1193,6 +1240,146 @@ def run(pdf: str = PDF) -> dict:
                     hybrid_topology.region_label_of[_single[0].region_id],
                     frame, px, min_run_px=1)),
                 hybrid.pool)),
+    }
+
+    # ============ HYBRID SPACE MEASUREMENT (Round 3) ================
+    # The enclosure algorithm was frozen on synthetic fixtures BEFORE this
+    # ran. AR-00 is an EVALUATION dataset here, not a tuning dataset: the
+    # self-test below re-asserts the freeze on every run, and no threshold
+    # in engine/space_enclosure.py may move because these rooms improve.
+    enclosure_freeze = enclosure_tests.report()
+
+    # The region supplies an inside point and an extent. Nothing else.
+    _seeds: dict = {}
+    for _reg in hybrid_topology.regions:
+        _lb = hybrid_topology.region_label_of.get(_reg.region_id)
+        if _lb is None:
+            continue
+        _ys, _xs = np.nonzero(np.asarray(hybrid_topology.labels) == _lb)
+        if not len(_xs):
+            continue
+        # A point the region actually contains: the medoid of its pixels,
+        # not the centroid, which for an L-shape can fall outside.
+        _cx, _cy = float(np.median(_xs)), float(np.median(_ys))
+        _k = int(np.argmin((_xs - _cx) ** 2 + (_ys - _cy) ** 2))
+        _seeds[_reg.region_id] = frame.to_vector(
+            (float(_xs[_k]) + 0.5) * px, (float(_ys[_k]) + 0.5) * px)
+
+    _enclosures, _enclosure_scores = [], {}
+    for _reg in hybrid_topology.regions:
+        _seed = _seeds.get(_reg.region_id)
+        _enc = enclosure.enclose(
+            _reg.region_id, _seed, hybrid.pool,
+            extent=_reg.bbox_mm, enclosure_id=f"LSE-{_reg.region_id}")
+        _enclosures.append(_enc)
+        _here = hybrid_labels_in.get(_reg.region_id, ())
+        _enclosure_scores[_reg.region_id] = enclosure.score(
+            _enc, seed_mm=_seed,
+            neighbour_seeds=[_seeds[r] for r in _reg.adjacent_region_ids
+                             if r in _seeds],
+            dimension_verdicts=[
+                r["verdict"] for r in hybrid_dimension_check["rows"]
+                if len(_here) == 1
+                and str(r["subject"]).startswith(f"{_here[0]}/")],
+            openings_expected=len(_reg.candidate_opening_ids),
+            openings_represented=sum(
+                1 for *_, src in _enc.edges
+                if src == "VECTOR_OPENING_JAMB"))
+
+    _enc_by_region = {e.region_id: e for e in _enclosures}
+
+    _releasable_portals = {g.portal_id for g in _portal_grades
+                           if g.may_release}
+
+    # §16 — three recalls, two denominators, printed together.
+    _scope = {x["space_id"]: x.get("scope") == "IN_SCOPE"
+              for x in sm["spaces"]}
+    _region_of_space = {sid: rid for rid, ids in hybrid_labels_in.items()
+                        for sid in ids}
+    _rows = []
+    for _x in sm["spaces"]:
+        _sid = _x["space_id"]
+        _rid = _region_of_space.get(_sid, "")
+        _enc2 = _enc_by_region.get(_rid)
+        _one = len(hybrid_labels_in.get(_rid, ())) == 1
+        _complete = bool(_enc2 and _enc2.is_complete)
+        _prod = bool(_enc2 and _enc2.production_support_pct >= 99.99)
+        _rows.append({
+            "space_id": _sid,
+            "in_scope": _scope.get(_sid, False),
+            "found_as_one_region": bool(_rid) and _one,
+            "measured_complete": _complete,
+            "release_eligible": _complete and _prod and _one,
+            "region_id": _rid,
+            "enclosure_verdict": (_enc2.verdict if _enc2 else "NO_REGION"),
+            "area_m2": (None if not (_enc2 and _enc2.area_m2)
+                        else round(_enc2.area_m2, 3)),
+            "vector_support_pct": (_enc2.vector_support_pct if _enc2
+                                   else 0.0),
+            "missing_boundary": ([lk.record() for lk in _enc2.leaks][:4]
+                                 if _enc2 else []),
+        })
+    _one_label = sum(1 for ids in hybrid_labels_in.values()
+                     if len(ids) == 1)
+    _multi_label = sum(1 for ids in hybrid_labels_in.values()
+                       if len(ids) > 1)
+    recall_record = recalls.build(
+        _rows, regions_total=len(hybrid_topology.regions),
+        regions_holding_one_label=_one_label,
+        regions_holding_several_labels=_multi_label,
+        regions_holding_no_label=(len(hybrid_topology.regions)
+                                  - _one_label - _multi_label),
+        notes={"algorithm": enclosure.ALGORITHM,
+               "freeze_hash": enclosure.freeze_hash()}).record()
+
+    # §20 — the decision. Success needs BOTH the synthetic proof and a
+    # material AR-00 improvement.
+    _complete_spaces = [r for r in _rows if r["measured_complete"]]
+    _controls_recovered = [r for r in _rows
+                           if r["space_id"] in ("BTH-01", "STR-01")
+                           and r["measured_complete"]]
+    enclosure_decision = {
+        "A_synthetic_fixtures_pass": (
+            enclosure_freeze["passed"] == enclosure_freeze["fixtures"]
+            and enclosure_freeze["refusals_delivered"]
+            == enclosure_freeze["refusals_expected"]),
+        "B_material_ar00_improvement": {
+            "complete_measured_spaces_now": len(_complete_spaces),
+            "complete_measured_spaces_round_2": 0,
+            "controls_recovered": [r["space_id"]
+                                   for r in _controls_recovered],
+            "met": bool(_complete_spaces or _controls_recovered),
+        },
+        "DECISION": (
+            "FULL_AUTOMATION_CONTINUES"
+            if (enclosure_freeze["passed"] == enclosure_freeze["fixtures"]
+                and (_complete_spaces or _controls_recovered))
+            else "HUMAN_ASSISTED_PDF_BOUNDARY_CONFIRMATION"),
+        "what_the_second_means": (
+            "automatic topology, plus human confirmation of the boundary "
+            "runs the drawing does not support, plus deterministic vector "
+            "measurement. A legitimate product architecture, and the one "
+            "the round names if high topology recall still yields "
+            "essentially no complete measured spaces"),
+    }
+
+    hybrid_record = {
+        **hybrid_record,
+        "ENCLOSURE_FREEZE": {
+            k: v for k, v in enclosure_freeze.items() if k != "outcomes"},
+        "enclosure_synthetic_outcomes": enclosure_freeze["outcomes"],
+        "LOCAL_SPACE_ENCLOSURES": {
+            **enclosure.summary(_enclosures),
+            "rows": [e.record() for e in _enclosures[:40]],
+            "scores": {k: v for k, v in
+                       list(_enclosure_scores.items())[:20]},
+        },
+        "PORTAL_EVIDENCE_GRADES": {
+            **ev_tiers.summary(_portal_grades),
+            "rows": [g.record() for g in _portal_grades[:40]],
+        },
+        "RECALL_MATRIX": recall_record,
+        "ROUND_3_DECISION": enclosure_decision,
     }
 
     # §14 — one work list per merged component, ranked by what it unlocks.

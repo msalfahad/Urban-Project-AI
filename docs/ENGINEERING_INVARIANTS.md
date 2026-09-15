@@ -974,3 +974,107 @@ rediscovered:
 
 What the reader may do is transcribe characters. It is never asked how big
 anything is, where a wall runs, or which room it is looking at.
+
+---
+
+## 37 · THE RASTER SAYS WHICH SPACE; THE VECTOR SAYS WHERE ITS BOUNDARY IS
+
+Round 2 matched every run of a region's raster contour to a vector object
+and closed not one room. The diagnosis was not tolerance — the median
+distance from an unmatched run to the nearest covering line was 968 mm —
+it was that **a contour run over a bathtub has no wall to match.** The
+region's outline follows baths, wardrobes, thresholds, stair nosings and
+door leaves, and demanding a wall for each of them made every bathroom
+unmeasurable.
+
+So the region stops being a path:
+
+```
+THE RASTER ANSWERS    which space are we measuring?
+THE VECTOR ANSWERS    where is every millimetre of its boundary?
+```
+
+The mechanism is a flood fill through an **arrangement of supported lines**.
+Take the drawn faces, caps and jambs near the region; cut the neighbourhood
+into cells on their coordinates; block a cell edge only where a line is
+actually DRAWN across it; flood from a point inside. What the flood cannot
+escape is the enclosure.
+
+Three properties then hold **by construction, not by a test**:
+
+- **A fixture is invisible.** A bathtub is not a boundary candidate, so it
+  cannot block a cell edge and cannot indent a result. There is no
+  detour-rejection rule because a detour cannot arise.
+- **A wall that stops short does not close.** A line blocks only over its
+  drawn extent, so the flood escapes through the gap. Nothing is ever
+  extended until it hits something.
+- **A corner is an intersection, not an invention.** Vertices are where two
+  blocked edges meet — two independently drawn lines crossing. A corner
+  with only one side supported cannot appear, because the other side never
+  blocked anything.
+
+Measured on fourteen fixtures built to have known answers: the enclosure
+returns the arithmetic area every time, while the traced contour of the
+same rooms is wrong by **11.5 m² in total** and **35% short on the
+bathroom**. Material standing inside a room — a free-standing column — is
+deducted as a hole rather than treated as a boundary or ignored.
+
+---
+
+## 38 · ORTHOGONALITY IS NOT INDEPENDENCE
+
+Requiring two different SOURCE_INDEPENDENCE classes before a portal could
+be validated was half right and wrong in its conclusion.
+
+Right: a raster render of a PDF is the same drawing observed twice, and
+counting it as two families is how a wall came to be confirmed by itself.
+
+Wrong: that nothing on one drawing can validate anything. A professional
+takeoff reads openings off a plan every day, and what makes that sound is
+that the plan says the same thing in **differently authored ways** — a gap
+in a wall, a swing arc, a leaf symbol, a printed width. Those are separate
+draughting acts that *could have disagreed*, which is what makes their
+agreement informative.
+
+Two axes, recorded separately and never conflated:
+
+```
+SOURCE INDEPENDENCE      how far from this document did it come?
+                         SAME_PRIMITIVE / SAME_DRAWING /
+                         SAME_DOCUMENT_SET / INDEPENDENT_SOURCE
+EVIDENCE ORTHOGONALITY   how differently was it authored?
+                         DRAWN_GEOMETRY / DRAWN_SYMBOL /
+                         PRINTED_ANNOTATION / DOCUMENT_STRUCTURE
+```
+
+A render relays the geometry it renders and a model relays what it read:
+neither adds a channel. So a wall measured twice off one polyline is one
+observation wearing two hats, while a gap plus a swing arc is two.
+
+Portals are graded, not gated: DRAWING / DOCUMENT / SOURCE validated. **An
+ordinary doorway with exact jamb geometry and orthogonal same-drawing
+support may carry a production quantity** — no site visit. An opening wider
+than an ordinary door is held for human QA, because at that width a wrong
+call moves square metres rather than a jamb. What no tier changes: exact
+coordinates come from drawn geometry, and the tier decides only whether the
+opening is *there*.
+
+---
+
+## 39 · A RECALL WITHOUT ITS DENOMINATOR IS A SLOGAN
+
+Round 2's report set "27 of 36 topology recall" beside "0 of 17 release
+recall". 36 is every labelled space; 17 is the in-scope subset. A reader
+comparing 75% with 0% was comparing two populations, and nothing on the
+page said so.
+
+Every recall is now reported twice, from one row set, with the denominator
+printed beside the number: TOPOLOGY, COMPLETE_MEASUREMENT and
+RELEASE_ELIGIBLE, each ALL and IN_SCOPE.
+
+The same discipline applies to precision. Calling 42.9% "topology
+precision" implied that 36 regions were false-positive rooms; they are wall
+cavities, outside areas and fixture gaps, never claimed to be rooms.
+**Classification comes after segmentation**, so ROOM_CANDIDATE_PRECISION is
+measured among the regions that hold a label, and UNCLASSIFIED_REGION_COUNT
+is reported as a count — not as a penalty.
