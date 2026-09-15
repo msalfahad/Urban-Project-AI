@@ -1,5 +1,15 @@
 # Project 2 — the gate result, frozen
 
+> **PROVENANCE, ADDED AFTER THE FACT — the finding below stands unchanged.**
+> The file this run read was **not the untouched original**: it had been
+> compressed from >30 MB to 29 MB before it reached the engine, which was
+> not known when the run was frozen. The original has since been supplied
+> and audited, and it carries **zero vector paths too**: the compression
+> recompressed pixels that were already pixels, and destroyed no linework.
+> So everything below remains true of the source and not merely of the copy.
+> The evidence is in `docs/PROJECT_2_SOURCE_PROVENANCE.md`. Nothing in this
+> document has been rewritten — it is the record of that run, on that file.
+
 Run at `e4c2a52` + input plumbing only. Nothing in the method was changed:
 no threshold, no tolerance, no pen weight, no rule. The proof of that is
 below and it is exact.
