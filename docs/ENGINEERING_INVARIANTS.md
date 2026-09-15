@@ -1138,3 +1138,46 @@ Measured on AR-00 under this rule: the localiser still finds 27 of 36 spaces,
 and only **1** of them has a partition resting entirely on material or
 validated portals. That is a reduction in what may be claimed, and it is the
 honest number.
+
+---
+
+## 42 · UNRESOLVED IS NOT A WEAK VERSION OF EITHER ANSWER
+
+The room partition returned `connected = True` for a gap with no evidence
+at all, and anything reading that boolean saw **ONE SPACE**. That asserted a
+physical-space relationship on no evidence — the same failure as calling a
+shaft a washroom, in a different costume.
+
+A boolean cannot express this, because a boolean has only two values and
+the commonest honest answer on a real drawing is neither:
+
+```
+ONE_PHYSICAL_SPACE            needs explicit open-plan evidence:
+                              a schedule row, a note, a single label
+                              spanning the extent
+TWO_DISTINCT_PHYSICAL_SPACES  needs supported separator evidence:
+                              continuous material, or a graded
+                              PORTAL_PARTITION_BOUNDARY
+ROOM_PARTITION_UNRESOLVED     neither is established
+```
+
+`UNRESOLVED` covers three different situations and is not a lean towards
+any of them: one open physical space, two rooms through a portal nobody has
+resolved, or two spaces whose separator was never recovered from the
+drawing.
+
+So `PartitionAnswer` carries **no `connected` field at all**. A caller asks
+`is_one_space` or `is_two_spaces`, and for UNRESOLVED **both are False** —
+which means `not is_two_spaces` cannot silently become "one space".
+`require_resolved()` raises rather than guessing.
+
+**The absence of a separator is not evidence of open plan.** The same two
+regions, with and without a schedule row declaring them one space, are
+UNRESOLVED and ONE_PHYSICAL_SPACE respectively — the geometry is identical
+and only the declaration differs.
+
+On AR-00 under this rule: of 135 region adjacencies, 27 are established as
+two distinct spaces and **108 have an unresolved relation**; of the 27
+labelled spaces found, **1** rests on an established partition. Those 108
+are overwhelmingly thin places in the render, not 108 doorways — which is
+exactly why none of them may assert a room relationship.

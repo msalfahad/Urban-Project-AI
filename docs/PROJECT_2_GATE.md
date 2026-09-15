@@ -62,7 +62,10 @@ RELEASE_ELIGIBLE_ALL/_IN_SCOPE    0 / 0       0.0%
 VECTOR BOUNDARY SUPPORT          mean 20.0%, median 0.0%
 DOCUMENT DIMENSION AGREEMENT     28 AGREE, 0 DISAGREE, 16 AMBIGUOUS,
                                  1 NOT_PRESENT
-ROOM PARTITION, labelled spaces  1 RELEASABLE, 26 UNRESOLVED, 9 NO_REGION
+ROOM PARTITION RELATION          1 TWO_DISTINCT_PHYSICAL_SPACES,
+  (labelled spaces)              26 UNRESOLVED, 9 NO_REGION
+ROOM PARTITION, pair level       27 established as two spaces,
+  (135 region adjacencies)      108 unresolved relation
 ```
 
 The median vector boundary support of **0.0%** is the honest shape of this
@@ -80,6 +83,9 @@ cannot:
   PDF text objects and skip the problem entirely?
 - Does the wall-pen convention differ, and does anything depend on it?
   (Nothing production does: pen is diagnostic only.)
+- Does a second sheet carry explicit open-plan evidence — a schedule row or
+  a note declaring one space? AR-00 carries none, which is why every
+  open-plan candidate on it is UNRESOLVED rather than one space.
 - Do door graphics close pixels there? The partition must not care — that
   is invariant 41, and the two synthetic ink cases assert it.
 - Is the wall solid porous in the same way, or is the enclosure's

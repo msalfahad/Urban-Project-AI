@@ -22,6 +22,8 @@ from engine.space_topologies import (MATERIAL_GEOMETRY,
                                      PARTITION_DIAGNOSTIC,
                                      PARTITION_RELEASABLE,
                                      PARTITION_UNRESOLVED,
+                                     REL_ONE_SPACE, REL_TWO_SPACES,
+                                     REL_UNRESOLVED,
                                      ROOM_PARTITION_TOPOLOGY,
                                      boundary_from_portal)
 
@@ -60,10 +62,11 @@ class Case:
     portal: object = None
     material_between: bool = False
     observations: list = field(default_factory=list)
+    open_plan_evidence: tuple = ()
     geometry_exact: bool = True
     host_compatible: bool = True
     expect_material_connected: bool = True
-    expect_rooms_distinct: bool = True
+    expect_relation: str = REL_TWO_SPACES
     expect_navigable: bool = True
     expect_partition_status: str = PARTITION_RELEASABLE
     door_ink_closes_pixels: bool | None = None
@@ -75,8 +78,7 @@ class Case:
             "between": [self.space_a, self.space_b],
             "expected": {
                 MATERIAL_GEOMETRY: self.expect_material_connected,
-                ROOM_PARTITION_TOPOLOGY: (
-                    "DISTINCT" if self.expect_rooms_distinct else "ONE"),
+                "ROOM_PARTITION_RELATION": self.expect_relation,
                 "partition_status": self.expect_partition_status,
                 NAVIGABLE_FREE_SPACE: self.expect_navigable,
             },
@@ -133,18 +135,35 @@ def room_to_room_sliding_door() -> Case:
 
 def open_plan_with_no_portal_boundary() -> Case:
     return Case(
-        name="OPEN_PLAN_DINING_TO_LIVING_WITH_NO_PHYSICAL_PORTAL",
+        name="OPEN_PLAN_DINING_TO_LIVING_WITH_NO_EVIDENCE_EITHER_WAY",
         space_a="DIN-09", space_b="LIV-09",
         portal=None, material_between=False,
         expect_material_connected=True,
-        expect_rooms_distinct=False,
+        expect_relation=REL_UNRESOLVED,
         expect_navigable=True,
         expect_partition_status=PARTITION_UNRESOLVED,
         door_ink_closes_pixels=False,
-        note=("no wall and no portal: the two labels are functional zones "
-              "of ONE space. Nothing here supports a room boundary, and "
-              "inventing one because two names exist is the error §13 of "
-              "the previous round forbids"))
+        note=("no wall, no portal and nothing declaring one space. The "
+              "absence of a separator is NOT evidence of open plan: the "
+              "separator may simply not have been recovered. Calling this "
+              "ONE SPACE asserts a physical relationship on no evidence"))
+
+
+def open_plan_with_explicit_evidence() -> Case:
+    return Case(
+        name="OPEN_PLAN_WITH_EXPLICIT_OPEN_PLAN_EVIDENCE",
+        space_a="DIN-10", space_b="LIV-10",
+        portal=None, material_between=False,
+        open_plan_evidence=("room schedule row naming one OPEN PLAN "
+                            "LIVING/DINING space",),
+        expect_material_connected=True,
+        expect_relation=REL_ONE_SPACE,
+        expect_navigable=True,
+        expect_partition_status=PARTITION_RELEASABLE,
+        door_ink_closes_pixels=False,
+        note=("the same geometry as the case above, with a schedule row "
+              "declaring one space. ONLY explicit evidence may establish "
+              "ONE PHYSICAL SPACE — never the absence of a wall"))
 
 
 def double_doors() -> Case:
@@ -223,17 +242,19 @@ def unresolved_gap_with_no_portal_evidence() -> Case:
         space_a="RGN-09", space_b="RGN-10",
         portal=None, material_between=False,
         expect_material_connected=True,
-        expect_rooms_distinct=False,
+        expect_relation=REL_UNRESOLVED,
         expect_navigable=True,
         expect_partition_status=PARTITION_UNRESOLVED,
         door_ink_closes_pixels=False,
-        note=("a hole in the drawing. Not a doorway, not a room boundary, "
-              "and not something to guess at: UNRESOLVED, releasable as "
-              "neither one space nor two"))
+        note=("a hole in the drawing. It may be one open space, two rooms "
+              "through an unresolved portal, or two spaces whose "
+              "separator was never recovered. Reporting any one of those "
+              "is asserting what nobody established"))
 
 
 ALL = (bedroom_to_corridor, bedroom_to_ensuite, room_to_room_sliding_door,
-       open_plan_with_no_portal_boundary, double_doors, door_with_swing_arc,
+       open_plan_with_no_portal_boundary, open_plan_with_explicit_evidence,
+       double_doors, door_with_swing_arc,
        door_without_swing_arc, leaf_ink_touching_both_jambs,
        graphics_that_do_not_touch, passage_or_archway,
        unresolved_gap_with_no_portal_evidence)

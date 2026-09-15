@@ -1429,14 +1429,16 @@ def run(pdf: str = PDF) -> dict:
         _row = topologies.answer_pair(_a.region_a, _a.region_b,
                                       portal=_portal,
                                       material_between=_material)
-        _status = _row[topologies.ROOM_PARTITION_TOPOLOGY]["status"]
+        _part = _row[topologies.ROOM_PARTITION_TOPOLOGY]
+        _status = _part["status"]
+        _rank = {topologies.PARTITION_RELEASABLE: 2,
+                 topologies.PARTITION_DIAGNOSTIC: 1,
+                 topologies.PARTITION_UNRESOLVED: 0}
         for _r in (_a.region_a, _a.region_b):
             _cur = _partition_of.get(_r)
-            _rank = {topologies.PARTITION_RELEASABLE: 2,
-                     topologies.PARTITION_DIAGNOSTIC: 1,
-                     topologies.PARTITION_UNRESOLVED: 0}
-            if _cur is None or _rank[_status] < _rank[_cur]:
-                _partition_of[_r] = _status
+            if _cur is None or _rank[_status] < _rank[_cur[0]]:
+                _partition_of[_r] = (
+                    _status, _part["ROOM_PARTITION_RELATION"])
 
     three_topology = topologies.build(
         _pairs, boundaries=_ppb,
@@ -1457,7 +1459,15 @@ def run(pdf: str = PDF) -> dict:
             "in_scope": _scope.get(_sid, False),
             "region_id": _rid,
             "PARTITION_STATUS": (
-                _partition_of.get(_rid, topologies.PARTITION_RELEASABLE)
+                _partition_of.get(
+                    _rid, (topologies.PARTITION_RELEASABLE, ""))[0]
+                if _rid else "NO_REGION"),
+            # The RELATION is reported beside the authority, because an
+            # unresolved relation is not a weak version of either answer.
+            "ROOM_PARTITION_RELATION": (
+                _partition_of.get(
+                    _rid, (topologies.PARTITION_RELEASABLE,
+                           topologies.REL_TWO_SPACES))[1]
                 if _rid else "NO_REGION"),
         })
     three_topology["labelled_space_partition_status"] = {
@@ -1466,6 +1476,8 @@ def run(pdf: str = PDF) -> dict:
         "by_status_in_scope": dict(Counter(
             r["PARTITION_STATUS"] for r in _partition_rows
             if r["in_scope"])),
+        "by_relation": dict(Counter(
+            r["ROOM_PARTITION_RELATION"] for r in _partition_rows)),
         "rows": _partition_rows,
         "basis": ("the weakest frontier a space has. A space whose every "
                   "frontier is material or a validated portal is "
