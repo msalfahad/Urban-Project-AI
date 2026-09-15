@@ -75,6 +75,26 @@ def test_the_invariants_are_written_down_where_someone_will_read_them():
     assert "BBOX IS NEVER PHYSICAL GEOMETRY" in text.upper()
     assert "A CLOSED POLYGON IS NOT A ROOM" in text.upper()
     assert "A SUM OF CYCLES IS NOT AN AREA" in text.upper()
+    assert "TWO BOUNDED FACES CANNOT OVERLAP" in text.upper()
+    assert "DO NOT OWN A COMPUTATIONAL GEOMETRY KERNEL" in text.upper()
+    assert "A ROOM IS A HOLE IN THE WALL SOLID" in text.upper()
+
+
+def test_the_engine_does_not_reimplement_geometry_primitives():
+    """Noding, union, difference, polygonization and overlap are GEOS work."""
+    import ast
+    banned = ("def _polygonize", "def _unary_union", "def _difference",
+              "def _node_edges", "def _convex_hull")
+    for mod in MODULES:
+        src = mod.read_text()
+        for b in banned:
+            assert b not in src, f"{mod.name} reimplements {b}"
+    # and the replacement spine delegates rather than computing
+    for name in ("wall_solid", "free_space"):
+        src = (ENGINE / f"{name}.py").read_text()
+        assert "shapely" in src, f"{name} should delegate to GEOS"
+        tree = ast.parse(src)
+        del tree
 
 
 def test_no_module_accepts_a_physical_space_on_one_axis_alone():

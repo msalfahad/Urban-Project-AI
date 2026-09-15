@@ -63,11 +63,12 @@ SHEET_RULES = "Rules and Assemblies"
 SHEET_REVISION = "Revision Delta"
 SHEET_TOPOLOGY = "Topology QA"
 SHEET_WALL_QA = "Wall Extraction QA"
+SHEET_PATHS = "Topology Path Comparison"
 
 SHEET_ORDER = (SHEET_DASHBOARD, SHEET_ROOM_REGISTER, SHEET_ROOM_COUNTS,
                SHEET_TRACE, SHEET_FLOORING, SHEET_WALLS, SHEET_EXCEPTIONS,
-               SHEET_SAMPLE, SHEET_WALL_QA, SHEET_TOPOLOGY, SHEET_RULES,
-               SHEET_COVERAGE,
+               SHEET_SAMPLE, SHEET_WALL_QA, SHEET_TOPOLOGY, SHEET_PATHS,
+               SHEET_RULES, SHEET_COVERAGE,
                SHEET_REVISION)
 
 # Takeoff status, kept blunt on purpose. A workbook that opens cleanly must not
@@ -775,6 +776,67 @@ def takeoff_coverage(tallies) -> Sheet:
         ))
 
 
+# ------------------------------------------- old path vs new path (§20)
+
+PATHS_COLUMNS = ("measure", "old_graph_path", "new_free_space_path",
+                 "what_this_decides")
+
+
+def path_comparison(old: dict | None, new: dict | None,
+                    falsifiers: dict | None = None) -> Sheet:
+    """The two geometry paths on the same frozen input, side by side.
+
+    A DIAGNOSTIC sheet. It exists for one round, to show whether the
+    replacement spine earns the removal of the custom geometry kernel — and
+    the old column is labelled as unable to release geometry, so nobody reads
+    its cycle count as a room count.
+    """
+    old, new = dict(old or {}), dict(new or {})
+    fails = (falsifiers or {}).get("failing_invariants", [])
+
+    def row(measure, o, n, decides=""):
+        return OrderedDict(measure=measure, old_graph_path=cell(o),
+                           new_free_space_path=cell(n),
+                           what_this_decides=cell(decides))
+
+    rows = [
+        row("mechanism", "custom half-edge planar face walk",
+            "GEOS: union of wall polygons, envelope minus barriers",
+            "whether this project owns a computational geometry kernel"),
+        row("space objects produced", old.get("bounded_cycles"),
+            new.get("space_components"),
+            "a cycle is not a room; a free-space component is a region"),
+        row("single-room candidates", old.get("clear_internal_polygons"),
+            new.get("occupiable_candidates")),
+        row("overlapping pairs", old.get("overlapping_pairs"),
+            new.get("overlapping_pairs"),
+            "two bounded faces of a planar subdivision CANNOT overlap. A "
+            "non-zero count here is a theorem violation, not a tuning issue"),
+        row("clear-internal basis", "by offsetting a centreline face",
+            "by construction — the boundary IS the drawn wall face",
+            "whether an area needs a conversion with no corner term"),
+        row("failing planar invariants",
+            ", ".join(i[0] for i in fails) if fails else "none",
+            "not applicable — no rotation system exists"),
+        row("may release production geometry",
+            old.get("may_release_geometry"), new.get("may_release_geometry"),
+            "the old path is DIAGNOSTIC_TOPOLOGY_PATH for one round only"),
+    ]
+    return Sheet(
+        name=SHEET_PATHS, columns=PATHS_COLUMNS, rows=tuple(rows),
+        notes=(
+            "DIAGNOSTIC. Both paths ran on the SAME frozen input. The old "
+            "path may not release geometry and its numbers appear here for "
+            "comparison only.",
+            "The old path fails six invariants of planar embeddings, "
+            "including the definitional one: faces are connected components "
+            "of the plane minus the graph, and components are disjoint.",
+            "The new path's components are connected components of ONE "
+            "geometry, so they cannot overlap by construction — which is the "
+            "property the old path could not provide.",
+        ))
+
+
 # ----------------------------------------------------------- the workbook
 
 # ------------------------------------------------------------- 0 dashboard
@@ -1401,6 +1463,9 @@ def build_workbook(bundle: dict) -> Workbook:
                                     bundle.get("face_correspondence", ()),
                                     bundle.get("face_containment", ())),
         SHEET_COVERAGE: takeoff_coverage(bundle.get("coverage", ())),
+        SHEET_PATHS: path_comparison(
+            bundle.get("old_graph_path"), bundle.get("new_free_space_path"),
+            bundle.get("old_path_falsifiers")),
         SHEET_REVISION: revision_delta(bundle.get("revision_delta", {})),
     }
     # The dashboard counts the other sheets, so it is built last and placed

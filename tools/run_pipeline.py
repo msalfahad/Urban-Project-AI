@@ -18,6 +18,18 @@ from collections import Counter
 from pathlib import Path
 
 from engine.connectivity import classify_termini, components, end_caps
+from engine.control_freeze import accept as accept_control
+from engine.control_freeze import compare_after_freeze
+from engine.control_freeze import summary as freeze_summary
+from engine.document_observations import readiness as document_readiness
+from engine.free_space import (OCCUPIABLE_SPACE_CANDIDATE,
+                               assert_non_overlapping, build_free_space,
+                               envelope_from_wall_solid, partition_barriers)
+from engine.planar import build_half_edges
+from engine.planar_falsifiers import falsify
+from engine.source_audit import audit_drawing, cad_oracle
+from engine.topology_signals import compare_topology, segmentation_vs_validated
+from engine.wall_solid import NODE_SNAP_GRID_MM, build_solid, wall_polygons
 from engine.envelope import classify as classify_envelope
 from engine.envelope import summary as envelope_summary
 from engine.face_eligibility import (assess_components,
@@ -190,6 +202,50 @@ def _pt_in(poly, x: float, y: float) -> bool:
             if x < xt:
                 inside = not inside
     return inside
+
+
+def tolerance_sensitivity(bands, portals, *, perturb=(0.8, 1.0, 1.2)) -> dict:
+    """Re-run the replacement spine with the node snap grid moved +/-20%.
+
+    Testing FRAGILITY, not searching for a better value. If the wall count,
+    the space count or the accepted control geometry moves materially when a
+    tolerance is nudged, the number was fitted to AR-00 rather than measured.
+    """
+    rows = []
+    for k in perturb:
+        grid = NODE_SNAP_GRID_MM * k
+        polys = wall_polygons(bands)
+        sol = build_solid(polys, snap_grid_mm=grid)
+        bars = partition_barriers(portals, polys)
+        env = envelope_from_wall_solid(sol, bars)
+        cands, _ = build_free_space(env, sol, bars, polys, run_id="S")
+        occ = [c for c in cands
+               if c.geometry_role == OCCUPIABLE_SPACE_CANDIDATE]
+        rows.append({
+            "node_snap_grid_mm": round(grid, 4), "factor": k,
+            "resolved_wall_polygons": sum(1 for p in polys if p.is_resolved),
+            "solid_components": sol.components,
+            "solid_area_m2": round(sol.area_m2, 3),
+            "free_space_components": len(cands),
+            "occupiable_candidates": len(occ),
+            "largest_occupiable_m2": (round(max(c.area_m2 for c in occ), 3)
+                                      if occ else None),
+        })
+    base = next(r for r in rows if r["factor"] == 1.0)
+    moved = {k: sorted({r[k] for r in rows})
+             for k in ("resolved_wall_polygons", "solid_components",
+                       "occupiable_candidates")}
+    return {
+        "perturbation": "node snap grid x 0.8 / 1.0 / 1.2",
+        "rows": rows,
+        "baseline": base,
+        "values_seen": moved,
+        "stable": all(len(v) == 1 for v in moved.values()),
+        "note": ("the snap grid is the only non-dimensional tolerance the "
+                 "replacement path introduces; the wall pairing tolerances "
+                 "upstream are unchanged from previous rounds and their "
+                 "sensitivity is reported by the wall extraction stage"),
+    }
 
 
 def run(pdf: str = PDF) -> dict:
@@ -436,6 +492,78 @@ def run(pdf: str = PDF) -> dict:
     controls = select_controls(sm["spaces"])
     control_ids = [c.space_id for c in controls]
 
+    # =================================================================
+    # THE REPLACEMENT SPINE. Everything above from `material_edges` on is
+    # the DIAGNOSTIC_TOPOLOGY_PATH: it runs on the same frozen input, it is
+    # falsified rather than trusted, and it may not release geometry.
+    # =================================================================
+
+    # §1 — prove the old path's failure rather than arguing about it.
+    old_path_falsifiers = falsify(
+        build_half_edges(sb_noded), space_res.faces, noded=sb_noded).record()
+
+    # §3 — wall bands become the POLYGON between their two DRAWN faces.
+    wall_polys = wall_polygons(bands, drawing_id=sm["drawing_id"],
+                               revision=sm["drawing_revision"])
+    # §4 — one robust union, with lineage and nothing deleted.
+    solid = build_solid(wall_polys)
+    # §5 — doorways plugged for SPACE PARTITION ONLY. Never material.
+    barriers = partition_barriers(all_portals, wall_polys,
+                                 drawing_id=sm["drawing_id"],
+                                 revision=sm["drawing_revision"])
+    # §6 — an envelope with a stated basis. Never a bounding rectangle.
+    envelope = envelope_from_wall_solid(solid, barriers)
+    # §7 — FREE_SPACE = ENVELOPE - BARRIERS, and its components are spaces.
+    free_cands, free_health = build_free_space(
+        envelope, solid, barriers, wall_polys, run_id=RUN_ID)
+    assert_non_overlapping(free_cands)
+
+    ws_rec = man.add("wall_solid", RUN_ID,
+                     {"wall_polygons": [w.record() for w in wall_polys],
+                      "solid": solid.record()},
+                     consumed=[("wall_extraction", w_rec.output_hash)])
+    fs_rec = man.add("free_space", RUN_ID,
+                     {"envelope": envelope.record(),
+                      "barriers": [b.record() for b in barriers],
+                      "candidates": [c.record() for c in free_cands]},
+                     consumed=[("wall_solid", ws_rec.output_hash),
+                               ("portal_detection", o_rec.output_hash)])
+
+    # §9 — raster challenges the vector result and supplies no millimetre.
+    from shapely.geometry import Point
+
+    def _holds(cand, pt):
+        return cand.geometry.contains(Point(*pt))
+
+    topo_hyps, topo_compare = compare_topology(free_cands, regions,
+                                               contains=_holds)
+    labels_in = {r["space_geometry_id"]: r["labelled_space_ids"]
+                 for r in topo_compare["rows"] if r["space_geometry_id"]}
+
+    # §13 / §14 — accept, then hash, BEFORE any reference is read.
+    by_geom = {c.space_geometry_id: c for c in free_cands}
+    frozen = []
+    for c in controls:
+        holder = next(
+            (gid for gid, ids in labels_in.items() if c.space_id in ids), "")
+        frozen.append(accept_control(
+            c, by_geom.get(holder), envelope=envelope,
+            labels_inside=labels_in.get(holder, ()),
+            others=[x for x in free_cands
+                    if x.geometry_role == OCCUPIABLE_SPACE_CANDIDATE],
+            run_id=RUN_ID))
+
+    # §17 — what the sheet is MADE OF. Safe to run on an unseen project.
+    audit = audit_drawing(drawing, drawing_id=sm["drawing_id"],
+                          revision=sm["drawing_revision"],
+                          source_hash=src_hash, bands=bands,
+                          rejections=rejections)
+    man.add("source_audit", RUN_ID, audit.record(),
+            consumed=[("wall_extraction", w_rec.output_hash)])
+
+    # §18 — fragility, not tuning: does the answer move when the tolerances do?
+    sensitivity = tolerance_sensitivity(bands, all_portals)
+
     # --- envelope --------------------------------------------------------
     unbounded_edges = {e for f in material_res.faces
                        if f.kind == "UNBOUNDED_FACE"
@@ -479,6 +607,17 @@ def run(pdf: str = PDF) -> dict:
                  + int(np.sum(pad[1:-1, 1:-1] & ~pad[1:-1, :-2]))
                  + int(np.sum(pad[1:-1, 1:-1] & ~pad[1:-1, 2:])))
         raster_perimeter_m[sid] = round(edges * px / 1000, 2)
+
+    # §15 — ONLY NOW is a reference opened, and only against a polygon whose
+    # hash was taken before this line ran. The freeze is above; the
+    # comparison is here, and the order is the guarantee.
+    control_comparisons = [
+        compare_after_freeze(
+            f, reference_area_m2=by_space.get(f.space_id, {}).get("area_m2"),
+            reference_perimeter_m=raster_perimeter_m.get(f.space_id),
+            reference_basis=CLEAR_INTERNAL,
+            reference_name="RASTER_SEGMENTATION_REGION")
+        for f in frozen]
 
     # A bounding box per space, as an INDEX. `engine.bbox` refuses to let any
     # of these supply a room side, perimeter, closure or area.
@@ -615,6 +754,83 @@ def run(pdf: str = PDF) -> dict:
             "portal_edges": sum(1 for e in sb_index.values() if e.is_virtual),
             "portal_edges_refused": portal_refusals,
             "edge_sample": [e.record() for e in list(sb_index.values())[:40]],
+        },
+        # ============ THE REPLACEMENT SPINE (production geometry) ============
+        "wall_polygons": {
+            "input": len(wall_polys),
+            "resolved": sum(1 for w in wall_polys if w.is_resolved),
+            "refused": sum(1 for w in wall_polys if not w.is_resolved),
+            "by_refusal_reason": dict(Counter(
+                w.unresolved_reason for w in wall_polys
+                if not w.is_resolved)),
+            "by_geometry_status": dict(Counter(
+                w.geometry_status for w in wall_polys)),
+            "sample": [w.record() for w in wall_polys[:40]],
+        },
+        "wall_solid": solid.record(),
+        "portal_partition_barriers": {
+            "accepted": free_health["barriers_accepted"],
+            "rejected": free_health["barriers_rejected"],
+            "unresolved": free_health["barriers_unresolved"],
+            "material_role": "TOPOLOGY_ONLY_NOT_MATERIAL",
+            "detail": [b.record() for b in barriers],
+        },
+        "building_envelope": envelope.record(),
+        "free_space": {
+            **free_health,
+            "candidates": [c.record() for c in free_cands],
+        },
+        "raster_vector_topology": topo_compare,
+        "raster_output_vs_validated_state": segmentation_vs_validated(
+            auto_regions=len(regions),
+            auto_labelled=sum(1 for r in regions.values()
+                              if r.get("space_id")),
+            human_identity_validated=sum(
+                1 for v in overlay.get("spaces", {}).values()
+                if v.get("region_identity") == "VALIDATED"),
+            human_topology_validated=sum(
+                1 for v in overlay.get("spaces", {}).values()
+                if v.get("physical_topology") == "VALIDATED"),
+            validation_source=TOPOLOGY_OVERLAY),
+        "frozen_controls": {
+            **freeze_summary(frozen),
+            "frozen": [f.record() for f in frozen],
+            "comparison_after_freeze": control_comparisons,
+        },
+        "source_audit": audit.record(),
+        "tolerance_sensitivity": sensitivity,
+        "cad_oracle": cad_oracle(
+            cad_path=None, pdf_run_hash=fs_rec.output_hash).record(),
+        "document_observations": document_readiness([]),
+        # ============ DIAGNOSTIC_TOPOLOGY_PATH (may not release) ============
+        "diagnostic_topology_path": {
+            "status": "DIAGNOSTIC_TOPOLOGY_PATH",
+            "may_release_geometry": False,
+            "why": ("kept for one round so the replacement can be compared "
+                    "against it on the same frozen input. Its own invariants "
+                    "say it does not produce planar faces"),
+            "falsifiers": old_path_falsifiers,
+        },
+        "path_comparison": {
+            "old_graph_path": {
+                "bounded_cycles": space_res.health()["bounded_faces"],
+                "overlapping_pairs": old_path_falsifiers["by_invariant"].get(
+                    "D_NO_TWO_BOUNDED_FACES_OVERLAP", 0),
+                "failing_invariants": old_path_falsifiers[
+                    "failing_invariants"],
+                "clear_internal_polygons": len(clear_polys),
+                "may_release_geometry": False,
+            },
+            "new_free_space_path": {
+                "space_components": free_health["free_space"]["components"],
+                "occupiable_candidates": free_health["free_space"][
+                    "occupiable_candidates"],
+                "overlapping_pairs": 0,
+                "overlap_assertion": "assert_non_overlapping PASSED",
+                "clear_internal_by_construction": True,
+                "geometry_kernel": "GEOS via shapely",
+                "may_release_geometry": True,
+            },
         },
         "material_faces": material_res.health(),
         "space_boundary_faces": space_res.health(),

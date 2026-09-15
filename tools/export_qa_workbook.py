@@ -741,6 +741,13 @@ def bundle(space_map_path: Path = DEFAULT_SPACE_MAP,
         "project_trade_rules": project_rules,
         "room_templates": [],      # none approved: a template is not a rule
         "assemblies": [],
+        # §20 — the two geometry paths on one frozen input. Diagnostic only.
+        "old_graph_path": _run().get("path_comparison", {}).get(
+            "old_graph_path"),
+        "new_free_space_path": _run().get("path_comparison", {}).get(
+            "new_free_space_path"),
+        "old_path_falsifiers": _run().get(
+            "diagnostic_topology_path", {}).get("falsifiers"),
         "faces": _faces(),
         "face_correspondence": _face_correspondence(),
         "face_containment": _face_containment(),

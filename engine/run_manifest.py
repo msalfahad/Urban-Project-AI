@@ -40,7 +40,12 @@ LINEAGE_CLASSES = (CURRENT_RUN, PRIOR_RUN, SUPERSEDED)
 # topology result without anything looking wrong.
 STAGES = ("frame", "wall_extraction", "wall_graph", "portal_detection",
           "opening_detection", "space_boundary_graph", "space_topology",
-          "topology", "semantic", "release_matrix")
+          "topology",
+          # The replacement spine. `wall_solid` and `free_space` are the
+          # production geometry path; the graph stages above are demoted to
+          # DIAGNOSTIC_TOPOLOGY_PATH and may not release geometry.
+          "wall_solid", "free_space", "source_audit",
+          "semantic", "release_matrix")
 
 
 class ManifestError(RuntimeError):

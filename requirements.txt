@@ -5,6 +5,10 @@ pytest>=8.0
 openpyxl>=3.1   # reading .xlsx takeoff/BOQ workbooks (Phase 0 auditor)
 
 # Client documents (quotations / contracts) — needed by documents/ and its tests:
+shapely>=2.0    # GEOS: the geometry kernel. This project does NOT own one —
+                # noding, union, difference, polygonization, validity,
+                # containment and overlap are library operations. See
+                # engine/wall_solid.py and engine/free_space.py.
 jinja2>=3.1
 python-barcode>=0.15   # Code 128 reference barcode on the letterhead
 

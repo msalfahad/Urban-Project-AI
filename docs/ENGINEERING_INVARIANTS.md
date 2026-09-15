@@ -321,3 +321,110 @@ falling back to whatever id is in reach.
 And **do not generate an action item from a zero.** "Reduce the 0 unexplained
 components and the 85 unresolved termini" asks for work that is already
 finished, which makes a reader distrust the half that is real.
+
+---
+
+## 16 · TWO BOUNDED FACES CANNOT OVERLAP
+
+A planar *graph* has cycles. A planar *embedding* has **faces**, and a face is
+a connected component of ℝ² minus the embedded edges and vertices. Connected
+components of any set are pairwise disjoint.
+
+So when the engine reported two bounded faces sharing 32 m², that was not a
+curiosity to be labelled `FACE_NESTING_ARTIFACT` — it was **proof the objects
+were not faces**. It had been enumerating cycles of the abstract graph.
+
+Six invariants are now asserted rather than hoped for: every half-edge in
+exactly one walk, Euler, signed areas cancelling, no face overlap, no crossing
+without a node, no ambiguous equal-angle rotation. All six failed on the real
+drawing. The root causes were **46 nodes with an ill-defined rotation system**
+(two outgoing half-edges at the same angle — what a portal closure laid on its
+host wall's centreline produces at every jamb) and **40 crossings with no
+vertex**.
+
+**A label is not a diagnosis.** `FACE_NESTING_ARTIFACT` named the symptom and
+hid the theorem.
+
+---
+
+## 17 · DO NOT OWN A COMPUTATIONAL GEOMETRY KERNEL
+
+Noding, intersection, union, difference, polygonization, validity, containment,
+overlap and IoU are library operations. GEOS has twenty years of work in
+exactly the robustness problems that broke the custom walker: collinear
+overlap, coincident edges, floating-point angular ordering, degenerate
+intersections.
+
+This project owns **construction meaning, source provenance, evidence,
+measurement basis and release logic**. It does not own numerical geometry.
+
+An earlier round correctly said *"do not tune the face walker."* The conclusion
+should have been *"do not own a face walker."*
+
+---
+
+## 18 · A ROOM IS A HOLE IN THE WALL SOLID
+
+```
+each band  →  the polygon between its two DRAWN faces
+all of them →  WALL_SOLID (robust union)
+envelope − solid − portal barriers  →  FREE SPACE
+connected components  →  space candidates
+```
+
+The boundary of each component lies **on the drawn wall faces by
+construction**, so the result is already on the clear-internal basis. No
+centreline offset, no room-facing-face determination, no corner correction, no
+mean-thickness adjustment — **the corners are right because nothing computed
+them**.
+
+Components of one geometry are disjoint by construction, which is precisely the
+property the planar path could not provide.
+
+A doorway is still four facts. A `PORTAL_PARTITION_BARRIER` serves only the
+fourth — it stops free space flowing through the door, it spans the host wall's
+own thickness, and it is tagged `TOPOLOGY_ONLY_NOT_MATERIAL`. An open-plan
+transition gets none: it is one physical space.
+
+---
+
+## 19 · SNAPPING IS NOT GAP-CLOSING, AND THE MAGNITUDE IS THE ARGUMENT
+
+Two walls that genuinely touch arrived **0.003 mm** apart — three microns, on a
+drawing whose pixel is 10.8 mm. Coordinates are snapped to a **0.05 mm** grid
+before the union: 1/2000 of the thinnest wall, and it moved the total wall area
+by three square centimetres.
+
+That is noise removal. Anything that needs more is a **real separation** and is
+reported as one; above 1.0 mm the union refuses to be asked.
+
+---
+
+## 20 · SEGMENTATION OUTPUT IS NOT VALIDATED STATE
+
+Project 23010's 35 identity-validated and 33 topology-validated regions were
+established by **human review and a golden overlay**. Quoting them as evidence
+that automatic raster segmentation is accurate would credit the algorithm with
+a person's work.
+
+They are counted separately, and the automatic figure carries
+`automatic_accuracy_established: False`. This matters most just before
+generalisation: on an unseen project the human column starts empty.
+
+---
+
+## 21 · FIX THE EVIDENCE ROLE BEFORE BUILDING THE EXTRACTION
+
+```
+PRINTED DIMENSION       →  SIZE evidence
+ROOM LABEL / SCHEDULE   →  IDENTITY evidence
+DOOR / WINDOW SCHEDULE  →  OPENING evidence
+```
+
+A printed 3.50 matching a measured 3497 mm proves the **size** is right and
+says nothing about which room it is — a bedroom and a bathroom can both be
+3.50 m wide. Letting a dimension match lift a room's identity would be the
+WSH-01 error in a new costume: geometry agreeing, name still wrong.
+
+The roles are fixed in code before any extraction exists, because that is where
+the temptation lies.
