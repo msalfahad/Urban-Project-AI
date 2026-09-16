@@ -1237,3 +1237,61 @@ So the set is split BEFORE anything reads it
 (`tools/split_submission_set.py`), and the take-off part is registered in
 `engine.reference_mapping.SEALED` so `refuse_if_sealed` refuses it **by
 name**, from any path. A seal kept in memory is not a seal.
+
+
+## 45 · A CLASS NAME IS NOT AN OBJECT, AND TWO DECODERS GIVE TWO ANSWERS
+
+Project 7757's DWG was called AEC-custom-object work on the strength of its
+readable strings — `AecDbDispRepPolygonTrueColour`, `WallSchem`,
+`WindowAssembly`, `DoorRcp`, `AecBase70`. The class table says otherwise:
+**244 AEC classes declared, every one with zero instances, none an entity
+class.** AutoCAD Architecture registers its class registry in every drawing
+it touches. The walls are plain lines; proxies: 0.
+
+**Read the instance count, not the name.**
+
+The same file gives two different answers depending which decoder is asked.
+LibreDWG's DXF writer aborts inside `BLOCKS` and emits **no ENTITIES section
+at all**; its JSON writer reports `SUCCESS` and decodes 10,796 entities. A
+source is therefore never declared unreadable on one decoder's word, and
+"the DXF had no entities" is not "the drawing has none" (§43 again, in CAD
+clothing).
+
+Two traps inside a decode that succeeded:
+
+- **A decoder artefact is not drawing content.** The JSON carries 66,842
+  BLOCK_BEGIN/BLOCK_END records for a file whose block table has 33 entries
+  and 931 block references. Counting them inflates the drawing thirtyfold.
+  They are excluded, and the exclusion is reported with its arithmetic.
+- **An unnamed entity is not an unknown one.** The JSON leaves `entity`
+  empty on most records while still carrying the numeric DWG type and the
+  AcDb subclass, which name it exactly. Reading the empty string as
+  "unidentified" discards ten thousand identified entities.
+
+## 46 · THE PRINTED UNIT IS NOT THE DRAWING UNIT
+
+`$DIMLFAC = 0.1` on project 7757 means every dimension on the sheet prints
+one tenth of the distance it measures: **the geometry is millimetres and
+the annotation is centimetres.** Its door blocks — `D115`, `D120`, `D200`,
+`D315` — are widths in centimetres, and read as millimetres they would be
+door openings 115 mm wide.
+
+Any comparison of a printed dimension against measured geometry must apply
+that factor. Omitting it is wrong by exactly ten and **passes review,
+because both numbers look plausible**. So `declared_units()` reports the
+factor whenever it is not 1, in the same breath as the unit.
+
+The unit itself is established the way every measurement in this project is
+— one declaration, proven on independent facts:
+
+```
+$INSUNITS = 4                      the author says millimetres
+$LIMMAX = 84100 x 59400            exactly A1 (841 x 594) x 100, which only
+                                   divides cleanly in millimetres
+$DIMLFAC = 0.1 + D115/D120/D315    printed cm, and those are plausible door
+                                   widths in cm and absurd in mm
+```
+
+And an absent variable is not an unrecognised one: `$MEASUREMENT` is missing
+from this decoder's JSON output, which is reported as
+`NOT_PRESENT_IN_THIS_DECODE` rather than as a reading of it.
