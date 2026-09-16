@@ -274,6 +274,34 @@ ROUNDS = (
              "clear-internal-finish-face basis; 36 of 70 polygons carried "
              "an established basis and 34 did not",
     ),
+    Freeze(
+        round_name="ROUND_6B_SINGLE_LINE_PARTITIONS",
+        commit="931a1ae",
+        source_file="P7757_ARCHITECTURAL.dwg",
+        source_sha256_16="7f61f3acdd62d62d",
+        artifact_path="data/runs/7757/P7757_ROUND6B_GEOMETRY.json",
+        artifact_sha256_16="",
+        project_output_hash={},
+        synthetic_artifact_hash={
+            "ROUND_6B_SYNTHETIC_HASH": "1010b2585e3d77fe4faa4c16"},
+        code_hashes_at_freeze={
+            "SINGLE_LINE_PARTITION_HASH": "2b9480e67e799c2b3d1f837f",
+            "WALL_FACE_OWNERSHIP_HASH": "b2529201eefb569dc651db84",
+            "PHYSICAL_WALL_BAND_HASH": "550e36a8e313a7d0955a2cf9",
+            "ROOM_PARTITION_GRAPH_HASH": "6bd4f2ff9ac748948e441baa",
+            "CAD_SPACE_ROLE_HASH": "bba19efe2c70dcba1e96f078",
+            "INTERIOR_EXTERIOR_HASH": "5f5bd575cb14541a2679ab00",
+            "SUPERVISED_BENCHMARK_HASH": "1330ff34ee82740c00d299c2"},
+        dependency_hashes_at_freeze={
+            "CAD_ADAPTER_HASH": "bd331c8074806e8b19711417",
+            "LOCAL_ENCLOSURE_HASH": "01ff128e7ffdab820805dce1",
+            "DRAWING_REGION_HASH": "bd1c391980507d3e18f5d9db"},
+        note="one drawn line carries three authorities and only the first "
+             "two are ever free: 213.4 m of partition held topology and "
+             "0.0 m of it became material. 69 polygons measured, 40 with "
+             "an established basis — which round 6C then had to divide "
+             "into rooms, halves of rooms, sheet content and questions",
+    ),
 )
 
 # Replays this project EXPECTS to diverge, and why. A divergence recorded
@@ -302,6 +330,14 @@ PREDICTED_DIVERGENCES = {
                                      "finish face",
         "SUPERVISED_BENCHMARK_HASH": "round 6A adds the MAIN KITCHEN "
                                      "geometry example the owner asked for",
+    },
+    "ROUND_6B_SINGLE_LINE_PARTITIONS": {
+        "WALL_FACE_OWNERSHIP_HASH": "round 6C did not touch it. If this "
+                                    "diverges, something below it moved",
+        "ROUND_6B_SYNTHETIC_HASH": "it stands on the partition and "
+                                   "ownership hashes. The twelve CASES "
+                                   "must still hold; the hash is a replay, "
+                                   "the pass is the score",
     },
     "ROUND_6A_WALL_FACE_OWNERSHIP": {
         "WALL_FACE_OWNERSHIP_HASH": "round 6B adds the basis "
@@ -373,6 +409,8 @@ def _live() -> dict:
                                          "model_hash"),
         "SINGLE_LINE_PARTITION_HASH": _one("single_line_partition",
                                            "model_hash"),
+        "DRAWING_ROLE_HASH": _one("drawing_role", "model_hash"),
+        "SPACE_REGISTER_HASH": _one("space_register", "model_hash"),
         "CAD_SPACE_ROLE_HASH": _space_role_hash(),
         "INTERIOR_EXTERIOR_HASH": _interior_exterior_hash(),
         "SUPERVISED_BENCHMARK_HASH": _supervised_hash(),
@@ -423,7 +461,13 @@ def _replay_synthetic() -> dict:
         "ROUND_4_SYNTHETIC_HASH": r4.freeze_hash(),
         "ROUND_6_SYNTHETIC_HASH": r6.freeze_hash(),
         "ROUND_6A_SYNTHETIC_HASH": _replay_6a(),
+        "ROUND_6B_SYNTHETIC_HASH": _one_selftest("round6b_selftest"),
+        "ROUND_6C_SYNTHETIC_HASH": _one_selftest("round6c_selftest"),
     }
+
+
+def _one_selftest(module_name: str) -> str:
+    return _one(module_name, "freeze_hash")
 
 
 def _replay_6a() -> str:

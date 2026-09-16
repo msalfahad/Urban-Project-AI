@@ -2129,3 +2129,120 @@ would have hidden:
 And a partition with a door in it is drawn as TWO PIECES, neither of which
 has a room on each side. Collinear pieces are merged across a gap that an
 opening on that very line explains, and across no other gap.
+
+---
+
+## 71 · MEASURING A POLYGON IS NOT KNOWING WHAT IT IS
+
+Four areas, and adding any two of them together produces a number that
+means nothing:
+
+```
+MEASURED_CANDIDATE_AREA        every polygon that has a boundary basis
+PHYSICAL_SPACE_AREA            the ones that are spaces of the building
+RELEASE_ELIGIBLE_GEOMETRY_AREA the ones the release gate passes
+TRADE_MEASUREMENT_AREA         what a trade may price. A later round
+```
+
+On P7757 the first is 269.1838 m² over 40 rows and the third is 26.3085
+m² over 6. Reporting the first as released floor area — which round 6B's
+own report did — is the failure this invariant exists to prevent.
+
+**A candidate's role is never inferred from its area.** A 1,020 m²
+polygon is sheet content because it repeats in three drawing regions; a
+1.2 m² polygon is refused because it is a stair tread. Neither verdict
+would survive a size rule, in either direction.
+
+---
+
+## 72 · A ROOM QUANTITY IS REFUSED BEFORE IT IS COMPUTED, NOT AFTER
+
+A room quantity taken from an elevation is not a small error. So every
+drawing region is asked what it SHOWS and WHICH FLOOR it is, and only a
+`FLOOR_PLAN` or a `ROOF_PLAN` **whose floor is also established** may
+release room quantities.
+
+`UNKNOWN` is not a floor plan by default. A region nobody has identified
+releases nothing, which is the entire point of asking.
+
+**A floor nobody stated is not derived from geometry.** P7757 carries no
+decodable title text at all — its titles are drawn in an SHX font this
+decoder does not resolve — so its floors arrive as a SUPERVISED
+ASSIGNMENT, carried as supplied with `provenance = SUPERVISED_AUDIT` and
+never as `DERIVED_FROM_THE_DRAWING`. The assignment is data, keyed on
+what a region is; no region id appears in any module.
+
+A title is read from text that is **not one of that region's own room
+stamps** and is at least as big as the text the sheet repeats, and where
+a string matches words of several roles the LONGEST match wins. Without
+the first rule a room called PLAN ROOM retitles the drawing; without the
+last, `SITE PLAN` is a floor plan.
+
+---
+
+## 73 · A FITTING HAS TWO FACES AND THEY DO NOT MEAN THE SAME THING
+
+A band standing on another band is a fitting: two established bands that
+share a face line over overlapping stretches, with their other faces on
+OPPOSITE sides of it. The one that RUNS FURTHER is the wall — a lining is
+fitted along part of a wall, never the other way round.
+
+```
+the SHARED face  is where it meets the wall. A space bounded there is
+                 bounded by the WALL BEHIND it, and that is what every
+                 wall lining in every building does
+the FRONT face   stands out into the room. A candidate that stops at it
+                 is the strip the fitting leaves over, not a room
+```
+
+**Only the front face blocks.** Blocking anything a fitting touches takes
+the room with the strip: P7757's kitchen — 8.100 m², bounded at the
+shared face by the wall behind its counter — was withheld by exactly that
+mistake, alongside the 2.25 m² pantry strip the rule was written for.
+
+---
+
+## 74 · A CONTAINER OF ROOMS IS NOT A ROOM. A CONTAINER OF NOTHING IS
+
+Counted both ways, a floor's area is its own double, so a candidate that
+contains candidates **which are themselves spaces** is a SUPER_REGION and
+releases nothing.
+
+Containment alone is not that test. A room with a decorative rectangle
+drawn inside it contains a candidate, and it is still a room: the
+rectangle is not a space, and releasing the room double-counts nothing.
+Which means the role decides the release and the geometry decides the
+role — in that order, which is why it takes two passes.
+
+---
+
+## 75 · A LABEL BELONGS TO A ROOM, NOT TO THE SMALLEST BOX AROUND THE TEXT
+
+A counter, a wardrobe, a vanity and a stair cell all contain text. The
+room that text names is the one those things stand IN.
+
+So the candidates for a label are the spaces containing it, and among
+them the smallest that is not a super-region wins. Where the only
+candidate is a subcell of something unresolved, and where two candidates
+claim it and neither is inside the other, the answer is an EXCEPTION —
+`THE_ONLY_CANDIDATE_IS_A_SUBCELL_INSIDE_A_LARGER_UNRESOLVED_SPACE` and
+`SEVERAL_PHYSICAL_SPACES_CONTAIN_THIS_LABEL`. A smallest-polygon rule
+would answer both, and half the time it would be wrong.
+
+**An unknown word is not guessed.** A term the vocabulary does not know
+keeps `UNKNOWN_TERM`: not translated, not matched to the nearest known
+word, and not dropped. The space it names is still measured, because an
+unreadable label must not destroy correct geometry.
+
+---
+
+## 76 · A STAIR IS A SPACE AND ITS PLAN RECTANGLE IS NOT A ROOM AREA
+
+A stair arrives as a run of closed cells, one per tread, and two tread
+lines 400 mm apart pair into a band as readily as a thin wall does — so a
+tread can reach the register with a clear internal basis and 1.2 m² of
+floor.
+
+It is registered as a physical space and it releases no room area. A
+stair's floor is measured on its going and its rise, never as a rectangle
+on plan, and that is a quantity-surveying fact rather than a threshold.
