@@ -2053,3 +2053,79 @@ know that something lies outside its building. That space is
 finish, and not enough to measure a yard. **No site polygon is invented to
 close the gap**, and no missing site ever makes outside-the-building
 interior.
+
+## 69 · ONE LINE, THREE AUTHORITIES, AND ONLY ONE OF THEM IS FREE
+
+*Round 6B, §1–§6. `POSITIVE_EVIDENCE_SINGLE_LINE_PARTITION_V1`,
+`SINGLE_LINE_PARTITION_HASH 2b9480e67e799c2b3d1f837f`.*
+
+A 100 mm block wall drawn as one line is still a wall. A worktop drawn as
+one line is still a worktop. Telling them apart is what this is for, and
+the answer is never one thing:
+
+```
+TOPOLOGY_AUTHORITY        are these two spaces separate?
+CLEAR_FACE_AUTHORITY      where exactly does each room's floor stop?
+MATERIAL_WALL_AUTHORITY   how much blockwork, plaster, paint is there?
+```
+
+A supported single-line partition may establish TWO PHYSICAL SPACES
+without establishing one millimetre of wall thickness. The three results
+are never collapsed:
+
+```
+A  topology established, clear face established, MATERIAL NOT
+B  topology established, clear face NOT,         MATERIAL NOT
+C  unresolved
+```
+
+**§6 IS MANDATORY AND IT IS NOT A THRESHOLD.** A line has no thickness,
+so every millimetre of boundary a partition holds is subtracted from the
+measurable wall exactly as an opening is. It may not create blockwork,
+plaster, paint, wall ceramic or waterproofing. On P7757, 213.4 m of
+boundary is held this way and contributes zero.
+
+**A SECOND FACE IS NEVER INVENTED.** The centreline is not substituted,
+because half of an unknown number is still unknown. The clear face is
+taken only from evidence outside the line: a band it continues, the
+reveals of an opening drawn in it, or an authored dimension that ends on
+it. A test asserts the module contains no `/ 2`, no `* 0.5` and no
+"centre".
+
+## 70 · DIVIDING A REGION IS NOT EVIDENCE OF BEING A PARTITION
+
+*Round 6B, §3.*
+
+That reasoning is circular, and it would make blockwork out of every
+dimension line, hatch boundary and worktop. A partition is ANCHORED and
+then CORROBORATED: one strong token and two in total.
+
+```
+STRONG       an opening hosted on it, the same line on another plan,
+             a partition alignment it continues, or a named room on
+             EACH SIDE of it
+SUPPORTING   wall to wall, one end at a wall, a T or L junction,
+             an authored dimension ending on it
+```
+
+**Running from wall to wall is SUPPORTING.** A worktop is fitted between
+two walls; so is a wardrobe and so is a bath. Spanning the room is what a
+fitting does, and treating it as strong brought P7757's kitchen counter
+straight back as a partition.
+
+Two corollaries the synthetic cases forced, both of which a real drawing
+would have hidden:
+
+* **A side is a half-plane only if you ask it badly.** "Is something named
+  on each side of this line" is true of every line in a building. Each
+  side reaches only as far as the next parallel line the drawing puts
+  there; a worktop has nothing named in its 500 mm.
+
+* **A CROSSING WALL IS NOT A REVEAL.** A reveal spans the band and stops.
+  A wall's face runs on past. Counting the second made a worktop "closed
+  at both ends" by the walls it is fitted between, on better evidence than
+  the wall it stands against.
+
+And a partition with a door in it is drawn as TWO PIECES, neither of which
+has a room on each side. Collinear pieces are merged across a gap that an
+opening on that very line explains, and across no other gap.

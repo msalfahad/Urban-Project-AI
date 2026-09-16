@@ -54,6 +54,7 @@ from engine import semantic_seed as seeds_mod
 from engine import space_enclosure as enc
 from engine import cad_space_role as srole
 from engine import space_topologies as topo
+from engine import single_line_partition as slp
 from engine import wall_face_ownership as wface
 from engine.boundary_match import VectorCandidate
 from engine.space_objects import SRC_VECTOR_WALL_FACE
@@ -328,6 +329,7 @@ class Report:
     junctions: list = field(default_factory=list)
     subdivisions: list = field(default_factory=list)
     ownership: list = field(default_factory=list)
+    partitions: list = field(default_factory=list)
     space_roles: object = None
     notes: dict = field(default_factory=dict)
 
@@ -673,6 +675,20 @@ def measure(normalized, profile, *, semantic=None) -> Report:
     id_rep = ident.reconcile(ident.observations_from(seed_texts))
     rep.identity = id_rep
 
+    # ---- ROUND 6B: the same line, seen on another plan ----------------
+    #
+    # A villa's upper floor repeats its lower floor's risers, shafts and
+    # party walls at the same place RELATIVE TO ITS OWN DRAWING. That
+    # repetition is architectural evidence; the absolute coordinates are
+    # not, and comparing them would be the cross-drawing reasoning §1 of
+    # round 4 forbids.
+    by_region = {}
+    for _reg in regions.regions:
+        by_region[_reg.region_id] = (
+            (_reg.x0, _reg.y0),
+            dregion.scope_candidates(_reg, all_cands))
+    cross_plan = slp.cross_plan_index(by_region)
+
     agg_auth = authority.AuthorityReport()
     agg_open = openings_mod.OpeningReport()
     agg_match = pmatch.MatchReport()
@@ -819,10 +835,29 @@ def measure(normalized, profile, *, semantic=None) -> Report:
         # ---- ROUND 6A: which face does each space stop at? ------------
         own = wface.ownership(walls.walls, arr, region_id=reg.region_id,
                               envelope=envelopes[reg.region_id])
+
+        # ---- ROUND 6B: which set-aside lines are actually partitions? --
+        #
+        # Asked of the lines round 6A set aside, with POSITIVE evidence
+        # only. What they may bound, what they may measure and what
+        # material they create are three separate answers.
+        _kept, _aside = wface.clear_candidates(
+            eligible, walls.walls, arr, closures=ring_closures,
+            recovered=recovered)
+        _aside_lines = [c for c in eligible
+                        if c.object_id in {d.object_id for d in _aside}]
+        parts = slp.assess(
+            _aside_lines, region_id=reg.region_id, walls=walls.walls,
+            candidates=eligible, openings=opens.openings,
+            dimensions=scoped["dimensions"], observations=obs,
+            cross_plan=cross_plan, origin=(reg.x0, reg.y0),
+            arrangement=arr)
+        rep.partitions.append(parts)
         graph = rpg.build(region_id=reg.region_id, candidates=eligible,
                           openings=opens.openings, host_status=status,
                           identity_groups=groups, recovered=recovered,
-                          wall_faces=own, walls=walls.walls)
+                          wall_faces=own, walls=walls.walls,
+                          partitions=parts)
         rep.ownership.append(wface.OwnershipReport(
             region_id=reg.region_id, faces=own,
             dropped=list(graph.dropped_lines),

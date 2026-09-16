@@ -124,7 +124,7 @@ def test_every_basis_this_engine_knows_is_named():
     assert set(wface.BASES) == {
         wface.CLEAR_INTERNAL_FINISH_FACE, wface.STRUCTURAL_FACE,
         wface.WALL_CENTERLINE, wface.EXTERNAL_FACE,
-        wface.BASIS_NOT_ESTABLISHED}
+        wface.CLEAR_FACE_NOT_ESTABLISHED, wface.BASIS_NOT_ESTABLISHED}
     assert all(b in wface.WHAT_EACH_BASIS_IS for b in wface.BASES)
 
 

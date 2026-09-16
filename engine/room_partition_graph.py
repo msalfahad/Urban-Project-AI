@@ -52,6 +52,7 @@ from engine import cad_openings as op
 from engine import cad_profile as cprofile
 from engine import space_enclosure as enc
 from engine import space_topologies as topo
+from engine import single_line_partition as slp
 from engine import wall_face_ownership as wface
 
 
@@ -162,6 +163,7 @@ class GraphReport:
     recovered: list = field(default_factory=list)
     absorbed_faces: int = 0
     dropped_lines: list = field(default_factory=list)
+    partition_lines: list = field(default_factory=list)
     quantities: dict = field(default_factory=dict)
     notes: dict = field(default_factory=dict)
 
@@ -178,6 +180,8 @@ class GraphReport:
                                           if len(s.zones) > 1),
             "arrangement_faces_absorbed": self.absorbed_faces,
             "lines_standing_inside_a_space": len(self.dropped_lines),
+            "single_line_partitions_bounding_a_space": len(
+                self.partition_lines),
             "spaces_on_the_clear_internal_basis": sum(
                 1 for s in self.spaces
                 if s.clear is not None and s.clear.basis_established),
@@ -408,6 +412,15 @@ def _shared_length_mm(face_wkt: str, o) -> float:
     return min(best, o.opening_length_mm)
 
 
+def _partition_length_mm(node) -> float:
+    """§6. How much of this space's boundary is a line with no thickness."""
+    clear = getattr(node, "clear", None)
+    if clear is None:
+        return 0.0
+    return sum(f.length_mm for f in clear.boundary_faces
+               if f.basis == wface.CLEAR_FACE_NOT_ESTABLISHED)
+
+
 def _quantities(node, openings_on_boundary, recovered_by_id=None) -> dict:
     """§10, kept apart rather than collapsed into one perimeter number."""
     e = node.enclosure
@@ -427,6 +440,15 @@ def _quantities(node, openings_on_boundary, recovered_by_id=None) -> dict:
         if cand is not None:
             recovered_mm += abs(cand.end_mm - cand.start_mm)
     recovered_mm = min(recovered_mm, max(0.0, boundary_mm - opening_mm))
+    # ROUND 6B §6, and it is MANDATORY. A single-line partition separates
+    # two rooms and has no thickness. Every millimetre of boundary it
+    # holds is material NOBODY has established, so it comes off the
+    # measurable length exactly as an opening and a recovered span do.
+    # Blockwork, plaster, paint, wall ceramic and waterproofing may not be
+    # created from a line.
+    partition_mm = _partition_length_mm(node)
+    partition_mm = min(partition_mm,
+                       max(0.0, boundary_mm - opening_mm - recovered_mm))
     # HOST_WALL_GROSS_LENGTH may include the opening span ONLY where the
     # host wall's continuation past the opening is independently
     # established — which is exactly what a THROUGH interruption with named
@@ -440,13 +462,20 @@ def _quantities(node, openings_on_boundary, recovered_by_id=None) -> dict:
         "MATERIAL_PRESENT_LENGTH_MM": round(max(0.0,
                                                 boundary_mm - opening_mm), 1),
         "RECOVERED_BOUNDARY_LENGTH_MM": round(recovered_mm, 1),
+        "SINGLE_LINE_PARTITION_LENGTH_MM": round(partition_mm, 1),
         "MATERIAL_AUTHORITY_ESTABLISHED_LENGTH_MM": round(
-            max(0.0, boundary_mm - opening_mm - recovered_mm), 1),
+            max(0.0, boundary_mm - opening_mm - recovered_mm
+                - partition_mm), 1),
         "HOST_WALL_GROSS_LENGTH_MM": round(
             sum(shared[o.opening_id] for o in gross_established), 1),
         "HOST_WALL_GROSS_ESTABLISHED_FOR": len(gross_established),
         "HOST_WALL_GROSS_NOT_ESTABLISHED_FOR": (
             len(openings_on_boundary) - len(gross_established)),
+        "why_a_partition_is_subtracted": (
+            "a single-line partition establishes that two rooms exist and "
+            "establishes NO wall thickness. §6: it contributes 0 m of "
+            "measurable material and may not create blockwork, plaster, "
+            "paint, wall ceramic or waterproofing"),
         "never": ("the room polygon's perimeter is NOT the material wall "
                   "length. Material stops at every opening, it is absent "
                   "along every recovered span, and both differences are "
@@ -456,7 +485,7 @@ def _quantities(node, openings_on_boundary, recovered_by_id=None) -> dict:
 
 def build(*, region_id, candidates, openings=(), host_status=None,
           identity_groups=(), extent=None, recovered=(), wall_faces=(),
-          walls=()) -> GraphReport:
+          walls=(), partitions=None) -> GraphReport:
     """Assemble ONE region's room-partition topology.
 
     `candidates` are that region's room-boundary-eligible wall bands.
@@ -507,8 +536,23 @@ def build(*, region_id, candidates, openings=(), host_status=None,
         clear_cands, dropped = wface.clear_candidates(
             candidates, walls or (), arrangement_model,
             closures=closures, recovered=recovered)
-        clear_cands = clear_cands + closures + list(recovered)
+        by_id = {c.object_id: c for c in candidates}
+        dropped_lines = [by_id[d.object_id] for d in dropped
+                         if d.object_id in by_id]
+        # ROUND 6B. A set-aside line that has POSITIVE architectural
+        # evidence behind it is a partition, and a partition bounds a
+        # space even when nobody drew its second face. It comes back into
+        # the boundary set; what it may MEASURE is decided separately.
+        back = []
+        if partitions is not None:
+            back = slp.boundary_candidates(partitions, dropped_lines)
+            kept_ids = {c.object_id for c in back}
+            dropped = [d for d in dropped
+                       if d.object_id not in kept_ids]
+            back = back + slp.closure_candidates(partitions, candidates)
+        clear_cands = clear_cands + back + closures + list(recovered)
         rep.dropped_lines = list(dropped)
+        rep.partition_lines = list(back)
         # A room the drawn arrangement never closed may still be closed
         # once the fittings standing inside it are set aside. P7757's W.C
         # is: a worktop line runs past its door reveal, and the face that
@@ -581,6 +625,21 @@ def build(*, region_id, candidates, openings=(), host_status=None,
     rep.absorbed_faces = sum(max(0, len(seeds[k]["faces"]) - 1)
                              for k in order)
 
+    # What each accepted partition line says about itself, for the sides
+    # it holds. A topology-only partition gives a side its own basis.
+    part_rows = {}
+    if partitions is not None:
+        for c in partitions.established():
+            part_rows[c.candidate_id] = {
+                "geometry": (c.axis, c.fixed_mm, c.start_mm, c.end_mm),
+                "clear_face_established": c.establishes_clear_face,
+                "band_id": c.clear_face_band_id,
+                "candidate_id": c.candidate_id,
+                "entities": list(c.source_entity_ids
+                                 or (c.source_entity_id,)),
+                "why": c.why,
+            }
+
     on_face = defaultdict(list)
     nodes = []
     for n, key in enumerate(order, 1):
@@ -616,7 +675,7 @@ def build(*, region_id, candidates, openings=(), host_status=None,
                 node_id, region_id, poly, wall_faces, closures=closures,
                 recovered=recovered, absorbed=max(0, len(parts) - 1),
                 obstructed_m2=sum(p.area for p in parts) / 1e6,
-                complete=complete)
+                complete=complete, partitions=part_rows)
             shape = poly
         mine = [o for o in closing if _on_boundary(shape, o)]
         for o in mine:

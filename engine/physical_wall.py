@@ -487,21 +487,31 @@ def _spans(face_a, face_b, thickness_mm: float = 0.0, owned=None) -> tuple:
 
 
 def _capped(candidates, axis, f_lo, f_hi, station) -> bool:
-    """Is the band closed across its faces at this station?
+    """Is the band CLOSED across its faces at this station by a reveal?
 
-    A reveal — the short perpendicular piece that closes a wall at a door,
-    at a corner or at its end — is the strongest cheap evidence that two
-    lines are the two faces of one wall. Two unrelated parallel lines have
-    nothing across them.
+    A reveal is the SHORT perpendicular piece that closes a wall at a
+    door, at a corner or at its end. It spans the band and stops.
+
+    A wall's own face crossing the station is a different thing entirely,
+    and counting it was a real defect: a worktop fitted between two walls
+    is "capped" at both ends by those walls, and on that evidence it
+    outranked the wall it stands against. So a capping piece may not run
+    far past the band it closes — and "far" is the band's own thickness,
+    which is the only measure this pair has.
     """
+    span = abs(f_hi - f_lo)
+    reach = span + JOIN_MM
     for c in candidates:
         if c.axis == axis or c.axis not in ("H", "V"):
             continue
         if abs(c.fixed_mm - station) > COLLINEAR_TOL_MM:
             continue
         lo, hi = sorted((c.start_mm, c.end_mm))
-        if lo <= f_lo + COLLINEAR_TOL_MM and hi >= f_hi - COLLINEAR_TOL_MM:
-            return True
+        if lo > f_lo + COLLINEAR_TOL_MM or hi < f_hi - COLLINEAR_TOL_MM:
+            continue
+        if (f_lo - lo) > reach or (hi - f_hi) > reach:
+            continue          # it runs on past: a crossing wall, not a cap
+        return True
     return False
 
 

@@ -249,6 +249,31 @@ ROUNDS = (
              "That last number is why round 6A exists: the polygon was "
              "stopping at a kitchen counter",
     ),
+    Freeze(
+        round_name="ROUND_6A_WALL_FACE_OWNERSHIP",
+        commit="b646fb6",
+        source_file="P7757_ARCHITECTURAL.dwg",
+        source_sha256_16="7f61f3acdd62d62d",
+        artifact_path="data/runs/7757/P7757_ROUND6A_GEOMETRY.json",
+        artifact_sha256_16="",
+        project_output_hash={},
+        synthetic_artifact_hash={
+            "ROUND_6A_SYNTHETIC_HASH": "57bf8257e7ff4051e2f77652"},
+        code_hashes_at_freeze={
+            "WALL_FACE_OWNERSHIP_HASH": "a36a3169568d9858ca913fda",
+            "PHYSICAL_WALL_BAND_HASH": "550e36a8e313a7d0955a2cf9",
+            "CAD_SPACE_ROLE_HASH": "bba19efe2c70dcba1e96f078",
+            "INTERIOR_EXTERIOR_HASH": "5f5bd575cb14541a2679ab00",
+            "SUPERVISED_BENCHMARK_HASH": "1330ff34ee82740c00d299c2"},
+        dependency_hashes_at_freeze={
+            "CAD_ADAPTER_HASH": "bd331c8074806e8b19711417",
+            "LOCAL_ENCLOSURE_HASH": "01ff128e7ffdab820805dce1",
+            "DRAWING_REGION_HASH": "bd1c391980507d3e18f5d9db"},
+        note="the kitchen stopped at a worktop. 8.100 m2 at 2700 x 3000, "
+             "the W.C at 3.375 and the WASH at 3.150, all on the "
+             "clear-internal-finish-face basis; 36 of 70 polygons carried "
+             "an established basis and 34 did not",
+    ),
 )
 
 # Replays this project EXPECTS to diverge, and why. A divergence recorded
@@ -277,6 +302,16 @@ PREDICTED_DIVERGENCES = {
                                      "finish face",
         "SUPERVISED_BENCHMARK_HASH": "round 6A adds the MAIN KITCHEN "
                                      "geometry example the owner asked for",
+    },
+    "ROUND_6A_WALL_FACE_OWNERSHIP": {
+        "WALL_FACE_OWNERSHIP_HASH": "round 6B adds the basis "
+                                    "CLEAR_FACE_NOT_ESTABLISHED, which is "
+                                    "a state round 6A could not express",
+        "PHYSICAL_WALL_BAND_HASH": "round 6B stops a crossing wall from "
+                                   "counting as a reveal",
+        "ROUND_6A_SYNTHETIC_HASH": "it stands on the ownership hash. The "
+                                   "nine CASES must still hold; the hash "
+                                   "is a replay, the pass is the score",
     },
     "ROUND_5_PARTITION_CONTINUITY": {
         "PHYSICAL_WALL_BAND_HASH": "round 6 replaces many-to-many face "
@@ -336,6 +371,8 @@ def _live() -> dict:
                                       "subdivision_hash"),
         "WALL_FACE_OWNERSHIP_HASH": _one("wall_face_ownership",
                                          "model_hash"),
+        "SINGLE_LINE_PARTITION_HASH": _one("single_line_partition",
+                                           "model_hash"),
         "CAD_SPACE_ROLE_HASH": _space_role_hash(),
         "INTERIOR_EXTERIOR_HASH": _interior_exterior_hash(),
         "SUPERVISED_BENCHMARK_HASH": _supervised_hash(),
@@ -385,7 +422,14 @@ def _replay_synthetic() -> dict:
         "ROUND_3_SYNTHETIC_HASH": r3.freeze_hash(),
         "ROUND_4_SYNTHETIC_HASH": r4.freeze_hash(),
         "ROUND_6_SYNTHETIC_HASH": r6.freeze_hash(),
+        "ROUND_6A_SYNTHETIC_HASH": _replay_6a(),
     }
+
+
+def _replay_6a() -> str:
+    from engine import round6a_selftest as r6a
+
+    return r6a.freeze_hash()
 
 
 def _artifact_agrees(fr: Freeze) -> dict:

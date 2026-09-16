@@ -68,9 +68,15 @@ STRUCTURAL_FACE = "STRUCTURAL_FACE"
 WALL_CENTERLINE = "WALL_CENTERLINE"
 EXTERNAL_FACE = "EXTERNAL_FACE"
 BASIS_NOT_ESTABLISHED = "MEASUREMENT_BASIS_NOT_ESTABLISHED"
+# ROUND 6B §4/§5. A side held by a single-line partition whose topology is
+# established and whose thickness is not. It is NOT the same state as "no
+# face at all": the two spaces ARE separate, and only the position of the
+# floor's edge is unknown. Collapsing the two would lose exactly the
+# distinction round 6B exists to keep.
+CLEAR_FACE_NOT_ESTABLISHED = "CLEAR_FACE_NOT_ESTABLISHED"
 
 BASES = (CLEAR_INTERNAL_FINISH_FACE, STRUCTURAL_FACE, WALL_CENTERLINE,
-         EXTERNAL_FACE, BASIS_NOT_ESTABLISHED)
+         EXTERNAL_FACE, CLEAR_FACE_NOT_ESTABLISHED, BASIS_NOT_ESTABLISHED)
 
 WHAT_EACH_BASIS_IS = {
     CLEAR_INTERNAL_FINISH_FACE: (
@@ -85,6 +91,11 @@ WHAT_EACH_BASIS_IS = {
     EXTERNAL_FACE: (
         "the face on the far side from the room. Used for external "
         "envelope quantities, never for an internal floor"),
+    CLEAR_FACE_NOT_ESTABLISHED: (
+        "a single-line partition separates this space from the next one, "
+        "and nothing says how thick it is. The TOPOLOGY is established; "
+        "the clear floor area is not, and the centreline is not "
+        "substituted for the face"),
     BASIS_NOT_ESTABLISHED: (
         "the space is bounded somewhere this module cannot name a face "
         "for. No floor quantity may be taken from it"),
@@ -710,7 +721,28 @@ def _edges_of(polygon) -> list:
     return out
 
 
-def attribute(polygon, faces, *, closures=(), recovered=()) -> list:
+def _junction_return(axis, fixed, lo, hi, faces, attributed) -> object:
+    """Is this short side the corner return of a band already on this ring?
+
+    A wall's two faces do not always meet at the corner: one run stops 50
+    or 150 mm short of the other, and the ring then carries a stub that no
+    face covers. It is not an unaccounted side — it is where the wall
+    turns. It is claimed only when the stub is no longer than the thinnest
+    wall this project recognises AND a face of the SAME band is already on
+    this ring, so nothing new is asserted about the geometry.
+    """
+    if hi - lo > MIN_WALL_MM + HAIRLINE_MM:
+        return None
+    for f in faces:
+        if f.wall_id not in attributed or f.axis != axis:
+            continue
+        if abs(f.fixed_mm - fixed) <= MIN_WALL_MM + HAIRLINE_MM:
+            return f
+    return None
+
+
+def attribute(polygon, faces, *, closures=(), recovered=(),
+              partitions=None) -> list:
     """Name every side of the polygon: which face, which band, which entity.
 
     §4 asks this of every physical-space polygon, and the answer is not
@@ -725,7 +757,9 @@ def attribute(polygon, faces, *, closures=(), recovered=()) -> list:
         if c.axis in ("H", "V"):
             closure_by_axis.setdefault(c.axis, []).append(c)
 
+    part_by_line = dict(partitions or {})
     out = []
+    attributed = set()
     for axis, fixed, (lo, hi) in _edges_of(polygon):
         hit = None
         for f in by_axis.get(axis, ()):
@@ -737,6 +771,7 @@ def attribute(polygon, faces, *, closures=(), recovered=()) -> list:
             hit = f
             break
         if hit is not None:
+            attributed.add(hit.wall_id)
             out.append(BoundaryFace(
                 axis=axis, fixed_mm=fixed, interval_mm=(lo, hi),
                 length_mm=hi - lo, basis=CLEAR_INTERNAL_FINISH_FACE,
@@ -762,11 +797,53 @@ def attribute(polygon, faces, *, closures=(), recovered=()) -> list:
                 cad_provenance=(cl.object_id,),
                 why=(BOUNDS_RECOVERED if rec else BOUNDS_PORTAL)))
             continue
+        part = None
+        for oid, row in part_by_line.items():
+            p_axis, p_fixed, p_lo, p_hi = row["geometry"]
+            if p_axis != axis or abs(p_fixed - fixed) > HAIRLINE_MM:
+                continue
+            if min(hi, p_hi) - max(lo, p_lo) <= HAIRLINE_MM:
+                continue
+            part = (oid, row)
+            break
+        if part is not None:
+            oid, row = part
+            established = row["clear_face_established"]
+            out.append(BoundaryFace(
+                axis=axis, fixed_mm=fixed, interval_mm=(lo, hi),
+                length_mm=hi - lo,
+                basis=(CLEAR_INTERNAL_FINISH_FACE if established
+                       else CLEAR_FACE_NOT_ESTABLISHED),
+                wall_band_id=row.get("band_id", ""),
+                face_id=row.get("candidate_id", ""),
+                cad_provenance=tuple(row.get("entities", (oid,))),
+                why=row.get("why", "")))
+            continue
         out.append(BoundaryFace(
             axis=axis, fixed_mm=fixed, interval_mm=(lo, hi),
             length_mm=hi - lo, basis=BASIS_NOT_ESTABLISHED,
-            why=("no established wall face, portal or recovered span "
-                 "covers this side")))
+            why=("no established wall face, portal, recovered span or "
+                 "single-line partition covers this side")))
+
+    # ---- second pass: the corners the wall turns at -------------------
+    #
+    # Asked only once every side that HAS a face has one, because a stub
+    # is claimed by a band already on this ring and the ring is not
+    # traversed in any particular order.
+    for i, f in enumerate(out):
+        if f.basis != BASIS_NOT_ESTABLISHED:
+            continue
+        ret = _junction_return(f.axis, f.fixed_mm, f.interval_mm[0],
+                               f.interval_mm[1], faces, attributed)
+        if ret is None:
+            continue
+        out[i] = BoundaryFace(
+            axis=f.axis, fixed_mm=f.fixed_mm, interval_mm=f.interval_mm,
+            length_mm=f.length_mm, basis=CLEAR_INTERNAL_FINISH_FACE,
+            wall_band_id=ret.wall_id, face_id=ret.face_id,
+            cad_provenance=ret.cad_provenance,
+            why=("the corner return of a band already bounding this "
+                 "space. No new geometry is asserted"))
     return out
 
 
@@ -790,6 +867,16 @@ class ClearSpace:
     def basis_established(self) -> bool:
         return self.basis == CLEAR_INTERNAL_FINISH_FACE
 
+    @property
+    def topology_established(self) -> bool:
+        """Are this space's limits known, whatever its area basis is?
+
+        §1: a supported single-line partition establishes TWO PHYSICAL
+        SPACES without establishing one millimetre of wall thickness.
+        """
+        return self.basis in (CLEAR_INTERNAL_FINISH_FACE,
+                              CLEAR_FACE_NOT_ESTABLISHED)
+
     def record(self, *, limit: int = 24) -> dict:
         return {
             "measurement_basis": self.basis,
@@ -808,6 +895,10 @@ class ClearSpace:
             "sides_with_no_established_face": sum(
                 1 for f in self.boundary_faces
                 if f.basis == BASIS_NOT_ESTABLISHED),
+            "sides_held_by_a_partition_of_unknown_thickness": sum(
+                1 for f in self.boundary_faces
+                if f.basis == CLEAR_FACE_NOT_ESTABLISHED),
+            "TOPOLOGY_ESTABLISHED": self.topology_established,
             "arrangement_faces_absorbed": self.absorbed_faces,
             "obstructed_extent_m2": round(self.obstructed_area_m2, 3),
             "area_behind_fittings_m2": round(self.absorbed_area_m2, 3),
@@ -817,27 +908,36 @@ class ClearSpace:
 
 def clear_space(space_id: str, region_id: str, polygon, faces, *,
                 closures=(), recovered=(), absorbed=0,
-                obstructed_m2: float = 0.0, complete: bool = True
-                ) -> ClearSpace:
+                obstructed_m2: float = 0.0, complete: bool = True,
+                partitions=None) -> ClearSpace:
     """Measure one space on the clear-internal-finish-face basis."""
     bf = tuple(attribute(polygon, faces, closures=closures,
-                         recovered=recovered))
+                         recovered=recovered, partitions=partitions))
     x0, y0, x1, y1 = polygon.bounds
     established = bool(bf) and complete and all(
         f.basis == CLEAR_INTERNAL_FINISH_FACE for f in bf)
+    partition_only = bool(bf) and complete and not established and all(
+        f.basis in (CLEAR_INTERNAL_FINISH_FACE, CLEAR_FACE_NOT_ESTABLISHED)
+        for f in bf)
+    basis = (CLEAR_INTERNAL_FINISH_FACE if established
+             else CLEAR_FACE_NOT_ESTABLISHED if partition_only
+             else BASIS_NOT_ESTABLISHED)
     return ClearSpace(
         space_id=space_id, region_id=region_id, polygon_wkt=polygon.wkt,
         area_m2=polygon.area / 1e6,
         principal_dims_mm=(round(x1 - x0, 1), round(y1 - y0, 1)),
-        basis=(CLEAR_INTERNAL_FINISH_FACE if established
-               else BASIS_NOT_ESTABLISHED),
+        basis=basis,
         boundary_faces=bf, absorbed_faces=absorbed,
         absorbed_area_m2=max(0.0, polygon.area / 1e6 - obstructed_m2),
         notes={} if established else {
             "why_not_released": (
+                "a single-line partition bounds this space and its "
+                "thickness is not established, so the TOPOLOGY holds and "
+                "the clear area does not"
+                if partition_only else
                 "the clear-internal flood did not close, or a side of this "
-                "polygon is not an established wall face, portal or "
-                "recovered span")})
+                "polygon is not an established wall face, portal, "
+                "recovered span or single-line partition")})
 
 
 @dataclass
