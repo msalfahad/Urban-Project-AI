@@ -43,6 +43,7 @@ from engine import cad_openings as openings_mod
 from engine import drawing_region as dregion
 from engine import enclosure_role as roles
 from engine import face_subdivision as fsub
+from engine import interior_exterior as iexr
 from engine import junction_recovery as jrec
 from engine import partition_continuity as pcont
 from engine import physical_wall as pwall
@@ -51,6 +52,7 @@ from engine import portal_match as pmatch
 from engine import room_partition_graph as rpg
 from engine import semantic_seed as seeds_mod
 from engine import space_enclosure as enc
+from engine import cad_space_role as srole
 from engine import space_topologies as topo
 from engine.boundary_match import VectorCandidate
 from engine.space_objects import SRC_VECTOR_WALL_FACE
@@ -323,6 +325,7 @@ class Report:
     continuity: list = field(default_factory=list)
     junctions: list = field(default_factory=list)
     subdivisions: list = field(default_factory=list)
+    space_roles: object = None
     notes: dict = field(default_factory=dict)
 
     def counts(self) -> dict:
@@ -360,6 +363,8 @@ class Report:
             "spaces_with_material_authority": sum(
                 1 for r in self.rows
                 if r.material_authority == pcont.MATERIAL_ESTABLISHED),
+            "by_space_role": (self.space_roles.counts()["by_role"]
+                              if self.space_roles else {}),
             "release_eligible": len(rel),
             "by_enclosure_role": dict(Counter(
                 r.enclosure_role for r in self.rows).most_common()),
@@ -403,6 +408,8 @@ class Report:
             "partition_continuity": [c.record() for c in self.continuity],
             "junction_recovery": [j.record() for j in self.junctions],
             "face_subdivision": [d.record() for d in self.subdivisions],
+            "space_roles": (self.space_roles.record()
+                            if self.space_roles else None),
             "boundary_authority": (self.authority.record()
                                    if self.authority else None),
             "identity_reconciliation": (self.identity.record()
@@ -667,6 +674,7 @@ def measure(normalized, profile, *, semantic=None) -> Report:
     agg_open = openings_mod.OpeningReport()
     agg_match = pmatch.MatchReport()
     role_of: dict = {}
+    envelopes: dict = {}
     eligible_count = 0
     rows: list = []
 
@@ -729,13 +737,23 @@ def measure(normalized, profile, *, semantic=None) -> Report:
         agg_match.notes.update(matched.notes)
         status = matched.status_of()
 
+        # ---- ROUND 6: what is inside this building, and what is not ----
+        #
+        # Built from the authority's OWN envelope and site verdicts. Where a
+        # region has no envelope band the model says so and every verdict
+        # that would have rested on it stays UNRESOLVED.
+        envelopes[reg.region_id] = iexr.build(
+            reg.region_id, region_cands, auth, closures=ring_closures,
+            room_points=[(o.x, o.y) for o in obs])
+
         # ---- ROUND 5: is the partition there where nobody drew it? -----
         #
         # The chain is kept whole. Faces become BANDS become PHYSICAL WALLS
         # before anything asks whether a stretch of one is continuous, and
         # the answer carries two authorities so that closing a room never
         # quietly creates blockwork.
-        walls = pwall.build(eligible, region_id=reg.region_id)
+        walls = pwall.build(eligible, region_id=reg.region_id,
+                            openings=opens.openings)
         cont = pcont.assess(walls.walls, openings=opens.openings,
                             region_id=reg.region_id)
         jct = jrec.recover(walls.walls, region_id=reg.region_id,
@@ -836,6 +854,30 @@ def measure(normalized, profile, *, semantic=None) -> Report:
             rep.roles.verdicts.extend(role_rep.verdicts)
 
     rep.rows = rows
+
+    # ---- ROUND 6, §2: what KIND of space is each of these? -------------
+    #
+    # Round 2's classifier still runs above, and still refuses a site, an
+    # envelope, a super-region or a frame the right to release as a room.
+    # What it may no longer do is call an unnamed space a void, so the role
+    # the engine REPORTS comes from here, on positive evidence only.
+    concepts = {}
+    for r in rows:
+        seen = []
+        for z in r.zones:
+            for o in (z.identity.observations if z.identity else ()):
+                look = getattr(o, "lookup", None)
+                if look is not None and look.is_known:
+                    seen.append((look.concept, look.concept_class))
+        concepts[r.space_id] = tuple(dict.fromkeys(seen))
+    rep.space_roles = srole.classify(
+        rows, regions=regions, envelopes=envelopes,
+        identity_concepts=concepts,
+        semantic_observations=sem.observations,
+        thickness_modes=tuple(sorted({
+            round(w.thickness_mm, 1) for wr in rep.walls for w in wr.walls})
+            if rep.walls else ()))
+
     rep.authority = agg_auth
     rep.openings = agg_open
     rep.matches = agg_match

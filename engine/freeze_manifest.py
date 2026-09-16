@@ -191,7 +191,58 @@ ROUNDS = (
                 "20fd3ed87d05f40ba6cf6123"},
         note="2 complete physical spaces became 36, release stayed 0",
     ),
+    Freeze(
+        round_name="ROUND_5_PARTITION_CONTINUITY",
+        commit="accf8ec",
+        source_file="P7757_ARCHITECTURAL.dwg",
+        source_sha256_16="7f61f3acdd62d62d",
+        artifact_path="data/runs/7757/P7757_CAD_round5.json",
+        artifact_sha256_16="57edcd4f2f23206b",
+        project_output_hash={
+            "PROJECT_2_CAD_ROUND5_HASH": "8a90def3ac70301a1398aed5"},
+        synthetic_artifact_hash={
+            "ROUND_5_SYNTHETIC_HASH": "852363123a94453174791e42"},
+        code_hashes_at_freeze={
+            "PHYSICAL_WALL_BAND_HASH": "35449c817a74f5c1e3e45cf1",
+            "PARTITION_CONTINUITY_HASH": "f9b9742aa125bfd028b75166",
+            "JUNCTION_RECOVERY_HASH": "cbe777aa922d5ad948ad4189",
+            "FACE_SUBDIVISION_HASH": "1313a956a735565e0905a42e",
+            "FREEZE_MANIFEST_SCHEMA_HASH": "da9588f4cbed1014d0af91ba"},
+        dependency_hashes_at_freeze={
+            "CAD_ADAPTER_HASH": "bd331c8074806e8b19711417",
+            "LOCAL_ENCLOSURE_HASH": "01ff128e7ffdab820805dce1",
+            "DRAWING_REGION_HASH": "bd1c391980507d3e18f5d9db",
+            "CAD_OPENING_CLASSIFIER_HASH": "336c6f1bc5bb0a3ea42bb698",
+            "PORTAL_MATCHER_HASH": "42e7bb997ecbad74fa58e2cf",
+            "ROOM_PARTITION_GRAPH_HASH": "6bd4f2ff9ac748948e441baa"},
+        note="36 physical-space polygons became 57 and four released. The "
+             "benchmark export of this state is "
+             "ROUND5_BENCHMARK_EXPORT_MANIFEST_HASH "
+             "a656bb0005d6bee6cbc508c1, written before round 6 began "
+             "because round 6 edits physical_wall and the export's own "
+             "hash gate will correctly refuse to regenerate it afterwards",
+    ),
 )
+
+# Replays this project EXPECTS to diverge, and why. A divergence recorded
+# here was predicted; one that is not recorded here is news.
+PREDICTED_DIVERGENCES = {
+    "ROUND_2_ENCLOSURE_ROLE": {
+        "ROUND_2_SYNTHETIC_HASH": "round 3 rewrote the semantic seed "
+                                  "classifier",
+        "SEMANTIC_SEED_CLASSIFIER_HASH": "round 3 rewrote it",
+    },
+    "ROUND_5_PARTITION_CONTINUITY": {
+        "PHYSICAL_WALL_BAND_HASH": "round 6 replaces many-to-many face "
+                                   "pairing with a one-line-one-wall "
+                                   "assignment",
+        "ROUND_5_SYNTHETIC_HASH": "it stands on the wall-band hash. The "
+                                  "twenty-three CASES must still pass; the "
+                                  "hash is a replay, the pass is the score",
+        "ROOM_PARTITION_GRAPH_HASH": "round 6 adds the material-only "
+                                     "arrangement the trade layer needs",
+    },
+}
 
 
 def _live() -> dict:
@@ -312,11 +363,14 @@ def replay(fr: Freeze) -> dict:
             "status": NOT_REPLAYABLE,
             "why": WHAT_IS_NOT_REPLAYABLE,
         }
+    diverged = sorted(k for k, v in rows.items() if v["status"] == DIVERGED)
+    predicted = PREDICTED_DIVERGENCES.get(fr.round_name, {})
     return {
         "round": fr.round_name,
         "rows": rows,
-        "diverged": sorted(k for k, v in rows.items()
-                           if v["status"] == DIVERGED),
+        "diverged": diverged,
+        "predicted": {k: predicted[k] for k in diverged if k in predicted},
+        "UNPREDICTED_DIVERGENCE": [k for k in diverged if k not in predicted],
         "what_divergence_means": WHAT_DIVERGENCE_MEANS,
     }
 
@@ -339,6 +393,7 @@ def manifest() -> dict:
                 "failure"),
         },
         "rounds": [fr.record() for fr in ROUNDS],
+        "predicted_divergences": dict(PREDICTED_DIVERGENCES),
         "replays": [replay(fr) for fr in ROUNDS],
         "artifact_checks": {fr.round_name: _artifact_agrees(fr)
                             for fr in ROUNDS},
@@ -363,7 +418,9 @@ def assert_no_artifact_was_rewritten() -> dict:
 
 
 def schema_hash() -> str:
-    parts = [SCHEMA, MATCHES, DIVERGED, NOT_REPLAYABLE]
+    parts = [SCHEMA, MATCHES, DIVERGED, NOT_REPLAYABLE,
+             ";".join(f"{r}:{','.join(sorted(v))}"
+                      for r, v in sorted(PREDICTED_DIVERGENCES.items()))]
     for fr in ROUNDS:
         parts.append("|".join([
             fr.round_name, fr.commit, fr.source_sha256_16,

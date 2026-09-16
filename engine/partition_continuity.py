@@ -390,6 +390,11 @@ def assess(walls, *, openings=(), region_id: str = "DR-001"
     wall_list = list(walls)
 
     for wall in wall_list:
+        # ROUND 6. A band paired on nothing but proximity may not lend a
+        # face it never drew to the topology. It is still reported as a
+        # band — it may well be a wall — but it recovers nothing, which is
+        # the difference between observing and inventing.
+        weak = not getattr(wall, "has_pairing_evidence", True)
         faces = (wall.face_a_mm, wall.face_b_mm)
         for span in wall.spans:
             if span.coverage == pw.BOTH_FACES:
@@ -434,7 +439,18 @@ def assess(walls, *, openings=(), region_id: str = "DR-001"
             # §7 FIRST, ALWAYS. An opening is negative evidence, and it
             # outranks every positive sign: a door drawn across a span is
             # the reason the span is empty.
-            if covering:
+            if weak:
+                verdict = UNRESOLVED_GAP
+                topo, mat = TOPOLOGY_NONE, MATERIAL_NONE
+                ev.append("Z_THE_BAND_ITSELF_IS_PAIRED_ON_NOTHING_BUT_"
+                          "PROXIMITY")
+                why = ("these two lines were called one wall because they "
+                       "run alongside each other and nothing else. No "
+                       "opening is hosted between them, no reveal closes "
+                       "them, neither is the other's nearest partner, and "
+                       "the separation is not one this drawing repeats. "
+                       "Such a band may not supply a face nobody drew")
+            elif covering:
                 verdict = OPENING_INTERRUPTION
                 topo, mat = TOPOLOGY_PORTAL, MATERIAL_ABSENT
                 why = ("a supported opening occupies this span end to end. "
@@ -493,6 +509,10 @@ def assess(walls, *, openings=(), region_id: str = "DR-001"
         "drawn across a span is the reason the span is empty, and "
         "recovering material there would be filling a doorway with "
         "blockwork")
+    rep.notes["a_band_must_earn_its_recovery"] = (
+        "a wall band paired on nothing but proximity recovers nothing. "
+        "That is round 6's addition and it is what stops a phantom second "
+        "face from slicing a floor")
     rep.notes["default"] = (
         "UNRESOLVED_GAP. False subdivision is as dangerous as false "
         "merging, so a gap nothing explains stays a gap nothing explains")

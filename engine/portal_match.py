@@ -133,7 +133,9 @@ class MatchReport:
                       "established at all"),
             "ambiguity_is_an_answer": (
                 "PORTAL_HOST_AMBIGUOUS blocks release through that portal "
-                "and does not decay into a guess"),
+                "and does not decay into a guess. Only hypotheses that "
+                "could close a boundary compete for one: a grade-D gap is "
+                "not a rival portal"),
             "notes": dict(self.notes),
         }
 
@@ -179,8 +181,16 @@ def match(openings, candidates, *, region=None, region_report=None,
 
     # Which openings claim which door geometry. A symbol claimed twice is
     # exactly §12's "multiple plausible hosts".
+    #
+    # ONLY A CANDIDATE PORTAL COMPETES. A hypothesis that closes nothing —
+    # a grade-D wall gap — is not a rival for a door: asking "which wall
+    # does this portal pierce" presupposes a portal. Letting gaps compete
+    # cost a real door its host wherever a gap's end happened to fall on
+    # that door's hinge, and the room behind it never closed.
     claimed = defaultdict(list)
     for o in openings:
+        if not o.may_close_boundary:
+            continue
         for s in o.symbol_ids:
             claimed[s].append(o.opening_id)
 

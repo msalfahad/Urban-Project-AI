@@ -26,6 +26,29 @@ and windows; or a run broken for no reason at all by whoever drew it.
 
     THE WALL'S IDENTITY MUST SURVIVE THE FRAGMENTATION OF ITS FACES.
 
+ROUND 6 ADDS THE OTHER HALF OF THAT SENTENCE
+
+The round-5 model asked each pair of parallel lines, in isolation, "are you
+a wall?" — and on P7757 845 drawn lines answered yes 3,272 times. 713 of
+them belonged to more than one band and one belonged to eight, because
+inside any 600 mm band a wall face sits beside its own finish line, a door
+frame, a fixture edge and the next room's wall. The phantom partitions that
+followed sliced the floor, and four wrong rooms released.
+
+    ONE SOURCE LINE MAY SERVE SEVERAL WALLS ONLY WHERE THOSE WALLS OCCUPY
+    DISJOINT STRETCHES OF IT.
+
+That is the explicit geometric evidence, and it is the whole of the new
+rule. Which partner a line takes on a contested stretch is settled by NAMED
+EVIDENCE in a stated order — an opening hosted, a reveal capping both ends,
+mutual agreement — and only then by a thickness the DRAWING ITSELF repeats.
+
+    A THICKNESS MODE IS SUPPORTING EVIDENCE. IT NEVER DEFINES A WALL.
+
+There is no universal "50 mm is not a wall" here and there may not be: a
+50 mm feature is usually a detail line and sometimes it is a partition, and
+the difference is what it does, not what it measures.
+
 So a wall is assembled from PAIRED evidence — two faces a consistent
 distance apart, overlapping along their length — and then its own extent is
 described in three separate registers, which are never merged:
@@ -51,7 +74,7 @@ from dataclasses import dataclass, field
 from engine import cad_profile as cprofile
 from engine import space_enclosure as enc
 
-MODEL = "FRAGMENT_TOLERANT_PHYSICAL_WALL_BAND_V1"
+MODEL = "ONE_LINE_ONE_WALL_PHYSICAL_BAND_V2"
 
 # The wall band and the overlap rule are the profile's own, unchanged: they
 # are what defined "wall" on this project in the first place.
@@ -63,6 +86,31 @@ MIN_FACE_OVERLAP_MM = cprofile.MIN_FACE_OVERLAP_MM
 # would not distinguish them. `space_enclosure.JUNCTION_REACH_MM`.
 JOIN_MM = enc.JUNCTION_REACH_MM
 COLLINEAR_TOL_MM = enc.COLLINEAR_JOIN_MM
+
+# ---------------------------------------------------- pairing evidence
+EV_HOSTS_AN_OPENING = "AN_OPENING_IS_HOSTED_BETWEEN_THESE_TWO_FACES"
+EV_CAPPED_BOTH_ENDS = "A_REVEAL_CLOSES_THE_BAND_AT_BOTH_ENDS"
+EV_CAPPED_ONE_END = "A_REVEAL_CLOSES_THE_BAND_AT_ONE_END"
+EV_MUTUAL_NEAREST = "EACH_FACE_IS_THE_OTHER_S_NEAREST_ADMISSIBLE_PARTNER"
+EV_THICKNESS_MODE = "THE_SEPARATION_IS_A_THICKNESS_THIS_DRAWING_REPEATS"
+EV_JUNCTION = "ANOTHER_WALL_MEETS_THIS_BAND"
+EV_OVERLAP = "THE_FACES_RUN_ALONGSIDE_EACH_OTHER"
+
+PAIRING_EVIDENCE = (EV_HOSTS_AN_OPENING, EV_CAPPED_BOTH_ENDS,
+                    EV_CAPPED_ONE_END, EV_MUTUAL_NEAREST,
+                    EV_THICKNESS_MODE, EV_JUNCTION, EV_OVERLAP)
+
+# The order the evidence is read in. NOT a weighted sum — a pair beats
+# another pair on the first token where they differ, and the last two are
+# tie-breakers rather than evidence.
+PRIORITY = (EV_HOSTS_AN_OPENING, EV_CAPPED_BOTH_ENDS, EV_CAPPED_ONE_END,
+            EV_MUTUAL_NEAREST, EV_THICKNESS_MODE, EV_JUNCTION)
+
+# A separation is a thickness THIS DRAWING REPEATS when it occurs at least
+# this many times among the walls established without needing it. One
+# occurrence is a measurement; two is a convention.
+MODE_MIN_SUPPORT = 2
+
 
 # How a span of a wall is covered by what is drawn.
 BOTH_FACES = "BOTH_FACES_DRAWN"
@@ -138,10 +186,23 @@ class PhysicalWall:
     face_a: tuple = ()        # FaceRun
     face_b: tuple = ()
     spans: tuple = ()         # Span, in order along the wall
+    evidence: tuple = ()      # why these two lines are one wall
+    overlap_mm: tuple = ()    # the stretch of each line this wall uses
 
     @property
     def thickness_mm(self) -> float:
         return abs(self.face_b_mm - self.face_a_mm)
+
+    @property
+    def has_pairing_evidence(self) -> bool:
+        """Is there any reason to call these two lines a wall but nearness?
+
+        Running alongside each other is what made 3,272 bands out of 845
+        lines. A band with nothing else behind it may still be reported —
+        it may well be a wall — but it has not earned the right to lend a
+        face it never drew to the room topology.
+        """
+        return any(t != EV_OVERLAP for t in self.evidence)
 
     @property
     def centre_mm(self) -> float:
@@ -211,6 +272,12 @@ class PhysicalWall:
                             "span inferred for topology is not a span "
                             "anybody may take blockwork from")},
             "spans": [s.record() for s in self.spans],
+            "PAIRING_EVIDENCE": list(self.evidence),
+            "uses_the_lines_over_mm": [round(v, 2)
+                                       for v in self.overlap_mm],
+            "why_these_two_lines": (
+                "named evidence in a stated order, and a line may serve "
+                "another wall only over a DISJOINT stretch of itself"),
         }
 
 
@@ -219,12 +286,19 @@ class WallReport:
     region_id: str = ""
     walls: list = field(default_factory=list)
     unpaired_lines: int = 0
+    pairs_offered: int = 0
+    pairs_refused_for_overlap: int = 0
+    thickness_modes: tuple = ()
     notes: dict = field(default_factory=dict)
 
     def counts(self) -> dict:
         return {
             "physical_wall_bands": len(self.walls),
             "unpaired_face_lines": self.unpaired_lines,
+            "pairs_offered": self.pairs_offered,
+            "pairs_refused_because_the_line_was_taken":
+                self.pairs_refused_for_overlap,
+            "THICKNESSES_THIS_DRAWING_REPEATS": list(self.thickness_modes),
             "walls_with_a_half_drawn_span": sum(
                 1 for w in self.walls if w.half_drawn()),
             "walls_with_an_undrawn_gap": sum(
@@ -266,11 +340,23 @@ def frozen_parameters() -> dict:
         "MIN_FACE_OVERLAP_MM": MIN_FACE_OVERLAP_MM,
         "JOIN_MM": JOIN_MM,
         "COLLINEAR_TOL_MM": COLLINEAR_TOL_MM,
+        "PRIORITY": list(PRIORITY),
+        "MODE_MIN_SUPPORT": MODE_MIN_SUPPORT,
         "why": {
             "no_new_number": (
                 "the wall band and the overlap rule are the profile's, and "
                 "the join and collinearity tolerances are the enclosure's. "
                 "This module introduces no constant of its own"),
+            "one_line_one_wall": (
+                "the only structural rule round 6 adds. A line may face "
+                "two walls over disjoint stretches and never over the same "
+                "stretch — which is explicit geometric evidence, not a "
+                "tolerance"),
+            "thickness_never_defines": (
+                "a separation that the drawing repeats RANKS a contested "
+                "pair. It never admits or rejects one, and there is no "
+                "universal rule that any particular millimetre figure is "
+                "or is not a wall"),
             "pairing_is_required": (
                 "a wall is two faces a consistent distance apart. One line "
                 "is a line. This is the same structural test the profile "
@@ -282,7 +368,7 @@ def frozen_parameters() -> dict:
 def wall_band_hash() -> str:
     parts = [MODEL, str(MIN_WALL_MM), str(MAX_WALL_MM),
              str(MIN_FACE_OVERLAP_MM), str(JOIN_MM), str(COLLINEAR_TOL_MM),
-             "|".join(COVERAGE)]
+             "|".join(COVERAGE), "|".join(PRIORITY), str(MODE_MIN_SUPPORT)]
     return hashlib.sha256("|".join(parts).encode("utf-8")).hexdigest()[:24]
 
 
@@ -386,44 +472,191 @@ def _spans(face_a, face_b, thickness_mm: float = 0.0) -> tuple:
     return tuple(out)
 
 
-def build(candidates, *, region_id: str = "DR-001") -> WallReport:
-    """Assemble this region's physical walls from its drawn faces."""
+def _capped(candidates, axis, f_lo, f_hi, station) -> bool:
+    """Is the band closed across its faces at this station?
+
+    A reveal — the short perpendicular piece that closes a wall at a door,
+    at a corner or at its end — is the strongest cheap evidence that two
+    lines are the two faces of one wall. Two unrelated parallel lines have
+    nothing across them.
+    """
+    for c in candidates:
+        if c.axis == axis or c.axis not in ("H", "V"):
+            continue
+        if abs(c.fixed_mm - station) > COLLINEAR_TOL_MM:
+            continue
+        lo, hi = sorted((c.start_mm, c.end_mm))
+        if lo <= f_lo + COLLINEAR_TOL_MM and hi >= f_hi - COLLINEAR_TOL_MM:
+            return True
+    return False
+
+
+def _hosted_openings(openings) -> set:
+    """The face pairs an already-classified opening says are one wall."""
+    out = set()
+    for o in openings or ():
+        faces = o.wall_faces_mm or ()
+        if len(faces) < 2:
+            continue
+        out.add((o.axis, round(min(faces), 1), round(max(faces), 1)))
+    return out
+
+
+def _overlap_interval(a, b):
+    """The stretch over which two merged unions actually run alongside."""
+    lo = max(min(iv[0] for iv in a), min(iv[0] for iv in b))
+    hi = min(max(iv[1] for iv in a), max(iv[1] for iv in b))
+    return (lo, hi) if hi > lo else None
+
+
+def build(candidates, *, region_id: str = "DR-001", openings=()
+          ) -> WallReport:
+    """Assemble this region's physical walls from its drawn faces.
+
+    TWO PASSES, and the second is the one round 6 exists for.
+
+    The first accepts only pairs that need no thickness argument at all —
+    a band hosting an opening, or closed by a reveal at both ends. Those
+    are walls on their own evidence, and the separations they show ARE this
+    drawing's wall thicknesses.
+
+    The second offers every remaining pair, ranked by named evidence in a
+    stated order, and accepts one only where BOTH its lines are still free
+    over that stretch. A line already spoken for between y=0 and y=4000 may
+    still be a face of another wall between y=6000 and y=10000; it may not
+    be a face of two walls over the same 4 metres.
+    """
     rep = WallReport(region_id=region_id)
     lines = _lines(candidates)
     keys = sorted(lines)
-    used = set()
+    unions = {k: _union(lines[k][2]) for k in keys}
+    hosted = _hosted_openings(openings)
 
-    for i, key_a in enumerate(keys):
-        axis_a, fixed_a, runs_a = lines[key_a]
-        ua = _union(runs_a)
-        for key_b in keys[i + 1:]:
-            axis_b, fixed_b, runs_b = lines[key_b]
+    # ---- every admissible pair, with its evidence ---------------------
+    pairs = []
+    for i, ka in enumerate(keys):
+        axis_a, fa, runs_a = lines[ka]
+        for kb in keys[i + 1:]:
+            axis_b, fb, runs_b = lines[kb]
             if axis_b != axis_a:
                 continue
-            sep = abs(fixed_b - fixed_a)
+            sep = abs(fb - fa)
             if sep < MIN_WALL_MM or sep > MAX_WALL_MM:
                 continue
-            ub = _union(runs_b)
-            if _overlap(ua, ub) < MIN_FACE_OVERLAP_MM:
+            if _overlap(unions[ka], unions[kb]) < MIN_FACE_OVERLAP_MM:
                 continue
-            wall_id = (f"PW-{region_id}-{axis_a}-"
-                       f"{round(min(fixed_a, fixed_b), 1)}-"
-                       f"{round(sep, 1)}")
-            rep.walls.append(PhysicalWall(
-                wall_id=wall_id, region_id=region_id, axis=axis_a,
-                face_a_mm=fixed_a, face_b_mm=fixed_b,
-                face_a=tuple(runs_a), face_b=tuple(runs_b),
-                spans=_spans(runs_a, runs_b, sep)))
-            used.add(key_a)
-            used.add(key_b)
+            iv = _overlap_interval(unions[ka], unions[kb])
+            if iv is None:
+                continue
+            f_lo, f_hi = min(fa, fb), max(fa, fb)
+            ev = [EV_OVERLAP]
+            if (axis_a, round(f_lo, 1), round(f_hi, 1)) in hosted:
+                ev.append(EV_HOSTS_AN_OPENING)
+            caps = sum(1 for st in iv
+                       if _capped(candidates, axis_a, f_lo, f_hi, st))
+            if caps >= 2:
+                ev.append(EV_CAPPED_BOTH_ENDS)
+            elif caps == 1:
+                ev.append(EV_CAPPED_ONE_END)
+            pairs.append({"a": ka, "b": kb, "sep": sep, "iv": iv,
+                          "overlap": _overlap(unions[ka], unions[kb]),
+                          "ev": ev, "axis": axis_a, "fa": fa, "fb": fb,
+                          "runs_a": runs_a, "runs_b": runs_b})
 
-    rep.unpaired_lines = len(keys) - len(used)
+    # mutual nearest, computed once over the admissible set
+    nearest = {}
+    for pr in pairs:
+        for x, y in ((pr["a"], pr), (pr["b"], pr)):
+            cur = nearest.get(x)
+            if cur is None or (pr["sep"], -pr["overlap"]) < \
+                    (cur["sep"], -cur["overlap"]):
+                nearest[x] = pr
+    for pr in pairs:
+        if nearest.get(pr["a"]) is pr and nearest.get(pr["b"]) is pr:
+            pr["ev"].append(EV_MUTUAL_NEAREST)
+
+    # ---- pass one: walls that need no thickness argument --------------
+    taken: dict = {}
+
+    def _free(key, iv) -> bool:
+        for lo, hi in taken.get(key, ()):
+            if min(hi, iv[1]) - max(lo, iv[0]) > JOIN_MM:
+                return False
+        return True
+
+    def _accept(pr) -> None:
+        for key in (pr["a"], pr["b"]):
+            taken.setdefault(key, []).append(pr["iv"])
+        accepted.append(pr)
+
+    accepted: list = []
+    certain = [pr for pr in pairs
+               if EV_HOSTS_AN_OPENING in pr["ev"]
+               or EV_CAPPED_BOTH_ENDS in pr["ev"]]
+    certain.sort(key=lambda pr: (-_rank(pr), -pr["overlap"], pr["sep"]))
+    for pr in certain:
+        if _free(pr["a"], pr["iv"]) and _free(pr["b"], pr["iv"]):
+            _accept(pr)
+
+    # ---- the drawing's own thicknesses, read off those walls ----------
+    support = Counter(round(pr["sep"], 1) for pr in accepted)
+    modes = tuple(sorted(t for t, n in support.items()
+                         if n >= MODE_MIN_SUPPORT))
+    rep.thickness_modes = modes
+    for pr in pairs:
+        if round(pr["sep"], 1) in modes and EV_THICKNESS_MODE not in pr["ev"]:
+            pr["ev"].append(EV_THICKNESS_MODE)
+
+    # ---- pass two: everything else, ranked, one stretch per line ------
+    rest = [pr for pr in pairs if pr not in accepted]
+    rest.sort(key=lambda pr: (-_rank(pr), -pr["overlap"], pr["sep"]))
+    for pr in rest:
+        if _free(pr["a"], pr["iv"]) and _free(pr["b"], pr["iv"]):
+            _accept(pr)
+
+    for pr in accepted:
+        sep = pr["sep"]
+        wall_id = (f"PW-{region_id}-{pr['axis']}-"
+                   f"{round(min(pr['fa'], pr['fb']), 1)}-{round(sep, 1)}")
+        rep.walls.append(PhysicalWall(
+            wall_id=wall_id, region_id=region_id, axis=pr["axis"],
+            face_a_mm=pr["fa"], face_b_mm=pr["fb"],
+            face_a=tuple(pr["runs_a"]), face_b=tuple(pr["runs_b"]),
+            spans=_spans(pr["runs_a"], pr["runs_b"], sep),
+            evidence=tuple(pr["ev"]), overlap_mm=pr["iv"]))
+
+    rep.unpaired_lines = len(keys) - len({k for pr in accepted
+                                          for k in (pr["a"], pr["b"])})
+    rep.pairs_offered = len(pairs)
+    rep.pairs_refused_for_overlap = len(pairs) - len(accepted)
     rep.notes["what_pairing_means"] = (
         "two faces a consistent distance apart, overlapping along their "
-        "length by at least the profile's own minimum. A line with no "
-        "partner stays a line")
+        "length, chosen by named evidence in a stated order. A line with "
+        "no partner stays a line")
+    rep.notes["one_line_one_wall"] = (
+        "a line may serve several walls only over DISJOINT stretches of "
+        "itself. On a contested stretch the better-evidenced pair wins and "
+        "the other is refused — which is the round-5 defect, closed")
+    rep.notes["thickness_is_evidence_not_a_definition"] = (
+        f"the thicknesses this drawing repeats are {list(modes)} mm, read "
+        "off the walls that needed no thickness argument. They RANK a "
+        "contested pair and they never admit or reject one on their own")
     rep.notes["fragmentation"] = (
         "faces are merged into runs before pairing, so a wall drawn in "
         "eleven pieces is one wall. Where the runs leave a hole, the hole "
         "is RECORDED as a span and nothing is concluded about it here")
     return rep
+
+
+def _rank(pr) -> int:
+    """Where this pair sits in the stated evidence order. Not a score.
+
+    Each token is worth more than everything below it put together, so a
+    pair beats another on the FIRST token where they differ. That is an
+    ordering, not a weighted sum, and no total is compared to a threshold.
+    """
+    value = 0
+    for n, token in enumerate(reversed(PRIORITY)):
+        if token in pr["ev"]:
+            value |= 1 << n
+    return value

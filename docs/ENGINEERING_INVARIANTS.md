@@ -1874,3 +1874,82 @@ A column is a closed figure whose BOTH extents lie inside the profile's
 wall band. It may not become a room, it may not break a partition that
 terminates into it, and observing one begins no structural quantity. This
 is architectural topology only.
+
+## 63 · ONE LINE IS ONE WALL FACE OVER ONE STRETCH
+
+*Round 6, addendum §1. `ONE_LINE_ONE_WALL_PHYSICAL_BAND_V2`,
+`PHYSICAL_WALL_BAND_HASH b6d79d2b5c5e2c13eb5d546d`.*
+
+A wall is two faces a consistent distance apart. One line is a line. Accepting
+every parallel neighbour a wall-like distance away lets ONE drawn line act as a
+face of four different walls over the same stretch, and each of those phantom
+bands then licenses a recovered span that slices a real room.
+
+```
+A line may face two walls over DISJOINT stretches, and never over the same
+stretch.
+```
+
+That is explicit geometric evidence, not a tolerance. On P7757 it refused
+2,883 of 3,272 offered pairs and left 389 bands.
+
+Evidence is ORDERED, never summed:
+
+```
+AN_OPENING_IS_HOSTED_BETWEEN_THESE_TWO_FACES
+A_REVEAL_CLOSES_THE_BAND_AT_BOTH_ENDS
+A_REVEAL_CLOSES_THE_BAND_AT_ONE_END
+EACH_FACE_IS_THE_OTHER_S_NEAREST_ADMISSIBLE_PARTNER
+THE_SEPARATION_IS_A_THICKNESS_THIS_DRAWING_REPEATS
+ANOTHER_WALL_MEETS_THIS_BAND
+```
+
+**A repeated thickness never defines a wall.** It ranks a contested pair, and
+it can neither admit a pair the structural test rejects nor reject one it
+admits. No millimetre figure anywhere in this engine is declared to be, or not
+to be, a wall — 50 mm is P7757's most repeated separation and it is ranked like
+any other.
+
+## 64 · A BAND PAIRED ON NOTHING MAY RECOVER NOTHING
+
+*Round 6, step 4. `NAMED_EVIDENCE_PARTITION_CONTINUITY_V1`.*
+
+Continuity recovery is only as sound as the band it recovers across. A band
+whose sole evidence is `THE_FACES_RUN_ALONGSIDE_EACH_OTHER` is proximity, and
+proximity is not pairing:
+
+```
+weak -> UNRESOLVED_GAP,  TOPOLOGY_NONE,  MATERIAL_NONE
+        Z_THE_BAND_ITSELF_IS_PAIRED_ON_NOTHING_BUT_PROXIMITY
+```
+
+This is §31 applied one level down. Round 5 already refused to treat
+collinearity as evidence of a wall; round 6 refuses to treat adjacency as
+evidence that there is a wall to be collinear WITH.
+
+## 65 · UNKNOWN IS NOT VOID
+
+*Round 6, step 3. `POSITIVE_EVIDENCE_CAD_SPACE_ROLE_V1`,
+`CAD_SPACE_ROLE_HASH cf6191908829d6a7d3b022d1`.*
+
+VOID and SHAFT are claims about what lies above and below a space. Nobody
+having written a name inside it is not such a claim. Round 5 called 43 of 57
+polygons VOID_OR_SHAFT by reading the round-2 ENCLOSURE role — whose
+`VOID_OR_SHAFT` means only "not a room seed" — as an architectural verdict.
+Two different questions had collapsed into one label.
+
+```
+UNNAMED_PENETRATION_NEEDS = (NO_OPENING_ANYWHERE_ON_ITS_BOUNDARY,
+                             THE_SAME_FOOTPRINT_APPEARS_ON_ANOTHER_PLAN)
+```
+
+Both, or the space is `INTERIOR_SPACE_UNCLASSIFIED` — an honest "not known
+yet", which is not releasable and is not a void. **No role is decided by how
+big a space is.** On P7757, 40 spaces have no opening at all and 13 of those
+repeat their footprint on another plan; only those 13 are called penetrations.
+
+INTERIOR and EXTERIOR are decided the same way, by envelope evidence rather
+than by area: the site ring minus the fabric ring is the exterior ground. Where
+a drawing carries no site boundary — as P7757 does not, in any of its nine
+regions — the engine enumerates ZERO exterior spaces and says so. A garden
+strip that cannot be separated is reported as unseparated, never invented.
