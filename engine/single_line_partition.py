@@ -41,7 +41,7 @@ from dataclasses import dataclass, field
 from engine import cad_profile as cprofile
 from engine import space_enclosure as enc
 
-MODEL = "POSITIVE_EVIDENCE_SINGLE_LINE_PARTITION_V1"
+MODEL = "POSITIVE_EVIDENCE_SINGLE_LINE_PARTITION_V2"
 
 # --- §1 the three authorities, kept apart --------------------------------
 TOPOLOGY_ESTABLISHED = "PARTITION_TOPOLOGY_ESTABLISHED"

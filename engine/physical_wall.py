@@ -74,7 +74,7 @@ from dataclasses import dataclass, field
 from engine import cad_profile as cprofile
 from engine import space_enclosure as enc
 
-MODEL = "SPACE_BOUNDED_ONE_LINE_ONE_WALL_PHYSICAL_BAND_V3"
+MODEL = "A_WALL_OWNS_STRETCHES_OF_ITS_TWO_LINES_V4"
 
 # The wall band and the overlap rule are the profile's own, unchanged: they
 # are what defined "wall" on this project in the first place.
@@ -536,6 +536,7 @@ def _spans(face_a, face_b, thickness_mm: float = 0.0, blocked=()) -> tuple:
                     for iv in ua + ub for v in iv}
                    | {span_lo, span_hi} | cuts)
     out = []
+    skipped = False
     for lo, hi in zip(edges, edges[1:]):
         if hi - lo <= JOIN_MM:
             continue
@@ -544,6 +545,7 @@ def _spans(face_a, face_b, thickness_mm: float = 0.0, blocked=()) -> tuple:
         # not this wall's, wherever it falls — including between this
         # wall's own first and last millimetre.
         if any(a <= mid <= b for a, b in (blocked or ())):
+            skipped = True
             continue
         in_a = any(x <= mid <= y for x, y in ua)
         in_b = any(x <= mid <= y for x, y in ub)
@@ -560,12 +562,18 @@ def _spans(face_a, face_b, thickness_mm: float = 0.0, blocked=()) -> tuple:
                         for oid in r.object_ids)
         else:
             cov, face, ids = NEITHER_FACE, "", ()
-        if out and out[-1].coverage == cov and out[-1].face == face:
+        # Two spans of the same coverage are one span — UNLESS a
+        # stretch belonging to another wall lies between them. Joining
+        # across that hole is how a wall swallows its neighbour's line
+        # while reporting the same coverage from end to end.
+        if out and not skipped and out[-1].coverage == cov \
+                and out[-1].face == face:
             prev = out[-1]
             out[-1] = Span(prev.lo, hi, cov, face,
                            prev.object_ids + tuple(ids))
         else:
             out.append(Span(lo, hi, cov, face, tuple(ids)))
+        skipped = False
     return tuple(out)
 
 

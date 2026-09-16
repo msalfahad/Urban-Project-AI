@@ -2246,3 +2246,137 @@ floor.
 It is registered as a physical space and it releases no room area. A
 stair's floor is measured on its going and its rise, never as a rectangle
 on plan, and that is a quantity-surveying fact rather than a threshold.
+
+---
+
+## 77 · A WALL OWNS STRETCHES OF ITS LINES, NOT THE SPAN BETWEEN THEM
+
+A band that reports the interval from its first millimetre to its last
+claims everything in between, including stretches another wall is drawn
+along. A wall owns a SET:
+
+```
+owned_mm    the stretches of its two lines it uses, taken in evidence
+            order with every stretch another wall holds blocked out
+drawn_mm    where BOTH its faces are drawn — where it IS a band
+face_stretches(which)
+            where THAT face is drawn, within what the wall owns
+```
+
+The gap a doorway leaves INSIDE a wall belongs to that wall. A stretch
+the wall next door is drawn along does not. One interval cannot say
+which is which, and a hull says the wrong one.
+
+**Three readers, three questions, and crossing them costs a room.**
+Where a face is drawn is what attributes a room's boundary. Where a band
+IS a band is the evidence a single line continues. Which stretches a
+wall uses is what an opening, a fitting and this invariant are asked
+about.
+
+**And two spans of the same coverage are not one span when a stretch
+belonging to another wall lies between them.** Joining across that hole
+is how a wall reports continuous ownership of a line it does not own.
+
+---
+
+## 78 · A FITTING'S FRONT FACE IS NOT WHERE A ROOM ENDS
+
+A band that shares a face line with another band, stands on the opposite
+side of it, and is DRAWN over a shorter run is a fitting: a counter, a
+run of units, a wardrobe, a duct casing.
+
+```
+the SHARED face  is where it meets the wall. A space on that side is
+                 bounded by the wall behind, which draws that line
+the FRONT face   stands out into the room. No room ends there
+```
+
+A fitting gives no clear internal finish face, is not the inside of a
+wall for the flood, and **cannot become a single-line partition however
+much evidence it collects** — a counter runs wall to wall, continues an
+alignment and has an opening beside it, and every one of those tokens is
+true of it.
+
+Which of two stacked bands is the wall is decided on HOW FAR EACH IS
+DRAWN. How much of the shared line each ended up owning says nothing:
+only one of them can own any given stretch of it.
+
+---
+
+## 79 · A PANTRY IS NOT ALWAYS A ROOM
+
+```
+PHYSICAL_SPACE  ->  FUNCTIONAL_ZONE  ->  TRADE_MEASUREMENT_ZONE
+```
+
+A functional zone creates no wall, no room and no quantity. One open
+space may hold a saloon, a dining, an American pantry and a circulation
+zone with nothing physical between them, and none of those boundaries
+may ever become blockwork or a room polygon.
+
+```
+CLOSED_PANTRY            four sides of established wall face
+OPEN_AMERICAN_PANTRY     it shares its space with the dining, saloon,
+                         living or reception it serves
+PANTRY_OPENNESS_UNKNOWN  a side no wall accounts for and nothing named
+                         beyond it. Open to WHAT, nobody says
+```
+
+**An open edge tiles nothing**, and the zone is never closed virtually
+to produce a fourth wall. **Without the units' own geometry the tiled
+length is NOT ESTABLISHED**: which stretch of an open space's perimeter
+is the pantry's is a question the units answer. **And no tile height is
+ever assumed** — without an owner rule the height and every area resting
+on it are an OWNER_RULE_REQUEST.
+
+---
+
+## 80 · A STAIR IS FIVE QUANTITIES AND A PLAN ANSWERS THREE
+
+```
+TREAD_M2   every tread from ITS OWN polygon — never a constant width
+           times a constant going times a count
+RISER_M2   width by height, and a PLAN CARRIES NO HEIGHT
+LANDING_M2 what the flights leave between them
+NOSING_LM  the exposed front edges
+STAIR_SKIRTING_LM   separately again
+```
+
+Square metres and linear metres are never added. Where the stair finish
+differs from the floor's — marble on the stair, porcelain around it —
+**the same square metre may not appear in both**, and a stair's footprint
+belongs to the stair.
+
+Without section evidence every riser is `RISER_QUANTITY_NOT_ESTABLISHED`.
+Neither `treads = risers` nor `treads = risers - 1` is derived anywhere.
+
+A run of parallel lines at a tread's going is also a louvre, a grating
+and a run of shelving. Four things separate a stair from them, each
+stated as a share or as the module's own figure:
+
+* **a stair fills its cell** — a run covering a small share of the cell
+  it stands in, with no stair label, is refused;
+* **two lines less than a going apart are one step's edge** — a nosing
+  line in front of each riser line is not a second flight;
+* **a walk is cut where the spans jump** — a room's own wall sits a
+  going from the first tread and joins the walk;
+* **runs in one cell are flights of one stair.**
+
+Where two flights of one stair overlap, their treads cannot both be
+marble and neither is chosen: the tread quantity is NOT ESTABLISHED.
+
+---
+
+## 81 · A MODEL HASH FREEZES A VOCABULARY, NOT A BEHAVIOUR
+
+These hashes are computed from a module's model name, its evidence
+tokens and its frozen parameters. Round 6D rewrote how three modules
+DECIDE without touching any of those, and their hashes would not have
+moved while the measured numbers did.
+
+**A replay that matches while the numbers move is worse than useless.**
+So a round that changes what a module concludes bumps that module's
+MODEL name, the freeze replays as `REPLAY_DIVERGED_UNDER_LATER_CODE`,
+and the reason is recorded against it in `PREDICTED_DIVERGENCES`.
+
+The CASES are the score. The hash is the question.

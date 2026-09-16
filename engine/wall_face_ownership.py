@@ -61,7 +61,7 @@ from engine import cad_profile as cprofile
 from engine import fitting_band as fitting
 from engine import space_enclosure as enc
 
-MODEL = "SPACE_STOPS_AT_THE_FACE_WALL_OWNERSHIP_V1"
+MODEL = "SPACE_STOPS_AT_THE_FACE_AND_NEVER_AT_A_FITTING_V2"
 
 # --- §4 the measurement bases, never silently switched -------------------
 CLEAR_INTERNAL_FINISH_FACE = "CLEAR_INTERNAL_FINISH_FACE"

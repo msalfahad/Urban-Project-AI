@@ -70,6 +70,7 @@ CONFIGURATION_NOT_ESTABLISHED = "STAIR_CONFIGURATION_NOT_ESTABLISHED"
 # --- what a plan cannot answer -------------------------------------------
 RISER_NOT_ESTABLISHED = "RISER_QUANTITY_NOT_ESTABLISHED"
 TREAD_NOT_ESTABLISHED = "TREAD_QUANTITY_NOT_ESTABLISHED"
+FLIGHTS_OVERLAP = "FLIGHTS_OF_ONE_STAIR_OVERLAP_EACH_OTHER"
 LANDING_NOT_ESTABLISHED = "LANDING_QUANTITY_NOT_ESTABLISHED"
 SKIRTING_NOT_ESTABLISHED = "STAIR_SKIRTING_NOT_ESTABLISHED"
 FLOOR_TO_FLOOR_NOT_ESTABLISHED = "FLOOR_TO_FLOOR_HEIGHT_NOT_ESTABLISHED"
@@ -107,6 +108,12 @@ LANDING_MIN_MM = MAX_GOING_MM
 # project's own thinnest wall, doubled: nothing new is chosen.
 MIN_WIDTH_MM = cprofile.MIN_WALL_THICKNESS_MM * 2.0
 
+# A STAIR FILLS ITS CELL. A run of hatching in the corner of a room is
+# parallel, pitched and inside an enclosure too — and it covers a few
+# per cent of it. A share, never an area: the cell decides the scale.
+STAIR_CELL_SHARE = 0.25
+NOT_ENOUGH_OF_THE_CELL = "THE_RUN_COVERS_TOO_LITTLE_OF_THE_CELL_IT_IS_IN"
+
 
 def frozen_parameters() -> dict:
     return {
@@ -118,7 +125,12 @@ def frozen_parameters() -> dict:
         "SAME_PITCH_MM": SAME_PITCH_MM,
         "LANDING_MIN_MM": LANDING_MIN_MM,
         "MIN_WIDTH_MM": MIN_WIDTH_MM,
+        "STAIR_CELL_SHARE": STAIR_CELL_SHARE,
         "why": {
+            "a_stair_fills_its_cell": (
+                "a run of hatching is parallel, pitched and inside an "
+                "enclosure as well. What a stair also does is take up "
+                "its cell, and a share says so at any scale"),
             "a_riser_needs_a_section": (
                 "a plan carries no height. Without section evidence the "
                 "riser quantity is NOT ESTABLISHED, and no standard rise "
@@ -151,7 +163,8 @@ def model_hash() -> str:
                 NOT_A_STAIR]
              + [str(v) for v in (MIN_TREADS, MIN_GOING_MM, MAX_GOING_MM,
                                  SAME_PITCH_MM, LANDING_MIN_MM,
-                                 MIN_WIDTH_MM)])
+                                 MIN_WIDTH_MM, STAIR_CELL_SHARE)]
+             + [NOT_ENOUGH_OF_THE_CELL, FLIGHTS_OVERLAP])
     return hashlib.sha256("|".join(parts).encode("utf-8")).hexdigest()[:24]
 
 
@@ -271,7 +284,10 @@ class Flight:
             "number_of_treads": len(self.treads),
             "number_of_risers": len(self.risers),
             "TREAD_M2": round(self.tread_area_m2, 4),
-            "RISER_M2": (None if any(r.area_m2 is None for r in self.risers)
+            # NO RISERS IS NOT ZERO RISERS. An empty sum reads as a
+            # measured nothing, and nothing here has been measured.
+            "RISER_M2": (None if not self.risers
+                         or any(r.area_m2 is None for r in self.risers)
                          else round(sum(r.area_m2 or 0.0
                                         for r in self.risers), 4)),
             "NOSING_LM": round(self.nosing_lm, 3),
@@ -294,6 +310,7 @@ class Assembly:
     space_id: str = ""
     footprint_wkt: str = ""
     footprint_area_m2: float = 0.0
+    containing_space_area_m2: float | None = None
     flights: list = field(default_factory=list)
     landings: list = field(default_factory=list)
     configuration: str = CONFIGURATION_NOT_ESTABLISHED
@@ -318,7 +335,9 @@ class Assembly:
     @property
     def riser_m2(self):
         vals = [r.area_m2 for f in self.flights for r in f.risers]
-        return None if any(v is None for v in vals) else sum(vals)
+        if not vals or any(v is None for v in vals):
+            return None          # not established is not zero
+        return sum(vals)
 
     def record(self) -> dict:
         return {
@@ -330,9 +349,17 @@ class Assembly:
             "configuration": self.configuration,
             "flight_count": len(self.flights),
             "footprint_area_m2": round(self.footprint_area_m2, 4),
+            "containing_space_area_m2": (
+                None if self.containing_space_area_m2 is None
+                else round(self.containing_space_area_m2, 4)),
             "footprint_wkt_mm": self.footprint_wkt,
             "MEASURED_NET": {
-                "TREAD_M2": round(self.tread_m2, 4),
+                # A stair whose flights overlap cannot have both their
+                # treads, and neither can be chosen: the quantity is NOT
+                # ESTABLISHED rather than the larger of two readings.
+                "TREAD_M2": (None if TREAD_NOT_ESTABLISHED
+                             in self.exceptions
+                             else round(self.tread_m2, 4)),
                 "RISER_M2": (None if self.riser_m2 is None
                              else round(self.riser_m2, 4)),
                 "LANDING_M2": round(self.landing_m2, 4),
@@ -393,10 +420,19 @@ class StairReport:
 def _runs(lines, axis: str) -> list:
     """Parallel drawn lines on one axis, grouped into pitched runs.
 
-    A run is three or more lines whose spacing is a tread's going and
-    repeats, and which span a common interval. That is what a flight of
-    treads looks like in plan. It is also what a louvre looks like, which
-    is why the caller still has to find stair evidence around it.
+    A run is three or more lines, each a tread's going from the last and
+    overlapping it along its length. SEVERAL RUNS MAY BE OPEN AT ONCE:
+    two flights side by side share their tread positions, and a walk
+    that can only follow one of them finds neither.
+
+    A CONSTANT pitch is not required — a winder's goings differ from
+    tread to tread, and requiring one would cut every winder into pieces
+    and then measure none of them. Constant pitch is recorded as
+    evidence where it is true.
+
+    This is also what a louvre, a grating and a run of shelving look
+    like, which is why the caller still has to find stair evidence
+    around the run.
     """
     rows = []
     for c in lines:
@@ -404,26 +440,62 @@ def _runs(lines, axis: str) -> list:
             continue
         lo, hi = sorted((c.start_mm, c.end_mm))
         rows.append((c.fixed_mm, lo, hi, c))
-    rows.sort()
-    out, cur = [], []
+    rows.sort(key=lambda r: (r[0], r[1], r[2]))
+    # TWO LINES LESS THAN A GOING APART ARE ONE STEP'S EDGE. A stair is
+    # often drawn with a nosing line just in front of each riser line,
+    # and read as two tracks it becomes two overlapping flights that
+    # measure the same marble twice.
+    merged = []
     for row in rows:
-        if not cur:
+        if merged and row[0] - merged[-1][0] < MIN_GOING_MM \
+                and min(merged[-1][2], row[2]) \
+                - max(merged[-1][1], row[1]) > MIN_WIDTH_MM:
+            prev = merged[-1]
+            merged[-1] = (prev[0], min(prev[1], row[1]),
+                          max(prev[2], row[2]), prev[3])
+            continue
+        merged.append(row)
+    rows = merged
+    open_runs: list = []
+    done: list = []
+    for row in rows:
+        best, best_gap = None, None
+        for run in open_runs:
+            last = run[-1]
+            gap = row[0] - last[0]
+            span = min(last[2], row[2]) - max(last[1], row[1])
+            if MIN_GOING_MM <= gap <= MAX_GOING_MM and span > MIN_WIDTH_MM:
+                if best is None or gap < best_gap:
+                    best, best_gap = run, gap
+        if best is not None:
+            best.append(row)
+            continue
+        open_runs.append([row])
+    for run in open_runs:
+        done.extend(_cut(run))
+    return done
+
+
+def _cut(run) -> list:
+    """Split a walk where the lines stop being treads of one flight.
+
+    A flight's treads reach nearly as far as each other — a winder's
+    shrink from one end to the other, but gradually. A room's own wall
+    runs the width of the ROOM and happens to sit a going away from the
+    first tread, so it joins the walk; and it gives itself away by
+    reaching past its neighbour by more than a tread's going, which is
+    the module's own figure and not a new one.
+    """
+    out, cur = [], []
+    for row in run:
+        if cur and abs((row[2] - row[1]) - (cur[-1][2] - cur[-1][1])) \
+                > MAX_GOING_MM:
+            out.append(cur)
             cur = [row]
             continue
-        gap = row[0] - cur[-1][0]
-        span = min(cur[-1][2], row[2]) - max(cur[-1][1], row[1])
-        same = (len(cur) < 2
-                or abs(gap - (cur[-1][0] - cur[-2][0])) <= SAME_PITCH_MM)
-        if MIN_GOING_MM <= gap <= MAX_GOING_MM and span > MIN_WIDTH_MM \
-                and same:
-            cur.append(row)
-            continue
-        if len(cur) >= MIN_TREADS:
-            out.append(cur)
-        cur = [row]
-    if len(cur) >= MIN_TREADS:
-        out.append(cur)
-    return out
+        cur.append(row)
+    out.append(cur)
+    return [r for r in out if len(r) >= MIN_TREADS]
 
 
 def _polygon(axis: str, f0: float, f1: float, lo: float, hi: float):
@@ -449,9 +521,12 @@ def assess(lines, *, region_id: str = "DR-001", spaces=(), labels=(),
 
     `spaces` are the region's measured spaces (each with a polygon and an
     identity), `labels` their authored text. `sections` is optional
-    section evidence: {stair key: {"riser_height_mm": ..., "risers": ...}}
-    — a plan alone never produces a riser height, and nothing here
-    invents one.
+    section evidence: {stair or region key: {"riser_height_mm": ...,
+    "risers": ..., "treads": ...}} — a plan alone never produces a riser
+    height, and nothing here invents one.
+
+    Runs that stand in the SAME cell are flights of ONE stair: two
+    flights and a landing are one staircase, not two staircases.
     """
     from shapely.wkt import loads
 
@@ -469,43 +544,37 @@ def assess(lines, *, region_id: str = "DR-001", spaces=(), labels=(),
                     for o in (labels or ())
                     if "STAIR" in (getattr(o, "text", "") or "").upper()]
 
+    # ---- every run, with the cell it stands in ------------------------
+    found = []
     n = 0
     for axis in ("H", "V"):
         for run in _runs(lines, axis):
             n += 1
-            ev = [EV_CONSTANT_PITCH, EV_SPAN_TOGETHER]
-            f_lo, f_hi = run[0][0], run[-1][0]
-            lo = max(r[1] for r in run)
-            hi = min(r[2] for r in run)
-            width = hi - lo
-            foot = _polygon(axis, f_lo, f_hi, lo, hi)
-
-            # which measured space is this run standing in, and does a
-            # stair label stand there too?
-            space_id, inside = "", None
-            for sid, g in poly_of.items():
-                try:
-                    if g.intersects(foot) and g.intersection(foot).area \
-                            > foot.area * 0.5:
-                        space_id, inside = sid, g
-                        break
-                except Exception:      # noqa: BLE001
-                    continue
-            if inside is not None:
-                ev.append(EV_INSIDE_ONE_CELL)
-            labelled = any(foot.buffer(0).contains(_pt(x, y))
-                           for x, y in stair_points)
-            if labelled:
-                ev.append(EV_STAIR_LABEL)
             goings = [run[i + 1][0] - run[i][0] for i in range(len(run) - 1)]
+            ev = [EV_SPAN_TOGETHER]
+            if goings and max(goings) - min(goings) <= SAME_PITCH_MM:
+                ev.append(EV_CONSTANT_PITCH)
             if goings and all(MIN_GOING_MM <= g <= MAX_GOING_MM
                               for g in goings):
                 ev.append(EV_GOING_IS_A_STAIR_GOING)
-
-            # A run of parallel lines is a stair when something other
-            # than the lines themselves says so: the cell it stands in,
-            # or a stair label in it. Decorative lines have neither.
-            if EV_INSIDE_ONE_CELL not in ev and not labelled:
+            f_lo, f_hi = run[0][0], run[-1][0]
+            lo = min(r[1] for r in run)
+            hi = max(r[2] for r in run)
+            foot = _polygon(axis, f_lo, f_hi, lo, hi)
+            space_id, cell = "", None
+            for sid, g in sorted(poly_of.items()):
+                try:
+                    if g.intersection(foot).area > foot.area * 0.5:
+                        space_id, cell = sid, g
+                        break
+                except Exception:      # noqa: BLE001
+                    continue
+            if cell is not None:
+                ev.append(EV_INSIDE_ONE_CELL)
+            labelled = any(foot.contains(_pt(x, y)) for x, y in stair_points)
+            if labelled:
+                ev.append(EV_STAIR_LABEL)
+            if cell is None and not labelled:
                 rep.refused.append({
                     "run_id": f"RUN-{region_id}-{n:03d}",
                     "axis": axis, "lines": len(run),
@@ -514,91 +583,93 @@ def assess(lines, *, region_id: str = "DR-001", spaces=(), labels=(),
                     "what_would_settle_it": (
                         "an enclosure around it, or a stair label in it")})
                 continue
+            found.append({"axis": axis, "run": run, "foot": foot,
+                          "space_id": space_id, "cell": cell,
+                          "ev": ev, "n": n})
 
-            flight = Flight(
-                flight_id=f"SF-{region_id}-{n:03d}", axis=axis,
-                direction_mm=(f_lo, f_hi), width_mm=width,
-                evidence=tuple(ev))
-            for i in range(len(run) - 1):
-                a, b = run[i], run[i + 1]
-                t_lo = max(a[1], b[1])
-                t_hi = min(a[2], b[2])
-                g = _polygon(axis, a[0], b[0], t_lo, t_hi)
-                tread = Tread(
-                    tread_id=f"ST-{region_id}-{n:03d}-{i + 1:02d}",
-                    index=i + 1, polygon_wkt=g.wkt,
-                    area_m2=g.area / 1e6, going_mm=b[0] - a[0],
-                    width_mm=t_hi - t_lo,
-                    nosing_length_mm=t_hi - t_lo,
-                    front_edge_wkt=_edge(axis, a[0], t_lo, t_hi),
-                    back_edge_wkt=_edge(axis, b[0], t_lo, t_hi),
-                    inner_edge_wkt=_edge("V" if axis == "H" else "H",
-                                         t_lo, a[0], b[0]),
-                    outer_edge_wkt=_edge("V" if axis == "H" else "H",
-                                         t_hi, a[0], b[0]),
-                    rectangular=True,
-                    cad_provenance=(getattr(a[3], "object_id", ""),
-                                    getattr(b[3], "object_id", "")))
-                flight.treads.append(tread)
+    # ---- runs in one cell are flights of one stair --------------------
+    groups: dict = {}
+    for item in found:
+        groups.setdefault(item["space_id"] or f"RUN-{item['n']}",
+                          []).append(item)
 
-            sec = (sections or {}).get(flight.flight_id) or \
-                (sections or {}).get(region_id) or {}
-            rise = sec.get("riser_height_mm")
-            count = sec.get("risers")
-            n_risers = int(count) if count else len(flight.treads)
-            for i in range(n_risers):
-                w = (flight.treads[min(i, len(flight.treads) - 1)].width_mm
-                     if flight.treads else width)
-                flight.risers.append(Riser(
-                    riser_id=f"SR-{region_id}-{n:03d}-{i + 1:02d}",
-                    index=i + 1, width_mm=w,
-                    height_mm=(None if rise is None else float(rise)),
-                    area_m2=(None if rise is None
-                             else w * float(rise) / 1e6),
-                    height_source=(RISER_NOT_ESTABLISHED if rise is None
-                                   else "SECTION_EVIDENCE"),
-                    status=(RISER_NOT_ESTABLISHED if rise is None
-                            else "RISER_MEASURED")))
+    for k, (key, items) in enumerate(sorted(groups.items()), 1):
+        cell = next((it["cell"] for it in items if it["cell"] is not None),
+                    None)
+        foot = items[0]["foot"]
+        for it in items[1:]:
+            foot = foot.union(it["foot"])
+        labelled = any(EV_STAIR_LABEL in it["ev"] for it in items)
+        if cell is not None and not labelled and \
+                foot.area < cell.area * STAIR_CELL_SHARE:
+            rep.refused.append({
+                "run_id": f"RUN-{region_id}-{items[0]['n']:03d}",
+                "axis": items[0]["axis"],
+                "lines": sum(len(it["run"]) for it in items),
+                "pitch_mm": None,
+                "why": NOT_ENOUGH_OF_THE_CELL,
+                "what_would_settle_it": (
+                    f"it covers {round(100 * foot.area / cell.area, 1)}% "
+                    "of the cell it stands in, and no stair label stands "
+                    "there")})
+            continue
+        asm = Assembly(
+            stair_id=f"SA-{region_id}-{k:03d}", region_id=region_id,
+            floor_from=floor_from, floor_to=floor_to,
+            space_id=items[0]["space_id"],
+            # THE STAIR'S OWN FOOTPRINT, not the room it stands in. The
+            # cell's area is reported beside it and never as the stair.
+            footprint_wkt=foot.wkt,
+            footprint_area_m2=foot.area / 1e6,
+            containing_space_area_m2=(None if cell is None
+                                      else cell.area / 1e6),
+            finish_rule=finish_rule,
+            skirting_lm=(skirting_rule or {}).get("skirting_lm"),
+            skirting_status=(
+                SKIRTING_NOT_ESTABLISHED
+                if not (skirting_rule or {}).get("skirting_lm")
+                else "FROM_A_PROJECT_RULE"),
+            evidence=tuple(sorted({e for it in items for e in it["ev"]})))
 
-            widths = {round(t.width_mm, 1) for t in flight.treads}
-            goings_r = {round(t.going_mm, 1) for t in flight.treads}
-            flight.configuration = (
-                STRAIGHT if len(widths) == 1 and len(goings_r) == 1
-                else WINDER)
-
-            exceptions = []
+        exceptions = []
+        for j, it in enumerate(items, 1):
+            flight = _flight(it, region_id, k, j, cell, sections)
+            asm.flights.append(flight)
             if any(r.status == RISER_NOT_ESTABLISHED for r in flight.risers):
                 exceptions.append(RISER_NOT_ESTABLISHED)
             if not flight.treads:
                 exceptions.append(TREAD_NOT_ESTABLISHED)
-            if count and len(flight.treads) and int(count) != \
-                    len(flight.treads) and sec.get("treads") and \
-                    int(sec["treads"]) != len(flight.treads):
+            sec = _section_for(sections, flight.flight_id, region_id)
+            told = sec.get("treads")
+            if told and int(told) != len(flight.treads):
                 exceptions.append(PLAN_AND_SECTION_DISAGREE)
 
-            asm = Assembly(
-                stair_id=f"SA-{region_id}-{n:03d}", region_id=region_id,
-                floor_from=floor_from, floor_to=floor_to,
-                space_id=space_id, footprint_wkt=foot.wkt,
-                footprint_area_m2=foot.area / 1e6,
-                flights=[flight], configuration=flight.configuration,
-                finish_rule=finish_rule,
-                skirting_lm=(skirting_rule or {}).get("skirting_lm"),
-                skirting_status=(
-                    SKIRTING_NOT_ESTABLISHED
-                    if not (skirting_rule or {}).get("skirting_lm")
-                    else "FROM_A_PROJECT_RULE"),
-                exceptions=tuple(exceptions), evidence=tuple(ev))
-
-            # Anything inside the same cell that is deeper than a going
-            # is a landing rather than a tread.
-            if inside is not None:
-                asm.landings.extend(_landings(inside, foot, axis,
-                                              region_id, n))
-                if asm.landings:
-                    asm.configuration = (
-                        L_SHAPED if len(asm.landings) == 1 else U_SHAPED)
-            rep.assemblies.append(asm)
+        asm.landings.extend(_landings(cell, [it["foot"] for it in items],
+                                      region_id, k))
+        axes = {it["axis"] for it in items}
+        if len(items) >= 2 and len(axes) > 1:
+            asm.configuration = L_SHAPED
+        elif len(items) >= 2:
+            asm.configuration = U_SHAPED
+        elif asm.flights:
+            asm.configuration = asm.flights[0].configuration
+        # Do two flights of this stair cover the same ground? Then their
+        # tread polygons cannot both be marble, and nothing here picks.
+        feet = [it["foot"] for it in items]
+        for i, fa in enumerate(feet):
+            for fb in feet[i + 1:]:
+                try:
+                    if fa.intersection(fb).area > 1000.0:
+                        exceptions.extend([FLIGHTS_OVERLAP,
+                                           TREAD_NOT_ESTABLISHED])
+                except Exception:      # noqa: BLE001
+                    continue
+        asm.exceptions = tuple(sorted(set(exceptions)))
+        if TREAD_NOT_ESTABLISHED in asm.exceptions:
+            for f in asm.flights:
+                for t in f.treads:
+                    t.status = TREAD_NOT_ESTABLISHED
+        rep.assemblies.append(asm)
 
     rep.notes["a_plan_carries_no_height"] = (
         "every riser here is NOT ESTABLISHED unless section evidence was "
@@ -606,7 +677,84 @@ def assess(lines, *, region_id: str = "DR-001", spaces=(), labels=(),
     rep.notes["no_double_count"] = (
         "a stair's footprint belongs to the stair. Its area may not "
         "appear in any floor-finish quantity as well")
+    rep.notes["runs_in_one_cell_are_one_stair"] = (
+        "two flights and a landing are one staircase. Counting them as "
+        "two would count the landing twice and the stair not at all")
     return rep
+
+
+def _section_for(sections, flight_id: str, region_id: str) -> dict:
+    src = sections or {}
+    return dict(src.get(flight_id) or src.get(region_id) or {})
+
+
+def _flight(item, region_id: str, k: int, j: int, cell, sections) -> Flight:
+    """One run of treads, each measured from its own polygon."""
+    axis, run = item["axis"], item["run"]
+    lo = min(r[1] for r in run)
+    hi = max(r[2] for r in run)
+    flight = Flight(
+        flight_id=f"SF-{region_id}-{k:03d}-{j:02d}", axis=axis,
+        direction_mm=(run[0][0], run[-1][0]), width_mm=hi - lo,
+        evidence=tuple(item["ev"]))
+    for i in range(len(run) - 1):
+        a, b = run[i], run[i + 1]
+        # A WINDER'S TREAD IS NOT THE OVERLAP OF TWO LINES. Take the
+        # stretch both lines reach over, clipped to the cell the stair
+        # stands in, so a wedge is measured as the wedge it is.
+        g = _polygon(axis, a[0], b[0], min(a[1], b[1]), max(a[2], b[2]))
+        # Clipped to THIS FLIGHT's own footprint, and then to the cell.
+        # Two flights side by side share their tread positions, and a
+        # tread clipped only to the cell would cover its neighbour's
+        # treads as well — a stair measuring more marble than it has.
+        for clip in (item["foot"], cell):
+            if clip is None:
+                continue
+            try:
+                g = g.intersection(clip)
+            except Exception:      # noqa: BLE001
+                pass
+        if g.is_empty or g.area <= 0:
+            continue
+        x0, y0, x1, y1 = g.bounds
+        width = (x1 - x0) if axis == "H" else (y1 - y0)
+        flight.treads.append(Tread(
+            tread_id=f"ST-{region_id}-{k:03d}-{j:02d}-{i + 1:02d}",
+            index=i + 1, polygon_wkt=g.wkt, area_m2=g.area / 1e6,
+            going_mm=b[0] - a[0], width_mm=width,
+            nosing_length_mm=a[2] - a[1],
+            front_edge_wkt=_edge(axis, a[0], a[1], a[2]),
+            back_edge_wkt=_edge(axis, b[0], b[1], b[2]),
+            inner_edge_wkt=_edge("V" if axis == "H" else "H",
+                                 min(a[1], b[1]), a[0], b[0]),
+            outer_edge_wkt=_edge("V" if axis == "H" else "H",
+                                 max(a[2], b[2]), a[0], b[0]),
+            rectangular=abs((a[2] - a[1]) - (b[2] - b[1])) <= SAME_PITCH_MM,
+            cad_provenance=(getattr(a[3], "object_id", ""),
+                            getattr(b[3], "object_id", ""))))
+
+    sec = _section_for(sections, flight.flight_id, region_id)
+    rise = sec.get("riser_height_mm")
+    told = sec.get("risers")
+    n_risers = int(told) if told else len(flight.treads)
+    for i in range(n_risers):
+        w = (flight.treads[min(i, len(flight.treads) - 1)].width_mm
+             if flight.treads else flight.width_mm)
+        flight.risers.append(Riser(
+            riser_id=f"SR-{region_id}-{k:03d}-{j:02d}-{i + 1:02d}",
+            index=i + 1, width_mm=w,
+            height_mm=(None if rise is None else float(rise)),
+            area_m2=(None if rise is None else w * float(rise) / 1e6),
+            height_source=(RISER_NOT_ESTABLISHED if rise is None
+                           else "SECTION_EVIDENCE"),
+            status=(RISER_NOT_ESTABLISHED if rise is None
+                    else "RISER_MEASURED")))
+
+    widths = {round(t.width_mm, 1) for t in flight.treads}
+    goings = {round(t.going_mm, 1) for t in flight.treads}
+    flight.configuration = (STRAIGHT if len(widths) == 1 and len(goings) == 1
+                            else WINDER)
+    return flight
 
 
 def _pt(x: float, y: float):
@@ -615,26 +763,40 @@ def _pt(x: float, y: float):
     return Point(x, y)
 
 
-def _landings(cell, foot, axis: str, region_id: str, n: int) -> list:
-    """What is left of the stair cell once the flight is taken out."""
+def _landings(cell, feet, region_id: str, n: int) -> list:
+    """What the flights of one stair leave BETWEEN them.
+
+    A landing is the piece a staircase turns on, and it lies between its
+    flights — never the rest of the room the stair stands in. Taking the
+    flights out of the space around them made a 1,229 m2 "landing" out
+    of a floor plate on the first run of this module.
+    """
+    from shapely.geometry import box
+
     out = []
-    try:
-        rest = cell.difference(foot)
-    except Exception:      # noqa: BLE001
+    if len(feet) < 2:
         return out
+    x0 = min(f.bounds[0] for f in feet)
+    y0 = min(f.bounds[1] for f in feet)
+    x1 = max(f.bounds[2] for f in feet)
+    y1 = max(f.bounds[3] for f in feet)
+    rest = box(x0, y0, x1, y1)
+    for f in feet:
+        rest = rest.difference(f)
+    if cell is not None:
+        try:
+            rest = rest.intersection(cell)
+        except Exception:      # noqa: BLE001
+            pass
     if rest.is_empty:
         return out
-    parts = list(getattr(rest, "geoms", [rest]))
-    for i, g in enumerate(parts, 1):
+    for i, g in enumerate(getattr(rest, "geoms", [rest]), 1):
         if g.is_empty or g.area <= 0:
             continue
-        x0, y0, x1, y1 = g.bounds
-        depth = (y1 - y0) if axis == "H" else (x1 - x0)
-        if depth < LANDING_MIN_MM:
-            continue
+        bx0, by0, bx1, by1 = g.bounds
         out.append(Landing(
             landing_id=f"SL-{region_id}-{n:03d}-{i:02d}",
             polygon_wkt=g.wkt, area_m2=g.area / 1e6,
-            length_mm=max(x1 - x0, y1 - y0),
-            width_mm=min(x1 - x0, y1 - y0)))
+            length_mm=max(bx1 - bx0, by1 - by0),
+            width_mm=min(bx1 - bx0, by1 - by0)))
     return out

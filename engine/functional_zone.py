@@ -59,6 +59,8 @@ L_SHAPE = "L_SHAPE"
 U_SHAPE = "U_SHAPE"
 CLOSED_ON_FOUR_SIDES = "CLOSED_ON_FOUR_SIDES"
 SHAPE_NOT_ESTABLISHED = "WALL_TILE_SHAPE_NOT_ESTABLISHED"
+TILE_LENGTH_NOT_ESTABLISHED = "WALL_TILE_LENGTH_NOT_ESTABLISHED"
+NO_SPACE_FOR_THE_LABEL = "NO_PHYSICAL_SPACE_CARRIES_THIS_PANTRY_LABEL"
 
 # Concepts that an American pantry opens ONTO. The ontology's own words,
 # not new vocabulary: a pantry open to one of these is the American case
@@ -92,6 +94,7 @@ def frozen_parameters() -> dict:
         "OPENNESS": list(OPENNESS),
         "WALL_TILE_SHAPES": [ONE_WALL, L_SHAPE, U_SHAPE,
                              CLOSED_ON_FOUR_SIDES, SHAPE_NOT_ESTABLISHED],
+        "TILE_LENGTH_NOT_ESTABLISHED": TILE_LENGTH_NOT_ESTABLISHED,
         "OPEN_PLAN_CONCEPTS": list(OPEN_PLAN_CONCEPTS),
         "PANTRY_TERMS": list(PANTRY_TERMS),
         "why": {
@@ -107,6 +110,10 @@ def frozen_parameters() -> dict:
                 "no default tile height exists in this engine. Without a "
                 "project rule the height and every area resting on it are "
                 "an OWNER_RULE_REQUEST"),
+            "an_open_pantry_needs_its_units": (
+                "which part of an open space's perimeter is the pantry's "
+                "wall is a question the units answer. Without them the "
+                "tiled length is NOT ESTABLISHED, never the perimeter"),
             "openness_is_evidence_not_a_word": (
                 "the label PANTRY says nothing about whether it is closed. "
                 "Where the geometry does not say, the answer is UNKNOWN"),
@@ -258,6 +265,52 @@ def _wall_faces(row) -> list:
                 "CLEAR_INTERNAL")]
 
 
+def _sides(faces) -> set:
+    """How many DIFFERENT sides these faces are. Axis and coordinate.
+
+    Not the coordinate alone: the west wall of a room at x = 0 and its
+    south wall at y = 0 are two sides of it and one number.
+    """
+    return {(f.get("axis", ""), round(f.get("fixed_mm", 0.0), 1))
+            for f in faces}
+
+
+def _host_walls(row, fittings, walls) -> list:
+    """The walls a zone's fittings stand on, and how far they run.
+
+    An American pantry's tiled walls are the ones its units are fitted
+    along — not the whole perimeter of the open space it sits in, which
+    is the dining room's wall as much as the pantry's.
+    """
+    from shapely.wkt import loads
+
+    out = []
+    poly = row.get("polygon")
+    if poly is None or not fittings:
+        return out
+    by_id = {w.wall_id: w for w in (walls or ())}
+    for band_id, st in sorted((fittings or {}).items()):
+        w = by_id.get(band_id)
+        if w is None:
+            continue
+        for lo, hi in w.drawn_mm:
+            seg = (loads(f"LINESTRING({st.far_face_mm} {lo}, "
+                         f"{st.far_face_mm} {hi})") if w.axis == "V"
+                   else loads(f"LINESTRING({lo} {st.far_face_mm}, "
+                              f"{hi} {st.far_face_mm})"))
+            try:
+                if not seg.intersects(poly.buffer(1.0)):
+                    continue
+            except Exception:      # noqa: BLE001
+                continue
+            out.append({"wall_band_id": st.wall_id,
+                        "fitting_band_id": band_id,
+                        "axis": w.axis,
+                        "fixed_mm": st.shared_face_mm,
+                        "length_mm": hi - lo})
+    return out
+
+
 def _open_faces(row) -> list:
     """The sides of a space that no wall band accounts for."""
     return [f for f in (row.get("boundary_faces") or ())
@@ -270,7 +323,7 @@ def _shape_of(n: int) -> str:
 
 
 def assess(rows, labels, *, floor_of=None, fittings=None,
-           tile_rules=None) -> ZoneReport:
+           wall_bands=(), tile_rules=None) -> ZoneReport:
     """One functional-zone candidate per authored label, and no walls.
 
     `rows` are the register's rows, each with `boundary_faces` as plain
@@ -297,6 +350,22 @@ def assess(rows, labels, *, floor_of=None, fittings=None,
         sid = getattr(v, "space_id", "")
         row = by_id.get(sid)
         if row is None:
+            # A PANTRY LABEL THAT RESOLVED TO NO SPACE IS STILL A PANTRY
+            # QUESTION. Leaving it out of the report would make the
+            # hardest case the invisible one.
+            raw = getattr(v, "text", "")
+            if _is_pantry(raw, ""):
+                n += 1
+                rep.pantries.append(PantryAnalysis(
+                    pantry_zone_id=f"FZ-UNRESOLVED-{n:04d}",
+                    space_id="", region_id=getattr(v, "region_id", ""),
+                    floor_level=getattr(v, "floor_level", ""),
+                    openness=OPENNESS_UNKNOWN,
+                    openness_evidence=(),
+                    wall_tile_shape=SHAPE_NOT_ESTABLISHED,
+                    exceptions=(NO_SPACE_FOR_THE_LABEL,
+                                TILE_LENGTH_NOT_ESTABLISHED,
+                                OWNER_RULE_REQUEST)))
             continue
         n += 1
         raw = getattr(v, "text", "")
@@ -328,27 +397,52 @@ def assess(rows, labels, *, floor_of=None, fittings=None,
 
         walls = _wall_faces(row)
         opens = _open_faces(row)
-        sides = {round(f["fixed_mm"], 1) for f in walls}
+        hosts = _host_walls(row, fittings, wall_bands)
+        if hosts:
+            # the units' own walls, which is what a pantry is tiled on
+            sides = _sides(hosts)
+            tile_m = sum(f["length_mm"] for f in hosts) / 1000.0
+            segments = tuple(sorted({f["wall_band_id"] for f in hosts}))
+            ev_host = EV_FITTING_RUN
+        else:
+            sides = _sides(walls)
+            tile_m = sum(f.get("length_mm", 0.0) for f in walls) / 1000.0
+            segments = tuple(sorted({f["wall_band_id"] for f in walls}))
+            ev_host = EV_HOST_WALLS
         shape = _shape_of(len(sides))
-        tile_m = sum(f.get("length_mm", 0.0) for f in walls) / 1000.0
         open_m = sum(f.get("length_mm", 0.0) for f in opens) / 1000.0
 
         ov = []
         if siblings and any(
                 onto.classify_term(getattr(s, "text", "")).concept
                 in OPEN_PLAN_CONCEPTS for s in siblings):
+            # It shares one space with the dining, saloon or living it
+            # serves. That is the American case, and no wall is missing.
             openness = OPEN_AMERICAN_PANTRY
             ov.append(EV_SHARES_A_SPACE)
-        elif opens:
-            openness = OPEN_AMERICAN_PANTRY
-            ov.append(EV_OPEN_EDGE)
-        elif walls and not opens and len(sides) >= 4:
+        elif walls and not opens and len(_sides(walls)) >= 4:
             openness = CLOSED_PANTRY
             ov.extend([EV_FULLY_BOUNDED, EV_SOLE_LABEL])
+        elif opens:
+            # A side with no wall band on it. OPEN TO WHAT, nobody says:
+            # an open edge with nothing named beyond it is a question,
+            # not an American pantry.
+            openness = OPENNESS_UNKNOWN
+            ov.append(EV_OPEN_EDGE)
         else:
             openness = OPENNESS_UNKNOWN
-        if walls:
-            ov.append(EV_HOST_WALLS)
+        if walls or hosts:
+            ov.append(ev_host)
+
+        # WITHOUT THE UNITS' OWN GEOMETRY the tiled length of an open
+        # pantry is not established: the perimeter of the space it sits
+        # in belongs to the dining room as much as to the pantry, and
+        # reporting it as tile would be a quantity nobody can build to.
+        tile_exceptions = []
+        if openness != CLOSED_PANTRY and not hosts:
+            tile_exceptions.append(TILE_LENGTH_NOT_ESTABLISHED)
+            tile_m = 0.0
+            shape = SHAPE_NOT_ESTABLISHED
 
         height = rules.get("wall_tile_height_m")
         src = rules.get("rule_source", OWNER_RULE_REQUEST)
@@ -358,8 +452,7 @@ def assess(rows, labels, *, floor_of=None, fittings=None,
             region_id=row["region_id"],
             floor_level=floor.get(row["region_id"], ""),
             openness=openness, openness_evidence=tuple(ov),
-            host_wall_segment_ids=tuple(sorted(
-                {f["wall_band_id"] for f in walls})),
+            host_wall_segment_ids=segments,
             open_edge_ids=tuple(sorted(
                 {f.get("face_id") or "UNNAMED_SIDE" for f in opens})),
             wall_tile_shape=shape, wall_tile_length_m=tile_m,
@@ -371,8 +464,9 @@ def assess(rows, labels, *, floor_of=None, fittings=None,
             height_source=(OWNER_RULE_REQUEST if height is None
                            else rules.get("height_source", "PROJECT_RULE")),
             rule_source=src,
-            exceptions=(() if openness != OPENNESS_UNKNOWN
-                        else (OWNER_RULE_REQUEST,))))
+            exceptions=tuple(tile_exceptions
+                             + ([OWNER_RULE_REQUEST]
+                                if openness == OPENNESS_UNKNOWN else []))))
 
     rep.notes["a_zone_is_not_a_room"] = (
         "a functional zone never creates a wall, a room polygon or a "

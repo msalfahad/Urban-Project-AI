@@ -302,6 +302,32 @@ ROUNDS = (
              "an established basis — which round 6C then had to divide "
              "into rooms, halves of rooms, sheet content and questions",
     ),
+    Freeze(
+        round_name="ROUND_6C_PHYSICAL_SPACE_REGISTER",
+        commit="b5a2ce1",
+        source_file="P7757_ARCHITECTURAL.dwg",
+        source_sha256_16="7f61f3acdd62d62d",
+        artifact_path="data/runs/7757/P7757_ROUND6C_REGISTER.json",
+        artifact_sha256_16="",
+        project_output_hash={},
+        synthetic_artifact_hash={
+            "ROUND_6C_SYNTHETIC_HASH": "c59e81b1ea572539377804da"},
+        code_hashes_at_freeze={
+            "DRAWING_ROLE_HASH": "db18783807179a48ccfd57a7",
+            "SPACE_REGISTER_HASH": "a0e9ecb7a1aa008da91a5da9",
+            "SINGLE_LINE_PARTITION_HASH": "2b9480e67e799c2b3d1f837f",
+            "WALL_FACE_OWNERSHIP_HASH": "b2529201eefb569dc651db84",
+            "PHYSICAL_WALL_BAND_HASH": "550e36a8e313a7d0955a2cf9"},
+        dependency_hashes_at_freeze={
+            "CAD_ADAPTER_HASH": "bd331c8074806e8b19711417",
+            "LOCAL_ENCLOSURE_HASH": "01ff128e7ffdab820805dce1",
+            "DRAWING_REGION_HASH": "bd1c391980507d3e18f5d9db"},
+        note="69 polygons are not 69 rooms: 269.1838 m2 of measured "
+             "candidate against 26.3085 m2 the release gate passes. The "
+             "bundle of this state is ROUND6C_EXPORT_MANIFEST_HASH "
+             "54003ad29e3863ceaa614c86, written before round 6D changed "
+             "anything",
+    ),
 )
 
 # Replays this project EXPECTS to diverge, and why. A divergence recorded
@@ -331,6 +357,21 @@ PREDICTED_DIVERGENCES = {
         "SUPERVISED_BENCHMARK_HASH": "round 6A adds the MAIN KITCHEN "
                                      "geometry example the owner asked for",
     },
+    "ROUND_6C_PHYSICAL_SPACE_REGISTER": {
+        "PHYSICAL_WALL_BAND_HASH": "round 6D gives a wall a SET of owned "
+                                   "stretches instead of the span between "
+                                   "its first and last millimetre",
+        "WALL_FACE_OWNERSHIP_HASH": "round 6D reads a face where THAT face "
+                                    "is drawn, and refuses the front face "
+                                    "of a fitting",
+        "SINGLE_LINE_PARTITION_HASH": "round 6D refuses a candidate that "
+                                      "is the front of a fitting, whatever "
+                                      "evidence it collects",
+        "ROUND_6C_SYNTHETIC_HASH": "it stands on those hashes. The "
+                                   "fourteen CASES must still hold; the "
+                                   "hash is a replay, the pass is the "
+                                   "score",
+    },
     "ROUND_6B_SINGLE_LINE_PARTITIONS": {
         "WALL_FACE_OWNERSHIP_HASH": "round 6C did not touch it. If this "
                                     "diverges, something below it moved",
@@ -338,13 +379,18 @@ PREDICTED_DIVERGENCES = {
                                    "ownership hashes. The twelve CASES "
                                    "must still hold; the hash is a replay, "
                                    "the pass is the score",
+        "PHYSICAL_WALL_BAND_HASH": "round 6D: stretches, not a hull",
+        "SINGLE_LINE_PARTITION_HASH": "round 6D: a fitting front is never "
+                                      "a partition",
     },
     "ROUND_6A_WALL_FACE_OWNERSHIP": {
         "WALL_FACE_OWNERSHIP_HASH": "round 6B adds the basis "
-                                    "CLEAR_FACE_NOT_ESTABLISHED, which is "
-                                    "a state round 6A could not express",
+                                    "CLEAR_FACE_NOT_ESTABLISHED, and "
+                                    "round 6D refuses a fitting's front "
+                                    "face",
         "PHYSICAL_WALL_BAND_HASH": "round 6B stops a crossing wall from "
-                                   "counting as a reveal",
+                                   "counting as a reveal, and round 6D "
+                                   "gives a wall a SET of owned stretches",
         "ROUND_6A_SYNTHETIC_HASH": "it stands on the ownership hash. The "
                                    "nine CASES must still hold; the hash "
                                    "is a replay, the pass is the score",
@@ -411,6 +457,9 @@ def _live() -> dict:
                                            "model_hash"),
         "DRAWING_ROLE_HASH": _one("drawing_role", "model_hash"),
         "SPACE_REGISTER_HASH": _one("space_register", "model_hash"),
+        "FITTING_BAND_HASH": _one("fitting_band", "model_hash"),
+        "FUNCTIONAL_ZONE_HASH": _one("functional_zone", "model_hash"),
+        "STAIR_ASSEMBLY_HASH": _one("stair_assembly", "model_hash"),
         "CAD_SPACE_ROLE_HASH": _space_role_hash(),
         "INTERIOR_EXTERIOR_HASH": _interior_exterior_hash(),
         "SUPERVISED_BENCHMARK_HASH": _supervised_hash(),
@@ -463,6 +512,7 @@ def _replay_synthetic() -> dict:
         "ROUND_6A_SYNTHETIC_HASH": _replay_6a(),
         "ROUND_6B_SYNTHETIC_HASH": _one_selftest("round6b_selftest"),
         "ROUND_6C_SYNTHETIC_HASH": _one_selftest("round6c_selftest"),
+        "ROUND_6D_SYNTHETIC_HASH": _one_selftest("round6d_selftest"),
     }
 
 

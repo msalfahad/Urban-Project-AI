@@ -53,6 +53,7 @@ from engine import portal_match as pmatch
 from engine import room_partition_graph as rpg
 from engine import semantic_seed as seeds_mod
 from engine import space_enclosure as enc
+from engine import stair_assembly as stair
 from engine import cad_space_role as srole
 from engine import space_topologies as topo
 from engine import single_line_partition as slp
@@ -332,6 +333,7 @@ class Report:
     ownership: list = field(default_factory=list)
     partitions: list = field(default_factory=list)
     fittings: list = field(default_factory=list)
+    stairs: list = field(default_factory=list)
     space_roles: object = None
     notes: dict = field(default_factory=dict)
 
@@ -627,7 +629,8 @@ def _identity_label(node) -> tuple:
     return tuple(t for z in node.zones for t in z.label_observations)
 
 
-def measure(normalized, profile, *, semantic=None) -> Report:
+def measure(normalized, profile, *, semantic=None,
+            sections=None, project_rules=None) -> Report:
     """Isolate the drawings, then measure each one on its own terms.
 
     ROUND 4 CHANGES THE ORDER AGAIN, AND FOR THE SAME REASON AS ROUND 3.
@@ -881,6 +884,20 @@ def measure(normalized, profile, *, semantic=None) -> Report:
         rep.subdivisions.append(fsub.diagnose(
             before.spaces, graph.spaces, continuity=cont,
             region_id=reg.region_id))
+
+        # ---- ROUND 6D: the stairs in this region ----------------------
+        #
+        # A stair is not a room floor: its treads, risers, landings and
+        # nosing are separate quantities, and on a project where the
+        # stair is marble and the floor porcelain they must not be the
+        # same square metre twice. Section evidence is passed in or the
+        # riser stays NOT ESTABLISHED.
+        rep.stairs.append(stair.assess(
+            eligible, region_id=reg.region_id,
+            spaces=[n.clear for n in graph.spaces if n.clear is not None],
+            labels=obs, sections=sections,
+            finish_rule=(project_rules or {}).get("stair_finish_rule", ""),
+            skirting_rule=(project_rules or {}).get("stair_skirting")))
 
         open_by_id = {o.opening_id: o for o in opens.openings}
         rel_by_opening: dict = {}
