@@ -6,8 +6,17 @@ PROJECT_2_CAD_ROUND2_HASH         70e2f4c34a6b1374687fb20f
 ENCLOSURE_ROLE_CLASSIFIER_HASH    844448ed7de88dea5c27ac75
 SEMANTIC_SEED_CLASSIFIER_HASH     64c01b36653f579fafc113a0
 WALL_ROLE_HASH                    e2ed8a68a37d1ed74d7e2e18
-ROUND_2_SYNTHETIC_HASH            (12 cases, 12 passing, safety held)
+ROUND_2_SYNTHETIC_HASH            de1caf07e16e738b3e34dcc5
+                                  (12 cases, 12 passing, safety held)
 ```
+
+> **Correction to an earlier statement.** I first reported
+> `ROUND_2_SYNTHETIC_HASH` as `e9d66302a8d917ebb6176eb9`. That was the
+> value **before** the `%%p` escape-regex fix, which changes
+> `SEMANTIC_SEED_CLASSIFIER_HASH` and therefore the synthetic hash built
+> from it. The frozen run always recorded the correct post-fix value; only
+> the prose was stale. The hashes above are the ones in
+> `data/runs/7757/P7757_CAD_round2.json`.
 
 **Round 1's baseline is preserved untouched.** `P7757_CAD_baseline.json` is
 byte-identical (`8323169dcad1053a`) and still records
