@@ -1430,3 +1430,96 @@ and a behavioural check that every real word classifies **identically to a
 nonsense word** in the same position.
 
 **A label is evidence for IDENTITY. It is never evidence for a BOUNDARY.**
+
+## 51 · A GENERAL VOCABULARY IS NOT A PROJECT-SPECIFIC RULE
+
+Round 2 asserted that `KITCHEN` must classify **exactly** like the nonsense
+word `QQZZX`. That was the wrong invariant. It made the semantic layer
+blind, and a blind layer cannot tell a kitchen from a street — which is
+precisely why a street label seeded a physical room.
+
+The invariant is narrower:
+
+    NO PROJECT-SPECIFIC STRING MAY BE HARDCODED TO FORCE A RESULT
+
+`kitchen` and `مطبخ` mean a kitchen on every drawing in the world.
+Refusing to know that is not rigour; it is a different error.
+
+So architectural language lives in a general vocabulary — 53 concepts, 332
+English and Arabic terms, matched **exactly on a normalised form** (no
+stemming, no substring: `STORE` must not match `STOREY`). Two tests keep it
+honest:
+
+- every real project word must reach its class **through the vocabulary**,
+  by the same lookup any other term takes;
+- **no concept may be named by a single term.** A one-term concept matching
+  one project's spelling is that project's rule wearing a general name.
+
+Breadth is the evidence. The vocabulary is required to recognise ward,
+classroom, showroom, riser, loggia, atrium, vestibule, مصعد, عيادة, بهو —
+none of which appears on any drawing here.
+
+**UNKNOWN stays a first-class answer**, and by §10 an unknown NAME never
+invalidates a correct GEOMETRY.
+
+## 52 · TWO LABELS IN ONE PLACE ARE USUALLY ONE NAME WRITTEN TWICE
+
+Round 2 blocked every room on P7757 with
+`IDENTITY_AMBIGUOUS_MULTIPLE_LABELS`, because it counted strings. Each stamp
+carries an English label and an Arabic one. `SALOON` and `صالون` are not two
+identities in conflict; they are one identity stated twice, and seeing both
+should make it STRONGER.
+
+```
+SAME_CONCEPT               one concept, two statements - identity strengthened
+COMPATIBLE                 one known, one UNKNOWN - nothing contradicts
+DIFFERENT_FUNCTIONAL_ZONE  a zone within a space, not a rival room
+CONFLICT                   two different ROOM concepts - releases nothing
+UNKNOWN                    neither recognised - honest
+```
+
+Grouping needs **spatial coincidence AND block lineage**: two stamps of
+different rooms can fall within two metres of each other near a shared wall,
+and merging those would invent a conflict out of a layout accident.
+
+On P7757 this took identity from **0 established to 17, with 0 conflicts**.
+
+## 53 · A ROOM IS CLOSED BY THE WALLS IT NEEDS, NOT THE WALLS IT HAS
+
+A site wall and a partition are both two parallel faces a consistent
+distance apart. The paired-face test cannot separate them: it asks how a
+line is DRAWN, and the difference is what the line DOES.
+
+So §6's rule is implemented directly:
+
+> Take the outermost boundary of everything the drawn lines enclose. Remove
+> the bands lying on it and look again. If every room observation is STILL
+> enclosed, that ring was never holding a room in — it bounds ground. If
+> removing it leaves a room unenclosed, the building boundary coincides with
+> it and it stays eligible.
+
+That is containment, and it reads no area, so a plot far larger than its
+building and one barely larger are handled identically.
+
+**Do not overcorrect.** An external building wall MAY form a room side —
+where there is no site line the outermost boundary IS the envelope, removing
+it opens the rooms, and it stays eligible. Rejecting envelope walls would
+make every corner room unmeasurable.
+
+Enclosure runs **twice**: first offering only bands that divide the fabric,
+and only if that fails offering the outermost boundary. The first pass is
+the nearest supported cycle, and a site line cannot appear in an enclosure
+that never used one. "Smallest" is topological throughout — no area is
+compared and no room-size prior exists.
+
+Two ways this went wrong before it went right, both caught by synthetic
+cases rather than by a client drawing:
+
+- **counting ray crossings is not a nesting depth.** An open partition adds
+  crossings on one side only, so a point between the plot and the building
+  scored the same depth as a point inside a room.
+- **short is not irrelevant.** Excluding runs under 300 mm from room
+  boundaries — a rule meant to keep ticks out of ring detection — stripped
+  1,313 of 2,877 bands from a drawing whose wall runs average 462 mm, after
+  which nothing enclosed at all. Short runs are kept out of the ring model
+  and still allowed to form a room side.

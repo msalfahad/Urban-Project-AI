@@ -112,17 +112,56 @@ _REAL_WORDS = ("SALOON", "KITCHEN", "DEWANEYA", "NEIGHBOUR", "SEA VIEW",
 
 
 @pytest.mark.parametrize("word", _REAL_WORDS)
-def test_a_real_project_word_gets_no_special_treatment(word):
-    """The behavioural version of "nothing is hardcoded".
+def test_a_real_project_word_is_judged_by_the_general_vocabulary(word):
+    """Round 3 corrected this test, and the correction matters.
 
-    Each of these is a string from P7757. Every one must be classified by
-    the same structural tests as an invented name — so each is compared
-    against a nonsense word in the identical position.
+    It used to demand that `KITCHEN` classify EXACTLY like the nonsense
+    word `QQZZX` — no reason may differ. That was the wrong invariant: it
+    made the semantic layer blind, so it could not tell a kitchen from a
+    street, and a street label seeded a physical room.
+
+    The invariant that replaces it is narrower and is the one that matters:
+    a real project's word must be judged by the GENERAL vocabulary, by the
+    same lookup as any other term, and never by a rule that names it. So
+    each word is required to reach its class through the vocabulary — the
+    same path a term from a drawing nobody here has seen would take.
     """
-    real = ss.classify([_Text(word, 0, 0, ("B",))]).observations[0]
-    made_up = ss.classify([_Text("QQZZX", 0, 0, ("B",))]).observations[0]
-    assert real.semantic_class == made_up.semantic_class
-    assert real.reasons == made_up.reasons
+    from engine import architectural_ontology as onto
+
+    o = ss.classify([_Text(word, 0, 0, ("B",))]).observations[0]
+    look = onto.classify_term(word)
+    if look.is_known:
+        # Its class came from the vocabulary's concept class, not from a
+        # rule mentioning this string.
+        assert ss.R_VOCABULARY in o.reasons
+        assert f"CONCEPT_{look.concept}" in o.reasons
+        assert o.semantic_class == ss._FROM_ONTOLOGY[look.concept_class]
+    else:
+        # Unrecognised: it takes the same path as any unknown term.
+        made_up = ss.classify([_Text("QQZZX", 0, 0, ("B",))]).observations[0]
+        assert o.semantic_class == made_up.semantic_class
+        assert o.reasons == made_up.reasons
+
+
+def test_the_vocabulary_contains_no_rule_naming_one_project(_=None):
+    """The hardcoding invariant, stated where it belongs.
+
+    Nothing may branch on a specific project's string. The vocabulary is
+    data, applied uniformly, and a term from it is looked up exactly as a
+    term from any other drawing would be.
+    """
+    from engine import architectural_ontology as onto
+
+    for word in _REAL_WORDS:
+        look = onto.classify_term(word)
+        if not look.is_known:
+            continue
+        # The concept it reaches must also be reachable by OTHER terms —
+        # a concept with exactly one term, matching one project's spelling,
+        # would be that project's rule wearing a general name.
+        concept = next(c for c in onto.concepts() if c.key == look.concept)
+        assert len(concept.terms) > 1, (
+            f"concept {concept.key} is named only by {concept.terms}")
 
 
 def test_no_real_project_string_is_hardcoded_in_the_executable_code():

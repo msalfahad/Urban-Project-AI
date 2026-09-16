@@ -25,6 +25,7 @@ from engine import cad_profile as profile
 from engine import cad_regions as regions
 from engine import cad_selftest as selftest
 from engine import round2_selftest as round2
+from engine import round3_selftest as round3
 from engine import space_enclosure as enc
 from engine import wall_role as wroles
 from engine.reference_mapping import refuse_if_sealed
@@ -50,6 +51,7 @@ def run(dwg: str, *, converter: str = "", work_dir: str = "data/runs/cad_convert
     # means.
     freeze = selftest.assert_frozen()
     r2 = round2.assert_frozen()
+    r3 = round3.assert_frozen()
 
     if decode_json and Path(decode_json).exists():
         decoded = json.loads(Path(decode_json).read_text(errors="replace"))
@@ -131,11 +133,22 @@ def run(dwg: str, *, converter: str = "", work_dir: str = "data/runs/cad_convert
             "WALL_ROLE_HASH": wroles.classifier_hash(),
             "cases": r2["cases"], "passed": r2["passed"],
             "failed": r2["failed"], "safety_result": r2["safety_result"]},
+        "round_3_freeze": {
+            "ROUND_3_SYNTHETIC_HASH": r3["ROUND_3_SYNTHETIC_HASH"],
+            "ROOM_BOUNDARY_AUTHORITY_HASH":
+                r3["ROOM_BOUNDARY_AUTHORITY_HASH"],
+            "MULTILINGUAL_IDENTITY_HASH": r3["MULTILINGUAL_IDENTITY_HASH"],
+            "ONTOLOGY_HASH": r3["ONTOLOGY_HASH"],
+            "cases": r3["cases"], "passed": r3["passed"],
+            "failed": r3["failed"],
+            "required_results_held": r3["required_results_held"]},
         "wall_roles": wall_rep.record(),
         "measurement": rep.record(),
         "PROJECT_2_CAD_BASELINE_HASH": _baseline(nd, prof, rep, src_hash),
         "PROJECT_2_CAD_ROUND2_HASH": _round2_hash(
             nd, prof, rep, src_hash, r2),
+        "PROJECT_2_CAD_ROUND3_HASH": _round3_hash(
+            nd, prof, rep, src_hash, r2, r3),
         "no_human_reference_was_opened": True,
         "what_is_absent_from_this_record": (
             "any benchmark, any architect take-off total, any manual "
@@ -192,6 +205,18 @@ def _round2_hash(nd, prof, rep, src_hash: str, r2: dict) -> str:
     return hashlib.sha256("|".join(parts).encode("utf-8")).hexdigest()[:24]
 
 
+def _round3_hash(nd, prof, rep, src_hash: str, r2: dict, r3: dict) -> str:
+    """Round 2's baseline plus round 3's authority, identity and vocabulary."""
+    parts = [
+        _round2_hash(nd, prof, rep, src_hash, r2),
+        f"authority={r3['ROOM_BOUNDARY_AUTHORITY_HASH']}",
+        f"identity={r3['MULTILINGUAL_IDENTITY_HASH']}",
+        f"ontology={r3['ONTOLOGY_HASH']}",
+        f"synthetic={r3['ROUND_3_SYNTHETIC_HASH']}",
+    ]
+    return hashlib.sha256("|".join(parts).encode("utf-8")).hexdigest()[:24]
+
+
 def _baseline(nd, prof, rep, src_hash: str) -> str:
     """One hash over every frozen component of this run."""
     parts = [
@@ -227,7 +252,8 @@ def main(argv=None) -> int:
         "PROJECT_2_CAD_BASELINE_HASH": rec.get(
             "PROJECT_2_CAD_BASELINE_HASH"),
         "PROJECT_2_CAD_ROUND2_HASH": rec.get("PROJECT_2_CAD_ROUND2_HASH"),
-        "round_2_freeze": rec.get("round_2_freeze"),
+        "PROJECT_2_CAD_ROUND3_HASH": rec.get("PROJECT_2_CAD_ROUND3_HASH"),
+        "round_3_freeze": rec.get("round_3_freeze"),
         "adapter_freeze": rec.get("adapter_freeze"),
         "counts": rec.get("measurement", {}).get("counts"),
     }, indent=2))

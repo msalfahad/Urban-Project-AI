@@ -38,7 +38,9 @@ import math
 from collections import Counter
 from dataclasses import dataclass, field
 
+from engine import boundary_authority as authority
 from engine import enclosure_role as roles
+from engine import identity_reconcile as ident
 from engine import semantic_seed as seeds_mod
 from engine import space_enclosure as enc
 from engine.boundary_match import VectorCandidate
@@ -81,6 +83,9 @@ class SpaceRow:
     provenance: tuple = ()
     enclosure_role: str = roles.UNRESOLVED
     role_evidence: tuple = ()
+    identity: object = None
+    boundary_roles: tuple = ()
+    closed_on_envelope: bool = False
 
     @property
     def is_complete(self) -> bool:
@@ -97,12 +102,30 @@ class SpaceRow:
         return self.enclosure.verdict
 
     @property
+    def physical_space_status(self) -> str:
+        """Is this a physical space — separately from what it is called.
+
+        §10: geometry, physical-space validity, identity and release are
+        four different questions. A room whose name nobody can read is
+        still a room.
+        """
+        if not self.is_complete:
+            return "PHYSICAL_SPACE_NOT_ESTABLISHED"
+        if self.enclosure_role != roles.RELEASABLE_ROLE:
+            return f"NOT_A_PHYSICAL_ROOM_ROLE_IS_{self.enclosure_role}"
+        return "PHYSICAL_SPACE_VALIDATED"
+
+    @property
     def identity_status(self) -> str:
-        if not self.label_observations:
-            return "IDENTITY_NOT_ESTABLISHED_NO_LABEL"
-        if len(set(self.label_observations)) > 1:
-            return "IDENTITY_AMBIGUOUS_MULTIPLE_LABELS"
-        return "LABEL_OBSERVED_FROM_AUTHORED_TEXT"
+        """What it is CALLED. Never a precondition for the geometry."""
+        if self.identity is None:
+            return ident.IDENTITY_UNKNOWN
+        return self.identity.identity_status
+
+    @property
+    def normalized_identity(self) -> str:
+        return "" if self.identity is None else \
+            self.identity.normalized_identity
 
     def record(self) -> dict:
         e = self.enclosure
@@ -111,9 +134,16 @@ class SpaceRow:
             "seed_mm": [round(v, 1) for v in self.seed_mm],
             "room_name_observations": list(self.label_observations),
             "label_block": self.label_block,
-            "room_type": "NOT_ESTABLISHED",
+            "room_type": (self.normalized_identity or "NOT_ESTABLISHED"),
             "geometry_status": self.geometry_status,
+            "physical_space_status": self.physical_space_status,
             "identity_status": self.identity_status,
+            "normalized_identity": self.normalized_identity,
+            "identity_evidence": (list(self.identity.evidence)
+                                  if self.identity else []),
+            "independent_identity_statements": (
+                self.identity.supporting_observations
+                if self.identity else 0),
             "clear_internal_polygon_wkt": (e.polygon_wkt if e else ""),
             "clear_area_m2": (None if not e or e.area_m2 is None
                               else round(e.area_m2, 3)),
@@ -132,6 +162,9 @@ class SpaceRow:
             "cad_provenance": list(self.provenance),
             "enclosure_role": self.enclosure_role,
             "enclosure_role_evidence": list(self.role_evidence),
+            "closed_using_building_envelope": self.closed_on_envelope,
+            "boundary_segments": [dict(b) for b in self.boundary_roles],
+            "boundary_segment_count": len(self.boundary_roles),
             "geometry_hash": (e.geometry_hash if e else ""),
             "release_status": self._release()["status"],
             "blocker": self._release()["blocker"],
@@ -156,7 +189,10 @@ class SpaceRow:
         if self.enclosure_role != roles.RELEASABLE_ROLE:
             return {"status": "DIAGNOSTIC_ONLY",
                     "blocker": f"ENCLOSURE_ROLE_IS_{self.enclosure_role}"}
-        if self.identity_status == "IDENTITY_AMBIGUOUS_MULTIPLE_LABELS":
+        # Identity must be ESTABLISHED or explicitly UNKNOWN. Only a
+        # CONTRADICTION blocks — round 2 blocked on "more than one string",
+        # which stopped every bilingual stamp on the drawing.
+        if self.identity_status == ident.IDENTITY_CONFLICT:
             return {"status": "DIAGNOSTIC_ONLY",
                     "blocker": "INCOMPATIBLE_SEMANTIC_OBSERVATIONS"}
         if not self.enclosure or not self.enclosure.edges:
@@ -178,6 +214,9 @@ class Report:
     candidate_lines: int = 0
     semantic: object = None
     roles: object = None
+    authority: object = None
+    identity: object = None
+    all_candidate_lines: int = 0
     notes: dict = field(default_factory=dict)
 
     def counts(self) -> dict:
@@ -187,8 +226,8 @@ class Report:
                    and not r.is_complete]
         unresolved = [r for r in self.rows if r not in complete
                       and r not in partial]
-        ident = [r for r in self.rows
-                 if r.identity_status == "LABEL_OBSERVED_FROM_AUTHORED_TEXT"]
+        established = [r for r in self.rows
+                       if r.identity_status == ident.IDENTITY_ESTABLISHED]
         rel = [r for r in self.rows
                if r._release()["status"] == "RELEASE_ELIGIBLE_GEOMETRY"]
         checks = [d for r in self.rows for d in r.dimension_checks]
@@ -197,7 +236,7 @@ class Report:
             "complete": len(complete),
             "partial": len(partial),
             "unresolved": len(unresolved),
-            "identity_established": len(ident),
+            "identity_established": len(established),
             "release_eligible": len(rel),
             "by_enclosure_role": dict(Counter(
                 r.enclosure_role for r in self.rows).most_common()),
@@ -227,7 +266,12 @@ class Report:
             "enclosure_algorithm": enc.ALGORITHM,
             "enclosure_freeze_hash": enc.freeze_hash(),
             "wall_layers_used": list(self.wall_layers),
-            "wall_face_candidates": self.candidate_lines,
+            "wall_like_candidates": self.all_candidate_lines,
+            "room_boundary_eligible_candidates": self.candidate_lines,
+            "boundary_authority": (self.authority.record()
+                                   if self.authority else None),
+            "identity_reconciliation": (self.identity.record()
+                                        if self.identity else None),
             "seeds_from_room_name_blocks": self.candidates,
             "counts": self.counts(),
             "semantic_seeds": (self.semantic.record() if self.semantic
@@ -289,6 +333,30 @@ def seeds_from_labels(normalized, *, semantic=None) -> list:
             "object_id": src.provenance.object_id,
         })
     return out
+
+
+def _boundary_segments(enclosure, role_of) -> tuple:
+    """Every side of the measured polygon, with its provenance and role.
+
+    §14 asks for this per segment: which CAD entity drew it, what role the
+    authority gave it, and whether material stands there or the boundary is
+    virtual (a portal closing a doorway without pretending material exists).
+    """
+    if not enclosure or not enclosure.edges:
+        return ()
+    out = []
+    for axis, fixed, lo, hi, object_id, src in enclosure.edges:
+        out.append({
+            "axis": axis, "fixed_mm": round(fixed, 2),
+            "interval_mm": [round(lo, 2), round(hi, 2)],
+            "length_mm": round(abs(hi - lo), 1),
+            "cad_provenance": object_id,
+            "boundary_roles": list(role_of.get(object_id, ())),
+            "material": ("MATERIAL_PRESENT" if object_id else
+                         "VIRTUAL_NO_MATERIAL"),
+            "source_type": src,
+        })
+    return tuple(out)
 
 
 def _principal(polygon_wkt: str) -> tuple:
@@ -405,39 +473,73 @@ def measure(normalized, profile, *, region=None, semantic=None) -> Report:
     Every stage can only narrow what the next one sees.
     """
     wall_layers = tuple(profile.wall_like_layers())
-    cands = wall_candidates(normalized, wall_layers)
+    all_cands = wall_candidates(normalized, wall_layers)
     sem = semantic if semantic is not None else seeds_mod.classify(
         normalized.texts)
     seeds = seeds_from_labels(normalized, semantic=sem)
     if region is not None:
         seeds = [s for s in seeds if region.contains(s["x"], s["y"])]
 
+    # ROUND 3's CORRECTION. A paired-face test proves a line is drawn like a
+    # wall; it cannot tell a site boundary from a partition. The authority
+    # stage measures how many walls lie between each side of a band and the
+    # outside, and only bands reaching the depth at which rooms live may
+    # close one. §6: a site line never completes a room polygon.
+    auth = authority.classify(all_cands, sem.seeds())
+    eligible_ids = {b.band_id for b in auth.eligible()}
+    cands = [c for c in all_cands if c.object_id in eligible_ids]
+    role_of = {b.band_id: b.roles for b in auth.bands}
+
+    # §7's SMALLEST SUPPORTED ENCLOSING CYCLE, done by enclosing twice.
+    #
+    # The first pass offers only bands that divide the fabric. If a seed
+    # closes on those, that is the nearest enclosing cycle and no outer
+    # boundary was needed — which is also §6 satisfied, because a site line
+    # can never appear in an enclosure that did not use one.
+    #
+    # Only when the inner pass fails is the outermost boundary offered, so
+    # a corner room bounded on two sides by external wall still measures
+    # (§5). "Smallest" here is topological, not an area comparison: it is
+    # the nearest cycle the drawn partitions support.
+    inner_cands = [c for c in cands
+                   if authority.INTERNAL_PARTITION in role_of.get(
+                       c.object_id, ())]
+
     rep = Report(candidates=len(seeds), wall_layers=wall_layers,
                  candidate_lines=len(cands))
     rep.semantic = sem
+    rep.authority = auth
+    rep.all_candidate_lines = len(all_cands)
 
-    # Group stamps that sit within one room: a block carries its English and
-    # its Arabic label as two text entities at nearby points, and they are
-    # one room, not two.
-    groups: list = []
-    for s in sorted(seeds, key=lambda r: (r["x"], r["y"])):
-        for g in groups:
-            if (abs(g["x"] - s["x"]) < 2000.0
-                    and abs(g["y"] - s["y"]) < 2000.0
-                    and g["block"] == s["block"]):
-                g["labels"].append(s["value"])
-                g["ids"].append(s["object_id"])
-                break
-        else:
-            groups.append({"x": s["x"], "y": s["y"], "block": s["block"],
-                           "labels": [s["value"]], "ids": [s["object_id"]]})
+    # Reconcile the labels at each place into ONE identity. Round 2 counted
+    # strings and called every bilingual stamp a conflict; SALOON and صالون
+    # are one identity stated twice.
+    by_id = {t.provenance.object_id: t for t in normalized.texts}
+    seed_texts = [by_id[s["object_id"]] for s in seeds
+                  if s["object_id"] in by_id]
+    id_rep = ident.reconcile(ident.observations_from(seed_texts))
+    rep.identity = id_rep
+
+    groups = [{"x": g.x, "y": g.y,
+               "block": (g.observations[0].carrier_block
+                         if g.observations else ""),
+               "labels": [o.text for o in g.observations],
+               "ids": [o.observation_id for o in g.observations],
+               "identity": g}
+              for g in id_rep.groups]
 
     for n, g in enumerate(sorted(groups, key=lambda r: (-r["y"], r["x"])), 1):
         sid = f"CADSP-{n:03d}"
         box = (g["x"] - SEED_NEIGHBOURHOOD_MM, g["y"] - SEED_NEIGHBOURHOOD_MM,
                g["x"] + SEED_NEIGHBOURHOOD_MM, g["y"] + SEED_NEIGHBOURHOOD_MM)
-        e = enc.enclose(sid, (g["x"], g["y"]), cands, extent=box,
+        e = enc.enclose(sid, (g["x"], g["y"]), inner_cands, extent=box,
                         enclosure_id=f"LSE-{sid}")
+        used_envelope = False
+        if not e.is_complete:
+            wider = enc.enclose(sid, (g["x"], g["y"]), cands, extent=box,
+                                enclosure_id=f"LSE-{sid}")
+            if wider.is_complete:
+                e, used_envelope = wider, True
         scores = enc.score(e, seed_mm=(g["x"], g["y"]))
         checks = _dimension_checks(e, normalized.dimensions,
                                    dimlfac=normalized.dimlfac)
@@ -448,15 +550,22 @@ def measure(normalized, profile, *, region=None, semantic=None) -> Report:
             principal_dims_mm=_principal(e.polygon_wkt),
             wall_thicknesses_mm=_thicknesses(e, cands),
             dimension_checks=tuple(checks),
-            provenance=tuple(g["ids"])))
+            provenance=tuple(g["ids"]),
+            identity=g.get("identity"),
+            boundary_roles=_boundary_segments(e, role_of),
+            closed_on_envelope=used_envelope))
 
     # WHAT KIND OF ENCLOSURE DID WE JUST CLOSE? Asked of every enclosure at
     # once, because the answer is containment and containment is a property
     # of the SET, not of one polygon.
+    # Counted over RECONCILED IDENTITIES, not raw labels. A bilingual stamp
+    # is two strings and one room; counting the strings made an ordinary
+    # room look like two observations in one space, which the role
+    # classifier then read as open plan and refused to call a room.
     role_rep = roles.classify(
         [(r.space_id, r.enclosure.polygon_wkt if r.enclosure else "")
          for r in rep.rows],
-        sem.seeds(), cands)
+        id_rep.groups, cands)
     verdicts = {v.enclosure_id: v for v in role_rep.verdicts}
     rep.rows = [
         SpaceRow(**{**r.__dict__,

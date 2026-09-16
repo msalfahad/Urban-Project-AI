@@ -116,7 +116,13 @@ def test_a_closed_room_is_measured_by_the_frozen_enclosure():
     assert abs(row.enclosure.area_m2 - 20.0) < 0.01, row.enclosure.area_m2
     assert abs(row.enclosure.perimeter_m - 18.0) < 0.01
     assert row.label_observations == ("SALOON",)
-    assert row.identity_status == "LABEL_OBSERVED_FROM_AUTHORED_TEXT"
+    # Round 3 replaced the status string: identity is now reconciled
+    # through the vocabulary rather than reported as "a label was seen".
+    from engine import identity_reconcile as ident
+
+    assert row.identity_status == ident.IDENTITY_ESTABLISHED
+    assert row.normalized_identity == "SALOON"
+    assert row.physical_space_status == "PHYSICAL_SPACE_VALIDATED"
     # The frozen algorithm, not a CAD-only copy of it.
     assert rep.record()["enclosure_algorithm"] == enc.ALGORITHM
     assert rep.record()["enclosure_freeze_hash"] == enc.freeze_hash()

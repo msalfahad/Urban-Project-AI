@@ -43,14 +43,28 @@ import re
 from collections import Counter
 from dataclasses import dataclass, field
 
-CLASSIFIER = "SEMANTIC_SEED_CLASSIFIER_V1"
+from engine import architectural_ontology as onto
 
-# The four classes. Only ROOM_LIKE may seed a physical-space measurement,
-# and even then only if its geometric context supports one (§5).
+CLASSIFIER = "SEMANTIC_SEED_CLASSIFIER_V2"
+
+# The classes. Only ROOM_LIKE may seed a physical-space measurement, and
+# even then only if its geometric context supports one (§5).
 ROOM_LIKE = "ROOM_LIKE"
 ZONE_LIKE = "ZONE_LIKE"
+EXTERNAL_SPACE_LIKE = "EXTERNAL_SPACE_LIKE"
 NON_SPACE_ANNOTATION = "NON_SPACE_ANNOTATION"
 AMBIGUOUS = "AMBIGUOUS"
+
+# What the vocabulary's concept classes mean for seeding. A zone is part of
+# a space rather than a space; an external space is a space that is not a
+# room; a site or drawing note is not a space at all.
+_FROM_ONTOLOGY = {
+    onto.ROOM: ROOM_LIKE,
+    onto.FUNCTIONAL_ZONE: ZONE_LIKE,
+    onto.EXTERNAL_SPACE: EXTERNAL_SPACE_LIKE,
+    onto.SITE_ANNOTATION: NON_SPACE_ANNOTATION,
+    onto.DRAWING_ANNOTATION: NON_SPACE_ANNOTATION,
+}
 
 # Why a string was classified the way it was.
 R_NUMERIC = "STRING_IS_A_MEASUREMENT_NOT_A_NAME"
@@ -59,6 +73,8 @@ R_OUTSIDE = "OBSERVATION_LIES_OUTSIDE_THE_BUILT_FABRIC"
 R_NO_CONTEXT = "NO_BOUNDED_GEOMETRY_NEAR_THE_OBSERVATION"
 R_LOOSE = "TEXT_NOT_CARRIED_BY_A_PLACED_SYMBOL"
 R_NAMELIKE = "STRING_BEHAVES_LIKE_A_NAME_INSIDE_BUILT_FABRIC"
+R_VOCABULARY = "ARCHITECTURAL_VOCABULARY_RECOGNISED_THE_TERM"
+R_UNKNOWN_TERM = "TERM_NOT_IN_THE_VOCABULARY_BUT_PLACED_LIKE_A_STAMP"
 
 # A string is a measurement when, stripped of the decorations a CAD level
 # or dimension puts round a number, nothing but a number is left. The
@@ -161,8 +177,9 @@ def frozen_rules() -> dict:
 
 
 def classifier_hash() -> str:
-    parts = [CLASSIFIER, ROOM_LIKE, ZONE_LIKE, NON_SPACE_ANNOTATION,
-             AMBIGUOUS, _NUMBER.pattern, _SCALE.pattern, _DECORATION.pattern]
+    parts = [CLASSIFIER, ROOM_LIKE, ZONE_LIKE, EXTERNAL_SPACE_LIKE,
+             NON_SPACE_ANNOTATION, AMBIGUOUS, _NUMBER.pattern,
+             _SCALE.pattern, _DECORATION.pattern, onto.ontology_hash()]
     return hashlib.sha256("|".join(parts).encode("utf-8")).hexdigest()[:24]
 
 
@@ -191,12 +208,22 @@ def classify(texts, *, built_fabric=None, bounded_context=None) -> SeedReport:
         carrier = (t.provenance.block_path[-1]
                    if t.provenance.block_path else "")
 
+        look = onto.classify_term(t.value)
+
         if is_measurement(t.value):
             cls = NON_SPACE_ANNOTATION
             reasons.append(R_NUMERIC)
         elif is_drawing_title(t.value):
             cls = NON_SPACE_ANNOTATION
             reasons.append(R_SCALE)
+        elif look.is_known:
+            # The vocabulary recognised the term, so its concept class
+            # decides. This is the round-3 correction: round 2 judged every
+            # string by shape alone and could not tell a kitchen from a
+            # street, which is why a street label seeded a room.
+            cls = _FROM_ONTOLOGY.get(look.concept_class, AMBIGUOUS)
+            reasons.append(R_VOCABULARY)
+            reasons.append(f"CONCEPT_{look.concept}")
         elif not carrier:
             # Loose text is as likely a note, a street name or a view. It is
             # not rejected outright — it is simply not permitted to seed.
@@ -213,7 +240,12 @@ def classify(texts, *, built_fabric=None, bounded_context=None) -> SeedReport:
                 cls = AMBIGUOUS
                 reasons.append(R_NO_CONTEXT)
 
-        if cls == ROOM_LIKE:
+        if cls == ROOM_LIKE and not look.is_known:
+            # An UNRECOGNISED term on a placed stamp still seeds. §10: a
+            # valid physical room exists even when its name is UNKNOWN, and
+            # an unreadable label must not destroy correct geometry.
+            reasons.append(R_UNKNOWN_TERM)
+        elif cls == ROOM_LIKE:
             reasons.append(R_NAMELIKE)
 
         rep.observations.append(SpaceObservation(
