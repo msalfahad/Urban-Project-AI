@@ -177,8 +177,7 @@ def run(decode_json: str, *, supervised_json: str = "",
         except Exception:      # noqa: BLE001
             continue
         for e in register.entries:
-            if not e.may_release or e.release_status != \
-                    freg.RELEASE_ELIGIBLE:
+            if not e.released:
                 continue
             g = (by_id.get(e.space_id) or {}).get("polygon")
             if g is None:

@@ -47,7 +47,7 @@ from dataclasses import dataclass, field
 from engine import cad_profile as cprofile
 from engine import space_enclosure as enc
 
-MODEL = "STAIR_ASSEMBLY_TREADS_RISERS_LANDINGS_V1"
+MODEL = "STAIR_ASSEMBLY_TREADS_RISERS_LANDINGS_V2"
 
 # --- what a stair is made of --------------------------------------------
 STAIR_ASSEMBLY = "STAIR_ASSEMBLY"
@@ -57,6 +57,35 @@ STAIR_RISER = "STAIR_RISER"
 STAIR_LANDING = "STAIR_LANDING"
 PARTS = (STAIR_ASSEMBLY, STAIR_FLIGHT, STAIR_TREAD, STAIR_RISER,
          STAIR_LANDING)
+
+# --- §11 what the drawing SHOWS, before anything is reconstructed -------
+OBS_PARALLEL_RUN = "A_RUN_OF_PARALLEL_LINES_AT_A_TREAD_GOING"
+OBS_ARC_RING = "CONCENTRIC_ARCS_WITH_LINES_POINTING_AT_THEIR_CENTRE"
+OBS_STAIR_LABEL = "A_STAIR_LABEL"
+OBSERVATION_KINDS = (OBS_PARALLEL_RUN, OBS_ARC_RING, OBS_STAIR_LABEL)
+
+MAPPED = "MAPPED_TO_STAIR_ASSEMBLY"
+UNRESOLVED_OBSERVATION = "STAIR_OBSERVATION_UNRESOLVED"
+# A run the drawing shows and the evidence REFUSES is resolved, not
+# unresolved: hatching in the corner of a plate is not a staircase
+# nobody reconstructed, it is not a staircase.
+NOT_A_STAIR_ON_EVIDENCE = "NOT_A_STAIR_ON_EVIDENCE"
+OBSERVATION_STATES = (MAPPED, UNRESOLVED_OBSERVATION,
+                      NOT_A_STAIR_ON_EVIDENCE)
+
+# --- §9 what KIND of stair it is ----------------------------------------
+MAIN_INTERIOR_STAIR = "MAIN_INTERIOR_STAIR"
+SECONDARY_INTERIOR_STAIR = "SECONDARY_INTERIOR_STAIR"
+SERVICE_STAIR = "SERVICE_STAIR"
+EXTERIOR_STEPS = "EXTERIOR_STEPS"
+LANDSCAPE_STEPS = "LANDSCAPE_STEPS"
+STAIR_ROLE_UNKNOWN = "STAIR_ROLE_UNKNOWN"
+STAIR_ROLES = (MAIN_INTERIOR_STAIR, SECONDARY_INTERIOR_STAIR,
+               SERVICE_STAIR, EXTERIOR_STEPS, LANDSCAPE_STEPS,
+               STAIR_ROLE_UNKNOWN)
+
+# §16. A stair is not marble because it is a stair.
+FINISH_NOT_CONFIRMED = "STAIR_FINISH_NOT_CONFIRMED"
 
 # --- how it runs ---------------------------------------------------------
 STRAIGHT = "STRAIGHT"
@@ -104,6 +133,31 @@ SAME_PITCH_MM = enc.COLLINEAR_JOIN_MM * 10.0
 # rather than a tread.
 LANDING_MIN_MM = MAX_GOING_MM
 
+# --- §13 what a piece of floor BETWEEN the flights actually is ----------
+#
+# A staircase turns on a LANDING. It does not turn on the floor plate it
+# arrives at, on the void its flights wind around, or on the circulation
+# the room keeps beside it. Round 6D took every piece left between the
+# flights for a landing, and one of them was 11.93 m2 — a floor plate
+# wearing a landing's name, and, had a finish been confirmed, marble
+# billed over porcelain on the same square metre (§16).
+FLOOR_PLATE = "FLOOR_PLATE"
+OPEN_VOID = "OPEN_VOID"
+CIRCULATION_FLOOR = "CIRCULATION_FLOOR"
+LANDING_ROLE_UNRESOLVED = "WHAT_THIS_PIECE_IS_IS_NOT_ESTABLISHED"
+BETWEEN_FLIGHT_ROLES = (STAIR_LANDING, FLOOR_PLATE, OPEN_VOID,
+                        CIRCULATION_FLOOR, LANDING_ROLE_UNRESOLVED)
+NOT_A_STAIR_LANDING = "NOT_A_STAIR_LANDING"
+
+# A landing is a piece of the STAIR: about as wide as the flights it
+# joins and no longer than a couple of them. Larger than that and the
+# stair stands on it rather than turns on it. A multiple of the drawn
+# flight width, never an area: the drawing decides the scale.
+LANDING_MAX_WIDTHS = 2.5
+
+# Two pieces touch when they come this close together.
+CONTACT_MM = SAME_PITCH_MM
+
 # A stair is at least this wide, or it is a ladder in a shaft. The
 # project's own thinnest wall, doubled: nothing new is chosen.
 MIN_WIDTH_MM = cprofile.MIN_WALL_THICKNESS_MM * 2.0
@@ -126,7 +180,21 @@ def frozen_parameters() -> dict:
         "LANDING_MIN_MM": LANDING_MIN_MM,
         "MIN_WIDTH_MM": MIN_WIDTH_MM,
         "STAIR_CELL_SHARE": STAIR_CELL_SHARE,
+        "LANDING_MAX_WIDTHS": LANDING_MAX_WIDTHS,
+        "CONTACT_MM": CONTACT_MM,
+        "BETWEEN_FLIGHT_ROLES": list(BETWEEN_FLIGHT_ROLES),
+        "STAIR_ROLES": list(STAIR_ROLES),
         "why": {
+            "a_landing_is_a_piece_of_the_stair": (
+                "a stair turns on a landing, arrives at a floor plate, "
+                "winds around a void and stands beside circulation. "
+                "Only the first is stair finish, and calling the other "
+                "three landings bills marble over porcelain"),
+            "a_kind_of_stair_is_not_a_width": (
+                "the widest run in a drawing is not the main stair of a "
+                "building. What a main stair does is carry a storey, and "
+                "where nothing says which storeys a run connects, its "
+                "kind is UNKNOWN rather than guessed"),
             "a_stair_fills_its_cell": (
                 "a run of hatching is parallel, pitched and inside an "
                 "enclosure as well. What a stair also does is take up "
@@ -156,6 +224,9 @@ def frozen_parameters() -> dict:
 
 def model_hash() -> str:
     parts = ([MODEL] + list(PARTS) + list(EVIDENCE)
+             + list(OBSERVATION_KINDS) + list(STAIR_ROLES)
+             + list(OBSERVATION_STATES) + list(BETWEEN_FLIGHT_ROLES)
+             + [FINISH_NOT_CONFIRMED, NOT_A_STAIR_LANDING]
              + [STRAIGHT, L_SHAPED, U_SHAPED, WINDER, CURVED, SPIRAL,
                 CONFIGURATION_NOT_ESTABLISHED, RISER_NOT_ESTABLISHED,
                 TREAD_NOT_ESTABLISHED, LANDING_NOT_ESTABLISHED,
@@ -163,12 +234,43 @@ def model_hash() -> str:
                 NOT_A_STAIR]
              + [str(v) for v in (MIN_TREADS, MIN_GOING_MM, MAX_GOING_MM,
                                  SAME_PITCH_MM, LANDING_MIN_MM,
-                                 MIN_WIDTH_MM, STAIR_CELL_SHARE)]
+                                 MIN_WIDTH_MM, STAIR_CELL_SHARE,
+                                 LANDING_MAX_WIDTHS, CONTACT_MM)]
              + [NOT_ENOUGH_OF_THE_CELL, FLIGHTS_OVERLAP])
     return hashlib.sha256("|".join(parts).encode("utf-8")).hexdigest()[:24]
 
 
 # ------------------------------------------------------------- the objects
+
+@dataclass
+class Observation:
+    """One stair-like thing the drawing shows. Not yet a staircase."""
+
+    observation_id: str = ""
+    region_id: str = ""
+    kind: str = ""
+    at_mm: tuple = ()
+    extent_mm: tuple = ()
+    lines: int = 0
+    evidence: tuple = ()
+    status: str = UNRESOLVED_OBSERVATION
+    stair_id: str = ""
+    why: str = ""
+
+    def record(self) -> dict:
+        return {
+            "stair_observation_id": self.observation_id,
+            "drawing_region_id": self.region_id,
+            "observation_kind": self.kind,
+            "at_mm": [round(v, 1) for v in self.at_mm],
+            "extent_mm": [round(v, 1) for v in self.extent_mm],
+            "lines": self.lines,
+            "evidence": list(self.evidence),
+            "status": self.status,
+            "stair_id": self.stair_id,
+            "why": self.why,
+        }
+
 
 @dataclass
 class Tread:
@@ -238,19 +340,38 @@ class Riser:
 
 @dataclass
 class Landing:
+    """A piece of floor between the flights, and what it IS (§13)."""
+
     landing_id: str = ""
     polygon_wkt: str = ""
     area_m2: float = 0.0
     length_mm: float = 0.0
     width_mm: float = 0.0
-    status: str = "LANDING_MEASURED"
+    role: str = LANDING_ROLE_UNRESOLVED
+    touches_flight_ends: int = 0
+    touches_flight_sides: int = 0
+    role_evidence: tuple = ()
+    status: str = NOT_A_STAIR_LANDING
+
+    @property
+    def is_stair_landing(self) -> bool:
+        return self.role == STAIR_LANDING
 
     def record(self) -> dict:
         return {
             "landing_id": self.landing_id,
-            "landing_area_m2": round(self.area_m2, 4),
+            "role": self.role,
+            "piece_area_m2": round(self.area_m2, 4),
+            # THE AREA IS ONLY A LANDING AREA WHEN THE PIECE IS ONE.
+            # A floor plate reported as landing_area_m2 is marble over
+            # porcelain on the same square metre.
+            "landing_area_m2": (round(self.area_m2, 4)
+                                if self.is_stair_landing else None),
             "landing_length_mm": round(self.length_mm, 1),
             "landing_width_mm": round(self.width_mm, 1),
+            "touches_flight_ends": self.touches_flight_ends,
+            "touches_flight_sides": self.touches_flight_sides,
+            "role_evidence": list(self.role_evidence),
             "polygon_wkt_mm": self.polygon_wkt,
             "status": self.status,
         }
@@ -266,6 +387,8 @@ class Flight:
     risers: list = field(default_factory=list)
     configuration: str = CONFIGURATION_NOT_ESTABLISHED
     evidence: tuple = ()
+    centre_mm: tuple = ()      # the ring's centre, or the flight's own
+    span_mm: tuple = ()        # inner/outer radius, or the drawn extent
 
     @property
     def tread_area_m2(self) -> float:
@@ -293,6 +416,8 @@ class Flight:
             "NOSING_LM": round(self.nosing_lm, 3),
             "configuration": self.configuration,
             "evidence": list(self.evidence),
+            "centre_mm": [round(v, 1) for v in self.centre_mm],
+            "span_mm": [round(v, 1) for v in self.span_mm],
             "treads": [t.record() for t in self.treads],
             "risers": [r.record() for r in self.risers],
             "counts_are_not_derived_from_each_other": (
@@ -314,6 +439,12 @@ class Assembly:
     flights: list = field(default_factory=list)
     landings: list = field(default_factory=list)
     configuration: str = CONFIGURATION_NOT_ESTABLISHED
+    stair_role: str = STAIR_ROLE_UNKNOWN
+    role_evidence: tuple = ()
+    interior_exterior: str = ""
+    finish: str = FINISH_NOT_CONFIRMED
+    finish_source: str = "OWNER_RULE_REQUEST"
+    physical_stair_id: str = ""
     finish_rule: str = ""
     skirting_lm: float | None = None
     skirting_status: str = SKIRTING_NOT_ESTABLISHED
@@ -326,7 +457,14 @@ class Assembly:
 
     @property
     def landing_m2(self) -> float:
-        return sum(x.area_m2 for x in self.landings)
+        # ONLY the pieces this stair turns on. The floor it lands on is
+        # floor, and it is measured by the floor, once (§13, §16).
+        return sum(x.area_m2 for x in self.landings if x.is_stair_landing)
+
+    @property
+    def not_stair_landing_m2(self) -> float:
+        return sum(x.area_m2 for x in self.landings
+                   if not x.is_stair_landing)
 
     @property
     def nosing_lm(self) -> float:
@@ -347,6 +485,12 @@ class Assembly:
             "floor_to": self.floor_to or FLOOR_TO_FLOOR_NOT_ESTABLISHED,
             "physical_space_id": self.space_id,
             "configuration": self.configuration,
+            "stair_role": self.stair_role,
+            "role_evidence": list(self.role_evidence),
+            "interior_exterior": self.interior_exterior,
+            "finish": self.finish,
+            "finish_source": self.finish_source,
+            "physical_stair_id": self.physical_stair_id,
             "flight_count": len(self.flights),
             "footprint_area_m2": round(self.footprint_area_m2, 4),
             "containing_space_area_m2": (
@@ -372,7 +516,13 @@ class Assembly:
             "skirting_status": self.skirting_status,
             "finish_rule": self.finish_rule or "NO_PROJECT_FINISH_RULE",
             "flights": [f.record() for f in self.flights],
-            "landings": [x.record() for x in self.landings],
+            "landings": [x.record() for x in self.landings
+                         if x.is_stair_landing],
+            # EVERY piece between the flights, including the ones that
+            # are not landings and the floor they belong to instead.
+            "pieces_between_the_flights": [x.record()
+                                           for x in self.landings],
+            "not_stair_landing_m2": round(self.not_stair_landing_m2, 4),
             "exceptions": list(self.exceptions),
             "evidence": list(self.evidence),
             "floor_finish_owner": (
@@ -385,6 +535,7 @@ class Assembly:
 class StairReport:
     region_id: str = ""
     assemblies: list = field(default_factory=list)
+    observations: list = field(default_factory=list)
     refused: list = field(default_factory=list)
     notes: dict = field(default_factory=dict)
 
@@ -396,7 +547,26 @@ class StairReport:
                           for f in a.flights),
             "risers": sum(len(f.risers) for a in self.assemblies
                           for f in a.flights),
-            "landings": sum(len(a.landings) for a in self.assemblies),
+            "stair_landings": sum(1 for a in self.assemblies
+                                  for x in a.landings
+                                  if x.is_stair_landing),
+            "pieces_between_flights": sum(len(a.landings)
+                                          for a in self.assemblies),
+            "pieces_that_are_floor_not_stair": sum(
+                1 for a in self.assemblies for x in a.landings
+                if x.role in (FLOOR_PLATE, CIRCULATION_FLOOR)),
+            "pieces_that_are_void": sum(
+                1 for a in self.assemblies for x in a.landings
+                if x.role == OPEN_VOID),
+            "stair_observations": len(self.observations),
+            "observations_mapped": sum(1 for o in self.observations
+                                       if o.status == MAPPED),
+            "observations_refused_as_not_a_stair": sum(
+                1 for o in self.observations
+                if o.status == NOT_A_STAIR_ON_EVIDENCE),
+            "observations_unresolved": sum(
+                1 for o in self.observations
+                if o.status == UNRESOLVED_OBSERVATION),
             "runs_refused": len(self.refused),
             "riser_quantity_established": sum(
                 1 for a in self.assemblies if a.riser_m2 is not None),
@@ -410,6 +580,7 @@ class StairReport:
             "counts": self.counts(),
             "frozen_parameters": frozen_parameters(),
             "assemblies": [a.record() for a in self.assemblies],
+            "observations": [o.record() for o in self.observations],
             "refused": list(self.refused),
             "notes": dict(self.notes),
         }
@@ -516,7 +687,8 @@ def _edge(axis: str, fixed: float, lo: float, hi: float) -> str:
 
 def assess(lines, *, region_id: str = "DR-001", spaces=(), labels=(),
            floor_from: str = "", floor_to: str = "", sections=None,
-           finish_rule: str = "", skirting_rule=None) -> StairReport:
+           finish_rule: str = "", skirting_rule=None,
+           arcs=(), primitives=()) -> StairReport:
     """Find the stairs in one region and measure what is drawn.
 
     `spaces` are the region's measured spaces (each with a polygon and an
@@ -587,6 +759,37 @@ def assess(lines, *, region_id: str = "DR-001", spaces=(), labels=(),
                           "space_id": space_id, "cell": cell,
                           "ev": ev, "n": n})
 
+    # ---- §12 the curved and winder flights ---------------------------
+    #
+    # Radial treads about a common centre. A detector that knows only
+    # parallel lines does not see a curved stair at all, and silence is
+    # the one answer a stair register may not give.
+    curved = curved_flights(arcs, primitives, region_id=region_id,
+                            sections=sections)
+    for ring, flight in curved:
+        from shapely.wkt import loads as _loads
+
+        foot = None
+        for t in flight.treads:
+            g = _loads(t.polygon_wkt)
+            foot = g if foot is None else foot.union(g)
+        if foot is None:
+            continue
+        space_id, cell = "", None
+        for sid, g in sorted(poly_of.items()):
+            try:
+                if g.intersection(foot).area > foot.area * 0.5:
+                    space_id, cell = sid, g
+                    break
+            except Exception:      # noqa: BLE001
+                continue
+        n += 1
+        found.append({"axis": "RADIAL", "run": [], "foot": foot,
+                      "space_id": space_id, "cell": cell, "n": n,
+                      "flight": flight, "ring": ring,
+                      "ev": list(flight.evidence)
+                      + ([EV_INSIDE_ONE_CELL] if cell is not None else [])})
+
     # ---- runs in one cell are flights of one stair --------------------
     groups: dict = {}
     for item in found:
@@ -600,7 +803,8 @@ def assess(lines, *, region_id: str = "DR-001", spaces=(), labels=(),
         for it in items[1:]:
             foot = foot.union(it["foot"])
         labelled = any(EV_STAIR_LABEL in it["ev"] for it in items)
-        if cell is not None and not labelled and \
+        radial = any(it["axis"] == "RADIAL" for it in items)
+        if cell is not None and not labelled and not radial and \
                 foot.area < cell.area * STAIR_CELL_SHARE:
             rep.refused.append({
                 "run_id": f"RUN-{region_id}-{items[0]['n']:03d}",
@@ -633,7 +837,11 @@ def assess(lines, *, region_id: str = "DR-001", spaces=(), labels=(),
 
         exceptions = []
         for j, it in enumerate(items, 1):
-            flight = _flight(it, region_id, k, j, cell, sections)
+            flight = (it["flight"] if it.get("flight") is not None
+                      else _flight(it, region_id, k, j, cell, sections))
+            # §13 asks what lies between the FLIGHTS, so the flights have
+            # to be on the items before the pieces between them are read.
+            it["flight"] = flight
             asm.flights.append(flight)
             if any(r.status == RISER_NOT_ESTABLISHED for r in flight.risers):
                 exceptions.append(RISER_NOT_ESTABLISHED)
@@ -644,8 +852,7 @@ def assess(lines, *, region_id: str = "DR-001", spaces=(), labels=(),
             if told and int(told) != len(flight.treads):
                 exceptions.append(PLAN_AND_SECTION_DISAGREE)
 
-        asm.landings.extend(_landings(cell, [it["foot"] for it in items],
-                                      region_id, k))
+        asm.landings.extend(_landings(cell, items, region_id, k))
         axes = {it["axis"] for it in items}
         if len(items) >= 2 and len(axes) > 1:
             asm.configuration = L_SHAPED
@@ -671,6 +878,60 @@ def assess(lines, *, region_id: str = "DR-001", spaces=(), labels=(),
                     t.status = TREAD_NOT_ESTABLISHED
         rep.assemblies.append(asm)
 
+    # ---- §11 every stair-like thing the drawing shows ----------------
+    mapped_ids = {it["n"]: a.stair_id
+                  for a in rep.assemblies
+                  for it in found
+                  if a.footprint_wkt and it["foot"] is not None
+                  and it["foot"].intersects(_loads_safe(a.footprint_wkt))}
+    for it in found:
+        g = it["foot"]
+        x0, y0, x1, y1 = (g.bounds if g is not None else (0, 0, 0, 0))
+        sid = mapped_ids.get(it["n"], "")
+        rep.observations.append(Observation(
+            observation_id=f"SO-{region_id}-{it['n']:03d}",
+            region_id=region_id,
+            kind=(OBS_ARC_RING if it["axis"] == "RADIAL"
+                  else OBS_PARALLEL_RUN),
+            at_mm=((x0 + x1) / 2.0, (y0 + y1) / 2.0),
+            extent_mm=(x0, y0, x1, y1),
+            lines=len(it["run"]) or len(it.get("flight").treads) + 1,
+            evidence=tuple(it["ev"]),
+            status=MAPPED if sid else UNRESOLVED_OBSERVATION,
+            stair_id=sid,
+            why=("reconstructed as part of this assembly" if sid else
+                 "the drawing shows it and this round did not "
+                 "reconstruct a stair from it")))
+    for x in rep.refused:
+        rep.observations.append(Observation(
+            observation_id=x["run_id"].replace("RUN-", "SO-"),
+            region_id=region_id, kind=OBS_PARALLEL_RUN,
+            lines=x.get("lines", 0), evidence=(),
+            status=NOT_A_STAIR_ON_EVIDENCE,
+            why=f"{x['why']}: {x.get('what_would_settle_it', '')}"))
+    for o in (labels or ()):
+        text = (getattr(o, "text", "") or "").upper()
+        if "STAIR" not in text:
+            continue
+        x, y = getattr(o, "x", 0.0), getattr(o, "y", 0.0)
+        hit = ""
+        for a in rep.assemblies:
+            try:
+                if _loads_safe(a.footprint_wkt).buffer(
+                        MAX_GOING_MM * 4).contains(_pt(x, y)):
+                    hit = a.stair_id
+                    break
+            except Exception:      # noqa: BLE001
+                continue
+        rep.observations.append(Observation(
+            observation_id=f"SO-{region_id}-L{abs(hash((x, y))) % 997:03d}",
+            region_id=region_id, kind=OBS_STAIR_LABEL, at_mm=(x, y),
+            evidence=(EV_STAIR_LABEL,),
+            status=MAPPED if hit else UNRESOLVED_OBSERVATION,
+            stair_id=hit,
+            why=("a stair assembly stands where this label does" if hit
+                 else "a stair is named here and none was reconstructed")))
+
     rep.notes["a_plan_carries_no_height"] = (
         "every riser here is NOT ESTABLISHED unless section evidence was "
         "supplied. No standard rise is assumed")
@@ -693,9 +954,12 @@ def _flight(item, region_id: str, k: int, j: int, cell, sections) -> Flight:
     axis, run = item["axis"], item["run"]
     lo = min(r[1] for r in run)
     hi = max(r[2] for r in run)
+    x0, y0, x1, y1 = item["foot"].bounds
     flight = Flight(
         flight_id=f"SF-{region_id}-{k:03d}-{j:02d}", axis=axis,
         direction_mm=(run[0][0], run[-1][0]), width_mm=hi - lo,
+        centre_mm=((x0 + x1) / 2.0, (y0 + y1) / 2.0),
+        span_mm=(run[0][0], run[-1][0]),
         evidence=tuple(item["ev"]))
     for i in range(len(run) - 1):
         a, b = run[i], run[i + 1]
@@ -757,23 +1021,74 @@ def _flight(item, region_id: str, k: int, j: int, cell, sections) -> Flight:
     return flight
 
 
+def _loads_safe(wkt: str):
+    from shapely.geometry import Polygon
+    from shapely.wkt import loads
+
+    try:
+        return loads(wkt)
+    except Exception:      # noqa: BLE001
+        return Polygon()
+
+
 def _pt(x: float, y: float):
     from shapely.geometry import Point
 
     return Point(x, y)
 
 
-def _landings(cell, feet, region_id: str, n: int) -> list:
-    """What the flights of one stair leave BETWEEN them.
+def _climb(flight, foot) -> tuple:
+    """The direction this flight climbs in, as a unit vector.
 
-    A landing is the piece a staircase turns on, and it lies between its
-    flights — never the rest of the room the stair stands in. Taking the
-    flights out of the space around them made a 1,229 m2 "landing" out
-    of a floor plate on the first run of this module.
+    A flight's treads are drawn across its climb, so the axis the run
+    was found on gives the climb directly. A curved flight climbs ROUND
+    its ring: at any point that is the tangent, across the radius.
+    """
+    axis = getattr(flight, "axis", "")
+    if axis == "H":
+        return (0.0, 1.0)
+    if axis == "V":
+        return (1.0, 0.0)
+    centre = tuple(getattr(flight, "centre_mm", ()) or ())
+    if axis == "RADIAL" and len(centre) == 2:
+        rx = foot.centroid.x - centre[0]
+        ry = foot.centroid.y - centre[1]
+        nrm = (rx * rx + ry * ry) ** 0.5
+        if nrm > 0:
+            return (-ry / nrm, rx / nrm)
+    return (0.0, 0.0)
+
+
+def _at_the_end(g, foot, flight) -> bool:
+    """Is this piece off the END of the flight, or beside its SIDE?
+
+    A stair turns on a piece at the end of a flight. The gap a pair of
+    parallel flights leaves BETWEEN them is beside both of their sides,
+    and it is the stairwell void, not a landing anybody walks on.
+    """
+    ux, uy = _climb(flight, foot)
+    if ux == 0.0 and uy == 0.0:
+        return False
+    dx = g.centroid.x - foot.centroid.x
+    dy = g.centroid.y - foot.centroid.y
+    return abs(dx * ux + dy * uy) > abs(dx * -uy + dy * ux)
+
+
+def _landings(cell, items, region_id: str, n: int) -> list:
+    """What the flights of one stair leave BETWEEN them, and what it is.
+
+    Two questions, and Round 6D answered only the first. WHERE the
+    leftover pieces are: between the flights, never the rest of the room
+    the stair stands in — taking the flights out of the space around
+    them made a 1,229 m2 "landing" out of a floor plate on the first run
+    of this module. And WHAT each piece is (§13): a stair turns on a
+    landing, arrives at a floor plate, winds around a void and stands
+    beside circulation, and only the first of those four is stair.
     """
     from shapely.geometry import box
 
     out = []
+    feet = [it["foot"] for it in items]
     if len(feet) < 2:
         return out
     x0 = min(f.bounds[0] for f in feet)
@@ -790,13 +1105,653 @@ def _landings(cell, feet, region_id: str, n: int) -> list:
             pass
     if rest.is_empty:
         return out
+    edge = None
+    if cell is not None:
+        try:
+            edge = cell.exterior
+        except Exception:      # noqa: BLE001
+            edge = None
+
     for i, g in enumerate(getattr(rest, "geoms", [rest]), 1):
         if g.is_empty or g.area <= 0:
             continue
         bx0, by0, bx1, by1 = g.bounds
+        long_mm = max(bx1 - bx0, by1 - by0)
+        short_mm = min(bx1 - bx0, by1 - by0)
+
+        ends, sides, widths, ev = 0, 0, [], []
+        near = g.buffer(CONTACT_MM)
+        for it in items:
+            foot, flight = it["foot"], it.get("flight")
+            try:
+                if not near.intersects(foot):
+                    continue
+            except Exception:      # noqa: BLE001
+                continue
+            widths.append(getattr(flight, "width_mm", 0.0) or 0.0)
+            if flight is not None and _at_the_end(g, foot, flight):
+                ends += 1
+            else:
+                sides += 1
+        width = max(widths) if widths else 0.0
+        fits = bool(width) and long_mm <= width * LANDING_MAX_WIDTHS \
+            and short_mm >= MIN_GOING_MM
+        try:
+            reaches_the_room = bool(edge is not None
+                                    and near.intersects(edge))
+        except Exception:      # noqa: BLE001
+            reaches_the_room = False
+
+        # SIZE FIRST. A piece bigger than the flights it lies among is
+        # not something a staircase turns on and not a well it winds
+        # around: it is floor, and the floor measures it. The 11.93 m2
+        # Round 6D called a landing is 7.0 m long beside a 1.25 m
+        # flight — a plate of floor between two runs of a stair.
+        if not fits and ends >= 2:
+            role = LANDING_ROLE_UNRESOLVED
+            ev.append("IT_JOINS_THE_ENDS_OF_TWO_FLIGHTS")
+            ev.append("AND_IT_IS_FAR_LARGER_THAN_THE_FLIGHTS_IT_JOINS")
+        elif not fits:
+            role = CIRCULATION_FLOOR if reaches_the_room else FLOOR_PLATE
+            ev.append("IT_IS_LARGER_THAN_THE_FLIGHTS_BESIDE_IT")
+            if reaches_the_room:
+                ev.append("THE_ROOM_AROUND_THE_STAIR_REACHES_IT")
+        elif ends >= 2:
+            role = STAIR_LANDING
+            ev.append("IT_JOINS_THE_ENDS_OF_TWO_FLIGHTS")
+            ev.append("IT_IS_NO_LARGER_THAN_THE_FLIGHTS_IT_JOINS")
+        elif ends == 1 and not reaches_the_room:
+            role = STAIR_LANDING
+            ev.append("IT_LIES_AT_THE_END_OF_A_FLIGHT")
+            ev.append("THE_ROOM_DOES_NOT_REACH_IT")
+        elif ends == 0 and sides >= 2 and not reaches_the_room:
+            role = OPEN_VOID
+            ev.append("IT_LIES_BESIDE_TWO_FLIGHTS_AND_AT_THE_END_OF_NONE")
+        elif reaches_the_room:
+            role = CIRCULATION_FLOOR
+            ev.append("THE_ROOM_AROUND_THE_STAIR_REACHES_IT")
+        else:
+            role = LANDING_ROLE_UNRESOLVED
+            ev.append("NOTHING_DRAWN_SAYS_WHICH_OF_THE_FOUR_IT_IS")
+
         out.append(Landing(
             landing_id=f"SL-{region_id}-{n:03d}-{i:02d}",
             polygon_wkt=g.wkt, area_m2=g.area / 1e6,
-            length_mm=max(bx1 - bx0, by1 - by0),
-            width_mm=min(bx1 - bx0, by1 - by0)))
+            length_mm=long_mm, width_mm=short_mm,
+            role=role, touches_flight_ends=ends, touches_flight_sides=sides,
+            role_evidence=tuple(ev),
+            status=("LANDING_MEASURED" if role == STAIR_LANDING
+                    else NOT_A_STAIR_LANDING)))
     return out
+
+
+# ------------------------------------------------- §12 the curved stair
+
+# Two arcs are drawn about the same centre when their centres are this
+# close. The enclosure's own junction reach, a hundred times over: a
+# drawn arc's centre is a computed point, not a snapped one.
+ARC_CENTRE_MM = enc.JUNCTION_REACH_MM * 100.0
+
+# A radial line points AT the centre when the perpendicular distance
+# from the centre to its infinite line is under this. Same figure.
+RADIAL_MM = ARC_CENTRE_MM
+
+RADIAL_RUN = "RADIAL_TREADS_ABOUT_A_COMMON_CENTRE"
+EV_CONCENTRIC_ARCS = "CONCENTRIC_ARCS_SHARE_A_CENTRE"
+EV_RADIAL_LINES = "LINES_POINT_AT_THAT_CENTRE"
+EV_TREADS_IN_SEQUENCE = "THE_RADIAL_LINES_FOLLOW_EACH_OTHER_ROUND"
+
+
+@dataclass(frozen=True)
+class ArcRing:
+    """Concentric arcs about one centre: a stair's inner and outer string."""
+
+    cx: float
+    cy: float
+    radii: tuple
+    arc_ids: tuple
+
+    @property
+    def inner_mm(self) -> float:
+        return min(self.radii)
+
+    @property
+    def outer_mm(self) -> float:
+        return max(self.radii)
+
+    def record(self) -> dict:
+        return {"centre_mm": [round(self.cx, 1), round(self.cy, 1)],
+                "radii_mm": [round(r, 1) for r in self.radii],
+                "inner_mm": round(self.inner_mm, 1),
+                "outer_mm": round(self.outer_mm, 1),
+                "arcs": len(self.radii),
+                "cad_provenance": list(self.arc_ids)}
+
+
+def arc_rings(arcs) -> list:
+    """Arcs grouped by the centre they are drawn about."""
+    groups: dict = {}
+    for a in arcs or ():
+        key = (round(a.cx / ARC_CENTRE_MM), round(a.cy / ARC_CENTRE_MM))
+        groups.setdefault(key, []).append(a)
+    out = []
+    for _k, members in groups.items():
+        if len(members) < 2:
+            continue
+        radii = sorted(m.radius for m in members)
+        if radii[-1] - radii[0] < MIN_WIDTH_MM:
+            continue          # one string drawn twice is not a stair
+        out.append(ArcRing(
+            cx=members[0].cx, cy=members[0].cy, radii=tuple(radii),
+            arc_ids=tuple(getattr(m, "object_id", "") for m in members)))
+    return out
+
+
+def _radials(ring: ArcRing, segments) -> list:
+    """Drawn lines that point at the ring's centre, by angle."""
+    import math
+
+    out = []
+    for s in segments or ():
+        x1, y1, x2, y2 = s.x1, s.y1, s.x2, s.y2
+        dx, dy = x2 - x1, y2 - y1
+        length = math.hypot(dx, dy)
+        if length < MIN_WIDTH_MM:
+            continue
+        # perpendicular distance from the centre to this line
+        d = abs(dy * (ring.cx - x1) - dx * (ring.cy - y1)) / length
+        if d > RADIAL_MM:
+            continue
+        r1 = math.hypot(x1 - ring.cx, y1 - ring.cy)
+        r2 = math.hypot(x2 - ring.cx, y2 - ring.cy)
+        lo, hi = min(r1, r2), max(r1, r2)
+        # A TREAD EDGE SPANS THE FLIGHT, from the inner string to the
+        # outer one. A line that merely points at the centre from
+        # somewhere else in the plan — a dimension, a wall on a radius,
+        # a hatch — crosses the band and keeps going, and it is not a
+        # tread. The slack is a tread's own smallest going.
+        if abs(lo - ring.inner_mm) > MIN_GOING_MM:
+            continue
+        if abs(hi - ring.outer_mm) > MIN_GOING_MM:
+            continue
+        mx, my = (x1 + x2) / 2.0, (y1 + y2) / 2.0
+        ang = math.atan2(my - ring.cy, mx - ring.cx)
+        out.append({"angle": ang, "lo": lo, "hi": hi,
+                    "object_id": getattr(s, "object_id", "")})
+    out.sort(key=lambda r: r["angle"])
+    return out
+
+
+def _dedupe(radials, ring: ArcRing) -> list:
+    """Two lines a hair apart are one tread edge drawn twice.
+
+    'A hair' is the angle a tread's smallest going subtends at the
+    ring's own mean radius — the module's own figure, at this stair's
+    scale.
+    """
+    if not radials:
+        return []
+    mean_r = max((ring.inner_mm + ring.outer_mm) / 2.0, 1.0)
+    min_angle = MIN_GOING_MM / mean_r
+    out = [radials[0]]
+    for r in radials[1:]:
+        if r["angle"] - out[-1]["angle"] < min_angle:
+            out[-1] = {**out[-1], "lo": min(out[-1]["lo"], r["lo"]),
+                       "hi": max(out[-1]["hi"], r["hi"]),
+                       "object_id": out[-1]["object_id"]}
+            continue
+        out.append(r)
+    return out
+
+
+def _sector(ring: ArcRing, a0: float, a1: float):
+    """The wedge between two radial lines, from inner string to outer."""
+    import math
+
+    from shapely.geometry import Polygon
+
+    steps = max(2, int(abs(a1 - a0) / math.radians(2.0)) + 1)
+    pts = []
+    for i in range(steps + 1):
+        t = a0 + (a1 - a0) * i / steps
+        pts.append((ring.cx + ring.outer_mm * math.cos(t),
+                    ring.cy + ring.outer_mm * math.sin(t)))
+    for i in range(steps, -1, -1):
+        t = a0 + (a1 - a0) * i / steps
+        pts.append((ring.cx + ring.inner_mm * math.cos(t),
+                    ring.cy + ring.inner_mm * math.sin(t)))
+    return Polygon(pts)
+
+
+def _sequence(radials, ring: ArcRing) -> list:
+    """Put the tread edges in order round the ring, and cut the run.
+
+    TWO THINGS THE ANGLES DO THAT A SORT DOES NOT SURVIVE. A flight that
+    crosses the -180/+180 line looks like a full circle when its angles
+    are simply sorted — the first version of this measured a 95-degree
+    flight as 352 degrees of marble. And a ring may carry lines that are
+    not treads of this flight at all.
+
+    So the sequence starts after the LARGEST gap round the circle — the
+    open side of the flight — and is cut wherever the step from one edge
+    to the next is not a tread's going at this ring's mean radius.
+    """
+    import math
+
+    if len(radials) < 2:
+        return []
+    mean_r = max((ring.inner_mm + ring.outer_mm) / 2.0, 1.0)
+    angles = [r["angle"] for r in radials]
+    gaps = [(angles[(i + 1) % len(angles)] - angles[i]) % (2 * math.pi)
+            for i in range(len(angles))]
+    start = (gaps.index(max(gaps)) + 1) % len(angles)
+    order, ang = [], []
+    for k in range(len(radials)):
+        i = (start + k) % len(radials)
+        a = angles[i]
+        if ang and a < ang[-1]:
+            a += 2 * math.pi * math.ceil((ang[-1] - a) / (2 * math.pi))
+        ang.append(a)
+        order.append({**radials[i], "angle": a})
+    runs, cur = [], [order[0]]
+    for prev, nxt in zip(order, order[1:]):
+        going = (nxt["angle"] - prev["angle"]) * mean_r
+        if MIN_GOING_MM <= going <= MAX_GOING_MM:
+            cur.append(nxt)
+            continue
+        runs.append(cur)
+        cur = [nxt]
+    runs.append(cur)
+    runs = [r for r in runs if len(r) >= MIN_TREADS + 1]
+    return max(runs, key=len) if runs else []
+
+
+def curved_flights(arcs, segments, *, region_id: str = "DR-001",
+                   sections=None) -> list:
+    """Every curved or winder flight this region draws, as Flights.
+
+    A winder's treads are wedges of different sizes and each is measured
+    from its OWN sector: no average tread, no constant going, and no
+    rectangle substituted for a shape the drawing gives exactly.
+    """
+    import math
+
+    out = []
+    for n, ring in enumerate(arc_rings(arcs), 1):
+        radials = _sequence(_dedupe(_radials(ring, segments), ring), ring)
+        if len(radials) < MIN_TREADS + 1:
+            continue
+        flight = Flight(
+            flight_id=f"SF-{region_id}-C{n:02d}", axis="RADIAL",
+            direction_mm=(round(math.degrees(radials[0]["angle"]), 2),
+                          round(math.degrees(radials[-1]["angle"]), 2)),
+            width_mm=ring.outer_mm - ring.inner_mm,
+            configuration=WINDER,
+            centre_mm=(ring.cx, ring.cy),
+            span_mm=(ring.inner_mm, ring.outer_mm),
+            evidence=(EV_CONCENTRIC_ARCS, EV_RADIAL_LINES,
+                      EV_TREADS_IN_SEQUENCE, EV_GOING_IS_A_STAIR_GOING))
+        for i in range(len(radials) - 1):
+            a0, a1 = radials[i]["angle"], radials[i + 1]["angle"]
+            sweep = a1 - a0
+            g = _sector(ring, a0, a1)
+            mean_r = (ring.inner_mm + ring.outer_mm) / 2.0
+            flight.treads.append(Tread(
+                tread_id=f"ST-{region_id}-C{n:02d}-{i + 1:02d}",
+                index=i + 1, polygon_wkt=g.wkt,
+                # the exact annulus sector, not the sampled polygon
+                area_m2=0.5 * (ring.outer_mm ** 2 - ring.inner_mm ** 2)
+                * abs(sweep) / 1e6,
+                going_mm=abs(sweep) * mean_r,
+                width_mm=ring.outer_mm - ring.inner_mm,
+                nosing_length_mm=abs(sweep) * ring.outer_mm,
+                front_edge_wkt=_ray(ring, a0), back_edge_wkt=_ray(ring, a1),
+                inner_edge_wkt=_arc_wkt(ring, ring.inner_mm, a0, a1),
+                outer_edge_wkt=_arc_wkt(ring, ring.outer_mm, a0, a1),
+                rectangular=False,
+                cad_provenance=(radials[i]["object_id"],
+                                radials[i + 1]["object_id"])))
+        sec = _section_for(sections, flight.flight_id, region_id)
+        rise = sec.get("riser_height_mm")
+        for i, t in enumerate(flight.treads, 1):
+            flight.risers.append(Riser(
+                riser_id=f"SR-{region_id}-C{n:02d}-{i:02d}",
+                index=i, width_mm=t.width_mm,
+                height_mm=(None if rise is None else float(rise)),
+                area_m2=(None if rise is None
+                         else t.width_mm * float(rise) / 1e6),
+                height_source=(RISER_NOT_ESTABLISHED if rise is None
+                               else "SECTION_EVIDENCE"),
+                status=(RISER_NOT_ESTABLISHED if rise is None
+                        else "RISER_MEASURED")))
+        out.append((ring, flight))
+    return out
+
+
+def _ray(ring: ArcRing, angle: float) -> str:
+    import math
+
+    from shapely.geometry import LineString
+
+    return LineString([
+        (ring.cx + ring.inner_mm * math.cos(angle),
+         ring.cy + ring.inner_mm * math.sin(angle)),
+        (ring.cx + ring.outer_mm * math.cos(angle),
+         ring.cy + ring.outer_mm * math.sin(angle))]).wkt
+
+
+def _arc_wkt(ring: ArcRing, radius: float, a0: float, a1: float) -> str:
+    import math
+
+    from shapely.geometry import LineString
+
+    steps = max(2, int(abs(a1 - a0) / math.radians(2.0)) + 1)
+    return LineString([
+        (ring.cx + radius * math.cos(a0 + (a1 - a0) * i / steps),
+         ring.cy + radius * math.sin(a0 + (a1 - a0) * i / steps))
+        for i in range(steps + 1)]).wkt
+
+
+# ------------------------------- §10 one staircase, drawn on three plans
+
+# A staircase drawn on the ground-floor plan and again on the first-floor
+# plan is ONE staircase. The two drawings put it at the same place
+# relative to their OWN region, which is how the sheet repeats anything.
+SAME_PLACE_MM = 250.0
+
+# The floors this project can order. A stair connects the ones its plans
+# are drawn on, and where a floor is not established it connects nothing.
+FLOOR_ORDER = ("BASEMENT", "GROUND", "MEZZANINE", "FIRST", "SECOND",
+               "ROOF")
+
+PHYSICAL_STAIR = "PHYSICAL_STAIR_ASSEMBLY"
+PLAN_INSTANCE = "STAIR_PLAN_INSTANCE"
+FLOORS_NOT_ESTABLISHED = "THE_FLOORS_THIS_STAIR_CONNECTS_ARE_NOT_ESTABLISHED"
+
+
+@dataclass
+class PhysicalStair:
+    """One staircase of the building, however many plans draw it."""
+
+    physical_stair_id: str = ""
+    instances: tuple = ()          # (region_id, stair_id)
+    floors: tuple = ()
+    floor_from: str = ""
+    floor_to: str = ""
+    stair_role: str = STAIR_ROLE_UNKNOWN
+    role_evidence: tuple = ()
+    finish: str = FINISH_NOT_CONFIRMED
+    finish_source: str = "OWNER_RULE_REQUEST"
+    configuration: str = CONFIGURATION_NOT_ESTABLISHED
+    width_m: float = 0.0
+    tread_m2: float | None = None
+    riser_m2: float | None = None
+    landing_m2: float = 0.0
+    floor_not_stair_m2: float = 0.0
+    nosing_lm: float = 0.0
+    skirting_lm: float | None = None
+    exceptions: tuple = ()
+    why: str = ""
+
+    def record(self) -> dict:
+        return {
+            "physical_stair_id": self.physical_stair_id,
+            "object": PHYSICAL_STAIR,
+            "plan_instances": [{"drawing_region_id": r, "stair_id": s}
+                               for r, s in self.instances],
+            "floors_it_is_drawn_on": list(self.floors),
+            "floor_from": self.floor_from or FLOORS_NOT_ESTABLISHED,
+            "floor_to": self.floor_to or FLOORS_NOT_ESTABLISHED,
+            "stair_role": self.stair_role,
+            "role_evidence": list(self.role_evidence),
+            "finish": self.finish,
+            "finish_source": self.finish_source,
+            "configuration": self.configuration,
+            "stair_width_m": round(self.width_m, 3),
+            "MEASURED_NET": {
+                "TREAD_M2": (None if self.tread_m2 is None
+                             else round(self.tread_m2, 4)),
+                "RISER_M2": (None if self.riser_m2 is None
+                             else round(self.riser_m2, 4)),
+                "LANDING_M2": round(self.landing_m2, 4),
+                "NOSING_LM": round(self.nosing_lm, 3),
+                "STAIR_SKIRTING_LM": self.skirting_lm,
+                # NOT stair quantity. The floor plate, void and
+                # circulation this stair stands among, reported so that
+                # the floor may measure them and the stair may not.
+                "FLOOR_BETWEEN_THE_FLIGHTS_NOT_STAIR_M2": round(
+                    self.floor_not_stair_m2, 4),
+                "this_is": ("ONE staircase, measured once. The same stair "
+                            "drawn on two plans is not two quantities"),
+            },
+            "exceptions": list(self.exceptions),
+            "why": self.why,
+        }
+
+
+def _flight_keys(a: Assembly, origin) -> set:
+    """What each flight of this stair looks like, relative to its region.
+
+    The assembly's own centroid is not enough: the ground-floor plan may
+    draw a curved flight AND the straight one beside it while the first
+    floor draws only the curve, and two centroids that differ do not
+    make two staircases. A FLIGHT is the thing that repeats.
+    """
+    ox, oy = origin
+    out = set()
+    for f in a.flights:
+        cx, cy = (f.centre_mm or (0.0, 0.0))
+        out.add((round((cx - ox) / SAME_PLACE_MM),
+                 round((cy - oy) / SAME_PLACE_MM),
+                 round(f.width_mm / SAME_PLACE_MM),
+                 len(f.treads)))
+    return out
+
+
+# What the envelope calls a space, in the two words it uses for each
+# side of the building line. A stair's kind starts with which side of it
+# the stair stands on.
+INTERIOR_WORDS = ("INTERIOR", "INSIDE_BUILDING")
+EXTERIOR_WORDS = ("EXTERIOR", "OUTSIDE_BUILDING")
+
+NOT_LANDSCAPE_OR_ENTRANCE = (
+    "WHETHER_THESE_OUTSIDE_STEPS_ARE_LANDSCAPE_IS_NOT_ESTABLISHED")
+
+
+def _role(*, interior, floors, width, widest, ties, hint, plans) -> tuple:
+    """What KIND of stair this is, on what the drawings actually say.
+
+    §9. A main stair carries a storey: it stands inside the building,
+    it is drawn on the plans of two established floors, and no wider
+    interior stair does the same. A run that climbs out of one plan into
+    nothing established is not a main stair, however wide it is drawn,
+    and its kind is UNKNOWN rather than guessed. SERVICE_STAIR and
+    LANDSCAPE_STEPS need a rule or a label to say so: no arrangement of
+    lines on a plan distinguishes them from the stair beside them.
+    """
+    if hint in STAIR_ROLES and hint != STAIR_ROLE_UNKNOWN:
+        return hint, ("A_RULE_GIVEN_FOR_THIS_STAIR_SAYS_IT_IS_" + hint,)
+    ev = []
+    if interior:
+        ev.append(f"THE_ENVELOPE_CALLS_ITS_SPACE_{interior}")
+    carries = len(floors) >= 2
+    if carries:
+        ev.append("IT_IS_DRAWN_ON_THE_PLANS_OF_" + "_AND_".join(floors))
+    else:
+        ev.append("THE_FLOORS_IT_CONNECTS_ARE_NOT_ESTABLISHED")
+    if plans > 1:
+        ev.append(f"THE_SAME_STAIR_IS_DRAWN_ON_{plans}_PLANS")
+
+    if interior in EXTERIOR_WORDS:
+        ev.append(NOT_LANDSCAPE_OR_ENTRANCE)
+        return EXTERIOR_STEPS, tuple(ev)
+    if interior not in INTERIOR_WORDS:
+        ev.append("NOTHING_SAYS_WHETHER_ITS_SPACE_IS_INSIDE")
+        return STAIR_ROLE_UNKNOWN, tuple(ev)
+    if not carries:
+        # INSIDE, and climbing to nothing the drawings establish. It may
+        # be the main stair of the building drawn once; it may be four
+        # steps up to a terrace. Width does not tell the two apart.
+        ev.append("IT_IS_NOT_ESTABLISHED_TO_CARRY_A_STOREY")
+        return STAIR_ROLE_UNKNOWN, tuple(ev)
+    if width >= widest - SAME_PLACE_MM:
+        if ties > 1:
+            ev.append("ANOTHER_INTERIOR_STAIR_CARRIES_A_STOREY_AS_WIDELY")
+            return STAIR_ROLE_UNKNOWN, tuple(ev)
+        ev.append("NO_WIDER_INTERIOR_STAIR_CARRIES_A_STOREY")
+        return MAIN_INTERIOR_STAIR, tuple(ev)
+    ev.append("A_WIDER_INTERIOR_STAIR_CARRIES_A_STOREY")
+    return SECONDARY_INTERIOR_STAIR, tuple(ev)
+
+
+def reconcile(reports, *, regions=(), floor_of=None, interior_of=None,
+              finish_rules=None, role_hints=None) -> dict:
+    """Plan instances into physical staircases, with a role and a finish.
+
+    §9 A stair's KIND comes from what it does — which storeys it
+       carries — and not from how wide its widest run is drawn.
+       role_hints carries what a rule or a label says about a space,
+       {space_id: role}, and nothing else may name a SERVICE_STAIR or
+       LANDSCAPE_STEPS: no arrangement of lines on a plan does.
+    §10 The same staircase on two plans is one staircase.
+    §16 No stair is marble because it is a stair: a finish is confirmed
+        by the owner or by a document, and otherwise it is a request.
+    """
+    origin = {r.region_id: (r.x0, r.y0) for r in regions}
+    floor = dict(floor_of or {})
+    interior = dict(interior_of or {})
+    rules = dict(finish_rules or {})
+    hints = dict(role_hints or {})
+
+    # ---- §10 the same stair on several plans -------------------------
+    #
+    # Grouped FIRST, because §9's question — what kind of stair is this —
+    # is asked of a staircase and not of a drawing of one. Two plan
+    # instances are one staircase when they draw a FLIGHT at the same
+    # place relative to their own regions. Joined transitively: a stair
+    # drawn on three plans is one stair, not three pairs.
+    every = [a for rep in reports for a in rep.assemblies]
+    keys = {id(a): _flight_keys(a, origin.get(a.region_id, (0.0, 0.0)))
+            for a in every}
+    parent = {id(a): id(a) for a in every}
+
+    def _find(x):
+        while parent[x] != x:
+            parent[x] = parent[parent[x]]
+            x = parent[x]
+        return x
+
+    for i, a in enumerate(every):
+        for b in every[i + 1:]:
+            if a.region_id == b.region_id:
+                continue
+            if keys[id(a)] & keys[id(b)]:
+                parent[_find(id(a))] = _find(id(b))
+    groups: dict = {}
+    for a in every:
+        groups.setdefault(_find(id(a)), []).append(a)
+
+    # ---- §9 what KIND of stair each staircase is ---------------------
+    #
+    # NOT the widest run in the drawing. Round 6D asked only how wide a
+    # run was, and made a four-tread run of 2.80 m the MAIN stair of the
+    # building while the curved stair that carries the storey came out
+    # SECONDARY. What a main stair does is carry a storey.
+    facts = {}
+    for root, members in groups.items():
+        known = sorted({floor.get(a.region_id, "") for a in members}
+                       & set(FLOOR_ORDER), key=FLOOR_ORDER.index)
+        ix = ""
+        for a in members:
+            ix = interior.get(a.space_id, "") or ix
+        facts[root] = {
+            "known": known,
+            "interior": ix,
+            "width": max((f.width_mm for a in members for f in a.flights),
+                         default=0.0),
+            "hint": next((hints.get(a.space_id) for a in members
+                          if hints.get(a.space_id)), ""),
+        }
+    carrying = [f["width"] for f in facts.values()
+                if f["interior"] in INTERIOR_WORDS and len(f["known"]) >= 2]
+    widest = max(carrying, default=0.0)
+    ties = sum(1 for w in carrying if w >= widest - SAME_PLACE_MM)
+    for root, f in facts.items():
+        f["role"], f["evidence"] = _role(
+            interior=f["interior"], floors=f["known"], width=f["width"],
+            widest=widest, ties=ties, hint=f["hint"],
+            plans=len(groups[root]))
+    for root, members in groups.items():
+        for a in members:
+            a.stair_role = facts[root]["role"]
+            a.role_evidence = facts[root]["evidence"]
+            a.interior_exterior = facts[root]["interior"]
+
+    out = []
+    for k, (_root, members) in enumerate(sorted(
+            groups.items(), key=lambda kv: kv[1][0].stair_id), 1):
+        floors = [floor.get(a.region_id, "") for a in members]
+        known = [f for f in floors if f in FLOOR_ORDER]
+        known.sort(key=FLOOR_ORDER.index)
+        first = members[0]
+        exceptions = sorted({x for a in members for x in a.exceptions})
+        tread = (None if any(a.record()["MEASURED_NET"]["TREAD_M2"] is None
+                             for a in members)
+                 else max(a.tread_m2 for a in members))
+        riser = (None if any(a.riser_m2 is None for a in members)
+                 else max(a.riser_m2 for a in members))
+        role = first.stair_role
+        rule = rules.get(role) or rules.get("ALL")
+        stair = PhysicalStair(
+            physical_stair_id=f"PS-STAIR-{k:03d}",
+            instances=tuple((a.region_id, a.stair_id) for a in members),
+            floors=tuple(floors), configuration=first.configuration,
+            floor_from=(known[0] if len(known) >= 2 else ""),
+            floor_to=(known[-1] if len(known) >= 2 else ""),
+            stair_role=role,
+            role_evidence=first.role_evidence,
+            finish=(rule or FINISH_NOT_CONFIRMED),
+            finish_source=("PROJECT_RULE_FOR_THIS_STAIR_ROLE" if rule
+                           else "OWNER_RULE_REQUEST"),
+            width_m=max((f.width_mm for a in members for f in a.flights),
+                        default=0.0) / 1000.0,
+            # MEASURED ONCE. The same stair drawn twice is one quantity,
+            # and the fuller representation is the one that measures it.
+            tread_m2=tread, riser_m2=riser,
+            landing_m2=max((a.landing_m2 for a in members), default=0.0),
+            floor_not_stair_m2=max((a.not_stair_landing_m2
+                                    for a in members), default=0.0),
+            nosing_lm=max((a.nosing_lm for a in members), default=0.0),
+            exceptions=tuple(exceptions
+                             + ([FLOORS_NOT_ESTABLISHED]
+                                if len(known) < 2 else [])),
+            why=("drawn on " + ", ".join(
+                f"{a.region_id}({floor.get(a.region_id, 'no floor')})"
+                for a in members)))
+        for a in members:
+            a.physical_stair_id = stair.physical_stair_id
+            a.finish = stair.finish
+            a.finish_source = stair.finish_source
+        out.append(stair)
+
+    return {
+        "model": MODEL,
+        "physical_stairs": out,
+        "counts": {
+            "physical_stair_assemblies": len(out),
+            "plan_instances": sum(len(x.instances) for x in out),
+            "connect_two_established_floors": sum(
+                1 for x in out if x.floor_from and x.floor_to),
+            "finish_confirmed": sum(
+                1 for x in out if x.finish != FINISH_NOT_CONFIRMED),
+        },
+        "notes": {
+            "one_stair_measured_once": (
+                "a staircase drawn on the ground and first floor plans is "
+                "one staircase. Adding both representations would buy the "
+                "marble twice"),
+            "no_finish_without_a_rule": (
+                "a stair is not marble because it is a stair. Until the "
+                "owner or a document says so, its finish is a request"),
+        },
+    }

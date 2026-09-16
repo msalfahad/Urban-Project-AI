@@ -342,13 +342,20 @@ def _s_b():
     r4._stamp(b, "S2", ["HALL"], 7000, 4000)
     _title(b, "GROUND FLOOR PLAN", 500, -500)
     return Case(
-        "SB_TWO_FLIGHTS_AND_A_LANDING",
-        "two flights in one cell are one staircase with a landing",
+        "SB_TWO_FLIGHTS_AND_THE_WELL_BETWEEN_THEM",
+        "two flights side by side are one staircase around a well",
         b.build(),
         expect={"assemblies": 1, "flights_at_least": 2,
-                # the 200 mm the two flights leave between them, over
-                # the 1.8 m they both reach: 0.36 m2 and not one more
-                "landing_m2": 0.2 * 1.8,
+                # ROUND 6E CORRECTION, DISCLOSED. Round 6D expected the
+                # 200 mm these two flights leave between them, over the
+                # 1.8 m they both reach, to be a LANDING of 0.36 m2.
+                # It is not one. It runs along the SIDE of both flights
+                # and meets the end of neither: it is the well a pair of
+                # parallel flights turns around, and nobody lays marble
+                # treads on it. The geometry is unchanged; what the
+                # piece is called is what was wrong (§13).
+                "landing_m2": 0.0,
+                "open_void_m2": 0.2 * 1.8,
                 "riser_quantity_not_established": True})
 
 

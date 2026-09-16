@@ -39,6 +39,7 @@ from collections import Counter
 from dataclasses import dataclass, field
 
 from engine import boundary_authority as authority
+from engine import cad_adapter as adapter
 from engine import cad_openings as openings_mod
 from engine import drawing_region as dregion
 from engine import enclosure_role as roles
@@ -892,10 +893,13 @@ def measure(normalized, profile, *, semantic=None,
         # stair is marble and the floor porcelain they must not be the
         # same square metre twice. Section evidence is passed in or the
         # riser stays NOT ESTABLISHED.
+        prims = scoped["primitives"]
         rep.stairs.append(stair.assess(
             eligible, region_id=reg.region_id,
             spaces=[n.clear for n in graph.spaces if n.clear is not None],
             labels=obs, sections=sections,
+            arcs=[p for p in prims if p.kind == adapter.ARC],
+            primitives=[p for p in prims if p.kind == adapter.SEGMENT],
             finish_rule=(project_rules or {}).get("stair_finish_rule", ""),
             skirting_rule=(project_rules or {}).get("stair_skirting")))
 

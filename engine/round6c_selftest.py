@@ -71,8 +71,7 @@ class _Label:
 
 def _released(reg):
     return [e for e in reg.entries
-            if e.may_release
-            and e.release_status == freg.RELEASE_ELIGIBLE]
+            if e.released]
 
 
 def _label_of(reg, text: str):
@@ -282,8 +281,7 @@ def check(case) -> Result:
                                "6C may not")
     if e.get("no_release_of_a_fitting_strip"):
         for x in reg.entries:
-            if sreg.LINING_FACE in x.blockers and x.may_release \
-                    and x.release_status == freg.RELEASE_ELIGIBLE:
+            if sreg.LINING_FACE in x.blockers and x.released:
                 bad.append(f"{x.space_id} stops at a fitting and released "
                            f"{round(x.area_m2, 4)} m2")
     if e.get("a_stair_releases_no_room_area"):

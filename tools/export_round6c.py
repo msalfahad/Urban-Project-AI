@@ -116,6 +116,8 @@ def register_rows(register, rows) -> list:
             "identity_authority": e.identity_authority,
             "geometry_authority": e.geometry_authority,
             "release_status": e.release_status,
+            "geometry_gate_status": e.geometry_gate_status,
+            "withheld_because": " ".join(e.withheld_because),
             "blockers": " ".join(e.blockers),
             "cad_provenance": " ".join(e.cad_provenance),
             "why": e.why,

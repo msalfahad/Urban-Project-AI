@@ -113,21 +113,16 @@ def assemble(nd, rep, *, supervised=None) -> dict:
     srole = ({v.space_id: v.role for v in rep.space_roles.verdicts}
              if rep.space_roles else {})
     lining = sreg.linings({wr.region_id: wr.walls for wr in rep.walls})
+    # §3. The drawing-role gate is part of the ONE release state, not a
+    # second pass that rewrites a status somebody else set.
+    may_release_in = {r.region_id for r in roles.roles if r.may_release_rooms}
     register = sreg.build(table, regions, roles=roles, floor_of=floor_of,
-                          space_role_of=srole, lining_bands=lining)
+                          space_role_of=srole, lining_bands=lining,
+                          may_release_in=may_release_in)
     register = sreg.reconcile_labels(register, sem.seeds(), table,
                                      floor_of=floor_of)
-
-    # §3. A region that is not an established plan of an established floor
-    # releases nothing, whatever its geometry says.
-    refused = 0
-    for e in register.entries:
-        rr = roles.of(e.region_id)
-        if not rr.may_release_rooms and e.release_status == RELEASE_ELIGIBLE:
-            e.blockers = e.blockers + (
-                f"DRAWING_ROLE_{rr.drawing_role}_MAY_NOT_RELEASE_ROOMS",)
-            e.release_status = WITHHELD_ROLE
-            refused += 1
+    refused = sum(1 for e in register.entries
+                  if sreg.W_DRAWING_ROLE in e.withheld_because)
 
     return {"roles": roles, "floor_of": floor_of, "rows": table,
             "linings": lining, "register": register,

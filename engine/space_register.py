@@ -69,6 +69,31 @@ REL_INDEPENDENT = "INDEPENDENT"
 RELATIONS = (REL_PARENT, REL_CHILD, REL_DUPLICATE, REL_OVERLAPPING,
              REL_INDEPENDENT)
 
+# --- ONE AUTHORITATIVE RELEASE STATE -------------------------------------
+# Round 6D reported a candidate as PARTIAL_SPACE, is_physical_space false,
+# may_release false — and RELEASE_ELIGIBLE_GEOMETRY, because that string
+# came from the MEASUREMENT layer and nothing ever revised it. Three
+# fields that can contradict each other are not a release decision.
+#
+# So there is one state, computed here, and the measurement's own verdict
+# is carried beside it under a name that cannot be mistaken for it.
+RELEASED = "RELEASED_FOR_ROOM_QUANTITY"
+WITHHELD = "WITHHELD"
+RELEASE_STATES = (RELEASED, WITHHELD)
+
+# Roles that may never carry a room quantity, whatever the measurement
+# said about the polygon.
+NEVER_A_ROOM_QUANTITY = (DRAWING_ARTIFACT, SUPER_REGION, PARTIAL_SPACE,
+                         UNRESOLVED, EXTERIOR, VOID, SHAFT, STAIR)
+
+# Why a candidate is withheld. The FIRST one that applies is the reason.
+W_ROLE = "THE_REGISTER_DOES_NOT_CALL_THIS_A_ROOM"
+W_NOT_A_SPACE = "IT_IS_NOT_A_PHYSICAL_SPACE_OF_THE_BUILDING"
+W_PARENT = "A_PARENT_MAY_NOT_RELEASE_WITH_ITS_CHILDREN"
+W_DUPLICATE = "DUPLICATE_OF_ANOTHER_CANDIDATE"
+W_GEOMETRY = "THE_MEASUREMENT_GATE_DID_NOT_PASS_THIS_GEOMETRY"
+W_DRAWING_ROLE = "ITS_DRAWING_REGION_MAY_NOT_RELEASE_ROOM_QUANTITIES"
+
 # --- §6 how a label resolves ---------------------------------------------
 LABEL_ONE_SPACE = "EXACTLY_ONE_PHYSICAL_SPACE"
 LABEL_EXCEPTION = "IDENTITY_UNRESOLVED_EXCEPTION"
@@ -192,7 +217,9 @@ class Entry:
     normalized_identity: str = ""
     identity_authority: str = ""
     geometry_authority: str = ""
-    release_status: str = ""
+    release_status: str = ""          # THE authoritative state
+    geometry_gate_status: str = ""    # what the measurement layer said
+    withheld_because: tuple = ()
     blockers: tuple = ()
     repeated_in: tuple = ()
     principal_dims_mm: tuple = ()
@@ -217,6 +244,11 @@ class Entry:
                 and self.candidate_role not in NOT_RELEASED_AS_A_ROOM
                 and self.relation != REL_DUPLICATE)
 
+    @property
+    def released(self) -> bool:
+        """The one answer. Never read one of the other fields instead."""
+        return self.release_status == RELEASED
+
     def record(self) -> dict:
         return {
             "physical_space_id": self.space_id,
@@ -237,6 +269,8 @@ class Entry:
             "identity_authority": self.identity_authority,
             "geometry_authority": self.geometry_authority,
             "release_status": self.release_status,
+            "geometry_gate_status": self.geometry_gate_status,
+            "withheld_because": list(self.withheld_because),
             "blockers": list(self.blockers),
             "repeated_in_regions": list(self.repeated_in),
             "cad_provenance": list(self.cad_provenance),
@@ -285,8 +319,7 @@ class Register:
                     e.basis.startswith("CLEAR_INTERNAL")]
         spaces = [e for e in self.entries if e.is_space]
         released = [e for e in self.entries
-                    if e.release_status == "RELEASE_ELIGIBLE_GEOMETRY"
-                    and e.may_release]
+                    if e.released]
         return {
             "MEASURED_CANDIDATE_AREA_M2": round(
                 sum(e.area_m2 for e in measured), 4),
@@ -304,6 +337,14 @@ class Register:
                 "gate; and a trade measurement does not exist yet"),
         }
 
+    def labels_sole_claim(self) -> int:
+        """Labels that resolved AND are the only label naming that space."""
+        counted = Counter(v.space_id for v in self.labels
+                          if v.status == LABEL_ONE_SPACE)
+        return sum(1 for v in self.labels
+                   if v.status == LABEL_ONE_SPACE
+                   and counted[v.space_id] == 1)
+
     def counts(self) -> dict:
         return {
             "candidates": len(self.entries),
@@ -312,8 +353,16 @@ class Register:
             "by_relation": dict(Counter(
                 e.relation for e in self.entries).most_common()),
             "labels": len(self.labels),
-            "labels_mapped_exactly_once": sum(
+            # THREE DIFFERENT NUMBERS, and round 6D reported the first
+            # under the second's name. A label that resolved to a space
+            # is not a label that is the only one naming that space.
+            "labels_resolved_to_a_space": sum(
                 1 for v in self.labels if v.status == LABEL_ONE_SPACE),
+            "labels_mapped_exactly_once_to_a_space_no_other_label_claims":
+                self.labels_sole_claim(),
+            "labels_sharing_a_space_with_another_label":
+                sum(1 for v in self.labels
+                    if v.status == LABEL_ONE_SPACE) - self.labels_sole_claim(),
             "labels_unmapped": sum(
                 1 for v in self.labels if v.status == LABEL_EXCEPTION),
             "areas": self.areas(),
@@ -398,7 +447,8 @@ def stops_at_a_fitting(row, lining_bands) -> tuple:
 
 
 def build(rows, regions, *, roles=None, floor_of=None,
-          space_role_of=None, lining_bands=None) -> Register:
+          space_role_of=None, lining_bands=None,
+          may_release_in=None) -> Register:
     """One register for a whole drawing, floor by floor.
 
     `rows` carry space_id, region_id, polygon, area_m2, basis,
@@ -502,7 +552,7 @@ def build(rows, regions, *, roles=None, floor_of=None,
             normalized_identity=r.get("normalized_identity", ""),
             identity_authority=r.get("identity_authority", ""),
             geometry_authority=r.get("geometry_authority", ""),
-            release_status=r.get("release_status", ""),
+            geometry_gate_status=r.get("release_status", ""),
             blockers=tuple(blockers),
             repeated_in=tuple(repeats.get(sid, ())),
             principal_dims_mm=tuple(r.get("principal_dims_mm") or ()),
@@ -529,6 +579,34 @@ def build(rows, regions, *, roles=None, floor_of=None,
             f"it contains {sum(1 for k in kids if k.is_space)} candidate(s) "
             "that are themselves spaces"]))
 
+    # ---- §3 ONE AUTHORITATIVE RELEASE STATE --------------------------
+    #
+    # Computed last, from everything the register now knows, and never
+    # inherited from the measurement layer. `may_release_in`, where a
+    # caller gives it, is the set of regions whose drawing role allows a
+    # room quantity at all.
+    for e in reg.entries:
+        why = []
+        if e.candidate_role in NEVER_A_ROOM_QUANTITY:
+            why.append(W_ROLE)
+        if not e.is_space:
+            why.append(W_NOT_A_SPACE)
+        if e.candidate_role == SUPER_REGION:
+            why.append(W_PARENT)
+        if e.relation == REL_DUPLICATE:
+            why.append(W_DUPLICATE)
+        if e.geometry_gate_status != "RELEASE_ELIGIBLE_GEOMETRY":
+            why.append(W_GEOMETRY)
+        if may_release_in is not None and e.region_id not in may_release_in:
+            why.append(W_DRAWING_ROLE)
+        e.withheld_because = tuple(dict.fromkeys(why))
+        e.release_status = WITHHELD if why else RELEASED
+
+    reg.notes["one_release_state"] = (
+        "release_status is the only release answer. geometry_gate_status "
+        "is what the MEASUREMENT layer said about the polygon before "
+        "anybody asked what it is, and it never releases anything on its "
+        "own")
     reg.notes["a_parent_never_releases_with_its_children"] = (
         "counted both ways, a floor's area is its own double")
     reg.notes["four_areas"] = (
@@ -617,10 +695,11 @@ def completeness(reg: Register) -> dict:
         counted = Counter(v.space_id for v in mapped)
         out[fl or "FLOOR_LEVEL_NOT_ESTABLISHED"] = {
             "authored_room_labels_detected": len(labels),
-            "labels_mapped_exactly_once": sum(
-                1 for v in mapped if counted[v.space_id] == 1),
+            "labels_resolved_to_a_space": len(mapped),
+            "labels_mapped_exactly_once_to_a_space_no_other_label_claims":
+                sum(1 for v in mapped if counted[v.space_id] == 1),
             "labels_unmapped": len(labels) - len(mapped),
-            "labels_mapped_to_a_space_that_several_labels_claim": sum(
+            "labels_sharing_a_space_with_another_label": sum(
                 1 for v in mapped if counted[v.space_id] > 1),
             "physical_spaces_established": sum(
                 1 for e in entries if e.is_space),
@@ -642,10 +721,7 @@ def completeness(reg: Register) -> dict:
                 "PHYSICAL_SPACE_AREA_M2": round(sum(
                     e.area_m2 for e in entries if e.is_space), 4),
                 "RELEASE_ELIGIBLE_GEOMETRY_AREA_M2": round(sum(
-                    e.area_m2 for e in entries
-                    if e.may_release
-                    and e.release_status == "RELEASE_ELIGIBLE_GEOMETRY"),
-                    4),
+                    e.area_m2 for e in entries if e.released), 4),
                 "TRADE_MEASUREMENT_AREA_M2": None,
             },
         }

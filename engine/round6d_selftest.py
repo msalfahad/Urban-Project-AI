@@ -166,6 +166,12 @@ def check(case) -> Result:
         "treads": sum(len(f.treads) for a in assemblies for f in a.flights),
         "tread_m2": round(sum(a.tread_m2 for a in assemblies), 4),
         "landing_m2": round(sum(a.landing_m2 for a in assemblies), 4),
+        # §13. What lies between the flights and is NOT a landing.
+        "open_void_m2": round(sum(
+            x.area_m2 for a in assemblies for x in a.landings
+            if x.role == stair.OPEN_VOID), 4),
+        "floor_not_stair_m2": round(sum(
+            a.not_stair_landing_m2 for a in assemblies), 4),
         "nosing_lm": round(sum(a.nosing_lm for a in assemblies), 3),
         "configurations": [a.configuration for a in assemblies],
         "runs_refused": len(refused),
@@ -213,8 +219,7 @@ def check(case) -> Result:
         except Exception:      # noqa: BLE001
             continue
         for entry in (reg.entries if reg is not None else ()):
-            if not entry.may_release or entry.release_status != \
-                    freg.RELEASE_ELIGIBLE:
+            if not entry.released:
                 continue
             row = next((r for r in rows
                         if r["space_id"] == entry.space_id), None)
@@ -320,6 +325,10 @@ def check(case) -> Result:
             e["landing_m2_at_least"]:
         bad.append(f"LANDING_M2 {obs['landing_m2']}, expected at least "
                    f"{e['landing_m2_at_least']}")
+    for key in ("open_void_m2", "floor_not_stair_m2"):
+        if key in e and abs(obs[key] - e[key]) > 0.01:
+            bad.append(f"{key.upper()} {obs[key]}, expected "
+                       f"{round(e[key], 4)}")
     if "landing_m2" in e and abs(obs["landing_m2"] - e["landing_m2"]) \
             > 0.001:
         bad.append(f"LANDING_M2 {obs['landing_m2']}, expected "

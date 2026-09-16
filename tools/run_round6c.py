@@ -72,12 +72,10 @@ def _false_negative_analysis(rows, reg) -> list:
             continue
         for r in hits:
             e = entry.get(r["space_id"])
-            released = r["release_status"] == "RELEASE_ELIGIBLE_GEOMETRY"
+            released = bool(e is not None and e.released)
             gates = list(r["blockers"])
-            if e is not None and not e.may_release:
-                gates.append(f"REGISTER:{e.relation}")
-            if e is not None and not e.is_space:
-                gates.append(f"CANDIDATE_ROLE:{e.candidate_role}")
+            if e is not None:
+                gates.extend(e.withheld_because)
             measured = r["basis"].startswith("CLEAR_INTERNAL")
             if released and not gates:
                 verdict, why = "RELEASED", "nothing is holding it"

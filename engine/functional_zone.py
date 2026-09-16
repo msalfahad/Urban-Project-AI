@@ -224,6 +224,10 @@ class ZoneReport:
         from collections import Counter
 
         return {
+            # ONE ZONE PER RESOLVED LABEL. This is not the number of
+            # labels that are the only label naming their space, and it
+            # is not a count of rooms.
+            "functional_zone_observations_created": len(self.zones),
             "functional_zones": len(self.zones),
             "by_kind": dict(Counter(z.zone_kind
                                     for z in self.zones).most_common()),
