@@ -1463,6 +1463,26 @@ SAME_PLACE_MM = 250.0
 # are drawn on, and where a floor is not established it connects nothing.
 FLOOR_ORDER = ("BASEMENT", "GROUND", "MEZZANINE", "FIRST", "SECOND",
                "ROOF")
+FLOOR_NOT_ESTABLISHED = "FLOOR_LEVEL_NOT_ESTABLISHED"
+
+# --- §8, §11 what the stair coverage of a floor is ----------------------
+#
+# Round 6D exported one stair and said nothing about the rest. A plan
+# that draws a stair the engine did not reconstruct has FAILED coverage,
+# not complete coverage of one stair, and a large curved stair left
+# unresolved is never left silent.
+COVERAGE_COMPLETE = "STAIR_COVERAGE_COMPLETE"
+COVERAGE_INCOMPLETE = "STAIR_COVERAGE_INCOMPLETE"
+COVERAGE_FAILED = "STAIR_COVERAGE_FAILED"
+NO_STAIR_OBSERVED = "NO_STAIR_LIKE_GEOMETRY_ON_THIS_FLOOR"
+COVERAGE_STATES = (COVERAGE_COMPLETE, COVERAGE_INCOMPLETE,
+                   COVERAGE_FAILED, NO_STAIR_OBSERVED)
+LARGE_UNRESOLVED = "A_LARGE_STAIR_OBSERVATION_IS_UNRESOLVED"
+
+# An unresolved observation is LARGE when it reaches this share of the
+# largest staircase the same drawings did reconstruct. A share, never a
+# size: the drawing sets the scale of its own stairs.
+LARGE_SHARE = STAIR_CELL_SHARE
 
 PHYSICAL_STAIR = "PHYSICAL_STAIR_ASSEMBLY"
 PLAN_INSTANCE = "STAIR_PLAN_INSTANCE"
@@ -1602,6 +1622,298 @@ def _role(*, interior, floors, width, widest, ties, hint, plans) -> tuple:
         return MAIN_INTERIOR_STAIR, tuple(ev)
     ev.append("A_WIDER_INTERIOR_STAIR_CARRIES_A_STOREY")
     return SECONDARY_INTERIOR_STAIR, tuple(ev)
+
+
+# --- §15 the stair quantity, each figure in its own unit ----------------
+#
+# A stair is bought in four different kinds of number and they are never
+# added: an area of marble, a length of nosing and skirting, a count of
+# treads and risers, and a width. A single "stair quantity" is a wrong
+# number in every unit at once.
+UNIT_M2 = "m2"
+UNIT_LM = "lm"
+UNIT_PCS = "pcs"
+UNIT_M = "m"
+UNITS = (UNIT_M2, UNIT_LM, UNIT_PCS, UNIT_M)
+NOT_ESTABLISHED_HERE = "NOT_ESTABLISHED"
+
+
+def _q(value, unit: str, status: str = "") -> dict:
+    return {"value": value, "unit": unit,
+            "status": (status or (NOT_ESTABLISHED_HERE if value is None
+                                  else "MEASURED_NET"))}
+
+
+def quantities(physical_stairs, reports=()) -> dict:
+    """§15. Every stair quantity, with its unit, and no sum across units."""
+    counts = {}
+    for rep in reports:
+        for a in rep.assemblies:
+            counts[a.stair_id] = {
+                "treads": sum(len(f.treads) for f in a.flights),
+                "risers": sum(1 for f in a.flights for r in f.risers
+                              if r.height_mm is not None),
+                "risers_drawn": sum(len(f.risers) for f in a.flights),
+                "landings": sum(1 for x in a.landings if x.is_stair_landing),
+            }
+    rows = []
+    for x in physical_stairs:
+        c = {"treads": 0, "risers": 0, "risers_drawn": 0, "landings": 0}
+        for _region, sid in x.instances:
+            got = counts.get(sid)
+            if got and got["treads"] >= c["treads"]:
+                c = got
+        unmeasured = TREAD_NOT_ESTABLISHED in x.exceptions
+        rows.append({
+            "physical_stair_id": x.physical_stair_id,
+            "stair_role": x.stair_role,
+            "finish": x.finish,
+            "configuration": x.configuration,
+            "floor_from": x.floor_from or FLOORS_NOT_ESTABLISHED,
+            "floor_to": x.floor_to or FLOORS_NOT_ESTABLISHED,
+            "STAIR_WIDTH": _q(round(x.width_m, 3) or None, UNIT_M),
+            "TREADS": _q(c["treads"] or None, UNIT_PCS),
+            "RISERS": _q(c["risers"] or None, UNIT_PCS,
+                         "" if c["risers"] else RISER_NOT_ESTABLISHED),
+            "RISERS_DRAWN_ON_PLAN": _q(c["risers_drawn"] or None, UNIT_PCS),
+            "STAIR_LANDINGS": _q(c["landings"], UNIT_PCS),
+            "TREAD_AREA": _q(None if unmeasured or x.tread_m2 is None
+                             else round(x.tread_m2, 4), UNIT_M2),
+            "RISER_FACE_AREA": _q(None if x.riser_m2 is None
+                                  else round(x.riser_m2, 4), UNIT_M2,
+                                  "" if x.riser_m2 is not None
+                                  else RISER_NOT_ESTABLISHED),
+            "LANDING_AREA": _q(round(x.landing_m2, 4), UNIT_M2),
+            "NOSING_LENGTH": _q(round(x.nosing_lm, 3), UNIT_LM),
+            "STAIR_SKIRTING": _q(x.skirting_lm, UNIT_LM,
+                                 "" if x.skirting_lm is not None
+                                 else SKIRTING_NOT_ESTABLISHED),
+            "FLOOR_BETWEEN_THE_FLIGHTS_NOT_STAIR": _q(
+                round(x.floor_not_stair_m2, 4), UNIT_M2,
+                "NOT_STAIR_QUANTITY"),
+            "exceptions": list(x.exceptions),
+        })
+    def _sum(key, unit):
+        vals = [r[key]["value"] for r in rows]
+        if any(v is None for v in vals):
+            return {"value": None, "unit": unit,
+                    "status": "NOT_ESTABLISHED_FOR_EVERY_STAIRCASE"}
+        return {"value": round(sum(vals), 4), "unit": unit,
+                "status": "MEASURED_NET"}
+    return {
+        "model": MODEL,
+        "rows": rows,
+        "totals": {
+            "TREAD_AREA": _sum("TREAD_AREA", UNIT_M2),
+            "RISER_FACE_AREA": _sum("RISER_FACE_AREA", UNIT_M2),
+            "LANDING_AREA": _sum("LANDING_AREA", UNIT_M2),
+            "NOSING_LENGTH": _sum("NOSING_LENGTH", UNIT_LM),
+            "STAIR_SKIRTING": _sum("STAIR_SKIRTING", UNIT_LM),
+            "TREADS": _sum("TREADS", UNIT_PCS),
+            "RISERS": _sum("RISERS", UNIT_PCS),
+        },
+        "units_are_never_added": (
+            "m2, lm and pcs are three different quantities of the same "
+            "staircase. There is no total of them and none is written"),
+    }
+
+
+# --- §16 the same square metre is never two finishes --------------------
+MARBLE_AND_PORCELAIN_CLASH = "A_SQUARE_METRE_IS_BOTH_STAIR_AND_FLOOR"
+NO_CLASH = "NO_SQUARE_METRE_IS_BOTH_STAIR_AND_FLOOR"
+
+
+def finish_clash(released, reports) -> dict:
+    """§16. MARBLE n PORCELAIN = 0 m2, measured rather than asserted.
+
+    `released` is what the register released as room floor — the
+    porcelain candidates — as (space_id, polygon_wkt) in millimetres.
+    Every stair footprint and every stair landing is taken out of it,
+    and what remains in both is reported as an area, which has to be
+    zero. Not a rule about what should happen: the intersection.
+    """
+    stair_parts = []
+    for rep in reports:
+        for a in rep.assemblies:
+            if a.footprint_wkt:
+                stair_parts.append((a.stair_id, _loads_safe(a.footprint_wkt)))
+            for x in a.landings:
+                if x.is_stair_landing and x.polygon_wkt:
+                    stair_parts.append((x.landing_id, _loads_safe(x.polygon_wkt)))
+    clashes, clash_m2 = [], 0.0
+    for space_id, wkt in released:
+        if not wkt:
+            continue
+        room = _loads_safe(wkt)
+        if room.is_empty:
+            continue
+        for part_id, part in stair_parts:
+            if part.is_empty:
+                continue
+            try:
+                over = room.intersection(part)
+            except Exception:      # noqa: BLE001
+                continue
+            if over.is_empty or over.area <= 0:
+                continue
+            clash_m2 += over.area / 1e6
+            clashes.append({
+                "physical_space_id": space_id,
+                "stair_part_id": part_id,
+                "overlap_m2": round(over.area / 1e6, 4),
+                "what_it_would_mean": (
+                    "this area would be billed as marble stair and as "
+                    "porcelain floor, and it is one area"),
+            })
+    return {
+        "model": MODEL,
+        "released_room_polygons": len(list(released)),
+        "stair_parts": len(stair_parts),
+        "MARBLE_INTERSECT_PORCELAIN_M2": round(clash_m2, 4),
+        "status": (NO_CLASH if clash_m2 <= 0.0001
+                   else MARBLE_AND_PORCELAIN_CLASH),
+        "clashes": clashes,
+        "this_is": ("the measured intersection of the released room "
+                    "floor with the stair, and not a promise about it"),
+    }
+
+
+def _extent_m2(o) -> float:
+    """How much ground a stair-like observation covers, from its extent."""
+    ex = tuple(o.extent_mm or ())
+    if len(ex) == 4:
+        return abs(ex[2] - ex[0]) * abs(ex[3] - ex[1]) / 1e6
+    if len(ex) == 2:
+        return abs(ex[0] * ex[1]) / 1e6
+    return 0.0
+
+
+def coverage(reports, physical_stairs=(), *, floor_of=None) -> dict:
+    """§8, §11. What the drawings show against what was reconstructed.
+
+    Per floor, because a building is climbed floor by floor and a stair
+    reconstructed on the ground plan says nothing about the first. A
+    floor whose plans draw stair-like geometry and yield no staircase
+    has FAILED, not "one stair"; a floor with an unresolved observation
+    or an unmeasured quantity is INCOMPLETE; and every unresolved
+    observation is listed, largest first, so that a large curved stair
+    is never quietly missing from a bill (§11).
+    """
+    floor = dict(floor_of or {})
+    per: dict = {}
+    for rep in reports:
+        fl = floor.get(rep.region_id, "") or FLOOR_NOT_ESTABLISHED
+        row = per.setdefault(fl, {
+            "floor": fl, "plans": [], "observations": 0, "mapped": 0,
+            "unresolved": 0, "refused_as_not_a_stair": 0,
+            "runs_refused": 0, "stair_assemblies": 0,
+            "unresolved_observations": [], "exceptions": set(),
+            "tread_quantity_established": 0,
+            "riser_quantity_established": 0,
+            "landing_role_unresolved": 0})
+        row["plans"].append(rep.region_id)
+        row["runs_refused"] += len(rep.refused)
+        row["stair_assemblies"] += len(rep.assemblies)
+        for o in rep.observations:
+            row["observations"] += 1
+            if o.status == MAPPED:
+                row["mapped"] += 1
+            elif o.status == NOT_A_STAIR_ON_EVIDENCE:
+                row["refused_as_not_a_stair"] += 1
+            else:
+                row["unresolved"] += 1
+                row["unresolved_observations"].append(o)
+        for a in rep.assemblies:
+            row["exceptions"].update(a.exceptions)
+            if TREAD_NOT_ESTABLISHED not in a.exceptions and a.flights:
+                row["tread_quantity_established"] += 1
+            if a.riser_m2 is not None:
+                row["riser_quantity_established"] += 1
+            row["landing_role_unresolved"] += sum(
+                1 for x in a.landings if x.role == LANDING_ROLE_UNRESOLVED)
+
+    biggest = max((a.footprint_area_m2 for rep in reports
+                   for a in rep.assemblies), default=0.0)
+    by_floor = {}
+    for fl, row in per.items():
+        large = [o for o in row["unresolved_observations"]
+                 if biggest and _extent_m2(o) >= biggest * LARGE_SHARE]
+        exceptions = sorted(row["exceptions"])
+        if large:
+            exceptions.append(LARGE_UNRESOLVED)
+        if not row["observations"] and not row["stair_assemblies"]:
+            status = NO_STAIR_OBSERVED
+            why = "no run of lines on these plans reads as a stair"
+        elif not row["stair_assemblies"]:
+            status = COVERAGE_FAILED
+            why = (f"{row['observations']} stair-like observations on "
+                   "these plans and not one staircase reconstructed")
+        elif row["unresolved"] or exceptions:
+            status = COVERAGE_INCOMPLETE
+            why = "; ".join(
+                ([f"{row['unresolved']} observations unresolved"]
+                 if row["unresolved"] else [])
+                + ([", ".join(exceptions)] if exceptions else []))
+        else:
+            status = COVERAGE_COMPLETE
+            why = "every stair-like observation is part of a staircase"
+        by_floor[fl] = {
+            "floor": fl,
+            "drawing_regions": sorted(row["plans"]),
+            "stair_observations": row["observations"],
+            "mapped_to_a_staircase": row["mapped"],
+            "unresolved": row["unresolved"],
+            "refused_as_not_a_stair": row["refused_as_not_a_stair"],
+            "runs_refused": row["runs_refused"],
+            "stair_assemblies": row["stair_assemblies"],
+            "tread_quantity_established": row["tread_quantity_established"],
+            "riser_quantity_established": row["riser_quantity_established"],
+            "pieces_between_flights_unresolved":
+                row["landing_role_unresolved"],
+            "coverage": status,
+            "why": why,
+            "exceptions": exceptions,
+            # NEVER SILENTLY IGNORED. Every observation nobody turned
+            # into a staircase, largest first, with what it covers.
+            "unresolved_observations": [
+                dict(o.record(),
+                     covers_m2=round(_extent_m2(o), 4),
+                     is_large=bool(biggest
+                                   and _extent_m2(o) >= biggest * LARGE_SHARE))
+                for o in sorted(row["unresolved_observations"],
+                                key=_extent_m2, reverse=True)],
+        }
+
+    order = [f for f in FLOOR_ORDER if f in by_floor] + \
+        sorted(f for f in by_floor if f not in FLOOR_ORDER)
+    rows = [by_floor[f] for f in order]
+    if any(r["coverage"] == COVERAGE_FAILED for r in rows):
+        overall = COVERAGE_FAILED
+    elif any(r["coverage"] == COVERAGE_INCOMPLETE for r in rows):
+        overall = COVERAGE_INCOMPLETE
+    elif not rows or all(r["coverage"] == NO_STAIR_OBSERVED for r in rows):
+        overall = NO_STAIR_OBSERVED
+    else:
+        overall = COVERAGE_COMPLETE
+    carry = sum(1 for x in physical_stairs
+                if x.floor_from and x.floor_to
+                and x.floor_from != x.floor_to)
+    return {
+        "model": MODEL,
+        "stair_coverage": overall,
+        "per_floor": rows,
+        "physical_staircases": len(list(physical_stairs)),
+        "staircases_that_carry_a_storey": carry,
+        "unresolved_in_total": sum(r["unresolved"] for r in rows),
+        "large_unresolved_in_total": sum(
+            1 for r in rows for o in r["unresolved_observations"]
+            if o["is_large"]),
+        "this_is": (
+            "what the drawings show against what was reconstructed. A "
+            "floor that draws a stair and yields none has FAILED "
+            "coverage, and one stair measured on one floor is not "
+            "coverage of the building"),
+    }
 
 
 def reconcile(reports, *, regions=(), floor_of=None, interior_of=None,
