@@ -1523,3 +1523,188 @@ cases rather than by a client drawing:
   1,313 of 2,877 bands from a drawing whose wall runs average 462 mm, after
   which nothing enclosed at all. Short runs are kept out of the ring model
   and still allowed to form a room side.
+
+---
+
+## 54 · NO RELATIONSHIP MAY CROSS A DRAWING
+
+*Round 4, §1. `STABILITY_SELECTED_DRAWING_REGION_ISOLATION_V1`,
+`DRAWING_REGION_HASH bd1c391980507d3e18f5d9db`.*
+
+One model space can hold twelve unrelated drawings. P7757's holds five
+plans of the same footprint, 45 m apart along one strip, plus fragments.
+Round 3 ran its containment tests across all of them at once and reported
+the cost itself: **zero site bands found**, because "the outermost boundary
+of everything the lines enclose" spanned the whole strip, and removing it
+could not free a room that an elevation's label was never inside.
+
+    NO WALL, PORTAL, ENCLOSURE, ADJACENCY OR CONTAINMENT RELATIONSHIP MAY
+    CROSS A DRAWING REGION.
+
+The regions come from the frozen ladder sweep, which reports where the
+partition is STABLE rather than choosing a distance. What this invariant
+adds is a stated selection rule and one structural correction:
+
+- the most stable plateau; **ties to the finer partition**; the rung
+  nearest that plateau's geometric middle;
+- **a group lying wholly inside another group's extent is merged into it.**
+
+Ties go finer because the two errors are not symmetric. Splitting one
+drawing in two costs measurement — some rooms go unmeasured. Merging two
+drawings INVENTS relationships that do not exist. Nesting is the exception
+and it is evidence, not a distance: a plot boundary and the villa inside it
+are one drawing, and separating them hides the site line from the building
+it encloses.
+
+A region is not a floor. `floor_name` is UNKNOWN and stays UNKNOWN; title
+text is gathered as evidence and never becomes an identity.
+
+## 55 · A GAP IS NOT AN OPENING, AND AN OPENING IS NOT A WIDTH
+
+*Round 4, §2–§5. `CAD_OPENING_EVIDENCE_CLASSIFIER_V1`,
+`CAD_OPENING_CLASSIFIER_HASH 336c6f1bc5bb0a3ea42bb698`.*
+
+The obvious fix for a room that will not close is to bridge the hole in its
+wall. It is also the one move that destroys the whole method, because it
+asserts material and topology nobody drew.
+
+    WALL GAP ALONE CANNOT CREATE A ROOM-PARTITION PORTAL.
+
+So openings are HYPOTHESES with GRADES, and the grade decides what each may
+do:
+
+```
+GRADE A  one transformed INSERT supplies the door, reveals agree
+GRADE B  a leaf or a swing, in a supported wall interruption
+GRADE C  the wall is pierced and its reveals are drawn — but no door is
+GRADE D  a gap, and nothing else
+```
+
+`MAY_CLOSE_BOUNDARY_FROM = GRADE_C`. `MAY_PARTITION_FROM = GRADE_B`, and
+doors only. **Grade D closes nothing, anywhere, ever.**
+
+Three rules hold the class apart from the size:
+
+- **the class never follows the width.** There is no table of plausible
+  door widths in the module, and a test asserts there is none.
+- **a name never promotes a grade.** `if block starts with "D": portal =
+  True` is forbidden; the transformed geometry has to land in a real
+  interruption. Width is reported three ways — geometric, block-name (read
+  as both millimetres and centimetres, authority NONE), authored dimension
+   — compared and **never averaged**.
+- **every tolerance is an earlier freeze.** The enclosure's junction reach
+  and collinearity tolerance; the profile's wall-thickness band. A test
+  asserts each equality. A fresh tolerance chosen while looking at a client
+  drawing is that drawing's rule wearing a general name.
+
+Three things a real drawing taught this classifier, each a comparison
+between two quantities measured on that same drawing and none of them an
+absolute size:
+
+- **a door symbol must SPAN its opening.** A 10.23 m wall line ending near
+  a jamb was read as a leaf and graded doors across a drawing; a 900 mm
+  leaf beside a 9.45 m hole accounts for 900 mm of it. Leaf plus the
+  measured frame inset either side must equal the measured width.
+- **the symbol sits IN the opening, not ON its corner.** Door leaves hang
+  inside the frame — 60 mm on P7757 — so a coincidence test against the
+  jamb point missed almost every real door. The test is containment in the
+  opening's own footprint, grown by the thickness of that same wall.
+- **a gap narrower than the wall it pierces is a break in a drawn line.**
+  Nothing passes through an opening narrower than the wall around it. It is
+  classified as such, and it is NOT bridged.
+
+## 56 · A WINDOW IS NOT A DOOR, AND A DOORLESS OPENING DECIDES NOTHING
+
+*Round 4, §6–§9, through the frozen `space_topologies` model.*
+
+```
+                    material      room partition         navigable
+door (A/B)          zero          TWO_DISTINCT           yes
+doorless (C)        zero          UNRESOLVED             yes
+window              zero          boundary continues     NO
+wall gap (D)        —             nothing closes         —
+```
+
+A validated door closes the room boundary with `MATERIAL_PRESENT_LENGTH =
+0`. A **doorless opening resolves neither relation** — it may close the
+polygon and it leaves `ROOM_PARTITION_RELATION_UNRESOLVED`, which blocks
+release and asserts neither one space nor two. A **window may never become
+a room-to-room passage and may never leak a room polygon to exterior
+space.**
+
+Where several identities sit inside one geometric face with no supported
+partition between them, the answer is ONE PHYSICAL SPACE with FUNCTIONAL
+ZONES. **No wall and no portal is manufactured between them, and no
+identity is discarded.**
+
+At every opening the four lengths stay apart:
+
+```
+SPACE_BOUNDARY_LENGTH    the room's perimeter, including the portal span
+OPENING_LENGTH           the portal width, clipped to what lies on THIS face
+MATERIAL_PRESENT_LENGTH  zero across the opening
+HOST_WALL_GROSS_LENGTH   only where host continuation is independently
+                         established
+```
+
+The room polygon's perimeter is **not** the material wall length, and an
+opening's contribution to one room is the part of it that lies on that
+room's boundary — summing whole widths once produced 11.05 m of opening on
+a 9.4 m perimeter.
+
+## 57 · A ROOM DOES NOT NEED A NAME TO EXIST
+
+*Round 4, §11–§12. `REGION_LOCAL_ROOM_PARTITION_GRAPH_V1`,
+`ROOM_PARTITION_GRAPH_HASH 6bd4f2ff9ac748948e441baa`.*
+
+Every round before this started from a label: find a room stamp, flood from
+it, see what closes. That made measurement hostage to the text layer — and
+on P7757 sixteen of thirty-three identities are Arabic in an SHX font this
+decoder returns as mojibake.
+
+    DERIVE SUPPORTED BOUNDED PHYSICAL-SPACE CANDIDATES FROM GEOMETRY FIRST.
+    THEN ATTACH SEMANTIC IDENTITY.
+
+The region's eligible bands plus the portals that earned the right to close
+something form one local arrangement; **its bounded faces ARE the
+candidates**; the frozen enclosure measures each from a point inside it;
+identity is attached last. A face with no readable label reports
+`PHYSICAL_SPACE_VALIDATED_IDENTITY_UNKNOWN` — it exists, it is measured,
+and it still may not RELEASE, because a face with no label can never be a
+`PHYSICAL_ROOM_CANDIDATE`. Round 2's safety is untouched.
+
+A face whose **mean thickness** — twice area over perimeter — is no more
+than the profile's maximum wall thickness is the inside of a wall, not a
+space. A bounding box will not do this: a perimeter wall's ring has the
+bbox of the whole building and is still 200 mm of blockwork.
+
+Hosts are matched **locally or not at all**. Six named checks, no global
+nearest-wall search; where two openings claim the same door geometry the
+answer is `PORTAL_HOST_AMBIGUOUS`, which blocks release through that portal
+and **does not decay into a guess**.
+
+## 58 · A PRESERVED HASH IS A PROPERTY OF ITS RUN, NOT A RECOMPUTATION
+
+*Round 4, §18.*
+
+`PROJECT_2_CAD_BASELINE_HASH`, `PROJECT_2_CAD_ROUND2_HASH` and
+`PROJECT_2_CAD_ROUND3_HASH` are properties of the runs that produced them
+and they live in those runs' artefacts. A later round that changes what is
+measured will recompute a DIFFERENT number under the same name. That is not
+a violation of "preserve unchanged" — overwriting the artefact would be —
+but reporting it as though it were the preserved value is.
+
+So a round-4 run declares the preserved values, checks the files still
+carry them, chains its own hash from the preserved STRING, and reports its
+recomputations separately under `recomputed_under_round_4`.
+
+Only a hash that is a property of the CODE — `ROUND_3_SYNTHETIC_HASH`,
+`ROUND_4_SYNTHETIC_HASH` — must still compute to the same value later, and
+only those may be asserted by a test.
+
+**Round 3 reported `ROUND_2_SYNTHETIC_HASH` as preserved when it was not.**
+Round 3 rewrote the semantic seed classifier, which is an input to it, so
+it moved from `de1caf07e16e738b3e34dcc5` to `55b221fa624f5e2d5d8ba32b` —
+as round 3's own run record correctly shows and its document did not. A
+hash reported from memory instead of from the run is a hash that means
+nothing.

@@ -129,6 +129,17 @@ def test_a_closed_room_is_measured_by_the_frozen_enclosure():
 
 
 def test_a_doorway_refuses_completeness_rather_than_being_bridged():
+    """Round 4 changed WHY nothing is released here, not whether.
+
+    `_room`'s gap cuts the inner face only and leaves the outer face
+    running straight across it, so material still stands there. Round 4
+    reads that for what it is — NON_OPENING_GEOMETRY, a break in one drawn
+    line — and refuses to close anything on it. Nothing bounds the space,
+    so no candidate exists at all, which is a stronger refusal than the
+    incomplete row round 1 produced.
+    """
+    from engine import cad_openings as co
+
     b = Builder()
     _room(b, 0, 0, 5000, 4000, layer="W", gap=900.0)
     t = b.text("KITCHEN", 2500, 2000, 300.0, "TEXT")
@@ -136,21 +147,31 @@ def test_a_doorway_refuses_completeness_rather_than_being_bridged():
     b.insert("kit", 0, 0)
     nd = _normalized(b)
     rep = cm.measure(nd, cp.build(nd))
-    row = rep.rows[0]
-    assert not row.is_complete
-    assert row._release()["status"] == "DIAGNOSTIC_ONLY"
-    assert row._release()["blocker"]
+    assert not [r for r in rep.rows
+                if r._release()["status"] == "RELEASE_ELIGIBLE_GEOMETRY"]
+    assert not [r for r in rep.rows if r.is_complete]
+    assert rep.openings.counts()["may_close_a_boundary"] == 0
+    assert co.NON_OPENING_GEOMETRY in rep.openings.by_class()
 
 
-def test_loose_text_is_not_a_seed():
-    """A street name is text. Seeding on it measures the wrong space."""
+def test_loose_text_never_names_a_space():
+    """A street name is text. It may not become a room's identity.
+
+    Round 4 measures the face whether or not anything names it (§11), so
+    the candidate now exists. What must still never happen is the thing
+    this test was written for: the loose string becoming the space's name,
+    or licensing a release.
+    """
     b = Builder()
     _room(b, 0, 0, 5000, 4000, layer="W")
     b.text("STREET 15.00", 2500, 2000, 300.0, "TEXT")
     nd = _normalized(b)
     rep = cm.measure(nd, cp.build(nd))
-    assert rep.counts()["space_candidates"] == 0
-    assert "would seed the wrong space" in rep.notes["seeding"]
+    assert rep.counts()["release_eligible"] == 0
+    for row in rep.rows:
+        assert row.normalized_identity == ""
+        assert "STREET 15.00" not in row.label_observations
+    assert "would name the wrong space" in rep.notes["seeding"]
 
 
 def test_the_dimension_check_keeps_three_values_apart():

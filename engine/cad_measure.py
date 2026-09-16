@@ -39,14 +39,19 @@ from collections import Counter
 from dataclasses import dataclass, field
 
 from engine import boundary_authority as authority
+from engine import cad_openings as openings_mod
+from engine import drawing_region as dregion
 from engine import enclosure_role as roles
 from engine import identity_reconcile as ident
+from engine import portal_match as pmatch
+from engine import room_partition_graph as rpg
 from engine import semantic_seed as seeds_mod
 from engine import space_enclosure as enc
+from engine import space_topologies as topo
 from engine.boundary_match import VectorCandidate
 from engine.space_objects import SRC_VECTOR_WALL_FACE
 
-MEASURE = "CAD_SEEDED_FROZEN_ENCLOSURE_V1"
+MEASURE = "CAD_REGION_LOCAL_GRAPH_FIRST_MEASUREMENT_V1"
 
 # How far from a room stamp to look for its walls. The enclosure's own
 # neighbourhood margin governs the wall search; this is only the box the
@@ -86,6 +91,11 @@ class SpaceRow:
     identity: object = None
     boundary_roles: tuple = ()
     closed_on_envelope: bool = False
+    region_id: str = ""
+    zones: tuple = ()
+    boundary_openings: tuple = ()
+    relations: tuple = ()
+    quantities: dict = field(default_factory=dict)
 
     @property
     def is_complete(self) -> bool:
@@ -111,13 +121,35 @@ class SpaceRow:
         """
         if not self.is_complete:
             return "PHYSICAL_SPACE_NOT_ESTABLISHED"
-        if self.enclosure_role != roles.RELEASABLE_ROLE:
-            return f"NOT_A_PHYSICAL_ROOM_ROLE_IS_{self.enclosure_role}"
-        return "PHYSICAL_SPACE_VALIDATED"
+        if self.enclosure_role == roles.RELEASABLE_ROLE:
+            return "PHYSICAL_SPACE_VALIDATED"
+        if self.enclosure_role == roles.VOID_OR_SHAFT:
+            # §11. A bounded face with no readable label is still a bounded
+            # face. It may not RELEASE as a room — round 2's safety is
+            # untouched — but refusing to admit it exists was the thing
+            # that made measurement hostage to the text layer.
+            return "PHYSICAL_SPACE_VALIDATED_IDENTITY_UNKNOWN"
+        return f"NOT_A_PHYSICAL_ROOM_ROLE_IS_{self.enclosure_role}"
+
+    @property
+    def is_physical_space(self) -> bool:
+        return self.physical_space_status.startswith(
+            "PHYSICAL_SPACE_VALIDATED")
+
+    @property
+    def unresolved_relations(self) -> tuple:
+        """Openings on this boundary that settle neither one room nor two."""
+        return tuple(
+            r for r in self.relations
+            if r.get("ROOM_PARTITION_RELATION") == topo.REL_UNRESOLVED)
 
     @property
     def identity_status(self) -> str:
         """What it is CALLED. Never a precondition for the geometry."""
+        if len(self.zones) > 1:
+            # §8. Several identities inside one face is not a conflict and
+            # not an unknown — it is one space used for several things.
+            return "IDENTITY_IS_SEVERAL_FUNCTIONAL_ZONES"
         if self.identity is None:
             return ident.IDENTITY_UNKNOWN
         return self.identity.identity_status
@@ -160,6 +192,14 @@ class SpaceRow:
                                                             else ())],
             "dimension_cross_check": [dict(d) for d in self.dimension_checks],
             "cad_provenance": list(self.provenance),
+            "drawing_region_id": self.region_id,
+            "functional_zones": [z.record() for z in self.zones],
+            "functional_zone_count": len(self.zones),
+            "boundary_openings": [dict(o) for o in self.boundary_openings],
+            "room_partition_relations": [dict(r) for r in self.relations],
+            "unresolved_room_partition_relations": len(
+                self.unresolved_relations),
+            "quantity_ontology": dict(self.quantities),
             "enclosure_role": self.enclosure_role,
             "enclosure_role_evidence": list(self.role_evidence),
             "closed_using_building_envelope": self.closed_on_envelope,
@@ -198,6 +238,19 @@ class SpaceRow:
         if not self.enclosure or not self.enclosure.edges:
             return {"status": "DIAGNOSTIC_ONLY",
                     "blocker": "BOUNDARY_PROVENANCE_NOT_SUPPORTED"}
+        # ROUND 4. An opening on this boundary that nobody could match to
+        # a host, and an opening that settles neither one room nor two,
+        # both stop the release. Neither invents anything: the polygon is
+        # measured and reported, it simply may not be quantified from.
+        amb = [o for o in self.boundary_openings
+               if o.get("host_status") not in ("", "HOST_ESTABLISHED")]
+        if amb:
+            return {"status": "DIAGNOSTIC_ONLY",
+                    "blocker": amb[0].get("host_status",
+                                          "PORTAL_HOST_AMBIGUOUS")}
+        if self.unresolved_relations:
+            return {"status": "DIAGNOSTIC_ONLY",
+                    "blocker": topo.REL_UNRESOLVED}
         bad = [d for d in self.dimension_checks
                if d.get("verdict") == DISAGREE]
         if bad:
@@ -217,6 +270,10 @@ class Report:
     authority: object = None
     identity: object = None
     all_candidate_lines: int = 0
+    regions: object = None
+    openings: object = None
+    matches: object = None
+    graphs: list = field(default_factory=list)
     notes: dict = field(default_factory=dict)
 
     def counts(self) -> dict:
@@ -237,6 +294,18 @@ class Report:
             "partial": len(partial),
             "unresolved": len(unresolved),
             "identity_established": len(established),
+            "identity_unknown": sum(
+                1 for r in self.rows
+                if r.identity_status == ident.IDENTITY_UNKNOWN),
+            "physical_spaces_validated": sum(
+                1 for r in self.rows if r.is_physical_space),
+            "validated_geometry_unknown_identity": sum(
+                1 for r in self.rows if r.is_physical_space
+                and r.identity_status == ident.IDENTITY_UNKNOWN),
+            "functional_zone_groups": sum(1 for r in self.rows
+                                          if len(r.zones) > 1),
+            "spaces_with_an_unresolved_relation": sum(
+                1 for r in self.rows if r.unresolved_relations),
             "release_eligible": len(rel),
             "by_enclosure_role": dict(Counter(
                 r.enclosure_role for r in self.rows).most_common()),
@@ -268,6 +337,12 @@ class Report:
             "wall_layers_used": list(self.wall_layers),
             "wall_like_candidates": self.all_candidate_lines,
             "room_boundary_eligible_candidates": self.candidate_lines,
+            "drawing_regions": (self.regions.record()
+                                if self.regions else None),
+            "openings": (self.openings.record() if self.openings else None),
+            "portal_matching": (self.matches.record()
+                                if self.matches else None),
+            "room_partition_graphs": [g.record() for g in self.graphs],
             "boundary_authority": (self.authority.record()
                                    if self.authority else None),
             "identity_reconciliation": (self.identity.record()
@@ -308,7 +383,10 @@ def wall_candidates(normalized, wall_layers) -> list:
     return out
 
 
-def seeds_from_labels(normalized, *, semantic=None) -> list:
+IDENTIFYING_CLASSES = (seeds_mod.ROOM_LIKE, seeds_mod.ZONE_LIKE)
+
+
+def seeds_from_labels(normalized, *, semantic=None, classes=None) -> list:
     """Every qualified room-name stamp, and nothing else.
 
     Round 1 used "text carried by a placed block", and 27 of 48 candidates
@@ -321,9 +399,10 @@ def seeds_from_labels(normalized, *, semantic=None) -> list:
     """
     rep = semantic if semantic is not None else seeds_mod.classify(
         normalized.texts)
+    want = tuple(classes) if classes else (seeds_mod.ROOM_LIKE,)
     by_id = {t.provenance.object_id: t for t in normalized.texts}
     out = []
-    for o in rep.seeds():
+    for o in [x for x in rep.observations if x.semantic_class in want]:
         src = by_id.get(o.provenance[0]) if o.provenance else None
         if src is None or not src.provenance.block_path:
             continue
@@ -352,8 +431,12 @@ def _boundary_segments(enclosure, role_of) -> tuple:
             "length_mm": round(abs(hi - lo), 1),
             "cad_provenance": object_id,
             "boundary_roles": list(role_of.get(object_id, ())),
-            "material": ("MATERIAL_PRESENT" if object_id else
-                         "VIRTUAL_NO_MATERIAL"),
+            "material": ("VIRTUAL_NO_MATERIAL"
+                         if (not object_id
+                             or object_id.startswith("PORTAL-"))
+                         else "MATERIAL_PRESENT"),
+            "opening_evidence": (object_id[len("PORTAL-"):]
+                                 if object_id.startswith("PORTAL-") else ""),
             "source_type": src,
         })
     return tuple(out)
@@ -458,129 +541,214 @@ def _thicknesses(enclosure, candidates) -> tuple:
     return tuple(t for t, _ in out.most_common(6))
 
 
-def measure(normalized, profile, *, region=None, semantic=None) -> Report:
-    """Classify, seed, flood, classify the role, then cross-check.
+def _identity_label(node) -> tuple:
+    """Every label inside one face, in order, without discarding any."""
+    return tuple(t for z in node.zones for t in z.label_observations)
 
-    The order matters and is the correction this round makes. Round 1 went
-    seed -> flood -> release. It now goes:
 
-        CLASSIFY THE OBSERVATION   is this string even about a space?
-        SEED                       only from what survives
-        FLOOD                      the frozen enclosure, unchanged
-        CLASSIFY THE ENCLOSURE     what KIND of thing did we just close?
-        RELEASE                    only a PHYSICAL_ROOM_CANDIDATE
+def measure(normalized, profile, *, semantic=None) -> Report:
+    """Isolate the drawings, then measure each one on its own terms.
 
-    Every stage can only narrow what the next one sees.
+    ROUND 4 CHANGES THE ORDER AGAIN, AND FOR THE SAME REASON AS ROUND 3.
+
+        ISOLATE      one model space can hold twelve unrelated drawings.
+                     No relationship may cross between them (§1)
+        AUTHORITY    which of this region's bands may close a room
+        OPENINGS     what the holes in those bands actually are (§2-§5)
+        MATCH        which wall each opening pierces, locally (§12)
+        GRAPH        the region's faces ARE the physical spaces (§11)
+        MEASURE      the frozen enclosure, unchanged, on each face
+        IDENTIFY     names attached last, and never required (§11)
+        ROLE         what KIND of enclosure each face is (round 2)
+        RELEASE      only a physical room, with no unresolved opening
+
+    Round 3 ran the authority, the containment and the enclosure across
+    all twelve drawings at once and reported the cost itself: zero site
+    bands found, because the outermost boundary of EVERYTHING spans the
+    whole 808 m strip. Every one of those tests is now local.
     """
     wall_layers = tuple(profile.wall_like_layers())
     all_cands = wall_candidates(normalized, wall_layers)
     sem = semantic if semantic is not None else seeds_mod.classify(
         normalized.texts)
-    seeds = seeds_from_labels(normalized, semantic=sem)
-    if region is not None:
-        seeds = [s for s in seeds if region.contains(s["x"], s["y"])]
+    # §8 needs the ZONE labels as well as the room ones. A dining area
+    # inside an open-plan face is a functional zone, and round 3's
+    # room-only filter silently threw it away — after which the face
+    # released as a KITCHEN, which is exactly the merge §8 forbids.
+    # Street names and level marks are still excluded: they name nothing
+    # here.
+    seeds = seeds_from_labels(normalized, semantic=sem,
+                              classes=IDENTIFYING_CLASSES)
 
-    # ROUND 3's CORRECTION. A paired-face test proves a line is drawn like a
-    # wall; it cannot tell a site boundary from a partition. The authority
-    # stage measures how many walls lie between each side of a band and the
-    # outside, and only bands reaching the depth at which rooms live may
-    # close one. §6: a site line never completes a room polygon.
-    auth = authority.classify(all_cands, sem.seeds())
-    eligible_ids = {b.band_id for b in auth.eligible()}
-    cands = [c for c in all_cands if c.object_id in eligible_ids]
-    role_of = {b.band_id: b.roles for b in auth.bands}
-
-    # §7's SMALLEST SUPPORTED ENCLOSING CYCLE, done by enclosing twice.
-    #
-    # The first pass offers only bands that divide the fabric. If a seed
-    # closes on those, that is the nearest enclosing cycle and no outer
-    # boundary was needed — which is also §6 satisfied, because a site line
-    # can never appear in an enclosure that did not use one.
-    #
-    # Only when the inner pass fails is the outermost boundary offered, so
-    # a corner room bounded on two sides by external wall still measures
-    # (§5). "Smallest" here is topological, not an area comparison: it is
-    # the nearest cycle the drawn partitions support.
-    inner_cands = [c for c in cands
-                   if authority.INTERNAL_PARTITION in role_of.get(
-                       c.object_id, ())]
-
-    rep = Report(candidates=len(seeds), wall_layers=wall_layers,
-                 candidate_lines=len(cands))
+    regions = dregion.isolate(normalized)
+    rep = Report(candidates=len(seeds), wall_layers=wall_layers)
     rep.semantic = sem
-    rep.authority = auth
+    rep.regions = regions
     rep.all_candidate_lines = len(all_cands)
 
-    # Reconcile the labels at each place into ONE identity. Round 2 counted
-    # strings and called every bilingual stamp a conflict; SALOON and صالون
-    # are one identity stated twice.
+    # Identity is reconciled ONCE, from the labels that qualified as seeds,
+    # and then handed to each region. Grouping is spatial and by block
+    # lineage, so it never reaches across a drawing anyway — but the
+    # regions are what actually enforce it below.
     by_id = {t.provenance.object_id: t for t in normalized.texts}
     seed_texts = [by_id[s["object_id"]] for s in seeds
                   if s["object_id"] in by_id]
     id_rep = ident.reconcile(ident.observations_from(seed_texts))
     rep.identity = id_rep
 
-    groups = [{"x": g.x, "y": g.y,
-               "block": (g.observations[0].carrier_block
-                         if g.observations else ""),
-               "labels": [o.text for o in g.observations],
-               "ids": [o.observation_id for o in g.observations],
-               "identity": g}
-              for g in id_rep.groups]
+    agg_auth = authority.AuthorityReport()
+    agg_open = openings_mod.OpeningReport()
+    agg_match = pmatch.MatchReport()
+    role_of: dict = {}
+    eligible_count = 0
+    rows: list = []
 
-    for n, g in enumerate(sorted(groups, key=lambda r: (-r["y"], r["x"])), 1):
-        sid = f"CADSP-{n:03d}"
-        box = (g["x"] - SEED_NEIGHBOURHOOD_MM, g["y"] - SEED_NEIGHBOURHOOD_MM,
-               g["x"] + SEED_NEIGHBOURHOOD_MM, g["y"] + SEED_NEIGHBOURHOOD_MM)
-        e = enc.enclose(sid, (g["x"], g["y"]), inner_cands, extent=box,
-                        enclosure_id=f"LSE-{sid}")
-        used_envelope = False
-        if not e.is_complete:
-            wider = enc.enclose(sid, (g["x"], g["y"]), cands, extent=box,
-                                enclosure_id=f"LSE-{sid}")
-            if wider.is_complete:
-                e, used_envelope = wider, True
-        scores = enc.score(e, seed_mm=(g["x"], g["y"]))
-        checks = _dimension_checks(e, normalized.dimensions,
-                                   dimlfac=normalized.dimlfac)
-        rep.rows.append(SpaceRow(
-            space_id=sid, seed_mm=(g["x"], g["y"]),
-            label_observations=tuple(g["labels"]), label_block=g["block"],
-            enclosure=e, scores=scores,
-            principal_dims_mm=_principal(e.polygon_wkt),
-            wall_thicknesses_mm=_thicknesses(e, cands),
-            dimension_checks=tuple(checks),
-            provenance=tuple(g["ids"]),
-            identity=g.get("identity"),
-            boundary_roles=_boundary_segments(e, role_of),
-            closed_on_envelope=used_envelope))
+    for reg in regions.regions:
+        scoped = dregion.scope(reg, normalized)
+        region_cands = dregion.scope_candidates(reg, all_cands)
+        if not region_cands:
+            continue
+        obs = [o for o in sem.seeds() if reg.contains(o.x, o.y)]
+        groups = [g for g in id_rep.groups if reg.contains(g.x, g.y)]
 
-    # WHAT KIND OF ENCLOSURE DID WE JUST CLOSE? Asked of every enclosure at
-    # once, because the answer is containment and containment is a property
-    # of the SET, not of one polygon.
-    # Counted over RECONCILED IDENTITIES, not raw labels. A bilingual stamp
-    # is two strings and one room; counting the strings made an ordinary
-    # room look like two observations in one space, which the role
-    # classifier then read as open plan and refused to call a room.
-    role_rep = roles.classify(
-        [(r.space_id, r.enclosure.polygon_wkt if r.enclosure else "")
-         for r in rep.rows],
-        id_rep.groups, cands)
-    verdicts = {v.enclosure_id: v for v in role_rep.verdicts}
-    rep.rows = [
-        SpaceRow(**{**r.__dict__,
-                    "enclosure_role": (verdicts[r.space_id].role
-                                       if r.space_id in verdicts
-                                       else roles.UNRESOLVED),
-                    "role_evidence": (verdicts[r.space_id].evidence
-                                      if r.space_id in verdicts else ())})
-        for r in rep.rows]
-    rep.roles = role_rep
+        # ---- what the holes are, BEFORE the authority runs -------------
+        #
+        # The order here is forced by a real failure. A plot wall with a
+        # gate in it does not close, so the authority never saw an outer
+        # ring, so no band was ever a site boundary — and the gate was free
+        # to become a room's side. The openings are therefore classified
+        # first, their closures let the authority see the rings that
+        # actually exist, and the authority's verdict is then put back onto
+        # the openings.
+        opens = openings_mod.classify(
+            region_cands, primitives=scoped["primitives"],
+            instances=scoped["instances"], dimensions=scoped["dimensions"],
+            region_id=reg.region_id)
+        ring_closures = rpg.closure_candidates(
+            opens.openings,
+            {o.opening_id: "HOST_ESTABLISHED" for o in opens.openings})
 
+        # ---- which bands may close a room, IN THIS DRAWING -------------
+        #
+        # Where a region carries no readable room stamp at all, the
+        # authority's question has no anchor and every band came back
+        # UNRESOLVED — which made a whole drawing unmeasurable because its
+        # text was in an SHX font. The faces of its own arrangement answer
+        # the same question without a string. This can release nothing on
+        # its own: a face with no label is never a PHYSICAL_ROOM_CANDIDATE.
+        anchors = obs or rpg.interior_anchors(region_cands + ring_closures)
+        auth = authority.classify(region_cands + ring_closures, anchors)
+        agg_auth.bands.extend(auth.bands)
+        if auth.room_depth is not None:
+            agg_auth.room_depth = auth.room_depth
+        agg_auth.notes.update(auth.notes)
+        role_of.update({b.band_id: b.roles for b in auth.bands})
+        eligible_ids = {b.band_id for b in auth.eligible()}
+        eligible = [c for c in region_cands if c.object_id in eligible_ids]
+        eligible_count += len(eligible)
+
+        # ---- and which wall each hole belongs to -----------------------
+        opens = openings_mod.apply_band_roles(opens, role_of)
+        agg_open.openings.extend(opens.openings)
+        agg_open.interruptions.extend(opens.interruptions)
+        agg_open.unmatched_symbols.extend(opens.unmatched_symbols)
+        agg_open.notes.update(opens.notes)
+
+        matched = pmatch.match(opens.openings, region_cands, region=reg,
+                               region_report=regions,
+                               eligible_bands=eligible_ids)
+        agg_match.matches.extend(matched.matches)
+        agg_match.portals.extend(matched.portals)
+        agg_match.notes.update(matched.notes)
+        status = matched.status_of()
+
+        # ---- the region's faces ARE the physical-space candidates ------
+        graph = rpg.build(region_id=reg.region_id, candidates=eligible,
+                          openings=opens.openings, host_status=status,
+                          identity_groups=groups)
+        rep.graphs.append(graph)
+
+        open_by_id = {o.opening_id: o for o in opens.openings}
+        rel_by_opening: dict = {}
+        for r in graph.relations:
+            rel_by_opening[r.get("opening_id", "")] = r
+
+        region_rows = []
+        for node in graph.spaces:
+            e = node.enclosure
+            bnd = []
+            rels = []
+            for oid in node.boundary_openings:
+                o = open_by_id.get(oid)
+                if o is None:
+                    continue
+                row = o.record()
+                row["host_status"] = status.get(oid, pmatch.HOST_NOT_FOUND)
+                bnd.append(row)
+                if oid in rel_by_opening:
+                    rels.append(rel_by_opening[oid])
+            checks = _dimension_checks(e, scoped["dimensions"],
+                                       dimlfac=normalized.dimlfac)
+            region_rows.append(SpaceRow(
+                space_id=node.node_id, seed_mm=node.seed_mm,
+                label_observations=_identity_label(node),
+                label_block="", enclosure=e,
+                scores=enc.score(e, seed_mm=node.seed_mm),
+                principal_dims_mm=_principal(e.polygon_wkt if e else ""),
+                wall_thicknesses_mm=_thicknesses(e, eligible),
+                dimension_checks=tuple(checks),
+                provenance=tuple(o.observation_id for z in node.zones
+                                 for o in z.identity.observations),
+                identity=node.identity,
+                boundary_roles=_boundary_segments(e, role_of),
+                region_id=reg.region_id,
+                zones=node.zones,
+                boundary_openings=tuple(bnd),
+                relations=tuple(rels),
+                quantities=graph.quantities.get(node.node_id, {})))
+
+        # ---- WHAT KIND OF ENCLOSURE, asked WITHIN THIS DRAWING ----------
+        #
+        # Containment is a property of a SET, and round 3's set was every
+        # drawing at once. A plan's outline contained a section's label
+        # and nothing was ever a site boundary. The set is now one drawing.
+        role_rep = roles.classify(
+            [(r.space_id, r.enclosure.polygon_wkt if r.enclosure else "")
+             for r in region_rows], groups, eligible)
+        verdicts = {v.enclosure_id: v for v in role_rep.verdicts}
+        rows.extend(
+            SpaceRow(**{**r.__dict__,
+                        "enclosure_role": (verdicts[r.space_id].role
+                                           if r.space_id in verdicts
+                                           else roles.UNRESOLVED),
+                        "role_evidence": (verdicts[r.space_id].evidence
+                                          if r.space_id in verdicts else ())})
+            for r in region_rows)
+        if rep.roles is None:
+            rep.roles = role_rep
+        else:
+            rep.roles.verdicts.extend(role_rep.verdicts)
+
+    rep.rows = rows
+    rep.authority = agg_auth
+    rep.openings = agg_open
+    rep.matches = agg_match
+    rep.candidate_lines = eligible_count
+
+    rep.notes["order"] = (
+        "isolate the drawings, then classify their openings, then build "
+        "each region's own arrangement, then measure its faces with the "
+        "frozen enclosure, then attach identity. Geometry does not wait "
+        "for a name")
     rep.notes["seeding"] = (
-        "every seed is a room-name block the architect placed inside the "
-        "room it names. Loose text was not used: a street name or a level "
-        "mark would seed the wrong space")
+        "a physical space no longer needs a room-name block to exist. "
+        "Labels localise and NAME; the faces of the region's arrangement "
+        "are what is measured. Loose text still never seeds anything: a "
+        "street name or a level mark would name the wrong space")
     rep.notes["wall_layers_came_from"] = (
         "the source profile's geometric test, not from any layer name")
+    rep.notes["openings"] = (
+        "no gap was bridged. An opening closes a boundary only when its "
+        "evidence grade and its matched host both allow it, and a grade-D "
+        "wall gap allows nothing")
     return rep

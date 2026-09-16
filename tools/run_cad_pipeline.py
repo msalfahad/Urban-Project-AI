@@ -26,9 +26,53 @@ from engine import cad_regions as regions
 from engine import cad_selftest as selftest
 from engine import round2_selftest as round2
 from engine import round3_selftest as round3
+from engine import round4_selftest as round4
 from engine import space_enclosure as enc
 from engine import wall_role as wroles
 from engine.reference_mapping import refuse_if_sealed
+
+
+# The Project-2 freezes the client asked to be preserved. Each is a
+# property of ITS OWN RUN and lives in that run's artefact; recomputing one
+# over new geometry is a different quantity with the same name, which is
+# why they are declared here and checked against the files rather than
+# recalculated. ROUND_3_SYNTHETIC_HASH is the exception: it is a property
+# of the round-3 CODE, so it must still compute to the same value today.
+PRESERVED = {
+    "PROJECT_2_CAD_BASELINE_HASH": (
+        "3edf12c66f0984330d77e248", "data/runs/7757/P7757_CAD_baseline.json"),
+    "PROJECT_2_CAD_ROUND2_HASH": (
+        "70e2f4c34a6b1374687fb20f", "data/runs/7757/P7757_CAD_round2.json"),
+    "PROJECT_2_CAD_ROUND3_HASH": (
+        "e95a4c3c4a298339d9e0adb1", "data/runs/7757/P7757_CAD_round3.json"),
+}
+
+
+def _preserved() -> dict:
+    """Check the earlier artefacts still carry what they were frozen at."""
+    rows = {}
+    for name, (want, where) in PRESERVED.items():
+        path = Path(where)
+        got = ""
+        if path.exists():
+            try:
+                text = path.read_text(errors="replace")
+                got = json.loads(text).get(name, "")
+            except Exception:      # noqa: BLE001
+                got = "UNREADABLE"
+        rows[name] = {"frozen_value": want, "recorded_in": where,
+                      "still_recorded_as": got,
+                      "unchanged": got == want}
+    return {
+        "hashes": rows,
+        "all_unchanged": all(r["unchanged"] for r in rows.values()),
+        "what_these_are": (
+            "each is a property of the run that produced it, and it lives "
+            "in that run's artefact. Recomputing one over round 4's "
+            "geometry is a DIFFERENT quantity wearing the same name, so "
+            "this round reports those separately and never overwrites "
+            "these files"),
+    }
 
 
 def _hash(path: Path) -> str:
@@ -52,6 +96,7 @@ def run(dwg: str, *, converter: str = "", work_dir: str = "data/runs/cad_convert
     freeze = selftest.assert_frozen()
     r2 = round2.assert_frozen()
     r3 = round3.assert_frozen()
+    r4 = round4.assert_frozen()
 
     if decode_json and Path(decode_json).exists():
         decoded = json.loads(Path(decode_json).read_text(errors="replace"))
@@ -142,18 +187,115 @@ def run(dwg: str, *, converter: str = "", work_dir: str = "data/runs/cad_convert
             "cases": r3["cases"], "passed": r3["passed"],
             "failed": r3["failed"],
             "required_results_held": r3["required_results_held"]},
+        "round_4_freeze": {
+            "ROUND_4_SYNTHETIC_HASH": r4["ROUND_4_SYNTHETIC_HASH"],
+            "DRAWING_REGION_HASH": r4["DRAWING_REGION_HASH"],
+            "CAD_OPENING_CLASSIFIER_HASH": r4["CAD_OPENING_CLASSIFIER_HASH"],
+            "PORTAL_MATCHER_HASH": r4["PORTAL_MATCHER_HASH"],
+            "ROOM_PARTITION_GRAPH_HASH": r4["ROOM_PARTITION_GRAPH_HASH"],
+            "cases": r4["cases"], "passed": r4["passed"],
+            "failed": r4["failed"],
+            "required_results_held": r4["required_results_held"]},
         "wall_roles": wall_rep.record(),
         "measurement": rep.record(),
-        "PROJECT_2_CAD_BASELINE_HASH": _baseline(nd, prof, rep, src_hash),
-        "PROJECT_2_CAD_ROUND2_HASH": _round2_hash(
-            nd, prof, rep, src_hash, r2),
-        "PROJECT_2_CAD_ROUND3_HASH": _round3_hash(
-            nd, prof, rep, src_hash, r2, r3),
+        "round_4_counts": _round4_counts(rep),
+        "complete_physical_spaces": _per_complete_space(rep),
+        "preserved_project_2_hashes": _preserved(),
+        "PROJECT_2_CAD_ROUND4_HASH": _round4_hash(nd, prof, rep, src_hash,
+                                                  r4),
+        "recomputed_under_round_4": {
+            "why": ("round 4 changed what is measured, so the earlier "
+                    "chains no longer reproduce. These are shown for "
+                    "comparison and are NOT the preserved values"),
+            "PROJECT_2_CAD_BASELINE_HASH_RECOMPUTED":
+                _baseline(nd, prof, rep, src_hash),
+            "PROJECT_2_CAD_ROUND2_HASH_RECOMPUTED":
+                _round2_hash(nd, prof, rep, src_hash, r2),
+            "PROJECT_2_CAD_ROUND3_HASH_RECOMPUTED":
+                _round3_hash(nd, prof, rep, src_hash, r2, r3),
+        },
         "no_human_reference_was_opened": True,
         "what_is_absent_from_this_record": (
             "any benchmark, any architect take-off total, any manual "
             "quantity, any Excel, any structural or sanitary quantity"),
     }
+
+
+def _round4_counts(rep) -> dict:
+    """§14's list, in §14's order, with nothing added and nothing merged."""
+    from engine import enclosure_role as roles
+
+    c = rep.counts()
+    oc = rep.openings.counts() if rep.openings else {}
+    mc = rep.matches.counts() if rep.matches else {}
+    cycles = sum(g.counts()["graph_cycles"] for g in rep.graphs)
+    rejected = sum(1 for r in rep.rows if r.enclosure_role in (
+        roles.SITE_OR_PLOT, roles.BUILDING_ENVELOPE, roles.SUPER_REGION,
+        roles.DETAIL_OR_ANNOTATION))
+    return {
+        "DRAWING_REGION_count": (rep.regions.counts()["drawing_regions"]
+                                 if rep.regions else 0),
+        "wall_boundary_candidates": rep.candidate_lines,
+        "wall_like_candidates_before_authority": rep.all_candidate_lines,
+        "door_candidates": oc.get("door_candidates", 0),
+        "window_candidates": oc.get("window_candidates", 0),
+        "validated_portals": oc.get("may_partition_rooms", 0),
+        "openings_that_may_close_a_boundary": oc.get(
+            "may_close_a_boundary", 0),
+        "doorless_openings": oc.get("doorless_openings", 0),
+        "unresolved_gaps": oc.get("unresolved_wall_gaps", 0),
+        "ambiguous_portal_hosts": mc.get("ambiguous_portal_hosts", 0),
+        "room_partition_graph_cycles": cycles,
+        "physical_space_candidates": c["space_candidates"],
+        "complete_spaces": c["complete"],
+        "partial_spaces": c["partial"],
+        "unresolved_spaces": c["unresolved"],
+        "identity_established": c["identity_established"],
+        "identity_unknown": c["identity_unknown"],
+        "functional_zone_groups": c["functional_zone_groups"],
+        "release_eligible": c["release_eligible"],
+        "false_or_super_region_rejections": rejected,
+        "by_enclosure_role": c["by_enclosure_role"],
+        "openings_by_class": oc.get("by_class", {}),
+        "openings_by_grade": oc.get("by_grade", {}),
+        "portal_hosts_by_status": mc.get("by_status", {}),
+        "unmatched_door_symbols": oc.get("unmatched_door_symbols", 0),
+    }
+
+
+def _per_complete_space(rep) -> list:
+    """§15, for every space whose boundary actually closed."""
+    out = []
+    for r in rep.rows:
+        if not r.is_complete:
+            continue
+        rec = r.record()
+        out.append({
+            "space_id": rec["space_id"],
+            "drawing_region_id": rec["drawing_region_id"],
+            "polygon_hash": rec["geometry_hash"],
+            "area_m2": rec["clear_area_m2"],
+            "clear_internal_perimeter_m": rec["clear_internal_perimeter_m"],
+            "principal_clear_dimensions_mm": rec[
+                "principal_clear_dimensions_mm"],
+            "boundary_trace": rec["boundary_segments"],
+            "opening_table": rec["boundary_openings"],
+            "room_partition_relations": rec["room_partition_relations"],
+            "quantity_ontology": rec["quantity_ontology"],
+            "identity": {
+                "identity_observations": rec["room_name_observations"],
+                "reconciled_concept": rec["normalized_identity"],
+                "identity_status": rec["identity_status"],
+                "independent_statements": rec[
+                    "independent_identity_statements"],
+                "functional_zones": rec["functional_zones"]},
+            "dimension_cross_check": rec["dimension_cross_check"],
+            "enclosure_role": rec["enclosure_role"],
+            "physical_space_status": rec["physical_space_status"],
+            "release_status": rec["release_status"],
+            "blocker": rec["blocker"],
+        })
+    return out
 
 
 def _finest_stable(sweep) -> list:
@@ -217,6 +359,30 @@ def _round3_hash(nd, prof, rep, src_hash: str, r2: dict, r3: dict) -> str:
     return hashlib.sha256("|".join(parts).encode("utf-8")).hexdigest()[:24]
 
 
+def _round4_hash(nd, prof, rep, src_hash: str, r4: dict) -> str:
+    """The PRESERVED round-3 lineage, plus round 4's own components.
+
+    Anchored to the frozen round-3 STRING rather than to a recomputation of
+    it: round 4 changed the measurement, so recomputing round 3's chain
+    here would silently redefine a hash the client asked to be preserved.
+    """
+    parts = [
+        PRESERVED["PROJECT_2_CAD_ROUND3_HASH"][0],
+        f"source={src_hash}",
+        f"adapter={adapter.adapter_hash()}",
+        f"normalization={nd.normalization_hash()}",
+        f"profile={prof.profile_hash()}",
+        f"enclosure={enc.freeze_hash()}",
+        f"spaces={rep.baseline_hash()}",
+        f"regions={r4['DRAWING_REGION_HASH']}",
+        f"openings={r4['CAD_OPENING_CLASSIFIER_HASH']}",
+        f"matcher={r4['PORTAL_MATCHER_HASH']}",
+        f"graph={r4['ROOM_PARTITION_GRAPH_HASH']}",
+        f"synthetic={r4['ROUND_4_SYNTHETIC_HASH']}",
+    ]
+    return hashlib.sha256("|".join(parts).encode("utf-8")).hexdigest()[:24]
+
+
 def _baseline(nd, prof, rep, src_hash: str) -> str:
     """One hash over every frozen component of this run."""
     parts = [
@@ -249,13 +415,12 @@ def main(argv=None) -> int:
         print(f"wrote {a.json}")
     print(json.dumps({
         "run_outcome": rec.get("run_outcome"),
-        "PROJECT_2_CAD_BASELINE_HASH": rec.get(
-            "PROJECT_2_CAD_BASELINE_HASH"),
-        "PROJECT_2_CAD_ROUND2_HASH": rec.get("PROJECT_2_CAD_ROUND2_HASH"),
-        "PROJECT_2_CAD_ROUND3_HASH": rec.get("PROJECT_2_CAD_ROUND3_HASH"),
-        "round_3_freeze": rec.get("round_3_freeze"),
+        "PROJECT_2_CAD_ROUND4_HASH": rec.get("PROJECT_2_CAD_ROUND4_HASH"),
+        "preserved_project_2_hashes": rec.get(
+            "preserved_project_2_hashes", {}).get("all_unchanged"),
+        "round_4_freeze": rec.get("round_4_freeze"),
         "adapter_freeze": rec.get("adapter_freeze"),
-        "counts": rec.get("measurement", {}).get("counts"),
+        "round_4_counts": rec.get("round_4_counts"),
     }, indent=2))
     return 0
 
