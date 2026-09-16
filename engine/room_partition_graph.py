@@ -52,6 +52,29 @@ from engine import cad_openings as op
 from engine import cad_profile as cprofile
 from engine import space_enclosure as enc
 from engine import space_topologies as topo
+from engine import wall_face_ownership as wface
+
+
+def _wkt_loads(text):
+    from shapely.wkt import loads
+
+    return loads(text)
+
+
+def _canonical(geom) -> str:
+    """One name for one polygon, whichever corner the flood started at.
+
+    Two floods of the same room from two seeds produce the same ring
+    written from different vertices. Comparing the raw WKT made the
+    kitchen appear twice.
+    """
+    try:
+        b = geom.bounds
+        return (f"{round(geom.area, 1)}|{round(b[0], 1)}|{round(b[1], 1)}"
+                f"|{round(b[2], 1)}|{round(b[3], 1)}"
+                f"|{round(geom.centroid.x, 1)}|{round(geom.centroid.y, 1)}")
+    except Exception:      # noqa: BLE001
+        return geom.wkt
 from engine.boundary_match import VectorCandidate
 from engine.evidence_tiers import PORTAL_DRAWING_VALIDATED, PORTAL_UNVALIDATED
 from engine.space_objects import SRC_VECTOR_OPENING_JAMB
@@ -104,6 +127,11 @@ class SpaceNode:
     recovered_on_boundary: tuple = ()
     zones: tuple = ()
     identity: object = None
+    # ROUND 6A. The same space, measured to the face each side of it
+    # actually stops at, with that basis named. None where round 6A was
+    # not asked (no wall faces supplied).
+    clear: object = None
+    absorbed_wkt: tuple = ()
 
     @property
     def is_complete(self) -> bool:
@@ -117,7 +145,9 @@ class SpaceNode:
                 "boundary_openings": list(self.boundary_openings),
                 "recovered_spans_on_this_boundary": list(
                     self.recovered_on_boundary),
-                "functional_zones": [z.record() for z in self.zones]}
+                "functional_zones": [z.record() for z in self.zones],
+                "CLEAR_INTERNAL": (None if self.clear is None
+                                   else self.clear.record())}
 
 
 @dataclass
@@ -130,6 +160,8 @@ class GraphReport:
     portal_boundaries: list = field(default_factory=list)
     closures: list = field(default_factory=list)
     recovered: list = field(default_factory=list)
+    absorbed_faces: int = 0
+    dropped_lines: list = field(default_factory=list)
     quantities: dict = field(default_factory=dict)
     notes: dict = field(default_factory=dict)
 
@@ -144,6 +176,11 @@ class GraphReport:
             "open_plan_connections": len(self.open_plan_connections),
             "functional_zone_groups": sum(1 for s in self.spaces
                                           if len(s.zones) > 1),
+            "arrangement_faces_absorbed": self.absorbed_faces,
+            "lines_standing_inside_a_space": len(self.dropped_lines),
+            "spaces_on_the_clear_internal_basis": sum(
+                1 for s in self.spaces
+                if s.clear is not None and s.clear.basis_established),
             "relations": len(self.relations),
             "relation_counts": dict(Counter(
                 r["ROOM_PARTITION_RELATION"] for r in rel)),
@@ -418,12 +455,20 @@ def _quantities(node, openings_on_boundary, recovered_by_id=None) -> dict:
 
 
 def build(*, region_id, candidates, openings=(), host_status=None,
-          identity_groups=(), extent=None, recovered=()) -> GraphReport:
+          identity_groups=(), extent=None, recovered=(), wall_faces=(),
+          walls=()) -> GraphReport:
     """Assemble ONE region's room-partition topology.
 
     `candidates` are that region's room-boundary-eligible wall bands.
     `openings` are its opening hypotheses, `host_status` the matcher's
     verdict per opening. Nothing from another region may appear in either.
+
+    ROUND 6A. `wall_faces` are the established faces with their ownership.
+    Where they are given, two arrangement faces with nothing BOUNDING
+    between them are one physical space — a kitchen and the strip in front
+    of its counter are one floor — and each space is additionally measured
+    on the CLEAR_INTERNAL_FINISH_FACE basis, which is the only basis a
+    floor quantity may later come from.
     """
     rep = GraphReport(region_id=region_id)
     status = dict(host_status or {})
@@ -435,6 +480,8 @@ def build(*, region_id, candidates, openings=(), host_status=None,
     # decided by the authorities that travel with them.
     rep.recovered = list(recovered)
     arrangement = list(candidates) + closures + list(recovered)
+    arrangement_model = (wface.arrangement(arrangement, region_id=region_id)
+                         if wall_faces else None)
 
     faces = _faces(arrangement)
     closing = [o for o in openings
@@ -448,29 +495,140 @@ def build(*, region_id, candidates, openings=(), host_status=None,
             continue
         space_faces.append(f)
 
+    # ---- ROUND 6A: a line nothing stops at does not divide a space -----
+    #
+    # The arrangement cuts a face wherever ANY line crosses it, including
+    # the front of a worktop. The enclosure then stops at the worktop, and
+    # a 2.70 m kitchen measures 2.20 m. So the flood is run a second time
+    # on the lines a room may actually stop at, and the difference between
+    # the two floods is reported rather than chosen between silently.
+    clear_cands, dropped = None, []
+    if wall_faces:
+        clear_cands, dropped = wface.clear_candidates(
+            candidates, walls or (), arrangement_model,
+            closures=closures, recovered=recovered)
+        clear_cands = clear_cands + closures + list(recovered)
+        rep.dropped_lines = list(dropped)
+        # A room the drawn arrangement never closed may still be closed
+        # once the fittings standing inside it are set aside. P7757's W.C
+        # is: a worktop line runs past its door reveal, and the face that
+        # ought to be the room never forms. Those faces are space
+        # candidates too — the seeds come from both arrangements, and the
+        # flood below decides which are the same space.
+        extra = [g for g in _faces(clear_cands) if not _is_material(g)]
+        known = [f for f in space_faces]
+        for g in extra:
+            pt = g.representative_point()
+            if not any(f.contains(pt) and f.area <= g.area * 1.05
+                       for f in known):
+                space_faces.append(g)
+
+    # Several arrangement faces may flood to ONE clear space — the kitchen
+    # and the strip behind its counter do. They are that one space, and it
+    # is measured once.
+    # A LABEL SAYS WHERE A SPACE MIGHT BE. It never says where its
+    # boundary runs — that is still the flood's answer, and the flood is
+    # still run on the clear lines only. This is what recovers a room the
+    # polygonised arrangement could not close because a fitting line ran
+    # past its door reveal.
+    seed_points = []
+    if clear_cands is not None and identity_groups:
+        from shapely.geometry import Point as _P
+
+        for g in identity_groups:
+            seed_points.append(_P(g.x, g.y))
+            # and every observation in the group on its own. Two names
+            # reconciled to one place are still two places to LOOK at:
+            # P7757 reconciles WASH with the DEWANEYA beside it, and the
+            # midpoint of the two is in neither room.
+            for o in getattr(g, "observations", ()):
+                seed_points.append(_P(o.x, o.y))
+
+    seeds, order = {}, []
+    for f in sorted(space_faces + seed_points,
+                    key=lambda g: (-g.bounds[3], g.bounds[0])):
+        pt = f if f.geom_type == "Point" else f.representative_point()
+        key = _canonical(f)
+        clear_e = None
+        if clear_cands is not None:
+            box = f.bounds
+            pad = enc.NEIGHBOURHOOD_MARGIN_MM
+            if f.geom_type == "Point":
+                pad = enc.NEIGHBOURHOOD_MARGIN_MM * 8
+            clear_e = enc.enclose(
+                "CLEAR", (pt.x, pt.y), clear_cands,
+                extent=(box[0] - pad, box[1] - pad,
+                        box[2] + pad, box[3] + pad),
+                enclosure_id="LSE-CLEAR")
+            # Only a CLOSED clear flood may speak for a face. A flood
+            # that leaked would otherwise merge every room it leaked
+            # into, and a leak is exactly what round 5 refuses to treat
+            # as a connection.
+            if clear_e.is_complete and clear_e.polygon_wkt:
+                key = _canonical(_wkt_loads(clear_e.polygon_wkt))
+            else:
+                clear_e = None
+        if f.geom_type == "Point" and clear_e is None:
+            continue           # a label with no room the clear lines close
+        if key not in seeds:
+            seeds[key] = {"faces": [], "clear": clear_e, "seed": (pt.x, pt.y),
+                          "shape": (f if f.geom_type != "Point" else None)}
+            order.append(key)
+        elif seeds[key]["shape"] is None and f.geom_type != "Point":
+            seeds[key]["shape"] = f
+        if f.geom_type != "Point":
+            seeds[key]["faces"].append(f)
+    rep.absorbed_faces = sum(max(0, len(seeds[k]["faces"]) - 1)
+                             for k in order)
+
     on_face = defaultdict(list)
     nodes = []
-    for n, f in enumerate(sorted(space_faces,
-                                 key=lambda g: (-g.bounds[3], g.bounds[0])),
-                          1):
-        pt = f.representative_point()
+    for n, key in enumerate(order, 1):
+        bucket = seeds[key]
+        parts = bucket["faces"]
+        f = parts[0] if parts else bucket["shape"]
+        if f is None:
+            f = _wkt_loads(bucket["clear"].polygon_wkt)
+        pt_x, pt_y = bucket["seed"]
         node_id = f"PS-{region_id}-{n:03d}"
         box = f.bounds
         pad = enc.NEIGHBOURHOOD_MARGIN_MM
-        e = enc.enclose(node_id, (pt.x, pt.y), arrangement,
+        e = enc.enclose(node_id, (pt_x, pt_y), arrangement,
                         extent=(box[0] - pad, box[1] - pad,
                                 box[2] + pad, box[3] + pad),
                         enclosure_id=f"LSE-{node_id}")
-        mine = [o for o in closing if _on_boundary(f, o)]
+        clear = None
+        shape = f
+        if clear_cands is not None:
+            ce = bucket["clear"]
+            poly = None
+            if ce is not None and ce.polygon_wkt:
+                from shapely.wkt import loads as _loads
+
+                try:
+                    poly = _loads(ce.polygon_wkt)
+                except Exception:      # noqa: BLE001
+                    poly = None
+            complete = bool(ce is not None and ce.is_complete)
+            if poly is None:
+                poly, complete = f, False
+            clear = wface.clear_space(
+                node_id, region_id, poly, wall_faces, closures=closures,
+                recovered=recovered, absorbed=max(0, len(parts) - 1),
+                obstructed_m2=sum(p.area for p in parts) / 1e6,
+                complete=complete)
+            shape = poly
+        mine = [o for o in closing if _on_boundary(shape, o)]
         for o in mine:
             on_face[o.opening_id].append(node_id)
         mine_rec = [c.object_id for c in recovered
-                    if _line_on_boundary(f, c)]
+                    if _line_on_boundary(shape, c)]
         nodes.append(SpaceNode(
-            node_id=node_id, region_id=region_id, seed_mm=(pt.x, pt.y),
-            face_wkt=f.wkt, enclosure=e,
+            node_id=node_id, region_id=region_id, seed_mm=(pt_x, pt_y),
+            face_wkt=shape.wkt, enclosure=e,
             boundary_openings=tuple(o.opening_id for o in mine),
-            recovered_on_boundary=tuple(mine_rec)))
+            recovered_on_boundary=tuple(mine_rec), clear=clear,
+            absorbed_wkt=tuple(p.wkt for p in parts[1:])))
 
     # ---- identity, attached LAST (§11) ---------------------------------
     from shapely.geometry import Point
@@ -486,12 +644,25 @@ def build(*, region_id, candidates, openings=(), host_status=None,
     out = []
     for node in nodes:
         shape = shapes.get(node.node_id)
-        inside = [g for g in identity_groups
-                  if shape is not None and shape.contains(Point(g.x, g.y))]
+        # A GROUP is reconciled at a place; its OBSERVATIONS are each at a
+        # place of their own. P7757 reconciles WASH with the DEWANEYA
+        # beside it, and the reconciled point is in neither room — so a
+        # group also belongs to a space that holds one of its
+        # observations, and the zone then lists only the observations
+        # actually inside.
+        inside, texts = [], []
+        for g in identity_groups:
+            if shape is None:
+                continue
+            here = [o for o in getattr(g, "observations", ())
+                    if shape.contains(Point(o.x, o.y))]
+            if shape.contains(Point(g.x, g.y)) or here:
+                inside.append(g)
+                texts.append(tuple(o.text for o in
+                                   (here or g.observations)))
         zones = tuple(Zone(zone_id=f"{node.node_id}-Z{i}", identity=g,
-                           label_observations=tuple(
-                               o.text for o in g.observations))
-                      for i, g in enumerate(inside, 1))
+                           label_observations=txt)
+                      for i, (g, txt) in enumerate(zip(inside, texts), 1))
         out.append(SpaceNode(**{**node.__dict__, "zones": zones,
                                 "identity": (inside[0] if len(inside) == 1
                                              else None)}))

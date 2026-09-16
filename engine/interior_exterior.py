@@ -37,6 +37,21 @@ INTERIOR = "INTERIOR"
 EXTERIOR = "EXTERIOR"
 UNRESOLVED = "INTERIOR_EXTERIOR_UNRESOLVED"
 
+# ROUND 6A §9. Two questions, not one. Whether a piece of geometry is
+# inside the BUILDING is answered by the envelope. How far the ground
+# around it EXTENDS is answered by the site boundary, and only by that.
+# P7757 draws no site boundary anywhere, and that must not make its garden
+# strip interior: it makes its EXTENT unknown, which is enough to keep it
+# out of an internal floor finish and not enough to measure a yard.
+INSIDE_BUILDING = "INSIDE_BUILDING"
+OUTSIDE_BUILDING = "OUTSIDE_BUILDING"
+BUILDING_UNKNOWN = "BUILDING_EXTENT_UNKNOWN"
+SITE_ESTABLISHED = "SITE_EXTENT_ESTABLISHED"
+SITE_UNKNOWN = "SITE_EXTENT_UNKNOWN"
+
+BUILDING_VERDICTS = (INSIDE_BUILDING, OUTSIDE_BUILDING, BUILDING_UNKNOWN)
+SITE_VERDICTS = (SITE_ESTABLISHED, SITE_UNKNOWN)
+
 EV_ENVELOPE_CONTAINMENT = "INSIDE_THE_BUILDING_ENVELOPE"
 EV_OUTSIDE_ENVELOPE = "INSIDE_THE_SITE_AND_OUTSIDE_THE_ENVELOPE"
 EV_EXTERIOR_ADJACENCY = "OPENS_ONTO_THE_UNBOUNDED_OUTSIDE"
@@ -188,14 +203,33 @@ class Verdict:
     verdict: str
     evidence: tuple = ()
     why: str = ""
+    building: str = BUILDING_UNKNOWN
+    site_extent: str = SITE_UNKNOWN
+
+    @property
+    def outside_building(self) -> bool:
+        return self.building == OUTSIDE_BUILDING
+
+    @property
+    def extent_unresolved(self) -> bool:
+        """Outside the building, with nothing to say how far it goes."""
+        return (self.building == OUTSIDE_BUILDING
+                and self.site_extent == SITE_UNKNOWN)
 
     def record(self) -> dict:
         return {"space_id": self.space_id,
                 "drawing_region_id": self.region_id,
                 "INTERIOR_EXTERIOR": self.verdict,
+                "BUILDING": self.building,
+                "SITE_EXTENT": self.site_extent,
                 "evidence": list(self.evidence),
                 "why": self.why,
-                "never": "no area took part in this verdict"}
+                "never": "no area took part in this verdict",
+                "two_questions": (
+                    "the envelope says which side of the BUILDING this is; "
+                    "the site boundary says how far the ground around it "
+                    "extends. A missing site answers the second and not "
+                    "the first")}
 
 
 def classify_point(model, x: float, y: float, *, concepts=(),
@@ -253,8 +287,15 @@ def classify_point(model, x: float, y: float, *, concepts=(),
                "says which side of the building this is. UNRESOLVED is the "
                "answer, and an area comparison is not allowed to supply "
                "one")
+    building = (BUILDING_UNKNOWN if not model.has_envelope
+                else INSIDE_BUILDING if inside_env else OUTSIDE_BUILDING)
+    if external and building == BUILDING_UNKNOWN:
+        building = OUTSIDE_BUILDING
+    site_extent = (SITE_ESTABLISHED if model.site is not None
+                   else SITE_UNKNOWN)
     return Verdict(space_id=space_id, region_id=model.region_id,
-                   verdict=verdict, evidence=tuple(ev), why=why)
+                   verdict=verdict, evidence=tuple(ev), why=why,
+                   building=building, site_extent=site_extent)
 
 
 def frozen_parameters() -> dict:
@@ -262,6 +303,12 @@ def frozen_parameters() -> dict:
             "why": {"no_area_rule": (
                 "size is not evidence of being outdoors. The 5.6 m2 strip "
                 "and a 500 m2 courtyard are asked the same questions"),
+                "a_missing_site_is_not_an_interior": (
+                    "outside the envelope with no site boundary is "
+                    "OUTSIDE_BUILDING with SITE_EXTENT_UNKNOWN. That is "
+                    "enough to keep it out of an internal floor finish and "
+                    "not enough to measure a yard. No site polygon is "
+                    "invented to fill the gap"),
                 "unresolved_is_common": (
                     "where a drawing gives no envelope, this returns "
                     "UNRESOLVED rather than assuming interior. On P7757 "
@@ -270,6 +317,8 @@ def frozen_parameters() -> dict:
 
 
 def model_hash() -> str:
-    parts = [MODEL, INTERIOR, EXTERIOR, UNRESOLVED, "|".join(EVIDENCE),
+    parts = [MODEL, INTERIOR, EXTERIOR, UNRESOLVED,
+             "|".join(BUILDING_VERDICTS), "|".join(SITE_VERDICTS),
+             "|".join(EVIDENCE),
              authority.authority_hash(), onto.ontology_hash()]
     return hashlib.sha256("|".join(parts).encode("utf-8")).hexdigest()[:24]

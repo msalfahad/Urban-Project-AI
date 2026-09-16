@@ -31,6 +31,7 @@ from engine import round3_selftest as round3
 from engine import round4_selftest as round4
 from engine import round5_selftest as round5
 from engine import round6_selftest as round6
+from engine import round6a_selftest as round6a
 from engine import supervised_benchmark as supervised
 from engine.reference_mapping import refuse_if_sealed
 from tools import run_cad_pipeline as pipeline
@@ -48,6 +49,23 @@ ROUND_5_FROZEN = {
     "unresolved_gaps": 4212,
 }
 
+# What round 6 steps 1-5 recorded at commit bc8e96f. Read-only: round 6A
+# is compared AGAINST it, and never recomputed as though it were this run.
+ROUND_6_STEPS_1_5 = {
+    "commit": "bc8e96f",
+    "physical_space_polygons": 67,
+    "release_eligible": 6,
+    "observed_wall_bands": 389,
+    "recovered_partition_spans": 511,
+    "recovered_partition_length_m": 566.1,
+    "unresolved_gaps": 299,
+    "kitchen_m2": 5.553,
+    "kitchen_dims_mm": [2200.0, 2550.0],
+    "by_space_role": {"INTERIOR_SPACE_UNCLASSIFIED": 45,
+                      "VOID_OR_SHAFT_ON_EVIDENCE": 13,
+                      "INTERIOR_ROOM": 9},
+}
+
 
 def run(dwg: str, *, decode_json: str) -> dict:
     refuse_if_sealed(dwg)
@@ -61,6 +79,7 @@ def run(dwg: str, *, decode_json: str) -> dict:
     r4 = round4.assert_frozen()
     r5 = round5.assert_frozen()
     r6 = round6.assert_geometry_frozen()
+    r6a = round6a.assert_frozen()
     fmanifest.assert_no_artifact_was_rewritten()
 
     decoded = json.loads(Path(decode_json).read_text(errors="replace"))
@@ -101,11 +120,17 @@ def run(dwg: str, *, decode_json: str) -> dict:
         "identity_established": counts["identity_established"],
         "identity_unknown": counts["identity_unknown"],
         "functional_zone_groups": counts["functional_zone_groups"],
+        "spaces_on_the_clear_internal_basis": sum(
+            1 for r in rep.rows
+            if r.clear is not None and r.clear.basis_established),
+        "lines_standing_inside_a_space": sum(
+            len(o.dropped) for o in rep.ownership),
+        "established_wall_faces": sum(len(o.faces) for o in rep.ownership),
     }
 
     return {
         "run_outcome": "COMPLETED",
-        "stage": "ROUND_6_STEP_5_GEOMETRY_ONLY",
+        "stage": "ROUND_6A_GEOMETRY_ONLY",
         "source": {"file": path.name, "sha256_16": src},
         "three_scoreboards": {
             "1_HISTORICAL_FROZEN": {
@@ -126,20 +151,123 @@ def run(dwg: str, *, decode_json: str) -> dict:
                     "awaiting_the_trade_layer":
                         r6["trade_cases_awaiting_implementation"]},
                 "ROUND_6_SYNTHETIC_HASH": r6["ROUND_6_SYNTHETIC_HASH"],
+                "round_6a": {"passed": r6a["passed"],
+                             "cases": r6a["cases"]},
+                "ROUND_6A_SYNTHETIC_HASH": r6a["ROUND_6A_SYNTHETIC_HASH"],
             },
         },
         "geometry_before_and_after": {
             "before_round_5_frozen": dict(ROUND_5_FROZEN),
-            "after_round_6_steps_3_and_4": now,
+            "after_round_6_steps_3_and_4": dict(ROUND_6_STEPS_1_5),
+            "after_round_6a": now,
         },
+        "named_spaces": _named(rep),
+        "all_interior_polygons": _interior(rep),
+        "outside_the_building": _outside(rep),
         "space_roles": (roles.record() if roles else None),
         "physical_walls": [wr.record(limit=4) for wr in rep.walls],
         "measurement_counts": counts,
+        "wall_face_ownership": [o.record(limit=6) for o in rep.ownership],
         "what_this_run_is_not": (
             "no trade zone, no floor ceramic, no wall ceramic, no waste "
-            "factor and no BOQ row. §16 stops here so the geometry effect "
-            "is visible on its own"),
+            "factor and no BOQ row. Round 6A is geometry only, and the "
+            "1.05 x 1.50 kitchen recess is deliberately NOT merged: that "
+            "is the TradeMeasurementZone question, and it comes later"),
         "no_sealed_reference_was_opened": True,
+    }
+
+
+WANTED = ("KITCHEN", "W.C", "WC", "WASH", "MOSL")
+
+
+def _labels(r) -> str:
+    return " ".join(str(t) for z in r.zones for t in z.label_observations)
+
+
+def _space_record(r) -> dict:
+    """§11: the polygon, its dimensions, and why every side is where it is."""
+    c = r.clear
+    out = {
+        "space_id": r.space_id,
+        "drawing_region_id": r.region_id,
+        "labels_observed": _labels(r),
+        "normalized_identity": getattr(r.identity, "normalized_identity",
+                                       "") if r.identity else "",
+        "OBSTRUCTED_EXTENT": {
+            "what_it_is": ("the frozen flood, which stops at the first "
+                           "line it meets — a worktop included. Kept as a "
+                           "diagnostic, never as a floor area"),
+            "area_m2": (None if not r.enclosure or r.enclosure.area_m2 is
+                        None else round(r.enclosure.area_m2, 3)),
+        },
+    }
+    if c is None:
+        out["CLEAR_INTERNAL"] = None
+        return out
+    out["CLEAR_INTERNAL"] = c.record(limit=64)
+    return out
+
+
+def _named(rep) -> list:
+    rows = []
+    for r in rep.rows:
+        text = _labels(r).upper()
+        if any(w in text for w in WANTED):
+            rows.append(_space_record(r))
+    return rows
+
+
+def _interior(rep, limit: int = 200) -> list:
+    roles = getattr(rep, "space_roles", None)
+    role_of = ({v.space_id: v.role for v in roles.verdicts}
+               if roles else {})
+    out = []
+    for r in rep.rows:
+        role = role_of.get(r.space_id, "")
+        if role not in ("INTERIOR_ROOM", "INTERIOR_SPACE_UNCLASSIFIED"):
+            continue
+        c = r.clear
+        out.append({
+            "space_id": r.space_id,
+            "drawing_region_id": r.region_id,
+            "SPACE_ROLE": role,
+            "labels_observed": _labels(r),
+            "measurement_basis": (c.basis if c else
+                                  "MEASUREMENT_BASIS_NOT_ESTABLISHED"),
+            "clear_internal_area_m2": (round(c.area_m2, 3) if c else None),
+            "principal_dims_mm": (list(c.principal_dims_mm) if c else []),
+            "sides_with_no_established_face": (
+                sum(1 for f in c.boundary_faces
+                    if f.basis == "MEASUREMENT_BASIS_NOT_ESTABLISHED")
+                if c else None),
+        })
+    return out[:limit]
+
+
+def _outside(rep) -> dict:
+    """§9: what lies outside the building, and how far it goes."""
+    roles = getattr(rep, "space_roles", None)
+    if roles is None:
+        return {"space_role_classifier": None}
+    out = []
+    for v in roles.verdicts:
+        if v.role not in ("EXTERIOR_EXTENT_UNRESOLVED",
+                          "EXTERIOR_SPACE_UNCLASSIFIED", "EXTERNAL_SPACE"):
+            continue
+        out.append(v.record())
+    return {
+        "candidates": out,
+        "regions_with_an_envelope": roles.counts()[
+            "regions_with_an_envelope"],
+        "regions_with_a_site_boundary": sum(
+            1 for m in roles.envelopes.values() if m.site is not None),
+        "what_a_missing_site_means": (
+            "the BUILDING question is answered by the envelope and the "
+            "EXTENT question by the site boundary. P7757 draws no site "
+            "boundary in any region, so any ground outside the envelope is "
+            "EXTERIOR_EXTENT_UNRESOLVED — kept out of an internal floor "
+            "finish, and not measured as a yard. No site polygon is "
+            "invented"),
     }
 
 

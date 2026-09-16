@@ -74,7 +74,7 @@ from dataclasses import dataclass, field
 from engine import cad_profile as cprofile
 from engine import space_enclosure as enc
 
-MODEL = "ONE_LINE_ONE_WALL_PHYSICAL_BAND_V2"
+MODEL = "SPACE_BOUNDED_ONE_LINE_ONE_WALL_PHYSICAL_BAND_V3"
 
 # The wall band and the overlap rule are the profile's own, unchanged: they
 # are what defined "wall" on this project in the first place.
@@ -88,6 +88,15 @@ JOIN_MM = enc.JUNCTION_REACH_MM
 COLLINEAR_TOL_MM = enc.COLLINEAR_JOIN_MM
 
 # ---------------------------------------------------- pairing evidence
+# ROUND 6A. Open space outside each face, and none between them. This is
+# what a wall IS, and it is read off the drawn coordinates rather than off
+# a layer or a depth. It ranks BELOW the reveals and a hosted opening on
+# purpose: those are evidence about one specific pair, while this is also
+# true of a pair that straddles a wall AND the detail line drawn beside
+# it. It outranks nearness, the repeated thickness and a junction, which
+# is where it settles the cases round 6A exists for.
+EV_SPACES_STOP_AT_BOTH_FACES = (
+    "OPEN_SPACE_LIES_OUTSIDE_EACH_FACE_AND_NONE_BETWEEN_THEM")
 EV_HOSTS_AN_OPENING = "AN_OPENING_IS_HOSTED_BETWEEN_THESE_TWO_FACES"
 EV_CAPPED_BOTH_ENDS = "A_REVEAL_CLOSES_THE_BAND_AT_BOTH_ENDS"
 EV_CAPPED_ONE_END = "A_REVEAL_CLOSES_THE_BAND_AT_ONE_END"
@@ -96,15 +105,17 @@ EV_THICKNESS_MODE = "THE_SEPARATION_IS_A_THICKNESS_THIS_DRAWING_REPEATS"
 EV_JUNCTION = "ANOTHER_WALL_MEETS_THIS_BAND"
 EV_OVERLAP = "THE_FACES_RUN_ALONGSIDE_EACH_OTHER"
 
-PAIRING_EVIDENCE = (EV_HOSTS_AN_OPENING, EV_CAPPED_BOTH_ENDS,
-                    EV_CAPPED_ONE_END, EV_MUTUAL_NEAREST,
-                    EV_THICKNESS_MODE, EV_JUNCTION, EV_OVERLAP)
+PAIRING_EVIDENCE = (EV_SPACES_STOP_AT_BOTH_FACES, EV_HOSTS_AN_OPENING,
+                    EV_CAPPED_BOTH_ENDS, EV_CAPPED_ONE_END,
+                    EV_MUTUAL_NEAREST, EV_THICKNESS_MODE, EV_JUNCTION,
+                    EV_OVERLAP)
 
 # The order the evidence is read in. NOT a weighted sum — a pair beats
 # another pair on the first token where they differ, and the last two are
 # tie-breakers rather than evidence.
 PRIORITY = (EV_HOSTS_AN_OPENING, EV_CAPPED_BOTH_ENDS, EV_CAPPED_ONE_END,
-            EV_MUTUAL_NEAREST, EV_THICKNESS_MODE, EV_JUNCTION)
+            EV_SPACES_STOP_AT_BOTH_FACES, EV_MUTUAL_NEAREST,
+            EV_THICKNESS_MODE, EV_JUNCTION)
 
 # A separation is a thickness THIS DRAWING REPEATS when it occurs at least
 # this many times among the walls established without needing it. One
@@ -414,7 +425,7 @@ def _overlap(a, b) -> float:
     return total
 
 
-def _spans(face_a, face_b, thickness_mm: float = 0.0) -> tuple:
+def _spans(face_a, face_b, thickness_mm: float = 0.0, owned=None) -> tuple:
     """Walk the wall once and say, for every stretch, what is drawn.
 
     A SHORT OVERHANG IS A CORNER, NOT A MISSING FACE. Where a ring's outer
@@ -439,6 +450,9 @@ def _spans(face_a, face_b, thickness_mm: float = 0.0) -> tuple:
     t = max(thickness_mm, JOIN_MM)
     span_lo = max(lo_a, lo_b) if abs(lo_a - lo_b) <= t else min(lo_a, lo_b)
     span_hi = min(hi_a, hi_b) if abs(hi_a - hi_b) <= t else max(hi_a, hi_b)
+    if owned is not None:
+        span_lo = max(span_lo, min(owned))
+        span_hi = min(span_hi, max(owned))
     if span_hi - span_lo <= JOIN_MM:
         return ()
     edges = sorted({min(max(v, span_lo), span_hi)
@@ -502,15 +516,47 @@ def _hosted_openings(openings) -> set:
     return out
 
 
-def _overlap_interval(a, b):
-    """The stretch over which two merged unions actually run alongside."""
-    lo = max(min(iv[0] for iv in a), min(iv[0] for iv in b))
-    hi = min(max(iv[1] for iv in a), max(iv[1] for iv in b))
-    return (lo, hi) if hi > lo else None
+def _intersect(a, b) -> list:
+    """Every stretch where BOTH lines are actually drawn.
+
+    A SET, not a hull. P7757 draws its east wall as one line from the
+    kitchen to the corridor and another from the corridor to the stair,
+    and taking the outer hull made a single pair claim nine metres of a
+    line it is only alongside for three — which then robbed the wall that
+    really is drawn there.
+    """
+    out = []
+    for lo1, hi1 in a:
+        for lo2, hi2 in b:
+            lo, hi = max(lo1, lo2), min(hi1, hi2)
+            if hi - lo > JOIN_MM:
+                out.append((lo, hi))
+    return sorted(out)
 
 
-def build(candidates, *, region_id: str = "DR-001", openings=()
-          ) -> WallReport:
+def _subtract(ivs, blocks) -> list:
+    """What is left of these stretches once those are taken away."""
+    cur = list(ivs)
+    for blo, bhi in blocks:
+        nxt = []
+        for lo, hi in cur:
+            if bhi <= lo + JOIN_MM or blo >= hi - JOIN_MM:
+                nxt.append((lo, hi))
+                continue
+            if blo - lo > JOIN_MM:
+                nxt.append((lo, blo))
+            if hi - bhi > JOIN_MM:
+                nxt.append((bhi, hi))
+        cur = nxt
+    return cur
+
+
+def _total(ivs) -> float:
+    return sum(hi - lo for lo, hi in ivs)
+
+
+def build(candidates, *, region_id: str = "DR-001", openings=(),
+          topology=None) -> WallReport:
     """Assemble this region's physical walls from its drawn faces.
 
     TWO PASSES, and the second is the one round 6 exists for.
@@ -543,23 +589,33 @@ def build(candidates, *, region_id: str = "DR-001", openings=()
             sep = abs(fb - fa)
             if sep < MIN_WALL_MM or sep > MAX_WALL_MM:
                 continue
-            if _overlap(unions[ka], unions[kb]) < MIN_FACE_OVERLAP_MM:
+            ivs = _intersect(unions[ka], unions[kb])
+            if _total(ivs) < MIN_FACE_OVERLAP_MM:
                 continue
-            iv = _overlap_interval(unions[ka], unions[kb])
-            if iv is None:
-                continue
+            iv = (ivs[0][0], ivs[-1][1])
             f_lo, f_hi = min(fa, fb), max(fa, fb)
             ev = [EV_OVERLAP]
+            if topology is not None and topology(axis_a, fa, fb, iv):
+                ev.append(EV_SPACES_STOP_AT_BOTH_FACES)
             if (axis_a, round(f_lo, 1), round(f_hi, 1)) in hosted:
                 ev.append(EV_HOSTS_AN_OPENING)
-            caps = sum(1 for st in iv
+            caps = sum(1 for st in (ivs[0][0], ivs[-1][1])
                        if _capped(candidates, axis_a, f_lo, f_hi, st))
             if caps >= 2:
                 ev.append(EV_CAPPED_BOTH_ENDS)
             elif caps == 1:
                 ev.append(EV_CAPPED_ONE_END)
+            spans = _spans(runs_a, runs_b, sep)
+            if not spans:
+                continue
+            # ROUND 6A. The stretch this pair would SPEAK about — not just
+            # the stretch its two faces run alongside. Continuity recovers
+            # from the spans, so one-line-one-wall has to be decided over
+            # them: a 400 mm band accepted north of P7757's kitchen was
+            # otherwise recovering a face straight through the kitchen.
             pairs.append({"a": ka, "b": kb, "sep": sep, "iv": iv,
-                          "overlap": _overlap(unions[ka], unions[kb]),
+                          "ivs": ivs, "spans": spans,
+                          "overlap": _total(ivs),
                           "ev": ev, "axis": axis_a, "fa": fa, "fb": fb,
                           "runs_a": runs_a, "runs_b": runs_b})
 
@@ -578,25 +634,37 @@ def build(candidates, *, region_id: str = "DR-001", openings=()
     # ---- pass one: walls that need no thickness argument --------------
     taken: dict = {}
 
-    def _free(key, iv) -> bool:
-        for lo, hi in taken.get(key, ()):
-            if min(hi, iv[1]) - max(lo, iv[0]) > JOIN_MM:
-                return False
-        return True
+    def _parts(pr) -> list:
+        """The stretches of this pair still free on BOTH of its lines."""
+        free = _subtract(pr["ivs"], taken.get(pr["a"], ()))
+        return _subtract(free, taken.get(pr["b"], ()))
 
-    def _accept(pr) -> None:
+    def _long_enough(parts) -> bool:
+        """Is what is left of this pair still a wall's worth of overlap?
+
+        The TOTAL, because a partition drawn in two 400 mm stubs either
+        side of a doorway is one wall — that is round 5's case W and the
+        whole point of merging faces into runs before pairing.
+        """
+        return _total(parts) >= MIN_FACE_OVERLAP_MM
+
+    def _accept(pr, parts) -> None:
+        pr["parts"] = parts
+        pr["iv"] = (parts[0][0], parts[-1][1])
         for key in (pr["a"], pr["b"]):
-            taken.setdefault(key, []).append(pr["iv"])
+            taken.setdefault(key, []).extend(parts)
         accepted.append(pr)
 
     accepted: list = []
     certain = [pr for pr in pairs
-               if EV_HOSTS_AN_OPENING in pr["ev"]
+               if EV_SPACES_STOP_AT_BOTH_FACES in pr["ev"]
+               or EV_HOSTS_AN_OPENING in pr["ev"]
                or EV_CAPPED_BOTH_ENDS in pr["ev"]]
     certain.sort(key=lambda pr: (-_rank(pr), -pr["overlap"], pr["sep"]))
     for pr in certain:
-        if _free(pr["a"], pr["iv"]) and _free(pr["b"], pr["iv"]):
-            _accept(pr)
+        parts = _parts(pr)
+        if _long_enough(parts):
+            _accept(pr, parts)
 
     # ---- the drawing's own thicknesses, read off those walls ----------
     support = Counter(round(pr["sep"], 1) for pr in accepted)
@@ -611,8 +679,35 @@ def build(candidates, *, region_id: str = "DR-001", openings=()
     rest = [pr for pr in pairs if pr not in accepted]
     rest.sort(key=lambda pr: (-_rank(pr), -pr["overlap"], pr["sep"]))
     for pr in rest:
-        if _free(pr["a"], pr["iv"]) and _free(pr["b"], pr["iv"]):
-            _accept(pr)
+        parts = _parts(pr)
+        if _long_enough(parts):
+            _accept(pr, parts)
+
+    # ---- ROUND 6A: a wall speaks only where no other wall does --------
+    #
+    # A band whose two faces are drawn over four metres used to SPAN the
+    # nine metres one of its faces happens to run, and continuity then
+    # recovered a face right through the room next door. So each accepted
+    # wall's spans are trimmed at the first stretch either of its lines
+    # already gives to a different wall. The wall keeps everything up to
+    # that point — which is what §5 needs — and nothing past it.
+    for pr in accepted:
+        lo, hi = float("-inf"), float("inf")
+        for other in accepted:
+            if other is pr:
+                continue
+            if other["a"] not in (pr["a"], pr["b"]) and \
+                    other["b"] not in (pr["a"], pr["b"]):
+                continue
+            for o_lo, o_hi in other["parts"]:
+                if o_hi <= pr["iv"][0] + JOIN_MM:
+                    lo = max(lo, o_hi)
+                elif o_lo >= pr["iv"][1] - JOIN_MM:
+                    hi = min(hi, o_lo)
+        pr["allowed"] = (lo, hi)
+    for pr in accepted:
+        pr["spans"] = _spans(pr["runs_a"], pr["runs_b"], pr["sep"],
+                             owned=pr["allowed"])
 
     for pr in accepted:
         sep = pr["sep"]
@@ -622,7 +717,7 @@ def build(candidates, *, region_id: str = "DR-001", openings=()
             wall_id=wall_id, region_id=region_id, axis=pr["axis"],
             face_a_mm=pr["fa"], face_b_mm=pr["fb"],
             face_a=tuple(pr["runs_a"]), face_b=tuple(pr["runs_b"]),
-            spans=_spans(pr["runs_a"], pr["runs_b"], sep),
+            spans=pr["spans"],
             evidence=tuple(pr["ev"]), overlap_mm=pr["iv"]))
 
     rep.unpaired_lines = len(keys) - len({k for pr in accepted
@@ -633,6 +728,13 @@ def build(candidates, *, region_id: str = "DR-001", openings=()
         "two faces a consistent distance apart, overlapping along their "
         "length, chosen by named evidence in a stated order. A line with "
         "no partner stays a line")
+    rep.notes["where_the_spaces_stop"] = (
+        "a pair whose faces have open space outside each of them and none "
+        "between them is a wall on the drawing's own evidence. A counter "
+        "front has floor on BOTH sides and a glazing line has wall on "
+        "both, and neither is where a room ends"
+        if topology is not None else
+        "not asked: no arrangement was supplied to this build")
     rep.notes["one_line_one_wall"] = (
         "a line may serve several walls only over DISJOINT stretches of "
         "itself. On a contested stretch the better-evidenced pair wins and "

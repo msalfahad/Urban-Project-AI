@@ -29,6 +29,8 @@ import hashlib
 from collections import Counter
 from dataclasses import dataclass, field
 
+from engine import wall_face_ownership as wface
+
 HARNESS = "P7757_SUPERVISED_DEVELOPMENT_BENCHMARK_V1"
 
 GEOMETRY = "GEOMETRY"
@@ -69,6 +71,42 @@ class Example:
 
 
 EXAMPLES = (
+    Example(
+        example_id="P7757-MAIN-KITCHEN-GEOMETRY",
+        scoreboard=GEOMETRY,
+        disclosed="round 6 measured the kitchen at 2.20 x 2.55 m. The main "
+                  "kitchen is 3.00 x 2.70 m; the 1.05 x 1.50 entrance "
+                  "recess is a LATER trade-zone question and is not part "
+                  "of this one",
+        assertion="the space carrying the KITCHEN concept is released on "
+                  "the CLEAR_INTERNAL_FINISH_FACE basis, with every side "
+                  "of its polygon attributed to a wall face, a portal or a "
+                  "recovered span",
+        figures={"main_kitchen_m2": 8.10, "main_kitchen_x_m": 3.00,
+                 "main_kitchen_y_m": 2.70, "round_6_steps_1_5_m2": 5.553},
+        motivated=("wall_face_ownership: a wall is where the spaces stop",
+                   "wall_face_ownership: a line with floor on both sides "
+                   "of it bounds nothing",
+                   "room_partition_graph: the flood is run again on the "
+                   "lines a room may stop at"),
+        protected_by=("A_TWO_ROOMS_SHARE_ONE_WALL",
+                      "C_FINISH_AND_DETAIL_LINES_BESIDE_A_WALL",
+                      "G_A_FINISH_LINE_INSIDE_THE_STRUCTURAL_FACE")),
+    Example(
+        example_id="P7757-WC-WASH-GEOMETRY",
+        scoreboard=GEOMETRY,
+        disclosed="the W.C is about 1.50 x 2.25 and the WASH about "
+                  "1.50 x 2.10. Round 5's 1.00 x 3.50 polygon was one slot "
+                  "across both of them",
+        assertion="the W.C and the WASH are two separately released "
+                  "spaces, each on the clear-internal basis, and neither "
+                  "carries the other's identity",
+        figures={"wc_m2": 3.375, "wash_m2": 3.15,
+                 "frozen_round5_m2": 3.50},
+        motivated=("portal_match: a claim on a door stands down when its "
+                   "faces are not the two faces of any wall",),
+        protected_by=("D_A_DOORWAY_DOES_NOT_SHORTEN_THE_ROOM",
+                      "H_ONE_WALL_TWO_DIFFERENT_CLEAR_WIDTHS")),
     Example(
         example_id="P7757-KITCHEN",
         scoreboard=GEOMETRY,
@@ -202,7 +240,50 @@ def evaluate(rep) -> dict:
                                 {}, "the trade layer is step 7 onward"))
             continue
 
-        if ex.example_id == "P7757-KITCHEN":
+        if ex.example_id == "P7757-MAIN-KITCHEN-GEOMETRY":
+            spaces = _concept_spaces(rep, "KITCHEN")
+            good = [r for r in spaces
+                    if r.clear is not None and r.clear.basis_established]
+            scores.append(Score(
+                ex.example_id, ex.scoreboard,
+                HELD if good else NOT_HELD,
+                {"kitchen_spaces": len(spaces),
+                 "released_on_the_clear_internal_basis": len(good),
+                 "clear_area_m2": [round(r.clear.area_m2, 3) for r in good],
+                 "principal_dims_mm": [list(r.clear.principal_dims_mm)
+                                       for r in good],
+                 "sides_with_no_established_face": [
+                     sum(1 for f in r.clear.boundary_faces
+                         if f.basis == wface.BASIS_NOT_ESTABLISHED)
+                     for r in good]},
+                "the basis is what is scored. The measured figure is "
+                "reported beside the disclosed one and was not optimised "
+                "towards it"))
+
+        elif ex.example_id == "P7757-WC-WASH-GEOMETRY":
+            wc = _concept_spaces(rep, "WC") + _concept_spaces(rep, "W.C")
+            seen, spaces = set(), []
+            for r in wc:
+                if r.space_id not in seen:
+                    seen.add(r.space_id)
+                    spaces.append(r)
+            good = [r for r in spaces
+                    if r.clear is not None and r.clear.basis_established]
+            shared = [r.space_id for r in good if len(r.zones) > 1]
+            scores.append(Score(
+                ex.example_id, ex.scoreboard,
+                HELD if len(good) >= 2 and not shared else NOT_HELD,
+                {"spaces_carrying_a_wc_concept": len(spaces),
+                 "released_on_the_clear_internal_basis": len(good),
+                 "clear_area_m2": sorted(round(r.clear.area_m2, 3)
+                                         for r in good),
+                 "principal_dims_mm": [list(r.clear.principal_dims_mm)
+                                       for r in good],
+                 "released_carrying_more_than_one_identity": shared},
+                "two rooms, two polygons, two bases. One polygon carrying "
+                "both identities is the round-5 slot"))
+
+        elif ex.example_id == "P7757-KITCHEN":
             spaces = _concept_spaces(rep, "KITCHEN")
             bad = [r.space_id for r in spaces
                    for rec in r.recovered_boundary

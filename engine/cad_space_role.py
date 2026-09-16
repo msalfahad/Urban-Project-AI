@@ -58,13 +58,20 @@ SHAFT = "SHAFT"
 STAIR = "STAIR"
 LIFT = "LIFT"
 VOID_OR_SHAFT = "VOID_OR_SHAFT_ON_EVIDENCE"
+# ROUND 6A §9. Outside the building, with no site boundary to say how far
+# the ground goes. Enough to keep it out of an internal floor finish; not
+# enough to measure a yard, and no site polygon is invented to close the
+# gap.
+EXTERIOR_EXTENT_UNRESOLVED = "EXTERIOR_EXTENT_UNRESOLVED"
 
-ROLES = (SPACE_ROLE_UNRESOLVED, INTERIOR_SPACE_UNCLASSIFIED, INTERIOR_ROOM,
+ROLES = (EXTERIOR_EXTENT_UNRESOLVED,
+         SPACE_ROLE_UNRESOLVED, INTERIOR_SPACE_UNCLASSIFIED, INTERIOR_ROOM,
          EXTERIOR_SPACE_UNCLASSIFIED, EXTERNAL_SPACE, SHAFT, STAIR, LIFT,
          VOID_OR_SHAFT)
 
 INTERIOR_ROLES = (INTERIOR_SPACE_UNCLASSIFIED, INTERIOR_ROOM)
-EXTERIOR_ROLES = (EXTERIOR_SPACE_UNCLASSIFIED, EXTERNAL_SPACE)
+EXTERIOR_ROLES = (EXTERIOR_SPACE_UNCLASSIFIED, EXTERNAL_SPACE,
+                  EXTERIOR_EXTENT_UNRESOLVED)
 PENETRATION_ROLES = (SHAFT, STAIR, LIFT, VOID_OR_SHAFT)
 
 # Concepts the frozen vocabulary already carries. Nothing is added here.
@@ -193,6 +200,10 @@ class RoleReport:
 def frozen_parameters() -> dict:
     return {
         "CLASSIFIER": CLASSIFIER,
+        "EXTERIOR_EXTENT_UNRESOLVED": (
+            "outside the building envelope with no site boundary. It may "
+            "not become an internal floor finish, and its extent may not "
+            "be measured"),
         "UNNAMED_PENETRATION_NEEDS": list(UNNAMED_PENETRATION_NEEDS),
         "FOOTPRINT_TOL_MM": FOOTPRINT_TOL_MM,
         "why": {
@@ -319,9 +330,18 @@ def classify(rows, *, regions=None, envelopes=None, identity_concepts=None,
             role = LIFT
             why = "a lift concept sits in it"
         elif inex.verdict == ie.EXTERIOR:
-            role = (EXTERNAL_SPACE if ie.EV_EXTERNAL_SEMANTICS in
-                    inex.evidence else EXTERIOR_SPACE_UNCLASSIFIED)
-            why = inex.why
+            if ie.EV_EXTERNAL_SEMANTICS in inex.evidence:
+                role = EXTERNAL_SPACE
+            elif inex.extent_unresolved:
+                role = EXTERIOR_EXTENT_UNRESOLVED
+            else:
+                role = EXTERIOR_SPACE_UNCLASSIFIED
+            why = inex.why + (
+                ". No site boundary exists in this drawing, so how far "
+                "this ground extends is NOT established — which is a "
+                "different question from which side of the building it is "
+                "on, and only the second one is answered here"
+                if inex.extent_unresolved else "")
         elif all(t in ev for t in UNNAMED_PENETRATION_NEEDS) and \
                 not concept_names:
             role = VOID_OR_SHAFT

@@ -222,6 +222,33 @@ ROUNDS = (
              "because round 6 edits physical_wall and the export's own "
              "hash gate will correctly refuse to regenerate it afterwards",
     ),
+    Freeze(
+        round_name="ROUND_6_GEOMETRY_STEPS_1_TO_5",
+        commit="bc8e96f",
+        source_file="P7757_ARCHITECTURAL.dwg",
+        source_sha256_16="7f61f3acdd62d62d",
+        artifact_path="data/runs/7757/P7757_SUPERVISED_GEOMETRY.json",
+        artifact_sha256_16="",
+        project_output_hash={},
+        synthetic_artifact_hash={
+            "ROUND_6_SYNTHETIC_HASH": "ac4752e4fc44ce02932586a3"},
+        code_hashes_at_freeze={
+            "PHYSICAL_WALL_BAND_HASH": "b6d79d2b5c5e2c13eb5d546d",
+            "CAD_SPACE_ROLE_HASH": "cf6191908829d6a7d3b022d1",
+            "INTERIOR_EXTERIOR_HASH": "752d9d9cb8e5fb51f9145e2d",
+            "SUPERVISED_BENCHMARK_HASH": "3047a37c2c8a7c5a45cfe44f",
+            "FREEZE_MANIFEST_SCHEMA_HASH": "71df459e2520865be23091a4"},
+        dependency_hashes_at_freeze={
+            "CAD_ADAPTER_HASH": "bd331c8074806e8b19711417",
+            "LOCAL_ENCLOSURE_HASH": "01ff128e7ffdab820805dce1",
+            "DRAWING_REGION_HASH": "bd1c391980507d3e18f5d9db",
+            "CAD_OPENING_CLASSIFIER_HASH": "336c6f1bc5bb0a3ea42bb698",
+            "ROOM_PARTITION_GRAPH_HASH": "6bd4f2ff9ac748948e441baa"},
+        note="3,272 wall bands became 389, 43 of 57 VOID became 13 of 67, "
+             "and the kitchen measured 5.553 m2 against a disclosed 9.675. "
+             "That last number is why round 6A exists: the polygon was "
+             "stopping at a kitchen counter",
+    ),
 )
 
 # Replays this project EXPECTS to diverge, and why. A divergence recorded
@@ -232,6 +259,25 @@ PREDICTED_DIVERGENCES = {
                                   "classifier",
         "SEMANTIC_SEED_CLASSIFIER_HASH": "round 3 rewrote it",
     },
+    "ROUND_6_GEOMETRY_STEPS_1_TO_5": {
+        "PHYSICAL_WALL_BAND_HASH": "round 6A adds the evidence token "
+                                   "OPEN_SPACE_LIES_OUTSIDE_EACH_FACE_AND_"
+                                   "NONE_BETWEEN_THEM, and lets a pair own "
+                                   "several disjoint stretches of a line "
+                                   "rather than one hull",
+        "CAD_SPACE_ROLE_HASH": "round 6A adds EXTERIOR_EXTENT_UNRESOLVED: "
+                               "outside the building with no site ring",
+        "INTERIOR_EXTERIOR_HASH": "round 6A separates the building "
+                                  "question from the site question",
+        "ROUND_6_SYNTHETIC_HASH": "it stands on the wall-band hash. The "
+                                  "eighteen CASES must still hold; the "
+                                  "hash is a replay, the pass is the score",
+        "ROOM_PARTITION_GRAPH_HASH": "round 6A measures each space a "
+                                     "second time on the clear-internal "
+                                     "finish face",
+        "SUPERVISED_BENCHMARK_HASH": "round 6A adds the MAIN KITCHEN "
+                                     "geometry example the owner asked for",
+    },
     "ROUND_5_PARTITION_CONTINUITY": {
         "PHYSICAL_WALL_BAND_HASH": "round 6 replaces many-to-many face "
                                    "pairing with a one-line-one-wall "
@@ -241,6 +287,12 @@ PREDICTED_DIVERGENCES = {
                                   "hash is a replay, the pass is the score",
         "ROOM_PARTITION_GRAPH_HASH": "round 6 adds the material-only "
                                      "arrangement the trade layer needs",
+        "PARTITION_CONTINUITY_HASH": "round 6 added the rule that a band "
+                                     "paired on nothing but proximity may "
+                                     "recover nothing",
+        "FACE_SUBDIVISION_HASH": "it stands on the continuity hash and "
+                                 "moves with it. The module itself is "
+                                 "unchanged since round 5",
     },
 }
 
@@ -275,7 +327,48 @@ def _live() -> dict:
         "CAD_OPENING_CLASSIFIER_HASH": openings.classifier_hash(),
         "PORTAL_MATCHER_HASH": pmatch.matcher_hash(),
         "ROOM_PARTITION_GRAPH_HASH": rpg.graph_hash(),
+        "PHYSICAL_WALL_BAND_HASH": _one("physical_wall", "wall_band_hash"),
+        "PARTITION_CONTINUITY_HASH": _one("partition_continuity",
+                                          "continuity_hash"),
+        "JUNCTION_RECOVERY_HASH": _one("junction_recovery",
+                                       "recovery_hash"),
+        "FACE_SUBDIVISION_HASH": _one("face_subdivision",
+                                      "subdivision_hash"),
+        "WALL_FACE_OWNERSHIP_HASH": _one("wall_face_ownership",
+                                         "model_hash"),
+        "CAD_SPACE_ROLE_HASH": _space_role_hash(),
+        "INTERIOR_EXTERIOR_HASH": _interior_exterior_hash(),
+        "SUPERVISED_BENCHMARK_HASH": _supervised_hash(),
     }
+
+
+def _one(module_name: str, fn_name: str) -> str:
+    """One module's own freeze hash, as it computes it TODAY."""
+    import importlib
+
+    try:
+        mod = importlib.import_module(f"engine.{module_name}")
+        return getattr(mod, fn_name)()
+    except Exception:      # noqa: BLE001
+        return ""
+
+
+def _space_role_hash() -> str:
+    from engine import cad_space_role as srole
+
+    return srole.classifier_hash()
+
+
+def _interior_exterior_hash() -> str:
+    from engine import interior_exterior as ie
+
+    return ie.model_hash()
+
+
+def _supervised_hash() -> str:
+    from engine import supervised_benchmark as sup
+
+    return sup.harness_hash()
 
 
 def _replay_synthetic() -> dict:
@@ -284,12 +377,14 @@ def _replay_synthetic() -> dict:
     from engine import round2_selftest as r2
     from engine import round3_selftest as r3
     from engine import round4_selftest as r4
+    from engine import round6_selftest as r6
 
     return {
         "CAD_FIXTURE_FREEZE_HASH": r1.freeze_hash(),
         "ROUND_2_SYNTHETIC_HASH": r2.freeze_hash(),
         "ROUND_3_SYNTHETIC_HASH": r3.freeze_hash(),
         "ROUND_4_SYNTHETIC_HASH": r4.freeze_hash(),
+        "ROUND_6_SYNTHETIC_HASH": r6.freeze_hash(),
     }
 
 

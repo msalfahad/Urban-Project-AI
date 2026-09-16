@@ -54,6 +54,7 @@ from engine import semantic_seed as seeds_mod
 from engine import space_enclosure as enc
 from engine import cad_space_role as srole
 from engine import space_topologies as topo
+from engine import wall_face_ownership as wface
 from engine.boundary_match import VectorCandidate
 from engine.space_objects import SRC_VECTOR_WALL_FACE
 
@@ -108,6 +109,7 @@ class SpaceRow:
     relations: tuple = ()
     quantities: dict = field(default_factory=dict)
     recovered_boundary: tuple = ()
+    clear: object = None
 
     @property
     def is_complete(self) -> bool:
@@ -325,6 +327,7 @@ class Report:
     continuity: list = field(default_factory=list)
     junctions: list = field(default_factory=list)
     subdivisions: list = field(default_factory=list)
+    ownership: list = field(default_factory=list)
     space_roles: object = None
     notes: dict = field(default_factory=dict)
 
@@ -729,9 +732,50 @@ def measure(normalized, profile, *, semantic=None) -> Report:
         agg_open.unmatched_symbols.extend(opens.unmatched_symbols)
         agg_open.notes.update(opens.notes)
 
+        # ---- ROUND 6A: where do this region's spaces actually stop? ---
+        #
+        # The arrangement is built ONCE, from the same eligible lines, and
+        # answers two questions the wall model could not ask for itself:
+        # is there open space outside each of these two faces, and is
+        # there any between them. A kitchen counter fails the second and a
+        # window's glazing line fails the first.
+        #
+        # The walls are built BEFORE the matcher now, because a door in
+        # dispute between a real partition and a coincidence is settled by
+        # asking which claimant's faces are a wall.
+        # THE DRAWING IS READ TWICE, and the second reading is the one
+        # round 6A needs. "Is there open space beyond this face" cannot be
+        # answered while a tile joint 300 mm inside the room is still
+        # treated as something a room might stop at — the wall then looks
+        # as though it has wall on its inner side. So:
+        #
+        #   1  pair the faces with no topology evidence at all (round 6)
+        #   2  set aside every line that is a face of no wall and has
+        #      floor on both sides of it
+        #   3  read the arrangement again without them, and pair again
+        #
+        # Nothing is assumed about which lines those are. They are found,
+        # named, counted and reported.
+        arr_all = wface.arrangement(eligible + ring_closures,
+                                    region_id=reg.region_id)
+        first = pwall.build(eligible, region_id=reg.region_id,
+                            openings=opens.openings)
+        standing, _inside = wface.clear_candidates(
+            eligible, first.walls, arr_all, closures=ring_closures)
+        arr = wface.arrangement(standing + ring_closures,
+                                region_id=reg.region_id)
+
+        def _stops(axis, fa, fb, iv, _arr=arr):
+            return wface.pair_topology(_arr, axis, fa, fb, iv
+                                       ).spaces_stop_at_both
+
+        walls = pwall.build(eligible, region_id=reg.region_id,
+                            openings=opens.openings, topology=_stops)
+
         matched = pmatch.match(opens.openings, region_cands, region=reg,
                                region_report=regions,
-                               eligible_bands=eligible_ids)
+                               eligible_bands=eligible_ids,
+                               walls=walls.walls)
         agg_match.matches.extend(matched.matches)
         agg_match.portals.extend(matched.portals)
         agg_match.notes.update(matched.notes)
@@ -752,8 +796,6 @@ def measure(normalized, profile, *, semantic=None) -> Report:
         # before anything asks whether a stretch of one is continuous, and
         # the answer carries two authorities so that closing a room never
         # quietly creates blockwork.
-        walls = pwall.build(eligible, region_id=reg.region_id,
-                            openings=opens.openings)
         cont = pcont.assess(walls.walls, openings=opens.openings,
                             region_id=reg.region_id)
         jct = jrec.recover(walls.walls, region_id=reg.region_id,
@@ -774,9 +816,17 @@ def measure(normalized, profile, *, semantic=None) -> Report:
         before = rpg.build(region_id=reg.region_id, candidates=eligible,
                            openings=opens.openings, host_status=status,
                            identity_groups=groups)
+        # ---- ROUND 6A: which face does each space stop at? ------------
+        own = wface.ownership(walls.walls, arr, region_id=reg.region_id,
+                              envelope=envelopes[reg.region_id])
         graph = rpg.build(region_id=reg.region_id, candidates=eligible,
                           openings=opens.openings, host_status=status,
-                          identity_groups=groups, recovered=recovered)
+                          identity_groups=groups, recovered=recovered,
+                          wall_faces=own, walls=walls.walls)
+        rep.ownership.append(wface.OwnershipReport(
+            region_id=reg.region_id, faces=own,
+            dropped=list(graph.dropped_lines),
+            spaces=[n.clear for n in graph.spaces if n.clear is not None]))
         rep.graphs.append(graph)
         rep.subdivisions.append(fsub.diagnose(
             before.spaces, graph.spaces, continuity=cont,
@@ -829,7 +879,8 @@ def measure(normalized, profile, *, semantic=None) -> Report:
                 zones=node.zones,
                 boundary_openings=tuple(bnd),
                 relations=tuple(rels),
-                quantities=graph.quantities.get(node.node_id, {})))
+                quantities=graph.quantities.get(node.node_id, {}),
+                clear=node.clear))
 
         # ---- WHAT KIND OF ENCLOSURE, asked WITHIN THIS DRAWING ----------
         #

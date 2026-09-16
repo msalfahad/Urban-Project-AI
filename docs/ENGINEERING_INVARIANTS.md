@@ -1953,3 +1953,103 @@ than by area: the site ring minus the fabric ring is the exterior ground. Where
 a drawing carries no site boundary — as P7757 does not, in any of its nine
 regions — the engine enumerates ZERO exterior spaces and says so. A garden
 strip that cannot be separated is reported as unseparated, never invented.
+
+## 66 · A WALL IS WHERE THE SPACES STOP
+
+*Round 6A, §2. `SPACE_STOPS_AT_THE_FACE_WALL_OWNERSHIP_V1`,
+`WALL_FACE_OWNERSHIP_HASH a36a3169568d9858ca913fda`.*
+
+P7757's kitchen measured 2.20 x 2.55 m against 3.00 x 2.70. The missing
+800 and 150 mm are two kitchen counters:
+
+```
+CAD-310  x = -152339.9   the west wall's internal face
+CAD-311  x = -151839.9   a 500 mm counter in front of it
+CAD-283  y = -800593.5   the north wall's internal face
+CAD-284  y = -801093.5   a 500 mm counter in front of it
+```
+
+The flood stops at the FIRST line it meets, and the first line it meets is
+a worktop. Between 2700 mm of clear floor and 2200 mm of unobstructed
+floor sits a counter, and only one of those two numbers is a floor area.
+
+Two questions answer it, asked of every line and every pair:
+
+```
+IS THERE OPEN SPACE ON THE OTHER SIDE OF YOU?
+IS THERE OPEN SPACE OUTSIDE EACH OF YOU, AND NONE BETWEEN YOU?
+```
+
+**No layer is trusted or distrusted.** The counter and the wall it stands
+against are on the same layers as each other elsewhere in the same
+drawing, and a module that read layer names would have to be retuned for
+every client.
+
+The reading is done from DRAWN COORDINATES, not from polygons. A wall's
+interior is a closed cell only if every line round it meets every other,
+and one 50 mm slot at a window turns the inside of a wall into the whole
+floor plate — which is how the first version of this rule read P7757's own
+kitchen wall as open floor. A strip wider than the profile's
+`MAX_WALL_THICKNESS_MM` is space; anything narrower is not. No new
+constant exists.
+
+And the drawing is read TWICE, because the question cannot be answered
+while a tile joint is still treated as something a room might stop at:
+pair with no topology evidence, set aside every line that is a face of no
+wall and has floor on both sides, then read again. A strip counts as the
+inside of a wall only when the two lines bounding it are the two faces of
+ONE established band — which is what separates a 200 mm wall from the
+500 mm gap behind a worktop. Both are narrow; only one has a wall's two
+faces around it.
+
+## 67 · ONE WALL GIVES OPPOSITE FACES TO THE TWO ROOMS IT SEPARATES
+
+*Round 6A, §3 and §4.*
+
+Ownership is the side the space is on. A wall yields its low face to the
+room on the low side and its HIGH face to the room on the high side, and
+no boundary is ever drawn down the middle of a wall to be shared between
+them. Every established face carries:
+
+```
+SPACE_LEFT / SPACE_RIGHT        which side of its own axis it faces
+INTERIOR / EXTERIOR / UNKNOWN   from the envelope model
+OPEN_SPACE / INSIDE_A_WALL / OUTSIDE_THE_DRAWN_ARRANGEMENT
+```
+
+Four measurement bases exist, and none is ever switched silently:
+
+```
+CLEAR_INTERNAL_FINISH_FACE   the only basis a floor quantity may use
+STRUCTURAL_FACE              not measured on this drawing
+WALL_CENTERLINE              never a floor area
+EXTERNAL_FACE                envelope quantities only
+MEASUREMENT_BASIS_NOT_ESTABLISHED
+```
+
+Every physical space names its basis, its boundary face ids, its wall band
+ids, and the CAD entity and selection reason for EVERY side. A side nobody
+can attribute is `MEASUREMENT_BASIS_NOT_ESTABLISHED`, and that withholds
+the release rather than being filled in. The frozen enclosure is untouched
+and is reported beside it as the OBSTRUCTED EXTENT — a diagnostic, never a
+floor area.
+
+## 68 · THE BUILDING AND THE SITE ARE TWO QUESTIONS
+
+*Round 6A, §9.*
+
+Whether geometry is inside the BUILDING is answered by the envelope. How
+far the ground around it EXTENDS is answered by the site boundary, and
+only by that.
+
+```
+INSIDE_BUILDING / OUTSIDE_BUILDING / BUILDING_EXTENT_UNKNOWN
+SITE_EXTENT_ESTABLISHED / SITE_EXTENT_UNKNOWN
+```
+
+A drawing with no site ring — P7757 in all nine of its regions — can still
+know that something lies outside its building. That space is
+`EXTERIOR_EXTENT_UNRESOLVED`: enough to keep it out of an internal floor
+finish, and not enough to measure a yard. **No site polygon is invented to
+close the gap**, and no missing site ever makes outside-the-building
+interior.

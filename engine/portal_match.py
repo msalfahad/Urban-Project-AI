@@ -166,8 +166,26 @@ def _band_index(candidates) -> dict:
     return out
 
 
+def _on_an_established_wall(o, walls) -> bool:
+    """Do this opening's two faces belong to one established wall band?"""
+    faces = tuple(sorted(o.wall_faces_mm or ()))
+    if len(faces) < 2:
+        return False
+    lo, hi = sorted((o.start_mm, o.end_mm))
+    for w in walls or ():
+        if w.axis != o.axis or not w.has_pairing_evidence:
+            continue
+        wf = tuple(sorted((w.face_a_mm, w.face_b_mm)))
+        if abs(wf[0] - faces[0]) > REACH_MM or abs(wf[1] - faces[-1]) > REACH_MM:
+            continue
+        w_lo, w_hi = w.overlap_mm or (0.0, 0.0)
+        if min(hi, w_hi) - max(lo, w_lo) > 0:
+            return True
+    return False
+
+
 def match(openings, candidates, *, region=None, region_report=None,
-          eligible_bands=None) -> MatchReport:
+          eligible_bands=None, walls=()) -> MatchReport:
     """Give every opening a host, an ambiguity, or nothing.
 
     `openings` and `candidates` must already belong to ONE drawing region.
@@ -188,11 +206,29 @@ def match(openings, candidates, *, region=None, region_report=None,
     # cost a real door its host wherever a gap's end happened to fall on
     # that door's hinge, and the room behind it never closed.
     claimed = defaultdict(list)
+    by_id = {o.opening_id: o for o in openings}
     for o in openings:
         if not o.may_close_boundary:
             continue
         for s in o.symbol_ids:
             claimed[s].append(o.opening_id)
+
+    # ROUND 6A. A door drawn once is claimed by every pair of lines that
+    # happens to straddle it, and on P7757 that put a real W.C door in
+    # dispute between its own 150 mm partition and a 550 mm separation
+    # nothing paired. An opening whose two faces ARE the two faces of an
+    # established wall is not in competition with one whose faces are not:
+    # the first names a wall, the second names a coincidence. Where the
+    # established claim is unique, the rest stand down. Where two
+    # established claims remain, the ambiguity is real and is kept.
+    on_wall = {o.opening_id: _on_an_established_wall(o, walls)
+               for o in openings}
+    stood_down = 0
+    for sym, ids in list(claimed.items()):
+        strong = [i for i in ids if on_wall.get(i)]
+        if len(strong) == 1 and len(ids) > 1:
+            stood_down += len(ids) - 1
+            claimed[sym] = strong
 
     for o in openings:
         checks, why = {}, ""
@@ -263,6 +299,11 @@ def match(openings, candidates, *, region=None, region_report=None,
     ok = {m.opening_id for m in rep.established()}
     rep.portals = [o for o in openings
                    if o.opening_id in ok and o.may_close_boundary]
+    if walls:
+        rep.notes["claims_that_stood_down"] = (
+            f"{stood_down} claim(s) on a door were withdrawn because the "
+            "claimant's two faces are not the two faces of any established "
+            "wall, and another claimant's are")
     rep.notes["what_a_host_is_for"] = (
         "a portal with no established host may not close a room boundary, "
         "whatever its evidence grade. Grade answers 'is this an opening'; "
