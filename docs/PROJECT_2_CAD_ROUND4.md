@@ -375,16 +375,24 @@ room-name allowlist, no coordinate box, no expected room count, no expected
 area, no floor total, no size threshold. No `31.37 × 15.00`. Project
 23010's `calibrate` constant is still unused.
 
-### A correction to round 3's report
+### A note on round 3's report
 
-`docs/PROJECT_2_CAD_ROUND3.md` lists `ROUND_2_SYNTHETIC_HASH
-de1caf07e16e738b3e34dcc5` under "Preserved unchanged". **That was wrong.**
-Round 3 rewrote the semantic seed classifier (`64c01b36653f579fafc113a0`
-→ `356ad3ea44f5b1cefec31208`), which is an input to that hash, so it moved
-to `55b221fa624f5e2d5d8ba32b` — as round 3's own run record
-(`P7757_CAD_round3.json`, `round_2_freeze`) correctly shows. The document
-reported a stale value. Round 4 leaves it at `55b221fa624f5e2d5d8ba32b`.
-The round-2 SAFETY result is unaffected: 12/12 then, 12/12 now.
+> **CORRECTED IN ROUND 5.** The paragraph that stood here said round 3
+> "did not preserve" `ROUND_2_SYNTHETIC_HASH` and that the value "moved".
+> That was the wrong description. **A historical freeze is immutable**:
+> round 2's `ROUND_2_SYNTHETIC_HASH` is `de1caf07e16e738b3e34dcc5` and
+> always will be. Round 3 rewrote the semantic seed classifier
+> (`64c01b36653f579fafc113a0` → `356ad3ea44f5b1cefec31208`), so REPLAYING
+> round 2's twelve cases under round-3 code computes
+> `55b221fa624f5e2d5d8ba32b` — a `CURRENT_REPLAY_HASH`, which is a
+> different object from a freeze. Round 3's document listed the replay
+> value under the heading "Preserved unchanged", which is a naming error in
+> a report, not a change to a freeze.
+>
+> Both numbers are correct and both are now carried by
+> `engine/freeze_manifest.py`. No artefact was edited. See
+> `docs/PROJECT_2_CAD_ROUND5.md` §0 and
+> `docs/ENGINEERING_INVARIANTS.md` §58.
 
 ---
 

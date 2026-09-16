@@ -20,16 +20,18 @@ PROJECT_2_CAD_ROUND2_HASH        70e2f4c34a6b1374687fb20f
 ROUND_2_SYNTHETIC_HASH           de1caf07e16e738b3e34dcc5
 ```
 
-> **CORRECTED IN ROUND 4.** `ROUND_2_SYNTHETIC_HASH` was NOT preserved by
-> this round. Round 3 rewrote the semantic seed classifier
-> (`64c01b36653f579fafc113a0` → `356ad3ea44f5b1cefec31208`), and that
-> classifier is an input to the hash, so it moved to
-> `55b221fa624f5e2d5d8ba32b` — which is what round 3's own run record
-> (`data/runs/7757/P7757_CAD_round3.json`, `round_2_freeze`) shows. The
-> value above was reported from the round-2 document rather than from the
-> round-3 run. Round 2's SAFETY result is unaffected: 12/12 then, 12/12
-> now. See `docs/PROJECT_2_CAD_ROUND4.md` § K and
-> `docs/ENGINEERING_INVARIANTS.md` §58.
+> **NOTE ADDED IN ROUND 5 (this replaces a round-4 note that used the
+> wrong words).** `ROUND_2_SYNTHETIC_HASH de1caf07e16e738b3e34dcc5` above
+> is round 2's freeze, and a freeze is immutable — it is correct here and
+> it will not change. What this heading should not have called "preserved"
+> is the fact that round 3 rewrote the semantic seed classifier
+> (`64c01b36653f579fafc113a0` → `356ad3ea44f5b1cefec31208`), so replaying
+> round 2's twelve cases under round-3 code computes
+> `55b221fa624f5e2d5d8ba32b` — a CURRENT_REPLAY_HASH, recorded correctly in
+> round 3's own run artefact. Two different objects, both correct, now both
+> carried by `engine/freeze_manifest.py`. Round 2's safety result is
+> unaffected: 12/12 then, 12/12 now. See `docs/PROJECT_2_CAD_ROUND5.md` §0
+> and `docs/ENGINEERING_INVARIANTS.md` §58.
 
 ---
 

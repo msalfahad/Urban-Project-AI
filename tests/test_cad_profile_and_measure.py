@@ -128,17 +128,19 @@ def test_a_closed_room_is_measured_by_the_frozen_enclosure():
     assert rep.record()["enclosure_freeze_hash"] == enc.freeze_hash()
 
 
-def test_a_doorway_refuses_completeness_rather_than_being_bridged():
-    """Round 4 changed WHY nothing is released here, not whether.
+def test_a_break_in_one_drawn_line_is_not_a_doorway():
+    """This fixture never was a doorway, and round 5 stops treating it as one.
 
-    `_room`'s gap cuts the inner face only and leaves the outer face
-    running straight across it, so material still stands there. Round 4
-    reads that for what it is — NON_OPENING_GEOMETRY, a break in one drawn
-    line — and refuses to close anything on it. Nothing bounds the space,
-    so no candidate exists at all, which is a stronger refusal than the
-    incomplete row round 1 produced.
+    `_room`'s `gap` cuts the INNER face and leaves the outer face running
+    straight across it. Round 4 already classified that correctly —
+    NON_OPENING_GEOMETRY, because material still stands there — but could
+    not then close the polygon, since the arrangement still had a hole in
+    the inner face. Round 5 recovers the span for TOPOLOGY (§5) and refuses
+    it for MATERIAL (§6), which is the honest reading of one continuous
+    face beside one broken one.
     """
     from engine import cad_openings as co
+    from engine import partition_continuity as pc
 
     b = Builder()
     _room(b, 0, 0, 5000, 4000, layer="W", gap=900.0)
@@ -147,11 +149,35 @@ def test_a_doorway_refuses_completeness_rather_than_being_bridged():
     b.insert("kit", 0, 0)
     nd = _normalized(b)
     rep = cm.measure(nd, cp.build(nd))
-    assert not [r for r in rep.rows
-                if r._release()["status"] == "RELEASE_ELIGIBLE_GEOMETRY"]
-    assert not [r for r in rep.rows if r.is_complete]
     assert rep.openings.counts()["may_close_a_boundary"] == 0
     assert co.NON_OPENING_GEOMETRY in rep.openings.by_class()
+    verdicts = {s.verdict for c in rep.continuity for s in c.spans}
+    assert pc.ESTABLISHED in verdicts
+    assert pc.MATERIAL_CANDIDATE in {
+        s.material_authority for c in rep.continuity for s in c.spans}
+
+
+def test_a_gap_through_both_faces_still_refuses_completeness():
+    """The real version of the case above: nothing runs across it at all."""
+    b = Builder()
+    x0, y0, x1, y1, t, gap = 0.0, 0.0, 5000.0, 4000.0, 200.0, 900.0
+    lo, hi = (x1 - gap) / 2, (x1 + gap) / 2
+    for y in (y0, y0 - t):                      # BOTH faces interrupted
+        b.line(x0, y, lo, y, "W")
+        b.line(hi, y, x1, y, "W")
+    b.line(x0, y1, x1, y1, "W")
+    b.line(x0, y1 + t, x1, y1 + t, "W")
+    b.line(x0, y0, x0, y1, "W")
+    b.line(x0 - t, y0, x0 - t, y1, "W")
+    b.line(x1, y0, x1, y1, "W")
+    b.line(x1 + t, y0, x1 + t, y1, "W")
+    txt = b.text("KITCHEN", 2500, 2000, 300.0, "TEXT")
+    b.block("kit", [txt])
+    b.insert("kit", 0, 0)
+    nd = _normalized(b)
+    rep = cm.measure(nd, cp.build(nd))
+    assert rep.counts()["release_eligible"] == 0
+    assert rep.openings.counts()["may_close_a_boundary"] == 0
 
 
 def test_loose_text_never_names_a_space():

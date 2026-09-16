@@ -26,7 +26,9 @@ from engine import cad_regions as regions
 from engine import cad_selftest as selftest
 from engine import round2_selftest as round2
 from engine import round3_selftest as round3
+from engine import freeze_manifest as fmanifest
 from engine import round4_selftest as round4
+from engine import round5_selftest as round5
 from engine import space_enclosure as enc
 from engine import wall_role as wroles
 from engine.reference_mapping import refuse_if_sealed
@@ -45,6 +47,8 @@ PRESERVED = {
         "70e2f4c34a6b1374687fb20f", "data/runs/7757/P7757_CAD_round2.json"),
     "PROJECT_2_CAD_ROUND3_HASH": (
         "e95a4c3c4a298339d9e0adb1", "data/runs/7757/P7757_CAD_round3.json"),
+    "PROJECT_2_CAD_ROUND4_HASH": (
+        "75d831180085a81a2b38506f", "data/runs/7757/P7757_CAD_round4.json"),
 }
 
 
@@ -97,6 +101,8 @@ def run(dwg: str, *, converter: str = "", work_dir: str = "data/runs/cad_convert
     r2 = round2.assert_frozen()
     r3 = round3.assert_frozen()
     r4 = round4.assert_frozen()
+    r5 = round5.assert_frozen()
+    fmanifest.assert_no_artifact_was_rewritten()
 
     if decode_json and Path(decode_json).exists():
         decoded = json.loads(Path(decode_json).read_text(errors="replace"))
@@ -196,23 +202,42 @@ def run(dwg: str, *, converter: str = "", work_dir: str = "data/runs/cad_convert
             "cases": r4["cases"], "passed": r4["passed"],
             "failed": r4["failed"],
             "required_results_held": r4["required_results_held"]},
+        "round_5_freeze": {
+            "ROUND_5_SYNTHETIC_HASH": r5["ROUND_5_SYNTHETIC_HASH"],
+            "FREEZE_MANIFEST_SCHEMA_HASH": r5["FREEZE_MANIFEST_SCHEMA_HASH"],
+            "PHYSICAL_WALL_BAND_HASH": r5["PHYSICAL_WALL_BAND_HASH"],
+            "PARTITION_CONTINUITY_HASH": r5["PARTITION_CONTINUITY_HASH"],
+            "JUNCTION_RECOVERY_HASH": r5["JUNCTION_RECOVERY_HASH"],
+            "FACE_SUBDIVISION_HASH": r5["FACE_SUBDIVISION_HASH"],
+            "cases": r5["cases"], "passed": r5["passed"],
+            "failed": r5["failed"],
+            "required_results_held": r5["required_results_held"]},
+        "freeze_manifest": fmanifest.manifest(),
         "wall_roles": wall_rep.record(),
         "measurement": rep.record(),
         "round_4_counts": _round4_counts(rep),
+        "round_5_counts": _round5_counts(rep),
+        "large_multi_observation_faces": _undersegmented(rep),
+        "dimension_cross_check_status": _dimension_status(rep),
         "complete_physical_spaces": _per_complete_space(rep),
         "preserved_project_2_hashes": _preserved(),
-        "PROJECT_2_CAD_ROUND4_HASH": _round4_hash(nd, prof, rep, src_hash,
-                                                  r4),
-        "recomputed_under_round_4": {
-            "why": ("round 4 changed what is measured, so the earlier "
-                    "chains no longer reproduce. These are shown for "
-                    "comparison and are NOT the preserved values"),
+        "PROJECT_2_CAD_ROUND5_HASH": _round5_hash(nd, prof, rep, src_hash,
+                                                  r5),
+        "recomputed_under_round_5": {
+            "why": ("each earlier round's PROJECT hash is a property of "
+                    "ITS run. Round 5 measures differently, so recomputing "
+                    "those chains here produces different numbers under "
+                    "the same names. They are shown for comparison only "
+                    "and are NOT the preserved values, which are declared "
+                    "and verified above"),
             "PROJECT_2_CAD_BASELINE_HASH_RECOMPUTED":
                 _baseline(nd, prof, rep, src_hash),
             "PROJECT_2_CAD_ROUND2_HASH_RECOMPUTED":
                 _round2_hash(nd, prof, rep, src_hash, r2),
             "PROJECT_2_CAD_ROUND3_HASH_RECOMPUTED":
                 _round3_hash(nd, prof, rep, src_hash, r2, r3),
+            "PROJECT_2_CAD_ROUND4_HASH_RECOMPUTED":
+                _round4_hash(nd, prof, rep, src_hash, r4),
         },
         "no_human_reference_was_opened": True,
         "what_is_absent_from_this_record": (
@@ -263,6 +288,94 @@ def _round4_counts(rep) -> dict:
     }
 
 
+def _round5_counts(rep) -> dict:
+    """§15's list, in §15's order."""
+    from engine import face_subdivision as fsub
+    from engine import partition_continuity as pcont
+
+    c = rep.counts()
+    spans = [s for x in rep.continuity for s in x.spans]
+    junctions = [j for x in rep.junctions for j in x.junctions]
+    walls = [w for x in rep.walls for w in x.walls]
+    diagnoses = [d for x in rep.subdivisions for d in x.diagnoses]
+    cycles = sum(g.counts()["graph_cycles"] for g in rep.graphs)
+    protected = sum(1 for s in spans
+                    if s.verdict == pcont.OPENING_INTERRUPTION)
+    return {
+        "drawing_regions": (rep.regions.counts()["drawing_regions"]
+                            if rep.regions else 0),
+        "observed_wall_bands": len(walls),
+        "walls_with_a_half_drawn_span": sum(
+            1 for w in walls if w.half_drawn()),
+        "walls_with_an_undrawn_gap": sum(1 for w in walls if w.gaps()),
+        "established_physical_partitions": sum(
+            1 for s in spans if s.verdict == pcont.ESTABLISHED),
+        "supported_continuations": sum(
+            1 for s in spans if s.verdict == pcont.SUPPORTED),
+        "unresolved_gaps": sum(
+            1 for s in spans if s.verdict == pcont.UNRESOLVED_GAP),
+        "no_continuation": sum(
+            1 for s in spans if s.verdict == pcont.NO_CONTINUATION),
+        "protected_openings": protected,
+        "junction_recoveries": sum(1 for j in junctions if j.is_recovered),
+        "junctions_not_recovered": sum(
+            1 for j in junctions if j.status == jrec_not_recovered()),
+        "columns_observed": sum(len(x.columns) for x in rep.junctions),
+        "room_partition_cycles": cycles,
+        "physical_space_polygons": c["space_candidates"],
+        "possible_undersegmented_polygons": len(diagnoses),
+        "undersegmentation_by_classification": dict(
+            __import__("collections").Counter(
+                d.outcome for d in diagnoses).most_common()),
+        "functional_zone_groups": c["functional_zone_groups"],
+        "complete": c["complete"],
+        "partial": c["partial"],
+        "unresolved": c["unresolved"],
+        "identity_established": c["identity_established"],
+        "identity_unknown": c["identity_unknown"],
+        "release_eligible": c["release_eligible"],
+        "spaces_closed_with_a_recovered_span": c[
+            "spaces_closed_with_a_recovered_span"],
+        "spaces_with_material_authority": c["spaces_with_material_authority"],
+        "recovered_partition_length_m": round(sum(
+            x.counts()["recovered_length_m"] for x in rep.continuity), 3),
+        "outcomes": list(fsub.OUTCOMES),
+    }
+
+
+def jrec_not_recovered() -> str:
+    from engine import junction_recovery as jrec
+
+    return jrec.NOT_RECOVERED
+
+
+def _undersegmented(rep) -> list:
+    """§16, for every polygon holding more than one space observation."""
+    return [d.record() for x in rep.subdivisions for d in x.diagnoses]
+
+
+def _dimension_status(rep) -> dict:
+    """§17, stated without flattering it."""
+    from engine import cad_measure as measure
+
+    checks = [d for r in rep.rows for d in r.dimension_checks]
+    counts = {v: sum(1 for d in checks if d["verdict"] == v)
+              for v in (measure.AGREE, measure.DISAGREE, measure.AMBIGUOUS,
+                        measure.NOT_APPLICABLE, measure.NOT_PRESENT)}
+    return {
+        "associations_attempted": len(checks),
+        **counts,
+        "what_this_is_not": (
+            f"{len(checks)} associations were ATTEMPTED. "
+            f"{counts[measure.AGREE]} of them are agreements between an "
+            "authored dimension and a measured span. The rest found no "
+            "dimension to compare, or no side to compare one against, and "
+            "none of those is a validation"),
+        "never": ("no geometry was adjusted to make a dimension agree, and "
+                  "no dimension is required for release"),
+    }
+
+
 def _per_complete_space(rep) -> list:
     """§15, for every space whose boundary actually closed."""
     out = []
@@ -282,6 +395,10 @@ def _per_complete_space(rep) -> list:
             "opening_table": rec["boundary_openings"],
             "room_partition_relations": rec["room_partition_relations"],
             "quantity_ontology": rec["quantity_ontology"],
+            "TOPOLOGY_AUTHORITY": rec["TOPOLOGY_AUTHORITY"],
+            "MATERIAL_AUTHORITY": rec["MATERIAL_AUTHORITY"],
+            "material_boq_status": rec["material_boq_status"],
+            "recovered_boundary_spans": rec["recovered_boundary_spans"],
             "identity": {
                 "identity_observations": rec["room_name_observations"],
                 "reconciled_concept": rec["normalized_identity"],
@@ -383,6 +500,31 @@ def _round4_hash(nd, prof, rep, src_hash: str, r4: dict) -> str:
     return hashlib.sha256("|".join(parts).encode("utf-8")).hexdigest()[:24]
 
 
+def _round5_hash(nd, prof, rep, src_hash: str, r5: dict) -> str:
+    """The PRESERVED round-4 lineage, plus round 5's own components.
+
+    Anchored to round 4's frozen STRING for the same reason round 4 was
+    anchored to round 3's: recomputing an earlier round's chain over new
+    geometry silently redefines a hash somebody was asked to preserve.
+    """
+    parts = [
+        PRESERVED["PROJECT_2_CAD_ROUND4_HASH"][0],
+        f"manifest={r5['FREEZE_MANIFEST_SCHEMA_HASH']}",
+        f"walls={r5['PHYSICAL_WALL_BAND_HASH']}",
+        f"continuity={r5['PARTITION_CONTINUITY_HASH']}",
+        f"junctions={r5['JUNCTION_RECOVERY_HASH']}",
+        f"subdivision={r5['FACE_SUBDIVISION_HASH']}",
+        f"synthetic={r5['ROUND_5_SYNTHETIC_HASH']}",
+        f"source={src_hash}",
+        f"adapter={adapter.adapter_hash()}",
+        f"normalization={nd.normalization_hash()}",
+        f"profile={prof.profile_hash()}",
+        f"enclosure={enc.freeze_hash()}",
+        f"spaces={rep.baseline_hash()}",
+    ]
+    return hashlib.sha256("|".join(parts).encode("utf-8")).hexdigest()[:24]
+
+
 def _baseline(nd, prof, rep, src_hash: str) -> str:
     """One hash over every frozen component of this run."""
     parts = [
@@ -415,12 +557,12 @@ def main(argv=None) -> int:
         print(f"wrote {a.json}")
     print(json.dumps({
         "run_outcome": rec.get("run_outcome"),
-        "PROJECT_2_CAD_ROUND4_HASH": rec.get("PROJECT_2_CAD_ROUND4_HASH"),
+        "PROJECT_2_CAD_ROUND5_HASH": rec.get("PROJECT_2_CAD_ROUND5_HASH"),
+        "round_5_counts": rec.get("round_5_counts"),
         "preserved_project_2_hashes": rec.get(
             "preserved_project_2_hashes", {}).get("all_unchanged"),
-        "round_4_freeze": rec.get("round_4_freeze"),
+        "round_5_freeze": rec.get("round_5_freeze"),
         "adapter_freeze": rec.get("adapter_freeze"),
-        "round_4_counts": rec.get("round_4_counts"),
     }, indent=2))
     return 0
 

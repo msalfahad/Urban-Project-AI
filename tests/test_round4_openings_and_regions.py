@@ -279,6 +279,10 @@ def test_the_room_perimeter_is_not_the_material_wall_length():
     assert q["SPACE_BOUNDARY_LENGTH_MM"] == 17800.0
     assert q["OPENING_LENGTH_MM"] == 900.0
     assert q["MATERIAL_PRESENT_LENGTH_MM"] == 16900.0
+    # Round 5 adds a third subtraction: a side held by a recovered span is
+    # boundary and is not measurable material. Nothing is recovered here.
+    assert q["RECOVERED_BOUNDARY_LENGTH_MM"] == 0.0
+    assert q["MATERIAL_AUTHORITY_ESTABLISHED_LENGTH_MM"] == 16900.0
     assert "is NOT the material wall length" in q["never"]
 
 

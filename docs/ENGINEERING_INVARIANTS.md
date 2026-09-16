@@ -1702,9 +1702,175 @@ Only a hash that is a property of the CODE — `ROUND_3_SYNTHETIC_HASH`,
 `ROUND_4_SYNTHETIC_HASH` — must still compute to the same value later, and
 only those may be asserted by a test.
 
-**Round 3 reported `ROUND_2_SYNTHETIC_HASH` as preserved when it was not.**
-Round 3 rewrote the semantic seed classifier, which is an input to it, so
-it moved from `de1caf07e16e738b3e34dcc5` to `55b221fa624f5e2d5d8ba32b` —
-as round 3's own run record correctly shows and its document did not. A
-hash reported from memory instead of from the run is a hash that means
-nothing.
+**Round 5 sharpened this, and corrected how round 4 had phrased it.** Four
+objects, never one:
+
+```
+HISTORICAL_ARTIFACT_HASH      what the run recorded, at the time. Immutable
+CODE_HASH_AT_FREEZE           the module hashes it recorded beside it
+DEPENDENCY_HASHES_AT_FREEZE   what those modules stood on, then
+CURRENT_REPLAY_HASH           what the same self-test computes TODAY
+```
+
+Round 2's `ROUND_2_SYNTHETIC_HASH` is `de1caf07e16e738b3e34dcc5` and always
+will be. Round 3 rewrote the semantic seed classifier, so replaying round
+2's twelve cases under round-3 code computes `55b221fa624f5e2d5d8ba32b`.
+Round 4's report called that "round 3 did not preserve the hash", which is
+the wrong description and invites the wrong fix — going back and editing an
+old record until a number matches.
+
+    A HISTORICAL FREEZE IS IMMUTABLE. A REPLAY IS A DIFFERENT OBJECT, AND
+    A DIVERGENCE BETWEEN THEM IS INFORMATION, NOT A FAILURE.
+
+A PROJECT output hash is not replayable at all: it is a property of a run
+over a client drawing. It is recorded and never recomputed.
+
+`engine/freeze_manifest.py` carries all four objects for rounds 1–4 in
+committed code, because `data/runs/` is gitignored and a record that lives
+only there leaves with the container. It verifies the declared values
+against the artefacts whenever those are present, and
+`assert_no_artifact_was_rewritten` fails loudly if an artefact ever stops
+saying what it said.
+
+---
+
+## 59 · A WALL'S IDENTITY MUST SURVIVE THE FRAGMENTATION OF ITS FACES
+
+*Round 5, §2–§3, §5. `FRAGMENT_TOLERANT_PHYSICAL_WALL_BAND_V1`,
+`PHYSICAL_WALL_BAND_HASH 35449c817a74f5c1e3e45cf1`.*
+
+One built partition reaches this engine as two continuous faces, or one
+continuous face and a fragmented opposite, or fragments on both sides, or a
+run broken at every junction it passes, or a run broken for no reason at
+all by whoever drew it. On P7757, 1,804 of 3,272 wall bands have a
+half-drawn span and 1,965 have an undrawn gap.
+
+The chain is kept whole and no link may be skipped:
+
+```
+CAD primitives -> wall-face OBSERVATIONS -> wall-BAND hypothesis
+  -> PHYSICAL WALL hypothesis -> opening subtraction -> room boundary
+```
+
+    NEVER: two collinear lines -> invent a wall.
+    NEVER: a gap -> bridge the gap.
+
+Pairing is required, using the profile's own structural test, so a lone
+line stays a line. A wall's extent is then held in three registers that
+never merge — `OBSERVED_FACE` (what is drawn),
+`INFERRED_PHYSICAL_WALL_EXTENT` (what it appears to occupy),
+`MATERIAL_QUANTITY_AUTHORITY` (only the spans where both faces are drawn).
+
+A SHORT OVERHANG IS A CORNER, NOT A MISSING FACE. Where a ring's outer face
+wraps past its inner one the overhang is the wall's own thickness, and a
+first version of this model "recovered" every corner of every building
+before a synthetic case caught it. A face running METRES past its partner
+is the opposite case and is exactly what §5 exists for.
+
+## 60 · FALSE SUBDIVISION IS AS DANGEROUS AS FALSE MERGING
+
+*Round 5, §4, §7–§11, §16. `NAMED_EVIDENCE_PARTITION_CONTINUITY_V1`
+(`PARTITION_CONTINUITY_HASH f9b9742aa125bfd028b75166`) and
+`SUPPORTED_PARTITION_FACE_SUBDIVISION_V1`
+(`FACE_SUBDIVISION_HASH 1313a956a735565e0905a42e`).*
+
+Five answers, and the default is the unhelpful one:
+
+```
+ESTABLISHED_CONTINUATION   one face runs across it, or another wall's
+                           material occupies it
+SUPPORTED_CONTINUATION     another wall terminates into it
+OPENING_INTERRUPTION       a door, window or supported archway is there
+NO_CONTINUATION            the wall ends
+UNRESOLVED_GAP             none of the above is established
+```
+
+    THERE IS NO `bridge_collinear_gap()` AND THERE MAY NOT BE ONE.
+
+Ten evidence tokens are named on every span; none is weighted and nothing
+is summed. **Only two may raise a verdict** — another wall's material
+occupying the span, or another wall terminating into it. Collinearity,
+matching ends, a repeated band and shared CAD provenance are consequences
+of one fact, that runs exist either side, and a rule resting on them is
+`bridge_collinear_gap()` under another name. A first version let them
+through and recovered a plain unexplained gap immediately.
+
+**Openings are tested FIRST and outrank every positive sign.** A door drawn
+across a span is the reason the span is empty; no material is ever
+recovered there.
+
+The same discipline governs splitting a face:
+
+    SEMANTIC OBSERVATIONS MAY DIAGNOSE UNDER-SEGMENTATION.
+    THEY MAY NOT CREATE THE MISSING GEOMETRY.
+
+A polygon holding several reconciled room concepts is flagged
+`POSSIBLE_UNDERSEGMENTED_SPACE` and classified on geometry alone —
+`ONE_PHYSICAL_SPACE`, `MULTIPLE_PHYSICAL_SPACES` or
+`ROOM_PARTITION_UNRESOLVED`. A face is never split because it holds many
+labels, because its area looks too large, because a room "should" be there,
+or because an expected count says so. A Gulf villa is full of open plan,
+and splitting a kitchen from a dining area that share one supported polygon
+would invent two rooms and two sets of walls nobody built.
+
+## 61 · TOPOLOGY AUTHORITY IS NOT MATERIAL AUTHORITY
+
+*Round 5, §6, §10.*
+
+A recovered span can be strong enough to say TWO ROOMS ARE SEPARATE and too
+weak to let anybody measure blockwork across it. Every span carries both:
+
+```
+TOPOLOGY_AUTHORITY   VALIDATED | SUPPORTED | FROM_A_PORTAL | NONE
+MATERIAL_AUTHORITY   ESTABLISHED | CANDIDATE | BELONGS_TO_ANOTHER_WALL
+                     | ABSENT_AT_AN_OPENING | NONE
+```
+
+`topology = VALIDATED, material = CANDIDATE` is the NORMAL result of a
+one-face recovery. `SUPPORTED` may subdivide a face and may never release
+one. A junction's occupancy is `BELONGS_TO_ANOTHER_WALL`, so the same
+blockwork is never counted twice.
+
+The room's own lengths carry the same separation, with three subtractions
+rather than one:
+
+```
+SPACE_BOUNDARY_LENGTH
+OPENING_LENGTH                         zero material across an opening
+RECOVERED_BOUNDARY_LENGTH              a side nobody drew
+MATERIAL_AUTHORITY_ESTABLISHED_LENGTH  what is actually measurable
+```
+
+On P7757 the four released rooms have 17.79, 9.00, 7.85 and 15.64 m of
+boundary and 0.11, 3.00, 0.00 and 0.00 m of measurable material. They are
+releasable as AREAS and not as BLOCKWORK, and a round that reported only
+the perimeter would have created four sets of wall quantities out of lines
+nobody drew.
+
+## 62 · A SNAP TOLERANCE IS DERIVED FROM THE DRAWING, AND REPORTED
+
+*Round 5, §12–§13. `DERIVED_TOLERANCE_JUNCTION_RECOVERY_V1`,
+`JUNCTION_RECOVERY_HASH cbe777aa922d5ad948ad4189`.*
+
+A drafter's line ends where the mouse let go. A partition that stops two
+millimetres short of the wall it meets leaves a hairline slot a flood walks
+straight through, and that is one of the ways a floor of rooms becomes one
+face. But a real gap between two walls must never become a junction, and
+the distance between those two statements may not be settled by a constant
+taken from a client's drawing.
+
+```
+tolerance = max(drafting_resolution_mm, min(thickness_a, thickness_b))
+```
+
+The drafting resolution is READ OFF the drawing — the finest unit nearly
+all of its coordinates sit on. The thickness is the thinner of the two
+walls meeting: a miss smaller than that lands inside the junction's own
+material, and a larger one is a space between two walls. **Every junction
+reports the tolerance it was judged by**, and a test asserts the string
+`7757` appears nowhere in the module.
+
+A column is a closed figure whose BOTH extents lie inside the profile's
+wall band. It may not become a room, it may not break a partition that
+terminates into it, and observing one begins no structural quantity. This
+is architectural topology only.

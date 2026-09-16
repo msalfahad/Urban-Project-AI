@@ -42,6 +42,10 @@ from engine import boundary_authority as authority
 from engine import cad_openings as openings_mod
 from engine import drawing_region as dregion
 from engine import enclosure_role as roles
+from engine import face_subdivision as fsub
+from engine import junction_recovery as jrec
+from engine import partition_continuity as pcont
+from engine import physical_wall as pwall
 from engine import identity_reconcile as ident
 from engine import portal_match as pmatch
 from engine import room_partition_graph as rpg
@@ -51,7 +55,7 @@ from engine import space_topologies as topo
 from engine.boundary_match import VectorCandidate
 from engine.space_objects import SRC_VECTOR_WALL_FACE
 
-MEASURE = "CAD_REGION_LOCAL_GRAPH_FIRST_MEASUREMENT_V1"
+MEASURE = "CAD_REGION_LOCAL_CONTINUITY_RECOVERED_MEASUREMENT_V1"
 
 # How far from a room stamp to look for its walls. The enclosure's own
 # neighbourhood margin governs the wall search; this is only the box the
@@ -69,6 +73,11 @@ AGREE = "AGREE"
 DISAGREE = "DISAGREE"
 AMBIGUOUS = "AMBIGUOUS"
 NOT_PRESENT = "NOT_PRESENT"
+# §17. A span that is not a SIDE of the polygon cannot be cross-checked
+# against a dimension at all, and calling that NOT_PRESENT overstated what
+# had been looked for. An L-shaped room has no single edge spanning its
+# bounding box, so no authored dimension could bracket one.
+NOT_APPLICABLE = "NOT_APPLICABLE"
 
 
 @dataclass(frozen=True)
@@ -96,6 +105,7 @@ class SpaceRow:
     boundary_openings: tuple = ()
     relations: tuple = ()
     quantities: dict = field(default_factory=dict)
+    recovered_boundary: tuple = ()
 
     @property
     def is_complete(self) -> bool:
@@ -135,6 +145,27 @@ class SpaceRow:
     def is_physical_space(self) -> bool:
         return self.physical_space_status.startswith(
             "PHYSICAL_SPACE_VALIDATED")
+
+    @property
+    def weakest_topology_authority(self) -> str:
+        """The weakest authority anything on this boundary carries.
+
+        A polygon is only as releasable as the flimsiest thing holding it
+        shut. A drawn wall carries VALIDATED; a recovered span carries what
+        `partition_continuity` gave it and no more.
+        """
+        if any(r["TOPOLOGY_AUTHORITY"] == pcont.TOPOLOGY_SUPPORTED
+               for r in self.recovered_boundary):
+            return pcont.TOPOLOGY_SUPPORTED
+        return pcont.TOPOLOGY_VALIDATED
+
+    @property
+    def material_authority(self) -> str:
+        """Whether blockwork may be taken from this room's own boundary."""
+        if any(r["MATERIAL_AUTHORITY"] != pcont.MATERIAL_ESTABLISHED
+               for r in self.recovered_boundary):
+            return pcont.MATERIAL_CANDIDATE
+        return pcont.MATERIAL_ESTABLISHED
 
     @property
     def unresolved_relations(self) -> tuple:
@@ -200,6 +231,13 @@ class SpaceRow:
             "unresolved_room_partition_relations": len(
                 self.unresolved_relations),
             "quantity_ontology": dict(self.quantities),
+            "recovered_boundary_spans": [dict(r)
+                                         for r in self.recovered_boundary],
+            "TOPOLOGY_AUTHORITY": self.weakest_topology_authority,
+            "MATERIAL_AUTHORITY": self.material_authority,
+            "material_boq_status": (
+                "MATERIAL_RELEASE_BLOCKED" if self.material_authority
+                != pcont.MATERIAL_ESTABLISHED else "MATERIAL_MEASURABLE"),
             "enclosure_role": self.enclosure_role,
             "enclosure_role_evidence": list(self.role_evidence),
             "closed_using_building_envelope": self.closed_on_envelope,
@@ -251,6 +289,13 @@ class SpaceRow:
         if self.unresolved_relations:
             return {"status": "DIAGNOSTIC_ONLY",
                     "blocker": topo.REL_UNRESOLVED}
+        # ROUND 5, §18. A recovered span may be strong enough to SUBDIVIDE
+        # and not strong enough to RELEASE. Material authority is tracked
+        # separately and blocks the BOQ, not the geometry.
+        if self.weakest_topology_authority != pcont.TOPOLOGY_VALIDATED:
+            return {"status": "DIAGNOSTIC_ONLY",
+                    "blocker": "RECOVERED_SPAN_TOPOLOGY_AUTHORITY_IS_"
+                               + self.weakest_topology_authority}
         bad = [d for d in self.dimension_checks
                if d.get("verdict") == DISAGREE]
         if bad:
@@ -274,6 +319,10 @@ class Report:
     openings: object = None
     matches: object = None
     graphs: list = field(default_factory=list)
+    walls: list = field(default_factory=list)
+    continuity: list = field(default_factory=list)
+    junctions: list = field(default_factory=list)
+    subdivisions: list = field(default_factory=list)
     notes: dict = field(default_factory=dict)
 
     def counts(self) -> dict:
@@ -306,6 +355,11 @@ class Report:
                                           if len(r.zones) > 1),
             "spaces_with_an_unresolved_relation": sum(
                 1 for r in self.rows if r.unresolved_relations),
+            "spaces_closed_with_a_recovered_span": sum(
+                1 for r in self.rows if r.recovered_boundary),
+            "spaces_with_material_authority": sum(
+                1 for r in self.rows
+                if r.material_authority == pcont.MATERIAL_ESTABLISHED),
             "release_eligible": len(rel),
             "by_enclosure_role": dict(Counter(
                 r.enclosure_role for r in self.rows).most_common()),
@@ -318,6 +372,8 @@ class Report:
                                        if d["verdict"] == AMBIGUOUS),
             "dimension_not_present": sum(1 for d in checks
                                          if d["verdict"] == NOT_PRESENT),
+            "dimension_not_applicable": sum(
+                1 for d in checks if d["verdict"] == NOT_APPLICABLE),
         }
 
     def baseline_hash(self) -> str:
@@ -343,6 +399,10 @@ class Report:
             "portal_matching": (self.matches.record()
                                 if self.matches else None),
             "room_partition_graphs": [g.record() for g in self.graphs],
+            "physical_walls": [w.record() for w in self.walls],
+            "partition_continuity": [c.record() for c in self.continuity],
+            "junction_recovery": [j.record() for j in self.junctions],
+            "face_subdivision": [d.record() for d in self.subdivisions],
             "boundary_authority": (self.authority.record()
                                    if self.authority else None),
             "identity_reconciliation": (self.identity.record()
@@ -466,6 +526,8 @@ def _dimension_checks(enclosure, dimensions, *, dimlfac: float) -> list:
 
     poly = loads(enclosure.polygon_wkt)
     x0, y0, x1, y1 = poly.bounds
+    rectangular = len(poly.exterior.coords) - 1 == 4 and not list(
+        getattr(poly, "interiors", ()) or ())
     spans = (("X", x1 - x0, x0, x1, (y0 + y1) / 2),
              ("Y", y1 - y0, y0, y1, (x0 + x1) / 2))
     out = []
@@ -496,8 +558,13 @@ def _dimension_checks(enclosure, dimensions, *, dimlfac: float) -> list:
                 "GEOMETRY_MEASURED_VALUE_MM": round(span, 2),
                 "DIMENSION_DISPLAY_VALUE": None,
                 "DIMENSION_NORMALIZED_VALUE_MM": None,
-                "residual_mm": None, "verdict": NOT_PRESENT,
-                "why": "no authored dimension brackets this span"})
+                "residual_mm": None,
+                "verdict": NOT_PRESENT if rectangular else NOT_APPLICABLE,
+                "why": ("no authored dimension brackets this span"
+                        if rectangular else
+                        "this polygon is not rectangular on this axis, so "
+                        "its bounding span is not a SIDE anything could "
+                        "have dimensioned")})
             continue
         norm = best.normalized_mm
         if norm is None or best.is_overridden:
@@ -662,11 +729,40 @@ def measure(normalized, profile, *, semantic=None) -> Report:
         agg_match.notes.update(matched.notes)
         status = matched.status_of()
 
+        # ---- ROUND 5: is the partition there where nobody drew it? -----
+        #
+        # The chain is kept whole. Faces become BANDS become PHYSICAL WALLS
+        # before anything asks whether a stretch of one is continuous, and
+        # the answer carries two authorities so that closing a room never
+        # quietly creates blockwork.
+        walls = pwall.build(eligible, region_id=reg.region_id)
+        cont = pcont.assess(walls.walls, openings=opens.openings,
+                            region_id=reg.region_id)
+        jct = jrec.recover(walls.walls, region_id=reg.region_id,
+                           candidates=eligible, openings=opens.openings)
+        recovered = (pcont.recovered_candidates(cont)
+                     + jrec.recovered_candidates(jct))
+        recovered_authority = {**pcont.recovered_authorities(cont),
+                               **jrec.recovered_authorities(jct)}
+        rep.walls.append(walls)
+        rep.continuity.append(cont)
+        rep.junctions.append(jct)
+
         # ---- the region's faces ARE the physical-space candidates ------
+        #
+        # Built TWICE on purpose: once from what is drawn, once with the
+        # recovered spans. The difference is the only honest evidence that
+        # a recovery subdivided anything, and §9 needs it to say so.
+        before = rpg.build(region_id=reg.region_id, candidates=eligible,
+                           openings=opens.openings, host_status=status,
+                           identity_groups=groups)
         graph = rpg.build(region_id=reg.region_id, candidates=eligible,
                           openings=opens.openings, host_status=status,
-                          identity_groups=groups)
+                          identity_groups=groups, recovered=recovered)
         rep.graphs.append(graph)
+        rep.subdivisions.append(fsub.diagnose(
+            before.spaces, graph.spaces, continuity=cont,
+            region_id=reg.region_id))
 
         open_by_id = {o.opening_id: o for o in opens.openings}
         rel_by_opening: dict = {}
@@ -689,6 +785,15 @@ def measure(normalized, profile, *, semantic=None) -> Report:
                     rels.append(rel_by_opening[oid])
             checks = _dimension_checks(e, scoped["dimensions"],
                                        dimlfac=normalized.dimlfac)
+            segs = _boundary_segments(e, role_of)
+            # Which recovered spans hold THIS face shut, asked of the
+            # geometry. The frozen enclosure names one drawn piece per
+            # side, so reading it off the edges would miss every recovery
+            # that shares a side with a longer drawn run.
+            recovered_here = [
+                {**recovered_authority[oid], "cad_provenance": oid}
+                for oid in node.recovered_on_boundary
+                if oid in recovered_authority]
             region_rows.append(SpaceRow(
                 space_id=node.node_id, seed_mm=node.seed_mm,
                 label_observations=_identity_label(node),
@@ -700,7 +805,8 @@ def measure(normalized, profile, *, semantic=None) -> Report:
                 provenance=tuple(o.observation_id for z in node.zones
                                  for o in z.identity.observations),
                 identity=node.identity,
-                boundary_roles=_boundary_segments(e, role_of),
+                boundary_roles=segs,
+                recovered_boundary=tuple(recovered_here),
                 region_id=reg.region_id,
                 zones=node.zones,
                 boundary_openings=tuple(bnd),

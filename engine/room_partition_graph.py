@@ -101,6 +101,7 @@ class SpaceNode:
     enclosure: object
     face_kind: str = SPACE_FACE
     boundary_openings: tuple = ()
+    recovered_on_boundary: tuple = ()
     zones: tuple = ()
     identity: object = None
 
@@ -114,6 +115,8 @@ class SpaceNode:
                 "seed_mm": [round(v, 1) for v in self.seed_mm],
                 "complete": self.is_complete,
                 "boundary_openings": list(self.boundary_openings),
+                "recovered_spans_on_this_boundary": list(
+                    self.recovered_on_boundary),
                 "functional_zones": [z.record() for z in self.zones]}
 
 
@@ -126,6 +129,7 @@ class GraphReport:
     open_plan_connections: list = field(default_factory=list)
     portal_boundaries: list = field(default_factory=list)
     closures: list = field(default_factory=list)
+    recovered: list = field(default_factory=list)
     quantities: dict = field(default_factory=dict)
     notes: dict = field(default_factory=dict)
 
@@ -136,6 +140,7 @@ class GraphReport:
             "physical_space_candidates": len(self.spaces),
             "wall_material_faces": self.material_faces,
             "portal_partition_boundaries": len(self.portal_boundaries),
+            "recovered_partition_lines": len(self.recovered),
             "open_plan_connections": len(self.open_plan_connections),
             "functional_zone_groups": sum(1 for s in self.spaces
                                           if len(s.zones) > 1),
@@ -284,6 +289,28 @@ def interior_anchors(candidates) -> list:
     return out
 
 
+def _line_on_boundary(face, cand) -> bool:
+    """Does this candidate line lie ON this face's boundary?
+
+    Asked of the GEOMETRY rather than read off the enclosure's edge
+    attribution. The frozen enclosure names one drawn piece per side — the
+    one covering most of it — which is the right answer for provenance and
+    the wrong one for "did a recovered span hold this room shut".
+    """
+    from shapely.geometry import LineString
+
+    lo, hi = sorted((cand.start_mm, cand.end_mm))
+    if hi - lo <= 0:
+        return False
+    if cand.axis == "H":
+        line = LineString([(lo, cand.fixed_mm), (hi, cand.fixed_mm)])
+    elif cand.axis == "V":
+        line = LineString([(cand.fixed_mm, lo), (cand.fixed_mm, hi)])
+    else:
+        return False
+    return face.exterior.distance(line) <= ON_BOUNDARY_MM
+
+
 def _on_boundary(face, o) -> bool:
     """Does this opening lie on this face's boundary?"""
     from shapely.geometry import LineString
@@ -344,7 +371,7 @@ def _shared_length_mm(face_wkt: str, o) -> float:
     return min(best, o.opening_length_mm)
 
 
-def _quantities(node, openings_on_boundary) -> dict:
+def _quantities(node, openings_on_boundary, recovered_by_id=None) -> dict:
     """§10, kept apart rather than collapsed into one perimeter number."""
     e = node.enclosure
     boundary_mm = (0.0 if not e or e.perimeter_m is None
@@ -352,6 +379,17 @@ def _quantities(node, openings_on_boundary) -> dict:
     shared = {o.opening_id: _shared_length_mm(node.face_wkt, o)
               for o in openings_on_boundary}
     opening_mm = min(sum(shared.values()), boundary_mm)
+    # A side held shut by a RECOVERED span is a side nobody drew. It is
+    # boundary, and it is not measurable material — reporting it inside
+    # MATERIAL_PRESENT_LENGTH would be the silent BOQ creation §6 exists to
+    # stop.
+    rec = recovered_by_id or {}
+    recovered_mm = 0.0
+    for oid in node.recovered_on_boundary:
+        cand = rec.get(oid)
+        if cand is not None:
+            recovered_mm += abs(cand.end_mm - cand.start_mm)
+    recovered_mm = min(recovered_mm, max(0.0, boundary_mm - opening_mm))
     # HOST_WALL_GROSS_LENGTH may include the opening span ONLY where the
     # host wall's continuation past the opening is independently
     # established — which is exactly what a THROUGH interruption with named
@@ -364,19 +402,23 @@ def _quantities(node, openings_on_boundary) -> dict:
         "OPENING_LENGTH_MM": round(opening_mm, 1),
         "MATERIAL_PRESENT_LENGTH_MM": round(max(0.0,
                                                 boundary_mm - opening_mm), 1),
+        "RECOVERED_BOUNDARY_LENGTH_MM": round(recovered_mm, 1),
+        "MATERIAL_AUTHORITY_ESTABLISHED_LENGTH_MM": round(
+            max(0.0, boundary_mm - opening_mm - recovered_mm), 1),
         "HOST_WALL_GROSS_LENGTH_MM": round(
             sum(shared[o.opening_id] for o in gross_established), 1),
         "HOST_WALL_GROSS_ESTABLISHED_FOR": len(gross_established),
         "HOST_WALL_GROSS_NOT_ESTABLISHED_FOR": (
             len(openings_on_boundary) - len(gross_established)),
         "never": ("the room polygon's perimeter is NOT the material wall "
-                  "length. Material stops at every opening, and the "
-                  "difference is stated rather than assumed"),
+                  "length. Material stops at every opening, it is absent "
+                  "along every recovered span, and both differences are "
+                  "stated rather than assumed"),
     }
 
 
 def build(*, region_id, candidates, openings=(), host_status=None,
-          identity_groups=(), extent=None) -> GraphReport:
+          identity_groups=(), extent=None, recovered=()) -> GraphReport:
     """Assemble ONE region's room-partition topology.
 
     `candidates` are that region's room-boundary-eligible wall bands.
@@ -387,7 +429,12 @@ def build(*, region_id, candidates, openings=(), host_status=None,
     status = dict(host_status or {})
     closures = closure_candidates(openings, status)
     rep.closures = closures
-    arrangement = list(candidates) + closures
+    # ROUND 5. Recovered partition spans enter the arrangement exactly like
+    # drawn ones, and their ids say RECOVERED so nothing downstream can
+    # mistake an inference for a line somebody drew. What they may DO is
+    # decided by the authorities that travel with them.
+    rep.recovered = list(recovered)
+    arrangement = list(candidates) + closures + list(recovered)
 
     faces = _faces(arrangement)
     closing = [o for o in openings
@@ -417,10 +464,13 @@ def build(*, region_id, candidates, openings=(), host_status=None,
         mine = [o for o in closing if _on_boundary(f, o)]
         for o in mine:
             on_face[o.opening_id].append(node_id)
+        mine_rec = [c.object_id for c in recovered
+                    if _line_on_boundary(f, c)]
         nodes.append(SpaceNode(
             node_id=node_id, region_id=region_id, seed_mm=(pt.x, pt.y),
             face_wkt=f.wkt, enclosure=e,
-            boundary_openings=tuple(o.opening_id for o in mine)))
+            boundary_openings=tuple(o.opening_id for o in mine),
+            recovered_on_boundary=tuple(mine_rec)))
 
     # ---- identity, attached LAST (§11) ---------------------------------
     from shapely.geometry import Point
@@ -508,9 +558,10 @@ def build(*, region_id, candidates, openings=(), host_status=None,
         rep.relations.append(row)
 
     by_id = {o.opening_id: o for o in openings}
+    rec_by_id = {c.object_id: c for c in rep.recovered}
     rep.quantities = {
         s.node_id: _quantities(s, [by_id[i] for i in s.boundary_openings
-                                   if i in by_id])
+                                   if i in by_id], rec_by_id)
         for s in rep.spaces}
 
     rep.notes["what_closed_what"] = (
