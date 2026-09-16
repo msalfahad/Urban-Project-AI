@@ -24,7 +24,9 @@ from engine import cad_measure as measure
 from engine import cad_profile as profile
 from engine import cad_regions as regions
 from engine import cad_selftest as selftest
+from engine import round2_selftest as round2
 from engine import space_enclosure as enc
+from engine import wall_role as wroles
 from engine.reference_mapping import refuse_if_sealed
 
 
@@ -42,8 +44,12 @@ def run(dwg: str, *, converter: str = "", work_dir: str = "data/runs/cad_convert
     path = Path(dwg)
     src_hash = _hash(path)
 
-    # The freeze gate, BEFORE anything is measured.
+    # Both freeze gates, BEFORE anything is measured. A change that alters
+    # a synthetic known answer, or that lets a site or super-region become
+    # releasable, fails the run rather than changing what a measurement
+    # means.
     freeze = selftest.assert_frozen()
+    r2 = round2.assert_frozen()
 
     if decode_json and Path(decode_json).exists():
         decoded = json.loads(Path(decode_json).read_text(errors="replace"))
@@ -77,6 +83,14 @@ def run(dwg: str, *, converter: str = "", work_dir: str = "data/runs/cad_convert
     sweep = regions.sweep(nd.primitives)
     rep = measure.measure(nd, prof)
 
+    # Second-stage wall roles, from occupancy rather than from layer names.
+    cands = measure.wall_candidates(nd, prof.wall_like_layers())
+    released_polys = [r.enclosure.polygon_wkt for r in rep.rows
+                      if r.enclosure and r.enclosure.polygon_wkt]
+    wall_rep = wroles.classify(
+        cands, interior=_occupancy(released_polys)) if released_polys \
+        else wroles.WallRoleReport()
+
     return {
         "run_outcome": "COMPLETED",
         "source": {"file": path.name, "sha256_16": src_hash,
@@ -108,8 +122,20 @@ def run(dwg: str, *, converter: str = "", work_dir: str = "data/runs/cad_convert
                               primitives=nd.primitives)
                 for c in _finest_stable(sweep)],
         },
+        "round_2_freeze": {
+            "ROUND_2_SYNTHETIC_HASH": r2["ROUND_2_SYNTHETIC_HASH"],
+            "ENCLOSURE_ROLE_CLASSIFIER_HASH":
+                r2["ENCLOSURE_ROLE_CLASSIFIER_HASH"],
+            "SEMANTIC_SEED_CLASSIFIER_HASH":
+                r2["SEMANTIC_SEED_CLASSIFIER_HASH"],
+            "WALL_ROLE_HASH": wroles.classifier_hash(),
+            "cases": r2["cases"], "passed": r2["passed"],
+            "failed": r2["failed"], "safety_result": r2["safety_result"]},
+        "wall_roles": wall_rep.record(),
         "measurement": rep.record(),
         "PROJECT_2_CAD_BASELINE_HASH": _baseline(nd, prof, rep, src_hash),
+        "PROJECT_2_CAD_ROUND2_HASH": _round2_hash(
+            nd, prof, rep, src_hash, r2),
         "no_human_reference_was_opened": True,
         "what_is_absent_from_this_record": (
             "any benchmark, any architect take-off total, any manual "
@@ -133,6 +159,37 @@ def _finest_stable(sweep) -> list:
         if part.distance_mm == best.from_mm:
             return part.major(total)
     return []
+
+
+def _occupancy(polygons):
+    """A point is occupied when some measured enclosure contains it."""
+    from shapely.geometry import Point
+    from shapely.wkt import loads
+
+    shapes = []
+    for wkt in polygons:
+        try:
+            shapes.append(loads(wkt))
+        except Exception:   # noqa: BLE001
+            continue
+
+    def inside(x, y):
+        pt = Point(x, y)
+        return any(s.contains(pt) for s in shapes)
+
+    return inside
+
+
+def _round2_hash(nd, prof, rep, src_hash: str, r2: dict) -> str:
+    """The round-2 baseline: round 1's components plus the new classifiers."""
+    parts = [
+        _baseline(nd, prof, rep, src_hash),
+        f"roles={r2['ENCLOSURE_ROLE_CLASSIFIER_HASH']}",
+        f"seeds={r2['SEMANTIC_SEED_CLASSIFIER_HASH']}",
+        f"walls={wroles.classifier_hash()}",
+        f"synthetic={r2['ROUND_2_SYNTHETIC_HASH']}",
+    ]
+    return hashlib.sha256("|".join(parts).encode("utf-8")).hexdigest()[:24]
 
 
 def _baseline(nd, prof, rep, src_hash: str) -> str:
@@ -169,6 +226,8 @@ def main(argv=None) -> int:
         "run_outcome": rec.get("run_outcome"),
         "PROJECT_2_CAD_BASELINE_HASH": rec.get(
             "PROJECT_2_CAD_BASELINE_HASH"),
+        "PROJECT_2_CAD_ROUND2_HASH": rec.get("PROJECT_2_CAD_ROUND2_HASH"),
+        "round_2_freeze": rec.get("round_2_freeze"),
         "adapter_freeze": rec.get("adapter_freeze"),
         "counts": rec.get("measurement", {}).get("counts"),
     }, indent=2))

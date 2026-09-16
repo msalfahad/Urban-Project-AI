@@ -38,6 +38,8 @@ import math
 from collections import Counter
 from dataclasses import dataclass, field
 
+from engine import enclosure_role as roles
+from engine import semantic_seed as seeds_mod
 from engine import space_enclosure as enc
 from engine.boundary_match import VectorCandidate
 from engine.space_objects import SRC_VECTOR_WALL_FACE
@@ -77,6 +79,8 @@ class SpaceRow:
     principal_dims_mm: tuple = ()
     dimension_checks: tuple = ()
     provenance: tuple = ()
+    enclosure_role: str = roles.UNRESOLVED
+    role_evidence: tuple = ()
 
     @property
     def is_complete(self) -> bool:
@@ -126,20 +130,38 @@ class SpaceRow:
                                                             else ())],
             "dimension_cross_check": [dict(d) for d in self.dimension_checks],
             "cad_provenance": list(self.provenance),
+            "enclosure_role": self.enclosure_role,
+            "enclosure_role_evidence": list(self.role_evidence),
             "geometry_hash": (e.geometry_hash if e else ""),
             "release_status": self._release()["status"],
             "blocker": self._release()["blocker"],
         }
 
     def _release(self) -> dict:
+        """Every condition, with the role test that round 1 did not have.
+
+        Round 1 released a 443 m2 plot as a washroom because it asked only
+        about completeness, identity and dimensions. All three were
+        satisfied. The question it never asked was WHAT KIND OF ENCLOSURE
+        this is, and that is now the first structural gate after geometry.
+
+        FALSE RELEASE IS WORSE THAN ZERO RELEASE, so every branch below
+        fails closed.
+        """
         if not self.is_complete:
             return {"status": "DIAGNOSTIC_ONLY",
                     "blocker": (self.enclosure.leaks[0].reason
                                 if self.enclosure and self.enclosure.leaks
                                 else self.geometry_status)}
-        if self.identity_status.startswith("IDENTITY_NOT_ESTABLISHED"):
+        if self.enclosure_role != roles.RELEASABLE_ROLE:
             return {"status": "DIAGNOSTIC_ONLY",
-                    "blocker": "IDENTITY_NOT_ESTABLISHED"}
+                    "blocker": f"ENCLOSURE_ROLE_IS_{self.enclosure_role}"}
+        if self.identity_status == "IDENTITY_AMBIGUOUS_MULTIPLE_LABELS":
+            return {"status": "DIAGNOSTIC_ONLY",
+                    "blocker": "INCOMPATIBLE_SEMANTIC_OBSERVATIONS"}
+        if not self.enclosure or not self.enclosure.edges:
+            return {"status": "DIAGNOSTIC_ONLY",
+                    "blocker": "BOUNDARY_PROVENANCE_NOT_SUPPORTED"}
         bad = [d for d in self.dimension_checks
                if d.get("verdict") == DISAGREE]
         if bad:
@@ -154,6 +176,8 @@ class Report:
     candidates: int = 0
     wall_layers: tuple = ()
     candidate_lines: int = 0
+    semantic: object = None
+    roles: object = None
     notes: dict = field(default_factory=dict)
 
     def counts(self) -> dict:
@@ -175,6 +199,8 @@ class Report:
             "unresolved": len(unresolved),
             "identity_established": len(ident),
             "release_eligible": len(rel),
+            "by_enclosure_role": dict(Counter(
+                r.enclosure_role for r in self.rows).most_common()),
             "dimension_checks": len(checks),
             "dimension_agree": sum(1 for d in checks
                                    if d["verdict"] == AGREE),
@@ -204,6 +230,9 @@ class Report:
             "wall_face_candidates": self.candidate_lines,
             "seeds_from_room_name_blocks": self.candidates,
             "counts": self.counts(),
+            "semantic_seeds": (self.semantic.record() if self.semantic
+                               else None),
+            "enclosure_roles": (self.roles.record() if self.roles else None),
             "spaces": [r.record() for r in self.rows],
             "notes": dict(self.notes),
             "authority": (
@@ -235,22 +264,29 @@ def wall_candidates(normalized, wall_layers) -> list:
     return out
 
 
-def seeds_from_labels(normalized) -> list:
-    """Every room-name stamp: a point the architect put inside a room.
+def seeds_from_labels(normalized, *, semantic=None) -> list:
+    """Every qualified room-name stamp, and nothing else.
 
-    Only text that arrived through a BLOCK INSTANCE counts. Text drawn
-    loose on the sheet is as likely to be a note, a street name or a level
-    mark, and a seed in the wrong place measures the wrong space.
+    Round 1 used "text carried by a placed block", and 27 of 48 candidates
+    were not rooms — a street name, a neighbour, a view and a level mark are
+    all text carried by placed blocks. The semantic classifier is now the
+    gate, and only ROOM_LIKE observations pass.
+
+    A label says WHERE a space might be and WHAT it might be called. It
+    never says where that space's boundary runs.
     """
+    rep = semantic if semantic is not None else seeds_mod.classify(
+        normalized.texts)
+    by_id = {t.provenance.object_id: t for t in normalized.texts}
     out = []
-    for t in normalized.texts:
-        if not t.provenance.block_path:
+    for o in rep.seeds():
+        src = by_id.get(o.provenance[0]) if o.provenance else None
+        if src is None or not src.provenance.block_path:
             continue
         out.append({
-            "block": t.provenance.block_path[-1],
-            "value": t.value,
-            "x": t.x, "y": t.y,
-            "object_id": t.provenance.object_id,
+            "block": src.provenance.block_path[-1],
+            "value": o.text, "x": o.x, "y": o.y,
+            "object_id": src.provenance.object_id,
         })
     return out
 
@@ -354,16 +390,31 @@ def _thicknesses(enclosure, candidates) -> tuple:
     return tuple(t for t, _ in out.most_common(6))
 
 
-def measure(normalized, profile, *, region=None) -> Report:
-    """Seed from room stamps, flood the authored lines, then cross-check."""
+def measure(normalized, profile, *, region=None, semantic=None) -> Report:
+    """Classify, seed, flood, classify the role, then cross-check.
+
+    The order matters and is the correction this round makes. Round 1 went
+    seed -> flood -> release. It now goes:
+
+        CLASSIFY THE OBSERVATION   is this string even about a space?
+        SEED                       only from what survives
+        FLOOD                      the frozen enclosure, unchanged
+        CLASSIFY THE ENCLOSURE     what KIND of thing did we just close?
+        RELEASE                    only a PHYSICAL_ROOM_CANDIDATE
+
+    Every stage can only narrow what the next one sees.
+    """
     wall_layers = tuple(profile.wall_like_layers())
     cands = wall_candidates(normalized, wall_layers)
-    seeds = seeds_from_labels(normalized)
+    sem = semantic if semantic is not None else seeds_mod.classify(
+        normalized.texts)
+    seeds = seeds_from_labels(normalized, semantic=sem)
     if region is not None:
         seeds = [s for s in seeds if region.contains(s["x"], s["y"])]
 
     rep = Report(candidates=len(seeds), wall_layers=wall_layers,
                  candidate_lines=len(cands))
+    rep.semantic = sem
 
     # Group stamps that sit within one room: a block carries its English and
     # its Arabic label as two text entities at nearby points, and they are
@@ -398,6 +449,24 @@ def measure(normalized, profile, *, region=None) -> Report:
             wall_thicknesses_mm=_thicknesses(e, cands),
             dimension_checks=tuple(checks),
             provenance=tuple(g["ids"])))
+
+    # WHAT KIND OF ENCLOSURE DID WE JUST CLOSE? Asked of every enclosure at
+    # once, because the answer is containment and containment is a property
+    # of the SET, not of one polygon.
+    role_rep = roles.classify(
+        [(r.space_id, r.enclosure.polygon_wkt if r.enclosure else "")
+         for r in rep.rows],
+        sem.seeds(), cands)
+    verdicts = {v.enclosure_id: v for v in role_rep.verdicts}
+    rep.rows = [
+        SpaceRow(**{**r.__dict__,
+                    "enclosure_role": (verdicts[r.space_id].role
+                                       if r.space_id in verdicts
+                                       else roles.UNRESOLVED),
+                    "role_evidence": (verdicts[r.space_id].evidence
+                                      if r.space_id in verdicts else ())})
+        for r in rep.rows]
+    rep.roles = role_rep
 
     rep.notes["seeding"] = (
         "every seed is a room-name block the architect placed inside the "

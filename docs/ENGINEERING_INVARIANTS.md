@@ -1362,3 +1362,71 @@ and that a layer named `WALL` is not proposed when its lines are unpaired.
 The same rule governs blocks. `SAL` is not saloon and `MB` is not master
 bedroom; they are `LABEL_BEARING_SYMBOL` observations carrying the text they
 carry. A block named `WC` is a block named `WC`.
+
+## 49 · A CLOSED POLYGON IS NOT A ROOM, AND ITS SIZE MAY NOT DECIDE
+
+Round 1 released a 443.841 m² polygon labelled `W.C`. It was the plot. Every
+gate passed — complete, identified, undisputed by any dimension — because
+none asked what KIND of enclosure it was.
+
+```
+SITE_OR_PLOT_ENCLOSURE   BUILDING_ENVELOPE   SUPER_REGION
+PHYSICAL_ROOM_CANDIDATE  VOID_OR_SHAFT       DETAIL_OR_ANNOTATION
+UNRESOLVED
+```
+
+**Only `PHYSICAL_ROOM_CANDIDATE` may ever be released.** The decision is
+CONTAINMENT, which is scale-free — it fires the same way on a 2 m² shaft and
+on a 500 m² plot. No area, no principal dimension and no expected room size
+takes any part in it, and a test asserts `area_m2` does not appear in the
+classifier at all.
+
+Two independent structural tests, and on P7757 the second is what fired:
+
+- **THE SUPER-REGION TEST.** A candidate containing several independently
+  supported space observations **separated by supported partitions** can
+  never be one physical room. Asked topologically — can you walk from this
+  label to that one without crossing drawn material? — so it needs no size
+  comparison. Two labels with nothing between them are NOT a super-region;
+  that is what distinguishes one open space from several rooms.
+
+- **THE INTERIOR-VOID TEST.** A polygon with a hole has something enclosed
+  inside it that the flood could not enter. On the 443 m² plot there were
+  **six**: the building's own rooms. Whether a void is a courtyard, a shaft
+  or a column cannot be settled without comparing sizes, so the enclosure
+  is UNRESOLVED rather than guessed at.
+
+The second is deliberately conservative — a room with a column in it will
+not release either. **FALSE RELEASE IS WORSE THAN ZERO RELEASE**, and if the
+safe answer is zero released rooms, zero is the answer.
+
+## 50 · TEXT INSIDE A POLYGON DOES NOT MAKE IT THE ROOM THAT TEXT NAMES
+
+27 of round 1's 48 candidates were not rooms. A street name, a neighbour, a
+view and a level mark are all text carried by placed blocks, and the rule
+was "text carried by a placed block".
+
+So a step was missing from the chain:
+
+```
+TEXT_OBSERVATION -> SEMANTIC_SPACE_OBSERVATION -> SPATIAL_SEED -> PHYSICAL_SPACE
+```
+
+`ROOM_LIKE · ZONE_LIKE · NON_SPACE_ANNOTATION · AMBIGUOUS`, and **AMBIGUOUS
+releases nothing** — that is the whole point of having the class.
+
+The tests are structural and language-independent, never lexical:
+
+- **A ROOM IS NOT NAMED BY A NUMBER.** Once CAD decoration is stripped, a
+  string that is a numeral is a level, a plot dimension or a setback. This
+  one test removed 19 of P7757's observations, in Arabic and English alike.
+- **A scale ratio marks a drawing title**, not a space.
+- **A label outside the built fabric names something outside it** — decided
+  by geometry the caller supplies, never by the words.
+
+That no real string steers a decision is asserted two ways: an AST check
+that no such word appears in a string literal the classifier can act on,
+and a behavioural check that every real word classifies **identically to a
+nonsense word** in the same position.
+
+**A label is evidence for IDENTITY. It is never evidence for a BOUNDARY.**
