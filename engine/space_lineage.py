@@ -309,7 +309,18 @@ def assign(rows, regions, *, previous=None, run_id: str = "",
             "normalized_identity", "")
         link.previous_role = prev_by_id[prev_id].get("candidate_role", "")
 
-        if len(parents) >= 2:
+        if best["iou"] >= SAME_SHAPE:
+            # THE SAME POLYGON IS THE SAME SPACE. Asked first, because a
+            # plate that still contains its own rooms overlaps every one
+            # of them, and a register that carries a parent and its
+            # children would otherwise read as a merge every time.
+            link.stable_space_id = prev_id
+            link.lineage = UNCHANGED
+            link.predecessor_ids = (prev_id,)
+            link.confidence = "THE_SAME_POLYGON"
+            link.reason = f"it covers {round(best['iou'] * 100, 1)}% of " \
+                          "the union with its predecessor"
+        elif len(parents) >= 2:
             link.stable_space_id = _key(
                 row["region_id"], poly, origin.get(row["region_id"],
                                                    (0.0, 0.0)))
@@ -329,13 +340,6 @@ def assign(rows, regions, *, previous=None, run_id: str = "",
             link.reason = (f"{len(children)} candidates of this run lie "
                            f"inside {prev_id}. Whichever was enumerated "
                            "first is not the parent")
-        elif best["iou"] >= SAME_SHAPE:
-            link.stable_space_id = prev_id
-            link.lineage = UNCHANGED
-            link.predecessor_ids = (prev_id,)
-            link.confidence = "THE_SAME_POLYGON"
-            link.reason = f"it covers {round(best['iou'] * 100, 1)}% of " \
-                          "the union with its predecessor"
         elif best["iou"] >= SAME_SPACE and len(
                 [p for p in mine if p["iou"] >= SAME_SPACE]) == 1 and len(
                 [p for p in by_prev.get(prev_id, ())

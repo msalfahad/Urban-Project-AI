@@ -328,6 +328,34 @@ ROUNDS = (
              "54003ad29e3863ceaa614c86, written before round 6D changed "
              "anything",
     ),
+    Freeze(
+        round_name="ROUND_6D_PANTRY_AND_STAIRS",
+        commit="f53e854",
+        source_file="P7757_ARCHITECTURAL.dwg",
+        source_sha256_16="7f61f3acdd62d62d",
+        artifact_path="data/runs/7757/round6d_export/"
+                      "P7757_ROUND6D_REPORT.json",
+        artifact_sha256_16="",
+        project_output_hash={},
+        synthetic_artifact_hash={
+            "ROUND_6D_SYNTHETIC_HASH": "6ed47af8801d63e97e73778d"},
+        code_hashes_at_freeze={
+            "FITTING_BAND_HASH": "cc45efc4267d957cba16e0f5",
+            "FUNCTIONAL_ZONE_HASH": "8fe062953599bfa5d748ccb1",
+            "STAIR_ASSEMBLY_HASH": "971409c71db7e5520949ee90",
+            "PHYSICAL_WALL_BAND_HASH": "8f17f155ca66db3f7970a5c4",
+            "WALL_FACE_OWNERSHIP_HASH": "bc0eac5502ad84c53f8f2e13",
+            "SINGLE_LINE_PARTITION_HASH": "1cdfe19e3fc2ff912a78d952",
+            "SPACE_REGISTER_HASH": "a0e9ecb7a1aa008da91a5da9"},
+        dependency_hashes_at_freeze={
+            "CAD_ADAPTER_HASH": "bd331c8074806e8b19711417",
+            "LOCAL_ENCLOSURE_HASH": "01ff128e7ffdab820805dce1",
+            "DRAWING_REGION_HASH": "bd1c391980507d3e18f5d9db"},
+        note="a pantry is not always a room and a stair is not a floor: "
+             "279.7944 m2 of measured candidate, 26.3085 m2 released, "
+             "P7757's pantry PANTRY_OPENNESS_UNKNOWN, and three stair "
+             "assemblies of which none carried an established riser",
+    ),
 )
 
 # Replays this project EXPECTS to diverge, and why. A divergence recorded
@@ -357,7 +385,34 @@ PREDICTED_DIVERGENCES = {
         "SUPERVISED_BENCHMARK_HASH": "round 6A adds the MAIN KITCHEN "
                                      "geometry example the owner asked for",
     },
+    "ROUND_6D_PANTRY_AND_STAIRS": {
+        "SPACE_REGISTER_HASH": "round 6E puts the release vocabulary "
+                               "into the model hash: one state, the "
+                               "roles that may never carry a room "
+                               "quantity, and every reason a candidate "
+                               "is withheld",
+        "STAIR_ASSEMBLY_HASH": "round 6E bumps the model to V2: the "
+                               "vocabulary gains what a piece of floor "
+                               "between two flights IS — STAIR_LANDING, "
+                               "OPEN_VOID, FLOOR_PLATE, "
+                               "CIRCULATION_FLOOR — and the roles a "
+                               "staircase can have. A model hash freezes "
+                               "a vocabulary, and this vocabulary grew",
+        "ROUND_6D_SYNTHETIC_HASH": "round 6E corrected case SB, which "
+                                   "expected the 200 mm well between two "
+                                   "parallel flights to be a landing of "
+                                   "0.36 m2. The geometry is unchanged "
+                                   "and the expectation was wrong: the "
+                                   "piece runs along both flights' sides "
+                                   "and meets the end of neither. The "
+                                   "nineteen CASES must still hold; the "
+                                   "hash is a replay, the pass is the "
+                                   "score",
+    },
     "ROUND_6C_PHYSICAL_SPACE_REGISTER": {
+        "SPACE_REGISTER_HASH": "round 6E puts the release vocabulary "
+                               "into the model hash. The register's "
+                               "ROLES are unchanged",
         "PHYSICAL_WALL_BAND_HASH": "round 6D gives a wall a SET of owned "
                                    "stretches instead of the span between "
                                    "its first and last millimetre",

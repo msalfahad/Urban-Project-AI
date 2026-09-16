@@ -191,6 +191,12 @@ def frozen_parameters() -> dict:
 
 def model_hash() -> str:
     parts = ([MODEL] + list(CANDIDATE_ROLES) + list(RELATIONS)
+             # §3 THE RELEASE VOCABULARY IS VOCABULARY. One state, the
+             # roles that may never carry a room quantity, and every
+             # reason a candidate is withheld.
+             + [RELEASED, WITHHELD] + list(NEVER_A_ROOM_QUANTITY)
+             + [W_ROLE, W_NOT_A_SPACE, W_PARENT, W_DUPLICATE, W_GEOMETRY,
+                W_DRAWING_ROLE]
              + [LABEL_ONE_SPACE, LABEL_EXCEPTION, WHY_NO_CANDIDATE,
                 WHY_ONLY_A_SUBCELL, WHY_SEVERAL, WHY_ARTIFACT,
                 str(REPEAT_MIN_REGIONS), str(DUPLICATE_SHARE),

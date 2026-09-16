@@ -2380,3 +2380,142 @@ MODEL name, the freeze replays as `REPLAY_DIVERGED_UNDER_LATER_CODE`,
 and the reason is recorded against it in `PREDICTED_DIVERGENCES`.
 
 The CASES are the score. The hash is the question.
+
+---
+
+## 82 · A RUN CANDIDATE IS NOT A PHYSICAL IDENTITY
+
+Between the frozen 6C and 6D bundles, 68 `physical_space_id` values
+appear in both and 17 of them change area by more than 5%. Areas
+**swapped** between ids. Those ids were the order the flood happened to
+enumerate faces in, and nothing else — and nothing else is what they can
+carry. There are two:
+
+```
+RUN_CANDIDATE_ID          this run's enumeration. It may change on every
+                          execution, and that is allowed
+STABLE_PHYSICAL_SPACE_ID  the identity of a space of the building. It
+                          survives ordinary geometry refinement
+```
+
+A stable id is carried forward **on evidence** — the region and floor, how
+much of it the same polygon covers both ways round, its centroid relative
+to its own region, the wall bands that bound it, what it is called — and
+**never on area**: two rooms of 12.60 m² on one floor are two rooms, and
+area is the one piece of evidence that cannot tell them apart.
+
+Every space of a run gets one of nine answers: `UNCHANGED`, `RESHAPED`,
+`SPLIT`, `MERGED`, `NEW`, `REMOVED`, `IDENTITY_CHANGED`, `ROLE_CHANGED`,
+`UNRESOLVED_LINEAGE`.
+
+**A split gives NEITHER child the parent's id.** Whichever child the
+flood enumerates first is not the parent, and pretending otherwise is how
+a revision comparison silently follows the wrong room. **A merge keeps
+EVERY predecessor**, because a merged space is one identity with several
+histories and losing one loses a revision.
+
+---
+
+## 83 · ONE AUTHORITATIVE RELEASE STATE
+
+Round 6D reported a candidate as `PARTIAL_SPACE`, `is_physical_space`
+false, `may_release` false — and `RELEASE_ELIGIBLE_GEOMETRY`, because
+that string came from the measurement layer and nothing revised it.
+Three fields that can contradict each other are not a decision.
+
+`RELEASE_STATUS` is the only release answer. It is computed last, from
+everything the register knows, and the measurement's own verdict is
+carried beside it as `geometry_gate_status`, under a name that cannot be
+mistaken for it. `RELEASED_FOR_ROOM_QUANTITY` may never coexist with
+`may_release=false`, `is_physical_space=false`, or the roles
+`PARTIAL_SPACE`, `DRAWING_ARTIFACT`, `SUPER_REGION`, `UNRESOLVED`,
+`EXTERIOR`, `VOID`, `SHAFT`, `STAIR`. **A withheld candidate always says
+why.**
+
+---
+
+## 84 · REPORT_METRIC == DETERMINISTIC_AGGREGATION(EXPORT)
+
+Every headline number in a report is declared as an aggregation over a
+named export table — a filter, a column, an operation — and recomputed
+from the rows that were actually written. **Neither number is ever
+changed to make them agree**: a disagreement means the report counts
+something the export does not carry, or the export is missing rows the
+report counted, and rounding one to the other hides which.
+
+---
+
+## 85 · AN EXPORT CARRIES WHERE IT CAME FROM, OR IT IS NOT EXPORTED
+
+Before a table is written: the worktree is `CLEAN`, `HEAD` is recorded in
+full, the **tree** hash is recorded, the tests are recorded as passed
+with a count from a run that happened, and the input drawing is hashed by
+its own bytes. An export from an unclean worktree cannot be reproduced
+from its commit, so it is refused.
+
+Two hashes per file, because they answer two questions:
+
+```
+RAW_FILE_SHA256           the bytes. Is this the same FILE?
+CANONICAL_CONTENT_SHA256  sorted keys, no insignificant whitespace.
+                          Is this the same ANSWER, however written out?
+```
+
+A manifest that gives one hash and calls it "the hash" is what this
+exists to stop.
+
+---
+
+## 86 · A STAIR'S KIND IS WHAT IT DOES, AND A LANDING IS PART OF THE STAIR
+
+A main stair **carries a storey**: it stands inside the building, it is
+drawn on the plans of two established floors, and no wider interior stair
+does the same. A run that climbs out of one plan into nothing established
+is `STAIR_ROLE_UNKNOWN` however wide it is drawn — Round 6D called a
+four-tread run of 2.80 m the MAIN stair of the building while the curved
+stair that carries the storey came out SECONDARY. `SERVICE_STAIR` and
+`LANDSCAPE_STEPS` need a rule or a label to say so; no arrangement of
+lines on a plan tells them from the stair beside them. **And no stair is
+marble because it is a stair.**
+
+Each piece of floor between the flights is classified from its own
+geometry:
+
+```
+STAIR_LANDING       it joins the ENDS of flights and is no larger than
+                    the flights it joins
+OPEN_VOID           it runs along their SIDES and meets the end of none
+CIRCULATION_FLOOR   the room around the stair reaches it
+FLOOR_PLATE         it is simply larger than the stair
+```
+
+Only a landing is stair quantity. Round 6D called an 11.93 m² plate —
+7.0 m long beside a 1.25 m flight — a landing; the rest is reported
+beside the stair as floor, so that no square metre is billed marble over
+porcelain.
+
+Stair coverage is reported **per floor**: a floor whose plans draw
+stair-like geometry and yield no staircase has `STAIR_COVERAGE_FAILED`,
+not coverage of one stair, and every unresolved observation is listed,
+largest first, with what it covers.
+
+---
+
+## 87 · A RISER HEIGHT IS SEARCHED FOR, AND NEVER ASSUMED
+
+A plan carries no height, so the whole architectural set is searched:
+level marks, riser notes, section and elevation sheets. Each finding is
+`PLACED` (it has coordinates the engine can attribute), a **LEAD** (it
+sits in a representation this project cannot place), or refused.
+
+A riser height comes from a floor-to-floor rise **between two named
+floors** divided by a riser **count** that is itself established. Not
+150, not 170, not 175, not "typical": a habit is not evidence. For P7757
+the set does carry the answer — the DWF's W2D streams hold seven level
+marks and the sheets SECTION A-A and SECTION B-B — and this project has
+no W2D reader, so the riser height stays NOT ESTABLISHED with
+`NO_READER_PLACES_THE_VERTICAL_EVIDENCE_THIS_SET_CARRIES`.
+
+**An area printed on a drawing is still the sealed take-off.** A text
+that states a quantity is refused by name, so that nobody reads it by
+accident.
