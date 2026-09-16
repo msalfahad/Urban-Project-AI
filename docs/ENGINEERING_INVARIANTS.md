@@ -1295,3 +1295,70 @@ $DIMLFAC = 0.1 + D115/D120/D315    printed cm, and those are plausible door
 And an absent variable is not an unrecognised one: `$MEASUREMENT` is missing
 from this decoder's JSON output, which is reported as
 `NOT_PRESENT_IN_THIS_DECODE` rather than as a reading of it.
+
+## 47 · A COMPLETE ENCLOSURE OF THE WRONG THING PASSES EVERY GATE
+
+Project 7757's CAD run released two spaces. One is labelled `W.C` and
+measures **443.841 m² over 31370 × 15000 mm**, which is the plot — `31.37`
+and `15.00` are the plot dimensions printed on the sheet. Its vector
+boundary support is **100%**, because the site boundary is fully drawn.
+
+It passed the release gate by satisfying every condition the gate tests:
+
+```
+enclosure complete          yes - the flood was genuinely stopped
+identity established        yes - from an authored room-name block
+no dimension disagreement   yes - nothing dimensions a plot-sized rectangle
+```
+
+**Nothing in the gate asked whether the measured space is plausibly the
+space its label names.** A 443 m² washroom satisfies a gate that never
+compares the result to its own seed. Completeness is a statement about the
+boundary, not about the identification, and the two were being read as one.
+
+Two source-general causes, both recorded rather than tuned away:
+
+- **A paired-face test is a WALL test, not a ROOM-WALL test.** A majority of
+  layer `1`'s 2078 m of axis-aligned length runs as parallel pairs 50–600 mm
+  apart, so it is proposed wall-like — and it is very likely the site and
+  plot layer. Feed a plot boundary to the enclosure as a wall face and a
+  flood that escapes a washroom still closes, on the plot.
+- **Text inside a block is not a room stamp.** `NEIGHBOUR`, `STREET`,
+  `SEA VIEW` and the level marks are all text carried by placed blocks, so
+  all passed the seed filter. 27 of 48 candidates are not rooms.
+
+The fix for each must be structural: a room wall is a paired face that
+participates in a **bounded circuit at room scale**, and a room stamp is
+text in a block whose **other placements also sit inside bounded areas**.
+Neither may be a name test, and neither may be chosen by watching P7757's
+numbers improve.
+
+## 48 · AN AUTHORED LAYER NAME IS AS UNTRUSTWORTHY AS A PEN WEIGHT
+
+AR-00's 1.14 pt pen was a fact about one plot that nearly became a
+production assumption. P7757 offers the same temptation with a better
+disguise: a layer actually called `W`, holding 2,430 lines.
+
+Writing `if layer == "W": wall` would have been right about this drawing and
+would have picked **the least convincing of four candidates**. The
+geometric test proposes four layers — `1`, `2`, `5` and `W` — and `W`'s
+commonest face separations are **80 mm and 63.2 mm**, against layer 2's and
+layer 5's clean **300 mm and 600 mm**.
+
+So the split is enforced in code, not in discipline:
+
+```
+engine/cad_adapter.py    source-independent. Knows entity types,
+                         transforms, coordinates. Matches NO name
+engine/cad_profile.py    per source. Observes what each layer CONTAINS,
+                         proposes a role, records the evidence and status
+```
+
+A profile may conclude that `W` strongly represents walls **on P7757**. It
+may never conclude that a layer called `W` represents walls. Tests assert
+that a layer named `ZZ-NONSENSE-NAME` is proposed wall-like on its geometry
+and that a layer named `WALL` is not proposed when its lines are unpaired.
+
+The same rule governs blocks. `SAL` is not saloon and `MB` is not master
+bedroom; they are `LABEL_BEARING_SYMBOL` observations carrying the text they
+carry. A block named `WC` is a block named `WC`.
