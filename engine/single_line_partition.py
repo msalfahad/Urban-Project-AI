@@ -357,12 +357,15 @@ def _band_faces(walls) -> dict:
     for w in walls or ():
         if not getattr(w, "has_pairing_evidence", False):
             continue
-        lo, hi = w.overlap_mm or (0.0, 0.0)
-        if hi - lo <= COLLINEAR_MM:
-            continue
-        for fixed in (w.face_a_mm, w.face_b_mm):
-            out.setdefault((w.axis, round(fixed, 1)),
-                           []).append((lo, hi, w.wall_id))
+        # Where the band IS a band — both faces drawn. A face whose
+        # partner is missing over a stretch is exactly the single line
+        # this module is asked about, and it cannot be its own evidence.
+        for lo, hi in w.drawn_mm:
+            if hi - lo <= COLLINEAR_MM:
+                continue
+            for fixed in (w.face_a_mm, w.face_b_mm):
+                out.setdefault((w.axis, round(fixed, 1)),
+                               []).append((lo, hi, w.wall_id))
     return out
 
 
@@ -543,9 +546,37 @@ def cross_plan_index(by_region) -> dict:
 
 # ----------------------------------------------------------------- assess
 
+def _fitting_fronts(walls, fittings) -> dict:
+    """(axis, coord) -> the stretches that are the FRONT of a fitting."""
+    out: dict = {}
+    lin = dict(fittings or {})
+    if not lin:
+        return out
+    for w in walls or ():
+        st = lin.get(w.wall_id)
+        if st is None:
+            continue
+        for which in ("A", "B"):
+            fixed = w.face_a_mm if which == "A" else w.face_b_mm
+            if abs(fixed - st.far_face_mm) > COLLINEAR_MM:
+                continue
+            for lo, hi in w.face_stretches(which):
+                out.setdefault((w.axis, round(fixed, 1)),
+                               []).append((lo, hi))
+    return out
+
+
+def _on_a_fitting_front(fronts, axis, fixed_mm, lo, hi) -> bool:
+    for a, b in fronts.get((axis, round(fixed_mm, 1)), ()):
+        if min(hi, b) - max(lo, a) > COLLINEAR_MM:
+            return True
+    return False
+
+
 def assess(lines, *, region_id="DR-001", walls=(), candidates=(),
            openings=(), dimensions=(), observations=(), cross_plan=None,
-           origin=(0.0, 0.0), arrangement=None) -> PartitionReport:
+           origin=(0.0, 0.0), arrangement=None,
+           fittings=None) -> PartitionReport:
     """Ask every set-aside line what evidence it actually has.
 
     `lines` are round 6A's set-aside lines — a face of no wall, with floor
@@ -555,6 +586,7 @@ def assess(lines, *, region_id="DR-001", walls=(), candidates=(),
     """
     rep = PartitionReport(region_id=region_id)
     faces = _band_faces(walls)
+    fronts = _fitting_fronts(walls, fittings)
     xplan = cross_plan or {}
     ox, oy = origin
 
@@ -574,6 +606,17 @@ def assess(lines, *, region_id="DR-001", walls=(), candidates=(),
         if cand.length_mm < MIN_LENGTH_MM:
             cand.why = ("shorter than the thinnest wall this project "
                         "recognises, so it is not a partition")
+            rep.candidates.append(cand)
+            continue
+
+        # ROUND 6D. A line that IS the front of a fitting is furniture,
+        # however much evidence it collects. A counter runs wall to wall,
+        # continues an alignment and often has an opening beside it —
+        # every one of those tokens is true of it and none of them makes
+        # it a partition.
+        if _on_a_fitting_front(fronts, line.axis, line.fixed_mm, lo, hi):
+            cand.why = ("this line is the front face of a band standing "
+                        "on a wall — a fitting, not a partition")
             rep.candidates.append(cand)
             continue
 

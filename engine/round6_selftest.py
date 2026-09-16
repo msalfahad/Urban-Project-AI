@@ -62,11 +62,12 @@ def _overlapping_shared_lines(rep) -> list:
             # The stretch this wall USES of each line — not the whole line.
             # One drawn line can legitimately be the face of two walls end
             # to end, and its extent covers both of them.
-            lo, hi = (w.overlap_mm if getattr(w, "overlap_mm", None)
-                      else w.observed_extent)
+            owned = (list(w.owned_mm) if getattr(w, "owned_mm", None)
+                     else [w.observed_extent])
             for f in (w.face_a_mm, w.face_b_mm):
-                by_line.setdefault((w.region_id, w.axis, round(f, 1)),
-                                   []).append((lo, hi, w.wall_id))
+                for lo, hi in owned:
+                    by_line.setdefault((w.region_id, w.axis, round(f, 1)),
+                                       []).append((lo, hi, w.wall_id))
     bad = []
     for key, rows in by_line.items():
         rows.sort()

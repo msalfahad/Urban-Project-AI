@@ -485,7 +485,7 @@ def _quantities(node, openings_on_boundary, recovered_by_id=None) -> dict:
 
 def build(*, region_id, candidates, openings=(), host_status=None,
           identity_groups=(), extent=None, recovered=(), wall_faces=(),
-          walls=(), partitions=None) -> GraphReport:
+          walls=(), partitions=None, fittings=None) -> GraphReport:
     """Assemble ONE region's room-partition topology.
 
     `candidates` are that region's room-boundary-eligible wall bands.
@@ -535,7 +535,7 @@ def build(*, region_id, candidates, openings=(), host_status=None,
     if wall_faces:
         clear_cands, dropped = wface.clear_candidates(
             candidates, walls or (), arrangement_model,
-            closures=closures, recovered=recovered)
+            closures=closures, recovered=recovered, fittings=fittings)
         by_id = {c.object_id: c for c in candidates}
         dropped_lines = [by_id[d.object_id] for d in dropped
                          if d.object_id in by_id]

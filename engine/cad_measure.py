@@ -43,6 +43,7 @@ from engine import cad_openings as openings_mod
 from engine import drawing_region as dregion
 from engine import enclosure_role as roles
 from engine import face_subdivision as fsub
+from engine import fitting_band as fband
 from engine import interior_exterior as iexr
 from engine import junction_recovery as jrec
 from engine import partition_continuity as pcont
@@ -330,6 +331,7 @@ class Report:
     subdivisions: list = field(default_factory=list)
     ownership: list = field(default_factory=list)
     partitions: list = field(default_factory=list)
+    fittings: list = field(default_factory=list)
     space_roles: object = None
     notes: dict = field(default_factory=dict)
 
@@ -777,7 +779,8 @@ def measure(normalized, profile, *, semantic=None) -> Report:
         first = pwall.build(eligible, region_id=reg.region_id,
                             openings=opens.openings)
         standing, _inside = wface.clear_candidates(
-            eligible, first.walls, arr_all, closures=ring_closures)
+            eligible, first.walls, arr_all, closures=ring_closures,
+            fittings=fband.detect(first.walls))
         arr = wface.arrangement(standing + ring_closures,
                                 region_id=reg.region_id)
 
@@ -787,6 +790,17 @@ def measure(normalized, profile, *, semantic=None) -> Report:
 
         walls = pwall.build(eligible, region_id=reg.region_id,
                             openings=opens.openings, topology=_stops)
+
+        # ---- ROUND 6D: which of these bands are fittings? -------------
+        #
+        # A counter, a run of units, a wardrobe and a duct casing are all
+        # drawn as two parallel lines a wall's thickness apart. One that
+        # stands ON another band, sharing its face and running a shorter
+        # length, is furniture — and no room's clear internal finish face
+        # is at the front of it.
+        fittings = fband.detect(walls.walls)
+        rep.fittings.append(fband.FittingReport(
+            region_id=reg.region_id, fittings=fittings))
 
         matched = pmatch.match(opens.openings, region_cands, region=reg,
                                region_report=regions,
@@ -834,7 +848,8 @@ def measure(normalized, profile, *, semantic=None) -> Report:
                            identity_groups=groups)
         # ---- ROUND 6A: which face does each space stop at? ------------
         own = wface.ownership(walls.walls, arr, region_id=reg.region_id,
-                              envelope=envelopes[reg.region_id])
+                              envelope=envelopes[reg.region_id],
+                              fittings=fittings)
 
         # ---- ROUND 6B: which set-aside lines are actually partitions? --
         #
@@ -843,7 +858,7 @@ def measure(normalized, profile, *, semantic=None) -> Report:
         # material they create are three separate answers.
         _kept, _aside = wface.clear_candidates(
             eligible, walls.walls, arr, closures=ring_closures,
-            recovered=recovered)
+            recovered=recovered, fittings=fittings)
         _aside_lines = [c for c in eligible
                         if c.object_id in {d.object_id for d in _aside}]
         parts = slp.assess(
@@ -851,13 +866,13 @@ def measure(normalized, profile, *, semantic=None) -> Report:
             candidates=eligible, openings=opens.openings,
             dimensions=scoped["dimensions"], observations=obs,
             cross_plan=cross_plan, origin=(reg.x0, reg.y0),
-            arrangement=arr)
+            arrangement=arr, fittings=fittings)
         rep.partitions.append(parts)
         graph = rpg.build(region_id=reg.region_id, candidates=eligible,
                           openings=opens.openings, host_status=status,
                           identity_groups=groups, recovered=recovered,
                           wall_faces=own, walls=walls.walls,
-                          partitions=parts)
+                          partitions=parts, fittings=fittings)
         rep.ownership.append(wface.OwnershipReport(
             region_id=reg.region_id, faces=own,
             dropped=list(graph.dropped_lines),

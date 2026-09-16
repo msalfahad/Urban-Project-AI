@@ -178,8 +178,10 @@ def _on_an_established_wall(o, walls) -> bool:
         wf = tuple(sorted((w.face_a_mm, w.face_b_mm)))
         if abs(wf[0] - faces[0]) > REACH_MM or abs(wf[1] - faces[-1]) > REACH_MM:
             continue
-        w_lo, w_hi = w.overlap_mm or (0.0, 0.0)
-        if min(hi, w_hi) - max(lo, w_lo) > 0:
+        # Each stretch the wall OWNS, never the span between the first
+        # and the last: an opening in the gap between two walls drawn on
+        # one line belongs to neither of them.
+        if w.owns(lo, hi):
             return True
     return False
 

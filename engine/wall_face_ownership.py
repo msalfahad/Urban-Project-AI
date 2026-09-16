@@ -58,6 +58,7 @@ import hashlib
 from dataclasses import dataclass, field
 
 from engine import cad_profile as cprofile
+from engine import fitting_band as fitting
 from engine import space_enclosure as enc
 
 MODEL = "SPACE_STOPS_AT_THE_FACE_WALL_OWNERSHIP_V1"
@@ -467,7 +468,7 @@ def _face_runs(wall, which):
 
 
 def ownership(walls, arr: Arrangement, *, region_id: str = "",
-              envelope=None) -> list:
+              envelope=None, fittings=None) -> list:
     """Every established face, with the side it faces and what is there.
 
     A face is owned by the space on ITS side. The same wall therefore
@@ -481,45 +482,49 @@ def ownership(walls, arr: Arrangement, *, region_id: str = "",
     for w in walls:
         if not w.has_pairing_evidence:
             continue
-        iv = w.overlap_mm or (0.0, 0.0)
         for which in ("A", "B"):
             fixed = w.face_a_mm if which == "A" else w.face_b_mm
             other = w.face_b_mm if which == "A" else w.face_a_mm
-            direction = -1 if fixed < other else +1
-            side = SPACE_LEFT if direction < 0 else SPACE_RIGHT
-            beyond = SIDE_OPEN
-            for st in PROBE_STATIONS:
-                seen = arr.beyond(w.axis, fixed, iv[0], iv[1], direction, st)
-                if seen == SIDE_SPACE:
-                    beyond = seen
-                    break
-                if seen == SIDE_OPEN:
-                    beyond = seen
-            ix = OWNER_UNKNOWN
-            if envelope is not None:
-                nxt = arr.next_coord(w.axis, fixed, iv[0], iv[1], direction)
-                step = (fixed + nxt) / 2.0 if nxt is not None else (
-                    fixed + direction * max(MIN_WALL_MM, 1.0))
-                along = (iv[0] + iv[1]) / 2.0
-                px, py = ((step, along) if w.axis == "V" else (along, step))
-                verdict = ie.classify_point(envelope, px, py)
-                ix = {ie.INTERIOR: OWNER_INTERIOR,
-                      ie.EXTERIOR: OWNER_EXTERIOR}.get(
-                          verdict.verdict, OWNER_UNKNOWN)
-            out.append(FaceOwnership(
-                wall_id=w.wall_id, region_id=region_id or w.region_id,
-                axis=w.axis, face=which, fixed_mm=fixed,
-                interval_mm=(iv[0], iv[1]), side=side, beyond=beyond,
-                interior_exterior=ix,
-                cad_provenance=tuple(
-                    oid for r in _face_runs(w, which)
-                    for oid in r.object_ids)))
+            # ROUND 6D: a fitting's front face owns no space. The room
+            # it stands in is measured to the wall behind it.
+            if fitting.is_front_face(fittings, w.wall_id, fixed):
+                continue
+            for iv in (w.face_stretches(which) or ((0.0, 0.0),)):
+                direction = -1 if fixed < other else +1
+                side = SPACE_LEFT if direction < 0 else SPACE_RIGHT
+                beyond = SIDE_OPEN
+                for st in PROBE_STATIONS:
+                    seen = arr.beyond(w.axis, fixed, iv[0], iv[1], direction, st)
+                    if seen == SIDE_SPACE:
+                        beyond = seen
+                        break
+                    if seen == SIDE_OPEN:
+                        beyond = seen
+                ix = OWNER_UNKNOWN
+                if envelope is not None:
+                    nxt = arr.next_coord(w.axis, fixed, iv[0], iv[1], direction)
+                    step = (fixed + nxt) / 2.0 if nxt is not None else (
+                        fixed + direction * max(MIN_WALL_MM, 1.0))
+                    along = (iv[0] + iv[1]) / 2.0
+                    px, py = ((step, along) if w.axis == "V" else (along, step))
+                    verdict = ie.classify_point(envelope, px, py)
+                    ix = {ie.INTERIOR: OWNER_INTERIOR,
+                          ie.EXTERIOR: OWNER_EXTERIOR}.get(
+                              verdict.verdict, OWNER_UNKNOWN)
+                out.append(FaceOwnership(
+                    wall_id=w.wall_id, region_id=region_id or w.region_id,
+                    axis=w.axis, face=which, fixed_mm=fixed,
+                    interval_mm=(iv[0], iv[1]), side=side, beyond=beyond,
+                    interior_exterior=ix,
+                    cad_provenance=tuple(
+                        oid for r in _face_runs(w, which)
+                        for oid in r.object_ids)))
     return out
 
 
 # ------------------------------- what may bound a clear-internal polygon
 
-def bounding_geometry(walls, *, closures=(), recovered=()):
+def bounding_geometry(walls, *, closures=(), recovered=(), fittings=None):
     """The lines a room is allowed to STOP at, as one geometry.
 
     Three kinds and no others: a face of a wall band that earned its
@@ -535,14 +540,20 @@ def bounding_geometry(walls, *, closures=(), recovered=()):
     for w in walls:
         if not w.has_pairing_evidence:
             continue
-        lo, hi = w.overlap_mm or (0.0, 0.0)
-        if hi - lo <= HAIRLINE_MM:
-            continue
-        for fixed in (w.face_a_mm, w.face_b_mm):
-            if w.axis == "V":
-                segs.append(LineString([(fixed, lo), (fixed, hi)]))
-            else:
-                segs.append(LineString([(lo, fixed), (hi, fixed)]))
+        for which in ("A", "B"):
+            fixed = w.face_a_mm if which == "A" else w.face_b_mm
+            # ROUND 6D: the front of a fitting is not where a room ends.
+            # Its shared face is the wall's own line and the wall puts it
+            # there itself.
+            if fitting.is_front_face(fittings, w.wall_id, fixed):
+                continue
+            for lo, hi in w.face_stretches(which):
+                if hi - lo <= HAIRLINE_MM:
+                    continue
+                if w.axis == "V":
+                    segs.append(LineString([(fixed, lo), (fixed, hi)]))
+                else:
+                    segs.append(LineString([(lo, fixed), (hi, fixed)]))
     for c in list(closures) + list(recovered):
         s = _segment(c)
         if s is not None:
@@ -583,33 +594,51 @@ class DroppedLine:
                 "why_it_does_not_bound_a_room": self.why}
 
 
-def _face_cover(walls) -> dict:
-    """Where an established band actually puts a face, per line."""
+def _face_cover(walls, fittings=None) -> dict:
+    """Where an established band actually puts a face, per line.
+
+    The FRONT face of a fitting is not one. A counter that stands against
+    a wall is drawn exactly like a wall, and a line kept because a band
+    has a face there is a line a room may stop at — which is how a room
+    comes to be measured to a run of units.
+    """
     out: dict = {}
     for w in walls or ():
         if not w.has_pairing_evidence:
             continue
-        lo, hi = w.overlap_mm or (0.0, 0.0)
-        if hi - lo <= HAIRLINE_MM:
-            continue
-        for fixed in (w.face_a_mm, w.face_b_mm):
-            out.setdefault((w.axis, round(fixed / HAIRLINE_MM)),
-                           []).append((lo, hi))
+        # Where the band IS a band — both of its faces drawn. A face
+        # running on past its partner is the single line round 6B asks
+        # about, and it does not get to keep a room's boundary on its own
+        # say-so just because a band starts somewhere along it.
+        for lo, hi in w.drawn_mm:
+            if hi - lo <= HAIRLINE_MM:
+                continue
+            for fixed in (w.face_a_mm, w.face_b_mm):
+                if fitting.is_front_face(fittings, w.wall_id, fixed):
+                    continue
+                out.setdefault((w.axis, round(fixed / HAIRLINE_MM)),
+                               []).append((lo, hi))
     return out
 
 
-def _band_pairs(walls) -> dict:
-    """Which two coordinates are the two faces of ONE established band."""
+def _band_pairs(walls, fittings=None) -> dict:
+    """Which two coordinates are the two faces of ONE established band.
+
+    A fitting is left out: the strip between a counter's back and its
+    front is furniture standing on the floor, not the inside of a wall.
+    """
     out: dict = {}
     for w in walls or ():
         if not w.has_pairing_evidence:
             continue
-        lo, hi = w.overlap_mm or (0.0, 0.0)
-        if hi - lo <= HAIRLINE_MM:
+        if (fittings or {}).get(w.wall_id) is not None:
             continue
         a, b = sorted((w.face_a_mm, w.face_b_mm))
-        out.setdefault((w.axis, round(a / HAIRLINE_MM),
-                        round(b / HAIRLINE_MM)), []).append((lo, hi))
+        for lo, hi in w.drawn_mm:
+            if hi - lo <= HAIRLINE_MM:
+                continue
+            out.setdefault((w.axis, round(a / HAIRLINE_MM),
+                            round(b / HAIRLINE_MM)), []).append((lo, hi))
     return out
 
 
@@ -635,7 +664,7 @@ def _side(arr: Arrangement, pairs: dict, axis: str, coord: float,
 
 
 def clear_candidates(candidates, walls, arr: Arrangement, *, closures=(),
-                     recovered=()) -> tuple:
+                     recovered=(), fittings=None) -> tuple:
     """Split a region's lines into what bounds a room and what stands in one.
 
     A line is KEPT when it is a face of an established wall band over this
@@ -655,8 +684,8 @@ def clear_candidates(candidates, walls, arr: Arrangement, *, closures=(),
     boundary cannot be fully attributed, so its measurement basis is NOT
     ESTABLISHED and no floor quantity may be taken from it.
     """
-    cover = _face_cover(walls)
-    pairs = _band_pairs(walls)
+    cover = _face_cover(walls, fittings)
+    pairs = _band_pairs(walls, fittings)
     keep_ids = {getattr(c, "object_id", "")
                 for c in list(closures) + list(recovered)}
     kept, dropped = [], []

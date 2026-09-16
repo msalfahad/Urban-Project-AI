@@ -33,6 +33,7 @@ from collections import Counter
 from dataclasses import dataclass, field
 
 from engine import cad_profile as cprofile
+from engine import fitting_band as fitting
 from engine import space_enclosure as enc
 
 MODEL = "UNIQUE_PHYSICAL_SPACE_REGISTER_V1"
@@ -380,83 +381,20 @@ def _thin(poly) -> bool:
     return (2.0 * poly.area / per) <= MIN_THICKNESS_MM
 
 
-@dataclass(frozen=True)
-class StackedBand:
-    """One band fitted along another: which face is which, and on what."""
-
-    lining_id: str
-    wall_id: str
-    axis: str
-    shared_face_mm: float
-    far_face_mm: float
+# The detector itself lives in `fitting_band`: round 6D moved it down to
+# the geometry layer, where a room measured to a counter front can still
+# be prevented rather than only described.
+StackedBand = fitting.StackedBand
 
 
 def linings(walls_by_region) -> dict:
-    """Bands that stand on another band: the shorter of each stacked pair.
-
-    Two established bands that share a face line over overlapping
-    stretches, with their other faces on OPPOSITE sides of it, are stacked
-    — one is fitted against the other. The one that runs further is the
-    wall.
-
-    Returns the lining band id -> StackedBand, so a caller can tell the
-    shared face (the wall behind) from the far face (the front of the
-    fitting).
-    """
-    out: dict = {}
-    for _region, walls in (walls_by_region or {}).items():
-        good = [w for w in walls
-                if getattr(w, "has_pairing_evidence", False)]
-        for a in good:
-            for b in good:
-                if a is b or a.axis != b.axis:
-                    continue
-                shared = None
-                for fa in (a.face_a_mm, a.face_b_mm):
-                    for fb in (b.face_a_mm, b.face_b_mm):
-                        if abs(fa - fb) <= SAME_PLACE_MM:
-                            shared = fa
-                if shared is None:
-                    continue
-                a_far = (a.face_b_mm if abs(a.face_a_mm - shared)
-                         <= SAME_PLACE_MM else a.face_a_mm)
-                b_far = (b.face_b_mm if abs(b.face_a_mm - shared)
-                         <= SAME_PLACE_MM else b.face_a_mm)
-                if (a_far - shared) * (b_far - shared) >= 0:
-                    continue          # same side: not stacked
-                a_lo, a_hi = a.overlap_mm or (0.0, 0.0)
-                b_lo, b_hi = b.overlap_mm or (0.0, 0.0)
-                if min(a_hi, b_hi) - max(a_lo, b_lo) <= SAME_PLACE_MM:
-                    continue          # they never meet along their length
-                if (a_hi - a_lo) < (b_hi - b_lo):
-                    out[a.wall_id] = StackedBand(
-                        lining_id=a.wall_id, wall_id=b.wall_id, axis=a.axis,
-                        shared_face_mm=shared, far_face_mm=a_far)
-                elif (b_hi - b_lo) < (a_hi - a_lo):
-                    out[b.wall_id] = StackedBand(
-                        lining_id=b.wall_id, wall_id=a.wall_id, axis=b.axis,
-                        shared_face_mm=shared, far_face_mm=b_far)
-    return out
+    """Which bands stand on another band, per region. `fitting_band`."""
+    return fitting.detect_by_region(walls_by_region)
 
 
 def stops_at_a_fitting(row, lining_bands) -> tuple:
-    """The linings whose FRONT face bounds this candidate.
-
-    `row["face_contacts"]` is (wall_band_id, face_mm) for every boundary
-    face of the candidate. A contact at a lining's shared face is a
-    contact with the wall behind it and is not returned.
-    """
-    lin = dict(lining_bands or {})
-    if not lin:
-        return ()
-    hit = {}
-    for band_id, face_mm in row.get("face_contacts", ()):
-        st = lin.get(band_id)
-        if st is None or face_mm is None:
-            continue
-        if abs(float(face_mm) - st.far_face_mm) <= SAME_PLACE_MM:
-            hit[band_id] = st
-    return tuple(hit[k] for k in sorted(hit))
+    """The fittings whose FRONT face bounds this candidate."""
+    return fitting.stops_at_a_fitting(row, lining_bands)
 
 
 def build(rows, regions, *, roles=None, floor_of=None,

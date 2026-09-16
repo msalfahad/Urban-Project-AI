@@ -198,11 +198,84 @@ class PhysicalWall:
     face_b: tuple = ()
     spans: tuple = ()         # Span, in order along the wall
     evidence: tuple = ()      # why these two lines are one wall
-    overlap_mm: tuple = ()    # the stretch of each line this wall uses
+    owned_mm: tuple = ()      # the DISJOINT stretches of its two lines
+    drawn_mm: tuple = ()      # the stretches where both faces are drawn
 
     @property
     def thickness_mm(self) -> float:
         return abs(self.face_b_mm - self.face_a_mm)
+
+    # ---- what this wall owns of the two lines it is drawn with --------
+    #
+    # A SET OF STRETCHES, never a hull. One line can legitimately be the
+    # face of two walls end to end, and a wall that reports the span from
+    # its first millimetre to its last claims everything between them —
+    # including stretches another wall is drawn along. The gap a doorway
+    # leaves INSIDE a wall belongs to that wall; a stretch another wall
+    # owns does not, and only a set can say which is which.
+
+    @property
+    def extent_mm(self) -> tuple:
+        """First and last millimetre this wall reaches. Display only.
+
+        Never use it to decide ownership: between those two numbers may
+        lie stretches belonging to a different wall.
+        """
+        if not self.owned_mm:
+            return (0.0, 0.0)
+        return (self.owned_mm[0][0], self.owned_mm[-1][1])
+
+    @property
+    def drawn_extent_mm(self) -> tuple:
+        """First and last millimetre BOTH faces of this band are drawn.
+
+        Where the band is, as a physical object — independent of which
+        stretches of its two lines it ended up owning, because a line is
+        given to one wall or the other and that says nothing about how
+        far either of them runs.
+        """
+        if not self.drawn_mm:
+            return self.extent_mm
+        return (self.drawn_mm[0][0], self.drawn_mm[-1][1])
+
+    @property
+    def drawn_run_mm(self) -> float:
+        lo, hi = self.drawn_extent_mm
+        return hi - lo
+
+    @property
+    def owned_length_mm(self) -> float:
+        return sum(hi - lo for lo, hi in self.owned_mm)
+
+    def owns(self, lo: float, hi: float, *, slack: float = 0.0) -> bool:
+        """Does any stretch this wall owns reach into (lo, hi)?"""
+        return any(min(hi, b) - max(lo, a) > -slack
+                   for a, b in self.owned_mm)
+
+    def owns_at(self, at: float, *, slack: float = 0.0) -> bool:
+        return any(a - slack <= at <= b + slack for a, b in self.owned_mm)
+
+    def owned_overlap_mm(self, lo: float, hi: float) -> float:
+        return sum(max(0.0, min(hi, b) - max(lo, a))
+                   for a, b in self.owned_mm)
+
+    def face_stretches(self, which: str) -> tuple:
+        """Where THIS face is drawn, within what the wall owns.
+
+        Not where both faces are drawn: a face whose partner is missing
+        over part of its length is still a face there, and it is the one
+        the room on that side stops at. Not the hull either, which would
+        put a face across a stretch nobody drew.
+        """
+        runs = self.face_a if which == "A" else self.face_b
+        return tuple(_intersect([(r.lo, r.hi) for r in runs],
+                                list(self.owned_mm)))
+
+    def stretches_of(self, fixed_mm: float) -> tuple:
+        """The same, chosen by which of the two face coordinates it is."""
+        which = "A" if abs(fixed_mm - self.face_a_mm) <= abs(
+            fixed_mm - self.face_b_mm) else "B"
+        return self.face_stretches(which)
 
     @property
     def has_pairing_evidence(self) -> bool:
@@ -284,8 +357,13 @@ class PhysicalWall:
                             "anybody may take blockwork from")},
             "spans": [s.record() for s in self.spans],
             "PAIRING_EVIDENCE": list(self.evidence),
-            "uses_the_lines_over_mm": [round(v, 2)
-                                       for v in self.overlap_mm],
+            "uses_the_lines_over_mm": [[round(lo, 2), round(hi, 2)]
+                                       for lo, hi in self.owned_mm],
+            "both_faces_drawn_over_mm": [[round(lo, 2), round(hi, 2)]
+                                         for lo, hi in self.drawn_mm],
+            "these_are_stretches_not_a_hull": (
+                "a wall owns the stretches listed and nothing between "
+                "them that another wall owns"),
             "why_these_two_lines": (
                 "named evidence in a stated order, and a line may serve "
                 "another wall only over a DISJOINT stretch of itself"),
@@ -425,7 +503,7 @@ def _overlap(a, b) -> float:
     return total
 
 
-def _spans(face_a, face_b, thickness_mm: float = 0.0, owned=None) -> tuple:
+def _spans(face_a, face_b, thickness_mm: float = 0.0, blocked=()) -> tuple:
     """Walk the wall once and say, for every stretch, what is drawn.
 
     A SHORT OVERHANG IS A CORNER, NOT A MISSING FACE. Where a ring's outer
@@ -450,18 +528,23 @@ def _spans(face_a, face_b, thickness_mm: float = 0.0, owned=None) -> tuple:
     t = max(thickness_mm, JOIN_MM)
     span_lo = max(lo_a, lo_b) if abs(lo_a - lo_b) <= t else min(lo_a, lo_b)
     span_hi = min(hi_a, hi_b) if abs(hi_a - hi_b) <= t else max(hi_a, hi_b)
-    if owned is not None:
-        span_lo = max(span_lo, min(owned))
-        span_hi = min(span_hi, max(owned))
     if span_hi - span_lo <= JOIN_MM:
         return ()
+    cuts = {v for iv in (blocked or ()) for v in iv
+            if span_lo < v < span_hi}
     edges = sorted({min(max(v, span_lo), span_hi)
-                    for iv in ua + ub for v in iv} | {span_lo, span_hi})
+                    for iv in ua + ub for v in iv}
+                   | {span_lo, span_hi} | cuts)
     out = []
     for lo, hi in zip(edges, edges[1:]):
         if hi - lo <= JOIN_MM:
             continue
         mid = (lo + hi) / 2.0
+        # A stretch of these two lines that another wall already holds is
+        # not this wall's, wherever it falls — including between this
+        # wall's own first and last millimetre.
+        if any(a <= mid <= b for a, b in (blocked or ())):
+            continue
         in_a = any(x <= mid <= y for x, y in ua)
         in_b = any(x <= mid <= y for x, y in ub)
         if in_a and in_b:
@@ -565,6 +648,17 @@ def _total(ivs) -> float:
     return sum(hi - lo for lo, hi in ivs)
 
 
+def _merge(ivs) -> list:
+    """Overlapping and touching stretches, joined into the fewest."""
+    out = []
+    for lo, hi in sorted(ivs):
+        if out and lo - out[-1][1] <= JOIN_MM:
+            out[-1] = (out[-1][0], max(out[-1][1], hi))
+        else:
+            out.append((lo, hi))
+    return out
+
+
 def build(candidates, *, region_id: str = "DR-001", openings=(),
           topology=None) -> WallReport:
     """Assemble this region's physical walls from its drawn faces.
@@ -659,8 +753,7 @@ def build(candidates, *, region_id: str = "DR-001", openings=(),
         return _total(parts) >= MIN_FACE_OVERLAP_MM
 
     def _accept(pr, parts) -> None:
-        pr["parts"] = parts
-        pr["iv"] = (parts[0][0], parts[-1][1])
+        pr["parts"] = sorted(parts)
         for key in (pr["a"], pr["b"]):
             taken.setdefault(key, []).extend(parts)
         accepted.append(pr)
@@ -701,23 +794,39 @@ def build(candidates, *, region_id: str = "DR-001", openings=(),
     # wall's spans are trimmed at the first stretch either of its lines
     # already gives to a different wall. The wall keeps everything up to
     # that point — which is what §5 needs — and nothing past it.
+    # Everything from a pair's first drawn millimetre to its last, MINUS
+    # everything already claimed by a wall of better evidence on one of
+    # the same two lines. What is left is a SET: the gap a doorway leaves
+    # inside this wall stays with it, and a stretch of line belonging to
+    # the wall next to it does not — which one interval could never say.
+    #
+    # `accepted` is in evidence order, so a wall that earned its pairing
+    # on an opening or a reveal claims before one that earned it on a
+    # repeated thickness, and no undrawn stretch is claimed twice.
+    # A wall's EXTENT is a different question from where both its faces
+    # are drawn: one face running metres past the other IS the wall with
+    # its other face missing, which is what round 5 recovers. What a wall
+    # may not do is take a stretch of either line that another wall
+    # already holds — so each accepted pair walks its spans with those
+    # stretches blocked out, in evidence order, and what it ends up
+    # covering is what it owns.
+    drawn_on: dict = {}
     for pr in accepted:
-        lo, hi = float("-inf"), float("inf")
-        for other in accepted:
-            if other is pr:
-                continue
-            if other["a"] not in (pr["a"], pr["b"]) and \
-                    other["b"] not in (pr["a"], pr["b"]):
-                continue
-            for o_lo, o_hi in other["parts"]:
-                if o_hi <= pr["iv"][0] + JOIN_MM:
-                    lo = max(lo, o_hi)
-                elif o_lo >= pr["iv"][1] - JOIN_MM:
-                    hi = min(hi, o_lo)
-        pr["allowed"] = (lo, hi)
+        for key in (pr["a"], pr["b"]):
+            drawn_on.setdefault(key, []).extend(pr["parts"])
+    claimed: dict = {}
     for pr in accepted:
+        raw = _merge([iv for key in (pr["a"], pr["b"])
+                      for iv in drawn_on.get(key, ())]
+                     + [iv for key in (pr["a"], pr["b"])
+                        for iv in claimed.get(key, ())])
+        # never block a wall out of the stretches it is itself drawn along
+        blocks = _subtract(raw, pr["parts"])
         pr["spans"] = _spans(pr["runs_a"], pr["runs_b"], pr["sep"],
-                             owned=pr["allowed"])
+                             blocked=blocks)
+        pr["owned"] = _merge([(sp.lo, sp.hi) for sp in pr["spans"]])
+        for key in (pr["a"], pr["b"]):
+            claimed.setdefault(key, []).extend(pr["owned"])
 
     for pr in accepted:
         sep = pr["sep"]
@@ -728,7 +837,9 @@ def build(candidates, *, region_id: str = "DR-001", openings=(),
             face_a_mm=pr["fa"], face_b_mm=pr["fb"],
             face_a=tuple(pr["runs_a"]), face_b=tuple(pr["runs_b"]),
             spans=pr["spans"],
-            evidence=tuple(pr["ev"]), overlap_mm=pr["iv"]))
+            evidence=tuple(pr["ev"]),
+            owned_mm=tuple(pr["owned"]),
+            drawn_mm=tuple(sorted(pr["parts"]))))
 
     rep.unpaired_lines = len(keys) - len({k for pr in accepted
                                           for k in (pr["a"], pr["b"])})
