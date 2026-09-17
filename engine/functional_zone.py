@@ -43,7 +43,7 @@ from __future__ import annotations
 import hashlib
 from dataclasses import dataclass, field
 
-MODEL = "FUNCTIONAL_ZONE_AND_PANTRY_OPENNESS_V1"
+MODEL = "FUNCTIONAL_ZONE_AND_PANTRY_OPENNESS_V2"
 
 # --- §1 the three answers ------------------------------------------------
 CLOSED_PANTRY = "CLOSED_PANTRY"
@@ -58,7 +58,19 @@ ONE_WALL = "ONE_WALL"
 L_SHAPE = "L_SHAPE"
 U_SHAPE = "U_SHAPE"
 CLOSED_ON_FOUR_SIDES = "CLOSED_ON_FOUR_SIDES"
+OTHER_DRAWN_CONFIGURATION = "OTHER_DRAWN_CONFIGURATION"
 SHAPE_NOT_ESTABLISHED = "WALL_TILE_SHAPE_NOT_ESTABLISHED"
+
+# The owner's rule UP-PANTRY-003: where the applicable pantry walls
+# cannot be established from the drawn installation, the tiled walls are
+# not guessed and not taken from the perimeter of the open space.
+TILE_WALLS_NEED_REVIEW = "PANTRY_TILE_WALLS_REQUIRE_OWNER_REVIEW"
+
+# An openness the OWNER established for a project. It is not geometry
+# and it never becomes geometry: it says which of the three answers is
+# true, and the tiled walls still come from what is drawn.
+EV_OWNER_CONFIRMED = "THE_OWNER_CONFIRMED_THIS_PANTRY_FOR_THIS_PROJECT"
+OWNER_CONFIRMED = "OWNER_CONFIRMED_FOR_THIS_PROJECT"
 TILE_LENGTH_NOT_ESTABLISHED = "WALL_TILE_LENGTH_NOT_ESTABLISHED"
 NO_SPACE_FOR_THE_LABEL = "NO_PHYSICAL_SPACE_CARRIES_THIS_PANTRY_LABEL"
 
@@ -93,7 +105,10 @@ def frozen_parameters() -> dict:
         "MODEL": MODEL,
         "OPENNESS": list(OPENNESS),
         "WALL_TILE_SHAPES": [ONE_WALL, L_SHAPE, U_SHAPE,
-                             CLOSED_ON_FOUR_SIDES, SHAPE_NOT_ESTABLISHED],
+                             CLOSED_ON_FOUR_SIDES,
+                             OTHER_DRAWN_CONFIGURATION,
+                             SHAPE_NOT_ESTABLISHED],
+        "TILE_WALLS_NEED_REVIEW": TILE_WALLS_NEED_REVIEW,
         "TILE_LENGTH_NOT_ESTABLISHED": TILE_LENGTH_NOT_ESTABLISHED,
         "OPEN_PLAN_CONCEPTS": list(OPEN_PLAN_CONCEPTS),
         "PANTRY_TERMS": list(PANTRY_TERMS),
@@ -125,7 +140,9 @@ def model_hash() -> str:
     parts = ([MODEL] + list(OPENNESS) + list(OPEN_PLAN_CONCEPTS)
              + list(PANTRY_TERMS)
              + [ONE_WALL, L_SHAPE, U_SHAPE, CLOSED_ON_FOUR_SIDES,
-                SHAPE_NOT_ESTABLISHED, OWNER_RULE_REQUEST])
+                OTHER_DRAWN_CONFIGURATION, SHAPE_NOT_ESTABLISHED,
+                TILE_WALLS_NEED_REVIEW, OWNER_CONFIRMED,
+                OWNER_RULE_REQUEST])
     return hashlib.sha256("|".join(parts).encode("utf-8")).hexdigest()[:24]
 
 
@@ -322,18 +339,34 @@ def _open_faces(row) -> list:
 
 
 def _shape_of(n: int) -> str:
+    """How the tiled walls of this installation are arranged.
+
+    One, two or three drawn host walls are the arrangements the owner
+    names; four is a closed pantry. More than four host sides is a real
+    arrangement the drawing shows and none of those words describe, and
+    it is reported as what it is rather than as a failure.
+    """
+    if n <= 0:
+        return SHAPE_NOT_ESTABLISHED
     return {1: ONE_WALL, 2: L_SHAPE, 3: U_SHAPE,
-            4: CLOSED_ON_FOUR_SIDES}.get(n, SHAPE_NOT_ESTABLISHED)
+            4: CLOSED_ON_FOUR_SIDES}.get(n, OTHER_DRAWN_CONFIGURATION)
 
 
 def assess(rows, labels, *, floor_of=None, fittings=None,
-           wall_bands=(), tile_rules=None) -> ZoneReport:
+           wall_bands=(), tile_rules=None, owner_openness=None) -> ZoneReport:
     """One functional-zone candidate per authored label, and no walls.
 
     `rows` are the register's rows, each with `boundary_faces` as plain
     dicts. `labels` are the reconciled label verdicts. `tile_rules` is an
     optional mapping of project rules — a height, a specification — and
     where it does not answer, the answer is an OWNER_RULE_REQUEST.
+
+    `owner_openness` is what the OWNER established about this project's
+    pantry: one of the three answers, and nothing else. It settles which
+    case applies where the drawing does not, and it supplies no geometry
+    whatever — the tiled walls still come from the drawn installation,
+    and where those cannot be established the answer is
+    PANTRY_TILE_WALLS_REQUIRE_OWNER_REVIEW rather than a perimeter.
     """
     from engine import architectural_ontology as onto
 
@@ -341,6 +374,7 @@ def assess(rows, labels, *, floor_of=None, fittings=None,
     floor = dict(floor_of or {})
     by_id = {r["space_id"]: r for r in rows}
     rules = dict(tile_rules or {})
+    owner = (owner_openness if owner_openness in OPENNESS else "")
 
     # every label that resolved to a space, grouped by that space
     in_space: dict = {}
@@ -364,11 +398,15 @@ def assess(rows, labels, *, floor_of=None, fittings=None,
                     pantry_zone_id=f"FZ-UNRESOLVED-{n:04d}",
                     space_id="", region_id=getattr(v, "region_id", ""),
                     floor_level=getattr(v, "floor_level", ""),
-                    openness=OPENNESS_UNKNOWN,
-                    openness_evidence=(),
+                    openness=(owner or OPENNESS_UNKNOWN),
+                    openness_evidence=((EV_OWNER_CONFIRMED,) if owner
+                                       else ()),
                     wall_tile_shape=SHAPE_NOT_ESTABLISHED,
+                    rule_source=(OWNER_CONFIRMED if owner
+                                 else OWNER_RULE_REQUEST),
                     exceptions=(NO_SPACE_FOR_THE_LABEL,
                                 TILE_LENGTH_NOT_ESTABLISHED,
+                                TILE_WALLS_NEED_REVIEW,
                                 OWNER_RULE_REQUEST)))
             continue
         n += 1
@@ -417,7 +455,14 @@ def assess(rows, labels, *, floor_of=None, fittings=None,
         open_m = sum(f.get("length_mm", 0.0) for f in opens) / 1000.0
 
         ov = []
-        if siblings and any(
+        if owner:
+            # THE OWNER'S ANSWER, FOR THIS PROJECT. It outranks what the
+            # geometry could not settle and is outranked by the drawing,
+            # which is why the drawn evidence is still collected and
+            # still reported beside it.
+            openness = owner
+            ov.append(EV_OWNER_CONFIRMED)
+        elif siblings and any(
                 onto.classify_term(getattr(s, "text", "")).concept
                 in OPEN_PLAN_CONCEPTS for s in siblings):
             # It shares one space with the dining, saloon or living it
@@ -445,6 +490,10 @@ def assess(rows, labels, *, floor_of=None, fittings=None,
         tile_exceptions = []
         if openness != CLOSED_PANTRY and not hosts:
             tile_exceptions.append(TILE_LENGTH_NOT_ESTABLISHED)
+            # UP-PANTRY-003: the applicable walls could not be
+            # established from the installation, so they go to the owner
+            # rather than to the perimeter of the space.
+            tile_exceptions.append(TILE_WALLS_NEED_REVIEW)
             tile_m = 0.0
             shape = SHAPE_NOT_ESTABLISHED
 
@@ -467,7 +516,7 @@ def assess(rows, labels, *, floor_of=None, fittings=None,
             net_wall_tile_area_m2=gross,
             height_source=(OWNER_RULE_REQUEST if height is None
                            else rules.get("height_source", "PROJECT_RULE")),
-            rule_source=src,
+            rule_source=(OWNER_CONFIRMED if owner else src),
             exceptions=tuple(tile_exceptions
                              + ([OWNER_RULE_REQUEST]
                                 if openness == OPENNESS_UNKNOWN else []))))

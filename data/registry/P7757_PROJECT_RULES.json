@@ -1,0 +1,36 @@
+{
+  "project": "P7757",
+  "version": "1.0.0",
+  "effective_date": "2026-09-17",
+  "source": "Owner rule addendum, Urban Projects, 2026-09-17",
+  "notes": {
+    "what_this_file_is": "what the OWNER said about THIS project. It sits below the drawing and above the Urban Projects standard, and it never supplies geometry",
+    "what_this_file_is_not": "not a measurement, not a dimension read off a drawing, and not a quantity"
+  },
+  "pantry": {
+    "openness": "OPEN_AMERICAN_PANTRY",
+    "owner_confirmed": true,
+    "opens_toward": ["DINING", "SALOON", "LIVING"],
+    "source": "Owner rule addendum 2026-09-17 §A",
+    "why": "the owner confirms the P7757 pantry is open toward the dining, saloon and living area and must not be forced into a closed physical room",
+    "tile_walls": "FROM_THE_DRAWN_INSTALLATION",
+    "wall_tile_height_m": null,
+    "height_source": "OWNER_RULE_REQUEST"
+  },
+  "stair": {
+    "finish_rule": "UP-STAIR-001",
+    "finish": "MARBLE",
+    "applies_to": "EVERY_STAIR_ASSEMBLY",
+    "surrounding_floor": "PORCELAIN",
+    "owner_confirmed": true,
+    "source": "Owner rule addendum 2026-09-17 §C",
+    "tread_marble_thickness_m": null,
+    "thickness_source": "VISIBLE_RISER_HEIGHT_NOT_ESTABLISHED"
+  },
+  "elevator": {
+    "stations": [],
+    "surround_width_m": null,
+    "source": "Owner rule addendum 2026-09-17 §H-§L",
+    "why": "the elevator standards are recorded in the rule library. No elevator geometry is established for P7757, so nothing is measured"
+  }
+}

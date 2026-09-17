@@ -24,7 +24,9 @@ from engine import cad_measure as measure
 from engine import cad_profile as cprofile
 from engine import floor_register as freg
 from engine import functional_zone as fz
+from engine import elevator_marble as elev
 from engine import report_consistency as rcons
+from engine import rule_library as rlib
 from engine import semantic_seed as seeds_mod
 from engine import space_lineage as lineage
 from engine import space_register as sreg
@@ -36,16 +38,34 @@ from tools import run_round6d as r6d
 
 STAGE = "ROUND_6E_STABLE_LINEAGE_STAIR_COMPLETENESS_REPRODUCIBLE_EXPORT"
 
-# §9, §16. The owner's PROJECT rule for P7757: its stairs are marble.
-# Applied to the stairs the rule is about — the interior ones — and not
-# to steps outside the building or to a run whose kind the drawings do
-# not establish. A stair is not marble because it is a stair.
+# The owner rule addendum of 2026-09-17 §C: for Urban Projects' normal
+# Kuwait villa and chalet workflow, stairs are MARBLE unless the
+# drawing, the specification or the owner establishes another finish —
+# and NOT only the main staircase. Every stair assembly the engine
+# detects takes the rule: main, secondary, service, roof, external
+# steps alike. The rule comes from the library, with its id and its
+# version, so that the bundle says which rule at which version was
+# applied rather than carrying a string somebody typed here.
 P7757_STAIR_FINISH = "STAIR_MARBLE_SURROUNDING_FLOOR_PORCELAIN"
-P7757_FINISH_RULES = {
-    stair.MAIN_INTERIOR_STAIR: P7757_STAIR_FINISH,
-    stair.SECONDARY_INTERIOR_STAIR: P7757_STAIR_FINISH,
-    stair.SERVICE_STAIR: P7757_STAIR_FINISH,
-}
+PROJECT_RULES_PATH = "data/registry/P7757_PROJECT_RULES.json"
+
+
+def _project_rules(path: str = PROJECT_RULES_PATH) -> dict:
+    p = Path(path)
+    if not p.exists():
+        return {}
+    return json.loads(p.read_text(encoding="utf-8"))
+
+
+def _finish_rules(library, project: dict) -> dict:
+    """What finish applies to this project's stairs, and from where."""
+    told = (project.get("stair") or {}).get("finish")
+    res = rlib.resolve(library, "UP-STAIR-001", project=told)
+    if not res.established or res.value is None:
+        return {}
+    return {"ALL": {"finish": P7757_STAIR_FINISH,
+                    "rule_id": f"{res.rule_id}@{res.rule_version}"
+                               f" [{res.source}]"}}
 
 MANIFESTS = {
     "ROUND_6C": "data/runs/7757/round6c_export/ROUND6C_EXPORT_MANIFEST.json",
@@ -178,9 +198,29 @@ def run_full(decode_json: str, *, supervised_json: str = "",
     built = freg.assemble(nd, rep, supervised=supervised)
     register, roles = built["register"], built["roles"]
     rows = r6d._faces(rep, built["rows"])
+
+    # ---- the owner rules, versioned, before anything is classified ---
+    library = rlib.load()
+    project = _project_rules()
+    pantry = project.get("pantry") or {}
+    # §A. The owner confirms P7757's pantry is OPEN_AMERICAN_PANTRY. It
+    # settles WHICH of the three answers is true and supplies no
+    # geometry: the tiled walls still come from the drawn installation.
+    openness = rlib.resolve(library, "UP-PANTRY-001",
+                            project=pantry.get("openness"))
     zones = fz.assess(rows, register.labels, floor_of=built["floor_of"],
                       fittings=built["linings"],
-                      wall_bands=[w for wr in rep.walls for w in wr.walls])
+                      wall_bands=[w for wr in rep.walls for w in wr.walls],
+                      owner_openness=(pantry.get("openness")
+                                      if pantry.get("owner_confirmed")
+                                      else None),
+                      tile_rules={
+                          "wall_tile_height_m":
+                              pantry.get("wall_tile_height_m"),
+                          "height_source": pantry.get("height_source", ""),
+                          "rule_source": "UP-PANTRY-003@" + (
+                              library.get("UP-PANTRY-003").version
+                              if library.get("UP-PANTRY-003") else "?")})
 
     # ---- A. 6C -> 6D -> 6E, from the bundles that were exported ------
     regions = rep.regions.regions
@@ -195,13 +235,22 @@ def run_full(decode_json: str, *, supervised_json: str = "",
     interior = ({v.space_id: v.interior_exterior
                  for v in rep.space_roles.verdicts}
                 if rep.space_roles else {})
+    finish_rules = _finish_rules(library, project)
     stairs = stair.reconcile(rep.stairs, regions=regions,
                              floor_of=built["floor_of"],
                              interior_of=interior,
-                             finish_rules=P7757_FINISH_RULES)
+                             finish_rules=finish_rules)
     coverage = stair.coverage(rep.stairs, stairs["physical_stairs"],
                               floor_of=built["floor_of"])
-    quantities = stair.quantities(stairs["physical_stairs"], rep.stairs)
+    quantities = stair.quantities(
+        stairs["physical_stairs"], rep.stairs,
+        commercial_basis=(project.get("stair") or {}).get(
+            "commercial_pricing_basis", ""))
+    # §H–§L. The elevator objects are DECLARED and their geometry is
+    # not established for this project, so nothing is measured and the
+    # questions are asked by name.
+    elevators = elev.stations(project.get("elevator") or {},
+                              library=library)
     wkt_of = {r.space_id: (r.clear.polygon_wkt if r.clear is not None
                            else "") for r in rep.rows}
     clash = stair.finish_clash(
@@ -250,16 +299,35 @@ def run_full(decode_json: str, *, supervised_json: str = "",
             "quantities": quantities,
             "project_finish_rule": {
                 "rule": P7757_STAIR_FINISH,
-                "applied_to": sorted(P7757_FINISH_RULES),
-                "not_applied_to": [stair.EXTERIOR_STEPS,
-                                   stair.LANDSCAPE_STEPS,
-                                   stair.STAIR_ROLE_UNKNOWN],
-                "why": ("the owner's rule is about this project's "
-                        "stairs. A run of steps whose kind the drawings "
-                        "do not establish is not marble because it is "
-                        "drawn as steps"),
+                "rule_id": (finish_rules.get("ALL") or {}).get(
+                    "rule_id", "NO_FINISH_RULE_RESOLVED"),
+                "applied_to": "EVERY_STAIR_ASSEMBLY",
+                "why": ("owner rule addendum 2026-09-17 §C: Kuwait "
+                        "villa and chalet stairs are marble unless the "
+                        "project establishes another finish, and NOT "
+                        "only the main staircase. The rule is applied "
+                        "to the stairs the engine DETECTED; a "
+                        "stair-like observation nobody reconstructed is "
+                        "unresolved, not marble"),
+                "override": ("a drawing, specification or owner "
+                             "statement for a particular stair replaces "
+                             "it"),
             },
         },
+        "G_owner_rules": {
+            "library": library.record(),
+            "project_rules": project,
+            "pantry_openness": openness.record(),
+            "stair_finish": (finish_rules.get("ALL")
+                             or {"finish": stair.FINISH_NOT_CONFIRMED}),
+            "priority": list(rlib.PRIORITY),
+            "a_rule_never_supplies_geometry": (
+                "an owner rule says which answer applies. Where the "
+                "geometry it needs is not established the rule's own "
+                "unknown_behavior applies, and no default dimension is "
+                "used on geometry nobody has established"),
+        },
+        "H_elevator_marble": elevators,
         "D_vertical_evidence": _vertical(decode_json, dwf=dwf, pdfs=pdfs),
         "E_marble_and_porcelain": clash,
         "F_pantry": zones.record(),
@@ -273,6 +341,8 @@ def run_full(decode_json: str, *, supervised_json: str = "",
     out["ROUND_6E_REPORT_HASH"] = _sha(
         json.dumps(out, sort_keys=True, default=str))
     context = {
+        "library": library, "project_rules": project,
+        "elevators": elevators,
         "nd": nd, "rep": rep, "built": built, "register": register,
         "roles": roles, "rows": rows, "zones": zones,
         "stairs": stairs, "coverage": coverage,
@@ -313,6 +383,15 @@ def main(argv=None) -> int:
               if k in ("riser_height_status", "what_would_settle_it",
                        "level_marks_placed", "take_off_totals_refused")},
         "E": rec["E_marble_and_porcelain"]["status"],
+        "F": rec["F_pantry"]["counts"],
+        "G": {"rules": len(rec["G_owner_rules"]["library"]["rules"]),
+              "RULE_LIBRARY_HASH":
+                  rec["G_owner_rules"]["library"]["RULE_LIBRARY_HASH"],
+              "pantry_openness":
+                  rec["G_owner_rules"]["pantry_openness"]["value"],
+              "stair_finish": rec["G_owner_rules"]["stair_finish"]},
+        "H": {"stations": rec["H_elevator_marble"]["station_count"],
+              "status": rec["H_elevator_marble"]["status"]},
     }, indent=2, ensure_ascii=False, default=str))
     return 0
 

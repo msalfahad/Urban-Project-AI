@@ -34,8 +34,11 @@ The tables:
     VERTICAL_EVIDENCE         the search for a rise, and its refusal
     EXCEPTIONS                every refusal anywhere in the run
 
-and beside them the six carried from round 6D: FITTING_BAND,
-WALL_STRETCH_OWNERSHIP, BOUNDARY, OPENING, IDENTITY, DIMENSION.
+and beside them the two the owner rule addendum adds — RULE_LIBRARY, the
+versioned owner rules as applied, and ELEVATOR_MARBLE, the declared
+landing objects and the questions they still carry — and the six carried
+from round 6D: FITTING_BAND, WALL_STRETCH_OWNERSHIP, BOUNDARY, OPENING,
+IDENTITY, DIMENSION.
 """
 
 from __future__ import annotations
@@ -45,12 +48,14 @@ import json
 import tarfile
 from pathlib import Path
 
+from engine import elevator_marble as elev
 from engine import export_provenance as xp
 from engine import fitting_band as fband
 from engine import functional_zone as fz
 from engine import physical_wall as pwall
 from engine import report_consistency as rcons
 from engine import round6e_selftest as r6e
+from engine import rule_library as rlib
 from engine import single_line_partition as slp
 from engine import space_lineage as slin
 from engine import space_register as sreg
@@ -186,6 +191,57 @@ def quantity_rows(quantities) -> list:
     return out
 
 
+def rule_rows(library, project) -> list:
+    """Every owner rule that was available to this run, as applied."""
+    out = []
+    for rule in sorted(library.rules.values(), key=lambda r: r.rule_id):
+        rec = rule.record()
+        rec["required_geometry"] = " | ".join(rec.pop("required_geometry"))
+        rec["exceptions"] = " | ".join(rec.pop("exceptions"))
+        rec["rule_hash"] = rule.rule_hash()
+        rec["project_override_in_this_run"] = json.dumps(
+            {k: v for k, v in (project or {}).items()
+             if isinstance(v, dict)
+             and rule.scope.lower() in k.lower()},
+            ensure_ascii=False, sort_keys=True)
+        out.append(rec)
+    return out
+
+
+def elevator_rows(elevators) -> list:
+    """The declared elevator objects, and what each one still needs."""
+    out = []
+    for st in elevators.get("stations", ()):
+        sur, thr = st["surround"], st["threshold"]
+        out.append({
+            "elevator_station_id": st["elevator_station_id"],
+            "elevator_id": st["elevator_id"],
+            "floor": st["floor"],
+            "door_index": st["door_index"],
+            "door_clear_width_mm": sur["door_clear_width_mm"],
+            "door_clear_height_mm": sur["door_clear_height_mm"],
+            "left_surround_width_mm": sur["left_surround_width_mm"],
+            "top_surround_width_mm": sur["top_surround_width_mm"],
+            "right_surround_width_mm": sur["right_surround_width_mm"],
+            "surround_width_source": sur["surround_width_source"],
+            "ELEVATOR_SURROUND_AREA_M2": sur["ELEVATOR_SURROUND_AREA_M2"],
+            "ELEVATOR_SURROUND_EDGE_LM": sur["ELEVATOR_SURROUND_EDGE_LM"],
+            "surround_status": sur["status"],
+            "threshold_width_mm": thr["threshold_width_mm"],
+            "threshold_depth_mm": thr["threshold_depth_mm"],
+            "ELEVATOR_THRESHOLD_AREA_M2": thr[
+                "ELEVATOR_THRESHOLD_AREA_M2"],
+            "threshold_status": thr["status"],
+            "measurement_basis": sur["measurement_basis"],
+            "exceptions": " ".join(st["exceptions"]),
+        })
+    for ex in elevators.get("exceptions", ()):
+        out.append({"elevator_station_id": ex.get("exact_term", ""),
+                    "surround_status": ex.get("exception", ""),
+                    "exceptions": ex.get("question_for_the_owner", "")})
+    return out
+
+
 def vertical_rows(vertical) -> list:
     return list(vertical.get("findings", []))
 
@@ -293,6 +349,8 @@ def run(decode_json: str, out_dir: str, *, supervised_json: str = "",
             "STAIR_ASSEMBLY_HASH": stair.model_hash(),
             "SPACE_REGISTER_HASH": sreg.model_hash(),
             "SPACE_LINEAGE_HASH": slin.model_hash(),
+            "RULE_LIBRARY_MODEL_HASH": rlib.model_hash(),
+            "ELEVATOR_MARBLE_HASH": elev.model_hash(),
             "VERTICAL_EVIDENCE_HASH": ve.model_hash(),
             "REPORT_CONSISTENCY_HASH": rcons.model_hash(),
             "EXPORT_PROVENANCE_HASH": xp.model_hash(),
@@ -389,6 +447,19 @@ def run(decode_json: str, out_dir: str, *, supervised_json: str = "",
             {"one_row_per": "level mark, riser note or sheet found",
              "note": ("PLACED, a LEAD in a representation this project "
                       "cannot place, or refused as a take-off total")}),
+        f"{name}RULE_LIBRARY": (
+            rule_rows(ctx["library"], ctx["project_rules"]),
+            {"one_row_per": "Urban Projects owner rule, as versioned",
+             "note": ("PROJECT DRAWING > PROJECT OWNER OVERRIDE > "
+                      "URBAN PROJECTS STANDARD > UNKNOWN. A default "
+                      "never bypasses geometry")}),
+        f"{name}ELEVATOR_MARBLE": (
+            elevator_rows(ctx["elevators"]),
+            {"one_row_per": "elevator landing station, or a question",
+             "note": ("declared for the later trade phase. The surround "
+                      "is the UNION area of its polygon, the threshold "
+                      "is its own object, and no elevator is detected "
+                      "in any drawing here")}),
         f"{name}FITTING_BAND": (
             x6d.fitting_rows(rep),
             {"one_row_per": "band that stands on another band"}),
@@ -442,6 +513,16 @@ def run(decode_json: str, out_dir: str, *, supervised_json: str = "",
         "report_hash": report["ROUND_6E_REPORT_HASH"],
         "report_against_export": consistency["status"],
         "areas_kept_apart": register.areas(),
+        "owner_rules": {
+            "RULE_LIBRARY_HASH": ctx["library"].library_hash(),
+            "library_version": ctx["library"].library_version,
+            "rules": len(ctx["library"].rules),
+            "project_rules": r6er.PROJECT_RULES_PATH,
+            "pantry_openness": report["F_pantry"]["counts"]["by_openness"],
+            "stair_finish_rule": report["C_stairs"][
+                "project_finish_rule"]["rule_id"],
+            "elevator": report["H_elevator_marble"]["status"],
+        },
         "stair_coverage": ctx["coverage"]["stair_coverage"],
         "riser_height": report["D_vertical_evidence"][
             "riser_height_status"],

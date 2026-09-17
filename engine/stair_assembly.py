@@ -96,6 +96,22 @@ CURVED = "CURVED"
 SPIRAL = "SPIRAL"
 CONFIGURATION_NOT_ESTABLISHED = "STAIR_CONFIGURATION_NOT_ESTABLISHED"
 
+# --- §E the marble riser is not the structural rise ---------------------
+#
+# A step rises by one figure and shows another. The top tread's marble
+# sits ON the step, so the riser face you actually see — and clad — is
+# the rise LESS the tread build-up. The owner's worked example is a
+# 0.16 m rise with a 0.03 m tread, showing 0.13 m; 0.13 is that example's
+# arithmetic and never a constant here. Without the rise and the build-up
+# the visible riser is NOT ESTABLISHED, and nothing invents it.
+VISIBLE_RISER_NOT_ESTABLISHED = "VISIBLE_RISER_HEIGHT_NOT_ESTABLISHED"
+BUILD_UP_NOT_ESTABLISHED = "TREAD_BUILD_UP_NOT_ESTABLISHED"
+
+# --- §F a measurement basis is not a pricing basis ----------------------
+GEOMETRIC_UNIT = "GEOMETRIC_MEASUREMENT_UNIT"
+COMMERCIAL_BASIS = "CONTRACTOR_COMMERCIAL_PRICING_BASIS"
+COMMERCIAL_NOT_ESTABLISHED = "CONTRACTOR_PRICING_BASIS_NOT_ESTABLISHED"
+
 # --- what a plan cannot answer -------------------------------------------
 RISER_NOT_ESTABLISHED = "RISER_QUANTITY_NOT_ESTABLISHED"
 TREAD_NOT_ESTABLISHED = "TREAD_QUANTITY_NOT_ESTABLISHED"
@@ -226,7 +242,10 @@ def model_hash() -> str:
     parts = ([MODEL] + list(PARTS) + list(EVIDENCE)
              + list(OBSERVATION_KINDS) + list(STAIR_ROLES)
              + list(OBSERVATION_STATES) + list(BETWEEN_FLIGHT_ROLES)
-             + [FINISH_NOT_CONFIRMED, NOT_A_STAIR_LANDING]
+             + [FINISH_NOT_CONFIRMED, NOT_A_STAIR_LANDING,
+                VISIBLE_RISER_NOT_ESTABLISHED, BUILD_UP_NOT_ESTABLISHED,
+                GEOMETRIC_UNIT, COMMERCIAL_BASIS,
+                COMMERCIAL_NOT_ESTABLISHED]
              + [STRAIGHT, L_SHAPED, U_SHAPED, WINDER, CURVED, SPIRAL,
                 CONFIGURATION_NOT_ESTABLISHED, RISER_NOT_ESTABLISHED,
                 TREAD_NOT_ESTABLISHED, LANDING_NOT_ESTABLISHED,
@@ -312,14 +331,18 @@ class Tread:
 
 @dataclass
 class Riser:
-    """One riser. Its face area needs a height a plan does not carry."""
+    """One riser, and the part of it the marble actually shows (§E)."""
 
     riser_id: str = ""
     index: int = 0
     width_mm: float = 0.0
-    height_mm: float | None = None
-    area_m2: float | None = None
+    height_mm: float | None = None          # the step's own rise
+    area_m2: float | None = None            # width x rise
+    tread_build_up_mm: float | None = None  # the tread marble on top
+    visible_height_mm: float | None = None  # rise LESS the build-up
+    visible_area_m2: float | None = None    # what is clad and seen
     height_source: str = RISER_NOT_ESTABLISHED
+    visible_source: str = VISIBLE_RISER_NOT_ESTABLISHED
     edge_wkt: str = ""
     status: str = RISER_NOT_ESTABLISHED
 
@@ -332,7 +355,17 @@ class Riser:
                                 else round(self.height_mm, 1)),
             "riser_face_area_m2": (None if self.area_m2 is None
                                    else round(self.area_m2, 4)),
+            "tread_build_up_mm": (None if self.tread_build_up_mm is None
+                                  else round(self.tread_build_up_mm, 1)),
+            "visible_riser_height_mm": (
+                None if self.visible_height_mm is None
+                else round(self.visible_height_mm, 1)),
+            # WHAT IS CLAD AND SEEN. The structural rise is reported
+            # beside it and the two are never the same number.
+            "RISER_VISIBLE_M2": (None if self.visible_area_m2 is None
+                                 else round(self.visible_area_m2, 4)),
             "height_source": self.height_source,
+            "visible_source": self.visible_source,
             "edge_wkt": self.edge_wkt,
             "status": self.status,
         }
@@ -413,6 +446,12 @@ class Flight:
                          or any(r.area_m2 is None for r in self.risers)
                          else round(sum(r.area_m2 or 0.0
                                         for r in self.risers), 4)),
+            # §E what the marble shows, which is not the structural rise
+            "RISER_VISIBLE_M2": (
+                None if not self.risers
+                or any(r.visible_area_m2 is None for r in self.risers)
+                else round(sum(r.visible_area_m2 or 0.0
+                               for r in self.risers), 4)),
             "NOSING_LM": round(self.nosing_lm, 3),
             "configuration": self.configuration,
             "evidence": list(self.evidence),
@@ -477,6 +516,14 @@ class Assembly:
             return None          # not established is not zero
         return sum(vals)
 
+    @property
+    def riser_visible_m2(self):
+        """§E the marble riser face: the rise LESS the tread build-up."""
+        vals = [r.visible_area_m2 for f in self.flights for r in f.risers]
+        if not vals or any(v is None for v in vals):
+            return None
+        return sum(vals)
+
     def record(self) -> dict:
         return {
             "stair_id": self.stair_id,
@@ -506,6 +553,8 @@ class Assembly:
                              else round(self.tread_m2, 4)),
                 "RISER_M2": (None if self.riser_m2 is None
                              else round(self.riser_m2, 4)),
+                "RISER_VISIBLE_M2": (None if self.riser_visible_m2 is None
+                                     else round(self.riser_visible_m2, 4)),
                 "LANDING_M2": round(self.landing_m2, 4),
                 "NOSING_LM": round(self.nosing_lm, 3),
                 "STAIR_SKIRTING_LM": self.skirting_lm,
@@ -944,6 +993,23 @@ def assess(lines, *, region_id: str = "DR-001", spaces=(), labels=(),
     return rep
 
 
+def _visible_riser(rise, build_up):
+    """The riser face the marble shows: the rise LESS the tread on top.
+
+    Both figures or neither. A rise with no build-up detail gives a
+    visible height nobody has established, and a default build-up is
+    exactly the invention this refuses.
+    """
+    if rise is None:
+        return None, VISIBLE_RISER_NOT_ESTABLISHED
+    if build_up is None:
+        return None, BUILD_UP_NOT_ESTABLISHED
+    visible = float(rise) - float(build_up)
+    if visible <= 0:
+        return None, VISIBLE_RISER_NOT_ESTABLISHED
+    return visible, "FROM_THE_RISE_AND_THE_TREAD_BUILD_UP"
+
+
 def _section_for(sections, flight_id: str, region_id: str) -> dict:
     src = sections or {}
     return dict(src.get(flight_id) or src.get(region_id) or {})
@@ -999,6 +1065,8 @@ def _flight(item, region_id: str, k: int, j: int, cell, sections) -> Flight:
 
     sec = _section_for(sections, flight.flight_id, region_id)
     rise = sec.get("riser_height_mm")
+    build_up = sec.get("tread_build_up_mm")
+    visible, vsrc = _visible_riser(rise, build_up)
     told = sec.get("risers")
     n_risers = int(told) if told else len(flight.treads)
     for i in range(n_risers):
@@ -1009,8 +1077,14 @@ def _flight(item, region_id: str, k: int, j: int, cell, sections) -> Flight:
             index=i + 1, width_mm=w,
             height_mm=(None if rise is None else float(rise)),
             area_m2=(None if rise is None else w * float(rise) / 1e6),
+            tread_build_up_mm=(None if build_up is None
+                               else float(build_up)),
+            visible_height_mm=visible,
+            visible_area_m2=(None if visible is None
+                             else w * visible / 1e6),
             height_source=(RISER_NOT_ESTABLISHED if rise is None
                            else "SECTION_EVIDENCE"),
+            visible_source=vsrc,
             status=(RISER_NOT_ESTABLISHED if rise is None
                     else "RISER_MEASURED")))
 
@@ -1413,6 +1487,8 @@ def curved_flights(arcs, segments, *, region_id: str = "DR-001",
                                 radials[i + 1]["object_id"])))
         sec = _section_for(sections, flight.flight_id, region_id)
         rise = sec.get("riser_height_mm")
+        build_up = sec.get("tread_build_up_mm")
+        visible, vsrc = _visible_riser(rise, build_up)
         for i, t in enumerate(flight.treads, 1):
             flight.risers.append(Riser(
                 riser_id=f"SR-{region_id}-C{n:02d}-{i:02d}",
@@ -1420,8 +1496,14 @@ def curved_flights(arcs, segments, *, region_id: str = "DR-001",
                 height_mm=(None if rise is None else float(rise)),
                 area_m2=(None if rise is None
                          else t.width_mm * float(rise) / 1e6),
+                tread_build_up_mm=(None if build_up is None
+                                   else float(build_up)),
+                visible_height_mm=visible,
+                visible_area_m2=(None if visible is None
+                                 else t.width_mm * visible / 1e6),
                 height_source=(RISER_NOT_ESTABLISHED if rise is None
                                else "SECTION_EVIDENCE"),
+                visible_source=vsrc,
                 status=(RISER_NOT_ESTABLISHED if rise is None
                         else "RISER_MEASURED")))
         out.append((ring, flight))
@@ -1506,6 +1588,7 @@ class PhysicalStair:
     width_m: float = 0.0
     tread_m2: float | None = None
     riser_m2: float | None = None
+    riser_visible_m2: float | None = None
     landing_m2: float = 0.0
     floor_not_stair_m2: float = 0.0
     nosing_lm: float = 0.0
@@ -1533,6 +1616,8 @@ class PhysicalStair:
                              else round(self.tread_m2, 4)),
                 "RISER_M2": (None if self.riser_m2 is None
                              else round(self.riser_m2, 4)),
+                "RISER_VISIBLE_M2": (None if self.riser_visible_m2 is None
+                                     else round(self.riser_visible_m2, 4)),
                 "LANDING_M2": round(self.landing_m2, 4),
                 "NOSING_LM": round(self.nosing_lm, 3),
                 "STAIR_SKIRTING_LM": self.skirting_lm,
@@ -1644,8 +1729,15 @@ def _q(value, unit: str, status: str = "") -> dict:
                                   else "MEASURED_NET"))}
 
 
-def quantities(physical_stairs, reports=()) -> dict:
-    """§15. Every stair quantity, with its unit, and no sum across units."""
+def quantities(physical_stairs, reports=(), *,
+               commercial_basis: str = "") -> dict:
+    """§15, §F. Every stair quantity in its own unit, and no sum across.
+
+    `commercial_basis` is how a contractor QUOTES this work, where the
+    project has told us. It is recorded beside the geometric units and
+    never replaces one: the physical marble is an area whatever the
+    commercial basis turns out to be.
+    """
     counts = {}
     for rep in reports:
         for a in rep.assemblies:
@@ -1683,6 +1775,13 @@ def quantities(physical_stairs, reports=()) -> dict:
                                   else round(x.riser_m2, 4), UNIT_M2,
                                   "" if x.riser_m2 is not None
                                   else RISER_NOT_ESTABLISHED),
+            # §E THE MARBLE FACE, which is the rise less the tread on
+            # top of it and never the rise itself.
+            "RISER_VISIBLE_AREA": _q(
+                None if x.riser_visible_m2 is None
+                else round(x.riser_visible_m2, 4), UNIT_M2,
+                "" if x.riser_visible_m2 is not None
+                else VISIBLE_RISER_NOT_ESTABLISHED),
             "LANDING_AREA": _q(round(x.landing_m2, 4), UNIT_M2),
             "NOSING_LENGTH": _q(round(x.nosing_lm, 3), UNIT_LM),
             "STAIR_SKIRTING": _q(x.skirting_lm, UNIT_LM,
@@ -1711,7 +1810,19 @@ def quantities(physical_stairs, reports=()) -> dict:
             "STAIR_SKIRTING": _sum("STAIR_SKIRTING", UNIT_LM),
             "TREADS": _sum("TREADS", UNIT_PCS),
             "RISERS": _sum("RISERS", UNIT_PCS),
+            "RISER_VISIBLE_AREA": _sum("RISER_VISIBLE_AREA", UNIT_M2),
         },
+        # §F A MEASUREMENT BASIS IS NOT A PRICING BASIS. A contractor may
+        # quote stair work by the step, by the flight or by the metre
+        # while the physical marble stays an area, and the two fields
+        # never stand in for one another.
+        GEOMETRIC_UNIT: {
+            "TREAD_AREA": UNIT_M2, "RISER_VISIBLE_AREA": UNIT_M2,
+            "LANDING_AREA": UNIT_M2, "NOSING_LENGTH": UNIT_LM,
+            "STAIR_SKIRTING": UNIT_LM, "RAILING_PATH": UNIT_LM,
+            "TREADS": UNIT_PCS, "RISERS": UNIT_PCS,
+        },
+        COMMERCIAL_BASIS: (commercial_basis or COMMERCIAL_NOT_ESTABLISHED),
         "units_are_never_added": (
             "m2, lm and pcs are three different quantities of the same "
             "staircase. There is no total of them and none is written"),
@@ -2012,8 +2123,18 @@ def reconcile(reports, *, regions=(), floor_of=None, interior_of=None,
                  else max(a.tread_m2 for a in members))
         riser = (None if any(a.riser_m2 is None for a in members)
                  else max(a.riser_m2 for a in members))
+        visible = (None if any(a.riser_visible_m2 is None
+                               for a in members)
+                   else max(a.riser_visible_m2 for a in members))
         role = first.stair_role
+        # §C THE PROJECT RULE IS ABOUT STAIRS, not about one staircase.
+        # "ALL" is how a project says every stair it has — main,
+        # secondary, service, roof, external steps alike.
         rule = rules.get(role) or rules.get("ALL")
+        rule_id = ""
+        if isinstance(rule, dict):
+            rule_id = rule.get("rule_id", "")
+            rule = rule.get("finish")
         stair = PhysicalStair(
             physical_stair_id=f"PS-STAIR-{k:03d}",
             instances=tuple((a.region_id, a.stair_id) for a in members),
@@ -2023,13 +2144,13 @@ def reconcile(reports, *, regions=(), floor_of=None, interior_of=None,
             stair_role=role,
             role_evidence=first.role_evidence,
             finish=(rule or FINISH_NOT_CONFIRMED),
-            finish_source=("PROJECT_RULE_FOR_THIS_STAIR_ROLE" if rule
-                           else "OWNER_RULE_REQUEST"),
+            finish_source=((rule_id or "PROJECT_RULE_FOR_THIS_STAIR_ROLE")
+                           if rule else "OWNER_RULE_REQUEST"),
             width_m=max((f.width_mm for a in members for f in a.flights),
                         default=0.0) / 1000.0,
             # MEASURED ONCE. The same stair drawn twice is one quantity,
             # and the fuller representation is the one that measures it.
-            tread_m2=tread, riser_m2=riser,
+            tread_m2=tread, riser_m2=riser, riser_visible_m2=visible,
             landing_m2=max((a.landing_m2 for a in members), default=0.0),
             floor_not_stair_m2=max((a.not_stair_landing_m2
                                     for a in members), default=0.0),

@@ -386,6 +386,13 @@ PREDICTED_DIVERGENCES = {
                                      "geometry example the owner asked for",
     },
     "ROUND_6D_PANTRY_AND_STAIRS": {
+        "FUNCTIONAL_ZONE_HASH": "the owner rule addendum of 2026-09-17 "
+                                "bumps the model to V2: a pantry "
+                                "openness the OWNER established for a "
+                                "project, the arrangement "
+                                "OTHER_DRAWN_CONFIGURATION that a "
+                                "drawing can show, and the refusal "
+                                "PANTRY_TILE_WALLS_REQUIRE_OWNER_REVIEW",
         "SPACE_REGISTER_HASH": "round 6E puts the release vocabulary "
                                "into the model hash: one state, the "
                                "roles that may never carry a room "

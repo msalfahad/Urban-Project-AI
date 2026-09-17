@@ -2519,3 +2519,84 @@ no W2D reader, so the riser height stays NOT ESTABLISHED with
 **An area printed on a drawing is still the sealed take-off.** A text
 that states a quantity is refused by name, so that nobody reads it by
 accident.
+
+---
+
+## 88 · AN OWNER RULE IS A RECORD, AND IT NEVER SUPPLIES GEOMETRY
+
+Owner knowledge lives in a versioned library, not in a constant in an
+engine file. Every rule carries `rule_id`, `rule_name`, `trade`, `scope`,
+country context, default-or-mandatory, `owner_confirmed`, `version`,
+`effective_date`, `source`, whether a project may override it,
+`required_geometry`, `calculation_method`, `unit`, `exceptions` and
+`unknown_behavior`. **A record missing any of those is refused**: a rule
+nobody can date, version or source is a habit somebody typed in.
+
+```
+PROJECT DRAWING / SPECIFICATION     what this building actually is
+PROJECT-SPECIFIC OWNER OVERRIDE     what the owner said about THIS one
+URBAN PROJECTS OWNER STANDARD       what the company does by default
+UNKNOWN / ASK OWNER                 and nothing below it is invented
+```
+
+A default never bypasses geometry. Where a rule carries a dimension and
+the drawing establishes another, **the drawing wins** and the resolution
+says so. Where the geometry a rule needs is not established, the answer
+is the rule's own `unknown_behavior` — a named refusal or an
+`OWNER_RULE_REQUEST` carrying the exact term, its place in the drawing
+and the question that would settle it. **Never a silent guess.**
+
+---
+
+## 89 · A STAIR IS MARBLE BY PROJECT RULE, AND THE MARBLE RISER IS NOT THE RISE
+
+For Urban Projects' Kuwait villa and chalet workflow the finish rule is
+MARBLE on tread (نايم), riser (قائم) and landing (استراحة), and it
+applies to **every stair assembly the engine detects** — main, secondary,
+service, roof, external steps — not only the main staircase. A drawing,
+specification or owner statement for a particular stair overrides it. The
+rule is applied to stairs that were DETECTED: a stair-like observation
+nobody reconstructed stays unresolved, never marble.
+
+The step rises by one figure and shows another. The tread's marble sits
+on top of the step, so the face that is clad and seen is
+
+```
+VISIBLE_RISER_HEIGHT = step_rise − tread_build_up
+RISER_VISIBLE_M2     = stair_width × VISIBLE_RISER_HEIGHT
+```
+
+The owner's worked example — 1.20 m wide, 0.30 m going, 0.16 m rise,
+0.03 m tread, giving 0.360 m² + 0.156 m² = 0.516 m² per step — is
+arithmetic, not a constant. **0.13 m is never hardcoded.** Without both
+the rise and the build-up detail the visible riser is
+`VISIBLE_RISER_HEIGHT_NOT_ESTABLISHED`.
+
+`GEOMETRIC_MEASUREMENT_UNIT` and `CONTRACTOR_COMMERCIAL_PRICING_BASIS`
+are separate fields: a contractor may quote stair work by the step while
+the physical marble stays an area, and neither ever stands in for the
+other.
+
+---
+
+## 90 · AN ELEVATOR SURROUND IS A POLYGON, AND A STATION IS A DOOR
+
+One elevator serving four floors is **four** landing stations; two doors
+on one floor are **two** assemblies. The shaft is never the count, and a
+typical station stands for many only once the doors, surrounds, detail
+and finish are established equal — with every station id preserved.
+
+Marble surrounds the outer landing door on LEFT, TOP and RIGHT, 0.50 m
+wide by Urban Projects default and by the drawing wherever it says. It is
+bought by area, and the area comes from the **union of the three bands**,
+because three sides times a width is wrong in both directions: along the
+door edge it misses both top corners (2.60 m² for a 1.00 × 2.10 door with
+0.50 m sides), and as three full bands it counts them twice (3.60 m²).
+The union is 3.10 m². `ELEVATOR_SURROUND_AREA_M2` and
+`ELEVATOR_SURROUND_EDGE_LM` are kept apart and neither substitutes for
+the other.
+
+The marble threshold at the door is its own object, never merged into the
+vertical surround, and `ELEVATOR_THRESHOLD_MARBLE_AREA ∩
+PORCELAIN_FLOOR_AREA = 0 m²`. Its depth is **not** an owner-confirmed
+default: where neither drawing nor detail establishes it, the run asks.

@@ -149,6 +149,53 @@ about it. `P7757_ROUND6E_EXPORT.tar.gz` carries the nineteen named
 tables, the six carried from 6D, the report and the manifest with its
 provenance block.
 
+## Owner rule addendum, 2026-09-17 — what it changed in this round
+
+The owner's addendum arrived after the first 6E bundle. It is recorded in
+`data/trade_rules/URBAN_PROJECTS_RULE_LIBRARY.json` (14 rules, versioned,
+dated, sourced) with P7757's own answers in
+`data/registry/P7757_PROJECT_RULES.json`, and three of its rules changed
+what this round reports.
+
+**§A, §B — the pantry.** P7757's pantry is `OPEN_AMERICAN_PANTRY` by the
+owner's confirmation, and the engine now says so with the evidence
+`THE_OWNER_CONFIRMED_THIS_PANTRY_FOR_THIS_PROJECT` instead of
+`PANTRY_OPENNESS_UNKNOWN`. The confirmation settles *which* answer is
+true and supplies no geometry: the pantry label still resolves to no
+physical space in the drawing, so the tiled walls are
+`PANTRY_TILE_WALLS_REQUIRE_OWNER_REVIEW` with
+`WALL_TILE_LENGTH = 0.00 m` — not the perimeter of the space it sits in,
+which belongs to the dining as much as to the pantry. The tile height
+remains an `OWNER_RULE_REQUEST`.
+
+**§C — the stair finish.** The marble rule now reaches **every** stair
+assembly the engine detected, not the interior roles only: all three
+P7757 staircases carry `STAIR_MARBLE_SURROUNDING_FLOOR_PORCELAIN` from
+`UP-STAIR-001@1.0.0`, applied through the owner's project override.
+Role detection is unchanged and still separate — the 2.80 m four-tread
+run is marble *and* `STAIR_ROLE_UNKNOWN`, because what it is and what it
+is finished in are two questions.
+
+**§E — the visible riser.** `RISER_VISIBLE_M2` is now its own quantity:
+the step rise less the tread build-up, times the width. For P7757 both
+the rise and the build-up are unestablished, so it reports
+`VISIBLE_RISER_HEIGHT_NOT_ESTABLISHED` rather than a number. The owner's
+0.516 m² per step is in the tests as arithmetic, never as a constant.
+
+**§F.** `GEOMETRIC_MEASUREMENT_UNIT` and
+`CONTRACTOR_COMMERCIAL_PRICING_BASIS` are separate fields on the stair
+quantity table; P7757 has no commercial basis stated, so it reads
+`CONTRACTOR_PRICING_BASIS_NOT_ESTABLISHED`.
+
+**§H–§L — the elevator.** `engine/elevator_marble.py` declares
+`ELEVATOR_LANDING_MARBLE_ASSEMBLY`, `ELEVATOR_DOOR_SURROUND` and
+`ELEVATOR_THRESHOLD_MARBLE` with the owner's method — the surround as the
+union area of its polygon (3.10 m² for the worked example, against 2.60
+and 3.60 for the two naive ways of getting it wrong) and the threshold as
+its own object with its depth asked for. **No elevator is detected in any
+drawing**: P7757 reports `ELEVATOR_STATIONS_NOT_ESTABLISHED`, and the
+full elevator BOQ waits for the trade phase.
+
 ## §22 · What this round did NOT start
 
 No TradeMeasurementZone, no ceramic BOQ, no waste rule, no pricing, no
