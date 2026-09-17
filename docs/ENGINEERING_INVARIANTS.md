@@ -2808,3 +2808,62 @@ however neatly one of them lands.
 This project broke that rule once, in the ground-floor open zone
 reconciliation, and the breach is recorded in that document rather than
 edited out of it.
+
+---
+
+## 99 · A BLIND PASS RECEIVES THE DRAWING, AND THE CONTRACT SAYS SO
+
+A blind visual pass exists to answer one question: **can this agent see
+the drawing**. It is not a test of whether an agent can find, somewhere
+in this repository, an answer somebody has already worked out. The two
+outcomes look identical — both produce a number that agrees with the
+benchmark — and only one of them is evidence that the engine can read a
+building.
+
+So the input side is a contract, in `engine/blind_input_contract.py`,
+rather than an intention.
+
+```
+MAY RECEIVE     the selected source drawing image; a whole-floor image
+                and crops generated from it; drawing metadata that
+                identifies the sheet and floor; approved Urban Projects
+                GENERAL construction rules; project specifications that
+                would be on the desk of anybody doing this for real
+NEVER RECEIVES  a reconciliation file, a human quantity workbook, a
+                manually reconstructed quantity, a correction note, a
+                known target area, a previous agent's answer, an owner
+                rule request whose text reveals the geometry it asks
+                about, a hypothesis formed after a reveal, or previously
+                corrected geometry for the spaces under test
+```
+
+Six gates stand between an input and the pass, because **a declared kind
+is only as honest as the caller**: `DECLARED`, `KIND`, `PATH`,
+`CROP_BASIS`, `EXISTS`, `CONTENT`. The path is checked as well as the
+kind, so relabelling a reconciliation file as sheet metadata does not get
+it through. An **undeclared kind is refused**, because a missing rule is
+not a permissive rule.
+
+**A crop drawn around the answer is the answer.** A box chosen from a
+known target hands the pass the reading it was meant to find, in a form
+no content scan can catch, so every crop declares what decided its box —
+a uniform tiling, coordinates read off the drawing, or the agent asking
+to look there — and a crop with no basis is refused.
+
+**A specification about the space under test is not a specification.** A
+surveyor on site has the spec; a pass being tested on whether it can see
+the ground-floor open zone may not have the block that describes that
+zone. The rest of the spec stays.
+
+Refusal and contamination are different events. An input refused **at the
+door** never reached the agent: the refusal is recorded and the run stays
+`BLIND_RUN_VALID`. Prohibited information found **in the context** ends
+the run — `BLIND_TEST_INVALID`, `stopped`, and every further offer
+raises. There is no partial credit, because a pass that has seen the
+answer cannot un-see it.
+
+Every blind run writes `A18_INPUT_MANIFEST.json`: each input by
+`RAW_FILE_SHA256` or `CANONICAL_CONTENT_SHA256`, what it is, which gates
+it passed, what was refused and why, and a `MANIFEST_HASH` over the
+whole record. A blind run is reproducible from that list and from
+nothing else.

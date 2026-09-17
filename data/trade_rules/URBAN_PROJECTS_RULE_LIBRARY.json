@@ -1,6 +1,6 @@
 {
   "library": "URBAN_PROJECTS_RULE_LIBRARY",
-  "library_version": "1.3.0",
+  "library_version": "1.4.0",
   "notes": {
     "priority": "PROJECT DRAWING / SPECIFICATION > PROJECT-SPECIFIC OWNER OVERRIDE > URBAN PROJECTS OWNER STANDARD > UNKNOWN / ASK OWNER",
     "a_default_never_bypasses_geometry": "where a rule carries a dimension and the drawing establishes another, the drawing wins. Where the geometry a rule needs is not established, the rule's unknown_behavior applies and no default dimension is used",
@@ -1048,6 +1048,27 @@
       "exceptions": [],
       "unknown_behavior": "UNCONFIRMED",
       "notes": "enforced in engine/benchmark_protection.py rather than remembered"
+    },
+    {
+      "rule_id": "UP-QA-002",
+      "rule_name": "A blind visual pass receives the drawing and nothing that carries the answer",
+      "rule_kind": "MEASUREMENT_RULE",
+      "trade": "ALL",
+      "scope": "QUALITY_ASSURANCE",
+      "country_context": "",
+      "default_or_mandatory": "MANDATORY",
+      "owner_confirmed": true,
+      "version": "1.0.0",
+      "effective_date": "2026-09-17",
+      "source": "Owner protocol: TEST-ISOLATION REQUIREMENT, 2026-09-17",
+      "project_override_allowed": false,
+      "required_geometry": [],
+      "calculation_method": "a blind visual pass MAY receive: the selected source drawing image, a whole-floor image and crops generated from it, drawing metadata that identifies the sheet and floor, approved Urban Projects general construction rules, and project specifications that would be available on a real job. It may NEVER receive: a reconciliation file, a human quantity workbook, a manually reconstructed quantity, a correction note, a known target area, a previous agent's answer, an owner rule request whose text reveals the geometry it asks about, a hypothesis formed after a reveal, or previously corrected geometry for the spaces under test. Four gates enforce it: the declared kind, the path the file sits at, the content it carries, and the basis that decided a crop box. An undeclared kind is refused rather than allowed. A refusal at the door leaves the run valid; information found IN the context ends it",
+      "unit": "NONE",
+      "value": "BLIND_TEST_INVALID_WHERE_THE_ANSWER_ENTERS_THE_CONTEXT",
+      "exceptions": [],
+      "unknown_behavior": "REFUSE_THE_INPUT",
+      "notes": "enforced in engine/blind_input_contract.py, and every blind run records its whole input side in A18_INPUT_MANIFEST.json"
     }
   ]
 }
