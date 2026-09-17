@@ -2600,3 +2600,83 @@ The marble threshold at the door is its own object, never merged into the
 vertical surround, and `ELEVATOR_THRESHOLD_MARBLE_AREA ∩
 PORCELAIN_FLOOR_AREA = 0 m²`. Its depth is **not** an owner-confirmed
 default: where neither drawing nor detail establishes it, the run asks.
+
+---
+
+## 91 · A TREAD HAS FOUR EDGES, AND ONLY ONE OF THEM IS THE NOSING
+
+```
+FRONT / NOSING   across the WIDTH, at the front of the step
+BACK             across the WIDTH, against the next riser
+INNER SIDE       along the GOING, at the inner string — an ARC on a winder
+OUTER SIDE       along the GOING, at the outer string — an ARC on a winder
+```
+
+Round 6E gave a winder tread its **outer arc** as the nosing length:
+378.1 mm on a tread 1250 mm wide. Fifteen treads of PS-STAIR-002 measured
+18.450 m of front edge and were exported as 8.058 m of nosing. On a
+winder the width is the radial front edge and the going is the arc; they
+are different lengths and **only the first is a nosing**.
+
+So the nosing length is **read off the front edge** rather than computed
+beside it, and every tread carries an edge audit in which the two cannot
+disagree.
+
+---
+
+## 92 · GEOMETRY AND COMMERCE ARE TWO TRUTHS, AND BOTH ARE KEPT
+
+```
+GEOMETRY     TREAD_AREA_M2  RISER_AREA_M2  VISIBLE_RISER_AREA_M2
+             LANDING_AREA_M2  NOSING_LENGTH_LM
+COMMERCIAL   STAIR_STEP_COMMERCIAL_LM  LANDING_COMMERCIAL_M2
+             STAIR_SKIRTING_COMMERCIAL_LM
+```
+
+Urban Projects buys marble steps by the **linear metre of step width**,
+and that rate covers tread, riser and nosing together. So
+
+```
+STAIR_STEP_COMMERCIAL_LM = SUM(width of each UNIQUE physical step)
+```
+
+**never derived from a tread area** — a winder's treads are wedges and
+the going is not constant — and **never counted twice**: the same
+staircase drawn on the ground and the first floor plan is one staircase,
+and the steps are summed on the PHYSICAL assembly after the cross-plan
+reconciliation. The landing is an area and the skirting a length; neither
+is multiplied by the step basis, and no total spans the units.
+
+---
+
+## 93 · A RATE IS NOT A RULE
+
+Three things that look alike and are not:
+
+```
+A  CONSTRUCTION VOCABULARY   نايم is a stair tread
+B  MEASUREMENT RULE          its commercial quantity is the sum of the
+                             unique step widths, in lm
+C  COMMERCIAL RATE           15 KWD/lm, on one quotation, on one date
+```
+
+The rule library holds A and B, each record carrying `rule_kind`, and
+**refuses any record that carries a currency**. C lives in a project rate
+card with its supplier and its date, and nothing in the measuring engine
+reads one. A price inside a measurement rule is a price that goes stale
+without anybody noticing.
+
+---
+
+## 94 · A STRONG RUN THE DETECTOR CANNOT BUILD IS A QUESTION
+
+A flight's worth of tread lines (`MIN_TREADS + 1`), every pitch a tread
+going, over a width at least as great as the deepest going this module
+recognises, is **`STAIR_OBSERVATION_UNRESOLVED`** when no staircase was
+reconstructed from it — not `NOT_A_STAIR_ON_EVIDENCE`. P7757's ROOF plan
+refused five such runs in Round 6E and reported nothing; four of them are
+11–12 lines at 250–400 mm over 1150–1350 mm of width.
+
+Weak runs — hatching, three short lines in a corner — stay answered. And
+a stair register is about **plans**: an unresolved run on an elevation or
+a section is counted apart, never as a missing staircase on a floor.

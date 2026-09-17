@@ -386,6 +386,14 @@ PREDICTED_DIVERGENCES = {
                                      "geometry example the owner asked for",
     },
     "ROUND_6D_PANTRY_AND_STAIRS": {
+        "STAIR_ASSEMBLY_HASH_6E_A": "round 6E-A names the four EDGE "
+                                    "ROLES of a tread, the composite "
+                                    "configuration, the commercial "
+                                    "step basis and the visible riser. "
+                                    "The nosing of a winder changed "
+                                    "from its outer arc to its front "
+                                    "edge, which is a behaviour change "
+                                    "and is declared as one",
         "FUNCTIONAL_ZONE_HASH": "the owner rule addendum of 2026-09-17 "
                                 "bumps the model to V2: a pantry "
                                 "openness the OWNER established for a "

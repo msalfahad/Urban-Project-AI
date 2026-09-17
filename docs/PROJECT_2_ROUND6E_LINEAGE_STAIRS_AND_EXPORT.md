@@ -196,6 +196,107 @@ its own object with its depth asked for. **No elevator is detected in any
 drawing**: P7757 reports `ELEVATOR_STATIONS_NOT_ESTABLISHED`, and the
 full elevator BOQ waits for the trade phase.
 
+## Round 6E-A — the audit's curved-stair finding, and the commercial layer
+
+### §4, §5 · Reproduced first, then fixed at the role
+
+| | Round 6E | 6E-A |
+|---|---|---|
+| PS-STAIR-002 front edges | 3 × 1150 + 12 × 1250 = **18.450 m** | unchanged |
+| PS-STAIR-002 `NET_NOSING_LM` | **8.058 m** | **18.450 m** |
+| the cause | a winder tread took its OUTER ARC (378.1 mm) as its nosing | the nosing is now READ OFF the front edge |
+
+The four edge roles are named — FRONT/NOSING and BACK across the width,
+INNER and OUTER along the going (arcs on a winder) — and every tread
+carries an edge audit in which the nosing and the front edge cannot
+disagree. Across P7757's 37 treads: **0 disagreements**, 56.364 m of
+front edge and 56.364 m of nosing.
+
+### §2, §3, §6, §9 · The commercial quantity
+
+`STAIR_STEP_COMMERCIAL_LM = SUM(width of each unique physical step)`.
+PS-STAIR-002 is drawn on two plans, has 2 unique flights and **15 unique
+physical steps = 18.450 lm** — counted once, never twice. PS-STAIR-003 is
+11.200 lm; PS-STAIR-001 is NOT ESTABLISHED (its flights overlap), so the
+project total is not established and the established-only figure,
+**29.650 lm**, is reported under its own name. Landing m² and skirting lm
+stay apart; no total spans units; no rate appears anywhere.
+
+### §7 · Configuration
+
+PS-STAIR-002 is **COMPOSITE_STRAIGHT_CURVED**, not L_SHAPED: it has three
+straight treads and twelve winder treads, and an overall change of
+direction describes every L, U and winder alike.
+
+### §8 · Landings, re-evaluated and unchanged
+
+Still **0 stair landings**, 11.9262 m² of floor between the flights —
+now with the working exported: the 10.27 m² piece runs along the sides of
+two flights and meets the end of neither; 1.66 m² is stair-sized but
+touches one side only and stays unresolved; a 0.0005 m² sliver. A section
+through the stair would settle them.
+
+### §12 · The ROOF
+
+Four of the five ROOF runs are now **STAIR_OBSERVATION_UNRESOLVED** —
+11–12 lines at 250–400 mm goings over 1150–1350 mm of width, 3.4–4.6 m²
+each. The fifth stays refused as too weak. ROOF coverage is still FAILED,
+and it now says what is unresolved instead of nothing.
+
+### §10, §11 · The riser, and what is actually blocked
+
+`VERTICAL_EVIDENCE: THE_SOURCE_SET_CARRIES_VERTICAL_EVIDENCE` ·
+`PLACEMENT: THE_EVIDENCE_IS_NOT_PLACED_AGAINST_A_FLOOR`. Three attempts
+are recorded:
+
+1. **the decoded DWG** — its texts are placed, and it carries only
+   `%%p0.00` and `+0.15`;
+2. **the published PDF** — 12 pages, 12 raster images, **0** vector
+   drawings, **0** characters: placing a level would need OCR;
+3. **the DWF W2D stream** — each text is preceded by `vx` and two 32-bit
+   integers, and those integers are **deltas** from the stream's running
+   point. Accumulating them needs a W2D opcode reader.
+
+The levels found are 0.00, 0.15, 0.30, 1.00, 4.30, 5.50, 9.70, 13.90 m,
+with SECTION A-A, SECTION B-B and four elevations. **No pair is assigned
+to a floor because its difference would give a believable riser.**
+
+### §1 · Thicknesses
+
+`TREAD_MARBLE_THICKNESS = 0.030 m` and `LANDING_MARBLE_THICKNESS =
+0.020 m`, separate Urban Projects defaults (UP-STAIR-006, UP-STAIR-007),
+both overridable by drawing or project. The tread build-up now feeds the
+visible riser: with a rise it computes, and P7757 has no rise, so
+`VISIBLE_RISER_HEIGHT_NOT_ESTABLISHED` stands.
+
+### §13, §14 · The pantry and the sanitary set
+
+`PANTRY_SANITARY_ALIGNMENT` reports what the design set answered: the
+pantry label stands 4.15 m from DINING and 4.17 m from KITCHEN (adjacency
+confirmed, openness consistent with the owner's confirmation), and **no
+sanitary representation this engine can read was supplied** — the 12-page
+set offered is a scan with no vector and no text. The applicable wall set
+is therefore `PANTRY_TILE_WALLS_REQUIRE_OWNER_REVIEW`, and the perimeter
+of the open space is not used.
+
+### §16, §17 · The elevator
+
+Threshold: actual dimensions first; with a drawn door width and no depth,
+**0.90 × 0.50 = 0.45 m²**; with neither, the fallback **1.10 × 0.50 =
+0.55 m²**. A known dimension is never replaced by a default. The surround
+stays the union area of its polygon (3.10 m² for the worked example).
+
+### §18, §19 · The library and the bundle
+
+22 rules across `CONSTRUCTION_VOCABULARY` (4), `MEASUREMENT_RULE` (17)
+and `COMMERCIAL_MEASUREMENT_BASIS` (1); the library **refuses** a record
+carrying a currency. `data/rate_cards/P7757_RATE_CARD.json` holds the
+project's rate slots with every rate `null` — the owner's 15 KWD/lm is
+recorded as an example of the arithmetic and not as this project's price.
+The bundle adds STAIR_COMMERCIAL_QUANTITY, STAIR_EDGE_ROLE_AUDIT,
+STAIR_LANDING_ANALYSIS, PANTRY_SANITARY_ALIGNMENT, RULE_RESOLUTION and
+RULE_LIBRARY.
+
 ## §22 · What this round did NOT start
 
 No TradeMeasurementZone, no ceramic BOQ, no waste rule, no pricing, no

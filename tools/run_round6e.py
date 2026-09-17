@@ -25,6 +25,7 @@ from engine import cad_profile as cprofile
 from engine import floor_register as freg
 from engine import functional_zone as fz
 from engine import elevator_marble as elev
+from engine import pantry_alignment as palign
 from engine import report_consistency as rcons
 from engine import rule_library as rlib
 from engine import semantic_seed as seeds_mod
@@ -154,6 +155,60 @@ def _lineage_rows(rep, rows) -> list:
     return out
 
 
+def _sanitary_sources(paths=()) -> list:
+    """§14. What was offered as the sanitary set, and what it turned out
+    to be. A scan with no vector and no text is named as unreadable
+    rather than quietly skipped.
+    """
+    out = []
+    for path in paths or ():
+        p = Path(path)
+        if not p.exists():
+            out.append(palign.Source(
+                name=str(path), kind="MISSING",
+                status=palign.SANITARY_NOT_SUPPLIED,
+                why_it_could_not_be_read="the file is not here"))
+            continue
+        if p.suffix.lower() == ".pdf":
+            pages = rasters = vectors = chars = 0
+            try:
+                import pymupdf
+
+                doc = pymupdf.open(str(p))
+                for page in doc:
+                    pages += 1
+                    rasters += len(page.get_images())
+                    vectors += len(page.get_drawings())
+                    chars += len(page.get_text())
+            except Exception as exc:      # noqa: BLE001
+                out.append(palign.Source(
+                    name=p.name, kind="PDF",
+                    status=palign.SANITARY_UNREADABLE,
+                    why_it_could_not_be_read=type(exc).__name__))
+                continue
+            readable = bool(vectors or chars)
+            out.append(palign.Source(
+                name=p.name, kind="PDF",
+                status=(palign.SANITARY_READ if readable
+                        else palign.SANITARY_UNREADABLE),
+                what_it_is=(f"{pages} pages, {rasters} raster images, "
+                            f"{vectors} vector drawings, {chars} "
+                            "characters of text"),
+                why_it_could_not_be_read=(
+                    "" if readable else
+                    "every page is a scanned image: no vector geometry "
+                    "and no text, and this project uses no OCR")))
+            continue
+        out.append(palign.Source(
+            name=p.name, kind=p.suffix.upper().lstrip("."),
+            status=palign.SANITARY_NOT_SUPPLIED,
+            what_it_is="offered, and not decoded by this run",
+            why_it_could_not_be_read=(
+                "this run reads a decoded CAD JSON. A sanitary DWG has "
+                "to be decoded the way the architectural one was")))
+    return out
+
+
 def _vertical(decode_json: str, dwf: str = "", pdfs=()) -> dict:
     from tools import scan_vertical_evidence as scan
 
@@ -163,7 +218,8 @@ def _vertical(decode_json: str, dwf: str = "", pdfs=()) -> dict:
     for p in pdfs or ():
         if Path(p).exists():
             found += scan.from_pdf(p, start=len(found) + 1)
-    return ve.assess(found)
+    return ve.assess(found, attempts=scan.placement_attempts(
+        decode_json, dwf, pdfs))
 
 
 def run(decode_json: str, **kw) -> dict:
@@ -173,7 +229,7 @@ def run(decode_json: str, **kw) -> dict:
 
 def run_full(decode_json: str, *, supervised_json: str = "",
              sections_json: str = "", dwf: str = "", pdfs=(),
-             bundles=BUNDLES) -> tuple:
+             sanitary=(), bundles=BUNDLES) -> tuple:
     from engine import round6e_selftest as r6e
 
     frozen = r6e.assert_frozen()
@@ -185,10 +241,27 @@ def run_full(decode_json: str, *, supervised_json: str = "",
     if sections_json and Path(sections_json).exists():
         sections = json.loads(Path(sections_json).read_text(
             encoding="utf-8")).get("sections", {})
+    # §1 (6E-A). The tread's marble build-up has an owner default, and
+    # the step's own RISE does not. Feeding the build-up in is what lets
+    # the visible riser be computed the moment a rise IS established —
+    # and on its own it computes nothing, which is the honest state for
+    # P7757.
+    library = rlib.load()
+    project = _project_rules()
+    build_up = rlib.resolve(
+        library, "UP-STAIR-006",
+        drawing=(project.get("stair") or {}).get(
+            "tread_marble_thickness_drawn_m"),
+        project=(project.get("stair") or {}).get(
+            "tread_marble_thickness_m"))
+    build_up_mm = (float(build_up.value) * 1000.0
+                   if build_up.established and build_up.value is not None
+                   else None)
     rep = measure.measure(
         nd, cprofile.build(nd), semantic=seeds_mod.classify(nd.texts),
         sections=sections,
-        project_rules={"stair_finish_rule": P7757_STAIR_FINISH})
+        project_rules={"stair_finish_rule": P7757_STAIR_FINISH,
+                       "tread_build_up_mm": build_up_mm})
 
     supervised, note = {}, "none supplied"
     if supervised_json and Path(supervised_json).exists():
@@ -200,8 +273,6 @@ def run_full(decode_json: str, *, supervised_json: str = "",
     rows = r6d._faces(rep, built["rows"])
 
     # ---- the owner rules, versioned, before anything is classified ---
-    library = rlib.load()
-    project = _project_rules()
     pantry = project.get("pantry") or {}
     # §A. The owner confirms P7757's pantry is OPEN_AMERICAN_PANTRY. It
     # settles WHICH of the three answers is true and supplies no
@@ -240,17 +311,56 @@ def run_full(decode_json: str, *, supervised_json: str = "",
                              floor_of=built["floor_of"],
                              interior_of=interior,
                              finish_rules=finish_rules)
-    coverage = stair.coverage(rep.stairs, stairs["physical_stairs"],
-                              floor_of=built["floor_of"])
+    coverage = stair.coverage(
+        rep.stairs, stairs["physical_stairs"],
+        floor_of=built["floor_of"],
+        plan_of={r.region_id: r.may_release_rooms
+                 for r in roles.roles})
     quantities = stair.quantities(
         stairs["physical_stairs"], rep.stairs,
         commercial_basis=(project.get("stair") or {}).get(
             "commercial_pricing_basis", ""))
+    # §2, §3, §6 (6E-A). The commercial quantity, from UNIQUE physical
+    # steps after the cross-plan reconciliation, beside the geometry.
+    commercial = stair.commercial(
+        stairs["physical_stairs"], rep.stairs, regions=regions,
+        rate_card=(project.get("rate_card")
+                   or "data/rate_cards/P7757_RATE_CARD.json"))
+    # §5 the edge roles of every tread, audited against themselves
+    edges = [t.edge_audit()
+             for s_rep in rep.stairs for a in s_rep.assemblies
+             for f in a.flights for t in f.treads]
+    # §8 what each piece between the flights is, and on what evidence
+    landings = stair.landing_analysis(rep.stairs, regions=regions,
+                                      floor_of=built["floor_of"])
     # §H–§L. The elevator objects are DECLARED and their geometry is
     # not established for this project, so nothing is measured and the
     # questions are asked by name.
     elevators = elev.stations(project.get("elevator") or {},
                               library=library)
+    # §13, §14 the pantry's applicable walls, from the design set
+    alignment = palign.align(
+        rows, register.labels, fittings=built["linings"],
+        wall_bands=[w for wr in rep.walls for w in wr.walls],
+        sources=_sanitary_sources(sanitary),
+        floor_of=built["floor_of"])
+    # §19 every rule this run asked for, and where the answer came from
+    resolutions = rlib.resolution_log(library, [
+        ("UP-PANTRY-001", {"project": pantry.get("openness")}),
+        ("UP-PANTRY-003", {}),
+        ("UP-PANTRY-004", {"project": pantry.get("wall_tile_height_m")}),
+        ("UP-STAIR-001", {"project": (project.get("stair") or {}).get(
+            "finish")}),
+        ("UP-STAIR-003", {}),
+        ("UP-STAIR-006", {"project": (project.get("stair") or {}).get(
+            "tread_marble_thickness_m")}),
+        ("UP-STAIR-007", {"project": (project.get("stair") or {}).get(
+            "landing_marble_thickness_m")}),
+        ("UP-STAIR-008", {}),
+        ("UP-STAIR-009", {}),
+        ("UP-ELEV-002", {}),
+        ("UP-ELEV-005", {}),
+    ])
     wkt_of = {r.space_id: (r.clear.polygon_wkt if r.clear is not None
                            else "") for r in rep.rows}
     clash = stair.finish_clash(
@@ -328,6 +438,22 @@ def run_full(decode_json: str, *, supervised_json: str = "",
                 "used on geometry nobody has established"),
         },
         "H_elevator_marble": elevators,
+        "I_commercial": commercial,
+        "J_edge_roles": {
+            "treads": len(edges),
+            "disagree": [e for e in edges
+                         if not e["nosing_is_the_front_edge"]],
+            "SUM_FRONT_EDGE_LM": round(sum(
+                (e["front_edge_length_mm"] or 0.0) for e in edges)
+                / 1000.0, 3),
+            "SUM_NOSING_LM": round(sum(e["nosing_length_mm"]
+                                       for e in edges) / 1000.0, 3),
+            "rows": edges,
+            "why": stair.WIDTH_IS_NOT_THE_ARC,
+        },
+        "K_landing_analysis": landings,
+        "L_pantry_alignment": alignment,
+        "M_rule_resolution": resolutions,
         "D_vertical_evidence": _vertical(decode_json, dwf=dwf, pdfs=pdfs),
         "E_marble_and_porcelain": clash,
         "F_pantry": zones.record(),
@@ -342,7 +468,9 @@ def run_full(decode_json: str, *, supervised_json: str = "",
         json.dumps(out, sort_keys=True, default=str))
     context = {
         "library": library, "project_rules": project,
-        "elevators": elevators,
+        "elevators": elevators, "commercial": commercial,
+        "edges": edges, "landings": landings, "alignment": alignment,
+        "resolutions": resolutions,
         "nd": nd, "rep": rep, "built": built, "register": register,
         "roles": roles, "rows": rows, "zones": zones,
         "stairs": stairs, "coverage": coverage,
@@ -360,10 +488,12 @@ def main(argv=None) -> int:
     ap.add_argument("--sections", default="")
     ap.add_argument("--dwf", default="")
     ap.add_argument("--pdf", action="append", default=[])
+    ap.add_argument("--sanitary", action="append", default=[])
     ap.add_argument("--json", default="")
     a = ap.parse_args(argv)
     rec = run(a.decode_json, supervised_json=a.supervised,
-              sections_json=a.sections, dwf=a.dwf, pdfs=a.pdf)
+              sections_json=a.sections, dwf=a.dwf, pdfs=a.pdf,
+              sanitary=a.sanitary)
     if a.json:
         Path(a.json).parent.mkdir(parents=True, exist_ok=True)
         Path(a.json).write_text(
@@ -392,6 +522,21 @@ def main(argv=None) -> int:
               "stair_finish": rec["G_owner_rules"]["stair_finish"]},
         "H": {"stations": rec["H_elevator_marble"]["station_count"],
               "status": rec["H_elevator_marble"]["status"]},
+        "I": rec["I_commercial"]["totals"],
+        "J": {"treads": rec["J_edge_roles"]["treads"],
+              "disagree": len(rec["J_edge_roles"]["disagree"]),
+              "SUM_FRONT_EDGE_LM": rec["J_edge_roles"]["SUM_FRONT_EDGE_LM"],
+              "SUM_NOSING_LM": rec["J_edge_roles"]["SUM_NOSING_LM"]},
+        "K": {"pieces": rec["K_landing_analysis"]["pieces"],
+              "stair_landings": rec["K_landing_analysis"][
+                  "stair_landings"],
+              "floor_m2": rec["K_landing_analysis"][
+                  "floor_between_the_flights_m2"]},
+        "L": {"pantries": rec["L_pantry_alignment"]["pantries"],
+              "walls_established": rec["L_pantry_alignment"][
+                  "walls_established"],
+              "review": rec["L_pantry_alignment"]["require_owner_review"]},
+        "M": {"unresolved_rules": rec["M_rule_resolution"]["unresolved"]},
     }, indent=2, ensure_ascii=False, default=str))
     return 0
 

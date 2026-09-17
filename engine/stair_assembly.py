@@ -94,7 +94,47 @@ U_SHAPED = "U_SHAPED"
 WINDER = "WINDER"
 CURVED = "CURVED"
 SPIRAL = "SPIRAL"
+# §7 (6E-A). A staircase of straight flights AND curved ones is neither
+# a straight stair nor an L. Round 6E called PS-STAIR-002 L_SHAPED
+# because its overall path changes direction, which is true of every
+# composite stair and says nothing about what is drawn.
+COMPOSITE_STRAIGHT_CURVED = "COMPOSITE_STRAIGHT_CURVED"
+OTHER_ESTABLISHED_CONFIGURATION = "OTHER_ESTABLISHED_CONFIGURATION"
+CONFIGURATIONS = (STRAIGHT, L_SHAPED, U_SHAPED, WINDER, CURVED, SPIRAL,
+                  COMPOSITE_STRAIGHT_CURVED,
+                  OTHER_ESTABLISHED_CONFIGURATION)
 CONFIGURATION_NOT_ESTABLISHED = "STAIR_CONFIGURATION_NOT_ESTABLISHED"
+
+# --- §5 (6E-A) WHAT EACH EDGE OF A TREAD IS -----------------------------
+#
+# A tread has four edges and they are four different quantities. Round 6E
+# gave a winder tread its OUTER ARC as the nosing length: 378.1 mm on a
+# tread 1250 mm wide, because the arc is the going direction and the
+# nosing runs across the width. 15 treads of PS-STAIR-002 measure 18.450
+# m of front edge and were reported as 8.058 m of nosing.
+#
+# So the roles are named, and the nosing length is READ OFF THE FRONT
+# EDGE rather than computed beside it, which is how the two came apart.
+#
+#     FRONT / NOSING   across the WIDTH, at the front of the step. The
+#                      exposed edge, and the one a step is measured by
+#     BACK             across the WIDTH, against the next riser
+#     INNER SIDE       along the GOING, at the inner string. An ARC on a
+#                      winder, a straight line on a straight flight
+#     OUTER SIDE       along the GOING, at the outer string
+EDGE_FRONT = "FRONT_NOSING_EDGE_ACROSS_THE_WIDTH"
+EDGE_BACK = "BACK_EDGE_ACROSS_THE_WIDTH"
+EDGE_INNER = "INNER_SIDE_EDGE_ALONG_THE_GOING"
+EDGE_OUTER = "OUTER_SIDE_EDGE_ALONG_THE_GOING"
+EDGE_ROLES = (EDGE_FRONT, EDGE_BACK, EDGE_INNER, EDGE_OUTER)
+
+# The front edge and the nosing length are ONE length. They agree to
+# within the enclosure's own join or the tread is reporting two answers.
+EDGE_AGREES_MM = 1.0
+EDGE_DISAGREES = "THE_NOSING_LENGTH_IS_NOT_THE_FRONT_EDGE"
+WIDTH_IS_NOT_THE_ARC = (
+    "on a winder the width is the radial front edge and the going is the "
+    "arc. They are different lengths and only the first is a nosing")
 
 # --- §E the marble riser is not the structural rise ---------------------
 #
@@ -242,12 +282,13 @@ def model_hash() -> str:
     parts = ([MODEL] + list(PARTS) + list(EVIDENCE)
              + list(OBSERVATION_KINDS) + list(STAIR_ROLES)
              + list(OBSERVATION_STATES) + list(BETWEEN_FLIGHT_ROLES)
-             + [FINISH_NOT_CONFIRMED, NOT_A_STAIR_LANDING,
+             + list(EDGE_ROLES)
+             + [EDGE_DISAGREES, FINISH_NOT_CONFIRMED, NOT_A_STAIR_LANDING,
                 VISIBLE_RISER_NOT_ESTABLISHED, BUILD_UP_NOT_ESTABLISHED,
                 GEOMETRIC_UNIT, COMMERCIAL_BASIS,
                 COMMERCIAL_NOT_ESTABLISHED]
-             + [STRAIGHT, L_SHAPED, U_SHAPED, WINDER, CURVED, SPIRAL,
-                CONFIGURATION_NOT_ESTABLISHED, RISER_NOT_ESTABLISHED,
+             + list(CONFIGURATIONS)
+             + [CONFIGURATION_NOT_ESTABLISHED, RISER_NOT_ESTABLISHED,
                 TREAD_NOT_ESTABLISHED, LANDING_NOT_ESTABLISHED,
                 SKIRTING_NOT_ESTABLISHED, PLAN_AND_SECTION_DISAGREE,
                 NOT_A_STAIR]
@@ -310,6 +351,46 @@ class Tread:
     cad_provenance: tuple = ()
     status: str = "TREAD_MEASURED"
 
+    def edge_roles(self) -> list:
+        """The four edges of this tread, each with what it IS (§5)."""
+        from shapely.wkt import loads
+
+        out = []
+        for role, wkt in ((EDGE_FRONT, self.front_edge_wkt),
+                          (EDGE_BACK, self.back_edge_wkt),
+                          (EDGE_INNER, self.inner_edge_wkt),
+                          (EDGE_OUTER, self.outer_edge_wkt)):
+            length = None
+            if wkt:
+                try:
+                    length = loads(wkt).length
+                except Exception:      # noqa: BLE001
+                    length = None
+            out.append({"edge_role": role, "wkt": wkt,
+                        "length_mm": (None if length is None
+                                      else round(length, 1))})
+        return out
+
+    def edge_audit(self) -> dict:
+        """§4. Does the nosing length agree with the front edge itself?"""
+        roles = {e["edge_role"]: e for e in self.edge_roles()}
+        front = roles[EDGE_FRONT]["length_mm"]
+        agrees = (front is not None
+                  and abs(front - self.nosing_length_mm) <= EDGE_AGREES_MM)
+        return {
+            "tread_id": self.tread_id,
+            "width_mm": round(self.width_mm, 1),
+            "going_mm": round(self.going_mm, 1),
+            "nosing_length_mm": round(self.nosing_length_mm, 1),
+            "front_edge_length_mm": front,
+            "back_edge_length_mm": roles[EDGE_BACK]["length_mm"],
+            "inner_side_edge_length_mm": roles[EDGE_INNER]["length_mm"],
+            "outer_side_edge_length_mm": roles[EDGE_OUTER]["length_mm"],
+            "nosing_is_the_front_edge": bool(agrees),
+            "status": ("EDGE_ROLES_AGREE" if agrees else EDGE_DISAGREES),
+            "why": WIDTH_IS_NOT_THE_ARC,
+        }
+
     def record(self) -> dict:
         return {
             "tread_id": self.tread_id,
@@ -325,6 +406,7 @@ class Tread:
             "outer_edge_wkt": self.outer_edge_wkt,
             "polygon_wkt_mm": self.polygon_wkt,
             "cad_provenance": list(self.cad_provenance),
+            "edge_roles": self.edge_roles(),
             "status": self.status,
         }
 
@@ -737,7 +819,7 @@ def _edge(axis: str, fixed: float, lo: float, hi: float) -> str:
 def assess(lines, *, region_id: str = "DR-001", spaces=(), labels=(),
            floor_from: str = "", floor_to: str = "", sections=None,
            finish_rule: str = "", skirting_rule=None,
-           arcs=(), primitives=()) -> StairReport:
+           arcs=(), primitives=(), build_up_mm=None) -> StairReport:
     """Find the stairs in one region and measure what is drawn.
 
     `spaces` are the region's measured spaces (each with a polygon and an
@@ -796,10 +878,23 @@ def assess(lines, *, region_id: str = "DR-001", spaces=(), labels=(),
             if labelled:
                 ev.append(EV_STAIR_LABEL)
             if cell is None and not labelled:
+                # §12 (6E-A). A RUN NOBODY COULD RECONSTRUCT IS NOT
+                # AUTOMATICALLY NOT A STAIR. Where the drawing itself
+                # shows a flight's worth of treads at a stair's going,
+                # spanning a stair's width, the honest answer is that
+                # this round could not resolve it — not that it is
+                # something else. The ROOF plan of P7757 refused five
+                # such runs in Round 6E and reported zero questions.
                 rep.refused.append({
                     "run_id": f"RUN-{region_id}-{n:03d}",
                     "axis": axis, "lines": len(run),
                     "pitch_mm": round(goings[0], 1) if goings else None,
+                    "extent_mm": (foot.bounds if foot is not None
+                                  else (0.0, 0.0, 0.0, 0.0)),
+                    "covers_m2": (foot.area / 1e6 if foot is not None
+                                  else 0.0),
+                    "width_mm": hi - lo,
+                    "strong": _strong_run(run, hi - lo, goings),
                     "why": NOT_A_STAIR,
                     "what_would_settle_it": (
                         "an enclosure around it, or a stair label in it")})
@@ -814,7 +909,7 @@ def assess(lines, *, region_id: str = "DR-001", spaces=(), labels=(),
     # parallel lines does not see a curved stair at all, and silence is
     # the one answer a stair register may not give.
     curved = curved_flights(arcs, primitives, region_id=region_id,
-                            sections=sections)
+                            sections=sections, build_up_mm=build_up_mm)
     for ring, flight in curved:
         from shapely.wkt import loads as _loads
 
@@ -887,7 +982,8 @@ def assess(lines, *, region_id: str = "DR-001", spaces=(), labels=(),
         exceptions = []
         for j, it in enumerate(items, 1):
             flight = (it["flight"] if it.get("flight") is not None
-                      else _flight(it, region_id, k, j, cell, sections))
+                      else _flight(it, region_id, k, j, cell, sections,
+                                   build_up_mm=build_up_mm))
             # §13 asks what lies between the FLIGHTS, so the flights have
             # to be on the items before the pieces between them are read.
             it["flight"] = flight
@@ -902,13 +998,7 @@ def assess(lines, *, region_id: str = "DR-001", spaces=(), labels=(),
                 exceptions.append(PLAN_AND_SECTION_DISAGREE)
 
         asm.landings.extend(_landings(cell, items, region_id, k))
-        axes = {it["axis"] for it in items}
-        if len(items) >= 2 and len(axes) > 1:
-            asm.configuration = L_SHAPED
-        elif len(items) >= 2:
-            asm.configuration = U_SHAPED
-        elif asm.flights:
-            asm.configuration = asm.flights[0].configuration
+        asm.configuration = _configuration(items, asm.flights)
         # Do two flights of this stair cover the same ground? Then their
         # tread polygons cannot both be marble, and nothing here picks.
         feet = [it["foot"] for it in items]
@@ -952,12 +1042,29 @@ def assess(lines, *, region_id: str = "DR-001", spaces=(), labels=(),
                  "the drawing shows it and this round did not "
                  "reconstruct a stair from it")))
     for x in rep.refused:
+        strong = bool(x.get("strong"))
         rep.observations.append(Observation(
             observation_id=x["run_id"].replace("RUN-", "SO-"),
             region_id=region_id, kind=OBS_PARALLEL_RUN,
-            lines=x.get("lines", 0), evidence=(),
-            status=NOT_A_STAIR_ON_EVIDENCE,
-            why=f"{x['why']}: {x.get('what_would_settle_it', '')}"))
+            at_mm=(((x["extent_mm"][0] + x["extent_mm"][2]) / 2.0,
+                    (x["extent_mm"][1] + x["extent_mm"][3]) / 2.0)
+                   if x.get("extent_mm") else ()),
+            extent_mm=tuple(x.get("extent_mm") or ()),
+            lines=x.get("lines", 0),
+            evidence=((STRONGLY_DRAWN,) if strong else ()),
+            # §12 A STRONG RUN IS A QUESTION, not a refusal. The weak
+            # ones — hatching, three short lines in a corner — are
+            # answered, and stay answered.
+            status=(UNRESOLVED_OBSERVATION if strong
+                    else NOT_A_STAIR_ON_EVIDENCE),
+            why=((f"{x.get('lines', 0)} lines at a "
+                  f"{x.get('pitch_mm')} mm going over "
+                  f"{round(x.get('width_mm', 0.0))} mm of width: the "
+                  "drawing shows a flight here and this round did not "
+                  "reconstruct a staircase from it. "
+                  + str(x.get("what_would_settle_it", "")))
+                 if strong else
+                 f"{x['why']}: {x.get('what_would_settle_it', '')}")))
     for o in (labels or ()):
         text = (getattr(o, "text", "") or "").upper()
         if "STAIR" not in text:
@@ -993,6 +1100,52 @@ def assess(lines, *, region_id: str = "DR-001", spaces=(), labels=(),
     return rep
 
 
+# §12. A run the drawing states STRONGLY: a flight's worth of treads at
+# a stair's going, spanning a width a person walks on. MIN_TREADS is the
+# module's own figure for a flight, and MIN_WIDTH_MM for a walking
+# width: nothing new is chosen here.
+STRONGLY_DRAWN = "A_FLIGHTS_WORTH_OF_TREADS_AT_A_STAIR_GOING"
+
+
+def _strong_run(run, width_mm: float, goings) -> bool:
+    """Is this run authored strongly enough to be a question, not a no?
+
+    A flight's worth of treads (MIN_TREADS + 1 lines), every pitch a
+    tread going, over a width at least as great as the deepest thing
+    this module calls a going — a stair is wider than one tread is deep.
+    Both figures are the module's own; nothing new is chosen.
+    """
+    if len(run) < MIN_TREADS + 1 or width_mm < MAX_GOING_MM:
+        return False
+    if not goings:
+        return False
+    return all(MIN_GOING_MM <= g <= MAX_GOING_MM for g in goings)
+
+
+def _configuration(items, flights) -> str:
+    """§7. What this staircase IS, from the flights that make it up.
+
+    A composite of straight flights and curved ones is named for being
+    one. An overall change of direction is true of an L, of a U and of
+    every winder that turns, and on its own it distinguishes nothing.
+    """
+    axes = {it["axis"] for it in items}
+    curved = sum(1 for it in items if it["axis"] == "RADIAL")
+    straight = len(items) - curved
+    if curved and straight:
+        return COMPOSITE_STRAIGHT_CURVED
+    if curved and not straight:
+        return CURVED if curved > 1 else (
+            flights[0].configuration if flights else CURVED)
+    if straight >= 2 and len(axes) > 1:
+        return L_SHAPED
+    if straight >= 2:
+        return U_SHAPED
+    if flights:
+        return flights[0].configuration
+    return CONFIGURATION_NOT_ESTABLISHED
+
+
 def _visible_riser(rise, build_up):
     """The riser face the marble shows: the rise LESS the tread on top.
 
@@ -1015,7 +1168,8 @@ def _section_for(sections, flight_id: str, region_id: str) -> dict:
     return dict(src.get(flight_id) or src.get(region_id) or {})
 
 
-def _flight(item, region_id: str, k: int, j: int, cell, sections) -> Flight:
+def _flight(item, region_id: str, k: int, j: int, cell, sections,
+            *, build_up_mm=None) -> Flight:
     """One run of treads, each measured from its own polygon."""
     axis, run = item["axis"], item["run"]
     lo = min(r[1] for r in run)
@@ -1065,7 +1219,7 @@ def _flight(item, region_id: str, k: int, j: int, cell, sections) -> Flight:
 
     sec = _section_for(sections, flight.flight_id, region_id)
     rise = sec.get("riser_height_mm")
-    build_up = sec.get("tread_build_up_mm")
+    build_up = sec.get("tread_build_up_mm", build_up_mm)
     visible, vsrc = _visible_riser(rise, build_up)
     told = sec.get("risers")
     n_risers = int(told) if told else len(flight.treads)
@@ -1441,7 +1595,7 @@ def _sequence(radials, ring: ArcRing) -> list:
 
 
 def curved_flights(arcs, segments, *, region_id: str = "DR-001",
-                   sections=None) -> list:
+                   sections=None, build_up_mm=None) -> list:
     """Every curved or winder flight this region draws, as Flights.
 
     A winder's treads are wedges of different sizes and each is measured
@@ -1478,7 +1632,12 @@ def curved_flights(arcs, segments, *, region_id: str = "DR-001",
                 * abs(sweep) / 1e6,
                 going_mm=abs(sweep) * mean_r,
                 width_mm=ring.outer_mm - ring.inner_mm,
-                nosing_length_mm=abs(sweep) * ring.outer_mm,
+                # THE NOSING IS THE FRONT EDGE, and on a winder the
+                # front edge is the RADIAL one: inner string to outer
+                # string, across the width somebody walks on. The outer
+                # arc is the going at the outer string, and it is
+                # reported as the outer SIDE edge where it belongs.
+                nosing_length_mm=ring.outer_mm - ring.inner_mm,
                 front_edge_wkt=_ray(ring, a0), back_edge_wkt=_ray(ring, a1),
                 inner_edge_wkt=_arc_wkt(ring, ring.inner_mm, a0, a1),
                 outer_edge_wkt=_arc_wkt(ring, ring.outer_mm, a0, a1),
@@ -1487,7 +1646,7 @@ def curved_flights(arcs, segments, *, region_id: str = "DR-001",
                                 radials[i + 1]["object_id"])))
         sec = _section_for(sections, flight.flight_id, region_id)
         rise = sec.get("riser_height_mm")
-        build_up = sec.get("tread_build_up_mm")
+        build_up = sec.get("tread_build_up_mm", build_up_mm)
         visible, vsrc = _visible_riser(rise, build_up)
         for i, t in enumerate(flight.treads, 1):
             flight.risers.append(Riser(
@@ -1829,6 +1988,247 @@ def quantities(physical_stairs, reports=(), *,
     }
 
 
+# --- §8 (6E-A) WHAT THE PIECE BETWEEN THE FLIGHTS IS, ON EVIDENCE -------
+#
+# A landing is not "the piece between two flights" and it is not "the
+# piece an owner rule needs to exist". It is where a stair arrives and
+# turns, and the drawing says so or it does not. So every piece is put
+# through the same questions, and the answers are reported whatever they
+# come to — including for P7757's 11.93 m2, which stays floor.
+EV_MEETS_FLIGHT_ENDS = "IT_MEETS_THE_END_OF_MORE_THAN_ONE_FLIGHT"
+EV_MEETS_ONE_END = "IT_MEETS_THE_END_OF_ONE_FLIGHT"
+EV_BESIDE_FLIGHTS = "IT_RUNS_ALONG_THE_SIDES_OF_THE_FLIGHTS"
+EV_ROOM_REACHES_IT = "THE_ROOM_AROUND_THE_STAIR_REACHES_IT"
+EV_STAIR_SIZED = "IT_IS_NO_LARGER_THAN_THE_FLIGHTS_IT_LIES_AMONG"
+EV_CONTINUES_ABOVE = "A_FLIGHT_OF_THIS_STAIR_IS_DRAWN_HERE_ON_ANOTHER_PLAN"
+EV_NO_SECTION = "NO_SECTION_EVIDENCE_WAS_SUPPLIED_FOR_THIS_STAIR"
+WOULD_SETTLE_IT = (
+    "a section through the stair, or the level and the arrow the plan "
+    "draws where a flight arrives")
+
+
+def landing_analysis(reports, *, regions=(), floor_of=None) -> dict:
+    """§8. Every piece between the flights, and the evidence for it.
+
+    The verdict is the one the geometry already gave. What this adds is
+    the WORKING: which questions were asked of the piece and how each
+    one answered, so that a reader can disagree with the verdict rather
+    than take it.
+    """
+    origin = {r.region_id: (r.x0, r.y0) for r in regions}
+    floor = dict(floor_of or {})
+    # where each stair's flights sit, relative to their own region: a
+    # piece with a flight of the same stair at its own place on another
+    # plan is where the stair CONTINUES, which is what a landing does
+    places: dict = {}
+    for rep in reports:
+        for a in rep.assemblies:
+            ox, oy = origin.get(a.region_id, (0.0, 0.0))
+            for f in a.flights:
+                cx, cy = (f.centre_mm or (0.0, 0.0))
+                places.setdefault(a.physical_stair_id or a.stair_id,
+                                  []).append(
+                    (a.region_id, round((cx - ox) / SAME_PLACE_MM),
+                     round((cy - oy) / SAME_PLACE_MM)))
+
+    rows = []
+    for rep in reports:
+        for a in rep.assemblies:
+            ox, oy = origin.get(a.region_id, (0.0, 0.0))
+            width = max((f.width_mm for f in a.flights), default=0.0)
+            for x in a.landings:
+                poly = _loads_safe(x.polygon_wkt)
+                here = (round((poly.centroid.x - ox) / SAME_PLACE_MM),
+                        round((poly.centroid.y - oy) / SAME_PLACE_MM))
+                continues = [r for r, cx, cy in places.get(
+                    a.physical_stair_id or a.stair_id, ())
+                    if r != a.region_id and abs(cx - here[0]) <= 1
+                    and abs(cy - here[1]) <= 1]
+                ev = []
+                if x.touches_flight_ends >= 2:
+                    ev.append(EV_MEETS_FLIGHT_ENDS)
+                elif x.touches_flight_ends == 1:
+                    ev.append(EV_MEETS_ONE_END)
+                if x.touches_flight_sides:
+                    ev.append(EV_BESIDE_FLIGHTS)
+                if width and x.length_mm <= width * LANDING_MAX_WIDTHS:
+                    ev.append(EV_STAIR_SIZED)
+                if continues:
+                    ev.append(EV_CONTINUES_ABOVE)
+                ev.append(EV_NO_SECTION)
+                rows.append({
+                    "piece_id": x.landing_id,
+                    "stair_id": a.stair_id,
+                    "physical_stair_id": a.physical_stair_id,
+                    "drawing_region_id": a.region_id,
+                    "floor": floor.get(a.region_id, ""),
+                    "verdict": x.role,
+                    "is_stair_landing": x.is_stair_landing,
+                    "piece_area_m2": round(x.area_m2, 4),
+                    "long_side_mm": round(x.length_mm, 1),
+                    "short_side_mm": round(x.width_mm, 1),
+                    "flight_width_mm": round(width, 1),
+                    "flight_ends_met": x.touches_flight_ends,
+                    "flight_sides_met": x.touches_flight_sides,
+                    "stair_continues_here_on": " ".join(sorted(
+                        set(continues))),
+                    "evidence": ev,
+                    "what_would_settle_it": WOULD_SETTLE_IT,
+                    "why": " ".join(x.role_evidence),
+                })
+    landings = [r for r in rows if r["is_stair_landing"]]
+    return {
+        "model": MODEL,
+        "rows": rows,
+        "pieces": len(rows),
+        "stair_landings": len(landings),
+        "STAIR_LANDING_AREA_M2": round(
+            sum(r["piece_area_m2"] for r in landings), 4),
+        "floor_between_the_flights_m2": round(
+            sum(r["piece_area_m2"] for r in rows
+                if not r["is_stair_landing"]), 4),
+        "a_rule_does_not_make_a_landing": (
+            "the owner's rule says a landing is marble. It does not say "
+            "that a piece of floor is a landing, and a piece is not "
+            "reclassified to give the rule something to apply to"),
+    }
+
+
+# --- §2, §3, §6 (6E-A) THE COMMERCIAL QUANTITY --------------------------
+#
+# Urban Projects commercially measures marble steps by the LINEAR METRE
+# OF STEP WIDTH, and the step rate covers the assembly of tread, riser
+# and nosing together. That is a different quantity from the geometry,
+# not a restatement of it:
+#
+#     STAIR_STEP_COMMERCIAL_LM = SUM(width of each physical step)
+#
+# SUM OF WIDTHS, never derived from a tread area: a winder's treads are
+# wedges, and area over an assumed going would give a length no supplier
+# would recognise. And UNIQUE PHYSICAL STEPS: the same staircase drawn
+# on the ground and the first floor plan is one staircase, and pricing
+# it twice is the double count this whole round exists to prevent.
+COMMERCIAL_STEP_LM = "STAIR_STEP_COMMERCIAL_LM"
+COMMERCIAL_LANDING_M2 = "LANDING_COMMERCIAL_M2"
+COMMERCIAL_SKIRTING_LM = "STAIR_SKIRTING_COMMERCIAL_LM"
+STEP_RATE_COVERS = ("TREAD", "RISER", "NOSING")
+FROM_THE_STEP_WIDTHS = "SUM_OF_THE_WIDTH_OF_EACH_UNIQUE_PHYSICAL_STEP"
+NEVER_FROM_AREA = (
+    "a commercial step length is never derived from a tread area: a "
+    "winder's treads are wedges and the going is not constant")
+NO_RATE_HERE = "NO_RATE_LIVES_IN_A_MEASUREMENT_RULE"
+
+
+def _unique_flights(members, origin) -> list:
+    """The flights of one staircase, counted once however often drawn."""
+    seen, out = set(), []
+    for a in sorted(members, key=lambda x: x.stair_id):
+        # the SAME key a stair is reconciled on, so that what counts as
+        # one flight here is what counted as one flight there
+        ox, oy = origin.get(a.region_id, (0.0, 0.0))
+        for flight in a.flights:
+            cx, cy = (flight.centre_mm or (0.0, 0.0))
+            key = (round((cx - ox) / SAME_PLACE_MM),
+                   round((cy - oy) / SAME_PLACE_MM),
+                   round(flight.width_mm / SAME_PLACE_MM),
+                   len(flight.treads))
+            if key in seen:
+                continue
+            seen.add(key)
+            out.append((a, flight))
+    return out
+
+
+def commercial(physical_stairs, reports=(), *, regions=(),
+               rate_card=None) -> dict:
+    """§2, §3, §6. What a contractor is quoted for, beside the geometry.
+
+    Two truths, kept apart. The geometric quantities are areas and
+    lengths of the physical marble; the commercial ones are how Urban
+    Projects buys the work. Neither is derived from the other, and a
+    RATE is not here at all: a price belongs to a project, a supplier
+    and a date, and a measurement rule that carries one is a rule that
+    goes stale without anybody noticing.
+    """
+    origin = {r.region_id: (r.x0, r.y0) for r in regions}
+    by_stair: dict = {}
+    for rep in reports:
+        for a in rep.assemblies:
+            if a.physical_stair_id:
+                by_stair.setdefault(a.physical_stair_id, []).append(a)
+
+    rows = []
+    for x in physical_stairs:
+        members = by_stair.get(x.physical_stair_id, [])
+        pairs = _unique_flights(members, origin)
+        steps = [t for _a, f in pairs for t in f.treads]
+        widths = [t.nosing_length_mm for t in steps]
+        unmeasured = TREAD_NOT_ESTABLISHED in x.exceptions
+        rows.append({
+            "physical_stair_id": x.physical_stair_id,
+            "stair_role": x.stair_role,
+            "configuration": x.configuration,
+            "floor_from": x.floor_from or FLOORS_NOT_ESTABLISHED,
+            "floor_to": x.floor_to or FLOORS_NOT_ESTABLISHED,
+            "plan_instances": len(members),
+            "unique_flights": len(pairs),
+            "unique_physical_steps": len(steps),
+            COMMERCIAL_STEP_LM: (None if unmeasured or not widths
+                                 else round(sum(widths) / 1000.0, 3)),
+            "step_rate_covers": list(STEP_RATE_COVERS),
+            "basis": FROM_THE_STEP_WIDTHS,
+            COMMERCIAL_LANDING_M2: round(x.landing_m2, 4),
+            COMMERCIAL_SKIRTING_LM: x.skirting_lm,
+            "skirting_status": (SKIRTING_NOT_ESTABLISHED
+                                if x.skirting_lm is None
+                                else "FROM_A_PROJECT_RULE"),
+            "step_widths_mm": [round(w, 1) for w in widths],
+            "status": (TREAD_NOT_ESTABLISHED if unmeasured
+                       else "MEASURED_NET"),
+        })
+    lengths = [r[COMMERCIAL_STEP_LM] for r in rows]
+    return {
+        "model": MODEL,
+        "rows": rows,
+        "totals": {
+            COMMERCIAL_STEP_LM: {
+                # THE PROJECT FIGURE. Not established while any
+                # staircase of the project is unmeasured: a total that
+                # silently drops a stair is a total nobody can buy from.
+                "value": (None if any(v is None for v in lengths)
+                          else round(sum(lengths), 3)),
+                "unit": UNIT_LM,
+                "steps": sum(r["unique_physical_steps"] for r in rows),
+                # And the same length over the staircases that ARE
+                # measured, named as what it is so that the two can
+                # never be read as one number.
+                "established_staircases_only": round(
+                    sum(v for v in lengths if v is not None), 3),
+                "staircases_not_established": sum(
+                    1 for v in lengths if v is None),
+            },
+            COMMERCIAL_LANDING_M2: {
+                "value": round(sum(r[COMMERCIAL_LANDING_M2]
+                                   for r in rows), 4),
+                "unit": UNIT_M2,
+            },
+            COMMERCIAL_SKIRTING_LM: {
+                "value": None, "unit": UNIT_LM,
+                "status": SKIRTING_NOT_ESTABLISHED,
+            },
+        },
+        "rate_card": (rate_card or NO_RATE_HERE),
+        "why_not_from_area": NEVER_FROM_AREA,
+        "counted_once": (
+            "the same staircase drawn on two plans is one staircase. "
+            "The steps are counted on the PHYSICAL assembly, after the "
+            "cross-plan reconciliation, never per plan instance"),
+        "never_added": (
+            "a step length in lm and a landing area in m2 are two "
+            "quantities. There is no total of them"),
+    }
+
+
 # --- §16 the same square metre is never two finishes --------------------
 MARBLE_AND_PORCELAIN_CLASH = "A_SQUARE_METRE_IS_BOTH_STAIR_AND_FLOOR"
 NO_CLASH = "NO_SQUARE_METRE_IS_BOTH_STAIR_AND_FLOOR"
@@ -1899,7 +2299,11 @@ def _extent_m2(o) -> float:
     return 0.0
 
 
-def coverage(reports, physical_stairs=(), *, floor_of=None) -> dict:
+OUTSIDE_A_PLAN = "THE_REGION_IS_NOT_A_FLOOR_PLAN"
+
+
+def coverage(reports, physical_stairs=(), *, floor_of=None,
+             plan_of=None) -> dict:
     """§8, §11. What the drawings show against what was reconstructed.
 
     Per floor, because a building is climbed floor by floor and a stair
@@ -1911,13 +2315,19 @@ def coverage(reports, physical_stairs=(), *, floor_of=None) -> dict:
     is never quietly missing from a bill (§11).
     """
     floor = dict(floor_of or {})
+    # A STAIR REGISTER IS ABOUT PLANS. A run of parallel lines on an
+    # elevation or a section is hatching, a louvre or a handrail, and it
+    # is counted apart rather than asked about as a missing staircase.
+    plans = dict(plan_of or {})
     per: dict = {}
     for rep in reports:
+        on_a_plan = plans.get(rep.region_id, True)
         fl = floor.get(rep.region_id, "") or FLOOR_NOT_ESTABLISHED
         row = per.setdefault(fl, {
             "floor": fl, "plans": [], "observations": 0, "mapped": 0,
             "unresolved": 0, "refused_as_not_a_stair": 0,
             "runs_refused": 0, "stair_assemblies": 0,
+            "outside_a_floor_plan": 0,
             "unresolved_observations": [], "exceptions": set(),
             "tread_quantity_established": 0,
             "riser_quantity_established": 0,
@@ -1931,6 +2341,10 @@ def coverage(reports, physical_stairs=(), *, floor_of=None) -> dict:
                 row["mapped"] += 1
             elif o.status == NOT_A_STAIR_ON_EVIDENCE:
                 row["refused_as_not_a_stair"] += 1
+            elif not on_a_plan:
+                # UNRESOLVED, and not a question about a staircase: the
+                # region it stands in does not draw a floor.
+                row["outside_a_floor_plan"] += 1
             else:
                 row["unresolved"] += 1
                 row["unresolved_observations"].append(o)
@@ -1976,6 +2390,7 @@ def coverage(reports, physical_stairs=(), *, floor_of=None) -> dict:
             "unresolved": row["unresolved"],
             "refused_as_not_a_stair": row["refused_as_not_a_stair"],
             "runs_refused": row["runs_refused"],
+            "observations_outside_a_floor_plan": row["outside_a_floor_plan"],
             "stair_assemblies": row["stair_assemblies"],
             "tread_quantity_established": row["tread_quantity_established"],
             "riser_quantity_established": row["riser_quantity_established"],

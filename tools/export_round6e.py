@@ -1,4 +1,4 @@
-"""Export round 6E: the bundle an auditor can reproduce.
+"""Export round 6E-A: the bundle an auditor can reproduce.
 
 §21. Nineteen tables in CSV and JSON, a report, and a manifest whose
 provenance block answers the two questions the audit of the 6C and 6D
@@ -50,6 +50,7 @@ from pathlib import Path
 
 from engine import elevator_marble as elev
 from engine import export_provenance as xp
+from engine import pantry_alignment as palign
 from engine import fitting_band as fband
 from engine import functional_zone as fz
 from engine import physical_wall as pwall
@@ -68,8 +69,8 @@ from tools import export_round6d as x6d
 from tools import run_round6c as r6c
 from tools import run_round6e as r6er
 
-EXPORT = "P7757_ROUND6E_EXPORT_V1"
-NAMED = 19
+EXPORT = "P7757_ROUND6E_A_EXPORT_V1"
+NAMED = 25
 
 
 def register_rows(register, rows, stable_of) -> list:
@@ -140,9 +141,9 @@ def physical_stair_rows(stairs) -> list:
     return out
 
 
-def observation_rows(rep, coverage) -> list:
+def observation_rows(rep, coverage, plan_of=None) -> list:
     out = []
-    floor_of = {r["floor"]: r for r in coverage["per_floor"]}
+    plans = dict(plan_of or {})
     region_floor = {}
     for row in coverage["per_floor"]:
         for region in row["drawing_regions"]:
@@ -151,6 +152,10 @@ def observation_rows(rep, coverage) -> list:
         for o in s.observations:
             rec = o.record()
             rec["floor"] = region_floor.get(o.region_id, "")
+            # A STAIR REGISTER IS ABOUT PLANS: an unresolved run on an
+            # elevation is not a missing staircase, and the column says
+            # which is which rather than the reader guessing.
+            rec["on_a_floor_plan"] = bool(plans.get(o.region_id, True))
             rec["covers_m2"] = round(stair._extent_m2(o), 4)
             rec["evidence"] = " ".join(rec.pop("evidence"))
             rec["at_mm"] = " ".join(str(v) for v in rec.pop("at_mm"))
@@ -187,6 +192,66 @@ def quantity_rows(quantities) -> list:
                 rec[f"{key}_unit"] = val["unit"]
                 rec[f"{key}_status"] = val["status"]
         rec["exceptions"] = " ".join(row["exceptions"])
+        out.append(rec)
+    return out
+
+
+def commercial_rows(commercial) -> list:
+    """§2, §3, §6. What the work is BOUGHT by, beside the geometry."""
+    out = []
+    for row in commercial.get("rows", ()):
+        rec = dict(row)
+        rec["step_widths_mm"] = " ".join(str(w)
+                                         for w in rec.pop("step_widths_mm"))
+        rec["step_rate_covers"] = " ".join(rec.pop("step_rate_covers"))
+        out.append(rec)
+    return out
+
+
+def edge_rows(edges) -> list:
+    """§4, §5. Every tread's four edges, and the nosing checked against
+    the front edge it is supposed to be."""
+    return [dict(e) for e in edges]
+
+
+def landing_rows(landings) -> list:
+    """§8. Every piece between the flights, with its working."""
+    out = []
+    for row in landings.get("rows", ()):
+        rec = dict(row)
+        rec["evidence"] = " ".join(rec.pop("evidence"))
+        out.append(rec)
+    return out
+
+
+def alignment_rows(alignment) -> list:
+    """§13, §14. The pantry's walls, and what the design set said."""
+    out = []
+    for row in alignment.get("rows", ()):
+        rec = dict(row)
+        rec["at_mm"] = " ".join(str(v) for v in rec.pop("at_mm"))
+        rec["evidence"] = " ".join(rec.pop("evidence"))
+        rec["adjacent_open_plan_labels"] = json.dumps(
+            rec.pop("adjacent_open_plan_labels"), ensure_ascii=False)
+        rec["fitting_runs_near_the_label"] = json.dumps(
+            rec.pop("fitting_runs_near_the_label"), ensure_ascii=False)
+        rec["sanitary_fixtures_found"] = json.dumps(
+            rec.pop("sanitary_fixtures_found"), ensure_ascii=False)
+        rec["sanitary_sources"] = json.dumps(rec.pop("sanitary_sources"),
+                                             ensure_ascii=False)
+        rec["applicable_wall_set"] = " ".join(rec.pop(
+            "applicable_wall_set"))
+        out.append(rec)
+    return out
+
+
+def resolution_rows(resolutions) -> list:
+    """§19. Every rule this run asked for, and where the answer came from."""
+    out = []
+    for row in resolutions.get("rows", ()):
+        rec = dict(row)
+        rec["what_is_missing"] = " ".join(rec.pop("what_is_missing"))
+        rec["value"] = json.dumps(rec.get("value"), ensure_ascii=False)
         out.append(rec)
     return out
 
@@ -290,36 +355,48 @@ def _metrics(report, tables) -> dict:
     stairs = report["C_stairs"]
     quantities = stairs["quantities"]["totals"]
     checks = [
-        ("RELEASE_ELIGIBLE_GEOMETRY", "P7757_ROUND6E_RELEASE_STATE",
+        ("RELEASE_ELIGIBLE_GEOMETRY", "P7757_ROUND6E_A_RELEASE_STATE",
          areas["RELEASE_ELIGIBLE_GEOMETRY"],
          {"where": {"RELEASE_STATUS": sreg.RELEASED}, "op": "count"}),
         ("RELEASE_ELIGIBLE_GEOMETRY_AREA_M2",
-         "P7757_ROUND6E_RELEASE_STATE",
+         "P7757_ROUND6E_A_RELEASE_STATE",
          areas["RELEASE_ELIGIBLE_GEOMETRY_AREA_M2"],
          {"where": {"RELEASE_STATUS": sreg.RELEASED}, "column": "area_m2"}),
-        ("PHYSICAL_SPACES", "P7757_ROUND6E_SPACE_REGISTER",
+        ("PHYSICAL_SPACES", "P7757_ROUND6E_A_SPACE_REGISTER",
          areas["PHYSICAL_SPACES"],
          {"where": {"is_physical_space": True}, "op": "count"}),
-        ("PHYSICAL_SPACE_AREA_M2", "P7757_ROUND6E_SPACE_REGISTER",
+        ("PHYSICAL_SPACE_AREA_M2", "P7757_ROUND6E_A_SPACE_REGISTER",
          areas["PHYSICAL_SPACE_AREA_M2"],
          {"where": {"is_physical_space": True}, "column": "area_m2"}),
-        ("PHYSICAL_STAIRCASES", "P7757_ROUND6E_PHYSICAL_STAIR",
+        ("PHYSICAL_STAIRCASES", "P7757_ROUND6E_A_PHYSICAL_STAIR",
          stairs["counts"]["physical_stair_assemblies"], {"op": "count"}),
-        ("NOSING_LENGTH_LM", "P7757_ROUND6E_PHYSICAL_STAIR",
+        ("NOSING_LENGTH_LM", "P7757_ROUND6E_A_PHYSICAL_STAIR",
          quantities["NOSING_LENGTH"]["value"],
          {"column": "NET_NOSING_LM"}),
-        ("LANDING_AREA_M2", "P7757_ROUND6E_PHYSICAL_STAIR",
+        ("LANDING_AREA_M2", "P7757_ROUND6E_A_PHYSICAL_STAIR",
          quantities["LANDING_AREA"]["value"],
          {"column": "NET_LANDING_M2"}),
-        ("STAIR_OBSERVATIONS", "P7757_ROUND6E_STAIR_OBSERVATION",
+        ("STAIR_OBSERVATIONS", "P7757_ROUND6E_A_STAIR_OBSERVATION",
          sum(r["stair_observations"]
              for r in stairs["coverage"]["per_floor"]), {"op": "count"}),
-        ("UNRESOLVED_STAIR_OBSERVATIONS",
-         "P7757_ROUND6E_STAIR_OBSERVATION",
+        ("UNRESOLVED_STAIR_OBSERVATIONS_ON_A_FLOOR_PLAN",
+         "P7757_ROUND6E_A_STAIR_OBSERVATION",
          stairs["coverage"]["unresolved_in_total"],
-         {"where": {"status": stair.UNRESOLVED_OBSERVATION},
+         {"where": {"status": stair.UNRESOLVED_OBSERVATION,
+                    "on_a_floor_plan": True},
           "op": "count"}),
-        ("SPACE_LINEAGE_LINKS", "P7757_ROUND6E_SPACE_LINEAGE",
+        ("STAIR_STEP_COMMERCIAL_LM_ESTABLISHED_ONLY",
+         "P7757_ROUND6E_A_STAIR_COMMERCIAL_QUANTITY",
+         (report["I_commercial"]["totals"][stair.COMMERCIAL_STEP_LM]
+          ["established_staircases_only"]),
+         {"where": {"status": "MEASURED_NET"},
+          "column": stair.COMMERCIAL_STEP_LM}),
+        ("STAIR_LANDINGS", "P7757_ROUND6E_A_STAIR_LANDING_ANALYSIS",
+         report["K_landing_analysis"]["stair_landings"],
+         {"where": {"is_stair_landing": True}, "op": "count"}),
+        ("TREADS_AUDITED", "P7757_ROUND6E_A_STAIR_EDGE_ROLE_AUDIT",
+         report["J_edge_roles"]["treads"], {"op": "count"}),
+        ("SPACE_LINEAGE_LINKS", "P7757_ROUND6E_A_SPACE_LINEAGE",
          report["A_lineage"]["this_run"]["counts"]["links"],
          {"where": {"lineage": [slin.UNCHANGED, slin.RESHAPED,
                                 slin.SPLIT, slin.MERGED, slin.NEW,
@@ -331,7 +408,7 @@ def _metrics(report, tables) -> dict:
 
 
 def run(decode_json: str, out_dir: str, *, supervised_json: str = "",
-        sections_json: str = "", dwf: str = "", pdfs=(),
+        sections_json: str = "", dwf: str = "", pdfs=(), sanitary=(),
         tests=None, allow_dirty: bool = False,
         why_dirty: str = "") -> dict:
     frozen = r6e.assert_frozen()
@@ -351,6 +428,7 @@ def run(decode_json: str, out_dir: str, *, supervised_json: str = "",
             "SPACE_LINEAGE_HASH": slin.model_hash(),
             "RULE_LIBRARY_MODEL_HASH": rlib.model_hash(),
             "ELEVATOR_MARBLE_HASH": elev.model_hash(),
+            "PANTRY_ALIGNMENT_HASH": palign.model_hash(),
             "VERTICAL_EVIDENCE_HASH": ve.model_hash(),
             "REPORT_CONSISTENCY_HASH": rcons.model_hash(),
             "EXPORT_PROVENANCE_HASH": xp.model_hash(),
@@ -360,13 +438,14 @@ def run(decode_json: str, out_dir: str, *, supervised_json: str = "",
 
     report, ctx = r6er.run_full(
         decode_json, supervised_json=supervised_json,
-        sections_json=sections_json, dwf=dwf, pdfs=pdfs)
+        sections_json=sections_json, dwf=dwf, pdfs=pdfs,
+        sanitary=sanitary)
     rep, register, roles = ctx["rep"], ctx["register"], ctx["roles"]
     rows, zones = ctx["rows"], ctx["zones"]
     report["_rows"] = rows
 
     out = Path(out_dir)
-    w, name = x6b._write, "P7757_ROUND6E_"
+    w, name = x6b._write, "P7757_ROUND6E_A_"
     tables = {
         f"{name}SPACE_REGISTER": (
             register_rows(register, rows, ctx["stable_of"]),
@@ -429,7 +508,9 @@ def run(decode_json: str, out_dir: str, *, supervised_json: str = "",
              "note": ("STAIR_LANDING, OPEN_VOID, FLOOR_PLATE or "
                       "CIRCULATION_FLOOR. Only the first is stair")}),
         f"{name}STAIR_OBSERVATION": (
-            observation_rows(rep, ctx["coverage"]),
+            observation_rows(rep, ctx["coverage"],
+                             plan_of={r.region_id: r.may_release_rooms
+                                      for r in roles.roles}),
             {"one_row_per": "stair-like thing the drawing shows",
              "note": ("MAPPED_TO_STAIR_ASSEMBLY, "
                       "STAIR_OBSERVATION_UNRESOLVED or refused on "
@@ -447,6 +528,39 @@ def run(decode_json: str, out_dir: str, *, supervised_json: str = "",
             {"one_row_per": "level mark, riser note or sheet found",
              "note": ("PLACED, a LEAD in a representation this project "
                       "cannot place, or refused as a take-off total")}),
+        f"{name}STAIR_COMMERCIAL_QUANTITY": (
+            commercial_rows(ctx["commercial"]),
+            {"one_row_per": "staircase, as the work is BOUGHT",
+             "note": ("the step length is the sum of the UNIQUE physical "
+                      "step widths after the cross-plan reconciliation, "
+                      "never derived from a tread area. The landing is "
+                      "an area and the skirting a length, and neither "
+                      "is multiplied by the step basis. No rate here")}),
+        f"{name}STAIR_EDGE_ROLE_AUDIT": (
+            edge_rows(ctx["edges"]),
+            {"one_row_per": "tread, with its four edges",
+             "note": ("FRONT/NOSING and BACK run across the width; "
+                      "INNER and OUTER run along the going and are ARCS "
+                      "on a winder. The nosing length is read off the "
+                      "front edge, so the two cannot disagree")}),
+        f"{name}STAIR_LANDING_ANALYSIS": (
+            landing_rows(ctx["landings"]),
+            {"one_row_per": "piece of floor between the flights",
+             "note": ("the verdict and the working behind it. A piece "
+                      "is not a landing because an owner rule needs one "
+                      "to exist")}),
+        f"{name}PANTRY_SANITARY_ALIGNMENT": (
+            alignment_rows(ctx["alignment"]),
+            {"one_row_per": "pantry label, and the design set's answer",
+             "note": ("adjacency, the fitting runs, the sanitary "
+                      "fixtures and what the sanitary set turned out to "
+                      "be. The perimeter of the open space is never the "
+                      "pantry's tile")}),
+        f"{name}RULE_RESOLUTION": (
+            resolution_rows(ctx["resolutions"]),
+            {"one_row_per": "rule this run asked for",
+             "note": ("the level of the priority order each answer came "
+                      "from: DRAWING > PROJECT > STANDARD > ASK")}),
         f"{name}RULE_LIBRARY": (
             rule_rows(ctx["library"], ctx["project_rules"]),
             {"one_row_per": "Urban Projects owner rule, as versioned",
@@ -492,7 +606,7 @@ def run(decode_json: str, out_dir: str, *, supervised_json: str = "",
     consistency = _metrics(report, {k: v[0] for k, v in tables.items()})
     report["G_report_against_export"] = consistency
 
-    rep_path = out / "P7757_ROUND6E_REPORT.json"
+    rep_path = out / "P7757_ROUND6E_A_REPORT.json"
     rep_path.write_text(json.dumps(report, indent=2, ensure_ascii=False,
                                    default=str) + "\n", encoding="utf-8")
     files.append(xp.file_hashes(rep_path, content=report))
@@ -524,6 +638,18 @@ def run(decode_json: str, out_dir: str, *, supervised_json: str = "",
             "elevator": report["H_elevator_marble"]["status"],
         },
         "stair_coverage": ctx["coverage"]["stair_coverage"],
+        "audit_corrections_6e_a": {
+            "NOSING_IS_THE_FRONT_EDGE": (
+                f"{len(ctx['edges'])} treads audited, "
+                + str(sum(1 for e in ctx["edges"]
+                          if not e["nosing_is_the_front_edge"]))
+                + " disagreements"),
+            "STAIR_STEP_COMMERCIAL_LM": ctx["commercial"]["totals"][
+                stair.COMMERCIAL_STEP_LM],
+            "STAIR_LANDINGS": ctx["landings"]["stair_landings"],
+            "PANTRY_WALLS": ctx["alignment"]["require_owner_review"],
+            "rate_card": "data/rate_cards/P7757_RATE_CARD.json",
+        },
         "riser_height": report["D_vertical_evidence"][
             "riser_height_status"],
         "MARBLE_INTERSECT_PORCELAIN_M2": report["E_marble_and_porcelain"][
@@ -539,18 +665,18 @@ def run(decode_json: str, out_dir: str, *, supervised_json: str = "",
             "no TradeMeasurementZone, no floor ceramic, no wall ceramic, "
             "no waste rule, no pricing and no contractor rates"),
     }
-    man = out / "ROUND6E_EXPORT_MANIFEST.json"
+    man = out / "ROUND6E_A_EXPORT_MANIFEST.json"
     man.write_text(json.dumps(manifest, indent=2, ensure_ascii=False,
                               default=str) + "\n", encoding="utf-8")
 
-    archive = out / "P7757_ROUND6E_EXPORT.tar.gz"
+    archive = out / "P7757_ROUND6E_A_EXPORT.tar.gz"
     with tarfile.open(archive, "w:gz") as tar:
         for e in exports:
             for key in ("csv", "json"):
                 p = Path(e[key])
-                tar.add(p, arcname=f"P7757_ROUND6E_EXPORT/{p.name}")
+                tar.add(p, arcname=f"P7757_ROUND6E_A_EXPORT/{p.name}")
         for p in (man, rep_path):
-            tar.add(p, arcname=f"P7757_ROUND6E_EXPORT/{p.name}")
+            tar.add(p, arcname=f"P7757_ROUND6E_A_EXPORT/{p.name}")
     manifest["archive"] = str(archive)
     manifest["archive_sha256"] = xp.raw_sha256(archive)
     man.write_text(json.dumps(manifest, indent=2, ensure_ascii=False,
@@ -566,6 +692,7 @@ def main(argv=None) -> int:
     ap.add_argument("--sections", default="")
     ap.add_argument("--dwf", default="")
     ap.add_argument("--pdf", action="append", default=[])
+    ap.add_argument("--sanitary", action="append", default=[])
     ap.add_argument("--tests-passed", type=int, default=0)
     ap.add_argument("--tests-failed", type=int, default=0)
     ap.add_argument("--tests-command", default="python -m pytest")
@@ -574,6 +701,7 @@ def main(argv=None) -> int:
     a = ap.parse_args(argv)
     man = run(a.decode_json, a.out_dir, supervised_json=a.supervised,
               sections_json=a.sections, dwf=a.dwf, pdfs=a.pdf,
+              sanitary=a.sanitary,
               tests={"passed": a.tests_passed, "failed": a.tests_failed,
                      "command": a.tests_command},
               allow_dirty=a.allow_dirty, why_dirty=a.why_dirty)

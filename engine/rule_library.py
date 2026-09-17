@@ -25,6 +25,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
 from dataclasses import dataclass, field
 from pathlib import Path
 
@@ -44,10 +45,38 @@ GEOMETRY_NOT_ESTABLISHED = "THE_GEOMETRY_THIS_RULE_NEEDS_IS_NOT_ESTABLISHED"
 DEFAULT = "DEFAULT"
 MANDATORY = "MANDATORY"
 
+# --- §18 THREE THINGS THAT ARE NOT ONE THING ----------------------------
+#
+# A. what a Kuwaiti or Arabic construction term MEANS
+# B. how the physical quantity it names is MEASURED
+# C. what a supplier CHARGES for it, on a quotation, on a date
+#
+# نايم is a stair tread (A). Its commercial quantity is the sum of the
+# step widths in linear metres (B). 15 KWD/lm is one supplier's price on
+# one job (C) — and a price inside a measurement rule is a price that
+# goes stale without anybody noticing, so this library refuses to hold
+# one. Rates live in a project rate card, scoped to a quotation and a
+# date, and nothing here reads them.
+KIND_VOCABULARY = "CONSTRUCTION_VOCABULARY"
+KIND_MEASUREMENT = "MEASUREMENT_RULE"
+KIND_COMMERCIAL = "COMMERCIAL_MEASUREMENT_BASIS"
+KINDS = (KIND_VOCABULARY, KIND_MEASUREMENT, KIND_COMMERCIAL)
+
+RATE_IN_A_RULE = "A_RATE_MAY_NOT_LIVE_IN_A_RULE"
+# MONEY, as a currency actually written down — not as the word "price"
+# in a sentence about what a quantity is bought by. A rule may say that
+# a surround is bought by the square metre; it may not say what a square
+# metre costs.
+MONEY = re.compile(
+    r"(\b(KWD|KD|USD|EUR|AED|SAR|GBP|DINAR|FILS)\b"
+    r"|\d\s*(KWD|KD|USD|EUR)\b"
+    r"|\bRATE\s*[:=]|\bPRICE\s*[:=]|\bPER\s+(LM|M2)\s*[:=])")
+
 # Every field a rule record must carry. A rule missing one of these is
 # not a rule: it is a habit somebody typed in, and it is refused.
 REQUIRED_FIELDS = (
-    "rule_id", "rule_name", "trade", "scope", "default_or_mandatory",
+    "rule_id", "rule_name", "rule_kind", "trade", "scope",
+    "default_or_mandatory",
     "owner_confirmed", "version", "effective_date", "source",
     "project_override_allowed", "required_geometry", "calculation_method",
     "unit", "exceptions", "unknown_behavior",
@@ -64,6 +93,7 @@ class RuleRefused(ValueError):
 class Rule:
     rule_id: str = ""
     rule_name: str = ""
+    rule_kind: str = KIND_MEASUREMENT
     trade: str = ""
     scope: str = ""
     country_context: str = ""
@@ -85,6 +115,7 @@ class Rule:
         return {
             "rule_id": self.rule_id,
             "rule_name": self.rule_name,
+            "rule_kind": self.rule_kind,
             "trade": self.trade,
             "scope": self.scope,
             "country_context": self.country_context,
@@ -172,8 +203,9 @@ class Library:
 
 def model_hash() -> str:
     parts = ([MODEL] + list(PRIORITY) + list(REQUIRED_FIELDS)
+             + list(KINDS)
              + [OWNER_RULE_REQUEST, NO_SUCH_RULE, GEOMETRY_NOT_ESTABLISHED,
-                DEFAULT, MANDATORY])
+                DEFAULT, MANDATORY, RATE_IN_A_RULE])
     return hashlib.sha256("|".join(parts).encode("utf-8")).hexdigest()[:24]
 
 
@@ -188,8 +220,21 @@ def build(records, *, library_version: str = "", notes=None) -> Library:
                 + ", ".join(missing)
                 + ". A rule nobody can date, version or source is not a "
                   "rule this project applies")
+        if rec["rule_kind"] not in KINDS:
+            raise RuleRefused(
+                f"{rec['rule_id']} is a {rec['rule_kind']}, which is none "
+                "of " + ", ".join(KINDS))
+        money = " ".join(str(rec.get(k, "")) for k in
+                         ("value", "notes", "calculation_method",
+                          "unit")).upper()
+        if MONEY.search(money):
+            raise RuleRefused(
+                f"{rec['rule_id']} carries what reads as a price. "
+                + RATE_IN_A_RULE + ": a rate belongs to a project rate "
+                "card, with its supplier and its date")
         rule = Rule(
             rule_id=rec["rule_id"], rule_name=rec["rule_name"],
+            rule_kind=rec["rule_kind"],
             trade=rec["trade"], scope=rec["scope"],
             country_context=rec.get("country_context", ""),
             default_or_mandatory=rec["default_or_mandatory"],
@@ -289,6 +334,34 @@ def resolve(library: Library, rule_id: str, *, drawing=None,
         source=SRC_STANDARD, rule_version=rule.version, established=True,
         why=(f"the Urban Projects standard, {rule.default_or_mandatory} "
              f"since {rule.effective_date}"))
+
+
+def resolution_log(library: Library, asked) -> dict:
+    """Every rule this run asked for, and the answer it got (§19).
+
+    `asked` is [(rule_id, {"drawing": ..., "project": ...}), ...] — what
+    the run actually resolved, in the order it resolved them, so that a
+    reader can see which level of the priority order each answer came
+    from rather than inferring it from the output.
+    """
+    rows = []
+    for rule_id, given in asked:
+        res = resolve(library, rule_id, **dict(given or {}))
+        rule = library.get(rule_id)
+        rows.append(dict(res.record(),
+                         rule_name=(rule.rule_name if rule else ""),
+                         rule_kind=(rule.rule_kind if rule else ""),
+                         scope=(rule.scope if rule else ""),
+                         asked_with=json.dumps(given or {},
+                                               sort_keys=True,
+                                               ensure_ascii=False)))
+    return {
+        "model": MODEL,
+        "rows": rows,
+        "priority": list(PRIORITY),
+        "unresolved": [r["rule_id"] for r in rows if not r["established"]],
+        "a_rate_is_not_here": RATE_IN_A_RULE,
+    }
 
 
 def owner_rule_request(term: str, *, where: str, question: str,

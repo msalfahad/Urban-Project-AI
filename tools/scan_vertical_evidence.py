@@ -42,6 +42,40 @@ DESIGN_PDF = "DESIGN_PDF"
 # it, which is why everything from here is UNPLACED.
 W2D_STRING = re.compile(rb"'([ -~]{1,60})'")
 
+# §11 (6E-A). Each W2D text is preceded by the two bytes `vx` and two
+# 32-bit integers. They are the position — and W2D writes positions as
+# DELTAS from the running point, so the pair beside a level mark is not
+# where it is on the sheet. Reading it as absolute would place a level
+# a few millimetres from the origin and attribute it to whatever region
+# sits there, which is worse than not placing it at all.
+W2D_TEXT_OPCODE = re.compile(rb"vx(.{4})(.{4})'([ -~]{1,60})'", re.S)
+DELTA_ENCODED = "THE_W2D_TEXT_POSITIONS_ARE_DELTA_ENCODED"
+
+
+def w2d_text_positions(path, limit: int = 40) -> list:
+    """What the stream says about WHERE its texts are, and how far that
+    gets: an opcode, two integers, and no running point to add them to.
+    """
+    raw = Path(path).read_bytes()
+    at = raw.find(b"PK\x03\x04")
+    if at < 0:
+        return []
+    zf = zipfile.ZipFile(io.BytesIO(raw[at:]))
+    out = []
+    for name in zf.namelist():
+        if not name.lower().endswith(".w2d"):
+            continue
+        data = zf.read(name)
+        for m in W2D_TEXT_OPCODE.finditer(data):
+            dx = int.from_bytes(m.group(1), "little", signed=True)
+            dy = int.from_bytes(m.group(2), "little", signed=True)
+            out.append({"text": m.group(3).decode("ascii", "replace"),
+                        "delta_x": dx, "delta_y": dy,
+                        "status": DELTA_ENCODED})
+            if len(out) >= limit:
+                return out
+    return out
+
 
 @dataclass
 class _Text:
@@ -111,6 +145,75 @@ def from_pdf(path: str, start: int = 1) -> list:
                    representation=DESIGN_PDF, placed=False, start=start)
 
 
+def placement_attempts(cad: str, dwf: str = "", pdfs=()) -> list:
+    """§11. What was actually tried to PLACE the evidence, and what each
+    attempt established. An absence of placement is reported as one, and
+    never as an absence of evidence.
+    """
+    out = []
+    if cad:
+        out.append({
+            "attempt": "THE_DECODED_DWG",
+            "representation": DESIGN_CAD,
+            "what_it_established": (
+                "its texts carry coordinates, so a level mark in it is "
+                "placed. The decode carries %%p0.00 and +0.15 only, and "
+                "neither is attributable to a floor-to-floor pair"),
+            "blocked_by": "",
+        })
+    for p in pdfs or ():
+        if not Path(p).exists():
+            continue
+        pages, rasters, vectors, chars = 0, 0, 0, 0
+        try:
+            import pymupdf
+
+            doc = pymupdf.open(p)
+            for page in doc:
+                pages += 1
+                rasters += len(page.get_images())
+                vectors += len(page.get_drawings())
+                chars += len(page.get_text())
+        except Exception as exc:      # noqa: BLE001
+            out.append({"attempt": "THE_PUBLISHED_PDF",
+                        "representation": DESIGN_PDF, "file": Path(p).name,
+                        "what_it_established": "",
+                        "blocked_by": f"{type(exc).__name__}"})
+            continue
+        out.append({
+            "attempt": "THE_PUBLISHED_PDF",
+            "representation": DESIGN_PDF,
+            "file": Path(p).name,
+            "what_it_established": (
+                f"{pages} pages, {rasters} raster images, {vectors} "
+                f"vector drawings, {chars} characters of text"),
+            "blocked_by": ("" if (vectors or chars) else
+                           "every page is a single scanned image: no "
+                           "vector geometry and no text. Placing a level "
+                           "from it would need OCR, which this project "
+                           "does not use"),
+        })
+    if dwf and Path(dwf).exists():
+        found = w2d_text_positions(dwf)
+        out.append({
+            "attempt": "THE_DWF_W2D_STREAM",
+            "representation": DESIGN_DWF,
+            "file": Path(dwf).name,
+            "what_it_established": (
+                f"{len(found)} texts carry a position opcode: two bytes "
+                "'vx' and two 32-bit integers before the string"),
+            "blocked_by": (
+                "the integers are DELTAS from the stream's running "
+                "point, not absolute coordinates. Accumulating them "
+                "needs a W2D opcode reader, which this project does "
+                "not have. Reading them as absolute would place a "
+                "level a few millimetres from the origin and attribute "
+                "it to whatever sits there"),
+            "sample": found[:5],
+        })
+    return out
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--cad")
@@ -132,7 +235,9 @@ def main() -> int:
     out = ve.assess(
         found,
         floors_needed=[f for f in a.floors.split(",") if f],
-        risers=(a.risers or None))
+        risers=(a.risers or None),
+        attempts=placement_attempts(a.cad, a.dwf[0] if a.dwf else "",
+                                    a.pdf))
     out["sources"] = ([{"path": a.cad, "representation": DESIGN_CAD}]
                       if a.cad else [])
     out["sources"] += [{"path": p, "representation": DESIGN_DWF}

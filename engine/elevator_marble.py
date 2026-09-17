@@ -100,7 +100,8 @@ def frozen_parameters() -> dict:
 def model_hash() -> str:
     parts = ([MODEL] + list(OBJECTS) + list(THREE_SIDES)
              + list(REQUIRED_GEOMETRY)
-             + [SURROUND_NOT_ESTABLISHED, WIDTH_NOT_ESTABLISHED,
+             + [FROM_A_DEFAULT, PART_DEFAULT,
+                SURROUND_NOT_ESTABLISHED, WIDTH_NOT_ESTABLISHED,
                 THRESHOLD_DEPTH_NOT_ESTABLISHED, STATIONS_NOT_ESTABLISHED,
                 EQUIVALENCE_NOT_ESTABLISHED, THRESHOLD_IS_NOT_FLOOR])
     return hashlib.sha256("|".join(parts).encode("utf-8")).hexdigest()[:24]
@@ -175,6 +176,10 @@ class Threshold:
                 None if self.exposed_edge_lm is None
                 else round(self.exposed_edge_lm, 3)),
             "depth_source": self.depth_source,
+            "a_known_dimension_is_never_replaced": (
+                "where the door width is drawn and only the depth is "
+                "not, the drawn width stays and the default depth is "
+                "borrowed for the depth alone"),
             "status": self.status,
             "what_is_missing": list(self.what_is_missing),
             "not_part_of_the_surround": (
@@ -260,19 +265,47 @@ def measure_surround(station_id: str, *, door_width_mm=None,
     return out
 
 
+FROM_A_DEFAULT = "FROM_THE_URBAN_PROJECTS_DEFAULT"
+PART_DEFAULT = "THE_DRAWN_WIDTH_WITH_THE_DEFAULT_DEPTH"
+
+
 def measure_threshold(station_id: str, *, width_mm=None, depth_mm=None,
                       depth_source=THRESHOLD_DEPTH_NOT_ESTABLISHED,
-                      exposed_edge: bool = True) -> Threshold:
-    """§L. The marble step, measured apart, and asked about when unknown."""
+                      exposed_edge: bool = True, fallback=None) -> Threshold:
+    """§L, §16. The marble step, measured apart, with a stated fallback.
+
+    Actual drawing dimensions first. Where none are available the Urban
+    Projects fallback applies — and where the DOOR WIDTH is established
+    and only the depth is not, the known width stays and only the depth
+    is borrowed. A known dimension is never replaced by a default, which
+    is what swapping in 1.10 m over a drawn 0.90 m door would do.
+    """
     out = Threshold(station_id=station_id, width_mm=width_mm,
                     depth_mm=depth_mm, depth_source=depth_source)
-    missing = [name for name, v in (("threshold_width", width_mm),
-                                    ("threshold_depth", depth_mm))
-               if v is None]
+    fb = dict(fallback or {})
+    fb_w = fb.get("width_mm")
+    fb_d = fb.get("depth_mm")
+    missing = tuple(name for name, v in (("threshold_width", width_mm),
+                                         ("threshold_depth", depth_mm))
+                    if v is None)
+    if missing and (fb_w is None and fb_d is None):
+        out.what_is_missing = missing
+        out.status = THRESHOLD_DEPTH_NOT_ESTABLISHED
+        return out
     if missing:
-        out.what_is_missing = tuple(missing)
-        out.status = (THRESHOLD_DEPTH_NOT_ESTABLISHED
-                      if depth_mm is None else rules.OWNER_RULE_REQUEST)
+        used_w = width_mm if width_mm is not None else fb_w
+        used_d = depth_mm if depth_mm is not None else fb_d
+        if used_w is None or used_d is None:
+            out.what_is_missing = missing
+            out.status = THRESHOLD_DEPTH_NOT_ESTABLISHED
+            return out
+        out.width_mm, out.depth_mm = used_w, used_d
+        out.depth_source = (PART_DEFAULT if width_mm is not None
+                            else FROM_A_DEFAULT)
+        out.what_is_missing = missing
+        out.area_m2 = used_w * used_d / 1e6
+        out.exposed_edge_lm = (used_w / 1000.0 if exposed_edge else None)
+        out.status = out.depth_source
         return out
     out.area_m2 = width_mm * depth_mm / 1e6
     out.exposed_edge_lm = (width_mm / 1000.0 if exposed_edge else None)
@@ -328,12 +361,26 @@ def stations(spec, *, library=None) -> dict:
                     right_mm=door.get("right_surround_width_mm",
                                       default_mm),
                     width_source=width.source)
+                # §16 the owner's fallback, in millimetres, and only
+                # for the dimension the drawing does not give.
+                fb = rules.resolve(lib, "UP-ELEV-005")
+                fallback = None
+                if isinstance(fb.value, dict):
+                    fallback = {
+                        "width_mm": float(fb.value.get("width_m", 0)) * 1000.0
+                        or None,
+                        "depth_mm": float(fb.value.get("depth_m", 0)) * 1000.0
+                        or None}
                 thr = measure_threshold(
-                    sid, width_mm=door.get("threshold_width_mm"),
+                    sid,
+                    width_mm=(door.get("threshold_width_mm")
+                              or door.get("door_clear_width_mm")),
                     depth_mm=door.get("threshold_depth_mm"),
                     depth_source=door.get("threshold_depth_source",
-                                          THRESHOLD_DEPTH_NOT_ESTABLISHED))
-                if thr.status != MEASURED:
+                                          THRESHOLD_DEPTH_NOT_ESTABLISHED),
+                    fallback=fallback)
+                if thr.status not in (MEASURED, PART_DEFAULT,
+                                      FROM_A_DEFAULT):
                     exceptions.append(rules.owner_rule_request(
                         sid, where=door.get("source_geometry", "unknown"),
                         question=("what is the marble threshold depth at "
@@ -349,7 +396,9 @@ def stations(spec, *, library=None) -> dict:
                         ([SURROUND_NOT_ESTABLISHED]
                          if sur.status != MEASURED else [])
                         + ([THRESHOLD_DEPTH_NOT_ESTABLISHED]
-                           if thr.status != MEASURED else []))))
+                           if thr.status not in (
+                               MEASURED, PART_DEFAULT,
+                               FROM_A_DEFAULT) else []))))
     total = ([s.surround.area_m2 for s in out]
              if out else [])
     return {

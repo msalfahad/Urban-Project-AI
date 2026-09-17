@@ -280,7 +280,8 @@ def test_a_station_with_no_door_geometry_measures_nothing():
     assert "door_clear_width" in s.what_is_missing
 
 
-def test_the_threshold_is_its_own_object_and_its_depth_is_asked_for():
+def test_the_threshold_is_its_own_object_and_says_where_it_came_from():
+    """§16. With no fallback offered it refuses; with one it says so."""
     t = elev.measure_threshold("ELV-01-GF", width_mm=1000.0)
     assert t.status == elev.THRESHOLD_DEPTH_NOT_ESTABLISHED
     assert t.area_m2 is None
@@ -288,13 +289,28 @@ def test_the_threshold_is_its_own_object_and_its_depth_is_asked_for():
         {"elevator_id": "ELV-01", "floors_served": ["GF"],
          "doors": {"ELV-01-GF": {"door_clear_width_mm": 1000.0,
                                  "door_clear_height_mm": 2100.0}}}]})
-    asked = [x for x in out["exceptions"]
-             if x["kind"] == "ELEVATOR_THRESHOLD"]
-    assert asked and "depth" in asked[0]["question_for_the_owner"]
     station = out["stations"][0]
-    assert station["threshold"]["ELEVATOR_THRESHOLD_AREA_M2"] is None
+    thr = station["threshold"]
+    # the drawn door width stays, and only the depth is borrowed
+    assert thr["threshold_width_mm"] == 1000.0
+    assert thr["threshold_depth_mm"] == 500.0
+    assert thr["ELEVATOR_THRESHOLD_AREA_M2"] == 0.5
+    assert thr["status"] == elev.PART_DEFAULT
+    assert "threshold_depth" in thr["what_is_missing"]
     # and the threshold never becomes part of the vertical surround
     assert station["surround"]["ELEVATOR_SURROUND_AREA_M2"] == 3.1
+
+
+def test_a_known_door_width_is_never_replaced_by_the_fallback():
+    """§16. 1.10 m is a fallback for an unknown width, not an override."""
+    fb = {"width_mm": 1100.0, "depth_mm": 500.0}
+    known = elev.measure_threshold("A", width_mm=900.0, fallback=fb)
+    assert known.width_mm == 900.0 and known.depth_mm == 500.0
+    assert round(known.area_m2, 4) == 0.45
+    assert known.status == elev.PART_DEFAULT
+    blank = elev.measure_threshold("B", fallback=fb)
+    assert blank.width_mm == 1100.0 and round(blank.area_m2, 4) == 0.55
+    assert blank.status == elev.FROM_A_DEFAULT
 
 
 def test_the_drawing_beats_the_half_metre_default(library):

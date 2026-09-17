@@ -901,7 +901,11 @@ def measure(normalized, profile, *, semantic=None,
             arcs=[p for p in prims if p.kind == adapter.ARC],
             primitives=[p for p in prims if p.kind == adapter.SEGMENT],
             finish_rule=(project_rules or {}).get("stair_finish_rule", ""),
-            skirting_rule=(project_rules or {}).get("stair_skirting")))
+            skirting_rule=(project_rules or {}).get("stair_skirting"),
+            # §1 (6E-A) the owner's tread marble build-up, where a rule
+            # or a drawing establishes one. It computes nothing on its
+            # own: a visible riser needs the step's RISE as well.
+            build_up_mm=(project_rules or {}).get("tread_build_up_mm")))
 
         open_by_id = {o.opening_id: o for o in opens.openings}
         rel_by_opening: dict = {}

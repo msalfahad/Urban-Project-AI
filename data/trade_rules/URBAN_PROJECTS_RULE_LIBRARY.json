@@ -1,10 +1,12 @@
 {
   "library": "URBAN_PROJECTS_RULE_LIBRARY",
-  "library_version": "1.0.0",
+  "library_version": "1.1.0",
   "notes": {
     "priority": "PROJECT DRAWING / SPECIFICATION > PROJECT-SPECIFIC OWNER OVERRIDE > URBAN PROJECTS OWNER STANDARD > UNKNOWN / ASK OWNER",
     "a_default_never_bypasses_geometry": "where a rule carries a dimension and the drawing establishes another, the drawing wins. Where the geometry a rule needs is not established, the rule's unknown_behavior applies and no default dimension is used",
-    "source": "Owner rule addendum, Urban Projects, 2026-09-17: stairs, open American pantry, elevator marble"
+    "source": "Owner rule addendum, Urban Projects, 2026-09-17: stairs, open American pantry, elevator marble",
+    "three_concepts": "CONSTRUCTION_VOCABULARY says what a term means; MEASUREMENT_RULE says how the quantity is measured; COMMERCIAL_MEASUREMENT_BASIS says how the work is bought. A RATE — what a supplier charges, on a quotation, on a date — lives in a project rate card and never in this library",
+    "source_6e_a": "Owner rule addendum 6E-A, 2026-09-17: stair thicknesses, commercial step measurement, elevator threshold fallback, vocabulary"
   },
   "rules": [
     {
@@ -19,13 +21,18 @@
       "effective_date": "2026-09-17",
       "source": "Owner rule addendum 2026-09-17 §A",
       "project_override_allowed": false,
-      "required_geometry": ["the physical space the pantry zone sits in"],
+      "required_geometry": [
+        "the physical space the pantry zone sits in"
+      ],
       "calculation_method": "PHYSICAL_SPACE -> FUNCTIONAL_ZONE = OPEN_AMERICAN_PANTRY -> TRADE_MEASUREMENT_ZONE. The zone creates no wall and closes no edge",
       "unit": "NONE",
       "value": "OPEN_AMERICAN_PANTRY_IS_A_ZONE_NOT_A_ROOM",
-      "exceptions": ["a pantry the drawing shows enclosed on four sides is a CLOSED_PANTRY and an ordinary physical space"],
+      "exceptions": [
+        "a pantry the drawing shows enclosed on four sides is a CLOSED_PANTRY and an ordinary physical space"
+      ],
       "unknown_behavior": "PANTRY_OPENNESS_UNKNOWN",
-      "notes": "the openness of a particular pantry is a project-level answer: the drawing, or the owner for that project"
+      "notes": "the openness of a particular pantry is a project-level answer: the drawing, or the owner for that project",
+      "rule_kind": "MEASUREMENT_RULE"
     },
     {
       "rule_id": "UP-PANTRY-002",
@@ -39,13 +46,16 @@
       "effective_date": "2026-09-17",
       "source": "Owner rule addendum 2026-09-17 §A",
       "project_override_allowed": false,
-      "required_geometry": ["which sides of the zone have no wall on them"],
+      "required_geometry": [
+        "which sides of the zone have no wall on them"
+      ],
       "calculation_method": "WALL_TILE_LENGTH = 0 on an edge open toward DINING, SALOON, LIVING, RECEPTION or OPEN CIRCULATION. The zone is never closed virtually to produce a wall",
       "unit": "lm",
       "value": 0.0,
       "exceptions": [],
       "unknown_behavior": "WALL_TILE_LENGTH_NOT_ESTABLISHED",
-      "notes": ""
+      "notes": "",
+      "rule_kind": "MEASUREMENT_RULE"
     },
     {
       "rule_id": "UP-PANTRY-003",
@@ -59,13 +69,22 @@
       "effective_date": "2026-09-17",
       "source": "Owner rule addendum 2026-09-17 §B",
       "project_override_allowed": true,
-      "required_geometry": ["the host wall segments of the pantry installation", "counter and cabinet geometry", "sink and plumbing evidence", "the architectural drawing", "the MEP or sanitary drawing where available"],
+      "required_geometry": [
+        "the host wall segments of the pantry installation",
+        "counter and cabinet geometry",
+        "sink and plumbing evidence",
+        "the architectural drawing",
+        "the MEP or sanitary drawing where available"
+      ],
       "calculation_method": "FULL_WALL tile on the actual host walls of the installation. The arrangement is ONE_WALL, L_SHAPED, U_SHAPED or OTHER_DRAWN_CONFIGURATION, derived from the geometry and never from the word PANTRY",
       "unit": "m2",
       "value": "FULL_WALL_ON_THE_APPLICABLE_PANTRY_WALLS",
-      "exceptions": ["never tile the perimeter of an imaginary closed pantry"],
+      "exceptions": [
+        "never tile the perimeter of an imaginary closed pantry"
+      ],
       "unknown_behavior": "PANTRY_TILE_WALLS_REQUIRE_OWNER_REVIEW",
-      "notes": "the wall serving the water, plumbing and counter arrangement is the one to identify first"
+      "notes": "the wall serving the water, plumbing and counter arrangement is the one to identify first",
+      "rule_kind": "MEASUREMENT_RULE"
     },
     {
       "rule_id": "UP-PANTRY-004",
@@ -79,13 +98,16 @@
       "effective_date": "2026-09-17",
       "source": "Owner rule addendum 2026-09-17 §B",
       "project_override_allowed": false,
-      "required_geometry": ["a project, drawing or owner height rule"],
+      "required_geometry": [
+        "a project, drawing or owner height rule"
+      ],
       "calculation_method": "the height comes from the project, the drawing or the owner. No universal height exists in this engine",
       "unit": "m",
       "value": null,
       "exceptions": [],
       "unknown_behavior": "OWNER_RULE_REQUEST",
-      "notes": ""
+      "notes": "",
+      "rule_kind": "MEASUREMENT_RULE"
     },
     {
       "rule_id": "UP-STAIR-001",
@@ -99,13 +121,18 @@
       "effective_date": "2026-09-17",
       "source": "Owner rule addendum 2026-09-17 §C",
       "project_override_allowed": true,
-      "required_geometry": ["the stair assemblies of the project"],
+      "required_geometry": [
+        "the stair assemblies of the project"
+      ],
       "calculation_method": "MARBLE on TREAD (نايم), RISER (قائم) and LANDING (استراحة) of EVERY stair assembly — main, secondary, service, roof, external steps — not only the main staircase",
       "unit": "FINISH",
       "value": "MARBLE",
-      "exceptions": ["a drawing, specification or owner statement that establishes another finish for a stair overrides this"],
+      "exceptions": [
+        "a drawing, specification or owner statement that establishes another finish for a stair overrides this"
+      ],
       "unknown_behavior": "STAIR_FINISH_NOT_CONFIRMED",
-      "notes": "the finish rule is applied to stairs the engine has DETECTED. A stair-like observation nobody reconstructed is unresolved, not marble"
+      "notes": "the finish rule is applied to stairs the engine has DETECTED. A stair-like observation nobody reconstructed is unresolved, not marble",
+      "rule_kind": "MEASUREMENT_RULE"
     },
     {
       "rule_id": "UP-STAIR-002",
@@ -119,13 +146,25 @@
       "effective_date": "2026-09-17",
       "source": "Owner rule addendum 2026-09-17 §D",
       "project_override_allowed": false,
-      "required_geometry": ["floor_from", "floor_to", "total_rise", "number_of_risers", "number_of_treads", "stair_width", "individual_tread_depths", "individual_riser_heights", "landings", "winder and curved tread polygons"],
+      "required_geometry": [
+        "floor_from",
+        "floor_to",
+        "total_rise",
+        "number_of_risers",
+        "number_of_treads",
+        "stair_width",
+        "individual_tread_depths",
+        "individual_riser_heights",
+        "landings",
+        "winder and curved tread polygons"
+      ],
       "calculation_method": "each figure from the floor-to-floor height, the sections, the levels, the stair details and the CAD geometry. A 16 cm riser, a 30 cm tread and a 120 cm width are EXAMPLES and may be used diagnostically only",
       "unit": "NONE",
       "value": null,
       "exceptions": [],
       "unknown_behavior": "STAIR_GEOMETRY_NOT_ESTABLISHED",
-      "notes": ""
+      "notes": "",
+      "rule_kind": "MEASUREMENT_RULE"
     },
     {
       "rule_id": "UP-STAIR-003",
@@ -139,13 +178,19 @@
       "effective_date": "2026-09-17",
       "source": "Owner rule addendum 2026-09-17 §E",
       "project_override_allowed": false,
-      "required_geometry": ["the actual step rise", "the tread marble thickness or build-up detail"],
+      "required_geometry": [
+        "the actual step rise",
+        "the tread marble thickness or build-up detail"
+      ],
       "calculation_method": "VISIBLE_RISER_HEIGHT = step_rise - tread_marble_thickness. TREAD_M2 = stair_width x tread_depth; RISER_VISIBLE_M2 = stair_width x VISIBLE_RISER_HEIGHT. The owner's worked example is 1.20 x 0.30 = 0.360 m2 of tread and 1.20 x (0.16 - 0.03) = 0.156 m2 of riser, 0.516 m2 per step — an EXAMPLE, not a constant",
       "unit": "m2",
       "value": null,
-      "exceptions": ["13 cm is never hardcoded: it is the example's arithmetic, not a standard"],
+      "exceptions": [
+        "13 cm is never hardcoded: it is the example's arithmetic, not a standard"
+      ],
       "unknown_behavior": "VISIBLE_RISER_HEIGHT_NOT_ESTABLISHED",
-      "notes": ""
+      "notes": "",
+      "rule_kind": "MEASUREMENT_RULE"
     },
     {
       "rule_id": "UP-STAIR-004",
@@ -165,7 +210,8 @@
       "value": "KEEP_THEM_APART",
       "exceptions": [],
       "unknown_behavior": "CONTRACTOR_PRICING_BASIS_NOT_ESTABLISHED",
-      "notes": ""
+      "notes": "",
+      "rule_kind": "MEASUREMENT_RULE"
     },
     {
       "rule_id": "UP-STAIR-005",
@@ -179,13 +225,18 @@
       "effective_date": "2026-09-17",
       "source": "Owner rule addendum 2026-09-17 §G",
       "project_override_allowed": false,
-      "required_geometry": ["the landing polygon"],
+      "required_geometry": [
+        "the landing polygon"
+      ],
       "calculation_method": "the landing's actual polygon in m2, with the invariant MARBLE_STAIR_AREA n PORCELAIN_FLOOR_AREA = 0 m2",
       "unit": "m2",
       "value": "MARBLE",
-      "exceptions": ["a piece of floor between the flights that is not a landing — a floor plate, a void, circulation — is not stair marble"],
+      "exceptions": [
+        "a piece of floor between the flights that is not a landing — a floor plate, a void, circulation — is not stair marble"
+      ],
       "unknown_behavior": "LANDING_QUANTITY_NOT_ESTABLISHED",
-      "notes": ""
+      "notes": "",
+      "rule_kind": "MEASUREMENT_RULE"
     },
     {
       "rule_id": "UP-ELEV-001",
@@ -199,13 +250,18 @@
       "effective_date": "2026-09-17",
       "source": "Owner rule addendum 2026-09-17 §H",
       "project_override_allowed": false,
-      "required_geometry": ["elevator_id", "the floors actually served", "the landing doors on each floor"],
+      "required_geometry": [
+        "elevator_id",
+        "the floors actually served",
+        "the landing doors on each floor"
+      ],
       "calculation_method": "ELEVATOR_LANDING_MARBLE_ASSEMBLY per station: one elevator serving four floors is four stations, and two doors on one floor are two landing-door assemblies. The shaft alone is never the count",
       "unit": "pcs",
       "value": "ONE_ASSEMBLY_PER_LANDING_DOOR",
       "exceptions": [],
       "unknown_behavior": "ELEVATOR_STATIONS_NOT_ESTABLISHED",
-      "notes": "declared for the later trade and BOQ phase. Nothing is measured on a project until its geometry is established"
+      "notes": "declared for the later trade and BOQ phase. Nothing is measured on a project until its geometry is established",
+      "rule_kind": "MEASUREMENT_RULE"
     },
     {
       "rule_id": "UP-ELEV-002",
@@ -219,13 +275,22 @@
       "effective_date": "2026-09-17",
       "source": "Owner rule addendum 2026-09-17 §I, with the owner's reference image",
       "project_override_allowed": true,
-      "required_geometry": ["door_clear_width", "door_clear_height", "left_surround_width", "right_surround_width", "top_surround_width"],
+      "required_geometry": [
+        "door_clear_width",
+        "door_clear_height",
+        "left_surround_width",
+        "right_surround_width",
+        "top_surround_width"
+      ],
       "calculation_method": "LEFT, TOP and RIGHT of the OUTER landing door, 0.50 m wide unless the drawing, detail or specification establishes another width. Measured as the AREA of the actual surround polygon in m2",
       "unit": "m",
       "value": 0.5,
-      "exceptions": ["a documented project dimension replaces the default"],
+      "exceptions": [
+        "a documented project dimension replaces the default"
+      ],
       "unknown_behavior": "ELEVATOR_SURROUND_WIDTH_NOT_ESTABLISHED",
-      "notes": ""
+      "notes": "",
+      "rule_kind": "MEASUREMENT_RULE"
     },
     {
       "rule_id": "UP-ELEV-003",
@@ -239,13 +304,18 @@
       "effective_date": "2026-09-17",
       "source": "Owner rule addendum 2026-09-17 §I, §J",
       "project_override_allowed": false,
-      "required_geometry": ["the surround polygon", "openings and deductions", "the measurement basis and its source geometry"],
+      "required_geometry": [
+        "the surround polygon",
+        "openings and deductions",
+        "the measurement basis and its source geometry"
+      ],
       "calculation_method": "construct the 2D cladding polygon of the three sides and take its UNION area. Never three-side linear perimeter x width, which counts the two top corners twice. ELEVATOR_SURROUND_AREA_M2 and ELEVATOR_SURROUND_EDGE_LM are kept separately and neither substitutes for the other",
       "unit": "m2",
       "value": "UNION_AREA_OF_THE_SURROUND_POLYGON",
       "exceptions": [],
       "unknown_behavior": "ELEVATOR_SURROUND_GEOMETRY_NOT_ESTABLISHED",
-      "notes": "Urban Projects normally prefers this surround measured and priced by m2 rather than by linear metre"
+      "notes": "Urban Projects normally prefers this surround measured and priced by m2 rather than by linear metre",
+      "rule_kind": "MEASUREMENT_RULE"
     },
     {
       "rule_id": "UP-ELEV-004",
@@ -259,33 +329,232 @@
       "effective_date": "2026-09-17",
       "source": "Owner rule addendum 2026-09-17 §K",
       "project_override_allowed": false,
-      "required_geometry": ["door dimensions per station", "surround dimensions per station", "the detail", "the finish"],
+      "required_geometry": [
+        "door dimensions per station",
+        "surround dimensions per station",
+        "the detail",
+        "the finish"
+      ],
       "calculation_method": "ONE VERIFIED TYPICAL STATION x VERIFIED COUNT, preserving every individual station id (ELV-01-GF, ELV-01-FF, ...). Nothing is multiplied until equivalence is established",
       "unit": "pcs",
       "value": "PRESERVE_THE_STATION_IDS",
       "exceptions": [],
       "unknown_behavior": "STATION_EQUIVALENCE_NOT_ESTABLISHED",
-      "notes": ""
+      "notes": "",
+      "rule_kind": "MEASUREMENT_RULE"
     },
     {
       "rule_id": "UP-ELEV-005",
-      "rule_name": "The elevator threshold is marble, measured separately",
+      "rule_name": "The elevator threshold is marble, measured separately, with a fallback size",
       "trade": "MARBLE",
       "scope": "ELEVATOR",
       "country_context": "",
+      "default_or_mandatory": "DEFAULT",
+      "owner_confirmed": true,
+      "version": "1.1.0",
+      "effective_date": "2026-09-17",
+      "source": "Owner rule addendum 2026-09-17 §L, fallback confirmed in the 6E-A addendum §16",
+      "project_override_allowed": true,
+      "required_geometry": [
+        "threshold width",
+        "threshold depth",
+        "the front exposed edge where applicable"
+      ],
+      "calculation_method": "ELEVATOR_THRESHOLD_MARBLE as its own object: width x depth in m2, and the exposed front edge in lm. ACTUAL DRAWING DIMENSIONS FIRST. Where none are available the Urban Projects fallback is 1.10 m x 0.50 m = 0.55 m2 — and where the door width IS established and only the depth is not, the width stays what the drawing says and only the 0.50 m depth is borrowed. A known dimension is never replaced by a default. It is never merged into the vertical door surround, and ELEVATOR_THRESHOLD_MARBLE_AREA n PORCELAIN_FLOOR_AREA = 0 m2 holds",
+      "unit": "m2",
+      "value": {
+        "width_m": 1.1,
+        "depth_m": 0.5
+      },
+      "exceptions": [],
+      "unknown_behavior": "ELEVATOR_THRESHOLD_DEPTH_NOT_ESTABLISHED",
+      "notes": "the fallback is a DEFAULT and not mandatory geometry: a drawing, a detail or a project note replaces either dimension on its own",
+      "rule_kind": "MEASUREMENT_RULE"
+    },
+    {
+      "rule_id": "UP-STAIR-006",
+      "rule_name": "Stair tread marble is 30 mm thick",
+      "rule_kind": "MEASUREMENT_RULE",
+      "trade": "MARBLE",
+      "scope": "STAIR",
+      "country_context": "KUWAIT",
+      "default_or_mandatory": "DEFAULT",
+      "owner_confirmed": true,
+      "version": "1.0.0",
+      "effective_date": "2026-09-17",
+      "source": "Owner rule addendum 6E-A §1",
+      "project_override_allowed": true,
+      "required_geometry": [
+        "the stair tread detail where the drawing gives one"
+      ],
+      "calculation_method": "TREAD_MARBLE_THICKNESS = 0.030 m unless the drawing, specification or owner establishes another. It is the build-up subtracted from the step rise to give the VISIBLE riser (UP-STAIR-003)",
+      "unit": "m",
+      "value": 0.03,
+      "exceptions": [
+        "a drawn tread detail replaces it"
+      ],
+      "unknown_behavior": "TREAD_BUILD_UP_NOT_ESTABLISHED",
+      "notes": "a tread and a landing are not the same thickness: see UP-STAIR-007"
+    },
+    {
+      "rule_id": "UP-STAIR-007",
+      "rule_name": "Stair landing marble is 20 mm thick",
+      "rule_kind": "MEASUREMENT_RULE",
+      "trade": "MARBLE",
+      "scope": "STAIR",
+      "country_context": "KUWAIT",
+      "default_or_mandatory": "DEFAULT",
+      "owner_confirmed": true,
+      "version": "1.0.0",
+      "effective_date": "2026-09-17",
+      "source": "Owner rule addendum 6E-A §1",
+      "project_override_allowed": true,
+      "required_geometry": [
+        "the landing detail where the drawing gives one"
+      ],
+      "calculation_method": "LANDING_MARBLE_THICKNESS = 0.020 m unless the drawing, specification or owner establishes another. The 30 mm tread thickness is NOT used for a normal landing",
+      "unit": "m",
+      "value": 0.02,
+      "exceptions": [
+        "a drawn landing detail replaces it"
+      ],
+      "unknown_behavior": "LANDING_BUILD_UP_NOT_ESTABLISHED",
+      "notes": ""
+    },
+    {
+      "rule_id": "UP-STAIR-008",
+      "rule_name": "Marble steps are commercially measured by linear metre of step width",
+      "rule_kind": "COMMERCIAL_MEASUREMENT_BASIS",
+      "trade": "MARBLE",
+      "scope": "STAIR",
+      "country_context": "KUWAIT",
+      "default_or_mandatory": "DEFAULT",
+      "owner_confirmed": true,
+      "version": "1.0.0",
+      "effective_date": "2026-09-17",
+      "source": "Owner rule addendum 6E-A §2, §3, §6",
+      "project_override_allowed": true,
+      "required_geometry": [
+        "the width of each physical step",
+        "the cross-plan reconciliation that makes the steps unique"
+      ],
+      "calculation_method": "STAIR_STEP_COMMERCIAL_LM = SUM(width of each UNIQUE physical step). The commercial step covers tread, riser and nosing together. It is NEVER derived from a tread area, and a step drawn on two plans is one step. The landing is measured in m2 and the skirting in lm, and neither is multiplied by the step basis",
+      "unit": "lm",
+      "value": "SUM_OF_THE_UNIQUE_PHYSICAL_STEP_WIDTHS",
+      "exceptions": [
+        "a project or supplier that quotes on another basis records that basis on the project, not here"
+      ],
+      "unknown_behavior": "CONTRACTOR_PRICING_BASIS_NOT_ESTABLISHED",
+      "notes": "what a supplier charges for one of these metres belongs to a project rate card with its quotation and its date, never to this rule"
+    },
+    {
+      "rule_id": "UP-VOCAB-001",
+      "rule_name": "نايم is the stair tread",
+      "rule_kind": "CONSTRUCTION_VOCABULARY",
+      "trade": "MARBLE",
+      "scope": "STAIR",
+      "country_context": "KUWAIT",
       "default_or_mandatory": "MANDATORY",
       "owner_confirmed": true,
       "version": "1.0.0",
       "effective_date": "2026-09-17",
-      "source": "Owner rule addendum 2026-09-17 §L",
-      "project_override_allowed": true,
-      "required_geometry": ["threshold width", "threshold depth", "the front exposed edge where applicable"],
-      "calculation_method": "ELEVATOR_THRESHOLD_MARBLE as its own object: width x depth in m2, and the exposed front edge in lm. It is never merged into the vertical door surround, and the invariant ELEVATOR_THRESHOLD_MARBLE_AREA n PORCELAIN_FLOOR_AREA = 0 m2 holds",
-      "unit": "m2",
-      "value": null,
+      "source": "Owner rule addendum 2026-09-17 §C and 6E-A §18",
+      "project_override_allowed": false,
+      "required_geometry": [],
+      "calculation_method": "a term, not a quantity: نايم names the horizontal surface of a step. How it is measured is UP-STAIR-003 and UP-STAIR-008",
+      "unit": "NONE",
+      "value": "STAIR_TREAD",
       "exceptions": [],
       "unknown_behavior": "OWNER_RULE_REQUEST",
-      "notes": "the threshold DEPTH is not an owner-confirmed default. Where neither drawing nor detail establishes it, ask the owner"
+      "notes": ""
+    },
+    {
+      "rule_id": "UP-VOCAB-002",
+      "rule_name": "قائم is the stair riser",
+      "rule_kind": "CONSTRUCTION_VOCABULARY",
+      "trade": "MARBLE",
+      "scope": "STAIR",
+      "country_context": "KUWAIT",
+      "default_or_mandatory": "MANDATORY",
+      "owner_confirmed": true,
+      "version": "1.0.0",
+      "effective_date": "2026-09-17",
+      "source": "Owner rule addendum 2026-09-17 §C and 6E-A §18",
+      "project_override_allowed": false,
+      "required_geometry": [],
+      "calculation_method": "a term, not a quantity: قائم names the vertical face of a step. What of it is clad is the VISIBLE riser, UP-STAIR-003",
+      "unit": "NONE",
+      "value": "STAIR_RISER",
+      "exceptions": [],
+      "unknown_behavior": "OWNER_RULE_REQUEST",
+      "notes": ""
+    },
+    {
+      "rule_id": "UP-VOCAB-003",
+      "rule_name": "استراحة is the stair landing",
+      "rule_kind": "CONSTRUCTION_VOCABULARY",
+      "trade": "MARBLE",
+      "scope": "STAIR",
+      "country_context": "KUWAIT",
+      "default_or_mandatory": "MANDATORY",
+      "owner_confirmed": true,
+      "version": "1.0.0",
+      "effective_date": "2026-09-17",
+      "source": "Owner rule addendum 2026-09-17 §G and 6E-A §8, §18",
+      "project_override_allowed": false,
+      "required_geometry": [],
+      "calculation_method": "a term, not a quantity: استراحة names the piece a stair arrives at and turns on. Whether a given piece of floor IS one is decided on geometry, never on the word",
+      "unit": "NONE",
+      "value": "STAIR_LANDING",
+      "exceptions": [],
+      "unknown_behavior": "OWNER_RULE_REQUEST",
+      "notes": ""
+    },
+    {
+      "rule_id": "UP-VOCAB-004",
+      "rule_name": "وزرة or نعلة الدرج is the stair skirting",
+      "rule_kind": "CONSTRUCTION_VOCABULARY",
+      "trade": "MARBLE",
+      "scope": "STAIR",
+      "country_context": "KUWAIT",
+      "default_or_mandatory": "MANDATORY",
+      "owner_confirmed": true,
+      "version": "1.0.0",
+      "effective_date": "2026-09-17",
+      "source": "Owner rule addendum 6E-A §9, §18",
+      "project_override_allowed": false,
+      "required_geometry": [],
+      "calculation_method": "a term, not a quantity: the skirting that follows the stair. Measured in lm, separately, and never inside the step basis or the landing area",
+      "unit": "NONE",
+      "value": "STAIR_SKIRTING",
+      "exceptions": [],
+      "unknown_behavior": "STAIR_SKIRTING_MEASUREMENT_CONVENTION_NOT_ESTABLISHED",
+      "notes": "the exact owner measurement convention for stair skirting is still awaited"
+    },
+    {
+      "rule_id": "UP-STAIR-009",
+      "rule_name": "A typical finished rise is a sanity range, never a measurement",
+      "rule_kind": "MEASUREMENT_RULE",
+      "trade": "MARBLE",
+      "scope": "STAIR",
+      "country_context": "KUWAIT",
+      "default_or_mandatory": "MANDATORY",
+      "owner_confirmed": true,
+      "version": "1.0.0",
+      "effective_date": "2026-09-17",
+      "source": "Owner rule addendum 6E-A §10",
+      "project_override_allowed": false,
+      "required_geometry": [
+        "floor-to-floor rise",
+        "number of risers",
+        "the stair design"
+      ],
+      "calculation_method": "a finished step rise commonly falls around 0.155-0.165 m. This is a DIAGNOSTIC SANITY RANGE and produces no quantity: a riser height comes from the floor-to-floor rise over a counted number of risers. A level is never assigned to a stair because the difference happens to fall in this range",
+      "unit": "m",
+      "value": null,
+      "exceptions": [],
+      "unknown_behavior": "RISER_HEIGHT_NOT_ESTABLISHED",
+      "notes": "diagnostic only"
     }
   ]
 }

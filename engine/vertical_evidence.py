@@ -36,7 +36,7 @@ import hashlib
 import re
 from dataclasses import dataclass
 
-MODEL = "VERTICAL_EVIDENCE_IS_SEARCHED_FOR_AND_NEVER_ASSUMED_V1"
+MODEL = "VERTICAL_EVIDENCE_IS_SEARCHED_FOR_AND_NEVER_ASSUMED_V2"
 
 # --- what a piece of vertical evidence is -------------------------------
 LEVEL_MARK = "A_LEVEL_MARK"
@@ -50,6 +50,26 @@ PLACED = "PLACED_IN_A_DRAWING_REGION"
 UNPLACED = "FOUND_BUT_NOT_PLACEABLE_BY_THIS_PROJECT"
 REFUSED_TAKE_OFF = "REFUSED_IT_IS_A_TAKE_OFF_TOTAL"
 STATES = (PLACED, UNPLACED, REFUSED_TAKE_OFF)
+
+# §11 (6E-A). TWO DIFFERENT SENTENCES, and Round 6E let them blur:
+#
+#   "the source set carries no vertical evidence"   — about the DRAWINGS
+#   "this engine cannot place the evidence it has"  — about the ENGINE
+#
+# For P7757 the second is true and the first is false. The set carries
+# eight level marks, two sections and four elevations; what is missing is
+# a reader that can put them against a floor and a stair.
+EVIDENCE_PRESENT = "THE_SOURCE_SET_CARRIES_VERTICAL_EVIDENCE"
+EVIDENCE_ABSENT = "THE_SOURCE_SET_CARRIES_NO_VERTICAL_EVIDENCE"
+PLACED_AGAINST_A_FLOOR = "THE_EVIDENCE_IS_PLACED_AGAINST_A_FLOOR"
+PLACEMENT_NOT_ESTABLISHED = "THE_EVIDENCE_IS_NOT_PLACED_AGAINST_A_FLOOR"
+
+# And the one inference that is never made from a level list.
+NEVER_BY_PLAUSIBILITY = (
+    "a level is never assigned to a floor or to a stair because the "
+    "difference between two numbers would give a believable riser. A "
+    "plausible answer from unplaced evidence is a guess with arithmetic "
+    "in front of it")
 
 NOT_ESTABLISHED = "RISER_HEIGHT_NOT_ESTABLISHED"
 ESTABLISHED = "RISER_HEIGHT_ESTABLISHED"
@@ -99,7 +119,9 @@ def frozen_parameters() -> dict:
 def model_hash() -> str:
     parts = ([MODEL] + list(KINDS) + list(STATES)
              + [NOT_ESTABLISHED, ESTABLISHED, NO_VERTICAL_EVIDENCE,
-                NO_READER, NO_RISER_COUNT, NO_FLOOR_PAIR])
+                NO_READER, NO_RISER_COUNT, NO_FLOOR_PAIR,
+                EVIDENCE_PRESENT, EVIDENCE_ABSENT,
+                PLACED_AGAINST_A_FLOOR, PLACEMENT_NOT_ESTABLISHED])
     return hashlib.sha256("|".join(parts).encode("utf-8")).hexdigest()[:24]
 
 
@@ -227,7 +249,7 @@ def scan(texts, *, source: str, representation: str, placed: bool = True,
     return out
 
 
-def assess(findings, *, floors_needed=(), risers=None) -> dict:
+def assess(findings, *, floors_needed=(), risers=None, attempts=()) -> dict:
     """Can a riser height be established from what was found? (§14)
 
     Only from a floor-to-floor rise BETWEEN TWO NAMED FLOORS and a riser
@@ -249,8 +271,27 @@ def assess(findings, *, floors_needed=(), risers=None) -> dict:
     leads = [f for f in found if f.status == UNPLACED]
     sealed = [f for f in found if f.status == REFUSED_TAKE_OFF]
 
+    carries = [f for f in found
+               if f.kind in (LEVEL_MARK, RISER_NOTE, SECTION_SHEET,
+                             ELEVATION_SHEET)
+               and f.status in (PLACED, UNPLACED)]
     out = {
         "model": MODEL,
+        # §11 the two sentences, told apart and both answered
+        "vertical_evidence": (EVIDENCE_PRESENT if carries
+                              else EVIDENCE_ABSENT),
+        "vertical_evidence_found": len(carries),
+        "placement": (PLACED_AGAINST_A_FLOOR if levels
+                      else PLACEMENT_NOT_ESTABLISHED),
+        "levels_found_m": sorted({round((f.value_mm or 0.0) / 1000.0, 3)
+                                  for f in found
+                                  if f.kind == LEVEL_MARK
+                                  and f.value_mm is not None}),
+        "sheets_found": sorted({f.text for f in found
+                                if f.kind in (SECTION_SHEET,
+                                              ELEVATION_SHEET)}),
+        "placement_attempts": [dict(a) for a in (attempts or ())],
+        "never_by_plausibility": NEVER_BY_PLAUSIBILITY,
         "findings": [f.record() for f in found],
         "level_marks_placed": sum(1 for f in found
                                   if f.kind == LEVEL_MARK
@@ -305,11 +346,13 @@ def assess(findings, *, floors_needed=(), risers=None) -> dict:
             "riser_height_status": NOT_ESTABLISHED,
             "what_would_settle_it": NO_READER,
             "why": ("the architectural set DOES carry vertical evidence "
-                    f"— {len(leads)} level marks, section and elevation "
-                    "sheets — in a representation this project has no "
-                    "reader for. A reader that places them, or the same "
-                    "sheets in a source the engine already decodes, "
-                    "settles it. Nothing here is assumed meanwhile"),
+                    f"— {len(leads)} findings, level marks, section and "
+                    "elevation sheets — in a representation this project "
+                    "has no reader for. THIS IS NOT AN ABSENCE OF "
+                    "EVIDENCE: it is an absence of placement. A reader "
+                    "that places them, or the same sheets in a source "
+                    "the engine already decodes, settles it, and "
+                    + NEVER_BY_PLAUSIBILITY),
         })
         return out
     if not levels:
