@@ -2680,3 +2680,36 @@ refused five such runs in Round 6E and reported nothing; four of them are
 Weak runs — hatching, three short lines in a corner — stay answered. And
 a stair register is about **plans**: an unresolved run on an elevation or
 a section is counted apart, never as a missing staircase on a floor.
+
+---
+
+## 95 · A SECOND DESIGN SET IS ITS OWN SOURCE, AND ITS ALIGNMENT IS A CLAIM
+
+The architectural drawing says where the walls are; the sanitary drawing
+says where the water and the drainage are. They are two representations
+of one building, so the sanitary set is registered as **DESIGN_SANITARY**
+with its own hash and its own coordinates, and it never replaces or
+overwrites the architectural decode.
+
+What joins them is a **tested** alignment. A sheet plotted "to fit" has
+no round scale — P7757's drainage plan is 38.0 mm per point, a 1:100 plot
+reduced to 1:108 — so the scale is searched for, and the search must
+produce a **winner**:
+
+```
+at least 60% of the plan's LONG walls matched, on BOTH axes, within 40 mm
+and the winning scale ahead of every other scale by 15% of those walls
+```
+
+Otherwise `ALIGNMENT_AMBIGUOUS` or `ALIGNMENT_NOT_ESTABLISHED`, and
+nothing is placed through it. An alignment that is nearly right puts a
+floor drain in the wrong room.
+
+**The architecture is subtracted before anything is counted.** A sanitary
+sheet redraws the walls as its background; counting those lines as
+drainage makes every room look plumbed.
+
+**And a symbol is not a rule.** A drainage point near a pantry says water
+arrives there. It does not say which wall is tiled, how high, or that
+there is a sink. Linework spread evenly around a label **names no host
+wall**, and the engine says so rather than picking one.

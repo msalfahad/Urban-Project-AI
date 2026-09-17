@@ -297,6 +297,35 @@ The bundle adds STAIR_COMMERCIAL_QUANTITY, STAIR_EDGE_ROLE_AUDIT,
 STAIR_LANDING_ANALYSIS, PANTRY_SANITARY_ALIGNMENT, RULE_RESOLUTION and
 RULE_LIBRARY.
 
+## The sanitary set, registered and aligned (source correction, 2026-09-17)
+
+The owner supplied the real sanitary set — `sanitary-7757(3).pdf`, three
+vector pages, sha256 `116736870983e63a` — and corrected my earlier
+identification: the 12-page scan is the compressed ARCHITECTURAL PDF.
+Both are now registered, separately, in `data/registry/P7757_PROJECT_RULES.json`.
+
+| page | alignment to the ground-floor plan | scale | long walls matched |
+|---|---|---|---|
+| 1 (Ground Floor Drainage Plan) | **ESTABLISHED** | 38.0 mm/pt ≈ 1:108 | 71% of 7 (x), 80% of 5 (y), mean residual 8.9 mm |
+| 2 | AMBIGUOUS — no scale wins | — | — |
+| 3 | NOT ESTABLISHED | — | — |
+
+Pages 2 and 3 fail against the *ground* floor, which is what they should
+do if they draw another level. The winning scale beats the runner-up
+(43%), and the alignment is corroborated independently: after the
+architectural background is subtracted, the two W.C spaces top the
+drainage-density table (2.48 and 2.17 lm/m²) and several dry rooms show
+**0.00**.
+
+**The pantry.** Drainage IS drawn there: 2.22 lm within 1.5 m of the
+PANTRY label and 8.55 lm within 3 m. At 1.5 m, 68% of it lies to the
+south-east; at 3 m that concentration falls to 42%. A host wall would
+hold its concentration at both radii, so the engine **names no wall** and
+the verdict stands at `PANTRY_TILE_WALLS_REQUIRE_OWNER_REVIEW`.
+
+One corroboration worth recording: the 2.70 m² `PARTIAL_SPACE` that
+Round 6C once mistook for the pantry carries **0.00 lm** of drainage.
+
 ## §22 · What this round did NOT start
 
 No TradeMeasurementZone, no ceramic BOQ, no waste rule, no pricing, no

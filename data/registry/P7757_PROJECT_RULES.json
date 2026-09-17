@@ -1,6 +1,6 @@
 {
   "project": "P7757",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "effective_date": "2026-09-17",
   "source": "Owner rule addendum, Urban Projects, 2026-09-17",
   "notes": {
@@ -10,12 +10,17 @@
   "pantry": {
     "openness": "OPEN_AMERICAN_PANTRY",
     "owner_confirmed": true,
-    "opens_toward": ["DINING", "SALOON", "LIVING"],
+    "opens_toward": [
+      "DINING",
+      "SALOON",
+      "LIVING"
+    ],
     "source": "Owner rule addendum 2026-09-17 §A",
     "why": "the owner confirms the P7757 pantry is open toward the dining, saloon and living area and must not be forced into a closed physical room",
     "tile_walls": "FROM_THE_DRAWN_INSTALLATION",
     "wall_tile_height_m": null,
-    "height_source": "OWNER_RULE_REQUEST"
+    "height_source": "OWNER_RULE_REQUEST",
+    "sanitary_evidence": "DRAINAGE_IS_DRAWN_AT_THE_PANTRY_AND_NAMES_NO_HOST_WALL"
   },
   "stair": {
     "finish_rule": "UP-STAIR-001",
@@ -32,5 +37,25 @@
     "surround_width_m": null,
     "source": "Owner rule addendum 2026-09-17 §H-§L",
     "why": "the elevator standards are recorded in the rule library. No elevator geometry is established for P7757, so nothing is measured"
+  },
+  "sources": {
+    "DESIGN_ARCHITECTURAL": {
+      "file": "P7757_ARCHITECTURAL.dwg",
+      "decode": "data/runs/cad_convert/P7757_ARCHITECTURAL.json",
+      "sha256_16": "7f61f3acdd62d62d",
+      "role": "the plan, the walls and the spaces. Never replaced"
+    },
+    "DESIGN_DWF": {
+      "file": "the published DWF package",
+      "role": "a second representation: level marks and the sheet set. Its W2D positions are delta-encoded and this project has no reader for them"
+    },
+    "DESIGN_SANITARY": {
+      "file": "sanitary-7757(3).pdf",
+      "sha256_16": "116736870983e63a",
+      "pages": 3,
+      "role": "the drainage and water set, its own source with its own coordinates. Page 1 is the Ground Floor Drainage Plan and aligns to the ground-floor architectural plan at 38.0 mm per point; pages 2 and 3 do not align to the ground floor and nothing is placed from them",
+      "registered": "2026-09-17",
+      "never": "it does not replace or overwrite the architectural source"
+    }
   }
 }
