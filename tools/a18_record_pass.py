@@ -28,19 +28,33 @@ from engine import export_provenance as prov
 
 PAGE = re.compile(r"-(\d{2})")
 
+# A crop is a PICTURE the pass looked at. A pass may also leave working
+# files in the same directory — a helper script it wrote to take the
+# crops, a log — and those are not inputs that reached it. They are kept
+# with the record and listed separately, because calling a script a crop
+# would put something in the manifest that the pass never saw.
+IMAGE_SUFFIXES = (".png", ".jpg", ".jpeg", ".gif", ".webp", ".bmp")
 
-def register_crops(run: bic.BlindRun, sandbox, run_dir) -> list:
+
+def register_crops(run: bic.BlindRun, sandbox, run_dir) -> tuple:
     """Every crop the pass cut, copied into the record and gated."""
     src = Path(sandbox) / "crops"
     if not src.is_dir():
-        return []
+        return [], []
     dst = Path(run_dir) / "crops"
     dst.mkdir(parents=True, exist_ok=True)
-    out = []
+    out, working = [], []
     for crop in sorted(src.iterdir()):
         if not crop.is_file():
             continue
         shutil.copy2(crop, dst / crop.name)
+        if crop.suffix.lower() not in IMAGE_SUFFIXES:
+            working.append({"file": crop.name,
+                            "bytes": crop.stat().st_size,
+                            prov.RAW: prov.raw_sha256(crop),
+                            "what_it_is": "a working file the pass wrote, "
+                                          "not an input it looked at"})
+            continue
         hit = PAGE.search(crop.stem)
         page = hit.group(1) if hit else ""
         out.append(run.offer(bic.Input(
@@ -50,7 +64,7 @@ def register_crops(run: bic.BlindRun, sandbox, run_dir) -> list:
             derived_from=f"IMG-{page}" if page else "UNRECORDED",
             crop_basis=bic.CROP_REQUESTED_BY_THE_AGENT,
             supplied_by="THE_PASS_ITSELF")))
-    return out
+    return out, working
 
 
 def main(argv=None) -> int:
@@ -67,7 +81,7 @@ def main(argv=None) -> int:
 
     run_dir = Path(a.run_dir)
     run = bic.BlindRun(run_id=a.run_id or run_dir.name, pass_id="A18")
-    crops = register_crops(run, a.sandbox, run_dir)
+    crops, working = register_crops(run, a.sandbox, run_dir)
 
     report = Path(a.report)
     decided = json.loads(a.decided)
@@ -93,6 +107,7 @@ def main(argv=None) -> int:
             "basis": bic.CROP_REQUESTED_BY_THE_AGENT,
             "rows": [c.record() for c in crops],
         },
+        "working_files_the_pass_wrote": working,
         "why_the_crops_are_here": (
             "a crop is an input that reached the pass. What it looked at "
             "is as much of the record as what it concluded"),
@@ -108,6 +123,7 @@ def main(argv=None) -> int:
                       "SELECTION_HASH": record["SELECTION_HASH"][:16],
                       "frozen": record["frozen"],
                       "crops": record["crops_the_pass_cut"]["count"],
+                      "working_files": len(working),
                       "crops_admitted":
                           record["crops_the_pass_cut"]["admitted"],
                       "PASS_RECORD_HASH":
