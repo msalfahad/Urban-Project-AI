@@ -52,15 +52,50 @@ COMPOSITE_CURVE = "COMPOSITE_CURVE"
 KINDS = (LINE, ARC, CIRCLE, POLYLINE, COMPOSITE_CURVE)
 
 # --- what a boundary piece is doing -------------------------------------
-ROLE_WALL_FACE = "PHYSICAL_WALL_FACE"
-ROLE_OPEN_EDGE = "OPEN_EDGE_NO_DRAWN_BARRIER"
-ROLE_OPENING = "OPENING_IN_A_HOST_WALL"
-ROLE_COLUMN = "COLUMN_FACE"
-ROLE_SHAFT = "SHAFT_FACE"
-ROLE_UNRESOLVED = "LINEWORK_ROLE_UNRESOLVED"
-ROLE_NOT_A_WALL = "NOT_A_WALL_ANNOTATION_OR_FITTING"
-ROLES = (ROLE_WALL_FACE, ROLE_OPEN_EDGE, ROLE_OPENING, ROLE_COLUMN,
-         ROLE_SHAFT, ROLE_UNRESOLVED, ROLE_NOT_A_WALL)
+#
+# THREE GEOMETRIES ARE KEPT APART HERE, and the role is what keeps them
+# apart:
+#
+#   MATERIAL_GEOMETRY   things built: wall faces, columns, glazing,
+#                       structural boundaries. These carry material length
+#   SPACE_TOPOLOGY      lines that separate spaces without being built. A
+#                       doorway needs one so that two rooms can be two
+#                       rooms, and it is NOT material
+#   FUNCTIONAL/TRADE    not E1's business at all, and not invented here
+MATERIAL_WALL_FACE = "MATERIAL_WALL_FACE"
+CURVED_MATERIAL_FACE = "CURVED_MATERIAL_FACE"
+GLAZING_BOUNDARY = "GLAZING_BOUNDARY"
+COLUMN_FACE = "COLUMN_FACE"
+OPENING = "OPENING"
+PORTAL = "PORTAL"
+VIRTUAL_PORTAL_BOUNDARY = "VIRTUAL_PORTAL_BOUNDARY"
+OPEN_EDGE = "OPEN_EDGE"
+STAIR_CUT_PLANE = "STAIR_CUT_PLANE"
+ANNOTATION_ONLY = "ANNOTATION_ONLY"
+DIMENSION_WITNESS = "DIMENSION_WITNESS"
+CAD_JUNCTION_REPAIR = "CAD_JUNCTION_REPAIR"
+ROLE_UNRESOLVED = "UNRESOLVED"
+ROLES = (MATERIAL_WALL_FACE, CURVED_MATERIAL_FACE, GLAZING_BOUNDARY,
+         COLUMN_FACE, OPENING, PORTAL, VIRTUAL_PORTAL_BOUNDARY, OPEN_EDGE,
+         STAIR_CUT_PLANE, ANNOTATION_ONLY, DIMENSION_WITNESS,
+         CAD_JUNCTION_REPAIR, ROLE_UNRESOLVED)
+
+# Which roles are built material. Everything else contributes ZERO wall
+# length, and the register computes that rather than trusting a caller.
+MATERIAL_ROLES = (MATERIAL_WALL_FACE, CURVED_MATERIAL_FACE,
+                  GLAZING_BOUNDARY, COLUMN_FACE)
+
+# Roles that exist only to let topology close. A doorway closure is one.
+TOPOLOGY_ONLY_ROLES = (VIRTUAL_PORTAL_BOUNDARY, OPEN_EDGE,
+                       CAD_JUNCTION_REPAIR)
+
+A_VIRTUAL_BOUNDARY_IS_NOT_WALL_MATERIAL = (
+    "a line inserted across a doorway lets two spaces be two spaces. "
+    "Nothing was built along it, so it contributes no wall material "
+    "length, and the register computes that from the role rather than "
+    "trusting whoever inserted it")
+
+RENDERING_ONLY = "RENDERING_ONLY"
 
 # --- topology ------------------------------------------------------------
 TOPOLOGY_CLOSED = "BOUNDARY_CLOSED_BY_DRAWN_GEOMETRY"
@@ -87,6 +122,13 @@ BASIS_NOT_ESTABLISHED = "CLEAR_FACE_NOT_ESTABLISHED"
 DENSIFY_TOL_MM = 1.0
 SNAP_MM = 0.5
 OWNER_TOL_MM = 2.0
+
+# Node coincidence. A quarter-arc computed from centre and angle lands at
+# x = 1.2e-13 rather than 0, and polygonize needs nodes to MEET, so a
+# quarter-disc built from three lines and an arc produced no face at all.
+# The linework is snapped to this grid before topology - declared, like
+# the densification, and applied to nothing that is stored.
+NODE_SNAP_MM = 0.001
 
 A_BOUNDING_BOX_IS_NOT_MEASUREMENT_GEOMETRY = (
     "a bounding box is stored for indexing and nothing else. The largest "
@@ -139,14 +181,33 @@ class BoundarySegment:
     start_angle: float = 0.0
     end_angle: float = 0.0
     ccw: bool = True
+    evidence: tuple = ()
+    confidence: str = ""
+
+    @property
+    def material_present(self) -> bool:
+        return self.role in MATERIAL_ROLES
+
+    @property
+    def wall_length_contribution_mm(self) -> float:
+        """Zero unless something was actually built along this piece."""
+        return self.length_mm if self.material_present else 0.0
 
     @property
     def sweep(self) -> float:
+        """The angle actually swept, in the direction this arc runs.
+
+        A boundary ring may walk an arc either way round. Assuming CCW
+        turned a recovered quarter-round into a 270 degree sweep, so the
+        direction is carried on the segment and honoured here.
+        """
         if self.kind == CIRCLE:
             return 2 * math.pi
         if self.kind != ARC:
             return 0.0
-        return (self.end_angle - self.start_angle) % (2 * math.pi)
+        if self.ccw:
+            return (self.end_angle - self.start_angle) % (2 * math.pi)
+        return (self.start_angle - self.end_angle) % (2 * math.pi)
 
     @property
     def length_mm(self) -> float:
@@ -167,10 +228,18 @@ class BoundarySegment:
              self.cy + self.radius * math.sin(self.end_angle)))
 
     def points(self, *, tol_mm: float = DENSIFY_TOL_MM) -> list:
-        """Densified points — for topology and drawing, never for storage."""
+        """RENDERING_ONLY / topology tessellation. Never the geometry.
+
+        The analytical geometry of an arc is its centre, radius and
+        angles, which this object keeps. These chords exist so a face can
+        be found and a picture drawn, and no chord may become measurement
+        geometry.
+        """
         if self.kind == LINE:
             return [(self.x1, self.y1), (self.x2, self.y2)]
         sweep = self.sweep or 2 * math.pi
+        if not self.ccw:
+            sweep = -sweep
         if self.radius <= 0:
             return []
         # chord error = r(1 - cos(step/2)) <= tol  =>  step = 2*acos(1-tol/r)
@@ -185,12 +254,21 @@ class BoundarySegment:
         return out
 
     def record(self) -> dict:
-        out = {"kind": self.kind, "role": self.role,
+        out = {"kind": self.kind, "boundary_role": self.role,
                "length_mm": round(self.length_mm, 3),
+               "material_present": self.material_present,
+               "wall_length_contribution_mm": round(
+                   self.wall_length_contribution_mm, 3),
                "entity": {"object_id": self.object_id,
                           "dwg_handle": self.dwg_handle,
                           "layer": self.layer,
                           "entity_type": self.entity_type}}
+        if self.evidence:
+            out["evidence"] = list(self.evidence)
+        if self.confidence:
+            out["confidence"] = self.confidence
+        if self.role in TOPOLOGY_ONLY_ROLES:
+            out["why_no_material"] = A_VIRTUAL_BOUNDARY_IS_NOT_WALL_MATERIAL
         if self.kind == LINE:
             out["start_mm"] = [round(self.x1, 4), round(self.y1, 4)]
             out["end_mm"] = [round(self.x2, 4), round(self.y2, 4)]
@@ -203,6 +281,8 @@ class BoundarySegment:
             out["sweep_deg"] = round(math.degrees(self.sweep), 6)
             out["direction"] = "CCW" if self.ccw else "CW"
             out["exact_parameters_retained"] = True
+            out["analytical_geometry"] = "THE_ORIGINAL_CURVE"
+            out["tessellation"] = RENDERING_ONLY
         return out
 
 
@@ -238,6 +318,26 @@ class CompositeBoundary:
     @property
     def perimeter_mm(self) -> float:
         return sum(s.length_mm for s in self.segments)
+
+    @property
+    def material_length_mm(self) -> float:
+        return sum(s.wall_length_contribution_mm for s in self.segments)
+
+    @property
+    def topology_only_length_mm(self) -> float:
+        return sum(s.length_mm for s in self.segments
+                   if s.role in TOPOLOGY_ONLY_ROLES)
+
+    def by_role(self) -> dict:
+        out = {}
+        for seg in self.segments:
+            out[seg.role] = round(out.get(seg.role, 0.0) + seg.length_mm, 3)
+        return out
+
+    @property
+    def contains_artificial_topology(self) -> bool:
+        return any(s.role in (VIRTUAL_PORTAL_BOUNDARY, CAD_JUNCTION_REPAIR)
+                   for s in self.segments)
 
     def points(self) -> list:
         out = []
@@ -278,15 +378,31 @@ class CompositeBoundary:
                                    if s.kind == CIRCLE),
             "has_curves": self.has_curves,
             "perimeter_mm": round(self.perimeter_mm, 3),
+            "material_length_mm": round(self.material_length_mm, 3),
+            "topology_only_length_mm": round(self.topology_only_length_mm, 3),
+            "length_by_boundary_role": self.by_role(),
+            "contains_artificial_topology":
+                self.contains_artificial_topology,
+            "a_virtual_boundary_is_not_wall_material":
+                A_VIRTUAL_BOUNDARY_IS_NOT_WALL_MATERIAL,
             "BOUNDARY_SEGMENTS": [s.record() for s in self.segments],
             "GEOMETRY_HASH": self.geometry_hash(),
             "densification": {
                 "tolerance_mm": self.densify_tol_mm,
-                "used_for": "TOPOLOGY_AND_RENDERING_ONLY",
+                "used_for": RENDERING_ONLY + "_AND_TOPOLOGY",
                 "not_used_for": "THE_STORED_BOUNDARY",
                 "why": WHY_A_CURVE_STAYS_A_CURVE},
             "bounding_box": self.bbox_for_indexing_only(),
         }
+
+
+def _noded(geom):
+    """Snap linework to the node grid so that meeting ends actually meet."""
+    try:
+        from shapely import set_precision
+        return set_precision(geom, NODE_SNAP_MM)
+    except Exception:
+        return geom
 
 
 def _close(a, b, tol=SNAP_MM) -> bool:
@@ -303,6 +419,7 @@ def frozen_parameters() -> dict:
         "DENSIFY_TOL_MM": DENSIFY_TOL_MM,
         "SNAP_MM": SNAP_MM,
         "OWNER_TOL_MM": OWNER_TOL_MM,
+        "NODE_SNAP_MM": NODE_SNAP_MM,
         "why": {
             "a_curve_stays_a_curve": WHY_A_CURVE_STAYS_A_CURVE,
             "a_bounding_box_is_not_measurement_geometry":
@@ -319,6 +436,28 @@ def frozen_parameters() -> dict:
 
 # ------------------------------------------------------------- the tracer
 
+GLAZING_LAYERS_DEFAULT = ()
+COLUMN_LAYERS_DEFAULT = ("S-COL.BON",)
+
+
+def _material_role(prim, *, glazing_layers=GLAZING_LAYERS_DEFAULT,
+                   column_layers=COLUMN_LAYERS_DEFAULT) -> str:
+    """The material role of one drawn primitive, by shape and layer.
+
+    A curved material face is not a straight one, and the register says
+    which it is rather than leaving a reviewer to infer it from the
+    parameters.
+    """
+    layer = prim.provenance.layer
+    if layer in column_layers:
+        return COLUMN_FACE
+    if layer in glazing_layers:
+        return GLAZING_BOUNDARY
+    if prim.kind in ("ARC", "CIRCLE"):
+        return CURVED_MATERIAL_FACE
+    return MATERIAL_WALL_FACE
+
+
 def _as_segment(prim, *, role=ROLE_UNRESOLVED) -> BoundarySegment:
     """One adapter primitive, carried across without losing its shape."""
     prov = prim.provenance
@@ -328,11 +467,15 @@ def _as_segment(prim, *, role=ROLE_UNRESOLVED) -> BoundarySegment:
         return BoundarySegment(kind=LINE, x1=prim.x1, y1=prim.y1,
                                x2=prim.x2, y2=prim.y2, **common)
     if prim.kind == "ARC":
+        if common["role"] == MATERIAL_WALL_FACE:
+            common["role"] = CURVED_MATERIAL_FACE
         return BoundarySegment(kind=ARC, cx=prim.cx, cy=prim.cy,
                                radius=prim.radius,
                                start_angle=prim.start_angle,
                                end_angle=prim.end_angle, **common)
     if prim.kind == "CIRCLE":
+        if common["role"] == MATERIAL_WALL_FACE:
+            common["role"] = CURVED_MATERIAL_FACE
         return BoundarySegment(kind=CIRCLE, cx=prim.cx, cy=prim.cy,
                                radius=prim.radius, **common)
     raise CadGeometryError(
@@ -341,14 +484,31 @@ def _as_segment(prim, *, role=ROLE_UNRESOLVED) -> BoundarySegment:
 
 
 def _sub_arc(seg: BoundarySegment, p_from, p_to) -> BoundarySegment:
-    """The part of an arc between two points on it, still an arc."""
+    """The part of an arc between two points on it, still an arc.
+
+    The ring may traverse the arc either way. Whichever direction gives a
+    sweep that FITS INSIDE the source arc is the direction this piece
+    runs; taking CCW on faith reported a quarter-round as 270 degrees.
+    """
     a1 = math.atan2(p_from[1] - seg.cy, p_from[0] - seg.cx)
     a2 = math.atan2(p_to[1] - seg.cy, p_to[0] - seg.cx)
+    two_pi = 2 * math.pi
+    ccw_sweep = (a2 - a1) % two_pi
+    cw_sweep = (a1 - a2) % two_pi
+    source = seg.sweep or two_pi
+    eps = 1e-6
+    if ccw_sweep <= source + eps and cw_sweep > source + eps:
+        ccw = True
+    elif cw_sweep <= source + eps and ccw_sweep > source + eps:
+        ccw = False
+    else:
+        ccw = ccw_sweep <= cw_sweep
     return BoundarySegment(kind=ARC, object_id=seg.object_id,
                            dwg_handle=seg.dwg_handle, layer=seg.layer,
                            entity_type=seg.entity_type, role=seg.role,
+                           evidence=seg.evidence, confidence=seg.confidence,
                            cx=seg.cx, cy=seg.cy, radius=seg.radius,
-                           start_angle=a1, end_angle=a2, ccw=seg.ccw)
+                           start_angle=a1, end_angle=a2, ccw=ccw)
 
 
 def trace(seed_mm, primitives, *, wall_layers=(), tol_mm=DENSIFY_TOL_MM,
@@ -407,84 +567,104 @@ def trace(seed_mm, primitives, *, wall_layers=(), tol_mm=DENSIFY_TOL_MM,
                 "why": ("no admitted wall-role geometry lies near this "
                         "point, so nothing drawn can bound it")}
 
-    faces = list(polygonize(unary_union(lines)))
+    faces = list(polygonize(_noded(unary_union(lines))))
     seed = Point(float(seed_mm[0]), float(seed_mm[1]))
-    holding = [f for f in faces if f.contains(seed)]
+    holding = sorted((f for f in faces if f.contains(seed)),
+                     key=lambda f: f.area)
     if not holding:
         return {"topology_status": TOPOLOGY_NOT_CLOSED,
                 "geometry_status": GEOMETRY_NOT_ESTABLISHED,
-                "boundary": None, "faces_built": len(faces),
+                "candidates": [], "faces_built": len(faces),
                 "excluded_by_layer": excluded,
                 "why": ("the admitted geometry builds no closed face "
                         "around this point. The space is not closed by "
-                        "drawn wall-role lines")}
-    face = min(holding, key=lambda f: f.area)
+                        "drawn wall-role lines, and that is a result "
+                        "rather than a failure to be repaired")}
 
     tree = STRtree(lines)
-    ring = list(face.exterior.coords)
-    owned, unowned_mm = [], 0.0
-    for a, b in zip(ring, ring[1:]):
-        mid = Point((a[0] + b[0]) / 2.0, (a[1] + b[1]) / 2.0)
-        best, best_d = None, None
-        for idx in tree.query(mid.buffer(OWNER_TOL_MM)):
-            d = lines[int(idx)].distance(mid)
-            if best_d is None or d < best_d:
-                best, best_d = int(idx), d
-        if best is None or best_d > OWNER_TOL_MM:
-            owned.append((None, a, b))
-            unowned_mm += math.hypot(b[0] - a[0], b[1] - a[1])
-        else:
-            owned.append((best, a, b))
 
-    # Collapse consecutive edges that share an owner, recovering the exact
-    # shape: a run of chords on one arc becomes ONE arc again.
-    boundary, i = [], 0
-    while i < len(owned):
-        idx, a, _b = owned[i]
-        j = i
-        while j + 1 < len(owned) and owned[j + 1][0] == idx:
-            j += 1
-        end = owned[j][2]
-        if idx is None:
-            boundary.append(BoundarySegment(
-                kind=LINE, x1=a[0], y1=a[1], x2=end[0], y2=end[1],
-                role=ROLE_OPEN_EDGE, object_id="", layer="",
-                entity_type="CONSTRUCTED_NOT_A_DRAWN_ENTITY"))
-        else:
-            src = segs[idx]
-            if src.kind == LINE:
-                boundary.append(BoundarySegment(
-                    kind=LINE, object_id=src.object_id,
-                    dwg_handle=src.dwg_handle, layer=src.layer,
-                    entity_type=src.entity_type, role=src.role,
-                    x1=a[0], y1=a[1], x2=end[0], y2=end[1]))
+    def boundary_of(face):
+        ring = list(face.exterior.coords)
+        owned, unowned_mm = [], 0.0
+        for a, b in zip(ring, ring[1:]):
+            mid = Point((a[0] + b[0]) / 2.0, (a[1] + b[1]) / 2.0)
+            best, best_d = None, None
+            for idx in tree.query(mid.buffer(OWNER_TOL_MM)):
+                dd = lines[int(idx)].distance(mid)
+                if best_d is None or dd < best_d:
+                    best, best_d = int(idx), dd
+            if best is None or best_d > OWNER_TOL_MM:
+                owned.append((None, a, b))
+                unowned_mm += math.hypot(b[0] - a[0], b[1] - a[1])
             else:
-                boundary.append(_sub_arc(src, a, end))
-        i = j + 1
+                owned.append((best, a, b))
 
-    comp = CompositeBoundary(segments=tuple(boundary), closed=True,
-                             densify_tol_mm=tol_mm)
-    open_mm = sum(s.length_mm for s in comp.segments
-                  if s.role == ROLE_OPEN_EDGE)
-    status = (TOPOLOGY_CLOSED if open_mm <= SNAP_MM
-              else TOPOLOGY_CLOSED_WITH_OPEN_EDGES)
+        # A run of chords on ONE arc becomes that arc again, with its own
+        # centre, radius and angles. No chord becomes geometry.
+        out, i = [], 0
+        while i < len(owned):
+            idx, a, _b = owned[i]
+            j = i
+            while j + 1 < len(owned) and owned[j + 1][0] == idx:
+                j += 1
+            end = owned[j][2]
+            if idx is None:
+                out.append(BoundarySegment(
+                    kind=LINE, x1=a[0], y1=a[1], x2=end[0], y2=end[1],
+                    role=OPEN_EDGE, object_id="", layer="",
+                    entity_type="NOT_ON_ANY_DRAWN_ENTITY",
+                    evidence=("no drawn wall-role entity lies along this "
+                              "stretch",)))
+            else:
+                src = segs[idx]
+                if src.kind == LINE:
+                    out.append(BoundarySegment(
+                        kind=LINE, object_id=src.object_id,
+                        dwg_handle=src.dwg_handle, layer=src.layer,
+                        entity_type=src.entity_type, role=src.role,
+                        evidence=src.evidence, confidence=src.confidence,
+                        x1=a[0], y1=a[1], x2=end[0], y2=end[1]))
+                else:
+                    out.append(_sub_arc(src, a, end))
+            i = j + 1
+        return CompositeBoundary(segments=tuple(out), closed=True,
+                                 densify_tol_mm=tol_mm), unowned_mm
+
+    candidates = []
+    for rank, face in enumerate(holding, start=1):
+        comp, unowned_mm = boundary_of(face)
+        open_mm = sum(x.length_mm for x in comp.segments
+                      if x.role == OPEN_EDGE)
+        candidates.append({
+            "candidate_rank_by_area": rank,
+            "topology_status": (TOPOLOGY_CLOSED if open_mm <= SNAP_MM
+                                else TOPOLOGY_CLOSED_WITH_OPEN_EDGES),
+            "geometry_status": (GEOMETRY_EXACT if open_mm <= SNAP_MM
+                                else GEOMETRY_PARTIAL),
+            "boundary": comp,
+            "densified_area_m2_rendering_only": round(face.area / 1e6, 6),
+            "open_edge_length_mm": round(open_mm, 3),
+            "not_on_a_drawn_entity_mm": round(unowned_mm, 3),
+            "material_length_mm": round(comp.material_length_mm, 3),
+            "topology_only_length_mm": round(comp.topology_only_length_mm, 3),
+            "contains_artificial_topology":
+                comp.contains_artificial_topology,
+            "clear_face_basis": (BASIS_DRAWN_FACE if open_mm <= SNAP_MM
+                                 else BASIS_NOT_ESTABLISHED),
+        })
+
     return {
-        "topology_status": status,
-        "geometry_status": (GEOMETRY_EXACT if open_mm <= SNAP_MM
-                            else GEOMETRY_PARTIAL),
-        "boundary": comp,
+        "topology_status": candidates[0]["topology_status"],
+        "geometry_status": candidates[0]["geometry_status"],
+        "candidates": candidates,
         "faces_built": len(faces),
         "faces_holding_the_seed": len(holding),
-        "densified_area_m2_topology_only": round(face.area / 1e6, 6),
-        "open_edge_length_mm": round(open_mm, 3),
-        "constructed_edge_length_mm": round(unowned_mm, 3),
         "excluded_by_layer": excluded,
-        "clear_face_basis": (BASIS_DRAWN_FACE if open_mm <= SNAP_MM
-                             else BASIS_NOT_ESTABLISHED),
-        "why": ("every edge of this boundary lies on a drawn entity, and "
-                "each one names it" if open_mm <= SNAP_MM else
-                "part of this boundary is not on any drawn wall-role "
-                "entity, and those stretches are marked as open edges"),
+        "ownership_is_not_decided_here": (
+            "a seed inside a face does NOT mean the face owns the labelled "
+            "space. Every face containing the point is returned with its "
+            "own boundary and evidence, and the region layer decides - or "
+            "withholds"),
     }
 
 
@@ -509,7 +689,7 @@ JUNCTION_GAP_MM = 20.0
 # joined unrelated ends metres apart across a room.
 COLLINEAR_DEG = 5.0
 
-JUNCTION_REPAIR = "A_LINE_STOPS_SHORT_OF_ITS_JUNCTION"
+GRADE_JUNCTION = "A_LINE_STOPS_SHORT_OF_ITS_JUNCTION"
 OPENING_GRADE_DOOR_ENTITY = "A_DOOR_ENTITY_STANDS_IN_THE_GAP"
 OPENING_GRADE_JAMB_PAIR = "TWO_WALL_ENDS_FACE_EACH_OTHER_ACROSS_IT"
 OPENING_GRADE_NONE = "NO_OPENING_EVIDENCE"
@@ -547,10 +727,11 @@ def close_openings(primitives, *, wall_layers=(), door_layers=(),
     if not wall_prims:
         return {"barriers": [], "rows": [], "note": "no wall-role geometry"}
 
-    segs = [_as_segment(p, role=ROLE_WALL_FACE) for p in wall_prims]
+    segs = [_as_segment(p, role=_material_role(p))
+            for p in wall_prims]
     lines = [LineString(s.points(tol_mm=tol_mm)) for s in segs
              if len(s.points(tol_mm=tol_mm)) >= 2]
-    noded = unary_union(lines)
+    noded = _noded(unary_union(lines))
     parts = (list(noded.geoms) if hasattr(noded, "geoms") else [noded])
 
     def key(pt):
@@ -585,11 +766,21 @@ def close_openings(primitives, *, wall_layers=(), door_layers=(),
         return (ha[0] * ux + ha[1] * uy >= cos_lim
                 and hb[0] * -ux + hb[1] * -uy >= cos_lim)
 
+    # TWO DIFFERENT GEOMETRIES, so two passes.
+    #
+    # A DOORWAY lies ALONG a wall: both ends run toward each other and the
+    # gap continues the line. A JUNCTION gap sits at a CORNER, where the
+    # two ends are perpendicular - so requiring collinearity correctly
+    # rejects it, and a corner repair needs its own proximity rule. One
+    # rule for both would either miss the corners or invent doors.
     pairs, rejected_not_collinear = [], 0
     for i, a in enumerate(dangling):
         for b in dangling[i + 1:]:
             gap = math.hypot(b[0] - a[0], b[1] - a[1])
-            if not (SNAP_MM < gap <= max_barrier_mm):
+            if not (NODE_SNAP_MM < gap <= max_barrier_mm):
+                continue
+            if gap <= JUNCTION_GAP_MM:
+                pairs.append((gap, a, b))          # a corner, any angle
                 continue
             if not continues(a, b, gap):
                 rejected_not_collinear += 1
@@ -610,7 +801,7 @@ def close_openings(primitives, *, wall_layers=(), door_layers=(),
                 if door_lines[int(idx)].distance(mid) <= gap / 2.0 + 50.0:
                     door_hits.append(int(idx))
         if gap <= JUNCTION_GAP_MM:
-            grade = JUNCTION_REPAIR
+            grade = GRADE_JUNCTION
         elif door_hits:
             grade = OPENING_GRADE_DOOR_ENTITY
         elif gap <= max_barrier_mm:
@@ -630,26 +821,47 @@ def close_openings(primitives, *, wall_layers=(), door_layers=(),
                     sides.append(segs[near[0][1]].object_id)
         used.add(ka)
         used.add(kb)
+        is_repair = grade == GRADE_JUNCTION
+        ev = [grade, f"gap_mm={round(gap, 2)}"]
+        ev += [f"host_wall={i}" for i in sides]
+        ev += [f"door_entity={door_prims[i].object_id}" for i in door_hits[:4]]
         bar = BoundarySegment(
             kind=LINE, x1=a[0], y1=a[1], x2=b[0], y2=b[1],
-            role=ROLE_OPENING, object_id="",
-            entity_type=("JUNCTION_REPAIR_NOT_A_DRAWN_ENTITY"
-                         if grade == JUNCTION_REPAIR
-                         else "OPENING_BARRIER_NOT_A_DRAWN_ENTITY"),
-            layer="|".join(sorted({s for s in sides})))
+            role=(CAD_JUNCTION_REPAIR if is_repair
+                  else VIRTUAL_PORTAL_BOUNDARY),
+            object_id="",
+            entity_type=("CAD_JUNCTION_REPAIR_NOT_AN_ORIGINAL_CAD_ENTITY"
+                         if is_repair
+                         else "VIRTUAL_PORTAL_BOUNDARY_NOTHING_WAS_BUILT_HERE"),
+            layer="|".join(sorted({s for s in sides})),
+            evidence=tuple(ev), confidence=("HIGH" if door_hits else "MEDIUM"))
         barriers.append(bar)
         rows.append({
-            "opening_id": f"OPN-{len(rows) + 1:03d}",
+            "portal_id": (f"REPAIR-{len(rows) + 1:03d}" if is_repair
+                          else f"PORTAL-{len(rows) + 1:03d}"),
+            "class": (CAD_JUNCTION_REPAIR if is_repair
+                      else "PORTAL_OR_OPENING_CANDIDATE"),
+            "boundary_role": (CAD_JUNCTION_REPAIR if is_repair
+                              else VIRTUAL_PORTAL_BOUNDARY),
+            "material_present": False,
+            "wall_length_contribution_mm": 0.0,
             "gap_mm": round(gap, 2),
             "at_mm": [round(mid.x, 2), round(mid.y, 2)],
             "grade": grade,
             "leaf_class": ("SINGLE_LEAF_WIDTH_OR_LESS"
                            if gap <= MAX_SINGLE_LEAF_MM
                            else "UP_TO_A_DOUBLE_LEAF"),
-            "wall_entities_either_side": sides,
+            "host_wall_faces": sides,
+            "jamb_endpoints_mm": [[round(a[0], 3), round(a[1], 3)],
+                                  [round(b[0], 3), round(b[1], 3)]],
+            "opening_width_mm": round(gap, 2),
             "door_entities_in_the_gap": [
                 door_prims[i].object_id for i in door_hits][:6],
-            "barrier_is_not_a_wall": True,
+            "confidence": ("HIGH" if door_hits else "MEDIUM"),
+            "threshold_geometry": "NOT_ESTABLISHED_IN_E1",
+            "why_no_material": A_VIRTUAL_BOUNDARY_IS_NOT_WALL_MATERIAL,
+            "original_vs_repaired": ("REPAIRED_TOPOLOGY" if is_repair
+                                     else "VIRTUAL_TOPOLOGY"),
         })
 
     wide = [(round(g, 1), [round(a[0], 1), round(a[1], 1)])
@@ -662,10 +874,12 @@ def close_openings(primitives, *, wall_layers=(), door_layers=(),
         "pairs_rejected_not_collinear": rejected_not_collinear,
         "gaps_closed": len(rows),
         "junction_repairs": sum(1 for r in rows
-                                if r["grade"] == JUNCTION_REPAIR),
-        "openings": sum(1 for r in rows if r["grade"] != JUNCTION_REPAIR),
+                                if r["grade"] == GRADE_JUNCTION),
+        "openings": sum(1 for r in rows if r["grade"] != GRADE_JUNCTION),
         "gaps_left_open_because_too_wide": len(wide),
         "rule": {
+            "JUNCTION_GAP_MM": JUNCTION_GAP_MM,
+            "COLLINEAR_DEG": COLLINEAR_DEG,
             "JUNCTION_GAP_MM": JUNCTION_GAP_MM,
             "COLLINEAR_DEG": COLLINEAR_DEG,
             "MAX_SINGLE_LEAF_MM": MAX_SINGLE_LEAF_MM,
