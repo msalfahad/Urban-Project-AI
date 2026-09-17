@@ -2867,3 +2867,57 @@ Every blind run writes `A18_INPUT_MANIFEST.json`: each input by
 it passed, what was refused and why, and a `MANIFEST_HASH` over the
 whole record. A blind run is reproducible from that list and from
 nothing else.
+
+---
+
+## 100 · A GATE YOU CAN WALK AROUND IS A NOTE, NOT A GATE
+
+The input contract of §99 refused a file and the file reached the cold
+agent anyway, because the sandbox was assembled with a copy command and
+the contract was consulted afterwards. The contract was right and it
+changed nothing.
+
+So `engine/agent_sandbox.py` holds two properties, and the second is what
+makes the first real:
+
+```
+THE ONLY WAY IN    bytes reach the sandbox through place(), which screens
+                   the input first and WRITES NOTHING when the contract
+                   refuses. A refused input raises
+THE ONLY WAY OUT   immediately before launch, verify() walks the sandbox
+                   on disk and requires
+
+                       SANDBOX_CONTENTS == ADMITTED_INPUT_MANIFEST
+
+                   byte for byte. Anything present that was not admitted
+                   fails the launch, however it got there
+```
+
+The one exception is declared in advance: directories the agent writes its
+own working files into. Those must be **empty at verification time**,
+because "created after execution starts" is a claim that can be checked
+rather than trusted — a working directory with files in it before launch
+had them put there by somebody.
+
+`launch_token()` is issued by verification, never asked for. A caller that
+launches without one has not checked, and the token goes stale the moment
+the sandbox changes.
+
+**A procedural breach is not the same as a leak.** The review that found
+this one said so explicitly: `INVALID_PROCEDURAL_INPUT_CONTRACT_BREACH`,
+not a finding that a benchmark quantity reached the pass. The run was
+preserved exactly, marked `PRESERVED_NOT_USED_AS_BLIND_SCORE`, and rerun
+clean — the verdict recorded in a file of its own rather than edited into
+the evidence.
+
+And the scanner that caused it was fixed in the other direction too. The
+word `expected` in *"a break is expected because a stair is its own
+finish"* is English; `expected area` is a benchmark. A scanner that cannot
+tell them apart gets switched off by whoever has to work around it, and a
+switched-off scanner protects nothing — so a trigger word now counts only
+where it is **attached to a quantity**, `actual` is not a trigger at all
+because in construction prose it means *as drawn*, and `known` and
+`reference` count only beside a word for an answer. What the content gate
+cannot catch is a bare number with no trigger beside it; benchmark
+**documents** are kept out by path instead, wholesale, before anything
+reads them.

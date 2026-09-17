@@ -38,7 +38,7 @@ import json
 import re
 from dataclasses import dataclass, field
 
-MODEL = "A_BENCHMARK_MAY_NOT_ANCHOR_AN_INTERPRETATION_V1"
+MODEL = "A_BENCHMARK_MAY_NOT_ANCHOR_AN_INTERPRETATION_V2"
 
 # --- the two phases ------------------------------------------------------
 BLIND = "BLIND_GEOMETRY_INTERPRETATION"
@@ -56,12 +56,84 @@ WITHHELD = (HUMAN_QUANTITY, RECONSTRUCTED_QUANTITY, EXPECTED_AREA,
             TARGET_DIMENSION, REVEALING_CORRECTION)
 
 # Field names that carry one of those, whatever they are called locally.
-# A key is checked by SHAPE, so that renaming it does not smuggle it in.
+# A key is checked by SHAPE, so that renaming it does not smuggle it in: a
+# FIELD called `expected` is benchmark-shaped whatever it holds, because a
+# field is a slot somebody put an answer in.
 BENCHMARK_KEYS = re.compile(
     r"(benchmark|expected|target|human_?(excel|total|quantity|area)"
     r"|excel|qiyal|known_?total|takeoff_?total|take_?off_?total"
     r"|reference_?(area|total)|should_?be|correct_?(area|value))",
     re.I)
+
+# PROSE IS NOT A FIELD.
+#
+# "a break is expected because a stair is its own finish" is ordinary
+# English about construction. "expected area" is a benchmark. Both contain
+# the word `expected`, and a scanner that cannot tell them apart either
+# leaks or cries wolf — and a scanner that cries wolf gets switched off,
+# which is the worse failure.
+#
+# What makes a sentence benchmark-shaped is not a trigger word. It is a
+# trigger ATTACHED TO A QUANTITY: to a quantity noun, or to a number.
+# Triggers come in two strengths, because construction prose uses some of
+# these words to mean AS DRAWN - the opposite of a benchmark.
+#
+# `actual` is deliberately not a trigger at all: "the landing's actual
+# polygon in m2", "ACTUAL DRAWING DIMENSIONS override a default" is what
+# the engine is told to measure, and treating it as a trigger fired on four
+# of this library's own measurement rules.
+STRONG_TRIGGER = (r"(?:expected|target|benchmark|correct|human|excel|qiyal"
+                  r"|should\s+be|ought\s+to\s+be)")
+# `known` and `reference` mean ESTABLISHED FROM THE DRAWING as often as they
+# mean given: "a known dimension is never replaced by a default". So they
+# only count beside a word for an ANSWER, never beside a word for a
+# measurement.
+WEAK_TRIGGER = r"(?:known|reference)"
+
+# A word for an ANSWER - something aggregated, concluded, totalled.
+ANSWER_WORD = (r"(?:areas?|quantit(?:y|ies)|totals?|values?|figures?"
+               r"|amounts?|sums?|counts?|takeoff|take[-\s]?off)")
+# A word for a MEASUREMENT - the sort of thing a drawing prints.
+MEASURE_WORD = (r"(?:dimensions?|lengths?|widths?|sizes?|numbers?|prices?"
+                r"|rates?|m2|m\u00b2|sqm|sq\.?\s?m|square\s+met(?:er|re)s?"
+                r"|lm|linear\s+met(?:er|re)s?|pcs)")
+NEAR = r"(?:[\s\-_]+\w+){0,2}[\s\-_]+"
+
+BENCHMARK_TEXT = re.compile(
+    # a strong trigger beside any quantity word, either order
+    STRONG_TRIGGER + NEAR + r"(?:" + ANSWER_WORD + r"|" + MEASURE_WORD + r")"
+    + r"|(?:" + ANSWER_WORD + r"|" + MEASURE_WORD + r")" + NEAR
+    + STRONG_TRIGGER
+    # a weak trigger only beside a word for an ANSWER
+    + r"|" + WEAK_TRIGGER + NEAR + ANSWER_WORD
+    + r"|" + ANSWER_WORD + NEAR + WEAK_TRIGGER
+    # or a strong trigger with a number close behind it
+    + r"|" + STRONG_TRIGGER + r"[^.\n]{0,24}?\d",
+    re.I)
+
+# A few phrases name a document that IS a known total, and need no trigger
+# word beside them: a take-off total is a known total however it is
+# introduced.
+BENCHMARK_PHRASE = re.compile(
+    r"take[-\s_]?off\s+(?:total|quantity|quantities|area|figure)"
+    r"|bill\s+of\s+quantit"
+    r"|excel\s+(?:total|quantity|quantities|area|figure)"
+    r"|(?:manual|measured)\s+take[-\s_]?off",
+    re.I)
+
+ORDINARY_LANGUAGE_IS_NOT_A_LEAK = (
+    "a trigger word on its own is English. What is prohibited is a trigger "
+    "attached to a quantity - to a quantity noun or to a number - because "
+    "that is what carries an answer. A scanner that fires on ordinary prose "
+    "gets switched off, and a switched-off scanner protects nothing")
+
+WHAT_THIS_SCANNER_DOES_NOT_CATCH = (
+    "a bare number with no trigger beside it. 'the area is 137.5' reads the "
+    "same as a dimension printed on a drawing, and drawings are full of "
+    "numbers a pass is SUPPOSED to read. Benchmark DOCUMENTS are kept out by "
+    "path instead - a workbook, a reconciliation file or a sealed take-off "
+    "is refused by where it lives, wholesale, before anything reads it. "
+    "The two gates cover different ground on purpose")
 
 # --- what MAY establish a reading ---------------------------------------
 EV_DRAWING_GEOMETRY = "DRAWING_GEOMETRY"
@@ -119,6 +191,10 @@ def frozen_parameters() -> dict:
                 "a benchmark tests whether the engine measures a real "
                 "building. Once it has steered an interpretation it "
                 "tests nothing"),
+            "ordinary_language_is_not_a_leak":
+                ORDINARY_LANGUAGE_IS_NOT_A_LEAK,
+            "what_this_scanner_does_not_catch":
+                WHAT_THIS_SCANNER_DOES_NOT_CATCH,
             "closeness_is_not_a_rank": (
                 "hypotheses are ordered by the evidence behind them. "
                 "Where no evidence separates them they stay unranked, "
@@ -144,9 +220,13 @@ def scan(payload) -> list:
         elif isinstance(node, (list, tuple)):
             for i, v in enumerate(node):
                 walk(v, f"{path}[{i}]")
-        elif isinstance(node, str) and BENCHMARK_KEYS.search(node):
-            found.append({"at": path, "key": node[:60],
-                          "withheld": HUMAN_QUANTITY})
+        elif isinstance(node, str):
+            hit = BENCHMARK_TEXT.search(node) or BENCHMARK_PHRASE.search(
+                node)
+            if hit:
+                found.append({"at": path, "key": node[:60],
+                              "matched": hit.group(0)[:60],
+                              "withheld": HUMAN_QUANTITY})
 
     walk(payload, "")
     return found
