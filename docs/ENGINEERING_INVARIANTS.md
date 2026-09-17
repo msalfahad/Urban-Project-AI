@@ -2739,3 +2739,31 @@ doorway** — the one place in the pack where a door is not a deduction.
 Four quantities stay apart everywhere: `MEASURED_NET`, `WASTE`,
 `PROCUREMENT` and `CONTRACTOR_COMMERCIAL`. A contractor's convention
 changes what is paid for, never what is built.
+
+---
+
+## 97 · A DELTA IS RECONCILED BY HYPOTHESIS, NEVER BY ADJUSTMENT
+
+A take-off and a benchmark that differ are two measurements of one
+building, and the difference is information. It is reconciled by finding
+what the two SCOPES or BASES disagree about — and never by moving a
+number toward the other.
+
+The P7757 ground-floor open zone: 138.7867 m² of take-off against a
+137.5000 m² benchmark, a gap of 1.2867 m² (0.94%). Every line of the
+take-off checks out exactly. The gap has a candidate identity: the
+take-off deducts **half** the pool's circular segment (1.2448 m²) where
+the benchmark behaves as though the **whole** of it were deducted —
+which leaves 0.0418 m², and 137.5418 rounded to the nearest half-metre
+is 137.5.
+
+That is a hypothesis with an address, not a correction. **The applicable
+fraction of a curved intrusion is evidence**: half a segment is deducted
+when half of it falls inside the room, and which half that is comes from
+the drawing. A fraction nobody established is refused — it is exactly
+the kind of silent default that makes two honest take-offs differ by one
+half-segment and nobody know why.
+
+Nothing in the engine reads a benchmark. A comparison against one is
+disclosed as benchmark-informed, and it changes no tolerance, no
+threshold and no dimension.

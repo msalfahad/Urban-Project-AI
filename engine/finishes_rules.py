@@ -57,7 +57,8 @@ THROUGH_THE_DOORWAY = (
 def model_hash() -> str:
     parts = [MODEL, UNIT_M2, UNIT_LM, UNIT_PCS, NOT_ESTABLISHED, MEASURED,
              str(UPTURN_M), FULL_WALL_TILE_TAKES_THE_SKIRTING,
-             ONE_EDGE_ONE_FINISH, THROUGH_THE_DOORWAY]
+             ONE_EDGE_ONE_FINISH, THROUGH_THE_DOORWAY,
+             CURVE_FRACTION_NOT_ESTABLISHED]
     return hashlib.sha256("|".join(parts).encode("utf-8")).hexdigest()[:24]
 
 
@@ -90,6 +91,62 @@ def _need(item, unit, rule_id, missing, why=""):
                     status=NOT_ESTABLISHED, what_is_missing=tuple(missing),
                     why=why or "the geometry this rule needs is not "
                               "established, and no default stands in")
+
+
+# --------------------------------------------- a curved intrusion
+
+CURVE_FRACTION_NOT_ESTABLISHED = "THE_APPLICABLE_FRACTION_IS_NOT_ESTABLISHED"
+
+
+def circular_segment_m2(radius_m=None, segment_height_m=None) -> Quantity:
+    """The area a circle cuts out of a rectangle, from the chord in.
+
+    A pool, a curved wall or a bay intrudes on a room as a CIRCULAR
+    SEGMENT — the piece between a chord and the arc — and its area is
+
+        R² · arccos((R − h)/R) − (R − h)·√(2Rh − h²)
+
+    where h is how deep the arc reaches past the chord. Nothing about
+    that is a rule of thumb, and nothing about it is half.
+    """
+    if radius_m is None or segment_height_m is None:
+        return _need("CIRCULAR_SEGMENT", UNIT_M2, "GEOMETRY",
+                     ["the radius", "the segment height"])
+    r, h = float(radius_m), float(segment_height_m)
+    if r <= 0 or h <= 0 or h > 2 * r:
+        return _need("CIRCULAR_SEGMENT", UNIT_M2, "GEOMETRY",
+                     ["a radius and a segment height that describe an arc"])
+    area = (r * r * math.acos((r - h) / r)
+            - (r - h) * math.sqrt(max(2 * r * h - h * h, 0.0)))
+    return Quantity("CIRCULAR_SEGMENT", area, UNIT_M2, "GEOMETRY",
+                    MEASURED,
+                    why=f"a segment of radius {r} m reaching {h} m past "
+                        "its chord")
+
+
+def curved_intrusion_deduction(radius_m=None, segment_height_m=None, *,
+                               applicable_fraction=None) -> Quantity:
+    """How much of that segment this room actually loses.
+
+    THE FRACTION IS EVIDENCE, NOT A HABIT. Half a segment is deducted
+    when half of it falls inside the room, and which half that is comes
+    from the drawing. A fraction nobody established is the reason a
+    take-off and a benchmark differ by exactly one half-segment.
+    """
+    seg = circular_segment_m2(radius_m, segment_height_m)
+    if seg.status != MEASURED:
+        return seg
+    if applicable_fraction is None:
+        return _need("CURVED_INTRUSION_DEDUCTION", UNIT_M2, "GEOMETRY",
+                     ["how much of the segment falls inside this room"],
+                     "the segment is " + f"{seg.value:.4f} m2 and how "
+                     "much of it this room loses is not established. "
+                     + CURVE_FRACTION_NOT_ESTABLISHED)
+    frac = float(applicable_fraction)
+    return Quantity("CURVED_INTRUSION_DEDUCTION", seg.value * frac,
+                    UNIT_M2, "GEOMETRY", MEASURED,
+                    why=(f"{frac:g} of a {seg.value:.4f} m2 segment, as "
+                         "the drawing gives it"))
 
 
 # ------------------------------------------------------------- ceramic

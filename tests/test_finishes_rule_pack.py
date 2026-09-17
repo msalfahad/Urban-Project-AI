@@ -148,3 +148,32 @@ def test_no_quantity_here_is_a_price(library):
         rule = library.get(rule_id)
         assert "KWD" not in str(rule.value).upper()
         assert rule.rule_kind in rlib.KINDS
+
+
+# --------------------------------------------- a curved intrusion
+
+def test_a_circular_segment_is_its_own_arithmetic():
+    """A pool cuts a segment out of a room: chord to arc, nothing else."""
+    q = fr.circular_segment_m2(4.20, 0.76)
+    assert q.unit == fr.UNIT_M2
+    assert q.value == pytest.approx(2.4897, abs=0.0001)
+
+
+def test_the_applicable_fraction_is_evidence_and_not_a_habit():
+    """The half that made a take-off and a benchmark differ."""
+    half = fr.curved_intrusion_deduction(4.20, 0.76,
+                                         applicable_fraction=0.5)
+    whole = fr.curved_intrusion_deduction(4.20, 0.76,
+                                          applicable_fraction=1.0)
+    assert half.value == pytest.approx(1.2448, abs=0.0001)
+    assert whole.value == pytest.approx(2.4897, abs=0.0001)
+    # and with no fraction established, no deduction is invented
+    unknown = fr.curved_intrusion_deduction(4.20, 0.76)
+    assert unknown.status == fr.NOT_ESTABLISHED
+    assert unknown.value is None
+    assert fr.CURVE_FRACTION_NOT_ESTABLISHED in unknown.why
+
+
+def test_a_bad_arc_is_refused_rather_than_computed():
+    for bad in ((0.0, 0.5), (4.2, 0.0), (4.2, 99.0), (-1.0, 0.5)):
+        assert fr.circular_segment_m2(*bad).status == fr.NOT_ESTABLISHED
