@@ -2713,3 +2713,29 @@ drainage makes every room look plumbed.
 arrives there. It does not say which wall is tiled, how high, or that
 there is a sink. Linework spread evenly around a label **names no host
 wall**, and the engine says so rather than picking one.
+
+---
+
+## 96 · A ZERO BY RULE IS NOT A ZERO BY IGNORANCE
+
+A wet room whose wall ceramic runs full height takes **no** floor
+skirting: the tile already reaches the floor. That quantity is `0.00 lm`
+and it is `MEASURED_NET` — the rule decided it. A room whose wall ceramic
+extent nobody established also reports no skirting, and that one is
+`NOT_ESTABLISHED` with the missing fact named.
+
+The two look identical in a total and mean opposite things. Every
+finishes quantity therefore carries its **rule id**, its **unit** and its
+**status**, and a quantity with no established geometry behind it returns
+`None`, never `0`.
+
+The same distinction governs the rest of the pack: an edge takes a mitred
+45° finish **or** a steel profile and never both; a stair skirting
+follows the **zigzag** or the **rake**, never the plan run beneath them;
+a railing follows the **open edge** only, so a flight between two walls
+takes none; and the waterproofing membrane **carries through the
+doorway** — the one place in the pack where a door is not a deduction.
+
+Four quantities stay apart everywhere: `MEASURED_NET`, `WASTE`,
+`PROCUREMENT` and `CONTRACTOR_COMMERCIAL`. A contractor's convention
+changes what is paid for, never what is built.
