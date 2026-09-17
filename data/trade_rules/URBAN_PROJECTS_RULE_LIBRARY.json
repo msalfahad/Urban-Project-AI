@@ -1,6 +1,6 @@
 {
   "library": "URBAN_PROJECTS_RULE_LIBRARY",
-  "library_version": "1.2.0",
+  "library_version": "1.3.0",
   "notes": {
     "priority": "PROJECT DRAWING / SPECIFICATION > PROJECT-SPECIFIC OWNER OVERRIDE > URBAN PROJECTS OWNER STANDARD > UNKNOWN / ASK OWNER",
     "a_default_never_bypasses_geometry": "where a rule carries a dimension and the drawing establishes another, the drawing wins. Where the geometry a rule needs is not established, the rule's unknown_behavior applies and no default dimension is used",
@@ -8,7 +8,8 @@
     "three_concepts": "CONSTRUCTION_VOCABULARY says what a term means; MEASUREMENT_RULE says how the quantity is measured; COMMERCIAL_MEASUREMENT_BASIS says how the work is bought. A RATE — what a supplier charges, on a quotation, on a date — lives in a project rate card and never in this library",
     "source_6e_a": "Owner rule addendum 6E-A, 2026-09-17: stair thicknesses, commercial step measurement, elevator threshold fallback, vocabulary",
     "qs_rule_pack_finishes_v1": "received 2026-09-17. Ceramic, stairs and waterproofing, plus the general rules that govern all three",
-    "qs_rule_pack_finishes_v1_status": "TRUNCATED AS RECEIVED: the CERAMIC, STAIRS and WATERPROOFING sections each end in an ellipsis. What arrived is recorded; what did not is not invented, and the missing items are an OWNER_RULE_REQUEST"
+    "qs_rule_pack_finishes_v1_status": "TRUNCATED AS RECEIVED: the CERAMIC, STAIRS and WATERPROOFING sections each end in an ellipsis. What arrived is recorded; what did not is not invented, and the missing items are an OWNER_RULE_REQUEST",
+    "benchmark_anchoring_protection": "received 2026-09-17. It applies to A18 and to every visual geometry verification pass; A18 does not exist in this codebase yet, and the protection is in the engine so that it is in force the moment such a pass does"
   },
   "rules": [
     {
@@ -1026,6 +1027,27 @@
       "exceptions": [],
       "unknown_behavior": "SHOWER_EXTENT_NOT_ESTABLISHED",
       "notes": ""
+    },
+    {
+      "rule_id": "UP-QA-001",
+      "rule_name": "A benchmark may not anchor a geometry interpretation",
+      "rule_kind": "MEASUREMENT_RULE",
+      "trade": "ALL",
+      "scope": "QUALITY_ASSURANCE",
+      "country_context": "",
+      "default_or_mandatory": "MANDATORY",
+      "owner_confirmed": true,
+      "version": "1.0.0",
+      "effective_date": "2026-09-17",
+      "source": "Owner protocol: BENCHMARK ANCHORING PROTECTION, 2026-09-17",
+      "project_override_allowed": false,
+      "required_geometry": [],
+      "calculation_method": "a blind geometry pass receives no human quantity, no manually reconstructed quantity, no expected area, no benchmark-derived dimension and no previous numeric correction whose value would reveal the target. The candidate geometry is FROZEN before any benchmark is opened. A numerical coincidence with a benchmark is NOT geometric evidence: a curve, arc, segment, fraction or boundary is established from drawing geometry, a CAD entity, an authored dimension, spatial topology, the specification, independent visual evidence or human clarification. Hypotheses raised after a reveal stay UNCONFIRMED until independent geometric evidence supports them, and are never ranked by closeness",
+      "unit": "NONE",
+      "value": "BLIND_THEN_FREEZE_THEN_RECONCILE",
+      "exceptions": [],
+      "unknown_behavior": "UNCONFIRMED",
+      "notes": "enforced in engine/benchmark_protection.py rather than remembered"
     }
   ]
 }

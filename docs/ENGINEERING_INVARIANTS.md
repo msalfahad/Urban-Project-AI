@@ -2757,7 +2757,9 @@ the benchmark behaves as though the **whole** of it were deducted —
 which leaves 0.0418 m², and 137.5418 rounded to the nearest half-metre
 is 137.5.
 
-That is a hypothesis with an address, not a correction. **The applicable
+That arithmetic is recorded as arithmetic. **It is not a reason to
+prefer that reading** — see §98, which this section originally broke by
+ranking the hypothesis first for landing on the number. **The applicable
 fraction of a curved intrusion is evidence**: half a segment is deducted
 when half of it falls inside the room, and which half that is comes from
 the drawing. A fraction nobody established is refused — it is exactly
@@ -2767,3 +2769,42 @@ half-segment and nobody know why.
 Nothing in the engine reads a benchmark. A comparison against one is
 disclosed as benchmark-informed, and it changes no tolerance, no
 threshold and no dimension.
+
+
+---
+
+## 98 · A BENCHMARK MAY NOT ANCHOR AN INTERPRETATION
+
+A benchmark is the only independent check a project has of whether this
+engine measures a real building. It stops being one the moment it
+influences the interpretation it is meant to test — and **influence does
+not need intent**: an interpreter who knows the expected area finds the
+reading that produces it, and experiences that as having seen it.
+
+```
+BLIND INTERPRETATION   no human quantity, no reconstructed quantity, no
+                       expected area, no benchmark-derived dimension, and
+                       no previous numeric correction whose value would
+                       reveal the target
+FREEZE                 the candidate geometry is hashed and can no
+                       longer move
+RECONCILIATION         only now may a benchmark be opened, and only to
+                       explain a difference — never to choose a reading
+```
+
+**A numerical coincidence with a benchmark is not geometric evidence.**
+Where two readings of a curved boundary give different areas and one
+lands on the benchmark, that landing is a fact about arithmetic and no
+part of the case for that reading. What establishes a curve, an arc, a
+segment, a fraction or a boundary: drawing geometry, a CAD entity, an
+authored dimension, spatial topology, the specification, independent
+visual evidence, or a human saying so.
+
+Hypotheses raised after a reveal stay `UNCONFIRMED` until independent
+geometric evidence supports them, and **they are never ordered by
+closeness**. Where no evidence separates them they stay `UNRANKED`,
+however neatly one of them lands.
+
+This project broke that rule once, in the ground-floor open zone
+reconciliation, and the breach is recorded in that document rather than
+edited out of it.
