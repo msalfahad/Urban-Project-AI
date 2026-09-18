@@ -72,11 +72,14 @@ def main(argv=None) -> int:
         if not src.exists():
             missing.append({"candidate_id": cid, "path": str(src)})
             continue
+        identity = next((i.get("value") for i in t.get("inputs", ())
+                         if i.get("kind") == "IDENTITY_TEXT_ONLY"), None)
         d = box / cid
         d.mkdir()
         shutil.copy(src, d / "OVERLAY.png")
         (d / "BRIEF.txt").write_text(
-            vc.V2_BRIEF + "\n\nLEGEND FOR THE OVERLAY\n"
+            f"CANDIDATE: {cid}\nTHE LABEL DRAWN IN THIS AREA: {identity}\n\n"
+            + vc.V2_BRIEF + "\n\nLEGEND FOR THE OVERLAY\n"
             + "\n".join("  " + x for x in t["OVERLAY_LEGEND"]) + "\n",
             encoding="utf-8")
         ans = v1_by.get(cid, {}).get("FROZEN_E1_3_V1_ANSWER") or {}
@@ -87,7 +90,7 @@ def main(argv=None) -> int:
             encoding="utf-8")
         rows.append({
             "candidate_id": cid,
-            "identity": t.get("identity") or t.get("IDENTITY"),
+            "identity": identity,
             "THE_PROPOSAL_CHANGED_SINCE_E1_3":
                 t.get("THE_PROPOSAL_CHANGED_SINCE_E1_3"),
             "THIS_IS_A_PROPOSED_BOUNDARY":
