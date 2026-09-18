@@ -302,6 +302,15 @@ _ELEMENT_FOR_GAP = {
 }
 
 
+def _parent_of(interval_id, interval_by_id):
+    iv = interval_by_id.get(interval_id)
+    if iv is not None:
+        return (iv.provenance or {}).get("object_id") or ""
+    # fall back on the id's own shape: "<prefix>:<parent>#<n>"
+    head = str(interval_id).split("#", 1)[0]
+    return head.split(":", 1)[-1] if ":" in head else head
+
+
 def chain_for(trace_out, *, gap_rows, exposed_ids, interval_by_id) -> dict:
     """Turn a walked face into a PHYSICAL_BOUNDARY_CHAIN.
 
@@ -330,10 +339,11 @@ def chain_for(trace_out, *, gap_rows, exposed_ids, interval_by_id) -> dict:
                         "established, and nothing is closed across it")})
             continue
         if s.role in cg.MATERIAL_ROLES:
-            if s.role == cg.COLUMN_FACE and oid not in exposed_ids:
+            parent = _parent_of(oid, interval_by_id)
+            if s.role == cg.COLUMN_FACE and parent not in exposed_ids:
                 connectors.append({
                     "kind": bc.UNRESOLVED_EDGE, "start_mm": a, "end_mm": z,
-                    "object_id": oid,
+                    "object_id": oid, "parent_object_id": parent,
                     "CLEAR_FACE_OWNERSHIP_STATUS": co.ARCHITECTURAL_FACE_OWNS,
                     "why": ("a structural column face stands here and does "
                             "not own the clear internal boundary. What the "
@@ -605,7 +615,7 @@ def chain_overlays(sheet, reg, gf, interp, rows, owner, out_dir) -> list:
                     colour, width, dash = r12.CASEWORK_COLOUR, 4, None
                 elif iv.role == ir.AMBIGUOUS_PAIRED_BAND:
                     colour, width, dash = r12.AMBIGUOUS_COLOUR, 4, None
-                elif iv.interval_id in hidden_ids:
+                elif (iv.provenance or {}).get("object_id") in hidden_ids:
                     colour, width, dash = HIDDEN_COLUMN_COLOUR
                 else:
                     continue
@@ -643,9 +653,11 @@ def chain_overlays(sheet, reg, gf, interp, rows, owner, out_dir) -> list:
 
 def whole_floor(sheet, reg, gf, rows, path) -> dict:
     from PIL import ImageDraw
-    box = gf["region"].extent_mm
-    centre = ((box[0] + box[2]) / 2.0, (box[1] + box[3]) / 2.0)
-    half = max(box[2] - box[0], box[3] - box[1]) / 2.0 + 2000.0
+    rgn = gf["region"]
+    x0, y0 = float(rgn.x0), float(rgn.y0)
+    x1, y1 = float(rgn.x1), float(rgn.y1)
+    centre = ((x0 + x1) / 2.0, (y0 + y1) / 2.0)
+    half = max(x1 - x0, y1 - y0) / 2.0 + 2000.0
     got = r12._frame(sheet, reg, centre, half, (2400, 2400))
     if got is None:
         return {"file": None, "why": "the sheet could not be framed"}
