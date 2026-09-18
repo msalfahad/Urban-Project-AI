@@ -294,3 +294,51 @@ def test_s_a_curved_face_keeps_its_points_and_its_own_length():
     assert el["length_mm"] == pytest.approx(6283.0, rel=0.01)
     assert el["wall_length_contribution_mm"] == pytest.approx(
         el["length_mm"], abs=0.01)
+
+
+# T - a ring may be nothing but the chain that makes it
+def test_t_a_ring_whose_steps_do_not_meet_is_refused():
+    """The defect this guards was found on a real floor.
+
+    A ring was built by listing the faces the walk stepped on and handing
+    them to a polygon. Where two consecutive faces did not meet, the
+    polygon constructor joined them with a line of its own. One region
+    came out "closed" with a third of its ring - 1.95 m of 5.68 m - drawn
+    by the constructor and appearing in no chain. Its area, 1.619 m2, was
+    larger than any shape of its stated 3.738 m perimeter can enclose.
+    """
+    segs = [_seg((0, 0), (4000, 0), "S"),
+            _seg((4000, 0), (4000, 3000), "E"),
+            _seg((4000, 3000), (2500, 3000), "N1"),
+            # a 500 mm hole in the north side, then the wall resumes
+            _seg((2000, 3000), (0, 3000), "N2"),
+            _seg((0, 3000), (0, 0), "W")]
+    res = _run(segs, (2000, 1500))
+    assert res["BOUNDARY_BASIS"] == bw.NOT_ESTABLISHED, (
+        "a ring that needs a line nobody drew is not a ring")
+    assert "ring_area_mm2" not in res
+
+
+# U - the ring of a region that IS closed equals its chain exactly
+def test_u_a_closed_ring_and_its_chain_are_the_same_length():
+    res = _run(_box(0, 0, 4000, 3000, "R"), (2000, 1500))
+    assert res["BOUNDARY_BASIS"] == bw.ENCLOSED
+    assert res["THE_RING_IS_ITS_OWN_CHAIN"] is True
+    assert res["ring_perimeter_mm"] == pytest.approx(
+        res["chain_length_mm"], abs=1.0)
+    assert res["ring_perimeter_mm"] == pytest.approx(14000.0, abs=1.0)
+
+
+# V - no ring may enclose more than its own perimeter allows
+def test_v_no_ring_beats_the_isoperimetric_bound():
+    for segs, seed in (
+            (_box(0, 0, 4000, 3000, "R"), (2000, 1500)),
+            (_box(0, 0, 900, 900, "T"), (450, 450)),
+            (_box(0, 0, 4000, 3000, "R") + _box(1000, 0, 1200, 200, "C"),
+             (2000, 1500))):
+        res = _run(segs, seed)
+        if res["BOUNDARY_BASIS"] != bw.ENCLOSED:
+            continue
+        p = res["ring_perimeter_mm"]
+        assert res["ring_area_mm2"] <= p * p / (4.0 * math.pi) + 1.0, (
+            "a ring cannot enclose more than a circle of its perimeter")

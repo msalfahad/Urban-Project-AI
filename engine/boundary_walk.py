@@ -71,6 +71,11 @@ MIN_PAIR_OVERLAP_MM = 150.0
 # thickness family inferred from the drawing under test.
 THICKNESS_TOLERANCE_MM = 15.0
 
+# A ring's own perimeter and the length of the chain that makes it are the
+# same number, to within noding slack. Anything more was added by the
+# polygon and not by the drawing.
+RING_PERIMETER_TOLERANCE_MM = 1.0
+
 # Noding drawn geometry leaves behind pieces of no length. A piece with no
 # length has no direction, so a walk that stepped onto one could not take
 # the turn at the next node. They are dropped.
@@ -761,6 +766,7 @@ def boundary_of_point(seed, pieces, *, gaps_at=None, mates=None,
         "faces_the_point_can_see": len(starts),
         "why": {
             "a_closed_ring_is_checked": WHY_A_CLOSED_RING_IS_CHECKED,
+            "a_ring_is_only_its_own_chain": A_RING_IS_ONLY_ITS_OWN_CHAIN,
             "every_visible_run_is_taken": WHY_EVERY_VISIBLE_RUN_IS_TAKEN,
             "a_disconnected_fragment": WHAT_A_DISCONNECTED_FRAGMENT_IS,
         },
@@ -769,6 +775,23 @@ def boundary_of_point(seed, pieces, *, gaps_at=None, mates=None,
 
 ENCLOSED = "ENCLOSED_BY_DRAWN_MATERIAL"
 NOT_ESTABLISHED = "BOUNDARY_NOT_ESTABLISHED_BY_THE_DRAWING"
+
+A_RING_IS_ONLY_ITS_OWN_CHAIN = (
+    "a ring was built by listing the material faces the walk stepped on "
+    "and handing them to a polygon. Where two consecutive steps did not "
+    "meet - across an opening, around the end of a wall - the polygon "
+    "constructor joined them with a straight line of its own, and that "
+    "line appeared in no chain, carried no evidence and was still counted "
+    "as boundary. One region was called closed with a third of its ring "
+    "invented that way. A ring is now accepted only when every step meets "
+    "the next on the drawing and the ring's own perimeter equals the "
+    "chain's own length")
+
+THE_RING_DID_NOT_CLOSE_ON_THE_CHAIN = (
+    "consecutive steps of this walk do not meet, so there is no ring: "
+    "anything that appeared to close it would be a line this system drew "
+    "and not a line the drawing has")
+
 
 WHY_THE_INNERMOST_RING = (
     "where more than one walked ring encloses the point, they are nested: "
@@ -819,6 +842,67 @@ def face_selection_audit(pieces, steps, mates, seed):
     return out
 
 
+def ring_of(result, pieces, *, snap_mm=NODE_SNAP_MM):
+    """The ordered vertices of a walk, and the length of the chain.
+
+    Every step contributes its own geometry - a face its points, a
+    crossing of a classified gap its span, the end of a wall the turn
+    across its thickness. A step that does not meet the one before it is
+    reported, because a ring that needs a line nobody drew is not a ring.
+    """
+    ring, chain_mm, broken = [], 0.0, None
+
+    def add(pts):
+        nonlocal chain_mm, broken
+        pts = [tuple(q) for q in pts]
+        if not pts:
+            return
+        if ring:
+            d = math.hypot(pts[0][0] - ring[-1][0], pts[0][1] - ring[-1][1])
+            if d > snap_mm and broken is None:
+                broken = {"between_mm": [list(ring[-1]), list(pts[0])],
+                          "distance_mm": round(d, 3)}
+        for k in range(1, len(pts)):
+            chain_mm += math.hypot(pts[k][0] - pts[k - 1][0],
+                                   pts[k][1] - pts[k - 1][1])
+        ring.extend(pts if not ring else pts[1:]
+                    if math.hypot(pts[0][0] - ring[-1][0],
+                                  pts[0][1] - ring[-1][1]) <= snap_mm
+                    else pts)
+
+    def oriented(a, b):
+        """A span is walked from the end the walk has reached."""
+        if not ring:
+            return [a, b]
+        da = math.hypot(a[0] - ring[-1][0], a[1] - ring[-1][1])
+        db = math.hypot(b[0] - ring[-1][0], b[1] - ring[-1][1])
+        return [a, b] if da <= db else [b, a]
+
+    for st in result["steps"]:
+        kind = st["STEP"]
+        if kind == STEP_MATERIAL_FACE:
+            cs = pieces[st["piece"]]["coords"]
+            add(cs if st["entered_at_end"] == 0 else list(reversed(cs)))
+        elif kind == STEP_WALL_END_RETURN:
+            add(oriented(tuple(st["at_mm"]), tuple(st["to_mm"])))
+        elif kind == STEP_ACROSS_A_GAP:
+            # the gap's two ends are recorded in the ORDER THE GAP WAS
+            # FOUND IN, which need not be the order the walk crosses it.
+            # Taking them as given put an 800 mm and a 1000 mm doorway
+            # into two rings backwards, and each looked like a hole.
+            add(oriented(tuple(st["start_mm"]), tuple(st["end_mm"])))
+        elif kind == STEP_SINGLE_LINE_END_TURN:
+            continue
+    if ring and len(ring) >= 3:
+        d = math.hypot(ring[0][0] - ring[-1][0], ring[0][1] - ring[-1][1])
+        if d > snap_mm and broken is None:
+            broken = {"between_mm": [list(ring[-1]), list(ring[0])],
+                      "distance_mm": round(d, 3),
+                      "this_is_the_gap_a_polygon_would_have_closed": True}
+        chain_mm += d if d <= snap_mm else 0.0
+    return ring, chain_mm, broken
+
+
 def boundary_at(seed, pieces, *, gaps_at=None, mates=None, facing=None,
                 rays=720, reach_mm=30000.0, max_steps=4000):
     """The corrected mechanism: one answer for one point, or none.
@@ -848,22 +932,39 @@ def boundary_at(seed, pieces, *, gaps_at=None, mates=None, facing=None,
         tried.add(key)
         if not r["CLOSED_BY_DRAWN_MATERIAL"]:
             continue
-        ring = []
-        for s in r["steps"]:
-            if s["STEP"] == STEP_MATERIAL_FACE:
-                cs = pieces[s["piece"]]["coords"]
-                ring.extend(cs if s["entered_at_end"] == 0
-                            else list(reversed(cs)))
+        ring, chain_mm, broken = ring_of(r, pieces)
+        if broken is not None:
+            r["THE_RING_DID_NOT_CLOSE_ON_THE_CHAIN"] = (
+                THE_RING_DID_NOT_CLOSE_ON_THE_CHAIN)
+            r["steps_that_do_not_meet"] = broken
+            islands.append(r)
+            continue
         if len(ring) < 4:
             continue
         try:
-            poly = Polygon(ring)
+            raw = Polygon(ring)
         except Exception:
             continue
-        if not poly.is_valid:
-            poly = poly.buffer(0)
+        # THE PERIMETER IS CHECKED ON THE RING AS WALKED. Repairing a
+        # self-touching ring - which is what going up one side of a stub
+        # and back down the other makes - drops the spur and with it the
+        # length that walking the spur really took, so the check has to
+        # come first and the repair is only for area and containment.
+        if abs(raw.length - chain_mm) > RING_PERIMETER_TOLERANCE_MM:
+            r["THE_RING_DID_NOT_CLOSE_ON_THE_CHAIN"] = (
+                A_RING_IS_ONLY_ITS_OWN_CHAIN)
+            r["ring_perimeter_mm"] = round(raw.length, 3)
+            r["chain_length_mm"] = round(chain_mm, 3)
+            r["length_the_polygon_added_by_itself_mm"] = round(
+                raw.length - chain_mm, 3)
+            islands.append(r)
+            continue
+        poly = raw if raw.is_valid else raw.buffer(0)
         r["started_on_piece"] = i
         r["ring_area_mm2"] = poly.area
+        r["ring_perimeter_mm"] = round(raw.length, 3)
+        r["chain_length_mm"] = round(chain_mm, 3)
+        r["THE_RING_IS_ITS_OWN_CHAIN"] = True
         if poly.contains(sp):
             rings.append((poly.area, r))
         else:
