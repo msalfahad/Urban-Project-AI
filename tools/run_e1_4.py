@@ -2172,6 +2172,9 @@ def phase_finalize(a) -> int:
                     "register still carries every task, every overlay hash "
                     "and every answer")})
 
+    artifacts = _rehash_artifacts(out, artifacts)
+    (out / "_E1_4_ARTIFACTS_GEOMETRY.json").write_text(
+        json.dumps(artifacts, indent=2) + "\n", encoding="utf-8")
     freeze = _freeze(a, st, artifacts, released, withheld)
     path = out / "E1_4_FREEZE.json"
     path.write_text(json.dumps(freeze, indent=2, ensure_ascii=False,
@@ -2189,6 +2192,33 @@ E1_4_MODULES = (
     "engine/ring_qa.py", "engine/traversal_geometry.py",
     "engine/visual_finding.py", "tools/run_e1_4.py",
 )
+
+
+A_FREEZE_BINDS_WHAT_IS_THERE = (
+    "the artifact hashes are taken from the files on disk at the moment "
+    "the freeze is written, not from a note an earlier phase left. The "
+    "V2 register is the case that proved it: the geometry phase recorded "
+    "its hash, the answer recorder then rewrote that file with twenty "
+    "cold answers in it, and the freeze went on naming the hash of the "
+    "empty one. A freeze that names a hash the file does not have binds "
+    "nothing, and the file it fails to bind is the evidence the "
+    "decisions were made from")
+
+
+def _rehash_artifacts(out, artifacts) -> dict:
+    """Every artifact, hashed from disk, now."""
+    fresh, missing = {}, []
+    for name in sorted(artifacts):
+        path = Path(out) / name
+        if not path.exists():
+            missing.append(name)
+            continue
+        fresh[name] = r12._sha(path)
+    if missing:
+        raise ValueError(
+            "A_FREEZE_MAY_NOT_NAME_A_FILE_THAT_IS_NOT_THERE = "
+            + ", ".join(missing))
+    return fresh
 
 
 def _freeze(a, st, artifacts, released, withheld) -> dict:
@@ -2243,6 +2273,7 @@ def _freeze(a, st, artifacts, released, withheld) -> dict:
             "interval_role": ir.model_hash(),
         },
         "ARTIFACTS": artifacts,
+        "a_freeze_binds_what_is_there": A_FREEZE_BINDS_WHAT_IS_THERE,
         "RELEASED": [r["candidate_id"] for r in released],
         "WITHHELD": [r["candidate_id"] for r in withheld],
         "NOT_HASHED_AND_WHY": {

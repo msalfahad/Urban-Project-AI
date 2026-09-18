@@ -1010,3 +1010,24 @@ def test_13c_one_span_is_one_opening_however_many_doors_evidence_it():
     assert row["door_ids_evidencing_this_opening"] == ["D-1", "D-2", "D-3"]
     assert od.DOOR_LEAF in row["door_evidence"]
     assert od.SWING_ARC in row["door_evidence"]
+
+
+def test_a_freeze_binds_the_file_that_is_there_not_a_note_about_it(tmp_path):
+    """The V2 register proved this one. The geometry phase recorded its
+    hash, the answer recorder then rewrote that file with twenty cold
+    answers in it, and the freeze went on naming the hash of the empty
+    one - binding nothing, and failing to bind the very evidence the
+    decisions were made from."""
+    from tools import run_e1_4 as r14
+    (tmp_path / "A.json").write_text('{"answers": []}\n')
+    stale = {"A.json": "0" * 64}
+    fresh = r14._rehash_artifacts(tmp_path, stale)
+    assert fresh["A.json"] != stale["A.json"]
+
+    (tmp_path / "A.json").write_text('{"answers": [1, 2, 3]}\n')
+    after = r14._rehash_artifacts(tmp_path, stale)
+    assert after["A.json"] != fresh["A.json"]
+
+    with pytest.raises(ValueError) as e:
+        r14._rehash_artifacts(tmp_path, {"NOT_THERE.json": "x"})
+    assert "A_FREEZE_MAY_NOT_NAME_A_FILE_THAT_IS_NOT_THERE" in str(e.value)
