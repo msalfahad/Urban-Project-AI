@@ -222,3 +222,55 @@ def test_o_two_parallel_lines_at_no_known_thickness_are_not_a_wall_body():
              {"a": (0, 733), "b": (4000, 733), "object_id": "B"}]
     fams = bw.thickness_families([200.0, 150.0])
     assert bw.pair_faces(faces, families=fams) == []
+
+
+# P - the mechanism knows nothing about any particular room
+def test_p_the_mechanism_names_no_region_and_no_project():
+    """No code in the mechanism may branch on a region or a project.
+
+    The module's opening docstring recounts which room the superseded
+    constructions were wrong about, which is history and belongs there.
+    Everything below it is the mechanism, and that is what is checked.
+    """
+    import ast
+    import pathlib
+    src = pathlib.Path("engine/boundary_walk.py").read_text(encoding="utf-8")
+    tree = ast.parse(src)
+    code = ast.unparse(ast.Module(
+        body=[n for n in tree.body
+              if not (isinstance(n, ast.Expr)
+                      and isinstance(n.value, ast.Constant)
+                      and isinstance(n.value.value, str))],
+        type_ignores=[]))
+    for word in ("PANTRY", "KITCHEN", "DRIVER", "WASH", "SALOON", "DINING",
+                 "DEWANEYA", "P7757", "LG-0", "E1_3-LG"):
+        assert word not in code, (
+            f"the mechanism must be general: its code mentions {word}")
+
+
+# Q - a proposal is never offered without the point inside it
+def test_q_enclosed_is_never_reported_without_the_point_inside():
+    for segs, seed in (
+            (_box(0, 0, 4000, 3000, "R"), (2000, 1500)),
+            (_box(0, 0, 200, 200, "TINY"), (3000, 3000)),
+            (_box(0, 0, 4000, 3000, "R") + _box(1800, 1300, 2000, 1500, "P"),
+             (600, 600)),
+            ([], (0, 0)),
+    ):
+        res = _run(segs, seed)
+        if res["BOUNDARY_BASIS"] == bw.ENCLOSED:
+            assert res["RING_ENCLOSES_THE_POINT"] is True
+            assert res.get("ring_area_mm2", 0.0) > 0.0
+        else:
+            assert res["RING_ENCLOSES_THE_POINT"] is False
+            assert "THIS_IS_NOT_A_PROPOSED_BOUNDARY" in res
+
+
+# R - a withheld result carries no area and says so
+def test_r_a_withheld_result_carries_no_area():
+    segs = [_seg((0, 0), (4000, 0), "S"),
+            _seg((4000, 0), (4000, 3000), "E")]
+    res = _run(segs, (2000, 1500))
+    assert res["BOUNDARY_BASIS"] == bw.NOT_ESTABLISHED
+    assert "ring_area_mm2" not in res
+    assert res["why"] == bw.WHY_NOTHING_IS_PROPOSED

@@ -1623,6 +1623,109 @@ def phase_v2_inputs(a) -> int:
     return 0
 
 
+
+DEV_DIAGNOSTIC_DIR = Path("data/runs/7757/e1_3_development_diagnostic")
+
+WHY_THE_CORRECTION_IS_AUDITED = (
+    "the mechanism that proposes a boundary was rebuilt after three "
+    "constructions failed. A rebuild can look like an improvement simply "
+    "because the cases that were vetoed stopped being vetoed, so this "
+    "register puts the three things side by side for every candidate "
+    "uniformly: what the superseded construction proposed and what the "
+    "challenge said about it, what the corrected mechanism proposes, and "
+    "what a fresh challenge with no knowledge of any of it says now. "
+    "Whether the general fix worked is read off this table, not asserted")
+
+A_VETO_IDENTIFIES_A_FAILURE_CLASS_ONLY = (
+    "the earlier challenge answers were used to name WHAT KIND of thing "
+    "was wrong. No coordinate, length, area or corrected outline from any "
+    "challenge was given to the corrected mechanism, and no threshold was "
+    "moved to make a particular candidate pass")
+
+
+def _correction_audit(a, rows, v2_by) -> dict:
+    """§11 of the correction brief - the three states, side by side."""
+    pre_v2, pre_props = {}, {}
+    f = DEV_DIAGNOSTIC_DIR / "PRE_CORRECTION_V2_ANSWERS.json"
+    if f.exists():
+        doc = json.loads(f.read_text(encoding="utf-8"))
+        pre_v2 = {x["candidate_id"]: x for x in doc.get("ANSWERS", ())}
+    f = DEV_DIAGNOSTIC_DIR / "PRE_CORRECTION_PROPOSALS.json"
+    if f.exists():
+        doc = json.loads(f.read_text(encoding="utf-8"))
+        for name, lst in (doc.get("PROPOSALS_BY_SUPERSEDED_CONSTRUCTION")
+                          or {}).items():
+            if not isinstance(lst, list):
+                continue
+            for x in lst:
+                pre_props.setdefault(x["CANDIDATE_ID"], {})[name] = x
+
+    out_rows = []
+    for r in rows:
+        cid = r["candidate_id"]
+        ch = r["chain"]
+        pv = pre_v2.get(cid)
+        post = v2_by.get(cid)
+        out_rows.append({
+            "CANDIDATE_ID": cid,
+            "identity": r["group"].english_token,
+            "PRE_CORRECTION_V2": ({
+                "STATUSES": pv.get("statuses"),
+                "summary": pv.get("summary"),
+                "reasons": pv.get("reasons"),
+            } if pv else "NOT_ANSWERED_THE_ROUND_WAS_STOPPED"),
+            "PRE_CORRECTION_PROPOSALS": pre_props.get(cid)
+            or "NOT_PRESENT_IN_THE_DEVELOPMENT_DIAGNOSTIC",
+            "CORRECTED_PROPOSAL": {
+                "BOUNDARY_BASIS": r.get("BOUNDARY_BASIS"),
+                "RING_ENCLOSES_THE_POINT": bool(
+                    ch and ch.get("RING_ENCLOSES_THE_POINT")),
+                "PHYSICAL_GEOMETRY_STATUS":
+                    r["physical"]["PHYSICAL_GEOMETRY_STATUS"],
+                "elements": 0 if ch is None else len(ch["CHAIN"]),
+                "material_length_counted_once_mm": None if ch is None
+                else ch.get("material_length_counted_once_mm"),
+                "clear_internal_area_mm2": None if ch is None
+                else ch.get("ring_area_mm2"),
+                "IS_A_PROPOSAL": bool(
+                    ch and ch.get("RING_ENCLOSES_THE_POINT")),
+                "withheld_because": None if (
+                    ch and ch.get("RING_ENCLOSES_THE_POINT"))
+                else bw.WHY_NOTHING_IS_PROPOSED,
+            },
+            "POST_CORRECTION_COLD_V2": ({
+                "STATUSES": post.get("statuses"),
+                "summary": post.get("summary"),
+                "reasons": post.get("reasons"),
+            } if post else "NOT_ANSWERED"),
+        })
+    return {
+        "why_the_correction_is_audited": WHY_THE_CORRECTION_IS_AUDITED,
+        "a_veto_identifies_a_failure_class_only":
+            A_VETO_IDENTIFIES_A_FAILURE_CLASS_ONLY,
+        "the_development_diagnostic_is_not_a_result": (
+            "data/runs/7757/e1_3_development_diagnostic holds the "
+            "superseded attempts. It is DEVELOPMENT_DIAGNOSTIC_ONLY and no "
+            "geometry or quantity may be taken from it"),
+        "counts": {
+            "candidates": len(out_rows),
+            "answered_in_the_pre_correction_round": sum(
+                1 for x in out_rows
+                if isinstance(x["PRE_CORRECTION_V2"], dict)),
+            "answered_in_the_post_correction_round": sum(
+                1 for x in out_rows
+                if isinstance(x["POST_CORRECTION_COLD_V2"], dict)),
+            "corrected_proposals_offered": sum(
+                1 for x in out_rows
+                if x["CORRECTED_PROPOSAL"]["IS_A_PROPOSAL"]),
+            "corrected_proposals_withheld": sum(
+                1 for x in out_rows
+                if not x["CORRECTED_PROPOSAL"]["IS_A_PROPOSAL"]),
+        },
+        "CANDIDATES": out_rows,
+    }
+
+
 def phase_finalize(a) -> int:
     out = Path(a.out)
     artifacts = json.loads((out / "_E1_3_ARTIFACTS_GEOMETRY.json")
@@ -1912,6 +2015,9 @@ def phase_finalize(a) -> int:
         "what_success_means": CLOSURE_IS_NOT_A_TARGET,
     })
 
+    _write(out, artifacts, "E1_3_CORRECTION_AUDIT_REGISTER.json",
+           _correction_audit(a, rows, v2_by))
+
     _write(out, artifacts, "E1_3_DELTA_FROM_E1_2.json", _delta(a, rows))
 
     reg_r, sheet = _registered_sheet(a, gf)
@@ -2142,6 +2248,7 @@ def _freeze(a, st, artifacts, released, withheld) -> dict:
             "gap_ontology": go.model_hash(),
             "column_ownership": co.model_hash(),
             "boundary_chain": bc.model_hash(),
+            "boundary_walk": bw.model_hash(),
             "space_status": ss.model_hash(),
             "arbitration_dimensions": ad.model_hash(),
             "decision_ledger": dl.model_hash(),

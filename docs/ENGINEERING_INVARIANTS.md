@@ -3281,3 +3281,81 @@ explanation derives from one ledger of checks. A check kept for
 information is labelled `DIAGNOSTIC_ONLY` and can never appear as the
 reason a region was withheld; a record that disagrees with the ledger —
 in its decision, its failed list or its wording — is refused outright.
+
+## §114 — A boundary is walked, not selected by where material lies
+
+Three constructions were built for the boundary of a region that drawn
+material does not enclose, and all three were wrong. They shared one
+mistake: each chose material by WHERE IT IS.
+
+A local search window closed around the label point. `cad_geometry.trace`
+walks `face.exterior` only, so a face's holes are dropped, and for a
+point nothing encloses the smallest containing face is the free space
+AROUND the building's blocks — its exterior is the window, and the real
+rooms inside it are exactly the holes that get dropped. A cold challenger
+saw the result and named it: adjacent rooms drawn as their own closed
+rings, held out as islands inside the area.
+
+A fan of sight lines then took the first material met in every
+direction. A sight line that leaves through an opening lands on the far
+wall of a space twenty metres away, so a pantry was proposed a boundary
+reaching into a stair core and two bathrooms. Culling what lay past a
+wall end removed those walls and nearly everything else with them.
+
+Distance, direction and enclosure by a search window are not evidence
+about a boundary. What a boundary is, is a connected thing: it is WALKED.
+The walk starts on one face and steps only onto material that carries the
+same side of the same space, so no element of a chain can belong to a
+space on the other side of an opening — not because a rule forbids it,
+but because there is no step that reaches there.
+
+## §115 — Which face of a wall bounds this room is decided by the pairing
+
+A wall drawn as two lines has two faces, and they are not
+interchangeable: one bounds this space and the other bounds whatever is
+on the far side. Two faces that are parallel, that overlap along their
+own direction, and that are separated by a distance belonging to a
+thickness family inferred from the drawing under test are the two faces
+of one wall body. The face that bounds this space is then the one on this
+space's side of that body.
+
+Never the nearest face. Never the face that closes the chain. Never the
+face that makes the area larger or smaller. Never a face named by a
+challenger. Where no pair is established the drawn line is itself the
+face, that is recorded, and no thickness is attributed to it.
+
+## §116 — What happens at a wall end, in one order
+
+Every question about openings, junctions, piers and stubs is asked at a
+wall end, and there is one order:
+
+1. a gap the gap ontology has classified carries the boundary across, as
+   whatever class it is;
+2. another wall end facing this one across a gap nothing has classified
+   means the boundary is OPEN here, and the walk stops — two ends facing
+   each other is the shape of the question, never the answer;
+3. where BOTH faces of a wall body stop at the same station, the wall
+   ends, and the boundary turns across its own thickness — a real piece
+   of material whose length is the thickness the pairing gives. A face
+   that stops while its mate carries on is an interruption in that face,
+   not the end of the wall;
+4. a single drawn line with no thickness established has both sides
+   facing this space, so the boundary turns back along it and the turn
+   crosses nothing;
+5. otherwise the boundary runs out, and the chain says so at that
+   coordinate.
+
+## §117 — A ring is this point's boundary only if it encloses this point
+
+A walk can close around something the point is outside of: a pier, a
+block of joinery, a shaft, a label's own box. That ring is a real
+boundary of a real thing and it is not this point's boundary. Closure is
+therefore never sufficient — the ring must contain the point. Where
+several rings enclose it they are nested, and the innermost is this
+space's: that is the containment hierarchy, not a preference for a
+smaller area.
+
+Where no ring encloses the point, NOTHING IS PROPOSED. What the walk
+established is kept, labelled as not a proposed boundary, and reported as
+a diagnostic of where the drawing stops carrying the boundary. A boundary
+that is not established is withheld, never approximated.
