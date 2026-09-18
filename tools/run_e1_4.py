@@ -1712,12 +1712,18 @@ def phase_v2_inputs(a) -> int:
         o = by_cand.get(row["candidate_id"])
         if o is None:
             continue
+        # o["file"] comes back from the overlay index already relative to
+        # the run, so relativising it again would leave only a basename
+        # and a reader could not find the picture the task names
         t = vc.Task(task_id=f"E1_4-V2-{row['candidate_id']}",
                     candidate_id=row["candidate_id"],
                     identity=row["group"].english_token,
-                    crop_path=r13._in_run(o["file"], out),
+                    crop_path=o["file"],
                     root=str(out), stage=vc.V2, brief=vc.V2_BRIEF)
         m = t.manifest()
+        m["OVERLAY_PATH_IN_THE_RUN"] = o["file"]
+        m["OVERLAY_SHA256"] = o.get(prov.RAW)
+        m["OVERLAY_LEGEND"] = list(OVERLAY_LEGEND)
         m["THE_PROPOSAL_CHANGED_SINCE_E1_3"] = bool(
             delta.get(row["candidate_id"], {}).get("THE_PROPOSAL_CHANGED"))
         m["THIS_IS_A_PROPOSED_BOUNDARY"] = o["THIS_IS_A_PROPOSED_BOUNDARY"]
