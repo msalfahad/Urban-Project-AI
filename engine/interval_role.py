@@ -1021,7 +1021,47 @@ def _collinear(segs, intervals, whole, meta, groups_of, by_id):
             else:
                 iv.conflicting_evidence = iv.conflicting_evidence + (
                     "THE_WALL_BAND_DOES_NOT_CONTINUE_OVER_THIS_STRETCH",)
-                iv.why = COLLINEARITY_IS_NOT_MATERIAL
+                # The role is not touched, so neither is its account of
+                # itself. An interval already established as something else
+                # - a COLUMN carrying structural evidence, say - keeps the
+                # reason it was established, and this pass only adds the
+                # fact that it also happens to lie in line with a wall.
+                if iv.role == UNKNOWN:
+                    iv.why = COLLINEARITY_IS_NOT_MATERIAL
+
+
+ESTABLISHING_EVIDENCE = (
+    EV_PAIRED_WALL_FACE, EV_SUPPORT_UNION, EV_MATERIAL_CONTINUATION,
+    EV_CASEWORK_DEPTH, EV_SPANS_WALL_TO_CASEWORK, EV_DETAIL_FAMILY,
+    EV_CURVE_SEMANTIC, EV_STAIR_ASSEMBLY, EV_DOOR_LAYER,
+    EV_DIMENSION_LAYER, EV_ANNOTATION_LAYER, EV_LEVEL_LAYER,
+) + COLUMN_EVIDENCE
+
+COLLINEARITY_IS_A_DIAGNOSTIC_TAG = (
+    "COLLINEAR_GEOMETRIC_CONTINUATION records a fact about coordinates and "
+    "is attached to every stretch that lies in line with an established "
+    "wall face, whatever that stretch already is. It is diagnostic, not "
+    "establishing: reading its presence as the reason a role exists calls a "
+    "structurally established column - or anything else that happens to lie "
+    "in line with a wall - a collinear guess"
+)
+
+
+def established_by_collinearity_alone(interval) -> bool:
+    """§5: is collinear continuation the ONLY thing holding this role up?
+
+    True only when the stretch lies in line with a wall face, the wall band
+    does not continue over it, and nothing else established what was built
+    there. An interval whose role came from a paired band, from casework
+    depth, from curve semantics or from column evidence is not this case,
+    even though the collinear tag also sits on it.
+    """
+    ev = tuple(interval.evidence or ())
+    if EV_COLLINEAR_GEOMETRIC not in ev:
+        return False
+    if EV_MATERIAL_CONTINUATION in ev:
+        return False
+    return not any(e in ESTABLISHING_EVIDENCE for e in ev)
 
 
 def frozen_parameters() -> dict:

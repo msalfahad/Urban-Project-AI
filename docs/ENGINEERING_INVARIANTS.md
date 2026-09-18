@@ -3118,3 +3118,43 @@ release.
 
 Closure rate is not an optimisation target. A stricter evidence rule that
 releases fewer regions has done its job.
+
+## §106 — A diagnostic tag is not the reason a role exists
+
+`COLLINEAR_GEOMETRIC_CONTINUATION` is attached to **every** stretch that
+lies on the same infinite line as an established wall face, whatever that
+stretch already is. It is a fact about coordinates, recorded so a reader
+can see it was considered. It is not evidence that anything was built.
+
+§105 bans material created *by* collinearity. It does not ban material
+that happens to *also* lie in line with a wall. Reading the tag's presence
+as the reason a role exists calls a structurally established column — or
+a curve, or a paired band, or a cabinet front at fitted-unit depth — a
+collinear guess, and withholds the region that column bounds for a
+bookkeeping reason rather than a drawing one. That is what
+`engine.interval_role.established_by_collinearity_alone()` exists to
+prevent: the stretch carries the tag, the wall band does **not** continue
+over it, **and** nothing in `ESTABLISHING_EVIDENCE` stands behind it.
+
+The same rule governs the interval's account of itself. A pass that does
+not change a role does not rewrite its `why`; it adds its finding to the
+evidence and to the conflicting evidence, and leaves the established
+reason standing.
+
+## §107 — A frozen run reproduces, and a register never hashes its own hash
+
+A freeze is a claim that a named set of bytes was produced from a named
+set of inputs. The claim is only checkable if running the same phase over
+the same inputs yields the same bytes.
+
+Two registers in E1.2 are written by one phase, recorded into by a cold
+pass, then read back and re-written by a later phase. A register that
+recomputed its self-hash over a body still carrying the previous
+self-hash changed on every rewrite, and with it the run hash — a freeze
+that could never be reproduced, from inputs that never changed. The
+self-hash key is therefore dropped before the hash is taken, always.
+
+The freeze also accounts for **every** file in the run directory: each
+one is either hashed in `ARTIFACTS` or named in `NOT_HASHED_AND_WHY`
+with the reason. A file nobody can check is not frozen, whatever the
+directory is called.

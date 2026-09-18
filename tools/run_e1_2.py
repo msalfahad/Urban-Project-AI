@@ -578,7 +578,14 @@ def _write(out, artifacts, name, body) -> dict:
     body = dict(body)
     body["E1_2_MODEL"] = E1_2_MODEL
     body["RUN_ID"] = RUN_ID
-    body[f"{name.split('.')[0]}_HASH"] = prov.canonical_sha256(body)
+    key = f"{name.split('.')[0]}_HASH"
+    # A register's own hash is never part of what it hashes. Re-writing a
+    # register that already carries one (the two visual registers are read
+    # back from disk after a cold pass recorded into them) would otherwise
+    # fold the previous hash into the new one and the freeze would not
+    # reproduce from the same inputs.
+    body.pop(key, None)
+    body[key] = prov.canonical_sha256(body)
     path = Path(out) / name
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(body, indent=2, ensure_ascii=False,
@@ -1069,7 +1076,7 @@ def release_decision(*, row, iv_by_id, arbitration) -> dict:
                    ring) if iv is None or iv.role == ir.UNKNOWN]
     put(C2, not missing,
         f"{len(missing)} material ring segments have no established "
-        "interval role" if missing else
+        f"interval role: {sorted(missing)}" if missing else
         f"all {len(ring)} material ring intervals name an established role")
     put(C3, True,
         "every role on this ring came from an atomic interval; no parent "
@@ -1078,18 +1085,23 @@ def release_decision(*, row, iv_by_id, arbitration) -> dict:
            if iv is not None and iv.role == ir.AMBIGUOUS_PAIRED_BAND]
     put(C4, not amb,
         f"{len(amb)} ring intervals are bands CAD cannot tell from a "
-        "counter or a bar" if amb else "no ambiguous band on the ring")
+        f"counter or a bar: {sorted(amb)}" if amb
+        else "no ambiguous band on the ring")
     loops = [iv.interval_id for iv in ring
              if iv is not None and iv.role == ir.COLUMN_CANDIDATE_UNRESOLVED]
     put(C5, not loops,
-        f"{len(loops)} ring intervals are unresolved column candidates"
-        if loops else "no unresolved loop acts as a column here")
+        f"{len(loops)} ring intervals are unresolved column candidates: "
+        f"{sorted(loops)}" if loops
+        else "no unresolved loop acts as a column here")
+    # §5: the ban is on material created BY collinearity, not on material
+    # that happens to lie in line with a wall. ir.established_by_
+    # collinearity_alone() is the rule; the raw tag is diagnostic.
     collinear_only = [
         iv.interval_id for iv in ring
-        if iv is not None and ir.EV_COLLINEAR_GEOMETRIC in iv.evidence
-        and ir.EV_MATERIAL_CONTINUATION not in iv.evidence]
+        if iv is not None and ir.established_by_collinearity_alone(iv)]
     put(C6, not collinear_only,
-        f"{len(collinear_only)} ring intervals are collinear only"
+        f"{len(collinear_only)} ring intervals are material by "
+        f"collinearity alone: {sorted(collinear_only)}"
         if collinear_only else
         "no ring interval is material by collinearity alone")
     put(C7, all(s.wall_length_contribution_mm == 0.0 for s in b.segments
@@ -1290,7 +1302,12 @@ def phase_finalize(a) -> int:
                       r["arbitration"]["ARBITRATION_STATE"],
                   "ambiguous_bands_on_the_ring":
                       list(r["ambiguous_on_ring"]),
-                  "why": r["region"].why} for r in withheld],
+                  "why": ("E1.2 withheld it because these release conditions "
+                          "failed: "
+                          + "; ".join(r["decision"]["failed"])
+                          + ". " + er.WITHHOLD_RATHER_THAN_REPAIR),
+                  "what_the_region_tracer_said": r["region"].why}
+                 for r in withheld],
     })
 
     _write(out, artifacts, "E1_2_COMPLETENESS_REGISTER.json", {
@@ -1339,11 +1356,21 @@ def phase_finalize(a) -> int:
         if d.exists():
             for f in sorted(d.glob("*.png")):
                 artifacts[f"{pat}/{f.name}"] = _sha(f)
+    # The per-candidate V1 records are what the cold source-only pass
+    # actually said, frozen one file per candidate before any proposal was
+    # shown. They are the evidence a reviewer reads against the overlays,
+    # so the freeze hashes them rather than only the collected register.
+    v1_frozen = out / "visual" / "v1_frozen_per_candidate"
+    if v1_frozen.exists():
+        for f in sorted(v1_frozen.glob("*.json")):
+            artifacts[f"visual/v1_frozen_per_candidate/{f.name}"] = _sha(f)
     _write(out, artifacts, "E1_2_OVERLAY_INDEX.json", {
         "whole_floor": whole,
         "local_overlays": locals_,
         "v1_source_only_crops": "visual/v1_source_only/",
         "v2_challenge_overlays": "visual/v2_overlays/",
+        "v1_frozen_answers_per_candidate":
+            "visual/v1_frozen_per_candidate/",
         "drawn_on": "THE_ORIGINAL_SOURCE_SHEET",
         "an_overlay_anchors_a_reader": vc.AN_OVERLAY_ANCHORS_A_READER,
     })
@@ -1385,6 +1412,17 @@ def phase_finalize(a) -> int:
                          "cad_geometry": cg.model_hash(),
                          "e1_region": er.model_hash()},
         "ARTIFACTS": artifacts,
+        "NOT_HASHED_AND_WHY": {
+            "E1_2_FREEZE.json":
+                "the freeze cannot carry its own hash. Its integrity is "
+                "E1_2_RUN_HASH, taken over everything above",
+            "_E1_2_ARTIFACTS_GEOMETRY.json":
+                "working state handed from the geometry phase to the "
+                "finalize phase. Every register it points at is hashed "
+                "above; it is not itself part of the frozen record",
+            "_E1_2_STATE.json":
+                "working state handed between phases, as above",
+        },
         "COUNTS": {
             "entities": interp["roles"]["entity_count"],
             "intervals": interp["roles"]["interval_count"],

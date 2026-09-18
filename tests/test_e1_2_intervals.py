@@ -385,3 +385,80 @@ def test_16_the_vocabulary_is_complete():
     assert len(vc.V2_STATUSES) == 11
     assert len(arb.STATES) == 5
     assert len(ai.CUT_REASONS) == 10
+
+
+def test_17_a_register_never_hashes_its_own_hash():
+    """The freeze must reproduce from the same inputs.
+
+    The two visual registers are written once by the geometry phase, then
+    recorded into by a cold pass, then read back and re-written by the
+    finalize phase. If the re-write folded the previous self-hash into the
+    new one, every finalize run would produce a different register hash and
+    therefore a different E1_2_RUN_HASH from identical inputs.
+    """
+    import json
+    import tempfile
+    from pathlib import Path
+    from tools import run_e1_2 as r
+
+    name = "E1_2_VISUAL_V2_CHALLENGE_REGISTER.json"
+    key = f"{name.split('.')[0]}_HASH"
+    with tempfile.TemporaryDirectory() as d:
+        art = {}
+        body = {"STAGE": "V2", "answers": [{"candidate_id": "X"}]}
+        first = r._write(d, art, name, body)
+        hash_1, raw_1 = first[key], art[name]
+
+        # read it back with its hash in place, exactly as finalize does
+        again = json.loads((Path(d) / name).read_text(encoding="utf-8"))
+        assert again[key] == hash_1
+        second = r._write(d, art, name, again)
+
+    assert second[key] == hash_1, "the self-hash changed on an idempotent rewrite"
+    assert art[name] == raw_1, "the register bytes changed on an idempotent rewrite"
+
+
+def test_18_collinearity_is_diagnostic_not_establishing():
+    """§5 bans material created BY collinearity, not material near a wall.
+
+    Two intervals both lie in line with an established wall face and in
+    both the wall band stops short. One has nothing else behind it: that is
+    the propagation §5 forbids. The other is a column established on its
+    own structural evidence, which the collinear tag merely also describes.
+    Treating the second as a collinear guess withholds a region for a
+    bookkeeping reason rather than a drawing one.
+    """
+    nothing_else = ai.Interval(
+        interval_id="IV-A", parent_object_id="O-A",
+        t_start=0.0, t_end=1.0,
+        start_mm=(0.0, 0.0), end_mm=(1000.0, 0.0), length_mm=1000.0,
+        layer="LEVEL", entity_type="LINE", kind="SEGMENT",
+        role=ir.UNKNOWN, confidence=ir.LOW,
+        evidence=(ir.EV_COLLINEAR_GEOMETRIC,
+                  ir.EV_UNSUPPORTED_REMAINDER))
+
+    a_real_column = ai.Interval(
+        interval_id="IV-B", parent_object_id="O-B",
+        t_start=0.0, t_end=1.0,
+        start_mm=(0.0, 0.0), end_mm=(250.0, 0.0), length_mm=250.0,
+        layer="S-COL", entity_type="LWPOLYLINE", kind="SEGMENT",
+        role=ir.COLUMN, confidence=ir.MEDIUM,
+        evidence=(ir.EV_UNSUPPORTED_REMAINDER, ir.EV_COL_LOOP,
+                  ir.EV_COL_LAYER_IS_STRUCTURAL, ir.EV_COL_FAMILY,
+                  ir.EV_COL_WALL_CONNECTIVITY,
+                  ir.EV_COLLINEAR_GEOMETRIC))
+
+    band_continues = ai.Interval(
+        interval_id="IV-C", parent_object_id="O-C",
+        t_start=0.0, t_end=1.0,
+        start_mm=(0.0, 0.0), end_mm=(900.0, 0.0), length_mm=900.0,
+        layer="1", entity_type="LINE", kind="SEGMENT",
+        role=ir.MATERIAL_WALL_FACE, confidence=ir.MEDIUM,
+        evidence=(ir.EV_COLLINEAR_GEOMETRIC, ir.EV_MATERIAL_CONTINUATION))
+
+    assert ir.established_by_collinearity_alone(nothing_else)
+    assert not ir.established_by_collinearity_alone(a_real_column)
+    assert not ir.established_by_collinearity_alone(band_continues)
+
+    # and the tag alone never licenses material
+    assert ir.EV_COLLINEAR_GEOMETRIC not in ir.ESTABLISHING_EVIDENCE
