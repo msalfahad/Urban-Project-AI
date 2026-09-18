@@ -26,6 +26,7 @@ from engine import admission_ledger as led
 from engine import arbitration_dimensions as ad
 from engine import atomic_interval as ai
 from engine import boundary_chain as bc
+from engine import boundary_walk as bw
 from engine import cad_geometry as cg
 from engine import column_ownership as co
 from engine import decision_ledger as dl
@@ -40,6 +41,7 @@ from engine import interval_role as ir
 from engine import label_ontology as lo
 from engine import space_status as ss
 from engine import stair_completeness as stc
+from engine import visible_boundary as vb
 from engine import visual_challenger_v2 as vc
 from tools import run_e1_2 as r12
 
@@ -93,6 +95,8 @@ ONE_FACE_MAY_HOLD_SEVERAL_LABELS = (
     "several functional zones, rather than handed to each label as if it "
     "were a room of its own")
 
+RUNS_OUT_COLOUR = (200, 0, 0)
+
 OVERLAY_LEGEND = (
     "thick black = an established material face of the boundary chain",
     "blue = a curved material face, kept as an arc",
@@ -107,6 +111,9 @@ OVERLAY_LEGEND = (
     "established, including where the drawing region frame was used to make "
     "a face walkable",
     "magenta = casework, counters, pool internals and fixtures, excluded",
+    "red cross = the boundary RUNS OUT here: the drawn material ends and "
+    "nothing carries the boundary on. Nothing beyond a red cross is "
+    "proposed as part of this region",
     "blue ring = the label this candidate was traced from",
 )
 
@@ -387,6 +394,263 @@ def chain_for(trace_out, *, gap_rows, exposed_ids, interval_by_id) -> dict:
     return bc.build(material, connectors=connectors)
 
 
+VISIBILITY_REACH_MM = 12000.0
+
+WHAT_A_VISIBLE_BOUNDARY_IS = (
+    "for a region drawn material does not enclose there is no face to "
+    "walk, and no window may be used to invent one. So the boundary is "
+    "taken by standing at the label point and looking out: in each "
+    "direction either drawn material is the first thing met, and that "
+    "stretch bounds this point, or nothing is, and the drawing "
+    "establishes no boundary that way.\n\n"
+    "Read it as what it says. It is the boundary evidence AROUND THIS "
+    "POINT, not the outline of a room the drawing never closed. Where "
+    "the sightlines run far, that is the region genuinely extending that "
+    "far: an open side means the space carries on until something stops "
+    "it, and the walls it reaches are the ones that do")
+
+
+def chain_from_visibility(seed, segments, *, gap_rows, exposed_ids,
+                          interval_by_id, reach_mm=VISIBILITY_REACH_MM):
+    """§11 for a region no drawn material encloses. No window is used."""
+    near = []
+    for s in segments:
+        pts = s.get("points") or ()
+        if len(pts) < 2:
+            continue
+        if min(math.hypot(p[0] - seed[0], p[1] - seed[1])
+               for p in pts) <= reach_mm:
+            near.append(s)
+    if not near:
+        return None, {"why": "no drawn material lies within reach"}
+
+    # A sight line that leaves through an opening lands on the far wall of
+    # another space, and that wall does not bound this point. What stops it
+    # is the mouth of the opening: the span from one wall end to the wall
+    # end facing it. Both ends are drawn material; the span is not.
+    mouth_spans = vb.mouths(seed, near, reach_mm=reach_mm)
+    look = vb.look_around(seed, near + mouth_spans, reach_mm=reach_mm)
+    look["mouths_between_wall_ends"] = len(mouth_spans)
+    look["a_mouth_is_not_a_wall"] = vb.A_MOUTH_IS_NOT_A_WALL
+    runs = [r for r in look["runs"]]
+    if not any(r["KIND"] == "MATERIAL_RUN" and not r.get("IS_A_MOUTH")
+               for r in runs):
+        return None, look
+
+    material, connectors = [], []
+    mats = [r for r in runs if r["KIND"] == "MATERIAL_RUN"]
+    for r in mats:
+        if r.get("IS_A_MOUTH"):
+            a = tuple(r["start_mm"])
+            b = tuple(r["end_mm"])
+            g = _class_at(tuple(r["mouth_start_mm"]),
+                          tuple(r["mouth_end_mm"]), gap_rows)
+            if g is not None:
+                kind = _ELEMENT_FOR_GAP.get(g["GAP_CLASS"], bc.UNRESOLVED_EDGE)
+                why = "; ".join(g["notes"]) or g["GAP_CLASS"]
+                gid, cls = g["GAP_ID"], g["GAP_CLASS"]
+            else:
+                kind, gid, cls = bc.OPEN_EDGE, None, None
+                why = ("the sight line ends at the mouth of an opening - the "
+                       "span from one wall end to the wall end facing it. No "
+                       "gap record classifies this span, so nothing is closed "
+                       "across it and the boundary stays open here")
+            connectors.append({
+                "kind": kind, "start_mm": a, "end_mm": b,
+                "GAP_ID": gid, "GAP_CLASS": cls,
+                "MOUTH_SPAN_MM": r.get("span_mm"),
+                "mouth_between_wall_ends": r.get("wall_end_object_ids"),
+                "FIRST_MATERIAL_MET_LOOKING_THIS_WAY": False,
+                "why": why})
+            continue
+        oid = r.get("object_id") or ""
+        iv = interval_by_id.get(oid)
+        parent = _parent_of(oid, interval_by_id)
+        role = r.get("boundary_role")
+        if role == cg.COLUMN_FACE and parent not in exposed_ids:
+            connectors.append({
+                "kind": bc.UNRESOLVED_EDGE,
+                "start_mm": tuple(r["start_mm"]), "end_mm": tuple(r["end_mm"]),
+                "object_id": oid, "parent_object_id": parent,
+                "CLEAR_FACE_OWNERSHIP_STATUS": co.ARCHITECTURAL_FACE_OWNS,
+                "why": ("a structural column face is the first thing met in "
+                        "this direction and it does not own the clear "
+                        "internal boundary")})
+            continue
+        kind = (bc.EXPOSED_COLUMN_FACE if role == cg.COLUMN_FACE
+                else bc.GLAZING_BOUNDARY
+                if (iv is not None and iv.role == ir.GLAZING)
+                else bc.MATERIAL_WALL_FACE)
+        material.append({
+            "kind": kind,
+            "start_mm": tuple(r["start_mm"]), "end_mm": tuple(r["end_mm"]),
+            "object_id": oid, "parent_object_id": parent,
+            "layer": r.get("layer"), "boundary_role": role,
+            "INTERVAL_ROLE": iv.role if iv is not None else None,
+            "FIRST_MATERIAL_MET_LOOKING_THIS_WAY": True,
+        })
+
+    # between consecutive material runs, a connector whose two ends are
+    # real wall ends. Its class comes from the gap evidence where one
+    # exists, and otherwise from whether the look found nothing that way.
+    order = [r for r in runs]
+    idx = [i for i, r in enumerate(order) if r["KIND"] == "MATERIAL_RUN"]
+    for n, i in enumerate(idx):
+        j = idx[(n + 1) % len(idx)] if len(idx) > 1 else None
+        if j is None:
+            break
+        a = tuple(order[i]["end_mm"])
+        b = tuple(order[j]["start_mm"])
+        if math.hypot(b[0] - a[0], b[1] - a[1]) <= cg.SNAP_MM:
+            continue
+        between = (order[i + 1:j] if i < j
+                   else order[i + 1:] + order[:j])
+        nothing_met = any(x["KIND"] == "NOTHING_MET" for x in between)
+        g = _class_at(a, b, gap_rows)
+        if g is not None:
+            cls = g["GAP_CLASS"]
+            kind = _ELEMENT_FOR_GAP.get(cls, bc.UNRESOLVED_EDGE)
+            why = "; ".join(g["notes"])
+            gid = g["GAP_ID"]
+        elif nothing_met:
+            cls, kind, gid = None, bc.OPEN_EDGE, None
+            why = ("looking between the end of one run of material and the "
+                   "start of the next, nothing was met. The drawing builds "
+                   "nothing along this stretch")
+        else:
+            cls, kind, gid = None, bc.UNRESOLVED_EDGE, None
+            why = ("two runs of material do not meet here and no classified "
+                   "gap corresponds to the span between them")
+        connectors.append({"kind": kind, "start_mm": a, "end_mm": b,
+                           "GAP_CLASS": cls, "GAP_ID": gid, "why": why,
+                           "BOTH_ENDS_ARE_REAL_WALL_ENDS": True})
+
+    if not material:
+        return None, look
+    ch = bc.build(material, connectors=connectors)
+    ch["BOUNDARY_BASIS"] = "VISIBLE_FROM_THE_LABEL_POINT"
+    ch["what_a_visible_boundary_is"] = WHAT_A_VISIBLE_BOUNDARY_IS
+    ch["no_window_is_involved"] = vb.NO_WINDOW_IS_INVOLVED
+    ch["look"] = {k: v for k, v in look.items() if k != "runs"}
+    return ch, look
+
+
+
+E1_3_CORRECTED_MECHANISM = (
+    "the boundary is WALKED from face to face. Selecting material by "
+    "where it is - nearest, or first met in a direction, or enclosed by a "
+    "search window - was tried three times and failed three times, and "
+    "each failure put material from another space into a region's "
+    "boundary. engine.boundary_walk replaces all three")
+
+_STOP_ELEMENT = {
+    bw.WHY_THE_WALK_STOPS: bc.UNRESOLVED_EDGE,
+    bw.BOUNDARY_OPEN_AT_AN_UNCLASSIFIED_GAP: bc.UNRESOLVED_EDGE,
+}
+
+
+def chain_from_walk(res, pieces, *, gap_rows, exposed_ids, interval_by_id):
+    """The walked boundary, written in the chain vocabulary."""
+    gap_by_id = {g["GAP_ID"]: g for g in gap_rows}
+    material, connectors = [], []
+    counted = set()
+    for st in res["steps"]:
+        kind = st["STEP"]
+        if kind == bw.STEP_MATERIAL_FACE:
+            pc = pieces[st["piece"]]
+            oid = pc.get("object_id") or ""
+            iv = interval_by_id.get(oid)
+            parent = _parent_of(oid, interval_by_id)
+            role = pc.get("boundary_role")
+            cs = pc["coords"]
+            a, z = ((tuple(cs[0]), tuple(cs[-1])) if st["entered_at_end"] == 0
+                    else (tuple(cs[-1]), tuple(cs[0])))
+            if role == cg.COLUMN_FACE and parent not in exposed_ids:
+                connectors.append({
+                    "kind": bc.UNRESOLVED_EDGE, "start_mm": a, "end_mm": z,
+                    "object_id": oid, "parent_object_id": parent,
+                    "CLEAR_FACE_OWNERSHIP_STATUS": co.ARCHITECTURAL_FACE_OWNS,
+                    "why": ("a structural column face lies on this stretch "
+                            "and it does not own the clear internal "
+                            "boundary")})
+                continue
+            el = (bc.EXPOSED_COLUMN_FACE if role == cg.COLUMN_FACE
+                  else bc.GLAZING_BOUNDARY
+                  if (iv is not None and iv.role == ir.GLAZING)
+                  else bc.MATERIAL_WALL_FACE)
+            first = st["piece"] not in counted
+            counted.add(st["piece"])
+            material.append({
+                "kind": el, "start_mm": a, "end_mm": z,
+                "object_id": oid, "parent_object_id": parent,
+                "layer": pc.get("layer"), "boundary_role": role,
+                "INTERVAL_ROLE": iv.role if iv is not None else None,
+                "WALKED_FROM_THE_FACE_BEFORE_IT": True,
+                # a face walked from both of its sides is ONE piece of
+                # drawn material and is counted once
+                "COUNTS_TOWARD_MATERIAL_LENGTH": first,
+            })
+        elif kind == bw.STEP_WALL_END_RETURN:
+            material.append({
+                "kind": bc.MATERIAL_WALL_FACE,
+                "start_mm": tuple(st["at_mm"]), "end_mm": tuple(st["to_mm"]),
+                "object_id": "", "parent_object_id": None,
+                "boundary_role": "WALL_END_ACROSS_ITS_OWN_THICKNESS",
+                "WALL_THICKNESS_MM": st["thickness_mm"],
+                "MATCHED_THICKNESS_FAMILY_MM": st["matched_family_mm"],
+                "COUNTS_TOWARD_MATERIAL_LENGTH": True,
+                "why": st["why"],
+            })
+        elif kind == bw.STEP_ACROSS_A_GAP:
+            g = gap_by_id.get(st["gap"], {})
+            connectors.append({
+                "kind": _ELEMENT_FOR_GAP.get(st["GAP_CLASS"],
+                                             bc.UNRESOLVED_EDGE),
+                "start_mm": tuple(st["start_mm"]),
+                "end_mm": tuple(st["end_mm"]),
+                "GAP_ID": st["gap"], "GAP_CLASS": st["GAP_CLASS"],
+                "why": "; ".join(g.get("notes") or ()) or st["GAP_CLASS"]})
+        elif kind == bw.STEP_SINGLE_LINE_END_TURN:
+            connectors.append({
+                "kind": bc.MATERIAL_CONTINUITY_SPAN,
+                "start_mm": tuple(st["at_mm"]), "end_mm": tuple(st["at_mm"]),
+                "SINGLE_LINE_WALL_END": True, "why": st["why"]})
+        elif kind == bw.STEP_STOPS:
+            connectors.append({
+                "kind": _STOP_ELEMENT.get(st["why"], bc.UNRESOLVED_EDGE),
+                "start_mm": tuple(st["at_mm"]), "end_mm": tuple(st["at_mm"]),
+                "THE_BOUNDARY_RUNS_OUT_HERE": True,
+                "an_end_faces_this_one_across_a_gap":
+                    st.get("an_end_faces_this_one_across_a_gap"),
+                "why": st["why"]})
+    if not material:
+        return None
+    ch = bc.build(material, connectors=connectors)
+    ch["BOUNDARY_BASIS"] = res["BOUNDARY_BASIS"]
+    ch["CLOSED_BY_DRAWN_MATERIAL"] = bool(res.get("RING_ENCLOSES_THE_POINT"))
+    ch["RING_ENCLOSES_THE_POINT"] = bool(res.get("RING_ENCLOSES_THE_POINT"))
+    ch["FACE_SELECTION"] = res.get("FACE_SELECTION") or []
+    ch["faces_the_point_can_see"] = res.get("faces_the_point_can_see")
+    ch["rings_that_close_but_not_around_the_point"] = res.get(
+        "rings_that_close_but_not_around_the_point")
+    ch["islands_standing_in_the_region"] = res.get(
+        "islands_standing_in_the_region") or []
+    ch["ring_area_mm2"] = res.get("ring_area_mm2")
+    ch["the_corrected_mechanism"] = E1_3_CORRECTED_MECHANISM
+    if not ch["RING_ENCLOSES_THE_POINT"]:
+        ch["THIS_IS_NOT_A_PROPOSED_BOUNDARY"] = res.get(
+            "THIS_IS_NOT_A_PROPOSED_BOUNDARY")
+        ch["why_nothing_is_proposed"] = bw.WHY_NOTHING_IS_PROPOSED
+    else:
+        ch["why_this_ring"] = res.get("why_this_ring")
+    # material length counts each piece of drawn material once
+    once = 0.0
+    for e in ch["CHAIN"]:
+        if e.get("COUNTS_TOWARD_MATERIAL_LENGTH"):
+            once += e["length_mm"]
+    ch["material_length_counted_once_mm"] = round(once, 3)
+    return ch
+
 def _face_key(chain, *, snap=1.0):
     """Two candidates in the SAME physical region share a face key."""
     if chain is None:
@@ -398,6 +662,49 @@ def _face_key(chain, *, snap=1.0):
 
 
 # ------------------------------------------------------------- candidates
+
+OPEN_SPAN_CLOSES_NOTHING = (
+    "a span from one wall end to the wall end facing it, where the drawing "
+    "offers no evidence that anything was built across it. It delimits "
+    "where the region stops; it does not close it. It contributes no wall "
+    "length, it is never read as a face, and a region that meets one is "
+    "ESTABLISHED_OPEN")
+
+
+def _open_span_barriers(look_segments, gaps):
+    """The facing wall-end spans that carry no closing evidence."""
+    known = []
+    for g in gaps["rows"]:
+        a, b = tuple(g["start_mm"]), tuple(g["end_mm"])
+        known.append((a, b))
+
+    def already(a, b):
+        for (ka, kb) in known:
+            if ((math.hypot(a[0] - ka[0], a[1] - ka[1]) <= cg.SNAP_MM
+                 and math.hypot(b[0] - kb[0], b[1] - kb[1]) <= cg.SNAP_MM)
+                or (math.hypot(a[0] - kb[0], a[1] - kb[1]) <= cg.SNAP_MM
+                    and math.hypot(b[0] - ka[0], b[1] - ka[1]) <= cg.SNAP_MM)):
+                return True
+        return False
+
+    out = []
+    for m in vb.mouths(None, look_segments):
+        a = tuple(m["mouth_start_mm"])
+        b = tuple(m["mouth_end_mm"])
+        if already(a, b):
+            continue
+        out.append(cg.BoundarySegment(
+            kind=cg.LINE, x1=a[0], y1=a[1], x2=b[0], y2=b[1],
+            role=cg.OPENING, object_id="",
+            entity_type="OPEN_SPAN_BETWEEN_TWO_WALL_ENDS_NOTHING_WAS_BUILT_HERE",
+            layer="|".join(str(x) for x in (m.get("wall_end_object_ids") or ())
+                           if x),
+            evidence=(OPEN_SPAN_CLOSES_NOTHING,
+                      m.get("TWO_ENDS_FACE_EACH_OTHER_BECAUSE") or "",
+                      f"span_mm={m['span_mm']}")))
+    return out
+
+
 def build_e1_3_candidates(gf, interp, *, ontology, gaps, owner) -> dict:
     """Trace every candidate against material, real portals and the frame."""
     from shapely.geometry import Point, Polygon
@@ -422,9 +729,43 @@ def build_e1_3_candidates(gf, interp, *, ontology, gaps, owner) -> dict:
     interval_by_id = {iv.interval_id: iv
                       for rows_ in roles["intervals"].values()
                       for iv in rows_}
-    ladder = window_ladder(gf["region"])
-    rgn = gf["region"]
-    region_area = (float(rgn.x1 - rgn.x0) * float(rgn.y1 - rgn.y0)) or 1.0
+    look_segments = []
+    for sg in segs:
+        try:
+            pts = sg.points(tol_mm=cg.DENSIFY_TOL_MM)
+        except Exception:
+            continue
+        if len(pts) >= 2:
+            look_segments.append({
+                "points": pts, "key": sg.object_id,
+                "object_id": sg.object_id, "boundary_role": sg.role,
+                "layer": sg.layer})
+
+    # §11 - a region with an open side still has an extent, and the drawing
+    # says where it stops: at the span from one wall end to the wall end
+    # facing it. The evidenced spans are already barriers; these are the
+    # rest, and they close NOTHING. They carry no material, they are never
+    # a wall, and a region delimited by one is open, not closed.
+    open_span_segments = _open_span_barriers(look_segments, gaps)
+    # Offering these to the trace as barriers was tried and did not help:
+    # it closed no further region and cost one that had been closed. They
+    # are computed and reported, and the trace is not given them.
+
+    # THE CORRECTED MECHANISM. Drawn material is noded into pieces once,
+    # the faces that are the two sides of one wall body are paired once,
+    # and the wall ends with something facing them are found once. Every
+    # candidate is then walked against exactly the same arrangement, so
+    # no region is treated differently from any other.
+    pieces = bw.pieces_from(look_segments, tol_mm=cg.DENSIFY_TOL_MM)
+    families = [{"nominal_mm": f["thickness_mm"]}
+                for f in gaps["wall_thickness_families_inferred"]]
+    mates, mate_pairs = bw.mate_map(pieces, families=families)
+    nodes = bw.node_graph(pieces)
+    facing = bw.facing_ends(pieces, nodes)
+    gaps_at = {}
+    for grow in gaps["rows"]:
+        for q in (grow["start_mm"], grow["end_mm"]):
+            gaps_at.setdefault(bw._nkey(tuple(q)), grow)
 
     rows = []
     for n, g in enumerate(groups, start=1):
@@ -433,53 +774,19 @@ def build_e1_3_candidates(gf, interp, *, ontology, gaps, owner) -> dict:
         anchor = english[0] if english else g.members[0]
         seed = anchor.visible_centroid
 
-        # Closed first: if drawn material and evidenced portals already
-        # enclose this point, no window is involved at all.
-        out = cg.trace(seed, [], wall_layers=(), tol_mm=cg.DENSIFY_TOL_MM,
-                       role_of=None, extra_segments=base)
-        chain = chain_for(out, gap_rows=gaps["rows"], exposed_ids=exposed,
-                          interval_by_id=interval_by_id)
-        used_half, tried = None, []
-        if chain is None or not chain["CLOSED_BY_DRAWN_MATERIAL"]:
-            kept = []
-            for half in ladder:
-                extra = base + tuple(window_segments(seed, half))
-                o = cg.trace(seed, [], wall_layers=(),
-                             tol_mm=cg.DENSIFY_TOL_MM, role_of=None,
-                             extra_segments=extra)
-                c = chain_for(o, gap_rows=gaps["rows"], exposed_ids=exposed,
-                              interval_by_id=interval_by_id)
-                share = None
-                if o.get("candidates"):
-                    share = (o["candidates"][0]
-                             ["densified_area_m2_rendering_only"]
-                             * 1e6 / region_area)
-                tried.append({"window_half_mm": half,
-                              "face_share_of_the_drawing_region":
-                                  None if share is None else round(share, 4),
-                              "material_length_mm":
-                                  None if c is None
-                                  else c["material_length_mm"],
-                              "kept": bool(c is not None and share is not None
-                                           and share
-                                           <= FACE_MAX_SHARE_OF_REGION)})
-                if (c is not None and share is not None
-                        and share <= FACE_MAX_SHARE_OF_REGION):
-                    kept.append((c, half, o))
-            if kept:
-                # the SMALLEST window that already found all the material a
-                # larger one would. Growing past that adds window edge, not
-                # evidence, and the open-edge lengths would be the window's
-                # rather than the drawing's.
-                top = max(c["material_length_mm"] for c, _h, _o in kept)
-                chain, used_half, out = next(
-                    (r for r in kept if r[0]["material_length_mm"] >= 0.98 * top),
-                    kept[-1])
+        res = bw.boundary_at(seed, pieces, gaps_at=gaps_at, mates=mates,
+                             facing=facing)
+        chain = chain_from_walk(res, pieces, gap_rows=gaps["rows"],
+                                exposed_ids=exposed,
+                                interval_by_id=interval_by_id)
+        basis = res["BOUNDARY_BASIS"]
 
         rows.append({"n": n, "group": g, "anchor": anchor, "seed": seed,
-                     "trace": out, "chain": chain,
-                     "window_half_mm": used_half,
-                     "windows_tried": tried,
+                     "trace": None, "chain": chain,
+                     "BOUNDARY_BASIS": None if chain is None else basis,
+                     "walk": {k: v for k, v in res.items()
+                              if k not in ("steps", "FACE_SELECTION")},
+                     "look": None,
                      "PHYSICAL_REGION_KEY": _face_key(chain),
                      "candidate_id": f"E1_3-{g.group_id}"})
 
@@ -510,7 +817,6 @@ def build_e1_3_candidates(gf, interp, *, ontology, gaps, owner) -> dict:
                 pass
         row["labels_inside"] = tuple(sorted(set(inside)))
     return {"rows": rows, "material_prims": mat, "segments": segs,
-            "window_ladder_mm": ladder,
             "physical_regions": {k: sorted(x["candidate_id"] for x in v)
                                  for k, v in shared.items()},
             "hidden_column_object_ids": sorted(hidden),
@@ -587,6 +893,20 @@ def _draw_chain(draw, chain, to_px, *, clip=(-300, 1800)):
             _dashed(draw, pts, colour, width, dash)
         else:
             draw.line(pts, fill=colour, width=width)
+    # Where the walk ran out, the element has no length and would draw as
+    # nothing. A reader has to be able to see that the boundary stops
+    # there, so it is marked.
+    for e in chain["CHAIN"]:
+        if not e.get("THE_BOUNDARY_RUNS_OUT_HERE"):
+            continue
+        qx, qy = to_px(*e["start_mm"])
+        if not (lo_ <= qx <= hi_ and lo_ <= qy <= hi_):
+            continue
+        r = 16
+        draw.line([(qx - r, qy - r), (qx + r, qy + r)],
+                  fill=RUNS_OUT_COLOUR, width=5)
+        draw.line([(qx - r, qy + r), (qx + r, qy - r)],
+                  fill=RUNS_OUT_COLOUR, width=5)
 
 
 def chain_overlays(sheet, reg, gf, interp, rows, owner, out_dir) -> list:
@@ -1119,6 +1439,27 @@ def phase_geometry(a) -> int:
             else ch["length_with_no_material_mm"],
             "length_by_chain_element": {} if ch is None
             else ch["length_by_chain_element"],
+            "BOUNDARY_BASIS": r.get("BOUNDARY_BASIS"),
+            "RING_ENCLOSES_THE_POINT": bool(
+                ch and ch.get("RING_ENCLOSES_THE_POINT")),
+            "material_length_counted_once_mm": None if ch is None
+            else ch.get("material_length_counted_once_mm"),
+            "clear_internal_area_mm2": None if ch is None
+            else ch.get("ring_area_mm2"),
+            "faces_the_point_can_see": None if ch is None
+            else ch.get("faces_the_point_can_see"),
+            "rings_that_close_but_not_around_the_point": None if ch is None
+            else ch.get("rings_that_close_but_not_around_the_point"),
+            "islands_standing_in_the_region": [] if ch is None
+            else ch.get("islands_standing_in_the_region") or [],
+            "FACE_SELECTION": [] if ch is None
+            else ch.get("FACE_SELECTION") or [],
+            "faces_walked_on_the_opposite_side_of_their_wall_body": 0
+            if ch is None else sum(
+                1 for f in (ch.get("FACE_SELECTION") or [])
+                if f.get("THE_WALK_IS_ON_THE_ROOM_SIDE_FACE") is False),
+            "THIS_IS_NOT_A_PROPOSED_BOUNDARY": None if ch is None
+            else ch.get("THIS_IS_NOT_A_PROPOSED_BOUNDARY"),
             "PHYSICAL_BOUNDARY_CHAIN": [] if ch is None else ch["CHAIN"],
             "run_endpoints": [] if ch is None else ch["run_endpoints"],
         })
@@ -1128,9 +1469,23 @@ def phase_geometry(a) -> int:
         "a_chain_is_not_a_polygon": bc.A_CHAIN_IS_NOT_A_POLYGON,
         "order_and_connectivity_are_the_point":
             bc.ORDER_AND_CONNECTIVITY_ARE_THE_POINT,
-        "why_a_local_window": WHY_A_LOCAL_WINDOW,
         "what_an_open_edge_length_is_and_is_not": WHAT_AN_OPEN_EDGE_LENGTH_IS,
         "one_face_may_hold_several_labels": ONE_FACE_MAY_HOLD_SEVERAL_LABELS,
+        "THE_CORRECTED_MECHANISM": E1_3_CORRECTED_MECHANISM,
+        "how_a_face_is_selected": bw.WHY_A_FACE_IS_SELECTED,
+        "why_a_closed_ring_is_checked_against_the_point":
+            bw.WHY_A_CLOSED_RING_IS_CHECKED,
+        "why_the_innermost_ring": bw.WHY_THE_INNERMOST_RING,
+        "why_nothing_is_proposed_where_nothing_is_established":
+            bw.WHY_NOTHING_IS_PROPOSED,
+        "why_the_walk_stops": bw.WHY_THE_WALK_STOPS,
+        "why_a_wall_end_returns": bw.WHY_A_WALL_END_RETURNS,
+        "why_a_single_line_end_turns": bw.WHY_A_SINGLE_LINE_END_TURNS,
+        "boundary_open_at_an_unclassified_gap":
+            bw.BOUNDARY_OPEN_AT_AN_UNCLASSIFIED_GAP,
+        "what_a_disconnected_fragment_is":
+            bw.WHAT_A_DISCONNECTED_FRAGMENT_IS,
+        "boundary_walk_frozen_parameters": bw.frozen_parameters(),
         "CHAIN_ELEMENTS": list(bc.CHAIN_ELEMENTS),
         "MATERIAL_ELEMENTS": list(bc.MATERIAL_ELEMENTS),
         "distinct_physical_regions": len(st["built"]["physical_regions"]),
