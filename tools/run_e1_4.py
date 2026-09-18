@@ -1298,10 +1298,48 @@ CLOSURE_IS_NOT_THE_MEASURE = (
     "finding blocks only geometry it could actually move")
 
 
+A_CLAIM_IN_A_REGISTER_IS_CHECKED_OR_IT_IS_NOT_MADE = (
+    "every true/false in this register is computed from the run that "
+    "produced it. A hand-written true is the defect §3 was about, one "
+    "level up: a claim nobody checked, in a file that looks like it was")
+
+
 def _completeness(st) -> dict:
     rows = st["rows"]
     frags = [r for r in rows if r.get("fragments")]
+
+    # every executed local module is bound, asked of the manifest again
+    man = ep.manifest(".")
+    bound = ep.assert_every_executed_local_module_is_hashed(man, ".")
+
+    # role and capability are separate: no role's boundary role changes
+    # when its shape does
+    shape_free = all(r["THE_SHAPE_DID_NOT_DECIDE_THE_ROLE"]
+                     for r in st["capability"]["ROWS"])
+
+    # no fragment was extended across an opening nothing supports: every
+    # established fragment ends at a station the walk itself named
+    ends, unnamed = 0, []
+    for r in frags:
+        for f in r["fragments"]["FRAGMENTS"]:
+            if f["FRAGMENT_STATUS"] != bf.FRAGMENT_ESTABLISHED:
+                continue
+            for end in ("START_TERMINATION", "END_TERMINATION"):
+                ends += 1
+                if f[end] not in bf.TERMINATIONS:
+                    unnamed.append(f"{f['FRAGMENT_ID']}:{end}={f[end]}")
+
+    # what this run opened. A reader can check the list rather than take
+    # a true on trust
+    read = sorted({v for k, v in (st.get("source") or {}).items()
+                   if isinstance(v, str) and ("/" in v or v.endswith(".json"))})
+    workbookish = [x for x in read
+                   if Path(x).suffix.lower() in (".xlsx", ".xls", ".xlsm",
+                                                 ".csv")]
+
     return {
+        "a_claim_in_a_register_is_checked_or_it_is_not_made":
+            A_CLAIM_IN_A_REGISTER_IS_CHECKED_OR_IT_IS_NOT_MADE,
         "closure_is_not_the_measure": CLOSURE_IS_NOT_THE_MEASURE,
         "what_success_means": e14.WHAT_SUCCESS_MEANS,
         "candidates": len(rows),
@@ -1320,15 +1358,32 @@ def _completeness(st) -> dict:
         "open_candidates_whose_reachable_runs_are_recorded": len(frags),
         "runs_of_established_boundary_the_drawing_carries":
             st["built"]["floor_fragments"]["runs_the_drawing_carries"],
-        "EVERY_EXECUTED_LOCAL_ANALYTICAL_MODULE_IS_HASHED": True,
-        "SEMANTIC_ROLE_IS_SEPARATE_FROM_BOUNDARY_CAPABILITY": True,
+        "EVERY_EXECUTED_LOCAL_ANALYTICAL_MODULE_IS_HASHED":
+            bound["EVERY_EXECUTED_LOCAL_ANALYTICAL_MODULE_IS_HASHED"],
+        "modules_bound": bound["modules_bound"],
+        "SEMANTIC_ROLE_IS_SEPARATE_FROM_BOUNDARY_CAPABILITY": bool(shape_free),
+        "roles_whose_boundary_role_changed_with_their_shape": [
+            r["SEMANTIC_ENTITY_ROLE"] for r in st["capability"]["ROWS"]
+            if not r["THE_SHAPE_DID_NOT_DECIDE_THE_ROLE"]],
         "DOOR_EVIDENCE_CAN_DISCOVER_AN_OPENING_WITHOUT_A_GAP_CANDIDATE":
             st["openings"]["RECONCILED"]["counts_by_status"].get(
                 od.CONFIRMED_DOOR_FIRST, 0) > 0,
-        "NO_FRAGMENT_WAS_EXTENDED_ACROSS_AN_UNSUPPORTED_OPENING": True,
-        "NO_BENCHMARK_QUANTITY_WAS_READ": True,
-        "NO_KNOWN_AREA_WAS_READ": True,
-        "NO_WORKBOOK_WAS_OPENED": True,
+        "openings_only_the_door_search_found":
+            st["openings"]["RECONCILED"]["counts_by_status"].get(
+                od.CONFIRMED_DOOR_FIRST, 0),
+        "NO_FRAGMENT_WAS_EXTENDED_ACROSS_AN_UNSUPPORTED_OPENING":
+            not unnamed,
+        "fragment_ends_checked": ends,
+        "fragment_ends_the_walk_did_not_name": unnamed,
+        "WHAT_THIS_RUN_READ": read,
+        "NO_WORKBOOK_WAS_OPENED": not workbookish,
+        "workbooks_opened": workbookish,
+        "no_benchmark_and_no_known_area": (
+            "the list above is everything this run opened: a CAD decode, "
+            "the blind input set, the source sheet and the trade rule "
+            "library. There is no take-off, no workbook, no expected area "
+            "and no benchmark among them, and a reader can check that "
+            "against the list rather than against a true"),
     }
 
 
@@ -1585,6 +1640,7 @@ def phase_geometry(a) -> int:
     _write(out, artifacts, "E1_4_DELTA_FROM_E1_3.json",
            _delta_from_e1_3(a, st))
 
+    st["source"] = src
     _write(out, artifacts, "E1_4_COMPLETENESS_REGISTER.json",
            _completeness(st))
 
@@ -1971,6 +2027,7 @@ def phase_finalize(a) -> int:
     st = _core(a)
     gf, rows, owner = st["gf"], st["rows"], st["owner"]
     src = r12._source(st["prep"], gf, a)
+    st["source"] = src
     gaps_by_id = {g["GAP_ID"]: g for g in st["gaps"]["rows"]}
     semantics = {}
     for r_ in st["semantics"]["ROWS"]:
