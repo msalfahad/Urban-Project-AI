@@ -51,6 +51,7 @@ def main() -> int:
     chk = _j("optional_checker/CHECKER_COMPARISON.json")
     ext = _j("external/EXTERNAL_DETECTOR_TEST_SPEC.json")
     sel = _j("01_SAMPLE_SELECTION.json")
+    red = _j("05_SAMPLE_REDUNDANCY.json")
     grp = _j("02_FEATURE_GROUP_REGISTER.json")
     crop = _j("03_CROP_REGISTER.json")
 
@@ -80,6 +81,10 @@ def main() -> int:
             "seeds_selected": sel.get("selected"),
             "feature_groups": grp.get("feature_groups"),
             "seed_collisions": len(sel.get("SEED_COLLISIONS", [])),
+            "distinct_features_if_each_overlap_cluster_is_one_feature":
+                red.get("distinct_features_if_each_cluster_is_one_feature"),
+            "groups_sharing_a_primary_member_with_another_group":
+                red.get("groups_inside_such_a_cluster"),
             "crops": crop.get("crops"),
             "groups_answered_pass_a": feat.get("groups_answered"),
             "pass_a_answers_refused": feat.get("answers_refused"),
@@ -118,6 +123,11 @@ def main() -> int:
             "EXTERNAL_DETECTOR_STATUS": ext.get("STATUS"),
         },
 
+        "THE_SAMPLE_IS_NOT_A_POPULATION_OF_FEATURES": (
+            red.get("WHY_IT_HAPPENS", "")),
+        "WHAT_A_LATER_SCORER_MUST_DO_ABOUT_THAT": (
+            red.get("WHAT_A_LATER_SCORER_MUST_DO", "")),
+
         "NO_ACCURACY_IS_REPORTED": (
             "not one number above says whether a reading is right. "
             "Nothing in this experiment was compared to a known answer, "
@@ -130,7 +140,8 @@ def main() -> int:
                 n: _sha(OUT / n) for n in
                 ("00_PROTOCOL.json", "01_SAMPLE_SELECTION.json",
                  "02_FEATURE_GROUP_REGISTER.json", "03_CROP_REGISTER.json",
-                 "04_E1_4_BASELINE.json") if (OUT / n).exists()},
+                 "04_E1_4_BASELINE.json", "05_SAMPLE_REDUNDANCY.json")
+                if (OUT / n).exists()},
             "CROPS": _tree(OUT / "crops") if (OUT / "crops").exists() else {},
             "PROMPTS_AND_INPUTS_AND_OUTPUTS": _tree(OUT / "a19"),
             "OPTIONAL_CHECKER": (_tree(OUT / "optional_checker")
