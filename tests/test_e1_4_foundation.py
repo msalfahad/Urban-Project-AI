@@ -153,6 +153,45 @@ def test_5_a_footprint_that_contradicts_its_reported_size_is_unresolved():
     assert ok["COLUMN_EXISTENCE_STATUS"] == cv.STRUCTURAL_COLUMN_CONFIRMED
 
 
+def test_5b_the_footprint_is_the_loops_own_ring_not_its_members_extents():
+    """Reproducing the frozen 600 x 2600 against 600 x 250 shows where the
+    two numbers came from: one is the loop, the other is the bounding box
+    of the whole entities that contribute sides to it. A wall line several
+    metres long can give a loop 250 mm of itself."""
+    members = [{"object_id": "W-1", "a": (0, 0), "b": (0, 2600)},
+               {"object_id": "W-2", "a": (600, 0), "b": (600, 2600)},
+               {"object_id": "S-1", "a": (0, 0), "b": (600, 0)},
+               {"object_id": "S-2", "a": (0, 250), "b": (600, 250)}]
+    d = cv.derive_from_members(members, expect_centre_mm=(300, 125),
+                               max_side_mm=1200.0)
+    assert d["LOOP_RING_ESTABLISHED"] is True
+    assert d["FOOTPRINT_BOX_FROM_THE_LOOPS_OWN_RING_MM"] == [0.0, 0.0,
+                                                             600.0, 250.0]
+    assert d["MEMBER_ENTITY_EXTENTS_BOX_MM"] == [0, 0, 600, 2600]
+    assert d["SIDES_OF_THIS_LOOP_ARE_PARTS_OF_LONGER_LINES"] is True
+    assert {r["object_id"] for r in d["MEMBERS_REACHING_BEYOND_THE_FOOTPRINT"]} \
+        == {"W-1", "W-2"}
+    # the loop and the size agree; what is not established is that a
+    # rectangle formed where two long walls cross is a discrete column
+    got = cv.assess({"loop": d["LOOP_RING"], "reported_size_mm": (600, 250),
+                     "on_structural_layer": True, "repeats_as_a_family": True,
+                     "sides_are_parts_of_longer_lines":
+                         d["SIDES_OF_THIS_LOOP_ARE_PARTS_OF_LONGER_LINES"]})
+    assert got["DERIVED_GEOMETRY_SELF_CONSISTENT"] is True
+    assert got["COLUMN_EXISTENCE_STATUS"] == cv.STRUCTURAL_COLUMN_UNRESOLVED
+    assert got["SIDES_OF_THIS_LOOP_ARE_PARTS_OF_LONGER_LINES"] is True
+    assert got["nothing_is_deleted"]
+
+
+def test_5c_members_that_do_not_close_establish_no_footprint():
+    d = cv.derive_from_members([{"object_id": "A", "a": (0, 0), "b": (600, 0)},
+                                {"object_id": "B", "a": (600, 0),
+                                 "b": (600, 600)}])
+    assert d["LOOP_RING_ESTABLISHED"] is False
+    assert d["LOOP_RING"] is None
+    assert d["MEMBER_ENTITY_EXTENTS_BOX_MM"] == [0.0, 0.0, 600.0, 600.0]
+
+
 # 6 --------------------------------------------------------------------
 def test_6_a_repeated_long_thin_loop_is_not_automatically_a_column():
     got = cv.assess({

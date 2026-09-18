@@ -13,6 +13,22 @@ inconsistency. A 600 x 2600 figure may be a column, a pier, a wall stub,
 a duct or a stair nosing - but whatever it is, a classifier that reports
 its size as 600 x 250 does not know which, and must say so.
 
+WHERE THE TWO NUMBERS CAME FROM
+
+Reproducing it showed the disagreement is in the derivation. size_mm is
+the bounding box of the polygonized FACE - the loop itself. The
+footprint_box_mm the E1.3 register carries is the bounding box of the
+whole ENTITIES that contribute sides to that loop, and a member entity
+can be a wall line several metres long whose contribution to the loop is
+250 mm of it. So the 2600 is a wall, not a column, and a register that
+calls it a footprint says something untrue about its own subject.
+
+That is a finding either way, and a strong one: a loop whose sides are
+parts of long wall lines is a corner of the room's fabric, not a
+discrete column. The two boxes are derived and reported separately here,
+and the reach of each member beyond the footprint is a fact about the
+candidate rather than a reason to keep quiet.
+
 WHAT THIS DOES
 
 Every candidate's geometry is derived here, from its own closed loop, and
@@ -115,6 +131,100 @@ def derive_geometry(loop) -> dict:
     }
 
 
+MEMBER_REACH_TOLERANCE_MM = 5.0
+
+A_MEMBER_IS_NOT_THE_FOOTPRINT = (
+    "the loop's own ring is the footprint. A member entity that carries "
+    "on past that ring is a longer line one part of which is a side of "
+    "this loop, and its full extent is not this candidate's size. The "
+    "reach is recorded because a loop whose sides are parts of long lines "
+    "is a corner of built fabric rather than a discrete figure")
+
+
+def derive_from_members(members, *, expect_centre_mm=None,
+                        max_side_mm=None) -> dict:
+    """Re-derive a candidate's closed footprint from its own member segments.
+
+    `members` are dicts with `object_id`, `a` and `b`. The ring is found
+    by polygonizing them - the same operation that proposed the loop in
+    the first place, done again here so E1.4 owns the geometry it judges
+    rather than inheriting a number.
+
+    `expect_centre_mm` picks between faces when the members enclose more
+    than one; without it, the largest face is taken and that is said.
+    """
+    pairs = [(m, (tuple(m["a"]), tuple(m["b"]))) for m in members or ()
+             if m.get("a") is not None and m.get("b") is not None]
+    segs = [seg for _m, seg in pairs]
+    xs = [p[0] for seg in segs for p in seg]
+    ys = [p[1] for seg in segs for p in seg]
+    extents = ([round(min(xs), 3), round(min(ys), 3),
+                round(max(xs), 3), round(max(ys), 3)] if xs else None)
+    out = {
+        "MEMBER_ENTITY_EXTENTS_BOX_MM": extents,
+        "member_count": len(segs),
+        "a_member_is_not_the_footprint": A_MEMBER_IS_NOT_THE_FOOTPRINT,
+    }
+    if len(segs) < 3:
+        return {**out, "LOOP_RING": None,
+                "LOOP_RING_ESTABLISHED": False,
+                "why": "fewer than three member segments cannot close a loop"}
+    try:
+        from shapely.geometry import LineString, Point
+        from shapely.ops import polygonize, unary_union
+    except Exception:                                  # pragma: no cover
+        return {**out, "LOOP_RING": None,
+                "LOOP_RING_ESTABLISHED": False,
+                "why": "no geometry library is available to close the loop"}
+    faces = list(polygonize(unary_union(
+        [LineString([a, b]) for a, b in segs])))
+    if max_side_mm is not None:
+        kept = []
+        for f in faces:
+            fx = [c[0] for c in f.exterior.coords]
+            fy = [c[1] for c in f.exterior.coords]
+            if max(max(fx) - min(fx), max(fy) - min(fy)) <= max_side_mm:
+                kept.append(f)
+        faces = kept or faces
+    if not faces:
+        return {**out, "LOOP_RING": None,
+                "LOOP_RING_ESTABLISHED": False,
+                "why": ("these members do not close a loop. Whatever "
+                        "proposed this candidate, its own sides do not "
+                        "enclose a footprint now")}
+    if expect_centre_mm is not None and len(faces) > 1:
+        want = Point(expect_centre_mm)
+        faces.sort(key=lambda f: f.centroid.distance(want))
+        picked, how = faces[0], "THE_FACE_NEAREST_THE_REPORTED_CENTRE"
+    else:
+        faces.sort(key=lambda f: -f.area)
+        picked, how = faces[0], ("THE_ONLY_FACE_THESE_MEMBERS_CLOSE"
+                                 if len(faces) == 1 else
+                                 "THE_LARGEST_FACE_THESE_MEMBERS_CLOSE")
+    ring = [(round(c[0], 3), round(c[1], 3)) for c in picked.exterior.coords]
+    rx = [p[0] for p in ring]
+    ry = [p[1] for p in ring]
+    box = (min(rx), min(ry), max(rx), max(ry))
+    beyond = []
+    for m, (a, b) in pairs:
+        reach = max(box[0] - min(a[0], b[0]), max(a[0], b[0]) - box[2],
+                    box[1] - min(a[1], b[1]), max(a[1], b[1]) - box[3])
+        if reach > MEMBER_REACH_TOLERANCE_MM:
+            beyond.append({"object_id": m.get("object_id"),
+                           "reaches_beyond_the_footprint_mm": round(reach, 3)})
+    return {
+        **out,
+        "LOOP_RING": [list(p) for p in ring],
+        "LOOP_RING_ESTABLISHED": True,
+        "HOW_THE_FACE_WAS_CHOSEN": how,
+        "faces_these_members_close": len(faces),
+        "FOOTPRINT_BOX_FROM_THE_LOOPS_OWN_RING_MM": [round(v, 3)
+                                                     for v in box],
+        "MEMBERS_REACHING_BEYOND_THE_FOOTPRINT": beyond,
+        "SIDES_OF_THIS_LOOP_ARE_PARTS_OF_LONGER_LINES": bool(beyond),
+    }
+
+
 def cross_check(derived, reported_size_mm) -> dict:
     """Do the derived footprint and the reported size describe one thing?"""
     if not derived.get("DERIVED"):
@@ -155,13 +265,23 @@ def cross_check(derived, reported_size_mm) -> dict:
     }
 
 
+A_LOOP_MADE_OF_LONGER_LINES_IS_NOT_A_DISCRETE_MEMBER = (
+    "the sides of this loop are parts of lines that carry on past it, so "
+    "what closes here is a corner of the fabric those lines build and not "
+    "a figure standing on its own. A discrete structural member is drawn "
+    "as a figure; a rectangle formed where two long walls cross is a "
+    "rectangle in the walls. It is kept, with its geometry, and it is not "
+    "confirmed as a column")
+
+
 def assess(candidate) -> dict:
     """One candidate's existence status, and why.
 
     `candidate` carries `loop` (the closed footprint), optionally
     `reported_size_mm`, and whatever evidence was gathered about it:
     `on_structural_layer`, `repeats_as_a_family`, `touches_a_wall`,
-    `has_a_block_reference`, `resembles_another_loop`.
+    `has_a_block_reference`, `resembles_another_loop`, and
+    `sides_are_parts_of_longer_lines` from derive_from_members.
     """
     derived = derive_geometry(candidate.get("loop"))
     checked = cross_check(derived, candidate.get("reported_size_mm"))
@@ -171,6 +291,21 @@ def assess(candidate) -> dict:
                            "touches_a_wall", "has_a_block_reference",
                            "resembles_another_loop")
                if candidate.get(k)]
+
+    if candidate.get("sides_are_parts_of_longer_lines"):
+        return {
+            "COLUMN_EXISTENCE_STATUS": STRUCTURAL_COLUMN_UNRESOLVED,
+            "DERIVED_GEOMETRY_SELF_CONSISTENT": consistent,
+            "evidence_raising_it_as_structure": raising,
+            "SIDES_OF_THIS_LOOP_ARE_PARTS_OF_LONGER_LINES": True,
+            "layer_evidence_is_evidence_not_truth":
+                LAYER_EVIDENCE_IS_EVIDENCE_NOT_TRUTH,
+            "nothing_is_deleted": NOTHING_IS_DELETED,
+            "why": A_LOOP_MADE_OF_LONGER_LINES_IS_NOT_A_DISCRETE_MEMBER,
+            **derived,
+            **{k: v for k, v in checked.items() if k != "why"},
+            "self_consistency_why": checked.get("why"),
+        }
 
     if not consistent:
         status = STRUCTURAL_COLUMN_UNRESOLVED
