@@ -72,6 +72,20 @@ POSITIVE_FOR_NOT_IN_THE_CUT_PLANE = (LINETYPE_IS_DASHED,
                                      LAYER_SAYS_OVERHEAD,
                                      RASTER_SHOWS_A_BROKEN_STROKE)
 
+# Weaker: evidence that the line is drawn the way this drawing draws what
+# the cut plane passes through. It does not say what the line is MADE of -
+# that is the semantic role's question, answered separately - only that
+# nothing places it above or below the cut.
+POSITIVE_FOR_BEING_IN_THE_CUT_PLANE = (LINETYPE_IS_CONTINUOUS,)
+
+A_CONTINUOUS_LINE_IS_IN_THE_CUT_PLANE = (
+    "this drawing draws what the cut plane does not pass through with a "
+    "broken linetype, and draws everything else continuously. A "
+    "continuous line is therefore in the cut plane. What it is made of is "
+    "a different question with a different answer: a fixture, a counter "
+    "and a wall are all drawn continuously, and it is the semantic role "
+    "that says which of them may bound a room")
+
 # A layer's linetype and the printed sheet can disagree. When they do,
 # neither is silently preferred.
 THE_LAYER_AND_THE_SHEET_DISAGREE = (
@@ -94,8 +108,9 @@ ABSENCE_OF_EVIDENCE_IS_UNRESOLVED = (
 
 
 def model_hash() -> str:
-    parts = [MODEL] + list(STATUSES) + list(POSITIVE_FOR_VISIBLE_MATERIAL) \
-        + list(POSITIVE_FOR_NOT_IN_THE_CUT_PLANE)
+    parts = ([MODEL] + list(STATUSES) + list(POSITIVE_FOR_VISIBLE_MATERIAL)
+             + list(POSITIVE_FOR_NOT_IN_THE_CUT_PLANE)
+             + list(POSITIVE_FOR_BEING_IN_THE_CUT_PLANE))
     return hashlib.sha256("|".join(parts).encode("utf-8")).hexdigest()[:24]
 
 
@@ -172,6 +187,9 @@ def classify(evidence) -> dict:
                    "positive evidence places built material in the cut "
                    "plane along this stretch")
 
+    if has & set(POSITIVE_FOR_BEING_IN_THE_CUT_PLANE):
+        return out(VISIBLE_MATERIAL_FACE, A_CONTINUOUS_LINE_IS_IN_THE_CUT_PLANE)
+
     if RUNS_WITH_A_STAIR in has:
         return out(STAIR_PROJECTION,
                    "it runs with drawn stair geometry and nothing "
@@ -234,6 +252,78 @@ def raster_stroke_evidence(samples) -> dict:
     return {**base, "EVIDENCE": None,
             "why": ("the sheet neither shows a solid stroke here nor a "
                     "dash pattern. It says nothing about this stretch")}
+
+
+# ------------------------------------- is the sheet probe evidence at all?
+# The probe is a second reading of the same drawing, taken from a raster
+# registered to the CAD. Registration is approximate and a printed stroke
+# has width, so a line sampled a pixel off its own ink alternates ink and
+# blank and reads as a dash pattern that is not there. Before the probe is
+# allowed to say anything about geometry, it is asked to agree with the
+# drawing's own linetype table, where that table is unambiguous.
+PROBE_MUST_AGREE_SHARE = 0.95
+PROBE_MIN_SAMPLE = 40
+
+A_PROBE_THAT_CONTRADICTS_THE_TABLE_IS_NOT_EVIDENCE = (
+    "the CAD records, per layer, which linetype each line is drawn with. "
+    "A probe of the printed sheet that calls continuous linework broken, "
+    "or hidden linework solid, is not reading the drawing - it is reading "
+    "its own registration error. It is kept per stretch as an "
+    "observation, and it is not admitted as evidence about the cut plane")
+
+WHY_THE_PROBE_IS_CALIBRATED_AND_NOT_TRUSTED = (
+    "an instrument is calibrated against something it should already "
+    "agree with. The linetype table is that something: it is the "
+    "drawing's own record of how each line is drawn, and neither it nor "
+    "the probe was chosen with any region's geometry in mind")
+
+
+def calibrate_raster_probe(pairs) -> dict:
+    """Does the sheet probe agree with the drawing's own linetype table?
+
+    `pairs` are (layer_linetype_evidence, probe_evidence) for every
+    stretch the probe was run on. Only stretches whose layer linetype is
+    unambiguous take part, and only stretches the probe answered.
+    """
+    table = {}
+    for expected, got in pairs or ():
+        if expected not in (LINETYPE_IS_CONTINUOUS, LINETYPE_IS_DASHED):
+            continue
+        if got not in (RASTER_SHOWS_A_SOLID_STROKE,
+                       RASTER_SHOWS_A_BROKEN_STROKE):
+            continue
+        table[(expected, got)] = table.get((expected, got), 0) + 1
+
+    def rate(expected, agreeing):
+        n = sum(v for (e, _g), v in table.items() if e == expected)
+        ok = table.get((expected, agreeing), 0)
+        return n, ok, (ok / n if n else None)
+
+    cont_n, cont_ok, cont_rate = rate(LINETYPE_IS_CONTINUOUS,
+                                      RASTER_SHOWS_A_SOLID_STROKE)
+    dash_n, dash_ok, dash_rate = rate(LINETYPE_IS_DASHED,
+                                      RASTER_SHOWS_A_BROKEN_STROKE)
+    enough = cont_n >= PROBE_MIN_SAMPLE and dash_n >= PROBE_MIN_SAMPLE
+    agrees = (enough
+              and (cont_rate or 0.0) >= PROBE_MUST_AGREE_SHARE
+              and (dash_rate or 0.0) >= PROBE_MUST_AGREE_SHARE)
+    return {
+        "CONFUSION": {f"{e}|{g}": v for (e, g), v in sorted(table.items())},
+        "CONTINUOUS_LINEWORK_THE_PROBE_CALLS_SOLID": cont_ok,
+        "CONTINUOUS_LINEWORK_PROBED": cont_n,
+        "AGREEMENT_ON_CONTINUOUS_LINEWORK": (
+            None if cont_rate is None else round(cont_rate, 4)),
+        "DASHED_LINEWORK_THE_PROBE_CALLS_BROKEN": dash_ok,
+        "DASHED_LINEWORK_PROBED": dash_n,
+        "AGREEMENT_ON_DASHED_LINEWORK": (
+            None if dash_rate is None else round(dash_rate, 4)),
+        "REQUIRED_AGREEMENT": PROBE_MUST_AGREE_SHARE,
+        "MINIMUM_SAMPLE": PROBE_MIN_SAMPLE,
+        "ENOUGH_LINEWORK_TO_CALIBRATE": enough,
+        "RASTER_STROKE_PROBE_IS_EVIDENCE": bool(agrees),
+        "why": (WHY_THE_PROBE_IS_CALIBRATED_AND_NOT_TRUSTED if agrees else
+                A_PROBE_THAT_CONTRADICTS_THE_TABLE_IS_NOT_EVIDENCE),
+    }
 
 
 # --------------------------------------- the drawing's own linetype table

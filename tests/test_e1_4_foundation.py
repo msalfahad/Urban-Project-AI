@@ -276,6 +276,17 @@ def test_9_a_dashed_overhead_outline_cannot_become_a_wall():
     assert unknown["LINE_SEMANTICS_STATUS"] == ls.UNRESOLVED
     assert unknown["MAY_BE_ASKED_TO_BOUND"] is False
 
+    nothing_exposed = ls.classify([ls.LINETYPE_NOT_EXPOSED])
+    assert nothing_exposed["LINE_SEMANTICS_STATUS"] == ls.UNRESOLVED
+
+    # this drawing draws what the cut plane misses with a broken linetype,
+    # so a continuous line is in the cut plane. What it is MADE of is the
+    # semantic role's question and this status does not answer it
+    plain = ls.classify([ls.LINETYPE_IS_CONTINUOUS])
+    assert plain["LINE_SEMANTICS_STATUS"] == ls.VISIBLE_MATERIAL_FACE
+    assert plain["MAY_BE_ASKED_TO_BOUND"] is True
+    assert not bcap.may_bound_a_clear_floor_region(ir.FURNITURE)
+
     solid = ls.classify([ls.LINETYPE_IS_CONTINUOUS,
                          ls.PAIRED_AT_A_WALL_THICKNESS])
     assert solid["LINE_SEMANTICS_STATUS"] == ls.VISIBLE_MATERIAL_FACE
