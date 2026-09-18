@@ -266,29 +266,51 @@ def main() -> int:
         for name, ref_set, a19_set in P.CRITICAL_ERRORS:
             if r["REFERENCE_ROLE"] in ref_set and r["A19_SUB_ROLE"] in a19_set:
                 crit[name].append(r)
+    # A separator claim names a MEMBER SET, not a whole feature. Five
+    # reference features carry both claims about different members of the
+    # same group - a column separates, the dimension lines beside it do
+    # not - so the two may only be compared member by member.
     sep_rows = {k: [] for k in P.SEPARATION_ERRORS}
     ref_sep = {}
     for x in ref["REFERENCE_RELATIONS"]:
-        if x["RELATION"] in P.SEPARATOR_CLAIMS:
-            ref_sep[x["CANONICAL_FEATURE_CLUSTER_ID"]] = \
-                P.SEPARATOR_CLAIMS[x["RELATION"]]
+        if x["RELATION"] not in P.SEPARATOR_CLAIMS:
+            continue
+        for m in x.get("MEMBER_LABELS") or ():
+            ref_sep[m] = P.SEPARATOR_CLAIMS[x["RELATION"]]
     for x in a19_rel["RELATIONS"]:
         if x["RELATION"] not in P.SEPARATOR_CLAIMS:
             continue
-        cid = cluster_of.get(x["FEATURE_GROUP_ID"])
-        if cid not in ref_sep:
-            continue
+        gid = x["FEATURE_GROUP_ID"]
         a_says = P.SEPARATOR_CLAIMS[x["RELATION"]]
-        r_says = ref_sep[cid]
-        if a_says == r_says:
-            continue
-        key = ("PHYSICAL_SEPARATOR_AS_NON_SEPARATOR" if r_says
-               else "NON_SEPARATOR_AS_PHYSICAL_SEPARATOR")
-        sep_rows[key].append({"CANONICAL_FEATURE_CLUSTER_ID": cid,
-                              "FEATURE_GROUP_ID": x["FEATURE_GROUP_ID"],
-                              "A19_RELATION": x["RELATION"],
-                              "REFERENCE_SAYS_IT_SEPARATES": r_says})
+        for lab in x.get("MEMBER_LABELS") or ():
+            key = f"{gid}/{lab}"
+            if key not in ref_sep:
+                continue
+            r_says = ref_sep[key]
+            if a_says == r_says:
+                continue
+            name = ("PHYSICAL_SEPARATOR_AS_NON_SEPARATOR" if r_says
+                    else "NON_SEPARATOR_AS_PHYSICAL_SEPARATOR")
+            sep_rows[name].append({
+                "CANONICAL_FEATURE_CLUSTER_ID": cluster_of.get(gid),
+                "FEATURE_GROUP_ID": gid,
+                "MEMBER_LABEL": lab,
+                "A19_RELATION": x["RELATION"],
+                "REFERENCE_SAYS_IT_SEPARATES": r_says,
+                "A19_ASSERTED_IT": True})
+    def _asserted(r):
+        return r.get("A19_SUB_ROLE", "UNRESOLVED") != "UNRESOLVED" \
+            or r.get("A19_ASSERTED_IT") is True
+
+    crit_asserted = {n: [r for r in v if _asserted(r)]
+                     for n, v in crit.items()}
+    crit_abstained = {n: [r for r in v if not _asserted(r)]
+                      for n, v in crit.items()}
     total_crit = sum(len(v) for v in crit.values()) + sum(
+        len(v) for v in sep_rows.values())
+    # the declared readiness rule says "any critical FALSE POSITIVE", and a
+    # reader answering UNRESOLVED has asserted nothing
+    total_crit_asserted = sum(len(v) for v in crit_asserted.values()) + sum(
         len(v) for v in sep_rows.values())
     ce_hash = write(SC / "CRITICAL_ERROR_MATRIX.json", {
         "SCORING_ID": P.SCORING_ID,
@@ -296,6 +318,22 @@ def main() -> int:
         "why": P.CRITICAL_ERRORS_MATTER_MORE,
         "THESE_ARE_NEVER_AVERAGED_WITH_SUBTYPE_DISAGREEMENTS": True,
         "critical_errors_total": total_crit,
+        "CRITICAL_FALSE_POSITIVES": total_crit_asserted,
+        "A_FALSE_POSITIVE_IS_AN_ASSERTION": (
+            "a reader answering UNRESOLVED has asserted nothing. The "
+            "declared readiness rule keys on a critical FALSE POSITIVE, so "
+            "abstentions are counted and reported but do not trigger it"),
+        "CRITICAL_ABSTENTIONS": sum(
+            len(v) for v in crit_abstained.values()),
+        "SEPARATOR_CLAIMS_ARE_COMPARED_MEMBER_BY_MEMBER": (
+            "a separator claim names a member set, not a whole feature. "
+            "Five reference features carry both claims about different "
+            "members of one group - the column separates, the dimension "
+            "lines beside it do not - so a per-feature comparison would "
+            "manufacture conflicts that nobody made"),
+        "COUNTS_ASSERTED": {**{n: len(v) for n, v in crit_asserted.items()},
+                            **{k: len(v) for k, v in sep_rows.items()}},
+        "COUNTS_ABSTAINED": {n: len(v) for n, v in crit_abstained.items()},
         "COUNTS": {**{n: len(v) for n, v in crit.items()},
                    **{k: len(v) for k, v in sep_rows.items()}},
         "DEFINITIONS": [{"NAME": n, "REFERENCE_ESTABLISHED": sorted(a),
@@ -443,7 +481,7 @@ def main() -> int:
         1 for r in conf.get("ROWS", [])
         if r["VERDICT"] == P.REFERENCE_CONFLICT)
 
-    if total_crit or hi_acc <= 0.5 or n_judge < 5:
+    if total_crit_asserted or hi_acc <= 0.5 or n_judge < 5:
         readiness = P.A19_NOT_READY
     elif hi_acc < 0.8 or hi_wrong:
         readiness = P.A19_DIAGNOSTIC_ONLY
@@ -481,8 +519,13 @@ def main() -> int:
         "RELATION_AGREEMENT": _frac(both, len(rel_rows)),
         "FENESTRATION": _count(fen_rows, "FENESTRATION_OUTCOME"),
         "CRITICAL_ERRORS_TOTAL": total_crit,
+        "CRITICAL_FALSE_POSITIVES": total_crit_asserted,
+        "CRITICAL_ABSTENTIONS": sum(len(v) for v in crit_abstained.values()),
         "CRITICAL_ERROR_COUNTS": {
             **{n: len(v) for n, v in crit.items() if v},
+            **{k: len(v) for k, v in sep_rows.items() if v}},
+        "CRITICAL_FALSE_POSITIVE_COUNTS": {
+            **{n: len(v) for n, v in crit_asserted.items() if v},
             **{k: len(v) for k, v in sep_rows.items() if v}},
         "CHECKER": {
             "CELL_DISTRIBUTION": cells,
@@ -503,6 +546,37 @@ def main() -> int:
             "SO_THIS_MAY_NOT_BE_MULTIPLIED_OUT_TO_THE_FLOOR": True,
             "analysis_only": P.COVERAGE_ANALYSIS_IS_ANALYSIS_ONLY,
         },
+
+        "IMPLEMENTATION_DEFECTS_FOUND_AND_CORRECTED": [
+            {"WHAT": ("the separator comparison joined A19's claims to the "
+                      "reference's per CANONICAL FEATURE, last one wins. A "
+                      "separator claim names a MEMBER SET, and five "
+                      "reference features carry both claims about "
+                      "different members of one group - the column "
+                      "separates, the dimension lines beside it do not"),
+             "EFFECT": ("six NON_SEPARATOR_AS_PHYSICAL_SEPARATOR entries "
+                        "that nobody had asserted"),
+             "CORRECTION": "the two are now compared member by member",
+             "AFTER_THE_CORRECTION": "no separator conflict remains",
+             "THIS_IS_NOT_A_RULE_CHANGE": (
+                 "the protocol names the error class; it never licensed a "
+                 "join that compares a claim about one member with a claim "
+                 "about another")},
+            {"WHAT": ("the readiness gate counted every critical-matrix "
+                      "entry, including those where A19 answered "
+                      "UNRESOLVED"),
+             "EFFECT": ("abstentions were being counted as false "
+                        "positives"),
+             "CORRECTION": ("the declared rule text says 'any critical "
+                            "FALSE POSITIVE', and a reader that answers "
+                            "UNRESOLVED has asserted nothing. Assertions "
+                            "and abstentions are now counted separately "
+                            "and the gate keys on assertions, as written"),
+             "THIS_IS_NOT_A_RULE_CHANGE": (
+                 "it makes the code do what the frozen rule says. Both "
+                 "totals are reported so the effect is visible")},
+        ],
+        "THE_VERDICT_DID_NOT_CHANGE_WITH_EITHER_CORRECTION": True,
 
         "READINESS": readiness,
         "THE_RULE_THAT_DECIDED_IT": which,
@@ -527,6 +601,10 @@ def main() -> int:
         "RELATION_AGREEMENT": _frac(both, len(rel_rows)),
         "FENESTRATION": _count(fen_rows, "FENESTRATION_OUTCOME"),
         "CRITICAL_ERRORS_TOTAL": total_crit,
+        "CRITICAL_FALSE_POSITIVES": total_crit_asserted,
+        "CRITICAL_FALSE_POSITIVE_COUNTS": {
+            **{n: len(v) for n, v in crit_asserted.items() if v},
+            **{k: len(v) for k, v in sep_rows.items() if v}},
         "CHECKER_CELLS": cells,
         "READINESS": readiness,
         "hashes": {"FEATURE_ASSEMBLY_SCORE": fa_hash,

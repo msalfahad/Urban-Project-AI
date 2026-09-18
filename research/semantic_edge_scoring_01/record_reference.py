@@ -20,6 +20,7 @@ import json
 import re
 from pathlib import Path
 
+from research.semantic_edge_experiment_01 import protocol as SE
 from research.semantic_edge_scoring_01 import protocol as P
 
 OUT = Path("data/experiments/SEMANTIC_EDGE_SCORING_01")
@@ -182,7 +183,7 @@ def stage_b() -> dict:
         ra, rb = a.get("REFERENCE_ROLE"), r.get("REFERENCE_ROLE")
         if ra == rb:
             verdict = "REFERENCE_AGREE"
-        elif P.UNRESOLVED_FEATURE in (ra, rb):
+        elif SE.UNRESOLVED_FEATURE in (ra, rb):
             verdict = "ONE_REFERENCE_UNRESOLVED"
         else:
             verdict = P.REFERENCE_CONFLICT
