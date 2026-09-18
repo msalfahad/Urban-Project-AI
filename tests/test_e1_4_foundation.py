@@ -862,3 +862,79 @@ def test_9d_a_dashed_layer_and_a_solid_sheet_settle_nothing():
                            ls.PAIRED_AT_A_WALL_THICKNESS])
     assert settled["LINE_SEMANTICS_STATUS"] == ls.BELOW_CUT_PLANE_GEOMETRY
     assert settled["MAY_BE_ASKED_TO_BOUND"] is False
+
+
+# §14 - the effect is computed from the drawing, not read off the name --
+def _owner(*, continues_across):
+    return {"rows": [{"COLUMN_ID": "LOOP-001",
+                      "member_object_ids": ["COL-1"],
+                      "CLEAR_FACE_OWNERSHIP_STATUS": co.ARCHITECTURAL_FACE_OWNS,
+                      "architectural_face_continues_across": continues_across}],
+            "object_ids_that_do_not_own_the_room_face": ["COL-1"],
+            "object_ids_that_own_the_room_face": []}
+
+
+def _row_with_column_on_its_chain():
+    return {"chain": {"CHAIN": [{"object_id": "COL-1"},
+                                {"object_id": "W-1"}]}}
+
+
+def test_14_a_column_that_cannot_move_the_chain_is_diagnostic():
+    """Kitchen's bug was that a status NAMED unresolved gated the release.
+    Here the architectural face runs unbroken across the footprint, so the
+    clear face is that face on either reading and the chain cannot move."""
+    from tools import run_e1_4 as r14
+    got = r14.affects_proposed_boundary(
+        "COLUMN_EXPOSURE_UNRESOLVED", _row_with_column_on_its_chain(),
+        _owner(continues_across=True))
+    assert got["AFFECTS_PROPOSED_BOUNDARY"] is vf.AFFECTS_NO
+    f = vf.finding("COLUMN_EXPOSURE_UNRESOLVED", evidence=["the crop"],
+                   confidence="COLD_VISUAL_READING",
+                   affects_proposed_boundary=got["AFFECTS_PROPOSED_BOUNDARY"],
+                   affected_chain_elements=got["AFFECTED_CHAIN_ELEMENTS"])
+    assert vf.gate([f])["COLD_VISUAL_FINDINGS_BLOCK_THE_GEOMETRY"] is False
+
+
+def test_14b_a_column_that_would_move_the_clear_face_is_blocking():
+    from tools import run_e1_4 as r14
+    got = r14.affects_proposed_boundary(
+        "COLUMN_EXPOSURE_UNRESOLVED", _row_with_column_on_its_chain(),
+        _owner(continues_across=False))
+    assert got["AFFECTS_PROPOSED_BOUNDARY"] is vf.AFFECTS_YES
+    assert got["AFFECTED_CHAIN_ELEMENTS"] == ["LOOP-001"]
+    f = vf.finding("COLUMN_EXPOSURE_UNRESOLVED", evidence=["the crop"],
+                   confidence="COLD_VISUAL_READING",
+                   affects_proposed_boundary=got["AFFECTS_PROPOSED_BOUNDARY"],
+                   affected_chain_elements=got["AFFECTED_CHAIN_ELEMENTS"])
+    assert vf.gate([f])["COLD_VISUAL_FINDINGS_BLOCK_THE_GEOMETRY"] is True
+
+
+def test_14c_a_finding_about_the_chain_itself_always_challenges_it():
+    from tools import run_e1_4 as r14
+    for status in ("WALL_FALSELY_REMOVED", "OPEN_SIDE_FALSELY_CLOSED",
+                   "POSSIBLE_UNDER_CAPTURE", "POSSIBLE_OVER_CAPTURE"):
+        got = r14.affects_proposed_boundary(
+            status, _row_with_column_on_its_chain(),
+            _owner(continues_across=True))
+        assert got["AFFECTS_PROPOSED_BOUNDARY"] is vf.AFFECTS_YES, status
+
+
+def test_14d_no_rule_in_the_effect_mechanism_names_a_region():
+    """Do not special-case Kitchen. AST-stripped, the mechanism names no
+    room, no candidate id and no token from this drawing."""
+    import ast
+    import inspect
+    from tools import run_e1_4 as r14
+    src = inspect.getsource(r14.affects_proposed_boundary)
+    tree = ast.parse(src)
+    for node in ast.walk(tree):
+        if isinstance(node, ast.Expr) and isinstance(node.value, ast.Constant):
+            node.value.value = ""
+        if isinstance(node, (ast.FunctionDef, ast.Module)):
+            if (node.body and isinstance(node.body[0], ast.Expr)
+                    and isinstance(node.body[0].value, ast.Constant)):
+                node.body = node.body[1:] or [ast.Pass()]
+    code = ast.unparse(ast.fix_missing_locations(tree)).upper()
+    for token in ("KITCHEN", "PANTRY", "WASH", "DEWANEYA", "SALOON",
+                  "LG-0", "E1_3-", "E1_4-LG"):
+        assert token not in code, token
