@@ -2921,3 +2921,87 @@ because in construction prose it means *as drawn*, and `known` and
 cannot catch is a bare number with no trigger beside it; benchmark
 **documents** are kept out by path instead, wholesale, before anything
 reads them.
+
+---
+
+## §101 — A layer says what to test. An entity says what it is.
+
+E1 v1 profiled the drawing's layers, found that `1`, `5`, `W` and `2` hold
+mostly paired faces, and then treated every line on them as a
+`MATERIAL_WALL_FACE`. Its own provenance register said, in writing,
+
+```
+ENTITY_ESTABLISHED_ROLE = NOT_ESTABLISHED_PER_ENTITY
+```
+
+and it released boundaries built from those entities anyway. Layer `5`
+carries the kitchen's wall **and** the kitchen's cabinet front, so the
+released Kitchen ran along a run of base units 500 mm inside the room and
+came out 2200 mm wide where the architect had dimensioned 2700.
+
+So the hierarchy is fixed, and it is a hierarchy rather than a threshold:
+
+```
+LAYER_DEFAULT_ROLE       candidate-generation evidence ONLY
+ENTITY_ESTABLISHED_ROLE  required before a segment may bound material
+UNKNOWN                  never releases as a room wall
+```
+
+What separates the two, generally and without knowing what room it is in:
+
+> **A WALL SEPARATES TWO SPACES.** It is drawn as two faces with the wall
+> body between them, and its ends land on other walls.
+>
+> **CASEWORK STANDS INSIDE ONE SPACE.** It is a single face standing off a
+> wall at fitted-unit depth — deeper than any ordinary wall, which is
+> exactly why the two can be told apart — with short returns back to it.
+
+Three details decided whether that rule worked at all on a real drawing,
+and each was wrong first:
+
+- **A dimension line runs parallel to the wall it measures.** In this
+  drawing it does so 135 mm away, inside the wall-thickness band, so the
+  cabinet front paired with a dimension line and became a wall. Only
+  entities that could themselves be built material take part in the
+  parallel reasoning.
+- **A wall's two faces are rarely two lines.** An opening breaks one face
+  into pieces while the other runs on, so the partner is matched against
+  the **union** of the collinear fragments at one offset.
+- **A line a hair off due west lands at 179.99°**, which rounded into a
+  bin the lookup never visited. Two faces of one wall were stored apart,
+  and 600 mm of wall beside a door was invisible.
+
+## §102 — A doorway is not an open side, and a stamp is not a room
+
+Three more corrections in the same iteration, each from the same mistake:
+taking a token for the thing it names.
+
+**The drawing is bilingual.** Every room carries an English stamp and an
+Arabic one, and the Arabic comes back through an SHX font the decoder
+cannot map — `ASVQBaL` beside `RECEPTION`. E1 v1 counted each as a
+functional space, so a room labelled twice became
+`MULTI_FUNCTION_PHYSICAL_REGION`. Script is now decided from the
+drawing's own typography — the text style, whether the string is
+generated backwards, whether the glyphs read as a word — and **no token
+is mapped to a word anywhere in the code**. Only a readable stamp in a
+different label group can make a region multi-function.
+
+**A text insertion point is not the middle of the text.** It is where the
+string starts, and for a right-to-left stamp it is at the other end. It
+is weak evidence, and a label conflict may never be raised from it alone.
+
+**A line drawn from the centre of a circle is how the circle was set
+out.** E1 v1 fed the pool's radial setting-out lines to the same tracer
+as the walls and polygonize cut the pool into wedges, two of which were
+released as rooms. The arcs were never the problem. A winder tread points
+at the same centre and **stops short of it**, running between two
+concentric arcs — that one ratio keeps the pool's construction lines out
+of the stair register and the pool's wedges out of the room register.
+
+**A doorway is not an open side.** When the blind reading says a space is
+open and CAD closes it with a door-width portal, that contradicts the
+reading rather than confirming it — a doorway is a hole in a wall, and
+the reading was that there is no wall. `CONFIRMED_BY_CAD` is no longer a
+status: every agreement names *what* agrees — the identity, the topology,
+or the boundary — because a closed ring containing the same text stamp
+confirms none of the other two.
