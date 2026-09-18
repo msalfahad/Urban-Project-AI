@@ -1311,8 +1311,47 @@ def _core(a):
                 band_offsets.append(float(b))
     struct_ids = set(owner["object_ids_that_do_not_own_the_room_face"]) | \
         set(owner["object_ids_that_own_the_room_face"])
+    # HOW FAR APART TWO WALL ENDS MAY BE AND STILL BE ASKED ABOUT.
+    #
+    # E1.2 proposed a candidate gap only within a fixed 2 m. That is a
+    # number about double doors, not about this drawing, and §6 says not
+    # to carry one. The reach here is the drawing's own extent, so every
+    # pair of wall ends that FACE each other is asked about, and the
+    # facing rule is left to be the only thing that decides whether two
+    # ends are a gap at all.
+    #
+    # This is not a licence to close anything: engine.gap_pass decides
+    # each candidate on the drawing's evidence and keeps a barrier only
+    # for a portal or a material continuity, so a gap with no evidence is
+    # UNRESOLVED and stays open.
+    #
+    # WHAT IT DID NOT FIX, measured rather than assumed. A cold round
+    # reported that the walk stops at doorways where a leaf and a swing
+    # arc are drawn, in rooms that are closed on the drawing. Widening
+    # the reach changed nothing at all - still 38 candidate gaps and 28
+    # portals - so those doorways are not being missed for distance.
+    # Their jambs are not reaching the pairing as wall ends in the first
+    # place, and that is still open.
+    xs = [v for p_ in mat_all
+          for v in (p_.interval.provenance or {}).get("extent_mm", ()) or ()]
+    span = max(xs) - min(xs) if xs else 0.0
+    reach = max(float(cg.MAX_DOUBLE_LEAF_MM), span)
     raw_closure = cg.close_openings(mat_all, wall_layers=(),
-                                    door_layers={"D"})
+                                    door_layers={"D"},
+                                    max_barrier_mm=reach)
+    raw_closure["HOW_FAR_APART_TWO_ENDS_MAY_BE_AND_STILL_BE_ASKED_ABOUT"] = {
+        "reach_mm": round(reach, 1),
+        "why": (
+            "the facing rule is what decides whether two wall ends are a "
+            "gap at all: a gap along a wall has to continue both walls "
+            "along their own lines. A distance limit on TOP of that rule "
+            "only hides gaps from the ontology, and a hidden gap reads as "
+            "a boundary that was never established"),
+        "this_closes_nothing_by_itself": (
+            "asking about a gap is not closing it. Every candidate is "
+            "classified against the drawing's own evidence, and one with "
+            "no evidence is UNRESOLVED and carries no barrier"),
+    }
     # The door geometry the drawing actually holds. close_openings is only
     # given material geometry, and a door leaf is not material, so the
     # evidence has to be gathered from the DOOR intervals themselves.
