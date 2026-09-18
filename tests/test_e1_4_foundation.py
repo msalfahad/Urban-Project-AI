@@ -756,3 +756,59 @@ def test_no_prior_guard_is_weakened():
     assert bw.RING_PERIMETER_TOLERANCE_MM == 1.0
     assert bw.THICKNESS_TOLERANCE_MM == 15.0
     assert bw.MIN_PAIR_OVERLAP_MM == 150.0
+
+
+# §7 - what the drawing itself says about its linetypes ------------------
+def test_9b_a_dashed_layer_is_read_from_the_drawings_own_tables():
+    """No layer is named in code. A layer is drawn broken when the LTYPE
+    its own record points at has a dash pattern."""
+    objects = [
+        {"object": "LTYPE", "name": "CONTINUOUS", "handle": [0, 1, 16],
+         "description": "Solid line", "pattern_len": 0.0},
+        {"object": "LTYPE", "name": "HIDDEN", "handle": [0, 1, 147],
+         "description": "__ __ __ __ __ __", "pattern_len": 0.375},
+        {"object": "LAYER", "name": "WALLS", "ltype": [5, 1, 16, 16]},
+        {"object": "LAYER", "name": "ABOVE", "ltype": [5, 1, 147, 147]},
+        {"object": "LAYER", "name": "NOTHING_SAID", "ltype": []},
+    ]
+    table = ls.linetype_table(objects)
+    assert table["WALLS"]["IS_DASHED"] is False
+    assert table["ABOVE"]["IS_DASHED"] is True
+    assert table["ABOVE"]["LINETYPE"] == "HIDDEN"
+    assert table["NOTHING_SAID"]["LINETYPE_WAS_EXPOSED"] is False
+    assert ls.layer_linetype_evidence("ABOVE", table) == ls.LINETYPE_IS_DASHED
+    assert ls.layer_linetype_evidence("WALLS", table) == \
+        ls.LINETYPE_IS_CONTINUOUS
+    assert ls.layer_linetype_evidence("NOTHING_SAID", table) == \
+        ls.LINETYPE_NOT_EXPOSED
+    assert ls.layer_linetype_evidence("NEVER_HEARD_OF_IT", table) == \
+        ls.LINETYPE_NOT_EXPOSED
+
+
+def test_9c_the_sheet_is_read_for_what_it_prints():
+    solid = ls.raster_stroke_evidence([True] * 20)
+    assert solid["EVIDENCE"] == ls.RASTER_SHOWS_A_SOLID_STROKE
+    broken = ls.raster_stroke_evidence(
+        [True, True, False, False] * 6)
+    assert broken["EVIDENCE"] == ls.RASTER_SHOWS_A_BROKEN_STROKE
+    assert broken["blank_runs"] >= ls.BROKEN_MIN_BLANK_RUNS
+    assert ls.raster_stroke_evidence([True] * 5)["EVIDENCE"] is None
+    assert ls.raster_stroke_evidence([False] * 30)["EVIDENCE"] is None
+    # one interruption in an otherwise inked stretch is not a dash pattern
+    nearly = ls.raster_stroke_evidence([True] * 10 + [False] + [True] * 10)
+    assert nearly["EVIDENCE"] == ls.RASTER_SHOWS_A_SOLID_STROKE
+
+
+def test_9d_a_dashed_layer_and_a_solid_sheet_settle_nothing():
+    got = ls.classify([ls.LINETYPE_IS_DASHED, ls.RASTER_SHOWS_A_SOLID_STROKE,
+                       ls.PAIRED_AT_A_WALL_THICKNESS])
+    assert got["LINE_SEMANTICS_STATUS"] == ls.UNRESOLVED
+    assert got["MAY_BE_ASKED_TO_BOUND"] is False
+    assert ls.LINETYPE_IS_DASHED in got["CONFLICTING_EVIDENCE"]
+    assert ls.RASTER_SHOWS_A_SOLID_STROKE in got["CONFLICTING_EVIDENCE"]
+    # the sheet showing a broken stroke settles it, and it is not material
+    settled = ls.classify([ls.LINETYPE_IS_DASHED,
+                           ls.RASTER_SHOWS_A_BROKEN_STROKE,
+                           ls.PAIRED_AT_A_WALL_THICKNESS])
+    assert settled["LINE_SEMANTICS_STATUS"] == ls.BELOW_CUT_PLANE_GEOMETRY
+    assert settled["MAY_BE_ASKED_TO_BOUND"] is False

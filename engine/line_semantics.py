@@ -72,6 +72,15 @@ POSITIVE_FOR_NOT_IN_THE_CUT_PLANE = (LINETYPE_IS_DASHED,
                                      LAYER_SAYS_OVERHEAD,
                                      RASTER_SHOWS_A_BROKEN_STROKE)
 
+# A layer's linetype and the printed sheet can disagree. When they do,
+# neither is silently preferred.
+THE_LAYER_AND_THE_SHEET_DISAGREE = (
+    "the layer this stretch is on carries a broken linetype, and the "
+    "printed sheet shows a solid stroke along it. A layer's linetype is "
+    "what was intended and the sheet is what was issued. Nobody here can "
+    "say which governs, so what this line means is UNRESOLVED - it bounds "
+    "nothing, and it is not asserted to be overhead either")
+
 A_LINE_THAT_CONTINUES_A_CHAIN_IS_NOT_A_WALL = (
     "a chain needing something at a coordinate is not evidence that "
     "anything is built there. Dashed geometry is never promoted to visible "
@@ -126,6 +135,18 @@ def classify(evidence) -> dict:
     not_cut = has & set(POSITIVE_FOR_NOT_IN_THE_CUT_PLANE)
     positive = has & set(POSITIVE_FOR_VISIBLE_MATERIAL)
 
+    # The sheet is what was issued and the layer is what was intended. A
+    # broken stroke on the sheet settles it; a solid stroke on the sheet
+    # against a broken linetype on the layer settles nothing.
+    if (RASTER_SHOWS_A_SOLID_STROKE in has
+            and RASTER_SHOWS_A_BROKEN_STROKE not in has
+            and not_cut and not_cut <= {LINETYPE_IS_DASHED}):
+        row = out(UNRESOLVED, THE_LAYER_AND_THE_SHEET_DISAGREE,
+                  blocked=sorted(not_cut | positive))
+        row["CONFLICTING_EVIDENCE"] = sorted(not_cut | {
+            RASTER_SHOWS_A_SOLID_STROKE})
+        return row
+
     # Geometry positively shown to be outside the cut plane cannot be
     # visible material, however well it would have continued a chain.
     if not_cut:
@@ -157,6 +178,112 @@ def classify(evidence) -> dict:
                    "establishes it as a face of built fabric")
 
     return out(UNRESOLVED, ABSENCE_OF_EVIDENCE_IS_UNRESOLVED)
+
+
+# --------------------------------------------------- what the sheet shows
+# A stroke is read as printed along at least this many sample stations.
+MIN_INK_SAMPLES = 12
+# Solid: nearly every station has ink and the ink is not interrupted.
+SOLID_MIN_INK_SHARE = 0.9
+SOLID_MAX_BLANK_RUNS = 1
+# Broken: ink and blank alternate more than once, with real blank in it.
+BROKEN_MIN_BLANK_RUNS = 2
+BROKEN_MIN_BLANK_SHARE = 0.15
+BROKEN_MIN_INK_SHARE = 0.2
+
+
+def raster_stroke_evidence(samples) -> dict:
+    """Read a printed stroke as solid, broken, or neither, from ink samples.
+
+    `samples` is the ink at evenly spaced stations along the stretch, in
+    order: True where the sheet is dark. A dash pattern shows up as ink
+    and blank alternating along the line; a solid stroke shows up as ink
+    nearly everywhere with at most one interruption.
+
+    Where the sheet does not settle it - too few stations, too little
+    ink, one long blank because the crop ran off the sheet - this returns
+    no evidence rather than a guess.
+    """
+    ink = [bool(v) for v in samples or ()]
+    n = len(ink)
+    if n < MIN_INK_SAMPLES:
+        return {"EVIDENCE": None, "samples": n,
+                "why": ("too few stations along this stretch for the sheet "
+                        "to say anything about its stroke")}
+    dark = sum(1 for v in ink if v)
+    share = dark / n
+    blank_runs, run = 0, False
+    for v in ink:
+        if not v and not run:
+            blank_runs += 1
+            run = True
+        elif v:
+            run = False
+    blank_share = 1.0 - share
+    base = {"samples": n, "ink_share": round(share, 4),
+            "blank_runs": blank_runs}
+    if share >= SOLID_MIN_INK_SHARE and blank_runs <= SOLID_MAX_BLANK_RUNS:
+        return {**base, "EVIDENCE": RASTER_SHOWS_A_SOLID_STROKE,
+                "why": "the sheet is inked along nearly all of this stretch"}
+    if (blank_runs >= BROKEN_MIN_BLANK_RUNS
+            and blank_share >= BROKEN_MIN_BLANK_SHARE
+            and share >= BROKEN_MIN_INK_SHARE):
+        return {**base, "EVIDENCE": RASTER_SHOWS_A_BROKEN_STROKE,
+                "why": ("the sheet alternates ink and blank along this "
+                        "stretch, which is how a dash pattern prints")}
+    return {**base, "EVIDENCE": None,
+            "why": ("the sheet neither shows a solid stroke here nor a "
+                    "dash pattern. It says nothing about this stretch")}
+
+
+# --------------------------------------- the drawing's own linetype table
+A_LINETYPE_IS_READ_FROM_THE_DRAWING = (
+    "which layers are drawn broken is read from the drawing's own LTYPE "
+    "table and its layer records, not from a list of layer names anybody "
+    "chose. A layer whose linetype has a dash pattern is drawn broken in "
+    "this drawing, whatever it is called")
+
+DASH_MARKS = ("_", "-", ".")
+
+
+def linetype_table(objects) -> dict:
+    """layer name -> what the drawing's own tables say its linetype is."""
+    ltypes = {}
+    for o in objects or ():
+        if o.get("object") != "LTYPE":
+            continue
+        h = o.get("handle") or []
+        key = h[-1] if h else None
+        desc = str(o.get("description") or "")
+        pattern = float(o.get("pattern_len") or 0.0)
+        ltypes[key] = {
+            "LINETYPE": o.get("name"),
+            "PATTERN_LENGTH": pattern,
+            "DESCRIPTION": desc,
+            "IS_DASHED": bool(
+                pattern > 0.0 or any(m * 2 in desc for m in DASH_MARKS)),
+        }
+    out = {}
+    for o in objects or ():
+        if o.get("object") != "LAYER":
+            continue
+        ref = o.get("ltype") or []
+        row = ltypes.get(ref[-1] if ref else None)
+        out[str(o.get("name"))] = {
+            **(row or {"LINETYPE": None, "PATTERN_LENGTH": None,
+                       "DESCRIPTION": "", "IS_DASHED": None}),
+            "LINETYPE_WAS_EXPOSED": row is not None,
+            "why": A_LINETYPE_IS_READ_FROM_THE_DRAWING,
+        }
+    return out
+
+
+def layer_linetype_evidence(layer, table) -> str:
+    """The one piece of linetype evidence the drawing offers about a layer."""
+    row = (table or {}).get(str(layer))
+    if not row or row.get("IS_DASHED") is None:
+        return LINETYPE_NOT_EXPOSED
+    return LINETYPE_IS_DASHED if row["IS_DASHED"] else LINETYPE_IS_CONTINUOUS
 
 
 def frozen_parameters() -> dict:
