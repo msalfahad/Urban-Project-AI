@@ -70,13 +70,16 @@ WHY_A_LOCAL_WINDOW = (
     "recorded beside every chain it produced")
 
 WHAT_AN_OPEN_EDGE_LENGTH_IS = (
-    "THAT an edge is open is a result: the drawing builds nothing along "
-    "it. HOW LONG it is, is not. An open edge runs until something stops "
-    "it, and where nothing does, what stops it here is the local window. "
-    "So material_length_mm is measured from drawn faces and may be used; "
-    "the length of an OPEN_EDGE records the extent of the figure that was "
-    "walked, not a distance the drawing establishes, and no later stage "
-    "may treat it as one")
+    "OPEN_EDGE is a claim about the drawing: a gap was found between two "
+    "wall ends and classified, and nothing is built across it. "
+    "UNRESOLVED_EDGE on the local window is not that claim. It says only "
+    "that this pass stopped looking there, and the drawing may well build "
+    "something just beyond it. Reading a window edge as an open side would "
+    "assert an absence nobody established.\n\n"
+    "So: material_length_mm is measured from drawn faces and may be used. "
+    "The length AND the position of any element carrying "
+    "ON_THE_LOCAL_WINDOW_EDGE belong to the window, not to the drawing, "
+    "and no later stage may read either as geometry the drawing gives")
 
 WINDOW_LEVELS = 7
 WINDOW_MIN_MM = 1500.0
@@ -317,13 +320,14 @@ def chain_for(trace_out, *, gap_rows, exposed_ids, interval_by_id) -> dict:
         iv = interval_by_id.get(oid)
         if oid.startswith(FRAME_ID):
             connectors.append({
-                "kind": bc.OPEN_EDGE, "start_mm": a, "end_mm": z,
+                "kind": bc.UNRESOLVED_EDGE, "start_mm": a, "end_mm": z,
                 "ON_THE_LOCAL_WINDOW_EDGE": True,
-                "LENGTH_IS_THE_WINDOWS_NOT_THE_DRAWINGS": True,
-                "why": ("no material stands along this stretch: the local "
-                        "window had to carry the figure here. The drawing "
-                        "builds nothing along it, and nothing is closed "
-                        "across it")})
+                "LENGTH_AND_POSITION_ARE_THE_WINDOWS_NOT_THE_DRAWINGS": True,
+                "why": ("the local window cut the figure here. That is not "
+                        "the drawing saying nothing is built along this "
+                        "stretch - it is this pass saying it stopped "
+                        "looking. What bounds the region here is not "
+                        "established, and nothing is closed across it")})
             continue
         if s.role in cg.MATERIAL_ROLES:
             if s.role == cg.COLUMN_FACE and oid not in exposed_ids:
@@ -902,9 +906,18 @@ def _statuses(st):
         r["a18"] = a18_by_token.get(g.english_token, [])
         r["label_class"] = label_class.get(g.group_id, lo.UNRESOLVED_TEXT)
         ch = r["chain"]
+        # A region is ESTABLISHED_OPEN only where the drawing itself shows
+        # an edge with nothing built along it. Stretches the local window
+        # cut are not evidence of openness, so they do not count toward it.
+        drawn_open = 0.0 if not ch else sum(
+            e["length_mm"] for e in ch["CHAIN"]
+            if e["CHAIN_ELEMENT"] in bc.NO_MATERIAL_EXISTS_HERE
+            and not e.get("ON_THE_LOCAL_WINDOW_EDGE"))
+        r["length_open_on_the_drawings_own_evidence_mm"] = round(drawn_open, 3)
         r["physical"] = ss.physical_status(
-            chain=ch or {"CHAIN": [], "CLOSED_BY_DRAWN_MATERIAL": False,
-                         "length_with_no_material_mm": 0.0, "runs": 0},
+            chain=dict(ch, length_with_no_material_mm=drawn_open) if ch
+            else {"CHAIN": [], "CLOSED_BY_DRAWN_MATERIAL": False,
+                  "length_with_no_material_mm": 0.0, "runs": 0},
             any_material_established=bool(ch and ch["CHAIN"]))
         r["gaps_on_chain"] = [] if not ch else [
             gap_by_id[e["GAP_ID"]] for e in ch["CHAIN"]
