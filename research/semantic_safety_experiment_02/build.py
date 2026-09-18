@@ -371,11 +371,26 @@ def main() -> int:
                             for k, v in placed.items()},
             }
         gate = qa.get("FEATURE", {})
-        ok = bool(gate) and not gate.get("FAILURES")
-        return ({"labels": labels, "crops": rows, "qa": qa} if ok else None,
+        clean = bool(gate) and not gate.get("FAILURES")
+        # §13 and the render gate collide on one feature only: the doorway
+        # holding the prior critical error, whose wall opening the drawing
+        # overlays with a door block. It is admitted with the tags that
+        # can be proved legible and the rest declared. No other feature
+        # may enter this way.
+        partial = (not clean) and bool(gate) and f["IS_THE_REGRESSION_FEATURE"]
+        ok = clean or partial
+        untagged = sorted((gate.get("FAILURES") or {}).keys())
+        return ({"labels": labels, "crops": rows, "qa": qa,
+                 "UNTAGGED_MEMBERS": untagged if partial else []}
+                if ok else None,
                 {"ADMITTED": ok,
+                 "ADMISSION": ("FULLY_TAGGED" if clean else
+                               P.PARTIAL_TAGGING_ADMISSION if partial
+                               else None),
                  "WHY_NOT": (None if ok else
                              "A_TAG_COULD_NOT_BE_PLACED_LEGIBLY"),
+                 "MEMBERS_SHOWN_WITHOUT_AN_INDIVIDUAL_TAG":
+                     untagged if partial else [],
                  "FEATURE_LEVEL_QA": gate,
                  "DETAIL_LEVEL_QA": qa.get("DETAIL")})
 
@@ -462,6 +477,10 @@ def main() -> int:
         "features_offered_to_the_gate": len(qa_rows),
         "features_admitted": sum(1 for r in qa_rows if r["ADMITTED"]),
         "features_refused": sum(1 for r in qa_rows if not r["ADMITTED"]),
+        "PARTIAL_TAGGING_RULE": P.PARTIAL_TAGGING_RULE,
+        "features_admitted_with_partial_tagging": sum(
+            1 for r in qa_rows
+            if r.get("ADMISSION") == P.PARTIAL_TAGGING_ADMISSION),
         "REFUSAL_REASONS": {r["WHY_NOT"]: sum(
             1 for x in qa_rows if x["WHY_NOT"] == r["WHY_NOT"])
             for r in qa_rows if r["WHY_NOT"]},
@@ -484,8 +503,11 @@ def main() -> int:
         for c in f["_render"]["crops"]:
             shutil.copy(c["path"], d / c["FILE"])
         sig = f["SIGNATURES"]
+        untagged = set(f["_render"].get("UNTAGGED_MEMBERS") or [])
         members = []
         for lab, iv in f["_render"]["labels"].items():
+            if lab in untagged:
+                continue
             parent = by_id.get(iv.parent_object_id)
             members.append({
                 "MEMBER_LABEL": lab,
@@ -525,6 +547,15 @@ def main() -> int:
                 "each of its members"),
             "CROPS": [c["FILE"] for c in f["_render"]["crops"]],
             "MARKED_MEMBERS": members,
+            "MEMBERS_SHOWN_BUT_NOT_INDIVIDUALLY_TAGGED": len(untagged),
+            "WHY_SOME_MEMBERS_CARRY_NO_TAG": (
+                "these members are drawn on top of one another in the "
+                "source, so no tag can point at one of them without "
+                "pointing at another. They are drawn in the member colour "
+                "so you can see them. Answer the feature's relation as "
+                "usual, and do not give a member role for a member you "
+                "cannot identify"
+                if untagged else None),
             "QUESTIONS_THAT_APPLY_HERE": {
                 k: v["QUESTION_APPLICABILITY"] for k, v in applic.items()},
             "APPLICABILITY_EVIDENCE": {
@@ -542,6 +573,9 @@ def main() -> int:
             "STRATUM": f["STRATUM"],
             "SELECTED_BECAUSE": f["SELECTED_BECAUSE"],
             "marked_members": len(members),
+            "members_shown_without_an_individual_tag": len(untagged),
+            "ADMISSION": ("PARTIAL_TAGGING_ADMISSION" if untagged
+                          else "FULLY_TAGGED"),
             "crops": len(f["_render"]["crops"]),
             "TASK_SHA256": sha(d / "TASK.json"),
             "FLOOR_CONTEXT_SHA256": sha(d / "FLOOR_CONTEXT.txt"),

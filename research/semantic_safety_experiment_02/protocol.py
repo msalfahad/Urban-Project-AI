@@ -67,10 +67,49 @@ from __future__ import annotations
 import hashlib
 
 EXPERIMENT_ID = "SEMANTIC_SAFETY_EXPERIMENT_02"
-PROTOCOL_VERSION = 2
+PROTOCOL_VERSION = 3
 
 SUPERSEDED_PROTOCOL_V1_HASH = (
     "6eb2edb4ce04272545c056cbeee21058b1a5ba9e628d2ec68dcd3c7ff2bda4ed")
+SUPERSEDED_PROTOCOL_V2_HASH = (
+    "9042244ddc40a812da0e051010a888f3372642164c31d8026eb64621a2765e1a")
+
+WHY_V2_WAS_SUPERSEDED_BEFORE_ANY_READER_RAN = (
+    "v2 still carried a collision, and this one was in the drawing rather "
+    "than in the code. The feature holding the prior critical error is a "
+    "doorway whose wall opening the drawing overlays with a door block's "
+    "linework, so several of its members are drawn coincident with each "
+    "other. The tag placer, trying ten radii by eight directions by seven "
+    "anchor positions per member at up to 3600 pixels, can place five of "
+    "fourteen tags without a leader running under another member's "
+    "anchor. Those members cannot be pointed at individually by anyone.\n\n"
+    "So the render gate and the regression rule could not both hold for "
+    "that one feature, and the owner decided: admit it, tag what can be "
+    "tagged, and declare the rest.\n\n"
+    "v3 adds PARTIAL_TAGGING_ADMISSION, available ONLY to a feature the "
+    "regression rule requires. Every other feature still faces the "
+    "absolute gate, because a gate with a general exception is not a "
+    "gate. Decided and recorded before any reference reader, A19 or "
+    "checker saw anything")
+
+PARTIAL_TAGGING_ADMISSION = "PARTIAL_TAGGING_ADMISSION"
+
+PARTIAL_TAGGING_RULE = (
+    "a feature admitted this way shows every member in the member colour "
+    "and tags only those whose tags the placer can prove legible. Its "
+    "task declares how many members are shown without an individual tag "
+    "and why. The PRIMARY output - the feature's physical relation to the "
+    "space around it - needs no per-member tag and is scored normally. "
+    "The untagged members are excluded from tertiary sub-role scoring and "
+    "the exclusion is recorded on the feature. Only a feature the "
+    "regression rule requires may be admitted this way")
+
+WHY_THE_PRIMARY_QUESTION_SURVIVES_PARTIAL_TAGGING = (
+    "whether space flows through a doorway is a question about the "
+    "feature, not about which of its lines is the jamb. A reader that "
+    "cannot say which line is which can still say that this is an opening "
+    "in a separator, and that is the claim this experiment exists to "
+    "test")
 
 WHY_V1_WAS_SUPERSEDED_BEFORE_ANY_READER_RAN = (
     "v1 carried two rules that collided on this drawing. The regression "
@@ -637,7 +676,8 @@ def _params() -> dict:
 
 def protocol_hash() -> str:
     parts = ([EXPERIMENT_ID, f"V{PROTOCOL_VERSION}",
-              SUPERSEDED_PROTOCOL_V1_HASH,
+              SUPERSEDED_PROTOCOL_V1_HASH, SUPERSEDED_PROTOCOL_V2_HASH,
+              PARTIAL_TAGGING_ADMISSION, PARTIAL_TAGGING_RULE,
               MODEL, THE_QUESTION, E1_4_RUN_HASH,
               EDGE_EXPERIMENT_FREEZE, EDGE_SCORING_FREEZE]
              + list(FALSE_SEPARATOR_ERRORS) + list(MISSED_SEPARATOR_ERRORS)
@@ -665,8 +705,19 @@ def record() -> dict:
         "EXPERIMENT_ID": EXPERIMENT_ID,
         "PROTOCOL_VERSION": PROTOCOL_VERSION,
         "SUPERSEDED_PROTOCOL_V1_HASH": SUPERSEDED_PROTOCOL_V1_HASH,
+        "SUPERSEDED_PROTOCOL_V2_HASH": SUPERSEDED_PROTOCOL_V2_HASH,
         "why_v1_was_superseded_before_any_reader_ran":
             WHY_V1_WAS_SUPERSEDED_BEFORE_ANY_READER_RAN,
+        "why_v2_was_superseded_before_any_reader_ran":
+            WHY_V2_WAS_SUPERSEDED_BEFORE_ANY_READER_RAN,
+        "PARTIAL_TAGGING_ADMISSION": {
+            "RULE": PARTIAL_TAGGING_RULE,
+            "AVAILABLE_ONLY_TO_A_REGRESSION_FEATURE": True,
+            "why_the_primary_question_survives_partial_tagging":
+                WHY_THE_PRIMARY_QUESTION_SURVIVES_PARTIAL_TAGGING,
+            "THE_GATE_REMAINS_ABSOLUTE_FOR_EVERY_OTHER_FEATURE": True,
+            "DECIDED_BY_THE_OWNER_BEFORE_ANY_READER_RAN": True,
+        },
         "NO_READER_HAD_SEEN_ANYTHING_WHEN_V1_WAS_REPLACED": True,
         "NO_SEMANTIC_ANSWER_EXISTED_WHEN_V1_WAS_REPLACED": True,
         "EXPERIMENT_CLASS": EXPERIMENT_CLASS,
