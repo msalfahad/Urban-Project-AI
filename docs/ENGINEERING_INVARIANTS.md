@@ -3005,3 +3005,116 @@ the reading was that there is no wall. `CONFIRMED_BY_CAD` is no longer a
 status: every agreement names *what* agrees — the identity, the topology,
 or the boundary — because a closed ring containing the same text stamp
 confirms none of the other two.
+
+---
+
+## §103 — A role belongs to an interval, never to an entity
+
+E1.1 asked "what is this line?" and answered once per line. One CAD line
+can be parallel to a wall face for 600 mm of its four metres, and that
+600 mm of evidence established the whole entity as `MATERIAL_WALL_FACE`.
+
+The unit of role is now the **atomic entity interval**: a stretch between
+two evidence-change points, carrying its own role, confidence, evidence,
+the partner intervals that support it and the evidence that contradicts
+it. An entity is cut wherever the evidence could change — a partner's
+overlap beginning or ending, a junction, a jamb, a portal, an
+intersection, a casework return, a column boundary, a block boundary, a
+semantic transition. Ninety-four entities on this floor carry more than
+one role, and the register says which stretch is which.
+
+**Evidence licenses the stretch it exists on.** A partner running along
+600 mm of a 4 m line says what that 600 mm is and says nothing whatever
+about the other 3.4 m. No role is ever written back onto the parent: an
+entity's "role" is a summary of its intervals, not a fact about it.
+
+Three consequences that are easy to get wrong:
+
+- **The support of a counter-face is a UNION.** An opening breaks one
+  face into pieces while the other runs on. Whether a band exists at an
+  offset at all is asked once, of everything the fragments cover
+  together; where it exists, every stretch it covers is supported. Every
+  fragment stays in provenance — E1.1 recorded one partner where the
+  decision came from three.
+- **A wall face runs to the corner it meets.** Its partner turns the
+  corner one wall thickness earlier, so the last stretch of a face is
+  routinely unsupported and is still the same wall. A supported run may
+  reach its own end when the tail is no longer than one wall thickness.
+  Bounded by construction; it cannot become whole-entity promotion again.
+- **Connectivity is a property of the band, not of a cut.** Because an
+  entity is cut wherever evidence changes, an interval's end is usually
+  in the middle of a wall. "Does this join anything?" is asked at the
+  ends of the supported run, and the answer is carried to every interval
+  inside it.
+
+## §104 — Four things a closed ring does not prove
+
+**A small closed loop is a question, not a column.** Furniture, a
+fixture, a planter, a duct and a pier all draw one. E1.1 established 220
+wall faces from loop size alone. A loop is now a `COLUMN_CANDIDATE` until
+structural evidence agrees — a layer that holds almost nothing but such
+loops, block lineage, a hatch inside it, a grid relationship with loops
+of its own family, wall connectivity — and at least one of those must be
+structural *in kind*, because repetition says "these are the same
+object", not "this object is structural". Four identical wardrobes repeat
+and line up too.
+
+**Collinearity is not material.** Lying on the same infinite line as a
+wall face is a fact about coordinates. E1.1 turned 69 entities into wall
+that way, including a 1000 mm entity on the LEVEL layer. The relation is
+now recorded as `COLLINEAR_GEOMETRIC_CONTINUATION`, and only becomes
+`MATERIAL_WALL_CONTINUATION_ESTABLISHED` when the wall BAND continues
+over the stretch too. A level mark, a dimension, a fixture or a cabinet
+front never inherits a wall role.
+
+**Double linework is not necessarily a wall.** Two parallel lines a
+wall's thickness apart may be a wall, a counter, a bar, a run of
+casework, a low partition or glazing — in plan they are the same drawing.
+Where the band joins the wall network at neither end, CAD says
+`AMBIGUOUS_PAIRED_BAND` and carries all eight readings as conflicting
+evidence, rather than picking one. Closure is not evidence and neither is
+the area it would produce.
+
+**A note about the site is not a room.** E1.1 counted NEIGHBOUR,
+NEIGHBOUR, STREET and SEA VIEW among twenty-four "functional
+identities", which made the completeness denominator wrong and put four
+permanent withheld rows in the register for things that were never
+rooms. A label is now classed before anything asks it for a boundary,
+from where it sits relative to the plot outline, how it is set beside the
+room stamps, how it is turned, and whether its glyphs read at all. No
+list of site words appears in the code.
+
+## §105 — A layer that checks the drawing may not say it looked at it
+
+E1.1 named its gate `visual_gate`, gave it a `sheet=` argument, checked
+entity roles, dimensions, label counts and whether the raster had
+registered — and returned `VISUALLY_CONSISTENT`. It never read a pixel.
+
+That layer is now `DETERMINISTIC_DRAWING_QA`. Its states say what it
+actually established: `DETERMINISTICALLY_CONSISTENT`, or a named
+conflict. `VISUALLY_CONSISTENT` is not in its vocabulary and emitting it
+raises.
+
+Looking is done by a **cold challenger**, in two stages, because an
+overlay anchors whoever sees it. **V1 sees the source sheet crop and the
+identity text, and never the proposal**: it writes down what is drawn —
+walls, open sides, doorways, glazing, counters, bars, casework, columns,
+stairs, curves, low partitions, ambiguous lines, connected zones. V1 is
+frozen. **V2 then sees the same crop, the frozen V1 observation and one
+proposed boundary** and answers a single question: does this follow
+actual physical enclosure?
+
+The challenger may disagree and may veto a release. It may not move a CAD
+coordinate, propose a corrected polygon, or return an area, a length or
+any quantity — returns are screened for both. Correction is made in CAD,
+by code, after the semantic evidence exists.
+
+And **A18 is a challenger, not the answer.** E1.1 withheld any candidate
+the frozen blind reading called open, which makes one witness final. A
+disagreement is now arbitrated on the CAD interval evidence, the portal
+evidence and the cold visual passes, and can be resolved *against* the
+frozen reading. Only a conflict the evidence does not settle blocks
+release.
+
+Closure rate is not an optimisation target. A stricter evidence rule that
+releases fewer regions has done its job.
