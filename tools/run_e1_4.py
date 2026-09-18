@@ -2146,6 +2146,32 @@ def phase_finalize(a) -> int:
             "WITHHELD": [{"candidate_id": r["candidate_id"],
                           "why": r["ledger"]["WHY"]} for r in withheld]})
 
+    # WHAT THE COLD ROUND ACTUALLY SAW, carried into the run.
+    #
+    # The sandbox the round read from is a working directory and it does
+    # not survive the session. The seal - one row per candidate naming the
+    # overlay, the brief and the earlier observation with their hashes,
+    # and naming what was deliberately kept out - is the evidence that the
+    # round was cold. Evidence that lives only in a scratch directory is
+    # not evidence a reviewer can check.
+    seal = Path(a.v2_sandbox or "") / "SEAL.json"
+    if seal.exists():
+        body = json.loads(seal.read_text(encoding="utf-8"))
+        body["source"] = src
+        body["THE_SANDBOX_ITSELF_IS_NOT_CARRIED"] = (
+            "the files are named here with their hashes. The overlays are "
+            "in this run; the brief and the earlier observation are "
+            "reproducible from this run and from frozen E1.3")
+        _write(out, artifacts, "E1_4_V2_COLD_ROUND_SEAL.json", body)
+    else:
+        _write(out, artifacts, "E1_4_V2_COLD_ROUND_SEAL.json", {
+            "source": src,
+            "SEAL_NOT_PRESENT": True,
+            "why": ("no sealed sandbox was named for this finalize, so what "
+                    "the cold round was shown is not recorded here. The V2 "
+                    "register still carries every task, every overlay hash "
+                    "and every answer")})
+
     freeze = _freeze(a, st, artifacts, released, withheld)
     path = out / "E1_4_FREEZE.json"
     path.write_text(json.dumps(freeze, indent=2, ensure_ascii=False,
@@ -2247,6 +2273,8 @@ def main(argv=None) -> int:
     ap.add_argument("--rules",
                     default="data/trade_rules/URBAN_PROJECTS_RULE_LIBRARY.json")
     ap.add_argument("--sandbox", default="")
+    ap.add_argument("--v2-sandbox", default="",
+                    help="the sealed directory the cold V2 round read from")
     ap.add_argument("--out", required=True)
     a = ap.parse_args(argv)
     if a.phase == "geometry":
