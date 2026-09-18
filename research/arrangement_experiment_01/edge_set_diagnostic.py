@@ -128,9 +128,15 @@ def main() -> int:
             "gates or by the drawing itself. Four progressively wider edge "
             "sets, the same arrangement, and what each encloses"),
         "NO_CLASSIFIER_WAS_REWRITTEN": True,
+        "CLASSIFICATION": "DEVELOPMENT_DIAGNOSTIC_ONLY",
         "NOTHING_HERE_IS_A_METHOD": (
             "these are diagnostics. Only set A is the experiment's hard "
             "arrangement; B, C and D exist to locate the cause"),
+        "SET_C_AND_SET_D_ARE_NOT_PROMOTED_INTO_ANY_METHOD": (
+            "the widening measured here motivated METHOD_1B. It is not "
+            "METHOD_1B. Method 1b admits an edge by its planar partition "
+            "capability, and never by widening a gate until more faces "
+            "close"),
         "SNAP_MM": 1.0,
         "SETS": {
             "A_E1_4_ADMITTED": "role gate + line semantics + ownership",
