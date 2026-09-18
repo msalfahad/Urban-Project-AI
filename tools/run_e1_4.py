@@ -1944,7 +1944,13 @@ def phase_finalize(a) -> int:
         ans = v2_by.get(r["candidate_id"], {})
         split = vc.split_statuses(ans.get("statuses", ()))
         findings = []
-        for status in split["PHYSICAL_STATUSES"]:
+        # A reader saying it cannot settle the question from this crop is
+        # not silence. Not knowing whether the geometry would move is
+        # itself a reason to withhold, which is what AFFECTS_UNRESOLVED
+        # means, so an undecided status is carried into the findings
+        # rather than dropped between the physical and naming buckets.
+        for status in (list(split["PHYSICAL_STATUSES"])
+                       + list(split["UNDECIDED_STATUSES"])):
             if status == vc.VISUALLY_CONSISTENT:
                 continue
             eff = affects_proposed_boundary(status, r, owner)
