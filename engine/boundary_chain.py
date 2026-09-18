@@ -145,6 +145,19 @@ def order_into_runs(elements, *, snap_mm=1.0):
     return runs
 
 
+A_CURVE_IS_NOT_ITS_CHORD = (
+    "an element drawn as an arc or a polyline has more than two points, "
+    "and the straight line between its ends is not it. Where an element "
+    "carries points_mm, the chain keeps every point and its length is the "
+    "length along those points. A chord would both draw the wrong line "
+    "and measure short")
+
+
+def _poly_len(points) -> float:
+    return sum(_len(points[i], points[i + 1])
+               for i in range(len(points) - 1))
+
+
 def build(elements, *, connectors=None, snap_mm=1.0) -> dict:
     """Assemble an ordered PHYSICAL_BOUNDARY_CHAIN.
 
@@ -164,21 +177,32 @@ def build(elements, *, connectors=None, snap_mm=1.0) -> dict:
         for e in run["elements"]:
             a = e["end_mm"] if e.get("reversed") else e["start_mm"]
             b = e["start_mm"] if e.get("reversed") else e["end_mm"]
+            pts = list(e.get("points_mm") or ())
+            if len(pts) >= 2 and e.get("reversed"):
+                pts = list(reversed(pts))
+            span = _poly_len(pts) if len(pts) >= 2 else _len(a, b)
             idx += 1
-            ordered.append({
+            row = {
                 "SEQ": idx,
                 "CHAIN_ELEMENT": e["kind"],
                 "run_index": n,
                 "start_mm": [round(a[0], 3), round(a[1], 3)],
                 "end_mm": [round(b[0], 3), round(b[1], 3)],
-                "length_mm": round(_len(a, b), 3),
+                "length_mm": round(span, 3),
                 "material_present": e["kind"] in MATERIAL_ELEMENTS,
                 "wall_length_contribution_mm": (
-                    round(_len(a, b), 3) if e["kind"] in MATERIAL_ELEMENTS
+                    round(span, 3) if e["kind"] in MATERIAL_ELEMENTS
                     else 0.0),
                 **{k: v for k, v in e.items()
-                   if k not in ("kind", "start_mm", "end_mm", "reversed")},
-            })
+                   if k not in ("kind", "start_mm", "end_mm", "reversed",
+                                "points_mm")},
+            }
+            if len(pts) >= 3:
+                row["points_mm"] = [[round(q[0], 3), round(q[1], 3)]
+                                    for q in pts]
+                row["a_curve_is_not_its_chord"] = A_CURVE_IS_NOT_ITS_CHORD
+                row["chord_length_mm"] = round(_len(a, b), 3)
+            ordered.append(row)
     for c in connectors or ():
         if c.get("kind") not in TOPOLOGY_ONLY_ELEMENTS:
             raise ValueError(
@@ -276,6 +300,7 @@ def frozen_parameters() -> dict:
         "MATERIAL_ELEMENTS": list(MATERIAL_ELEMENTS),
         "TOPOLOGY_ONLY_ELEMENTS": list(TOPOLOGY_ONLY_ELEMENTS),
         "NO_MATERIAL_EXISTS_HERE": list(NO_MATERIAL_EXISTS_HERE),
+        "a_curve_is_not_its_chord": A_CURVE_IS_NOT_ITS_CHORD,
         "why": {
             "an_open_edge_is_a_result": AN_OPEN_EDGE_IS_A_RESULT,
             "a_chain_is_not_a_polygon": A_CHAIN_IS_NOT_A_POLYGON,

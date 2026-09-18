@@ -914,3 +914,30 @@ def boundary_at(seed, pieces, *, gaps_at=None, mates=None, facing=None,
             "carrying the boundary. They are not offered as this region's "
             "boundary and no area follows from them"),
     }
+
+
+TWO_SEEDS_IN_ONE_ENCLOSURE = (
+    "a straight sight line from one label's point to another's crosses no "
+    "drawn material. Nothing is built between them, so they stand in one "
+    "enclosure however differently they are named. This is a fact about "
+    "the drawing and about where the labels sit; it is not a decision to "
+    "merge them, and two names on one floor do not make a boundary")
+
+
+def sight_line_is_clear(a, b, pieces, *, tol_mm=1.0):
+    """Does the straight line from a to b cross any drawn material?"""
+    from shapely.geometry import LineString
+    from shapely.strtree import STRtree
+
+    geos = [LineString(p["coords"]) for p in pieces]
+    if not geos:
+        return True, None
+    tree = STRtree(geos)
+    span = LineString([a, b])
+    for idx in tree.query(span):
+        j = int(idx)
+        if span.intersects(geos[j]):
+            hit = span.intersection(geos[j])
+            if not hit.is_empty:
+                return False, pieces[j].get("object_id")
+    return True, None

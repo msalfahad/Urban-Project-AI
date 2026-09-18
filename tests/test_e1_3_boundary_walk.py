@@ -274,3 +274,23 @@ def test_r_a_withheld_result_carries_no_area():
     assert res["BOUNDARY_BASIS"] == bw.NOT_ESTABLISHED
     assert "ring_area_mm2" not in res
     assert res["why"] == bw.WHY_NOTHING_IS_PROPOSED
+
+
+# S - a curved face is never reduced to the straight line between its ends
+def test_s_a_curved_face_keeps_its_points_and_its_own_length():
+    from engine import boundary_chain as bcm
+
+    arc = [(2000 + 2000 * math.cos(math.radians(a)),
+            2000 * math.sin(math.radians(a)))
+           for a in range(0, 181, 2)]
+    chord = math.hypot(arc[-1][0] - arc[0][0], arc[-1][1] - arc[0][1])
+    ch = bcm.build([{"kind": bcm.MATERIAL_WALL_FACE,
+                     "start_mm": arc[0], "end_mm": arc[-1],
+                     "points_mm": arc, "object_id": "ARC"}])
+    el = ch["CHAIN"][0]
+    assert el["points_mm"], "the points of a curved face must survive"
+    assert el["chord_length_mm"] == pytest.approx(chord, abs=1.0)
+    # a half circle of radius 2 m is 6.283 m; its chord is 4 m
+    assert el["length_mm"] == pytest.approx(6283.0, rel=0.01)
+    assert el["wall_length_contribution_mm"] == pytest.approx(
+        el["length_mm"], abs=0.01)

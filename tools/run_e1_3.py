@@ -97,6 +97,21 @@ ONE_FACE_MAY_HOLD_SEVERAL_LABELS = (
 
 RUNS_OUT_COLOUR = (200, 0, 0)
 
+# A region whose boundary the drawing does not establish has no proposal.
+# Its overlay still shows what the walk established, and it must be
+# impossible to mistake that for a proposal, so it is drawn thin and in
+# its own colour and the image says so in words.
+NOT_PROPOSED_COLOUR = (90, 110, 150)
+NOT_PROPOSED_BANNER = (
+    "NO BOUNDARY IS PROPOSED FOR THIS REGION. The thin blue-grey line is "
+    "only the stretch of real material the walk established before it ran "
+    "out, and the red crosses are where it ran out. It is not an outline "
+    "of this space and it encloses nothing.")
+A_BANNER_STATES_OUR_OWN_STATUS = (
+    "the banner says what this overlay is offering, which is a fact about "
+    "the proposal and not about the drawing. It tells the reader nothing "
+    "about where any boundary ought to be")
+
 OVERLAY_LEGEND = (
     "thick black = an established material face of the boundary chain",
     "blue = a curved material face, kept as an arc",
@@ -111,10 +126,18 @@ OVERLAY_LEGEND = (
     "established, including where the drawing region frame was used to make "
     "a face walkable",
     "magenta = casework, counters, pool internals and fixtures, excluded",
+    "thin blue-grey = NOT A PROPOSAL: where the drawing does not establish "
+    "a boundary for the region, nothing is proposed, and this is only the "
+    "stretch of real material the walk established before it ran out",
     "red cross = the boundary RUNS OUT here: the drawn material ends and "
     "nothing carries the boundary on. Nothing beyond a red cross is "
     "proposed as part of this region",
     "blue ring = the label this candidate was traced from",
+    "pale grey-green = a dimension or witness line. It is context, it is "
+    "never part of the chain, and nothing is claimed along it",
+    "this overlay is the SAME WINDOW as the source crop, so what is "
+    "observed of the crop applies to it exactly. Part of the chain may "
+    "therefore lie outside the frame",
 )
 
 
@@ -580,8 +603,13 @@ def chain_from_walk(res, pieces, *, gap_rows, exposed_ids, interval_by_id):
                   else bc.MATERIAL_WALL_FACE)
             first = st["piece"] not in counted
             counted.add(st["piece"])
+            walked = (list(cs) if st["entered_at_end"] == 0
+                      else list(reversed(cs)))
             material.append({
                 "kind": el, "start_mm": a, "end_mm": z,
+                # an arc or a polyline face keeps every point it is drawn
+                # with: the chord between its ends is not the face
+                "points_mm": walked if len(walked) >= 3 else None,
                 "object_id": oid, "parent_object_id": parent,
                 "layer": pc.get("layer"), "boundary_role": role,
                 "INTERVAL_ROLE": iv.role if iv is not None else None,
@@ -790,6 +818,36 @@ def build_e1_3_candidates(gf, interp, *, ontology, gaps, owner) -> dict:
                      "PHYSICAL_REGION_KEY": _face_key(chain),
                      "candidate_id": f"E1_3-{g.group_id}"})
 
+    # §13 - two labels with nothing built between them stand in one
+    # enclosure. This is asked of every pair uniformly, and it decides
+    # nothing about names: it records what the drawing does and does not
+    # build between the points the labels sit on.
+    seed_pairs = []
+    for i in range(len(rows)):
+        for j in range(i + 1, len(rows)):
+            clear, blocker = bw.sight_line_is_clear(
+                rows[i]["seed"], rows[j]["seed"], pieces)
+            if not clear:
+                continue
+            seed_pairs.append({
+                "a": rows[i]["candidate_id"],
+                "a_identity": rows[i]["group"].english_token,
+                "b": rows[j]["candidate_id"],
+                "b_identity": rows[j]["group"].english_token,
+                "SIGHT_LINE_IS_CLEAR_OF_DRAWN_MATERIAL": True,
+                "distance_mm": round(math.hypot(
+                    rows[j]["seed"][0] - rows[i]["seed"][0],
+                    rows[j]["seed"][1] - rows[i]["seed"][1]), 3),
+                "why": bw.TWO_SEEDS_IN_ONE_ENCLOSURE,
+            })
+    same = {}
+    for pr in seed_pairs:
+        same.setdefault(pr["a"], set()).add(pr["b"])
+        same.setdefault(pr["b"], set()).add(pr["a"])
+    for r in rows:
+        r["labels_seeded_in_the_same_enclosure"] = sorted(
+            same.get(r["candidate_id"], ()))
+
     # §13 — several labels in one face are one physical region
     shared = {}
     for r in rows:
@@ -819,6 +877,11 @@ def build_e1_3_candidates(gf, interp, *, ontology, gaps, owner) -> dict:
     return {"rows": rows, "material_prims": mat, "segments": segs,
             "physical_regions": {k: sorted(x["candidate_id"] for x in v)
                                  for k, v in shared.items()},
+            "label_seed_pairs_with_nothing_built_between_them": seed_pairs,
+            "wall_bodies_paired": len(mate_pairs),
+            "wall_thickness_families_used": families,
+            "dangling_ends_with_something_facing_them": len(facing),
+            "pieces_of_drawn_material": len(pieces),
             "hidden_column_object_ids": sorted(hidden),
             "exposed_column_object_ids": sorted(exposed)}
 
@@ -835,6 +898,10 @@ CHAIN_COLOUR = {
     bc.UNRESOLVED_EDGE: ((150, 0, 200), 5, (6, 10)),
 }
 HIDDEN_COLUMN_COLOUR = ((130, 130, 130), 3, (8, 8))
+
+# A dimension line is not part of anything the chain claims. It is drawn
+# pale so that no reader can mistake a witness line for a chain element.
+DIMENSION_CONTEXT_COLOUR = (150, 165, 150)
 
 
 def _dashed(draw, pts, colour, width, dash):
@@ -864,6 +931,13 @@ def _arc_px(e, to_px):
 
 
 def _extent_of_chain(row, half_default=5000.0):
+    """Superseded: the V2 overlay now uses the source crop's own window.
+
+    Sizing the frame to the chain meant that a region whose walk ran a
+    long way was shown at whole-sheet scale, while the frozen observation
+    it was to be compared with was of a close crop. Kept because the
+    delta register still reports the extent a chain covers.
+    """
     cx, cy = row["anchor"].visible_centroid
     ch = row.get("chain")
     if ch and ch["CHAIN"]:
@@ -877,13 +951,42 @@ def _extent_of_chain(row, half_default=5000.0):
     return (cx, cy), half_default
 
 
-def _draw_chain(draw, chain, to_px, *, clip=(-300, 1800)):
+def _banner(draw, text, *, size=(1500, 1500)):
+    """Say in the image what the image is offering."""
+    from PIL import ImageFont
+    try:
+        font = ImageFont.truetype(
+            "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 26)
+    except Exception:
+        font = ImageFont.load_default()
+    words, lines, cur = text.split(), [], ""
+    for w in words:
+        trial = (cur + " " + w).strip()
+        if draw.textlength(trial, font=font) > size[0] - 60:
+            lines.append(cur)
+            cur = w
+        else:
+            cur = trial
+    if cur:
+        lines.append(cur)
+    h = 34 * len(lines) + 22
+    draw.rectangle([0, 0, size[0], h], fill=(255, 245, 200),
+                   outline=(180, 0, 0), width=4)
+    for n, ln in enumerate(lines):
+        draw.text((22, 12 + 34 * n), ln, fill=(140, 0, 0), font=font)
+
+
+def _draw_chain(draw, chain, to_px, *, clip=(-300, 1800), proposed=True):
     lo_, hi_ = clip
     for e in chain["CHAIN"]:
         colour, width, dash = CHAIN_COLOUR.get(
             e["CHAIN_ELEMENT"], ((0, 0, 0), 4, None))
+        if not proposed and e["CHAIN_ELEMENT"] in bc.MATERIAL_ELEMENTS:
+            colour, width, dash = NOT_PROPOSED_COLOUR, 3, None
         if e["CHAIN_ELEMENT"] == bc.CURVED_MATERIAL_FACE and "centre_mm" in e:
             pts = _arc_px(e, to_px)
+        elif e.get("points_mm"):
+            pts = [to_px(*q) for q in e["points_mm"]]
         else:
             pts = [to_px(*e["start_mm"]), to_px(*e["end_mm"])]
         if len(pts) < 2 or not all(lo_ <= q[0] <= hi_ and lo_ <= q[1] <= hi_
@@ -918,8 +1021,12 @@ def chain_overlays(sheet, reg, gf, interp, rows, owner, out_dir) -> list:
     hidden_ids = set(owner["object_ids_that_do_not_own_the_room_face"])
     made = []
     for row in rows:
-        centre, half = _extent_of_chain(row)
-        got = r12._frame(sheet, reg, centre, half, (1500, 1500))
+        # THE SAME WINDOW AS THE SOURCE CROP. A frame sized to the chain
+        # put the proposal and the frozen observation of the crop on
+        # different views of the sheet, and a cold reader was asked to
+        # compare an overlay with an observation of somewhere else.
+        centre, half = r12._extent_of(row)
+        got = r12._frame(sheet, reg, centre, half, (1400, 1400))
         if got is None:
             continue
         img, to_px, _box = got
@@ -948,19 +1055,28 @@ def chain_overlays(sheet, reg, gf, interp, rows, owner, out_dir) -> list:
                         _dashed(draw, pts, colour, width, dash)
                     else:
                         draw.line(pts, fill=colour, width=width)
+        proposed = bool(row.get("chain")
+                        and row["chain"].get("RING_ENCLOSES_THE_POINT"))
         if row.get("chain"):
-            _draw_chain(draw, row["chain"], to_px)
+            _draw_chain(draw, row["chain"], to_px, proposed=proposed)
         for d in gf["dimensions"]:
             mid = ((d.x1 + d.x2) / 2.0, (d.y1 + d.y2) / 2.0)
             if abs(mid[0] - centre[0]) > half or abs(mid[1] - centre[1]) > half:
                 continue
+            # pale grey, because a dimension line is context. It used to
+            # be drawn in a green close to the OPEN EDGE's, and a cold
+            # reader could not tell a witness line from a chain element
             draw.line([to_px(d.x1, d.y1), to_px(d.x2, d.y2)],
-                      fill=(0, 150, 0), width=2)
+                      fill=DIMENSION_CONTEXT_COLOUR, width=2)
         px, py = to_px(*row["anchor"].visible_centroid)
         draw.ellipse([px - 9, py - 9, px + 9, py + 9], outline=(0, 0, 220),
                      width=4)
         if reg.rotation_deg:
             img = img.rotate(-reg.rotation_deg, expand=True)
+        if not proposed:
+            # after the sheet's own rotation, so the words read level
+            _banner(ImageDraw.Draw(img), NOT_PROPOSED_BANNER,
+                    size=img.size)
         name = f"V2_OVERLAY_{row['candidate_id']}.png"
         img.save(out_dir / name)
         made.append({"candidate_id": row["candidate_id"],
@@ -1454,6 +1570,12 @@ def phase_geometry(a) -> int:
             else ch.get("islands_standing_in_the_region") or [],
             "FACE_SELECTION": [] if ch is None
             else ch.get("FACE_SELECTION") or [],
+            # A LINE IS NOT A WALL UNTIL ITS ROLE SAYS SO. Whatever the
+            # walk stepped on, its established interval role is named
+            # here, so a chain resting on something that is not a wall
+            # face is visible without opening the chain.
+            "chain_elements_by_interval_role": (
+                {} if ch is None else _role_tally(ch)),
             "faces_walked_on_the_opposite_side_of_their_wall_body": 0
             if ch is None else sum(
                 1 for f in (ch.get("FACE_SELECTION") or [])
@@ -1498,6 +1620,29 @@ def phase_geometry(a) -> int:
     })
 
     stairs = stc.detect(gf["primitives"])
+    _write(out, artifacts, "E1_3_LABEL_SEED_RELATION_REGISTER.json", {
+        "source": src,
+        "what_this_asks": (
+            "for every pair of label points, whether the drawing builds "
+            "anything along the straight line between them"),
+        "two_seeds_in_one_enclosure": bw.TWO_SEEDS_IN_ONE_ENCLOSURE,
+        "a_name_is_not_a_wall": (
+            "this register records only what is and is not built. It does "
+            "not merge two regions because their labels can see each "
+            "other, and it does not separate two regions because their "
+            "labels differ"),
+        "pairs_with_nothing_built_between_them": len(
+            st["built"]["label_seed_pairs_with_nothing_built_between_them"]),
+        "PAIRS":
+            st["built"]["label_seed_pairs_with_nothing_built_between_them"],
+        "BY_CANDIDATE": [
+            {"CANDIDATE_ID": r["candidate_id"],
+             "identity": r["group"].english_token,
+             "labels_seeded_in_the_same_enclosure":
+                 r.get("labels_seeded_in_the_same_enclosure") or []}
+            for r in rows],
+    })
+
     _write(out, artifacts, "E1_3_STAIR_COMPLETENESS_REGISTER.json", {
         "source": src, **{k: v for k, v in stairs.items() if k != "rows"},
         "ASSEMBLIES": stairs.get("rows", []),
@@ -1641,6 +1786,17 @@ A_VETO_IDENTIFIES_A_FAILURE_CLASS_ONLY = (
     "was wrong. No coordinate, length, area or corrected outline from any "
     "challenge was given to the corrected mechanism, and no threshold was "
     "moved to make a particular candidate pass")
+
+
+def _role_tally(chain) -> dict:
+    """What the walked elements' established interval roles actually are."""
+    tally = {}
+    for e in chain["CHAIN"]:
+        if e["CHAIN_ELEMENT"] not in bc.MATERIAL_ELEMENTS:
+            continue
+        role = e.get("INTERVAL_ROLE") or e.get("boundary_role") or "NOT_STATED"
+        tally[role] = round(tally.get(role, 0.0) + e["length_mm"], 3)
+    return tally
 
 
 def _correction_audit(a, rows, v2_by) -> dict:
