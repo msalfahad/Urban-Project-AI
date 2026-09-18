@@ -3158,3 +3158,126 @@ The freeze also accounts for **every** file in the run directory: each
 one is either hashed in `ARTIFACTS` or named in `NOT_HASHED_AND_WHY`
 with the reason. A file nobody can check is not frozen, whatever the
 directory is called.
+
+## §108 — An edge has a relation. It does not have a Boolean called "open"
+
+E1.2's arbitration reduced the cold pass's findings to
+`visual_says_open = bool(v1_open_sides)`. The pass had written, under
+that heading, that the main body of a kitchen continues into its own
+southern leg with no wall between them — a true statement about the
+INSIDE of one region. Collapsed to a Boolean it became "this region is
+open to another region", which the pass never said.
+
+Every side of a candidate now stands in one named RELATION, and the two
+that describe a candidate's own interior — `INTERNAL_CONTINUITY_WITHIN_
+CANDIDATE` and `FUNCTIONAL_SUBZONE_BOUNDARY_WITHOUT_WALL` — are
+distinguishable from `PHYSICAL_BOUNDARY_OPEN_TO_OTHER_SPACE`. A region
+is open because some edge opens onto another space, never because a list
+was non-empty.
+
+## §109 — Two wall ends facing each other is the shape of the question
+
+A doorway in plan is a gap between two wall ends that continue each
+other's line. So is a T-junction where a cross wall lands. So is a
+column pocket. So is a polyline the draughtsman broke for convenience.
+The geometry cannot tell them apart, so it is not allowed to: a gap is
+CLASSIFIED, and only a class carrying positive evidence that an opening
+was drawn may become a portal.
+
+Confirming evidence is the author saying a door is here — a leaf, a
+swing arc, a door block, an explicit opening entity, a schedule
+reference. Circumstantial evidence — jamb geometry, a width matching a
+family this drawing's own confirmed doors establish, a reading from the
+cold pass, a wall band interrupted across its thickness — makes an
+opening PROBABLE only in independent combination, and records which
+combination.
+
+A gap the width of a wall this drawing uses, with nothing standing in
+it, is not a doorway and not a junction: it is `UNRESOLVED_GAP`. The
+wall thickness families and the opening width families are inferred from
+the drawing under test, never chosen for a project.
+
+## §110 — A column can exist without owning the room's face
+
+Three questions with three different answers and three different
+evidences: does it EXIST, is it EXPOSED into the room, does it OWN the
+clear internal boundary. A structural column standing inside a wall is a
+fact about the structure and not about the room; the plasterer never
+sees it and the clear internal face is the architectural line.
+
+An unresolved column and a confirmed-but-unexposed column have the same
+effect on the room boundary: none. Exposure is what licenses a
+structural outline to cut into a room. Nothing is deleted — both
+geometries stay, with different ownership.
+
+Whether the architectural face continues past a column is tested on
+COLLINEAR RUNS, never on single entities. CAD cuts a wall face at every
+intersection, so each piece of it stops at the column it passes; asking
+whether one piece spans the footprint would answer no for every column
+ever drawn inside a wall.
+
+## §111 — An open room still has boundaries
+
+Refusing to invent a polygon is right. Storing nothing is not. A pantry
+with drawn walls on three sides and an opening on the fourth has three
+established walls, and throwing them away with the one that does not
+exist loses real evidence.
+
+Every candidate gets a `PHYSICAL_BOUNDARY_CHAIN`: the established pieces
+in order, connected where they connect, with portals, continuity spans,
+open edges and unresolved edges recorded as what they are. A portal and a
+continuity span carry the boundary through and contribute no material. An
+open edge and an unresolved edge contribute nothing and are never closed.
+
+To put a boundary in ORDER a face must exist to walk. A doorway can be
+spanned to make one; an open side cannot, because its two walls do not
+face each other and no span is ever proposed. Nor can the whole drawing
+serve as a frame — an open region's seed then falls in the one face
+outside every closed loop, and the answer is the site. So the material is
+cut against a LOCAL WINDOW that grows only while the face stays
+room-scale, and stops at the smallest size that has already found all the
+material a larger one would.
+
+**THAT an edge is open is a result. HOW LONG it is, is not.** An open
+edge runs until something stops it, and where nothing does, what stopped
+it is the window. Material lengths are measured from drawn faces and may
+be used; an open edge's length records the extent of the figure walked,
+and no later stage may read it as a distance the drawing establishes.
+
+## §112 — Physical geometry, functional identity, trade zone
+
+Three layers. E1 establishes the first, may record what it does not know
+about the second, and decides nothing at all about the third.
+
+A region may be geometrically established while what to call its parts is
+still open. The walls do not move when the argument about the name is
+settled, so the name cannot be a precondition for recording the walls. A
+possible functional subzone with no physical separator — no wall, no
+portal, nothing drawn — is a question about naming, and it may not veto a
+physical boundary.
+
+The visual challenger's `POSSIBLE_OVER_CAPTURE` therefore means the
+boundary CROSSES A PHYSICAL BOUNDARY and takes in part of another
+physical region. "This continuous area might have a second name" is
+`POSSIBLE_FUNCTIONAL_SUBZONE`, it is forwarded to the identity dimension,
+and it is structurally incapable of appearing among the reasons a
+boundary was withheld.
+
+Arbitration is dimensioned to match: physical topology, boundary role and
+functional identity are arbitrated separately, because A18, CAD and the
+cold passes may agree about one and differ about another. Confirmed
+enclosure with unresolved naming is a valid, complete E1 result.
+
+## §113 — One ledger, and every account of the decision reads from it
+
+Frozen E1.2 Kitchen gave three different reasons for one decision: a
+validation block failing one condition, a release decision listing
+another, and prose repeating the first. A reader could not tell which was
+the reason.
+
+The cure is not better prose but that the prose has no independent
+source. Every failure, every withheld reason and every sentence of
+explanation derives from one ledger of checks. A check kept for
+information is labelled `DIAGNOSTIC_ONLY` and can never appear as the
+reason a region was withheld; a record that disagrees with the ledger —
+in its decision, its failed list or its wording — is refused outright.
