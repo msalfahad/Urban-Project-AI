@@ -1792,6 +1792,31 @@ ONE_READING_MOVES_THE_CLEAR_FACE = (
     "chain moves, so this uncertainty is unresolved geometry")
 
 
+# How close a footprint has to come to a chain to be standing on it. It
+# is a drawing tolerance, not a search radius: a column either meets the
+# boundary or it does not.
+FOOTPRINT_TOUCHES_CHAIN_MM = 50.0
+
+
+def _footprint_meets_chain(column, chain) -> bool:
+    """Does this candidate's own footprint meet this candidate's chain?"""
+    box = (column.get("FOOTPRINT_BOX_FROM_THE_LOOPS_OWN_RING_MM")
+           or column.get("footprint_box_mm"))
+    if not box or len(box) != 4 or not chain:
+        return False
+    from shapely.geometry import LineString, box as make_box
+    pad = FOOTPRINT_TOUCHES_CHAIN_MM
+    foot = make_box(box[0] - pad, box[1] - pad, box[2] + pad, box[3] + pad)
+    for e in chain:
+        pts = e.get("points_mm") or [e.get("start_mm"), e.get("end_mm")]
+        pts = [tuple(p) for p in pts if p]
+        if len(pts) < 2:
+            continue
+        if foot.intersects(LineString(pts)):
+            return True
+    return False
+
+
 def affects_proposed_boundary(status, row, owner) -> dict:
     """Could resolving this finding change the chain this run proposes?"""
     if status in A_STATUS_ABOUT_THE_BOUNDARY_ITSELF:
@@ -1802,10 +1827,24 @@ def affects_proposed_boundary(status, row, owner) -> dict:
     if status in (vc.COLUMN_EXPOSURE_UNRESOLVED, vc.COLUMN_ROLE_UNRESOLVED):
         ch = (row.get("chain") or {}).get("CHAIN", [])
         on_chain = {e.get("object_id") for e in ch if e.get("object_id")}
+        # WHICH COLUMNS COULD MOVE *THIS* CHAIN.
+        #
+        # A column that owns a face on the chain is named there. One that
+        # does NOT own the face was held back from the walk, so it is not
+        # on the chain by object id however close it stands - and those
+        # are exactly the ones whose exposure is in question. So the test
+        # is geometric: does the candidate's own footprint meet this
+        # candidate's own chain?
+        #
+        # Asking instead for every column on the floor whose ownership
+        # reads ARCHITECTURAL_FACE_OWNS was tried here and named nineteen
+        # loops against one small room. A finding about a column at the
+        # other end of the building cannot move this boundary, and a rule
+        # that says it can is the name-based gating §14 replaced, wearing
+        # different clothes.
         touching = [c for c in owner["rows"]
                     if set(c["member_object_ids"]) & on_chain
-                    or c["CLEAR_FACE_OWNERSHIP_STATUS"]
-                    == co.ARCHITECTURAL_FACE_OWNS]
+                    or _footprint_meets_chain(c, ch)]
         moving = [c for c in touching
                   if not c.get("architectural_face_continues_across")]
         if not touching:

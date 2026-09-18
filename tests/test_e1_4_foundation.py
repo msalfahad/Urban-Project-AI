@@ -938,3 +938,36 @@ def test_14d_no_rule_in_the_effect_mechanism_names_a_region():
     for token in ("KITCHEN", "PANTRY", "WASH", "DEWANEYA", "SALOON",
                   "LG-0", "E1_3-", "E1_4-LG"):
         assert token not in code, token
+
+
+def test_14e_a_column_at_the_other_end_of_the_floor_cannot_move_this_chain():
+    """Asking for every column on the floor whose ownership reads
+    ARCHITECTURAL_FACE_OWNS named nineteen loops against one small room.
+    A finding about a column that does not meet this chain cannot move
+    this boundary, and a rule that says it can is name-based gating in
+    different clothes."""
+    from tools import run_e1_4 as r14
+    row = {"chain": {"CHAIN": [{"start_mm": (0, 0), "end_mm": (2000, 0)},
+                               {"start_mm": (2000, 0), "end_mm": (2000, 2000)}]}}
+    far = {"rows": [{"COLUMN_ID": "LOOP-FAR",
+                     "member_object_ids": ["COL-FAR"],
+                     "FOOTPRINT_BOX_FROM_THE_LOOPS_OWN_RING_MM":
+                         [50000, 50000, 50600, 50600],
+                     "CLEAR_FACE_OWNERSHIP_STATUS": co.ARCHITECTURAL_FACE_OWNS,
+                     "architectural_face_continues_across": False}],
+           "object_ids_that_do_not_own_the_room_face": ["COL-FAR"],
+           "object_ids_that_own_the_room_face": []}
+    got = r14.affects_proposed_boundary("COLUMN_EXPOSURE_UNRESOLVED", row, far)
+    assert got["AFFECTS_PROPOSED_BOUNDARY"] is vf.AFFECTS_NO
+    assert got["AFFECTED_CHAIN_ELEMENTS"] == []
+
+    # the same column standing on this chain does reach it
+    near = {"rows": [dict(far["rows"][0],
+                          COLUMN_ID="LOOP-NEAR",
+                          FOOTPRINT_BOX_FROM_THE_LOOPS_OWN_RING_MM=[
+                              1900, -100, 2100, 300])],
+            "object_ids_that_do_not_own_the_room_face": ["COL-FAR"],
+            "object_ids_that_own_the_room_face": []}
+    got = r14.affects_proposed_boundary("COLUMN_EXPOSURE_UNRESOLVED", row, near)
+    assert got["AFFECTS_PROPOSED_BOUNDARY"] is vf.AFFECTS_YES
+    assert got["AFFECTED_CHAIN_ELEMENTS"] == ["LOOP-NEAR"]
