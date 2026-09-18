@@ -58,9 +58,26 @@ def main(argv=None) -> int:
                                 "why": vc.THE_CHALLENGER_MAY_NOT_MOVE_A_COORDINATE})
                 continue
             row["ANSWER_SHA256"] = prov.canonical_sha256(row)
-            row["source_file"] = src
+            # The NAME of the file the answer came in, not where it sat.
+            # A register that records a temporary directory makes the run
+            # hash a hash of the machine as well - see invariant §119.
+            row["source_file"] = Path(src).name
             rows.append(row)
 
+    # no register may carry a filesystem location (§119)
+    root = str(path.parent) + "/"
+
+    def _rel(obj):
+        if isinstance(obj, dict):
+            return {k: (v[len(root):] if (k in ("file", "path", "crop_path")
+                                          and isinstance(v, str)
+                                          and v.startswith(root))
+                        else _rel(v)) for k, v in obj.items()}
+        if isinstance(obj, list):
+            return [_rel(v) for v in obj]
+        return obj
+
+    body = _rel(body)
     body["answers"] = rows
     body["answers_refused_on_the_way_in"] = refused
     body["status"] = "FROZEN"

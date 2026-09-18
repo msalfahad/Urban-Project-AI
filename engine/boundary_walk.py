@@ -199,8 +199,11 @@ def pair_faces(faces, *, families=(), parallel_deg=PARALLEL_DEG,
     out = []
     for i, f in enumerate(faces):
         ui = _unit(f["a"], f["b"])
-        for j in range(i + 1, len(faces)):
-            g = faces[j]
+        # ORDER IS NEVER IDENTITY: the mate is taken from the iteration
+        # itself rather than looked up by a loop variable, and the pair
+        # records both faces' own object ids so any later use of its
+        # positions can be checked against them.
+        for j, g in enumerate(faces[i + 1:], start=i + 1):
             uj = _unit(g["a"], g["b"])
             if abs(ui[0] * uj[0] + ui[1] * uj[1]) < cos_lim:
                 continue
@@ -236,8 +239,21 @@ def pair_faces(faces, *, families=(), parallel_deg=PARALLEL_DEG,
 
 
 def room_side_face(pair, faces, point):
-    """Which face of a wall body bounds the space the point is in."""
+    """Which face of a wall body bounds the space the point is in.
+
+    The pair carries both faces' positions AND both faces' object ids.
+    The positions are used and then checked against the ids, because a
+    position is not an identity and a list that has been re-ordered
+    between the pairing and this call would otherwise answer about two
+    other faces entirely.
+    """
     f, g = faces[pair["i"]], faces[pair["j"]]
+    if "face_a" in pair and (f.get("object_id") != pair["face_a"]
+                             or g.get("object_id") != pair["face_b"]):
+        raise ValueError(
+            "the pair's positions no longer point at the faces it was "
+            f"made from: {pair['face_a']!r}/{pair['face_b']!r} became "
+            f"{f.get('object_id')!r}/{g.get('object_id')!r}")
     u = _unit(f["a"], f["b"])
     s_point = _side(point, f["a"], u)
     s_other = _side(g["a"], f["a"], u)

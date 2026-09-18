@@ -142,8 +142,55 @@ OVERLAY_LEGEND = (
 
 
 # ---------------------------------------------------------------- helpers
+PATHS_ARE_RELATIVE_TO_THE_RUN = (
+    "every file a register names is named relative to the run directory, "
+    "and no register records a filesystem location, a temporary directory "
+    "or the repr of a live object. A freeze must depend on the content it "
+    "froze and on nothing else about the machine that produced it")
+
+
+def _in_run(path, out):
+    """A path as the run records it: relative, so a hash of it is a hash
+    of the run and not of the directory the run happened to execute in."""
+    if not path:
+        return path
+    root = str(Path(out)) + "/"
+    p = str(path)
+    return p[len(root):] if p.startswith(root) else Path(p).name
+
+
+def _relative_paths(obj, out):
+    """Rewrite every file a register names to be relative to the run."""
+    root = str(Path(out)) + "/"
+    if isinstance(obj, dict):
+        return {k: (v[len(root):] if (k in ("file", "path", "crop_path")
+                                      and isinstance(v, str)
+                                      and v.startswith(root))
+                    else _relative_paths(v, out))
+                for k, v in obj.items()}
+    if isinstance(obj, list):
+        return [_relative_paths(v, out) for v in obj]
+    return obj
+
+
+def _json_only(obj):
+    """Keep what a register can carry; name what it cannot, without paths."""
+    out = {}
+    for k, v in obj.items():
+        try:
+            json.dumps(v)
+        except TypeError:
+            out[k] = (f"NOT_RECORDED_A_LIVE_{type(v).__name__.upper()}_"
+                      f"OBJECT_IS_NOT_A_RESULT")
+            continue
+        out[k] = v
+    return out
+
+
 def _write(out, artifacts, name, body) -> dict:
-    body = dict(body)
+    # No register may carry a filesystem location. Done here, once, so
+    # that no register can be added later that forgets to - see §119.
+    body = _relative_paths(dict(body), out)
     body["E1_3_MODEL"] = E1_3_MODEL
     body["RUN_ID"] = RUN_ID
     key = f"{name.split('.')[0]}_HASH"
@@ -1690,8 +1737,9 @@ def phase_geometry(a) -> int:
     ledger = led.Ledger()
     for row in seal.get("inputs_made_available", ()):
         ledger.offer(row, at=row.get("placed_at", ""))
-    manifest = dict(seal)
+    manifest = _json_only(dict(seal))
     manifest["MODEL"] = ei3.MODEL
+    manifest["paths_are_relative_to_the_run"] = PATHS_ARE_RELATIVE_TO_THE_RUN
     _write(out, artifacts, "E1_3_INPUT_MANIFEST.json", manifest)
 
     reg_r, sheet = _registered_sheet(a, gf)
@@ -1704,8 +1752,8 @@ def phase_geometry(a) -> int:
         t = vc.Task(task_id=f"V1-{row['candidate_id']}",
                     candidate_id=row["candidate_id"],
                     identity=row["group"].english_token,
-                    crop_path=(crop or {}).get("file", ""),
-                    stage=vc.V1, brief=vc.V1_BRIEF)
+                    crop_path=_in_run((crop or {}).get("file", ""), out),
+                    root=str(out), stage=vc.V1, brief=vc.V1_BRIEF)
         tasks.append(t.manifest())
     _write(out, artifacts, "E1_3_VISUAL_V1_REGISTER.json", {
         "STAGE": vc.V1, "status": "AWAITING_ANSWERS",
@@ -1780,9 +1828,10 @@ def phase_v2_inputs(a) -> int:
         t = vc.Task(task_id=f"V2-{row['candidate_id']}",
                     candidate_id=row["candidate_id"],
                     identity=row["group"].english_token,
-                    crop_path=(crop or {}).get("file", ""),
-                    overlay_path=(ov or {}).get("file", ""),
-                    legend=OVERLAY_LEGEND, stage=vc.V2, brief=vc.V2_BRIEF)
+                    crop_path=_in_run((crop or {}).get("file", ""), out),
+                    overlay_path=_in_run((ov or {}).get("file", ""), out),
+                    root=str(out), legend=OVERLAY_LEGEND, stage=vc.V2,
+                    brief=vc.V2_BRIEF)
         m = t.manifest()
         m["frozen_v1_observation"] = v1_by.get(row["candidate_id"], {})
         tasks.append(m)
@@ -2222,7 +2271,7 @@ def phase_finalize(a) -> int:
             sheet, reg_r, gf, rows,
             out / "E1_3_GROUND_FLOOR_ON_THE_SOURCE_SHEET.png")
         if whole.get("file"):
-            artifacts[whole["file"]] = whole[prov.RAW]
+            artifacts[Path(whole["file"]).name] = whole[prov.RAW]
         locals_ = chain_overlays(sheet, reg_r, gf, interp, rows, owner,
                                  out / "local_overlays")
         for row in locals_:
@@ -2238,7 +2287,30 @@ def phase_finalize(a) -> int:
     if v1f.exists():
         for f in sorted(v1f.glob("*.json")):
             artifacts[f"visual/v1_frozen_per_candidate/{f.name}"] = r12._sha(f)
+    # A REGISTER MAY NOT RECORD WHERE IT HAPPENED TO BE WRITTEN.
+    #
+    # The overlay index held each overlay's absolute path, so finalizing
+    # the same run into a different directory changed the index, changed
+    # its hash and changed E1_3_RUN_HASH. A run hash that depends on the
+    # directory it ran in is not a hash of the run. Every path here is
+    # relative to the run directory.
+    def _rel(rec):
+        rec = dict(rec)
+        f = rec.get("file")
+        if f:
+            try:
+                rec["file"] = str(Path(f).relative_to(out))
+            except ValueError:
+                rec["file"] = Path(f).name
+        return rec
+
+    whole = _rel(whole) if whole else whole
+    locals_ = [_rel(x) for x in locals_]
     _write(out, artifacts, "E1_3_OVERLAY_INDEX.json", {
+        "a_register_may_not_record_where_it_was_written": (
+            "every path in this index is relative to the run directory. "
+            "An absolute path would make E1_3_RUN_HASH a function of the "
+            "directory the run happened to be finalized in"),
         "whole_floor": whole, "local_overlays": locals_,
         "v1_source_only_crops": "visual/v1_source_only/",
         "v2_challenge_overlays": "visual/v2_overlays/",

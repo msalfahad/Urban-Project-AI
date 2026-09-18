@@ -193,21 +193,30 @@ class Task:
     stage: str = V1
     brief: str = ""
     provenance: RuntimeProvenance = field(default_factory=RuntimeProvenance)
+    # Where the run's files live. Used to find them, never recorded.
+    root: str = ""
 
     def manifest(self) -> dict:
+        def _sha(rel):
+            """The file's content hash, found through `root`.
+
+            A task records a path RELATIVE to the run, because the task's
+            own hash is taken over this manifest and a hash that includes
+            an absolute path is partly a hash of the machine. `root` is
+            where to find the file and is never recorded.
+            """
+            if not rel:
+                return ""
+            p = Path(self.root) / rel if self.root else Path(rel)
+            return prov.raw_sha256(str(p)) if p.exists() else ""
+
         rows = [{"kind": "SOURCE_SHEET_CROP", "path": self.crop_path,
-                 "RAW_FILE_SHA256": (prov.raw_sha256(self.crop_path)
-                                     if self.crop_path
-                                     and Path(self.crop_path).exists()
-                                     else "")},
+                 "RAW_FILE_SHA256": _sha(self.crop_path)},
                 {"kind": "IDENTITY_TEXT_ONLY", "value": self.identity}]
         if self.stage == V2:
             rows.append({"kind": "CANDIDATE_OVERLAY",
                          "path": self.overlay_path,
-                         "RAW_FILE_SHA256":
-                             (prov.raw_sha256(self.overlay_path)
-                              if self.overlay_path
-                              and Path(self.overlay_path).exists() else "")})
+                         "RAW_FILE_SHA256": _sha(self.overlay_path)})
             rows.append({"kind": "OVERLAY_LEGEND", "value": list(self.legend)})
             rows.append({"kind": "FROZEN_V1_OBSERVATION",
                          "value": "supplied verbatim from the frozen V1 "

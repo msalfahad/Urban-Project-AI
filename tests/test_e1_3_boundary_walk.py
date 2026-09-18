@@ -342,3 +342,38 @@ def test_v_no_ring_beats_the_isoperimetric_bound():
         p = res["ring_perimeter_mm"]
         assert res["ring_area_mm2"] <= p * p / (4.0 * math.pi) + 1.0, (
             "a ring cannot enclose more than a circle of its perimeter")
+
+
+# W - no register may carry a filesystem location
+def test_w_a_register_records_no_path_and_no_live_object():
+    """§119. The overlay index held absolute paths, so finalising the same
+    run into another directory changed its hash and changed the run hash.
+    The input manifest went further and held the repr of a live sandbox
+    object, filesystem path included.
+    """
+    import importlib
+    r = importlib.import_module("tools.run_e1_3")
+
+    body = {
+        "whole_floor": {"file": "/tmp/run7/E1_3_FLOOR.png", "sha": "abc"},
+        "local_overlays": [{"file": "/tmp/run7/local_overlays/a.png"},
+                           {"file": "/elsewhere/b.png"}],
+        "tasks": [{"inputs": [{"path": "/tmp/run7/visual/c.png"}]}],
+        "kept": "/tmp/run7/not-a-file-key",
+    }
+    out = r._relative_paths(body, "/tmp/run7")
+    assert out["whole_floor"]["file"] == "E1_3_FLOOR.png"
+    assert out["local_overlays"][0]["file"] == "local_overlays/a.png"
+    assert out["local_overlays"][1]["file"] == "/elsewhere/b.png"
+    assert out["tasks"][0]["inputs"][0]["path"] == "visual/c.png"
+    assert out["kept"] == "/tmp/run7/not-a-file-key"
+    assert out["whole_floor"]["sha"] == "abc"
+
+    class Live:
+        def __repr__(self):
+            return "Live(root=PosixPath('/tmp/sandbox-17'))"
+
+    kept = r._json_only({"box": Live(), "run_id": "E1_3-P7757-GF-001"})
+    assert kept["run_id"] == "E1_3-P7757-GF-001"
+    assert "sandbox-17" not in kept["box"]
+    assert kept["box"].startswith("NOT_RECORDED_A_LIVE_")

@@ -3359,3 +3359,46 @@ Where no ring encloses the point, NOTHING IS PROPOSED. What the walk
 established is kept, labelled as not a proposed boundary, and reported as
 a diagnostic of where the drawing stops carrying the boundary. A boundary
 that is not established is withheld, never approximated.
+
+## §118 — A ring is nothing but the chain that makes it
+
+A region was reported closed with an area of 1.619 m² from a chain of
+3.738 m. No shape of that perimeter can enclose more than 1.112 m², so
+the number was impossible on its face.
+
+The ring had been built by listing the faces the walk stepped on and
+handing them to a polygon. Where two consecutive steps did not meet, the
+polygon constructor joined them with a straight line of its own — a line
+that appeared in no chain, carried no evidence, and was counted as
+boundary anyway. A third of that ring, 1.95 m of 5.68 m, was drawn by the
+constructor rather than by the architect.
+
+A closed ring is therefore accepted only when every step meets the next
+on the drawing AND the ring's own perimeter equals the chain's own
+length. The perimeter is measured on the ring **as walked**: repairing a
+self-touching ring, which is what walking up one side of a stub and back
+down the other produces, silently drops the spur and with it the length
+that walking the spur took.
+
+Enforcing this immediately found a second fault of the same family. A
+gap's two ends are recorded in the order the gap was found in, which need
+not be the order the walk crosses it; taking them as given put an 800 mm
+and a 1000 mm doorway into two rings backwards, and each then read as a
+hole in its own ring. A span is walked from the end the walk has reached.
+
+The isoperimetric bound — no ring encloses more than a circle of its own
+perimeter — is cheap, needs no reference geometry, and would have caught
+the original defect on its own. It is now a test.
+
+## §119 — A register may not record where it happened to be written
+
+The overlay index stored each overlay's absolute path. Finalising the
+same run into a different directory therefore changed the index, changed
+its hash, and changed the run hash — so the "hash of the run" was partly
+a hash of the path it ran in, and two byte-identical analyses compared
+unequal.
+
+Every path a register records is relative to the run directory. This is
+the same error as a register hashing its own hash field: a freeze must
+depend on the content it froze and on nothing else about the machine it
+was produced on.
