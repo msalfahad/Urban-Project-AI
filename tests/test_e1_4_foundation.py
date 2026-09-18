@@ -971,3 +971,42 @@ def test_14e_a_column_at_the_other_end_of_the_floor_cannot_move_this_chain():
     got = r14.affects_proposed_boundary("COLUMN_EXPOSURE_UNRESOLVED", row, near)
     assert got["AFFECTS_PROPOSED_BOUNDARY"] is vf.AFFECTS_YES
     assert got["AFFECTED_CHAIN_ELEMENTS"] == ["LOOP-NEAR"]
+
+
+def test_13b_a_gap_elsewhere_is_not_this_walls_interruption():
+    """Offering every wall every gap on the floor let 291 door entities
+    match 33 real interruptions and report 206 openings. Both ends of a
+    span have to lie on the wall that would host it."""
+    elsewhere = {"wall_id": "W-3", "a": (0.0, 0.0), "b": (6000.0, 0.0),
+                 "interrupted_spans": [{"from_mm": (2500.0, 9000.0),
+                                        "to_mm": (3400.0, 9000.0)}]}
+    doors = [{"door_id": "D-1", "at_mm": (2950.0, 120.0),
+              "evidence": [od.SWING_ARC, od.DOOR_LEAF],
+              "direction": (1.0, 0.0)}]
+    found = od.door_first(doors, [elsewhere], reach_mm=600.0)
+    assert found["matched"] == 0
+    assert found["HOST_WALL_MATCH_ATTEMPTS"][0]["REJECTED_BECAUSE"] == \
+        od.HOST_WALL_NOT_INTERRUPTED
+
+
+def test_13c_one_span_is_one_opening_however_many_doors_evidence_it():
+    """A double leaf, or a leaf and its swing arc, stand at one
+    interruption. Counting them separately turns the strength of the
+    evidence into doors that are not there."""
+    doors = [{"door_id": "D-1", "at_mm": (2900.0, 120.0),
+              "evidence": [od.DOOR_LEAF], "direction": (1.0, 0.0)},
+             {"door_id": "D-2", "at_mm": (3000.0, 130.0),
+              "evidence": [od.SWING_ARC], "direction": (1.0, 0.0)},
+             {"door_id": "D-3", "at_mm": (2950.0, 100.0),
+              "evidence": [od.HINGE_POINT, od.DOOR_LEAF],
+              "direction": (1.0, 0.0)}]
+    found = od.door_first(doors, [_WALL], reach_mm=600.0)
+    assert found["matched"] == 3
+    rows = od.reconcile([], found)["RECONCILED_OPENINGS"]
+    assert len(rows) == 1
+    row = rows[0]
+    assert row["RECONCILIATION_STATUS"] == od.CONFIRMED_DOOR_FIRST
+    assert row["doors_evidencing_this_opening"] == 3
+    assert row["door_ids_evidencing_this_opening"] == ["D-1", "D-2", "D-3"]
+    assert od.DOOR_LEAF in row["door_evidence"]
+    assert od.SWING_ARC in row["door_evidence"]

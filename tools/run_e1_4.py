@@ -411,14 +411,20 @@ def opening_pass(gaps, door_segments, material_segments) -> dict:
             "interrupted_spans": spans_by_wall.get(
                 getattr(s, "object_id", ""), []),
         })
-    # Every classified gap is an interruption of the fabric, wherever the
-    # ontology attributed it; a door is matched against the wall it lies
-    # along, so the spans are offered to every wall the search reaches.
-    every_span = [{"from_mm": tuple(g["start_mm"]), "to_mm": tuple(g["end_mm"])}
-                  for g in gaps["rows"]]
+    # A gap the ontology did not attribute to any wall is still an
+    # interruption of the fabric, so it is offered to the search - but the
+    # search then has to establish that the span lies on the wall it would
+    # host it, because a gap elsewhere on the floor is not this wall's
+    # interruption. Offering every wall every gap was tried here and it
+    # let 291 door entities match 33 real interruptions, reporting 206
+    # openings where there were at most 33.
+    unattributed = [{"from_mm": tuple(g["start_mm"]),
+                     "to_mm": tuple(g["end_mm"])}
+                    for g in gaps["rows"]
+                    if not (g.get("host_wall_faces") or ())]
     for w in wall_rows:
         if not w["interrupted_spans"]:
-            w["interrupted_spans"] = every_span
+            w["interrupted_spans"] = unattributed
 
     found = od.door_first(doors, wall_rows, reach_mm=DOOR_REACH_MM)
     gap_first = [{"GAP_ID": g["GAP_ID"], "GAP_CLASS": g["GAP_CLASS"],
@@ -989,7 +995,7 @@ def _core(a) -> dict:
         prior = json.loads(p3.read_text(encoding="utf-8")).get("PAIRS", [])
     relations = seed_relation_pass(built["rows"], built["pieces"],
                                    prior_pairs=prior)
-    return {"relations": relations, "prep": prep, "gf": gf, "interp": interp, "owner": owner,
+    return {"args": a, "relations": relations, "prep": prep, "gf": gf, "interp": interp, "owner": owner,
             "gaps": gaps, "ontology": ontology, "built": built,
             "rows": built["rows"], "cand_json": cand_json,
             "semantics": semantics, "capability": capability,
@@ -1329,10 +1335,16 @@ def _completeness(st) -> dict:
                 if f[end] not in bf.TERMINATIONS:
                     unnamed.append(f"{f['FRAGMENT_ID']}:{end}={f[end]}")
 
-    # what this run opened. A reader can check the list rather than take
-    # a true on trust
-    read = sorted({v for k, v in (st.get("source") or {}).items()
-                   if isinstance(v, str) and ("/" in v or v.endswith(".json"))})
+    # WHAT THIS RUN OPENED, from the arguments it was given rather than
+    # from a summary of one of them. The first version of this list read
+    # the source record and named one file, the CAD decode, while the run
+    # had also opened the blind input set, the sheet and the rule
+    # library. A list a reader is told to check has to be the list.
+    a = st.get("args")
+    read = sorted({str(x) for x in (
+        getattr(a, "decode", None), getattr(a, "a18_dir", None),
+        getattr(a, "raster", None), getattr(a, "rules", None),
+        getattr(a, "prior_e1_3", None)) if x})
     workbookish = [x for x in read
                    if Path(x).suffix.lower() in (".xlsx", ".xls", ".xlsm",
                                                  ".csv")]
@@ -2028,6 +2040,7 @@ def phase_finalize(a) -> int:
     gf, rows, owner = st["gf"], st["rows"], st["owner"]
     src = r12._source(st["prep"], gf, a)
     st["source"] = src
+    st["args"] = a
     gaps_by_id = {g["GAP_ID"]: g for g in st["gaps"]["rows"]}
     semantics = {}
     for r_ in st["semantics"]["ROWS"]:

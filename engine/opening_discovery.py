@@ -126,7 +126,29 @@ def _dist(a, b):
     return math.hypot(b[0] - a[0], b[1] - a[1])
 
 
-def door_first(doors, walls, *, reach_mm, align_deg=10.0) -> dict:
+# How far a wall's own interruption may lie off that wall's line and
+# still be that wall's interruption. It is a drawing tolerance.
+SPAN_LIES_ON_THE_WALL_MM = 50.0
+
+A_SPAN_BELONGS_TO_THE_WALL_IT_INTERRUPTS = (
+    "an interruption is a stretch where a particular wall stops. A gap "
+    "somewhere else on the floor is not this wall's interruption however "
+    "near the door happens to be, and offering every wall every gap makes "
+    "any door match something. Both ends of the span have to lie on this "
+    "wall's own line")
+
+
+def _off_line(p, a, b) -> float:
+    """How far a point lies off the infinite line through a and b."""
+    dx, dy = b[0] - a[0], b[1] - a[1]
+    n = math.hypot(dx, dy)
+    if n <= 0:
+        return _dist(p, a)
+    return abs((p[0] - a[0]) * dy - (p[1] - a[1]) * dx) / n
+
+
+def door_first(doors, walls, *, reach_mm, align_deg=10.0,
+               span_on_wall_mm=SPAN_LIES_ON_THE_WALL_MM) -> dict:
     """From each piece of door evidence, look for the wall that hosts it.
 
     `doors` are dicts with `door_id`, `at_mm`, `evidence`, and optionally
@@ -173,17 +195,29 @@ def door_first(doors, walls, *, reach_mm, align_deg=10.0) -> dict:
 
         gap, w, foot = near[0]
         spans = [s for s in (w.get("interrupted_spans") or ())]
-        hosting = None
+        wa, wb = tuple(w["a"]), tuple(w["b"])
+        hosting, best = None, None
         for s in spans:
             sa, sb = tuple(s["from_mm"]), tuple(s["to_mm"])
-            if _dist(_mid(sa, sb), foot) <= max(reach_mm, _dist(sa, sb)):
-                hosting = s
-                break
+            # the span has to be an interruption of THIS wall
+            if max(_off_line(sa, wa, wb), _off_line(sb, wa, wb)) \
+                    > span_on_wall_mm:
+                continue
+            # NOT `d`: that is the door under test, and shadowing it here
+            # made the door a float two lines later
+            sep = _dist(_mid(sa, sb), foot)
+            if sep > reach_mm:
+                continue
+            if best is None or sep < best:
+                hosting, best = s, sep
         if hosting is None:
             attempts.append({
                 "door_id": d.get("door_id"), "MATCHED": False,
                 "host_wall_id": w.get("wall_id"),
                 "REJECTED_BECAUSE": HOST_WALL_NOT_INTERRUPTED,
+                "spans_offered_for_this_wall": len(spans),
+                "a_span_belongs_to_the_wall_it_interrupts":
+                    A_SPAN_BELONGS_TO_THE_WALL_IT_INTERRUPTS,
                 "why": ("the nearest wall runs unbroken past this door. An "
                         "opening needs the wall to stop; a leaf drawn "
                         "against an unbroken wall is not a portal"),
@@ -230,6 +264,14 @@ def door_first(doors, walls, *, reach_mm, align_deg=10.0) -> dict:
         "a_door_must_not_disappear": A_DOOR_MUST_NOT_DISAPPEAR,
         "what_is_kept_includes_what_failed": WHAT_IS_KEPT_INCLUDES_WHAT_FAILED,
     }
+
+
+A_SPAN_IS_ONE_OPENING = (
+    "several pieces of door evidence can stand at one interruption - two "
+    "leaves of a double door, a leaf and its swing arc, a leaf drawn "
+    "twice. They are evidence about that one opening. Counting them as "
+    "separate openings turns the strength of the evidence into a number "
+    "of doors that are not there")
 
 
 def reconcile(gap_first, door_first_out, *, same_place_mm=150.0,
@@ -279,16 +321,30 @@ def reconcile(gap_first, door_first_out, *, same_place_mm=150.0,
             "gap_first": g, "door_first": match, "why": why,
         })
 
+    # ONE SPAN IS ONE OPENING. Several doors can evidence the same
+    # interruption - a double leaf, a leaf and its arc, a leaf drawn twice
+    # - and each is evidence about that one opening, not another opening.
+    by_span = {}
     for d in door_first_out.get("OPENING_CANDIDATES", ()):
         if d["OPENING_CANDIDATE_ID"] in used_door:
             continue
-        strong = set(d["door_evidence"]) & set(
-            ESTABLISHES_THAT_AN_OPENING_EXISTS)
+        key = tuple(sorted((tuple(round(v, 3) for v in d["start_mm"]),
+                            tuple(round(v, 3) for v in d["end_mm"]))))
+        by_span.setdefault(key, []).append(d)
+    for key, group in by_span.items():
+        evidence = sorted({e for d in group for e in d["door_evidence"]})
+        strong = set(evidence) & set(ESTABLISHES_THAT_AN_OPENING_EXISTS)
+        first = group[0]
         rows.append({
-            "OPENING_ID": d["OPENING_CANDIDATE_ID"],
+            "OPENING_ID": first["OPENING_CANDIDATE_ID"],
             "RECONCILIATION_STATUS": (CONFIRMED_DOOR_FIRST if strong
                                       else PROBABLE),
-            "gap_first": None, "door_first": d,
+            "gap_first": None, "door_first": first,
+            "door_ids_evidencing_this_opening": sorted(
+                d["door_id"] for d in group),
+            "doors_evidencing_this_opening": len(group),
+            "door_evidence": evidence,
+            "one_span_is_one_opening": A_SPAN_IS_ONE_OPENING,
             "why": ("the door search found this opening from drawn door "
                     "evidence and the gap search never proposed it. This is "
                     "the case that used to vanish"
