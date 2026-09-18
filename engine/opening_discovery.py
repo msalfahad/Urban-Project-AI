@@ -232,8 +232,15 @@ def door_first(doors, walls, *, reach_mm, align_deg=10.0) -> dict:
     }
 
 
-def reconcile(gap_first, door_first_out, *, same_place_mm=150.0) -> dict:
-    """Put the two searches beside each other, deterministically."""
+def reconcile(gap_first, door_first_out, *, same_place_mm=150.0,
+              width_tolerance_mm=50.0) -> dict:
+    """Put the two searches beside each other, deterministically.
+
+    `same_place_mm` is how close two findings must be to be the same
+    opening; `width_tolerance_mm` is how closely they must then agree
+    about how wide it is. They are two different questions and they had
+    better not share one number.
+    """
     rows = []
     used_door = set()
     for g in gap_first:
@@ -257,7 +264,7 @@ def reconcile(gap_first, door_first_out, *, same_place_mm=150.0) -> dict:
         used_door.add(match["OPENING_CANDIDATE_ID"])
         w_g = _dist(ga, gb)
         w_d = match["width_mm"]
-        if abs(w_g - w_d) > same_place_mm:
+        if abs(w_g - w_d) > width_tolerance_mm:
             status, why = CONFLICT, (
                 "both searches found an opening in the same place and "
                 f"disagree about its width: {round(w_g, 1)} mm against "

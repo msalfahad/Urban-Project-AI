@@ -45,6 +45,7 @@ from __future__ import annotations
 
 import hashlib
 
+from engine import cad_geometry as cg
 from engine import interval_role as ir
 
 MODEL = "A_ROLE_IS_WHAT_A_THING_IS_A_CAPABILITY_IS_WHAT_IT_CAN_ANSWER_V1"
@@ -172,6 +173,96 @@ def record(role) -> dict:
         **{c: (c in got) for c in CAPABILITIES},
         "these_are_dimensions_not_answers": THESE_ARE_DIMENSIONS_NOT_ANSWERS,
     }
+
+
+# --------------------------------------------------- shape is not a role
+# E1.2 decided a boundary role like this:
+#
+#     if iv.role == ir.GLAZING:            return GLAZING_BOUNDARY
+#     if iv.role == ir.COLUMN:             return COLUMN_FACE
+#     if iv.kind in ("ARC", "CIRCLE"):     return CURVED_MATERIAL_FACE
+#     return MATERIAL_WALL_FACE
+#
+# The third line reads the SHAPE of the entity and returns a MATERIAL
+# role from it, so the edge of a swimming pool, a door's swing arc and a
+# curved annotation all came back as material wall face - and the fourth
+# line did the same for everything else that was not glazing or a column.
+# That file is frozen E1.2 and is not touched. This is what E1.4 asks
+# instead, and the two dimensions are kept apart by construction: the
+# role decides what the stretch can bound, and the shape decides how it
+# is drawn and measured.
+POOL_WATER_EDGE = "POOL_WATER_EDGE"
+OPENING_EVIDENCE_NOT_A_BOUNDARY = "OPENING_EVIDENCE_NOT_A_BOUNDARY"
+NOT_A_PHYSICAL_BOUNDARY = "NOT_A_PHYSICAL_BOUNDARY"
+
+_BOUNDARY_ROLE = {
+    ir.MATERIAL_WALL_FACE: cg.MATERIAL_WALL_FACE,
+    ir.GLAZING: cg.GLAZING_BOUNDARY,
+    ir.COLUMN: cg.COLUMN_FACE,
+    ir.POOL_CONTOUR: POOL_WATER_EDGE,
+    ir.DOOR: OPENING_EVIDENCE_NOT_A_BOUNDARY,
+}
+
+CURVE = "CURVE"
+STRAIGHT = "STRAIGHT"
+POLYLINE_SHAPE = "POLYLINE"
+
+EXACT_CURVE_IS_FIRST_CLASS = (
+    "a curve is carried as the curve it is drawn as, and it is measured "
+    "along itself. Recording that a stretch is curved is not a licence to "
+    "change what it is, and turning it into its chord is not a licence "
+    "either")
+
+
+def shape_of(kind) -> str:
+    if kind in (cg.ARC, cg.CIRCLE, cg.COMPOSITE_CURVE):
+        return CURVE
+    if kind == cg.POLYLINE:
+        return POLYLINE_SHAPE
+    return STRAIGHT
+
+
+def boundary_role_for(role, *, kind=cg.LINE) -> dict:
+    """What a stretch may bound, and separately how it is drawn."""
+    return {
+        "SEMANTIC_ENTITY_ROLE": role,
+        "ENTITY_KIND": kind,
+        "SHAPE": shape_of(kind),
+        "BOUNDARY_ROLE": _BOUNDARY_ROLE.get(role, NOT_A_PHYSICAL_BOUNDARY),
+        "THE_SHAPE_DID_NOT_DECIDE_THE_ROLE": True,
+        "MAY_BOUND_A_CLEAR_FLOOR_REGION": has(
+            role, CAN_BOUND_CLEAR_FLOOR_REGION),
+        "EXACT_CURVE_IS_FIRST_CLASS": EXACT_CURVE_IS_FIRST_CLASS,
+        "shape_is_not_a_role": SHAPE_IS_NOT_A_ROLE,
+    }
+
+
+def may_bound_a_clear_floor_region(role) -> bool:
+    """E1.4's admission test for a room boundary.
+
+    E1.2's frozen MAY_BOUND_MATERIAL carries POOL_CONTOUR, so the edge of
+    the water was admitted to room boundaries. That list is frozen and is
+    left alone; this predicate is asked instead.
+    """
+    return has(role, CAN_BOUND_CLEAR_FLOOR_REGION)
+
+
+def roles_that_may_bound_a_clear_floor_region() -> tuple:
+    return tuple(r for r in ir.ROLES
+                 if has(r, CAN_BOUND_CLEAR_FLOOR_REGION))
+
+
+WHY_E1_2_MAY_BOUND_MATERIAL_IS_NOT_USED = (
+    "interval_role.MAY_BOUND_MATERIAL is (MATERIAL_WALL_FACE, GLAZING, "
+    "COLUMN, POOL_CONTOUR). It is frozen E1.2 and it is not modified. "
+    "E1.4 asks may_bound_a_clear_floor_region instead, which answers from "
+    "the capability table, where the edge of the water bounds the pool "
+    "and bounds no room")
+
+
+def roles_admitted_by_e1_2_but_not_by_e1_4() -> tuple:
+    return tuple(r for r in ir.MAY_BOUND_MATERIAL
+                 if not has(r, CAN_BOUND_CLEAR_FLOOR_REGION))
 
 
 def roles_missing_a_capability_row() -> tuple:

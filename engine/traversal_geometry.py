@@ -211,8 +211,7 @@ def _segments(points):
 
 
 # ------------------------------------------------------------- traversal
-def traverse(steps, pieces, *, mates=None, gap_by_id=None,
-             face_points=None):
+def traverse(steps, pieces, *, mates=None, gap_by_id=None):
     """Build the three objects from one walk.
 
     `steps` is the step list `engine.boundary_walk.walk` produced.
@@ -220,12 +219,15 @@ def traverse(steps, pieces, *, mates=None, gap_by_id=None,
     wall body, as `boundary_walk.mate_map` returns it - it is what tells
     this module which body a face belongs to, and whether a thickness was
     established for it at all.
-    `face_points` may override the points of a piece, for a caller that
-    carries an arc's drawn points separately from its ends.
+
+    A piece's `coords` is its drawn geometry, every point of it. There is
+    no second list of points to look a face up in: ORDER IS NEVER
+    IDENTITY, and a face found by its position in another collection is
+    the mistake this project keeps a global guard against. An arc's
+    points belong in the arc's own `coords`.
     """
     mates = mates or {}
     gap_by_id = gap_by_id or {}
-    face_points = face_points or {}
 
     path, boundary, open_stations = [], {}, []
     bodies = {}
@@ -248,8 +250,6 @@ def traverse(steps, pieces, *, mates=None, gap_by_id=None,
         return tuple(sorted(keys)), thickness, family
 
     def _pts(i):
-        if i in face_points:
-            return [tuple(p) for p in face_points[i]]
         return [tuple(p) for p in pieces[i]["coords"]]
 
     for order, st in enumerate(steps):
