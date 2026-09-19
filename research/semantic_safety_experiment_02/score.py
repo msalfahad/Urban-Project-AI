@@ -229,6 +229,70 @@ def critical_matrix(matrix):
     }, hard, high
 
 
+def topology_critical(prim_rows):
+    """THE HEADLINE. Per-class safety, each with its own denominator.
+
+    An aggregate hides exactly the thing that matters. A reader right
+    about thirty-five annotation lines and wrong about the one doorway
+    scores well and builds the wrong building. So each topology-critical
+    class is reported on its own, twice over:
+
+      RECALL     of the features the reference ESTABLISHES as this class,
+                 how many did A19 call this class? Missing them is the
+                 dangerous direction for SEPARATOR and OPENING alike
+      PRECISION  of the features A19 CALLS this class, how many does the
+                 reference establish as it? This is where a false
+                 separator shows up
+
+    A class with two examples must not be able to look like a class with
+    twenty, so every row carries its counts and never a bare rate.
+    """
+    rows = []
+    for cls in P.TOPOLOGY_CRITICAL_CLASSES:
+        judged = [r for r in prim_rows if r["OUTCOME"] in
+                  (P.PHYSICAL_RELATION_EXACT_MATCH,
+                   P.PHYSICAL_RELATION_WRONG, P.A19_UNRESOLVED)]
+        ref_is = [r for r in judged if r["REFERENCE_RELATION"] == cls]
+        a19_is = [r for r in judged if r["A19_RELATION"] == cls]
+        hit = [r for r in ref_is if r["A19_RELATION"] == cls]
+        missed = [r for r in ref_is if r["A19_RELATION"] != cls]
+        false = [r for r in a19_is if r["REFERENCE_RELATION"] != cls]
+        high_false = [r for r in false if r["A19_CONFIDENCE"] == P.HIGH]
+        rows.append({
+            "CLASS": cls,
+            "reference_established_this_class": len(ref_is),
+            "a19_called_this_class": len(a19_is),
+            "recall_numerator": len(hit),
+            "recall_denominator": len(ref_is),
+            "precision_numerator": len(hit),
+            "precision_denominator": len(a19_is),
+            "A19_MISSED_IT": [r["CANONICAL_FEATURE_ID"] for r in missed],
+            "A19_CALLED_IT_THIS_WRONGLY":
+                [r["CANONICAL_FEATURE_ID"] for r in false],
+            "high_confidence_false_calls": len(high_false),
+            "THE_DENOMINATOR_IS_SMALL": len(ref_is) < 5,
+        })
+    thin = [r["CLASS"] for r in rows if r["THE_DENOMINATOR_IS_SMALL"]]
+    return {
+        "EXPERIMENT_ID": P.EXPERIMENT_ID,
+        "SAMPLE_ID": P.SAMPLE_ID,
+        "PROTOCOL_HASH": P.protocol_hash(),
+        "THIS_IS_THE_HEADLINE": P.THE_HEADLINE_IS_TOPOLOGY_CRITICAL_SAFETY,
+        "aggregate_accuracy_is_reported_but_is_not_the_headline":
+            P.AGGREGATE_ACCURACY_IS_REPORTED_BUT_IS_NOT_THE_HEADLINE,
+        "BY_CLASS": rows,
+        "CLASSES_WITH_TOO_FEW_EXAMPLES_TO_CARRY_A_RATE": thin,
+        "WHAT_A_THIN_CLASS_MEANS": (
+            "a class the drawing gave fewer than five established "
+            "examples of cannot support a rate. Its counts are reported "
+            "and no percentage is computed from them, because a "
+            "percentage over three cases reads like a measurement and "
+            "is not one"),
+        "do_not_hide_the_denominator": P.DO_NOT_HIDE_THE_DENOMINATOR,
+        "the_sample_is_not_random": P.THE_SAMPLE_IS_NOT_RANDOM,
+    }, thin
+
+
 def assembly():
     ref = established()
     rows = _load("a19/ASSEMBLY_ASSERTIONS.json")["ROWS"]
@@ -388,7 +452,10 @@ def main() -> int:
     prim, rows, matrix = primary()
     mat, hard, high = critical_matrix(matrix)
     ck = checker_value(rows)
+    topo, thin = topology_critical(rows)
     hashes = {
+        "TOPOLOGY_CRITICAL_SCORE.json":
+            write(OUT / "scores" / "TOPOLOGY_CRITICAL_SCORE.json", topo),
         "PRIMARY_RELATION_SCORE.json":
             write(OUT / "scores" / "PRIMARY_RELATION_SCORE.json", prim),
         "CRITICAL_ERROR_MATRIX.json":
@@ -403,7 +470,15 @@ def main() -> int:
     }
     auth = authority(prim, hard, high, ck)
     hashes["AUTHORITY.json"] = write(OUT / "scores" / "AUTHORITY.json", auth)
-    print(json.dumps({"relation_accuracy":
+    print(json.dumps({"THE_HEADLINE_PER_CLASS": [
+                          {"CLASS": r["CLASS"],
+                           "recall": [r["recall_numerator"],
+                                      r["recall_denominator"]],
+                           "precision": [r["precision_numerator"],
+                                         r["precision_denominator"]]}
+                          for r in topo["BY_CLASS"]],
+                      "CLASSES_TOO_THIN_TO_CARRY_A_RATE": thin,
+                      "relation_accuracy":
                       [prim["relation_accuracy_numerator"],
                        prim["relation_accuracy_denominator"]],
                       "high_confidence_accuracy":

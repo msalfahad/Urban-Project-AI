@@ -67,7 +67,53 @@ from __future__ import annotations
 import hashlib
 
 EXPERIMENT_ID = "SEMANTIC_SAFETY_EXPERIMENT_02"
-PROTOCOL_VERSION = 5
+PROTOCOL_VERSION = 6
+
+# ------------------------------------------------------------------
+# sample identity - §2 of the directive
+# ------------------------------------------------------------------
+# A sample is a thing with a name and a history, not a revision of an
+# earlier one. SAFETY_SAMPLE_02 is a NEW targeted safety round. It does
+# not correct, replace or amend SAFETY_SAMPLE_01, which stands on its own
+# as a result about the sampling apparatus.
+SAMPLE_ID = "SAFETY_SAMPLE_02"
+SAMPLE_CLASS = "TARGETED_SAFETY_VALIDATION_SAMPLE"
+
+ANCESTRY = (
+    {"SAMPLE_ID": "SAFETY_SAMPLE_01",
+     "PROTOCOL_VERSION": 3,
+     "PROTOCOL_HASH":
+         "18853629a9d5d40d4f5b817e54af2cd13a4038090320819e0a1a31a13fcc7c3b",
+     "REFERENCE_A_SHA256":
+         "46427972f425000ed445dd46116b43e9addd9cdf0790e54f9208b909fca08258",
+     "RELATION_TO_THIS_SAMPLE": "ANCESTOR_NOT_SUPERSEDED",
+     "WHERE_IT_IS_KEPT": "safety_sample_01_apparatus_result/"},
+)
+
+SAFETY_SAMPLE_01_IS_A_RESULT_NOT_A_MISTAKE = (
+    "SAFETY_SAMPLE_01 is preserved exactly as run, with its frozen "
+    "Reference A, and it is not overwritten, re-scored or re-read. It is "
+    "an APPARATUS AND SAMPLING result, and this is its finding:\n\n"
+    "  THE SOURCE-SIGNATURE SAMPLING STRATEGY DID NOT PROVIDE ENOUGH\n"
+    "  OPENING AND GLAZED_PHYSICAL_SEPARATOR EXAMPLES TO ANSWER THE\n"
+    "  SAFETY QUESTION.\n\n"
+    "Forty features were drawn on mechanical source signatures - a pair "
+    "at a wall thickness, a member on an opening layer, door geometry "
+    "near, a fitted-unit offset. The blind reference read twenty-one of "
+    "them as ANNOTATION_OR_DIMENSION and left ONE opening and ONE glazed "
+    "separator. A question about separator against opening cannot be "
+    "answered on one of each.\n\n"
+    "That is a real measurement about the strategy, obtained honestly and "
+    "worth keeping. It says the signatures were too weak a proxy: an "
+    "annotation line can sit near a door, cross a wall thickness and run "
+    "along the envelope, and on this drawing it does")
+
+SAFETY_SAMPLE_02_IS_A_NEW_ROUND = (
+    "this is a new targeted safety-validation round, not a corrected "
+    "version of SAFETY_SAMPLE_01. It carries its own sample id, its own "
+    "registers and its own freeze. Its ancestry to SAFETY_SAMPLE_01 is "
+    "recorded so the two can be read together, and neither stands in for "
+    "the other")
 
 SUPERSEDED_PROTOCOL_V4_HASH = (
     "cdaa8108be7c07d7129f928a8cc83822d1a022c05618810c51f855efddda8dde")
@@ -402,38 +448,99 @@ NO_IRRELEVANT_QUESTION_REACHES_THE_READER = (
 SAMPLE_MIN = 32
 SAMPLE_MAX = 40
 
+# ------------------------------------------------------------------
+# what may and may not choose a feature - §3 of the directive
+# ------------------------------------------------------------------
+SELECTION_MAY_ONLY_USE = (
+    "confirmed door evidence from the frozen door register",
+    "the frozen gap and portal registers",
+    "wall interruption evidence",
+    "established wall roles from E1.4",
+    "opening-layer evidence, by the drawing's own layer names",
+    "the exterior and facade relationship, by the envelope band",
+    "glazing and window candidate geometry where the frozen evidence "
+    "makes it deterministic",
+    "counter, cabinet and fitted-unit roles established by E1.4",
+    "structural and column roles established by E1.4",
+    "hidden, overhead and annotation roles established by E1.4",
+)
+
+SELECTION_MAY_NOT_USE = (
+    "any A19 answer, from this experiment or any earlier one",
+    "any previous reference semantic label, including SAFETY_SAMPLE_01's",
+    "any checker answer",
+    "known room geometry",
+    "benchmark areas",
+    "closure success or failure",
+    "a human picking an easy case",
+)
+
+THE_SELECTION_QUESTION = (
+    "WHICH FROZEN SOURCE SIGNATURES ARE LIKELY TO PRODUCE EXAMPLES FROM "
+    "THE CATEGORY WE NEED TO TEST? - and never: which examples do we "
+    "already know A19 will classify correctly? The second question is "
+    "the one that would make this whole round worthless, and it is the "
+    "easier one to answer, which is why it is named here")
+
+A_STRATUM_NAME_IS_A_TARGET_NOT_AN_ANSWER = (
+    "each stratum below is named for the safety category it is TRYING to "
+    "produce, because the sample is deliberately balanced across those "
+    "categories. The name states what the source signature aims at. It "
+    "does not state what the feature is. A feature in "
+    "WINDOW_OR_GLAZED_CANDIDATE may turn out to be annotation, and the "
+    "reference is the only thing that may say so. No stratum name "
+    "reaches any reader: the blind package is searched for every one of "
+    "them before a reader is given it")
+
 # Source signatures, not semantic claims. Each is a mechanical property of
 # the drawing chosen to make a target category likely to appear. What a
 # feature IS remains for the reference to say.
+# Read in order; the FIRST rule that fits decides. The annotation rule is
+# first on purpose: a feature whose every member is already established as
+# drawing apparatus may reach no other stratum, whatever its geometry
+# looks like. That single rule is what SAFETY_SAMPLE_01 lacked.
 STRATA = (
-    ("S1_MATERIAL_WALL_BODY", 6,
+    ("DIMENSION_OR_ANNOTATION_CANDIDATE", 3,
+     "EVERY member carries an established dimension, witness, annotation, "
+     "level or grid role. A small control, deliberately capped: "
+     "SAFETY_SAMPLE_01 was half annotation and measured almost nothing"),
+    ("SOLID_SEPARATOR_CANDIDATE", 6,
      "a member carries the established role MATERIAL_WALL_FACE and the "
      "feature holds a pair of parallel members at a wall thickness"),
-    ("S2_WINDOW_LAYER", 6,
+    ("WINDOW_OR_GLAZED_CANDIDATE", 6,
      "a member sits on a layer the drawing names for windows or glazing. "
      "The deterministic layer establishes NO glazing anywhere on this "
-     "floor, so the layer name is the only source evidence there is"),
-    ("S3_DOOR_OR_RECORDED_OPENING", 6,
+     "floor, so the layer name is the only source evidence there is, and "
+     "the shortfall rule below applies to it before any other stratum"),
+    ("DOOR_OR_OPENING_CANDIDATE", 6,
      "the feature spans a gap the frozen gap register recorded as a "
-     "portal, or a member sits on a door layer, or door geometry lies "
-     "within DOOR_REACH_MM of a member carrying a material wall face"),
-    ("S4_FITTED_JOINERY", 5,
+     "portal, or a member sits on a door layer, or confirmed door "
+     "geometry lies within DOOR_REACH_MM of a member carrying an "
+     "established material wall face"),
+    ("COUNTER_CABINET_OR_FITTED_UNIT_CANDIDATE", 5,
      "a member carries an established casework, cabinet-front, "
      "counter-edge, fixture or furniture role"),
-    ("S5_STRUCTURAL_MEMBER", 4,
+    ("COLUMN_OR_OBSTACLE_CANDIDATE", 4,
      "a member carries an established column role, or an unresolved "
      "column-candidate role, or sits on a structural layer"),
-    ("S6_STAIR_OR_NOT_IN_CUT_PLANE", 4,
+    ("STAIR_HIDDEN_OR_OVERHEAD_CANDIDATE", 4,
      "a member carries an established stair role, or its line semantics "
-     "place it above or below the cut plane"),
-    ("S7_ANNOTATION_CONTROL", 3,
-     "every member carries a dimension, witness, annotation or level "
-     "role. A small control, deliberately capped: the previous sample "
-     "was half annotation and measured almost nothing"),
-    ("S8_UNRESOLVED_IN_THE_CUT_PLANE", 6,
+     "place it above or below the visible cut plane"),
+    ("GENUINELY_AMBIGUOUS_HIGH_IMPACT", 6,
      "no member's role is established, and the line semantics place the "
-     "feature in the visible cut plane"),
+     "feature in the visible cut plane. These are the features a "
+     "deterministic engine cannot settle, which is what makes them worth "
+     "asking a reader about"),
 )
+
+TARGETS_ARE_WHERE_SOURCE_AVAILABILITY_PERMITS = (
+    "each target above is a ceiling on what will be taken, not a quota to "
+    "be met. A stratum the drawing cannot fill records the shortfall, "
+    "with the number of candidates it actually had, and the sample comes "
+    "out smaller. Nothing is invented, stretched, relabelled or borrowed "
+    "from a neighbouring stratum to make a target. A short stratum is a "
+    "finding about the drawing; a filled one that was filled dishonestly "
+    "is a finding about nothing")
 
 EXCLUDED_FROM_EVERY_STRATUM_BUT_THE_CONTROL = (
     "a feature whose every member carries a dimension, witness, "
@@ -597,6 +704,10 @@ DUAL_REFERENCE_RULE = (
     "the first reference"
 )
 
+# every topology-critical feature is read twice, independently. These are
+# the same five classes the headline reports, which is not a coincidence:
+# the features whose answer changes the building are the features whose
+# answer has to be established twice
 GEOMETRY_CHANGING_RELATIONS = (
     PHYSICAL_SEPARATOR, GLAZED_PHYSICAL_SEPARATOR, OPENING_IN_SEPARATOR,
     NON_SEPARATOR_FEATURE, OBSTACLE,
@@ -681,6 +792,56 @@ ABSTAINING_IS_NOT_AN_ERROR = (
     "reported, and it never triggers a critical-error gate. A reader that "
     "abstains costs a human a look; a reader that guesses costs a wrong "
     "building, and the two are not scored alike")
+
+# ------------------------------------------------------------------
+# what the headline is - §9 of the directive
+# ------------------------------------------------------------------
+TOPOLOGY_CRITICAL_CLASSES = (
+    PHYSICAL_SEPARATOR,
+    GLAZED_PHYSICAL_SEPARATOR,
+    OPENING_IN_SEPARATOR,
+    NON_SEPARATOR_FEATURE,
+    OBSTACLE,
+)
+
+THE_HEADLINE_IS_TOPOLOGY_CRITICAL_SAFETY = (
+    "the headline of this experiment is per-class topology-critical "
+    "safety, reported separately for SOLID SEPARATOR, GLAZED SEPARATOR, "
+    "OPENING, NON-SEPARATOR and OBSTACLE. It is NOT aggregate "
+    "classification accuracy.\n\n"
+    "An aggregate hides exactly the thing that matters. A reader that is "
+    "right about thirty-five annotation lines and wrong about the one "
+    "doorway scores well and builds the wrong building. The per-class "
+    "table is what gets read first, and each class carries its own "
+    "denominator so a class with two examples cannot look like a class "
+    "with twenty")
+
+AGGREGATE_ACCURACY_IS_REPORTED_BUT_IS_NOT_THE_HEADLINE = (
+    "an aggregate figure is still computed and still published, because "
+    "hiding it would be its own kind of dishonesty. It is reported below "
+    "the per-class table and it never decides the authority level on its "
+    "own")
+
+# ------------------------------------------------------------------
+# the sample is frozen before a reader sees it - §8 of the directive
+# ------------------------------------------------------------------
+SAMPLE_FREEZE_RULE = (
+    "the sample selection is frozen, hashed and recorded BEFORE any "
+    "reference reader is opened. After that freeze no feature may be "
+    "added, dropped, swapped or re-rendered for this round. A sample "
+    "that can still move while its answers arrive is not a sample, it is "
+    "a search")
+
+ORDER_OF_WORK = (
+    "1. select and render, from frozen deterministic evidence only",
+    "2. FREEZE THE SAMPLE",
+    "3. blind Reference A over every admitted feature",
+    "4. independent Reference B over every topology-critical feature",
+    "5. FREEZE THE REFERENCE",
+    "6. A19",
+    "7. the narrow checker",
+    "8. scoring, then the decision report and the freeze",
+)
 
 # §16 - declared before any score exists
 THE_ASYMMETRIC_GATE = (
@@ -811,6 +972,26 @@ def record() -> dict:
     return {
         "EXPERIMENT_ID": EXPERIMENT_ID,
         "PROTOCOL_VERSION": PROTOCOL_VERSION,
+        "SAMPLE_ID": SAMPLE_ID,
+        "SAMPLE_CLASS": SAMPLE_CLASS,
+        "ANCESTRY": [dict(a) for a in ANCESTRY],
+        "safety_sample_01_is_a_result_not_a_mistake":
+            SAFETY_SAMPLE_01_IS_A_RESULT_NOT_A_MISTAKE,
+        "safety_sample_02_is_a_new_round": SAFETY_SAMPLE_02_IS_A_NEW_ROUND,
+        "SELECTION_MAY_ONLY_USE": list(SELECTION_MAY_ONLY_USE),
+        "SELECTION_MAY_NOT_USE": list(SELECTION_MAY_NOT_USE),
+        "THE_SELECTION_QUESTION": THE_SELECTION_QUESTION,
+        "TOPOLOGY_CRITICAL_CLASSES": list(TOPOLOGY_CRITICAL_CLASSES),
+        "the_headline_is_topology_critical_safety":
+            THE_HEADLINE_IS_TOPOLOGY_CRITICAL_SAFETY,
+        "aggregate_accuracy_is_reported_but_is_not_the_headline":
+            AGGREGATE_ACCURACY_IS_REPORTED_BUT_IS_NOT_THE_HEADLINE,
+        "SAMPLE_FREEZE_RULE": SAMPLE_FREEZE_RULE,
+        "ORDER_OF_WORK": list(ORDER_OF_WORK),
+        "a_stratum_name_is_a_target_not_an_answer":
+            A_STRATUM_NAME_IS_A_TARGET_NOT_AN_ANSWER,
+        "targets_are_where_source_availability_permits":
+            TARGETS_ARE_WHERE_SOURCE_AVAILABILITY_PERMITS,
         "SUPERSEDED_PROTOCOL_V1_HASH": SUPERSEDED_PROTOCOL_V1_HASH,
         "SUPERSEDED_PROTOCOL_V2_HASH": SUPERSEDED_PROTOCOL_V2_HASH,
         "SUPERSEDED_PROTOCOL_V3_HASH": SUPERSEDED_PROTOCOL_V3_HASH,

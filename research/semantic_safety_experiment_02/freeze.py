@@ -51,8 +51,32 @@ def decision() -> dict:
         ("AUTHORITY", auth), ("REFERENCE_A", refa),
         ("REFERENCE_CONFLICTS", confl)) if v is None]
 
+    topo = read("scores/TOPOLOGY_CRITICAL_SCORE.json")
+    samp = read("SAMPLE_FREEZE.json")
     return {
         "EXPERIMENT_ID": P.EXPERIMENT_ID,
+        "SAMPLE_ID": P.SAMPLE_ID,
+        "SAMPLE_CLASS": P.SAMPLE_CLASS,
+        "ANCESTRY": [dict(a) for a in P.ANCESTRY],
+        "safety_sample_02_is_a_new_round": P.SAFETY_SAMPLE_02_IS_A_NEW_ROUND,
+
+        # ---- THE HEADLINE, first, before any aggregate ----
+        "HEADLINE_TOPOLOGY_CRITICAL_SAFETY": {
+            "this_is_the_headline":
+                P.THE_HEADLINE_IS_TOPOLOGY_CRITICAL_SAFETY,
+            "BY_CLASS": (topo or {}).get("BY_CLASS"),
+            "CLASSES_WITH_TOO_FEW_EXAMPLES_TO_CARRY_A_RATE":
+                (topo or {}).get(
+                    "CLASSES_WITH_TOO_FEW_EXAMPLES_TO_CARRY_A_RATE"),
+            "WHAT_A_THIN_CLASS_MEANS": (topo or {}).get(
+                "WHAT_A_THIN_CLASS_MEANS"),
+        },
+        "SAMPLE_FREEZE_SHA256": (samp or {}).get("SAMPLE_FREEZE_SHA256"),
+        "PER_CATEGORY_TARGETS_AND_WHAT_THE_DRAWING_SUPPLIED":
+            (samp or {}).get(
+                "PER_CATEGORY_TARGETS_AND_WHAT_THE_DRAWING_SUPPLIED"),
+        "SAMPLE_SHORTFALLS": (samp or {}).get("SHORTFALLS"),
+
         "PROTOCOL_VERSION": P.PROTOCOL_VERSION,
         "PROTOCOL_HASH": P.protocol_hash(),
         "EXPERIMENT_CLASS": P.EXPERIMENT_CLASS,
@@ -85,7 +109,9 @@ def decision() -> dict:
         "5_A19_RELATION_DISTRIBUTION":
             (read("a19/PRIMARY_RELATIONS.json") or {}).get(
                 "RELATION_DISTRIBUTION"),
-        "6_RELATION_ACCURACY": {
+        "6_AGGREGATE_RELATION_ACCURACY_NOT_THE_HEADLINE": {
+            "why_it_is_not_the_headline":
+                P.AGGREGATE_ACCURACY_IS_REPORTED_BUT_IS_NOT_THE_HEADLINE,
             "numerator": (prim or {}).get("relation_accuracy_numerator"),
             "denominator": (prim or {}).get(
                 "relation_accuracy_denominator"),
@@ -176,7 +202,16 @@ def main() -> int:
         "files": len(files),
         "FILES": {k: files[k] for k in sorted(files)},
     })
-    print(json.dumps({"FREEZE_SHA256": freeze, "files": len(files),
+    print(json.dumps({"SAMPLE_ID": P.SAMPLE_ID,
+                      "HEADLINE_BY_CLASS": [
+                          {"CLASS": r["CLASS"],
+                           "recall": [r["recall_numerator"],
+                                      r["recall_denominator"]],
+                           "precision": [r["precision_numerator"],
+                                         r["precision_denominator"]]}
+                          for r in (dec["HEADLINE_TOPOLOGY_CRITICAL_SAFETY"]
+                                    .get("BY_CLASS") or ())],
+                      "FREEZE_SHA256": freeze, "files": len(files),
                       "AUTHORITY_LEVEL":
                           dec["16_AUTHORITY_LEVEL"]["AUTHORITY_LEVEL"],
                       "REGISTERS_MISSING": dec["REGISTERS_MISSING"]},

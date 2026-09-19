@@ -45,10 +45,14 @@ DOOR_NAMES = ("D", "DR", "DOOR")
 COLUMN_NAMES = ("COL", "S-COL", "STRUCT")
 HOMOGENEOUS_SHARE = 0.9
 
+# A stratum name says which safety category the selection was AIMING at,
+# so in front of a reader it would be a hint at the answer. Every one of
+# them is screened out of the blind package along with the rest.
 FORBIDDEN_IN_A_BLIND_PACKAGE = (
     "PASS_A", "PASS_B", "A19", "E1_4", "SEMANTIC_ENTITY_ROLE",
     "REFERENCE_ROLE_DISTRIBUTION", "CHECKER_COMPARISON",
-)
+    "SAFETY_SAMPLE", "STRATUM", "SELECTED_BECAUSE",
+) + tuple(name for name, _, _ in P.STRATA)
 
 
 class Args:
@@ -202,38 +206,49 @@ STRUCTURAL_ROLES = (ir.COLUMN, ir.COLUMN_CANDIDATE_UNRESOLVED)
 
 
 def _stratum(sig):
-    """First rule that fits, in the declared order.
+    """The first rule that fits, in the declared order.
 
-    v4 stratifies on the established semantic role E1.4 already assigns
-    each interval, on the frozen gap and door registers, and on the
-    drawing's own layer names - evidence that predicts the category. It
-    does not consult any reference or A19 answer.
+    Every input below is FROZEN DETERMINISTIC evidence: the semantic role
+    E1.4 already established for each interval, the frozen gap and door
+    registers, the drawing's own layer names, and line semantics. No A19
+    answer, no reference label from any round, no checker answer, no room
+    geometry, no benchmark area and no closure result takes any part in
+    it. The question asked here is which source signatures are LIKELY to
+    produce a category - never which examples will be answered correctly.
+
+    A stratum's NAME says what it is TRYING to produce. It does not say
+    what the feature is. The reference is the only thing that may say
+    that, and no stratum name ever reaches a reader.
     """
     roles = set(sig["MEMBER_ROLES"])
-    # the one rule the first sample lacked
+
+    # FIRST, and deliberately so: a feature every one of whose members is
+    # already established as drawing apparatus may reach no other
+    # stratum, whatever its geometry looks like. SAFETY_SAMPLE_01 lacked
+    # this rule and came back half annotation
     if roles and roles <= set(ANNOTATION_ROLES):
-        return "S7_ANNOTATION_CONTROL"
+        return "DIMENSION_OR_ANNOTATION_CANDIDATE"
     if (ir.MATERIAL_WALL_FACE in roles
             and sig["A_PAIR_AT_A_WALL_THICKNESS"]):
-        return "S1_MATERIAL_WALL_BODY"
+        return "SOLID_SEPARATOR_CANDIDATE"
     if sig["ON_A_WINDOW_LAYER"]:
-        return "S2_WINDOW_LAYER"
+        return "WINDOW_OR_GLAZED_CANDIDATE"
     if (sig["SPANS_A_RECORDED_PORTAL"] or sig["ON_A_DOOR_LAYER"]
             or (sig["DOOR_GEOMETRY_IS_NEAR"]
                 and ir.MATERIAL_WALL_FACE in roles)):
-        return "S3_DOOR_OR_RECORDED_OPENING"
+        return "DOOR_OR_OPENING_CANDIDATE"
     if roles & set(JOINERY_ROLES):
-        return "S4_FITTED_JOINERY"
+        return "COUNTER_CABINET_OR_FITTED_UNIT_CANDIDATE"
     if roles & set(STRUCTURAL_ROLES) or sig["ON_A_STRUCTURAL_LAYER"]:
-        return "S5_STRUCTURAL_MEMBER"
+        return "COLUMN_OR_OBSTACLE_CANDIDATE"
     if (ir.STAIR_GEOMETRY in roles
             or sig["NOT_IN_THE_VISIBLE_CUT_PLANE"]):
-        return "S6_STAIR_OR_NOT_IN_CUT_PLANE"
+        return "STAIR_HIDDEN_OR_OVERHEAD_CANDIDATE"
     if roles <= {ir.UNKNOWN} and sig["IN_THE_CUT_PLANE"]:
-        return "S8_UNRESOLVED_IN_THE_CUT_PLANE"
+        return "GENUINELY_AMBIGUOUS_HIGH_IMPACT"
     if ir.MATERIAL_WALL_FACE in roles:
-        return "S1_MATERIAL_WALL_BODY"
-    return "S8_UNRESOLVED_IN_THE_CUT_PLANE"
+        return "SOLID_SEPARATOR_CANDIDATE"
+    return "GENUINELY_AMBIGUOUS_HIGH_IMPACT"
 
 
 def _crop_plan(feat):
@@ -307,7 +322,7 @@ def main() -> int:
     t0 = time.time()
     a = Args()
     OUT.mkdir(parents=True, exist_ok=True)
-    keep = OUT / "round1_superseded_sample"
+    keep = OUT / "safety_sample_01_apparatus_result"
     if not keep.exists():
         keep.mkdir(parents=True)
         for name in ("00_PROTOCOL.json",
@@ -320,13 +335,26 @@ def main() -> int:
         for d in ("blind_sandbox", "crops", "reference_raw"):
             if (OUT / d).exists():
                 shutil.move(str(OUT / d), str(keep / d))
-        (keep / "WHY_THIS_SAMPLE_IS_SUPERSEDED.json").write_text(
+        (keep / "APPARATUS_RESULT.json").write_text(
             json.dumps({
+                "SAMPLE_ID": "SAFETY_SAMPLE_01",
+                "RESULT_CLASS": "APPARATUS_AND_SAMPLING_RESULT",
+                "THIS_IS_NOT_A_FAILED_DRAFT": (
+                    "it was run honestly, start to finish, and it "
+                    "measured something true about the sampling "
+                    "strategy. It is preserved exactly as run and is not "
+                    "overwritten, re-scored or re-read"),
+                "THE_FINDING":
+                    P.SAFETY_SAMPLE_01_IS_A_RESULT_NOT_A_MISTAKE,
+                "SUCCESSOR": {
+                    "SAMPLE_ID": P.SAMPLE_ID,
+                    "RELATION": "NEW_TARGETED_ROUND_NOT_A_CORRECTION",
+                    "safety_sample_02_is_a_new_round":
+                        P.SAFETY_SAMPLE_02_IS_A_NEW_ROUND},
                 "WHY": P.WHY_V3_WAS_SUPERSEDED,
                 "the_reference_is_not_a_sampling_aid":
                     P.THE_REFERENCE_IS_NOT_A_SAMPLING_AID,
-                "IT_IS_KEPT_AS_EVIDENCE_ABOUT_THE_APPARATUS": True,
-                "ITS_ANSWERS_TOOK_NO_PART_IN_SELECTING_THE_NEW_SAMPLE":
+                "ITS_ANSWERS_TOOK_NO_PART_IN_SELECTING_SAFETY_SAMPLE_02":
                     True,
             }, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     proto_hash = write(OUT / "00_PROTOCOL.json", P.record())
