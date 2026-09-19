@@ -50,6 +50,23 @@ ARTIFACT_SHA256 = {
         "eedf2d9ae6a6ae8baabed9a42cb1d04b68d7228433b308b63337c1f517a497ff",
 }
 
+PARTIAL_STATE_FREEZE_SHA256 = (
+    "dd0d1958a0a56e496e6ab7cea0e153008275ccd148995a1f327e992da3d03e5b")
+VALIDATOR_SHA256_AT_PARTIAL_FREEZE = (
+    "8949697ccb8ea4f8adf252c1225c0351a462606b5156b2b2fce1029a22a81b4f")
+RAW_OUTPUT_SHA256_AT_PARTIAL_FREEZE = {
+    "trace_raw/CASE-1-NORMAL-PLASTER.json":
+        "e7f8f4c76e7391499871e394c8f420e8918da33da3fc465e1d1453df745425e4",
+    "trace_raw/CASE-4-STAIR.json":
+        "dd616918584fd46d6c82f076b2740fc0a6c069dce8b0ab61089b27e4b4f59d99",
+}
+CONTINUATION_PROMPT_SHA256 = {
+    "prompts_trace/CASE-3-DOOR-AND-WINDOW.txt":
+        "77b1cd7483d94f79d5e9d1241cca4b4063c6a43f1bdf2dea07693145abcf856f",
+    "prompts_trace/CASE-6-ROOF-PARAPET.txt":
+        "5f2098241a4331405f8c92784adad4ee1a5de8b48b58fe07fe4f77ccea6f914a",
+}
+
 TRACE_READING_SHA256 = {
     "trace_raw/CASE-1-NORMAL-PLASTER.json": None,   # filled by verify()
     "trace_raw/CASE-4-STAIR.json": None,
