@@ -67,10 +67,50 @@ CONTINUATION_PROMPT_SHA256 = {
         "5f2098241a4331405f8c92784adad4ee1a5de8b48b58fe07fe4f77ccea6f914a",
 }
 
-TRACE_READING_SHA256 = {
-    "trace_raw/CASE-1-NORMAL-PLASTER.json": None,   # filled by verify()
-    "trace_raw/CASE-4-STAIR.json": None,
+TRACE_READING_SHA256 = {f"trace_raw/{k}": v for k, v in {
+    "CASE-1-NORMAL-PLASTER.json": "e7f8f4c76e7391499871e394c8f420e8918da33da3fc465e1d1453df745425e4",
+    "CASE-3-DOOR-AND-WINDOW.json": "931d4f81051be322eabd6ea69e595f933ac885dbe0ae8f4899f961b01d08fa91",
+    "CASE-4-STAIR.json": "dd616918584fd46d6c82f076b2740fc0a6c069dce8b0ab61089b27e4b4f59d99",
+    "CASE-6-ROOF-PARAPET.json": "5cee27b52bf162ae34ef526feb7fd62fad1b5e52e77531ba390dc6932be8969a"
+}.items()}
+
+# ------------------------------------------------------------------
+# FINAL state: all four cases, one validator, one guard
+# ------------------------------------------------------------------
+FINAL_VALIDATOR_SHA256 = (
+    "25fc1bceb6437833efbb26cef7e119796537c86e4a5ab008d0a383b0e8f64681")
+FINAL_ARTIFACT_SHA256 = {
+    "RAW_OUTPUT_FREEZE.json": "75cb7642549d0f8680c092bb06f6e23049af1cac392b64bfa47c2bbedf9ee437",
+    "TRACE_REGISTER.json": "29ae3d8305957457ce996d9afc4a36459bdeab04e86ea8ce15a7ed85c0749396",
+    "OVERLAY_INDEX.json": "f0e49984780f720646f4afba2cc6db28a1da2b8068c84056a97f341d93a0ca12",
+    "ORIGINAL_SOURCE_MAPPING_TEST.json": "28b2a918187a15e83251aa0c960b3e8f6d0c32986b617f1352accf60fa746783",
+    "TRACE_PILOT_REPORT.json": "6b21ce408c88cb0828eaeb0749190d987f92ad247ab201042e80326ff5cd120b",
+    "PREFLIGHT_RESULT.json": "6f2de0ddec0a38278e3f52e7c77ecb5913c98af4144ab6cf8af6def96aa21837"
 }
+
+GUARD_DEFECT_FOUND_AT_FINAL_PASS = {
+    "WHAT": "source_access_guard scanned NEW_SOURCE_REQUIREMENTS for sheet "
+            "names, so a reader ASKING for the floor plan above tripped "
+            "the access guard as if it had read it",
+    "GUARD_SHA256_BEFORE": "ecf3f4c6d9a8fa47",
+    "GUARD_SHA256_AFTER": "be99126f879b225c",
+    "FIX": "request channels are excluded from the mention scan and "
+           "reported separately as REQUESTED_UNMOUNTED_SOURCES; a request "
+           "is not an access",
+    "GENERIC_NOT_CASE_SPECIFIC": True,
+    "RAW_OUTPUTS_UNTOUCHED": True,
+    "RERUN_OVER_ALL_FOUR_FROZEN_RAW_OUTPUTS": True,
+}
+
+SOURCE_REQUIREMENT_DISCOVERED_DURING_TRACE = {
+    "CASE-3-DOOR-AND-WINDOW": ["FIRST_FLOOR_PLAN_OR_REFLECTED_CEILING_PLAN"],
+    "WHY_IT_MATTERS": "the pre-read gave FIRST_FLOOR_PLAN to CASE-1 and "
+                      "CASE-4 but not CASE-3; the CASE-3 reader found on "
+                      "its own that dashed features in the SALOON need the "
+                      "floor above, and asked through the authorised "
+                      "channel instead of browsing",
+}
+
 
 # ------------------------------------------------------------------
 # what did not happen, recorded as plainly as what did
@@ -78,8 +118,12 @@ TRACE_READING_SHA256 = {
 COVERAGE = {
     "SUBSET_FROZEN": ["CASE-1-NORMAL-PLASTER", "CASE-3-DOOR-AND-WINDOW",
                       "CASE-4-STAIR", "CASE-6-ROOF-PARAPET"],
-    "TRACED": ["CASE-1-NORMAL-PLASTER", "CASE-4-STAIR"],
-    "NOT_TRACED": ["CASE-3-DOOR-AND-WINDOW", "CASE-6-ROOF-PARAPET"],
+    "TRACED": ["CASE-1-NORMAL-PLASTER", "CASE-3-DOOR-AND-WINDOW",
+               "CASE-4-STAIR", "CASE-6-ROOF-PARAPET"],
+    "NOT_TRACED": [],
+    "HISTORY": "CASE-3 and CASE-6 failed on a session rate limit at the "
+               "first attempt and were rerun from their frozen packets "
+               "and prompts unchanged; CASE-1 and CASE-4 were not rerun",
     "WHY_NOT": (
         "both readers terminated on an API session rate limit before "
         "writing their file. This is an infrastructure failure, not a "
@@ -95,16 +139,18 @@ COVERAGE = {
 }
 
 RESULTS = {
-    "TRACES_ACCEPTED": 119,
-    "TRACES_REJECTED": 1,
+    "VALID_TRACE_RECORDS": 255,
+    "LOCATABLE_TRACES": 250,
+    "NON_LOCATABLE_VALID_TRACES": 5,
+    "INVALID_TRACE_RECORDS": 0,
+    "SUPPORTED_BY_LINKS_RESOLVED": 151,
     "DANGLING_SUPPORTED_BY": 0,
-    "SUPPORTED_BY_LINKS_RESOLVED": 74,
-    "OVERLAY_IMAGES": 10,
-    "ROUND_TRIP_WORST_ERROR_PX": 0.0,
-    "RANDOM_POINT_INK_AGREEMENT": 1.0,
-    "REAL_TRACE_MAPPING_AGREEMENT": 1.0,
-    "REAL_TRACES_CHECKED": 119,
+    "SOURCE_ACCESS": "WITHIN_SANDBOX on all four",
+    "COORDINATE_ROUNDTRIP_PASS": True,
+    "SOURCE_INK_CORRESPONDENCE_PASS": True,
+    "TRACE_COORDINATE_MAPPING_PASS": True,
     "PARAMETRIC_RECALCULATION_ALL_CHECKS_PASS": True,
+    "CRITERIA_A_TO_I": "PASS",
 }
 
 # ------------------------------------------------------------------
