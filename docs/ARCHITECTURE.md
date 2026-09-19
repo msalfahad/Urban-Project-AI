@@ -87,6 +87,35 @@ time.
 | E21 | Campaign Budget & KPIs | Channel weights → KWD that sums exactly; cost per lead. **Built.** | 4 |
 | E22 | Document Numbers | Reference numbers, price totals, payment splits, validity dates, amounts in Arabic words for quotations and contracts. **Built.** | 3 |
 
+## Geometry is four layers, not three
+
+Under evaluation, not built. A quantity surveyor closes a doorway on purpose
+to make a room measurable, then deducts the door by rule — the closure is a
+measurement instrument, never a claim that a wall is there. This system has
+only ever had three layers and so had to obtain measurable regions from
+physical geometry, which is the documented cause of a long run of failures.
+
+| | layer | answers |
+|---|---|---|
+| A | `PHYSICAL_GEOMETRY` | what physically exists |
+| B | `TOPOLOGICAL_RELATION` | door, opening, glazing, open passage, connectivity |
+| C | `QS_MEASUREMENT_GEOMETRY` | synthetic zero-material closures that make a measurement region well-defined |
+| D | `TRADE_QUANTITY` | deterministic quantity after deductions, additions and rules |
+
+A measurement closure carries `PHYSICAL_MATERIAL_PRESENT = false`,
+`WALL_LENGTH_CONTRIBUTION = 0`, `MEASUREMENT_CONSTRUCTION_ONLY = true`,
+`REVERSIBLE = true` and exact provenance to the opening that caused it. It
+is trade-dependent, never universal: appropriate for floor area and plaster,
+dangerous for wall tile, blockwork, egress and fire compartmentation.
+
+Its chief value is not that more rooms close. It is that `PHYSICAL_GEOMETRY`
+is finally allowed to be an honest description of the drawing — open where
+the drawing is open.
+
+See **[QS_MEASUREMENT_CLOSURE.md](QS_MEASUREMENT_CLOSURE.md)** for the full
+evaluation, the evidence from the frozen E1.4 registers, the enforceable
+invariants, and the six questions answered.
+
 ## Why this split
 
 An earlier plan made everything an agent — 33 agents. It would have paid tokens
