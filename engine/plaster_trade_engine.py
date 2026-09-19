@@ -100,7 +100,8 @@ def calculate(region: dict, reg: dict, *, treatment: str) -> dict:
     inputs = {"PRINCIPAL_WALL_FACE": [], "REVEALS_AND_RETURNS": [],
               "STEEL_PROFILES": []}
 
-    if region["MEASUREMENT_REGION_STATUS"] != "MEASUREMENT_REGION_CLOSED":
+    if region["MEASUREMENT_REGION_STATUS"] not in (
+            "MEASUREMENT_REGION_CLOSED", "MEASUREMENT_RUN_ESTABLISHED"):
         return {"TREATMENT": treatment, "REGION_ID": region["REGION_ID"],
                 "QUANTITY_STATE": "NOT_ESTABLISHED",
                 "WHY": "the measurement region was not formed",

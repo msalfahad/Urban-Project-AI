@@ -157,3 +157,27 @@ def test_h_physical_hash_survives_closure():
     assert r["INVARIANTS"]["PHYSICAL_HASH_BEFORE"] == before
     assert r["INVARIANTS"]["PHYSICAL_HASH_AFTER_CLOSURE_REMOVAL"] == before
     assert M.canon_hash(walls) == before
+
+
+# I: a parapet is a run, not a cell - no ring, closures irrelevant, gross
+# is still the contributing sum and an unresolved edge still blocks it
+def test_i_linear_run_needs_no_ring_but_still_refuses_unresolved():
+    run = [wall("P1", (0, 0), (5, 0), 5.0), wall("P2", (5, 0), (5, 2), 2.0)]
+    r = M.build_region(region_id="I", physical_edges=run, sites=[],
+                       openings=[], trade="EXTERNAL_PLASTER", basis=M.LINEAR_RUN)
+    assert r["MEASUREMENT_REGION_STATUS"] == "MEASUREMENT_RUN_ESTABLISHED"
+    assert r["REGION_SHAPE"] == "LINEAR_RUN" and r["RING_REQUIRED"] is False
+    assert r["GROSS_BASIS"]["VALUE"] == 7.0
+    run[1] = wall("P2", (5, 0), (5, 2), 2.0, kind="UNRESOLVED_EDGE")
+    r2 = M.build_region(region_id="I", physical_edges=run, sites=[],
+                        openings=[], trade="EXTERNAL_PLASTER", basis=M.LINEAR_RUN)
+    assert r2["MEASUREMENT_REGION_STATUS"] == "MEASUREMENT_REGION_NOT_ESTABLISHED"
+
+
+def test_i_linear_run_never_closes_a_site():
+    run = [wall("P1", (0, 0), (5, 0), 5.0)]
+    r = M.build_region(region_id="I", physical_edges=run,
+                       sites=[site("S", (5, 0), (7, 0), 2.0)], openings=[],
+                       trade="EXTERNAL_PLASTER", basis=M.LINEAR_RUN)
+    assert r["SYNTHETIC_CLOSURES"] == []
+    assert r["GROSS_BASIS"]["VALUE"] == 5.0

@@ -46,7 +46,16 @@ SITE_TYPES = ("CONFIRMED_DOOR_OPENING", "CONFIRMED_WINDOW_OPENING",
 # Which site types a measurement basis is allowed to close. An
 # UNRESOLVED_GAP is never closed by any basis - that would be bridging a
 # gap the drawing did not establish.
+# A LINEAR_RUN is measured as a run of faces, not as a cell: a parapet, a
+# stair wall, a single facade. No ring is required and no site is closed;
+# the gross basis is still the sum of CONTRIBUTING edge lengths, and an
+# UNRESOLVED_EDGE on the run still blocks it. It is not a way to dodge
+# the ring test for a room - the basis is declared per region and
+# recorded in the output.
+LINEAR_RUN = "LINEAR_RUN"
+
 CLOSABLE_BY_BASIS = {
+    LINEAR_RUN: (),
     "WALL_FACE_PLASTER": ("CONFIRMED_DOOR_OPENING", "CONFIRMED_WINDOW_OPENING",
                           "MATERIAL_CONTINUITY"),
     "WALL_FACE_PLASTER_OPEN_PLAN_CELL": (
@@ -169,16 +178,19 @@ def build_region(*, region_id: str, physical_edges: list, sites: list,
                       if s["SITE_TYPE"] not in CLOSABLE_BY_BASIS.get(basis, ())]
 
     reasons = []
+    linear = basis == LINEAR_RUN
     if unresolved_edges:
         reasons.append({"REASON": "AN_UNRESOLVED_GAP_LIES_ON_THE_BOUNDARY",
                         "EDGES": unresolved_edges})
-    if dangling:
+    if dangling and not linear:
         reasons.append({"REASON": "THE_BOUNDARY_DOES_NOT_MEET_ITSELF",
                         "DANGLING_ENDPOINTS": [list(p) for p in dangling]})
-    if unclosed_sites:
+    if unclosed_sites and not linear:
         reasons.append({"REASON": "A_SITE_THIS_BASIS_MAY_NOT_CLOSE_LIES_ON_"
                                   "THE_BOUNDARY",
                         "SITES": unclosed_sites})
+    if linear and not physical_edges:
+        reasons.append({"REASON": "A_LINEAR_RUN_WITH_NO_EDGES"})
     formed = not reasons
 
     # gross basis: contributing edge lengths, never a perimeter
@@ -227,8 +239,11 @@ def build_region(*, region_id: str, physical_edges: list, sites: list,
         "TRADE": trade,
         "MEASUREMENT_BASIS": basis,
         "MEASUREMENT_REGION_STATUS": (
-            "MEASUREMENT_REGION_CLOSED" if formed
+            ("MEASUREMENT_RUN_ESTABLISHED" if linear
+             else "MEASUREMENT_REGION_CLOSED") if formed
             else "MEASUREMENT_REGION_NOT_ESTABLISHED"),
+        "REGION_SHAPE": "LINEAR_RUN" if linear else "CELL",
+        "RING_REQUIRED": not linear,
         "NOT_ESTABLISHED_BECAUSE": reasons or None,
         "PHYSICAL_EDGES": physical_edges,
         "SYNTHETIC_CLOSURES": closures,
