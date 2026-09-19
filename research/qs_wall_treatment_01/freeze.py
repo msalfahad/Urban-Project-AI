@@ -52,6 +52,9 @@ CODE = [
     "research/qs_wall_treatment_01/owner_review_v2.py",
     "engine/dimension_roles.py",
     "research/qs_wall_treatment_01/owner_plan_verification.py",
+    "research/qs_wall_treatment_01/owner_review_v3.py",
+    "research/qs_wall_treatment_01/se_elevation_source_audit.py",
+    "research/qs_wall_treatment_01/owner_review_v4.py",
 ]
 ARTIFACTS_ESTIMATE = [
     "P7757_OWNER_PARAMETERS.json", "OVERLAP_AUDIT.json",
@@ -71,6 +74,14 @@ ARTIFACTS_OWNER_EVIDENCE = ARTIFACTS_DUAL + [
     "P7757_WALL_TREATMENT_ESTIMATE_v3.json", "QS_TRACE_v3.md", "SENSITIVITY_v3.json",
     "DUAL_BASIS_v3.json", "A22_DUAL_BASIS_v3.json", "OWNER_REVIEW_V3.md",
     "decision_cards/S1_SALOON_DIMENSIONS.png"]
+ARTIFACTS_SE_AUDIT = ARTIFACTS_OWNER_EVIDENCE + [
+    "FREEZE_OWNER_EVIDENCE.json", "SE_ELEVATION_SOURCE_AUDIT.json",
+    "decision_cards/D1_SE_PARAPET_SOURCE_CARD.png", "OWNER_REVIEW_V4.md"] + [
+    f"decision_cards/se_native/{n}" for n in (
+        "DIM-07_130.png", "DIM-08_50.png", "DIM-10_50.png", "DIM-11_50.png", "DIM-13_1440.png",
+        "DIM-14_50.png", "DIM-15_420.png", "DIM-16_155.png", "DIM-17_193.png", "DIM-18_104.png",
+        "DIM-19_139.png", "DIM-20_20.png", "DIM-21_680.png", "below_parapet_139_windows.png",
+        "chain_104_139.png", "left_of_tower_97.png")]
 UPSTREAM = [
     P.TRACE_REGISTER,
     "data/experiments/A21_TRACE_SUFFICIENCY_01/TRACE_PILOT_REPORT.json",
@@ -98,7 +109,8 @@ def _git_head() -> str:
 
 def freeze(stage: str) -> dict:
     arts = {"estimate": ARTIFACTS_ESTIMATE, "a22": ARTIFACTS_A22, "final": ARTIFACTS_FINAL,
-            "dual": ARTIFACTS_DUAL, "owner_evidence": ARTIFACTS_OWNER_EVIDENCE}[stage]
+            "dual": ARTIFACTS_DUAL, "owner_evidence": ARTIFACTS_OWNER_EVIDENCE,
+            "se_audit": ARTIFACTS_SE_AUDIT}[stage]
     body = {
         "PHASE_ID": P.PHASE_ID, "ARTIFACT": f"FREEZE_{stage.upper()}",
         "STAGE": stage, "GIT_HEAD_AT_FREEZE": _git_head(),
@@ -106,7 +118,7 @@ def freeze(stage: str) -> dict:
         "UPSTREAM_SHA256": {u: (_sha(Path(u)) if Path(u).exists() else None) for u in UPSTREAM},
         "CODE_SHA256": {c: (_sha(Path(c)) if Path(c).exists() else None) for c in CODE},
         "ARTIFACT_SHA256": {a: (_sha(OUT / a) if (OUT / a).exists() else None) for a in arts},
-        "BENCHMARK_OPENED_BEFORE_THIS_FREEZE": stage in ("final", "dual", "owner_evidence"),
+        "BENCHMARK_OPENED_BEFORE_THIS_FREEZE": stage in ("final", "dual", "owner_evidence", "se_audit"),
         "STANDING_PROHIBITIONS": P.STANDING_PROHIBITIONS,
     }
     missing = [k for k, v in body["ARTIFACT_SHA256"].items() if v is None]

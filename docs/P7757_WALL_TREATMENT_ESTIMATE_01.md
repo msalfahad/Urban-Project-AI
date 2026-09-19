@@ -117,3 +117,28 @@ Estimate v3 carries that split; v1 and v2 stay frozen. The SALOON card
 `decision_cards/S1_SALOON_DIMENSIONS.png` shows setting-out spans in blue,
 plaster faces in green and the thickness annotation. Freeze:
 `FREEZE_OWNER_EVIDENCE.json`.
+
+## SE elevation owner source check (fourth checkpoint)
+
+The owner's second manual check ("155 exists; 50 is the top link of
+100 + 870 + 420 + 50; I see no 130 and no 104") was answered on the native
+scans of the original pages (SE elevation p4, B-B p9, A-A p8; embedded
+image hashes equal the frozen source hashes). Every audited dimension is
+recorded with sheet, page, hashes, text box, dimension line, tick endpoints,
+what each end terminates on, the physical owner candidate and a
+termination-based owner status (`SE_ELEVATION_SOURCE_AUDIT.json`,
+`decision_cards/se_native/`). Findings: 104 is printed inside the lattice
+zone and is a balustrade assembly height, not a misread of 139; 139 is
+independent; 130 exists only on B-B and belongs to the NW roof edge; 97
+sits on the arched feature left of the tower; 155 is tower top to dome
+apex; the SE 50 is a chain link whose lower tick is a dashed datum, while
+the tower parapet's 0.50 face is established on A-A. No text correction was
+needed. The earlier D1 figures (1.22 / 1.42 over 7.10 m) are withdrawn
+because a face height was applied over the lattice portion; the residual is
+the floor/parapet split on the solid portion (Option A 1.40 at the +9.70
+datum, recommended; Option B 1.22 at the drawn base line), 0.18 m² per
+metre run, and no established m² changes because the solid portion has no
+length. D2 is resolved provisionally from E1.4 and the DWG (edge level
+line, no plasterable face). D3 stays with the owner. Estimate v3 is
+unchanged. Cards: `decision_cards/D1_SE_PARAPET_SOURCE_CARD.png`; review
+`OWNER_REVIEW_V4.md`; freeze `FREEZE_SE_AUDIT.json`.

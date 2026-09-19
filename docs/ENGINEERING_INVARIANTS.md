@@ -3622,3 +3622,23 @@ opening for that opening only, never a universal door rule. An owner's
 manual plan verification is an evidence layer of its own
 (`OWNER_VERIFIED_DIMENSION_OWNERSHIP`) reconciled forward; it rewrites no
 frozen output.
+
+## §138 — A printed number is not a physical object, and neither is a plasterable face
+
+An owner's "I do not see this number" reopens a reading; it does not
+delete it. The check goes back to the native page (the embedded scan of
+the original PDF page, 1-based, hash-matched to the frozen
+`SOURCE_FILE_HASH`) and returns a source status per printed value
+(`ESTABLISHED`, `ESTABLISHED_ON_<OTHER_SHEET>_ONLY`,
+`TEXT_PRESENT_NOT_TRACED`, `NOT_FOUND`) with the exact `TEXT_BBOX`,
+dimension line, tick endpoints and a native crop. A misread is recorded as
+`DIMENSION_TEXT_CORRECTION` beside the historical reading, never over it.
+Ownership is decided by what each witness line terminates on, never by
+which element the text sits nearest: a `50` that is the top link of
+100 + 870 + 420 + 50 = 1440 is a `STOREY_LEVEL_HEIGHT_CHAIN` link, and a
+`155` from a tower top to a dome apex owns no face. A value enters plaster
+arithmetic only when `DIMENSION_OWNER_STATUS = OWNER_ESTABLISHED` and
+`MATERIAL_ROLE = PLASTERABLE_SOLID_FACE`, so a balustrade assembly height
+(P7757 `104`, printed inside the lattice zone) can be established as text
+and still contribute nothing. A dimension on one sheet relates to an
+element on another only through a stated `CROSS_SHEET_RELATION_STATUS`.
