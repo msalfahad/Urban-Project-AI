@@ -577,7 +577,7 @@ def main() -> int:
                     "asked"},
             "FENESTRATION_DETAIL": {
                 "QUESTION_APPLICABILITY": bool(
-                    sig["ON_A_WINDOW_OR_DOOR_LAYER"]
+                    sig["ON_A_WINDOW_LAYER"] or sig["ON_A_DOOR_LAYER"]
                     or sig["IN_THE_ENVELOPE_BAND"]),
                 "APPLICABILITY_EVIDENCE":
                     f"layer kinds {sig['LAYER_KINDS']}, in the envelope "
