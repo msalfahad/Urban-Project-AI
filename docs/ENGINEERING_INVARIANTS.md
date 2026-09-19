@@ -3642,3 +3642,40 @@ arithmetic only when `DIMENSION_OWNER_STATUS = OWNER_ESTABLISHED` and
 (P7757 `104`, printed inside the lattice zone) can be established as text
 and still contribute nothing. A dimension on one sheet relates to an
 element on another only through a stated `CROSS_SHEET_RELATION_STATUS`.
+
+## §139 — A roof edge is an assembly, not a parapet
+
+Before a plaster quantity is asked of a roof edge, its components are
+registered separately (`engine/parapet_assembly.py`): slab datum,
+structural edge, solid parapet, solid kerb, curved upstand, balustrade,
+handrail, coping, facade wall below, tower/dome feature, external finish
+face, internal roof-side face, unknown component. Each component owns its
+dimensions; each face owns its bottom, top, side, material and eligibility.
+A balustrade or handrail component cannot carry a plasterable face at all;
+a coping is its own item and never adds to a wall face height. A face's
+area carries the weakest of its inputs (`engine/quantity_state.py`), and a
+face whose eligibility is not established has a reference gross and no
+quantity.
+
+## §140 — Lengths come from authored geometry, correspondence is stated
+
+An authored DWG line or arc is measured as drawn (an arc by radius times
+sweep, never a chord or a bounding box). Whether that authored run is the
+element an elevation shows is a separate statement:
+`ESTABLISHED_CORRESPONDENCE`, `PROPOSED_CORRESPONDENCE` or none; a
+proposed correspondence caps the quantity at PROVISIONAL. A same-family
+source (the DWG's own elevation, the structural set) corroborates and never
+confirms independently; a vector plot at an exact scale is registered by
+translation only, and the residuals say whether the scale held.
+
+## §141 — Column existence, exposure and face ownership are three facts
+
+`COLUMN_EXISTS` (a structural sheet or a hatch), `COLUMN_EXPOSED_TO_ROOM`
+(nothing drawn around it) and `COLUMN_OWNS_CLEAR_FINISH_FACE` (the room
+boundary bends around it) are recorded separately and may disagree. A
+statement in a frozen layer that turns out incomplete is marked
+`SUPERSEDED_IN_PART` in the ledger (`engine/supersession_ledger.py`); the
+frozen file keeps its hash. An owner question is queued
+(`engine/owner_decision_queue.py`) with options, impact and a card, and the
+run stops only when a decision blocks a large scope or would require
+inventing geometry.

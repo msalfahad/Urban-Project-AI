@@ -85,7 +85,8 @@ def contribution(kind: str, trade: str) -> dict:
     glazing = kind == "GLAZING_BOUNDARY"
     synthetic = kind == SYNTHETIC_KIND
     if trade in ("NORMAL_INTERNAL_PLASTER", "TILE_PREP_TARTUSHA",
-                 "EXTERNAL_PLASTER", "STAIR_WALL_PLASTER"):
+                 "EXTERNAL_PLASTER", "STAIR_WALL_PLASTER",
+                 "ROOF_PARAPET_PLASTER", "COLUMN_BONDING_PLUS_PLASTER"):
         return {"LENGTH_CONTRIBUTES": material, "REASON": (
             "plaster is applied to material faces only; glazing, open "
             "edges and closures carry none")}

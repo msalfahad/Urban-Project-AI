@@ -142,3 +142,27 @@ length. D2 is resolved provisionally from E1.4 and the DWG (edge level
 line, no plasterable face). D3 stays with the owner. Estimate v3 is
 unchanged. Cards: `decision_cards/D1_SE_PARAPET_SOURCE_CARD.png`; review
 `OWNER_REVIEW_V4.md`; freeze `FREEZE_SE_AUDIT.json`.
+
+## Parapet assembly and four-layer measurement (fifth checkpoint)
+
+The SE roof edge was found in the DWG roof-plan copy (outer face 7.50 m,
+roof-side floor line 7.10 m equal to the printed 129 + 2×R221 + 139 chain, a
+250 mm line 3.767 m from the SW corner that is the frozen raster's UNK-01,
+corner arc r = 0.231) and split into a solid NE portion (3.683 / 3.483 m)
+and a kerb-and-lattice SW portion, PROPOSED_CORRESPONDENCE. The structural
+set ST7757.pdf (an exact 1:100 vector plot) registers to the DWG by
+translation with 30 of 30 columns under 55 mm; it gives the SE edge 7.497 m,
+the +13.90 slab exterior ring 29.794 m and an RC edge beam 45×75 with a
+20×20 upstand, and it defers the parapet above to the architectural detail.
+D2 is answered in three statements: the 30×60 column exists on LOOP-059,
+it is exposed (free-standing, beams not walls) and it does not own the
+SALOON clear face; the 1.3 m dashed line is the overhead beam. The
+assembly register (`PARAPET_ASSEMBLY_REGISTER.json`, 16 components), the
+face register (17 faces, face-specific heights), the measurement regions
+(virtual closures with zero material and no geometry authority), the
+opening register, the plaster trace v4 (states per line, totals per unit),
+A22 v4, the owner decision queue (six non-blocking items), the supersession
+ledger (seven entries, all earlier freezes unchanged), the source coverage,
+the leakage guard (clean) and three visual QA overlays on the original pages
+are frozen in `FREEZE_ASSEMBLY.json`. Estimate v3 stays frozen; v4 adds the
+roof-edge faces and the D2 column as PROVISIONAL lines.
