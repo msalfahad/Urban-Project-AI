@@ -67,7 +67,7 @@ from __future__ import annotations
 import hashlib
 
 EXPERIMENT_ID = "SEMANTIC_SAFETY_EXPERIMENT_02"
-PROTOCOL_VERSION = 6
+PROTOCOL_VERSION = 7
 
 # ------------------------------------------------------------------
 # sample identity - §2 of the directive
@@ -76,10 +76,18 @@ PROTOCOL_VERSION = 6
 # earlier one. SAFETY_SAMPLE_02 is a NEW targeted safety round. It does
 # not correct, replace or amend SAFETY_SAMPLE_01, which stands on its own
 # as a result about the sampling apparatus.
-SAMPLE_ID = "SAFETY_SAMPLE_02"
+SAMPLE_ID = "SAFETY_SAMPLE_03"
 SAMPLE_CLASS = "TARGETED_SAFETY_VALIDATION_SAMPLE"
 
 ANCESTRY = (
+    {"SAMPLE_ID": "SAFETY_SAMPLE_02",
+     "PROTOCOL_VERSION": 6,
+     "PROTOCOL_HASH":
+         "1bec7f6a82983a23d1be0e90f360c53ac1493695ab9720e1223945b2458ffe20",
+     "SAMPLE_FREEZE_SHA256":
+         "f54529f4852e5244752e53a89b3cb085773c99fcbb045d94eb5af80969180dc9",
+     "RELATION_TO_THIS_SAMPLE": "ANCESTOR_NOT_SUPERSEDED",
+     "WHERE_IT_IS_KEPT": "safety_sample_02_apparatus_result/"},
     {"SAMPLE_ID": "SAFETY_SAMPLE_01",
      "PROTOCOL_VERSION": 3,
      "PROTOCOL_HASH":
@@ -107,6 +115,31 @@ SAFETY_SAMPLE_01_IS_A_RESULT_NOT_A_MISTAKE = (
     "worth keeping. It says the signatures were too weak a proxy: an "
     "annotation line can sit near a door, cross a wall thickness and run "
     "along the envelope, and on this drawing it does")
+
+SAFETY_SAMPLE_02_IS_A_RESULT_NOT_A_MISTAKE = (
+    "SAFETY_SAMPLE_02 is preserved exactly as run, with whatever reference "
+    "readings it received, and it is not overwritten or re-scored. It is "
+    "an APPARATUS result, and this is its finding:\n\n"
+    "  THE FEATURE BUILDER NEVER CONSULTED THE DRAWING REGION'S OWN\n"
+    "  BOUNDARY, SO SHEET FURNITURE - THE FRAME AND THE TITLE BLOCK -\n"
+    "  WAS SAMPLED AS THOUGH IT WERE FLOOR CONTENT.\n\n"
+    "All six features of its GENUINELY_AMBIGUOUS_HIGH_IMPACT stratum "
+    "were sheet furniture: four frame sides, the title block, and one "
+    "more border run. That stratum measured nothing about the building. "
+    "The other thirty-four features, across the seven other strata, were "
+    "sound - every one of them inside the plan region.\n\n"
+    "The blind reference revealed it. The blind reference did not fix "
+    "it: the rule below is geometric and uses only frozen deterministic "
+    "evidence, so no reference label takes any part in the new "
+    "selection. What the reference did was show where to look")
+
+SAFETY_SAMPLE_03_IS_A_NEW_ROUND = (
+    "this is a third targeted safety-validation round with its own sample "
+    "id, its own registers and its own freeze. It is not a correction or "
+    "an amendment of SAFETY_SAMPLE_02: that round is preserved whole. "
+    "Re-selecting everything, rather than patching one stratum after its "
+    "answers were visible, is what keeps the freeze rule in §8 meaning "
+    "what it says")
 
 SAFETY_SAMPLE_02_IS_A_NEW_ROUND = (
     "this is a new targeted safety-validation round, not a corrected "
@@ -452,6 +485,7 @@ SAMPLE_MAX = 40
 # what may and may not choose a feature - §3 of the directive
 # ------------------------------------------------------------------
 SELECTION_MAY_ONLY_USE = (
+    "the drawing region's own boundary, from the frozen region isolation",
     "confirmed door evidence from the frozen door register",
     "the frozen gap and portal registers",
     "wall interruption evidence",
@@ -547,6 +581,34 @@ EXCLUDED_FROM_EVERY_STRATUM_BUT_THE_CONTROL = (
     "annotation or level role cannot enter a geometry-changing stratum, "
     "whatever its geometry looks like. That single rule is what the first "
     "sample lacked")
+
+# ------------------------------------------------------------------
+# the sheet is not the building
+# ------------------------------------------------------------------
+# The drawing region isolator already establishes, deterministically and
+# frozen, the rectangle this plan occupies on its sheet. The frame that
+# rectangle is measured from, and the title block in its corner, are
+# DRAWING, not BUILDING - and nothing in a floor plan is drawn flush
+# against the sheet border. So a feature that touches or crosses the
+# region's own boundary rectangle is sheet furniture and is excluded
+# before any stratum sees it.
+SHEET_BORDER_TOL_MM = 50.0
+
+SHEET_FURNITURE_RULE = (
+    "a canonical feature whose bounding box touches or crosses the "
+    "drawing region's own boundary rectangle, within SHEET_BORDER_TOL_MM, "
+    "is SHEET FURNITURE. It is excluded from every stratum, counted, and "
+    "reported. Plan content sits inside the frame with margin; the frame "
+    "and the title block are the sheet, not the floor")
+
+WHY_THE_TOLERANCE_IS_NOT_TUNED = (
+    "measured over SAFETY_SAMPLE_02's forty admitted features at 1, 10, "
+    "50 and 100 mm, the rule catches the same six sheet-furniture "
+    "features and no plan feature at every one of them. A threshold that "
+    "does not move its answer across two orders of magnitude is "
+    "describing a structural difference, not a fitted cut. 50 mm is "
+    "declared because it is the middle of that range, and the sweep is "
+    "recorded so the claim can be checked rather than believed")
 
 TIE_BREAK = "lowest stable source interval id ascending"
 
@@ -978,6 +1040,12 @@ def record() -> dict:
         "safety_sample_01_is_a_result_not_a_mistake":
             SAFETY_SAMPLE_01_IS_A_RESULT_NOT_A_MISTAKE,
         "safety_sample_02_is_a_new_round": SAFETY_SAMPLE_02_IS_A_NEW_ROUND,
+        "safety_sample_02_is_a_result_not_a_mistake":
+            SAFETY_SAMPLE_02_IS_A_RESULT_NOT_A_MISTAKE,
+        "safety_sample_03_is_a_new_round": SAFETY_SAMPLE_03_IS_A_NEW_ROUND,
+        "SHEET_BORDER_TOL_MM": SHEET_BORDER_TOL_MM,
+        "SHEET_FURNITURE_RULE": SHEET_FURNITURE_RULE,
+        "why_the_tolerance_is_not_tuned": WHY_THE_TOLERANCE_IS_NOT_TUNED,
         "SELECTION_MAY_ONLY_USE": list(SELECTION_MAY_ONLY_USE),
         "SELECTION_MAY_NOT_USE": list(SELECTION_MAY_NOT_USE),
         "THE_SELECTION_QUESTION": THE_SELECTION_QUESTION,
