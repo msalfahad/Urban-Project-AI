@@ -79,3 +79,25 @@ identity-mapping differences and one human-review item on parapets. No
 number was tuned; NOT_COMPARABLE at the total level.
 
 Freeze digests: see `data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/FREEZE_FINAL.json`.
+
+## Dual basis (owner decisions of the second checkpoint)
+
+The site record uses a contractor measurement basis; the estimate uses an
+engineering basis. Both are now computed on the same frozen faces and kept
+apart (`engine/quantity_layers.py`, `engine/contractor_measurement.py`,
+`research/qs_wall_treatment_01/dual_basis.py`). On the comparable SALOON
+faces the whole difference is the height rule (3.20 owner input vs 3.60 site
+record); no opening is deductible on either basis there. Everything beyond
+the traced faces is scope, not error.
+
+A raster-to-DWG registration fitted from ten declared pairs (residuals under
+6 px, about 19 mm per pixel) resolved A22 items T2, T3 and T9 by the source
+hierarchy: the printed 5.15 runs exactly from an authored stub at the open
+edge to the sea-view wall line; the 633 is the glazing band exactly; the
+printed 90s are pier bodies or an unowned span, not exposed plaster faces.
+The 1.80 lm column line is retired and replaced by CAD exposed faces
+0.700 + 0.468 lm as a PROVISIONAL line (`CAD_TRACE_LINKS.json`, estimate v2).
+
+Residual owner decisions are three visual cards (`decision_cards/`): the SE
+parapet face basis, the element at the SALOON/RECEPTION open edge, and the
+benchmark workbook's identity. Freeze: `FREEZE_DUAL.json`.

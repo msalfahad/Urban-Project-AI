@@ -197,3 +197,37 @@ FACE_DIMENSIONS = {
         "NOTE": "face height AMBIGUOUS: 1.22 m to the band or 1.42 m with it; "
                 "NOT_ESTABLISHED until resolved"},
 }
+
+
+# ==================================================================
+# CAD-derived lengths (§15): used only with a CAD_TRACE_LINK_STATUS read
+# from CAD_TRACE_LINKS.json at build time; ESTABLISHED -> established
+# face, PROVISIONAL -> provisional face, otherwise unresolved. The A21
+# printed values these replace are recorded as DIMENSION_OWNERSHIP_DIFFERENCE.
+# ==================================================================
+CAD_LENGTHS = {
+    ("CASE-3-DOOR-AND-WINDOW", "COL-02"): {
+        "length_m": 0.700, "length_basis": "CAD_GEOMETRY", "LINK_ID": "L4X",
+        "WHAT": "exposed pier face inside the SALOON: neighbour-wall inner face to glazing start",
+        "REPLACES": "printed DIM-03 '90' = pier BODY incl. 0.20 wall thickness",
+        "DIFFERENCE_CLASS": "DIMENSION_OWNERSHIP_DIFFERENCE"},
+    ("CASE-3-DOOR-AND-WINDOW", "COL-01"): {
+        "length_m": 0.468, "length_basis": "CAD_GEOMETRY", "LINK_ID": "L5X",
+        "WHAT": "exposed pier face inside the SALOON: glazing end to return-wall inner face",
+        "REPLACES": "printed DIM-02 '90' whose ownership is NOT_ESTABLISHED (authored body 0.668)",
+        "DIFFERENCE_CLASS": "DIMENSION_OWNERSHIP_DIFFERENCE"},
+}
+
+# Wall thicknesses established from printed dimensions - the owner's reveal
+# rule is ACTUAL WALL THICKNESS FIRST (§6); a default applies only where the
+# host wall's thickness is not established
+WALL_THICKNESS_M = {
+    ("CASE-3-DOOR-AND-WINDOW", "SEG-02"): {"value": 0.20, "source": "DIM-06 '20'"},
+    ("CASE-3-DOOR-AND-WINDOW", "SEG-03"): {"value": 0.20, "source": "DIM-09 '20'"},
+    ("CASE-1-NORMAL-PLASTER", "SEG-01"): {"value": 0.15, "source": "DIM-10 '15'"},
+    ("CASE-1-NORMAL-PLASTER", "SEG-02"): {"value": 0.15, "source": "DIM-10 '15'"},
+    ("CASE-4-STAIR", "SEG-04"): {"value": 0.15, "source": "DIM-20 '15'"},
+}
+REVEAL_DEPTH_RULE = ("ENGINEERING: an opening's reveal depth is its host wall's established "
+                     "thickness; the TEMPORARY_DEFAULT applies only when that thickness is "
+                     "not established. CONTRACTOR: 0.20 as the site record used")

@@ -3565,3 +3565,43 @@ sheet that the CAD ground-floor path cannot see) and
 `SHARED_ASSUMPTION_AGREEMENT` (two paths built on one owner height) are
 verdicts on one item each. The DWG and the PDF are one design family, so
 their agreement is repeatability, never independent corroboration.
+
+## §133 — Engineering and contractor measurement are two bases, never one
+
+`MEASURED_NET_QUANTITY` (ENGINEERING_QS: geometry, approved project
+parameters, full physical opening deduction, reveals separate) and
+`CONTRACTOR_MEASUREMENT_QUANTITY` (the site record's conventions: its
+heights, half deductions, 2 m = 1 m corners) are computed on the same faces
+and kept side by side. Neither overwrites the other, nothing is averaged,
+and a difference between them is `MEASUREMENT_BASIS_DIFFERENCE` until a
+basis comparison shows an error. A contractor rulebook entry is
+`SITE_RECORD` or `CONTRACTOR_MEASUREMENT_RULE` and is never geometry
+(`engine/contractor_measurement.py`, `engine/quantity_layers.py`).
+
+## §134 — Every trade item carries every layer
+
+`PHYSICAL_DESIGN_GEOMETRY`, `MEASURED_NET_QUANTITY`,
+`OWNER_PARAMETRIC_QUANTITY`, `PROVISIONAL_DEFAULT_QUANTITY`,
+`CONTRACTOR_MEASUREMENT_QUANTITY`, `WASTE_FACTOR`, `PROCUREMENT_QUANTITY`,
+`RATE`, `AMOUNT` are present on every item and never collapsed. A rate is a
+supplier's price on a date; with no quotation on the rate card the amount
+is `None`, not zero.
+
+## §135 — A CAD length enters an A21-linked quantity only through a link
+
+The raster and the DWG are registered only from declared pairs whose two
+sides are each established on their own path, axis by axis, with residuals
+reported. An authored run is projected and tested against the stored trace
+geometry (`engine/cad_trace_registration.py`); `CAD_TRACE_LINK_STATUS`
+`ESTABLISHED` gives an established face, `PROVISIONAL` a provisional one,
+anything else leaves the face unresolved. Benchmark closeness is never a
+link criterion.
+
+## §136 — Arithmetic equality with two levels is not wall continuity
+
+A site record's 12.90 m stair-well height equals the drawing's +1.00 to
++13.90; it is still not adopted as an engineering plaster height until one
+continuous plasterable wall is established across slabs, landings,
+openings, voids and balustrades. Until then it is
+`CONTRACTOR_MEASUREMENT_BASIS` and the engineering quantity is
+component-based or unresolved.

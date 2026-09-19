@@ -35,8 +35,18 @@ def load_register() -> dict:
     return json.loads(Path(P.TRACE_REGISTER).read_text("utf-8"))
 
 
-def face_set_inputs(plan: dict, reg: dict, owner_records: dict | None = None) -> dict:
+def _links() -> dict:
+    p = Path(P.OUT_DIR) / "CAD_TRACE_LINKS.json"
+    if not p.exists():
+        return {}
+    d = json.loads(p.read_text("utf-8"))
+    return {l["LINK_ID"]: l["CAD_TRACE_LINK_STATUS"] for l in d["LINKS"]}
+
+
+def face_set_inputs(plan: dict, reg: dict, owner_records: dict | None = None,
+                    use_cad_lengths: bool = False) -> dict:
     cid = plan["CASE"]
+    links = _links() if use_cad_lengths else {}
     traces = [t for t in reg["TRACES"] if t["CASE_ID"] == cid]
     by_id = {t["TRACE_ID"]: t for t in traces}
     objs = {o["TRACE_ID"]: o for o in MRA.physical_objects(
@@ -77,6 +87,19 @@ def face_set_inputs(plan: dict, reg: dict, owner_records: dict | None = None) ->
                 for d in fd.get("supporting_dimensions", []) if d in owners}
         if plan.get("HEIGHT_PARAMETER"):
             rec["HEIGHT_PARAMETER"] = plan["HEIGHT_PARAMETER"]
+        cl = D.CAD_LENGTHS.get((cid, fid)) if use_cad_lengths else None
+        if cl:
+            rec.update({"length_m": cl["length_m"], "length_basis": "CAD_GEOMETRY",
+                        "length_source": "DRAWING_CAD_GEOMETRY",
+                        "CAD_TRACE_LINK_STATUS": links.get(cl["LINK_ID"], "NOT_ESTABLISHED"),
+                        "CAD_LINK_ID": cl["LINK_ID"], "CAD_WHAT": cl["WHAT"],
+                        "REPLACES_PRINTED": cl["REPLACES"],
+                        "DIFFERENCE_CLASS": cl["DIFFERENCE_CLASS"],
+                        "A21_PRINTED_LENGTH_M": L})
+        wt = D.WALL_THICKNESS_M.get((cid, fid))
+        if wt:
+            rec["WALL_THICKNESS_M"] = wt["value"]
+            rec["WALL_THICKNESS_SOURCE"] = wt["source"]
         ur = (plan.get("UNRESOLVED_FACES") or {}).get(fid)
         if ur:
             rec["MATERIAL_ROLE"] = "UNRESOLVED"
@@ -89,7 +112,11 @@ def face_set_inputs(plan: dict, reg: dict, owner_records: dict | None = None) ->
         L, src, basis, dims = _length(t, by_id)
         host = t.get("HOSTED_IN")
         host = host[0] if isinstance(host, list) and host else host
+        wt = D.WALL_THICKNESS_M.get((cid, host)) if host else None
         openings.append({
+            "reveal_depth_m": (wt["value"] if wt else None),
+            "reveal_depth_source": ("DRAWING_PRINTED_DIMENSION" if wt else None),
+            "REVEAL_DEPTH_RULE": D.REVEAL_DEPTH_RULE,
             "OPENING_ID": oid, "TYPE": (t["EFFECTIVE_CLAIM_TYPE"]
                                         if t["EFFECTIVE_CLAIM_TYPE"] in OPENING_TYPES
                                         else "UNRESOLVED"),

@@ -43,6 +43,13 @@ CODE = [
     "research/qs_wall_treatment_01/benchmark_survey.py",
     "research/qs_wall_treatment_01/benchmark_reconciliation.py",
     "research/qs_wall_treatment_01/review_package.py",
+    "engine/quantity_layers.py", "engine/contractor_measurement.py",
+    "engine/cad_trace_registration.py",
+    "research/qs_wall_treatment_01/cad_links.py",
+    "research/qs_wall_treatment_01/dual_basis.py",
+    "research/qs_wall_treatment_01/decision_cards.py",
+    "research/qs_wall_treatment_01/a22_dual_basis.py",
+    "research/qs_wall_treatment_01/owner_review_v2.py",
 ]
 ARTIFACTS_ESTIMATE = [
     "P7757_OWNER_PARAMETERS.json", "OVERLAP_AUDIT.json",
@@ -53,6 +60,10 @@ ARTIFACTS_ESTIMATE = [
 ARTIFACTS_A22 = ARTIFACTS_ESTIMATE + ["FREEZE_ESTIMATE.json", "A22_STRUCTURAL_COMPARISON.json"]
 ARTIFACTS_FINAL = ARTIFACTS_A22 + ["FREEZE_A22.json", "BENCHMARK_ACCESS_LOG.json",
                                    "BENCHMARK_RECONCILIATION.json", "OWNER_REVIEW_PACKAGE.md"]
+ARTIFACTS_DUAL = ARTIFACTS_FINAL + [
+    "FREEZE_FINAL.json", "CAD_TRACE_LINKS.json", "P7757_WALL_TREATMENT_ESTIMATE_v2.json",
+    "QS_TRACE_v2.md", "SENSITIVITY_v2.json", "DUAL_BASIS.json", "DECISION_CARDS.json",
+    "A22_DUAL_BASIS.json", "OWNER_REVIEW_V2.md"]
 UPSTREAM = [
     P.TRACE_REGISTER,
     "data/experiments/A21_TRACE_SUFFICIENCY_01/TRACE_PILOT_REPORT.json",
@@ -79,7 +90,8 @@ def _git_head() -> str:
 
 
 def freeze(stage: str) -> dict:
-    arts = {"estimate": ARTIFACTS_ESTIMATE, "a22": ARTIFACTS_A22, "final": ARTIFACTS_FINAL}[stage]
+    arts = {"estimate": ARTIFACTS_ESTIMATE, "a22": ARTIFACTS_A22, "final": ARTIFACTS_FINAL,
+            "dual": ARTIFACTS_DUAL}[stage]
     body = {
         "PHASE_ID": P.PHASE_ID, "ARTIFACT": f"FREEZE_{stage.upper()}",
         "STAGE": stage, "GIT_HEAD_AT_FREEZE": _git_head(),
@@ -87,7 +99,7 @@ def freeze(stage: str) -> dict:
         "UPSTREAM_SHA256": {u: (_sha(Path(u)) if Path(u).exists() else None) for u in UPSTREAM},
         "CODE_SHA256": {c: (_sha(Path(c)) if Path(c).exists() else None) for c in CODE},
         "ARTIFACT_SHA256": {a: (_sha(OUT / a) if (OUT / a).exists() else None) for a in arts},
-        "BENCHMARK_OPENED_BEFORE_THIS_FREEZE": stage == "final",
+        "BENCHMARK_OPENED_BEFORE_THIS_FREEZE": stage in ("final", "dual"),
         "STANDING_PROHIBITIONS": P.STANDING_PROHIBITIONS,
     }
     missing = [k for k, v in body["ARTIFACT_SHA256"].items() if v is None]

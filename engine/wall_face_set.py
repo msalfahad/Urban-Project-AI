@@ -72,6 +72,13 @@ def classify_face(face: dict, trade: str) -> tuple:
         return "UNRESOLVED", "no established length"
     if basis == "SCALED_MEASUREMENT":
         return "UNRESOLVED", "length is a scaled measurement, not used"
+    if basis == "CAD_GEOMETRY":
+        link = face.get("CAD_TRACE_LINK_STATUS") or "NOT_ESTABLISHED"
+        if link == "ESTABLISHED" and vts != "TRACE_PROVISIONAL":
+            return "ESTABLISHED", "authored CAD length with an ESTABLISHED trace link"
+        if link in ("ESTABLISHED", "PROVISIONAL"):
+            return "PROVISIONAL", f"authored CAD length; CAD_TRACE_LINK_STATUS {link}"
+        return "UNRESOLVED", f"authored CAD length but CAD_TRACE_LINK_STATUS {link}"
     if vts == "TRACE_PROVISIONAL" or basis == "DERIVED_CHAIN":
         return "PROVISIONAL", (f"trace {vts}" if vts == "TRACE_PROVISIONAL"
                                else "length derived from a dimension chain")

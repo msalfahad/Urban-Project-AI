@@ -40,10 +40,10 @@ def _num(x):
     return isinstance(x, (int, float))
 
 
-def run_sets(reg_params: dict, trace_reg: dict, owners: dict) -> list:
+def run_sets(reg_params: dict, trace_reg: dict, owners: dict, use_cad_lengths: bool = False) -> list:
     out = []
     for plan in D.FACE_SET_PLAN:
-        inp = F.face_set_inputs(plan, trace_reg, owners)
+        inp = F.face_set_inputs(plan, trace_reg, owners, use_cad_lengths=use_cad_lengths)
         fs = FS.build_face_set(set_id=plan["SET_ID"], faces=inp["faces"],
                                openings=inp["openings"], trade=plan["TRADE"],
                                basis=plan["BASIS"], zone=plan["ZONE"], floor=plan["FLOOR"])
@@ -165,7 +165,8 @@ def qs_trace_md(results: list, aggr: dict, reg_params: dict) -> str:
     return "\n".join(L) + "\n"
 
 
-def sensitivity(trace_reg: dict, owners: dict, base_params: dict, base_results: list) -> dict:
+def sensitivity(trace_reg: dict, owners: dict, base_params: dict, base_results: list,
+                use_cad_lengths: bool = False) -> dict:
     base_proj = aggregate(base_results)["PROJECT"]["ESTABLISHED_SUBTOTAL_M2"]
     out = {"MODE": "SCENARIO_ONLY",
            "THE_OFFICIAL_PARAMETER_IS_NOT_CHANGED": True,
@@ -175,7 +176,7 @@ def sensitivity(trace_reg: dict, owners: dict, base_params: dict, base_results: 
         for pid, v in changes.items():
             reg[pid] = dict(reg[pid], VALUE=v, SCENARIO=True,
                             STATUS="SCENARIO_NOT_OFFICIAL")
-        res = run_sets(reg, trace_reg, owners)
+        res = run_sets(reg, trace_reg, owners, use_cad_lengths)
         proj = aggregate(res)["PROJECT"]["ESTABLISHED_SUBTOTAL_M2"]
         out["SCENARIOS"][name] = {
             "CHANGES": changes,
@@ -187,18 +188,22 @@ def sensitivity(trace_reg: dict, owners: dict, base_params: dict, base_results: 
     return out
 
 
-def main() -> dict:
+def main(version: str = "", use_cad_lengths: bool = False) -> dict:
     OUT.mkdir(parents=True, exist_ok=True)
+    sfx = f"_{version}" if version else ""
     trace_reg = F.load_register()
     owners_doc = json.loads((OUT / "DIMENSION_OWNER_REGISTER.json").read_text("utf-8"))
     owners = owners_doc["PER_CASE"]
     params = OP.p7757_registry()
-    results = run_sets(params, trace_reg, owners)
+    results = run_sets(params, trace_reg, owners, use_cad_lengths)
     aggr = aggregate(results)
     guard = MRA.guard_contributions([c for r in results for c in r["SHEET"]["CONTRIBUTIONS"]
                                      if c["BUCKET"] == "ESTABLISHED"])
     body = {
-        "PHASE_ID": P.PHASE_ID, "ARTIFACT": "P7757_WALL_TREATMENT_ESTIMATE",
+        "PHASE_ID": P.PHASE_ID, "ARTIFACT": f"P7757_WALL_TREATMENT_ESTIMATE{sfx}",
+        "VERSION": version or "v1", "CAD_LENGTHS_USED": use_cad_lengths,
+        "CAD_LENGTHS": ({f"{k[0]}/{k[1]}": v for k, v in D.CAD_LENGTHS.items()}
+                        if use_cad_lengths else {}),
         "PROJECT_ID": P.PROJECT_ID,
         "TRACE_REGISTER_SHA256": _sha(Path(P.TRACE_REGISTER)),
         "PARAMETER_REGISTRY": params,
@@ -215,14 +220,14 @@ def main() -> dict:
         "NOT_A_BOQ": True, "NO_FIREBASE_WRITE": True, "E1_4_CONSULTED": False,
         "BENCHMARK_OPENED": False,
     }
-    p = OUT / "P7757_WALL_TREATMENT_ESTIMATE.json"
+    p = OUT / f"P7757_WALL_TREATMENT_ESTIMATE{sfx}.json"
     p.write_text(json.dumps(body, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    (OUT / "QS_TRACE.md").write_text(qs_trace_md(results, aggr, params), encoding="utf-8")
-    sens = sensitivity(trace_reg, owners, params, results)
-    (OUT / "SENSITIVITY.json").write_text(json.dumps(sens, indent=2) + "\n", encoding="utf-8")
+    (OUT / f"QS_TRACE{sfx}.md").write_text(qs_trace_md(results, aggr, params), encoding="utf-8")
+    sens = sensitivity(trace_reg, owners, params, results, use_cad_lengths)
+    (OUT / f"SENSITIVITY{sfx}.json").write_text(json.dumps(sens, indent=2) + "\n", encoding="utf-8")
     return {
-        "ESTIMATE_SHA256": _sha(p), "QS_TRACE_SHA256": _sha(OUT / "QS_TRACE.md"),
-        "SENSITIVITY_SHA256": _sha(OUT / "SENSITIVITY.json"),
+        "ESTIMATE_SHA256": _sha(p), "QS_TRACE_SHA256": _sha(OUT / f"QS_TRACE{sfx}.md"),
+        "SENSITIVITY_SHA256": _sha(OUT / f"SENSITIVITY{sfx}.json"),
         "PROJECT": aggr["PROJECT"], "BY_TRADE": {
             k: (v["ESTABLISHED_SUBTOTAL_M2"], v["PROVISIONAL_SUBTOTAL_M2"], v["COVERAGE_STATUS"])
             for k, v in aggr["BY_TRADE"].items()},
@@ -232,4 +237,6 @@ def main() -> dict:
 
 
 if __name__ == "__main__":
-    print(json.dumps(main(), indent=2))
+    import sys
+    v = sys.argv[1] if len(sys.argv) > 1 else ""
+    print(json.dumps(main(version=v, use_cad_lengths=(v == "v2")), indent=2))
