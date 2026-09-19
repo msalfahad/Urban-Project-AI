@@ -101,3 +101,19 @@ The 1.80 lm column line is retired and replaced by CAD exposed faces
 Residual owner decisions are three visual cards (`decision_cards/`): the SE
 parapet face basis, the element at the SALOON/RECEPTION open edge, and the
 benchmark workbook's identity. Freeze: `FREEZE_DUAL.json`.
+
+## Owner-verified plan layer (third checkpoint)
+
+The owner's manual plan check (515 endpoints; 90 + 633 + 90 with the 20 as
+thickness; both 90s legitimate; 40 + 452 + 45 next; 150 − 20 − 20 = 110 for
+one opening) is recorded in `owner_plan_verification.py` as its own
+evidence layer. Every segment is corroborated by authored DWG lines
+(`OWNER_EVIDENCE_RECONCILIATION.json`): the upper 90 runs from the glazing
+end to a door-layer line 0.232 past the return wall, so the earlier "matches
+no authored span" is withdrawn. The CAD pier runs 0.700 / 0.468 are kept but
+split by plaster-face ownership into column bonding 0.20 / 0.30 (S-COL.BON
+hatch extents inside the room) and block 0.50 / 0.168, all PROVISIONAL.
+Estimate v3 carries that split; v1 and v2 stay frozen. The SALOON card
+`decision_cards/S1_SALOON_DIMENSIONS.png` shows setting-out spans in blue,
+plaster faces in green and the thickness annotation. Freeze:
+`FREEZE_OWNER_EVIDENCE.json`.

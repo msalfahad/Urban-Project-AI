@@ -19,8 +19,8 @@ from research.qs_wall_treatment_01 import protocol as P
 OUT = Path(P.OUT_DIR)
 
 
-def run() -> dict:
-    dual = json.loads((OUT / "DUAL_BASIS.json").read_text("utf-8"))
+def run(version: str = "v2") -> dict:
+    dual = json.loads((OUT / ("DUAL_BASIS.json" if version == "v2" else f"DUAL_BASIS_{version}.json")).read_text("utf-8"))
     links = json.loads((OUT / "CAD_TRACE_LINKS.json").read_text("utf-8"))
     a22 = json.loads((OUT / "A22_STRUCTURAL_COMPARISON.json").read_text("utf-8"))
     rec = json.loads((OUT / "BENCHMARK_RECONCILIATION.json").read_text("utf-8"))
@@ -83,7 +83,7 @@ def run() -> dict:
     ]
     resolved = {k: v for k, v in links["ITEMS"].items()}
     body = {
-        "PHASE_ID": P.PHASE_ID, "ARTIFACT": "A22_DUAL_BASIS",
+        "PHASE_ID": P.PHASE_ID, "ARTIFACT": "A22_DUAL_BASIS", "ESTIMATE_VERSION": version,
         "PREVIOUS_A22_SHA256": hashlib.sha256((OUT / "A22_STRUCTURAL_COMPARISON.json").read_bytes()).hexdigest(),
         "BASES_COMPARED": ["ENGINEERING_QS", "CONTRACTOR_SITE_MEASUREMENT", "CAD_GEOMETRY (A21 corroboration)"],
         "SIDE_BY_SIDE_TRACED_FACES": rows,
@@ -113,11 +113,12 @@ def run() -> dict:
         },
         "NOT_AN_ERROR_ORACLE": True, "ESTIMATE_CHANGED_BY_THE_RECORD": False,
     }
-    p = OUT / "A22_DUAL_BASIS.json"
+    p = OUT / ("A22_DUAL_BASIS.json" if version == "v2" else f"A22_DUAL_BASIS_{version}.json")
     p.write_text(json.dumps(body, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     return {"A22_DUAL_BASIS_SHA256": hashlib.sha256(p.read_bytes()).hexdigest(),
             "ATTRIBUTION": body["WHOLE_HOUSE_DIFFERENCE_ATTRIBUTION"]}
 
 
 if __name__ == "__main__":
-    print(json.dumps(run(), indent=2, ensure_ascii=False))
+    import sys
+    print(json.dumps(run(sys.argv[1] if len(sys.argv) > 1 else "v2"), indent=2, ensure_ascii=False))

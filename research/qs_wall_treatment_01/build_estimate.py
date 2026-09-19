@@ -239,4 +239,4 @@ def main(version: str = "", use_cad_lengths: bool = False) -> dict:
 if __name__ == "__main__":
     import sys
     v = sys.argv[1] if len(sys.argv) > 1 else ""
-    print(json.dumps(main(version=v, use_cad_lengths=(v == "v2")), indent=2))
+    print(json.dumps(main(version=v, use_cad_lengths=(v if v in ("v2", "v3") else False)), indent=2))

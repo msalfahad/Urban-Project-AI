@@ -87,11 +87,24 @@ def face_set_inputs(plan: dict, reg: dict, owner_records: dict | None = None,
                 for d in fd.get("supporting_dimensions", []) if d in owners}
         if plan.get("HEIGHT_PARAMETER"):
             rec["HEIGHT_PARAMETER"] = plan["HEIGHT_PARAMETER"]
-        cl = D.CAD_LENGTHS.get((cid, fid)) if use_cad_lengths else None
+        table = (D.CAD_LENGTHS_V3 if use_cad_lengths == "v3" else D.CAD_LENGTHS) if use_cad_lengths else {}
+        cl = table.get((cid, fid))
+        ov = D.OWNER_VERIFIED_ENDPOINTS.get((cid, fid))
+        if ov:
+            rec["OWNER_VERIFIED_ENDPOINTS"] = ov
+        if cl and cl.get("NOT_ADDITIVE"):
+            rec.update({"MATERIAL_ROLE": "UNRESOLVED", "ROLE_ASSIGNED_BY": "TRADE_SPLIT_PENDING",
+                        "CAD_LENGTH_NOT_ADDITIVE_M": cl["length_m"], "CAD_WHAT": cl["WHAT"],
+                        "WHY_UNRESOLVED_IN_THIS_SET": cl["NOT_ADDITIVE"]})
+            cl = None
         if cl:
             rec.update({"length_m": cl["length_m"], "length_basis": "CAD_GEOMETRY",
                         "length_source": "DRAWING_CAD_GEOMETRY",
-                        "CAD_TRACE_LINK_STATUS": links.get(cl["LINK_ID"], "NOT_ESTABLISHED"),
+                        "CAD_TRACE_LINK_STATUS": (
+                            "PROVISIONAL" if cl.get("OWNERSHIP_STATUS") == "PROVISIONAL"
+                            and links.get(cl["LINK_ID"]) == "ESTABLISHED"
+                            else links.get(cl["LINK_ID"], "NOT_ESTABLISHED")),
+                        "PLASTER_FACE_OWNERSHIP": cl.get("OWNERSHIP_STATUS", "NOT_STATED"),
                         "CAD_LINK_ID": cl["LINK_ID"], "CAD_WHAT": cl["WHAT"],
                         "REPLACES_PRINTED": cl["REPLACES"],
                         "DIFFERENCE_CLASS": cl["DIFFERENCE_CLASS"],
@@ -106,6 +119,11 @@ def face_set_inputs(plan: dict, reg: dict, owner_records: dict | None = None,
             rec["ROLE_ASSIGNED_BY"] = "FACE_SET_PLAN_DECLARATION"
             rec["WHY_UNRESOLVED_IN_THIS_SET"] = ur
         faces.append(rec)
+    excluded = {}
+    for fid in plan["FACES"]:
+        cl = (D.CAD_LENGTHS_V3 if use_cad_lengths == "v3" else {}).get((cid, fid)) or {}
+        for oid in cl.get("EXCLUDES_OPENINGS", []):
+            excluded[oid] = cl["WHY_EXCLUDED"]
     openings = []
     for oid in plan["OPENINGS"]:
         t = by_id[oid]
@@ -120,7 +138,8 @@ def face_set_inputs(plan: dict, reg: dict, owner_records: dict | None = None,
             "OPENING_ID": oid, "TYPE": (t["EFFECTIVE_CLAIM_TYPE"]
                                         if t["EFFECTIVE_CLAIM_TYPE"] in OPENING_TYPES
                                         else "UNRESOLVED"),
-            "HOSTED_IN": host, "width_m": L, "width_source": src,
+            "HOSTED_IN": (None if oid in excluded else host),
+            "HOST_EXCLUDED_WHY": excluded.get(oid), "width_m": L, "width_source": src,
             "height_m": None, "height_source": None,
             "trace_ids": [oid] + dims, "VISUAL_TRACE_STATUS": t["VISUAL_TRACE_STATUS"],
         })

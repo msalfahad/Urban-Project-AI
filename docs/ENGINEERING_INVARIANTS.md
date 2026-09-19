@@ -3605,3 +3605,20 @@ continuous plasterable wall is established across slabs, landings,
 openings, voids and balustrades. Until then it is
 `CONTRACTOR_MEASUREMENT_BASIS` and the engineering quantity is
 component-based or unresolved.
+
+## §137 — A printed dimension is not a plaster face until its role is known
+
+A printed value has a role before it has a use: `WALL_THICKNESS` (20 / 15
+beside a wall), `SETTING_OUT_SEGMENT` (a link of an external dimension
+chain), `LINEAR_SPAN` (a face run between extension lines), `OVERALL_WIDTH`
+or `CLEAR_OPENING` (`engine/dimension_roles.py`). Three objects are compared
+and never forced equal: the `PRINTED_DIMENSION_OBJECT`, the
+`CAD_FACE_OBJECT` at the same locator, and the `PLASTER_CONTRIBUTING_FACE`.
+On P7757 the two printed 90s of the SALOON sea-view chain are corroborated
+to the millimetre by authored lines and are setting-out segments; the
+plaster faces inside them are 0.20 + 0.50 and 0.30 + 0.168, PROVISIONAL by
+ownership. An overall 150 with 20 + 20 of construction is a 110 clear
+opening for that opening only, never a universal door rule. An owner's
+manual plan verification is an evidence layer of its own
+(`OWNER_VERIFIED_DIMENSION_OWNERSHIP`) reconciled forward; it rewrites no
+frozen output.

@@ -231,3 +231,50 @@ WALL_THICKNESS_M = {
 REVEAL_DEPTH_RULE = ("ENGINEERING: an opening's reveal depth is its host wall's established "
                      "thickness; the TEMPORARY_DEFAULT applies only when that thickness is "
                      "not established. CONTRACTOR: 0.20 as the site record used")
+
+
+# ==================================================================
+# v3 (owner-verified plan layer): the CAD pier runs are split by plaster
+# face ownership. Column-bonding faces come from the S-COL.BON hatch
+# extents inside the room; the block portions of the pier runs are normal
+# plaster faces of the sea-view line (SEG-01). COL-04 inside the 515 run is
+# a trade-split candidate only, not additive to SEG-02.
+# ==================================================================
+CAD_LENGTHS_V3 = {
+    ("CASE-3-DOOR-AND-WINDOW", "COL-02"): {
+        "length_m": 0.200, "length_basis": "CAD_GEOMETRY", "LINK_ID": "L4X",
+        "OWNERSHIP_STATUS": "PROVISIONAL",
+        "WHAT": "column-bonding face inside the SALOON: S-COL.BON hatch 0.40 x 0.20 at the corner, "
+                "0.20 of it inside the room (-805093.5 -> -804893.5)",
+        "REPLACES": "printed DIM-03 '90' = external setting-out segment (owner-verified), not a face",
+        "DIFFERENCE_CLASS": "DIMENSION_OWNERSHIP_DIFFERENCE"},
+    ("CASE-3-DOOR-AND-WINDOW", "COL-01"): {
+        "length_m": 0.300, "length_basis": "CAD_GEOMETRY", "LINK_ID": "L5X",
+        "OWNERSHIP_STATUS": "PROVISIONAL",
+        "WHAT": "column-bonding face inside the SALOON: S-COL.BON hatch 0.50 x 0.20, 0.30 inside "
+                "the room (-797893.5 -> -797593.5)",
+        "REPLACES": "printed DIM-02 '90' = external setting-out segment (owner-verified), not a face",
+        "DIFFERENCE_CLASS": "DIMENSION_OWNERSHIP_DIFFERENCE"},
+    ("CASE-3-DOOR-AND-WINDOW", "SEG-01"): {
+        "length_m": 0.668, "length_basis": "CAD_GEOMETRY", "LINK_ID": "L3",
+        "WHAT": "block portions of the sea-view line inside the room: 0.50 (-804893.5 -> -804393.5) "
+                "and 0.168 (-798062.0 -> -797893.5), between the column zones and the glazing",
+        "REPLACES": "no printed length (SEG-01 dimension AMBIGUOUS in A21)",
+        "DIFFERENCE_CLASS": "CAD_FACE_OBJECT",
+        "OWNERSHIP_STATUS": "PROVISIONAL",
+        "WHY_OWNERSHIP_PROVISIONAL": "the block / column split of the pier runs rests on the "
+                                     "S-COL.BON hatch extents; no section or schedule confirms it",
+        "EXCLUDES_OPENINGS": ["GLZ-01", "D-01", "UNK-01"],
+        "WHY_EXCLUDED": "the measured block portions lie outside the glazing zone; the "
+                        "openings traced on the sea-view line sit in that zone"},
+    ("CASE-3-DOOR-AND-WINDOW", "COL-04"): {
+        "length_m": 0.700, "length_basis": "CAD_GEOMETRY", "LINK_ID": "NONE",
+        "WHAT": "S-COL.BON hatch in the neighbour wall (x -131069.9 -> -130369.9), protruding 50 mm; "
+                "lies INSIDE the 515 face run of SEG-02",
+        "REPLACES": "nothing", "DIFFERENCE_CLASS": "TRADE_SPLIT_PENDING",
+        "NOT_ADDITIVE": "overlaps SEG-02; bonding vs normal plaster split is an owner rule"},
+}
+OWNER_VERIFIED_ENDPOINTS = {
+    ("CASE-3-DOOR-AND-WINDOW", "SEG-02"): "515 from the SALOON-side (sea-view) wall to the column "
+                                          "immediately before the GARDEN (owner-verified)",
+}

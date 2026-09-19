@@ -241,8 +241,8 @@ def benchmark_identity(rec: dict, curves: dict) -> dict:
             "QUANTITIES_USED_TO_CHANGE_FROZEN_GEOMETRY": False}
 
 
-def run() -> dict:
-    est = json.loads((OUT / "P7757_WALL_TREATMENT_ESTIMATE_v2.json").read_text("utf-8"))
+def run(version: str = "v2") -> dict:
+    est = json.loads((OUT / f"P7757_WALL_TREATMENT_ESTIMATE_{version}.json").read_text("utf-8"))
     rec = json.loads((OUT / "BENCHMARK_RECONCILIATION.json").read_text("utf-8"))
     curves = json.loads((OUT / "CAD_CURVE_REGISTER.json").read_text("utf-8"))
     reg = json.loads(Path(P.TRACE_REGISTER).read_text("utf-8"))
@@ -300,7 +300,7 @@ def run() -> dict:
             for k, v in d["DRIVERS"].items():
                 drivers[k] = round(drivers[k] + v, 4)
     body = {
-        "PHASE_ID": P.PHASE_ID, "ARTIFACT": "DUAL_BASIS",
+        "PHASE_ID": P.PHASE_ID, "ARTIFACT": "DUAL_BASIS", "ESTIMATE_VERSION": version,
         "BASES": Q.BASES, "LAYERS": Q.LAYERS,
         "CONTRACTOR_RULEBOOK": rb,
         "HEIGHT_BASIS_RECORDS": height_basis_records(),
@@ -325,7 +325,7 @@ def run() -> dict:
                  "SOURCE": "data/rate_cards/P7757_RATE_CARD.json", "KWD_IMPACT": None},
         "NO_BASIS_OVERWRITES_THE_OTHER": True, "NOT_AN_APPROVED_BOQ": True,
     }
-    p = OUT / "DUAL_BASIS.json"
+    p = OUT / ("DUAL_BASIS.json" if version == "v2" else f"DUAL_BASIS_{version}.json")
     p.write_text(json.dumps(body, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     return {"DUAL_BASIS_SHA256": hashlib.sha256(p.read_bytes()).hexdigest(),
             "PROJECT": body["PROJECT"],
@@ -334,4 +334,5 @@ def run() -> dict:
 
 
 if __name__ == "__main__":
-    print(json.dumps(run(), indent=2, ensure_ascii=False))
+    import sys
+    print(json.dumps(run(sys.argv[1] if len(sys.argv) > 1 else "v2"), indent=2, ensure_ascii=False))

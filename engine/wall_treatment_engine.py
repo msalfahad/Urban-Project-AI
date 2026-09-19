@@ -231,8 +231,11 @@ def calculate(face_set: dict, reg: dict, *, treatment: str,
         sheet.append({"LINE": "REVEAL", "OPENING_ID": o["OPENING_ID"], "GIRTH_M": girth,
                       "DEPTH_M": d, "DEPTH_SOURCE": d_src, "CALC": f"{girth} x {d} = {rv}",
                       "AREA_M2": rv, "SEPARATE_FROM_THE_WALL_FACE": True})
-        # §17 profile-eligible edges, lm per category
-        if _num(w) and _num(h):
+        # §17 profile-eligible edges, lm per category; one opening without a
+        # size makes every category NOT_ESTABLISHED and it stays so
+        if all(v is None for v in prof.values()):
+            pass
+        elif _num(w) and _num(h):
             if o["TYPE"] == "DOOR":
                 prof["DOOR_JAMB"] += 2 * h
                 prof["DOOR_HEAD"] += w
