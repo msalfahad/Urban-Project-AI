@@ -201,11 +201,10 @@ def build_case_sandboxes() -> dict:
     manifests, failed = [], []
     for c in req["CASES"]:
         cid = c["CASE_ID"]
-        declared = ([c["PRIMARY_PLAN"]] + list(c.get("REQUIRED_SECTIONS") or [])
-                    + list(c.get("REQUIRED_ELEVATIONS") or [])
-                    + list(c.get("REQUIRED_DETAILS") or [])
-                    + list(c.get("OPTIONAL_CONTEXT") or []))
-        declared = [s for s in declared if s]
+        # the merged artifact already carries the conservative union of
+        # every sheet either path justified as REQUIRED. Nothing else is
+        # mounted - POSSIBLY_RELEVANT does not earn a mount.
+        declared = [s for s in c.get("CONSERVATIVE_UNION_MOUNTED") or [] if s]
         missing = [s for s in declared if s not in index["SHEETS"]]
         unavailable = list(c.get("MISSING_SOURCE") or [])
         if missing:
@@ -225,6 +224,18 @@ def build_case_sandboxes() -> dict:
             "SOURCES": sorted(mounted),
             "WHY_EACH_SOURCE_IS_HERE": c.get("WHY_EACH_SOURCE_IS_REQUIRED"),
             "SOURCES_KNOWN_TO_BE_MISSING_FROM_THE_DRAWING_SET": unavailable,
+            "CASE_SOURCE_STATUS": c.get("CASE_SOURCE_STATUS"),
+            "A_MISSING_SOURCE_DOES_NOT_UPGRADE_ANYTHING": (
+                "you may still inspect the geometry that IS here, but no "
+                "result may be upgraded to ESTABLISHED because a missing "
+                "source was unavailable. Say what is missing"),
+            "WHY_EACH_SHEET_IS_MOUNTED": {
+                r["SHEET_ID"]: {
+                    "DISCOVERED_BY": r["DISCOVERED_BY"],
+                    "REASON": (r.get("REASON_VISUAL_PREREAD")
+                               or r.get("REASON_DOCUMENT_GRAPH")),
+                } for r in c.get("SOURCE_REQUIREMENTS") or []
+                if r["SHEET_ID"] in declared},
             "THIS_PACKET_WAS_DECLARED_BEFORE_ANY_MEASURING_BEGAN": (
                 "a pre-read stage decided which sheets this question needs "
                 "and this directory contains exactly those. If something "
@@ -238,6 +249,7 @@ def build_case_sandboxes() -> dict:
             "MOUNTED": mounted,
             "MOUNTED_COUNT": len(mounted),
             "DECLARED_MISSING_FROM_THE_SET": unavailable,
+            "CASE_SOURCE_STATUS": c.get("CASE_SOURCE_STATUS"),
             "STATUS": ("SOURCE_SET_INCOMPLETE_BUT_RUNNABLE" if unavailable
                        else "SOURCE_SET_COMPLETE"),
             "TASK_SHA256": sha(d / "TASK.json"),
