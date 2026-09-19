@@ -128,14 +128,19 @@ def _signatures(feat, *, layer_kinds, doors, stairs, material, gaps,
     sig["LAYERS"] = sorted(lays)
     sig["LAYER_KINDS"] = sorted({k for L in lays
                                  for k in layer_kinds.get(L, ())})
-    sig["ON_A_WINDOW_OR_DOOR_LAYER"] = bool(
-        {"WINDOW_LAYER", "DOOR_LAYER"} & set(sig["LAYER_KINDS"]))
+    sig["ON_A_WINDOW_LAYER"] = "WINDOW_LAYER" in sig["LAYER_KINDS"]
+    sig["ON_A_DOOR_LAYER"] = "DOOR_LAYER" in sig["LAYER_KINDS"]
+    sig["MEMBER_ROLES"] = sorted({m.role for m in ms})
     sig["ON_AN_ANNOTATION_LAYER"] = "ANNOTATION_LAYER" in sig["LAYER_KINDS"]
     sig["ON_A_STRUCTURAL_LAYER"] = "STRUCTURAL_LAYER" in sig["LAYER_KINDS"]
 
     g = LineString([(box[0], box[1]), (box[2], box[3])]).envelope
     sig["SPANS_A_RECORDED_GAP"] = any(
         g.buffer(P.JOIN_MM).intersects(
+            LineString([tuple(x["start_mm"]), tuple(x["end_mm"])]))
+        for x in gaps if x.get("start_mm") and x.get("end_mm"))
+    sig["SPANS_A_RECORDED_PORTAL"] = any(
+        x.get("IS_A_PORTAL") and g.buffer(P.JOIN_MM).intersects(
             LineString([tuple(x["start_mm"]), tuple(x["end_mm"])]))
         for x in gaps if x.get("start_mm") and x.get("end_mm"))
 
@@ -189,23 +194,46 @@ def _signatures(feat, *, layer_kinds, doors, stairs, material, gaps,
     return sig
 
 
+ANNOTATION_ROLES = (ir.DIMENSION_LINE, ir.DIMENSION_WITNESS,
+                    ir.ANNOTATION, ir.LEVEL_OR_GRID_ANNOTATION)
+JOINERY_ROLES = (ir.CASEWORK, ir.CABINET_FRONT, ir.COUNTER_EDGE,
+                 ir.FIXTURE, ir.FURNITURE)
+STRUCTURAL_ROLES = (ir.COLUMN, ir.COLUMN_CANDIDATE_UNRESOLVED)
+
+
 def _stratum(sig):
-    """First signature that fits, in the declared order."""
-    if sig["A_PAIR_AT_A_WALL_THICKNESS"]:
-        return "S1_PAIRED_BAND"
-    if sig["ON_A_WINDOW_OR_DOOR_LAYER"] or sig["SPANS_A_RECORDED_GAP"]:
-        return "S2_OPENING_LAYER"
-    if sig["DOOR_GEOMETRY_IS_NEAR"]:
-        return "S3_DOOR_EVIDENCE"
-    if sig["PARALLEL_TO_MATERIAL_AT_FITTED_UNIT_DEPTH"]:
-        return "S4_FITTED_UNIT_OFFSET"
-    if sig["A_SMALL_CLOSED_LOOP"] or sig["ON_A_STRUCTURAL_LAYER"]:
-        return "S5_STRUCTURAL_LOOP"
-    if sig["STAIR_GEOMETRY_IS_NEAR"] or sig["NOT_IN_THE_VISIBLE_CUT_PLANE"]:
+    """First rule that fits, in the declared order.
+
+    v4 stratifies on the established semantic role E1.4 already assigns
+    each interval, on the frozen gap and door registers, and on the
+    drawing's own layer names - evidence that predicts the category. It
+    does not consult any reference or A19 answer.
+    """
+    roles = set(sig["MEMBER_ROLES"])
+    # the one rule the first sample lacked
+    if roles and roles <= set(ANNOTATION_ROLES):
+        return "S7_ANNOTATION_CONTROL"
+    if (ir.MATERIAL_WALL_FACE in roles
+            and sig["A_PAIR_AT_A_WALL_THICKNESS"]):
+        return "S1_MATERIAL_WALL_BODY"
+    if sig["ON_A_WINDOW_LAYER"]:
+        return "S2_WINDOW_LAYER"
+    if (sig["SPANS_A_RECORDED_PORTAL"] or sig["ON_A_DOOR_LAYER"]
+            or (sig["DOOR_GEOMETRY_IS_NEAR"]
+                and ir.MATERIAL_WALL_FACE in roles)):
+        return "S3_DOOR_OR_RECORDED_OPENING"
+    if roles & set(JOINERY_ROLES):
+        return "S4_FITTED_JOINERY"
+    if roles & set(STRUCTURAL_ROLES) or sig["ON_A_STRUCTURAL_LAYER"]:
+        return "S5_STRUCTURAL_MEMBER"
+    if (ir.STAIR_GEOMETRY in roles
+            or sig["NOT_IN_THE_VISIBLE_CUT_PLANE"]):
         return "S6_STAIR_OR_NOT_IN_CUT_PLANE"
-    if sig["ON_AN_ANNOTATION_LAYER"]:
-        return "S7_ANNOTATION_LAYER"
-    return "S8_OTHER_HIGH_IMPACT_AMBIGUITY"
+    if roles <= {ir.UNKNOWN} and sig["IN_THE_CUT_PLANE"]:
+        return "S8_UNRESOLVED_IN_THE_CUT_PLANE"
+    if ir.MATERIAL_WALL_FACE in roles:
+        return "S1_MATERIAL_WALL_BODY"
+    return "S8_UNRESOLVED_IN_THE_CUT_PLANE"
 
 
 def _crop_plan(feat):
@@ -256,15 +284,15 @@ def _render(sheet, reg, feat, by_id, labels, half, marked, path,
             continue
         members_px[lab] = pts
         # a leader may start anywhere along the member it names, so every
-        # tag is offered several feet in a declared order: the middle
-        # first, then the quarters, then the ends drawn in
-        n = len(inside)
-        picks, seen = [], set()
-        for frac in (0.5, 0.35, 0.65, 0.2, 0.8, 0.1, 0.9):
-            k = min(n - 1, max(0, int(round(frac * (n - 1)))))
-            if k not in seen:
-                seen.add(k)
-                picks.append(inside[k])
+        # tag is offered feet in a declared order: the middle first, then
+        # outward. They are spaced along the member BY LENGTH - v4 spaced
+        # them by vertex index, which gave a straight segment only its
+        # two ends
+        picks = R.anchor_candidates(pts, pixels)
+        if not picks:
+            missing[lab] = "A_TAGGED_MEMBER_IS_NOT_INSIDE_THE_CROP"
+            del members_px[lab]
+            continue
         anchors[lab] = picks
     placed, failed = R.place_tags(anchors, pixels)
     failed.update(missing)
@@ -279,6 +307,28 @@ def main() -> int:
     t0 = time.time()
     a = Args()
     OUT.mkdir(parents=True, exist_ok=True)
+    keep = OUT / "round1_superseded_sample"
+    if not keep.exists():
+        keep.mkdir(parents=True)
+        for name in ("00_PROTOCOL.json",
+                     "01_CANONICAL_FEATURE_REGISTER.json",
+                     "02_RENDER_QA_REGISTER.json",
+                     "03_REFERENCE_INPUT_MANIFEST.json",
+                     "04_REFERENCE_A.json"):
+            if (OUT / name).exists():
+                shutil.move(str(OUT / name), str(keep / name))
+        for d in ("blind_sandbox", "crops", "reference_raw"):
+            if (OUT / d).exists():
+                shutil.move(str(OUT / d), str(keep / d))
+        (keep / "WHY_THIS_SAMPLE_IS_SUPERSEDED.json").write_text(
+            json.dumps({
+                "WHY": P.WHY_V3_WAS_SUPERSEDED,
+                "the_reference_is_not_a_sampling_aid":
+                    P.THE_REFERENCE_IS_NOT_A_SAMPLING_AID,
+                "IT_IS_KEPT_AS_EVIDENCE_ABOUT_THE_APPARATUS": True,
+                "ITS_ANSWERS_TOOK_NO_PART_IN_SELECTING_THE_NEW_SAMPLE":
+                    True,
+            }, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     proto_hash = write(OUT / "00_PROTOCOL.json", P.record())
 
     st = r14._core(a)

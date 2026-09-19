@@ -67,7 +67,88 @@ from __future__ import annotations
 import hashlib
 
 EXPERIMENT_ID = "SEMANTIC_SAFETY_EXPERIMENT_02"
-PROTOCOL_VERSION = 3
+PROTOCOL_VERSION = 5
+
+SUPERSEDED_PROTOCOL_V4_HASH = (
+    "cdaa8108be7c07d7129f928a8cc83822d1a022c05618810c51f855efddda8dde")
+
+SUPERSEDED_PROTOCOL_V3_HASH = (
+    "18853629a9d5d40d4f5b817e54af2cd13a4038090320819e0a1a31a13fcc7c3b")
+
+WHY_V3_WAS_SUPERSEDED = (
+    "v3's strata were SOURCE SIGNATURES - a pair at a wall thickness, a "
+    "member on an opening layer, door geometry near, a fitted-unit "
+    "offset - chosen to make the target categories likely without "
+    "presupposing them. On this drawing they are a weak proxy, because an "
+    "annotation line can sit near a door, cross a wall thickness and run "
+    "along the envelope, and it does.\n\n"
+    "The first blind reference over the v3 sample, frozen at "
+    "46427972f425000ed445dd46116b43e9addd9cdf0790e54f9208b909fca08258, "
+    "read twenty-one of forty features as ANNOTATION_OR_DIMENSION, and "
+    "left ONE opening and ONE glazed separator. An experiment about "
+    "separator against opening cannot be answered on one of each, and an "
+    "authority level rested on them would be a number standing in for "
+    "evidence that is not there.\n\n"
+    "v4 stratifies on evidence that actually predicts the category: the "
+    "established semantic role E1.4 already assigns each interval, the "
+    "frozen gap and door registers, and the drawing's own layer names. A "
+    "feature whose every member carries a dimension or annotation role is "
+    "excluded from every stratum but the small annotation control.\n\n"
+    "WHAT V4 MAY NOT DO, AND DOES NOT: the reference's answers take no "
+    "part in selecting the new sample. Selecting on the answer is the one "
+    "thing that would make the rerun worthless. The v3 sample and its "
+    "reference are preserved as evidence about the apparatus, not reused "
+    "as a sampling aid")
+
+WHY_V4_WAS_SUPERSEDED = (
+    "v4 changed WHICH features are sampled. v5 changes nothing about "
+    "that, and nothing about what makes a tag legible. It repairs the "
+    "placer, which two measured defects made weaker than the rule it "
+    "was written to enforce.\n\n"
+    "DEFECT 1 - the leader feet. A tag's leader may start anywhere along "
+    "the member it names, and the placer offered seven feet along it: "
+    "the middle, then the quarters, then the ends. It chose them by "
+    "INDEX among the vertices the geometry returned. A straight SEGMENT "
+    "returns two vertices, so all seven fractions collapsed onto index 0 "
+    "or index 1 and the member offered only its two ENDS - which on a "
+    "wall run is precisely where every other member ends too. v5 "
+    "interpolates the feet BY ARC LENGTH, so a straight member offers "
+    "real interior feet.\n\n"
+    "DEFECT 2 - the search. The placer walked the labels once, in order, "
+    "took the first position that passed, and never went back. A member "
+    "whose good positions an EARLIER label had taken was reported "
+    "unplaceable when a different assignment would have tagged them "
+    "both. It then RE-CHECKED its own result against every other final "
+    "position and could fail a tag it had already accepted - proof from "
+    "the apparatus itself that its search did not decide what its tests "
+    "decided. v5 searches with backtracking over the same positions in "
+    "the same declared order, under one pairwise gate used both to "
+    "search and to verify, and tries hardest first to tag EVERY member: "
+    "the count of untagged members is now the smallest the declared "
+    "tests permit rather than an artefact of label order.\n\n"
+    "NO TEST IS RELAXED AND NO TEST IS ADDED. TAG_BOX, TAG_MARGIN_PX, "
+    "TAG_MIN_GAP_PX, LEADER_CLEAR_PX, TAG_RADII_PX and "
+    "TAG_DIRECTIONS_DEG are unchanged. Both repairs only widen the "
+    "search, so wherever v4's placer succeeded v5 returns the same "
+    "placement.\n\n"
+    "WHY IT HAD TO BE REPAIRED BEFORE A READER SAW THE SAMPLE: under the "
+    "owner's resolution of the tagging collision, a member may go "
+    "untagged only because its source geometry is COINCIDENT with "
+    "another member's and no unique tag is therefore possible. The "
+    "renderer gate remains absolute for every member that is "
+    "geometrically distinguishable. Over the v3 sample two members - "
+    "E1_2:CAD-1021#02 at a measured coincident share of 0.00 and "
+    "E1_2:CAD-361@1023#01 at 0.04 - were left untagged by the placer "
+    "while being fully distinguishable in the drawing. That is the "
+    "placer failing the rule, not the drawing forcing an exception, and "
+    "it is recorded as an implementation defect with its measurement, "
+    "not tidied away")
+
+THE_REFERENCE_IS_NOT_A_SAMPLING_AID = (
+    "reference A over the v3 sample is frozen and kept. It is read here "
+    "as a finding about stratification - source signatures do not select "
+    "for geometry-changing features on this drawing - and never as a "
+    "list of which features to pick next")
 
 SUPERSEDED_PROTOCOL_V1_HASH = (
     "6eb2edb4ce04272545c056cbeee21058b1a5ba9e628d2ec68dcd3c7ff2bda4ed")
@@ -264,6 +345,16 @@ LEADER_CLEAR_PX = 8
 TAG_RADII_PX = (26, 38, 52, 70, 92, 118, 150, 190, 240, 300)
 TAG_DIRECTIONS_DEG = (315, 45, 225, 135, 0, 180, 90, 270)
 
+# where along its own member a leader may plant its foot, as a fraction of
+# the member's LENGTH - the middle first, then outward. v4 read these as
+# vertex indices, which gave a straight segment only its two ends.
+TAG_ANCHOR_FRACTIONS = (0.5, 0.35, 0.65, 0.2, 0.8, 0.42, 0.58,
+                        0.28, 0.72, 0.12, 0.88, 0.06, 0.94)
+# the backtracking search is bounded so a pathological crop cannot hang
+# the build; running out of budget is reported, never rounded to success
+TAG_SEARCH_NODE_BUDGET = 120000
+TAG_SEARCH_MAX_SKIPS = 3
+
 RENDER_QA_FIELDS = ("TAG_VISIBLE", "TAG_TO_ENTITY_LINK_UNAMBIGUOUS")
 
 ADMISSION_FAILS_WHEN = (
@@ -315,30 +406,40 @@ SAMPLE_MAX = 40
 # the drawing chosen to make a target category likely to appear. What a
 # feature IS remains for the reference to say.
 STRATA = (
-    ("S1_PAIRED_BAND", 6,
-     "the feature contains a pair of parallel members at a separation "
-     "inside the drawing's own wall-thickness band"),
-    ("S2_OPENING_LAYER", 6,
-     "the feature contains a member on a layer the drawing uses for "
-     "openings, or spans a gap the frozen gap register recorded"),
-    ("S3_DOOR_EVIDENCE", 6,
-     "door geometry from the frozen source layer lies within "
-     "DOOR_REACH_MM of the feature"),
-    ("S4_FITTED_UNIT_OFFSET", 5,
-     "the feature runs parallel to established material at a separation "
-     "inside the fitted-unit depth band"),
-    ("S5_STRUCTURAL_LOOP", 4,
-     "the feature contains a small closed loop, or members on a layer "
-     "holding almost nothing but such loops"),
+    ("S1_MATERIAL_WALL_BODY", 6,
+     "a member carries the established role MATERIAL_WALL_FACE and the "
+     "feature holds a pair of parallel members at a wall thickness"),
+    ("S2_WINDOW_LAYER", 6,
+     "a member sits on a layer the drawing names for windows or glazing. "
+     "The deterministic layer establishes NO glazing anywhere on this "
+     "floor, so the layer name is the only source evidence there is"),
+    ("S3_DOOR_OR_RECORDED_OPENING", 6,
+     "the feature spans a gap the frozen gap register recorded as a "
+     "portal, or a member sits on a door layer, or door geometry lies "
+     "within DOOR_REACH_MM of a member carrying a material wall face"),
+    ("S4_FITTED_JOINERY", 5,
+     "a member carries an established casework, cabinet-front, "
+     "counter-edge, fixture or furniture role"),
+    ("S5_STRUCTURAL_MEMBER", 4,
+     "a member carries an established column role, or an unresolved "
+     "column-candidate role, or sits on a structural layer"),
     ("S6_STAIR_OR_NOT_IN_CUT_PLANE", 4,
-     "stair geometry lies near the feature, or its members carry a "
-     "linetype the drawing uses for geometry above or below the cut"),
-    ("S7_ANNOTATION_LAYER", 3,
-     "the feature's members sit on a dimension or annotation layer"),
-    ("S8_OTHER_HIGH_IMPACT_AMBIGUITY", 6,
-     "anything else in the cut plane whose role the deterministic layer "
-     "did not settle"),
+     "a member carries an established stair role, or its line semantics "
+     "place it above or below the cut plane"),
+    ("S7_ANNOTATION_CONTROL", 3,
+     "every member carries a dimension, witness, annotation or level "
+     "role. A small control, deliberately capped: the previous sample "
+     "was half annotation and measured almost nothing"),
+    ("S8_UNRESOLVED_IN_THE_CUT_PLANE", 6,
+     "no member's role is established, and the line semantics place the "
+     "feature in the visible cut plane"),
 )
+
+EXCLUDED_FROM_EVERY_STRATUM_BUT_THE_CONTROL = (
+    "a feature whose every member carries a dimension, witness, "
+    "annotation or level role cannot enter a geometry-changing stratum, "
+    "whatever its geometry looks like. That single rule is what the first "
+    "sample lacked")
 
 TIE_BREAK = "lowest stable source interval id ascending"
 
@@ -667,6 +768,9 @@ def _params() -> dict:
         "LEADER_CLEAR_PX": LEADER_CLEAR_PX,
         "TAG_RADII_PX": list(TAG_RADII_PX),
         "TAG_DIRECTIONS_DEG": list(TAG_DIRECTIONS_DEG),
+        "TAG_ANCHOR_FRACTIONS": list(TAG_ANCHOR_FRACTIONS),
+        "TAG_SEARCH_NODE_BUDGET": TAG_SEARCH_NODE_BUDGET,
+        "TAG_SEARCH_MAX_SKIPS": TAG_SEARCH_MAX_SKIPS,
         "ESCALATION_FACTOR": ESCALATION_FACTOR,
         "ESCALATION_MIN_HALF_MM": ESCALATION_MIN_HALF_MM,
         "ESCALATIONS_ALLOWED": ESCALATIONS_ALLOWED,
@@ -685,6 +789,9 @@ def protocol_hash() -> str:
              + list(RENDER_RULES) + list(ADMISSION_FAILS_WHEN)
              + list(APPLICABILITY_RULES)
              + [f"{n}:{q}:{w}" for n, q, w in STRATA]
+             + [SUPERSEDED_PROTOCOL_V3_HASH,
+                EXCLUDED_FROM_EVERY_STRATUM_BUT_THE_CONTROL,
+                THE_REFERENCE_IS_NOT_A_SAMPLING_AID]
              + [REGRESSION_RULE] + list(REGRESSION_SOURCE_INTERVALS)
              + list(PHYSICAL_RELATIONS) + list(ASSEMBLY_TYPES)
              + list(ENTITY_SUB_ROLES) + list(CONFIDENCE_CLASSES)
@@ -706,6 +813,14 @@ def record() -> dict:
         "PROTOCOL_VERSION": PROTOCOL_VERSION,
         "SUPERSEDED_PROTOCOL_V1_HASH": SUPERSEDED_PROTOCOL_V1_HASH,
         "SUPERSEDED_PROTOCOL_V2_HASH": SUPERSEDED_PROTOCOL_V2_HASH,
+        "SUPERSEDED_PROTOCOL_V3_HASH": SUPERSEDED_PROTOCOL_V3_HASH,
+        "why_v3_was_superseded": WHY_V3_WAS_SUPERSEDED,
+        "why_v4_was_superseded": WHY_V4_WAS_SUPERSEDED,
+        "SUPERSEDED_PROTOCOL_V4_HASH": SUPERSEDED_PROTOCOL_V4_HASH,
+        "the_reference_is_not_a_sampling_aid":
+            THE_REFERENCE_IS_NOT_A_SAMPLING_AID,
+        "THE_V3_REFERENCE_ANSWERS_TOOK_NO_PART_IN_SELECTING_THIS_SAMPLE":
+            True,
         "why_v1_was_superseded_before_any_reader_ran":
             WHY_V1_WAS_SUPERSEDED_BEFORE_ANY_READER_RAN,
         "why_v2_was_superseded_before_any_reader_ran":
@@ -775,6 +890,8 @@ def record() -> dict:
             "TIE_BREAK": TIE_BREAK,
             "do_not_fabricate_to_meet_a_quota":
                 DO_NOT_FABRICATE_TO_MEET_A_QUOTA,
+            "EXCLUDED_FROM_EVERY_STRATUM_BUT_THE_CONTROL":
+                EXCLUDED_FROM_EVERY_STRATUM_BUT_THE_CONTROL,
             "THE_STRATA_ARE_SOURCE_SIGNATURES_NOT_PREDICTED_ANSWERS": True,
         },
 
