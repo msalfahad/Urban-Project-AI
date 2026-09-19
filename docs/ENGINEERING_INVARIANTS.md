@@ -3402,3 +3402,67 @@ Every path a register records is relative to the run directory. This is
 the same error as a register hashing its own hash field: a freeze must
 depend on the content it froze and on nothing else about the machine it
 was produced on.
+
+## §120 — A region closed through a zero-material portal is not enclosed by drawn material
+
+`QS_MEASUREMENT_REGION_EXPERIMENT_01` (frozen,
+`c9d13a2c350b0d5ee8d050363afc6813880999ccc4773dbd5addf5846426f252`) read the
+frozen E1.4 chains and found that every candidate E1.4 reports as
+`CLOSED_BY_DRAWN_MATERIAL` closes only because a `DOOR_PORTAL` element sits
+in its chain — an element carrying `material_present=false` and
+`wall_length_contribution_mm=0.0`.
+
+For that ground floor the honest counts are:
+
+```
+PHYSICAL_REGIONS_ENCLOSED_BY_DRAWN_MATERIAL   0
+MEASUREMENT_REGIONS_CLOSED                    3
+```
+
+E1.4's arithmetic was never wrong: it already holds portal length outside
+the material total and reports `length_with_no_material_mm: 0`. What it did
+was let a **measurement** fact wear a **physical** name.
+
+**A chain that needs a zero-material element to close is not enclosed by
+drawn material.** Forward, the two facts carry different names and are never
+summed. `ENCLOSED_BY_DRAWN_MATERIAL` means the ring is made of material and
+nothing else. A ring completed by a portal, a barrier or any synthetic span
+is `MEASUREMENT_REGION_CLOSED`, and it names the closure that completed it.
+
+There is no combined "closed rooms" figure. A metric that adds them tells a
+reader that a doorway is a wall.
+
+Historical E1.4 output is preserved exactly as run and is not rewritten. The
+correction is to the vocabulary going forward, not to the frozen record.
+
+## §121 — The four statuses, and the two invariants that keep them apart
+
+Four questions, four answers, never one field:
+
+| status | asks | may be decided by |
+|---|---|---|
+| `PHYSICAL_REGION_STATUS` | is this region enclosed by material that exists? | drawn material only |
+| `TOPOLOGICAL_SITE_STATUS` | what is established at this site between two physical entities? | frozen evidence; a site may be an ABSENCE of geometry |
+| `MEASUREMENT_REGION_STATUS` | can a calculable region be formed for a stated trade and basis? | physical edges plus declared measurement closures |
+| `TRADE_QUANTITY_STATUS` | does this edge or opening contribute to this quantity? | a rule, applied to the pair (edge, trade) |
+
+A measurement closure may move `MEASUREMENT_REGION_STATUS`. It may never
+move `PHYSICAL_REGION_STATUS`. Two invariants enforce that, and both are
+**mandatory CI requirements** for any future measurement-region builder:
+
+**REVERSIBILITY.** `REVERSIBLE` is proved, never stored. Hash the physical
+claims (STATE A), construct every measurement closure (STATE B), remove them
+all (STATE C), and require `HASH(A) == HASH(C)`. The hash covers the
+physical claims specifically — not whole files — so it cannot pass on
+unrelated bytes. `QS_MEASUREMENT_REGION_EXPERIMENT_01` proved this over 31
+closures with zero drift.
+
+**ZERO MATERIAL CONTRIBUTION.** No synthetic measurement boundary, open
+physical edge or unresolved edge may carry a material, plaster or
+wall-ceramic length contribution for any trade. Polygon perimeter may never
+silently become wall length. The experiment checked this two independent
+ways over 405 edges — its own flags, and E1.4's separately computed
+`wall_length_contribution_mm` — and both agreed at zero.
+
+A closure that can survive neither test is not a measurement instrument. It
+is an undeclared wall.

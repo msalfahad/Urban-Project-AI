@@ -89,32 +89,45 @@ time.
 
 ## Geometry is four layers, not three
 
-Under evaluation, not built. A quantity surveyor closes a doorway on purpose
-to make a room measurable, then deducts the door by rule — the closure is a
-measurement instrument, never a claim that a wall is there. This system has
-only ever had three layers and so had to obtain measurable regions from
-physical geometry, which is the documented cause of a long run of failures.
+Established by `QS_MEASUREMENT_REGION_EXPERIMENT_01` (frozen). A quantity
+surveyor closes a doorway on purpose to make a room measurable, then deducts
+the door by rule — the closure is a measurement instrument, never a claim
+that a wall is there. This system had only three layers and so had to obtain
+measurable regions from physical geometry, which is the documented cause of
+a long run of failures.
 
-| | layer | answers |
-|---|---|---|
-| A | `PHYSICAL_GEOMETRY` | what physically exists |
-| B | `TOPOLOGICAL_RELATION` | door, opening, glazing, open passage, connectivity |
-| C | `QS_MEASUREMENT_GEOMETRY` | synthetic zero-material closures that make a measurement region well-defined |
-| D | `TRADE_QUANTITY` | deterministic quantity after deductions, additions and rules |
+```
+PHYSICAL_GEOMETRY          what material exists, and where
+        ↓
+TOPOLOGICAL_SITES          what is established BETWEEN physical entities
+        ↓
+TRADE_MEASUREMENT_REGIONS  a calculable region, for one trade and one basis
+        ↓
+QUANTITIES                 after deductions, additions and rules
+```
 
-A measurement closure carries `PHYSICAL_MATERIAL_PRESENT = false`,
-`WALL_LENGTH_CONTRIBUTION = 0`, `MEASUREMENT_CONSTRUCTION_ONLY = true`,
-`REVERSIBLE = true` and exact provenance to the opening that caused it. It
-is trade-dependent, never universal: appropriate for floor area and plaster,
-dangerous for wall tile, blockwork, egress and fire compartmentation.
+Each arrow is one-way. A later layer may read an earlier one; none may write
+to it, repair it, or borrow its authority.
 
-Its chief value is not that more rooms close. It is that `PHYSICAL_GEOMETRY`
-is finally allowed to be an honest description of the drawing — open where
-the drawing is open.
+Four separate statuses, never one field and never summed:
+`PHYSICAL_REGION_STATUS`, `TOPOLOGICAL_SITE_STATUS`,
+`MEASUREMENT_REGION_STATUS`, `TRADE_QUANTITY_STATUS`.
 
-See **[QS_MEASUREMENT_CLOSURE.md](QS_MEASUREMENT_CLOSURE.md)** for the full
-evaluation, the evidence from the frozen E1.4 registers, the enforceable
-invariants, and the six questions answered.
+**A topological site may represent an absence of geometry.** A site is wall
+termination A + the void + wall termination B; a door leaf or swing arc
+inside it is evidence *about* the site, not the site. The void is a
+first-class site with no line in it.
+
+Two findings worth carrying: a region closed through a zero-material portal
+is **not** enclosed by drawn material (invariant §120 — for the P7757 ground
+floor the honest counts are 0 physical, 3 measurement), and any future
+measurement-region builder must pass two mandatory CI invariants —
+reversibility proved by hash, and zero material contribution from synthetic
+or open edges (§121).
+
+See **[FOUR_LAYER_GEOMETRY.md](FOUR_LAYER_GEOMETRY.md)** for the normative
+terminology and **[QS_MEASUREMENT_CLOSURE.md](QS_MEASUREMENT_CLOSURE.md)**
+for the evaluation behind it.
 
 ## Why this split
 
