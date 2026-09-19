@@ -58,6 +58,22 @@ TRACE_SCHEMA = {
 REQUIRED_PER_TRACE = ("TRACE_ID", "CASE_ID", "CLAIM_TYPE", "SHEET_ID",
                       "VISUAL_TRACE_STATUS")
 
+DIMENSION_CLAIM_TYPES = ("PRINTED_DIMENSION", "HEIGHT_DIMENSION")
+
+# A dimension's geometry is not a generic PIXEL_* box - it is the text
+# box plus the dimension line plus the two extension lines, which is
+# exactly what PRINTED_DIMENSION_FIELDS specifies and what makes the
+# dimension auditable at all. The first validator only accepted the
+# generic fields and rejected 43 perfectly well-formed dimension traces.
+DIMENSION_GEOMETRY_FIELDS = ("TEXT_BBOX", "DIMENSION_LINE_TRACE",
+                             "EXTENSION_LINE_A", "EXTENSION_LINE_B")
+
+
+def geometry_fields_for(claim_type: str) -> tuple:
+    if claim_type in DIMENSION_CLAIM_TYPES:
+        return tuple(P.TRACE_GEOMETRY_FIELDS) + DIMENSION_GEOMETRY_FIELDS
+    return tuple(P.TRACE_GEOMETRY_FIELDS)
+
 
 def validate_trace(t: dict, sheets: dict) -> list:
     """Every reason this trace is not usable. Empty list means usable."""
@@ -74,9 +90,17 @@ def validate_trace(t: dict, sheets: dict) -> list:
     sid = t.get("SHEET_ID")
     if sid and sid not in sheets:
         bad.append(f"SHEET_ID {sid} is not in the sheet index")
-    geom = [g for g in P.TRACE_GEOMETRY_FIELDS if t.get(g)]
+    geom = [g for g in geometry_fields_for(ct) if t.get(g)]
     if not geom and st != "TRACE_NOT_ESTABLISHED":
         bad.append("no geometry, and the status is not TRACE_NOT_ESTABLISHED")
+    # A running dimension CHAIN ("125 / 120 / 77 / 77 / 52") is a real
+    # drawing construct and has no single VALUE_M. Only an ESTABLISHED
+    # dimension must carry one; an ambiguous or unresolved dimension is
+    # allowed to say so.
+    if (ct in DIMENSION_CLAIM_TYPES and t.get("VALUE_M") is None
+            and not t.get("VALUES_M")
+            and st == "TRACE_ESTABLISHED"):
+        bad.append("an ESTABLISHED dimension trace with no VALUE_M")
     if t.get("SUPPORTED_BY") and not isinstance(t["SUPPORTED_BY"], (str, list)):
         bad.append("SUPPORTED_BY must be a trace id or a list of them")
     return bad
@@ -192,9 +216,90 @@ def ink_agreement(patch: int = 24, samples: int = 120, seed: int = 11) -> dict:
     return out
 
 
+def trace_mapping_check(patch: int = 24) -> dict:
+    """Criterion C on the REAL traces, not on random points.
+
+    Every accepted trace has a representative point taken from its own
+    stored geometry, projected to the original page, and the ink around
+    it compared. Random points prove the transform; these prove that the
+    coordinates a reader actually produced land where they claim to.
+    """
+    import numpy as np
+    reg_path = OUT / "TRACE_REGISTER.json"
+    if not reg_path.exists():
+        return {"REGISTER_PRESENT": False}
+    reg = json.loads(reg_path.read_text("utf-8"))
+    idx = json.loads((OUT / "SHEET_INDEX.json").read_text("utf-8"))["SHEETS"]
+    cache = {}
+
+    def sheets(sid):
+        if sid not in cache:
+            rec = idx[sid]
+            cache[sid] = (
+                np.asarray(Image.open(S.INDEX_BOX / rec["PREPARED_FILE"])
+                           .convert("L"), dtype=float),
+                np.asarray(Image.open(S.PAGES / rec["ORIGINAL_PAGE_ID"])
+                           .convert("L"), dtype=float),
+                SheetTransform(rec))
+        return cache[sid]
+
+    def rep_point(t):
+        for f in geometry_fields_for(t["CLAIM_TYPE"]):
+            g = t.get(f)
+            if not g:
+                continue
+            if f.endswith("_BBOX"):
+                return ((g[0] + g[2]) / 2.0, (g[1] + g[3]) / 2.0)
+            if f.endswith("_POINT"):
+                return (g[0], g[1])
+            mid = g[len(g) // 2]
+            return (mid[0], mid[1])
+        return None
+
+    checked, agree, deltas, off = 0, 0, [], []
+    for t in reg["TRACES"]:
+        pt = rep_point(t)
+        if pt is None:
+            continue
+        proc, orig, tr = sheets(t["SHEET_ID"])
+        x, y = pt
+        ox, oy = tr.to_original(x, y)
+        r = patch // 2
+        R = max(r, int(round(r / tr.k)))
+        if not (r < x < proc.shape[1] - r and r < y < proc.shape[0] - r):
+            off.append({"TRACE_ID": t["TRACE_ID"],
+                        "WHY": "representative point falls outside the "
+                               "processed sheet"})
+            continue
+        if not (R < ox < orig.shape[1] - R and R < oy < orig.shape[0] - R):
+            off.append({"TRACE_ID": t["TRACE_ID"],
+                        "WHY": "projected point falls outside the page"})
+            continue
+        pp = proc[int(y) - r:int(y) + r, int(x) - r:int(x) + r]
+        ob = np.rot90(orig[int(oy) - R:int(oy) + R,
+                           int(ox) - R:int(ox) + R], k=-1)
+        oo = np.asarray(Image.fromarray(ob.astype("uint8"))
+                        .resize((2 * r, 2 * r), Image.LANCZOS), dtype=float)
+        d = abs(pp.mean() - oo.mean())
+        deltas.append(d)
+        checked += 1
+        if d < 25.0:
+            agree += 1
+    return {
+        "REGISTER_PRESENT": True,
+        "TRACES_CHECKED": checked,
+        "AGREEING_WITHIN_25_LEVELS": agree,
+        "AGREEMENT_RATE": round(agree / checked, 4) if checked else None,
+        "MEAN_ABS_INTENSITY_DELTA": (round(float(sum(deltas) / len(deltas)), 3)
+                                     if deltas else None),
+        "POINTS_OFF_SHEET": off,
+    }
+
+
 def mapping_test() -> dict:
     rt = round_trip()
     ink = ink_agreement()
+    real = trace_mapping_check()
     body = {
         "PHASE_ID": P.PHASE_ID,
         "ARTIFACT": "ORIGINAL_SOURCE_MAPPING_TEST",
@@ -210,6 +315,11 @@ def mapping_test() -> dict:
         "ROUND_TRIP": rt,
         "ALL_SHEETS_INVERT": all(v["INVERTS"] for v in rt.values()),
         "INK_AGREEMENT": ink,
+        "REAL_TRACE_MAPPING": real,
+        "WHY_A_THIRD_TEST": (
+            "random points prove the transform. The third test projects "
+            "the coordinates READERS ACTUALLY PRODUCED and checks the ink "
+            "there, which is what criterion C is really asking"),
         "SHEETS_TESTED": len(rt),
         "THE_TRANSFORM_IS_STORED_PER_SHEET_NOT_GLOBALLY": (
             "each sheet carries its own W_orig, trim origin and scale, so "
@@ -223,7 +333,8 @@ def mapping_test() -> dict:
             "WORST_ROUND_TRIP_PX": max(v["WORST_ABS_ERROR_PX"]
                                        for v in rt.values()),
             "INK_AGREEMENT_RATES": {k: v["AGREEMENT_RATE"]
-                                    for k, v in ink.items()}}
+                                    for k, v in ink.items()},
+            "REAL_TRACE_MAPPING": real}
 
 
 def write_schema() -> str:
