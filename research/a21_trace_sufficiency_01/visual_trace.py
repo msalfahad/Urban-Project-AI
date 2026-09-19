@@ -32,12 +32,92 @@ OUT = Path("data/experiments/A21_TRACE_SUFFICIENCY_01")
 # the schema
 # ==================================================================
 
+# Schema normalisation (TRACE_ARCHITECTURE_HARDENING). Two claim types
+# are added to the protocol's list; raw outputs that expressed a vertical
+# relation as UNRESOLVED_FEATURE + RELATION stay valid and are VIEWED as
+# VERTICAL_RELATION by the register without any raw byte changing.
+ADDED_CLAIM_TYPES = ("VERTICAL_RELATION", "CROSS_SHEET_RELATION")
+CLAIM_TYPES = tuple(P.CLAIM_TYPES) + ADDED_CLAIM_TYPES
+
+# Three statuses that are NEVER collapsed into one another:
+#   TRACE_RECORD_STATUS       is the record well-formed?
+#   TRACE_LOCATABILITY_STATUS does it carry geometry that can be drawn
+#                             and projected?
+#   the five semantic statuses (GEOMETRY / IDENTITY / DIMENSION /
+#                             TREATMENT / PARAMETER)
+# A VALID record that is NOT locatable is a legitimate, useful trace - it
+# is how a reader says "there is something here I cannot place".
+TRACE_RECORD_STATUSES = ("VALID", "INVALID")
+TRACE_LOCATABILITY_STATUSES = ("LOCATABLE", "NOT_ESTABLISHED")
+
+# Cross-sheet relations. Two sheets whose projected graphics differ are
+# NOT thereby contradictory - an elevation projection can hide an
+# internal void. Promotion to an established contradiction needs all
+# five conditions; anything less is POTENTIAL.
+CROSS_SHEET_RELATION_STATUSES = (
+    "SAME_PHYSICAL_LOCATION_ESTABLISHED",
+    "SAME_PHYSICAL_LOCATION_PROVISIONAL",
+    "DIFFERENT_PHYSICAL_LOCATION",
+    "NOT_ESTABLISHED",
+)
+CONTRADICTION_STATUSES = ("ESTABLISHED_CROSS_SHEET_CONTRADICTION",
+                          "POTENTIAL_CROSS_SHEET_CONTRADICTION")
+CONTRADICTION_PROMOTION_REQUIRES = (
+    "both claims are traced",
+    "both sheet identities are established",
+    "the physical relationship / location is established",
+    "the drawings are expected to describe the same condition",
+    "the represented conditions are incompatible",
+)
+
+
+def classify_contradiction(claim_a: dict, claim_b: dict,
+                           relation_status: str,
+                           same_condition_expected: bool,
+                           incompatible: bool) -> str:
+    """POTENTIAL unless every promotion condition holds."""
+    traced = all(locatability_status(c) == "LOCATABLE"
+                 for c in (claim_a, claim_b))
+    sheets = all(c.get("SHEET_ID") for c in (claim_a, claim_b))
+    located = relation_status == "SAME_PHYSICAL_LOCATION_ESTABLISHED"
+    if traced and sheets and located and same_condition_expected and incompatible:
+        return "ESTABLISHED_CROSS_SHEET_CONTRADICTION"
+    return "POTENTIAL_CROSS_SHEET_CONTRADICTION"
+
+
+# The three mapping tests, named precisely, with what each does NOT prove.
+MAPPING_TESTS = {
+    "COORDINATE_ROUNDTRIP_PASS": (
+        "processed -> original -> processed inverts at ~0.0 px on every "
+        "sheet"),
+    "SOURCE_INK_CORRESPONDENCE_PASS": (
+        "random ink points on the processed sheet land on the same ink on "
+        "the original page, compared at equal PHYSICAL area"),
+    "TRACE_COORDINATE_MAPPING_PASS": (
+        "the coordinates readers actually produced land on the same ink "
+        "on the original page, for every locatable accepted trace"),
+}
+MAPPING_TESTS_DO_NOT_PROVE = (
+    "SEMANTIC_ACCURACY", "GEOMETRY_CORRECTNESS", "MEASUREMENT_CORRECTNESS",
+)
+WHY_THAT_MATTERS = (
+    "a trace can map perfectly to ink and still identify the wrong "
+    "architectural object. 'Trace accuracy' is never used to mean both")
+
 TRACE_SCHEMA = {
     "IDENTITY": list(P.TRACE_FIELDS),
     "GEOMETRY_ONE_OF": list(P.TRACE_GEOMETRY_FIELDS),
     "TRANSFORM": P.TRACE_TRANSFORM_FIELD,
-    "CLAIM_TYPES": list(P.CLAIM_TYPES),
+    "CLAIM_TYPES": list(CLAIM_TYPES),
+    "CLAIM_TYPES_ADDED_AT_HARDENING": list(ADDED_CLAIM_TYPES),
     "TRACE_STATUSES": list(P.TRACE_STATUSES),
+    "TRACE_RECORD_STATUSES": list(TRACE_RECORD_STATUSES),
+    "TRACE_LOCATABILITY_STATUSES": list(TRACE_LOCATABILITY_STATUSES),
+    "CROSS_SHEET_RELATION_STATUSES": list(CROSS_SHEET_RELATION_STATUSES),
+    "CONTRADICTION_STATUSES": list(CONTRADICTION_STATUSES),
+    "CONTRADICTION_PROMOTION_REQUIRES": list(CONTRADICTION_PROMOTION_REQUIRES),
+    "MAPPING_TESTS": MAPPING_TESTS,
+    "MAPPING_TESTS_DO_NOT_PROVE": list(MAPPING_TESTS_DO_NOT_PROVE),
     "PRINTED_DIMENSION_FIELDS": list(P.PRINTED_DIMENSION_FIELDS),
     "LINKAGE": {
         "SUPPORTED_BY": (
@@ -75,6 +155,32 @@ def geometry_fields_for(claim_type: str) -> tuple:
     return tuple(P.TRACE_GEOMETRY_FIELDS)
 
 
+def locatability_status(t: dict) -> str:
+    """Does the trace carry any geometry that can be drawn and projected?"""
+    return ("LOCATABLE"
+            if any(t.get(g) for g in geometry_fields_for(t.get("CLAIM_TYPE", "")))
+            else "NOT_ESTABLISHED")
+
+
+def record_status(t: dict, sheets: dict) -> tuple:
+    """(VALID | INVALID, reasons). Well-formedness only - never semantics,
+    and never locatability: a well-formed trace with no geometry is VALID
+    and NOT_ESTABLISHED, which is a different thing from INVALID."""
+    reasons = [r for r in validate_trace(t, sheets)
+               if not r.startswith("no geometry")]
+    return ("INVALID" if reasons else "VALID"), reasons
+
+
+def effective_claim_type(t: dict) -> str:
+    """The register's VIEW of a claim type. An UNRESOLVED_FEATURE that
+    carries a RELATION is a vertical relation expressed before the type
+    existed; it is viewed as one without the raw record changing."""
+    ct = t.get("CLAIM_TYPE")
+    if ct == "UNRESOLVED_FEATURE" and t.get("RELATION"):
+        return "VERTICAL_RELATION"
+    return ct
+
+
 def validate_trace(t: dict, sheets: dict) -> list:
     """Every reason this trace is not usable. Empty list means usable."""
     bad = []
@@ -82,7 +188,7 @@ def validate_trace(t: dict, sheets: dict) -> list:
         if not t.get(f):
             bad.append(f"missing {f}")
     ct = t.get("CLAIM_TYPE")
-    if ct and ct not in P.CLAIM_TYPES:
+    if ct and ct not in CLAIM_TYPES:
         bad.append(f"unknown CLAIM_TYPE {ct}")
     st = t.get("VISUAL_TRACE_STATUS")
     if st and st not in P.TRACE_STATUSES:

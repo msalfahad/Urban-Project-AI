@@ -15,8 +15,13 @@ import hashlib
 import json
 from pathlib import Path
 
+import hashlib as _h
+
 from research.a21_trace_sufficiency_01 import protocol as P
+from research.a21_trace_sufficiency_01 import source_access_guard as SAG
 from research.a21_trace_sufficiency_01 import visual_trace as VT
+
+VALIDATOR_FILE = Path("research/a21_trace_sufficiency_01/visual_trace.py")
 
 OUT = Path("data/experiments/A21_TRACE_SUFFICIENCY_01")
 RAW = OUT / "trace_raw"
@@ -64,13 +69,17 @@ def build() -> dict:
         for t in doc.get("TRACES") or []:
             t = dict(t)
             t.setdefault("CASE_ID", cid)
-            bad = VT.validate_trace(t, idx)
-            missing = [s for s in FIVE_STATUSES if not t.get(s)]
+            rec_status, reasons = VT.record_status(t, idx)
+            missing = [st for st in FIVE_STATUSES if not t.get(st)]
             if missing:
-                bad.append(f"missing statuses: {','.join(missing)}")
-            if bad:
+                rec_status = "INVALID"
+                reasons.append(f"missing statuses: {','.join(missing)}")
+            t["TRACE_RECORD_STATUS"] = rec_status
+            t["TRACE_LOCATABILITY_STATUS"] = VT.locatability_status(t)
+            t["EFFECTIVE_CLAIM_TYPE"] = VT.effective_claim_type(t)
+            if rec_status == "INVALID":
                 rejected.append({"TRACE_ID": t.get("TRACE_ID"),
-                                 "CASE_ID": cid, "REASONS": bad,
+                                 "CASE_ID": cid, "REASONS": reasons,
                                  "KEPT_FOR_THE_RECORD": True, "TRACE": t})
                 continue
             sid = t["SHEET_ID"]
@@ -81,14 +90,6 @@ def build() -> dict:
             t["ORIGINAL_PDF_PAGE"] = rec["ORIGINAL_PDF_PAGE"]
             t["ORIGINAL_PAGE_COORDINATE_TRANSFORM"] = rec[
                 "ORIGINAL_PAGE_COORDINATE_TRANSFORM"]
-            # a TRACE_NOT_ESTABLISHED claim is allowed to carry no
-            # geometry - that is the honest way to say "I can see there
-            # is something here and I cannot place it". It still belongs
-            # in the register; it simply cannot be projected or drawn.
-            # A dimension carries FOUR geometries - text box, dimension
-            # line, two extension lines - and every one of them is
-            # projected, because the extension lines are what prove which
-            # faces the dimension actually runs between.
             fields = [gg for gg in VT.geometry_fields_for(t["CLAIM_TYPE"])
                       if t.get(gg)]
             t["ORIGINAL_PAGE_GEOMETRY"] = (
@@ -99,9 +100,11 @@ def build() -> dict:
                                  "honest to draw"})
             traces.append(t)
 
-    by_type, by_status, by_case = {}, {}, {}
+    by_type, by_status, by_case, by_eff = {}, {}, {}, {}
     for t in traces:
         by_type[t["CLAIM_TYPE"]] = by_type.get(t["CLAIM_TYPE"], 0) + 1
+        by_eff[t["EFFECTIVE_CLAIM_TYPE"]] = by_eff.get(
+            t["EFFECTIVE_CLAIM_TYPE"], 0) + 1
         s = t["VISUAL_TRACE_STATUS"]
         by_status[s] = by_status.get(s, 0) + 1
         by_case[t["CASE_ID"]] = by_case.get(t["CASE_ID"], 0) + 1
@@ -123,14 +126,30 @@ def build() -> dict:
                                  "SUPPORTED_BY": ref,
                                  "PROBLEM": "no such trace in the register"})
 
+    locatable = [t for t in traces
+                 if t["TRACE_LOCATABILITY_STATUS"] == "LOCATABLE"]
+    access = SAG.audit_all()
     body = {
         "PHASE_ID": P.PHASE_ID,
         "ARTIFACT": "TRACE_REGISTER",
+        "VALIDATOR_SHA256": _h.sha256(VALIDATOR_FILE.read_bytes()).hexdigest(),
         "CASES_PRESENT": sorted(per_case),
         "PER_CASE": per_case,
+        # the three statuses, reported separately and never collapsed
+        "VALID_TRACE_RECORDS": len(traces),
+        "LOCATABLE_TRACES": len(locatable),
+        "NON_LOCATABLE_VALID_TRACES": len(traces) - len(locatable),
+        "INVALID_TRACE_RECORDS": len(rejected),
+        "A_NON_LOCATABLE_VALID_TRACE_IS_NOT_A_FAILURE": (
+            "it is how a reader says 'there is something here I cannot "
+            "place'. It is counted, kept, and never drawn"),
+        "SOURCE_ACCESS_AUDIT": access,
+        "SOURCE_ACCESS_ALL_WITHIN_SANDBOX": all(
+            v["STATUS"] == "WITHIN_SANDBOX" for v in access.values()),
         "TRACES_ACCEPTED": len(traces),
         "TRACES_REJECTED": len(rejected),
         "BY_CLAIM_TYPE": dict(sorted(by_type.items())),
+        "BY_EFFECTIVE_CLAIM_TYPE": dict(sorted(by_eff.items())),
         "BY_VISUAL_TRACE_STATUS": dict(sorted(by_status.items())),
         "BY_CASE": dict(sorted(by_case.items())),
         "DIMENSION_TRACES": len(dims),
@@ -156,6 +175,13 @@ def build() -> dict:
     p.write_text(json.dumps(body, indent=2, ensure_ascii=False) + "\n",
                  encoding="utf-8")
     return {"SHA256": hashlib.sha256(p.read_bytes()).hexdigest(),
+            "VALIDATOR_SHA256": body["VALIDATOR_SHA256"],
+            "VALID": len(traces), "LOCATABLE": len(locatable),
+            "NON_LOCATABLE_VALID": len(traces) - len(locatable),
+            "INVALID": len(rejected),
+            "SOURCE_ACCESS_ALL_WITHIN_SANDBOX":
+                body["SOURCE_ACCESS_ALL_WITHIN_SANDBOX"],
+            "BY_EFFECTIVE_CLAIM_TYPE": body["BY_EFFECTIVE_CLAIM_TYPE"],
             "ACCEPTED": len(traces), "REJECTED": len(rejected),
             "BY_CLAIM_TYPE": body["BY_CLAIM_TYPE"],
             "BY_VISUAL_TRACE_STATUS": body["BY_VISUAL_TRACE_STATUS"],
