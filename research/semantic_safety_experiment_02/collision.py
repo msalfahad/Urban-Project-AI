@@ -226,20 +226,36 @@ def main() -> int:
         "MEMBERS": rows,
 
         "TIMING_STATED_PLAINLY": {
-            "PROTOCOL_V3_WITH_PARTIAL_TAGGING_WAS_HASHED_AND_COMMITTED_"
-            "BEFORE_ANY_READER_LAUNCHED": True,
-            "THE_PER_MEMBER_RECORD_IN_THIS_FILE_WAS_WRITTEN_AFTER_THE_"
-            "REFERENCE_READERS_HAD_STARTED": True,
-            "WHY_THAT_IS_SAFE": (
-                "this file is a register. No reader reads it. The blind "
-                "sandbox the readers are looking at was not touched, and "
-                "every one of its files was re-hashed against the input "
-                "manifest to prove it"),
+            "SAMPLE_ID": P.SAMPLE_ID,
+            "THE_PROTOCOL_WAS_HASHED_AND_COMMITTED_BEFORE_THE_SAMPLE_"
+            "WAS_SELECTED": True,
+            "THIS_RECORD_WAS_WRITTEN_BEFORE_ANY_READER_OPENED_THIS_"
+            "SAMPLE": not (OUT / "04_REFERENCE_A.json").exists(),
+            "WHY_THAT_MATTERS": (
+                "for SAFETY_SAMPLE_01 this same per-member record was "
+                "written AFTER its reference readers had started, which "
+                "was safe but not ideal, and was stated plainly at the "
+                "time. For SAFETY_SAMPLE_02 it comes first: the untagged "
+                "members are proved coincident in the source before any "
+                "reader is opened, not explained afterwards"),
             "BLIND_SANDBOX_FILES_THAT_DRIFTED": drift,
             "THE_SANDBOX_IS_BYTE_IDENTICAL_TO_THE_MANIFEST": not drift,
         },
+        "THE_RULE_THIS_DISCHARGES": (
+            "a member may go untagged only because its source geometry "
+            "is coincident with another member's. The renderer gate "
+            "remains absolute for every member that is geometrically "
+            "distinguishable"),
+        "THE_PLACER_DEFECT_THAT_ONCE_BROKE_THAT_RULE": (
+            "over SAFETY_SAMPLE_01 two members - E1_2:CAD-1021#02 at a "
+            "coincident share of 0.00 and E1_2:CAD-361@1023#01 at 0.04 - "
+            "were left untagged while fully distinguishable. That was "
+            "the placer failing the rule, not the drawing forcing an "
+            "exception. It is measured in "
+            "08_PLACER_DEFECT_AND_REPAIR.json and repaired; both members "
+            "carry tags in this sample"),
     }
-    p = OUT / "04_PROTOCOL_COLLISION_AND_RESOLUTION.json"
+    p = OUT / "07_PROTOCOL_COLLISION_AND_RESOLUTION.json"
     p.write_text(json.dumps(body, indent=2, ensure_ascii=False) + "\n",
                  encoding="utf-8")
     print(json.dumps({k: v for k, v in body.items()
