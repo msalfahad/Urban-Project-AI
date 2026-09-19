@@ -31,10 +31,19 @@ PASS1_READER_SHA256 = {
 # ------------------------------------------------------------------
 # PASS 2 - filled in after it freezes, in its own commit
 # ------------------------------------------------------------------
-PASS2_FREEZE_SHA256 = None
-PASS2_READER_SHA256 = {}
+PASS2_FREEZE_SHA256 = (
+    "8fedccb529328eeb4b1db8394eb264cc4c4facfa52b6bcc91fe8da77963282ad")
+PASS2_READER_SHA256 = {
+    "improved_raw/IMP_PASS2_cases_1_3.json":
+        "cc66fd38e9121fbc1a3b9791836f0ef2430c4e22d5b1e0f9073d33685ca6a455",
+    "improved_raw/IMP_PASS2_cases_4_6.json":
+        "b5a0a1e6754e1a65bd0c626f2f01a839e4b1261db78172f845a0f1b192d5eba0",
+}
 
-COMPARISON_SHA256 = None
+COMPARISON_SHA256 = (
+    "e58c3e09bced87546692a57d629dcd85b0b8159dc228ea7e88b098fa0b1f3344")
+FINDINGS_SHA256 = (
+    "ffacc11cb7266159c3e1b676c404ad0d437a233daef0f61de6c1457ce69fcd91")
 
 ORDER_OF_OPERATIONS = (
     "improved protocol declared and hashed",
@@ -57,6 +66,8 @@ def _registered() -> dict:
         out["IMPROVED_PASS2_FREEZE.json"] = PASS2_FREEZE_SHA256
     if COMPARISON_SHA256:
         out["A21_SOURCE_PRESENTATION_COMPARISON.json"] = COMPARISON_SHA256
+    if FINDINGS_SHA256:
+        out["A21_SOURCE_PRESENTATION_FINDINGS.json"] = FINDINGS_SHA256
     return out
 
 
