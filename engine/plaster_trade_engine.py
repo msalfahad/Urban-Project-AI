@@ -75,6 +75,10 @@ def _prov(t) -> str:
 
 
 def _state(source_types) -> str:
+    """Weakest provenance among the inputs; NOT_APPLICABLE when there are
+    no inputs at all (a room with no openings has no reveal line)."""
+    if not source_types:
+        return "NOT_APPLICABLE"
     rank = max(PROVENANCE_RANK.get(_prov(t), 4) for t in source_types)
     return RANK_TO_STATE[rank]
 
@@ -188,13 +192,16 @@ def calculate(region: dict, reg: dict, *, treatment: str) -> dict:
                           f"openings x {H}",
                   "NEVER_ADDED_TO_M2": True})
 
+    no_openings = not region["OPENINGS"]
     states = {
         "PRINCIPAL_WALL_FACE": (_state(inputs["PRINCIPAL_WALL_FACE"])
                                 if principal is not None else "NOT_ESTABLISHED"),
-        "REVEALS_AND_RETURNS": (_state(inputs["REVEALS_AND_RETURNS"])
-                                if reveals is not None else "NOT_ESTABLISHED"),
-        "STEEL_PROFILES": (_state(inputs["STEEL_PROFILES"])
-                           if profiles_lm is not None else "NOT_ESTABLISHED"),
+        "REVEALS_AND_RETURNS": ("NOT_APPLICABLE" if no_openings else
+                                (_state(inputs["REVEALS_AND_RETURNS"])
+                                 if reveals is not None else "NOT_ESTABLISHED")),
+        "STEEL_PROFILES": ("NOT_APPLICABLE" if no_openings else
+                           (_state(inputs["STEEL_PROFILES"])
+                            if profiles_lm is not None else "NOT_ESTABLISHED")),
     }
     all_inputs = [t for v in inputs.values() for t in v]
     return {

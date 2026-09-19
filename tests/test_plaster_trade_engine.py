@@ -89,3 +89,16 @@ def test_reader_source_types_rank_and_weak_reads_are_flagged():
     # a scaled read is still a drawing read; the default door height is
     # what makes the wall face provisional, not the scale
     assert r["QUANTITY_STATE"]["PRINCIPAL_WALL_FACE"] == "PROVISIONAL_DEFAULT_QUANTITY"
+
+
+def test_no_openings_gives_not_applicable_reveals_not_a_crash():
+    walls, _, _ = fixture_a()
+    region = M.build_region(region_id="R", physical_edges=walls[:1], sites=[],
+                            openings=[], trade=PL, basis=M.LINEAR_RUN)
+    reg = PM.with_owner_value(PM.default_registry(), "APPLICABLE_PLASTER_HEIGHT",
+                              3.0, "m", 2, "synthetic owner value")
+    r = E.calculate(region, reg, treatment=PL)
+    assert r["QUANTITY_STATE"]["PRINCIPAL_WALL_FACE"] == "OWNER_PARAMETRIC_QUANTITY"
+    assert r["QUANTITY_STATE"]["REVEALS_AND_RETURNS"] == "NOT_APPLICABLE"
+    assert r["QUANTITY_STATE"]["STEEL_PROFILES"] == "NOT_APPLICABLE"
+    assert r["RESULT"]["PRINCIPAL_WALL_FACE_M2"] == 12.0

@@ -49,6 +49,15 @@ def _ends(t: dict):
     if t.get("PIXEL_POLYLINE"):
         pl = t["PIXEL_POLYLINE"]
         return tuple(pl[0]), tuple(pl[-1])
+    if t.get("PIXEL_POLYGON"):
+        pts = [tuple(q) for q in t["PIXEL_POLYGON"]]
+        best, pair = -1.0, None
+        for i in range(len(pts)):
+            for j in range(i + 1, len(pts)):
+                d = math.dist(pts[i], pts[j])
+                if d > best:
+                    best, pair = d, (pts[i], pts[j])
+        return pair
     if t.get("PIXEL_BBOX"):
         x0, y0, x1, y1 = t["PIXEL_BBOX"]
         # a bbox edge: use its long axis as the face

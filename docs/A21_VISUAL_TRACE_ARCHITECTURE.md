@@ -156,3 +156,44 @@ reader reruns (`recalculation_test.py`, synthetic values only).
   everything downstream.
 - The pre-read stage is itself a reader. Its output decides access, never
   interpretation, and its interpretations live only in the controller record.
+
+## 8. From traces to quantities: the deterministic path
+
+```
+TRACE_REGISTER ──▶ engine/trace_to_region ──▶ engine/qs_measurement_region ──▶ engine/plaster_trade_engine
+   (A21 evidence)      (adapter, no invention)     (regions, closures, lm basis)     (m2 sheet, per-line states)
+```
+
+- **Adapter** (`trace_to_region.py`): takes a length only from an ESTABLISHED
+  dimension status; promotes an open edge to a closable site only when both
+  ends land on traced wall terminations; never invents a wall; records every
+  endpoint it snapped under tolerance. A polygon-traced face becomes a run
+  along its long axis.
+- **Region builder**: two shapes. `CELL` requires a ring and may close sites
+  under the declared basis; `LINEAR_RUN` (a parapet, a stair wall, a facade)
+  requires no ring and never closes a site. Under both, a synthetic closure
+  contributes zero, an `UNRESOLVED_EDGE` blocks, reversibility is proven by
+  hash on every build, and the gross basis is the sum of contributing edge
+  lengths — never a polygon perimeter.
+- **Trade engine**: a QS sheet with no hidden arithmetic. Each result line
+  (principal wall face, reveals, profiles) carries the weakest provenance
+  among *its own* inputs; there is no single state for the sheet. m² and lm
+  are never combined. Reader source types are bridged explicitly to
+  provenance ranks; scaled and visually interpreted reads are flagged.
+
+### 8.1 P7757 through this path (DETERMINISTIC_QS_PATH_01)
+
+With the parameter registry as it stands, every traced case ends at the
+owner-input gate and nothing is forced:
+
+| case | shape | region | why |
+|---|---|---|---|
+| CASE-1 RECEPTION | cell | NOT_ESTABLISHED | boundary does not meet itself; unresolved edges on it |
+| CASE-3 SALOON | cell | NOT_ESTABLISHED | boundary does not meet itself (open to RECEPTION, curved pool wall) |
+| CASE-4 stair walls | run | RUN_ESTABLISHED, gross NOT_ESTABLISHED | no contributing face carries a printed length |
+| CASE-6 SE parapet | run | NOT_ESTABLISHED | unresolved roof-edge portions on the run |
+
+This is consistent with four independent visual readings and with what
+E1.4 recorded independently: the drawing does not enclose these spaces and
+does not print the lengths a QS would need. The next inputs are the owner's,
+not the engine's.

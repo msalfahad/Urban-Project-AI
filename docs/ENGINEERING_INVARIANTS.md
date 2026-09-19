@@ -3466,3 +3466,38 @@ ways over 405 edges — its own flags, and E1.4's separately computed
 
 A closure that can survive neither test is not a measurement instrument. It
 is an undeclared wall.
+
+
+## §122 — A synthetic measurement closure contributes nothing, in production code too
+
+`engine/qs_measurement_region.py` carries the closure constants as data
+(`material_present=False`, `quantity_length_contribution=0`, `reversible=True`)
+and checks them on every build: removing every closure must restore the
+physical edge set byte-for-byte by hash, and a closure passed in as physical
+geometry raises. A basis may close a confirmed door, window or open passage;
+no basis may close an `UNRESOLVED_GAP`.
+
+## §123 — Gross basis is a sum of contributing edges, never a perimeter
+
+A polygon perimeter counts closure spans, and a closure is nothing. The
+region builder reports `IS_A_POLYGON_PERIMETER: false` on every gross basis
+and computes it from edges whose `(kind, trade)` contribution is true. Glazing
+bounds a floor cell and carries no plaster. A contributing edge with no
+established length makes the whole gross basis `NOT_ESTABLISHED` — a partial
+sum is never presented as a gross.
+
+## §124 — A quantity is only as established as its weakest input, per result line
+
+`engine/plaster_trade_engine.py` gives each result line — principal wall
+face, reveals and returns, steel profiles — the weakest provenance among its
+own inputs. One temporary default anywhere in a line makes that line
+`PROVISIONAL_DEFAULT_QUANTITY`; an owner input makes it
+`OWNER_PARAMETRIC_QUANTITY`, never `SOURCE_ESTABLISHED`. A reveal depth the
+registry lacks leaves the principal wall face untouched, because the wall
+face never used it. There is no single state for a sheet.
+
+## §125 — A run is not a cell
+
+A parapet, a stair wall and a facade are measured as `LINEAR_RUN`: no ring is
+required and no site is ever closed. The basis is declared per region and
+recorded in the output; it is not a way to dodge the ring test for a room.
