@@ -197,3 +197,43 @@ This is consistent with four independent visual readings and with what
 E1.4 recorded independently: the drawing does not enclose these spaces and
 does not print the lengths a QS would need. The next inputs are the owner's,
 not the engine's.
+
+## 9. After the gate: P7757_WALL_TREATMENT_ESTIMATE_01
+
+The owner answered the gate (normal internal plaster 3.20 m; external
+storey heights 4.00 / 4.50 / 4.00; door 1.00 × 2.20 and window 1.50 × 1.50
+as temporary defaults; reveals ~0.20 / 0.15) and set two rules from the
+CASE-6 overlay review: **trace overlap ≠ material overlap**, and wall
+plaster needs **faces, not a ring**. Code under `research/qs_wall_treatment_01/`
+and the engine modules it uses:
+
+| step | module | output (gitignored, hashed in FREEZE_*.json) |
+|---|---|---|
+| material-role overlap audit, §4 balustrade rule, double-count guard | `engine/material_role_audit.py` | `OVERLAP_AUDIT.json` |
+| dimension owner from traced extension lines + orchestrator re-check of every CASE-6 height | `engine/dimension_owner.py` | `DIMENSION_OWNER_REGISTER.json` |
+| exact arcs from the DWG, correspondence only proposed | `engine/cad_curve_register.py` | `CAD_CURVE_REGISTER.json` |
+| owner parameters (§7) with scope rules (§8) | `owner_parameters.py` | `P7757_OWNER_PARAMETERS.json` |
+| face-set basis and partial-quantity architecture | `engine/wall_face_set.py`, `engine/wall_treatment_engine.py` | `P7757_WALL_TREATMENT_ESTIMATE.json`, `QS_TRACE.md`, `SENSITIVITY.json` |
+| source inventory (§25) | `source_inventory.py` | `SOURCE_INVENTORY.json` |
+| trace review UI (§26) | `review_ui.py` | `TRACE_REVIEW_UI.html` |
+| structural comparison (§34–36) after the estimate freeze | `a22_structural_comparison.py` | `A22_STRUCTURAL_COMPARISON.json` |
+| benchmark survey and reconciliation, after the A22 freeze | `benchmark_survey.py`, `benchmark_reconciliation.py` | `BENCHMARK_ACCESS_LOG.json`, `BENCHMARK_RECONCILIATION.json` |
+
+What the traced subset established, truthfully small: SALOON normal
+internal plaster on two printed faces (5.15 + 2.00) × 3.20 =
+22.88 m² `OWNER_PARAMETRIC_QUANTITY`, SALOON column bonding + plaster
+(0.90 + 0.90) × 3.20 = 5.76 m² (flagged by A22 for human review), 0.69 ×
+3.20 = 2.21 m² provisional, SE parapet capping 7.10 × 0.20 = 1.42 m²
+provisional (chain-derived length). Everything else on the four cases is
+`UNRESOLVED_SCOPE` with a reason per face: double-height reception (height
+unknown), stair walls (no printed face lengths), facades (exposure not
+established), parapet faces (heights ambiguous or lengths not printed).
+Coverage is `PARTIAL` everywhere and `COMPLETE_TOTAL_STATUS` is
+`NOT_ESTABLISHED` everywhere.
+
+The independent re-check of the CASE-6 heights confirmed the register with
+one prose correction: the "155" on the SE elevation runs from the tower top
+to the **dome apex**, not to the parapet rail (the rail is the end of the
+"193"); the chain values are unchanged. The B-B stack at the cut (kerb 0.54 +
+lattice 0.52 + cap 0.17 above +9.70) reconciles with the elevation chain
+(rail top +10.92) within a pixel.

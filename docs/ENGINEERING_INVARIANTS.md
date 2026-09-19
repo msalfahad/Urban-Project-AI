@@ -3501,3 +3501,67 @@ face never used it. There is no single state for a sheet.
 A parapet, a stair wall and a facade are measured as `LINEAR_RUN`: no ring is
 required and no site is ever closed. The basis is declared per region and
 recorded in the output; it is not a way to dodge the ring test for a room.
+
+## §126 — Trace overlap is not material overlap
+
+Two traces sharing pixels is a fact about the drawing, not about material.
+The overlap audit (`engine/material_role_audit.py`) classifies every
+same-sheet pair of material-bearing traces as one of
+`SAME_OBJECT_MULTIPLE_SEMANTIC_VIEWS`, `DIFFERENT_OBJECTS_SAME_PROJECTION`,
+`PARTIAL_OVERLAP`, `MUTUALLY_EXCLUSIVE_MATERIAL_ROLES`,
+`ALLOWED_LAYER_OVERLAP` or `UNRESOLVED_OVERLAP`. Object membership and
+role overrides are controller declarations recorded in the output; without
+a declaration a near-total overlap stays `UNRESOLVED_OVERLAP`, never
+"same object". A mutually exclusive pair is resolved by
+`EXCLUDE_BOTH_UNTIL_RESOLVED`, never by a silent winner.
+
+## §127 — An open balustrade has no plasterable face
+
+`OPEN_BALUSTRADE` carries `PLASTERABLE_SOLID_FACE = 0`. Only a solid base
+under it, traced as its own object, contributes, and only for its own
+height. The double-count guard refuses a balustrade face contribution on
+its own, without needing a conflicting pair.
+
+## §128 — A dimension's owner is a separate fact from its text
+
+`TEXT_READ_ESTABLISHED` says the printed value was read.
+`DIMENSION_OWNER_STATUS` (`OWNER_ESTABLISHED` / `OWNER_PROVISIONAL` /
+`OWNER_AMBIGUOUS` / `OWNER_NOT_ESTABLISHED`) says which traced element the
+extension lines land on, resolved geometrically from the traced extension
+lines against traced element geometry — never from the reader's prose. An
+ink check on the processed sheet is recorded beside it and changes
+neither.
+
+## §129 — Wall plaster needs faces, not a ring
+
+The measurement basis for wall treatment is a `WALL_FACE_SET` or
+`LINEAR_SURFACE_RUN`: a set of faces each with its own length provenance.
+No closed polygon is required, no synthetic closure is needed, no gap is
+bridged. The gross basis is a sum of face lengths.
+
+## §130 — A partial quantity is reported as partial
+
+Every wall-treatment result carries `ESTABLISHED_SUBTOTAL`,
+`PROVISIONAL_SUBTOTAL` (kept apart, never added), `COVERAGE_STATUS`,
+`COMPLETE_TOTAL_STATUS` and `UNRESOLVED_SCOPE`. A face set built from a
+traced subset can never claim `COMPLETE`; an established subtotal is never
+called the total. A smaller truthful number beats a complete fabricated
+one.
+
+## §131 — Owner heights do not propagate
+
+`NORMAL_INTERNAL_PLASTER_HEIGHT` applies to normal rooms only. Double-height
+zones, stair wells, facades, parapets and tartusha rooms carry their own
+parameters, which stay `UNKNOWN` until an accepted source or the owner
+establishes them. A parapet face's height comes from its own traced
+dimension or is unresolved; there is no general parapet height.
+
+## §132 — CAD geometry and visual semantics are ranked per item, not per source
+
+A22 compares derivations, not totals. `CAD_GEOMETRY_STRONGER_THAN_VISUAL`
+(an authored arc against "a curve exists"),
+`VISUAL_SEMANTIC_STRONGER_THAN_CAD` (a void relation read from another
+sheet that the CAD ground-floor path cannot see) and
+`SHARED_ASSUMPTION_AGREEMENT` (two paths built on one owner height) are
+verdicts on one item each. The DWG and the PDF are one design family, so
+their agreement is repeatability, never independent corroboration.
