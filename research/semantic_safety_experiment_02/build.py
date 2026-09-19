@@ -370,30 +370,15 @@ def main() -> int:
                 for iv in intervals}
     t_core = time.time() - t0
 
-    feats = F.build(intervals, block_of=block_of)
-
-    # THE SHEET IS NOT THE BUILDING. The region isolator already
-    # establishes, frozen and deterministically, the rectangle this plan
-    # occupies on its sheet. The frame that rectangle is measured from,
-    # and the title block in its corner, are DRAWING - and nothing in a
-    # floor plan is drawn flush against the sheet border. SAFETY_SAMPLE_02
-    # never asked, and sampled four frame sides and a title block as
-    # though they were floor content.
+    # THE SHEET IS NOT THE BUILDING, and the test belongs in feature
+    # construction, not after it: applied to INTERVALS before any
+    # grouping, a frame line can never join a plan feature and drag it
+    # out of the sample with it.
     rgn = gf["region"]
     rect = (rgn.x0, rgn.y0, rgn.x1, rgn.y1)
-    tol = P.SHEET_BORDER_TOL_MM
-
-    def _is_sheet_furniture(bb):
-        return (abs(bb[0] - rect[0]) <= tol or abs(bb[1] - rect[1]) <= tol
-                or abs(bb[2] - rect[2]) <= tol or abs(bb[3] - rect[3]) <= tol
-                or bb[0] < rect[0] - tol or bb[1] < rect[1] - tol
-                or bb[2] > rect[2] + tol or bb[3] > rect[3] + tol)
-
-    sheet_furniture, floor_feats = [], []
-    for f in feats:
-        (sheet_furniture if _is_sheet_furniture(f["bounding_box_mm"])
-         else floor_feats).append(f)
-    feats = floor_feats
+    feats = F.build(intervals, block_of=block_of, sheet_rect=rect,
+                    sheet_tol=P.SHEET_BORDER_TOL_MM)
+    sheet_removed = list(getattr(F.build, "sheet_intervals_removed", ()))
 
     from shapely.geometry import MultiPoint
     pts = [p for iv in intervals
@@ -544,12 +529,11 @@ def main() -> int:
         "why_the_tolerance_is_not_tuned": P.WHY_THE_TOLERANCE_IS_NOT_TUNED,
         "THE_DRAWING_REGION_BOUNDARY_RECTANGLE_MM":
             [round(v, 1) for v in rect],
-        "features_excluded_as_sheet_furniture": len(sheet_furniture),
-        "SHEET_FURNITURE": [
-            {"SOURCE_INTERVAL_IDS": x["SOURCE_INTERVAL_IDS"][:4],
-             "members": x["members"],
-             "bounding_box_mm": x["bounding_box_mm"]}
-            for x in sheet_furniture],
+        "THE_FILTER_IS_APPLIED_IN_FEATURE_CONSTRUCTION": (
+            "sheet intervals are removed before a single feature is "
+            "grown, so no frame line can join a plan feature"),
+        "intervals_removed_as_sheet": len(sheet_removed),
+        "SHEET_INTERVAL_IDS": sheet_removed[:60],
         "features_on_the_floor_after_the_sheet_is_removed": len(feats),
         "intervals_accounted_for": sum(f["members"] for f in feats),
         "LAYER_KINDS_AS_THE_DRAWING_NAMES_THEM": layer_kinds,

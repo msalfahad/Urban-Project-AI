@@ -67,7 +67,7 @@ from __future__ import annotations
 import hashlib
 
 EXPERIMENT_ID = "SEMANTIC_SAFETY_EXPERIMENT_02"
-PROTOCOL_VERSION = 7
+PROTOCOL_VERSION = 8
 
 # ------------------------------------------------------------------
 # sample identity - §2 of the directive
@@ -885,6 +885,62 @@ AGGREGATE_ACCURACY_IS_REPORTED_BUT_IS_NOT_THE_HEADLINE = (
     "own")
 
 # ------------------------------------------------------------------
+# when to stop asking this question of this drawing
+# ------------------------------------------------------------------
+# DECLARED BEFORE REFERENCE A IS OPENED. A sufficiency threshold written
+# after the answers are visible is not a threshold, it is a description
+# of whatever arrived.
+MIN_EXAMPLES_TO_CARRY_A_RATE = 5
+
+SUFFICIENCY_RULE = (
+    "the central safety question is PHYSICAL SEPARATOR against OPENING. "
+    "It cannot be answered at all unless the reference ESTABLISHES at "
+    "least MIN_EXAMPLES_TO_CARRY_A_RATE features of PHYSICAL_SEPARATOR "
+    "and at least that many of OPENING_IN_SEPARATOR. Those two are the "
+    "two sides of the question and neither can be inferred from the "
+    "other.\n\n"
+    "GLAZED_PHYSICAL_SEPARATOR and NON_SEPARATOR_FEATURE need the same "
+    "count to carry a RATE of their own. Below it they are reported as "
+    "counts, with the limitation named, and the experiment continues on "
+    "the classes that do have the examples.\n\n"
+    "The threshold is the same five already declared for a class to "
+    "carry a rate at all. It is not a new number invented for this "
+    "round")
+
+THIS_IS_THE_LAST_SAMPLE_REDESIGN = (
+    "SAFETY_SAMPLE_03 is the last redesign of the sample for this "
+    "question. If the reference cannot establish enough examples of the "
+    "classes the question turns on, the finding is a SOURCE POPULATION "
+    "LIMITATION of this drawing and the work STOPS there. There is no "
+    "SAFETY_SAMPLE_04.\n\n"
+    "Redrawing a sample until it yields the examples one wants is "
+    "selecting on the answer by a slower route. Two redesigns were "
+    "earned - one because the source signatures were too weak a proxy, "
+    "one because the feature builder sampled the sheet as though it were "
+    "the floor - and both were apparatus defects found and fixed. A "
+    "third would be a different thing: the drawing itself declining to "
+    "supply the evidence, which is a result, not a problem to engineer "
+    "around")
+
+SOURCE_POPULATION_LIMITATION = "SOURCE_POPULATION_LIMITATION"
+
+WHAT_A_SOURCE_POPULATION_LIMITATION_MEANS = (
+    "this ground floor does not contain enough of the thing being "
+    "tested for a blind reading of it to measure anything. That says "
+    "nothing about whether A19 is safe. It says this drawing cannot "
+    "answer the question, and that answering it needs a floor that has "
+    "the features - which is a statement about scope, not a failure and "
+    "not a pass")
+
+NO_SEMANTIC_ANSWER_IS_REUSED = (
+    "no A19 answer, reference reading or checker answer from "
+    "SAFETY_SAMPLE_01 or SAFETY_SAMPLE_02 is carried into this round, "
+    "for any feature, EVEN WHERE A CROP IS BYTE-IDENTICAL to one those "
+    "rounds used. Every reading here is taken fresh and blind. A reused "
+    "answer would make this round partly a copy of a round that was "
+    "retired for an apparatus defect, and the saving is not worth it")
+
+# ------------------------------------------------------------------
 # the sample is frozen before a reader sees it - §8 of the directive
 # ------------------------------------------------------------------
 SAMPLE_FREEZE_RULE = (
@@ -1055,6 +1111,12 @@ def record() -> dict:
         "aggregate_accuracy_is_reported_but_is_not_the_headline":
             AGGREGATE_ACCURACY_IS_REPORTED_BUT_IS_NOT_THE_HEADLINE,
         "SAMPLE_FREEZE_RULE": SAMPLE_FREEZE_RULE,
+        "MIN_EXAMPLES_TO_CARRY_A_RATE": MIN_EXAMPLES_TO_CARRY_A_RATE,
+        "SUFFICIENCY_RULE": SUFFICIENCY_RULE,
+        "this_is_the_last_sample_redesign": THIS_IS_THE_LAST_SAMPLE_REDESIGN,
+        "what_a_source_population_limitation_means":
+            WHAT_A_SOURCE_POPULATION_LIMITATION_MEANS,
+        "no_semantic_answer_is_reused": NO_SEMANTIC_ANSWER_IS_REUSED,
         "ORDER_OF_WORK": list(ORDER_OF_WORK),
         "a_stratum_name_is_a_target_not_an_answer":
             A_STRATUM_NAME_IS_A_TARGET_NOT_AN_ANSWER,

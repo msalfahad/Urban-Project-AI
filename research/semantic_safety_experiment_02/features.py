@@ -91,13 +91,52 @@ def relation(a, b, *, block_of):
     return out
 
 
-def build(intervals, *, block_of):
-    """Grow every interval into exactly one canonical feature."""
+def on_the_sheet_border(iv, rect, tol) -> bool:
+    """Is this interval part of the SHEET rather than the FLOOR?
+
+    The drawing region isolator establishes, frozen and deterministically,
+    the rectangle this plan occupies on its sheet. The frame that
+    rectangle is measured from, and the title block in its corner, are
+    DRAWING, not BUILDING - and nothing in a floor plan is drawn flush
+    against the sheet border.
+
+    The test is applied to the INTERVAL, before any grouping, so a frame
+    line can never join a plan feature and drag it out of the sample with
+    it. Dropping whole features afterwards would have done that.
+    """
+    x0, y0, x1, y1 = rect
+    for x, y in (iv.start_mm, iv.end_mm):
+        if (abs(x - x0) <= tol or abs(x - x1) <= tol
+                or abs(y - y0) <= tol or abs(y - y1) <= tol
+                or x < x0 - tol or x > x1 + tol
+                or y < y0 - tol or y > y1 + tol):
+            return True
+    return False
+
+
+def build(intervals, *, block_of, sheet_rect=None,
+          sheet_tol=P.SHEET_BORDER_TOL_MM):
+    """Grow every interval into exactly one canonical feature.
+
+    `sheet_rect` is the drawing region's own boundary rectangle. When it
+    is given, intervals belonging to the sheet are removed HERE, before a
+    single feature is grown, so the canonical feature population is built
+    from floor geometry alone. SAFETY_SAMPLE_02 never asked, and sampled
+    four frame sides and a title block as floor content.
+    """
     from shapely.geometry import LineString
     from shapely.strtree import STRtree
 
     ivs = sorted((iv for iv in intervals if iv.length_mm > 0),
                  key=lambda x: x.interval_id)
+    sheet_ivs = []
+    if sheet_rect is not None:
+        keep = []
+        for iv in ivs:
+            (sheet_ivs if on_the_sheet_border(iv, sheet_rect, sheet_tol)
+             else keep).append(iv)
+        ivs = keep
+    build.sheet_intervals_removed = [iv.interval_id for iv in sheet_ivs]
     by_id = {iv.interval_id: iv for iv in ivs}
     geoms = [LineString([iv.start_mm, iv.end_mm]) for iv in ivs]
     tree = STRtree(geoms)
