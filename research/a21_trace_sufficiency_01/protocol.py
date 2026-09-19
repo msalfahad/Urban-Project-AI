@@ -232,6 +232,25 @@ REQUIRED_CHARACTERISTICS = (
     "A_PARAPET_BALUSTRADE_DISTINCTION",
 )
 
+SUBSET_SELECTION_PROTOCOL_STATUS = "E1_4_INFLUENCED_MEMBERSHIP_UNCHANGED"
+
+WHAT_THAT_STATUS_MEANS = (
+    "E1.4 boundary classifications were improperly consulted by three of "
+    "the five subset clauses",
+    "no E1.4 quantity was used - only element type counts",
+    "no prior A21 result was used, checked by parsing the rule module",
+    "independent re-derivation from the declared case categories produces "
+    "the same four-case membership",
+    "therefore the subset remains usable, but the selection protocol is "
+    "NOT described as fully blind",
+)
+
+E1_4_IS_SEALED_OUT_DOWNSTREAM = (
+    "E1.4 is used for nothing else in this phase: not source "
+    "requirements, not sandbox membership, not trace placement, not "
+    "interpretation. The RECEPTION 26-of-29 observation is held as a "
+    "sealed future reconciliation note")
+
 SUBSET_RULE = (
     "each characteristic is assigned to a case by a rule fixed BEFORE any "
     "trace is generated, using only (a) the case's own declared subject, "

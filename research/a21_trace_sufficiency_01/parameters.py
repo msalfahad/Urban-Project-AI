@@ -79,16 +79,43 @@ def parameter(pid, value, unit, source_type, source_reference, *,
     }
 
 
-def default_registry() -> dict:
-    """The parameter set as the experiments actually left it.
+WHY_A_PARAMETER_IS_UNKNOWN = (
+    "a parameter is UNKNOWN when NO CURRENTLY ACCEPTED PROJECT SOURCE OR "
+    "OWNER_PROJECT_INPUT ESTABLISHES ITS VALUE. That is the definition, "
+    "and it is a property of the project's evidence, not of any "
+    "experiment. A reading that failed to find a value is validation "
+    "evidence for the status; it is never the reason for it. Stated this "
+    "way the schema is reusable on a project that never ran an experiment "
+    "at all")
 
-    APPLICABLE_PLASTER_HEIGHT is deliberately UNKNOWN. Twenty-four case
-    readings failed to establish it from the drawing, and inventing one
-    here would undo the only thing those readings proved.
+VALIDATION_EVIDENCE = {
+    "APPLICABLE_PLASTER_HEIGHT": {
+        "OBSERVATION": (
+            "across two frozen visual experiments, 23 of 24 case readings "
+            "returned PLASTER_HEIGHT_NOT_ESTABLISHED, and the one "
+            "exception read its value off a sheet its packet had not "
+            "declared"),
+        "WHAT_IT_SUPPORTS": (
+            "that the P7757 drawing set does not establish this parameter"),
+        "WHAT_IT_IS_NOT": (
+            "the definition of the UNKNOWN status. The status would be "
+            "UNKNOWN on a project where no experiment had ever run"),
+    },
+}
+
+
+def default_registry() -> dict:
+    """The parameter set for this project, by the general definition.
+
+    Every entry below is UNKNOWN for one reason only: no accepted project
+    source and no owner project input establishes it. See
+    WHY_A_PARAMETER_IS_UNKNOWN, and VALIDATION_EVIDENCE for the separate
+    experimental observation that supports the status here.
     """
     return {p["PARAMETER_ID"]: p for p in [
         parameter("APPLICABLE_PLASTER_HEIGHT", None, "m", "UNKNOWN",
-                  "not established by the drawing in any of 24 readings",
+                  "no accepted project source and no owner project input "
+                  "establishes this value",
                   status="AWAITING_OWNER_INPUT"),
         parameter("DOOR_HEIGHT", 2.20, "m", "TEMPORARY_DEFAULT",
                   "authorised temporary owner default",
@@ -97,28 +124,40 @@ def default_registry() -> dict:
                   "authorised temporary owner default",
                   default_or_actual="DEFAULT"),
         parameter("DOOR_REVEAL_DEPTH", None, "m", "UNKNOWN",
-                  "frame set-back within the wall is not drawn",
+                  "no accepted project source establishes it",
                   status="AWAITING_SOURCE"),
         parameter("WINDOW_REVEAL_DEPTH", None, "m", "UNKNOWN",
-                  "frame set-back within the wall is not drawn",
+                  "no accepted project source establishes it",
                   status="AWAITING_SOURCE"),
         parameter("ROOF_PARAPET_RULE", None, None, "UNKNOWN",
-                  "no rule states how a parapet face height is measured "
-                  "from the structural level", status="AWAITING_OWNER_INPUT"),
+                  "no accepted project source or owner project input "
+                  "establishes it", status="AWAITING_OWNER_INPUT"),
         parameter("CONTROL_JOINT_RULE", None, None, "UNKNOWN",
-                  "no spacing is drawn, noted or specified anywhere",
-                  status="AWAITING_OWNER_INPUT"),
+                  "no accepted project source or owner project input "
+                  "establishes it", status="AWAITING_OWNER_INPUT"),
     ]}
 
 
-def with_owner_height(reg: dict, value: float, version: int) -> dict:
-    """The owner supplies a plaster height. It is NOT drawing evidence."""
+def with_owner_value(reg: dict, pid: str, value, unit, version: int,
+                     reference: str) -> dict:
+    """An owner supplies a parameter. It never becomes drawing evidence."""
     reg = json.loads(json.dumps(reg))
-    reg["APPLICABLE_PLASTER_HEIGHT"] = parameter(
-        "APPLICABLE_PLASTER_HEIGHT", value, "m", "OWNER_PROJECT_INPUT",
-        "supplied by the owner for this project; not read from any sheet",
-        project_specific=True, owner_confirmed=True, version=version)
+    p = parameter(pid, value, unit, "OWNER_PROJECT_INPUT", reference,
+                  project_specific=True, owner_confirmed=True,
+                  version=version)
+    p["DEFAULT_OR_ACTUAL"] = "PROJECT_INPUT"
+    p["STATUS"] = "ESTABLISHED_FOR_PROJECT"
+    reg[pid] = p
     return reg
+
+
+OWNER_INPUT_NEVER_BECOMES_DRAWING_DERIVED = (
+    "an owner-supplied value is stored SOURCE_TYPE = OWNER_PROJECT_INPUT, "
+    "OWNER_CONFIRMED = true, DEFAULT_OR_ACTUAL = PROJECT_INPUT, STATUS = "
+    "ESTABLISHED_FOR_PROJECT. Every quantity depending on it is an "
+    "OWNER_PARAMETRIC_QUANTITY and never a SOURCE_ESTABLISHED_QUANTITY. "
+    "The constructor makes the alternative unrepresentable: a DRAWING "
+    "parameter marked OWNER_CONFIRMED raises")
 
 
 # ==================================================================
@@ -181,6 +220,10 @@ def schema_doc() -> dict:
             "an OWNER_PROJECT_INPUT that is not OWNER_CONFIRMED",
             "a DRAWING parameter marked OWNER_CONFIRMED",
         ],
+        "WHY_A_PARAMETER_IS_UNKNOWN": WHY_A_PARAMETER_IS_UNKNOWN,
+        "VALIDATION_EVIDENCE_HELD_SEPARATELY": VALIDATION_EVIDENCE,
+        "OWNER_INPUT_NEVER_BECOMES_DRAWING_DERIVED":
+            OWNER_INPUT_NEVER_BECOMES_DRAWING_DERIVED,
         "THE_FINDING_THAT_MUST_SURVIVE": P.THE_FINDING_THAT_MUST_SURVIVE,
         "PARAMETRIC_RECALCULATION": P.PARAMETRIC_RECALCULATION,
         "REGISTRY_AS_THE_EXPERIMENTS_LEFT_IT": default_registry(),
