@@ -403,3 +403,28 @@ quantity is NOT_ESTABLISHED (no Qortuba height exists; P7757 heights not reused)
 critical, nothing patched. Frozen as `FREEZE_PA08_QORTUBA_BLIND_01.json`; preliminary verdict
 NOT_READY_FOR_EXTERNAL_COMPARISON (topology not sufficiently represented). The owner's withheld comparison data was
 not requested or used.
+
+**PA08-QORTUBA-R1 (post-blind generic partition recovery).** The blind
+freeze stood; the failure it recorded was diagnosed before any geometry
+changed. `QORTUBA_PARTITION_FAILURE_REGISTER.json` names nine boundaries
+of the merged cell with their entities, layers, block relations, face
+pairs, authored thickness dimensions and door intersections, and assigns
+each to one of eight generic failure classes; a raster ablation proves
+which boundaries are causal. Six generic rules answer them: the angle wrap
+repair (§179), end-gap intervals with junction, along-wall and shared-gap
+refinements (§181), end caps on unresolved strips so a strip is never a
+corridor, closed-outline separators for unpaired material loops, revival
+of demotions whose host never survived (§180), and a thickness-supported
+band rule that promotes a thin pair only with an authored dimension **and**
+a junction to established structure. Qortuba's seven labelled rooms now
+occupy seven separate cells. Fifty-three spaces, eleven labelled; fifty-two
+internal floor regions, three `SOURCE_ESTABLISHED` (14.07 m²), the rest
+provisional; wall length, skirting path and profile path are three separate
+items with no contractor deduction; block, plaster and paint carry lengths
+only, every area `NOT_ESTABLISHED` for want of a height. An independent
+reader of the original sheet agreed with fourteen of fifteen comparable
+adjacencies. The P7757 regression is a yield loss in the safe direction:
+accepted wall length 384 → 502 m and established spaces 2 → 5, against
+confirmed doors 12 → 11 with twenty door-class sites where there were
+twelve. Frozen as `FREEZE_PA08_QORTUBA_R1`; the owner's withheld flooring,
+skirting and profile quantities were not requested, opened or inferred.

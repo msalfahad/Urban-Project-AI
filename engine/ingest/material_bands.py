@@ -38,6 +38,7 @@ COLUMN_SIDE_MAX = 1200.0           # up to this side length a closed loop joined
 JOINERY_DEPTH_MIN_MM = 300.0
 THIN_BAND_MM = 150.0          # PA07R2 (FM-R1-05): a pair thinner than this needs fill evidence; a handrail, a skirting or a glazing frame is not a wall       # PA07R1: a closed outline deeper than this (wardrobe 600, counter 600, bath 700) is joinery until hatched or confirmed
 ANGLE_TOL = math.radians(1.0)
+ANGLE_NOISE_RAD = 1e-9             # PA07R3: floating-point wrap repair only, never a pairing tolerance
 AXIS_MERGE_MM = 30.0
 THK_MERGE_MM = 25.0
 MAX_BAND_GAP_MM = 3000.0           # collinear pairs closer than this belong to one band (openings are intervals)
@@ -45,6 +46,7 @@ FAMILY_MIN = 6                     # two walls with doubled lines are 4-5 parall
 FAMILY_LENGTH_BAND = (0.5, 2.0)    # family members have comparable lengths (hatch strokes, treads); a wall face beside them does not
 FAMILY_SPACING_MAX = 400.0
 JUNCTION_TOL = 80.0
+BLOCK_SIDE_SHARE = 0.8             # PA07R3: a side is "block-borne" when this share of its covered length lies inside block instances
 ENCLOSURE_SHARE = 0.5              # interior parallel faces covering this share of the band -> not one solid
 EDGE_TOL = 5.0
 HATCH_FILL_SHARE = 0.3             # hatch strokes over this share of a band = material fill evidence
@@ -65,7 +67,13 @@ def _len(p):
 
 
 def _angle(p):
-    return math.atan2(p.y2 - p.y1, p.x2 - p.x1) % math.pi
+    """Direction in [0, pi), with the wrap at pi repaired.  PA07R3 (PA08-R1, FC-1): a line whose endpoints differ by floating-point
+    noise (a coordinate decoded as 1000.0 and 999.99999999994) comes out of atan2 as a tiny negative angle, which `% pi` turns into
+    pi - epsilon.  The pairing frame (ux, uy) then flips sign for that line alone, its offset becomes -y instead of +y, and it never
+    pairs with its true parallel face.  Only NOISE is repaired here: the threshold is a nanoradian, far below any drawn slope, so a
+    line genuinely tilted towards pi keeps its own direction and no new pairing tolerance is introduced."""
+    a = math.atan2(p.y2 - p.y1, p.x2 - p.x1) % math.pi
+    return a - math.pi if a >= math.pi - ANGLE_NOISE_RAD else a
 
 
 def _dir_key(ang):
@@ -173,6 +181,8 @@ def _pairs(segs):
     """Parallel segment pairs at a candidate thickness with real overlap.  -> [(a, b, thk, (lo, hi), (ux, uy), axis)]"""
     by_dir = defaultdict(list)
     for p in segs:
+        if _len(p) < WALL_MIN_MM:
+            continue              # PA07R3: a piece shorter than the thinnest wall is a cap, a jamb or a stray fragment, never a pairing face
         ang = _angle(p); ux, uy = math.cos(ang), math.sin(ang)
         by_dir[_dir_key(ang)].append((-uy * p.x1 + ux * p.y1, _proj(p, ux, uy), p, (ux, uy)))
     out = []
@@ -531,11 +541,35 @@ def _material_side(b, face_id):
 
 
 # ------------------------------------------------------------------ build
-def build(view_id, prims, roles, storey_id=None, source_id=None, single_line_layers=(), view_bbox=None):
+def build(view_id, prims, roles, storey_id=None, source_id=None, single_line_layers=(), view_bbox=None, thickness_support=()):
     """PA07_MATERIAL_BAND_REGISTER rows for one view: accepted bands, rejected candidates with reasons, unresolved candidates.
 
+    `thickness_support` (PA07R3): wall thicknesses (mm) that the source itself repeats as authored dimensions; a candidate of such a
+    thickness carries THICKNESS_SUPPORT evidence, which arbitrates face-side conflicts and lets a short return follow its wall.  It never
+    promotes a candidate on its own.
+
     Returns (rows, bands); `bands` are the working dicts (geometry + evidence) used by the topology layer."""
+    thickness_support = tuple(float(t) for t in (thickness_support or ()))
     cands = candidates(prims, roles)
+    prims_by_id = {p.object_id: p for p in prims}
+    # PA07R3 (PA08-R1): block definitions placed more than once in the view are symbols (furniture, fixtures, doors), never wall assemblies
+    block_inserts = defaultdict(lambda: defaultdict(list))
+    for p in prims:
+        if p.provenance.block_path and "@" in p.object_id:
+            block_inserts["/".join(p.provenance.block_path)][p.object_id.rsplit("@", 1)[1]].append(p)
+    repeated_blocks = set()
+    for key, insts in block_inserts.items():
+        if len(insts) < 2:
+            continue
+        spans = []
+        for ps in insts.values():
+            xs = [v for q in ps for v in ((q.x1, q.x2) if q.kind == "SEGMENT" else (q.cx - q.radius, q.cx + q.radius))]
+            ys = [v for q in ps for v in ((q.y1, q.y2) if q.kind == "SEGMENT" else (q.cy - q.radius, q.cy + q.radius))]
+            spans.append(math.hypot(max(xs) - min(xs), max(ys) - min(ys)))
+        # a symbol is small: a door, a fixture, a piece of furniture.  A repeated ARCHITECTURAL module (a room pod, a plan copy,
+        # a stair core) is larger than a wall structure's minimum developed length and is never a symbol.
+        if max(spans) < STRUCTURE_MIN_MM:
+            repeated_blocks.add(key)
     segs = [p for p in cands if p.kind == "SEGMENT"]
     arcs = [p for p in cands if p.kind == "ARC"]
     fam_groups = family_groups(segs)
@@ -571,6 +605,9 @@ def build(view_id, prims, roles, storey_id=None, source_id=None, single_line_lay
             _set(b, "REJECTED", "REPETITION_FAMILY (treads / hatch / grid at regular spacing)"); continue
         if b["THK"] < WALL_MIN_MM:
             _set(b, "REJECTED", f"THIN_PAIR_BELOW_WALL_MINIMUM ({round(b['THK'], 1)} mm < {WALL_MIN_MM:.0f} mm: drafting offset, line doubling or frame)"); continue
+        if b["BLOCK"] and all("/".join(prims_by_id[f].provenance.block_path) in repeated_blocks for f in b["FACES"]):
+            ev["REPEATED_BLOCK"] = sorted({"/".join(prims_by_id[f].provenance.block_path) for f in b["FACES"]})
+            _set(b, "REJECTED", "REPEATED_BLOCK_SYMBOL_STRIP (PA07R3: both faces inside instances of a block placed more than once in the view: furniture, fixture or door symbol, not a wall assembly)"); continue
         enclosed, doubling = _interior_faces(b, cands_by_dir, arcs)
         if doubling:
             ev["FACE_DOUBLING"] = [{k: v for k, v in d.items() if k != "INTERVALS"} for d in doubling]
@@ -601,8 +638,24 @@ def build(view_id, prims, roles, storey_id=None, source_id=None, single_line_lay
     # ---- phase 1c (PA07R2, gate Q12b): a pair shorter along its axis than it is thick, that is not a closed loop, is a transverse pairing
     # (a door jamb against a wall face, a reveal, a nib); it never follows the structure into acceptance
     for b in bands:
-        if b["STATUS"] is None and not b.get("LOOP") and not b.get("LONG_LOOP") and b["LENGTH"] < b["THK"] - 1e-6:
-            _set(b, "UNRESOLVED", f"SHORT_TRANSVERSE_PAIR (PA07R2: {round(b['LENGTH'])} mm along the axis for {round(b['THK'])} mm thickness: a jamb, reveal or nib paired with a wall face, not a wall)")
+        if b["STATUS"] is not None:
+            continue
+        b["THICKNESS_SUPPORT"] = any(abs(b["THK"] - t) <= THK_MERGE_MM for t in thickness_support)
+        # PA07R3 (PA08-R1, Qortuba): a strip with one side drawn inside a block instance and the other side a model-space line is a
+        # symbol (door leaf, frame, fixture) paired with a wall face, never a wall: walls drawn in blocks carry BOTH faces in the block
+        a_block = [bool(prims_by_id[f].provenance.block_path) for f in b["SIDE_A"]] if b["SIDE_A"] else []
+        b_block = [bool(prims_by_id[f].provenance.block_path) for f in b["SIDE_B"]] if b["SIDE_B"] else []
+        sa_share, sb_share = _block_share(b, "SIDE_A", prims_by_id), _block_share(b, "SIDE_B", prims_by_id)
+        a_model, b_model = _model_cover(b, "SIDE_A", prims_by_id), _model_cover(b, "SIDE_B", prims_by_id)
+        b["EVIDENCE"]["BLOCK_SHARE_BY_SIDE"] = {"A": round(sa_share, 3), "B": round(sb_share, 3), "MODEL_SPACE_COVER_MM": {"A": round(a_model), "B": round(b_model)}}
+        if a_block and b_block and ((sa_share >= BLOCK_SIDE_SHARE and b_model >= 0.5 * b["LENGTH"]) or (sb_share >= BLOCK_SIDE_SHARE and a_model >= 0.5 * b["LENGTH"])):
+            # length-weighted (PA08-R1, FC-7): a bed or counter drawn against a wall face is a block outline plus a stray exploded piece; the
+            # stray piece must not turn a symbol side into a wall side
+            _set(b, "REJECTED", "MIXED_BLOCK_STRIP (PA07R3: one side drawn inside a block instance, the other a model-space line: a symbol (leaf, frame, fixture, furniture) beside a wall face)"); continue
+        if not b.get("LOOP") and not b.get("LONG_LOOP") and b["LENGTH"] < b["THK"] - 1e-6:
+            b["R2_SHORT_TRANSVERSE"] = True      # decided in phase 5: a return of the host wall's thickness follows the wall; anything else stays unresolved
+            if not (b["THICKNESS_SUPPORT"] and not any(a_block) and not any(b_block)):
+                _set(b, "UNRESOLVED", f"SHORT_TRANSVERSE_PAIR (PA07R2: {round(b['LENGTH'])} mm along the axis for {round(b['THK'])} mm thickness: a jamb, reveal or nib paired with a wall face, not a wall)")
     # ---- phase 2: frames inside a thicker candidate's strip (candidate = not rejected in phase 1)
     live = [b for b in bands if b["STATUS"] is None]
     for b in live:
@@ -610,6 +663,7 @@ def build(view_id, prims, roles, storey_id=None, source_id=None, single_line_lay
             if h is b or h["STATUS"] is not None or h["THK"] <= b["THK"] or h.get("LOOP"):
                 continue
             if _strip_inside(b, h):
+                b["FRAME_OF"] = h        # PA07R3: re-judged after anchoring if the host does not survive
                 _set(b, "REJECTED", f"FRAME_WITHIN_HOST_BAND (thinner pair inside the strip of {h['KEY']}: window / glazing frame or finish line)")
                 h["EVIDENCE"].setdefault("FRAMES_INSIDE", []).append(sorted(b["FACES"]))
                 break
@@ -644,10 +698,14 @@ def build(view_id, prims, roles, storey_id=None, source_id=None, single_line_lay
                     z["EVIDENCE"].setdefault("COLUMN_INTERFACE", []).append({"FACE_ID": fid, "WITH_BAND": o["KEY"]})
                 continue
             if x.get("LONG_LOOP") or y.get("LONG_LOOP"):
+                # PA07R3: a closed outline of wall thickness (a wall piece between two returns) is demoted by a shared face only when the
+                # other strip carries fill evidence; an unevidenced strip beside it is decided by the evidence / thickness arbitration below
+                demoted = False
                 for z, o in ((x, y), (y, x)):
-                    if z.get("LONG_LOOP") and z["STATUS"] is None:
-                        _set(z, "UNRESOLVED", f"CLOSED_OUTLINE_AGAINST_WALL (closed outline sharing face {fid} with band {o['KEY']}: counter, fitting or lining drawn on a wall face)")
-                continue
+                    if z.get("LONG_LOOP") and z["STATUS"] is None and (z["THK"] > JOINERY_DEPTH_MIN_MM or o["EVIDENCE"]["MATERIAL_FILL"]["FILL"] == "EVIDENCED"):
+                        _set(z, "UNRESOLVED", f"CLOSED_OUTLINE_AGAINST_WALL (closed outline sharing face {fid} with band {o['KEY']}: counter, fitting or lining drawn on a wall face)"); demoted = True
+                if demoted:
+                    continue
             fx, fy = x["EVIDENCE"]["MATERIAL_FILL"]["FILL"], y["EVIDENCE"]["MATERIAL_FILL"]["FILL"]
             if fx == "EVIDENCED" and fy == "EVIDENCED":
                 for z, o in ((x, y), (y, x)):
@@ -658,6 +716,22 @@ def build(view_id, prims, roles, storey_id=None, source_id=None, single_line_lay
                 winner = y if loser is x else x
                 _set(loser, "UNRESOLVED", f"VOID_BESIDE_EVIDENCED_ELEMENT (shares face {fid} with band {winner['KEY']} on the other side, which has fill or end-face evidence; this strip has none)")
                 winner["EVIDENCE"].setdefault("VOID_NEIGHBOURS", []).append(loser["KEY"])
+                continue
+            # PA07R3 (PA08-R1): thickness support arbitrates an unevidenced conflict: the strip whose thickness the source repeats as an
+            # authored dimension, and that runs at least MIN_FREE_BAND_MM, keeps its candidacy; the unsupported strip is UNRESOLVED
+            sx, sy = x.get("THICKNESS_SUPPORT") and x["LENGTH"] >= MIN_FREE_BAND_MM, y.get("THICKNESS_SUPPORT") and y["LENGTH"] >= MIN_FREE_BAND_MM
+            if sx and sy:
+                # both thicknesses are authored project thicknesses: continuity decides only when one strip is a fragment beside a structure-length wall
+                lx, ly = x["LENGTH"], y["LENGTH"]
+                if max(lx, ly) >= STRUCTURE_MIN_MM and min(lx, ly) < STRUCTURE_MIN_MM and max(lx, ly) >= 3 * min(lx, ly):
+                    loser, winner = (y, x) if lx > ly else (x, y)
+                    _set(loser, "UNRESOLVED", f"FRAGMENT_BESIDE_SUPPORTED_WALL (PA07R3: shares face {fid} with band {winner['KEY']} ({round(winner['LENGTH'])} mm of authored thickness {round(winner['THK'])} mm); this {round(loser['LENGTH'])} mm strip is a fragment beside it)")
+                    winner["EVIDENCE"].setdefault("THICKNESS_ARBITRATION", []).append({"FACE_ID": fid, "AGAINST": loser["KEY"], "BY": "CONTINUITY"})
+                    continue
+            if sx != sy:
+                loser, winner = (y, x) if sx else (x, y)
+                _set(loser, "UNRESOLVED", f"UNSUPPORTED_STRIP_BESIDE_SUPPORTED_WALL (PA07R3: shares face {fid} with band {winner['KEY']} whose thickness {round(winner['THK'])} mm is an authored project thickness; this {round(loser['THK'])} mm strip has no such support and no fill evidence)")
+                winner["EVIDENCE"].setdefault("THICKNESS_ARBITRATION", []).append({"FACE_ID": fid, "AGAINST": loser["KEY"]})
                 continue
             conflict_edges[id(x)].add(id(y)); conflict_edges[id(y)].add(id(x))
     by_id = {id(b): b for b in live}
@@ -677,6 +751,7 @@ def build(view_id, prims, roles, storey_id=None, source_id=None, single_line_lay
                 continue
             shared = [f for f in b["FACES"] if f in h["FACES"] and _material_side(b, f) == _material_side(h, f) and _overlap(b, h, f)]
             if shared and h["THK"] > b["THK"] and h["EVIDENCE"].get("FACE_DOUBLING"):
+                b["DUP_OF"] = h        # PA07R3: re-evaluated after anchoring if the primary does not survive
                 _set(b, "REJECTED", f"DUPLICATE_OF_BAND (same face, same material side as {h['KEY']}: the inner line is recorded there as FACE_DOUBLING)")
                 h["EVIDENCE"]["THICKNESS_ALTERNATIVES_MM"] = sorted(set(h["EVIDENCE"].get("THICKNESS_ALTERNATIVES_MM", [round(h["THK"], 1)]) + [round(b["THK"], 1)]))
                 break
@@ -722,7 +797,16 @@ def build(view_id, prims, roles, storey_id=None, source_id=None, single_line_lay
     while changed:
         changed = False
         for b in live:
-            if id(b) in accepted or not b.get("LOOP") or b["LENGTH"] > COLUMN_SIDE_MAX or b["THK"] > COLUMN_SIDE_MAX:
+            if id(b) in accepted:
+                continue
+            if b.get("R2_SHORT_TRANSVERSE") and b["STATUS"] is None:
+                # PA07R3: a short pair of a supported wall thickness whose end joins an accepted straight band of the SAME thickness is that wall's return
+                for j in b.get("JOINS_ALL", []):
+                    h = phys_by_key.get(j["BAND"])
+                    if h is not None and id(h) in accepted and not h.get("LOOP") and h["KIND"] == "S" and abs(h["THK"] - b["THK"]) <= THK_MERGE_MM:
+                        accepted.add(id(b)); b["R3_WALL_RETURN_OF"] = h["KEY"]; changed = True; break
+                continue
+            if not b.get("LOOP") or b["LENGTH"] > COLUMN_SIDE_MAX or b["THK"] > COLUMN_SIDE_MAX:
                 continue
             # joined by an end (JOINS_ALL) or touching an accepted straight band by one of its sides or ends
             hosts = [phys_by_key[j["BAND"]] for j in b["JOINS_ALL"] if j["BAND"] in phys_by_key and id(phys_by_key[j["BAND"]]) in accepted]
@@ -745,16 +829,51 @@ def build(view_id, prims, roles, storey_id=None, source_id=None, single_line_lay
                 if nib:
                     continue
                 accepted.add(id(b)); changed = True
-    for b in live:
-        b["EVIDENCE"]["INTERSECTION"] = dict(b["EVIDENCE"].get("INTERSECTION", {}), JOINS=[{k: v for k, v in j.items()} for j in b["JOINS_ALL"]])
+    # PA07R3 (PA08-R1 §3): a demotion that depends on ANOTHER candidate is void when that candidate does not survive.  A real
+    # partition must not be lost because a thicker strip that was never established happened to enclose it.
+    revived = [d for d in bands if d.get("FRAME_OF") is not None and d["FRAME_OF"]["STATUS"] != "ACCEPTED"]
+    acc_bands = [z for z in bands if id(z) in accepted]
+    acc_face_ids = {f for z in acc_bands for f in z["FACES"]}
+    for d in revived:
+        d["JOINS_ALL"] = _joins(d, physical)
+        joined = [j for j in d["JOINS_ALL"] if j["BAND"] in phys_by_key and id(phys_by_key[j["BAND"]]) in accepted]
+        # a pair that borrows a face from an established wall is that wall's frame, finish or construction line, never a second wall;
+        # and a pair still enclosed by an established wall stays enclosed
+        borrows = sorted(set(d["FACES"]) & acc_face_ids)
+        enclosed_by_accepted = [z["KEY"] for z in acc_bands if z is not d and z["THK"] > d["THK"] and _strip_inside(d, z)]
+        if borrows or enclosed_by_accepted:
+            d["STATUS"] = None
+            _set(d, "REJECTED", f"FRAME_WITHIN_HOST_BAND ({'shares face ' + borrows[0] + ' with an established wall' if borrows else 'inside the strip of established band ' + enclosed_by_accepted[0]}: window / glazing frame, finish or construction line)")
+            continue
+        if joined and d["THK"] >= THIN_BAND_MM - THK_MERGE_MM / 5 and d["LENGTH"] >= MIN_FREE_BAND_MM:
+            d["STATUS"] = None; _set(d, "ACCEPTED", None); accepted.add(id(d))
+            d["BAND_TYPE"] = "ANGLED_BAND" if d["ORIENTATION"] == "ANGLED" else ("CURVED_BAND" if d["KIND"] == "C" else "STRAIGHT_BAND")
+            d["EVIDENCE"]["FRAME_HOST_FAILED"] = {"HOST": d["FRAME_OF"]["KEY"], "HOST_STATUS": d["FRAME_OF"]["STATUS"], "JOINED_TO": [j["BAND"] for j in joined][:3],
+                                                  "RULE": "the enclosing candidate was never established, so it cannot demote this pair; judged on its own junctions"}
+        else:
+            d["STATUS"] = None; _set(d, "UNRESOLVED", f"FRAME_HOST_UNRESOLVED (PA07R3: enclosed by {d['FRAME_OF']['KEY']} which was not established either; neither pair is decided)")
+    for b in live + [d for d in bands if d.get("DUP_OF") is not None] + revived:
+        b["EVIDENCE"]["INTERSECTION"] = dict(b["EVIDENCE"].get("INTERSECTION", {}), JOINS=[{k: v for k, v in j.items()} for j in b.get("JOINS_ALL", [])])
         b["EVIDENCE"]["CONTINUITY"] = {"EXTENT_MM": round(b["LENGTH"], 1), "COVERED_MM": round(b["COVERED"], 1), "GAPS_MM": [round(b["COVER"][i + 1][0] - b["COVER"][i][1], 1) for i in range(len(b["COVER"]) - 1)]}
-        if id(b) in accepted and not b.get("LOOP") and b["THK"] < THIN_BAND_MM and b["EVIDENCE"]["MATERIAL_FILL"]["FILL"] != "EVIDENCED":
+        if id(b) in accepted and not b.get("LOOP") and b["THK"] < THIN_BAND_MM - THK_MERGE_MM / 5 and b["EVIDENCE"]["MATERIAL_FILL"]["FILL"] != "EVIDENCED" and not (b.get("THICKNESS_SUPPORT") and not b["BLOCK"] and _joined_to_accepted(b, phys_by_key, accepted)):
+            # PA07R3 (PA08-R1 §3): a thin pair whose thickness the source itself authors as a dimension, and that is joined to accepted
+            # structure, is a partition of that thickness; thickness alone (a frame, a handrail drawn 100 mm apart) never promotes
             _set(b, "UNRESOLVED", f"THIN_BAND_UNCONFIRMED (PA07R2: a {round(b['THK'])} mm pair without hatch or end-face evidence: handrail, skirting, frame or a thin partition; owner or fill evidence required)")
         elif id(b) in accepted:
             if b.get("LOOP"):
                 _set(b, "ACCEPTED", None); b["BAND_TYPE"] = "COLUMN_BAND"; b["ORIENTATION"] = "COLUMN"
             else:
                 _set(b, "ACCEPTED", None); b["BAND_TYPE"] = "CURVED_BAND" if b["KIND"] == "C" else ("ANGLED_BAND" if b["ORIENTATION"] == "ANGLED" else "STRAIGHT_BAND")
+        elif b.get("R2_SHORT_TRANSVERSE") and b["STATUS"] is None:
+            _set(b, "UNRESOLVED", f"SHORT_TRANSVERSE_PAIR (PA07R2: {round(b['LENGTH'])} mm along the axis for {round(b['THK'])} mm thickness: a jamb, reveal or nib paired with a wall face, not a wall)")
+        elif b.get("DUP_OF") is not None and b["DUP_OF"]["STATUS"] != "ACCEPTED":
+            # PA07R3: the thicker primary did not survive; the thinner alternative is judged on its own joins
+            joined = any(id(phys_by_key[j["BAND"]]) in accepted for j in b.get("JOINS_ALL", []) if j["BAND"] in phys_by_key)
+            if joined and b["THK"] >= THIN_BAND_MM:
+                b["STATUS"] = None; _set(b, "ACCEPTED", None); b["BAND_TYPE"] = "ANGLED_BAND" if b["ORIENTATION"] == "ANGLED" else "STRAIGHT_BAND"; accepted.add(id(b))
+                b["EVIDENCE"]["DUPLICATE_PRIMARY_FAILED"] = b["DUP_OF"]["KEY"]
+            else:
+                b["STATUS"] = None; _set(b, "UNRESOLVED", f"DUPLICATE_PRIMARY_UNRESOLVED (PA07R3: thinner alternative of {b['DUP_OF']['KEY']} which did not survive; joined to no accepted band)")
         elif b.get("R2_WALL_NIB_OF"):
             _set(b, "UNRESOLVED", f"WALL_NIB_OR_PIER (PA07R2: closed outline of the host wall's thickness on the axis of band {b['R2_WALL_NIB_OF']}: a wall piece closed by a jamb or a pier, not a column; counted neither as wall nor as column until confirmed)")
         elif b.get("R2_COLUMN_CANDIDATE"):
@@ -796,6 +915,31 @@ def build(view_id, prims, roles, storey_id=None, source_id=None, single_line_lay
 
 def _set(b, status, reason):
     b["STATUS"], b["REASON"] = status, reason
+
+
+def _joined_to_accepted(b, phys_by_key, accepted):
+    """PA07R3: does an end of b join a band that the anchoring fixpoint accepted?"""
+    for j in b.get("JOINS_ALL", []):
+        h = phys_by_key.get(j["BAND"])
+        if h is not None and id(h) in accepted and h is not b:
+            b["EVIDENCE"]["THICKNESS_SUPPORT_RULE"] = {"THICKNESS_MM": round(b["THK"], 1), "JOINED_TO": h["KEY"], "RULE": "authored thickness + junction to accepted structure"}
+            return True
+    return False
+
+
+def _block_share(b, side, prims_by_id):
+    """Share of a side's covered length that lies inside block instances."""
+    tot = blk = 0.0
+    for fid, (_, (lo, hi)) in b[side].items():
+        L = max(hi - lo, 0.0); tot += L
+        if prims_by_id[fid].provenance.block_path:
+            blk += L
+    return blk / tot if tot else 0.0
+
+
+def _model_cover(b, side, prims_by_id):
+    """Covered length of a side's model-space (non-block) faces."""
+    return _covered(_union([(lo, hi) for fid, (_, (lo, hi)) in b[side].items() if not prims_by_id[fid].provenance.block_path and hi > lo]))
 
 
 def _overlap(x, y, fid):
@@ -860,3 +1004,36 @@ def summarise(rows):
                 out["ACCEPTED_WITH_FACE_DOUBLING"] += 1
     out["BY_TYPE"] = dict(out["BY_TYPE"]); out["REJECTED_BY_REASON"] = dict(out["REJECTED_BY_REASON"]); out["UNRESOLVED_BY_REASON"] = dict(out["UNRESOLVED_BY_REASON"])
     return out
+
+
+# ------------------------------------------------------------------ PA07R3 (PA08-R1 §6): face-side conflict arbitration register
+ARBITRATION_RULES = {
+    "LAYERED_INTERFACE": "both strips carry fill evidence (hatch or end faces): the shared line is an interface of a layered wall; both kept",
+    "VOID_BESIDE_EVIDENCED_ELEMENT": "one strip has fill or end-face evidence, the other none: the unevidenced strip is a void beside an element",
+    "FRAGMENT_BESIDE_SUPPORTED_WALL": "both thicknesses are authored; a strip shorter than STRUCTURE_MIN_MM beside a wall of >= 3x its length is a fragment",
+    "UNSUPPORTED_STRIP_BESIDE_SUPPORTED_WALL": "one thickness is an authored project dimension (>= THICKNESS_SUPPORT_MIN_COUNT occurrences), the other is not, neither has fill: the unsupported strip yields",
+    "CLOSED_OUTLINE_AGAINST_WALL": "a closed outline sharing the face with a filled strip is a counter, fitting or lining on that face",
+    "FACE_SIDE_CONFLICT": "no evidence separates the two strips: both stay UNRESOLVED; nothing is chosen for closing a room",
+}
+
+
+def arbitration_rows(bands):
+    """One row per band that took part in a face-side conflict, with the evidence that decided it.  Room closure is never an input."""
+    rows = []
+    for b in bands:
+        ev = b["EVIDENCE"]
+        reason = (b["REASON"] or "").split(" (")[0]
+        took_part = reason in ARBITRATION_RULES or any(k in ev for k in ("THICKNESS_ARBITRATION", "VOID_NEIGHBOURS", "LAYERED_INTERFACE", "FACE_SIDE_CONFLICT"))
+        if not took_part:
+            continue
+        if b["STATUS"] == "ACCEPTED" or reason not in ARBITRATION_RULES:
+            decision = "KEPT"
+            rule = "LAYERED_INTERFACE" if "LAYERED_INTERFACE" in ev else ("UNSUPPORTED_STRIP_BESIDE_SUPPORTED_WALL" if "THICKNESS_ARBITRATION" in ev else ("VOID_BESIDE_EVIDENCED_ELEMENT" if "VOID_NEIGHBOURS" in ev else reason or "FACE_SIDE_CONFLICT"))
+        else:
+            decision, rule = "YIELDED" if reason != "FACE_SIDE_CONFLICT" else "BOTH_UNRESOLVED", reason
+        rows.append({"BAND_ID": b["BAND_ID"], "KEY": b["KEY"], "STATUS": b["STATUS"], "THICKNESS_MM": round(b["THK"], 1), "LENGTH_MM": round(b["LENGTH"], 1), "DECISION": decision, "RULE": rule,
+                     "RULE_TEXT": ARBITRATION_RULES.get(rule, ""), "EVIDENCE": {"FILL": ev.get("MATERIAL_FILL", {}).get("FILL"), "END_CAPS": ev.get("MATERIAL_FILL", {}).get("END_CAPS"), "HATCH_SHARE": ev.get("MATERIAL_FILL", {}).get("HATCH_SHARE"),
+                                                                                 "THICKNESS_SUPPORT": b.get("THICKNESS_SUPPORT"), "BLOCK": b["BLOCK"], "BLOCK_SHARE_BY_SIDE": ev.get("BLOCK_SHARE_BY_SIDE"),
+                                                                                 "AGAINST": ev.get("THICKNESS_ARBITRATION") or ev.get("VOID_NEIGHBOURS") or ev.get("LAYERED_INTERFACE") or (ev.get("FACE_SIDE_CONFLICT") or {}).get("CONFLICTING_BANDS")},
+                     "ROOM_CLOSURE_USED": False, "REASON": b["REASON"]})
+    return rows

@@ -33,6 +33,7 @@ SITE_TYPE_MAP = {"CONFIRMED_DOOR_OPENING": "CONFIRMED_DOOR_OPENING", "CONFIRMED_
                  "CONFIRMED_OPEN_PASSAGE": "CONFIRMED_OPEN_PASSAGE", "MATERIAL_CONTINUITY": "MATERIAL_CONTINUITY", "CAD_JUNCTION": "MATERIAL_CONTINUITY",
                  "PROBABLE_DOOR_OPENING": "UNRESOLVED_GAP", "UNRESOLVED": "UNRESOLVED_GAP"}
 GATES = ("VIEW_ROLE", "UNIT_STATUS", "SCALE_STATUS", "SPACE_STATUS", "MATERIAL_BANDS", "OPENING_SITE_STATUS", "IDENTITY_STATUS", "STOREY_STATUS", "HEIGHT_STATUS", "RULE_STATUS")
+THICKNESS_SUPPORT_MIN_COUNT = 3       # PA07R3: an authored thickness repeated at least this often in a view is project thickness evidence
 SCALE_RATIO_MAX = 1.3             # PA07R2 (FM-R1-03): a plan view whose wall-thickness or door-span median differs from the source-wide median by more than this factor (either way) is a scale question
 SEM_EXTERIOR_CLASSES = ("ROOF", "COURT", "GARDEN", "POOL", "BALCONY", "TERRACE")
 WET_LABEL_TOKENS = tuple(sorted({k.upper() for k, v in list(SEM.AR.items()) + list(SEM.EN.items()) if v in SEM.WET}))      # every vocabulary key of a wet class (no literal room names here)
@@ -109,6 +110,25 @@ class Pipeline7(PL.Pipeline):
             "RULE": "per-entity display semantics (linetype resolved BYLAYER / BYBLOCK / override, visibility, lineweight, block transform depth) are evidence for the band engine; a hidden or invisible entity is never a material face; layer names decide nothing"}
 
     # ------------------------------------------------------------ PA07A bands
+    def _thickness_support(self, view_id):
+        """PA07R3 (PA08-R1): wall thicknesses the source repeats as authored dimensions in this view (>= THICKNESS_SUPPORT_MIN_COUNT entities of one
+        displayed value within the wall-thickness range).  Evidence only; it never creates a band."""
+        rows = [r for r in self.registers.get("DIMENSION_CHAIN_REGISTER", {}).get("ROWS", []) if r.get("VIEW") == view_id and r.get("DISPLAY_TEXT")]
+        vals = Counter()
+        for r in rows:
+            try:
+                v = float(str(r["DISPLAY_TEXT"]).replace(",", ".")) * (r.get("DISPLAY_FACTOR") or 1.0)
+            except ValueError:
+                continue
+            unit = self.registers.get("PA06_SOURCE_UNIT_REGISTER", {}).get("ROWS", [])
+            scale = {"cm": 10.0, "m": 1000.0, "mm": 1.0}.get(unit[0]["UNIT_CANDIDATE"] if unit else "mm", 1.0)
+            mm = v * scale
+            if MB.WALL_MIN_MM <= mm <= MB.THICKNESS[1]:
+                vals[round(mm)] += 1
+        sup = sorted(v for v, n in vals.items() if n >= THICKNESS_SUPPORT_MIN_COUNT)
+        self.registers.setdefault("PA07_THICKNESS_SUPPORT", {"ARTIFACT": "PA07_THICKNESS_SUPPORT", "BY_VIEW": {}})["BY_VIEW"][view_id] = {"SUPPORTED_MM": sup, "COUNTS": dict(vals)}
+        return sup
+
     def stage_build_material_bands(self):
         rows_all = []
         for v in self.views:
@@ -116,7 +136,7 @@ class Pipeline7(PL.Pipeline):
             if role not in PLAN_LIKE:
                 self.bands7[v["VIEW_ID"]], self.band_rows[v["VIEW_ID"]] = [], []
                 continue
-            rows, bands = MB.build(v["VIEW_ID"], v["PRIMITIVES"], self.roles[v["VIEW_ID"]], storey_id=None, source_id=v["SOURCE_PATH"], view_bbox=v["BBOX_MM"])
+            rows, bands = MB.build(v["VIEW_ID"], v["PRIMITIVES"], self.roles[v["VIEW_ID"]], storey_id=None, source_id=v["SOURCE_PATH"], view_bbox=v["BBOX_MM"], thickness_support=self._thickness_support(v["VIEW_ID"]))
             for r in rows:
                 r["VIEW_ROLE_AT_BUILD"] = role
             self.bands7[v["VIEW_ID"]], self.band_rows[v["VIEW_ID"]] = bands, rows
@@ -129,7 +149,7 @@ class Pipeline7(PL.Pipeline):
 
     # ------------------------------------------------------------ PA07B / PA07C topology
     def stage_build_band_topology(self):
-        iv_all, site_all = [], []
+        iv_all, site_all, short_rows, arb_rows = [], [], [], []
         for v in self.views:
             bands = self.bands7.get(v["VIEW_ID"], [])
             if not bands:
@@ -138,13 +158,21 @@ class Pipeline7(PL.Pipeline):
             ivs, sites, seals = BT.build_view(v["VIEW_ID"], v["PRIMITIVES"], self.roles[v["VIEW_ID"]], bands, source_id=v["SOURCE_PATH"])
             seals = seals + PF.glazing_separators(v["PRIMITIVES"], self.roles[v["VIEW_ID"]])
             self.intervals[v["VIEW_ID"]], self.sites7[v["VIEW_ID"]], self.seals[v["VIEW_ID"]] = ivs, sites, seals
+            short_rows.extend(BT.short_element_rows(bands, sites, v["PRIMITIVES"], self.roles[v["VIEW_ID"]]))
+            arb_rows.extend(MB.arbitration_rows(bands))
             iv_all.extend(ivs); site_all.extend(sites)
         self.registers["PA07_BAND_INTERVAL_REGISTER"] = {"ARTIFACT": "PA07_BAND_INTERVAL_REGISTER", "ROWS": iv_all, "COUNT": len(iv_all), "SUMMARY": BT.summarise(iv_all, site_all),
                                                          "RULE": "every accepted band is cut into MATERIAL / OPENING / JUNCTION / UNRESOLVED intervals from the coverage of its two faces; seals close every interval end with zero-material chords"}
         self.registers["PA07_OPENING_SITE_REGISTER"] = {"ARTIFACT": "PA07_OPENING_SITE_REGISTER", "ROWS": site_all, "COUNT": len(site_all), "BY_CLASS": dict(Counter(s["CLASS"] for s in site_all)),
                                                         "BY_STATUS": dict(Counter(s["STATUS"] for s in site_all)), "CLASSES": BT.SITE_CLASSES,
                                                         "RULES": ["a single-face gap is never a doorway", "both faces interrupted -> candidate; jambs + leaf / swing -> CONFIRMED; jambs only at door span -> PROBABLE",
-                                                                  "insufficient evidence -> UNRESOLVED, never merged", "CONFIRMED_OPEN_PASSAGE only after the space layer finds interior spaces on both sides"]}
+                                                                  "insufficient evidence -> UNRESOLVED, never merged", "CONFIRMED_OPEN_PASSAGE only after the space layer finds interior spaces on both sides",
+                                                                  "PA07R3: a band end that stops short of an accepted wall hosts an END GAP interval classified by the same evidence (corner doors, doorless openings)"]}
+        self.registers["PA07_SHORT_ELEMENT_REGISTER"] = {"ARTIFACT": "PA07_SHORT_ELEMENT_REGISTER", "ROWS": short_rows, "COUNT": len(short_rows), "BY_CLASS": dict(Counter(r["CONTEXT_CLASS"] for r in short_rows)),
+                                                         "CLASSES": BT.SHORT_ELEMENT_CLASSES, "RULE": "PA07R3 (PA08-R1 §5): short transverse candidates are classified by context (junction, site, loop, block, family); no global relaxation of the short-pair guard"}
+        self.registers["PA07_FACE_SIDE_ARBITRATION_REGISTER"] = {"ARTIFACT": "PA07_FACE_SIDE_ARBITRATION_REGISTER", "ROWS": arb_rows, "COUNT": len(arb_rows), "BY_DECISION": dict(Counter(r["DECISION"] for r in arb_rows)),
+                                                                 "BY_RULE": dict(Counter(r["RULE"] for r in arb_rows)), "RULES": MB.ARBITRATION_RULES,
+                                                                 "RULE": "PA07R3 (PA08-R1 §6): every face-side conflict is decided by fill, end faces, authored thickness support and continuity, deterministically; room closure is never an input; undecided conflicts stay UNRESOLVED on both sides"}
 
     # ------------------------------------------------------------ PA07D / PA07E faces, spaces, junctions
     def stage_build_planar_faces(self):

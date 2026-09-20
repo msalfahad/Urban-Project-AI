@@ -4098,3 +4098,85 @@ opened; the comparison classifies every fact into predeclared classes with froze
 SILENT_WRONG_QUANTITY (must be 0); gate v4 keeps twelve conditions NOT_TESTED until such a run exists. The runner-ready
 check executes every step on a synthetic villa written by the engine's author and is marked so: it proves the
 harness runs, never that the engine is right.
+
+## §179 — A wall's direction is a fact, not a tolerance: repair the wrap, never widen the bin
+
+The Qortuba partition between the hall and a bedroom is drawn as two
+horizontal lines 200 mm apart. The engine never paired them. The reason
+was not geometry: one line's endpoints differ in y by eight hundredths of
+a nanometre, so `atan2` returns a tiny **negative** angle, `% pi` turns
+that into `pi - epsilon`, and the pairing frame `(ux, uy)` flips sign for
+that line alone. Its offset was recorded as `-y` instead of `+y`, and no
+partner could be found at any distance.
+
+The repair is a **wrap repair, not a tolerance**: an angle within a
+nanoradian of `pi` is the same direction as zero. The first attempt used
+half the angular tolerance — half a degree — and that quietly turned a
+floating-point fix into a pairing tolerance: on P7757 it created dozens of
+new candidate strips that then conflicted with real walls and left them
+unresolved. The threshold is now a nanoradian, far below any slope a
+draughtsman can draw, and the P7757 candidate set is unchanged.
+
+**A numerical defect is repaired at noise scale. Anything wider is a rule
+change and must be argued as one.**
+
+## §180 — A demotion that depends on another candidate is void if that candidate does not survive
+
+Two rules demote a band by pointing at a neighbour: `FRAME_WITHIN_HOST_BAND`
+(a thinner pair inside a thicker strip) and `DUPLICATE_OF_BAND` (the
+thinner alternative of a doubled face). Both were unconditional. On P7757
+a 120 mm partition, 3.9 m long and real, was rejected as a frame inside a
+200 mm strip that itself was never established — so the partition vanished
+and the door it hosted vanished with it.
+
+A demotion that rests on another candidate is now **re-judged when that
+candidate fails**. The revived pair must still earn acceptance on its own
+junctions, and it is refused outright when it borrows a face from an
+established wall or still sits inside one: a pair that shares a face with
+a wall that *was* established is that wall's frame, finish or construction
+line, never a second wall.
+
+## §181 — A gap at the end of a wall is still a gap
+
+Band topology classified interruptions **inside** a band's extent. A wall
+that stops short of the wall it runs into — the ordinary way a corner door
+is drawn — produced no interval at all: the band simply ended, the end
+state was recorded as a free end, and the doorway was never classified.
+Most of the Qortuba doors are drawn that way, which is why seven labelled
+rooms merged into one cell.
+
+An end that is not joined and stops short of an accepted wall now hosts an
+**end-gap interval**, classified by exactly the same evidence as any other
+gap. Three refinements keep it honest: a gap within the drafting tolerance
+is a junction and hosts nothing; a gap with an accepted wall lying beside
+it is the band running along that wall, not an opening between rooms; and
+when two bands face each other across one gap, the longer one hosts the
+single site and the other records that it yielded.
+
+Openings also outrank outline detection. A double-leaf door drawn as two
+leaves between two jambs closes a loop in the endpoint graph, and the
+closed-outline rule read it as a niche — costing a confirmed door on
+P7757. Evidence already read at a classified site is that opening's
+evidence and is never re-read as an outline.
+
+## §182 — The raster measures topology; a quantity comes from the lines that seal the room
+
+The raster area on a planar face has always carried its own disclaimer:
+free cells plus a half-cell strip, eligibility only, never a quantity. The
+Qortuba phase needed real floor areas, and the temptation was to promote
+the raster number because it looked close enough.
+
+Instead the measurement layer builds the area from the **lines that seal
+the face**. Their axis-aligned coordinates are the cut lines of an
+arrangement; every arrangement cell whose centre falls inside the face
+contributes its exact rectangle; the sum is a vector area with a written
+formula, cross-checked against the rasterised face and **refused** when
+the two disagree, when a boundary line is not axis-aligned, or when the
+face is not a rectilinear region of those lines.
+
+The state follows the boundary, not the arithmetic: a region whose every
+boundary is material or an established opening is `SOURCE_ESTABLISHED`;
+one with any provisional boundary keeps its number but stays `PROVISIONAL`
+and enters no total. Three of fifty-two Qortuba floor regions are
+established. That is the honest count, and the arrangement never invented
+the other forty-nine.
