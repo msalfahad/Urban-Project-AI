@@ -512,3 +512,42 @@ deliberately excluded (§194). Frozen as
 `FREEZE_PA08_QORTUBA_EXTERNAL_RECONCILIATION_01`. No engine rule was changed;
 four fixes are recommended for R4 and none implemented.
 `READY_FOR_NEXT_VALIDATION_VILLA: NO`.
+
+**PA08-QORTUBA-ROOM-BY-ROOM-QS-01 (source-only takeoff, then the aggregate
+check).** The owner asked for the surveyor's own room-by-room calculation
+from the DWG rather than a contractor working sheet. Because the contractor
+totals had already been seen, integrity rests on order and reach rather than
+on blindness (§198): the takeoff module imports no contractor register and no
+comparison code, its source carries none of the contractor aggregates as a
+literal, and its freeze was written on a clean tree at commit `1de7f7e`
+before the comparison module existed.
+
+Three things the drawing gave up that earlier phases missed. An unlabelled
+internal lobby of 4.510 m² serves two bedrooms and a bathroom through doors
+of 925, 1000 and 1125 mm, and is a room on that evidence (§195). Of seven
+glazed elements, six sit in wall bands that run continuously past them so the
+floor-level trades run underneath, while one cuts its band through at 2750 mm
+between the hall and the preparation area and stops both trades at its jambs
+(§196). The profile is issued as a second BOQ item on the skirting's own
+path, per the owner's description of the installed product, instead of being
+measured again under a rule of its own (§197).
+
+Totals, summed from the rows: dry floor 120.6475 m² over seven rooms, wet
+17.8625 m² over three, apartment 138.5100 m². Skirting 106.075 m, profile
+106.075 m, ceiling 138.5100 m². Block 51.800 m at 150 mm and 86.930 m at
+200 mm. Plasterable face 135.225 m, paint eligible 107.625 m, the difference
+being the wet rooms. Every area needing a height stays `NOT_ESTABLISHED`, and
+the bathroom and preparation host walls total 38.750 m of net host wall
+waiting on one number. Each room formula merges the arrangement into the few
+rectangles a surveyor would write by hand, and a test multiplies every
+formula back out.
+
+Against the contractor aggregates: flooring 120.6475 against 107.76, skirting
+and profile 106.075 each against 76.90. No engine error and no contractor
+error was recorded from any of it, because a total of known room scope cannot
+be scored against a summary line that names no storey and no room (§199).
+What the comparison did establish is that both sides measure the profile at
+exactly the skirting length, so the trade rule agrees independently on both
+sides even where the magnitudes do not. Frozen as
+`FREEZE_PA08_QORTUBA_ROOM_BY_ROOM_QS_01` and
+`FREEZE_PA08_QORTUBA_QS01_AGGREGATE_COMPARISON`; no engine rule changed.

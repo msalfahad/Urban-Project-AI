@@ -192,3 +192,64 @@ def test_an_envelope_check_is_never_reported_as_an_area_check():
             assert d["ENVELOPE_CHECK"]["WHAT_THIS_DOES_NOT_CHECK"]
         if d["METHOD_B_STRENGTH"] == "FULLY_AUTHORED":
             assert d["METHOD_B_DIMENSION_ARITHMETIC_M2"] is not None and d["DELTA_M2"] is not None
+
+
+# ------------------------------------------------------------------ §24 the aggregate check, and the order it ran in
+def test_the_comparison_verifies_the_takeoff_freeze_before_reading_the_contractor_sheet():
+    from research.qs_wall_treatment_01.pa08.qortuba.qs01 import compare as CP
+    c = reg("QORTUBA_QS01_AGGREGATE_CONTRACTOR_COMPARISON")
+    o = c["ORDER_OF_WORK"]
+    assert o["SOURCE_ONLY_FREEZE_VERIFIED_BEFORE_READING_THE_CONTRACTOR_SHEET"] is True
+    assert o["SOURCE_ONLY_FREEZE_DIGEST"] == reg("FREEZE_PA08_QORTUBA_ROOM_BY_ROOM_QS_01")["DIGEST"]
+    assert o["TAKEOFF_TREE_CLEAN_AT_FREEZE"] is True
+    assert CP.verify_source_only_freeze()["SOURCE_ONLY_CALCULATION_COMPLETE"] is True
+
+
+def test_the_takeoff_module_does_not_import_the_comparison():
+    """The gate only means something if the measured side cannot reach the benchmark side."""
+    assert "compare" not in " ".join(sorted(_imports(SRC)))
+    cmp_src = Path("research/qs_wall_treatment_01/pa08/qortuba/qs01/compare.py")
+    assert "takeoff" not in " ".join(sorted(_imports(cmp_src))), "the comparison must read frozen files, not recompute"
+
+
+def test_no_room_calculation_was_adjusted_after_the_aggregate_was_seen():
+    c = reg("QORTUBA_QS01_AGGREGATE_CONTRACTOR_COMPARISON")
+    assert c["METRICS"]["ROOM_CALCULATIONS_ADJUSTED_AFTER_SEEING_THE_AGGREGATE"] == 0
+    fr = reg("FREEZE_PA08_QORTUBA_QS01_AGGREGATE_COMPARISON")
+    assert fr["ROOM_CALCULATIONS_ADJUSTED"] == 0 and fr["ENGINE_CHANGED"] == "NONE"
+    assert fr["SOURCE_ONLY_FREEZE_NOT_REWRITTEN"]["MISMATCHES"] == []
+    for n, h in reg("FREEZE_PA08_QORTUBA_ROOM_BY_ROOM_QS_01")["CONTENTS"].items():
+        assert TK._sha(OUT / f"{n}.json") == h, f"{n} changed"
+
+
+def test_every_aggregate_row_carries_a_class_and_a_reason_not_just_a_delta():
+    from research.qs_wall_treatment_01.pa08.qortuba.qs01 import compare as CP
+    for r in reg("QORTUBA_QS01_AGGREGATE_CONTRACTOR_COMPARISON")["ROWS"]:
+        assert r["CLASSIFICATION"] and all(c in CP.DIFFERENCE_CLASSES for c in r["CLASSIFICATION"])
+        assert r["ROOT_CAUSE"] and len(r["ROOT_CAUSE"]) > 40, r["ITEM"]
+        assert r["ENGINE_BASIS"] and r["CONTRACTOR_BASIS"]
+
+
+def test_an_unexplained_difference_is_not_called_an_error_in_either_direction():
+    m = reg("QORTUBA_QS01_AGGREGATE_CONTRACTOR_COMPARISON")["METRICS"]
+    assert m["ENGINE_ERRORS_FOUND_BY_THIS_COMPARISON"] == 0
+    assert m["CONTRACTOR_ERRORS_FOUND_BY_THIS_COMPARISON"] == 0
+    assert m["WHY_ZERO"]
+    assert m["ROOM_LEVEL_COMPARISONS_POSSIBLE"] == 0
+
+
+def test_the_profile_rule_agreement_is_not_claimed_to_settle_the_magnitude():
+    c = reg("QORTUBA_QS01_AGGREGATE_CONTRACTOR_COMPARISON")["PROFILE_TRADE_RULE_CHECK"]
+    assert c["ENGINE_PROFILE_OVER_SKIRTING"] == c["CONTRACTOR_PROFILE_OVER_SKIRTING"] == 1.0
+    assert c["AGREEMENT"] == "TRADE_RULE_AGREES"
+    assert c["WHAT_IT_DOES_NOT_SETTLE"] and c["WHY_THIS_IS_NOT_CIRCULAR"]
+
+
+def test_an_implied_height_from_the_contractor_sheet_is_never_fed_back():
+    rows = reg("QORTUBA_QS01_AGGREGATE_CONTRACTOR_COMPARISON")["ROWS"]
+    r = [x for x in rows if x["CONTRACTOR_ROW"] == "CC-04"][0]
+    assert r["ENGINE_VALUE"] is None, "the engine must still emit no wall tile area"
+    for q in ("NOT_SOURCE_ESTABLISHED", "DIAGNOSTIC_ONLY", "NOT_FED_BACK_INTO_ANY_QUANTITY"):
+        assert q in r["IMPLIED_HEIGHT_QUALIFIERS"]
+    for t in reg("QORTUBA_QS01_WALL_TILE_TAKEOFF")["ROWS"]:
+        assert t["WALL_TILE_HEIGHT"]["VALUE"] is None

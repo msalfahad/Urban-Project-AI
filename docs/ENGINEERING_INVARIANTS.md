@@ -4362,3 +4362,72 @@ differences, the floor total and the skirting total, remain unexplained, and
 both stayed out of the count. An unexplained difference is not a demonstrated
 error, and padding the count with suspicion devalues it exactly as much as
 hiding a real entry does.
+
+## §195 — A room without a label is still a room
+
+Three phases of measurement dropped a 4.510 m² space off two bedrooms and a
+bathroom, because every rule that promoted a cell to a room asked for a room
+name and this one carries none. The drawing says what it is anyway: three
+doors open into it, of 925, 1000 and 1125 mm, and each one leads to a room of
+this apartment.
+
+A door is stronger evidence of a room than a label is. Labels are typed by a
+draughtsman and are missing from circulation space in most residential plans;
+a door is drawn because someone walks through it. The test for membership of
+a floor package is what opens into a space, not what is written in it.
+
+## §196 — A glazed element interrupts a floor trade only when the wall band stops
+
+Six of the seven glazed elements in Qortuba sit inside wall bands whose faces
+run continuously past them, so wall stands below the glass and the skirting
+runs underneath. The seventh cuts its band right through: both faces
+interrupted, the opening crossing the full thickness. There, nothing stands
+at floor level and both floor-level trades stop at the jambs.
+
+That distinction comes from the band, not from the layer name, and not from
+the element's colour. A plan also cannot say whether floor-level glazing
+slides or is fixed, and it does not have to: the candidates are recorded, the
+trade effect is identical for all of them, and the quantity is released
+rather than held for a question that does not change the answer.
+
+## §197 — One underlying path, two trade items
+
+The owner states the black profile is installed directly above the skirting
+on the same wall path. So the takeoff reads one eligible wall path and issues
+two BOQ lines against it, with two ids, rather than measuring the profile
+again under a different rule.
+
+The alternative, which an earlier pass took, is to give the upper trade its
+own perimeter from the raw wall path, and that invents length: a profile that
+sits above a skirting cannot cross a doorway the skirting stops at, and
+cannot be certain along a wall whose skirting is still unresolved. Measuring
+the second trade separately is not independence, it is a second chance to be
+wrong.
+
+## §198 — When the benchmark is already known, prove the order instead
+
+Once a contractor's totals have been seen, no later calculation can claim to
+be blind, and saying it is blind anyway is worse than admitting it is not.
+What can still be proved is sequence and reach.
+
+The Qortuba room-by-room takeoff was made auditable in three ways rather than
+one. Its module imports no contractor register and no comparison code. Its
+source contains no contractor aggregate as a literal, which a test checks by
+scanning for each one. Its freeze was written, on a clean tree at a named
+commit, before the comparison module existed, and the comparison verifies
+that digest and every artifact hash before reading a single contractor
+number, then again afterwards. A figure nudged toward a benchmark would break
+the digest.
+
+## §199 — A difference of unknown scope is a question, not an error
+
+The room-by-room takeoff came out 10.7 per cent above the contractor on
+flooring and 27.5 per cent above on skirting. Neither was recorded as an
+engine error or a contractor error, and both counts stayed at zero.
+
+A total whose room scope is known cannot be scored against a summary line
+whose scope is not stated. Deciding which side is wrong would be a guess
+dressed as a finding, and the register would then carry an error that no
+evidence supports. The useful output of that comparison was the one thing it
+could establish: both sides measure the profile on exactly the skirting's
+path, so the trade rule agrees even where the magnitudes do not.
