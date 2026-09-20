@@ -328,3 +328,27 @@ such cells get NOT_APPLICABLE lines and are excluded from interior wall totals).
 written to `pa06r1/` with its own blind rebuild (P7757_BLIND_REBUILD_PA06R1) and frozen as
 `FREEZE_PA06R1.json`; `FREEZE_PA06.json` and `pa06/` are kept unchanged as history and the supersession is
 recorded in the PA06 ledger.
+
+## Geometry and topology safety (eleventh checkpoint, PA07)
+
+PA07 closed the five PA06 blockers that could produce a plausible quantity from the wrong physical geometry.
+Material is now a band of paired faces with evidence (`engine/ingest/material_bands.py`, §169), a band is a
+one-dimensional host cut into MATERIAL / OPENING / JUNCTION / UNRESOLVED intervals with zero-material chords
+sealing every interval end (`band_topology.py`, §170), spaces are the connected components of the whole free mask
+with no seed grid (`planar_faces.py`, §171), column facts are kept separate (`junctions.py`, §172), per-entity
+linetype, visibility and lineweight are resolved through the layer and block tables (`engine/cad_adapter.py`),
+and the bridge runs only behind nine named gates (`pipeline7.py`, §173). 51 new adversarial tests
+(`tests/test_pa07_*.py`) cover the fifteen band cases, the nine curved fixtures and the space fixtures.
+
+P7757 ran as regression data through `research/qs_wall_treatment_01/pa07/run.py`: 9369 raw
+primitives, 2031 band candidates of which 443 accepted, 1299 rejected and 289 unresolved
+(each with its reason), sites {'UNRESOLVED': 42, 'CAD_JUNCTION': 23, 'PROBABLE_DOOR_OPENING': 1, 'MATERIAL_CONTINUITY': 1, 'CONFIRMED_DOOR_OPENING': 8, 'CONFIRMED_WINDOW_OPENING': 2}, planar faces {'EXTERIOR_CONNECTED': 7, 'MATERIAL_INTERIOR': 591, 'SLIVER': 124, 'ELIGIBLE': 12},
+3 interior spaces on plan views, 3.005 m of
+material boundary on them (structure only), bridge-allowed lines 0. The PA06R2
+figure of 1282.684 m of interior vector wall was not preserved and could
+not be: most P7757 walls carry a third parallel line and no hatch or end returns, so the band engine leaves them
+UNRESOLVED and the rooms beside them leak to the exterior face. That is the FAIL VISIBLY outcome the phase was built
+for; the owner queue asks which line is the wall face. No independent second villa exists in the repository or the
+uploads, so the validation protocol is frozen unexecuted (`SECOND_REGRESSION_SOURCE_REQUIRED.json`, §174) and
+PROJECT_3_ENTRY_GATE_V3 is NOT_READY. Freeze: `FREEZE_PA07.json`; the cold review and its POST_REVIEW variants sit
+beside the frozen artifacts.

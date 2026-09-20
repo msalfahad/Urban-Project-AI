@@ -4002,3 +4002,58 @@ transforms, role counts, material developed length, site classes, space counts, 
 radii, dimension ownership, storey topology, closure reversibility, semantic anchors, quantity-trace
 structure). A mis-specified criterion becomes APPARATUS_DEFECT; a failing one is never edited into a pass.
 `engine/ingest/gates_v2.py` adds the cold review as a condition: the mechanical PA05 12/12 is not reused.
+
+## §169 — Material is a band of two paired faces with evidence, never a face, a layer or a raster
+
+`engine/ingest/material_bands.py` (PA07A). A wall exists only as a MATERIAL_BAND: parallel faces (or concentric
+arcs) at a candidate thickness with real overlap, clustered along one axis with gaps bridged only up to an opening
+width. A candidate is REJECTED when its faces form a regular repetition family, when it is thinner than the wall
+minimum, when other parallel faces run inside it, when it is a thinner pair inside another band's strip, or when
+both of its faces belong to neighbouring elements with material on the far side (the space between them). It stays
+UNRESOLVED when it is the outermost line of the view, when a face is claimed with material on both sides and neither
+strip carries fill or end-face evidence, or when it joins no wall structure. Layer names are recorded and decide
+nothing; a hidden or invisible entity is never a face; no raster appearance repairs a rejected candidate. Every
+rejection and every unresolved candidate keeps its reason in PA07_MATERIAL_BAND_REGISTER.
+
+## §170 — A band is a one-dimensional host; a single-face gap is never a doorway; chords seal every interval
+
+`engine/ingest/band_topology.py` (PA07B / PA07C). Straight and curved bands share one axis parameter, developed
+distance in mm. The coverage of the two faces cuts the band into MATERIAL, OPENING, JUNCTION and UNRESOLVED
+intervals. A site is classified only from jamb returns, leaf, swing, frame and glazing evidence; one interrupted
+face is a niche, recess or omission, never an opening; two interrupted faces without evidence stay UNRESOLVED and
+are never merged. The topology layer receives face lines over material, chords across the thickness at every
+interval end and band end, and face chords over every non-material interval; every chord carries MATERIAL = False.
+No chord replaces a curved band for length; a curved opening is an angular interval on the developed axis.
+
+## §171 — Planar faces come from the whole free mask; a room is never invented for a label
+
+`engine/ingest/planar_faces.py` (PA07D). There is no seed grid: the free mask of the view is labelled into
+connected components and every component is a planar face with its boundary relations, area basis, exterior
+status and eligibility. A face inside an accepted band strip is wall interior; a face touching the view border is
+exterior-connected; a face with no material boundary is not a space. Boundary lengths per space come from the band
+geometry cut at junctions and column footprints, never from cell runs or polygon perimeters. MISSING_SPACE_QA
+reports ANCHOR_WITHOUT_SPACE, SPACE_WITHOUT_IDENTITY, MULTIPLE_ANCHORS_ONE_SPACE, OPEN_REGION and
+POSSIBLE_MISSED_SPACE; none of them creates, splits or merges a space.
+
+## §172 — Column existence, exposure, ownership and trade eligibility are separate facts
+
+`engine/ingest/junctions.py` (PA07E). Per column: OBJECT_EXISTS, OBJECT_GEOMETRY, EXPOSED_TO_SPACE, HOSTS_WALL,
+TERMINATES_WALL, CLEAR_FACE_OWNERSHIP and TRADE_ELIGIBILITY are recorded separately. A wall face over a column
+footprint is a JUNCTION_CUT owned by the column; an embedded column contributes no exposed face; a beam edge is
+never wall material and never a space boundary.
+
+## §173 — The bridge runs only behind nine named gates, and the gate that blocks a line is written down
+
+`engine/ingest/pipeline7.py` (PA07H). For every space and trade the PA07_QUANTITY_SAFETY_REGISTER evaluates
+VIEW_ROLE, UNIT_STATUS, SPACE_STATUS, MATERIAL_BANDS, OPENING_SITE_STATUS, IDENTITY_STATUS, STOREY_STATUS,
+HEIGHT_STATUS and RULE_STATUS. Only a line passing all nine reaches `qs_measurement_region` and
+`plaster_trade_engine`; every other line names its blocking gates and carries no number. The seven PA07 freeze
+barriers (units, roles, bands, sites, faces, semantics, bridge) are serial: no stage writes back.
+
+## §174 — Independent validation needs an independent source; without one the phase records SOURCE_REQUIRED
+
+`research/qs_wall_treatment_01/pa07/validation.py` (PA07I). Truth is a second villa never used to develop the
+architecture, or a hand-verification pack sealed before the run; no PA / E1 result, workbook or AI reader is truth.
+Tolerances are declared before any comparison and never changed after it. When no such source exists the protocol
+is frozen unexecuted, SECOND_REGRESSION_SOURCE_REQUIRED.json states what to upload, and PROJECT_3_ENTRY_GATE_V3
+is NOT_READY — the correct result, not a failure of the phase.

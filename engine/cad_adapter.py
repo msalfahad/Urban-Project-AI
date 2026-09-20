@@ -197,6 +197,10 @@ class Provenance:
     block_path: tuple = ()          # outermost block name first
     instance_path: tuple = ()       # the INSERT handles that placed it
     sub_id: str = ""                # which part of a multi-part entity
+    linetype: str = "BYLAYER"       # resolved display linetype name (BYLAYER / BYBLOCK resolved through the tables)
+    linetype_source: str = "UNRESOLVED"   # ENTITY_OVERRIDE / BLOCK_INSERT / LAYER_TABLE / DEFAULT
+    invisible: bool = False
+    lineweight: int | None = None
 
     @property
     def object_id(self) -> str:
@@ -224,7 +228,9 @@ class Provenance:
                 "layer": self.layer, "source_sha256_16": self.source_hash,
                 "block_path": list(self.block_path),
                 "instance_path": list(self.instance_path),
-                "part": self.sub_id, "object_id": self.object_id}
+                "part": self.sub_id, "object_id": self.object_id,
+                "linetype": self.linetype, "linetype_source": self.linetype_source,
+                "invisible": self.invisible, "lineweight": self.lineweight}
 
 
 def _part_id(x1: float, y1: float, x2: float, y2: float) -> str:
@@ -592,13 +598,38 @@ def normalize(decoded: dict, *, source_file: str = "", source_hash: str = "",
         return layer_name.get(_abs_handle(o.get("layer")),
                               "UNRESOLVED_LAYER_REFERENCE")
 
+    # PA07F: display semantics per entity.  ltype_flags: 0 BYLAYER, 1 BYBLOCK, 2 CONTINUOUS, 3 a linetype handle.
+    ltype_name = {}
+    layer_ltype = {}
+    for o in objs:
+        if o.get("object") == "LTYPE":
+            ltype_name[_abs_handle(o.get("handle"))] = o.get("name") or "UNNAMED"
+    for o in objs:
+        if o.get("object") == "LAYER":
+            layer_ltype[o.get("name")] = ltype_name.get(_abs_handle(o.get("ltype")), "CONTINUOUS")
+
+    def display_of(o, block_lt=None):
+        """(linetype, source, invisible, lineweight) for an entity; BYBLOCK resolves through the placing INSERT."""
+        flags = o.get("ltype_flags")
+        if flags == 3 or (flags is None and o.get("ltype")):
+            return ltype_name.get(_abs_handle(o.get("ltype")), "UNKNOWN_LTYPE"), "ENTITY_OVERRIDE", bool(o.get("invisible")), o.get("linewt")
+        if flags == 2:
+            return "CONTINUOUS", "ENTITY_OVERRIDE", bool(o.get("invisible")), o.get("linewt")
+        if flags == 1:
+            if block_lt:
+                return block_lt, "BLOCK_INSERT", bool(o.get("invisible")), o.get("linewt")
+            return "BYBLOCK", "UNRESOLVED", bool(o.get("invisible")), o.get("linewt")
+        return layer_ltype.get(layer_of(o), "CONTINUOUS"), "LAYER_TABLE", bool(o.get("invisible")), o.get("linewt")
+
     def emit(o, xf: Transform2D, block_path: tuple, inst_path: tuple,
-             depth: int):
+             depth: int, block_lt=None):
         t = o.get("type")
+        lt, lt_src, inv, lw = display_of(o, block_lt)
         prov = Provenance(
             handle=_abs_handle(o.get("handle")) or -1,
             entity_type=str(t), layer=layer_of(o), source_hash=source_hash,
-            block_path=block_path, instance_path=inst_path)
+            block_path=block_path, instance_path=inst_path,
+            linetype=lt, linetype_source=lt_src, invisible=inv, lineweight=lw)
 
         if t == T_LINE:
             x1, y1 = xf.apply(_pt(o.get("start"), 0), _pt(o.get("start"), 1))
@@ -625,7 +656,9 @@ def normalize(decoded: dict, *, source_file: str = "", source_hash: str = "",
                     handle=prov.handle, entity_type=prov.entity_type,
                     layer=prov.layer, source_hash=prov.source_hash,
                     block_path=prov.block_path,
-                    instance_path=prov.instance_path, sub_id=part)
+                    instance_path=prov.instance_path, sub_id=part,
+                    linetype=prov.linetype, linetype_source=prov.linetype_source,
+                    invisible=prov.invisible, lineweight=prov.lineweight)
                 bulge = float(bulges[i]) if i < len(bulges) else 0.0
                 if abs(bulge) > 1e-12:
                     # A bulged span is an ARC. Emitting it as a chord would
@@ -700,9 +733,10 @@ def normalize(decoded: dict, *, source_file: str = "", source_hash: str = "",
                     prov.object_id)
                 return
             bh_handle = _abs_handle(o.get("block_header"))
+            insert_lt = display_of(o, block_lt)[0]          # a BYBLOCK child resolves through its placing INSERT
             for child in owned_by.get(bh_handle, ()):
                 emit(child, placed, block_path + (name,),
-                     inst_path + (prov.handle,), depth + 1)
+                     inst_path + (prov.handle,), depth + 1, block_lt=insert_lt)
             return
 
         if t == T_HATCH:
