@@ -4304,3 +4304,61 @@ A net is the length of the class that qualifies, not the path minus the
 deductions someone remembered to list. Stating it that way makes the wet
 rooms come out at zero on their own arithmetic, with the wall-edge geometry
 preserved on a separate line for whenever the owner does rule.
+
+## §191 — A trade that sits on another inherits its path and its certainty
+
+The owner states that a black profile is installed directly above the
+skirting and follows the same wall path. The engine had measured the profile
+from the whole wall path: across 12.1 m of door openings, along 2.75 m of
+edges it had itself judged not to be walls, and along 26.2 m of bathroom
+wall whose skirting the same run held at `SOURCE_REQUIRED` pending the
+owner's skirted-or-tiled decision. It released all of it as
+`SOURCE_ESTABLISHED`, 143.025 m, with no exception raised.
+
+Nothing was wrong with the geometry. The trade rule was wrong, and the two
+failures it contains are different. Crossing an opening is a path error: a
+profile at skirting level stops at a jamb exactly as the skirting does.
+Releasing the wet rooms is a certainty error, and the worse of the two: an
+upper trade cannot be more certain than the trade it sits on. A rule that
+states both — the upper trade's path is the lower trade's path unless a
+source says otherwise, and its state is never stronger — is generic, and
+belongs in the engine rather than in a project's numbers.
+
+## §192 — Find the defect, then decompose the difference to prove it
+
+A single number disagreeing with a benchmark proves nothing about where the
+fault lies. The profile disagreed with the contractor by 66.125 m, which on
+its own is just a gap.
+
+Sorting that gap into the engine's own segment classes accounted for every
+metre of it: openings, wet-room edges, non-wall edges and column faces, with
+zero residual. Correcting the rule collapsed the profile discrepancy exactly
+onto the skirting discrepancy, which separated one confirmed engine defect
+from one scope question that is still open. A difference that decomposes
+exactly is a diagnosis; a difference that merely shrinks after an adjustment
+is a coincidence being fitted.
+
+## §193 — A benchmark without its working sheet cannot close a comparison
+
+A priced summary sheet states what was billed. It does not state which rooms
+were measured, at what face, with what deducted. Every room-level question in
+the first Qortuba external comparison ended at `SOURCE_REQUIRED` because only
+the priced sheet was supplied and the كيال working sheets were not.
+
+The temptation at that point is to decompose the summary into rooms until it
+matches, which manufactures the missing source and then validates against it.
+Nine rooms with no contractor counterpart are nine `NOT_COMPARABLE` rows, and
+an empty transcription register is the correct artifact for a document that
+does not exist.
+
+## §194 — A silent wrong quantity count must be earned in both directions
+
+The count of quantities released on a wrong basis without raising an
+exception is the one metric an estimating engine cannot argue with. It is
+worth only what its discipline is worth.
+
+Qortuba's first external comparison found one: the profile. Two further
+differences, the floor total and the skirting total, remain unexplained, and
+both stayed out of the count. An unexplained difference is not a demonstrated
+error, and padding the count with suspicion devalues it exactly as much as
+hiding a real entry does.

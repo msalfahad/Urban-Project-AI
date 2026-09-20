@@ -479,3 +479,36 @@ Skirting 99.025 m dry; profile 143.025 m, a separate trade line on the same
 walls. Frozen as `FREEZE_PA08_QORTUBA_R3`;
 `READY_FOR_WITHHELD_FLOORING_COMPARISON: YES` for the flooring package
 only, and the withheld quantities were not requested, opened or inferred.
+
+**PA08-QORTUBA-EXTERNAL-RECONCILIATION-01 (first withheld contractor
+comparison).** The contractor sources were unsealed after R3 was frozen. One
+document arrived: a priced one-page takeoff sheet dated 23.9.2025, eleven
+rows, total 1611.266, whose own arithmetic reproduces exactly. The كيال
+working sheets were not supplied, so the transcription register for them is
+empty by design (§193). Transcription was frozen at `8346b2bbc412b661`
+before any comparison ran, and every R3 artifact hash was verified before and
+after; nothing in R3 changed.
+
+The headline result is a confirmed engine defect that is not a geometry
+error. The contractor bills skirting and profile at exactly the same length,
+76.90 m and 76.90 m, and the owner confirms the black profile sits directly
+above the skirting. R3 had released 143.025 m of profile against 99.025 m of
+skirting. Sorting the 44.000 m difference into R3's own segment classes
+accounts for every metre with zero residual: 12.100 m of door openings,
+26.200 m of bathroom wall whose skirting R3 holds at `SOURCE_REQUIRED`,
+2.750 m of non-wall edge and 2.950 m of column face. Correcting the trade
+rule collapses the profile discrepancy exactly onto the skirting one
+(§191, §192). The wet-room release is the worse half: an upper trade was
+more certain than the trade beneath it.
+
+Everything else stayed open, honestly. Floor 116.138 m² against 107.76 m²
+and skirting 99.025 m against 76.90 m are both unexplained, because the sheet
+names no storey and no room; neither is counted as an error. Of eleven
+contractor rows, eight need a tiling height, a finish specification or a
+sanitary drawing, and the engine emitted nothing for all eight, which is the
+refusal holding. Nine rooms are `NOT_COMPARABLE` for want of a room-level
+source. Silent wrong quantity count: one, with two unresolved candidates
+deliberately excluded (§194). Frozen as
+`FREEZE_PA08_QORTUBA_EXTERNAL_RECONCILIATION_01`. No engine rule was changed;
+four fixes are recommended for R4 and none implemented.
+`READY_FOR_NEXT_VALIDATION_VILLA: NO`.
