@@ -4236,3 +4236,71 @@ probable. Boundary certainty now records the **line** and the **opening
 type** separately. A chord from a band that was never established remains a
 different matter entirely — that line may not exist — and it still blocks
 the region.
+
+## §186 — Thickness evidence, not a layer name, decides where a floor stops
+
+Two parallel faces at a candidate thickness mean something with a thickness
+stands on that line. Whatever its material role turns out to be — block,
+duct, lining, unresolved — a floor finish stops there, because a floor
+cannot pass through a solid. A single unpaired line carries no thickness
+evidence at all. It may be a partition, a glazing line, a furniture edge or
+an overhead element, and it cannot fix where a floor stops.
+
+So the measurement region is assembled **across** every line with no
+thickness evidence, and each crossing is recorded. This is what let nine
+Qortuba rooms release a floor area while their physical wall verdicts stayed
+exactly where the conservative pass left them.
+
+## §187 — A measurement closure is never a wall
+
+Closing a doorway or an open edge so a region can be measured writes four
+facts on that segment: no material present, not a physical wall, no geometry
+authority, reversible. Nothing propagates back into the band model. A
+floor region that is established must never promote the material status of
+the band beside it, and the regression asserts the physical verdicts are
+byte-for-byte what the previous pass recorded.
+
+The inverse is the load-bearing half: floor certainty is cheap to release
+and wall certainty is not, so the moment a measurement result is allowed to
+argue about material, every quantity downstream inherits a confidence the
+drawing never supported.
+
+## §188 — Sample the region, not one cell of it
+
+An arrangement of boundary lines is turned into an area by asking, for each
+cell of the arrangement, whether its centre lies inside the region. When a
+region is assembled across an erased line, that centre can land exactly on
+the erased line, which is not free space in the raster — and the whole
+region is then refused as not closed.
+
+The membership test must be asked of the region as it was assembled: the
+erased cells belong to it where it lies on both sides of the line, and only
+there. Where the far side is a room the assembly refused to absorb, the line
+is the closure this region stops at and its cells are not this region's
+floor. The raster cross-check uses the same mask, so both halves of the
+check describe one piece of floor.
+
+## §189 — A chain segment is not an overall dimension
+
+An authored dimension that owns two of a room's boundary lines does not
+therefore state that room's overall span; it may be one segment of a chain
+between two interior lines. Treating the largest owned dimension as the
+overall span produced bounding boxes smaller than the polygons they were
+supposed to bound, and negative notch areas — an impossible quantity that a
+register nevertheless reported as a confirmation.
+
+The bounding box belongs to the polygon. A dimension can only **confirm** a
+span, and only when its value equals that span, or when the chain segments
+tile the axis boundary to boundary and their sum does. Anything less is
+recorded as partial, and the row says which axis is confirmed and how.
+
+## §190 — A register may not contradict its own numbers
+
+A wet room's skirting row carried a note saying wet edges carry no skirting
+length until the owner rules on skirted-or-tiled, and a net length that
+included exactly those edges. Both were written in the same dictionary.
+
+A net is the length of the class that qualifies, not the path minus the
+deductions someone remembered to list. Stating it that way makes the wet
+rooms come out at zero on their own arithmetic, with the wall-edge geometry
+preserved on a separate line for whenever the owner does rule.

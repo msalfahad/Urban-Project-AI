@@ -450,3 +450,32 @@ profile stay separate trade lines. Ceilings are derived case by case from
 the cleaned region. Block, plaster and paint carry lengths only. Frozen as
 `FREEZE_PA08_QORTUBA_R2`; `READY_FOR_WITHHELD_FLOORING_COMPARISON: NO`, and
 the withheld quantities were not requested, opened or inferred.
+
+**PA08-QORTUBA-R3 (floor-finish measurement regions).** R2 held the
+physical wall model conservative and let that decide the floor, which is an
+architectural error: where a floor finish stops is a question about lines,
+not about material roles. R3 separates the two. The discriminator is
+thickness evidence (§186). A paired band's drawn face means something with
+a thickness stands there, so the floor stops, whatever the band's material
+role turns out to be; an unpaired single line has no thickness evidence and
+cannot fix where a floor stops, so the region is assembled across it and
+every crossing is recorded, reversibly. Doors and open edges are closed by
+measurement closures that carry no material, no wall, no geometry authority
+(§187). All nine regions come out `SOURCE_ESTABLISHED`: dry 116.138 m²
+across six rooms, wet 17.863 m² across three bathrooms, kept separate. The
+dress room, which R2 could not measure at all, is 11.985 m². No physical
+wall verdict moved: twenty provisional, one established, three not
+established, exactly as R2 left them, and block, plaster and paint areas
+remain `NOT_ESTABLISHED` for want of a height. The area method is an
+arrangement of the bounding lines, cross-checked against the raster and
+refused on disagreement; the membership test is asked of the region as
+assembled, not of one raster cell (§188). Authored dimensions confirm a
+span only when a single dimension or a boundary-to-boundary chain says so
+(§189), which replaced bounding boxes smaller than their own polygons.
+Skirting nets the skirting-eligible class rather than subtracting a
+remembered list (§190), so the three wet rooms read zero pending the
+owner's skirted-or-tiled ruling with their wall-edge geometry preserved.
+Skirting 99.025 m dry; profile 143.025 m, a separate trade line on the same
+walls. Frozen as `FREEZE_PA08_QORTUBA_R3`;
+`READY_FOR_WITHHELD_FLOORING_COMPARISON: YES` for the flooring package
+only, and the withheld quantities were not requested, opened or inferred.
