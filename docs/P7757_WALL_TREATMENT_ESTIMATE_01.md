@@ -388,3 +388,18 @@ thickness medians differ from the source. The PA08 blind-validation harness (`pa
 on a synthetic villa (every step executes, the deliberate leak is caught, SILENT_WRONG_QUANTITY_COUNT 0) but not
 executed: no independent villa exists; `SECOND_REGRESSION_SOURCE_REQUIRED.json` stays active and gate v4 is
 NOT_READY. The answer to an unseen-villa draft BOQ remains NO.
+
+### PA08_QORTUBA_BLIND_01 (first independent blind run)
+
+An independent second-floor apartment plan (QORTUBA: DWG R2013 in centimetres, decoded with LibreDWG 0.13.3, plus its
+plotted A3 PDF) was accepted (`pa08_qortuba/PA08_SOURCE_ACCEPTANCE.json`) and run through the frozen PA07R2 engine
+AS-IS in the audited subprocess (no violation; engine code hashes identical to FREEZE_PA07R2). Result: units cm
+SOURCE_ESTABLISHED; 101 authored dimensions read, 85 agreeing with geometry and 16 rotated dimensions mis-measured by
+the adapter (recorded as blind defect QBD-04, HUMAN_REVIEW, no quantity consumes them); 20 room labels, of which the
+10 Arabic ones are keyboard-mapped Latin glyphs the engine cannot read (decoded deterministically in the research layer
+as AI_INTERPRETED); 24 accepted wall bands (97 m), 131 unresolved; 1 door and 1 provisional window of 8 door blocks and
+7 window groups; 12 provisional cells with seven rooms' labels merged into one; bridge-allowed 0. Every vertical
+quantity is NOT_ESTABLISHED (no Qortuba height exists; P7757 heights not reused). Ten blind defects recorded, none
+critical, nothing patched. Frozen as `FREEZE_PA08_QORTUBA_BLIND_01.json`; preliminary verdict
+NOT_READY_FOR_EXTERNAL_COMPARISON (topology not sufficiently represented). The owner's withheld comparison data was
+not requested or used.
