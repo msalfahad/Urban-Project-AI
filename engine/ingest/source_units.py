@@ -87,6 +87,8 @@ def resolve(normalized, *, source_id, declared_unit=None, door_layer=None, wall_
         evidence.append(f"INSUNITS = {raw} -> {cand}")
         if suffix_scale not in (None, "CONFLICT") and abs(suffix_scale - scale) / scale > 0.01:
             conflict = {"KIND": "INSUNITS_VS_DIMENSION_TEXT", "INSUNITS_SCALE": scale, "DIMENSION_TEXT_SCALE": suffix_scale}
+        if cand == "mm" and normalized.dimlfac and normalized.dimlfac > 1.0 + 1e-9:
+            conflict = conflict or {"KIND": "INSUNITS_MM_BUT_DIMLFAC_ABOVE_ONE", "DIMLFAC": normalized.dimlfac, "NOTE": "displayed numbers exceed the geometry: the geometry is authored in a larger unit than INSUNITS claims"}
         status = "SOURCE_ESTABLISHED" if conflict is None else "CONFLICT"
     elif suffix_scale not in (None, "CONFLICT"):
         scale = suffix_scale; prov = "DIMENSION_TEXT_UNIT_SUFFIX"

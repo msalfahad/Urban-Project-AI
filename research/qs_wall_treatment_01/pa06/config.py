@@ -15,7 +15,7 @@ from research.qs_wall_treatment_01 import owner_parameters as OP, protocol as P
 from research.qs_wall_treatment_01.pa05 import config_p7757 as C5
 
 OUT = Path(P.OUT_DIR)
-TAG = os.environ.get("PA06_OUT_TAG", "pa06")           # pa06 = first freeze; pa06r1 = after the exterior-cell defect
+TAG = os.environ.get("PA06_OUT_TAG", "pa06")           # pa06 = first freeze; pa06r1 = exterior-cell defect; pa06r2 = fail-safes after the cold review
 OUT6 = OUT / TAG
 BLIND_DIR = Path("data/experiments/P7757_BLIND_REBUILD_02" if TAG == "pa06" else f"data/experiments/P7757_BLIND_REBUILD_{TAG.upper()}")
 

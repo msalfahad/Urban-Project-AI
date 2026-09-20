@@ -221,7 +221,7 @@ def boundary_chain(cell_row, grids, index, edges_by_id):
             e["KIND"] = ("EXPOSED_COLUMN_FACE" if src.get("ROLE") == "COLUMN_FACE" else "GLAZING_BOUNDARY" if src.get("ROLE") == "GLAZING" else
                          "CURVED_MATERIAL_FACE" if src.get("GEOMETRY_SOURCE") == "VECTOR_ARC" else "SITE_CHORD" if src.get("OPENING_SITE_ID") else "PHYSICAL_WALL_FACE")
             e["length_m"] = round(src.get("DEVELOPED_LENGTH_MM", 0.0) * share / 1000, 4)
-            e["length_source"] = "DRAWING_CAD_GEOMETRY"
+            e["length_source"] = "DRAWING_CAD_GEOMETRY" if src.get("ROLE_STATUS") == "ESTABLISHED" or src.get("OPENING_SITE_ID") else "DRAWING_PROVISIONAL_ROLE"
             e["trace_ids"] = [src.get("ENTITY_ID")] if src.get("ENTITY_ID") else []
             e["OPENING_SITE_ID"] = src.get("OPENING_SITE_ID")
         for i, e in enumerate(chain):

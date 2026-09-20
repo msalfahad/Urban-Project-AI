@@ -18,6 +18,9 @@ from engine.ingest.spaces_v2 import _label_at
 CLASSES = ("BEDROOM", "MASTER_BEDROOM", "BATHROOM", "WC", "KITCHEN", "PANTRY", "LAUNDRY", "IRON_ROOM", "WASHROOM", "LIVING", "DINING", "RECEPTION", "SALOON", "DEWANEYA",
            "MAID_ROOM", "DRIVER_ROOM", "STAIR", "CORRIDOR", "VOID", "ROOF", "COURT", "GARDEN", "POOL", "ELEVATOR", "STORE", "OFFICE", "ENTRANCE", "BALCONY", "TERRACE", "UNKNOWN")
 WET = ("BATHROOM", "WC", "KITCHEN", "LAUNDRY", "WASHROOM", "POOL")
+# classes that are interior rooms whose floor / ceiling area is a take-off item (exterior, circulation shafts and unknown are not)
+INTERIOR_ROOM_CLASSES = ("BEDROOM", "MASTER_BEDROOM", "BATHROOM", "WC", "KITCHEN", "PANTRY", "LAUNDRY", "IRON_ROOM", "WASHROOM", "LIVING", "DINING", "RECEPTION", "SALOON", "DEWANEYA",
+                         "MAID_ROOM", "DRIVER_ROOM", "CORRIDOR", "STORE", "OFFICE", "ENTRANCE")
 # classes whose ceiling height is not the normal storey height without a section or an owner scope (double height, wells, shafts, exterior)
 HEIGHT_NOT_NORMAL = ("STAIR", "VOID", "ELEVATOR", "RECEPTION", "SALOON", "ROOF", "COURT", "GARDEN", "POOL", "BALCONY", "TERRACE", "UNKNOWN")
 EN = {
@@ -38,7 +41,7 @@ AR = {
 }
 LEVEL_RE = re.compile(r"^(?:%%p|±|\+|-)\s*\d{1,2}[.,]\d{2}\s*$")
 NUMBER_RE = re.compile(r"^[\d.,\s%x×X-]+$")
-SITE_WORDS = ("NEIGHBOUR", "NEIGHBOR", "STREET", "SEA VIEW", "ROAD", "PLOT", "SITE", "NORTH", "SOUTH", "EAST", "WEST", "جار", "شارع", "طريق", "بحر")
+SITE_WORDS = ("NEIGHBOUR", "NEIGHBOR", "STREET", "SEA", "ROAD", "PLOT", "SITE", "NORTH", "SOUTH", "EAST", "WEST", "جار", "شارع", "طريق", "بحر")
 
 
 def _language(raw):
@@ -61,8 +64,9 @@ def classify_text(raw):
         return {"TEXT_ROLE": "LEVEL_MARK", "CANONICAL_CLASS": None, "LANGUAGE": "NONE"}
     if NUMBER_RE.match(s):
         return {"TEXT_ROLE": "DIMENSION_OR_NUMBER", "CANONICAL_CLASS": None, "LANGUAGE": "NONE"}
-    if any(w in up for w in SITE_WORDS):
-        return {"TEXT_ROLE": "SITE_LABEL", "CANONICAL_CLASS": None, "LANGUAGE": _language(s)}
+    words = re.sub(r"[^A-Z\u0600-\u06FF ]", " ", up).split()
+    if words and all(w in SITE_WORDS or w in ("VIEW",) for w in words) and any(w in SITE_WORDS for w in words):
+        return {"TEXT_ROLE": "SITE_LABEL", "CANONICAL_CLASS": None, "LANGUAGE": _language(s)}      # the whole label is a site phrase (NEIGHBOUR, STREET, SEA VIEW), never a substring
     lang = _language(s)
     if lang == "AR":
         for k in sorted(AR, key=len, reverse=True):

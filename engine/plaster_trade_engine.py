@@ -64,6 +64,9 @@ READER_SOURCE_TO_PROVENANCE = {
     "PROJECT_SPECIFICATION": "SPECIFICATION",
     "TEMPORARY_OWNER_DEFAULT": "TEMPORARY_DEFAULT",
     "VISUAL_INTERPRETATION": "DRAWING",
+    # PA06 boundary adapter: a face whose material role is only PROVISIONAL (unpaired stub, single line) ranks as a
+    # temporary default, so a line built on it is never stronger than PROVISIONAL
+    "DRAWING_PROVISIONAL_ROLE": "TEMPORARY_DEFAULT",
 }
 # Which of those are weaker READS of the same source - reported on the
 # sheet so a reviewer can see them, without inventing a new state.

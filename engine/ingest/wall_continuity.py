@@ -244,8 +244,10 @@ def find_sites(view_id, prims, roles, entity_ids):
                 cls, why = "MATERIAL_CONTINUITY_GAP", "too narrow for a passage: the wall continues"
             elif door:
                 cls, why = "CONFIRMED_DOOR_OPENING", f"door swing of the gap width hinged at a jamb ({len(door)} leaf/leaves)"
-            elif glazing or (window and len(window) >= 1 and span <= MAX_SITE_MM):
-                cls, why = "CONFIRMED_WINDOW_OPENING", "frame / glazing lines inside the wall strip across the gap"
+            elif glazing or (len([w for w in window if w["ROLE"] == "WINDOW_FRAME"]) >= 1) or (len(window) >= 2 and span <= MAX_SITE_MM):
+                cls, why = "CONFIRMED_WINDOW_OPENING", "glazing / frame role, or at least two parallel strip lines across the gap"
+            elif window and span <= MAX_SITE_MM:
+                cls, why = "UNRESOLVED_SITE", "a single unclassified line across the gap: threshold / finish / sliding leaf undecidable"
             elif span > MAX_SITE_MM:
                 cls, why = "TRUE_WALL_TERMINATION", f"span {round(span)} mm exceeds the opening band: the wall ends (open plan), no closure"
             elif left["KIND"] == "T_JUNCTION" or right["KIND"] == "T_JUNCTION":

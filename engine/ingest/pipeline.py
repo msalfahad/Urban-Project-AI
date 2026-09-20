@@ -70,7 +70,7 @@ class Pipeline(H.Run):
         for v in self.views:
             lp = self.layers[v["SOURCE_PATH"]]
             n = self.normalized[v["SOURCE_PATH"]]
-            level_layers = [l for l in lp.get("TEXT_LAYERS", []) if any(STY.LEVEL_RE.match(t.value.strip().replace(" ", "")) for t in v["TEXTS"] if t.provenance.layer == l)]
+            level_layers = [l for l in lp.get("TEXT_LAYERS", []) if l not in lp["WALL_LAYERS"] and any(STY.LEVEL_RE.match(t.value.strip().replace(" ", "")) for t in v["TEXTS"] if t.provenance.layer == l)]
             rows = PRO.classify(v["PRIMITIVES"], lp, v["DIMS"], level_layers=level_layers)
             self.roles[v["VIEW_ID"]] = rows
             eids = self.entity_ids[v["VIEW_ID"]]
@@ -176,7 +176,7 @@ class Pipeline(H.Run):
         fams, links = STY.copy_families(self.views)
         by_view = {r["VIEW_ID"]: r for r in self.registers["SHEET_ROLE_REGISTER"]["VIEWS"]}
         rows = STY.storey_register(self.views, fams, sheet_roles_by_view=by_view, owner_storeys=self.cfg.get("OWNER_STOREY_NAMES") or {})
-        self.storey_of_view = {r["PLAN_COPY_ID"]: (r["STOREY_NAME"] or r.get("GENERIC_NAME")) for r in rows}
+        self.storey_of_view = {r["PLAN_COPY_ID"]: ("HUMAN_REVIEW:STACKED_STOREYS" if r.get("STACKED_STOREYS_SUSPECTED") else (r["STOREY_NAME"] or r.get("GENERIC_NAME"))) for r in rows}
         self.registers["PA06_VIEW_COPY_FAMILY_REGISTER"] = {"ARTIFACT": "PA06_VIEW_COPY_FAMILY_REGISTER", "FAMILIES": fams, "LINKS": links}
         self.registers["PA06_STOREY_REGISTER"] = {"ARTIFACT": "PA06_STOREY_REGISTER", "ROWS": rows, "RULE": "names never from coordinate order alone; FLOOR_nn in level order or FLOOR_UNORDERED"}
         # sheet roles v2: deterministic / visual / final status with provenance
@@ -208,14 +208,19 @@ class Pipeline(H.Run):
                 zs = by_cell.get(c["CELL_ID"], [])
                 undec = sum(1 for r in rows if r["ATTACHED_SPACE_ID"] == c["CELL_ID"] and r["TEXT_ROLE"] == "UNDECODABLE_TEXT")
                 c["SEMANTIC_IDENTITY"] = {"ZONES": [(z["CANONICAL_CLASS"], z["IDENTITY_STATUS"]) for z in zs], "UNDECODABLE_LABELS": undec,
-                                          "STATUS": "NONE" if not zs and not undec else ("UNRESOLVED" if not zs else ("SINGLE" if len(zs) == 1 and zs[0]["IDENTITY_STATUS"] != "CONFLICT" else "MULTIPLE"))}
+                                          "STATUS": "NONE" if not zs and not undec else ("UNRESOLVED" if (not zs or undec) else ("SINGLE" if len(zs) == 1 and zs[0]["IDENTITY_STATUS"] != "CONFLICT" else "MULTIPLE")),
+                                          "NOTE": "an undecodable stamp in the cell keeps the identity UNRESOLVED even when one label reads" if undec else None}
             # space class: a cell holding site labels (neighbour / street / sea view) or bounded by plot-boundary lines is the exterior, never a room
             edge_roles = {}
             for e in self.edges.get(v["VIEW_ID"], []):
                 edge_roles.setdefault(e["SPACE_ID"], set()).add(e["ROLE"])
             for c in self.cells[v["VIEW_ID"]]:
+                has_rooms = bool((c.get("SEMANTIC_IDENTITY") or {}).get("ZONES"))
                 ext = c.get("SITE_LABELS_INSIDE", 0) > 0 or "SITE_BOUNDARY" in edge_roles.get(c["CELL_ID"], set()) or c["TOUCHES_VIEW_EDGE"]
-                c["SPACE_CLASS"] = "EXTERIOR_SITE" if ext else ("INTERIOR" if c["IN_RANGE"] else "OUT_OF_RANGE")
+                if ext and has_rooms and not c["TOUCHES_VIEW_EDGE"]:
+                    c["SPACE_CLASS"] = "HUMAN_REVIEW"            # room stamps and site labels in one cell: a merge or a mis-read, never decided here
+                else:
+                    c["SPACE_CLASS"] = "EXTERIOR_SITE" if ext else ("INTERIOR" if c["IN_RANGE"] else "OUT_OF_RANGE")
                 c["QUANTITY_ELIGIBLE"] = c["SPACE_CLASS"] == "INTERIOR"
             rows_all.extend(rows); zones_all.extend(zones)
         self.registers["PA06_SEMANTIC_ANCHOR_REGISTER"] = {"ARTIFACT": "PA06_SEMANTIC_ANCHOR_REGISTER", "ROWS": rows_all, "FUNCTIONAL_ZONES": zones_all,

@@ -126,7 +126,9 @@ def storey_register(views, families, sheet_roles_by_view=None, owner_storeys=Non
             name, name_src, name_status = words.most_common(1)[0][0], "FLOOR_LABEL_TEXT", "SOURCE_ESTABLISHED"
         elif sheet_roles_by_view.get(v["VIEW_ID"], {}).get("STOREY"):
             name, name_src, name_status = sheet_roles_by_view[v["VIEW_ID"]]["STOREY"], "SHEET_INDEX_CONFIG", "CONFIG_DECLARED"
+        stacked = bool(levels) and (max(levels) - min(levels) >= 2.5)
         rows.append({"PLAN_COPY_ID": v["VIEW_ID"], "FAMILY_ID": fam_of.get(v["VIEW_ID"]), "VIEW_ROLE": v.get("ROLE", {}).get("FINAL_ROLE"), "LEVEL_MARKS_IN_VIEW": levels,
+                     "STACKED_STOREYS_SUSPECTED": stacked, "REVIEW": "HUMAN_REVIEW: level marks more than 2.5 m apart inside one plan view (overlaid storeys?)" if stacked else None,
                      "REFERENCE_LEVEL": ref, "LEVEL_SOURCE": "LEVEL_TEXT_IN_VIEW" if levels else None, "STOREY_NAME": name, "NAME_SOURCE": name_src, "NAME_STATUS": name_status,
                      "COPY_TRANSFORM": None})
     # order: by reference level where every member has one; else copy order with the relation NOT_ESTABLISHED

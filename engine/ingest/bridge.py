@@ -13,12 +13,13 @@ from collections import Counter
 
 from engine import plaster_trade_engine as PTE, qs_measurement_region as QMR
 from engine.ingest import ids, states as STS
-from engine.ingest.semantics import WET, HEIGHT_NOT_NORMAL
+from engine.ingest.semantics import WET, HEIGHT_NOT_NORMAL, INTERIOR_ROOM_CLASSES
 
 SITE_TYPE_MAP = {"CONFIRMED_DOOR_OPENING": "CONFIRMED_DOOR_OPENING", "CONFIRMED_WINDOW_OPENING": "CONFIRMED_WINDOW_OPENING", "CONFIRMED_OPEN_PASSAGE": "CONFIRMED_OPEN_PASSAGE",
                  "MATERIAL_CONTINUITY_GAP": "MATERIAL_CONTINUITY", "CAD_JUNCTION_GAP": "MATERIAL_CONTINUITY", "UNRESOLVED_SITE": "UNRESOLVED_GAP"}
 TRADES = {"NORMAL_INTERNAL_PLASTER": ("NORMAL_INTERNAL_PLASTER", "WALL_FACE_PLASTER"), "WET_ROOM_SPLATTER": ("TILE_PREP_TARTUSHA", "WALL_FACE_PLASTER"),
-          "COLUMN_BONDING": ("COLUMN_BONDING_PLUS_PLASTER", "WALL_FACE_PLASTER"), "EXTERNAL_PLASTER": ("EXTERNAL_PLASTER", QMR.LINEAR_RUN), "PARAPET": ("ROOF_PARAPET_EXTERNAL_FACE", QMR.LINEAR_RUN)}
+          "COLUMN_BONDING": ("COLUMN_BONDING_PLUS_PLASTER", QMR.LINEAR_RUN), "EXTERNAL_PLASTER": ("EXTERNAL_PLASTER", QMR.LINEAR_RUN), "PARAPET": ("ROOF_PARAPET_EXTERNAL_FACE", QMR.LINEAR_RUN)}
+INTERIOR_CLASSES_FOR_AREA = INTERIOR_ROOM_CLASSES
 HEIGHT_EXCLUDED_CLASSES = HEIGHT_NOT_NORMAL
 STOREY_TOKENS = {"GROUND_FLOOR": "GROUND", "FIRST_FLOOR": "FIRST", "SECOND_FLOOR": "SECOND", "ROOF": "SECOND_ROOF_ROOM", "BASEMENT": "BASEMENT"}
 
@@ -70,6 +71,27 @@ def build(cells, regions, edges, chains_by_cell, sites_by_id, storey_of_cell, re
         chains = chains_by_cell.get(c["CELL_ID"], [])
         sem = c.get("SEMANTIC_IDENTITY")
         storey = storey_of_cell.get(c["CELL_ID"])
+        # fail-safes: a cell that sees BOTH sides of one material entity has merged through a wall interior (jamb-less opening);
+        # a cell in a view with stacked level marks may be an overlay of storeys.  Either -> HUMAN_REVIEW, no number.
+        cell_edges = [e for e in edges if e["SPACE_ID"] == c["CELL_ID"] and e["MATERIAL_PRESENT"]]
+        sides = {}
+        for e in cell_edges:
+            sides.setdefault(e["ENTITY_ID"], set()).add(e["SIDE"])
+        two_sided = sorted(k for k, v in sides.items() if len(v) == 2)
+        review = []
+        if two_sided:
+            review.append({"REASON": "CELL_SEES_BOTH_SIDES_OF_A_MATERIAL_ENTITY", "ENTITIES": two_sided[:10], "COUNT": len(two_sided)})
+        if isinstance(storey, str) and storey.startswith("HUMAN_REVIEW"):
+            review.append({"REASON": "STACKED_STOREYS_SUSPECTED_IN_VIEW"})
+        if review:
+            for trade in trades:
+                trace.append({"LINE_ID": ids.make_id("TRADE_ZONE", c["CELL_ID"], trade, "REVIEW"), "CELL_ID": c["CELL_ID"], "PHYSICAL_SPACE_ID": c.get("PHYSICAL_SPACE_ID"), "STOREY": storey, "TRADE": trade,
+                              "TREATMENT": TRADES[trade][0], "MEASUREMENT_BASIS": TRADES[trade][1], "REGION_STATUS": "HUMAN_REVIEW", "REGION_REASONS": review, "LENGTH_GEOMETRY": None, "HEIGHT_SOURCE": None,
+                              "OPENING_DEDUCTION_SOURCE": [], "TRADE_RULE": None, "SEMANTIC_IDENTITY": sem, "AREA_M2_PRINCIPAL": None, "QUANTITY_STATE_ENGINE": None, "QUANTITY_STATUS": "HUMAN_REVIEW",
+                              "STATUS_DIMENSIONS": STS.record(TOPOLOGY_STATUS="HUMAN_REVIEW", QUANTITY_STATUS="HUMAN_REVIEW"), "PROVENANCE": {"REGISTERS": ["PA06_SPACE_BOUNDARY_FACE_REGISTER", "PA06_STOREY_REGISTER"]},
+                              "ENGINE_SHEET": None, "BARE_NUMBER": False})
+            c["REVIEW_FLAGS"] = review
+            continue
         # physical edges and sites from the traced chain(s)
         phys, sites, openings = [], [], []
         for chain in chains:
@@ -98,7 +120,9 @@ def build(cells, regions, edges, chains_by_cell, sites_by_id, storey_of_cell, re
             if trade == "COLUMN_BONDING" and not any(p["KIND"] == "EXPOSED_COLUMN_FACE" for p in phys):
                 continue
             rid = ids.make_id("TRADE_ZONE", c["CELL_ID"], trade)
-            region = QMR.build_region(region_id=rid, physical_edges=phys, sites=sites, openings=openings, trade=treatment, basis=basis)
+            phys_t = [p for p in phys if p["KIND"] == "EXPOSED_COLUMN_FACE"] if trade == "COLUMN_BONDING" else phys
+            sites_t, openings_t = ([], []) if trade == "COLUMN_BONDING" else (sites, openings)
+            region = QMR.build_region(region_id=rid, physical_edges=phys_t, sites=sites_t, openings=openings_t, trade=treatment, basis=basis)
             region["TRADE_MEASUREMENT_REGION_ID"] = rid; region["CELL_ID"] = c["CELL_ID"]; region["PHYSICAL_SPACE_ID"] = c.get("PHYSICAL_SPACE_ID"); region["TRADE"] = trade
             region["CLOSURE_STAMP"] = QMR.CLOSURE_CONSTANTS
             region_rows.append(region)
@@ -138,9 +162,13 @@ def build(cells, regions, edges, chains_by_cell, sites_by_id, storey_of_cell, re
         if not c["IN_RANGE"] or not c.get("QUANTITY_ELIGIBLE", c["IN_RANGE"]):
             continue
         sem = c.get("SEMANTIC_IDENTITY") or {}
+        if c.get("REVIEW_FLAGS"):
+            continue
         void_like = any(z[0] in ("VOID", "STAIR", "ELEVATOR") for z in sem.get("ZONES", []))
+        zones = [z[0] for z in sem.get("ZONES", [])]
+        identified = sem.get("STATUS") in ("SINGLE", "MULTIPLE") and zones and all(z in INTERIOR_CLASSES_FOR_AREA for z in zones)
         for trade in ("FLOOR_AREA", "CEILING_AREA"):
-            state = "PROVISIONAL" if (trade == "FLOOR_AREA" or not void_like) else "NOT_ESTABLISHED"
+            state = "PROVISIONAL" if (identified and (trade == "FLOOR_AREA" or not void_like)) else "NOT_ESTABLISHED"
             if not unit_status_ok:
                 state = "SOURCE_REQUIRED"
             trace.append({"LINE_ID": ids.make_id("TRADE_ZONE", c["CELL_ID"], trade, "LINE"), "CELL_ID": c["CELL_ID"], "PHYSICAL_SPACE_ID": c.get("PHYSICAL_SPACE_ID"), "STOREY": storey_of_cell.get(c["CELL_ID"]),
@@ -149,7 +177,7 @@ def build(cells, regions, edges, chains_by_cell, sites_by_id, storey_of_cell, re
                           "SEMANTIC_IDENTITY": sem, "AREA_M2_PRINCIPAL": c["AREA_M2"] if state == "PROVISIONAL" else None, "QUANTITY_STATE_ENGINE": None, "QUANTITY_STATUS": state,
                           "STATUS_DIMENSIONS": STS.record(GEOMETRY_STATUS="PROVISIONAL", TOPOLOGY_STATUS="SOURCE_ESTABLISHED", MEASUREMENT_STATUS="PROVISIONAL", QUANTITY_STATUS=state),
                           "PROVENANCE": {"REGISTERS": ["PA06_PHYSICAL_SPACE_REGISTER"]}, "ENGINE_SHEET": None, "BARE_NUMBER": False,
-                          "NOTE": "ceiling area is NOT_ESTABLISHED where a void / stair / shaft zone is attached; otherwise provisional equal to the floor cell"})
+                          "NOTE": "area lines carry a value only for a cell whose identity is an established interior room class; unlabelled loops, exterior classes and void / stair / shaft cells stay NOT_ESTABLISHED"})
     counts = Counter(t["QUANTITY_STATUS"] for t in trace)
     return {"ARTIFACT": "PA06_TRADE_MEASUREMENT_REGION_REGISTER", "ROWS": region_rows, "COUNT": len(region_rows),
             "REVERSIBILITY": {"ALL_REVERSIBLE": all(r["INVARIANTS"]["REVERSIBLE"] for r in region_rows) if region_rows else None,
