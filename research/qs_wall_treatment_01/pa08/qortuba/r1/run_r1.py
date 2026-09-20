@@ -380,10 +380,21 @@ def finish():
         if p.exists():
             contents[name] = _sha(p)
     head = subprocess.run(["git", "rev-parse", "--short", "HEAD"], capture_output=True, text=True).stdout.strip()
+    dirty = subprocess.run(["git", "status", "--porcelain"], capture_output=True, text=True).stdout.strip().splitlines()
     frozen_blind = json.loads((BLIND_OUT / "FREEZE_PA08_QORTUBA_BLIND_01.json").read_text("utf-8"))
+    # the prior freeze is cited by ITS OWN digest key; verify it independently so a broken citation can never pass as "intact"
+    prior_digest = frozen_blind.get("FREEZE_DIGEST_SHA256") or frozen_blind.get("DIGEST")
+    prior_files_ok = all((BLIND_OUT / n).exists() and _sha(BLIND_OUT / n) == h for n, h in frozen_blind.get("FILES", {}).items())
+    prior_digest_ok = bool(prior_digest) and hashlib.sha256(json.dumps(frozen_blind.get("FILES", {}), sort_keys=True).encode()).hexdigest() == prior_digest
     fr = {"ARTIFACT": "FREEZE_PA08_QORTUBA_R1", "PROJECT_ALIAS": "QORTUBA", "PROJECT_ROLE_NOW": "DEVELOPMENT / REGRESSION (declared by the owner after the blind freeze)",
-          "PRIOR_FREEZE_NOT_REWRITTEN": {"FREEZE": "PA08_QORTUBA_BLIND_01", "DIGEST": frozen_blind.get("DIGEST") or frozen_blind.get("FREEZE_DIGEST"), "STATUS": "intact; this phase cites it and never edits it"},
-          "GIT_HEAD_AT_FREEZE": head, "ENGINE_VERSION": ENGINE_VERSION, "ENGINE_FILE_HASHES": {f: _sha(f) for f in ENGINE_FILES if Path(f).exists()},
+          "PRIOR_FREEZE_NOT_REWRITTEN": {"FREEZE": "PA08_QORTUBA_BLIND_01", "DIGEST": prior_digest, "FILE_COUNT": len(frozen_blind.get("FILES", {})),
+                                         "VERIFIED_ON_DISK": {"ALL_FILE_HASHES_MATCH": prior_files_ok, "DIGEST_RECOMPUTES": prior_digest_ok},
+                                         "STATUS": "intact; this phase cites it and never edits it" if (prior_files_ok and prior_digest_ok) else "CITATION_INVALID: the prior freeze does not verify on disk"},
+          # a freeze names the commit that carries the code it describes.  A freeze taken on a dirty or uncommitted tree says so here
+          # rather than naming a commit that does not contain the rules the registers were produced with.
+          "GIT_HEAD_AT_FREEZE": head, "WORKING_TREE_AT_FREEZE": {"CLEAN": not dirty, "UNCOMMITTED_PATHS": [l[3:] for l in dirty][:20],
+                                                                 "MEANING": "CLEAN means GIT_HEAD_AT_FREEZE contains exactly the code that produced these registers; otherwise the head named here is not sufficient provenance"},
+          "ENGINE_VERSION": ENGINE_VERSION, "ENGINE_FILE_HASHES": {f: _sha(f) for f in ENGINE_FILES if Path(f).exists()},
           "SOURCE_HASHES": frozen_blind["SOURCE_HASHES"], "DECODER": frozen_blind["DECODER"],
           "CONTENTS": contents, "COUNT": len(contents),
           "WITHHELD_OWNER_DATA": "NOT_REQUESTED_NOT_OPENED_NOT_INFERRED",
