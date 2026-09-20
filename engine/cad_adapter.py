@@ -666,12 +666,22 @@ def normalize(decoded: dict, *, source_file: str = "", source_hash: str = "",
                     chord = math.hypot(x2 - x1, y2 - y1)
                     if chord < MIN_SEGMENT_MM:
                         continue
+                    # PA07R2 (FM-R1-01): the true centre lies r*cos(theta/2) off the
+                    # chord midpoint, to the left of the chord for a positive bulge
+                    # (counter-clockwise) and to the right for a negative one; the
+                    # angles are those of the real endpoints about that centre.
                     theta = 4 * math.atan(abs(bulge))
                     radius = chord / (2 * math.sin(theta / 2))
                     mx, my = (x1 + x2) / 2, (y1 + y2) / 2
+                    lx, ly = -(y2 - y1) / chord, (x2 - x1) / chord
+                    h = radius * math.cos(theta / 2) * (1.0 if bulge > 0 else -1.0)
+                    cx, cy = mx + lx * h, my + ly * h
+                    a1 = math.atan2(y1 - cy, x1 - cx) % (2 * math.pi)
+                    a2 = math.atan2(y2 - cy, x2 - cx) % (2 * math.pi)
+                    sa, ea = (a1, a2) if bulge > 0 else (a2, a1)
                     out.primitives.append(Primitive(
-                        ARC, prov_i, cx=mx, cy=my, radius=radius,
-                        start_angle=0.0, end_angle=theta,
+                        ARC, prov_i, cx=cx, cy=cy, radius=radius,
+                        start_angle=sa, end_angle=ea,
                         x1=x1, y1=y1, x2=x2, y2=y2))
                 elif math.hypot(x2 - x1, y2 - y1) >= MIN_SEGMENT_MM:
                     out.primitives.append(Primitive(

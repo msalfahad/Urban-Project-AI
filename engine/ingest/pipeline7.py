@@ -32,7 +32,10 @@ PLAN_LIKE = SR.PLAN_ROLES + ("UNKNOWN",)
 SITE_TYPE_MAP = {"CONFIRMED_DOOR_OPENING": "CONFIRMED_DOOR_OPENING", "CONFIRMED_WINDOW_OPENING": "CONFIRMED_WINDOW_OPENING", "CONFIRMED_GLAZED_OPENING": "CONFIRMED_WINDOW_OPENING",
                  "CONFIRMED_OPEN_PASSAGE": "CONFIRMED_OPEN_PASSAGE", "MATERIAL_CONTINUITY": "MATERIAL_CONTINUITY", "CAD_JUNCTION": "MATERIAL_CONTINUITY",
                  "PROBABLE_DOOR_OPENING": "UNRESOLVED_GAP", "UNRESOLVED": "UNRESOLVED_GAP"}
-GATES = ("VIEW_ROLE", "UNIT_STATUS", "SPACE_STATUS", "MATERIAL_BANDS", "OPENING_SITE_STATUS", "IDENTITY_STATUS", "STOREY_STATUS", "HEIGHT_STATUS", "RULE_STATUS")
+GATES = ("VIEW_ROLE", "UNIT_STATUS", "SCALE_STATUS", "SPACE_STATUS", "MATERIAL_BANDS", "OPENING_SITE_STATUS", "IDENTITY_STATUS", "STOREY_STATUS", "HEIGHT_STATUS", "RULE_STATUS")
+SCALE_RATIO_MAX = 1.3             # PA07R2 (FM-R1-03): a plan view whose wall-thickness or door-span median differs from the source-wide median by more than this factor (either way) is a scale question
+SEM_EXTERIOR_CLASSES = ("ROOF", "COURT", "GARDEN", "POOL", "BALCONY", "TERRACE")
+WET_LABEL_TOKENS = tuple(sorted({k.upper() for k, v in list(SEM.AR.items()) + list(SEM.EN.items()) if v in SEM.WET}))      # every vocabulary key of a wet class (no literal room names here)
 SNAP_MM = 3.0
 
 
@@ -199,7 +202,10 @@ class Pipeline7(PL.Pipeline):
                                                           "BY_VIEW_ROLE": dict(Counter(s["VIEW_ROLE"] for s in spaces_all)), "BY_GEOMETRY_STATUS": dict(Counter(s["GEOMETRY_STATUS"] for s in spaces_all))}
         self.registers["PA07_SPACE_BOUNDARY_FACE_REGISTER"] = {"ARTIFACT": "PA07_SPACE_BOUNDARY_FACE_REGISTER", "ROWS": brows_all, "COUNT": len(brows_all), "BY_KIND": dict(Counter(r["SEAL_KIND"] for r in brows_all)),
                                                                "LENGTH_SOURCE": "band developed geometry cut at junctions and column footprints; never raster runs, never polygon perimeters"}
+        candidates = [{"BAND_ID": b["BAND_ID"], "VIEW_ID": vid, "REASON": (b["REASON"] or "").split(" (")[0], "SIDES_MM": [round(b["LENGTH"], 1), round(b["THK"], 1)]}
+                      for vid, bl in self.bands7.items() for b in bl if b["STATUS"] == "UNRESOLVED" and (b["REASON"] or "").split(" (")[0] in ("COLUMN_CANDIDATE", "WALL_NIB_OR_PIER")]
         self.registers["PA07_COLUMN_JUNCTION_REGISTER"] = {"ARTIFACT": "PA07_COLUMN_JUNCTION_REGISTER", "ROWS": cols_all, "BEAMS": beams_all, "COUNT": len(cols_all),
+                                                           "CANDIDATES_UNCONFIRMED": candidates, "CANDIDATES_RULE": "PA07R2: a free-standing crossed outline or a wall nib is listed here for structural / owner confirmation; no face of it is counted",
                                                            "SUMMARY": JN.summarise(cols_all, {"COUNT": sum(b["COUNT"] for b in beams_all)}),
                                                            "FIELDS": ["OBJECT_EXISTS", "OBJECT_GEOMETRY", "EXPOSED_TO_SPACE", "HOSTS_WALL", "TERMINATES_WALL", "CLEAR_FACE_OWNERSHIP", "TRADE_ELIGIBILITY"]}
 
@@ -219,7 +225,28 @@ class Pipeline7(PL.Pipeline):
 
     def stage_build_storeys(self):
         super().stage_build_storeys()
-        self.registers["PA07_STOREY_REGISTER"] = dict(self.registers["PA06_STOREY_REGISTER"], ARTIFACT="PA07_STOREY_REGISTER")
+        # PA07R2 (FM-R1-04): a storey name taken from floor words is a HUMAN_REVIEW when the view carries floor words of more than one storey
+        by_view = {v["VIEW_ID"]: v for v in self.views}
+        for r in self.registers["PA06_STOREY_REGISTER"]["ROWS"]:
+            if r.get("NAME_SOURCE") == "FLOOR_LABEL_TEXT":
+                words = STY._floor_words(by_view.get(r["PLAN_COPY_ID"], {}))
+                if len(words) > 1:
+                    r["FLOOR_WORDS_IN_VIEW"] = dict(words)
+                    r["STOREY_NAME"] = "HUMAN_REVIEW:CONFLICTING_FLOOR_WORDS"; r["NAME_STATUS"] = "HUMAN_REVIEW"
+                    r["REVIEW"] = "PA07R2: floor words of more than one storey inside one plan view (notes such as 'UP TO FIRST FLOOR'); the owner names the storey"
+                    self.storey_of_view[r["PLAN_COPY_ID"]] = r["STOREY_NAME"]
+        # PA07R2 (FM-R1-02): copies of one plan that carry the same storey name (or none) are duplicates: only an owner input may pick the measured copy
+        self.duplicate_copy_views = {}
+        for fam in self.registers["PA06_VIEW_COPY_FAMILY_REGISTER"]["FAMILIES"]:
+            by_name = defaultdict(list)
+            for m in fam["MEMBERS"]:
+                if m in self.storey_of_view:
+                    by_name[self.storey_of_view.get(m)].append(m)
+            for name, members in by_name.items():
+                if len(members) > 1:
+                    for m in members:
+                        self.duplicate_copy_views[m] = {"FAMILY_ID": fam["FAMILY_ID"], "STOREY": name, "COPIES": sorted(members)}
+        self.registers["PA07_STOREY_REGISTER"] = dict(self.registers["PA06_STOREY_REGISTER"], ARTIFACT="PA07_STOREY_REGISTER", DUPLICATE_PLAN_COPIES=self.duplicate_copy_views)
 
     # ------------------------------------------------------------ PA07 semantics
     def stage_attach_semantics7(self):
@@ -239,14 +266,22 @@ class Pipeline7(PL.Pipeline):
                 site = [a for a in anchors if a.get("ROLE") == "SITE_LABEL"]
                 classes = sorted({a["CLASS"] for a in rooms if a.get("CLASS")})
                 status = "NONE" if not rooms and not undec else ("UNRESOLVED" if (not rooms or undec) else ("SINGLE" if len(classes) == 1 and len(rooms) == 1 else ("SINGLE_CLASS_REPEATED" if len(classes) == 1 else "MULTIPLE")))
+                # PA07R2 (FM-R1-08): a label carrying a wet-room word whose class is not a wet class ('MASTER BATH' -> MASTER_BEDROOM) is ambiguous: HUMAN_REVIEW
+                ambiguous = [a["TEXT"] for a in rooms if any(tok in str(a.get("TEXT", "")).upper() for tok in WET_LABEL_TOKENS) and a.get("CLASS") not in SEM.WET]
+                if ambiguous and status in ("SINGLE", "SINGLE_CLASS_REPEATED", "MULTIPLE"):
+                    status = "UNRESOLVED"
                 kinds = {a.get("SOURCE_KIND", "CAD_TEXT") for a in rooms}
                 if status == "SINGLE" and "AI_VISUAL_READ" in kinds:
                     status = "AI_INTERPRETED"          # PA07R1 (FM-P7-09): an AI read never becomes an established identity
                 zone_status = "OWNER_ESTABLISHED" if kinds == {"OWNER_PROJECT_INPUT"} else ("AI_INTERPRETED" if "AI_VISUAL_READ" in kinds else "SOURCE_TEXT_ESTABLISHED")
                 s["SEMANTIC_IDENTITY"] = {"ZONES": [(c, zone_status) for c in classes], "STATUS": status, "UNDECODABLE_LABELS": len(undec), "SITE_LABELS_INSIDE": len(site), "SOURCE_KINDS": sorted(kinds),
-                                          "NOTE": "an undecodable stamp keeps the identity UNRESOLVED even when one label reads" if undec else None}
+                                          "AMBIGUOUS_LABELS": ambiguous,
+                                          "NOTE": "an undecodable stamp keeps the identity UNRESOLVED even when one label reads" if undec else ("PA07R2: wet-room word in a label whose class is not a wet class; the owner decides the identity" if ambiguous else None)}
                 s["IDENTITY_STATUS"] = status
-                s["SPACE_CLASS"] = "EXTERIOR_SITE" if site and not rooms else ("HUMAN_REVIEW" if (site and rooms) or s.get("ROOF_PLAN_REVIEW") else "INTERIOR")
+                exterior_classes = [c for c in classes if c in SEM_EXTERIOR_CLASSES]
+                # PA07R2 (gate Q10): a cell whose every room label is an exterior class (GARDEN, COURT, ROOF, POOL, BALCONY, TERRACE) is not an interior room
+                s["SPACE_CLASS"] = ("EXTERIOR_SITE" if site and not rooms else ("EXTERIOR_LABELLED" if (rooms and classes and len(exterior_classes) == len(classes)) else
+                                    ("HUMAN_REVIEW" if (site and rooms) or s.get("ROOF_PLAN_REVIEW") or exterior_classes else "INTERIOR")))
                 s["STOREY"] = self.storey_of_view.get(v["VIEW_ID"])
                 for a in anchors:
                     rows_all.append({"ANCHOR_ID": ids.anchor_id(v["VIEW_ID"], a.get("ROLE"), a["TEXT"], (0.0, 0.0)), "RAW_TEXT": a["TEXT"], "TEXT_ROLE": a.get("ROLE"), "CANONICAL_CLASS": a.get("CLASS"),
@@ -267,6 +302,7 @@ class Pipeline7(PL.Pipeline):
         units_ok = all(self.units_ok.values()) if self.units_ok else False
         trades = tuple(self.cfg.get("TRADES") or ("NORMAL_INTERNAL_PLASTER", "WET_ROOM_SPLATTER", "COLUMN_BONDING"))
         safety, regions, trace = [], [], []
+        self.scale_evidence = self._scale_evidence()
         for v in self.views:
             spaces = self.spaces.get(v["VIEW_ID"], [])
             if not spaces:
@@ -277,8 +313,13 @@ class Pipeline7(PL.Pipeline):
             for r in self.brows[v["VIEW_ID"]]:
                 if r["SPACE_FACE_ID"]:
                     brows_by_space[r["SPACE_FACE_ID"]].append(r)
+            space_by_face = {x["FACE_ID"]: x for x in spaces}
+            rows_by_band = defaultdict(list)
+            for r in self.brows[v["VIEW_ID"]]:
+                rows_by_band[r["BAND_ID"]].append(r)
             for s in spaces:
                 rows = brows_by_space.get(s["FACE_ID"], [])
+                s["UNLABELLED_NEIGHBOUR_ACROSS_UNEVIDENCED_BAND"] = self._unlabelled_neighbours(s, rows, rows_by_band, bands_by_id, space_by_face)
                 for trade in trades:
                     gates = self._gates(s, rows, bands_by_id, sites_by_id, reg, trade, v, units_ok)
                     blocked = [g for g in GATES if gates[g]["STATUS"] != "PASS"]
@@ -297,7 +338,16 @@ class Pipeline7(PL.Pipeline):
                                       "QUANTITY_STATE_ENGINE": None, "QUANTITY_STATUS": worst, "STATUS_DIMENSIONS": STS.record(QUANTITY_STATUS=worst), "ENGINE_SHEET": None, "BARE_NUMBER": False,
                                       "PROVENANCE": {"REGISTERS": ["PA07_QUANTITY_SAFETY_REGISTER"]}})
                         safety.append(row); continue
-                    region, line = self._bridge(s, rows, bands_by_id, sites_by_id, reg, trade, units_ok)
+                    try:
+                        region, line = self._bridge(s, rows, bands_by_id, sites_by_id, reg, trade, units_ok)
+                    except Exception as e:          # PA07R2 (FM-R1-07): a bridge failure is one loud line, never a dead run
+                        row["BLOCKED_BY"] = ["BRIDGE_EXCEPTION"]; row["BRIDGE_ALLOWED"] = False; row["QUANTITY_STATUS"] = "NOT_ESTABLISHED"; row["BRIDGE_EXCEPTION"] = repr(e)[:300]
+                        trace.append({"LINE_ID": ids.make_id("TRADE_ZONE", s["SPACE_ID"], trade, "LINE7"), "SPACE_ID": s["SPACE_ID"], "STOREY": s.get("STOREY"), "TRADE": trade, "TREATMENT": TRADES[trade][0],
+                                      "MEASUREMENT_BASIS": TRADES[trade][1], "REGION_STATUS": "NOT_FORMED_BRIDGE_EXCEPTION", "BLOCKED_BY": ["BRIDGE_EXCEPTION"], "GATE_DETAIL": {"BRIDGE_EXCEPTION": repr(e)[:300]},
+                                      "LENGTH_GEOMETRY": None, "HEIGHT_SOURCE": None, "OPENING_DEDUCTION_SOURCE": [], "TRADE_RULE": None, "SEMANTIC_IDENTITY": s["SEMANTIC_IDENTITY"], "AREA_M2_PRINCIPAL": None,
+                                      "QUANTITY_STATE_ENGINE": None, "QUANTITY_STATUS": "NOT_ESTABLISHED", "STATUS_DIMENSIONS": STS.record(QUANTITY_STATUS="NOT_ESTABLISHED"), "ENGINE_SHEET": None, "BARE_NUMBER": False,
+                                      "PROVENANCE": {"REGISTERS": ["PA07_QUANTITY_SAFETY_REGISTER"]}})
+                        safety.append(row); continue
                     row["QUANTITY_STATUS"] = line["QUANTITY_STATUS"]; row["REGION_STATUS"] = region["MEASUREMENT_REGION_STATUS"]
                     safety.append(row); regions.append(region); trace.append(line)
         self.registers["PA07_QUANTITY_SAFETY_REGISTER"] = {"ARTIFACT": "PA07_QUANTITY_SAFETY_REGISTER", "ROWS": safety, "COUNT": len(safety), "GATES": GATES,
@@ -311,13 +361,62 @@ class Pipeline7(PL.Pipeline):
         self.registers["PA07_QUANTITY_INPUT_TRACE"] = {"ARTIFACT": "PA07_QUANTITY_INPUT_TRACE", "LINES": trace, "COUNT": len(trace), "BY_STATUS": dict(Counter(t["QUANTITY_STATUS"] for t in trace)), "TOTALS": None,
                                                        "RULE": "no total: every line is an input trace with its own state; a total across states or units is refused by design"}
 
+    def _unlabelled_neighbours(self, s, rows, rows_by_band, bands_by_id, space_by_face):
+        """PA07R2 (gate Q11): a labelled space separated from an unlabelled eligible cell by an accepted band that carries no fill evidence and hosts no
+        opening: a beam drawn with continuous lines, a counter or a screen would split one room exactly so; the owner confirms the partition."""
+        out = []
+        for r in rows:
+            if r["SEAL_KIND"] != "FACE":
+                continue
+            b = bands_by_id.get(r["BAND_ID"])
+            if b is None or b.get("LOOP") or b["EVIDENCE"].get("MATERIAL_FILL", {}).get("FILL") == "EVIDENCED":
+                continue
+            if any(x["SEAL_KIND"] == "OPENING_CHORD" for x in rows_by_band.get(b["BAND_ID"], [])):
+                continue
+            for x in rows_by_band.get(b["BAND_ID"], []):
+                if x["SIDE"] == r["SIDE"] or x["SEAL_KIND"] != "FACE" or not x["SPACE_FACE_ID"] or x["SPACE_FACE_ID"] == s["FACE_ID"]:
+                    continue
+                n = space_by_face.get(x["SPACE_FACE_ID"])
+                if n is not None and n["SEMANTIC_IDENTITY"]["STATUS"] == "NONE" and s["SEMANTIC_IDENTITY"]["STATUS"] != "NONE":
+                    out.append({"BAND_ID": b["BAND_ID"], "NEIGHBOUR_SPACE_ID": n["SPACE_ID"], "NEIGHBOUR_AREA_M2": n["AREA_GEOMETRIC_M2"]})
+        return out
+
+    def _scale_evidence(self):
+        """PA07R2 (FM-R1-03): per plan view, the median accepted straight-band thickness and the median confirmed door span, against the source-wide medians."""
+        import statistics
+        per = {}
+        for v in self.views:
+            if not self.spaces.get(v["VIEW_ID"]):
+                continue
+            thk = [b["THK"] for b in self.bands7.get(v["VIEW_ID"], []) if b["STATUS"] == "ACCEPTED" and not b.get("LOOP")]
+            doors = [s["SPAN_MM"] for s in self.sites7.get(v["VIEW_ID"], []) if s["CLASS"] == "CONFIRMED_DOOR_OPENING" and s["STATUS"] == "ESTABLISHED"]
+            per[v["VIEW_ID"]] = {"THK_MEDIAN_MM": statistics.median(thk) if thk else None, "DOOR_MEDIAN_MM": statistics.median(doors) if doors else None}
+        all_thk = [x["THK_MEDIAN_MM"] for x in per.values() if x["THK_MEDIAN_MM"]]
+        all_door = [x["DOOR_MEDIAN_MM"] for x in per.values() if x["DOOR_MEDIAN_MM"]]
+        ref = {"THK_MEDIAN_MM": statistics.median(all_thk) if all_thk else None, "DOOR_MEDIAN_MM": statistics.median(all_door) if all_door else None, "PLAN_VIEWS": len(per)}
+        for vid, x in per.items():
+            ratios = {}
+            for k in ("THK_MEDIAN_MM", "DOOR_MEDIAN_MM"):
+                if x[k] and ref[k]:
+                    ratios[k] = round(x[k] / ref[k], 3)
+            x["RATIOS"] = ratios
+            x["STATUS"] = "HUMAN_REVIEW" if any(max(r, 1.0 / r) > SCALE_RATIO_MAX for r in ratios.values() if r > 0) else ("PASS" if len(per) > 1 else "PASS_SINGLE_VIEW")
+        return {"PER_VIEW": per, "REFERENCE": ref, "RULE": "only a cross-view comparison; one plan view alone cannot be checked for an enlarged copy"}
+
     def _gates(self, s, rows, bands_by_id, sites_by_id, reg, trade, v, units_ok):
         g = {}
         role = s.get("VIEW_ROLE")
-        g["VIEW_ROLE"] = {"STATUS": "PASS" if role in SR.PLAN_ROLES else "NOT_ESTABLISHED", "VALUE": role, "WHY": "spaces are measured on plan views only"}
+        dup = self.duplicate_copy_views.get(v["VIEW_ID"]) if hasattr(self, "duplicate_copy_views") else None
+        g["VIEW_ROLE"] = {"STATUS": ("HUMAN_REVIEW" if dup else ("PASS" if role in SR.PLAN_ROLES else "NOT_ESTABLISHED")), "VALUE": role, "DUPLICATE_PLAN_COPY": dup,
+                          "WHY": "spaces are measured on plan views only; PA07R2: copies of one plan under one storey name are measured once only after the owner picks the copy"}
         g["UNIT_STATUS"] = {"STATUS": "PASS" if units_ok else "SOURCE_REQUIRED", "VALUE": self.units_ok, "WHY": "no physical length without an established source unit"}
-        g["SPACE_STATUS"] = {"STATUS": "PASS" if (s["GEOMETRY_STATUS"] == "ESTABLISHED" and s.get("SPACE_CLASS") == "INTERIOR") else ("HUMAN_REVIEW" if s.get("SPACE_CLASS") == "HUMAN_REVIEW" else "NOT_ESTABLISHED"),
-                             "VALUE": {"GEOMETRY_STATUS": s["GEOMETRY_STATUS"], "SPACE_CLASS": s.get("SPACE_CLASS"), "UNRESOLVED_MM": s["UNRESOLVED_MM"]}, "WHY": "boundary must be established material and opening chords only; exterior and provisional boundaries stay out"}
+        sc = (getattr(self, "scale_evidence", None) or {}).get("PER_VIEW", {}).get(v["VIEW_ID"], {"STATUS": "PASS_SINGLE_VIEW"})
+        g["SCALE_STATUS"] = {"STATUS": "HUMAN_REVIEW" if sc.get("STATUS") == "HUMAN_REVIEW" else "PASS", "VALUE": sc, "WHY": "PA07R2: a plan view drawn at another scale than the rest of the source (enlarged detail) is a scale question"}
+        unl = s.get("UNLABELLED_NEIGHBOUR_ACROSS_UNEVIDENCED_BAND") or []
+        g["SPACE_STATUS"] = {"STATUS": ("HUMAN_REVIEW" if (unl and s["GEOMETRY_STATUS"] == "ESTABLISHED" and s.get("SPACE_CLASS") == "INTERIOR") else
+                                        ("PASS" if (s["GEOMETRY_STATUS"] == "ESTABLISHED" and s.get("SPACE_CLASS") == "INTERIOR") else ("HUMAN_REVIEW" if s.get("SPACE_CLASS") in ("HUMAN_REVIEW", "EXTERIOR_LABELLED") else "NOT_ESTABLISHED"))),
+                             "VALUE": {"GEOMETRY_STATUS": s["GEOMETRY_STATUS"], "SPACE_CLASS": s.get("SPACE_CLASS"), "UNRESOLVED_MM": s["UNRESOLVED_MM"], "UNLABELLED_NEIGHBOUR_ACROSS_UNEVIDENCED_BAND": unl},
+                             "WHY": "boundary must be established material and opening chords only; exterior and provisional boundaries stay out; PA07R2: an unlabelled cell across an unevidenced band (beam, counter, screen) needs the owner"}
         bad_bands = sorted({r["BAND_ID"] for r in rows if r["MATERIAL"] and (bands_by_id.get(r["BAND_ID"], {}).get("STATUS") != "ACCEPTED" or r["FACE_POSITION_STATUS"] != "ESTABLISHED")})
         g["MATERIAL_BANDS"] = {"STATUS": "PASS" if rows and not bad_bands else ("NOT_ESTABLISHED" if rows else "NOT_ESTABLISHED"), "VALUE": {"BANDS_WITH_DOUBLED_OR_UNACCEPTED_FACES": bad_bands, "MATERIAL_MM": s["MATERIAL_BOUNDARY_MM"]},
                                "WHY": "every material stretch must come from an ACCEPTED band with an established face position (no FACE_DOUBLING ambiguity)"}
@@ -359,7 +458,8 @@ class Pipeline7(PL.Pipeline):
             eid = f"BE-{r['BAND_ID']}-{r['SIDE']}-{round(r['AXIAL_START'])}"
             if r["SEAL_KIND"] in ("FACE", "COLUMN_FACE"):
                 kind = "EXPOSED_COLUMN_FACE" if r["SEAL_KIND"] == "COLUMN_FACE" else ("CURVED_MATERIAL_FACE" if r["CURVATURE_TYPE"] == "ARC" else "PHYSICAL_WALL_FACE")
-                phys.append({"EDGE_ID": eid, "KIND": kind, "length_m": round(r["LENGTH_MM"] / 1000, 4), "length_source": "BAND_DEVELOPED_GEOMETRY", "a": list(a), "b": list(c), "trace_ids": [r["BAND_ID"], r["INTERVAL_ID"]]})
+                phys.append({"EDGE_ID": eid, "KIND": kind, "length_m": round(r["LENGTH_MM"] / 1000, 4), "length_source": "BAND_DEVELOPED_GEOMETRY", "a": list(a), "b": list(c),
+                             "trace_ids": [t for t in (r["BAND_ID"], r["INTERVAL_ID"] or (r["BAND_ID"].replace("MB-", "CO-") if r["SEAL_KIND"] == "COLUMN_FACE" else None)) if t]})
             elif r["SEAL_KIND"] == "OPENING_CHORD":
                 site = sites_by_id.get(r["SITE_ID"], {})
                 st = SITE_TYPE_MAP.get(site.get("CLASS"), "UNRESOLVED_GAP")

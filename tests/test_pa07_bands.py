@@ -91,6 +91,15 @@ def test_06_07_08_real_partitions_and_external_wall(t):
     prims = anchor_frame() + F.wall((0, 3000), (5000, 3000), t) + F.cap((0, 3000), (5000, 3000), t, "end")
     rows, _ = build(prims)
     acc = [r for r in accepted(rows) if r["ORIENTATION_TYPE"] == "HORIZONTAL" and abs(r["THICKNESS_MM"] - t) < 1 and r["DEVELOPED_LENGTH_MM"] < 6000]
+    if t < MB.THIN_BAND_MM:
+        # PA07R2 (FM-R1-05): a pair thinner than 150 mm without fill evidence is UNRESOLVED (handrail / skirting / frame); hatched it is a wall
+        thin = [r for r in rows if r["ORIENTATION_TYPE"] == "HORIZONTAL" and abs(r["THICKNESS_MM"] - t) < 1 and r["DEVELOPED_LENGTH_MM"] < 6000]
+        assert not acc and thin and all(r["MATERIAL_STATUS"] == "UNRESOLVED" and r["REJECTION_REASON"].startswith("THIN_BAND_UNCONFIRMED") for r in thin)
+        strokes = F.hatch(0, 3000 - t / 2 + 10, 5000, 3000 + t / 2 - 10, pitch=80)      # strokes inside the strip, clear of the faces
+        for s in strokes:
+            s._role = "HATCH_STROKE"
+        rows, _ = build(prims + strokes)
+        acc = [r for r in accepted(rows) if r["ORIENTATION_TYPE"] == "HORIZONTAL" and abs(r["THICKNESS_MM"] - t) < 1 and r["DEVELOPED_LENGTH_MM"] < 6000]
     assert len(acc) == 1
     assert abs(acc[0]["DEVELOPED_LENGTH_MM"] - 5000) <= 10 and acc[0]["THICKNESS_STATUS"] == "ESTABLISHED" and acc[0]["BAND_TYPE"] == "STRAIGHT_BAND"
     assert acc[0]["INTERSECTION_EVIDENCE"]["JOINS"], "a partition joined to the frame must show the junction"
@@ -125,11 +134,12 @@ def test_11_tapering_decorative_element_is_not_a_wall():
 
 
 def test_12_column_free_standing_and_block_column_unresolved():
-    # PA07R1: a free-standing closed rectangle is a column only with a cross (or hatch) inside it; a bare rectangle is a trap / appliance / tile
+    # PA07R2 (FM-R1-06): a free-standing crossed rectangle is a COLUMN_CANDIDATE (column, trap, A/C or duct symbol): UNRESOLVED until structurally confirmed; a bare rectangle likewise
     prims = anchor_frame() + F.rect(3000, 3000, 3400, 3400, "C") + [F.seg("C", (3000, 3000), (3400, 3400))]
     rows, _ = build(prims)
     cols = [r for r in accepted(rows) if r["BAND_TYPE"] == "COLUMN_BAND"]
-    assert len(cols) == 1 and cols[0]["INTERSECTION_EVIDENCE"]["CLOSED_LOOP"] and sorted(cols[0]["INTERSECTION_EVIDENCE"]["SIDES_MM"]) == [400, 400]
+    cand = [r for r in rows if (r["REJECTION_REASON"] or "").startswith("COLUMN_CANDIDATE")]
+    assert not cols and len(cand) == 1 and cand[0]["MATERIAL_STATUS"] == "UNRESOLVED" and sorted(cand[0]["INTERSECTION_EVIDENCE"]["SIDES_MM"]) == [400, 400]
     bare = [r for r in build(anchor_frame() + F.rect(3000, 3000, 3400, 3400, "C"))[0] if r["INTERSECTION_EVIDENCE"] and r["INTERSECTION_EVIDENCE"].get("CLOSED_LOOP") and not (r["REJECTION_REASON"] or "").startswith("DUPLICATE")]
     assert bare and all(r["MATERIAL_STATUS"] == "UNRESOLVED" for r in bare)
     rows, _ = build(anchor_frame() + F.rect(3000, 3000, 3400, 3400, "C", block=("COL",)))

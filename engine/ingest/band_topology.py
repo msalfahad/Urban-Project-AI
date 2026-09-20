@@ -31,6 +31,7 @@ SITE_CLASSES = ("CONFIRMED_DOOR_OPENING", "PROBABLE_DOOR_OPENING", "CONFIRMED_WI
                 "MATERIAL_CONTINUITY", "CAD_JUNCTION", "UNRESOLVED")
 CAD_GAP_MM = 120.0            # faces that simply fail to meet
 CONTINUITY_MAX_MM = 500.0     # a both-face break narrower than this without jambs is a drafting break, not a passage
+UNEVIDENCED_BREAK_MM = 250.0  # PA07R2 (FM-R1-11): a both-face break wider than this with nothing drawn in it is a hatch, duct or niche question, not continuity
 DOOR_SPAN = (600.0, 2500.0)
 PROBABLE_DOOR_SPAN = (600.0, 1400.0)
 SWING_RADIUS_TOL = 0.15
@@ -212,8 +213,12 @@ def classify_gap(b, t0, t1, prims, roles, accepted, segs, all_bands=()):
         cls, status, why = "CAD_JUNCTION", "ESTABLISHED", f"faces fail to meet by {round(span)} mm (< {CAD_GAP_MM:.0f}); drafting gap"
     elif span < CONTINUITY_MAX_MM and not jambs and not (swings or leaves or frames) and unresolved_here:
         cls, status, why = "UNRESOLVED", "BREAK_WITH_UNRESOLVED_ELEMENT", f"both faces break for {round(span)} mm where an unresolved candidate {unresolved_here[:2]} crosses the gap"
-    elif span < CONTINUITY_MAX_MM and not jambs and not (swings or leaves or frames):
+    elif span < UNEVIDENCED_BREAK_MM and not jambs and not (swings or leaves or frames):
         cls, status, why = "MATERIAL_CONTINUITY", "ESTABLISHED", f"both faces break for {round(span)} mm with no jamb, leaf, swing or frame and no candidate crossing the gap: face-line break inside one wall"
+    elif span < CONTINUITY_MAX_MM and not jambs and not (swings or leaves or frames):
+        cls, status, why = "UNRESOLVED", "UNEVIDENCED_BREAK", f"PA07R2: both faces break for {round(span)} mm with nothing drawn in the gap: serving hatch, duct, niche or a drafting break cannot be told apart; zero material, provisional"
+    elif swings and len([f for f in frames if f["ROLE"] not in GLAZING_ROLES]) >= 2:
+        cls, status, why = "UNRESOLVED", "DOOR_OR_WINDOW_CONFLICT", "PA07R2 (FM-R1-09): a swing arc together with >= 2 frame lines inside the gap: casement window, French window or a door with a threshold; the type decides height and deduction, so it is not established"
     elif swings and (jambs or leaves) and DOOR_SPAN[0] <= span <= DOOR_SPAN[1]:
         cls, status, why = "CONFIRMED_DOOR_OPENING", "ESTABLISHED", "swing arc at a jamb with radius ~ span, plus jamb returns or a leaf"
     elif jambs and leaves and DOOR_SPAN[0] <= span <= DOOR_SPAN[1]:
@@ -350,10 +355,20 @@ def unresolved_seals(bands, prims, roles):
             out.append({"KIND": "UNRESOLVED_CHORD", "SIDE": None, "BAND_ID": b["BAND_ID"], "INTERVAL_ID": None, "SITE_ID": None, "MATERIAL": False, "PTS": _prim_pts(f), "NOTE": f"face of {b['STATUS']} candidate: {reason}"})
     accepted = [b for b in bands if b["STATUS"] == "ACCEPTED"]
     for p in MB.candidates(prims, roles):
-        if p.object_id in used or p.kind != "SEGMENT" or MB._len(p) < MB.MIN_FREE_BAND_MM:
+        if p.object_id in used or p.kind not in ("SEGMENT", "ARC"):
             continue
+        if p.kind == "SEGMENT":
+            if MB._len(p) < MB.MIN_FREE_BAND_MM:
+                continue
+            ends = ((p.x1, p.y1), (p.x2, p.y2))
+        else:
+            # PA07R2 (FM-R1-01): an unpaired arc of wall length (a curved face whose mate was not found) separates provisionally too
+            sw = ((p.end_angle - p.start_angle) % (2 * math.pi)) or 2 * math.pi
+            if p.radius * sw < MB.MIN_FREE_BAND_MM:
+                continue
+            ends = ((p.cx + p.radius * math.cos(p.start_angle), p.cy + p.radius * math.sin(p.start_angle)), (p.cx + p.radius * math.cos(p.end_angle), p.cy + p.radius * math.sin(p.end_angle)))
         # an unpaired line that runs wall to wall (both ends inside accepted band strips) may be a single-line partition or a glazing line: it separates, provisionally
-        ends_in = [any(MB.in_strip(h, x, y, tol=MB.JUNCTION_TOL) for h in accepted) for x, y in ((p.x1, p.y1), (p.x2, p.y2))]
+        ends_in = [any(MB.in_strip(h, x, y, tol=MB.JUNCTION_TOL) for h in accepted) for x, y in ends]
         if all(ends_in):
             out.append({"KIND": "UNRESOLVED_CHORD", "SIDE": None, "BAND_ID": None, "INTERVAL_ID": None, "SITE_ID": None, "MATERIAL": False, "PTS": _prim_pts(p), "OBJECT_ID": p.object_id, "NOTE": "unpaired wall-to-wall line: single-line partition, glazing or overhead element; provisional separator"})
     return out

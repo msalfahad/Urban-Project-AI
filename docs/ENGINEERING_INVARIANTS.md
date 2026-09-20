@@ -4057,3 +4057,44 @@ architecture, or a hand-verification pack sealed before the run; no PA / E1 resu
 Tolerances are declared before any comparison and never changed after it. When no such source exists the protocol
 is frozen unexecuted, SECOND_REGRESSION_SOURCE_REQUIRED.json states what to upload, and PROJECT_3_ENTRY_GATE_V3
 is NOT_READY — the correct result, not a failure of the phase.
+
+## §175 — A safety question is answered by an executed counterexample, never by the existence of a test
+
+`research/qs_wall_treatment_01/pa07/post_review_gate.py` (PA07R1 / PA07R2). Each of the fifteen post-review questions
+(window frame as wall, stair as wall, single-face gap as door, jamb-less merge, chord length, vanishing narrow room,
+merged cell with one label, unresolved band or opening reaching a quantity, exterior cell as room, beam as wall,
+column double count, storey / height mistakes, provisional role promoted) builds a synthetic fixture, runs it
+through the real modules or the whole pipeline7 and records what happened. PASS means loud or correct; FAIL means a
+wrong number or role reached an ESTABLISHED / bridge-allowed state; NOT_TESTED means the fixture did not execute.
+The gate that PA07R1 fails (Q02, Q03, Q10, Q11, Q12) and PA07R2 passes is the evidence for the revision, not the
+revision's own description of itself.
+
+## §176 — A decode that is wrong about the source is fixed as a decode, never guarded around
+
+`engine/cad_adapter.py` (PA07R2, FM-R1-01). A bulged polyline span encodes an exact arc; emitting it with its centre
+at the chord midpoint was a wrong reading of the source, and a wrong reading is corrected where it happens, with
+a test that states the encoded geometry. Guards convert silent paths into loud ones; they never compensate for a
+misread source downstream.
+
+## §177 — Symbols, nibs, rails, copies and scales are questions until a witness answers them
+
+`engine/ingest/material_bands.py`, `band_topology.py`, `pipeline7.py` (PA07R2). A free-standing crossed outline is
+a COLUMN_CANDIDATE (column, trap, A/C unit or duct symbol share the convention); a loop of the host wall's
+thickness on its axis is a WALL_NIB_OR_PIER; a pair shorter than it is thick is a SHORT_TRANSVERSE_PAIR; a pair
+thinner than 150 mm without fill evidence is THIN_BAND_UNCONFIRMED; a both-face break of 250–500 mm with nothing
+drawn is an UNEVIDENCED_BREAK; a swing with frame lines is DOOR_OR_WINDOW_CONFLICT; plan copies under one storey
+name are DUPLICATE_PLAN_COPY; a plan view whose wall-thickness or door-span median differs from the source by more
+than a factor 1.3 is a SCALE question; floor words of two storeys in one view, a wet word in a dry-class label, an
+exterior-class label, and an unlabelled cell across an unevidenced band are all HUMAN_REVIEW. None of these
+invents geometry or reinterprets the source; each only withholds a number that PA07R1 would have emitted.
+
+## §178 — Independent validation is a sealed, audited, frozen procedure, and a dry run of it is not validation
+
+`research/qs_wall_treatment_01/pa08/` (PA08). A candidate source is accepted only when its hashes and aliases match
+no development or regression project; the truth pack is built by hand from the original drawings, refuses any
+result-shaped key and is sealed by hash before the run; the blind run executes in a subprocess whose every file open
+is audited and which turns a forbidden read into VALIDATION_INVALID; the output is frozen before the truth is
+opened; the comparison classifies every fact into predeclared classes with frozen tolerances and counts
+SILENT_WRONG_QUANTITY (must be 0); gate v4 keeps twelve conditions NOT_TESTED until such a run exists. The runner-ready
+check executes every step on a synthetic villa written by the engine's author and is marked so: it proves the
+harness runs, never that the engine is right.

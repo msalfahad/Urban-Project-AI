@@ -367,3 +367,24 @@ accepted bands, 42 interior spaces on plan views of which 1 established and
 merging them), bridge-allowed lines 0. PA07 and its freeze are kept unchanged as history; the
 revision is frozen as `FREEZE_PA07R1.json`. No fresh cold review of PA07R1 was performed, so gate v3 condition 13
 stays failed. The answer to an unseen-villa draft BOQ remains NO.
+
+### PA07R1 cold review, PA07R2 guards and the PA08 harness (eleventh checkpoint, continued)
+
+A fresh cold review of PA07R1 in a new context (given only the generic ingestion code, the PA07R1 code, tests, freeze
+manifest, metrics and quantity-safety register; no FM-P6 list, no earlier review, no P7757 quantities) found 18
+failure modes: CRITICAL_SILENT 3 (bulged-polyline arcs decoded with the wrong centre so curved walls vanished and
+rooms merged; furniture / ceiling copies of a plan each measured once; an enlarged 2x detail passing all gates),
+HIGH_SILENT 8, LOUD 3, QUALITY 4; verdict IS_PA07R1_SAFELY_CONSERVATIVE = NO ("conservative by yield, not by
+construction"). The fifteen-question post-review gate, executed as synthetic counterexamples
+(`pa07/post_review_gate.py`), failed PA07R1 on five questions (stair fixture error, single-face gap leaving one side
+ESTABLISHED, a walled GARDEN classed INTERIOR, a continuous-line beam splitting a room, and a wall nib beside a door
+jamb becoming a column whose face was counted twice and then crashing the bridge). PA07R2 applied sixteen guards and
+corrections (`pa07r2/PA07R2_GUARDS.json`, `tests/test_pa07r2_guards.py`, §175–§177): the review's findings stand
+FIXED 3, GUARDED 8, PARTIALLY_GUARDED 1, RECORDED for PA09 5, no change 1, OPEN 0; the gate passes 15 of 15 under
+PA07R2. P7757 rerun as `pa07r2/` (regression only, delta in `PA07R2_P7757_DELTA.json`): accepted bands 367 -> 174
+(308 short transverse pairs and 59 thin bands now UNRESOLVED, 14 wall nibs, 7 column candidates), confirmed doors
+6 -> 12, spaces 45 (2 established), bridge-allowed 0, a new SCALE_STATUS gate blocking 68 lines on views whose wall
+thickness medians differ from the source. The PA08 blind-validation harness (`pa08/`, §178) is prepared and dry-run
+on a synthetic villa (every step executes, the deliberate leak is caught, SILENT_WRONG_QUANTITY_COUNT 0) but not
+executed: no independent villa exists; `SECOND_REGRESSION_SOURCE_REQUIRED.json` stays active and gate v4 is
+NOT_READY. The answer to an unseen-villa draft BOQ remains NO.

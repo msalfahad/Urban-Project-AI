@@ -28,7 +28,7 @@ REQUIRED = ["PA07_MATERIAL_BAND_REGISTER", "PA07_BAND_INTERVAL_REGISTER", "PA07_
             "PA07_SPACE_BOUNDARY_FACE_REGISTER", "PA07_COLUMN_JUNCTION_REGISTER", "PA07_DISPLAY_SEMANTICS_REGISTER", "PA07_QUANTITY_SAFETY_REGISTER", "PA07_TRADE_MEASUREMENT_REGION_REGISTER",
             "PA07_QUANTITY_INPUT_TRACE", "PA07_SEMANTIC_ANCHOR_REGISTER", "PA07_MISSING_SPACE_QA", "PA07_STOREY_REGISTER", "PA07_QA_REPORT"]
 ENGINE_FILES = sorted(str(p) for p in Path("engine/ingest").glob("*.py"))
-TEST_FILES = ["tests/test_pa07r1_guards.py", "tests/test_pa07_bands.py", "tests/test_pa07_topology.py", "tests/test_pa07_spaces.py", "tests/test_pa06_topology.py", "tests/test_pa06_pipeline.py", "tests/test_pa05_ingest.py"]
+TEST_FILES = ["tests/test_pa07r2_guards.py", "tests/test_pa07r1_guards.py", "tests/test_pa07_bands.py", "tests/test_pa07_topology.py", "tests/test_pa07_spaces.py", "tests/test_pa06_topology.py", "tests/test_pa06_pipeline.py", "tests/test_pa05_ingest.py"]
 
 
 def write(name, obj):

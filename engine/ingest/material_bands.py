@@ -35,7 +35,8 @@ MIN_FREE_BAND_MM = 600.0           # a structure needs at least one band this lo
 STRUCTURE_MIN_MM = 2000.0          # total developed length of a joined group of bands before it counts as a wall structure
 COLUMN_FREE_MAX = 600.0            # a closed loop up to this side length is a column even when free-standing
 COLUMN_SIDE_MAX = 1200.0           # up to this side length a closed loop joined to a wall band is a column
-JOINERY_DEPTH_MIN_MM = 300.0       # PA07R1: a closed outline deeper than this (wardrobe 600, counter 600, bath 700) is joinery until hatched or confirmed
+JOINERY_DEPTH_MIN_MM = 300.0
+THIN_BAND_MM = 150.0          # PA07R2 (FM-R1-05): a pair thinner than this needs fill evidence; a handrail, a skirting or a glazing frame is not a wall       # PA07R1: a closed outline deeper than this (wardrobe 600, counter 600, bath 700) is joinery until hatched or confirmed
 ANGLE_TOL = math.radians(1.0)
 AXIS_MERGE_MM = 30.0
 THK_MERGE_MM = 25.0
@@ -597,6 +598,11 @@ def build(view_id, prims, roles, storey_id=None, source_id=None, single_line_lay
         for dup in grp[1:]:
             dup["LOOP"] = False
             _set(dup, "REJECTED", f"DUPLICATE_OF_BAND (the other side pair of closed loop {grp[0]['KEY']})")
+    # ---- phase 1c (PA07R2, gate Q12b): a pair shorter along its axis than it is thick, that is not a closed loop, is a transverse pairing
+    # (a door jamb against a wall face, a reveal, a nib); it never follows the structure into acceptance
+    for b in bands:
+        if b["STATUS"] is None and not b.get("LOOP") and not b.get("LONG_LOOP") and b["LENGTH"] < b["THK"] - 1e-6:
+            _set(b, "UNRESOLVED", f"SHORT_TRANSVERSE_PAIR (PA07R2: {round(b['LENGTH'])} mm along the axis for {round(b['THK'])} mm thickness: a jamb, reveal or nib paired with a wall face, not a wall)")
     # ---- phase 2: frames inside a thicker candidate's strip (candidate = not rejected in phase 1)
     live = [b for b in bands if b["STATUS"] is None]
     for b in live:
@@ -704,7 +710,9 @@ def build(view_id, prims, roles, storey_id=None, source_id=None, single_line_lay
             accepted.update(id(z) for z in comp)
     for b in live:
         if b.get("LOOP") and b["LENGTH"] <= COLUMN_FREE_MAX and b["THK"] <= COLUMN_FREE_MAX and not b["BLOCK"] and _loop_evidence(b, segs):
-            accepted.add(id(b))       # PA07R1: a free-standing closed rectangle is a column only with hatch or a cross inside it
+            # PA07R2 (FM-R1-06): a cross or hatch inside a free-standing closed rectangle is a drafting convention shared by columns,
+            # floor traps, A/C units and ducts; it is a COLUMN_CANDIDATE for structural confirmation, never accepted on its own
+            b["R2_COLUMN_CANDIDATE"] = True
     for b in live:
         if b.get("LONG_LOOP") and id(b) in accepted and b["THK"] > JOINERY_DEPTH_MIN_MM and b["EVIDENCE"]["MATERIAL_FILL"]["HATCH_SHARE"] < HATCH_FILL_SHARE:
             accepted.discard(id(b))   # PA07R1: a closed outline deeper than a partition, joined only by its ends and unhatched, is joinery until confirmed
@@ -716,16 +724,41 @@ def build(view_id, prims, roles, storey_id=None, source_id=None, single_line_lay
         for b in live:
             if id(b) in accepted or not b.get("LOOP") or b["LENGTH"] > COLUMN_SIDE_MAX or b["THK"] > COLUMN_SIDE_MAX:
                 continue
-            if any(id(phys_by_key[j["BAND"]]) in accepted for j in b["JOINS_ALL"] if j["BAND"] in phys_by_key):
+            # joined by an end (JOINS_ALL) or touching an accepted straight band by one of its sides or ends
+            hosts = [phys_by_key[j["BAND"]] for j in b["JOINS_ALL"] if j["BAND"] in phys_by_key and id(phys_by_key[j["BAND"]]) in accepted]
+            mid = (b["EXTENT"][0] + b["EXTENT"][1]) / 2
+            probes = [band_point(b, mid, +b["THK"] / 2), band_point(b, mid, -b["THK"] / 2), band_point(b, b["EXTENT"][0], 0.0), band_point(b, b["EXTENT"][1], 0.0)]
+            for h in live:
+                if id(h) in accepted and not h.get("LOOP") and h["KIND"] == "S" and h not in hosts and any(in_strip(h, x, y, tol=JUNCTION_TOL) for x, y in probes):
+                    hosts.append(h)
+            if hosts:
+                # PA07R2 (FM-R1-06b): a loop whose short dimension equals the thickness of the accepted straight band it is joined to,
+                # and whose centre lies on that band's axis, is a wall nib closed by a jamb or a pier: it stays a wall question, not a column
+                nib = False
+                for h in hosts:
+                    if h.get("LOOP") or h["KIND"] != "S":
+                        continue
+                    cx, cy = band_point(b, mid)
+                    _, d = band_param(h, cx, cy)
+                    if abs(min(b["LENGTH"], b["THK"]) - h["THK"]) <= THK_MERGE_MM and abs(d) <= AXIS_MERGE_MM:
+                        nib = True; b["R2_WALL_NIB_OF"] = h["KEY"]
+                if nib:
+                    continue
                 accepted.add(id(b)); changed = True
     for b in live:
         b["EVIDENCE"]["INTERSECTION"] = dict(b["EVIDENCE"].get("INTERSECTION", {}), JOINS=[{k: v for k, v in j.items()} for j in b["JOINS_ALL"]])
         b["EVIDENCE"]["CONTINUITY"] = {"EXTENT_MM": round(b["LENGTH"], 1), "COVERED_MM": round(b["COVERED"], 1), "GAPS_MM": [round(b["COVER"][i + 1][0] - b["COVER"][i][1], 1) for i in range(len(b["COVER"]) - 1)]}
-        if id(b) in accepted:
+        if id(b) in accepted and not b.get("LOOP") and b["THK"] < THIN_BAND_MM and b["EVIDENCE"]["MATERIAL_FILL"]["FILL"] != "EVIDENCED":
+            _set(b, "UNRESOLVED", f"THIN_BAND_UNCONFIRMED (PA07R2: a {round(b['THK'])} mm pair without hatch or end-face evidence: handrail, skirting, frame or a thin partition; owner or fill evidence required)")
+        elif id(b) in accepted:
             if b.get("LOOP"):
                 _set(b, "ACCEPTED", None); b["BAND_TYPE"] = "COLUMN_BAND"; b["ORIENTATION"] = "COLUMN"
             else:
                 _set(b, "ACCEPTED", None); b["BAND_TYPE"] = "CURVED_BAND" if b["KIND"] == "C" else ("ANGLED_BAND" if b["ORIENTATION"] == "ANGLED" else "STRAIGHT_BAND")
+        elif b.get("R2_WALL_NIB_OF"):
+            _set(b, "UNRESOLVED", f"WALL_NIB_OR_PIER (PA07R2: closed outline of the host wall's thickness on the axis of band {b['R2_WALL_NIB_OF']}: a wall piece closed by a jamb or a pier, not a column; counted neither as wall nor as column until confirmed)")
+        elif b.get("R2_COLUMN_CANDIDATE"):
+            _set(b, "UNRESOLVED", "COLUMN_CANDIDATE (PA07R2: free-standing crossed or hatched closed outline: column, floor trap, A/C unit or duct symbol; structural confirmation required before any face is counted)")
         elif b.get("LOOP"):
             _set(b, "UNRESOLVED", "CLOSED_LOOP_UNRESOLVED (column-sized outline from a block or beyond the free-standing column limit, joined to no wall band)" if b["BLOCK"] or b["LENGTH"] > COLUMN_FREE_MAX
                  else "CLOSED_LOOP_UNRESOLVED (column-sized outline joined to no wall band, with no hatch or cross inside: trap, appliance or tile, not a column)")

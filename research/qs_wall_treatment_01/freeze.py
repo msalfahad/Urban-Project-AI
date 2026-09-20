@@ -88,6 +88,9 @@ CODE = [
     "engine/cad_adapter.py", "engine/ingest/material_bands.py", "engine/ingest/band_topology.py", "engine/ingest/planar_faces.py", "engine/ingest/junctions.py", "engine/ingest/pipeline7.py",
     "engine/ingest/gates_v3.py", "research/qs_wall_treatment_01/pa07/config.py", "research/qs_wall_treatment_01/pa07/validation.py", "research/qs_wall_treatment_01/pa07/run.py",
     "research/qs_wall_treatment_01/pa07/report.py", "tests/pa07_fixtures.py", "tests/test_pa07_bands.py", "tests/test_pa07_topology.py", "tests/test_pa07_spaces.py", "tests/test_pa07r1_guards.py",
+    "tests/test_pa07r2_guards.py", "research/qs_wall_treatment_01/pa07/post_review_gate.py", "research/qs_wall_treatment_01/pa07/r2_guards.py", "research/qs_wall_treatment_01/pa08/__init__.py", "research/qs_wall_treatment_01/pa08/config.py",
+    "research/qs_wall_treatment_01/pa08/source_acceptance.py", "research/qs_wall_treatment_01/pa08/truth_pack.py", "research/qs_wall_treatment_01/pa08/blind_run.py", "research/qs_wall_treatment_01/pa08/compare.py",
+    "research/qs_wall_treatment_01/pa08/gate_v4.py", "research/qs_wall_treatment_01/pa08/protocol.py", "research/qs_wall_treatment_01/pa08/runner_ready_check.py", "research/qs_wall_treatment_01/pa08/run.py", "tests/test_pa08_harness.py",
 ]
 ARTIFACTS_ESTIMATE = [
     "P7757_OWNER_PARAMETERS.json", "OVERLAP_AUDIT.json",
@@ -167,6 +170,10 @@ ARTIFACTS_PA07 = ARTIFACTS_PA06R2 + ["FREEZE_PA06R2.json"] + [f"pa07/{a}" for a 
     "supervised/FREEZE7_1_SOURCE_UNITS.json", "supervised/FREEZE7_2_PRIMITIVE_ROLES.json", "supervised/FREEZE7_3_MATERIAL_BANDS.json", "supervised/FREEZE7_4_TOPOLOGICAL_SITES.json",
     "supervised/FREEZE7_5_PLANAR_FACES.json", "supervised/FREEZE7_6_SEMANTIC_ATTACHMENT.json", "supervised/FREEZE7_7_QUANTITY_BRIDGE.json", "PA07_REPORT.md")]
 ARTIFACTS_PA07R1 = ARTIFACTS_PA07 + ["FREEZE_PA07.json", "pa07/PA07_ARCHITECTURE_REVIEW.json", "pa07/PA07_PROJECT_3_ENTRY_GATE_V3_POST_REVIEW.json", "pa07/PA07_REPORT_POST_REVIEW.md"] + [a.replace("pa07/", "pa07r1/", 1) for a in ARTIFACTS_PA07 if a.startswith("pa07/")] + ["pa07r1/PA07R1_GUARDS.json"]
+ARTIFACTS_PA07R2 = ARTIFACTS_PA07R1 + ["FREEZE_PA07R1.json", "pa07r1/PA07R1_COLD_REVIEW.json", "pa07r1/PA07R1_COLD_REVIEW_RECOMMENDATIONS.json", "pa07r1/PA07R1_POST_REVIEW_GATE.json"] + \
+    [a.replace("pa07/", "pa07r2/", 1) for a in ARTIFACTS_PA07 if a.startswith("pa07/")] + ["pa07r2/PA07R2_GUARDS.json", "pa07r2/PA07R1_POST_REVIEW_GATE.json", "pa07r2/PA07R2_P7757_DELTA.json"] + \
+    [f"pa08/{a}" for a in ("PA08_VALIDATION_PROTOCOL.json", "PA08_SOURCE_ACCEPTANCE_SCHEMA.json", "PA08_TRUTH_PACK_SCHEMA.json", "PA08_BLIND_RUN_POLICY.json", "PA08_COMPARISON_SCHEMA.json",
+                           "PA08_PROJECT_3_GATE_V4.json", "PA08_RUNNER_READY_CHECK.json", "SECOND_REGRESSION_SOURCE_REQUIRED.json", "PROJECT_RULE_CANDIDATES.json")]
 UPSTREAM = [
     P.TRACE_REGISTER,
     "data/experiments/A21_TRACE_SUFFICIENCY_01/TRACE_PILOT_REPORT.json",
@@ -195,7 +202,7 @@ def _git_head() -> str:
 def freeze(stage: str) -> dict:
     arts = {"estimate": ARTIFACTS_ESTIMATE, "a22": ARTIFACTS_A22, "final": ARTIFACTS_FINAL,
             "dual": ARTIFACTS_DUAL, "owner_evidence": ARTIFACTS_OWNER_EVIDENCE,
-            "se_audit": ARTIFACTS_SE_AUDIT, "assembly": ARTIFACTS_ASSEMBLY, "pa02": ARTIFACTS_PA02, "pa03": ARTIFACTS_PA03, "pa04": ARTIFACTS_PA04, "pa05": ARTIFACTS_PA05, "pa06": ARTIFACTS_PA06, "pa06r1": ARTIFACTS_PA06R1, "pa06r2": ARTIFACTS_PA06R2, "pa07": ARTIFACTS_PA07, "pa07r1": ARTIFACTS_PA07R1}[stage]
+            "se_audit": ARTIFACTS_SE_AUDIT, "assembly": ARTIFACTS_ASSEMBLY, "pa02": ARTIFACTS_PA02, "pa03": ARTIFACTS_PA03, "pa04": ARTIFACTS_PA04, "pa05": ARTIFACTS_PA05, "pa06": ARTIFACTS_PA06, "pa06r1": ARTIFACTS_PA06R1, "pa06r2": ARTIFACTS_PA06R2, "pa07": ARTIFACTS_PA07, "pa07r1": ARTIFACTS_PA07R1, "pa07r2": ARTIFACTS_PA07R2}[stage]
     body = {
         "PHASE_ID": P.PHASE_ID, "ARTIFACT": f"FREEZE_{stage.upper()}",
         "STAGE": stage, "GIT_HEAD_AT_FREEZE": _git_head(),
@@ -203,7 +210,7 @@ def freeze(stage: str) -> dict:
         "UPSTREAM_SHA256": {u: (_sha(Path(u)) if Path(u).exists() else None) for u in UPSTREAM},
         "CODE_SHA256": {c: (_sha(Path(c)) if Path(c).exists() else None) for c in CODE},
         "ARTIFACT_SHA256": {a: (_sha(OUT / a) if (OUT / a).exists() else None) for a in arts},
-        "BENCHMARK_OPENED_BEFORE_THIS_FREEZE": stage in ("final", "dual", "owner_evidence", "se_audit", "assembly", "pa02", "pa03", "pa04", "pa05", "pa06", "pa06r1", "pa06r2", "pa07", "pa07r1"),
+        "BENCHMARK_OPENED_BEFORE_THIS_FREEZE": stage in ("final", "dual", "owner_evidence", "se_audit", "assembly", "pa02", "pa03", "pa04", "pa05", "pa06", "pa06r1", "pa06r2", "pa07", "pa07r1", "pa07r2"),
         "STANDING_PROHIBITIONS": P.STANDING_PROHIBITIONS,
     }
     missing = [k for k, v in body["ARTIFACT_SHA256"].items() if v is None]

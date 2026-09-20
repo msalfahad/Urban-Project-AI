@@ -262,8 +262,10 @@ def boundary_faces(view_id, faces, grids, bands, intervals, seals):
                 labs.append(lab_q)
             lab = max(set(labs), key=labs.count)
             f = face_of_label.get(lab)
+            # PA07R2 (FM-R1-10): a curved face runs at the face radius, not on the axis: scale the axis parameter run by (R +- t/2) / R
+            face_scale = (b["R_AXIS"] + side_sign * b["THK"] / 2) / b["R_AXIS"] if b["KIND"] == "C" else 1.0
             rows.append({"SPACE_FACE_ID": f["FACE_ID"] if f else None, "SPACE_ELIGIBILITY": f["SPACE_ELIGIBILITY"] if f else "NONE", "VIEW_ID": view_id, "BAND_ID": b["BAND_ID"], "INTERVAL_ID": interval_id, "SITE_ID": site_id,
-                         "SEAL_KIND": kind, "SIDE": "A" if side_sign < 0 else "B", "AXIAL_START": round(a, 1), "AXIAL_END": round(c, 1), "LENGTH_MM": round(c - a, 1), "MATERIAL": material,
+                         "SEAL_KIND": kind, "SIDE": "A" if side_sign < 0 else "B", "AXIAL_START": round(a, 1), "AXIAL_END": round(c, 1), "LENGTH_MM": round((c - a) * face_scale, 1), "MATERIAL": material,
                          "CURVATURE_TYPE": "ARC" if b["KIND"] == "C" else "STRAIGHT", "LENGTH_SOURCE": "BAND_DEVELOPED_GEOMETRY",
                          "FACE_POSITION_STATUS": "AMBIGUOUS_FACE_DOUBLING" if b["EVIDENCE"].get("FACE_DOUBLING") else "ESTABLISHED"})
         for a, c in cut:
@@ -324,7 +326,8 @@ def space_register(view_id, faces, boundary_rows, storey_id=None):
                      "OPEN_RELATIONS": f["OPEN_RELATIONS"], "UNRESOLVED_RELATIONS": f["UNRESOLVED_RELATIONS"], "ANCHORS": f["CONTAINS_SEMANTIC_ANCHOR"],
                      "IDENTITY_STATUS": ("SINGLE" if len([a for a in f["CONTAINS_SEMANTIC_ANCHOR"] if a.get("ROLE") == "ROOM_NAME"]) == 1 else
                                          ("MULTIPLE" if len([a for a in f["CONTAINS_SEMANTIC_ANCHOR"] if a.get("ROLE") == "ROOM_NAME"]) > 1 else "NONE")),
-                     "GEOMETRY_STATUS": f["STATUS"], "MATERIAL_PRESENT_ON_CHORDS": False,
+                     # PA07R2 (gate Q03): a boundary that carries any unresolved chord is provisional whatever the raster status says
+                     "GEOMETRY_STATUS": "BOUNDARY_PROVISIONAL" if comp.get("UNRESOLVED_CHORD", 0.0) > 0 else f["STATUS"], "MATERIAL_PRESENT_ON_CHORDS": False,
                      "PROVENANCE": {"RULE": "planar face of the free mask bounded by accepted band faces; lengths from band developed geometry cut at junctions"}})
     return rows
 

@@ -45,7 +45,8 @@ def test_fm02_bare_rectangle_is_not_a_column_but_a_crossed_one_is():
     assert not r["cols"] and len(r["spaces"]) == 1
     crossed = bare + [F.seg("X", (2000, 1500), (2400, 1900))]
     r = run_spaces(crossed)
-    assert len(r["cols"]) == 1
+    # PA07R2 (FM-R1-06): the cross makes it a COLUMN_CANDIDATE (column or symbol), never an accepted column on its own
+    assert not r["cols"] and any((x["REJECTION_REASON"] or "").startswith("COLUMN_CANDIDATE") for x in r["rows"])
 
 
 def test_fm03_unresolved_wall_still_separates_rooms_provisionally():

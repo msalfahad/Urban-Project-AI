@@ -106,8 +106,11 @@ def test_window_with_frame_lines():
 def test_tiny_gap_and_short_break_are_not_openings():
     _, _, _, sites, _ = run(doorway(gap=(3000.0, 3060.0), jambs=False, swing=False))
     assert [s["CLASS"] for s in sites if s["SPAN_MM"] == 60] == ["CAD_JUNCTION"]
+    _, _, _, sites, _ = run(doorway(gap=(3000.0, 3200.0), jambs=False, swing=False))
+    assert [s["CLASS"] for s in sites if s["SPAN_MM"] == 200] == ["MATERIAL_CONTINUITY"]
+    # PA07R2 (FM-R1-11): a both-face break of 250..500 mm with nothing drawn in it is a hatch / duct / niche question: UNRESOLVED, zero material
     _, _, _, sites, _ = run(doorway(gap=(3000.0, 3400.0), jambs=False, swing=False))
-    assert [s["CLASS"] for s in sites if s["SPAN_MM"] == 400] == ["MATERIAL_CONTINUITY"]
+    assert [(s["CLASS"], s["STATUS"]) for s in sites if s["SPAN_MM"] == 400] == [("UNRESOLVED", "UNEVIDENCED_BREAK")]
 
 
 def test_wide_jambed_gap_is_open_passage_candidate_only():

@@ -71,8 +71,12 @@ def test_curved_room_boundary_is_developed_length():
     r = run(prims)
     assert len(r["spaces"]) == 1
     s = r["spaces"][0]
-    inner_arc = (r_axis - t / 2) * math.pi
-    assert abs(s["MATERIAL_BOUNDARY_MM"] - (inner_arc + 6000 - 200)) <= 0.01 * inner_arc + 60
+    # PA07R2 (FM-R1-10): the boundary runs on the inner face radius (r - t/2), cut where the straight wall's inner face meets it, within 20 mm of the true geometry
+    r_in = r_axis - t / 2
+    phi = math.asin((t / 2) / r_in)
+    inner_arc = r_in * (math.pi - 2 * phi)
+    chord = 2 * r_in * math.cos(phi)
+    assert abs(s["MATERIAL_BOUNDARY_MM"] - (inner_arc + chord)) <= 20, (s["MATERIAL_BOUNDARY_MM"], inner_arc + chord)
     assert any(b["CURVATURE_TYPE"] == "ARC" for b in r["brows"] if b["SPACE_FACE_ID"] == s["FACE_ID"])
 
 
@@ -88,7 +92,7 @@ def test_region_touching_border_and_courtyard_and_shaft():
     areas = sorted(s["AREA_GEOMETRIC_M2"] for s in r["spaces"])
     assert len(areas) == 2 and abs(areas[0] - 9.0) < 0.3 and 65 < areas[1] < 80
     # shaft: 0.8 x 0.8 enclosed inside a room, no label: SPACE_WITHOUT_IDENTITY, still a physical space
-    prims = F.room(0, 0, 6000, 4000, 200) + F.room(1000, 1000, 1800, 1800, 100)
+    prims = F.room(0, 0, 6000, 4000, 200) + F.room(1000, 1000, 1800, 1800, 200)      # PA07R2: 100 mm walls are THIN_BAND_UNCONFIRMED; a shaft in 200 mm blockwork
     r = run(prims, texts=[{"TEXT": "BED", "X": 4000, "Y": 2000, "ROLE": "ROOM_NAME"}])
     assert len(r["spaces"]) == 2
     kinds = [i["KIND"] for i in r["qa"]]
@@ -142,14 +146,21 @@ def test_corner_gaps_2_5_10_25_mm_keep_one_room():
 
 
 def test_nested_column_region_is_material_not_a_space():
-    prims = F.room(0, 0, 6000, 4000, 200) + F.rect(2000, 1500, 2400, 1900, "C") + [F.seg("C", (2000, 1500), (2400, 1900))]   # PA07R1: a free-standing column carries its cross
+    # PA07R2 (FM-R1-06): a free-standing crossed rectangle is a COLUMN_CANDIDATE: no column object, no column face, the room boundary is the walls alone
+    prims = F.room(0, 0, 6000, 4000, 200) + F.rect(2000, 1500, 2400, 1900, "C") + [F.seg("C", (2000, 1500), (2400, 1900))]
     r = run(prims)
-    assert len(r["spaces"]) == 1
-    inner = [f for f in r["faces"] if f["SPACE_ELIGIBILITY"] == "MATERIAL_INTERIOR" and f["AREA_GEOMETRIC_M2"] < 0.2]
-    assert inner
+    assert len(r["spaces"]) == 1 and not r["cols"]
+    cand = [x for x in r["rows"] if (x["REJECTION_REASON"] or "").startswith("COLUMN_CANDIDATE")]
+    assert len(cand) == 1 and cand[0]["MATERIAL_STATUS"] == "UNRESOLVED"
+    s = r["spaces"][0]
+    assert s["COLUMN_FACE_MM"] == 0 and abs(s["MATERIAL_BOUNDARY_MM"] - 20000) <= 20
+    # joined to a wall and wider than it, a crossed 400 x 400 loop is a column at the wall (PA07R1 behaviour kept)
+    prims = F.room(0, 0, 6000, 4000, 200) + F.rect(2800, 3600, 3200, 4000, "C") + [F.seg("C", (2800, 3600), (3200, 4000))]
+    r = run(prims)
     col = r["cols"]
-    assert len(col) == 1 and col[0]["EXPOSED_TO_SPACE"]["STATUS"] == "EXPOSED" and abs(col[0]["EXPOSED_TO_SPACE"]["EXPOSED_MM_STRUCTURE_ONLY"] - 1600) <= 1
+    assert len(col) == 1 and col[0]["EXPOSED_TO_SPACE"]["STATUS"] == "EXPOSED" and abs(col[0]["EXPOSED_TO_SPACE"]["EXPOSED_MM_STRUCTURE_ONLY"] - 1200) <= 1
     assert col[0]["TRADE_ELIGIBILITY"]["COLUMN_BONDING"] == "CANDIDATE_LINEAR_RUN" and col[0]["TRADE_ELIGIBILITY"]["WALL_PLASTER"] == "NONE"
+    assert abs(r["spaces"][0]["MATERIAL_BOUNDARY_MM"] - (20000 - 400 + 1200)) <= 30
     assert col[0]["OBJECT_EXISTS"]["STATUS"] == "ESTABLISHED" and not col[0]["HOSTS_WALL"]
 
 
