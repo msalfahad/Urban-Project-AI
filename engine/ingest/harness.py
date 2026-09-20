@@ -80,6 +80,12 @@ class Run:
                 del decoded
                 sid = ids.sheet_id(rec["SHA256"], "MODEL")
                 sheets.append(dict(rec, SHEET_ID=sid, PAGE="MODEL", TEXT_LAYER_AVAILABLE=bool(n.texts), COUNTS={"PRIMITIVES": len(n.primitives), "TEXTS": len(n.texts), "DIMENSIONS": len(n.dimensions)}))
+            elif src["KIND"] == "PRIMITIVE_JSON":
+                n = primitives_from_json(json.loads(path.read_text("utf-8")), source_file=path.name, source_hash=rec["SHA256"])
+                self.normalized[str(path)] = n
+                self.linetypes[str(path)] = n.notes.get("LINETYPES", {})
+                sid = ids.sheet_id(rec["SHA256"], "MODEL")
+                sheets.append(dict(rec, SHEET_ID=sid, PAGE="MODEL", TEXT_LAYER_AVAILABLE=bool(n.texts), COUNTS={"PRIMITIVES": len(n.primitives), "TEXTS": len(n.texts), "DIMENSIONS": len(n.dimensions)}))
             elif src["KIND"] == "PDF":
                 import pymupdf
                 doc = pymupdf.open(str(path))
@@ -305,6 +311,35 @@ class Run:
             written[name] = str(p)
         (out / "HARNESS_METRICS.json").write_text(json.dumps(self.metrics, indent=1, default=_json_default), "utf-8")
         return written
+
+
+def primitives_from_json(doc, *, source_file="", source_hash=""):
+    """A NormalizedDrawing from a plain JSON document: {"insunits": 4, "dimlfac": 1.0, "linetypes": {layer: name},
+    "primitives": [{"kind": "SEGMENT"|"ARC"|"CIRCLE", "layer", "handle", "x1","y1","x2","y2" | "cx","cy","r","a0","a1"}],
+    "texts": [{"value","x","y","height","layer","handle"}], "dimensions": [{"x1","y1","x2","y2","display","user_text","layer","handle","type"}]}."""
+    prims, texts, dims = [], [], []
+    for i, p in enumerate(doc.get("primitives", [])):
+        prov = CA.Provenance(handle=int(p.get("handle", i + 1)), entity_type=p["kind"], layer=str(p.get("layer", "0")), source_hash=source_hash[:16])
+        if p["kind"] == "SEGMENT":
+            prims.append(CA.Primitive(kind="SEGMENT", provenance=prov, x1=float(p["x1"]), y1=float(p["y1"]), x2=float(p["x2"]), y2=float(p["y2"])))
+        elif p["kind"] == "ARC":
+            prims.append(CA.Primitive(kind="ARC", provenance=prov, cx=float(p["cx"]), cy=float(p["cy"]), radius=float(p["r"]), start_angle=float(p.get("a0", 0.0)), end_angle=float(p.get("a1", 6.283185307))))
+        elif p["kind"] == "CIRCLE":
+            prims.append(CA.Primitive(kind="CIRCLE", provenance=prov, cx=float(p["cx"]), cy=float(p["cy"]), radius=float(p["r"])))
+    for i, t in enumerate(doc.get("texts", [])):
+        prov = CA.Provenance(handle=int(t.get("handle", 100000 + i)), entity_type="TEXT", layer=str(t.get("layer", "TEXT")), source_hash=source_hash[:16])
+        texts.append(CA.TextObservation(value=str(t["value"]), x=float(t["x"]), y=float(t["y"]), height=float(t.get("height", 250.0)), provenance=prov))
+    dimlfac = float(doc.get("dimlfac", 1.0))
+    for i, d in enumerate(doc.get("dimensions", [])):
+        prov = CA.Provenance(handle=int(d.get("handle", 200000 + i)), entity_type=str(d.get("type", "21")), layer=str(d.get("layer", "DIM")), source_hash=source_hash[:16])
+        geom = math.hypot(float(d["x2"]) - float(d["x1"]), float(d["y2"]) - float(d["y1"]))
+        dims.append(CA.DimensionObservation(geometry_mm=geom, display_value=(None if d.get("display") is None else float(d["display"])), dimlfac=dimlfac, user_text=str(d.get("user_text", "")),
+                                            x1=float(d["x1"]), y1=float(d["y1"]), x2=float(d["x2"]), y2=float(d["y2"]), provenance=prov))
+    ins = doc.get("insunits")
+    n = CA.NormalizedDrawing(source_file=source_file, source_hash=source_hash, drawing_unit=("millimetre" if ins == 4 else "NOT_ESTABLISHED" if ins in (None, 0) else f"insunits_code_{ins}"),
+                             insunits_code=ins, dimlfac=dimlfac, primitives=prims, texts=texts, dimensions=dims)
+    n.notes["LINETYPES"] = doc.get("linetypes", {})
+    return n
 
 
 def _json_default(o):

@@ -31,6 +31,11 @@ LEAK_PATTERNS = {
 }
 
 
+# the bilingual room ontology is generic vocabulary by design (a dictionary of CLASSES, not one project's rooms); it is the only file
+# allowed to carry room-name literals, and it may carry no coordinates, ids or paths
+PATTERN_EXEMPTIONS = {"ROOM_NAME_LITERAL": ("engine/ingest/semantics.py",)}
+
+
 def scan_engine(paths):
     """Scan engine source files for the generic leakage shapes; returns hits per file."""
     hits = []
@@ -38,6 +43,8 @@ def scan_engine(paths):
         text = Path(p).read_text("utf-8")
         for i, line in enumerate(text.splitlines(), 1):
             for name, rx in LEAK_PATTERNS.items():
+                if str(p).replace("\\", "/") in PATTERN_EXEMPTIONS.get(name, ()):
+                    continue
                 m = rx.search(line)
                 if m:
                     hits.append({"FILE": str(p), "LINE": i, "PATTERN": name, "MATCH": m.group(0)})

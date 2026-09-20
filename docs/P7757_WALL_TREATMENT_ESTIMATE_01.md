@@ -301,3 +301,22 @@ layer overrides that the supervised configuration carries. All twelve
 Project-3 gates pass. Freeze: `FREEZE_PA05.json`. The second architecture
 review (`pa05/ARCHITECTURE_REVIEW_PA05.json` / `.md`) is stored beside the
 artifacts and kept out of the freeze, as in PA04.
+
+## Production bridge (tenth checkpoint, PA06)
+
+PA06 built the generic bridge from source files to the deterministic quantity engines: a source-unit
+resolver, a primitive role classifier, block / hatch / structural object roles, a wall-material continuity
+site model with fixtures A-J, cells and physical regions, vector wall length per space, a storey / copy
+family register, hybrid sheet roles, a bilingual semantic ontology, one canonical state lattice with
+boundary adapters (lm is a presentation alias of m), and the quantity bridge to
+`qs_measurement_region` / `plaster_trade_engine`. P7757 ran as regression data through
+`research/qs_wall_treatment_01/pa06/run.py` with freeze barriers after geometry and topology:
+9369 primitives, 1991 material entities,
+3522 hatch strokes rejected, 25 topology cells in
+23 physical regions, 2535.21 m of
+vector material wall (a structure metric, not a quantity), 16 functional zones,
+453 measurement closures, quantity-input lines by state
+{"NOT_ESTABLISHED": 36, "PROVISIONAL": 50}. The blind rebuild v2 (P7757_BLIND_REBUILD_02, sources only,
+audit hook, tolerances declared before the run) passed all thirteen criteria. The cold architecture review
+and PROJECT_3_ENTRY_GATE_V2 are recorded beside the artifacts; the gate is not READY while the review names
+a failure able to produce a silently wrong quantity. Freeze: `FREEZE_PA06.json`.

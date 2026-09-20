@@ -51,8 +51,11 @@ def deterministic_role(ev):
     if role is None:
         # geometry hints (CAD views with no title text): door swings + closed rooms say plan family; level marks without doors say vertical view
         doors, closed, levels = ev.get("DOOR_ARC_COUNT") or 0, ev.get("CLOSED_SPACE_COUNT") or 0, ev.get("LEVEL_SYMBOL_COUNT") or 0
-        if doors >= 3 and closed >= 3:
-            why.append(f"geometry hint: {doors} door swings and {closed} closed spaces -> plan family (floor vs roof undecidable from geometry)")
+        if doors >= 1 and closed >= 2:
+            why.append(f"geometry hint: {doors} door swing(s) and {closed} closed spaces -> plan family (floor vs roof undecidable from geometry)")
+            return "FLOOR_PLAN", why, "INCOMPLETE"
+        if closed >= 2 and (ev.get("ROOM_LABEL_COUNT") or 0) >= 2 and ev.get("DIMENSION_ORIENTATION") != "VERTICAL_DOMINANT":
+            why.append(f"geometry hint: {closed} closed spaces with {ev.get('ROOM_LABEL_COUNT')} text stamps and no vertical-dominant dimensions -> plan family (no door swings drawn)")
             return "FLOOR_PLAN", why, "INCOMPLETE"
         if levels >= 3 and doors == 0 and ev.get("DIMENSION_ORIENTATION") == "VERTICAL_DOMINANT":
             why.append(f"geometry hint: {levels} level marks, no door swings, vertical dimensions -> vertical view (elevation vs section undecidable)")

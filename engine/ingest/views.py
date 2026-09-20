@@ -30,26 +30,30 @@ def _bbox(p):
     return None
 
 
-def _split(items, key, gap):
-    items = sorted(items, key=key)
-    groups, cur = [], [items[0]]
+def _split(items, lo_key, hi_key, gap):
+    """Interval merging along one axis: an entity joins the open group when its extent starts within `gap` of the
+    group's running extent (extents, not centres, so a long wall stays with the plan it bounds)."""
+    if not items:
+        return []
+    items = sorted(items, key=lo_key)
+    groups, cur, cur_hi = [], [items[0]], hi_key(items[0])
     for it in items[1:]:
-        if key(it) - key(cur[-1]) > gap:
+        if lo_key(it) - cur_hi > gap:
             groups.append(cur)
-            cur = [it]
+            cur, cur_hi = [it], hi_key(it)
         else:
-            cur.append(it)
+            cur.append(it); cur_hi = max(cur_hi, hi_key(it))
     groups.append(cur)
     return groups
 
 
 def find_views(primitives, sheet, gap_mm=GAP_MM, min_entities=50):
-    """Cluster primitives into views by x then y gaps of their bbox centres."""
+    """Cluster primitives into views by x then y gaps between entity extents."""
     boxed = [(p, _bbox(p)) for p in primitives if _bbox(p) is not None]
     boxed = [(p, b) for p, b in boxed if (b[2] - b[0]) < 200000 and (b[3] - b[1]) < 200000]     # drop sheet frames / giant lines
     views = []
-    for gx in _split(boxed, lambda t: (t[1][0] + t[1][2]) / 2, gap_mm):
-        for gy in _split(gx, lambda t: (t[1][1] + t[1][3]) / 2, gap_mm):
+    for gx in _split(boxed, lambda t: t[1][0], lambda t: t[1][2], gap_mm):
+        for gy in _split(gx, lambda t: t[1][1], lambda t: t[1][3], gap_mm):
             if len(gy) < min_entities:
                 continue
             x0 = min(b[0] for _, b in gy); y0 = min(b[1] for _, b in gy); x1 = max(b[2] for _, b in gy); y1 = max(b[3] for _, b in gy)
@@ -128,7 +132,8 @@ def layer_profile(normalized, overrides=None, linetypes=None):
     door = arcs.most_common(1)[0][0] if arcs else None
     dims = Counter(d.provenance.layer for d in normalized.dimensions)
     texts = Counter(t.provenance.layer for t in normalized.texts)
-    roles = {"WALL_LAYERS": walls, "DOOR_LAYER": door, "DIMENSION_LAYERS": [l for l, _ in dims.most_common(2)], "TEXT_LAYERS": [l for l, _ in texts.most_common(3)],
+    total_dims = sum(dims.values()) or 1
+    roles = {"WALL_LAYERS": walls, "DOOR_LAYER": door, "DIMENSION_LAYERS": [l for l, c in dims.most_common(3) if c >= 0.2 * total_dims], "TEXT_LAYERS": [l for l, _ in texts.most_common(3)],
              "HIDDEN_LAYERS": hidden, "GLAZING_LAYERS": [], "LINETYPES": linetypes,
              "EVIDENCE": {"wall_like_from_profile": list(prof.wall_like_layers()), "hidden_by_layer_table_linetype": hidden, "door_arc_votes": dict(arcs), "profile_hash": prof.profile_hash()}, "OVERRIDES": {}}
     for k, v in (overrides or {}).items():

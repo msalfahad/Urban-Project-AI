@@ -3915,3 +3915,90 @@ structure only: face and opening identity, curve radii, dimension
 ownership, plan-copy offsets, space topology and measurement-region
 reversibility. Quantities are never compared and the benchmark is never
 opened.
+
+## §160 — A unit is a resolved fact with a status, never an assumption that numbers look like millimetres
+
+`engine/ingest/source_units.py` resolves the source unit by priority: INSUNITS, dimension texts that carry a
+unit, declared metadata, a second authored dimension as cross-check, else NOT_ESTABLISHED. Door-swing radii
+and paired wall thicknesses are secondary checks of the candidate, never the selector; a contradiction is
+CONFLICT. The drawing is scaled to millimetres before any threshold, so the same villa in mm and in m yields
+the same material lengths, and no quantity line consumes a length from a source whose unit status is not
+acceptable: such lines are SOURCE_REQUIRED.
+
+## §161 — A layer name never decides a role; hatch strokes and door swings are not walls
+
+`engine/ingest/primitive_roles.py` classifies every primitive from layer statistics and linetypes, entity
+kind, block membership, repetition families (hatch, treads), paired-face geometry, arc radius and hinge
+topology, dimension origins and closed loops, with ROLE_STATUS, ROLE_EVIDENCE and a confidence class, never a
+number. On P7757 the raw wall-layer candidates (9369 primitives) reduce to
+1991 material entities: 3522 hatch strokes,
+90 door swings and leaves and 1326 annotation
+entities are rejected by role and reported, not silently kept.
+
+## §162 — A gap is a site only inside a host-wall context; collinear stubs across a corridor are not openings
+
+`engine/ingest/wall_continuity.py` builds wall bands from paired faces, attaches fragments, and finds sites
+where a band's material coverage stops and resumes along its own axis. Both terminations at crossing walls
+mean two walls meeting a corridor wall, recorded as COLLINEAR_STUBS_NOT_A_SITE. Classes are
+CONFIRMED_DOOR_OPENING, CONFIRMED_WINDOW_OPENING, CONFIRMED_OPEN_PASSAGE, MATERIAL_CONTINUITY_GAP,
+CAD_JUNCTION_GAP, TRUE_WALL_TERMINATION and UNRESOLVED_SITE, each with door, window, junction and free-space
+evidence. On P7757: 13 doors, 1 window,
+21 continuity gaps, 25 junction gaps,
+48 unresolved sites, 399 terminations and
+49 non-sites, against PA05's 578 sites of which 173 were unresolved and all of
+which were closed before flooding. The counts were not tuned.
+
+## §163 — Physical regions stop at physical separators; topology cells also stop at unresolved sites
+
+`engine/ingest/spaces_v2.py` floods twice: physical separators (material faces, columns, glazing, confirmed
+door and window chords, continuing material) bound PHYSICAL REGIONS; topology CELLS additionally stop at
+unresolved and passage sites, so an open-plan region keeps its cells for measurement while the physical
+record says the cells are one region. Cells that vanish under a 300 mm erosion are wall interiors, not
+spaces; cells touching the view edge are exterior. A view whose role stays UNKNOWN produces no spaces.
+
+## §164 — A space's wall length is the developed length of its vector faces, never a perimeter or a raster run
+
+`engine/ingest/space_boundary.py` walks every material face along its own geometry, assigns each sample to
+the cell beside it, snaps run ends to the vector crossing of the neighbouring face (the true inner corner)
+and reports per cell the material, column, glazing and site-chord lengths with LENGTH_BASIS = VECTOR_FACES.
+Rotated rooms return the same length at every angle and curved rooms return the arc's developed length. The
+raster grid decides only which cell lies beside a sample; the traced boundary chain gives the measurement
+layer an ordered ring in which an unmatched run becomes an UNRESOLVED_EDGE.
+
+## §165 — Storeys are copy families ordered by level text, or FLOOR_UNORDERED
+
+`engine/ingest/storeys.py` links plan copies by endpoint voting (translation, or a 90-degree rotation that
+must be twice as strong), reads level marks and floor words inside each copy, and names storeys GROUND /
+FIRST / ROOF only from text or owner input. Copies without level text are FLOOR_UNORDERED with
+STOREY_RELATION_STATUS = ORDER_NOT_ESTABLISHED; nothing is inferred from coordinate order. On P7757 only the
+ground copy carries level marks, so its two upper copies stay unordered and the external storey height cannot
+be selected for them.
+
+## §166 — Identity attaches to existing cells; text never creates geometry; AI reads never become source text
+
+`engine/ingest/semantics.py` classifies each label (level mark, number, site label, room name, undecodable
+SHX rendering) in Arabic or English against a bilingual class dictionary that keeps the raw label. A room
+name becomes a functional zone of the cell it falls in; several zones in one physical region are allowed;
+a CONFLICT is two labels at one place naming different classes. Owner labels are OWNER_CONFIRMED, AI reads
+are AI_INTERPRETED, and only text drawn in the source is SOURCE_TEXT_ESTABLISHED. Undecodable stamps stay
+UNRESOLVED and hold the identity-dependent heights at NOT_ESTABLISHED.
+
+## §167 — The quantity bridge adapts registers to the tested engines and emits a trace before any number
+
+`engine/ingest/bridge.py` hands each in-range cell's traced boundary to `engine/qs_measurement_region.py`
+(closures zero-material and hash-reversible), and its formed region to `engine/plaster_trade_engine.py`,
+with the governing height chosen per trade and identity: the normal internal height applies only to a
+single established dry or circulation room; reception, saloon, stair, void, shaft and exterior classes,
+wet-room tartusha and parapets need their own parameter or a section. Every line carries its edge ids,
+height parameter and source type, opening deduction sources, engine and rule version, basis, canonical
+status and the five status dimensions; the trace refuses a total. Unresolved sites leave the region
+unformed and the line NOT_ESTABLISHED, never a plausible number.
+
+## §168 — The blind gate declares its tolerances before the run and never weakens them afterwards
+
+`research/qs_wall_treatment_01/pa06/blind_v2.py` freezes the supervised PA06 reference by hash, runs the
+pipeline on sources only under an audit hook, and compares thirteen predeclared criteria A-M (units, copy
+transforms, role counts, material developed length, site classes, space counts, vector wall length, curve
+radii, dimension ownership, storey topology, closure reversibility, semantic anchors, quantity-trace
+structure). A mis-specified criterion becomes APPARATUS_DEFECT; a failing one is never edited into a pass.
+`engine/ingest/gates_v2.py` adds the cold review as a condition: the mechanical PA05 12/12 is not reused.

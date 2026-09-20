@@ -81,6 +81,10 @@ CODE = [
     "engine/ingest/faces.py", "engine/ingest/opening_sites.py", "engine/ingest/spaces.py", "engine/ingest/measurement_regions.py", "engine/ingest/harness.py",
     "engine/ingest/gates.py", "research/qs_wall_treatment_01/pa05/config_p7757.py", "research/qs_wall_treatment_01/pa05/migration.py",
     "research/qs_wall_treatment_01/pa05/blind_rebuild.py", "research/qs_wall_treatment_01/pa05/run.py", "tests/test_pa05_ingest.py", "tests/data/p7757_pa05_expectations.json",
+    "engine/ingest/source_units.py", "engine/ingest/primitive_roles.py", "engine/ingest/assemblies.py", "engine/ingest/wall_continuity.py", "engine/ingest/spaces_v2.py",
+    "engine/ingest/space_boundary.py", "engine/ingest/storeys.py", "engine/ingest/semantics.py", "engine/ingest/states.py", "engine/ingest/bridge.py", "engine/ingest/pipeline.py",
+    "engine/ingest/gates_v2.py", "research/qs_wall_treatment_01/pa06/config.py", "research/qs_wall_treatment_01/pa06/blind_v2.py", "research/qs_wall_treatment_01/pa06/run.py",
+    "research/qs_wall_treatment_01/pa06/report.py", "tests/test_pa06_topology.py", "tests/test_pa06_pipeline.py",
 ]
 ARTIFACTS_ESTIMATE = [
     "P7757_OWNER_PARAMETERS.json", "OVERLAP_AUDIT.json",
@@ -142,6 +146,13 @@ ARTIFACTS_PA05 = ARTIFACTS_PA04 + ["FREEZE_PA04.json"] + [f"pa05/harness/{a}" fo
     "QA_REPORT.json", "PROJECT_INGESTION_MANIFEST.json")] + [f"pa05/{a}" for a in (
     "P7757_MIGRATION_REPORT.json", "PA05_TEST_RESULTS.json", "BENCHMARK_LEAKAGE_SCAN.json", "PA05_SUCCESS_GATE.json", "P7757_BLIND_REBUILD_RESULT.json",
     "P7757_BLIND_REBUILD_COMPARISON.json", "BLIND_REBUILD_FREEZE_COPY.json", "PROJECT_3_EXECUTABLE_GATES.json", "PA05_METRICS.json")]
+ARTIFACTS_PA06 = ARTIFACTS_PA05 + ["FREEZE_PA05.json"] + [f"pa06/{a}" for a in (
+    "PA06_SOURCE_UNIT_REGISTER.json", "PA06_PRIMITIVE_ROLE_REGISTER.json", "PA06_MATERIAL_GEOMETRY_REGISTER.json", "PA06_TOPOLOGICAL_SITE_REGISTER.json", "PA06_PHYSICAL_SPACE_REGISTER.json",
+    "PA06_SPACE_BOUNDARY_FACE_REGISTER.json", "PA06_SPACE_WALL_LENGTH_REGISTER.json", "PA06_STOREY_REGISTER.json", "PA06_VIEW_COPY_FAMILY_REGISTER.json", "PA06_SHEET_ROLE_REGISTER.json",
+    "PA06_SEMANTIC_ANCHOR_REGISTER.json", "PA06_ASSEMBLY_OBJECT_REGISTER.json", "PA06_STRUCTURAL_OBJECT_REGISTER.json", "PA06_TRADE_MEASUREMENT_REGION_REGISTER.json", "PA06_QUANTITY_INPUT_TRACE.json",
+    "PA06_STATUS_MIGRATION_REPORT.json", "PA06_BLIND_PROTOCOL.json", "PA06_BLIND_RESULT.json", "PA06_BLIND_COMPARISON.json", "PA06_PROJECT_3_ENTRY_GATE_V2.json", "PA06_OWNER_DECISION_QUEUE.json",
+    "PA06_SOURCE_REQUEST_QUEUE.json", "PA06_REVISION_SUPERSESSION_LEDGER.json", "PA06_METRICS.json", "PA06_TEST_RESULTS.json", "PA06_BENCHMARK_LEAKAGE_SCAN.json", "FREEZE_PA06_REFERENCE.json",
+    "supervised/FREEZE_PA06_GEOMETRY.json", "supervised/FREEZE_PA06_TOPOLOGY.json", "PA06_REPORT.md")]
 UPSTREAM = [
     P.TRACE_REGISTER,
     "data/experiments/A21_TRACE_SUFFICIENCY_01/TRACE_PILOT_REPORT.json",
@@ -170,7 +181,7 @@ def _git_head() -> str:
 def freeze(stage: str) -> dict:
     arts = {"estimate": ARTIFACTS_ESTIMATE, "a22": ARTIFACTS_A22, "final": ARTIFACTS_FINAL,
             "dual": ARTIFACTS_DUAL, "owner_evidence": ARTIFACTS_OWNER_EVIDENCE,
-            "se_audit": ARTIFACTS_SE_AUDIT, "assembly": ARTIFACTS_ASSEMBLY, "pa02": ARTIFACTS_PA02, "pa03": ARTIFACTS_PA03, "pa04": ARTIFACTS_PA04, "pa05": ARTIFACTS_PA05}[stage]
+            "se_audit": ARTIFACTS_SE_AUDIT, "assembly": ARTIFACTS_ASSEMBLY, "pa02": ARTIFACTS_PA02, "pa03": ARTIFACTS_PA03, "pa04": ARTIFACTS_PA04, "pa05": ARTIFACTS_PA05, "pa06": ARTIFACTS_PA06}[stage]
     body = {
         "PHASE_ID": P.PHASE_ID, "ARTIFACT": f"FREEZE_{stage.upper()}",
         "STAGE": stage, "GIT_HEAD_AT_FREEZE": _git_head(),
@@ -178,7 +189,7 @@ def freeze(stage: str) -> dict:
         "UPSTREAM_SHA256": {u: (_sha(Path(u)) if Path(u).exists() else None) for u in UPSTREAM},
         "CODE_SHA256": {c: (_sha(Path(c)) if Path(c).exists() else None) for c in CODE},
         "ARTIFACT_SHA256": {a: (_sha(OUT / a) if (OUT / a).exists() else None) for a in arts},
-        "BENCHMARK_OPENED_BEFORE_THIS_FREEZE": stage in ("final", "dual", "owner_evidence", "se_audit", "assembly", "pa02", "pa03", "pa04", "pa05"),
+        "BENCHMARK_OPENED_BEFORE_THIS_FREEZE": stage in ("final", "dual", "owner_evidence", "se_audit", "assembly", "pa02", "pa03", "pa04", "pa05", "pa06"),
         "STANDING_PROHIBITIONS": P.STANDING_PROHIBITIONS,
     }
     missing = [k for k, v in body["ARTIFACT_SHA256"].items() if v is None]

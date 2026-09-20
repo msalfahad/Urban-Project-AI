@@ -4,7 +4,8 @@ fails loudly; m2 and lm never share an additive field."""
 from __future__ import annotations
 
 UNITS = ("mm", "m", "mm2", "m2", "mm3", "m3", "lm", "nr", "kg", "ton", "KWD")
-DIMENSION = {"mm": "L", "m": "L", "lm": "L_RUN", "mm2": "A", "m2": "A", "mm3": "V", "m3": "V", "nr": "N", "kg": "M", "ton": "M", "KWD": "C"}
+DIMENSION = {"mm": "L", "m": "L", "lm": "L", "mm2": "A", "m2": "A", "mm3": "V", "m3": "V", "nr": "N", "kg": "M", "ton": "M", "KWD": "C"}
+PRESENTATION_ALIAS = {"lm": "m"}     # lm is how a running length is PRESENTED; internally it is m with dimension LENGTH
 TO_BASE = {"mm": 0.001, "m": 1.0, "lm": 1.0, "mm2": 1e-6, "m2": 1.0, "mm3": 1e-9, "m3": 1.0, "nr": 1.0, "kg": 1.0, "ton": 1000.0, "KWD": 1.0}
 
 
@@ -14,7 +15,7 @@ class UnitError(ValueError):
 
 class Q:
     """A number with a unit.  Arithmetic across incompatible dimensions raises UnitError;
-    lm (running length of a face / edge) is deliberately NOT additive with m (a coordinate length)."""
+    lm is a presentation alias of m (dimension LENGTH); m and m2 never add."""
 
     __slots__ = ("v", "u")
 
@@ -51,9 +52,6 @@ class Q:
             if DIMENSION[self.u] == "L" and DIMENSION[other.u] == "L":
                 a, b = self.to("m"), other.to("m")
                 return Q(None if a.v is None or b.v is None else a.v * b.v, "m2")
-            if {DIMENSION[self.u], DIMENSION[other.u]} == {"L_RUN", "L"}:
-                a, b = self.to("lm"), other.to("m")
-                return Q(None if a.v is None or b.v is None else a.v * b.v, "m2")
             if {DIMENSION[self.u], DIMENSION[other.u]} == {"A", "L"}:
                 a = self.to("m2") if DIMENSION[self.u] == "A" else other.to("m2")
                 b = other.to("m") if DIMENSION[self.u] == "A" else self.to("m")
@@ -61,7 +59,7 @@ class Q:
         raise UnitError(f"unsupported product {self.u} x {getattr(other, 'u', type(other).__name__)}")
 
     def record(self):
-        return {"VALUE": None if self.v is None else round(self.v, 4), "UNIT": self.u}
+        return {"VALUE": None if self.v is None else round(self.v, 4), "UNIT": self.u, "INTERNAL_UNIT": PRESENTATION_ALIAS.get(self.u, self.u), "DIMENSION": DIMENSION[self.u]}
 
     def __repr__(self):
         return f"Q({self.v}, {self.u})"

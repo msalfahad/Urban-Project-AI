@@ -118,13 +118,13 @@ def test_id_constructors_refuse_unknown_kind_and_never_take_indices():
 def test_units_m2_and_lm_never_add():
     with pytest.raises(U.UnitError):
         U.Q(1.0, "m2") + U.Q(1.0, "lm")
-    with pytest.raises(U.UnitError):
-        U.Q(1.0, "m") + U.Q(1.0, "lm")
+    assert (U.Q(1.0, "m") + U.Q(1.0, "lm")).v == 2.0          # lm is a presentation alias of m (PA06 WS10)
     with pytest.raises(U.UnitError):
         U.total([U.Q(1, "m2"), U.Q(2, "lm")])
     assert (U.Q(3.0, "lm") * U.Q(2.5, "m")).u == "m2" and abs((U.Q(3.0, "lm") * U.Q(2.5, "m")).v - 7.5) < 1e-9
     assert (U.Q(2000, "mm") + U.Q(1, "m")).to("m").v == 3.0
-    assert U.totals_by_unit([U.Q(1, "m2"), U.Q(2, "m2"), U.Q(5, "lm")]) == {"m2": {"VALUE": 3.0, "UNIT": "m2"}, "lm": {"VALUE": 5.0, "UNIT": "lm"}}
+    tb = U.totals_by_unit([U.Q(1, "m2"), U.Q(2, "m2"), U.Q(5, "lm")])
+    assert (tb["m2"]["VALUE"], tb["m2"]["UNIT"], tb["lm"]["VALUE"], tb["lm"]["UNIT"]) == (3.0, "m2", 5.0, "lm")
 
 
 # ------------------------------------------------------------------ §11 status
