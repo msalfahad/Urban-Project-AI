@@ -3679,3 +3679,38 @@ frozen file keeps its hash. An owner question is queued
 (`engine/owner_decision_queue.py`) with options, impact and a card, and the
 run stops only when a decision blocks a large scope or would require
 inventing geometry.
+
+## §142 — A level is a number; what it represents is a separate fact
+
+A roof edge carries eight level fields (`engine/level_identity.py`):
+structural slab, architectural roof, finished roof, waterproofing,
+screed / foam build-up, parapet base, visible-finish face bottom and
+executed-plaster face bottom, each with its own identity status. Two
+measurement bases are kept side by side and never merged: the
+ENGINEERING_VISIBLE_FINISH_BASIS (the face above the finished roof) and the
+CONTRACTOR_EXECUTED_WORK_BASIS (the face plastered on the masonry from the
+slab). They may legitimately start at different levels; a difference
+between them is not an error. The owner is asked for the missing fact (the
+build-up) only after every section, plan, DWG and structural sheet has
+been read for it, and is never asked to pick one of two numbers.
+
+## §143 — A column's plaster girth is the sum of its exposed faces
+
+The structural section and the plasterable girth are different facts
+(`engine/column_faces.py`): each of the four faces carries its own
+exposure, a face buried in or flush with another construction is
+excluded, and the girth is the sum of what remains. A treatment sequence on
+one face (column bonding, then plaster) is two treatment lines on one
+physical area (`engine/wall_treatment_matrix.py`); the area is counted
+once.
+
+## §144 — A void is not a double-height wall until a wall stands on it
+
+An FF opening marked VOID is classified by what bounds it at the upper
+floor: railing line pairs, a stair, an open corridor or a wall. Only a
+wall standing on the void boundary makes a double-height face. On P7757
+the reception void is a stair well bounded by railings, so the reception
+walls are normal-height faces and the "double-height plaster height" was a
+question asked of a wall that does not exist. A stair well is measured as
+per-storey faces from the level chains with its interruptions listed; a
+site record's single 12.90 m line stays a contractor basis.

@@ -63,6 +63,11 @@ CODE = [
     "research/qs_wall_treatment_01/measurement_regions_v4.py", "research/qs_wall_treatment_01/a22_v4.py",
     "research/qs_wall_treatment_01/decision_queue_v4.py", "research/qs_wall_treatment_01/visual_qa_v4.py",
     "research/qs_wall_treatment_01/owner_report_v5.py",
+    "engine/level_identity.py", "engine/column_faces.py", "engine/wall_treatment_matrix.py",
+    "research/qs_wall_treatment_01/pa02_levels_columns.py", "research/qs_wall_treatment_01/pa02_double_height_stair.py",
+    "research/qs_wall_treatment_01/pa02_roof_edges_facade.py", "research/qs_wall_treatment_01/pa02_trades_wet_openings.py",
+    "research/qs_wall_treatment_01/pa02_visual_qa.py", "research/qs_wall_treatment_01/pa02_gate.py",
+    "research/qs_wall_treatment_01/owner_report_v6.py",
 ]
 ARTIFACTS_ESTIMATE = [
     "P7757_OWNER_PARAMETERS.json", "OVERLAP_AUDIT.json",
@@ -98,6 +103,11 @@ ARTIFACTS_ASSEMBLY = ARTIFACTS_SE_AUDIT + [
     "SOURCE_COVERAGE.json", "BENCHMARK_LEAKAGE_GUARD.json", "VISUAL_QA.json",
     "visual_qa/SE_ELEVATION_FACES.png", "visual_qa/ROOF_PLAN_EDGES.png", "visual_qa/GF_PLAN_D2_COLUMN.png",
     "OWNER_REPORT_V5.md"]
+ARTIFACTS_PA02 = ARTIFACTS_ASSEMBLY + [
+    "FREEZE_ASSEMBLY.json", "D1_LEVEL_IDENTITY.json", "COLUMN_FACE_REGISTER.json", "DOUBLE_HEIGHT_AND_STAIR_REGISTERS.json",
+    "ROOF_EDGES_FACADE_FINISH_KERB.json", "TRADES_WET_OPENINGS_FLOORS_COVERAGE.json", "PA02_GATE.json",
+    "A22_RECONCILIATION_REGISTER_v5.json", "VISUAL_QA_PA02.json", "visual_qa/FF_VOID_STAIR.png", "visual_qa/SE_FACADE_OPENINGS.png",
+    "visual_qa/NE_PARAPET_TOP.png", "visual_qa/NW_ROOF_EDGE.png", "OWNER_REPORT_V6.md"]
 UPSTREAM = [
     P.TRACE_REGISTER,
     "data/experiments/A21_TRACE_SUFFICIENCY_01/TRACE_PILOT_REPORT.json",
@@ -126,7 +136,7 @@ def _git_head() -> str:
 def freeze(stage: str) -> dict:
     arts = {"estimate": ARTIFACTS_ESTIMATE, "a22": ARTIFACTS_A22, "final": ARTIFACTS_FINAL,
             "dual": ARTIFACTS_DUAL, "owner_evidence": ARTIFACTS_OWNER_EVIDENCE,
-            "se_audit": ARTIFACTS_SE_AUDIT, "assembly": ARTIFACTS_ASSEMBLY}[stage]
+            "se_audit": ARTIFACTS_SE_AUDIT, "assembly": ARTIFACTS_ASSEMBLY, "pa02": ARTIFACTS_PA02}[stage]
     body = {
         "PHASE_ID": P.PHASE_ID, "ARTIFACT": f"FREEZE_{stage.upper()}",
         "STAGE": stage, "GIT_HEAD_AT_FREEZE": _git_head(),
@@ -134,7 +144,7 @@ def freeze(stage: str) -> dict:
         "UPSTREAM_SHA256": {u: (_sha(Path(u)) if Path(u).exists() else None) for u in UPSTREAM},
         "CODE_SHA256": {c: (_sha(Path(c)) if Path(c).exists() else None) for c in CODE},
         "ARTIFACT_SHA256": {a: (_sha(OUT / a) if (OUT / a).exists() else None) for a in arts},
-        "BENCHMARK_OPENED_BEFORE_THIS_FREEZE": stage in ("final", "dual", "owner_evidence", "se_audit", "assembly"),
+        "BENCHMARK_OPENED_BEFORE_THIS_FREEZE": stage in ("final", "dual", "owner_evidence", "se_audit", "assembly", "pa02"),
         "STANDING_PROHIBITIONS": P.STANDING_PROHIBITIONS,
     }
     missing = [k for k, v in body["ARTIFACT_SHA256"].items() if v is None]

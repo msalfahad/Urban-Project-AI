@@ -90,7 +90,9 @@ def run() -> dict:
     ring_thk_mean = round(sum(ring_thk.values()) / 2, 3)
     ne_len_outer = 18.27
     ne_len_inner = 18.87
-    ne_par_h = extent_m("PAR-07", "x")          # A-A hatched cut: slab top to parapet top
+    ne_par_h_raster = extent_m("PAR-07", "x")   # A-A hatched cut: slab top to the top of the band (1.62 raster)
+    ne_par_h = round(DECL["SOLID_TOP_M"]["LEVEL_M"] - DECL["SLAB_M"]["LEVEL_M"], 2)   # 1.40 face to the band underside: the NE elevation wall top reads +11.27 (band top) by the
+                                                # level-chain scale, and the A-A hatch 1.62 = 1.40 + 0.20 band (CORRECTED from 1.652)
     kerb_h_cut = extent_m("PAR-04", "x")
     SLAB, BASE, TOP, BAND = DECL["SLAB_M"]["LEVEL_M"], DECL["BASE_LINE"]["LEVEL_M"], DECL["SOLID_TOP_M"]["LEVEL_M"], DECL["BAND_M"]["THICKNESS"]
     prov = {"CAD": "ESTABLISHED_FROM_DWG", "CAD_PROPOSED": "PROPOSED_CORRESPONDENCE", "RASTER": "PROVISIONAL",
@@ -197,7 +199,9 @@ def run() -> dict:
          SOURCE_DIMENSION_IDS=["DIM-10", "DIM-11", "DIM-14"], DIMENSION_OWNER_STATUS={"DIM-10": "OWNER_ESTABLISHED", "DIM-11": "OWNER_PROVISIONAL", "DIM-14": "OWNER_PROVISIONAL"})
     comp("NE-RE-SOLID", "SOLID_PARAPET", SOURCE_OBJECT_ID="PAR-03 (plan) / PAR-07 (A-A hatched cut)", SHEET_ID="SECOND_FLOOR_ROOF_PLAN",
          CAD_OBJECT_ID=["CAD-4735", "CAD-4741"], LENGTH={"OUTER_M": ne_len_outer, "ROOF_SIDE_M": ne_len_inner, "SOURCE": "DWG authored lines"},
-         HEIGHT={"A_A_CUT_ABOVE_SLAB_RASTER_M": ne_par_h, "STATUS": "PROVISIONAL (raster; one cut)"}, THICKNESS=0.20,
+         HEIGHT={"A_A_CUT_ABOVE_SLAB_RASTER_M": ne_par_h_raster, "FACE_TO_BAND_UNDERSIDE_M": ne_par_h, "BAND_M": BAND,
+                 "STATUS": "PROVISIONAL (A-A hatch 1.62 = 1.40 face + 0.20 band; NE elevation wall top +11.27 by chain scale)"}, THICKNESS=0.20,
+         COPING_STATUS="CAPPED (band 0.20, as the SE solid portion)",
          MATERIAL_STATUS="SOLID_MASONRY_OR_RC", EXT="ELIGIBLE_PROVISIONAL", INT="ELIGIBLE_PROVISIONAL",
          SOURCE_DIMENSION_IDS=["DIM-01"], PROVENANCE={"NOTE": "neighbour-side parapet; external face faces the neighbour plot"})
     comp("SW-RE-SOLID", "SOLID_PARAPET", SOURCE_OBJECT_ID="PAR-02 (plan)", SHEET_ID="SECOND_FLOOR_ROOF_PLAN",
@@ -269,7 +273,13 @@ def run() -> dict:
          notes=["the external face is continuous with the tower wall below; the +13.90 split is the ENGINEERING convention (DIM-14 chain link, OWNER_PROVISIONAL)"])
     face(face_id="F-NE-SOLID-ROOFSIDE", component_id="NE-RE-SOLID", side="ROOF_SIDE", bottom=SLAB, bottom_source="ESTABLISHED",
          top=round(SLAB + ne_par_h, 3), top_source="PROVISIONAL", material="SOLID_MASONRY_OR_RC", eligibility="ELIGIBLE_PROVISIONAL",
-         length_m=ne_len_inner, length_source="ESTABLISHED_FROM_DWG", notes=["height from the A-A hatched cut (raster); one cut for an 18.9 m run -> PROVISIONAL"])
+         length_m=ne_len_inner, length_source="ESTABLISHED_FROM_DWG", notes=["face to the band underside (+11.10): A-A hatch 1.62 minus the 0.20 band; NE elevation wall top; one cut for an 18.9 m run -> PROVISIONAL"])
+    face(face_id="F-NE-CAP-TOP", component_id="NE-RE-SOLID", side="TOP", bottom=0.0, bottom_source="OWNER_ESTABLISHED", top=0.20,
+         top_source="PROVISIONAL", material="SOLID_PROVISIONAL", eligibility="NOT_ESTABLISHED", length_m=ne_len_outer, length_source="ESTABLISHED_FROM_DWG",
+         notes=["NE coping: the NE elevation's wall top reads +11.10 (no band drawn) while A-A hatches 1.62 above the slab (1.40 + 0.20); whether a band exists on the NE is NOT_ESTABLISHED"])
+    face(face_id="F-NE-CAP-EDGE-ROOFSIDE", component_id="NE-RE-SOLID", side="ROOF_SIDE", bottom=TOP, bottom_source="PROVISIONAL", top=round(TOP + BAND, 2),
+         top_source="PROVISIONAL", material="SOLID_PROVISIONAL", eligibility="NOT_ESTABLISHED", length_m=ne_len_inner, length_source="ESTABLISHED_FROM_DWG",
+         notes=["NE band edge face: existence NOT_ESTABLISHED (see F-NE-CAP-TOP)"])
     face(face_id="F-NE-SOLID-EXT", component_id="NE-RE-SOLID", side="EXTERNAL", bottom=SLAB, bottom_source="ESTABLISHED",
          top=round(SLAB + ne_par_h, 3), top_source="PROVISIONAL", material="SOLID_MASONRY_OR_RC", eligibility="NOT_ESTABLISHED",
          length_m=ne_len_outer, length_source="ESTABLISHED_FROM_DWG", notes=["neighbour side; whether the external face is finished is NOT_ESTABLISHED (boundary wall condition) -> queued",

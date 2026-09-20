@@ -166,3 +166,33 @@ ledger (seven entries, all earlier freezes unchanged), the source coverage,
 the leakage guard (clean) and three visual QA overlays on the original pages
 are frozen in `FREEZE_ASSEMBLY.json`. Estimate v3 stays frozen; v4 adds the
 roof-edge faces and the D2 column as PROVISIONAL lines.
+
+## Second technical pass (sixth checkpoint, PA02)
+
+D1 was rebuilt as a level-identity model: +9.70 is the structural slab and
+parapet base (sections hatch the masonry from the slab top; the structural
+roof sheet prints +9.70 on the slab), +9.88 is a level line drawn 0.16–0.18
+above the slab on two different edges (the SE raster and the DWG's NW
+elevation) with no build-up drawn anywhere; its identity stays
+NOT_ESTABLISHED after source exhaustion, both bases are carried (1.22 / 1.40
+on the SE solid portion, 0.63 m² apart) and the owner is asked for the roof
+build-up, not for a choice. The DWG elevation blob was corrected from "SE,
+mirrored" to the NORTH WEST elevation (its printed 155 / 269 / 305 / 230
+match page 6). The column girth was rebuilt face by face (LOOP-059: four
+exposed faces, 1.80 lm). The FF void over the reception is a stair well
+bounded by railings and the curved stair, so no double-height wall exists;
+the block stair well (printed 2.50 × 6.45) is measured as per-storey faces
+(93.1 / 75.2 / 75.2 m² gross, PROVISIONAL, interruptions listed, underside
+not established). The NE parapet was corrected to a 1.40 face plus a 0.20
+band (A-A hatch 1.62; NE elevation top +11.27), the NW sea-view element is a
+lattice balustrade on a low kerb (page 6), the SW parapet height comes from
+the SE elevation's end-on view (~1.35 above the base line, PROPOSED), the
+annex and tower edges are registered. SE façade openings were read on the
+native page with the printed dimensions (arches as rectangle + semicircle);
+the net faces are GEOMETRIC_REFERENCE_ONLY because the external finish
+system is unknown (one element, the entrance arch, is confirmed cladding).
+Wet rooms carry E1.4 chain lengths (59.2 lm GF, PROVISIONAL) with areas
+NOT_ESTABLISHED; the project opening register holds 35 openings; profile
+steel, floor-by-floor output and a coverage matrix are produced. The owner
+queue was rebuilt to five items, none blocking. Freeze:
+`FREEZE_PA02.json`.
