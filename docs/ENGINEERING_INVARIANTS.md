@@ -3766,3 +3766,40 @@ has zero plasterable face and its kerb is a separate component; a thin
 element between two flights becomes a plaster wall only with role
 evidence.
 
+## §148 — A region id is not an identity; an anchor is
+
+Regions flood-filled between wall and door lines (`engine/plan_regions.py`)
+are numbered by traversal order, which changes whenever the barrier grid
+changes. Room identity, challenge kits and reconciliations key on a CAD
+anchor point inside the region, never on the run's id. A region that spans
+several printed labels is an OPEN_GROUP whose face lengths are counted
+once and whose per-room attribution stays NOT_ESTABLISHED; the flood fill
+cannot distinguish a missing door leaf from a real open edge, so such
+groups go to a reader or to the owner.
+
+## §149 — A cold challenge is reconciled by authority, never by vote
+
+A high-impact reading (new room or void identity, double height, a curve
+over 2 m², a façade or parapet over 5 m², structural face ownership, a
+project-wide rule, any source disagreement) gets an independent reader that
+sees the sources and the question only. `engine/cold_challenge.py` compares
+the two readings field by field: AGREE, DISAGREE, PRIMARY_ONLY,
+CHALLENGER_ONLY or AGREE_ON_NUMBER_ONLY (same number, incompatible basis).
+Every open field names the authority that settles it (DWG, printed
+dimension, section, structural source, owner evidence) or stays UNRESOLVED.
+On P7757 the DWG jamb lines settled the NW window height against both
+readers, and the challenger's section-elevation finding withdrew an
+"opening" that was an interior door in a cut storey. The kit a reader
+receives is frozen before the reader starts.
+
+## §150 — Heights are scoped parameters; ceilings and floors are derived regions
+
+`engine/height_parameters.py` holds one record per scope (value, source,
+status, effective scope, owner override, revision); no module carries a
+global plaster height, and a scope without a value still yields linear
+metres. A ceiling region starts from the floor region and deducts stair
+openings, voids, double-height zones and shafts; it is never set equal to
+the floor. A floor region is geometry only until a material is
+established: physical space, functional zone and trade measurement zone are
+three different partitions.
+

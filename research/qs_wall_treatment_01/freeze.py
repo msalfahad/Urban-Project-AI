@@ -71,6 +71,11 @@ CODE = [
     "engine/source_review.py",
     "research/qs_wall_treatment_01/pa03_source_review.py", "research/qs_wall_treatment_01/pa03_visual_qa.py",
     "research/qs_wall_treatment_01/pa03_gate.py", "research/qs_wall_treatment_01/owner_report_v7.py",
+    "engine/plan_regions.py", "engine/height_parameters.py", "engine/self_checks.py", "engine/cold_challenge.py",
+    "research/qs_wall_treatment_01/pa04/common.py", "research/qs_wall_treatment_01/pa04/rooms.py", "research/qs_wall_treatment_01/pa04/facades.py",
+    "research/qs_wall_treatment_01/pa04/roof_edges.py", "research/qs_wall_treatment_01/pa04/stairs_v3.py", "research/qs_wall_treatment_01/pa04/structural.py",
+    "research/qs_wall_treatment_01/pa04/openings_v2.py", "research/qs_wall_treatment_01/pa04/heights_treatments.py", "research/qs_wall_treatment_01/pa04/challenges.py",
+    "research/qs_wall_treatment_01/pa04/gate.py", "research/qs_wall_treatment_01/pa04/report_v8.py",
 ]
 ARTIFACTS_ESTIMATE = [
     "P7757_OWNER_PARAMETERS.json", "OVERLAP_AUDIT.json",
@@ -119,6 +124,13 @@ ARTIFACTS_PA03 = ARTIFACTS_PA02 + [
     "visual_qa/source_crops/se_tower_chain.png", "visual_qa/source_crops/se_mb_window.png", "visual_qa/source_crops/se_base_chain.png",
     "visual_qa/source_crops/ne_top_full.png", "visual_qa/source_crops/ne_top_zoomL.png", "visual_qa/source_crops/ne_top_zoomR.png",
     "OWNER_REPORT_V7.md"]
+ARTIFACTS_PA04 = ARTIFACTS_PA03 + ["FREEZE_PA03.json"] + [f"pa04/{a}" for a in (
+    "FF_PHYSICAL_FACE_REGISTER.json", "GF_ROOF_PHYSICAL_FACE_REGISTER.json", "WET_ROOM_REGISTER_V2.json", "CEILING_MEASUREMENT_REGION_REGISTER.json",
+    "FLOOR_MEASUREMENT_REGION_REGISTER.json", "FACADE_OPENINGS_NE_NW_PRIMARY.json", "ROOF_EDGE_REGISTER_V2.json", "STAIR_GEOMETRY_V3.json",
+    "STRUCTURAL_EXPOSURE_REGISTER.json", "OPENING_REGISTER_V2.json", "PROFILE_STEEL_REGISTER_V2.json", "HEIGHT_PARAMETER_TABLE.json",
+    "WALL_TREATMENT_SEQUENCES_V2.json", "COLD_CHALLENGE_RECONCILIATION.json", "CHALLENGER_READINGS.json", "PA04_SELF_CHECKS.json",
+    "A22_RECONCILIATION_REGISTER_v7.json", "COVERAGE_PA04.json", "OWNER_DECISION_QUEUE_V4.json", "PA04_METRICS.json", "PA04_GATE.json",
+    "FABLE_RECOMMENDATIONS.json", "PROJECT_3_ENTRY_CRITERIA.json", "OWNER_REPORT_V8.md")]
 UPSTREAM = [
     P.TRACE_REGISTER,
     "data/experiments/A21_TRACE_SUFFICIENCY_01/TRACE_PILOT_REPORT.json",
@@ -147,7 +159,7 @@ def _git_head() -> str:
 def freeze(stage: str) -> dict:
     arts = {"estimate": ARTIFACTS_ESTIMATE, "a22": ARTIFACTS_A22, "final": ARTIFACTS_FINAL,
             "dual": ARTIFACTS_DUAL, "owner_evidence": ARTIFACTS_OWNER_EVIDENCE,
-            "se_audit": ARTIFACTS_SE_AUDIT, "assembly": ARTIFACTS_ASSEMBLY, "pa02": ARTIFACTS_PA02, "pa03": ARTIFACTS_PA03}[stage]
+            "se_audit": ARTIFACTS_SE_AUDIT, "assembly": ARTIFACTS_ASSEMBLY, "pa02": ARTIFACTS_PA02, "pa03": ARTIFACTS_PA03, "pa04": ARTIFACTS_PA04}[stage]
     body = {
         "PHASE_ID": P.PHASE_ID, "ARTIFACT": f"FREEZE_{stage.upper()}",
         "STAGE": stage, "GIT_HEAD_AT_FREEZE": _git_head(),
@@ -155,7 +167,7 @@ def freeze(stage: str) -> dict:
         "UPSTREAM_SHA256": {u: (_sha(Path(u)) if Path(u).exists() else None) for u in UPSTREAM},
         "CODE_SHA256": {c: (_sha(Path(c)) if Path(c).exists() else None) for c in CODE},
         "ARTIFACT_SHA256": {a: (_sha(OUT / a) if (OUT / a).exists() else None) for a in arts},
-        "BENCHMARK_OPENED_BEFORE_THIS_FREEZE": stage in ("final", "dual", "owner_evidence", "se_audit", "assembly", "pa02", "pa03"),
+        "BENCHMARK_OPENED_BEFORE_THIS_FREEZE": stage in ("final", "dual", "owner_evidence", "se_audit", "assembly", "pa02", "pa03", "pa04"),
         "STANDING_PROHIBITIONS": P.STANDING_PROHIBITIONS,
     }
     missing = [k for k, v in body["ARTIFACT_SHA256"].items() if v is None]

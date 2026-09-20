@@ -242,3 +242,31 @@ QA_RENDER_VALIDITY_REGISTER, PA03_DEPENDENT_QUANTITIES, A22 v6, queue v3
 (six items, none blocking; a new RECEPTION-SECTION-SOURCE information
 item), ledger L-15..L-22. Freeze: `FREEZE_PA03.json`.
 
+## Multi-domain expansion batch (eighth checkpoint, PA04)
+
+PA04 ran seven workstreams as a batch with three cold-challenge readers
+and deterministic reconciliation. Plan regions were flood-filled from the
+DWG wall and door layers (`engine/plan_regions.py`) on all three copies:
+the first floor gives 21 regions with host-wall, door-line and open-edge
+lengths per face (areas withheld: the FF height is NOT_ESTABLISHED); one
+region merges the corridor, living area and two bedrooms because the DWG
+closes no door there. Wet rooms carry host-wall lengths only (no tile
+height invented). The NW elevation's authored DWG dimensions and jamb
+lines fixed the three arched windows (155.2 × 216.1 + semicircle r 0.776)
+and the tower arch (269.1 × 216.1 + segment rise 83.9); the cold challenge
+showed pages 6 and 7 are section-elevations with the ground storey cut,
+so one "door" was withdrawn and GF façade openings stay NOT_ESTABLISHED.
+Roof edges were completed with the full field set (annex run 30.8 m from
+the annex-roof region, heights missing); stair geometry v3 counts 26
+treads on the main stair and gives slope-factor soffits; the beam
+schedules (read visually, no text layer) put CB7 20 × 75 over the D2
+column (exposed height 3.75, area 2.81 m², PROVISIONAL) and CB6 20 × 75 on
+the opening's north edge. The reception challenger agreed with PA03 on
+every plan edge and confirmed that no section cuts the opening. Openings
+v2 unifies 71 records (actual overrides default), profiles v2, treatment
+sequences v2, a scoped height table, ceiling and floor region registers,
+A22 v7 (AGREE_ON_NUMBER_ONLY on the stair-well perimeter), coverage by
+state, queue v4 (seven items, one new: FF-HEIGHT-RULE), metrics,
+recommendations, parallelism classes and Project-3 entry criteria. Freeze:
+`FREEZE_PA04.json`.
+
