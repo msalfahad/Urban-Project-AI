@@ -270,3 +270,8 @@ state, queue v4 (seven items, one new: FF-HEIGHT-RULE), metrics,
 recommendations, parallelism classes and Project-3 entry criteria. Freeze:
 `FREEZE_PA04.json`.
 
+The architecture review (`pa04/ARCHITECTURE_REVIEW_PA04.json` / `.md`, one
+read-only reviewer agent run after the freeze) is stored beside the frozen
+artifacts and deliberately kept out of the freeze list: it edits no
+production data and is advice, not measurement.
+
