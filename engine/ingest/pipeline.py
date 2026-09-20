@@ -164,7 +164,8 @@ class Pipeline(H.Run):
             edges_all.extend(edges); wl_all.extend(SB.wall_lengths(self.cells[v["VIEW_ID"]], self.regions[v["VIEW_ID"]], edges))
         self.registers["PA06_SPACE_BOUNDARY_FACE_REGISTER"] = {"ARTIFACT": "PA06_SPACE_BOUNDARY_FACE_REGISTER", "ROWS": edges_all, "COUNT": len(edges_all), "GEOMETRY_SOURCES": dict(Counter(e["GEOMETRY_SOURCE"] for e in edges_all))}
         self.registers["PA06_SPACE_WALL_LENGTH_REGISTER"] = {"ARTIFACT": "PA06_SPACE_WALL_LENGTH_REGISTER", "ROWS": wl_all,
-                                                             "TOTALS_STRUCTURE_ONLY": {"VECTOR_MATERIAL_WALL_M_IN_RANGE_CELLS": round(sum(w["VECTOR_MATERIAL_WALL_M"] for w in wl_all if w["KIND"] == "TOPOLOGY_CELL" and w["IN_RANGE"]), 3)},
+                                                             "TOTALS_STRUCTURE_ONLY": {"VECTOR_MATERIAL_WALL_M_IN_RANGE_CELLS": round(sum(w["VECTOR_MATERIAL_WALL_M"] for w in wl_all if w["KIND"] == "TOPOLOGY_CELL" and w["IN_RANGE"]), 3),
+                                                                                       "NOTE": "includes exterior cells (the building's outer faces seen from the plot); the interior-only figure is in PA06_QA_REPORT after the space class is known"},
                                                              "POLYGON_PERIMETER_USED": False, "RASTER_RUNS_USED_FOR_LENGTH": False}
 
     def stage_freeze_topology(self):
@@ -208,6 +209,14 @@ class Pipeline(H.Run):
                 undec = sum(1 for r in rows if r["ATTACHED_SPACE_ID"] == c["CELL_ID"] and r["TEXT_ROLE"] == "UNDECODABLE_TEXT")
                 c["SEMANTIC_IDENTITY"] = {"ZONES": [(z["CANONICAL_CLASS"], z["IDENTITY_STATUS"]) for z in zs], "UNDECODABLE_LABELS": undec,
                                           "STATUS": "NONE" if not zs and not undec else ("UNRESOLVED" if not zs else ("SINGLE" if len(zs) == 1 and zs[0]["IDENTITY_STATUS"] != "CONFLICT" else "MULTIPLE"))}
+            # space class: a cell holding site labels (neighbour / street / sea view) or bounded by plot-boundary lines is the exterior, never a room
+            edge_roles = {}
+            for e in self.edges.get(v["VIEW_ID"], []):
+                edge_roles.setdefault(e["SPACE_ID"], set()).add(e["ROLE"])
+            for c in self.cells[v["VIEW_ID"]]:
+                ext = c.get("SITE_LABELS_INSIDE", 0) > 0 or "SITE_BOUNDARY" in edge_roles.get(c["CELL_ID"], set()) or c["TOUCHES_VIEW_EDGE"]
+                c["SPACE_CLASS"] = "EXTERIOR_SITE" if ext else ("INTERIOR" if c["IN_RANGE"] else "OUT_OF_RANGE")
+                c["QUANTITY_ELIGIBLE"] = c["SPACE_CLASS"] == "INTERIOR"
             rows_all.extend(rows); zones_all.extend(zones)
         self.registers["PA06_SEMANTIC_ANCHOR_REGISTER"] = {"ARTIFACT": "PA06_SEMANTIC_ANCHOR_REGISTER", "ROWS": rows_all, "FUNCTIONAL_ZONES": zones_all,
                                                            "COUNTS": {"ANCHORS": len(rows_all), "BY_TEXT_ROLE": dict(Counter(r["TEXT_ROLE"] for r in rows_all)), "BY_IDENTITY_STATUS": dict(Counter(r["IDENTITY_STATUS"] for r in rows_all)),
@@ -239,6 +248,10 @@ class Pipeline(H.Run):
                                 "ANNOTATION_REJECTED": sum(roles.get(k, {}).get("COUNT", 0) for k in ("DIMENSION_LINE", "DIMENSION_EXTENSION", "GRID_OR_LEVEL", "TEXT_OR_LABEL")),
                                 "MATERIAL_ENTITIES": len(mat), "MATERIAL_PROVISIONAL": sum(1 for m in mat if m["ROLE_STATUS"] != "ESTABLISHED"), "UNKNOWN_GEOMETRY": roles.get("UNKNOWN_GEOMETRY", {}).get("COUNT", 0)},
               "SITES": self.registers["PA06_TOPOLOGICAL_SITE_REGISTER"]["SUMMARY"], "SPACES": self.registers["PA06_PHYSICAL_SPACE_REGISTER"]["COUNTS"],
+              "SPACE_CLASSES": dict(Counter(c.get("SPACE_CLASS") for c in self.registers["PA06_PHYSICAL_SPACE_REGISTER"]["CELLS"])),
+              "VECTOR_MATERIAL_WALL_M_INTERIOR_CELLS": round(sum(w["VECTOR_MATERIAL_WALL_M"] for w in self.registers["PA06_SPACE_WALL_LENGTH_REGISTER"]["ROWS"] if w["KIND"] == "TOPOLOGY_CELL"
+                                                              and any(c["CELL_ID"] == w["SPACE_ID"] and c.get("QUANTITY_ELIGIBLE") for c in self.registers["PA06_PHYSICAL_SPACE_REGISTER"]["CELLS"])), 3),
+              "EXTERIOR_CELLS_EXCLUDED_FROM_QUANTITIES": [c["CELL_ID"] for c in self.registers["PA06_PHYSICAL_SPACE_REGISTER"]["CELLS"] if c.get("SPACE_CLASS") == "EXTERIOR_SITE"],
               "QUANTITY_LINES_BY_STATUS": self.registers["PA06_QUANTITY_INPUT_TRACE"]["BY_STATUS"], "VIEWS_WITHOUT_ROLE": [r["VIEW_ID"] for r in self.registers["SHEET_ROLE_REGISTER"]["VIEWS"] if r["FINAL_ROLE"] in ("UNKNOWN", "HUMAN_REVIEW")],
               "STOREYS_WITHOUT_NAME": [r["PLAN_COPY_ID"] for r in self.registers["PA06_STOREY_REGISTER"]["ROWS"] if not r["STOREY_NAME"]]}
         self.registers["PA06_QA_REPORT"] = qa

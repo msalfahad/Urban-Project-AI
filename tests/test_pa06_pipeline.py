@@ -183,3 +183,19 @@ def test_p7757_regression_lessons(p7757):
     assert all((l["HEIGHT_SOURCE"] or {}).get("PARAMETER_ID") != "EXTERNAL_STOREY_HEIGHT_GROUND" for l in R["PA06_QUANTITY_INPUT_TRACE"]["LINES"] if l["TRADE"] == "NORMAL_INTERNAL_PLASTER")
     # open plan: a physical region may hold several functional zones
     assert any(len(x["FUNCTIONAL_ZONES"]) > 1 for x in R["PA06_PHYSICAL_SPACE_REGISTER"]["REGIONS"])
+
+
+def test_exterior_site_cell_gets_no_area_line(tmp_path):
+    """A plot outline around the villa with NEIGHBOUR / STREET stamps forms a closed exterior cell: it must be EXTERIOR_SITE with a NOT_APPLICABLE line, never a provisional floor area."""
+    doc = json.loads(villa(tmp_path).read_text())
+    for a, b in (((-14000, -13000), (26000, -13000)), ((26000, -13000), (26000, 17000)), ((26000, 17000), (-14000, 17000)), ((-14000, 17000), (-14000, -13000))):
+        doc["primitives"].append({"kind": "SEGMENT", "layer": "SITE", "x1": a[0], "y1": a[1], "x2": b[0], "y2": b[1]})       # 40 x 30 m plot on its own layer
+    doc["texts"] += [{"value": "NEIGHBOUR", "x": -8000, "y": 12000}, {"value": "STREET", "x": 20000, "y": -8000}]
+    p = tmp_path / "plot.json"; p.write_text(json.dumps(doc), "utf-8")
+    r = PL.run(cfg(p))
+    cells = [c for c in r.registers["PA06_PHYSICAL_SPACE_REGISTER"]["CELLS"] if c["IN_RANGE"]]
+    ext = [c for c in cells if c["SPACE_CLASS"] == "EXTERIOR_SITE"]
+    assert len(ext) == 1 and ext[0]["AREA_M2"] > 200 and len([c for c in cells if c["SPACE_CLASS"] == "INTERIOR"]) == 2
+    lines = [l for l in r.registers["PA06_QUANTITY_INPUT_TRACE"]["LINES"] if l["CELL_ID"] == ext[0]["CELL_ID"]]
+    assert lines and all(l["QUANTITY_STATUS"] == "NOT_APPLICABLE" and l["AREA_M2_PRINCIPAL"] is None for l in lines)
+    assert not any(l["TRADE"] in ("FLOOR_AREA", "CEILING_AREA") for l in lines)

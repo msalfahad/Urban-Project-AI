@@ -320,3 +320,11 @@ vector material wall (a structure metric, not a quantity), 16 functional zones,
 audit hook, tolerances declared before the run) passed all thirteen criteria. The cold architecture review
 and PROJECT_3_ENTRY_GATE_V2 are recorded beside the artifacts; the gate is not READY while the review names
 a failure able to produce a silently wrong quantity. Freeze: `FREEZE_PA06.json`.
+
+After the first PA06 freeze an apparatus defect was found: closed plot cells between the site boundary and
+the building carried PROVISIONAL floor and ceiling area lines (a plot area presented as a floor). The fix is
+generic (SPACE_CLASS = EXTERIOR_SITE from site labels inside the cell, plot-boundary edges or the view edge;
+such cells get NOT_APPLICABLE lines and are excluded from interior wall totals). The corrected run was
+written to `pa06r1/` with its own blind rebuild (P7757_BLIND_REBUILD_PA06R1) and frozen as
+`FREEZE_PA06R1.json`; `FREEZE_PA06.json` and `pa06/` are kept unchanged as history and the supersession is
+recorded in the PA06 ledger.

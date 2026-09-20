@@ -88,7 +88,9 @@ def main():
         {"SUPERSEDED": "pa05/harness/PHYSICAL_SPACE_REGISTER WALL_BOUNDARY_LM (raster runs)", "BY": "PA06_SPACE_WALL_LENGTH_REGISTER (vector faces)", "REASON": "FM-P5-02"},
         {"SUPERSEDED": "pa05/harness/ATOMIC_FACE_REGISTER as material", "BY": "PA06_MATERIAL_GEOMETRY_REGISTER (role-filtered)", "REASON": "FM-P5-03"},
         {"SUPERSEDED": "PA05 config VIEW_ASSIGNMENTS / LAYER_OVERRIDES", "BY": "PA06_STOREY_REGISTER + layer-table linetypes", "REASON": "FM-P5-05 / FM-P5-11"},
-        {"SUPERSEDED": "PA05 blind gate (4 must-agree topics)", "BY": "PA06 blind gate v2 (A-M predeclared tolerances)", "REASON": "FM-P5-14"}], "FROZEN_ARTIFACTS_REWRITTEN": False})
+        {"SUPERSEDED": "PA05 blind gate (4 must-agree topics)", "BY": "PA06 blind gate v2 (A-M predeclared tolerances)", "REASON": "FM-P5-14"},
+        {"SUPERSEDED": "pa06/ (FREEZE_PA06): exterior plot cells carried PROVISIONAL floor / ceiling area lines", "BY": "pa06r1/ (FREEZE_PA06R1): SPACE_CLASS EXTERIOR_SITE, NOT_APPLICABLE lines", "REASON": "APPARATUS_DEFECT found after the first freeze; the first freeze is kept as history"}],
+        "FROZEN_ARTIFACTS_REWRITTEN": False})
     tests, rc = run_tests(); write("PA06_TEST_RESULTS", {"ARTIFACT": "PA06_TEST_RESULTS", "RESULTS": tests, "RETURN_CODE": rc, "COUNTS": dict(Counter("PASS" if v else "FAIL" for v in tests.values()))})
     scan = {"CLEAN": True, "HITS": {}}
     for name in REQUIRED:
@@ -107,7 +109,7 @@ def main():
     # metrics (counts, not a score)
     roles = R["PA06_PRIMITIVE_ROLE_REGISTER"]["BY_ROLE"]; qa = R["PA06_QA_REPORT"]; wl = R["PA06_SPACE_WALL_LENGTH_REGISTER"]["ROWS"]; sem = R["PA06_SEMANTIC_ANCHOR_REGISTER"]
     cells = [c for c in R["PA06_PHYSICAL_SPACE_REGISTER"]["CELLS"] if c["IN_RANGE"]]
-    metrics = {"ARTIFACT": "PA06_METRICS", "RAW_PRIMITIVES": R["PA06_PRIMITIVE_ROLE_REGISTER"]["COUNT"], "ROLE_FILTERED_MATERIAL_PRIMITIVES": qa["CONTAMINATION"]["MATERIAL_ENTITIES"],
+    metrics = {"ARTIFACT": "PA06_METRICS", "OUTPUT_TAG": C6.TAG, "VECTOR_MATERIAL_WALL_M_INTERIOR_CELLS": qa.get("VECTOR_MATERIAL_WALL_M_INTERIOR_CELLS"), "SPACE_CLASSES": qa.get("SPACE_CLASSES"), "RAW_PRIMITIVES": R["PA06_PRIMITIVE_ROLE_REGISTER"]["COUNT"], "ROLE_FILTERED_MATERIAL_PRIMITIVES": qa["CONTAMINATION"]["MATERIAL_ENTITIES"],
                "HATCH_STROKES_REJECTED": qa["CONTAMINATION"]["HATCH_STROKES_REJECTED"], "DOOR_SWINGS_REJECTED": qa["CONTAMINATION"]["DOOR_SWINGS_REJECTED"], "ANNOTATION_GEOMETRY_REJECTED": qa["CONTAMINATION"]["ANNOTATION_REJECTED"],
                "MATERIAL_WALL_FACES": roles.get("MATERIAL_WALL_FACE", {}).get("COUNT", 0), "CURVED_MATERIAL_FACES": sum(1 for m in R["PA06_MATERIAL_GEOMETRY_REGISTER"]["ROWS"] if m["KIND"] in ("ARC", "CIRCLE")),
                "TOPOLOGICAL_SITES_BY_CLASS": R["PA06_TOPOLOGICAL_SITE_REGISTER"]["SUMMARY"], "NON_SITES_COLLINEAR_STUBS": len(R["PA06_TOPOLOGICAL_SITE_REGISTER"]["NON_SITES"]),

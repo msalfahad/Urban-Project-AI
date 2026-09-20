@@ -59,6 +59,14 @@ def build(cells, regions, edges, chains_by_cell, sites_by_id, storey_of_cell, re
     for c in cells:
         if not c["IN_RANGE"]:
             continue
+        if not c.get("QUANTITY_ELIGIBLE", c["IN_RANGE"]):
+            trace.append({"LINE_ID": ids.make_id("TRADE_ZONE", c["CELL_ID"], "EXTERIOR", "LINE"), "CELL_ID": c["CELL_ID"], "PHYSICAL_SPACE_ID": c.get("PHYSICAL_SPACE_ID"), "STOREY": storey_of_cell.get(c["CELL_ID"]),
+                          "TRADE": "NONE", "TREATMENT": None, "MEASUREMENT_BASIS": None, "REGION_STATUS": "NOT_A_ROOM", "REGION_REASONS": [{"REASON": "EXTERIOR_SITE_CELL", "EVIDENCE": {"SITE_LABELS_INSIDE": c.get("SITE_LABELS_INSIDE"), "SPACE_CLASS": c.get("SPACE_CLASS")}}],
+                          "LENGTH_GEOMETRY": None, "HEIGHT_SOURCE": None, "OPENING_DEDUCTION_SOURCE": [], "TRADE_RULE": None, "SEMANTIC_IDENTITY": c.get("SEMANTIC_IDENTITY"), "AREA_M2_PRINCIPAL": None,
+                          "QUANTITY_STATE_ENGINE": None, "QUANTITY_STATUS": "NOT_APPLICABLE", "STATUS_DIMENSIONS": STS.record(TOPOLOGY_STATUS="SOURCE_ESTABLISHED", QUANTITY_STATUS="NOT_APPLICABLE"),
+                          "PROVENANCE": {"REGISTERS": ["PA06_PHYSICAL_SPACE_REGISTER", "PA06_SEMANTIC_ANCHOR_REGISTER"]}, "ENGINE_SHEET": None, "BARE_NUMBER": False,
+                          "NOTE": "exterior cell (site labels inside / plot boundary / view edge): external faces belong to the EXTERNAL_PLASTER adapter, no internal or floor line"})
+            continue
         chains = chains_by_cell.get(c["CELL_ID"], [])
         sem = c.get("SEMANTIC_IDENTITY")
         storey = storey_of_cell.get(c["CELL_ID"])
@@ -127,7 +135,7 @@ def build(cells, regions, edges, chains_by_cell, sites_by_id, storey_of_cell, re
                           "ENGINE_SHEET": sheet, "BARE_NUMBER": False})
     # floor / ceiling area lines (raster cell area; provisional by construction)
     for c in cells:
-        if not c["IN_RANGE"]:
+        if not c["IN_RANGE"] or not c.get("QUANTITY_ELIGIBLE", c["IN_RANGE"]):
             continue
         sem = c.get("SEMANTIC_IDENTITY") or {}
         void_like = any(z[0] in ("VOID", "STAIR", "ELEVATOR") for z in sem.get("ZONES", []))

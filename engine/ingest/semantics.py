@@ -131,6 +131,12 @@ def anchors(view, cells, regions, grids, texts, owner_labels=(), ai_labels=()):
             zones.append({"FUNCTIONAL_ZONE_ID": ids.make_id("FUNCTIONAL_ZONE", cid, cls), "CELL_ID": cid, "PHYSICAL_SPACE_ID": next(a["ATTACHED_PHYSICAL_SPACE_ID"] for a in al),
                           "CANONICAL_CLASS": cls, "ANCHORS": [a["ANCHOR_ID"] for a in members], "IDENTITY_STATUS": st, "RAW_LABELS": [a["RAW_TEXT"] for a in members],
                           "SHARES_CELL_WITH": [c for c in classes if c != cls]})
+    site_hits = {}
+    for r in rows:
+        if r["TEXT_ROLE"] == "SITE_LABEL" and r["ATTACHED_SPACE_ID"]:
+            site_hits[r["ATTACHED_SPACE_ID"]] = site_hits.get(r["ATTACHED_SPACE_ID"], 0) + 1
+    for c in cells:
+        c["SITE_LABELS_INSIDE"] = site_hits.get(c["CELL_ID"], 0)
     for reg in regions:
         zs = [z for z in zones if z["PHYSICAL_SPACE_ID"] == reg["PHYSICAL_SPACE_ID"]]
         reg["FUNCTIONAL_ZONES"] = [z["FUNCTIONAL_ZONE_ID"] for z in zs]

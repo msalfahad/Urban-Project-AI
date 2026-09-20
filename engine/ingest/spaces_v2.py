@@ -16,7 +16,7 @@ from engine.ingest import ids
 
 CELL_MM = 50
 MIN_AREA_M2, MAX_AREA_M2 = 0.8, 2500.0
-SEPARATOR_ROLES = ("MATERIAL_WALL_FACE", "MATERIAL_WALL_CENTERLINE", "COLUMN_FACE", "GLAZING")
+SEPARATOR_ROLES = ("MATERIAL_WALL_FACE", "MATERIAL_WALL_CENTERLINE", "COLUMN_FACE", "GLAZING", "SITE_BOUNDARY")   # a plot line bounds the exterior cell; it carries no material
 
 
 def _tuples(prims, roles, allowed):
