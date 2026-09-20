@@ -4180,3 +4180,59 @@ one with any provisional boundary keeps its number but stays `PROVISIONAL`
 and enters no total. Three of fifty-two Qortuba floor regions are
 established. That is the honest count, and the arrangement never invented
 the other forty-nine.
+
+## §183 — A cell is not a room until something says what it is; size never says it
+
+Separating the Qortuba partitions produced fifty-three raster cells, and
+thirty-four of them were under a square metre. The tempting rule — drop
+everything below a threshold — is wrong in both directions. A water closet
+of 0.8 m² is a real room a floor finish must cover. A five-square-metre
+enclosure fenced off by two unresolved strips is not a room at all.
+
+Every cell is therefore classified by **which physical element's interior
+it is**, and the reason has to name that element: the strip of a wall
+candidate whose interior the cell fills, the pocket inside a door frame,
+the gap between two stair treads, the inside of a closed outline. Only a
+cell that nothing explains, and that carries a room name, becomes a floor
+region. The one dimensional test in the set is source-derived rather than
+invented: a clear width below the thinnest material band **this drawing
+itself contains** is a drafting sliver, because nothing thinner than the
+project's own thinnest wall can be a space.
+
+A cell nobody explains and nobody names is `HUMAN_REVIEW`. It is neither
+deleted nor promoted. Sixteen Qortuba cells sit there, including the stair
+hall and the lift lobby, and they carry no quantity.
+
+The same pass caught a real error: a 0.417 m² pocket between two stair
+treads had been released as `SOURCE_ESTABLISHED` floor area, because its
+boundary happened to contain no unresolved chord. Naming the element whose
+interior it is removed it.
+
+## §184 — A doorway is a cell, so two rooms joined by a door do not touch
+
+Reading room-to-room relations from raster adjacency reports a door as a
+solid wall. The reason is structural: an opening chord is a barrier, so the
+free strip inside the wall line between the two jambs is a **cell of its
+own**, and the two rooms are each adjacent to that cell rather than to each
+other. Their own boundaries meet only at a corner.
+
+Room relations are now read through the connector cell, and the site on the
+connector names the relation. This retired a false disagreement: an
+independent reader of the sheet saw a door between a bathroom and a dress
+room where the engine had reported continuous wall. The engine had found
+the door all along — leaf, frame pieces and a wall return across the
+thickness at the jamb — and the comparison was reading the wrong thing.
+
+## §185 — Where a floor stops and what an opening is are two different facts
+
+A floor region is bounded by lines. An opening's line position comes from
+the host wall's own two jambs and is established whenever that wall is.
+Whether the opening is a confirmed door or only a probable one changes the
+skirting deduction, not where the floor stops.
+
+Conflating the two cost real yield: rooms whose every boundary line was
+established were being held provisional because a door in them was only
+probable. Boundary certainty now records the **line** and the **opening
+type** separately. A chord from a band that was never established remains a
+different matter entirely — that line may not exist — and it still blocks
+the region.

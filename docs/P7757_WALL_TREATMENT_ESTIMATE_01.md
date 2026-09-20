@@ -428,3 +428,25 @@ accepted wall length 384 → 502 m and established spaces 2 → 5, against
 confirmed doors 12 → 11 with twenty door-class sites where there were
 twelve. Frozen as `FREEZE_PA08_QORTUBA_R1`; the owner's withheld flooring,
 skirting and profile quantities were not requested, opened or inferred.
+
+**PA08-QORTUBA-R2 (artifact cells against real floor space).** R1's
+partition recovery left fifty-three cells, thirty-four under a square
+metre. R2 changes no engine rule; it adds a measurement-layer classifier
+that names, for every cell, which physical element's interior it is
+(§183). Of the fifty-three: nine are free space, one the roof, one the
+sheet's own site region, fourteen stair components, eight the interiors of
+wall strips, frames, columns or joinery, four drafting slivers, and sixteen
+remain `HUMAN_REVIEW`. Forty-four cells leave floor scope, among them a
+0.417 m² stair pocket R1 had released as established floor area. Room
+relations are now read through the doorway cell (§184), which resolved the
+one outstanding semantic disagreement: the bath-to-dress boundary is a
+**door**, on leaf, frame and jamb-return evidence in the DWG, not the
+reader's say-so. Boundary certainty separates an opening's line position
+from its type (§185). Nine floor-finish regions result, one
+`SOURCE_ESTABLISHED` at 5.10 m² and seven provisional at 116.53 m²; the
+blockers are genuine unresolved perimeter, from 1.2 per cent of the
+boundary in one bathroom to 57.6 per cent in the dress room. Skirting and
+profile stay separate trade lines. Ceilings are derived case by case from
+the cleaned region. Block, plaster and paint carry lengths only. Frozen as
+`FREEZE_PA08_QORTUBA_R2`; `READY_FOR_WITHHELD_FLOORING_COMPARISON: NO`, and
+the withheld quantities were not requested, opened or inferred.
