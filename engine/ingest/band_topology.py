@@ -140,6 +140,7 @@ def _frame_lines(b, t0, t1, prims, roles):
 
 def _crossing(b, t0, t1, accepted):
     """An accepted band passing through the host over the gap, or ending on the host inside it (a wall meeting here)."""
+    # PA07R1: a crossing band must contain the middle of the gap, not only its ends (two partitions across a corridor)
     mid = MB.band_point(b, (t0 + t1) / 2)
     for h in accepted:
         if h is b:
@@ -187,9 +188,11 @@ def _cut(b):
 
 
 # ------------------------------------------------------------------ classification
-def classify_gap(b, t0, t1, prims, roles, accepted, segs):
+def classify_gap(b, t0, t1, prims, roles, accepted, segs, all_bands=()):
     """Evidence and class for a both-face interruption [t0, t1] of band b."""
     span = t1 - t0
+    mid = MB.band_point(b, (t0 + t1) / 2)
+    unresolved_here = [h["BAND_ID"] for h in all_bands if h is not b and h["STATUS"] != "ACCEPTED" and MB.in_strip(h, mid[0], mid[1], tol=10.0)]
     jamb_a, jamb_b = _returns_at(b, t0, segs), _returns_at(b, t1, segs)
     crossing = _crossing(b, t0, t1, accepted)
     swings = _swings(b, t0, t1, prims, roles)
@@ -207,16 +210,20 @@ def classify_gap(b, t0, t1, prims, roles, accepted, segs):
         cls, status, why = "CAD_JUNCTION", "ESTABLISHED", "an accepted band passes through / meets the host over this interval"
     elif span < CAD_GAP_MM and not jambs:
         cls, status, why = "CAD_JUNCTION", "ESTABLISHED", f"faces fail to meet by {round(span)} mm (< {CAD_GAP_MM:.0f}); drafting gap"
+    elif span < CONTINUITY_MAX_MM and not jambs and not (swings or leaves or frames) and unresolved_here:
+        cls, status, why = "UNRESOLVED", "BREAK_WITH_UNRESOLVED_ELEMENT", f"both faces break for {round(span)} mm where an unresolved candidate {unresolved_here[:2]} crosses the gap"
     elif span < CONTINUITY_MAX_MM and not jambs and not (swings or leaves or frames):
-        cls, status, why = "MATERIAL_CONTINUITY", "ESTABLISHED", f"both faces break for {round(span)} mm with no jamb, leaf, swing or frame: face-line break inside one wall"
+        cls, status, why = "MATERIAL_CONTINUITY", "ESTABLISHED", f"both faces break for {round(span)} mm with no jamb, leaf, swing or frame and no candidate crossing the gap: face-line break inside one wall"
     elif swings and (jambs or leaves) and DOOR_SPAN[0] <= span <= DOOR_SPAN[1]:
         cls, status, why = "CONFIRMED_DOOR_OPENING", "ESTABLISHED", "swing arc at a jamb with radius ~ span, plus jamb returns or a leaf"
     elif jambs and leaves and DOOR_SPAN[0] <= span <= DOOR_SPAN[1]:
         cls, status, why = "CONFIRMED_DOOR_OPENING", "ESTABLISHED", "jamb returns at both ends and a leaf of the span length; no swing drawn"
     elif (swings or leaves) and DOOR_SPAN[0] <= span <= DOOR_SPAN[1]:
         cls, status, why = "PROBABLE_DOOR_OPENING", "PROVISIONAL", "swing or leaf evidence without jamb returns"
+    elif jambs and len(frames) >= 2 and any(f["ROLE"] in GLAZING_ROLES for f in frames):
+        cls, status, why = "CONFIRMED_WINDOW_OPENING", "ESTABLISHED", "jamb returns, >= 2 frame lines and a glazing / window-frame role among them"
     elif jambs and len(frames) >= 2:
-        cls, status, why = "CONFIRMED_WINDOW_OPENING", "ESTABLISHED", "jamb returns and >= 2 frame lines along the band inside the opening"
+        cls, status, why = "CONFIRMED_WINDOW_OPENING", "PROVISIONAL", "jamb returns and >= 2 frame lines from line count only (sliding door, threshold or window): span established, type provisional"
     elif jambs and glazing:
         cls, status, why = "CONFIRMED_GLAZED_OPENING", "ESTABLISHED", "jamb returns and a glazing line along the opening"
     elif jambs and PROBABLE_DOOR_SPAN[0] <= span <= PROBABLE_DOOR_SPAN[1]:
@@ -247,7 +254,7 @@ def build_view(view_id, prims, roles, bands, source_id=None):
             if a_here and b_here:
                 row["CLASS"] = "MATERIAL"
             elif not a_here and not b_here:
-                ev = classify_gap(b, t0, t1, prims, roles, accepted, segs)
+                ev = classify_gap(b, t0, t1, prims, roles, accepted, segs, all_bands=bands)
                 sid = ids.make_id("OPENING_SITE", "SITE7", b["BAND_ID"], round(t0), round(t1), tol=10.0)
                 ev.update({"SITE_ID": sid, "VIEW_ID": view_id, "SOURCE": {"SOURCE_ID": source_id, "HOST_FACES": sorted(b["FACES"]), "RULE": "band_topology.classify_gap"}})
                 sites.append(ev)
@@ -275,6 +282,7 @@ def build_view(view_id, prims, roles, bands, source_id=None):
     for b in accepted:
         if b.get("BAND_TYPE") == "COLUMN_BAND":
             seals.extend(_column_seals(b))
+    seals.extend(unresolved_seals(bands, prims, roles))
     return intervals, sites, seals
 
 
@@ -307,12 +315,56 @@ def _seals(b, cuts, rows):
             out.append({"KIND": "FACE", "SIDE": "B", "BAND_ID": b["BAND_ID"], "INTERVAL_ID": row["INTERVAL_ID"], "MATERIAL": True, "PTS": _poly(b, t0, t1, +h)})
         else:
             tag = {"OPENING": "OPENING_CHORD", "JUNCTION": "JUNCTION_CHORD", "UNRESOLVED": "UNRESOLVED_CHORD"}[row["CLASS"]]
-            out.append({"KIND": tag, "SIDE": "A", "BAND_ID": b["BAND_ID"], "INTERVAL_ID": row["INTERVAL_ID"], "SITE_ID": row["SITE_ID"], "MATERIAL": False, "PTS": _poly(b, t0, t1, -h)})
-            out.append({"KIND": tag, "SIDE": "B", "BAND_ID": b["BAND_ID"], "INTERVAL_ID": row["INTERVAL_ID"], "SITE_ID": row["SITE_ID"], "MATERIAL": False, "PTS": _poly(b, t0, t1, +h)})
+            # PA07R1: a face that is present stays a material FACE; only the interrupted side is chorded
+            for side, sign, here in (("A", -1, a_here), ("B", +1, b_here)):
+                if here:
+                    out.append({"KIND": "FACE", "SIDE": side, "BAND_ID": b["BAND_ID"], "INTERVAL_ID": row["INTERVAL_ID"], "MATERIAL": True, "PTS": _poly(b, t0, t1, sign * h)})
+                else:
+                    out.append({"KIND": tag, "SIDE": side, "BAND_ID": b["BAND_ID"], "INTERVAL_ID": row["INTERVAL_ID"], "SITE_ID": row["SITE_ID"], "MATERIAL": False, "PTS": _poly(b, t0, t1, sign * h)})
         # chords across the thickness at both ends of every interval (wall interiors never connect to rooms)
         for t in (t0, t1):
             out.append({"KIND": "THICKNESS_CHORD", "BAND_ID": b["BAND_ID"], "INTERVAL_ID": row["INTERVAL_ID"], "MATERIAL": False, "PTS": [MB.band_point(b, t, -h), MB.band_point(b, t, +h)]})
+    # PA07R1: at both band ends, zero-material stubs along both faces beyond the extent close the junction-tolerance gap (<= 80 mm) in the raster
+    for t, sign in ((b["EXTENT"][0], -1), (b["EXTENT"][1], +1)):
+        for side in (-h, +h):
+            out.append({"KIND": "JUNCTION_CHORD", "SIDE": "END", "BAND_ID": b["BAND_ID"], "INTERVAL_ID": None, "SITE_ID": None, "MATERIAL": False, "PTS": [MB.band_point(b, t, side), MB.band_point(b, t + sign * (MB.JUNCTION_TOL + 20.0), side)]})
     return out
+
+
+def unresolved_seals(bands, prims, roles):
+    """PA07R1 (FM-P7-03): the faces of every UNRESOLVED candidate, of thin rejected pairs and of long unpaired candidate
+    lines are zero-material UNRESOLVED_CHORD seals: rooms never merge silently across a wall the engine could not
+    establish; the space beside them becomes BOUNDARY_PROVISIONAL and the SPACE_STATUS gate blocks it."""
+    out = []
+    used = set()
+    for b in bands:
+        used.update(b["FACES"])
+        if b["STATUS"] == "ACCEPTED":
+            continue
+        reason = (b["REASON"] or "").split(" (")[0]
+        if b["STATUS"] == "REJECTED" and reason not in ("THIN_PAIR_BELOW_WALL_MINIMUM", "CLOSED_FITTING_LOOP"):
+            continue
+        if b["LENGTH"] < MB.MIN_FREE_BAND_MM and not b.get("JOINS_ALL"):
+            continue          # a short isolated candidate (annotation box, symbol) separates nothing that matters
+        for f in b["FACES"].values():
+            out.append({"KIND": "UNRESOLVED_CHORD", "SIDE": None, "BAND_ID": b["BAND_ID"], "INTERVAL_ID": None, "SITE_ID": None, "MATERIAL": False, "PTS": _prim_pts(f), "NOTE": f"face of {b['STATUS']} candidate: {reason}"})
+    accepted = [b for b in bands if b["STATUS"] == "ACCEPTED"]
+    for p in MB.candidates(prims, roles):
+        if p.object_id in used or p.kind != "SEGMENT" or MB._len(p) < MB.MIN_FREE_BAND_MM:
+            continue
+        # an unpaired line that runs wall to wall (both ends inside accepted band strips) may be a single-line partition or a glazing line: it separates, provisionally
+        ends_in = [any(MB.in_strip(h, x, y, tol=MB.JUNCTION_TOL) for h in accepted) for x, y in ((p.x1, p.y1), (p.x2, p.y2))]
+        if all(ends_in):
+            out.append({"KIND": "UNRESOLVED_CHORD", "SIDE": None, "BAND_ID": None, "INTERVAL_ID": None, "SITE_ID": None, "MATERIAL": False, "PTS": _prim_pts(p), "OBJECT_ID": p.object_id, "NOTE": "unpaired wall-to-wall line: single-line partition, glazing or overhead element; provisional separator"})
+    return out
+
+
+def _prim_pts(p):
+    if p.kind == "SEGMENT":
+        return [(p.x1, p.y1), (p.x2, p.y2)]
+    sw = ((p.end_angle - p.start_angle) % (2 * math.pi)) or 2 * math.pi
+    n = max(2, int(p.radius * sw / 50) + 1)
+    return [(p.cx + p.radius * math.cos(p.start_angle + sw * k / n), p.cy + p.radius * math.sin(p.start_angle + sw * k / n)) for k in range(n + 1)]
 
 
 def _column_seals(b):

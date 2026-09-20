@@ -179,7 +179,7 @@ def build(view_id, box, seals, bands, texts=(), cell=CELL_MM, source_id=None):
         if 0 <= r < H and 0 <= c < W and label[r, c]:
             f = lab_of.get(int(label[r, c]))
             if f is not None:
-                f["CONTAINS_SEMANTIC_ANCHOR"].append({"TEXT": t["TEXT"], "ROLE": t.get("ROLE"), "CLASS": t.get("CLASS")})
+                f["CONTAINS_SEMANTIC_ANCHOR"].append({"TEXT": t["TEXT"], "ROLE": t.get("ROLE"), "CLASS": t.get("CLASS"), "SOURCE_KIND": t.get("SOURCE_KIND", "CAD_TEXT")})
     return faces, grids
 
 
@@ -252,8 +252,14 @@ def boundary_faces(view_id, faces, grids, bands, intervals, seals):
             # look just outside the face, at 1.5 cells, at three points along the run; majority label
             labs = []
             for q in (0.25, 0.5, 0.75):
-                x, y = MB.band_point(b, a + (c - a) * q, side_sign * (b["THK"] / 2 + 1.5 * cell))
-                labs.append(label_at(x, y))
+                # PA07R1 (FM-P7-17): the first labelled cell beyond the face cell, never a cell further out than that
+                lab_q = 0
+                for k in (0.6, 1.1, 1.6):
+                    x, y = MB.band_point(b, a + (c - a) * q, side_sign * (b["THK"] / 2 + k * cell))
+                    lab_q = label_at(x, y)
+                    if lab_q:
+                        break
+                labs.append(lab_q)
             lab = max(set(labs), key=labs.count)
             f = face_of_label.get(lab)
             rows.append({"SPACE_FACE_ID": f["FACE_ID"] if f else None, "SPACE_ELIGIBILITY": f["SPACE_ELIGIBILITY"] if f else "NONE", "VIEW_ID": view_id, "BAND_ID": b["BAND_ID"], "INTERVAL_ID": interval_id, "SITE_ID": site_id,
@@ -281,8 +287,9 @@ def boundary_faces(view_id, faces, grids, bands, intervals, seals):
             # the two short sides: attributed by the face just beyond the end, unless a wall band occupies it
             others = [h for h in accepted if h is not b and _near(b, h)]
             for t, tag, sign in ((b["EXTENT"][0], "START", -1), (b["EXTENT"][1], "END", +1)):
-                x1, y1 = MB.band_point(b, t + sign * 1.0)
-                if any(MB.in_strip(h, x1, y1, tol=0.0) for h in others):
+                # PA07R1 (FM-P7-07): the short side is sampled across its length, not at one axis point
+                probes = [MB.band_point(b, t + sign * 1.0, d) for d in (-0.4 * b["THK"], -0.2 * b["THK"], 0.0, 0.2 * b["THK"], 0.4 * b["THK"])]
+                if any(MB.in_strip(h, x1, y1, tol=0.0) for h in others for x1, y1 in probes):
                     rows.append({"SPACE_FACE_ID": None, "SPACE_ELIGIBILITY": "NONE", "VIEW_ID": view_id, "BAND_ID": b["BAND_ID"], "INTERVAL_ID": None, "SITE_ID": None, "SEAL_KIND": "JUNCTION_CUT", "SIDE": tag,
                                  "AXIAL_START": round(t, 1), "AXIAL_END": round(t, 1), "LENGTH_MM": round(b["THK"], 1), "MATERIAL": True, "CURVATURE_TYPE": "STRAIGHT", "LENGTH_SOURCE": "BAND_DEVELOPED_GEOMETRY",
                                  "FACE_POSITION_STATUS": "NOT_APPLICABLE", "NOTE": "column short side inside a wall band (embedded)"})

@@ -352,3 +352,18 @@ for; the owner queue asks which line is the wall face. No independent second vil
 uploads, so the validation protocol is frozen unexecuted (`SECOND_REGRESSION_SOURCE_REQUIRED.json`, §174) and
 PROJECT_3_ENTRY_GATE_V3 is NOT_READY. Freeze: `FREEZE_PA07.json`; the cold review and its POST_REVIEW variants sit
 beside the frozen artifacts.
+
+After the PA07 freeze a cold review (separate context, FM-P6 list withheld until its second round) found 18 failure
+modes, six of them CRITICAL and silent: a wardrobe or counter outline joined at its ends became a wall, any bare
+rectangle up to 600 mm became a column, unresolved walls were invisible to the topology so rooms merged across them,
+one perpendicular stub counted as material fill, aligned partitions across a corridor promoted to an open passage,
+and far-side T-junctions chorded both faces so the bridge had never formed a region on real geometry. The review's
+classification of the PA06 modes against PA07: FIXED 4, PARTIALLY_FIXED 10, UNCHANGED 1, WORSENED 1 (FM-P6-16,
+the attribution sampling). PA07R1 applied the cheap guards (`pa07r1/PA07R1_GUARDS.json`, seven new tests in
+`tests/test_pa07r1_guards.py` including an end-to-end pipeline7 run that forms a closed, reversible region on a
+synthetic villa and blocks the same villa with an unresolved doorway) and re-ran P7757 as `pa07r1/`: 367
+accepted bands, 42 interior spaces on plan views of which 1 established and
+41 BOUNDARY_PROVISIONAL (the unresolved walls now split the leaked regions instead of
+merging them), bridge-allowed lines 0. PA07 and its freeze are kept unchanged as history; the
+revision is frozen as `FREEZE_PA07R1.json`. No fresh cold review of PA07R1 was performed, so gate v3 condition 13
+stays failed. The answer to an unseen-villa draft BOQ remains NO.

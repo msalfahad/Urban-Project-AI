@@ -162,8 +162,9 @@ class Pipeline7(PL.Pipeline):
                 if r["SITE_ID"] and r["SPACE_FACE_ID"]:
                     by_site[r["SITE_ID"]].add(r["SPACE_ELIGIBILITY"])
             def sides(site):
-                el = [r["SPACE_ELIGIBILITY"] for r in brows if r["SITE_ID"] == site["SITE_ID"] and r["SPACE_FACE_ID"]]
-                return ("INTERIOR", "INTERIOR") if len(el) >= 2 and all(e == "ELIGIBLE" for e in el) else ("NOT_INTERIOR", "NOT_INTERIOR")
+                # PA07R1 (FM-P7-04): the two sides must be two DIFFERENT eligible planar faces
+                fs = {r["SPACE_FACE_ID"]: r["SPACE_ELIGIBILITY"] for r in brows if r["SITE_ID"] == site["SITE_ID"] and r["SPACE_FACE_ID"]}
+                return ("INTERIOR", "INTERIOR") if len(fs) >= 2 and all(e == "ELIGIBLE" for e in fs.values()) else ("NOT_INTERIOR", "NOT_INTERIOR")
             BT.promote_open_passages(self.sites7[v["VIEW_ID"]], sides)
             spaces = PF.space_register(v["VIEW_ID"], faces, brows)
             # second pass on the sheet role: door sites and enclosed spaces complete the geometry hint (as PA06 did); an UNKNOWN view produces no spaces
@@ -171,15 +172,18 @@ class Pipeline7(PL.Pipeline):
             if role == "UNKNOWN":
                 # only CONFIRMED door sites count as door evidence here: a swing arc alone (PA06 role) appears on sections and elevations too
                 doors = sum(1 for s in self.sites7[v["VIEW_ID"]] if s["CLASS"] == "CONFIRMED_DOOR_OPENING")
-                ev = dict(reg_views[v["VIEW_ID"]]["EVIDENCE_INPUT"], DOOR_ARC_COUNT=doors, CLOSED_SPACE_COUNT=len(spaces))
+                room_labels = sum(1 for t in texts if t["ROLE"] == "ROOM_NAME")
+                ev = dict(reg_views[v["VIEW_ID"]]["EVIDENCE_INPUT"], DOOR_ARC_COUNT=doors, CLOSED_SPACE_COUNT=len(spaces), ROOM_LABELS=room_labels)
                 r2 = SR.classify(ev)
-                if r2["FINAL_ROLE"] in SR.PLAN_ROLES:
+                if r2["FINAL_ROLE"] in SR.PLAN_ROLES and room_labels >= 1 and doors >= 1 and len(spaces) >= 2:   # PA07R1 (FM-P7-18): a plan hint needs a room label too
                     r2["ROLE_STATUS"] = "GEOMETRY_HINT_" + r2["ROLE_STATUS"]
                     v["ROLE"] = r2; reg_views[v["VIEW_ID"]].update(r2); reg_views[v["VIEW_ID"]]["EVIDENCE_INPUT"] = ev
                 else:
                     reg_views[v["VIEW_ID"]]["EVIDENCE_INPUT"] = ev
             for s in spaces:
                 s["VIEW_ROLE"] = v["ROLE"]["FINAL_ROLE"]; s["VIEW_ROLE_STATUS"] = v["ROLE"]["ROLE_STATUS"]
+                if s["VIEW_ROLE"] == "ROOF_PLAN":
+                    s["ROOF_PLAN_REVIEW"] = True
             for f in faces:
                 f["VIEW_ROLE"] = v["ROLE"]["FINAL_ROLE"]
             cols, beams, ext = JN.build(v["VIEW_ID"], bands, brows, v["PRIMITIVES"], self.roles[v["VIEW_ID"]], [o for o in self.registers["PA06_STRUCTURAL_OBJECT_REGISTER"]["ROWS"] if o.get("VIEW") == v["VIEW_ID"]])
@@ -203,14 +207,14 @@ class Pipeline7(PL.Pipeline):
         out = []
         for t in v["TEXTS"]:
             cls = SEM.classify_text(t.value)
-            out.append({"TEXT": t.value, "X": t.x, "Y": t.y, "ROLE": cls["TEXT_ROLE"], "CLASS": cls["CANONICAL_CLASS"], "LANGUAGE": cls["LANGUAGE"], "SOURCE": {"KIND": "CAD_TEXT", "LAYER": t.provenance.layer, "HANDLE": t.provenance.handle}})
+            out.append({"TEXT": t.value, "X": t.x, "Y": t.y, "ROLE": cls["TEXT_ROLE"], "CLASS": cls["CANONICAL_CLASS"], "LANGUAGE": cls["LANGUAGE"], "SOURCE": {"KIND": "CAD_TEXT", "LAYER": t.provenance.layer, "HANDLE": t.provenance.handle}, "SOURCE_KIND": "CAD_TEXT"})
         x0, y0, x1, y1 = v["BBOX_MM"]
         for o in (self.cfg.get("OWNER_ANCHORS") or []):
             if x0 <= o["X"] <= x1 and y0 <= o["Y"] <= y1:
-                cls = SEM.classify_text(o["TEXT"]); out.append({"TEXT": o["TEXT"], "X": o["X"], "Y": o["Y"], "ROLE": cls["TEXT_ROLE"], "CLASS": cls["CANONICAL_CLASS"], "LANGUAGE": cls["LANGUAGE"], "SOURCE": {"KIND": "OWNER_PROJECT_INPUT", "ID": o.get("ID")}})
+                cls = SEM.classify_text(o["TEXT"]); out.append({"TEXT": o["TEXT"], "X": o["X"], "Y": o["Y"], "ROLE": cls["TEXT_ROLE"], "CLASS": cls["CANONICAL_CLASS"], "LANGUAGE": cls["LANGUAGE"], "SOURCE": {"KIND": "OWNER_PROJECT_INPUT", "ID": o.get("ID")}, "SOURCE_KIND": "OWNER_PROJECT_INPUT"})
         for a in (self.cfg.get("AI_LABELS") or []):
             if x0 <= a["X"] <= x1 and y0 <= a["Y"] <= y1:
-                cls = SEM.classify_text(a["TEXT"]); out.append({"TEXT": a["TEXT"], "X": a["X"], "Y": a["Y"], "ROLE": cls["TEXT_ROLE"], "CLASS": cls["CANONICAL_CLASS"], "LANGUAGE": cls["LANGUAGE"], "SOURCE": {"KIND": "AI_VISUAL_READ", "MODEL": a.get("MODEL")}})
+                cls = SEM.classify_text(a["TEXT"]); out.append({"TEXT": a["TEXT"], "X": a["X"], "Y": a["Y"], "ROLE": cls["TEXT_ROLE"], "CLASS": cls["CANONICAL_CLASS"], "LANGUAGE": cls["LANGUAGE"], "SOURCE": {"KIND": "AI_VISUAL_READ", "MODEL": a.get("MODEL")}, "SOURCE_KIND": "AI_VISUAL_READ"})
         return out
 
     def stage_build_storeys(self):
@@ -235,10 +239,14 @@ class Pipeline7(PL.Pipeline):
                 site = [a for a in anchors if a.get("ROLE") == "SITE_LABEL"]
                 classes = sorted({a["CLASS"] for a in rooms if a.get("CLASS")})
                 status = "NONE" if not rooms and not undec else ("UNRESOLVED" if (not rooms or undec) else ("SINGLE" if len(classes) == 1 and len(rooms) == 1 else ("SINGLE_CLASS_REPEATED" if len(classes) == 1 else "MULTIPLE")))
-                s["SEMANTIC_IDENTITY"] = {"ZONES": [(c, "SOURCE_TEXT_ESTABLISHED") for c in classes], "STATUS": status, "UNDECODABLE_LABELS": len(undec), "SITE_LABELS_INSIDE": len(site),
+                kinds = {a.get("SOURCE_KIND", "CAD_TEXT") for a in rooms}
+                if status == "SINGLE" and "AI_VISUAL_READ" in kinds:
+                    status = "AI_INTERPRETED"          # PA07R1 (FM-P7-09): an AI read never becomes an established identity
+                zone_status = "OWNER_ESTABLISHED" if kinds == {"OWNER_PROJECT_INPUT"} else ("AI_INTERPRETED" if "AI_VISUAL_READ" in kinds else "SOURCE_TEXT_ESTABLISHED")
+                s["SEMANTIC_IDENTITY"] = {"ZONES": [(c, zone_status) for c in classes], "STATUS": status, "UNDECODABLE_LABELS": len(undec), "SITE_LABELS_INSIDE": len(site), "SOURCE_KINDS": sorted(kinds),
                                           "NOTE": "an undecodable stamp keeps the identity UNRESOLVED even when one label reads" if undec else None}
                 s["IDENTITY_STATUS"] = status
-                s["SPACE_CLASS"] = "EXTERIOR_SITE" if site and not rooms else ("HUMAN_REVIEW" if site and rooms else "INTERIOR")
+                s["SPACE_CLASS"] = "EXTERIOR_SITE" if site and not rooms else ("HUMAN_REVIEW" if (site and rooms) or s.get("ROOF_PLAN_REVIEW") else "INTERIOR")
                 s["STOREY"] = self.storey_of_view.get(v["VIEW_ID"])
                 for a in anchors:
                     rows_all.append({"ANCHOR_ID": ids.anchor_id(v["VIEW_ID"], a.get("ROLE"), a["TEXT"], (0.0, 0.0)), "RAW_TEXT": a["TEXT"], "TEXT_ROLE": a.get("ROLE"), "CANONICAL_CLASS": a.get("CLASS"),
@@ -318,13 +326,14 @@ class Pipeline7(PL.Pipeline):
         g["OPENING_SITE_STATUS"] = {"STATUS": "PASS" if not bad_sites else "NOT_ESTABLISHED", "VALUE": {"SITES": site_ids, "NOT_ESTABLISHED": bad_sites}, "WHY": "every site on the boundary must be an ESTABLISHED class; PROBABLE and UNRESOLVED block"}
         ident = s["SEMANTIC_IDENTITY"]
         needs_identity = trade in ("NORMAL_INTERNAL_PLASTER", "WET_ROOM_SPLATTER")
-        g["IDENTITY_STATUS"] = {"STATUS": "PASS" if (not needs_identity or ident["STATUS"] == "SINGLE") else ("HUMAN_REVIEW" if ident["STATUS"] in ("MULTIPLE", "UNRESOLVED", "SINGLE_CLASS_REPEATED") else "NOT_ESTABLISHED"),
+        g["IDENTITY_STATUS"] = {"STATUS": "PASS" if (not needs_identity or ident["STATUS"] == "SINGLE") else ("HUMAN_REVIEW" if ident["STATUS"] in ("MULTIPLE", "UNRESOLVED", "SINGLE_CLASS_REPEATED", "AI_INTERPRETED") else "NOT_ESTABLISHED"),
                                 "VALUE": ident, "WHY": "the trade rule and the height selection depend on a single established room identity" if needs_identity else "column bonding needs no room identity"}
         storey = s.get("STOREY")
-        g["STOREY_STATUS"] = {"STATUS": "PASS" if (isinstance(storey, str) and not storey.startswith("HUMAN_REVIEW") and storey) else ("HUMAN_REVIEW" if isinstance(storey, str) and storey.startswith("HUMAN_REVIEW") else "NOT_ESTABLISHED"),
+        g["STOREY_STATUS"] = {"STATUS": "PASS" if (isinstance(storey, str) and storey and not storey.startswith("HUMAN_REVIEW") and "UNORDERED" not in storey) else ("HUMAN_REVIEW" if isinstance(storey, str) and storey.startswith("HUMAN_REVIEW") else "NOT_ESTABLISHED"),
                               "VALUE": storey, "WHY": "storey identity from the copy-family / level register; stacked storeys in one view need review"}
         Hv, Hsrc, pid, why = _height_for_cell(ident, storey, reg, trade)
-        g["HEIGHT_STATUS"] = {"STATUS": "PASS" if (Hv is not None and Hsrc in ("OWNER_PROJECT_INPUT", "SOURCE_ESTABLISHED", "TEMPORARY_DEFAULT")) else "SOURCE_REQUIRED", "VALUE": {"PARAMETER_ID": pid, "VALUE_M": Hv, "SOURCE_TYPE": Hsrc}, "WHY": why}
+        g["HEIGHT_STATUS"] = {"STATUS": "PASS" if (Hv is not None and Hsrc in ("OWNER_PROJECT_INPUT", "SOURCE_ESTABLISHED")) else "SOURCE_REQUIRED",   # PA07R1 (FM-P7-11): a temporary default never passes
+                              "VALUE": {"PARAMETER_ID": pid, "VALUE_M": Hv, "SOURCE_TYPE": Hsrc}, "WHY": why}
         g["RULE_STATUS"] = {"STATUS": "PASS" if (trade in TRADES and self.cfg.get("RULE_VERSION")) else "NOT_ESTABLISHED", "VALUE": {"RULE_VERSION": self.cfg.get("RULE_VERSION"), "TREATMENT": TRADES.get(trade, (None,))[0]},
                             "WHY": "a declared rule version and a known treatment for the trade"}
         return g

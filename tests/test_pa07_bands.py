@@ -125,10 +125,13 @@ def test_11_tapering_decorative_element_is_not_a_wall():
 
 
 def test_12_column_free_standing_and_block_column_unresolved():
-    prims = anchor_frame() + F.rect(3000, 3000, 3400, 3400, "C")
+    # PA07R1: a free-standing closed rectangle is a column only with a cross (or hatch) inside it; a bare rectangle is a trap / appliance / tile
+    prims = anchor_frame() + F.rect(3000, 3000, 3400, 3400, "C") + [F.seg("C", (3000, 3000), (3400, 3400))]
     rows, _ = build(prims)
     cols = [r for r in accepted(rows) if r["BAND_TYPE"] == "COLUMN_BAND"]
     assert len(cols) == 1 and cols[0]["INTERSECTION_EVIDENCE"]["CLOSED_LOOP"] and sorted(cols[0]["INTERSECTION_EVIDENCE"]["SIDES_MM"]) == [400, 400]
+    bare = [r for r in build(anchor_frame() + F.rect(3000, 3000, 3400, 3400, "C"))[0] if r["INTERSECTION_EVIDENCE"] and r["INTERSECTION_EVIDENCE"].get("CLOSED_LOOP") and not (r["REJECTION_REASON"] or "").startswith("DUPLICATE")]
+    assert bare and all(r["MATERIAL_STATUS"] == "UNRESOLVED" for r in bare)
     rows, _ = build(anchor_frame() + F.rect(3000, 3000, 3400, 3400, "C", block=("COL",)))
     blk = [r for r in rows if r["INTERSECTION_EVIDENCE"] and r["INTERSECTION_EVIDENCE"].get("CLOSED_LOOP") and not (r["REJECTION_REASON"] or "").startswith("DUPLICATE")]
     assert blk and all(r["MATERIAL_STATUS"] == "UNRESOLVED" for r in blk)

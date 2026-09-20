@@ -35,6 +35,7 @@ MIN_FREE_BAND_MM = 600.0           # a structure needs at least one band this lo
 STRUCTURE_MIN_MM = 2000.0          # total developed length of a joined group of bands before it counts as a wall structure
 COLUMN_FREE_MAX = 600.0            # a closed loop up to this side length is a column even when free-standing
 COLUMN_SIDE_MAX = 1200.0           # up to this side length a closed loop joined to a wall band is a column
+JOINERY_DEPTH_MIN_MM = 300.0       # PA07R1: a closed outline deeper than this (wardrobe 600, counter 600, bath 700) is joinery until hatched or confirmed
 ANGLE_TOL = math.radians(1.0)
 AXIS_MERGE_MM = 30.0
 THK_MERGE_MM = 25.0
@@ -48,7 +49,8 @@ EDGE_TOL = 5.0
 HATCH_FILL_SHARE = 0.3             # hatch strokes over this share of a band = material fill evidence
 HATCH_STROKE_MAX_MM = 300.0        # a PA06 HATCH_STROKE longer than this is re-examined here: the PA06 family rule swallows wall faces
 EXCLUDED_ROLES = ("DIMENSION_LINE", "DIMENSION_EXTENSION", "DIMENSION_TEXT", "TEXT_OR_LABEL", "DOOR_SWING", "DOOR_LEAF", "GRID_OR_LEVEL", "STAIR_EDGE", "BEAM_EDGE")
-NON_MATERIAL_LINETYPES = ("HIDDEN", "DASHED", "DASH", "DOT", "CENTER", "PHANTOM", "DIVIDE", "BORDER")
+NON_MATERIAL_LINETYPES = ("HIDDEN", "DASHED", "DASH", "DOT", "CENTER", "PHANTOM", "DIVIDE", "BORDER",
+                          "ISO02", "ISO03", "ISO04", "ISO05", "ISO06", "ISO07", "ISO08", "ISO09", "ISO10", "ISO11", "ISO12", "ISO13", "ISO14", "ISO15", "JIS_02", "JIS_08", "JIS_09", "JIS_10", "JIS_11")   # PA07R1: ISO / JIS broken-line names
 TWO_PI = 2 * math.pi
 N_DIR = int(round(math.pi / ANGLE_TOL))
 
@@ -113,7 +115,7 @@ def candidates(prims, roles):
 
 def fill_strokes(prims, roles, family_ids):
     """Segments that count as material fill: short PA06 hatch strokes and members of a regular repetition family."""
-    return [p for p in prims if p.kind == "SEGMENT" and ((roles.get(p.object_id, {}).get("ROLE") == "HATCH_STROKE" and _len(p) <= HATCH_STROKE_MAX_MM) or p.object_id in family_ids)]
+    return [p for p in prims if p.kind == "SEGMENT" and _len(p) <= HATCH_STROKE_MAX_MM and (roles.get(p.object_id, {}).get("ROLE") == "HATCH_STROKE" or p.object_id in family_ids)]   # PA07R1: long family members (shelves, louvres, tiles) are never fill
 
 
 # ------------------------------------------------------------------ repetition families
@@ -306,12 +308,16 @@ def _split_loops(bands, segs):
         for a_id, b_id, thk, ov in b["PAIRS"]:
             a, c = b["FACES"][a_id], b["FACES"][b_id]
             ends_a, ends_c = [(a.x1, a.y1), (a.x2, a.y2)], [(c.x1, c.y1), (c.x2, c.y2)]
-            if _len(a) > COLUMN_SIDE_MAX or _len(c) > COLUMN_SIDE_MAX or thk > COLUMN_SIDE_MAX:
-                continue
             for (p, q) in ((ends_c[0], ends_c[1]), (ends_c[1], ends_c[0])):
                 c1, c2 = joined(ends_a[0], p), joined(ends_a[1], q)
                 if c1 and c2 and c1[0] is not c2[0]:
-                    loops.append((a, c, c1[0], c2[0], thk)); break
+                    if _len(a) > COLUMN_SIDE_MAX or _len(c) > COLUMN_SIDE_MAX or thk > COLUMN_SIDE_MAX:
+                        # PA07R1 (FM-P7-01): a closed outline longer than a column inside a wall cluster (wardrobe, counter, bath drawn against the wall face)
+                        b["LONG_LOOP"] = True
+                        b["EVIDENCE"].setdefault("CLOSED_OUTLINE", []).append([a.object_id, c.object_id, c1[0].object_id, c2[0].object_id])
+                    else:
+                        loops.append((a, c, c1[0], c2[0], thk))
+                    break
         if not loops or len(b["FACES"]) <= 2:
             out.append(b); continue
         for a, c, cap1, cap2, thk in loops:
@@ -435,8 +441,23 @@ def _material_fill(b, hatch, caps):
             lo, hi = min(t1, t2), max(t1, t2)
             ivs.extend((max(lo, a), min(hi, c)) for a, c in b["COVER"] if min(hi, c) - max(lo, a) > 0)
     share = _covered(ivs) / max(b["COVERED"], 1e-9) if ivs else 0.0
-    evidenced = share >= HATCH_FILL_SHARE or len(caps) >= 1
-    return {"HATCH_STROKES": len(ivs), "HATCH_FILLED_MM": round(_covered(ivs), 1), "HATCH_SHARE": round(share, 3), "END_CAPS": len(caps), "FILL": "EVIDENCED" if evidenced else "UNEVIDENCED"}
+    both_ends = {c[0] for c in caps} == {"START", "END"}
+    evidenced = share >= HATCH_FILL_SHARE or both_ends          # PA07R1: one return is not fill evidence; both ends or hatch
+    return {"HATCH_STROKES": len(ivs), "HATCH_FILLED_MM": round(_covered(ivs), 1), "HATCH_SHARE": round(share, 3), "END_CAPS": len(caps), "END_CAPS_BOTH": both_ends, "FILL": "EVIDENCED" if evidenced else "UNEVIDENCED"}
+
+
+def _loop_evidence(b, segs):
+    """PA07R1: hatch inside the loop strip, or a cross / diagonal drawn inside it (the structural column convention)."""
+    if b["EVIDENCE"]["MATERIAL_FILL"]["HATCH_SHARE"] >= HATCH_FILL_SHARE:
+        return True
+    side = min(b["LENGTH"], b["THK"])
+    for q in segs:
+        if q.object_id in b["FACES"] or _len(q) < 0.5 * side:
+            continue
+        if in_strip(b, q.x1, q.y1, tol=0.0) and in_strip(b, q.x2, q.y2, tol=0.0) and abs(((_angle(q) - b["ANGLE"]) % (math.pi / 2))) > 5 * ANGLE_TOL and abs(((_angle(q) - b["ANGLE"]) % (math.pi / 2)) - math.pi / 2) > 5 * ANGLE_TOL:
+            b["EVIDENCE"]["LOOP_CROSS"] = q.object_id
+            return True
+    return False
 
 
 def _on_view_edge(p, bbox):
@@ -682,8 +703,12 @@ def build(view_id, prims, roles, storey_id=None, source_id=None, single_line_lay
         if len(comp) >= 2 and total >= STRUCTURE_MIN_MM and any(z["LENGTH"] >= MIN_FREE_BAND_MM for z in comp):
             accepted.update(id(z) for z in comp)
     for b in live:
-        if b.get("LOOP") and b["LENGTH"] <= COLUMN_FREE_MAX and b["THK"] <= COLUMN_FREE_MAX and not b["BLOCK"]:
-            accepted.add(id(b))
+        if b.get("LOOP") and b["LENGTH"] <= COLUMN_FREE_MAX and b["THK"] <= COLUMN_FREE_MAX and not b["BLOCK"] and _loop_evidence(b, segs):
+            accepted.add(id(b))       # PA07R1: a free-standing closed rectangle is a column only with hatch or a cross inside it
+    for b in live:
+        if b.get("LONG_LOOP") and id(b) in accepted and b["THK"] > JOINERY_DEPTH_MIN_MM and b["EVIDENCE"]["MATERIAL_FILL"]["HATCH_SHARE"] < HATCH_FILL_SHARE:
+            accepted.discard(id(b))   # PA07R1: a closed outline deeper than a partition, joined only by its ends and unhatched, is joinery until confirmed
+            b["R1_LONG_LOOP_UNCONFIRMED"] = True
     # column-sized loops up to COLUMN_SIDE_MAX follow the structure they are joined to
     changed = True
     while changed:
@@ -703,7 +728,9 @@ def build(view_id, prims, roles, storey_id=None, source_id=None, single_line_lay
                 _set(b, "ACCEPTED", None); b["BAND_TYPE"] = "CURVED_BAND" if b["KIND"] == "C" else ("ANGLED_BAND" if b["ORIENTATION"] == "ANGLED" else "STRAIGHT_BAND")
         elif b.get("LOOP"):
             _set(b, "UNRESOLVED", "CLOSED_LOOP_UNRESOLVED (column-sized outline from a block or beyond the free-standing column limit, joined to no wall band)" if b["BLOCK"] or b["LENGTH"] > COLUMN_FREE_MAX
-                 else "CLOSED_LOOP_UNRESOLVED (column-sized outline joined to no wall band)")
+                 else "CLOSED_LOOP_UNRESOLVED (column-sized outline joined to no wall band, with no hatch or cross inside: trap, appliance or tile, not a column)")
+        elif b.get("R1_LONG_LOOP_UNCONFIRMED"):
+            _set(b, "UNRESOLVED", "CLOSED_OUTLINE_UNCONFIRMED (closed outline of fitting length joined only by its own ends, no hatch inside: wardrobe, counter, bath or a wall pier; owner confirmation or fill required)")
         else:
             _set(b, "UNRESOLVED", "ISOLATED_PAIR (joined to no established band: decorative, furniture, symbol or an unanchored wall fragment)")
     for b in bands:

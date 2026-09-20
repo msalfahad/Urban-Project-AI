@@ -142,7 +142,7 @@ def test_corner_gaps_2_5_10_25_mm_keep_one_room():
 
 
 def test_nested_column_region_is_material_not_a_space():
-    prims = F.room(0, 0, 6000, 4000, 200) + F.rect(2000, 1500, 2400, 1900, "C")
+    prims = F.room(0, 0, 6000, 4000, 200) + F.rect(2000, 1500, 2400, 1900, "C") + [F.seg("C", (2000, 1500), (2400, 1900))]   # PA07R1: a free-standing column carries its cross
     r = run(prims)
     assert len(r["spaces"]) == 1
     inner = [f for f in r["faces"] if f["SPACE_ELIGIBILITY"] == "MATERIAL_INTERIOR" and f["AREA_GEOMETRIC_M2"] < 0.2]

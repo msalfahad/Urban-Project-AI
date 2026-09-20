@@ -54,6 +54,8 @@ def main():
               f"- PA06 modes: {review.get('PA06_FAILURE_MODES_STATUS')}", ""]
     L += ["## Answer", "", "May the architecture produce a DRAFT BOQ for an unseen villa: **NO** (no independent validation executed; the P7757 regression shows the honest failure surface: most walls unresolved without fill or end-face evidence).", ""]
     (OUT7 / f"PA07_REPORT{suffix}.md").write_text("\n".join(L), "utf-8")
+    if suffix and not (OUT7 / "PA07_REPORT.md").exists():
+        (OUT7 / "PA07_REPORT.md").write_text("\n".join(L), "utf-8")      # a revision run started after the review still carries the plain report the freeze lists
     print(json.dumps({"VERDICT": gate["VERDICT"], "FAILED": gate["FAILED"], "REPORT": str(OUT7 / f"PA07_REPORT{suffix}.md")}))
 
 
