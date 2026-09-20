@@ -275,3 +275,29 @@ read-only reviewer agent run after the freeze) is stored beside the frozen
 artifacts and deliberately kept out of the freeze list: it edits no
 production data and is advice, not measurement.
 
+
+## Production ingestion and stable geometry architecture (ninth checkpoint, PA05)
+
+PA05 built the generic ingestion package `engine/ingest/` (ids, status,
+units, rules, owner inputs, curves, sheet roles, source inventory, views,
+dimensions, faces, opening sites, spaces, measurement regions, a nine-stage
+harness and twelve executable gates) and ran P7757 through it as input
+data only (`research/qs_wall_treatment_01/pa05/config_p7757.py`). The
+supervised run finds eight model-space views, recovers the plan-copy
+offsets from endpoint voting, owns 377 of 389 authored dimensions on both
+ends (the void's 587 / 400 among them), yields 2,714 horizontal, 2,622
+vertical, 7,366 angled and 120 arc faces by developed length, 578 opening
+sites of which 173 are UNRESOLVED (a site, never a merge), 71 physical
+spaces with anchors and bounding entities, 59 semantic anchors, and 284
+trade measurement regions whose closures are hash-reversible. The
+migration adapter classifies 213 frozen items (60 without loss, 107 with
+information loss, 29 not migratable, 17 historical only) and edits nothing.
+The PA05 success gate A–K passed, so P7757_BLIND_REBUILD_01 ran in a fresh
+directory under an audit hook that logged every file open (three source
+files, no violation); its frozen outputs agree with the supervised run on
+curve radii, dimension ownership, plan-copy offsets and region
+reversibility, and differ where the blind run lacks the sheet reads and
+layer overrides that the supervised configuration carries. All twelve
+Project-3 gates pass. Freeze: `FREEZE_PA05.json`. The second architecture
+review (`pa05/ARCHITECTURE_REVIEW_PA05.json` / `.md`) is stored beside the
+artifacts and kept out of the freeze, as in PA04.

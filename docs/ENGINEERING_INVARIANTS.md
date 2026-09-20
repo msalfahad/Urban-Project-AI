@@ -3803,3 +3803,115 @@ the floor. A floor region is geometry only until a material is
 established: physical space, functional zone and trade measurement zone are
 three different partitions.
 
+
+## §151 — Ingestion is a contract of nine layers; no layer repairs the one above it
+
+`engine/ingest/harness.py` runs SOURCE_DOCUMENT → SHEET / VIEW → RAW_ENTITY →
+CANONICAL_GEOMETRIC_FEATURE → TOPOLOGICAL_SITE / RELATION → PHYSICAL_SPACE →
+FUNCTIONAL_ZONE → TRADE_MEASUREMENT_ZONE → QUANTITY INPUTS as nine named
+stages over a project configuration dictionary. Every project fact (paths,
+sheet reads, a point inside each model-space view, layer overrides, owner
+inputs, printed labels) arrives in that dictionary; the engine package
+holds no coordinate, entity id, room name, file path or dimension of any
+project, and `engine/ingest/gates.py` scans it for the generic shapes of
+such leakage on every run. A stage that lacks evidence records
+NOT_ESTABLISHED or UNRESOLVED and passes it on; it never fills a gap with
+a value the stage above did not establish.
+
+## §152 — A stable id is a hash of evidence, never a position in a list
+
+`engine/ingest/ids.py` derives SHEET, VIEW, CAD_ENTITY, ATOMIC_FACE,
+OPENING_SITE, TOPOLOGY_REGION, PHYSICAL_SPACE, DIMENSION, CHAIN, ANCHOR and
+CLOSURE ids from the source hash, the sheet, the layer, a geometry
+fingerprint quantised to a tolerance and the parent id. Segment endpoints
+are canonically ordered, so a reversed line has the same id; a DWG handle
+is evidence but not identity, so a re-saved drawing with identical geometry
+keeps its ids; a flood-fill label is carried as RUN_LABEL_NOT_A_KEY and
+never used as one. Reclassifying a feature (a door site that becomes
+unresolved) changes its class and nothing else. The tests prove: same
+source → same ids, shuffled input → same ids, noise inside the tolerance →
+same ids, a material or geometry change → different ids.
+
+## §153 — A sheet role is decided by evidence; an AI read fills, it never overrides
+
+`engine/ingest/sheet_roles.py` reads titles, schedule tables, metadata,
+level marks, dimension orientation, door swings and closed spaces. A
+complete deterministic result is final; an AI role may fill an UNKNOWN or
+refine an incomplete ELEVATION into a SECTION_ELEVATION; a disagreement
+with a complete deterministic result is a CHALLENGE whose final role is
+HUMAN_REVIEW. P7757's printed sheets are raster with no text layer, so
+their roles are AI_FILLED_UNKNOWN and say so; only the two vector
+schedule titles classify deterministically. The blind rebuild, which
+receives no reads, leaves the raster sheets UNKNOWN and classifies the
+three plan copies from geometry alone as plan family, INCOMPLETE.
+
+## §154 — A dimension is owned by the entity that terminates its extension line
+
+`engine/ingest/dimensions.py` keeps reading the number and owning the
+number apart: DISPLAY_TEXT is what the drawing shows (geometry × DIMLFAC,
+so P7757's 587 / 400 are 5870 / 4000 mm), MEASURED_VALUE is the geometry,
+and each extension origin is owned by the entity whose endpoint (first) or
+line (second) lies within tolerance of it, on any layer. BOTH_OWNED,
+ONE_OWNED, UNOWNED and NOT_SUPPORTED are recorded per dimension; contiguous
+dimensions on one line form a chain. Ownership never comes from the nearest
+object.
+
+## §155 — An opening site exists where walls terminate, with or without a leaf
+
+`engine/ingest/opening_sites.py` makes a site of every gap between
+collinear wall entities on one line: CAD_JUNCTION_GAP below the junction
+tolerance, MATERIAL_CONTINUITY_GAP below a passable width,
+CONFIRMED_DOOR_OPENING when a swing arc of that width is hinged at a jamb,
+CONFIRMED_GLAZED_SEPARATOR when a glazing line crosses it, otherwise
+UNRESOLVED_OPENING_SITE. The two face lines of one wall pair as twins. Every
+site is closed by a chord before `engine/ingest/spaces.py` floods, so a
+missing door leaf never merges the rooms on both sides; the relation
+between them is the site's class. MERGES_ROOMS_AUTOMATICALLY is false on
+every record.
+
+## §156 — A physical space is an anchor and its bounding entities; a label is attached, never merged in
+
+`engine/ingest/spaces.py` identifies a space by an interior anchor and the
+sorted set of entity ids on its boundary, records opening sites, open edges
+and unresolved edges, and states CLOSED_BY_MATERIAL / CLOSED_WITH_SITES /
+PARTIALLY_OPEN. Semantic anchors (DWG text, printed labels via a transform,
+owner confirmations) are separate objects with candidate spaces and a
+status; a space with several labels is MULTIPLE_LABELS_ONE_TOPOLOGY_CELL
+and its per-room identity stays NOT_ESTABLISHED. GEOMETRY_ID and
+SEMANTIC_IDENTITY never share a field.
+
+## §157 — Rules have scope and owner inputs have revisions; nothing is promoted by itself
+
+`engine/ingest/rules.py` resolves a parameter by
+PROJECT_DRAWING_SPEC > PROJECT_OWNER_OVERRIDE > URBAN_STANDARD >
+TEMPORARY_DEFAULT > UNKNOWN, reports a tie inside one scope as CONFLICT and
+refuses an URBAN_STANDARD without an approval record; promotion returns a
+new rule and leaves the project rule untouched. `engine/ingest/owner_inputs.py`
+stores every owner answer as a revision that names what it supersedes, and
+`Recalculator` re-evaluates only the quantity lines that declare a
+dependency on the changed parameter, without re-reading geometry.
+
+## §158 — A layer's role comes from its table and its statistics, never from its name
+
+`engine/ingest/views.py` takes wall-like layers from
+`engine/cad_profile.py` statistics and removes any layer whose DWG layer
+table linetype is HIDDEN / DASHED / CENTER; P7757's layer "2" is hidden by
+its table, which the blind rebuild found without being told. The door layer
+is the layer with most quarter-circle swings. Views are gap clusters of
+entity boxes; plan copies are recovered by endpoint voting refined to the
+exact median translation, which gave 44852.65 and 89705.31 mm on P7757 as
+source facts, not constants. Explicit overrides are recorded as
+overrides beside the evidence they replace.
+
+## §159 — The blind rebuild reads sources and approved inputs only, and a hook proves it
+
+`research/qs_wall_treatment_01/pa05/blind_rebuild.py` runs the harness in a
+subprocess under `sys.addaudithook`: every file open is logged and any read
+outside the allowlist (the source files, the engine, the explicit extra
+files) raises and marks the run FAILED_ACCESS. The blind configuration
+carries no sheet reads, no view assignments and no layer overrides. Its
+outputs are frozen by hash before the comparison, and the comparison is
+structure only: face and opening identity, curve radii, dimension
+ownership, plan-copy offsets, space topology and measurement-region
+reversibility. Quantities are never compared and the benchmark is never
+opened.

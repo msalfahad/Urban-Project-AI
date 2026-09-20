@@ -76,6 +76,11 @@ CODE = [
     "research/qs_wall_treatment_01/pa04/roof_edges.py", "research/qs_wall_treatment_01/pa04/stairs_v3.py", "research/qs_wall_treatment_01/pa04/structural.py",
     "research/qs_wall_treatment_01/pa04/openings_v2.py", "research/qs_wall_treatment_01/pa04/heights_treatments.py", "research/qs_wall_treatment_01/pa04/challenges.py",
     "research/qs_wall_treatment_01/pa04/gate.py", "research/qs_wall_treatment_01/pa04/report_v8.py",
+    "engine/ingest/__init__.py", "engine/ingest/ids.py", "engine/ingest/status.py", "engine/ingest/units.py", "engine/ingest/rules.py", "engine/ingest/owner_inputs.py",
+    "engine/ingest/curves.py", "engine/ingest/sheet_roles.py", "engine/ingest/source_inventory.py", "engine/ingest/views.py", "engine/ingest/dimensions.py",
+    "engine/ingest/faces.py", "engine/ingest/opening_sites.py", "engine/ingest/spaces.py", "engine/ingest/measurement_regions.py", "engine/ingest/harness.py",
+    "engine/ingest/gates.py", "research/qs_wall_treatment_01/pa05/config_p7757.py", "research/qs_wall_treatment_01/pa05/migration.py",
+    "research/qs_wall_treatment_01/pa05/blind_rebuild.py", "research/qs_wall_treatment_01/pa05/run.py", "tests/test_pa05_ingest.py", "tests/data/p7757_pa05_expectations.json",
 ]
 ARTIFACTS_ESTIMATE = [
     "P7757_OWNER_PARAMETERS.json", "OVERLAP_AUDIT.json",
@@ -131,6 +136,12 @@ ARTIFACTS_PA04 = ARTIFACTS_PA03 + ["FREEZE_PA03.json"] + [f"pa04/{a}" for a in (
     "WALL_TREATMENT_SEQUENCES_V2.json", "COLD_CHALLENGE_RECONCILIATION.json", "CHALLENGER_READINGS.json", "PA04_SELF_CHECKS.json",
     "A22_RECONCILIATION_REGISTER_v7.json", "COVERAGE_PA04.json", "OWNER_DECISION_QUEUE_V4.json", "PA04_METRICS.json", "PA04_GATE.json",
     "FABLE_RECOMMENDATIONS.json", "PROJECT_3_ENTRY_CRITERIA.json", "OWNER_REPORT_V8.md")]
+ARTIFACTS_PA05 = ARTIFACTS_PA04 + ["FREEZE_PA04.json"] + [f"pa05/harness/{a}" for a in (
+    "SHEET_REGISTER.json", "SHEET_ROLE_REGISTER.json", "SOURCE_INVENTORY.json", "LAYER_PROFILE.json", "VIEW_TRANSFORMS.json", "ATOMIC_FACE_REGISTER.json", "CURVE_REGISTER.json",
+    "DIMENSION_CHAIN_REGISTER.json", "OPENING_SITE_REGISTER.json", "PHYSICAL_SPACE_REGISTER.json", "SEMANTIC_ANCHOR_REGISTER.json", "MEASUREMENT_REGION_REGISTER.json",
+    "QA_REPORT.json", "PROJECT_INGESTION_MANIFEST.json")] + [f"pa05/{a}" for a in (
+    "P7757_MIGRATION_REPORT.json", "PA05_TEST_RESULTS.json", "BENCHMARK_LEAKAGE_SCAN.json", "PA05_SUCCESS_GATE.json", "P7757_BLIND_REBUILD_RESULT.json",
+    "P7757_BLIND_REBUILD_COMPARISON.json", "BLIND_REBUILD_FREEZE_COPY.json", "PROJECT_3_EXECUTABLE_GATES.json", "PA05_METRICS.json")]
 UPSTREAM = [
     P.TRACE_REGISTER,
     "data/experiments/A21_TRACE_SUFFICIENCY_01/TRACE_PILOT_REPORT.json",
@@ -159,7 +170,7 @@ def _git_head() -> str:
 def freeze(stage: str) -> dict:
     arts = {"estimate": ARTIFACTS_ESTIMATE, "a22": ARTIFACTS_A22, "final": ARTIFACTS_FINAL,
             "dual": ARTIFACTS_DUAL, "owner_evidence": ARTIFACTS_OWNER_EVIDENCE,
-            "se_audit": ARTIFACTS_SE_AUDIT, "assembly": ARTIFACTS_ASSEMBLY, "pa02": ARTIFACTS_PA02, "pa03": ARTIFACTS_PA03, "pa04": ARTIFACTS_PA04}[stage]
+            "se_audit": ARTIFACTS_SE_AUDIT, "assembly": ARTIFACTS_ASSEMBLY, "pa02": ARTIFACTS_PA02, "pa03": ARTIFACTS_PA03, "pa04": ARTIFACTS_PA04, "pa05": ARTIFACTS_PA05}[stage]
     body = {
         "PHASE_ID": P.PHASE_ID, "ARTIFACT": f"FREEZE_{stage.upper()}",
         "STAGE": stage, "GIT_HEAD_AT_FREEZE": _git_head(),
@@ -167,7 +178,7 @@ def freeze(stage: str) -> dict:
         "UPSTREAM_SHA256": {u: (_sha(Path(u)) if Path(u).exists() else None) for u in UPSTREAM},
         "CODE_SHA256": {c: (_sha(Path(c)) if Path(c).exists() else None) for c in CODE},
         "ARTIFACT_SHA256": {a: (_sha(OUT / a) if (OUT / a).exists() else None) for a in arts},
-        "BENCHMARK_OPENED_BEFORE_THIS_FREEZE": stage in ("final", "dual", "owner_evidence", "se_audit", "assembly", "pa02", "pa03", "pa04"),
+        "BENCHMARK_OPENED_BEFORE_THIS_FREEZE": stage in ("final", "dual", "owner_evidence", "se_audit", "assembly", "pa02", "pa03", "pa04", "pa05"),
         "STANDING_PROHIBITIONS": P.STANDING_PROHIBITIONS,
     }
     missing = [k for k, v in body["ARTIFACT_SHA256"].items() if v is None]
