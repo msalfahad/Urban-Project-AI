@@ -3714,3 +3714,55 @@ walls are normal-height faces and the "double-height plaster height" was a
 question asked of a wall that does not exist. A stair well is measured as
 per-storey faces from the level chains with its interruptions listed; a
 site record's single 12.90 m line stays a contractor basis.
+
+> Forward note (PA03, 2026-09-20): the P7757 example in §144 ("the
+> reception void is a stair well bounded by railings, so the reception
+> walls are normal-height faces") is WITHDRAWN by the owner source review
+> (ledger L-15 / SR-02). The rule of §144 stands; its P7757 application
+> did not: see §145.
+
+## §145 — A floor opening is a slab fact; wall continuity is a wall fact
+
+`engine/source_review.py` keeps VOID_FLOOR_OPENING and
+WALL_CONTINUES_VERTICALLY as independent fields on every void edge, and
+refuses a continuity value derived from the opening. "There is a void,
+therefore there is no double-height wall" is not an inference: a wall
+standing in the same plane on both plan copies with the void's stair
+against it (P7757 RV-S-B) is a candidate double-height face, and an FF
+wall over an open GF edge (RV-W) is a face taller than its storey. The
+status is FULLY_ESTABLISHED only when every candidate is proved by a
+section; on P7757 no section cuts the opening, so it is
+NOT_FULLY_ESTABLISHED and the faces stay NOT_ESTABLISHED.
+
+## §146 — A printed dimension and a CAD extent are reconciled by class, never by arithmetic
+
+A printed value is kept beside every CAD candidate that could own it and
+the pair is classified (SAME_OBJECT_DIFFERENT_FACE_BASIS,
+IDENTITY_MAPPING_DIFFERENCE, CAD_GEOMETRY_DIFFERENCE,
+PRINTED_DIMENSION_OWNERSHIP_DIFFERENCE, UNRESOLVED). Nothing is averaged
+and the CAD value never replaces the printed one. On P7757 the printed
+587 × 400 are authored DWG dimension entities naming the VOID_STAIR_ZONE
+(opening plus the straight-flight strip to the NE wall face); the X marks
+the SLAB_OPENING 5.82 × 2.75 (the structural plan agrees); both objects
+are preserved. The same discipline applies to a printed chain on an
+elevation: each figure has an owner (opening height, spandrel, sill
+offset, head offset, arch rise, pier, frame detail) decided by its
+witness terminations on the native page, never by prose.
+
+## §147 — A QA render is evidence of a read, never source authority
+
+Every render carries SOURCE_IMAGE or DERIVED_QA_OVERLAY, an ink fraction
+and a target-visibility judgement, and is INFORMATIVE,
+PARTIALLY_INFORMATIVE or NOT_INFORMATIVE. A render that does not visibly
+contain the claimed object (or shows only sheet grid) supports nothing; an
+overlay's own lines and captions (the +11.30 band line, the "5.82 × 2.75"
+caption) are never evidence for the level or the dimension they depict.
+Corollaries recorded in PA03: an elevation's existence and its finish are
+different facts (a queue reason may not say "no elevation exists" when
+page 7 is the NE elevation); a column's exposed girth, its exposed height
+and its bonding area are three records, and girth × a parametric height
+is an OWNER_PARAMETRIC figure, never the physical area; an open lattice
+has zero plasterable face and its kerb is a separate component; a thin
+element between two flights becomes a plaster wall only with role
+evidence.
+

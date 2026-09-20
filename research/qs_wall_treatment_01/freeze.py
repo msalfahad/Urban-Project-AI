@@ -68,6 +68,9 @@ CODE = [
     "research/qs_wall_treatment_01/pa02_roof_edges_facade.py", "research/qs_wall_treatment_01/pa02_trades_wet_openings.py",
     "research/qs_wall_treatment_01/pa02_visual_qa.py", "research/qs_wall_treatment_01/pa02_gate.py",
     "research/qs_wall_treatment_01/owner_report_v6.py",
+    "engine/source_review.py",
+    "research/qs_wall_treatment_01/pa03_source_review.py", "research/qs_wall_treatment_01/pa03_visual_qa.py",
+    "research/qs_wall_treatment_01/pa03_gate.py", "research/qs_wall_treatment_01/owner_report_v7.py",
 ]
 ARTIFACTS_ESTIMATE = [
     "P7757_OWNER_PARAMETERS.json", "OVERLAP_AUDIT.json",
@@ -108,6 +111,14 @@ ARTIFACTS_PA02 = ARTIFACTS_ASSEMBLY + [
     "ROOF_EDGES_FACADE_FINISH_KERB.json", "TRADES_WET_OPENINGS_FLOORS_COVERAGE.json", "PA02_GATE.json",
     "A22_RECONCILIATION_REGISTER_v5.json", "VISUAL_QA_PA02.json", "visual_qa/FF_VOID_STAIR.png", "visual_qa/SE_FACADE_OPENINGS.png",
     "visual_qa/NE_PARAPET_TOP.png", "visual_qa/NW_ROOF_EDGE.png", "OWNER_REPORT_V6.md"]
+ARTIFACTS_PA03 = ARTIFACTS_PA02 + [
+    "FREEZE_PA02.json", "VOID_GEOMETRY_RECONCILIATION.json", "RECEPTION_VERTICAL_FACE_REGISTER.json", "STAIR_COMPONENT_REGISTER_V2.json",
+    "COLUMN_VERTICAL_EXPOSURE_REGISTER.json", "NE_ELEVATION_FINISH_ELIGIBILITY_REGISTER.json", "SE_OPENING_DIMENSION_OWNERSHIP_AUDIT.json",
+    "PA02_SOURCE_REVIEW_SUPERSESSION_LEDGER.json", "QA_RENDER_VALIDITY_REGISTER.json", "PA03_DEPENDENT_QUANTITIES.json",
+    "A22_RECONCILIATION_REGISTER_v6.json", "PA03_GATE.json", "visual_qa/FF_VOID_TWO_OBJECTS.png",
+    "visual_qa/source_crops/se_tower_chain.png", "visual_qa/source_crops/se_mb_window.png", "visual_qa/source_crops/se_base_chain.png",
+    "visual_qa/source_crops/ne_top_full.png", "visual_qa/source_crops/ne_top_zoomL.png", "visual_qa/source_crops/ne_top_zoomR.png",
+    "OWNER_REPORT_V7.md"]
 UPSTREAM = [
     P.TRACE_REGISTER,
     "data/experiments/A21_TRACE_SUFFICIENCY_01/TRACE_PILOT_REPORT.json",
@@ -136,7 +147,7 @@ def _git_head() -> str:
 def freeze(stage: str) -> dict:
     arts = {"estimate": ARTIFACTS_ESTIMATE, "a22": ARTIFACTS_A22, "final": ARTIFACTS_FINAL,
             "dual": ARTIFACTS_DUAL, "owner_evidence": ARTIFACTS_OWNER_EVIDENCE,
-            "se_audit": ARTIFACTS_SE_AUDIT, "assembly": ARTIFACTS_ASSEMBLY, "pa02": ARTIFACTS_PA02}[stage]
+            "se_audit": ARTIFACTS_SE_AUDIT, "assembly": ARTIFACTS_ASSEMBLY, "pa02": ARTIFACTS_PA02, "pa03": ARTIFACTS_PA03}[stage]
     body = {
         "PHASE_ID": P.PHASE_ID, "ARTIFACT": f"FREEZE_{stage.upper()}",
         "STAGE": stage, "GIT_HEAD_AT_FREEZE": _git_head(),
@@ -144,7 +155,7 @@ def freeze(stage: str) -> dict:
         "UPSTREAM_SHA256": {u: (_sha(Path(u)) if Path(u).exists() else None) for u in UPSTREAM},
         "CODE_SHA256": {c: (_sha(Path(c)) if Path(c).exists() else None) for c in CODE},
         "ARTIFACT_SHA256": {a: (_sha(OUT / a) if (OUT / a).exists() else None) for a in arts},
-        "BENCHMARK_OPENED_BEFORE_THIS_FREEZE": stage in ("final", "dual", "owner_evidence", "se_audit", "assembly", "pa02"),
+        "BENCHMARK_OPENED_BEFORE_THIS_FREEZE": stage in ("final", "dual", "owner_evidence", "se_audit", "assembly", "pa02", "pa03"),
         "STANDING_PROHIBITIONS": P.STANDING_PROHIBITIONS,
     }
     missing = [k for k, v in body["ARTIFACT_SHA256"].items() if v is None]

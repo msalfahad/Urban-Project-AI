@@ -196,3 +196,49 @@ NOT_ESTABLISHED; the project opening register holds 35 openings; profile
 steel, floor-by-floor output and a coverage matrix are produced. The owner
 queue was rebuilt to five items, none blocking. Freeze:
 `FREEZE_PA02.json`.
+
+## Source review and correction layer (seventh checkpoint, PA03)
+
+The owner's source review reopened four PA02 statements before any
+dependent quantity was used. The FF "void" was reconciled without
+arithmetic: the printed 587 × 400 are authored DWG dimension entities and
+name the VOID_STAIR_ZONE (5.87 to the outer railing line; 4.00 from the
+opening's north line to the NE wall face, which includes the 1.15 m
+straight-flight strip), while PA02's 5.82 × 2.75 is the SLAB_OPENING
+marked by the architectural X and, independently, by the structural p4
+"Open To Below" X. Both objects are preserved (width:
+SAME_OBJECT_DIFFERENT_FACE_BASIS; depth: IDENTITY_MAPPING_DIFFERENCE).
+The statement "there is a void, therefore no double-height wall" was
+withdrawn (L-10 reopened): the four opening edges were modelled from the
+solid / dashed layers of both plan copies — north and east edges open with
+FF railings, the west edge open at GF under an FF wall, the NE edge a GF
+opening to the garden strip under an FF wall for 3.82 m and the same
+200 wall on both floors for 2.05 m with the straight flight against it
+(candidate double-height face RVF-S-B). No section cuts the opening (A-A
+has it behind the viewer, B-B looks away), so
+DOUBLE_HEIGHT_WALL_STATUS = NOT_FULLY_ESTABLISHED and every face stays
+NOT_ESTABLISHED. The D2 column's exposure was rebuilt face by face with
+the walls that end on it (CAD-822/823 on the west face, CAD-783 on the
+east): internal plasterable girth 0.75 lm (0.85 on the structural depth),
+external face 0.60 separate, exposed height NOT_ESTABLISHED, the 5.76 m²
+superseded and 0.75 × 3.20 = 2.40 labelled OWNER_PARAMETRIC. The block
+stair's 10 cm element stays UNRESOLVED with the full-height wall roles
+excluded provisionally by A-A (the far flight is visible); the per-storey
+stair subtotals were demoted to GEOMETRIC_REFERENCE_ONLY and the twelve
+faces carry exposure / openings / landing / occlusion fields. The NE
+elevation exists (page 7): the queue wording was withdrawn and the item
+rewritten with SOLID_FACE_TOP (PROVISIONAL), BAND_EXISTS
+(NOT_ESTABLISHED: page 7 draws one top line), BAND_HEIGHT (DERIVED 0.20)
+and BAND_TRADE_ROLE (UNKNOWN) as separate fields. The SE opening
+dimensions were re-read on native crops with witness terminations
+(W1–W4 and the 2.15 × 1.90 window PRINTED_OWNED; two small 8 / 5 figures
+at the W2 sill UNRESOLVED). A QA render validity register classifies every
+overlay and source crop; three NE top crops are NOT_INFORMATIVE for a
+band. Registers: VOID_GEOMETRY_RECONCILIATION,
+RECEPTION_VERTICAL_FACE_REGISTER, STAIR_COMPONENT_REGISTER_V2,
+COLUMN_VERTICAL_EXPOSURE_REGISTER, NE_ELEVATION_FINISH_ELIGIBILITY_REGISTER,
+SE_OPENING_DIMENSION_OWNERSHIP_AUDIT, PA02_SOURCE_REVIEW_SUPERSESSION_LEDGER,
+QA_RENDER_VALIDITY_REGISTER, PA03_DEPENDENT_QUANTITIES, A22 v6, queue v3
+(six items, none blocking; a new RECEPTION-SECTION-SOURCE information
+item), ledger L-15..L-22. Freeze: `FREEZE_PA03.json`.
+
