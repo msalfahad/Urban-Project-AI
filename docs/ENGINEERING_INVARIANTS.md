@@ -4991,3 +4991,43 @@ approval is the owner's act, and an engine cannot approve its own output, so
 every record leaves as DRAFT. And it connects to nothing: no app, no
 database, no upload. Raw extraction must never write project financial data.
 A person stands between the measurement and the money.
+
+## §239 — A confirmed parameter is not a placeholder
+
+The Qortuba drawing set states no opening heights at all, so every internal
+door consumed TD-02, the generic 2.20 m placeholder — and every quantity
+that touched a door was held PARTIAL for it. Bathroom wall ceramic had an
+established host length, a tile height, source-established door widths and
+nothing else outstanding, and was still reported as unfinished because of a
+figure nobody doubted.
+
+The owner has now confirmed 2.20 m as a project parameter. That moves it up
+the ladder from rank 4 to rank 2: an OWNER_CONFIRMED_PROJECT_PARAMETER, not
+an assumption. A source drawing dimension would still override it, and none
+exists. So consuming it is provenance, not a reservation, and a row is no
+longer held open for having used it.
+
+The flag stays — the file must still say which figures rest on the parameter
+— but it is recorded as USES_OWNER_CONFIRMED_PARAMETER and carries a note
+rather than a warning. The generic TD-02 survives for other projects, with
+its own entry saying it is superseded here.
+
+A status must mean what it says. PARTIAL means something is genuinely
+missing; if nothing is, the row is FINAL and says so.
+
+## §240 — Three kinds of question, and only one holds up the takeoff
+
+The last batch put to the owner is not uniform. Six window heights and three
+unknown gaps are **measurement inputs**: until they arrive, wall areas
+cannot be computed and the rows that wait name them. The Hall/Pantry glazing
+is a **trade classification input**: its 6.050 m² is settled and deducted,
+and the answer decides only which BOQ line carries it. The PVC doors are a
+**pricing input**: seven doors and 16.665 m² are finished, and the answer
+decides the unit they are sold in.
+
+Marking them alike would misrepresent the state of the work — it would say
+the takeoff is waiting on eleven things when it is waiting on nine. So each
+row declares its kind, and only a measurement input may appear in a
+quantity's residual list. The test holds both directions: every measurement
+question is one some row is actually waiting on, and every row that is
+waiting is actually asked.

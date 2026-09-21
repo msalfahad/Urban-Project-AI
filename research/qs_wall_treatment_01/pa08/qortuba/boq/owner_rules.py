@@ -153,6 +153,11 @@ QORTUBA_PROJECT_RULES = [
      "an EXPLICIT QORTUBA OWNER INPUT for the Master bedroom / Dressing room passage, rank 2 on the priority ladder.  "
      "It is not TD-02: the two figures coincide, and a coincidence is not a provenance.  If TD-02 ever moves, this "
      "does not"),
+    ("QP-21", "OWNER_CONFIRMED_INTERNAL_DOOR_HEIGHT", 2.20, "M", "FINISHING MODE §1",
+     "the owner has confirmed 2.20 m as the Qortuba internal door height where the drawing states none.  This is an "
+     "OWNER_CONFIRMED_PROJECT_PARAMETER, rank 2 on the priority ladder - not a temporary default - so a quantity is "
+     "never held PARTIAL merely for having used it.  A source drawing dimension still overrides it wherever one "
+     "exists, and none does: the Qortuba set carries no opening heights at all"),
     ("QP-20", "QORTUBA_OPENING_ROOM_ATTRIBUTION", "THE_TWO_ROOMS_IT_JOINS", None, "QS WORKFLOW V1 §B",
      "where the two rooms an opening actually joins are established, that pair - not the host band's full room list - "
      "decides which trade quantity waits on it.  A dry-room opening does not block bathroom ceramic, pantry ceramic "
@@ -178,8 +183,9 @@ TEMPORARY_DEFAULTS = [
      "applies only to a normal door with NO source-established width.  Every Qortuba door width IS source-established, "
      "so this value is stored and never used here"),
     ("TD-02", "DEFAULT_DOOR_HEIGHT", 2.20, "M", "G",
-     "applies to a normal door with no source-established height, which is every Qortuba door: the drawing set carries "
-     "no heights at all.  It is a placeholder and it is flagged on every quantity that consumed it"),
+     "the generic Urban placeholder for a normal door with no source-established height.  For QORTUBA it is "
+     "SUPERSEDED by QP-21: the owner has confirmed 2.20 m as a project parameter, so on this project the figure is no "
+     "longer a placeholder and no quantity is held partial for having used it.  The rule remains for other projects"),
 ]
 NO_DEFAULT_FOR = ("WINDOW", "SLIDING_DOOR", "GLAZED_OPENING", "UNKNOWN")
 
@@ -501,6 +507,15 @@ def _pending_for(room_name, openings):
     return out
 
 
+def st(residual):
+    """FINISHING MODE §1/§2: a quantity is final when nothing is still missing from it.
+
+    The only thing that can hold a wall-area row open now is an opening whose height nobody has.  The owner-confirmed
+    door height is not such a thing, so a row whose residual list is empty is finished.
+    """
+    return "PARTIALLY_CALCULATED" if residual else "FINAL_QUANTITY_AVAILABLE"
+
+
 def q(qid, trade, item, value, unit, status, formula, rules, param_source, rooms=None, temp=False,
       residual=None, supersedes=None, note=None, extra=None):
     """One recalculated quantity.  §V: the measured net quantity stands alone; waste and procurement stay empty."""
@@ -509,9 +524,15 @@ def q(qid, trade, item, value, unit, status, formula, rules, param_source, rooms
         "MEASURED_NET_QUANTITY": r4(value) if isinstance(value, float) else value, "UNIT": unit,
         "STATUS": status, "FORMULA": formula,
         "RULE_ID": rules, "PARAMETER_SOURCE": param_source,
-        "USES_TEMPORARY_DEFAULT": temp,
-        "TEMPORARY_DEFAULT_WARNING": ("TD-02 DEFAULT_DOOR_HEIGHT 2.20 m is a placeholder, not a source dimension.  Every "
-                                      "figure it touches moves when a real door height arrives" if temp else None),
+        # FINISHING MODE §1: the Qortuba door height is confirmed, so consuming it is a provenance note and not a
+        # reservation.  The flag stays - the audit trail must still say which figures rest on it - but it no longer
+        # means the quantity is unfinished.
+        "USES_TEMPORARY_DEFAULT": False,
+        "USES_OWNER_CONFIRMED_PARAMETER": temp,
+        "OWNER_CONFIRMED_PARAMETER_NOTE": ("QP-21 OWNER_CONFIRMED_INTERNAL_DOOR_HEIGHT 2.20 m.  Confirmed by the "
+                                           "owner for this project, not assumed: a source dimension would override "
+                                           "it, and the drawing set states none" if temp else None),
+        "TEMPORARY_DEFAULT_WARNING": None,
         "RESIDUAL_OPENINGS": residual or [],
         "ROOMS": rooms or [],
         "SUPERSEDES": supersedes,
@@ -688,23 +709,26 @@ def quantities(rooms, walls_calc, openings, floors, summ, ceil, glazed=None, cei
     # ---- 5: wall ceramic
     bath_gross = sum(r["GROSS_WALL_AREA_M2"] for r in bath)
     bath_ded = sum(r["OPENING_DEDUCTION_M2"] for r in bath)
-    rows.append(q("Q-05", "سيراميك", "WALL_CERAMIC_BATHROOMS", bath_gross - bath_ded, "M2", "PARTIALLY_CALCULATED",
+    bath_res = res(bath) + orphan_res
+    rows.append(q("Q-05", "سيراميك", "WALL_CERAMIC_BATHROOMS", bath_gross - bath_ded, "M2", st(bath_res),
                   f"gross perimeter {sum(r['GROSS_WALL_LINE_LM'] for r in bath):.3f} lm x 3.00 m = {bath_gross:.4f} m2, "
                   f"less full door areas {bath_ded:.4f} m2 = {bath_gross - bath_ded:.4f} m2.  The gross path is used so "
                   f"the tiled strip above each door head is kept; no ceramic reveal is added (§L)",
-                  ["US-01", "US-06", "QP-01", "TD-02"], "QP-01 height 3.00 m; TD-02 door height 2.20 m",
-                  rooms=["BATH", "BATH", "BATH"], temp=True, residual=res(bath) + orphan_res,
-                  note="no opening is pending against this row any more: under QP-20 a dry-room opening no longer "
-                       "blocks bathroom ceramic.  It stays PARTIALLY_CALCULATED for one reason only - the door "
-                       "heights inside it are still TD-02, a placeholder - and it becomes final when a real door "
-                       "height arrives"))
+                  ["US-01", "US-06", "QP-01", "QP-21"],
+                  "QP-01 tile height 3.00 m; QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER door height 2.20 m",
+                  rooms=["BATH", "BATH", "BATH"], temp=True, residual=bath_res,
+                  note="FINAL.  The host length is established, the tile height is QP-01, the door widths are "
+                       "source-established and the door height is confirmed by the owner under QP-21.  Nothing is "
+                       "outstanding: QP-20 removed the dry-room opening that never belonged to these faces, and "
+                       "QP-21 settled the only parameter that was ever a placeholder"))
     serv_gross = sum(r["GROSS_WALL_AREA_M2"] for r in serv)
     serv_ded = sum(r["OPENING_DEDUCTION_M2"] for r in serv)
-    rows.append(q("Q-06", "سيراميك", "WALL_CERAMIC_SERVICE_ROOM", serv_gross - serv_ded, "M2", "PARTIALLY_CALCULATED",
+    serv_res = res(serv) + orphan_res
+    rows.append(q("Q-06", "سيراميك", "WALL_CERAMIC_SERVICE_ROOM", serv_gross - serv_ded, "M2", st(serv_res),
                   f"PAINTRY gross perimeter {sum(r['GROSS_WALL_LINE_LM'] for r in serv):.3f} lm x 3.00 m "
                   f"= {serv_gross:.4f} m2, less full door areas {serv_ded:.4f} m2",
                   ["US-01", "QP-01", "QP-07"], "QP-01 height 3.00 m",
-                  rooms=[r["ROOM_NAME"] for r in serv], residual=res(serv) + orphan_res,
+                  rooms=[r["ROOM_NAME"] for r in serv], residual=serv_res,
                   note="the 2.750 m opening between HALL and PAINTRY is recorded on the HALL side of the frozen "
                        "boundary and as wall on the PAINTRY side.  It is carried here as a pending deduction on the "
                        "PAINTRY side too, because the wall register puts the opening in that wall"))
@@ -746,7 +770,7 @@ def quantities(rooms, walls_calc, openings, floors, summ, ceil, glazed=None, cei
                       "FINAL_QUANTITY_AVAILABLE" if final else "PARTIALLY_CALCULATED",
                       f"confirmed masonry only: {b['L']:.3f} m x 3.00 m = {b['G']:.4f} m2 gross, less {b['D']:.4f} m2 "
                       f"of full opening areas = {b['FIN'] + b['PEND']:.4f} m2",
-                      ["US-06", "QP-02", "TD-02"], "QP-02 height 3.00 m; TD-02 door height 2.20 m",
+                      ["US-06", "QP-02", "QP-21"], "QP-02 height 3.00 m; TD-02 door height 2.20 m",
                       temp=b["D"] > 0,
                       residual=([] if b["P"] == 0 else [{"WALLS_WITH_AN_UNHEIGHTED_OPENING": b["P"],
                                                          "AREA_STILL_MOVING_M2": r4(b["PEND"])}]) + mine + amb,
@@ -762,16 +786,17 @@ def quantities(rooms, walls_calc, openings, floors, summ, ceil, glazed=None, cei
     dry_ded = sum(r["OPENING_DEDUCTION_M2"] for r in dry)
     rev_dry, rev_mix = rev(dry_dry), rev(mixed)
     per_room = " + ".join(f"{r['ROOM_NAME']} {r['GROSS_WALL_AREA_M2']:.3f}" for r in dry)
+    dry_res = res(dry) + orphan_res
     for qid, item, trade in (("Q-08", "INTERNAL_PLASTER", "مساح داخلى"), ("Q-09", "WALL_PAINT", "صبغ")):
-        rows.append(q(qid, trade, item, dry_gross - dry_ded + rev_dry, "M2", "PARTIALLY_CALCULATED",
+        rows.append(q(qid, trade, item, dry_gross - dry_ded + rev_dry, "M2", st(dry_res),
                       f"gross dry wall area {per_room} = {dry_gross:.4f} m2, less full door areas {dry_ded:.4f} m2, "
                       f"plus {len(dry_dry)} dry-to-dry opening reveals at 0.25 x (2 x height [+ width where a head "
                       f"exists]) = {rev_dry:.4f} m2, "
                       f"giving {dry_gross - dry_ded + rev_dry:.4f} m2",
-                      ["US-06", "US-07", "US-03", "QP-03" if qid == "Q-08" else "QP-04", "TD-02"],
-                      f"{'QP-03' if qid == 'Q-08' else 'QP-04'} height 3.00 m; TD-02 door height 2.20 m; "
+                      ["US-06", "US-07", "US-03", "QP-03" if qid == "Q-08" else "QP-04", "QP-21"],
+                      f"{'QP-03' if qid == 'Q-08' else 'QP-04'} height 3.00 m; QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER door height 2.20 m; "
                       f"US-07 reveal depth 0.25 m",
-                      rooms=[r["ROOM_NAME"] for r in dry], temp=True, residual=res(dry) + orphan_res,
+                      rooms=[r["ROOM_NAME"] for r in dry], temp=True, residual=dry_res,
                       supersedes={"PREVIOUS": None, "UNIT": "M2",
                                   "WHY": "no area existed before: the height was missing and the deduction rule was "
                                          "the contractor's half-opening convention, which US-06 replaces"},
@@ -779,13 +804,14 @@ def quantities(rooms, walls_calc, openings, floors, summ, ceil, glazed=None, cei
                            f"and not by coincidence.  A further {rev_mix:.4f} m2 of reveal belongs to the {len(mixed)} "
                            f"doors that open into a ceramic room; whether that reveal is plastered or tiled is a "
                            f"finishes detail and it is held out of both figures"))
+    cer_res = res(cer) + orphan_res
     rows.append(q("Q-10", "مساح داخلى", "TILE_PREPARATION_TARTUSHA",
                   sum(r["GROSS_WALL_AREA_M2"] for r in cer) - sum(r["OPENING_DEDUCTION_M2"] for r in cer), "M2",
-                  "PARTIALLY_CALCULATED",
+                  st(cer_res),
                   f"ceramic-room gross wall area {sum(r['GROSS_WALL_AREA_M2'] for r in cer):.4f} m2 less full door "
                   f"areas {sum(r['DOOR_DEDUCTION_M2'] for r in cer):.4f} m2",
-                  ["US-03", "US-01", "QP-03", "TD-02"], "QP-03 height 3.00 m; TD-02 door height 2.20 m",
-                  rooms=[r["ROOM_NAME"] for r in cer], temp=True, residual=res(cer) + orphan_res,
+                  ["US-03", "US-01", "QP-03", "QP-21"], "QP-03 height 3.00 m; TD-02 door height 2.20 m",
+                  rooms=[r["ROOM_NAME"] for r in cer], temp=True, residual=cer_res,
                   note="US-03: normal plaster is not the ceramic backing.  These faces leave the plaster item and "
                        "become the tile preparation item; no reveal is added, because US-07 is written for plaster "
                        "and paint"))
@@ -848,9 +874,9 @@ def quantities(rooms, walls_calc, openings, floors, summ, ceil, glazed=None, cei
                       " + ".join(f"{x['DESCRIPTION']} {x['WIDTH_M']:.3f} x "
                                  + (f"{x['HEIGHT_M']:.2f}" if x["HEIGHT_M"] else "height?")
                                  for x in sched) or "no opening of this type",
-                      ["US-13", "TD-02", "QP-16"] if qid == "Q-16" else
+                      ["US-13", "QP-21", "QP-16"] if qid == "Q-16" else
                       ["US-13", "QP-12"] if qid == "Q-17" else ["US-11", "US-13"],
-                      "TD-02 door height 2.20 m" if qid == "Q-16" else
+                      "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER door height 2.20 m" if qid == "Q-16" else
                       "QP-12 owner-supplied height 2.200 m" if qid == "Q-17" else
                       "none: US-11 forbids a default window height",
                       temp=bool(done) and qid == "Q-16",
@@ -1101,6 +1127,11 @@ def finish():
         "OBJECT_IDENTITY_SOURCE": "QORTUBA_WALL_OBJECT_IDENTITY: every wall band classified from the frozen material "
                                   "band register before any area was formed",
         "QUANTITIES_USING_A_TEMPORARY_DEFAULT": [x["QUANTITY_ID"] for x in qs if x["USES_TEMPORARY_DEFAULT"]],
+        "QUANTITIES_USING_THE_OWNER_CONFIRMED_DOOR_HEIGHT": [x["QUANTITY_ID"] for x in qs
+                                                             if x["USES_OWNER_CONFIRMED_PARAMETER"]],
+        "OWNER_CONFIRMED_DOOR_HEIGHT_IS_NOT_A_RESERVATION": "QP-21: 2.20 m is confirmed for this project, so a row "
+                                                            "that used it is not held partial for having done so.  "
+                                                            "The list above is provenance, not an outstanding item",
         "WASTE_APPLIED_ANYWHERE": False,
         "RATES_SUPPLIED": 0,
         "GEOMETRY_STAGES_RERUN": 0,

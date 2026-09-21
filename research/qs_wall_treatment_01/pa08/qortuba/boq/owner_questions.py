@@ -37,7 +37,29 @@ ISSUED_NUMBERS = {
     "BE-07": 1, "BE-06": 2, "BE-05": 3, "BE-04": 4, "BE-02": 5, "BE-01": 6,
     "OS-b1e147c89482": 7, "OS-77f8fed2eb15": 8, "OS-85cb2192ebc0": 9,
     "OS-3144b5fbb149": 10, "OS-045efd7810a7": 11,
+    "Q-17": 12, "Q-16": 13,
 }
+
+# FINISHING MODE §5: two things still needed to finish Qortuba are not measurements.  One decides which trade
+# carries a product; the other decides the UNIT a settled quantity is priced in.  Neither is a question about the
+# drawing, so both are marked as what they are and kept out of the measurement queue.
+NON_OPENING_QUESTIONS = [
+    {"ID": "Q-17", "ROOM": "Between the Hall and the Pantry / preparation kitchen",
+     "OPENING": "Internal glazed opening", "WIDTH_M": 2.750,
+     "KNOWN": "2.750 m wide x 2.200 m high = 6.050 m2, physically established and already deducted from both rooms",
+     "QUESTION": "What is this glazing made of, and which trade supplies it - aluminium, PVC, timber or joinery?",
+     "ASKS_FOR": "TRADE", "INPUT_KIND": "TRADE_CLASSIFICATION_INPUT",
+     "WHY_IT_MATTERS": "the area is settled and no wall quantity waits on it.  What is missing is which schedule the "
+                       "product belongs to, and US-13 forbids putting it under aluminium by resemblance",
+     "UNLOCKS": "the internal glazing BOQ line"},
+    {"ID": "Q-16", "ROOM": "All seven interior doors", "OPENING": "PVC internal doors", "WIDTH_M": None,
+     "KNOWN": "7 doors, widths source-established, height 2.20 m confirmed under QP-21, 16.665 m2 of opening area",
+     "QUESTION": "Are PVC doors priced per door, per set, or by m2?",
+     "ASKS_FOR": "PRICING_BASIS", "INPUT_KIND": "PRICING_INPUT",
+     "WHY_IT_MATTERS": "this is NOT a measurement question.  The physical quantity is finished; what is missing is "
+                       "the unit it is sold in, and a quantity in the wrong unit is not a pricing quantity",
+     "UNLOCKS": "the PVC door pricing line only.  No wall quantity waits on it"},
+]
 
 
 def questions():
@@ -55,7 +77,8 @@ def questions():
     for r in sorted(heights, key=lambda z: -z["WIDTH_M"]):
         out.append({"#": num(r), "ROOM": r["ROOM"], "OPENING": r["OPENING"], "WIDTH_M": r["WIDTH_M"],
                     "QUESTION": "Height?", "LOCATION": r["LOCATION"],
-                    "ASKS_FOR": "HEIGHT", "TRADE": r["MATERIAL_TRADE"],
+                    "ASKS_FOR": "HEIGHT", "INPUT_KIND": "QUANTITY_MEASUREMENT_INPUT",
+                    "TRADE": r["MATERIAL_TRADE"],
                     "WHY_IT_MATTERS": "no area can be released for this opening's trade, and every wall it stands in "
                                       "stays partial, until the height is known",
                     "AUDIT_OPENING_ID": r["OPENING_ID"]})
@@ -71,6 +94,7 @@ def questions():
                                 "What is this: a door, an open passage, a window, or something else?",
                     "LOCATION": r["LOCATION"],
                     "ASKS_FOR": "PASSAGE_HEIGHT" if passage else "TYPE",
+                    "INPUT_KIND": "QUANTITY_MEASUREMENT_INPUT",
                     "TRADE": r["MATERIAL_TRADE"],
                     "WHY_IT_MATTERS": ("full height means the opening is the full 3.00 m wall height with no top "
                                        "reveal; a head means the owner gives the height and a top reveal applies.  "
@@ -80,6 +104,12 @@ def questions():
                                       "until then the walls it stands in cannot be finished",
                     "PLAN_READING": r["PDF_READER"],
                     "AUDIT_OPENING_ID": r["OPENING_ID"]})
+    for x in NON_OPENING_QUESTIONS:
+        out.append({"#": ISSUED_NUMBERS[x["ID"]], "ROOM": x["ROOM"], "OPENING": x["OPENING"],
+                    "WIDTH_M": x["WIDTH_M"], "QUESTION": x["QUESTION"], "LOCATION": x["KNOWN"],
+                    "ASKS_FOR": x["ASKS_FOR"], "INPUT_KIND": x["INPUT_KIND"], "TRADE": None,
+                    "WHY_IT_MATTERS": x["WHY_IT_MATTERS"], "UNLOCKS": x["UNLOCKS"],
+                    "PLAN_READING": None, "AUDIT_OPENING_ID": x["ID"]})
     return out
 
 
@@ -169,6 +199,12 @@ def finish():
         "ASKING_FOR_A_HEIGHT": sum(1 for q in qs if q["ASKS_FOR"] == "HEIGHT"),
         "ASKING_FOR_A_TYPE": sum(1 for q in qs if q["ASKS_FOR"] == "TYPE"),
         "ASKING_FOR_A_PASSAGE_HEIGHT": sum(1 for q in qs if q["ASKS_FOR"] == "PASSAGE_HEIGHT"),
+        "QUANTITY_MEASUREMENT_INPUTS": sum(1 for q in qs if q["INPUT_KIND"] == "QUANTITY_MEASUREMENT_INPUT"),
+        "PRICING_INPUTS": sum(1 for q in qs if q["INPUT_KIND"] == "PRICING_INPUT"),
+        "TRADE_CLASSIFICATION_INPUTS": sum(1 for q in qs if q["INPUT_KIND"] == "TRADE_CLASSIFICATION_INPUT"),
+        "INPUT_KINDS": "a measurement input changes a quantity; a trade input decides which BOQ line carries a "
+                       "quantity that is already settled; a pricing input decides the unit it is sold in.  Only the "
+                       "first kind holds up the takeoff",
         "A_NUMBER_IS_ISSUED_ONCE": "a question number belongs to its opening for good.  #8 and #9 were the two open "
                                    "passages and are now answered, so those numbers are retired rather than reused: "
                                    "the crops already in the owner's hands still point at what they always pointed at",
@@ -188,6 +224,7 @@ if __name__ == "__main__":
     o = finish()
     print(f"{'#':>2}  {'Room':30s} {'Opening':26s} {'Width':>7s}  Question")
     for q in o["ROWS"]:
-        print(f"{q['#']:>2}  {str(q['ROOM']):30s} {q['OPENING']:26s} {q['WIDTH_M']:7.3f}  {q['QUESTION']}")
+        w = f"{q['WIDTH_M']:7.3f}" if q["WIDTH_M"] is not None else " " * 7
+        print(f"{q['#']:>2}  {str(q['ROOM'])[:30]:30s} {q['OPENING']:26s} {w}  {q['QUESTION']}")
     print()
     print("marked plan:", o["MARKED_PLAN"])

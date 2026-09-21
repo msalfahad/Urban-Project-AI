@@ -62,7 +62,12 @@ def test_no_question_put_to_the_owner_carries_an_opaque_id():
 
 def test_every_question_names_a_room_an_opening_and_a_width():
     for q in reg("QORTUBA_OWNER_QUESTIONS")["ROWS"]:
-        assert q["ROOM"] and q["OPENING"] and q["WIDTH_M"] > 0 and q["QUESTION"]
+        assert q["ROOM"] and q["OPENING"] and q["QUESTION"]
+        # a pricing question is about a unit, not a dimension, so it is the one row with no width to give
+        if q["INPUT_KIND"] == "QUANTITY_MEASUREMENT_INPUT":
+            assert q["WIDTH_M"] > 0, q["#"]
+        else:
+            assert q["ASKS_FOR"] in ("PRICING_BASIS", "TRADE")
         assert q["LOCATION"] and len(q["LOCATION"]) > 10
         assert q["WHY_IT_MATTERS"]
 

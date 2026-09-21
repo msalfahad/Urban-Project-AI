@@ -220,7 +220,10 @@ def test_a_window_without_a_height_stays_owner_input_required():
 def test_the_door_areas_sum_to_the_schedule():
     x = by_id()["Q-16"]
     assert abs(x["MEASURED_NET_QUANTITY"] - round(sum(r["AREA_M2"] for r in x["SCHEDULE"]), 4)) < 1e-9
-    assert x["USES_TEMPORARY_DEFAULT"] is True
+    # the height is confirmed by the owner for this project, so it is provenance and not a reservation
+    assert x["USES_TEMPORARY_DEFAULT"] is False
+    assert x["USES_OWNER_CONFIRMED_PARAMETER"] is True
+    assert "QP-21" in x["OWNER_CONFIRMED_PARAMETER_NOTE"]
     assert x["BOQ_ITEM"] == "PVC_INTERNAL_DOORS", "US-13: an interior door is never an aluminium item"
     assert all(r["MATERIAL_TRADE"] == "PVC" for r in x["SCHEDULE"])
 

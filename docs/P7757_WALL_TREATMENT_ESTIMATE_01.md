@@ -967,3 +967,31 @@ height.
 The export shape is prepared but not connected (§238):
 `APPROVED_QUANTITIES.json` carries all nineteen fields per record and leaves
 every one of them DRAFT.
+
+### Finishing mode
+
+The internal door height is confirmed: 2.20 m, an
+OWNER_CONFIRMED_PROJECT_PARAMETER stored as QP-21, not the TD-02
+placeholder it replaces (§239). Nothing about the arithmetic changed — the
+figure was always 2.20 m — but the reservation attached to it is gone, so a
+quantity whose only outstanding item was the door height is now FINAL.
+
+Bathroom wall ceramic, **84.900 m²**, is the row that moved: established
+host length, QP-01 tile height 3.00 m, source-established door widths,
+QP-21 door height, and — since QP-20 removed the dry-room opening that never
+belonged to those faces — nothing pending. Thirteen quantities are now
+final, six partial.
+
+The six that remain partial each name a real outstanding opening: pantry
+ceramic and tile preparation wait on the Pantry window; plaster and paint
+wait on six window heights and three unresolved gaps; the two blockwork
+rows wait on a thickness-item ambiguity that is not an opening at all.
+
+The PVC schedule keeps its layers apart: seven doors and 16.665 m² of
+opening area are established as physical facts, and FINAL_PRICING_QUANTITY
+stays PROJECT_RULE_REQUIRED until the owner gives the unit. A settled
+measurement does not settle a pricing basis.
+
+The final owner batch is eleven rows of three kinds (§240): nine
+measurement inputs that hold up quantities, one trade classification, and
+one pricing input that holds up nothing in the takeoff at all.

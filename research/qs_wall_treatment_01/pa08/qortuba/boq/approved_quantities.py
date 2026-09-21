@@ -82,6 +82,7 @@ def records():
                 x["NOTE"],
                 (f"{len(x['RESIDUAL_OPENINGS'])} opening(s) still without a height"
                  if x["RESIDUAL_OPENINGS"] else None),
+                (x["OWNER_CONFIRMED_PARAMETER_NOTE"] if x["USES_OWNER_CONFIRMED_PARAMETER"] else None),
                 (x["TEMPORARY_DEFAULT_WARNING"] if x["USES_TEMPORARY_DEFAULT"] else None),
             ) if z) or None,
             "QUANTITY_ID": x["QUANTITY_ID"],

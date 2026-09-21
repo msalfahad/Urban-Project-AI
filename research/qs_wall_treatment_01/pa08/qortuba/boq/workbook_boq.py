@@ -118,6 +118,7 @@ def bill_rows(qs, cm):
         note = " | ".join(z for z in (
             x["NOTE"],
             (f"{len(res)} opening(s) still without a height" if res else None),
+            (x["OWNER_CONFIRMED_PARAMETER_NOTE"] if x["USES_OWNER_CONFIRMED_PARAMETER"] else None),
             (x["TEMPORARY_DEFAULT_WARNING"] if x["USES_TEMPORARY_DEFAULT"] else None),
             (f"supersedes {x['SUPERSEDES']['PREVIOUS']} {x['SUPERSEDES']['UNIT']}: {x['SUPERSEDES']['WHY']}"
              if x["SUPERSEDES"] and x["SUPERSEDES"]["PREVIOUS"] is not None else None),
@@ -199,8 +200,9 @@ def build():
         ("", ""),
         ("THREE QUANTITY COLUMNS", "كمية القياس is what the drawing measured. قاعدة التحويل is the rule applied to it. "
                                    "الكمية النهائية is the payable figure."),
-        ("TEMPORARY DEFAULT", "Door height 2.20 m is TD-02, a placeholder and not a source dimension. Every figure it "
-                              "touches is flagged and will move when a real height arrives."),
+        ("OWNER-CONFIRMED PARAMETER", "Door height 2.20 m is QP-21, confirmed by the owner for this project. It is "
+                                      "not a placeholder: no quantity is held partial for having used it, and a "
+                                      "source drawing dimension would still override it if one existed."),
         ("NOT PRICED", "No rate has been supplied, so سعر الوحدة and الإجمالي are empty on every row."),
         ("NO WASTE", "§V: waste and procurement stay empty until a waste percentage is given."),
         ("NOT RECOMPUTED", "No geometry stage was re-run: " + ", ".join(ow["STAGES_NEVER_RERUN_BY_A_RULE_CHANGE"])),
@@ -284,7 +286,7 @@ def build():
     for x in qs["ROWS"]:
         r = _put(ws, r, [x["QUANTITY_ID"], x["BOQ_ITEM"], x["MEASURED_NET_QUANTITY"], x["UNIT"],
                          ", ".join(x["RULE_ID"]) or "—", x["PARAMETER_SOURCE"], x["FORMULA"],
-                         "نعم TD-02" if x["USES_TEMPORARY_DEFAULT"] else "لا",
+                         "نعم QP-21" if x["USES_OWNER_CONFIRMED_PARAMETER"] else "لا",
                          ", ".join(f"{o.get('OPENING_ID', '')}({o.get('WIDTH_M', '')})"
                                    for o in x["RESIDUAL_OPENINGS"] if o.get("OPENING_ID")) or "—",
                          (f"{x['SUPERSEDES']['PREVIOUS']} {x['SUPERSEDES']['UNIT']} — {x['SUPERSEDES']['WHY']}"
@@ -295,7 +297,7 @@ def build():
     for x in bw["ROWS"]:
         r = _put(ws, r, [x["WALL_ID"], ", ".join(x["ROOMS"]) or "—", x["NET_AREA_M2"], "M2", "US-06, QP-02",
                          f"height {x['HEIGHT_M']} m, thickness {x['THICKNESS_MM']} mm", x["ARITHMETIC"],
-                         "نعم TD-02" if x["OPENINGS_DEDUCTED"] else "لا",
+                         "نعم QP-21" if x["OPENINGS_DEDUCTED"] else "لا",
                          ", ".join(f"{o['OPENING_ID']}({o['W']})" for o in x["OPENINGS_PENDING"]) or "—",
                          "—", STATUS_AR[x["STATUS"]]], STATUS_FILL[x["STATUS"]])
         ws.cell(r - 1, 3).number_format = "0.0000"
