@@ -86,6 +86,9 @@ def test_a_height_exists_only_where_the_owner_default_may_reach():
             # an owner override is a real dimension and may reach any type
             assert r["HEIGHT_M"] == owner[r["OPENING_ID"]][0] and "OWNER" in r["HEIGHT_SOURCE"]
             continue
+        if r["OPENING_ID"] in OS.OWNER_CLOSED_AS_MEASUREMENT_OPENINGS:
+            assert r["HEIGHT_M"] == OS.QORTUBA_WALL_HEIGHT_M
+            continue
         if r["OPENING_ID"] in OS.OWNER_SUPPLIED_PASSAGE_SUBTYPES:
             # a passage height is an explicit project input, not a default, and may reach any subtype
             assert r["HEIGHT_M"] == OS.OWNER_SUPPLIED_PASSAGE_SUBTYPES[r["OPENING_ID"]][1]
@@ -174,21 +177,22 @@ def test_the_skirting_and_profile_are_the_owner_s_fixed_figure():
     for qid in ("Q-01", "Q-02"):
         # 86.589 was the figure before the owner identified the two open passages; each interrupts the path of BOTH
         # rooms it joins, so 4 x 1.200 lm left it.  The window rule QP-09 that fixed 86.589 is unchanged.
-        assert q[qid]["MEASURED_NET_QUANTITY"] == 81.789, qid
+        assert q[qid]["MEASURED_NET_QUANTITY"] == 76.389, qid
         assert q[qid]["VALUE_BEFORE_THE_OPEN_PASSAGE_CORRECTION"] == 86.589, qid
-        assert q[qid]["OPEN_PASSAGE_DEDUCTION_LM"] == 4.8, qid
+        assert q[qid]["OPEN_PASSAGE_DEDUCTION_LM"] == 10.2, qid
         assert q[qid]["STATUS"] == "FINAL_QUANTITY_AVAILABLE"
         assert "QP-09" in q[qid]["RULE_ID"]
     assert q["Q-01"]["MEASURED_NET_QUANTITY"] == q["Q-02"]["MEASURED_NET_QUANTITY"]
     rules = {r["PARAMETER"]: r for r in reg("URBAN_OWNER_RULES_V1")["QORTUBA_PROJECT_RULES"]}
-    assert rules["QORTUBA_HIDDEN_SKIRTING_PATH"]["VALUE"] == 81.789
-    assert rules["QORTUBA_HIDDEN_PROFILE_PATH"]["VALUE"] == 81.789
+    assert q["Q-01"]["MEASURED_NET_QUANTITY"] == 76.389
+    assert rules["QORTUBA_HIDDEN_SKIRTING_PATH"]["VALUE"] == 76.389
+    assert rules["QORTUBA_HIDDEN_PROFILE_PATH"]["VALUE"] == 76.389
     assert rules["QORTUBA_SKIRTING_WINDOW_DEDUCTION"]["RULE_LEVEL"] == "QORTUBA_PROJECT_RULE"
 
 
 def test_the_superseded_reading_is_kept_as_an_audit_trail_not_as_a_quantity():
     q = by_id()["Q-01"]
-    assert q["VALUE_UNDER_THE_SUPERSEDED_READING"] == 91.675
+    assert q["VALUE_UNDER_THE_SUPERSEDED_READING"] == 86.275
     assert q["SUPERSEDED_READING_CLOSED_BY"].startswith("QP-09")
     assert q["MEASURED_NET_QUANTITY"] != q["VALUE_UNDER_THE_SUPERSEDED_READING"]
 

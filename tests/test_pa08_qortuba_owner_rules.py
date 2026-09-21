@@ -87,8 +87,9 @@ def test_no_default_height_reaches_a_window_a_sliding_door_or_an_unknown():
             continue
         if x["OPENING_ID"] in owner:
             continue  # an owner override is a real dimension, not a default, and may reach any type
-        if x["OPENING_ID"] in OS.OWNER_SUPPLIED_PASSAGE_SUBTYPES:
-            continue  # so is an open-passage height the owner supplied
+        if (x["OPENING_ID"] in OS.OWNER_SUPPLIED_PASSAGE_SUBTYPES
+                or x["OPENING_ID"] in OS.OWNER_CLOSED_AS_MEASUREMENT_OPENINGS):
+            continue  # so is a passage or full-height opening the owner closed
         # otherwise a height exists only on an ordinary door, and only from the owner's default
         assert x["TYPE"] == "DOOR" and x["HEIGHT_M"] == 2.20, x["OPENING_ID"]
         assert x["HEIGHT_STATE"] == "TEMPORARY_OWNER_DEFAULT"
@@ -189,7 +190,9 @@ def test_every_opening_deduction_is_the_full_area_and_never_a_half():
         want = sum(o["W"] * o["H"] for o in w["OPENINGS_DEDUCTED"])
         assert abs(w["OPENING_DEDUCTION_M2"] - round(want, 4)) < 1e-9, w["WALL_ID"]
     for x in quants()["ROWS"]:
-        assert "half" not in x["FORMULA"].lower() and "0.5" not in x["FORMULA"], x["QUANTITY_ID"]
+        # a half-opening convention would show as an explicit halving, not as any digits that happen to read 0.5
+        f = x["FORMULA"].lower()
+        assert "half" not in f and "x 0.5" not in f and "/ 2" not in f, x["QUANTITY_ID"]
 
 
 def test_blockwork_adds_no_reveal_back():
@@ -243,7 +246,7 @@ def test_a_missing_height_blocks_only_the_rows_that_depend_on_it():
     # the skirting pair is fixed by QP-09 and was never held by a height
     for qid in ("Q-01", "Q-02"):
         assert by[qid]["STATUS"] == "FINAL_QUANTITY_AVAILABLE"
-        assert by[qid]["MEASURED_NET_QUANTITY"] == 81.789
+        assert by[qid]["MEASURED_NET_QUANTITY"] == 76.389
         assert by[qid]["USES_TEMPORARY_DEFAULT"] is False
         assert by[qid]["RESIDUAL_OPENINGS"] == [], "no unheighted opening may hold up a linear quantity"
     assert q["BY_STATUS"]["FINAL_QUANTITY_AVAILABLE"] > 0 and q["BY_STATUS"]["PARTIALLY_CALCULATED"] > 0

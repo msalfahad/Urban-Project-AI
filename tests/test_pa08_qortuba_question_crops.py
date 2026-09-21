@@ -42,14 +42,12 @@ def test_every_open_gap_question_has_its_own_image():
 
 
 def test_the_numbers_the_owner_already_has_do_not_move():
-    """An answer must not renumber the questions still open, or the crops already sent stop meaning anything."""
-    by_n = {x["#"]: x for x in crops()["ROWS"]}
-    assert {7, 10, 11} == set(by_n), "the answered gaps leave gaps; the others keep their issued numbers"
-    assert by_n[7]["WIDTH_M"] == 2.7
-    assert by_n[10]["WIDTH_M"] == by_n[11]["WIDTH_M"] == 1.1
-    assert crops()["RETIRED_NUMBERS"] == [8, 9]
-    folder = Path(crops()["ROWS"][0]["IMAGE"]).parent
-    for n in crops()["RETIRED_NUMBERS"]:
+    """Every gap is answered, so every gap crop is retired - and its number stays out of circulation for good."""
+    c = crops()
+    assert c["ROWS"] == [] and c["COUNT"] == 0
+    assert c["RETIRED_NUMBERS"] == [7, 8, 9, 10, 11]
+    folder = Path(PR.OUT_DIR) / "pa08_qortuba_boq" / "owner_question_crops"
+    for n in c["RETIRED_NUMBERS"]:
         assert not (folder / f"QORTUBA_OPENING_{n}.png").exists(), "an answered question is not pictured as open"
 
 

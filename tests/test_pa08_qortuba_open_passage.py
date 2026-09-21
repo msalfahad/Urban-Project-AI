@@ -102,30 +102,33 @@ def test_a_passage_never_reaches_a_door_or_window_schedule():
 
 # ------------------------------------------------------------------ the linear deduction
 def test_each_passage_leaves_the_path_of_both_rooms_it_joins():
+    PASSAGES_ONLY = PASSAGES
     rooms = {r["ROOM_ID"]: r for r in reg("QORTUBA_ROOM_FINISH_AND_SKIRTING_RECALC")["ROWS"]}
     got = {}
     for r in rooms.values():
         for p in r["OPEN_PASSAGES_DEDUCTED"]:
             got.setdefault(p["OPENING_ID"], []).append((r["ROOM_NAME"], p["WIDTH_M"]))
-    assert set(got) == set(PASSAGES)
-    for sid, hits in got.items():
+    assert set(PASSAGES_ONLY) <= set(got)
+    for sid in PASSAGES_ONLY:
+        hits = got[sid]
         assert len(hits) == 2, f"{sid} must interrupt the path of both rooms it joins"
         assert all(w == 1.2 for _, w in hits)
-    assert {n for hits in got.values() for n, _ in hits} == {
+    assert {n for sid in PASSAGES_ONLY for n, _ in got[sid]} == {
         "HALL", "UNLABELLED_INTERNAL_SPACE", "M.B.ROOM", "DRESS"}
 
 
-def test_the_skirting_and_profile_total_moved_by_exactly_the_four_widths():
+def test_the_skirting_and_profile_total_moved_by_exactly_the_widths_that_interrupt_it():
     q = by_id()
     for qid in ("Q-01", "Q-02"):
         x = q[qid]
-        assert x["MEASURED_NET_QUANTITY"] == 81.789
+        # two passages at 1.200 m and the 2.700 m full-height opening, each leaving both room paths it joins;
+        # the two 1.100 m bedroom gaps interrupt no measured apartment path and take nothing off
+        assert x["MEASURED_NET_QUANTITY"] == 76.389
         assert x["VALUE_BEFORE_THE_OPEN_PASSAGE_CORRECTION"] == 86.589
-        assert x["OPEN_PASSAGE_DEDUCTION_LM"] == 4.8
-        assert round(86.589 - 4.8, 3) == x["MEASURED_NET_QUANTITY"]
-        assert len(x["OPEN_PASSAGES_DEDUCTED"]) == 4
-        for d in x["OPEN_PASSAGES_DEDUCTED"]:
-            assert round(d["PATH_BEFORE_LM"] - d["PATH_AFTER_LM"], 3) == 1.2, d["ROOM"]
+        assert x["OPEN_PASSAGE_DEDUCTION_LM"] == 10.2
+        assert round(86.589 - 10.2, 3) == x["MEASURED_NET_QUANTITY"]
+        assert len(x["OPEN_PASSAGES_DEDUCTED"]) == 6
+        assert round(sum(d["WIDTH_M"] for d in x["OPEN_PASSAGES_DEDUCTED"]), 3) == 10.2
         assert x["STATUS"] == "FINAL_QUANTITY_AVAILABLE", "a linear deduction never waits for a height"
         assert x["RESIDUAL_OPENINGS"] == []
 
@@ -140,9 +143,15 @@ def test_the_project_rules_record_the_correction_and_the_open_question():
     assert "O-11" not in {x["ID"] for x in ledger["STILL_OPEN"]}
 
 
-def test_the_three_other_gaps_are_still_unresolved_and_uninferred():
+def test_the_three_other_gaps_are_closed_by_the_owner_for_measurement():
+    """They were UNRESOLVED; the owner closed them without naming an architectural type, and none was inferred."""
     o = opens()
     for sid in ("OS-b1e147c89482", "OS-3144b5fbb149", "OS-045efd7810a7"):
-        assert o[sid]["TYPE"] == "UNRESOLVED"
-        assert o[sid]["HEIGHT_M"] is None
-        assert o[sid]["STATUS"] == "OWNER_INPUT_REQUIRED"
+        r = o[sid]
+        assert r["TYPE"] == "FULL_HEIGHT_OPENING_FOR_MEASUREMENT"
+        assert r["HEIGHT_M"] == 3.0
+        assert r["REVEAL_SIDES"] == ["LEFT", "RIGHT"], "full height, so there is no head to finish"
+        assert r["STATUS"] == "USABLE"
+    hum = {h["OPENING_ID"]: h for h in OS.human_register()}
+    for sid in ("OS-b1e147c89482", "OS-3144b5fbb149", "OS-045efd7810a7"):
+        assert hum[sid]["MATERIAL_TRADE"] == "OPEN_PASSAGE_NO_PROCUREMENT"

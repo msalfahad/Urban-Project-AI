@@ -78,7 +78,8 @@ def test_the_questions_are_numbered_and_the_plan_is_numbered_the_same_way():
     # numbers are issued once and never reused, so an answered question leaves a gap rather than renumbering the rest
     assert nums == sorted(nums) and len(set(nums)) == len(nums)
     assert set(nums) <= set(OQ.ISSUED_NUMBERS.values())
-    assert oq["RETIRED_NUMBERS"] == [8, 9], "the two answered passages keep their numbers out of circulation"
+    # every opening question the owner has answered keeps its number out of circulation
+    assert oq["RETIRED_NUMBERS"] == [7, 8, 9, 10, 11]
     assert Path(oq["MARKED_PLAN"]).exists()
     assert OQ.PLAN.stat().st_size > 5000, "the marked plan is drawn, not a stub"
 
@@ -93,16 +94,13 @@ def test_each_window_is_asked_on_its_own_row():
 
 def test_an_unresolved_gap_is_asked_in_words_not_as_a_hash():
     oq = reg("QORTUBA_OWNER_QUESTIONS")
-    kinds = [q for q in oq["ROWS"] if q["ASKS_FOR"] == "TYPE"]
-    # five gaps were asked; the owner has answered two of them, so three type questions remain
-    assert len(kinds) == 3
-    for q in kinds:
-        assert "door, an open passage, a window" in q["QUESTION"]
-        assert "OS-" not in q["LOCATION"]
-    # and nothing the owner has answered is asked again, in any form
-    assert not [q for q in oq["ROWS"] if q["ASKS_FOR"] == "PASSAGE_HEIGHT"]
+    # every gap is now closed, so no type question remains at all
+    assert not [q for q in oq["ROWS"] if q["ASKS_FOR"] in ("TYPE", "PASSAGE_HEIGHT")]
     asked = {q["AUDIT_OPENING_ID"] for q in oq["ROWS"]}
     assert not (asked & set(OS.OWNER_SUPPLIED_PASSAGE_SUBTYPES))
+    assert not (asked & set(OS.OWNER_CLOSED_AS_MEASUREMENT_OPENINGS))
+    for q in oq["ROWS"]:
+        assert "OS-" not in q["LOCATION"] and "BE-" not in q["LOCATION"]
 
 
 # ------------------------------------------------------------------ §2 the glazed opening
@@ -122,7 +120,8 @@ def test_both_sides_of_a_shared_opening_lose_the_area():
     rooms = {x["ROOM"]: x for x in reg("QORTUBA_ROOM_FINISH_AND_SKIRTING_RECALC")["ROWS"]}
     assert abs(rooms["PAINTRY"]["OPENING_DEDUCTION_M2"] - 6.05) < 1e-9
     # the Hall also loses the 3.600 m2 full-height passage to the Lobby, so its deduction is 14.025 + 3.600
-    assert abs(rooms["HALL / whgm"]["OPENING_DEDUCTION_M2"] - 17.625) < 1e-9
+    # the Hall also loses the 3.600 m2 passage to the Lobby and the 8.100 m2 full-height opening to the Bedroom
+    assert abs(rooms["HALL / whgm"]["OPENING_DEDUCTION_M2"] - 25.725) < 1e-9
 
 
 # ------------------------------------------------------------------ §3 PVC is not aluminium

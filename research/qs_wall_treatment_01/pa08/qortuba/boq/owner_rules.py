@@ -135,10 +135,11 @@ QORTUBA_PROJECT_RULES = [
      "the owner has read the two figures and chosen: the clear WIDTH of every door, sliding door and window comes off "
      "the hidden skirting and hidden profile path, whether or not wall stands below the opening.  The question is "
      "closed and is not asked again"),
-    ("QP-10", "QORTUBA_HIDDEN_SKIRTING_PATH", 81.789, "LM", "owner confirmation + OPEN-PASSAGE RULE CORRECTION",
+    ("QP-10", "QORTUBA_HIDDEN_SKIRTING_PATH", 76.389, "LM", "owner confirmation + OPEN-PASSAGE RULE CORRECTION",
      "the payable hidden skirting path, fixed by the owner under QP-09 and corrected under QP-17: the two open "
-     "passages interrupt the path and their clear widths come off it, which 86.589 lm did not do"),
-    ("QP-11", "QORTUBA_HIDDEN_PROFILE_PATH", 81.789, "LM", "owner confirmation + OPEN-PASSAGE RULE CORRECTION",
+     "passages and the 2.700 m full-height opening interrupt the path, and their clear widths come off every room "
+     "side they interrupt.  The two 1.100 m bedroom gaps interrupt no measured apartment path and take nothing"),
+    ("QP-11", "QORTUBA_HIDDEN_PROFILE_PATH", 76.389, "LM", "owner confirmation + OPEN-PASSAGE RULE CORRECTION",
      "the payable hidden profile path: the same path as QP-10, issued as a separate BOQ item under US-08"),
     ("QP-17", "QORTUBA_OPEN_PASSAGES", "2 x 1.200 m", "M", "OPEN-PASSAGE RULE CORRECTION",
      "the owner has identified two of the five unresolved gaps as open passages: the 1.200 m gap between the Hall and "
@@ -188,6 +189,8 @@ TEMPORARY_DEFAULTS = [
      "longer a placeholder and no quantity is held partial for having used it.  The rule remains for other projects"),
 ]
 NO_DEFAULT_FOR = ("WINDOW", "SLIDING_DOOR", "GLAZED_OPENING", "UNKNOWN")
+# gaps with no leaf and no system in them: they interrupt the wall trades and are never procured
+NO_LEAF_TYPES = ("OPEN_PASSAGE", "FULL_HEIGHT_OPENING_FOR_MEASUREMENT")
 
 # ---------------------------------------------------------------------------- §A/§S what the owner has now overruled
 SUPERSEDED = [
@@ -295,6 +298,8 @@ def opening_register_from_source():
             "ROOMS": ([x.strip() for x in r["ROOM"].split(",")] if r["ROOM"] else []),
             "ROOM_ID": r["ROOM_ID"],
             "OPEN_PASSAGE_SUBTYPE": r["OPEN_PASSAGE_SUBTYPE"], "REVEAL_SIDES": r["REVEAL_SIDES"],
+            "INTERIOR_TO_HOST_BAND": r["INTERIOR_TO_HOST_BAND"],
+            "WHY_NOT_DEDUCTED_FROM_THE_BAND": r["WHY_NOT_DEDUCTED_FROM_THE_BAND"],
             "INSIDE_APARTMENT": bool(r["ROOM"]),
             "IS_AN_OPENING_THROUGH_THE_WALL": r["IS_AN_OPENING_THROUGH_THE_WALL"],
             "INTERRUPTS_AT_FLOOR_LEVEL": r["INTERRUPTS_AT_FLOOR_LEVEL"],
@@ -371,7 +376,7 @@ def room_rows(skirt, openings, glazed=None, human=None):
     # one.  The frozen boundary traced these two gaps as continuous wall face, so the width was never taken out.
     passage = defaultdict(list)
     for h in (human or []):
-        if h["TYPE"] == "OPEN_PASSAGE" and h["IS_AN_OPENING_THROUGH_THE_WALL"]:
+        if h["TYPE"] in NO_LEAF_TYPES and h["IS_AN_OPENING_THROUGH_THE_WALL"]:
             for rid in h["ROOM_IDS_FOR_DEDUCTION"]:
                 passage[rid].append(h)
     by_room = defaultdict(list)
@@ -441,9 +446,17 @@ def wall_rows(walls, openings, identity=None):
     H = 3.00
     ident = {r["WALL_ID"]: r for r in (identity if identity is not None else MI.wall_identity())}
     by_wall = defaultdict(list)
+    end_gaps = defaultdict(list)
     for o in openings:
-        if o["HOST_WALL_ID"]:
+        if not o["HOST_WALL_ID"]:
+            continue
+        # a band's length is the material that is there.  A gap at an END of the band is already outside that
+        # length - the band stops at the jamb - so deducting its area removes wall that was never counted.  The
+        # 1.900 m stub between the two 1.100 m bedroom gaps proves it: 5.700 gross less 6.600 is -0.900 m2.
+        if o.get("INTERIOR_TO_HOST_BAND", True):
             by_wall[o["HOST_WALL_ID"]].append(o)
+        else:
+            end_gaps[o["HOST_WALL_ID"]].append(o)
     rows = []
     for w in walls["ROWS"]:
         idr = ident[w["WALL_ID"]]
@@ -468,10 +481,16 @@ def wall_rows(walls, openings, identity=None):
                                    "H": o["HEIGHT_M"]} for o in usable],
             "OPENINGS_PENDING": [{"OPENING_ID": o["OPENING_ID"], "TYPE": o["TYPE"], "W": o["WIDTH_M"],
                                   "WHY": "no height, and no default is permitted for this type"} for o in pending],
+            "END_GAPS_NOT_DEDUCTED": [{"OPENING_ID": o["OPENING_ID"], "TYPE": o["TYPE"], "W": o["WIDTH_M"],
+                                       "WHY": o["WHY_NOT_DEDUCTED_FROM_THE_BAND"]}
+                                      for o in end_gaps.get(w["WALL_ID"], [])],
             "STATUS": ("GEOMETRIC_REFERENCE_ONLY" if not masonry
                        else "PARTIALLY_CALCULATED" if pending
                        else "FINAL_QUANTITY_AVAILABLE"),
             "ARITHMETIC": ((f"{w['LENGTH_M']:.3f} x {H:.2f} = {gross:.4f} m2 gross"
+                            + (f" (the band's measured length already stops at "
+                               f"{len(end_gaps.get(w['WALL_ID'], []))} end gap(s), which are therefore not deducted "
+                               f"again)" if end_gaps.get(w["WALL_ID"]) else "")
                             + (f" - {ded:.4f} m2 openings = {gross - ded:.4f} m2 net" if not pending
                                else f" - {ded:.4f} m2 resolved openings, {len(pending)} opening(s) still unheighted"))
                            if masonry else
@@ -549,8 +568,10 @@ def quantities(rooms, walls_calc, openings, floors, summ, ceil, glazed=None, cei
     # §B: the two rooms an opening actually joins, where the plan reading or the floor-level boundary established
     # them.  This is what _pending_for prefers over the host band's full room list.
     joined = {h["OPENING_ID"]: h["ROOMS_FOR_DEDUCTION"] for h in (human_reg or []) if h["ROOMS_FOR_DEDUCTION"]}
+    deducts_from = {h["OPENING_ID"]: h["ROOM_IDS_FOR_DEDUCTION"] for h in (human_reg or [])}
     for o in openings:
         o["ROOMS_JOINED"] = joined.get(o["OPENING_ID"])
+        o["ROOM_IDS_JOINED"] = deducts_from.get(o["OPENING_ID"]) or []
     dry = [r for r in rooms if r["FINISH_CLASS"] == "DRY_ROOM"]
     cer = [r for r in rooms if r["FINISH_CLASS"] == "CERAMIC_SERVICE_ROOM"]
     bath = [r for r in cer if r["ROOM_NAME"] == "BATH"]
@@ -601,15 +622,19 @@ def quantities(rooms, walls_calc, openings, floors, summ, ceil, glazed=None, cei
         return out
 
     # a passage is finished like any other opening: it is not procured, but its jambs are plastered and painted
-    apt_pass = [o for o in openings if o["TYPE"] == "OPEN_PASSAGE" and o["INSIDE_APARTMENT"]
+    apt_pass = [o for o in openings if o["TYPE"] in NO_LEAF_TYPES and o["INSIDE_APARTMENT"]
                 and o["HEIGHT_M"] is not None]
     # §B again: whether an opening's reveal is a dry-room reveal is decided by the rooms it actually joins, not by
     # every room its host band runs past.
     def _sides(o):
         return set(o.get("ROOMS_JOINED") or o["ROOMS"])
 
-    dry_dry = [o for o in apt_doors + apt_pass if not (_sides(o) & set(CERAMIC_ROOM_NAMES))]
-    mixed = [o for o in apt_doors + apt_pass if _sides(o) & set(CERAMIC_ROOM_NAMES)]
+    # a reveal is the return face of a hole in a wall that was measured.  Where an opening's area was deducted from
+    # no room - because no room's finish path runs along it - there is no measured face for its returns to belong to,
+    # so no reveal is added either.  Reveals follow the deduction; they do not lead it.
+    revealing = [o for o in apt_doors + apt_pass if o.get("ROOM_IDS_JOINED")]
+    dry_dry = [o for o in revealing if not (_sides(o) & set(CERAMIC_ROOM_NAMES))]
+    mixed = [o for o in revealing if _sides(o) & set(CERAMIC_ROOM_NAMES)]
 
     sk = sum(r["SKIRTING_LM"] for r in dry)
     wet_floor = summ["B_WET_INTERNAL_FLOOR_AREA_M2"]["VALUE"]
@@ -628,8 +653,10 @@ def quantities(rooms, walls_calc, openings, floors, summ, ceil, glazed=None, cei
     # QP-17: exactly which room path loses which passage width, so the correction can be read off the row
     pas_detail = [{"ROOM": r["ROOM_NAME"], "ROOM_ID": r["ROOM_ID"], "OPENING_ID": p["OPENING_ID"],
                    "DESCRIPTION": p["DESCRIPTION"], "WIDTH_M": p["WIDTH_M"],
-                   "PATH_BEFORE_LM": r3(r["SKIRTING_LM_IF_ALL_WINDOW_WIDTHS_DEDUCTED"] + r["OPEN_PASSAGE_LM"]),
-                   "PATH_AFTER_LM": r["SKIRTING_LM_IF_ALL_WINDOW_WIDTHS_DEDUCTED"]}
+                   # the path figures are the ROOM's, not this one opening's: a room may lose more than one
+                   "ROOM_PATH_BEFORE_ALL_OF_THEM_LM": r3(r["SKIRTING_LM_IF_ALL_WINDOW_WIDTHS_DEDUCTED"]
+                                                         + r["OPEN_PASSAGE_LM"]),
+                   "ROOM_PATH_AFTER_LM": r["SKIRTING_LM_IF_ALL_WINDOW_WIDTHS_DEDUCTED"]}
                   for r in dry for p in r["OPEN_PASSAGES_DEDUCTED"]]
     pas_total = sum(r["OPEN_PASSAGE_LM"] for r in dry)
     for qid, item in (("Q-01", "HIDDEN_SKIRTING"), ("Q-02", "HIDDEN_PROFILE_ABOVE_SKIRTING")):

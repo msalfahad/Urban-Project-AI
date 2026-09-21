@@ -5031,3 +5031,63 @@ row declares its kind, and only a measurement input may appear in a
 quantity's residual list. The test holds both directions: every measurement
 question is one some row is actually waiting on, and every row that is
 waiting is actually asked.
+
+## §241 — A band's length already stops at its end gaps
+
+Blockwork is a band's measured masonry length times the wall height, less
+the openings in it. But a band's length is the material that is there: where
+a gap sits at an *end* of the band, the band's extent stops at that jamb and
+the gap was never inside the measured length. Deducting it removes wall that
+was never counted.
+
+The proof is arithmetic and impossible to argue with. The 1.900 m stub
+between the two 1.100 m bedroom gaps gives 5.700 m² gross; deducting both
+gaps gives **−0.900 m²**. A wall cannot contain less than nothing.
+
+So an opening is deducted from a band only where its interval lies within
+that band's own extent. End gaps are listed on the wall row as
+END_GAPS_NOT_DEDUCTED with the reason, so the exclusion is visible rather
+than silent. Seven Qortuba walls carry one, including four doors — the
+defect predated the openings that exposed it, and correcting it moves
+figures that were previously reported.
+
+A quantity that cannot be negative is a cheap invariant and a good one. The
+test now asserts it for every wall.
+
+## §242 — A reveal follows a deduction; it never leads it
+
+A reveal is the return face of a hole in a wall that was measured. Where an
+opening's area came off no room — because no room's finish path runs along
+that band — there is no measured face for its returns to belong to, and
+adding 0.25 m of reveal invents plaster on a wall the same calculation says
+nobody finishes.
+
+So reveals are computed only over openings that actually deducted from at
+least one room. The two bedroom gaps are the case: their host band belongs
+to two unlabelled spaces, so no apartment finish run passes along it. They
+take nothing off the skirting, nothing off the plaster, and add nothing
+back.
+
+They are still holes in a confirmed masonry band, and the blockwork row says
+so. A room's finishes and a wall's material are different questions, and an
+opening may be invisible to one and obvious to the other.
+
+## §243 — The room an opening joins is in the finish-path register
+
+A wall takeoff lists every room a band runs past along its whole length —
+too coarse to say which face an opening cuts, and useless where two rooms
+share a label. The R1 skirting and profile path registers are not: they
+record, per room and per band, the exact axial intervals of that room's own
+finish run. A gap interrupts a room's path where a segment of that path
+stops at one of the gap's jambs.
+
+That lookup names the room exactly: the 2.700 m opening joins the Hall and
+the 18.75 m² bedroom, not "a bedroom". It also reproduces, independently,
+the pairs the floor-level boundary already gave for the two passages — which
+is what makes it trustworthy.
+
+It may only add precision, never remove a deduction. An empty result means
+the lookup found nothing, which is not the same as there being nothing, so
+the existing attribution stands and the row records which basis was used. A
+silent miss that deletes a deduction is worse than the coarse answer it
+replaced.

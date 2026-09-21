@@ -995,3 +995,33 @@ measurement does not settle a pricing basis.
 The final owner batch is eleven rows of three kinds (§240): nine
 measurement inputs that hold up quantities, one trade classification, and
 one pricing input that holds up nothing in the takeoff at all.
+
+### Final completion: the last three gaps, and two defects they exposed
+
+The owner closed #7, #10 and #11 as full-height wall interruptions for
+measurement — 3.000 m, no architectural type named and none inferred, no
+procurement item of any kind. Storing them surfaced two errors that were
+already in the engine.
+
+The first was arithmetic. The 1.900 m stub between the two 1.100 m bedroom
+gaps produced **−0.900 m²** of blockwork: the band's measured length already
+stops at each gap, so deducting them subtracted wall that was never counted
+(§241). Seven walls carry an end gap, four of them doors, so this had been
+quietly understating blockwork since before these openings existed.
+Correcting it moves figures reported earlier in this project — 150 mm
+blockwork settles at 128.870 m² and 200 mm at 235.740 m².
+
+The second was attribution. #10 and #11 sit in a band that belongs to two
+unlabelled spaces; no apartment room's finish run passes along it. They
+therefore interrupt no skirting path and deduct from no room's plaster —
+while remaining real holes in a confirmed masonry band, which the blockwork
+row records. Reveals now follow deductions rather than leading them (§242).
+
+Room-side attribution is read from the frozen finish-path registers (§243),
+which name the 2.700 m opening's rooms exactly — the Hall and the 18.75 m²
+bedroom — and independently reproduce the pairs already established for both
+passages.
+
+Hidden skirting and hidden profile settle at **76.389 lm**; plaster and
+paint at **283.0025 m²** each. Fourteen quantities are final. The only
+measurement questions left are the six window heights.

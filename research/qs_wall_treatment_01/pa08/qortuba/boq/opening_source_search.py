@@ -23,7 +23,8 @@ R3 = Path(PR.OUT_DIR) / "pa08_qortuba_r3"
 QS = Path(PR.OUT_DIR) / "pa08_qortuba_qs01"
 DWG_JSON = Path("data/runs/cad_convert/QORTUBA_ARCHITECTURAL.json")
 
-OPENING_TYPES = ("DOOR", "WINDOW", "SLIDING_DOOR", "GLAZED_OPENING", "OPEN_PASSAGE", "UNRESOLVED")
+OPENING_TYPES = ("DOOR", "WINDOW", "SLIDING_DOOR", "GLAZED_OPENING", "OPEN_PASSAGE",
+                 "FULL_HEIGHT_OPENING_FOR_MEASUREMENT", "UNRESOLVED")
 
 # OPEN_PASSAGE: a real interruption in the wall with no door leaf or system in it.  It is not PVC, it is not
 # aluminium, and it must never appear in a door or window procurement schedule - but it does interrupt blockwork,
@@ -35,13 +36,28 @@ OPEN_PASSAGE_TRADE = "OPEN_PASSAGE_NO_PROCUREMENT"
 # takeoff needs the eight cases that change a quantity.  Anything that does not fit one of them is UNKNOWN, and an
 # UNKNOWN that materially moves a number is a question for the owner, not a new geometry rule.
 OPENING_CASES = ("DOOR", "WINDOW", "SLIDING_DOOR", "GLAZED_OPENING",
-                 "OPEN_PASSAGE_FULL_HEIGHT", "OPEN_PASSAGE_WITH_HEAD", "NOT_AN_OPENING", "UNKNOWN")
+                 "OPEN_PASSAGE_FULL_HEIGHT", "OPEN_PASSAGE_WITH_HEAD",
+                 "FULL_HEIGHT_OPENING_FOR_MEASUREMENT", "NOT_AN_OPENING", "UNKNOWN")
+
+# FINAL COMPLETION §11: the owner has closed #7, #10 and #11 without naming an architectural type.  For quantity
+# measurement they are simply full-height interruptions in the wall: 3.000 m high, no leaf and no system, so nothing
+# is procured for them.  This is a MEASUREMENT CLASSIFICATION, not an architectural one, and it is not asked again.
+OWNER_CLOSED_AS_MEASUREMENT_OPENINGS = {
+    "OS-b1e147c89482": "FINAL COMPLETION §11: closed by the owner as a full-height wall interruption for "
+                       "measurement, 2.700 x 3.000 = 8.100 m2.  No architectural type was given and none is inferred",
+    "OS-3144b5fbb149": "FINAL COMPLETION §11: closed by the owner as a full-height wall interruption for "
+                       "measurement, 1.100 x 3.000 = 3.300 m2",
+    "OS-045efd7810a7": "FINAL COMPLETION §11: closed by the owner as a full-height wall interruption for "
+                       "measurement, 1.100 x 3.000 = 3.300 m2",
+}
 
 
 def case_of(row):
     """The generic case this opening bills under, from its type, its subtype and whether it is a gap at all."""
     if not row["IS_AN_OPENING_THROUGH_THE_WALL"]:
         return "NOT_AN_OPENING"
+    if row["TYPE"] == "FULL_HEIGHT_OPENING_FOR_MEASUREMENT":
+        return "FULL_HEIGHT_OPENING_FOR_MEASUREMENT"
     if row["TYPE"] == "OPEN_PASSAGE":
         return row["OPEN_PASSAGE_SUBTYPE"] or "UNKNOWN"
     return row["TYPE"] if row["TYPE"] in OPENING_CASES else "UNKNOWN"
@@ -226,31 +242,41 @@ def completed_register():
             "ROOM": ", ".join(rooms) or None, "ROOM_ID": (glz[bid]["ROOM_ID"] if bid else None),
             "HOST_WALL_ID": (w["WALL_ID"] if w else None),
             "HOST_WALL_THICKNESS_MM": s["HOST_WALL_THICKNESS_MM"],
-            "TYPE": (OWNER_SUPPLIED_TYPES[sid][0] if (is_opening and sid in OWNER_SUPPLIED_TYPES)
+            "TYPE": ("FULL_HEIGHT_OPENING_FOR_MEASUREMENT"
+                     if (is_opening and sid in OWNER_CLOSED_AS_MEASUREMENT_OPENINGS) else
+                     OWNER_SUPPLIED_TYPES[sid][0] if (is_opening and sid in OWNER_SUPPLIED_TYPES)
                      else t if is_opening else "UNRESOLVED"),
-            "TYPE_SOURCE": OWNER_SUPPLIED_TYPES[sid][1] if sid in OWNER_SUPPLIED_TYPES else None,
+            "TYPE_SOURCE": (OWNER_CLOSED_AS_MEASUREMENT_OPENINGS.get(sid)
+                            or (OWNER_SUPPLIED_TYPES[sid][1] if sid in OWNER_SUPPLIED_TYPES else None)),
             "WIDTH_M": round(s["SPAN_MM"] / 1000, 4),
             # TD-02 reaches ordinary doors and nothing else.  An open passage is not a door, so it takes no height
             # from it: a passage is either full height or it has a head, and only the owner knows which.
             "HEIGHT_M": (OWNER_SUPPLIED_HEIGHTS[sid][0] if sid in OWNER_SUPPLIED_HEIGHTS else
+                         QORTUBA_WALL_HEIGHT_M if sid in OWNER_CLOSED_AS_MEASUREMENT_OPENINGS else
                          OWNER_SUPPLIED_PASSAGE_SUBTYPES[sid][1] if sid in OWNER_SUPPLIED_PASSAGE_SUBTYPES else
                          DEFAULT_DOOR_HEIGHT_M if (is_opening and t == "DOOR"
                                                    and sid not in OWNER_SUPPLIED_TYPES) else None),
             "OPEN_PASSAGE_SUBTYPE": (OWNER_SUPPLIED_PASSAGE_SUBTYPES[sid][0]
                                      if sid in OWNER_SUPPLIED_PASSAGE_SUBTYPES else None),
-            "REVEAL_SIDES": list(REVEAL_SIDES[OWNER_SUPPLIED_PASSAGE_SUBTYPES[sid][0]])
-                            if sid in OWNER_SUPPLIED_PASSAGE_SUBTYPES else None,
-            "HEIGHT_STATUS": ("ANSWERED_BY_OWNER" if sid in OWNER_SUPPLIED_PASSAGE_SUBTYPES else
+            # full height means no head, so there is no top to finish: left and right only (§6, §11)
+            "REVEAL_SIDES": (["LEFT", "RIGHT"] if sid in OWNER_CLOSED_AS_MEASUREMENT_OPENINGS else
+                             list(REVEAL_SIDES[OWNER_SUPPLIED_PASSAGE_SUBTYPES[sid][0]])
+                             if sid in OWNER_SUPPLIED_PASSAGE_SUBTYPES else None),
+            "HEIGHT_STATUS": ("ANSWERED_BY_OWNER" if (sid in OWNER_SUPPLIED_PASSAGE_SUBTYPES
+                                                      or sid in OWNER_CLOSED_AS_MEASUREMENT_OPENINGS) else
                               "OWNER_INPUT_REQUIRED" if (is_opening and sid in OWNER_SUPPLIED_TYPES) else None),
             "WIDTH_SOURCE": "DWG opening site span, from the wall band's own interrupted faces",
             "HEIGHT_SOURCE": (OWNER_SUPPLIED_HEIGHTS[sid][1] if sid in OWNER_SUPPLIED_HEIGHTS else
+                              OWNER_CLOSED_AS_MEASUREMENT_OPENINGS.get(sid) or None
+                              if sid in OWNER_CLOSED_AS_MEASUREMENT_OPENINGS else
                               OWNER_SUPPLIED_PASSAGE_SUBTYPES[sid][2] if sid in OWNER_SUPPLIED_PASSAGE_SUBTYPES else
                               "TD-02 APPROVED_TEMPORARY_DEFAULT, ordinary door with no source height"
                               if (is_opening and t == "DOOR" and sid not in OWNER_SUPPLIED_TYPES) else None),
             "IS_AN_OPENING_THROUGH_THE_WALL": is_opening,
             "INTERRUPTS_AT_FLOOR_LEVEL": is_opening,
             "STATUS": ("NOT_AN_OPENING" if not is_opening else
-                       "USABLE" if sid in OWNER_SUPPLIED_PASSAGE_SUBTYPES else
+                       "USABLE" if (sid in OWNER_SUPPLIED_PASSAGE_SUBTYPES
+                                    or sid in OWNER_CLOSED_AS_MEASUREMENT_OPENINGS) else
                        "PARTIAL_HEIGHT_REQUIRED" if sid in OWNER_SUPPLIED_TYPES else
                        "USABLE" if (t == "DOOR" or sid in OWNER_SUPPLIED_HEIGHTS) else "OWNER_INPUT_REQUIRED"),
             "EVIDENCE": s["REASON"],
@@ -286,8 +312,15 @@ def completed_register():
             "WHY_NOT_AN_OPENING": ("wall stands below this glazing, so it does not interrupt the wall at floor level; "
                                    "it does interrupt the wall AREA and is deducted there" if b["WALL_BELOW"] else None),
         })
+    gg = gap_geometry()
     for r in rows:
         r["CASE"] = case_of(r)
+        g = gg.get(r["OPENING_ID"]) or {}
+        # a blue element with no site is a frame inside a wall face, so it is interior by construction
+        r["INTERIOR_TO_HOST_BAND"] = g.get("INTERIOR_TO_HOST_BAND", True)
+        r["BAND_EXTENT_MM"] = g.get("BAND_EXTENT_MM")
+        r["GAP_MM"] = g.get("GAP_MM")
+        r["WHY_NOT_DEDUCTED_FROM_THE_BAND"] = g.get("WHY")
     rows.sort(key=lambda r: -r["WIDTH_M"])
     return rows
 
@@ -355,6 +388,81 @@ PDF_PAIR = {
     "OS-85cb2192ebc0": ("Master bedroom", "Dressing room"),
     "OS-b5a0fbb335d4": ("Hall", "Pantry / preparation kitchen"),
 }
+def gap_geometry():
+    """Where each opening site sits relative to its host band's own measured extent.
+
+    A band's length is the material that is there.  An opening INSIDE that extent is a hole in measured wall, so its
+    area must come off.  An opening at an END of the band is already outside the extent - the band stops at the jamb -
+    so deducting it again removes material that was never counted.  The proof is arithmetic: the 1.900 m stub between
+    the two 1.100 m bedroom gaps yields 5.700 m2 gross, and deducting both gaps gives -0.900 m2.
+
+    This is a lookup against the frozen band register, not a measurement.
+    """
+    from research.qs_wall_treatment_01.pa08.qortuba.boq import owner_question_crops as C
+    walls = {w["WALL_ID"]: w for w in reg(QS, "QORTUBA_QS01_BLOCK_WALL_TAKEOFF")["ROWS"]}
+    sites = {r["SITE_ID"]: r for r in reg(R1, "PA08_QORTUBA_R1_OPENING_REGISTER")["ROWS"]}
+    jp, bands = C.jamb_points(), C.bands()
+    out = {}
+    for w in walls.values():
+        b = bands.get(w["WALL_ID"])
+        if not b:
+            continue
+        e0, e1 = sorted((b["E0"], b["E1"]))
+        for o in w["OPENINGS"]:
+            sid = o["SITE_ID"]
+            if sid not in sites:
+                continue
+            lo, hi, basis = C.gap_interval(sites[sid], b, jp)
+            inside = (e0 - 1) <= lo and hi <= (e1 + 1)
+            out[sid] = {"HOST_WALL_ID": w["WALL_ID"], "GAP_MM": [lo, hi], "BAND_EXTENT_MM": [e0, e1],
+                        "INTERIOR_TO_HOST_BAND": bool(inside), "MARKER_BASIS": basis,
+                        "WHY": (None if inside else
+                                "the gap lies at an end of the host band, beyond its measured extent: the band's "
+                                "length already stops at this jamb, so its area is not deducted a second time")}
+    return out
+
+
+def frozen_room_sides():
+    """Which room-side finish paths each opening site actually interrupts, read from the frozen path registers.
+
+    The wall takeoff lists every room a band runs past along its whole length, which is too coarse to say which face
+    an opening cuts.  The R1 skirting path register is not: it records, per room and per band, the exact axial
+    intervals of that room's own finish run.  A gap interrupts a room's path where a segment of that path stops at
+    one of the gap's jambs.  This is a lookup in a frozen artifact - no geometry is measured, computed or moved.
+    """
+    from research.qs_wall_treatment_01.pa08.qortuba.boq import owner_question_crops as C
+    spr = json.loads((R1 / "PA08_QORTUBA_R1_SKIRTING_PATH_REGISTER.json").read_text("utf-8"))["ROWS"]
+    walls = {w["WALL_ID"]: w for w in reg(QS, "QORTUBA_QS01_BLOCK_WALL_TAKEOFF")["ROWS"]}
+    eligible = {r["ROOM_ID"] for r in reg(QS, "QORTUBA_QS01_SKIRTING_TAKEOFF")["ROWS"]}
+    sites = {r["SITE_ID"]: r for r in reg(R1, "PA08_QORTUBA_R1_OPENING_REGISTER")["ROWS"]}
+    canonical = {f["ROOM_ID"]: f["ROOM"] for f in reg(QS, "QORTUBA_QS01_FLOOR_CALCULATIONS")["ROWS"]}
+    jp, bands = C.jamb_points(), C.bands()
+    out = {}
+    for sid, site in sites.items():
+        w = walls.get(site.get("HOST_WALL_ID")) or next(
+            (v for v in walls.values() if any(o["SITE_ID"] == sid for o in v["OPENINGS"])), None)
+        if not w or w["WALL_ID"] not in bands:
+            continue
+        lo, hi, _ = C.gap_interval(site, bands[w["WALL_ID"]], jp)
+        hit = []
+        for path in spr:
+            rid = "RM-" + path["SPACE_ID"][3:11]
+            if rid not in eligible:
+                continue          # not an apartment room with a measured finish path
+            for seg in path["PATH"]:
+                if seg["BAND_ID"] != w["BAND_ID"]:
+                    continue
+                a, b = sorted((seg["AXIAL_START"], seg["AXIAL_END"]))
+                # a jamb of this gap is where that room's own run stops: half the band thickness of tolerance
+                if min(abs(b - lo), abs(a - hi), abs(a - lo), abs(b - hi)) <= max(260, w["THICKNESS_MM"]):
+                    # the path register labels a space by position; the canonical room name comes from the floor
+                    # register, so the pair reads the same as every other room name in the takeoff
+                    hit.append((canonical.get(rid, path["ROOM"]), rid))
+                    break
+        out[sid] = sorted(set(hit))
+    return out
+
+
 # the same pairs as raw room labels, for matching against the quantity rows
 PDF_PAIR_RAW = {
     "OS-77f8fed2eb15": ("HALL / whgm", "UNLABELLED_INTERNAL_SPACE"),
@@ -376,6 +484,7 @@ def human_register():
     area_of = {f["ROOM"]: f["METHOD_A_CAD_POLYGON_AREA_M2"] for f in floors.values()}
 
     out = []
+    frozen_sides = frozen_room_sides()
     for r in rows:
         seen = sides.get(r["OPENING_ID"], [])
         w = walls.get(r["HOST_WALL_ID"])
@@ -412,6 +521,15 @@ def human_register():
             # shared wall, and its pair must not be collapsed to the single room the element sits nearest
             if r["BLUE_ELEMENT_ID"] and r["ROOM_ID"] and not site_row:
                 ids = [r["ROOM_ID"]]
+        # §11/§12: where the frozen path registers say exactly which room-side runs this gap interrupts, that is
+        # the answer - it names the room even when two rooms share a label.  It may only ADD precision, never remove
+        # a deduction: an empty result means the lookup found nothing, which is not the same as there being nothing,
+        # so the existing attribution stands and the miss is recorded rather than silently costing a deduction.
+        fs = frozen_sides.get(r["OPENING_ID"]) or []
+        frozen_used = bool(fs) and site_row and not r["BLUE_ELEMENT_ID"]
+        if frozen_used:
+            ids = [rid for _nm, rid in fs]
+            raw = [nm for nm, _rid in fs]
         if len(both) < 2 and r["OPENING_ID"] in PDF_PAIR:
             both = list(PDF_PAIR[r["OPENING_ID"]])
             here, other = both[0], both[1:]
@@ -430,6 +548,10 @@ def human_register():
             material, why_mat = EXTERIOR_OPENING_MATERIAL, "an exterior opening system in an envelope wall"
         elif not inside:
             material, why_mat = "OUTSIDE_APARTMENT", "this opening is not in an apartment wall and is out of scope"
+        elif r["TYPE"] == "FULL_HEIGHT_OPENING_FOR_MEASUREMENT":
+            material, why_mat = OPEN_PASSAGE_TRADE, ("a full-height wall interruption closed by the owner for "
+                                                     "measurement.  Nothing is procured for it: no door, no window, "
+                                                     "no PVC and no aluminium item")
         elif r["TYPE"] == "OPEN_PASSAGE":
             material, why_mat = OPEN_PASSAGE_TRADE, ("an open passage has no door leaf and no system in it: it is not "
                                                      "PVC, it is not aluminium, and nothing is procured for it.  It "
@@ -462,6 +584,7 @@ def human_register():
         where = where.replace("the a ", "a ").replace("the A ", "a ")
         kind = {"DOOR": "Door", "WINDOW": "Window", "SLIDING_DOOR": "Sliding door",
                 "GLAZED_OPENING": "Glazed opening", "OPEN_PASSAGE": "Open passage",
+                "FULL_HEIGHT_OPENING_FOR_MEASUREMENT": "Full-height wall opening",
                 "UNRESOLVED": "Opening of unknown type"}[r["TYPE"]]
         out.append({
             "OPENING_ID": r["OPENING_ID"],
@@ -477,6 +600,8 @@ def human_register():
             "MATERIAL_TRADE": material, "WHY_THAT_TRADE": why_mat,
             "INTERIOR": interior, "INSIDE_APARTMENT": inside,
             "ROOMS_FOR_DEDUCTION": raw, "ROOM_IDS_FOR_DEDUCTION": ids,
+            "ROOM_SIDE_BASIS": ("FROZEN_FINISH_PATH_REGISTER" if frozen_used else
+                                "FLOOR_LEVEL_BOUNDARY_OR_HOST_BAND"),
             "STATUS": r["STATUS"],
             "IS_AN_OPENING_THROUGH_THE_WALL": r["IS_AN_OPENING_THROUGH_THE_WALL"],
             "HOST_WALL_ID": r["HOST_WALL_ID"],
