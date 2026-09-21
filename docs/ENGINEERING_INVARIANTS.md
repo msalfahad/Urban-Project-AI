@@ -4431,3 +4431,47 @@ dressed as a finding, and the register would then carry an error that no
 evidence supports. The useful output of that comparison was the one thing it
 could establish: both sides measure the profile on exactly the skirting's
 path, so the trade rule agrees even where the magnitudes do not.
+
+## §200 — A number in the right row is not a quantity in the right unit
+
+The first Qortuba pricing matrix marked twenty-six rows ready to price. The
+test it used was whether the row held a number. That is the wrong test, and
+it is the most expensive mistake an estimating system can make, because the
+output looks finished.
+
+Blockwork was offered at 86.930 m of 200 mm wall against a rate per square
+metre. Plaster was offered as 106.075 m of face. Aluminium was offered as a
+count of seven. A stair was offered as 12.643 m² of plan footprint against a
+marble rate. None of those is a pricing quantity; each is one input short of
+one, and the missing input is a height, a scope decision or a section.
+
+A row is ready only when what exists is in the unit AND on the basis the
+bill prices that item by. Under that rule the same project yields zero final
+pricing quantities, which is the honest state of a drawing set with no
+section, no elevation and no finishes schedule.
+
+## §201 — Three quantity columns, because the sheet is needed before the answer is
+
+A single quantity column forces a false choice: leave it empty and the
+workbook is useless until the last input arrives, or fill it with the
+measured figure and the wrong unit gets priced.
+
+Measured input, final BOQ quantity and unit are three separate fields. The
+first carries what the drawing gives, in the unit the drawing gives it. The
+third names the unit the second must arrive in. The second stays empty, with
+the conversion formula and the one blocking input written beside it. An
+estimator can then work the sheet, chase exactly one thing per trade, and
+never mistake a length for an area.
+
+## §202 — Ask for the input that releases the rows that already have numbers
+
+Grouping blocked rows by what would unblock them is only half the job. The
+first version of the register picked each trade's minimum input by counting
+rows, and told the owner that ceramic's next need was the sanitary drawings,
+because three fixture rows shared that blocker. Ceramic's real next need is
+the tiling height, which converts two measured wall lengths into areas.
+
+Rank a trade's blockers by how many rows they release that already carry a
+measured figure, and only then by total count. The question an owner should
+be asked first is the one that turns existing work into a quantity, not the
+one that appears most often.

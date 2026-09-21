@@ -578,6 +578,11 @@ def finish():
               "LAYER_RULE": "MEASURED_GEOMETRY, COMMERCIAL_SCOPE, WASTE, PROCUREMENT, RATE and AMOUNT are separate fields on "
                             "every row.  Only the first is filled here: a geometric quantity is not a payable quantity, and "
                             "neither is a purchase quantity.",
+              "CAN_PRICE_NOW_IS_SUPERSEDED": {
+                  "BY": "QORTUBA_FINAL_PRICING_AUDIT",
+                  "WHY": "the CAN_PRICE_NOW flag on these rows tests whether a row holds a number, not whether it holds a "
+                         "priceable one.  A blockwork length in metres is not a pricing quantity where the rate is per square "
+                         "metre.  Read the audit's CLASS field instead; these rows remain as the trade cut they describe."},
               "NO_RATE_RULE": "no rate was supplied for this project, so no row carries a rate or an amount",
               "ROOM_DATA": "the room-by-room calculations remain the supporting workpaper and are unchanged by this matrix"}
     written.append(write("QORTUBA_PRICING_INPUT_MATRIX", matrix))

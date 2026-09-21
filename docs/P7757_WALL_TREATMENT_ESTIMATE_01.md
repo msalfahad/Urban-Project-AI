@@ -586,3 +586,36 @@ External plaster, external paint and railings are `NOT_READY` and each needs
 a drawing this set does not contain. Frozen as
 `FREEZE_QORTUBA_PRICING_INPUT_MATRIX`, with the workbook written out in trade
 order as `QORTUBA_PRICING_INPUT_MATRIX.xlsx`.
+
+**QORTUBA-FINAL-PRICING-AUDIT (reclassification against the pricing unit).**
+The pricing matrix's ready flag tested whether a row held a number rather
+than whether it held a priceable one, and twenty-six rows passed that test
+wrongly. This pass reclassifies every row against the stricter rule: ready
+only when the quantity is in the unit and on the basis the bill prices that
+item by (§200). No geometry, no engine rule and no quantity was created.
+
+Sixty-seven rows across sixteen trade sections, now including concrete,
+steel, sanitary and electrical as sections of their own rather than folded
+into other items. **Final pricing quantities available now: zero.** Thirty
+rows carry a measured input, six have the right unit but unconfirmed scope,
+thirty need a drawing or a specification, and one records an exclusion so it
+stays visible.
+
+The demotions are the point. Blockwork lengths by thickness were offered
+against an area rate. Plaster and paint face lengths were offered against
+area rates. Seven aluminium units were offered as a count. A 12.643 m² stair
+plan footprint was offered against a marble rate. The ceiling's 138.5100 m²
+is base geometry and not a decor quantity, and the 153.125 m perimeter is
+room geometry and not a cove.
+
+Every row now carries three quantity fields rather than one: measured input,
+final BOQ quantity and the unit that second figure must arrive in, with the
+conversion formula and the single blocking input written beside it (§201).
+Ranking each trade's blockers by how many measured rows they release, rather
+than by how often they appear, changed ceramic's first ask from the sanitary
+drawings to the tiling height (§202). Two inputs dominate: the wall height
+releases ten rows and the opening heights another ten.
+
+Eleven trades are partially ready and five are not ready. Frozen as
+`FREEZE_QORTUBA_FINAL_PRICING_AUDIT`, with the workbook rewritten in the
+sixteen-section layout.
