@@ -99,6 +99,18 @@ URBAN_STANDARDS = [
      "shadow gaps, decorative perimeters and gypsum feature lengths are NOT_ESTABLISHED and are never inferred from a "
      "room perimeter",
      "V2 §7", ["R-23 and R-24 as PAYABLE items: the historical cornice run is precedent, not a Qortuba quantity"]),
+    ("US-16", "AN_OPEN_PASSAGE_IS_AN_OPENING_WITH_NOTHING_IN_IT",
+     "OPEN_PASSAGE is a physical opening type: a real interruption in the wall with no door leaf or system in it.  It "
+     "is not PVC, it is not aluminium, and it never appears in a door or window procurement schedule or door count.  "
+     "It does interrupt blockwork, plaster, paint, wall ceramic, skirting and the hidden profile, according to its "
+     "dimensions and the finishes on each side",
+     "OPEN-PASSAGE RULE CORRECTION", []),
+    ("US-17", "AN_OPEN_PASSAGE_HAS_NO_ASSUMED_HEIGHT",
+     "an open passage is either OPEN_PASSAGE_FULL_HEIGHT, where its height IS the applicable wall height and no top "
+     "reveal exists, or OPEN_PASSAGE_WITH_HEAD, where the owner supplies the opening height and left, right and top "
+     "reveals all apply under US-07.  Until the owner states which, HEIGHT_STATUS is OWNER_INPUT_REQUIRED: the door "
+     "default TD-02 never reaches it, and the width deduction from the linear path proceeds without waiting",
+     "OPEN-PASSAGE RULE CORRECTION", ["TD-02 is explicitly barred from open passages"]),
     ("US-10", "SOURCE_DIMENSIONS_OVERRIDE_DEFAULTS",
      "an actual drawing dimension is never overwritten by a default, and a default never becomes source truth",
      "A, G", []),
@@ -123,10 +135,19 @@ QORTUBA_PROJECT_RULES = [
      "the owner has read the two figures and chosen: the clear WIDTH of every door, sliding door and window comes off "
      "the hidden skirting and hidden profile path, whether or not wall stands below the opening.  The question is "
      "closed and is not asked again"),
-    ("QP-10", "QORTUBA_HIDDEN_SKIRTING_PATH", 86.589, "LM", "owner confirmation",
-     "the payable hidden skirting path, fixed by the owner under QP-09"),
-    ("QP-11", "QORTUBA_HIDDEN_PROFILE_PATH", 86.589, "LM", "owner confirmation",
+    ("QP-10", "QORTUBA_HIDDEN_SKIRTING_PATH", 81.789, "LM", "owner confirmation + OPEN-PASSAGE RULE CORRECTION",
+     "the payable hidden skirting path, fixed by the owner under QP-09 and corrected under QP-17: the two open "
+     "passages interrupt the path and their clear widths come off it, which 86.589 lm did not do"),
+    ("QP-11", "QORTUBA_HIDDEN_PROFILE_PATH", 81.789, "LM", "owner confirmation + OPEN-PASSAGE RULE CORRECTION",
      "the payable hidden profile path: the same path as QP-10, issued as a separate BOQ item under US-08"),
+    ("QP-17", "QORTUBA_OPEN_PASSAGES", "2 x 1.200 m", "M", "OPEN-PASSAGE RULE CORRECTION",
+     "the owner has identified two of the five unresolved gaps as open passages: the 1.200 m gap between the Hall and "
+     "the Lobby, and the 1.200 m gap between the Master bedroom and the Dressing room.  Each interrupts the skirting "
+     "and hidden profile path of BOTH rooms it joins, so 4 x 1.200 = 4.800 lm leaves the path; each carries no "
+     "height and no procurement line"),
+    ("QP-18", "QORTUBA_OPEN_PASSAGE_VERTICAL_CONDITION", None, None, "OPEN-PASSAGE RULE CORRECTION",
+     "OWNER_INPUT_REQUIRED for both passages: full height to the 3.00 m wall, or a head above the opening.  No area "
+     "is deducted from any wall trade for either of them until that answer arrives, and TD-02 is barred"),
     ("QP-12", "QORTUBA_HALL_PANTRY_GLAZED_OPENING_HEIGHT", 2.200, "M", "V2 §2",
      "the owner has given the height of the glazed opening between the Hall and the Pantry.  This is a real dimension "
      "under an owner override, not a default, so 2.750 x 2.200 = 6.050 m2 is deducted from every dependent wall area"),
@@ -329,6 +350,14 @@ def room_rows(skirt, openings, glazed=None, human=None):
             continue
         for rid in h["ROOM_IDS_FOR_DEDUCTION"]:
             ded[rid].append(h)
+    # OPEN-PASSAGE RULE CORRECTION: an open passage interrupts the skirting and the hidden profile exactly as a
+    # doorway does, so its CLEAR WIDTH leaves the linear path.  This deduction needs no height and does not wait for
+    # one.  The frozen boundary traced these two gaps as continuous wall face, so the width was never taken out.
+    passage = defaultdict(list)
+    for h in (human or []):
+        if h["TYPE"] == "OPEN_PASSAGE" and h["IS_AN_OPENING_THROUGH_THE_WALL"]:
+            for rid in h["ROOM_IDS_FOR_DEDUCTION"]:
+                passage[rid].append(h)
     by_room = defaultdict(list)
     for g in (glazed or []):
         if g.get("ROOM_ID") and g["WALL_BELOW"]:
@@ -345,7 +374,9 @@ def room_rows(skirt, openings, glazed=None, human=None):
         col = sum(s["LENGTH_MM"] for s in segs if s["SEGMENT_CLASS"] == "COLUMN_FACE") / 1000
         # §E: deduct the clear WIDTH of openings from a linear quantity.  A column face is not an opening, so the
         # skirting runs across it; §E's do-not-deduct list is about things that are not openings, and a column is one.
-        skirting = 0.0 if ceramic else gross - sum(doors) - sum(glaz)
+        pas = passage.get(x["ROOM_ID"], [])
+        pas_w = sum(p["WIDTH_M"] for p in pas)
+        skirting = 0.0 if ceramic else max(gross - sum(doors) - sum(glaz) - pas_w, 0.0)
         # §1 of the audit: glazed elements that stand in this room with wall BELOW them.  They do not interrupt the
         # boundary path, so they are not deducted here - and they are carried so the alternative reading is computable.
         sills = by_room.get(x["ROOM_ID"], [])
@@ -358,6 +389,9 @@ def room_rows(skirt, openings, glazed=None, human=None):
             "WAS_WET_IN_WORKPAPER": x["WET_OR_DRY"] == "WET",
             "GROSS_WALL_LINE_LM": r3(gross), "WALL_FACE_LM": r3(face), "COLUMN_FACE_LM": r3(col),
             "DOOR_OPENING_LM": r3(sum(doors)), "GLAZED_OPENING_LM": r3(sum(glaz)),
+            "OPEN_PASSAGE_LM": r3(pas_w),
+            "OPEN_PASSAGES_DEDUCTED": [{"OPENING_ID": p["OPENING_ID"], "DESCRIPTION": p["DESCRIPTION"],
+                                        "WIDTH_M": p["WIDTH_M"]} for p in pas],
             "DOOR_WIDTHS_M": [r3(d) for d in sorted(doors, reverse=True)],
             "GLAZED_WIDTHS_M": [r3(g) for g in sorted(glaz, reverse=True)],
             "SKIRTING_LM": r3(skirting),
@@ -374,8 +408,9 @@ def room_rows(skirt, openings, glazed=None, human=None):
                                    "AREA_M2": r4(h["WIDTH_M"] * h["HEIGHT_M"])} for h in ded.get(x["ROOM_ID"], [])],
             "GLAZED_DEDUCTION_M2": None if glaz else 0.0,
             "GLAZED_PENDING_WIDTH_M": r3(sum(glaz)) or None,
-            "SKIRTING_ARITHMETIC": (f"{gross:.3f} gross wall line - {sum(doors):.3f} doors - {sum(glaz):.3f} glazed "
-                                    f"= {skirting:.3f} lm" if not ceramic else
+            "SKIRTING_ARITHMETIC": (f"{gross:.3f} gross wall line - {sum(doors):.3f} doors - {sum(glaz):.3f} glazed"
+                                    + (f" - {pas_w:.3f} open passage" if pas_w else "")
+                                    + f" = {skirting:.3f} lm" if not ceramic else
                                     "0.000 lm: US-02, the wall ceramic reaches the floor ceramic"),
         })
     return rows
@@ -526,10 +561,18 @@ def quantities(rooms, walls_calc, openings, floors, summ, ceil, glazed=None, cei
     sills = [g for g in (glazed or []) if g["WALL_BELOW"]]
     dry_names = {r["ROOM_NAME"] for r in dry} | {r["ROOM"] for r in dry}
     dry_sills = [g for g in sills if g["ROOM"] in dry_names]
+    # QP-17: exactly which room path loses which passage width, so the correction can be read off the row
+    pas_detail = [{"ROOM": r["ROOM_NAME"], "ROOM_ID": r["ROOM_ID"], "OPENING_ID": p["OPENING_ID"],
+                   "DESCRIPTION": p["DESCRIPTION"], "WIDTH_M": p["WIDTH_M"],
+                   "PATH_BEFORE_LM": r3(r["SKIRTING_LM_IF_ALL_WINDOW_WIDTHS_DEDUCTED"] + r["OPEN_PASSAGE_LM"]),
+                   "PATH_AFTER_LM": r["SKIRTING_LM_IF_ALL_WINDOW_WIDTHS_DEDUCTED"]}
+                  for r in dry for p in r["OPEN_PASSAGES_DEDUCTED"]]
+    pas_total = sum(r["OPEN_PASSAGE_LM"] for r in dry)
     for qid, item in (("Q-01", "HIDDEN_SKIRTING"), ("Q-02", "HIDDEN_PROFILE_ABOVE_SKIRTING")):
         rows.append(q(qid, "بروفايل" if qid == "Q-02" else "سيراميك", item, sk_all, "LM",
                       "FINAL_QUANTITY_AVAILABLE",
-                      f"gross wall line less the clear WIDTH of every door, sliding door and window, dry rooms only: "
+                      f"gross wall line less the clear WIDTH of every door, sliding door, window and open passage, "
+                      f"dry rooms only: "
                       + " + ".join(f"{r['ROOM_NAME']} {r['SKIRTING_LM_IF_ALL_WINDOW_WIDTHS_DEDUCTED']:.3f}"
                                    for r in dry) + f" = {sk_all:.3f} lm",
                       ["US-02", "US-08", "QP-06", "QP-07", "QP-08", "QP-09", "QP-10" if qid == "Q-01" else "QP-11"],
@@ -539,12 +582,16 @@ def quantities(rooms, walls_calc, openings, floors, summ, ceil, glazed=None, cei
                                   "WHY": "PAINTRY leaves the skirting entirely under US-01/QP-07 (-11.150), and the "
                                          "column faces in HALL and DRESS join it because §E deducts openings and a "
                                          "column is not an opening (+1.550)"},
-                      note="FINAL under QP-09: the owner has read both figures and fixed the rule.  Every door, "
-                           "sliding door and window width comes off the path, whether or not wall stands below the "
-                           f"opening.  The superseded reading, which left the {len(dry_sills)} windows with wall "
-                           f"below on the path, gave {sk:.3f} lm and is retained only as an audit trail",
+                      note="FINAL under QP-09 and QP-17: the owner has read both figures and fixed the rule.  Every "
+                           "door, sliding door and window width comes off the path, whether or not wall stands below "
+                           f"the opening, and so does every open passage.  The superseded reading, which left the "
+                           f"{len(dry_sills)} windows with wall below on the path, gave {sk:.3f} lm and is retained "
+                           f"only as an audit trail",
                       extra={"VALUE_UNDER_THE_SUPERSEDED_READING": r3(sk),
                              "SUPERSEDED_READING_CLOSED_BY": "QP-09, owner confirmation",
+                             "VALUE_BEFORE_THE_OPEN_PASSAGE_CORRECTION": r3(sk_all + pas_total),
+                             "OPEN_PASSAGE_DEDUCTION_LM": r3(pas_total),
+                             "OPEN_PASSAGES_DEDUCTED": pas_detail,
                              "WINDOW_WIDTHS_DEDUCTED": [{"ID": g["BLUE_ELEMENT_ID"], "ROOM": g["ROOM"],
                                                          "WIDTH_M": g["WIDTH_M"], "WALL_BELOW": True,
                                                          "HOST_WALL_ID": g["HOST_WALL_ID"]}
@@ -832,6 +879,10 @@ def answered_questions():
         ("V2-02", "the dry floor finish", "QP-14 = porcelain, which releases 108.9625 m2"),
         ("V2-03", "whether interior doors are aluminium",
          "US-13 + QP-16 = no: they are PVC and carry their own schedule"),
+        ("OP-01", "what the 1.200 m gap between the Hall and the Lobby is",
+         "US-16 + QP-17 = an OPEN_PASSAGE: no door leaf, no procurement line, and its width leaves the linear path"),
+        ("OP-02", "what the 1.200 m gap between the Master bedroom and the Dressing room is",
+         "US-16 + QP-17 = an OPEN_PASSAGE, on the same terms"),
     ]
 
 
@@ -840,10 +891,19 @@ STILL_OPEN = [
      "US-11 forbids a default window height, so each window is asked in its own row of QORTUBA_OWNER_QUESTIONS with "
      "its room and its width, and none is given another's height",
      "the aluminium schedule, and the plaster, paint, blockwork and ceramic of every wall they stand in"),
-    ("O-07", "PROJECT_INPUT", "what five remaining openings actually are: door, open passage, window or something else",
-     "the type decides whether a height may be defaulted and which trade carries it.  Each is described by room, "
-     "adjacent room and width, and numbered on the marked plan",
+    ("O-07", "PROJECT_INPUT", "what three remaining openings actually are: door, open passage, window or something "
+     "else",
+     "two of the original five are answered - the owner has confirmed both 1.200 m gaps as open passages.  Three are "
+     "still open: the 2.700 m gap between a Bedroom and the Hall, and the two 1.100 m gaps at the ends of the same "
+     "short Bedroom wall facing the stair landing.  Each has its own crop and none is inferred",
      "the wall-area trades of the rooms they stand in"),
+    ("O-11", "PROJECT_INPUT", "the vertical condition of each open passage: open to the ceiling, or is there wall "
+     "above it?",
+     "US-17 gives a passage no assumed height.  If it is full height its opening height IS the 3.00 m wall height and "
+     "no top reveal exists; if it has a head the owner gives the height and left, right and top reveals all apply.  "
+     "The width deduction from the skirting and profile path has already been taken and does not wait for this",
+     "the blockwork, plaster, paint and wall-ceramic AREAS of the Hall, the Lobby, the Master bedroom and the "
+     "Dressing room.  It blocks no linear quantity and no other room"),
     ("O-09", "PROJECT_RULE", "whether the 7 interior PVC doors are priced per door, per set, or by m2",
      "the physical side is settled — 7 doors, 16.665 m2 of opening area — but a physical area is not a pricing "
      "quantity.  Until the basis is given, FINAL_PRICING_QUANTITY stays empty rather than defaulting to the m2 that "

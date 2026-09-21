@@ -4884,3 +4884,49 @@ shape of fact: 2.750 × 2.200 = 6.050 m² is physically established and stays
 deducted from both rooms, while which trade carries the product is still
 unwritten. The measurement is finished. The bill is not, and the file says
 which is which.
+
+## §233 — An open passage is an opening with nothing in it
+
+OPEN_PASSAGE is a physical opening type in its own right: a real
+interruption in the wall with no door leaf and no system in it. It is not
+PVC, it is not aluminium, and it never appears in a door or window
+procurement schedule or in a door count — there is nothing to buy. It does
+interrupt blockwork, plaster, paint, wall ceramic, skirting and the hidden
+profile, according to its dimensions and the finishes on each side.
+
+The engine had no such type, so two 1.200 m gaps sat as UNRESOLVED and the
+frozen boundary traced both as continuous wall face. Their widths therefore
+stayed on the skirting and profile path, which is the one place a gap costs
+nothing to be wrong about and is wrong anyway: skirting does not run across
+an opening. Each passage interrupts the path of *both* rooms it joins, so
+four widths left it, not two.
+
+A passage has no assumed height. It is either OPEN_PASSAGE_FULL_HEIGHT,
+where the opening height *is* the applicable wall height and no top reveal
+exists — only left and right — or OPEN_PASSAGE_WITH_HEAD, where the owner
+gives the height and left, right and top reveals all apply under §H's
+0.25 m rule. Until the owner says which, HEIGHT_STATUS is
+OWNER_INPUT_REQUIRED and the door default is barred: a passage is not a
+door, so 2.20 m is not its height by proxy.
+
+The two deductions come apart here, and that is the point. The **width**
+leaves the linear path immediately, because a linear quantity needs no
+height. The **area** leaves nothing at all until the vertical condition is
+known. One answer is available now and is taken; the other is not, and
+nothing is invented to stand in for it.
+
+## §234 — An answer must not renumber the questions still open
+
+The owner was sent five numbered crops. Two came back answered. Rebuilding
+the question table by sort order would have promoted the remaining gaps into
+the vacated numbers, so crop #7 in the owner's hand would refer to a
+different opening than question #7 in the file — and every later answer
+would land on the wrong wall.
+
+So a question number is issued once and kept. The gaps stay in the single
+width-ordered sequence they were first issued in whether or not their type
+has since been settled: the two confirmed passages remain #8 and #9, and the
+three still-unknown gaps remain #7, #10 and #11. What changes is the
+question printed on the crop, never the number above it. A settled type is
+not asked again — #8 and #9 are no longer offered door / window / sliding
+door, only "open to the ceiling, or is there wall above it?"

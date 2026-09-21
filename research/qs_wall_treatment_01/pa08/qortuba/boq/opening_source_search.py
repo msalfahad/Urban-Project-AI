@@ -23,7 +23,13 @@ R3 = Path(PR.OUT_DIR) / "pa08_qortuba_r3"
 QS = Path(PR.OUT_DIR) / "pa08_qortuba_qs01"
 DWG_JSON = Path("data/runs/cad_convert/QORTUBA_ARCHITECTURAL.json")
 
-OPENING_TYPES = ("DOOR", "WINDOW", "SLIDING_DOOR", "GLAZED_OPENING", "UNRESOLVED")
+OPENING_TYPES = ("DOOR", "WINDOW", "SLIDING_DOOR", "GLAZED_OPENING", "OPEN_PASSAGE", "UNRESOLVED")
+
+# OPEN_PASSAGE: a real interruption in the wall with no door leaf or system in it.  It is not PVC, it is not
+# aluminium, and it must never appear in a door or window procurement schedule - but it does interrupt blockwork,
+# plaster, paint, wall ceramic, skirting and the hidden profile, exactly as its dimensions and its neighbours require.
+OPEN_PASSAGE_SUBTYPES = ("OPEN_PASSAGE_FULL_HEIGHT", "OPEN_PASSAGE_WITH_HEAD")
+OPEN_PASSAGE_TRADE = "OPEN_PASSAGE_NO_PROCUREMENT"
 APARTMENT_ROOMS = {"HALL / whgm", "M.B.ROOM", "BED.ROOM", "PAINTRY", "DRESS", "BATH", "UNLABELLED_INTERNAL_SPACE"}
 
 DEFAULT_DOOR_WIDTH_M = 1.00
@@ -34,6 +40,16 @@ DEFAULT_DOOR_HEIGHT_M = 2.20
 OWNER_SUPPLIED_HEIGHTS = {
     "OS-b5a0fbb335d4": (2.200, "OWNER INPUTS V2 §2: the glazed opening between the Hall and the Pantry is 2.200 m "
                                "high, so its physical opening is 2.750 x 2.200 = 6.050 m2"),
+}
+
+# OPEN-PASSAGE RULE CORRECTION: the owner has identified two of the five unresolved gaps.  This is an OWNER
+# OVERRIDE, rank 2 on the priority ladder, and it settles the TYPE only - the vertical condition is a separate
+# question, and until it is answered no height may be taken from anywhere, least of all from the door default.
+OWNER_SUPPLIED_TYPES = {
+    "OS-77f8fed2eb15": ("OPEN_PASSAGE", "OPEN-PASSAGE RULE CORRECTION: the owner confirms the 1.200 m gap between "
+                                        "the Hall and the Lobby is an open passage, not a door"),
+    "OS-85cb2192ebc0": ("OPEN_PASSAGE", "OPEN-PASSAGE RULE CORRECTION: the owner confirms the 1.200 m gap between "
+                                        "the Master bedroom and the Dressing room is an open passage, not a door"),
 }
 
 # a room answers to a name a person uses, not to the label the CAD file happens to carry
@@ -177,17 +193,26 @@ def completed_register():
             "ROOM": ", ".join(rooms) or None, "ROOM_ID": (glz[bid]["ROOM_ID"] if bid else None),
             "HOST_WALL_ID": (w["WALL_ID"] if w else None),
             "HOST_WALL_THICKNESS_MM": s["HOST_WALL_THICKNESS_MM"],
-            "TYPE": t if is_opening else "UNRESOLVED",
+            "TYPE": (OWNER_SUPPLIED_TYPES[sid][0] if (is_opening and sid in OWNER_SUPPLIED_TYPES)
+                     else t if is_opening else "UNRESOLVED"),
+            "TYPE_SOURCE": OWNER_SUPPLIED_TYPES[sid][1] if sid in OWNER_SUPPLIED_TYPES else None,
             "WIDTH_M": round(s["SPAN_MM"] / 1000, 4),
+            # TD-02 reaches ordinary doors and nothing else.  An open passage is not a door, so it takes no height
+            # from it: a passage is either full height or it has a head, and only the owner knows which.
             "HEIGHT_M": (OWNER_SUPPLIED_HEIGHTS[sid][0] if sid in OWNER_SUPPLIED_HEIGHTS else
-                         DEFAULT_DOOR_HEIGHT_M if (is_opening and t == "DOOR") else None),
+                         DEFAULT_DOOR_HEIGHT_M if (is_opening and t == "DOOR"
+                                                   and sid not in OWNER_SUPPLIED_TYPES) else None),
+            "OPEN_PASSAGE_SUBTYPE": None,
+            "HEIGHT_STATUS": ("OWNER_INPUT_REQUIRED" if (is_opening and sid in OWNER_SUPPLIED_TYPES
+                                                         and sid not in OWNER_SUPPLIED_HEIGHTS) else None),
             "WIDTH_SOURCE": "DWG opening site span, from the wall band's own interrupted faces",
             "HEIGHT_SOURCE": (OWNER_SUPPLIED_HEIGHTS[sid][1] if sid in OWNER_SUPPLIED_HEIGHTS else
                               "TD-02 APPROVED_TEMPORARY_DEFAULT, ordinary door with no source height"
-                              if (is_opening and t == "DOOR") else None),
+                              if (is_opening and t == "DOOR" and sid not in OWNER_SUPPLIED_TYPES) else None),
             "IS_AN_OPENING_THROUGH_THE_WALL": is_opening,
             "INTERRUPTS_AT_FLOOR_LEVEL": is_opening,
             "STATUS": ("NOT_AN_OPENING" if not is_opening else
+                       "PARTIAL_HEIGHT_REQUIRED" if sid in OWNER_SUPPLIED_TYPES else
                        "USABLE" if (t == "DOOR" or sid in OWNER_SUPPLIED_HEIGHTS) else "OWNER_INPUT_REQUIRED"),
             "EVIDENCE": s["REASON"],
             "SITE_STATUS": s["STATUS"], "SITE_CLASS": s["CLASS"],
@@ -205,8 +230,11 @@ def completed_register():
             "ROOM": g["ROOM"], "ROOM_ID": g["ROOM_ID"],
             "HOST_WALL_ID": g["HOST_WALL_ID"], "HOST_WALL_THICKNESS_MM": g["HOST_WALL_THICKNESS_MM"],
             "TYPE": BLUE_TYPE[b["TYPE"]],
+            "TYPE_SOURCE": None,
             "WIDTH_M": round(b["WIDTH_MM"] / 1000, 4),
             "HEIGHT_M": None,
+            "OPEN_PASSAGE_SUBTYPE": None,
+            "HEIGHT_STATUS": None,
             "WIDTH_SOURCE": "DWG blue element frame width",
             "HEIGHT_SOURCE": None,
             # a window with a sill IS an opening through the wall; it simply does not reach the floor
@@ -241,7 +269,14 @@ def finish_register():
                                      if r["IS_AN_OPENING_THROUGH_THE_WALL"] and not r["INTERRUPTS_AT_FLOOR_LEVEL"]],
         "STILL_BLOCKING": [{"OPENING_ID": r["OPENING_ID"], "TYPE": r["TYPE"], "WIDTH_M": r["WIDTH_M"],
                             "ROOM": r["ROOM"], "HOST_WALL_ID": r["HOST_WALL_ID"]}
-                           for r in rows if r["STATUS"] == "OWNER_INPUT_REQUIRED"],
+                           for r in rows if r["STATUS"] in ("OWNER_INPUT_REQUIRED", "PARTIAL_HEIGHT_REQUIRED")],
+        "OPEN_PASSAGES": [{"OPENING_ID": r["OPENING_ID"], "WIDTH_M": r["WIDTH_M"], "HEIGHT_M": r["HEIGHT_M"],
+                           "SUBTYPE": r["OPEN_PASSAGE_SUBTYPE"], "HEIGHT_STATUS": r["HEIGHT_STATUS"],
+                           "ROOM": r["ROOM"], "HOST_WALL_ID": r["HOST_WALL_ID"], "WHY": r["TYPE_SOURCE"]}
+                          for r in rows if r["TYPE"] == "OPEN_PASSAGE"],
+        "OPEN_PASSAGE_SUBTYPES": list(OPEN_PASSAGE_SUBTYPES),
+        "OPEN_PASSAGES_NEVER_ENTER_A_PROCUREMENT_SCHEDULE": True,
+        "OWNER_SUPPLIED_TYPES": {k: v[0] for k, v in OWNER_SUPPLIED_TYPES.items()},
         "OWNER_SUPPLIED_HEIGHTS": {k: v[0] for k, v in OWNER_SUPPLIED_HEIGHTS.items()},
         "DEFAULT_APPLIED_ONLY_TO_ORDINARY_DOORS": True,
         "RULE": "an actual source dimension overrides a default; the 1.00 x 2.20 m default reaches ordinary doors only "
@@ -348,6 +383,10 @@ def human_register():
             material, why_mat = EXTERIOR_OPENING_MATERIAL, "an exterior opening system in an envelope wall"
         elif not inside:
             material, why_mat = "OUTSIDE_APARTMENT", "this opening is not in an apartment wall and is out of scope"
+        elif r["TYPE"] == "OPEN_PASSAGE":
+            material, why_mat = OPEN_PASSAGE_TRADE, ("an open passage has no door leaf and no system in it: it is not "
+                                                     "PVC, it is not aluminium, and nothing is procured for it.  It "
+                                                     "interrupts the wall trades and nothing else")
         elif r["TYPE"] == "GLAZED_OPENING" and interior:
             material, why_mat = "INTERNAL_GLAZED_OPENING", ("both sides are apartment rooms, so this is internal "
                                                             "glazing and not an aluminium envelope item")
@@ -375,13 +414,17 @@ def human_register():
 
         where = where.replace("the a ", "a ").replace("the A ", "a ")
         kind = {"DOOR": "Door", "WINDOW": "Window", "SLIDING_DOOR": "Sliding door",
-                "GLAZED_OPENING": "Glazed opening", "UNRESOLVED": "Opening of unknown type"}[r["TYPE"]]
+                "GLAZED_OPENING": "Glazed opening", "OPEN_PASSAGE": "Open passage",
+                "UNRESOLVED": "Opening of unknown type"}[r["TYPE"]]
         out.append({
             "OPENING_ID": r["OPENING_ID"],
             "ROOM": here, "ADJACENT": other or None, "LOCATION": where,
             "OPENING": kind, "TYPE": r["TYPE"],
             "WIDTH_M": r["WIDTH_M"], "HEIGHT_M": r["HEIGHT_M"],
             "HEIGHT_SOURCE": r["HEIGHT_SOURCE"],
+            "TYPE_SOURCE": r.get("TYPE_SOURCE"),
+            "OPEN_PASSAGE_SUBTYPE": r.get("OPEN_PASSAGE_SUBTYPE"),
+            "HEIGHT_STATUS": r.get("HEIGHT_STATUS"),
             "MATERIAL_TRADE": material, "WHY_THAT_TRADE": why_mat,
             "INTERIOR": interior, "INSIDE_APARTMENT": inside,
             "ROOMS_FOR_DEDUCTION": raw, "ROOM_IDS_FOR_DEDUCTION": ids,

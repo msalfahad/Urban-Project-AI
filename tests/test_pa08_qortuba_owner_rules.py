@@ -127,10 +127,12 @@ def test_skirting_deducts_opening_widths_in_metres_and_nothing_else():
         if x["FINISH_CLASS"] == "CERAMIC_SERVICE_ROOM":
             assert x["SKIRTING_LM"] == 0.0, x["ROOM"]
             continue
-        want = round(x["GROSS_WALL_LINE_LM"] - x["DOOR_OPENING_LM"] - x["GLAZED_OPENING_LM"], 3)
+        want = round(x["GROSS_WALL_LINE_LM"] - x["DOOR_OPENING_LM"] - x["GLAZED_OPENING_LM"]
+                     - x["OPEN_PASSAGE_LM"], 3)
         assert abs(x["SKIRTING_LM"] - want) < 1e-9, (x["ROOM"], x["SKIRTING_LM"], want)
-        # a column face is not an opening, so it stays on the path
-        assert x["SKIRTING_LM"] >= x["WALL_FACE_LM"] - 1e-9
+        # a column face is not an opening, so it stays on the path.  An open passage is the one thing the frozen
+        # boundary traced as continuous WALL FACE that is not wall at all, so it is the only permitted shortfall.
+        assert x["SKIRTING_LM"] >= x["WALL_FACE_LM"] - x["OPEN_PASSAGE_LM"] - 1e-9
 
 
 def test_no_area_was_ever_subtracted_from_a_linear_quantity():
@@ -234,7 +236,7 @@ def test_a_missing_height_blocks_only_the_rows_that_depend_on_it():
     # the skirting pair is fixed by QP-09 and was never held by a height
     for qid in ("Q-01", "Q-02"):
         assert by[qid]["STATUS"] == "FINAL_QUANTITY_AVAILABLE"
-        assert by[qid]["MEASURED_NET_QUANTITY"] == 86.589
+        assert by[qid]["MEASURED_NET_QUANTITY"] == 81.789
         assert by[qid]["USES_TEMPORARY_DEFAULT"] is False
         assert by[qid]["RESIDUAL_OPENINGS"] == [], "no unheighted opening may hold up a linear quantity"
     assert q["BY_STATUS"]["FINAL_QUANTITY_AVAILABLE"] > 0 and q["BY_STATUS"]["PARTIALLY_CALCULATED"] > 0

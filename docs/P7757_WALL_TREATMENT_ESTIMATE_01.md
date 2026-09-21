@@ -896,3 +896,41 @@ physically fixed and stays deducted from both rooms, while its commercial
 material and trade are unwritten (§232). Both are now open items O-09 and
 O-10 in the question ledger; V2-03 — that the doors are PVC and not
 aluminium — stays closed.
+
+### The open-passage correction
+
+The owner answered two of the five gaps: both 1.200 m openings are open
+passages, not doors. The other three stay unresolved and are not inferred.
+
+OPEN_PASSAGE is now a permanent opening type (§233) with two subtypes,
+OPEN_PASSAGE_FULL_HEIGHT and OPEN_PASSAGE_WITH_HEAD. It carries no
+procurement line at all — the PVC schedule is unchanged at seven doors and
+16.665 m², and neither passage appears in it or in any aluminium row — and
+it takes no height from the door default, because a passage is not a door.
+
+The correction that had a number attached to it was in the linear path. The
+frozen boundary traced both gaps as continuous wall face, so their widths
+were still on the skirting and profile run; skirting does not run across an
+opening. Each passage interrupts the path of both rooms it joins:
+
+| Opening | Room path | Before | After |
+|---|---|---|---|
+| Hall ↔ Lobby, 1.200 m | HALL | 23.054 | 21.854 |
+| | UNLABELLED_INTERNAL_SPACE (Lobby) | 7.050 | 5.850 |
+| M.Bedroom ↔ Dressing, 1.200 m | M.B.ROOM | 15.452 | 14.252 |
+| | DRESS | 12.425 | 11.225 |
+
+Four widths, 4.800 lm, so the hidden skirting and the hidden profile both
+move from 86.589 lm to **81.789 lm**. QP-09, the owner's window rule that
+fixed 86.589, is untouched; QP-17 records what came off it and QP-10/QP-11
+carry the corrected figure. The row stays FINAL: a linear deduction needs no
+height and does not wait for one.
+
+Nothing else moved. No wall area was deducted for either passage — the
+vertical condition is QP-18, OWNER_INPUT_REQUIRED, and the blockwork,
+plaster, paint and wall-ceramic rows of the four rooms involved simply
+continue to name these two openings among what they are waiting for, as they
+already did. The question put to the owner is now the one that is still
+open: "is it open all the way to the ceiling, or is there wall above it?"
+The type question is retired for those two (§234), and their crop numbers,
+#8 and #9, do not move.

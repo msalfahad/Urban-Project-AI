@@ -28,6 +28,11 @@ DWG_JSON = Path("data/runs/cad_convert/QORTUBA_ARCHITECTURAL.json")
 
 DWG_UNITS_TO_MM = 10.0          # INSUNITS 5: the drawing is authored in centimetres
 CHOICES = "Door  /  Open passage  /  Window  /  Sliding door  /  Not an opening  /  Other?"
+# US-16: this one is settled as an open passage, so it is never offered the type choice again.  What is still open is
+# the vertical condition, and that is the only thing this crop asks.
+PASSAGE_CHOICES = "Open to the ceiling  /  Wall above it - what is the opening height?"
+ASK = {"TYPE": ("What is this opening?", CHOICES),
+       "PASSAGE_HEIGHT": ("Open passage - is it open to the ceiling?", PASSAGE_CHOICES)}
 
 NAVY = (31, 58, 95)
 RED = (192, 57, 43)
@@ -137,6 +142,7 @@ def _rooms():
 
 
 def draw_crop(n, q, band, lo, hi, rooms, allbands, hint=None, half_w=4200, half_h=2900, px=1600):
+    heading, choices = ASK[q["ASKS_FOR"]]
     ax = band["AXIS"]
     cx = (lo + hi) / 2 if ax == "H" else band["OFF"]
     cy = band["OFF"] if ax == "H" else (lo + hi) / 2
@@ -210,14 +216,17 @@ def draw_crop(n, q, band, lo, hi, rooms, allbands, hint=None, half_w=4200, half_
     d.text((mx - ww / 2, my + R + 15), wl, fill="white", font=f_w)
 
     d.rectangle([0, 0, W, top - 1], fill=NAVY)
-    d.text((22, 14), f"OPENING #{n}", fill="white", font=_font(34, True))
+    d.text((22, 14), f"OPENING #{n}" + ("  -  OPEN PASSAGE" if q["ASKS_FOR"] == "PASSAGE_HEIGHT" else ""),
+           fill="white", font=_font(34, True))
     d.text((22, 54), q["LOCATION"][0].upper() + q["LOCATION"][1:], fill=(210, 222, 236), font=_font(21))
     d.rectangle([0, top + H, W, top + H + bot], fill=(245, 247, 250))
-    d.text((22, top + H + 16), "What is this opening?", fill=INK, font=_font(28, True))
-    d.text((22, top + H + 58), CHOICES, fill=NAVY, font=_font(27, True))
+    d.text((22, top + H + 16), heading, fill=INK, font=_font(28, True))
+    d.text((22, top + H + 58), choices, fill=NAVY, font=_font(27, True))
     d.text((22, top + H + 104),
            "Measured clear width "
-           f"{q['WIDTH_M']:.3f} m.  Height not in the drawing set.  No type has been assumed.",
+           f"{q['WIDTH_M']:.3f} m.  Height not in the drawing set.  "
+           + ("Type confirmed by the owner: open passage.  No height has been assumed."
+              if q["ASKS_FOR"] == "PASSAGE_HEIGHT" else "No type has been assumed."),
            fill=GREY, font=_font(19))
     # the hint goes last, over the footer band rather than under it, wrapped so no word runs off the page
     if hint:
@@ -240,7 +249,7 @@ def draw_crop(n, q, band, lo, hi, rooms, allbands, hint=None, half_w=4200, half_
 
 def finish():
     qs = [q for q in reg(Path(PR.OUT_DIR) / "pa08_qortuba_boq", "QORTUBA_OWNER_QUESTIONS")["ROWS"]
-          if q["ASKS_FOR"] == "TYPE"]
+          if q["ASKS_FOR"] in ASK]
     sites = {r["SITE_ID"]: r for r in reg(R1, "PA08_QORTUBA_R1_OPENING_REGISTER")["ROWS"]}
     hosts = {o["OPENING_ID"]: o["HOST_WALL_ID"] for o in reg(Path(PR.OUT_DIR) / "pa08_qortuba_boq",
                                                              "QORTUBA_OPENING_REGISTER_COMPLETED")["ROWS"]}
@@ -251,19 +260,23 @@ def finish():
         band = bs[hosts[sid]]
         lo, hi, basis = gap_interval(sites[sid], band, jp)
         hint = None
-        if sum(1 for z in qs if hosts[z["AUDIT_OPENING_ID"]] == hosts[sid]) > 1:
-            other = [z["#"] for z in qs if hosts[z["AUDIT_OPENING_ID"]] == hosts[sid] and z["#"] != q["#"]]
+        same = [z for z in qs if hosts[z["AUDIT_OPENING_ID"]] == hosts[sid] and z["ASKS_FOR"] == q["ASKS_FOR"]]
+        if len(same) > 1:
+            other = [z["#"] for z in same if z["#"] != q["#"]]
             hint = (f"This short wall has a gap at BOTH ends: this one, and opening #{other[0]} at the other end. "
                     f"They may be the same kind of thing or different - please answer each.")
         p = draw_crop(q["#"], q, band, lo, hi, rooms, bs, hint)
         out.append({"#": q["#"], "ROOM": q["ROOM"], "LOCATION": q["LOCATION"], "WIDTH_M": q["WIDTH_M"],
-                    "QUESTION": CHOICES, "IMAGE": str(p), "MARKER_BASIS": basis,
+                    "ASKS_FOR": q["ASKS_FOR"], "QUESTION": ASK[q["ASKS_FOR"]][1],
+                    "IMAGE": str(p), "MARKER_BASIS": basis,
                     "ADJACENT_ROOMS": band["ROOMS"], "AUDIT_OPENING_ID": sid})
     rec = {"ARTIFACT": "QORTUBA_OWNER_QUESTION_CROPS",
            "RULE": "one crop per unresolved opening, numbered as in the question table.  No CAD or hash identifier "
                    "appears on any image; the id is carried here for the audit trail only",
-           "CHOICES": CHOICES, "ROWS": out, "COUNT": len(out),
+           "CHOICES": CHOICES, "PASSAGE_CHOICES": PASSAGE_CHOICES, "ROWS": out, "COUNT": len(out),
            "NO_TYPE_INFERRED": True,
+           "A_SETTLED_TYPE_IS_NEVER_ASKED_AGAIN": "a crop for a confirmed open passage asks only the vertical "
+                                                  "condition; it does not offer door / window / sliding door again",
            "GEOMETRY_MODIFIED": "NONE"}
     (Path(PR.OUT_DIR) / "pa08_qortuba_boq" / "QORTUBA_OWNER_QUESTION_CROPS.json").write_text(
         json.dumps(rec, indent=1, ensure_ascii=False, default=str), "utf-8")

@@ -16,6 +16,7 @@ from research.qs_wall_treatment_01 import protocol as PR
 
 OUT = Path(PR.OUT_DIR) / "pa08_qortuba_boq"
 CHOICES = "Door  /  Open passage  /  Window  /  Sliding door  /  Not an opening  /  Other?"
+PASSAGE_CHOICES = "Open to the ceiling  /  Wall above it - what is the opening height?"
 OPAQUE = ("OS-", "BE-", "CAD-", "WALL-", "SITE-")
 
 
@@ -32,11 +33,21 @@ def by_id():
 
 
 # ------------------------------------------------------------------ one crop per unresolved opening
-def test_every_unresolved_opening_has_its_own_image():
-    asked = [q["#"] for q in reg("QORTUBA_OWNER_QUESTIONS")["ROWS"] if q["ASKS_FOR"] == "TYPE"]
+def test_every_open_gap_question_has_its_own_image():
+    asked = [q["#"] for q in reg("QORTUBA_OWNER_QUESTIONS")["ROWS"]
+             if q["ASKS_FOR"] in ("TYPE", "PASSAGE_HEIGHT")]
     numbered = [x["#"] for x in crops()["ROWS"]]
-    assert sorted(numbered) == sorted(asked), "a type question without a crop cannot be pointed at"
+    assert sorted(numbered) == sorted(asked), "a question about a gap without a crop cannot be pointed at"
     assert len(set(numbered)) == len(numbered), "two questions must not share a number"
+
+
+def test_the_numbers_the_owner_already_has_do_not_move():
+    """An answer must not renumber the questions still open, or the crops already sent stop meaning anything."""
+    by_n = {x["#"]: x for x in crops()["ROWS"]}
+    assert {7, 8, 9, 10, 11} == set(by_n), "the five gaps keep the numbers they were first issued under"
+    assert by_n[7]["WIDTH_M"] == 2.7
+    assert by_n[8]["WIDTH_M"] == by_n[9]["WIDTH_M"] == 1.2
+    assert by_n[10]["WIDTH_M"] == by_n[11]["WIDTH_M"] == 1.1
 
 
 def test_each_image_exists_and_is_a_real_drawing():
@@ -48,11 +59,20 @@ def test_each_image_exists_and_is_a_real_drawing():
         assert p.stat().st_size > 40_000, f"#{x['#']} is too small to contain a drawing"
 
 
-def test_a_crop_names_its_rooms_and_its_width_and_asks_only_the_type():
+def test_a_crop_names_its_rooms_and_its_width_and_asks_one_settled_question():
+    want = {"TYPE": CHOICES, "PASSAGE_HEIGHT": PASSAGE_CHOICES}
     for x in crops()["ROWS"]:
         assert x["ADJACENT_ROOMS"], f"#{x['#']} names no room"
         assert isinstance(x["WIDTH_M"], (int, float)) and x["WIDTH_M"] > 0
-        assert x["QUESTION"] == CHOICES, f"#{x['#']} asks something other than the agreed six choices"
+        assert x["QUESTION"] == want[x["ASKS_FOR"]], f"#{x['#']} asks the wrong question for its state"
+
+
+def test_a_confirmed_open_passage_is_never_asked_its_type_again():
+    pas = [x for x in crops()["ROWS"] if x["ASKS_FOR"] == "PASSAGE_HEIGHT"]
+    assert {x["#"] for x in pas} == {8, 9}
+    for x in pas:
+        assert x["QUESTION"] == PASSAGE_CHOICES
+        assert "Sliding door" not in x["QUESTION"] and "Window" not in x["QUESTION"]
 
 
 def test_no_engine_identifier_appears_where_the_owner_reads():

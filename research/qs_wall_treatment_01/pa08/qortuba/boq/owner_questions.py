@@ -33,8 +33,11 @@ def questions():
     """One numbered row per thing the owner must answer, ranked so the biggest openings come first."""
     rows = [r for r in OS.human_register()
             if r["IS_AN_OPENING_THROUGH_THE_WALL"] and r["INSIDE_APARTMENT"] and r["HEIGHT_M"] is None]
-    heights = [r for r in rows if r["TYPE"] != "UNRESOLVED"]
-    kinds = [r for r in rows if r["TYPE"] == "UNRESOLVED"]
+    heights = [r for r in rows if r["TYPE"] not in ("UNRESOLVED", "OPEN_PASSAGE")]
+    # An answer the owner has already given must not renumber the ones still open.  The gaps keep the single
+    # width-ordered sequence they were first issued in, whether or not their type has since been settled: #8 and #9
+    # are the two 1.200 m passages in the crops already sent, and they stay #8 and #9.
+    gaps = [r for r in rows if r["TYPE"] in ("UNRESOLVED", "OPEN_PASSAGE")]
     out, n = [], 0
     for r in sorted(heights, key=lambda z: -z["WIDTH_M"]):
         n += 1
@@ -44,12 +47,25 @@ def questions():
                     "WHY_IT_MATTERS": "no area can be released for this opening's trade, and every wall it stands in "
                                       "stays partial, until the height is known",
                     "AUDIT_OPENING_ID": r["OPENING_ID"]})
-    for r in sorted(kinds, key=lambda z: -z["WIDTH_M"]):
+    for r in sorted(gaps, key=lambda z: -z["WIDTH_M"]):
         n += 1
-        out.append({"#": n, "ROOM": r["ROOM"], "OPENING": "Opening of unknown type", "WIDTH_M": r["WIDTH_M"],
-                    "QUESTION": "What is this: a door, an open passage, a window, or something else?",
-                    "LOCATION": r["LOCATION"], "ASKS_FOR": "TYPE", "TRADE": r["MATERIAL_TRADE"],
-                    "WHY_IT_MATTERS": "the type decides whether a height may be defaulted and which trade carries it; "
+        passage = r["TYPE"] == "OPEN_PASSAGE"
+        # US-16 and US-17: once the type is settled the type question is never asked again.  What is left for a
+        # passage is the vertical condition, asked in the words a person standing in it would use.
+        out.append({"#": n, "ROOM": r["ROOM"],
+                    "OPENING": "Open passage" if passage else "Opening of unknown type",
+                    "WIDTH_M": r["WIDTH_M"],
+                    "QUESTION": (f"Opening {r['LOCATION']}, {r['WIDTH_M']:.2f} m wide: is it open all the way to the "
+                                 "ceiling, or is there wall above it?") if passage else
+                                "What is this: a door, an open passage, a window, or something else?",
+                    "LOCATION": r["LOCATION"],
+                    "ASKS_FOR": "PASSAGE_HEIGHT" if passage else "TYPE",
+                    "TRADE": r["MATERIAL_TRADE"],
+                    "WHY_IT_MATTERS": ("full height means the opening is the full 3.00 m wall height with no top "
+                                       "reveal; a head means the owner gives the height and a top reveal applies.  "
+                                       "Until then the wall AREAS of the two rooms it joins stay partial - the width "
+                                       "deduction from the skirting and profile path is already taken") if passage else
+                                      "the type decides whether a height may be defaulted and which trade carries it; "
                                       "until then the walls it stands in cannot be finished",
                     "PLAN_READING": r["PDF_READER"],
                     "AUDIT_OPENING_ID": r["OPENING_ID"]})
@@ -141,6 +157,10 @@ def finish():
         "ROWS": qs, "COUNT": len(qs),
         "ASKING_FOR_A_HEIGHT": sum(1 for q in qs if q["ASKS_FOR"] == "HEIGHT"),
         "ASKING_FOR_A_TYPE": sum(1 for q in qs if q["ASKS_FOR"] == "TYPE"),
+        "ASKING_FOR_A_PASSAGE_HEIGHT": sum(1 for q in qs if q["ASKS_FOR"] == "PASSAGE_HEIGHT"),
+        "A_SETTLED_TYPE_IS_NEVER_ASKED_AGAIN": "US-16 and QP-17 settled both open passages.  Neither is offered the "
+                                               "door / window / sliding door choice again; only the vertical "
+                                               "condition is still open",
         "MARKED_PLAN": str(plan),
         "NO_HEIGHT_IS_ASSUMED_FOR_ANY_OF_THEM": True,
         "WINDOWS_ARE_NOT_GROUPED": "each window is asked separately.  None is given another's height unless the owner "

@@ -85,10 +85,18 @@ def test_each_window_is_asked_on_its_own_row():
 def test_an_unresolved_gap_is_asked_in_words_not_as_a_hash():
     oq = reg("QORTUBA_OWNER_QUESTIONS")
     kinds = [q for q in oq["ROWS"] if q["ASKS_FOR"] == "TYPE"]
-    assert len(kinds) == 5
+    # five gaps were asked; the owner has answered two of them, so three type questions remain
+    assert len(kinds) == 3
     for q in kinds:
         assert "door, an open passage, a window" in q["QUESTION"]
         assert "OS-" not in q["LOCATION"]
+    # and the two that were answered are never offered the type choice again
+    pas = [q for q in oq["ROWS"] if q["ASKS_FOR"] == "PASSAGE_HEIGHT"]
+    assert len(pas) == 2
+    for q in pas:
+        assert "open all the way to the ceiling" in q["QUESTION"]
+        assert "door, an open passage, a window" not in q["QUESTION"]
+        assert "OS-" not in q["QUESTION"] and "OS-" not in q["LOCATION"]
 
 
 # ------------------------------------------------------------------ §2 the glazed opening
