@@ -746,3 +746,40 @@ Eleven owner questions are now closed and recorded as closed, so they are
 not asked again. Five remain, and only one of them is new: whether the
 PAINTRY takes waterproofing as well as ceramic, with 11.6825 m² of floor and
 11.150 m of perimeter already measured and waiting on one word.
+
+### Owner-rule application audit
+
+The owner asked for the recalculation to be audited before any quantity was
+accepted. Two of its findings changed the bill.
+
+The blockwork had been formed from anything with a measured spacing. Object
+identity was never checked, and six of the eight thickness groups turn out
+to contain no masonry at all: the 300 mm group is four 2.900 m bands drawn
+on the STAIR layer around the stair shaft, the 350 and 450 mm groups are
+COLUMN_BANDs closed at both ends with an evidenced fill, the 550 mm band
+shares the COL and WALL layers, the 600 mm band bounds stair on both sides,
+and the 219 mm group is eighty millimetres of drafting arrow with both face
+roles UNKNOWN_GEOMETRY (§218). All six are demoted to geometric reference.
+Within the surviving 150 and 200 mm groups a further 10.35 m of column and
+compound band is excluded, so confirmed masonry is 128.38 m of the measured
+155.16 m, and blockwork falls from 260.790 to 235.740 m² at 200 mm and from
+138.735 to 134.495 m² at 150 mm.
+
+The skirting proof came out differently from expected. The path reconciles
+segment by segment in all ten rooms, and no opening height enters it at all
+(§219) — but the width of six glazed elements was not deducted, because
+each stands in a band carrying no opening site, so the wall runs
+continuously past it in plan. Leaving them on the path gives 96.475 m;
+deducting every window width gives 86.589 m. Both are published and the
+pair is demoted to PROJECT_RULE_REQUIRED, because the difference is a
+reading of the rule rather than a fact about the drawing.
+
+Two smaller repairs came with it. Every glazed element is now joined to its
+host band and host room, so a window in one bedroom no longer blocks the
+plaster in another — and attributing by room id rather than room name
+corrected a double count across the two rooms both called BED.ROOM (§220).
+Tile preparation reconciles exactly with the two wall ceramic items,
+118.350 m² either way, because the backing render sits behind the tile on
+the same faces.
+
+Thirteen quantities were final before the audit. Five survive it.

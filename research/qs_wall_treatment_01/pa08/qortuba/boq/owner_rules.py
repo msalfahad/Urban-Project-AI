@@ -15,10 +15,11 @@ from __future__ import annotations
 import hashlib
 import json
 import subprocess
-from collections import defaultdict
+from collections import Counter, defaultdict
 from pathlib import Path
 
 from research.qs_wall_treatment_01 import protocol as PR
+from research.qs_wall_treatment_01.pa08.qortuba.boq import material_identity as MI
 
 OUT = Path(PR.OUT_DIR) / "pa08_qortuba_boq"
 PRC = Path(PR.OUT_DIR) / "pa08_qortuba_pricing"
@@ -250,9 +251,13 @@ def opening_register(walls, blue):
 
 
 # ---------------------------------------------------------------------------- the per-room arithmetic
-def room_rows(skirt, openings):
+def room_rows(skirt, openings, glazed=None):
     """One row per interior room, built only from its frozen boundary segments."""
     door_h = TEMPORARY_DEFAULTS[1][2]
+    by_room = defaultdict(list)
+    for g in (glazed or []):
+        if g.get("ROOM_ID") and g["WALL_BELOW"]:
+            by_room[g["ROOM_ID"]].append(g)
     rows = []
     for x in skirt:
         name = x["ROOM"].split(" /")[0]
@@ -266,6 +271,11 @@ def room_rows(skirt, openings):
         # §E: deduct the clear WIDTH of openings from a linear quantity.  A column face is not an opening, so the
         # skirting runs across it; §E's do-not-deduct list is about things that are not openings, and a column is one.
         skirting = 0.0 if ceramic else gross - sum(doors) - sum(glaz)
+        # §1 of the audit: glazed elements that stand in this room with wall BELOW them.  They do not interrupt the
+        # boundary path, so they are not deducted here - and they are carried so the alternative reading is computable.
+        sills = by_room.get(x["ROOM_ID"], [])
+        sill_w = sum(g["WIDTH_M"] for g in sills)
+        skirting_all = 0.0 if ceramic else max(skirting - sill_w, 0.0)
         rows.append({
             "ROOM_ID": x["ROOM_ID"], "ROOM": x["ROOM"], "ROOM_NAME": name,
             "FINISH_CLASS": "CERAMIC_SERVICE_ROOM" if ceramic else "DRY_ROOM",
@@ -277,6 +287,10 @@ def room_rows(skirt, openings):
             "GLAZED_WIDTHS_M": [r3(g) for g in sorted(glaz, reverse=True)],
             "SKIRTING_LM": r3(skirting),
             "HIDDEN_PROFILE_LM": r3(skirting),
+            "WINDOW_WITH_WALL_BELOW_IDS": [g["BLUE_ELEMENT_ID"] for g in sills],
+            "WINDOW_WITH_WALL_BELOW_WIDTH_LM": r3(sill_w),
+            "SKIRTING_LM_IF_ALL_WINDOW_WIDTHS_DEDUCTED": r3(skirting_all),
+            "HIDDEN_PROFILE_LM_IF_ALL_WINDOW_WIDTHS_DEDUCTED": r3(skirting_all),
             "GROSS_WALL_AREA_M2": r4(gross * 3.0),
             "DOOR_DEDUCTION_M2": r4(sum(d * door_h for d in doors)),
             "GLAZED_DEDUCTION_M2": None if glaz else 0.0,
@@ -288,35 +302,51 @@ def room_rows(skirt, openings):
     return rows
 
 
-def wall_rows(walls, openings):
-    """Blockwork, one row per wall band, at the owner's 3.00 m height with the full opening deduction."""
+def wall_rows(walls, openings, identity=None):
+    """Blockwork, one row per wall band - but only where the band is a masonry wall.
+
+    A column, a stair shaft and a drafting arrow all report a thickness.  None of them is blockwork, so none of them
+    produces an area here; they are carried as geometric reference so the exclusion is visible rather than silent.
+    """
     H = 3.00
+    ident = {r["WALL_ID"]: r for r in (identity if identity is not None else MI.wall_identity())}
     by_wall = defaultdict(list)
     for o in openings:
         if o["HOST_WALL_ID"]:
             by_wall[o["HOST_WALL_ID"]].append(o)
     rows = []
     for w in walls["ROWS"]:
+        idr = ident[w["WALL_ID"]]
         ops = by_wall.get(w["WALL_ID"], [])
         usable = [o for o in ops if o["HEIGHT_M"] is not None]
         pending = [o for o in ops if o["HEIGHT_M"] is None]
-        gross = w["LENGTH_M"] * H
-        ded = sum(o["WIDTH_M"] * o["HEIGHT_M"] for o in usable)
+        masonry = idr["BLOCKWORK_CONFIRMED"]
+        gross = w["LENGTH_M"] * H if masonry else 0.0
+        ded = sum(o["WIDTH_M"] * o["HEIGHT_M"] for o in usable) if masonry else 0.0
         rows.append({
             "WALL_ID": w["WALL_ID"], "THICKNESS_MM": w["THICKNESS_MM"], "LENGTH_M": w["LENGTH_M"],
             "ROOMS": sorted({r for r in w["ROOM_SIDE_A"] + w["ROOM_SIDE_B"] if r in APARTMENT_ROOMS}),
-            "HEIGHT_M": H, "HEIGHT_RULE": "QP-02",
-            "GROSS_AREA_M2": r4(gross),
-            "OPENING_DEDUCTION_M2": r4(ded),
-            "NET_AREA_M2": (None if pending else r4(gross - ded)),
+            "PHYSICAL_OBJECT_CLASS": idr["PHYSICAL_OBJECT_CLASS"],
+            "BLOCKWORK_CONFIRMED": masonry,
+            "THICKNESS_ITEM_ESTABLISHED": idr["THICKNESS_ITEM_ESTABLISHED"],
+            "IDENTITY_EVIDENCE": idr["EVIDENCE"],
+            "HEIGHT_M": H if masonry else None, "HEIGHT_RULE": "QP-02" if masonry else None,
+            "GROSS_AREA_M2": (r4(gross) if masonry else None),
+            "OPENING_DEDUCTION_M2": (r4(ded) if masonry else None),
+            "NET_AREA_M2": (None if (pending or not masonry) else r4(gross - ded)),
             "OPENINGS_DEDUCTED": [{"OPENING_ID": o["OPENING_ID"], "TYPE": o["TYPE"], "W": o["WIDTH_M"],
                                    "H": o["HEIGHT_M"]} for o in usable],
             "OPENINGS_PENDING": [{"OPENING_ID": o["OPENING_ID"], "TYPE": o["TYPE"], "W": o["WIDTH_M"],
                                   "WHY": "no height, and no default is permitted for this type"} for o in pending],
-            "STATUS": "PARTIALLY_CALCULATED" if pending else "FINAL_QUANTITY_AVAILABLE",
-            "ARITHMETIC": (f"{w['LENGTH_M']:.3f} x {H:.2f} = {gross:.4f} m2 gross"
-                           + (f" - {ded:.4f} m2 openings = {gross - ded:.4f} m2 net" if not pending
-                              else f" - {ded:.4f} m2 resolved openings, {len(pending)} opening(s) still unheighted")),
+            "STATUS": ("GEOMETRIC_REFERENCE_ONLY" if not masonry
+                       else "PARTIALLY_CALCULATED" if pending
+                       else "FINAL_QUANTITY_AVAILABLE"),
+            "ARITHMETIC": ((f"{w['LENGTH_M']:.3f} x {H:.2f} = {gross:.4f} m2 gross"
+                            + (f" - {ded:.4f} m2 openings = {gross - ded:.4f} m2 net" if not pending
+                               else f" - {ded:.4f} m2 resolved openings, {len(pending)} opening(s) still unheighted"))
+                           if masonry else
+                           f"no blockwork area: this band is a {idr['PHYSICAL_OBJECT_CLASS']}, and {w['LENGTH_M']:.3f} m "
+                           f"of plan length is carried as geometric reference only"),
         })
     return rows
 
@@ -332,7 +362,7 @@ def _pending_for(room_name, openings):
 
 
 def q(qid, trade, item, value, unit, status, formula, rules, param_source, rooms=None, temp=False,
-      residual=None, supersedes=None, note=None):
+      residual=None, supersedes=None, note=None, extra=None):
     """One recalculated quantity.  §V: the measured net quantity stands alone; waste and procurement stay empty."""
     return {
         "QUANTITY_ID": qid, "TRADE": trade, "BOQ_ITEM": item,
@@ -349,10 +379,11 @@ def q(qid, trade, item, value, unit, status, formula, rules, param_source, rooms
         "PROCUREMENT_QUANTITY": None,
         "WASTE_WHY": "§V: no waste percentage has been given, so none is assumed and no procurement quantity exists",
         "NOTE": note,
+        **(extra or {}),
     }
 
 
-def quantities(rooms, walls_calc, openings, floors, summ, ceil):
+def quantities(rooms, walls_calc, openings, floors, summ, ceil, glazed=None):
     door_h = TEMPORARY_DEFAULTS[1][2]
     dry = [r for r in rooms if r["FINISH_CLASS"] == "DRY_ROOM"]
     cer = [r for r in rooms if r["FINISH_CLASS"] == "CERAMIC_SERVICE_ROOM"]
@@ -363,6 +394,13 @@ def quantities(rooms, walls_calc, openings, floors, summ, ceil):
     # A genuine orphan is a glazed element inside the apartment with NO host wall and NO host room.  An unresolved site
     # on a wall that touches no apartment room is not an orphan - it is simply outside the scope, and saying otherwise
     # would smear a stair-wall ambiguity across every apartment quantity.
+    hosted = {g["BLUE_ELEMENT_ID"]: g for g in (glazed or []) if g["ROOM"]}
+    for o in openings:
+        g = hosted.get(o["OPENING_ID"])
+        if g and not o["ROOMS"]:
+            o["ROOMS"] = [g["ROOM"]]
+            o["NOTE"] = (f"host room {g['ROOM']} attributed from the frozen band centreline and room bounding box "
+                         f"({g['ROOM_BASIS']}); DIAGNOSTIC, not a source statement")
     orphan = [o for o in openings if o["HEIGHT_M"] is None and not o["ROOMS"] and o["HOST_WALL_ID"] is None]
     orphan_res = [{"OPENING_ID": o["OPENING_ID"], "TYPE": o["TYPE"], "WIDTH_M": o["WIDTH_M"],
                    "HOST_WALL_THICKNESS_MM": o["HOST_WALL_THICKNESS_MM"],
@@ -397,19 +435,33 @@ def quantities(rooms, walls_calc, openings, floors, summ, ceil):
     rows = []
     # ---- 1 and 2: the hidden system, one path, two items
     arith = " + ".join(f"{r['ROOM_NAME']} {r['SKIRTING_LM']:.3f}" for r in dry)
+    sk_all = sum(r["SKIRTING_LM_IF_ALL_WINDOW_WIDTHS_DEDUCTED"] for r in dry)
+    sills = [g for g in (glazed or []) if g["WALL_BELOW"]]
+    dry_names = {r["ROOM_NAME"] for r in dry} | {r["ROOM"] for r in dry}
+    dry_sills = [g for g in sills if g["ROOM"] in dry_names]
     for qid, item in (("Q-01", "HIDDEN_SKIRTING"), ("Q-02", "HIDDEN_PROFILE_ABOVE_SKIRTING")):
-        rows.append(q(qid, "بروفايل" if qid == "Q-02" else "سيراميك", item, sk, "LM", "FINAL_QUANTITY_AVAILABLE",
-                      f"gross wall line less door and glazed opening WIDTHS, dry rooms only: {arith} = {sk:.3f} lm",
+        rows.append(q(qid, "بروفايل" if qid == "Q-02" else "سيراميك", item, sk, "LM", "PROJECT_RULE_REQUIRED",
+                      f"gross wall line less the WIDTH of every opening that interrupts it, dry rooms only: {arith} "
+                      f"= {sk:.3f} lm.  Deducting the width of the {len(dry_sills)} window(s) that have wall below "
+                      f"them as well would give {sk_all:.3f} lm",
                       ["US-02", "US-08", "QP-06", "QP-07", "QP-08"],
-                      "floor-level boundary classification, frozen; no height and no wall-level opening enters a "
-                      "linear quantity",
+                      "floor-level boundary classification, frozen; no height enters a linear quantity",
                       rooms=[r["ROOM_NAME"] for r in dry],
                       supersedes={"PREVIOUS": summ["D_TOTAL_SKIRTING_LM"]["VALUE"], "UNIT": "LM",
                                   "WHY": "PAINTRY leaves the skirting entirely under US-01/QP-07 (-11.150), and the "
                                          "column faces in HALL and DRESS join it because §E deducts openings and a "
                                          "column is not an opening (+1.550)"},
-                      note="both items are FINAL because a skirting depends only on where wall meets floor, and that "
-                           "classification is complete for every millimetre of every room boundary"))
+                      note="NOT FINAL until the owner reads the window rule.  Six of the seven glazed elements have "
+                           "wall below them: their host bands carry no opening site at all, so the wall is continuous "
+                           "past them in plan and a skirting runs under them.  One reading of §E leaves them on the "
+                           f"path ({sk:.3f} lm); the literal reading deducts every window width ({sk_all:.3f} lm).  "
+                           "The difference is entirely the five windows standing in dry rooms",
+                      extra={"VALUE_IF_ALL_WINDOW_WIDTHS_DEDUCTED": r3(sk_all),
+                             "WINDOWS_AT_ISSUE": [{"ID": g["BLUE_ELEMENT_ID"], "ROOM": g["ROOM"],
+                                                   "WIDTH_M": g["WIDTH_M"], "WALL_BELOW": True,
+                                                   "HOST_WALL_ID": g["HOST_WALL_ID"],
+                                                   "HOST_WALL_OPENING_SITES": g["HOST_WALL_OPENING_SITES"]}
+                                                  for g in dry_sills]}))
     # ---- 3 and 4: waterproofing
     rows.append(q("Q-03", "عازل حمام+مطابخ", "WET_AREA_WATERPROOFING_FLOOR", wet_floor, "M2",
                   "FINAL_QUANTITY_AVAILABLE",
@@ -452,30 +504,54 @@ def quantities(rooms, walls_calc, openings, floors, summ, ceil):
                        "boundary and as wall on the PAINTRY side.  It is carried here as a pending deduction on the "
                        "PAINTRY side too, because the wall register puts the opening in that wall"))
     # ---- 6: blockwork
-    by_t = defaultdict(lambda: {"L": 0.0, "G": 0.0, "D": 0.0, "F": 0, "P": 0, "FIN": 0.0, "PEND": 0.0})
+    by_t = defaultdict(lambda: {"L": 0.0, "G": 0.0, "D": 0.0, "F": 0, "P": 0, "FIN": 0.0, "PEND": 0.0,
+                                "REF_L": 0.0, "REF_N": 0, "CLASSES": set(), "AMB": 0.0})
     for w in walls_calc:
         b = by_t[str(int(w["THICKNESS_MM"]))]
+        b["CLASSES"].add(w["PHYSICAL_OBJECT_CLASS"])
+        if not w["BLOCKWORK_CONFIRMED"]:
+            b["REF_L"] += w["LENGTH_M"]; b["REF_N"] += 1
+            continue
         b["L"] += w["LENGTH_M"]; b["G"] += w["GROSS_AREA_M2"]; b["D"] += w["OPENING_DEDUCTION_M2"]
+        if not w["THICKNESS_ITEM_ESTABLISHED"]:
+            b["AMB"] += w["LENGTH_M"]
         if w["STATUS"] == "FINAL_QUANTITY_AVAILABLE":
             b["F"] += 1; b["FIN"] += w["NET_AREA_M2"]
         else:
             b["P"] += 1; b["PEND"] += w["GROSS_AREA_M2"] - w["OPENING_DEDUCTION_M2"]
     for t in sorted(by_t, key=lambda k: -by_t[k]["L"]):
         b = by_t[t]
+        cls = sorted(b["CLASSES"])
+        if b["L"] == 0.0:
+            rows.append(q(f"Q-07-{t}", "مبانى", f"BLOCKWORK_{t}", None, "M2", "NOT_APPLICABLE",
+                          f"{b['REF_L']:.3f} m of plan length at this spacing, and not one metre of it is a masonry "
+                          f"wall: the bands are {', '.join(cls)}",
+                          [], "QORTUBA_WALL_OBJECT_IDENTITY, from the frozen material band register",
+                          note="NO BLOCKWORK QUANTITY EXISTS AT THIS THICKNESS.  A pair of faces with a measured "
+                               "spacing is not masonry; the plan length is kept as geometric reference only"))
+            continue
         # a glazed element sits in a wall of its own frame depth, so it can only move a thickness that matches it
         mine = [o for o in orphan_res if str(int(o["HOST_WALL_THICKNESS_MM"])) == t]
+        amb = ([{"THICKNESS_ITEM_AMBIGUOUS_LENGTH_M": r3(b["AMB"]),
+                 "WHY": "the two faces may be a doubled line rather than two sides of a wall, so which thickness item "
+                        "this length bills under is not established.  The AREA does not move; the BOQ line might"}]
+               if b["AMB"] > 0 else [])
+        final = b["P"] == 0 and not mine and not amb
         rows.append(q(f"Q-07-{t}", "مبانى", f"BLOCKWORK_{t}", b["FIN"] + b["PEND"], "M2",
-                      "FINAL_QUANTITY_AVAILABLE" if (b["P"] == 0 and not mine) else "PARTIALLY_CALCULATED",
-                      f"{b['L']:.3f} m x 3.00 m = {b['G']:.4f} m2 gross, less {b['D']:.4f} m2 of full opening areas "
-                      f"= {b['FIN'] + b['PEND']:.4f} m2",
+                      "FINAL_QUANTITY_AVAILABLE" if final else "PARTIALLY_CALCULATED",
+                      f"confirmed masonry only: {b['L']:.3f} m x 3.00 m = {b['G']:.4f} m2 gross, less {b['D']:.4f} m2 "
+                      f"of full opening areas = {b['FIN'] + b['PEND']:.4f} m2",
                       ["US-06", "QP-02", "TD-02"], "QP-02 height 3.00 m; TD-02 door height 2.20 m",
                       temp=b["D"] > 0,
                       residual=([] if b["P"] == 0 else [{"WALLS_WITH_AN_UNHEIGHTED_OPENING": b["P"],
-                                                         "AREA_STILL_MOVING_M2": r4(b["PEND"])}]) + mine,
+                                                         "AREA_STILL_MOVING_M2": r4(b["PEND"])}]) + mine + amb,
                       supersedes={"PREVIOUS": None, "UNIT": "M2",
                                   "WHY": "no blockwork area existed before: the height was missing and the deduction "
                                          "column was undecided.  US-06 and QP-02 settle both"},
-                      note=f"{b['F']} wall bands are fully resolved and {b['P']} still carry an opening with no height"))
+                      extra={"EXCLUDED_AS_NOT_MASONRY": {"BANDS": b["REF_N"], "PLAN_LENGTH_M": r3(b["REF_L"]),
+                                                         "CLASSES": cls}},
+                      note=f"{b['F']} masonry bands are fully resolved and {b['P']} still carry an opening with no "
+                           f"height; {b['REF_N']} band(s) at this spacing are not masonry and contribute nothing"))
     # ---- 7 and 8: plaster and paint, the same faces
     dry_gross = sum(r["GROSS_WALL_AREA_M2"] for r in dry)
     dry_ded = sum(r["DOOR_DEDUCTION_M2"] for r in dry)
@@ -583,9 +659,11 @@ def finish():
     ceil = summ["F_TOTAL_CEILING_GEOMETRY_M2"]["VALUE"]
 
     ops = opening_register(walls, blue)
-    rooms = room_rows(skirt, ops)
-    wcalc = wall_rows(walls, ops)
-    qs = quantities(rooms, wcalc, ops, floors, summ, ceil)
+    glazed = MI.glazed_hosts()
+    ident = MI.wall_identity()
+    rooms = room_rows(skirt, ops, glazed)
+    wcalc = wall_rows(walls, ops, ident)
+    qs = quantities(rooms, wcalc, ops, floors, summ, ceil, glazed)
 
     store = {
         "ARTIFACT": "URBAN_OWNER_RULES_V1",
@@ -644,7 +722,27 @@ def finish():
                                              and not r["WAS_WET_IN_WORKPAPER"]],
                 "GEOMETRY_RECOMPUTED": 0}
 
+    ident_art = {"ARTIFACT": "QORTUBA_WALL_OBJECT_IDENTITY",
+                 "RULE": "two faces with a measured spacing are a geometric pair.  Only a masonry wall may become a "
+                         "blockwork quantity; a column, a shaft and a drafting arrow all report a thickness too",
+                 "CLASSES": list(MI.OBJECT_CLASSES), "ROWS": ident, "COUNT": len(ident),
+                 "BY_CLASS": dict(Counter(r["PHYSICAL_OBJECT_CLASS"] for r in ident)),
+                 "LENGTH_M_BY_THICKNESS_AND_CLASS": MI.summary(),
+                 "BLOCKWORK_CONFIRMED_BANDS": sum(1 for r in ident if r["BLOCKWORK_CONFIRMED"]),
+                 "BLOCKWORK_CONFIRMED_LENGTH_M": r3(sum(r["LENGTH_M"] for r in ident if r["BLOCKWORK_CONFIRMED"])),
+                 "EXCLUDED_LENGTH_M": r3(sum(r["LENGTH_M"] for r in ident if not r["BLOCKWORK_CONFIRMED"])),
+                 "GEOMETRY_RECOMPUTED": 0}
+    glaze_art = {"ARTIFACT": "QORTUBA_GLAZED_ELEMENT_HOSTS",
+                 "RULE": "every glazed element joined to the wall band it stands in and the room that band bounds, by "
+                         "lookup over frozen centrelines and bounding boxes.  Room attribution is DIAGNOSTIC",
+                 "ROWS": glazed, "COUNT": len(glazed),
+                 "INTERRUPTS_THE_WALL_IN_PLAN": [g["BLUE_ELEMENT_ID"] for g in glazed if g["INTERRUPTS_THE_WALL_IN_PLAN"]],
+                 "WALL_BELOW": [g["BLUE_ELEMENT_ID"] for g in glazed if g["WALL_BELOW"]],
+                 "WITHOUT_A_ROOM": [g["BLUE_ELEMENT_ID"] for g in glazed if not g["ROOM"]],
+                 "GEOMETRY_RECOMPUTED": 0}
     wall_art = {"ARTIFACT": "QORTUBA_BLOCKWORK_RECALC", "ROWS": wcalc, "COUNT": len(wcalc),
+                "BLOCKWORK_CONFIRMED_BANDS": sum(1 for w in wcalc if w["BLOCKWORK_CONFIRMED"]),
+                "EXCLUDED_AS_NOT_MASONRY": sum(1 for w in wcalc if not w["BLOCKWORK_CONFIRMED"]),
                 "HEIGHT_M": 3.00, "HEIGHT_RULE": "QP-02",
                 "POPULATION": "all 41 wall bands the frozen takeoff records, unchanged.  Some of them bound the stair "
                               "and the common circulation rather than the apartment; splitting that population is a "
@@ -656,20 +754,26 @@ def finish():
 
     final = [x for x in qs if x["STATUS"] == "FINAL_QUANTITY_AVAILABLE"]
     partial = [x for x in qs if x["STATUS"] == "PARTIALLY_CALCULATED"]
-    blocked = [x for x in qs if x["STATUS"] in ("SOURCE_REQUIRED", "SPEC_REQUIRED")]
+    blocked = [x for x in qs if x["STATUS"] in ("SOURCE_REQUIRED", "SPEC_REQUIRED", "PROJECT_RULE_REQUIRED")]
+    na = [x for x in qs if x["STATUS"] == "NOT_APPLICABLE"]
     quant = {
         "ARTIFACT": "QORTUBA_RECALCULATED_QUANTITIES_V1",
         "RULE": "every figure below is arithmetic over the FROZEN measurement registers.  No geometry was re-read, no "
                 "room re-measured and no opening re-detected",
         "ROWS": qs, "COUNT": len(qs),
         "BY_STATUS": {k: sum(1 for x in qs if x["STATUS"] == k) for k in
-                      ("FINAL_QUANTITY_AVAILABLE", "PARTIALLY_CALCULATED", "SPEC_REQUIRED", "SOURCE_REQUIRED")},
+                      ("FINAL_QUANTITY_AVAILABLE", "PARTIALLY_CALCULATED", "PROJECT_RULE_REQUIRED",
+                       "SPEC_REQUIRED", "SOURCE_REQUIRED", "NOT_APPLICABLE")},
         "FINAL": [{"QUANTITY_ID": x["QUANTITY_ID"], "BOQ_ITEM": x["BOQ_ITEM"],
                    "VALUE": x["MEASURED_NET_QUANTITY"], "UNIT": x["UNIT"]} for x in final],
         "PARTIAL": [{"QUANTITY_ID": x["QUANTITY_ID"], "BOQ_ITEM": x["BOQ_ITEM"],
                      "VALUE_SO_FAR": x["MEASURED_NET_QUANTITY"], "UNIT": x["UNIT"],
                      "OPENINGS_STILL_PENDING": len(x["RESIDUAL_OPENINGS"])} for x in partial],
-        "BLOCKED": [{"QUANTITY_ID": x["QUANTITY_ID"], "BOQ_ITEM": x["BOQ_ITEM"], "WHY": x["NOTE"]} for x in blocked],
+        "BLOCKED": [{"QUANTITY_ID": x["QUANTITY_ID"], "BOQ_ITEM": x["BOQ_ITEM"], "STATUS": x["STATUS"],
+                     "VALUE_SO_FAR": x["MEASURED_NET_QUANTITY"], "WHY": x["NOTE"]} for x in blocked],
+        "NOT_APPLICABLE": [{"QUANTITY_ID": x["QUANTITY_ID"], "BOQ_ITEM": x["BOQ_ITEM"], "WHY": x["NOTE"]} for x in na],
+        "OBJECT_IDENTITY_SOURCE": "QORTUBA_WALL_OBJECT_IDENTITY: every wall band classified from the frozen material "
+                                  "band register before any area was formed",
         "QUANTITIES_USING_A_TEMPORARY_DEFAULT": [x["QUANTITY_ID"] for x in qs if x["USES_TEMPORARY_DEFAULT"]],
         "WASTE_APPLIED_ANYWHERE": False,
         "RATES_SUPPLIED": 0,
@@ -685,7 +789,8 @@ def finish():
                             for i, k, qq, w, b in STILL_OPEN],
              "STILL_OPEN_COUNT": len(STILL_OPEN)}
 
-    written = [write(o["ARTIFACT"], o) for o in (store, opening, room_art, wall_art, quant, quest)]
+    written = [write(o["ARTIFACT"], o) for o in (store, opening, ident_art, glaze_art, room_art, wall_art,
+                                                 quant, quest)]
     head = subprocess.run(["git", "rev-parse", "--short", "HEAD"], capture_output=True, text=True).stdout.strip()
     dirty = subprocess.run(["git", "status", "--porcelain"], capture_output=True, text=True).stdout.strip().splitlines()
     fr = {"ARTIFACT": "FREEZE_URBAN_OWNER_RULES_V1",
@@ -702,8 +807,8 @@ def finish():
     fr["DIGEST"] = hashlib.sha256(json.dumps({k: v for k, v in fr.items() if k != "DIGEST"},
                                              sort_keys=True, default=str).encode()).hexdigest()
     write("FREEZE_URBAN_OWNER_RULES_V1", fr)
-    return {"RULES": store, "OPENINGS": opening, "ROOMS": room_art, "WALLS": wall_art, "QUANTITIES": quant,
-            "QUESTIONS": quest, "FREEZE": fr}
+    return {"RULES": store, "OPENINGS": opening, "IDENTITY": ident_art, "GLAZED": glaze_art, "ROOMS": room_art,
+            "WALLS": wall_art, "QUANTITIES": quant, "QUESTIONS": quest, "FREEZE": fr}
 
 
 if __name__ == "__main__":
@@ -723,5 +828,10 @@ if __name__ == "__main__":
         print(f"   {x['QUANTITY_ID']:8s} {x['BOQ_ITEM']:38s} {x['VALUE_SO_FAR']:>10} {x['UNIT']}  "
               f"pending {x['OPENINGS_STILL_PENDING']}")
     print()
-    print("BLOCKED:", [x["QUANTITY_ID"] for x in o["QUANTITIES"]["BLOCKED"]])
+    print("RULE/SPEC/SOURCE BLOCKED:")
+    for x in o["QUANTITIES"]["BLOCKED"]:
+        print(f"   {x['QUANTITY_ID']:8s} {x['BOQ_ITEM']:38s} {str(x['VALUE_SO_FAR']):>10}  {x['STATUS']}")
+    print("NOT APPLICABLE:", [x["QUANTITY_ID"] for x in o["QUANTITIES"]["NOT_APPLICABLE"]])
+    print("object identity:", o["IDENTITY"]["BY_CLASS"], "| masonry lm", o["IDENTITY"]["BLOCKWORK_CONFIRMED_LENGTH_M"],
+          "| excluded lm", o["IDENTITY"]["EXCLUDED_LENGTH_M"])
     print("closed questions:", o["QUESTIONS"]["CLOSED_COUNT"], "| still open:", o["QUESTIONS"]["STILL_OPEN_COUNT"])

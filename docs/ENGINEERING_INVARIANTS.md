@@ -4665,3 +4665,60 @@ opening.
 
 Every one of those metres is traceable to a rule id. A quantity that moves
 without one is a quantity nobody can defend.
+
+## §218 — A thickness is not an object
+
+Two faces with a measured spacing between them will report a thickness
+whatever they are. A column reports one. A stair flight reports one. A
+drafting arrow drawn on the `arrow2` layer, eighty millimetres long, with
+both face roles UNKNOWN_GEOMETRY, reports 219 mm — and it reached a
+blockwork bill.
+
+So object identity is decided before any area is formed, from evidence the
+band engine already recorded: the CAD layers the faces were drawn on, the
+band type, the face roles, the end caps and the fill. Of 155 m of measured
+plan length at eight nominal thicknesses, 128.38 m is masonry wall and
+26.78 m is not: four 2.900 m stair-shaft bands on the STAIR layer, six
+COLUMN_BANDs closed at both ends with an evidenced fill, four compound
+bands sharing the COL and WALL layers, and the arrow. Six of the eight
+thickness groups contain no masonry at all and produce no quantity.
+
+A quantity engine that trusts spacing alone will bill a drawing's
+annotations.
+
+## §219 — A linear deduction needs a width, so a missing height can never hold it up
+
+Skirting and profile are measured in metres run. The deduction is a clear
+width taken off a length. No opening height enters the trade, so no missing
+height may ever be the reason such a quantity is unfinished — and if one
+appears to be, the dependency graph is wrong.
+
+What can hold it up is a different question: which openings interrupt the
+path. Six of Qortuba's seven glazed elements stand in bands that carry no
+opening site at all — the wall runs continuously past them in plan, so a
+skirting runs under them. Leaving them on the path gives 96.475 m;
+deducting every window width gives 86.589 m. That is a reading of the rule,
+not a fact the rule states, so both figures are published and the quantity
+waits on the owner rather than on a drawing.
+
+## §220 — A room name is not a room
+
+This plan has two rooms called BED.ROOM. Attributing a window to a room by
+its name gave both bedrooms both bedrooms' windows, and the alternative
+skirting total came out 3.342 m too low — a wrong number produced by
+correct arithmetic over a wrong key.
+
+Every attribution is carried by room id. A name is for the reader.
+
+## §221 — An audit re-derives; it does not re-measure
+
+The audit that produced §218 to §220 moved no line, added no rule and
+opened no phase. It re-derived each reported quantity a second way from the
+frozen registers — the skirting path segment by segment against each room's
+gross perimeter, the tile preparation against the sum of the two wall
+ceramic items — and reported where the first derivation and the owner's
+rule disagreed.
+
+Every finding came out of a register that was already on disk. The
+information needed to reject the drafting arrow had been recorded by the
+band engine three phases earlier and simply never consulted.

@@ -36,11 +36,13 @@ THIN = Border(*[Side(style="thin", color="BFC9D4")] * 4)
 
 STATUS_FILL = {"FINAL_QUANTITY_AVAILABLE": GREEN, "PARTIALLY_CALCULATED": MINT, "ONE_INPUT_REQUIRED": CREAM,
                "PROJECT_RULE_REQUIRED": BLUE, "SPEC_REQUIRED": PEACH, "DRAWING_REQUIRED": PEACH,
-               "SOURCE_REQUIRED": PEACH, "NOT_APPLICABLE": GREY, "CLOSED_BY_OWNER_RULE": GREY}
+               "SOURCE_REQUIRED": PEACH, "NOT_APPLICABLE": GREY, "CLOSED_BY_OWNER_RULE": GREY,
+               "GEOMETRIC_REFERENCE_ONLY": GREY}
 STATUS_AR = {"FINAL_QUANTITY_AVAILABLE": "كمية نهائية جاهزة", "PARTIALLY_CALCULATED": "محسوبة جزئياً",
              "ONE_INPUT_REQUIRED": "ينقصه مُدخل واحد", "PROJECT_RULE_REQUIRED": "ينقصه قرار قاعدة",
              "SPEC_REQUIRED": "ينقصه مواصفة", "DRAWING_REQUIRED": "ينقصه مخطط", "SOURCE_REQUIRED": "ينقصه مصدر",
-             "NOT_APPLICABLE": "لا ينطبق", "CLOSED_BY_OWNER_RULE": "مغلق بقاعدة المالك"}
+             "NOT_APPLICABLE": "لا ينطبق", "CLOSED_BY_OWNER_RULE": "مغلق بقاعدة المالك",
+             "GEOMETRIC_REFERENCE_ONLY": "مرجع هندسي فقط"}
 
 # §9/§W: the fifteen columns, in the order the house bills use
 COLS = ["البند", "الوصف", "وحدة التسعير", "كمية القياس", "وحدة القياس", "قاعدة التحويل", "الكمية النهائية",
@@ -302,6 +304,23 @@ def build():
     r = _band(ws, r, "مفتوحة / STILL OPEN", 5)
     for x in ql["STILL_OPEN"]:
         r = _put(ws, r, [x["ID"], x["KIND"], x["QUESTION"], x["WHY"], x["BLOCKS"]], PEACH)
+
+    # ---------------------------------------------------------------- object identity, the audit's §3
+    ident = json.loads((OUT / "QORTUBA_WALL_OBJECT_IDENTITY.json").read_text("utf-8"))
+    ws = wb.create_sheet("هوية الجدران Identity")
+    cols = ["الجدار", "السمك مم", "الطول م", "الصنف / Object class", "مباني؟", "طبقات CAD", "نوع الشريط",
+            "أدوار الأوجه", "حالة السمك", "الغرف", "الدليل / Evidence", "الحالة"]
+    r = _head(ws, cols, [14, 10, 10, 22, 10, 26, 16, 34, 26, 30, 96, 30],
+              "WALL OBJECT IDENTITY - what each measured band actually is",
+              "Two faces with a measured spacing are a geometric pair. Only a masonry wall may become a blockwork "
+              "quantity: a column, a stair shaft and a drafting arrow all report a thickness too.")
+    for x in sorted(ident["ROWS"], key=lambda z: (-z["THICKNESS_MM"], -z["LENGTH_M"])):
+        r = _put(ws, r, [x["WALL_ID"], x["THICKNESS_MM"], x["LENGTH_M"], x["PHYSICAL_OBJECT_CLASS"],
+                         "نعم" if x["BLOCKWORK_CONFIRMED"] else "لا", ", ".join(x["CAD_LAYERS"]), x["BAND_TYPE"],
+                         " / ".join(x["FACE_ROLES"]), x["THICKNESS_STATUS"], ", ".join(x["ROOMS"]) or "—",
+                         " | ".join(x["EVIDENCE"]), x["STATUS"]],
+                 GREEN if x["BLOCKWORK_CONFIRMED"] else GREY)
+        ws.cell(r - 1, 3).number_format = "0.000"
 
     # ---------------------------------------------------------------- historical registry, unchanged
     ws = wb.create_sheet("سوابق تاريخية Precedent")

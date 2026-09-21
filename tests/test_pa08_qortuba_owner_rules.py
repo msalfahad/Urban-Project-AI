@@ -170,6 +170,9 @@ def test_the_upturn_area_is_reference_only_and_never_the_boq_quantity():
 # ------------------------------------------------------------------ §F/§I/§J/§K the full deduction and the reveals
 def test_every_opening_deduction_is_the_full_area_and_never_a_half():
     for w in reg("QORTUBA_BLOCKWORK_RECALC")["ROWS"]:
+        if not w["BLOCKWORK_CONFIRMED"]:
+            assert w["OPENING_DEDUCTION_M2"] is None, w["WALL_ID"]
+            continue
         want = sum(o["W"] * o["H"] for o in w["OPENINGS_DEDUCTED"])
         assert abs(w["OPENING_DEDUCTION_M2"] - round(want, 4)) < 1e-9, w["WALL_ID"]
     for x in quants()["ROWS"]:
@@ -218,25 +221,39 @@ def test_a_partial_quantity_carries_a_value_and_names_what_is_missing():
 def test_a_missing_height_blocks_only_the_rows_that_depend_on_it():
     q = quants()
     finals = {x["QUANTITY_ID"] for x in q["ROWS"] if x["STATUS"] == "FINAL_QUANTITY_AVAILABLE"}
-    assert {"Q-01", "Q-02", "Q-03", "Q-04", "Q-11", "Q-12"} <= finals, "linear and floor items need no height"
+    assert {"Q-03", "Q-04", "Q-11", "Q-12"} <= finals, "floor and perimeter items need no height"
+    by = by_id()
+    # the skirting pair is held by a RULE reading, never by a height: it still carries its value
+    for qid in ("Q-01", "Q-02"):
+        assert by[qid]["STATUS"] == "PROJECT_RULE_REQUIRED"
+        assert by[qid]["MEASURED_NET_QUANTITY"] is not None and by[qid]["USES_TEMPORARY_DEFAULT"] is False
+        assert by[qid]["RESIDUAL_OPENINGS"] == [], "no unheighted opening may hold up a linear quantity"
     assert q["BY_STATUS"]["FINAL_QUANTITY_AVAILABLE"] > 0 and q["BY_STATUS"]["PARTIALLY_CALCULATED"] > 0
 
 
-def test_the_unattributed_windows_are_named_on_every_row_they_can_reach():
+def test_every_window_now_has_a_host_room_so_none_is_smeared_everywhere():
+    """The audit joined each glazed element to its host band, so no window blocks a room it does not stand in."""
     op = reg("QORTUBA_OPENING_REGISTER")
-    orphans = {o["OPENING_ID"] for o in op["ROWS"]
-               if not o["ROOMS"] and o["HOST_WALL_ID"] is None and o["INSIDE_APARTMENT"]}
-    assert len(orphans) == 6
+    assert op["WITHOUT_A_HOST_ROOM"] == []
+    glz = {g["BLUE_ELEMENT_ID"]: g for g in reg("QORTUBA_GLAZED_ELEMENT_HOSTS")["ROWS"]}
     q = by_id()
     for qid in ("Q-05", "Q-06", "Q-08", "Q-09", "Q-10"):
-        assert orphans <= {o.get("OPENING_ID") for o in q[qid]["RESIDUAL_OPENINGS"]}, qid
-    # every one of them has a 200 mm frame, so only the 200 mm blockwork can move
-    assert orphans <= {o.get("OPENING_ID") for o in q["Q-07-200"]["RESIDUAL_OPENINGS"]}
-    for qid in ("Q-07-300", "Q-07-350", "Q-07-450", "Q-07-550", "Q-07-600", "Q-07-219"):
-        assert not (orphans & {o.get("OPENING_ID") for o in q[qid]["RESIDUAL_OPENINGS"]}), qid
+        rooms = set(q[qid]["ROOMS"])
+        for o in q[qid]["RESIDUAL_OPENINGS"]:
+            oid = o.get("OPENING_ID")
+            if oid in glz:
+                assert glz[oid]["ROOM"] in rooms or glz[oid]["ROOM"] is None, (qid, oid)
+    # a glazed element can only move a blockwork group whose thickness matches its host wall
+    for qid, x in q.items():
+        if not qid.startswith("Q-07-"):
+            continue
+        t = int(qid.split("-")[-1])
+        for o in x["RESIDUAL_OPENINGS"]:
+            if o.get("OPENING_ID") in glz:
+                assert int(glz[o["OPENING_ID"]]["HOST_WALL_THICKNESS_MM"]) == t, (qid, o["OPENING_ID"])
 
 
-def test_an_opening_outside_the_apartment_does_not_smear_across_apartment_rows():
+def test_an_opening_outside_the_apartment_does_not_smear_across_apartment_rows():  # noqa: D401
     out = {o["OPENING_ID"] for o in reg("QORTUBA_OPENING_REGISTER")["ROWS"]
            if not o["ROOMS"] and o["HOST_WALL_ID"]}
     assert out, "the fixture needs at least one site on a wall touching no apartment room"
