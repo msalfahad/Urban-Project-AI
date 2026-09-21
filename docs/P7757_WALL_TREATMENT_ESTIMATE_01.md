@@ -654,3 +654,46 @@ aluminium summary (§205). Ten house items have no Qortuba counterpart, among
 them render under skirting, plaster corners and ends, and the roof upturn,
 which needs a roof perimeter Qortuba never measured. Three rows have no house
 precedent at all, including the black profile, and none was given one (§206).
+
+### Urban BOQ rule registry and the Qortuba conversion map
+
+The schema library says how the house measures. Turning that into rules for a
+live project is where a reference project leaks, so the registry records each
+rule at a level: thirty-six rules, thirty-five HISTORICAL_PRECEDENT and one
+QORTUBA_PROJECT_RULE, none at URBAN_STANDARD (§207). Each carries its
+generalisation safety: seventeen safe candidates, eleven trade-specific,
+six contractor-specific and two project-specific. The six contractor-specific
+rules — the half deductions on plaster and paint, the 2م=1م halving of corners
+and wall ends, the blockwork deduction columns — are the ones that look like
+house practice and are not, and none of them is applied to Qortuba without the
+owner (§208).
+
+The conversion map holds thirty-nine Qortuba BOQ items, each with three
+separate quantity layers. Exactly one final BOQ quantity exists: the bathroom
+floor waterproofing, 17.8625 m², where the measured unit and the house pricing
+unit are the same and the house bills the item with no deduction, so the
+conversion is the identity. The membrane specification is still outstanding
+and sets the rate, not the quantity, which is why that row is final and the
+ceramic rows carrying the same kind of area are not.
+
+Three more items are a single rule decision away, each already measured in the
+right unit: the skirting at 106.075 m, the black profile on the same path at
+106.075 m, and the bathroom waterproofing upturn at 27.600 m. Fifteen items
+need one project input, overwhelmingly a height the drawing set does not
+contain; fourteen need a drawing or a schedule.
+
+Thirteen owner questions are raised, ranked by how many measured rows each
+answer alone makes payable — and a compound blocker is never counted as
+released by one answer (§209). The tiling height leads, releasing the two wall
+ceramic rows. The blockwork height affects nine rows and releases none of
+them, because every blockwork row also waits on the deduction column. Missing
+drawings are listed as documents rather than dressed up as decisions.
+
+Two quantities changed shape in this pass and neither was recomputed. The
+seventh glazed element, still UNRESOLVED, was taken out of the aluminium
+windows item and given its own row (§210); and the ceiling cornice was given
+the gross wall line of 153.125 m rather than the net skirting run, because a
+cornice crosses the doorway a skirting stops at (§211). The black profile
+remains a new candidate BOQ item, بروفايل أعلى النعلة, priced by the metre by
+analogy with نعلات, marked as a Qortuba project rule and an Urban standard
+candidate, and not promoted.

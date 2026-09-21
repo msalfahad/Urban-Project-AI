@@ -4531,3 +4531,58 @@ The temptation is to bill it under the cornice line, or under the skirting,
 because both are linear and both are close. Recording it as having no house
 precedent, and asking which item it belongs to, costs one question. Guessing
 costs a wrong bill that nobody can trace back to a decision.
+
+## §207 — A precedent is not a standard until a second project says so
+
+A rule read off one previous project's bill is evidence about that bill. It
+was agreed with one contractor, on one design, for one trade, and it may have
+been a negotiating position rather than a company practice. The registry
+therefore carries three levels — HISTORICAL_PRECEDENT, QORTUBA_PROJECT_RULE,
+URBAN_STANDARD — and promotion between them is an act that needs evidence,
+not a default.
+
+Thirty-six rules are recorded and none stands at URBAN_STANDARD. Seventeen
+are marked SAFE_URBAN_STANDARD_CANDIDATE, which records that they look like
+ordinary practice and still does not make them one. The cheapest way to
+invent a company rule is to write down what one project did and stop
+labelling it.
+
+## §208 — A rule belongs to the trade it was read from
+
+The plaster invoice deducts openings at half their area. The paint invoice
+does too. It is tempting to read that as a house convention; it is better
+read as one subcontractor who negotiated both packages. The ceramic covers
+carry no deduction column at all, and the blockwork sheet offers a full
+column and a half column and never says which applies when.
+
+So the registry refuses to generalise across trades, and the owner is asked
+the plaster question and the paint question separately, on purpose. Four
+trades, four sheets, four answers — even where the answers turn out to be
+the same.
+
+## §209 — One answer, one question: a compound blocker is not unblocked
+
+Ranking owner questions by how much they release is only honest if a
+question that releases nothing is not credited. A row whose blocker reads
+"the opening heights and the system specification" is not made payable by
+supplying the heights, so the ranking counts it as affected and not as
+released. Without that rule the aluminium rows advertise three unlocks and
+deliver none, and the owner answers the wrong question first.
+
+## §210 — An unclassified element joins no item
+
+Six of Qortuba's seven glazed elements are classed as windows; the seventh
+is UNRESOLVED. The house bills doors and windows as two separate cover
+items, so an element that is not yet either cannot be added to one of them.
+Folding it into the windows total would have moved 2.750 m of width into a
+priced item on no evidence, and the total would have looked more complete
+for it. It is held out as its own row instead, waiting on the elevation.
+
+## §211 — The cornice runs over the doorway the skirting stops at
+
+The ceiling cornice and the floor skirting follow the same room, and they
+are not the same length: a skirting stops at each door opening and a cornice
+runs across it. So the cornice inherits the skirting register's GROSS wall
+line, 153.125 m, and not its net run of 106.075 m, and the two are kept as
+separate keys rather than one reused number. Same room, same wall, two
+different measurements, because two different things happen at the door.
