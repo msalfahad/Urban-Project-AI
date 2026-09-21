@@ -839,7 +839,7 @@ the waterproofed room types are enumerated and now include the pantry; and
 a ceiling is priced by area until a ceiling drawing exists, so the 153.125 m
 perimeter leaves the bill (§230).
 
-Fourteen quantities are final. The pantry joins the waterproofing at
+Thirteen quantities are final. The pantry joins the waterproofing at
 11.685 m² of floor and 11.150 m of gross-perimeter upturn — the gross room
 perimeter, not the skirting path, which is zero there. The dry floor is
 released as porcelain at 108.9625 m², re-totalled room by room from the
@@ -1023,5 +1023,5 @@ bedroom — and independently reproduce the pairs already established for both
 passages.
 
 Hidden skirting and hidden profile settle at **76.389 lm**; plaster and
-paint at **283.0025 m²** each. Fourteen quantities are final. The only
+paint at **283.0025 m²** each. Thirteen quantities are final. The only
 measurement questions left are the six window heights.
