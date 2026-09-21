@@ -145,9 +145,18 @@ QORTUBA_PROJECT_RULES = [
      "the Lobby, and the 1.200 m gap between the Master bedroom and the Dressing room.  Each interrupts the skirting "
      "and hidden profile path of BOTH rooms it joins, so 4 x 1.200 = 4.800 lm leaves the path; each carries no "
      "height and no procurement line"),
-    ("QP-18", "QORTUBA_OPEN_PASSAGE_VERTICAL_CONDITION", None, None, "OPEN-PASSAGE RULE CORRECTION",
-     "OWNER_INPUT_REQUIRED for both passages: full height to the 3.00 m wall, or a head above the opening.  No area "
-     "is deducted from any wall trade for either of them until that answer arrives, and TD-02 is barred"),
+    ("QP-18", "QORTUBA_OPEN_PASSAGE_VERTICAL_CONDITION", "ANSWERED", None, "QS WORKFLOW V1 §A",
+     "the owner has given both: the Hall / Lobby passage is OPEN_PASSAGE_FULL_HEIGHT at the 3.000 m wall height, with "
+     "left and right reveals and no top; the Master bedroom / Dressing room passage is OPEN_PASSAGE_WITH_HEAD at "
+     "2.200 m, with left, right and top reveals"),
+    ("QP-19", "QORTUBA_OPEN_PASSAGE_WITH_HEAD_HEIGHT", 2.200, "M", "QS WORKFLOW V1 §A",
+     "an EXPLICIT QORTUBA OWNER INPUT for the Master bedroom / Dressing room passage, rank 2 on the priority ladder.  "
+     "It is not TD-02: the two figures coincide, and a coincidence is not a provenance.  If TD-02 ever moves, this "
+     "does not"),
+    ("QP-20", "QORTUBA_OPENING_ROOM_ATTRIBUTION", "THE_TWO_ROOMS_IT_JOINS", None, "QS WORKFLOW V1 §B",
+     "where the two rooms an opening actually joins are established, that pair - not the host band's full room list - "
+     "decides which trade quantity waits on it.  A dry-room opening does not block bathroom ceramic, pantry ceramic "
+     "or tile preparation unless frozen geometry puts it in one of those faces"),
     ("QP-12", "QORTUBA_HALL_PANTRY_GLAZED_OPENING_HEIGHT", 2.200, "M", "V2 §2",
      "the owner has given the height of the glazed opening between the Hall and the Pantry.  This is a real dimension "
      "under an owner override, not a default, so 2.750 x 2.200 = 6.050 m2 is deducted from every dependent wall area"),
@@ -279,6 +288,7 @@ def opening_register_from_source():
             "HOST_WALL_ID": r["HOST_WALL_ID"], "HOST_WALL_THICKNESS_MM": r["HOST_WALL_THICKNESS_MM"],
             "ROOMS": ([x.strip() for x in r["ROOM"].split(",")] if r["ROOM"] else []),
             "ROOM_ID": r["ROOM_ID"],
+            "OPEN_PASSAGE_SUBTYPE": r["OPEN_PASSAGE_SUBTYPE"], "REVEAL_SIDES": r["REVEAL_SIDES"],
             "INSIDE_APARTMENT": bool(r["ROOM"]),
             "IS_AN_OPENING_THROUGH_THE_WALL": r["IS_AN_OPENING_THROUGH_THE_WALL"],
             "INTERRUPTS_AT_FLOOR_LEVEL": r["INTERRUPTS_AT_FLOOR_LEVEL"],
@@ -473,13 +483,22 @@ def _aliases(room):
 def _pending_for(room_name, openings):
     """Openings that touch a room and cannot yet be deducted.
 
-    Attribution is deliberately over-inclusive: a wall band lists every room along its length, so a 600 mm site on a
-    14 m external wall is flagged against all four rooms that wall touches even though it stands in one of them.  An
-    over-flag is the safe direction - it delays a quantity, it never inflates one.
+    A wall band lists every room along its length, so a 600 mm site on a 14 m external wall reaches all four rooms
+    that wall touches even though it stands in one of them.  Over-flagging is the safe direction where nothing better
+    is known - it delays a quantity, it never inflates one - but it is not better than knowing.  §B of QS WORKFLOW V1:
+    where the two rooms an opening actually joins ARE established, that pair decides which quantity waits on it, and
+    the band's other rooms are not charged with a dependency the geometry does not support.
     """
     names = {room_name} if isinstance(room_name, str) else set(room_name)
-    return [o for o in openings if o["HEIGHT_M"] is None and (names & set(o["ROOMS"]))
-            and o.get("IS_AN_OPENING_THROUGH_THE_WALL", True)]
+    out = []
+    for o in openings:
+        if o["HEIGHT_M"] is not None or not o.get("IS_AN_OPENING_THROUGH_THE_WALL", True):
+            continue
+        joins = o.get("ROOMS_JOINED")
+        if not (names & set(joins if joins else o["ROOMS"])):
+            continue
+        out.append(o)
+    return out
 
 
 def q(qid, trade, item, value, unit, status, formula, rules, param_source, rooms=None, temp=False,
@@ -506,6 +525,11 @@ def q(qid, trade, item, value, unit, status, formula, rules, param_source, rooms
 
 def quantities(rooms, walls_calc, openings, floors, summ, ceil, glazed=None, ceil_rows=(), human_reg=()):
     door_h = TEMPORARY_DEFAULTS[1][2]
+    # §B: the two rooms an opening actually joins, where the plan reading or the floor-level boundary established
+    # them.  This is what _pending_for prefers over the host band's full room list.
+    joined = {h["OPENING_ID"]: h["ROOMS_FOR_DEDUCTION"] for h in (human_reg or []) if h["ROOMS_FOR_DEDUCTION"]}
+    for o in openings:
+        o["ROOMS_JOINED"] = joined.get(o["OPENING_ID"])
     dry = [r for r in rooms if r["FINISH_CLASS"] == "DRY_ROOM"]
     cer = [r for r in rooms if r["FINISH_CLASS"] == "CERAMIC_SERVICE_ROOM"]
     bath = [r for r in cer if r["ROOM_NAME"] == "BATH"]
@@ -542,10 +566,29 @@ def quantities(rooms, walls_calc, openings, floors, summ, ceil, glazed=None, cei
         return out
 
     def rev(ds):
-        return sum(REVEAL_DEPTH * (2 * door_h + o["WIDTH_M"]) for o in ds)
+        """US-07 reveals: 0.25 m on each side that exists.
 
-    dry_dry = [o for o in apt_doors if not (set(o["ROOMS"]) & set(CERAMIC_ROOM_NAMES))]
-    mixed = [o for o in apt_doors if set(o["ROOMS"]) & set(CERAMIC_ROOM_NAMES)]
+        A door and a passage with a head both have a left, a right and a top.  A full-height passage has no head, so
+        there is no top to finish and only the two jambs are added - the sill is excluded for all of them (§H).
+        """
+        out = 0.0
+        for o in ds:
+            h = o["HEIGHT_M"] if o["HEIGHT_M"] is not None else door_h
+            sides = o.get("REVEAL_SIDES") or ("LEFT", "RIGHT", "TOP")
+            out += REVEAL_DEPTH * (2 * h if "LEFT" in sides else 0.0)
+            out += REVEAL_DEPTH * (o["WIDTH_M"] if "TOP" in sides else 0.0)
+        return out
+
+    # a passage is finished like any other opening: it is not procured, but its jambs are plastered and painted
+    apt_pass = [o for o in openings if o["TYPE"] == "OPEN_PASSAGE" and o["INSIDE_APARTMENT"]
+                and o["HEIGHT_M"] is not None]
+    # §B again: whether an opening's reveal is a dry-room reveal is decided by the rooms it actually joins, not by
+    # every room its host band runs past.
+    def _sides(o):
+        return set(o.get("ROOMS_JOINED") or o["ROOMS"])
+
+    dry_dry = [o for o in apt_doors + apt_pass if not (_sides(o) & set(CERAMIC_ROOM_NAMES))]
+    mixed = [o for o in apt_doors + apt_pass if _sides(o) & set(CERAMIC_ROOM_NAMES)]
 
     sk = sum(r["SKIRTING_LM"] for r in dry)
     wet_floor = summ["B_WET_INTERNAL_FLOOR_AREA_M2"]["VALUE"]
@@ -650,7 +693,11 @@ def quantities(rooms, walls_calc, openings, floors, summ, ceil, glazed=None, cei
                   f"less full door areas {bath_ded:.4f} m2 = {bath_gross - bath_ded:.4f} m2.  The gross path is used so "
                   f"the tiled strip above each door head is kept; no ceramic reveal is added (§L)",
                   ["US-01", "US-06", "QP-01", "TD-02"], "QP-01 height 3.00 m; TD-02 door height 2.20 m",
-                  rooms=["BATH", "BATH", "BATH"], temp=True, residual=res(bath) + orphan_res))
+                  rooms=["BATH", "BATH", "BATH"], temp=True, residual=res(bath) + orphan_res,
+                  note="no opening is pending against this row any more: under QP-20 a dry-room opening no longer "
+                       "blocks bathroom ceramic.  It stays PARTIALLY_CALCULATED for one reason only - the door "
+                       "heights inside it are still TD-02, a placeholder - and it becomes final when a real door "
+                       "height arrives"))
     serv_gross = sum(r["GROSS_WALL_AREA_M2"] for r in serv)
     serv_ded = sum(r["OPENING_DEDUCTION_M2"] for r in serv)
     rows.append(q("Q-06", "سيراميك", "WALL_CERAMIC_SERVICE_ROOM", serv_gross - serv_ded, "M2", "PARTIALLY_CALCULATED",
@@ -718,7 +765,8 @@ def quantities(rooms, walls_calc, openings, floors, summ, ceil, glazed=None, cei
     for qid, item, trade in (("Q-08", "INTERNAL_PLASTER", "مساح داخلى"), ("Q-09", "WALL_PAINT", "صبغ")):
         rows.append(q(qid, trade, item, dry_gross - dry_ded + rev_dry, "M2", "PARTIALLY_CALCULATED",
                       f"gross dry wall area {per_room} = {dry_gross:.4f} m2, less full door areas {dry_ded:.4f} m2, "
-                      f"plus {len(dry_dry)} dry-to-dry door reveals at 0.25 x (2 x 2.20 + width) = {rev_dry:.4f} m2, "
+                      f"plus {len(dry_dry)} dry-to-dry opening reveals at 0.25 x (2 x height [+ width where a head "
+                      f"exists]) = {rev_dry:.4f} m2, "
                       f"giving {dry_gross - dry_ded + rev_dry:.4f} m2",
                       ["US-06", "US-07", "US-03", "QP-03" if qid == "Q-08" else "QP-04", "TD-02"],
                       f"{'QP-03' if qid == 'Q-08' else 'QP-04'} height 3.00 m; TD-02 door height 2.20 m; "
@@ -883,6 +931,11 @@ def answered_questions():
          "US-16 + QP-17 = an OPEN_PASSAGE: no door leaf, no procurement line, and its width leaves the linear path"),
         ("OP-02", "what the 1.200 m gap between the Master bedroom and the Dressing room is",
          "US-16 + QP-17 = an OPEN_PASSAGE, on the same terms"),
+        ("OP-03", "the vertical condition of the Hall / Lobby passage",
+         "QP-18 = OPEN_PASSAGE_FULL_HEIGHT at the 3.000 m wall height: 1.200 x 3.000 = 3.600 m2, left and right "
+         "reveals, no top"),
+        ("OP-04", "the vertical condition of the Master bedroom / Dressing room passage",
+         "QP-18 + QP-19 = OPEN_PASSAGE_WITH_HEAD at 2.200 m: 1.200 x 2.200 = 2.640 m2, left, right and top reveals"),
     ]
 
 
@@ -897,13 +950,6 @@ STILL_OPEN = [
      "still open: the 2.700 m gap between a Bedroom and the Hall, and the two 1.100 m gaps at the ends of the same "
      "short Bedroom wall facing the stair landing.  Each has its own crop and none is inferred",
      "the wall-area trades of the rooms they stand in"),
-    ("O-11", "PROJECT_INPUT", "the vertical condition of each open passage: open to the ceiling, or is there wall "
-     "above it?",
-     "US-17 gives a passage no assumed height.  If it is full height its opening height IS the 3.00 m wall height and "
-     "no top reveal exists; if it has a head the owner gives the height and left, right and top reveals all apply.  "
-     "The width deduction from the skirting and profile path has already been taken and does not wait for this",
-     "the blockwork, plaster, paint and wall-ceramic AREAS of the Hall, the Lobby, the Master bedroom and the "
-     "Dressing room.  It blocks no linear quantity and no other room"),
     ("O-09", "PROJECT_RULE", "whether the 7 interior PVC doors are priced per door, per set, or by m2",
      "the physical side is settled — 7 doors, 16.665 m2 of opening area — but a physical area is not a pricing "
      "quantity.  Until the basis is given, FINAL_PRICING_QUANTITY stays empty rather than defaulting to the m2 that "

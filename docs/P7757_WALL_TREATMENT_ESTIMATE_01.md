@@ -934,3 +934,36 @@ already did. The question put to the owner is now the one that is still
 open: "is it open all the way to the ceiling, or is there wall above it?"
 The type question is retired for those two (§234), and their crop numbers,
 #8 and #9, do not move.
+
+### QS Workflow v1, and the two passage answers
+
+The development philosophy changed here. The objective is not an engine that
+understands every drawing condition on its own; it is drawings → first
+takeoff → owner questions → owner answers → final quantities → Excel →
+owner approval. Where a ten-second answer resolves an ambiguity, the answer
+is cheaper and more reliable than the geometry rule, and the rule is written
+only when the same deterministic error would recur across projects.
+
+Both passages are now answered. #8, Hall ↔ Lobby, is
+OPEN_PASSAGE_FULL_HEIGHT at the 3.000 m wall height — 1.200 × 3.000 =
+3.600 m², left and right reveals, no top, because there is no head to finish
+(§237). #9, Master bedroom ↔ Dressing room, is OPEN_PASSAGE_WITH_HEAD at
+2.200 m — 1.200 × 2.200 = 2.640 m², all three reveals. That 2.200 m is an
+explicit Qortuba owner input recorded as QP-19, not TD-02 wearing the same
+number. Neither enters a procurement schedule.
+
+The false ceramic dependency is gone (§235). #8's host band runs past a
+bathroom and the Pantry, so the over-inclusive attribution had it blocking
+bathroom ceramic, pantry ceramic and tile preparation — three faces it is
+not in. Attribution now prefers the two rooms an opening actually joins.
+Bathroom ceramic has no pending opening at all and waits only on the TD-02
+door heights; pantry ceramic and tile preparation wait only on the Pantry
+window, which really is in the Pantry wall.
+
+The skirting and profile figure was revalidated rather than protected:
+81.789 lm still checks, because the width deduction never depended on the
+height.
+
+The export shape is prepared but not connected (§238):
+`APPROVED_QUANTITIES.json` carries all nineteen fields per record and leaves
+every one of them DRAFT.

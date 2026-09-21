@@ -4930,3 +4930,64 @@ three still-unknown gaps remain #7, #10 and #11. What changes is the
 question printed on the crop, never the number above it. A settled type is
 not asked again — #8 and #9 are no longer offered door / window / sliding
 door, only "open to the ceiling, or is there wall above it?"
+
+## §235 — An opening belongs to the rooms it joins, not to the band it sits in
+
+A wall band lists every room along its length. A 1.200 m gap in a band that
+runs past a bathroom, the Hall, the Pantry and the Lobby was therefore
+flagged against all four, and bathroom ceramic, pantry ceramic and tile
+preparation all sat blocked by an opening in none of them.
+
+Over-flagging was the safe direction while nothing better was known — it
+delays a quantity, it never inflates one — but it is not better than
+knowing. Where the two rooms an opening actually joins are established, that
+pair decides which quantity waits on it and which reveal set it belongs to.
+The band's other rooms are not charged with a dependency the geometry does
+not support. Where no pair is established, the band's list still governs,
+because a delay is still better than a guess.
+
+Removing a false dependency must not remove a true one: the Pantry window is
+in the Pantry wall, so it still holds the pantry ceramic and the tile
+preparation, and it says so by name.
+
+## §236 — A question number is a name the owner holds
+
+Numbers were issued 1–11 and crops were sent. Two came back answered. If the
+table is then rebuilt by sort order, the answered questions vacate their
+slots, the open ones slide up, and crop #10 in the owner's hand now names
+what the file calls #8. Every later answer lands on the wrong wall.
+
+So a number is issued once, recorded, and never reused. An answered question
+retires its number rather than releasing it; new questions take the next
+number after the highest ever issued. The visible sequence has gaps in it,
+and the gaps are the point. The retired crop images are deleted too — a
+picture of a settled question is not a question, and leaving it on disk
+invites it to be asked again.
+
+## §237 — A full-height opening has no head, so it has no top reveal
+
+An open passage is either full height or it has a head. Full height means
+the opening height *is* the applicable wall height — 3.000 m here — and
+there is nothing above the opening to finish, so the 0.25 m reveal applies
+to the left and the right jamb only. With a head, the owner gives the
+height and left, right and top all apply.
+
+The reveal rule is therefore written from the sides an opening actually has,
+not from a fixed three. And where an owner-supplied height happens to equal
+a temporary default — 2.200 m is both the Dressing-room passage height and
+TD-02 — the record says which one it came from. A coincidence of figures is
+not a provenance: if TD-02 ever moves, an owner input does not move with it.
+
+## §238 — A quantity leaves the workpaper as DRAFT
+
+Measured quantities become handover records with a fixed schema: project,
+revision, floor, zone, room, trade, item, measured quantity and unit, final
+BOQ quantity and unit, formula, source, rule, status, approval state, notes.
+A record missing any of those fields is not a handover record and the export
+refuses it.
+
+Two things the export does not do. It does not mark anything APPROVED —
+approval is the owner's act, and an engine cannot approve its own output, so
+every record leaves as DRAFT. And it connects to nothing: no app, no
+database, no upload. Raw extraction must never write project financial data.
+A person stands between the measurement and the money.

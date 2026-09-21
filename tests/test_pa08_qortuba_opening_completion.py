@@ -86,6 +86,14 @@ def test_a_height_exists_only_where_the_owner_default_may_reach():
             # an owner override is a real dimension and may reach any type
             assert r["HEIGHT_M"] == owner[r["OPENING_ID"]][0] and "OWNER" in r["HEIGHT_SOURCE"]
             continue
+        if r["OPENING_ID"] in OS.OWNER_SUPPLIED_PASSAGE_SUBTYPES:
+            # a passage height is an explicit project input, not a default, and may reach any subtype
+            assert r["HEIGHT_M"] == OS.OWNER_SUPPLIED_PASSAGE_SUBTYPES[r["OPENING_ID"]][1]
+            assert "OWNER INPUT" in r["HEIGHT_SOURCE"] or "owner" in r["HEIGHT_SOURCE"]
+            # where the figure happens to equal the door default, the record says so is not where it came from
+            if r["HEIGHT_M"] == OS.DEFAULT_DOOR_HEIGHT_M:
+                assert "not the generic TD-02" in r["HEIGHT_SOURCE"], "a coincidence is not a provenance"
+            continue
         assert r["TYPE"] == "DOOR" and r["HEIGHT_M"] == OS.DEFAULT_DOOR_HEIGHT_M
         assert "TD-02" in r["HEIGHT_SOURCE"]
     assert opens()["DEFAULT_APPLIED_ONLY_TO_ORDINARY_DOORS"] is True
@@ -131,8 +139,8 @@ def test_the_pdf_reading_is_recorded_as_evidence_and_not_as_a_dimension():
     quoted = [r for r in rows.values() if r["PDF_READER"]]
     assert len(quoted) == 3
     for r in quoted:
-        if r["OPENING_ID"] in OS.OWNER_SUPPLIED_HEIGHTS:
-            assert "OWNER" in r["HEIGHT_SOURCE"], "the height came from the owner, never from the reader"
+        if r["OPENING_ID"] in OS.OWNER_SUPPLIED_HEIGHTS or r["OPENING_ID"] in OS.OWNER_SUPPLIED_PASSAGE_SUBTYPES:
+            assert "owner" in r["HEIGHT_SOURCE"].lower(), "the height came from the owner, never from the reader"
             continue
         assert r["HEIGHT_M"] is None, "a reader may speak to type, never to a dimension"
 

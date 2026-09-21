@@ -44,10 +44,13 @@ def test_every_open_gap_question_has_its_own_image():
 def test_the_numbers_the_owner_already_has_do_not_move():
     """An answer must not renumber the questions still open, or the crops already sent stop meaning anything."""
     by_n = {x["#"]: x for x in crops()["ROWS"]}
-    assert {7, 8, 9, 10, 11} == set(by_n), "the five gaps keep the numbers they were first issued under"
+    assert {7, 10, 11} == set(by_n), "the answered gaps leave gaps; the others keep their issued numbers"
     assert by_n[7]["WIDTH_M"] == 2.7
-    assert by_n[8]["WIDTH_M"] == by_n[9]["WIDTH_M"] == 1.2
     assert by_n[10]["WIDTH_M"] == by_n[11]["WIDTH_M"] == 1.1
+    assert crops()["RETIRED_NUMBERS"] == [8, 9]
+    folder = Path(crops()["ROWS"][0]["IMAGE"]).parent
+    for n in crops()["RETIRED_NUMBERS"]:
+        assert not (folder / f"QORTUBA_OPENING_{n}.png").exists(), "an answered question is not pictured as open"
 
 
 def test_each_image_exists_and_is_a_real_drawing():
@@ -67,12 +70,10 @@ def test_a_crop_names_its_rooms_and_its_width_and_asks_one_settled_question():
         assert x["QUESTION"] == want[x["ASKS_FOR"]], f"#{x['#']} asks the wrong question for its state"
 
 
-def test_a_confirmed_open_passage_is_never_asked_its_type_again():
-    pas = [x for x in crops()["ROWS"] if x["ASKS_FOR"] == "PASSAGE_HEIGHT"]
-    assert {x["#"] for x in pas} == {8, 9}
-    for x in pas:
-        assert x["QUESTION"] == PASSAGE_CHOICES
-        assert "Sliding door" not in x["QUESTION"] and "Window" not in x["QUESTION"]
+def test_an_answered_opening_has_no_crop_at_all():
+    """Both passages are settled as to type and height, so neither is pictured as an open question."""
+    assert not [x for x in crops()["ROWS"] if x["ASKS_FOR"] == "PASSAGE_HEIGHT"]
+    assert all(x["ASKS_FOR"] == "TYPE" and x["QUESTION"] == CHOICES for x in crops()["ROWS"])
 
 
 def test_no_engine_identifier_appears_where_the_owner_reads():

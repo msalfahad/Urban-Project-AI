@@ -30,6 +30,21 @@ OPENING_TYPES = ("DOOR", "WINDOW", "SLIDING_DOOR", "GLAZED_OPENING", "OPEN_PASSA
 # plaster, paint, wall ceramic, skirting and the hidden profile, exactly as its dimensions and its neighbours require.
 OPEN_PASSAGE_SUBTYPES = ("OPEN_PASSAGE_FULL_HEIGHT", "OPEN_PASSAGE_WITH_HEAD")
 OPEN_PASSAGE_TRADE = "OPEN_PASSAGE_NO_PROCUREMENT"
+
+# QS WORKFLOW V1 §D: the whole useful vocabulary, and deliberately no more.  A drawing has endless variations; a
+# takeoff needs the eight cases that change a quantity.  Anything that does not fit one of them is UNKNOWN, and an
+# UNKNOWN that materially moves a number is a question for the owner, not a new geometry rule.
+OPENING_CASES = ("DOOR", "WINDOW", "SLIDING_DOOR", "GLAZED_OPENING",
+                 "OPEN_PASSAGE_FULL_HEIGHT", "OPEN_PASSAGE_WITH_HEAD", "NOT_AN_OPENING", "UNKNOWN")
+
+
+def case_of(row):
+    """The generic case this opening bills under, from its type, its subtype and whether it is a gap at all."""
+    if not row["IS_AN_OPENING_THROUGH_THE_WALL"]:
+        return "NOT_AN_OPENING"
+    if row["TYPE"] == "OPEN_PASSAGE":
+        return row["OPEN_PASSAGE_SUBTYPE"] or "UNKNOWN"
+    return row["TYPE"] if row["TYPE"] in OPENING_CASES else "UNKNOWN"
 APARTMENT_ROOMS = {"HALL / whgm", "M.B.ROOM", "BED.ROOM", "PAINTRY", "DRESS", "BATH", "UNLABELLED_INTERNAL_SPACE"}
 
 DEFAULT_DOOR_WIDTH_M = 1.00
@@ -51,6 +66,24 @@ OWNER_SUPPLIED_TYPES = {
     "OS-85cb2192ebc0": ("OPEN_PASSAGE", "OPEN-PASSAGE RULE CORRECTION: the owner confirms the 1.200 m gap between "
                                         "the Master bedroom and the Dressing room is an open passage, not a door"),
 }
+
+# QS WORKFLOW V1 §A: the owner has now given the vertical condition of both passages.  A subtype is an explicit
+# PROJECT INPUT, rank 2 on the priority ladder.  FULL_HEIGHT takes the applicable wall height and has no head, so no
+# top reveal exists; WITH_HEAD takes the height the owner states - which is a Qortuba input in its own right and not
+# the generic door default, even where the two figures happen to coincide.
+QORTUBA_WALL_HEIGHT_M = 3.000
+OWNER_SUPPLIED_PASSAGE_SUBTYPES = {
+    "OS-77f8fed2eb15": ("OPEN_PASSAGE_FULL_HEIGHT", QORTUBA_WALL_HEIGHT_M,
+                        "QS WORKFLOW V1 §A: the owner states the Hall / Lobby passage is open to the ceiling, so "
+                        "its opening height IS the applicable wall height, 3.000 m.  1.200 x 3.000 = 3.600 m2"),
+    "OS-85cb2192ebc0": ("OPEN_PASSAGE_WITH_HEAD", 2.200,
+                        "QS WORKFLOW V1 §A: the owner states the Master bedroom / Dressing room passage is shaped "
+                        "like a normal door opening and gives 2.200 m.  This is an EXPLICIT QORTUBA OWNER INPUT, not "
+                        "the generic TD-02 door default.  1.200 x 2.200 = 2.640 m2"),
+}
+# no top reveal exists where there is no head to reveal
+REVEAL_SIDES = {"OPEN_PASSAGE_FULL_HEIGHT": ("LEFT", "RIGHT"),
+                "OPEN_PASSAGE_WITH_HEAD": ("LEFT", "RIGHT", "TOP")}
 
 # a room answers to a name a person uses, not to the label the CAD file happens to carry
 FRIENDLY = {
@@ -200,18 +233,24 @@ def completed_register():
             # TD-02 reaches ordinary doors and nothing else.  An open passage is not a door, so it takes no height
             # from it: a passage is either full height or it has a head, and only the owner knows which.
             "HEIGHT_M": (OWNER_SUPPLIED_HEIGHTS[sid][0] if sid in OWNER_SUPPLIED_HEIGHTS else
+                         OWNER_SUPPLIED_PASSAGE_SUBTYPES[sid][1] if sid in OWNER_SUPPLIED_PASSAGE_SUBTYPES else
                          DEFAULT_DOOR_HEIGHT_M if (is_opening and t == "DOOR"
                                                    and sid not in OWNER_SUPPLIED_TYPES) else None),
-            "OPEN_PASSAGE_SUBTYPE": None,
-            "HEIGHT_STATUS": ("OWNER_INPUT_REQUIRED" if (is_opening and sid in OWNER_SUPPLIED_TYPES
-                                                         and sid not in OWNER_SUPPLIED_HEIGHTS) else None),
+            "OPEN_PASSAGE_SUBTYPE": (OWNER_SUPPLIED_PASSAGE_SUBTYPES[sid][0]
+                                     if sid in OWNER_SUPPLIED_PASSAGE_SUBTYPES else None),
+            "REVEAL_SIDES": list(REVEAL_SIDES[OWNER_SUPPLIED_PASSAGE_SUBTYPES[sid][0]])
+                            if sid in OWNER_SUPPLIED_PASSAGE_SUBTYPES else None,
+            "HEIGHT_STATUS": ("ANSWERED_BY_OWNER" if sid in OWNER_SUPPLIED_PASSAGE_SUBTYPES else
+                              "OWNER_INPUT_REQUIRED" if (is_opening and sid in OWNER_SUPPLIED_TYPES) else None),
             "WIDTH_SOURCE": "DWG opening site span, from the wall band's own interrupted faces",
             "HEIGHT_SOURCE": (OWNER_SUPPLIED_HEIGHTS[sid][1] if sid in OWNER_SUPPLIED_HEIGHTS else
+                              OWNER_SUPPLIED_PASSAGE_SUBTYPES[sid][2] if sid in OWNER_SUPPLIED_PASSAGE_SUBTYPES else
                               "TD-02 APPROVED_TEMPORARY_DEFAULT, ordinary door with no source height"
                               if (is_opening and t == "DOOR" and sid not in OWNER_SUPPLIED_TYPES) else None),
             "IS_AN_OPENING_THROUGH_THE_WALL": is_opening,
             "INTERRUPTS_AT_FLOOR_LEVEL": is_opening,
             "STATUS": ("NOT_AN_OPENING" if not is_opening else
+                       "USABLE" if sid in OWNER_SUPPLIED_PASSAGE_SUBTYPES else
                        "PARTIAL_HEIGHT_REQUIRED" if sid in OWNER_SUPPLIED_TYPES else
                        "USABLE" if (t == "DOOR" or sid in OWNER_SUPPLIED_HEIGHTS) else "OWNER_INPUT_REQUIRED"),
             "EVIDENCE": s["REASON"],
@@ -234,6 +273,7 @@ def completed_register():
             "WIDTH_M": round(b["WIDTH_MM"] / 1000, 4),
             "HEIGHT_M": None,
             "OPEN_PASSAGE_SUBTYPE": None,
+            "REVEAL_SIDES": None,
             "HEIGHT_STATUS": None,
             "WIDTH_SOURCE": "DWG blue element frame width",
             "HEIGHT_SOURCE": None,
@@ -246,6 +286,8 @@ def completed_register():
             "WHY_NOT_AN_OPENING": ("wall stands below this glazing, so it does not interrupt the wall at floor level; "
                                    "it does interrupt the wall AREA and is deducted there" if b["WALL_BELOW"] else None),
         })
+    for r in rows:
+        r["CASE"] = case_of(r)
     rows.sort(key=lambda r: -r["WIDTH_M"])
     return rows
 
@@ -257,6 +299,11 @@ def finish_register():
         "ARTIFACT": "QORTUBA_OPENING_REGISTER_COMPLETED",
         "SOURCE_SEARCH": source_search(),
         "TYPES": list(OPENING_TYPES),
+        "CASES": list(OPENING_CASES),
+        "BY_CASE": dict(Counter(r["CASE"] for r in rows)),
+        "CASE_RULE": "§D: these eight cases are the whole vocabulary.  A drawing variation that does not fit one "
+                     "of them is UNKNOWN, and an UNKNOWN that materially moves a quantity is asked of the owner "
+                     "rather than inferred by a new geometry rule",
         "ROWS": rows, "COUNT": len(rows),
         "APARTMENT_OPENINGS": len(apt),
         "BY_TYPE": dict(Counter(r["TYPE"] for r in rows)),
@@ -422,8 +469,10 @@ def human_register():
             "OPENING": kind, "TYPE": r["TYPE"],
             "WIDTH_M": r["WIDTH_M"], "HEIGHT_M": r["HEIGHT_M"],
             "HEIGHT_SOURCE": r["HEIGHT_SOURCE"],
+            "CASE": r.get("CASE"),
             "TYPE_SOURCE": r.get("TYPE_SOURCE"),
             "OPEN_PASSAGE_SUBTYPE": r.get("OPEN_PASSAGE_SUBTYPE"),
+            "REVEAL_SIDES": r.get("REVEAL_SIDES"),
             "HEIGHT_STATUS": r.get("HEIGHT_STATUS"),
             "MATERIAL_TRADE": material, "WHY_THAT_TRADE": why_mat,
             "INTERIOR": interior, "INSIDE_APARTMENT": inside,

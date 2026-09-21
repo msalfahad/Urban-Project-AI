@@ -49,26 +49,39 @@ def test_both_confirmed_gaps_are_open_passages_of_1200_mm():
 
 
 # ------------------------------------------------------------------ no assumed height
-def test_a_passage_takes_no_height_from_the_door_default():
+def test_a_passage_height_is_an_owner_input_and_never_the_door_default():
     o = opens()
+    full, head = o["OS-77f8fed2eb15"], o["OS-85cb2192ebc0"]
+    assert full["OPEN_PASSAGE_SUBTYPE"] == "OPEN_PASSAGE_FULL_HEIGHT"
+    assert full["HEIGHT_M"] == 3.0 == OS.QORTUBA_WALL_HEIGHT_M, "full height IS the wall height"
+    assert full["REVEAL_SIDES"] == ["LEFT", "RIGHT"], "there is no head, so there is no top to finish"
+    assert head["OPEN_PASSAGE_SUBTYPE"] == "OPEN_PASSAGE_WITH_HEAD"
+    assert head["HEIGHT_M"] == 2.2
+    assert head["REVEAL_SIDES"] == ["LEFT", "RIGHT", "TOP"]
+    # 2.200 m also happens to be TD-02.  A coincidence of figures is not a provenance: this one is an owner input,
+    # and if TD-02 ever moves, this does not.
+    assert "not the generic TD-02" in head["HEIGHT_SOURCE"]
+    rules = {r["PARAMETER"]: r for r in reg("URBAN_OWNER_RULES_V1")["QORTUBA_PROJECT_RULES"]}
+    assert rules["QORTUBA_OPEN_PASSAGE_WITH_HEAD_HEIGHT"]["VALUE"] == 2.2
     for sid in PASSAGES:
-        r = o[sid]
-        assert r["HEIGHT_M"] is None, "TD-02 is barred from an open passage"
-        assert r["HEIGHT_SOURCE"] is None
-        assert r["HEIGHT_STATUS"] == "OWNER_INPUT_REQUIRED"
-        assert r["OPEN_PASSAGE_SUBTYPE"] is None
-        assert r["STATUS"] == "PARTIAL_HEIGHT_REQUIRED"
+        assert o[sid]["HEIGHT_STATUS"] == "ANSWERED_BY_OWNER"
+        assert o[sid]["STATUS"] == "USABLE"
 
 
-def test_no_wall_area_is_deducted_for_a_passage_before_its_height_arrives():
-    """The width deduction is taken; the AREA deduction is not, and the rows that wait say which openings they wait on."""
-    rooms = {r["ROOM_ID"]: r for r in reg("QORTUBA_ROOM_FINISH_AND_SKIRTING_RECALC")["ROWS"]}
-    for r in rooms.values():
+def test_each_passage_area_is_deducted_from_both_rooms_it_joins():
+    rooms = {r["ROOM_NAME"]: r for r in reg("QORTUBA_ROOM_FINISH_AND_SKIRTING_RECALC")["ROWS"]}
+    got = {}
+    for r in reg("QORTUBA_ROOM_FINISH_AND_SKIRTING_RECALC")["ROWS"]:
         for o in r["OPENINGS_DEDUCTED"]:
-            assert o["OPENING_ID"] not in PASSAGES, "no area may be taken for a passage with no height"
+            if o["OPENING_ID"] in PASSAGES:
+                got.setdefault(o["OPENING_ID"], []).append((r["ROOM_NAME"], o["AREA_M2"]))
+    assert set(got) == set(PASSAGES)
+    assert sorted(got["OS-77f8fed2eb15"]) == [("HALL", 3.6), ("UNLABELLED_INTERNAL_SPACE", 3.6)]
+    assert sorted(got["OS-85cb2192ebc0"]) == [("DRESS", 2.64), ("M.B.ROOM", 2.64)]
+    # and nothing still waits on them
     waiting = {o.get("OPENING_ID") for x in reg("QORTUBA_RECALCULATED_QUANTITIES_V1")["ROWS"]
                for o in x["RESIDUAL_OPENINGS"]}
-    assert set(PASSAGES) <= waiting, "the wall-area rows must say they are waiting on these two"
+    assert not (set(PASSAGES) & waiting)
 
 
 # ------------------------------------------------------------------ never procured
@@ -120,11 +133,11 @@ def test_the_skirting_and_profile_total_moved_by_exactly_the_four_widths():
 def test_the_project_rules_record_the_correction_and_the_open_question():
     rules = {r["PARAMETER"]: r for r in reg("URBAN_OWNER_RULES_V1")["QORTUBA_PROJECT_RULES"]}
     assert rules["QORTUBA_OPEN_PASSAGES"]["VALUE"] == "2 x 1.200 m"
-    assert rules["QORTUBA_OPEN_PASSAGE_VERTICAL_CONDITION"]["VALUE"] is None
+    assert rules["QORTUBA_OPEN_PASSAGE_VERTICAL_CONDITION"]["VALUE"] == "ANSWERED"
     ledger = reg("QORTUBA_QUESTION_LEDGER")
     closed = {x["DECISION_ID"] for x in ledger["CLOSED"]}
-    assert {"OP-01", "OP-02"} <= closed, "a type the owner has given is never asked again"
-    assert "O-11" in {x["ID"] for x in ledger["STILL_OPEN"]}
+    assert {"OP-01", "OP-02", "OP-03", "OP-04"} <= closed, "an answer the owner has given is never asked again"
+    assert "O-11" not in {x["ID"] for x in ledger["STILL_OPEN"]}
 
 
 def test_the_three_other_gaps_are_still_unresolved_and_uninferred():

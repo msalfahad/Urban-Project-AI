@@ -248,8 +248,8 @@ def draw_crop(n, q, band, lo, hi, rooms, allbands, hint=None, half_w=4200, half_
 
 
 def finish():
-    qs = [q for q in reg(Path(PR.OUT_DIR) / "pa08_qortuba_boq", "QORTUBA_OWNER_QUESTIONS")["ROWS"]
-          if q["ASKS_FOR"] in ASK]
+    qreg = reg(Path(PR.OUT_DIR) / "pa08_qortuba_boq", "QORTUBA_OWNER_QUESTIONS")
+    qs = [q for q in qreg["ROWS"] if q["ASKS_FOR"] in ASK]
     sites = {r["SITE_ID"]: r for r in reg(R1, "PA08_QORTUBA_R1_OPENING_REGISTER")["ROWS"]}
     hosts = {o["OPENING_ID"]: o["HOST_WALL_ID"] for o in reg(Path(PR.OUT_DIR) / "pa08_qortuba_boq",
                                                              "QORTUBA_OPENING_REGISTER_COMPLETED")["ROWS"]}
@@ -270,7 +270,18 @@ def finish():
                     "ASKS_FOR": q["ASKS_FOR"], "QUESTION": ASK[q["ASKS_FOR"]][1],
                     "IMAGE": str(p), "MARKER_BASIS": basis,
                     "ADJACENT_ROOMS": band["ROOMS"], "AUDIT_OPENING_ID": sid})
+    # A crop for a question the owner has answered is no longer a question.  Its number is retired rather than
+    # reissued, and its image is deleted so it cannot be re-read as still open.  The retired list is taken from the
+    # question ledger, not from whatever happens to be on disk, so it says the same thing on every run.
+    retired = qreg.get("RETIRED_NUMBERS", [])
+    live = {f"QORTUBA_OPENING_{x['#']}.png" for x in out}
+    for f in OUT.glob("QORTUBA_OPENING_*.png"):
+        if f.name not in live:
+            f.unlink()
     rec = {"ARTIFACT": "QORTUBA_OWNER_QUESTION_CROPS",
+           "RETIRED_NUMBERS": retired,
+           "RETIRED_WHY": "these questions are answered.  Their numbers stay out of circulation so that a crop "
+                          "already in the owner's hands never comes to mean a different opening",
            "RULE": "one crop per unresolved opening, numbered as in the question table.  No CAD or hash identifier "
                    "appears on any image; the id is carried here for the audit trail only",
            "CHOICES": CHOICES, "PASSAGE_CHOICES": PASSAGE_CHOICES, "ROWS": out, "COUNT": len(out),

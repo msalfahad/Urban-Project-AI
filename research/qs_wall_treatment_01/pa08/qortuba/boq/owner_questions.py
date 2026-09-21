@@ -29,30 +29,41 @@ def reg(folder, name):
     return json.loads((folder / f"{name}.json").read_text("utf-8"))
 
 
+# A question number is a name the owner holds.  Once a number has been put in front of them - in a table or on a
+# crop - it belongs to that opening for good: if an answered question vacates its slot and the ones still open slide
+# up, every crop already sent points at the wrong wall.  So numbers are issued once, recorded here, and never reused.
+# New questions take the next free number after the highest ever issued.
+ISSUED_NUMBERS = {
+    "BE-07": 1, "BE-06": 2, "BE-05": 3, "BE-04": 4, "BE-02": 5, "BE-01": 6,
+    "OS-b1e147c89482": 7, "OS-77f8fed2eb15": 8, "OS-85cb2192ebc0": 9,
+    "OS-3144b5fbb149": 10, "OS-045efd7810a7": 11,
+}
+
+
 def questions():
     """One numbered row per thing the owner must answer, ranked so the biggest openings come first."""
     rows = [r for r in OS.human_register()
             if r["IS_AN_OPENING_THROUGH_THE_WALL"] and r["INSIDE_APARTMENT"] and r["HEIGHT_M"] is None]
     heights = [r for r in rows if r["TYPE"] not in ("UNRESOLVED", "OPEN_PASSAGE")]
-    # An answer the owner has already given must not renumber the ones still open.  The gaps keep the single
-    # width-ordered sequence they were first issued in, whether or not their type has since been settled: #8 and #9
-    # are the two 1.200 m passages in the crops already sent, and they stay #8 and #9.
     gaps = [r for r in rows if r["TYPE"] in ("UNRESOLVED", "OPEN_PASSAGE")]
-    out, n = [], 0
+    nxt = iter(range(max(ISSUED_NUMBERS.values()) + 1, 999))
+
+    def num(r):
+        return ISSUED_NUMBERS.get(r["OPENING_ID"]) or next(nxt)
+
+    out = []
     for r in sorted(heights, key=lambda z: -z["WIDTH_M"]):
-        n += 1
-        out.append({"#": n, "ROOM": r["ROOM"], "OPENING": r["OPENING"], "WIDTH_M": r["WIDTH_M"],
+        out.append({"#": num(r), "ROOM": r["ROOM"], "OPENING": r["OPENING"], "WIDTH_M": r["WIDTH_M"],
                     "QUESTION": "Height?", "LOCATION": r["LOCATION"],
                     "ASKS_FOR": "HEIGHT", "TRADE": r["MATERIAL_TRADE"],
                     "WHY_IT_MATTERS": "no area can be released for this opening's trade, and every wall it stands in "
                                       "stays partial, until the height is known",
                     "AUDIT_OPENING_ID": r["OPENING_ID"]})
     for r in sorted(gaps, key=lambda z: -z["WIDTH_M"]):
-        n += 1
         passage = r["TYPE"] == "OPEN_PASSAGE"
         # US-16 and US-17: once the type is settled the type question is never asked again.  What is left for a
         # passage is the vertical condition, asked in the words a person standing in it would use.
-        out.append({"#": n, "ROOM": r["ROOM"],
+        out.append({"#": num(r), "ROOM": r["ROOM"],
                     "OPENING": "Open passage" if passage else "Opening of unknown type",
                     "WIDTH_M": r["WIDTH_M"],
                     "QUESTION": (f"Opening {r['LOCATION']}, {r['WIDTH_M']:.2f} m wide: is it open all the way to the "
@@ -158,9 +169,10 @@ def finish():
         "ASKING_FOR_A_HEIGHT": sum(1 for q in qs if q["ASKS_FOR"] == "HEIGHT"),
         "ASKING_FOR_A_TYPE": sum(1 for q in qs if q["ASKS_FOR"] == "TYPE"),
         "ASKING_FOR_A_PASSAGE_HEIGHT": sum(1 for q in qs if q["ASKS_FOR"] == "PASSAGE_HEIGHT"),
-        "A_SETTLED_TYPE_IS_NEVER_ASKED_AGAIN": "US-16 and QP-17 settled both open passages.  Neither is offered the "
-                                               "door / window / sliding door choice again; only the vertical "
-                                               "condition is still open",
+        "A_NUMBER_IS_ISSUED_ONCE": "a question number belongs to its opening for good.  #8 and #9 were the two open "
+                                   "passages and are now answered, so those numbers are retired rather than reused: "
+                                   "the crops already in the owner's hands still point at what they always pointed at",
+        "RETIRED_NUMBERS": sorted(set(ISSUED_NUMBERS.values()) - {q["#"] for q in qs}),
         "MARKED_PLAN": str(plan),
         "NO_HEIGHT_IS_ASSUMED_FOR_ANY_OF_THEM": True,
         "WINDOWS_ARE_NOT_GROUPED": "each window is asked separately.  None is given another's height unless the owner "

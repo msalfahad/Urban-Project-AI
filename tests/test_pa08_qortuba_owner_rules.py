@@ -11,7 +11,8 @@ import json
 from pathlib import Path
 
 from research.qs_wall_treatment_01 import protocol as PR
-from research.qs_wall_treatment_01.pa08.qortuba.boq import owner_rules as OR, workbook_boq as WB
+from research.qs_wall_treatment_01.pa08.qortuba.boq import (opening_source_search as OS, owner_rules as OR,
+                                                          workbook_boq as WB)
 
 OUT = Path(PR.OUT_DIR) / "pa08_qortuba_boq"
 QS = Path(PR.OUT_DIR) / "pa08_qortuba_qs01"
@@ -86,6 +87,8 @@ def test_no_default_height_reaches_a_window_a_sliding_door_or_an_unknown():
             continue
         if x["OPENING_ID"] in owner:
             continue  # an owner override is a real dimension, not a default, and may reach any type
+        if x["OPENING_ID"] in OS.OWNER_SUPPLIED_PASSAGE_SUBTYPES:
+            continue  # so is an open-passage height the owner supplied
         # otherwise a height exists only on an ordinary door, and only from the owner's default
         assert x["TYPE"] == "DOOR" and x["HEIGHT_M"] == 2.20, x["OPENING_ID"]
         assert x["HEIGHT_STATE"] == "TEMPORARY_OWNER_DEFAULT"
@@ -198,7 +201,8 @@ def test_blockwork_adds_no_reveal_back():
 def test_the_plaster_reveal_is_three_sided_at_a_quarter_metre():
     assert OR.REVEAL_DEPTH == 0.25
     q = by_id()["Q-08"]
-    assert "0.25 x (2 x 2.20 + width)" in q["FORMULA"]
+    # three sides where a head exists, two where it does not: the formula names the rule rather than one height
+    assert "0.25 x (2 x height" in q["FORMULA"] and "width where a head exists" in q["FORMULA"]
     assert "sill" not in q["FORMULA"].lower()
     assert "US-07" in q["RULE_ID"]
 
@@ -222,7 +226,10 @@ def test_a_ceramic_face_leaves_plaster_and_paint_and_joins_tile_preparation():
 def test_a_partial_quantity_carries_a_value_and_names_what_is_missing():
     for x in quants()["ROWS"]:
         if x["STATUS"] == "PARTIALLY_CALCULATED":
-            assert x["MEASURED_NET_QUANTITY"] is not None and x["RESIDUAL_OPENINGS"], x["QUANTITY_ID"]
+            # partial means a value plus a named reservation: either an opening with no height, or a temporary
+            # default still standing in for one
+            assert x["MEASURED_NET_QUANTITY"] is not None, x["QUANTITY_ID"]
+            assert x["RESIDUAL_OPENINGS"] or x["USES_TEMPORARY_DEFAULT"], x["QUANTITY_ID"]
         if x["STATUS"] == "FINAL_QUANTITY_AVAILABLE":
             assert x["RESIDUAL_OPENINGS"] == [], x["QUANTITY_ID"]
             assert x["MEASURED_NET_QUANTITY"] is not None
