@@ -551,3 +551,38 @@ exactly the skirting length, so the trade rule agrees independently on both
 sides even where the magnitudes do not. Frozen as
 `FREEZE_PA08_QORTUBA_ROOM_BY_ROOM_QS_01` and
 `FREEZE_PA08_QORTUBA_QS01_AGGREGATE_COMPARISON`; no engine rule changed.
+
+**QORTUBA-PRICING-INPUT-MATRIX (trade BOQ readiness).** The frozen
+room-by-room takeoff re-cut into the twelve trades a bill is priced by, with
+the room rows left underneath as calculation backup. No geometry was
+measured and no engine rule touched; the workpaper freeze digest is verified
+before the matrix is built and its artifacts are unchanged after.
+
+Six layers are separate fields on every row: measured geometry, commercial
+scope, waste, procurement, rate and amount. Only the first is ever filled.
+No rate was supplied for this project, so no row carries a rate or an amount,
+and the Excel columns for them are created empty on purpose.
+
+Fifty-eight trade rows. Twenty-six carry an established quantity and need
+only a rate: floors 120.6475 m² dry and 17.8625 m² wet, skirting 106.075 m,
+profile 106.075 m, flat ceiling 138.5100 m², ceiling perimeter 153.125 m
+taken on the gross wall line because a cove runs across a door head where a
+skirting stops, eight wall-length lines by thickness, three plaster face
+lines, paint 107.625 m with the tiled bathrooms excluded rather than assumed
+painted, bathroom and roof and terrace waterproofing, the stair plan area and
+the door and glazed-unit counts. Thirty-two rows are blocked and each names
+one next input.
+
+Grouping those asks collapses thirty-two blocked rows onto seventeen
+distinct inputs, and three of them carry most of the weight: the opening
+heights unblock eight rows, the stair section four, the finishes schedule
+three. Four vertical heights are asked for separately because they are
+different numbers, with a note that one building section would supply all of
+them. Nothing is requested that no named row needs.
+
+Readiness is reported per trade with no overall percentage, because the
+trades are blocked by different things and one number would hide which.
+External plaster, external paint and railings are `NOT_READY` and each needs
+a drawing this set does not contain. Frozen as
+`FREEZE_QORTUBA_PRICING_INPUT_MATRIX`, with the workbook written out in trade
+order as `QORTUBA_PRICING_INPUT_MATRIX.xlsx`.
