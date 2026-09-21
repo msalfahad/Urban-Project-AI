@@ -86,6 +86,9 @@ def test_a_height_exists_only_where_the_owner_default_may_reach():
             # an owner override is a real dimension and may reach any type
             assert r["HEIGHT_M"] == owner[r["OPENING_ID"]][0] and "OWNER" in r["HEIGHT_SOURCE"]
             continue
+        if r["TYPE"] == "WINDOW":
+            assert r["HEIGHT_M"] == OS.QORTUBA_WINDOW_HEIGHT_M
+            continue
         if r["OPENING_ID"] in OS.OWNER_CLOSED_AS_MEASUREMENT_OPENINGS:
             assert r["HEIGHT_M"] == OS.QORTUBA_WALL_HEIGHT_M
             continue
@@ -134,7 +137,7 @@ def test_a_window_with_a_sill_is_still_an_opening_in_the_wall_area():
     for s in sills:
         assert rows[s]["IS_AN_OPENING_THROUGH_THE_WALL"] is True, s
         assert rows[s]["INTERRUPTS_AT_FLOOR_LEVEL"] is False
-        assert rows[s]["STATUS"] == "OWNER_INPUT_REQUIRED"
+        assert rows[s]["STATUS"] == "USABLE", "the owner has supplied the height"
 
 
 def test_the_pdf_reading_is_recorded_as_evidence_and_not_as_a_dimension():
@@ -213,12 +216,15 @@ def test_the_aluminium_rows_are_schedules_and_never_bare_counts():
                 assert abs(row["AREA_M2"] - round(row["WIDTH_M"] * row["HEIGHT_M"], 4)) < 1e-9
 
 
-def test_a_window_without_a_height_stays_owner_input_required():
+def test_the_aluminium_schedule_is_complete_and_priced_from_the_plan_alone():
     x = by_id()["Q-15"]
-    assert x["STATUS"] == "OWNER_INPUT_REQUIRED" and x["MEASURED_NET_QUANTITY"] is None
-    assert x["RESOLVED"] == 0 and x["OPENINGS"] > 0
-    assert "forbids a default" in x["PARAMETER_SOURCE"]
+    assert x["STATUS"] == "FINAL_QUANTITY_AVAILABLE"
+    assert x["RESOLVED"] == x["OPENINGS"] == 6
     assert x["BOQ_ITEM"] == "ALUMINIUM_EXTERNAL_WINDOWS"
+    a = x["PRE_CONTRACT_ALUMINIUM"]
+    assert a["WINDOW_COUNT"] == 6 and a["WINDOW_AREA_M2"] == 17.2459
+    assert a["SLIDING_DOOR_COUNT"] == 0 and a["TOTAL_PRE_CONTRACT_AREA_M2"] == 17.2459
+    assert "architectural plan only" in a["BASIS"], "no supplier drawing exists in this workflow"
 
 
 def test_the_door_areas_sum_to_the_schedule():

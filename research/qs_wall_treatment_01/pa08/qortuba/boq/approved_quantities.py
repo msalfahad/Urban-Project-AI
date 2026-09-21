@@ -35,6 +35,8 @@ STATUS_MAP = {
     "PARTIALLY_CALCULATED": "PARTIAL",
     "OWNER_INPUT_REQUIRED": "OWNER_INPUT_REQUIRED",
     "PROJECT_RULE_REQUIRED": "SPEC_REQUIRED",
+    "PRICING_BASIS_REQUIRED": "PRICING_BASIS_REQUIRED",
+    "TRADE_CLASSIFICATION_PENDING": "TRADE_CLASSIFICATION_PENDING",
     "SPEC_REQUIRED": "SPEC_REQUIRED",
     "SOURCE_REQUIRED": "DRAWING_REQUIRED",
     "NOT_APPLICABLE": "NOT_APPLICABLE",
@@ -70,8 +72,11 @@ def records():
             "SUBITEM": x["QUANTITY_ID"],
             "MEASURED_QUANTITY": x["MEASURED_NET_QUANTITY"],
             "MEASURED_UNIT": x["UNIT"],
-            "FINAL_BOQ_QUANTITY": (x["MEASURED_NET_QUANTITY"]
-                                   if x["STATUS"] == "FINAL_QUANTITY_AVAILABLE" else None),
+            # §26: a complete measurement carries its quantity.  What is still missing is a rate convention or a
+            # trade name, and neither of those is a measurement
+            "FINAL_BOQ_QUANTITY": (x["MEASURED_NET_QUANTITY"] if x["STATUS"] in
+                                   ("FINAL_QUANTITY_AVAILABLE", "PRICING_BASIS_REQUIRED",
+                                    "TRADE_CLASSIFICATION_PENDING") else None),
             "BOQ_UNIT": x["UNIT"],
             "FORMULA": x["FORMULA"],
             "SOURCE": x["PARAMETER_SOURCE"],

@@ -154,6 +154,14 @@ QORTUBA_PROJECT_RULES = [
      "an EXPLICIT QORTUBA OWNER INPUT for the Master bedroom / Dressing room passage, rank 2 on the priority ladder.  "
      "It is not TD-02: the two figures coincide, and a coincidence is not a provenance.  If TD-02 ever moves, this "
      "does not"),
+    ("QP-22", "QORTUBA_WINDOW_HEIGHT", 1.500, "M", "FINAL COMPLETION §1",
+     "the owner sets 1.500 m for every Qortuba window whose height the drawing set does not state.  A "
+     "QORTUBA_PROJECT_INPUT for this project only: US-11 still forbids a default window height, so the next project "
+     "with a silent drawing is asked rather than given this number"),
+    ("QP-23", "QORTUBA_SLIDING_DOOR_HEIGHT", 2.200, "M", "FINAL COMPLETION §1",
+     "the owner gives 2.200 m for two roof-side sliding doors and one kitchen / pantry sliding door.  The frozen "
+     "SECOND FLOOR apartment register contains no sliding door of any kind, so this input binds nothing in this "
+     "scope.  It is stored, not discarded: no width is invented to make an opening exist"),
     ("QP-21", "OWNER_CONFIRMED_INTERNAL_DOOR_HEIGHT", 2.20, "M", "FINISHING MODE §1",
      "the owner has confirmed 2.20 m as the Qortuba internal door height where the drawing states none.  This is an "
      "OWNER_CONFIRMED_PROJECT_PARAMETER, rank 2 on the priority ladder - not a temporary default - so a quantity is "
@@ -526,6 +534,15 @@ def _pending_for(room_name, openings):
     return out
 
 
+# §26 FINAL COMPLETION: what a status means once measurement is finished.
+FINAL_STATUS_MEANING = {
+    "FINAL_QUANTITY_AVAILABLE": "FINAL_MEASURED_QUANTITY: the physical quantity is complete",
+    "PRICING_BASIS_REQUIRED": "the quantity is complete; the pricing UNIT the owner buys it in is not",
+    "TRADE_CLASSIFICATION_PENDING": "the quantity is complete; which commercial trade supplies it is not",
+    "PARTIALLY_CALCULATED": "something physical is genuinely still missing",
+}
+
+
 def st(residual):
     """FINISHING MODE §1/§2: a quantity is final when nothing is still missing from it.
 
@@ -761,7 +778,8 @@ def quantities(rooms, walls_calc, openings, floors, summ, ceil, glazed=None, cei
                        "PAINTRY side too, because the wall register puts the opening in that wall"))
     # ---- 6: blockwork
     by_t = defaultdict(lambda: {"L": 0.0, "G": 0.0, "D": 0.0, "F": 0, "P": 0, "FIN": 0.0, "PEND": 0.0,
-                                "REF_L": 0.0, "REF_N": 0, "CLASSES": set(), "AMB": 0.0})
+                                "REF_L": 0.0, "REF_N": 0, "CLASSES": set(), "AMB": 0.0,
+                                "MAXMOVE": 0.0, "PENDW": []})
     for w in walls_calc:
         b = by_t[str(int(w["THICKNESS_MM"]))]
         b["CLASSES"].add(w["PHYSICAL_OBJECT_CLASS"])
@@ -775,6 +793,10 @@ def quantities(rooms, walls_calc, openings, floors, summ, ceil, glazed=None, cei
             b["F"] += 1; b["FIN"] += w["NET_AREA_M2"]
         else:
             b["P"] += 1; b["PEND"] += w["GROSS_AREA_M2"] - w["OPENING_DEDUCTION_M2"]
+            # the figure can only fall, and only by the area of the openings that still have no height.  Reporting
+            # the whole wall as "still moving" overstates a bounded uncertainty by an order of magnitude.
+            b["MAXMOVE"] += sum(o["W"] for o in w["OPENINGS_PENDING"]) * 3.00
+            b["PENDW"] += [o["W"] for o in w["OPENINGS_PENDING"]]
     for t in sorted(by_t, key=lambda k: -by_t[k]["L"]):
         b = by_t[t]
         cls = sorted(b["CLASSES"])
@@ -792,20 +814,36 @@ def quantities(rooms, walls_calc, openings, floors, summ, ceil, glazed=None, cei
                  "WHY": "the two faces may be a doubled line rather than two sides of a wall, so which thickness item "
                         "this length bills under is not established.  The AREA does not move; the BOQ line might"}]
                if b["AMB"] > 0 else [])
-        final = b["P"] == 0 and not mine and not amb
+        # §18 FINAL COMPLETION: the physical area is finished once every opening in a masonry band has a height.
+        # A thickness group whose BOQ LINE is still under review is a commercial mapping question, not a measurement
+        # one, and a complete quantity is not called partial because its eventual category needs a look.
+        physical_final = b["P"] == 0 and not mine
         rows.append(q(f"Q-07-{t}", "مبانى", f"BLOCKWORK_{t}", b["FIN"] + b["PEND"], "M2",
-                      "FINAL_QUANTITY_AVAILABLE" if final else "PARTIALLY_CALCULATED",
+                      "FINAL_QUANTITY_AVAILABLE" if physical_final else "PARTIALLY_CALCULATED",
                       f"confirmed masonry only: {b['L']:.3f} m x 3.00 m = {b['G']:.4f} m2 gross, less {b['D']:.4f} m2 "
                       f"of full opening areas = {b['FIN'] + b['PEND']:.4f} m2",
-                      ["US-06", "QP-02", "QP-21"], "QP-02 height 3.00 m; TD-02 door height 2.20 m",
+                      ["US-06", "QP-02", "QP-21"], "QP-02 height 3.00 m; QP-21 door height 2.20 m",
                       temp=b["D"] > 0,
-                      residual=([] if b["P"] == 0 else [{"WALLS_WITH_AN_UNHEIGHTED_OPENING": b["P"],
-                                                         "AREA_STILL_MOVING_M2": r4(b["PEND"])}]) + mine + amb,
+                      residual=([] if b["P"] == 0 else
+                                [{"WALLS_WITH_AN_UNHEIGHTED_OPENING": b["P"],
+                                  "OPENING_WIDTHS_M": sorted(b["PENDW"], reverse=True),
+                                  "MAXIMUM_THE_FIGURE_CAN_STILL_FALL_M2": r4(b["MAXMOVE"]),
+                                  "WHY": "small gaps in masonry whose height the drawing never states.  The quantity "
+                                         "above already stands at its maximum: it can only fall, and only by the "
+                                         "bound shown"}]) + mine,
                       supersedes={"PREVIOUS": None, "UNIT": "M2",
                                   "WHY": "no blockwork area existed before: the height was missing and the deduction "
                                          "column was undecided.  US-06 and QP-02 settle both"},
                       extra={"EXCLUDED_AS_NOT_MASONRY": {"BANDS": b["REF_N"], "PLAN_LENGTH_M": r3(b["REF_L"]),
-                                                         "CLASSES": cls}},
+                                                         "CLASSES": cls},
+                             "PHYSICAL_QUANTITY_STATE": ("PHYSICAL_QUANTITY_FINAL" if physical_final
+                                                         else "PARTIALLY_CALCULATED"),
+                             "COMMERCIAL_ITEM_MAPPING": ("COMMERCIAL_ITEM_MAPPING_REVIEW" if amb else "SETTLED"),
+                             "COMMERCIAL_ITEM_MAPPING_NOTE": (amb[0]["WHY"] if amb else None),
+                             "AMBIGUOUS_THICKNESS_ITEM_LENGTH_M": (amb[0]["THICKNESS_ITEM_AMBIGUOUS_LENGTH_M"]
+                                                                   if amb else 0.0),
+                             "MAXIMUM_REMAINING_MOVEMENT_M2": r4(b["MAXMOVE"]),
+                             "LOWER_BOUND_M2": r4(b["FIN"] + b["PEND"] - b["MAXMOVE"])},
                       note=f"{b['F']} masonry bands are fully resolved and {b['P']} still carry an opening with no "
                            f"height; {b['REF_N']} band(s) at this spacing are not masonry and contribute nothing"))
     # ---- 7 and 8: plaster and paint, the same faces
@@ -895,7 +933,8 @@ def quantities(rooms, walls_calc, openings, floors, summ, ceil, glazed=None, cei
         # pricing basis (per door/set or by m2) and the internal glazing waits on its commercial trade.
         settled = sched and len(done) == len(sched)
         rows.append(q(qid, trade, item, area, "M2",
-                      "PROJECT_RULE_REQUIRED" if (settled and qid in ("Q-16", "Q-17")) else
+                      ("PRICING_BASIS_REQUIRED" if qid == "Q-16" else "TRADE_CLASSIFICATION_PENDING")
+                      if (settled and qid in ("Q-16", "Q-17")) else
                       "FINAL_QUANTITY_AVAILABLE" if settled else
                       "PARTIALLY_CALCULATED" if done else "OWNER_INPUT_REQUIRED",
                       " + ".join(f"{x['DESCRIPTION']} {x['WIDTH_M']:.3f} x "
@@ -925,6 +964,33 @@ def quantities(rooms, walls_calc, openings, floors, summ, ceil, glazed=None, cei
                                          "dependent wall deduction; which trade carries the product is not"}
                                  if qid == "Q-17" else
                                  {"VALUE": area, "STATE": "ESTABLISHED" if settled else "PENDING"}),
+                             "PRE_CONTRACT_ALUMINIUM": ({
+                                 "BASIS": "architectural plan only.  No supplier or shop drawing exists in this "
+                                          "workflow: the point of this schedule is to ask for quotations, not to "
+                                          "check one",
+                                 "BY_TYPE": {tt: {"COUNT": sum(1 for x in sched if x["TYPE"] == tt),
+                                                  "AREA_M2": round(sum(x["AREA_M2"] for x in sched
+                                                                       if x["TYPE"] == tt and x["AREA_M2"]), 4)}
+                                             for tt in sorted({x["TYPE"] for x in sched})},
+                                 "WINDOW_COUNT": sum(1 for x in sched if x["TYPE"] == "WINDOW"),
+                                 "WINDOW_AREA_M2": round(sum(x["AREA_M2"] for x in sched
+                                                             if x["TYPE"] == "WINDOW" and x["AREA_M2"]), 4),
+                                 "SLIDING_DOOR_COUNT": sum(1 for x in sched if x["TYPE"] == "SLIDING_DOOR"),
+                                 "SLIDING_DOOR_AREA_M2": round(sum(x["AREA_M2"] for x in sched
+                                                                   if x["TYPE"] == "SLIDING_DOOR" and x["AREA_M2"]),
+                                                               4),
+                                 "OTHER_EXTERNAL_COUNT": sum(1 for x in sched if x["TYPE"]
+                                                             not in ("WINDOW", "SLIDING_DOOR")),
+                                 "OTHER_EXTERNAL_AREA_M2": round(sum(x["AREA_M2"] for x in sched
+                                                                     if x["TYPE"] not in ("WINDOW", "SLIDING_DOOR")
+                                                                     and x["AREA_M2"]), 4),
+                                 "TOTAL_PRE_CONTRACT_AREA_M2": area,
+                                 "SLIDING_DOORS_IN_THIS_SCOPE": 0,
+                                 "WHY_NO_SLIDING_DOOR": "the owner gave 2.200 m for two roof-side sliding doors and "
+                                                        "one kitchen / pantry sliding door.  The frozen SECOND FLOOR "
+                                                        "apartment register contains none of them, and no width is "
+                                                        "invented to make one exist (QP-23)",
+                             } if qid == "Q-15" else None),
                              "TRADE_SEPARATION": "US-13: interior doors are PVC and are never billed as aluminium; "
                                                  "aluminium carries exterior openings only",
                              "COUNT_IS_NOT_THE_QUANTITY": "a count is a multiplier: the priced quantity is the sum of "
@@ -1133,6 +1199,7 @@ def finish():
     final = [x for x in qs if x["STATUS"] == "FINAL_QUANTITY_AVAILABLE"]
     partial = [x for x in qs if x["STATUS"] == "PARTIALLY_CALCULATED"]
     blocked = [x for x in qs if x["STATUS"] in ("SOURCE_REQUIRED", "SPEC_REQUIRED", "PROJECT_RULE_REQUIRED",
+                                                "PRICING_BASIS_REQUIRED", "TRADE_CLASSIFICATION_PENDING",
                                                 "OWNER_INPUT_REQUIRED")]
     na = [x for x in qs if x["STATUS"] == "NOT_APPLICABLE"]
     quant = {
@@ -1142,7 +1209,8 @@ def finish():
         "ROWS": qs, "COUNT": len(qs),
         "BY_STATUS": {k: sum(1 for x in qs if x["STATUS"] == k) for k in
                       ("FINAL_QUANTITY_AVAILABLE", "PARTIALLY_CALCULATED", "OWNER_INPUT_REQUIRED",
-                       "PROJECT_RULE_REQUIRED", "SPEC_REQUIRED", "SOURCE_REQUIRED", "NOT_APPLICABLE")},
+                       "PROJECT_RULE_REQUIRED", "PRICING_BASIS_REQUIRED", "TRADE_CLASSIFICATION_PENDING",
+                       "SPEC_REQUIRED", "SOURCE_REQUIRED", "NOT_APPLICABLE")},
         "FINAL": [{"QUANTITY_ID": x["QUANTITY_ID"], "BOQ_ITEM": x["BOQ_ITEM"],
                    "VALUE": x["MEASURED_NET_QUANTITY"], "UNIT": x["UNIT"]} for x in final],
         "PARTIAL": [{"QUANTITY_ID": x["QUANTITY_ID"], "BOQ_ITEM": x["BOQ_ITEM"],

@@ -45,7 +45,7 @@ def test_the_numbers_the_owner_already_has_do_not_move():
     """Every gap is answered, so every gap crop is retired - and its number stays out of circulation for good."""
     c = crops()
     assert c["ROWS"] == [] and c["COUNT"] == 0
-    assert c["RETIRED_NUMBERS"] == [7, 8, 9, 10, 11]
+    assert c["RETIRED_NUMBERS"] == [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
     folder = Path(PR.OUT_DIR) / "pa08_qortuba_boq" / "owner_question_crops"
     for n in c["RETIRED_NUMBERS"]:
         assert not (folder / f"QORTUBA_OPENING_{n}.png").exists(), "an answered question is not pictured as open"
@@ -101,7 +101,7 @@ def test_the_pvc_doors_are_physically_established_but_not_yet_priceable():
     assert x["FINAL_PRICING_QUANTITY"]["VALUE"] is None
     assert x["FINAL_PRICING_QUANTITY"]["STATE"] == "PROJECT_RULE_REQUIRED"
     assert x["FINAL_PRICING_QUANTITY"]["OPTIONS"] == ["per door", "per set", "by m2"]
-    assert x["STATUS"] == "PROJECT_RULE_REQUIRED"
+    assert x["STATUS"] == "PRICING_BASIS_REQUIRED", "the measurement is done; only the pricing unit is not"
 
 
 def test_the_internal_glazed_opening_has_its_area_but_not_its_trade():
@@ -109,10 +109,11 @@ def test_the_internal_glazed_opening_has_its_area_but_not_its_trade():
     assert abs(x["PHYSICAL_OPENING_AREA_M2"]["VALUE"] - 6.05) < 1e-9
     assert x["PHYSICAL_OPENING_AREA_M2"]["STATE"] == "ESTABLISHED"
     assert x["FINAL_PRICING_QUANTITY"]["VALUE"] is None
-    assert x["STATUS"] == "PROJECT_RULE_REQUIRED"
+    assert x["STATUS"] == "TRADE_CLASSIFICATION_PENDING"
     # the deduction it caused elsewhere stands: the wall really does have that hole in it
-    rooms = {r["ROOM_ID"]: r for r in reg("QORTUBA_ROOM_FINISH_AND_SKIRTING_RECALC")["ROWS"]}
-    assert any(abs(r["OPENING_DEDUCTION_M2"] - 6.05) < 1e-9 for r in rooms.values())
+    rooms = reg("QORTUBA_ROOM_FINISH_AND_SKIRTING_RECALC")["ROWS"]
+    charged = [o for r in rooms for o in r["OPENINGS_DEDUCTED"] if o["OPENING_ID"] == "OS-b5a0fbb335d4"]
+    assert len(charged) == 2 and all(abs(o["AREA_M2"] - 6.05) < 1e-9 for o in charged)
 
 
 def test_neither_pending_row_is_reported_as_a_final_quantity():

@@ -30,24 +30,29 @@ def rules():
 
 
 # ------------------------------------------------------------------ §1 no default window height
-def test_there_is_no_default_window_height_anywhere():
+def test_a_window_height_comes_from_the_owner_and_never_from_a_default():
+    """US-11 is unchanged: the engine still may not assume a window height.  The owner has supplied one."""
     us = {x["TITLE"] for x in rules()["URBAN_STANDARDS"]}
     assert "THERE_IS_NO_DEFAULT_WINDOW_HEIGHT" in us
-    for r in reg("QORTUBA_OPENING_REGISTER_COMPLETED")["ROWS"]:
-        if r["TYPE"] in ("WINDOW", "SLIDING_DOOR") and r["HEIGHT_M"] is not None:
-            raise AssertionError(f"{r['OPENING_ID']} was given a window height")
-    # the aluminium schedule shows an unanswered height as a question, never as a number
+    completed = reg("QORTUBA_OPENING_REGISTER_COMPLETED")
+    assert completed["QORTUBA_WINDOW_HEIGHT_IS_A_PROJECT_INPUT_NOT_AN_URBAN_DEFAULT"] is True
+    for r in completed["ROWS"]:
+        if r["TYPE"] in ("WINDOW", "SLIDING_DOOR"):
+            assert r["HEIGHT_M"] == 1.5, r["OPENING_ID"]
+            assert "QORTUBA_PROJECT_INPUT" in r["HEIGHT_SOURCE"], r["OPENING_ID"]
+            assert "not an Urban default" in r["HEIGHT_SOURCE"] or "US-11 still forbids" in r["HEIGHT_SOURCE"]
+    # and the schedule is now a set of areas rather than a set of questions
     alu = by_id()["Q-15"]
-    assert "height?" in alu["FORMULA"] and alu["MEASURED_NET_QUANTITY"] is None
+    assert alu["MEASURED_NET_QUANTITY"] == 17.2459
     for r in alu["SCHEDULE"]:
-        assert r["HEIGHT_M"] is None and r["AREA_M2"] is None
+        assert r["HEIGHT_M"] == 1.5 and r["AREA_M2"] is not None
 
 
-def test_a_window_without_a_height_is_owner_input_required_not_source_required():
-    assert by_id()["Q-15"]["STATUS"] == "OWNER_INPUT_REQUIRED"
+def test_the_aluminium_row_is_final_once_every_height_is_supplied():
+    assert by_id()["Q-15"]["STATUS"] == "FINAL_QUANTITY_AVAILABLE"
     for r in reg("QORTUBA_OPENING_REGISTER_COMPLETED")["ROWS"]:
         if r["TYPE"] == "WINDOW":
-            assert r["STATUS"] == "OWNER_INPUT_REQUIRED", r["OPENING_ID"]
+            assert r["STATUS"] == "USABLE", r["OPENING_ID"]
 
 
 # ------------------------------------------------------------------ §1/§8/§9 how the owner is asked
@@ -78,18 +83,19 @@ def test_the_questions_are_numbered_and_the_plan_is_numbered_the_same_way():
     # numbers are issued once and never reused, so an answered question leaves a gap rather than renumbering the rest
     assert nums == sorted(nums) and len(set(nums)) == len(nums)
     assert set(nums) <= set(OQ.ISSUED_NUMBERS.values())
-    # every opening question the owner has answered keeps its number out of circulation
-    assert oq["RETIRED_NUMBERS"] == [7, 8, 9, 10, 11]
+    # every measurement question is answered; the numbers stay retired and only the two commercial rows remain
+    assert oq["RETIRED_NUMBERS"] == [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+    assert nums == [12, 13]
     assert Path(oq["MARKED_PLAN"]).exists()
     assert OQ.PLAN.stat().st_size > 5000, "the marked plan is drawn, not a stub"
 
 
-def test_each_window_is_asked_on_its_own_row():
+def test_no_window_height_is_asked_for_any_more():
+    """Six windows were asked one at a time; all six are answered, so none is asked again."""
     oq = reg("QORTUBA_OWNER_QUESTIONS")
-    wins = [q for q in oq["ROWS"] if q["ASKS_FOR"] == "HEIGHT"]
-    assert len(wins) == 6 and len({q["AUDIT_OPENING_ID"] for q in wins}) == 6
+    assert not [q for q in oq["ROWS"] if q["ASKS_FOR"] == "HEIGHT"]
     assert oq["WINDOWS_ARE_NOT_GROUPED"]
-    assert oq["NO_HEIGHT_IS_ASSUMED_FOR_ANY_OF_THEM"] is True
+    assert set(oq["RETIRED_NUMBERS"]) >= {1, 2, 3, 4, 5, 6}
 
 
 def test_an_unresolved_gap_is_asked_in_words_not_as_a_hash():
@@ -118,10 +124,13 @@ def test_the_hall_pantry_opening_is_2750_by_2200():
 
 def test_both_sides_of_a_shared_opening_lose_the_area():
     rooms = {x["ROOM"]: x for x in reg("QORTUBA_ROOM_FINISH_AND_SKIRTING_RECALC")["ROWS"]}
-    assert abs(rooms["PAINTRY"]["OPENING_DEDUCTION_M2"] - 6.05) < 1e-9
-    # the Hall also loses the 3.600 m2 full-height passage to the Lobby, so its deduction is 14.025 + 3.600
-    # the Hall also loses the 3.600 m2 passage to the Lobby and the 8.100 m2 full-height opening to the Bedroom
-    assert abs(rooms["HALL / whgm"]["OPENING_DEDUCTION_M2"] - 25.725) < 1e-9
+    # the Pantry loses the 6.050 m2 glazing plus its own 2.4165 m2 window
+    assert abs(rooms["PAINTRY"]["OPENING_DEDUCTION_M2"] - 8.4665) < 1e-9
+    ded = {o["OPENING_ID"] for o in rooms["PAINTRY"]["OPENINGS_DEDUCTED"]}
+    assert "OS-b5a0fbb335d4" in ded and "BE-02" in ded
+    # the Hall loses the glazing, the 3.600 m2 passage to the Lobby, the 8.100 m2 opening to the Bedroom,
+    # a 1.760 m2 door and its own 3.5196 m2 window
+    assert abs(rooms["HALL / whgm"]["OPENING_DEDUCTION_M2"] - 29.2446) < 1e-9
 
 
 # ------------------------------------------------------------------ §3 PVC is not aluminium

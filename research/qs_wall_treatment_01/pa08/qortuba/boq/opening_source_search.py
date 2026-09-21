@@ -73,6 +73,30 @@ OWNER_SUPPLIED_HEIGHTS = {
                                "high, so its physical opening is 2.750 x 2.200 = 6.050 m2"),
 }
 
+# FINAL PROJECT COMPLETION §1: the owner has given the height of every Qortuba window whose height the drawing set
+# never stated.  This is a QORTUBA_PROJECT_INPUT and it is deliberately NOT an Urban default: US-11 still forbids
+# assuming a window height, and the next project with a silent drawing gets the question, not this number.
+QORTUBA_WINDOW_HEIGHT_M = 1.500
+QORTUBA_WINDOW_HEIGHT_WHY = ("FINAL PROJECT COMPLETION §1: the owner sets 1.500 m for the Qortuba windows whose "
+                             "height the drawing set does not state.  A QORTUBA_PROJECT_INPUT for this project only - "
+                             "US-11 still forbids a default window height, and a future project is asked, not told")
+
+# The owner also gave 2.200 m for two roof-side sliding doors and one kitchen/pantry sliding door.  The frozen
+# SECOND_FLOOR apartment takeoff contains no sliding door of any kind, so these heights bind nothing here.  They are
+# stored rather than discarded: if a later scope brings those openings in, the answer is already on file.
+QORTUBA_SLIDING_DOOR_HEIGHT_M = 2.200
+SLIDING_DOOR_INPUTS = {
+    "ROOF_SIDE_SLIDING_DOORS": {"HEIGHT_M": 2.200, "COUNT_STATED_BY_OWNER": 2,
+                                "PRESENT_IN_THIS_SCOPE": False,
+                                "WHY": "the frozen scope is the SECOND FLOOR apartment; no roof-side sliding door "
+                                       "appears in its opening register, and the roof level is a different storey"},
+    "KITCHEN_PANTRY_SLIDING_DOOR": {"HEIGHT_M": 2.200, "COUNT_STATED_BY_OWNER": 1,
+                                    "PRESENT_IN_THIS_SCOPE": False,
+                                    "WHY": "the Pantry has one external opening in the frozen register and it is a "
+                                           "window, BE-02 at 1.611 m wide, not a sliding door.  No width for a "
+                                           "pantry sliding door exists in the source, and none is invented"},
+}
+
 # OPEN-PASSAGE RULE CORRECTION: the owner has identified two of the five unresolved gaps.  This is an OWNER
 # OVERRIDE, rank 2 on the priority ladder, and it settles the TYPE only - the vertical condition is a separate
 # question, and until it is answered no height may be taken from anywhere, least of all from the door default.
@@ -297,16 +321,16 @@ def completed_register():
             "TYPE": BLUE_TYPE[b["TYPE"]],
             "TYPE_SOURCE": None,
             "WIDTH_M": round(b["WIDTH_MM"] / 1000, 4),
-            "HEIGHT_M": None,
+            "HEIGHT_M": (QORTUBA_WINDOW_HEIGHT_M if BLUE_TYPE[b["TYPE"]] == "WINDOW" else None),
             "OPEN_PASSAGE_SUBTYPE": None,
-            "REVEAL_SIDES": None,
-            "HEIGHT_STATUS": None,
+            "REVEAL_SIDES": (["LEFT", "RIGHT", "TOP"] if BLUE_TYPE[b["TYPE"]] == "WINDOW" else None),
+            "HEIGHT_STATUS": ("ANSWERED_BY_OWNER" if BLUE_TYPE[b["TYPE"]] == "WINDOW" else None),
             "WIDTH_SOURCE": "DWG blue element frame width",
-            "HEIGHT_SOURCE": None,
+            "HEIGHT_SOURCE": (QORTUBA_WINDOW_HEIGHT_WHY if BLUE_TYPE[b["TYPE"]] == "WINDOW" else None),
             # a window with a sill IS an opening through the wall; it simply does not reach the floor
             "IS_AN_OPENING_THROUGH_THE_WALL": True,
             "INTERRUPTS_AT_FLOOR_LEVEL": not b["WALL_BELOW"],
-            "STATUS": "OWNER_INPUT_REQUIRED",
+            "STATUS": ("USABLE" if BLUE_TYPE[b["TYPE"]] == "WINDOW" else "OWNER_INPUT_REQUIRED"),
             "EVIDENCE": b["WHY"],
             "SITE_STATUS": None, "SITE_CLASS": None, "PDF_READER": None,
             "WHY_NOT_AN_OPENING": ("wall stands below this glazing, so it does not interrupt the wall at floor level; "
@@ -358,6 +382,10 @@ def finish_register():
         "OPEN_PASSAGES_NEVER_ENTER_A_PROCUREMENT_SCHEDULE": True,
         "OWNER_SUPPLIED_TYPES": {k: v[0] for k, v in OWNER_SUPPLIED_TYPES.items()},
         "OWNER_SUPPLIED_HEIGHTS": {k: v[0] for k, v in OWNER_SUPPLIED_HEIGHTS.items()},
+        "QORTUBA_WINDOW_HEIGHT_M": QORTUBA_WINDOW_HEIGHT_M,
+        "QORTUBA_WINDOW_HEIGHT_IS_A_PROJECT_INPUT_NOT_AN_URBAN_DEFAULT": True,
+        "SLIDING_DOOR_INPUTS": SLIDING_DOOR_INPUTS,
+        "SLIDING_DOORS_IN_THIS_SCOPE": sum(1 for r in rows if r["TYPE"] == "SLIDING_DOOR"),
         "DEFAULT_APPLIED_ONLY_TO_ORDINARY_DOORS": True,
         "RULE": "an actual source dimension overrides a default; the 1.00 x 2.20 m default reaches ordinary doors only "
                 "and never a window, a sliding door or a glazed opening.  Every Qortuba door width is source "

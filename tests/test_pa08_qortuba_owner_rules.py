@@ -90,13 +90,18 @@ def test_no_default_height_reaches_a_window_a_sliding_door_or_an_unknown():
         if (x["OPENING_ID"] in OS.OWNER_SUPPLIED_PASSAGE_SUBTYPES
                 or x["OPENING_ID"] in OS.OWNER_CLOSED_AS_MEASUREMENT_OPENINGS):
             continue  # so is a passage or full-height opening the owner closed
-        # otherwise a height exists only on an ordinary door, and only from the owner's default
+        if x["TYPE"] == "WINDOW":
+            # the owner supplied 1.500 m as a Qortuba project input; the engine still assumes nothing
+            assert x["HEIGHT_M"] == OS.QORTUBA_WINDOW_HEIGHT_M, x["OPENING_ID"]
+            continue
+        # otherwise a height exists only on an ordinary door, and only from the owner's confirmed parameter
         assert x["TYPE"] == "DOOR" and x["HEIGHT_M"] == 2.20, x["OPENING_ID"]
-        assert x["HEIGHT_STATE"] == "TEMPORARY_OWNER_DEFAULT"
     for x in o["ROWS"]:
         if x["OPENING_ID"] in owner:
             continue
-        assert not (x["TYPE"] in OR.NO_DEFAULT_FOR and x["HEIGHT_M"] is not None), x["OPENING_ID"]
+        # a type on the no-default list may carry a height only where the OWNER supplied one, never a default
+        if x["TYPE"] in OR.NO_DEFAULT_FOR and x["HEIGHT_M"] is not None:
+            assert x["TYPE"] == "WINDOW" and x["HEIGHT_M"] == OS.QORTUBA_WINDOW_HEIGHT_M, x["OPENING_ID"]
 
 
 def test_a_source_width_is_never_replaced_by_the_default_width():

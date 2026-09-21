@@ -63,12 +63,15 @@ def test_an_opening_is_attributed_to_the_rooms_it_joins_not_to_the_band_s_whole_
     assert rules["QORTUBA_OPENING_ROOM_ATTRIBUTION"]["VALUE"] == "THE_TWO_ROOMS_IT_JOINS"
 
 
-def test_the_pantry_window_still_blocks_the_pantry_because_it_really_is_there():
-    """Removing false dependencies must not remove true ones."""
+def test_the_pantry_window_is_deducted_from_the_pantry_because_it_really_is_there():
+    """Removing false dependencies must not remove true ones: the pantry window is in the pantry wall."""
+    rooms = {r["ROOM_NAME"]: r for r in reg("QORTUBA_ROOM_FINISH_AND_SKIRTING_RECALC")["ROWS"]}
+    ded = {o["OPENING_ID"]: o for o in rooms["PAINTRY"]["OPENINGS_DEDUCTED"]}
+    assert "BE-02" in ded and ded["BE-02"]["AREA_M2"] == 2.4165
     q = by_id()
     for qid in ("Q-06", "Q-10"):
-        named = {o.get("OPENING_ID") for o in q[qid]["RESIDUAL_OPENINGS"]}
-        assert "BE-02" in named, f"{qid} genuinely waits on the pantry window height"
+        assert q[qid]["STATUS"] == "FINAL_QUANTITY_AVAILABLE", f"{qid} is finished now its window has a height"
+        assert q[qid]["RESIDUAL_OPENINGS"] == []
 
 
 # ------------------------------------------------------------------ a number is a name
@@ -78,7 +81,7 @@ def test_a_question_number_is_issued_once_and_never_reused():
     issued = set(OQ.ISSUED_NUMBERS.values())
     assert live <= issued
     assert oq["RETIRED_NUMBERS"] == sorted(issued - live)
-    assert set(oq["RETIRED_NUMBERS"]) == {7, 8, 9, 10, 11}, "every answered opening keeps its number retired"
+    assert set(oq["RETIRED_NUMBERS"]) == set(range(1, 12)), "every answered opening keeps its number retired"
     # and the numbers that remain still name the same openings they always named
     by_n = {q["#"]: q["AUDIT_OPENING_ID"] for q in oq["ROWS"]}
     for oid, n in OQ.ISSUED_NUMBERS.items():
@@ -106,9 +109,11 @@ def test_nothing_leaves_the_engine_approved():
     assert e["BY_APPROVAL"] == {"DRAFT": e["COUNT"]}
 
 
-def test_only_a_final_row_carries_a_payable_quantity():
+def test_only_a_completed_measurement_carries_a_payable_quantity():
+    """A complete measurement carries its quantity even where the pricing unit or the trade is undecided."""
+    done = ("FINAL", "PRICING_BASIS_REQUIRED", "TRADE_CLASSIFICATION_PENDING")
     for r in reg("APPROVED_QUANTITIES")["ROWS"]:
-        if r["STATUS"] == "FINAL":
+        if r["STATUS"] in done:
             assert r["FINAL_BOQ_QUANTITY"] is not None and r["FINAL_BOQ_QUANTITY"] == r["MEASURED_QUANTITY"]
         else:
             assert r["FINAL_BOQ_QUANTITY"] is None, r["SUBITEM"]
@@ -152,7 +157,7 @@ def test_a_measured_quantity_is_not_a_pricing_basis():
     assert abs(x["PHYSICAL_OPENING_AREA_M2"]["VALUE"] - 16.665) < 1e-9
     assert x["FINAL_PRICING_QUANTITY"]["VALUE"] is None
     assert x["FINAL_PRICING_QUANTITY"]["STATE"] == "PROJECT_RULE_REQUIRED"
-    assert x["STATUS"] == "PROJECT_RULE_REQUIRED", "a settled measurement does not settle a pricing unit"
+    assert x["STATUS"] == "PRICING_BASIS_REQUIRED", "a settled measurement does not settle a pricing unit"
 
 
 def test_the_bedroom_lobby_door_attribution_stays_corrected():
@@ -162,7 +167,7 @@ def test_the_bedroom_lobby_door_attribution_stays_corrected():
     assert set(d["ROOMS_FOR_DEDUCTION"]) == {"BED.ROOM", "UNLABELLED_INTERNAL_SPACE"}
     assert "BATH" not in d["ROOMS_FOR_DEDUCTION"]
     q = by_id()
-    assert q["Q-08"]["MEASURED_NET_QUANTITY"] == 283.0025 == q["Q-09"]["MEASURED_NET_QUANTITY"]
+    assert q["Q-08"]["MEASURED_NET_QUANTITY"] == 268.1731 == q["Q-09"]["MEASURED_NET_QUANTITY"]
 
 
 # ------------------------------------------------------------------ FINISHING MODE §5 the final batch
@@ -171,11 +176,11 @@ def test_the_final_batch_asks_for_everything_still_needed_and_nothing_else():
     by_kind = {}
     for q in oq["ROWS"]:
         by_kind.setdefault(q["ASKS_FOR"], []).append(q["#"])
-    assert sorted(by_kind["HEIGHT"]) == [1, 2, 3, 4, 5, 6], "the six window heights"
+    assert "HEIGHT" not in by_kind, "every window height is answered"
     assert "TYPE" not in by_kind, "every gap is closed; no architectural type is still being asked"
     assert by_kind["TRADE"] == [12], "the internal glazing trade"
     assert by_kind["PRICING_BASIS"] == [13], "the PVC pricing basis"
-    assert len(oq["ROWS"]) == 8
+    assert len(oq["ROWS"]) == 2, "nothing about measurement is still being asked"
 
 
 def test_a_pricing_question_is_marked_as_one_and_holds_up_no_measurement():
@@ -184,7 +189,7 @@ def test_a_pricing_question_is_marked_as_one_and_holds_up_no_measurement():
     assert len(pricing) == 1 and pricing[0]["ASKS_FOR"] == "PRICING_BASIS"
     assert oq["PRICING_INPUTS"] == 1
     assert oq["TRADE_CLASSIFICATION_INPUTS"] == 1
-    assert oq["QUANTITY_MEASUREMENT_INPUTS"] == 6
+    assert oq["QUANTITY_MEASUREMENT_INPUTS"] == 0
     assert "NOT a measurement question" in pricing[0]["WHY_IT_MATTERS"]
     # and nothing in the takeoff names it as an outstanding opening
     waiting = {o.get("OPENING_ID") for x in reg("QORTUBA_RECALCULATED_QUANTITIES_V1")["ROWS"]
@@ -239,6 +244,6 @@ def test_the_two_bedroom_gaps_interrupt_no_measured_apartment_path():
 
 def test_a_reveal_follows_a_deduction_and_never_leads_it():
     q = by_id()["Q-08"]
-    assert "7 dry-to-dry opening reveals" in q["FORMULA"]
+    assert "dry-to-dry opening reveals" in q["FORMULA"]
     # the two bedroom gaps deduct from no room, so they add no reveal either
-    assert q["MEASURED_NET_QUANTITY"] == 283.0025
+    assert q["MEASURED_NET_QUANTITY"] == 268.1731

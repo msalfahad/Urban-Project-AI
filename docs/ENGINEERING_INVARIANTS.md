@@ -5091,3 +5091,58 @@ the lookup found nothing, which is not the same as there being nothing, so
 the existing attribution stands and the row records which basis was used. A
 silent miss that deletes a deduction is worse than the coarse answer it
 replaced.
+
+## §244 — A project input is not a standard
+
+The owner set 1.500 m as the height of every Qortuba window the drawing set
+never dimensioned. That is a QORTUBA_PROJECT_INPUT at rank 2 on the ladder,
+and it is deliberately not promoted: US-11 still forbids assuming a window
+height, so the next project with a silent drawing gets the question, not
+this number.
+
+The distinction costs nothing to keep and is the whole difference between a
+decision and a habit. A number that was right once for one flat becomes
+wrong the moment it is applied to a building nobody measured.
+
+## §245 — An answer for an opening that is not there invents nothing
+
+The owner also gave 2.200 m for two roof-side sliding doors and a
+kitchen/pantry sliding door. The frozen SECOND FLOOR apartment register
+contains no sliding door of any kind — the Pantry's one external opening is
+a 1.611 m window — and the roof is a different storey.
+
+So the heights are stored and bind nothing here. No width is conjured up to
+give them something to multiply, and no opening is reclassified to make the
+answer fit. An input that arrives for a thing the scope does not contain is
+recorded with PRESENT_IN_THIS_SCOPE false and a reason, so that a later
+scope finds the answer already on file and this scope stays honest.
+
+## §246 — Bound an uncertainty instead of leaving it open
+
+Five small gaps in masonry — one at 0.600 m and four at 0.150 m — have no
+height anywhere in the drawing. The blockwork rows had been reporting the
+whole area of every wall containing one as "still moving", which overstated
+a bounded uncertainty by an order of magnitude.
+
+A figure that can only fall, and only by the area of the openings that still
+lack a height, has a computable floor. The rows now carry
+MAXIMUM_REMAINING_MOVEMENT_M2 and LOWER_BOUND_M2: 200 mm blockwork is
+218.4942 m² and cannot fall below 216.2442; 150 mm is 128.870 and cannot
+fall below 127.520. Under 1% either way.
+
+A bounded uncertainty can be priced. An unbounded one stops the job.
+
+## §247 — A benchmark validates; it never corrects
+
+The contractor measured the same flat under his own commercial convention
+and our figures come from the drawing under Urban's rules. Neither was
+fitted to the other, which is the only reason the comparison is worth
+anything: hidden skirting 76.389 lm against his 76.90, and the profile the
+same — two independent measurements of one path agreeing to 0.66%.
+
+Where they differ, our number does not move. His bundled wet-area line is
+159.28 m² against our 139.431 across four separately measured items; that is
+a scope and height-basis difference to be understood, not a target. And
+where he bills something we never measured — corners, grooves, chamfers — the
+row is NOT_COMPARABLE and stays empty. Inventing a trim length to close a
+gap against a benchmark is precisely the failure a benchmark exists to catch.

@@ -1025,3 +1025,34 @@ passages.
 Hidden skirting and hidden profile settle at **76.389 lm**; plaster and
 paint at **283.0025 m²** each. Thirteen quantities are final. The only
 measurement questions left are the six window heights.
+
+### Qortuba complete: the pre-pricing takeoff
+
+The owner supplied the last heights: 1.500 m for every window the drawing
+never dimensioned, as a Qortuba project input rather than an Urban default
+(§244). With that, every opening in the frozen register has a height and
+every measurable quantity is measured.
+
+Eighteen quantities are FINAL_MEASURED_QUANTITY. One is
+PRICING_BASIS_REQUIRED (seven PVC doors, 16.665 m², waiting on per door /
+per set / by m²) and one is TRADE_CLASSIFICATION_PENDING (the 6.050 m²
+internal glazing). The two blockwork rows are physically complete to within
+a stated bound: five small gaps in masonry have no height, so 200 mm stands
+at 218.4942 m² with a floor of 216.2442 and 150 mm at 128.870 with a floor
+of 127.520 (§246).
+
+The aluminium package is a pre-contract takeoff from the architectural plan
+alone — six windows, 17.2459 m² — built to request quotations rather than to
+check one. The owner's sliding-door heights are stored but bind nothing:
+this storey has no sliding door, and none was invented to use them (§245).
+
+`QORTUBA_FINAL_PRE_PRICING_TAKEOFF` is sealed at 22 rows with no rate and no
+waste, so a price can never quietly move a measurement.
+
+The contractor's own sheet, measured independently, sits beside it as
+validation only (§247). Hidden skirting 76.389 lm against his 76.90 and the
+profile the same — 0.66% apart on two independent measurements of one path.
+Dry floor 108.9625 against 107.76, 1.12%. His bundled wet line is 12.5%
+above our four separate items, a scope and height-basis difference. His
+corner and chamfer trims are NOT_COMPARABLE: we never measured a corner
+length, and none was invented to close the gap.

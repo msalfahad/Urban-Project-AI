@@ -37,12 +37,15 @@ THIN = Border(*[Side(style="thin", color="BFC9D4")] * 4)
 STATUS_FILL = {"FINAL_QUANTITY_AVAILABLE": GREEN, "PARTIALLY_CALCULATED": MINT, "ONE_INPUT_REQUIRED": CREAM,
                "PROJECT_RULE_REQUIRED": BLUE, "SPEC_REQUIRED": PEACH, "DRAWING_REQUIRED": PEACH,
                "SOURCE_REQUIRED": PEACH, "NOT_APPLICABLE": GREY, "CLOSED_BY_OWNER_RULE": GREY,
-               "GEOMETRIC_REFERENCE_ONLY": GREY, "OWNER_INPUT_REQUIRED": PEACH}
+               "GEOMETRIC_REFERENCE_ONLY": GREY, "OWNER_INPUT_REQUIRED": PEACH,
+               "PRICING_BASIS_REQUIRED": BLUE, "TRADE_CLASSIFICATION_PENDING": BLUE}
 STATUS_AR = {"FINAL_QUANTITY_AVAILABLE": "كمية نهائية جاهزة", "PARTIALLY_CALCULATED": "محسوبة جزئياً",
              "ONE_INPUT_REQUIRED": "ينقصه مُدخل واحد", "PROJECT_RULE_REQUIRED": "ينقصه قرار قاعدة",
              "SPEC_REQUIRED": "ينقصه مواصفة", "DRAWING_REQUIRED": "ينقصه مخطط", "SOURCE_REQUIRED": "ينقصه مصدر",
              "NOT_APPLICABLE": "لا ينطبق", "CLOSED_BY_OWNER_RULE": "مغلق بقاعدة المالك",
-             "GEOMETRIC_REFERENCE_ONLY": "مرجع هندسي فقط", "OWNER_INPUT_REQUIRED": "بانتظار قرار المالك"}
+             "GEOMETRIC_REFERENCE_ONLY": "مرجع هندسي فقط", "OWNER_INPUT_REQUIRED": "بانتظار قرار المالك",
+             "PRICING_BASIS_REQUIRED": "الكمية نهائية / ينقصه أساس التسعير",
+             "TRADE_CLASSIFICATION_PENDING": "الكمية نهائية / ينقصه تصنيف البند"}
 
 # §9/§W: the fifteen columns, in the order the house bills use
 COLS = ["البند", "الوصف", "وحدة التسعير", "كمية القياس", "وحدة القياس", "قاعدة التحويل", "الكمية النهائية",
@@ -127,7 +130,11 @@ def bill_rows(qs, cm):
             "TRADE": x["TRADE"], "ID": x["QUANTITY_ID"], "ITEM": x["BOQ_ITEM"], "UNIT": x["UNIT"],
             "MEASURED": x["MEASURED_NET_QUANTITY"], "MEASURED_UNIT": x["UNIT"],
             "FORMULA": x["FORMULA"],
-            "FINAL": (x["MEASURED_NET_QUANTITY"] if x["STATUS"] == "FINAL_QUANTITY_AVAILABLE" else None),
+            # a measurement that is complete carries its quantity, even where the pricing unit or the trade is not
+            # yet decided: the empty columns to its right are the ones still waiting
+            "FINAL": (x["MEASURED_NET_QUANTITY"] if x["STATUS"] in
+                      ("FINAL_QUANTITY_AVAILABLE", "PRICING_BASIS_REQUIRED", "TRADE_CLASSIFICATION_PENDING")
+                      else None),
             "SOURCE": "QORTUBA_QS01 (frozen) + " + rules,
             "COMMERCIAL": rules, "STATUS": x["STATUS"], "NOTE": note,
         })
