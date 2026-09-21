@@ -75,6 +75,30 @@ URBAN_STANDARDS = [
      "normal skirting is one linear-metre item, and on the same pricing basis its unit rate is half the hidden skirting "
      "rate.  This is a rate rule and it changes no quantity; an explicit project rate overrides it",
      "D2", []),
+    ("US-11", "THERE_IS_NO_DEFAULT_WINDOW_HEIGHT",
+     "a window, sliding door or glazed opening whose height is absent from the source is OWNER_INPUT_REQUIRED.  No "
+     "figure is assumed for it - not 1.50 m, not 1.20 m, not anything - and the owner is asked",
+     "V2 §1", []),
+    ("US-12", "ASK_IN_WORDS_A_PERSON_CAN_ACT_ON",
+     "an owner is never asked about an internal identifier.  Every question names the room, the opening type, the "
+     "width and what the opening joins; where that is still ambiguous a numbered plan crop is produced.  The opaque "
+     "id stays in the audit column",
+     "V2 §1, §8, §9", []),
+    ("US-13", "INTERIOR_DOORS_ARE_PVC_EXTERIOR_OPENINGS_ARE_ALUMINIUM",
+     "interior doors - bedrooms, bathrooms, internal service rooms and any other internal door - are PVC and are "
+     "billed as their own schedule.  Aluminium carries exterior doors, windows and exterior sliding systems only, and "
+     "internal door area is never called an aluminium quantity",
+     "V2 §3", ["the single aluminium doors row of OWNER RULES V1"]),
+    ("US-14", "WATERPROOFING_ROOM_TYPES_ARE_ENUMERATED",
+     "bathroom, WC, shower, kitchen, pantry / preparation kitchen, iron room, washing room and laundry all receive "
+     "waterproofing: a floor membrane by area and an upturn of 0.15 m along the GROSS room perimeter, doorways not "
+     "deducted, unless a project specification explicitly overrides it",
+     "V2 §4", ["US-04 and US-05 are widened, not replaced: the method is unchanged and the room list is now explicit"]),
+    ("US-15", "A_CEILING_IS_PRICED_BY_AREA_UNTIL_A_CEILING_DRAWING_EXISTS",
+     "the ceiling is one priced line in m2 over the established ceiling plan area.  Cornice, cove lighting, bulkheads, "
+     "shadow gaps, decorative perimeters and gypsum feature lengths are NOT_ESTABLISHED and are never inferred from a "
+     "room perimeter",
+     "V2 §7", ["R-23 and R-24 as PAYABLE items: the historical cornice run is precedent, not a Qortuba quantity"]),
     ("US-10", "SOURCE_DIMENSIONS_OVERRIDE_DEFAULTS",
      "an actual drawing dimension is never overwritten by a default, and a default never becomes source truth",
      "A, G", []),
@@ -103,6 +127,19 @@ QORTUBA_PROJECT_RULES = [
      "the payable hidden skirting path, fixed by the owner under QP-09"),
     ("QP-11", "QORTUBA_HIDDEN_PROFILE_PATH", 86.589, "LM", "owner confirmation",
      "the payable hidden profile path: the same path as QP-10, issued as a separate BOQ item under US-08"),
+    ("QP-12", "QORTUBA_HALL_PANTRY_GLAZED_OPENING_HEIGHT", 2.200, "M", "V2 §2",
+     "the owner has given the height of the glazed opening between the Hall and the Pantry.  This is a real dimension "
+     "under an owner override, not a default, so 2.750 x 2.200 = 6.050 m2 is deducted from every dependent wall area"),
+    ("QP-13", "QORTUBA_PANTRY_WATERPROOFING", "APPLIES", None, "V2 §4",
+     "the Pantry receives waterproofing under US-14: a floor membrane over its measured area and an upturn along its "
+     "GROSS perimeter, which is not the skirting path"),
+    ("QP-14", "QORTUBA_DRY_FLOOR_FINISH", "PORCELAIN", None, "V2 §6",
+     "the dry internal floor finish is porcelain, which releases the dry floor area that was waiting on a schedule"),
+    ("QP-15", "QORTUBA_CEILING_BASIS", "AREA_ONLY", "M2", "V2 §7",
+     "the ceiling is priced by area alone for this project; no decor length is carried"),
+    ("QP-16", "QORTUBA_INTERIOR_DOORS", "PVC", None, "V2 §3",
+     "all seven Qortuba apartment doors are interior - each is seen from two apartment rooms on the frozen floor-level "
+     "boundary - so all seven are PVC and none belongs to the aluminium package"),
 ]
 
 # ---------------------------------------------------------------------------- §G the one temporary default
@@ -282,9 +319,16 @@ def opening_register(walls, blue):
 
 
 # ---------------------------------------------------------------------------- the per-room arithmetic
-def room_rows(skirt, openings, glazed=None):
+def room_rows(skirt, openings, glazed=None, human=None):
     """One row per interior room, built only from its frozen boundary segments."""
     door_h = TEMPORARY_DEFAULTS[1][2]
+    # every opening that has a height, charged to the rooms that actually lose wall area to it
+    ded = defaultdict(list)
+    for h in (human or []):
+        if h["HEIGHT_M"] is None or not h["IS_AN_OPENING_THROUGH_THE_WALL"]:
+            continue
+        for rid in h["ROOM_IDS_FOR_DEDUCTION"]:
+            ded[rid].append(h)
     by_room = defaultdict(list)
     for g in (glazed or []):
         if g.get("ROOM_ID") and g["WALL_BELOW"]:
@@ -324,6 +368,10 @@ def room_rows(skirt, openings, glazed=None):
             "HIDDEN_PROFILE_LM_IF_ALL_WINDOW_WIDTHS_DEDUCTED": r3(skirting_all),
             "GROSS_WALL_AREA_M2": r4(gross * 3.0),
             "DOOR_DEDUCTION_M2": r4(sum(d * door_h for d in doors)),
+            "OPENING_DEDUCTION_M2": r4(sum(h["WIDTH_M"] * h["HEIGHT_M"] for h in ded.get(x["ROOM_ID"], []))),
+            "OPENINGS_DEDUCTED": [{"OPENING_ID": h["OPENING_ID"], "DESCRIPTION": h["DESCRIPTION"],
+                                   "W": h["WIDTH_M"], "H": h["HEIGHT_M"],
+                                   "AREA_M2": r4(h["WIDTH_M"] * h["HEIGHT_M"])} for h in ded.get(x["ROOM_ID"], [])],
             "GLAZED_DEDUCTION_M2": None if glaz else 0.0,
             "GLAZED_PENDING_WIDTH_M": r3(sum(glaz)) or None,
             "SKIRTING_ARITHMETIC": (f"{gross:.3f} gross wall line - {sum(doors):.3f} doors - {sum(glaz):.3f} glazed "
@@ -421,7 +469,7 @@ def q(qid, trade, item, value, unit, status, formula, rules, param_source, rooms
     }
 
 
-def quantities(rooms, walls_calc, openings, floors, summ, ceil, glazed=None):
+def quantities(rooms, walls_calc, openings, floors, summ, ceil, glazed=None, ceil_rows=(), human_reg=()):
     door_h = TEMPORARY_DEFAULTS[1][2]
     dry = [r for r in rooms if r["FINISH_CLASS"] == "DRY_ROOM"]
     cer = [r for r in rooms if r["FINISH_CLASS"] == "CERAMIC_SERVICE_ROOM"]
@@ -517,6 +565,30 @@ def quantities(rooms, walls_calc, openings, floors, summ, ceil, glazed=None):
                   supersedes={"PREVIOUS": summ["H_TOTAL_BATHROOM_HOST_WALL_LM"]["VALUE"], "UNIT": "LM",
                               "WHY": "the earlier figure was the door-deducted host-wall path.  US-05 forbids breaking "
                                      "the membrane at a threshold, so the 2.625 lm of doorway is restored"}))
+    serv_perim = sum(r["GROSS_WALL_LINE_LM"] for r in serv)
+    rows.append(q("Q-03P", "عازل حمام+مطابخ", "PANTRY_WATERPROOFING_FLOOR", serv_floor, "M2",
+                  "FINAL_QUANTITY_AVAILABLE",
+                  " + ".join(f"{f['ROOM']} {f['METHOD_A_CAD_POLYGON_AREA_M2']}" for f in floors
+                             if f["ROOM"].split(" /")[0] in CERAMIC_ROOM_NAMES and f["WET_OR_DRY"] == "DRY")
+                  + f" = {serv_floor} m2",
+                  ["US-14", "QP-13"], "frozen floor polygons, unchanged", rooms=[r["ROOM_NAME"] for r in serv],
+                  supersedes={"PREVIOUS": None, "UNIT": "M2",
+                              "WHY": "US-14 names the pantry / preparation kitchen among the waterproofed rooms, so "
+                                     "the area that was measured and unassigned now has a trade"}))
+    rows.append(q("Q-04P", "عازل حمام+مطابخ", "PANTRY_WATERPROOFING_UPTURN", serv_perim, "LM",
+                  "FINAL_QUANTITY_AVAILABLE",
+                  "GROSS pantry perimeter, doorways NOT deducted: "
+                  + " + ".join(f"{r['ROOM_NAME']} {r['GROSS_WALL_LINE_LM']:.3f}" for r in serv)
+                  + f" = {serv_perim:.3f} lm",
+                  ["US-14", "US-05", "QP-13"], "frozen boundary segments, summed gross",
+                  rooms=[r["ROOM_NAME"] for r in serv],
+                  note="the GROSS room perimeter, not the skirting path.  The pantry's skirting is zero under US-02 "
+                       "and would have been the wrong figure to reach for"))
+    rows.append(q("Q-04PR", "عازل حمام+مطابخ", "PANTRY_UPTURN_VERTICAL_AREA_REFERENCE", serv_perim * UPTURN_HEIGHT,
+                  "M2", "FINAL_QUANTITY_AVAILABLE",
+                  f"{serv_perim:.3f} lm x {UPTURN_HEIGHT:.2f} m = {serv_perim * UPTURN_HEIGHT:.4f} m2",
+                  ["US-14"], "derived from Q-04P",
+                  note="MATERIAL AND ENGINEERING REFERENCE ONLY, as Q-04R is for the bathrooms"))
     rows.append(q("Q-04R", "عازل حمام+مطابخ", "WET_AREA_UPTURN_VERTICAL_AREA_REFERENCE", wet_perim * UPTURN_HEIGHT,
                   "M2", "FINAL_QUANTITY_AVAILABLE",
                   f"{wet_perim:.3f} lm x {UPTURN_HEIGHT:.2f} m = {wet_perim * UPTURN_HEIGHT:.4f} m2",
@@ -525,7 +597,7 @@ def quantities(rooms, walls_calc, openings, floors, summ, ceil, glazed=None):
                        "area must never be priced beside it"))
     # ---- 5: wall ceramic
     bath_gross = sum(r["GROSS_WALL_AREA_M2"] for r in bath)
-    bath_ded = sum(r["DOOR_DEDUCTION_M2"] for r in bath)
+    bath_ded = sum(r["OPENING_DEDUCTION_M2"] for r in bath)
     rows.append(q("Q-05", "سيراميك", "WALL_CERAMIC_BATHROOMS", bath_gross - bath_ded, "M2", "PARTIALLY_CALCULATED",
                   f"gross perimeter {sum(r['GROSS_WALL_LINE_LM'] for r in bath):.3f} lm x 3.00 m = {bath_gross:.4f} m2, "
                   f"less full door areas {bath_ded:.4f} m2 = {bath_gross - bath_ded:.4f} m2.  The gross path is used so "
@@ -533,7 +605,7 @@ def quantities(rooms, walls_calc, openings, floors, summ, ceil, glazed=None):
                   ["US-01", "US-06", "QP-01", "TD-02"], "QP-01 height 3.00 m; TD-02 door height 2.20 m",
                   rooms=["BATH", "BATH", "BATH"], temp=True, residual=res(bath) + orphan_res))
     serv_gross = sum(r["GROSS_WALL_AREA_M2"] for r in serv)
-    serv_ded = sum(r["DOOR_DEDUCTION_M2"] for r in serv)
+    serv_ded = sum(r["OPENING_DEDUCTION_M2"] for r in serv)
     rows.append(q("Q-06", "سيراميك", "WALL_CERAMIC_SERVICE_ROOM", serv_gross - serv_ded, "M2", "PARTIALLY_CALCULATED",
                   f"PAINTRY gross perimeter {sum(r['GROSS_WALL_LINE_LM'] for r in serv):.3f} lm x 3.00 m "
                   f"= {serv_gross:.4f} m2, less full door areas {serv_ded:.4f} m2",
@@ -593,7 +665,7 @@ def quantities(rooms, walls_calc, openings, floors, summ, ceil, glazed=None):
                            f"height; {b['REF_N']} band(s) at this spacing are not masonry and contribute nothing"))
     # ---- 7 and 8: plaster and paint, the same faces
     dry_gross = sum(r["GROSS_WALL_AREA_M2"] for r in dry)
-    dry_ded = sum(r["DOOR_DEDUCTION_M2"] for r in dry)
+    dry_ded = sum(r["OPENING_DEDUCTION_M2"] for r in dry)
     rev_dry, rev_mix = rev(dry_dry), rev(mixed)
     per_room = " + ".join(f"{r['ROOM_NAME']} {r['GROSS_WALL_AREA_M2']:.3f}" for r in dry)
     for qid, item, trade in (("Q-08", "INTERNAL_PLASTER", "مساح داخلى"), ("Q-09", "WALL_PAINT", "صبغ")):
@@ -613,7 +685,7 @@ def quantities(rooms, walls_calc, openings, floors, summ, ceil, glazed=None):
                            f"doors that open into a ceramic room; whether that reveal is plastered or tiled is a "
                            f"finishes detail and it is held out of both figures"))
     rows.append(q("Q-10", "مساح داخلى", "TILE_PREPARATION_TARTUSHA",
-                  sum(r["GROSS_WALL_AREA_M2"] for r in cer) - sum(r["DOOR_DEDUCTION_M2"] for r in cer), "M2",
+                  sum(r["GROSS_WALL_AREA_M2"] for r in cer) - sum(r["OPENING_DEDUCTION_M2"] for r in cer), "M2",
                   "PARTIALLY_CALCULATED",
                   f"ceramic-room gross wall area {sum(r['GROSS_WALL_AREA_M2'] for r in cer):.4f} m2 less full door "
                   f"areas {sum(r['DOOR_DEDUCTION_M2'] for r in cer):.4f} m2",
@@ -632,54 +704,86 @@ def quantities(rooms, walls_calc, openings, floors, summ, ceil, glazed=None):
                   supersedes={"PREVIOUS": None, "UNIT": "M2",
                               "WHY": "this area sat inside the undifferentiated dry floor total, waiting on a finishes "
                                      "schedule.  QP-07 gives it a finish"}))
-    rows.append(q("Q-13", "سيراميك", "FLOOR_FINISH_DRY_ROOMS", dry_floor, "M2", "SPEC_REQUIRED",
-                  f"dry internal floor {summ['A_DRY_INTERNAL_FLOOR_AREA_M2']['VALUE']} m2 less the PAINTRY "
-                  f"{serv_floor} m2 now carried as ceramic = {dry_floor} m2",
-                  ["M"], "frozen floor polygons",
-                  note="§M keeps dry and wet apart until the finish scope is known.  Which dry rooms take ceramic is "
-                       "still a finishes schedule question and no rule above answers it"))
+    dry_rooms = [f for f in floors if f["ROOM"].split(" /")[0] not in CERAMIC_ROOM_NAMES]
+    checked = r4(sum(f["METHOD_A_CAD_POLYGON_AREA_M2"] for f in dry_rooms))
+    rows.append(q("Q-13", "سيراميك", "PORCELAIN_FLOOR_DRY_ROOMS", checked, "M2", "FINAL_QUANTITY_AVAILABLE",
+                  " + ".join(f"{f['ROOM']} {f['METHOD_A_CAD_POLYGON_AREA_M2']}" for f in dry_rooms)
+                  + f" = {checked} m2",
+                  ["QP-14", "US-01"], "frozen floor polygons, re-totalled after the service-room exclusions",
+                  rooms=[f["ROOM"] for f in dry_rooms],
+                  extra={"SUBTOTAL_VERIFIED_AGAINST_THE_FROZEN_REGISTER": True,
+                         "DRY_TOTAL_BEFORE_SERVICE_EXCLUSIONS": summ["A_DRY_INTERNAL_FLOOR_AREA_M2"]["VALUE"],
+                         "PANTRY_EXCLUDED_M2": serv_floor,
+                         "ROOM_BREAKDOWN": [{"ROOM": f["ROOM"], "AREA_M2": f["METHOD_A_CAD_POLYGON_AREA_M2"]}
+                                            for f in dry_rooms]},
+                  supersedes={"PREVIOUS": None, "UNIT": "M2",
+                              "WHY": "the area was blocked on a finishes schedule; QP-14 supplies the finish"},
+                  note="re-totalled room by room from the frozen polygons rather than taken from the earlier subtotal, "
+                       "because the pantry left the dry set after that subtotal was written.  The six rooms sum to "
+                       f"{checked} m2 and the room breakdown is kept in the calculation backup"))
     # ---- §7 aluminium: an area per opening, subtotalled by type.  A count is a multiplier, never a quantity
-    glazed_ops = [o for o in openings if o["TYPE"] in ("WINDOW", "SLIDING_DOOR", "GLAZED_OPENING")
-                  and o["INSIDE_APARTMENT"]]
-    doors_ops = [o for o in apt_doors]
-    for qid, item, group, trade in (("Q-15", "ALUMINIUM_WINDOWS", glazed_ops, "ألمنيوم"),
-                                    ("Q-16", "ALUMINIUM_DOORS", doors_ops, "ألمنيوم")):
-        sched = [{"OPENING_ID": o["OPENING_ID"], "TYPE": o["TYPE"], "ROOM": (o["ROOMS"] or [None])[0],
+    # §3/§11: three separate schedules, because an internal door is not an aluminium item
+    by_trade = defaultdict(list)
+    for h in human_reg or []:
+        if h["IS_AN_OPENING_THROUGH_THE_WALL"] and h["INSIDE_APARTMENT"]:
+            by_trade[h["MATERIAL_TRADE"]].append(h)
+    for qid, item, group, trade in (("Q-15", "ALUMINIUM_EXTERNAL_WINDOWS", by_trade["ALUMINIUM"], "ألمنيوم"),
+                                    ("Q-16", "PVC_INTERNAL_DOORS", by_trade["PVC"], "أبواب PVC"),
+                                    ("Q-17", "INTERNAL_GLAZED_OPENING",
+                                     by_trade["INTERNAL_GLAZED_OPENING"], "زجاج داخلي")):
+        sched = [{"OPENING_ID": o["OPENING_ID"], "TYPE": o["TYPE"], "ROOM": o["ROOM"],
+                  "DESCRIPTION": o["DESCRIPTION"], "MATERIAL_TRADE": o["MATERIAL_TRADE"],
+                  "COUNT": 1,
                   "WIDTH_M": o["WIDTH_M"], "HEIGHT_M": o["HEIGHT_M"],
                   "AREA_M2": (r4(o["WIDTH_M"] * o["HEIGHT_M"]) if o["HEIGHT_M"] is not None else None),
-                  "STATUS": ("CALCULATED" if o["HEIGHT_M"] is not None else "SOURCE_REQUIRED"),
+                  "STATUS": ("CALCULATED" if o["HEIGHT_M"] is not None else "OWNER_INPUT_REQUIRED"),
                   "WHY": (None if o["HEIGHT_M"] is not None else
-                          "no height in the source and §G permits no default for this type")} for o in group]
+                          "US-11: there is no default window height, so the owner is asked")} for o in group]
         done = [x for x in sched if x["AREA_M2"] is not None]
         area = round(sum(x["AREA_M2"] for x in done), 4) if done else None
         # the AREA is established once a height exists; which openings fall under the aluminium package rather than a
         # joinery one is a finishes question, and material identity is part of being final
         rows.append(q(qid, trade, item, area, "M2",
-                      "SPEC_REQUIRED" if len(done) == len(sched) and sched else
-                      "PARTIALLY_CALCULATED" if done else "SOURCE_REQUIRED",
-                      " + ".join(f"{x['OPENING_ID']} {x['WIDTH_M']:.3f} x "
-                                 + (f"{x['HEIGHT_M']:.2f}" if x["HEIGHT_M"] else "H?")
+                      "FINAL_QUANTITY_AVAILABLE" if (sched and len(done) == len(sched)) else
+                      "PARTIALLY_CALCULATED" if done else "OWNER_INPUT_REQUIRED",
+                      " + ".join(f"{x['DESCRIPTION']} {x['WIDTH_M']:.3f} x "
+                                 + (f"{x['HEIGHT_M']:.2f}" if x["HEIGHT_M"] else "height?")
                                  for x in sched) or "no opening of this type",
-                      ["US-10", "TD-02"] if group is doors_ops else ["US-10"],
-                      "TD-02 door height 2.20 m" if group is doors_ops else "none: §G forbids a default here",
-                      temp=bool(done) and group is doors_ops,
+                      ["US-13", "TD-02", "QP-16"] if qid == "Q-16" else
+                      ["US-13", "QP-12"] if qid == "Q-17" else ["US-11", "US-13"],
+                      "TD-02 door height 2.20 m" if qid == "Q-16" else
+                      "QP-12 owner-supplied height 2.200 m" if qid == "Q-17" else
+                      "none: US-11 forbids a default window height",
+                      temp=bool(done) and qid == "Q-16",
                       residual=[{"OPENING_ID": x["OPENING_ID"], "TYPE": x["TYPE"], "WIDTH_M": x["WIDTH_M"],
                                  "WHY": x["WHY"]} for x in sched if x["AREA_M2"] is None],
-                      extra={"SCHEDULE": sched, "OPENINGS": len(sched), "RESOLVED": len(done),
+                      extra={"SCHEDULE": sched, "OPENINGS": len(sched), "COUNT": len(sched), "RESOLVED": len(done),
+                             "TRADE_SEPARATION": "US-13: interior doors are PVC and are never billed as aluminium; "
+                                                 "aluminium carries exterior openings only",
                              "COUNT_IS_NOT_THE_QUANTITY": "a count is a multiplier: the priced quantity is the sum of "
                                                           "width x height over the schedule above"},
-                      note="every opening is listed with its own width and the area appears only where a height "
-                           "exists.  The remaining question is material, not measurement: the house bills اجمالي "
-                           "الأبواب and اجمالي الشبابيك under the aluminium package, and which Qortuba openings are "
-                           "aluminium rather than timber joinery is not drawn"))
+                      note=("count, width, height and area, one row per opening.  " +
+                            ("all seven Qortuba apartment doors are interior - each is seen from two apartment rooms "
+                             "on the frozen boundary - so all seven are PVC under US-13 and none is an aluminium item"
+                             if qid == "Q-16" else
+                             "an internal glazed opening between two apartment rooms: not an aluminium envelope item, "
+                             "and its product is classified separately" if qid == "Q-17" else
+                             "no area is released until every height is supplied: US-11 permits no default and §11 "
+                             "requires count, width, height and area before an aluminium pricing quantity exists"))))
 
     # ---- 9: ceiling paint
-    rows.append(q("Q-14", "صبغ", "CEILING_PAINT", None, "M2", "SOURCE_REQUIRED",
-                  f"{ceil} m2 of flat ceiling geometry exists, but no rule above establishes a ceiling paint scope",
-                  [], "none",
-                  note="the house precedent R-10 prices paint to the DECOR ceiling and no flat ceiling paint at all.  "
-                       "Without a ceiling design there is no decor area, so this stays a drawing question rather than "
-                       "a quantity.  It is named so the absence is visible"))
+    rows.append(q("Q-14", "ديكور جبس", "CEILING_BY_AREA", ceil, "M2", "FINAL_QUANTITY_AVAILABLE",
+                  " + ".join(f"{c['ROOM']} {c['CEILING_GEOMETRIC_AREA_M2']}" for c in ceil_rows) + f" = {ceil} m2",
+                  ["US-15", "QP-15"], "frozen ceiling geometry register, unchanged",
+                  extra={"DECOR_LENGTHS_NOT_CARRIED": ["cornice", "cove lighting", "bulkhead", "shadow gap",
+                                                       "decorative perimeter", "gypsum feature length"],
+                         "CEILING_PERIMETER_NOT_A_PAYABLE_ITEM_LM": 153.125},
+                  supersedes={"PREVIOUS": None, "UNIT": "M2",
+                              "WHY": "the ceiling had no priced line at all: the house precedent prices decor and no "
+                                     "ceiling design exists.  US-15 gives it an area line instead"},
+                  note="one line, priced by area.  The 153.125 lm ceiling perimeter measured earlier is NOT carried "
+                       "as a payable decor item: under US-15 nothing is inferred from a room perimeter without a "
+                       "ceiling drawing.  A rate per m2 is all this row now needs"))
     return rows
 
 
@@ -697,29 +801,33 @@ def answered_questions():
         ("D-10", "the blockwork deduction column, full or half", "US-06 = full opening area"),
         ("D-11", "whether Qortuba inherits the plaster half deduction", "US-06 = no, full opening area"),
         ("D-12", "whether Qortuba inherits the paint half deduction", "US-06 = no, full opening area"),
+        ("O-03", "whether the Pantry takes waterproofing as well as ceramic",
+         "US-14 + QP-13 = yes: floor membrane 11.685 m2 and a gross-perimeter upturn of 11.150 lm"),
+        ("O-04", "the ceiling scope", "US-15 + QP-15 = priced by area, 138.510 m2, with no decor length carried"),
+        ("V2-01", "the height of the glazed opening between the Hall and the Pantry", "QP-12 = 2.200 m"),
+        ("V2-02", "the dry floor finish", "QP-14 = porcelain, which releases 108.9625 m2"),
+        ("V2-03", "whether interior doors are aluminium",
+         "US-13 + QP-16 = no: they are PVC and carry their own schedule"),
     ]
 
 
 STILL_OPEN = [
-    ("O-01", "PROJECT_INPUT", "the door, window and glazed opening HEIGHTS",
-     "TD-02 covers normal doors as a temporary default only.  §G forbids a default for windows, sliding doors and "
-     "glazed panels, so seven glazed elements and ten unclassified sites still carry no height",
-     "every wall-area trade"),
-    ("O-02", "DRAWING_REQUIRED", "which room each of the six unattributed windows stands in",
-     "the six windows have measured widths and no host room, so no room's wall area can deduct them even after a "
-     "height arrives",
-     "wall ceramic, plaster, paint, blockwork"),
-    ("O-03", "PROJECT_RULE", "whether the PAINTRY takes waterproofing as well as ceramic",
-     "the owner's PAINTRY instruction is scoped to the ceramic takeoff.  US-01 lists kitchens among the wet service "
-     "rooms, so the floor membrane may follow; the quantities are measured and waiting on one word",
-     "PAINTRY floor membrane 11.6825 m2 and upturn 11.150 lm"),
-    ("O-04", "DRAWING_REQUIRED", "the ceiling paint scope",
-     "the house prices paint to the decor ceiling only, and no ceiling design exists",
-     "ceiling paint"),
+    ("O-06", "PROJECT_INPUT", "the height of each of the six exterior windows, asked one at a time",
+     "US-11 forbids a default window height, so each window is asked in its own row of QORTUBA_OWNER_QUESTIONS with "
+     "its room and its width, and none is given another's height",
+     "the aluminium schedule, and the plaster, paint, blockwork and ceramic of every wall they stand in"),
+    ("O-07", "PROJECT_INPUT", "what five remaining openings actually are: door, open passage, window or something else",
+     "the type decides whether a height may be defaulted and which trade carries it.  Each is described by room, "
+     "adjacent room and width, and numbered on the marked plan",
+     "the wall-area trades of the rooms they stand in"),
     ("O-05", "PROJECT_RULE", "whether the 2م=1م halving of corners and wall ends applies",
-     "unchanged from before and still unasked-for: Qortuba has not cut its boundary into corners and ends, so the "
-     "answer releases nothing yet",
+     "unchanged and still unasked-for: Qortuba has not cut its boundary into corners and ends, so the answer releases "
+     "nothing yet",
      "plaster corners and ends"),
+    ("O-08", "SPEC_REQUIRED", "the ceramic, porcelain, membrane and ceiling specifications, and the rates",
+     "every quantity that is final is final as a QUANTITY.  Products and rates are a separate conversation, named "
+     "here so the absence is visible rather than assumed",
+     "pricing, not measurement"),
 ]
 
 
@@ -736,9 +844,10 @@ def finish():
     ops = opening_register_from_source()
     glazed = MI.glazed_hosts()
     ident = MI.wall_identity()
-    rooms = room_rows(skirt, ops, glazed)
+    human = OS.human_register()
+    rooms = room_rows(skirt, ops, glazed, human)
     wcalc = wall_rows(walls, ops, ident)
-    qs = quantities(rooms, wcalc, ops, floors, summ, ceil, glazed)
+    qs = quantities(rooms, wcalc, ops, floors, summ, ceil, glazed, reg(QS, "QORTUBA_QS01_CEILING_TAKEOFF")["ROWS"], human)
 
     store = {
         "ARTIFACT": "URBAN_OWNER_RULES_V1",
@@ -829,7 +938,8 @@ def finish():
 
     final = [x for x in qs if x["STATUS"] == "FINAL_QUANTITY_AVAILABLE"]
     partial = [x for x in qs if x["STATUS"] == "PARTIALLY_CALCULATED"]
-    blocked = [x for x in qs if x["STATUS"] in ("SOURCE_REQUIRED", "SPEC_REQUIRED", "PROJECT_RULE_REQUIRED")]
+    blocked = [x for x in qs if x["STATUS"] in ("SOURCE_REQUIRED", "SPEC_REQUIRED", "PROJECT_RULE_REQUIRED",
+                                                "OWNER_INPUT_REQUIRED")]
     na = [x for x in qs if x["STATUS"] == "NOT_APPLICABLE"]
     quant = {
         "ARTIFACT": "QORTUBA_RECALCULATED_QUANTITIES_V1",
@@ -837,8 +947,8 @@ def finish():
                 "room re-measured and no opening re-detected",
         "ROWS": qs, "COUNT": len(qs),
         "BY_STATUS": {k: sum(1 for x in qs if x["STATUS"] == k) for k in
-                      ("FINAL_QUANTITY_AVAILABLE", "PARTIALLY_CALCULATED", "PROJECT_RULE_REQUIRED",
-                       "SPEC_REQUIRED", "SOURCE_REQUIRED", "NOT_APPLICABLE")},
+                      ("FINAL_QUANTITY_AVAILABLE", "PARTIALLY_CALCULATED", "OWNER_INPUT_REQUIRED",
+                       "PROJECT_RULE_REQUIRED", "SPEC_REQUIRED", "SOURCE_REQUIRED", "NOT_APPLICABLE")},
         "FINAL": [{"QUANTITY_ID": x["QUANTITY_ID"], "BOQ_ITEM": x["BOQ_ITEM"],
                    "VALUE": x["MEASURED_NET_QUANTITY"], "UNIT": x["UNIT"]} for x in final],
         "PARTIAL": [{"QUANTITY_ID": x["QUANTITY_ID"], "BOQ_ITEM": x["BOQ_ITEM"],

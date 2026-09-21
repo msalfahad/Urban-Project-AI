@@ -78,14 +78,20 @@ def test_the_superseded_precedents_are_named_and_demoted_not_deleted():
 def test_no_default_height_reaches_a_window_a_sliding_door_or_an_unknown():
     o = reg("QORTUBA_OPENING_REGISTER")
     assert set(OR.NO_DEFAULT_FOR) <= set(o["TYPES"])
+    from research.qs_wall_treatment_01.pa08.qortuba.boq import opening_source_search as OS
+    owner = set(OS.OWNER_SUPPLIED_HEIGHTS)
     for x in o["ROWS"]:
         if x["HEIGHT_M"] is None:
             assert x["HEIGHT_STATE"] == "NOT_ESTABLISHED"
             continue
-        # a height exists only on an ordinary door, and only from the owner's default
+        if x["OPENING_ID"] in owner:
+            continue  # an owner override is a real dimension, not a default, and may reach any type
+        # otherwise a height exists only on an ordinary door, and only from the owner's default
         assert x["TYPE"] == "DOOR" and x["HEIGHT_M"] == 2.20, x["OPENING_ID"]
         assert x["HEIGHT_STATE"] == "TEMPORARY_OWNER_DEFAULT"
     for x in o["ROWS"]:
+        if x["OPENING_ID"] in owner:
+            continue
         assert not (x["TYPE"] in OR.NO_DEFAULT_FOR and x["HEIGHT_M"] is not None), x["OPENING_ID"]
 
 
@@ -311,8 +317,9 @@ def test_an_answered_question_is_closed_and_not_asked_again():
     ql = reg("QORTUBA_QUESTION_LEDGER")
     old = {d["DECISION_ID"] for d in reg("QORTUBA_OWNER_DECISIONS_REQUIRED")["ROWS"]}
     closed = {c["DECISION_ID"] for c in ql["CLOSED"]}
-    assert closed <= old, closed - old
-    assert len(closed) >= 11
+    # every D-xx closure answers a question that was actually asked; later closures carry their own ids
+    assert {c for c in closed if c.startswith("D-")} <= old
+    assert len(closed) >= 16
     for c in ql["CLOSED"]:
         assert c["ANSWERED_BY"]
     open_q = " ".join(x["QUESTION"].lower() for x in ql["STILL_OPEN"])
@@ -322,7 +329,8 @@ def test_an_answered_question_is_closed_and_not_asked_again():
 
 def test_every_open_question_still_blocks_something_real():
     for x in reg("QORTUBA_QUESTION_LEDGER")["STILL_OPEN"]:
-        assert x["BLOCKS"] and x["WHY"] and x["KIND"] in ("PROJECT_INPUT", "PROJECT_RULE", "DRAWING_REQUIRED")
+        assert x["BLOCKS"] and x["WHY"]
+        assert x["KIND"] in ("PROJECT_INPUT", "PROJECT_RULE", "DRAWING_REQUIRED", "SPEC_REQUIRED")
 
 
 # ------------------------------------------------------------------ the frozen inputs and the workbook

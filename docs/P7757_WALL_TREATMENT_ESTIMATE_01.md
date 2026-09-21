@@ -821,3 +821,41 @@ with widths and no areas, because no default may reach a window.
 Seven quantities are final. One silent escape was caught on the way: the room
 HALL / whgm never matched the canonical name HALL, so HALL had been dodging
 every opening residual in the register. It now carries five.
+
+### Owner inputs v2 and the communication rules
+
+Five rules were promoted to URBAN_STANDARD and six Qortuba inputs stored.
+Two of the standards are about how the engine talks rather than how it
+measures: there is no default window height, an absent one is
+OWNER_INPUT_REQUIRED (§227), and no question put to an owner may carry an
+internal identifier (§226). Eleven questions are now asked in words — room,
+opening, width, what it joins — with the ids in an audit column and a
+numbered plan crop drawn from the frozen geometry so the numbers on the
+sheet match the numbers in the table.
+
+The other three standards changed quantities. Interior doors are PVC and
+have their own schedule, aluminium carries exterior openings only (§228);
+the waterproofed room types are enumerated and now include the pantry; and
+a ceiling is priced by area until a ceiling drawing exists, so the 153.125 m
+perimeter leaves the bill (§230).
+
+Fourteen quantities are final. The pantry joins the waterproofing at
+11.685 m² of floor and 11.150 m of gross-perimeter upturn — the gross room
+perimeter, not the skirting path, which is zero there. The dry floor is
+released as porcelain at 108.9625 m², re-totalled room by room from the
+frozen polygons rather than inherited, because the pantry left the dry set
+after that subtotal was written. The ceiling is one line at 138.510 m². The
+PVC schedule is 16.665 m² across seven doors; the internal glazed opening is
+6.050 m² on the owner's supplied 2.200 m height; the aluminium schedule
+carries six windows with widths, no areas and no assumed heights.
+
+That supplied height moved four other figures. Wall ceramic to the pantry
+falls to 27.400 m², tile preparation to 112.300 m² — still exactly the sum
+of the two wall ceramic items — and plaster and paint to 305.9013 m² each.
+Blockwork at 150 mm falls to 128.445 m² as the wall carrying that opening
+resolves.
+
+One defect the tests caught: the opening had been deducted from the Hall
+only. A blue element's nearest-room attribution had collapsed a two-room
+opening to one room, leaving the Pantry with 6.050 m² of wall it does not
+have (§229).

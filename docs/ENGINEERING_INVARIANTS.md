@@ -4779,3 +4779,70 @@ all, because no default may reach a window.
 And an area is not a trade. Which of those openings are aluminium and which
 are timber joinery is a finishes question, so the row carries its area and
 waits on material identity rather than calling itself final.
+
+## §226 — A question an owner cannot answer is not a question
+
+"What is OS-77f8fed2eb15?" names a hash that exists only inside this engine.
+The owner was in the flat; they were never in the hash. So every row put to
+an owner names the room, the opening, the width and what it joins — "Opening
+between the Hall and the Lobby, width 1.20 m: is this a door, an open
+passage, a window, or something else?" — and the identifier sits in a column
+marked AUDIT, where it belongs.
+
+Where words still leave a doubt, a numbered plan crop is drawn from the
+frozen geometry and the numbers match the table, so the owner can point
+rather than describe. Two bedrooms are both called BED.ROOM and three rooms
+are called BATH, so a name carries its area when the area disambiguates it
+and says "a Bedroom" when it cannot — indefinite rather than falsely
+specific.
+
+## §227 — A default is a floor under one type, not a ceiling over all of them
+
+The owner's door-height default was never extended to windows, and the
+standard now says so explicitly: there is no default window height, and an
+absent one is OWNER_INPUT_REQUIRED. Six windows are therefore asked one at a
+time, each with its own room and its own width, and none is given another's
+height. Guessing one number would have released an aluminium area, a
+plaster area, a paint area and a blockwork area across four rooms, all of
+them wrong together and none of them traceable to a source.
+
+The same owner supplied one real height — 2.200 m for the glazed opening
+between the Hall and the Pantry. That is an override at rank two of the
+priority ladder, above every standard and every default, and it is recorded
+as a dimension rather than a placeholder. A default and an override are not
+the same kind of thing and the register does not let them look alike.
+
+## §228 — A PVC door is not an aluminium item
+
+Interior doors and exterior windows are measured the same way — count times
+width times height — and that similarity is exactly what makes the mistake
+easy. All seven Qortuba apartment doors are interior, and the evidence is
+structural rather than assumed: each is seen from two apartment rooms on the
+frozen floor-level boundary. So they are PVC, they carry their own schedule,
+and 16.665 m² never appears under aluminium. The 2.750 × 2.200 opening
+between two apartment rooms is neither: it is internal glazing, and it gets
+its own line rather than being rounded into the nearest trade.
+
+A trade is a material, not an arithmetic shape.
+
+## §229 — Both sides of an opening lose the wall
+
+An opening in a shared wall removes area from the room on each side of it.
+The frozen floor-level boundary records both sides for a doorway, but it
+recorded the Hall/Pantry glazed opening on the Hall side only, and a blue
+element's nearest-room attribution then collapsed the pair to that one room.
+The Pantry kept 6.050 m² of wall it does not have.
+
+So the deduction set is built from the two rooms an opening actually joins —
+the floor-level sides where the boundary records two, otherwise the pair the
+plan reading or the host band gives — and never from a 5 m band's list of
+every room it happens to touch. One opening, two rooms, once each.
+
+## §230 — Do not infer a length from a perimeter
+
+A room perimeter is 153.125 m whether or not a cornice runs along it. With
+no ceiling drawing, cornice, cove lighting, bulkheads, shadow gaps and
+decorative perimeters are NOT_ESTABLISHED, and the ceiling is one priced
+line in m² over the measured 138.510 m². The perimeter stays in the
+geometry, where it is true, and out of the bill, where it would be a
+fabricated quantity wearing a real measurement's clothes.

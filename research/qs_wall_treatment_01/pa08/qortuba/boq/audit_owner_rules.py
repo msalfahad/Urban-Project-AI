@@ -211,7 +211,7 @@ def ceramic_audit():
     def blk(rs):
         host = round(sum(r["GROSS_WALL_LINE_LM"] for r in rs), 3)
         gross = round(host * 3.00, 4)
-        ded = round(sum(r["DOOR_DEDUCTION_M2"] for r in rs), 4)
+        ded = round(sum(r["OPENING_DEDUCTION_M2"] for r in rs), 4)
         return {"HOST_WALL_LENGTH_LM": host, "HEIGHT_M": 3.00, "GROSS_M2": gross,
                 "FULL_OPENING_DEDUCTION_M2": ded, "NET_M2": round(gross - ded, 4),
                 "ARITHMETIC": f"{host:.3f} x 3.00 = {gross:.4f} - {ded:.4f} = {gross - ded:.4f} m2"}
@@ -257,6 +257,7 @@ def plaster_audit():
         per_room.append({
             "ROOM": r["ROOM"],
             "DOORS_DEDUCTED_LM": r["DOOR_OPENING_LM"], "DOOR_DEDUCTION_M2": r["DOOR_DEDUCTION_M2"],
+            "OPENING_DEDUCTION_M2": r["OPENING_DEDUCTION_M2"],
             "OPENINGS_WITH_NO_HEIGHT": [{"OPENING_ID": o["OPENING_ID"], "TYPE": o["TYPE"], "WIDTH_M": o["WIDTH_M"],
                                          "HOST_WALL_ID": o["HOST_WALL_ID"]} for o in pend],
             "BLOCKED": bool(pend),
@@ -274,7 +275,7 @@ def plaster_audit():
         "REVEAL_RULE_KEPT": "0.25 m left, right and top; no sill",
         "REVEAL_M2_IN_THE_FIGURE": round(q["Q-08"]["MEASURED_NET_QUANTITY"]
                                          - sum(r["GROSS_WALL_AREA_M2"] for r in dry)
-                                         + sum(r["DOOR_DEDUCTION_M2"] for r in dry), 4),
+                                         + sum(r["OPENING_DEDUCTION_M2"] for r in dry), 4),
         "PLASTER_EQUALS_PAINT": q["Q-08"]["MEASURED_NET_QUANTITY"] == q["Q-09"]["MEASURED_NET_QUANTITY"],
     }
 

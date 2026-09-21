@@ -13,7 +13,7 @@ include the presence or absence of a door, identifies two of the remaining gaps 
 from __future__ import annotations
 
 import json
-from collections import Counter
+from collections import Counter, defaultdict
 from pathlib import Path
 
 from research.qs_wall_treatment_01 import protocol as PR
@@ -28,6 +28,37 @@ APARTMENT_ROOMS = {"HALL / whgm", "M.B.ROOM", "BED.ROOM", "PAINTRY", "DRESS", "B
 
 DEFAULT_DOOR_WIDTH_M = 1.00
 DEFAULT_DOOR_HEIGHT_M = 2.20
+
+# §2 of OWNER INPUTS V2: a height the owner supplied for one named opening.  This is an OWNER OVERRIDE, rank 2 on the
+# priority ladder - above any standard and above any default - and it is a real dimension, not a placeholder.
+OWNER_SUPPLIED_HEIGHTS = {
+    "OS-b5a0fbb335d4": (2.200, "OWNER INPUTS V2 §2: the glazed opening between the Hall and the Pantry is 2.200 m "
+                               "high, so its physical opening is 2.750 x 2.200 = 6.050 m2"),
+}
+
+# a room answers to a name a person uses, not to the label the CAD file happens to carry
+FRIENDLY = {
+    "HALL / whgm": "Hall", "M.B.ROOM": "Master bedroom", "PAINTRY": "Pantry / preparation kitchen",
+    "DRESS": "Dressing room", "UNLABELLED_INTERNAL_SPACE": "Lobby (unlabelled internal space)",
+}
+
+
+AMBIGUOUS_NAMES = {"BED.ROOM", "BATH"}
+
+
+def friendly(room, area=None):
+    """A room name a person can act on.  Two rooms are called BED.ROOM and three are called BATH, so a name without an
+    area is deliberately indefinite rather than falsely specific."""
+    if not room:
+        return None
+    if room in AMBIGUOUS_NAMES and not area:
+        return "a Bedroom" if room == "BED.ROOM" else "a Bathroom"
+    base = FRIENDLY.get(room, room.title() if room.isupper() else room)
+    if room == "BED.ROOM" and area:
+        return f"Bedroom ({area:.2f} m2)"
+    if room == "BATH" and area:
+        return f"Bathroom ({area:.2f} m2)"
+    return base
 
 
 def reg(folder, name):
@@ -148,14 +179,16 @@ def completed_register():
             "HOST_WALL_THICKNESS_MM": s["HOST_WALL_THICKNESS_MM"],
             "TYPE": t if is_opening else "UNRESOLVED",
             "WIDTH_M": round(s["SPAN_MM"] / 1000, 4),
-            "HEIGHT_M": (DEFAULT_DOOR_HEIGHT_M if (is_opening and t == "DOOR") else None),
+            "HEIGHT_M": (OWNER_SUPPLIED_HEIGHTS[sid][0] if sid in OWNER_SUPPLIED_HEIGHTS else
+                         DEFAULT_DOOR_HEIGHT_M if (is_opening and t == "DOOR") else None),
             "WIDTH_SOURCE": "DWG opening site span, from the wall band's own interrupted faces",
-            "HEIGHT_SOURCE": ("TD-02 APPROVED_TEMPORARY_DEFAULT, ordinary door with no source height"
+            "HEIGHT_SOURCE": (OWNER_SUPPLIED_HEIGHTS[sid][1] if sid in OWNER_SUPPLIED_HEIGHTS else
+                              "TD-02 APPROVED_TEMPORARY_DEFAULT, ordinary door with no source height"
                               if (is_opening and t == "DOOR") else None),
             "IS_AN_OPENING_THROUGH_THE_WALL": is_opening,
             "INTERRUPTS_AT_FLOOR_LEVEL": is_opening,
             "STATUS": ("NOT_AN_OPENING" if not is_opening else
-                       "USABLE" if t == "DOOR" else "SOURCE_REQUIRED"),
+                       "USABLE" if (t == "DOOR" or sid in OWNER_SUPPLIED_HEIGHTS) else "OWNER_INPUT_REQUIRED"),
             "EVIDENCE": s["REASON"],
             "SITE_STATUS": s["STATUS"], "SITE_CLASS": s["CLASS"],
             "PDF_READER": PDF_READER.get(sid),
@@ -179,7 +212,7 @@ def completed_register():
             # a window with a sill IS an opening through the wall; it simply does not reach the floor
             "IS_AN_OPENING_THROUGH_THE_WALL": True,
             "INTERRUPTS_AT_FLOOR_LEVEL": not b["WALL_BELOW"],
-            "STATUS": "SOURCE_REQUIRED",
+            "STATUS": "OWNER_INPUT_REQUIRED",
             "EVIDENCE": b["WHY"],
             "SITE_STATUS": None, "SITE_CLASS": None, "PDF_READER": None,
             "WHY_NOT_AN_OPENING": ("wall stands below this glazing, so it does not interrupt the wall at floor level; "
@@ -208,9 +241,151 @@ def finish_register():
                                      if r["IS_AN_OPENING_THROUGH_THE_WALL"] and not r["INTERRUPTS_AT_FLOOR_LEVEL"]],
         "STILL_BLOCKING": [{"OPENING_ID": r["OPENING_ID"], "TYPE": r["TYPE"], "WIDTH_M": r["WIDTH_M"],
                             "ROOM": r["ROOM"], "HOST_WALL_ID": r["HOST_WALL_ID"]}
-                           for r in rows if r["STATUS"] == "SOURCE_REQUIRED"],
+                           for r in rows if r["STATUS"] == "OWNER_INPUT_REQUIRED"],
+        "OWNER_SUPPLIED_HEIGHTS": {k: v[0] for k, v in OWNER_SUPPLIED_HEIGHTS.items()},
         "DEFAULT_APPLIED_ONLY_TO_ORDINARY_DOORS": True,
         "RULE": "an actual source dimension overrides a default; the 1.00 x 2.20 m default reaches ordinary doors only "
                 "and never a window, a sliding door or a glazed opening.  Every Qortuba door width is source "
                 "established, so only the height half of that default is ever used",
     }
+
+
+# ---------------------------------------------------------------------------- §1/§8/§9 how an opening is described
+INTERIOR_DOOR_MATERIAL = "PVC"
+EXTERIOR_OPENING_MATERIAL = "ALUMINIUM"
+
+
+def _room_sides():
+    """Which apartment rooms each opening is seen from, on the frozen floor-level boundary."""
+    sides = defaultdict(list)
+    floors = {f["ROOM_ID"]: f for f in reg(QS, "QORTUBA_QS01_FLOOR_CALCULATIONS")["ROWS"]}
+    for r in reg(QS, "QORTUBA_QS01_SKIRTING_TAKEOFF")["ROWS"]:
+        for s in r["SEGMENTS"]:
+            if s["SEGMENT_CLASS"] in ("DOOR_OPENING", "FLOOR_LEVEL_GLAZED_OPENING") and s.get("SITE_ID"):
+                area = floors.get(r["ROOM_ID"], {}).get("METHOD_A_CAD_POLYGON_AREA_M2")
+                sides[s["SITE_ID"]].append((r["ROOM"], r["ROOM_ID"], area))
+    return sides
+
+
+# where the independent PDF reading names the pair of rooms a gap joins, it is clearer than a 5 m band's room list
+PDF_PAIR = {
+    "OS-77f8fed2eb15": ("Hall", "Lobby (unlabelled internal space)"),
+    "OS-85cb2192ebc0": ("Master bedroom", "Dressing room"),
+    "OS-b5a0fbb335d4": ("Hall", "Pantry / preparation kitchen"),
+}
+# the same pairs as raw room labels, for matching against the quantity rows
+PDF_PAIR_RAW = {
+    "OS-77f8fed2eb15": ("HALL / whgm", "UNLABELLED_INTERNAL_SPACE"),
+    "OS-85cb2192ebc0": ("M.B.ROOM", "DRESS"),
+    "OS-b5a0fbb335d4": ("HALL / whgm", "PAINTRY"),
+}
+
+
+def human_register():
+    """The same openings, described the way a person reads a plan: room, what it is, how wide, and what it opens onto.
+
+    The opaque id stays on every row, but it belongs in the audit column.  A question that names OS-77f8fed2eb15 is a
+    question nobody can answer; a question that names the opening between the Hall and the Lobby is one anybody can.
+    """
+    rows = completed_register()
+    sides = _room_sides()
+    floors = {f["ROOM_ID"]: f for f in reg(QS, "QORTUBA_QS01_FLOOR_CALCULATIONS")["ROWS"]}
+    walls = {w["WALL_ID"]: w for w in reg(QS, "QORTUBA_QS01_BLOCK_WALL_TAKEOFF")["ROWS"]}
+    area_of = {f["ROOM"]: f["METHOD_A_CAD_POLYGON_AREA_M2"] for f in floors.values()}
+
+    out = []
+    for r in rows:
+        seen = sides.get(r["OPENING_ID"], [])
+        w = walls.get(r["HOST_WALL_ID"])
+        both = [friendly(nm, ar) for nm, _rid, ar in seen]
+        if r["BLUE_ELEMENT_ID"] and r["ROOM_ID"]:
+            f = floors.get(r["ROOM_ID"])
+            here = friendly(r["ROOM"], f["METHOD_A_CAD_POLYGON_AREA_M2"] if f else None)
+        else:
+            here = both[0] if both else friendly((r["ROOM"] or "").split(",")[0].strip() or None,
+                                                area_of.get((r["ROOM"] or "").split(",")[0].strip()))
+        other = [b for b in both if b != here]
+        wall_rooms = sorted({z for z in ((w["ROOM_SIDE_A"] + w["ROOM_SIDE_B"]) if w else []) if z not in APARTMENT_ROOMS})
+        apt_rooms = sorted({z for z in ((w["ROOM_SIDE_A"] + w["ROOM_SIDE_B"]) if w else []) if z in APARTMENT_ROOMS})
+        r_blue = r["BLUE_ELEMENT_ID"]
+        # the floor-level path is the best evidence of which two rooms an opening joins; where it records only one side
+        # (or none), fall back to the rooms the host band itself bounds
+        site_row = bool(r["SITE_CLASS"])
+        # which rooms lose wall area to this opening: the floor-level sides where the boundary records two of them,
+        # otherwise the pair the reading or the host band gives.  A 5 m band touching four rooms is not that pair.
+        raw = [nm for nm, _rid, _ar in seen]
+        if len(raw) < 2 and r["OPENING_ID"] in PDF_PAIR_RAW:
+            raw = list(PDF_PAIR_RAW[r["OPENING_ID"]])
+        elif len(raw) < 2 and len(apt_rooms) == 2 and site_row:
+            raw = list(apt_rooms)
+        elif not raw and r["BLUE_ELEMENT_ID"] and r["ROOM"]:
+            raw = [r["ROOM"]]
+        ids = [rid for _nm, rid, _ar in seen]
+        if len(ids) < 2:
+            uniq = {}
+            for f in floors.values():
+                uniq.setdefault(f["ROOM"], []).append(f["ROOM_ID"])
+            ids = [uniq[nm][0] for nm in raw if len(uniq.get(nm, [])) == 1]
+            # a blue-ONLY row is a window in one room's external wall; a row that also has a site is a gap in a
+            # shared wall, and its pair must not be collapsed to the single room the element sits nearest
+            if r["BLUE_ELEMENT_ID"] and r["ROOM_ID"] and not site_row:
+                ids = [r["ROOM_ID"]]
+        if len(both) < 2 and r["OPENING_ID"] in PDF_PAIR:
+            both = list(PDF_PAIR[r["OPENING_ID"]])
+            here, other = both[0], both[1:]
+        elif len(both) < 2 and len(apt_rooms) == 2 and site_row:
+            both = [friendly(nm) for nm in apt_rooms]
+            here, other = both[0], both[1:]
+        interior = len(seen) >= 2 or (len(apt_rooms) == 2 and site_row) or r["OPENING_ID"] in PDF_PAIR
+        inside = bool(apt_rooms) or bool(r["ROOM"])
+        if not inside:
+            material, why_mat = "OUTSIDE_APARTMENT", "this opening is not in an apartment wall and is out of scope"
+        elif r["TYPE"] == "DOOR" and interior:
+            material, why_mat = INTERIOR_DOOR_MATERIAL, "an interior door: both sides are apartment rooms"
+        elif r["TYPE"] == "DOOR":
+            material, why_mat = EXTERIOR_OPENING_MATERIAL, "not seen from two apartment rooms, so it is an envelope door"
+        elif r["TYPE"] in ("WINDOW", "SLIDING_DOOR") and not interior:
+            material, why_mat = EXTERIOR_OPENING_MATERIAL, "an exterior opening system in an envelope wall"
+        elif not inside:
+            material, why_mat = "OUTSIDE_APARTMENT", "this opening is not in an apartment wall and is out of scope"
+        elif r["TYPE"] == "GLAZED_OPENING" and interior:
+            material, why_mat = "INTERNAL_GLAZED_OPENING", ("both sides are apartment rooms, so this is internal "
+                                                            "glazing and not an aluminium envelope item")
+        else:
+            material, why_mat = "NOT_CLASSIFIED", "type not established, so no trade may claim it"
+
+        outside = ", ".join(z.strip("[]").replace("_", " ").lower() for z in wall_rooms)
+        if other:
+            where = f"between {here} and {', '.join(other)}"
+        elif r["BLUE_ELEMENT_ID"]:
+            where = f"in the {here} external wall"
+        elif not inside:
+            where = f"outside the apartment, in the wall between {outside}"
+        elif apt_rooms and outside:
+            where = ("on the wall shared by " + " and ".join(friendly(z) for z in apt_rooms)
+                     + f", which also faces {outside}") if len(apt_rooms) > 1 else \
+                    f"in the {friendly(apt_rooms[0])} wall facing {outside}"
+        elif apt_rooms:
+            where = "on the wall shared by " + " and ".join(friendly(z) for z in apt_rooms)
+        else:
+            where = f"in the {here}" if here else "location not established"
+
+        where = where.replace("the a ", "a ").replace("the A ", "a ")
+        kind = {"DOOR": "Door", "WINDOW": "Window", "SLIDING_DOOR": "Sliding door",
+                "GLAZED_OPENING": "Glazed opening", "UNRESOLVED": "Opening of unknown type"}[r["TYPE"]]
+        out.append({
+            "OPENING_ID": r["OPENING_ID"],
+            "ROOM": here, "ADJACENT": other or None, "LOCATION": where,
+            "OPENING": kind, "TYPE": r["TYPE"],
+            "WIDTH_M": r["WIDTH_M"], "HEIGHT_M": r["HEIGHT_M"],
+            "HEIGHT_SOURCE": r["HEIGHT_SOURCE"],
+            "MATERIAL_TRADE": material, "WHY_THAT_TRADE": why_mat,
+            "INTERIOR": interior, "INSIDE_APARTMENT": inside,
+            "ROOMS_FOR_DEDUCTION": raw, "ROOM_IDS_FOR_DEDUCTION": ids,
+            "STATUS": r["STATUS"],
+            "IS_AN_OPENING_THROUGH_THE_WALL": r["IS_AN_OPENING_THROUGH_THE_WALL"],
+            "HOST_WALL_ID": r["HOST_WALL_ID"],
+            "DESCRIPTION": f"{kind} {where}, width {r['WIDTH_M']:.3f} m",
+            "PDF_READER": r["PDF_READER"],
+        })
+    return out

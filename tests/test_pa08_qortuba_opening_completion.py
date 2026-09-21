@@ -73,13 +73,18 @@ def test_every_opening_carries_the_eight_required_fields():
             assert k in r, (r["OPENING_ID"], k)
         assert r["TYPE"] in OS.OPENING_TYPES
         assert r["WIDTH_M"] > 0 and r["WIDTH_SOURCE"]
-        assert r["STATUS"] in ("USABLE", "SOURCE_REQUIRED", "NOT_AN_OPENING")
+        assert r["STATUS"] in ("USABLE", "OWNER_INPUT_REQUIRED", "NOT_AN_OPENING")
 
 
 def test_a_height_exists_only_where_the_owner_default_may_reach():
+    owner = OS.OWNER_SUPPLIED_HEIGHTS
     for r in opens()["ROWS"]:
         if r["HEIGHT_M"] is None:
             assert r["HEIGHT_SOURCE"] is None
+            continue
+        if r["OPENING_ID"] in owner:
+            # an owner override is a real dimension and may reach any type
+            assert r["HEIGHT_M"] == owner[r["OPENING_ID"]][0] and "OWNER" in r["HEIGHT_SOURCE"]
             continue
         assert r["TYPE"] == "DOOR" and r["HEIGHT_M"] == OS.DEFAULT_DOOR_HEIGHT_M
         assert "TD-02" in r["HEIGHT_SOURCE"]
@@ -118,7 +123,7 @@ def test_a_window_with_a_sill_is_still_an_opening_in_the_wall_area():
     for s in sills:
         assert rows[s]["IS_AN_OPENING_THROUGH_THE_WALL"] is True, s
         assert rows[s]["INTERRUPTS_AT_FLOOR_LEVEL"] is False
-        assert rows[s]["STATUS"] == "SOURCE_REQUIRED"
+        assert rows[s]["STATUS"] == "OWNER_INPUT_REQUIRED"
 
 
 def test_the_pdf_reading_is_recorded_as_evidence_and_not_as_a_dimension():
@@ -126,6 +131,9 @@ def test_the_pdf_reading_is_recorded_as_evidence_and_not_as_a_dimension():
     quoted = [r for r in rows.values() if r["PDF_READER"]]
     assert len(quoted) == 3
     for r in quoted:
+        if r["OPENING_ID"] in OS.OWNER_SUPPLIED_HEIGHTS:
+            assert "OWNER" in r["HEIGHT_SOURCE"], "the height came from the owner, never from the reader"
+            continue
         assert r["HEIGHT_M"] is None, "a reader may speak to type, never to a dimension"
 
 
@@ -176,7 +184,7 @@ def test_the_superseded_reading_is_kept_as_an_audit_trail_not_as_a_quantity():
 # ------------------------------------------------------------------ §7 aluminium
 def test_the_aluminium_rows_are_schedules_and_never_bare_counts():
     q = by_id()
-    for qid in ("Q-15", "Q-16"):
+    for qid in ("Q-15", "Q-16", "Q-17"):
         x = q[qid]
         assert x["UNIT"] == "M2", qid
         assert x["SCHEDULE"] and x["OPENINGS"] == len(x["SCHEDULE"])
@@ -184,23 +192,25 @@ def test_the_aluminium_rows_are_schedules_and_never_bare_counts():
         for row in x["SCHEDULE"]:
             assert row["WIDTH_M"] > 0 and row["OPENING_ID"]
             if row["HEIGHT_M"] is None:
-                assert row["AREA_M2"] is None and row["STATUS"] == "SOURCE_REQUIRED" and row["WHY"]
+                assert row["AREA_M2"] is None and row["STATUS"] == "OWNER_INPUT_REQUIRED" and row["WHY"]
             else:
                 assert abs(row["AREA_M2"] - round(row["WIDTH_M"] * row["HEIGHT_M"], 4)) < 1e-9
 
 
-def test_a_window_without_a_height_stays_source_required():
+def test_a_window_without_a_height_stays_owner_input_required():
     x = by_id()["Q-15"]
-    assert x["STATUS"] == "SOURCE_REQUIRED" and x["MEASURED_NET_QUANTITY"] is None
+    assert x["STATUS"] == "OWNER_INPUT_REQUIRED" and x["MEASURED_NET_QUANTITY"] is None
     assert x["RESOLVED"] == 0 and x["OPENINGS"] > 0
     assert "forbids a default" in x["PARAMETER_SOURCE"]
+    assert x["BOQ_ITEM"] == "ALUMINIUM_EXTERNAL_WINDOWS"
 
 
 def test_the_door_areas_sum_to_the_schedule():
     x = by_id()["Q-16"]
     assert abs(x["MEASURED_NET_QUANTITY"] - round(sum(r["AREA_M2"] for r in x["SCHEDULE"]), 4)) < 1e-9
     assert x["USES_TEMPORARY_DEFAULT"] is True
-    assert x["STATUS"] == "SPEC_REQUIRED", "the area is established; the material is not"
+    assert x["BOQ_ITEM"] == "PVC_INTERNAL_DOORS", "US-13: an interior door is never an aluminium item"
+    assert all(r["MATERIAL_TRADE"] == "PVC" for r in x["SCHEDULE"])
 
 
 # ------------------------------------------------------------------ nothing moved

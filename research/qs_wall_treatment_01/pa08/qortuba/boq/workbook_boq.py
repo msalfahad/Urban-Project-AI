@@ -37,12 +37,12 @@ THIN = Border(*[Side(style="thin", color="BFC9D4")] * 4)
 STATUS_FILL = {"FINAL_QUANTITY_AVAILABLE": GREEN, "PARTIALLY_CALCULATED": MINT, "ONE_INPUT_REQUIRED": CREAM,
                "PROJECT_RULE_REQUIRED": BLUE, "SPEC_REQUIRED": PEACH, "DRAWING_REQUIRED": PEACH,
                "SOURCE_REQUIRED": PEACH, "NOT_APPLICABLE": GREY, "CLOSED_BY_OWNER_RULE": GREY,
-               "GEOMETRIC_REFERENCE_ONLY": GREY}
+               "GEOMETRIC_REFERENCE_ONLY": GREY, "OWNER_INPUT_REQUIRED": PEACH}
 STATUS_AR = {"FINAL_QUANTITY_AVAILABLE": "كمية نهائية جاهزة", "PARTIALLY_CALCULATED": "محسوبة جزئياً",
              "ONE_INPUT_REQUIRED": "ينقصه مُدخل واحد", "PROJECT_RULE_REQUIRED": "ينقصه قرار قاعدة",
              "SPEC_REQUIRED": "ينقصه مواصفة", "DRAWING_REQUIRED": "ينقصه مخطط", "SOURCE_REQUIRED": "ينقصه مصدر",
              "NOT_APPLICABLE": "لا ينطبق", "CLOSED_BY_OWNER_RULE": "مغلق بقاعدة المالك",
-             "GEOMETRIC_REFERENCE_ONLY": "مرجع هندسي فقط"}
+             "GEOMETRIC_REFERENCE_ONLY": "مرجع هندسي فقط", "OWNER_INPUT_REQUIRED": "بانتظار قرار المالك"}
 
 # §9/§W: the fifteen columns, in the order the house bills use
 COLS = ["البند", "الوصف", "وحدة التسعير", "كمية القياس", "وحدة القياس", "قاعدة التحويل", "الكمية النهائية",
@@ -59,7 +59,13 @@ SUPERSEDED_BY = {
     "CM-C3": "Q-05", "CM-C4": "Q-06", "CM-IP1": "Q-08", "CM-PT1": "Q-09",
     "CM-IP2": "Q-10", "CM-C1": "Q-13", "CM-C2": "Q-11",
 }
-CLOSED_BY_RULE = {"CM-IP3": ("QP-05", "Qortuba carries no render band behind the skirting, so the item does not arise")}
+CLOSED_BY_RULE = {
+    "CM-IP3": ("QP-05", "Qortuba carries no render band behind the skirting, so the item does not arise"),
+    "CM-CL2": ("US-15", "the ceiling cornice run is not carried: nothing is inferred from a room perimeter without a "
+                        "ceiling drawing, so the 122.900 lm dry perimeter is NOT a payable decor item"),
+    "CM-CL3": ("US-15", "the same for the 30.225 lm wet perimeter"),
+    "CM-CL1": ("US-15 + QP-15", "the ceiling is one priced area line, Q-14, over 138.510 m2"),
+}
 
 
 def _head(ws, cols, widths, title=None, sub=None):
@@ -321,6 +327,19 @@ def build():
                          " | ".join(x["EVIDENCE"]), x["STATUS"]],
                  GREEN if x["BLOCKWORK_CONFIRMED"] else GREY)
         ws.cell(r - 1, 3).number_format = "0.000"
+
+    # ---------------------------------------------------------------- owner questions, in words
+    oq = json.loads((OUT / "QORTUBA_OWNER_QUESTIONS.json").read_text("utf-8"))
+    ws = wb.create_sheet("أسئلة المالك Ask Owner")
+    cols = ["#", "الغرفة / Room", "الفتحة / Opening", "العرض م / Width", "السؤال / Question",
+            "الموقع / Location", "لماذا / Why it matters", "AUDIT ID"]
+    r = _head(ws, cols, [5, 30, 26, 13, 52, 74, 76, 24], "OWNER INPUT REQUIRED", oq["RULE"])
+    for x in oq["ROWS"]:
+        r = _put(ws, r, [x["#"], x["ROOM"], x["OPENING"], x["WIDTH_M"], x["QUESTION"], x["LOCATION"],
+                         x["WHY_IT_MATTERS"], x["AUDIT_OPENING_ID"]], PEACH)
+        ws.cell(r - 1, 4).number_format = "0.000"
+    r += 1
+    ws.cell(r, 1, "Numbered plan: " + Path(oq["MARKED_PLAN"]).name).font = Font(italic=True, size=9, color="666666")
 
     # ---------------------------------------------------------------- historical registry, unchanged
     ws = wb.create_sheet("سوابق تاريخية Precedent")
