@@ -619,3 +619,38 @@ releases ten rows and the opening heights another ten.
 Eleven trades are partially ready and five are not ready. Frozen as
 `FREEZE_QORTUBA_FINAL_PRICING_AUDIT`, with the workbook rewritten in the
 sixteen-section layout.
+
+**URBAN-PROJECTS-BOQ-SCHEMA-LIBRARY (the house pricing structure, learned
+from previous projects).** Six historical workbooks were read for structure
+only: concrete and steel, aluminium, paint, floors with waterproofing and
+decor and railing, internal and external plaster, and blockwork. Two are
+legacy `.xls` and were read directly with a read-only reader, so no
+conversion was needed and no original was modified; two further uploads are
+byte-identical duplicates and one is a programme of works rather than a bill.
+
+Forty-one items recorded with their raw Arabic name, canonical name, pricing
+unit, quantity basis, formula pattern, quoted deduction rule and source sheet.
+Every item's Arabic text is verified to exist in the sheet the register names,
+and every workbook hash is verified. No quantity, rate, total or room
+dimension from any reference project is stored, and a test scans for them
+(§203).
+
+Two row shapes run through every workbook: a summary invoice carrying the
+priced items with full and half deduction columns, and a detail takeoff where
+count, length and height build each element under a storey heading. Ten house
+conventions were recovered, including openings deducted at half rather than
+in full, corner and end beads measured by the metre and then halved under the
+rule written on the sheet as 2م=1م, a waterproofing upturn priced by the
+metre with no height, stairs and landings as one combined area with a counted
+side piece, and blockwork priced by area per thickness with external
+blockwork as its own item.
+
+Against that schema, fifteen Qortuba pricing units are confirmed and five are
+wrong (§204). The upturn correction is the valuable one: carried as an area
+needing a height, the house prices it by the metre, so the measured bathroom
+perimeter of 27.600 m is already the quantity. Thirteen rows need recutting
+to the house's row shapes, chiefly the stair, the ceiling decor split and the
+aluminium summary (§205). Ten house items have no Qortuba counterpart, among
+them render under skirting, plaster corners and ends, and the roof upturn,
+which needs a roof perimeter Qortuba never measured. Three rows have no house
+precedent at all, including the black profile, and none was given one (§206).

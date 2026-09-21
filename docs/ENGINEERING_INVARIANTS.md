@@ -4475,3 +4475,59 @@ Rank a trade's blockers by how many rows they release that already carry a
 measured figure, and only then by total count. The question an owner should
 be asked first is the one that turns existing work into a quantity, not the
 one that appears most often.
+
+## §203 — Learn the structure from the reference project, never the numbers
+
+A previous project's bill teaches what the house prices, in what unit, built
+by what formula, with what deduction written in its own words. It must not
+teach what anything costs or how big anything was.
+
+The Qortuba schema library records item names, units, quantity bases,
+formula patterns and quoted deduction rules from six historical workbooks,
+and stores no quantity, rate, total or room dimension from any of them. A
+test scans the whole register for the reference project's own figures and
+fails if one appears. The originals are read only, and their hashes are
+checked before and after.
+
+## §204 — An assumed unit is a defect until the house confirms it
+
+Fifteen of the Qortuba pricing units matched the house bill and are now
+sourced rather than assumed. Five did not, and every one of them would have
+produced a wrong bill:
+
+A waterproofing upturn was carried as an area needing a height. The house
+prices it by the metre, so the height was never needed and the measured
+bathroom perimeter was already the answer. A stair side piece was carried by
+the metre; the house counts it. A door reveal was carried by the metre; the
+house measures it as an area. A door and a window count were carried as
+priced rows; in the house bill a count is a multiplier inside an area and is
+never the priced quantity.
+
+Four of those five made a row look harder than it was, and one made a count
+look like a quantity. Both directions are errors, and neither is visible
+without the reference bill.
+
+## §205 — The house's row shape is part of the quantity
+
+Six Qortuba rows split a stair into treads, risers, landings, nosings and
+skirting. The house prices stairs and landings as one combined area, with a
+skirting length and a counted side piece: three items, not six. A takeoff
+cut to the wrong shape cannot be priced even when every number in it is
+right.
+
+The same applies in reverse. The house splits decor and render into dry
+rooms against bathrooms and kitchens, prices external blockwork apart from
+the thickness items, and gives a named special room its own line. Thirteen
+Qortuba rows need recutting to those shapes, and that is a restructuring
+task, not a measurement one.
+
+## §206 — An item with no precedent gets no precedent invented
+
+The black profile above the skirting appears nowhere in six historical
+workbooks. The nearest thing by name is a ceiling cornice, which is a
+different product in a different place.
+
+The temptation is to bill it under the cornice line, or under the skirting,
+because both are linear and both are close. Recording it as having no house
+precedent, and asking which item it belongs to, costs one question. Guessing
+costs a wrong bill that nobody can trace back to a decision.
