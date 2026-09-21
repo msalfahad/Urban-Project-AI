@@ -252,7 +252,8 @@ def plaster_audit():
     dry = [r for r in rooms if r["FINISH_CLASS"] == "DRY_ROOM"]
     per_room = []
     for r in dry:
-        pend = [o for o in ops if o["HEIGHT_M"] is None and r["ROOM_NAME"] in o["ROOMS"]]
+        pend = [o for o in ops if o["HEIGHT_M"] is None and ({r["ROOM"], r["ROOM_NAME"]} & set(o["ROOMS"]))
+                and o.get("IS_AN_OPENING_THROUGH_THE_WALL", True)]
         per_room.append({
             "ROOM": r["ROOM"],
             "DOORS_DEDUCTED_LM": r["DOOR_OPENING_LM"], "DOOR_DEDUCTION_M2": r["DOOR_DEDUCTION_M2"],
@@ -299,8 +300,15 @@ def status_audit(sk):
         "Q-07-219": "PHYSICAL OBJECT IDENTITY: 0.080 m of geometry drawn on the arrow2 layer with both face roles "
                     "UNKNOWN_GEOMETRY.  This is a drafting arrow, and it should never have reached a bill",
     }
-    demoted = sorted(prev - now)
+    # what THIS audit demoted, and which of those a later owner rule has since restored
+    audit_demoted = {"Q-01", "Q-02", "Q-07-219", "Q-07-300", "Q-07-350", "Q-07-450", "Q-07-550", "Q-07-600"}
+    demoted = sorted(audit_demoted - now)
+    restored = sorted(audit_demoted & now)
     return {
+        "RESTORED_BY_A_LATER_OWNER_RULE": [
+            {"QUANTITY_ID": i, "WHY": "QP-09: the owner read both figures and fixed the window deduction, so the "
+                                      "commercial rule that was open when this audit first ran is now closed"}
+            for i in restored],
         "FINAL_QUANTITIES_THAT_SURVIVE_AUDIT": [
             {"QUANTITY_ID": x["QUANTITY_ID"], "BOQ_ITEM": x["BOQ_ITEM"],
              "VALUE": x["MEASURED_NET_QUANTITY"], "UNIT": x["UNIT"]}
@@ -313,6 +321,8 @@ def status_audit(sk):
              "UNIT": x["UNIT"], "OPENINGS_PENDING": len(x["RESIDUAL_OPENINGS"])}
             for x in qs["ROWS"] if x["STATUS"] == "PARTIALLY_CALCULATED"],
         "FINAL_BEFORE_AUDIT": len(prev), "FINAL_AFTER_AUDIT": len(now),
+        "DEMOTED_BY_THIS_AUDIT": sorted(audit_demoted),
+        "STILL_DEMOTED": demoted,
         "TEST": "a quantity is final only when the PHYSICAL OBJECT IDENTITY and the COMMERCIAL RULE are both "
                 "established.  Six quantities failed the first test and two failed the second",
     }
@@ -322,6 +332,9 @@ def finish():
     ver = OR.verify_inputs()
     sk = skirting_proof()
     out = {
+        "NOTE_ON_SECTION_1": "the owner has since fixed the window deduction under QP-09, so the issued skirting is "
+                             "the all-window-widths figure.  Both columns are kept because the audit trail is the "
+                             "point of an audit",
         "ARTIFACT": "QORTUBA_OWNER_RULE_APPLICATION_AUDIT",
         "SCOPE": "an audit of how OWNER RULES V1 was applied.  No geometry was modified, no rule added, no phase opened",
         "INPUT_FREEZES_VERIFIED": ver,

@@ -4722,3 +4722,60 @@ rule disagreed.
 Every finding came out of a register that was already on disk. The
 information needed to reject the drafting arrow had been recorded by the
 band engine three phases earlier and simply never consulted.
+
+## §222 — An exhaustive search that finds nothing is a result
+
+The Qortuba drawing set was searched for an opening height everywhere one
+could hide: block attributes, authored dimensions, door and window blocks,
+schedules, annotations, embedded elevations and sections, and repeated block
+definitions. There are no ATTRIB or ATTDEF entities and all 116 block headers
+report `hasattrs = 0`. All 101 linear dimensions sit at elevation 0.0 with
+extrusion [0,0,1]: every one measures a plan distance. Every TEXT and MTEXT
+string is a room name, a title-block field or a dimension override; the only
+height-like string in the file is `LEVEL R.F = 4.00 m`, a roof level. The
+named blocks are `_OBLIQUE`, `dot-j`, `FRAM`, `LOG`, `6`, `asgasgas`, `BATH`
+and `DRE`, none of them an opening type.
+
+So the finding is recorded as a finding: this source contains no opening
+height, and no further reading of it will produce one. That is worth more
+than a guess, because it converts an open question into a closed one and
+names the three things that could answer it.
+
+## §223 — A gap through one face is not a doorway
+
+A doorway interrupts both faces of a wall. Five Qortuba sites interrupt only
+one — four of them 150 mm wide, exactly the thickness of the wall they sit
+in, and one 600 mm — and the band engine said so at R1 in a field nobody had
+read since. They are wall ends and corners, not openings, so they deduct
+nothing and block nothing. Four CAD junctions on the stair bands go the same
+way. Nine of twenty-five register entries stop holding up trades.
+
+The converse also holds and is easier to get wrong: a window with a sill IS
+an opening through the wall. It does not interrupt the floor line, so no
+skirting is deducted for it, and it does interrupt the wall area, so plaster,
+paint and blockwork must. One flag cannot carry both facts, so the register
+carries two.
+
+## §224 — An owner's confirmation closes a question; it does not erase the alternative
+
+The owner read 96.475 m and 86.589 m, chose the second, and fixed it as a
+project rule. The chosen figure is now the quantity. The superseded one is
+kept beside it, labelled with the rule that closed it, because six months
+from now somebody will ask why the skirting is not the wall line and the
+answer should be in the file rather than in somebody's memory.
+
+Closing a question means not asking it again. It does not mean deleting the
+reasoning that made it a question.
+
+## §225 — A count is a multiplier; the schedule is the quantity
+
+Aluminium is priced by area. Reporting seven openings is reporting nothing:
+the priced quantity is the sum of width x height across a named schedule, and
+the schedule has to be visible so that each row can be checked and each
+missing height can be seen. Qortuba's seven door openings give 16.665 m2 on
+the owner's temporary door height; its seven glazed elements give no area at
+all, because no default may reach a window.
+
+And an area is not a trade. Which of those openings are aluminium and which
+are timber joinery is a finishes question, so the row carries its area and
+waits on material identity rather than calling itself final.

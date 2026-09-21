@@ -79,12 +79,14 @@ def test_no_default_height_reaches_a_window_a_sliding_door_or_an_unknown():
     o = reg("QORTUBA_OPENING_REGISTER")
     assert set(OR.NO_DEFAULT_FOR) <= set(o["TYPES"])
     for x in o["ROWS"]:
-        if x["TYPE"] in OR.NO_DEFAULT_FOR:
-            assert x["HEIGHT_M"] is None, x["OPENING_ID"]
+        if x["HEIGHT_M"] is None:
             assert x["HEIGHT_STATE"] == "NOT_ESTABLISHED"
-        else:
-            assert x["TYPE"] == "DOOR" and x["HEIGHT_M"] == 2.20
-            assert x["HEIGHT_STATE"] == "TEMPORARY_OWNER_DEFAULT"
+            continue
+        # a height exists only on an ordinary door, and only from the owner's default
+        assert x["TYPE"] == "DOOR" and x["HEIGHT_M"] == 2.20, x["OPENING_ID"]
+        assert x["HEIGHT_STATE"] == "TEMPORARY_OWNER_DEFAULT"
+    for x in o["ROWS"]:
+        assert not (x["TYPE"] in OR.NO_DEFAULT_FOR and x["HEIGHT_M"] is not None), x["OPENING_ID"]
 
 
 def test_a_source_width_is_never_replaced_by_the_default_width():
@@ -223,10 +225,11 @@ def test_a_missing_height_blocks_only_the_rows_that_depend_on_it():
     finals = {x["QUANTITY_ID"] for x in q["ROWS"] if x["STATUS"] == "FINAL_QUANTITY_AVAILABLE"}
     assert {"Q-03", "Q-04", "Q-11", "Q-12"} <= finals, "floor and perimeter items need no height"
     by = by_id()
-    # the skirting pair is held by a RULE reading, never by a height: it still carries its value
+    # the skirting pair is fixed by QP-09 and was never held by a height
     for qid in ("Q-01", "Q-02"):
-        assert by[qid]["STATUS"] == "PROJECT_RULE_REQUIRED"
-        assert by[qid]["MEASURED_NET_QUANTITY"] is not None and by[qid]["USES_TEMPORARY_DEFAULT"] is False
+        assert by[qid]["STATUS"] == "FINAL_QUANTITY_AVAILABLE"
+        assert by[qid]["MEASURED_NET_QUANTITY"] == 86.589
+        assert by[qid]["USES_TEMPORARY_DEFAULT"] is False
         assert by[qid]["RESIDUAL_OPENINGS"] == [], "no unheighted opening may hold up a linear quantity"
     assert q["BY_STATUS"]["FINAL_QUANTITY_AVAILABLE"] > 0 and q["BY_STATUS"]["PARTIALLY_CALCULATED"] > 0
 
@@ -241,8 +244,10 @@ def test_every_window_now_has_a_host_room_so_none_is_smeared_everywhere():
         rooms = set(q[qid]["ROOMS"])
         for o in q[qid]["RESIDUAL_OPENINGS"]:
             oid = o.get("OPENING_ID")
-            if oid in glz:
-                assert glz[oid]["ROOM"] in rooms or glz[oid]["ROOM"] is None, (qid, oid)
+            if oid in glz and glz[oid]["ROOM"]:
+                # a room answers to its full label and to its canonical name
+                aliases = rooms | {r.split(" /")[0] for r in rooms}
+                assert glz[oid]["ROOM"].split(" /")[0] in aliases, (qid, oid)
     # a glazed element can only move a blockwork group whose thickness matches its host wall
     for qid, x in q.items():
         if not qid.startswith("Q-07-"):

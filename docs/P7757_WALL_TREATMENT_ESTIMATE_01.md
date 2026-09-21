@@ -783,3 +783,41 @@ Tile preparation reconciles exactly with the two wall ceramic items,
 the same faces.
 
 Thirteen quantities were final before the audit. Five survive it.
+
+### Opening completion and the confirmed skirting
+
+The owner confirmed the skirting rule: every door, sliding door and window
+width comes off the path. The hidden skirting and the hidden profile are both
+86.589 m, stored as QP-10 and QP-11, and the question is closed. The
+superseded 96.475 m reading is kept beside them with the rule that closed it
+(§224).
+
+The remaining blocker was opening height and type, so the drawing set was
+searched exhaustively for both. Nothing was found, and the search itself is
+recorded: no block attributes anywhere, all 101 dimensions in the plan plane,
+no schedule, no elevation, no section, no opening mark, and no named block of
+an opening type (§222). The drawing carries no opening height at all, and the
+three things that could supply one are named.
+
+Two things the search did resolve. Five sites interrupt only one face of
+their wall — four of them exactly one wall thickness wide — and a doorway
+interrupts both, so they are wall ends rather than openings; with four CAD
+junctions that is nine register entries which now block nothing (§223). And
+the independent PDF reading, whose declared powers cover the presence of a
+door, identifies two of the remaining gaps as doorless openings, recorded as
+type evidence and never as a dimension.
+
+The blockwork gained nothing from the owner's rule and lost nothing either:
+235.740 m² at 200 mm and 134.495 m² at 150 mm, both still partial, because
+every masonry group carries either an unheighted opening or a thickness whose
+face doubling leaves the BOQ line ambiguous. Wall ceramic is 84.900 m² to the
+bathrooms and 33.450 m² to the PAINTRY; tile preparation is 118.350 m², still
+the exact sum of the two. Plaster and paint are 311.9513 m² each.
+
+The aluminium rows are schedules rather than counts (§225): seven door
+openings at 16.665 m² on the temporary door height, and seven glazed elements
+with widths and no areas, because no default may reach a window.
+
+Seven quantities are final. One silent escape was caught on the way: the room
+HALL / whgm never matched the canonical name HALL, so HALL had been dodging
+every opening residual in the register. It now carries five.
