@@ -507,7 +507,10 @@ def safety_register(rows):
             "SAFETY_CLASS": s, "MEANING": SAFETY_MEANING[s], "COUNT": len(members),
             "RULES": [{"RULE_ID": r["RULE_ID"], "TRADE": r["TRADE"], "ITEM": r["ITEM"],
                        "RULE_DESCRIPTION": r["RULE_DESCRIPTION"]} for r in members],
-            "MAY_BE_APPLIED_TO_QORTUBA_WITHOUT_OWNER": s == "SAFE_URBAN_STANDARD_CANDIDATE",
+            # §T, the owner's correction: a candidate is not a standard, and only a standard applies on its own.
+            "MAY_BE_APPLIED_TO_QORTUBA_WITHOUT_OWNER": False,
+            "WHY_NOT_APPLIED": "a candidate never applies automatically.  Only an APPROVED_URBAN_STANDARD may act on "
+                               "its own, and then only below a project drawing and an owner override",
             "MAY_BE_PROMOTED_TO_URBAN_STANDARD_NOW": False,
             "WHY_NOT_PROMOTED": "every rule here was read off ONE previous project.  A second project, or the owner "
                                 "declaring it company practice, is what turns a precedent into a standard",

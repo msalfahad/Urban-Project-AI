@@ -41,10 +41,12 @@ def test_no_rule_stands_at_urban_standard():
 
 
 def test_a_safe_candidate_is_still_only_a_candidate():
+    """The owner's §T correction: a candidate never applies on its own, only an approved standard does."""
     for s in reg("QORTUBA_RULE_SAFETY_REGISTER")["ROWS"]:
         assert s["SAFETY_CLASS"] in RR.SAFETY
         assert s["MAY_BE_PROMOTED_TO_URBAN_STANDARD_NOW"] is False, s["SAFETY_CLASS"]
-        assert s["WHY_NOT_PROMOTED"]
+        assert s["MAY_BE_APPLIED_TO_QORTUBA_WITHOUT_OWNER"] is False, s["SAFETY_CLASS"]
+        assert s["WHY_NOT_PROMOTED"] and s["WHY_NOT_APPLIED"]
 
 
 def test_a_contractor_specific_rule_never_applies_to_qortuba_by_itself():

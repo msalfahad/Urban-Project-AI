@@ -4586,3 +4586,82 @@ runs across it. So the cornice inherits the skirting register's GROSS wall
 line, 153.125 m, and not its net run of 106.075 m, and the two are kept as
 separate keys rather than one reused number. Same room, same wall, two
 different measurements, because two different things happen at the door.
+
+## §212 — A rule changes what a number means, never where a line is
+
+An owner declaring a 3.00 m plaster height is not new information about the
+drawing. It is new information about the bill. So a rule change recalculates
+quantities and re-runs no geometry: not wall detection, not room detection,
+not opening detection, not floor polygons. The dependency graph is stored
+explicitly, parameter by parameter, so that changing the plaster height
+touches plaster and tile preparation and nothing else — and so that the
+claim can be tested rather than trusted.
+
+The frozen measurement registers are the input to every figure. If a rule
+change could move a boundary, the boundary was never established in the
+first place.
+
+## §213 — A temporary default is flagged on every figure it touches
+
+The owner supplied a default door height of 2.20 m for doors with no source
+dimension. Every Qortuba door width is source-established and no height is,
+so the default sets the height and the drawing sets the width — per
+dimension, not per opening. A default never overwrites a source dimension,
+and a source dimension never inherits a default's uncertainty.
+
+Every quantity that consumed the default carries the warning on its own row.
+A placeholder that is not marked as one becomes a measurement within two
+handovers.
+
+## §214 — No default is extended by analogy
+
+The default covers normal doors. It was not extended to windows, sliding
+doors or glazed panels, because the owner scoped it to doors and a window
+head is not a door head. The result is that seven glazed elements and ten
+unclassified sites still carry no height, and every wall-area quantity that
+depends on them is PARTIALLY_CALCULATED rather than finished.
+
+The temptation is to reason that 2.20 m is "about right" for a window too.
+That reasoning produces a number with no source, sitting in the same column
+as numbers that have one.
+
+## §215 — An orphan is named by what it lacks, not by where it is missing from
+
+Six glazed elements have measured widths, no height and no host room. They
+are carried as a named residual on every wall-area quantity they could
+reach — and on none that they could not. Each has a 200 mm frame, so only
+the 200 mm blockwork can move; the 300, 350, 450, 550, 600 and 219 mm
+thicknesses are final. An unresolved site on a wall bounding the stair is
+not an orphan at all: it is out of scope, and smearing it across the
+apartment would have turned one stair-wall ambiguity into a hold on thirteen
+apartment quantities.
+
+A residual that is attached to everything blocks everything, and stops
+carrying information.
+
+## §216 — A membrane that stops at the threshold is not a waterproof room
+
+The bathroom waterproofing upturn was measured at 27.600 m: the host-wall
+path, which stops at each doorway because that is where the wall stops. As
+a wall measurement it was right. As a membrane quantity it was wrong, and
+wrong in the direction that leaks.
+
+The owner's standard restores the doorway: 30.225 m, the gross wet-room
+perimeter, doorways included. The 2.625 m difference is exactly the three
+bathroom door widths. This is the clearest case in the project of a
+geometrically correct number being the wrong quantity — and of why the
+physical measurement and the payable quantity are kept in separate columns.
+
+## §217 — Where wall tile reaches the floor tile there is nothing for a skirting to do
+
+A fully ceramic room has no skirting, no hidden skirting and no profile,
+because the wall finish already covers what a skirting covers. Applying
+this to Qortuba moved the PAINTRY out of the skirting entirely and out of
+plaster and paint into tile preparation, on one owner sentence and no new
+measurement. The skirting fell from 106.075 m to 96.475 m: −11.150 m for
+the PAINTRY, +1.550 m for the column faces in HALL and DRESS, which stay on
+the path because the deduction rule deducts openings and a column is not an
+opening.
+
+Every one of those metres is traceable to a rule id. A quantity that moves
+without one is a quantity nobody can defend.

@@ -697,3 +697,52 @@ cornice crosses the doorway a skirting stops at (§211). The black profile
 remains a new candidate BOQ item, بروفايل أعلى النعلة, priced by the metre by
 analogy with نعلات, marked as a Qortuba project rule and an Urban standard
 candidate, and not promoted.
+
+### Owner rules v1 and the Qortuba recalculation
+
+The owner supplied explicit rules, and they sit on a stored priority ladder:
+a project drawing beats an owner override, which beats an approved Urban
+standard, which beats an approved temporary default, which beats a question.
+A historical BOQ precedent sits on no rung of that ladder at all until the
+owner puts it on one (§207 still holds; what changed is that ten rules now
+have an owner behind them).
+
+Ten rules were promoted to URBAN_STANDARD: connected floor and wall ceramic
+in wet and service rooms, no skirting or profile in such a room, no paint on
+a fully ceramic face, the membrane as a floor item plus a 0.15 m upturn, the
+doorway left unbroken in that upturn, the full opening deduction for all
+wall-area trades, 0.25 m three-sided reveals for plaster and paint, the
+hidden skirting and hidden profile sharing one payable path, normal skirting
+as a separate system at half the hidden rate, and source dimensions over
+defaults. Eight Qortuba project rules carry the four 3.00 m heights and the
+project's system choices, and are explicitly not company policy. One
+temporary default — a 2.20 m door height — is flagged on every figure it
+touches (§213), and was not extended to windows (§214). Seven historical
+precedents were superseded and demoted to reference only, among them both
+half-opening deductions and the blockwork deduction column that had been the
+single most-blocking open question.
+
+Thirteen quantities are now final. The hidden skirting and the hidden
+profile are 96.475 m each, down from 106.075 m: the PAINTRY leaves the
+skirting under the ceramic rule and the column faces join it under the
+deduction rule (§217). The bathroom membrane is 17.8625 m² of floor and
+30.225 m of upturn, the latter corrected upward by exactly the three
+bathroom door widths (§216). Floor ceramic splits into 17.8625 m² wet and
+11.685 m² service, leaving 108.9625 m² of dry floor still waiting on a
+finishes schedule. Six blockwork thicknesses are final at 3.00 m with full
+opening deductions.
+
+Seven quantities are partially calculated: they carry a deterministic value
+and a named list of openings that still have no height. Bathroom wall
+ceramic reads 84.900 m², computed from the gross perimeter so the tiled
+strip above each door head survives; plaster and paint each read 311.951 m²
+over the same dry faces, equal by construction rather than coincidence; tile
+preparation reads 118.350 m². The residual is honest and bounded: seven
+glazed elements and ten unclassified sites have no height, and six of the
+glazed elements have no host room either, so they are named on every row
+they could reach and on no row they could not (§215).
+
+Eleven owner questions are now closed and recorded as closed, so they are
+not asked again. Five remain, and only one of them is new: whether the
+PAINTRY takes waterproofing as well as ceramic, with 11.6825 m² of floor and
+11.150 m of perimeter already measured and waiting on one word.
