@@ -859,3 +859,40 @@ One defect the tests caught: the opening had been deducted from the Hall
 only. A blue element's nearest-room attribution had collapsed a two-room
 opening to one room, leaving the Pantry with 6.050 m² of wall it does not
 have (§229).
+
+### Crops for the five unanswerable questions, and a price that is not an area
+
+Nothing was recalculated in this pass. Two things were made answerable.
+
+Eleven questions were open. Six named a room and a window and could be
+answered from an armchair. Five asked what an opening *is* — and a sentence
+like "a 1.100 m gap in a bedroom wall facing the stair landing" is not a
+place. Neither was the whole-plan image: eleven numbers at plan scale sit on
+top of each other.
+
+So each of the five got its own crop, generated in
+`research/qs_wall_treatment_01/pa08/qortuba/boq/owner_question_crops.py` from
+material already frozen. The jamb object ids the R1 opening register names
+are resolved back to coordinates in the DWG decode — a lookup, not a new
+measurement — and the gap is drawn on the host band's own centreline and
+thickness. Around it goes enough wall to recognise the place, with the
+adjacent rooms named, one large red number on the questioned gap, and the
+measured clear width printed on the image. Below it the six choices: door,
+open passage, window, sliding door, not an opening, other. No CAD handle,
+site id or hash appears on any image; the opaque id stays in the audit
+record. Openings #10 and #11 sit at opposite ends of the same 1.900 m stub,
+so each crop says so — a person shown one of them would otherwise answer for
+both (§231).
+
+The second correction is a status, not a number. The seven interior PVC
+doors and their 16.665 m² of opening area are established and every wall
+trade around them has already taken the deduction — but none of that says
+whether the doors are priced per door, per set, or by the square metre. The
+row now carries PHYSICAL_OPENING_AREA_M2 = 16.665 ESTABLISHED with
+FINAL_PRICING_QUANTITY empty and PROJECT_RULE_REQUIRED, rather than
+reporting the one number it happens to have as though it were the bill. The
+Hall/Pantry glazed opening is the same: 2.750 × 2.200 = 6.050 m² is
+physically fixed and stays deducted from both rooms, while its commercial
+material and trade are unwritten (§232). Both are now open items O-09 and
+O-10 in the question ledger; V2-03 — that the doors are PVC and not
+aluminium — stays closed.

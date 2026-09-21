@@ -330,16 +330,21 @@ def build():
 
     # ---------------------------------------------------------------- owner questions, in words
     oq = json.loads((OUT / "QORTUBA_OWNER_QUESTIONS.json").read_text("utf-8"))
+    crops = json.loads((OUT / "QORTUBA_OWNER_QUESTION_CROPS.json").read_text("utf-8"))
+    crop_of = {x["#"]: Path(x["IMAGE"]).name for x in crops["ROWS"]}
     ws = wb.create_sheet("أسئلة المالك Ask Owner")
     cols = ["#", "الغرفة / Room", "الفتحة / Opening", "العرض م / Width", "السؤال / Question",
-            "الموقع / Location", "لماذا / Why it matters", "AUDIT ID"]
-    r = _head(ws, cols, [5, 30, 26, 13, 52, 74, 76, 24], "OWNER INPUT REQUIRED", oq["RULE"])
+            "الموقع / Location", "لماذا / Why it matters", "الصورة / Crop image", "AUDIT ID"]
+    r = _head(ws, cols, [5, 30, 26, 13, 52, 74, 76, 30, 24], "OWNER INPUT REQUIRED", oq["RULE"])
     for x in oq["ROWS"]:
         r = _put(ws, r, [x["#"], x["ROOM"], x["OPENING"], x["WIDTH_M"], x["QUESTION"], x["LOCATION"],
-                         x["WHY_IT_MATTERS"], x["AUDIT_OPENING_ID"]], PEACH)
+                         x["WHY_IT_MATTERS"], crop_of.get(x["#"], "—"), x["AUDIT_OPENING_ID"]], PEACH)
         ws.cell(r - 1, 4).number_format = "0.000"
     r += 1
     ws.cell(r, 1, "Numbered plan: " + Path(oq["MARKED_PLAN"]).name).font = Font(italic=True, size=9, color="666666")
+    r += 1
+    ws.cell(r, 1, f"{crops['COUNT']} separate crops, one per unresolved opening, carry no CAD or hash identifier on "
+                  "the image itself. " + crops["CHOICES"]).font = Font(italic=True, size=9, color="666666")
 
     # ---------------------------------------------------------------- historical registry, unchanged
     ws = wb.create_sheet("سوابق تاريخية Precedent")

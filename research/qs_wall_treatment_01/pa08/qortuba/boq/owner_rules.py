@@ -743,8 +743,12 @@ def quantities(rooms, walls_calc, openings, floors, summ, ceil, glazed=None, cei
         area = round(sum(x["AREA_M2"] for x in done), 4) if done else None
         # the AREA is established once a height exists; which openings fall under the aluminium package rather than a
         # joinery one is a finishes question, and material identity is part of being final
+        # a physical opening area is not a pricing quantity.  §12 of OWNER INPUTS V2: the PVC schedule waits on a
+        # pricing basis (per door/set or by m2) and the internal glazing waits on its commercial trade.
+        settled = sched and len(done) == len(sched)
         rows.append(q(qid, trade, item, area, "M2",
-                      "FINAL_QUANTITY_AVAILABLE" if (sched and len(done) == len(sched)) else
+                      "PROJECT_RULE_REQUIRED" if (settled and qid in ("Q-16", "Q-17")) else
+                      "FINAL_QUANTITY_AVAILABLE" if settled else
                       "PARTIALLY_CALCULATED" if done else "OWNER_INPUT_REQUIRED",
                       " + ".join(f"{x['DESCRIPTION']} {x['WIDTH_M']:.3f} x "
                                  + (f"{x['HEIGHT_M']:.2f}" if x["HEIGHT_M"] else "height?")
@@ -758,11 +762,31 @@ def quantities(rooms, walls_calc, openings, floors, summ, ceil, glazed=None, cei
                       residual=[{"OPENING_ID": x["OPENING_ID"], "TYPE": x["TYPE"], "WIDTH_M": x["WIDTH_M"],
                                  "WHY": x["WHY"]} for x in sched if x["AREA_M2"] is None],
                       extra={"SCHEDULE": sched, "OPENINGS": len(sched), "COUNT": len(sched), "RESOLVED": len(done),
+                             "PHYSICAL_OPENING_AREA_M2": {"VALUE": area, "STATE": "ESTABLISHED" if settled
+                                                          else "PARTIAL"},
+                             "FINAL_PRICING_QUANTITY": (
+                                 {"VALUE": None, "STATE": "PROJECT_RULE_REQUIRED",
+                                  "WAITING_ON": "whether PVC doors are priced per door / per set or by m2",
+                                  "OPTIONS": ["per door", "per set", "by m2"],
+                                  "WHY": "the physical opening area is established; the pricing UNIT is not, and a "
+                                         "quantity in the wrong unit is not a pricing quantity"}
+                                 if qid == "Q-16" else
+                                 {"VALUE": None, "STATE": "PROJECT_RULE_REQUIRED",
+                                  "WAITING_ON": "the commercial material and trade of this internal glazed opening",
+                                  "WHY": "2.750 x 2.200 = 6.050 m2 is physically established and used in every "
+                                         "dependent wall deduction; which trade carries the product is not"}
+                                 if qid == "Q-17" else
+                                 {"VALUE": area, "STATE": "ESTABLISHED" if settled else "PENDING"}),
                              "TRADE_SEPARATION": "US-13: interior doors are PVC and are never billed as aluminium; "
                                                  "aluminium carries exterior openings only",
                              "COUNT_IS_NOT_THE_QUANTITY": "a count is a multiplier: the priced quantity is the sum of "
                                                           "width x height over the schedule above"},
-                      note=("count, width, height and area, one row per opening.  " +
+                      note=("PHYSICAL QUANTITY ESTABLISHED, FINAL PRICING QUANTITY PENDING - waiting on "
+                            + ("whether PVC doors are priced per door, per set or by m2 (O-09).  "
+                               if qid == "Q-16" else
+                               "the commercial material and trade of this glazed opening (O-10).  ")
+                            if qid in ("Q-16", "Q-17") else "") + ("count, width, height and area, one row per "
+                            "opening.  " +
                             ("all seven Qortuba apartment doors are interior - each is seen from two apartment rooms "
                              "on the frozen boundary - so all seven are PVC under US-13 and none is an aluminium item"
                              if qid == "Q-16" else
@@ -820,6 +844,17 @@ STILL_OPEN = [
      "the type decides whether a height may be defaulted and which trade carries it.  Each is described by room, "
      "adjacent room and width, and numbered on the marked plan",
      "the wall-area trades of the rooms they stand in"),
+    ("O-09", "PROJECT_RULE", "whether the 7 interior PVC doors are priced per door, per set, or by m2",
+     "the physical side is settled — 7 doors, 16.665 m2 of opening area — but a physical area is not a pricing "
+     "quantity.  Until the basis is given, FINAL_PRICING_QUANTITY stays empty rather than defaulting to the m2 that "
+     "happens to be measured",
+     "the PVC door schedule only.  No wall-area trade waits on it: the widths are already deducted"),
+    ("O-10", "PROJECT_RULE", "the commercial material and trade of the internal glazed opening between the Hall and "
+     "the Pantry",
+     "2.750 x 2.200 = 6.050 m2 is physically established and frozen, but no source says whether it is aluminium "
+     "glazing, a PVC screen, a timber-framed panel or joinery, and US-13 forbids placing it under aluminium by "
+     "resemblance",
+     "the internal glazing line only.  The opening is already deducted from the walls around it"),
     ("O-05", "PROJECT_RULE", "whether the 2م=1م halving of corners and wall ends applies",
      "unchanged and still unasked-for: Qortuba has not cut its boundary into corners and ends, so the answer releases "
      "nothing yet",

@@ -4846,3 +4846,41 @@ decorative perimeters are NOT_ESTABLISHED, and the ceiling is one priced
 line in m² over the measured 138.510 m². The perimeter stays in the
 geometry, where it is true, and out of the bill, where it would be a
 fabricated quantity wearing a real measurement's clothes.
+
+## §231 — A question that cannot be pointed at is not a question
+
+Eleven openings were put to the owner. Six named a room and a window and
+could be answered from memory. Five asked what an opening *is*, and no
+wording of "a 1.100 m gap in a bedroom wall facing the stair landing" tells
+a person which gap. A whole-plan image with eleven numbers on it was no
+better: at that scale the numbers land on each other.
+
+So each unresolved opening gets its own large crop, drawn from the frozen
+band register and the jamb line the opening register already names — the
+surrounding walls, the adjacent rooms by name, one red number on the
+questioned gap, and its measured clear width on the image itself. No CAD
+handle, site id or hash appears anywhere a person reads; the opaque id stays
+in the audit column, where it is the audit trail and not the question. Two
+gaps at opposite ends of the same 1.900 m stub say so, because a person
+shown one of them would otherwise answer for both.
+
+Nothing in the crop proposes an answer. The six choices are listed flat —
+door, open passage, window, sliding door, not an opening, other — and the
+engine draws where the gap is, not what it thinks is in it.
+
+## §232 — A physical opening area is not a pricing quantity
+
+Seven interior PVC doors are established, and so is 16.665 m² of opening
+area: the widths are measured, the height is the approved temporary default,
+and every wall trade around them has already taken the deduction. None of
+that says whether the doors are bought per door, per set, or by the square
+metre.
+
+A quantity in the wrong unit is not a pricing quantity, so 16.665 m² is
+reported as PHYSICAL_OPENING_AREA_M2 with FINAL_PRICING_QUANTITY empty and
+the row at PROJECT_RULE_REQUIRED — not as a final m² figure that happens to
+be the only number available. The Hall/Pantry glazed opening is the same
+shape of fact: 2.750 × 2.200 = 6.050 m² is physically established and stays
+deducted from both rooms, while which trade carries the product is still
+unwritten. The measurement is finished. The bill is not, and the file says
+which is which.

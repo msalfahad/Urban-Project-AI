@@ -354,13 +354,16 @@ def human_register():
         else:
             material, why_mat = "NOT_CLASSIFIED", "type not established, so no trade may claim it"
 
-        outside = ", ".join(z.strip("[]").replace("_", " ").lower() for z in wall_rooms)
+        # a drafting artefact is not a place an owner can picture, so it is not named in a question
+        named_out = [z for z in wall_rooms if "DRAFTING" not in z and "NOT_A_MEASURED" not in z
+                     and "SHEET_OR_SITE" not in z and z != "UNKNOWN"]
+        outside = ", ".join(z.strip("[]").replace("_", " ").lower() for z in named_out)
         if other:
             where = f"between {here} and {', '.join(other)}"
         elif r["BLUE_ELEMENT_ID"]:
             where = f"in the {here} external wall"
         elif not inside:
-            where = f"outside the apartment, in the wall between {outside}"
+            where = f"outside the apartment, in the wall between {outside or 'unnamed spaces'}"
         elif apt_rooms and outside:
             where = ("on the wall shared by " + " and ".join(friendly(z) for z in apt_rooms)
                      + f", which also faces {outside}") if len(apt_rooms) > 1 else \
