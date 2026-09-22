@@ -1082,5 +1082,19 @@ only defect, a 2% agreement tolerance declared in advance, the comparison
 fields, the six success metrics, and the policy that an ambiguity becomes an
 owner question before it becomes shared code.
 
-Status: AWAITING_DRAWINGS. No villa drawing, schedule or specification is
-present, so step 1 has not begun.
+### Step 1: the inventory, and what it did not open
+
+`FULL_VILLA_BLIND_SOURCE_INVENTORY` classifies all 48 sources present —
+18 of them drawings — from metadata alone (§251). Nine spreadsheets are
+recorded SEALED_NOT_OPENED: not one was opened, including to establish
+what it was. Six drawings name no project and are listed
+DRAWING_UNATTRIBUTED rather than guessed at.
+
+No villa set is present. Every attributed drawing belongs to P7757, whose
+benchmark workbook was unsealed in an earlier phase, or to Qortuba, which is
+the sealed benchmark itself. The inventory therefore records
+`VILLA_SOURCE_SET_PRESENT: False` and `STEPS_4_TO_15_BLOCKED: True` as
+checkable data (§252) instead of measuring whatever was to hand.
+
+Status: AWAITING_DRAWINGS at step 1. Steps 2 and 3 are answerable only
+against a villa set; steps 4 to 15 are blocked.

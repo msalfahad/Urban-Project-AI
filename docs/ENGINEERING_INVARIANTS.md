@@ -5195,3 +5195,41 @@ information and owner input are differences to be understood, not failures —
 and saying so in advance is what stops it being decided afterwards, when the
 deltas are visible and the temptation is to reclassify. No frozen blind
 quantity is moved to improve a comparison: a delta is classified, not closed.
+
+## §251 — Classify a sealed file by its metadata; opening it to find out what it is breaks the seal
+
+Step 1 of a blind validation is an inventory, and an inventory is a
+temptation: nine spreadsheets arrived with this session, and the quickest
+way to know whether any of them is the villa's bill of quantities is to open
+one and look.
+
+That is exactly the move the blind protocol exists to prevent. A BOQ that
+has been read cannot be unread, and "I only checked whether it was a BOQ" is
+how a seal gets broken — the figure is in the system's context from that
+moment, and every quantity produced afterwards is suspect in a way no audit
+can undo.
+
+So the inventory classifies on metadata alone — name, extension, size, date
+— and any file with a commercial extension becomes SEALED_NOT_OPENED
+regardless of what its name suggests. The asymmetry justifies it: an
+unclassified drawing costs one owner question, and an opened bill costs the
+whole experiment.
+
+The same rule sends a drawing whose project cannot be read from its name to
+DRAWING_UNATTRIBUTED rather than to a guess. Attribution by filename is
+cheap when it works and silent when it is wrong.
+
+## §252 — Absent inputs stop the workflow; they are not replaced with whatever is on disk
+
+The villa blind validation has fifteen steps. Step 1 found no villa. Every
+drawing in the session belongs to P7757 — taken off and its benchmark
+workbook already unsealed, so it cannot be measured blind — or to Qortuba,
+which is the sealed benchmark being validated against.
+
+A measurement engine under instruction to produce a takeoff will find
+something to measure. The inventory therefore records
+`VILLA_SOURCE_SET_PRESENT: False` and `STEPS_4_TO_15_BLOCKED: True` as data,
+not as prose, so the block is checkable and the next step cannot quietly
+proceed on a substitute. Running the workflow against a project whose
+answers are already known would produce numbers and prove nothing, which is
+worse than producing nothing: it would look like a validation.
