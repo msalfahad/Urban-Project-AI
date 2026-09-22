@@ -78,6 +78,23 @@ def page_labels(page_index):
     return lab
 
 
+def page_paths(page_index):
+    """Every point the page draws, with y turned upward like page_items, so one transform serves both."""
+    import re as _re
+    import pypdf
+    c = pypdf.PdfReader(PDF).pages[page_index].get_contents().get_data().decode("latin-1")
+    return [(float(m.group(1)), -float(m.group(2)))
+            for m in _re.finditer(r"(-?\d+\.?\d*)\s+(-?\d+\.?\d*)\s+[ml]\b", c)]
+
+
+def drawn_points(floor, ents):
+    """The plotted geometry of one floor, in drawing coordinates."""
+    tr = transform_for(floor, ents)
+    if not tr or not tr["ESTABLISHED"]:
+        return []
+    return [apply(tr, x, y) for x, y in page_paths(PAGE_OF[floor])]
+
+
 def dwg_dims(ents, window):
     x0, x1, y0, y1 = window
     out = []

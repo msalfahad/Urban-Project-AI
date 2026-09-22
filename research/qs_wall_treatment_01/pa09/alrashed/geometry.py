@@ -211,3 +211,48 @@ def rooms(g):
                           "WIDTH_M": round(bx1 - bx0, 4), "DEPTH_M": round(by1 - by0, 4),
                           "CELL_COUNT": len(cells)})
     return comps
+
+
+def wall_cells(g):
+    """Grid cells that ARE wall material, with the thickness and length each one contributes.
+
+    Walls are barriers between cells, so the strip between a wall's two faces is itself a cell: narrow, blocked on
+    both of its long sides, and exactly as wide as the wall is thick.  Reading the wall out of the grid this way
+    means the thickness is measured from the drawing rather than assumed, and every millimetre of wall belongs to
+    exactly one cell - so nothing is counted twice where walls meet.
+    """
+    xs, ys = g["XS"], g["YS"]
+    nx, ny = len(xs) - 1, len(ys) - 1
+    tol = SNAP_MM / 1000.0
+    blockV, blockH = collections.defaultdict(set), collections.defaultdict(set)
+    for kind, pos, lo, hi in g["WALLS"] + g["COLUMNS"]:
+        if kind == "V":
+            i = _snap_to(pos, xs, tol)
+            if i is None:
+                continue
+            for j in range(ny):
+                if ys[j] >= lo - tol and ys[j + 1] <= hi + tol:
+                    blockV[i].add(j)
+        else:
+            j = _snap_to(pos, ys, tol)
+            if j is None:
+                continue
+            for i in range(nx):
+                if xs[i] >= lo - tol and xs[i + 1] <= hi + tol:
+                    blockH[j].add(i)
+    out = []
+    for i in range(nx):
+        w = xs[i + 1] - xs[i]
+        for j in range(ny):
+            h = ys[j + 1] - ys[j]
+            v = w <= MAX_WALL_M and j in blockV.get(i, ()) and j in blockV.get(i + 1, ())
+            hz = h <= MAX_WALL_M and i in blockH.get(j, ()) and i in blockH.get(j + 1, ())
+            if v and (not hz or w <= h):
+                out.append({"I": i, "J": j, "AXIS": "V", "THICKNESS_M": round(w, 4), "LENGTH_M": round(h, 4),
+                            "AREA_M2": round(w * h, 6),
+                            "FACES": [("LEFT", i - 1, j), ("RIGHT", i + 1, j)]})
+            elif hz:
+                out.append({"I": i, "J": j, "AXIS": "H", "THICKNESS_M": round(h, 4), "LENGTH_M": round(w, 4),
+                            "AREA_M2": round(w * h, 6),
+                            "FACES": [("BELOW", i, j - 1), ("ABOVE", i, j + 1)]})
+    return out

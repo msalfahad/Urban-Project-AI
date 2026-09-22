@@ -5393,3 +5393,56 @@ The gap stays open. The measured ground floor was not moved towards 382.16,
 and no schedule figure entered a quantity. A figure that cannot be
 reproduced is reported as NOT_ESTABLISHED with what it appears to be — which
 is worth more than a reconciliation that closes because someone made it.
+
+## §262 — An opening is a gap with a door drawn in it, not every gap in a wall line
+
+Closing the gaps in Al Rashed's wall lines produced 159 of them. There are
+not 159 openings in this villa. Most gaps are junctions — one wall
+interrupting another — and counting them as openings would have deducted
+them from the blockwork.
+
+The drawing says which gaps are openings, twice over. The CAD file puts a
+door or window block in each one, and the issued plot draws a small mark at
+each jamb, in one distinctive colour. Two marks facing each other across a
+wall line are the two sides of one opening and their separation **is** its
+clear width: 37 openings, measured jamb to jamb, at 0.80, 0.90, 1.00, 1.80 m
+— the widths a door actually comes in.
+
+Type comes from the block the CAD file places in the opening, not from the
+width. An opening with no symbol keeps its measured width and reports
+`TYPE_CLASSIFICATION_PENDING`, because a 0.90 m gap is a door or a window
+and guessing which one puts the guess into two trades at once.
+
+## §263 — A located opening with no readable width carries no area
+
+Seven window symbols sit on the Al Rashed ground floor. The wall is drawn
+continuous behind each one — no gap, no jamb marks — and the block that
+draws them is a dynamic block the decode does not expand. Neither supplied
+file states a window width.
+
+The owner's rule is that a drawn width wins and a default is used only where
+the source gives no usable width at all; their stated default for windows is
+*none*. So each window is reported at its position, with the owner's 2.00 m
+height, `WIDTH_M: null`, `AREA_M2: null` and `SOURCE_REQUIRED`. Aluminium
+has no quantity and the external plaster and paint are gross of window
+openings, which the row says.
+
+A located opening with no area is worth more than an opening with an
+invented one: the first is a question, the second is a wrong number that
+nothing downstream will question.
+
+## §264 — A covered area is measured to the outside of the wall; a room is measured inside it
+
+The Al Rashed schedule's 494.62 m² (82.43%) matched nothing measured — until
+the roof was measured. The roof slab at first-floor level encloses
+474.693 m², and the parapet runs 101.76 m round it at 200 mm:
+
+    474.693 + 101.76 × 0.200 = 495.045   against   494.62   (+0.09%)
+
+The gap was never an error. A room is measured inside its enclosing wall; a
+municipality coverage figure is taken to the outside face. One wall
+thickness is the whole difference, and finding it named the figure.
+
+The remaining 382.16 m² still does not reproduce — 5.48 m² from the nearest
+measured quantity. It stays NOT_ESTABLISHED. Three of five figures now
+reproduce independently, and no measured area was moved towards any of them.

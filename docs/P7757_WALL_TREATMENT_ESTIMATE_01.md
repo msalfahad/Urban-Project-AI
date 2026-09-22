@@ -1179,4 +1179,27 @@ other two figures are not reproduced and are left that way.
 No height is assumed anywhere: the 4.00 m floor-to-floor is never turned
 into a clear height, and every opening carries a width with its height null.
 
-Status: PLAN-AREA TAKEOFF COMPLETE, wall trades blocked on height.
+### The owner's heights, and the finishing takeoff
+
+The owner answered AR-01 to AR-08: a 3.60 m wall height for this villa, 2.20 m
+doors, 2.00 m windows, a 1.00 m parapet, and — the one that travels — the wet
+and service room rule promoted to URBAN_STANDARD **US-18**: porcelain to the
+floor and to the full wall height automatically, no skirting and no paint on a
+tiled face, tile preparation behind. Project values and the Urban rule are
+stored apart, so the next villa inherits the rule and not the 3.60.
+
+The 159 gaps became **37 openings** (§262): an opening is a gap with a door
+drawn in it, and the issued plot marks each jamb, so the widths are measured
+jamb to jamb at 0.80, 0.90, 1.00 and 1.80 m. Seven window symbols have no
+readable width in either file and carry no area at all (§263) — aluminium is
+SOURCE_REQUIRED and the external plaster is gross of windows, which the rows
+say.
+
+Then the roof named a schedule figure that had matched nothing. Measured
+inside its parapet the roof is 474.693 m²; a coverage figure is taken to the
+outside face, and 474.693 + 101.76 × 0.200 = 495.045 against 494.62, within a
+tenth of a percent (§264). Three of five schedule figures now reproduce
+independently. 382.16 still does not, and stays that way.
+
+Status: FINISHING TAKEOFF MEASURED, not frozen — aluminium and the ground
+floor's 382.16 are the isolated uncertainties.
