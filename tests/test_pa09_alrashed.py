@@ -132,3 +132,83 @@ def test_nothing_the_drawing_answers_is_put_to_the_owner():
     subjects = " ".join(x["SUBJECT"].lower() for x in q["QUESTIONS"])
     for settled in ("drawing unit", "wall thickness", "which revision"):
         assert settled not in subjects, settled
+
+
+# ------------------------------------------------------------------ the plan-area takeoff
+def take():
+    return json.loads((OUT / "ALRASHED_FIRST_PLAN_AREA_TAKEOFF.json").read_text("utf-8"))
+
+
+def test_every_square_metre_of_each_plan_belongs_to_exactly_one_component():
+    """The closure check: a residual other than zero would mean area was created or lost."""
+    for f in take()["FLOORS"]:
+        c = f["CLOSURE"]
+        assert abs(c["RESIDUAL_M2"]) < 1e-3, (f["FLOOR"], c)
+        assert c["PLAN_WINDOW_RECTANGLE_M2"] > 0
+
+
+def test_room_names_are_placed_by_a_transform_that_is_checked_not_assumed():
+    for f in take()["FLOORS"]:
+        t = f["LABEL_TRANSFORM"]
+        assert t["ESTABLISHED"] is True, f["FLOOR"]
+        assert t["MAX_RESIDUAL_M"] <= 0.05, (f["FLOOR"], t["MAX_RESIDUAL_M"])
+        assert abs(abs(t["ROT_DEG"]) - 90) < 0.1, "the plans are turned through a right angle on the sheet"
+        assert t["INLIERS"] >= 8
+
+
+def test_rooms_reproduce_the_dimensions_printed_beside_them():
+    """The kitchen is dimensioned 820 x 500 on the sheet; the recovered room is 41.000 m2."""
+    gr = next(f for f in take()["FLOORS"] if f["FLOOR"] == "GROUND")
+    k = next(r for r in gr["ROOMS"] if r["NAME"] == "KITCHEN")
+    assert abs(k["WIDTH_M"] - 8.20) < 0.01 and abs(k["DEPTH_M"] - 5.00) < 0.01
+    assert abs(k["AREA_M2"] - 41.000) < 0.01
+
+
+def test_a_space_the_drawing_does_not_name_keeps_its_area_and_loses_no_identity_it_never_had():
+    rows = [r for f in take()["FLOORS"] for r in f["ROOMS"]]
+    unnamed = [r for r in rows if r["ROLE"] == "UNNAMED_ON_DRAWING"]
+    assert unnamed, "there are unlabelled spaces and they are reported, not hidden"
+    for r in unnamed:
+        assert r["NAME"] is None and r["AREA_M2"] > 0
+
+
+def test_no_wall_height_is_assumed_anywhere_in_the_takeoff():
+    t = take()
+    assert "no clear height is assumed" in t["HEIGHT_RULE"]
+    for o in t["OPENINGS_ALL"]:
+        assert o["HEIGHT_M"] is None and o["AREA_M2"] is None
+        assert o["HEIGHT_STATUS"] == "OWNER_INPUT_REQUIRED"
+    blob = json.dumps(t)
+    assert "3.80" not in blob, "the 4.00 m floor-to-floor is never turned into a clear height"
+
+
+def test_openings_carry_a_clear_width_that_a_door_or_window_could_be():
+    ops = take()["OPENINGS_ALL"]
+    assert len(ops) > 100
+    for o in ops:
+        assert 0 < o["CLEAR_WIDTH_M"] <= 3.0
+
+
+def test_the_stair_is_plan_geometry_only():
+    for s in take()["STAIRS"]:
+        assert s["STATUS"] == "PLAN_GEOMETRY_ONLY" and s["STAIR_LINES"] > 0
+
+
+# ------------------------------------------------------------------ the schedule, as validation only
+def test_the_first_floor_reproduces_the_sheets_own_area_figure():
+    row = next(r for r in take()["AREA_SCHEDULE_RECONCILIATION"]["ROWS"] if r["SCHEDULE_FIGURE_M2"] == 69.66)
+    assert row["AGREEMENT"] == "EXACT"
+    assert abs(row["DELTA_PCT"]) < 0.05
+    assert abs(8.10 * 8.60 - 69.66) < 1e-9
+
+
+def test_a_schedule_figure_that_is_not_reproduced_is_left_unestablished():
+    rows = take()["AREA_SCHEDULE_RECONCILIATION"]["ROWS"]
+    assert any(r["AGREEMENT"] == "NOT_ESTABLISHED" for r in rows)
+    assert "no schedule figure was used as a quantity" in take()["AREA_SCHEDULE_RECONCILIATION"]["RULE"]
+
+
+def test_no_measured_area_was_moved_towards_the_schedule():
+    """The ground floor is 5.48 m2 off the schedule and stays off it."""
+    row = next(r for r in take()["AREA_SCHEDULE_RECONCILIATION"]["ROWS"] if r["SCHEDULE_FIGURE_M2"] == 382.16)
+    assert row["DELTA_M2"] != 0 and row["AGREEMENT"] == "NOT_ESTABLISHED"

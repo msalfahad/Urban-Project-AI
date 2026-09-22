@@ -1151,6 +1151,32 @@ still needs: storey identity, space status, and **height**. There is no
 section, elevation or schedule in the supplied set, so no wall or opening
 height can be read from it.
 
-Status: FIRST TAKEOFF IN PROGRESS. Geometry, units and regions are settled;
-eight owner questions went back as one batch, six of which multiply a
-quantity rather than label one.
+### The first plan-area takeoff
+
+The plans are wholly axis-aligned, so the grid of wall faces cuts each one
+into exact rectangles and a room is a whole number of them. Areas are sums
+of exact products — no raster, no tolerance. A doorway is closed by a
+virtual closure across the gap so a room stops at its jamb; the closure
+bounds the room and is never measured as material.
+
+Room names could not be read from the DWG at all — its labels are dynamic
+blocks carrying the whole 266-name library — so names come from the issued
+PDF and geometry from the DWG, joined by a transform fitted on dimension
+values unique in both and checked on 24 witnesses to a worst residual of
+21 mm (§258). The kitchen comes back 8.20 × 5.00 = 41.000 m², exactly its
+printed dimensions.
+
+Every square metre of each plan window belongs to exactly one component, and
+the residual against the window rectangle is zero on all three floors
+(§260). Spaces no label falls inside keep their measured area and are
+reported as UNNAMED_ON_DRAWING rather than named by inference (§259).
+
+Then, and only then, the sheet's own area schedule was opened for comparison
+(§261). The first floor reproduces **69.66 m² exactly** — the penthouse
+block at 8.10 × 8.60 — and the plot comes to 600.16 against 600.00. The
+other two figures are not reproduced and are left that way.
+
+No height is assumed anywhere: the 4.00 m floor-to-floor is never turned
+into a clear height, and every opening carries a width with its height null.
+
+Status: PLAN-AREA TAKEOFF COMPLETE, wall trades blocked on height.

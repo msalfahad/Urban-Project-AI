@@ -5321,3 +5321,75 @@ multiplicity — and no other row scores 1.000 for any page.
 
 That is drawing-region isolation decided by evidence rather than by layout,
 and it is cheap: the dimensions are already in both files.
+
+## §258 — Names come from the plot that was issued; geometry from the file that drew it
+
+The Al Rashed room labels are dynamic blocks. Every instance carries the
+whole room-name library — 266 names — and shows one of them through a
+visibility state the decode does not resolve. The name cannot be read from
+the DWG at all.
+
+The PDF is the plot that was issued and shows exactly one name per label. So
+the names come from the PDF and the geometry from the DWG, joined by a
+transform fitted on the one thing both files state identically: the dimension
+values. A value appearing exactly once on the page and exactly once in the
+window is an unambiguous pair of points, and three such pairs fix a
+similarity transform.
+
+Two things make it trustworthy rather than plausible. The fit is checked
+against every pair it did not need — 24 witnesses, worst residual **21 mm**
+across a 23 m plan — and it is refused outright below eight inliers or above
+350 mm. And the transform must be a **reflection**: a PDF counts y downward
+and a drawing counts it upward, so fitting a plain similarity returns a
+meaningless rotation instead of failing. Flipping y once, up front, turns it
+back into an honest rotation and scale.
+
+The plans are also turned through 90° on the sheet, so a two-word room name
+is stacked rather than strung out. Parts of one name are therefore taken as
+words that line up on *either* axis, which reads a rotated sheet and an
+upright one the same way.
+
+## §259 — A space the drawing does not name has an area and no identity
+
+Recovering the Al Rashed plans exactly leaves spaces no label falls inside:
+circulation, shafts, lobbies, the strip beside a stair. Their areas are known
+to the millimetre; their identities are simply not stated.
+
+Calling these UNCLASSIFIED invites someone to classify them. They are
+`UNNAMED_ON_DRAWING`: a status about the *drawing*, not a gap in the
+measurement. 45.1 m² of the basement, 47.3 m² of the ground floor and 36.4 m²
+of the first are reported this way rather than absorbed into a neighbouring
+room or given a plausible name, because a name invented here becomes a
+quantity later.
+
+Beside every component the takeoff records `CONTAINS_STAIR_GEOMETRY` as a
+fact, separate from the role. Evidence and conclusion stay apart.
+
+## §260 — Closure: every square metre belongs to exactly one component
+
+The exact rectilinear decomposition makes a test possible that a raster
+never could: the plan window is cut into rectangles, each rectangle joins
+exactly one component, so the components must sum to the window.
+
+`RESIDUAL_M2` is that sum against the window rectangle, and it is zero to
+rounding on all three floors. A non-zero residual would mean area was
+created or lost — the one arithmetic failure a takeoff cannot afford and the
+easiest to miss, because every individual room would still look right.
+
+## §261 — The drawing's own area schedule is compared against, never measured from
+
+The Al Rashed sheet carries an area schedule: 69.66 m² (11.61%), 382.16 m²
+(63.69%), 494.62 m² (82.43%), 600.00 m² (100%). It would be an easy source
+of floor areas and a wrong one — it is a municipality coverage statement on
+conventions the sheet does not write down.
+
+So the floors are measured first, independently, and only then compared. Two
+figures come back reproduced: the first floor at **69.66 m² exactly** (the
+penthouse block, 8.10 × 8.60), and the plot at 600.16 against 600.00. Two do
+not: 382.16 sits 5.48 m² from the nearest measured quantity, and 494.62
+matches no single floor.
+
+The gap stays open. The measured ground floor was not moved towards 382.16,
+and no schedule figure entered a quantity. A figure that cannot be
+reproduced is reported as NOT_ESTABLISHED with what it appears to be — which
+is worth more than a reconciliation that closes because someone made it.
