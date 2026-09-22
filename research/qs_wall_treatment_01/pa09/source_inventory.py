@@ -36,8 +36,14 @@ KNOWN = {
                 "sealed as the finished benchmark.  Not a candidate: it is the reference the next project is "
                 "judged against"),
     "ST7757": ("PROJECT_ALREADY_WORKED", "the P7757 structural set"),
+    "ALRASHED": ("BLIND_VALIDATION_PROJECT",
+                 "the new blind project: Ahmad Abdullah Ali Al Rashed, Sabah Al Ahmad, block D4, plot 247"),
 }
 QORTUBA_MARKERS = ("qurtoba", "qortuba", "plot_449", "plot-449", "block__1__plot_449")
+# Attribution is the owner's to give, and a filename that carries only a date cannot be classified without it.
+# These two the owner attributed in words to the Al Rashed villa, and the sheets confirm it: Sabah Al Ahmad,
+# block D4, plot 247.
+ALRASHED_FILES = ("507baa5b-16-11-2025.pdf", "a0f821ff-16-11-2025.dwg")
 P7757_MARKERS = ("p7757", "st7757", "7757", "alsenan")
 
 
@@ -50,6 +56,9 @@ def _git(*a):
 
 def classify(name: str, ext: str):
     low = name.lower()
+    if name in ALRASHED_FILES:
+        return "ALRASHED", ("attributed by the owner to the Al Rashed villa and confirmed by the sheet: "
+                            "Sabah Al Ahmad, block D4, plot 247")
     if ext in COMMERCIAL_EXT:
         # never opened, whatever it turns out to be
         return "SEALED_NOT_OPENED", ("a spreadsheet is where a bill of quantities lives.  Under the blind protocol "
@@ -111,18 +120,20 @@ def finish():
         "NOTHING_IN_THE_COMMERCIAL_CLASS_WAS_OPENED": all(not r["OPENED_BY_THIS_INVENTORY"] for r in rows),
         "SEALED_NOT_OPENED_COUNT": by_project.get("SEALED_NOT_OPENED", 0),
         # step 2: revisions, missing disciplines, conflicts - answerable only once a villa set exists
-        "VILLA_SOURCE_SET_PRESENT": False,
-        "WHY_NOT": "every drawing in this session belongs to P7757 or to Qortuba.  P7757 was taken off and its "
-                   "benchmark workbook unsealed in earlier phases, so its historical figures are already known to "
-                   "this system and it cannot be measured blind.  Qortuba is the sealed benchmark itself.  No third "
-                   "project - no villa - has been supplied",
-        "DISCIPLINES_RECEIVED_FOR_THE_VILLA": [],
-        "DISCIPLINES_MISSING_FOR_THE_VILLA": ["architectural", "structural", "MEP", "schedules", "specifications"],
+        "VILLA_SOURCE_SET_PRESENT": by_project.get("ALRASHED", 0) > 0,
+        "WHY_NOT": None if by_project.get("ALRASHED", 0) else
+                   "every drawing in this session belongs to P7757 or to Qortuba, and neither can be measured blind",
+        "DISCIPLINES_RECEIVED_FOR_THE_VILLA": (["architectural floor plans: basement, ground, first"]
+                                               if by_project.get("ALRASHED", 0) else []),
+        "DISCIPLINES_MISSING_FOR_THE_VILLA": ["sections", "elevations", "structural", "MEP", "schedules",
+                                              "specifications"],
         "REVISIONS_IDENTIFIED": [],
         "CONFLICTS_IDENTIFIED": [],
-        "STEPS_4_TO_15_BLOCKED": True,
-        "WHAT_IS_NEEDED": "the villa drawing set.  Without it there is nothing to measure, and a takeoff produced "
-                          "without one would not be a blind validation of anything",
+        "STEPS_4_TO_15_BLOCKED": not by_project.get("ALRASHED", 0),
+        "WHAT_IS_NEEDED": ("heights: the supplied set has no section, elevation or schedule, so no wall or opening "
+                           "height can be read from it"
+                           if by_project.get("ALRASHED", 0) else
+                           "the villa drawing set.  Without it there is nothing to measure"),
         "GIT_HEAD": _git("rev-parse", "--short", "HEAD"),
     }
     rec["DIGEST"] = hashlib.sha256(

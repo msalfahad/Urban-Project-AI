@@ -60,13 +60,26 @@ def test_a_drawing_that_names_no_project_is_flagged_not_guessed():
     assert "could not be read" in why
 
 
-# ------------------------------------------------------------------ the stop
-def test_the_workflow_stops_when_no_villa_set_is_present():
+# ------------------------------------------------------------------ the stop, and its release
+def test_the_workflow_stops_exactly_while_no_villa_set_is_present():
+    """The block is data, not prose: it is on when nothing is attributed and off when something is."""
     r = inv()
-    assert r["VILLA_SOURCE_SET_PRESENT"] is False
-    assert r["STEPS_4_TO_15_BLOCKED"] is True
-    assert r["DISCIPLINES_RECEIVED_FOR_THE_VILLA"] == []
-    assert r["WHY_NOT"] and r["WHAT_IS_NEEDED"]
+    assert r["STEPS_4_TO_15_BLOCKED"] is (r["VILLA_SOURCE_SET_PRESENT"] is False)
+    assert r["WHAT_IS_NEEDED"], "what is still needed is always named"
+
+
+def test_the_attributed_villa_set_is_recognised_and_the_block_lifts():
+    r = inv()
+    assert r["VILLA_SOURCE_SET_PRESENT"] is True
+    assert r["BY_PROJECT"].get("ALRASHED") == len(SI.ALRASHED_FILES)
+    assert r["DISCIPLINES_RECEIVED_FOR_THE_VILLA"], "the set that arrived is named, not just counted"
+    assert "sections" in r["DISCIPLINES_MISSING_FOR_THE_VILLA"]
+
+
+def test_the_two_projects_that_cannot_be_measured_blind_are_still_set_apart():
+    r = inv()
+    assert r["BY_PROJECT"].get("QORTUBA") and r["BY_PROJECT"].get("P7757")
+    assert "ALRASHED" in SI.KNOWN and SI.KNOWN["ALRASHED"][0] == "BLIND_VALIDATION_PROJECT"
 
 
 def test_the_inventory_is_reproducible_and_hashed():

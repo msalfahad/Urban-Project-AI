@@ -1121,6 +1121,36 @@ Four questions went back as one batch, in a `V-nn` namespace of their own:
 Qortuba's question numbers are sealed with Qortuba and are never continued
 into another project.
 
-Status: AWAITING_DRAWINGS. The villa's other floors, elevations, sections,
-structural and MEP drawings and schedules are all absent; steps 4 to 15
-remain blocked.
+### The blind project arrives: Al Rashed, Sabah Al Ahmad
+
+The third project is a real one. Ahmad Abdullah Ali Al Rashed, Sabah Al
+Ahmad Residential City, block D4, plot 247, 600.00 m² — a three-storey villa
+drawn by EWAN, permit BLD 0245232024. The supplied set is one DWG and one
+three-page PDF: basement at 65.04, ground at 69.04, first at 73.04, the first
+floor almost entirely open roof with a small plant block.
+
+Two things had to be settled before anything could be measured, and both
+were settled from the drawings rather than by asking.
+
+The file declares its unit as **inches** (§255). Under inches its wall pairs
+are 5.1 mm apart; under metres, 200 mm, and the plot works out at
+22.00 × 27.28 = 600.16 m² against the 600.00 m² its own schedule states. The
+engine refused to measure until the declared unit was checked against the
+wall band and the file's claim failed it. The same file also made the
+resolver call 495 of 502 dimensions inconsistent, because DIMLFAC was read
+from the header rather than from each dimension's own style (§256).
+
+The DWG then turned out to hold **nine** plan windows — three storeys by
+three revision rows, the old ones marked CANCELED and MODIFY. The current
+row was identified by dimension containment against the issued PDF: row R3
+scores 1.000 on all three pages, no other row scores 1.000 on any (§257).
+
+With the unit resolved the frozen engine ran clean on the villa — no access
+violations, 2,580 material bands, 158 opening sites — and then said what it
+still needs: storey identity, space status, and **height**. There is no
+section, elevation or schedule in the supplied set, so no wall or opening
+height can be read from it.
+
+Status: FIRST TAKEOFF IN PROGRESS. Geometry, units and regions are settled;
+eight owner questions went back as one batch, six of which multiply a
+quantity rather than label one.

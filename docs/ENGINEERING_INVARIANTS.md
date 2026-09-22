@@ -5270,3 +5270,54 @@ established without opening a schedule or asking anyone.
 The finding is reported, not acted on. If the earlier sheet is the built
 one, the frozen benchmark was measured from a superseded drawing — and
 reopening a sealed benchmark is the owner's decision, never the engine's.
+
+## §255 — INSUNITS is a claim; the building is the evidence
+
+The Al Rashed DWG declares `INSUNITS = 1` — inches. Under inches the
+drawing's own wall pairs are 5.1 mm apart. There is no such wall. Under
+metres they are 200 mm apart, and the plot measures 22.00 × 27.28 = 600.16 m²
+against the 600.00 m² the sheet's own schedule states.
+
+The engine refused to measure, correctly: `ACCEPTABLE_FOR_QUANTITIES: false`.
+But refusing forever is not right either — a drafter's wrong header should
+not stop a takeoff of a building that says plainly how big it is.
+
+So a declared unit may now overrule INSUNITS, on physical evidence and
+nothing else: the declared unit has to put the drawing's paired wall lines
+inside the band every masonry wall is inside (50–600 mm), and the INSUNITS
+candidate has to put them outside it. Both readings, and the overruled code,
+stay in the register under `INSUNITS_OVERRIDE`. A declaration alone changes
+nothing — the walls have to disagree with the file.
+
+`WALL_THICKNESS_BAND_MM` had been declared in that module and never used.
+It is what a unit check was always missing: a length whose plausible range is
+narrow whatever the building is.
+
+## §256 — A header's DIMLFAC is a default; each dimension carries its own
+
+The same file made the resolver report 495 of 502 dimensions "inconsistent".
+They were not. `DIMLFAC` was read from the header, where it is only the
+current default; every dimension is plotted through its own style, and this
+drawing's style scales by 100 — metres drawn, centimetres shown.
+
+So the check now also asks what the dimensions say among *themselves*: the
+modal ratio of display value to own geometry, and the share of dimensions at
+it. Here 72% sit at exactly 100. Dimensions that agree with each other are
+internally consistent whatever the header claims, and the mismatch is only a
+conflict when they disagree among themselves.
+
+## §257 — Which revision was plotted is a question the drawings answer
+
+The Al Rashed DWG holds nine plan windows: three storeys across, three
+revision rows down, the superseded ones labelled OLD AREA, CANCELED and
+MODIFY. Measuring the wrong row would produce a clean, wrong takeoff.
+
+Position on the sheet does not say which row is current, and neither does a
+revision label. The PDF does: it is the plot that was issued. So each PDF
+page's printed dimension values are taken as a multiset and tested for
+containment in each window's dimension values. Row R3 scores 1.000 for all
+three pages — every number the page prints is in that window with the same
+multiplicity — and no other row scores 1.000 for any page.
+
+That is drawing-region isolation decided by evidence rather than by layout,
+and it is cheap: the dimensions are already in both files.

@@ -46,6 +46,28 @@ def _dimension_consistency(dims, tol=0.005):
     return ok, bad, witnesses
 
 
+def _display_ratio_mode(dims, tol=0.005):
+    """The commonest ratio of a dimension's display value to its own geometry, and the share of dimensions at it.
+
+    The header's DIMLFAC is only the current default; each dimension is plotted through its own style.  When the
+    dimensions agree among themselves on one ratio they are internally consistent, whatever the header says.
+    """
+    ratios = []
+    for d in dims:
+        if d.display_value is None or d.user_text or d.geometry_mm <= 0:
+            continue
+        ratios.append(d.display_value / d.geometry_mm)
+    if not ratios:
+        return None, 0.0
+    buckets = {}
+    for r in ratios:
+        key = round(r, 3)
+        buckets[key] = buckets.get(key, 0) + 1
+    best = max(buckets, key=buckets.get)
+    share = sum(1 for r in ratios if abs(r - best) <= tol * max(best, 1.0)) / len(ratios)
+    return best, share
+
+
 def _suffix_scale(dims):
     """Scale-to-mm from dimension texts that carry a unit suffix ("5.87 m"); needs two agreeing witnesses."""
     found = []
@@ -63,6 +85,46 @@ def _suffix_scale(dims):
     return (s0 if agree else "CONFLICT"), found
 
 
+def _wall_thickness_mode(primitives, wall_layers, scale):
+    """The commonest face-to-face separation of paired wall lines, in millimetres under the candidate scale.
+
+    A wall is drawn as two parallel lines that overlap along their length and sit a little apart.  That separation
+    is the one length in a building whose plausible range is narrow whatever the drawing is of, which is what makes
+    it a usable check on a claimed unit: no residential wall is 5 mm thick and none is 5 m thick.
+    """
+    walls = set(wall_layers or ())
+    segs = []
+    for p in primitives:
+        if p.kind != "SEGMENT" or (walls and p.provenance.layer not in walls):
+            continue
+        dx, dy = p.x2 - p.x1, p.y2 - p.y1
+        n = math.hypot(dx, dy)
+        if n < 1e-9:
+            continue
+        # axis-aligned only: a skew wall pair needs the band engine, and this is a check, not a measurement
+        if abs(dx) < 1e-9:
+            segs.append(("V", p.x1, min(p.y1, p.y2), max(p.y1, p.y2)))
+        elif abs(dy) < 1e-9:
+            segs.append(("H", p.y1, min(p.x1, p.x2), max(p.x1, p.x2)))
+    gaps = []
+    for axis in ("H", "V"):
+        rows = sorted((s for s in segs if s[0] == axis), key=lambda s: s[1])
+        for i, a in enumerate(rows):
+            for b in rows[i + 1:]:
+                d = b[1] - a[1]
+                if d <= 0:
+                    continue
+                if d * scale > WALL_THICKNESS_BAND_MM[1] * 2:
+                    break                                   # rows are sorted: nothing further is a pair
+                overlap = min(a[3], b[3]) - max(a[2], b[2])
+                if overlap > 0:
+                    gaps.append(round(d * scale, 1))
+    if not gaps:
+        return None, 0
+    mode = max(set(gaps), key=gaps.count)
+    return mode, len(gaps)
+
+
 def _secondary(primitives, door_layer, wall_layers, scale):
     """Under the candidate scale, do door swings and paired wall thicknesses fall in villa bands?"""
     radii = [p.radius * scale for p in primitives if p.kind == "ARC" and door_layer and p.provenance.layer == door_layer]
@@ -70,7 +132,11 @@ def _secondary(primitives, door_layer, wall_layers, scale):
     if radii:
         inside = sum(1 for r in radii if DOOR_SWING_BAND_MM[0] <= r <= DOOR_SWING_BAND_MM[1])
         swing_ok = inside >= max(1, 0.5 * len(radii))
-    return {"DOOR_SWING_RADII_CHECKED": len(radii), "DOOR_SWING_IN_BAND": swing_ok, "BAND_MM": DOOR_SWING_BAND_MM}
+    mode, pairs = _wall_thickness_mode(primitives, wall_layers, scale)
+    wall_ok = None if mode is None else (WALL_THICKNESS_BAND_MM[0] <= mode <= WALL_THICKNESS_BAND_MM[1])
+    return {"DOOR_SWING_RADII_CHECKED": len(radii), "DOOR_SWING_IN_BAND": swing_ok, "BAND_MM": DOOR_SWING_BAND_MM,
+            "WALL_PAIRS_CHECKED": pairs, "WALL_THICKNESS_MODE_MM": mode, "WALL_THICKNESS_IN_BAND": wall_ok,
+            "WALL_BAND_MM": WALL_THICKNESS_BAND_MM}
 
 
 def resolve(normalized, *, source_id, declared_unit=None, door_layer=None, wall_layers=()):
@@ -108,10 +174,40 @@ def resolve(normalized, *, source_id, declared_unit=None, door_layer=None, wall_
     # dimension consistency is evidence about the AUTHORING, and the second authored dimension is the cross-check
     if ok + bad:
         evidence.append(f"{ok} authored dimensions display geometry x DIMLFAC ({normalized.dimlfac}); {bad} do not")
-    if bad > ok and status in ACCEPTABLE:
+    # DIMLFAC comes from the header, but each dimension carries its own style's factor: a drawing whose dimensions
+    # are all plotted through a style with DIMLFAC 100 looks wholly "inconsistent" against a header that says 1.
+    # So the count is recorded as evidence and the modal display-to-geometry ratio is recorded beside it, and the
+    # mismatch is only a conflict when the dimensions do not agree among THEMSELVES.
+    ratio, ratio_share = _display_ratio_mode(dims)
+    if ratio is not None:
+        evidence.append(f"{ratio_share:.0%} of authored dimensions display geometry x {ratio:g}")
+    if bad > ok and status in ACCEPTABLE and not (ratio is not None and ratio_share >= 0.5):
         conflict = conflict or {"KIND": "DIMENSIONS_INCONSISTENT_WITH_DIMLFAC", "CONSISTENT": ok, "INCONSISTENT": bad}
         status = "CONFLICT"
     secondary = {"SECOND_DIMENSION_CROSS_CHECK": len(witnesses) >= 2, "WITNESSES": witnesses}
+
+    # INSUNITS is a field a drafter can leave wrong, and a wrong one is not a reason to refuse to measure a building
+    # that says plainly how big it is.  So a declared unit may overrule it, but only on physical evidence: the
+    # declared unit has to put the drawing's own wall pairs inside the band that every masonry wall is inside, and
+    # the INSUNITS candidate has to put them outside it.  Both readings and the overruled code stay in the register.
+    override = None
+    if declared_unit in UNIT_SCALE and scale and abs(UNIT_SCALE[declared_unit] - scale) / scale > 0.01:
+        dec_scale = UNIT_SCALE[declared_unit]
+        sec_ins = _secondary(normalized.primitives, door_layer, wall_layers, scale)
+        sec_dec = _secondary(normalized.primitives, door_layer, wall_layers, dec_scale)
+        if sec_ins.get("WALL_THICKNESS_IN_BAND") is False and sec_dec.get("WALL_THICKNESS_IN_BAND") is True:
+            override = {"OVERRULED_PROVENANCE": prov, "OVERRULED_UNIT": cand, "OVERRULED_SCALE_TO_MM": scale,
+                        "OVERRULED_WALL_THICKNESS_MODE_MM": sec_ins.get("WALL_THICKNESS_MODE_MM"),
+                        "DECLARED_WALL_THICKNESS_MODE_MM": sec_dec.get("WALL_THICKNESS_MODE_MM"),
+                        "WALL_BAND_MM": WALL_THICKNESS_BAND_MM,
+                        "WHY": "the paired wall lines this drawing is built from are outside every plausible wall "
+                               "thickness under the INSUNITS code and inside it under the declared unit"}
+            evidence.append(f"INSUNITS {cand} put the modal wall pair at {sec_ins.get('WALL_THICKNESS_MODE_MM')} mm, "
+                            f"outside {WALL_THICKNESS_BAND_MM}; declared {declared_unit} puts it at "
+                            f"{sec_dec.get('WALL_THICKNESS_MODE_MM')} mm, inside it")
+            cand, scale, prov, status = declared_unit, dec_scale, "DECLARED_OVERRIDES_IMPLAUSIBLE_INSUNITS", "DECLARED_ESTABLISHED"
+            conflict = None
+
     if scale:
         secondary.update(_secondary(normalized.primitives, door_layer, wall_layers, scale))
         if secondary.get("DOOR_SWING_IN_BAND") is False and status in ACCEPTABLE:
@@ -119,7 +215,8 @@ def resolve(normalized, *, source_id, declared_unit=None, door_layer=None, wall_
             status = "CONFLICT"
     return {"SOURCE_ID": source_id, "RAW_INSUNITS": raw, "RAW_DRAWING_UNIT": normalized.drawing_unit, "DIMLFAC": normalized.dimlfac, "UNIT_CANDIDATE": cand,
             "UNIT_SCALE_TO_MM": scale, "EVIDENCE": evidence, "SECONDARY_CHECK": secondary, "STATUS": status, "CONFLICT": conflict, "PROVENANCE": prov,
-            "DECLARED_UNIT": declared_unit, "ACCEPTABLE_FOR_QUANTITIES": status in ACCEPTABLE and conflict is None}
+            "DECLARED_UNIT": declared_unit, "INSUNITS_OVERRIDE": override,
+            "ACCEPTABLE_FOR_QUANTITIES": status in ACCEPTABLE and conflict is None}
 
 
 def scale_drawing(normalized, scale_to_mm):
