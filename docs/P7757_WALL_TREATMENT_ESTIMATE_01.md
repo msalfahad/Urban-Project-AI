@@ -1056,3 +1056,31 @@ Dry floor 108.9625 against 107.76, 1.12%. His bundled wet line is 12.5%
 above our four separate items, a scope and height-basis difference. His
 corner and chamfer trims are NOT_COMPARABLE: we never measured a corner
 length, and none was invented to close the gap.
+
+### Qortuba sealed as BENCHMARK_PROJECT_01
+
+The project is closed. Twelve artifacts are hashed into
+`QORTUBA_BENCHMARK_SEAL` — the pre-pricing takeoff, the DRAFT export, the
+workbook, the rule store, the opening register, the room and wall
+workpapers, the object-identity register, the rule-application audit, the
+question ledger and the precedent library — and `verify()` re-hashes them so
+a later edit breaks the seal instead of quietly changing a number (§248).
+Qortuba now serves as BENCHMARK_PROJECT_01, WORKFLOW_REFERENCE and
+REGRESSION_PROJECT.
+
+The seal also splits what Qortuba taught from what Qortuba is (§249):
+seventeen Urban standards travel to the next project, twenty-three Qortuba
+project values do not. The 3.00 m wall, the 2.20 m door and the 1.500 m
+window are measurements of one flat.
+
+### The villa blind validation, written before the drawings
+
+`FULL_VILLA_BLIND_PROTOCOL` fixes the rules while no villa drawing exists in
+the repository (§250): the ten steps, what may be read, what stays sealed
+until the freeze, the seven discrepancy classes with ENGINE_ERROR as the
+only defect, a 2% agreement tolerance declared in advance, the comparison
+fields, the six success metrics, and the policy that an ambiguity becomes an
+owner question before it becomes shared code.
+
+Status: AWAITING_DRAWINGS. No villa drawing, schedule or specification is
+present, so step 1 has not begun.

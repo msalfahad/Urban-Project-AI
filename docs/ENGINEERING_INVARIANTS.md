@@ -5146,3 +5146,52 @@ a scope and height-basis difference to be understood, not a target. And
 where he bills something we never measured — corners, grooves, chamfers — the
 row is NOT_COMPARABLE and stays empty. Inventing a trim length to close a
 gap against a benchmark is precisely the failure a benchmark exists to catch.
+
+## §248 — A benchmark that can be edited is not a benchmark
+
+Qortuba is finished, so it stops being work and becomes a reference: a
+worked example of the workflow, a regression fixture, and the first project
+whose method a later one can be judged against. That only holds if the
+finished thing cannot drift.
+
+The seal hashes twelve artifacts — the pre-pricing takeoff, the structured
+export, the workbook, the rule store, the opening register, the room and
+wall workpapers, the identity register, the audit, the question ledger and
+the precedent library — and `verify()` re-hashes them on demand. A later
+change shows up as a broken seal rather than as a quietly different number.
+Nothing in it is approved and no rate exists in it.
+
+## §249 — A method travels; a measurement of one building does not
+
+The most expensive mistake this system could make is reusing a project value
+on a building nobody measured, because it would look like knowledge and read
+like a number.
+
+So the seal splits the rule store by the level it already carries.
+Seventeen URBAN_STANDARDS travel: how an opening is deducted, which rooms
+are wet, what a reveal is, that a measurement is not a price, that a
+question a person can answer in ten seconds beats an inference. Twenty-three
+QORTUBA_PROJECT_RULES do not: the 3.00 m wall, the 2.20 m door, the 1.500 m
+window are facts about one flat. The next project reads them or asks.
+
+The split is read from the store rather than restated, so the two cannot
+drift apart, and the villa protocol asserts the same two sets.
+
+## §250 — Write the blind rules before the drawings arrive
+
+The owner holds a completed BOQ for the next villa. A takeoff that has seen
+it is not evidence about whether the system works; it is an exercise in
+reproducing a number somebody already has. Glancing at it "just for the room
+list" spends the whole experiment.
+
+So the protocol is fixed and hashed while no villa drawing exists anywhere
+in the repository: what may be read, what stays sealed (quantities,
+contractor measurements, rates, totals, quotation — and any summary,
+screenshot or recollection of them), the seven discrepancy classes, the 2%
+agreement tolerance, and which single class counts as a defect.
+
+Only ENGINE_ERROR is a defect. Scope, commercial rule, missing source
+information and owner input are differences to be understood, not failures —
+and saying so in advance is what stops it being decided afterwards, when the
+deltas are visible and the temptation is to reclassify. No frozen blind
+quantity is moved to improve a comparison: a delta is classified, not closed.
