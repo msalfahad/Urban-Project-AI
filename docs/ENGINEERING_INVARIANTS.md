@@ -5233,3 +5233,40 @@ not as prose, so the block is checkable and the next step cannot quietly
 proceed on a substitute. Running the workflow against a project whose
 answers are already known would produce numbers and prove nothing, which is
 worse than producing nothing: it would look like a validation.
+
+## §253 — Attribution is the owner's to give; identity is the file's, and identity wins
+
+The owner attributed two files to the new blind villa project. One of them
+is byte-identical to the DWG the frozen Qortuba benchmark was measured from
+— the same md5, the file named in `pa08/qortuba/blind.py` as the benchmark's
+own input. The other is an earlier revision of that same sheet.
+
+A system that took the label at face value would have measured the benchmark
+and reported a validation. So every attributed source is hashed against the
+sealed inputs *before* it is read as a new project, and the check reads those
+paths from the benchmark's own module rather than copying them, so it moves
+if the benchmark moves instead of silently passing.
+
+The title block is read the same way: from the sheet, not the filename. The
+flattened PDF text runs the owner's name into the sheet name
+(`...ALFAHDSECOND FLOOR PLAN`), so the storey is matched from a known set of
+storey words rather than as "whatever capitals precede FLOOR PLAN". A folder
+called `STRUCTURE` in the source path is where a sheet was stored, not what
+it is: a sheet that says FLOOR PLAN and carries room names is architectural.
+
+## §254 — Two plots of one sheet are compared on what they draw, not on their title blocks
+
+The newly supplied PDF and the benchmark's PDF are the same sheet of the
+same building. Their title blocks differ in date (Oct 13 2024 vs Apr 14
+2025) and in level datum (S.F = 4.20 m vs R.F = 4.00 m), which says a
+revision happened but not whether it changed anything measurable.
+
+So the comparison is made on drawn geometry: every `m`/`l` point in the
+content stream, as a set. 12,080 points are shared; 3,934 appear only in the
+later plot and 3,237 only in the earlier, and almost all of those sit inside
+the plan body rather than in the sheet frame. That is a material revision,
+established without opening a schedule or asking anyone.
+
+The finding is reported, not acted on. If the earlier sheet is the built
+one, the frozen benchmark was measured from a superseded drawing — and
+reopening a sealed benchmark is the owner's decision, never the engine's.

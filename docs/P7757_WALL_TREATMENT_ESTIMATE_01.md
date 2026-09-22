@@ -1096,5 +1096,31 @@ the sealed benchmark itself. The inventory therefore records
 `VILLA_SOURCE_SET_PRESENT: False` and `STEPS_4_TO_15_BLOCKED: True` as
 checkable data (§252) instead of measuring whatever was to hand.
 
-Status: AWAITING_DRAWINGS at step 1. Steps 2 and 3 are answerable only
-against a villa set; steps 4 to 15 are blocked.
+### Step 2: the attributed set is the benchmark's own sheet
+
+The owner attributed two files to the villa project.
+`FULL_VILLA_BLIND_ATTRIBUTED_SOURCES` reads both and resolves what they are
+rather than what they are called (§253). Both are the SECOND FLOOR PLAN of
+Block 1 / Plot 449, area 305.30 m², at Sabah Al Salem — Qortuba. The DWG is
+byte-identical to the file named as the benchmark's own input in
+`pa08/qortuba/blind.py`.
+
+So `BLIND_MEASUREMENT_POSSIBLE` is False and no takeoff was produced.
+Measuring the benchmark's own source would reproduce an answer the system
+already holds.
+
+The pass did find something the benchmark did not know: the supplied PDF is
+an **earlier** revision of the benchmark sheet — Oct 13 2024 at level
+S.F = 4.20 m, against the Apr 14 2025 revision at R.F = 4.00 m that Qortuba
+was measured from. Compared on drawn geometry rather than title blocks
+(§254), the two plots share 12,080 points and each draws over 3,000 the
+other does not, nearly all inside the plan body. That is a material
+revision, and which sheet is the built one is question V-03.
+
+Four questions went back as one batch, in a `V-nn` namespace of their own:
+Qortuba's question numbers are sealed with Qortuba and are never continued
+into another project.
+
+Status: AWAITING_DRAWINGS. The villa's other floors, elevations, sections,
+structural and MEP drawings and schedules are all absent; steps 4 to 15
+remain blocked.
