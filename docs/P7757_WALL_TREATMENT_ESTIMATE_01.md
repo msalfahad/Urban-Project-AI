@@ -1201,5 +1201,27 @@ outside face, and 474.693 + 101.76 × 0.200 = 495.045 against 494.62, within a
 tenth of a percent (§264). Three of five schedule figures now reproduce
 independently. 382.16 still does not, and stays that way.
 
-Status: FINISHING TAKEOFF MEASURED, not frozen — aluminium and the ground
-floor's 382.16 are the isolated uncertainties.
+### The window standard, and the blind freeze
+
+The owner approved a window size guide as URBAN_WINDOW_SIZE_GUIDE_V1 (US-19),
+a **fallback** ranked fourth behind a stated dimension, a measured one and a
+project override (§265). It supplied only heights: every width was measured
+from the plot, which draws each glazed opening as a rectangle through the
+wall — 2.001, 1.002 and 0.600 m against the guide's 1.80 for the same rooms.
+The illustrative 2.00 m height from earlier is recorded as superseded and no
+window keeps it (§266).
+
+The 155 m² gap between wall porcelain and its preparation turned out to be a
+defect, not a trade rule: the preparation was counted on wall faces that
+required a wall line to span a whole grid cell, so fragmented walls were
+missed. Both trades now take one host and the difference is 0.000 m² across
+thirteen rooms (§267). The odd blockwork thicknesses — 202, 167, 147, 126,
+100, 50, 283 mm — are named as junction artefacts and excluded from the bill,
+visibly (§268).
+
+All eleven pre-freeze checks pass. FULL_VILLA_BLIND_PRE_PRICING_TAKEOFF is
+frozen with no rate supplied and no waste applied; every structured record
+leaves as DRAFT, because the system does not approve its own takeoff.
+
+Status: BLIND TAKEOFF FROZEN. The historical Excel has not been requested,
+opened, inspected or compared against.

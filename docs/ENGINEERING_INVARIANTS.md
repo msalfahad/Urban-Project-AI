@@ -5446,3 +5446,63 @@ thickness is the whole difference, and finding it named the figure.
 The remaining 382.16 m² still does not reproduce — 5.48 m² from the nearest
 measured quantity. It stays NOT_ESTABLISHED. Three of five figures now
 reproduce independently, and no measured area was moved towards any of them.
+
+## §265 — A standard supplies what the drawing cannot, and never what it can
+
+The owner approved a window size guide as an Urban standard. It gives width
+**and** height for fourteen room types, and taking both would have been the
+easy reading and the wrong one.
+
+The guide ranks fourth, below a stated dimension, below a measured one, and
+below an owner override for the project. On Al Rashed it supplies only
+heights. Every width was measured: the plot draws each glazed opening as a
+rectangle punched through the wall, as wide as the opening and as deep as
+the wall, so the rectangle **is** the clear width — 2.001, 1.002 and 0.600 m,
+against the guide's 1.80 for the same rooms. The drawing wins, and the
+register records the rank each figure came from.
+
+A width taken from the guide would have been marked
+`URBAN_STANDARD_FALLBACK` and `ESTIMATED_FOR_PRE_PRICING`. None was.
+
+The guide also carries design advice — orientation, window-to-wall ratio,
+daylight. None of it touches a takeoff: a window built 2.00 m wide is 2.00 m
+wide whichever way it faces. It is stored as DESIGN_REVIEW_ONLY.
+
+## §266 — An illustrative number is superseded, not quietly kept
+
+Earlier in this project the owner offered "2 m × 2 m for example" as a
+window basis, before the guide existed. Seven windows carried 2.00 m.
+
+The guide supersedes it, and the supersession is recorded rather than
+applied silently: no window keeps 2.00 m, and the heights now run 1.50, 1.20,
+2.20 and 0.60 by room type. An example given to explain an idea is not a
+measurement, and the audit trail should show when one stopped being used.
+
+## §267 — Two trades on the same face take the same host
+
+Wall porcelain measured 458.784 m² and the tile preparation behind it
+303.444 m² — a 155 m² gap between a material and the preparation it sits on.
+
+Three readings were possible: a different trade scope, a different
+commercial basis, or an error. It was the error. The porcelain used each
+room's perimeter; the preparation used a count of wall faces that required a
+wall line to span a whole grid cell, so every wall drawn in fragments was
+missed. Documenting that as a "trade rule" would have frozen a defect into
+the standard.
+
+Both now take one host — the room's perimeter less that room's own openings
+— because both are applied to the same faces. Thirteen rooms, difference
+0.000 m², net 432.329 m². The reconciliation closes because the cause was
+found, not because the numbers were made to agree.
+
+## §268 — Only a confirmed wall is billed as one
+
+Al Rashed's wall cells came out at 150 mm, 200 mm, and then 202, 167, 147,
+126, 100, 50 and 283 mm. The drawing dimensions two thicknesses. The rest
+arise where two walls meet or a line is drawn twice.
+
+They are 0.54 m² of plan area out of 66.58 — small enough to pass unnoticed
+into a blockwork rate, which is exactly why they need a name. Only
+`MASONRY_WALL` enters the final quantity; each artefact is listed with its
+length, its area and `BILLED: false`, so the exclusion is visible and
+reversible rather than a silent filter.
