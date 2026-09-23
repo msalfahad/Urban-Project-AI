@@ -5506,3 +5506,47 @@ into a blockwork rate, which is exactly why they need a name. Only
 `MASONRY_WALL` enters the final quantity; each artefact is listed with its
 length, its area and `BILLED: false`, so the exclusion is visible and
 reversible rather than a silent filter.
+
+## §269 — Identity before comparison: a validation against the wrong building is worse than none
+
+The owner unsealed `الراشد صباح الاحمد.xlsx` for the blind comparison. That
+file is not in the session — the upload replaces every non-ASCII character
+in a filename with an underscore, no uploaded file carries the 18 the name
+needs, and no workbook contains the string الراشد anywhere in its cells or
+shared strings.
+
+What *is* present is a complete six-book contractor measurement set from one
+subcontractor for a Sabah Al Ahmad villa. It was tempting to treat it as the
+evidence: it covers exactly the trades measured, it is real, and it would
+have produced a full trade-by-trade scorecard.
+
+It measures a different building. Three decisive reasons: it prices a
+**swimming pool** (concrete 12.348 m³, pool floor 21 m², pool walls
+19.8 m²), a **dome** (181.806 m²), and its blockwork is **617 m² of 150 mm
+against 84 m² of 200 mm** — the inverse of Al Rashed's 190 m² and 963 m². A
+villa built mostly in 150 mm block is not a villa built mostly in 200 mm.
+Four master bedrooms, a roof maid's room, an annex and a different district
+support it.
+
+So no comparison was made and every trade is NOT_COMPARABLE —
+DIFFERENT_PROJECT. A scorecard against the wrong building produces
+percentages that read as accuracy and carry none: the exact failure the
+blind protocol exists to prevent, arriving at the last step disguised as the
+payoff. The frozen takeoff is untouched; identity is checked before
+comparison, not after.
+
+## §270 — Another party's conventions are read as method, never adopted as rule
+
+The set that is present is still worth something: it shows how this
+subcontractor measures. Openings are deducted at **half** (خصم بالنصف — the
+plaster book deducts 58.2475 against a 116.495 opening schedule, exactly
+half). Arrises and stopped ends are a separate paid item in linear metres at
+2 m = 1 m. Tile preparation is measured under skirting as well as behind
+wall tiling. Plaster is measured room by room as height × running length —
+the same basis this engine uses.
+
+The first three differ from our rules and none was adopted. Each is recorded
+as a candidate with `PROMOTE: ASK_THE_OWNER`, because a commercial
+measurement rule is the owner's to set, and because these came from a
+contract this project is not party to. Reading another party's method is
+research; applying it is a decision.

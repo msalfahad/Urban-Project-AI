@@ -1223,5 +1223,25 @@ All eleven pre-freeze checks pass. FULL_VILLA_BLIND_PRE_PRICING_TAKEOFF is
 frozen with no rate supplied and no waste applied; every structured record
 leaves as DRAFT, because the system does not approve its own takeoff.
 
-Status: BLIND TAKEOFF FROZEN. The historical Excel has not been requested,
-opened, inspected or compared against.
+### The unseal: the evidence is a different villa
+
+The owner unsealed the historical workbook. It is not in the session — the
+upload sanitises Arabic filenames to underscores, and no workbook names
+الراشد anywhere in its contents.
+
+What is present is a complete six-book contractor measurement set for a
+Sabah Al Ahmad villa, covering exactly the trades measured. It measures a
+different building: a swimming pool, a dome, four master bedrooms, an annex,
+and blockwork that is 617 m² of 150 mm against 84 m² of 200 mm — the inverse
+of Al Rashed's 190 and 963 (§269).
+
+So no comparison was made. Every trade is NOT_COMPARABLE —
+DIFFERENT_PROJECT, and the frozen takeoff is untouched. A scorecard against
+the wrong building would have read as accuracy and carried none.
+
+The set's own conventions — half-deduction of openings, arrises paid in
+linear metres, preparation under skirting — are recorded as candidates for
+the owner to approve, not adopted (§270).
+
+Status: BLIND TAKEOFF FROZEN at `3e847af` / `ae259eaba3203798`. Validation
+awaits the correct historical workbook.

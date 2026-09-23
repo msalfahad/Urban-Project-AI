@@ -130,10 +130,14 @@ def test_structural_and_mep_are_scoped_out_and_carry_no_quantity():
         assert f'"TRADE": "{absent}"' not in blob
 
 
-def test_the_historical_excel_is_untouched():
-    r = rec()
-    assert "not requested, opened, inspected or compared" in r["SEALED"]
-    src = Path("research/qs_wall_treatment_01/pa09/alrashed").rglob("*.py")
-    for p in src:
-        t = p.read_text("utf-8")
-        assert ".xlsx" not in t or "ALRASHED_TRADE_PRICING_WORKBOOK" in t
+def test_the_freeze_records_that_it_was_made_blind():
+    """The seal has since been lifted; what the freeze asserts about itself must still stand."""
+    assert "not requested, opened, inspected or compared" in rec()["SEALED"]
+
+
+def test_no_historical_figure_reached_the_frozen_takeoff():
+    """The unseal pass read contractor workbooks. None of their numbers may appear in the frozen result."""
+    blob = json.dumps(rec(), ensure_ascii=False)
+    for historical in ("1260.6895", "617.2479", "559.8014", "409.58", "433.83", "116.9",
+                       "352.436", "1209.385", "1502.83", "1249.375"):
+        assert historical not in blob, historical
