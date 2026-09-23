@@ -1243,5 +1243,32 @@ The set's own conventions — half-deduction of openings, arrises paid in
 linear metres, preparation under skirting — are recorded as candidates for
 the owner to approve, not adopted (§270).
 
-Status: BLIND TAKEOFF FROZEN at `3e847af` / `ae259eaba3203798`. Validation
-awaits the correct historical workbook.
+### The validation: no engine error, and a workbook that is mostly not quantities
+
+The right workbook arrived and its md5 and sha-256 matched the owner's
+declaration exactly. It is a refurbishment works-and-price list, not a BOQ
+(§271): twelve of twenty-eight lines are bare lump sums, and only two
+quantities survive recovery — 950.22 m² of insulation and 57 lm of
+balustrade. Thirteen of twenty comparisons are therefore NOT_COMPARABLE.
+
+Where comparison was possible the frozen figures held. Basement doors 14
+against 14 — exact, once the aluminium and steel leaves are added to the
+wooden count, which turns an apparent 36% error into none (§272). Ground
+doors 16 against 17. Master-bedroom windows within 2% and 4%, kitchen within
+9%.
+
+The bathroom windows are 14% low, and all of it is the guide's 0.60 m height
+against a 0.75 m site frame — the measured width agreed to 40 mm. That is the
+guide answering for its own value (§273), recorded as a candidate revision;
+the guide was not edited.
+
+Aluminium differs by 348%, which is where a careless validator declares an
+engine error. The drawing decides it: the plot draws 7 glazed openings on the
+ground floor and **zero** on the basement and roof, out of 1,859 and 1,334
+paths (§274). The frozen figure reads its source faithfully; the site
+schedule measures glazing the permit drawing does not show.
+
+Six defects were found in the historical workbook, including a grand total
+that omits 1,375 KD of its own listed insulation materials.
+
+Status: VALIDATED. Frozen at `3e847af` / `ae259eaba3203798`, unchanged.

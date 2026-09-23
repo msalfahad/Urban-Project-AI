@@ -5550,3 +5550,73 @@ as a candidate with `PROMOTE: ASK_THE_OWNER`, because a commercial
 measurement rule is the owner's to set, and because these came from a
 contract this project is not party to. Reading another party's method is
 research; applying it is a decision.
+
+## §271 — Most of a real cost record is not a quantity
+
+The Al Rashed historical workbook arrived, hash-verified, and it is not a
+bill of quantities. Sheet1 is twenty-eight lines of works against prices —
+sanding steel, breaking out for the lift, building a ramp, repairing plaster
+— and twelve of them are bare lump sums with no quantity and no rate behind
+them.
+
+Only two quantities survive recovery with confidence: 950.22 m² of
+insulation (a summed area schedule behind `=1.5*F28`) and 57 lm of
+balustrade (`=57*30`, corroborated on the other sheet). Two more are
+numbers in a product whose units are not stated — `=77*28`, `=120*8` —
+where the door counts elsewhere in the same workbook are 27, not 77.
+Recording those as quantities would have invented four figures out of
+arithmetic.
+
+So thirteen of twenty comparisons are NOT_COMPARABLE, and that is the
+finding rather than a failure of the comparison. A validation against a cost
+record can only test the part of the record that is a measurement.
+
+## §272 — Normalise both sides to the same objects before calling a count wrong
+
+The workbook counts basement doors as 8 wooden plus 1 large. The frozen
+register counts 14. Set side by side that is a 36% error.
+
+It is not an error at all. The workbook splits leaves by material and counts
+the aluminium doors and the main steel door on different lines; the frozen
+register counts every opening that carries a door symbol. Adding the four
+aluminium leaves and the steel one to the nine wooden gives 14 — **exact**.
+
+The ground floor tells the same story from the other side: 16 against 17, a
+single leaf apart on an honest like-for-like. A count is only comparable
+once both sides are counting the same objects, and the work of establishing
+that is the comparison.
+
+## §273 — A guide's height is answerable for its own error
+
+Seven Al Rashed windows were measured width-from-drawing, height-from-guide.
+Against site-measured frames the areas land within 2%, 4% and 9% for the
+master bedrooms and kitchen — and 14% low for the bathrooms.
+
+The whole bathroom gap is the height: the measured width agreed to 40 mm,
+while the guide gives 0.60 m against a site frame of 0.75 m. That is not a
+measurement failure and not an engine error. It is
+OWNER_INPUT_DIFFERENCE, and what it puts in question is
+`URBAN_WINDOW_SIZE_GUIDE_V1`'s bathroom row.
+
+The guide was **not** edited. One project is one observation, and a standard
+that revises itself the first time a site frame disagrees is not a standard.
+The finding is recorded as a candidate with the owner's decision outstanding.
+
+## §274 — Check the drawing before calling the engine wrong
+
+The historical schedule lists 31 openings across three floors, including
+basement windows and aluminium doors. The frozen takeoff found 7, all on the
+ground floor. A 348% gap on aluminium is exactly where an honest validator
+reaches for ENGINE_ERROR.
+
+The test is whether the drawing supports the frozen figure, not whether the
+site record disagrees with it. Counting the wipeout rectangles the issued
+plot draws through a wall — the way every one of the seven is drawn — gives
+7 on the ground floor and **zero** on the basement and roof plans, out of
+1,859 and 1,334 drawn paths respectively.
+
+So the frozen figure is a faithful reading of the source it was given, and
+the difference is scope: the site schedule measures glazing the 16-11-2025
+permit drawing does not show. No engine error was found in this validation —
+not because the engine was protected, but because every difference traced to
+scope, to a missing source, or to a guide value.
