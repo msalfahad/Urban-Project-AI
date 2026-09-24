@@ -1,0 +1,401 @@
+<title>Urban QS Engine Status</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Arabic:wght@400;600&display=swap">
+<style>
+:root{
+  color-scheme: light;
+  --paper:#eef1f4; --card:#ffffff; --ink:#101b2b; --ink-soft:#42566b; --line:#cfd8e2;
+  --blue:#1f5f8b; --blue-soft:#e3edf5; --green:#2c6e49; --green-soft:#e0efe6;
+  --amber:#8a6212; --amber-soft:#f6ecd7; --red:#a33a2c; --red-soft:#f7e4e1;
+  --display:'Archivo','Helvetica Neue',Arial,sans-serif;
+  --body:'Source Serif 4',Georgia,'Times New Roman',serif;
+  --mono:'IBM Plex Mono',ui-monospace,'SFMono-Regular',Menlo,monospace;
+  --ar:'IBM Plex Sans Arabic','Segoe UI',Tahoma,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --paper:#0d1520; --card:#141f2d; --ink:#e6edf4; --ink-soft:#9fb2c4; --line:#27384a;
+    --blue:#6aa9d6; --blue-soft:#17293a; --green:#6cc294; --green-soft:#122a1f;
+    --amber:#d8ab52; --amber-soft:#2b2312; --red:#e08877; --red-soft:#2e1a17;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --paper:#0d1520; --card:#141f2d; --ink:#e6edf4; --ink-soft:#9fb2c4; --line:#27384a;
+  --blue:#6aa9d6; --blue-soft:#17293a; --green:#6cc294; --green-soft:#122a1f;
+  --amber:#d8ab52; --amber-soft:#2b2312; --red:#e08877; --red-soft:#2e1a17;
+}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16.5px;line-height:1.62;margin:0}
+.wrap{max-width:min(74rem,100%);margin:0 auto;padding-inline:20px;padding-block:0}
+header.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--card);border-bottom:1px solid var(--line)}
+header.bar .wrap{display:flex;flex-wrap:wrap;gap:10px 22px;align-items:baseline;padding-block:11px}
+header.bar strong{font-family:var(--display);font-weight:700;letter-spacing:.01em}
+nav{display:flex;flex-wrap:wrap;gap:14px;font-family:var(--mono);font-size:12px}
+nav a{color:var(--ink-soft);text-decoration:none;border-bottom:1px dotted var(--line)}
+nav a:hover,nav a:focus{color:var(--blue);border-bottom-color:var(--blue)}
+main{padding-block:34px 70px}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(28px,5.2vw,44px);line-height:1.1;margin:0 0 10px;text-wrap:balance;letter-spacing:-.015em}
+h2{font-family:var(--display);font-weight:600;font-size:clamp(20px,3.2vw,27px);margin:54px 0 6px;text-wrap:balance;letter-spacing:-.01em}
+h3{font-family:var(--display);font-weight:600;font-size:17px;margin:26px 0 4px}
+p,li{max-width:68ch}
+.lede{font-size:19px;color:var(--ink-soft);max-width:64ch}
+.eyebrow{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin:0 0 8px}
+.rule{height:1px;background:var(--line);border:0;margin:0}
+section{scroll-margin-top:90px}
+.grid{display:grid;gap:16px}
+@media(min-width:720px){.grid.two{grid-template-columns:1fr 1fr}.grid.four{grid-template-columns:repeat(4,1fr)}}
+.tile{background:var(--card);border:1px solid var(--line);border-radius:3px;padding:14px 16px}
+.tile .n{font-family:var(--mono);font-size:25px;font-variant-numeric:tabular-nums;display:block;line-height:1.2}
+.tile .k{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft)}
+.scroll{overflow-x:auto;border:1px solid var(--line);background:var(--card);border-radius:3px;margin:18px 0}
+table{border-collapse:collapse;width:100%;font-size:14.5px;min-width:560px}
+th,td{text-align:left;padding:9px 13px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:var(--mono);font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-soft);font-weight:500;white-space:nowrap}
+tbody tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+code,.mono{font-family:var(--mono);font-size:.9em}
+.ar{font-family:var(--ar);direction:rtl;unicode-bidi:isolate}
+.meter{position:relative;height:9px;background:var(--line);border-radius:99px;overflow:hidden;min-width:96px}
+.meter span{position:absolute;inset:0 auto 0 0;background:var(--blue);border-radius:99px}
+.meter.good span{background:var(--green)}.meter.low span{background:var(--amber)}.meter.bad span{background:var(--red)}
+.pill{display:inline-block;font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;padding:2px 7px;border-radius:2px;white-space:nowrap}
+.p-ok{background:var(--green-soft);color:var(--green)}
+.p-warn{background:var(--amber-soft);color:var(--amber)}
+.p-bad{background:var(--red-soft);color:var(--red)}
+.p-info{background:var(--blue-soft);color:var(--blue)}
+.case{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--red);border-radius:3px;padding:14px 17px;margin:14px 0}
+.case.fixed{border-left-color:var(--green)}
+.case h3{margin:0 0 4px;display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.case .id{font-family:var(--mono);font-size:11px;color:var(--ink-soft)}
+.case dl{display:grid;grid-template-columns:auto 1fr;gap:3px 14px;margin:9px 0 0;font-size:15px}
+.case dt{font-family:var(--mono);font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-soft);padding-top:5px}
+.case dd{margin:0;max-width:62ch}
+.q{background:var(--card);border:1px solid var(--line);border-radius:3px;padding:14px 17px;margin:12px 0}
+.q h3{margin:0 0 3px}
+.q .why{color:var(--ink-soft);font-size:15px;margin:6px 0 0}
+blockquote{margin:18px 0;padding:2px 0 2px 18px;border-left:3px solid var(--blue);color:var(--ink-soft);font-size:16px}
+.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:stretch;margin:20px 0}
+.flow .step{flex:1 1 150px;min-width:0;background:var(--card);border:1px solid var(--line);border-top:2px solid var(--blue);border-radius:3px;padding:9px 12px}
+.flow .step b{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--blue)}
+.flow .step span{font-size:14px;color:var(--ink-soft);display:block;margin-top:2px}
+footer{border-top:1px solid var(--line);margin-top:56px;padding-block:22px 0;color:var(--ink-soft);font-size:14px}
+ul.tight{padding-left:20px;margin:8px 0}
+ul.tight li{margin:3px 0}
+.k-line{font-family:var(--mono);font-size:12px;color:var(--ink-soft);letter-spacing:.02em}
+</style>
+
+<header class="bar"><div class="wrap">
+  <strong>Urban QS Engine</strong>
+  <nav>
+    <a href="#status">Where we are</a>
+    <a href="#how">How it works</a>
+    <a href="#rules">Rules</a>
+    <a href="#right">What it got right</a>
+    <a href="#wrong">What it got wrong</a>
+    <a href="#limits">What it cannot do</a>
+    <a href="#ask">What I need</a>
+    <a href="#app">The web app</a>
+  </nav>
+</div></header>
+
+<main class="wrap">
+
+<p class="eyebrow">Status report &middot; 24 September 2026</p>
+<h1>What the engine has learned, and how far it is from the product</h1>
+<p class="lede">Two villas measured from their own drawings, one of them blind and then checked against a historical workbook. This is everything the system knows, everything it got wrong on the way, and the honest distance left to a web app Urban can put in front of a client.</p>
+
+<div class="grid four" style="margin:26px 0 8px">
+  <div class="tile"><span class="n">≈55%</span><span class="k">to the final goal</span></div>
+  <div class="tile"><span class="n">135</span><span class="k">rooms measured</span></div>
+  <div class="tile"><span class="n">0.000</span><span class="k">m² decomposition error</span></div>
+  <div class="tile"><span class="n">0</span><span class="k">engine errors found in validation</span></div>
+</div>
+<p class="k-line">Frozen takeoff: commit <code>3e847af</code> &middot; digest <code>ae259eaba3203798</code> &middot; unchanged by everything below.</p>
+
+<hr class="rule" style="margin-top:30px">
+
+<section id="status">
+<h2>Where we are</h2>
+<p>The measurement half of the system is strong and getting stronger. The product half — pricing, storage, a screen a person can use — barely exists. The single number is a weighted average of the capabilities below, not a feeling.</p>
+
+<div class="scroll"><table>
+<thead><tr><th>Capability</th><th class="num">Weight</th><th class="num">Done</th><th style="min-width:120px">Progress</th><th>Where it stands</th></tr></thead>
+<tbody>
+<tr><td>Source ingest and identity<br><span class="k-line">DWG decode, units, revision isolation</span></td><td class="num">10</td><td class="num">85%</td><td><div class="meter good"><span style="width:85%"></span></div></td><td>Proved the drawing unit against a wrongly set <code>INSUNITS</code>, and picked the issued revision out of nine plan windows by dimension containment, score 1.000.</td></tr>
+<tr><td>Geometry and room recovery</td><td class="num">15</td><td class="num">75%</td><td><div class="meter good"><span style="width:75%"></span></div></td><td>Exact for axis-aligned plans: rooms are whole grid cells, areas are sums of exact products. Anything curved or angled is not handled at all.</td></tr>
+<tr><td>Semantic labelling<br><span class="k-line">room names, roles, Arabic and English</span></td><td class="num">8</td><td class="num">60%</td><td><div class="meter low"><span style="width:60%"></span></div></td><td>Labels are matched to rooms through a fitted PDF↔DWG transform. 128.8 m² across the villa is still <code>UNNAMED_ON_DRAWING</code> — measured exactly, identity simply not stated.</td></tr>
+<tr><td>Openings</td><td class="num">10</td><td class="num">65%</td><td><div class="meter low"><span style="width:65%"></span></div></td><td>35 doors and 7 windows, every width measured from the drawing. Heights still come from owner input or the size guide, not from the drawing.</td></tr>
+<tr><td>The third dimension<br><span class="k-line">heights from sections and elevations</span></td><td class="num">7</td><td class="num">25%</td><td><div class="meter bad"><span style="width:25%"></span></div></td><td>Every height in this project is an owner input. The engine cannot yet read a section to establish a clear height, and it correctly refuses to guess one.</td></tr>
+<tr><td>Trade measurement rules</td><td class="num">10</td><td class="num">55%</td><td><div class="meter low"><span style="width:55%"></span></div></td><td>Seven rules carry across projects today. Most trades still depend on a project answer rather than a standard.</td></tr>
+<tr><td>Quantity output and schema</td><td class="num">10</td><td class="num">80%</td><td><div class="meter good"><span style="width:80%"></span></div></td><td>Thirteen-sheet Arabic workbook with live formulas, and a 265-record JSON export where quantity, waste, procurement, rate and amount are five separate fields.</td></tr>
+<tr><td>Validation and QA</td><td class="num">10</td><td class="num">70%</td><td><div class="meter good"><span style="width:70%"></span></div></td><td>Blind protocol, freeze, 15 deterministic checks, 3,028 regression tests all passing. Two independent villas is still a small sample.</td></tr>
+<tr><td>Pricing and procurement</td><td class="num">5</td><td class="num">10%</td><td><div class="meter bad"><span style="width:10%"></span></div></td><td>Columns exist and are deliberately empty. No rate library, no waste standard, no supplier data.</td></tr>
+<tr><td>The web app itself</td><td class="num">10</td><td class="num">5%</td><td><div class="meter bad"><span style="width:5%"></span></div></td><td>Nothing is built. The data model and the file formats it would need are, which is the hard part.</td></tr>
+<tr><td>Generalisation</td><td class="num">5</td><td class="num">35%</td><td><div class="meter bad"><span style="width:35%"></span></div></td><td>Two villas, one office. Every new project still needs a human to confirm the plan windows and the scope.</td></tr>
+</tbody>
+</table></div>
+<p><strong>Weighted total: 56%.</strong> I would tell a client 55%. The engine can measure a villa like Al Rashed end to end and defend every number; it cannot yet price one, store one, or let somebody who is not me run it.</p>
+</section>
+
+<section id="how">
+<h2>How the engine works today</h2>
+<p>Nine stages, each of which can refuse. A stage that cannot establish something does not fill the gap with a plausible value — it marks the item and moves on. That single habit is why the validation found no engine error.</p>
+
+<div class="flow">
+  <div class="step"><b>01 Decode</b><span>DWG and PDF into entities, layers, blocks</span></div>
+  <div class="step"><b>02 Units</b><span>1 unit = 1 m, proved against wall thickness</span></div>
+  <div class="step"><b>03 Revision</b><span>the three plan windows the PDF actually plots</span></div>
+  <div class="step"><b>04 Grid</b><span>wall faces become exact grid lines</span></div>
+  <div class="step"><b>05 Rooms</b><span>whole cells, doorways virtually closed</span></div>
+  <div class="step"><b>06 Labels</b><span>names through a fitted PDF to DWG transform</span></div>
+  <div class="step"><b>07 Openings</b><span>jamb marks and wipeout rectangles</span></div>
+  <div class="step"><b>08 Quantities</b><span>trades under the rule ladder</span></div>
+  <div class="step"><b>09 Output</b><span>workbook, export, digest, freeze</span></div>
+</div>
+
+<div class="scroll"><table>
+<thead><tr><th>Stage</th><th>What it establishes</th><th>How it can fail safely</th></tr></thead>
+<tbody>
+<tr><td>Decode</td><td>Entities, layers, blocks out of the DWG</td><td>Legacy Arabic font bytes are replaced, not guessed at</td></tr>
+<tr><td>Units</td><td>1 unit = 1 m, proved by wall pairs landing in the 50–600 mm band</td><td>A declared unit overrides <code>INSUNITS</code> only on physical evidence</td></tr>
+<tr><td>Region isolation</td><td>Which three plan windows the issued PDF actually plots</td><td>Score below 1.000 means ask, not assume</td></tr>
+<tr><td>Grid</td><td>Every wall face becomes a grid line; the plan is exactly a set of rectangles</td><td>Residual ≠ 0 fails the closure check</td></tr>
+<tr><td>Rooms</td><td>Connected cells, with doorways virtually closed up to 3.00 m</td><td>A room that leaks through a doorway shows up as an absurd area</td></tr>
+<tr><td>Labels</td><td>Room names, through a similarity transform with a reflection</td><td>No inliers → no labels, rather than wrong labels</td></tr>
+<tr><td>Openings</td><td>Doors from jamb marks, windows from white wipeout rectangles</td><td>A symbol with no measurable gap keeps its type and loses its width</td></tr>
+<tr><td>Quantities</td><td>Trade measurement under the rule ladder</td><td>A missing height blocks the quantity instead of inventing one</td></tr>
+<tr><td>Output</td><td>Workbook, JSON export, digest, freeze</td><td>Every record leaves as <code>DRAFT</code>; the engine never approves itself</td></tr>
+</tbody>
+</table></div>
+</section>
+
+<section id="rules">
+<h2>The rules it now carries</h2>
+<p>The distinction that matters: a number you give for one villa stays with that villa, and a rule you approve travels to every future project. They are stored separately so the next project inherits the rule and not the number.</p>
+
+<h3>The priority ladder</h3>
+<p>Consulted strictly in order, and a lower rank is never used while a higher one can answer:</p>
+<ul class="tight">
+<li><strong>1 — A dimension written on the drawing.</strong></li>
+<li><strong>2 — A dimension measured from the drawing geometry.</strong></li>
+<li><strong>3 — An explicit owner value for this project.</strong></li>
+<li><strong>4 — An approved Urban standard.</strong></li>
+<li><strong>5 — Ask the owner.</strong> Nothing is invented at this rank.</li>
+</ul>
+
+<div class="scroll"><table>
+<thead><tr><th>Rule</th><th>What it says</th><th>Travels</th><th>Came from</th></tr></thead>
+<tbody>
+<tr><td><code>US-18</code></td><td>A wet or service room takes porcelain to the floor and to the full wall height automatically; a fully tiled face takes no paint and no skirting.</td><td><span class="pill p-ok">yes</span></td><td>AR-05</td></tr>
+<tr><td><code>US-19</code></td><td>The window size guide, as a fallback for heights only. A measured width always beats the guide's width.</td><td><span class="pill p-ok">yes</span></td><td>Owner's guide table</td></tr>
+<tr><td><code>US-20</code></td><td>Before any count or quantity is compared, both sides are reduced to the same population of objects.</td><td><span class="pill p-ok">yes</span></td><td>A 36% door-count error that fell to zero once aluminium and steel leaves joined the wooden ones</td></tr>
+<tr><td><code>US-21</code></td><td>An aluminium quantity taken from architectural drawings is published as drawing scope only, never as a supply quantity.</td><td><span class="pill p-ok">yes</span></td><td>7 glazed openings drawn against 34 objects on site</td></tr>
+<tr><td><code>US-22</code></td><td>Every row of an opening schedule carries a floor. Where it is not established the value is <code>UNKNOWN</code> and the row is marked.</td><td><span class="pill p-ok">yes</span></td><td>One missing header blocked 27 of 31 rows from comparison</td></tr>
+<tr><td><code>DS-01</code></td><td>Quantity, unit, waste, procurement quantity, rate and amount occupy separate fields and separate columns. No cell ever holds a quantity and a price together.</td><td><span class="pill p-ok">permanent</span></td><td><code>=1100+325+430+150*2.5</code> — a cell from which no quantity can ever be recovered</td></tr>
+<tr><td><code>AR-01…AR-08</code></td><td>3.60 m wall height, 2.20 m doors, 2.00 m windows, 1.00 m parapet, structural and MEP out of scope, external areas measured by area.</td><td><span class="pill p-warn">project only</span></td><td>Your answers for this villa</td></tr>
+</tbody>
+</table></div>
+<p>One rule was <em>rejected</em>, and that matters as much: the historical workbook's 0.75 m bathroom window did not replace the guide's 0.60 m. One project's site frame is an observation, not a standard.</p>
+</section>
+
+<section id="right">
+<h2>What it got right</h2>
+<p>These are the checks I did not control — figures produced by the architect or measured on site, which the engine had no way to tune itself towards.</p>
+
+<div class="scroll"><table>
+<thead><tr><th>Check</th><th class="num">Engine</th><th class="num">Independent source</th><th class="num">Difference</th><th>Why it counts</th></tr></thead>
+<tbody>
+<tr><td>First-floor penthouse area</td><td class="num">69.661 m²</td><td class="num">69.66 m²</td><td class="num">+0.001%</td><td>The architect's own area schedule, reproduced from geometry alone</td></tr>
+<tr><td>Ground-floor coverage</td><td class="num">495.045 m²</td><td class="num">494.62 m²</td><td class="num">+0.09%</td><td>Once measured to the outside face of the parapet, as the schedule measures it</td></tr>
+<tr><td>Plot area</td><td class="num">600.16 m²</td><td class="num">600.00 m²</td><td class="num">+0.03%</td><td>The title figure, recovered from the boundary lines</td></tr>
+<tr><td>Basement door leaves</td><td class="num">8</td><td class="num">8</td><td class="num">0%</td><td>Exact once both sides counted the same objects — the origin of <code>US-20</code></td></tr>
+<tr><td>Master bedroom window, second candidate</td><td class="num">3.00 m²</td><td class="num">3.06 m²</td><td class="num">−1.91%</td><td>Width measured, height from the guide</td></tr>
+<tr><td>Room decomposition</td><td class="num">184 rectangles</td><td class="num">135 room areas</td><td class="num">0.000 m²</td><td>The readable arithmetic in the new workbook sums back exactly to the frozen figures</td></tr>
+</tbody>
+</table></div>
+<p>Two other things went right that are harder to put in a table. The engine found and fixed <strong>its own</strong> 155 m² defect before any comparison with history. And when a 348% aluminium gap appeared — exactly where an eager validator declares an engine error — it went back to the drawing, counted 1,859 and 1,334 drawn paths on the basement and roof plans, found zero glazed openings there, and classified the difference as scope rather than error.</p>
+</section>
+
+<section id="wrong">
+<h2>What it got wrong</h2>
+<p>Every one of these was found and fixed inside the work. I am listing them because the pattern they make is more useful than any of them alone: the engine's failures are nearly always <em>a rule applied one level too confidently</em>, not arithmetic.</p>
+
+<div class="case fixed"><h3>Rooms leaked through doorways <span class="id">DEF-01</span> <span class="pill p-ok">fixed</span></h3>
+<dl>
+<dt>Symptom</dt><dd>One "room" of 425 m² and another of 560 m² — the whole floor flooding through open doorways.</dd>
+<dt>Cause</dt><dd>A door is a hole in a wall, and the flood fill treated the hole as an absence of wall.</dd>
+<dt>Fix</dt><dd>Virtual closures: a gap up to 3.00 m in a wall line is spanned for the purpose of bounding a room, and is never wall material.</dd>
+<dt>Lesson</dt><dd>Topology and material are two different questions about the same line.</dd>
+</dl></div>
+
+<div class="case fixed"><h3>Tile preparation under-measured by 155 m² <span class="id">DEF-02</span> <span class="pill p-ok">fixed</span></h3>
+<dl>
+<dt>Symptom</dt><dd>Wall porcelain and the preparation behind it disagreed by 155.340 m², and the first instinct was to call it a trade-scope difference.</dd>
+<dt>Cause</dt><dd>The face count required a wall line to span a whole grid cell, so walls drawn in fragments were missed.</dd>
+<dt>Fix</dt><dd>Both trades take the same host: the room's perimeter less its own openings. Difference now 0.000.</dd>
+<dt>Lesson</dt><dd>When two measurements of the same physical face disagree, one of them is wrong. Do not write a rule to excuse the gap.</dd>
+</dl></div>
+
+<div class="case fixed"><h3>159 "openings" that were mostly junctions <span class="id">DEF-03</span> <span class="pill p-ok">fixed</span></h3>
+<dl>
+<dt>Cause</dt><dd>Every gap in a wall line was read as an opening. Most gaps are where one wall meets another.</dd>
+<dt>Fix</dt><dd>An opening is a gap with a door or window symbol in it. Rebuilt from jamb marks and block symbols: 37.</dd>
+</dl></div>
+
+<div class="case fixed"><h3>"The window widths are unavailable" <span class="id">DEF-04</span> <span class="pill p-ok">fixed</span></h3>
+<dl>
+<dt>Symptom</dt><dd>I concluded and reported that no window width could be measured, and proposed to use the guide's widths.</dd>
+<dt>Cause</dt><dd>Dynamic blocks do not expand in the decode, and the path coordinates I first used were in a different space from the text.</dd>
+<dt>Fix</dt><dd>The plot draws each glazed opening as a white rectangle punched through the wall. All seven widths were measurable after all.</dd>
+<dt>Lesson</dt><dd>"Not available" was a statement about my method, not about the drawing. It cost a near-miss where a standard would have replaced a measurement.</dd>
+</dl></div>
+
+<div class="case fixed"><h3>The PDF-to-DWG transform returned nonsense <span class="id">DEF-05</span> <span class="pill p-ok">fixed</span></h3>
+<dl>
+<dt>Cause</dt><dd>A similarity transform with positive scale cannot express a reflection, and the PDF's y axis runs down while the drawing's runs up.</dd>
+<dt>Fix</dt><dd>Negate page y before fitting. Residual dropped to 0.021 m on withheld witnesses.</dd>
+</dl></div>
+
+<div class="case fixed"><h3>Multi-word room labels were invisible <span class="id">DEF-06</span> <span class="pill p-ok">fixed</span></h3>
+<dl>
+<dt>Cause</dt><dd>Words were grouped on a shared y. The plans are rotated 90°, so "BED ROOM" shares an x instead.</dd>
+<dt>Fix</dt><dd>Group on either axis.</dd>
+</dl></div>
+
+<div class="case fixed"><h3>CLOSE_AGREEMENT was used too generously <span class="id">DEF-07</span> <span class="pill p-ok">corrected</span></h3>
+<dl>
+<dt>Symptom</dt><dd>I reported 3.8%, 5.9% and 9.1% differences as close agreement. You set the band at 2%.</dd>
+<dt>Cause</dt><dd>A judgement where a threshold belonged. Generosity in a validator is a defect, not a courtesy.</dd>
+<dt>Fix</dt><dd>2% is now arithmetic. Three of six comparisons left the class and each had to name its cause. Two of seven differences are inside the band — a smaller and truer number than the one I first gave you.</dd>
+</dl></div>
+
+<div class="case fixed"><h3>A floor was inferred where none was stated <span class="id">DEF-08</span> <span class="pill p-ok">corrected</span></h3>
+<dl>
+<dt>Symptom</dt><dd>I read rows 5–21 of the historical schedule as basement openings.</dd>
+<dt>Cause</dt><dd>The sheet has one header at the top and nothing marking where the ground floor begins. I filled the gap with a reading.</dd>
+<dt>Fix</dt><dd>Four rows of thirty-one have proof. The other twenty-seven are <code>FLOOR = UNKNOWN</code>. The rule <code>US-22</code> exists so Urban's own schedules never repeat it.</dd>
+</dl></div>
+
+<div class="case fixed"><h3>A commercial basis was called a quantity <span class="id">DEF-09</span> <span class="pill p-ok">corrected</span></h3>
+<dl>
+<dt>Symptom</dt><dd>950.22 m² was carried as a "historical waterproofing quantity".</dd>
+<dt>Cause</dt><dd>It is <code>SUM(F5:F24)</code> feeding <code>=1.5*F28</code>, and one of its twenty components is 600.00 — the plot area. It is a priced basis, not a membrane area.</dd>
+<dt>Fix</dt><dd>Recorded as <code>HISTORICAL_COMMERCIAL_BASIS</code>, and it may not be compared against a measured area at all.</dd>
+</dl></div>
+
+<div class="case fixed"><h3>Two tests asserted yesterday's world <span class="id">DEF-10</span> <span class="pill p-ok">fixed</span></h3>
+<dl>
+<dt>Symptom</dt><dd>A test asserted that no villa files were present; another asserted that no workbook had been opened. Both were true when written and false afterwards.</dd>
+<dt>Fix</dt><dd>Rewritten to assert the <em>rule</em> — that the workflow stops without a villa set, that no historical figure reached the frozen quantities — rather than the state of one afternoon.</dd>
+</dl></div>
+</section>
+
+<section id="limits">
+<h2>What it still cannot do, and how I would fix each one</h2>
+
+<div class="scroll"><table>
+<thead><tr><th>Limit</th><th>What breaks</th><th>How I would solve it</th><th>Size</th></tr></thead>
+<tbody>
+<tr><td>Only axis-aligned plans</td><td>The exact decomposition assumes every wall face is horizontal or vertical. A curved or angled villa produces nothing, not a wrong answer.</td><td>Keep the exact path for orthogonal plans; add a polygon-clipping path for the rest, with the same closure check as the gate. The earlier P7757 work already has the harder machinery.</td><td><span class="pill p-warn">large</span></td></tr>
+<tr><td>Heights come from you, not the drawing</td><td>Every wall, door and window height in this villa is an owner input. Without you, no vertical quantity exists.</td><td>Read the section and elevation sheets: match level marks to floor labels, and take the clear height as a measured dimension at rank 1 or 2 instead of rank 3.</td><td><span class="pill p-warn">large</span></td></tr>
+<tr><td>128.8 m² unnamed</td><td>Circulation, shafts and lobbies carry no label, so they are measured exactly and classified as unknown.</td><td>Infer role from adjacency and shape as a <em>candidate</em> only, and put the candidates in a review screen for one click each. Never write an inferred name into a quantity.</td><td><span class="pill p-info">medium</span></td></tr>
+<tr><td>Drawing scope ≠ site scope</td><td>The drawings show 7 glazed openings; the site record lists 34 objects. Neither is wrong; they measure different things.</td><td>Publish two registers side by side — drawing scope and site scope — with <code>US-21</code> keeping them apart. The site register needs a source Urban actually controls.</td><td><span class="pill p-info">medium</span></td></tr>
+<tr><td>No ceiling, sanitary or MEP reading</td><td>Suspended ceilings, floor tanking and services are out of scope or undrawn.</td><td>Ask for the ceiling plan and the sanitary layout as inputs. Until they exist, these stay <code>SOURCE_REQUIRED</code> — which is the correct behaviour, not a gap.</td><td><span class="pill p-info">small</span></td></tr>
+<tr><td>No rates, no waste</td><td>The BOQ has empty price columns on purpose.</td><td>A rate library with the same travel rule as the standards: an Urban rate that travels, a project rate that does not, and a date on both.</td><td><span class="pill p-info">medium</span></td></tr>
+<tr><td>Two projects is a small sample</td><td>Generalisation is unproven. Each new villa still needs a human to confirm which plan windows are the issued ones.</td><td>Make the region-isolation score the gate: 1.000 proceeds, anything less asks. Then run three more villas blind before claiming the engine is general.</td><td><span class="pill p-info">medium</span></td></tr>
+<tr><td>It runs only where I run it</td><td>No upload, no storage, no login, no screen.</td><td>The next section.</td><td><span class="pill p-bad">not started</span></td></tr>
+</tbody>
+</table></div>
+</section>
+
+<section id="ask">
+<h2>What I need from you</h2>
+<p>Eight questions, none of them previously answered. Each one unblocks a quantity or a rule; none of them is a matter of taste.</p>
+
+<div class="q"><h3>1. Skirting — is it in scope, and at what height?</h3>
+<p>I derived 828.49 lm from the frozen geometry (room perimeter less the doors on it, wet rooms excluded under <code>US-18</code>) and marked every line <code>DERIVED_NOT_IN_FROZEN_TAKEOFF</code>. It is in the workbook as a draft and priced nowhere.</p>
+<p class="why">If skirting is standard Urban scope, this becomes a rule and every future villa gets it automatically.</p></div>
+
+<div class="q"><h3>2. What finish do the stairs and the unnamed spaces take?</h3>
+<p>67.6 m² of stair and landing, and 128.8 m² the drawing does not name. Both are measured exactly and both sit outside the floor-finish line.</p>
+<p class="why">Nearly 200 m² of floor finish hangs on this — more than a quarter of the internal area.</p></div>
+
+<div class="q"><h3>3. The external and parking areas — 155.2 m². What material?</h3>
+<p>The area is final. <code>AR-08</code> told me to measure them and not invent a finish, so the line reads <code>FINISH_CLASSIFICATION_PENDING</code>.</p>
+<p class="why">Interlock, tiles and plain screed are different trades at different rates.</p></div>
+
+<div class="q"><h3>4. What goes on the roof above the waterproofing?</h3>
+<p>474.7 m² of roof, with the membrane measured and the finish unstated.</p></div>
+
+<div class="q"><h3>5. Is wet-room floor tanking standard Urban scope even when it is not drawn?</h3>
+<p>No detail on any of the three plans. If you say it is standard, it becomes a rule like <code>US-18</code> and applies to 91.7 m² of wet and service floor here.</p>
+<p class="why">This is exactly the shape of question that should end in a travelling rule rather than a project answer.</p></div>
+
+<div class="q"><h3>6. Who supplies the site-scope opening register?</h3>
+<p>The drawings support 7 windows. The site record listed 34 objects. I can publish both registers, but only if the second one comes from a source Urban controls — a measured site survey, not a historical price list.</p></div>
+
+<div class="q"><h3>7. Are there suspended or decorative ceilings?</h3>
+<p>931.0 m² is measured as plain ceiling on the enclosed plan area. No ceiling plan was supplied, so nothing decorative is measured.</p></div>
+
+<div class="q"><h3>8. Waste percentages and rates — do you have Urban standards?</h3>
+<p>The workbook has the columns, wired with the formulas, and deliberately empty. Tell me the standard waste per trade and I will make them rules with the same travel discipline as everything else.</p>
+<p class="why">Also: if you can send the window size guide PDF itself, I will check it against the table you transcribed rather than assume they match.</p></div>
+</section>
+
+<section id="app">
+<h2>The web app</h2>
+<p>Not started, on your instruction. Here is what I would build and, more usefully, what is already done for it.</p>
+
+<h3>What already exists</h3>
+<ul class="tight">
+<li><strong>The data model.</strong> The 265-record export is the database schema, <code>DS-01</code>-shaped: every record carries project, drawing revision, floor, room, trade, item, components, calculation, measured quantity, unit, waste, procurement quantity, rate, amount, source, rule id, status and approval status.</li>
+<li><strong>The rule store.</strong> Urban standards, project values and schema rules are already separate objects with a travel flag.</li>
+<li><strong>The audit trail.</strong> Frozen artifacts with digests, plus a validation amendment that changes the record without touching the measurement. That is version history with a reason attached.</li>
+<li><strong>The review material.</strong> Every quantity decomposes to rectangles a reviewer can check by eye.</li>
+</ul>
+
+<h3>What I would build, in order</h3>
+<ul class="tight">
+<li><strong>Upload and identify.</strong> Drop a DWG and a PDF; the app runs decode, units and region isolation and shows what it found. The one human step: confirm the plan windows when the containment score is below 1.000.</li>
+<li><strong>Review the rooms.</strong> The plan with each room's rectangles drawn over it, its area, and one click to name an unnamed space or correct a role. Every override recorded as an owner input, never silently merged into the measurement.</li>
+<li><strong>Answer the blockers.</strong> The open questions, as a queue: wall height, door height, finish materials. The engine already knows which quantities each answer unblocks.</li>
+<li><strong>The BOQ.</strong> The thirteen sheets as screens, with the same live formulas and the same empty price columns until a rate library exists.</li>
+<li><strong>Approve.</strong> Records leave the engine as <code>DRAFT</code> and only a person moves them to approved. That is a product rule, not a technical one.</li>
+</ul>
+
+<h3>What I would not build yet</h3>
+<p>Anything that prices automatically. A rate applied to a quantity nobody has reviewed is how the historical workbook ended up with <code>=1100+325+430+150*2.5</code>, and that cell is the reason <code>DS-01</code> exists.</p>
+</section>
+
+<section id="files">
+<h2>What was delivered this round</h2>
+<div class="scroll"><table>
+<thead><tr><th>File</th><th>What it is</th></tr></thead>
+<tbody>
+<tr><td><code>ALRASHED_DETAILED_QUANTITY_TAKEOFF.xlsx</code></td><td>Thirteen Arabic right-to-left sheets: <span class="ar">ملخص الحصر، حصر المساحات، الأرضيات، كسوة الجدران، النعلة والبروفايل، العازل، الأسقف، الأبواب والشبابيك، المباني، المساح والصبغ، السطح والخارجي، BOQ حسب البند، المصادر والمراجعة</span></td></tr>
+<tr><td><code>ALRASHED_DETAILED_QUANTITY_EXPORT.json</code></td><td>265 draft records, one per room per trade, <code>DS-01</code> schema</td></tr>
+<tr><td><code>ALRASHED_VALIDATION_AMENDMENT_01.json</code></td><td>The corrected validation record and the seven rule decisions</td></tr>
+<tr><td><code>FULL_VILLA_BLIND_PRE_PRICING_TAKEOFF.json</code></td><td>The frozen measurement — untouched by any of the above</td></tr>
+</tbody>
+</table></div>
+
+<div class="scroll"><table>
+<thead><tr><th>Frozen quantity</th><th class="num">m²</th><th>Frozen quantity</th><th class="num">m²</th></tr></thead>
+<tbody>
+<tr><td>Internal floor</td><td class="num">734.638</td><td>Internal plaster</td><td class="num">1,493.945</td></tr>
+<tr><td>Wet and service floor</td><td class="num">91.668</td><td>Internal paint</td><td class="num">1,061.616</td></tr>
+<tr><td>Ceiling</td><td class="num">931.016</td><td>External plaster and paint</td><td class="num">894.859</td></tr>
+<tr><td>Wall porcelain, net</td><td class="num">432.329</td><td>Roof and waterproofing</td><td class="num">474.693</td></tr>
+<tr><td>Tile preparation</td><td class="num">432.329</td><td>Parapet blockwork</td><td class="num">101.760</td></tr>
+<tr><td>Blockwork 150 mm</td><td class="num">190.289</td><td>Parapet plaster / paint, each</td><td class="num">203.520</td></tr>
+<tr><td>Blockwork 200 mm</td><td class="num">963.188</td><td>Aluminium, drawing scope</td><td class="num">14.330</td></tr>
+<tr><td>External and parking</td><td class="num">155.206</td><td>Door openings (35)</td><td class="num">73.280</td></tr>
+</tbody>
+</table></div>
+</section>
+
+<footer class="wrap" style="padding-inline:0">
+<p>Prepared for Mohammad. Every figure here traces to the Al Rashed permit drawings of 16-11-2025 or to a decision you made. No historical price, quantity or formula entered any quantity in this report.</p>
+</footer>
+</main>
