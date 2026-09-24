@@ -104,14 +104,15 @@ ul.tight li{margin:3px 0}
 <p class="eyebrow">Status report &middot; 24 September 2026</p>
 <h1>What the engine has learned, and how far it is from the product</h1>
 <p class="lede">Two villas measured from their own drawings, one of them blind and then checked against a historical workbook. This is everything the system knows, everything it got wrong on the way, and the honest distance left to a web app Urban can put in front of a client.</p>
+<p class="lede" style="font-size:16px">Revision 2 carries an external audit's corrections. Three claims in revision 1 were wrong and are fixed below: 135 connected components are not 135 rooms, 196.378 m² of stair and unnamed floor area was being counted as porcelain when its finish is unresolved, and "no engine errors" described the historical validation only — the audit then found classification errors in the detailed export.</p>
 
 <div class="grid four" style="margin:26px 0 8px">
   <div class="tile"><span class="n">≈55%</span><span class="k">to the final goal</span></div>
-  <div class="tile"><span class="n">135</span><span class="k">rooms measured</span></div>
+  <div class="tile"><span class="n">135</span><span class="k">connected components — 64 spaces, 71 wall slivers</span></div>
   <div class="tile"><span class="n">0.000</span><span class="k">m² decomposition error</span></div>
-  <div class="tile"><span class="n">0</span><span class="k">engine errors found in validation</span></div>
+  <div class="tile"><span class="n">196.4</span><span class="k">m² of floor finish still unclassified</span></div>
 </div>
-<p class="k-line">Frozen takeoff: commit <code>3e847af</code> &middot; digest <code>ae259eaba3203798</code> &middot; unchanged by everything below.</p>
+<p class="k-line">Frozen takeoff: commit <code>3e847af</code> &middot; digest <code>ae259eaba3203798</code> &middot; unchanged by everything below. Report revision 2, after an external audit.</p>
 
 <hr class="rule" style="margin-top:30px">
 
@@ -211,9 +212,10 @@ ul.tight li{margin:3px 0}
 <tr><td>Plot area</td><td class="num">600.16 m²</td><td class="num">600.00 m²</td><td class="num">+0.03%</td><td>The title figure, recovered from the boundary lines</td></tr>
 <tr><td>Basement door leaves</td><td class="num">8</td><td class="num">8</td><td class="num">0%</td><td>Exact once both sides counted the same objects — the origin of <code>US-20</code></td></tr>
 <tr><td>Master bedroom window, second candidate</td><td class="num">3.00 m²</td><td class="num">3.06 m²</td><td class="num">−1.91%</td><td>Width measured, height from the guide</td></tr>
-<tr><td>Room decomposition</td><td class="num">184 rectangles</td><td class="num">135 room areas</td><td class="num">0.000 m²</td><td>The readable arithmetic in the new workbook sums back exactly to the frozen figures</td></tr>
+<tr><td>Component decomposition</td><td class="num">184 rectangles</td><td class="num">135 component areas</td><td class="num">0.000 m²</td><td>The readable arithmetic in the new workbook sums back exactly to the frozen figures</td></tr>
 </tbody>
 </table></div>
+<p><strong>What "no engine errors" does and does not mean.</strong> It is the verdict of the <em>historical validation</em>: no difference against the historical workbook proved a frozen quantity wrong. It never meant the engine makes no mistakes. The external audit of the detailed export went on to find four classification defects — pending floor area published as porcelain, components published as rooms, a ceiling finish marked final, and a guide category used outside its band — all of which are corrected in revision 2 and are now covered by tests.</p>
 <p>Two other things went right that are harder to put in a table. The engine found and fixed <strong>its own</strong> 155 m² defect before any comparison with history. And when a 348% aluminium gap appeared — exactly where an eager validator declares an engine error — it went back to the drawing, counted 1,859 and 1,334 drawn paths on the basement and roof plans, found zero glazed openings there, and classified the difference as scope rather than error.</p>
 </section>
 
@@ -284,6 +286,25 @@ ul.tight li{margin:3px 0}
 <dt>Fix</dt><dd>Recorded as <code>HISTORICAL_COMMERCIAL_BASIS</code>, and it may not be compared against a measured area at all.</dd>
 </dl></div>
 
+<div class="case fixed"><h3>Pending floor area was published as porcelain <span class="id">DEF-11</span> <span class="pill p-ok">fixed in rev 2</span></h3>
+<dl>
+<dt>Symptom</dt><dd>The JSON export carried 62 <code>PORCELAIN_FLOOR</code> records totalling 931.016 m², while the workbook and BOQ correctly used 734.638 m². The extra 196.378 m² is 9 stair and landing components and 24 unnamed spaces.</dd>
+<dt>Cause</dt><dd>One role list did the work of two questions: what is enclosed, and what takes porcelain. A stair takes treads; an unnamed space takes whatever the owner decides.</dd>
+<dt>Fix</dt><dd>Those 33 records are now <code>FLOOR_FINISH_UNCLASSIFIED</code> / <code>AR-FL-PENDING</code> / <code>FINISH_CLASSIFICATION_PENDING</code>, <code>BOQ_INCLUDED: false</code>. The area is kept and measured; it is simply not porcelain until somebody says so.</dd>
+</dl></div>
+
+<div class="case fixed"><h3>135 components were called 135 rooms <span class="id">DEF-12</span> <span class="pill p-ok">fixed in rev 2</span></h3>
+<dl>
+<dt>Symptom</dt><dd>Every artifact, and this report, said "135 rooms measured". 71 of those are wall material and slivers — 54.7 m² of them.</dd>
+<dt>Fix</dt><dd>A published census: 135 connected components = 64 non-sliver + 71 wall/sliver, with role counts (16 internal, 12 wet, 1 kitchen, 9 stair, 24 unnamed, 2 external). A connected component becomes a room when the drawing names it or its geometry proves what it is, and not before.</dd>
+</dl></div>
+
+<div class="case fixed"><h3>A guide category used outside its own band <span class="id">DEF-13</span> <span class="pill p-ok">fixed in rev 2</span></h3>
+<dl>
+<dt>Symptom</dt><dd>Window AR-W-05 sits in a 91.06 m² hall and was given the <code>LARGE_HALL</code> category, whose band is 35–60 m². Its 2.20 m height was published as if settled.</dd>
+<dt>Fix</dt><dd>Every window now carries an explicit authority. A category matched from a drawing <em>label</em> is supported by the label (which is why GR-108's M.BED ROOM overrides the area band). A category chosen from area is supported only inside its band; outside it, the height is <code>ASK_THE_OWNER</code> and the window moves to <code>AR-AL-PENDING</code>. The two aluminium lines still add back to the frozen 14.3301 m².</dd>
+</dl></div>
+
 <div class="case fixed"><h3>Two tests asserted yesterday's world <span class="id">DEF-10</span> <span class="pill p-ok">fixed</span></h3>
 <dl>
 <dt>Symptom</dt><dd>A test asserted that no villa files were present; another asserted that no workbook had been opened. Both were true when written and false afterwards.</dd>
@@ -314,7 +335,7 @@ ul.tight li{margin:3px 0}
 <p>Eight questions, none of them previously answered. Each one unblocks a quantity or a rule; none of them is a matter of taste.</p>
 
 <div class="q"><h3>1. Skirting — is it in scope, and at what height?</h3>
-<p>I derived 828.49 lm from the frozen geometry (room perimeter less the doors on it, wet rooms excluded under <code>US-18</code>) and marked every line <code>DERIVED_NOT_IN_FROZEN_TAKEOFF</code>. It is in the workbook as a draft and priced nowhere.</p>
+<p>828.49 lm derived from the frozen geometry, and since revision 2 split into three buckets rather than offered as one number: 381.535 lm in dry named internal spaces (candidates), 97.355 lm on stairs and landings and 349.603 lm in unnamed spaces (both blocked until their floor finish is settled). Every line is <code>DERIVED_NOT_IN_FROZEN_TAKEOFF</code>, provisional, and priced nowhere.</p>
 <p class="why">If skirting is standard Urban scope, this becomes a rule and every future villa gets it automatically.</p></div>
 
 <div class="q"><h3>2. What finish do the stairs and the unnamed spaces take?</h3>
@@ -336,7 +357,7 @@ ul.tight li{margin:3px 0}
 <p>The drawings support 7 windows. The site record listed 34 objects. I can publish both registers, but only if the second one comes from a source Urban controls — a measured site survey, not a historical price list.</p></div>
 
 <div class="q"><h3>7. Are there suspended or decorative ceilings?</h3>
-<p>931.0 m² is measured as plain ceiling on the enclosed plan area. No ceiling plan was supplied, so nothing decorative is measured.</p></div>
+<p>931.0 m² is measured as ceiling plan area. The area is final; the ceiling <em>type</em> is not, so since revision 2 the finish carries <code>FINISH_CLASSIFICATION_PENDING</code> and sits in the provisional section of the BOQ rather than being priced as a plain ceiling.</p></div>
 
 <div class="q"><h3>8. Waste percentages and rates — do you have Urban standards?</h3>
 <p>The workbook has the columns, wired with the formulas, and deliberately empty. Tell me the standard waste per trade and I will make them rules with the same travel discipline as everything else.</p>

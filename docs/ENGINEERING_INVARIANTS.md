@@ -5707,3 +5707,72 @@ the room totals still land on the frozen figures; the trade sheets, which
 rebuild from published millimetre dimensions, agree to within 0.003 m² on a
 963 m² line, and the workbook says so in its own sources sheet rather than
 hiding it.
+
+## §281 — An unsettled finish is a status, not a default material
+
+The detailed export classified 62 components as `PORCELAIN_FLOOR` totalling
+931.016 m², while the workbook and the BOQ used 734.638 m². The difference —
+196.378 m² — is 9 stair and landing components and 24 spaces the drawing does
+not name. A stair takes treads. An unnamed space takes whatever the owner
+decides. Neither takes porcelain because it happens to be enclosed.
+
+One role list had been answering two different questions: *what is enclosed*
+and *what takes this finish*. They are now separate lists, and the 33
+components are `FLOOR_FINISH_UNCLASSIFIED` / `AR-FL-PENDING` /
+`FINISH_CLASSIFICATION_PENDING`, `BOQ_INCLUDED: false`. The area is measured,
+kept and visible; it is simply not porcelain until somebody says so.
+
+## §282 — A connected component is not a room
+
+135 connected components were published as "135 rooms" in every artifact and
+in the status report. 71 of them are wall material and slivers — 54.655 m².
+The real count of spaces is 64.
+
+Every artifact now carries a census: `CONNECTED_COMPONENT_COUNT` 135 =
+`NON_SLIVER_COMPONENT_COUNT` 64 + `WALL_MATERIAL_OR_SLIVER_COUNT` 71, with the
+role split beneath it (16 internal, 12 wet, 1 kitchen, 9 stair, 24 unnamed, 2
+external). A component is a maximal set of plan cells joined without a wall or
+a virtual closure between them — a geometric fact. It becomes a room when the
+drawing names it or its geometry proves what it is, and not one step earlier.
+
+## §283 — A fallback standard used outside its own scope is an assumption
+
+`URBAN_WINDOW_SIZE_GUIDE_V1` gives `LARGE_HALL` an area band of 35–60 m².
+Window AR-W-05 sits in a 91.06 m² space, and its 2.20 m guide height was
+published as though settled.
+
+The band is not decoration. Every window now carries an explicit authority for
+its category: a category matched from a drawing **label** is supported by the
+label — which is why GR-108's `M.BED ROOM` overrides the area band rather than
+being overridden by it — while a category chosen from **area** is supported
+only while the area is inside that category's band. Outside it, there is no
+authority, the height is `ASK_THE_OWNER` at rank 5, and the window moves to
+`AR-AL-PENDING`. The two aluminium lines still add back to the frozen
+14.3301 m², because nothing measured changed: only what the engine claims to
+know.
+
+## §284 — A check that cannot fail is not a check
+
+Fifteen QA rows used to record a PASS the generator had decided. They are now
+twenty-two checks that work something out at generation time — from the
+workbook's own evaluated formulas, from the export, from the frozen file's
+bytes — and each carries `INPUTS`, `TOLERANCE`, `RESULT`, `METHOD`, `COMMIT`
+and `EVALUATED_AT_UTC` so a reader can redo the arithmetic.
+
+The tests follow the same rule. Each audit finding has a validator, and each
+validator is tested twice: once against the published artifacts, where it must
+find nothing, and once against a deliberately corrupted copy — a stair moved
+into `PORCELAIN_FLOOR`, a component relabelled a room, a row count reported as
+an object count, a ceiling marked final, a historical figure used as a
+quantity, a changed frozen file — where it must object. A test that has only
+ever seen good data proves nothing about what it would catch.
+
+## §285 — A formula with no cached result is a blank cell to most readers
+
+openpyxl writes `<f>` and no `<v>`, so every number in the workbook depended on
+the reader's application recalculating it. The same 872 formulas now ship with
+their evaluated results written beside them: 823 numeric results read back
+through a data-only reader, none missing, none an error value, and the
+formulas themselves untouched. The evaluator that computes them is the same
+one the quality checks and the tests use, so the workbook, the checks and the
+tests cannot drift apart.

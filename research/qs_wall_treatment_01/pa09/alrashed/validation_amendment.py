@@ -16,6 +16,14 @@ from research.qs_wall_treatment_01 import protocol as PR
 
 OUT = Path(PR.OUT_DIR) / "pa09_alrashed"
 CLOSE_AGREEMENT_MAX_PCT = 2.0
+REVISION = 2
+REVISION_HISTORY = [
+    {"REVISION": 1, "WHAT": "the owner's seven corrections and seven rule decisions"},
+    {"REVISION": 2, "WHAT": "an external audit found the opening counts mixing two populations in one field.  "
+                            "ROW_COUNT, MULTIPLICITY and PHYSICAL_OBJECT_COUNT are now separate fields and the "
+                            "31 rows reconcile to 34 objects explicitly: 26 windows, 6 doors, 2 sliding doors",
+     "WHAT_DID_NOT_CHANGE": "no classification, no rule decision and no restated figure moved"},
+]
 
 
 def _git(*a):
@@ -83,20 +91,38 @@ FLOOR_ATTRIBUTION_RULE = {
 }
 
 # ------------------------------------------------------------------ 3. counts, kept apart
+# A row is not an object.  The schedule has 31 rows; two of those rows carry a count in their own text, so the
+# same schedule describes 34 physical objects.  Each number lives in its own field and they are never summed
+# across populations - which is what US-20 was promoted to prevent.
 HISTORICAL_COUNTS = {
-    "SCHEDULE_ROW_COUNT": 31,
-    "PHYSICAL_OBJECT_COUNT_AFTER_MULTIPLICITIES": 34,
-    "MULTIPLICITY_ROWS": [{"ROW": 35, "ROWS_TO_OBJECTS": "1 row -> 2 objects"},
-                          {"ROW": 36, "ROWS_TO_OBJECTS": "1 row -> 3 objects"}],
-    "WINDOW_COUNT": 24, "WINDOW_NOTE": "8 named دريشة + 7 named only by room + 9 bathroom windows",
-    "DOOR_COUNT_IN_THE_L_M_SCHEDULE": 6, "DOOR_NOTE": "4 aluminium doors + 1 roof door row (2 objects)",
-    "SLIDING_DOOR_COUNT": 2,
-    "OPENING_COUNT_TOTAL_OBJECTS": 34,
-    "SEPARATE_LEAF_COUNT_BLOCK": {"BASEMENT_WOODEN": 8, "BASEMENT_LARGE": 1, "GROUND_WOODEN": 17, "ROOF": 1,
-                                  "MAIN_STEEL": 1, "TOTAL_LEAVES": 28,
-                                  "NOTE": "a different block on the same sheet, counting leaves by material; it "
-                                          "is not the same population as the L/M schedule and the two must not "
-                                          "be added together"},
+    "POPULATION": "the L/M opening schedule on the شبابيك sheet, rows 5 to 36",
+    "FIELD_RULE": "ROW_COUNT, MULTIPLICITY and PHYSICAL_OBJECT_COUNT are three separate fields.  No field "
+                  "holds a row count and an object count at the same time",
+    "SCHEDULE_ROW_COUNT": {"WINDOWS": 24, "DOORS": 5, "SLIDING_DOORS": 2, "TOTAL": 31},
+    "WINDOW_ROW_NOTE": "8 rows named دريشة + 7 rows named only by their room + 9 bathroom window rows = 24",
+    "MULTIPLICITY": [
+        {"ROW": 36, "LABEL": "دريشة العدد ٣", "KIND": "WINDOW",
+         "ROW_COUNT": 1, "MULTIPLICITY": 3, "PHYSICAL_OBJECT_COUNT": 3,
+         "EVIDENCE": "the row's own text states a count of three"},
+        {"ROW": 35, "LABEL": "باب العدد ٢", "KIND": "DOOR",
+         "ROW_COUNT": 1, "MULTIPLICITY": 2, "PHYSICAL_OBJECT_COUNT": 2,
+         "EVIDENCE": "the row's own text states a count of two"},
+    ],
+    "PHYSICAL_OBJECT_COUNT": {"WINDOWS": 26, "DOORS": 6, "SLIDING_DOORS": 2, "TOTAL": 34},
+    "RECONCILIATION": {
+        "WINDOWS": "24 rows + 2 extra objects from row 36 (1 row -> 3 objects) = 26 objects",
+        "DOORS": "5 rows + 1 extra object from row 35 (1 row -> 2 objects) = 6 objects",
+        "SLIDING_DOORS": "2 rows -> 2 objects",
+        "TOTAL": "31 rows -> 34 objects (26 + 6 + 2)",
+    },
+    "SEPARATE_LEAF_COUNT_BLOCK": {
+        "WHAT_IT_COUNTS": "door LEAVES by material, in a different block on the same sheet",
+        "BASEMENT_WOODEN": 8, "BASEMENT_LARGE": 1, "GROUND_WOODEN": 17, "ROOF": 1, "MAIN_STEEL": 1,
+        "TOTAL_LEAVES": 28,
+        "IS_THE_SAME_POPULATION_AS_THE_L_M_SCHEDULE": False,
+        "NOTE": "a leaf is not an opening and this block is not the L/M schedule; the two must never be added "
+                "together, and neither may be compared against the other without normalising first (US-20)",
+    },
 }
 
 # ------------------------------------------------------------------ 4 and 5. two figures renamed to what they are
@@ -172,7 +198,9 @@ CORRECTED_VERDICT = {
 
 def build():
     rec = {"ARTIFACT": "ALRASHED_VALIDATION_AMENDMENT_01",
+           "REVISION": REVISION,
            "AMENDS": "ALRASHED_HISTORICAL_VALIDATION",
+           "REVISION_HISTORY": REVISION_HISTORY,
            "OWNER_POSITION": OWNER_POSITION,
            "CLOSE_AGREEMENT_MAX_PCT": CLOSE_AGREEMENT_MAX_PCT,
            "RECLASSIFIED": RECLASSIFIED,

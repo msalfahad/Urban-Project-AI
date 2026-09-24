@@ -4,6 +4,7 @@
 **Project:** Urban Projects quantity-surveying engine (Kuwait villas)
 **Latest measured project:** Ahmad Abdullah Ali Al Rashed — Sabah Al Ahmad, Block D4, Plot 247, 600.00 m² plot
 **Frozen takeoff:** commit `3e847af`, digest `ae259eaba3203798` — unchanged by everything described below
+**Report revision:** 2 (external audit corrections applied)
 
 > This file is the plain-text twin of the HTML report. It is written so another AI assistant, or a colleague with
 > no access to this repository, can understand the whole system from this one document.
@@ -18,8 +19,21 @@ to end and can defend every number down to the rectangles a room is made of. It 
 or be run by anybody except the agent that built it. **I put the whole system at roughly 55% of the way to the
 product**, with the measurement half strong and the application half barely begun.
 
-Key figures: 135 rooms measured, 184 rectangles, 0.000000 m² decomposition residual, 0 engine errors found in
-validation, 3,028 regression tests passing, 15 of 15 quality checks passing on the new workbook.
+Key figures: **135 connected components** — 64 spaces and 71 wall slivers, not 135 rooms — 184 rectangles,
+0.000000 m² decomposition residual, 22 of 22 executable quality checks passing on the corrected workbook.
+
+**Revision 2 corrects three claims made in revision 1**, after an external audit:
+
+1. "135 rooms measured" was wrong. There are 135 connected components: 16 internal rooms, 12 wet rooms, 1 kitchen,
+   9 stair/landing, 24 unnamed spaces, 2 external areas and **71 wall material or sliver components**.
+2. 196.378 m² of stair, landing and unnamed floor area was exported as `PORCELAIN_FLOOR`. Its finish is not
+   settled, so it is now `FLOOR_FINISH_UNCLASSIFIED` / `AR-FL-PENDING`, measured and kept but out of the base BOQ.
+3. "0 engine errors" described **the historical validation only** — no difference against the historical workbook
+   proved a frozen quantity wrong. It never meant the engine makes no mistakes; the audit went on to find four
+   classification defects in the detailed export, all corrected here and now covered by tests.
+
+Also provisional, and clearly marked as such: **skirting** (828.493 lm split into three decision buckets) and
+**ceiling finish** (931.016 m² of area is final, the ceiling type is not).
 
 ---
 
@@ -30,7 +44,7 @@ The single percentage is a weighted average of the capabilities below, not an im
 | Capability | Weight | Done | Where it stands |
 |---|---:|---:|---|
 | Source ingest and identity (DWG decode, units, revision isolation) | 10 | 85% | Proved the drawing unit against a wrongly set `INSUNITS`; picked the issued revision out of nine plan windows by dimension containment, score 1.000 |
-| Geometry and room recovery | 15 | 75% | Exact for axis-aligned plans: rooms are whole grid cells, areas are sums of exact products. Curved or angled plans are not handled at all |
+| Geometry and component recovery | 15 | 75% | Exact for axis-aligned plans: components are whole grid cells, areas are sums of exact products. Curved or angled plans are not handled at all |
 | Semantic labelling (room names, roles, Arabic and English) | 8 | 60% | Labels matched through a fitted PDF↔DWG transform. 128.8 m² is still `UNNAMED_ON_DRAWING` — measured exactly, identity not stated |
 | Openings | 10 | 65% | 35 doors and 7 windows, every width measured from the drawing. Heights still come from owner input or the size guide |
 | The third dimension (heights from sections and elevations) | 7 | 25% | Every height in this project is an owner input. The engine cannot read a section yet, and refuses to guess |
@@ -110,7 +124,7 @@ These are checks the engine could not tune itself towards — figures produced b
 | Plot area | 600.16 m² | 600.00 m² (title) | +0.03% |
 | Basement door leaves | 8 | 8 (site record) | 0% |
 | Master bedroom window, second candidate | 3.00 m² | 3.06 m² (site frame) | −1.91% |
-| Room decomposition | 184 rectangles | 135 frozen room areas | 0.000 m² |
+| Component decomposition | 184 rectangles | 135 frozen component areas | 0.000 m² |
 
 Two further things went right that do not fit a table:
 
@@ -138,6 +152,10 @@ are nearly always *a rule applied one level too confidently*, not arithmetic.
 | DEF-08 | A floor inferred where none was stated (rows 5–21 read as basement) | The sheet carries one header at the top and nothing marking where the next floor begins | 4 rows of 31 have proof; the other 27 are `FLOOR = UNKNOWN`. `US-22` exists so Urban's own schedules never repeat it | |
 | DEF-09 | A commercial basis called a quantity — 950.22 m² carried as "historical waterproofing quantity" | It is `SUM(F5:F24)` feeding `=1.5*F28`, and one of its twenty components is 600.00, the plot area | Recorded as `HISTORICAL_COMMERCIAL_BASIS`; it may not be compared against a measured area at all | |
 | DEF-10 | Two tests asserted yesterday's world (no villa present; no workbook opened) | Both were true when written and false afterwards | Rewritten to assert the *rule* rather than the state of one afternoon | |
+| DEF-11 | 196.378 m² of stair and unnamed floor area exported as `PORCELAIN_FLOOR` while the workbook used 734.638 m² | One role list answered two different questions: what is enclosed, and what takes porcelain | 33 records moved to `FLOOR_FINISH_UNCLASSIFIED` / `AR-FL-PENDING`, measured and kept, out of the base BOQ | An unsettled finish is a status, not a default material |
+| DEF-12 | 135 connected components published as 135 rooms | No entity census; the geometric unit was given a use-based name | A census in every artifact: 135 = 64 non-sliver + 71 wall/sliver, with role counts | A component becomes a room when the drawing names it, not before |
+| DEF-13 | Window AR-W-05 used the `LARGE_HALL` category in a 91.06 m² hall, band 35–60 m² | The guide's area band was advisory in code and absolute in principle | Every window carries an authority: a label supports its category; an area only inside the band. AR-W-05 is now `ASK_THE_OWNER` and `AR-AL-PENDING` | A fallback standard used outside its own scope is an assumption wearing a rule's name |
+| DEF-14 | Ceiling finish published as plain and final with no ceiling plan | Area and finish were one status | Area stays `FINAL_QUANTITY_AVAILABLE`; the finish is `FINISH_CLASSIFICATION_PENDING` and provisional in the BOQ | Measuring a surface is not deciding what goes on it |
 
 ---
 
@@ -160,9 +178,10 @@ are nearly always *a rule applied one level too confidently*, not arithmetic.
 
 Eight questions, none previously answered. Each unblocks a quantity or a rule.
 
-1. **Skirting (النعلة) — in scope, and at what height?** 828.49 lm derived from the frozen geometry (room
-   perimeter less the doors on it, wet rooms excluded under `US-18`), every line marked
-   `DERIVED_NOT_IN_FROZEN_TAKEOFF`. If it is standard Urban scope it becomes a rule.
+1. **Skirting (النعلة) — in scope, and at what height?** 828.493 lm derived from the frozen geometry, split into
+   three buckets: 381.535 lm dry named internal (candidates), 97.355 lm stair/landing and 349.603 lm unnamed
+   (both blocked until the floor finish is settled). Every line is `DERIVED_NOT_IN_FROZEN_TAKEOFF` and
+   provisional. If it is standard Urban scope it becomes a rule.
 2. **What finish do the stairs and the unnamed spaces take?** 67.6 m² of stair and landing, 128.8 m² unnamed —
    nearly 200 m² of floor finish, more than a quarter of the internal area.
 3. **The external and parking areas — 155.2 m². What material?** Area final, finish unstated under AR-08.
@@ -211,7 +230,8 @@ is how the historical workbook ended up with `=1100+325+430+150*2.5`, and that c
 | File | What it is |
 |---|---|
 | `ALRASHED_DETAILED_QUANTITY_TAKEOFF.xlsx` | 13 Arabic right-to-left sheets: ملخص الحصر، حصر المساحات، الأرضيات، كسوة الجدران، النعلة والبروفايل، العازل، الأسقف، الأبواب والشبابيك، المباني، المساح والصبغ، السطح والخارجي، BOQ حسب البند، المصادر والمراجعة |
-| `ALRASHED_DETAILED_QUANTITY_EXPORT.json` | 265 draft records, one per room per trade, `DS-01` schema |
+| `ALRASHED_DETAILED_QUANTITY_EXPORT.json` | 265 draft records, one per component per trade, `DS-01` schema, with the component census, the floor-finish split and the aluminium split |
+| `ALRASHED_QUANTITY_RECONCILIATION.json` | Machine-readable agreement table: JSON vs workbook vs BOQ vs frozen, line by line |
 | `ALRASHED_VALIDATION_AMENDMENT_01.json` | The corrected validation record and the seven rule decisions |
 | `FULL_VILLA_BLIND_PRE_PRICING_TAKEOFF.json` | The frozen measurement — untouched by any of the above |
 

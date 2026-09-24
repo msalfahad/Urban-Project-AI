@@ -57,20 +57,38 @@ def test_the_basement_inference_is_withdrawn():
     assert "inferred, not proven" in VA.FLOOR_ATTRIBUTION_RULE["WITHDRAWN"]
 
 
-# ------------------------------------------------------------------ 3. three different things called a count
-def test_rows_objects_and_leaves_are_three_separate_counts():
+# ------------------------------------------------------------------ 3. rows, objects and leaves
+def test_rows_and_objects_live_in_separate_fields():
     c = VA.HISTORICAL_COUNTS
-    assert c["SCHEDULE_ROW_COUNT"] == 31
-    assert c["PHYSICAL_OBJECT_COUNT_AFTER_MULTIPLICITIES"] == 34
-    assert c["WINDOW_COUNT"] + c["DOOR_COUNT_IN_THE_L_M_SCHEDULE"] + c["SLIDING_DOOR_COUNT"] == 32
-    assert c["OPENING_COUNT_TOTAL_OBJECTS"] == 34
+    assert c["SCHEDULE_ROW_COUNT"] == {"WINDOWS": 24, "DOORS": 5, "SLIDING_DOORS": 2, "TOTAL": 31}
+    assert c["PHYSICAL_OBJECT_COUNT"] == {"WINDOWS": 26, "DOORS": 6, "SLIDING_DOORS": 2, "TOTAL": 34}
+    assert "ROW_COUNT" in c["FIELD_RULE"] and "PHYSICAL_OBJECT_COUNT" in c["FIELD_RULE"]
+
+
+def test_every_multiplicity_is_stated_with_its_own_evidence():
+    mult = VA.HISTORICAL_COUNTS["MULTIPLICITY"]
+    assert len(mult) == 2
+    for m in mult:
+        assert m["PHYSICAL_OBJECT_COUNT"] == m["ROW_COUNT"] * m["MULTIPLICITY"]
+        assert m["EVIDENCE"]
+    extra = sum(m["PHYSICAL_OBJECT_COUNT"] - m["ROW_COUNT"] for m in mult)
+    rows = VA.HISTORICAL_COUNTS["SCHEDULE_ROW_COUNT"]["TOTAL"]
+    assert rows + extra == VA.HISTORICAL_COUNTS["PHYSICAL_OBJECT_COUNT"]["TOTAL"] == 34
 
 
 def test_the_leaf_block_is_kept_out_of_the_opening_population():
     b = VA.HISTORICAL_COUNTS["SEPARATE_LEAF_COUNT_BLOCK"]
     assert b["TOTAL_LEAVES"] == 28
-    assert b["TOTAL_LEAVES"] != VA.HISTORICAL_COUNTS["OPENING_COUNT_TOTAL_OBJECTS"]
-    assert "must not" in b["NOTE"]
+    assert b["IS_THE_SAME_POPULATION_AS_THE_L_M_SCHEDULE"] is False
+    assert b["TOTAL_LEAVES"] != VA.HISTORICAL_COUNTS["PHYSICAL_OBJECT_COUNT"]["TOTAL"]
+    assert "never be added" in b["NOTE"]
+
+
+def test_the_revision_records_what_changed_and_what_did_not():
+    assert VA.REVISION == 2
+    last = VA.REVISION_HISTORY[-1]
+    assert last["REVISION"] == 2 and "ROW_COUNT" in last["WHAT"]
+    assert "no classification" in last["WHAT_DID_NOT_CHANGE"]
 
 
 # ------------------------------------------------------------------ 4 and 5. two figures renamed
