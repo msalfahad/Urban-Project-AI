@@ -135,12 +135,10 @@ def test_a_centroid_collision_does_not_produce_a_false_match():
 
 # ------------------------------------------------------------------ rooms, which is what decisions attach to
 def test_a_renamed_room_keeps_its_identity_so_a_decision_survives_the_rename():
-    a = pipeline.run(syn.small_plan("R1"), max_opening_span=syn.MAX_OPENING_SPAN, wall_height=3.0,
-                        wall_geometry_includes_openings=syn.WALL_GEOMETRY_SPANS_OPENINGS)
+    a = syn.run(syn.small_plan("R1"), wall_height=3.0)
     plan_b = syn.small_plan("R2")
     plan_b["LABELS"] = [lb if lb.text != "ROOM B" else type(lb)("STORE", lb.x, lb.y) for lb in plan_b["LABELS"]]
-    b = pipeline.run(plan_b, max_opening_span=syn.MAX_OPENING_SPAN, wall_height=3.0,
-                        wall_geometry_includes_openings=syn.WALL_GEOMETRY_SPANS_OPENINGS)
+    b = syn.run(plan_b, wall_height=3.0)
     recs = identity.match_revisions(a["SPACE_OBJECTS"], b["SPACE_OBJECTS"], TOL)
     assert states(recs) == {LINEAGE_UNCHANGED: len(a["SPACE_OBJECTS"])}
     old = {s.label: s.persistent_id for s in a["SPACE_OBJECTS"]}
@@ -149,10 +147,8 @@ def test_a_renamed_room_keeps_its_identity_so_a_decision_survives_the_rename():
 
 
 def test_a_room_that_grows_is_modified_and_still_carries_its_decision():
-    a = pipeline.run(syn.small_plan("R1"), max_opening_span=syn.MAX_OPENING_SPAN, wall_height=3.0,
-                        wall_geometry_includes_openings=syn.WALL_GEOMETRY_SPANS_OPENINGS)
-    b = pipeline.run(syn.small_plan("R2", shift=0.005), max_opening_span=syn.MAX_OPENING_SPAN,
-                     wall_height=3.0, wall_geometry_includes_openings=syn.WALL_GEOMETRY_SPANS_OPENINGS)
+    a = syn.run(syn.small_plan("R1"), wall_height=3.0)
+    b = syn.run(syn.small_plan("R2", shift=0.005), wall_height=3.0)
     recs = identity.match_revisions(a["SPACE_OBJECTS"], b["SPACE_OBJECTS"], TOL)
     assert set(states(recs)) <= {LINEAGE_UNCHANGED, LINEAGE_MODIFIED}
     assert all(r["DECISIONS_CARRY_FORWARD"] for r in recs)

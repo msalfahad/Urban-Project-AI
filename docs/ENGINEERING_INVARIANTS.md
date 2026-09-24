@@ -5865,3 +5865,139 @@ left in no state at all.
 One of those mutations exists to prove a check is blind: pro-rata output
 *passes* the totals invariant. Knowing which of your checks cannot see a defect
 is worth as much as knowing which can.
+
+## §291 — Blocked is the absence of a number, not a note beside one
+
+R4 marked all sixty-one wall rows blocked and published a 150 mm and a 200 mm
+figure anyway, beside the frozen ones, as a comparison. Nothing in the engine
+objected, because nothing had been asked to.
+
+The contract now separates the two at the point of arithmetic rather than at
+the point of presentation. A blocked row carries no value under a summable
+name; it carries a `DIAGNOSTIC_ONLY_` field that no later sum will pick up. A
+subtotal with one blocked contributor is **null** — not provisional, not
+indicative — and says what it is waiting on. INV-15 fails when either rule is
+broken, and the mutation that re-implements the R4 behaviour is caught by it.
+
+No rows at all also publishes nothing. An extraction that produced no wall is
+not a building with no wall in it.
+
+## §292 — Which wall is this in? is unanswerable for something that is not an opening
+
+Host assignment answers confidently for a two-millimetre drafting gap, because
+the question it was asked contains the assumption. So the population is
+normalised first (US-20): extracted geometry, the drawing's own opening
+register and the schedule become one physical population, and every candidate
+leaves with one of five classifications and the evidence for it.
+
+A candidate is admitted on **provenance** — a block, a schedule row, a symbol
+or layer — never on size. Size can only reject, and only below the resolution
+the source was drawn at. Jamb geometry is corroborating, not naming: a gap
+between two jambs is equally a door, an archway and a line the draughtsman
+forgot, and those are measured differently. Nothing is deleted; INV-21 requires
+every candidate offered to leave with a class and a reason.
+
+## §293 — A deduction is two facts, and both need an owner
+
+An area deducted from a wall is a width and a height. R4 carried seven windows
+with `HEIGHT_M = null` while the project's own approved height record sat
+unread. The evidence hierarchy is now executable — drawing dimension, measured
+geometry, owner project input, approved guide, unresolved question — and every
+opening leaves admission with a separate resolved record for each dimension,
+including the records that were passed over. INV-17 fails on a deduction whose
+two facts are not both established, or which rests on one object twice.
+
+## §294 — A maximum span can reject a join; it cannot prove one
+
+The old rule bridged any gap no wider than the maximum opening span. At 3 m
+that joins two unrelated walls 2 m apart into one wall nobody built, and every
+quantity measured on the invented wall is self-consistent and wrong.
+
+A gap is now closed only where the source says something spans it: a confirmed
+opening filling it, continuation geometry drawn across it, or the source
+declaring the two segments one object. INV-18 fails on any bridge without one
+of those relations, and a mutation puts the span-only rule back to prove it.
+
+Related: a wall line's material length is the **union** of its segments' spans,
+not their sum. A wall traced twice on two layers was being measured twice, and
+a doubled length is invisible in every total.
+
+## §295 — One Boolean for a whole revision is an assumption about a mixed population
+
+Whether a wall's drawn material runs through its openings or stops at each jamb
+is not a property of a file. A facade drawn as one polyline spans its windows
+while the partitions beside it stop at every door, and asserting one answer for
+both is a full opening area, wrong, on half the walls.
+
+The question is now asked of each wall line, against the openings that actually
+lie in it, by intersecting the drawn material with each opening's footprint.
+Lines whose openings disagree are `OPENING_BASIS_UNRESOLVED` and carry no
+quantity. INV-19 fails on a basis stated without testing an opening.
+
+## §296 — A thickness is a measurement; being a wall is an identity
+
+R4 billed blockwork at 50 mm, 100 mm and 126 mm. Nothing in the building has
+those thicknesses; they are grid artefacts, junctions and duplicated lines that
+happen to be measurable.
+
+Identity is now settled before measurement, from the drawing: what it annotates,
+the topology of its crossings, the thickness families it actually uses, and
+shape. There is no list of accepted thicknesses anywhere in the engine — a
+thickness that occurs once in a whole drawing is not a construction standard,
+and an object as short as it is thick is not a run of wall. Five identities;
+only `CONFIRMED_MASONRY_WALL` is billed. INV-16 fails when a band is billed on
+thickness alone; INV-22 keeps a settled exclusion (a column) from blocking a
+subtotal, and an unresolved band from being quietly excluded.
+
+Families are discovered from the **whole source**, not one storey. Asking per
+floor makes a partition that appears once in a basement and thirty times
+upstairs an unknown object downstairs and a wall upstairs.
+
+## §297 — A question blocks what its answer could change, and nothing else
+
+R4 blocked every wall line on a floor because one door's host was unproved:
+sixty-one rows withheld to protect two. The engine now follows the actual chain
+— opening, candidate hosts, wall lines, thickness subtotal, bill line — and
+blocks the nodes whose value could move. INV-20 fails on a row blocked with no
+reachable reason.
+
+The chain starts earlier than the host question. A gap the source has not
+explained is upstream of it: if it turns out to be an opening it will be
+deducted from the wall it sits in. Those candidates block the lines they lie
+in. An opening that can be associated with no wall at all blocks nothing and is
+reported separately, as a completeness question about the extraction rather
+than a value question about a line.
+
+## §298 — Fifty single-component spaces validate nothing
+
+R4 reported fifty semantic spaces on the real villa, each containing exactly
+one component, and presented that as the multi-component room problem solved.
+
+The assembly is now graded on what the drawing actually presented:
+`MULTI_COMPONENT_CASE_ENCOUNTERED_AND_VALIDATED`, `THIS_DRAWING_SUPPLIED_NO_
+PROVEN_MULTI_COMPONENT_CASE`, or `CONTINUOUS_SEAMS_EXIST_BUT_NOTHING_MERGED` —
+which is a defect to fix, not a result to report. Every merge shows the seam
+that justified it; every pair of adjacent fragments kept apart shows what kept
+them apart.
+
+## §299 — A gate that reads the engine is not independent of it
+
+Most invariants compare one engine structure against another. That establishes
+internal consistency, which is exactly what a confidently wrong engine has.
+
+The acceptance gate is handed the published **document** and no access to the
+code that made it. Ten checks: blocked quantities excluded from totals; the
+opening population normalised; noise rejected on evidence; continuity proved;
+the basis per line; thickness not treated as identity; height provenance on
+every deduction; and three metamorphic results — rigid motion, segmentation,
+and equivalent CAD representations. It is kept honest by being run against the
+R4 output, which it must reject; a gate that only ever passes the current build
+proves nothing about the current build.
+
+## §300 — The same building, described differently, measures the same
+
+Translate the drawing 1.2 km, turn it through a right angle, or let the
+extractor cut every wall into three: the quantities must come back identical.
+A result that moves under any of these depends on the description rather than
+on the building, and that dependence is invisible in any single run. These are
+run against the real drawing, not only against fixtures.

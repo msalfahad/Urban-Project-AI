@@ -59,9 +59,12 @@ def test_the_core_imports_nothing_from_a_project_package():
 def test_every_tolerance_and_threshold_is_declared_with_a_reason():
     """A tolerance nobody can explain is a tuned constant waiting to happen."""
     named = {
-        "engine/qs_core/openings.py": ["DECISIVE_MARGIN"],
+        "engine/qs_core/openings.py": ["DECISIVE_MARGIN", "GAP_OCCUPANCY", "SPANS_SHARE"],
         "engine/qs_core/spaces.py": ["MAJORITY"],
         "engine/qs_core/identity.py": ["MIN_IOU_MATCH", "AMBIGUITY_BAND", "SPLIT_SHARE"],
+        "engine/qs_core/admission.py": ["DUPLICATE_OVERLAP", "WALL_INTERSECTION_SHARE"],
+        "engine/qs_core/masonry.py": ["WALL_ASPECT_MIN", "FAMILY_MIN_MEMBERS", "DUPLICATE_SHARE",
+                                      "JUNCTION_COVERAGE"],
     }
     for path, names in named.items():
         text = Path(path).read_text("utf-8")
@@ -83,17 +86,64 @@ def test_a_tolerance_is_always_an_argument_to_the_algorithms():
 
 
 def test_no_rate_waste_or_amount_is_ever_introduced():
-    r = pipeline.run(syn.small_plan(), max_opening_span=syn.MAX_OPENING_SPAN, wall_height=3.0,
-                        wall_geometry_includes_openings=syn.WALL_GEOMETRY_SPANS_OPENINGS)
+    r = syn.run(syn.small_plan(), wall_height=3.0)
     check = invariants.pricing_fields_separate_and_empty(r["MEASUREMENT_OBJECT_LIST"])
     assert check["PASS"], check["RESULT"]
     for o in r["MEASUREMENT_OBJECTS"]:
         assert set(("WASTE_PERCENT", "PROCUREMENT_QUANTITY", "UNIT_RATE", "AMOUNT")) <= set(o)
-        assert o["MEASURED_QUANTITY"] is not None and o["MEASURED_UNIT"]
+        assert o["MEASURED_UNIT"]
+        if o["STATUS"] == "FINAL_QUANTITY_AVAILABLE":
+            assert o["MEASURED_QUANTITY"] is not None
+        else:
+            assert o["MEASURED_QUANTITY"] is None, "an unfinished object carries no quantity to be summed"
 
 
 def test_the_engines_own_checks_do_not_cite_an_expected_answer():
-    r = pipeline.run(syn.small_plan(), max_opening_span=syn.MAX_OPENING_SPAN, wall_height=3.0,
-                        wall_geometry_includes_openings=syn.WALL_GEOMETRY_SPANS_OPENINGS)
+    r = syn.run(syn.small_plan(), wall_height=3.0)
     check = invariants.checks_are_evidence_based(r["INVARIANTS"]["CHECKS"], FORBIDDEN)
     assert check["PASS"], check["RESULT"]
+
+
+def test_the_facts_only_the_source_knows_have_no_defaults():
+    """A default here is a guess about someone else's drawing, made silently and carried into a bill."""
+    import inspect
+    from engine.qs_core import pipeline as pl
+
+    params = inspect.signature(pl.run).parameters
+    for name in ("max_opening_span", "drafting_resolution_m"):
+        assert params[name].default is inspect.Parameter.empty, f"{name} has acquired a default"
+
+
+def test_no_source_wide_opening_basis_survives_anywhere_in_the_core():
+    """The Boolean this round replaced: one answer for a whole revision, about a mixed population."""
+    offenders = []
+    for p in CORE:
+        if p.name == "acceptance.py":
+            continue          # the gate LOOKS for the old field in a document, and fails the document that has it
+        for n, line in enumerate(p.read_text("utf-8").splitlines(), 1):
+            if "wall_geometry_includes_openings" in line or "WALL_GEOMETRY_INCLUDES_OPENINGS" in line:
+                offenders.append({"FILE": str(p), "LINE": n, "TEXT": line.strip()})
+    assert not offenders, offenders
+
+
+def test_the_engine_holds_no_list_of_acceptable_wall_thicknesses():
+    """Identity is established from the drawing; a whitelist would be this project's answer, written down."""
+    import re as _re
+    offenders = []
+    for p in CORE:
+        for n, line in enumerate(p.read_text("utf-8").splitlines(), 1):
+            if line.lstrip().startswith("#"):
+                continue
+            m = _re.match(r"\s*([A-Z_]*THICKNESS[A-Z_]*)\s*=\s*(.+)", line)
+            if m and _re.search(r"\d", m.group(2)):
+                offenders.append({"FILE": str(p), "LINE": n, "TEXT": line.strip()})
+            if _re.search(r"THICKNESS[A-Z_]*\s*(in|==)\s*[\(\[{]", line):
+                offenders.append({"FILE": str(p), "LINE": n, "TEXT": line.strip()})
+    assert not offenders, offenders
+
+
+def test_the_acceptance_gate_touches_no_engine_object():
+    """It grades a document.  If it could reach into the engine it would stop being independent."""
+    text = Path("engine/qs_core/acceptance.py").read_text("utf-8")
+    for line in text.splitlines():
+        assert not re.match(r"\s*(from|import)\s+engine\.qs_core", line), line

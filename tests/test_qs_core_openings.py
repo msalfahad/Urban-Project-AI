@@ -11,9 +11,18 @@ import random
 
 import pytest
 
-from engine.qs_core import geom, identity, invariants, openings as op
+from engine.qs_core import geom, identity, invariants, openings as op, evidence as EV
 from engine.qs_core.entities import HOST_ASSIGNED, HOST_WALL_UNRESOLVED
 from engine.qs_core.synthetic import TOL, opening, wall_band
+
+
+HEIGHT = EV.resolve("wall height", [EV.Claim(3.0, EV.OWNER_PROJECT_INPUT, "TEST")], TOL)
+
+
+def quantities(bands, reg, ops=(), blocked=None):
+    """Wall rows for a set of bands, with the basis measured rather than asserted."""
+    basis = op.evaluate_opening_basis(bands, list(ops), TOL)
+    return op.wall_band_quantities(bands, reg, HEIGHT, basis, blocked or {})
 
 
 def band_x(ref, y0, thickness, x0=0.0, x1=6.0):
@@ -68,8 +77,9 @@ def test_an_opening_near_a_junction_still_has_one_proved_host():
 
 def test_a_band_with_no_openings_keeps_its_gross_area():
     thin, thick = band_x("W-150", 0.0, 0.15), band_x("W-200", 3.0, 0.20)
-    reg = op.build_opening_register([door_through_x_band("OP-1", thin, 1.0)], [thin, thick], TOL)
-    rows = {r["COMPONENT_REF"]: r for r in op.wall_band_quantities([thin, thick], reg, 3.0, True)}
+    door = door_through_x_band("OP-1", thin, 1.0)
+    reg = op.build_opening_register([door], [thin, thick], TOL)
+    rows = {r["COMPONENT_REF"]: r for r in quantities([thin, thick], reg, [door])}
     assert rows["W-200"]["OPENING_DEDUCTION_M2"] == 0.0
     assert rows["W-200"]["NET_AREA_M2"] == rows["W-200"]["GROSS_AREA_M2"]
     assert rows["W-150"]["NET_AREA_M2"] < rows["W-150"]["GROSS_AREA_M2"]
@@ -141,12 +151,15 @@ def test_the_register_reconciles_and_blocks_the_floor_that_holds_an_unresolved_o
     clear = opening("OP-1", (0.5, 0.0, 1.4, 0.15), geom.AXIS_X, 0.90, 2.10)
     straddling = opening("OP-2", (2.55, 0.0, 3.45, 0.15), geom.AXIS_X, 0.90, 2.10)
     reg = op.build_opening_register([clear, straddling], [left, right], TOL)
-    rows = op.wall_band_quantities([left, right], reg, 3.0, True)
+    rows = quantities([left, right], reg, [clear, straddling])
     assert reg["ASSIGNED_AREA_M2"] + reg["UNRESOLVED_AREA_M2"] == pytest.approx(reg["TOTAL_OPENING_AREA_M2"])
-    assert all(r["STATUS"] == "BLOCKED_BY_UNRESOLVED_OPENING" for r in rows)
     assert invariants.deductions_reconcile(reg, rows, 1e-9)["PASS"]
     assert invariants.unresolved_never_allocated(reg, rows, 1e-9)["PASS"]
     assert sum(r["OPENING_DEDUCTION_M2"] for r in rows) == pytest.approx(clear.area)
+    # the straddling opening lies half in each line's material, so neither line can state its own basis
+    blocked = [r for r in rows if r["STATUS"] != "FINAL_QUANTITY_AVAILABLE"]
+    assert blocked and all(r["OPENING_BASIS"] == op.BASIS_UNRESOLVED for r in blocked)
+    assert all(r["NET_AREA_M2"] is None for r in blocked)
 
 
 # ------------------------------------------------------------------ a property, over many random plans
@@ -164,7 +177,7 @@ def test_whatever_the_plan_no_deduction_is_ever_divided(seed):
         at = rnd.uniform(-1.0, b.x1)
         ops.append(opening(f"OP-{j}", (at, b.y0, at + w, b.y1), geom.AXIS_X, w, 2.10))
     reg = op.build_opening_register(ops, bands, TOL)
-    rows = op.wall_band_quantities(bands, reg, 3.0, True)
+    rows = quantities(bands, reg, ops)
     assert reg["ASSIGNED_AREA_M2"] + reg["UNRESOLVED_AREA_M2"] == pytest.approx(reg["TOTAL_OPENING_AREA_M2"])
     assert sum(r["OPENING_DEDUCTION_M2"] for r in rows) == pytest.approx(reg["ASSIGNED_AREA_M2"])
     for o in reg["REGISTER"]:

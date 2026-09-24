@@ -145,3 +145,32 @@ def distance_point_to_rect(x, y, r):
     dx = max(r.x0 - x, 0.0, x - r.x1)
     dy = max(r.y0 - y, 0.0, y - r.y1)
     return math.hypot(dx, dy)
+
+
+# ---------------------------------------------------------------- rigid motions, for metamorphic testing
+def translate(rect, dx, dy):
+    return Rect(rect.x0 + dx, rect.y0 + dy, rect.x1 + dx, rect.y1 + dy)
+
+
+def rotate90(rect, quarter_turns=1):
+    """Rotate about the origin in right angles, which keeps an axis-aligned rectangle axis-aligned.
+
+    Arbitrary rotation is not offered, and deliberately: this engine reasons about axis-aligned geometry, and a
+    helper that silently produced a non-axis-aligned answer would be a lie about what it can measure.
+    """
+    r = rect
+    for _ in range(quarter_turns % 4):
+        r = Rect(-r.y1, r.x0, -r.y0, r.x1)
+    return r
+
+
+def rotate_axis(axis, quarter_turns=1):
+    if axis is None or quarter_turns % 2 == 0:
+        return axis
+    return AXIS_Y if axis == AXIS_X else AXIS_X
+
+
+def rotate_point(x, y, quarter_turns=1):
+    for _ in range(quarter_turns % 4):
+        x, y = -y, x
+    return x, y

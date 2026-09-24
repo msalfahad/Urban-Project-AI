@@ -9,7 +9,7 @@ from __future__ import annotations
 
 import pytest
 
-from engine.qs_core import geom, invariants, openings as op, spaces as sp, synthetic as syn
+from engine.qs_core import evidence as EV, geom, invariants, openings as op, spaces as sp, synthetic as syn
 from engine.qs_core.entities import (ASSIGNED_TO_SPACE, HOST_ASSIGNED, KIND_WALL_BAND, Evidence)
 
 
@@ -30,6 +30,9 @@ def prorata_wall_rows(wall_bands, register, height):
     return rows
 
 
+_HEIGHT = EV.resolve("wall height", [EV.Claim(3.0, EV.OWNER_PROJECT_INPUT, "TEST")], syn.TOL)
+
+
 def _two_bands_one_door():
     thin = syn.wall_band("W-150", (0.0, 0.0, 6.0, 0.15), 0.15, geom.AXIS_X)
     thick = syn.wall_band("W-200", (0.0, 3.0, 4.0, 3.20), 0.20, geom.AXIS_X)
@@ -40,7 +43,8 @@ def _two_bands_one_door():
 def test_pro_rata_allocation_puts_material_against_the_wrong_wall_and_is_caught():
     thin, thick, door = _two_bands_one_door()
     reg = op.build_opening_register([door], [thin, thick], syn.TOL)
-    honest = {r["COMPONENT_REF"]: r for r in op.wall_band_quantities([thin, thick], reg, 3.0, True)}
+    honest = {r["COMPONENT_REF"]: r for r in op.wall_band_quantities([thin, thick], reg, _HEIGHT, op.evaluate_opening_basis(
+        [thin, thick], [door], syn.TOL), {})}
     defective = {r["COMPONENT_REF"]: r for r in prorata_wall_rows([thin, thick], reg, 3.0)}
 
     assert honest["W-200"]["OPENING_DEDUCTION_M2"] == 0.0

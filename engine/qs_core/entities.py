@@ -81,6 +81,7 @@ class GeometryComponent:
     thickness: float = None          # wall bands only, in metres
     axis: str = None                 # wall bands only
     material_length: float = None    # wall lines only: the run that actually has material in it
+    material_rects: list = None      # wall lines only: the material itself, as distinct from the envelope
     layer: str = None
     uid: str = None
     persistent_id: str = None
@@ -143,6 +144,7 @@ class Opening:
     host_evidence: list = field(default_factory=list)
     host_confidence: str = CONFIDENCE_NONE
     host_status: str = HOST_WALL_UNRESOLVED
+    admission: dict = None           # how this opening came to be believed in: see qs_core.admission
 
     @property
     def area(self):
@@ -161,6 +163,7 @@ class Opening:
                 "HOST_CANDIDATES": self.host_candidates,
                 "HOST_ASSIGNMENT_CONFIDENCE": self.host_confidence,
                 "HOST_ASSIGNMENT_STATUS": self.host_status,
+                "ADMISSION": self.admission,
                 "HOST_EVIDENCE": [e.as_dict() for e in self.host_evidence]}
 
 

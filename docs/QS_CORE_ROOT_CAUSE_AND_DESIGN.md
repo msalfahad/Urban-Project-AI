@@ -183,19 +183,55 @@ default. A default is a constant smuggled into the engine; it is now a required 
 
 ---
 
+## 9. What R5 added, and why
+
+Four stages now run before anything is measured, because each of them answers a
+question the measuring stage was silently assuming.
+
+1. **Admission** (`admission.py`). The three populations a real source offers -
+   extracted geometry, the drawing's own opening register, the schedule - are
+   normalised to one physical population. Every candidate leaves with one of
+   five classifications and the provenance behind it. A candidate is admitted
+   because something *names* it an opening, never because it is the right size.
+2. **Continuity** (`openings.build_wall_lines`). A gap is closed only where the
+   source says something spans it. The maximum opening span is a veto, not a
+   proof.
+3. **Basis** (`openings.evaluate_opening_basis`). Whether a wall's drawn
+   material runs through its openings is measured per line, against the
+   openings that lie in it, instead of asserted once for a whole revision.
+4. **Identity** (`masonry.py`). What each band *is* - masonry, structure, a
+   junction, a duplicate, or unknown - is settled from the drawing before
+   anything measures it. The thickness families come from the whole source; the
+   engine holds no list of acceptable thicknesses.
+
+Two more stages changed what comes out. `dependency.py` follows opening ->
+candidate hosts -> wall lines -> subtotal -> bill line and blocks only what an
+answer could move. `quantities.py` makes a blocked row carry no summable value
+and a subtotal with one blocked contributor null.
+
+And two things now grade the result from outside it: `acceptance.py`, which
+reads the published document and nothing else, and `transforms.py`, which asks
+whether the same building described differently measures the same - on the real
+drawing, not only on fixtures.
+
+---
+
 ## 9. Running it
 
 ```bash
 export PYTHONPATH=$PWD
-python -m pytest tests/test_qs_core_openings.py tests/test_qs_core_spaces.py \
-                 tests/test_qs_core_identity.py tests/test_qs_core_mutation.py \
-                 tests/test_qs_core_audit.py tests/test_qs_core_generalization.py -o addopts= -v
+python -m pytest tests/test_qs_core_*.py -o addopts= -v
 
 # the project regression: reads the frozen takeoff, never writes it
-python -m research.qs_wall_treatment_01.pa09.alrashed.regression_r2
-python -m pytest tests/test_pa09_alrashed_regression_r2.py -o addopts= -v
+python -m research.qs_wall_treatment_01.pa09.alrashed.regression_r5
+python -m pytest tests/test_pa09_alrashed_regression_r5.py -o addopts= -v
+
+# the deliverable package, verified after it is written
+python docs/build_r5_validation_package.py
 ```
 
 Artifacts land in `data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa09_alrashed/`:
-`ALRASHED_GENERIC_ENGINE_REGRESSION.json`, `ALRASHED_OPENING_TO_HOST_REGISTER.json`,
-`ALRASHED_COMPONENT_TO_ROOM_MEMBERSHIP_REGISTER.json`, `ALRASHED_ENTITY_LINEAGE_REGISTER.json`.
+`ALRASHED_GENERIC_ENGINE_VALIDATION.json` and the registers beside it - opening
+admission, per-wall opening basis, masonry identity, dependency and blocking,
+space-assembly validation, final versus blocked quantities, opening to host,
+component to room membership, entity lineage, and the anti-calibration audit.

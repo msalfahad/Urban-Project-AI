@@ -21,15 +21,99 @@ from engine.qs_core.entities import (CONFIDENCE_NONE, CONFIDENCE_PROVEN, CONFIDE
 DECISIVE_MARGIN = 0.15
 
 
-def build_wall_lines(bands, tolerance, max_opening_span):
-    """Join collinear segments of equal thickness into the wall they are segments of.
+# How much of a gap an opening has to occupy before it explains the gap.  A 0.9 m door does not explain a 2 m
+# hole in a wall; something else is going on there and the engine does not decide what.
+GAP_OCCUPANCY = 0.90
+
+GAP_BRIDGED_BY_CONFIRMED_OPENING = "BRIDGED_BY_A_CONFIRMED_OPENING"
+GAP_BRIDGED_BY_CONTINUATION_GEOMETRY = "BRIDGED_BY_CONTINUATION_GEOMETRY"
+GAP_BRIDGED_BY_DECLARED_CAD_CONTINUITY = "BRIDGED_BY_DECLARED_CAD_CONTINUITY"
+GAP_NOT_BRIDGED_NO_EVIDENCE = "NOT_BRIDGED_NO_CONTINUITY_EVIDENCE"
+GAP_NOT_BRIDGED_TOO_WIDE = "NOT_BRIDGED_WIDER_THAN_ANY_OPENING_IN_THIS_SOURCE"
+
+
+def _axis_span(rect, axis):
+    return (rect.x0, rect.x1) if axis == geom.AXIS_X else (rect.y0, rect.y1)
+
+
+def _cross_span(rect, axis):
+    return (rect.y0, rect.y1) if axis == geom.AXIS_X else (rect.x0, rect.x1)
+
+
+def _covered(lo, hi, spans):
+    """How much of [lo, hi] the given intervals cover, as a fraction."""
+    if hi <= lo:
+        return 0.0
+    merged = []
+    for a, b in sorted((max(lo, a), min(hi, b)) for a, b in spans):
+        if b <= a:
+            continue
+        if merged and a <= merged[-1][1]:
+            merged[-1][1] = max(merged[-1][1], b)
+        else:
+            merged.append([a, b])
+    return sum(b - a for a, b in merged) / (hi - lo)
+
+
+def _gap_evidence(axis, lo, hi, offset_lo, offset_hi, floor, prev_ref, next_ref,
+                  max_opening_span, tolerance, openings, continuation_geometry, cad_continuity):
+    """Is there evidence that wall material continues across this gap, or only that it could?
+
+    A maximum opening span can REJECT a join - a 4 m hole is not a door - but it cannot prove one.  Two unrelated
+    walls that happen to lie on one line, 2 m apart, are two walls; joining them invents a wall, and every
+    quantity on that invented wall is wrong in a way no total will reveal.
+    """
+    width = hi - lo
+    if width > max_opening_span + tolerance:
+        return {"BRIDGED": False, "RELATION": GAP_NOT_BRIDGED_TOO_WIDE, "GAP_M": round(width, 6),
+                "MAX_OPENING_SPAN_M": max_opening_span,
+                "WHY": "no opening in this source is this wide, so the gap is not an opening"}
+    pair = frozenset((prev_ref, next_ref))
+    for rec in cad_continuity or ():
+        if frozenset(rec.get("SEGMENTS", ())) >= pair:
+            return {"BRIDGED": True, "RELATION": GAP_BRIDGED_BY_DECLARED_CAD_CONTINUITY,
+                    "GAP_M": round(width, 6), "REFERENCE": rec.get("REFERENCE"),
+                    "WHY": "the source states that these segments are one object"}
+    spans = []
+    for o in openings or ():
+        if getattr(o, "floor", None) != floor:
+            continue
+        r = o.rect
+        c0, c1 = _cross_span(r, axis)
+        if min(c1, offset_hi) - max(c0, offset_lo) <= -tolerance:
+            continue
+        spans.append((_axis_span(r, axis), o.opening_ref))
+    share = _covered(lo, hi, [s for s, _ref in spans])
+    if share >= GAP_OCCUPANCY:
+        return {"BRIDGED": True, "RELATION": GAP_BRIDGED_BY_CONFIRMED_OPENING, "GAP_M": round(width, 6),
+                "OPENINGS": sorted(ref for _s, ref in spans), "OCCUPANCY": round(share, 6),
+                "WHY": "a confirmed opening occupies the gap, so the wall runs through it and the opening is "
+                       "deducted from it"}
+    cont = [_axis_span(r, axis) for r in (continuation_geometry or ())
+            if min(_cross_span(r, axis)[1], offset_hi) - max(_cross_span(r, axis)[0], offset_lo) > -tolerance]
+    cshare = _covered(lo, hi, cont)
+    if cshare >= GAP_OCCUPANCY:
+        return {"BRIDGED": True, "RELATION": GAP_BRIDGED_BY_CONTINUATION_GEOMETRY, "GAP_M": round(width, 6),
+                "OCCUPANCY": round(cshare, 6),
+                "WHY": "geometry that continues the wall across the gap is drawn here, for example a lintel or "
+                       "a header over an opening"}
+    return {"BRIDGED": False, "RELATION": GAP_NOT_BRIDGED_NO_EVIDENCE, "GAP_M": round(width, 6),
+            "OPENING_OCCUPANCY": round(share, 6), "CONTINUATION_OCCUPANCY": round(cshare, 6),
+            "REQUIRED_OCCUPANCY": GAP_OCCUPANCY,
+            "WHY": "the gap is narrow enough that an opening could explain it, and nothing in the source says "
+                   "one does; a maximum span can reject a join but cannot prove one"}
+
+
+def build_wall_lines(bands, tolerance, max_opening_span, openings=(), continuation_geometry=(),
+                     cad_continuity=()):
+    """Join collinear segments of equal thickness into the wall they are segments of - where the source says so.
 
     A wall interrupted by a door arrives from an extractor as two segments.  They are not two walls, and the door
-    is in neither of them - it is in the gap.  Grouping by line and thickness puts the hole back in the wall it
-    belongs to, which is also how a surveyor measures: the wall gross, less its openings.
+    is in neither of them - it is in the gap.  Putting the hole back in the wall it belongs to is how a surveyor
+    measures: the wall gross, less its openings.
 
-    A gap wider than `max_opening_span` is not an opening, so segments either side of it stay separate walls.
-    The caller supplies that span because it is a fact about the building, not about the algorithm.
+    But a gap is only closed on EVIDENCE that something spans it: a confirmed opening filling it, geometry drawn
+    across it, or the source declaring the segments one object.  `max_opening_span` is a veto, not a proof.
     """
     from engine.qs_core.entities import Evidence, GeometryComponent, KIND_WALL_BAND
 
@@ -40,36 +124,117 @@ def build_wall_lines(bands, tolerance, max_opening_span):
         key = (b.floor, b.axis, round(offset / tolerance), round((b.thickness or 0) / tolerance))
         groups.setdefault(key, []).append(b)
 
-    lines = []
+    lines, gap_log = [], []
     for (floor, axis, _o, _t), members in sorted(groups.items()):
         members.sort(key=lambda m: m.bbox.x0 if axis == geom.AXIS_X else m.bbox.y0)
-        runs, current = [], [members[0]]
+        runs, current, bridges = [], [members[0]], [[]]
         for prev, nxt in zip(members, members[1:]):
             pb, nb = prev.bbox, nxt.bbox
-            gap = (nb.x0 - pb.x1) if axis == geom.AXIS_X else (nb.y0 - pb.y1)
-            if gap <= max_opening_span + tolerance:
+            lo, hi = ((pb.x1, nb.x0) if axis == geom.AXIS_X else (pb.y1, nb.y0))
+            off_lo, off_hi = _cross_span(pb, axis)
+            ev = _gap_evidence(axis, lo, hi, off_lo, off_hi, floor, prev.component_ref, nxt.component_ref,
+                               max_opening_span, tolerance, openings, continuation_geometry, cad_continuity)
+            ev.update({"FLOOR": floor, "AXIS": axis, "FROM_SEGMENT": prev.component_ref,
+                       "TO_SEGMENT": nxt.component_ref, "FROM_M": round(lo, 6), "TO_M": round(hi, 6),
+                       "THICKNESS_M": prev.thickness})
+            gap_log.append(ev)
+            if hi - lo <= tolerance or ev["BRIDGED"]:
                 current.append(nxt)
+                bridges[-1].append(ev)
             else:
                 runs.append(current)
-                current = [nxt]
+                current, bridges = [nxt], bridges + [[]]
         runs.append(current)
-        for run in runs:
-            env = geom.bbox([r for m in run for r in m.rects])
+        for run, bridged in zip(runs, bridges):
+            rects = [r for m in run for r in m.rects]
+            env = geom.bbox(rects)
             thickness = run[0].thickness
+            # the run that actually has material in it, as the UNION of the segments' spans.  Summing their
+            # lengths would count a wall drawn twice on two layers twice, which is a quantity error that no
+            # later check can see, because the doubled length is perfectly self-consistent.
+            spans = [_axis_span(r, axis) for r in rects]
+            material_length = _covered(min(a for a, _b in spans), max(b for _a, b in spans), spans) * \
+                (max(b for _a, b in spans) - min(a for a, _b in spans))
+            overlapped = round(sum(b - a for a, b in spans) - material_length, 9)
             ref = (f"WALL-LINE::{floor}::{axis}::{round(env.y0 if axis == geom.AXIS_X else env.x0, 4)}"
                    f"::{round(env.x0 if axis == geom.AXIS_X else env.y0, 4)}::{thickness}")
             line = GeometryComponent(ref, KIND_WALL_BAND, [env], floor, run[0].source_revision,
                                      thickness=thickness, axis=axis, layer=run[0].layer,
-                                     material_length=round(sum(m.length for m in run), 9))
+                                     material_length=round(material_length, 9),
+                                     material_rects=list(rects))
             line.evidence.append(Evidence("WALL_LINE_ASSEMBLED_FROM_COLLINEAR_SEGMENTS",
                                           {"SEGMENTS": [m.component_ref for m in run],
-                                           "MATERIAL_LENGTH_M": round(sum(m.length for m in run), 6),
+                                           "MATERIAL_LENGTH_M": round(material_length, 6),
+                                           "SEGMENT_LENGTH_SUM_M": round(sum(m.length for m in run), 6),
+                                           "OVERLAPPING_SEGMENT_LENGTH_M": overlapped,
                                            "ENVELOPE_LENGTH_M": round(line.length, 6),
                                            "MAX_OPENING_SPAN_M": max_opening_span,
-                                           "WHY": "these segments lie on one line at one thickness, separated "
-                                                  "only by gaps an opening could explain"}))
+                                           "GAPS_CLOSED": bridged,
+                                           "WHY": "these segments lie on one line at one thickness, and every "
+                                                  "gap between them is closed by evidence that material or an "
+                                                  "opening continues across it"}))
             lines.append(line)
-    return lines
+    lines.sort(key=lambda c: c.component_ref)
+    return lines, gap_log
+
+
+# ---------------------------------------------------------------- does this wall's material span its openings?
+MATERIAL_SPANS = "MATERIAL_SPANS_ITS_OPENINGS"
+MATERIAL_STOPS = "MATERIAL_STOPS_AT_THE_JAMBS"
+BASIS_NOT_TESTABLE = "NO_OPENING_ON_THIS_LINE_TO_TEST"
+BASIS_UNRESOLVED = "OPENING_BASIS_UNRESOLVED"
+SPANS_SHARE = 0.90
+STOPS_SHARE = 0.10
+
+
+def evaluate_opening_basis(wall_lines, openings, tolerance):
+    """Per wall line, on evidence: does the drawn material run through its openings, or stop at the jambs?
+
+    One Boolean for a whole drawing revision is a guess about a mixed population.  Extractors, and draughtsmen,
+    are not consistent within one file: a facade drawn as one polyline spans its windows while an internal
+    partition drawn segment by segment stops at every door.  Asserting one answer for both double-counts every
+    opening in one of them.  So the question is asked of each line, against the openings that actually lie in it.
+    """
+    out = {}
+    for line in wall_lines:
+        material = line.material_rects or line.rects
+        tested = []
+        for o in openings:
+            if o.floor != line.floor or not o.rect.expanded(tolerance).overlaps(line.bbox):
+                continue
+            inter = sum(i.area for i in (o.rect.intersection(r) for r in material) if i)
+            share = inter / o.rect.area if o.rect.area > 0 else 0.0
+            tested.append({"OPENING_REF": o.opening_ref, "MATERIAL_SHARE_OF_THE_OPENING": round(share, 6),
+                           "READS_AS": (MATERIAL_SPANS if share >= SPANS_SHARE else
+                                        MATERIAL_STOPS if share <= STOPS_SHARE else BASIS_UNRESOLVED)})
+        readings = {t["READS_AS"] for t in tested}
+        if not tested:
+            basis, conf, status = BASIS_NOT_TESTABLE, CONFIDENCE_NONE, BASIS_NOT_TESTABLE
+            why = ("no opening lies in this wall line, so there is nothing to deduct and the basis makes no "
+                   "difference to its quantity")
+        elif readings == {MATERIAL_SPANS}:
+            basis, conf, status = MATERIAL_SPANS, CONFIDENCE_PROVEN, MATERIAL_SPANS
+            why = ("the drawn material covers the footprint of every opening in this line, so the gross length "
+                   "already includes them and they are deducted once")
+        elif readings == {MATERIAL_STOPS}:
+            basis, conf, status = MATERIAL_STOPS, CONFIDENCE_PROVEN, MATERIAL_STOPS
+            why = ("the drawn material stops at the jambs of every opening in this line, so the wall over each "
+                   "opening has to be added back before the opening is deducted")
+        else:
+            basis, conf, status = BASIS_UNRESOLVED, CONFIDENCE_NONE, BASIS_UNRESOLVED
+            why = ("the openings in this line do not agree: some are covered by material and some are not, so "
+                   "the engine cannot state one gross basis for the line")
+        out[line.component_ref] = {
+            "COMPONENT_REF": line.component_ref, "FLOOR": line.floor, "THICKNESS_M": line.thickness,
+            "BASIS": basis, "STATUS": status, "CONFIDENCE": conf,
+            "MATERIAL_SPANS_THE_OPENING": basis == MATERIAL_SPANS,
+            "MATERIAL_STOPS_AT_THE_JAMBS": basis == MATERIAL_STOPS,
+            "OPENINGS_TESTED": sorted(tested, key=lambda t: t["OPENING_REF"]),
+            "DETECTED_BY": "the drawn material of this line intersected with the footprint of each opening "
+                           f"that lies in it; >= {SPANS_SHARE} covered reads as spanning, <= {STOPS_SHARE} as "
+                           "stopping at the jambs, anything between as unresolved",
+            "WHY": why}
+    return out
 
 
 def _containment(opening, band):
@@ -237,49 +402,86 @@ def build_opening_register(openings, wall_bands, tolerance):
     }
 
 
-def wall_band_quantities(wall_bands, register, height, geometry_includes_openings, blocked_note=None):
-    """Net wall area per band: gross less the openings this band hosts, and nothing else.
+def wall_band_quantities(wall_lines, register, height_record, basis_by_ref, blocked_by_ref,
+                         identity_by_ref=None):
+    """Net wall area per line: gross on that line's own evidenced basis, less the openings it hosts.
 
-    `geometry_includes_openings` is a question about the SOURCE, which only the extractor can answer.  Some
-    extractors draw a wall straight through its doorway, so the gross already includes the hole; others stop the
-    wall at each jamb, so the hole has to be added back before it can be deducted.  Getting this wrong
-    double-counts every door, which is why it is an argument with no default.
-
-    The height is an input too: where it comes from is the caller's evidence to carry.
+    Three things had to be true before this function could compute anything, and each of them is now an
+    evidenced record rather than an assumption: the line's identity (is it masonry at all), its opening basis
+    (does its drawn material run through its openings), and the height (from the evidence hierarchy).  Where any
+    of them is open, or the dependency graph says this line's value could move, the row carries no quantity -
+    only a diagnostic value under a name that cannot be summed by accident.
     """
+    from engine.qs_core import evidence as EV, quantities as QY
+
     ded = register["DEDUCTION_BY_WALL_COMPONENT_M2"]
     widths = register["HOSTED_WIDTH_BY_WALL_COMPONENT_M"]
-    unmeasured = register["UNMEASURED_OPENINGS_BY_WALL_COMPONENT"]
-    unresolved_floors = {o["FLOOR"] for o in register["REGISTER"]
-                         if o["HOST_ASSIGNMENT_STATUS"] != HOST_ASSIGNED}
+    height_ok = EV.established(height_record)
+    height = height_record.get("VALUE") if height_record else None
+    identity_by_ref = identity_by_ref or {}
     rows = []
-    for b in sorted(wall_bands, key=lambda x: x.component_ref):
+    for b in sorted(wall_lines, key=lambda x: x.component_ref):
+        basis = basis_by_ref.get(b.component_ref, {"BASIS": BASIS_NOT_TESTABLE})
         material = b.material_length if b.material_length is not None else b.length
-        gross_length = material if geometry_includes_openings else material + widths.get(b.component_ref, 0.0)
-        gross = gross_length * height
+        hosted_width = widths.get(b.component_ref, 0.0)
         d = ded.get(b.component_ref, 0.0)
-        mine_unmeasured = unmeasured.get(b.component_ref, [])
-        blocked = b.floor in unresolved_floors or bool(mine_unmeasured)
-        why = None
-        if mine_unmeasured:
-            why = ("an opening this band hosts has no established height, so its deduction cannot be "
-                   f"computed: {mine_unmeasured}")
-        elif blocked:
-            why = (blocked_note or "an opening on this floor has no proved host, so the split between "
-                                   "thicknesses on this floor is not final")
-        rows.append({
+        ident = identity_by_ref.get(b.component_ref, {})
+
+        if basis["BASIS"] == MATERIAL_SPANS:
+            gross_length, gross_why = material, ("the drawn material of this line runs through its openings, "
+                                                 "so its length already includes them")
+        elif basis["BASIS"] == MATERIAL_STOPS:
+            gross_length, gross_why = material + hosted_width, ("the drawn material stops at each jamb, so the "
+                                                                "wall over each opening is added back before "
+                                                                "the opening is deducted")
+        elif basis["BASIS"] == BASIS_NOT_TESTABLE:
+            gross_length, gross_why = material, ("no opening lies in this line, so both bases give the same "
+                                                 "length and the question does not arise")
+        else:
+            gross_length, gross_why = None, ("the openings in this line disagree about the basis, so its gross "
+                                             "length is not established")
+
+        h = height if height_ok else None
+        computable = gross_length is not None and h is not None
+        net = round(gross_length * h - d, 6) if computable else None
+        reasons = (blocked_by_ref.get(b.component_ref) or {}).get("REASONS", [])
+        billable = ident.get("BILLABLE_AS_MASONRY")
+        # A band established NOT to be masonry is not an open question about the masonry quantity: it is a
+        # settled exclusion.  Blocking a subtotal because a column stands in the same thickness family would
+        # withhold finished work for a reason that has already been answered.
+        excluded = billable is False and ident.get("IDENTITY") != "WALL_IDENTITY_UNRESOLVED"
+        final = computable and not reasons and not excluded and billable is not False
+        row = {
             "COMPONENT_REF": b.component_ref, "FLOOR": b.floor, "THICKNESS_M": b.thickness,
+            "THICKNESS_FAMILY_M": ident.get("THICKNESS_FAMILY_M"),
+            "WALL_IDENTITY": ident.get("IDENTITY"), "BILLABLE_AS_MASONRY": billable,
             "MATERIAL_LENGTH_M": round(material, 6),
-            "HOSTED_OPENING_WIDTH_M": round(widths.get(b.component_ref, 0.0), 6),
-            "GROSS_LENGTH_M": round(gross_length, 6), "HEIGHT_M": height,
-            "GROSS_AREA_M2": round(gross, 6), "OPENING_DEDUCTION_M2": round(d, 6),
-            "NET_AREA_M2": round(gross - d, 6),
-            "GROSS_BASIS": ("the wall as drawn, which already spans its openings" if geometry_includes_openings
-                            else "the wall material plus the openings it hosts, so the wall over a door is "
-                                 "counted before the door is deducted"),
-            "DEDUCTION_SOURCE": "the openings whose host is this band, in full",
-            "STATUS": ("BLOCKED_BY_UNMEASURED_OPENING" if mine_unmeasured else
-                       "BLOCKED_BY_UNRESOLVED_OPENING" if blocked else "FINAL_QUANTITY_AVAILABLE"),
-            "BLOCKED_NOTE": why,
-        })
+            "HOSTED_OPENING_WIDTH_M": round(hosted_width, 6),
+            "OPENING_BASIS": basis["BASIS"], "OPENING_BASIS_EVIDENCE": basis,
+            "GROSS_LENGTH_M": None if gross_length is None else round(gross_length, 6),
+            "GROSS_BASIS": gross_why,
+            "HEIGHT_M": h, "HEIGHT_EVIDENCE": height_record,
+            "GROSS_AREA_M2": round(gross_length * h, 6) if computable else None,
+            "OPENING_DEDUCTION_M2": round(d, 6),
+            "DEDUCTION_SOURCE": "the openings whose host is this line, in full",
+            "NET_AREA_M2": net if final else None,
+            "STATUS": (QY.FINAL if final else
+                       "EXCLUDED_NOT_MASONRY" if excluded else "BLOCKED_PENDING_ANSWERS"),
+            "EXCLUDED_BECAUSE": ident.get("WHY") if excluded else None,
+            "BLOCKED_BY": reasons or ([] if final else [
+                {"KIND": "OPENING_BASIS_UNRESOLVED" if gross_length is None else
+                         "WALL_HEIGHT_NOT_ESTABLISHED" if h is None else "NOT_ESTABLISHED_AS_MASONRY",
+                 "WHY": (gross_why if gross_length is None else
+                         "no established source gives this wall's height" if h is None else
+                         ident.get("WHY", "this band is not established to be billable masonry"))}]),
+        }
+        if not final:
+            row[QY.diagnostic_name("NET_AREA_M2")] = net
+            if gross_length is None:
+                row[QY.diagnostic_name("NET_AREA_M2_IF_MATERIAL_SPANS")] = (
+                    round(material * h - d, 6) if h is not None else None)
+                row[QY.diagnostic_name("NET_AREA_M2_IF_MATERIAL_STOPS_AT_JAMBS")] = (
+                    round((material + hosted_width) * h - d, 6) if h is not None else None)
+            row["BLOCKED_NOTE"] = "; ".join(r.get("WHY", "") for r in row["BLOCKED_BY"]) or None
+        rows.append(row)
     return rows
