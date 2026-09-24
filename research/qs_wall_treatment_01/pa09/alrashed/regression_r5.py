@@ -461,7 +461,10 @@ def provenance():
         "SOURCE_ARTIFACT_COMMIT": {
             "SHA": _git("log", "-1", "--format=%H", "--", str(FROZEN)) or None,
             "PATH": str(FROZEN),
-            "WHAT": "the commit that last touched the source artifact this run reads"},
+            "TRACKED_IN_GIT": bool(_git("ls-files", "--", str(FROZEN))),
+            "WHAT": "the commit that last touched the source artifact this run reads",
+            "IF_NULL": "this artifact is produced output and is not tracked in git, so it has no commit; its "
+                       "identity is the digest recorded beside it, which the run asserts unchanged"},
         "FROZEN_ARTIFACT": {
             "PATH": str(FROZEN), "SHA256": hashlib.sha256(FROZEN.read_bytes()).hexdigest(),
             "WHAT": "the digest of the frozen takeoff, opened read-only and never rewritten"},

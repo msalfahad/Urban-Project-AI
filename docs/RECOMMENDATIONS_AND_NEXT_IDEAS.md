@@ -121,3 +121,67 @@ deterministic; we have not proved it. One command, one assertion — worth doing
 | 6 | B-4 confidence grades, B-6 overlap matrix | make the priced BOQ defensible | M |
 | 7 | C-1 heights from sections | removes the biggest assumption in the model | L |
 | 8 | C-2 non-orthogonal path | removes the biggest scope limit | L |
+
+---
+
+# R5 round — where the engine should go next
+
+## 1. The 35 unexplained gaps are the whole bottleneck, and they are cheap to close
+
+Every masonry subtotal on this villa is null for one reason: 35 breaks in wall
+lines that nothing in the DWG names as an opening. Three sources could answer
+them without touching the engine:
+
+- the **door and window schedule**, if it exists as a table in the PDF — the
+  admission stage already takes schedule rows and reconciles them against the
+  geometry, so this is a data connection, not new logic;
+- the **sections and elevations**, where a doorway and an archway look nothing
+  alike;
+- the **owner**, for the handful the drawings genuinely do not settle.
+
+Closing them turns 19 blocked rows into final rows and makes 150 mm and 200 mm
+publishable. Nothing else in the pipeline has anything like that leverage.
+
+## 2. Teach the admission stage to read an opening schedule table
+
+`normalize_opening_population` already accepts `schedule_rows` and reports
+`SCHEDULE_ROWS_WITHOUT_GEOMETRY`. What is missing is the extractor that turns a
+PDF schedule table into those rows. That single piece of work converts the
+largest class of open questions into evidence on every future project, not just
+this one.
+
+## 3. Let a candidate inherit provenance from an identical twin
+
+Several of the 35 gaps are the same width, on the same layer, in the same wall
+family, as gaps that *do* carry a door block. A generic rule — a candidate whose
+geometry and context match a confirmed opening within tolerance inherits its
+classification, at `STRONG` rather than `PROVEN`, and says which twin it copied
+— would resolve a good share of them on evidence rather than assumption, and is
+falsifiable by a reviewer reading the twin reference.
+
+## 4. Vertical continuity is still missing
+
+Identity, spaces and quantities are per floor. Stairs, voids and double-height
+rooms have no cross-floor relation, so a void is floor area the adapter must
+exclude by hand — the same class of manual patch this round removed for walls.
+A `LEVEL_RELATION` register (this space is open to that one above) is the next
+structural gap.
+
+## 5. Ceilings and finishes are where the next R4-shaped failure is waiting
+
+Wall quantities now have identity, basis, provenance and a blocking graph.
+Ceilings have an area and a type nobody established. If ceilings are priced
+before they get the same treatment, the review that follows will be this one
+again, in a different trade.
+
+## 6. For the BOQ itself
+
+- Publish **blocked rows as visible bill lines with null quantities and the
+  question attached**, not as omissions. A bill with 19 explicit gaps is
+  auditable; a bill quietly 19 rows shorter is not.
+- Carry `DIAGNOSTIC_ONLY_*` figures into the workbook in a separate,
+  differently-formatted column. Estimators need a size to plan around; the
+  format has to make it impossible to add that column to a total.
+- Add the **seam evidence** and the **wall identity** as columns on the
+  measured rows. They are the two decisions a human reviewer can most usefully
+  falsify, and both are currently only in JSON.
