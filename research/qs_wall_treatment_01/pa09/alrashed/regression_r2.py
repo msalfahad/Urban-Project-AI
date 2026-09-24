@@ -102,11 +102,18 @@ def extract_floor(ents, floor):
                                 width=w, height=None, width_source="MEASURED_FROM_PROJECT_GEOMETRY",
                                 height_source="NOT_ESTABLISHED", axis=axis))
 
-    # Every break the extractor spanned in a wall line is carried to the engine as what it is: a gap the source
-    # draws, whose contents the source does not state.
+    # Everything the source draws between two pieces of floor is carried to the engine as what it is.  A column
+    # line is material; a break the extractor spanned in a wall line is a gap whose contents the source does not
+    # state.  Leaving either out makes the engine read a boundary as open floor.
     barriers = [Barrier(geom.AXIS_Y if kind == "V" else geom.AXIS_X, pos, lo, hi,
-                        Barrier.VIRTUAL_CLOSURE, floor, component_ref=f"CLOSURE::{kind}::{round(pos, 3)}")
-                for kind, pos, lo, hi in g["CLOSURES"]]
+                        Barrier.BACKED_BY_MATERIAL, floor, component_ref=f"COLUMN::{kind}::{round(pos, 3)}")
+                for kind, pos, lo, hi in g["COLUMNS"]]
+    barriers += [Barrier(geom.AXIS_Y if kind == "V" else geom.AXIS_X, pos, lo, hi,
+                         Barrier.BACKED_BY_MATERIAL, floor, component_ref=f"WALL::{kind}::{round(pos, 3)}")
+                 for kind, pos, lo, hi in g["WALLS"]]
+    barriers += [Barrier(geom.AXIS_Y if kind == "V" else geom.AXIS_X, pos, lo, hi,
+                         Barrier.VIRTUAL_CLOSURE, floor, component_ref=f"CLOSURE::{kind}::{round(pos, 3)}")
+                 for kind, pos, lo, hi in g["CLOSURES"]]
 
     labels = [Label(x["NAME"], x["X"], x["Y"]) for x in labs]
     window = G.WINDOWS[floor]
