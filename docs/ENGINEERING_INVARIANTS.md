@@ -5776,3 +5776,92 @@ through a data-only reader, none missing, none an error value, and the
 formulas themselves untouched. The evaluator that computes them is the same
 one the quality checks and the tests use, so the workbook, the checks and the
 tests cannot drift apart.
+
+## §286 — Identity belongs to the thing, not to the walk that found it
+
+A component reference built from scan order (`f"{floor[:2]}-{k:03d}"`) is a
+statement about the extractor, not about the building. Move a wall five
+millimetres, the grid gains a line, the walk changes, and every reference after
+that point shifts — so an owner's decision about a room silently lands on a
+different room in the next revision.
+
+Identity is now three separate things, because they answer three different
+questions. A **fingerprint** hashes the geometry itself, so an identical rerun
+is identical. A **UID** is the immutable handle a store keeps. A **persistent
+id** is what a decision attaches to, and it is carried across revisions by
+matching geometry — IoU, centroid proximity, dimensions, label — never by
+position.
+
+And splits and merges are detected *before* one-to-one matching, because half a
+room that split still overlaps its parent enough to look like the parent moved.
+A split, a merge or a tie sets `DECISIONS_CARRY_FORWARD: false` and says why:
+which of the parents' decisions survives is not a geometric question.
+
+## §287 — A hole is in one wall
+
+The engine used to pool a floor's openings and share the deduction across
+thickness bands in proportion to wall length. The floor total came out exactly
+right, which is why no check on totals ever saw it, and the split between two
+separately priced lines came out wrong.
+
+An opening is assigned to one host on spatial evidence — containment, axis
+agreement, thickness agreement, span overlap, proximity — and only when the
+leading candidate beats its rival by a stated margin. Otherwise it is
+`HOST_WALL_UNRESOLVED`, the wall lines on that floor are blocked from pricing,
+and the question is published with its candidates. **No branch divides a
+deduction.**
+
+The invariant that catches the old behaviour is not the one that reconciles
+totals — that one *passes* on pro-rata output. It is INV-14: every deduction
+sits on the band that hosts it, compared band by band against the canonical
+register.
+
+## §288 — Two facts about a source that the engine may not assume
+
+Real geometry forced two questions into the open, and both are now arguments
+without defaults.
+
+**Does the extractor draw a wall through its own doorway?** Some do; some stop
+at each jamb. Assume wrongly and every door is deducted twice, or the wall over
+a door is never counted. `wall_band_quantities` takes
+`geometry_includes_openings`, and `pipeline.run` refuses to produce wall
+quantities without it.
+
+**How wide a gap can an opening explain?** Collinear wall segments either side
+of a gap are one wall interrupted by a door, or two walls with a room between
+them. The engine groups them into wall lines using a span the caller supplies,
+because it is a fact about the building.
+
+A default for either would be a constant smuggled into a generic engine. The
+audit test that forbids this caught exactly that slip — `max_opening_span=3.0`
+sitting in a signature — while this work was being written.
+
+## §289 — A drawn gap is a question, not open floor
+
+Where two pieces of floor touch, the engine asks what is physically on the
+seam: wall material means two rooms, an opening means two rooms with a door,
+nothing at all means one room continuing. The fourth case is the one that
+matters: a **break the source draws in a wall line and does not explain**. A
+doorway, an archway and a missing line look identical there.
+
+Reading that as open floor merged eleven components of a real ground floor into
+one 132 m² space with two names in it. Reading it as `CANDIDATE_OPENING_
+REVIEW_REQUIRED` — not merged, published as a question — left nineteen spaces,
+fourteen of them named, and one honest doubt.
+
+The same rule settles the defect that started it: where floor genuinely
+continues with nothing between, the label on one fragment names the whole
+space. A room is not the fragment that happens to contain its text.
+
+## §290 — A check that cannot fail is not a check
+
+The clearest way to hold this is to put each defect back and require the
+invariant to object. Eight mutations now run against the real invariants: pro-
+rata allocation, pro-rata allocation of an *unresolved* opening, scan-order
+ids, a label confined to its fragment, a check citing a known total, a tie
+resolved by picking the leader, wall material counted as floor, and a component
+left in no state at all.
+
+One of those mutations exists to prove a check is blind: pro-rata output
+*passes* the totals invariant. Knowing which of your checks cannot see a defect
+is worth as much as knowing which can.
