@@ -5620,3 +5620,90 @@ the difference is scope: the site schedule measures glazing the 16-11-2025
 permit drawing does not show. No engine error was found in this validation —
 not because the engine was protected, but because every difference traced to
 scope, to a missing source, or to a guide value.
+
+## §275 — CLOSE_AGREEMENT is a band, not a feeling
+
+§273 called 3.8%, 5.9% and 9.1% close agreement. They are not. The owner set
+the band at **2% or better**, and once it is applied as arithmetic rather
+than as judgement, three of the six comparisons leave the class and have to
+name a cause instead: the master-bedroom window is an
+`OWNER_INPUT_DIFFERENCE` (the guide's 1.50 m height against a 1.715 m site
+frame), the ground-floor door count is `SOURCE_INFORMATION_MISSING` (one leaf
+in seventeen, with nothing in the sources to say which), and the kitchen
+window is a `SCOPE_DIFFERENCE` (three site openings against the one the
+drawing draws).
+
+Two differences out of seven are inside 2%. That is the honest number, and
+it is smaller than the one the validation first reported.
+
+## §276 — A floor is written only where a floor is proven
+
+The historical opening schedule carries one header at the top of the sheet
+and nothing marking where the next floor begins. The validation read rows
+5–21 as basement on that basis. Nothing proves it.
+
+Proof is an explicit floor label on the row, an unambiguous room match,
+drawing geometry, or the owner saying so. Four rows of thirty-one have it —
+two carry بالأرضي or a master bedroom that exists only on the ground floor,
+two sit under the السطح header. The other twenty-seven are
+`FLOOR = UNKNOWN`, `STATUS = HISTORICAL_LOCATION_UNCONFIRMED`.
+
+This is why `US-22` now requires every row of an Urban opening schedule to
+carry a floor: one missing header cost twenty-seven comparisons.
+
+## §277 — Rows, objects and leaves are three different counts
+
+The same sheet gives 31 schedule rows, 34 physical objects (two rows carry
+multiplicities — "باب العدد ٢", "دريشة العدد ٣"), and a separate block
+counting 28 door **leaves** by material. None of the three is the others, and
+the leaf block is not the same population as the L/M schedule, so the two
+must never be added.
+
+`US-20` follows from it: before any count or quantity is compared, both sides
+are reduced to the same population of objects. The basement door count showed
+a 36% error that fell to **zero** once the aluminium and steel leaves were
+added to the wooden ones — the error was entirely in the comparison.
+
+## §278 — Name a commercial basis as a commercial basis
+
+`F28 = SUM(F5:F24)` gives 950.22 and feeds `I11 = 1.5*F28`. It was carried in
+the validation as a "historical waterproofing quantity". It is not one: one
+of its twenty components is 600.00, the plot area, so it is a priced basis
+for insulation labour, not a membrane area. It is recorded as
+`HISTORICAL_COMMERCIAL_BASIS` and may not be compared against a measured area
+at all.
+
+The 57 lm of balustrade is the mirror case — stated twice in the workbook,
+drawn nowhere on the permit drawings. It is `FIELD_VERIFICATION_REQUIRED`: a
+claim about work that may exist on site, added to no measured quantity.
+
+## §279 — DS-01: a quantity and a price never share a cell
+
+`=1100+325+430+150*2.5` is three lump sums added to one quantity-times-rate.
+No ceramic quantity can be recovered from it, and no audit can ever be run
+against it. The workbook's most expensive defect is a schema defect.
+
+`DS-01` is permanent and applies to every Urban output: `MEASURED_QUANTITY`,
+`MEASURED_UNIT`, `WASTE_PERCENT`, `PROCUREMENT_QUANTITY`, `UNIT_RATE` and
+`AMOUNT` occupy separate database fields and separate spreadsheet columns. No
+cell and no field ever holds a quantity and a price together.
+
+## §280 — Show the rectangles, do not restate the area
+
+A room area of 140.9111 m² is not reviewable. The same room written as three
+rectangles — 27.0803 × 3.6501, then two more — is, and a reader can check it
+against the plan with a scale rule.
+
+The decomposition is exact rather than approximate, because the plan is
+wholly axis-aligned: a room is a whole number of grid cells, so a greedy
+maximal-rectangle cover of those cells sums to the room's area with **zero**
+residual, not a tolerance. Across 135 rooms and 184 rectangles the largest
+variance is 0.000000 m².
+
+That is the rule this establishes: a readable decomposition may change how a
+quantity is written down and may never change the quantity. The workbook
+stores each dimension at full precision and merely *displays* it rounded, so
+the room totals still land on the frozen figures; the trade sheets, which
+rebuild from published millimetre dimensions, agree to within 0.003 m² on a
+963 m² line, and the workbook says so in its own sources sheet rather than
+hiding it.
