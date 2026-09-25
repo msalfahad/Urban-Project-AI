@@ -31,8 +31,17 @@ def transform_plan(plan, dx=0.0, dy=0.0, quarter_turns=0):
         if c.material_rects:
             c.material_rects = [move(r) for r in c.material_rects]
     for c in out.get("CANDIDATES", []):
-        c.rect = move(c.rect)
+        x, y = geom.rotate_point(c.centre[0], c.centre[1], quarter_turns)
+        c.centre = (x + dx, y + dy)
         c.axis = geom.rotate_axis(c.axis, quarter_turns)
+        if c.jamb_points:
+            moved = []
+            for jx, jy in c.jamb_points:
+                rx, ry = geom.rotate_point(jx, jy, quarter_turns)
+                moved.append((rx + dx, ry + dy))
+            c.jamb_points = moved
+        if c.rotation is not None:
+            c.rotation = (c.rotation + 90 * (quarter_turns % 4)) % 360
     for b in out.get("BARRIERS", []):
         for _ in range(quarter_turns % 4):
             # (x, y) -> (-y, x): a line along x at y=p becomes a line along y at x=-p, and the reverse

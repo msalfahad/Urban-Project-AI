@@ -15,12 +15,13 @@ TOL, SPAN = S.TOL, S.MAX_OPENING_SPAN
 
 def classify(bands, **kw):
     lines, _gaps = OP.build_wall_lines(bands, TOL, SPAN, openings=[])
+    kw.setdefault("material_map", S.MASONRY_MAP)
     reg = MA.classify_wall_identity(lines, TOL, **kw)
     return lines, {r["COMPONENT_REF"]: r for r in reg["REGISTER"]}, reg
 
 
 def only(by_ref, identity):
-    return sorted(r for r, v in by_ref.items() if v["IDENTITY"] == identity)
+    return sorted(r for r, v in by_ref.items() if v["GEOMETRY_IDENTITY"] == identity)
 
 
 def test_the_thickness_families_are_discovered_from_the_drawing_not_declared():
@@ -34,20 +35,20 @@ def test_the_thickness_families_are_discovered_from_the_drawing_not_declared():
 def test_a_band_with_a_thickness_nothing_else_uses_is_not_billed():
     _lines, by_ref, _reg = classify(S.a_drawing_with_artefacts_among_its_walls())
     odd = next(v for r, v in by_ref.items() if v["THICKNESS_M"] == 0.13)
-    assert odd["IDENTITY"] == MA.WALL_IDENTITY_UNRESOLVED
+    assert odd["GEOMETRY_IDENTITY"] == MA.WALL_GEOMETRY_CANDIDATE
     assert odd["BILLABLE_AS_MASONRY"] is False
 
 
 def test_the_square_where_two_walls_cross_is_a_junction_not_a_wall():
     _lines, by_ref, _reg = classify(S.a_drawing_with_artefacts_among_its_walls())
-    junctions = [v for v in by_ref.values() if v["IDENTITY"] == MA.JUNCTION_ARTEFACT]
+    junctions = [v for v in by_ref.values() if v["GEOMETRY_ARTEFACT_REASON"] == MA.JUNCTION_ARTEFACT]
     assert junctions, {r: v["IDENTITY"] for r, v in by_ref.items()}
     assert junctions[0]["COVERED_BY_CROSSING_WALLS"] >= MA.JUNCTION_COVERAGE
 
 
 def test_one_wall_drawn_on_two_layers_is_billed_once():
     _lines, by_ref, _reg = classify(S.the_same_wall_drawn_on_two_layers())
-    dups = [v for v in by_ref.values() if v["IDENTITY"] == MA.DUPLICATED_LINE_ARTEFACT]
+    dups = [v for v in by_ref.values() if v["GEOMETRY_ARTEFACT_REASON"] == MA.DUPLICATED_LINE_ARTEFACT]
     assert len(dups) == 1 and dups[0]["DUPLICATE_OF"]
 
 
@@ -57,7 +58,7 @@ def test_a_band_as_short_as_it_is_thick_is_never_a_run_of_wall():
     long_b = S.wall_band("M-B", (0.0, 6.0, 8.0, 6.20), 0.20, "X")
     _lines, by_ref, _reg = classify([stub, long_a, long_b])
     stub_rec = next(v for r, v in by_ref.items() if v["MATERIAL_LENGTH_M"] == 0.20)
-    assert stub_rec["IDENTITY"] in (MA.COLUMN_OR_STRUCTURE, MA.JUNCTION_ARTEFACT)
+    assert stub_rec["GEOMETRY_ARTEFACT_REASON"] in (MA.COLUMN_OR_STRUCTURE, MA.JUNCTION_ARTEFACT)
     assert stub_rec["ASPECT_LENGTH_OVER_THICKNESS"] < MA.WALL_ASPECT_MIN
 
 
@@ -65,17 +66,19 @@ def test_what_the_drawing_says_outranks_what_its_shape_suggests():
     walls = S.a_drawing_with_artefacts_among_its_walls()
     lines, _gaps = OP.build_wall_lines(walls, TOL, SPAN, openings=[])
     odd = next(ln for ln in lines if ln.thickness == 0.13)
-    reg = MA.classify_wall_identity(lines, TOL,
+    reg = MA.classify_wall_identity(lines, TOL, wall_layers=("A-WALL-BLK",),
                                     annotations={odd.component_ref: {"MATERIAL": "BLOCKWORK",
-                                                                     "LAYER": "A-WALL-BLK"}},
-                                    masonry_materials=("BLOCKWORK",))
+                                                                     "LAYER": "A-WALL-BLK",
+                                                                     "REFERENCE": "ANNOTATION::ODD"}},
+                                    material_map=S.MASONRY_MAP)
     rec = next(r for r in reg["REGISTER"] if r["COMPONENT_REF"] == odd.component_ref)
-    assert rec["IDENTITY"] == MA.CONFIRMED_MASONRY_WALL and rec["CONFIDENCE"] == "PROVEN"
+    assert rec["MATERIAL_IDENTITY"] == MA.MASONRY_CONFIRMED
+    assert rec["MATERIAL_CONFIDENCE"] == "PROVEN"
 
 
 def test_real_walls_are_still_confirmed_so_the_rule_is_not_simply_restrictive():
     _lines, by_ref, reg = classify(S.a_drawing_with_artefacts_among_its_walls())
-    assert reg["COUNTS"][MA.CONFIRMED_MASONRY_WALL] >= 3
+    assert reg["GEOMETRY_COUNTS"][MA.CONFIRMED_WALL_GEOMETRY] >= 3
 
 
 def test_the_invariant_fails_when_an_unproved_band_is_billed():
@@ -83,6 +86,7 @@ def test_the_invariant_fails_when_an_unproved_band_is_billed():
     odd = next(r for r, v in by_ref.items() if v["THICKNESS_M"] == 0.13)
     honest = [{"COMPONENT_REF": r, "STATUS": QY.FINAL} for r, v in by_ref.items()
               if v["BILLABLE_AS_MASONRY"]]
+    assert True
     assert invariants.unusual_band_is_not_billed_on_thickness_alone(reg, honest)["PASS"]
     smuggled = honest + [{"COMPONENT_REF": odd, "STATUS": QY.FINAL}]
     check = invariants.unusual_band_is_not_billed_on_thickness_alone(reg, smuggled)

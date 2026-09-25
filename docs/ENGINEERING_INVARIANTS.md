@@ -6001,3 +6001,111 @@ extractor cut every wall into three: the quantities must come back identical.
 A result that moves under any of these depends on the description rather than
 on the building, and that dependence is invisible in any single run. These are
 run against the real drawing, not only against fixtures.
+
+## §301 — Existence and hosting are two questions, and only one of them is about walls
+
+A door is a hole in a wall, and a hole is drawn as the absence of material.
+Asking whether a door's rectangle overlaps wall material therefore asks the
+wrong question: in a source that stops each wall at its jambs the correct answer
+is zero overlap, every time.
+
+Admission decides what **exists**, from what the source names — a CAD block, a
+schedule row, an opening symbol or layer, a swing arc — and consults no wall
+geometry at all. Host resolution then asks which wall each confirmed opening
+interrupts, and is allowed to fail. An object carrying a recognised door or
+window block identity is admitted as a physical opening unless the source
+contradicts it, and **failure to overlap wall material is not contradictory
+evidence**. A confirmed opening whose host is unresolved keeps its place in the
+population, in the counts and in every coverage check.
+
+## §302 — An opening is not a rectangle
+
+An opening is carried as the features the source actually holds: insertion
+point, span, orientation, block identity, layer, swing, jamb marks, provenance.
+It has no depth and no footprint until a host is resolved; then the depth is the
+host's own thickness, recorded with that as its source. Any depth invented
+before hosting is an extractor's grid spacing wearing a quantity's clothes.
+
+## §303 — A confirmed opening proves the wall runs through it
+
+A maximum opening span can **reject** a join — a four-metre hole is not a door —
+but it can never prove one. What proves one is an opening resolved to two
+collinear wall ends: the wall runs through the gap and the opening is deducted
+from it. The host record names the two segments that face each other across that
+gap, not merely the set of segments involved, so a run the extractor chopped
+into five pieces joins on the same evidence as a run drawn in one.
+
+## §304 — Proximity is a tie-break, never a reason
+
+A host is scored on structural fit, parallel faces, jamb alignment, axis
+agreement, span fit and thickness match. Proximity carries 0.05 and cannot
+decide anything alone: nothing is hosted unless something structural fits
+(`STRUCTURAL_FIT_MIN`). Two groups within `DECISIVE_MARGIN` of each other are
+not distinguishable by the geometry in front of us, and the register publishes
+both with their scores rather than picking the nearer one.
+
+## §305 — Eligibility is decided before authority
+
+Every dimension claim carries a status, a scope, an effective revision and its
+provenance, and — when retired — what superseded it and why. A resolver reads
+eligibility first and rank second. An owner input outranks a standard for ever,
+so a resolver that reads rank alone keeps choosing a value the project retired;
+a superseded claim must lose inside the scope it was retired in and may still
+answer outside it.
+
+## §306 — Two identity axes: what a band is, and what it is made of
+
+Geometry identity comes from shapes, topology, thickness families and the
+drawing's own wall layers. Material identity comes only from an annotation, a
+legend, a specification, an owner input or an active standard. **A thickness
+family appearing twice is not material proof**; nor is a layer named for walls,
+which says "wall" and never "masonry". A band is billable only where both axes
+are established, and a drawing that annotates no material yields no masonry
+quantity — which is a finite question, not a defect.
+
+## §307 — One unanswered fact is one question
+
+Root questions carry stable ids of the form `RQ::<KIND>::<SUBJECT>`; everything
+a fact holds up is a dependency impact against that id, never a second question.
+The subject is chosen so that one answer closes it: a material question is keyed
+to the thickness family, because a specification states a material by wall type,
+and asking it per line reports fifty-four questions where the source has one
+gap.
+
+## §308 — A category comes from the room, or it does not come at all
+
+A guide that varies by room use cannot be applied project-wide. Each opening
+resolves its host room from the geometry; the room's label maps to a category
+through a table the caller supplies; and where the host room is ambiguous the
+register publishes the competing rooms and no category. Mixed room types never
+share one category, and an unresolved room publishes width and leaves height a
+question.
+
+## §309 — A row's status and a line's blocking are the same statement twice
+
+A row is final, blocked or excluded — three categories, because an excluded row
+is neither released work nor an open question, and reporting two forces it into
+one of them. Blocking is a property of the **line** and its open questions; the
+categories are a property of what may be **published** for it. Both are
+published, together with the arithmetic that reconciles them, and the engine
+derives both from one function so they cannot drift apart.
+
+## §310 — The gate is twenty-one document-level checks, and it must fail on R4
+
+The acceptance gate reads the published document and has no access to the code
+that made it. Beyond the R5 checks it now verifies: every named opening is in
+the population; the population conserves what came in; a named door is not
+dropped for want of a host; height coverage is claimed only over a population
+that was read; a superseded claim never wins; a category names the host room
+behind it; one category is not asserted for every room; material is independent
+of geometry; root questions are unique and every impact has one; the narrative
+agrees with the registers it cites; and the row categories agree with the line
+blocking. Each has a mutation test that must fail it, and the whole gate scores
+0/21 on the committed R4 output.
+
+## §311 — CAD evidence is exhausted before any other source is opened
+
+Block identity, layer, jamb marks, swing arcs and bracketing wall ends are in
+the file already. Reaching for a PDF schedule first imports a second source's
+errors on top of evidence that was never read; on this drawing the CAD evidence
+alone moved thirty-five objects from unresolved to named.

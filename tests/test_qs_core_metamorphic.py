@@ -16,14 +16,13 @@ MASONRY = ("BLOCKWORK",)
 
 
 def annotations_for(plan):
-    return {c.component_ref: {"MATERIAL": "BLOCKWORK", "LAYER": "WALL"}
+    return {c.component_ref: {"MATERIAL": "BLOCKWORK", "LAYER": "WALL",
+                              "REFERENCE": f"ANNOTATION::{c.component_ref}"}
             for c in plan["COMPONENTS"] if c.kind == KIND_WALL_BAND}
 
 
 def run(plan):
-    return pipeline.run(plan, max_opening_span=S.MAX_OPENING_SPAN,
-                        drafting_resolution_m=S.DRAFTING_RESOLUTION, wall_height_evidence=S.WALL_HEIGHT,
-                        annotations=annotations_for(plan), masonry_materials=MASONRY)
+    return S.run(plan, wall_height=3.0, annotations=annotations_for(plan))
 
 
 def quantities(result):

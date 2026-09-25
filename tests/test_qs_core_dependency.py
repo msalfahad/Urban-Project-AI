@@ -12,7 +12,7 @@ from engine.qs_core.entities import HOST_ASSIGNED
 
 TOL, SPAN = S.TOL, S.MAX_OPENING_SPAN
 HEIGHT = EV.resolve("wall height", [EV.Claim(3.0, EV.OWNER_PROJECT_INPUT, "TEST")], TOL)
-ANNOTATED = {"MATERIAL": "BLOCKWORK"}
+ANNOTATED = {"MATERIAL": "BLOCKWORK", "LAYER": "WALL", "REFERENCE": "ANNOTATION::TEST"}
 
 
 def plan_with_an_ambiguous_door():
@@ -38,7 +38,7 @@ def build(bands, ops, height=HEIGHT):
     basis = OP.evaluate_opening_basis(lines, ops, TOL)
     ident = MA.classify_wall_identity(lines, TOL,
                                       annotations={ln.component_ref: ANNOTATED for ln in lines},
-                                      masonry_materials=("BLOCKWORK",))
+                                      material_map=S.MASONRY_MAP, wall_layers=("WALL",))
     by_ref = {r["COMPONENT_REF"]: r for r in ident["REGISTER"]}
     graph = DEP.build(register, lines, basis, by_ref, EV.established(height), TOL)
     rows = OP.wall_band_quantities(lines, register, height, basis, graph["BLOCKED"], by_ref)
@@ -53,8 +53,8 @@ def test_an_unresolved_host_blocks_its_candidates_and_leaves_the_rest_released()
     blocked = set(graph["BLOCKED_WALL_LINES"])
     candidates = {c["COMPONENT_REF"] for o in unresolved for c in o["HOST_CANDIDATES"]}
     assert blocked >= candidates
-    assert graph["RELEASED_WALL_LINES"], "something far away must survive the question"
-    assert not (blocked & set(graph["RELEASED_WALL_LINES"]))
+    assert graph["NON_BLOCKED_WALL_LINES"], "something far away must survive the question"
+    assert not (blocked & set(graph["NON_BLOCKED_WALL_LINES"]))
 
 
 def test_the_far_wall_keeps_its_quantity_while_the_corner_is_open():
@@ -141,13 +141,13 @@ def test_a_gap_nobody_has_explained_blocks_the_wall_it_sits_in():
     from engine.qs_core import admission as AD
 
     walls, cands, _schedule = S.an_unlabelled_wall_gap()
-    pop = AD.normalize_opening_population(cands, walls, [], S.DRAFTING_RESOLUTION, TOL)
+    pop = AD.normalize_opening_population(cands, [], S.DRAFTING_RESOLUTION, TOL)
     lines, _gaps = OP.build_wall_lines(walls, TOL, SPAN, openings=[])
     register = OP.build_opening_register([], lines, TOL)
     basis = OP.evaluate_opening_basis(lines, [], TOL)
     ident = MA.classify_wall_identity(lines, TOL,
                                       annotations={ln.component_ref: ANNOTATED for ln in lines},
-                                      masonry_materials=("BLOCKWORK",))
+                                      material_map=S.MASONRY_MAP, wall_layers=("WALL",))
     by_ref = {r["COMPONENT_REF"]: r for r in ident["REGISTER"]}
     graph = DEP.build(register, lines, basis, by_ref, True, TOL, population=pop)
     assert graph["BLOCKED_WALL_LINES"], "an unexplained hole cannot leave the wall around it final"
@@ -161,17 +161,21 @@ def test_a_confirmed_opening_does_not_block_the_wall_it_is_deducted_from():
     """The contrast that makes the previous test mean something: knowing what the hole is releases the wall."""
     from engine.qs_core import admission as AD
 
+    from engine.qs_core import hosting as H
+
     walls, cands, schedule = S.a_real_narrow_opening()
-    pop = AD.normalize_opening_population(cands, walls, schedule, S.DRAFTING_RESOLUTION, TOL)
+    pop = AD.normalize_opening_population(cands, schedule, S.DRAFTING_RESOLUTION, TOL)
+    H.resolve_hosts(cands, walls, TOL)                 # hosting supplies the depth, and so the footprint
+    pop = AD.refresh(pop, cands)
     ops = AD.admitted_openings(cands, TOL)
     lines, _gaps = OP.build_wall_lines(walls, TOL, SPAN, openings=ops)
-    register = OP.build_opening_register(ops, lines, TOL)
+    register = OP.register_from_hosts(ops, lines, TOL)
     basis = OP.evaluate_opening_basis(lines, ops, TOL)
     ident = MA.classify_wall_identity(lines, TOL,
                                       annotations={ln.component_ref: ANNOTATED for ln in lines},
-                                      masonry_materials=("BLOCKWORK",))
+                                      material_map=S.MASONRY_MAP, wall_layers=("WALL",))
     by_ref = {r["COMPONENT_REF"]: r for r in ident["REGISTER"]}
     graph = DEP.build(register, lines, basis, by_ref, True, TOL, population=pop)
-    assert graph["BLOCKED_WALL_LINES"] == []
+    assert graph["BLOCKED_WALL_LINES"] == [], graph["BLOCKED"]
     rows = OP.wall_band_quantities(lines, register, HEIGHT, basis, graph["BLOCKED"], by_ref)
-    assert all(r["NET_AREA_M2"] is not None for r in rows)
+    assert all(r["NET_AREA_M2"] is not None for r in rows), [r["BLOCKED_BY"] for r in rows]

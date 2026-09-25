@@ -1,5 +1,15 @@
 # R5: what changed, why, and what it cost in published quantities
 
+> **Correction (R6).** The claim below that the thirty-five gaps are objects
+> "nothing in the source names as an opening" is **false**, and R5's own
+> admission register — in the package that sentence was delivered in — said so:
+> every one of them carries a `CAD_BLOCK_IDENTITY` of the form
+> `DOOR-<zone>::<ref>`. What R5 had found was that their rectangles overlap no
+> wall material, which is the normal condition for a door. See
+> `docs/R6_WHAT_CHANGED_AND_WHY.md`. This document is kept as the record of what
+> was reported, not as a statement of what is true.
+
+
 R4 was rejected as an automation baseline, on ten specific grounds. This is what
 each one turned out to be, what replaced it, and what the replacement does to the
 numbers. Nothing here was tuned toward the frozen takeoff, the historical

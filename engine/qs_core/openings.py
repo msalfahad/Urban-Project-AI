@@ -55,8 +55,32 @@ def _covered(lo, hi, spans):
     return sum(b - a for a, b in merged) / (hi - lo)
 
 
+def _bridging_pairs(openings):
+    """Openings whose resolved host is a pair of bracketing wall ends: each one closes exactly that gap.
+
+    This is the inversion the review asked for.  A confirmed opening is itself the evidence that two collinear
+    segments are one interrupted wall - it does not have to overlap both of them first to prove it.
+    """
+    out = {}
+    for o in openings or ():
+        rec = getattr(getattr(o, "candidate", None), "host_record", None) or {}
+        if rec.get("HOST_STATUS") != "HOST_CONFIRMED":
+            continue
+        # the host resolver reports which two segments face each other across the gap.  Falling back to the
+        # whole host set only works where the host was a single pair; a run chopped into five pieces has the
+        # same physical meaning and must bridge the same gap, which is why the pair is carried explicitly.
+        pair = rec.get("HOST_BRACKETING_SEGMENT_REFS")
+        if not pair:
+            refs = rec.get("HOST_SEGMENT_REFS") or []
+            pair = refs if len(refs) == 2 else None
+        if pair:
+            out[frozenset(pair)] = getattr(o, "opening_ref", None) or rec.get("CANDIDATE_REF")
+    return out
+
+
 def _gap_evidence(axis, lo, hi, offset_lo, offset_hi, floor, prev_ref, next_ref,
-                  max_opening_span, tolerance, openings, continuation_geometry, cad_continuity):
+                  max_opening_span, tolerance, openings, continuation_geometry, cad_continuity,
+                  bridging_pairs=None):
     """Is there evidence that wall material continues across this gap, or only that it could?
 
     A maximum opening span can REJECT a join - a 4 m hole is not a door - but it cannot prove one.  Two unrelated
@@ -69,6 +93,13 @@ def _gap_evidence(axis, lo, hi, offset_lo, offset_hi, floor, prev_ref, next_ref,
                 "MAX_OPENING_SPAN_M": max_opening_span,
                 "WHY": "no opening in this source is this wide, so the gap is not an opening"}
     pair = frozenset((prev_ref, next_ref))
+    bridged_by = (bridging_pairs or {}).get(pair)
+    if bridged_by:
+        return {"BRIDGED": True, "RELATION": GAP_BRIDGED_BY_CONFIRMED_OPENING, "GAP_M": round(width, 6),
+                "OPENINGS": [bridged_by], "OCCUPANCY": None,
+                "WHY": "a confirmed opening was resolved to these two wall ends, so the wall runs through the "
+                       "gap and the opening is deducted from it; the opening is the evidence for the join, "
+                       "not the other way round"}
     for rec in cad_continuity or ():
         if frozenset(rec.get("SEGMENTS", ())) >= pair:
             return {"BRIDGED": True, "RELATION": GAP_BRIDGED_BY_DECLARED_CAD_CONTINUITY,
@@ -76,8 +107,8 @@ def _gap_evidence(axis, lo, hi, offset_lo, offset_hi, floor, prev_ref, next_ref,
                     "WHY": "the source states that these segments are one object"}
     spans = []
     for o in openings or ():
-        if getattr(o, "floor", None) != floor:
-            continue
+        if getattr(o, "floor", None) != floor or getattr(o, "rect", None) is None:
+            continue          # no footprint yet: its host is unresolved, so it proves no continuity
         r = o.rect
         c0, c1 = _cross_span(r, axis)
         if min(c1, offset_hi) - max(c0, offset_lo) <= -tolerance:
@@ -124,6 +155,7 @@ def build_wall_lines(bands, tolerance, max_opening_span, openings=(), continuati
         key = (b.floor, b.axis, round(offset / tolerance), round((b.thickness or 0) / tolerance))
         groups.setdefault(key, []).append(b)
 
+    bridging = _bridging_pairs(openings)
     lines, gap_log = [], []
     for (floor, axis, _o, _t), members in sorted(groups.items()):
         members.sort(key=lambda m: m.bbox.x0 if axis == geom.AXIS_X else m.bbox.y0)
@@ -133,7 +165,8 @@ def build_wall_lines(bands, tolerance, max_opening_span, openings=(), continuati
             lo, hi = ((pb.x1, nb.x0) if axis == geom.AXIS_X else (pb.y1, nb.y0))
             off_lo, off_hi = _cross_span(pb, axis)
             ev = _gap_evidence(axis, lo, hi, off_lo, off_hi, floor, prev.component_ref, nxt.component_ref,
-                               max_opening_span, tolerance, openings, continuation_geometry, cad_continuity)
+                               max_opening_span, tolerance, openings, continuation_geometry, cad_continuity,
+                               bridging_pairs=bridging)
             ev.update({"FLOOR": floor, "AXIS": axis, "FROM_SEGMENT": prev.component_ref,
                        "TO_SEGMENT": nxt.component_ref, "FROM_M": round(lo, 6), "TO_M": round(hi, 6),
                        "THICKNESS_M": prev.thickness})
@@ -200,7 +233,10 @@ def evaluate_opening_basis(wall_lines, openings, tolerance):
         material = line.material_rects or line.rects
         tested = []
         for o in openings:
-            if o.floor != line.floor or not o.rect.expanded(tolerance).overlaps(line.bbox):
+            # an opening whose host is unresolved has no footprint yet, so there is nothing to test it with;
+            # its line is blocked by the host question, not by a basis it cannot have
+            if o.rect is None or o.floor != line.floor or \
+                    not o.rect.expanded(tolerance).overlaps(line.bbox):
                 continue
             inter = sum(i.area for i in (o.rect.intersection(r) for r in material) if i)
             share = inter / o.rect.area if o.rect.area > 0 else 0.0
@@ -306,6 +342,14 @@ def assign_opening_host(opening, wall_bands, tolerance):
     no branch in which a deduction is divided between candidates.
     """
     candidates = []
+    if opening.rect is None:
+        opening.host_status = HOST_WALL_UNRESOLVED
+        opening.host_confidence = CONFIDENCE_NONE
+        opening.host_candidates = []
+        opening.host_evidence = [Evidence("NO_FOOTPRINT_TO_SCORE", {
+            "WHY": "this opening has no resolved depth, so it has no rectangle; its host is decided by "
+                   "qs_core.hosting from the material around it, not by scoring overlaps"})]
+        return opening
     for band in wall_bands:
         if band.floor != opening.floor:
             continue
@@ -364,10 +408,54 @@ def assign_opening_host(opening, wall_bands, tolerance):
     return opening
 
 
+def register_from_hosts(openings, wall_lines, tolerance):
+    """The canonical register: every physical opening, the wall LINE its resolved host segments belong to,
+    and the deduction that follows.  Openings whose host is unresolved keep their place and carry no deduction.
+    """
+    from engine.qs_core.entities import HOST_ASSIGNED, HOST_WALL_UNRESOLVED
+
+    by_segment = {}
+    for ln in wall_lines:
+        for e in ln.evidence:
+            for seg in e.detail.get("SEGMENTS", []) or []:
+                by_segment[seg] = ln
+    for o in openings:
+        rec = getattr(getattr(o, "candidate", None), "host_record", None) or {}
+        refs = rec.get("HOST_SEGMENT_REFS") or []
+        host_lines = {by_segment[r].component_ref for r in refs if r in by_segment}
+        candidates = []
+        for c in rec.get("CANDIDATES", []):
+            wall_lines = sorted({by_segment[r].component_ref for r in c["COMPONENT_REFS"]
+                                 if r in by_segment})
+            candidates.append({"COMPONENT_REF": wall_lines[0] if len(wall_lines) == 1 else None,
+                               "WALL_LINES": wall_lines, "SEGMENT_REFS": c["COMPONENT_REFS"],
+                               "SCORE": c["SCORE"], "RELATION": c["RELATION"], "EVIDENCE": c["EVIDENCE"]})
+        o.host_candidates = candidates
+        if rec.get("HOST_STATUS") == "HOST_CONFIRMED" and len(host_lines) == 1:
+            o.host_status = HOST_ASSIGNED
+            o.host_component_ref = sorted(host_lines)[0]
+            o.host_thickness = rec.get("HOST_THICKNESS_M")
+            o.host_confidence = rec.get("CONFIDENCE")
+            o.host_evidence = [Evidence("HOST_PROVED_BY_THE_MATERIAL_AROUND_THE_OPENING", dict(rec))]
+        else:
+            o.host_status = HOST_WALL_UNRESOLVED
+            o.host_component_ref = None
+            o.host_thickness = None
+            o.host_confidence = rec.get("CONFIDENCE", CONFIDENCE_NONE)
+            o.host_evidence = [Evidence("HOST_NOT_RESOLVED", dict(
+                rec, WALL_LINES_THE_SEGMENTS_BELONG_TO=sorted(host_lines),
+                NOTE="the opening exists; what is unresolved is which wall it is deducted from"))]
+    return _summarise(openings, tolerance)
+
+
 def build_opening_register(openings, wall_bands, tolerance):
-    """The canonical register: every opening, its host or its lack of one, and the totals that follow."""
+    """Score-based host assignment, kept for callers that have no segment-level host resolution."""
     for o in openings:
         assign_opening_host(o, wall_bands, tolerance)
+    return _summarise(openings, tolerance)
+
+
+def _summarise(openings, tolerance):
     assigned = [o for o in openings if o.host_status == HOST_ASSIGNED]
     unresolved = [o for o in openings if o.host_status != HOST_ASSIGNED]
     by_band, by_thickness, width_by_band, unmeasured = {}, {}, {}, {}
@@ -444,17 +532,29 @@ def wall_band_quantities(wall_lines, register, height_record, basis_by_ref, bloc
         h = height if height_ok else None
         computable = gross_length is not None and h is not None
         net = round(gross_length * h - d, 6) if computable else None
-        reasons = (blocked_by_ref.get(b.component_ref) or {}).get("REASONS", [])
+        from engine.qs_core import masonry as _MA
+
+        reasons = list((blocked_by_ref.get(b.component_ref) or {}).get("REASONS", []))
         billable = ident.get("BILLABLE_AS_MASONRY")
-        # A band established NOT to be masonry is not an open question about the masonry quantity: it is a
-        # settled exclusion.  Blocking a subtotal because a column stands in the same thickness family would
-        # withhold finished work for a reason that has already been answered.
-        excluded = billable is False and ident.get("IDENTITY") != "WALL_IDENTITY_UNRESOLVED"
+        geometry = ident.get("GEOMETRY_IDENTITY")
+        material_identity = ident.get("MATERIAL_IDENTITY")
+        # A band the drawing settles is NOT a wall is a settled exclusion, not an open question: blocking a
+        # subtotal because a column shares a thickness family withholds finished work for an answered reason.
+        excluded = geometry == _MA.NON_WALL_ARTEFACT
+        # A wall whose material nobody states is the opposite case: measurable, unbilled, and a question.  The
+        # reasons come from the same function the dependency graph blocks on, so the row status and the graph
+        # cannot disagree about how much of this floor is held up.
+        for r in _MA.identity_blocks(ident):
+            if r not in reasons:
+                reasons.append(r)
         final = computable and not reasons and not excluded and billable is not False
         row = {
             "COMPONENT_REF": b.component_ref, "FLOOR": b.floor, "THICKNESS_M": b.thickness,
             "THICKNESS_FAMILY_M": ident.get("THICKNESS_FAMILY_M"),
-            "WALL_IDENTITY": ident.get("IDENTITY"), "BILLABLE_AS_MASONRY": billable,
+            "WALL_GEOMETRY_IDENTITY": ident.get("GEOMETRY_IDENTITY"),
+            "WALL_MATERIAL_IDENTITY": ident.get("MATERIAL_IDENTITY"),
+            "MATERIAL_EVIDENCE": ident.get("MATERIAL_EVIDENCE"),
+            "BILLABLE_AS_MASONRY": billable,
             "MATERIAL_LENGTH_M": round(material, 6),
             "HOSTED_OPENING_WIDTH_M": round(hosted_width, 6),
             "OPENING_BASIS": basis["BASIS"], "OPENING_BASIS_EVIDENCE": basis,
@@ -467,13 +567,14 @@ def wall_band_quantities(wall_lines, register, height_record, basis_by_ref, bloc
             "NET_AREA_M2": net if final else None,
             "STATUS": (QY.FINAL if final else
                        "EXCLUDED_NOT_MASONRY" if excluded else "BLOCKED_PENDING_ANSWERS"),
-            "EXCLUDED_BECAUSE": ident.get("WHY") if excluded else None,
+            "EXCLUDED_BECAUSE": ident.get("WHY_GEOMETRY") if excluded else None,
+            "EXCLUDED_REASON_KIND": ident.get("GEOMETRY_ARTEFACT_REASON") if excluded else None,
             "BLOCKED_BY": reasons or ([] if final else [
                 {"KIND": "OPENING_BASIS_UNRESOLVED" if gross_length is None else
                          "WALL_HEIGHT_NOT_ESTABLISHED" if h is None else "NOT_ESTABLISHED_AS_MASONRY",
                  "WHY": (gross_why if gross_length is None else
                          "no established source gives this wall's height" if h is None else
-                         ident.get("WHY", "this band is not established to be billable masonry"))}]),
+                         ident.get("WHY_MATERIAL", "this band is not established to be billable masonry"))}]),
         }
         if not final:
             row[QY.diagnostic_name("NET_AREA_M2")] = net

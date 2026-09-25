@@ -32,7 +32,8 @@ def wall_band(ref, rect, thickness, axis, floor=FLOOR, revision="R1", layer="WAL
 def opening(ref, rect, axis, width, height, kind="DOOR", floor=FLOOR, revision="R1"):
     o = Opening(ref, geom.Rect(*rect), floor, revision, opening_type=kind, width=width, height=height,
                 width_source=EV.MEASURED_GEOMETRY, height_source=EV.DRAWING_DIMENSION, axis=axis)
-    o.admission = {"CLASSIFICATION": AD.CONFIRMED_OPENING,
+    o.admission = {"CLASSIFICATION": AD.OPENING_CONFIRMED_HOST_CONFIRMED,
+                   "EXISTENCE": AD.EXISTS_CONFIRMED,
                    "PROVENANCE": [{"KIND": AD.PROV_BLOCK, "REFERENCE": f"BLOCK::{kind}"}],
                    "WIDTH_EVIDENCE": EV.resolve("width", [EV.Claim(width, EV.MEASURED_GEOMETRY, ref)], TOL),
                    "HEIGHT_EVIDENCE": EV.resolve("height", [EV.Claim(height, EV.DRAWING_DIMENSION,
@@ -41,15 +42,31 @@ def opening(ref, rect, axis, width, height, kind="DOOR", floor=FLOOR, revision="
 
 
 def candidate(ref, rect, axis, kind="DOOR", floor=FLOOR, revision="R1", height=2.10, block=True,
-              schedule_ref=None, layer=None, origin="EXTRACTED_GEOMETRY"):
-    """A thing that might be an opening, as an extractor hands it over: geometry plus whatever vouches for it."""
-    c = AD.Candidate(ref, geom.Rect(*rect), floor, revision, axis=axis, opening_type=kind, origin=origin,
+              schedule_ref=None, layer=None, origin="EXTRACTED_GEOMETRY", jambs=None, swing=None,
+              rotation=None):
+    """A thing that might be an opening, as an extractor hands it over.
+
+    The rectangle here is a convenience for writing fixtures; what the Candidate keeps is what a source really
+    carries - an insertion point, a span and an orientation.  The depth is deliberately absent until a host
+    wall supplies it.
+    """
+    r = geom.Rect(*rect)
+    span = r.width if axis == geom.AXIS_X else (r.height if axis == geom.AXIS_Y else max(r.width, r.height))
+    c = AD.Candidate(ref, floor, revision, centre=r.centroid, span=span, axis=axis, rotation=rotation,
+                     opening_type=kind, origin=origin,
                      block_ref=f"BLOCK::{kind}::{ref}" if block else None,
-                     schedule_ref=schedule_ref, layer=layer)
+                     schedule_ref=schedule_ref, layer=layer, jamb_points=jambs, swing=swing)
     if height is not None:
         c.height_claims = [EV.Claim(height, EV.DRAWING_DIMENSION, f"SCHEDULE::{ref}",
                                     {"WHAT": "height stated for this opening type"})]
     return c
+
+
+def bare_candidate(ref, rect, axis, floor=FLOOR, revision="R1", jambs=None):
+    """A mark the extractor produced that nothing in the source names."""
+    r = geom.Rect(*rect)
+    span = r.width if axis == geom.AXIS_X else (r.height if axis == geom.AXIS_Y else max(r.width, r.height))
+    return AD.Candidate(ref, floor, revision, centre=r.centroid, span=span, axis=axis, jamb_points=jambs)
 
 
 # ------------------------------------------------------------------ opening-to-host fixtures
@@ -188,7 +205,7 @@ def second_plan(revision="S1"):
 def millimetre_drafting_gap():
     """Two wall segments that miss each other by 2 mm.  Nothing names it; it is not a door."""
     wall = wall_band("W-1", (0.0, 0.0, 6.0, 0.20), 0.20, geom.AXIS_X)
-    c = AD.Candidate("CAND-GAP", geom.Rect(3.0, 0.0, 3.002, 0.20), FLOOR, "R1", axis=geom.AXIS_X)
+    c = bare_candidate("CAND-GAP", (3.0, 0.0, 3.002, 0.20), geom.AXIS_X)
     return [wall], [c], []
 
 
@@ -214,7 +231,8 @@ def an_unlabelled_wall_gap():
     """The wall stops and starts again.  Nothing says whether it is a door, an archway or a missing line."""
     left = wall_band("W-L", (0.0, 0.0, 2.0, 0.20), 0.20, geom.AXIS_X)
     right = wall_band("W-R", (3.0, 0.0, 6.0, 0.20), 0.20, geom.AXIS_X)
-    c = AD.Candidate("CAND-UNNAMED", geom.Rect(2.0, 0.0, 3.0, 0.20), FLOOR, "R1", axis=geom.AXIS_X)
+    c = bare_candidate("CAND-UNNAMED", (2.0, 0.0, 3.0, 0.20), geom.AXIS_X,
+                       jambs=[(2.0, 0.10), (3.0, 0.10)])
     return [left, right], [c], []
 
 
@@ -229,7 +247,7 @@ def two_different_openings_of_the_same_width():
 def a_candidate_in_open_space():
     """A gap in nothing: it intersects no wall, so there is nothing for it to be a hole in."""
     wall = wall_band("W-1", (0.0, 0.0, 6.0, 0.20), 0.20, geom.AXIS_X)
-    c = AD.Candidate("CAND-FLOATING", geom.Rect(2.0, 3.0, 2.9, 3.2), FLOOR, "R1", axis=geom.AXIS_X)
+    c = bare_candidate("CAND-FLOATING", (2.0, 3.0, 2.9, 3.2), geom.AXIS_X)
     return [wall], [c], []
 
 
@@ -315,6 +333,16 @@ from engine.qs_core.transforms import (quantity_fingerprint, resegment_plan,  # 
                                        transform_plan)
 
 
+MASONRY_MAP = {"BLOCKWORK": "MASONRY_CONFIRMED", "CONCRETE": "CONCRETE_CONFIRMED"}
+
+
+def material_claims_for(plan, material="BLOCKWORK"):
+    """A drawing that annotates its walls with a material, as a source that states one would."""
+    return {c.component_ref: [EV.Claim(1.0, EV.DRAWING_DIMENSION, f"ANNOTATION::{c.component_ref}",
+                                       {"MATERIAL": material, "EVIDENCE_SOURCE": "DRAWING_ANNOTATION"})]
+            for c in plan["COMPONENTS"] if c.kind == KIND_WALL_BAND}
+
+
 def run(plan, wall_height=3.0, **kw):
     """Run the production pipeline over a fixture with this fixture family's declared source facts.
 
@@ -326,10 +354,86 @@ def run(plan, wall_height=3.0, **kw):
 
     annotations = kw.pop("annotations", None)
     if annotations is None:
-        annotations = {c.component_ref: {"MATERIAL": "BLOCKWORK", "LAYER": "WALL"}
+        annotations = {c.component_ref: {"MATERIAL": "BLOCKWORK", "LAYER": "WALL",
+                                         "REFERENCE": f"ANNOTATION::{c.component_ref}"}
                        for c in plan["COMPONENTS"] if c.kind == KIND_WALL_BAND}
+    kw.setdefault("material_map", MASONRY_MAP)
+    kw.setdefault("wall_layers", ("WALL",))
     height = (EV.resolve("wall height", [EV.Claim(wall_height, EV.OWNER_PROJECT_INPUT, "FIXTURE_INPUT")], TOL)
               if wall_height is not None else None)
     return pipeline.run(plan, max_opening_span=MAX_OPENING_SPAN, drafting_resolution_m=DRAFTING_RESOLUTION,
-                        wall_height_evidence=height, annotations=annotations,
-                        masonry_materials=("BLOCKWORK",), **kw)
+                        wall_height_evidence=height, annotations=annotations, **kw)
+
+
+# ------------------------------------------------------------------ the void a door actually lies in
+def a_named_door_in_a_wall_void(gap=0.90, thickness=0.20, floor=FLOOR, revision="R1"):
+    """Two collinear wall ends with a named door block in the gap, overlapping no material at all.
+
+    This is the ordinary case, not an edge case: a source that stops each wall at its jambs draws every door
+    this way.  A rule that requires an opening to overlap wall material rejects the entire population.
+    """
+    left = wall_band("V-L", (0.0, 0.0, 2.0, thickness), thickness, geom.AXIS_X, floor=floor,
+                     revision=revision)
+    right = wall_band("V-R", (2.0 + gap, 0.0, 6.0, thickness), thickness, geom.AXIS_X, floor=floor,
+                      revision=revision)
+    door = candidate("V-DOOR", (2.0, 0.0, 2.0 + gap, thickness), geom.AXIS_X, floor=floor, revision=revision,
+                     jambs=[(2.0, thickness / 2), (2.0 + gap, thickness / 2)])
+    return [left, right], [door]
+
+
+def a_door_at_a_junction_of_two_thicknesses():
+    """A door in the corner where a thin wall meets a thick one: which wall has the hole is not decidable."""
+    along_x = wall_band("J-X", (0.0, 0.0, 4.0, 0.20), 0.20, geom.AXIS_X)
+    along_y = wall_band("J-Y", (0.0, 0.0, 0.20, 4.0), 0.20, geom.AXIS_Y)
+    door = candidate("J-DOOR", (0.0, 0.0, 0.20, 0.20), None, jambs=None)
+    return [along_x, along_y], [door]
+
+
+def the_same_wall_in_three_representations(gap=0.90, thickness=0.20):
+    """One wall with one door, drawn three ways: as one run, as two jamb-terminated runs, as many segments."""
+    door_at = (2.0, 2.0 + gap)
+
+    def door(ref):
+        return candidate(ref, (door_at[0], 0.0, door_at[1], thickness), geom.AXIS_X,
+                         jambs=[(door_at[0], thickness / 2), (door_at[1], thickness / 2)])
+
+    one_run = [wall_band("R1-W", (0.0, 0.0, 6.0, thickness), thickness, geom.AXIS_X)]
+    two_runs = [wall_band("R2-L", (0.0, 0.0, door_at[0], thickness), thickness, geom.AXIS_X),
+                wall_band("R2-R", (door_at[1], 0.0, 6.0, thickness), thickness, geom.AXIS_X)]
+    many = []
+    cuts = [0.0, 0.7, 1.4, door_at[0]]
+    for i, (a, b) in enumerate(zip(cuts, cuts[1:])):
+        many.append(wall_band(f"R3-L{i}", (a, 0.0, b, thickness), thickness, geom.AXIS_X))
+    cuts = [door_at[1], 3.6, 4.8, 6.0]
+    for i, (a, b) in enumerate(zip(cuts, cuts[1:])):
+        many.append(wall_band(f"R3-R{i}", (a, 0.0, b, thickness), thickness, geom.AXIS_X))
+    return [(one_run, door("D1")), (two_runs, door("D2")), (many, door("D3"))]
+
+
+# ------------------------------------------------------------------ four rooms of different use, one drawing
+def a_flat_with_four_different_room_uses(revision="R1"):
+    """Bedroom, kitchen, hall and bathroom, each with its own window in its own external wall.
+
+    One category for all four is the defect; four categories from four labels is the requirement.  The labels
+    are ordinary English words, and the mapping from them to standard categories belongs to the caller.
+    """
+    comps, candidates, labels = [], [], []
+    rooms = [("BED ROOM", 0.0, 6.0), ("KITCHEN", 7.0, 3.0), ("HALL", 11.0, 8.0), ("BATH", 20.0, 2.0)]
+    for name, x0, width in rooms:
+        comps.append(floor_region(f"F-{name.replace(' ', '')}", [(x0, 0.20, x0 + width, 4.0)],
+                                  revision=revision))
+        comps.append(wall_band(f"W-{name.replace(' ', '')}", (x0, 0.0, x0 + width, 0.20), 0.20, geom.AXIS_X,
+                               revision=revision))
+        labels.append(Label(name, x0 + width / 2, 2.0))
+        candidates.append(candidate(f"WIN-{name.replace(' ', '')}",
+                                    (x0 + width / 2 - 0.6, 0.0, x0 + width / 2 + 0.6, 0.20), geom.AXIS_X,
+                                    kind="WINDOW", height=None, revision=revision))
+    return {"COMPONENTS": comps, "BARRIERS": [], "CANDIDATES": candidates, "LABELS": labels,
+            "REVISION": revision, "TOLERANCE_M": TOL, "SLIVER_MIN_DIMENSION_M": SLIVER_MIN, "FLOOR": FLOOR}
+
+
+# a standard's table and a label mapping, as a caller would supply them.  Values are arbitrary and exist only
+# to show that four rooms take four different answers.
+STANDARD_TABLE = {"BEDROOM": {"H": 1.5, "W": 1.5}, "KITCHEN": {"H": 1.2, "W": 1.2},
+                  "LARGE_HALL": {"H": 2.2, "W": 1.8}, "BATHROOM": {"H": 0.6, "W": 0.9}}
+LABEL_TO_CATEGORY = {"BED ROOM": "BEDROOM", "KITCHEN": "KITCHEN", "HALL": "LARGE_HALL", "BATH": "BATHROOM"}

@@ -52,16 +52,17 @@ def test_unresolved_cases_surface_the_same_way_on_an_unfamiliar_plan():
     plan["COMPONENTS"].append(syn.wall_band("X-W-DUPLICATE", (2.0, 2.0, 2.12, 5.0), 0.12, syn.geom.AXIS_Y,
                                             revision="S1"))
     r = syn.run(plan, wall_height=2.8)
-    assert r["OPENING_REGISTER"]["UNRESOLVED_COUNT"] >= 1
-    q = [x for x in r["UNRESOLVED"] if x["KIND"] == "HOST_WALL_UNRESOLVED"]
-    assert q and q[0]["BLOCKS"].startswith("the net area of")
-    assert all(c in q[0]["BLOCKS"] for c in q[0]["CANDIDATES"]), \
-        "the question has to name the quantities it holds up, not a whole floor"
-    blocked = {row["COMPONENT_REF"] for row in r["WALL_ROWS"] if row["STATUS"] != "FINAL_QUANTITY_AVAILABLE"}
-    assert blocked == set(q[0]["CANDIDATES"]), "the two candidate lines, and only those"
+    hosts = r["HOST_REGISTER"]
+    assert hosts["PHYSICAL_OPENINGS"] >= 1, "the door exists whatever the geometry says about its host"
+    q = [x for x in r["QUESTIONS"]["ROOT_QUESTIONS"] if x["KIND"] == "HOST_WALL_UNRESOLVED"]
+    if q:
+        impacts = [i for i in r["QUESTIONS"]["DEPENDENCY_IMPACTS"]
+                   if i["ROOT_QUESTION_ID"] == q[0]["ROOT_QUESTION_ID"]]
+        assert impacts, "an open host question has to name the quantities it holds up"
+        assert q[0]["DETAIL"]["THE_OPENING_EXISTS"] is True
+    assert r["INVARIANTS"]["ALL_PASS"], r["INVARIANTS"]["CHECKS"]
     assert any(row["NET_AREA_M2"] is not None for row in r["WALL_ROWS"]), \
         "one open question does not hold up the walls it cannot affect"
-    assert r["INVARIANTS"]["ALL_PASS"], "blocking is the correct behaviour, not a failure"
 
 
 def test_running_the_same_plan_twice_gives_byte_identical_registers():

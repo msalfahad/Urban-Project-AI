@@ -145,6 +145,7 @@ class Opening:
     host_confidence: str = CONFIDENCE_NONE
     host_status: str = HOST_WALL_UNRESOLVED
     admission: dict = None           # how this opening came to be believed in: see qs_core.admission
+    candidate: object = None         # the source features it was admitted from: see qs_core.admission
 
     @property
     def area(self):
@@ -155,7 +156,10 @@ class Opening:
     def as_dict(self):
         return {"OPENING_REF": self.opening_ref, "UID": self.uid, "PERSISTENT_ID": self.persistent_id,
                 "FLOOR": self.floor, "SOURCE_REVISION": self.source_revision, "TYPE": self.opening_type,
-                "GEOMETRY": self.rect.as_tuple(), "AXIS": self.axis,
+                "GEOMETRY": None if self.rect is None else self.rect.as_tuple(), "AXIS": self.axis,
+                "CENTRE": (list(self.candidate.centre) if self.candidate is not None
+                           else (None if self.rect is None else list(self.rect.centroid))),
+                "SPAN_M": (round(self.candidate.span, 6) if self.candidate is not None else self.width),
                 "WIDTH_M": self.width, "WIDTH_SOURCE": self.width_source,
                 "HEIGHT_M": self.height, "HEIGHT_SOURCE": self.height_source,
                 "AREA_M2": None if self.area is None else round(self.area, 6),

@@ -27,6 +27,8 @@ BLOCK_HEIGHT_NOT_ESTABLISHED = "OPENING_HEIGHT_NOT_ESTABLISHED"
 BLOCK_WALL_HEIGHT_NOT_ESTABLISHED = "WALL_HEIGHT_NOT_ESTABLISHED"
 BLOCK_BASIS_UNRESOLVED = "OPENING_BASIS_UNRESOLVED"
 BLOCK_IDENTITY_UNRESOLVED = "WALL_IDENTITY_UNRESOLVED"
+BLOCK_MATERIAL_UNRESOLVED = "WALL_MATERIAL_NOT_ESTABLISHED"
+BLOCK_GEOMETRY_UNRESOLVED = "WALL_GEOMETRY_NOT_ESTABLISHED"
 UNASSOCIATED_OPENING = "UNRESOLVED_OPENING_NOT_ASSOCIATED_WITH_ANY_WALL"
 
 
@@ -50,7 +52,9 @@ def build(register, wall_lines, basis_by_ref, identity_by_ref, wall_height_estab
 
     for o in register["REGISTER"]:
         ref, status = o["OPENING_REF"], o["HOST_ASSIGNMENT_STATUS"]
-        cands = [c["COMPONENT_REF"] for c in o["HOST_CANDIDATES"]]
+        cands = sorted({ref for c in o["HOST_CANDIDATES"]
+                        for ref in (c.get("WALL_LINES") or
+                                    ([c["COMPONENT_REF"]] if c.get("COMPONENT_REF") else []))})
         for c in cands:
             edges.append({"FROM": ref, "FROM_KIND": NODE_OPENING, "TO": c, "TO_KIND": NODE_WALL_LINE,
                           "RELATION": "COULD_BE_HOSTED_BY" if status != HOST_ASSIGNED else "IS_HOSTED_BY"})
@@ -65,8 +69,14 @@ def build(register, wall_lines, basis_by_ref, identity_by_ref, wall_height_estab
             else:
                 # nothing intersects it; widen the search by the opening's own size before saying it is
                 # associated with nothing.  The radius is the object's own extent, not a chosen distance.
-                g = o["GEOMETRY"]
-                rect = geom.Rect(*g)
+                # an opening whose host is unresolved may have no footprint at all; its own span about its
+                # centre is the extent within which a wall could still turn out to be the answer
+                if o.get("GEOMETRY"):
+                    rect = geom.Rect(*o["GEOMETRY"])
+                else:
+                    cx, cy = o["CENTRE"]
+                    half = (o.get("SPAN_M") or tolerance) / 2.0
+                    rect = geom.Rect(cx - half, cy - half, cx + half, cy + half)
                 radius = max(rect.width, rect.height)
                 near = sorted(ln.component_ref for ln in wall_lines
                               if ln.floor == o["FLOOR"] and rect.expanded(radius).overlaps(ln.bbox))
@@ -81,7 +91,8 @@ def build(register, wall_lines, basis_by_ref, identity_by_ref, wall_height_estab
                                       "TO_KIND": NODE_WALL_LINE, "RELATION": "NEAR_ENOUGH_TO_BE_AFFECTED"})
                 else:
                     unassociated.append({
-                        "OPENING_REF": ref, "FLOOR": o["FLOOR"], "GEOMETRY": g, "AREA_M2": o["AREA_M2"],
+                        "OPENING_REF": ref, "FLOOR": o["FLOOR"], "GEOMETRY": o.get("GEOMETRY"),
+                        "CENTRE": o.get("CENTRE"), "SPAN_M": o.get("SPAN_M"), "AREA_M2": o["AREA_M2"],
                         "KIND": UNASSOCIATED_OPENING,
                         "WHY": "this opening has no candidate host and no wall line lies within its own "
                                "extent; nothing in the wall quantities can be shown to depend on it, so "
@@ -102,7 +113,16 @@ def build(register, wall_lines, basis_by_ref, identity_by_ref, wall_height_estab
     for c in ((population or {}).get("POPULATION") or []):
         if c["CLASSIFICATION"] != "OPENING_CANDIDATE_UNRESOLVED":
             continue
-        rect = geom.Rect(*c["GEOMETRY"])
+        # an unresolved candidate has no depth and so no footprint; its own span, about its centre, is the
+        # extent within which a wall could turn out to be affected
+        if c.get("GEOMETRY"):
+            rect = geom.Rect(*c["GEOMETRY"])
+        else:
+            cx, cy = c["CENTRE"]
+            half = c["SPAN_M"] / 2.0
+            rect = (geom.Rect(cx - half, cy - tolerance, cx + half, cy + tolerance)
+                    if c["AXIS"] != geom.AXIS_Y else
+                    geom.Rect(cx - tolerance, cy - half, cx + tolerance, cy + half))
         near = sorted(ln.component_ref for ln in wall_lines
                       if ln.floor == c["FLOOR"] and rect.expanded(tolerance).overlaps(ln.bbox))
         for ref in near:
@@ -136,21 +156,35 @@ def build(register, wall_lines, basis_by_ref, identity_by_ref, wall_height_estab
                    "WHY": "no established source gives the height of this wall, so no area can be computed "
                           "from its length"})
 
+    # a line whose own identity is open is held up by that, and the graph has to say so: a row reported as
+    # blocked and a line reported as non-blocked are the same line, and only one of them can be true
+    for ref in lines:
+        for reason in MA.identity_blocks(identity_by_ref.get(ref) or {}):
+            block(ref, NODE_WALL_LINE, dict(reason, WALL_LINE=ref))
+
     # subtotals and bill lines: a subtotal moves if any line that feeds it moves, and a line whose identity is
     # unresolved feeds it if the answer turns out to be masonry
     subtotals = {}
     for ln in wall_lines:
-        ident = (identity_by_ref.get(ln.component_ref) or {}).get("IDENTITY")
+        rec = identity_by_ref.get(ln.component_ref) or {}
+        geometry = rec.get("GEOMETRY_IDENTITY")
+        material = rec.get("MATERIAL_IDENTITY")
+        billable = rec.get("BILLABLE_AS_MASONRY")
         key = _thickness_key(ln.thickness, tolerance)
         s = subtotals.setdefault(key, {"THICKNESS_M": key, "LINES": [], "BILLABLE_LINES": [],
                                        "CANDIDATE_LINES": []})
         s["LINES"].append(ln.component_ref)
-        if ident in MA.BILLABLE:
+        if billable:
             s["BILLABLE_LINES"].append(ln.component_ref)
             edges.append({"FROM": ln.component_ref, "FROM_KIND": NODE_WALL_LINE, "TO": f"SUBTOTAL::{key}",
                           "TO_KIND": NODE_SUBTOTAL, "RELATION": "CONTRIBUTES_TO"})
-        elif ident == MA.WALL_IDENTITY_UNRESOLVED:
+        elif geometry != MA.NON_WALL_ARTEFACT:
+            # wall geometry whose material is unstated, or a band not yet established to be a wall: if the
+            # answer turns out to be masonry this subtotal is larger than anything released here
             s["CANDIDATE_LINES"].append(ln.component_ref)
+            s.setdefault("CANDIDATE_REASONS", {})[ln.component_ref] = (
+                "WALL_MATERIAL_NOT_ESTABLISHED" if geometry == MA.CONFIRMED_WALL_GEOMETRY
+                else "WALL_GEOMETRY_NOT_ESTABLISHED")
             edges.append({"FROM": ln.component_ref, "FROM_KIND": NODE_WALL_LINE, "TO": f"SUBTOTAL::{key}",
                           "TO_KIND": NODE_SUBTOTAL, "RELATION": "MIGHT_CONTRIBUTE_TO"})
 
@@ -163,10 +197,14 @@ def build(register, wall_lines, basis_by_ref, identity_by_ref, wall_height_estab
                        "WHY": "a line that feeds this subtotal is blocked, so the subtotal could change",
                        "LINE_REASONS": [r["KIND"] for r in blocked[ref]["REASONS"]]})
         for ref in s["CANDIDATE_LINES"]:
+            kind = (s.get("CANDIDATE_REASONS", {}) or {}).get(ref, BLOCK_IDENTITY_UNRESOLVED)
             block(node, NODE_SUBTOTAL,
-                  {"KIND": BLOCK_IDENTITY_UNRESOLVED, "WALL_LINE": ref,
-                   "WHY": "a band of this thickness has not been established to be masonry; if it is, this "
-                          "subtotal is larger than the released figure"})
+                  {"KIND": kind, "WALL_LINE": ref,
+                   "WHY": ("no applicable source states what this band is made of; if it is masonry, this "
+                           "subtotal is larger than any figure released here"
+                           if kind == "WALL_MATERIAL_NOT_ESTABLISHED" else
+                           "this band is not established to be a wall; if it is, this subtotal is larger "
+                           "than any figure released here")})
         edges.append({"FROM": node, "FROM_KIND": NODE_SUBTOTAL, "TO": f"BOQ::MASONRY::{key}",
                       "TO_KIND": NODE_BOQ, "RELATION": "IS_BILLED_AS"})
         if node in blocked:
@@ -183,7 +221,11 @@ def build(register, wall_lines, basis_by_ref, identity_by_ref, wall_height_estab
         "EDGES": sorted(edges, key=lambda e: (e["FROM_KIND"], e["FROM"], e["TO"])),
         "BLOCKED": dict(sorted(blocked.items())),
         "BLOCKED_WALL_LINES": sorted(r for r, b in blocked.items() if b["NODE_KIND"] == NODE_WALL_LINE),
-        "RELEASED_WALL_LINES": sorted(r for r in lines if r not in blocked),
+        # NOT "released": a line can be outside the blocked set because it is excluded from the trade
+        # altogether.  An excluded row is not a released quantity, and a field that conflates the two reads
+        # as more finished work than exists.
+        "NON_BLOCKED_WALL_LINES": sorted(r for r in lines if r not in blocked),
+        "NON_BLOCKED_MEANS": "not held up by an open question; it may still be excluded from the trade",
         "BLOCKED_SUBTOTALS": sorted(r for r, b in blocked.items() if b["NODE_KIND"] == NODE_SUBTOTAL),
         "SUBTOTALS": {str(k): v for k, v in sorted(subtotals.items(), key=lambda kv: (kv[0] is None, kv[0]))},
         "UNASSOCIATED_OPENINGS": sorted(unassociated, key=lambda u: u["OPENING_REF"]),

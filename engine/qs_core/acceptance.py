@@ -144,6 +144,204 @@ def grade(doc):
                            "the same building, described differently, has to measure the same; a result that "
                            "moves is a result that depends on the description"))
 
+    # A11 ------------------------------------------------------- the named source population is covered
+    pop = doc.get("OPENING_POPULATION") or {}
+    named = set(pop.get("NAMED_BY_THE_SOURCE") or [])
+    rows = {c["CANDIDATE_REF"]: c for c in pop.get("POPULATION", [])}
+    missing = sorted(named - set(rows))
+    checks.append(_chk("A11", "every opening the source names appears in the published population",
+                       bool(pop) and not missing,
+                       {"NAMED_BY_THE_SOURCE": len(named), "IN_THE_POPULATION": len(rows),
+                        "MISSING": missing},
+                       "an object the drawing names individually cannot be absent from the register that "
+                       "claims to be the population"))
+
+    # A12 ------------------------------------------------------- nothing appears or disappears
+    counts = pop.get("COUNTS") or {}
+    total = sum(counts.values()) if counts else None
+    conserved = bool(pop) and total == pop.get("CANDIDATES_IN") == len(rows)
+    checks.append(_chk("A12", "admitted plus excluded plus unresolved equals the source population", conserved,
+                       {"CANDIDATES_IN": pop.get("CANDIDATES_IN"), "SUM_OF_CLASSES": total,
+                        "POPULATION_ROWS": len(rows), "COUNTS": counts},
+                       "a classification that does not add up has either invented an object or lost one"))
+
+    # A13 ------------------------------------------------------- a named door stays admitted
+    physical = set(pop.get("PHYSICAL_OPENING_REFS") or [])
+    dropped = []
+    for ref in sorted(named - physical):
+        row = rows.get(ref, {})
+        cls = row.get("CLASSIFICATION")
+        if cls in ("DUPLICATE_OF_CONFIRMED_OPENING", "OPENING_CANDIDATE_UNRESOLVED"):
+            continue                       # a duplicate, or a contradiction the source itself creates
+        dropped.append({"REF": ref, "CLASSIFICATION": cls, "EVIDENCE": row.get("EVIDENCE")})
+    hosts = doc.get("HOST_REGISTER") or {}
+    unresolved_hosts = set(hosts.get("HOST_UNRESOLVED_REFS") or [])
+    retracted = sorted(unresolved_hosts - physical)
+    checks.append(_chk("A13", "a named opening stays admitted even where its host is unresolved",
+                       bool(pop) and not dropped and not retracted,
+                       {"NAMED": len(named), "PHYSICAL": len(physical),
+                        "HOST_UNRESOLVED": len(unresolved_hosts),
+                        "DROPPED_WITHOUT_CONTRADICTORY_EVIDENCE": dropped,
+                        "RETRACTED_BY_HOST_FAILURE": retracted},
+                       "failing to work out which wall a door is in is not evidence that the door is not "
+                       "there"))
+
+    # A14 ------------------------------------------------------- height coverage over the whole population
+    reg_rows = doc.get("OPENING_REGISTER_ROWS") or []
+    relevant = [o for o in reg_rows if o.get("OPENING_REF") in physical] or reg_rows
+    without = [{"OPENING_REF": o.get("OPENING_REF"),
+                "HEIGHT_STATUS": ((o.get("ADMISSION") or {}).get("HEIGHT_EVIDENCE") or {}).get("STATUS",
+                                                                                               "NO_RECORD")}
+               for o in relevant
+               if ((o.get("ADMISSION") or {}).get("HEIGHT_EVIDENCE") or {}).get("STATUS") != "ESTABLISHED"]
+    # a document with no stated physical population cannot claim to have checked one
+    checked_all = bool(pop) and bool(physical) and len(relevant) >= len(physical)
+    checks.append(_chk("A14", "height evidence is examined across the whole physical population",
+                       checked_all,
+                       {"PHYSICAL_OPENINGS": len(physical), "ROWS_EXAMINED": len(relevant),
+                        "WITHOUT_ESTABLISHED_HEIGHT": without},
+                       "checking only the openings that survived to a deduction reports a coverage the run "
+                       "did not achieve; an opening with no height is a question, and it has to be counted"))
+
+    # A15 ------------------------------------------------------- superseded evidence never wins
+    winners = []
+    for o in reg_rows:
+        adm = o.get("ADMISSION") or {}
+        for what in ("WIDTH_EVIDENCE", "HEIGHT_EVIDENCE"):
+            rec = adm.get(what) or {}
+            if rec.get("STATUS") != "ESTABLISHED":
+                continue
+            chosen = rec.get("REFERENCE")
+            for c in rec.get("CONSIDERED", []):
+                if c.get("REFERENCE") == chosen and c.get("STATUS") in ("SUPERSEDED", "WITHDRAWN"):
+                    winners.append({"OPENING_REF": o.get("OPENING_REF"), "WHAT": what,
+                                    "REFERENCE": chosen, "STATUS": c.get("STATUS")})
+    with_records = [o for o in reg_rows if (o.get("ADMISSION") or {}).get("HEIGHT_EVIDENCE")]
+    checks.append(_chk("A15", "a superseded or withdrawn claim never resolves a dimension",
+                       bool(with_records) and not winners,
+                       {"ROWS_READ": len(reg_rows), "ROWS_CARRYING_EVIDENCE_RECORDS": len(with_records),
+                        "OFFENDERS": winners},
+                       "seniority is not eligibility: a value the project retired outranks the standard that "
+                       "replaced it for ever, so rank alone will keep choosing it.  A document that carries "
+                       "no lifecycle records cannot show that it respected them"))
+
+    # A16 / A17 -------------------------------------------------- categories come from rooms, not defaults
+    cat = doc.get("ROOM_CATEGORY_REGISTER") or {}
+    cat_rows = cat.get("REGISTER") or []
+    without_room = [r["OPENING_REF"] for r in cat_rows
+                    if (r.get("CATEGORY") or {}).get("CATEGORY")
+                    and not ((r.get("CATEGORY") or {}).get("ROOM") or {}).get("ROOM_ID")]
+    no_categories_needed = bool(cat) and cat.get("OPENINGS") == 0
+    checks.append(_chk("A16", "every resolved category carries the host-room evidence it came from",
+                       bool(cat) and not without_room and (bool(cat_rows) or no_categories_needed),
+                       {"ROWS": len(cat_rows), "RESOLVED": cat.get("CATEGORY_RESOLVED"),
+                        "WITHOUT_HOST_ROOM": without_room},
+                       "a category with no room behind it is a default, whatever it is called"))
+    rooms = len(cat.get("DISTINCT_ROOMS") or [])
+    distinct = cat.get("DISTINCT_CATEGORY_COUNT")
+    defaulted = [r["OPENING_REF"] for r in cat_rows
+                 if ((r.get("CATEGORY") or {}).get("SOURCE") or "").endswith("DEFAULT")]
+    one_for_many = bool(cat_rows) and rooms > 1 and distinct == 1
+    checks.append(_chk("A17", "rooms of different use do not all receive one unexplained category",
+                       bool(cat) and not defaulted and not one_for_many,
+                       {"DISTINCT_ROOMS": rooms, "DISTINCT_CATEGORIES": distinct,
+                        "MARKED_AS_A_DEFAULT": defaulted},
+                       "one category across many rooms is a project-wide default; the point of a category is "
+                       "that it differs by use"))
+
+    # A18 ------------------------------------------------------- material proof is independent of geometry
+    ident_rows = doc.get("WALL_IDENTITY_REGISTER") or []
+    bad_material = []
+    for r in ident_rows:
+        if r.get("MATERIAL_IDENTITY") in (None, "MATERIAL_UNKNOWN"):
+            continue
+        ev = r.get("MATERIAL_EVIDENCE") or {}
+        if not ev.get("REFERENCE") or ev.get("EVIDENCE_SOURCE") not in (
+                r.get("MATERIAL_EVIDENCE_SOURCES_ACCEPTED") or []):
+            bad_material.append({"COMPONENT_REF": r.get("COMPONENT_REF"), "EVIDENCE": ev})
+        if r.get("THICKNESS_FAMILY_PROVES_MATERIAL"):
+            bad_material.append({"COMPONENT_REF": r.get("COMPONENT_REF"),
+                                 "WHY": "a thickness family was treated as material evidence"})
+    two_axes = all("GEOMETRY_IDENTITY" in r and "MATERIAL_IDENTITY" in r for r in ident_rows)
+    checks.append(_chk("A18", "material identity is proved independently of wall geometry",
+                       bool(ident_rows) and two_axes and not bad_material,
+                       {"BANDS": len(ident_rows), "TWO_AXES_PRESENT": two_axes,
+                        "OFFENDERS": bad_material},
+                       "shape and repetition establish a wall; only a document can establish what it is "
+                       "built from"))
+
+    # A19 ------------------------------------------------------- questions are not double counted
+    qs = doc.get("QUESTIONS") or {}
+    roots = qs.get("ROOT_QUESTIONS") or []
+    ids = [r["ROOT_QUESTION_ID"] for r in roots]
+    duplicate_ids = sorted({i for i in ids if ids.count(i) > 1})
+    orphans = qs.get("IMPACTS_WITHOUT_A_ROOT_QUESTION") or []
+    subjects = [(r["KIND"], r["SUBJECT_REF"]) for r in roots]
+    duplicate_subjects = sorted({s for s in subjects if subjects.count(s) > 1})
+    checks.append(_chk("A19", "one unanswered fact is one root question, and impacts do not inflate the count",
+                       bool(qs) and not duplicate_ids and not duplicate_subjects and not orphans,
+                       {"ROOT_QUESTIONS": len(roots), "IMPACTS": qs.get("DEPENDENCY_IMPACT_COUNT"),
+                        "DUPLICATE_IDS": duplicate_ids, "DUPLICATE_SUBJECTS": duplicate_subjects,
+                        "IMPACTS_WITHOUT_A_ROOT": orphans},
+                       "the same fact counted twice makes the source look worse than it is and the work list "
+                       "impossible to close"))
+
+    # A20 ------------------------------------------------------- the narrative agrees with the registers
+    def _at(path):
+        node = doc
+        for part in path.split("."):
+            if isinstance(node, list):
+                try:
+                    node = node[int(part)]
+                    continue
+                except (ValueError, IndexError):
+                    return None
+            if not isinstance(node, dict) or part not in node:
+                return None
+            node = node[part]
+        return node
+
+    assertions = doc.get("NARRATIVE_ASSERTIONS") or []
+    wrong = []
+    for a in assertions:
+        actual = _at(a.get("REGISTER_PATH", ""))
+        if actual != a.get("VALUE"):
+            wrong.append({"STATEMENT": a.get("STATEMENT"), "REGISTER_PATH": a.get("REGISTER_PATH"),
+                          "SAID": a.get("VALUE"), "REGISTER_SAYS": actual})
+    checks.append(_chk("A20", "every statement in the narrative is checkable against a register and agrees",
+                       bool(assertions) and not wrong,
+                       {"ASSERTIONS": len(assertions), "DISAGREEMENTS": wrong},
+                       "a report that contradicts its own registers is the failure that made the last round "
+                       "unusable, and it is the one thing no internal invariant can see"))
+
+    # A21 ------------------------------------------------------- row status and line blocking say the same
+    status = doc.get("WALL_LINE_STATUS") or {}
+    blocked_lines = set(status.get("BLOCKED") or [])
+    open_lines = set(status.get("NOT_BLOCKED") or [])
+    wall_rows = doc.get("WALL_ROWS") or []
+    contradictions = []
+    for r in wall_rows:
+        ref, st = r.get("COMPONENT_REF"), r.get("STATUS")
+        if st == "BLOCKED_PENDING_ANSWERS" and ref not in blocked_lines:
+            contradictions.append({"COMPONENT_REF": ref, "ROW_SAYS": st, "LINE_SAYS": "NOT_BLOCKED"})
+        elif st == "FINAL_QUANTITY_AVAILABLE" and ref in blocked_lines:
+            contradictions.append({"COMPONENT_REF": ref, "ROW_SAYS": st, "LINE_SAYS": "BLOCKED"})
+    stated = ((doc.get("PUBLICATION") or {}).get("ROW_CATEGORIES") or {})
+    counted = {"FINAL": sum(1 for r in wall_rows if r.get("STATUS") == "FINAL_QUANTITY_AVAILABLE"),
+               "BLOCKED": sum(1 for r in wall_rows if r.get("STATUS") == "BLOCKED_PENDING_ANSWERS"),
+               "EXCLUDED": sum(1 for r in wall_rows if r.get("STATUS") == "EXCLUDED_NOT_MASONRY"),
+               "OF": len(wall_rows)}
+    miscounted = {k: {"SAID": stated.get(k), "ROWS_SAY": v} for k, v in counted.items()
+                  if stated.get(k) != v}
+    checks.append(_chk("A21", "the row categories and the line blocking are the same statement twice",
+                       bool(wall_rows) and bool(status) and not contradictions and not miscounted,
+                       {"WALL_ROWS": len(wall_rows), "BLOCKED_LINES": len(blocked_lines),
+                        "NOT_BLOCKED_LINES": len(open_lines), "STATED_CATEGORIES": stated or None,
+                        "ROWS_SAY": counted, "CONTRADICTIONS": contradictions,
+                        "MISCOUNTED": miscounted},
+                       "a document that calls a line blocked in one table and released in another lets a "
+                       "reader pick the number they prefer, and one of the two is always wrong"))
+
     failed = [c for c in checks if c["RESULT"] == FAIL]
     return {"GATE": "QS_CORE_ACCEPTANCE", "CHECKS": checks, "PASSED": len(checks) - len(failed),
             "OF": len(checks), "ALL_PASS": not failed,

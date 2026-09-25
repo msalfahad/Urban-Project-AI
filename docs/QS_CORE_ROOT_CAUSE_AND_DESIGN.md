@@ -223,15 +223,34 @@ export PYTHONPATH=$PWD
 python -m pytest tests/test_qs_core_*.py -o addopts= -v
 
 # the project regression: reads the frozen takeoff, never writes it
-python -m research.qs_wall_treatment_01.pa09.alrashed.regression_r5
-python -m pytest tests/test_pa09_alrashed_regression_r5.py -o addopts= -v
+python -m research.qs_wall_treatment_01.pa09.alrashed.regression_r6
+python -m pytest tests/test_pa09_alrashed_regression_r6.py -o addopts= -v
 
 # the deliverable package, verified after it is written
-python docs/build_r5_validation_package.py
+python docs/build_r6_validation_package.py
 ```
 
 Artifacts land in `data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa09_alrashed/`:
-`ALRASHED_GENERIC_ENGINE_VALIDATION.json` and the registers beside it - opening
-admission, per-wall opening basis, masonry identity, dependency and blocking,
-space-assembly validation, final versus blocked quantities, opening to host,
-component to room membership, entity lineage, and the anti-calibration audit.
+`ALRASHED_GENERIC_ENGINE_VALIDATION_R6.json` and the registers beside it - the
+source opening population, opening admission, opening to host, the evidence
+claim lifecycle, window room and category, wall geometry and wall material
+separately, the root questions, the dependency impacts, final versus blocked
+quantities, component to room membership, entity lineage, the before-and-after
+table and the anti-calibration audit.
+
+## 10. What R6 corrected
+
+Twelve grounds, each checked against R5's own registers before any code was
+touched: existence separated from hosting; the opening carried as source
+features rather than a fabricated rectangle; the depth taken from a resolved
+host; competing hosts published rather than resolved by proximity; evidence
+given a lifecycle so a retired claim cannot win; window categories taken from
+host rooms; geometry identity separated from material identity; root questions
+separated from their consequences; row status reported in three categories that
+reconcile with the line blocking; the gate extended to twenty-one checks that
+score 0/21 on R4; and CAD evidence exhausted before any other source was
+opened. `docs/R6_WHAT_CHANGED_AND_WHY.md` has the object-by-object table.
+
+The R5 adapter no longer runs, by design: it built each opening as a rectangle
+of a guessed depth, and that constructor is gone. A test in
+`tests/test_pa09_alrashed_regression_r5.py` asserts that it raises.

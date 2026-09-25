@@ -269,9 +269,11 @@ def unusual_band_is_not_billed_on_thickness_alone(identity_register, rows):
             continue
         if i is None:
             offenders.append({"ROW": r.get("COMPONENT_REF"), "WHY": "billed with no identity record at all"})
-        elif i["IDENTITY"] not in MA.BILLABLE:
-            offenders.append({"ROW": r.get("COMPONENT_REF"), "IDENTITY": i["IDENTITY"],
-                              "WHY": "billed although its identity is not established as masonry"})
+        elif not i["BILLABLE_AS_MASONRY"]:
+            offenders.append({"ROW": r.get("COMPONENT_REF"),
+                              "GEOMETRY_IDENTITY": i["GEOMETRY_IDENTITY"],
+                              "MATERIAL_IDENTITY": i["MATERIAL_IDENTITY"],
+                              "WHY": "billed although one of its two identities is not established"})
         elif not i["THICKNESS_FAMILY_PROVED"] and not i.get("ANNOTATION"):
             offenders.append({"ROW": r.get("COMPONENT_REF"), "THICKNESS_M": i["THICKNESS_M"],
                               "FAMILY_MEMBERS": i["THICKNESS_FAMILY_MEMBERS"],
@@ -279,7 +281,8 @@ def unusual_band_is_not_billed_on_thickness_alone(identity_register, rows):
                                      "annotation to support it"})
     return _rec("INV-16_A_BAND_IS_NOT_BILLED_AS_MASONRY_BECAUSE_IT_HAS_A_THICKNESS", not offenders,
                 {"IDENTITY_RECORDS": len(ident), "ROWS": len(rows),
-                 "BILLABLE_IDENTITIES": list(MA.BILLABLE)}, 0, {"OFFENDERS": offenders},
+                 "BILLABLE_GEOMETRY": list(MA.BILLABLE_GEOMETRY),
+                 "BILLABLE_MATERIAL": list(MA.BILLABLE_MATERIAL)}, 0, {"OFFENDERS": offenders},
                 "every final row matched to its identity record and to the thickness family behind it")
 
 
@@ -385,7 +388,7 @@ def excluded_bands_do_not_block_a_subtotal(rows, publication):
     Both errors cost quantities: treating a column as an unanswered question withholds finished masonry, and
     treating an unresolved band as an exclusion publishes a subtotal that could still grow.
     """
-    excluded = {r["COMPONENT_REF"] for r in rows if r.get("STATUS") == "EXCLUDED_NOT_MASONRY"}
+    excluded = {r["COMPONENT_REF"] for r in rows if r.get("STATUS") == "EXCLUDED_NOT_MASONRY"}  # noqa: E501
     listed = {r["COMPONENT_REF"] for r in publication.get("EXCLUDED_ROWS", [])}
     offenders = []
     if excluded != listed:
@@ -406,6 +409,94 @@ def excluded_bands_do_not_block_a_subtotal(rows, publication):
                 {"ROWS": len(rows), "EXCLUDED": len(excluded)}, 0, {"OFFENDERS": offenders},
                 "every excluded band checked against the publication's exclusion list and against every "
                 "subtotal's blocked-row list")
+
+
+def material_is_never_inferred_from_shape(identity_register, rows):
+    """Geometry proves a wall.  It never proves what the wall is made of.
+
+    The defect this replaces billed blockwork off a thickness that appeared twice in the drawing.  Repetition
+    of a dimension is a fact about draughting, and a bill item is a fact about construction.
+    """
+    from engine.qs_core import masonry as MA, quantities as QY
+
+    ident = {r["COMPONENT_REF"]: r for r in identity_register["REGISTER"]}
+    offenders = []
+    for r in identity_register["REGISTER"]:
+        if r["MATERIAL_IDENTITY"] == MA.MATERIAL_UNKNOWN:
+            continue
+        ev = r.get("MATERIAL_EVIDENCE") or {}
+        if ev.get("EVIDENCE_SOURCE") not in MA.MATERIAL_EVIDENCE_SOURCES:
+            offenders.append({"COMPONENT_REF": r["COMPONENT_REF"],
+                              "MATERIAL_IDENTITY": r["MATERIAL_IDENTITY"],
+                              "EVIDENCE_SOURCE": ev.get("EVIDENCE_SOURCE"),
+                              "WHY": "a material was established by something that cannot state a material"})
+        if r.get("THICKNESS_FAMILY_PROVES_MATERIAL"):
+            offenders.append({"COMPONENT_REF": r["COMPONENT_REF"],
+                              "WHY": "a thickness family was recorded as material evidence"})
+    for row in rows:
+        if row.get("STATUS") != QY.FINAL:
+            continue
+        i = ident.get(row.get("COMPONENT_REF")) or {}
+        if not (i.get("MATERIAL_EVIDENCE") or {}).get("REFERENCE"):
+            offenders.append({"ROW": row.get("COMPONENT_REF"),
+                              "WHY": "billed as masonry with no document stating the material"})
+    return _rec("INV-23_MATERIAL_IS_NEVER_INFERRED_FROM_SHAPE_OR_REPETITION", not offenders,
+                {"BANDS": len(ident), "ROWS": len(rows),
+                 "SOURCES_THAT_MAY_STATE_A_MATERIAL": list(MA.MATERIAL_EVIDENCE_SOURCES)}, 0,
+                {"OFFENDERS": offenders},
+                "every material identity traced to the document that states it, and every billed row checked "
+                "for one")
+
+
+def named_source_openings_are_conserved(population, hosts, register):
+    """Every object the source names survives admission, hosting and publication, or is explained.
+
+    R5 lost thirty-five named doors between the CAD file and the report.  Nothing in the engine noticed,
+    because nothing counted the source population against the published one.
+    """
+    named = set(population["NAMED_BY_THE_SOURCE"])
+    in_population = {c["CANDIDATE_REF"] for c in population["POPULATION"]}
+    physical = set(population["PHYSICAL_OPENING_REFS"])
+    hosted = {r["CANDIDATE_REF"] for r in hosts["REGISTER"]}
+    published = {o["OPENING_REF"] for o in register["REGISTER"]}
+    lost_from_population = sorted(named - in_population)
+    excluded = {c["CANDIDATE_REF"]: c["CLASSIFICATION"] for c in population["POPULATION"]
+                if c["CANDIDATE_REF"] in named and c["CANDIDATE_REF"] not in physical}
+    unexplained = sorted(ref for ref, cls in excluded.items()
+                         if cls not in ("DUPLICATE_OF_CONFIRMED_OPENING", "OPENING_CANDIDATE_UNRESOLVED"))
+    lost_before_hosting = sorted(physical - hosted)
+    lost_before_publication = sorted(physical - published)
+    ok = not (lost_from_population or unexplained or lost_before_hosting or lost_before_publication)
+    return _rec("INV-24_A_NAMED_SOURCE_OPENING_IS_CONSERVED_TO_THE_END", ok,
+                {"NAMED_BY_THE_SOURCE": len(named), "PHYSICAL": len(physical), "HOSTED": len(hosted),
+                 "PUBLISHED": len(published)}, 0,
+                {"LOST_FROM_THE_POPULATION": lost_from_population,
+                 "EXCLUDED_WITHOUT_CONTRADICTORY_EVIDENCE": unexplained,
+                 "LOST_BEFORE_HOSTING": lost_before_hosting,
+                 "LOST_BEFORE_PUBLICATION": lost_before_publication},
+                "the source population counted against the admitted, hosted and published populations")
+
+
+def existence_is_not_retracted_by_host_failure(population, hosts):
+    """An opening whose host could not be worked out is still an opening."""
+    from engine.qs_core import admission as AD
+
+    by_ref = {c["CANDIDATE_REF"]: c for c in population["POPULATION"]}
+    offenders = []
+    for r in hosts["REGISTER"]:
+        c = by_ref.get(r["CANDIDATE_REF"], {})
+        if r["HOST_STATUS"] != "HOST_CONFIRMED" and \
+                c.get("CLASSIFICATION") != AD.OPENING_CONFIRMED_HOST_UNRESOLVED:
+            offenders.append({"OPENING": r["CANDIDATE_REF"], "CLASSIFICATION": c.get("CLASSIFICATION"),
+                              "WHY": "its host is unresolved and its existence was downgraded with it"})
+        if c.get("EXISTENCE") != AD.EXISTS_CONFIRMED:
+            offenders.append({"OPENING": r["CANDIDATE_REF"], "EXISTENCE": c.get("EXISTENCE"),
+                              "WHY": "an opening reached host resolution without confirmed existence"})
+    return _rec("INV-25_AN_UNRESOLVED_HOST_NEVER_RETRACTS_AN_OPENING", not offenders,
+                {"HOSTED_OR_ATTEMPTED": len(hosts["REGISTER"]),
+                 "HOST_UNRESOLVED": hosts["HOST_UNRESOLVED"]}, 0, {"OFFENDERS": offenders},
+                "every host record checked against the classification the same object carries in the "
+                "population")
 
 
 def evaluate_all(**checks):

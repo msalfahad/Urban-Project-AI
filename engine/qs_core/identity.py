@@ -33,12 +33,20 @@ def fingerprint(entity, places=4):
     """A hash of the geometry and its kind.  Identical input, identical fingerprint, on any machine."""
     rects = getattr(entity, "rects", None)
     if rects is None:
-        rects = [entity.rect]
+        rects = [entity.rect] if getattr(entity, "rect", None) is not None else []
     parts = [str(getattr(entity, "kind", getattr(entity, "opening_type", ""))),
              str(entity.floor),
              str(round(entity.thickness, places)) if getattr(entity, "thickness", None) is not None else "-",
              str(getattr(entity, "axis", "-") or "-")]
     parts += [",".join(str(v) for v in t) for t in sorted(r.as_tuple(places) for r in rects)]
+    if not rects:
+        # an opening whose host is unresolved has no footprint yet.  Its identity is the source features it
+        # was admitted from, so it can still be matched across revisions - an object with no geometry is not
+        # an object with no identity.
+        c = getattr(entity, "candidate", None)
+        if c is not None:
+            parts += ["FEATURES", ",".join(str(round(v, places)) for v in c.centre),
+                      str(round(c.span, places))]
     return hashlib.sha256("|".join(parts).encode()).hexdigest()[:16]
 
 

@@ -62,7 +62,9 @@ def test_every_tolerance_and_threshold_is_declared_with_a_reason():
         "engine/qs_core/openings.py": ["DECISIVE_MARGIN", "GAP_OCCUPANCY", "SPANS_SHARE"],
         "engine/qs_core/spaces.py": ["MAJORITY"],
         "engine/qs_core/identity.py": ["MIN_IOU_MATCH", "AMBIGUITY_BAND", "SPLIT_SHARE"],
-        "engine/qs_core/admission.py": ["DUPLICATE_OVERLAP", "WALL_INTERSECTION_SHARE"],
+        "engine/qs_core/admission.py": ["DUPLICATE_SPAN_OVERLAP"],
+        "engine/qs_core/hosting.py": ["DECISIVE_MARGIN", "STRUCTURAL_FIT_MIN"],
+        "engine/qs_core/masonry.py": ["MATERIAL_EVIDENCE_SOURCES"],
         "engine/qs_core/masonry.py": ["WALL_ASPECT_MIN", "FAMILY_MIN_MEMBERS", "DUPLICATE_SHARE",
                                       "JUNCTION_COVERAGE"],
     }
@@ -139,6 +141,20 @@ def test_the_engine_holds_no_list_of_acceptable_wall_thicknesses():
                 offenders.append({"FILE": str(p), "LINE": n, "TEXT": line.strip()})
             if _re.search(r"THICKNESS[A-Z_]*\s*(in|==)\s*[\(\[{]", line):
                 offenders.append({"FILE": str(p), "LINE": n, "TEXT": line.strip()})
+    assert not offenders, offenders
+
+
+def test_the_engine_holds_no_project_vocabulary_for_rooms_or_materials():
+    """Which words a drawing uses for its rooms, and which materials a bill has, belong to the caller."""
+    vocabulary = ("BED ROOM", "DEWANIYA", "LIVING_ROOM", "MAJLIS", "BLOCKWORK", "AAC", "THERMASTONE")
+    offenders = []
+    for p in CORE:
+        if p.name == "synthetic.py":
+            continue          # the fixtures module plays the CALLER: supplying a vocabulary is its job
+        text = p.read_text("utf-8")
+        for word in vocabulary:
+            if word in text:
+                offenders.append({"FILE": str(p), "WORD": word})
     assert not offenders, offenders
 
 
