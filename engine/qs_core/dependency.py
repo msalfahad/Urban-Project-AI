@@ -233,3 +233,108 @@ def build(register, wall_lines, basis_by_ref, identity_by_ref, wall_height_estab
                 "other reason; blocking a node whose value cannot change hides a quantity that is finished, "
                 "and releasing one whose value can change publishes a guess",
     }
+
+
+# ------------------------------------------------------------------ blocker sets
+#
+# "Affects", "removes a blocker" and "releases" are three different statements, and R6's report used the third
+# where only the first was true: four material questions were called the whole bottleneck, when many of the
+# rows they touch are also waiting on an unresolved host, an unresolved height or an unsettled basis.  A
+# question that removes one of three blockers releases nothing.  These are the definitions everything
+# downstream - including every sentence of prose - is generated from.
+
+AFFECTS = "the answer participates in determining this node"
+REMOVES_ONE = "answering this removes one of the blockers on this node"
+RELEASES = "answering this alone makes this node publishable under the current state"
+
+NODE_BLOCKED = "BLOCKED"
+NODE_PUBLISHABLE = "PUBLISHABLE_UNDER_THE_CURRENT_STATE"
+NODE_EXCLUDED = "EXCLUDED_FROM_THE_TRADE"
+
+
+def blocker_sets(graph, questions, wall_rows=()):
+    """Per node: which unique facts it waits on, and - separately - which single answers would free it.
+
+    Set-valued and idempotent by construction: building this twice from the same graph gives the same object,
+    and an edge recorded from two construction paths counts once.
+    """
+    by_node, downstream = {}, {}
+    for i in questions.get("DEPENDENCY_IMPACTS", []):
+        by_node.setdefault(str(i["NODE"]), set()).add(i["ROOT_QUESTION_ID"])
+    for e in graph.get("EDGES", []):
+        if e["FROM_KIND"] in (NODE_WALL_LINE, NODE_SUBTOTAL):
+            downstream.setdefault(str(e["FROM"]), set()).add(str(e["TO"]))
+
+    excluded = {r["COMPONENT_REF"] for r in wall_rows or () if r.get("STATUS") == "EXCLUDED_NOT_MASONRY"}
+    kind_of = {}
+    for kind, refs in (graph.get("NODES") or {}).items():
+        for ref in refs:
+            kind_of[str(ref)] = kind
+
+    nodes = {}
+    for node in sorted(set(by_node) | set(kind_of)):
+        blockers = sorted(by_node.get(node, set()))
+        status = (NODE_EXCLUDED if node in excluded else
+                  NODE_BLOCKED if blockers else NODE_PUBLISHABLE)
+        nodes[node] = {
+            "NODE": node,
+            "NODE_KIND": kind_of.get(node, "UNKNOWN"),
+            "NODE_STATUS": status,
+            "BLOCKER_IDS": blockers,
+            "BLOCKER_COUNT": len(blockers),
+            "DIRECTLY_AFFECTED_BY": blockers,
+            "ANSWER_ALONE_RELEASES_NODE": blockers[0] if len(blockers) == 1 else None,
+            "REMAINING_BLOCKERS_IF_ANSWERED": {q: sorted(set(blockers) - {q}) for q in blockers},
+            "DOWNSTREAM": sorted(downstream.get(node, set())),
+        }
+
+    per_question = {}
+    for q in questions.get("ROOT_QUESTIONS", []):
+        qid = q["ROOT_QUESTION_ID"]
+        affected = sorted(n for n, rec in nodes.items() if qid in rec["BLOCKER_IDS"])
+        releases = sorted(n for n in affected if nodes[n]["ANSWER_ALONE_RELEASES_NODE"] == qid)
+        per_question[qid] = {
+            "ROOT_QUESTION_ID": qid,
+            "KIND": q["KIND"],
+            "AFFECTS_NODES": affected,
+            "AFFECTS_NODE_COUNT": len(affected),
+            "RELEASES_NODES": releases,
+            "RELEASES_NODE_COUNT": len(releases),
+            "REMOVES_A_BLOCKER_BUT_LEAVES_OTHERS": sorted(set(affected) - set(releases)),
+            "RELEASES_WALL_LINES": [n for n in releases if nodes[n]["NODE_KIND"] == NODE_WALL_LINE],
+            "RELEASES_SUBTOTALS": [n for n in releases if nodes[n]["NODE_KIND"] == NODE_SUBTOTAL],
+        }
+
+    return {
+        "DEFINITIONS": {"AFFECTS": AFFECTS, "REMOVES_ONE_BLOCKER": REMOVES_ONE, "RELEASES": RELEASES},
+        "NODES": nodes,
+        "BY_ROOT_QUESTION": dict(sorted(per_question.items())),
+        "BLOCKED_NODE_COUNT": sum(1 for r in nodes.values() if r["NODE_STATUS"] == NODE_BLOCKED),
+        "NODES_RELEASED_BY_ONE_ANSWER": sum(1 for r in nodes.values()
+                                            if r["ANSWER_ALONE_RELEASES_NODE"] is not None),
+        "NODES_WITH_SEVERAL_BLOCKERS": sum(1 for r in nodes.values() if r["BLOCKER_COUNT"] > 1),
+        "RULE": "a root question may be said to RELEASE a node only when it is that node's only remaining "
+                "blocker.  Anything else removes one blocker and leaves the rest, and must be reported that "
+                "way, whatever the headline would prefer",
+    }
+
+
+def simulate(blockers, answered):
+    """What would actually be released if this set of questions were answered, and what would still not be."""
+    answered = set(answered or ())
+    released, still = [], []
+    for node, rec in sorted(blockers["NODES"].items()):
+        if rec["NODE_STATUS"] != NODE_BLOCKED:
+            continue
+        remaining = sorted(set(rec["BLOCKER_IDS"]) - answered)
+        (released if not remaining else still).append(
+            {"NODE": node, "NODE_KIND": rec["NODE_KIND"], "REMAINING_BLOCKERS": remaining})
+    return {
+        "ANSWERED": sorted(answered),
+        "RELEASED_NODES": released,
+        "RELEASED_NODE_COUNT": len(released),
+        "STILL_BLOCKED": still,
+        "STILL_BLOCKED_COUNT": len(still),
+        "RULE": "this is the only statement about what an answer is worth that may be published; a count of "
+                "affected nodes is not a count of released ones",
+    }

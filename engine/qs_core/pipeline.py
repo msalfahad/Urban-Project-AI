@@ -12,9 +12,11 @@ questions that are not.
 
 from __future__ import annotations
 
-from engine.qs_core import (admission as AD, dependency as DEP, evidence as EV, hosting as HO, identity,
-                            invariants, masonry as MA, openings as op, questions as QN, quantities as QY,
-                            room_category as RC, space_validation as SV, spaces as sp)
+from engine.qs_core import (admission as AD, dependency as DEP, evidence as EV, final_state as FS,
+                            hosting as HO, identity, invariants, masonry as MA, openings as op,
+                            questions as QN, quantities as QY, report_claims as RCL,
+                            room_category as RC,
+                            space_validation as SV, spaces as sp)
 from engine.qs_core.entities import (ASSIGNED_TO_SPACE, CONFIDENCE_NONE, CONFIDENCE_PROVEN, Evidence,
                                      KIND_EXTERNAL, KIND_WALL_BAND, MeasurementObject, SPACE_LABEL_CONFLICT,
                                      UNRESOLVED)
@@ -68,7 +70,8 @@ def run(plan, max_opening_span, drafting_resolution_m, wall_height_evidence=None
         closure_tolerance=1e-6, schedule_rows=(), continuation_geometry=(), cad_continuity=(),
         annotations=None, material_claims=None, material_map=None, thickness_families=None,
         wall_layers=(), subject_of=None, room_category_mapping=None, category_resolver=None,
-        standard_table=None, standard_reference=None, needs_a_category=None):
+        standard_table=None, standard_reference=None, needs_a_category=None, space_role=None,
+        material_scopes=None, exclusion_evidence=None):
     """Run the engine over one plan, in the order the evidence allows.
 
     Admission decides what EXISTS, from what the source names, and consults no wall geometry.  Host resolution
@@ -94,38 +97,48 @@ def run(plan, max_opening_span, drafting_resolution_m, wall_height_evidence=None
     confirmed = AD.admitted_openings(plan["CANDIDATES"], tol, subject_of=subject_of, revision=revision)
     id_report = identity.assign_identity(list(comps) + list(confirmed), revision)
 
-    # 3 -- wall lines, closed where the source proves continuity; a confirmed opening IS that proof
+    # 3 -- wall lines, closed where the source proves continuity; a confirmed opening IS that proof.  This
+    #      needs the openings' footprints, which hosting has supplied, and nothing about their dimensions.
     bands, gap_log = op.build_wall_lines(segments, tol, max_opening_span, openings=confirmed,
                                          continuation_geometry=continuation_geometry,
                                          cad_continuity=cad_continuity)
 
-    # 4 -- the register, from resolved hosts; then the basis of each line, then what each line IS
-    register = op.register_from_hosts(confirmed, bands, tol)
-    basis = op.evaluate_opening_basis(bands, [o for o in confirmed if o.rect is not None], tol)
-    ident = MA.classify_wall_identity(bands, tol, annotations=annotations, families=thickness_families,
-                                      material_claims=material_claims, material_map=material_map,
-                                      revision=revision, wall_layers=wall_layers)
-    ident_by_ref = {r["COMPONENT_REF"]: r for r in ident["REGISTER"]}
+    # 3b - which wall LINE each resolved host belongs to.  Part of the opening's final state, because the
+    #      deduction, the graph and the questions must all be told the same wall.
+    op.assign_host_lines(confirmed, bands)
 
-    # 5 -- what each open question actually holds up
-    height_ok = EV.established(wall_height_evidence)
-    graph = DEP.build(register, bands, basis, ident_by_ref, height_ok, tol, population=population)
-
-    wall_rows = op.wall_band_quantities(bands, register, wall_height_evidence or {}, basis,
-                                        graph["BLOCKED"], ident_by_ref) if wall_height_evidence else []
-
+    # 4 -- the spaces, because room USE is evidence about an opening's dimensions and has to be gathered
+    #      before the dimensions are closed, not after the quantities have been computed from them
     assembly = sp.assemble_semantic_spaces(comps, plan["BARRIERS"],
                                            [o for o in confirmed if o.rect is not None], plan["LABELS"],
                                            tol, plan["SLIVER_MIN_DIMENSION_M"], revision)
     validation = SV.validate(assembly["SPACES"], assembly["MEMBERSHIP"], assembly["SEAMS"],
                              floor=plan.get("FLOOR"))
 
-    # -- the standard by room use, applied only where nothing of higher authority answered.  It needs the
-    #    spaces, and the spaces need the openings, so this is deliberately a second evidence pass rather than
-    #    a guess made earlier with less to go on.
+    # 5 -- the standard by room use, applied only where nothing of higher authority answered
     categories = _resolve_room_categories(confirmed, assembly["SPACES"], tol, room_category_mapping,
                                           category_resolver, standard_table, standard_reference,
-                                          needs_a_category, subject_of, revision)
+                                          needs_a_category, subject_of, revision, space_role=space_role)
+
+    # 6 -- THE EVIDENCE BARRIER.  Every dimension this run will ever have is now resolved.  Nothing below may
+    #      change what an opening says, and everything below records the version it was derived from.
+    final = FS.freeze(confirmed)
+
+    # 7 -- derived state: areas, deductions, bases, identity, dependencies, rows, questions
+    register = FS.stamp(op.register_from_hosts(confirmed, bands, tol), final)
+    basis = op.evaluate_opening_basis(bands, [o for o in confirmed if o.rect is not None], tol)
+    ident = MA.classify_wall_identity(bands, tol, annotations=annotations, families=thickness_families,
+                                      material_claims=material_claims, material_map=material_map,
+                                      revision=revision, wall_layers=wall_layers,
+                                      material_scopes=material_scopes, exclusion_evidence=exclusion_evidence)
+    ident_by_ref = {r["COMPONENT_REF"]: r for r in ident["REGISTER"]}
+
+    height_ok = EV.established(wall_height_evidence)
+    graph = FS.stamp(DEP.build(register, bands, basis, ident_by_ref, height_ok, tol, population=population),
+                     final)
+
+    wall_rows = op.wall_band_quantities(bands, register, wall_height_evidence or {}, basis,
+                                        graph["BLOCKED"], ident_by_ref) if wall_height_evidence else []
 
     objects = _floor_objects(assembly["SPACES"], revision) + _wall_objects(wall_rows, revision)
 
@@ -156,6 +169,10 @@ def run(plan, max_opening_span, drafting_resolution_m, wall_height_evidence=None
             "a band the drawing settles is not a wall is excluded from the masonry quantity and listed here; "
             "it does not block a subtotal, because its identity is settled")
 
+    questions = FS.stamp(unresolved_questions(final, assembly, population, hosts, graph, basis, ident),
+                         final)
+    blockers = DEP.blocker_sets(graph, questions, wall_rows)
+
     checks = {
         "one_host": invariants.one_host_per_opening(register),
         "reconcile": invariants.deductions_reconcile(register, wall_rows, 1e-9) if wall_rows else None,
@@ -180,6 +197,10 @@ def run(plan, max_opening_span, drafting_resolution_m, wall_height_evidence=None
         "basis": invariants.opening_basis_is_decided_per_wall_line(basis, bands),
         "scope": invariants.blocking_is_limited_to_the_affected_scope(graph, wall_rows) if wall_rows else None,
         "admission": invariants.every_candidate_leaves_admission_classified(population),
+        "barrier": invariants.derived_registers_share_one_evidence_version(
+            final, confirmed, [register, graph, questions]),
+        "coherent": invariants.the_opening_registers_agree_with_the_final_state(final, register),
+        "idempotent": invariants.dependency_impacts_are_unique(questions),
         "conserved": invariants.named_source_openings_are_conserved(population, hosts, register),
         "existence": invariants.existence_is_not_retracted_by_host_failure(population, hosts),
     }
@@ -187,10 +208,14 @@ def run(plan, max_opening_span, drafting_resolution_m, wall_height_evidence=None
         checks["closure"] = invariants.floor_closure(comps, plan_window_area, closure_tolerance)
     checks = {k: v for k, v in checks.items() if v is not None}
 
-    questions = unresolved_questions(register, assembly, population, hosts, graph, basis, ident)
 
     return {
         "REVISION": revision,
+        "FINAL_OPENING_STATE": final,
+        "CONFIRMED_OPENINGS": confirmed,
+        "EVIDENCE_VERSION": final["EVIDENCE_VERSION"],
+        "EVIDENCE_BARRIER": FS.verify(final, confirmed),
+        "BLOCKER_SETS": blockers,
         "OPENING_POPULATION": population,
         "HOST_REGISTER": hosts,
         "GAP_LOG": gap_log,
@@ -218,14 +243,14 @@ def run(plan, max_opening_span, drafting_resolution_m, wall_height_evidence=None
 
 
 def _resolve_room_categories(openings, spaces, tolerance, mapping, resolver, table, reference,
-                             needs_a_category, subject_of, revision):
+                             needs_a_category, subject_of, revision, space_role=None):
     """Resolve each opening's host room and category, and let the standard answer where nothing else did."""
     needs = needs_a_category or (lambda o: o.opening_type == "WINDOW")
     rows = []
     for o in sorted(openings, key=lambda x: x.opening_ref):
         if not needs(o) or o.candidate is None:
             continue
-        room = RC.resolve_host_room(o.candidate, spaces, tolerance)
+        room = RC.resolve_host_room(o.candidate, spaces, tolerance, space_role=space_role)
         cat = RC.category_for(room, mapping or {}, resolver=resolver)
         claim = RC.standard_claim(cat, table, reference or "APPLICABLE_STANDARD")
         applied = False
@@ -249,9 +274,16 @@ def _resolve_room_categories(openings, spaces, tolerance, mapping, resolver, tab
     return RC.build_register(rows)
 
 
-def acceptance_document(result, metamorphic=None, narrative=None):
+def acceptance_document(result, metamorphic=None, narrative=None, claims=None):
     """The published document, in the shape the independent gate reads.  It contains no engine objects."""
-    return {
+    doc = {
+        "FINAL_OPENING_STATE": result.get("FINAL_OPENING_STATE"),
+        "EVIDENCE_VERSIONS": {
+            "OPENING_REGISTER": (result.get("OPENING_REGISTER") or {}).get(FS.VERSION_FIELD),
+            "DEPENDENCY_GRAPH": (result.get("DEPENDENCY_GRAPH") or {}).get(FS.VERSION_FIELD),
+            "QUESTIONS": (result.get("QUESTIONS") or {}).get(FS.VERSION_FIELD)},
+        "EVIDENCE_BARRIER": result.get("EVIDENCE_BARRIER"),
+        "BLOCKER_SETS": result.get("BLOCKER_SETS"),
         "PUBLICATION": result.get("PUBLICATION"),
         "WALL_ROWS": result.get("WALL_ROWS") or [],
         "OPENING_POPULATION": result.get("OPENING_POPULATION"),
@@ -272,6 +304,48 @@ def acceptance_document(result, metamorphic=None, narrative=None):
         "METAMORPHIC": metamorphic or {},
         "NARRATIVE_ASSERTIONS": narrative or default_narrative(result),
     }
+    doc["REPORT_CLAIMS"] = claims if claims is not None else default_report_claims(doc)
+    return doc
+
+
+def default_report_claims(doc):
+    """The claims a report of THIS document is allowed to make, each checked against its own register.
+
+    Anything a reader would repeat as a number or as a cause is declared here, so that the gate re-reads it.
+    Whether the prose contains a number nobody declared is a different question, and the register says so.
+    """
+    reg = RCL.Register(doc)
+    pop = doc.get("OPENING_POPULATION") or {}
+    hosts = doc.get("HOST_REGISTER") or {}
+    qs = doc.get("QUESTIONS") or {}
+    blockers = doc.get("BLOCKER_SETS") or {}
+    final = doc.get("FINAL_OPENING_STATE") or {}
+    reg.claim("C-POPULATION", "the source names {value} openings on this floor",
+              "OPENING_POPULATION.NAMED_BY_THE_SOURCE_COUNT", pop.get("NAMED_BY_THE_SOURCE_COUNT"))
+    reg.claim("C-PHYSICAL", "{value} physical openings were admitted",
+              "OPENING_POPULATION.PHYSICAL_OPENING_COUNT", pop.get("PHYSICAL_OPENING_COUNT"))
+    reg.claim("C-HOSTED", "{value} of them have a resolved host",
+              "HOST_REGISTER.HOST_CONFIRMED", hosts.get("HOST_CONFIRMED"))
+    reg.claim("C-QUESTIONS", "{value} unique facts remain unanswered",
+              "QUESTIONS.ROOT_QUESTION_COUNT", qs.get("ROOT_QUESTION_COUNT"))
+    reg.claim("C-IMPACTS", "those facts hold up {value} dependent values",
+              "QUESTIONS.DEPENDENCY_IMPACT_COUNT", qs.get("DEPENDENCY_IMPACT_COUNT"))
+    reg.claim("C-RELEASABLE", "{value} blocked nodes would be released by a single answer",
+              "BLOCKER_SETS.NODES_RELEASED_BY_ONE_ANSWER",
+              blockers.get("NODES_RELEASED_BY_ONE_ANSWER"), kind=RCL.RELEASE,
+              note="a node with two blockers is released by neither answer alone")
+    reg.claim("C-MULTIPLE", "{value} blocked nodes are waiting on more than one answer",
+              "BLOCKER_SETS.NODES_WITH_SEVERAL_BLOCKERS",
+              blockers.get("NODES_WITH_SEVERAL_BLOCKERS"), kind=RCL.RELEASE)
+    reg.claim("C-HEIGHTS", "{value} openings have an established height",
+              "FINAL_OPENING_STATE.HEIGHT_ESTABLISHED", final.get("HEIGHT_ESTABLISHED"))
+    reg.claim("C-BARRIER", "the derived registers all describe the frozen evidence state: {value}",
+              "EVIDENCE_BARRIER.UNCHANGED", (doc.get("EVIDENCE_BARRIER") or {}).get("UNCHANGED"),
+              kind=RCL.STATUS)
+    rows = doc.get("WALL_ROWS") or []
+    reg.claim("C-ROWS", "{value} wall rows were assessed", None, len(rows), kind=RCL.COUNT,
+              query=lambda d: len(d.get("WALL_ROWS") or []))
+    return reg.as_dict()
 
 
 def default_narrative(result):
@@ -302,8 +376,15 @@ def default_narrative(result):
     return [a for a in out if a["VALUE"] is not None]
 
 
-def unresolved_questions(register, assembly, population, hosts, graph, basis, ident):
-    """Unique unanswered facts, and - separately - everything those facts hold up."""
+def unresolved_questions(final, assembly, population, hosts, graph, basis, ident):
+    """Unique unanswered facts, and - separately - everything those facts hold up.
+
+    The dimension questions are asked of the FROZEN evidence state, never of a derived field.  R6 asked them
+    of AREA_M2 on the opening register, which had been serialised before the room standard answered four of
+    the heights: the answer existed and the question was still on the list.  A question may exist only while
+    its fact is currently unanswered, and "currently" means the final state, which is the only state a
+    register built after the barrier is allowed to describe.
+    """
     reg = QN.Register()
 
     for c in population["POPULATION"]:
@@ -330,15 +411,23 @@ def unresolved_questions(register, assembly, population, hosts, graph, basis, id
             for node in c.get("WALL_LINES", []) or c["COMPONENT_REFS"]:
                 reg.impact(qid, node, "WALL_LINE", "its net area is not final while this host is unknown")
 
-    for o in register["REGISTER"]:
-        if o["HOST_ASSIGNMENT_STATUS"] == "HOST_ASSIGNED" and o["AREA_M2"] is None:
+    for o in final["OPENINGS"]:
+        if o["HOST_ASSIGNMENT_STATUS"] != "HOST_ASSIGNED":
+            continue                      # its host is the open fact, and that question is asked above
+        if o["HEIGHT_EVIDENCE"]["STATUS"] != EV.ESTABLISHED:
             qid = reg.ask("OPENING_HEIGHT_NOT_ESTABLISHED", o["OPENING_REF"],
                           f"What is the height of opening {o['OPENING_REF']}?", floor=o["FLOOR"],
-                          subject_kind="PHYSICAL_OPENING",
-                          evidence=[(o.get("ADMISSION") or {}).get("HEIGHT_EVIDENCE")],
+                          subject_kind="PHYSICAL_OPENING", evidence=[o["HEIGHT_EVIDENCE"]],
                           needed_from="a drawing dimension, a schedule row, or an applicable standard")
             reg.impact(qid, o["HOST_COMPONENT_REF"], "WALL_LINE",
                        "its deduction cannot be computed without this height")
+        elif o["WIDTH_EVIDENCE"]["STATUS"] != EV.ESTABLISHED:
+            qid = reg.ask("OPENING_WIDTH_NOT_ESTABLISHED", o["OPENING_REF"],
+                          f"What is the width of opening {o['OPENING_REF']}?", floor=o["FLOOR"],
+                          subject_kind="PHYSICAL_OPENING", evidence=[o["WIDTH_EVIDENCE"]],
+                          needed_from="a drawing dimension, a schedule row, or an applicable standard")
+            reg.impact(qid, o["HOST_COMPONENT_REF"], "WALL_LINE",
+                       "its deduction cannot be computed without this width")
 
     asked = {r["ROOT_QUESTION_ID"] for r in reg.as_dict()["ROOT_QUESTIONS"]}
     for u in graph["UNASSOCIATED_OPENINGS"]:
@@ -371,20 +460,30 @@ def unresolved_questions(register, assembly, population, hosts, graph, basis, id
                           subject_kind="WALL_LINE", evidence=[r], needed_from="the drawing")
             reg.impact(qid, f"SUBTOTAL::{r['THICKNESS_FAMILY_M']}", "THICKNESS_SUBTOTAL",
                        "this subtotal is larger if the band turns out to be a wall")
-        elif r["MATERIAL_IDENTITY"] == MA.MATERIAL_UNKNOWN and \
+        # Both axes can be open at once, and they are two different facts: "is this band a wall" is answered
+        # by the drawing, "what is it made of" by a specification.  Asking only the first leaves the
+        # dependency graph pointing at a material question nobody asked.
+        if r["MATERIAL_IDENTITY"] == MA.MATERIAL_UNKNOWN and \
                 r["GEOMETRY_IDENTITY"] != MA.NON_WALL_ARTEFACT:
-            # the SUBJECT is the thickness family, not the line: a specification states a material by wall
-            # type, so one answer closes every wall of that type.  Asking it once per line would report
-            # fifty-four questions where the source has one gap.
-            family = f"THICKNESS_FAMILY::{r['THICKNESS_FAMILY_M']}"
-            qid = reg.ask("WALL_MATERIAL_NOT_ESTABLISHED", family,
-                          f"What are the {r['THICKNESS_FAMILY_M']} m walls built from?",
-                          subject_kind="THICKNESS_FAMILY",
+            # The SUBJECT is a question GROUP: the bands that share every attribute the source states about
+            # them.  It is not a wall type.  R6 grouped by thickness alone and assumed one answer covered
+            # every wall of that thickness - the same unsupported inference as reading material off shape,
+            # made in the other direction.  Asking per line would report fifty-four questions where the
+            # source has one gap; asking per thickness assumes an answer the source has not given.
+            scope = r["MATERIAL_SCOPE_KEY"]
+            attrs = r["MATERIAL_SCOPE_ATTRIBUTES"]
+            qid = reg.ask("WALL_MATERIAL_NOT_ESTABLISHED", scope,
+                          (f"What are the {attrs['THICKNESS_FAMILY_M']} m walls on {attrs['FLOOR']} drawn on "
+                           f"layer {attrs['LAYER']} built from, and does that answer extend beyond them?"),
+                          floor=r["FLOOR"], subject_kind="MATERIAL_SCOPE_GROUP",
                           evidence=[{"EXAMPLE_LINE": r["COMPONENT_REF"], "FLOOR": r["FLOOR"],
                                      "WHY": r["WHY_MATERIAL"],
+                                     "SCOPE_ATTRIBUTES": attrs,
                                      "SOURCES_THAT_COULD_ANSWER": r["MATERIAL_EVIDENCE_SOURCES_ACCEPTED"]}],
                           needed_from="a drawing annotation, a legend, a specification, an owner input or an "
-                                      "active project standard")
+                                      "active project standard - stating which walls it covers",
+                          detail={"THE_GROUP_IS_NOT_A_WALL_TYPE": r["THICKNESS_FAMILY_IS_NOT_A_WALL_TYPE"],
+                                  "ANSWER_PROPAGATES": "only as far as the answering evidence states"})
             reg.impact(qid, r["COMPONENT_REF"], "WALL_LINE", "it carries no masonry quantity")
             reg.impact(qid, f"SUBTOTAL::{r['THICKNESS_FAMILY_M']}", "THICKNESS_SUBTOTAL",
                        "this subtotal is not final while the material of its walls is unstated")
@@ -413,7 +512,7 @@ def unresolved_questions(register, assembly, population, hosts, graph, basis, id
                                   if x["COMPONENT_REF"] == (reason.get("WALL_LINE") or node)), None)
                 if ident_row:
                     reg.impact(QN.root_id("WALL_MATERIAL_NOT_ESTABLISHED",
-                                          f"THICKNESS_FAMILY::{ident_row['THICKNESS_FAMILY_M']}"),
+                                          ident_row["MATERIAL_SCOPE_KEY"]),
                                node, rec["NODE_KIND"], reason["WHY"])
                 continue
             kind = {"HOST_WALL_UNRESOLVED": "HOST_WALL_UNRESOLVED",

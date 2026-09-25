@@ -130,14 +130,84 @@ def _covered_share(ln, others):
     return min(1.0, inter / area)
 
 
-def classify_material(ref, note, material_claims, material_map, tolerance, subject=None, revision=None):
+# ---------------------------------------------------------------- the scope a material claim applies to
+#
+# R6 asked one material question per THICKNESS FAMILY and assumed one answer covered every wall of that
+# thickness.  That is the same unsupported inference the round before had just removed from the other
+# direction: thickness does not prove material, and it does not delimit material either.  External walls,
+# internal partitions, structural walls and service enclosures are routinely drawn at the same thickness and
+# built of different things.
+#
+# So a material claim carries an explicit applicability scope, stated as attributes the SOURCE distinguishes,
+# and it answers a band only where every attribute it names matches that band.  A claim with no scope at all
+# may answer project-wide only when the evidence itself says that is its scope.
+SCOPE_ATTRIBUTES = ("WALL_TYPE_CODE", "LAYER", "FLOOR", "THICKNESS_FAMILY_M", "ROLE", "TAG_SET")
+SCOPE_STATED = "SCOPE_STATED_BY_THE_EVIDENCE"
+SCOPE_PROJECT_WIDE = "PROJECT_WIDE_AND_THE_EVIDENCE_SAYS_SO"
+SCOPE_NOT_STATED = "SCOPE_NOT_STATED_SO_IT_CANNOT_PROPAGATE"
+
+
+def band_attributes(line, family_key_value, note=None):
+    """The attributes of a band a material claim may be scoped against.  All of them come from the source."""
+    note = note or {}
+    return {
+        "WALL_TYPE_CODE": note.get("WALL_TYPE_CODE"),
+        "LAYER": None if line.layer is None else str(line.layer).upper(),
+        "FLOOR": line.floor,
+        "THICKNESS_FAMILY_M": family_key_value,
+        "ROLE": note.get("ROLE"),
+        "TAG_SET": note.get("TAG_SET"),
+    }
+
+
+def scope_matches(scope, attrs):
+    """Does this claim's stated scope cover this band?  Every attribute it names has to match."""
+    scope = dict(scope or {})
+    stated = bool(scope.pop(SCOPE_STATED, False))
+    named = {k: v for k, v in scope.items() if k in SCOPE_ATTRIBUTES and v is not None}
+    if not named:
+        # an unscoped claim answers everything only if the evidence itself says it is project-wide
+        return (stated, SCOPE_PROJECT_WIDE if stated else SCOPE_NOT_STATED)
+    for k, v in sorted(named.items()):
+        got = attrs.get(k)
+        if isinstance(v, (list, tuple, set)):
+            if got not in set(v):
+                return (False, f"SCOPE_{k}_DOES_NOT_COVER_{got!r}")
+        elif got != v:
+            return (False, f"SCOPE_{k}_IS_{v!r}_AND_THIS_BAND_IS_{got!r}")
+    return (True, "SCOPE_" + "_AND_".join(f"{k}={named[k]!r}" for k in sorted(named)))
+
+
+def scope_key(attrs):
+    """The group a material question is asked about: the attributes the source distinguishes, all of them.
+
+    This is a QUESTION GROUP, not a wall-type identity.  Two bands in one group share every attribute the
+    drawing states about them, which is why one answer can plausibly cover both - and the answer still only
+    propagates as far as its own stated scope.
+    """
+    parts = [f"{k}={attrs.get(k)!r}" for k in ("FLOOR", "LAYER", "THICKNESS_FAMILY_M")]
+    return "MATERIAL_SCOPE::" + "::".join(parts)
+
+
+def applicable_scoped_claims(scopes, attrs):
+    """Split the caller's scoped material claims into the ones that cover this band and the ones that do not."""
+    applies, rejected = [], []
+    for c in scopes or ():
+        ok, why = scope_matches(getattr(c, "scope", None) or (c.detail or {}).get("SCOPE"), attrs)
+        (applies if ok else rejected).append(
+            c if ok else dict(c.as_dict(), OUT_OF_SCOPE_BECAUSE=why))
+    return applies, rejected
+
+
+def classify_material(ref, note, material_claims, material_map, tolerance, subject=None, revision=None,
+                      scoped_claims=()):
     """What is this band made of?  Only a source that states a material may answer.
 
     `material_claims` maps a component reference to evidence.Claim-like records whose `reference` names the
     document that states the material and whose `detail["MATERIAL"]` names it.  They go through the same
     lifecycle as every other claim, so a superseded specification cannot answer either.
     """
-    claims = list(material_claims.get(ref, []) if material_claims else [])
+    claims = list(material_claims.get(ref, []) if material_claims else []) + list(scoped_claims or ())
     stated = (note or {}).get("MATERIAL")
     if stated:
         claims = claims + [EV.Claim(1.0, EV.DRAWING_DIMENSION, (note or {}).get("REFERENCE") or f"ANNOTATION::{ref}",
@@ -199,7 +269,8 @@ def identity_blocks(ident):
 
 
 def classify_wall_identity(lines, tolerance, annotations=None, families=None, material_claims=None,
-                           material_map=None, revision=None, wall_layers=()):
+                           material_map=None, revision=None, wall_layers=(), material_scopes=None,
+                           exclusion_evidence=None):
     """Decide what each band IS - as geometry, and separately as material - before anything measures it."""
     annotations = annotations or {}
     material_map = material_map or {}
@@ -207,6 +278,9 @@ def classify_wall_identity(lines, tolerance, annotations=None, families=None, ma
     # which is geometry evidence of the same kind as a door block is opening evidence.  It says nothing about
     # what the wall is built from, and this module never reads it as material.
     wall_layers = {str(x).upper() for x in (wall_layers or ())}
+    # Positive source evidence that a band is NOT a wall: the drawing names it a column, or a caller-supplied
+    # record says so.  Nothing is excluded from the trade on shape alone.
+    exclusion_evidence = exclusion_evidence or {}
     fams = families or thickness_families(lines, tolerance)
     records = []
 
@@ -226,10 +300,21 @@ def classify_wall_identity(lines, tolerance, annotations=None, families=None, ma
         junction_share = _covered_share(ln, cross_axis)
 
         # ---------------------------------------------------------- axis one: geometry
-        if ln.kind == KIND_COLUMN:
+        #
+        # Exclusion is permanent and silent: an excluded band leaves the trade and asks nobody anything.  It
+        # therefore needs POSITIVE evidence that the object is not a wall - the source naming it a column, the
+        # same object drawn twice, or a junction whose area is already inside the walls that cross there.
+        # Shortness is not that evidence.  A pier, a wall return, a jamb nib and an isolated fragment of wall
+        # are all shorter than twice their thickness, and R6 excluded twenty-three bands on a wall layer for
+        # exactly that reason, on WEAK confidence, without asking anyone.
+        named_column = exclusion_evidence.get(ln.component_ref) or {}
+        on_a_wall_layer = (ln.layer or "").upper() in wall_layers
+        if ln.kind == KIND_COLUMN or named_column.get("KIND") == COLUMN_OR_STRUCTURE:
             geometry, reason, gconf = (NON_WALL_ARTEFACT, COLUMN_OR_STRUCTURE,
                                        CONFIDENCE_PROVEN)
-            gwhy = "the source draws this as a column, which is structure and not a run of wall"
+            gwhy = ("the source draws this as a column, which is structure and not a run of wall"
+                    if ln.kind == KIND_COLUMN else
+                    f"the source names this a column ({named_column.get('REFERENCE')})")
         elif aspect is not None and aspect < WALL_ASPECT_MIN and junction_share >= JUNCTION_COVERAGE:
             geometry, reason, gconf = NON_WALL_ARTEFACT, JUNCTION_ARTEFACT, CONFIDENCE_STRONG
             gwhy = ("this band is as short as it is thick and lies inside the crossing of walls running the "
@@ -238,10 +323,14 @@ def classify_wall_identity(lines, tolerance, annotations=None, families=None, ma
             geometry, reason, gconf = NON_WALL_ARTEFACT, DUPLICATED_LINE_ARTEFACT, CONFIDENCE_STRONG
             gwhy = f"this band occupies the same place as {twin.component_ref}; one object drawn twice"
         elif aspect is not None and aspect < WALL_ASPECT_MIN:
-            geometry, reason, gconf = NON_WALL_ARTEFACT, COLUMN_OR_STRUCTURE, CONFIDENCE_WEAK
-            gwhy = "this band is as short as it is thick, so whatever it is, it is not a run of wall"
+            geometry, reason, gconf = WALL_GEOMETRY_CANDIDATE, None, CONFIDENCE_WEAK
+            gwhy = ("this band is shorter than twice its thickness, which is true of a pier, a wall return, a "
+                    "jamb nib and an isolated fragment of wall as well as of a column; nothing in the source "
+                    "settles which"
+                    + (f", and the source draws it on {ln.layer}, a layer it uses for walls"
+                       if on_a_wall_layer else ""))
         elif aspect is not None and aspect >= WALL_ASPECT_MIN and (
-                fam["PROVED"] or (ln.layer or "").upper() in wall_layers):
+                fam["PROVED"] or on_a_wall_layer):
             geometry, reason, gconf = CONFIRMED_WALL_GEOMETRY, None, CONFIDENCE_STRONG
             gwhy = ("this band runs far enough to be a wall, and " + (
                 "its thickness is one this drawing uses repeatedly" if fam["PROVED"] else
@@ -252,9 +341,12 @@ def classify_wall_identity(lines, tolerance, annotations=None, families=None, ma
                     "does not settle whether this is a wall")
 
         # ---------------------------------------------------------- axis two: material
-        subject = {"OBJECT_KIND": "WALL", "THICKNESS_FAMILY_M": key, "FLOOR": ln.floor}
+        attrs = band_attributes(ln, key, note)
+        scoped, out_of_scope = applicable_scoped_claims(material_scopes, attrs)
+        subject = dict(attrs, OBJECT_KIND="WALL")
         mat = classify_material(ln.component_ref, note, material_claims, material_map, tolerance,
-                                subject=subject, revision=revision)
+                                subject=subject, revision=revision, scoped_claims=scoped)
+        mat["MATERIAL_INELIGIBLE"] = list(mat["MATERIAL_INELIGIBLE"]) + out_of_scope
 
         billable = geometry in BILLABLE_GEOMETRY and mat["MATERIAL_IDENTITY"] in BILLABLE_MATERIAL
         ln.evidence.append(Evidence("WALL_IDENTITY", {
@@ -275,6 +367,13 @@ def classify_wall_identity(lines, tolerance, annotations=None, families=None, ma
             "THICKNESS_FAMILY_MEMBERS": fam.get("MEMBER_COUNT"),
             "THICKNESS_FAMILY_PROVED": fam.get("PROVED"),
             "THICKNESS_FAMILY_PROVES_MATERIAL": False,
+            "THICKNESS_FAMILY_IS_NOT_A_WALL_TYPE": ("walls of one thickness may be built of different things; "
+                                                    "this family groups a QUESTION, never a material"),
+            "MATERIAL_SCOPE_KEY": scope_key(attrs),
+            "MATERIAL_SCOPE_ATTRIBUTES": attrs,
+            "MATERIAL_SCOPES_OUT_OF_SCOPE": [c.get("OUT_OF_SCOPE_BECAUSE") for c in out_of_scope],
+            "ON_A_SOURCE_WALL_LAYER": on_a_wall_layer,
+            "EXCLUDED_ON": (None if geometry != NON_WALL_ARTEFACT else reason),
             "COVERED_BY_CROSSING_WALLS": round(junction_share, 6),
             "DUPLICATE_OF": twin.component_ref if twin is not None else None,
             "ANNOTATION": note or None,
@@ -296,3 +395,42 @@ def classify_wall_identity(lines, tolerance, annotations=None, families=None, ma
             "RULE": "geometry identity and material identity are established independently; a band is billed "
                     "as masonry only when the drawing's shapes say it is a wall AND an applicable source says "
                     "what it is made of.  A thickness family is never material evidence"}
+
+
+
+def material_scope_register(records, claims_by_scope=None):
+    """Every distinct question group, what is in it, and how far an answer about it would travel."""
+    groups = {}
+    for r in records:
+        g = groups.setdefault(r["MATERIAL_SCOPE_KEY"], {
+            "SCOPE_KEY": r["MATERIAL_SCOPE_KEY"],
+            "ATTRIBUTES": r["MATERIAL_SCOPE_ATTRIBUTES"],
+            "MEMBERS": [], "MATERIAL_IDENTITIES": set(), "ANSWERED_BY": None})
+        g["MEMBERS"].append(r["COMPONENT_REF"])
+        g["MATERIAL_IDENTITIES"].add(r["MATERIAL_IDENTITY"])
+        if r["MATERIAL_EVIDENCE"]:
+            g["ANSWERED_BY"] = r["MATERIAL_EVIDENCE"].get("REFERENCE")
+    out = []
+    for key in sorted(groups):
+        g = groups[key]
+        out.append({
+            "SCOPE_KEY": key, "ATTRIBUTES": g["ATTRIBUTES"], "MEMBERS": sorted(g["MEMBERS"]),
+            "MEMBER_COUNT": len(g["MEMBERS"]),
+            "MATERIAL_IDENTITIES_IN_THIS_GROUP": sorted(g["MATERIAL_IDENTITIES"]),
+            "ANSWERED_BY": g["ANSWERED_BY"],
+            "ANSWER_PROPAGATES": ("only as far as the answering evidence states its own scope; membership of "
+                                  "this group is not itself a reason to propagate"),
+            "OFFERED_CLAIM": (claims_by_scope or {}).get(key),
+        })
+    return {
+        "GROUPS": out,
+        "GROUP_COUNT": len(out),
+        "SCOPE_ATTRIBUTES": list(SCOPE_ATTRIBUTES),
+        "WHAT_A_GROUP_IS": "a set of bands sharing every attribute the source states about them, so that one "
+                           "question can sensibly be asked about all of them",
+        "WHAT_A_GROUP_IS_NOT": "a wall type.  Walls of one thickness, on one layer, on one floor may still be "
+                               "built of different things, and only the answering document may say otherwise",
+        "RULE": "a material answer applies to a band when the answering evidence's own stated scope covers "
+                "that band's attributes; an unscoped answer propagates project-wide only when the evidence "
+                "says that is its scope",
+    }

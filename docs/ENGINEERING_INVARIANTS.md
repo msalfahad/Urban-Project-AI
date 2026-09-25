@@ -6109,3 +6109,92 @@ Block identity, layer, jamb marks, swing arcs and bracketing wall ends are in
 the file already. Reaching for a PDF schedule first imports a second source's
 errors on top of evidence that was never read; on this drawing the CAD evidence
 alone moved thirty-five objects from unresolved to named.
+
+## §312 — The evidence barrier: one moment, one set of numbers
+
+Evidence arrives in stages, because some of it depends on earlier stages: a
+window's height may come from a standard that varies by room use, and the room
+is not known until the spaces are assembled, which needs the openings. That is a
+real ordering constraint and not a defect. The defect is deriving quantities
+before it finishes.
+
+So the stage is closed explicitly:
+
+    admit → resolve hosts → assemble the spaces room-use needs → resolve room
+    evidence → resolve every remaining dimension → **FREEZE** → derive areas,
+    deductions, dependencies, questions and documents
+
+The freeze publishes a version derived from the state's own contents. Every
+register built afterwards records that version, and the engine re-reads the live
+objects afterwards to confirm they still say what the frozen state says. A
+register carrying a different version is describing a different moment, and its
+numbers may not be read beside the others.
+
+## §313 — A question may exist only while its fact is unanswered
+
+A question is asked of the frozen evidence, never of a derived field. R6 asked
+for four window heights that a standard had already supplied, because it tested
+`AREA_M2` on a register serialised before the standard ran. An established
+dimension carries no question; an unresolved one carries exactly one.
+
+## §314 — Affects, removes a blocker, releases
+
+Three different statements, and only the third is a promise:
+
+- **affects** — the answer participates in determining this node;
+- **removes one blocker** — one of several open facts would be settled;
+- **releases** — answering this alone makes the node publishable *now*.
+
+A node publishes the set of facts holding it up, what would remain if each were
+answered, and whether any single answer frees it. A question may be said to
+release a node only when it is that node's only remaining blocker. Every
+sentence in a report that uses "unblocks" or "releases" is generated from this
+calculation, and impacts are a set keyed by fact, node, node kind and effect, so
+that walking the graph twice cannot double the work an answer appears to do.
+
+## §315 — A material answer travels as far as its own scope, and no further
+
+Thickness does not prove material, and it does not delimit it either. External
+walls, internal partitions, structural walls and service enclosures are
+routinely drawn at one thickness and built of different things. A material claim
+therefore carries an explicit applicability scope — a wall-type code, a
+documented layer, a floor, an internal/external role, a tagged set, a
+specification clause, or an owner-confirmed project-wide rule — and answers a
+band only where every attribute it names matches. An unscoped claim propagates
+project-wide only when the evidence itself says that is its scope.
+
+A material question is asked about a **group**: the bands sharing every
+attribute the source states about them. That makes one question askable of many
+walls. It is not a wall type, and the register says so on every row.
+
+## §316 — An exclusion is permanent and silent, so it needs positive evidence
+
+A blocked row asks a question; an excluded row asks nobody anything and never
+appears again. The evidence for leaving the trade is therefore the source naming
+a column, the same object drawn twice, or a junction whose area is already
+inside the walls that cross there. Being shorter than twice its thickness is not
+evidence: a pier, a wall return, a jamb nib and an isolated fragment of wall are
+all short, and all of them are masonry. Weak confidence may never exclude
+anything, and a layer the source uses for walls is positive evidence the other
+way, weighed explicitly.
+
+## §317 — A window's standard belongs to the enclosed side
+
+A window separates an occupied room from the open air. Resolving the room by
+distance ignores that: on a real drawing a roof terrace competed with the
+bedroom on the other side of the glass and three windows lost their standard.
+The sides are separated first, using the host wall's own axis and normal, then
+classified by a role the CALLER supplies — the words a drawing uses for
+"outside" are the drawing's, never the engine's. One enclosed room facing one
+open area resolves to the room; two enclosed rooms is a real ambiguity; no
+enclosed room means no room-use standard applies.
+
+## §318 — "Every declared claim agrees" is not "all prose verified"
+
+Every number and every causal statement a report makes is a claim object: an id,
+the sentence, the register path or query that decides it, the value asserted,
+its kind, and the result of re-reading the register. Prose is generated from the
+claims rather than written beside them. The gate reports what it actually
+proves — that every **declared** claim agrees with its register — and no report
+may describe that as having verified its prose. A number that never became a
+claim is not verified by anything.

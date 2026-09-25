@@ -24,16 +24,54 @@ CATEGORY_RESOLVED = "CATEGORY_RESOLVED"
 CATEGORY_UNMAPPED = "CATEGORY_NOT_IN_THE_MAPPING"
 CATEGORY_NO_ROOM = "CATEGORY_UNRESOLVED_BECAUSE_THE_ROOM_IS"
 
+# What a space IS, for the purpose of deciding whether a room-use standard can be read from it.  A window
+# normally separates an occupied room from the outside; the standard belongs to the occupied side.  Which of
+# a drawing's labels mean "outside" is a property of the drawing, so the CALLER classifies - the engine only
+# knows that the two kinds behave differently.
+ENCLOSED_ROOM = "ENCLOSED_ROOM"
+EXTERNAL_OR_OPEN = "EXTERNAL_OR_OPEN_AREA"
+ROLE_UNKNOWN = "SPACE_ROLE_UNKNOWN"
 
-def resolve_host_room(candidate, spaces, tolerance):
-    """The space the opening opens into, from the geometry of both.
+SIDE_A, SIDE_B = "SIDE_A", "SIDE_B"
 
-    An opening in an external wall faces one internal space; an opening in a partition faces two, and that is
-    an ambiguity to report rather than a coin to toss.  Distance is measured from the opening's own centre, so
-    this works whether or not the opening has a resolved depth.
+
+def _side_of(candidate, space, axis):
+    """Which side of the opening's own wall line this space lies on, along the wall's normal."""
+    cx, cy = candidate.centre
+    here = cy if axis == geom.AXIS_X else cx          # the wall's normal is across its axis
+    above = below = 0.0
+    for r in space.rects:
+        lo, hi = (r.y0, r.y1) if axis == geom.AXIS_X else (r.x0, r.x1)
+        mid = (lo + hi) / 2.0
+        area = (r.x1 - r.x0) * (r.y1 - r.y0)
+        if mid >= here:
+            above += area
+        else:
+            below += area
+    if above == below:
+        return None
+    return SIDE_B if above > below else SIDE_A
+
+
+def resolve_host_room(candidate, spaces, tolerance, space_role=None):
+    """The room whose USE decides this opening's standard, from the two sides of the wall it sits in.
+
+    An opening separates what is on one side of its wall from what is on the other.  Reading the room off
+    whichever labelled polygon happens to be nearest ignores that entirely: on this drawing it let an external
+    roof terrace compete on equal terms with the bedroom on the other side of the glass, and three windows
+    were reported ambiguous because the two sides were a few centimetres apart in distance.
+
+    So the sides are separated first, using the host wall's own axis and normal, and then classified.  One
+    enclosed room facing one external or open area is not an ambiguity - it is the ordinary external window,
+    and the standard belongs to the enclosed side.  Two enclosed rooms genuinely is an ambiguity.  The
+    classification comes from the caller, because which of a drawing's words mean "outside" is the drawing's
+    business and not the engine's.
     """
     cx, cy = candidate.centre
+    axis = candidate.axis or (geom.AXIS_X if abs(candidate.span) else geom.AXIS_X)
     reach = max(candidate.span, (candidate.depth or 0.0) * 2.0, tolerance * 20)
+    role_of = space_role or (lambda _s: ROLE_UNKNOWN)
+
     near = []
     for s in spaces:
         if s.floor != candidate.floor or not s.rects:
@@ -43,28 +81,71 @@ def resolve_host_room(candidate, spaces, tolerance):
             near.append((round(d, 6), s))
     near.sort(key=lambda t: (t[0], t[1].room_id))
 
-    published = [{"ROOM_ID": s.room_id, "LABEL": s.label, "LABEL_STATUS": s.label_status,
-                  "AREA_M2": round(s.area, 6), "DISTANCE_M": d} for d, s in near]
+    published = []
+    for d, s in near:
+        published.append({"ROOM_ID": s.room_id, "LABEL": s.label, "LABEL_STATUS": s.label_status,
+                          "AREA_M2": round(s.area, 6), "DISTANCE_M": d,
+                          "SIDE": _side_of(candidate, s, axis), "ROLE": role_of(s)})
+    sides = {SIDE_A: [r for r in published if r["SIDE"] == SIDE_A],
+             SIDE_B: [r for r in published if r["SIDE"] == SIDE_B],
+             None: [r for r in published if r["SIDE"] is None]}
+    geometry = {"WALL_AXIS": axis, "OPENING_CENTRE": [cx, cy], "REACH_M": round(reach, 6),
+                "SIDES": {k or "ASTRIDE_THE_WALL": [r["ROOM_ID"] for r in v] for k, v in sides.items()}}
+
     if not near:
         return {"STATUS": ROOM_NOT_FOUND, "ROOM_ID": None, "LABEL": None, "AREA_M2": None,
-                "CANDIDATES": published, "REACH_M": round(reach, 6),
+                "CANDIDATES": published, "REACH_M": round(reach, 6), "GEOMETRY": geometry,
                 "WHY": "no space lies within this opening's own extent of it"}
-    labelled = [(d, s) for d, s in near if s.label]
-    if len(labelled) == 1:
-        d, s = labelled[0]
-        return {"STATUS": ROOM_RESOLVED, "ROOM_ID": s.room_id, "LABEL": s.label,
-                "AREA_M2": round(s.area, 6), "DISTANCE_M": d, "CANDIDATES": published,
-                "REACH_M": round(reach, 6),
-                "WHY": "exactly one named space is within reach of this opening"}
+
+    labelled = [r for r in published if r["LABEL"]]
     if not labelled:
         return {"STATUS": ROOM_NOT_FOUND, "ROOM_ID": near[0][1].room_id, "LABEL": None,
                 "AREA_M2": round(near[0][1].area, 6), "CANDIDATES": published,
-                "REACH_M": round(reach, 6),
+                "REACH_M": round(reach, 6), "GEOMETRY": geometry,
                 "WHY": "the spaces around this opening carry no label the source states"}
+
+    enclosed = [r for r in labelled if r["ROLE"] == ENCLOSED_ROOM]
+    external = [r for r in labelled if r["ROLE"] == EXTERNAL_OR_OPEN]
+    unknown = [r for r in labelled if r["ROLE"] not in (ENCLOSED_ROOM, EXTERNAL_OR_OPEN)]
+
+    def resolved(row, why):
+        return {"STATUS": ROOM_RESOLVED, "ROOM_ID": row["ROOM_ID"], "LABEL": row["LABEL"],
+                "AREA_M2": row["AREA_M2"], "DISTANCE_M": row["DISTANCE_M"], "SIDE": row["SIDE"],
+                "ROLE": row["ROLE"], "CANDIDATES": published, "REACH_M": round(reach, 6),
+                "GEOMETRY": geometry, "WHY": why}
+
+    # the ordinary external window: occupied room one side, open air the other
+    if len(enclosed) == 1 and not unknown:
+        return resolved(enclosed[0],
+                        ("one enclosed room and %d external or open area(s) meet at this opening; the "
+                         "room-use standard belongs to the enclosed side" % len(external))
+                        if external else
+                        "exactly one enclosed room is within reach of this opening")
+    if len(enclosed) > 1:
+        return {"STATUS": ROOM_AMBIGUOUS, "ROOM_ID": None, "LABEL": None, "AREA_M2": None,
+                "CANDIDATES": published, "REACH_M": round(reach, 6), "GEOMETRY": geometry,
+                "WHY": f"{len(enclosed)} enclosed rooms meet at this opening; which room's use applies is "
+                       "not decidable from geometry alone"}
+    if enclosed and unknown:
+        return {"STATUS": ROOM_AMBIGUOUS, "ROOM_ID": None, "LABEL": None, "AREA_M2": None,
+                "CANDIDATES": published, "REACH_M": round(reach, 6), "GEOMETRY": geometry,
+                "WHY": "one enclosed room and %d space(s) the source does not classify meet at this opening; "
+                       "an unclassified space is not evidence that the enclosed side is the only one"
+                       % len(unknown)}
+    if external and not enclosed and not unknown:
+        return {"STATUS": ROOM_NOT_FOUND, "ROOM_ID": None, "LABEL": None, "AREA_M2": None,
+                "CANDIDATES": published, "REACH_M": round(reach, 6), "GEOMETRY": geometry,
+                "WHY": "every space at this opening is external or open; a room-use standard needs an "
+                       "occupied room and there is none"}
+
+    # nothing classified: fall back to the label evidence alone, and say so
+    if len(labelled) == 1:
+        return resolved(labelled[0],
+                        "exactly one named space is within reach, and the source classifies no space here")
     return {"STATUS": ROOM_AMBIGUOUS, "ROOM_ID": None, "LABEL": None, "AREA_M2": None,
-            "CANDIDATES": published, "REACH_M": round(reach, 6),
-            "WHY": f"{len(labelled)} named spaces are within reach and the opening faces more than one of "
-                   "them; which room's standard applies is not decidable from geometry alone"}
+            "CANDIDATES": published, "REACH_M": round(reach, 6), "GEOMETRY": geometry,
+            "WHY": f"{len(labelled)} named spaces are within reach and the source classifies none of them as "
+                   "enclosed or external, so the side that owns the standard cannot be identified"}
 
 
 def category_for(room, mapping, resolver=None):

@@ -52,14 +52,42 @@ def test_one_wall_drawn_on_two_layers_is_billed_once():
     assert len(dups) == 1 and dups[0]["DUPLICATE_OF"]
 
 
-def test_a_band_as_short_as_it_is_thick_is_never_a_run_of_wall():
+def test_a_band_as_short_as_it_is_thick_is_a_question_and_not_an_exclusion():
+    """A pier, a wall return and a jamb nib are all shorter than twice their thickness, and all of them are
+    masonry.  R6 excluded twenty-three such bands from the trade on shape alone, at WEAK confidence, without
+    asking anyone - which is a permanent, silent deduction from the quantity made on no evidence at all."""
     stub = S.wall_band("M-STUB", (0.0, 0.0, 0.20, 0.20), 0.20, "X")
     long_a = S.wall_band("M-A", (0.0, 3.0, 8.0, 3.20), 0.20, "X")
     long_b = S.wall_band("M-B", (0.0, 6.0, 8.0, 6.20), 0.20, "X")
     _lines, by_ref, _reg = classify([stub, long_a, long_b])
     stub_rec = next(v for r, v in by_ref.items() if v["MATERIAL_LENGTH_M"] == 0.20)
-    assert stub_rec["GEOMETRY_ARTEFACT_REASON"] in (MA.COLUMN_OR_STRUCTURE, MA.JUNCTION_ARTEFACT)
+    assert stub_rec["GEOMETRY_IDENTITY"] == MA.WALL_GEOMETRY_CANDIDATE
+    assert stub_rec["GEOMETRY_ARTEFACT_REASON"] is None
     assert stub_rec["ASPECT_LENGTH_OVER_THICKNESS"] < MA.WALL_ASPECT_MIN
+    assert "pier" in stub_rec["WHY_GEOMETRY"]
+
+
+def test_the_source_naming_a_band_a_column_does_exclude_it():
+    """Exclusion needs positive evidence, and this is what positive evidence looks like."""
+    stub = S.wall_band("M-STUB", (0.0, 0.0, 0.20, 0.20), 0.20, "X")
+    long_a = S.wall_band("M-A", (0.0, 3.0, 8.0, 3.20), 0.20, "X")
+    reg = MA.classify_wall_identity([stub, long_a], TOL, exclusion_evidence={
+        "M-STUB": {"KIND": MA.COLUMN_OR_STRUCTURE, "REFERENCE": "COLUMN_SCHEDULE::C-3"}})
+    rec = next(r for r in reg["REGISTER"] if r["COMPONENT_REF"] == "M-STUB")
+    assert rec["GEOMETRY_IDENTITY"] == MA.NON_WALL_ARTEFACT
+    assert rec["GEOMETRY_ARTEFACT_REASON"] == MA.COLUMN_OR_STRUCTURE
+    assert rec["GEOMETRY_CONFIDENCE"] == "PROVEN"
+
+
+def test_no_band_is_excluded_from_the_trade_on_weak_evidence():
+    """Whatever the fixture, an exclusion has to be able to say why with more than a shrug."""
+    for lines in (S.a_drawing_with_artefacts_among_its_walls(),
+                  [S.wall_band("M-STUB", (0.0, 0.0, 0.20, 0.20), 0.20, "X"),
+                   S.wall_band("M-A", (0.0, 3.0, 8.0, 3.20), 0.20, "X")]):
+        reg = MA.classify_wall_identity(lines, TOL)
+        weak = [r for r in reg["REGISTER"]
+                if r["GEOMETRY_IDENTITY"] == MA.NON_WALL_ARTEFACT and r["GEOMETRY_CONFIDENCE"] == "WEAK"]
+        assert not weak, weak
 
 
 def test_what_the_drawing_says_outranks_what_its_shape_suggests():

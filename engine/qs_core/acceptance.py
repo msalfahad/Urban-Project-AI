@@ -342,6 +342,187 @@ def grade(doc):
                        "a document that calls a line blocked in one table and released in another lets a "
                        "reader pick the number they prefer, and one of the two is always wrong"))
 
+    # A22 ------------------------------------------------------- the derived registers describe one moment
+    final = doc.get("FINAL_OPENING_STATE") or {}
+    frozen = {r["OPENING_REF"]: r for r in final.get("OPENINGS", [])}
+    reg_rows = doc.get("OPENING_REGISTER_ROWS") or []
+    disagree = []
+    for row in reg_rows:
+        want = frozen.get(row.get("OPENING_REF"))
+        if want is None:
+            disagree.append({"OPENING_REF": row.get("OPENING_REF"), "WHY": "not in the final state"})
+            continue
+        for field in ("WIDTH_M", "HEIGHT_M", "AREA_M2"):
+            a, b = want.get(field), row.get(field)
+            if (a is None) != (b is None) or (a is not None and abs(a - b) > 1e-9):
+                disagree.append({"OPENING_REF": row.get("OPENING_REF"), "FIELD": field,
+                                 "FINAL_STATE": a, "REGISTER": b})
+        wa = (want.get("WIDTH_EVIDENCE") or {}).get("REFERENCE")
+        wb = ((row.get("ADMISSION") or {}).get("WIDTH_EVIDENCE") or {}).get("REFERENCE")
+        ha = (want.get("HEIGHT_EVIDENCE") or {}).get("REFERENCE")
+        hb = ((row.get("ADMISSION") or {}).get("HEIGHT_EVIDENCE") or {}).get("REFERENCE")
+        if (wa, ha) != (wb, hb):
+            disagree.append({"OPENING_REF": row.get("OPENING_REF"), "FIELD": "SELECTED_EVIDENCE",
+                             "FINAL_STATE": [wa, ha], "REGISTER": [wb, hb]})
+    checks.append(_chk("A22", "every opening register agrees with the final evidence state",
+                       bool(final) and bool(reg_rows) and not disagree,
+                       {"HAS_FINAL_STATE": bool(final), "OPENINGS": len(frozen),
+                        "REGISTER_ROWS": len(reg_rows), "DISAGREEMENTS": disagree},
+                       "a register built before the last piece of evidence arrived describes an earlier "
+                       "moment; two such registers side by side let a reader read a resolved height beside a "
+                       "null area and a question asking for the height that was resolved"))
+
+    # A23/A24 --------------------------------------------------- questions match the evidence, both ways
+    qs = doc.get("QUESTIONS") or {}
+    roots = qs.get("ROOT_QUESTIONS") or []
+    height_qs = {r["SUBJECT_REF"]: 0 for r in roots if r.get("KIND") == "OPENING_HEIGHT_NOT_ESTABLISHED"}
+    for r in roots:
+        if r.get("KIND") == "OPENING_HEIGHT_NOT_ESTABLISHED":
+            height_qs[r["SUBJECT_REF"]] += 1
+    answered_but_asked, unanswered_but_silent, asked_twice = [], [], []
+    for ref, row in sorted(frozen.items()):
+        established = (row.get("HEIGHT_EVIDENCE") or {}).get("STATUS") == "ESTABLISHED"
+        asked = height_qs.get(ref, 0)
+        if established and asked:
+            answered_but_asked.append({"OPENING_REF": ref,
+                                       "HEIGHT": (row.get("HEIGHT_EVIDENCE") or {}).get("VALUE"),
+                                       "ANSWERED_BY": (row.get("HEIGHT_EVIDENCE") or {}).get("REFERENCE")})
+        if not established and row.get("HOST_ASSIGNMENT_STATUS") == "HOST_ASSIGNED" and asked == 0:
+            unanswered_but_silent.append({"OPENING_REF": ref})
+        if asked > 1:
+            asked_twice.append({"OPENING_REF": ref, "QUESTIONS": asked})
+    checks.append(_chk("A23", "an established dimension carries no question asking for it",
+                       bool(frozen) and not answered_but_asked,
+                       {"ESTABLISHED_HEIGHTS": sum(1 for r in frozen.values()
+                                                   if (r.get("HEIGHT_EVIDENCE") or {}).get("STATUS")
+                                                   == "ESTABLISHED"),
+                        "ANSWERED_BUT_STILL_ASKED": answered_but_asked},
+                       "a question may exist only while its fact is unanswered; a work list that asks for "
+                       "answers it already holds cannot be closed"))
+    checks.append(_chk("A24", "an unresolved required dimension carries exactly one question",
+                       bool(frozen) and not unanswered_but_silent and not asked_twice,
+                       {"UNANSWERED_AND_UNASKED": unanswered_but_silent, "ASKED_MORE_THAN_ONCE": asked_twice},
+                       "a missing fact nobody asks about is a quantity published on nothing, and the same "
+                       "fact asked twice is a work list that cannot be finished"))
+
+    # A25 ------------------------------------------------------- one evidence version across the registers
+    versions = doc.get("EVIDENCE_VERSIONS") or {}
+    want_version = final.get("EVIDENCE_VERSION")
+    mixed = {k: v for k, v in versions.items() if v != want_version}
+    checks.append(_chk("A25", "every derived register records the evidence version it was built from",
+                       bool(want_version) and bool(versions) and not mixed,
+                       {"EVIDENCE_VERSION": want_version, "REGISTERS": versions, "MISMATCHED": mixed},
+                       "the deduction, the dependency graph and the question register must be derived from "
+                       "the same state, and must be able to prove it"))
+
+    # A26 ------------------------------------------------------- impacts are a set
+    seen = {}
+    for i in qs.get("DEPENDENCY_IMPACTS", []):
+        key = (i.get("ROOT_QUESTION_ID"), str(i.get("NODE")), i.get("NODE_KIND"), i.get("EFFECT"))
+        seen[key] = seen.get(key, 0) + 1
+    dupes = [{"KEY": list(k), "ROWS": n} for k, n in sorted(seen.items()) if n > 1]
+    checks.append(_chk("A26", "dependency impacts are unique and idempotent",
+                       "DEPENDENCY_IMPACTS" in qs and not dupes,
+                       {"IMPACT_ROWS": len(qs.get("DEPENDENCY_IMPACTS", [])), "DISTINCT_EDGES": len(seen),
+                        "DUPLICATES": dupes},
+                       "an impact count inflated by the number of construction paths measures the graph "
+                       "walk, not the work an answer would release"))
+
+    # A27 ------------------------------------------------------- "releases" means no blocker remains
+    blockers = doc.get("BLOCKER_SETS") or {}
+    wrong_release = []
+    for node, rec in sorted((blockers.get("NODES") or {}).items()):
+        claimed = rec.get("ANSWER_ALONE_RELEASES_NODE")
+        if claimed is not None and len(rec.get("BLOCKER_IDS") or []) != 1:
+            wrong_release.append({"NODE": node, "CLAIMED": claimed,
+                                  "BLOCKERS": rec.get("BLOCKER_IDS")})
+    for qid, rec in sorted((blockers.get("BY_ROOT_QUESTION") or {}).items()):
+        for node in rec.get("RELEASES_NODES", []):
+            n = (blockers.get("NODES") or {}).get(node, {})
+            if sorted(n.get("BLOCKER_IDS") or []) != [qid]:
+                wrong_release.append({"NODE": node, "CLAIMED_BY": qid,
+                                      "BLOCKERS": n.get("BLOCKER_IDS")})
+    checks.append(_chk("A27", "a question is said to release a node only when nothing else blocks it",
+                       bool(blockers) and not wrong_release,
+                       {"NODES": len(blockers.get("NODES") or {}),
+                        "RELEASED_BY_ONE_ANSWER": blockers.get("NODES_RELEASED_BY_ONE_ANSWER"),
+                        "SEVERAL_BLOCKERS": blockers.get("NODES_WITH_SEVERAL_BLOCKERS"),
+                        "OVERCLAIMED": wrong_release},
+                       "removing one of three blockers releases nothing, and a report that calls it a "
+                       "release promises work the answer will not deliver"))
+
+    # A28 ------------------------------------------------------- material answers carry their own scope
+    ident_rows = doc.get("WALL_IDENTITY_REGISTER") or []
+    unscoped = [r for r in ident_rows
+                if r.get("MATERIAL_IDENTITY") not in (None, "MATERIAL_UNKNOWN")
+                and not (r.get("MATERIAL_EVIDENCE") or {}).get("REFERENCE")]
+    no_scope_field = [r["COMPONENT_REF"] for r in ident_rows if not r.get("MATERIAL_SCOPE_KEY")]
+    family_as_type = [r["COMPONENT_REF"] for r in ident_rows
+                      if r.get("THICKNESS_FAMILY_PROVES_MATERIAL")]
+    material_questions = [r for r in roots if r.get("KIND") == "WALL_MATERIAL_NOT_ESTABLISHED"]
+    keyed_on_thickness_alone = [r["SUBJECT_REF"] for r in material_questions
+                                if str(r.get("SUBJECT_REF", "")).startswith("THICKNESS_FAMILY::")]
+    checks.append(_chk("A28", "a material answer applies only where its own scope says it does",
+                       bool(ident_rows) and not unscoped and not no_scope_field
+                       and not family_as_type and not keyed_on_thickness_alone,
+                       {"BANDS": len(ident_rows), "MATERIAL_WITHOUT_A_DOCUMENT": len(unscoped),
+                        "BANDS_WITHOUT_A_SCOPE_KEY": no_scope_field,
+                        "THICKNESS_TREATED_AS_MATERIAL_PROOF": family_as_type,
+                        "QUESTIONS_KEYED_ON_THICKNESS_ALONE": keyed_on_thickness_alone},
+                       "walls of one thickness may be built of different things; grouping a question by "
+                       "thickness is convenient, and treating the group as a wall type is an inference the "
+                       "source has not made"))
+
+    # A29 ------------------------------------------------------- weak evidence never excludes a quantity
+    weak_exclusions = [{"COMPONENT_REF": r.get("COMPONENT_REF"), "REASON": r.get("GEOMETRY_ARTEFACT_REASON"),
+                        "CONFIDENCE": r.get("GEOMETRY_CONFIDENCE"),
+                        "ON_A_SOURCE_WALL_LAYER": r.get("ON_A_SOURCE_WALL_LAYER")}
+                       for r in ident_rows
+                       if r.get("GEOMETRY_IDENTITY") == "NON_WALL_ARTEFACT"
+                       and r.get("GEOMETRY_CONFIDENCE") == "WEAK"]
+    shape_only = [r.get("COMPONENT_REF") for r in ident_rows
+                  if r.get("GEOMETRY_IDENTITY") == "NON_WALL_ARTEFACT"
+                  and r.get("GEOMETRY_ARTEFACT_REASON") == "COLUMN_OR_STRUCTURE"
+                  and not r.get("ANNOTATION") and r.get("GEOMETRY_CONFIDENCE") != "PROVEN"]
+    checks.append(_chk("A29", "nothing leaves the trade on weak evidence or on its shape alone",
+                       bool(ident_rows) and not weak_exclusions and not shape_only,
+                       {"EXCLUDED": sum(1 for r in ident_rows
+                                        if r.get("GEOMETRY_IDENTITY") == "NON_WALL_ARTEFACT"),
+                        "EXCLUDED_ON_WEAK_EVIDENCE": weak_exclusions,
+                        "EXCLUDED_AS_A_COLUMN_WITHOUT_THE_SOURCE_SAYING_SO": shape_only},
+                       "an exclusion is permanent and silent, so it needs positive evidence: a pier, a wall "
+                       "return and a jamb nib are all shorter than twice their thickness and all of them are "
+                       "masonry"))
+
+    # A30 ------------------------------------------------------- an open area is not a room
+    cats = doc.get("ROOM_CATEGORY_REGISTER") or {}
+    competing = []
+    for row in cats.get("REGISTER", []):
+        room = row.get("ROOM") or {}
+        if room.get("STATUS") != "HOST_ROOM_AMBIGUOUS":
+            continue
+        roles = [c.get("ROLE") for c in room.get("CANDIDATES", []) if c.get("LABEL")]
+        enclosed = [r for r in roles if r == "ENCLOSED_ROOM"]
+        if len(enclosed) <= 1 and any(r == "EXTERNAL_OR_OPEN_AREA" for r in roles):
+            competing.append({"OPENING_REF": row.get("OPENING_REF"), "ROLES": roles})
+    checks.append(_chk("A30", "an external or open area never competes with a room for a room-use standard",
+                       "REGISTER" in cats and not competing,
+                       {"WINDOWS": len(cats.get("REGISTER", [])),
+                        "AMBIGUOUS_BECAUSE_OF_AN_OPEN_AREA": competing},
+                       "a window separates an occupied room from the outside; reading the standard off "
+                       "whichever labelled polygon is nearer lets a roof terrace answer for a bedroom"))
+
+    # A31 ------------------------------------------------------- every claim in the report is traceable
+    claims = doc.get("REPORT_CLAIMS") or {}
+    rows = claims.get("CLAIMS") or []
+    unverified = [c for c in rows if c.get("VERIFIED") is not True]
+    checks.append(_chk("A31", "every numerical or causal claim in the report is declared and traceable",
+                       bool(rows) and not unverified,
+                       {"DECLARED_CLAIMS": len(rows), "UNVERIFIED": unverified,
+                        "WHAT_THIS_MEANS": claims.get("WHAT_THIS_CHECK_DOES_NOT_PROVE")},
+                       "this proves that every DECLARED claim agrees with its register.  It does not prove "
+                       "that the prose contains no undeclared claim, and must never be reported as if it did"))
+
     failed = [c for c in checks if c["RESULT"] == FAIL]
     return {"GATE": "QS_CORE_ACCEPTANCE", "CHECKS": checks, "PASSED": len(checks) - len(failed),
             "OF": len(checks), "ALL_PASS": not failed,

@@ -499,6 +499,58 @@ def existence_is_not_retracted_by_host_failure(population, hosts):
                 "population")
 
 
+def derived_registers_share_one_evidence_version(final, openings, registers):
+    """Every register built after the barrier describes the same moment, and the objects have not moved."""
+    from engine.qs_core import final_state as FS
+
+    drift = FS.verify(final, openings)
+    version = final["EVIDENCE_VERSION"]
+    wrong = [{"REGISTER": i, "VERSION": (r or {}).get(FS.VERSION_FIELD, FS.UNVERSIONED)}
+             for i, r in enumerate(registers)
+             if (r or {}).get(FS.VERSION_FIELD) != version]
+    return _rec("INV-26_EVERY_DERIVED_REGISTER_DESCRIBES_THE_FROZEN_STATE",
+                drift["UNCHANGED"] and not wrong,
+                {"EVIDENCE_VERSION": version, "REGISTERS": len(registers)}, 0,
+                {"DRIFTED": drift["DRIFTED"], "WRONG_VERSION": wrong,
+                 "MISSING_AFTER_THE_FREEZE": drift["MISSING_AFTER_THE_FREEZE"]},
+                "the live openings re-read after the derived registers were built, and each register's "
+                "recorded evidence version compared with the frozen one")
+
+
+def the_opening_registers_agree_with_the_final_state(final, register):
+    """One opening, one width, one height, one area - in whichever register a reader happens to open."""
+    by_ref = {r["OPENING_REF"]: r for r in final["OPENINGS"]}
+    offenders = []
+    for row in register["REGISTER"]:
+        want = by_ref.get(row["OPENING_REF"])
+        if want is None:
+            offenders.append({"OPENING_REF": row["OPENING_REF"], "WHY": "not in the frozen state"})
+            continue
+        for field in ("WIDTH_M", "HEIGHT_M", "AREA_M2"):
+            a, b = want[field], row.get(field)
+            if (a is None) != (b is None) or (a is not None and abs(a - b) > 1e-9):
+                offenders.append({"OPENING_REF": row["OPENING_REF"], "FIELD": field,
+                                  "FINAL_STATE": a, "REGISTER": b,
+                                  "WHY": "the register was built from an earlier evidence state"})
+    return _rec("INV-27_THE_OPENING_REGISTER_AGREES_WITH_THE_FINAL_EVIDENCE", not offenders,
+                {"OPENINGS": len(final["OPENINGS"])}, 0, {"OFFENDERS": offenders},
+                "every published width, height and area compared field by field with the frozen state")
+
+
+def dependency_impacts_are_unique(questions):
+    """The impact register is a set.  Walking the graph twice must not double the work it appears to release."""
+    seen = {}
+    for i in questions.get("DEPENDENCY_IMPACTS", []):
+        key = (i["ROOT_QUESTION_ID"], str(i["NODE"]), i["NODE_KIND"], i["EFFECT"])
+        seen[key] = seen.get(key, 0) + 1
+    duplicates = [{"KEY": list(k), "ROWS": n} for k, n in sorted(seen.items()) if n > 1]
+    return _rec("INV-28_DEPENDENCY_IMPACTS_ARE_A_SET", not duplicates,
+                {"IMPACT_ROWS": len(questions.get("DEPENDENCY_IMPACTS", [])), "DISTINCT_EDGES": len(seen),
+                 "REPEATED_INSERTIONS": questions.get("REPEATED_INSERTIONS")}, 0,
+                {"DUPLICATES": duplicates},
+                "every impact row keyed by fact, node, node kind and effect, and the keys counted")
+
+
 def evaluate_all(**checks):
     rows = [v for v in checks.values()]
     return {"CHECKS": rows, "PASSED": sum(1 for r in rows if r["PASS"]), "OF": len(rows),

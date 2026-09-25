@@ -223,15 +223,15 @@ export PYTHONPATH=$PWD
 python -m pytest tests/test_qs_core_*.py -o addopts= -v
 
 # the project regression: reads the frozen takeoff, never writes it
-python -m research.qs_wall_treatment_01.pa09.alrashed.regression_r6
-python -m pytest tests/test_pa09_alrashed_regression_r6.py -o addopts= -v
+python -m research.qs_wall_treatment_01.pa09.alrashed.regression_r7
+python -m pytest tests/test_pa09_alrashed_regression_r7.py -o addopts= -v
 
 # the deliverable package, verified after it is written
-python docs/build_r6_validation_package.py
+python docs/build_r7_validation_package.py
 ```
 
 Artifacts land in `data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa09_alrashed/`:
-`ALRASHED_GENERIC_ENGINE_VALIDATION_R6.json` and the registers beside it - the
+`ALRASHED_GENERIC_ENGINE_VALIDATION_R7.json` and the registers beside it - the
 source opening population, opening admission, opening to host, the evidence
 claim lifecycle, window room and category, wall geometry and wall material
 separately, the root questions, the dependency impacts, final versus blocked
@@ -254,3 +254,27 @@ opened. `docs/R6_WHAT_CHANGED_AND_WHY.md` has the object-by-object table.
 The R5 adapter no longer runs, by design: it built each opening as a rectangle
 of a guessed depth, and that constructor is gone. A test in
 `tests/test_pa09_alrashed_regression_r5.py` asserts that it raises.
+
+## 11. What R7 corrected
+
+Ten grounds, each checked against R6's own registers before any code was
+touched.  The one that produced the others: R6 resolved window heights from the
+room standard after it had already built the opening register, the deductions,
+the dependency graph and the question register, so those registers described an
+earlier moment than the evidence they cited.  R7 makes "the evidence is final"
+an explicit event - `engine/qs_core/final_state.py` - with a version every
+derived register records and the gate re-reads.
+
+The rest: questions asked of the frozen state rather than of a derived field;
+host rooms resolved from the two sides of the wall, with an external area never
+competing with an enclosed room; dependencies as idempotent blocker sets, with
+*affects*, *removes one blocker* and *releases* defined and distinguished;
+material claims carrying an explicit applicability scope, so thickness is never
+a wall type; exclusion from the trade only on positive evidence, so a short band
+is a question; and every reported number declared as a claim object with a
+register path.  `docs/R7_WHAT_CHANGED_AND_WHY.md` has the defect-by-defect
+table.
+
+The R6 adapter is kept as the artifact of its round; the delivered R6 package is
+the verifiable copy of what it produced, and the R7 before-and-after column is
+read from it.

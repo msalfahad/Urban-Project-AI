@@ -70,10 +70,16 @@ def test_the_graph_field_is_named_for_what_it_contains():
 
 
 def test_non_blocked_is_not_the_same_as_final_when_a_band_is_excluded():
-    """The arithmetic that made the last report contradict itself, made explicit."""
+    """The arithmetic that made the last report contradict itself, made explicit.
+
+    The excluded band is one the SOURCE names a column.  Under R7 a short band on its own is a question, not
+    an exclusion, so a fixture that excluded it on shape would be testing a rule that no longer exists.
+    """
     plan = S.small_plan("R1")
     plan["COMPONENTS"].append(S.wall_band("STUB", (6.0, 6.0, 6.2, 6.2), 0.20, "X"))
-    r = S.run(plan, wall_height=3.0)
+    r = S.run(plan, wall_height=3.0,
+              exclusion_evidence={"WALL-LINE::LEVEL_1::X::6.0::6.0::0.2":
+                                  {"KIND": "COLUMN_OR_STRUCTURE", "REFERENCE": "COLUMN_SCHEDULE::C-12"}})
     cats = r["PUBLICATION"]["ROW_CATEGORIES"]
     non_blocked = len(r["DEPENDENCY_GRAPH"]["NON_BLOCKED_WALL_LINES"])
     assert cats["EXCLUDED"] >= 1, "the fixture has to actually produce an excluded band"

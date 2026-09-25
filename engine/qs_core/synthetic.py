@@ -432,6 +432,63 @@ def a_flat_with_four_different_room_uses(revision="R1"):
             "REVISION": revision, "TOLERANCE_M": TOL, "SLIVER_MIN_DIMENSION_M": SLIVER_MIN, "FLOOR": FLOOR}
 
 
+# ------------------------------------------------------------------ which side of the window owns the standard
+def a_window_between_two_spaces(inside="BED ROOM", outside="ROOF", thickness=0.20, revision="R1",
+                                floor=FLOOR):
+    """One window in one wall, with a named space on each side of it.
+
+    This is the shape of every external window ever drawn, and R6 could not read it: it took whichever named
+    polygon was nearest and called two-sided-ness an ambiguity.  The caller says which of its own words mean
+    "outside"; the engine only has to notice that the two sides are different kinds of thing.
+    """
+    comps = [
+        floor_region("F-INSIDE", [(0.0, 0.0, 6.0, 4.0)], revision=revision, floor=floor),
+        wall_band("W-EXT", (0.0, 4.0, 6.0, 4.0 + thickness), thickness, geom.AXIS_X, revision=revision,
+                  floor=floor),
+        floor_region("F-OUTSIDE", [(0.0, 4.0 + thickness, 6.0, 9.0)], revision=revision, floor=floor),
+    ]
+    labels = [Label(inside, 3.0, 2.0), Label(outside, 3.0, 6.5)]
+    win = candidate("WIN-1", (2.4, 4.0, 3.6, 4.0 + thickness), geom.AXIS_X, kind="WINDOW", height=None,
+                    revision=revision, floor=floor)
+    return {"COMPONENTS": comps, "BARRIERS": [], "CANDIDATES": [win], "LABELS": labels,
+            "REVISION": revision, "TOLERANCE_M": TOL, "SLIVER_MIN_DIMENSION_M": SLIVER_MIN, "FLOOR": floor}
+
+
+# The caller's own vocabulary, as an adapter would supply it.  The engine holds none of these words.
+EXTERNAL_WORDS = ("ROOF", "TERRACE", "BALCONY", "OPEN TO SKY", "CAR PARKING")
+ENCLOSED_WORDS = ("BED ROOM", "M.BED ROOM", "KITCHEN", "HALL", "BATH", "CORRIDOR", "ROOM A", "ROOM B",
+                  "LIVING", "OFFICE", "WORKSHOP")
+
+
+def space_role(space):
+    """The role classifier a caller hands the engine: enclosed room, open area, or not stated."""
+    from engine.qs_core import room_category as RC
+
+    label = (space.label or "").strip().upper()
+    if not label:
+        return RC.ROLE_UNKNOWN
+    if any(w in label for w in EXTERNAL_WORDS):
+        return RC.EXTERNAL_OR_OPEN
+    if any(label.startswith(w) for w in ENCLOSED_WORDS):
+        return RC.ENCLOSED_ROOM
+    return RC.ROLE_UNKNOWN
+
+
+# ------------------------------------------------------------------ equal thickness, different materials
+def two_walls_of_one_thickness_and_two_materials(thickness=0.20, revision="R1"):
+    """An external wall and a service enclosure, drawn at the same thickness on different layers.
+
+    Grouping a material question by thickness is convenient.  Concluding that one answer covers both of these
+    is the inference the source has not made.
+    """
+    return [
+        wall_band("W-EXTERNAL", (0.0, 0.0, 8.0, thickness), thickness, geom.AXIS_X, revision=revision,
+                  layer="A-WALL-EXTERNAL"),
+        wall_band("W-SERVICE", (0.0, 5.0, 8.0, 5.0 + thickness), thickness, geom.AXIS_X, revision=revision,
+                  layer="A-WALL-SERVICE"),
+    ]
+
+
 # a standard's table and a label mapping, as a caller would supply them.  Values are arbitrary and exist only
 # to show that four rooms take four different answers.
 STANDARD_TABLE = {"BEDROOM": {"H": 1.5, "W": 1.5}, "KITCHEN": {"H": 1.2, "W": 1.2},

@@ -408,9 +408,13 @@ def assign_opening_host(opening, wall_bands, tolerance):
     return opening
 
 
-def register_from_hosts(openings, wall_lines, tolerance):
-    """The canonical register: every physical opening, the wall LINE its resolved host segments belong to,
-    and the deduction that follows.  Openings whose host is unresolved keep their place and carry no deduction.
+def assign_host_lines(openings, wall_lines):
+    """Map each opening's resolved host SEGMENTS onto the wall LINE they belong to.
+
+    This is part of an opening's final state, not of the register that reports it: the deduction, the
+    dependency graph and the questions all need to know which line an opening is deducted from, and they must
+    all be told the same thing.  It is deterministic and idempotent, so running it before the evidence barrier
+    and again inside the register cannot produce two answers.
     """
     from engine.qs_core.entities import HOST_ASSIGNED, HOST_WALL_UNRESOLVED
 
@@ -445,6 +449,16 @@ def register_from_hosts(openings, wall_lines, tolerance):
             o.host_evidence = [Evidence("HOST_NOT_RESOLVED", dict(
                 rec, WALL_LINES_THE_SEGMENTS_BELONG_TO=sorted(host_lines),
                 NOTE="the opening exists; what is unresolved is which wall it is deducted from"))]
+    return openings
+
+
+def register_from_hosts(openings, wall_lines, tolerance):
+    """The canonical register: every physical opening, the wall line it is deducted from, and that deduction.
+
+    It reports the opening's final state and adds nothing to it.  Openings whose host is unresolved keep their
+    place and carry no deduction.
+    """
+    assign_host_lines(openings, wall_lines)
     return _summarise(openings, tolerance)
 
 
