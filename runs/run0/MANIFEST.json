@@ -1,0 +1,67 @@
+{
+  "run_label": "RUN 0 — PRE-CANONICAL-ID LIVE RUN",
+  "project_id": "23010",
+  "drawing_id": "AR-00",
+  "floor_id": "2F",
+  "acceptance_status": "INVALID_FOR_FINAL_SCORING",
+  "reason": "IDENTIFIER_SCHEMA_DEFECT",
+  "reason_detail": "apartment_id and zone_id were free text chosen by the model, then compared by string equality. A1 wrote APT-EAST / ZONE-EAST-RESIDENTIAL; A2 wrote APT-01 / BEDROOM_WING_NORTH. Those may denote the same topology at different granularity, so 0% field agreement is a measurement artefact, not a finding about the agents. The run is preserved because it is the evidence that exposed the defect.",
+  "benchmark_scored": false,
+  "benchmark_seal": "INTACT — no MEASURER figure was compared against this run",
+  "geometry_sha256": "83fc1037cff6154072be02e7f1b6d271cbca6cd394a5002dd43f02621d48a583",
+  "runs": {
+    "a1": {
+      "run_id": "a1-733acac2",
+      "agent": "a1",
+      "model": "claude-fable-5-1",
+      "effort": "high",
+      "max_tokens": 96000,
+      "timestamp": "2026-09-13T18:46:11Z",
+      "seconds": 208.8,
+      "schema_valid": true,
+      "prompt_file": "/home/user/Urban-Project-AI/agents/a1_extractor/prompt_semantic.md"
+    },
+    "a2blind": {
+      "run_id": "a2blind-10abd1aa",
+      "agent": "a2blind",
+      "model": "claude-fable-5-1",
+      "effort": "high",
+      "max_tokens": 96000,
+      "timestamp": "2026-09-13T18:50:28Z",
+      "seconds": 245.5,
+      "schema_valid": true,
+      "prompt_file": "/home/user/Urban-Project-AI/agents/a2_reviewer/prompt_blind.md"
+    }
+  },
+  "spaces_classified": {
+    "a1": 36,
+    "a2blind": 36
+  },
+  "what_run_0_does_establish": [
+    "Both agents returned schema-valid output over all 36 opaque spaces.",
+    "Neither agent returned a geometry field; zero geometry mutation attempts.",
+    "semantic_label agreed on 36/36 — same-model blind reproducibility, NOT independent correctness.",
+    "Seven scope disagreements (terraces, voids, maid block, iron room, shaft) are real and were carried into Run 1 unchanged."
+  ],
+  "what_run_0_does_not_establish": [
+    "No accuracy claim of any kind. The benchmark was never opened.",
+    "apartment_id / zone_id agreement is uninterpretable under the defective schema.",
+    "trade_relevance agreement (12/36) measured an LLM decision that has since been moved to E27."
+  ],
+  "artifacts_sha256": {
+    "a1_raw.txt": "31ad7ff8661394dbf370043aabb195c5020040a92074bff835c016e1ac51c56c",
+    "a1_result.json": "dc793c7661745ddd493011c0fcc944342bcd8766ca49fafc887816d72d9a5b43",
+    "a2blind_raw.txt": "a8c7cf7be2b64aece1e15ff52c8aa4e68af5f81d3e94412892cad97b64470728",
+    "a2blind_result.json": "261479f995da68855194041b30b0b9dc977d0a58b4594275702b7e7ad1df8f77",
+    "alias_private.json": "ae6363234ede10f7fb6cb6a78dc9acae2deba58a29204ed92e3d1b4c1d8aeb61",
+    "compare.py": "f5bec9514ee1574ed108428be2a32e1aec67aae58f0da73062984a441e1f631e",
+    "e32_result.json": "5aa91879cbfe6127efa4e1d9940ae72d3801fbc206d0e2c94344e691f4c44470",
+    "freeze.py": "fd37c01766daabece489d50080ff05bd4282f450c4dfdaf4664929089875aa6a",
+    "frozen.json": "c21df0cf62e4b30432f53caa526747d7978d39decdcd70b425cbac57120911f0",
+    "package.json": "077f0b59879fd6666b0e0a6fb1aa6dedb97b9fa1a2a9a000093b6afbadb5260b",
+    "package.py": "882fac0fae10c6c7a070e3a6c1e4e0dd9f08001bad7cdf046eada94715369b1c",
+    "run_agent.py": "d9e74e74c20d55a65c731a51c6cffc8d0661b2cbf194963aeb70a52c47a3da33"
+  },
+  "artifacts_location": "data/runs/run0/ (gitignored — carries client room dimensions)",
+  "superseded_by": "RUN 1 — OFFICIAL BLIND ACCEPTANCE RUN"
+}

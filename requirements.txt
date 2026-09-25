@@ -1,0 +1,19 @@
+# Core runtime deps are added phase by phase as modules need them.
+# The engine and agent scaffolding are intentionally dependency-free so the
+# core runs anywhere. Dev/test only for now:
+pytest>=8.0
+openpyxl>=3.1   # reading .xlsx takeoff/BOQ workbooks (Phase 0 auditor)
+
+# Client documents (quotations / contracts) — needed by documents/ and its tests:
+shapely>=2.0    # GEOS: the geometry kernel. This project does NOT own one —
+                # noding, union, difference, polygonization, validity,
+                # containment and overlap are library operations. See
+                # engine/wall_solid.py and engine/free_space.py.
+jinja2>=3.1
+python-barcode>=0.15   # Code 128 reference barcode on the letterhead
+
+# Optional, installed only when running agents/sync live (not needed for tests):
+#   anthropic>=0.39     # calling the Claude API (agents/base.py)
+#   firebase-admin>=7   # reading/writing the app's Firestore (tools/connect_firestore.py)
+#   pymupdf>=1.24       # parsing pricing PDFs + rendering drawings (tools/)
+#   playwright>=1.40    # printing documents to PDF with Chromium (documents/render.py)

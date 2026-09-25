@@ -1,0 +1,27 @@
+{
+  "schema": "SUPERVISED_FLOOR_ASSIGNMENT_V1",
+  "source_file": "P7757_ARCHITECTURAL.dwg",
+  "source_sha256_16": "7f61f3acdd62d62d",
+  "provenance": "SUPERVISED_AUDIT",
+  "why_this_file_exists": [
+    "This drawing carries NO decodable title text. Its 89 decoded strings",
+    "are room stamps, level marks, NEIGHBOUR, STREET and SEA VIEW. There is",
+    "no 'GROUND FLOOR PLAN' for the engine to read, because the sheet's",
+    "titles are drawn in an SHX font this decoder does not resolve.",
+    "So the floor of every region is NOT ESTABLISHED from the drawing, and",
+    "the owner's independent audit supplied the mapping below.",
+    "It is DATA, not engine logic: engine/drawing_role.py contains no",
+    "region id of any project, and every assignment taken from here is",
+    "reported with floor_provenance = SUPERVISED_AUDIT rather than",
+    "DERIVED_FROM_THE_DRAWING."
+  ],
+  "assignments": {
+    "DR-002": {"floor_level": "GROUND", "drawing_role": "FLOOR_PLAN"},
+    "DR-004": {"floor_level": "FIRST", "drawing_role": "FLOOR_PLAN"},
+    "DR-006": {"floor_level": "ROOF", "drawing_role": "ROOF_PLAN"}
+  },
+  "deliberately_unassigned": {
+    "DR-001": "the audit leaves it unresolved for BOQ purposes",
+    "DR-003": "the audit leaves it unresolved for BOQ purposes"
+  }
+}
