@@ -25,11 +25,17 @@ def _ev(eid, kind, lineage, producer=FR.ENGINE):
     return FR.UnitEvidence(eid, FR.NATIVE_UNIT, kind, "MS", (lineage,), 1.0, source_sha256=SHA, producer=producer)
 
 
+def designation(region="PLAN", space="MS"):
+    """R8.4: a reference region needs a designation; a bare reference=True confers nothing under V2."""
+    return FR.ReferenceRegionDesignation(f"DES:{region}", SHA, space, region, FR.SOURCE_PLAN_LABEL,
+                                         "TEXT:plan-title", FR.ENGINE, FR.ACCEPTED)
+
+
 def frames(verified=True):
     decl = list(FR.declaration_evidence(4, "MS", SHA)[0])
     extra = [_ev("E1", FR.KNOWN_PLOT_DIMENSION, "AUTHORED:PLOT", FR.HUMAN), _ev("E2", FR.EXPLICIT_UNIT_NOTE, "AUTHORED:NOTE")]
     u = FR.unit_context(SHA, "MS", FR.MODEL_SPACE, decl + (extra if verified else []), insunits=4)
-    r = FR.region_transform(u, "PLAN", FR.MODEL_SPACE_PLAN, reference=True)
+    r = FR.region_transform(u, "PLAN", FR.MODEL_SPACE_PLAN, reference=True, designation=designation())
     return u, r, FR.measurement_frame(u, r)
 
 
@@ -95,7 +101,7 @@ def test_good_geometry_never_cures_bad_units():
     u = FR.unit_context(SHA, "MS", FR.MODEL_SPACE,
                         list(FR.declaration_evidence(1, "MS", SHA)[0]) + [_ev("E1", FR.KNOWN_PLOT_DIMENSION, "AUTHORED:P")],
                         insunits=1)
-    r = FR.region_transform(u, "PLAN", FR.MODEL_SPACE_PLAN, reference=True)
+    r = FR.region_transform(u, "PLAN", FR.MODEL_SPACE_PLAN, reference=True, designation=designation())
     res = P.evaluate("LINE", "D1:5", (), AREA, ctx(), FR.measurement_frame(u, r), u, r, parser_policy=QUALIFIED)
     assert u.status == FR.CONFLICT and not res.final_eligible and FR.PREVIEW_MEASUREMENT not in res.eligible_uses
 

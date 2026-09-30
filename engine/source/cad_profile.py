@@ -38,6 +38,7 @@ from . import capability as C
 from . import decoder_pins as PINS
 from . import findings as F
 from . import frame as FR
+from . import qualification as Q
 from . import reconcile as R
 
 # ---------------------------------------------------------------- parser-independence policy (data)
@@ -49,22 +50,51 @@ PARSER_RISK_CODES = frozenset({F.HANDLE_VALUE_TRUNCATED, F.ROUTE_DECODE_FAILED, 
                                F.SOURCE_MAPPING_UNVERIFIED})
 
 
+PARSER_POLICY_V1_ID = "URBAN_PARSER_INDEPENDENCE_V1"
+PARSER_POLICY_V2_ID = "URBAN_PARSER_INDEPENDENCE_V2"
+
+
 @dataclass(frozen=True)
 class ParserIndependencePolicy:
-    """Claude's recommendation (R8.3 §23): option B. An independent parser (AutoCAD / ODA
-    export reconciled K1 vs K2) is REQUIRED for a scope when a parser-risk finding is in scope,
-    when the decode pin is not REGISTERED / REPRODUCED, for benchmark qualification, and for
-    the first migration consumer; otherwise a qualified decoder build + K1 + source
-    conservation + capability gates suffice. `qualified_builds` is EMPTY today: no decoder
-    build has yet passed a real independent-parser comparison, so today option B behaves
-    like option A for every real project."""
+    """Claude's recommendation (R8.3 §23, kept in R8.4): option B. An independent parser (AutoCAD /
+    ODA export reconciled K1 vs K2) is REQUIRED for a scope when a parser-risk finding is in scope,
+    when the decode pin is not REGISTERED / REPRODUCED, for benchmark qualification, and for the
+    first migration consumer; otherwise a qualified decoder + K1 + source conservation +
+    capability gates suffice.
+
+    V1 (R8.3, reproducible): "qualified" = the build's sha256 is in `qualified_builds` — global.
+    V2 (R8.4, default): "qualified" = a DecoderQualification for this build whose ENVELOPE covers
+    the source's feature profile (qualification.qualification_for). `qualified_builds` is kept for
+    V1 compatibility only and ignored by V2. `qualifications` is EMPTY today: no build has passed
+    a real independent-parser comparison (no independent export was supplied in R8.4)."""
     option: str = OPTION_B
     qualified_builds: frozenset = frozenset()
     require_for_benchmark: bool = True
-    policy_id: str = "URBAN_PARSER_INDEPENDENCE_V1"
+    policy_id: str = PARSER_POLICY_V1_ID
+    qualifications: tuple = ()
 
 
-DEFAULT_PARSER_POLICY = ParserIndependencePolicy()
+PARSER_POLICY_V1 = ParserIndependencePolicy()
+PARSER_POLICY_V2 = ParserIndependencePolicy(policy_id=PARSER_POLICY_V2_ID)
+DEFAULT_PARSER_POLICY = PARSER_POLICY_V2
+
+CAD_PROFILE_V1_ID = "URBAN_CAD_PROFILE_V1"
+CAD_PROFILE_V2_ID = "URBAN_CAD_PROFILE_V2"
+
+
+@dataclass(frozen=True)
+class CadProfilePolicy:
+    """Versioned CAD profile (R8.4 §32). V1 = R8.3 behaviour (global qualified builds, frame
+    release V1). V2 = envelope qualification, frame release V2, region designation required
+    for a reference region's authority (frame.region_transform)."""
+    profile_id: str
+    parser_policy: ParserIndependencePolicy
+    frame_policy: object
+
+
+CAD_PROFILE_V1 = CadProfilePolicy(CAD_PROFILE_V1_ID, PARSER_POLICY_V1, FR.RELEASE_V1)
+CAD_PROFILE_V2 = CadProfilePolicy(CAD_PROFILE_V2_ID, PARSER_POLICY_V2, FR.RELEASE_V2)
+DEFAULT_CAD_PROFILE = CAD_PROFILE_V2
 
 
 @dataclass(frozen=True)
@@ -83,6 +113,7 @@ class SourceValidationContext:
     decoder_binary_sha256: str | None
     document_findings: tuple = ()           # findings with obs_id None
     reconciliation: dict | None = None      # {"verdict", "parser_independence", "by_key": {(handle, path): status}}
+    feature_profile: object = None          # qualification.SourceFeatureProfile (V2 envelope check)
 
 
 @dataclass(frozen=True)
@@ -133,13 +164,20 @@ def parser_requirement(ctx: SourceValidationContext, scope_findings, method: Mea
     rec_ok = rec.get("verdict") in (R.PASS, R.WARN)
     if key is not None and rec.get("by_key") is not None:
         rec_ok = rec_ok and rec["by_key"].get(key) in (R.PASS, R.WARN)
+    if policy.policy_id == PARSER_POLICY_V2_ID:
+        qual = Q.qualification_for(ctx.decoder_binary_sha256, ctx.feature_profile, policy.qualifications)
+        build_ok, build_why = qual["covered"], qual["reason"]
+    else:
+        build_ok = ctx.decoder_binary_sha256 in policy.qualified_builds
+        build_why = "decoder build not qualified by any independent-parser comparison"
     need = (policy.option == OPTION_A or risk or not pin_ok
             or (method.benchmark_qualification and policy.require_for_benchmark)
-            or (policy.option == OPTION_B and ctx.decoder_binary_sha256 not in policy.qualified_builds))
+            or (policy.option == OPTION_B and not build_ok))
     if policy.option == OPTION_C and pin_ok and not risk:
         need = False
     if not need:
-        return "PASS", "qualified decoder build, no parser-risk finding in scope"
+        return "PASS", ("qualified decoder build, no parser-risk finding in scope" if policy.policy_id != PARSER_POLICY_V2_ID
+                        else f"{build_why}; no parser-risk finding in scope")
     if indep and rec_ok:
         return "PASS", "independent-parser reconciliation PASS for this scope"
     why = []
@@ -147,8 +185,8 @@ def parser_requirement(ctx: SourceValidationContext, scope_findings, method: Mea
         why.append("parser-risk findings in scope: " + ",".join(risk))
     if not pin_ok:
         why.append(f"decode pin {ctx.decode_pin_status}")
-    if ctx.decoder_binary_sha256 not in policy.qualified_builds:
-        why.append("decoder build not qualified by any independent-parser comparison")
+    if not build_ok:
+        why.append(build_why)
     why.append("independent-parser reconciliation " + ("not PASS" if indep else "not available"))
     return "FAIL", "; ".join(why)
 

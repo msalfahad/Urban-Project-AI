@@ -552,7 +552,7 @@ class ReleasePolicy:
 
 
 RELEASE_V2 = ReleasePolicy()
-RELEASE_V2_H2 = ReleasePolicy(require_admitted_corroboration=True)
+RELEASE_V2_H2 = ReleasePolicy(policy_id="URBAN_FRAME_RELEASE_V2_H2", require_admitted_corroboration=True)
 RELEASE_V1 = ReleasePolicy(policy_id=RELEASE_V1_ID, require_role_and_scope=False, authorised_roles=())
 DEFAULT_POLICY = RELEASE_V2
 FINAL_HUMAN_BASES_V2 = ("CORROBORATED_BY_ADMITTED_EVIDENCE", "AUTHORITATIVE_PROJECT_CONFIRMATION")
@@ -584,11 +584,13 @@ MODEL_SPACE, PAPER_LAYOUT, PDF_PAGE, RASTER_PAGE = "MODEL_SPACE", "PAPER_LAYOUT"
 SPACE_KINDS = (MODEL_SPACE, PAPER_LAYOUT, PDF_PAGE, RASTER_PAGE)
 
 MODEL_SPACE_PLAN, MODEL_SPACE_DETAIL = "MODEL_SPACE_PLAN", "MODEL_SPACE_DETAIL"
+MODEL_SPACE_UNKNOWN = "MODEL_SPACE_UNKNOWN"      # R8.4: role not established; never inherits plan full-size authority
 PAPER_SPACE_VIEWPORT, PDF_VECTOR_REGION, RASTER_REGION = "PAPER_SPACE_VIEWPORT", "PDF_VECTOR_REGION", "RASTER_REGION"
-REGION_KINDS = (MODEL_SPACE_PLAN, MODEL_SPACE_DETAIL, PAPER_SPACE_VIEWPORT, PDF_VECTOR_REGION, RASTER_REGION)
+REGION_KINDS = (MODEL_SPACE_PLAN, MODEL_SPACE_DETAIL, MODEL_SPACE_UNKNOWN, PAPER_SPACE_VIEWPORT, PDF_VECTOR_REGION,
+                RASTER_REGION)
 # uses a region kind can ever support, whatever its evidence
 REGION_USE_CAP = {
-    MODEL_SPACE_PLAN: USES, MODEL_SPACE_DETAIL: USES,
+    MODEL_SPACE_PLAN: USES, MODEL_SPACE_DETAIL: USES, MODEL_SPACE_UNKNOWN: USES,
     PAPER_SPACE_VIEWPORT: (COUNT_ONLY, ANNOTATION_MAPPING),                      # never measurement authority
     PDF_VECTOR_REGION: (PREVIEW_MEASUREMENT, COUNT_ONLY, ANNOTATION_MAPPING),    # validation profile not approved
     RASTER_REGION: (PREVIEW_MEASUREMENT,),                                        # preview only
@@ -684,6 +686,10 @@ class RegionMeasurementTransform:
     excluded_evidence: tuple
     allowed_use: tuple
     findings: tuple = ()
+    designation_id: str | None = None    # R8.4: the ReferenceRegionDesignation behind `reference`
+    reference_basis: str | None = None
+    policy_id: str | None = None
+    evidence_digest: str | None = None   # R8.4: version of the evidence this status was computed from
 
     def as_dict(self):
         d = {k: v for k, v in self.__dict__.items() if k != "findings"}
@@ -705,6 +711,7 @@ class MeasurementFrame:
     allowed_use: tuple
     blocking_reasons: tuple
     findings: tuple = ()
+    evidence_digest: str | None = None   # R8.4: digest over the unit and region evidence versions
 
     def as_dict(self):
         d = {k: v for k, v in self.__dict__.items() if k != "findings"}
@@ -766,17 +773,96 @@ def _decompose(m):
     return math.atan2(c, a), det < 0, sx, sy
 
 
+# ---------------------------------------------------------------- reference-region designation (R8.4 §18-§20)
+SOURCE_PLAN_LABEL = "SOURCE_PLAN_LABEL"                   # the source labels this region as the plan
+PROJECT_ADAPTER_CLAIM = "PROJECT_ADAPTER_CLAIM"           # a reviewed project adapter names the region (windows live there)
+HUMAN_DESIGNATION = "HUMAN_DESIGNATION"                   # an authorised person designates it
+DETERMINISTIC_REGION_ROLE = "DETERMINISTIC_REGION_ROLE"   # a reviewed deterministic role rule, accepted
+OTHER_AUTHORIZED_EVIDENCE = "OTHER_AUTHORIZED_EVIDENCE"
+DESIGNATION_BASES = (SOURCE_PLAN_LABEL, PROJECT_ADAPTER_CLAIM, HUMAN_DESIGNATION, DETERMINISTIC_REGION_ROLE,
+                     OTHER_AUTHORIZED_EVIDENCE)
+ACCEPTED = "ACCEPTED"
+
+
+@dataclass(frozen=True)
+class ReferenceRegionDesignation:
+    """WHY a model-space region is the plan region through which the unit context is defined.
+    A region CANDIDATE (region_candidates.py) is not a designation: only a record with an
+    authority basis and review_status ACCEPTED is."""
+    designation_id: str
+    source_sha256: str
+    coordinate_space_id: str
+    region_id: str
+    basis: str
+    source_ref: str
+    producer: str
+    review_status: str
+    author: str | None = None
+    timestamp: str | None = None
+    author_role: str | None = None
+    notes: str = ""
+
+    def as_dict(self):
+        return dict(self.__dict__)
+
+
+def designation_admissible(d: ReferenceRegionDesignation, unit: UnitContext, region_id: str,
+                           policy: ReleasePolicy) -> tuple:
+    """(status the designation can confer or None, reason)."""
+    if d.basis not in DESIGNATION_BASES:
+        return None, f"UNKNOWN_DESIGNATION_BASIS:{d.basis}"
+    if d.source_sha256 != unit.source_sha256:
+        return None, "DESIGNATION_SOURCE_MISMATCH"
+    if d.coordinate_space_id != unit.coordinate_space_id or d.region_id != region_id:
+        return None, "DESIGNATION_SCOPE_MISMATCH"
+    if d.review_status != ACCEPTED:
+        return None, f"DESIGNATION_NOT_ACCEPTED:{d.review_status}"
+    if d.producer == AGENT:
+        return None, "AGENT_DESIGNATION_REJECTED"
+    if not d.source_ref:
+        return None, "DESIGNATION_WITHOUT_SOURCE_REF"
+    if d.basis == HUMAN_DESIGNATION:
+        if d.producer != HUMAN or not d.author or not d.timestamp:
+            return None, "HUMAN_DESIGNATION_INCOMPLETE"
+        if policy.require_role_and_scope and d.author_role not in policy.authorised_roles:
+            return None, "HUMAN_ROLE_NOT_AUTHORISED"
+        return CONFIRMED_BY_HUMAN, "REFERENCE_REGION_BY_HUMAN_DESIGNATION"
+    return VERIFIED, f"REFERENCE_REGION_BY_DESIGNATION:{d.basis}"
+
+
+def evidence_digest(*parts) -> str:
+    import hashlib
+    import json
+    return hashlib.sha256(json.dumps(parts, sort_keys=True, default=str).encode()).hexdigest()
+
+
+_POLICIES_BY_ID = {p.policy_id: p for p in (RELEASE_V1, RELEASE_V2, RELEASE_V2_H2)}
+
+
+def _policy_of(unit: UnitContext, policy):
+    if policy is not None:
+        return policy
+    return _POLICIES_BY_ID.get(unit.policy_id, DEFAULT_POLICY)
+
+
 def region_transform(unit: UnitContext, region_id: str, region_kind: str, evidence=(), matrix=(1, 0, 0, 0, 1, 0),
                      reference: bool = False, bounds=None, parent_region_id=None,
-                     policy: ReleasePolicy = DEFAULT_POLICY) -> RegionMeasurementTransform:
+                     policy: ReleasePolicy = None,
+                     designation: ReferenceRegionDesignation | None = None) -> RegionMeasurementTransform:
     """A region's relation to the real building. MODEL_SPACE_PLAN regions carry the medium
-    convention (full size) as a DECLARATION; a `reference` plan region is the one the unit
-    context is defined through, so its full-size scale is definitional (not re-verified here,
-    but still contradicted by any region-scale evidence that disagrees). A detail carries no
-    convention: without evidence its scale is BLOCKED."""
+    convention (full size) as a DECLARATION. The REFERENCE plan region is the one the unit
+    context is defined through, so its full-size scale is definitional (still contradicted by
+    any region-scale evidence that disagrees).
+
+    R8.4: under RELEASE_V2 `reference` confers authority only through an admissible
+    ReferenceRegionDesignation; a bare reference=True is recorded (REFERENCE_REGION_UNDESIGNATED)
+    and confers nothing. RELEASE_V1 keeps the R8.3 behaviour (reproducible). The policy
+    defaults to the unit context's own policy. A MODEL_SPACE_DETAIL or MODEL_SPACE_UNKNOWN
+    region carries no convention: without region-local evidence its scale is BLOCKED (U-2)."""
+    policy = _policy_of(unit, policy)
     if region_kind not in REGION_KINDS:
         raise ValueError(region_kind)
-    if reference and region_kind != MODEL_SPACE_PLAN:
+    if (reference or designation is not None) and region_kind != MODEL_SPACE_PLAN:
         raise ValueError("only a model-space plan region can be the unit reference region")
     rot, refl, sx, sy = _decompose(matrix)
     findings = []
@@ -789,13 +875,32 @@ def region_transform(unit: UnitContext, region_id: str, region_kind: str, eviden
                                (f"CONVENTION:MODEL_SPACE_FULL_SIZE:{region_id}",), 1.0, producer=ENGINE))
     a = assess(REGION_SCALE, ev, unit.source_sha256, scope=region_id, unit_mm=unit.native_to_mm, policy=policy)
     status, reason, machine = a.status, a.reason, a.machine_status
-    if region_kind == MODEL_SPACE_DETAIL and status == BLOCKED and not a.admitted:
-        reason = "U-2: DETAIL_SCALE_WITHOUT_REGION_EVIDENCE"
-    if reference and status == UNCONFIRMED and a.reason == "DECLARATION_ONLY":
-        status, reason, machine = VERIFIED, "REFERENCE_REGION_BY_DEFINITION", VERIFIED
+    if region_kind in (MODEL_SPACE_DETAIL, MODEL_SPACE_UNKNOWN) and status == BLOCKED and not a.admitted:
+        reason = ("U-2: DETAIL_SCALE_WITHOUT_REGION_EVIDENCE" if region_kind == MODEL_SPACE_DETAIL
+                  else "U-2: UNKNOWN_REGION_ROLE_WITHOUT_REGION_EVIDENCE")
+    human_basis = a.human_basis
+    ref_status, ref_reason, basis = None, None, None
+    if policy.policy_id == RELEASE_V1_ID:
+        if reference:
+            ref_status, ref_reason = VERIFIED, "REFERENCE_REGION_BY_DEFINITION"
+    elif designation is not None:
+        ref_status, ref_reason = designation_admissible(designation, unit, region_id, policy)
+        basis = designation.basis
+        if ref_status is None:
+            findings.append(SourceFinding(F.REFERENCE_REGION_DESIGNATION_REJECTED, None, (),
+                                          f"{region_id}: {designation.designation_id} {ref_reason}", scope=region_id))
+    elif reference:
+        findings.append(SourceFinding(F.REFERENCE_REGION_UNDESIGNATED, None, (),
+                                      f"{region_id}: reference=True without a ReferenceRegionDesignation confers no "
+                                      "authority (R8.4)", scope=region_id))
+    is_ref = ref_status is not None
+    if is_ref and status == UNCONFIRMED and a.reason == "DECLARATION_ONLY":
+        status, reason, machine = ref_status, ref_reason, VERIFIED
+        if ref_status == CONFIRMED_BY_HUMAN:
+            human_basis = "AUTHORITATIVE_PROJECT_CONFIRMATION"
     if any(f.code == F.REGION_SCALE_CONFLICT and "non-uniform" in f.detail for f in findings):
         status, reason = CONFLICT, "NON_UNIFORM_REGION_SCALE"
-    uses = allowed_uses(status, a.human_basis, policy)
+    uses = allowed_uses(status, human_basis, policy)
     cap = REGION_USE_CAP[region_kind]
     if region_kind in (PDF_VECTOR_REGION, RASTER_REGION):
         findings.append(SourceFinding(F.REGION_PROFILE_NOT_APPROVED, None, (),
@@ -803,12 +908,17 @@ def region_transform(unit: UnitContext, region_id: str, region_kind: str, eviden
                                       scope=region_id))
     uses = tuple(u for u in uses if u in cap)
     scale = a.value if status not in (CONFLICT, BLOCKED) else None
+    digest = evidence_digest("REGION", region_id, region_kind, list(matrix),
+                             sorted((e.evidence_id, e.derived_value, e.review_status) for e in ev),
+                             designation.as_dict() if designation else None, policy.policy_id, unit.unit_context_id)
     return RegionMeasurementTransform(f"RT:{region_id}", unit.unit_context_id, region_id, region_kind, parent_region_id,
-                                      bounds, tuple(matrix), scale, rot, refl, reference, status, reason, machine,
+                                      bounds, tuple(matrix), scale, rot, refl, is_ref, status, reason, machine,
                                       a.machine_support, a.admitted, a.excluded, uses,
                                       tuple(findings) + tuple(f for f in a.findings
-                                                              if not (reference and f.code == F.REGION_SCALE_UNCONFIRMED
-                                                                      and status == VERIFIED)))
+                                                              if not (is_ref and f.code == F.REGION_SCALE_UNCONFIRMED
+                                                                      and status in (VERIFIED, CONFIRMED_BY_HUMAN))),
+                                      designation.designation_id if designation and is_ref else None, basis,
+                                      policy.policy_id, digest)
 
 
 def compose_status(unit_status: str, region_status: str) -> str:
@@ -836,9 +946,11 @@ def measurement_frame(unit: UnitContext, region: RegionMeasurementTransform,
         findings.append(SourceFinding(F.FRAME_INELIGIBLE, None, (), f"{region.region_id}: {'; '.join(reasons)}",
                                       scope=region.region_id))
     mm = unit.native_to_mm * region.local_scale if unit.native_to_mm and region.local_scale else None
+    digest = evidence_digest("FRAME", unit.unit_context_id, unit.status, list(unit.evidence_ids), unit.native_to_mm,
+                             unit.policy_id, (unit.confirmation or {}).get("active"), region.evidence_digest)
     return MeasurementFrame(f"MF:{region.region_id}", unit.unit_context_id, region.region_transform_id, status,
                             unit.status, region.status, unit.native_to_mm, region.local_scale, mm, uses,
-                            tuple(reasons), tuple(findings))
+                            tuple(reasons), tuple(findings), digest)
 
 
 class FrameRegistry:

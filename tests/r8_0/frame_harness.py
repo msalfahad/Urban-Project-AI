@@ -112,7 +112,7 @@ def frames(source, measure_in=None, overrides=None, force=None, accept_enlargeme
     model = reg.add_unit_context(FR.unit_context(SHA, "MODEL", FR.MODEL_SPACE, [], insunits=None))
     out, regions = {}, {}
     if "layouts" in source:
-        regions["MODEL"] = FR.region_transform(model, "MODEL", FR.MODEL_SPACE_PLAN, reference=True)
+        regions["MODEL"] = FR.region_transform(model, "MODEL", FR.MODEL_SPACE_PLAN)
         for lname, lay in source["layouts"].items():
             if lname == "MODEL":
                 continue
