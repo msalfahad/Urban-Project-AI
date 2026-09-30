@@ -52,3 +52,12 @@ external MCP tests, benchmark adapters and experimental outputs.
 | `r8_4_package.py` | `data/reports/URBAN_QTO_R8_4_QUALIFICATION_SHADOW/` + zip | review package from the outputs, registers and the final suite's junit |
 
 Run order: qualification → regions → shadow_diff → (final suite) → package. No script writes to a published, approved or frozen artefact.
+
+## R8.5 (shadow)
+
+| script | writes (outputs/r8_5/) | purpose |
+|---|---|---|
+| `r8_5_source_exceptions.py` | `SOURCE_EXCEPTION_REGISTER.json` | every unrealised object per row region, positive-evidence states, explicit layer relevance |
+| `r8_5_qualification.py` | `CAPABILITY_SIGNATURE_REGISTER.json`, `DECODER_QUALIFICATION_V2.json`, `INDEPENDENT_RECONCILIATION_RESULTS.json` | target signatures, V2 records, DXF search |
+| `r8_5_value_shadow.py` | `SHADOW_VALUE_DIFF.json`, `CANONICAL_SHADOW_QUANTITIES.json`, `REAL_PROJECT_R8_5_STATUS.json` | canonical remeasurement (Qortuba), canonical status (P7757), native cross-check (Al Rashed) |
+| `r8_5_package.py` | `data/reports/URBAN_QTO_R8_5_VALUE_SHADOW/` + zip | review package from the outputs and the final suite's junit |
