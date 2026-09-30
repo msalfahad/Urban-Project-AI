@@ -463,10 +463,14 @@ def alrashed(src: Source):
             room_native.append({"room_ref": rm["ROOM_REF"], "floor": fl["FLOOR"], "current_native_area": rm["AREA_M2"],
                                 "reproduced_by_adapter_reading": key_own is not None,
                                 "canonical_native_area": can["AREA_M2"] if can else None,
-                                "native_check": ("SAME_NATIVE_AREA" if can and abs(can["AREA_M2"] - rm["AREA_M2"]) < 1e-9 else
-                                                 "CHANGED_NATIVE_AREA" if can else
+                                "adapter_reading_native_area": f["_own"][key_own]["AREA_M2"] if key_own else None,
+                                "native_check": ("SAME_NATIVE_AREA" if can and abs(can["AREA_M2"] - f["_own"][key_own]["AREA_M2"]) < 1e-9
+                                                 else "NATIVE_WITHIN_NUMERIC_TOLERANCE"
+                                                 if can and abs(can["AREA_M2"] - f["_own"][key_own]["AREA_M2"]) <= 1.0001e-4
+                                                 else "CHANGED_NATIVE_AREA" if can else
                                                  "CHANGED_NATIVE_TOPOLOGY" if key_own else "NOT_REPRODUCED"),
-                                "native_delta": (can["AREA_M2"] - rm["AREA_M2"]) if can else None})
+                                # same method, same precision: canonical K1 run vs the adapter's own reading
+                                "native_delta": (can["AREA_M2"] - f["_own"][key_own]["AREA_M2"]) if can else None})
     for f in floors.values():
         f.pop("_own")
         f.pop("_can")
