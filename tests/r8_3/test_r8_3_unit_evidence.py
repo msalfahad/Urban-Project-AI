@@ -69,3 +69,19 @@ def test_two_dimension_families_and_mixed_scale_notes_raise_findings():
 def test_one_scale_ratio_written_two_ways_is_not_mixed():
     x = UE.extract(decode(5, 1.0, notes=("1:100", "1/100")), SHA)
     assert not [f for f in x["findings"] if f.code == F.REGION_MIXED_SCALE_NOTES]
+
+
+def test_a_human_confirmation_consistent_with_every_family_resolves_a_contradicted_declaration():
+    """The Al Rashed pattern: INSUNITS inch, a ratio-100 family that excludes inch. A human confirmation
+    of metre for THIS source hash is consistent with the family set, so V1 permits FINAL for the unit;
+    a confirmation of inch (inside no family set) does not."""
+    x = UE.extract(decode(1, 100.0), SHA)
+
+    def with_human(v):
+        h = FR.UnitEvidence("H", FR.NATIVE_UNIT, FR.HUMAN_CONFIRMATION, "MODEL_SPACE", ("HUMAN:owner",), v,
+                            producer=FR.HUMAN, author="owner", timestamp="t", source_sha256=SHA)
+        return FR.unit_context(SHA, "MODEL_SPACE", FR.MODEL_SPACE, x["evidence"] + [h], insunits=1)
+    ok = with_human(1000.0)
+    assert ok.status == FR.CONFIRMED_BY_HUMAN and FR.FINAL_MEASUREMENT in ok.allowed_use
+    bad = with_human(25.4)
+    assert bad.status == FR.CONFIRMED_BY_HUMAN and FR.FINAL_MEASUREMENT not in bad.allowed_use
