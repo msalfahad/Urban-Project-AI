@@ -45,7 +45,8 @@ INCH = f"{SPACE}:INSUNITS:LIBREDWG"
 
 
 def test_default_policy_is_v2_and_v1_is_reproducible():
-    assert FR.DEFAULT_POLICY.policy_id == "URBAN_FRAME_RELEASE_V2"
+    # R8.5: the default moved to URBAN_FRAME_RELEASE_V3 (authorised supersession); this module pins V2
+    assert FR.RELEASE_V2.policy_id == "URBAN_FRAME_RELEASE_V2" and FR.DEFAULT_POLICY.policy_id == "URBAN_FRAME_RELEASE_V3"
     assert FR.RELEASE_V1.policy_id == "URBAN_FRAME_RELEASE_V1"
 
 

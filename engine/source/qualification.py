@@ -23,6 +23,7 @@ No project name, file, count threshold or quantity appears here.
 
 from __future__ import annotations
 
+import math
 from collections import Counter
 from dataclasses import dataclass, field
 
@@ -249,3 +250,217 @@ def qualification_for(decoder_binary_sha256, profile: SourceFeatureProfile | Non
             best = (q, miss)
     return {"covered": False, "qualification_id": best[0].qualification_id, "uncovered": best[1],
             "reason": "outside envelope: " + ", ".join(best[1])}
+
+
+# ====================================================================== V2: capability signatures (R8.5)
+# R8.4's envelope (V1 above, kept reproducible) records MARGINAL features: "ARC occurs somewhere" and
+# "REFLECTION occurs somewhere". That over-states qualification: ARC-under-translation plus
+# LINE-under-reflection does not establish ARC-under-reflection. V2 qualifies INTERACTIONS: one
+# signature per realised occurrence, carrying every dimension that selects a different decoder field
+# or kernel code path for that occurrence.
+#
+# Minimum dimensions (and why each is needed):
+#   KIND     entity kind with its curve class (LWPOLYLINE_STRAIGHT vs LWPOLYLINE_BULGE, ELLIPSE_FULL vs
+#            ELLIPSE_ARC): the bulge / parameter fields are decoded and transformed separately
+#   CHAIN    the set of transform classes along the instance chain (TRANSLATION, ROTATION, REFLECTION,
+#            UNIFORM_SCALE, NON_UNIFORM_SCALE, OCS_NON_DEFAULT) or DEFAULT_FRAME at top level
+#   NET      the composed orientation (NET_REFLECTED / NET_DIRECT): two reflections cancel, one does not
+#   DEPTH    exact nesting depth (no buckets: depth 3 is not proven by depth 1)
+#   EXT      the entity's own extrusion class (DEFAULT, NEG_Z, TILTED, UNREADABLE)
+#   CTX      block contexts on the chain (ARRAY = MINSERT, DYNAMIC_ANONYMOUS, XREF) or '-'
+#   VIS      VISIBLE / HIDDEN (hidden geometry is carried, not realised)
+#   HANDLE   the occurrence's own handle representation (H12, H3_CONSISTENT, H3_SIZE_VALUE_INCONSISTENT)
+# Reference domains get their own signatures: REF=INSERT_LINEAGE and REF=BLOCK_RECORD_LINEAGE with the
+# handle classes of the insert and of the block record it names.
+
+QUALIFICATION_SCHEMA_V1 = "URBAN_DECODER_QUALIFICATION_V1"
+QUALIFICATION_SCHEMA_V2 = "URBAN_DECODER_QUALIFICATION_V2"
+EXERCISED_AND_PASS = "EXERCISED_AND_PASS"
+EXERCISED_NONPASS = "EXERCISED_NONPASS"
+NOT_EXERCISED = "NOT_EXERCISED"
+PASS_VERDICTS = frozenset({"PASS"})          # WARN / BLOCK / KNOWN_LIBRARY_LIMITATION / UNMATCHED / AMBIGUOUS are non-pass
+H12, H3_CONSISTENT, H3_INCONSISTENT = "H12", "H3_CONSISTENT", "H3_SIZE_VALUE_INCONSISTENT"
+_TRANSFORMS = (TRANSLATION, ROTATION, REFLECTION, UNIFORM_SCALE, NON_UNIFORM_SCALE, OCS_NON_DEFAULT)
+
+
+def handle_class(handle_id: str | None) -> str:
+    """From the D1 handle identity ('v' for 1-2 byte handles, 'v+3B' for a 3-byte one)."""
+    if not handle_id or "+" not in str(handle_id):
+        return H12
+    v, size = str(handle_id).split("+", 1)
+    try:
+        nbytes = int(size.rstrip("B"))
+        return H3_INCONSISTENT if nbytes > _min_bytes(int(v)) else H3_CONSISTENT
+    except ValueError:
+        return H3_INCONSISTENT
+
+
+def extrusion_class(extrusion) -> str:
+    try:
+        x, y, z = (float(v) for v in tuple(extrusion)[:3])
+    except (TypeError, ValueError):
+        return "UNREADABLE"
+    if not all(math.isfinite(v) for v in (x, y, z)) or (x, y, z) == (0.0, 0.0, 0.0):
+        return "UNREADABLE"
+    n = math.sqrt(x * x + y * y + z * z)
+    if abs(x) / n < 1e-9 and abs(y) / n < 1e-9:
+        return "DEFAULT" if z > 0 else "NEG_Z"
+    return "TILTED"
+
+
+def _kind_class(obs) -> str:
+    g = obs.geometry
+    if obs.kind == O.LWPOLYLINE and isinstance(g, O.PolylineGeom):
+        return "LWPOLYLINE_BULGE" if any(abs(float(b or 0.0)) > 1e-12 for b in g.bulges) else "LWPOLYLINE_STRAIGHT"
+    if obs.kind == O.ELLIPSE and isinstance(g, O.EllipseGeom):
+        full = abs(abs(float(g.end_param) - float(g.start_param)) - 2 * math.pi) < 1e-9
+        return "ELLIPSE_FULL" if full else "ELLIPSE_ARC"
+    if obs.kind == O.UNSUPPORTED_KIND:
+        return f"UNSUPPORTED:{obs.source_type}"
+    return obs.kind
+
+
+def _level_orientation(obs) -> int:
+    g = obs.geometry
+    sx, sy = (float(g.scale[0]), float(g.scale[1])) if g.scale else (1.0, 1.0)
+    sign = -1 if sx * sy < 0 else 1
+    if extrusion_class(obs.extrusion) == "NEG_Z":
+        sign = -sign
+    return sign
+
+
+def signature(kind_class, chain, net_sign, depth, ext, ctx, visible, hcls) -> str:
+    ch = "+".join(sorted(chain)) if chain else "DEFAULT_FRAME"
+    return (f"KIND={kind_class}|CHAIN={ch}|NET={'NET_REFLECTED' if net_sign < 0 else 'NET_DIRECT'}|DEPTH={depth}"
+            f"|EXT={ext}|CTX={'+'.join(sorted(ctx)) if ctx else '-'}|VIS={'VISIBLE' if visible else 'HIDDEN'}"
+            f"|HANDLE={hcls}")
+
+
+def capability_signatures(document: O.SourceDocument, max_depth: int = 16) -> dict:
+    """{signature: [(obs_id, instance_path), ...]} for every occurrence a K1 traversal reaches.
+    Instance paths follow the kernel's convention (INSERT obs_id + MINSERT cell label)."""
+    from .cad.kernel import grid_offsets
+    out = {}
+
+    def add(sig, key):
+        out.setdefault(sig, []).append(key)
+
+    def walk(entities, chain, net, depth, ctx, visible, path, stack):
+        for obs in entities:
+            vis = visible and obs.visible
+            kc = _kind_class(obs)
+            add(signature(kc, chain, net, depth, extrusion_class(obs.extrusion), ctx, vis,
+                          handle_class(obs.source_handle)), (obs.obs_id, path))
+            if obs.kind != O.INSERT or not isinstance(obs.geometry, O.InsertGeom):
+                continue
+            g = obs.geometry
+            blk = document.blocks.get(g.block_key)
+            hb = handle_class(g.block_key[1:] if g.block_key and g.block_key.startswith("H") else None)
+            add(f"REF=INSERT_LINEAGE|HANDLE={handle_class(obs.source_handle)}|TARGET={hb}", (obs.obs_id, path))
+            if blk is None or blk.key in stack or depth + 1 > max_depth:
+                continue
+            add(f"REF=BLOCK_RECORD_LINEAGE|TARGET={hb}|DEPTH={depth + 1}", (obs.obs_id, path))
+            cls = {c for c in _insert_classes(obs) if c in _TRANSFORMS}
+            c2 = set(ctx)
+            if g.grid is not None:
+                c2.add("ARRAY")
+            if blk.anonymous or blk.parent_ref is not None:
+                c2.add("DYNAMIC_ANONYMOUS")
+            if blk.xref is not None:
+                c2.add("XREF")
+            for label, _ in grid_offsets(g.grid, g.rotation):
+                walk(blk.entities, set(chain) | cls, net * _level_orientation(obs), depth + 1, frozenset(c2), vis,
+                     path + (obs.obs_id + label,), stack | {blk.key})
+
+    walk(document.entities, set(), 1, 0, frozenset(), True, (), frozenset())
+    return out
+
+
+@dataclass(frozen=True)
+class EquivalenceRule:
+    """An explicit, reviewed statement that a qualified signature pattern also covers another.
+    `covers(qualified, target)` must be a pure function of the two signatures."""
+    equivalence_rule_id: str
+    from_pattern: str
+    to_class: str
+    technical_reason: str
+    tests: tuple
+    covers: object = None
+
+    def applies(self, qualified: str, target: str) -> bool:
+        return bool(self.covers and self.covers(qualified, target))
+
+
+# No production equivalence is admitted in R8.5: none is proven for BOTH the decoder field path and the
+# kernel path. The mechanism is exercised by tests with a test-local rule.
+EQUIVALENCE_RULES: tuple = ()
+
+
+@dataclass(frozen=True)
+class DecoderQualificationV2:
+    qualification_id: str
+    decoder_route: str
+    decoder_binary_sha256: str | None
+    status: str
+    signatures: tuple = ()                 # ((signature, state, pass_count, nonpass_count), ...)
+    reference_source_sha256: tuple = ()
+    independent_route: str | None = None
+    reconciliation_verdict: str | None = None
+    equivalence_rules: tuple = ()
+    evidence: str = ""
+    notes: str = ""
+    schema: str = QUALIFICATION_SCHEMA_V2
+
+    def __post_init__(self):
+        if self.status not in STATUSES:
+            raise ValueError(self.status)
+        if self.status == QUALIFIED and (not self.independent_route or not self.reference_source_sha256
+                                         or not any(s[1] == EXERCISED_AND_PASS for s in self.signatures)):
+            raise ValueError("QUALIFIED V2 needs an independent route, a reference source and >=1 PASS signature")
+        for s in self.signatures:
+            if s[1] not in (EXERCISED_AND_PASS, EXERCISED_NONPASS):
+                raise ValueError(s)
+
+    def passed(self) -> frozenset:
+        return frozenset(s[0] for s in self.signatures if s[1] == EXERCISED_AND_PASS)
+
+    def as_dict(self):
+        d = dict(self.__dict__)
+        d["signatures"] = [dict(zip(("signature", "state", "pass", "nonpass"), s)) for s in self.signatures]
+        d["reference_source_sha256"] = list(self.reference_source_sha256)
+        d["equivalence_rules"] = [r.equivalence_rule_id for r in self.equivalence_rules]
+        return d
+
+
+def signature_states(sig_keys: dict, verdict_by_key: dict) -> tuple:
+    """Per signature: EXERCISED_AND_PASS only if EVERY occurrence carrying it was compared and PASSED.
+    One non-pass (WARN, BLOCK, limitation, unmatched, ambiguous, or not compared) -> EXERCISED_NONPASS.
+    No percentage: 999 passes and one failure is NONPASS."""
+    rows = []
+    for sig in sorted(sig_keys):
+        keys = sig_keys[sig]
+        ok = sum(1 for k in keys if verdict_by_key.get(k) in PASS_VERDICTS)
+        rows.append((sig, EXERCISED_AND_PASS if ok == len(keys) and keys else EXERCISED_NONPASS, ok, len(keys) - ok))
+    return tuple(rows)
+
+
+def coverage_v2(target_signatures, qualifications, decoder_binary_sha256, rules=EQUIVALENCE_RULES) -> dict:
+    """{covered, uncovered: [(signature, NOT_EXERCISED|EXERCISED_NONPASS)], via_equivalence, qualification_ids}."""
+    active = [q for q in qualifications if isinstance(q, DecoderQualificationV2) and q.status == QUALIFIED
+              and decoder_binary_sha256 is not None and q.decoder_binary_sha256 == decoder_binary_sha256]
+    passed = frozenset().union(*(q.passed() for q in active)) if active else frozenset()
+    nonpass = frozenset(s[0] for q in active for s in q.signatures if s[1] == EXERCISED_NONPASS)
+    uncovered, via = [], []
+    for t in sorted(set(target_signatures)):
+        if t in passed:
+            continue
+        rule = next((r for r in rules for p in passed if r.applies(p, t)), None)
+        if rule is not None:
+            via.append((t, rule.equivalence_rule_id))
+            continue
+        uncovered.append((t, EXERCISED_NONPASS if t in nonpass else NOT_EXERCISED))
+    return {"covered": bool(active) and not uncovered, "uncovered": uncovered, "via_equivalence": via,
+            "qualification_ids": [q.qualification_id for q in active],
+            "reason": ("no QUALIFIED V2 record for this decoder build" if not active else
+                       "all target signatures qualified" if not uncovered else
+                       f"{len(uncovered)} target signatures not qualified")}

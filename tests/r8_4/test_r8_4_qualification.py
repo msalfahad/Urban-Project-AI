@@ -63,7 +63,8 @@ def test_a_no_qualification_requires_an_independent_parser():
     p = profile(PLAIN)
     st, why = parser(p, [])
     assert st == "FAIL" and "no QUALIFIED envelope" in why
-    assert P.DEFAULT_PARSER_POLICY.policy_id == P.PARSER_POLICY_V2_ID and P.DEFAULT_PARSER_POLICY.qualifications == ()
+    # R8.5: default moved to URBAN_PARSER_INDEPENDENCE_V3 (capability signatures); V2 kept reproducible
+    assert P.PARSER_POLICY_V2.policy_id == P.PARSER_POLICY_V2_ID and P.PARSER_POLICY_V2.qualifications == ()
 
 
 def test_b_profile_inside_envelope_is_covered():
@@ -168,6 +169,6 @@ def test_i_scope_build_risk_and_v1_reproducible():
 
 
 def test_cad_profile_versions_are_explicit():
-    assert P.DEFAULT_CAD_PROFILE.profile_id == "URBAN_CAD_PROFILE_V2"
+    assert P.CAD_PROFILE_V2.profile_id == "URBAN_CAD_PROFILE_V2"      # R8.5: default is V3
     assert P.CAD_PROFILE_V1.parser_policy.policy_id == P.PARSER_POLICY_V1_ID
     assert P.CAD_PROFILE_V2.frame_policy.policy_id == "URBAN_FRAME_RELEASE_V2"

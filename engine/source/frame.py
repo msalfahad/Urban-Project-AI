@@ -163,6 +163,12 @@ class UnitEvidence:
     claim_scope: tuple = ()                      # coordinate spaces / regions the claim covers
     supersedes: str | None = None                # evidence_id of the claim this one corrects (never erases)
     acknowledges: tuple = ()                     # evidence ids of contradictions the author saw and overrules
+    # R8.5: a supersession is itself an authorised event (release V3)
+    supersession_status: str | None = None       # PROPOSED / ACCEPTED / REJECTED (None: no supersession)
+    supersession_authorized_by: str | None = None
+    supersession_authorizer_role: str | None = None
+    supersession_timestamp: str | None = None
+    supersession_reason: str = ""
 
     def __post_init__(self):
         if self.question not in (NATIVE_UNIT, REGION_SCALE):
@@ -296,13 +302,20 @@ def admissibility(e: UnitEvidence, source_sha256: str | None, policy=None, scope
 def human_confirmation(confirmation_id: str, source_sha256: str, coordinate_space_id: str, native_to_mm: float,
                        author: str, author_role: str, timestamp: str, scope: tuple | None = None,
                        supersedes: str | None = None, acknowledges: tuple = (), notes: str = "",
-                       question: str = NATIVE_UNIT, producer: str = HUMAN) -> UnitEvidence:
-    """A recorded, versioned human claim (R8.4 §5). It is EVIDENCE: status is still computed."""
+                       question: str = NATIVE_UNIT, producer: str = HUMAN, supersession_status: str | None = None,
+                       supersession_authorized_by: str | None = None, supersession_authorizer_role: str | None = None,
+                       supersession_timestamp: str | None = None, supersession_reason: str = "") -> UnitEvidence:
+    """A recorded, versioned human claim (R8.4 §5; supersession event fields R8.5). It is EVIDENCE:
+    status is still computed."""
     return UnitEvidence(confirmation_id, question, HUMAN_CONFIRMATION, coordinate_space_id, (f"HUMAN:{author}",),
                         native_to_mm, source_sha256=source_sha256, producer=producer, author=author,
                         timestamp=timestamp, notes=notes, author_role=author_role,
                         claim_scope=tuple(scope) if scope else (coordinate_space_id,), supersedes=supersedes,
-                        acknowledges=tuple(acknowledges))
+                        acknowledges=tuple(acknowledges),
+                        supersession_status=supersession_status if supersedes else None,
+                        supersession_authorized_by=supersession_authorized_by,
+                        supersession_authorizer_role=supersession_authorizer_role,
+                        supersession_timestamp=supersession_timestamp, supersession_reason=supersession_reason)
 
 
 def active_claims(claims) -> tuple:
@@ -313,6 +326,69 @@ def active_claims(claims) -> tuple:
     unknown = [c.evidence_id for c in claims if c.supersedes and c.supersedes not in ids]
     active = [c for c in claims if c.evidence_id not in superseded]
     return active, sorted(superseded), unknown
+
+
+PROPOSED, ACCEPTED_SUPERSESSION, REJECTED_SUPERSESSION = "PROPOSED", "ACCEPTED", "REJECTED"
+SUPERSESSION_STATUSES = (PROPOSED, ACCEPTED_SUPERSESSION, REJECTED_SUPERSESSION)
+
+
+def supersession_decision(c: UnitEvidence, target: UnitEvidence | None, policy) -> tuple:
+    """(effective, outcome) for claim `c` naming `target` in `supersedes` (release V3, R8.5).
+
+    Effective (the target retires, never erased) only when correction authority is clear:
+      A SAME_AUTHOR            the target's own author corrects it;
+      C REVIEWED               status ACCEPTED, with reviewer, reviewer role, timestamp and reason, where
+                               the reviewer is the target's author (consent of the corrected person) or a
+                               named project correction authority (B: policy.correction_authorities), and
+                               the reviewer is not the proposer.
+    No role outranks another: an authorised role alone never retires someone else's claim."""
+    if target is None:
+        return False, "TARGET_MISSING"
+    if target.source_sha256 != c.source_sha256:
+        return False, "TARGET_OTHER_SOURCE"
+    if target.question != c.question or not (set(target.claim_scope or (target.scope,)) &
+                                             set(c.claim_scope or (c.scope,))):
+        return False, "TARGET_OUTSIDE_SCOPE"
+    if c.author and c.author == target.author:
+        return True, "ACCEPTED_SAME_AUTHOR"
+    st = c.supersession_status or PROPOSED
+    if st == REJECTED_SUPERSESSION:
+        return False, "REJECTED"
+    if st != ACCEPTED_SUPERSESSION:
+        return False, "PENDING_REVIEW"
+    rv = c.supersession_authorized_by
+    if not rv or not c.supersession_timestamp or not c.supersession_reason:
+        return False, "ACCEPTANCE_INCOMPLETE"
+    if rv == c.author:
+        return False, "SELF_REVIEW_NOT_ALLOWED"
+    if c.supersession_authorizer_role not in policy.authorised_roles:
+        return False, "REVIEWER_ROLE_NOT_AUTHORISED"
+    if rv == target.author:
+        return True, "ACCEPTED_BY_TARGET_AUTHOR"
+    if rv in policy.correction_authorities:
+        return True, "ACCEPTED_BY_PROJECT_CORRECTION_AUTHORITY"
+    return False, "REVIEWER_WITHOUT_CORRECTION_AUTHORITY"
+
+
+def active_claims_v3(admitted, all_claims, policy) -> tuple:
+    """(active, superseded, unknown, outcomes). `all_claims` includes inadmissible human records so a
+    supersession naming a claim for another source / scope is diagnosed, not mistaken for 'missing'."""
+    by_id = {c.evidence_id: c for c in all_claims}
+    retired, unknown, outcomes = set(), [], []
+    for c in admitted:
+        if not c.supersedes:
+            continue
+        ok, why = supersession_decision(c, by_id.get(c.supersedes), policy)
+        outcomes.append({"claim": c.evidence_id, "supersedes": c.supersedes, "effective": ok, "outcome": why,
+                         "status": c.supersession_status, "authorized_by": c.supersession_authorized_by,
+                         "authorizer_role": c.supersession_authorizer_role, "timestamp": c.supersession_timestamp,
+                         "reason": c.supersession_reason})
+        if ok:
+            retired.add(c.supersedes)
+        elif why == "TARGET_MISSING":
+            unknown.append(c.evidence_id)
+    active = [c for c in admitted if c.evidence_id not in retired]
+    return active, sorted(retired), unknown, outcomes
 
 
 def assess(question: str, evidence, source_sha256: str | None, checked_dimensions=(), local_scale: float = 1.0,
@@ -468,12 +544,19 @@ def assess(question: str, evidence, source_sha256: str | None, checked_dimension
             reason = f"HUMAN_CONFIRMED_OVER_{machine}"
     elif human:
         # URBAN_FRAME_RELEASE_V2 (R8.4): authoritative, INFORMED project confirmation.
-        active, superseded, unknown = active_claims(human)
+        outcomes = []
+        if policy.supersession_model == SUPERSESSION_AUTHORISED:
+            all_h = [e for e in evidence if e.kind == HUMAN_CONFIRMATION]
+            active, superseded, unknown, outcomes = active_claims_v3(human, all_h, policy)
+            if any(not o["effective"] for o in outcomes):
+                extra.append(F.HUMAN_SUPERSESSION_NOT_EFFECTIVE)
+        else:
+            active, superseded, unknown = active_claims(human)
         vals = [c.derived_value for c in active]
         if unknown:
             extra.append(F.HUMAN_CONFIRMATION_REVIEW_REQUIRED)
         confirmation = {"active": [c.evidence_id for c in active], "superseded": superseded,
-                        "supersession_target_unknown": unknown,
+                        "supersession_target_unknown": unknown, "supersessions": outcomes,
                         "claims": [{"evidence_id": c.evidence_id, "author": c.author, "author_role": c.author_role,
                                     "timestamp": c.timestamp, "value": c.derived_value, "scope": list(c.claim_scope),
                                     "supersedes": c.supersedes, "acknowledges": list(c.acknowledges)} for c in human]}
@@ -524,6 +607,9 @@ def assess(question: str, evidence, source_sha256: str | None, checked_dimension
 
 # ---------------------------------------------------------------- release policy (explicit)
 RELEASE_V1_ID, RELEASE_V2_ID = "URBAN_FRAME_RELEASE_V1", "URBAN_FRAME_RELEASE_V2"
+RELEASE_V3_ID = "URBAN_FRAME_RELEASE_V3"
+SUPERSESSION_BY_NAME = "BY_NAME"                 # R8.4: naming `supersedes` retires the target
+SUPERSESSION_AUTHORISED = "AUTHORISED"           # R8.5: supersession_decision (same author / reviewed)
 AUTHORISED_ROLES = ("PROJECT_OWNER", "PROJECT_ARCHITECT", "PROJECT_ENGINEER", "URBAN_QS_LEAD")
 
 
@@ -549,12 +635,16 @@ class ReleasePolicy:
     require_admitted_corroboration: bool = False
     require_role_and_scope: bool = True
     authorised_roles: tuple = AUTHORISED_ROLES
+    supersession_model: str = SUPERSESSION_BY_NAME
+    correction_authorities: tuple = ()           # project correction authorities, defined by Urban (none yet)
 
 
 RELEASE_V2 = ReleasePolicy()
+# V3 (R8.5, default) = V2 + authorised supersession. H3 unchanged.
+RELEASE_V3 = ReleasePolicy(policy_id=RELEASE_V3_ID, supersession_model=SUPERSESSION_AUTHORISED)
 RELEASE_V2_H2 = ReleasePolicy(policy_id="URBAN_FRAME_RELEASE_V2_H2", require_admitted_corroboration=True)
 RELEASE_V1 = ReleasePolicy(policy_id=RELEASE_V1_ID, require_role_and_scope=False, authorised_roles=())
-DEFAULT_POLICY = RELEASE_V2
+DEFAULT_POLICY = RELEASE_V3
 FINAL_HUMAN_BASES_V2 = ("CORROBORATED_BY_ADMITTED_EVIDENCE", "AUTHORITATIVE_PROJECT_CONFIRMATION")
 
 
@@ -836,7 +926,7 @@ def evidence_digest(*parts) -> str:
     return hashlib.sha256(json.dumps(parts, sort_keys=True, default=str).encode()).hexdigest()
 
 
-_POLICIES_BY_ID = {p.policy_id: p for p in (RELEASE_V1, RELEASE_V2, RELEASE_V2_H2)}
+_POLICIES_BY_ID = {p.policy_id: p for p in (RELEASE_V1, RELEASE_V2, RELEASE_V2_H2, RELEASE_V3)}
 
 
 def _policy_of(unit: UnitContext, policy):

@@ -74,12 +74,19 @@ class ParserIndependencePolicy:
     qualifications: tuple = ()
 
 
+PARSER_POLICY_V3_ID = "URBAN_PARSER_INDEPENDENCE_V3"
 PARSER_POLICY_V1 = ParserIndependencePolicy()
 PARSER_POLICY_V2 = ParserIndependencePolicy(policy_id=PARSER_POLICY_V2_ID)
-DEFAULT_PARSER_POLICY = PARSER_POLICY_V2
+# V3 (R8.5, default): "qualified" = every target CAPABILITY SIGNATURE (qualification.capability_signatures)
+# is EXERCISED_AND_PASS in a URBAN_DECODER_QUALIFICATION_V2 record for this build (or covered by an
+# explicit equivalence rule). V2's flat envelope over-states qualification (an ARC under translation and a
+# LINE under reflection do not prove an ARC under reflection); V2 is kept reproducible.
+PARSER_POLICY_V3 = ParserIndependencePolicy(policy_id=PARSER_POLICY_V3_ID)
+DEFAULT_PARSER_POLICY = PARSER_POLICY_V3
 
 CAD_PROFILE_V1_ID = "URBAN_CAD_PROFILE_V1"
 CAD_PROFILE_V2_ID = "URBAN_CAD_PROFILE_V2"
+CAD_PROFILE_V3_ID = "URBAN_CAD_PROFILE_V3"
 
 
 @dataclass(frozen=True)
@@ -94,7 +101,8 @@ class CadProfilePolicy:
 
 CAD_PROFILE_V1 = CadProfilePolicy(CAD_PROFILE_V1_ID, PARSER_POLICY_V1, FR.RELEASE_V1)
 CAD_PROFILE_V2 = CadProfilePolicy(CAD_PROFILE_V2_ID, PARSER_POLICY_V2, FR.RELEASE_V2)
-DEFAULT_CAD_PROFILE = CAD_PROFILE_V2
+CAD_PROFILE_V3 = CadProfilePolicy(CAD_PROFILE_V3_ID, PARSER_POLICY_V3, FR.RELEASE_V3)
+DEFAULT_CAD_PROFILE = CAD_PROFILE_V3
 
 
 @dataclass(frozen=True)
@@ -114,6 +122,7 @@ class SourceValidationContext:
     document_findings: tuple = ()           # findings with obs_id None
     reconciliation: dict | None = None      # {"verdict", "parser_independence", "by_key": {(handle, path): status}}
     feature_profile: object = None          # qualification.SourceFeatureProfile (V2 envelope check)
+    capability_signatures: object = None    # {signature: [keys]} (V3 signature check)
 
 
 @dataclass(frozen=True)
@@ -164,7 +173,13 @@ def parser_requirement(ctx: SourceValidationContext, scope_findings, method: Mea
     rec_ok = rec.get("verdict") in (R.PASS, R.WARN)
     if key is not None and rec.get("by_key") is not None:
         rec_ok = rec_ok and rec["by_key"].get(key) in (R.PASS, R.WARN)
-    if policy.policy_id == PARSER_POLICY_V2_ID:
+    if policy.policy_id == PARSER_POLICY_V3_ID:
+        if ctx.capability_signatures is None:
+            build_ok, build_why = False, "capability signatures not computed; coverage cannot be shown"
+        else:
+            cov = Q.coverage_v2(ctx.capability_signatures, policy.qualifications, ctx.decoder_binary_sha256)
+            build_ok, build_why = cov["covered"], cov["reason"]
+    elif policy.policy_id == PARSER_POLICY_V2_ID:
         qual = Q.qualification_for(ctx.decoder_binary_sha256, ctx.feature_profile, policy.qualifications)
         build_ok, build_why = qual["covered"], qual["reason"]
     else:
@@ -176,7 +191,7 @@ def parser_requirement(ctx: SourceValidationContext, scope_findings, method: Mea
     if policy.option == OPTION_C and pin_ok and not risk:
         need = False
     if not need:
-        return "PASS", ("qualified decoder build, no parser-risk finding in scope" if policy.policy_id != PARSER_POLICY_V2_ID
+        return "PASS", ("qualified decoder build, no parser-risk finding in scope" if policy.policy_id == PARSER_POLICY_V1_ID
                         else f"{build_why}; no parser-risk finding in scope")
     if indep and rec_ok:
         return "PASS", "independent-parser reconciliation PASS for this scope"
