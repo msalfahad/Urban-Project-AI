@@ -1,0 +1,1329 @@
+{
+  "SCHEMA": "R8_0_EXPECTED_FAILURES_V1",
+  "frozen": "2026-09-30",
+  "rule": "every entry is applied as a STRICT xfail on the exception its class allows (conftest.py). An entry that passes fails the run. Predictions were written from analysis before the marked run.",
+  "classes": {
+    "KNOWN_DEFECT": "current production engine is wrong (AssertionError)",
+    "TARGET_NOT_IMPLEMENTED": "R8 module not written yet (TargetNotImplemented)",
+    "LIBRARY_KNOWN_FAILURE": "an oracle library is wrong on this case (AssertionError)",
+    "BOUNDARY_DEBT": "pre-existing boundary violation, frozen and tracked (AssertionError)"
+  },
+  "expected_failures": [
+    {
+      "test": "test_r8_0_curves.py::test_arc_current_engine[F02_MIRROR_X]",
+      "class": "KNOWN_DEFECT",
+      "defect": "MIRRORED_ARC_SWEEP",
+      "fixture": "F02",
+      "reason": "cad_adapter L688-695 adds the composed rotation to ARC angles; a reflection is applied as a rotation"
+    },
+    {
+      "test": "test_r8_0_curves.py::test_bulge_current_engine[F02_MIRROR_X]",
+      "class": "KNOWN_DEFECT",
+      "defect": "MIRRORED_BULGE_SIDE",
+      "fixture": "F02",
+      "reason": "cad_adapter L662-680 builds the arc on the WORLD chord with the LOCAL bulge sign; under det<0 it bows to the wrong side"
+    },
+    {
+      "test": "test_r8_0_curves.py::test_arc_current_engine[F02_MIRROR_Y]",
+      "class": "KNOWN_DEFECT",
+      "defect": "MIRRORED_ARC_SWEEP",
+      "fixture": "F02",
+      "reason": "cad_adapter L688-695 adds the composed rotation to ARC angles; a reflection is applied as a rotation"
+    },
+    {
+      "test": "test_r8_0_curves.py::test_bulge_current_engine[F02_MIRROR_Y]",
+      "class": "KNOWN_DEFECT",
+      "defect": "MIRRORED_BULGE_SIDE",
+      "fixture": "F02",
+      "reason": "cad_adapter L662-680 builds the arc on the WORLD chord with the LOCAL bulge sign; under det<0 it bows to the wrong side"
+    },
+    {
+      "test": "test_r8_0_curves.py::test_arc_current_engine[F02_NEG_SCALE_X]",
+      "class": "KNOWN_DEFECT",
+      "defect": "MIRRORED_ARC_SWEEP",
+      "fixture": "F02",
+      "reason": "cad_adapter L688-695 adds the composed rotation to ARC angles; a reflection is applied as a rotation"
+    },
+    {
+      "test": "test_r8_0_curves.py::test_bulge_current_engine[F02_NEG_SCALE_X]",
+      "class": "KNOWN_DEFECT",
+      "defect": "MIRRORED_BULGE_SIDE",
+      "fixture": "F02",
+      "reason": "cad_adapter L662-680 builds the arc on the WORLD chord with the LOCAL bulge sign; under det<0 it bows to the wrong side"
+    },
+    {
+      "test": "test_r8_0_curves.py::test_arc_current_engine[F02_NEG_SCALE_Y]",
+      "class": "KNOWN_DEFECT",
+      "defect": "MIRRORED_ARC_SWEEP",
+      "fixture": "F02",
+      "reason": "cad_adapter L688-695 adds the composed rotation to ARC angles; a reflection is applied as a rotation"
+    },
+    {
+      "test": "test_r8_0_curves.py::test_bulge_current_engine[F02_NEG_SCALE_Y]",
+      "class": "KNOWN_DEFECT",
+      "defect": "MIRRORED_BULGE_SIDE",
+      "fixture": "F02",
+      "reason": "cad_adapter L662-680 builds the arc on the WORLD chord with the LOCAL bulge sign; under det<0 it bows to the wrong side"
+    },
+    {
+      "test": "test_r8_0_curves.py::test_arc_current_engine[F02_ROTATION_REFLECTION]",
+      "class": "KNOWN_DEFECT",
+      "defect": "MIRRORED_ARC_SWEEP",
+      "fixture": "F02",
+      "reason": "cad_adapter L688-695 adds the composed rotation to ARC angles; a reflection is applied as a rotation"
+    },
+    {
+      "test": "test_r8_0_curves.py::test_bulge_current_engine[F02_ROTATION_REFLECTION]",
+      "class": "KNOWN_DEFECT",
+      "defect": "MIRRORED_BULGE_SIDE",
+      "fixture": "F02",
+      "reason": "cad_adapter L662-680 builds the arc on the WORLD chord with the LOCAL bulge sign; under det<0 it bows to the wrong side"
+    },
+    {
+      "test": "test_r8_0_curves.py::test_arc_current_engine[F03_OCS_NEG_Z_ENTITIES]",
+      "class": "KNOWN_DEFECT",
+      "defect": "OCS_EXTRUSION_IGNORED",
+      "fixture": "F03",
+      "reason": "cad_adapter ignores extrusion: ARC centre/angles read as WCS"
+    },
+    {
+      "test": "test_r8_0_curves.py::test_bulge_current_engine[F03_OCS_NEG_Z_ENTITIES]",
+      "class": "KNOWN_DEFECT",
+      "defect": "OCS_EXTRUSION_IGNORED",
+      "fixture": "F03",
+      "reason": "cad_adapter ignores extrusion: LWPOLYLINE vertices/bulge read as WCS"
+    },
+    {
+      "test": "test_r8_0_curves.py::test_arc_current_engine[F03_OCS_NEG_Z_INSERT]",
+      "class": "KNOWN_DEFECT",
+      "defect": "OCS_EXTRUSION_IGNORED",
+      "fixture": "F03",
+      "reason": "cad_adapter ignores extrusion: ARC centre/angles read as WCS"
+    },
+    {
+      "test": "test_r8_0_curves.py::test_bulge_current_engine[F03_OCS_NEG_Z_INSERT]",
+      "class": "KNOWN_DEFECT",
+      "defect": "OCS_EXTRUSION_IGNORED",
+      "fixture": "F03",
+      "reason": "cad_adapter ignores extrusion: LWPOLYLINE vertices/bulge read as WCS"
+    },
+    {
+      "test": "test_r8_0_curves.py::test_arc_current_engine[F05_NESTED_BLOCK_MIRROR]",
+      "class": "KNOWN_DEFECT",
+      "defect": "MIRRORED_ARC_SWEEP",
+      "fixture": "F05",
+      "reason": "cad_adapter L688-695 adds the composed rotation to ARC angles; a reflection is applied as a rotation"
+    },
+    {
+      "test": "test_r8_0_curves.py::test_bulge_current_engine[F05_NESTED_BLOCK_MIRROR]",
+      "class": "KNOWN_DEFECT",
+      "defect": "MIRRORED_BULGE_SIDE",
+      "fixture": "F05",
+      "reason": "cad_adapter L662-680 builds the arc on the WORLD chord with the LOCAL bulge sign; under det<0 it bows to the wrong side"
+    },
+    {
+      "test": "test_r8_0_curves.py::test_arc_current_engine[F05_NESTED_ROTATION_REFLECTION]",
+      "class": "KNOWN_DEFECT",
+      "defect": "MIRRORED_ARC_SWEEP",
+      "fixture": "F05",
+      "reason": "cad_adapter L688-695 adds the composed rotation to ARC angles; a reflection is applied as a rotation"
+    },
+    {
+      "test": "test_r8_0_curves.py::test_bulge_current_engine[F05_NESTED_ROTATION_REFLECTION]",
+      "class": "KNOWN_DEFECT",
+      "defect": "MIRRORED_BULGE_SIDE",
+      "fixture": "F05",
+      "reason": "cad_adapter L662-680 builds the arc on the WORLD chord with the LOCAL bulge sign; under det<0 it bows to the wrong side"
+    },
+    {
+      "test": "test_r8_0_curves.py::test_line_current_engine[F03_OCS_NEG_Z_INSERT]",
+      "class": "KNOWN_DEFECT",
+      "defect": "OCS_EXTRUSION_IGNORED",
+      "fixture": "F03",
+      "reason": "INSERT insertion point is in the INSERT's OCS; cad_adapter Transform2D.from_insert ignores extrusion"
+    },
+    {
+      "test": "test_r8_0_block_transforms.py::test_base_point_current_engine[F01_BASE_POINT_PLAIN]",
+      "class": "KNOWN_DEFECT",
+      "defect": "BLOCK_BASE_POINT_IGNORED",
+      "fixture": "F01",
+      "reason": "Transform2D.from_insert has no -base_pt term"
+    },
+    {
+      "test": "test_r8_0_block_transforms.py::test_base_point_current_engine[F01_BASE_POINT_ROTATED]",
+      "class": "KNOWN_DEFECT",
+      "defect": "BLOCK_BASE_POINT_IGNORED",
+      "fixture": "F01",
+      "reason": "Transform2D.from_insert has no -base_pt term"
+    },
+    {
+      "test": "test_r8_0_block_transforms.py::test_base_point_current_engine[F01_BASE_POINT_SCALED]",
+      "class": "KNOWN_DEFECT",
+      "defect": "BLOCK_BASE_POINT_IGNORED",
+      "fixture": "F01",
+      "reason": "Transform2D.from_insert has no -base_pt term"
+    },
+    {
+      "test": "test_r8_0_block_transforms.py::test_base_point_current_engine[F01_BASE_POINT_MIRRORED]",
+      "class": "KNOWN_DEFECT",
+      "defect": "BLOCK_BASE_POINT_IGNORED",
+      "fixture": "F01",
+      "reason": "Transform2D.from_insert has no -base_pt term"
+    },
+    {
+      "test": "test_r8_0_block_transforms.py::test_base_point_current_engine[F01_BASE_POINT_NESTED]",
+      "class": "KNOWN_DEFECT",
+      "defect": "BLOCK_BASE_POINT_IGNORED",
+      "fixture": "F01",
+      "reason": "Transform2D.from_insert has no -base_pt term"
+    },
+    {
+      "test": "test_r8_0_block_transforms.py::test_minsert_current_engine_realises_every_cell[F06_MINSERT_GRID]",
+      "class": "KNOWN_DEFECT",
+      "defect": "MINSERT_NOT_EXPANDED",
+      "fixture": "F06",
+      "reason": "type 8 MINSERT is counted UNHANDLED and never expanded (0 of 6 cells realised; visible, not silent)"
+    },
+    {
+      "test": "test_r8_0_block_transforms.py::test_minsert_current_engine_realises_every_cell[F06_MINSERT_ROTATED]",
+      "class": "KNOWN_DEFECT",
+      "defect": "MINSERT_NOT_EXPANDED",
+      "fixture": "F06",
+      "reason": "type 8 MINSERT is counted UNHANDLED and never expanded (0 of 6 cells realised; visible, not silent)"
+    },
+    {
+      "test": "test_r8_0_block_transforms.py::test_minsert_current_engine_realises_every_cell[F06_MINSERT_SCALED]",
+      "class": "KNOWN_DEFECT",
+      "defect": "MINSERT_NOT_EXPANDED",
+      "fixture": "F06",
+      "reason": "type 8 MINSERT is counted UNHANDLED and never expanded (0 of 6 cells realised; visible, not silent)"
+    },
+    {
+      "test": "test_r8_0_block_transforms.py::test_minsert_current_engine_realises_every_cell[F06_MINSERT_NESTED]",
+      "class": "KNOWN_DEFECT",
+      "defect": "MINSERT_NOT_EXPANDED",
+      "fixture": "F06",
+      "reason": "type 8 MINSERT is counted UNHANDLED and never expanded (0 of 6 cells realised; visible, not silent)"
+    },
+    {
+      "test": "test_r8_0_block_transforms.py::test_minsert_current_engine_realises_every_cell[F06_MINSERT_MIRRORED_PARENT]",
+      "class": "KNOWN_DEFECT",
+      "defect": "MINSERT_NOT_EXPANDED",
+      "fixture": "F06",
+      "reason": "type 8 MINSERT is counted UNHANDLED and never expanded (0 of 6 cells realised; visible, not silent)"
+    },
+    {
+      "test": "test_r8_0_block_transforms.py::test_non_uniform_scale_arc_current_engine",
+      "class": "KNOWN_DEFECT",
+      "defect": "NON_UNIFORM_SCALE_ARC_AS_CIRCLE",
+      "fixture": "F04",
+      "reason": "ARC radius * scale_x under scale(2,1): an elliptical arc realised as a circle through the wrong end point"
+    },
+    {
+      "test": "test_r8_0_ocs.py::test_frame_problem_is_a_visible_finding_current_engine[F34_TILTED_EXTRUSION]",
+      "class": "KNOWN_DEFECT",
+      "defect": "FRAME_FAIL_OPEN",
+      "fixture": "F34",
+      "reason": "extrusion never read: a tilted or unreadable frame is silently realised as WCS (fail-open)"
+    },
+    {
+      "test": "test_r8_0_ocs.py::test_frame_problem_is_a_visible_finding_current_engine[F34_UNREADABLE_ZERO]",
+      "class": "KNOWN_DEFECT",
+      "defect": "FRAME_FAIL_OPEN",
+      "fixture": "F34",
+      "reason": "extrusion never read: a tilted or unreadable frame is silently realised as WCS (fail-open)"
+    },
+    {
+      "test": "test_r8_0_ocs.py::test_frame_problem_is_a_visible_finding_current_engine[F34_UNREADABLE_NULL]",
+      "class": "KNOWN_DEFECT",
+      "defect": "FRAME_FAIL_OPEN",
+      "fixture": "F34",
+      "reason": "extrusion never read: a tilted or unreadable frame is silently realised as WCS (fail-open)"
+    },
+    {
+      "test": "test_r8_0_ocs.py::test_frame_problem_is_a_visible_finding_current_engine[F34_UNREADABLE_SHORT]",
+      "class": "KNOWN_DEFECT",
+      "defect": "FRAME_FAIL_OPEN",
+      "fixture": "F34",
+      "reason": "extrusion never read: a tilted or unreadable frame is silently realised as WCS (fail-open)"
+    },
+    {
+      "test": "test_r8_0_ocs.py::test_frame_problem_is_a_visible_finding_current_engine[F34_UNREADABLE_TEXT]",
+      "class": "KNOWN_DEFECT",
+      "defect": "FRAME_FAIL_OPEN",
+      "fixture": "F34",
+      "reason": "extrusion never read: a tilted or unreadable frame is silently realised as WCS (fail-open)"
+    },
+    {
+      "test": "test_r8_0_source_capability.py::test_xref_is_a_visible_finding_current_engine[F08_XREF_RESOLVED]",
+      "class": "KNOWN_DEFECT",
+      "defect": "XREF_SILENT",
+      "fixture": "F08",
+      "reason": "xref block placed as an empty instance; no flag read, no finding"
+    },
+    {
+      "test": "test_r8_0_source_capability.py::test_xref_is_a_visible_finding_current_engine[F08_XREF_MISSING]",
+      "class": "KNOWN_DEFECT",
+      "defect": "XREF_SILENT",
+      "fixture": "F08",
+      "reason": "xref block placed as an empty instance; no flag read, no finding"
+    },
+    {
+      "test": "test_r8_0_source_capability.py::test_xref_is_a_visible_finding_current_engine[F08_XREF_NESTED]",
+      "class": "KNOWN_DEFECT",
+      "defect": "XREF_SILENT",
+      "fixture": "F08",
+      "reason": "xref block placed as an empty instance; no flag read, no finding"
+    },
+    {
+      "test": "test_r8_0_source_capability.py::test_xref_is_a_visible_finding_current_engine[F08_XREF_UNLOADED]",
+      "class": "KNOWN_DEFECT",
+      "defect": "XREF_SILENT",
+      "fixture": "F08",
+      "reason": "xref block placed as an empty instance; no flag read, no finding"
+    },
+    {
+      "test": "test_r8_0_source_capability.py::test_xref_is_a_visible_finding_current_engine[F08_XREF_OVERLAY]",
+      "class": "KNOWN_DEFECT",
+      "defect": "XREF_SILENT",
+      "fixture": "F08",
+      "reason": "xref block placed as an empty instance; no flag read, no finding"
+    },
+    {
+      "test": "test_r8_0_source_capability.py::test_rotated_linear_dimension_geometry_current_engine",
+      "class": "KNOWN_DEFECT",
+      "defect": "ROTATED_DIMENSION_PROJECTION",
+      "fixture": "F10",
+      "reason": "DimensionObservation.geometry_mm = distance between extension origins, not their projection on the dimension line (QBD-04)"
+    },
+    {
+      "test": "test_r8_0_source_capability.py::test_mtext_literal_current_engine",
+      "class": "KNOWN_DEFECT",
+      "defect": "MTEXT_CODES_UNDECODED",
+      "fixture": "F11",
+      "reason": "MTEXT value kept with raw inline format codes (\\A, {\\f..;}, \\P, %%c)"
+    },
+    {
+      "test": "test_r8_0_digests.py::test_case_A_current_engine_realised_digest",
+      "class": "KNOWN_DEFECT",
+      "defect": "MIRRORED_ARC_SWEEP",
+      "fixture": "DG-A",
+      "reason": "the mirrored-curve defect seen through the realised digest"
+    },
+    {
+      "test": "test_r8_0_truth.py::test_minsert_truth_agrees_with_ezdxf[F06_MINSERT_MIRRORED_PARENT]",
+      "class": "LIBRARY_KNOWN_FAILURE",
+      "defect": "EZDXF_NESTED_MINSERT_UNDER_REFLECTION",
+      "fixture": "F06",
+      "reason": "ezdxf 1.4.4 realises a MINSERT nested under a reflecting parent with its rows on the wrong side; hand truth is authoritative"
+    },
+    {
+      "test": "test_r8_0_import_boundaries.py::test_B7_engine_imports_nothing_from_research",
+      "class": "BOUNDARY_DEBT",
+      "defect": "ENGINE_IMPORTS_RESEARCH",
+      "reason": "engine/plaster_trade_engine.py and engine/wall_treatment_engine.py import research.a21_trace_sufficiency_01.parameters (pre-existing, frozen by B-7)"
+    },
+    {
+      "test": "test_r8_0_block_transforms.py::test_base_point_k1_acceptance[F01_BASE_POINT_PLAIN]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "K1_REALISE",
+      "fixture": "F01",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_block_transforms.py::test_base_point_k1_acceptance[F01_BASE_POINT_ROTATED]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "K1_REALISE",
+      "fixture": "F01",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_block_transforms.py::test_base_point_k1_acceptance[F01_BASE_POINT_SCALED]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "K1_REALISE",
+      "fixture": "F01",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_block_transforms.py::test_base_point_k1_acceptance[F01_BASE_POINT_MIRRORED]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "K1_REALISE",
+      "fixture": "F01",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_block_transforms.py::test_base_point_k1_acceptance[F01_BASE_POINT_NESTED]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "K1_REALISE",
+      "fixture": "F01",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_block_transforms.py::test_minsert_k1_acceptance[F06_MINSERT_GRID]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "K1_REALISE",
+      "fixture": "F06",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_block_transforms.py::test_minsert_k1_acceptance[F06_MINSERT_ROTATED]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "K1_REALISE",
+      "fixture": "F06",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_block_transforms.py::test_minsert_k1_acceptance[F06_MINSERT_SCALED]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "K1_REALISE",
+      "fixture": "F06",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_block_transforms.py::test_minsert_k1_acceptance[F06_MINSERT_NESTED]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "K1_REALISE",
+      "fixture": "F06",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_block_transforms.py::test_minsert_k1_acceptance[F06_MINSERT_MIRRORED_PARENT]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "K1_REALISE",
+      "fixture": "F06",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_block_transforms.py::test_non_uniform_scale_k1_acceptance",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "K1_REALISE",
+      "fixture": "F04",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_block_transforms.py::test_anonymous_block_correlated_by_handle_across_routes",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "RECONCILE",
+      "fixture": "F13",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_curves.py::test_k1_acceptance[F02_MIRROR_X]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "K1_REALISE",
+      "fixture": "F02",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_curves.py::test_k1_acceptance[F02_MIRROR_Y]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "K1_REALISE",
+      "fixture": "F02",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_curves.py::test_k1_acceptance[F02_NEG_SCALE_X]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "K1_REALISE",
+      "fixture": "F02",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_curves.py::test_k1_acceptance[F02_NEG_SCALE_Y]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "K1_REALISE",
+      "fixture": "F02",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_curves.py::test_k1_acceptance[F02_ROTATION_REFLECTION]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "K1_REALISE",
+      "fixture": "F02",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_curves.py::test_k1_acceptance[F05_NESTED_ROTATION_REFLECTION]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "K1_REALISE",
+      "fixture": "F05",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_curves.py::test_k1_acceptance[F05_DOUBLE_REFLECTION_CANCELS]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "K1_REALISE",
+      "fixture": "F05",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_curves.py::test_k1_acceptance[F05_NESTED_BLOCK_MIRROR]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "K1_REALISE",
+      "fixture": "F05",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_curves.py::test_k1_acceptance[F03_OCS_NEG_Z_INSERT]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "K1_REALISE",
+      "fixture": "F03",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_curves.py::test_k1_acceptance[F03_OCS_NEG_Z_ENTITIES]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "K1_REALISE",
+      "fixture": "F03",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_curves.py::test_k1_acceptance[F03_OCS_POS_Z_CONTROL]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "K1_REALISE",
+      "fixture": "F03",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_curves.py::test_k1_acceptance[F02_ROTATION_ONLY_CONTROL]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "K1_REALISE",
+      "fixture": "F02",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_curves.py::test_k1_acceptance[F02_SCALED_HALF_TURN_CONTROL]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "K1_REALISE",
+      "fixture": "F02",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_digests.py::test_golden_vectors_production_conformance",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "SOURCE_REPRESENTATION_DIGEST",
+      "fixture": "DG",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_ocs.py::test_frame_problem_k1_acceptance[F34_TILTED_EXTRUSION]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "K1_REALISE",
+      "fixture": "F34",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_ocs.py::test_frame_problem_k1_acceptance[F34_UNREADABLE_ZERO]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "K1_REALISE",
+      "fixture": "F34",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_ocs.py::test_frame_problem_k1_acceptance[F34_UNREADABLE_NULL]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "K1_REALISE",
+      "fixture": "F34",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_ocs.py::test_frame_problem_k1_acceptance[F34_UNREADABLE_SHORT]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "K1_REALISE",
+      "fixture": "F34",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_ocs.py::test_frame_problem_k1_acceptance[F34_UNREADABLE_TEXT]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "K1_REALISE",
+      "fixture": "F34",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_ocs.py::test_ocs_plan_frame_contract[F34_TILTED_EXTRUSION]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "OCS_PLAN_FRAME",
+      "fixture": "F34",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_ocs.py::test_ocs_plan_frame_contract[F34_UNREADABLE_ZERO]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "OCS_PLAN_FRAME",
+      "fixture": "F34",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_ocs.py::test_ocs_plan_frame_contract[F34_UNREADABLE_NULL]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "OCS_PLAN_FRAME",
+      "fixture": "F34",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_ocs.py::test_ocs_plan_frame_contract[F34_UNREADABLE_SHORT]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "OCS_PLAN_FRAME",
+      "fixture": "F34",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_ocs.py::test_ocs_plan_frame_contract[F34_UNREADABLE_TEXT]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "OCS_PLAN_FRAME",
+      "fixture": "F34",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_ocs.py::test_line_is_wcs_native_k1_acceptance",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "K1_REALISE",
+      "fixture": "F03",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_source_capability.py::test_xref_register_contract[F08_XREF_RESOLVED]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "CAPABILITY_REGISTER",
+      "fixture": "F08",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_source_capability.py::test_xref_register_contract[F08_XREF_MISSING]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "CAPABILITY_REGISTER",
+      "fixture": "F08",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_source_capability.py::test_xref_register_contract[F08_XREF_NESTED]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "CAPABILITY_REGISTER",
+      "fixture": "F08",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_source_capability.py::test_xref_register_contract[F08_XREF_UNLOADED]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "CAPABILITY_REGISTER",
+      "fixture": "F08",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_source_capability.py::test_xref_register_contract[F08_XREF_OVERLAY]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "CAPABILITY_REGISTER",
+      "fixture": "F08",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_source_capability.py::test_skipped_object_register_contract[F35_OLE2FRAME_IN_BLOCK]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "CAPABILITY_REGISTER",
+      "fixture": "F35",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_source_capability.py::test_skipped_object_register_contract[F36_PROXY_ENTITY]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "CAPABILITY_REGISTER",
+      "fixture": "F36",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_source_capability.py::test_skipped_object_register_contract[F19_CUSTOM_ON_WALL_LAYER]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "CAPABILITY_REGISTER",
+      "fixture": "F19",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_source_capability.py::test_custom_entity_on_wall_layer_blocks_region_contract",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "SOURCE_PROFILE",
+      "fixture": "F19",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_source_capability.py::test_route_missing_a_declared_class_contract",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "RECONCILE",
+      "fixture": "F20",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_source_capability.py::test_ellipse_flattening_contract",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "K1_REALISE",
+      "fixture": "F07",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_source_capability.py::test_ellipse_negative_normal_sweep_contract",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "K1_REALISE",
+      "fixture": "F07",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_source_capability.py::test_dynamic_block_visibility_contract",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "CAPABILITY_REGISTER",
+      "fixture": "F09",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_source_capability.py::test_rotated_linear_dimension_contract",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "DIMENSION_MEASURE",
+      "fixture": "F10",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_source_capability.py::test_mtext_literal_cad_text_contract",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "CAD_TEXT_PLAIN",
+      "fixture": "F11",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_source_capability.py::test_attrib_bound_to_its_insert_contract",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "K1_REALISE",
+      "fixture": "F12",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_source_capability.py::test_legacy_codepage_text_contract",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "CAPABILITY_REGISTER",
+      "fixture": "F14",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[F15]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "FRAMES",
+      "fixture": "F15",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[MT-26]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "FRAMES",
+      "mutation": "MT-26",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[F16]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "FRAMES",
+      "fixture": "F16",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[MT-08]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "FRAMES",
+      "mutation": "MT-08",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[F17]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "UNIT_CONTEXT",
+      "fixture": "F17",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[MT-07]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "UNIT_CONTEXT",
+      "mutation": "MT-07",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[MT-32]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "UNIT_CONTEXT",
+      "mutation": "MT-32",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[MT-51]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "UNIT_CONTEXT",
+      "mutation": "MT-51",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[F30]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "UNIT_CONTEXT",
+      "fixture": "F30",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[MT-23]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "FRAMES",
+      "mutation": "MT-23",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[F26]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "FRAMES",
+      "fixture": "F26",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[MT-24]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "FRAMES",
+      "mutation": "MT-24",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[F27]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "FRAMES",
+      "fixture": "F27",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[MT-25]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "FRAMES",
+      "mutation": "MT-25",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[F28]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "FRAME_EVIDENCE",
+      "fixture": "F28",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[MT-27]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "FRAME_EVIDENCE",
+      "mutation": "MT-27",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[MT-28]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "FRAME_EVIDENCE",
+      "mutation": "MT-28",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[F29]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "FRAME_EVIDENCE",
+      "fixture": "F29",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[MT-29]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "FRAME_EVIDENCE",
+      "mutation": "MT-29",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[F18]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "FRAMES",
+      "fixture": "F18",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[MT-30]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "FRAME_EVIDENCE",
+      "mutation": "MT-30",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[MT-44]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "SOURCE_PROFILE",
+      "mutation": "MT-44",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[MT-45]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "SOURCE_PROFILE",
+      "mutation": "MT-45",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[MT-46]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "SOURCE_PROFILE",
+      "mutation": "MT-46",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[MT-09]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "PUBLISH_WITH_FRAME",
+      "mutation": "MT-09",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[MT-05]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "RECONCILE",
+      "mutation": "MT-05",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[MT-06]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "RECONCILE",
+      "mutation": "MT-06",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[MT-10]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "CLAIM_FROM",
+      "mutation": "MT-10",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[MT-11]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "FACT_POLICY_RESOLVE",
+      "mutation": "MT-11",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[MT-12a]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "FACT_POLICY_RESOLVE",
+      "mutation": "MT-12a",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[MT-12b]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "FACT_POLICY_RESOLVE",
+      "mutation": "MT-12b",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[MT-13]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "FACT_POLICY_RESOLVE",
+      "mutation": "MT-13",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[MT-18]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "FACT_POLICY_RESOLVE",
+      "mutation": "MT-18",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[MT-19]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "FACT_POLICY_RESOLVE",
+      "mutation": "MT-19",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[MT-20]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "FACT_POLICY_RESOLVE",
+      "mutation": "MT-20",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[MT-21]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "FACT_POLICY_RESOLVE",
+      "mutation": "MT-21",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[MT-22]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "FACT_POLICY_RESOLVE",
+      "mutation": "MT-22",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[MT-33]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "FRAME_EVIDENCE",
+      "mutation": "MT-33",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[F21]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "SCOPE_APPLIES",
+      "fixture": "F21",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[MT-34]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "SCOPE_APPLIES",
+      "mutation": "MT-34",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[F22]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "SCOPE_APPLIES",
+      "fixture": "F22",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[F23]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "SCOPE_APPLIES",
+      "fixture": "F23",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[F24]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "SCOPE_VALIDATE",
+      "fixture": "F24",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[F24b]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "FACT_POLICY_RESOLVE",
+      "fixture": "F24b",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[MT-35]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "SCOPE_VALIDATE",
+      "mutation": "MT-35",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[MT-36a]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "FACT_POLICY_RESOLVE",
+      "mutation": "MT-36a",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[MT-36b]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "FACT_POLICY_RESOLVE",
+      "mutation": "MT-36b",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[MT-37]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "FACT_POLICY_RESOLVE",
+      "mutation": "MT-37",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[MT-38]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "SCOPE_VALIDATE",
+      "mutation": "MT-38",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[F25]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "SCOPE_APPLIES",
+      "fixture": "F25",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[F31]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "TRANSCRIPTION_PROMOTE",
+      "fixture": "F31",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[MT-31]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "TRANSCRIPTION_PROMOTE",
+      "mutation": "MT-31",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[MT-39]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "TRANSCRIPTION_RECORD",
+      "mutation": "MT-39",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[F32]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "TRANSCRIPTION_PROMOTE",
+      "fixture": "F32",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[MT-40]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "TRANSCRIPTION_PROMOTE",
+      "mutation": "MT-40",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[F33]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "CLAIM_FROM",
+      "fixture": "F33",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[MT-41]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "CLAIM_FROM",
+      "mutation": "MT-41",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[MT-42]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "FACT_POLICY_LOAD",
+      "mutation": "MT-42",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[MT-43]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "TRANSCRIPTION_RECORD",
+      "mutation": "MT-43",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[MT-14]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "SOURCE_DELTA",
+      "mutation": "MT-14",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[MT-15]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "SOURCE_DELTA",
+      "mutation": "MT-15",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[MT-16]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "SOURCE_DELTA",
+      "mutation": "MT-16",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    },
+    {
+      "test": "test_r8_0_pending_contracts.py::test_contract[MT-17]",
+      "class": "TARGET_NOT_IMPLEMENTED",
+      "target": "SOURCE_DELTA",
+      "mutation": "MT-17",
+      "reason": "R8 module not written in R8.0 (tests first)"
+    }
+  ],
+  "defect_signatures": [
+    {
+      "file": "test_r8_0_curves.py",
+      "scene": "F02_MIRROR_X",
+      "failing_fields": {
+        "arc": [
+          "END_POINT",
+          "MID_SWEEP_POINT",
+          "SWEEP_DIRECTION"
+        ],
+        "bulge": [
+          "ARC_MIDPOINT",
+          "CENTER",
+          "SIDE_OF_CHORD",
+          "SWEEP_DIRECTION"
+        ],
+        "line": []
+      },
+      "derivation": "centre is affine-correct; start coincides because the local arc starts at 0 deg; the sweep is rotated 180 deg-equivalent instead of reflected, so end, mid and direction are wrong. Bulge: vertices are affine-correct; the arc is rebuilt on the wrong side of its chord"
+    },
+    {
+      "file": "test_r8_0_curves.py",
+      "scene": "F02_MIRROR_Y",
+      "failing_fields": {
+        "arc": [
+          "END_POINT",
+          "MID_SWEEP_POINT",
+          "SWEEP_DIRECTION"
+        ],
+        "bulge": [
+          "ARC_MIDPOINT",
+          "CENTER",
+          "SIDE_OF_CHORD",
+          "SWEEP_DIRECTION"
+        ],
+        "line": []
+      },
+      "derivation": "centre is affine-correct; start coincides because the local arc starts at 0 deg; the sweep is rotated 180 deg-equivalent instead of reflected, so end, mid and direction are wrong. Bulge: vertices are affine-correct; the arc is rebuilt on the wrong side of its chord"
+    },
+    {
+      "file": "test_r8_0_curves.py",
+      "scene": "F02_NEG_SCALE_X",
+      "failing_fields": {
+        "arc": [
+          "END_POINT",
+          "MID_SWEEP_POINT",
+          "SWEEP_DIRECTION"
+        ],
+        "bulge": [
+          "ARC_MIDPOINT",
+          "CENTER",
+          "SIDE_OF_CHORD",
+          "SWEEP_DIRECTION"
+        ],
+        "line": []
+      },
+      "derivation": "centre is affine-correct; start coincides because the local arc starts at 0 deg; the sweep is rotated 180 deg-equivalent instead of reflected, so end, mid and direction are wrong. Bulge: vertices are affine-correct; the arc is rebuilt on the wrong side of its chord"
+    },
+    {
+      "file": "test_r8_0_curves.py",
+      "scene": "F02_NEG_SCALE_Y",
+      "failing_fields": {
+        "arc": [
+          "END_POINT",
+          "MID_SWEEP_POINT",
+          "SWEEP_DIRECTION"
+        ],
+        "bulge": [
+          "ARC_MIDPOINT",
+          "CENTER",
+          "SIDE_OF_CHORD",
+          "SWEEP_DIRECTION"
+        ],
+        "line": []
+      },
+      "derivation": "centre is affine-correct; start coincides because the local arc starts at 0 deg; the sweep is rotated 180 deg-equivalent instead of reflected, so end, mid and direction are wrong. Bulge: vertices are affine-correct; the arc is rebuilt on the wrong side of its chord"
+    },
+    {
+      "file": "test_r8_0_curves.py",
+      "scene": "F02_ROTATION_REFLECTION",
+      "failing_fields": {
+        "arc": [
+          "END_POINT",
+          "MID_SWEEP_POINT",
+          "SWEEP_DIRECTION"
+        ],
+        "bulge": [
+          "ARC_MIDPOINT",
+          "CENTER",
+          "SIDE_OF_CHORD",
+          "SWEEP_DIRECTION"
+        ],
+        "line": []
+      },
+      "derivation": "centre is affine-correct; start coincides because the local arc starts at 0 deg; the sweep is rotated 180 deg-equivalent instead of reflected, so end, mid and direction are wrong. Bulge: vertices are affine-correct; the arc is rebuilt on the wrong side of its chord"
+    },
+    {
+      "file": "test_r8_0_curves.py",
+      "scene": "F03_OCS_NEG_Z_ENTITIES",
+      "failing_fields": {
+        "arc": [
+          "CENTER",
+          "END_POINT",
+          "MID_SWEEP_POINT",
+          "START_POINT",
+          "SWEEP_DIRECTION"
+        ],
+        "bulge": [
+          "ARC_MIDPOINT",
+          "CENTER",
+          "SIDE_OF_CHORD",
+          "SWEEP_DIRECTION",
+          "VERTEX_A",
+          "VERTEX_B"
+        ],
+        "line": []
+      },
+      "derivation": "extrusion ignored: the whole curve is read at its OCS coordinates (mirror image across Y)"
+    },
+    {
+      "file": "test_r8_0_curves.py",
+      "scene": "F03_OCS_NEG_Z_INSERT",
+      "failing_fields": {
+        "arc": [
+          "CENTER",
+          "END_POINT",
+          "MID_SWEEP_POINT",
+          "START_POINT",
+          "SWEEP_DIRECTION"
+        ],
+        "bulge": [
+          "ARC_MIDPOINT",
+          "CENTER",
+          "SIDE_OF_CHORD",
+          "SWEEP_DIRECTION",
+          "VERTEX_A",
+          "VERTEX_B"
+        ],
+        "line": [
+          "SEGMENT"
+        ]
+      },
+      "derivation": "extrusion ignored: the whole curve is read at its OCS coordinates (mirror image across Y)"
+    },
+    {
+      "file": "test_r8_0_curves.py",
+      "scene": "F05_NESTED_BLOCK_MIRROR",
+      "failing_fields": {
+        "arc": [
+          "END_POINT",
+          "MID_SWEEP_POINT",
+          "SWEEP_DIRECTION"
+        ],
+        "bulge": [
+          "ARC_MIDPOINT",
+          "CENTER",
+          "SIDE_OF_CHORD",
+          "SWEEP_DIRECTION"
+        ],
+        "line": []
+      },
+      "derivation": "centre is affine-correct; start coincides because the local arc starts at 0 deg; the sweep is rotated 180 deg-equivalent instead of reflected, so end, mid and direction are wrong. Bulge: vertices are affine-correct; the arc is rebuilt on the wrong side of its chord"
+    },
+    {
+      "file": "test_r8_0_curves.py",
+      "scene": "F05_NESTED_ROTATION_REFLECTION",
+      "failing_fields": {
+        "arc": [
+          "END_POINT",
+          "MID_SWEEP_POINT",
+          "SWEEP_DIRECTION"
+        ],
+        "bulge": [
+          "ARC_MIDPOINT",
+          "CENTER",
+          "SIDE_OF_CHORD",
+          "SWEEP_DIRECTION"
+        ],
+        "line": []
+      },
+      "derivation": "centre is affine-correct; start coincides because the local arc starts at 0 deg; the sweep is rotated 180 deg-equivalent instead of reflected, so end, mid and direction are wrong. Bulge: vertices are affine-correct; the arc is rebuilt on the wrong side of its chord"
+    }
+  ]
+}

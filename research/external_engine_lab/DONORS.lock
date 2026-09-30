@@ -1,0 +1,36 @@
+{
+  "SCHEMA": "URBAN_DONORS_LOCK_V1",
+  "reviewed": "2026-09-30",
+  "rule": "Donor code is referenced ONLY at these commits. Clones live in donors/ (gitignored). Nothing under engine/ may import anything in research/external_engine_lab/. No donor or MCP engine may provide a FINAL quantity.",
+  "donors": [
+    {"id": "UC4N", "repo": "U-C4N/Autocad-MCP", "commit": "cdb10638963898b3ea9b10cdd96a2c9bc495f184", "licence": "MIT",
+     "copyright": "Copyright (c) 2026 Umutcan Edizsalan", "status": "APPROVED_DONOR",
+     "purpose": "strongest CAD source/transform donor; COPY_ADAPT backends/ocs.py -> engine/source/cad/kernel_ocs (fail-closed) and engineering/understand/labels.py:plain -> engine/source/cad/text; clean reimplementation of snapshot, diff, topology, skip/MINSERT/XREF rules",
+     "rejected_behaviour": ["engineering/understand/takeoff.py:unit_of (inferred unit overrides INSUNITS; defaults to mm)", "backends/ocs.py silent identity on unreadable extrusion", "engineering/arch/faces.py hand-rolled planar kernel", "engineering/understand/network.py as architectural wall topology (it is a P&ID pipe-network reader)"]},
+    {"id": "OT", "repo": "Kentucky-ai/opentakeoff", "commit": "e6d2251cc18a4f144a983f6b7b6740f550ea6d08", "licence": "Apache-2.0",
+     "copyright": "Copyright 2026 Kentucky AI and the OpenTakeoff contributors (NOTICE)", "status": "APPROVED_DONOR_LATER_ROUNDS",
+     "purpose": "strongest PDF / document / schedule donor (R10/R11, clean reimplementation in Python); One-Click / detectRooms = CANDIDATE_GENERATOR / BENCHMARK_ONLY",
+     "rejected_behaviour": ["quantities on scaleConfirmed:false", "mixedScaleWarning warn-not-block", "scheduleScan silent row drop"]},
+    {"id": "BM", "repo": "beiming183-cloud/AutoCAD-MCP", "commit": "11f7c47e5038796a20451b38b23032e625b5aa26", "licence": "MIT",
+     "copyright": "Copyright (c) 2024 AutoCAD MCP Server Contributors (fork of puran-water @ 95476a3)", "status": "APPROVED_PATTERN_DONOR",
+     "purpose": "CAD verification patterns: field-level readback diffs, revision anchors, representation digest pattern, native readback oracle (lab only)",
+     "rejected_behaviour": ["audit.py geometry_digest as proof of physical geometry (OCS-blind)"]},
+    {"id": "SL", "repo": "Slacker-LLC/autocad-mcp", "commit": "2723b4fae13ac7bc91274fcd502528b92da7a6a5", "licence": "Apache-2.0",
+     "copyright": "Slacker LLC (NOTICE)", "status": "RESEARCH_ORACLE_REFERENCE",
+     "purpose": "live AutoCAD COM handle readback reference for the lab oracle only",
+     "rejected_behaviour": ["drawing_units_per_mm treats unitless INSUNITS as mm"]},
+    {"id": "PW", "repo": "puran-water/autocad-mcp", "commit": "95476a33a1c246308326eb4709d6379ef2efdbc1", "licence": "MIT",
+     "copyright": "Copyright (c) 2024 AutoCAD MCP Server Contributors", "status": "BENCHMARK_REFERENCE",
+     "purpose": "benchmark / reference only (upstream of beiming183)"}
+  ],
+  "references": [
+    {"id": "AK", "repo": "ahmetcemkaraca/AutoCAD_MCP", "commit": "364f59fe507639f25d11ddab89b99b4050fa27a4", "licence": "MIT", "status": "REJECTED_REFERENCE"},
+    {"id": "VM", "repo": "vigneshpbmenon/autocad-mcp-server", "commit": "e7091ad32a8be68fdc36acfdd37d223c569a8dc9", "licence": "MIT (license.txt)", "status": "REJECTED_REFERENCE"},
+    {"id": "CNP", "repo": "christiannp/autocad", "commit": null, "licence": "UNKNOWN", "status": "UNRESOLVED_EXTERNAL_REPOSITORY", "note": "not reachable; does not block development; evaluate separately if it becomes available"},
+    {"id": "OCERP", "repo": "datadrivenconstruction/OpenConstructionERP", "commit": "68ee22a15f70339e2c8aa750648f9da78bb91644", "licence": "AGPL-3.0", "status": "IDEA_ONLY_AGPL", "note": "architecture ideas only (decoder binary pinning); no code or copied text may enter Urban"}
+  ],
+  "libraries": [
+    {"name": "ezdxf", "version": "1.4.4", "licence": "MIT", "status": "PLANNED_PRODUCTION_DEPENDENCY (K2, ezdxf.math.OCS)",
+     "known_failures_pinned": ["virtual_entities() on MINSERT yields the first cell only", "xref INSERT yields no virtual entities", "MINSERT nested under a reflecting parent: rows realised on the wrong side (R8.0 finding)"]}
+  ]
+}

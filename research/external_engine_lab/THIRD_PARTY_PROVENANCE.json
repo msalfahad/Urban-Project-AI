@@ -1,0 +1,23 @@
+{
+  "SCHEMA": "URBAN_THIRD_PARTY_PROVENANCE_V1",
+  "status": "PREPARED — nothing copied yet (R8.0 is tests only)",
+  "rule": "An entry moves PLANNED -> IMPORTED only in the commit that adds the code; that commit fills URBAN_MODIFICATIONS with the diff summary and carries the licence header in the destination file. No donor source may lose provenance.",
+  "disclaimer": "Engineering/commercial risk classification, not legal advice.",
+  "entries": [
+    {"DONOR_REPO": "U-C4N/Autocad-MCP", "DONOR_COMMIT": "cdb10638963898b3ea9b10cdd96a2c9bc495f184",
+     "DONOR_FILE": "backends/ocs.py",
+     "DONOR_SYMBOL": "is_wcs_frame, is_flat_frame, to_wcs_2d, from_wcs, wcs_arc_angles, plane_normal, wcs_bulge",
+     "LICENSE": "MIT", "COPYRIGHT": "Copyright (c) 2026 Umutcan Edizsalan",
+     "NOTICE_REQUIREMENT": "keep the copyright notice and MIT permission notice in the adapted file",
+     "URBAN_DESTINATION": "engine/source/cad/kernel_ocs.py (binding in tests/r8_0/targets.py: OCS_PLAN_FRAME)",
+     "URBAN_MODIFICATIONS": "PLANNED: replace `except Exception: return True/value` with FRAME_UNREADABLE; refuse tilted frames with UNSUPPORTED_FRAME; Urban types; the composed INSERT determinant is handled in the Urban kernel, not here",
+     "STATUS": "PLANNED"},
+    {"DONOR_REPO": "U-C4N/Autocad-MCP", "DONOR_COMMIT": "cdb10638963898b3ea9b10cdd96a2c9bc495f184",
+     "DONOR_FILE": "engineering/understand/labels.py", "DONOR_SYMBOL": "plain",
+     "LICENSE": "MIT", "COPYRIGHT": "Copyright (c) 2026 Umutcan Edizsalan",
+     "NOTICE_REQUIREMENT": "keep the copyright notice and MIT permission notice in the adapted file",
+     "URBAN_DESTINATION": "engine/source/cad/text.py (binding: CAD_TEXT_PLAIN)",
+     "URBAN_MODIFICATIONS": "PLANNED: literal decoding only; %%c -> U+2300 per the R8.0 F11 contract; fold_lookalikes NOT copied; no language semantics",
+     "STATUS": "PLANNED"}
+  ]
+}

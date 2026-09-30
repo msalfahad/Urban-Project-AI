@@ -1,0 +1,1016 @@
+{
+  "SCHEMA": "R8_0_FIXTURE_REGISTER_V1",
+  "frozen": "2026-09-30",
+  "anti_calibration": "every fixture is synthetic; truth is hand-derived or a structural contract; no fixture, tolerance, transform formula or digest precision was chosen by looking at any project",
+  "variant_scenes": {
+    "curves": [
+      "F02_MIRROR_X",
+      "F02_MIRROR_Y",
+      "F02_NEG_SCALE_X",
+      "F02_NEG_SCALE_Y",
+      "F02_ROTATION_REFLECTION",
+      "F05_NESTED_ROTATION_REFLECTION",
+      "F05_DOUBLE_REFLECTION_CANCELS",
+      "F05_NESTED_BLOCK_MIRROR",
+      "F03_OCS_NEG_Z_INSERT",
+      "F03_OCS_NEG_Z_ENTITIES",
+      "F03_OCS_POS_Z_CONTROL",
+      "F02_ROTATION_ONLY_CONTROL",
+      "F02_SCALED_HALF_TURN_CONTROL"
+    ],
+    "base_point": [
+      "F01_BASE_POINT_PLAIN",
+      "F01_BASE_POINT_ROTATED",
+      "F01_BASE_POINT_SCALED",
+      "F01_BASE_POINT_MIRRORED",
+      "F01_BASE_POINT_NESTED"
+    ],
+    "minsert": [
+      "F06_MINSERT_GRID",
+      "F06_MINSERT_ROTATED",
+      "F06_MINSERT_SCALED",
+      "F06_MINSERT_NESTED",
+      "F06_MINSERT_MIRRORED_PARENT"
+    ],
+    "xref": [
+      "F08_XREF_RESOLVED",
+      "F08_XREF_MISSING",
+      "F08_XREF_NESTED",
+      "F08_XREF_UNLOADED",
+      "F08_XREF_OVERLAY"
+    ],
+    "frame": [
+      "F34_TILTED_EXTRUSION",
+      "F34_UNREADABLE_ZERO",
+      "F34_UNREADABLE_NULL",
+      "F34_UNREADABLE_SHORT",
+      "F34_UNREADABLE_TEXT"
+    ],
+    "skipped": [
+      "F35_OLE2FRAME_IN_BLOCK",
+      "F36_PROXY_ENTITY",
+      "F19_CUSTOM_ON_WALL_LAYER"
+    ]
+  },
+  "fixtures": [
+    {
+      "id": "F01",
+      "case": "block base point ≠ origin",
+      "defect_class": "BLOCK_BASE_POINT",
+      "required_outcome": "realised geometry equals known answer; K1 vs K2 PASS",
+      "new_in_r8_0": false,
+      "stage": "A",
+      "truth_basis": "HAND_DERIVED + EZDXF_CORROBORATED",
+      "current_engine_status": "KNOWN_DEFECT",
+      "test_status_counts": {
+        "KNOWN_DEFECT": 5,
+        "TARGET_NOT_IMPLEMENTED": 5,
+        "PASS": 15
+      },
+      "tests": [
+        "test_r8_0_block_transforms.py::test_base_point_current_engine[F01_BASE_POINT_MIRRORED]",
+        "test_r8_0_block_transforms.py::test_base_point_current_engine[F01_BASE_POINT_NESTED]",
+        "test_r8_0_block_transforms.py::test_base_point_current_engine[F01_BASE_POINT_PLAIN]",
+        "test_r8_0_block_transforms.py::test_base_point_current_engine[F01_BASE_POINT_ROTATED]",
+        "test_r8_0_block_transforms.py::test_base_point_current_engine[F01_BASE_POINT_SCALED]",
+        "test_r8_0_block_transforms.py::test_base_point_k1_acceptance[F01_BASE_POINT_MIRRORED]",
+        "test_r8_0_block_transforms.py::test_base_point_k1_acceptance[F01_BASE_POINT_NESTED]",
+        "test_r8_0_block_transforms.py::test_base_point_k1_acceptance[F01_BASE_POINT_PLAIN]",
+        "test_r8_0_block_transforms.py::test_base_point_k1_acceptance[F01_BASE_POINT_ROTATED]",
+        "test_r8_0_block_transforms.py::test_base_point_k1_acceptance[F01_BASE_POINT_SCALED]",
+        "test_r8_0_mutations.py::test_MT01_skip_base_point_is_detected[F01_BASE_POINT_MIRRORED]",
+        "test_r8_0_mutations.py::test_MT01_skip_base_point_is_detected[F01_BASE_POINT_NESTED]",
+        "test_r8_0_mutations.py::test_MT01_skip_base_point_is_detected[F01_BASE_POINT_PLAIN]",
+        "test_r8_0_mutations.py::test_MT01_skip_base_point_is_detected[F01_BASE_POINT_ROTATED]",
+        "test_r8_0_mutations.py::test_MT01_skip_base_point_is_detected[F01_BASE_POINT_SCALED]",
+        "test_r8_0_truth.py::test_base_point_truth_agrees_with_ezdxf[F01_BASE_POINT_MIRRORED]",
+        "test_r8_0_truth.py::test_base_point_truth_agrees_with_ezdxf[F01_BASE_POINT_NESTED]",
+        "test_r8_0_truth.py::test_base_point_truth_agrees_with_ezdxf[F01_BASE_POINT_PLAIN]",
+        "test_r8_0_truth.py::test_base_point_truth_agrees_with_ezdxf[F01_BASE_POINT_ROTATED]",
+        "test_r8_0_truth.py::test_base_point_truth_agrees_with_ezdxf[F01_BASE_POINT_SCALED]",
+        "test_r8_0_truth.py::test_reference_realiser_matches_truth_base_point[F01_BASE_POINT_MIRRORED]",
+        "test_r8_0_truth.py::test_reference_realiser_matches_truth_base_point[F01_BASE_POINT_NESTED]",
+        "test_r8_0_truth.py::test_reference_realiser_matches_truth_base_point[F01_BASE_POINT_PLAIN]",
+        "test_r8_0_truth.py::test_reference_realiser_matches_truth_base_point[F01_BASE_POINT_ROTATED]",
+        "test_r8_0_truth.py::test_reference_realiser_matches_truth_base_point[F01_BASE_POINT_SCALED]"
+      ],
+      "exposure": {
+        "ALRASHED": 0,
+        "P7757": 0
+      },
+      "to_reverify_against_real_decode": []
+    },
+    {
+      "id": "F02",
+      "case": "mirrored INSERT (X and Y) with swing arc",
+      "defect_class": "MIRROR",
+      "required_outcome": "det_sign −1; arc realised points equal known answer",
+      "new_in_r8_0": false,
+      "stage": "A",
+      "truth_basis": "HAND_DERIVED + EZDXF_CORROBORATED",
+      "current_engine_status": "KNOWN_DEFECT",
+      "test_status_counts": {
+        "KNOWN_DEFECT": 10,
+        "PASS": 56,
+        "TARGET_NOT_IMPLEMENTED": 7
+      },
+      "tests": [
+        "test_r8_0_curves.py::test_arc_current_engine[F02_MIRROR_X]",
+        "test_r8_0_curves.py::test_arc_current_engine[F02_MIRROR_Y]",
+        "test_r8_0_curves.py::test_arc_current_engine[F02_NEG_SCALE_X]",
+        "test_r8_0_curves.py::test_arc_current_engine[F02_NEG_SCALE_Y]",
+        "test_r8_0_curves.py::test_arc_current_engine[F02_ROTATION_ONLY_CONTROL]",
+        "test_r8_0_curves.py::test_arc_current_engine[F02_ROTATION_REFLECTION]",
+        "test_r8_0_curves.py::test_arc_current_engine[F02_SCALED_HALF_TURN_CONTROL]",
+        "test_r8_0_curves.py::test_bulge_current_engine[F02_MIRROR_X]",
+        "test_r8_0_curves.py::test_bulge_current_engine[F02_MIRROR_Y]",
+        "test_r8_0_curves.py::test_bulge_current_engine[F02_NEG_SCALE_X]",
+        "test_r8_0_curves.py::test_bulge_current_engine[F02_NEG_SCALE_Y]",
+        "test_r8_0_curves.py::test_bulge_current_engine[F02_ROTATION_ONLY_CONTROL]",
+        "test_r8_0_curves.py::test_bulge_current_engine[F02_ROTATION_REFLECTION]",
+        "test_r8_0_curves.py::test_bulge_current_engine[F02_SCALED_HALF_TURN_CONTROL]",
+        "test_r8_0_curves.py::test_defect_signature_is_exactly_as_predicted[F02_MIRROR_X]",
+        "test_r8_0_curves.py::test_defect_signature_is_exactly_as_predicted[F02_MIRROR_Y]",
+        "test_r8_0_curves.py::test_defect_signature_is_exactly_as_predicted[F02_NEG_SCALE_X]",
+        "test_r8_0_curves.py::test_defect_signature_is_exactly_as_predicted[F02_NEG_SCALE_Y]",
+        "test_r8_0_curves.py::test_defect_signature_is_exactly_as_predicted[F02_ROTATION_REFLECTION]",
+        "test_r8_0_curves.py::test_k1_acceptance[F02_MIRROR_X]",
+        "test_r8_0_curves.py::test_k1_acceptance[F02_MIRROR_Y]",
+        "test_r8_0_curves.py::test_k1_acceptance[F02_NEG_SCALE_X]",
+        "test_r8_0_curves.py::test_k1_acceptance[F02_NEG_SCALE_Y]",
+        "test_r8_0_curves.py::test_k1_acceptance[F02_ROTATION_ONLY_CONTROL]",
+        "test_r8_0_curves.py::test_k1_acceptance[F02_ROTATION_REFLECTION]",
+        "test_r8_0_curves.py::test_k1_acceptance[F02_SCALED_HALF_TURN_CONTROL]",
+        "test_r8_0_curves.py::test_line_current_engine[F02_MIRROR_X]",
+        "test_r8_0_curves.py::test_line_current_engine[F02_MIRROR_Y]",
+        "test_r8_0_curves.py::test_line_current_engine[F02_NEG_SCALE_X]",
+        "test_r8_0_curves.py::test_line_current_engine[F02_NEG_SCALE_Y]",
+        "test_r8_0_curves.py::test_line_current_engine[F02_ROTATION_ONLY_CONTROL]",
+        "test_r8_0_curves.py::test_line_current_engine[F02_ROTATION_REFLECTION]",
+        "test_r8_0_curves.py::test_line_current_engine[F02_SCALED_HALF_TURN_CONTROL]",
+        "test_r8_0_mutations.py::test_MT02_control_not_falsely_flagged[F02_ROTATION_ONLY_CONTROL]",
+        "test_r8_0_mutations.py::test_MT02_control_not_falsely_flagged[F02_SCALED_HALF_TURN_CONTROL]",
+        "test_r8_0_mutations.py::test_MT02_is_exactly_what_the_current_engine_does[F02_MIRROR_X]",
+        "test_r8_0_mutations.py::test_MT02_is_exactly_what_the_current_engine_does[F02_MIRROR_Y]",
+        "test_r8_0_mutations.py::test_MT02_is_exactly_what_the_current_engine_does[F02_NEG_SCALE_X]",
+        "test_r8_0_mutations.py::test_MT02_is_exactly_what_the_current_engine_does[F02_NEG_SCALE_Y]",
+        "test_r8_0_mutations.py::test_MT02_is_exactly_what_the_current_engine_does[F02_ROTATION_ONLY_CONTROL]",
+        "test_r8_0_mutations.py::test_MT02_is_exactly_what_the_current_engine_does[F02_ROTATION_REFLECTION]",
+        "test_r8_0_mutations.py::test_MT02_is_exactly_what_the_current_engine_does[F02_SCALED_HALF_TURN_CONTROL]",
+        "test_r8_0_mutations.py::test_MT02_mirror_as_rotation_is_detected[F02_MIRROR_X]",
+        "test_r8_0_mutations.py::test_MT02_mirror_as_rotation_is_detected[F02_MIRROR_Y]",
+        "test_r8_0_mutations.py::test_MT02_mirror_as_rotation_is_detected[F02_NEG_SCALE_X]",
+        "test_r8_0_mutations.py::test_MT02_mirror_as_rotation_is_detected[F02_NEG_SCALE_Y]",
+        "test_r8_0_mutations.py::test_MT02_mirror_as_rotation_is_detected[F02_ROTATION_REFLECTION]",
+        "test_r8_0_mutations.py::test_MT49_bulge_flip_keyed_on_extrusion_only_is_detected[F02_MIRROR_X]",
+        "test_r8_0_mutations.py::test_MT49_bulge_flip_keyed_on_extrusion_only_is_detected[F02_MIRROR_Y]",
+        "test_r8_0_mutations.py::test_MT49_bulge_flip_keyed_on_extrusion_only_is_detected[F02_NEG_SCALE_X]",
+        "test_r8_0_mutations.py::test_MT49_bulge_flip_keyed_on_extrusion_only_is_detected[F02_NEG_SCALE_Y]",
+        "test_r8_0_mutations.py::test_MT49_bulge_flip_keyed_on_extrusion_only_is_detected[F02_ROTATION_REFLECTION]",
+        "test_r8_0_truth.py::test_curve_truth_agrees_with_ezdxf[F02_MIRROR_X]",
+        "test_r8_0_truth.py::test_curve_truth_agrees_with_ezdxf[F02_MIRROR_Y]",
+        "test_r8_0_truth.py::test_curve_truth_agrees_with_ezdxf[F02_NEG_SCALE_X]",
+        "test_r8_0_truth.py::test_curve_truth_agrees_with_ezdxf[F02_NEG_SCALE_Y]",
+        "test_r8_0_truth.py::test_curve_truth_agrees_with_ezdxf[F02_ROTATION_ONLY_CONTROL]",
+        "test_r8_0_truth.py::test_curve_truth_agrees_with_ezdxf[F02_ROTATION_REFLECTION]",
+        "test_r8_0_truth.py::test_curve_truth_agrees_with_ezdxf[F02_SCALED_HALF_TURN_CONTROL]",
+        "test_r8_0_truth.py::test_reference_realiser_matches_truth_curves[F02_MIRROR_X]",
+        "test_r8_0_truth.py::test_reference_realiser_matches_truth_curves[F02_MIRROR_Y]",
+        "test_r8_0_truth.py::test_reference_realiser_matches_truth_curves[F02_NEG_SCALE_X]",
+        "test_r8_0_truth.py::test_reference_realiser_matches_truth_curves[F02_NEG_SCALE_Y]",
+        "test_r8_0_truth.py::test_reference_realiser_matches_truth_curves[F02_ROTATION_ONLY_CONTROL]",
+        "test_r8_0_truth.py::test_reference_realiser_matches_truth_curves[F02_ROTATION_REFLECTION]",
+        "test_r8_0_truth.py::test_reference_realiser_matches_truth_curves[F02_SCALED_HALF_TURN_CONTROL]",
+        "test_r8_0_truth.py::test_stated_orientation_matches_the_map[F02_MIRROR_X]",
+        "test_r8_0_truth.py::test_stated_orientation_matches_the_map[F02_MIRROR_Y]",
+        "test_r8_0_truth.py::test_stated_orientation_matches_the_map[F02_NEG_SCALE_X]",
+        "test_r8_0_truth.py::test_stated_orientation_matches_the_map[F02_NEG_SCALE_Y]",
+        "test_r8_0_truth.py::test_stated_orientation_matches_the_map[F02_ROTATION_ONLY_CONTROL]",
+        "test_r8_0_truth.py::test_stated_orientation_matches_the_map[F02_ROTATION_REFLECTION]",
+        "test_r8_0_truth.py::test_stated_orientation_matches_the_map[F02_SCALED_HALF_TURN_CONTROL]"
+      ],
+      "exposure": {
+        "ALRASHED": 68,
+        "P7757": 13
+      },
+      "to_reverify_against_real_decode": []
+    },
+    {
+      "id": "F03",
+      "case": "OCS extrusion (0,0,−1) on LWPOLYLINE and ARC",
+      "defect_class": "OCS_EXTRUSION",
+      "required_outcome": "plan geometry equals known answer",
+      "new_in_r8_0": false,
+      "stage": "A",
+      "truth_basis": "HAND_DERIVED + EZDXF_CORROBORATED",
+      "current_engine_status": "KNOWN_DEFECT",
+      "test_status_counts": {
+        "KNOWN_DEFECT": 5,
+        "PASS": 23,
+        "TARGET_NOT_IMPLEMENTED": 4
+      },
+      "tests": [
+        "test_r8_0_curves.py::test_arc_current_engine[F03_OCS_NEG_Z_ENTITIES]",
+        "test_r8_0_curves.py::test_arc_current_engine[F03_OCS_NEG_Z_INSERT]",
+        "test_r8_0_curves.py::test_arc_current_engine[F03_OCS_POS_Z_CONTROL]",
+        "test_r8_0_curves.py::test_bulge_current_engine[F03_OCS_NEG_Z_ENTITIES]",
+        "test_r8_0_curves.py::test_bulge_current_engine[F03_OCS_NEG_Z_INSERT]",
+        "test_r8_0_curves.py::test_bulge_current_engine[F03_OCS_POS_Z_CONTROL]",
+        "test_r8_0_curves.py::test_defect_signature_is_exactly_as_predicted[F03_OCS_NEG_Z_ENTITIES]",
+        "test_r8_0_curves.py::test_defect_signature_is_exactly_as_predicted[F03_OCS_NEG_Z_INSERT]",
+        "test_r8_0_curves.py::test_k1_acceptance[F03_OCS_NEG_Z_ENTITIES]",
+        "test_r8_0_curves.py::test_k1_acceptance[F03_OCS_NEG_Z_INSERT]",
+        "test_r8_0_curves.py::test_k1_acceptance[F03_OCS_POS_Z_CONTROL]",
+        "test_r8_0_curves.py::test_line_current_engine[F03_OCS_NEG_Z_ENTITIES]",
+        "test_r8_0_curves.py::test_line_current_engine[F03_OCS_NEG_Z_INSERT]",
+        "test_r8_0_curves.py::test_line_current_engine[F03_OCS_POS_Z_CONTROL]",
+        "test_r8_0_mutations.py::test_MT02_control_not_falsely_flagged[F03_OCS_POS_Z_CONTROL]",
+        "test_r8_0_mutations.py::test_MT02_is_exactly_what_the_current_engine_does[F03_OCS_POS_Z_CONTROL]",
+        "test_r8_0_mutations.py::test_MT02_mirror_as_rotation_is_detected[F03_OCS_NEG_Z_ENTITIES]",
+        "test_r8_0_mutations.py::test_MT02_mirror_as_rotation_is_detected[F03_OCS_NEG_Z_INSERT]",
+        "test_r8_0_mutations.py::test_MT03_drop_ocs_is_detected[F03_OCS_NEG_Z_ENTITIES]",
+        "test_r8_0_mutations.py::test_MT03_drop_ocs_is_detected[F03_OCS_NEG_Z_INSERT]",
+        "test_r8_0_mutations.py::test_MT49_bulge_flip_keyed_on_extrusion_only_is_detected[F03_OCS_NEG_Z_INSERT]",
+        "test_r8_0_ocs.py::test_line_is_wcs_native_k1_acceptance",
+        "test_r8_0_ocs.py::test_line_is_wcs_native_whatever_its_extrusion_current_engine",
+        "test_r8_0_truth.py::test_curve_truth_agrees_with_ezdxf[F03_OCS_NEG_Z_ENTITIES]",
+        "test_r8_0_truth.py::test_curve_truth_agrees_with_ezdxf[F03_OCS_NEG_Z_INSERT]",
+        "test_r8_0_truth.py::test_curve_truth_agrees_with_ezdxf[F03_OCS_POS_Z_CONTROL]",
+        "test_r8_0_truth.py::test_reference_realiser_matches_truth_curves[F03_OCS_NEG_Z_ENTITIES]",
+        "test_r8_0_truth.py::test_reference_realiser_matches_truth_curves[F03_OCS_NEG_Z_INSERT]",
+        "test_r8_0_truth.py::test_reference_realiser_matches_truth_curves[F03_OCS_POS_Z_CONTROL]",
+        "test_r8_0_truth.py::test_stated_orientation_matches_the_map[F03_OCS_NEG_Z_ENTITIES]",
+        "test_r8_0_truth.py::test_stated_orientation_matches_the_map[F03_OCS_NEG_Z_INSERT]",
+        "test_r8_0_truth.py::test_stated_orientation_matches_the_map[F03_OCS_POS_Z_CONTROL]"
+      ],
+      "exposure": {
+        "ALRASHED": 6,
+        "P7757": 0
+      },
+      "to_reverify_against_real_decode": []
+    },
+    {
+      "id": "F04",
+      "case": "non-uniform scale on an arc",
+      "defect_class": "NON_UNIFORM_SCALE",
+      "required_outcome": "ellipse realised within flatten tolerance",
+      "new_in_r8_0": false,
+      "stage": "A",
+      "truth_basis": "HAND_DERIVED",
+      "current_engine_status": "KNOWN_DEFECT",
+      "test_status_counts": {
+        "KNOWN_DEFECT": 1,
+        "TARGET_NOT_IMPLEMENTED": 1
+      },
+      "tests": [
+        "test_r8_0_block_transforms.py::test_non_uniform_scale_arc_current_engine",
+        "test_r8_0_block_transforms.py::test_non_uniform_scale_k1_acceptance"
+      ],
+      "exposure": "NOT_A_SOURCE_COUNT_CLASS",
+      "to_reverify_against_real_decode": []
+    },
+    {
+      "id": "F05",
+      "case": "3-level nesting with mixed rotation and mirror",
+      "defect_class": "NESTED_TRANSFORM",
+      "required_outcome": "every leaf equals known answer",
+      "new_in_r8_0": false,
+      "stage": "A",
+      "truth_basis": "HAND_DERIVED + EZDXF_CORROBORATED",
+      "current_engine_status": "KNOWN_DEFECT",
+      "test_status_counts": {
+        "PASS": 24,
+        "KNOWN_DEFECT": 4,
+        "TARGET_NOT_IMPLEMENTED": 3
+      },
+      "tests": [
+        "test_r8_0_curves.py::test_arc_current_engine[F05_DOUBLE_REFLECTION_CANCELS]",
+        "test_r8_0_curves.py::test_arc_current_engine[F05_NESTED_BLOCK_MIRROR]",
+        "test_r8_0_curves.py::test_arc_current_engine[F05_NESTED_ROTATION_REFLECTION]",
+        "test_r8_0_curves.py::test_bulge_current_engine[F05_DOUBLE_REFLECTION_CANCELS]",
+        "test_r8_0_curves.py::test_bulge_current_engine[F05_NESTED_BLOCK_MIRROR]",
+        "test_r8_0_curves.py::test_bulge_current_engine[F05_NESTED_ROTATION_REFLECTION]",
+        "test_r8_0_curves.py::test_defect_signature_is_exactly_as_predicted[F05_NESTED_BLOCK_MIRROR]",
+        "test_r8_0_curves.py::test_defect_signature_is_exactly_as_predicted[F05_NESTED_ROTATION_REFLECTION]",
+        "test_r8_0_curves.py::test_k1_acceptance[F05_DOUBLE_REFLECTION_CANCELS]",
+        "test_r8_0_curves.py::test_k1_acceptance[F05_NESTED_BLOCK_MIRROR]",
+        "test_r8_0_curves.py::test_k1_acceptance[F05_NESTED_ROTATION_REFLECTION]",
+        "test_r8_0_curves.py::test_line_current_engine[F05_DOUBLE_REFLECTION_CANCELS]",
+        "test_r8_0_curves.py::test_line_current_engine[F05_NESTED_BLOCK_MIRROR]",
+        "test_r8_0_curves.py::test_line_current_engine[F05_NESTED_ROTATION_REFLECTION]",
+        "test_r8_0_mutations.py::test_MT02_control_not_falsely_flagged[F05_DOUBLE_REFLECTION_CANCELS]",
+        "test_r8_0_mutations.py::test_MT02_is_exactly_what_the_current_engine_does[F05_DOUBLE_REFLECTION_CANCELS]",
+        "test_r8_0_mutations.py::test_MT02_is_exactly_what_the_current_engine_does[F05_NESTED_BLOCK_MIRROR]",
+        "test_r8_0_mutations.py::test_MT02_is_exactly_what_the_current_engine_does[F05_NESTED_ROTATION_REFLECTION]",
+        "test_r8_0_mutations.py::test_MT02_mirror_as_rotation_is_detected[F05_NESTED_BLOCK_MIRROR]",
+        "test_r8_0_mutations.py::test_MT02_mirror_as_rotation_is_detected[F05_NESTED_ROTATION_REFLECTION]",
+        "test_r8_0_mutations.py::test_MT49_bulge_flip_keyed_on_extrusion_only_is_detected[F05_NESTED_BLOCK_MIRROR]",
+        "test_r8_0_mutations.py::test_MT49_bulge_flip_keyed_on_extrusion_only_is_detected[F05_NESTED_ROTATION_REFLECTION]",
+        "test_r8_0_truth.py::test_curve_truth_agrees_with_ezdxf[F05_DOUBLE_REFLECTION_CANCELS]",
+        "test_r8_0_truth.py::test_curve_truth_agrees_with_ezdxf[F05_NESTED_BLOCK_MIRROR]",
+        "test_r8_0_truth.py::test_curve_truth_agrees_with_ezdxf[F05_NESTED_ROTATION_REFLECTION]",
+        "test_r8_0_truth.py::test_reference_realiser_matches_truth_curves[F05_DOUBLE_REFLECTION_CANCELS]",
+        "test_r8_0_truth.py::test_reference_realiser_matches_truth_curves[F05_NESTED_BLOCK_MIRROR]",
+        "test_r8_0_truth.py::test_reference_realiser_matches_truth_curves[F05_NESTED_ROTATION_REFLECTION]",
+        "test_r8_0_truth.py::test_stated_orientation_matches_the_map[F05_DOUBLE_REFLECTION_CANCELS]",
+        "test_r8_0_truth.py::test_stated_orientation_matches_the_map[F05_NESTED_BLOCK_MIRROR]",
+        "test_r8_0_truth.py::test_stated_orientation_matches_the_map[F05_NESTED_ROTATION_REFLECTION]"
+      ],
+      "exposure": {
+        "ALRASHED": 68,
+        "P7757": 13
+      },
+      "to_reverify_against_real_decode": []
+    },
+    {
+      "id": "F06",
+      "case": "MINSERT 3×2",
+      "defect_class": "MINSERT",
+      "required_outcome": "6 instances, each placed",
+      "new_in_r8_0": false,
+      "stage": "A",
+      "truth_basis": "HAND_DERIVED + EZDXF_CORROBORATED",
+      "current_engine_status": "KNOWN_DEFECT",
+      "test_status_counts": {
+        "KNOWN_DEFECT": 5,
+        "TARGET_NOT_IMPLEMENTED": 5,
+        "PASS": 24,
+        "LIBRARY_KNOWN_FAILURE": 1
+      },
+      "tests": [
+        "test_r8_0_block_transforms.py::test_minsert_current_engine_realises_every_cell[F06_MINSERT_GRID]",
+        "test_r8_0_block_transforms.py::test_minsert_current_engine_realises_every_cell[F06_MINSERT_MIRRORED_PARENT]",
+        "test_r8_0_block_transforms.py::test_minsert_current_engine_realises_every_cell[F06_MINSERT_NESTED]",
+        "test_r8_0_block_transforms.py::test_minsert_current_engine_realises_every_cell[F06_MINSERT_ROTATED]",
+        "test_r8_0_block_transforms.py::test_minsert_current_engine_realises_every_cell[F06_MINSERT_SCALED]",
+        "test_r8_0_block_transforms.py::test_minsert_k1_acceptance[F06_MINSERT_GRID]",
+        "test_r8_0_block_transforms.py::test_minsert_k1_acceptance[F06_MINSERT_MIRRORED_PARENT]",
+        "test_r8_0_block_transforms.py::test_minsert_k1_acceptance[F06_MINSERT_NESTED]",
+        "test_r8_0_block_transforms.py::test_minsert_k1_acceptance[F06_MINSERT_ROTATED]",
+        "test_r8_0_block_transforms.py::test_minsert_k1_acceptance[F06_MINSERT_SCALED]",
+        "test_r8_0_block_transforms.py::test_minsert_never_one_instance_for_many[F06_MINSERT_GRID]",
+        "test_r8_0_block_transforms.py::test_minsert_never_one_instance_for_many[F06_MINSERT_MIRRORED_PARENT]",
+        "test_r8_0_block_transforms.py::test_minsert_never_one_instance_for_many[F06_MINSERT_NESTED]",
+        "test_r8_0_block_transforms.py::test_minsert_never_one_instance_for_many[F06_MINSERT_ROTATED]",
+        "test_r8_0_block_transforms.py::test_minsert_never_one_instance_for_many[F06_MINSERT_SCALED]",
+        "test_r8_0_block_transforms.py::test_minsert_never_silently_disappears_current_engine[F06_MINSERT_GRID]",
+        "test_r8_0_block_transforms.py::test_minsert_never_silently_disappears_current_engine[F06_MINSERT_MIRRORED_PARENT]",
+        "test_r8_0_block_transforms.py::test_minsert_never_silently_disappears_current_engine[F06_MINSERT_NESTED]",
+        "test_r8_0_block_transforms.py::test_minsert_never_silently_disappears_current_engine[F06_MINSERT_ROTATED]",
+        "test_r8_0_block_transforms.py::test_minsert_never_silently_disappears_current_engine[F06_MINSERT_SCALED]",
+        "test_r8_0_mutations.py::test_S01_minsert_first_cell_only_is_detected[F06_MINSERT_GRID]",
+        "test_r8_0_mutations.py::test_S01_minsert_first_cell_only_is_detected[F06_MINSERT_MIRRORED_PARENT]",
+        "test_r8_0_mutations.py::test_S01_minsert_first_cell_only_is_detected[F06_MINSERT_NESTED]",
+        "test_r8_0_mutations.py::test_S01_minsert_first_cell_only_is_detected[F06_MINSERT_ROTATED]",
+        "test_r8_0_mutations.py::test_S01_minsert_first_cell_only_is_detected[F06_MINSERT_SCALED]",
+        "test_r8_0_truth.py::test_minsert_truth_agrees_with_ezdxf[F06_MINSERT_GRID]",
+        "test_r8_0_truth.py::test_minsert_truth_agrees_with_ezdxf[F06_MINSERT_MIRRORED_PARENT]",
+        "test_r8_0_truth.py::test_minsert_truth_agrees_with_ezdxf[F06_MINSERT_NESTED]",
+        "test_r8_0_truth.py::test_minsert_truth_agrees_with_ezdxf[F06_MINSERT_ROTATED]",
+        "test_r8_0_truth.py::test_minsert_truth_agrees_with_ezdxf[F06_MINSERT_SCALED]",
+        "test_r8_0_truth.py::test_reference_realiser_matches_truth_minsert[F06_MINSERT_GRID]",
+        "test_r8_0_truth.py::test_reference_realiser_matches_truth_minsert[F06_MINSERT_MIRRORED_PARENT]",
+        "test_r8_0_truth.py::test_reference_realiser_matches_truth_minsert[F06_MINSERT_NESTED]",
+        "test_r8_0_truth.py::test_reference_realiser_matches_truth_minsert[F06_MINSERT_ROTATED]",
+        "test_r8_0_truth.py::test_reference_realiser_matches_truth_minsert[F06_MINSERT_SCALED]"
+      ],
+      "exposure": {
+        "ALRASHED": 0,
+        "P7757": 0
+      },
+      "to_reverify_against_real_decode": [
+        "MINSERT num_cols/num_rows/col_spacing/row_spacing field names"
+      ]
+    },
+    {
+      "id": "F07",
+      "case": "SPLINE and ELLIPSE flattening",
+      "defect_class": "UNCONVERTED_CLASS",
+      "required_outcome": "max chord deviation ≤ declared tolerance",
+      "new_in_r8_0": false,
+      "stage": "A",
+      "truth_basis": "HAND_DERIVED + EZDXF_CORROBORATED",
+      "current_engine_status": "CURRENT_PASS",
+      "test_status_counts": {
+        "TARGET_NOT_IMPLEMENTED": 2,
+        "PASS": 2
+      },
+      "tests": [
+        "test_r8_0_source_capability.py::test_ellipse_flattening_contract",
+        "test_r8_0_source_capability.py::test_ellipse_is_counted_current_engine",
+        "test_r8_0_source_capability.py::test_ellipse_negative_normal_is_counted_current_engine",
+        "test_r8_0_source_capability.py::test_ellipse_negative_normal_sweep_contract"
+      ],
+      "exposure": {
+        "ALRASHED": 319,
+        "P7757": 0
+      },
+      "to_reverify_against_real_decode": [
+        "ELLIPSE sm_axis/axis_ratio field names"
+      ]
+    },
+    {
+      "id": "F08",
+      "case": "xref placeholder block",
+      "defect_class": "XREF",
+      "required_outcome": "XREF_NOT_RESOLVED; region cannot release",
+      "new_in_r8_0": false,
+      "stage": "A",
+      "truth_basis": "HAND_DERIVED",
+      "current_engine_status": "KNOWN_DEFECT",
+      "test_status_counts": {
+        "PASS": 5,
+        "KNOWN_DEFECT": 5,
+        "TARGET_NOT_IMPLEMENTED": 5
+      },
+      "tests": [
+        "test_r8_0_mutations.py::test_S03_ignored_xref_is_detected[F08_XREF_MISSING]",
+        "test_r8_0_mutations.py::test_S03_ignored_xref_is_detected[F08_XREF_NESTED]",
+        "test_r8_0_mutations.py::test_S03_ignored_xref_is_detected[F08_XREF_OVERLAY]",
+        "test_r8_0_mutations.py::test_S03_ignored_xref_is_detected[F08_XREF_RESOLVED]",
+        "test_r8_0_mutations.py::test_S03_ignored_xref_is_detected[F08_XREF_UNLOADED]",
+        "test_r8_0_source_capability.py::test_xref_is_a_visible_finding_current_engine[F08_XREF_MISSING]",
+        "test_r8_0_source_capability.py::test_xref_is_a_visible_finding_current_engine[F08_XREF_NESTED]",
+        "test_r8_0_source_capability.py::test_xref_is_a_visible_finding_current_engine[F08_XREF_OVERLAY]",
+        "test_r8_0_source_capability.py::test_xref_is_a_visible_finding_current_engine[F08_XREF_RESOLVED]",
+        "test_r8_0_source_capability.py::test_xref_is_a_visible_finding_current_engine[F08_XREF_UNLOADED]",
+        "test_r8_0_source_capability.py::test_xref_register_contract[F08_XREF_MISSING]",
+        "test_r8_0_source_capability.py::test_xref_register_contract[F08_XREF_NESTED]",
+        "test_r8_0_source_capability.py::test_xref_register_contract[F08_XREF_OVERLAY]",
+        "test_r8_0_source_capability.py::test_xref_register_contract[F08_XREF_RESOLVED]",
+        "test_r8_0_source_capability.py::test_xref_register_contract[F08_XREF_UNLOADED]"
+      ],
+      "exposure": {
+        "ALRASHED": 0,
+        "P7757": 0
+      },
+      "to_reverify_against_real_decode": [
+        "xref flag fields is_xref_resolved / loaded_bit semantics"
+      ]
+    },
+    {
+      "id": "F09",
+      "case": "dynamic block, two visibility states",
+      "defect_class": "DYNAMIC_BLOCK_VISIBILITY",
+      "required_outcome": "visibility_resolved=false ⇒ no identity claim from name/text",
+      "new_in_r8_0": false,
+      "stage": "A",
+      "truth_basis": "CONTRACT_SPECIFICATION (structural outcome, no quantity)",
+      "current_engine_status": "NOT_APPLICABLE_TO_CURRENT_ENGINE",
+      "test_status_counts": {
+        "TARGET_NOT_IMPLEMENTED": 1
+      },
+      "tests": [
+        "test_r8_0_source_capability.py::test_dynamic_block_visibility_contract"
+      ],
+      "exposure": "NOT_A_SOURCE_COUNT_CLASS",
+      "to_reverify_against_real_decode": []
+    },
+    {
+      "id": "F10",
+      "case": "rotated linear dimension with offset extension origins",
+      "defect_class": "ROTATED_DIMENSION_PROJECTION",
+      "required_outcome": "projected measured = act_measurement ± 0.5 mm; ezdxf get_measurement agrees",
+      "new_in_r8_0": false,
+      "stage": "A",
+      "truth_basis": "HAND_DERIVED",
+      "current_engine_status": "KNOWN_DEFECT",
+      "test_status_counts": {
+        "TARGET_NOT_IMPLEMENTED": 1,
+        "KNOWN_DEFECT": 1
+      },
+      "tests": [
+        "test_r8_0_source_capability.py::test_rotated_linear_dimension_contract",
+        "test_r8_0_source_capability.py::test_rotated_linear_dimension_geometry_current_engine"
+      ],
+      "exposure": {
+        "ALRASHED": 454,
+        "P7757": 366
+      },
+      "to_reverify_against_real_decode": [
+        "DIMENSION_LINEAR dim_rotation field name"
+      ]
+    },
+    {
+      "id": "F11",
+      "case": "MTEXT with inline codes",
+      "defect_class": "MTEXT_CODES",
+      "required_outcome": "normalised text equal across routes",
+      "new_in_r8_0": false,
+      "stage": "A",
+      "truth_basis": "HAND_DERIVED",
+      "current_engine_status": "KNOWN_DEFECT",
+      "test_status_counts": {
+        "TARGET_NOT_IMPLEMENTED": 1,
+        "KNOWN_DEFECT": 1
+      },
+      "tests": [
+        "test_r8_0_source_capability.py::test_mtext_literal_cad_text_contract",
+        "test_r8_0_source_capability.py::test_mtext_literal_current_engine"
+      ],
+      "exposure": {
+        "ALRASHED": 515,
+        "P7757": 389
+      },
+      "to_reverify_against_real_decode": []
+    },
+    {
+      "id": "F12",
+      "case": "ATTRIB-tagged door block",
+      "defect_class": "ATTRIB_BINDING",
+      "required_outcome": "tag/value bound to its INSERT",
+      "new_in_r8_0": false,
+      "stage": "A",
+      "truth_basis": "HAND_DERIVED",
+      "current_engine_status": "CURRENT_PASS",
+      "test_status_counts": {
+        "TARGET_NOT_IMPLEMENTED": 1,
+        "PASS": 1
+      },
+      "tests": [
+        "test_r8_0_source_capability.py::test_attrib_bound_to_its_insert_contract",
+        "test_r8_0_source_capability.py::test_attrib_value_not_lost_current_engine"
+      ],
+      "exposure": "NOT_A_SOURCE_COUNT_CLASS",
+      "to_reverify_against_real_decode": []
+    },
+    {
+      "id": "F13",
+      "case": "anonymous block renamed between routes",
+      "defect_class": "NESTED_TRANSFORM",
+      "required_outcome": "correlated by block-record handle, PASS",
+      "new_in_r8_0": false,
+      "stage": "A",
+      "truth_basis": "HAND_DERIVED",
+      "current_engine_status": "CURRENT_PASS",
+      "test_status_counts": {
+        "TARGET_NOT_IMPLEMENTED": 1,
+        "PASS": 1
+      },
+      "tests": [
+        "test_r8_0_block_transforms.py::test_anonymous_block_correlated_by_handle_across_routes",
+        "test_r8_0_block_transforms.py::test_anonymous_block_realised_once_current_engine"
+      ],
+      "exposure": "NOT_A_SOURCE_COUNT_CLASS",
+      "to_reverify_against_real_decode": []
+    },
+    {
+      "id": "F14",
+      "case": "legacy codepage text",
+      "defect_class": "TEXT_ENCODING",
+      "required_outcome": "TEXT_NORMALISED or TEXT_UNDECODABLE; undecodable never an identity source",
+      "new_in_r8_0": false,
+      "stage": "A",
+      "truth_basis": "CONTRACT_SPECIFICATION (structural outcome, no quantity)",
+      "current_engine_status": "NOT_APPLICABLE_TO_CURRENT_ENGINE",
+      "test_status_counts": {
+        "TARGET_NOT_IMPLEMENTED": 1
+      },
+      "tests": [
+        "test_r8_0_source_capability.py::test_legacy_codepage_text_contract"
+      ],
+      "exposure": "NOT_A_SOURCE_COUNT_CLASS",
+      "to_reverify_against_real_decode": []
+    },
+    {
+      "id": "F15",
+      "case": "paper-space viewport at 1:50",
+      "defect_class": "UNIT_DECLARATION",
+      "required_outcome": "viewport frame with parent model frame; measurements only in model frame",
+      "new_in_r8_0": false,
+      "stage": "B",
+      "truth_basis": "CONTRACT_SPECIFICATION (structural outcome, no quantity)",
+      "current_engine_status": "NOT_APPLICABLE_TO_CURRENT_ENGINE",
+      "test_status_counts": {
+        "TARGET_NOT_IMPLEMENTED": 1
+      },
+      "tests": [
+        "test_r8_0_pending_contracts.py::test_contract[F15]"
+      ],
+      "exposure": "NOT_A_SOURCE_COUNT_CLASS",
+      "to_reverify_against_real_decode": []
+    },
+    {
+      "id": "F16",
+      "case": "two plan regions at different scales in one model space",
+      "defect_class": "UNIT_DECLARATION",
+      "required_outcome": "two frames, independently statused",
+      "new_in_r8_0": false,
+      "stage": "B",
+      "truth_basis": "CONTRACT_SPECIFICATION (structural outcome, no quantity)",
+      "current_engine_status": "NOT_APPLICABLE_TO_CURRENT_ENGINE",
+      "test_status_counts": {
+        "TARGET_NOT_IMPLEMENTED": 1
+      },
+      "tests": [
+        "test_r8_0_pending_contracts.py::test_contract[F16]"
+      ],
+      "exposure": "NOT_A_SOURCE_COUNT_CLASS",
+      "to_reverify_against_real_decode": []
+    },
+    {
+      "id": "F17",
+      "case": "INSUNITS contradicting geometry (Al Rashed pattern)",
+      "defect_class": "UNIT_DECLARATION",
+      "required_outcome": "frame PROVISIONAL; FINAL forbidden until confirmed",
+      "new_in_r8_0": false,
+      "stage": "B",
+      "truth_basis": "CONTRACT_SPECIFICATION (structural outcome, no quantity)",
+      "current_engine_status": "NOT_APPLICABLE_TO_CURRENT_ENGINE",
+      "test_status_counts": {
+        "TARGET_NOT_IMPLEMENTED": 1
+      },
+      "tests": [
+        "test_r8_0_pending_contracts.py::test_contract[F17]"
+      ],
+      "exposure": "NOT_A_SOURCE_COUNT_CLASS",
+      "to_reverify_against_real_decode": []
+    },
+    {
+      "id": "F18",
+      "case": "PDF page rotated 270° with a scale bar",
+      "defect_class": "UNIT_DECLARATION",
+      "required_outcome": "native_to_frame measured; scale bar is E-P/E-C evidence",
+      "new_in_r8_0": false,
+      "stage": "B",
+      "truth_basis": "CONTRACT_SPECIFICATION (structural outcome, no quantity)",
+      "current_engine_status": "NOT_APPLICABLE_TO_CURRENT_ENGINE",
+      "test_status_counts": {
+        "TARGET_NOT_IMPLEMENTED": 1
+      },
+      "tests": [
+        "test_r8_0_pending_contracts.py::test_contract[F18]"
+      ],
+      "exposure": "NOT_A_SOURCE_COUNT_CLASS",
+      "to_reverify_against_real_decode": []
+    },
+    {
+      "id": "F19",
+      "case": "unhandled custom entity on a wall layer",
+      "defect_class": "UNCONVERTED_CLASS",
+      "required_outcome": "region measured claims blocked",
+      "new_in_r8_0": false,
+      "stage": "A",
+      "truth_basis": "HAND_DERIVED",
+      "current_engine_status": "CURRENT_PASS",
+      "test_status_counts": {
+        "TARGET_NOT_IMPLEMENTED": 2,
+        "PASS": 1
+      },
+      "tests": [
+        "test_r8_0_source_capability.py::test_custom_entity_on_wall_layer_blocks_region_contract",
+        "test_r8_0_source_capability.py::test_skipped_object_is_counted_current_engine[F19_CUSTOM_ON_WALL_LAYER]",
+        "test_r8_0_source_capability.py::test_skipped_object_register_contract[F19_CUSTOM_ON_WALL_LAYER]"
+      ],
+      "exposure": {
+        "ALRASHED": 10,
+        "P7757": 4
+      },
+      "to_reverify_against_real_decode": []
+    },
+    {
+      "id": "F20",
+      "case": "route missing an entity class it declares it supports",
+      "defect_class": "UNCONVERTED_CLASS",
+      "required_outcome": "PRESENCE BLOCK",
+      "new_in_r8_0": false,
+      "stage": "A",
+      "truth_basis": "CONTRACT_SPECIFICATION (structural outcome, no quantity)",
+      "current_engine_status": "NOT_APPLICABLE_TO_CURRENT_ENGINE",
+      "test_status_counts": {
+        "TARGET_NOT_IMPLEMENTED": 1
+      },
+      "tests": [
+        "test_r8_0_source_capability.py::test_route_missing_a_declared_class_contract"
+      ],
+      "exposure": "NOT_A_SOURCE_COUNT_CLASS",
+      "to_reverify_against_real_decode": []
+    },
+    {
+      "id": "F21",
+      "case": "spec clause: all internal partitions are AAC",
+      "defect_class": "SCOPE",
+      "required_outcome": "selector WALL_ROLE=INTERNAL_PARTITION; applies only where WALL_ROLE established",
+      "new_in_r8_0": false,
+      "stage": "C",
+      "truth_basis": "CONTRACT_SPECIFICATION (structural outcome, no quantity)",
+      "current_engine_status": "NOT_APPLICABLE_TO_CURRENT_ENGINE",
+      "test_status_counts": {
+        "TARGET_NOT_IMPLEMENTED": 1
+      },
+      "tests": [
+        "test_r8_0_pending_contracts.py::test_contract[F21]"
+      ],
+      "exposure": "NOT_A_SOURCE_COUNT_CLASS",
+      "to_reverify_against_real_decode": []
+    },
+    {
+      "id": "F22",
+      "case": "legend wall type W3 keyed by hatch",
+      "defect_class": "SCOPE",
+      "required_outcome": "selector WALL_TYPE_CODE=W3",
+      "new_in_r8_0": false,
+      "stage": "C",
+      "truth_basis": "CONTRACT_SPECIFICATION (structural outcome, no quantity)",
+      "current_engine_status": "NOT_APPLICABLE_TO_CURRENT_ENGINE",
+      "test_status_counts": {
+        "TARGET_NOT_IMPLEMENTED": 1
+      },
+      "tests": [
+        "test_r8_0_pending_contracts.py::test_contract[F22]"
+      ],
+      "exposure": "NOT_A_SOURCE_COUNT_CLASS",
+      "to_reverify_against_real_decode": []
+    },
+    {
+      "id": "F23",
+      "case": "all external walls on ground floor",
+      "defect_class": "SCOPE",
+      "required_outcome": "ALL[WALL_ROLE=EXTERNAL, FLOOR=GROUND]",
+      "new_in_r8_0": false,
+      "stage": "C",
+      "truth_basis": "CONTRACT_SPECIFICATION (structural outcome, no quantity)",
+      "current_engine_status": "NOT_APPLICABLE_TO_CURRENT_ENGINE",
+      "test_status_counts": {
+        "TARGET_NOT_IMPLEMENTED": 1
+      },
+      "tests": [
+        "test_r8_0_pending_contracts.py::test_contract[F23]"
+      ],
+      "exposure": "NOT_A_SOURCE_COUNT_CLASS",
+      "to_reverify_against_real_decode": []
+    },
+    {
+      "id": "F24",
+      "case": "owner: all project masonry is blockwork",
+      "defect_class": "SCOPE",
+      "required_outcome": "PROJECT_WIDE at OWNER_PROJECT_INPUT tier; superseded by F22 on W3 walls",
+      "new_in_r8_0": false,
+      "stage": "C",
+      "truth_basis": "CONTRACT_SPECIFICATION (structural outcome, no quantity)",
+      "current_engine_status": "NOT_APPLICABLE_TO_CURRENT_ENGINE",
+      "test_status_counts": {
+        "TARGET_NOT_IMPLEMENTED": 2
+      },
+      "tests": [
+        "test_r8_0_pending_contracts.py::test_contract[F24]",
+        "test_r8_0_pending_contracts.py::test_contract[F24b]"
+      ],
+      "exposure": "NOT_A_SOURCE_COUNT_CLASS",
+      "to_reverify_against_real_decode": []
+    },
+    {
+      "id": "F25",
+      "case": "finish schedule ROOM-07 → WT-03",
+      "defect_class": "SCOPE",
+      "required_outcome": "ALL[SPACE_ID=ROOM-07, SURFACE=WALL] bound via SUBJECT_ANCHOR",
+      "new_in_r8_0": false,
+      "stage": "C",
+      "truth_basis": "CONTRACT_SPECIFICATION (structural outcome, no quantity)",
+      "current_engine_status": "NOT_APPLICABLE_TO_CURRENT_ENGINE",
+      "test_status_counts": {
+        "TARGET_NOT_IMPLEMENTED": 1
+      },
+      "tests": [
+        "test_r8_0_pending_contracts.py::test_contract[F25]"
+      ],
+      "exposure": "NOT_A_SOURCE_COUNT_CLASS",
+      "to_reverify_against_real_decode": []
+    },
+    {
+      "id": "F26",
+      "case": "×5 enlarged model-space detail with scale text and DIMLFAC 0.2",
+      "defect_class": "FRAME_SPLIT",
+      "required_outcome": "same UNIT_CONTEXT; region real_per_presented=0.2 VERIFIED",
+      "new_in_r8_0": false,
+      "stage": "B",
+      "truth_basis": "CONTRACT_SPECIFICATION (structural outcome, no quantity)",
+      "current_engine_status": "NOT_APPLICABLE_TO_CURRENT_ENGINE",
+      "test_status_counts": {
+        "TARGET_NOT_IMPLEMENTED": 1
+      },
+      "tests": [
+        "test_r8_0_pending_contracts.py::test_contract[F26]"
+      ],
+      "exposure": "NOT_A_SOURCE_COUNT_CLASS",
+      "to_reverify_against_real_decode": []
+    },
+    {
+      "id": "F27",
+      "case": "enlarged detail with no region-local evidence",
+      "defect_class": "FRAME_SPLIT",
+      "required_outcome": "region BLOCKED (U-2)",
+      "new_in_r8_0": false,
+      "stage": "B",
+      "truth_basis": "CONTRACT_SPECIFICATION (structural outcome, no quantity)",
+      "current_engine_status": "NOT_APPLICABLE_TO_CURRENT_ENGINE",
+      "test_status_counts": {
+        "TARGET_NOT_IMPLEMENTED": 1
+      },
+      "tests": [
+        "test_r8_0_pending_contracts.py::test_contract[F27]"
+      ],
+      "exposure": "NOT_A_SOURCE_COUNT_CLASS",
+      "to_reverify_against_real_decode": []
+    },
+    {
+      "id": "F28",
+      "case": "auto-generated dimensions as sole unit evidence",
+      "defect_class": "INDEPENDENCE",
+      "required_outcome": "independent set size 0 from them; unit not VERIFIED",
+      "new_in_r8_0": false,
+      "stage": "B",
+      "truth_basis": "CONTRACT_SPECIFICATION (structural outcome, no quantity)",
+      "current_engine_status": "NOT_APPLICABLE_TO_CURRENT_ENGINE",
+      "test_status_counts": {
+        "TARGET_NOT_IMPLEMENTED": 1
+      },
+      "tests": [
+        "test_r8_0_pending_contracts.py::test_contract[F28]"
+      ],
+      "exposure": "NOT_A_SOURCE_COUNT_CLASS",
+      "to_reverify_against_real_decode": []
+    },
+    {
+      "id": "F29",
+      "case": "overridden dimension text as unit evidence",
+      "defect_class": "INDEPENDENCE",
+      "required_outcome": "counts as DOCUMENT_SOURCE member",
+      "new_in_r8_0": false,
+      "stage": "B",
+      "truth_basis": "CONTRACT_SPECIFICATION (structural outcome, no quantity)",
+      "current_engine_status": "NOT_APPLICABLE_TO_CURRENT_ENGINE",
+      "test_status_counts": {
+        "TARGET_NOT_IMPLEMENTED": 1
+      },
+      "tests": [
+        "test_r8_0_pending_contracts.py::test_contract[F29]"
+      ],
+      "exposure": "NOT_A_SOURCE_COUNT_CLASS",
+      "to_reverify_against_real_decode": []
+    },
+    {
+      "id": "F30",
+      "case": "raster page with DPI metadata contradicting page size",
+      "defect_class": "FRAME_SPLIT",
+      "required_outcome": "UNIT_CONTEXT CONFLICT",
+      "new_in_r8_0": false,
+      "stage": "B",
+      "truth_basis": "CONTRACT_SPECIFICATION (structural outcome, no quantity)",
+      "current_engine_status": "NOT_APPLICABLE_TO_CURRENT_ENGINE",
+      "test_status_counts": {
+        "TARGET_NOT_IMPLEMENTED": 1
+      },
+      "tests": [
+        "test_r8_0_pending_contracts.py::test_contract[F30]"
+      ],
+      "exposure": "NOT_A_SOURCE_COUNT_CLASS",
+      "to_reverify_against_real_decode": []
+    },
+    {
+      "id": "F31",
+      "case": "vector-outline dimension crop, two independent transcriptions",
+      "defect_class": "TRANSCRIPTION",
+      "required_outcome": "promoted to SOURCE_DIMENSION_TEXT; parsed by code",
+      "new_in_r8_0": false,
+      "stage": "C",
+      "truth_basis": "CONTRACT_SPECIFICATION (structural outcome, no quantity)",
+      "current_engine_status": "NOT_APPLICABLE_TO_CURRENT_ENGINE",
+      "test_status_counts": {
+        "TARGET_NOT_IMPLEMENTED": 1
+      },
+      "tests": [
+        "test_r8_0_pending_contracts.py::test_contract[F31]"
+      ],
+      "exposure": "NOT_A_SOURCE_COUNT_CLASS",
+      "to_reverify_against_real_decode": []
+    },
+    {
+      "id": "F32",
+      "case": "scanned door schedule row, one model transcription",
+      "defect_class": "TRANSCRIPTION",
+      "required_outcome": "stays CANDIDATE",
+      "new_in_r8_0": false,
+      "stage": "C",
+      "truth_basis": "CONTRACT_SPECIFICATION (structural outcome, no quantity)",
+      "current_engine_status": "NOT_APPLICABLE_TO_CURRENT_ENGINE",
+      "test_status_counts": {
+        "TARGET_NOT_IMPLEMENTED": 1
+      },
+      "tests": [
+        "test_r8_0_pending_contracts.py::test_contract[F32]"
+      ],
+      "exposure": "NOT_A_SOURCE_COUNT_CLASS",
+      "to_reverify_against_real_decode": []
+    },
+    {
+      "id": "F33",
+      "case": "vision model classifies an unlabelled room",
+      "defect_class": "INFERENCE",
+      "required_outcome": "AI_INFERENCE CANDIDATE only; room stays UNNAMED_ON_DRAWING",
+      "new_in_r8_0": false,
+      "stage": "C",
+      "truth_basis": "CONTRACT_SPECIFICATION (structural outcome, no quantity)",
+      "current_engine_status": "NOT_APPLICABLE_TO_CURRENT_ENGINE",
+      "test_status_counts": {
+        "TARGET_NOT_IMPLEMENTED": 1
+      },
+      "tests": [
+        "test_r8_0_pending_contracts.py::test_contract[F33]"
+      ],
+      "exposure": "NOT_A_SOURCE_COUNT_CLASS",
+      "to_reverify_against_real_decode": []
+    },
+    {
+      "id": "F34",
+      "case": "frame not representable in plan: tilted or unreadable extrusion",
+      "defect_class": "OCS_FRAME_FAIL_CLOSED",
+      "required_outcome": "UNSUPPORTED_FRAME / FRAME_UNREADABLE finding; no plan geometry; blocks FINAL",
+      "new_in_r8_0": true,
+      "stage": "A",
+      "truth_basis": "HAND_DERIVED",
+      "current_engine_status": "KNOWN_DEFECT",
+      "test_status_counts": {
+        "PASS": 4,
+        "KNOWN_DEFECT": 5,
+        "TARGET_NOT_IMPLEMENTED": 10
+      },
+      "tests": [
+        "test_r8_0_mutations.py::test_S02_unreadable_frame_as_wcs_is_detected[F34_UNREADABLE_NULL]",
+        "test_r8_0_mutations.py::test_S02_unreadable_frame_as_wcs_is_detected[F34_UNREADABLE_SHORT]",
+        "test_r8_0_mutations.py::test_S02_unreadable_frame_as_wcs_is_detected[F34_UNREADABLE_TEXT]",
+        "test_r8_0_mutations.py::test_S02_unreadable_frame_as_wcs_is_detected[F34_UNREADABLE_ZERO]",
+        "test_r8_0_ocs.py::test_frame_problem_is_a_visible_finding_current_engine[F34_TILTED_EXTRUSION]",
+        "test_r8_0_ocs.py::test_frame_problem_is_a_visible_finding_current_engine[F34_UNREADABLE_NULL]",
+        "test_r8_0_ocs.py::test_frame_problem_is_a_visible_finding_current_engine[F34_UNREADABLE_SHORT]",
+        "test_r8_0_ocs.py::test_frame_problem_is_a_visible_finding_current_engine[F34_UNREADABLE_TEXT]",
+        "test_r8_0_ocs.py::test_frame_problem_is_a_visible_finding_current_engine[F34_UNREADABLE_ZERO]",
+        "test_r8_0_ocs.py::test_frame_problem_k1_acceptance[F34_TILTED_EXTRUSION]",
+        "test_r8_0_ocs.py::test_frame_problem_k1_acceptance[F34_UNREADABLE_NULL]",
+        "test_r8_0_ocs.py::test_frame_problem_k1_acceptance[F34_UNREADABLE_SHORT]",
+        "test_r8_0_ocs.py::test_frame_problem_k1_acceptance[F34_UNREADABLE_TEXT]",
+        "test_r8_0_ocs.py::test_frame_problem_k1_acceptance[F34_UNREADABLE_ZERO]",
+        "test_r8_0_ocs.py::test_ocs_plan_frame_contract[F34_TILTED_EXTRUSION]",
+        "test_r8_0_ocs.py::test_ocs_plan_frame_contract[F34_UNREADABLE_NULL]",
+        "test_r8_0_ocs.py::test_ocs_plan_frame_contract[F34_UNREADABLE_SHORT]",
+        "test_r8_0_ocs.py::test_ocs_plan_frame_contract[F34_UNREADABLE_TEXT]",
+        "test_r8_0_ocs.py::test_ocs_plan_frame_contract[F34_UNREADABLE_ZERO]"
+      ],
+      "exposure": {
+        "ALRASHED": 0,
+        "P7757": 0
+      },
+      "to_reverify_against_real_decode": []
+    },
+    {
+      "id": "F35",
+      "case": "OLE2FRAME inside a placed block",
+      "defect_class": "SKIPPED_OBJECT",
+      "required_outcome": "SOURCE_CAPABILITY_REGISTER row with handle; blocks FINAL",
+      "new_in_r8_0": true,
+      "stage": "A",
+      "truth_basis": "HAND_DERIVED",
+      "current_engine_status": "CURRENT_PASS",
+      "test_status_counts": {
+        "PASS": 1,
+        "TARGET_NOT_IMPLEMENTED": 1
+      },
+      "tests": [
+        "test_r8_0_source_capability.py::test_skipped_object_is_counted_current_engine[F35_OLE2FRAME_IN_BLOCK]",
+        "test_r8_0_source_capability.py::test_skipped_object_register_contract[F35_OLE2FRAME_IN_BLOCK]"
+      ],
+      "exposure": {
+        "ALRASHED": 0,
+        "P7757": 0
+      },
+      "to_reverify_against_real_decode": [
+        "OLE2FRAME type code 74 in a real decode"
+      ]
+    },
+    {
+      "id": "F36",
+      "case": "ACAD_PROXY_ENTITY",
+      "defect_class": "SKIPPED_OBJECT",
+      "required_outcome": "SOURCE_CAPABILITY_REGISTER row with handle; blocks FINAL",
+      "new_in_r8_0": true,
+      "stage": "A",
+      "truth_basis": "HAND_DERIVED",
+      "current_engine_status": "CURRENT_PASS",
+      "test_status_counts": {
+        "PASS": 1,
+        "TARGET_NOT_IMPLEMENTED": 1
+      },
+      "tests": [
+        "test_r8_0_source_capability.py::test_skipped_object_is_counted_current_engine[F36_PROXY_ENTITY]",
+        "test_r8_0_source_capability.py::test_skipped_object_register_contract[F36_PROXY_ENTITY]"
+      ],
+      "exposure": {
+        "ALRASHED": 0,
+        "P7757": 0
+      },
+      "to_reverify_against_real_decode": [
+        "ACAD_PROXY_ENTITY type code 498 in a real decode"
+      ]
+    }
+  ]
+}
