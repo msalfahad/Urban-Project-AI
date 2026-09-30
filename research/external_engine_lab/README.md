@@ -41,3 +41,14 @@ external MCP tests, benchmark adapters and experimental outputs.
   CAD_PROFILE (engine/source/frame.py, cad_profile.py) for the three real sources; column Question A. No quantity is
   read; nothing is published.
 - Neither file is imported by `engine/`.
+
+## R8.4 (shadow)
+
+| script | writes | purpose |
+|---|---|---|
+| `r8_4_qualification.py` | `outputs/r8_4/DECODER_QUALIFICATION_*.json`, `INDEPENDENT_RECONCILIATION_RESULTS.json` | target feature profiles, handle representation, qualification register (P7757 BLOCKED_EXTERNAL_INPUT), DXF search with writer provenance |
+| `r8_4_regions.py` | `outputs/r8_4/REFERENCE_REGION_REGISTER.json` | deterministic region candidates, active-path view roles, pending adapter designations (none accepted) |
+| `r8_4_shadow_diff.py` | `outputs/r8_4/SHADOW_ROW_DIFF.json`, `REAL_PROJECT_R8_4_STATUS.json` | row-by-row current vs canonical (frame V2, CAD profile V2), status only, no value recomputed |
+| `r8_4_package.py` | `data/reports/URBAN_QTO_R8_4_QUALIFICATION_SHADOW/` + zip | review package from the outputs, registers and the final suite's junit |
+
+Run order: qualification → regions → shadow_diff → (final suite) → package. No script writes to a published, approved or frozen artefact.

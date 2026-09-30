@@ -25,15 +25,16 @@ UPLOADS = Path("/root/.claude/uploads/93607c01-16a4-590f-af7c-1c2701c3b240")
 SCRATCH = Path("/tmp/claude-0/-home-user-Urban-Project-AI/93607c01-16a4-590f-af7c-1c2701c3b240/scratchpad")
 SOURCES = {
     "ALRASHED": {"sha256": "299c61b1df7660384e027d44c0a29d8b64c92995843c0517cea05d485974660c",
-                 "decodes": ["data/runs/pinned_redecode/ALRASHED_PINNED_REDECODE.json",
-                             "data/runs/cad_convert/ALRASHED_ARCHITECTURAL.json"]},
+                 "decodes": ["data/runs/cad_convert/ALRASHED_ARCHITECTURAL.json",
+                             "data/runs/pinned_redecode/ALRASHED_PINNED_REDECODE.json"]},
     "P7757": {"sha256": "7f61f3ac",   # prefix; full hash read from the pinned-redecode record
-              "decodes": ["data/runs/pinned_redecode/P7757_PINNED_REDECODE.json",
-                          "data/runs/cad_convert/P7757_ARCHITECTURAL.json"]},
+              "decodes": ["data/runs/cad_convert/P7757_ARCHITECTURAL.json",
+                          "data/runs/pinned_redecode/P7757_PINNED_REDECODE.json"]},
     "QORTUBA": {"sha256": "2ec3a9c8",
-                "decodes": ["data/runs/pinned_redecode/QORTUBA_PINNED_REDECODE.json",
-                            "data/runs/cad_convert/QORTUBA_ARCHITECTURAL.json"]},
+                "decodes": ["data/runs/cad_convert/QORTUBA_ARCHITECTURAL.json",
+                            "data/runs/pinned_redecode/QORTUBA_PINNED_REDECODE.json"]},
 }
+# the historical decodes are the ones the active path consumed; their pin status is REPRODUCED_BY_REGISTERED_BUILD
 BUILD = PINS.PINS["LIBREDWG_DWGREAD"][0]["sha256"]
 DXF_PATTERNS = ("*.dxf", "*.DXF", "*.dxf.zip", "*autocad*", "*AUTOCAD*", "*oda*.dxf", "*ODA*")
 
