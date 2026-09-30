@@ -72,15 +72,17 @@ def test_one_scale_ratio_written_two_ways_is_not_mixed():
 
 
 def test_a_human_confirmation_consistent_with_every_family_resolves_a_contradicted_declaration():
-    """The Al Rashed pattern: INSUNITS inch, a ratio-100 family that excludes inch. A human confirmation
-    of metre for THIS source hash is consistent with the family set, so V1 permits FINAL for the unit;
-    a confirmation of inch (inside no family set) does not."""
+    """URBAN_FRAME_RELEASE_V1 (R8.3) behaviour, pinned for audit. It documents the V1 DEFECT the R8.4
+    review found: the assumption-bearing family set was counted as the non-human agreement that made
+    the confirmation FINAL - candidate evidence raising authority. V2 refuses this
+    (tests/r8_4/test_r8_4_human_confirmation.py::test_E_candidate_agreement_is_never_positive_corroboration)."""
     x = UE.extract(decode(1, 100.0), SHA)
 
     def with_human(v):
         h = FR.UnitEvidence("H", FR.NATIVE_UNIT, FR.HUMAN_CONFIRMATION, "MODEL_SPACE", ("HUMAN:owner",), v,
                             producer=FR.HUMAN, author="owner", timestamp="t", source_sha256=SHA)
-        return FR.unit_context(SHA, "MODEL_SPACE", FR.MODEL_SPACE, x["evidence"] + [h], insunits=1)
+        return FR.unit_context(SHA, "MODEL_SPACE", FR.MODEL_SPACE, x["evidence"] + [h], insunits=1,
+                               policy=FR.RELEASE_V1)
     ok = with_human(1000.0)
     assert ok.status == FR.CONFIRMED_BY_HUMAN and FR.FINAL_MEASUREMENT in ok.allowed_use
     bad = with_human(25.4)

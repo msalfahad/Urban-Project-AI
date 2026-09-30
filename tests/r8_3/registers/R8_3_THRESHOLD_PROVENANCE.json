@@ -32,5 +32,16 @@
   "- **PREVIEW rows**: value visible in the preview/trace view only, publication status `PREVIEW`, excluded from every subtotal (subtotal `null` under the existing contract), never exported to Urban PM, watermarked on any proof."
  ],
  "r8_3_action": "preserved unchanged; not retuned on any project; the missing repository provenance is recorded here as a documentation gap, not as permission to reselect the numbers",
- "recorded": "2026-09-30"
+ "recorded": "2026-09-30",
+ "r8_4_addendum": {
+  "recorded": "2026-09-30",
+  "later_edition": {
+   "path": "data/reports/URBAN_QTO_R8_SPEC/R8_REVISED_SPEC.md",
+   "sha256": "17e1a9cddcaddb22ffc1576d8df303291d950fea1d92b1dc36e1e112a47dd0f1",
+   "bytes": 53116,
+   "status": "EXTERNAL_FROZEN_SPEC_NOT_PREVIOUSLY_COMMITTED",
+   "same_values": true
+  },
+  "correction": "R8.3 cited only v1; the later edition states the same three thresholds. Values unchanged, not retuned."
+ }
 }

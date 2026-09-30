@@ -11,6 +11,10 @@ exception its class allows:
     CONTRACT_DISPUTED       AssertionError           (R8.3) the implemented design disagrees with a
                                                      frozen R8.0 expectation; the expectation is kept
                                                      UNCHANGED and the dispute awaits review
+    CONTRACT_SUPERSEDED     AssertionError |         (R8.4) the dispute was reviewed and the legacy
+                            TargetNotImplemented     expectation formally superseded
+                                                     (registers/R8_CONTRACT_SUPERSESSION.json); the legacy
+                                                     contract is kept byte-for-byte and still runs
 
 Strict means an entry that unexpectedly passes FAILS the run, so a fix can
 never slip in without the register being updated in the same change.
@@ -32,7 +36,8 @@ HERE = Path(__file__).parent
 REGISTER = HERE / "registers" / "R8_0_EXPECTED_FAILURES.json"
 RAISES = {"KNOWN_DEFECT": AssertionError, "TARGET_NOT_IMPLEMENTED": TargetNotImplemented,
           "LIBRARY_KNOWN_FAILURE": AssertionError, "BOUNDARY_DEBT": AssertionError,
-          "CONTRACT_DISPUTED": AssertionError}
+          "CONTRACT_DISPUTED": AssertionError,
+          "CONTRACT_SUPERSEDED": (AssertionError, TargetNotImplemented)}
 
 
 def load_expected():

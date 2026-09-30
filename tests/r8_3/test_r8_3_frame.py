@@ -33,6 +33,9 @@ def unit_note(v=1.0, eid="E_NOTE"):
 
 
 def uc(evidence, insunits=4, **kw):
+    # R8.3 semantics are pinned to URBAN_FRAME_RELEASE_V1 so the round stays reproducible for audit;
+    # V2 (R8.4 default) is tested in tests/r8_4/test_r8_4_human_confirmation.py
+    kw.setdefault("policy", FR.RELEASE_V1)
     return FR.unit_context(SHA, SPACE, FR.MODEL_SPACE, evidence, insunits=insunits, **kw)
 
 
@@ -125,7 +128,7 @@ def test_G2_human_agreeing_with_the_declaration_is_final_eligible_but_still_not_
 def test_G2b_human_confirmation_in_a_vacuum_is_never_final():
     u = uc([human(1.0)], insunits=0)
     assert u.status == FR.CONFIRMED_BY_HUMAN and FR.FINAL_MEASUREMENT not in u.allowed_use
-    closed = FR.ReleasePolicy(human_confirmed_final=False)
+    closed = FR.ReleasePolicy(policy_id=FR.RELEASE_V1_ID, human_confirmed_final=False, require_role_and_scope=False)
     assert FR.FINAL_MEASUREMENT not in uc(decl(4) + [human(1.0)], policy=closed).allowed_use
 
 
@@ -381,7 +384,7 @@ def test_every_frame_finding_declares_the_measurement_frame_domain():
     codes = [c for c in F.IMPACTS if c.startswith(("UNIT_", "REGION_", "FRAME_", "CHECKED_DIMENSION",
                                                   "HUMAN_CONFIRMATION", "AGENT_STATUS"))
              and c != F.FRAME_UNREADABLE]
-    assert len(codes) == 17
+    assert len(codes) == 20        # R8.3: 17; R8.4 adds HUMAN_CONFIRMATION_CONFLICT / _REVIEW_REQUIRED / _REJECTED
     assert all(F.IMPACTS[c][0][0] == F.MEASUREMENT_FRAME for c in codes)
 
 

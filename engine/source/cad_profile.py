@@ -234,6 +234,78 @@ def evaluate(kind: str, obs_id: str, instance_path, method: MeasurementMethod, c
     return ProfileResult(tuple(rows), final, tuple(uses), fails, frame.status if frame else None, ev)
 
 
+# ---------------------------------------------------------------- V-CAD check ids (R8.4 §10)
+# The R8 revised spec, later edition (sha256 17e1a9cd..., §6a) names the CAD_PROFILE checks
+# V-CAD-1..6. R8.3 stated requirements A-I without that numbering (and wrongly reported the
+# numbering as undefined). The mapping below is the R8.4 reviewed binding; A-I stay the
+# evaluated requirements, V-CAD ids are a reporting view over them.
+V_CAD_CHECKS = {
+    "V-CAD-1": ("D_ROUTES", "kernel reconciliation PASS for every INSERT-placed observation used"),
+    "V-CAD-2": ("C_SOURCE", "no SOURCE-scope decode conflict"),
+    "V-CAD-3": ("C_SOURCE", "census frozen (source conservation balanced)"),
+    "V-CAD-4": ("H_FINDINGS", "no unresolved XREF in the region"),
+    "V-CAD-5": ("H_FINDINGS", "no UNHANDLED class on a profile-relevant layer of the region"),
+    "V-CAD-6": (None, "parser independence recorded; the spec says not required, the R8.3 parser policy "
+                      "(option B) is stricter and is what D_ROUTES enforces"),
+}
+UNREALISED_CLASS_CODES = frozenset({F.UNHANDLED, F.SKIPPED, F.PROXY, F.CUSTOM_CLASS, F.UNSUPPORTED})
+XREF_CODES = frozenset({F.XREF_NOT_RESOLVED, F.XREF_CONTENT_NOT_IN_SOURCE, F.XREF_UNLOADED})
+
+
+def region_class_findings(capability_rows, region_id: str, relevant_layers, in_region=None) -> list:
+    """V-CAD-5 input. Census rows for unrealised classes, re-scoped to a region by LAYER.
+
+    `relevant_layers` is supplied by the caller: the layers the region's measured observations
+    use, plus layers an adapter / region-role claim designates as walls, openings, columns,
+    labels or dimensions. engine/source holds no layer names. `in_region(row) -> True | False |
+    None` places a row spatially; None (an unrealised entity usually has no geometry to place)
+    keeps it in scope — fail closed.
+
+    Relevant layer  -> the census impacts, scoped to the region (BLOCKING GEOMETRY_COMPLETENESS)
+    Other layer     -> REVIEW only (the spec's WARN)"""
+    out = []
+    layers = set(relevant_layers)
+    for r in capability_rows:
+        if r.get("code") not in UNREALISED_CLASS_CODES and r.get("code") not in XREF_CODES:
+            continue
+        where = in_region(r) if in_region else None
+        if where is False:
+            continue
+        relevant = r.get("layer") in layers or r.get("code") in XREF_CODES
+        imp = tuple((i["domain"], i["severity"]) for i in r.get("impacts", ())) if relevant else \
+            ((F.GEOMETRY_COMPLETENESS, F.REVIEW),)
+        out.append(F.SourceFinding(r["code"], None, (),
+                                   f"{r.get('source_type')} handle {r.get('handle')} on layer {r.get('layer')!r}: "
+                                   + ("profile-relevant layer of the region" if relevant else "layer not profile-relevant"),
+                                   imp or None, scope=region_id))
+    return out
+
+
+def v_cad_view(result: ProfileResult, region_findings=()) -> dict:
+    """V-CAD-n PASS/FAIL derived from an evaluated ProfileResult (reporting view only)."""
+    req = {r[0]: r[1] for r in result.requirements}
+    blocking = {f.code for f in region_findings if f.blocking_domains}
+    out = {}
+    for cid, (rid, _) in V_CAD_CHECKS.items():
+        if cid == "V-CAD-5":
+            out[cid] = "FAIL" if blocking & UNREALISED_CLASS_CODES else "PASS"
+        elif cid == "V-CAD-4":
+            out[cid] = "FAIL" if blocking & XREF_CODES else "PASS"
+        elif rid is None:
+            out[cid] = "RECORDED"
+        else:
+            out[cid] = req.get(rid, "NOT_EVALUATED")
+    return out
+
+
+def region_release(result: ProfileResult) -> str:
+    if FR.FINAL_MEASUREMENT in result.eligible_uses:
+        return "FINAL"
+    if FR.PREVIEW_MEASUREMENT in result.eligible_uses:
+        return "PREVIEW"
+    return "BLOCKED"
+
+
 def source_profile_release(profile: str, request: str, checks: dict | None = None, profile_implemented: bool = True,
                            bound_px: float | None = None, mm_per_px: float | None = None,
                            item_tolerance_mm: float | None = None) -> dict:

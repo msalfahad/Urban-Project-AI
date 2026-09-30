@@ -158,6 +158,11 @@ class UnitEvidence:
     notes: str = ""
     derived_set: tuple = ()                      # CONSTRAINT: the values consistent with this item (it can
                                                  # contradict a value outside the set, never confirm one)
+    # R8.4: a HUMAN_CONFIRMATION is a versioned claim
+    author_role: str | None = None
+    claim_scope: tuple = ()                      # coordinate spaces / regions the claim covers
+    supersedes: str | None = None                # evidence_id of the claim this one corrects (never erases)
+    acknowledges: tuple = ()                     # evidence ids of contradictions the author saw and overrules
 
     def __post_init__(self):
         if self.question not in (NATIVE_UNIT, REGION_SCALE):
@@ -256,8 +261,11 @@ def _two_independent_kinds(classes) -> bool:
     return any(k1 != k2 for i, a in enumerate(ks) for b in ks[i + 1:] for k1 in a for k2 in b)
 
 
-def admissibility(e: UnitEvidence, source_sha256: str | None):
+def admissibility(e: UnitEvidence, source_sha256: str | None, policy=None, scope: str | None = None):
     """(admissible, why). Only DECODER / ENGINE / HUMAN items reviewed ADMITTED count."""
+    policy = policy or DEFAULT_POLICY
+    if e.kind == HUMAN_CONFIRMATION and e.producer == AGENT:
+        return False, "AGENT_GENERATED_HUMAN_RECORD"
     if e.review_status == REJECTED:
         return False, "REJECTED"
     if e.producer == AGENT and e.review_status == ADMITTED:
@@ -271,30 +279,60 @@ def admissibility(e: UnitEvidence, source_sha256: str | None):
     if e.kind in CIRCULAR_KINDS:
         return False, "CIRCULAR_WITH_MEASURED_GEOMETRY"
     if e.kind == HUMAN_CONFIRMATION:
-        if e.producer != HUMAN or not e.author or not e.timestamp:
+        if e.producer != HUMAN or not e.author or not e.timestamp or (policy.require_role_and_scope and not e.author_role):
             return False, "HUMAN_CONFIRMATION_INCOMPLETE"
         if source_sha256 is None or e.source_sha256 != source_sha256:
             return False, "HUMAN_CONFIRMATION_SOURCE_MISMATCH"
+        if policy.require_role_and_scope:
+            if e.author_role not in policy.authorised_roles:
+                return False, "HUMAN_ROLE_NOT_AUTHORISED"
+            if scope is not None and scope not in (e.claim_scope or ()):
+                return False, "HUMAN_CONFIRMATION_SCOPE_MISMATCH"
     if e.derived_value is None and not e.derived_set:
         return False, "NO_DERIVED_VALUE"
     return True, None
 
 
+def human_confirmation(confirmation_id: str, source_sha256: str, coordinate_space_id: str, native_to_mm: float,
+                       author: str, author_role: str, timestamp: str, scope: tuple | None = None,
+                       supersedes: str | None = None, acknowledges: tuple = (), notes: str = "",
+                       question: str = NATIVE_UNIT, producer: str = HUMAN) -> UnitEvidence:
+    """A recorded, versioned human claim (R8.4 §5). It is EVIDENCE: status is still computed."""
+    return UnitEvidence(confirmation_id, question, HUMAN_CONFIRMATION, coordinate_space_id, (f"HUMAN:{author}",),
+                        native_to_mm, source_sha256=source_sha256, producer=producer, author=author,
+                        timestamp=timestamp, notes=notes, author_role=author_role,
+                        claim_scope=tuple(scope) if scope else (coordinate_space_id,), supersedes=supersedes,
+                        acknowledges=tuple(acknowledges))
+
+
+def active_claims(claims) -> tuple:
+    """(active, superseded, findings). A later claim that names `supersedes` retires the earlier one;
+    it never erases it. Two ACTIVE claims that disagree are a conflict for review."""
+    ids = {c.evidence_id for c in claims}
+    superseded = {c.supersedes for c in claims if c.supersedes in ids}
+    unknown = [c.evidence_id for c in claims if c.supersedes and c.supersedes not in ids]
+    active = [c for c in claims if c.evidence_id not in superseded]
+    return active, sorted(superseded), unknown
+
+
 def assess(question: str, evidence, source_sha256: str | None, checked_dimensions=(), local_scale: float = 1.0,
-           unit_mm: float | None = None, scope: str = "") -> Assessment:
+           unit_mm: float | None = None, scope: str = "", policy=None) -> Assessment:
     """The frozen deterministic rule. Pure function of its inputs."""
+    policy = policy or DEFAULT_POLICY
     evidence = [e for e in evidence if e.question == question]
     adm, excluded, cands, findings = [], [], [], []
     for e in evidence:
-        ok, why = admissibility(e, source_sha256)
+        ok, why = admissibility(e, source_sha256, policy, scope or None)
         if ok:
             adm.append(e)
             continue
         excluded.append((e.evidence_id, why))
         if why == "HUMAN_CONFIRMATION_SOURCE_MISMATCH":
             findings.append(SourceFinding(F.HUMAN_CONFIRMATION_SOURCE_MISMATCH, None, (), f"{scope}: {e.evidence_id}"))
-        elif why == "AGENT_CANNOT_ADMIT_EVIDENCE":
+        elif why in ("AGENT_CANNOT_ADMIT_EVIDENCE", "AGENT_GENERATED_HUMAN_RECORD"):
             findings.append(SourceFinding(F.AGENT_STATUS_ESCALATION_REJECTED, None, (), f"{scope}: {e.evidence_id}"))
+        elif why in ("HUMAN_CONFIRMATION_INCOMPLETE", "HUMAN_ROLE_NOT_AUTHORISED", "HUMAN_CONFIRMATION_SCOPE_MISMATCH"):
+            findings.append(SourceFinding(F.HUMAN_CONFIRMATION_REJECTED, None, (), f"{scope}: {e.evidence_id}: {why}"))
         if why in ("CANDIDATE", "ASSUMPTION_UNRESOLVED", "AGENT_CANNOT_ADMIT_EVIDENCE") and (
                 e.derived_value is not None or e.derived_set):
             cands.append(e)
@@ -394,10 +432,12 @@ def assess(question: str, evidence, source_sha256: str | None, checked_dimension
         extra.append(F.UNIT_DECLARATION_CONFLICT if support == "DECLARATION_ONLY" else
                      (F.UNIT_EVIDENCE_CONFLICT if question == NATIVE_UNIT else F.REGION_SCALE_CONFLICT))
     machine = status
-    # ---- human confirmation: never VERIFIED; may resolve a DECLARATION conflict, never overrides evidence
+    # ---- human confirmation
     confirmation = None
     human_basis = None
-    if human:
+    if human and policy.policy_id == RELEASE_V1_ID:
+        # URBAN_FRAME_RELEASE_V1, kept only to reproduce R8.3 for audit (known defect: a CANDIDATE set
+        # could count as the non-human agreement that made a human confirmation FINAL).
         h = human[-1]
         confirmation = {"evidence_id": h.evidence_id, "author": h.author, "timestamp": h.timestamp,
                         "value": h.derived_value, "source_sha256": h.source_sha256}
@@ -426,6 +466,49 @@ def assess(question: str, evidence, source_sha256: str | None, checked_dimension
             support = "AGREEING_PHYSICAL_EVIDENCE" if any(_agree(v, hv) for v in physical_vals) else (
                 "DECLARATION_ONLY" if any(_agree(d, hv) for d in dvals) else "NONE")
             reason = f"HUMAN_CONFIRMED_OVER_{machine}"
+    elif human:
+        # URBAN_FRAME_RELEASE_V2 (R8.4): authoritative, INFORMED project confirmation.
+        active, superseded, unknown = active_claims(human)
+        vals = [c.derived_value for c in active]
+        if unknown:
+            extra.append(F.HUMAN_CONFIRMATION_REVIEW_REQUIRED)
+        confirmation = {"active": [c.evidence_id for c in active], "superseded": superseded,
+                        "supersession_target_unknown": unknown,
+                        "claims": [{"evidence_id": c.evidence_id, "author": c.author, "author_role": c.author_role,
+                                    "timestamp": c.timestamp, "value": c.derived_value, "scope": list(c.claim_scope),
+                                    "supersedes": c.supersedes, "acknowledges": list(c.acknowledges)} for c in human]}
+        if any(not _agree(vals[0], v) for v in vals[1:]):
+            status, value, reason, human_basis = CONFLICT, None, "HUMAN_CONFIRMATIONS_CONFLICT", "CONFLICTING_CLAIMS"
+            extra.append(F.HUMAN_CONFIRMATION_CONFLICT)
+        else:
+            hv = vals[0]
+            acknowledged = {x for c in active for x in c.acknowledges}
+            physical_vals = [v for _, v in supporting]
+            contradicts_physical = (any(not _agree(hv, v) for v in physical_vals) or (G is not None and not _member(hv, G))
+                                    or reason in ("INDEPENDENT_CLASSES_DISAGREE", "ONE_LINEAGE_DISAGREES_WITH_ITSELF",
+                                                  "SET_INTERSECTION_EMPTY", "POINT_VALUE_OUTSIDE_SET_INTERSECTION"))
+            if contradicts_physical:
+                status, value, reason = CONFLICT, None, "HUMAN_CONFIRMATION_CONTRADICTS_ADMITTED_EVIDENCE"
+                human_basis = "CONTRADICTS_ADMITTED_EVIDENCE"
+                extra.append(conflict_code)
+            elif machine == VERIFIED:
+                human_basis = "VERIFIED_UNCHANGED"
+            else:
+                status, value = CONFIRMED_BY_HUMAN, hv
+                contradictions = [d.evidence_id for d in decls if not _agree(d.derived_value, hv)] + [
+                    e.evidence_id for e in cands
+                    if not _member(hv, (e.derived_value,) if e.derived_value is not None else e.derived_set)]
+                unack = [x for x in contradictions if x not in acknowledged]
+                agreeing_physical = any(_agree(v, hv) for v in physical_vals)
+                if unack:
+                    human_basis = "UNACKNOWLEDGED_CONTRADICTION:" + ",".join(unack)
+                    extra.append(F.HUMAN_CONFIRMATION_REVIEW_REQUIRED)
+                else:
+                    human_basis = ("CORROBORATED_BY_ADMITTED_EVIDENCE" if agreeing_physical
+                                   else "AUTHORITATIVE_PROJECT_CONFIRMATION")
+                support = "AGREEING_PHYSICAL_EVIDENCE" if agreeing_physical else (
+                    "DECLARATION_ONLY" if any(_agree(d, hv) for d in dvals) else "HUMAN_AUTHORITY_ONLY")
+                reason = f"HUMAN_CONFIRMED_OVER_{machine}"
     code = {UNCONFIRMED: F.UNIT_UNCONFIRMED, BLOCKED: F.UNIT_EVIDENCE_INSUFFICIENT,
             PROVISIONAL: F.UNIT_UNCONFIRMED}.get(status)
     if question == REGION_SCALE:
@@ -440,32 +523,51 @@ def assess(question: str, evidence, source_sha256: str | None, checked_dimension
 
 
 # ---------------------------------------------------------------- release policy (explicit)
+RELEASE_V1_ID, RELEASE_V2_ID = "URBAN_FRAME_RELEASE_V1", "URBAN_FRAME_RELEASE_V2"
+AUTHORISED_ROLES = ("PROJECT_OWNER", "PROJECT_ARCHITECT", "PROJECT_ENGINEER", "URBAN_QS_LEAD")
+
+
 @dataclass(frozen=True)
 class ReleasePolicy:
-    """URBAN_FRAME_RELEASE_V1 — which statuses may support FINAL scale-dependent measurement (§20).
+    """Which frame statuses may support FINAL scale-dependent measurement (explicit, versioned).
 
-    VERIFIED                FINAL.
-    CONFIRMED_BY_HUMAN      FINAL only when the confirmation (a) is for this exact source hash,
-                            (b) contradicts no admitted physical evidence and no constraint set,
-                            candidate or admitted, and (c) at least one NON-human item agrees
-                            with it (a declaration, a physical class or a constraint set).
-                            A human may therefore RESOLVE a declaration conflict (INSUNITS says
-                            inch, the dimension families exclude inch, the owner confirms
-                            metre), but never overrides evidence and never confirms in a vacuum.
-    anything else           no FINAL.
+    URBAN_FRAME_RELEASE_V2 (default, R8.4) — authoritative, INFORMED project confirmation:
+      * the claim is admissible only for the exact source hash, with author, AUTHORISED role,
+        timestamp and a scope covering the coordinate space / region being assessed;
+      * admitted physical evidence contradicting it -> CONFLICT (never acknowledged away);
+      * every declaration or CANDIDATE that contradicts it must be named in `acknowledges`,
+        otherwise REVIEW (CONFIRMED_BY_HUMAN without FINAL);
+      * candidate evidence NEVER counts as positive support;
+      * two ACTIVE claims that disagree -> CONFLICT; `supersedes` retires a claim, never erases it.
+      FINAL: CORROBORATED_BY_ADMITTED_EVIDENCE, or AUTHORITATIVE_PROJECT_CONFIRMATION unless
+      `require_admitted_corroboration` (option H2) is set.
+    URBAN_FRAME_RELEASE_V1 (R8.3) — reproducible for audit only; superseded because a CANDIDATE set
+      could serve as the non-human agreement that made a confirmation FINAL.
     """
+    policy_id: str = RELEASE_V2_ID
     human_confirmed_final: bool = True
-    policy_id: str = "URBAN_FRAME_RELEASE_V1"
+    require_admitted_corroboration: bool = False
+    require_role_and_scope: bool = True
+    authorised_roles: tuple = AUTHORISED_ROLES
 
 
-DEFAULT_POLICY = ReleasePolicy()
+RELEASE_V2 = ReleasePolicy()
+RELEASE_V2_H2 = ReleasePolicy(require_admitted_corroboration=True)
+RELEASE_V1 = ReleasePolicy(policy_id=RELEASE_V1_ID, require_role_and_scope=False, authorised_roles=())
+DEFAULT_POLICY = RELEASE_V2
+FINAL_HUMAN_BASES_V2 = ("CORROBORATED_BY_ADMITTED_EVIDENCE", "AUTHORITATIVE_PROJECT_CONFIRMATION")
 
 
-def allowed_uses(status: str, human_basis: str | None = None, policy: ReleasePolicy = DEFAULT_POLICY) -> tuple:
+def allowed_uses(status: str, human_basis: str | None = None, policy: ReleasePolicy = None) -> tuple:
+    policy = policy or DEFAULT_POLICY
     if status == VERIFIED:
         return USES
     if status == CONFIRMED_BY_HUMAN:
-        final = policy.human_confirmed_final and human_basis == "CONSISTENT_WITH_ALL_EVIDENCE"
+        if policy.policy_id == RELEASE_V1_ID:
+            final = policy.human_confirmed_final and human_basis == "CONSISTENT_WITH_ALL_EVIDENCE"
+        else:
+            final = policy.human_confirmed_final and human_basis in FINAL_HUMAN_BASES_V2 and (
+                not policy.require_admitted_corroboration or human_basis == "CORROBORATED_BY_ADMITTED_EVIDENCE")
         return ((FINAL_MEASUREMENT,) if final else ()) + (PREVIEW_MEASUREMENT, COUNT_ONLY, ANNOTATION_MAPPING)
     if status in (PROVISIONAL, UNCONFIRMED):
         return (PREVIEW_MEASUREMENT, COUNT_ONLY, ANNOTATION_MAPPING)
@@ -552,6 +654,8 @@ class UnitContext:
     confirmation: dict | None
     allowed_use: tuple
     findings: tuple = ()
+    human_basis: str | None = None
+    policy_id: str | None = None
 
     def as_dict(self):
         d = {k: v for k, v in self.__dict__.items() if k != "findings"}
@@ -641,7 +745,7 @@ def unit_context(source_sha256, coordinate_space_id, coordinate_space_kind, evid
                                           scope=coordinate_space_id))
             continue
         own.append(e)
-    a = assess(NATIVE_UNIT, own, source_sha256, checked_dimensions, scope=coordinate_space_id)
+    a = assess(NATIVE_UNIT, own, source_sha256, checked_dimensions, scope=coordinate_space_id, policy=policy)
     code = int(insunits) if isinstance(insunits, (int, float)) and int(insunits) in INSUNITS else None
     return UnitContext(unit_context_id or f"UC:{coordinate_space_id}", source_sha256, coordinate_space_id,
                        coordinate_space_kind, code if code is not None else (insunits if insunits is not None else None),
@@ -650,7 +754,7 @@ def unit_context(source_sha256, coordinate_space_id, coordinate_space_kind, evid
                        a.machine_support, a.admitted, a.excluded, a.contesting_candidates, a.confirmation,
                        _value_uses(allowed_uses(a.status, a.human_basis, policy),
                                    a.value if a.status not in (CONFLICT, BLOCKED) else None),
-                       tuple(findings) + a.findings)
+                       tuple(findings) + a.findings, a.human_basis, (policy or DEFAULT_POLICY).policy_id)
 
 
 def _decompose(m):
@@ -683,7 +787,7 @@ def region_transform(unit: UnitContext, region_id: str, region_kind: str, eviden
     if region_kind == MODEL_SPACE_PLAN:
         ev.append(UnitEvidence(f"{region_id}:MODEL_SPACE_FULL_SIZE", REGION_SCALE, MEDIUM_CONVENTION, region_id,
                                (f"CONVENTION:MODEL_SPACE_FULL_SIZE:{region_id}",), 1.0, producer=ENGINE))
-    a = assess(REGION_SCALE, ev, unit.source_sha256, scope=region_id, unit_mm=unit.native_to_mm)
+    a = assess(REGION_SCALE, ev, unit.source_sha256, scope=region_id, unit_mm=unit.native_to_mm, policy=policy)
     status, reason, machine = a.status, a.reason, a.machine_status
     if region_kind == MODEL_SPACE_DETAIL and status == BLOCKED and not a.admitted:
         reason = "U-2: DETAIL_SCALE_WITHOUT_REGION_EVIDENCE"

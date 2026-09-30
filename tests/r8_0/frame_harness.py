@@ -21,7 +21,8 @@ no rule and never supplies a value the fixture does not carry. Every translation
     regions[*].native_unit_to_mm      -> NATIVE_UNIT evidence scoped to the region (U-1 test)
     scale_text "... 1:A (x.. of plan 1:B)" -> EXPLICIT_SCALE_NOTE, value A / B
     dimlfac + dimensions display/geometry  -> DIMENSION_STYLE, value display / geometry
-    force {region: value}             -> an external HUMAN claim of that value
+    force {region: value}             -> an AUTHORISED human claim of that value (role URBAN_QS_LEAD, scoped to
+                                         the region): a forced value is at most such a claim (R8.4, V2)
     overrides [{status, by}]          -> FrameRegistry.set_status (always refused)
     accept_enlargement                -> an AGENT candidate with no value
   FRAME_EVIDENCE
@@ -145,9 +146,9 @@ def frames(source, measure_in=None, overrides=None, force=None, accept_enlargeme
                                       (f"AUTHORED:{SHA}:DIMSTYLE:{rid}", FR.family_lineage(FR.DIMENSION_STYLE, SHA)),
                                       d["display"] / d["geometry_native"], observed_value=r["dimlfac"], source_sha256=SHA))
         if force and rid in force:
-            ev.append(FR.UnitEvidence(f"{rid}:FORCED", FR.REGION_SCALE, FR.HUMAN_CONFIRMATION, rid, ("HUMAN:forced",),
-                                      force[rid]["real_per_presented"], producer=FR.HUMAN, author="FORCED_OVERRIDE",
-                                      timestamp="R8.0-MT-24", source_sha256=SHA))
+            ev.append(FR.human_confirmation(f"{rid}:FORCED", SHA, rid, force[rid]["real_per_presented"],
+                                            "FORCED_OVERRIDE", "URBAN_QS_LEAD", "R8.0-MT-24", scope=(rid,),
+                                            question=FR.REGION_SCALE))
         if accept_enlargement:
             ev.append(FR.UnitEvidence(f"{rid}:ACCEPTED", FR.REGION_SCALE, FR.EXPLICIT_SCALE_NOTE, rid, ("AGENT:accept",),
                                       None, producer=FR.AGENT, review_status=FR.CANDIDATE, source_sha256=SHA))
@@ -222,8 +223,46 @@ def frame_evidence(evidence=None, real_source=None):
 # ---------------------------------------------------------------- SOURCE_PROFILE
 def source_profile(profile, request=None, decode=None, **kw):
     if decode is not None:
-        raise TargetNotImplemented(
-            "R8.0 F19 names check V-CAD-5, but no R8 document defines the V-CAD-n numbering; the R8.3 CAD "
-            "profile states requirements A-I (engine/source/cad_profile.py). A V-CAD -> A-I mapping is a "
-            "reviewed decision, not something this adapter may invent")
+        return source_profile_decode(profile, decode)
     return P.source_profile_release(profile, request, **kw)
+
+
+def source_profile_decode(profile, decode, region_id="MODEL_SPACE"):
+    """R8.0 F19 decode form, bound in R8.4 (R8_CONTRACT_SUPERSESSION.json, F19 entry).
+
+    V-CAD-5 is defined in the R8 revised spec, later edition §6a ("no UNHANDLED class on a
+    profile-relevant layer of the region"). Translation only: builder decode -> production D1
+    -> production K1 -> production census -> production cad_profile.region_class_findings /
+    evaluate / v_cad_view. The profile-relevant layers are the layers of the region's measured
+    (realised) observations — the one generic rule the spec gives; no layer name is chosen here.
+    The frame is a declared-millimetre model space (the fixture carries no unit question)."""
+    from engine.source import decoder_pins as PINS
+    from engine.source.cad import census
+    from .k1_harness import _imports, apply_test_schema_extensions
+    if profile != "CAD_PROFILE":
+        raise ValueError(profile)
+    _, kernel, lm = _imports()
+    doc = apply_test_schema_extensions(decode, lm.to_document(decode))
+    real = kernel.realise(doc)
+    rows = census.capability_register(doc, real)
+    measured = {}
+    for seg in real.segments:
+        measured.setdefault(seg.lineage.obs_id, seg.lineage)
+    layers = {lin.layer for lin in measured.values()}
+    region_findings = P.region_class_findings(rows, region_id, layers)
+    decl, _ = FR.declaration_evidence(4, "MODEL", SHA)
+    u = FR.unit_context(SHA, "MODEL", FR.MODEL_SPACE, decl, insunits=4)
+    rt = FR.region_transform(u, region_id, FR.MODEL_SPACE_PLAN)
+    mf = FR.measurement_frame(u, rt)
+    ctx = P.SourceValidationContext(True, PINS.REGISTERED, None)
+    method = P.MeasurementMethod("LINEAR_LENGTH", scale_dependent=True)
+    results = [P.evaluate(lin.kind, oid, (), method, ctx, mf, u, rt, region_findings=region_findings)
+               for oid, lin in sorted(measured.items())]
+    views = [P.v_cad_view(r, region_findings) for r in results]
+    releases = [P.region_release(r) for r in results]
+    worst = min(releases, key=("BLOCKED", "PREVIEW", "FINAL").index) if releases else "BLOCKED"
+    out = {cid: ("FAIL" if any(v[cid] == "FAIL" for v in views) else views[0][cid] if views else "NOT_EVALUATED")
+           for cid in P.V_CAD_CHECKS}
+    out.update({"region_release": worst, "relevant_layers": sorted(layers),
+                "region_findings": [f.as_dict() for f in region_findings]})
+    return out
