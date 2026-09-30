@@ -28,13 +28,19 @@ class TargetNotImplemented(ImportError):
 
 TARGETS = {
     # source fidelity (engine/source) -------------------------------------
-    "K1_REALISE": "engine.source.cad.kernel:realise",
+    # R8.1: K1 acceptance goes builder decode -> PRODUCTION D1 mapper -> PRODUCTION K1
+    # through a test-side adapter that adds only the test-schema MINSERT/xref fields
+    # production refuses to guess (k1_harness.py). Reviewed change.
+    "K1_REALISE": "tests.r8_0.k1_harness:realise_decode",
+    "K1_REALISE_DOCUMENT": "engine.source.cad.kernel:realise",
+    "D1_TO_DOCUMENT": "engine.source.cad.libredwg_map:to_document",
     "K2_REALISE": "engine.source.cad.kernel_ezdxf:realise",
     "OCS_PLAN_FRAME": "engine.source.cad.kernel_ocs:plan_frame",
     "CAPABILITY_REGISTER": "engine.source.cad.census:capability_register",
     "CAD_TEXT_PLAIN": "engine.source.cad.text:plain",
     "DIMENSION_MEASURE": "engine.source.cad.dimensions:measured",
-    "SOURCE_REPRESENTATION_DIGEST": "engine.source.digests:source_representation_digest",
+    # R8.1: URBAN-SRD-1 is a per-route representation digest; the D1 route builds the records
+    "SOURCE_REPRESENTATION_DIGEST": "engine.source.cad.libredwg_map:source_representation_digest",
     "REALISED_GEOMETRY_DIGEST": "engine.source.digests:realised_geometry_digest",
     "RECONCILE": "engine.source.reconcile:reconcile",
     "UNIT_CONTEXT": "engine.source.units:resolve_unit_context",

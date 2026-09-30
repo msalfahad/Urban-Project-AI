@@ -90,7 +90,7 @@ def dependency_violations(files, register):
             top = _top(name)
             if top in forbidden:
                 bad.append((str(f.relative_to(ROOT)), name, "FORBIDDEN"))
-            elif name.startswith("engine.source") or top in std or top in allowed or top == "__future__":
+            elif name == "engine.source" or name.startswith("engine.source.") or top in std or top in allowed or top == "__future__":
                 continue
             elif top == "engine":
                 bad.append((str(f.relative_to(ROOT)), name, "ENGINE_OUTSIDE_SOURCE"))
@@ -144,7 +144,7 @@ def _violations_for(text):
         top = _top(name)
         if top in reg["forbidden"]:
             bad.append((name, "FORBIDDEN"))
-        elif name.startswith("engine.source") or top in std or top in reg["third_party_allowed"] or top == "__future__":
+        elif name == "engine.source" or name.startswith("engine.source.") or top in std or top in reg["third_party_allowed"] or top == "__future__":
             continue
         elif top == "engine":
             bad.append((name, "ENGINE_OUTSIDE_SOURCE"))

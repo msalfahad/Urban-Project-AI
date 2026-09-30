@@ -64,8 +64,7 @@
       "current_engine_status": "KNOWN_DEFECT",
       "test_status_counts": {
         "KNOWN_DEFECT": 5,
-        "TARGET_NOT_IMPLEMENTED": 5,
-        "PASS": 15
+        "PASS": 20
       },
       "tests": [
         "test_r8_0_block_transforms.py::test_base_point_current_engine[F01_BASE_POINT_MIRRORED]",
@@ -111,8 +110,7 @@
       "current_engine_status": "KNOWN_DEFECT",
       "test_status_counts": {
         "KNOWN_DEFECT": 10,
-        "PASS": 56,
-        "TARGET_NOT_IMPLEMENTED": 7
+        "PASS": 63
       },
       "tests": [
         "test_r8_0_curves.py::test_arc_current_engine[F02_MIRROR_X]",
@@ -206,8 +204,7 @@
       "current_engine_status": "KNOWN_DEFECT",
       "test_status_counts": {
         "KNOWN_DEFECT": 5,
-        "PASS": 23,
-        "TARGET_NOT_IMPLEMENTED": 4
+        "PASS": 27
       },
       "tests": [
         "test_r8_0_curves.py::test_arc_current_engine[F03_OCS_NEG_Z_ENTITIES]",
@@ -260,7 +257,7 @@
       "current_engine_status": "KNOWN_DEFECT",
       "test_status_counts": {
         "KNOWN_DEFECT": 1,
-        "TARGET_NOT_IMPLEMENTED": 1
+        "PASS": 1
       },
       "tests": [
         "test_r8_0_block_transforms.py::test_non_uniform_scale_arc_current_engine",
@@ -279,9 +276,8 @@
       "truth_basis": "HAND_DERIVED + EZDXF_CORROBORATED",
       "current_engine_status": "KNOWN_DEFECT",
       "test_status_counts": {
-        "PASS": 24,
-        "KNOWN_DEFECT": 4,
-        "TARGET_NOT_IMPLEMENTED": 3
+        "PASS": 27,
+        "KNOWN_DEFECT": 4
       },
       "tests": [
         "test_r8_0_curves.py::test_arc_current_engine[F05_DOUBLE_REFLECTION_CANCELS]",
@@ -333,8 +329,7 @@
       "current_engine_status": "KNOWN_DEFECT",
       "test_status_counts": {
         "KNOWN_DEFECT": 5,
-        "TARGET_NOT_IMPLEMENTED": 5,
-        "PASS": 24,
+        "PASS": 29,
         "LIBRARY_KNOWN_FAILURE": 1
       },
       "tests": [
@@ -392,8 +387,8 @@
       "truth_basis": "HAND_DERIVED + EZDXF_CORROBORATED",
       "current_engine_status": "CURRENT_PASS",
       "test_status_counts": {
-        "TARGET_NOT_IMPLEMENTED": 2,
-        "PASS": 2
+        "TARGET_NOT_IMPLEMENTED": 1,
+        "PASS": 3
       },
       "tests": [
         "test_r8_0_source_capability.py::test_ellipse_flattening_contract",
@@ -524,8 +519,7 @@
       "truth_basis": "HAND_DERIVED",
       "current_engine_status": "CURRENT_PASS",
       "test_status_counts": {
-        "TARGET_NOT_IMPLEMENTED": 1,
-        "PASS": 1
+        "PASS": 2
       },
       "tests": [
         "test_r8_0_source_capability.py::test_attrib_bound_to_its_insert_contract",
@@ -931,9 +925,8 @@
       "truth_basis": "HAND_DERIVED",
       "current_engine_status": "KNOWN_DEFECT",
       "test_status_counts": {
-        "PASS": 4,
-        "KNOWN_DEFECT": 5,
-        "TARGET_NOT_IMPLEMENTED": 10
+        "PASS": 14,
+        "KNOWN_DEFECT": 5
       },
       "tests": [
         "test_r8_0_mutations.py::test_S02_unreadable_frame_as_wcs_is_detected[F34_UNREADABLE_NULL]",
@@ -1011,6 +1004,12 @@
       "to_reverify_against_real_decode": [
         "ACAD_PROXY_ENTITY type code 498 in a real decode"
       ]
+    }
+  ],
+  "history": [
+    {
+      "round": "R8.1",
+      "note": "test_status_counts recomputed after K1; fixture truth unchanged"
     }
   ]
 }

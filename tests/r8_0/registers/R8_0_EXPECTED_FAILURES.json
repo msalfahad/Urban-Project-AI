@@ -324,262 +324,10 @@
       "reason": "engine/plaster_trade_engine.py and engine/wall_treatment_engine.py import research.a21_trace_sufficiency_01.parameters (pre-existing, frozen by B-7)"
     },
     {
-      "test": "test_r8_0_block_transforms.py::test_base_point_k1_acceptance[F01_BASE_POINT_PLAIN]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "K1_REALISE",
-      "fixture": "F01",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_block_transforms.py::test_base_point_k1_acceptance[F01_BASE_POINT_ROTATED]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "K1_REALISE",
-      "fixture": "F01",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_block_transforms.py::test_base_point_k1_acceptance[F01_BASE_POINT_SCALED]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "K1_REALISE",
-      "fixture": "F01",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_block_transforms.py::test_base_point_k1_acceptance[F01_BASE_POINT_MIRRORED]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "K1_REALISE",
-      "fixture": "F01",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_block_transforms.py::test_base_point_k1_acceptance[F01_BASE_POINT_NESTED]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "K1_REALISE",
-      "fixture": "F01",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_block_transforms.py::test_minsert_k1_acceptance[F06_MINSERT_GRID]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "K1_REALISE",
-      "fixture": "F06",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_block_transforms.py::test_minsert_k1_acceptance[F06_MINSERT_ROTATED]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "K1_REALISE",
-      "fixture": "F06",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_block_transforms.py::test_minsert_k1_acceptance[F06_MINSERT_SCALED]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "K1_REALISE",
-      "fixture": "F06",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_block_transforms.py::test_minsert_k1_acceptance[F06_MINSERT_NESTED]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "K1_REALISE",
-      "fixture": "F06",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_block_transforms.py::test_minsert_k1_acceptance[F06_MINSERT_MIRRORED_PARENT]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "K1_REALISE",
-      "fixture": "F06",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_block_transforms.py::test_non_uniform_scale_k1_acceptance",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "K1_REALISE",
-      "fixture": "F04",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
       "test": "test_r8_0_block_transforms.py::test_anonymous_block_correlated_by_handle_across_routes",
       "class": "TARGET_NOT_IMPLEMENTED",
       "target": "RECONCILE",
       "fixture": "F13",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_curves.py::test_k1_acceptance[F02_MIRROR_X]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "K1_REALISE",
-      "fixture": "F02",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_curves.py::test_k1_acceptance[F02_MIRROR_Y]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "K1_REALISE",
-      "fixture": "F02",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_curves.py::test_k1_acceptance[F02_NEG_SCALE_X]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "K1_REALISE",
-      "fixture": "F02",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_curves.py::test_k1_acceptance[F02_NEG_SCALE_Y]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "K1_REALISE",
-      "fixture": "F02",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_curves.py::test_k1_acceptance[F02_ROTATION_REFLECTION]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "K1_REALISE",
-      "fixture": "F02",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_curves.py::test_k1_acceptance[F05_NESTED_ROTATION_REFLECTION]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "K1_REALISE",
-      "fixture": "F05",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_curves.py::test_k1_acceptance[F05_DOUBLE_REFLECTION_CANCELS]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "K1_REALISE",
-      "fixture": "F05",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_curves.py::test_k1_acceptance[F05_NESTED_BLOCK_MIRROR]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "K1_REALISE",
-      "fixture": "F05",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_curves.py::test_k1_acceptance[F03_OCS_NEG_Z_INSERT]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "K1_REALISE",
-      "fixture": "F03",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_curves.py::test_k1_acceptance[F03_OCS_NEG_Z_ENTITIES]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "K1_REALISE",
-      "fixture": "F03",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_curves.py::test_k1_acceptance[F03_OCS_POS_Z_CONTROL]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "K1_REALISE",
-      "fixture": "F03",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_curves.py::test_k1_acceptance[F02_ROTATION_ONLY_CONTROL]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "K1_REALISE",
-      "fixture": "F02",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_curves.py::test_k1_acceptance[F02_SCALED_HALF_TURN_CONTROL]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "K1_REALISE",
-      "fixture": "F02",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_digests.py::test_golden_vectors_production_conformance",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "SOURCE_REPRESENTATION_DIGEST",
-      "fixture": "DG",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_ocs.py::test_frame_problem_k1_acceptance[F34_TILTED_EXTRUSION]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "K1_REALISE",
-      "fixture": "F34",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_ocs.py::test_frame_problem_k1_acceptance[F34_UNREADABLE_ZERO]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "K1_REALISE",
-      "fixture": "F34",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_ocs.py::test_frame_problem_k1_acceptance[F34_UNREADABLE_NULL]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "K1_REALISE",
-      "fixture": "F34",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_ocs.py::test_frame_problem_k1_acceptance[F34_UNREADABLE_SHORT]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "K1_REALISE",
-      "fixture": "F34",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_ocs.py::test_frame_problem_k1_acceptance[F34_UNREADABLE_TEXT]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "K1_REALISE",
-      "fixture": "F34",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_ocs.py::test_ocs_plan_frame_contract[F34_TILTED_EXTRUSION]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "OCS_PLAN_FRAME",
-      "fixture": "F34",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_ocs.py::test_ocs_plan_frame_contract[F34_UNREADABLE_ZERO]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "OCS_PLAN_FRAME",
-      "fixture": "F34",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_ocs.py::test_ocs_plan_frame_contract[F34_UNREADABLE_NULL]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "OCS_PLAN_FRAME",
-      "fixture": "F34",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_ocs.py::test_ocs_plan_frame_contract[F34_UNREADABLE_SHORT]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "OCS_PLAN_FRAME",
-      "fixture": "F34",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_ocs.py::test_ocs_plan_frame_contract[F34_UNREADABLE_TEXT]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "OCS_PLAN_FRAME",
-      "fixture": "F34",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_ocs.py::test_line_is_wcs_native_k1_acceptance",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "K1_REALISE",
-      "fixture": "F03",
       "reason": "R8 module not written in R8.0 (tests first)"
     },
     {
@@ -655,16 +403,9 @@
     {
       "test": "test_r8_0_source_capability.py::test_ellipse_flattening_contract",
       "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "K1_REALISE",
+      "target": "K1_REALISE:flattened (R8.3)",
       "fixture": "F07",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_source_capability.py::test_ellipse_negative_normal_sweep_contract",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "K1_REALISE",
-      "fixture": "F07",
-      "reason": "R8 module not written in R8.0 (tests first)"
+      "reason": "R8.1: K1 realises the exact elliptical arc; FLATTENING with a declared chord tolerance in mm needs an established MEASUREMENT_FRAME (R8.3). The K1 contract section \"flattened\" raises TargetNotImplemented (tests/r8_0/k1_harness.py)."
     },
     {
       "test": "test_r8_0_source_capability.py::test_dynamic_block_visibility_contract",
@@ -685,13 +426,6 @@
       "class": "TARGET_NOT_IMPLEMENTED",
       "target": "CAD_TEXT_PLAIN",
       "fixture": "F11",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_source_capability.py::test_attrib_bound_to_its_insert_contract",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "K1_REALISE",
-      "fixture": "F12",
       "reason": "R8 module not written in R8.0 (tests first)"
     },
     {
@@ -1324,6 +1058,58 @@
         "line": []
       },
       "derivation": "centre is affine-correct; start coincides because the local arc starts at 0 deg; the sweep is rotated 180 deg-equivalent instead of reflected, so end, mid and direction are wrong. Bulge: vertices are affine-correct; the arc is rebuilt on the wrong side of its chord"
+    }
+  ],
+  "history": [
+    {
+      "round": "R8.1",
+      "date": "2026-09-30",
+      "moved_TARGET_NOT_IMPLEMENTED_to_PASS": [
+        "test_r8_0_block_transforms.py::test_base_point_k1_acceptance[F01_BASE_POINT_MIRRORED]",
+        "test_r8_0_block_transforms.py::test_base_point_k1_acceptance[F01_BASE_POINT_NESTED]",
+        "test_r8_0_block_transforms.py::test_base_point_k1_acceptance[F01_BASE_POINT_PLAIN]",
+        "test_r8_0_block_transforms.py::test_base_point_k1_acceptance[F01_BASE_POINT_ROTATED]",
+        "test_r8_0_block_transforms.py::test_base_point_k1_acceptance[F01_BASE_POINT_SCALED]",
+        "test_r8_0_block_transforms.py::test_minsert_k1_acceptance[F06_MINSERT_GRID]",
+        "test_r8_0_block_transforms.py::test_minsert_k1_acceptance[F06_MINSERT_MIRRORED_PARENT]",
+        "test_r8_0_block_transforms.py::test_minsert_k1_acceptance[F06_MINSERT_NESTED]",
+        "test_r8_0_block_transforms.py::test_minsert_k1_acceptance[F06_MINSERT_ROTATED]",
+        "test_r8_0_block_transforms.py::test_minsert_k1_acceptance[F06_MINSERT_SCALED]",
+        "test_r8_0_block_transforms.py::test_non_uniform_scale_k1_acceptance",
+        "test_r8_0_curves.py::test_k1_acceptance[F02_MIRROR_X]",
+        "test_r8_0_curves.py::test_k1_acceptance[F02_MIRROR_Y]",
+        "test_r8_0_curves.py::test_k1_acceptance[F02_NEG_SCALE_X]",
+        "test_r8_0_curves.py::test_k1_acceptance[F02_NEG_SCALE_Y]",
+        "test_r8_0_curves.py::test_k1_acceptance[F02_ROTATION_ONLY_CONTROL]",
+        "test_r8_0_curves.py::test_k1_acceptance[F02_ROTATION_REFLECTION]",
+        "test_r8_0_curves.py::test_k1_acceptance[F02_SCALED_HALF_TURN_CONTROL]",
+        "test_r8_0_curves.py::test_k1_acceptance[F03_OCS_NEG_Z_ENTITIES]",
+        "test_r8_0_curves.py::test_k1_acceptance[F03_OCS_NEG_Z_INSERT]",
+        "test_r8_0_curves.py::test_k1_acceptance[F03_OCS_POS_Z_CONTROL]",
+        "test_r8_0_curves.py::test_k1_acceptance[F05_DOUBLE_REFLECTION_CANCELS]",
+        "test_r8_0_curves.py::test_k1_acceptance[F05_NESTED_BLOCK_MIRROR]",
+        "test_r8_0_curves.py::test_k1_acceptance[F05_NESTED_ROTATION_REFLECTION]",
+        "test_r8_0_digests.py::test_golden_vectors_production_conformance",
+        "test_r8_0_ocs.py::test_frame_problem_k1_acceptance[F34_TILTED_EXTRUSION]",
+        "test_r8_0_ocs.py::test_frame_problem_k1_acceptance[F34_UNREADABLE_NULL]",
+        "test_r8_0_ocs.py::test_frame_problem_k1_acceptance[F34_UNREADABLE_SHORT]",
+        "test_r8_0_ocs.py::test_frame_problem_k1_acceptance[F34_UNREADABLE_TEXT]",
+        "test_r8_0_ocs.py::test_frame_problem_k1_acceptance[F34_UNREADABLE_ZERO]",
+        "test_r8_0_ocs.py::test_line_is_wcs_native_k1_acceptance",
+        "test_r8_0_ocs.py::test_ocs_plan_frame_contract[F34_TILTED_EXTRUSION]",
+        "test_r8_0_ocs.py::test_ocs_plan_frame_contract[F34_UNREADABLE_NULL]",
+        "test_r8_0_ocs.py::test_ocs_plan_frame_contract[F34_UNREADABLE_SHORT]",
+        "test_r8_0_ocs.py::test_ocs_plan_frame_contract[F34_UNREADABLE_TEXT]",
+        "test_r8_0_ocs.py::test_ocs_plan_frame_contract[F34_UNREADABLE_ZERO]",
+        "test_r8_0_source_capability.py::test_attrib_bound_to_its_insert_contract",
+        "test_r8_0_source_capability.py::test_ellipse_negative_normal_sweep_contract"
+      ],
+      "by_target": {
+        "K1_REALISE": 32,
+        "SOURCE_REPRESENTATION_DIGEST": 1,
+        "OCS_PLAN_FRAME": 5
+      },
+      "note": "KNOWN_DEFECT entries against cad_adapter are unchanged: cad_adapter is untouched in R8.1"
     }
   ]
 }

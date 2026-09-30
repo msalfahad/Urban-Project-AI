@@ -5,7 +5,7 @@
   "donors": [
     {"id": "UC4N", "repo": "U-C4N/Autocad-MCP", "commit": "cdb10638963898b3ea9b10cdd96a2c9bc495f184", "licence": "MIT",
      "copyright": "Copyright (c) 2026 Umutcan Edizsalan", "status": "APPROVED_DONOR",
-     "purpose": "strongest CAD source/transform donor; COPY_ADAPT backends/ocs.py -> engine/source/cad/kernel_ocs (fail-closed) and engineering/understand/labels.py:plain -> engine/source/cad/text; clean reimplementation of snapshot, diff, topology, skip/MINSERT/XREF rules",
+     "purpose": "strongest CAD source/transform donor; backends/ocs.py = REFERENCE + CLEAN_REIMPLEMENT in engine/source/cad/kernel_ocs (R8.1, nothing copied); COPY_ADAPT engineering/understand/labels.py:plain -> engine/source/cad/text; clean reimplementation of snapshot, diff, topology, skip/MINSERT/XREF rules",
      "rejected_behaviour": ["engineering/understand/takeoff.py:unit_of (inferred unit overrides INSUNITS; defaults to mm)", "backends/ocs.py silent identity on unreadable extrusion", "engineering/arch/faces.py hand-rolled planar kernel", "engineering/understand/network.py as architectural wall topology (it is a P&ID pipe-network reader)"]},
     {"id": "OT", "repo": "Kentucky-ai/opentakeoff", "commit": "e6d2251cc18a4f144a983f6b7b6740f550ea6d08", "licence": "Apache-2.0",
      "copyright": "Copyright 2026 Kentucky AI and the OpenTakeoff contributors (NOTICE)", "status": "APPROVED_DONOR_LATER_ROUNDS",
@@ -30,7 +30,7 @@
     {"id": "OCERP", "repo": "datadrivenconstruction/OpenConstructionERP", "commit": "68ee22a15f70339e2c8aa750648f9da78bb91644", "licence": "AGPL-3.0", "status": "IDEA_ONLY_AGPL", "note": "architecture ideas only (decoder binary pinning); no code or copied text may enter Urban"}
   ],
   "libraries": [
-    {"name": "ezdxf", "version": "1.4.4", "licence": "MIT", "status": "PLANNED_PRODUCTION_DEPENDENCY (K2, ezdxf.math.OCS)",
-     "known_failures_pinned": ["virtual_entities() on MINSERT yields the first cell only", "xref INSERT yields no virtual entities", "MINSERT nested under a reflecting parent: rows realised on the wrong side (R8.0 finding)"]}
+    {"name": "ezdxf", "version": "1.4.4", "licence": "MIT", "status": "PLANNED_PRODUCTION_DEPENDENCY (K2 only; K1 does not import ezdxf, R8.1 OCS decision A)",
+     "known_failures_pinned": ["virtual_entities() on MINSERT yields the first cell only", "xref INSERT yields no virtual entities", "MINSERT nested under a reflecting parent: rows realised on the wrong side (R8.0 finding; R8.1 mechanism: Insert.transform leaves row_spacing/column_spacing untouched; see MINSERT_REFLECTION_ORACLE.json)"]}
   ]
 }
