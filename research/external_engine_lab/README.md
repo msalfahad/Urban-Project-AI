@@ -30,3 +30,14 @@ external MCP tests, benchmark adapters and experimental outputs.
   Each run is repeated once per defect, with that single defect corrected (K1 is the corrector). The diffs are written to `outputs/`. `cad_adapter.normalize` is patched in-process only; nothing published changes.
 - **`r8_2_k2_real_attempts.py`** tries K2 on the real sources through `dwg2dxf` plus ezdxf, and records the exact failures and hashes. No DXF is repaired.
 - **`r8_2_path_and_independence.py`** holds the ACTIVE_PATH_MAP and DECODER_INDEPENDENCE_MATRIX as data. `verify()` checks the map against the runners' imports; this check is pinned by `tests/r8_2/test_r8_2_paths_and_pins.py`.
+
+## R8.3 — pinned re-decode, unit context, measurement frame (SHADOW)
+
+- `r8_3_pinned_redecode.py` — re-decodes every original DWG present with the REGISTERED dwgread
+  (sha256 fe49cf28…) into `data/runs/pinned_redecode/` (historical JSON untouched); compares bytes, UTF-8
+  normalisation, SRD, census, handle representation, references; records the text-decoding delta row by row and
+  the `PINNED_LIBREDWG_DWGREAD_JSON_HANDLE_REPRESENTATION_DEFECT` (reproduction count, collisions, affected references).
+- `r8_3_real_status.py` — evidence (engine/source/cad/unit_evidence.py) → UNIT_CONTEXT / region / MEASUREMENT_FRAME /
+  CAD_PROFILE (engine/source/frame.py, cad_profile.py) for the three real sources; column Question A. No quantity is
+  read; nothing is published.
+- Neither file is imported by `engine/`.

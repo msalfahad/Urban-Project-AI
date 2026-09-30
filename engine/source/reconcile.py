@@ -8,7 +8,11 @@ CORRELATION (identity first)
     Each realised item is keyed by its SOURCE identity:
         (source handle, instance path of INSERT handles + MINSERT cell, family, span)
     Blocks are correlated by BLOCK-RECORD HANDLE, never by name (anonymous
-    *U names differ between routes). Within one source object with several
+    *U names differ between routes). R8.3: entity keys, instance paths, INSERT
+    handles and block-record handles all go through ONE identity contract
+    (handle_basis); every INSERT on either side yields exactly one lineage row
+    (PASS / BLOCK_LINEAGE_CONFLICT / UNMATCHED_INSERT_LINEAGE /
+    AMBIGUOUS_INSERT_LINEAGE / AMBIGUOUS_BLOCK_RECORD_LINEAGE) - none is skipped. Within one source object with several
     items (polyline spans) an item may be disambiguated by geometry only when
     exactly one candidate lies within tolerance; otherwise
     AMBIGUOUS_CORRELATION. No cross-object nearest-neighbour matching, ever.
@@ -159,31 +163,127 @@ def _grade(d, tol, field_class):
     return BLOCK, field_class, d
 
 
+# ---------------------------------------------------------------- ONE identity contract
+# Entity handles, INSERT handles, instance-path elements and block-record handles all
+# correlate through handle_basis(); nothing in this module compares raw handle strings.
+EXACT, LOW_BITS = "SOURCE_HANDLE", "TRUNCATED_HANDLE_LOW_BITS"
+
+
+def _split_tail(h):
+    """'123[0,1]' -> ('123', '[0,1]') (MINSERT cell suffix)."""
+    i = h.find("[")
+    return (h, "") if i < 0 else (h[:i], h[i:])
+
+
+def _low_bits_match(x, y) -> bool:
+    """x a D1 truncated id 'v+3B'; y a full handle > 0xFFFF whose low 16 bits are v."""
+    if not x or not y or not x.endswith("+3B") and "+3B[" not in x:
+        return False
+    xb, xt = _split_tail(x)
+    yb, yt = _split_tail(y)
+    if xt != yt or yb.endswith("+3B"):
+        return False
+    try:
+        return int(yb) > 0xFFFF and (int(yb) & 0xFFFF) == int(xb[:-3])
+    except ValueError:
+        return False
+
+
+def handle_basis(x, y):
+    """How two handle ids correlate: SOURCE_HANDLE, TRUNCATED_HANDLE_LOW_BITS or None."""
+    x, y = _strip(x), _strip(y)
+    if x is None or y is None:
+        return None
+    if x == y:
+        return EXACT
+    if _low_bits_match(x, y) or _low_bits_match(y, x):
+        return LOW_BITS
+    return None
+
+
+def _weakest(*bases):
+    return LOW_BITS if LOW_BITS in bases else EXACT
+
+
+def _key_basis(ka, kb):
+    if kb[2] != ka[2] or len(kb[1]) != len(ka[1]):
+        return None
+    parts = [handle_basis(ka[0], kb[0])] + [handle_basis(x, y) for x, y in zip(ka[1], kb[1])]
+    return None if None in parts else _weakest(*parts)
+
+
 def _correlate_key(ka, kbs):
     """Exact identity, else truncated-handle low-bits correlation (unique only)."""
     if ka in kbs:
-        return ka, "SOURCE_HANDLE"
-
-    def trunc_match(x, y):
-        if x == y:
-            return True
-        if x and x.endswith("+3B"):
-            v = x[:-3].split("[")[0]
-            tail = x[len(x.split("[")[0]):] if "[" in x else ""
-            yy, ytail = y.split("[")[0], (y[len(y.split("[")[0]):] if "[" in y else "")
-            try:
-                return tail == ytail and int(yy) > 0xFFFF and (int(yy) & 0xFFFF) == int(v)
-            except ValueError:
-                return False
-        return False
-
-    cands = [kb for kb in kbs if kb[2] == ka[2] and len(kb[1]) == len(ka[1]) and trunc_match(ka[0], kb[0])
-             and all(trunc_match(x, y) for x, y in zip(ka[1], kb[1]))]
+        return ka, EXACT
+    cands = [kb for kb in kbs if _key_basis(ka, kb)]
     if len(cands) == 1:
-        return cands[0], "TRUNCATED_HANDLE_LOW_BITS"
+        return cands[0], LOW_BITS
     if len(cands) > 1:
         return None, AMBIGUOUS
     return None, None
+
+
+# ---------------------------------------------------------------- block lineage
+LINEAGE_PASS = "PASS"
+BLOCK_LINEAGE_CONFLICT = "BLOCK_LINEAGE_CONFLICT"
+UNMATCHED_INSERT_LINEAGE = "UNMATCHED_INSERT_LINEAGE"
+AMBIGUOUS_INSERT_LINEAGE = "AMBIGUOUS_INSERT_LINEAGE"
+AMBIGUOUS_BLOCK_RECORD_LINEAGE = "AMBIGUOUS_BLOCK_RECORD_LINEAGE"
+
+
+def _record(v):
+    """insert_blocks values: a block-record handle id, or {"record": id, "name": str}. The name
+    is carried for audit only; identity is the record handle (§7: BLOCK NAME != BLOCK IDENTITY)."""
+    return (v.get("record"), v.get("name")) if isinstance(v, dict) else (v, None)
+
+
+def lineage_rows(insert_blocks_a: dict, insert_blocks_b: dict) -> tuple:
+    """Compare INSERT -> block-record lineage under the same identity contract as geometry.
+    Every INSERT on either side yields exactly one row; nothing is skipped."""
+    rows, bases = [], Counter()
+    a_recs = [_record(v)[0] for v in insert_blocks_a.values()]
+    b_recs = [_record(v)[0] for v in insert_blocks_b.values()]
+    b_ins = list(insert_blocks_b)
+    used = set()
+
+    def row(outcome, ins_a, ins_b, basis=None, rec_a=None, rec_b=None, name_a=None, name_b=None):
+        return {"key": [ins_a if ins_a is not None else ins_b], "status": PASS if outcome == LINEAGE_PASS else BLOCK,
+                "field_class": "BLOCK_LINEAGE", "outcome": outcome, "family": "INSERT", "basis": basis,
+                "insert_a": ins_a, "insert_b": ins_b, "record_a": rec_a, "record_b": rec_b,
+                "name_a": name_a, "name_b": name_b}
+
+    for ins, va in sorted(insert_blocks_a.items(), key=lambda kv: str(kv[0])):
+        ra, na = _record(va)
+        cands = [k for k in b_ins if handle_basis(ins, k)]
+        exact = [k for k in cands if handle_basis(ins, k) == EXACT]
+        cands = exact or cands
+        if not cands:
+            rows.append(row(UNMATCHED_INSERT_LINEAGE, ins, None, rec_a=ra, name_a=na))
+            continue
+        if len(cands) > 1:
+            rows.append(row(AMBIGUOUS_INSERT_LINEAGE, ins, None, rec_a=ra, name_a=na))
+            used.update(cands)
+            continue
+        kb = cands[0]
+        used.add(kb)
+        rb, nb = _record(insert_blocks_b[kb])
+        rbasis = handle_basis(ra, rb)
+        ibasis = handle_basis(ins, kb)
+        if rbasis is None:
+            rows.append(row(BLOCK_LINEAGE_CONFLICT, ins, kb, ibasis, ra, rb, na, nb))
+        elif rbasis == LOW_BITS and (len({r for r in b_recs if handle_basis(ra, r)}) > 1
+                                     or len({r for r in a_recs if handle_basis(r, rb)}) > 1):
+            rows.append(row(AMBIGUOUS_BLOCK_RECORD_LINEAGE, ins, kb, ibasis, ra, rb, na, nb))
+        else:
+            basis = _weakest(ibasis, rbasis)
+            bases[basis] += 1
+            rows.append(row(LINEAGE_PASS, ins, kb, basis, ra, rb, na, nb))
+    for kb in b_ins:
+        if kb not in used:
+            rb, nb = _record(insert_blocks_b[kb])
+            rows.append(row(UNMATCHED_INSERT_LINEAGE, None, kb, rec_b=rb, name_b=nb))
+    return rows, bases
 
 
 def _match_group(key, la, lb, tol, basis, lim):
@@ -258,13 +358,13 @@ def reconcile(a, b, tolerance: Tolerance = SYNTHETIC, known_limitations_b=(), in
     for k in (ha - hb) + (hb - ha):
         rows.append({"key": list(k), "status": BLOCK, "field_class": "VISIBILITY", "family": "HIDDEN"})
     # block lineage by record handle (names never compared)
-    block_rows = 0
-    if insert_blocks_a is not None and insert_blocks_b is not None:
-        for ins, blk in insert_blocks_a.items():
-            other = insert_blocks_b.get(ins)
-            if other is not None and _strip(other) != _strip(blk):
-                rows.append({"key": [ins], "status": BLOCK, "field_class": "BLOCK_LINEAGE", "family": "INSERT"})
-            block_rows += other is not None
+    block_rows, lineage_bases = 0, Counter()
+    if (insert_blocks_a is None) != (insert_blocks_b is None):
+        raise ValueError("block lineage needs both routes' insert_blocks, or neither")
+    if insert_blocks_a is not None:
+        lrows, lineage_bases = lineage_rows(insert_blocks_a, insert_blocks_b)
+        rows.extend(lrows)
+        block_rows = sum(1 for r in lrows if r["outcome"] == LINEAGE_PASS)
     status = Counter(r["status"] for r in rows)
     fields = Counter(r["field_class"] for r in rows if r["status"] not in (PASS,))
     geometry_conflict = any(r["status"] == BLOCK and r["field_class"] in ("POSITION", "CURVE_CENTRE", "ORIENTATION", "KIND")
@@ -286,6 +386,8 @@ def reconcile(a, b, tolerance: Tolerance = SYNTHETIC, known_limitations_b=(), in
         verdict, field_class, scope = PASS, None, None
     return {"verdict": verdict, "field_class": field_class, "scope": scope,
             "correlated_by": "BLOCK_RECORD_HANDLE" if block_rows else "SOURCE_HANDLE",
-            "correlation_bases": dict(bases), "tolerance": tolerance.as_dict(),
+            "correlation_bases": dict(bases), "lineage_bases": dict(lineage_bases),
+            "lineage_outcomes": dict(Counter(r["outcome"] for r in rows if r.get("field_class") == "BLOCK_LINEAGE")),
+            "tolerance": tolerance.as_dict(),
             "counts": dict(status), "non_pass_by_field": dict(fields), "items": rows,
             "routes": [name_a, name_b]}

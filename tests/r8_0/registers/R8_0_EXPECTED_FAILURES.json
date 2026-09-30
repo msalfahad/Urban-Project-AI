@@ -6,7 +6,8 @@
     "KNOWN_DEFECT": "current production engine is wrong (AssertionError)",
     "TARGET_NOT_IMPLEMENTED": "R8 module not written yet (TargetNotImplemented)",
     "LIBRARY_KNOWN_FAILURE": "an oracle library is wrong on this case (AssertionError)",
-    "BOUNDARY_DEBT": "pre-existing boundary violation, frozen and tracked (AssertionError)"
+    "BOUNDARY_DEBT": "pre-existing boundary violation, frozen and tracked (AssertionError)",
+    "CONTRACT_DISPUTED": "the implemented design disagrees with a frozen R8.0 expectation; expectation kept unchanged pending review (AssertionError)"
   },
   "expected_failures": [
     {
@@ -328,7 +329,7 @@
       "class": "TARGET_NOT_IMPLEMENTED",
       "target": "SOURCE_PROFILE",
       "fixture": "F19",
-      "reason": "R8 module not written in R8.0 (tests first)"
+      "reason": "SOURCE_PROFILE bound in R8.3, but check id V-CAD-5 is defined in no R8 document; the R8.3 CAD profile uses requirements A-I. Mapping needs review"
     },
     {
       "test": "test_r8_0_source_capability.py::test_ellipse_flattening_contract",
@@ -352,172 +353,20 @@
       "reason": "R8 module not written in R8.0 (tests first)"
     },
     {
-      "test": "test_r8_0_pending_contracts.py::test_contract[F15]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "FRAMES",
-      "fixture": "F15",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_pending_contracts.py::test_contract[MT-26]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "FRAMES",
-      "mutation": "MT-26",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_pending_contracts.py::test_contract[F16]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "FRAMES",
-      "fixture": "F16",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_pending_contracts.py::test_contract[MT-08]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "FRAMES",
-      "mutation": "MT-08",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
       "test": "test_r8_0_pending_contracts.py::test_contract[F17]",
-      "class": "TARGET_NOT_IMPLEMENTED",
+      "class": "CONTRACT_DISPUTED",
       "target": "UNIT_CONTEXT",
       "fixture": "F17",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_pending_contracts.py::test_contract[MT-07]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "UNIT_CONTEXT",
-      "mutation": "MT-07",
-      "reason": "R8 module not written in R8.0 (tests first)"
+      "reason": "R8.0 expects PROVISIONAL when only GEOMETRY_PLAUSIBILITY contradicts INSUNITS. R8.3 computes UNCONFIRMED: the frozen spec's own table makes plausibility support-only and 'declaration only' UNCONFIRMED; letting plausibility raise the status to PROVISIONAL would, under the spec's CONFIRMED_BY_HUMAN row, let plausibility + a human reach FINAL. Both statuses forbid FINAL and allow PREVIEW; conflict is still flagged (UNIT_PLAUSIBILITY_QUESTION). Expectation kept unchanged pending review.",
+      "disputed_in": "R8.3"
     },
     {
       "test": "test_r8_0_pending_contracts.py::test_contract[MT-32]",
-      "class": "TARGET_NOT_IMPLEMENTED",
+      "class": "CONTRACT_DISPUTED",
       "target": "UNIT_CONTEXT",
       "mutation": "MT-32",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_pending_contracts.py::test_contract[MT-51]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "UNIT_CONTEXT",
-      "mutation": "MT-51",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_pending_contracts.py::test_contract[F30]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "UNIT_CONTEXT",
-      "fixture": "F30",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_pending_contracts.py::test_contract[MT-23]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "FRAMES",
-      "mutation": "MT-23",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_pending_contracts.py::test_contract[F26]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "FRAMES",
-      "fixture": "F26",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_pending_contracts.py::test_contract[MT-24]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "FRAMES",
-      "mutation": "MT-24",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_pending_contracts.py::test_contract[F27]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "FRAMES",
-      "fixture": "F27",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_pending_contracts.py::test_contract[MT-25]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "FRAMES",
-      "mutation": "MT-25",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_pending_contracts.py::test_contract[F28]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "FRAME_EVIDENCE",
-      "fixture": "F28",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_pending_contracts.py::test_contract[MT-27]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "FRAME_EVIDENCE",
-      "mutation": "MT-27",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_pending_contracts.py::test_contract[MT-28]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "FRAME_EVIDENCE",
-      "mutation": "MT-28",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_pending_contracts.py::test_contract[F29]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "FRAME_EVIDENCE",
-      "fixture": "F29",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_pending_contracts.py::test_contract[MT-29]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "FRAME_EVIDENCE",
-      "mutation": "MT-29",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_pending_contracts.py::test_contract[F18]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "FRAMES",
-      "fixture": "F18",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_pending_contracts.py::test_contract[MT-30]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "FRAME_EVIDENCE",
-      "mutation": "MT-30",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_pending_contracts.py::test_contract[MT-44]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "SOURCE_PROFILE",
-      "mutation": "MT-44",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_pending_contracts.py::test_contract[MT-45]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "SOURCE_PROFILE",
-      "mutation": "MT-45",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_pending_contracts.py::test_contract[MT-46]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "SOURCE_PROFILE",
-      "mutation": "MT-46",
-      "reason": "R8 module not written in R8.0 (tests first)"
+      "reason": "R8.0 expects PROVISIONAL when only GEOMETRY_PLAUSIBILITY contradicts INSUNITS. R8.3 computes UNCONFIRMED: the frozen spec's own table makes plausibility support-only and 'declaration only' UNCONFIRMED; letting plausibility raise the status to PROVISIONAL would, under the spec's CONFIRMED_BY_HUMAN row, let plausibility + a human reach FINAL. Both statuses forbid FINAL and allow PREVIEW; conflict is still flagged (UNIT_PLAUSIBILITY_QUESTION). Expectation kept unchanged pending review.",
+      "disputed_in": "R8.3"
     },
     {
       "test": "test_r8_0_pending_contracts.py::test_contract[MT-09]",
@@ -601,7 +450,7 @@
       "class": "TARGET_NOT_IMPLEMENTED",
       "target": "FRAME_EVIDENCE",
       "mutation": "MT-33",
-      "reason": "R8 module not written in R8.0 (tests first)"
+      "reason": "real-source row: needs URBAN_R8_REAL_SOURCE (unset); R8.3 real evaluation (lab) gives Al Rashed UNIT_CONTEXT CONFLICT with 0 admitted physical evidence, not the R8.0 prediction PROVISIONAL / independent set 1 (DIMLFAC evidence is candidate-only per the R8.3 review)"
     },
     {
       "test": "test_r8_0_pending_contracts.py::test_contract[F21]",
@@ -1037,6 +886,45 @@
         "CAPABILITY_REGISTER": 10
       },
       "note": "CAPABILITY_REGISTER and RECONCILE bound via tests/r8_0/k1_harness.py to production census / reconcile; cad_adapter KNOWN_DEFECT entries unchanged"
+    },
+    {
+      "round": "R8.3",
+      "date": "2026-09-30",
+      "moved_TARGET_NOT_IMPLEMENTED_to_PASS": [
+        "test_r8_0_pending_contracts.py::test_contract[F15]",
+        "test_r8_0_pending_contracts.py::test_contract[F16]",
+        "test_r8_0_pending_contracts.py::test_contract[F18]",
+        "test_r8_0_pending_contracts.py::test_contract[F26]",
+        "test_r8_0_pending_contracts.py::test_contract[F27]",
+        "test_r8_0_pending_contracts.py::test_contract[F28]",
+        "test_r8_0_pending_contracts.py::test_contract[F29]",
+        "test_r8_0_pending_contracts.py::test_contract[F30]",
+        "test_r8_0_pending_contracts.py::test_contract[MT-07]",
+        "test_r8_0_pending_contracts.py::test_contract[MT-08]",
+        "test_r8_0_pending_contracts.py::test_contract[MT-23]",
+        "test_r8_0_pending_contracts.py::test_contract[MT-24]",
+        "test_r8_0_pending_contracts.py::test_contract[MT-25]",
+        "test_r8_0_pending_contracts.py::test_contract[MT-26]",
+        "test_r8_0_pending_contracts.py::test_contract[MT-27]",
+        "test_r8_0_pending_contracts.py::test_contract[MT-28]",
+        "test_r8_0_pending_contracts.py::test_contract[MT-29]",
+        "test_r8_0_pending_contracts.py::test_contract[MT-30]",
+        "test_r8_0_pending_contracts.py::test_contract[MT-44]",
+        "test_r8_0_pending_contracts.py::test_contract[MT-45]",
+        "test_r8_0_pending_contracts.py::test_contract[MT-46]",
+        "test_r8_0_pending_contracts.py::test_contract[MT-51]"
+      ],
+      "by_target": {
+        "FRAMES": 10,
+        "UNIT_CONTEXT": 3,
+        "FRAME_EVIDENCE": 6,
+        "SOURCE_PROFILE": 3
+      },
+      "moved_TARGET_NOT_IMPLEMENTED_to_CONTRACT_DISPUTED": [
+        "test_r8_0_pending_contracts.py::test_contract[F17]",
+        "test_r8_0_pending_contracts.py::test_contract[MT-32]"
+      ],
+      "note": "UNIT_CONTEXT / FRAMES / FRAME_EVIDENCE / SOURCE_PROFILE bound via tests/r8_0/frame_harness.py to production engine/source/frame.py and cad_profile.py; frozen expectations unchanged"
     }
   ]
 }

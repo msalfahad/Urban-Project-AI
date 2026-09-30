@@ -70,6 +70,24 @@ HANDLE_VALUE_TRUNCATED = "HANDLE_VALUE_TRUNCATED"
 # route / reconciliation
 ROUTE_DECODE_FAILED = "ROUTE_DECODE_FAILED"
 KNOWN_LIBRARY_LIMITATION = "KNOWN_LIBRARY_LIMITATION"
+# measurement frame (R8.3) — all in the MEASUREMENT_FRAME domain; count methods ignore it
+UNIT_UNCONFIRMED = "UNIT_UNCONFIRMED"                       # declaration only / one class
+UNIT_EVIDENCE_INSUFFICIENT = "UNIT_EVIDENCE_INSUFFICIENT"   # nothing admissible
+UNIT_EVIDENCE_CONFLICT = "UNIT_EVIDENCE_CONFLICT"           # physical evidence disagrees
+UNIT_DECLARATION_CONFLICT = "UNIT_DECLARATION_CONFLICT"     # declaration vs evidence (or vs declaration)
+UNIT_DECLARATION_CONTRADICTED = "UNIT_DECLARATION_CONTRADICTED"  # >=2 agreeing classes overrule it: PROVISIONAL
+UNIT_DECLARATION_UNITLESS = "UNIT_DECLARATION_UNITLESS"     # INSUNITS 0 / absent: nothing inferred
+UNIT_REDEFINITION_REJECTED = "UNIT_REDEFINITION_REJECTED"   # U-1: a region tried to redefine native meaning
+REGION_SCALE_UNCONFIRMED = "REGION_SCALE_UNCONFIRMED"
+REGION_SCALE_CONFLICT = "REGION_SCALE_CONFLICT"
+REGION_PROFILE_NOT_APPROVED = "REGION_PROFILE_NOT_APPROVED"  # PDF / raster region validation not approved
+REGION_MIXED_SCALE_NOTES = "REGION_MIXED_SCALE_NOTES"       # one unsegmented region carries different scale notes
+FRAME_CONFLICT = "FRAME_CONFLICT"
+FRAME_INELIGIBLE = "FRAME_INELIGIBLE"                       # frame does not permit FINAL measurement
+CHECKED_DIMENSION_RESIDUAL_FAILED = "CHECKED_DIMENSION_RESIDUAL_FAILED"
+HUMAN_CONFIRMATION_SOURCE_MISMATCH = "HUMAN_CONFIRMATION_SOURCE_MISMATCH"
+AGENT_STATUS_ESCALATION_REJECTED = "AGENT_STATUS_ESCALATION_REJECTED"
+UNIT_PLAUSIBILITY_QUESTION = "UNIT_PLAUSIBILITY_QUESTION"   # plausibility disagrees: a QUESTION, never a status
 
 ENTITY_CATEGORIES = (UNHANDLED, SKIPPED, PROXY, CUSTOM_CLASS, UNSUPPORTED,
                      SOURCE_MAPPING_UNVERIFIED, SOURCE_TYPE_CONFLICT)
@@ -122,6 +140,23 @@ IMPACTS = {
     HANDLE_VALUE_TRUNCATED: ((IDENTITY, REVIEW), (SOURCE_COMPLETENESS, REVIEW)),
     ROUTE_DECODE_FAILED: ((SOURCE_COMPLETENESS, BLOCKING), (GEOMETRY_COMPLETENESS, BLOCKING)),
     KNOWN_LIBRARY_LIMITATION: ((GEOMETRY, REVIEW),),
+    UNIT_UNCONFIRMED: ((MEASUREMENT_FRAME, BLOCKING),),
+    UNIT_EVIDENCE_INSUFFICIENT: ((MEASUREMENT_FRAME, BLOCKING),),
+    UNIT_EVIDENCE_CONFLICT: ((MEASUREMENT_FRAME, BLOCKING),),
+    UNIT_DECLARATION_CONFLICT: ((MEASUREMENT_FRAME, BLOCKING),),
+    UNIT_DECLARATION_CONTRADICTED: ((MEASUREMENT_FRAME, REVIEW),),
+    UNIT_DECLARATION_UNITLESS: ((MEASUREMENT_FRAME, REVIEW),),
+    UNIT_REDEFINITION_REJECTED: ((MEASUREMENT_FRAME, BLOCKING),),
+    REGION_SCALE_UNCONFIRMED: ((MEASUREMENT_FRAME, BLOCKING),),
+    REGION_SCALE_CONFLICT: ((MEASUREMENT_FRAME, BLOCKING),),
+    REGION_PROFILE_NOT_APPROVED: ((MEASUREMENT_FRAME, BLOCKING),),
+    REGION_MIXED_SCALE_NOTES: ((MEASUREMENT_FRAME, REVIEW),),
+    FRAME_CONFLICT: ((MEASUREMENT_FRAME, BLOCKING),),
+    FRAME_INELIGIBLE: ((MEASUREMENT_FRAME, BLOCKING),),
+    CHECKED_DIMENSION_RESIDUAL_FAILED: ((MEASUREMENT_FRAME, BLOCKING),),
+    HUMAN_CONFIRMATION_SOURCE_MISMATCH: ((MEASUREMENT_FRAME, REVIEW),),
+    AGENT_STATUS_ESCALATION_REJECTED: ((MEASUREMENT_FRAME, REVIEW),),
+    UNIT_PLAUSIBILITY_QUESTION: ((MEASUREMENT_FRAME, REVIEW),),
 }
 
 
@@ -139,6 +174,8 @@ class SourceFinding:
     instance_path: tuple = ()
     detail: str = ""
     impacts: tuple | None = None        # None -> the code's declared default
+    scope: str | None = None            # R8.3: what the uncertainty covers when not one observation
+                                        # (a coordinate space, a region); None = obs_id or document
 
     def __post_init__(self):
         imp = self.impacts if self.impacts is not None else impacts_for(self.code)
@@ -162,4 +199,5 @@ class SourceFinding:
     def as_dict(self) -> dict:
         return {"code": self.code, "obs_id": self.obs_id, "instance_path": list(self.instance_path),
                 "blocks_final": self.blocks_final, "detail": self.detail,
-                "impacts": [{"domain": d, "severity": s} for d, s in self.impacts]}
+                "impacts": [{"domain": d, "severity": s} for d, s in self.impacts],
+                **({"scope": self.scope} if self.scope else {})}

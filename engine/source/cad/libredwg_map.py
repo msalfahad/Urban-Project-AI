@@ -105,8 +105,13 @@ def _abs(h):
 
 
 # ------------------------------------------------------------ handle identity (R8.2)
-# LibreDWG 0.13.3's JSON writer prints a 3-byte handle with only its low 16 bits
-# ([0, 3, 10388] is some handle 0x??2894). Two different objects can then share a
+# LibreDWG JSON output prints a 3-byte handle with only its low 16 bits
+# ([0, 3, 10388] is some handle 0x??2894). R8.3: first observed in the historical
+# decodes (pin NOT_ESTABLISHED); a pinned re-decode with the REGISTERED dwgread 0.13.3
+# build reproduced it byte for byte, so it is attributed to that build
+# (decoder_pins.KNOWN_REPRESENTATION_DEFECTS); whether the parser, the internal representation or the JSON writer
+# drops the high byte is not localised
+# (PINNED_LIBREDWG_DWGREAD_JSON_HANDLE_REPRESENTATION_DEFECT). Two different objects can then share a
 # value; (byte size, value) stays unique in every real decode. Absolute references
 # (codes 2-5) carry the target's byte size, so they resolve exactly; relative
 # references (codes 6/8/10/12) carry an OFFSET size, and their computed absolute
@@ -475,7 +480,8 @@ def _created_by(decode):
 def insert_blocks(document) -> dict:
     """{INSERT handle id: block-record handle id} for block-lineage reconciliation (names never used)."""
     out = {}
-    obs = list(document.entities) + [o for b in document.blocks.values() for o in b.entities]
+    obs = (list(document.entities) + [o for b in document.blocks.values() for o in b.entities]
+           + [o for _, o in document.other_layouts])
     for o in obs:
         if o.kind == O.INSERT and o.geometry.block_key:
             out[o.source_handle] = o.geometry.block_key[1:]

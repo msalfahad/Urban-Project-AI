@@ -47,10 +47,12 @@ TARGETS = {
     # R8.2: fixture routes (decode + R8.0 mutations) -> production D1/K1 -> production reconcile
     "RECONCILE": "tests.r8_0.k1_harness:reconcile_routes",
     "RECONCILE_REALISED": "engine.source.reconcile:reconcile",
-    "UNIT_CONTEXT": "engine.source.units:resolve_unit_context",
-    "FRAMES": "engine.source.frames:resolve_frames",
-    "FRAME_EVIDENCE": "engine.source.frames:independent_evidence",
-    "SOURCE_PROFILE": "engine.source.source_profile:evaluate",
+    # R8.3: the R8.0 frame / unit contract schema -> production engine/source/frame.py and
+    # cad_profile.py through a test-side adapter that only translates vocabulary (frame_harness.py)
+    "UNIT_CONTEXT": "tests.r8_0.frame_harness:unit_context",
+    "FRAMES": "tests.r8_0.frame_harness:frames",
+    "FRAME_EVIDENCE": "tests.r8_0.frame_harness:frame_evidence",
+    "SOURCE_PROFILE": "tests.r8_0.frame_harness:source_profile",
     "SOURCE_DELTA": "engine.source.deltas:classify",
     # downstream evidence (engine/qs_core) -------------------------------
     "FACT_POLICY_RESOLVE": "engine.qs_core.fact_policy:resolve",

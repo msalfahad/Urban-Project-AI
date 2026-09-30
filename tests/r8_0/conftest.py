@@ -8,6 +8,9 @@ exception its class allows:
     TARGET_NOT_IMPLEMENTED  TargetNotImplemented     the R8 module is not written yet
     LIBRARY_KNOWN_FAILURE   AssertionError           an oracle library is wrong here
     BOUNDARY_DEBT           AssertionError           pre-existing, frozen, to retire
+    CONTRACT_DISPUTED       AssertionError           (R8.3) the implemented design disagrees with a
+                                                     frozen R8.0 expectation; the expectation is kept
+                                                     UNCHANGED and the dispute awaits review
 
 Strict means an entry that unexpectedly passes FAILS the run, so a fix can
 never slip in without the register being updated in the same change.
@@ -28,7 +31,8 @@ from .targets import TargetNotImplemented
 HERE = Path(__file__).parent
 REGISTER = HERE / "registers" / "R8_0_EXPECTED_FAILURES.json"
 RAISES = {"KNOWN_DEFECT": AssertionError, "TARGET_NOT_IMPLEMENTED": TargetNotImplemented,
-          "LIBRARY_KNOWN_FAILURE": AssertionError, "BOUNDARY_DEBT": AssertionError}
+          "LIBRARY_KNOWN_FAILURE": AssertionError, "BOUNDARY_DEBT": AssertionError,
+          "CONTRACT_DISPUTED": AssertionError}
 
 
 def load_expected():

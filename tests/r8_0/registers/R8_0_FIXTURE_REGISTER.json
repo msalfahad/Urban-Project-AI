@@ -574,7 +574,7 @@
       "truth_basis": "CONTRACT_SPECIFICATION (structural outcome, no quantity)",
       "current_engine_status": "NOT_APPLICABLE_TO_CURRENT_ENGINE",
       "test_status_counts": {
-        "TARGET_NOT_IMPLEMENTED": 1
+        "PASS": 1
       },
       "tests": [
         "test_r8_0_pending_contracts.py::test_contract[F15]"
@@ -592,7 +592,7 @@
       "truth_basis": "CONTRACT_SPECIFICATION (structural outcome, no quantity)",
       "current_engine_status": "NOT_APPLICABLE_TO_CURRENT_ENGINE",
       "test_status_counts": {
-        "TARGET_NOT_IMPLEMENTED": 1
+        "PASS": 1
       },
       "tests": [
         "test_r8_0_pending_contracts.py::test_contract[F16]"
@@ -610,7 +610,7 @@
       "truth_basis": "CONTRACT_SPECIFICATION (structural outcome, no quantity)",
       "current_engine_status": "NOT_APPLICABLE_TO_CURRENT_ENGINE",
       "test_status_counts": {
-        "TARGET_NOT_IMPLEMENTED": 1
+        "CONTRACT_DISPUTED": 1
       },
       "tests": [
         "test_r8_0_pending_contracts.py::test_contract[F17]"
@@ -628,7 +628,7 @@
       "truth_basis": "CONTRACT_SPECIFICATION (structural outcome, no quantity)",
       "current_engine_status": "NOT_APPLICABLE_TO_CURRENT_ENGINE",
       "test_status_counts": {
-        "TARGET_NOT_IMPLEMENTED": 1
+        "PASS": 1
       },
       "tests": [
         "test_r8_0_pending_contracts.py::test_contract[F18]"
@@ -779,7 +779,7 @@
       "truth_basis": "CONTRACT_SPECIFICATION (structural outcome, no quantity)",
       "current_engine_status": "NOT_APPLICABLE_TO_CURRENT_ENGINE",
       "test_status_counts": {
-        "TARGET_NOT_IMPLEMENTED": 1
+        "PASS": 1
       },
       "tests": [
         "test_r8_0_pending_contracts.py::test_contract[F26]"
@@ -797,7 +797,7 @@
       "truth_basis": "CONTRACT_SPECIFICATION (structural outcome, no quantity)",
       "current_engine_status": "NOT_APPLICABLE_TO_CURRENT_ENGINE",
       "test_status_counts": {
-        "TARGET_NOT_IMPLEMENTED": 1
+        "PASS": 1
       },
       "tests": [
         "test_r8_0_pending_contracts.py::test_contract[F27]"
@@ -815,7 +815,7 @@
       "truth_basis": "CONTRACT_SPECIFICATION (structural outcome, no quantity)",
       "current_engine_status": "NOT_APPLICABLE_TO_CURRENT_ENGINE",
       "test_status_counts": {
-        "TARGET_NOT_IMPLEMENTED": 1
+        "PASS": 1
       },
       "tests": [
         "test_r8_0_pending_contracts.py::test_contract[F28]"
@@ -833,7 +833,7 @@
       "truth_basis": "CONTRACT_SPECIFICATION (structural outcome, no quantity)",
       "current_engine_status": "NOT_APPLICABLE_TO_CURRENT_ENGINE",
       "test_status_counts": {
-        "TARGET_NOT_IMPLEMENTED": 1
+        "PASS": 1
       },
       "tests": [
         "test_r8_0_pending_contracts.py::test_contract[F29]"
@@ -851,7 +851,7 @@
       "truth_basis": "CONTRACT_SPECIFICATION (structural outcome, no quantity)",
       "current_engine_status": "NOT_APPLICABLE_TO_CURRENT_ENGINE",
       "test_status_counts": {
-        "TARGET_NOT_IMPLEMENTED": 1
+        "PASS": 1
       },
       "tests": [
         "test_r8_0_pending_contracts.py::test_contract[F30]"
@@ -1010,6 +1010,10 @@
     {
       "round": "R8.2",
       "note": "test_status_counts recomputed after census + reconcile; fixture truth unchanged"
+    },
+    {
+      "round": "R8.3",
+      "note": "test_status_counts recomputed after frame / unit / profile binding; fixture truth unchanged"
     }
   ]
 }

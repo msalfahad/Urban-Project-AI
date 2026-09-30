@@ -1,0 +1,36 @@
+{
+ "SCHEMA": "URBAN_R8_3_THRESHOLD_PROVENANCE_V1",
+ "decision_id": "R8_3_D01_FRAME_THRESHOLDS",
+ "source_document": "R8_REVISED_SPEC.v1.md §5 (Status rules)",
+ "source_status": "EXTERNAL_FROZEN_SPEC_NOT_PREVIOUSLY_COMMITTED",
+ "source_sha256": "9bb2433d1817af6a5a4ec74ad04b5c65f9f06d7c6a13ea7086782c06defbe955",
+ "source_location": "review workspace (session scratchpad); a full copy is included in the R8.3 package as SPEC_EVIDENCE/R8_REVISED_SPEC.v1.md",
+ "values": {
+  "independent_agreement": "<= 0.5 %",
+  "material_contradiction": "> 0.5 %",
+  "checked_dimension_residual": "<= max(2 mm, 0.2 %)"
+ },
+ "code_constants": {
+  "engine/source/frame.py": {
+   "AGREEMENT_REL": 0.005,
+   "CHECKED_DIM_ABS_MM": 2.0,
+   "CHECKED_DIM_REL": 0.002
+  }
+ },
+ "verbatim_excerpt": [
+  "**Status rules** (evidence kinds as in joint review 13 §1; E-M plausibility is support-only):",
+  "",
+  "| Status | Condition | final | preview |",
+  "|---|---|---|---|",
+  "| VERIFIED | ≥2 independent non-plausibility kinds agree within 0.5 %; none disagrees > 0.5 %; every checked dimension residual ≤ max(2 mm, 0.2 %); no declaration contradicted | ✅ | ✅ |",
+  "| CONFIRMED_BY_HUMAN | a PROVISIONAL frame confirmed by a recorded human claim | ✅ | ✅ |",
+  "| PROVISIONAL | one non-plausibility kind with no contradiction, **or** ≥2 agreeing kinds that contradict a declaration (Al Rashed) | ❌ | ✅ |",
+  "| UNCONFIRMED | declaration only, or set by an agent | ❌ | ✅ |",
+  "| CONFLICT | two independent kinds disagree > 0.5 %, or two sheets of one plan disagree | ❌ | ❌ |",
+  "| BLOCKED | no evidence other than plausibility; sheet marked not to scale; residual failure | ❌ | ❌ |",
+  "",
+  "- **PREVIEW rows**: value visible in the preview/trace view only, publication status `PREVIEW`, excluded from every subtotal (subtotal `null` under the existing contract), never exported to Urban PM, watermarked on any proof."
+ ],
+ "r8_3_action": "preserved unchanged; not retuned on any project; the missing repository provenance is recorded here as a documentation gap, not as permission to reselect the numbers",
+ "recorded": "2026-09-30"
+}

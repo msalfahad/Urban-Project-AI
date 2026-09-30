@@ -31,6 +31,17 @@ STACKS = {
     "SOURCE_K1_K2": {"modules": ["engine/source/cad/kernel.py", "engine/source/cad/kernel_ezdxf.py",
                                  "engine/source/reconcile.py", "engine/source/cad/census.py"],
                      "role": "canonical source engine (R8.1-R8.2); SHADOW only, no production consumer"},
+    # R8.3
+    "SOURCE_FRAME": {"modules": ["engine/source/frame.py", "engine/source/cad_profile.py",
+                                 "engine/source/cad/unit_evidence.py"],
+                     "role": "UNIT_CONTEXT / REGION_MEASUREMENT_TRANSFORM / MEASUREMENT_FRAME / CAD_PROFILE (R8.3); "
+                             "SHADOW only, no production consumer"},
+    "UNIT_RESOLVER_INGEST": {"modules": ["engine/ingest/source_units.py"],
+                             "role": "units used by pipeline7 today: INSUNITS first; a declared unit may overrule it on "
+                                     "the wall-thickness plausibility band (R8.3: plausibility is not unit authority)"},
+    "UNIT_DECLARATION_ALRASHED": {"modules": ["research/qs_wall_treatment_01/pa09/alrashed/blind.py"],
+                                  "role": "declares the Al Rashed unit as metre (INSUNITS says inch) on title text, "
+                                          "wall-pair plausibility and the dimension display ratio"},
     "EXTERNAL_ENGINE_LAB": {"modules": ["research/external_engine_lab/r8_2_shadow_impact.py"],
                             "role": "research, never imported by engine/"},
 }
@@ -147,8 +158,36 @@ def verify():
     return problems
 
 
+# R8.3 §43: which UNIT / FRAME / CAD_PROFILE authority each CURRENT path uses today, classified
+# with the R8.2 path vocabulary. Nothing here changes a published path.
+UNIT_FRAME_BY_PATH = [
+    {"project": "ALRASHED", "path": "R7 published BOQ", "unit_authority_today": "PROJECT_READER_ALRASHED treats 1 drawing unit as 1 metre implicitly "
+                             "(geometry.py: segments 'in metres', snap = mm / 1000); UNIT_DECLARATION_ALRASHED records the "
+                             "declaration and its reasons (title text, wall-pair plausibility, dimension display ratio)",
+     "frame_authority_today": "none (no region / frame record)", "cad_profile_today": "none",
+     "r8_3_unit_context": "CONFLICT (INSUNITS inch; the ratio-100 dimension family excludes inch under every standard display unit)",
+     "classification": "AFFECTS_ACTIVE_PUBLISHED_PATH",
+     "meaning": "the published R7 quantities rest on a unit R8.3 would not admit without a human confirmation; "
+                "no published value is changed in R8.3"},
+    {"project": "QORTUBA", "path": "QS01 released room-by-room takeoff", "unit_authority_today": "UNIT_RESOLVER_INGEST (INSUNITS 5 = cm)",
+     "frame_authority_today": "none", "cad_profile_today": "pipeline7 quantity safety gates",
+     "r8_3_unit_context": "UNCONFIRMED (declaration only; dimension family compatible, which is not support)",
+     "classification": "AFFECTS_ACTIVE_PUBLISHED_PATH",
+     "meaning": "released quantities rest on INSUNITS alone; under R8.3 they would be PREVIEW until a second "
+                "independent kind or a human confirmation exists"},
+    {"project": "P7757", "path": "PA07 supervised regression", "unit_authority_today": "UNIT_RESOLVER_INGEST (INSUNITS 4 = mm)",
+     "frame_authority_today": "none", "cad_profile_today": "pipeline7 gates (BRIDGE_ALLOWED = 0)",
+     "r8_3_unit_context": "UNCONFIRMED (declaration only)", "classification": "AFFECTS_NON_ACTIVE_PATH",
+     "meaning": "publishes nothing"},
+    {"project": "ALL", "path": "R8 source engine", "unit_authority_today": "SOURCE_FRAME", "frame_authority_today": "SOURCE_FRAME",
+     "cad_profile_today": "SOURCE_FRAME (cad_profile)", "r8_3_unit_context": "per source", "classification": "AFFECTS_FUTURE_PATH",
+     "meaning": "TARGET_CANONICAL, SHADOW"},
+]
+
+
 def build():
     return {"ACTIVE_PATH_MAP": {"SCHEMA": "URBAN_R8_2_ACTIVE_PATH_MAP_V1", "stacks": STACKS, "paths": PATHS,
+                                "unit_frame_by_path": UNIT_FRAME_BY_PATH,
                                 "verification_problems": verify(),
                                 "note": "'the engine' is not one path: four stacks are live or frozen; only the rows marked "
                                         "CURRENT_ACTIVE feed an output today"},
