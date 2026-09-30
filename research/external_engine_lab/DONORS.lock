@@ -30,7 +30,7 @@
     {"id": "OCERP", "repo": "datadrivenconstruction/OpenConstructionERP", "commit": "68ee22a15f70339e2c8aa750648f9da78bb91644", "licence": "AGPL-3.0", "status": "IDEA_ONLY_AGPL", "note": "architecture ideas only (decoder binary pinning); no code or copied text may enter Urban"}
   ],
   "libraries": [
-    {"name": "ezdxf", "version": "1.4.4", "licence": "MIT", "status": "PLANNED_PRODUCTION_DEPENDENCY (K2 only; K1 does not import ezdxf, R8.1 OCS decision A)",
+    {"name": "ezdxf", "version": "1.4.4", "licence": "MIT", "status": "PRODUCTION_DEPENDENCY_K2_ONLY (engine/source/cad/kernel_ezdxf.py, R8.2; K1 does not import ezdxf)",
      "known_failures_pinned": ["virtual_entities() on MINSERT yields the first cell only", "xref INSERT yields no virtual entities", "MINSERT nested under a reflecting parent: rows realised on the wrong side (R8.0 finding; R8.1 mechanism: Insert.transform leaves row_spacing/column_spacing untouched; see MINSERT_REFLECTION_ORACLE.json)"]}
   ]
 }

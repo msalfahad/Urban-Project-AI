@@ -414,9 +414,8 @@
       "truth_basis": "HAND_DERIVED",
       "current_engine_status": "KNOWN_DEFECT",
       "test_status_counts": {
-        "PASS": 5,
-        "KNOWN_DEFECT": 5,
-        "TARGET_NOT_IMPLEMENTED": 5
+        "PASS": 10,
+        "KNOWN_DEFECT": 5
       },
       "tests": [
         "test_r8_0_mutations.py::test_S03_ignored_xref_is_detected[F08_XREF_MISSING]",
@@ -453,7 +452,7 @@
       "truth_basis": "CONTRACT_SPECIFICATION (structural outcome, no quantity)",
       "current_engine_status": "NOT_APPLICABLE_TO_CURRENT_ENGINE",
       "test_status_counts": {
-        "TARGET_NOT_IMPLEMENTED": 1
+        "PASS": 1
       },
       "tests": [
         "test_r8_0_source_capability.py::test_dynamic_block_visibility_contract"
@@ -538,8 +537,7 @@
       "truth_basis": "HAND_DERIVED",
       "current_engine_status": "CURRENT_PASS",
       "test_status_counts": {
-        "TARGET_NOT_IMPLEMENTED": 1,
-        "PASS": 1
+        "PASS": 2
       },
       "tests": [
         "test_r8_0_block_transforms.py::test_anonymous_block_correlated_by_handle_across_routes",
@@ -558,7 +556,7 @@
       "truth_basis": "CONTRACT_SPECIFICATION (structural outcome, no quantity)",
       "current_engine_status": "NOT_APPLICABLE_TO_CURRENT_ENGINE",
       "test_status_counts": {
-        "TARGET_NOT_IMPLEMENTED": 1
+        "PASS": 1
       },
       "tests": [
         "test_r8_0_source_capability.py::test_legacy_codepage_text_contract"
@@ -648,8 +646,8 @@
       "truth_basis": "HAND_DERIVED",
       "current_engine_status": "CURRENT_PASS",
       "test_status_counts": {
-        "TARGET_NOT_IMPLEMENTED": 2,
-        "PASS": 1
+        "TARGET_NOT_IMPLEMENTED": 1,
+        "PASS": 2
       },
       "tests": [
         "test_r8_0_source_capability.py::test_custom_entity_on_wall_layer_blocks_region_contract",
@@ -672,7 +670,7 @@
       "truth_basis": "CONTRACT_SPECIFICATION (structural outcome, no quantity)",
       "current_engine_status": "NOT_APPLICABLE_TO_CURRENT_ENGINE",
       "test_status_counts": {
-        "TARGET_NOT_IMPLEMENTED": 1
+        "PASS": 1
       },
       "tests": [
         "test_r8_0_source_capability.py::test_route_missing_a_declared_class_contract"
@@ -965,8 +963,7 @@
       "truth_basis": "HAND_DERIVED",
       "current_engine_status": "CURRENT_PASS",
       "test_status_counts": {
-        "PASS": 1,
-        "TARGET_NOT_IMPLEMENTED": 1
+        "PASS": 2
       },
       "tests": [
         "test_r8_0_source_capability.py::test_skipped_object_is_counted_current_engine[F35_OLE2FRAME_IN_BLOCK]",
@@ -990,8 +987,7 @@
       "truth_basis": "HAND_DERIVED",
       "current_engine_status": "CURRENT_PASS",
       "test_status_counts": {
-        "PASS": 1,
-        "TARGET_NOT_IMPLEMENTED": 1
+        "PASS": 2
       },
       "tests": [
         "test_r8_0_source_capability.py::test_skipped_object_is_counted_current_engine[F36_PROXY_ENTITY]",
@@ -1010,6 +1006,10 @@
     {
       "round": "R8.1",
       "note": "test_status_counts recomputed after K1; fixture truth unchanged"
+    },
+    {
+      "round": "R8.2",
+      "note": "test_status_counts recomputed after census + reconcile; fixture truth unchanged"
     }
   ]
 }

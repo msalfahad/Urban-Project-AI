@@ -19,3 +19,14 @@ external MCP tests, benchmark adapters and experimental outputs.
   - dynamic-block counts.
 
   Its output goes to `outputs/`, which is gitignored. No count it prints may become a production target.
+
+## R8.2 additions
+
+- **`r8_2_shadow_impact.py`: the shadow bridge.** It runs the real downstream code for each active path:
+  - Qortuba QS01;
+  - P7757 PA07;
+  - the Al Rashed project reader.
+
+  Each run is repeated once per defect, with that single defect corrected (K1 is the corrector). The diffs are written to `outputs/`. `cad_adapter.normalize` is patched in-process only; nothing published changes.
+- **`r8_2_k2_real_attempts.py`** tries K2 on the real sources through `dwg2dxf` plus ezdxf, and records the exact failures and hashes. No DXF is repaired.
+- **`r8_2_path_and_independence.py`** holds the ACTIVE_PATH_MAP and DECODER_INDEPENDENCE_MATRIX as data. `verify()` checks the map against the runners' imports; this check is pinned by `tests/r8_2/test_r8_2_paths_and_pins.py`.

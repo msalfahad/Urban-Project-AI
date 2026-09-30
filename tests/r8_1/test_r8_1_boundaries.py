@@ -19,7 +19,11 @@ from tests.r8_0.test_r8_0_import_boundaries import (FORBIDDEN_IN_ENGINE, FORBIDD
 EXPECTED_MODULES = {"engine/source/__init__.py", "engine/source/findings.py", "engine/source/observations.py",
                     "engine/source/digests.py", "engine/source/cad/__init__.py", "engine/source/cad/affine.py",
                     "engine/source/cad/kernel.py", "engine/source/cad/kernel_ocs.py",
-                    "engine/source/cad/libredwg_map.py"}
+                    "engine/source/cad/libredwg_map.py",
+                    # R8.2
+                    "engine/source/capability.py", "engine/source/conservation.py", "engine/source/decoder_pins.py",
+                    "engine/source/realised.py", "engine/source/reconcile.py", "engine/source/cad/census.py",
+                    "engine/source/cad/kernel_ezdxf.py"}
 
 
 def _is_source(name):
@@ -50,9 +54,12 @@ def test_B5_B6_live_engine_source_dependencies_registered():
 
 
 def test_k1_is_stdlib_only_in_r8_1():
-    """Stronger than B-5: R8.1 K1 uses no third-party library at all."""
+    """Stronger than B-5: K1 uses no third-party library at all. (R8.2: the K2 route,
+    kernel_ezdxf.py, uses ezdxf by design and is covered by B-5's register instead.)"""
     std = set(sys.stdlib_module_names) | {"__future__"}
     for p in _files(SOURCE):
+        if p.name == "kernel_ezdxf.py":
+            continue
         for name in imports_of_text(p.read_text(), p, members=False):
             assert name.split(".")[0] in std or _is_source(name), (_rel(p), name)
 

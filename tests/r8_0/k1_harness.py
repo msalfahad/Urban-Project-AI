@@ -48,7 +48,7 @@ def _imports():
 
 def apply_test_schema_extensions(decode, doc):
     O, _, lm = _imports()
-    rows = {str(lm._abs(o.get("handle"))): o for o in decode.get("OBJECTS", [])}
+    rows = {str(lm.handle_id(o.get("handle"))): o for o in decode.get("OBJECTS", [])}
 
     def fix(obs):
         row = rows.get(obs.source_handle, {})
@@ -76,3 +76,47 @@ def realise_decode(decode):
     _, kernel, lm = _imports()
     doc = apply_test_schema_extensions(decode, lm.to_document(decode))
     return ContractResult(kernel.realise(doc).as_contract_dict())
+
+
+def capability_register_decode(decode):
+    """CAPABILITY_REGISTER target (R8.2): builder decode -> production D1 -> test-schema
+    extensions -> production census (engine.source.cad.census)."""
+    _, kernel, lm = _imports()
+    try:
+        from engine.source.cad import census
+    except ModuleNotFoundError as err:
+        raise TargetNotImplemented(f"CAPABILITY_REGISTER: {err.name} not implemented") from None
+    doc = apply_test_schema_extensions(decode, lm.to_document(decode))
+    return census.capability_register(doc)
+
+
+def _modified(route):
+    import copy
+    dec = copy.deepcopy(route["decode"])
+    for old, new in (route.get("rename") or {}).items():
+        for o in dec["OBJECTS"]:
+            if (o.get("object") == "BLOCK_HEADER" or o.get("type") == 49) and o.get("name") == old:
+                o["name"] = new
+    kind = route.get("drop_first_of")
+    if kind:
+        i = next(i for i, o in enumerate(dec["OBJECTS"]) if o.get("entity") == kind)
+        dec["OBJECTS"].pop(i)
+    return dec
+
+
+def reconcile_routes(route_a, route_b):
+    """RECONCILE target (R8.2): two decodes of the same synthetic source, each through the
+    production D1 mapper and K1, compared by the production reconciliation (SYNTHETIC tolerance).
+    The route modifiers (rename / drop_first_of) are the R8.0 fixture's own mutations."""
+    _, kernel, lm = _imports()
+    try:
+        from engine.source import reconcile as R
+    except ModuleNotFoundError as err:
+        raise TargetNotImplemented(f"RECONCILE: {err.name} not implemented") from None
+    docs = []
+    for route in (route_a, route_b):
+        dec = _modified(route)
+        docs.append(apply_test_schema_extensions(dec, lm.to_document(dec)))
+    ra, rb = (kernel.realise(d) for d in docs)
+    return R.reconcile(ra, rb, R.SYNTHETIC, insert_blocks_a=lm.insert_blocks(docs[0]),
+                       insert_blocks_b=lm.insert_blocks(docs[1]), name_a="D1/K1", name_b="D1'/K1")

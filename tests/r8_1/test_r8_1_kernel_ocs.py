@@ -72,10 +72,15 @@ def _imports(path):
     return names
 
 
+K2_ROUTE = "kernel_ezdxf.py"      # R8.2: the ezdxf route itself (K2) is the one module allowed to import ezdxf
+
+
 def test_k1_is_independent_of_ezdxf():
-    """R8.1 OCS decision (Option A): no engine/source module imports ezdxf,
-    so K1 and the future ezdxf-based K2 cannot share an OCS failure."""
+    """R8.1 OCS decision (Option A): no K1 module imports ezdxf, so K1 and the
+    ezdxf-based K2 (R8.2, engine/source/cad/kernel_ezdxf.py) cannot share an OCS failure."""
     for p in sorted((ROOT / "engine" / "source").rglob("*.py")):
+        if p.name == K2_ROUTE:
+            continue
         assert not any(n == "ezdxf" or n.startswith("ezdxf.") for n in _imports(p)), p
 
 

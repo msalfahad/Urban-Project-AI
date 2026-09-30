@@ -53,6 +53,8 @@ from .. import observations as O
 from . import kernel_ocs
 from .affine import Affine2
 from .kernel_ocs import SourceFrameError
+from ..realised import (Lineage, RealisedAttribute, RealisedCircle, RealisedCircularArc,  # noqa: F401
+                        RealisedEllipticalArc, RealisedGeometry, RealisedSegment)
 
 MAX_NESTING_DEPTH = 16
 # Relative tolerance for "this linear map is a similarity" (float64 noise on
@@ -62,6 +64,7 @@ SIMILARITY_REL_TOL = 1e-9
 TWO_PI = 2.0 * math.pi
 
 REALISED, HIDDEN, CARRIED, FINDING = "REALISED", "HIDDEN", "CARRIED", "FINDING"
+UNPLACED, OTHER_LAYOUT = "UNPLACED", "OTHER_LAYOUT"      # R8.2: retained, never realised
 
 
 # ---------------------------------------------------------------- composition
@@ -114,115 +117,7 @@ def _flip(d):
 
 
 # ---------------------------------------------------------------- realised records
-
-@dataclass(frozen=True)
-class Lineage:
-    obs_id: str
-    source_handle: str
-    instance_path: tuple
-    layer: str | None
-    kind: str
-
-
-@dataclass(frozen=True)
-class RealisedSegment:
-    a: tuple
-    b: tuple
-    lineage: Lineage
-
-
-@dataclass(frozen=True)
-class RealisedCircularArc:
-    """source ARC: start/end are the images of the entity's start/end angles.
-    source BULGE: start = VERTEX_A, end = VERTEX_B; direction is A -> B."""
-
-    center: tuple
-    radius: float
-    start: tuple
-    mid: tuple
-    end: tuple
-    direction: str
-    source: str
-    lineage: Lineage
-
-
-@dataclass(frozen=True)
-class RealisedCircle:
-    center: tuple
-    radius: float
-    lineage: Lineage
-
-
-@dataclass(frozen=True)
-class RealisedEllipticalArc:
-    """point(t) = center + cos t * axis_u + sin t * axis_v, t from t0 to t1
-    (conjugate semi-diameters; exact, not an approximation)."""
-
-    center: tuple
-    axis_u: tuple
-    axis_v: tuple
-    t0: float
-    t1: float
-    start: tuple
-    mid: tuple
-    end: tuple
-    direction: str
-    full: bool
-    source: str
-    lineage: Lineage
-
-
-@dataclass(frozen=True)
-class RealisedAttribute:
-    tag: str
-    value: str
-    insertion: tuple
-    owner_insert_handle: str
-    lineage: Lineage
-
-
-@dataclass
-class RealisedGeometry:
-    segments: list = field(default_factory=list)
-    arcs: list = field(default_factory=list)
-    circles: list = field(default_factory=list)
-    elliptical_arcs: list = field(default_factory=list)
-    attributes: list = field(default_factory=list)
-    carried: list = field(default_factory=list)
-    hidden: list = field(default_factory=list)
-    findings: list = field(default_factory=list)
-    dispositions: Counter = field(default_factory=Counter)
-    visits: int = 0
-
-    def as_contract_dict(self) -> dict:
-        """The frozen R8 physical-geometry interface (tests/r8_0 acceptance tests)."""
-        arcs, bulges = [], []
-        for a in self.arcs:
-            meta = {"obs_id": a.lineage.obs_id, "instance_path": list(a.lineage.instance_path), "layer": a.lineage.layer}
-            if a.source == "BULGE":
-                bulges.append({"VERTEX_A": a.start, "VERTEX_B": a.end, "ARC_MIDPOINT": a.mid, "CENTER": a.center,
-                               "DIR_A_TO_B": a.direction, "RADIUS": a.radius, **meta})
-            else:
-                arcs.append({"CENTER": a.center, "P0": a.start, "PM": a.mid, "P1": a.end, "DIR": a.direction,
-                             "RADIUS": a.radius, **meta})
-        return {
-            "segments": [(s.a, s.b) for s in self.segments],
-            "segment_lineage": [{"obs_id": s.lineage.obs_id, "instance_path": list(s.lineage.instance_path),
-                                 "layer": s.lineage.layer} for s in self.segments],
-            "arcs": arcs, "bulges": bulges,
-            "circles": [{"CENTER": c.center, "RADIUS": c.radius, "obs_id": c.lineage.obs_id} for c in self.circles],
-            "elliptical_arcs": [{"CENTER": e.center, "AXIS_U": e.axis_u, "AXIS_V": e.axis_v, "T0": e.t0, "T1": e.t1,
-                                 "START_POINT": e.start, "MID_SWEEP_POINT": e.mid, "END_POINT": e.end,
-                                 "SWEEP_DIRECTION": e.direction, "FULL": e.full, "source": e.source,
-                                 "obs_id": e.lineage.obs_id, "instance_path": list(e.lineage.instance_path)}
-                                for e in self.elliptical_arcs],
-            "attributes": [{"tag": a.tag, "value": a.value, "insertion": a.insertion,
-                            "owner_insert_handle": a.owner_insert_handle} for a in self.attributes],
-            "findings": [f.as_dict() for f in self.findings],
-            "hidden": list(self.hidden),
-            "carried": list(self.carried),
-            "dispositions": dict(self.dispositions),
-        }
+# The neutral output schema lives in engine/source/realised.py (shared with K2).
 
 
 # ---------------------------------------------------------------- the walk
@@ -232,12 +127,25 @@ def realise(document: O.SourceDocument) -> RealisedGeometry:
     out.findings.extend(document.findings)
     for obs in document.entities:
         _emit(document, obs, Affine2.identity(), (), True, 0, out)
+    for up in getattr(document, "unplaced", ()):
+        o = up.observation
+        out.unplaced.append({"obs_id": o.obs_id, "source_handle": o.source_handle, "source_type": o.source_type,
+                             "layer": o.layer, "raw_owner": up.raw_owner, "reason": up.reason})
+        if o.kind == O.UNSUPPORTED_KIND:        # its own content finding survives quarantine
+            g = o.geometry
+            out.findings.append(SourceFinding(g.category, o.obs_id, (), g.reason, getattr(g, "impacts", None)))
+        _dispose(out, UNPLACED, o)
+    for layout, o in getattr(document, "other_layouts", ()):
+        out.other_layout.append({"obs_id": o.obs_id, "layout": layout, "kind": o.kind})
+        _dispose(out, OTHER_LAYOUT, o)
     return out
 
 
-def _dispose(out, kind):
+def _dispose(out, kind, obs=None):
     out.dispositions[kind] += 1
     out.visits += 1
+    if obs is not None:
+        out.obs_dispositions.setdefault(obs.obs_id, Counter())[kind] += 1
 
 
 def _finding(out, code, obs, path, detail=""):
@@ -252,16 +160,19 @@ def _emit(doc, obs, parent: Affine2, path: tuple, visible: bool, depth: int, out
     kind = obs.kind
     if kind == O.UNSUPPORTED_KIND:
         g = obs.geometry
-        _finding(out, g.category, obs, path, g.reason)
-        _dispose(out, FINDING)
+        out.findings.append(SourceFinding(g.category, obs.obs_id, tuple(path), g.reason, getattr(g, "impacts", None)))
+        _dispose(out, FINDING, obs)
         return
     if not (visible and obs.visible):
         out.hidden.append({"obs_id": obs.obs_id, "kind": kind, "instance_path": list(path)})
-        _dispose(out, HIDDEN)
+        _dispose(out, HIDDEN, obs)
         return
     if kind in O.CARRIED_KINDS:
         out.carried.append({"obs_id": obs.obs_id, "kind": kind, "instance_path": list(path)})
-        _dispose(out, CARRIED)
+        if kind == O.SOLID:
+            _finding(out, F.UNVERIFIED_FOR_QTO_USE, obs, path,
+                     "SOLID carried with its corners; role (fill / poche / geometry) not established by type")
+        _dispose(out, CARRIED, obs)
         return
     try:
         if kind == O.LINE:
@@ -283,13 +194,13 @@ def _emit(doc, obs, parent: Affine2, path: tuple, visible: bool, depth: int, out
             return
         else:
             _finding(out, F.UNHANDLED, obs, path, f"kind {kind!r} has no K1 realisation")
-            _dispose(out, FINDING)
+            _dispose(out, FINDING, obs)
             return
     except SourceFrameError as err:
         _finding(out, err.code, obs, path, err.detail)
-        _dispose(out, FINDING)
+        _dispose(out, FINDING, obs)
         return
-    _dispose(out, REALISED)
+    _dispose(out, REALISED, obs)
 
 
 def _check_orientation(out, obs, path, start, mid, end, centre, direction):
@@ -404,7 +315,7 @@ def _realise_insert(doc, obs, parent, path, depth, out):
     here = path + (obs.obs_id,)
     if blk is None:
         _finding(out, F.MISSING_BLOCK_DEFINITION, obs, here, f"block {g.block_key!r} is not defined in the source")
-        _dispose(out, FINDING)
+        _dispose(out, FINDING, obs)
         return
     if blk.xref is not None:
         x = blk.xref
@@ -413,24 +324,32 @@ def _realise_insert(doc, obs, parent, path, depth, out):
         _finding(out, code, obs, here,
                  f"xref {blk.name!r} path={x.path!r} attachment={x.attachment} mapping={x.mapping_status}; "
                  "its content is not in this source: zero children is not evidence of no geometry")
-        _dispose(out, FINDING)
+        _dispose(out, FINDING, obs)
         # any locally present entities are still realised, but the instance stays incomplete
         if not blk.entities:
             return
     if not blk.name_readable:
         _finding(out, F.BLOCK_NAME_UNREADABLE, obs, here, f"block {blk.key!r} has no readable name in the source")
+    if getattr(blk, "anonymous", False) and blk.name.upper().startswith("*U"):
+        ref = blk.parent_ref
+        code = (F.DYNAMIC_BLOCK_UNRESOLVED if ref is None else
+                F.DYNAMIC_BLOCK_IDENTITY_UNVERIFIED if ref[0] == "BLOCK_HEADER" else
+                F.DYNAMIC_BLOCK_UNRESOLVED if ref[0] == "AMBIGUOUS_REFERENCE" else F.ANONYMOUS_BLOCK_NO_IDENTITY)
+        _finding(out, code, obs, here,
+                 f"anonymous block {blk.name!r} ({blk.key}); parent evidence {ref!r} (unverified). Evaluated geometry is "
+                 "realised; identity claims from this instance are not established")
     if depth >= MAX_NESTING_DEPTH:
         _finding(out, F.NESTING_LIMIT, obs, here, f"nesting deeper than {MAX_NESTING_DEPTH}")
-        _dispose(out, FINDING)
+        _dispose(out, FINDING, obs)
         return
     try:
         ocs = frame_matrix(obs.extrusion)
     except SourceFrameError as err:
         _finding(out, err.code, obs, here, err.detail)
-        _dispose(out, FINDING)
+        _dispose(out, FINDING, obs)
         return
     if blk.xref is None:
-        _dispose(out, REALISED)
+        _dispose(out, REALISED, obs)
     for label, off in grid_offsets(g.grid, g.rotation):
         placed = parent @ ocs @ insert_matrix(g, blk.base_point, off)
         cell_path = path + (obs.obs_id + label,)

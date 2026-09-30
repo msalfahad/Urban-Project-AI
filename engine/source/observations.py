@@ -34,9 +34,13 @@ TEXT = "TEXT"
 MTEXT = "MTEXT"
 DIMENSION = "DIMENSION"
 HATCH = "HATCH"
+POINT = "POINT"
+SOLID = "SOLID"
+ATTDEF = "ATTDEF"
 UNSUPPORTED_KIND = "UNSUPPORTED"
 
-CARRIED_KINDS = frozenset({TEXT, MTEXT, DIMENSION, HATCH})     # observed, not realised by K1
+# observed and retained, not realised by K1 as measurement geometry (R8.2 capability register)
+CARRIED_KINDS = frozenset({TEXT, MTEXT, DIMENSION, HATCH, POINT, SOLID, ATTDEF})
 
 DEFAULT_EXTRUSION = (0.0, 0.0, 1.0)
 
@@ -49,7 +53,10 @@ class SourceRevisionAnchor:
     route: str
     decoder: str
     decoder_version: str | None = None
-    decoder_binary_sha256: str | None = None   # DECODER_BINARY_PIN, filled in R8.2
+    decoder_binary_sha256: str | None = None   # DECODER_BINARY_PIN; None = not established for THESE bytes
+    parser_lineage: str | None = None          # who parsed the DWG bytes (e.g. LIBREDWG), for independence claims
+    conversion_chain: tuple = ()               # ordered steps from the original source to this representation
+    pin_status: str = "NOT_ESTABLISHED"        # decoder_pins.status(): REGISTERED / UNREGISTERED_BUILD / NOT_ESTABLISHED
 
 
 @dataclass(frozen=True)
@@ -125,9 +132,19 @@ class TextGeom:
 
 
 @dataclass(frozen=True)
+class CarriedGeom:
+    """A carried kind's own anchor points, in its frame, so nothing about it is lost."""
+
+    anchor: tuple | None
+    points: tuple = ()
+    value: str = ""
+
+
+@dataclass(frozen=True)
 class UnsupportedGeom:
     category: str          # findings.ENTITY_CATEGORIES
     reason: str
+    impacts: tuple | None = None       # capability-register impacts for this kind (None: code default)
 
 
 @dataclass(frozen=True)
@@ -160,6 +177,22 @@ class BlockDefinition:
     entities: tuple
     xref: XrefInfo | None = None
     name_readable: bool = True
+    anonymous: bool = False             # *U / *D style name: the name is not an identity
+    parent_ref: tuple | None = None     # route's evidence of a dynamic parent: ("BLOCK_HEADER", key, name) /
+                                        # ("NON_BLOCK", kind) / None (no reference); mapping UNVERIFIED
+
+
+@dataclass(frozen=True)
+class UnplacedObservation:
+    """An observation whose ownership / placement the source does not establish.
+
+    Kept whole (handle, type, layer, raw geometry) so it stays auditable, and
+    NEVER realised in model space: its coordinates may be block-local."""
+
+    observation: SourceEntityObservation
+    raw_owner: Any                      # the route's raw owner reference, verbatim
+    reason: str                         # OWNER_HANDLE_UNKNOWN / OWNER_AMBIGUOUS / OWNER_EVIDENCE_CONFLICT / OWNER_IS_INSERT / NO_OWNER_EVIDENCE
+    evidence: tuple = ()                # what each ownership source said
 
 
 @dataclass(frozen=True)
@@ -168,5 +201,7 @@ class SourceDocument:
     entities: tuple                     # model space
     blocks: dict = field(default_factory=dict)
     header: dict = field(default_factory=dict)   # recorded raw, never interpreted here
-    findings: tuple = ()                # route-level findings (e.g. unresolved owners)
+    findings: tuple = ()                # route-level findings
     notes: dict = field(default_factory=dict)
+    unplaced: tuple = ()                # UnplacedObservation: ownership not established (R8.2 Phase 0)
+    other_layouts: tuple = ()           # (layout name, observation): paper-space content, retained, not realised

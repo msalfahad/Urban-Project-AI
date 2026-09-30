@@ -324,80 +324,10 @@
       "reason": "engine/plaster_trade_engine.py and engine/wall_treatment_engine.py import research.a21_trace_sufficiency_01.parameters (pre-existing, frozen by B-7)"
     },
     {
-      "test": "test_r8_0_block_transforms.py::test_anonymous_block_correlated_by_handle_across_routes",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "RECONCILE",
-      "fixture": "F13",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_source_capability.py::test_xref_register_contract[F08_XREF_RESOLVED]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "CAPABILITY_REGISTER",
-      "fixture": "F08",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_source_capability.py::test_xref_register_contract[F08_XREF_MISSING]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "CAPABILITY_REGISTER",
-      "fixture": "F08",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_source_capability.py::test_xref_register_contract[F08_XREF_NESTED]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "CAPABILITY_REGISTER",
-      "fixture": "F08",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_source_capability.py::test_xref_register_contract[F08_XREF_UNLOADED]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "CAPABILITY_REGISTER",
-      "fixture": "F08",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_source_capability.py::test_xref_register_contract[F08_XREF_OVERLAY]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "CAPABILITY_REGISTER",
-      "fixture": "F08",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_source_capability.py::test_skipped_object_register_contract[F35_OLE2FRAME_IN_BLOCK]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "CAPABILITY_REGISTER",
-      "fixture": "F35",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_source_capability.py::test_skipped_object_register_contract[F36_PROXY_ENTITY]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "CAPABILITY_REGISTER",
-      "fixture": "F36",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_source_capability.py::test_skipped_object_register_contract[F19_CUSTOM_ON_WALL_LAYER]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "CAPABILITY_REGISTER",
-      "fixture": "F19",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
       "test": "test_r8_0_source_capability.py::test_custom_entity_on_wall_layer_blocks_region_contract",
       "class": "TARGET_NOT_IMPLEMENTED",
       "target": "SOURCE_PROFILE",
       "fixture": "F19",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_source_capability.py::test_route_missing_a_declared_class_contract",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "RECONCILE",
-      "fixture": "F20",
       "reason": "R8 module not written in R8.0 (tests first)"
     },
     {
@@ -406,13 +336,6 @@
       "target": "K1_REALISE:flattened (R8.3)",
       "fixture": "F07",
       "reason": "R8.1: K1 realises the exact elliptical arc; FLATTENING with a declared chord tolerance in mm needs an established MEASUREMENT_FRAME (R8.3). The K1 contract section \"flattened\" raises TargetNotImplemented (tests/r8_0/k1_harness.py)."
-    },
-    {
-      "test": "test_r8_0_source_capability.py::test_dynamic_block_visibility_contract",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "CAPABILITY_REGISTER",
-      "fixture": "F09",
-      "reason": "R8 module not written in R8.0 (tests first)"
     },
     {
       "test": "test_r8_0_source_capability.py::test_rotated_linear_dimension_contract",
@@ -426,13 +349,6 @@
       "class": "TARGET_NOT_IMPLEMENTED",
       "target": "CAD_TEXT_PLAIN",
       "fixture": "F11",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_source_capability.py::test_legacy_codepage_text_contract",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "CAPABILITY_REGISTER",
-      "fixture": "F14",
       "reason": "R8 module not written in R8.0 (tests first)"
     },
     {
@@ -608,20 +524,6 @@
       "class": "TARGET_NOT_IMPLEMENTED",
       "target": "PUBLISH_WITH_FRAME",
       "mutation": "MT-09",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_pending_contracts.py::test_contract[MT-05]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "RECONCILE",
-      "mutation": "MT-05",
-      "reason": "R8 module not written in R8.0 (tests first)"
-    },
-    {
-      "test": "test_r8_0_pending_contracts.py::test_contract[MT-06]",
-      "class": "TARGET_NOT_IMPLEMENTED",
-      "target": "RECONCILE",
-      "mutation": "MT-06",
       "reason": "R8 module not written in R8.0 (tests first)"
     },
     {
@@ -1110,6 +1012,31 @@
         "OCS_PLAN_FRAME": 5
       },
       "note": "KNOWN_DEFECT entries against cad_adapter are unchanged: cad_adapter is untouched in R8.1"
+    },
+    {
+      "round": "R8.2",
+      "date": "2026-09-30",
+      "moved_TARGET_NOT_IMPLEMENTED_to_PASS": [
+        "test_r8_0_block_transforms.py::test_anonymous_block_correlated_by_handle_across_routes",
+        "test_r8_0_pending_contracts.py::test_contract[MT-05]",
+        "test_r8_0_pending_contracts.py::test_contract[MT-06]",
+        "test_r8_0_source_capability.py::test_dynamic_block_visibility_contract",
+        "test_r8_0_source_capability.py::test_legacy_codepage_text_contract",
+        "test_r8_0_source_capability.py::test_route_missing_a_declared_class_contract",
+        "test_r8_0_source_capability.py::test_skipped_object_register_contract[F19_CUSTOM_ON_WALL_LAYER]",
+        "test_r8_0_source_capability.py::test_skipped_object_register_contract[F35_OLE2FRAME_IN_BLOCK]",
+        "test_r8_0_source_capability.py::test_skipped_object_register_contract[F36_PROXY_ENTITY]",
+        "test_r8_0_source_capability.py::test_xref_register_contract[F08_XREF_MISSING]",
+        "test_r8_0_source_capability.py::test_xref_register_contract[F08_XREF_NESTED]",
+        "test_r8_0_source_capability.py::test_xref_register_contract[F08_XREF_OVERLAY]",
+        "test_r8_0_source_capability.py::test_xref_register_contract[F08_XREF_RESOLVED]",
+        "test_r8_0_source_capability.py::test_xref_register_contract[F08_XREF_UNLOADED]"
+      ],
+      "by_target": {
+        "RECONCILE": 4,
+        "CAPABILITY_REGISTER": 10
+      },
+      "note": "CAPABILITY_REGISTER and RECONCILE bound via tests/r8_0/k1_harness.py to production census / reconcile; cad_adapter KNOWN_DEFECT entries unchanged"
     }
   ]
 }

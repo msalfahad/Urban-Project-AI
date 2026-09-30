@@ -151,7 +151,9 @@ def test_delimiters_are_counted_not_realised():
     dec["OBJECTS"] += [{"entity": n, "type": t, "handle": [0, 1, 900 + t], "ownerhandle": [4, 1, 2, 2]}
                        for n, t in (("BLOCK", 4), ("ENDBLK", 5), ("SEQEND", 6))]
     doc = L.to_document(dec)
-    assert len(doc.entities) == 1 and doc.notes == {"delimiter_BLOCK": 1, "delimiter_ENDBLK": 1, "delimiter_SEQEND": 1}
+    delims = {k: v for k, v in doc.notes.items() if k.startswith("delimiter_")}
+    assert len(doc.entities) == 1 and delims == {"delimiter_BLOCK": 1, "delimiter_ENDBLK": 1, "delimiter_SEQEND": 1}
+    assert doc.notes["raw_entity_rows"] == 4                       # R8.2 conservation: every row counted
 
 
 # ---------------------------------------------------------------- block headers
@@ -191,23 +193,30 @@ def test_missing_base_point_is_read_as_origin_with_a_visible_finding():
     assert [f.code for f in doc.findings] == [F.SOURCE_MAPPING_UNVERIFIED]
 
 
-def test_paper_space_entities_are_counted_not_mixed_into_model_space():
+def test_paper_space_entities_are_retained_not_mixed_into_model_space():
+    """R8.2: paper-space content is kept as observations (OTHER_LAYOUT), not merely counted."""
     dec = B.build({"entities": [{"kind": "LINE", "a": (0, 0), "b": (1, 0)}]})
     dec["OBJECTS"].append({"object": "BLOCK_HEADER", "type": 49, "handle": [0, 1, 800], "name": "*Paper_Space"})
     dec["OBJECTS"].append({"entity": "LINE", "type": 19, "handle": [0, 1, 801], "ownerhandle": [4, 1, 800, 800],
                            "start": [0, 0, 0], "end": [5, 0, 0]})
     doc = L.to_document(dec)
-    assert len(doc.entities) == 1 and doc.notes == {"other_layout_entities:*Paper_Space": 1}
+    assert len(doc.entities) == 1
+    assert [(lay, o.source_handle) for lay, o in doc.other_layouts] == [("*Paper_Space", "801")]
+    got = kernel.realise(doc).as_contract_dict()
+    assert got["segments"] == [((0.0, 0.0), (1.0, 0.0))] and got["dispositions"]["OTHER_LAYOUT"] == 1
 
 
-def test_unresolved_owner_is_a_non_blocking_document_finding():
+def test_unresolved_owner_is_quarantined_never_model_space():
+    """R8.2 Phase 0 (replaces R8.1's non-blocking model-space fallback): an owner
+    the source does not establish -> UNPLACED + blocking OWNER_UNRESOLVED."""
     dec = B.build({"entities": [{"kind": "LINE", "a": (0, 0), "b": (1, 0)}]})
     for o in dec["OBJECTS"]:
         if o.get("entity") == "LINE":
             o["ownerhandle"] = [4, 1, 12345, 12345]
     got = realise(dec)
-    assert codes(got) == [F.OWNER_UNRESOLVED] and got["findings"][0]["blocks_final"] is False
-    assert len(got["segments"]) == 1
+    assert codes(got) == [F.OWNER_UNRESOLVED] and got["findings"][0]["blocks_final"] is True
+    assert got["segments"] == [] and got["dispositions"] == {"UNPLACED": 1}
+    assert got["unplaced"][0]["reason"] == "OWNER_HANDLE_UNKNOWN" and got["unplaced"][0]["raw_owner"] == [4, 1, 12345, 12345]
 
 
 # ---------------------------------------------------------------- attributes
@@ -235,5 +244,6 @@ def test_every_entity_row_is_accounted_for(sid):
                                                                            for x in b.entities)
                    if e.kind == O.INSERT)
     mapped = len(doc.entities) + sum(len(b.entities) for b in doc.blocks.values())
-    noted = sum(doc.notes.values())
-    assert mapped + attached + noted == len(rows)
+    retained = len(doc.unplaced) + len(doc.other_layouts)
+    noted = sum(v for k, v in doc.notes.items() if k.startswith("delimiter_"))
+    assert mapped + attached + retained + noted == len(rows)

@@ -36,13 +36,17 @@ TARGETS = {
     "D1_TO_DOCUMENT": "engine.source.cad.libredwg_map:to_document",
     "K2_REALISE": "engine.source.cad.kernel_ezdxf:realise",
     "OCS_PLAN_FRAME": "engine.source.cad.kernel_ocs:plan_frame",
-    "CAPABILITY_REGISTER": "engine.source.cad.census:capability_register",
+    # R8.2: the census is route-neutral (SourceDocument in); the harness adds only test-schema fields
+    "CAPABILITY_REGISTER": "tests.r8_0.k1_harness:capability_register_decode",
+    "CAPABILITY_CENSUS_DOCUMENT": "engine.source.cad.census:capability_register",
     "CAD_TEXT_PLAIN": "engine.source.cad.text:plain",
     "DIMENSION_MEASURE": "engine.source.cad.dimensions:measured",
     # R8.1: URBAN-SRD-1 is a per-route representation digest; the D1 route builds the records
     "SOURCE_REPRESENTATION_DIGEST": "engine.source.cad.libredwg_map:source_representation_digest",
     "REALISED_GEOMETRY_DIGEST": "engine.source.digests:realised_geometry_digest",
-    "RECONCILE": "engine.source.reconcile:reconcile",
+    # R8.2: fixture routes (decode + R8.0 mutations) -> production D1/K1 -> production reconcile
+    "RECONCILE": "tests.r8_0.k1_harness:reconcile_routes",
+    "RECONCILE_REALISED": "engine.source.reconcile:reconcile",
     "UNIT_CONTEXT": "engine.source.units:resolve_unit_context",
     "FRAMES": "engine.source.frames:resolve_frames",
     "FRAME_EVIDENCE": "engine.source.frames:independent_evidence",
