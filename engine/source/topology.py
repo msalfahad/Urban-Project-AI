@@ -163,6 +163,22 @@ def _near_on_arc(prim, pt, eps):
     return _arc_param(prim, pt, eps)
 
 
+def _side(p, a, b):
+    """Signed distance of p from the line a-b."""
+    L = _d(a, b)
+    return 0.0 if L == 0.0 else ((b[0] - a[0]) * (p[1] - a[1]) - (b[1] - a[1]) * (p[0] - a[0])) / L
+
+
+def _decisive_crossing(a, b, c, d, eps):
+    """A proper crossing is decided only when each segment's ends lie on opposite sides of the other's line by MORE
+    than eps. An end within eps of the other line is a touch (handled by the end-point tests), never a crossing
+    computed from a near-zero determinant: near-collinear overlap cannot produce a crossing that depends on noise."""
+    s1, s2 = _side(c, a, b), _side(d, a, b)
+    s3, s4 = _side(a, c, d), _side(b, c, d)
+    return (abs(s1) > eps and abs(s2) > eps and abs(s3) > eps and abs(s4) > eps
+            and (s1 > 0) != (s2 > 0) and (s3 > 0) != (s4 > 0))
+
+
 def _pair_splits(P, Q, eps):
     """[(prim, param, point)] split points of a pair (both directions)."""
     out = []
@@ -177,7 +193,7 @@ def _pair_splits(P, Q, eps):
         r = (b[0] - a[0], b[1] - a[1])
         s = (d[0] - c[0], d[1] - c[1])
         den = r[0] * s[1] - r[1] * s[0]
-        if den != 0.0:
+        if den != 0.0 and _decisive_crossing(a, b, c, d, eps):
             qp = (c[0] - a[0], c[1] - a[1])
             t = (qp[0] * s[1] - qp[1] * s[0]) / den
             u = (qp[0] * r[1] - qp[1] * r[0]) / den
@@ -640,8 +656,18 @@ def _probe_pieces(probe, prims, eps):
         for prim, t, _pt in _pair_splits(pp, q, eps):
             if prim is pp:
                 ts.append(t)
-    ts = sorted(set(ts))
-    return [pp.point((t0 + t1) / 2) for t0, t1 in zip(ts, ts[1:]) if t1 > t0] or [pp.point(ts[0])]
+    # split parameters closer than eps along the probe are ONE split: a zero-length piece at a shared end point is
+    # numerical, and must not let the probe "touch" a site it only meets at a point (route-noise robustness)
+    scale = _d(pp.a, pp.b) if pp.kind == "S" else pp.r
+    merged = []
+    for t in sorted(set(ts)):
+        if merged and (t - merged[-1]) * scale <= eps:
+            continue
+        merged.append(t)
+    end = ts and max(ts)
+    if merged and end is not None and merged[-1] != end and (end - merged[-1]) * scale <= eps:
+        merged[-1] = end
+    return [pp.point((t0 + t1) / 2) for t0, t1 in zip(merged, merged[1:]) if t1 > t0] or [pp.point(merged[0])]
 
 
 def touched_sites(arr, sites, items, probe, eps, tol):
@@ -921,8 +947,10 @@ def analyse(items, probes, labels, *, revision_id, region_id, unit_native_to_mm,
             out["findings"].append({"code": LABEL_OCCURRENCE_SPLIT, "occurrence": occ, "sites": sorted(ss)})
     # ---- probes
     blocking_roles = set(blocking_roles)
+    out["probe_sites"] = {}
     for pb in sorted(probes, key=lambda z: z.source_id):
         hit = touched_sites(arr_n, sites_n, items, pb, e_n, e_n)
+        out["probe_sites"][pb.source_id] = hit
         for sid in hit:
             s = by_id[sid]
             s["contents"][pb.role] += 1
@@ -938,10 +966,18 @@ def analyse(items, probes, labels, *, revision_id, region_id, unit_native_to_mm,
     pairs = [(occ, (st["closure_a"], st["closure_b"])) for occ, st in sorted(opening_status.items())
              if st.get("state") == "CLOSED" and st.get("closure_b")]
     pairs += [(oid, tuple(cl)) for oid, cl in sorted((glazed_openings or {}).items()) if len(cl) == 2]
+    geom_of = {it.source_id: it.geometry for it in items if it.source_id.startswith("CLOSURE|")}
     for occ, (ca, cb) in pairs:
+        # an OPENING_SITE is the zone BETWEEN the two closures: bounded by both and lying inside their extent.
+        # A room that merely touches both closures (it wraps round the opening) is not one.
+        xs = [geom_of[c][k] for c in (ca, cb) for k in (0, 2)]
+        ys = [geom_of[c][k] for c in (ca, cb) for k in (1, 3)]
+        zone = (min(xs) - e_r, min(ys) - e_r, max(xs) + e_r, max(ys) + e_r)
         for sid in closure_sites.get(ca, set()) & closure_sites.get(cb, set()):
-            by_id[sid]["kind"] = OPENING_SITE
-            by_id[sid]["opening_of"] = occ
+            b = by_id[sid]["bbox"]
+            if zone[0] <= b[0] and zone[1] <= b[1] and b[2] <= zone[2] and b[3] <= zone[3]:
+                by_id[sid]["kind"] = OPENING_SITE
+                by_id[sid]["opening_of"] = occ
     if opening_symbol_occurrences:
         for occ, st in sorted(opening_status.items()):
             if st.get("state") != "CLOSED":

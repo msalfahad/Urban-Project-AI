@@ -1,0 +1,316 @@
+{
+ "SCHEMA": "URBAN_R8_8_OWNER_ACTION_REGISTER_V5",
+ "supersedes": "URBAN_R8_7_OWNER_ACTION_REGISTER_V4",
+ "rule": "an owner action is only something the owner can attach, confirm, approve or decide; installing tools, running comparisons and re-anchoring claims are engineering actions",
+ "moved_to_engineering": [
+  "ESTABLISH_NEW_DWG_SOURCE_IDENTITY",
+  "ALLOW_DECODER_INSTALL_IN_ENVIRONMENT",
+  "ANCHOR_SELECTED_PLAN_TO_EXACT_NEW_DWG"
+ ],
+ "required_now": [],
+ "headline": "NO OWNER ACTION REQUIRED FOR THE NEXT CODING ROUND",
+ "actions": [
+  {
+   "action_id": "CONFIRM_QORTUBA_NATIVE_UNIT",
+   "project": "QORTUBA",
+   "question": "What is the native drawing unit of this exact DWG (one drawing unit = how many millimetres)?",
+   "why_needed": "every round-1 area scales with the square of the unit; the active path read cm from INSUNITS, which the canonical policy does not accept as confirmation. The room method also uses mm thresholds, so the unit affects which rooms exist, not only their scale",
+   "exact_source_hash": "2ec3a9c8b66eb2e129275b87010f4a8d79d7e5bdcc31c1897c14fd7e5647d355",
+   "choices": [
+    "mm",
+    "cm",
+    "m",
+    "other (state it)"
+   ],
+   "what_is_blocked": [
+    "unit context",
+    "measurement frame",
+    "physical value of Q-03, Q-03P, Q-11, Q-12, Q-13, Q-14"
+   ],
+   "urgency": "HIGH",
+   "status": "RESOLVED",
+   "resolved_only_by": "explicit owner input recorded as an authorised claim (release V3)",
+   "resolved_by_claim": "QORTUBA-NATIVE-UNIT-OWNER-001",
+   "resolved_value": {
+    "unit": "cm",
+    "native_to_mm": 10.0
+   },
+   "resolved_by": "Mohammad",
+   "resolved_role": "PROJECT_OWNER",
+   "resolved_at": "2026-10-01",
+   "effect": "UNIT_CONTEXT CONFIRMED_BY_HUMAN for this exact source hash only; the INSUNITS declaration is kept as evidence; nothing transferred to P7757, Al Rashed or any other source",
+   "binds_only_to": "2ec3a9c8b66eb2e129275b87010f4a8d79d7e5bdcc31c1897c14fd7e5647d355",
+   "not_transferred_to": [
+    "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+    "the DWG the Qortuba DXF was converted from (not supplied)",
+    "7f61f3acdd62d62dc745f8b522f8136cb41c575df36ec6d9f27c2fe48fea41e3",
+    "3f7a556c69786834c16c355504437b5abcd1f5aa3a9625b33a2c5b14213f0227"
+   ],
+   "note": "historical revision only; unchanged"
+  },
+  {
+   "action_id": "CONFIRM_QORTUBA_AUTHORITATIVE_REVISION",
+   "project": "QORTUBA",
+   "question": "Which Qortuba drawing is the current design?",
+   "status": "RESOLVED",
+   "answer": "the newer four-layout drawing (QORTUBA_REV_NEW); the older 2ec3a9c8 stays historical",
+   "resolved_by_claim": "QORTUBA-AUTHORITATIVE-REVISION-OWNER-001",
+   "exact_source_hash": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+   "supersedes_action": "DECIDE_QORTUBA_DRAWING_REVISION",
+   "what_is_blocked": [],
+   "urgency": "-"
+  },
+  {
+   "action_id": "SELECT_QORTUBA_BOTTOM_MOST_PLAN",
+   "project": "QORTUBA",
+   "question": "Which of the four stacked SECOND FLOOR PLAN layouts is measured?",
+   "status": "RESOLVED",
+   "answer": "PLAN_VARIANT_4_SELECTED (bottom-most, title 0x1AC, region RC:MODEL_SPACE:4267:540:1649)",
+   "resolved_by_claim": "QORTUBA-PLAN-SELECTION-OWNER-001",
+   "exact_source_hash": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+   "supersedes_action": "REVIEW_QORTUBA_SECOND_FLOOR_PLAN_DESIGNATION",
+   "what_is_blocked": [],
+   "urgency": "-",
+   "use_limit": "SHADOW / DIAGNOSTIC until ANCHOR_SELECTED_PLAN_TO_EXACT_NEW_DWG"
+  },
+  {
+   "action_id": "CONFIRM_QORTUBA_NEW_REVISION_NATIVE_UNIT",
+   "project": "QORTUBA",
+   "question": "What is the native unit of the newer drawing?",
+   "status": "RESOLVED",
+   "answer": "1 native unit = 1 cm (native_to_mm 10.0)",
+   "resolved_by_claim": "QORTUBA-NEW-REVISION-NATIVE-UNIT-OWNER-001",
+   "exact_source_hash": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+   "what_is_blocked": [],
+   "urgency": "-",
+   "anchor_state": "OWNER_CONFIRMED_PENDING_EXACT_SOURCE_ANCHOR"
+  },
+  {
+   "action_id": "REVIEW_QORTUBA_Q14_CEILING_CONDITIONS",
+   "project": "QORTUBA",
+   "question": "In these ten second-floor spaces, is there any ceiling void, stair opening, shaft, open-to-above area or change of ceiling (bulkhead / drop) that is NOT the same as the floor area shown?",
+   "why_needed": "Q-14 sets ceiling area = floor region; the method records VOID / STAIR_OPENING / SHAFT / OPEN_TO_ABOVE = False without testing them (no reflected ceiling plan exists)",
+   "exact_source_hash": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+   "choices": [
+    "NO (ceiling = floor area)",
+    "YES (name the spaces)",
+    "NOT SURE"
+   ],
+   "what_is_blocked": [
+    "Q-14 release"
+   ],
+   "urgency": "MEDIUM",
+   "status": "RESOLVED",
+   "resolved_only_by": "explicit owner input recorded as an authorised claim (release V3)",
+   "previous_action_id": "CONFIRM_Q14_CEILING_HAS_NO_VOID_OR_OPENING",
+   "review_image": "QORTUBA_Q14_CEILING_OWNER_REVIEW.png",
+   "affected_spaces": [
+    [
+     "RM-2eaf198b",
+     "HALL / whgm",
+     36.37
+    ],
+    [
+     "RM-1bf02f9e",
+     "M.B.ROOM",
+     20.8075
+    ],
+    [
+     "RM-dd405ee7",
+     "BED.ROOM",
+     18.7525
+    ],
+    [
+     "RM-c9bc432b",
+     "BED.ROOM",
+     16.5375
+    ],
+    [
+     "RM-45ddc40d",
+     "PAINTRY",
+     11.685
+    ],
+    [
+     "RM-894527f7",
+     "DRESS",
+     11.985
+    ],
+    [
+     "RM-a8bebaab",
+     "BATH",
+     8.5525
+    ],
+    [
+     "RM-3ef43270",
+     "BATH",
+     5.1
+    ],
+    [
+     "RM-1a81d91e",
+     "UNLABELLED_INTERNAL_SPACE",
+     4.51
+    ],
+    [
+     "RM-2618ef17",
+     "BATH",
+     4.21
+    ]
+   ],
+   "answer": "ceiling footprint = floor footprint for the ten Q-14 spaces of the selected apartment layout only",
+   "resolved_by_claim": "QORTUBA-Q14-CEILING-FOOTPRINT-OWNER-001",
+   "scope": "QORTUBA_REV_NEW / RC:MODEL_SPACE:4267:540:1649 / ten labelled spaces / Q-14 only; never a floor-wide, villa-wide or company rule"
+  },
+  {
+   "action_id": "SUPPLY_QORTUBA_NEW_REVISION_DWG",
+   "project": "QORTUBA",
+   "question": "Please send the original DWG of the newer four-layout Qortuba drawing (the file 'qurtoba villah.dxf' was made from), unchanged.",
+   "why_needed": "every new-revision claim and value is anchored to the DXF only; the DWG anchors revision identity, plan selection, unit, the Q-14 claim and the quantities",
+   "exact_source_hash": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+   "choices": null,
+   "status": "FILE_RECEIVED",
+   "urgency": "HIGH",
+   "what_is_blocked": [
+    "ANCHOR_SELECTED_PLAN_TO_EXACT_NEW_DWG",
+    "any release of a new-revision quantity"
+   ],
+   "supersedes_action": "SUPPLY_QORTUBA_SOURCE_DWG_OF_DXF",
+   "resolved_only_by": "a file, then hash + identity checks",
+   "FILE_RECEIVED": {
+    "sha256": "e4babbc2ded14d8b01d64fbfd4b373e6a09ba60c4490a56e6305a82c9e47171f",
+    "bytes": 35110771
+   },
+   "SOURCE_IDENTITY": "NOT_ESTABLISHED",
+   "note": "the owner supplied the DWG (sha256 e4babbc2...); nothing more is asked of the owner for it. Its identity with the DXF is an Urban engineering task (ENGINEERING_ACTION_REGISTER)",
+   "outstanding_request": false
+  },
+  {
+   "action_id": "APPROVE_QORTUBA_NEW_ROUND1_BASELINE",
+   "project": "QORTUBA",
+   "status": "NOT_REQUESTED_YET",
+   "question": "Approve the new-revision round-1 rows as the baseline (after they are established on the DWG)",
+   "exact_source_hash": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+   "what_is_blocked": [
+    "migration transaction step 1"
+   ],
+   "urgency": "LATER",
+   "supersedes_action": "APPROVE_QORTUBA_ROUND1_BASELINE",
+   "note": "deliberately not asked: the new-revision topology is not stable enough to approve (R8.8: Q-03/Q-11/Q-13/Q-14 blocked on the new revision)",
+   "outstanding_request": false
+  },
+  {
+   "action_id": "SUPPLY_INDEPENDENT_P7757_DXF",
+   "project": "P7757",
+   "question": "Please export the exact P7757 DWG (AutoCAD 2018 DXF, AC1032, or ODA) with no edits, explodes, purges, audits, rescale or cleanup, and state tool, version and settings.",
+   "why_needed": "INDEPENDENT_REAL_RECONCILIATION is BLOCKED_EXTERNAL_INPUT; the two supplied DXFs are ezdxf conversions (DIAGNOSTIC_NONQUALIFYING_CONVERSION)",
+   "exact_source_hash": "7f61f3acdd62d62dc745f8b522f8136cb41c575df36ec6d9f27c2fe48fea41e3",
+   "choices": null,
+   "what_is_blocked": [
+    "P7757 independent reconciliation"
+   ],
+   "urgency": "MEDIUM",
+   "status": "OPEN",
+   "resolved_only_by": "explicit owner input recorded as an authorised claim (release V3)",
+   "FILE_RECEIVED": {
+    "state": "RECEIVED",
+    "sha256": "ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4",
+    "source_fidelity": "SOURCE_FIDELITY_PASS",
+    "intake_class": "HIGH_FIDELITY_PROVENANCE_UNVERIFIED_DXF"
+   },
+   "INDEPENDENT_PROVENANCE_ESTABLISHED": "NO",
+   "admission": "PROVENANCE_UNVERIFIED",
+   "note": "high-fidelity file received; independence still unproven, so nothing qualifies Standing decision; not needed for the next coding round and not re-asked in R8.8.",
+   "needed_for_next_coding_round": false,
+   "outstanding_request": false
+  },
+  {
+   "action_id": "DECIDE_ALRASHED_COLUMN_DEDUCTION_METHOD",
+   "project": "ALRASHED",
+   "question": "Are column footprints inside a room deducted from the floor-finish quantity?",
+   "why_needed": "the closed-polyline defect fix would change BA-092 from 146.97 to 146.7697 m2 (column-net); neither value may be chosen until the trade rule is decided",
+   "exact_source_hash": "299c61b1df7660384e027d44c0a29d8b64c92995843c0517cea05d485974660c",
+   "choices": [
+    "DEDUCT_ALL_COLUMN_FOOTPRINTS",
+    "DO_NOT_DEDUCT",
+    "DEDUCT_ABOVE_A_STATED_AREA"
+   ],
+   "what_is_blocked": [
+    "Al Rashed floor-finish rows",
+    "applying the closed-bit fix"
+   ],
+   "urgency": "MEDIUM",
+   "status": "OPEN",
+   "resolved_only_by": "explicit owner input recorded as an authorised claim (release V3)",
+   "previous_action_id": "DECIDE_COLUMN_DEDUCTION_METHOD",
+   "needed_for_next_coding_round": false,
+   "outstanding_request": false,
+   "note": "Standing decision; not needed for the next coding round and not re-asked in R8.8."
+  },
+  {
+   "action_id": "CONFIRM_P7757_NATIVE_UNIT",
+   "project": "P7757",
+   "question": "What is the native drawing unit of this exact DWG?",
+   "why_needed": "P7757 unit context is UNCONFIRMED",
+   "exact_source_hash": "7f61f3acdd62d62dc745f8b522f8136cb41c575df36ec6d9f27c2fe48fea41e3",
+   "choices": [
+    "mm",
+    "cm",
+    "m",
+    "other"
+   ],
+   "what_is_blocked": [
+    "P7757 physical values"
+   ],
+   "urgency": "LOW",
+   "status": "OPEN",
+   "resolved_only_by": "explicit owner input recorded as an authorised claim (release V3)",
+   "note": "the P7757 DXF declares $INSUNITS 4 (mm), the same declaration the DWG carries; a declaration is not a confirmation Standing decision; not needed for the next coding round and not re-asked in R8.8.",
+   "needed_for_next_coding_round": false,
+   "outstanding_request": false
+  },
+  {
+   "action_id": "RESOLVE_ALRASHED_UNIT",
+   "project": "ALRASHED",
+   "question": "Which unit governs this DWG (the evidence conflicts)?",
+   "why_needed": "Al Rashed unit context is CONFLICT: every value is VALUE_NOT_COMPUTABLE",
+   "exact_source_hash": "299c61b1df7660384e027d44c0a29d8b64c92995843c0517cea05d485974660c",
+   "choices": [
+    "mm",
+    "cm",
+    "m",
+    "other"
+   ],
+   "what_is_blocked": [
+    "all Al Rashed physical values"
+   ],
+   "urgency": "LOW",
+   "status": "OPEN",
+   "resolved_only_by": "explicit owner input recorded as an authorised claim (release V3)",
+   "previous_action_id": "RESOLVE_ALRASHED_UNIT_CONFLICT",
+   "needed_for_next_coding_round": false,
+   "outstanding_request": false,
+   "note": "Standing decision; not needed for the next coding round and not re-asked in R8.8."
+  },
+  {
+   "action_id": "REVIEW_ALRASHED_FLOOR_WINDOWS",
+   "project": "ALRASHED",
+   "question": "Are the adapter's three floor windows the plan regions?",
+   "why_needed": "the windows are adapter constants, PENDING_REVIEW",
+   "exact_source_hash": "299c61b1df7660384e027d44c0a29d8b64c92995843c0517cea05d485974660c",
+   "choices": [
+    "ACCEPT",
+    "REJECT",
+    "CHANGE"
+   ],
+   "what_is_blocked": [
+    "Al Rashed region designation"
+   ],
+   "urgency": "LOW",
+   "status": "OPEN",
+   "resolved_only_by": "explicit owner input recorded as an authorised claim (release V3)",
+   "previous_action_id": "REVIEW_ALRASHED_ADAPTER_WINDOWS",
+   "needed_for_next_coding_round": false,
+   "outstanding_request": false,
+   "note": "Standing decision; not needed for the next coding round and not re-asked in R8.8."
+  }
+ ]
+}

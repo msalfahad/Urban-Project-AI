@@ -1,0 +1,399 @@
+{
+ "SCHEMA": "URBAN_R8_8_DECISION_REGISTER_V1",
+ "assessment_before_coding": {
+  "1_biggest_risk_topology_not_decoder": "YES: the decoder fixes source identity; the room path amplified 4.4e-11 into 1.64 m2 on ONE route",
+  "2_perfect_parser_makes_QS01_safe": "NO: raster cells, exact axis predicates and band heuristics are discontinuous in their input; a perfect parser still sits on cliffs",
+  "3_H584_unacceptable": "YES",
+  "4_admission_before_topology": "YES",
+  "5_R8_7_membership_exact_for_curves": "NO: 5-point sampling",
+  "6_R8_7_source_part_id_source_stable": "NO: an ordinal over realised output per kind",
+  "7_safer_architecture": "YES, implemented: a vector topology with NO axis predicate, three tolerance bands and a two-build stability certificate (a site is certified only if identical at eps_n and eps_r), positive role admission, closures only from proven openings, label occurrences from source structure"
+ },
+ "decisions": [
+  {
+   "id": "R88-D01",
+   "decision": "TS01 (engine/source/topology + room_topology) replaces QS01 as the room / space topology path in SHADOW; QS01 stays research/legacy only"
+  },
+  {
+   "id": "R88-D02",
+   "decision": "TOPOLOGY_TOLERANCE_POLICY_V1 frozen (digest 263d2adf1d1770e1): eps_n = 2**-30 x max|coord|, eps_r = 1 mm via the unit claim, jamb 0.25"
+  },
+  {
+   "id": "R88-D03",
+   "decision": "region membership exact (RM-EXACT-1, RM-TANGENT-1)"
+  },
+  {
+   "id": "R88-D04",
+   "decision": "source sub-part identity from source structure (Lineage.sub_part); R8.6 calculation path re-frozen deliberately (kernel.py)"
+  },
+  {
+   "id": "R88-D05",
+   "decision": "a method exclusion needs role authority (MethodExclusion); the R8.7 bare declaration and its test are superseded; QS01 contract v2"
+  },
+  {
+   "id": "R88-D06",
+   "decision": "visibility is an authority for parts, texts and dimensions; nothing is VISIBLE by default"
+  },
+  {
+   "id": "R88-D07",
+   "decision": "ROOM TOPOLOGY consumes only TOPOLOGY_BOUNDARY / STRUCTURAL_OBSTACLE / GLAZING_BOUNDARY / OPENING_BOUNDARY; unknown blocks the sites it touches"
+  },
+  {
+   "id": "R88-D08",
+   "decision": "two stamps in one physical space = MULTIPLE_SEMANTIC_LABELS (REVIEW); no rule picks a winner"
+  },
+  {
+   "id": "R88-D09",
+   "decision": "owner register V5: only owner-doable actions; tooling / comparison / re-anchoring moved to the engineering register"
+  },
+  {
+   "id": "R88-D10",
+   "decision": "the new DWG identity stays NOT_ESTABLISHED; not on the topology critical path"
+  }
+ ],
+ "findings": [
+  {
+   "id": "F-R88-01",
+   "finding": "R8.7 region sampler unsafe: an arc whose 5 samples are inside crossed the boundary (test A); same for an ellipse between parameters (test B)"
+  },
+  {
+   "id": "F-R88-02",
+   "finding": "R8.7 part_index was a per-kind ordinal over realised output: a polyline's later spans changed index when an earlier span was degenerate or of another kind; ezdxf-exploded parts had no source span at all (now None, fail closed)"
+  },
+  {
+   "id": "F-R88-03",
+   "finding": "R8.7 builders marked every TEXT and DIMENSION VISIBLE (no layer state, no dynamic state); a text under an unresolved dynamic block could label a room"
+  },
+  {
+   "id": "F-R88-04",
+   "finding": "R8.7 bare exclusions let 8 ellipses out with no authority; all 8 are now proven door swings (GR-02) with established closures"
+  },
+  {
+   "id": "F-R88-05",
+   "finding": "the legacy QS01 path has exact axis predicates and raster cells; H584 (4.4e-11) moved 1.6425 m2 BED.ROOM <-> UNLABELLED; TS01 has no axis predicate"
+  },
+  {
+   "id": "F-R88-06",
+   "finding": "FIRNTUR (furniture by name, misspelled) has no lexicon role and blocks HALL and M.B.ROOM/DRESS; the R8.5 active-path profile even listed it as WALL-like"
+  },
+  {
+   "id": "F-R88-07",
+   "finding": "open passages join physically connected spaces: old M.B.ROOM + DRESS and HALL + lobby; new HALL + BED.ROOM + BATH (the redrawn partition). The legacy method split them by chords without source evidence"
+  },
+  {
+   "id": "F-R88-08",
+   "finding": "post-freeze (found by the K1/K2 run): a near-collinear overlap could create a crossing from a near-zero determinant -> crossings now need ends beyond eps on both sides (no tolerance number changed)"
+  },
+  {
+   "id": "F-R88-09",
+   "finding": "post-freeze (found by the K1/K2 run): a zero-length probe piece at a shared corner let an unknown line 'touch' a site on one route only -> split parameters within eps merged"
+  },
+  {
+   "id": "F-R88-10",
+   "finding": "post-freeze (found by the new-revision run): a room touching both closures of one door was classed OPENING_SITE -> an opening site must lie between them"
+  },
+  {
+   "id": "F-R88-11",
+   "finding": "legacy Q-03 17.8625 includes one bathroom's door threshold strip (0.12 m2); TS01 keeps every opening strip as its own OPENING_SITE (17.7425): METHOD_DIFFERENCE, a trade rule for later, not a topology error"
+  },
+  {
+   "id": "F-R88-12",
+   "finding": "new revision: bound-xref block 'BED 3' (171 parts) proven FURNITURE (GR-03) and excluded; three 'SF3' occurrences (81 parts, layer PM) have no role evidence -> UNKNOWN -> HALL blocked"
+  },
+  {
+   "id": "F-R88-13",
+   "finding": "unknown layers '0', RCC, BB, Layer4, BOUNDRY W block only the stair core and the roof; OFFICE NAME (title logo, 571 parts + 37 unrealised REGIONs) touches no bounded site"
+  },
+  {
+   "id": "F-R88-14",
+   "finding": "unrealised source entities (REGION / ACIS, RTEXT, proxies, xref content) were invisible to every room method; TS01 now accounts for them per layer"
+  },
+  {
+   "id": "F-R88-15",
+   "finding": "the old Q-14 has no TS01 ceiling basis: the owner's ceiling = floor claim is scoped to REV_NEW (OWNER_SCOPE_MISMATCH for REV_OLD), as intended"
+  },
+  {
+   "id": "F-R88-16",
+   "finding": "any visible text inside a site counts as a label occurrence (conservative); no annotation text sits inside a Qortuba apartment room"
+  },
+  {
+   "id": "F-R88-17",
+   "finding": "no frozen / off layer exists in either Qortuba revision (both routes agree); three unresolved dynamic blocks exist in the new file, none in the region"
+  }
+ ],
+ "post_freeze_changes": {
+  "tolerance_numbers": "unchanged",
+  "fixes": [
+   "F-R88-08",
+   "F-R88-09",
+   "F-R88-10"
+  ],
+  "freeze_commit": "9f77e4d"
+ },
+ "gates": {
+  "MIGRATION_PLANNING_READY": "YES",
+  "MIGRATION_EXECUTION_READY": "NO",
+  "PRODUCTION_MIGRATION": "NO",
+  "TS01_ROOM_TOPOLOGY": "IMPLEMENTED_SHADOW",
+  "QS01": "LEGACY_RESEARCH_ONLY",
+  "OLD_QORTUBA_ROUTE_STABLE_TOPOLOGY": "YES",
+  "NEW_DWG_SOURCE_IDENTITY": "NOT_ESTABLISHED",
+  "OWNER_ACTION_REQUIRED_NOW": "NONE"
+ },
+ "answers": {
+  "1_r87_sampler_unsafe": "YES (tests A, B reproduce the miss)",
+  "2_membership_now_exact": "YES: exact bounds and edge intersections for SEGMENT / ARC / CIRCLE / ELLIPTICAL_ARC; eps_n noise only; tangent rule frozen",
+  "3_r87_identity_order_dependent": "YES (per-kind realised ordinal)",
+  "4_subpart_identity_explicit": "YES (Lineage.sub_part from source structure, both routes)",
+  "5_shuffle_changes_identity": "NO (tests: shuffle, unrelated insertion)",
+  "6_visibility_authoritative": "YES for parts, texts and dimensions (entity flag, frozen / off layer, ByLayer, dynamic state); layer table not read -> VISIBILITY_UNRESOLVED",
+  "7_ellipses_safe_to_exclude": "YES, all eight, by proven role (not by declaration)",
+  "8_ellipse_counts": {
+   "TOPOLOGY_IRRELEVANT_PROVEN": 8
+  },
+  "9_why_205_furniture_parts_affected_MB_ROOM": "the legacy room method had no admission layer: every curve in the region entered its band / raster arrangement, so the bound-xref bed block's lines bounded cells inside M.B.ROOM",
+  "10_can_furniture_enter_topology": "NO: proven furniture is excluded; unproven furniture-like geometry is UNKNOWN and blocks its room",
+  "11_tolerance_policy": "three bands + certificate: noise eps_n = 2**-30 x max|coord| (numeric representation), authored eps_r = 1 mm (via the unit claim); a site counts only if identical at both; no axis predicate exists",
+  "12_frozen_before_totals": "the numbers yes (before any Qortuba topology run); the policy register and the TS01 rules were committed (9f77e4d) after the old-K1 development run and before the K2 cross-route run and the new-revision diagnostic",
+  "13_old_k1_vs_k2_same_topology": "YES: 75 sites, identical ids, labels, issues, contents; max area difference 6.0e-11 m2; rows equal: True",
+  "14_H584_can_move_area": "NO (sites bounded by H584 identical across routes)",
+  "15_above_tolerance_perturbation": "inside the ambiguous band -> TOLERANCE_SENSITIVE (REVIEW); above eps_r -> the topology genuinely changes (rooms merge -> MULTIPLE_SEMANTIC_LABELS)",
+  "16_two_labels_one_space": "MULTIPLE_SEMANTIC_LABELS -> REVIEW_REQUIRED; a stamp is one source occurrence",
+  "17_title_block_room": "NO (GR-01 / GR-15 never admitted; a cut frame occurrence blocks the input)",
+  "18_new_revision_sites": [
+   {
+    "site": "SITE-eaae022599294151",
+    "stamps": [
+     [
+      "ROOF",
+      "s'P"
+     ]
+    ],
+    "area_m2": 127.509952,
+    "status": "REVIEW_REQUIRED",
+    "issues": [
+     "TOPOLOGY_ROLE_UNRESOLVED"
+    ]
+   },
+   {
+    "site": "SITE-4e2a2a3375396340",
+    "stamps": [
+     [
+      "BED.ROOM",
+      "yvtmk,L"
+     ],
+     [
+      "BATH",
+      "plHL"
+     ],
+     [
+      "HALL",
+      "whgm"
+     ]
+    ],
+    "area_m2": 68.54,
+    "status": "REVIEW_REQUIRED",
+    "issues": [
+     "MULTIPLE_SEMANTIC_LABELS",
+     "TOPOLOGY_ROLE_UNRESOLVED"
+    ]
+   },
+   {
+    "site": "SITE-a6405850100155ac",
+    "stamps": [
+     [
+      "M.B.ROOM",
+      "k,LVzdsD"
+     ],
+     [
+      "DRESS",
+      "lBfS"
+     ]
+    ],
+    "area_m2": 33.2,
+    "status": "REVIEW_REQUIRED",
+    "issues": [
+     "MULTIPLE_SEMANTIC_LABELS",
+     "TOPOLOGY_ROLE_UNRESOLVED"
+    ]
+   },
+   {
+    "site": "SITE-daca396d6d730e60",
+    "stamps": [
+     [
+      "BED.ROOM",
+      "yvtmk,L"
+     ]
+    ],
+    "area_m2": 16.327,
+    "status": "CERTIFIED",
+    "issues": []
+   },
+   {
+    "site": "SITE-8c1c7563d5252c50",
+    "stamps": [
+     [
+      "PAINTRY",
+      "jpqdV"
+     ]
+    ],
+    "area_m2": 11.685,
+    "status": "CERTIFIED",
+    "issues": []
+   },
+   {
+    "site": "SITE-1c4abf65f9b5db1e",
+    "stamps": [
+     [
+      "BATH",
+      "plHL"
+     ]
+    ],
+    "area_m2": 8.5525,
+    "status": "CERTIFIED",
+    "issues": []
+   },
+   {
+    "site": "SITE-fe8ed5548fb4310e",
+    "stamps": [
+     [
+      "BATH",
+      "plHL"
+     ]
+    ],
+    "area_m2": 4.09,
+    "status": "CERTIFIED",
+    "issues": []
+   }
+  ],
+  "19_rows_computable": {
+   "OLD (both routes)": {
+    "Q-03": [
+     "COMPUTED_SHADOW",
+     17.7425
+    ],
+    "Q-03P": [
+     "COMPUTED_SHADOW",
+     11.685
+    ],
+    "Q-11": [
+     "COMPUTED_SHADOW",
+     17.7425
+    ],
+    "Q-12": [
+     "COMPUTED_SHADOW",
+     11.685
+    ],
+    "Q-13": [
+     "BLOCKED",
+     null
+    ],
+    "Q-14": [
+     "BLOCKED",
+     null
+    ]
+   },
+   "NEW": {
+    "Q-03": [
+     "BLOCKED",
+     null
+    ],
+    "Q-03P": [
+     "COMPUTED_SHADOW",
+     11.685
+    ],
+    "Q-11": [
+     "BLOCKED",
+     null
+    ],
+    "Q-12": [
+     "COMPUTED_SHADOW",
+     11.685
+    ],
+    "Q-13": [
+     "BLOCKED",
+     null
+    ],
+    "Q-14": [
+     "BLOCKED",
+     null
+    ]
+   }
+  },
+  "20_what_blocks": {
+   "Q-03": [
+    {
+     "site": "SITE-4e2a2a3375396340",
+     "why": "stamps of different row classes in one physical space (['DRY', 'WET']): MULTIPLE_SEMANTIC_LABELS"
+    }
+   ],
+   "Q-11": [
+    {
+     "site": "SITE-4e2a2a3375396340",
+     "why": "stamps of different row classes in one physical space (['DRY', 'WET']): MULTIPLE_SEMANTIC_LABELS"
+    }
+   ],
+   "Q-13": [
+    {
+     "site": "SITE-4e2a2a3375396340",
+     "why": "stamps of different row classes in one physical space (['DRY', 'WET']): MULTIPLE_SEMANTIC_LABELS"
+    },
+    {
+     "site": "SITE-a6405850100155ac",
+     "why": [
+      "TOPOLOGY_ROLE_UNRESOLVED"
+     ],
+     "blocked_by": [
+      "QORTUBA_REV_NEW|H1445||SEGMENT|0",
+      "QORTUBA_REV_NEW|H1446||SEGMENT|0",
+      "QORTUBA_REV_NEW|H1669||SEGMENT|0",
+      "QORTUBA_REV_NEW|H1670||SEGMENT|0",
+      "QORTUBA_REV_NEW|H514||SEGMENT|0",
+      "QORTUBA_REV_NEW|H517||SEGMENT|0"
+     ]
+    }
+   ],
+   "Q-14": [
+    {
+     "site": "SITE-4e2a2a3375396340",
+     "why": [
+      "TOPOLOGY_ROLE_UNRESOLVED"
+     ],
+     "blocked_by": [
+      "QORTUBA_REV_NEW|H612083|700047|ARC|0",
+      "QORTUBA_REV_NEW|H612083|700051|ARC|0",
+      "QORTUBA_REV_NEW|H612083|700052|ARC|0",
+      "QORTUBA_REV_NEW|H612084|700047|ARC|0",
+      "QORTUBA_REV_NEW|H612084|700051|ARC|0",
+      "QORTUBA_REV_NEW|H612084|700052|ARC|0",
+      "QORTUBA_REV_NEW|H612085|700047|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612085|700051|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612085|700052|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612086|700047|ARC|0",
+      "QORTUBA_REV_NEW|H612086|700051|ARC|0",
+      "QORTUBA_REV_NEW|H612086|700052|ARC|0"
+     ]
+    },
+    {
+     "site": "SITE-a6405850100155ac",
+     "why": [
+      "TOPOLOGY_ROLE_UNRESOLVED"
+     ],
+     "blocked_by": [
+      "QORTUBA_REV_NEW|H1445||SEGMENT|0",
+      "QORTUBA_REV_NEW|H1446||SEGMENT|0",
+      "QORTUBA_REV_NEW|H1669||SEGMENT|0",
+      "QORTUBA_REV_NEW|H1670||SEGMENT|0",
+      "QORTUBA_REV_NEW|H514||SEGMENT|0",
+      "QORTUBA_REV_NEW|H517||SEGMENT|0"
+     ]
+    }
+   ]
+  },
+  "21_ac1032_decoder_relevant_to_migration": "YES for anchoring the new revision before any migration; NOT for the topology architecture",
+  "22_biggest_remaining_technical_risk": "role evidence and semantic subdivision: unknown-role geometry and physically connected multi-room spaces now block most rows; the door / glazing closure rules are proven on one drafting family only",
+  "23_owner_action_now": "NONE (NO OWNER ACTION REQUIRED FOR THE NEXT CODING ROUND)",
+  "24_next_round": "R8.9 role evidence + semantic subdivision with authority paths, and TS01 shadow on a second drawing family (P7757) - no migration"
+ },
+ "recommendation": "do not migrate; keep QS01 legacy; make TS01's blockers resolvable by evidence (reviewed role claims with an authority path, evidenced subdivision), then prove TS01 on a second drawing family before any baseline approval"
+}

@@ -317,7 +317,16 @@ def build_k2_records(dxf_path, revision_id, out_pickle):
         raise ValueError(f"K2 could not load {dxf_path}: {[f.detail for f in findings]}")
     rg = K2R.realise(doc)
     k = CB.K2(revision_id, doc, rg)
+    def layer_of(obs_id):
+        try:
+            e = k.entity(obs_id) if obs_id else None
+            return e.dxf.get("layer", None) if e is not None else None
+        except Exception:                                  # noqa: BLE001 - e.g. RTEXT exposes no DXF layer attribute
+            return None
     blob = {"parts": k.parts(), "texts": k.texts(), "dims": k.dimensions(),
+            "unrealised": [{"code": f.code, "obs_id": f.obs_id, "layer": layer_of(f.obs_id),
+                            "path": [p.split(":", 1)[1].split("[")[0] for p in f.instance_path]}
+                           for f in rg.findings],
             "header": {h: doc.header.get(h) for h in ("$INSUNITS", "$DIMLFAC", "$FINGERPRINTGUID", "$VERSIONGUID")},
             "findings": [(f.code, f.obs_id, tuple(f.instance_path), f.detail) for f in rg.findings],
             "hidden": rg.hidden, "dispositions": dict(rg.dispositions), "dxf_sha256": sha(dxf_path)}

@@ -134,3 +134,21 @@ def test_same_fixtures_give_the_same_first_run():
                               .encode()).hexdigest()
     parts = H.two_rooms(gap=(100, 180)) + H.box(20, 100, 100, 200, 150, layer="FURN", path=("7",))
     assert digest(run(parts, LABELS)) == digest(run(parts, LABELS))
+
+
+def test_post_freeze_fix_near_collinear_overlap_never_creates_a_noise_crossing():
+    """F-R88-08 (found by the old-revision K1/K2 run): two overlapping wall lines, one tilted by 4e-12, must not
+    produce a 'crossing' from a near-zero determinant; the topology is that of the exact overlap."""
+    exact = H.two_rooms() + [H.seg(900, 100, 400, 900, 400)]
+    tilted = H.two_rooms() + [H.seg(900, 100, 400, 900, 400 + 4e-12)]
+    assert summary(run(exact, LABELS)) == summary(run(tilted, LABELS))
+
+
+def test_post_freeze_fix_a_probe_meeting_a_site_at_one_point_does_not_touch_it():
+    """F-R88-09: an unknown line starting exactly at a room's corner and running into the neighbour touches the
+    neighbour only; a 1e-12 change of its start point must not change which sites it blocks."""
+    from engine.source import geometry_role as GR
+    for dy in (0.0, 1e-12, -1e-12):
+        r = run(H.two_rooms() + [H.seg(800, 500, 400 + dy, 700, 300, layer="UNKNOWN_LAYER")], LABELS)
+        blocked = sorted(tuple(s["labels"]) for s in r["sites"] if GR.UNKNOWN_PHYSICAL in s["contents"])
+        assert blocked == [("E6",)]

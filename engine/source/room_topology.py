@@ -76,8 +76,56 @@ def topology_inputs(inp: CI.CanonicalMeasurementInput, *, frame_insert, eps_n):
     return items, probes, labels, adm, closures, status, door_probes
 
 
+UNREALISED_CODES = ("UNHANDLED", "CUSTOM_CLASS", "PROXY", "SKIPPED", "UNSUPPORTED", "UNSUPPORTED_FRAME",
+                    "XREF_CONTENT_NOT_IN_SOURCE", "XREF_NOT_RESOLVED", "XREF_UNLOADED", "MISSING_BLOCK_DEFINITION",
+                    "NESTING_LIMIT", "UNVERIFIED_FOR_QTO_USE")
+UNREALISED_BOUNDARY_LAYER = "UNREALISED_ENTITY_ON_BOUNDARY_LAYER"
+UNREALISED_IN_SITE = "UNREALISED_ENTITY_POSSIBLY_IN_SITE"
+
+
+def unrealised_accounting(unrealised, inp, res, frame_insert):
+    """Source entities the route could not realise (custom / proxy / unhandled / xref content / carried fills) have
+    no placed geometry, so the topology never sees them. They are never ignored silently:
+      * inside the region's frame occurrence -> they belong to the sheet frame (no room content);
+      * on a WALL / COLUMN / GLAZING layer -> the whole input is INCOMPLETE (a boundary may be missing);
+      * on a layer whose realised parts touch a bounded site -> every such site gets UNREALISED_IN_SITE (blocking);
+      * otherwise -> recorded, with the evidence (no realised part of that layer lies in any bounded site)."""
+    out = {"blocking_input": [], "site_issues": defaultdict(list), "recorded": []}
+    occ_in = {_occ(p) for p in inp.parts}
+    layer_sites = defaultdict(set)
+    for p in inp.parts:
+        for sid in res["probe_sites"].get(p.identity.key, ()):
+            layer_sites[p.layer].add(sid)
+    for u in sorted(unrealised, key=lambda z: (z["obs_id"] or "", z["code"])):
+        if u["code"] not in UNREALISED_CODES:
+            continue
+        path = tuple(u.get("path") or ())
+        top = ("I" + path[0]) if path else None
+        if top is not None and top not in occ_in:
+            continue                                            # inside an occurrence outside the region
+        if path and frame_insert is not None and path[0] == frame_insert:
+            out["recorded"].append(dict(u, disposition="IN_SHEET_FRAME_OCCURRENCE"))
+            continue
+        lr = GR.layer_role(u.get("layer"))
+        if u.get("layer") is None:
+            out["blocking_input"].append(dict(u, disposition="UNREALISED_ENTITY_LAYER_UNKNOWN"))
+            continue
+        if lr in GR.BOUNDARY_LAYER_ROLES:
+            out["blocking_input"].append(dict(u, disposition=UNREALISED_BOUNDARY_LAYER))
+            continue
+        sites = sorted(layer_sites.get(u.get("layer"), ()))
+        if sites:
+            for sid in sites:
+                out["site_issues"][sid].append(u["obs_id"])
+            out["recorded"].append(dict(u, disposition=UNREALISED_IN_SITE, sites=sites))
+        else:
+            out["recorded"].append(dict(u, disposition="NOT_IN_ANY_BOUNDED_SITE_BY_LAYER_EVIDENCE",
+                                        evidence="no realised part of this layer in the region touches a bounded site"))
+    return out
+
+
 def run(inp: CI.CanonicalMeasurementInput, *, frame_insert, expected_revision_id=None, selected_region_id=None,
-        contract=TS01) -> dict:
+        contract=TS01, unrealised=None) -> dict:
     v = CI.validate(inp, contract, expected_revision_id=expected_revision_id, selected_region_id=selected_region_id)
     out = {"method_id": contract.method_id, "validation": v, "state": v["state"], "sites": None}
     if v["state"] != CI.COMPLETE:
@@ -93,6 +141,17 @@ def run(inp: CI.CanonicalMeasurementInput, *, frame_insert, expected_revision_id
                     unit_native_to_mm=inp.unit_native_to_mm, max_abs_coordinate=max(coords),
                     blocking_roles=GR.TOPOLOGY_BLOCKING, opening_status=status,
                     opening_symbol_occurrences=door_probes, glazed_openings=adm["glazed_openings"])
+    if unrealised is not None:
+        acc = unrealised_accounting(unrealised, inp, res, frame_insert)
+        res["unrealised"] = {"blocking_input": acc["blocking_input"], "recorded": acc["recorded"],
+                             "sites": {k: sorted(v) for k, v in acc["site_issues"].items()}}
+        for s_ in res["sites"]:
+            if s_["site_id"] in acc["site_issues"] or acc["blocking_input"]:
+                s_["issues"] = sorted(set(s_["issues"]) | {UNREALISED_IN_SITE if not acc["blocking_input"]
+                                                          else UNREALISED_BOUNDARY_LAYER})
+                s_["status"] = T.REVIEW_REQUIRED
+    else:
+        res["unrealised"] = {"state": "NOT_SUPPLIED: the caller did not account for unrealised source entities"}
     res["roles"] = adm
     res["openings"] = status
     res["closures"] = closures

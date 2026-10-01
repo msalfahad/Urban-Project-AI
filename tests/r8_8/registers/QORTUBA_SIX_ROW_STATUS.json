@@ -1,0 +1,915 @@
+{
+ "SCHEMA": "URBAN_R8_8_QORTUBA_SIX_ROW_STATUS_V1",
+ "method": "TS01_CERTIFIED_ROOM_TOPOLOGY",
+ "row_rules": {
+  "Q-03 / Q-11": "sites whose stamps are BATH",
+  "Q-03P / Q-12": "sites whose stamps are PAINTRY",
+  "Q-13": "apartment sites whose stamps are neither (plus unlabelled internal spaces)",
+  "Q-14": "every apartment site, ceiling = floor footprint ONLY where the scoped owner claim QORTUBA-Q14-CEILING-FOOTPRINT-OWNER-001 applies (revision, region, space, item, purpose)"
+ },
+ "rows": {
+  "OLD_K1": {
+   "Q-03": {
+    "state": "COMPUTED_SHADOW",
+    "value": 17.7425,
+    "value_if_split_review_accepted": null,
+    "sites_used": [
+     {
+      "site": "SITE-50b24a2e0df863f2",
+      "stamps": [
+       [
+        "BATH",
+        "plHL"
+       ]
+      ],
+      "area_m2": 4.09,
+      "area_bound_m2": 0.009
+     },
+     {
+      "site": "SITE-9cd4555183e82aa2",
+      "stamps": [
+       [
+        "BATH",
+        "plHL"
+       ]
+      ],
+      "area_m2": 8.5525,
+      "area_bound_m2": 0.0119
+     },
+     {
+      "site": "SITE-dd2d6c85412cee23",
+      "stamps": [
+       [
+        "BATH",
+        "plHL"
+       ]
+      ],
+      "area_m2": 5.1,
+      "area_bound_m2": 0.0094
+     }
+    ],
+    "split_invariant_sites": [],
+    "blockers": []
+   },
+   "Q-03P": {
+    "state": "COMPUTED_SHADOW",
+    "value": 11.685,
+    "value_if_split_review_accepted": null,
+    "sites_used": [
+     {
+      "site": "SITE-b324fca08f742b0d",
+      "stamps": [
+       [
+        "PAINTRY",
+        "jpqdV"
+       ]
+      ],
+      "area_m2": 11.685,
+      "area_bound_m2": 0.0139
+     }
+    ],
+    "split_invariant_sites": [],
+    "blockers": []
+   },
+   "Q-11": {
+    "state": "COMPUTED_SHADOW",
+    "value": 17.7425,
+    "value_if_split_review_accepted": null,
+    "sites_used": [
+     {
+      "site": "SITE-50b24a2e0df863f2",
+      "stamps": [
+       [
+        "BATH",
+        "plHL"
+       ]
+      ],
+      "area_m2": 4.09,
+      "area_bound_m2": 0.009
+     },
+     {
+      "site": "SITE-9cd4555183e82aa2",
+      "stamps": [
+       [
+        "BATH",
+        "plHL"
+       ]
+      ],
+      "area_m2": 8.5525,
+      "area_bound_m2": 0.0119
+     },
+     {
+      "site": "SITE-dd2d6c85412cee23",
+      "stamps": [
+       [
+        "BATH",
+        "plHL"
+       ]
+      ],
+      "area_m2": 5.1,
+      "area_bound_m2": 0.0094
+     }
+    ],
+    "split_invariant_sites": [],
+    "blockers": []
+   },
+   "Q-12": {
+    "state": "COMPUTED_SHADOW",
+    "value": 11.685,
+    "value_if_split_review_accepted": null,
+    "sites_used": [
+     {
+      "site": "SITE-b324fca08f742b0d",
+      "stamps": [
+       [
+        "PAINTRY",
+        "jpqdV"
+       ]
+      ],
+      "area_m2": 11.685,
+      "area_bound_m2": 0.0139
+     }
+    ],
+    "split_invariant_sites": [],
+    "blockers": []
+   },
+   "Q-13": {
+    "state": "BLOCKED",
+    "value": null,
+    "value_if_split_review_accepted": null,
+    "sites_used": [
+     {
+      "site": "SITE-72ff1e5a3c150d7d",
+      "stamps": [
+       [
+        "BED.ROOM",
+        "yvtmk,L"
+       ]
+      ],
+      "area_m2": 16.5075,
+      "area_bound_m2": 0.0168
+     },
+     {
+      "site": "SITE-fec6c675b81ee36d",
+      "stamps": [
+       [
+        "BED.ROOM",
+        "yvtmk,L"
+       ]
+      ],
+      "area_m2": 20.1525,
+      "area_bound_m2": 0.0264
+     }
+    ],
+    "split_invariant_sites": [],
+    "blockers": [
+     {
+      "site": "SITE-56af91bb145d30cc",
+      "why": [
+       "TOPOLOGY_ROLE_UNRESOLVED"
+      ],
+      "blocked_by": [
+       "QORTUBA_REV_OLD|H1587||SEGMENT|0",
+       "QORTUBA_REV_OLD|H1588||SEGMENT|0",
+       "QORTUBA_REV_OLD|H1589||SEGMENT|0",
+       "QORTUBA_REV_OLD|H1590||SEGMENT|0",
+       "QORTUBA_REV_OLD|H511||SEGMENT|0",
+       "QORTUBA_REV_OLD|H524||SEGMENT|0"
+      ]
+     },
+     {
+      "site": "SITE-8e1f0b3a736abb02",
+      "why": [
+       "TOPOLOGY_ROLE_UNRESOLVED"
+      ],
+      "blocked_by": [
+       "QORTUBA_REV_OLD|H1445||SEGMENT|0",
+       "QORTUBA_REV_OLD|H1446||SEGMENT|0",
+       "QORTUBA_REV_OLD|H1669||SEGMENT|0",
+       "QORTUBA_REV_OLD|H1670||SEGMENT|0",
+       "QORTUBA_REV_OLD|H514||SEGMENT|0",
+       "QORTUBA_REV_OLD|H517||SEGMENT|0"
+      ]
+     }
+    ]
+   },
+   "Q-14": {
+    "state": "BLOCKED",
+    "value": null,
+    "value_if_split_review_accepted": null,
+    "sites_used": [
+     {
+      "site": "SITE-50b24a2e0df863f2",
+      "stamps": [
+       [
+        "BATH",
+        "plHL"
+       ]
+      ],
+      "area_m2": 4.09,
+      "area_bound_m2": 0.009
+     },
+     {
+      "site": "SITE-72ff1e5a3c150d7d",
+      "stamps": [
+       [
+        "BED.ROOM",
+        "yvtmk,L"
+       ]
+      ],
+      "area_m2": 16.5075,
+      "area_bound_m2": 0.0168
+     },
+     {
+      "site": "SITE-9cd4555183e82aa2",
+      "stamps": [
+       [
+        "BATH",
+        "plHL"
+       ]
+      ],
+      "area_m2": 8.5525,
+      "area_bound_m2": 0.0119
+     },
+     {
+      "site": "SITE-b324fca08f742b0d",
+      "stamps": [
+       [
+        "PAINTRY",
+        "jpqdV"
+       ]
+      ],
+      "area_m2": 11.685,
+      "area_bound_m2": 0.0139
+     },
+     {
+      "site": "SITE-dd2d6c85412cee23",
+      "stamps": [
+       [
+        "BATH",
+        "plHL"
+       ]
+      ],
+      "area_m2": 5.1,
+      "area_bound_m2": 0.0094
+     },
+     {
+      "site": "SITE-fec6c675b81ee36d",
+      "stamps": [
+       [
+        "BED.ROOM",
+        "yvtmk,L"
+       ]
+      ],
+      "area_m2": 20.1525,
+      "area_bound_m2": 0.0264
+     }
+    ],
+    "split_invariant_sites": [],
+    "blockers": [
+     {
+      "site": "SITE-56af91bb145d30cc",
+      "why": [
+       "TOPOLOGY_ROLE_UNRESOLVED"
+      ],
+      "blocked_by": [
+       "QORTUBA_REV_OLD|H1587||SEGMENT|0",
+       "QORTUBA_REV_OLD|H1588||SEGMENT|0",
+       "QORTUBA_REV_OLD|H1589||SEGMENT|0",
+       "QORTUBA_REV_OLD|H1590||SEGMENT|0",
+       "QORTUBA_REV_OLD|H511||SEGMENT|0",
+       "QORTUBA_REV_OLD|H524||SEGMENT|0"
+      ]
+     },
+     {
+      "site": "SITE-8e1f0b3a736abb02",
+      "why": [
+       "TOPOLOGY_ROLE_UNRESOLVED"
+      ],
+      "blocked_by": [
+       "QORTUBA_REV_OLD|H1445||SEGMENT|0",
+       "QORTUBA_REV_OLD|H1446||SEGMENT|0",
+       "QORTUBA_REV_OLD|H1669||SEGMENT|0",
+       "QORTUBA_REV_OLD|H1670||SEGMENT|0",
+       "QORTUBA_REV_OLD|H514||SEGMENT|0",
+       "QORTUBA_REV_OLD|H517||SEGMENT|0"
+      ]
+     },
+     {
+      "site": "SITE-50b24a2e0df863f2",
+      "why": "Q-14 ceiling basis: OWNER_SCOPE_MISMATCH ['revision_id']"
+     },
+     {
+      "site": "SITE-72ff1e5a3c150d7d",
+      "why": "Q-14 ceiling basis: OWNER_SCOPE_MISMATCH ['revision_id']"
+     },
+     {
+      "site": "SITE-9cd4555183e82aa2",
+      "why": "Q-14 ceiling basis: OWNER_SCOPE_MISMATCH ['revision_id']"
+     },
+     {
+      "site": "SITE-b324fca08f742b0d",
+      "why": "Q-14 ceiling basis: OWNER_SCOPE_MISMATCH ['revision_id']"
+     },
+     {
+      "site": "SITE-dd2d6c85412cee23",
+      "why": "Q-14 ceiling basis: OWNER_SCOPE_MISMATCH ['revision_id']"
+     },
+     {
+      "site": "SITE-fec6c675b81ee36d",
+      "why": "Q-14 ceiling basis: OWNER_SCOPE_MISMATCH ['revision_id']"
+     }
+    ]
+   }
+  },
+  "OLD_K2": {
+   "Q-03": {
+    "state": "COMPUTED_SHADOW",
+    "value": 17.7425,
+    "value_if_split_review_accepted": null,
+    "sites_used": [
+     {
+      "site": "SITE-50b24a2e0df863f2",
+      "stamps": [
+       [
+        "BATH",
+        "plHL"
+       ]
+      ],
+      "area_m2": 4.09,
+      "area_bound_m2": 0.009
+     },
+     {
+      "site": "SITE-9cd4555183e82aa2",
+      "stamps": [
+       [
+        "BATH",
+        "plHL"
+       ]
+      ],
+      "area_m2": 8.5525,
+      "area_bound_m2": 0.0119
+     },
+     {
+      "site": "SITE-dd2d6c85412cee23",
+      "stamps": [
+       [
+        "BATH",
+        "plHL"
+       ]
+      ],
+      "area_m2": 5.1,
+      "area_bound_m2": 0.0094
+     }
+    ],
+    "split_invariant_sites": [],
+    "blockers": []
+   },
+   "Q-03P": {
+    "state": "COMPUTED_SHADOW",
+    "value": 11.685,
+    "value_if_split_review_accepted": null,
+    "sites_used": [
+     {
+      "site": "SITE-b324fca08f742b0d",
+      "stamps": [
+       [
+        "PAINTRY",
+        "jpqdV"
+       ]
+      ],
+      "area_m2": 11.685,
+      "area_bound_m2": 0.0139
+     }
+    ],
+    "split_invariant_sites": [],
+    "blockers": []
+   },
+   "Q-11": {
+    "state": "COMPUTED_SHADOW",
+    "value": 17.7425,
+    "value_if_split_review_accepted": null,
+    "sites_used": [
+     {
+      "site": "SITE-50b24a2e0df863f2",
+      "stamps": [
+       [
+        "BATH",
+        "plHL"
+       ]
+      ],
+      "area_m2": 4.09,
+      "area_bound_m2": 0.009
+     },
+     {
+      "site": "SITE-9cd4555183e82aa2",
+      "stamps": [
+       [
+        "BATH",
+        "plHL"
+       ]
+      ],
+      "area_m2": 8.5525,
+      "area_bound_m2": 0.0119
+     },
+     {
+      "site": "SITE-dd2d6c85412cee23",
+      "stamps": [
+       [
+        "BATH",
+        "plHL"
+       ]
+      ],
+      "area_m2": 5.1,
+      "area_bound_m2": 0.0094
+     }
+    ],
+    "split_invariant_sites": [],
+    "blockers": []
+   },
+   "Q-12": {
+    "state": "COMPUTED_SHADOW",
+    "value": 11.685,
+    "value_if_split_review_accepted": null,
+    "sites_used": [
+     {
+      "site": "SITE-b324fca08f742b0d",
+      "stamps": [
+       [
+        "PAINTRY",
+        "jpqdV"
+       ]
+      ],
+      "area_m2": 11.685,
+      "area_bound_m2": 0.0139
+     }
+    ],
+    "split_invariant_sites": [],
+    "blockers": []
+   },
+   "Q-13": {
+    "state": "BLOCKED",
+    "value": null,
+    "value_if_split_review_accepted": null,
+    "sites_used": [
+     {
+      "site": "SITE-72ff1e5a3c150d7d",
+      "stamps": [
+       [
+        "BED.ROOM",
+        "yvtmk,L"
+       ]
+      ],
+      "area_m2": 16.5075,
+      "area_bound_m2": 0.0168
+     },
+     {
+      "site": "SITE-fec6c675b81ee36d",
+      "stamps": [
+       [
+        "BED.ROOM",
+        "yvtmk,L"
+       ]
+      ],
+      "area_m2": 20.1525,
+      "area_bound_m2": 0.0264
+     }
+    ],
+    "split_invariant_sites": [],
+    "blockers": [
+     {
+      "site": "SITE-56af91bb145d30cc",
+      "why": [
+       "TOPOLOGY_ROLE_UNRESOLVED"
+      ],
+      "blocked_by": [
+       "QORTUBA_REV_OLD|H1587||SEGMENT|0",
+       "QORTUBA_REV_OLD|H1588||SEGMENT|0",
+       "QORTUBA_REV_OLD|H1589||SEGMENT|0",
+       "QORTUBA_REV_OLD|H1590||SEGMENT|0",
+       "QORTUBA_REV_OLD|H511||SEGMENT|0",
+       "QORTUBA_REV_OLD|H524||SEGMENT|0"
+      ]
+     },
+     {
+      "site": "SITE-8e1f0b3a736abb02",
+      "why": [
+       "TOPOLOGY_ROLE_UNRESOLVED"
+      ],
+      "blocked_by": [
+       "QORTUBA_REV_OLD|H1445||SEGMENT|0",
+       "QORTUBA_REV_OLD|H1446||SEGMENT|0",
+       "QORTUBA_REV_OLD|H1669||SEGMENT|0",
+       "QORTUBA_REV_OLD|H1670||SEGMENT|0",
+       "QORTUBA_REV_OLD|H514||SEGMENT|0",
+       "QORTUBA_REV_OLD|H517||SEGMENT|0"
+      ]
+     }
+    ]
+   },
+   "Q-14": {
+    "state": "BLOCKED",
+    "value": null,
+    "value_if_split_review_accepted": null,
+    "sites_used": [
+     {
+      "site": "SITE-50b24a2e0df863f2",
+      "stamps": [
+       [
+        "BATH",
+        "plHL"
+       ]
+      ],
+      "area_m2": 4.09,
+      "area_bound_m2": 0.009
+     },
+     {
+      "site": "SITE-72ff1e5a3c150d7d",
+      "stamps": [
+       [
+        "BED.ROOM",
+        "yvtmk,L"
+       ]
+      ],
+      "area_m2": 16.5075,
+      "area_bound_m2": 0.0168
+     },
+     {
+      "site": "SITE-9cd4555183e82aa2",
+      "stamps": [
+       [
+        "BATH",
+        "plHL"
+       ]
+      ],
+      "area_m2": 8.5525,
+      "area_bound_m2": 0.0119
+     },
+     {
+      "site": "SITE-b324fca08f742b0d",
+      "stamps": [
+       [
+        "PAINTRY",
+        "jpqdV"
+       ]
+      ],
+      "area_m2": 11.685,
+      "area_bound_m2": 0.0139
+     },
+     {
+      "site": "SITE-dd2d6c85412cee23",
+      "stamps": [
+       [
+        "BATH",
+        "plHL"
+       ]
+      ],
+      "area_m2": 5.1,
+      "area_bound_m2": 0.0094
+     },
+     {
+      "site": "SITE-fec6c675b81ee36d",
+      "stamps": [
+       [
+        "BED.ROOM",
+        "yvtmk,L"
+       ]
+      ],
+      "area_m2": 20.1525,
+      "area_bound_m2": 0.0264
+     }
+    ],
+    "split_invariant_sites": [],
+    "blockers": [
+     {
+      "site": "SITE-56af91bb145d30cc",
+      "why": [
+       "TOPOLOGY_ROLE_UNRESOLVED"
+      ],
+      "blocked_by": [
+       "QORTUBA_REV_OLD|H1587||SEGMENT|0",
+       "QORTUBA_REV_OLD|H1588||SEGMENT|0",
+       "QORTUBA_REV_OLD|H1589||SEGMENT|0",
+       "QORTUBA_REV_OLD|H1590||SEGMENT|0",
+       "QORTUBA_REV_OLD|H511||SEGMENT|0",
+       "QORTUBA_REV_OLD|H524||SEGMENT|0"
+      ]
+     },
+     {
+      "site": "SITE-8e1f0b3a736abb02",
+      "why": [
+       "TOPOLOGY_ROLE_UNRESOLVED"
+      ],
+      "blocked_by": [
+       "QORTUBA_REV_OLD|H1445||SEGMENT|0",
+       "QORTUBA_REV_OLD|H1446||SEGMENT|0",
+       "QORTUBA_REV_OLD|H1669||SEGMENT|0",
+       "QORTUBA_REV_OLD|H1670||SEGMENT|0",
+       "QORTUBA_REV_OLD|H514||SEGMENT|0",
+       "QORTUBA_REV_OLD|H517||SEGMENT|0"
+      ]
+     },
+     {
+      "site": "SITE-50b24a2e0df863f2",
+      "why": "Q-14 ceiling basis: OWNER_SCOPE_MISMATCH ['revision_id']"
+     },
+     {
+      "site": "SITE-72ff1e5a3c150d7d",
+      "why": "Q-14 ceiling basis: OWNER_SCOPE_MISMATCH ['revision_id']"
+     },
+     {
+      "site": "SITE-9cd4555183e82aa2",
+      "why": "Q-14 ceiling basis: OWNER_SCOPE_MISMATCH ['revision_id']"
+     },
+     {
+      "site": "SITE-b324fca08f742b0d",
+      "why": "Q-14 ceiling basis: OWNER_SCOPE_MISMATCH ['revision_id']"
+     },
+     {
+      "site": "SITE-dd2d6c85412cee23",
+      "why": "Q-14 ceiling basis: OWNER_SCOPE_MISMATCH ['revision_id']"
+     },
+     {
+      "site": "SITE-fec6c675b81ee36d",
+      "why": "Q-14 ceiling basis: OWNER_SCOPE_MISMATCH ['revision_id']"
+     }
+    ]
+   }
+  },
+  "NEW_K2": {
+   "Q-03": {
+    "state": "BLOCKED",
+    "value": null,
+    "value_if_split_review_accepted": null,
+    "sites_used": [
+     {
+      "site": "SITE-1c4abf65f9b5db1e",
+      "stamps": [
+       [
+        "BATH",
+        "plHL"
+       ]
+      ],
+      "area_m2": 8.5525,
+      "area_bound_m2": 0.0119
+     },
+     {
+      "site": "SITE-fe8ed5548fb4310e",
+      "stamps": [
+       [
+        "BATH",
+        "plHL"
+       ]
+      ],
+      "area_m2": 4.09,
+      "area_bound_m2": 0.009
+     }
+    ],
+    "split_invariant_sites": [],
+    "blockers": [
+     {
+      "site": "SITE-4e2a2a3375396340",
+      "why": "stamps of different row classes in one physical space (['DRY', 'WET']): MULTIPLE_SEMANTIC_LABELS"
+     }
+    ]
+   },
+   "Q-03P": {
+    "state": "COMPUTED_SHADOW",
+    "value": 11.685,
+    "value_if_split_review_accepted": null,
+    "sites_used": [
+     {
+      "site": "SITE-8c1c7563d5252c50",
+      "stamps": [
+       [
+        "PAINTRY",
+        "jpqdV"
+       ]
+      ],
+      "area_m2": 11.685,
+      "area_bound_m2": 0.0139
+     }
+    ],
+    "split_invariant_sites": [],
+    "blockers": []
+   },
+   "Q-11": {
+    "state": "BLOCKED",
+    "value": null,
+    "value_if_split_review_accepted": null,
+    "sites_used": [
+     {
+      "site": "SITE-1c4abf65f9b5db1e",
+      "stamps": [
+       [
+        "BATH",
+        "plHL"
+       ]
+      ],
+      "area_m2": 8.5525,
+      "area_bound_m2": 0.0119
+     },
+     {
+      "site": "SITE-fe8ed5548fb4310e",
+      "stamps": [
+       [
+        "BATH",
+        "plHL"
+       ]
+      ],
+      "area_m2": 4.09,
+      "area_bound_m2": 0.009
+     }
+    ],
+    "split_invariant_sites": [],
+    "blockers": [
+     {
+      "site": "SITE-4e2a2a3375396340",
+      "why": "stamps of different row classes in one physical space (['DRY', 'WET']): MULTIPLE_SEMANTIC_LABELS"
+     }
+    ]
+   },
+   "Q-12": {
+    "state": "COMPUTED_SHADOW",
+    "value": 11.685,
+    "value_if_split_review_accepted": null,
+    "sites_used": [
+     {
+      "site": "SITE-8c1c7563d5252c50",
+      "stamps": [
+       [
+        "PAINTRY",
+        "jpqdV"
+       ]
+      ],
+      "area_m2": 11.685,
+      "area_bound_m2": 0.0139
+     }
+    ],
+    "split_invariant_sites": [],
+    "blockers": []
+   },
+   "Q-13": {
+    "state": "BLOCKED",
+    "value": null,
+    "value_if_split_review_accepted": null,
+    "sites_used": [
+     {
+      "site": "SITE-daca396d6d730e60",
+      "stamps": [
+       [
+        "BED.ROOM",
+        "yvtmk,L"
+       ]
+      ],
+      "area_m2": 16.327,
+      "area_bound_m2": 0.01658
+     }
+    ],
+    "split_invariant_sites": [],
+    "blockers": [
+     {
+      "site": "SITE-4e2a2a3375396340",
+      "why": "stamps of different row classes in one physical space (['DRY', 'WET']): MULTIPLE_SEMANTIC_LABELS"
+     },
+     {
+      "site": "SITE-a6405850100155ac",
+      "why": [
+       "TOPOLOGY_ROLE_UNRESOLVED"
+      ],
+      "blocked_by": [
+       "QORTUBA_REV_NEW|H1445||SEGMENT|0",
+       "QORTUBA_REV_NEW|H1446||SEGMENT|0",
+       "QORTUBA_REV_NEW|H1669||SEGMENT|0",
+       "QORTUBA_REV_NEW|H1670||SEGMENT|0",
+       "QORTUBA_REV_NEW|H514||SEGMENT|0",
+       "QORTUBA_REV_NEW|H517||SEGMENT|0"
+      ]
+     }
+    ]
+   },
+   "Q-14": {
+    "state": "BLOCKED",
+    "value": null,
+    "value_if_split_review_accepted": null,
+    "sites_used": [
+     {
+      "site": "SITE-1c4abf65f9b5db1e",
+      "stamps": [
+       [
+        "BATH",
+        "plHL"
+       ]
+      ],
+      "area_m2": 8.5525,
+      "area_bound_m2": 0.0119
+     },
+     {
+      "site": "SITE-8c1c7563d5252c50",
+      "stamps": [
+       [
+        "PAINTRY",
+        "jpqdV"
+       ]
+      ],
+      "area_m2": 11.685,
+      "area_bound_m2": 0.0139
+     },
+     {
+      "site": "SITE-daca396d6d730e60",
+      "stamps": [
+       [
+        "BED.ROOM",
+        "yvtmk,L"
+       ]
+      ],
+      "area_m2": 16.327,
+      "area_bound_m2": 0.01658
+     },
+     {
+      "site": "SITE-fe8ed5548fb4310e",
+      "stamps": [
+       [
+        "BATH",
+        "plHL"
+       ]
+      ],
+      "area_m2": 4.09,
+      "area_bound_m2": 0.009
+     }
+    ],
+    "split_invariant_sites": [],
+    "blockers": [
+     {
+      "site": "SITE-4e2a2a3375396340",
+      "why": [
+       "TOPOLOGY_ROLE_UNRESOLVED"
+      ],
+      "blocked_by": [
+       "QORTUBA_REV_NEW|H612083|700047|ARC|0",
+       "QORTUBA_REV_NEW|H612083|700051|ARC|0",
+       "QORTUBA_REV_NEW|H612083|700052|ARC|0",
+       "QORTUBA_REV_NEW|H612084|700047|ARC|0",
+       "QORTUBA_REV_NEW|H612084|700051|ARC|0",
+       "QORTUBA_REV_NEW|H612084|700052|ARC|0",
+       "QORTUBA_REV_NEW|H612085|700047|SEGMENT|0",
+       "QORTUBA_REV_NEW|H612085|700051|SEGMENT|0",
+       "QORTUBA_REV_NEW|H612085|700052|SEGMENT|0",
+       "QORTUBA_REV_NEW|H612086|700047|ARC|0",
+       "QORTUBA_REV_NEW|H612086|700051|ARC|0",
+       "QORTUBA_REV_NEW|H612086|700052|ARC|0"
+      ]
+     },
+     {
+      "site": "SITE-a6405850100155ac",
+      "why": [
+       "TOPOLOGY_ROLE_UNRESOLVED"
+      ],
+      "blocked_by": [
+       "QORTUBA_REV_NEW|H1445||SEGMENT|0",
+       "QORTUBA_REV_NEW|H1446||SEGMENT|0",
+       "QORTUBA_REV_NEW|H1669||SEGMENT|0",
+       "QORTUBA_REV_NEW|H1670||SEGMENT|0",
+       "QORTUBA_REV_NEW|H514||SEGMENT|0",
+       "QORTUBA_REV_NEW|H517||SEGMENT|0"
+      ]
+     }
+    ]
+   }
+  }
+ },
+ "legacy_R8_6_old_revision": {
+  "Q-03": 17.8625,
+  "Q-03P": 11.685,
+  "Q-11": 17.8625,
+  "Q-12": 11.685,
+  "Q-13": 108.9625,
+  "Q-14": 138.51
+ },
+ "comparison_made_after_the_rows": {
+  "Q-03": {
+   "TS01_OLD_K1": 17.7425,
+   "legacy_QS01": 17.8625
+  },
+  "Q-03P": {
+   "TS01_OLD_K1": 11.685,
+   "legacy_QS01": 11.685
+  },
+  "Q-11": {
+   "TS01_OLD_K1": 17.7425,
+   "legacy_QS01": 17.8625
+  },
+  "Q-12": {
+   "TS01_OLD_K1": 11.685,
+   "legacy_QS01": 11.685
+  },
+  "Q-13": {
+   "TS01_OLD_K1": null,
+   "legacy_QS01": 108.9625
+  },
+  "Q-14": {
+   "TS01_OLD_K1": null,
+   "legacy_QS01": 138.51
+  }
+ }
+}
