@@ -17,7 +17,9 @@ Build (no axis predicates, no rasters, no sampling)
     4  faces by the left-face walk; signed area exact for arcs (chord polygon + circular segments)
     5  holes: the outer cycle of a nested component is subtracted from the innermost face containing it
 Sites
-    every bounded face is a site. site_id = digest(revision, region, sorted boundary SOURCE identities) - not its
+    every bounded face is a site. Its walk is split into OUTER boundary, HOLE boundary and INTERIOR STUBS (edges the
+    walk passes on both sides): `perimeter` is the face-walk length (it bounds the certificate, conservatively);
+    `boundary_perimeter` excludes stubs (R8.9). site_id = digest(revision, region, sorted boundary SOURCE identities) - not its
     name, not its coordinates. A room name is an attribute (its label occurrences).
 Certificate
     the build is repeated at eps_r (topology_policy). A site is CERTIFIED only if the eps_r build contains the same
@@ -628,6 +630,24 @@ def sites_of(arr, revision_id, region_id):
         per = _cycle_perimeter(arr, cyc) + sum(_cycle_perimeter(arr, hc) for hc in hole_cycles)
         sid = "SITE-" + hashlib.sha256("|".join([revision_id or "", region_id or "", "OUTER"] + src + ["HOLES"] + hsrc)
                                        .encode()).hexdigest()[:16]
+        # R8.9: the boundary a trade may use is the ONE-SIDED part of the walk; an edge the walk passes on both sides
+        # is an interior stub / bridge (a partition nib inside the room): it must not inflate the room perimeter
+        def split(cycles):
+            seen = defaultdict(int)
+            for c in cycles:
+                for ei, _ in c:
+                    seen[ei] += 1
+            one = {ei for ei, n in seen.items() if n == 1}
+            two = {ei for ei, n in seen.items() if n > 1}
+            return one, two
+        o1, o2 = split([cyc])
+        h1, h2 = split(hole_cycles)
+        def srcs(es):
+            return sorted({x for ei in es for x in arr.edges[ei]["sources"]})
+        def length(es):
+            return sum(_d(arr.nodes[arr.edges[ei]["n0"]], arr.nodes[arr.edges[ei]["n1"]]) if arr.edges[ei]["kind"] == "S"
+                       else arr.edges[ei]["prim"].r * (arr.edges[ei]["t1"] - arr.edges[ei]["t0"]) for ei in es)
+        stub_src = sorted(set(srcs(o2 | h2)) - set(srcs(o1 | h1)))
         roles = defaultdict(float)
         for ei, _ in cyc:
             e = arr.edges[ei]
@@ -637,6 +657,9 @@ def sites_of(arr, revision_id, region_id):
         sites.append({"site_id": sid, "face": k, "area": area, "gross_outer_area": f["area"], "perimeter": per,
                       "boundary_source_ids": src, "hole_source_ids": hsrc, "holes": len(hole_cycles),
                       "boundary_role_lengths": dict(sorted(roles.items())), "bbox": f["bbox"],
+                      "outer_boundary_source_ids": srcs(o1), "hole_boundary_source_ids": srcs(h1),
+                      "interior_stub_source_ids": stub_src, "boundary_perimeter": length(o1) + length(h1),
+                      "interior_stub_length": length(o2) + length(h2),
                       "cycle": cyc, "hole_cycles": hole_cycles})
     ids = defaultdict(list)
     for s in sites:
@@ -648,6 +671,42 @@ def sites_of(arr, revision_id, region_id):
                 s.setdefault("issues", []).append(SITE_ID_COLLISION)
     sites.sort(key=lambda s: s["site_id"])
     return sites
+
+
+def interior_point(arr, cyc, eps):
+    """A point strictly inside a face: the middle of one of its one-sided edges (longest first), offset to the
+    face side (the left of the left-face walk) by a small distance, verified by the exact winding number."""
+    seen = defaultdict(int)
+    for k, _ in cyc:
+        seen[k] += 1
+    cand = []
+    for k, fw in cyc:
+        if seen[k] > 1:
+            continue
+        e = arr.edges[k]
+        if e["kind"] == "S":
+            p, q = (arr.nodes[e["n0"]], arr.nodes[e["n1"]]) if fw else (arr.nodes[e["n1"]], arr.nodes[e["n0"]])
+            ln = _d(p, q)
+            if ln <= 0:
+                continue
+            m = ((p[0] + q[0]) / 2, (p[1] + q[1]) / 2)
+            nrm = (-(q[1] - p[1]) / ln, (q[0] - p[0]) / ln)
+        else:
+            pr = e["prim"]
+            t = (e["t0"] + e["t1"]) / 2
+            m = pr.point(t)
+            ln = pr.r * (e["t1"] - e["t0"])
+            radial = ((m[0] - pr.c[0]) / pr.r, (m[1] - pr.c[1]) / pr.r)
+            nrm = (-radial[0], -radial[1]) if fw else radial      # CCW arc forward: the centre is on the left
+        cand.append((-ln, k, m, nrm, ln))
+    for _, _, m, nrm, ln in sorted(cand):
+        for d in (min(eps, ln * 1e-3), min(eps, ln * 1e-3) / 16):
+            if d <= 0:
+                continue
+            pt = (m[0] + nrm[0] * d, m[1] + nrm[1] * d)
+            if _winding(arr, cyc, pt) != 0 and _dist_to_cycle(arr, cyc, pt) > d / 4:
+                return pt
+    return None
 
 
 def locate(arr, sites, pt, tol):
@@ -922,8 +981,8 @@ def analyse(items, probes, labels, *, revision_id, region_id, unit_native_to_mm,
             blocking_roles=(), opening_status=None, opening_symbol_occurrences=None, glazed_openings=None):
     """Sites, certificate, labels and blocking for one admitted input. Returns a JSON-able dict (plus private
     arrangement handles under '_arr')."""
-    if max_abs_coordinate is None:
-        max_abs_coordinate = max([abs(v) for it in items for v in it.geometry[:2]] or [1.0])
+    if max_abs_coordinate is None:                      # the full exact extent (R8.9), never geometry[:2]
+        max_abs_coordinate = max([1.0] + [abs(v) for it in items for v in (_Prim(0, it).bbox or ())])
     tol = TP.tolerances(max_abs_coordinate, unit_native_to_mm)
     out = {"policy": TP.POLICY_ID, "policy_digest": TP.record()["digest"], "tolerances": tol, "sites": [],
            "findings": []}

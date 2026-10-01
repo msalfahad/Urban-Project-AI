@@ -56,6 +56,30 @@ def _geometry(kind, g):
     return (g.center[0], g.center[1], g.axis_u[0], g.axis_u[1], g.axis_v[0], g.axis_v[1], g.t0, g.t1)
 
 
+def effective_layer(layer, path, insert_layer):
+    """(effective layer, authority, chain) by AutoCAD layer-0 semantics, innermost insert first. `insert_layer`
+    gives an INSERT occurrence's own layer (None when unknown). Only the inserts actually needed are consulted."""
+    if layer is None:
+        return None, CI.EFFECTIVE_UNRESOLVED, ()
+    if layer != "0" or not path:
+        return layer, CI.EFFECTIVE_SOURCE_LAYER, ()
+    eff, chain = layer, []
+    for p in reversed(tuple(path)):
+        if eff != "0":
+            break
+        own = insert_layer(p) if insert_layer is not None else None
+        chain.append(p)
+        if own is None:
+            return None, CI.EFFECTIVE_UNRESOLVED, tuple(chain)
+        eff = own
+    return eff, CI.EFFECTIVE_BYLAYER_INSERT_CHAIN, tuple(chain)
+
+
+def _eff_kw(layer, path, insert_layer) -> dict:
+    eff, auth, _ = effective_layer(layer, path, insert_layer)
+    return {"effective_layer": eff, "effective_layer_authority": auth}
+
+
 def parts_from_realised(revision_id: str, realised, steps, visibility=None) -> tuple:
     """CanonicalPart per realised curve. part_index = the SOURCE sub-part the curve realises (Lineage.sub_part:
     0 for a single-curve entity, the span index for a polyline span), read from source structure by the route -
@@ -70,8 +94,9 @@ def parts_from_realised(revision_id: str, realised, steps, visibility=None) -> t
             vis = visibility(lin.layer, path) if visibility is not None else CI.VISIBILITY_UNRESOLVED
             ident = CI.SourceIdentity(revision_id, _base(lin.obs_id) if lin.obs_id else None,
                                       tuple(_handle(p) for p in path), kind, getattr(lin, "sub_part", None))
+            eff, auth, _ = effective_layer(lin.layer, path, getattr(visibility, "insert_layer", None))
             out.append(CI.CanonicalPart(ident, kind, _geometry(kind, g), lin.layer, vis, steps(path), lin.obs_id,
-                                        lin.kind))
+                                        lin.kind, effective_layer=eff, effective_layer_authority=auth))
     return tuple(out)
 
 
@@ -115,7 +140,7 @@ class VisibilityAuthority:
             if st.get("frozen"):
                 return CI.HIDDEN_SOURCE
             eff_parent = eff
-        eff = eff_parent if (layer == "0" and eff_parent is not None) else layer
+        eff = effective_layer(layer, path, self.insert_layer)[0] if path else layer
         st = self._state(eff)
         if st is None:
             return CI.VISIBILITY_UNRESOLVED
@@ -214,9 +239,11 @@ class K1:
                 x, y = (m @ kernel.frame_matrix(o.extrusion)).apply(ins)
             raw = self.raw.get(_base(o.obs_id), {})
             h = raw.get("height")
+            eff, auth, _ = effective_layer(o.layer, path, self.vis.insert_layer)
             out.append(CI.PlacedText(CI.SourceIdentity(self.rev, _base(o.obs_id), tuple(_handle(p) for p in path), o.kind, 0),
                                      (o.geometry.value or "").strip() if getattr(o.geometry, "value", None) is not None else None,
-                                     x, y, None if h is None else float(h), o.layer, vis, self.steps(path), o.kind))
+                                     x, y, None if h is None else float(h), o.layer, vis, self.steps(path), o.kind,
+                                     effective_layer=eff, effective_layer_authority=auth))
         return tuple(out)
 
     def dimensions(self):
@@ -235,7 +262,7 @@ class K1:
                 ident = CI.SourceIdentity(self.rev, _base(oid), tuple(_handle(p) for p in path), "DIMENSION", 0)
                 if r is None:
                     out.append(CI.PlacedDimension(ident, None, None, None, None, self.dimlfac, None, o.layer,
-                                                  vis, self.steps(path)))
+                                                  vis, self.steps(path), **_eff_kw(o.layer, path, self.vis.insert_layer)))
                     continue
                 a = r.get("xline1_pt") or r.get("def_pt")
                 b = r.get("xline2_pt") or r.get("def_pt")
@@ -245,7 +272,8 @@ class K1:
                 out.append(CI.PlacedDimension(ident, None if a is None or b is None else ((a[0], a[1]), (b[0], b[1])),
                                               placed, None if act is None else float(act), str(r.get("user_text") or ""),
                                               self.dimlfac, None if r.get("type") is None else str(r.get("type")),
-                                              o.layer, vis, self.steps(path)))
+                                              o.layer, vis, self.steps(path),
+                                              **_eff_kw(o.layer, path, self.vis.insert_layer)))
         return tuple(out)
 
 
@@ -318,7 +346,8 @@ class K2:
             out.append(CI.PlacedText(CI.SourceIdentity(self.rev, _base(c["obs_id"]), tuple(_handle(q) for q in path), t, 0),
                                      None if value is None else value.strip(), None if p is None else p[0],
                                      None if p is None else p[1], None if h is None else float(h),
-                                     e.dxf.get("layer", None), vis, self.steps(path), t))
+                                     e.dxf.get("layer", None), vis, self.steps(path), t,
+                                     **_eff_kw(e.dxf.get("layer", None), path, self.vis.insert_layer)))
         return tuple(out)
 
     def dimensions(self):
@@ -339,7 +368,8 @@ class K2:
                                           None if pa is None or pb is None else (pa, pb),
                                           None if act is None else float(act), str(g.get("text", "") or ""),
                                           self.dimlfac, code, g.get("layer", None), vis, self.steps(path),
-                                          g.get("dimstyle", None)))
+                                          g.get("dimstyle", None),
+                                          **_eff_kw(g.get("layer", None), path, self.vis.insert_layer)))
         return tuple(out)
 
 

@@ -10,7 +10,7 @@ Why
 Evidence (never one kind alone)
     LAYER_ROLE          the effective layer's name tokens against a generic AEC lexicon (exact tokens, not
                         substrings; a bound-xref prefix "<xref>$n$" is the DWG binding convention and is split off;
-                        a layer-0 child takes the layer of the insert that places it - ByLayer)
+                        R8.9: the CANONICAL effective layer - layer-0 inheritance through the whole insert chain)
     BLOCK_NAME_ROLE     the innermost block's name tokens (presentation metadata: corroboration only)
     INSTANCE_CONTEXT    MODEL_SPACE | SYMBOL_OCCURRENCE | SHEET_FRAME_OCCURRENCE (the selected region's own frame
                         occurrence, named by an owner-confirmed region claim)
@@ -162,10 +162,14 @@ ROLE_RULES = (
      "requires": "LAYER_ROLE=SHEET_FRAME + INSTANCE_CONTEXT=MODEL_SPACE"},
     {"id": "GR-16", "role": PRESENTATION_OVERHEAD, "strength": CORROBORATED,
      "requires": "LAYER_ROLE in {HIDDEN_LINE, NON_PLOT}"},
+    {"id": "GR-17", "role": "(as GR-05 .. GR-12, GR-15)", "strength": STRUCTURAL,
+     "requires": "INSTANCE_CONTEXT=BUILDING_ASSEMBLY_OCCURRENCE (an occurrence established from positive evidence by "
+                 "role_authority.occurrence_contexts, never by size): its children are read as model-space content; "
+                 "its own nested inserts are symbol occurrences (GR-02 .. GR-04 apply to them)"},
     {"id": "GR-99", "role": UNKNOWN_PHYSICAL, "strength": NONE,
      "requires": "no rule above holds: unknown physical geometry (blocks every site it touches)"},
 )
-POLICY_ID = "GEOMETRY_ROLE_EVIDENCE_POLICY_V1"
+POLICY_ID = "GEOMETRY_ROLE_EVIDENCE_POLICY_V2"   # V2 (R8.9): canonical effective layer; building assemblies
 
 
 def policy_record() -> dict:
@@ -188,8 +192,12 @@ class RoleAssignment:
 
 
 # ---------------------------------------------------------------- per-occurrence structure
-def _occurrence(part):
+def _occurrence(part, assemblies=frozenset()):
+    """The SYMBOL occurrence a part belongs to: its top-level insert, or - inside an established building assembly
+    - the assembly's own nested insert (the assembly's direct children behave as model-space entities)."""
     path = part.identity.instance_handles or ()
+    if path and path[0] in assemblies:
+        return ("I" + path[0] + "/" + path[1]) if len(path) > 1 else ("A" + path[0] + ":" + str(part.identity.source_handle))
     return ("I" + path[0]) if path else ("E" + str(part.identity.source_handle))
 
 
@@ -225,22 +233,26 @@ def door_signature(parts, eps=None):
 
 # ---------------------------------------------------------------- admission
 def admit(inp: CI.CanonicalMeasurementInput, *, frame_insert: str | None, eps: float,
-          insert_layers: dict | None = None) -> dict:
+          assemblies=frozenset()) -> dict:
     """{part key: RoleAssignment} for every VISIBLE part of the input, plus the door occurrences found.
 
     frame_insert   the top-level insert occurrence of the region's sheet frame (owner-confirmed region claim)
     eps            coincidence tolerance (the frozen numeric tolerance of the topology policy)
-    insert_layers  {top-level insert handle: insert layer} for ByLayer of layer-0 children (optional)"""
-    insert_layers = insert_layers or {}
+
+    The layer evidence is each record's canonical EFFECTIVE layer (canonical_input.effective_layer: AutoCAD
+    layer-0 inheritance through the whole insert chain, derived by the builder). A record whose effective layer is
+    unresolved or not derived has NO layer role (it can only be decided by block structure, else GR-99).
+    assemblies     top-level insert handles established as BUILDING_ASSEMBLY_OCCURRENCE (role_authority)"""
+    assemblies = frozenset(assemblies)
     occ = {}
     for p in inp.parts:
         if p.visibility == CI.VISIBLE:
-            occ.setdefault(_occurrence(p), []).append(p)
+            occ.setdefault(_occurrence(p, assemblies), []).append(p)
     occ_info = {}
     for o, ps in occ.items():
         if not o.startswith("I"):
             continue
-        roles_in = {layer_role(_eff(p, insert_layers)) for p in ps}
+        roles_in = {layer_role(CI.effective_layer(p)[0]) for p in ps}
         info = {"no_boundary_layer": not (roles_in & set(BOUNDARY_LAYER_ROLES)),
                 "layer_roles": sorted(r for r in roles_in if r),
                 "block_name": ps[0].lineage[-1].block_name if ps[0].lineage else None,
@@ -251,36 +263,36 @@ def admit(inp: CI.CanonicalMeasurementInput, *, frame_insert: str | None, eps: f
     out = {}
     for o, ps in occ.items():
         for p in ps:
-            a = _assign(p, o, occ_info.get(o), frame_insert, insert_layers)
+            a = _assign(p, o, occ_info.get(o), frame_insert, assemblies)
             out[p.identity.key] = a
     doors = {o: i["door_signature"] for o, i in occ_info.items() if i["door_signature"] is not None}
     return {"roles": out, "doors": doors, "occurrences": occ_info, "policy": POLICY_ID}
 
 
-def _eff(p, insert_layers):
-    if p.layer == "0" and p.identity.instance_handles:
-        return insert_layers.get(p.identity.instance_handles[0], p.layer)
-    return p.layer
-
-
-def _assign(p, occ_id, info, frame_insert, insert_layers) -> RoleAssignment:
+def _assign(p, occ_id, info, frame_insert, assemblies=frozenset()) -> RoleAssignment:
     key = p.identity.key
-    lay = _eff(p, insert_layers)
+    lay, lay_auth = CI.effective_layer(p)
     lr = layer_role(lay)
     path = p.identity.instance_handles or ()
     ctx = ("SHEET_FRAME_OCCURRENCE" if (path and frame_insert is not None and path[0] == frame_insert)
+           else ("SYMBOL_OCCURRENCE" if len(path) > 1 else "BUILDING_ASSEMBLY_OCCURRENCE") if (path and path[0] in assemblies)
            else "SYMBOL_OCCURRENCE" if path else "MODEL_SPACE")
     bname = p.lineage[-1].block_name if p.lineage else None
     br = block_name_role(bname) if path else None
     etype = p.entity_type
-    ev = {"LAYER_ROLE": lr, "layer": lay, "INSTANCE_CONTEXT": ctx, "BLOCK_NAME_ROLE": br, "ENTITY_TYPE": etype,
+    ev = {"LAYER_ROLE": lr, "layer": lay, "source_layer": p.layer, "effective_layer_authority": lay_auth,
+          "INSTANCE_CONTEXT": ctx, "BLOCK_NAME_ROLE": br, "ENTITY_TYPE": etype,
           "KIND": p.kind}
     if info is not None:
         ev["BLOCK_DEFINITION"] = {"NO_BOUNDARY_LAYER": info["no_boundary_layer"],
                                   "DOOR_SIGNATURE": info["door_signature"] is not None}
     linear = etype in ("LINE", "LWPOLYLINE", "ARC", "CIRCLE") and p.kind in ("SEGMENT", "ARC", "CIRCLE")
 
+    in_assembly = ctx == "BUILDING_ASSEMBLY_OCCURRENCE"
+
     def r(role, rid, strength):
+        if in_assembly and rid not in ("GR-13", "GR-14", "GR-16", "GR-99", "GR-08"):
+            return RoleAssignment(key, role, strength, rid + "/GR-17", dict(ev, BUILDING_ASSEMBLY=path[0]))
         return RoleAssignment(key, role, strength, rid, ev)
     if ctx == "SHEET_FRAME_OCCURRENCE":
         return r(SHEET_FRAME, "GR-01", STRUCTURAL)
@@ -293,14 +305,14 @@ def _assign(p, occ_id, info, frame_insert, insert_layers) -> RoleAssignment:
             return r(SANITARY_FIXTURE, "GR-04", STRUCTURAL)
     if lr in BOUNDARY_LAYER_ROLES and (etype == "ELLIPSE" or p.kind == "ELLIPTICAL_ARC"):
         return r(BOUNDARY_CURVE_UNSUPPORTED, "GR-08", CORROBORATED)
-    if ctx == "MODEL_SPACE" and linear:
+    if ctx in ("MODEL_SPACE", "BUILDING_ASSEMBLY_OCCURRENCE") and linear:
         if lr == "WALL":
             return r(TOPOLOGY_BOUNDARY, "GR-05", CORROBORATED)
         if lr == "COLUMN":
             return r(STRUCTURAL_OBSTACLE, "GR-06", CORROBORATED)
         if lr == "GLAZING" and p.kind != "CIRCLE":
             return r(GLAZING_BOUNDARY, "GR-07", CORROBORATED)
-    if ctx == "MODEL_SPACE":
+    if ctx in ("MODEL_SPACE", "BUILDING_ASSEMBLY_OCCURRENCE"):
         if lr == "FURNITURE":
             return r(FURNITURE, "GR-09", CORROBORATED)
         if lr == "FIXTURE":

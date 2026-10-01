@@ -20,6 +20,8 @@ from collections import defaultdict
 
 from . import canonical_input as CI
 from . import geometry_role as GR
+from . import region_membership as RM
+from . import role_authority as RA
 from . import topology as T
 from . import topology_crosscheck as XC
 from . import topology_policy as TP
@@ -45,35 +47,78 @@ TS01 = CI.MethodContract(
 )
 
 
-def _occ(rec):
-    path = rec.identity.instance_handles or ()
-    return ("I" + path[0]) if path else ("E" + str(rec.identity.source_handle))
+def max_abs_coordinate(parts) -> float:
+    """The numeric tolerance's coordinate magnitude from the FULL exact extent of every part (both segment end
+    points, arc / circle / ellipse extrema), never from whichever values sit in tuple positions 0 and 1 (R8.9)."""
+    m = 1.0
+    for p in parts:
+        b = RM.exact_bbox(p.kind, p.geometry)
+        if b is not None:
+            m = max(m, *(abs(v) for v in b))
+    return m
 
 
-def topology_inputs(inp: CI.CanonicalMeasurementInput, *, frame_insert, eps_n):
-    """(items, probes, labels, roles result, closures, opening status, symbol probes per door) - deterministic."""
+def _occ(rec, assemblies=frozenset()):
+    return GR._occurrence(rec, assemblies)
+
+
+LINEAR = ("SEGMENT", "ARC", "CIRCLE")
+
+
+def topology_inputs(inp: CI.CanonicalMeasurementInput, *, frame_insert, eps_n, eps_r=None, claims=(),
+                    occurrence_claims=None):
+    """(items, probes, labels, roles result, closures, opening status, symbol probes per door) - deterministic.
+
+    R8.9 role authority (role_authority): occurrence contexts (building assemblies from positive evidence), source-
+    scoped role claims, boundary authority grades (an admitted line touching no other boundary is NOT admitted:
+    UNCONNECTED_BOUNDARY_CANDIDATE, blocking), and the separator candidates for the consequence check (stored in
+    the roles result)."""
     adm = GR.admit(inp, frame_insert=frame_insert, eps=eps_n)
-    roles = adm["roles"]
-    items, probes, door_probes = [], [], defaultdict(list)
+    ctx = RA.occurrence_contexts(inp, adm, frame_insert, occurrence_claims)
+    assemblies = frozenset(o for o, v in ctx.items() if v["context"] == RA.BUILDING_ASSEMBLY)
+    if assemblies:
+        adm = GR.admit(inp, frame_insert=frame_insert, eps=eps_n, assemblies=assemblies)
+    roles, claim_rec = RA.apply_claims(inp, adm["roles"], claims)
+    adm["roles"], adm["claims"], adm["occurrence_contexts"] = roles, claim_rec, ctx
+    items, probes, door_probes, cands = [], [], defaultdict(list), []
     for p in sorted(inp.parts, key=lambda q: q.identity.key or ""):
         if p.visibility != CI.VISIBLE:
             continue
         a = roles[p.identity.key]
-        if a.role in GR.TOPOLOGY_ADMITTED and p.kind in ("SEGMENT", "ARC", "CIRCLE"):
+        if a.role in GR.TOPOLOGY_ADMITTED and p.kind in LINEAR:
             items.append(T.BoundaryItem(p.identity.key, p.kind, tuple(p.geometry), a.role))
-        else:
-            pb = T.Probe(p.identity.key, p.kind, tuple(p.geometry), a.role, _occ(p))
-            probes.append(pb)
-            if a.role == GR.OPENING_SYMBOL:
-                door_probes[_occ(p)].append(pb)
+            continue
+        pb = T.Probe(p.identity.key, p.kind, tuple(p.geometry), a.role, _occ(p, assemblies))
+        probes.append(pb)
+        if a.role == GR.OPENING_SYMBOL:
+            door_probes[_occ(p, assemblies)].append(pb)
+        rule = a.rule_id.split("/")[0]
+        if p.kind in LINEAR and (rule in RA.LAYER_ONLY_EXCLUSION_RULES or a.role in GR.TOPOLOGY_BLOCKING):
+            cands.append((T.BoundaryItem(p.identity.key, p.kind, tuple(p.geometry), a.role),
+                          "UNKNOWN" if a.role in GR.TOPOLOGY_BLOCKING else rule))
+    grades = RA.grade_boundaries(items, eps_r) if eps_r else {}
+    unconnected = [it for it in items if grades.get(it.source_id, {}).get("grade") == RA.CANDIDATE]
+    if unconnected:
+        drop = {it.source_id for it in unconnected}
+        items = [it for it in items if it.source_id not in drop]
+        for it in unconnected:
+            probes.append(T.Probe(it.source_id, it.kind, it.geometry, RA.UNCONNECTED_BOUNDARY_CANDIDATE,
+                                  "E" + it.source_id))
+            cands.append((T.BoundaryItem(it.source_id, it.kind, it.geometry, RA.UNCONNECTED_BOUNDARY_CANDIDATE),
+                          "UNKNOWN"))
+        probes.sort(key=lambda z: z.source_id)
+    if eps_r:                                     # excluded linework counts only where it bridges the network
+        cands = [c for c in cands if c[1] == "UNKNOWN"] + \
+            RA.bridging_subset([c for c in cands if c[1] != "UNKNOWN"], items, eps_r)
+    adm["grades"], adm["separator_candidates"] = grades, cands
     closures, status = T.opening_closures(adm["doors"], items, eps_n)
-    e_r = TP.eps_authored(inp.unit_native_to_mm)
+    e_r = eps_r if eps_r else TP.eps_authored(inp.unit_native_to_mm)
     g_closures, g_status, g_open = T.glazing_closures(items, eps_n, e_r) if e_r else ([], {}, {})
     closures = closures + g_closures
     status = dict(status)
     adm["glazing"] = g_status
     adm["glazed_openings"] = g_open
-    labels = [T.LabelText(t.identity.key, _occ(t), t.value, t.x, t.y)
+    labels = [T.LabelText(t.identity.key, _occ(t, assemblies), t.value, t.x, t.y)
               for t in sorted(inp.texts, key=lambda q: q.identity.key or "")
               if t.visibility == CI.VISIBLE and t.value and t.x is not None and t.y is not None]
     return items, probes, labels, adm, closures, status, door_probes
@@ -127,23 +172,75 @@ def unrealised_accounting(unrealised, inp, res, frame_insert):
     return out
 
 
+PHYSICAL_ISSUES = (T.TOLERANCE_SENSITIVE, T.ZERO_WIDTH_SLIVER, T.TOPOLOGY_ROLE_UNRESOLVED, T.OPENING_CLOSURE_UNRESOLVED,
+                   T.SITE_ID_COLLISION, XC.GEOS_CROSSCHECK_DISAGREES, RA.ROLE_CONFLICT_SEPARATOR,
+                   "UNREALISED_ENTITY_ON_BOUNDARY_LAYER", "UNREALISED_ENTITY_POSSIBLY_IN_SITE",
+                   "OCCURRENCE_REVIEW_REQUIRED")
+SEMANTIC_ISSUES = (T.MULTIPLE_SEMANTIC_LABELS, T.LABEL_ON_BOUNDARY, T.LABEL_OCCURRENCE_SPLIT)
+
+
+def classify_issues(site) -> None:
+    """R8.9: physical (topology) vs semantic (labels) vs trade (objects inside a stable site) issues. The overall
+    `status` keeps its R8.8 meaning (CERTIFIED only with no issue at all)."""
+    iss = set(site["issues"])
+    site["physical_issues"] = sorted(iss & set(PHYSICAL_ISSUES))
+    site["semantic_issues"] = sorted(iss & set(SEMANTIC_ISSUES))
+    site["trade_issues"] = sorted(iss - set(PHYSICAL_ISSUES) - set(SEMANTIC_ISSUES))
+    site["physical_status"] = T.CERTIFIED if not site["physical_issues"] else T.REVIEW_REQUIRED
+
+
+def consequences(res, items, adm, labels, tol) -> None:
+    """R8.9 consequence check (role_authority.separator_analysis), run SEPARATELY for layer-only exclusions and for
+    unknown geometry so each effect is attributed to its own origin; folded into the site issues, plus the site's
+    weakest boundary authority grade."""
+    cands = adm.get("separator_candidates", [])
+    groups = {"exclusion": [c for c in cands if c[1] != "UNKNOWN"], "unknown": [c for c in cands if c[1] == "UNKNOWN"]}
+    sep = {g: RA.separator_analysis(res, items, cs, eps_n=tol["eps_n"], eps_r=tol["eps_r"], labels=labels)
+           for g, cs in groups.items()}
+    res["separators"] = sep
+    unknown_ids = {c.source_id for c, _ in groups["unknown"]}
+    grades = adm.get("grades", {})
+    for s_ in res["sites"]:
+        ex, un = sep["exclusion"]["sites"].get(s_["site_id"]), sep["unknown"]["sites"].get(s_["site_id"])
+        iss = set(s_["issues"])
+        if ex:
+            issue, level = RA.consequence_issue(ex)
+            if level == "NOTE":
+                s_.setdefault("trade_notes", []).append(issue)
+            elif issue:
+                iss.add(issue)
+        blocked = set(s_.get("blocked_by", []))
+        if blocked and blocked <= unknown_ids and (un is None or un["effect"] == "NONE"):
+            # every blocking source is linear geometry that cannot change this site: the PHYSICAL site stands;
+            # what the object is remains a trade question
+            iss = (iss - {T.TOPOLOGY_ROLE_UNRESOLVED}) | {RA.UNKNOWN_OBJECT_IN_SITE}
+        s_["issues"] = sorted(iss)
+        s_["consequence"] = {g: {"effect": e["effect"], "sources": e["sources"], "origins": e["origins"]}
+                             for g, e in (("exclusion", ex), ("unknown", un)) if e}
+        g = [grades[x]["grade"] for x in s_["boundary_source_ids"] if x in grades]
+        s_["authority_grade"] = min(g, key=lambda z: RA.GRADE_ORDER[z]) if g else None
+        s_["status"] = T.CERTIFIED if not s_["issues"] else T.REVIEW_REQUIRED
+
+
 def run(inp: CI.CanonicalMeasurementInput, *, frame_insert, expected_revision_id=None, selected_region_id=None,
-        contract=TS01, unrealised=None) -> dict:
+        contract=TS01, unrealised=None, claims=(), occurrence_claims=None) -> dict:
     v = CI.validate(inp, contract, expected_revision_id=expected_revision_id, selected_region_id=selected_region_id)
     out = {"method_id": contract.method_id, "validation": v, "state": v["state"], "sites": None}
     if v["state"] != CI.COMPLETE:
         return out
-    coords = [abs(c) for p in inp.parts for c in p.geometry[:2]] or [1.0]
-    tol = TP.tolerances(max(coords), inp.unit_native_to_mm)
+    m = max_abs_coordinate(inp.parts)
+    tol = TP.tolerances(m, inp.unit_native_to_mm)
     if not tol["valid"]:
         out.update(state=T.UNIT_UNRESOLVED, tolerances=tol)
         return out
-    items, probes, labels, adm, closures, status, door_probes = topology_inputs(inp, frame_insert=frame_insert,
-                                                                                  eps_n=tol["eps_n"])
+    items, probes, labels, adm, closures, status, door_probes = topology_inputs(
+        inp, frame_insert=frame_insert, eps_n=tol["eps_n"], eps_r=tol["eps_r"], claims=claims,
+        occurrence_claims=occurrence_claims)
     res = T.analyse(items + closures, probes, labels, revision_id=inp.revision.revision_id, region_id=inp.region_id,
-                    unit_native_to_mm=inp.unit_native_to_mm, max_abs_coordinate=max(coords),
-                    blocking_roles=GR.TOPOLOGY_BLOCKING, opening_status=status,
+                    unit_native_to_mm=inp.unit_native_to_mm, max_abs_coordinate=m,
+                    blocking_roles=GR.TOPOLOGY_BLOCKING + (RA.UNCONNECTED_BOUNDARY_CANDIDATE,), opening_status=status,
                     opening_symbol_occurrences=door_probes, glazed_openings=adm["glazed_openings"])
+    consequences(res, items + closures, adm, labels, tol)
     xc = XC.check(res, items + closures, tol["eps_n"])
     for s_ in res["sites"]:
         st = xc["per_site"].get(s_["site_id"], {}).get("state", xc["state"])
@@ -164,6 +261,8 @@ def run(inp: CI.CanonicalMeasurementInput, *, frame_insert, expected_revision_id
                 s_["status"] = T.REVIEW_REQUIRED
     else:
         res["unrealised"] = {"state": "NOT_SUPPLIED: the caller did not account for unrealised source entities"}
+    for s_ in res["sites"]:
+        classify_issues(s_)
     res["roles"] = adm
     res["openings"] = status
     res["closures"] = closures

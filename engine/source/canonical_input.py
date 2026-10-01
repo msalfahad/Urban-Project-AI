@@ -48,6 +48,27 @@ EXACT_SOURCE = "EXACT_SOURCE"                       # the authored file itself (
 DERIVED_PENDING_SOURCE = "DERIVED_PENDING_SOURCE"   # only a derived file (e.g. a DXF) is hashed; source awaited
 
 
+# effective layer authority (R8.9): AutoCAD layer-0 semantics. An entity on layer "0" inside a block takes the
+# EFFECTIVE layer of the INSERT that places it; an insert on "0" inside another block takes its parent's, and so on
+# to model space. source_layer (the record's `layer`) is never overwritten.
+EFFECTIVE_SOURCE_LAYER = "SOURCE_LAYER"               # authored on its own layer (or layer 0 in model space)
+EFFECTIVE_BYLAYER_INSERT_CHAIN = "BYLAYER_INSERT_CHAIN"   # inherited through the insert chain (exact evidence)
+EFFECTIVE_UNRESOLVED = "EFFECTIVE_LAYER_UNRESOLVED"   # an insert layer needed for the inheritance is unknown
+EFFECTIVE_NOT_DERIVED = "EFFECTIVE_LAYER_NOT_DERIVED"  # the builder did not derive it for a layer-0 block child
+
+
+def effective_layer(rec):
+    """(effective layer, authority) of a part / text / dimension. A record built without derivation keeps its
+    own layer only where no inheritance can apply (not on "0", or in model space); otherwise it is NOT_DERIVED
+    and no layer-based role may be taken from it."""
+    auth = getattr(rec, "effective_layer_authority", None)
+    if auth is not None:
+        return getattr(rec, "effective_layer", None), auth
+    if rec.layer is not None and (rec.layer != "0" or not rec.identity.instance_handles):
+        return rec.layer, EFFECTIVE_SOURCE_LAYER
+    return None, EFFECTIVE_NOT_DERIVED
+
+
 @dataclass(frozen=True)
 class SourceRevision:
     revision_id: str
@@ -95,6 +116,8 @@ class CanonicalPart:
     obs_id: str | None = None
     entity_type: str | None = None
     region: str = IN_REGION
+    effective_layer: str | None = None              # layer after layer-0 / insert inheritance (R8.9)
+    effective_layer_authority: str | None = None     # how it was derived (EFFECTIVE_* below); None = not derived
 
 
 @dataclass(frozen=True)
@@ -109,6 +132,8 @@ class PlacedText:
     lineage: tuple
     entity_type: str | None = None
     region: str = IN_REGION
+    effective_layer: str | None = None
+    effective_layer_authority: str | None = None
 
 
 @dataclass(frozen=True)
@@ -126,6 +151,8 @@ class PlacedDimension:
     lineage: tuple
     style: str | None = None                         # dimension style name (presentation)
     region: str = IN_REGION
+    effective_layer: str | None = None
+    effective_layer_authority: str | None = None
 
 
 @dataclass(frozen=True)
