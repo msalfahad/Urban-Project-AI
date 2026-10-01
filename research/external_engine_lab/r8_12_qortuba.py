@@ -270,9 +270,11 @@ def registers(work, commit=None):
         "h2431_regression": {
             "r8_11": next(c for c in r811_tc["NEW_K2"] if c["closure_id"] in r811_tc["applied"]["NEW_K2"]),
             "r8_12": next(c for c in blind["NEW_K2"]["closures"] if "2431" in c["evidence"]),
-            "same_geometry": next(c for c in blind["NEW_K2"]["closures"] if "2431" in c["evidence"])["geometry"] ==
-            [round(v, 4) for v in next(c for c in r811_tc["NEW_K2"] if c["closure_id"] in
+            "same_geometry": [round(v, 2) for v in next(c for c in blind["NEW_K2"]["closures"]
+                                                         if "2431" in c["evidence"])["geometry"]] ==
+            [round(v, 2) for v in next(c for c in r811_tc["NEW_K2"] if c["closure_id"] in
                                        r811_tc["applied"]["NEW_K2"])["geometry"]],
+            "compared_at": "0.01 native (R8.11 recorded 2 decimals)",
             "id_changed_because": "closure ids derive from the band id, and band ids are V3 assembly ids"},
         "h1316_control": {"closures_with_1316": [c for c in blind["NEW_K2"]["closures"] if "1316" in c["evidence"]],
                           "classification": "NOT_WALL_CAP (window jamb; unchanged)"},
