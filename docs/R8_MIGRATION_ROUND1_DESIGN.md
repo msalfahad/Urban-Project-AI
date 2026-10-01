@@ -422,3 +422,65 @@ The fact enters no TS01 input: RUN_INPUT_DIGEST, sites, areas and the frozen rul
 BLOCKED_ENGINE_LIMITATION, and its value is deliberately not computed. R8.12 runs the fragment-aware band rule
 (E-R8.12-01) blind first. The owner fact becomes a part-scoped role claim on H2430 only if that generic rule cannot
 establish the band.
+
+## 13. R8.12 addendum — fragment-aware wall bands, blind Qortuba re-run, digest hierarchy
+
+**WALL_BAND_POLICY_V3** has three parts:
+- **FACE CHAINS:** fragments join only when continuity is positively established. That means collinear and touching
+  within eps_n, in the same occurrence, with no opening or glazing at the joint. A gap of any size, including inside
+  the 50 mm review band, is never joined. Duplicates are ambiguity. Joints and branches are typed nodes, and a
+  T-junction is a node, not an end.
+- **LOCAL BAND SPANS:** local mutual nearest is tested per elementary interval. Geometry outside an interval never
+  disqualifies it. A label anywhere in the raw pair strip rejects the pair; this guards an unlabelled slice of a room,
+  a hazard of local pairing found during design. Crossings subdivide the strip into SPAN / OBSTACLE_OVERLAP /
+  CROSSING_WALL_NODE / ENCLOSED_NODE.
+- **WALL-BAND ASSEMBLIES:** these carry the ends: JUNCTION_OR_CONTINUATION, RECEIVING_FACE_JUNCTION, OPENING_JAMB,
+  CAPPED, ALIGNED_FREE_END.
+
+Every span keeps its exact source-part intervals. Ids come from source entities plus the extent along the canonical
+direction. Every behaviour constant is in `PARAMS` / `policy_record()`, which is AST-checked. TOPOLOGY_CLOSURE_POLICY_V1
+is unchanged (same digest).
+
+**Anti-calibration order:**
+1. Recommendation written.
+2. V3 + 35 synthetic tests committed (`b72d866`).
+3. Freeze record committed.
+4. Blind Qortuba run committed (`BLIND_QORTUBA_RESULT.json`).
+5. Owner fact compared.
+6. Rows rebuilt.
+
+**Blind H2430:**
+- The band forms from H470 + H471 against H477.
+- Column H718 makes only its interval an OBSTACLE_OVERLAP.
+- H2430 is WALL_END_CAP_PROVEN (0.0 mm), and the zero-material closure is AUTHORISED_FOR_SHADOW. It separates the
+  0.3813 m² pure wall core (HALL 43.1806 → 42.7993 m²).
+- H2431 is unchanged (0.6494 m²), and H1316 still gets no closure.
+- The Hall / Lobby passage is engine-detected at 1196.45 mm and stays open.
+
+The owner physical fact agrees on all 7 parts. It is CORROBORATING_ONLY for topology and rows, APPLIED only for the
+passage attributes (release layer), and no owner role claim was needed.
+
+**Rows:**
+- **Q-14 = COMPUTED_SHADOW 141.0263 m²** (not FINAL). The release blockers are the source anchor and the passage
+  soffit vs ceiling allocation.
+- **Q-13:** a counterfactual over both answers shows the floor-under-objects fact is the sole blocker. One owner
+  question is prepared.
+
+**Digest hierarchy** (`run_manifest`):
+- TOPOLOGY_RUN_INPUT_DIGEST (= RUN_INPUT_DIGEST);
+- ROW_AUTHORITY_DIGEST = topology + row authorities + applied owner facts;
+- RELEASE_INPUT_DIGEST = row + anchor + reviews + release blockers.
+
+A corroborating fact changes none of them except the release layer it is applied in.
+
+**Owner physical facts** are a generic engine model (`engine/source/owner_facts.py`): outcomes OFFERED / APPLIED /
+CORROBORATING_ONLY / REJECTED_SCOPE / STALE / CONFLICT, plus the engine-vs-owner matrix.
+
+**Recorded, not patched** (they go to R8.13 under the same freeze protocol):
+- **V3-D1:** chain ids collide for parallel sides of one closed polyline (H2060 / H2061).
+- **V3-D2:** elongation is measured on the chain overlap rather than the local run (a 1.80 m pseudo-band outside the
+  apartment).
+
+Neither touches a closure or a row.
+
+**Gates:** MIGRATION_PLANNING_READY = YES, MIGRATION_EXECUTION_READY = NO, PRODUCTION_MIGRATION = NO.

@@ -123,4 +123,9 @@ bridges it to the legacy QS01 method. Owner decisions are scoped claims in `data
 | `r8_11_owner_facts.py` | `data/registry/OWNER_PHYSICAL_FACTS.json` | owner clarification (Hall / Lobby open passage) as a part-bound physical fact; binding; owner-declared OPEN_PASSAGE_SITE with measured geometry |
 | `r8_11_package.py` | `data/reports/URBAN_QTO_R8_11_WALL_BANDS_AND_RUN_MANIFEST/` + zip | review package (19 md + 15 json + picture) |
 
+| `r8_12_blind.py` | `tests/r8_12/registers/BLIND_QORTUBA_RESULT.json` | the BLIND run of the frozen WALL_BAND_POLICY_V3 (no owner fact, no expected value) |
+| `r8_12_qortuba.py` | `tests/r8_12/registers/{FRAGMENT_FACE_POLICY,FACE_CHAIN_REGISTER,BAND_SPAN_REGISTER,WALL_BAND_ASSEMBLY_REGISTER,TOPOLOGY_CLOSURE_REGISTER,OWNER_FACT_COMPARISON,Q14_STATUS,Q13_STATUS,DIGEST_HIERARCHY,POLICY_PROVENANCE_AUDIT,QORTUBA_R8_12_STATUS}.json` | six rows after the blind run, owner fact compared afterwards, Q-13 sole-blocker counterfactual, digest hierarchy, policy audit |
+| `r8_12_registers.py` | `tests/r8_12/registers/{OWNER_ACTION_REGISTER,ENGINEERING_ACTION_REGISTER,R8_12_DECISION_REGISTER}.json` | owner actions V9 (one question), engineering actions, recommendation + answers 1-29 |
+| `r8_12_package.py` | `data/reports/URBAN_QTO_R8_12_FRAGMENT_AWARE_WALL_BANDS/` + zip | review package (19 md + 16 json) |
+
 `<work>` must hold `old_k2.pkl` (K2 on LibreDWG's DXF of the old DWG) and `new_k2.pkl` (K2 on the hash-addressed new DXF).

@@ -1,0 +1,212 @@
+{
+ "SCHEMA": "URBAN_R8_12_Q13_STATUS_V1",
+ "row": "Q-13",
+ "state": "BLOCKED_MULTIPLE: BLOCKED_ROLE, BLOCKED_TRADE_RULE",
+ "value": null,
+ "blocker_classes": [
+  "ROLE_AUTHORITY",
+  "TRADE_RULE"
+ ],
+ "blockers": [
+  {
+   "site": "SITE-621f9bce1e5ec52a",
+   "zones": [
+    "HALL",
+    "whgm"
+   ],
+   "area_m2": 42.799289,
+   "blockers": [
+    {
+     "class": "TRADE_RULE",
+     "issue": "OBJECT_FOOTPRINT_POLICY_UNRESOLVED",
+     "detail": {
+      "source": "1663",
+      "roles": [
+       "FURNITURE"
+      ],
+      "pockets_m2": [
+       2.3914
+      ]
+     }
+    },
+    {
+     "class": "ROLE_AUTHORITY",
+     "issue": "TOPOLOGY_ROLE_UNRESOLVED",
+     "detail": [
+      "612083",
+      "612083",
+      "612083",
+      "612084",
+      "612084",
+      "612084",
+      "612085",
+      "612085",
+      "612085",
+      "612086",
+      "612086",
+      "612086"
+     ]
+    },
+    {
+     "class": "TRADE_RULE",
+     "issue": "OBJECT_FOOTPRINT_POLICY_UNRESOLVED",
+     "detail": "QORTUBA-FLOOR-TREATMENT: FLOOR_FINISH"
+    }
+   ]
+  },
+  {
+   "site": "SITE-a6405850100155ac",
+   "zones": [
+    "DRESS",
+    "M.B.ROOM"
+   ],
+   "area_m2": 33.2,
+   "blockers": [
+    {
+     "class": "ROLE_AUTHORITY",
+     "issue": "TOPOLOGY_ROLE_UNRESOLVED",
+     "detail": [
+      "1445",
+      "1446",
+      "1669",
+      "1670",
+      "514",
+      "517"
+     ]
+    },
+    {
+     "class": "TRADE_RULE",
+     "issue": "OBJECT_FOOTPRINT_POLICY_UNRESOLVED",
+     "detail": "QORTUBA-FLOOR-TREATMENT: FLOOR_FINISH"
+    }
+   ]
+  }
+ ],
+ "sites_used": [
+  {
+   "site": "SITE-5f1762f1a93b91ca",
+   "zones": [
+    "BED.ROOM"
+   ],
+   "area_m2": 19.2725,
+   "decision": "SINGLE_SEMANTIC_ZONE"
+  },
+  {
+   "site": "SITE-daca396d6d730e60",
+   "zones": [
+    "BED.ROOM"
+   ],
+   "area_m2": 16.327,
+   "decision": "SINGLE_SEMANTIC_ZONE"
+  }
+ ],
+ "trade_authority": {
+  "rule": "QORTUBA-FLOOR-TREATMENT@v2",
+  "authority": "PROJECT_OWNER_RULE (owner rule store, rank 2)",
+  "refs": [
+   "research/qs_wall_treatment_01/pa08/qortuba/boq/owner_rules.py: US-01 WET_SERVICE_ROOM_CERAMIC",
+   "research/qs_wall_treatment_01/pa08/qortuba/boq/owner_rules.py: QP-07 QORTUBA_CERAMIC_SERVICE_ROOMS = BATH x3 + PAINTRY",
+   "research/qs_wall_treatment_01/pa08/qortuba/boq/owner_rules.py: QP-14 QORTUBA_DRY_FLOOR_FINISH = PORCELAIN",
+   "QORTUBA-SPACE-CLASS@v1"
+  ],
+  "row_treatment": "PORCELAIN_DRY_FLOOR",
+  "semantic_class_rule": "QORTUBA-SPACE-CLASS@v1"
+ },
+ "footprint_authority": {
+  "treatment": null,
+  "policy": null
+ },
+ "release_blockers": [
+  "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+  "OBJECT_FOOTPRINT_IMPLICIT: proven furniture / fixture footprints are inside the measured floor by the topology convention, not by a FLOOR_FINISH footprint authority",
+  "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+ ],
+ "r8_10": {
+  "state": "BLOCKED_MULTIPLE: BLOCKED_PHYSICAL, BLOCKED_ROLE, BLOCKED_TRADE_RULE",
+  "value": null,
+  "blocker_classes": [
+   "PHYSICAL_TOPOLOGY",
+   "ROLE_AUTHORITY",
+   "TRADE_RULE"
+  ]
+ },
+ "old_revision": {
+  "state": "BLOCKED_MULTIPLE: BLOCKED_ROLE, BLOCKED_TRADE_RULE",
+  "value": null
+ },
+ "final": false,
+ "run_input_digest": "12547d2d834b6ca4898be83877540a9869bcdacbf663123f9aa91fc189485616",
+ "row_input_digest": "3277ebc5520183c92d4a2ea01c43b8caca343f6fd64ea6de4efbd143f18cae4e",
+ "r8_11": {
+  "state": "BLOCKED_MULTIPLE: BLOCKED_ENGINE_LIMITATION, BLOCKED_ROLE, BLOCKED_TRADE_RULE",
+  "value": null,
+  "blocker_classes": [
+   "ENGINE_LIMITATION",
+   "ROLE_AUTHORITY",
+   "TRADE_RULE"
+  ]
+ },
+ "blocker_set": [
+  "ROLE_AUTHORITY:TOPOLOGY_ROLE_UNRESOLVED",
+  "TRADE_RULE:OBJECT_FOOTPRINT_POLICY_UNRESOLVED",
+  "TRADE_RULE:OBJECT_FOOTPRINT_POLICY_UNRESOLVED:1663"
+ ],
+ "digests": {
+  "TOPOLOGY_RUN_INPUT_DIGEST": "12547d2d834b6ca4898be83877540a9869bcdacbf663123f9aa91fc189485616",
+  "ROW_AUTHORITY_DIGEST": {
+   "layer": "ROW_AUTHORITY_DIGEST",
+   "topology": "12547d2d834b6ca4898be83877540a9869bcdacbf663123f9aa91fc189485616",
+   "row": "Q-13",
+   "method": "TS01 + trade layer (lab rows)",
+   "trade_rules": [
+    "QORTUBA-FLOOR-TREATMENT@v2"
+   ],
+   "semantic_class_rules": [
+    "QORTUBA-SPACE-CLASS@v1"
+   ],
+   "footprint_policies": [
+    "QORTUBA-CEILING-OBJECT-FOOTPRINT@v1:CEILING:FOOTPRINT_INCLUDED"
+   ],
+   "row_claims": [
+    "QORTUBA-NEW-DIM-LINES-7116-7119-ARE-WALLS-OWNER-001@v1"
+   ],
+   "owner_facts_applied": [],
+   "digest": "9892503ec0a70d7749017b6b746b99d1e42d5bd135725e4326ee0ab0f577359c"
+  },
+  "RELEASE_INPUT_DIGEST": {
+   "layer": "RELEASE_INPUT_DIGEST",
+   "row": "9892503ec0a70d7749017b6b746b99d1e42d5bd135725e4326ee0ab0f577359c",
+   "source_anchor_state": "DWG_DXF_IDENTITY_NOT_ESTABLISHED",
+   "reviews": [],
+   "release_policy": "SHADOW_ONLY_NO_RELEASE_GATE",
+   "release_blockers": [
+    "OBJECT_FOOTPRINT_IMPLICIT: proven furniture / fixture footprints are inside the measured floor by the topology convention, not by a FLOOR_FINISH footprint authority",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed",
+    "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED"
+   ],
+   "owner_facts_applied": [],
+   "digest": "93cb6ccb9d3c9f2853e33c732b3e47dff0b7d6f020c458f0f7867b673ca0c015"
+  }
+ },
+ "sole_blocker_test": {
+  "question": "would ONE owner answer (floor laid under the built-in wardrobes and loose furniture) release Q-13?",
+  "method": "counterfactual: the rows rebuilt under each possible answer as a hypothetical FLOOR_FINISH footprint policy; only the STATE is recorded, never a value",
+  "counterfactual": {
+   "YES_WHOLE_ROOM": {
+    "state": "COMPUTED_SHADOW",
+    "blocker_classes": [],
+    "value_recorded": false
+   },
+   "NO_FOOTPRINT_DEDUCTED": {
+    "state": "BLOCKED_MULTIPLE: BLOCKED_ROLE, BLOCKED_TRADE_RULE",
+    "blocker_classes": [
+     "ROLE_AUTHORITY",
+     "TRADE_RULE"
+    ],
+    "value_recorded": false
+   }
+  },
+  "answer": "YES",
+  "consequence": "prepare ONE owner question"
+ }
+}
