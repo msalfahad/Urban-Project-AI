@@ -36,6 +36,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 
 from engine import cad_adapter as CA                                                     # noqa: E402
 from engine.source import canonical_build as CB, canonical_input as CI, owner_scope as OS  # noqa: E402
+from engine.source import geometry_role as GR, topology_policy as TP                     # noqa: E402
 from engine.source.cad import kernel, libredwg_map as L                                  # noqa: E402
 
 import r8_6_canonical_rebuild as R86                                                     # noqa: E402
@@ -61,7 +62,7 @@ FINGERPRINT = None                                     # filled from the decode 
 # ------------------------------------------------------------------ the QS01 contract (declared; proven below)
 QS01 = CI.MethodContract(
     method_id="QS01_METHOD_A_ARRANGEMENT_OF_BOUNDARY_LINES+OWNER_RULES_V1_FLOOR_ROWS",
-    version="1",
+    version="2",
     input_fields=("revision", "region_id", "frame_id", "unit_native_to_mm", "unit_claim_id"),
     part_fields=("source_revision_id", "source_handle", "instance_path", "block_identity", "source_part_id",
                  "part_index", "layer", "visibility", "curve_kind", "geometry"),
@@ -70,11 +71,22 @@ QS01 = CI.MethodContract(
     dimension_fields=("source_revision_id", "dimension_identity", "source_handle", "instance_path",
                       "placed_points", "measurement", "user_text", "dimlfac", "dimension_type", "visibility"),
     accepted_part_kinds=("SEGMENT", "ARC", "CIRCLE"),
-    declared_exclusions={"ELLIPTICAL_ARC": "the method's input has no elliptical primitive; the active reading never "
-                                           "carried one (R8.6: canonical input equal to the active reading without them)"},
+    # R8.8: the R8.7 bare declaration (no authority) is superseded by an exclusion that needs a role per part
+    exclusions=(CI.MethodExclusion(
+        kind="ELLIPTICAL_ARC", domain="ROOM_TOPOLOGY (QS01 floor rows)",
+        reason="the method's input has no elliptical primitive; an ellipse may be left out only when it is proven not "
+               "to bound a room",
+        authority=GR.POLICY_ID + " rule GR-02 (door symbol: symbol occurrence + door signature + DOOR layer role)",
+        allowed_roles=(GR.OPENING_SYMBOL,)),),
     visibility_relevant=True,
     region_review_blocks=True,
 )
+
+
+def roles_for(inp: CI.CanonicalMeasurementInput):
+    """Role authority for the exclusion contract (geometry role admission on the same input)."""
+    coords = [abs(c) for p in inp.parts for c in p.geometry[:2]] or [1.0]
+    return GR.admit(inp, frame_insert=FRAME_INSERT, eps=TP.eps_noise(max(coords)))["roles"]
 
 
 # ------------------------------------------------------------------ bridge to the legacy method input
@@ -206,7 +218,8 @@ def rooms_of(res):
 
 def measure(inp, contract=QS01, *, expected_revision_id, selected_region_id=REGION_ID) -> dict:
     """The guarded measurement: no COMPLETE validation -> no quantity; method unit != claimed unit -> no quantity."""
-    v = CI.validate(inp, contract, expected_revision_id=expected_revision_id, selected_region_id=selected_region_id)
+    v = CI.validate(inp, contract, expected_revision_id=expected_revision_id, selected_region_id=selected_region_id,
+                    roles=roles_for(inp) if contract.exclusions else None)
     if v["state"] != CI.COMPLETE:
         return {"state": v["state"], "six": None, "rooms": None, "validation": v}
     res = run_legacy(inp, strict=True)

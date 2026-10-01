@@ -152,8 +152,8 @@ def _finding(out, code, obs, path, detail=""):
     out.findings.append(SourceFinding(code, obs.obs_id if obs is not None else None, tuple(path), detail))
 
 
-def _lineage(obs, path):
-    return Lineage(obs.obs_id, obs.source_handle, tuple(path), obs.layer, obs.kind)
+def _lineage(obs, path, sub_part=0):
+    return Lineage(obs.obs_id, obs.source_handle, tuple(path), obs.layer, obs.kind, sub_part)
 
 
 def _emit(doc, obs, parent: Affine2, path: tuple, visible: bool, depth: int, out: RealisedGeometry):
@@ -214,7 +214,7 @@ def _circle_points(c, r, t):
 
 
 def _elliptical_from_circle(obs, full, c_loc, r, t0, sweep, local_dir_sign, path, source, out,
-                            start=None, end=None, mid=None):
+                            start=None, end=None, mid=None, sub_part=0):
     """Exact affine image of a circular arc under a non-similarity map."""
     C = full.apply(c_loc)
     u = full.apply_linear((r, 0.0))
@@ -224,7 +224,7 @@ def _elliptical_from_circle(obs, full, c_loc, r, t0, sweep, local_dir_sign, path
     direction = "CCW" if (curve_orientation(full, full) * local_dir_sign) > 0 else "CW"
     out.elliptical_arcs.append(RealisedEllipticalArc(
         C, u, v, tt[0], tt[2], start or pts[0], mid or pts[1], end or pts[2], direction,
-        abs(sweep - TWO_PI) < 1e-15, source, _lineage(obs, path)))
+        abs(sweep - TWO_PI) < 1e-15, source, _lineage(obs, path, sub_part)))
     _finding(out, F.NON_UNIFORM_SCALE_CURVE, obs, path,
              "circular curve under a non-similarity map realised exactly as an elliptical arc")
 
@@ -266,7 +266,7 @@ def _realise_polyline(obs, full, frame, path, out):
             continue
         A, B = full.apply(a), full.apply(b)
         if abs(bulge) < 1e-12:
-            out.segments.append(RealisedSegment(A, B, _lineage(obs, path)))
+            out.segments.append(RealisedSegment(A, B, _lineage(obs, path, i)))
             continue
         chord = math.hypot(b[0] - a[0], b[1] - a[1])
         theta = 4.0 * math.atan(abs(bulge))
@@ -281,14 +281,14 @@ def _realise_polyline(obs, full, frame, path, out):
         if not full.is_similarity(SIMILARITY_REL_TOL):
             ta = math.atan2(a[1] - c_loc[1], a[0] - c_loc[0])
             _elliptical_from_circle(obs, full, c_loc, rad, ta, theta, int(sgn), path, "BULGE", out,
-                                    start=A, end=B, mid=full.apply(m_loc))
+                                    start=A, end=B, mid=full.apply(m_loc), sub_part=i)
             continue
         C, M = full.apply(c_loc), full.apply(m_loc)
         local_dir = "CCW" if bulge > 0 else "CW"
         direction = local_dir if curve_orientation(full, frame) > 0 else _flip(local_dir)
         _check_orientation(out, obs, path, A, M, B, C, direction)
         out.arcs.append(RealisedCircularArc(C, rad * math.sqrt(abs(full.det())), A, M, B, direction, "BULGE",
-                                            _lineage(obs, path)))
+                                            _lineage(obs, path, i)))
 
 
 def _realise_ellipse(obs, container, path, out):

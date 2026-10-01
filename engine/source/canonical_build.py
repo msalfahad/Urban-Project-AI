@@ -8,6 +8,14 @@ Two routes, one output shape:
 
 Identity is source-derived (see canonical_input). Nothing is matched by coordinates; a record that cannot be
 placed keeps its identity with world_placement None, so a method that needs it fails closed.
+
+R8.8
+    * part identity: part_index is the SOURCE sub-part (Lineage.sub_part), never an output ordinal;
+    * visibility AUTHORITY for parts, texts and dimensions alike (VisibilityAuthority): the entity flag (applied by
+      the kernel), the layer state (frozen / off, read from the source layer table), frozen ancestor insert layers,
+      ByLayer inheritance of layer-0 children, and unresolved dynamic-block occurrences. Nothing is VISIBLE by
+      default: a record whose layer state was not read is VISIBILITY_UNRESOLVED;
+    * region membership is EXACT (region_membership): no sampling of curves.
 Project-agnostic; stdlib only.
 """
 
@@ -18,6 +26,7 @@ from collections import Counter
 
 from . import canonical_input as CI
 from . import findings as F
+from . import region_membership as RM
 from .cad import kernel
 from .cad.affine import Affine2
 
@@ -47,22 +56,20 @@ def _geometry(kind, g):
     return (g.center[0], g.center[1], g.axis_u[0], g.axis_u[1], g.axis_v[0], g.axis_v[1], g.t0, g.t1)
 
 
-def parts_from_realised(revision_id: str, realised, steps, unresolved_occurrences=frozenset()) -> tuple:
-    """CanonicalPart per realised curve. part_index = ordinal among the parts of one kind realised from one
-    source-entity occurrence, in emission order (the source's own vertex order). `steps(path)` gives the
-    LineageStep per path level; `unresolved_occurrences` are insert occurrences whose visibility state was not
-    read (their parts are VISIBILITY_UNRESOLVED, never silently visible)."""
-    out, ordinal = [], Counter()
+def parts_from_realised(revision_id: str, realised, steps, visibility=None) -> tuple:
+    """CanonicalPart per realised curve. part_index = the SOURCE sub-part the curve realises (Lineage.sub_part:
+    0 for a single-curve entity, the span index for a polyline span), read from source structure by the route -
+    never an ordinal counted over the realised output, so emission order cannot change an identity (R8.8). A route
+    that cannot name the sub-part leaves it None and the identity key is None (a method requiring it fails closed).
+    `steps(path)` gives the LineageStep per path level; `visibility(layer, path)` the visibility authority."""
+    out = []
     for attr, kind in PART_KINDS.items():
         for g in getattr(realised, attr):
             lin = g.lineage
             path = tuple(lin.instance_path)
-            key = (lin.obs_id, path, kind)
-            idx = ordinal[key]
-            ordinal[key] += 1
-            vis = CI.VISIBILITY_UNRESOLVED if any(p in unresolved_occurrences for p in path) else CI.VISIBLE
+            vis = visibility(lin.layer, path) if visibility is not None else CI.VISIBILITY_UNRESOLVED
             ident = CI.SourceIdentity(revision_id, _base(lin.obs_id) if lin.obs_id else None,
-                                      tuple(_handle(p) for p in path), kind, idx)
+                                      tuple(_handle(p) for p in path), kind, getattr(lin, "sub_part", None))
             out.append(CI.CanonicalPart(ident, kind, _geometry(kind, g), lin.layer, vis, steps(path), lin.obs_id,
                                         lin.kind))
     return tuple(out)
@@ -71,6 +78,70 @@ def parts_from_realised(revision_id: str, realised, steps, unresolved_occurrence
 def unresolved_dynamic_occurrences(realised) -> frozenset:
     return frozenset(f.instance_path[-1] for f in realised.findings
                      if f.code == F.DYNAMIC_BLOCK_UNRESOLVED and f.instance_path)
+
+
+class VisibilityAuthority:
+    """Visibility of one record from source facts only.
+
+    layer_states  {layer name: {"frozen": bool, "off": bool}} read from the source layer table, or None when the
+                  route did not read it (then nothing can be VISIBLE: VISIBILITY_UNRESOLVED).
+    insert_layer  callable(path entry) -> the INSERT occurrence's own layer (None when unknown).
+    unresolved    instance-path entries of dynamic-block occurrences whose visibility state was not read.
+
+    Rules (AutoCAD display semantics): a frozen layer hides its entities and, on an INSERT, the whole occurrence;
+    an OFF layer hides its own entities only; an entity on layer "0" inside a block takes the layer of the insert
+    that places it (ByLayer). Entity invisibility flags are applied earlier by the kernels (hidden records)."""
+
+    def __init__(self, layer_states, insert_layer, unresolved=frozenset()):
+        self.states, self.insert_layer, self.unresolved = layer_states, insert_layer, frozenset(unresolved)
+
+    def _state(self, layer):
+        if self.states is None or layer is None:
+            return None
+        return self.states.get(layer)
+
+    def __call__(self, layer, path) -> str:
+        if any(p in self.unresolved for p in path):
+            return CI.VISIBILITY_UNRESOLVED
+        if self.states is None:
+            return CI.VISIBILITY_UNRESOLVED
+        eff_parent = None
+        for p in path:                                   # outermost first: effective layer of each insert
+            own = self.insert_layer(p)
+            eff = eff_parent if (own == "0" and eff_parent is not None) else own
+            st = self._state(eff)
+            if st is None:
+                return CI.VISIBILITY_UNRESOLVED
+            if st.get("frozen"):
+                return CI.HIDDEN_SOURCE
+            eff_parent = eff
+        eff = eff_parent if (layer == "0" and eff_parent is not None) else layer
+        st = self._state(eff)
+        if st is None:
+            return CI.VISIBILITY_UNRESOLVED
+        if st.get("frozen") or st.get("off"):
+            return CI.HIDDEN_SOURCE
+        return CI.VISIBLE
+
+
+def k1_layer_states(decode: dict):
+    """{layer: {frozen, off}} from a pinned LibreDWG decode. LibreDWG's own LAYER spec (dwg.spec, R2000+):
+    frozen = flag0 & 1, on = !(flag0 & 2). None when the decode has no LAYER record with a flag0."""
+    out = {}
+    for o in decode.get("OBJECTS", []):
+        if o.get("object") == "LAYER" and o.get("name") is not None:
+            f = o.get("flag0")
+            if not isinstance(f, int):
+                return None
+            out[o["name"]] = {"frozen": bool(f & 1), "off": bool(f & 2)}
+    return out or None
+
+
+def k2_layer_states(ezdoc):
+    try:
+        return {ly.dxf.name: {"frozen": bool(ly.is_frozen()), "off": bool(ly.is_off())} for ly in ezdoc.layers} or None
+    except Exception:                                    # noqa: BLE001 - an unreadable table is "not read"
+        return None
 
 
 # ---------------------------------------------------------------- K1
@@ -85,6 +156,12 @@ class K1:
         self.raw = {str(L.handle_id(o.get("handle"))): o for o in decode.get("OBJECTS", [])
                     if isinstance(o.get("handle"), list)}
         self.dimlfac = float(decode.get("HEADER", {}).get("DIMLFAC") or 1.0)
+        self.layer_states = k1_layer_states(decode)
+        self.vis = VisibilityAuthority(self.layer_states, self._insert_layer, unresolved_dynamic_occurrences(realised))
+
+    def _insert_layer(self, path_entry):
+        o = self.obs.get(path_entry.split("[")[0])
+        return o.layer if o is not None else None
 
     def steps(self, path) -> tuple:
         out = []
@@ -110,13 +187,23 @@ class K1:
         return m
 
     def parts(self):
-        return parts_from_realised(self.rev, self.real, self.steps, unresolved_dynamic_occurrences(self.real))
+        return parts_from_realised(self.rev, self.real, self.steps, self.vis)
+
+    def _carried_and_hidden(self, kinds):
+        """(entry, visibility) for every carried record of these kinds, and every entity-flag-hidden one
+        (HIDDEN_SOURCE: listed so a consumer can see it exists and must not use it)."""
+        for c in self.real.carried:
+            if c["kind"] in kinds:
+                o = self.obs.get(c["obs_id"])
+                yield c, o, self.vis(o.layer if o is not None else None, tuple(c["instance_path"]))
+        for h in self.real.hidden:
+            if h["kind"] in kinds:
+                yield h, self.obs.get(h["obs_id"]), CI.HIDDEN_SOURCE
 
     def texts(self):
         out = []
-        for c in self.real.carried:
-            o = self.obs.get(c["obs_id"])
-            if o is None or o.kind not in ("TEXT", "MTEXT"):
+        for c, o, vis in self._carried_and_hidden(("TEXT", "MTEXT")):
+            if o is None:
                 continue
             path = tuple(c["instance_path"])
             m = self.placement(path)
@@ -129,27 +216,26 @@ class K1:
             h = raw.get("height")
             out.append(CI.PlacedText(CI.SourceIdentity(self.rev, _base(o.obs_id), tuple(_handle(p) for p in path), o.kind, 0),
                                      (o.geometry.value or "").strip() if getattr(o.geometry, "value", None) is not None else None,
-                                     x, y, None if h is None else float(h), o.layer, CI.VISIBLE, self.steps(path), o.kind))
+                                     x, y, None if h is None else float(h), o.layer, vis, self.steps(path), o.kind))
         return tuple(out)
 
     def dimensions(self):
         placements = {}
-        for c in self.real.carried:
-            o = self.obs.get(c["obs_id"])
-            if o is not None and o.kind == "DIMENSION":
-                placements.setdefault(c["obs_id"], []).append(tuple(c["instance_path"]))
+        for c, o, vis in self._carried_and_hidden(("DIMENSION",)):
+            if o is not None:
+                placements.setdefault(c["obs_id"], []).append((tuple(c["instance_path"]), vis))
         for o in self.doc.entities:
             if o.kind == "DIMENSION" and o.obs_id not in placements:
-                placements[o.obs_id] = [()]
+                placements[o.obs_id] = [((), self.vis(o.layer, ()))]
         out = []
         for oid, paths in sorted(placements.items(), key=lambda kv: int(_base(kv[0]))):
             o = self.obs[oid]
             r = self.raw.get(_base(oid))
-            for path in paths:
+            for path, vis in paths:
                 ident = CI.SourceIdentity(self.rev, _base(oid), tuple(_handle(p) for p in path), "DIMENSION", 0)
                 if r is None:
                     out.append(CI.PlacedDimension(ident, None, None, None, None, self.dimlfac, None, o.layer,
-                                                  CI.VISIBLE, self.steps(path)))
+                                                  vis, self.steps(path)))
                     continue
                 a = r.get("xline1_pt") or r.get("def_pt")
                 b = r.get("xline2_pt") or r.get("def_pt")
@@ -159,7 +245,7 @@ class K1:
                 out.append(CI.PlacedDimension(ident, None if a is None or b is None else ((a[0], a[1]), (b[0], b[1])),
                                               placed, None if act is None else float(act), str(r.get("user_text") or ""),
                                               self.dimlfac, None if r.get("type") is None else str(r.get("type")),
-                                              o.layer, CI.VISIBLE, self.steps(path)))
+                                              o.layer, vis, self.steps(path)))
         return tuple(out)
 
 
@@ -169,9 +255,15 @@ class K2:
         self.rev, self.doc, self.real = revision_id, ezdoc, realised
         self.dimlfac = float(ezdoc.header.get("$DIMLFAC", 1.0) or 1.0)
         self._steps = {}
+        self.layer_states = k2_layer_states(ezdoc)
+        self.vis = VisibilityAuthority(self.layer_states, self._insert_layer, unresolved_dynamic_occurrences(realised))
 
     def entity(self, obs_id):
         return self.doc.entitydb.get(format(int(_base(obs_id)), "X"))
+
+    def _insert_layer(self, path_entry):
+        e = self.entity(path_entry)
+        return e.dxf.get("layer", None) if e is not None else None
 
     def steps(self, path) -> tuple:
         if path not in self._steps:
@@ -200,14 +292,20 @@ class K2:
         return (float(v[0]), float(v[1]))
 
     def parts(self):
-        return parts_from_realised(self.rev, self.real, self.steps, unresolved_dynamic_occurrences(self.real))
+        return parts_from_realised(self.rev, self.real, self.steps, self.vis)
+
+    def _carried_and_hidden(self, kinds):
+        for c in self.real.carried:
+            if c["kind"] in kinds:
+                e = self.entity(c["obs_id"])
+                yield c, e, self.vis(e.dxf.get("layer", None) if e is not None else None, tuple(c["instance_path"]))
+        for h in self.real.hidden:
+            if h["kind"] in kinds or (h["kind"] == "MTEXT" and "MTEXT" in kinds):
+                yield h, self.entity(h["obs_id"]), CI.HIDDEN_SOURCE
 
     def texts(self):
         out = []
-        for c in self.real.carried:
-            if c["kind"] not in ("TEXT", "MTEXT"):
-                continue
-            e = self.entity(c["obs_id"])
+        for c, e, vis in self._carried_and_hidden(("TEXT", "MTEXT")):
             path = tuple(c["instance_path"])
             if e is None:
                 continue
@@ -220,15 +318,12 @@ class K2:
             out.append(CI.PlacedText(CI.SourceIdentity(self.rev, _base(c["obs_id"]), tuple(_handle(q) for q in path), t, 0),
                                      None if value is None else value.strip(), None if p is None else p[0],
                                      None if p is None else p[1], None if h is None else float(h),
-                                     e.dxf.get("layer", None), CI.VISIBLE, self.steps(path), t))
+                                     e.dxf.get("layer", None), vis, self.steps(path), t))
         return tuple(out)
 
     def dimensions(self):
         out = []
-        for c in self.real.carried:
-            if c["kind"] != "DIMENSION":
-                continue
-            e = self.entity(c["obs_id"])
+        for c, e, vis in self._carried_and_hidden(("DIMENSION",)):
             if e is None:
                 continue
             path = tuple(c["instance_path"])
@@ -243,43 +338,33 @@ class K2:
             out.append(CI.PlacedDimension(ident, None if a is None or b is None else ((a[0], a[1]), (b[0], b[1])),
                                           None if pa is None or pb is None else (pa, pb),
                                           None if act is None else float(act), str(g.get("text", "") or ""),
-                                          self.dimlfac, code, g.get("layer", None), CI.VISIBLE, self.steps(path),
+                                          self.dimlfac, code, g.get("layer", None), vis, self.steps(path),
                                           g.get("dimstyle", None)))
         return tuple(out)
 
 
 # ---------------------------------------------------------------- input assembly and region clipping
 def _points(rec):
-    if isinstance(rec, CI.CanonicalPart):
-        g = rec.geometry
-        if rec.kind == "SEGMENT":
-            return [(g[0], g[1]), (g[2], g[3])]
-        if rec.kind == "ARC":
-            cx, cy, r, a0, a1 = g
-            sweep = (a1 - a0) % (2 * math.pi)
-            return [(cx + r * math.cos(a0 + sweep * k / 4), cy + r * math.sin(a0 + sweep * k / 4)) for k in range(5)]
-        if rec.kind == "CIRCLE":
-            cx, cy, r = g
-            return [(cx - r, cy), (cx + r, cy), (cx, cy - r), (cx, cy + r)]
-        cx, cy, ux, uy, vx, vy, t0, t1 = g
-        return [(cx + math.cos(t) * ux + math.sin(t) * vx, cy + math.cos(t) * uy + math.sin(t) * vy)
-                for t in (t0 + (t1 - t0) * k / 4 for k in range(5))]
+    """The finite point set of a text / dimension record (None when unplaced)."""
     if isinstance(rec, CI.PlacedText):
         return None if rec.x is None or rec.y is None else [(rec.x, rec.y)]
     return None if rec.placed_points is None else list(rec.placed_points)
 
 
-def membership(rec, bounds) -> str:
+MEMBERSHIP = {RM.FULLY_INSIDE: CI.IN_REGION, RM.FULLY_OUTSIDE: CI.OUTSIDE_REGION,
+              RM.CROSSES_BOUNDARY: CI.REVIEW_REQUIRED, RM.UNRESOLVED: CI.REVIEW_REQUIRED}
+
+
+def exact_state(rec, bounds, eps: float = 0.0) -> str:
+    """FULLY_INSIDE / FULLY_OUTSIDE / CROSSES_BOUNDARY / UNRESOLVED, exactly (region_membership; no sampling)."""
+    if isinstance(rec, CI.CanonicalPart):
+        return RM.classify(rec.kind, rec.geometry, bounds, eps)
     pts = _points(rec)
-    if not pts:
-        return CI.REVIEW_REQUIRED
-    x0, y0, x1, y1 = bounds
-    inside = [x0 <= x <= x1 and y0 <= y <= y1 for x, y in pts]
-    if all(inside):
-        return CI.IN_REGION
-    if not any(inside):
-        return CI.OUTSIDE_REGION
-    return CI.REVIEW_REQUIRED
+    return RM.classify_points(pts, bounds, eps) if pts else RM.UNRESOLVED
+
+
+def membership(rec, bounds, eps: float = 0.0) -> str:
+    return MEMBERSHIP[exact_state(rec, bounds, eps)]
 
 
 def occurrence(rec) -> str:
@@ -289,13 +374,13 @@ def occurrence(rec) -> str:
 
 
 def assemble(revision: CI.SourceRevision, region_id: str, bounds, frame_id, unit_native_to_mm, unit_claim_id,
-             parts, texts, dimensions, notes=None) -> CI.CanonicalMeasurementInput:
+             parts, texts, dimensions, notes=None, eps: float = 0.0) -> CI.CanonicalMeasurementInput:
     """Keep the records inside the selected region. Membership is judged per top-level OCCURRENCE: a block
     occurrence partly inside and partly outside is never cut in two - every one of its records is listed
     REVIEW_REQUIRED (an occurrence cut by the region boundary changed a room decomposition silently, R8.7).
     Unplaceable records are REVIEW_REQUIRED too; outside records are counted."""
     recs = [("parts", r) for r in parts] + [("texts", r) for r in texts] + [("dimensions", r) for r in dimensions]
-    member = {id(r): membership(r, bounds) for _, r in recs}
+    member = {id(r): membership(r, bounds, eps) for _, r in recs}
     by_occ = {}
     for _, r in recs:
         by_occ.setdefault(occurrence(r), set()).add(member[id(r)])
@@ -304,7 +389,8 @@ def assemble(revision: CI.SourceRevision, region_id: str, bounds, frame_id, unit
         states = by_occ[occurrence(r)]
         m = member[id(r)]
         if m == CI.REVIEW_REQUIRED:
-            review[f"{name}:{r.identity.key}"] = "crosses the region boundary or has no placement"
+            review[f"{name}:{r.identity.key}"] = ("crosses the region boundary (exact test) or has no placement: "
+                                                  + exact_state(r, bounds, eps))
         elif len(states) > 1 and occurrence(r).startswith("I"):
             review[f"{name}:{r.identity.key}"] = f"occurrence {occurrence(r)[1:]} is partly inside the region"
         elif m == CI.IN_REGION:
@@ -313,17 +399,17 @@ def assemble(revision: CI.SourceRevision, region_id: str, bounds, frame_id, unit
             outside[name] += 1
     n = dict(notes or {})
     n["outside_region"] = dict(outside)
+    n["region_membership_policy"] = RM.POLICY["id"]
     return CI.CanonicalMeasurementInput(revision, region_id, frame_id, unit_native_to_mm, unit_claim_id,
                                         tuple(kept["parts"]), tuple(kept["texts"]), tuple(kept["dimensions"]),
                                         review, n)
 
 
 def occurrence_extent(parts, insert_handle: str):
-    """Bounds of every part placed through one top-level insert occurrence (e.g. a sheet frame)."""
-    xs, ys = [], []
-    for p in parts:
-        if p.identity.instance_handles and p.identity.instance_handles[0] == insert_handle:
-            for x, y in _points(p):
-                xs.append(x)
-                ys.append(y)
-    return None if not xs else (min(xs), min(ys), max(xs), max(ys))
+    """EXACT bounds of every part placed through one top-level insert occurrence (e.g. a sheet frame)."""
+    boxes = [RM.exact_bbox(p.kind, p.geometry) for p in parts
+             if p.identity.instance_handles and p.identity.instance_handles[0] == insert_handle]
+    boxes = [b for b in boxes if b is not None]
+    if not boxes:
+        return None
+    return (min(b[0] for b in boxes), min(b[1] for b in boxes), max(b[2] for b in boxes), max(b[3] for b in boxes))

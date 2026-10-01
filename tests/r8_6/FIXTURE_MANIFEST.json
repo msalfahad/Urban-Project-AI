@@ -14,7 +14,7 @@
   "engine/ingest/pipeline7.py": "ddf03ca77228f34e7146957d7aea5e614f4eebcb06c12853ee1de94bc147f307",
   "engine/ingest/source_units.py": "295aea39cc22a73e51b42de7624d4bd58c887526e7997f3618d558d6c21a171e",
   "engine/cad_adapter.py": "4d060a1d0f9c5a6ed19c6f8b7b508fa7a5762aa4dc74684bc3b1ec9cd0a573a3",
-  "engine/source/cad/kernel.py": "7ae1562686744eed7504db015e57410020dcfc1e26a1b91766555ca1d11eca5b",
+  "engine/source/cad/kernel.py": "0888c5d0ca4f2ccc3371df75ef344bf93604d3666a99f6205bda2e879aa2f99f",
   "engine/source/cad/libredwg_map.py": "98a3414cc296dfa6196491086f6522ea17f2b6a0f0f212f5b1d4658f9017a44b"
  },
  "regression_truth": {
@@ -26,5 +26,14 @@
   "Q-14": 138.51
  },
  "regression_truth_rule": "written AFTER the calculation path was frozen; it is compared to a computed value and never enters geometry extraction, unit selection, snapping, region selection or method selection",
- "canonical_rooms_digest": "165a7cd8206ae2a8d3bc872b54ec7213c50cb66500514ce9b3491f750f102630"
+ "canonical_rooms_digest": "165a7cd8206ae2a8d3bc872b54ec7213c50cb66500514ce9b3491f750f102630",
+ "refreeze_log": [
+  {
+   "round": "R8.8",
+   "file": "engine/source/cad/kernel.py",
+   "from": "7ae1562686744eed7504db015e57410020dcfc1e26a1b91766555ca1d11eca5b",
+   "to": "0888c5d0ca4f2ccc3371df75ef344bf93604d3666a99f6205bda2e879aa2f99f",
+   "why": "deliberate re-freeze: the kernel now records the SOURCE sub-part (Lineage.sub_part = polyline span index) so canonical part identity no longer depends on realisation order; realised geometry, dispositions and findings are unchanged (R8.6 six rows and canonical rooms digest re-verified by this suite)"
+  }
+ ]
 }

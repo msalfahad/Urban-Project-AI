@@ -17,6 +17,10 @@ class Lineage:
     instance_path: tuple
     layer: str | None
     kind: str
+    # R8.8: the source sub-part this curve realises, read from SOURCE STRUCTURE (never counted from output):
+    # 0 for a single-curve entity (LINE, ARC, CIRCLE, ELLIPSE); the span index for an LWPOLYLINE span. None when
+    # the route cannot name it (a consumer that requires it must fail closed).
+    sub_part: int | None = None
 
 
 @dataclass(frozen=True)

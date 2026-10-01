@@ -116,6 +116,7 @@ class _K2:
     def __init__(self, doc):
         self.doc = doc
         self.out = RealisedGeometry()
+        self._sub = 0                    # sub-part of a single-curve entity; None for ezdxf-exploded parts
 
     # -------------------------------------------------------------- bookkeeping
     def dispose(self, kind, obs_id):
@@ -127,8 +128,9 @@ class _K2:
     def finding(self, code, obs_id, path, detail="", impacts=None):
         self.out.findings.append(SourceFinding(code, obs_id, tuple(path), detail, impacts))
 
-    def lineage(self, obs_id, path, layer, kind):
-        return Lineage(obs_id, obs_id[3:] if obs_id else None, tuple(path), layer, kind)
+    def lineage(self, obs_id, path, layer, kind, sub_part=0):
+        return Lineage(obs_id, obs_id[3:] if obs_id else None, tuple(path), layer, kind,
+                       sub_part if self._sub is not None else None)
 
     # -------------------------------------------------------------- the walk
     def emit(self, e, path, depth, visible, reflected_parent, source=None, converted=None):
@@ -200,7 +202,7 @@ class _K2:
                 self.finding(F.DEGENERATE_GEOMETRY, obs_id, path, f"span {i} has coincident end points")
                 continue
             A, B = _xy(ocs.to_wcs((ax, ay, elev))), _xy(ocs.to_wcs((bx, by, elev)))
-            lin = self.lineage(obs_id, path, layer, "LWPOLYLINE")
+            lin = self.lineage(obs_id, path, layer, "LWPOLYLINE", i)
             if abs(b) < 1e-12:
                 self.out.segments.append(RealisedSegment(A, B, lin))
                 continue
@@ -268,12 +270,18 @@ class _K2:
             for child in blk:
                 if child.dxftype() == "ATTDEF":
                     continue                                                 # values arrive as ATTRIBs
-                for v, conv in self._placed(child, m, cell_path):
+                placed = self._placed(child, m, cell_path)
+                # a source entity exploded by ezdxf into several parts (virtual_entities) has no source span index
+                # the route can name: those parts carry sub_part None (R8.8: never counted from the output)
+                one_curve = len(placed) == 1 and (placed[0][0].dxftype() == child.dxftype() or placed[0][1] is not None)
+                for v, conv in placed:
+                    self._sub = 0 if one_curve else None          # reset: a nested INSERT's walk changes it
                     self.emit(v, cell_path, depth + 1, visible, reflected, source=child, converted=conv)
                     if limited and v.dxftype() != "INSERT":
                         self.finding(F.KNOWN_LIBRARY_LIMITATION, f"D2:{_hid(child)}", cell_path,
                                      "EZDXF-L02: MINSERT under a reflecting parent; ezdxf does not transform spacing",
                                      ((F.GEOMETRY, F.BLOCKING),))
+                self._sub = 0
         for att in ins.attribs:
             p = att.ocs().to_wcs(att.dxf.insert)
             self.out.attributes.append(RealisedAttribute(att.dxf.get("tag", ""), att.dxf.get("text", ""), _xy(p),

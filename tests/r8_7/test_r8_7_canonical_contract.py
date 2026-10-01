@@ -109,8 +109,16 @@ def test_missing_input_fields_fail_closed():
 
 
 def test_declared_exclusion_is_counted_and_an_undeclared_kind_fails():
+    # SUPERSEDED IN R8.8 (decision R88-D05): a bare declared exclusion carries no authority and now fails closed;
+    # the same part is excluded only through a MethodExclusion whose allowed role it positively carries.
     ell = part(h="9", kind="ELLIPTICAL_ARC", geom=(0, 0, 1, 0, 0, 1, 0, 1))
     v = state(inp(parts=[part(), ell]))
+    assert v["state"] == CI.METHOD_INPUT_INCOMPLETE
+    assert v["exclusion_without_authority"] == {"ELLIPTICAL_ARC:BARE_DECLARATION": 1}
+    ex = CI.MethodExclusion("ELLIPTICAL_ARC", "TEST", "not consumed", "test", ("OPENING_SYMBOL",))
+    c2 = replace(CONTRACT, declared_exclusions={}, exclusions=(ex,))
+    role = type("A", (), {"role": "OPENING_SYMBOL"})()
+    v = CI.validate(inp(parts=[part(), ell]), c2, roles={ell.identity.key: role})
     assert v["state"] == CI.COMPLETE and v["excluded_by_declaration"] == {"ELLIPTICAL_ARC": 1}
     spline = part(h="9", kind="SPLINE", geom=(0, 0))
     assert state(inp(parts=[part(), spline]))["unsupported_part_kinds"] == {"SPLINE": 1}

@@ -143,6 +143,19 @@ class CanonicalMeasurementInput:
 
 
 @dataclass(frozen=True)
+class MethodExclusion:
+    """R8.8: a method may leave a part KIND unconsumed only with authority. `allowed_roles` names the geometry roles
+    (geometry_role) that positively establish an occurrence as irrelevant to this method's domain; every excluded
+    part must carry one of them, or the input is METHOD_INPUT_INCOMPLETE. UNSUPPORTED_BY_METHOD is never read as
+    IRRELEVANT_TO_QUANTITY."""
+    kind: str
+    domain: str
+    reason: str
+    authority: str
+    allowed_roles: tuple = ()
+
+
+@dataclass(frozen=True)
 class MethodContract:
     """What one method consumes. Only declared fields are required; a field a method does not read is not."""
     method_id: str
@@ -152,10 +165,12 @@ class MethodContract:
     text_fields: tuple = ()
     dimension_fields: tuple = ()
     accepted_part_kinds: tuple = ("SEGMENT", "ARC", "CIRCLE")
-    declared_exclusions: dict = field(default_factory=dict)    # {part kind: reason the method excludes it}
+    declared_exclusions: dict = field(default_factory=dict)    # R8.7 bare {kind: reason}: NO authority (R8.8)
     visibility_relevant: bool = True
     region_review_blocks: bool = True
     evidence: dict = field(default_factory=dict)                 # {field: ablation evidence}
+    exclusions: tuple = ()                                        # R8.8 MethodExclusion records (role authority)
+    hidden_excluded: bool = False                                 # R8.8: HIDDEN_* records are not consumed
 
 
 # ---------------------------------------------------------------- field readers (None = absent)
@@ -248,13 +263,25 @@ def _check(collection, records, fields, readers, out, rev_id):
         out["ambiguous_fields"][k] = n
 
 
+HIDDEN_STATES = (HIDDEN_SOURCE, HIDDEN_DYNAMIC_STATE)
+EXCLUSION_WITHOUT_AUTHORITY = "EXCLUSION_WITHOUT_ROLE_AUTHORITY"
+
+
 def validate(inp: CanonicalMeasurementInput, contract: MethodContract, *, expected_revision_id: str | None = None,
-             selected_region_id: str | None = None) -> dict:
+             selected_region_id: str | None = None, roles: dict | None = None) -> dict:
     """The fail-closed check. Returns {state, missing_fields, ambiguous_fields, revision_conflicts,
-    region_conflicts, visibility_unresolved, unsupported_part_kinds, excluded_by_declaration, examples}."""
+    region_conflicts, visibility_unresolved, unsupported_part_kinds, excluded_by_declaration,
+    exclusion_without_authority, hidden_excluded, examples}.
+
+    R8.8: `roles` ({part key: object with .role}) is the role authority for MethodExclusion records. A part of an
+    excluded kind is excluded only when its role is one the exclusion allows; otherwise it is counted under
+    exclusion_without_authority and the input is METHOD_INPUT_INCOMPLETE. A bare R8.7 `declared_exclusions` entry
+    carries no authority at all. With `hidden_excluded`, HIDDEN_SOURCE / HIDDEN_DYNAMIC_STATE records are not
+    consumed (listed, never checked); VISIBILITY_UNRESOLVED always counts."""
     out = {"method_id": contract.method_id, "contract_version": contract.version, "missing_fields": {},
            "ambiguous_fields": {}, "revision_conflicts": [], "region_conflicts": [], "visibility_unresolved": {},
-           "unsupported_part_kinds": {}, "excluded_by_declaration": {}, "region_review_required": 0, "examples": {}}
+           "unsupported_part_kinds": {}, "excluded_by_declaration": {}, "exclusion_without_authority": {},
+           "hidden_excluded": {}, "region_review_required": 0, "examples": {}}
     for f in contract.input_fields:
         if _blank(INPUT_READERS[f](inp)):
             out["missing_fields"][f"input.{f}"] = 1
@@ -264,17 +291,45 @@ def validate(inp: CanonicalMeasurementInput, contract: MethodContract, *, expect
                                           "input_revision": expected_revision_id})
     if selected_region_id is not None and inp.region_id != selected_region_id:
         out["region_conflicts"].append({"input_region": inp.region_id, "selected_region": selected_region_id})
-    parts = [p for p in inp.parts if p.kind not in contract.declared_exclusions]
-    for p in inp.parts:
+
+    def visible(recs, name):
+        if not contract.hidden_excluded:
+            return list(recs)
+        keep = []
+        for r in recs:
+            if r.visibility in HIDDEN_STATES:
+                out["hidden_excluded"][name] = out["hidden_excluded"].get(name, 0) + 1
+            else:
+                keep.append(r)
+        return keep
+    ex_by_kind = {e.kind: e for e in contract.exclusions}
+    parts = []
+    for p in visible(inp.parts, "parts"):
+        ex = ex_by_kind.get(p.kind)
+        if ex is not None:
+            a = (roles or {}).get(p.identity.key)
+            role = getattr(a, "role", None)
+            if role is not None and role in ex.allowed_roles:
+                out["excluded_by_declaration"][p.kind] = out["excluded_by_declaration"].get(p.kind, 0) + 1
+            else:
+                k = f"{p.kind}:{role or 'NO_ROLE'}"
+                out["exclusion_without_authority"][k] = out["exclusion_without_authority"].get(k, 0) + 1
+                out["examples"].setdefault(f"exclusion.{p.kind}", p.identity.key or repr(p.identity))
+            continue
         if p.kind in contract.declared_exclusions:
-            out["excluded_by_declaration"][p.kind] = out["excluded_by_declaration"].get(p.kind, 0) + 1
-        elif p.kind not in contract.accepted_part_kinds:
+            k = f"{p.kind}:BARE_DECLARATION"
+            out["exclusion_without_authority"][k] = out["exclusion_without_authority"].get(k, 0) + 1
+            out["examples"].setdefault(f"exclusion.{p.kind}", p.identity.key or repr(p.identity))
+            continue
+        if p.kind not in contract.accepted_part_kinds:
             out["unsupported_part_kinds"][p.kind] = out["unsupported_part_kinds"].get(p.kind, 0) + 1
+        parts.append(p)
+    texts, dims = visible(inp.texts, "texts"), visible(inp.dimensions, "dimensions")
     _check("parts", parts, contract.part_fields, PART_READERS, out, rev_id)
-    _check("texts", inp.texts, contract.text_fields, TEXT_READERS, out, rev_id)
-    _check("dimensions", inp.dimensions, contract.dimension_fields, DIMENSION_READERS, out, rev_id)
+    _check("texts", texts, contract.text_fields, TEXT_READERS, out, rev_id)
+    _check("dimensions", dims, contract.dimension_fields, DIMENSION_READERS, out, rev_id)
     if contract.visibility_relevant:
-        for name, recs in (("parts", parts), ("texts", inp.texts), ("dimensions", inp.dimensions)):
+        for name, recs in (("parts", parts), ("texts", texts), ("dimensions", dims)):
             bad = Counter(r.visibility for r in recs if r.visibility != VISIBLE)
             if bad:
                 out["visibility_unresolved"][name] = dict(bad)
@@ -284,7 +339,8 @@ def validate(inp: CanonicalMeasurementInput, contract: MethodContract, *, expect
     elif out["region_conflicts"]:
         state = REGION_NOT_SELECTED
     elif (out["missing_fields"] or out["ambiguous_fields"] or out["visibility_unresolved"]
-          or out["unsupported_part_kinds"] or (contract.region_review_blocks and inp.region_review)):
+          or out["unsupported_part_kinds"] or out["exclusion_without_authority"]
+          or (contract.region_review_blocks and inp.region_review)):
         state = METHOD_INPUT_INCOMPLETE
     else:
         state = COMPLETE
@@ -305,7 +361,10 @@ def contract_record(c: MethodContract) -> dict:
             "part_fields": list(c.part_fields), "text_fields": list(c.text_fields),
             "dimension_fields": list(c.dimension_fields), "accepted_part_kinds": list(c.accepted_part_kinds),
             "declared_exclusions": dict(c.declared_exclusions), "visibility_relevant": c.visibility_relevant,
-            "region_review_blocks": c.region_review_blocks, "evidence": dict(c.evidence)}
+            "region_review_blocks": c.region_review_blocks, "evidence": dict(c.evidence),
+            "exclusions": [{"kind": e.kind, "domain": e.domain, "reason": e.reason, "authority": e.authority,
+                            "allowed_roles": list(e.allowed_roles)} for e in c.exclusions],
+            "hidden_excluded": c.hidden_excluded}
 
 
 SCHEMA = {
@@ -321,6 +380,8 @@ SCHEMA = {
     "region_membership": [IN_REGION, REVIEW_REQUIRED, OUTSIDE_REGION],
     "records": {"parts": sorted(PART_READERS), "texts": sorted(TEXT_READERS), "dimensions": sorted(DIMENSION_READERS)},
     "outcomes": [COMPLETE, METHOD_INPUT_INCOMPLETE, SOURCE_REVISION_MISMATCH, REGION_NOT_SELECTED],
+    "exclusion_contract": "R8.8 MethodExclusion(kind, domain, reason, authority, allowed_roles): an excluded part must "
+                          "carry an allowed geometry role; a bare declaration has no authority",
     "rule": "a method declares its fields; any declared field absent, duplicated, cross-revision or unresolved -> "
             "no quantity; nothing is substituted",
 }
