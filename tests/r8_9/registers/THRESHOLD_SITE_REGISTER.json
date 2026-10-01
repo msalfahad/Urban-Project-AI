@@ -1,0 +1,272 @@
+{
+ "SCHEMA": "URBAN_R8_9_THRESHOLD_SITE_REGISTER_V1",
+ "rule": "an opening site is its own physical object; its trade allocation is TRADE_RULE_REQUIRED",
+ "runs": {
+  "OLD_K1": [
+   {
+    "threshold_id": "THRESHOLD-8639087a5492f6c5",
+    "physical_site_id": "SITE-04cdde7c375a2ff7",
+    "opening": "I1443",
+    "area": 1200.0,
+    "sides": [
+     "SITE-8e1f0b3a736abb02",
+     "SITE-9cd4555183e82aa2"
+    ],
+    "allocation": "TRADE_RULE_REQUIRED",
+    "why": "which side's finish covers the strip is a trade rule; no authoritative Urban rule answers it, and TS01 never moves it into a room to match a total",
+    "area_m2": 0.12
+   },
+   {
+    "threshold_id": "THRESHOLD-0f2510f2d76fb0d8",
+    "physical_site_id": "SITE-3f268f68d072de8f",
+    "opening": "I841",
+    "area": 1500.0000001192093,
+    "sides": [
+     "SITE-56af91bb145d30cc",
+     "SITE-fec6c675b81ee36d"
+    ],
+    "allocation": "TRADE_RULE_REQUIRED",
+    "why": "which side's finish covers the strip is a trade rule; no authoritative Urban rule answers it, and TS01 never moves it into a room to match a total",
+    "area_m2": 0.15
+   },
+   {
+    "threshold_id": "THRESHOLD-8732ee1c2cb4f9da",
+    "physical_site_id": "SITE-8bd86fd47559dcf6",
+    "opening": "I1561",
+    "area": 1200.0000001192093,
+    "sides": [
+     "SITE-50b24a2e0df863f2",
+     "SITE-56af91bb145d30cc"
+    ],
+    "allocation": "TRADE_RULE_REQUIRED",
+    "why": "which side's finish covers the strip is a trade rule; no authoritative Urban rule answers it, and TS01 never moves it into a room to match a total",
+    "area_m2": 0.12
+   },
+   {
+    "threshold_id": "THRESHOLD-39991b974260f19c",
+    "physical_site_id": "SITE-8c54eeebefe4e03f",
+    "opening": "I1028",
+    "area": 1500.0,
+    "sides": [
+     "SITE-1e8835fb33cb1a98",
+     "SITE-5613caf47fb31d11"
+    ],
+    "allocation": "TRADE_RULE_REQUIRED",
+    "why": "which side's finish covers the strip is a trade rule; no authoritative Urban rule answers it, and TS01 never moves it into a room to match a total",
+    "area_m2": 0.15
+   },
+   {
+    "threshold_id": "THRESHOLD-f8e1494e02c5892d",
+    "physical_site_id": "SITE-dc55eaa88d8f3346",
+    "opening": "I1988",
+    "area": 1500.0,
+    "sides": [
+     "SITE-56af91bb145d30cc",
+     "SITE-72ff1e5a3c150d7d"
+    ],
+    "allocation": "TRADE_RULE_REQUIRED",
+    "why": "which side's finish covers the strip is a trade rule; no authoritative Urban rule answers it, and TS01 never moves it into a room to match a total",
+    "area_m2": 0.15
+   },
+   {
+    "threshold_id": "THRESHOLD-aa3fea7d5ebcdca0",
+    "physical_site_id": "SITE-ee74da53975a6dc5",
+    "opening": "I2044",
+    "area": 1200.0,
+    "sides": [
+     "SITE-56af91bb145d30cc",
+     "SITE-dd2d6c85412cee23"
+    ],
+    "allocation": "TRADE_RULE_REQUIRED",
+    "why": "which side's finish covers the strip is a trade rule; no authoritative Urban rule answers it, and TS01 never moves it into a room to match a total",
+    "area_m2": 0.12
+   },
+   {
+    "threshold_id": "THRESHOLD-a1093604b1a5cb26",
+    "physical_site_id": "SITE-f8197d84baa08cef",
+    "opening": "I677",
+    "area": 1500.0,
+    "sides": [
+     "SITE-1e8835fb33cb1a98",
+     "SITE-56af91bb145d30cc"
+    ],
+    "allocation": "TRADE_RULE_REQUIRED",
+    "why": "which side's finish covers the strip is a trade rule; no authoritative Urban rule answers it, and TS01 never moves it into a room to match a total",
+    "area_m2": 0.15
+   }
+  ],
+  "OLD_K2": [
+   {
+    "threshold_id": "THRESHOLD-8639087a5492f6c5",
+    "physical_site_id": "SITE-04cdde7c375a2ff7",
+    "opening": "I1443",
+    "area": 1200.0,
+    "sides": [
+     "SITE-8e1f0b3a736abb02",
+     "SITE-9cd4555183e82aa2"
+    ],
+    "allocation": "TRADE_RULE_REQUIRED",
+    "why": "which side's finish covers the strip is a trade rule; no authoritative Urban rule answers it, and TS01 never moves it into a room to match a total",
+    "area_m2": 0.12
+   },
+   {
+    "threshold_id": "THRESHOLD-0f2510f2d76fb0d8",
+    "physical_site_id": "SITE-3f268f68d072de8f",
+    "opening": "I841",
+    "area": 1500.0,
+    "sides": [
+     "SITE-56af91bb145d30cc",
+     "SITE-fec6c675b81ee36d"
+    ],
+    "allocation": "TRADE_RULE_REQUIRED",
+    "why": "which side's finish covers the strip is a trade rule; no authoritative Urban rule answers it, and TS01 never moves it into a room to match a total",
+    "area_m2": 0.15
+   },
+   {
+    "threshold_id": "THRESHOLD-8732ee1c2cb4f9da",
+    "physical_site_id": "SITE-8bd86fd47559dcf6",
+    "opening": "I1561",
+    "area": 1199.9999998807907,
+    "sides": [
+     "SITE-50b24a2e0df863f2",
+     "SITE-56af91bb145d30cc"
+    ],
+    "allocation": "TRADE_RULE_REQUIRED",
+    "why": "which side's finish covers the strip is a trade rule; no authoritative Urban rule answers it, and TS01 never moves it into a room to match a total",
+    "area_m2": 0.12
+   },
+   {
+    "threshold_id": "THRESHOLD-39991b974260f19c",
+    "physical_site_id": "SITE-8c54eeebefe4e03f",
+    "opening": "I1028",
+    "area": 1500.0,
+    "sides": [
+     "SITE-1e8835fb33cb1a98",
+     "SITE-5613caf47fb31d11"
+    ],
+    "allocation": "TRADE_RULE_REQUIRED",
+    "why": "which side's finish covers the strip is a trade rule; no authoritative Urban rule answers it, and TS01 never moves it into a room to match a total",
+    "area_m2": 0.15
+   },
+   {
+    "threshold_id": "THRESHOLD-f8e1494e02c5892d",
+    "physical_site_id": "SITE-dc55eaa88d8f3346",
+    "opening": "I1988",
+    "area": 1500.0,
+    "sides": [
+     "SITE-56af91bb145d30cc",
+     "SITE-72ff1e5a3c150d7d"
+    ],
+    "allocation": "TRADE_RULE_REQUIRED",
+    "why": "which side's finish covers the strip is a trade rule; no authoritative Urban rule answers it, and TS01 never moves it into a room to match a total",
+    "area_m2": 0.15
+   },
+   {
+    "threshold_id": "THRESHOLD-aa3fea7d5ebcdca0",
+    "physical_site_id": "SITE-ee74da53975a6dc5",
+    "opening": "I2044",
+    "area": 1200.0,
+    "sides": [
+     "SITE-56af91bb145d30cc",
+     "SITE-dd2d6c85412cee23"
+    ],
+    "allocation": "TRADE_RULE_REQUIRED",
+    "why": "which side's finish covers the strip is a trade rule; no authoritative Urban rule answers it, and TS01 never moves it into a room to match a total",
+    "area_m2": 0.12
+   },
+   {
+    "threshold_id": "THRESHOLD-a1093604b1a5cb26",
+    "physical_site_id": "SITE-f8197d84baa08cef",
+    "opening": "I677",
+    "area": 1500.0,
+    "sides": [
+     "SITE-1e8835fb33cb1a98",
+     "SITE-56af91bb145d30cc"
+    ],
+    "allocation": "TRADE_RULE_REQUIRED",
+    "why": "which side's finish covers the strip is a trade rule; no authoritative Urban rule answers it, and TS01 never moves it into a room to match a total",
+    "area_m2": 0.15
+   }
+  ],
+  "NEW_K2": [
+   {
+    "threshold_id": "THRESHOLD-bfcea08375237224",
+    "physical_site_id": "SITE-2bf3db64b092ac64",
+    "opening": "I677",
+    "area": 1500.0000001192093,
+    "sides": [
+     "SITE-2201f5d1b83158c0",
+     "SITE-788f30878ba9d2b3"
+    ],
+    "allocation": "TRADE_RULE_REQUIRED",
+    "why": "which side's finish covers the strip is a trade rule; no authoritative Urban rule answers it, and TS01 never moves it into a room to match a total",
+    "area_m2": 0.15
+   },
+   {
+    "threshold_id": "THRESHOLD-28f50f8dc18c1e90",
+    "physical_site_id": "SITE-5b8e4f9259cdb19c",
+    "opening": "I1561",
+    "area": 1200.0000001192093,
+    "sides": [
+     "SITE-2201f5d1b83158c0",
+     "SITE-fe8ed5548fb4310e"
+    ],
+    "allocation": "TRADE_RULE_REQUIRED",
+    "why": "which side's finish covers the strip is a trade rule; no authoritative Urban rule answers it, and TS01 never moves it into a room to match a total",
+    "area_m2": 0.12
+   },
+   {
+    "threshold_id": "THRESHOLD-e84ea1bf89bb6701",
+    "physical_site_id": "SITE-95292543249f37c6",
+    "opening": "I1028",
+    "area": 1500.0,
+    "sides": [
+     "SITE-788f30878ba9d2b3",
+     "SITE-eaae022599294151"
+    ],
+    "allocation": "TRADE_RULE_REQUIRED",
+    "why": "which side's finish covers the strip is a trade rule; no authoritative Urban rule answers it, and TS01 never moves it into a room to match a total",
+    "area_m2": 0.15
+   },
+   {
+    "threshold_id": "THRESHOLD-c82365dd41b94abe",
+    "physical_site_id": "SITE-9f4d8d389cb86869",
+    "opening": "I1988",
+    "area": 1500.0,
+    "sides": [
+     "SITE-2201f5d1b83158c0",
+     "SITE-daca396d6d730e60"
+    ],
+    "allocation": "TRADE_RULE_REQUIRED",
+    "why": "which side's finish covers the strip is a trade rule; no authoritative Urban rule answers it, and TS01 never moves it into a room to match a total",
+    "area_m2": 0.15
+   },
+   {
+    "threshold_id": "THRESHOLD-04910e5deeeed2fc",
+    "physical_site_id": "SITE-bd2b680527d056fa",
+    "opening": "I841",
+    "area": 1499.9999998807907,
+    "sides": [
+     "SITE-2201f5d1b83158c0"
+    ],
+    "allocation": "TRADE_RULE_REQUIRED",
+    "why": "which side's finish covers the strip is a trade rule; no authoritative Urban rule answers it, and TS01 never moves it into a room to match a total",
+    "area_m2": 0.15
+   },
+   {
+    "threshold_id": "THRESHOLD-f9846605acbce828",
+    "physical_site_id": "SITE-e639327cc873867d",
+    "opening": "I1443",
+    "area": 1199.9999998807907,
+    "sides": [
+     "SITE-1c4abf65f9b5db1e",
+     "SITE-a6405850100155ac"
+    ],
+    "allocation": "TRADE_RULE_REQUIRED",
+    "why": "which side's finish covers the strip is a trade rule; no authoritative Urban rule answers it, and TS01 never moves it into a room to match a total",
+    "area_m2": 0.12
+   }
+  ]
+ },
+ "qs01_method_difference": "legacy QS01 wet floor 17.8625 vs TS01 17.7425: one 0.12 m2 door-threshold strip; TS01 keeps it as a threshold site and does not move it into the bath"
+}

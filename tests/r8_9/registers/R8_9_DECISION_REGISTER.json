@@ -1,0 +1,237 @@
+{
+ "SCHEMA": "URBAN_R8_9_DECISION_REGISTER_V1",
+ "recommendation_before_coding": {
+  "1_biggest_silent_risk": "role decisions by layer name alone in BOTH directions - R8.8 questioned admission (GR-05/06/07) but exclusion (GR-09 .. GR-16) is equally layer-only: the new revision's bath / bedroom walls are on the DIM layer and were silently excluded; only the three labels in one space revealed it. With one label it would have been a certified, silently wrong room",
+  "2_role_vs_arithmetic": "YES, role authority - and source completeness (attached xrefs); polygon arithmetic is cross-checked. But the HALL + BED.ROOM + BATH space is a ROLE conflict, not a semantic-zone question",
+  "3_three_objects": "YES; with one guard: a multi-label space must pass a separator-candidate search before it is accepted as an open plan",
+  "4_disagreements": [
+   "§4 'independent evidence per wall line' would block nearly every drawing; grade edges and check consequences instead",
+   "the multi-label cases should not all be treated as semantic: one of the two is a missing separator"
+  ],
+  "5_what_differently": [
+   "consequence check of layer-only exclusion (a diagnostic arrangement)",
+   "network connectivity as role evidence (unconnected lines are candidates)",
+   "text roles from structure (tag occurrences, same-source tag family)",
+   "positive placement evidence for unrealised entities (ACIS / spline extents)"
+  ],
+  "6_resolved_from_source": [
+   "effective layer",
+   "full-extent eps_n",
+   "cross-check V2",
+   "unrealised accounting (all 38 old-revision OFFICE NAME entities placed)",
+   "stubs",
+   "thresholds",
+   "door-reach audit",
+   "text roles (PAINTRY by tag family)",
+   "P7757 to UNIT_UNRESOLVED"
+  ],
+  "7_unavoidable_owner_input": [
+   "are the two attached xrefs outside the plan?",
+   "are the four DIM-layer lines walls?"
+  ],
+  "8_not_mentioned": [
+   "layer-only EXCLUSION (DIM walls)",
+   "attached xrefs whose content is not in the file (R8.8 skipped them silently)",
+   "duplicate SF3 insert (double count for counted trades)",
+   "P7757: the generic lexicon admits almost nothing (W / D / 5 / 1 layers)"
+  ]
+ },
+ "decisions": [
+  {
+   "id": "R89-D01",
+   "decision": "effective layer is a canonical record field (effective_layer + authority); role admission reads it; the R8.8 insert_layers argument is removed"
+  },
+  {
+   "id": "R89-D02",
+   "decision": "role authority stage: boundary grades, unconnected lines not admitted, consequence check of layer-only exclusion and of unknown geometry"
+  },
+  {
+   "id": "R89-D03",
+   "decision": "source-scoped layer role claims (revision id AND anchor hash; candidates never change a role; claims never edit geometry)"
+  },
+  {
+   "id": "R89-D04",
+   "decision": "building-assembly occurrences from positive evidence (GR-17); unknown occurrences fail closed"
+  },
+  {
+   "id": "R89-D05",
+   "decision": "unrealised entities excluded only on positive evidence; the R8.8 layer-peer disposition and its test are superseded"
+  },
+  {
+   "id": "R89-D06",
+   "decision": "text roles before labels; only ROOM_LABEL_ESTABLISHED names a space"
+  },
+  {
+   "id": "R89-D07",
+   "decision": "physical site / semantic zone / trade region are separate objects; subdivision only from authored SEMANTIC_BOUNDARY (GR-18) or a claim"
+  },
+  {
+   "id": "R89-D08",
+   "decision": "threshold sites kept; allocation TRADE_RULE_REQUIRED"
+  },
+  {
+   "id": "R89-D09",
+   "decision": "GEOS cross-check V2: all phases; PHASE_SENSITIVE_INCONCLUSIVE never reported as agreement; no buffer(0); the R8.8 any-phase tests are superseded"
+  },
+  {
+   "id": "R89-D10",
+   "decision": "eps_n from the full exact extent"
+  },
+  {
+   "id": "R89-D11",
+   "decision": "1 mm authored precision = ENGINE_METHOD_PARAMETER (Urban method rule approval recommended later, not now)"
+  },
+  {
+   "id": "R89-D12",
+   "decision": "geometry role policy V2 (effective layer, GR-17, GR-18); the frozen topology tolerance policy is unchanged (digest 263d2adf...)"
+  }
+ ],
+ "findings": [
+  {
+   "id": "F-R89-01",
+   "finding": "the effective-layer gap is real (insert_layers never supplied; top level only) but latent in Qortuba (0 layer-0 children inside inserts); in P7757 it decides 3328 parts"
+  },
+  {
+   "id": "F-R89-02",
+   "finding": "new Qortuba: DIM lines 7116 / 7117 / 7118 / 7119 lie on the faces of the old walls H467 / H465 / H817 / H513 (150 mm pairs); the layer-only exclusion merged BATH + BED.ROOM into the HALL space"
+  },
+  {
+   "id": "F-R89-03",
+   "finding": "new Qortuba carries two attached xrefs (block.dwg, facade details) whose content is not in the file; R8.8 skipped them silently - they now block the region (BLOCKED_SOURCE_COMPLETENESS)"
+  },
+  {
+   "id": "F-R89-04",
+   "finding": "the 37 + 1 OFFICE NAME entities (ACIS REGIONs + a spline) are placed by their own geometry in the title / logo strip, outside every bounded site, identically from the K1 decode and the new DXF"
+  },
+  {
+   "id": "F-R89-05",
+   "finding": "FIRNTUR: MB wardrobe joinery candidate (rectangle-with-diagonal, 600 mm deep); roof double lines unresolved; the same token hosts proven furniture in this source - a source-scoped candidate, never a lexicon entry"
+  },
+  {
+   "id": "F-R89-06",
+   "finding": "SF3 / PM: furniture candidate (3-seat sofa outline 2385 x 995 mm, same library as BED 3); two of three occurrences are exact duplicates - a double-count risk for any counted trade"
+  },
+  {
+   "id": "F-R89-07",
+   "finding": "M.B.ROOM + DRESS: one connected space with two zones; no authored subdivision (legitimate open zone)"
+  },
+  {
+   "id": "F-R89-08",
+   "finding": "door reach: Qortuba closures need 1/15 of the leaf radius; the 0.25 ratio decides nothing here (NEEDS_MORE_EVIDENCE)"
+  },
+  {
+   "id": "F-R89-09",
+   "finding": "GEOS V2: all phases agree on every site (old K1 / K2 75, new 64); the R8.8 any-phase rule was never needed on Qortuba"
+  },
+  {
+   "id": "F-R89-10",
+   "finding": "P7757: the generic exact-token lexicon admits ~5% of parts (layers W, D, 5, 1, TOI, ST); doors are D### blocks on layer D - no door is proven; the role machinery fails closed, as it must"
+  },
+  {
+   "id": "F-R89-11",
+   "finding": "PAINTRY is a misspelled room name; it is established only through its tag family (TR-04), never through the vocabulary"
+  },
+  {
+   "id": "F-R89-12",
+   "finding": "the new revision leaves a 1.196 m gap between the H471 / H477 and H2296 / H2297 wall faces, and the jamb cap H2045 and H1316 float (not admitted)"
+  }
+ ],
+ "post_r8_8_changes": {
+  "tolerance_numbers": "unchanged",
+  "policy_digest": "263d2adf1d17... unchanged",
+  "old_revision_rows": {
+   "Q-03": [
+    "COMPUTED_SHADOW",
+    17.7425
+   ],
+   "Q-03P": [
+    "COMPUTED_SHADOW",
+    11.685
+   ],
+   "Q-11": [
+    "COMPUTED_SHADOW",
+    17.7425
+   ],
+   "Q-12": [
+    "COMPUTED_SHADOW",
+    11.685
+   ],
+   "Q-13": [
+    "BLOCKED",
+    null
+   ],
+   "Q-14": [
+    "BLOCKED",
+    null
+   ]
+  },
+  "superseded_tests": [
+   "R8.8 inspired-risks layer-peer unrealised test (R89-D05)",
+   "R8.8 grid-phase / real-data cross-check assertions (R89-D09)"
+  ]
+ },
+ "gates": {
+  "MIGRATION_PLANNING_READY": "YES",
+  "MIGRATION_EXECUTION_READY": "NO",
+  "PRODUCTION_MIGRATION": "NO",
+  "TS01": "SHADOW",
+  "QS01": "LEGACY_RESEARCH_ONLY",
+  "R9_RULES_AS_DATA": "NOT_STARTED",
+  "NEW_DWG_SOURCE_IDENTITY": "NOT_ESTABLISHED",
+  "P7757_TS01_CERTIFICATE": "UNIT_UNRESOLVED"
+ },
+ "answers": {
+  "1_effective_layer_problem_found": "YES: confirmed in code (admit() took insert_layers, TS01 never passed it, and only the top-level insert was read); latent in Qortuba, real in P7757",
+  "2_effective_layer_canonical_nested_safe": "YES: canonical record field with authority, whole insert chain, both routes (tests A-F)",
+  "3_layer_name_sole_wall_authority": "NO longer alone: an admitted line must also join the boundary network (unconnected -> CANDIDATE, not admitted); exclusions answer to their consequence. A connected single line on a wall layer is still admitted (NETWORK grade) - stated, not hidden",
+  "4_authority_paths": [
+   "layer + type + context + network connectivity (NETWORK)",
+   "derived opening closures (STRUCTURAL)",
+   "building-assembly children (GR-17)",
+   "reviewed source-scoped claim (STRUCTURAL)"
+  ],
+  "5_firntur": "this source's furniture / joinery layer: MB wardrobe symbols (candidate); roof double lines unresolved",
+  "6_sf3_pm": "a furniture candidate (sofa) from the MY BLOCKS library; ROLE_UNRESOLVED",
+  "7_established_or_unresolved": "both UNRESOLVED as authority (source-scoped candidates with evidence, not applied); neither changes a row",
+  "8_block_hosted_plans": "YES when the occurrence is established as a building assembly from positive evidence; otherwise fail closed (tests)",
+  "9_unrealised_cleared_by_absence": "NO (R89-D05)",
+  "10_37_acis_regions_excluded": "YES, positively: their own ACIS geometry (vertices + B-spline control points through the body transform) lies in the title / logo strip, outside every bounded site",
+  "11_arbitrary_notes_as_labels": "NO: only ROOM_LABEL_ESTABLISHED texts name a space; candidates and unknown texts raise semantic review",
+  "12_physical_vs_semantic_separate": "YES: PHYSICAL_TOPOLOGICAL_SITE, SEMANTIC_ZONE_CANDIDATE, TRADE_MEASUREMENT_REGION with separate ids",
+  "13_interpretations": {
+   "HALL + BED.ROOM + BATH": "TOPOLOGY_BOUNDARY_MISSING_FROM_ROLE_ADMISSION: the old revision's BATH / BED.ROOM walls are drawn in the new revision on the DIM layer (exact geometric identity, 150 mm face pairs, bridging the network); an excluded separator, not an open plan. Owner decision needed: are these lines walls?",
+   "M.B.ROOM + DRESS": "ONE_PHYSICAL_SPACE_MULTIPLE_SEMANTIC_ZONES_UNRESOLVED (identical in both revisions): no wall, door or finish line separates DRESS from M.B.ROOM; the wardrobe joinery (FIRNTUR) lines touch the walls; no subdivision evidence. Legitimately one connected physical space with two zones; the zone boundary is not authored"
+  },
+  "14_subdivision_established": "NO: no authored finish / zone / threshold line exists in either space",
+  "15_threshold_strip": "kept as its own THRESHOLD site; allocation TRADE_RULE_REQUIRED; not moved into the bath",
+  "16_max_abs_coordinate": "YES: full exact extent (test)",
+  "17_geos_phase_policy": "ALL_PHASES_AGREE / PHASE_SENSITIVE_INCONCLUSIVE / ALL_PHASES_DISAGREE / NOT_APPLICABLE_CURVE / CHECK_INPUT_INVALID; only all-disagree blocks; inconclusive is never reported as agreement. Qortuba: all phases agree before and after",
+  "18_buffer0_removed": "YES",
+  "19_jamb_ratio": "NEEDS_MORE_EVIDENCE: on this drawing family every accepted closure needs 1/15 of the leaf radius (the door block's own frame inset) and no rejected hypothesis closes even at a full radius, so the 0.25 ratio decides nothing here; it is not shown OVERBROAD, not shown generic. Recommendation: derive the reach from the door symbol's own geometry (its frame / jamb parts) on a second family",
+  "20_authored_precision_class": "ENGINE_METHOD_PARAMETER; recommend later approval as an Urban method rule",
+  "21_p7757_progress": "canonical input, effective layers, roles, occurrence contexts, text roles, unrealised accounting, door search, numeric checks and an uncertified eps_n arrangement - certificate UNIT_UNRESOLVED; input also incomplete (6 layers, 181 text values)",
+  "22_p7757_unit_needed": "NOT NOW: only when P7757 quantities are in scope; even then role evidence for its W / D layers is the larger blocker",
+  "23_new_rows_computable": [],
+  "24_what_blocks": {
+   "Q-03": "BLOCKED_MULTIPLE: BLOCKED_ROLE, BLOCKED_SOURCE_COMPLETENESS",
+   "Q-03P": "BLOCKED_SOURCE_COMPLETENESS",
+   "Q-11": "BLOCKED_MULTIPLE: BLOCKED_ROLE, BLOCKED_SOURCE_COMPLETENESS",
+   "Q-12": "BLOCKED_SOURCE_COMPLETENESS",
+   "Q-13": "BLOCKED_MULTIPLE: BLOCKED_ROLE, BLOCKED_SOURCE_COMPLETENESS",
+   "Q-14": "BLOCKED_MULTIPLE: BLOCKED_ROLE, BLOCKED_SOURCE_COMPLETENESS"
+  },
+  "25_new_issue": [
+   "layer-only exclusion of real walls (DIM)",
+   "attached xrefs not in the file",
+   "duplicate SF3 insert",
+   "P7757 lexicon failure"
+  ],
+  "26_next_round": "R8.10: owner answers (xrefs, DIM walls) applied as source-scoped claims and re-run; source-scoped role evidence for P7757 (W / D); door reach from symbol geometry; wall-core obstacle identity - still no migration",
+  "27_disagree_with_chatgpt": [
+   "the HALL + BED.ROOM + BATH case is a role conflict, not semantic subdivision",
+   "per-line independent evidence for every wall would block real drawings; grade + consequence instead",
+   "the GEOS phase concern was right in principle but changed nothing on Qortuba"
+  ]
+ },
+ "recommendation": "stay in shadow; ask the owner the two YES / NO reviews when convenient; next round applies them as source-scoped claims and builds source-scoped role evidence for P7757"
+}
