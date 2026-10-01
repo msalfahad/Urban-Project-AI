@@ -137,8 +137,8 @@ def authority_classes() -> dict:
                                   "owner_approval": "RECOMMENDED_LATER as an URBAN_METHOD_RULE (company method), "
                                                     "not blocking R8.9: it only decides REVIEW vs CERTIFIED"},
         "JAMB_ALLOWANCE_RATIO": {"value": JAMB_ALLOWANCE_RATIO, "class": "ENGINE_METHOD_PARAMETER",
-                                 "basis": "door-closure reach; R8.9 audit: Qortuba doors need 1/15 of the leaf radius "
-                                          "and the rejected hypothesis never closes within a full radius",
+                                 "basis": "door-closure reach; R8.9 audit: on the first drawing family accepted closures need 1/15 of the leaf "
+                                          "radius and the rejected hypothesis never closes within a full radius",
                                  "owner_approval": "NOT_NEEDED; NEEDS_MORE_EVIDENCE (second drawing family)"},
         "MIN_BAND_RATIO": {"value": MIN_BAND_RATIO, "class": "ENGINE_METHOD_PARAMETER",
                            "basis": "degeneracy guard", "owner_approval": "NOT_NEEDED"}}

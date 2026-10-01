@@ -2,7 +2,7 @@
 
 R8.8 admitted a topology boundary from layer token + entity type + model-space context, and EXCLUDED geometry from
 topology the same way (furniture / dimension / annotation layers). Both directions rest on the layer name alone. On
-the new Qortuba revision four lines on a dimension layer lie exactly on the faces of walls the previous revision
+a real revised drawing four lines on a dimension layer lie exactly on the faces of walls the previous revision
 drew on the wall layer; the layer-only exclusion silently merged three rooms. This module makes every layer-derived
 decision answerable to its CONSEQUENCE and records the authority behind each admitted boundary.
 

@@ -1,6 +1,6 @@
 """TEXT ROLE AUTHORITY (R8.9): a text is not a room identity merely because it lies inside a polygon.
 
-R8.8 counted every visible text inside a site as a label occurrence (conservative for Qortuba, where no other text
+R8.8 counted every visible text inside a site as a label occurrence (conservative on a drawing where no other text
 sits in an apartment room, but not a generic rule). Here each text gets a role from positive evidence BEFORE it can
 name a space:
 
