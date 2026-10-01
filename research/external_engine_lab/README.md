@@ -69,3 +69,12 @@ Run order: qualification → regions → shadow_diff → (final suite) → packa
 | `r8_5_export_intake.py` | `R8_INDEPENDENT_EXPORT_INTAKE.json` | admission + measured verification of supplied DXFs (the two ezdxf DXFs: DIAGNOSTIC_NONQUALIFYING_CONVERSION) |
 | `r8_5_adapter_defect.py` | `R8_ADAPTER_DEFECT_CLOSED_FLAG.json` | active-path defect report (project reader closed bit); reported, not fixed |
 | `r8_5_migration_round1_scope.py` | `R8_MIGRATION_ROUND1_SCOPE.json` | scope of the design-only migration round 1 (`docs/R8_MIGRATION_ROUND1_DESIGN.md`) |
+
+## R8.6 (pre-migration proof; shadow / design)
+
+| script | writes | purpose |
+|---|---|---|
+| `r8_6_canonical_rebuild.py` | `tests/r8_6/registers/QORTUBA_ROUND1_PROOF.json` | the six round-1 rows rebuilt by the active method from canonical inputs only; method-input contract ablations |
+| `r8_6_pre_migration.py` | `tests/r8_6/registers/*.json` | owner actions, dependency graph, blocker register, legacy audit, round-1 signatures, parser plan, defect, transaction, decisions |
+| `r8_6_upload_drift.py` | `outputs/r8_6/UPLOAD_DRIFT_STATUS.json` | stored villa inventory vs the session upload folder (status step, never a test) |
+| `r8_6_package.py` | `data/reports/URBAN_QTO_R8_6_PRE_MIGRATION_PROOF/` + zip | review package from the registers and the final suite's junit |
