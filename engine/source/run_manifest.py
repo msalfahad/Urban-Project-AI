@@ -37,6 +37,12 @@ from . import wall_bands as WB
 
 SCHEMA = "URBAN_QTO_RUN_MANIFEST_V1"
 
+# R8.12 digest hierarchy: each layer digests the layer below it plus ONLY its own authorities.
+TOPOLOGY_LAYER = "TOPOLOGY_RUN_INPUT_DIGEST"   # everything that can change TS01 physical topology (= RUN_INPUT_DIGEST)
+ROW_LAYER = "ROW_AUTHORITY_DIGEST"             # + the authorities that decide ONE row's state / value
+RELEASE_LAYER = "RELEASE_INPUT_DIGEST"         # + source-anchor state, reviews, release policy / blockers
+DIGEST_LAYERS = (TOPOLOGY_LAYER, ROW_LAYER, RELEASE_LAYER)
+
 
 def _digest(obj) -> str:
     return hashlib.sha256(json.dumps(obj, sort_keys=True, default=str).encode()).hexdigest()
@@ -142,7 +148,30 @@ def build(inp: CI.CanonicalMeasurementInput, res: dict, *, method_id, contract_v
     run_input_digest = _digest(core)
     commit = provenance.get("code_commit")
     return dict(core, run_id="RUN-" + run_input_digest[:16], RUN_INPUT_DIGEST=run_input_digest,
+                TOPOLOGY_RUN_INPUT_DIGEST=run_input_digest, digest_layer=TOPOLOGY_LAYER,
                 code_commit=commit, CODE_BOUND_DIGEST=_digest([run_input_digest, commit]) if commit else None,
                 metadata=dict({k: v for k, v in provenance.items() if k != "code_commit"},
                               geos_loaded=loaded_geos_version()),
                 not_in_digest=["code_commit", "timestamp", "run_id", "metadata"])
+
+
+def row_authority_digest(topology_digest, *, row_id, row_method, trade_rules=(), semantic_class_rules=(),
+                         footprint_policies=(), row_claims=(), owner_facts_applied=()) -> dict:
+    """ROW_AUTHORITY_DIGEST: the topology digest + the authorities that decided this row. A fact that is only
+    CORROBORATING (the engine established the same reading) is listed outside the digest: it changed no row."""
+    core = {"layer": ROW_LAYER, "topology": topology_digest, "row": row_id, "method": row_method,
+            "trade_rules": sorted(map(str, trade_rules)), "semantic_class_rules": sorted(map(str, semantic_class_rules)),
+            "footprint_policies": sorted(map(str, footprint_policies)), "row_claims": sorted(map(str, row_claims)),
+            "owner_facts_applied": sorted(map(str, owner_facts_applied))}
+    return dict(core, digest=_digest(core))
+
+
+def release_input_digest(row_digest, *, source_anchor_state, reviews=(), release_policy=None, release_blockers=(),
+                         owner_facts_applied=()) -> dict:
+    """RELEASE_INPUT_DIGEST: the row authority digest + everything a release decision reads."""
+    core = {"layer": RELEASE_LAYER, "row": row_digest, "source_anchor_state": source_anchor_state,
+            "reviews": sorted(map(str, reviews)), "release_policy": release_policy,
+            "release_blockers": sorted(map(str, release_blockers)),
+            "owner_facts_applied": sorted(map(str, owner_facts_applied))}
+    return dict(core, digest=_digest(core))
+
