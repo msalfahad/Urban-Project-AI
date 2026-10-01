@@ -1,0 +1,198 @@
+{
+ "SCHEMA": "URBAN_R8_7_DECISION_REGISTER_V1",
+ "decisions": [
+  {
+   "id": "R87-D01",
+   "decision": "QORTUBA_REV_OLD (2ec3a9c8) and QORTUBA_REV_NEW (DXF df0e1d69, DWG pending) are separate revisions; a measurement consumes exactly one.",
+   "status": "DECIDED"
+  },
+  {
+   "id": "R87-D02",
+   "decision": "The R8.6 six-row proof is VALID_FOR_REVISION_OLD and is now the SUPERSEDED_SOURCE_BASELINE; it is not current quantity truth.",
+   "status": "DECIDED"
+  },
+  {
+   "id": "R87-D03",
+   "decision": "Owner decisions recorded as scoped claims: authoritative revision, plan selection (PLAN_VARIANT_4_SELECTED), new-revision unit (cm), Q-14 ceiling footprint (selected apartment only). All SHADOW_DIAGNOSTIC until the DWG is anchored.",
+   "status": "DECIDED"
+  },
+  {
+   "id": "R87-D04",
+   "decision": "CANONICAL_MEASUREMENT_INPUT implemented in engine/source (canonical_input, canonical_build, owner_scope); every QS01 declared field fails closed.",
+   "status": "DECIDED"
+  },
+  {
+   "id": "R87-D05",
+   "decision": "The R8.6 silent HALL case (block identity + part identity lost) now returns METHOD_INPUT_INCOMPLETE with no quantity; the unguarded method would have published HALL 25.0925.",
+   "status": "DECIDED"
+  },
+  {
+   "id": "R87-D06",
+   "decision": "Part identity is source-derived (revision | handle | insert path | kind | index); the coordinate hash is gone from the canonical path. Block lineage carries insert + block-record handles.",
+   "status": "DECIDED"
+  },
+  {
+   "id": "R87-D07",
+   "decision": "Region membership is judged per top-level occurrence; the measurement clip is the selected plan's own frame occurrence (H156).",
+   "status": "DECIDED"
+  },
+  {
+   "id": "R87-D08",
+   "decision": "NEW_REVISION_DXF_DIAGNOSTIC: Q-03P / Q-12 unchanged (11.685); Q-03 / Q-11 37.3882 REVIEW_REQUIRED (merged BED.ROOM / BATH); Q-13 / Q-14 BLOCKED (M.B.ROOM, HALL, UNLABELLED not established).",
+   "status": "DECIDED"
+  },
+  {
+   "id": "R87-D09",
+   "decision": "Q-14 owner rule applies only inside its scope; it does not rescue missing geometry; CEILING_NET_PLAN_AREA recorded as a future requirement.",
+   "status": "DECIDED"
+  },
+  {
+   "id": "R87-D10",
+   "decision": "Converter stays CONVERTER_UNKNOWN; nothing qualifies; the owner is not asked about the converter again.",
+   "status": "DECIDED"
+  },
+  {
+   "id": "R87-D11",
+   "decision": "MIGRATION_PLANNING_READY = YES; MIGRATION_EXECUTION_READY = NO; PRODUCTION_MIGRATION = NO.",
+   "status": "DECIDED"
+  }
+ ],
+ "findings": [
+  {
+   "id": "F-R87-01",
+   "risk": "silent quantity error (route sensitivity)",
+   "finding": "one WALL segment (H584) horizontal to 4e-11 in K1 and exactly horizontal in K2 moves 1.6425 m2 between BED.ROOM and the unlabelled space; Q-13 / Q-14 move by +0.0225. The QS01 room split is not stable across routes at the 1e-11 level",
+   "action": "method robustness round (tolerance-explicit axis / junction tests)"
+  },
+  {
+   "id": "F-R87-02",
+   "risk": "silent quantity error (region clipping)",
+   "finding": "clipping to the region candidate's recorded bounds drops the frame's corner marks; the method then measures the title block as a 90.327 m2 'room' (Q-13 199.2895, Q-14 228.837). Fixed: occurrence-level membership makes it REVIEW_REQUIRED; the clip is the frame occurrence",
+   "action": "fixed (canonical_build.assemble)"
+  },
+  {
+   "id": "F-R87-03",
+   "risk": "room decomposition (new revision)",
+   "finding": "205 bound-xref furniture parts ('MY BLOCKS$0$...') added in the master bedroom; the method no longer establishes M.B.ROOM",
+   "action": "method must ignore furniture by role, not by layer name"
+  },
+  {
+   "id": "F-R87-04",
+   "risk": "room decomposition (new revision)",
+   "finding": "the BED.ROOM (16.54) / BATH (5.1) partition changed; the method returns one WET space 'BED.ROOM / BATH' 24.6257 holding two label occurrences",
+   "action": "MERGED_LABELLED_SPACES -> REVIEW_REQUIRED"
+  },
+  {
+   "id": "F-R87-05",
+   "risk": "legacy hard-coded names",
+   "finding": "owner_rules.APARTMENT_ROOMS hard-codes 'HALL / whgm'; in the new revision the label texts land in two regions ('whgm' 34.609 and a 6 cm 'HALL' sliver), so name-based legacy logic would mis-scope",
+   "action": "the canonical contract carries label identity; legacy name sets stay out of new methods"
+  },
+  {
+   "id": "F-R87-06",
+   "risk": "unsafe human-claim propagation",
+   "finding": "the Q-14 claim is label-scoped; it applies to the new revision only if the remeasured label multiset matches; it currently does not (BED.ROOM / BATH, whgm, HALL)",
+   "action": "re-check after the DWG"
+  }
+ ],
+ "gates": {
+  "PRODUCTION_MIGRATION": "NO",
+  "MIGRATION_PLANNING_READY": "YES",
+  "MIGRATION_EXECUTION_READY": "NO",
+  "QORTUBA_CURRENT_REVISION": "QORTUBA_REV_NEW",
+  "QORTUBA_REV_NEW_ANCHOR": "DXF_ONLY_PENDING_DWG",
+  "QORTUBA_PLAN_SELECTION": "RESOLVED (PLAN_VARIANT_4_SELECTED; SHADOW until anchored)",
+  "QORTUBA_REV_NEW_UNIT": "OWNER_CONFIRMED_PENDING_EXACT_DWG_ANCHOR",
+  "QORTUBA_Q14_CEILING": "RESOLVED_SCOPED",
+  "CANONICAL_MEASUREMENT_INPUT": "IMPLEMENTED_SHADOW",
+  "QS01_FAIL_CLOSED": "YES",
+  "INDEPENDENT_REAL_RECONCILIATION": "BLOCKED_EXTERNAL_PROVENANCE",
+  "SIGNATURES_QUALIFIED": 0,
+  "ALRASHED_COLUMN_RULE": "TRADE_DEDUCTION_RULE_UNDECIDED"
+ },
+ "answers": {
+  "1_new_revision_authoritative_design": "YES, by owner claim; anchored to the DXF only until the DWG arrives",
+  "2_bottom_plan_owner_approved": "YES (PLAN_VARIANT_4_SELECTED)",
+  "3_new_revision_unit_owner_confirmed": "YES (1 cm), pending exact DWG anchor",
+  "4_q14_ceiling_resolved": "YES, scoped to the selected apartment's ten labelled spaces and Q-14",
+  "5_ceiling_condition_prevented_from_leaking": "YES: OWNER_SCOPE_MISMATCH for another region, revision, project, space or item; PURPOSE_NOT_AUTHORISED for release",
+  "6_unanchored_because_dwg_missing": [
+   "revision identity",
+   "plan selection",
+   "unit",
+   "Q-14 claim",
+   "every new value"
+  ],
+  "7_canonical_input_implemented": "YES (engine/source/canonical_input.py, canonical_build.py, owner_scope.py)",
+  "8_qortuba_room_method_requires": {
+   "proven_by_ablation": [
+    "parts.block_identity",
+    "parts.source_part_id",
+    "parts.instance_path",
+    "texts.world_placement",
+    "texts.text_value",
+    "dimensions.placed_points",
+    "dimensions.measurement",
+    "input.region (membership by the selected frame occurrence)"
+   ],
+   "declared_by_policy_no_change_on_this_source": [
+    "parts.layer",
+    "dimensions.dimension_type",
+    "parts.visibility",
+    "input.unit_claim_id"
+   ],
+   "not_required": [
+    "texts.text_height",
+    "linetype",
+    "lineweight",
+    "HATCH",
+    "instances / block definition / layer tables"
+   ]
+  },
+  "9_every_required_missing_field_fails_closed": true,
+  "10_hall_silent_change_possible": "NO through the contract; the unguarded legacy path still would",
+  "11_part_identity_source_based": "YES",
+  "12_text_dimension_inputs_canonical": "YES (placed through the insert path, with identity, layer, visibility)",
+  "13_revisions_can_mix_accidentally": "NO (SOURCE_REVISION_MISMATCH)",
+  "14_new_plan_remeasured": "YES, as NEW_REVISION_DXF_DIAGNOSTIC",
+  "15_rows_changed": {
+   "Q-03": "NEW_REVISION_DXF_DIAGNOSTIC_REVIEW_REQUIRED: merged labelled space BED.ROOM / BATH",
+   "Q-03P": "NEW_REVISION_DXF_DIAGNOSTIC",
+   "Q-11": "NEW_REVISION_DXF_DIAGNOSTIC_REVIEW_REQUIRED: merged labelled space BED.ROOM / BATH",
+   "Q-12": "NEW_REVISION_DXF_DIAGNOSTIC",
+   "Q-13": "BLOCKED: METHOD_DID_NOT_ESTABLISH_ROOMS M.B.ROOM, HALL, UNLABELLED_INTERNAL_SPACE",
+   "Q-14": "BLOCKED: METHOD_DID_NOT_ESTABLISH_ROOMS M.B.ROOM, HALL, UNLABELLED_INTERNAL_SPACE"
+  },
+  "16_causes": {
+   "Q-03": [
+    "SOURCE_REVISION_CHANGE"
+   ],
+   "Q-03P": [
+    "NO_CHANGE"
+   ],
+   "Q-11": [
+    "SOURCE_REVISION_CHANGE"
+   ],
+   "Q-12": [
+    "NO_CHANGE"
+   ],
+   "Q-13": [
+    "PARSER_DIFFERENCE",
+    "SOURCE_REVISION_CHANGE"
+   ],
+   "Q-14": [
+    "PARSER_DIFFERENCE",
+    "SOURCE_REVISION_CHANGE"
+   ]
+  },
+  "17_q14_changes": "BLOCKED: the owner rule does not rescue missing geometry (rooms not established or the space set changed)"
+ },
+ "recommendation": {
+  "next": "SUPPLY the new DWG (external), then: anchor + DWG remeasure; in parallel a QS01 robustness round (route-stable axis/junction tolerances, furniture by role, merged-label refusal) proven on both revisions before any baseline approval",
+  "not_now": [
+   "R9 ceiling trade rules",
+   "migration",
+   "parser qualification"
+  ]
+ }
+}

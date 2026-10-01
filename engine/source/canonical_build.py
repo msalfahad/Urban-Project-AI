@@ -1,0 +1,329 @@
+"""Builders of CANONICAL_MEASUREMENT_INPUT (R8.7) from a realised route, and region clipping.
+
+Two routes, one output shape:
+    K1: a pinned decode -> SourceDocument -> kernel.realise; texts / dimensions placed through the K1 instance path
+        with the kernel's own matrices (frame @ insert, per level).
+    K2: a DXF read by ezdxf -> kernel_ezdxf.realise; texts / dimensions placed through ezdxf's insert matrices.
+        The ezdxf document is used by duck typing; this module imports no third-party library.
+
+Identity is source-derived (see canonical_input). Nothing is matched by coordinates; a record that cannot be
+placed keeps its identity with world_placement None, so a method that needs it fails closed.
+Project-agnostic; stdlib only.
+"""
+
+from __future__ import annotations
+
+import math
+from collections import Counter
+
+from . import canonical_input as CI
+from . import findings as F
+from .cad import kernel
+from .cad.affine import Affine2
+
+# DIMENSION subtype (DXF group 70 & 7) -> the source object type code a DWG reader reports
+DIMTYPE_CODE = {0: "21", 1: "22", 2: "24", 3: "26", 4: "25", 5: "23", 6: "20"}
+PART_KINDS = {"segments": "SEGMENT", "arcs": "ARC", "circles": "CIRCLE", "elliptical_arcs": "ELLIPTICAL_ARC"}
+
+
+def _handle(obs_id: str) -> str:
+    """'D1:156' -> '156'; 'D2:156[0,1]' -> '156[0,1]' (a MINSERT cell is its own occurrence)."""
+    return obs_id.split(":", 1)[1]
+
+
+def _base(obs_id: str) -> str:
+    return _handle(obs_id).split("[")[0].split("+")[0]
+
+
+def _geometry(kind, g):
+    if kind == "SEGMENT":
+        return (g.a[0], g.a[1], g.b[0], g.b[1])
+    if kind == "ARC":
+        st, en = (g.start, g.end) if g.direction == "CCW" else (g.end, g.start)
+        ang = (lambda q: math.atan2(q[1] - g.center[1], q[0] - g.center[0]) % (2 * math.pi))
+        return (g.center[0], g.center[1], g.radius, ang(st), ang(en))
+    if kind == "CIRCLE":
+        return (g.center[0], g.center[1], g.radius)
+    return (g.center[0], g.center[1], g.axis_u[0], g.axis_u[1], g.axis_v[0], g.axis_v[1], g.t0, g.t1)
+
+
+def parts_from_realised(revision_id: str, realised, steps, unresolved_occurrences=frozenset()) -> tuple:
+    """CanonicalPart per realised curve. part_index = ordinal among the parts of one kind realised from one
+    source-entity occurrence, in emission order (the source's own vertex order). `steps(path)` gives the
+    LineageStep per path level; `unresolved_occurrences` are insert occurrences whose visibility state was not
+    read (their parts are VISIBILITY_UNRESOLVED, never silently visible)."""
+    out, ordinal = [], Counter()
+    for attr, kind in PART_KINDS.items():
+        for g in getattr(realised, attr):
+            lin = g.lineage
+            path = tuple(lin.instance_path)
+            key = (lin.obs_id, path, kind)
+            idx = ordinal[key]
+            ordinal[key] += 1
+            vis = CI.VISIBILITY_UNRESOLVED if any(p in unresolved_occurrences for p in path) else CI.VISIBLE
+            ident = CI.SourceIdentity(revision_id, _base(lin.obs_id) if lin.obs_id else None,
+                                      tuple(_handle(p) for p in path), kind, idx)
+            out.append(CI.CanonicalPart(ident, kind, _geometry(kind, g), lin.layer, vis, steps(path), lin.obs_id,
+                                        lin.kind))
+    return tuple(out)
+
+
+def unresolved_dynamic_occurrences(realised) -> frozenset:
+    return frozenset(f.instance_path[-1] for f in realised.findings
+                     if f.code == F.DYNAMIC_BLOCK_UNRESOLVED and f.instance_path)
+
+
+# ---------------------------------------------------------------- K1
+class K1:
+    def __init__(self, revision_id, decode: dict, document, realised):
+        self.rev, self.decode, self.doc, self.real = revision_id, decode, document, realised
+        self.obs = {o.obs_id: o for o in document.entities}
+        for b in document.blocks.values():
+            for o in b.entities:
+                self.obs[o.obs_id] = o
+        from .cad import libredwg_map as L
+        self.raw = {str(L.handle_id(o.get("handle"))): o for o in decode.get("OBJECTS", [])
+                    if isinstance(o.get("handle"), list)}
+        self.dimlfac = float(decode.get("HEADER", {}).get("DIMLFAC") or 1.0)
+
+    def steps(self, path) -> tuple:
+        out = []
+        for oid in path:
+            o = self.obs.get(oid.split("[")[0])
+            key = getattr(getattr(o, "geometry", None), "block_key", None)
+            blk = self.doc.blocks.get(key) if key else None
+            out.append(CI.LineageStep(_handle(oid), (key[1:] if key and key.startswith("H") else key) if blk else None,
+                                      blk.name if blk is not None else None))
+        return tuple(out)
+
+    def placement(self, path):
+        m = Affine2.identity()
+        for oid in path:
+            base, _, cell = oid.partition("[")
+            if cell:
+                return None                          # MINSERT cell placement not mapped: unplaced, not guessed
+            ins = self.obs.get(base)
+            blk = self.doc.blocks.get(ins.geometry.block_key) if ins is not None else None
+            if blk is None:
+                return None
+            m = m @ kernel.frame_matrix(ins.extrusion) @ kernel.insert_matrix(ins.geometry, blk.base_point)
+        return m
+
+    def parts(self):
+        return parts_from_realised(self.rev, self.real, self.steps, unresolved_dynamic_occurrences(self.real))
+
+    def texts(self):
+        out = []
+        for c in self.real.carried:
+            o = self.obs.get(c["obs_id"])
+            if o is None or o.kind not in ("TEXT", "MTEXT"):
+                continue
+            path = tuple(c["instance_path"])
+            m = self.placement(path)
+            ins = getattr(o.geometry, "insertion", None)
+            if m is None or ins is None:
+                x = y = None
+            else:
+                x, y = (m @ kernel.frame_matrix(o.extrusion)).apply(ins)
+            raw = self.raw.get(_base(o.obs_id), {})
+            h = raw.get("height")
+            out.append(CI.PlacedText(CI.SourceIdentity(self.rev, _base(o.obs_id), tuple(_handle(p) for p in path), o.kind, 0),
+                                     (o.geometry.value or "").strip() if getattr(o.geometry, "value", None) is not None else None,
+                                     x, y, None if h is None else float(h), o.layer, CI.VISIBLE, self.steps(path), o.kind))
+        return tuple(out)
+
+    def dimensions(self):
+        placements = {}
+        for c in self.real.carried:
+            o = self.obs.get(c["obs_id"])
+            if o is not None and o.kind == "DIMENSION":
+                placements.setdefault(c["obs_id"], []).append(tuple(c["instance_path"]))
+        for o in self.doc.entities:
+            if o.kind == "DIMENSION" and o.obs_id not in placements:
+                placements[o.obs_id] = [()]
+        out = []
+        for oid, paths in sorted(placements.items(), key=lambda kv: int(_base(kv[0]))):
+            o = self.obs[oid]
+            r = self.raw.get(_base(oid))
+            for path in paths:
+                ident = CI.SourceIdentity(self.rev, _base(oid), tuple(_handle(p) for p in path), "DIMENSION", 0)
+                if r is None:
+                    out.append(CI.PlacedDimension(ident, None, None, None, None, self.dimlfac, None, o.layer,
+                                                  CI.VISIBLE, self.steps(path)))
+                    continue
+                a = r.get("xline1_pt") or r.get("def_pt")
+                b = r.get("xline2_pt") or r.get("def_pt")
+                m = self.placement(path)
+                placed = None if (m is None or a is None or b is None) else (m.apply((a[0], a[1])), m.apply((b[0], b[1])))
+                act = r.get("act_measurement")
+                out.append(CI.PlacedDimension(ident, None if a is None or b is None else ((a[0], a[1]), (b[0], b[1])),
+                                              placed, None if act is None else float(act), str(r.get("user_text") or ""),
+                                              self.dimlfac, None if r.get("type") is None else str(r.get("type")),
+                                              o.layer, CI.VISIBLE, self.steps(path)))
+        return tuple(out)
+
+
+# ---------------------------------------------------------------- K2 (ezdxf document by duck typing)
+class K2:
+    def __init__(self, revision_id, ezdoc, realised):
+        self.rev, self.doc, self.real = revision_id, ezdoc, realised
+        self.dimlfac = float(ezdoc.header.get("$DIMLFAC", 1.0) or 1.0)
+        self._steps = {}
+
+    def entity(self, obs_id):
+        return self.doc.entitydb.get(format(int(_base(obs_id)), "X"))
+
+    def steps(self, path) -> tuple:
+        if path not in self._steps:
+            out = []
+            for oid in path:
+                ins = self.entity(oid)
+                blk = self.doc.blocks.get(ins.dxf.name) if ins is not None else None
+                rec = str(int(blk.block_record.dxf.handle, 16)) if blk is not None else None
+                out.append(CI.LineageStep(_handle(oid), rec, ins.dxf.name if ins is not None else None))
+            self._steps[path] = tuple(out)
+        return self._steps[path]
+
+    def apply(self, path, p):
+        """Block-local point -> world through the insert matrices (innermost first). None when unplaceable."""
+        mats = []
+        for oid in path:
+            if "[" in oid:
+                return None
+            ins = self.entity(oid)
+            if ins is None:
+                return None
+            mats.append(ins.matrix44())
+        v = p
+        for m in reversed(mats):
+            v = m.transform(v)
+        return (float(v[0]), float(v[1]))
+
+    def parts(self):
+        return parts_from_realised(self.rev, self.real, self.steps, unresolved_dynamic_occurrences(self.real))
+
+    def texts(self):
+        out = []
+        for c in self.real.carried:
+            if c["kind"] not in ("TEXT", "MTEXT"):
+                continue
+            e = self.entity(c["obs_id"])
+            path = tuple(c["instance_path"])
+            if e is None:
+                continue
+            t = e.dxftype()
+            if t == "TEXT":
+                local, value, h = e.ocs().to_wcs(e.dxf.insert), e.dxf.get("text", None), e.dxf.get("height", None)
+            else:
+                local, value, h = e.dxf.insert, e.text, e.dxf.get("char_height", None)
+            p = self.apply(path, (local[0], local[1], local[2] if len(local) > 2 else 0.0))
+            out.append(CI.PlacedText(CI.SourceIdentity(self.rev, _base(c["obs_id"]), tuple(_handle(q) for q in path), t, 0),
+                                     None if value is None else value.strip(), None if p is None else p[0],
+                                     None if p is None else p[1], None if h is None else float(h),
+                                     e.dxf.get("layer", None), CI.VISIBLE, self.steps(path), t))
+        return tuple(out)
+
+    def dimensions(self):
+        out = []
+        for c in self.real.carried:
+            if c["kind"] != "DIMENSION":
+                continue
+            e = self.entity(c["obs_id"])
+            if e is None:
+                continue
+            path = tuple(c["instance_path"])
+            ident = CI.SourceIdentity(self.rev, _base(c["obs_id"]), tuple(_handle(q) for q in path), "DIMENSION", 0)
+            g = e.dxf
+            a = g.get("defpoint2", None) if g.hasattr("defpoint2") else g.get("defpoint", None)
+            b = g.get("defpoint3", None) if g.hasattr("defpoint3") else g.get("defpoint", None)
+            pa = None if a is None else self.apply(path, (a[0], a[1], 0.0))
+            pb = None if b is None else self.apply(path, (b[0], b[1], 0.0))
+            act = g.get("actual_measurement", None) if g.hasattr("actual_measurement") else None
+            code = DIMTYPE_CODE.get(int(g.get("dimtype", 0)) & 7) if e.dxftype() == "DIMENSION" else None
+            out.append(CI.PlacedDimension(ident, None if a is None or b is None else ((a[0], a[1]), (b[0], b[1])),
+                                          None if pa is None or pb is None else (pa, pb),
+                                          None if act is None else float(act), str(g.get("text", "") or ""),
+                                          self.dimlfac, code, g.get("layer", None), CI.VISIBLE, self.steps(path),
+                                          g.get("dimstyle", None)))
+        return tuple(out)
+
+
+# ---------------------------------------------------------------- input assembly and region clipping
+def _points(rec):
+    if isinstance(rec, CI.CanonicalPart):
+        g = rec.geometry
+        if rec.kind == "SEGMENT":
+            return [(g[0], g[1]), (g[2], g[3])]
+        if rec.kind == "ARC":
+            cx, cy, r, a0, a1 = g
+            sweep = (a1 - a0) % (2 * math.pi)
+            return [(cx + r * math.cos(a0 + sweep * k / 4), cy + r * math.sin(a0 + sweep * k / 4)) for k in range(5)]
+        if rec.kind == "CIRCLE":
+            cx, cy, r = g
+            return [(cx - r, cy), (cx + r, cy), (cx, cy - r), (cx, cy + r)]
+        cx, cy, ux, uy, vx, vy, t0, t1 = g
+        return [(cx + math.cos(t) * ux + math.sin(t) * vx, cy + math.cos(t) * uy + math.sin(t) * vy)
+                for t in (t0 + (t1 - t0) * k / 4 for k in range(5))]
+    if isinstance(rec, CI.PlacedText):
+        return None if rec.x is None or rec.y is None else [(rec.x, rec.y)]
+    return None if rec.placed_points is None else list(rec.placed_points)
+
+
+def membership(rec, bounds) -> str:
+    pts = _points(rec)
+    if not pts:
+        return CI.REVIEW_REQUIRED
+    x0, y0, x1, y1 = bounds
+    inside = [x0 <= x <= x1 and y0 <= y <= y1 for x, y in pts]
+    if all(inside):
+        return CI.IN_REGION
+    if not any(inside):
+        return CI.OUTSIDE_REGION
+    return CI.REVIEW_REQUIRED
+
+
+def occurrence(rec) -> str:
+    """The top-level occurrence a record belongs to: its outermost insert, or the entity itself."""
+    path = rec.identity.instance_handles
+    return ("I" + path[0]) if path else ("E" + str(rec.identity.source_handle))
+
+
+def assemble(revision: CI.SourceRevision, region_id: str, bounds, frame_id, unit_native_to_mm, unit_claim_id,
+             parts, texts, dimensions, notes=None) -> CI.CanonicalMeasurementInput:
+    """Keep the records inside the selected region. Membership is judged per top-level OCCURRENCE: a block
+    occurrence partly inside and partly outside is never cut in two - every one of its records is listed
+    REVIEW_REQUIRED (an occurrence cut by the region boundary changed a room decomposition silently, R8.7).
+    Unplaceable records are REVIEW_REQUIRED too; outside records are counted."""
+    recs = [("parts", r) for r in parts] + [("texts", r) for r in texts] + [("dimensions", r) for r in dimensions]
+    member = {id(r): membership(r, bounds) for _, r in recs}
+    by_occ = {}
+    for _, r in recs:
+        by_occ.setdefault(occurrence(r), set()).add(member[id(r)])
+    kept, review, outside = {"parts": [], "texts": [], "dimensions": []}, {}, Counter()
+    for name, r in recs:
+        states = by_occ[occurrence(r)]
+        m = member[id(r)]
+        if m == CI.REVIEW_REQUIRED:
+            review[f"{name}:{r.identity.key}"] = "crosses the region boundary or has no placement"
+        elif len(states) > 1 and occurrence(r).startswith("I"):
+            review[f"{name}:{r.identity.key}"] = f"occurrence {occurrence(r)[1:]} is partly inside the region"
+        elif m == CI.IN_REGION:
+            kept[name].append(r)
+        else:
+            outside[name] += 1
+    n = dict(notes or {})
+    n["outside_region"] = dict(outside)
+    return CI.CanonicalMeasurementInput(revision, region_id, frame_id, unit_native_to_mm, unit_claim_id,
+                                        tuple(kept["parts"]), tuple(kept["texts"]), tuple(kept["dimensions"]),
+                                        review, n)
+
+
+def occurrence_extent(parts, insert_handle: str):
+    """Bounds of every part placed through one top-level insert occurrence (e.g. a sheet frame)."""
+    xs, ys = [], []
+    for p in parts:
+        if p.identity.instance_handles and p.identity.instance_handles[0] == insert_handle:
+            for x, y in _points(p):
+                xs.append(x)
+                ys.append(y)
+    return None if not xs else (min(xs), min(ys), max(xs), max(ys))

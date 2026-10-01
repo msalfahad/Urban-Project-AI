@@ -1,0 +1,533 @@
+{
+ "SCHEMA": "URBAN_R8_7_FAIL_CLOSED_ABLATIONS_V1",
+ "base_revision": "QORTUBA_REV_OLD",
+ "base_six": {
+  "Q-03": 17.8625,
+  "Q-03P": 11.685,
+  "Q-11": 17.8625,
+  "Q-12": 11.685,
+  "Q-13": 108.9625,
+  "Q-14": 138.51
+ },
+ "ablations": [
+  {
+   "field": "parts.block_identity",
+   "corruption": "block identity removed from every part placed through a block",
+   "lenient_legacy_run": {
+    "six": {
+     "Q-03": null,
+     "Q-03P": null,
+     "Q-11": null,
+     "Q-12": null,
+     "Q-13": null,
+     "Q-14": null
+    },
+    "six_change": true,
+    "rooms_change": true,
+    "rooms_only_in_lenient_run": [
+     [
+      "HALL / whgm",
+      29.0153
+     ],
+     [
+      "UNLABELLED_INTERNAL_SPACE",
+      0.84
+     ],
+     [
+      "UNLABELLED_INTERNAL_SPACE",
+      2.89
+     ],
+     [
+      "UNLABELLED_INTERNAL_SPACE",
+      null
+     ]
+    ]
+   },
+   "guarded_state": "METHOD_INPUT_INCOMPLETE",
+   "guarded_quantity": null,
+   "missing_fields": {
+    "parts.block_identity": 202
+   },
+   "ambiguous_fields": {},
+   "visibility_unresolved": {}
+  },
+  {
+   "field": "parts.source_part_id",
+   "corruption": "part identity collapsed (part index removed from polyline spans)",
+   "lenient_legacy_run": {
+    "six": {
+     "Q-03": 17.8625,
+     "Q-03P": 11.685,
+     "Q-11": 17.8625,
+     "Q-12": 11.685,
+     "Q-13": 110.9425,
+     "Q-14": 140.49
+    },
+    "six_change": true,
+    "rooms_change": true,
+    "rooms_only_in_lenient_run": [
+     [
+      "BED.ROOM",
+      20.8375
+     ],
+     [
+      "M.B.ROOM",
+      20.7025
+     ]
+    ]
+   },
+   "guarded_state": "METHOD_INPUT_INCOMPLETE",
+   "guarded_quantity": null,
+   "missing_fields": {
+    "parts.source_part_id": 679,
+    "parts.part_index": 679
+   },
+   "ambiguous_fields": {},
+   "visibility_unresolved": {}
+  },
+  {
+   "field": "parts.block_identity+parts.source_part_id",
+   "corruption": "the R8.6 lossy mapping: both at once",
+   "lenient_legacy_run": {
+    "six": {
+     "Q-03": 17.8625,
+     "Q-03P": 11.685,
+     "Q-11": 17.8625,
+     "Q-12": 11.685,
+     "Q-13": 103.9253,
+     "Q-14": 133.4728
+    },
+    "six_change": true,
+    "rooms_change": true,
+    "rooms_only_in_lenient_run": [
+     [
+      "BED.ROOM",
+      20.8375
+     ],
+     [
+      "HALL / whgm",
+      25.0925
+     ],
+     [
+      "M.B.ROOM",
+      20.7025
+     ],
+     [
+      "UNLABELLED_INTERNAL_SPACE",
+      4.2603
+     ]
+    ]
+   },
+   "guarded_state": "METHOD_INPUT_INCOMPLETE",
+   "guarded_quantity": null,
+   "missing_fields": {
+    "parts.block_identity": 202,
+    "parts.source_part_id": 679,
+    "parts.part_index": 679
+   },
+   "ambiguous_fields": {},
+   "visibility_unresolved": {}
+  },
+  {
+   "field": "parts.source_part_id(duplicate)",
+   "corruption": "every polyline span given part index 0 (duplicate identity)",
+   "lenient_legacy_run": {
+    "six": {
+     "Q-03": 17.8625,
+     "Q-03P": 11.685,
+     "Q-11": 17.8625,
+     "Q-12": 11.685,
+     "Q-13": 110.9425,
+     "Q-14": 140.49
+    },
+    "six_change": true,
+    "rooms_change": true,
+    "rooms_only_in_lenient_run": [
+     [
+      "BED.ROOM",
+      20.8375
+     ],
+     [
+      "M.B.ROOM",
+      20.7025
+     ]
+    ]
+   },
+   "guarded_state": "METHOD_INPUT_INCOMPLETE",
+   "guarded_quantity": null,
+   "missing_fields": {},
+   "ambiguous_fields": {
+    "parts.source_part_id": 665
+   },
+   "visibility_unresolved": {}
+  },
+  {
+   "field": "parts.instance_path",
+   "corruption": "instance path removed from parts placed through a block",
+   "lenient_legacy_run": {
+    "six": {
+     "Q-03": 17.8625,
+     "Q-03P": 11.685,
+     "Q-11": 17.8625,
+     "Q-12": 11.685,
+     "Q-13": 101.4278,
+     "Q-14": 130.9753
+    },
+    "six_change": true,
+    "rooms_change": true,
+    "rooms_only_in_lenient_run": [
+     [
+      "HALL / whgm",
+      29.0153
+     ],
+     [
+      "UNLABELLED_INTERNAL_SPACE",
+      0.6
+     ],
+     [
+      "UNLABELLED_INTERNAL_SPACE",
+      0.84
+     ],
+     [
+      "UNLABELLED_INTERNAL_SPACE",
+      2.89
+     ]
+    ]
+   },
+   "guarded_state": "METHOD_INPUT_INCOMPLETE",
+   "guarded_quantity": null,
+   "missing_fields": {
+    "parts.instance_path": 202,
+    "parts.block_identity": 202,
+    "parts.source_part_id": 202
+   },
+   "ambiguous_fields": {},
+   "visibility_unresolved": {}
+  },
+  {
+   "field": "parts.layer",
+   "corruption": "layer removed from every part",
+   "lenient_legacy_run": {
+    "six": {
+     "Q-03": 17.8625,
+     "Q-03P": 11.685,
+     "Q-11": 17.8625,
+     "Q-12": 11.685,
+     "Q-13": 108.9625,
+     "Q-14": 138.51
+    },
+    "six_change": false,
+    "rooms_change": false,
+    "rooms_only_in_lenient_run": []
+   },
+   "guarded_state": "METHOD_INPUT_INCOMPLETE",
+   "guarded_quantity": null,
+   "missing_fields": {
+    "parts.layer": 1110
+   },
+   "ambiguous_fields": {},
+   "visibility_unresolved": {}
+  },
+  {
+   "field": "texts.world_placement",
+   "corruption": "placement removed from every text",
+   "lenient_legacy_run": {
+    "six": {
+     "Q-03": 0,
+     "Q-03P": 0.0,
+     "Q-11": 0,
+     "Q-12": 0.0,
+     "Q-13": 0.0,
+     "Q-14": 0
+    },
+    "six_change": true,
+    "rooms_change": true,
+    "rooms_only_in_lenient_run": []
+   },
+   "guarded_state": "METHOD_INPUT_INCOMPLETE",
+   "guarded_quantity": null,
+   "missing_fields": {
+    "texts.world_placement": 61
+   },
+   "ambiguous_fields": {},
+   "visibility_unresolved": {}
+  },
+  {
+   "field": "texts.text_value",
+   "corruption": "value removed from every text",
+   "lenient_legacy_run": {
+    "six": {
+     "Q-03": 0,
+     "Q-03P": 0.0,
+     "Q-11": 0,
+     "Q-12": 0.0,
+     "Q-13": 0.0,
+     "Q-14": 0
+    },
+    "six_change": true,
+    "rooms_change": true,
+    "rooms_only_in_lenient_run": []
+   },
+   "guarded_state": "METHOD_INPUT_INCOMPLETE",
+   "guarded_quantity": null,
+   "missing_fields": {
+    "texts.text_value": 61
+   },
+   "ambiguous_fields": {},
+   "visibility_unresolved": {}
+  },
+  {
+   "field": "texts.text_height (not declared)",
+   "corruption": "height removed from every text (not a declared field)",
+   "lenient_legacy_run": {
+    "six": {
+     "Q-03": 17.8625,
+     "Q-03P": 11.685,
+     "Q-11": 17.8625,
+     "Q-12": 11.685,
+     "Q-13": 108.9625,
+     "Q-14": 138.51
+    },
+    "six_change": false,
+    "rooms_change": false,
+    "rooms_only_in_lenient_run": []
+   },
+   "guarded_state": "COMPLETE",
+   "guarded_quantity": {
+    "Q-03": 17.8625,
+    "Q-03P": 11.685,
+    "Q-11": 17.8625,
+    "Q-12": 11.685,
+    "Q-13": 108.9625,
+    "Q-14": 138.51
+   },
+   "missing_fields": {},
+   "ambiguous_fields": {},
+   "visibility_unresolved": {}
+  },
+  {
+   "field": "dimensions.placed_points",
+   "corruption": "placement removed from every dimension",
+   "lenient_legacy_run": {
+    "six": {
+     "Q-03": 16.855,
+     "Q-03P": 9.975,
+     "Q-11": 16.855,
+     "Q-12": 9.975,
+     "Q-13": 62.27,
+     "Q-14": 89.1
+    },
+    "six_change": true,
+    "rooms_change": true,
+    "rooms_only_in_lenient_run": [
+     [
+      "BATH",
+      4.845
+     ],
+     [
+      "BATH",
+      7.8
+     ],
+     [
+      "BED.ROOM",
+      20.7775
+     ],
+     [
+      "DRESS",
+      2.22
+     ],
+     [
+      "M.B.ROOM",
+      21.025
+     ],
+     [
+      "PAINTRY",
+      9.975
+     ],
+     [
+      "UNLABELLED_INTERNAL_SPACE",
+      1.71
+     ]
+    ]
+   },
+   "guarded_state": "METHOD_INPUT_INCOMPLETE",
+   "guarded_quantity": null,
+   "missing_fields": {
+    "dimensions.placed_points": 101
+   },
+   "ambiguous_fields": {},
+   "visibility_unresolved": {}
+  },
+  {
+   "field": "dimensions.measurement",
+   "corruption": "authored measurement removed from every dimension",
+   "lenient_legacy_run": {
+    "six": {
+     "Q-03": 16.855,
+     "Q-03P": 9.975,
+     "Q-11": 16.855,
+     "Q-12": 9.975,
+     "Q-13": 62.27,
+     "Q-14": 89.1
+    },
+    "six_change": true,
+    "rooms_change": true,
+    "rooms_only_in_lenient_run": [
+     [
+      "BATH",
+      4.845
+     ],
+     [
+      "BATH",
+      7.8
+     ],
+     [
+      "BED.ROOM",
+      20.7775
+     ],
+     [
+      "DRESS",
+      2.22
+     ],
+     [
+      "M.B.ROOM",
+      21.025
+     ],
+     [
+      "PAINTRY",
+      9.975
+     ],
+     [
+      "UNLABELLED_INTERNAL_SPACE",
+      1.71
+     ]
+    ]
+   },
+   "guarded_state": "METHOD_INPUT_INCOMPLETE",
+   "guarded_quantity": null,
+   "missing_fields": {
+    "dimensions.measurement": 101
+   },
+   "ambiguous_fields": {},
+   "visibility_unresolved": {}
+  },
+  {
+   "field": "dimensions.dimension_type",
+   "corruption": "dimension type removed",
+   "lenient_legacy_run": {
+    "six": {
+     "Q-03": 17.8625,
+     "Q-03P": 11.685,
+     "Q-11": 17.8625,
+     "Q-12": 11.685,
+     "Q-13": 108.9625,
+     "Q-14": 138.51
+    },
+    "six_change": false,
+    "rooms_change": false,
+    "rooms_only_in_lenient_run": []
+   },
+   "guarded_state": "METHOD_INPUT_INCOMPLETE",
+   "guarded_quantity": null,
+   "missing_fields": {
+    "dimensions.dimension_type": 101
+   },
+   "ambiguous_fields": {},
+   "visibility_unresolved": {}
+  },
+  {
+   "field": "parts.visibility",
+   "corruption": "parts placed through one block marked VISIBILITY_UNRESOLVED",
+   "lenient_legacy_run": {
+    "six": {
+     "Q-03": 17.8625,
+     "Q-03P": 11.685,
+     "Q-11": 17.8625,
+     "Q-12": 11.685,
+     "Q-13": 108.9625,
+     "Q-14": 138.51
+    },
+    "six_change": false,
+    "rooms_change": false,
+    "rooms_only_in_lenient_run": []
+   },
+   "guarded_state": "METHOD_INPUT_INCOMPLETE",
+   "guarded_quantity": null,
+   "missing_fields": {},
+   "ambiguous_fields": {},
+   "visibility_unresolved": {
+    "parts": {
+     "VISIBILITY_UNRESOLVED": 21
+    }
+   }
+  },
+  {
+   "field": "input.unit_claim_id",
+   "corruption": "the unit claim removed from the input",
+   "lenient_legacy_run": {
+    "six": {
+     "Q-03": 17.8625,
+     "Q-03P": 11.685,
+     "Q-11": 17.8625,
+     "Q-12": 11.685,
+     "Q-13": 108.9625,
+     "Q-14": 138.51
+    },
+    "six_change": false,
+    "rooms_change": false,
+    "rooms_only_in_lenient_run": []
+   },
+   "guarded_state": "METHOD_INPUT_INCOMPLETE",
+   "guarded_quantity": null,
+   "missing_fields": {
+    "input.unit_claim_id": 1
+   },
+   "ambiguous_fields": {},
+   "visibility_unresolved": {}
+  },
+  {
+   "field": "source_revision (mixed)",
+   "corruption": "OLD revision records under the NEW revision anchor",
+   "guarded_state": "SOURCE_REVISION_MISMATCH",
+   "guarded_quantity": null,
+   "revision_conflicts": 1272
+  },
+  {
+   "field": "region_id (wrong plan variant)",
+   "corruption": "input built for another plan variant",
+   "guarded_state": "REGION_NOT_SELECTED",
+   "guarded_quantity": null,
+   "region_conflicts": [
+    {
+     "input_region": "RC:PLAN_VARIANT_3",
+     "selected_region": "RC:MODEL_SPACE:4267:540:1649"
+    }
+   ]
+  },
+  {
+   "field": "region membership (candidate bounds)",
+   "corruption": "clip to the region candidate's recorded bounds, which lie inside the frame's corner marks (lenient = the old per-part clipping, which drops the 8 corner-mark parts silently)",
+   "guarded_state": "METHOD_INPUT_INCOMPLETE",
+   "guarded_quantity": null,
+   "region_review_required": 21,
+   "lenient_legacy_run": {
+    "six": {
+     "Q-03": 17.8625,
+     "Q-03P": 11.685,
+     "Q-11": 17.8625,
+     "Q-12": 11.685,
+     "Q-13": 199.2895,
+     "Q-14": 228.837
+    },
+    "six_change": true,
+    "rooms_only_in_lenient_run": [
+     [
+      "MOHAMAD ALI / AHMAD SAMI ALFAHD / SECOND FLOOR PLAN",
+      90.327
+     ]
+    ]
+   }
+  }
+ ],
+ "rule": "every corrupted declared field -> no quantity; the lenient run shows what the method would have published silently"
+}

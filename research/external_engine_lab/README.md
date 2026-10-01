@@ -92,3 +92,17 @@ test-time writes). `<work>` holds the K2 pickles, indexes and D1 decodes the int
 | `r8_6a_registers.py` | `tests/r8_6a/registers/{OWNER_ACTION_REGISTER,R8_6A_DECISION_REGISTER}.json` | owner actions V3 (FILE_RECEIVED vs INDEPENDENT_PROVENANCE_ESTABLISHED), decisions, contract review, findings, gates |
 | `r8_6a_owner_images.py` | the two owner-review PNGs | Qortuba SECOND FLOOR PLAN variants (DXF as stored) and the Q-14 ten-space ceiling question |
 | `r8_6a_package.py` | `data/reports/URBAN_QTO_R8_6A_DXF_INTAKE/` + zip | review package from the registers, the images and the final suite's junit |
+
+## R8.7 (canonical measurement input, Qortuba new revision; shadow)
+
+The contract lives in `engine/source` (`canonical_input.py`, `canonical_build.py`, `owner_scope.py`); the lab only
+bridges it to the legacy QS01 method. Owner decisions are scoped claims in `data/registry/OWNER_PROJECT_CLAIMS.json`.
+
+| script | writes | purpose |
+|---|---|---|
+| `r8_7_canonical.py` | `<work>/*_k2.pkl` (`build-k2`) | QS01 contract, strict / lenient bridge, isolated stub-decode runner, revision inputs, scoped units |
+| `r8_7_proof.py` | `tests/r8_7/registers/{QS01_METHOD_INPUT_CONTRACT,FAIL_CLOSED_ABLATION_RESULTS,QORTUBA_REVISION_DELTA,Q14_SCOPED_CEILING_RULE,REGION_CLASSIFICATION_NEW_REVISION}.json` | ablations, OLD_K1 / OLD_K2 / NEW_K2 runs, parser-culprit bisection, cause attribution, scoped Q-14, region classes |
+| `r8_7_registers.py` | `tests/r8_7/registers/{QORTUBA_SOURCE_REVISION_REGISTER,OWNER_ACTION_REGISTER,OWNER_PROJECT_CLAIMS,CANONICAL_MEASUREMENT_INPUT_SCHEMA,R8_7_DECISION_REGISTER}.json` | revisions, owner actions V4, claim scope checks, schema, decisions / gates / findings |
+| `r8_7_package.py` | `data/reports/URBAN_QTO_R8_7_CANONICAL_INPUT/` + zip | review package from the registers and the final suite's junit |
+
+`<work>` must hold `old_k2.pkl` (K2 on LibreDWG's DXF of the old DWG) and `new_k2.pkl` (K2 on the hash-addressed new DXF).

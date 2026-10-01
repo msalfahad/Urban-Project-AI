@@ -175,3 +175,29 @@ If the later revision is chosen, round 1 is re-anchored to its DWG. That DWG the
 
 The unit claim on `2ec3a9c8…` is not transferred. No DXF has a proven decoder, so G4 (qualification) stays at
 0 signatures. See `tests/r8_6a/registers/`.
+
+## 8. R8.7 addendum — new revision selected, canonical input contract in place
+
+### Owner decisions
+
+The owner has selected QORTUBA_REV_NEW: the four-layout drawing, plan PLAN_VARIANT_4_SELECTED, drawn in cm. Ceiling
+area equals floor area for the selected apartment's ten spaces only.
+
+All four decisions are scoped claims anchored to DXF `df0e1d69…`, so they serve SHADOW / DIAGNOSTIC work only.
+Precondition G1 (exact source) is now satisfied only by the original DWG of the new revision. When it arrives, the
+claims are re-anchored by supersession, with history kept.
+
+### The canonical contract
+
+Every round-1 method input now passes `engine.source.canonical_input.validate` against the method's declared
+contract. Missing, duplicated, cross-revision or unresolved provenance gives no quantity.
+
+### What the diagnostic remeasurement found
+
+The diagnostic remeasurement of the new plan does not establish Q-13 or Q-14, and it flags Q-03 and Q-11.
+Round 1 therefore also needs a QS01 robustness round, proven on both revisions and both routes, before any new
+baseline approval. The work needed is:
+
+- route-stable tolerances, because one wall line differing by 4e-11 moves 1.6 m² between rooms;
+- separating furniture from walls by role;
+- refusing merged labelled spaces.
