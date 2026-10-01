@@ -127,5 +127,10 @@ bridges it to the legacy QS01 method. Owner decisions are scoped claims in `data
 | `r8_12_qortuba.py` | `tests/r8_12/registers/{FRAGMENT_FACE_POLICY,FACE_CHAIN_REGISTER,BAND_SPAN_REGISTER,WALL_BAND_ASSEMBLY_REGISTER,TOPOLOGY_CLOSURE_REGISTER,OWNER_FACT_COMPARISON,Q14_STATUS,Q13_STATUS,DIGEST_HIERARCHY,POLICY_PROVENANCE_AUDIT,QORTUBA_R8_12_STATUS}.json` | six rows after the blind run, owner fact compared afterwards, Q-13 sole-blocker counterfactual, digest hierarchy, policy audit |
 | `r8_12_registers.py` | `tests/r8_12/registers/{OWNER_ACTION_REGISTER,ENGINEERING_ACTION_REGISTER,R8_12_DECISION_REGISTER}.json` | owner actions V9 (one question), engineering actions, recommendation + answers 1-29 |
 | `r8_12_package.py` | `data/reports/URBAN_QTO_R8_12_FRAGMENT_AWARE_WALL_BANDS/` + zip | review package (19 md + 16 json) |
+| `r8_13_recommendation.json` | - | the R8.13 recommendation, written before any V4 code and committed with the V4 freeze |
+| `r8_13_blind.py` | `tests/r8_13/registers/BLIND_QORTUBA_V4_RESULT.json` | the BLIND run of the frozen WALL_BAND_POLICY_V4 (no owner / floor / finish fact, no expected value) |
+| `r8_13_qortuba.py` | (built by `r8_13_registers.py`) | after the blind run: band diff V3 -> V4, owner finish facts in the trade layer only, Q-13 rebuild with the strip audit, Q-14 regression, digests, closure release evaluation, determinism |
+| `r8_13_registers.py` | `tests/r8_13/registers/{OWNER_ACTION_REGISTER,OWNER_FINISH_FACT_REGISTER,TRADE_OBJECT_FOOTPRINT_POLICY,SEMANTIC_SPACE_CLASS_REGISTER,WALL_BAND_V4_POLICY,V3_DEFECT_RESOLUTION,BLIND_COMPARISON,Q13_STATUS,Q14_STATUS,QORTUBA_R8_13_STATUS,DIGEST_HIERARCHY,SOURCE_ANCHOR_STATUS,CLOSURE_RELEASE_MODEL,WET_SERVICE_FINISH_SCOPE,SKIRTING_METHOD_FACT,ENGINEERING_ACTION_REGISTER,R8_13_DECISION_REGISTER}.json` | every R8.13 register (answers 1-31) |
+| `r8_13_package.py` | `data/reports/URBAN_QTO_R8_13_V4_AND_FLOOR_AUTHORITY/` + zip | review package (21 md + 16 json + 4 supporting) |
 
 `<work>` must hold `old_k2.pkl` (K2 on LibreDWG's DXF of the old DWG) and `new_k2.pkl` (K2 on the hash-addressed new DXF).

@@ -1,0 +1,358 @@
+{
+ "SCHEMA": "URBAN_R8_13_OWNER_FINISH_FACT_REGISTER_V1",
+ "policy": {
+  "policy_id": "OWNER_METHOD_FACT_POLICY_V1",
+  "domains": [
+   "TRADE_FOOTPRINT",
+   "TRADE_FINISH_SCOPE",
+   "TRADE_UNIT"
+  ],
+  "forbidden_domains": [
+   "TOPOLOGY_ROLE",
+   "TOPOLOGY_CLOSURE_REVIEW",
+   "BLOCKER_CLASSIFICATION",
+   "PASSAGE_ATTRIBUTES",
+   "TOPOLOGY",
+   "WALL_BAND",
+   "PASSAGE_DETECTION"
+  ],
+  "kind_domains": {
+   "TRADE_OBJECT_FOOTPRINT": [
+    "TRADE_FOOTPRINT"
+   ],
+   "FINISH_SCOPE": [
+    "TRADE_FINISH_SCOPE"
+   ],
+   "MEASUREMENT_UNIT": [
+    "TRADE_UNIT"
+   ]
+  },
+  "relations": [
+   "CORROBORATING",
+   "MORE_SPECIFIC",
+   "SUPERSEDED_IN_SCOPE"
+  ],
+  "binding": "revision + anchor + region + frame (all or nothing); then trade / space classes / finish",
+  "outcomes": [
+   "OFFERED",
+   "APPLIED",
+   "CORROBORATING_ONLY",
+   "REJECTED_SCOPE",
+   "STALE",
+   "CONFLICT"
+  ],
+  "never": [
+   "a topology, role, closure or passage input",
+   "a transfer to another revision, project or space class",
+   "'ignore furniture globally' (scope is the trade + classes + finish)",
+   "two in-force contradictory statements without a supersession",
+   "project logic in code",
+   "a quantity"
+  ],
+  "digest": "38ef02ce76806cb5ae3bebb6566c7325d522aba04d0aa9b4d832eab91cdd0ec0"
+ },
+ "file": "data/registry/OWNER_FINISH_FACTS.json",
+ "facts": [
+  {
+   "ref": "QORTUBA-NEW-FLOOR-OBJECT-FOOTPRINT-OWNER-001@v1",
+   "kind": "TRADE_OBJECT_FOOTPRINT",
+   "scope": {
+    "project": "QORTUBA",
+    "source_revision_id": "QORTUBA_REV_NEW",
+    "source_anchor_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+    "region_id": "RC:MODEL_SPACE:4267:540:1649",
+    "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649",
+    "plan": "PLAN_VARIANT_4_SELECTED",
+    "trade": "FLOOR_FINISH",
+    "space_classes": [
+     "DRY_INTERNAL_ROOM"
+    ],
+    "finish": "PORCELAIN_DRY_FLOOR"
+   },
+   "statement": {
+    "text": "PORCELAIN FLOOR IS MEASURED OVER THE WHOLE ROOM FLOOR AREA",
+    "includes": [
+     "built-in wardrobes",
+     "fixed joinery / dressing-room wardrobes",
+     "loose furniture",
+     "sofas",
+     "normal movable furniture"
+    ],
+    "footprint": "NOT deducted",
+    "trade": "FLOOR_FINISH",
+    "object_class": "ANY_NON_PARTITION_OBJECT",
+    "treatment": "FOOTPRINT_INCLUDED",
+    "values": [
+     {
+      "trade": "FLOOR_FINISH",
+      "attribute": "OBJECT_FOOTPRINT",
+      "value": "FOOTPRINT_INCLUDED"
+     }
+    ],
+    "is": "a BOQ / trade-measurement owner METHOD fact",
+    "is_not": [
+     "a semantic role of SF3 / FIRNTUR / any object",
+     "a topology input",
+     "a CAD edit",
+     "'ignore furniture globally'",
+     "a rule for wet / service floors, ceilings, walls or skirting"
+    ]
+   },
+   "unit": "m2",
+   "allowed_domains": [
+    "TRADE_FOOTPRINT"
+   ],
+   "transfer_forbidden": [
+    "the old Qortuba revision",
+    "any other Qortuba revision, region or plan variant",
+    "the DWG (identity NOT_ESTABLISHED)",
+    "P7757",
+    "Al Rashed",
+    "any future villa or project",
+    "an Urban default"
+   ],
+   "binding": {
+    "NEW_K2": "APPLIES",
+    "OLD_K1": "REJECTED_SCOPE"
+   },
+   "relations": [
+    {
+     "rule": "QP-14 QORTUBA_DRY_FLOOR_FINISH = PORCELAIN",
+     "relation": "MORE_SPECIFIC",
+     "why": "same finish; adds the object-footprint method for that finish"
+    },
+    {
+     "rule": "QP-08 QORTUBA_FIXED_CABINET_DEDUCTION = NOT_APPLICABLE (skirting / profile)",
+     "relation": "CORROBORATING",
+     "why": "the same no-deduction principle for joinery, now stated for the floor"
+    }
+   ],
+   "row_outcomes": {
+    "Q-03": "REJECTED_SCOPE",
+    "Q-03P": "REJECTED_SCOPE",
+    "Q-11": "REJECTED_SCOPE",
+    "Q-12": "REJECTED_SCOPE",
+    "Q-13": "APPLIED",
+    "Q-14": "REJECTED_SCOPE"
+   }
+  },
+  {
+   "ref": "QORTUBA-NEW-DRY-ROOM-FINISH-OWNER-001@v1",
+   "kind": "MEASUREMENT_UNIT",
+   "scope": {
+    "project": "QORTUBA",
+    "source_revision_id": "QORTUBA_REV_NEW",
+    "source_anchor_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+    "region_id": "RC:MODEL_SPACE:4267:540:1649",
+    "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649",
+    "plan": "PLAN_VARIANT_4_SELECTED",
+    "space_classes": [
+     "DRY_INTERNAL_ROOM"
+    ]
+   },
+   "statement": {
+    "text": "dry / internal rooms carry FLOOR (m2) + SKIRTING (lm)",
+    "floor_unit": "m2",
+    "skirting_unit": "lm",
+    "skirting_method": "UNCHANGED: the existing skirting methodology (QP-08: no wardrobe / joinery deduction from skirting or profile); no behind-wardrobe skirting path is invented",
+    "values": [
+     {
+      "trade": "SKIRTING",
+      "attribute": "UNIT",
+      "value": "lm"
+     },
+     {
+      "trade": "FLOOR_FINISH",
+      "attribute": "UNIT",
+      "value": "m2"
+     }
+    ],
+    "quantities": "NONE in R8.13 (no skirting row is computed)"
+   },
+   "unit": "lm",
+   "allowed_domains": [
+    "TRADE_UNIT"
+   ],
+   "transfer_forbidden": [
+    "the old Qortuba revision",
+    "any other Qortuba revision, region or plan variant",
+    "the DWG (identity NOT_ESTABLISHED)",
+    "P7757",
+    "Al Rashed",
+    "any future villa or project",
+    "an Urban default"
+   ],
+   "binding": {
+    "NEW_K2": "APPLIES",
+    "OLD_K1": "REJECTED_SCOPE"
+   },
+   "relations": [
+    {
+     "rule": "QP-08 QORTUBA_FIXED_CABINET_DEDUCTION",
+     "relation": "CORROBORATING",
+     "why": "skirting method unchanged"
+    },
+    {
+     "rule": "QP-06 QORTUBA_SKIRTING_SYSTEM = HIDDEN (old-revision rule store)",
+     "relation": "CORROBORATING",
+     "why": "the unit lm is the same; the system is not restated for the new revision and is not changed"
+    }
+   ],
+   "row_outcomes": {
+    "Q-03": "REJECTED_SCOPE",
+    "Q-03P": "REJECTED_SCOPE",
+    "Q-11": "REJECTED_SCOPE",
+    "Q-12": "REJECTED_SCOPE",
+    "Q-13": "OFFERED",
+    "Q-14": "REJECTED_SCOPE"
+   }
+  },
+  {
+   "ref": "QORTUBA-NEW-WET-SERVICE-FINISH-OWNER-001@v1",
+   "kind": "FINISH_SCOPE",
+   "scope": {
+    "project": "QORTUBA",
+    "source_revision_id": "QORTUBA_REV_NEW",
+    "source_anchor_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+    "region_id": "RC:MODEL_SPACE:4267:540:1649",
+    "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649",
+    "plan": "PLAN_VARIANT_4_SELECTED",
+    "space_classes": [
+     "WET_SERVICE_ROOM",
+     "SERVICE_ROOM"
+    ]
+   },
+   "statement": {
+    "text": "bathrooms, ironing rooms, washing / laundry rooms and the kitchen: FLOOR ceramic / porcelain AND WALL ceramic / porcelain to 3.20 m",
+    "owner_room_types": [
+     "BATHROOM",
+     "IRONING_ROOM",
+     "WASHING_LAUNDRY_ROOM",
+     "KITCHEN"
+    ],
+    "floor": "CERAMIC_OR_PORCELAIN",
+    "wall": "CERAMIC_OR_PORCELAIN",
+    "wall_finish_height_m": 3.2,
+    "values": [
+     {
+      "trade": "WALL_TILE",
+      "attribute": "HEIGHT_M",
+      "value": 3.2
+     }
+    ],
+    "this_case_only": "3.20 m is ONLY for this Qortuba selected revision: NOT an Urban default; it does not transfer to P7757, Al Rashed or any future villa",
+    "quantities": "NONE in R8.13: no tested wall-ceramic face-set path exists for this revision; never gross perimeter x 3.20"
+   },
+   "unit": "m",
+   "allowed_domains": [
+    "TRADE_FINISH_SCOPE"
+   ],
+   "transfer_forbidden": [
+    "the old Qortuba revision",
+    "any other Qortuba revision, region or plan variant",
+    "the DWG (identity NOT_ESTABLISHED)",
+    "P7757",
+    "Al Rashed",
+    "any future villa or project",
+    "an Urban default"
+   ],
+   "binding": {
+    "NEW_K2": "APPLIES",
+    "OLD_K1": "REJECTED_SCOPE"
+   },
+   "relations": [
+    {
+     "rule": "US-01 WET_SERVICE_ROOM_CERAMIC",
+     "relation": "MORE_SPECIFIC",
+     "why": "same rooms and same floor + wall ceramic; adds the project height"
+    },
+    {
+     "rule": "QP-07 QORTUBA_CERAMIC_SERVICE_ROOMS = BATH x3 + PAINTRY",
+     "relation": "CORROBORATING",
+     "why": "bathrooms + the kitchen / preparation zone (QP-07 names PAINTRY that zone); PAINTRY keeps its own QP-07 rule"
+    },
+    {
+     "rule": "QP-01 QORTUBA_WALL_TILE_HEIGHT = 3.00 m",
+     "relation": "SUPERSEDED_IN_SCOPE",
+     "scope": "the selected NEW revision (QORTUBA_REV_NEW, DXF df0e1d69...) wet / service rooms only; QP-01 stays in force for the old revision",
+     "why": "a CHANGE of value (3.00 -> 3.20 m): versioned, scoped supersession - never two in-force heights"
+    },
+    {
+     "rule": "US-02 NO_SKIRTING_IN_A_FULLY_CERAMIC_ROOM",
+     "relation": "CORROBORATING",
+     "why": "wall tile reaches the floor tile in these rooms"
+    }
+   ],
+   "row_outcomes": {
+    "Q-03": "CORROBORATING_ONLY",
+    "Q-03P": "CORROBORATING_ONLY",
+    "Q-11": "CORROBORATING_ONLY",
+    "Q-12": "CORROBORATING_ONLY",
+    "Q-13": "REJECTED_SCOPE",
+    "Q-14": "REJECTED_SCOPE"
+   }
+  }
+ ],
+ "reconciliation": [
+  {
+   "rule": "QP-14 QORTUBA_DRY_FLOOR_FINISH = PORCELAIN",
+   "relation": "MORE_SPECIFIC",
+   "why": "same finish; adds the object-footprint method for that finish",
+   "fact": "QORTUBA-NEW-FLOOR-OBJECT-FOOTPRINT-OWNER-001@v1"
+  },
+  {
+   "rule": "QP-08 QORTUBA_FIXED_CABINET_DEDUCTION = NOT_APPLICABLE (skirting / profile)",
+   "relation": "CORROBORATING",
+   "why": "the same no-deduction principle for joinery, now stated for the floor",
+   "fact": "QORTUBA-NEW-FLOOR-OBJECT-FOOTPRINT-OWNER-001@v1"
+  },
+  {
+   "rule": "QP-08 QORTUBA_FIXED_CABINET_DEDUCTION",
+   "relation": "CORROBORATING",
+   "why": "skirting method unchanged",
+   "fact": "QORTUBA-NEW-DRY-ROOM-FINISH-OWNER-001@v1"
+  },
+  {
+   "rule": "QP-06 QORTUBA_SKIRTING_SYSTEM = HIDDEN (old-revision rule store)",
+   "relation": "CORROBORATING",
+   "why": "the unit lm is the same; the system is not restated for the new revision and is not changed",
+   "fact": "QORTUBA-NEW-DRY-ROOM-FINISH-OWNER-001@v1"
+  },
+  {
+   "rule": "US-01 WET_SERVICE_ROOM_CERAMIC",
+   "relation": "MORE_SPECIFIC",
+   "why": "same rooms and same floor + wall ceramic; adds the project height",
+   "fact": "QORTUBA-NEW-WET-SERVICE-FINISH-OWNER-001@v1"
+  },
+  {
+   "rule": "QP-07 QORTUBA_CERAMIC_SERVICE_ROOMS = BATH x3 + PAINTRY",
+   "relation": "CORROBORATING",
+   "why": "bathrooms + the kitchen / preparation zone (QP-07 names PAINTRY that zone); PAINTRY keeps its own QP-07 rule",
+   "fact": "QORTUBA-NEW-WET-SERVICE-FINISH-OWNER-001@v1"
+  },
+  {
+   "rule": "QP-01 QORTUBA_WALL_TILE_HEIGHT = 3.00 m",
+   "relation": "SUPERSEDED_IN_SCOPE",
+   "scope": "the selected NEW revision (QORTUBA_REV_NEW, DXF df0e1d69...) wet / service rooms only; QP-01 stays in force for the old revision",
+   "why": "a CHANGE of value (3.00 -> 3.20 m): versioned, scoped supersession - never two in-force heights",
+   "fact": "QORTUBA-NEW-WET-SERVICE-FINISH-OWNER-001@v1"
+  },
+  {
+   "rule": "US-02 NO_SKIRTING_IN_A_FULLY_CERAMIC_ROOM",
+   "relation": "CORROBORATING",
+   "why": "wall tile reaches the floor tile in these rooms",
+   "fact": "QORTUBA-NEW-WET-SERVICE-FINISH-OWNER-001@v1"
+  }
+ ],
+ "silent_contradictions": [],
+ "rule": "same meaning -> CORROBORATING / MORE_SPECIFIC; a change -> SUPERSEDED_IN_SCOPE with its exact scope; never two in-force statements of different value",
+ "physical_fact_unchanged": {
+  "ref": "QORTUBA-NEW-HALL-LOBBY-OPEN-PASSAGE-OWNER-001@v1",
+  "domains": {
+   "TOPOLOGY_ROLE": "OFFERED",
+   "TOPOLOGY_CLOSURE_REVIEW": "CORROBORATING_ONLY",
+   "BLOCKER_CLASSIFICATION": "CORROBORATING_ONLY",
+   "PASSAGE_ATTRIBUTES": "APPLIED"
+  }
+ }
+}

@@ -484,3 +484,51 @@ CORROBORATING_ONLY / REJECTED_SCOPE / STALE / CONFLICT, plus the engine-vs-owner
 Neither touches a closure or a row.
 
 **Gates:** MIGRATION_PLANNING_READY = YES, MIGRATION_EXECUTION_READY = NO, PRODUCTION_MIGRATION = NO.
+
+## 14. R8.13 addendum — wall-band V4, Qortuba floor / finish owner authority, Q-13 completion
+
+**Order (anti-calibration):** recommendation → root cause → V4 design → 24 synthetic tests → freeze (`R8_13_V4_FREEZE`) →
+commit → blind Qortuba run (`BLIND_QORTUBA_V4_RESULT`, committed first) → comparison → owner facts → rows.
+
+**WALL_BAND_POLICY_V4** (`engine/source/wall_bands.py`):
+- **D1 identity.** The V3 chain id (entities + extent) is kept wherever it is unique. Chains of the SAME entities and
+  extent (the parallel sides of one closed polyline) are told apart by their supporting line (canonical direction +
+  signed offset). Band ids come from the two chain ids. A residual collision fails closed (recorded, excluded).
+- **D2 support.** ASSEMBLY_STRUCTURAL_SUPPORT: elongation is tested on the LOCAL run, not on the raw chain overlap. A
+  shorter run inherits support only across a full-width closed structural loop from a self-supported run of the same
+  chain pair. An unsupported run is recorded, never a band, passage source or ambiguity source.
+- **Passages** need two structural sides.
+- TOPOLOGY_CLOSURE_POLICY_V1 is unchanged.
+
+**Blind result:**
+- no chain-id collision;
+- the 574 / 584 pseudo-band and both false passages (new 6.0 m, old 6.0 m and 4.6 m) are gone;
+- H2430 / H2431 keep their V3 closure geometry and areas (0.3813 / 0.6494 m²), and H1316 stays NOT_WALL_CAP;
+- every labelled site area is unchanged.
+
+Two post-blind observations go to R8.14:
+- V4-O1: a ring between nested closed polylines on a wall layer — a role question;
+- V4-O2: an elongation tie at exact equality.
+
+**Owner method facts** (`engine/source/owner_method_facts.py`, data in `data/registry/OWNER_FINISH_FACTS.json`):
+- They are scoped trade facts, bound like claims, and never reach topology.
+- The floor answer becomes a FLOOR_FINISH FOOTPRINT_INCLUDED policy for the dry porcelain floor of the selected
+  revision. It is applied ONLY to Q-13, after the frozen topology.
+- 3.20 m is a wet / service finish scope for this revision only. It supersedes QP-01 in that scope; no wall quantity
+  is computed.
+- Skirting is lm, method unchanged.
+
+**Strips** (`engine/source/trade_strips.py`):
+- Door thresholds are separate sites, excluded from room rows, and carried as a STRIP_ALLOCATION release blocker.
+- Open-passage strips inside a site are included only when every side carries the row's treatment.
+
+**Rows (SHADOW):**
+- Q-03 = Q-11 = 17.7425;
+- Q-03P = Q-12 = 11.685;
+- **Q-13 = 111.5988** (computes only with the scoped floor fact);
+- **Q-14 = 141.0263** (SAME as R8.12).
+
+**Release model** (`engine/source/closure_release.py`): REVIEWED_FOR_RELEASE_CANDIDATE requires frozen policy +
+cross-route agreement + owner / source corroboration + source anchor + human review. Nothing is released.
+
+**Gates:** MIGRATION_PLANNING_READY = YES, MIGRATION_EXECUTION_READY = NO, PRODUCTION_MIGRATION = NO.

@@ -1,0 +1,375 @@
+{
+ "SCHEMA": "URBAN_R8_13_V3_DEFECT_RESOLUTION_V1",
+ "V3_D1": {
+  "root_cause": "the V3 chain id was revision + region + ENTITY + extent: the sub-part index was stripped (_entity) and the supporting line was not in it, so the parallel sides of one closed polyline with the same extent shared an id; detect() then indexed chains and candidates by that id (byc / cand), collapsing two chains into one entry",
+  "fix": "V4: keep the V3 id where unique; chains of the same entities and extent are told apart by their supporting line; band ids from the two chain ids; collisions fail closed",
+  "blind_result": {
+   "chain_id_collisions": [],
+   "line_disambiguated": [
+    [
+     "2060|0"
+    ],
+    [
+     "2060|1"
+    ],
+    [
+     "2060|2"
+    ],
+    [
+     "2060|3"
+    ],
+    [
+     "2061|0"
+    ],
+    [
+     "2061|1"
+    ],
+    [
+     "2061|2"
+    ],
+    [
+     "2061|3"
+    ]
+   ],
+   "chain_ids_unique": true,
+   "band_ids_unique": true
+  },
+  "state": "RESOLVED"
+ },
+ "V3_D2": {
+  "root_cause": "elongation was tested on the RAW chain overlap (215 native) while the pair 574 / 584 is locally mutual nearest only across the core of the perpendicular end wall (570 / 579): a 150 mm local run against a 1800 mm separation - another wall's core seen crosswise",
+  "fix": "V4 ASSEMBLY_STRUCTURAL_SUPPORT on the LOCAL run (inherited only across a full-width structural loop from a self-supported run of the same pair); structural passage sides",
+  "blind_result": {
+   "unsupported_touching_findings": [
+    {
+     "chain_a": [
+      "584"
+     ],
+     "chain_b": [
+      "574"
+     ],
+     "s": [
+      110738.081745,
+      110753.081745
+     ],
+     "local_run": 15.000000000087311,
+     "separation": 180.0,
+     "raw_chain_overlap": 215.0000000000873,
+     "state": "UNSUPPORTED",
+     "means": "NON_AUTHORITATIVE_PAIR_RUN: no band, no passage, no ambiguity"
+    },
+    {
+     "chain_a": [
+      "2060"
+     ],
+     "chain_b": [
+      "2060"
+     ],
+     "s": [
+      109828.172762,
+      109838.172762
+     ],
+     "local_run": 10.0,
+     "separation": 40.0,
+     "raw_chain_overlap": 210.0,
+     "state": "UNSUPPORTED",
+     "means": "NON_AUTHORITATIVE_PAIR_RUN: no band, no passage, no ambiguity"
+    },
+    {
+     "chain_a": [
+      "2060"
+     ],
+     "chain_b": [
+      "2060"
+     ],
+     "s": [
+      110028.172762,
+      110038.172762
+     ],
+     "local_run": 10.0,
+     "separation": 40.0,
+     "raw_chain_overlap": 210.0,
+     "state": "UNSUPPORTED",
+     "means": "NON_AUTHORITATIVE_PAIR_RUN: no band, no passage, no ambiguity"
+    },
+    {
+     "chain_a": [
+      "2060"
+     ],
+     "chain_b": [
+      "552"
+     ],
+     "s": [
+      14549.719614,
+      14559.719614
+     ],
+     "local_run": 10.0,
+     "separation": 20.091016828402644,
+     "raw_chain_overlap": 40.0,
+     "state": "UNSUPPORTED",
+     "means": "NON_AUTHORITATIVE_PAIR_RUN: no band, no passage, no ambiguity"
+    },
+    {
+     "chain_a": [
+      "2060"
+     ],
+     "chain_b": [
+      "552"
+     ],
+     "s": [
+      14579.719614,
+      14589.719614
+     ],
+     "local_run": 10.0,
+     "separation": 20.091016828402644,
+     "raw_chain_overlap": 40.0,
+     "state": "UNSUPPORTED",
+     "means": "NON_AUTHORITATIVE_PAIR_RUN: no band, no passage, no ambiguity"
+    }
+   ],
+   "inherited_support_used": [],
+   "false_passage_OP_a38c9a827025e4a9": "GONE",
+   "old_revision_false_passages": "GONE: OP-c624f362e720d083 (6000 x 1800) and OP-09badb0314071752 (4600 x 600, pair 551 / 817, 150 mm run vs 600 mm)"
+  },
+  "state": "RESOLVED"
+ },
+ "band_diff_v3_to_v4": {
+  "NEW_K2": {
+   "v3_records": 76,
+   "v4_records": 55,
+   "v3_distinct": 58,
+   "v4_distinct": 53,
+   "v3_duplicate_records": 18,
+   "lost": [
+    {
+     "state": "WALL_BAND_AMBIGUOUS",
+     "faces": [
+      "2060"
+     ],
+     "width_mm": 400.0,
+     "length_mm": 100.0,
+     "n": 4
+    },
+    {
+     "state": "WALL_BAND_AMBIGUOUS",
+     "faces": [
+      "2060",
+      "2060"
+     ],
+     "width_mm": 400.0,
+     "length_mm": 100.0,
+     "n": 4
+    },
+    {
+     "state": "WALL_BAND_AMBIGUOUS",
+     "faces": [
+      "2060",
+      "2061"
+     ],
+     "width_mm": 100.0,
+     "length_mm": 200.0,
+     "n": 4
+    },
+    {
+     "state": "WALL_BAND_AMBIGUOUS",
+     "faces": [
+      "2060",
+      "2061"
+     ],
+     "width_mm": 100.0,
+     "length_mm": 1900.0,
+     "n": 4
+    },
+    {
+     "state": "WALL_BAND_AMBIGUOUS",
+     "faces": [
+      "2060",
+      "2061"
+     ],
+     "width_mm": 300.0,
+     "length_mm": 1900.0,
+     "n": 4
+    },
+    {
+     "state": "WALL_BAND_ESTABLISHED",
+     "faces": [
+      "2060",
+      "552"
+     ],
+     "width_mm": 200.91,
+     "length_mm": 100.0,
+     "n": 4
+    },
+    {
+     "state": "WALL_BAND_ESTABLISHED",
+     "faces": [
+      "574",
+      "584"
+     ],
+     "width_mm": 1800.0,
+     "length_mm": 150.0,
+     "n": 1
+    }
+   ],
+   "gained": [
+    {
+     "state": "WALL_BAND_ESTABLISHED",
+     "faces": [
+      "2060",
+      "2061"
+     ],
+     "width_mm": 100.0,
+     "length_mm": 200.0,
+     "n": 2
+    },
+    {
+     "state": "WALL_BAND_ESTABLISHED",
+     "faces": [
+      "2060",
+      "2061"
+     ],
+     "width_mm": 100.0,
+     "length_mm": 1900.0,
+     "n": 2
+    }
+   ],
+   "unchanged_distinct": 51
+  },
+  "OLD_K1": {
+   "v3_records": 76,
+   "v4_records": 56,
+   "v3_distinct": 61,
+   "v4_distinct": 54,
+   "v3_duplicate_records": 15,
+   "lost": [
+    {
+     "state": "WALL_BAND_AMBIGUOUS",
+     "faces": [
+      "2060"
+     ],
+     "width_mm": 400.0,
+     "length_mm": 100.0,
+     "n": 4
+    },
+    {
+     "state": "WALL_BAND_AMBIGUOUS",
+     "faces": [
+      "2060",
+      "2060"
+     ],
+     "width_mm": 400.0,
+     "length_mm": 100.0,
+     "n": 4
+    },
+    {
+     "state": "WALL_BAND_AMBIGUOUS",
+     "faces": [
+      "2060",
+      "2061"
+     ],
+     "width_mm": 100.0,
+     "length_mm": 200.0,
+     "n": 4
+    },
+    {
+     "state": "WALL_BAND_AMBIGUOUS",
+     "faces": [
+      "2060",
+      "2061"
+     ],
+     "width_mm": 100.0,
+     "length_mm": 1900.0,
+     "n": 4
+    },
+    {
+     "state": "WALL_BAND_AMBIGUOUS",
+     "faces": [
+      "2060",
+      "2061"
+     ],
+     "width_mm": 300.0,
+     "length_mm": 1900.0,
+     "n": 4
+    },
+    {
+     "state": "WALL_BAND_ESTABLISHED",
+     "faces": [
+      "545",
+      "549"
+     ],
+     "width_mm": 150.0,
+     "length_mm": 150.0,
+     "n": 1
+    },
+    {
+     "state": "WALL_BAND_ESTABLISHED",
+     "faces": [
+      "549",
+      "550"
+     ],
+     "width_mm": 400.0,
+     "length_mm": 150.0,
+     "n": 1
+    },
+    {
+     "state": "WALL_BAND_ESTABLISHED",
+     "faces": [
+      "551",
+      "817"
+     ],
+     "width_mm": 600.0,
+     "length_mm": 150.0,
+     "n": 1
+    },
+    {
+     "state": "WALL_BAND_ESTABLISHED",
+     "faces": [
+      "574",
+      "584"
+     ],
+     "width_mm": 1800.0,
+     "length_mm": 150.0,
+     "n": 1
+    }
+   ],
+   "gained": [
+    {
+     "state": "WALL_BAND_ESTABLISHED",
+     "faces": [
+      "2060",
+      "2061"
+     ],
+     "width_mm": 100.0,
+     "length_mm": 200.0,
+     "n": 2
+    },
+    {
+     "state": "WALL_BAND_ESTABLISHED",
+     "faces": [
+      "2060",
+      "2061"
+     ],
+     "width_mm": 100.0,
+     "length_mm": 1900.0,
+     "n": 2
+    }
+   ],
+   "unchanged_distinct": 52
+  }
+ },
+ "post_blind_observations_for_r8_14": [
+  {
+   "id": "V4-O1",
+   "what": "H2060 (2100 x 400 mm closed polyline, WALL layer) with H2061 nested inside it 100 mm in on every side: V4 reads the 100 mm ring as ESTABLISHED bands (V3 showed them AMBIGUOUS only because of the D1 dictionary collapse)",
+   "effect": "no closure, no passage, no row",
+   "question": "a ring between nested closed polylines on a wall layer: shaft wall or symbol? (role, not band geometry)",
+   "action": "R8.14, not patched"
+  },
+  {
+   "id": "V4-O2",
+   "what": "a square local run (run == separation, pair 545 / 549 old revision, 150 x 150 mm) is decided by floating-point noise at the elongation equality (V3 and V4 alike)",
+   "effect": "old revision only; no row",
+   "action": "R8.14: state an explicit tie rule for elongation_ratio (a policy parameter), not patched"
+  }
+ ]
+}
