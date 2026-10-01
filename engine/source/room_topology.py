@@ -334,7 +334,8 @@ def run(inp: CI.CanonicalMeasurementInput, *, frame_insert, expected_revision_id
                     blocking_roles=GR.TOPOLOGY_BLOCKING + (RA.UNCONNECTED_BOUNDARY_CANDIDATE,), opening_status=status,
                     opening_symbol_occurrences=door_probes, glazed_openings=adm["glazed_openings"])
     consequences(res, items + closures, adm, labels, tol, inp.unit_native_to_mm)
-    net = RA.network_review(res, items, adm.get("grades", {}), adm["roles"], inp.dimensions, eps_r=tol["eps_r"])
+    net = RA.network_review(res, items, adm.get("grades", {}), adm["roles"], inp.texts, eps_r=tol["eps_r"],
+                            unit_native_to_mm=inp.unit_native_to_mm)
     res["network_review"] = net
     for sid in sorted({x for v in net.values() if v["state"] == RA.NETWORK_ROLE_CONFLICT for x in v["sites"]}):
         s_ = next(z for z in res["sites"] if z["site_id"] == sid)

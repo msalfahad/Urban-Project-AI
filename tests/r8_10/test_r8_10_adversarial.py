@@ -21,16 +21,32 @@ def net(r, part):
 
 
 # ------------------------------------------------------------------------------- §21 NETWORK grade
-def test_A_dimension_line_on_a_wall_layer_with_its_dimension_entity_is_a_role_conflict():
+def test_A_dimension_line_on_a_wall_layer_carrying_its_own_length_is_a_role_conflict():
     line = H.seg(50, 400, 0, 400, 400)                                      # WALL layer, wall to wall
-    d = H.dim(60, pts=((400.0, 0.0), (400.0, 400.0)), m=400.0)             # the dimension it was drawn for
-    r = run(outer() + [line], [H.text(5, "BED.ROOM", 700, 200)], dims=[d])
+    own = H.text(60, "4000", 410, 200, layer="TEXT")                         # 400 units x 10 mm, at its middle
+    r = run(outer() + [line], [H.text(5, "BED.ROOM", 700, 200), own])
     assert net(r, line) == RA.NETWORK_ROLE_CONFLICT
     assert all(RA.NETWORK_ROLE_CONFLICT in s["issues"] for s in r["sites"])
     assert not [s for s in r["sites"] if s["status"] == T.CERTIFIED]
 
 
-def test_A2_the_same_line_without_its_dimension_entity_is_only_a_candidate_documented_residual():
+def test_a_real_wall_dimensioned_corner_to_corner_is_not_a_conflict():
+    # R8.10 finding on the old Qortuba revision: real walls carry DIMENSION entities whose measured points coincide
+    # with their ends; being measured is not being a dimension line
+    wall = H.seg(56, 500, 0, 500, 400)
+    d = H.dim(61, pts=((500.0, 0.0), (500.0, 400.0)), m=400.0)
+    r = run(outer() + [wall], [H.text(5, "BED.ROOM", 200, 200), H.text(6, "BATH", 700, 200)], dims=[d])
+    assert net(r, wall) == RA.NETWORK_BOUNDARY_ESTABLISHED
+    assert all(s["status"] == T.CERTIFIED for s in r["sites"])
+
+
+def test_a_length_text_far_from_the_line_is_not_self_dimensioning():
+    line = H.seg(50, 400, 0, 400, 400)
+    r = run(outer() + [line], [H.text(5, "BED.ROOM", 700, 200), H.text(60, "4000", 800, 200, layer="TEXT")])
+    assert net(r, line) == RA.NETWORK_BOUNDARY_CANDIDATE
+
+
+def test_A2_the_same_line_without_its_own_length_text_is_only_a_candidate_documented_residual():
     line = H.seg(50, 400, 0, 400, 400)
     r = run(outer() + [line], [H.text(5, "BED.ROOM", 700, 200)])
     assert net(r, line) == RA.NETWORK_BOUNDARY_CANDIDATE                  # recorded: labelled | unlabelled

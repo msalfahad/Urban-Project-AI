@@ -49,6 +49,9 @@ Project-agnostic; stdlib only.
 
 from __future__ import annotations
 
+import math
+import re
+
 from collections import defaultdict
 from dataclasses import dataclass, field
 
@@ -323,18 +326,50 @@ NETWORK_BOUNDARY_CANDIDATE = "NETWORK_BOUNDARY_CANDIDATE"
 NETWORK_ROLE_CONFLICT = "NETWORK_ROLE_CONFLICT"
 
 
-def _same_pts(a, b, eps):
-    return T._d(a, b) <= eps
+_NUM = re.compile(r"^\s*([0-9]+(?:[.,][0-9]+)?)\s*$")
 
 
-def network_review(res, items, grades, roles, dimensions, *, eps_r) -> dict:
+def self_dimension_text(it, texts, unit_native_to_mm):
+    """The visible text that states this segment's own length at its middle, or None (size-free: distances are in
+    text heights; the number must match the length as mm, cm or m to the text's own decimals)."""
+    if not unit_native_to_mm or it.kind != "SEGMENT":
+        return None
+    x1, y1, x2, y2 = it.geometry
+    L = math.hypot(x2 - x1, y2 - y1)
+    if L == 0.0:
+        return None
+    ux, uy = (x2 - x1) / L, (y2 - y1) / L
+    mx, my = (x1 + x2) / 2, (y1 + y2) / 2
+    mm = L * unit_native_to_mm
+    for t in texts:
+        if t.x is None or not t.height or t.visibility != CI.VISIBLE:
+            continue
+        m = _NUM.match(t.value or "")
+        if not m:
+            continue
+        along = (t.x - mx) * ux + (t.y - my) * uy
+        across = abs(-(t.x - mx) * uy + (t.y - my) * ux)
+        if across > 1.5 * t.height or abs(along) > L / 3:
+            continue
+        txt = m.group(1).replace(",", ".")
+        dec = len(txt.split(".")[1]) if "." in txt else 0
+        val = float(txt)
+        if any(abs(round(mm / f, dec) - val) < 0.5 * 10 ** -dec for f in (1.0, 10.0, 1000.0)):
+            return t.identity.key
+    return None
+
+
+def network_review(res, items, grades, roles, texts, *, eps_r, unit_native_to_mm=None) -> dict:
     """R8.10 §21: NETWORK grade (a wall-layer line connected at both ends) says the line is CONNECTED, not that it is
     a wall. Each NETWORK line that separates two different sites is classified:
       NETWORK_BOUNDARY_ESTABLISHED  corroborated: it separates two DIFFERENT established label occurrences, or a
                                     reviewed claim names it
-      NETWORK_ROLE_CONFLICT         positive contrary evidence: its two ends coincide with the measured points of a
-                                    DIMENSION entity of the same source (a dimension line drawn on a wall layer) -
-                                    a PHYSICAL issue on both sites
+      NETWORK_ROLE_CONFLICT         positive contrary evidence: the line is SELF-DIMENSIONED - a visible numeric
+                                    text equal to the line's own length (as mm, cm or m, at the text's own
+                                    decimals) stands at the line's middle, within 1.5 text heights of it: a
+                                    dimension line drawn on a wall layer. A PHYSICAL issue on both sites.
+                                    (A DIMENSION entity whose measured points coincide with the line's ends is NOT
+                                    contrary evidence: real walls are dimensioned corner to corner - R8.10 finding)
       NETWORK_BOUNDARY_CANDIDATE    anything else (recorded, not blocking: a double-line wall face looks exactly
                                     like this; telling a wall band from a pocket needs a wall-band model, R8.11)"""
     side = defaultdict(list)
@@ -349,15 +384,12 @@ def network_review(res, items, grades, roles, dimensions, *, eps_r) -> dict:
         sites = sorted(side.get(it.source_id, []), key=lambda z: z["site_id"])
         if len(sites) < 2:
             continue
-        a, b = (it.geometry[0], it.geometry[1]), (it.geometry[2], it.geometry[3])
-        dim_hit = [d.identity.key for d in dimensions if d.placed_points and len(d.placed_points) >= 2 and
-                   ((_same_pts(a, d.placed_points[0], eps_r) and _same_pts(b, d.placed_points[1], eps_r)) or
-                    (_same_pts(a, d.placed_points[1], eps_r) and _same_pts(b, d.placed_points[0], eps_r)))]
+        dim_hit = self_dimension_text(it, texts, unit_native_to_mm)
         occs = [set(s_["labels"]) for s_ in sites]
         ra = roles.get(it.source_id)
         claimed = ra is not None and str(ra.rule_id).startswith("CLAIM:")
         if dim_hit:
-            state, why = NETWORK_ROLE_CONFLICT, {"dimension": sorted(dim_hit)}
+            state, why = NETWORK_ROLE_CONFLICT, {"self_dimension_text": dim_hit}
         elif claimed:
             state, why = NETWORK_BOUNDARY_ESTABLISHED, {"claim": ra.rule_id}
         elif all(occs) and not set.intersection(*occs):
