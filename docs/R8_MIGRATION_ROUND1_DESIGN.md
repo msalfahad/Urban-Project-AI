@@ -328,3 +328,69 @@ passage in a WALL stub (R8.9 wording corrected). Source anchor (DWG <-> DXF) sta
 
 **Package:** `data/reports/URBAN_QTO_R8_10_OWNER_CLAIMS_AND_TRADE_EQUIVALENCE/`. **Gates:** MIGRATION_PLANNING_READY =
 YES, MIGRATION_EXECUTION_READY = NO, PRODUCTION_MIGRATION = NO.
+
+## 12. R8.11 addendum — wall bands, zero-material topology closures, object-footprint authority, run manifest
+
+**Three things are kept apart.** A: source geometry (never rewritten). B: a TopologyClosure
+(`engine/source/topology_closures.py`), a derived, reversible, zero-material record used only for connectivity. C: a
+source correction claim (none in R8.11). A closure never adds wall length, area, plaster, paint, skirting or an
+opening width.
+
+**Wall bands** (`engine/source/wall_bands.py`): two admitted wall faces that are parallel, overlapping, separated,
+elongated, mutual nearest (one side only) with an empty strip, neither self-dimensioned. They are
+TOPOLOGY_OBSTACLE_GEOMETRY, not masonry, and their identity is a digest of revision + region + the face source ids.
+Ends are ALIGNED_FREE_END, CAPPED or RECEIVING_FACE_JUNCTION (amendment A1, below). A drawn line of any role except a
+door or window symbol across an aligned end corroborates it: WALL_END_CAP_PROVEN (exact) or WALL_END_CAP_CANDIDATE
+(within the 50 mm review band). The closure of an aligned free end is the segment between the two **face end
+points**, never the cap line's coordinates. Release levels run CANDIDATE → DIAGNOSTIC_PASS → (REVIEWED) →
+AUTHORISED_FOR_SHADOW → (AUTHORISED_FOR_RELEASE, never in R8.11), or TOPOLOGY_CLOSURE_UNRESOLVED. AUTHORISED_FOR_SHADOW
+requires cap corroboration plus a safety test:
+- the label partition is unchanged;
+- every separated piece is a pure band interior;
+- the area balance holds.
+
+**Anti-calibration.** The band, cap, near-miss and closure rules were frozen with 24 synthetic tests (commit
+`5895981`) before the first Qortuba run.
+
+That first run found an independent defect. A band running into another wall's face line (a T-junction, or merged
+cores) was taken for a free end, which produced 150–200 mm "passages" through wall cores. Amendment A1
+(WALL_BAND_POLICY_V2) adds the RECEIVING_FACE_JUNCTION end kind. It can only remove candidates: the authorised
+closure set on both revisions is unchanged, and so are all row values.
+
+A second defect was found and **not** fixed in R8.11. The band pairing tests "mutual nearest" over a face's whole
+length, so a face drawn in two collinear fragments (H470 + H471) gets no partner. That is why H2430 stays
+UNRESOLVED. Fixing it after seeing the result would calibrate the rule to this drawing, so it is E-R8.12-01: synthetic
+tests first, then a blind re-run.
+
+**Trade authority.**
+- `trade_regions` V2 adds a SemanticClassRule: exact label → space class → treatment. A raw spelling variant maps to
+  nothing.
+- It also adds a TradeObjectFootprintPolicy (FOOTPRINT_INCLUDED / DEDUCTED / ROLE_REQUIRED / NOT_APPLICABLE). This
+  keeps an object's role separate from what a trade does with its footprint.
+- The ceiling policy comes from the existing Q-14 claim. No floor policy exists, and none is invented. The implicit
+  inclusion of proven object footprints in floor areas is recorded as a release blocker.
+
+**Run manifest** (`engine/source/run_manifest.py`). RUN_INPUT_DIGEST covers:
+- the canonical input;
+- the revision, anchor, region, frame and unit;
+- the claims offered, applied and rejected, with their outcomes;
+- the evidence version;
+- every policy id and digest;
+- the method and contract version;
+- the closure policy;
+- the decoder route;
+- the installed kernel versions.
+
+The code commit is not part of it: it is bound separately in CODE_BOUND_DIGEST. Trade-layer authority (the Q-14
+claim, the class rule, footprint policies) is bound per row by a row_input_digest in the lab.
+
+**Qortuba (new revision).**
+- Q-03 / Q-11 = 17.7425 and Q-03P / Q-12 = 11.685 (COMPUTED_SHADOW, unchanged).
+- The H2431 band end is closed by an authorised zero-material closure. The 0.6494 m² core leaves the HALL
+  (43.83 → 43.1806 m²) and the HALL's near-miss is gone.
+- Q-14 is BLOCKED_ROLE by the H2430 wall core alone (0.3813 m²).
+- Q-13 is also blocked by the floor object-footprint rule and the SF3 / FIRNTUR roles. The wardrobe-floor fact is not
+  the sole blocker, so no owner question is asked.
+
+**Package:** `data/reports/URBAN_QTO_R8_11_WALL_BANDS_AND_RUN_MANIFEST/`. **Gates:** MIGRATION_PLANNING_READY = YES,
+MIGRATION_EXECUTION_READY = NO, PRODUCTION_MIGRATION = NO.

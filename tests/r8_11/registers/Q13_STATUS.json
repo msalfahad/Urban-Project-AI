@@ -1,0 +1,163 @@
+{
+ "SCHEMA": "URBAN_R8_11_Q13_STATUS_V1",
+ "row": "Q-13",
+ "state": "BLOCKED_MULTIPLE: BLOCKED_ROLE, BLOCKED_TRADE_RULE",
+ "value": null,
+ "blocker_classes": [
+  "ROLE_AUTHORITY",
+  "TRADE_RULE"
+ ],
+ "blockers": [
+  {
+   "site": "SITE-6d1ce80253b53f83",
+   "zones": [
+    "HALL",
+    "whgm"
+   ],
+   "area_m2": 43.180638,
+   "blockers": [
+    {
+     "class": "TRADE_RULE",
+     "issue": "OBJECT_FOOTPRINT_POLICY_UNRESOLVED",
+     "detail": {
+      "source": "1663",
+      "roles": [
+       "FURNITURE"
+      ],
+      "pockets_m2": [
+       2.3914
+      ]
+     }
+    },
+    {
+     "class": "ROLE_AUTHORITY",
+     "issue": "ROLE_CONFLICT_SEPARATOR",
+     "detail": {
+      "source": "2430",
+      "roles": [
+       "DIMENSION_GRAPHICS"
+      ],
+      "pockets_m2": [
+       0.3813
+      ],
+      "why": "a line closing a wall core / a possible partition: material to every area trade whatever the footprint policy"
+     }
+    },
+    {
+     "class": "ROLE_AUTHORITY",
+     "issue": "TOPOLOGY_ROLE_UNRESOLVED",
+     "detail": [
+      "612083",
+      "612083",
+      "612083",
+      "612084",
+      "612084",
+      "612084",
+      "612085",
+      "612085",
+      "612085",
+      "612086",
+      "612086",
+      "612086"
+     ]
+    },
+    {
+     "class": "TRADE_RULE",
+     "issue": "OBJECT_FOOTPRINT_POLICY_UNRESOLVED",
+     "detail": "QORTUBA-FLOOR-TREATMENT: FLOOR_FINISH"
+    }
+   ]
+  },
+  {
+   "site": "SITE-a6405850100155ac",
+   "zones": [
+    "DRESS",
+    "M.B.ROOM"
+   ],
+   "area_m2": 33.2,
+   "blockers": [
+    {
+     "class": "ROLE_AUTHORITY",
+     "issue": "TOPOLOGY_ROLE_UNRESOLVED",
+     "detail": [
+      "1445",
+      "1446",
+      "1669",
+      "1670",
+      "514",
+      "517"
+     ]
+    },
+    {
+     "class": "TRADE_RULE",
+     "issue": "OBJECT_FOOTPRINT_POLICY_UNRESOLVED",
+     "detail": "QORTUBA-FLOOR-TREATMENT: FLOOR_FINISH"
+    }
+   ]
+  }
+ ],
+ "sites_used": [
+  {
+   "site": "SITE-5f1762f1a93b91ca",
+   "zones": [
+    "BED.ROOM"
+   ],
+   "area_m2": 19.2725,
+   "decision": "SINGLE_SEMANTIC_ZONE"
+  },
+  {
+   "site": "SITE-daca396d6d730e60",
+   "zones": [
+    "BED.ROOM"
+   ],
+   "area_m2": 16.327,
+   "decision": "SINGLE_SEMANTIC_ZONE"
+  }
+ ],
+ "trade_authority": {
+  "rule": "QORTUBA-FLOOR-TREATMENT@v2",
+  "authority": "PROJECT_OWNER_RULE (owner rule store, rank 2)",
+  "refs": [
+   "research/qs_wall_treatment_01/pa08/qortuba/boq/owner_rules.py: US-01 WET_SERVICE_ROOM_CERAMIC",
+   "research/qs_wall_treatment_01/pa08/qortuba/boq/owner_rules.py: QP-07 QORTUBA_CERAMIC_SERVICE_ROOMS = BATH x3 + PAINTRY",
+   "research/qs_wall_treatment_01/pa08/qortuba/boq/owner_rules.py: QP-14 QORTUBA_DRY_FLOOR_FINISH = PORCELAIN",
+   "QORTUBA-SPACE-CLASS@v1"
+  ],
+  "row_treatment": "PORCELAIN_DRY_FLOOR",
+  "semantic_class_rule": "QORTUBA-SPACE-CLASS@v1"
+ },
+ "footprint_authority": {
+  "treatment": null,
+  "policy": null
+ },
+ "release_blockers": [
+  "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+  "OBJECT_FOOTPRINT_IMPLICIT: proven furniture / fixture footprints are inside the measured floor by the topology convention, not by a FLOOR_FINISH footprint authority",
+  "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+ ],
+ "r8_10": {
+  "state": "BLOCKED_MULTIPLE: BLOCKED_PHYSICAL, BLOCKED_ROLE, BLOCKED_TRADE_RULE",
+  "value": null,
+  "blocker_classes": [
+   "PHYSICAL_TOPOLOGY",
+   "ROLE_AUTHORITY",
+   "TRADE_RULE"
+  ]
+ },
+ "old_revision": {
+  "state": "BLOCKED_MULTIPLE: BLOCKED_ROLE, BLOCKED_TRADE_RULE",
+  "value": null
+ },
+ "final": false,
+ "run_input_digest": "645dff01bd02218557203c6e1d5d5d999e1b3ca7abdc091e0b4a36bf0bf1ec68",
+ "row_input_digest": "bd165f4dc071e6630d56963a6503ec6bdcd113021bda8fb6f4e4e665b2081593",
+ "sole_blocker_test": {
+  "question": "is the floor-under-object fact the ONLY remaining Q-13 blocker?",
+  "answer": "NO",
+  "other_blockers": [
+   "ROLE_AUTHORITY:ROLE_CONFLICT_SEPARATOR:2430",
+   "ROLE_AUTHORITY:TOPOLOGY_ROLE_UNRESOLVED"
+  ],
+  "consequence": "no owner question is asked in R8.11"
+ }
+}

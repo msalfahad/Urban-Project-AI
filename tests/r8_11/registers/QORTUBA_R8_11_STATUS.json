@@ -1,0 +1,1754 @@
+{
+ "SCHEMA": "URBAN_R8_11_QORTUBA_STATUS_V1",
+ "scope": {
+  "plan": "PLAN_VARIANT_4_SELECTED",
+  "region": "RC:MODEL_SPACE:4267:540:1649",
+  "frame": "MF:RC:MODEL_SPACE:4267:540:1649",
+  "revision": "QORTUBA_REV_NEW",
+  "anchor_dxf": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+  "dwg_candidate": "e4babbc2ded14d8b01d64fbfd4b373e6a09ba60c4490a56e6305a82c9e47171f",
+  "dwg_identity": "NOT_ESTABLISHED"
+ },
+ "closure_policy": "TOPOLOGY_CLOSURE_POLICY_V1",
+ "wall_band_policy": "WALL_BAND_POLICY_V2",
+ "rows": {
+  "NEW_K2_R8_11": {
+   "Q-03": {
+    "state": "COMPUTED_SHADOW",
+    "value": 17.7425,
+    "physical_site_ids": [
+     "SITE-1c4abf65f9b5db1e",
+     "SITE-a2b19efc492a6d0b",
+     "SITE-fe8ed5548fb4310e"
+    ],
+    "sites_used": [
+     {
+      "site": "SITE-1c4abf65f9b5db1e",
+      "zones": [
+       "BATH"
+      ],
+      "area_m2": 8.5525,
+      "decision": "SINGLE_SEMANTIC_ZONE"
+     },
+     {
+      "site": "SITE-a2b19efc492a6d0b",
+      "zones": [
+       "BATH"
+      ],
+      "area_m2": 5.1,
+      "decision": "SINGLE_SEMANTIC_ZONE"
+     },
+     {
+      "site": "SITE-fe8ed5548fb4310e",
+      "zones": [
+       "BATH"
+      ],
+      "area_m2": 4.09,
+      "decision": "SINGLE_SEMANTIC_ZONE"
+     }
+    ],
+    "blockers": [],
+    "blocker_classes": [],
+    "trade_authority": {
+     "rule": "QORTUBA-FLOOR-TREATMENT@v2",
+     "authority": "PROJECT_OWNER_RULE (owner rule store, rank 2)",
+     "refs": [
+      "research/qs_wall_treatment_01/pa08/qortuba/boq/owner_rules.py: US-01 WET_SERVICE_ROOM_CERAMIC",
+      "research/qs_wall_treatment_01/pa08/qortuba/boq/owner_rules.py: QP-07 QORTUBA_CERAMIC_SERVICE_ROOMS = BATH x3 + PAINTRY",
+      "research/qs_wall_treatment_01/pa08/qortuba/boq/owner_rules.py: QP-14 QORTUBA_DRY_FLOOR_FINISH = PORCELAIN",
+      "QORTUBA-SPACE-CLASS@v1"
+     ],
+     "row_treatment": "CERAMIC_WET_FLOOR",
+     "semantic_class_rule": "QORTUBA-SPACE-CLASS@v1"
+    },
+    "footprint_authority": {
+     "treatment": null,
+     "policy": null
+    },
+    "implicit_object_footprints": {},
+    "zone_decisions": {
+     "SITE-1c4abf65f9b5db1e": {
+      "rule": "QORTUBA-FLOOR-TREATMENT@v2",
+      "trade": "FLOOR_FINISH",
+      "authority": "PROJECT_OWNER_RULE (owner rule store, rank 2)",
+      "treatments": {
+       "BATH": "CERAMIC_WET_FLOOR"
+      },
+      "unresolved_texts": [],
+      "authored_trade_boundary": false,
+      "state": "SINGLE_SEMANTIC_ZONE",
+      "why": "one semantic zone",
+      "space_classes": {
+       "BATH": "WET_ROOM"
+      },
+      "object_materiality": null,
+      "exclusion_groups": []
+     },
+     "SITE-a2b19efc492a6d0b": {
+      "rule": "QORTUBA-FLOOR-TREATMENT@v2",
+      "trade": "FLOOR_FINISH",
+      "authority": "PROJECT_OWNER_RULE (owner rule store, rank 2)",
+      "treatments": {
+       "BATH": "CERAMIC_WET_FLOOR"
+      },
+      "unresolved_texts": [],
+      "authored_trade_boundary": false,
+      "state": "SINGLE_SEMANTIC_ZONE",
+      "why": "one semantic zone",
+      "space_classes": {
+       "BATH": "WET_ROOM"
+      },
+      "object_materiality": null,
+      "exclusion_groups": []
+     },
+     "SITE-fe8ed5548fb4310e": {
+      "rule": "QORTUBA-FLOOR-TREATMENT@v2",
+      "trade": "FLOOR_FINISH",
+      "authority": "PROJECT_OWNER_RULE (owner rule store, rank 2)",
+      "treatments": {
+       "BATH": "CERAMIC_WET_FLOOR"
+      },
+      "unresolved_texts": [],
+      "authored_trade_boundary": false,
+      "state": "SINGLE_SEMANTIC_ZONE",
+      "why": "one semantic zone",
+      "space_classes": {
+       "BATH": "WET_ROOM"
+      },
+      "object_materiality": null,
+      "exclusion_groups": []
+     }
+    },
+    "semantic_zone_ids": [
+     "ZONE-521333605fee9dad",
+     "ZONE-d17d13a2a93ca96f",
+     "ZONE-e02fda0197f6650f"
+    ],
+    "wall_bands": [
+     "WB-298800ce16db4b79",
+     "WB-3f0c2b19ab151915",
+     "WB-7d515124fe87e3a5",
+     "WB-b0e2774b18433212",
+     "WB-cb65fe1a8f201b2f",
+     "WB-efec5c14f5c79ab7"
+    ],
+    "topology_closures_applied": [],
+    "opening_closures": [
+     "CLOSURE|I1443|A",
+     "CLOSURE|I1561|A",
+     "CLOSURE|I2044|A"
+    ],
+    "threshold_sites": [
+     {
+      "threshold": "THRESHOLD-cf12fcdfd3e6a4a6",
+      "site": "SITE-1cc94d2ca98f6229",
+      "opening": "I2044",
+      "area_m2": 0.12,
+      "sides": [
+       "SITE-6d1ce80253b53f83",
+       "SITE-a2b19efc492a6d0b"
+      ],
+      "allocation": "TRADE_RULE_REQUIRED"
+     },
+     {
+      "threshold": "THRESHOLD-28f50f8dc18c1e90",
+      "site": "SITE-5b8e4f9259cdb19c",
+      "opening": "I1561",
+      "area_m2": 0.12,
+      "sides": [
+       "SITE-6d1ce80253b53f83",
+       "SITE-fe8ed5548fb4310e"
+      ],
+      "allocation": "TRADE_RULE_REQUIRED"
+     },
+     {
+      "threshold": "THRESHOLD-f9846605acbce828",
+      "site": "SITE-e639327cc873867d",
+      "opening": "I1443",
+      "area_m2": 0.12,
+      "sides": [
+       "SITE-1c4abf65f9b5db1e",
+       "SITE-a6405850100155ac"
+      ],
+      "allocation": "TRADE_RULE_REQUIRED"
+     }
+    ],
+    "open_passage_sites": [],
+    "claims_applied": [
+     "QORTUBA-NEW-DIM-LINES-7116-7119-ARE-WALLS-OWNER-001@v1"
+    ],
+    "source_anchor": {
+     "revision": "QORTUBA_REV_NEW",
+     "dxf_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+     "dwg_identity": "NOT_ESTABLISHED"
+    },
+    "run_id": "RUN-645dff01bd022185",
+    "run_input_digest": "645dff01bd02218557203c6e1d5d5d999e1b3ca7abdc091e0b4a36bf0bf1ec68",
+    "release_blockers": [
+     "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+    ],
+    "row_input_digest": "00ed7fee8bdc807d55d248bcce856b74bf0d64b6deb47cca8b885960f465e454",
+    "row_input_digest_covers": [
+     "footprint_policies",
+     "row",
+     "row_claims",
+     "run_input_digest",
+     "space_classes",
+     "trade_rule"
+    ]
+   },
+   "Q-03P": {
+    "state": "COMPUTED_SHADOW",
+    "value": 11.685,
+    "physical_site_ids": [
+     "SITE-8c1c7563d5252c50"
+    ],
+    "sites_used": [
+     {
+      "site": "SITE-8c1c7563d5252c50",
+      "zones": [
+       "PAINTRY"
+      ],
+      "area_m2": 11.685,
+      "decision": "SINGLE_SEMANTIC_ZONE"
+     }
+    ],
+    "blockers": [],
+    "blocker_classes": [],
+    "trade_authority": {
+     "rule": "QORTUBA-FLOOR-TREATMENT@v2",
+     "authority": "PROJECT_OWNER_RULE (owner rule store, rank 2)",
+     "refs": [
+      "research/qs_wall_treatment_01/pa08/qortuba/boq/owner_rules.py: US-01 WET_SERVICE_ROOM_CERAMIC",
+      "research/qs_wall_treatment_01/pa08/qortuba/boq/owner_rules.py: QP-07 QORTUBA_CERAMIC_SERVICE_ROOMS = BATH x3 + PAINTRY",
+      "research/qs_wall_treatment_01/pa08/qortuba/boq/owner_rules.py: QP-14 QORTUBA_DRY_FLOOR_FINISH = PORCELAIN",
+      "QORTUBA-SPACE-CLASS@v1"
+     ],
+     "row_treatment": "CERAMIC_SERVICE_FLOOR",
+     "semantic_class_rule": "QORTUBA-SPACE-CLASS@v1"
+    },
+    "footprint_authority": {
+     "treatment": null,
+     "policy": null
+    },
+    "implicit_object_footprints": {
+     "SITE-8c1c7563d5252c50": {
+      "SANITARY_FIXTURE": 5
+     }
+    },
+    "zone_decisions": {
+     "SITE-8c1c7563d5252c50": {
+      "rule": "QORTUBA-FLOOR-TREATMENT@v2",
+      "trade": "FLOOR_FINISH",
+      "authority": "PROJECT_OWNER_RULE (owner rule store, rank 2)",
+      "treatments": {
+       "PAINTRY": "CERAMIC_SERVICE_FLOOR"
+      },
+      "unresolved_texts": [],
+      "authored_trade_boundary": false,
+      "state": "SINGLE_SEMANTIC_ZONE",
+      "why": "one semantic zone",
+      "space_classes": {
+       "PAINTRY": "SERVICE_ROOM"
+      },
+      "object_materiality": null,
+      "exclusion_groups": []
+     }
+    },
+    "semantic_zone_ids": [
+     "ZONE-3db6e83acfb43dc3"
+    ],
+    "wall_bands": [
+     "WB-8645c0f3b6a8e8ba",
+     "WB-a0f614bd5f5a02d4",
+     "WB-cb65fe1a8f201b2f"
+    ],
+    "topology_closures_applied": [],
+    "opening_closures": [
+     "CLOSURE|GLAZED|QORTUBA_REV_NEW|H533||SEGMENT|0|F1",
+     "CLOSURE|GLAZED|QORTUBA_REV_NEW|H542||SEGMENT|0|F2"
+    ],
+    "threshold_sites": [],
+    "open_passage_sites": [],
+    "claims_applied": [],
+    "source_anchor": {
+     "revision": "QORTUBA_REV_NEW",
+     "dxf_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+     "dwg_identity": "NOT_ESTABLISHED"
+    },
+    "run_id": "RUN-645dff01bd022185",
+    "run_input_digest": "645dff01bd02218557203c6e1d5d5d999e1b3ca7abdc091e0b4a36bf0bf1ec68",
+    "release_blockers": [
+     "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+     "OBJECT_FOOTPRINT_IMPLICIT: proven furniture / fixture footprints are inside the measured floor by the topology convention, not by a FLOOR_FINISH footprint authority",
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+    ],
+    "row_input_digest": "62728a42a9c8c6506128e878e9f93c9e66ceaf50210092f7d29ca5115b1c513d",
+    "row_input_digest_covers": [
+     "footprint_policies",
+     "row",
+     "row_claims",
+     "run_input_digest",
+     "space_classes",
+     "trade_rule"
+    ]
+   },
+   "Q-11": {
+    "state": "COMPUTED_SHADOW",
+    "value": 17.7425,
+    "physical_site_ids": [
+     "SITE-1c4abf65f9b5db1e",
+     "SITE-a2b19efc492a6d0b",
+     "SITE-fe8ed5548fb4310e"
+    ],
+    "sites_used": [
+     {
+      "site": "SITE-1c4abf65f9b5db1e",
+      "zones": [
+       "BATH"
+      ],
+      "area_m2": 8.5525,
+      "decision": "SINGLE_SEMANTIC_ZONE"
+     },
+     {
+      "site": "SITE-a2b19efc492a6d0b",
+      "zones": [
+       "BATH"
+      ],
+      "area_m2": 5.1,
+      "decision": "SINGLE_SEMANTIC_ZONE"
+     },
+     {
+      "site": "SITE-fe8ed5548fb4310e",
+      "zones": [
+       "BATH"
+      ],
+      "area_m2": 4.09,
+      "decision": "SINGLE_SEMANTIC_ZONE"
+     }
+    ],
+    "blockers": [],
+    "blocker_classes": [],
+    "trade_authority": {
+     "rule": "QORTUBA-FLOOR-TREATMENT@v2",
+     "authority": "PROJECT_OWNER_RULE (owner rule store, rank 2)",
+     "refs": [
+      "research/qs_wall_treatment_01/pa08/qortuba/boq/owner_rules.py: US-01 WET_SERVICE_ROOM_CERAMIC",
+      "research/qs_wall_treatment_01/pa08/qortuba/boq/owner_rules.py: QP-07 QORTUBA_CERAMIC_SERVICE_ROOMS = BATH x3 + PAINTRY",
+      "research/qs_wall_treatment_01/pa08/qortuba/boq/owner_rules.py: QP-14 QORTUBA_DRY_FLOOR_FINISH = PORCELAIN",
+      "QORTUBA-SPACE-CLASS@v1"
+     ],
+     "row_treatment": "CERAMIC_WET_FLOOR",
+     "semantic_class_rule": "QORTUBA-SPACE-CLASS@v1"
+    },
+    "footprint_authority": {
+     "treatment": null,
+     "policy": null
+    },
+    "implicit_object_footprints": {},
+    "zone_decisions": {
+     "SITE-1c4abf65f9b5db1e": {
+      "rule": "QORTUBA-FLOOR-TREATMENT@v2",
+      "trade": "FLOOR_FINISH",
+      "authority": "PROJECT_OWNER_RULE (owner rule store, rank 2)",
+      "treatments": {
+       "BATH": "CERAMIC_WET_FLOOR"
+      },
+      "unresolved_texts": [],
+      "authored_trade_boundary": false,
+      "state": "SINGLE_SEMANTIC_ZONE",
+      "why": "one semantic zone",
+      "space_classes": {
+       "BATH": "WET_ROOM"
+      },
+      "object_materiality": null,
+      "exclusion_groups": []
+     },
+     "SITE-a2b19efc492a6d0b": {
+      "rule": "QORTUBA-FLOOR-TREATMENT@v2",
+      "trade": "FLOOR_FINISH",
+      "authority": "PROJECT_OWNER_RULE (owner rule store, rank 2)",
+      "treatments": {
+       "BATH": "CERAMIC_WET_FLOOR"
+      },
+      "unresolved_texts": [],
+      "authored_trade_boundary": false,
+      "state": "SINGLE_SEMANTIC_ZONE",
+      "why": "one semantic zone",
+      "space_classes": {
+       "BATH": "WET_ROOM"
+      },
+      "object_materiality": null,
+      "exclusion_groups": []
+     },
+     "SITE-fe8ed5548fb4310e": {
+      "rule": "QORTUBA-FLOOR-TREATMENT@v2",
+      "trade": "FLOOR_FINISH",
+      "authority": "PROJECT_OWNER_RULE (owner rule store, rank 2)",
+      "treatments": {
+       "BATH": "CERAMIC_WET_FLOOR"
+      },
+      "unresolved_texts": [],
+      "authored_trade_boundary": false,
+      "state": "SINGLE_SEMANTIC_ZONE",
+      "why": "one semantic zone",
+      "space_classes": {
+       "BATH": "WET_ROOM"
+      },
+      "object_materiality": null,
+      "exclusion_groups": []
+     }
+    },
+    "semantic_zone_ids": [
+     "ZONE-521333605fee9dad",
+     "ZONE-d17d13a2a93ca96f",
+     "ZONE-e02fda0197f6650f"
+    ],
+    "wall_bands": [
+     "WB-298800ce16db4b79",
+     "WB-3f0c2b19ab151915",
+     "WB-7d515124fe87e3a5",
+     "WB-b0e2774b18433212",
+     "WB-cb65fe1a8f201b2f",
+     "WB-efec5c14f5c79ab7"
+    ],
+    "topology_closures_applied": [],
+    "opening_closures": [
+     "CLOSURE|I1443|A",
+     "CLOSURE|I1561|A",
+     "CLOSURE|I2044|A"
+    ],
+    "threshold_sites": [
+     {
+      "threshold": "THRESHOLD-cf12fcdfd3e6a4a6",
+      "site": "SITE-1cc94d2ca98f6229",
+      "opening": "I2044",
+      "area_m2": 0.12,
+      "sides": [
+       "SITE-6d1ce80253b53f83",
+       "SITE-a2b19efc492a6d0b"
+      ],
+      "allocation": "TRADE_RULE_REQUIRED"
+     },
+     {
+      "threshold": "THRESHOLD-28f50f8dc18c1e90",
+      "site": "SITE-5b8e4f9259cdb19c",
+      "opening": "I1561",
+      "area_m2": 0.12,
+      "sides": [
+       "SITE-6d1ce80253b53f83",
+       "SITE-fe8ed5548fb4310e"
+      ],
+      "allocation": "TRADE_RULE_REQUIRED"
+     },
+     {
+      "threshold": "THRESHOLD-f9846605acbce828",
+      "site": "SITE-e639327cc873867d",
+      "opening": "I1443",
+      "area_m2": 0.12,
+      "sides": [
+       "SITE-1c4abf65f9b5db1e",
+       "SITE-a6405850100155ac"
+      ],
+      "allocation": "TRADE_RULE_REQUIRED"
+     }
+    ],
+    "open_passage_sites": [],
+    "claims_applied": [
+     "QORTUBA-NEW-DIM-LINES-7116-7119-ARE-WALLS-OWNER-001@v1"
+    ],
+    "source_anchor": {
+     "revision": "QORTUBA_REV_NEW",
+     "dxf_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+     "dwg_identity": "NOT_ESTABLISHED"
+    },
+    "run_id": "RUN-645dff01bd022185",
+    "run_input_digest": "645dff01bd02218557203c6e1d5d5d999e1b3ca7abdc091e0b4a36bf0bf1ec68",
+    "release_blockers": [
+     "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+    ],
+    "row_input_digest": "ce3b62619aba505b382f56295390dcd27f446c3b0ecf717bea590649d207bd8e",
+    "row_input_digest_covers": [
+     "footprint_policies",
+     "row",
+     "row_claims",
+     "run_input_digest",
+     "space_classes",
+     "trade_rule"
+    ]
+   },
+   "Q-12": {
+    "state": "COMPUTED_SHADOW",
+    "value": 11.685,
+    "physical_site_ids": [
+     "SITE-8c1c7563d5252c50"
+    ],
+    "sites_used": [
+     {
+      "site": "SITE-8c1c7563d5252c50",
+      "zones": [
+       "PAINTRY"
+      ],
+      "area_m2": 11.685,
+      "decision": "SINGLE_SEMANTIC_ZONE"
+     }
+    ],
+    "blockers": [],
+    "blocker_classes": [],
+    "trade_authority": {
+     "rule": "QORTUBA-FLOOR-TREATMENT@v2",
+     "authority": "PROJECT_OWNER_RULE (owner rule store, rank 2)",
+     "refs": [
+      "research/qs_wall_treatment_01/pa08/qortuba/boq/owner_rules.py: US-01 WET_SERVICE_ROOM_CERAMIC",
+      "research/qs_wall_treatment_01/pa08/qortuba/boq/owner_rules.py: QP-07 QORTUBA_CERAMIC_SERVICE_ROOMS = BATH x3 + PAINTRY",
+      "research/qs_wall_treatment_01/pa08/qortuba/boq/owner_rules.py: QP-14 QORTUBA_DRY_FLOOR_FINISH = PORCELAIN",
+      "QORTUBA-SPACE-CLASS@v1"
+     ],
+     "row_treatment": "CERAMIC_SERVICE_FLOOR",
+     "semantic_class_rule": "QORTUBA-SPACE-CLASS@v1"
+    },
+    "footprint_authority": {
+     "treatment": null,
+     "policy": null
+    },
+    "implicit_object_footprints": {
+     "SITE-8c1c7563d5252c50": {
+      "SANITARY_FIXTURE": 5
+     }
+    },
+    "zone_decisions": {
+     "SITE-8c1c7563d5252c50": {
+      "rule": "QORTUBA-FLOOR-TREATMENT@v2",
+      "trade": "FLOOR_FINISH",
+      "authority": "PROJECT_OWNER_RULE (owner rule store, rank 2)",
+      "treatments": {
+       "PAINTRY": "CERAMIC_SERVICE_FLOOR"
+      },
+      "unresolved_texts": [],
+      "authored_trade_boundary": false,
+      "state": "SINGLE_SEMANTIC_ZONE",
+      "why": "one semantic zone",
+      "space_classes": {
+       "PAINTRY": "SERVICE_ROOM"
+      },
+      "object_materiality": null,
+      "exclusion_groups": []
+     }
+    },
+    "semantic_zone_ids": [
+     "ZONE-3db6e83acfb43dc3"
+    ],
+    "wall_bands": [
+     "WB-8645c0f3b6a8e8ba",
+     "WB-a0f614bd5f5a02d4",
+     "WB-cb65fe1a8f201b2f"
+    ],
+    "topology_closures_applied": [],
+    "opening_closures": [
+     "CLOSURE|GLAZED|QORTUBA_REV_NEW|H533||SEGMENT|0|F1",
+     "CLOSURE|GLAZED|QORTUBA_REV_NEW|H542||SEGMENT|0|F2"
+    ],
+    "threshold_sites": [],
+    "open_passage_sites": [],
+    "claims_applied": [],
+    "source_anchor": {
+     "revision": "QORTUBA_REV_NEW",
+     "dxf_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+     "dwg_identity": "NOT_ESTABLISHED"
+    },
+    "run_id": "RUN-645dff01bd022185",
+    "run_input_digest": "645dff01bd02218557203c6e1d5d5d999e1b3ca7abdc091e0b4a36bf0bf1ec68",
+    "release_blockers": [
+     "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+     "OBJECT_FOOTPRINT_IMPLICIT: proven furniture / fixture footprints are inside the measured floor by the topology convention, not by a FLOOR_FINISH footprint authority",
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+    ],
+    "row_input_digest": "c34ba43c86477d96d397ab8a47fb63a8b7f2a14049f7ddd5d1448546b9463382",
+    "row_input_digest_covers": [
+     "footprint_policies",
+     "row",
+     "row_claims",
+     "run_input_digest",
+     "space_classes",
+     "trade_rule"
+    ]
+   },
+   "Q-13": {
+    "state": "BLOCKED_MULTIPLE: BLOCKED_ROLE, BLOCKED_TRADE_RULE",
+    "value": null,
+    "physical_site_ids": [
+     "SITE-5f1762f1a93b91ca",
+     "SITE-6d1ce80253b53f83",
+     "SITE-a6405850100155ac",
+     "SITE-daca396d6d730e60"
+    ],
+    "sites_used": [
+     {
+      "site": "SITE-5f1762f1a93b91ca",
+      "zones": [
+       "BED.ROOM"
+      ],
+      "area_m2": 19.2725,
+      "decision": "SINGLE_SEMANTIC_ZONE"
+     },
+     {
+      "site": "SITE-daca396d6d730e60",
+      "zones": [
+       "BED.ROOM"
+      ],
+      "area_m2": 16.327,
+      "decision": "SINGLE_SEMANTIC_ZONE"
+     }
+    ],
+    "blockers": [
+     {
+      "site": "SITE-6d1ce80253b53f83",
+      "zones": [
+       "HALL",
+       "whgm"
+      ],
+      "area_m2": 43.180638,
+      "blockers": [
+       {
+        "class": "TRADE_RULE",
+        "issue": "OBJECT_FOOTPRINT_POLICY_UNRESOLVED",
+        "detail": {
+         "source": "1663",
+         "roles": [
+          "FURNITURE"
+         ],
+         "pockets_m2": [
+          2.3914
+         ]
+        }
+       },
+       {
+        "class": "ROLE_AUTHORITY",
+        "issue": "ROLE_CONFLICT_SEPARATOR",
+        "detail": {
+         "source": "2430",
+         "roles": [
+          "DIMENSION_GRAPHICS"
+         ],
+         "pockets_m2": [
+          0.3813
+         ],
+         "why": "a line closing a wall core / a possible partition: material to every area trade whatever the footprint policy"
+        }
+       },
+       {
+        "class": "ROLE_AUTHORITY",
+        "issue": "TOPOLOGY_ROLE_UNRESOLVED",
+        "detail": [
+         "612083",
+         "612083",
+         "612083",
+         "612084",
+         "612084",
+         "612084",
+         "612085",
+         "612085",
+         "612085",
+         "612086",
+         "612086",
+         "612086"
+        ]
+       },
+       {
+        "class": "TRADE_RULE",
+        "issue": "OBJECT_FOOTPRINT_POLICY_UNRESOLVED",
+        "detail": "QORTUBA-FLOOR-TREATMENT: FLOOR_FINISH"
+       }
+      ]
+     },
+     {
+      "site": "SITE-a6405850100155ac",
+      "zones": [
+       "DRESS",
+       "M.B.ROOM"
+      ],
+      "area_m2": 33.2,
+      "blockers": [
+       {
+        "class": "ROLE_AUTHORITY",
+        "issue": "TOPOLOGY_ROLE_UNRESOLVED",
+        "detail": [
+         "1445",
+         "1446",
+         "1669",
+         "1670",
+         "514",
+         "517"
+        ]
+       },
+       {
+        "class": "TRADE_RULE",
+        "issue": "OBJECT_FOOTPRINT_POLICY_UNRESOLVED",
+        "detail": "QORTUBA-FLOOR-TREATMENT: FLOOR_FINISH"
+       }
+      ]
+     }
+    ],
+    "blocker_classes": [
+     "ROLE_AUTHORITY",
+     "TRADE_RULE"
+    ],
+    "trade_authority": {
+     "rule": "QORTUBA-FLOOR-TREATMENT@v2",
+     "authority": "PROJECT_OWNER_RULE (owner rule store, rank 2)",
+     "refs": [
+      "research/qs_wall_treatment_01/pa08/qortuba/boq/owner_rules.py: US-01 WET_SERVICE_ROOM_CERAMIC",
+      "research/qs_wall_treatment_01/pa08/qortuba/boq/owner_rules.py: QP-07 QORTUBA_CERAMIC_SERVICE_ROOMS = BATH x3 + PAINTRY",
+      "research/qs_wall_treatment_01/pa08/qortuba/boq/owner_rules.py: QP-14 QORTUBA_DRY_FLOOR_FINISH = PORCELAIN",
+      "QORTUBA-SPACE-CLASS@v1"
+     ],
+     "row_treatment": "PORCELAIN_DRY_FLOOR",
+     "semantic_class_rule": "QORTUBA-SPACE-CLASS@v1"
+    },
+    "footprint_authority": {
+     "treatment": null,
+     "policy": null
+    },
+    "implicit_object_footprints": {
+     "SITE-6d1ce80253b53f83": {
+      "FURNITURE": 74
+     },
+     "SITE-a6405850100155ac": {
+      "FURNITURE": 170
+     }
+    },
+    "zone_decisions": {
+     "SITE-5f1762f1a93b91ca": {
+      "rule": "QORTUBA-FLOOR-TREATMENT@v2",
+      "trade": "FLOOR_FINISH",
+      "authority": "PROJECT_OWNER_RULE (owner rule store, rank 2)",
+      "treatments": {
+       "BED.ROOM": "PORCELAIN_DRY_FLOOR"
+      },
+      "unresolved_texts": [],
+      "authored_trade_boundary": false,
+      "state": "SINGLE_SEMANTIC_ZONE",
+      "why": "one semantic zone",
+      "space_classes": {
+       "BED.ROOM": "DRY_INTERNAL_ROOM"
+      },
+      "object_materiality": null,
+      "exclusion_groups": []
+     },
+     "SITE-6d1ce80253b53f83": {
+      "rule": "QORTUBA-FLOOR-TREATMENT@v2",
+      "trade": "FLOOR_FINISH",
+      "authority": "PROJECT_OWNER_RULE (owner rule store, rank 2)",
+      "treatments": {
+       "HALL": "PORCELAIN_DRY_FLOOR",
+       "whgm": "PORCELAIN_DRY_FLOOR"
+      },
+      "unresolved_texts": [],
+      "authored_trade_boundary": false,
+      "state": "SEMANTIC_SUBDIVISION_NOT_REQUIRED_FOR_TRADE",
+      "why": "every established label has the same treatment for this trade",
+      "space_classes": {
+       "HALL": "DRY_INTERNAL_ROOM",
+       "whgm": "DRY_INTERNAL_ROOM"
+      },
+      "object_materiality": {
+       "state": "ROLE_MATERIAL_TO_TRADE",
+       "sources": [
+        "QORTUBA_REV_NEW|H612083|700047|ARC|0",
+        "QORTUBA_REV_NEW|H612083|700051|ARC|0",
+        "QORTUBA_REV_NEW|H612083|700052|ARC|0",
+        "QORTUBA_REV_NEW|H612084|700047|ARC|0",
+        "QORTUBA_REV_NEW|H612084|700051|ARC|0",
+        "QORTUBA_REV_NEW|H612084|700052|ARC|0",
+        "QORTUBA_REV_NEW|H612085|700047|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612085|700051|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612085|700052|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612086|700047|ARC|0",
+        "QORTUBA_REV_NEW|H612086|700051|ARC|0",
+        "QORTUBA_REV_NEW|H612086|700052|ARC|0",
+        "QORTUBA_REV_NEW|H612087|700047|ARC|0",
+        "QORTUBA_REV_NEW|H612087|700051|ARC|0",
+        "QORTUBA_REV_NEW|H612087|700052|ARC|0",
+        "QORTUBA_REV_NEW|H612088|700047|ARC|0",
+        "QORTUBA_REV_NEW|H612088|700051|ARC|0",
+        "QORTUBA_REV_NEW|H612088|700052|ARC|0",
+        "QORTUBA_REV_NEW|H612089|700047|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612089|700051|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612089|700052|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612090|700047|ARC|0",
+        "QORTUBA_REV_NEW|H612090|700051|ARC|0",
+        "QORTUBA_REV_NEW|H612090|700052|ARC|0",
+        "QORTUBA_REV_NEW|H612091|700047|ARC|0",
+        "QORTUBA_REV_NEW|H612091|700051|ARC|0",
+        "QORTUBA_REV_NEW|H612091|700052|ARC|0",
+        "QORTUBA_REV_NEW|H612092|700047|ARC|0",
+        "QORTUBA_REV_NEW|H612092|700051|ARC|0",
+        "QORTUBA_REV_NEW|H612092|700052|ARC|0",
+        "QORTUBA_REV_NEW|H612093|700047|ARC|0",
+        "QORTUBA_REV_NEW|H612093|700051|ARC|0",
+        "QORTUBA_REV_NEW|H612093|700052|ARC|0",
+        "QORTUBA_REV_NEW|H612094|700047|ARC|0",
+        "QORTUBA_REV_NEW|H612094|700051|ARC|0",
+        "QORTUBA_REV_NEW|H612094|700052|ARC|0",
+        "QORTUBA_REV_NEW|H612095|700047|ARC|0",
+        "QORTUBA_REV_NEW|H612095|700051|ARC|0",
+        "QORTUBA_REV_NEW|H612095|700052|ARC|0",
+        "QORTUBA_REV_NEW|H612096|700047|ARC|0",
+        "QORTUBA_REV_NEW|H612096|700051|ARC|0",
+        "QORTUBA_REV_NEW|H612096|700052|ARC|0",
+        "QORTUBA_REV_NEW|H612097|700047|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612097|700051|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612097|700052|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612098|700047|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612098|700051|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612098|700052|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612099|700047|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612099|700051|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612099|700052|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612100|700047|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612100|700051|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612100|700052|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612101|700047|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612101|700051|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612101|700052|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612102|700047|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612102|700051|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612102|700052|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612103|700047|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612103|700051|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612103|700052|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612104|700047|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612104|700051|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612104|700052|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612105|700047|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612105|700051|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612105|700052|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612106|700047|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612106|700051|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612106|700052|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612107|700047|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612107|700051|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612107|700052|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612108|700047|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612108|700051|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612108|700052|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612109|700047|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612109|700051|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612109|700052|SEGMENT|0"
+       ],
+       "why": "QORTUBA-FLOOR-TREATMENT: no authority says how this trade treats an object footprint; the object's role could change the region (e.g. a fixed obstacle vs loose furniture)"
+      },
+      "exclusion_groups": [
+       {
+        "source": "1663",
+        "roles": [
+         "FURNITURE"
+        ],
+        "origins": [
+         "GR-09"
+        ],
+        "object_class": "ANY_NON_PARTITION_OBJECT",
+        "effect": "CHANGES_AREA",
+        "pockets_m2": [
+         2.3914
+        ],
+        "materiality_FLOOR_FINISH": {
+         "state": "ROLE_MATERIAL_TO_TRADE",
+         "why": "QORTUBA-FLOOR-TREATMENT: no authority says how FLOOR_FINISH treats this object's footprint"
+        }
+       },
+       {
+        "source": "2430",
+        "roles": [
+         "DIMENSION_GRAPHICS"
+        ],
+        "origins": [
+         "GR-13"
+        ],
+        "object_class": "PARTITION_OR_WALL_END_CANDIDATE",
+        "effect": "CHANGES_AREA",
+        "pockets_m2": [
+         0.3813
+        ],
+        "materiality_FLOOR_FINISH": {
+         "state": "ROLE_MATERIAL_TO_TRADE",
+         "why": "a line closing a wall core / a possible partition: material to every area trade whatever the footprint policy"
+        }
+       }
+      ]
+     },
+     "SITE-a6405850100155ac": {
+      "rule": "QORTUBA-FLOOR-TREATMENT@v2",
+      "trade": "FLOOR_FINISH",
+      "authority": "PROJECT_OWNER_RULE (owner rule store, rank 2)",
+      "treatments": {
+       "DRESS": "PORCELAIN_DRY_FLOOR",
+       "M.B.ROOM": "PORCELAIN_DRY_FLOOR"
+      },
+      "unresolved_texts": [],
+      "authored_trade_boundary": false,
+      "state": "SEMANTIC_SUBDIVISION_NOT_REQUIRED_FOR_TRADE",
+      "why": "every established label has the same treatment for this trade",
+      "space_classes": {
+       "DRESS": "DRY_INTERNAL_ROOM",
+       "M.B.ROOM": "DRY_INTERNAL_ROOM"
+      },
+      "object_materiality": {
+       "state": "ROLE_MATERIAL_TO_TRADE",
+       "sources": [
+        "QORTUBA_REV_NEW|H1445||SEGMENT|0",
+        "QORTUBA_REV_NEW|H1446||SEGMENT|0",
+        "QORTUBA_REV_NEW|H1669||SEGMENT|0",
+        "QORTUBA_REV_NEW|H1670||SEGMENT|0",
+        "QORTUBA_REV_NEW|H514||SEGMENT|0",
+        "QORTUBA_REV_NEW|H517||SEGMENT|0"
+       ],
+       "why": "QORTUBA-FLOOR-TREATMENT: no authority says how this trade treats an object footprint; the object's role could change the region (e.g. a fixed obstacle vs loose furniture)"
+      },
+      "exclusion_groups": []
+     },
+     "SITE-daca396d6d730e60": {
+      "rule": "QORTUBA-FLOOR-TREATMENT@v2",
+      "trade": "FLOOR_FINISH",
+      "authority": "PROJECT_OWNER_RULE (owner rule store, rank 2)",
+      "treatments": {
+       "BED.ROOM": "PORCELAIN_DRY_FLOOR"
+      },
+      "unresolved_texts": [],
+      "authored_trade_boundary": false,
+      "state": "SINGLE_SEMANTIC_ZONE",
+      "why": "one semantic zone",
+      "space_classes": {
+       "BED.ROOM": "DRY_INTERNAL_ROOM"
+      },
+      "object_materiality": null,
+      "exclusion_groups": []
+     }
+    },
+    "semantic_zone_ids": [
+     "ZONE-24e9a910c13d2443",
+     "ZONE-48c157a56848b72f",
+     "ZONE-5de66c292116717c",
+     "ZONE-9a374fd0e98bd89b",
+     "ZONE-ab1fa8d63631d70a"
+    ],
+    "wall_bands": [
+     "WB-03e3abac62c69e25",
+     "WB-104bcfdbc4fad197",
+     "WB-25b061fabe95986e",
+     "WB-298800ce16db4b79",
+     "WB-3f0c2b19ab151915",
+     "WB-55c29f71d76c8db7",
+     "WB-7a6402794280e0e9",
+     "WB-82fa01a38ddcb8ec",
+     "WB-8645c0f3b6a8e8ba",
+     "WB-908be65a229afc8d",
+     "WB-a0f614bd5f5a02d4",
+     "WB-a2df6911004beaa3",
+     "WB-b0e2774b18433212",
+     "WB-b1fe3d69cf126ddb",
+     "WB-d5c66eb15b9d1d88",
+     "WB-fa3143c0ea1ff5a1"
+    ],
+    "topology_closures_applied": [
+     "TC-aea10821cffe20ff"
+    ],
+    "opening_closures": [
+     "CLOSURE|GLAZED|QORTUBA_REV_NEW|H533||SEGMENT|0|F2",
+     "CLOSURE|GLAZED|QORTUBA_REV_NEW|H542||SEGMENT|0|F1",
+     "CLOSURE|I1443|B",
+     "CLOSURE|I1471|A",
+     "CLOSURE|I1561|B",
+     "CLOSURE|I1988|A",
+     "CLOSURE|I1988|B",
+     "CLOSURE|I2044|B",
+     "CLOSURE|I677|A",
+     "CLOSURE|I841|A",
+     "CLOSURE|I841|B"
+    ],
+    "threshold_sites": [
+     {
+      "threshold": "THRESHOLD-cf12fcdfd3e6a4a6",
+      "site": "SITE-1cc94d2ca98f6229",
+      "opening": "I2044",
+      "area_m2": 0.12,
+      "sides": [
+       "SITE-6d1ce80253b53f83",
+       "SITE-a2b19efc492a6d0b"
+      ],
+      "allocation": "TRADE_RULE_REQUIRED"
+     },
+     {
+      "threshold": "THRESHOLD-bfcea08375237224",
+      "site": "SITE-2bf3db64b092ac64",
+      "opening": "I677",
+      "area_m2": 0.15,
+      "sides": [
+       "SITE-6d1ce80253b53f83",
+       "SITE-788f30878ba9d2b3"
+      ],
+      "allocation": "TRADE_RULE_REQUIRED"
+     },
+     {
+      "threshold": "THRESHOLD-28f50f8dc18c1e90",
+      "site": "SITE-5b8e4f9259cdb19c",
+      "opening": "I1561",
+      "area_m2": 0.12,
+      "sides": [
+       "SITE-6d1ce80253b53f83",
+       "SITE-fe8ed5548fb4310e"
+      ],
+      "allocation": "TRADE_RULE_REQUIRED"
+     },
+     {
+      "threshold": "THRESHOLD-c82365dd41b94abe",
+      "site": "SITE-9f4d8d389cb86869",
+      "opening": "I1988",
+      "area_m2": 0.15,
+      "sides": [
+       "SITE-6d1ce80253b53f83",
+       "SITE-daca396d6d730e60"
+      ],
+      "allocation": "TRADE_RULE_REQUIRED"
+     },
+     {
+      "threshold": "THRESHOLD-04910e5deeeed2fc",
+      "site": "SITE-bd2b680527d056fa",
+      "opening": "I841",
+      "area_m2": 0.15,
+      "sides": [
+       "SITE-5f1762f1a93b91ca",
+       "SITE-6d1ce80253b53f83"
+      ],
+      "allocation": "TRADE_RULE_REQUIRED"
+     },
+     {
+      "threshold": "THRESHOLD-f9846605acbce828",
+      "site": "SITE-e639327cc873867d",
+      "opening": "I1443",
+      "area_m2": 0.12,
+      "sides": [
+       "SITE-1c4abf65f9b5db1e",
+       "SITE-a6405850100155ac"
+      ],
+      "allocation": "TRADE_RULE_REQUIRED"
+     }
+    ],
+    "open_passage_sites": [
+     {
+      "passage": "OP-358c62a203fd6982",
+      "width_mm": 1200.0,
+      "area_m2": 0.18,
+      "allocation": "NOT_ALLOCATED"
+     },
+     {
+      "passage": "OP-6983f5ce59b5a92c",
+      "width_mm": 3450.0,
+      "area_m2": 0.69,
+      "allocation": "NOT_ALLOCATED"
+     },
+     {
+      "passage": "OP-7839dee3d54915dd",
+      "width_mm": 850.0,
+      "area_m2": 0.17,
+      "allocation": "NOT_ALLOCATED"
+     }
+    ],
+    "claims_applied": [
+     "QORTUBA-NEW-DIM-LINES-7116-7119-ARE-WALLS-OWNER-001@v1"
+    ],
+    "source_anchor": {
+     "revision": "QORTUBA_REV_NEW",
+     "dxf_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+     "dwg_identity": "NOT_ESTABLISHED"
+    },
+    "run_id": "RUN-645dff01bd022185",
+    "run_input_digest": "645dff01bd02218557203c6e1d5d5d999e1b3ca7abdc091e0b4a36bf0bf1ec68",
+    "release_blockers": [
+     "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+     "OBJECT_FOOTPRINT_IMPLICIT: proven furniture / fixture footprints are inside the measured floor by the topology convention, not by a FLOOR_FINISH footprint authority",
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+    ],
+    "row_input_digest": "bd165f4dc071e6630d56963a6503ec6bdcd113021bda8fb6f4e4e665b2081593",
+    "row_input_digest_covers": [
+     "footprint_policies",
+     "row",
+     "row_claims",
+     "run_input_digest",
+     "space_classes",
+     "trade_rule"
+    ]
+   },
+   "Q-14": {
+    "state": "BLOCKED_ROLE",
+    "value": null,
+    "physical_site_ids": [
+     "SITE-1c4abf65f9b5db1e",
+     "SITE-5f1762f1a93b91ca",
+     "SITE-6d1ce80253b53f83",
+     "SITE-8c1c7563d5252c50",
+     "SITE-a2b19efc492a6d0b",
+     "SITE-a6405850100155ac",
+     "SITE-daca396d6d730e60",
+     "SITE-fe8ed5548fb4310e"
+    ],
+    "sites_used": [
+     {
+      "site": "SITE-1c4abf65f9b5db1e",
+      "zones": [
+       "BATH"
+      ],
+      "area_m2": 8.5525,
+      "decision": "SINGLE_SEMANTIC_ZONE"
+     },
+     {
+      "site": "SITE-5f1762f1a93b91ca",
+      "zones": [
+       "BED.ROOM"
+      ],
+      "area_m2": 19.2725,
+      "decision": "SINGLE_SEMANTIC_ZONE"
+     },
+     {
+      "site": "SITE-8c1c7563d5252c50",
+      "zones": [
+       "PAINTRY"
+      ],
+      "area_m2": 11.685,
+      "decision": "SINGLE_SEMANTIC_ZONE"
+     },
+     {
+      "site": "SITE-a2b19efc492a6d0b",
+      "zones": [
+       "BATH"
+      ],
+      "area_m2": 5.1,
+      "decision": "SINGLE_SEMANTIC_ZONE"
+     },
+     {
+      "site": "SITE-a6405850100155ac",
+      "zones": [
+       "DRESS",
+       "M.B.ROOM"
+      ],
+      "area_m2": 33.2,
+      "decision": "SEMANTIC_SUBDIVISION_NOT_REQUIRED_FOR_TRADE"
+     },
+     {
+      "site": "SITE-daca396d6d730e60",
+      "zones": [
+       "BED.ROOM"
+      ],
+      "area_m2": 16.327,
+      "decision": "SINGLE_SEMANTIC_ZONE"
+     },
+     {
+      "site": "SITE-fe8ed5548fb4310e",
+      "zones": [
+       "BATH"
+      ],
+      "area_m2": 4.09,
+      "decision": "SINGLE_SEMANTIC_ZONE"
+     }
+    ],
+    "blockers": [
+     {
+      "site": "SITE-6d1ce80253b53f83",
+      "zones": [
+       "HALL",
+       "whgm"
+      ],
+      "area_m2": 43.180638,
+      "blockers": [
+       {
+        "class": "ROLE_AUTHORITY",
+        "issue": "ROLE_CONFLICT_SEPARATOR",
+        "detail": {
+         "source": "2430",
+         "roles": [
+          "DIMENSION_GRAPHICS"
+         ],
+         "pockets_m2": [
+          0.3813
+         ],
+         "why": "a line closing a wall core / a possible partition: material to every area trade whatever the footprint policy"
+        }
+       }
+      ]
+     }
+    ],
+    "blocker_classes": [
+     "ROLE_AUTHORITY"
+    ],
+    "trade_authority": {
+     "rule": "QORTUBA-Q14-CEILING-TREATMENT@v1",
+     "authority": "OWNER_CLAIM",
+     "refs": [
+      "QORTUBA-Q14-CEILING-FOOTPRINT-OWNER-001"
+     ],
+     "row_treatment": "CEILING_BY_AREA",
+     "semantic_class_rule": null
+    },
+    "footprint_authority": {
+     "treatment": "FOOTPRINT_INCLUDED",
+     "policy": "QORTUBA-CEILING-OBJECT-FOOTPRINT@v1"
+    },
+    "implicit_object_footprints": {
+     "SITE-6d1ce80253b53f83": {
+      "FURNITURE": 74
+     },
+     "SITE-8c1c7563d5252c50": {
+      "SANITARY_FIXTURE": 5
+     },
+     "SITE-a6405850100155ac": {
+      "FURNITURE": 170
+     }
+    },
+    "zone_decisions": {
+     "SITE-1c4abf65f9b5db1e": {
+      "rule": "QORTUBA-Q14-CEILING-TREATMENT@v1",
+      "trade": "CEILING",
+      "authority": "OWNER_CLAIM",
+      "treatments": {
+       "BATH": "CEILING_BY_AREA"
+      },
+      "unresolved_texts": [],
+      "authored_trade_boundary": false,
+      "state": "SINGLE_SEMANTIC_ZONE",
+      "why": "one semantic zone",
+      "space_classes": null,
+      "object_materiality": null,
+      "exclusion_groups": []
+     },
+     "SITE-5f1762f1a93b91ca": {
+      "rule": "QORTUBA-Q14-CEILING-TREATMENT@v1",
+      "trade": "CEILING",
+      "authority": "OWNER_CLAIM",
+      "treatments": {
+       "BED.ROOM": "CEILING_BY_AREA"
+      },
+      "unresolved_texts": [],
+      "authored_trade_boundary": false,
+      "state": "SINGLE_SEMANTIC_ZONE",
+      "why": "one semantic zone",
+      "space_classes": null,
+      "object_materiality": null,
+      "exclusion_groups": []
+     },
+     "SITE-6d1ce80253b53f83": {
+      "rule": "QORTUBA-Q14-CEILING-TREATMENT@v1",
+      "trade": "CEILING",
+      "authority": "OWNER_CLAIM",
+      "treatments": {
+       "HALL": "CEILING_BY_AREA",
+       "whgm": "CEILING_BY_AREA"
+      },
+      "unresolved_texts": [],
+      "authored_trade_boundary": false,
+      "state": "SEMANTIC_SUBDIVISION_NOT_REQUIRED_FOR_TRADE",
+      "why": "every established label has the same treatment for this trade",
+      "space_classes": null,
+      "object_materiality": {
+       "state": "ROLE_UNRESOLVED_BUT_NON_MATERIAL_TO_TRADE",
+       "sources": [
+        "QORTUBA_REV_NEW|H612083|700047|ARC|0",
+        "QORTUBA_REV_NEW|H612083|700051|ARC|0",
+        "QORTUBA_REV_NEW|H612083|700052|ARC|0",
+        "QORTUBA_REV_NEW|H612084|700047|ARC|0",
+        "QORTUBA_REV_NEW|H612084|700051|ARC|0",
+        "QORTUBA_REV_NEW|H612084|700052|ARC|0",
+        "QORTUBA_REV_NEW|H612085|700047|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612085|700051|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612085|700052|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612086|700047|ARC|0",
+        "QORTUBA_REV_NEW|H612086|700051|ARC|0",
+        "QORTUBA_REV_NEW|H612086|700052|ARC|0",
+        "QORTUBA_REV_NEW|H612087|700047|ARC|0",
+        "QORTUBA_REV_NEW|H612087|700051|ARC|0",
+        "QORTUBA_REV_NEW|H612087|700052|ARC|0",
+        "QORTUBA_REV_NEW|H612088|700047|ARC|0",
+        "QORTUBA_REV_NEW|H612088|700051|ARC|0",
+        "QORTUBA_REV_NEW|H612088|700052|ARC|0",
+        "QORTUBA_REV_NEW|H612089|700047|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612089|700051|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612089|700052|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612090|700047|ARC|0",
+        "QORTUBA_REV_NEW|H612090|700051|ARC|0",
+        "QORTUBA_REV_NEW|H612090|700052|ARC|0",
+        "QORTUBA_REV_NEW|H612091|700047|ARC|0",
+        "QORTUBA_REV_NEW|H612091|700051|ARC|0",
+        "QORTUBA_REV_NEW|H612091|700052|ARC|0",
+        "QORTUBA_REV_NEW|H612092|700047|ARC|0",
+        "QORTUBA_REV_NEW|H612092|700051|ARC|0",
+        "QORTUBA_REV_NEW|H612092|700052|ARC|0",
+        "QORTUBA_REV_NEW|H612093|700047|ARC|0",
+        "QORTUBA_REV_NEW|H612093|700051|ARC|0",
+        "QORTUBA_REV_NEW|H612093|700052|ARC|0",
+        "QORTUBA_REV_NEW|H612094|700047|ARC|0",
+        "QORTUBA_REV_NEW|H612094|700051|ARC|0",
+        "QORTUBA_REV_NEW|H612094|700052|ARC|0",
+        "QORTUBA_REV_NEW|H612095|700047|ARC|0",
+        "QORTUBA_REV_NEW|H612095|700051|ARC|0",
+        "QORTUBA_REV_NEW|H612095|700052|ARC|0",
+        "QORTUBA_REV_NEW|H612096|700047|ARC|0",
+        "QORTUBA_REV_NEW|H612096|700051|ARC|0",
+        "QORTUBA_REV_NEW|H612096|700052|ARC|0",
+        "QORTUBA_REV_NEW|H612097|700047|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612097|700051|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612097|700052|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612098|700047|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612098|700051|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612098|700052|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612099|700047|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612099|700051|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612099|700052|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612100|700047|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612100|700051|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612100|700052|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612101|700047|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612101|700051|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612101|700052|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612102|700047|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612102|700051|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612102|700052|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612103|700047|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612103|700051|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612103|700052|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612104|700047|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612104|700051|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612104|700052|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612105|700047|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612105|700051|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612105|700052|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612106|700047|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612106|700051|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612106|700052|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612107|700047|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612107|700051|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612107|700052|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612108|700047|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612108|700051|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612108|700052|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612109|700047|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612109|700051|SEGMENT|0",
+        "QORTUBA_REV_NEW|H612109|700052|SEGMENT|0"
+       ],
+       "footprint_policy": "QORTUBA-CEILING-OBJECT-FOOTPRINT@v1",
+       "why": "QORTUBA-CEILING-OBJECT-FOOTPRINT@v1: this trade includes the footprint of any non-partition object, and the consequence check proves the object cannot separate the labels (its role may stay unresolved)"
+      },
+      "exclusion_groups": [
+       {
+        "source": "1663",
+        "roles": [
+         "FURNITURE"
+        ],
+        "origins": [
+         "GR-09"
+        ],
+        "object_class": "ANY_NON_PARTITION_OBJECT",
+        "effect": "CHANGES_AREA",
+        "pockets_m2": [
+         2.3914
+        ],
+        "materiality_CEILING": {
+         "state": "ROLE_UNRESOLVED_BUT_NON_MATERIAL_TO_TRADE",
+         "why": "QORTUBA-CEILING-OBJECT-FOOTPRINT@v1: the trade includes the footprint of a non-partition object"
+        }
+       },
+       {
+        "source": "2430",
+        "roles": [
+         "DIMENSION_GRAPHICS"
+        ],
+        "origins": [
+         "GR-13"
+        ],
+        "object_class": "PARTITION_OR_WALL_END_CANDIDATE",
+        "effect": "CHANGES_AREA",
+        "pockets_m2": [
+         0.3813
+        ],
+        "materiality_CEILING": {
+         "state": "ROLE_MATERIAL_TO_TRADE",
+         "why": "a line closing a wall core / a possible partition: material to every area trade whatever the footprint policy"
+        }
+       }
+      ]
+     },
+     "SITE-8c1c7563d5252c50": {
+      "rule": "QORTUBA-Q14-CEILING-TREATMENT@v1",
+      "trade": "CEILING",
+      "authority": "OWNER_CLAIM",
+      "treatments": {
+       "PAINTRY": "CEILING_BY_AREA"
+      },
+      "unresolved_texts": [],
+      "authored_trade_boundary": false,
+      "state": "SINGLE_SEMANTIC_ZONE",
+      "why": "one semantic zone",
+      "space_classes": null,
+      "object_materiality": null,
+      "exclusion_groups": []
+     },
+     "SITE-a2b19efc492a6d0b": {
+      "rule": "QORTUBA-Q14-CEILING-TREATMENT@v1",
+      "trade": "CEILING",
+      "authority": "OWNER_CLAIM",
+      "treatments": {
+       "BATH": "CEILING_BY_AREA"
+      },
+      "unresolved_texts": [],
+      "authored_trade_boundary": false,
+      "state": "SINGLE_SEMANTIC_ZONE",
+      "why": "one semantic zone",
+      "space_classes": null,
+      "object_materiality": null,
+      "exclusion_groups": []
+     },
+     "SITE-a6405850100155ac": {
+      "rule": "QORTUBA-Q14-CEILING-TREATMENT@v1",
+      "trade": "CEILING",
+      "authority": "OWNER_CLAIM",
+      "treatments": {
+       "DRESS": "CEILING_BY_AREA",
+       "M.B.ROOM": "CEILING_BY_AREA"
+      },
+      "unresolved_texts": [],
+      "authored_trade_boundary": false,
+      "state": "SEMANTIC_SUBDIVISION_NOT_REQUIRED_FOR_TRADE",
+      "why": "every established label has the same treatment for this trade",
+      "space_classes": null,
+      "object_materiality": {
+       "state": "ROLE_UNRESOLVED_BUT_NON_MATERIAL_TO_TRADE",
+       "sources": [
+        "QORTUBA_REV_NEW|H1445||SEGMENT|0",
+        "QORTUBA_REV_NEW|H1446||SEGMENT|0",
+        "QORTUBA_REV_NEW|H1669||SEGMENT|0",
+        "QORTUBA_REV_NEW|H1670||SEGMENT|0",
+        "QORTUBA_REV_NEW|H514||SEGMENT|0",
+        "QORTUBA_REV_NEW|H517||SEGMENT|0"
+       ],
+       "footprint_policy": "QORTUBA-CEILING-OBJECT-FOOTPRINT@v1",
+       "why": "QORTUBA-CEILING-OBJECT-FOOTPRINT@v1: this trade includes the footprint of any non-partition object, and the consequence check proves the object cannot separate the labels (its role may stay unresolved)"
+      },
+      "exclusion_groups": []
+     },
+     "SITE-daca396d6d730e60": {
+      "rule": "QORTUBA-Q14-CEILING-TREATMENT@v1",
+      "trade": "CEILING",
+      "authority": "OWNER_CLAIM",
+      "treatments": {
+       "BED.ROOM": "CEILING_BY_AREA"
+      },
+      "unresolved_texts": [],
+      "authored_trade_boundary": false,
+      "state": "SINGLE_SEMANTIC_ZONE",
+      "why": "one semantic zone",
+      "space_classes": null,
+      "object_materiality": null,
+      "exclusion_groups": []
+     },
+     "SITE-fe8ed5548fb4310e": {
+      "rule": "QORTUBA-Q14-CEILING-TREATMENT@v1",
+      "trade": "CEILING",
+      "authority": "OWNER_CLAIM",
+      "treatments": {
+       "BATH": "CEILING_BY_AREA"
+      },
+      "unresolved_texts": [],
+      "authored_trade_boundary": false,
+      "state": "SINGLE_SEMANTIC_ZONE",
+      "why": "one semantic zone",
+      "space_classes": null,
+      "object_materiality": null,
+      "exclusion_groups": []
+     }
+    },
+    "semantic_zone_ids": [
+     "ZONE-24e9a910c13d2443",
+     "ZONE-3db6e83acfb43dc3",
+     "ZONE-48c157a56848b72f",
+     "ZONE-521333605fee9dad",
+     "ZONE-5de66c292116717c",
+     "ZONE-9a374fd0e98bd89b",
+     "ZONE-ab1fa8d63631d70a",
+     "ZONE-d17d13a2a93ca96f",
+     "ZONE-e02fda0197f6650f"
+    ],
+    "wall_bands": [
+     "WB-03e3abac62c69e25",
+     "WB-104bcfdbc4fad197",
+     "WB-25b061fabe95986e",
+     "WB-298800ce16db4b79",
+     "WB-3f0c2b19ab151915",
+     "WB-55c29f71d76c8db7",
+     "WB-7a6402794280e0e9",
+     "WB-7d515124fe87e3a5",
+     "WB-82fa01a38ddcb8ec",
+     "WB-8645c0f3b6a8e8ba",
+     "WB-908be65a229afc8d",
+     "WB-a0f614bd5f5a02d4",
+     "WB-a2df6911004beaa3",
+     "WB-b0e2774b18433212",
+     "WB-b1fe3d69cf126ddb",
+     "WB-cb65fe1a8f201b2f",
+     "WB-d5c66eb15b9d1d88",
+     "WB-efec5c14f5c79ab7",
+     "WB-fa3143c0ea1ff5a1"
+    ],
+    "topology_closures_applied": [
+     "TC-aea10821cffe20ff"
+    ],
+    "opening_closures": [
+     "CLOSURE|GLAZED|QORTUBA_REV_NEW|H533||SEGMENT|0|F1",
+     "CLOSURE|GLAZED|QORTUBA_REV_NEW|H533||SEGMENT|0|F2",
+     "CLOSURE|GLAZED|QORTUBA_REV_NEW|H542||SEGMENT|0|F1",
+     "CLOSURE|GLAZED|QORTUBA_REV_NEW|H542||SEGMENT|0|F2",
+     "CLOSURE|I1443|A",
+     "CLOSURE|I1443|B",
+     "CLOSURE|I1471|A",
+     "CLOSURE|I1561|A",
+     "CLOSURE|I1561|B",
+     "CLOSURE|I1988|A",
+     "CLOSURE|I1988|B",
+     "CLOSURE|I2044|A",
+     "CLOSURE|I2044|B",
+     "CLOSURE|I677|A",
+     "CLOSURE|I841|A",
+     "CLOSURE|I841|B"
+    ],
+    "threshold_sites": [
+     {
+      "threshold": "THRESHOLD-cf12fcdfd3e6a4a6",
+      "site": "SITE-1cc94d2ca98f6229",
+      "opening": "I2044",
+      "area_m2": 0.12,
+      "sides": [
+       "SITE-6d1ce80253b53f83",
+       "SITE-a2b19efc492a6d0b"
+      ],
+      "allocation": "TRADE_RULE_REQUIRED"
+     },
+     {
+      "threshold": "THRESHOLD-bfcea08375237224",
+      "site": "SITE-2bf3db64b092ac64",
+      "opening": "I677",
+      "area_m2": 0.15,
+      "sides": [
+       "SITE-6d1ce80253b53f83",
+       "SITE-788f30878ba9d2b3"
+      ],
+      "allocation": "TRADE_RULE_REQUIRED"
+     },
+     {
+      "threshold": "THRESHOLD-28f50f8dc18c1e90",
+      "site": "SITE-5b8e4f9259cdb19c",
+      "opening": "I1561",
+      "area_m2": 0.12,
+      "sides": [
+       "SITE-6d1ce80253b53f83",
+       "SITE-fe8ed5548fb4310e"
+      ],
+      "allocation": "TRADE_RULE_REQUIRED"
+     },
+     {
+      "threshold": "THRESHOLD-c82365dd41b94abe",
+      "site": "SITE-9f4d8d389cb86869",
+      "opening": "I1988",
+      "area_m2": 0.15,
+      "sides": [
+       "SITE-6d1ce80253b53f83",
+       "SITE-daca396d6d730e60"
+      ],
+      "allocation": "TRADE_RULE_REQUIRED"
+     },
+     {
+      "threshold": "THRESHOLD-04910e5deeeed2fc",
+      "site": "SITE-bd2b680527d056fa",
+      "opening": "I841",
+      "area_m2": 0.15,
+      "sides": [
+       "SITE-5f1762f1a93b91ca",
+       "SITE-6d1ce80253b53f83"
+      ],
+      "allocation": "TRADE_RULE_REQUIRED"
+     },
+     {
+      "threshold": "THRESHOLD-f9846605acbce828",
+      "site": "SITE-e639327cc873867d",
+      "opening": "I1443",
+      "area_m2": 0.12,
+      "sides": [
+       "SITE-1c4abf65f9b5db1e",
+       "SITE-a6405850100155ac"
+      ],
+      "allocation": "TRADE_RULE_REQUIRED"
+     }
+    ],
+    "open_passage_sites": [
+     {
+      "passage": "OP-358c62a203fd6982",
+      "width_mm": 1200.0,
+      "area_m2": 0.18,
+      "allocation": "NOT_ALLOCATED"
+     },
+     {
+      "passage": "OP-6983f5ce59b5a92c",
+      "width_mm": 3450.0,
+      "area_m2": 0.69,
+      "allocation": "NOT_ALLOCATED"
+     },
+     {
+      "passage": "OP-7839dee3d54915dd",
+      "width_mm": 850.0,
+      "area_m2": 0.17,
+      "allocation": "NOT_ALLOCATED"
+     }
+    ],
+    "claims_applied": [
+     "QORTUBA-NEW-DIM-LINES-7116-7119-ARE-WALLS-OWNER-001@v1",
+     "QORTUBA-Q14-CEILING-FOOTPRINT-OWNER-001"
+    ],
+    "source_anchor": {
+     "revision": "QORTUBA_REV_NEW",
+     "dxf_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+     "dwg_identity": "NOT_ESTABLISHED"
+    },
+    "run_id": "RUN-645dff01bd022185",
+    "run_input_digest": "645dff01bd02218557203c6e1d5d5d999e1b3ca7abdc091e0b4a36bf0bf1ec68",
+    "release_blockers": [
+     "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+    ],
+    "row_input_digest": "cbb1d3cc6778faa5f01463d7c474e8690278712986a80f59f132368fc8e341d0",
+    "row_input_digest_covers": [
+     "footprint_policies",
+     "row",
+     "row_claims",
+     "run_input_digest",
+     "space_classes",
+     "trade_rule"
+    ]
+   }
+  },
+  "OLD_K1_R8_11": {
+   "Q-03": {
+    "state": "COMPUTED_SHADOW",
+    "value": 17.7425,
+    "blocker_classes": []
+   },
+   "Q-03P": {
+    "state": "COMPUTED_SHADOW",
+    "value": 11.685,
+    "blocker_classes": []
+   },
+   "Q-11": {
+    "state": "COMPUTED_SHADOW",
+    "value": 17.7425,
+    "blocker_classes": []
+   },
+   "Q-12": {
+    "state": "COMPUTED_SHADOW",
+    "value": 11.685,
+    "blocker_classes": []
+   },
+   "Q-13": {
+    "state": "BLOCKED_MULTIPLE: BLOCKED_ROLE, BLOCKED_TRADE_RULE",
+    "value": null,
+    "blocker_classes": [
+     "ROLE_AUTHORITY",
+     "TRADE_RULE"
+    ]
+   },
+   "Q-14": {
+    "state": "BLOCKED_OWNER_FACT",
+    "value": null,
+    "blocker_classes": [
+     "OWNER_FACT"
+    ]
+   }
+  },
+  "NEW_K2_R8_10_REPRODUCED": {
+   "Q-03": {
+    "state": "COMPUTED_SHADOW",
+    "value": 17.7425
+   },
+   "Q-03P": {
+    "state": "COMPUTED_SHADOW",
+    "value": 11.685
+   },
+   "Q-11": {
+    "state": "COMPUTED_SHADOW",
+    "value": 17.7425
+   },
+   "Q-12": {
+    "state": "COMPUTED_SHADOW",
+    "value": 11.685
+   },
+   "Q-13": {
+    "state": "BLOCKED_MULTIPLE: BLOCKED_PHYSICAL, BLOCKED_ROLE, BLOCKED_TRADE_RULE",
+    "value": null
+   },
+   "Q-14": {
+    "state": "BLOCKED_MULTIPLE: BLOCKED_PHYSICAL, BLOCKED_ROLE",
+    "value": null
+   }
+  },
+  "OLD_K1_R8_10_REPRODUCED": {
+   "Q-03": {
+    "state": "COMPUTED_SHADOW",
+    "value": 17.7425
+   },
+   "Q-03P": {
+    "state": "COMPUTED_SHADOW",
+    "value": 11.685
+   },
+   "Q-11": {
+    "state": "COMPUTED_SHADOW",
+    "value": 17.7425
+   },
+   "Q-12": {
+    "state": "COMPUTED_SHADOW",
+    "value": 11.685
+   },
+   "Q-13": {
+    "state": "BLOCKED_MULTIPLE: BLOCKED_ROLE, BLOCKED_TRADE_RULE",
+    "value": null
+   },
+   "Q-14": {
+    "state": "BLOCKED_OWNER_FACT",
+    "value": null
+   }
+  }
+ },
+ "old_revision_unchanged_by_closures": {
+  "Q-03": true,
+  "Q-03P": true,
+  "Q-11": true,
+  "Q-12": true,
+  "Q-13": true,
+  "Q-14": true
+ },
+ "hall": {
+  "hall_site_r8_10": "SITE-27d6688454aaf8de",
+  "hall_area_r8_10_m2": 43.83,
+  "hall_site_r8_11": "SITE-6d1ce80253b53f83",
+  "hall_area_r8_11_m2": 43.1806,
+  "removed_m2": 0.6494,
+  "hall_issues_r8_10": [
+   "NEAR_MISS_BOUNDARY_GAP",
+   "ROLE_CONFLICT_SEPARATOR",
+   "TOPOLOGY_ROLE_UNRESOLVED"
+  ],
+  "hall_issues_r8_11": [
+   "ROLE_CONFLICT_SEPARATOR",
+   "TOPOLOGY_ROLE_UNRESOLVED"
+  ],
+  "the_0_6493_m2_leak": "CLOSED: the H2296/H2297 band end is closed by the authorised zero-material closure (face end points, not H2431's coordinates); the separated piece is a pure band interior and leaves the HALL; NEAR_MISS_BOUNDARY_GAP is gone from the HALL",
+  "the_0_3813_m2_core": "STILL INSIDE the HALL: H2430's band is not established (see H2430) - the HALL keeps ROLE_CONFLICT_SEPARATOR for it",
+  "the_2_3914_m2_pocket": "H1663 dining set against the wall: a FURNITURE object, never a wall; its footprint is a trade-policy question (ceiling: included by the Q-14 claim; floor: no authority)"
+ },
+ "final": "SHADOW only: no row is FINAL"
+}

@@ -1,0 +1,245 @@
+{
+ "SCHEMA": "URBAN_R8_11_TOPOLOGY_CLOSURE_REGISTER_V1",
+ "policy": {
+  "policy_id": "TOPOLOGY_CLOSURE_POLICY_V1",
+  "rule": "WALL_END_CLOSURE_V1",
+  "material": "NONE: never wall length, area or finish",
+  "geometry": "the segment between the two face end points of an aligned free end (source coordinates of the faces; never a cap's coordinates; never a moved end point)",
+  "authorised_for_shadow_requires": [
+   "established band",
+   "aligned free end",
+   "drawn cap corroboration",
+   "label partition unchanged",
+   "separated pieces are pure band interiors (band faces, closures, cross edges parallel to the closure)",
+   "area balance"
+  ],
+  "release_levels": [
+   "TOPOLOGY_CLOSURE_CANDIDATE",
+   "DIAGNOSTIC_PASS",
+   "REVIEWED",
+   "AUTHORISED_FOR_SHADOW",
+   "AUTHORISED_FOR_RELEASE",
+   "TOPOLOGY_CLOSURE_UNRESOLVED"
+  ],
+  "never": [
+   "distance alone (a near-miss < 50 mm never joins anything)",
+   "a closure between two labelled rooms without stronger authority",
+   "an opening width change",
+   "a source edit"
+  ],
+  "digest": "46742c570b4d8a036fd6b7446f28055bfd4e1adbff51966e800e5986ca99ccb2"
+ },
+ "NEW_K2": [
+  {
+   "closure_id": "TC-aea10821cffe20ff",
+   "band_id": "WB-b1fe3d69cf126ddb",
+   "kind": "WALL_END_CLOSURE",
+   "rule": "WALL_END_CLOSURE_V1",
+   "release": "AUTHORISED_FOR_SHADOW",
+   "geometry": [
+    109893.4,
+    15029.72,
+    109893.4,
+    15049.72
+   ],
+   "source_evidence": [
+    "2296",
+    "2297",
+    "2431"
+   ],
+   "authority": "ENGINE_DERIVED (TOPOLOGY_CLOSURE_POLICY_V1)",
+   "physical_material": "NONE",
+   "affects_topology": true,
+   "affects_wall_quantity": false,
+   "affects_finish_quantity": false,
+   "reversible": true,
+   "corroboration": [
+    {
+     "source": "2431",
+     "role": "DIMENSION_GRAPHICS",
+     "grade": "WALL_END_CAP_CANDIDATE"
+    }
+   ],
+   "safety": {
+    "label_partition_unchanged": true,
+    "area_balance_ok": true,
+    "passes": true,
+    "separated_pieces": [
+     {
+      "area_m2": 0.6494,
+      "pure_band_interior": true,
+      "from_site": "SITE-8bb22e86906129c0",
+      "boundary": [
+       "2296",
+       "2297",
+       "549",
+       "TCLOSURE|TC-aea10821cffe20ff"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "closure_id": "TC-afadb7261888249e",
+   "band_id": "WB-a0f614bd5f5a02d4",
+   "kind": "WALL_END_CLOSURE",
+   "rule": "WALL_END_CLOSURE_V1",
+   "release": "DIAGNOSTIC_PASS",
+   "geometry": [
+    109593.08,
+    15109.72,
+    109608.08,
+    15109.72
+   ],
+   "source_evidence": [
+    "535",
+    "543"
+   ],
+   "authority": "ENGINE_DERIVED (TOPOLOGY_CLOSURE_POLICY_V1)",
+   "physical_material": "NONE",
+   "affects_topology": true,
+   "affects_wall_quantity": false,
+   "affects_finish_quantity": false,
+   "reversible": true,
+   "corroboration": [],
+   "safety": {
+    "label_partition_unchanged": true,
+    "area_balance_ok": true,
+    "passes": true,
+    "separated_pieces": [
+     {
+      "area_m2": 0.09,
+      "pure_band_interior": true,
+      "from_site": "SITE-5020dfc9981d046c",
+      "boundary": [
+       "1512",
+       "477",
+       "535",
+       "543",
+       "TCLOSURE|TC-afadb7261888249e"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "closure_id": "TC-bf49f65df1238aa5",
+   "band_id": "WB-25b061fabe95986e",
+   "kind": "WALL_END_CLOSURE",
+   "rule": "WALL_END_CLOSURE_V1",
+   "release": "DIAGNOSTIC_PASS",
+   "geometry": [
+    110178.08,
+    15114.72,
+    110178.08,
+    15099.72
+   ],
+   "source_evidence": [
+    "1947",
+    "1948"
+   ],
+   "authority": "ENGINE_DERIVED (TOPOLOGY_CLOSURE_POLICY_V1)",
+   "physical_material": "NONE",
+   "affects_topology": true,
+   "affects_wall_quantity": false,
+   "affects_finish_quantity": false,
+   "reversible": true,
+   "corroboration": [],
+   "safety": {
+    "label_partition_unchanged": true,
+    "area_balance_ok": true,
+    "passes": true,
+    "separated_pieces": [
+     {
+      "area_m2": 0.06,
+      "pure_band_interior": true,
+      "from_site": "SITE-fd4d78f31e470bfb",
+      "boundary": [
+       "1947",
+       "1948",
+       "549",
+       "704",
+       "TCLOSURE|TC-bf49f65df1238aa5"
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "OLD_K1": [
+  {
+   "closure_id": "TC-e6e0e1d6aca1a3ca",
+   "band_id": "WB-f302332377db138a",
+   "kind": "WALL_END_CLOSURE",
+   "rule": "WALL_END_CLOSURE_V1",
+   "release": "DIAGNOSTIC_PASS",
+   "geometry": [
+    109593.08,
+    15109.72,
+    109608.08,
+    15109.72
+   ],
+   "source_evidence": [
+    "535",
+    "543"
+   ],
+   "authority": "ENGINE_DERIVED (TOPOLOGY_CLOSURE_POLICY_V1)",
+   "physical_material": "NONE",
+   "affects_topology": true,
+   "affects_wall_quantity": false,
+   "affects_finish_quantity": false,
+   "reversible": true,
+   "corroboration": [],
+   "safety": {
+    "label_partition_unchanged": true,
+    "area_balance_ok": true,
+    "passes": true,
+    "separated_pieces": [
+     {
+      "area_m2": 0.09,
+      "pure_band_interior": true,
+      "from_site": "SITE-df4ae474eb125798",
+      "boundary": [
+       "1512",
+       "477",
+       "535",
+       "543",
+       "TCLOSURE|TC-e6e0e1d6aca1a3ca"
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "applied": {
+  "NEW_K2": [
+   "TC-aea10821cffe20ff"
+  ],
+  "OLD_K1": []
+ },
+ "leak": {
+  "hall_site_r8_10": "SITE-27d6688454aaf8de",
+  "hall_area_r8_10_m2": 43.83,
+  "hall_site_r8_11": "SITE-6d1ce80253b53f83",
+  "hall_area_r8_11_m2": 43.1806,
+  "removed_m2": 0.6494,
+  "hall_issues_r8_10": [
+   "NEAR_MISS_BOUNDARY_GAP",
+   "ROLE_CONFLICT_SEPARATOR",
+   "TOPOLOGY_ROLE_UNRESOLVED"
+  ],
+  "hall_issues_r8_11": [
+   "ROLE_CONFLICT_SEPARATOR",
+   "TOPOLOGY_ROLE_UNRESOLVED"
+  ],
+  "the_0_6493_m2_leak": "CLOSED: the H2296/H2297 band end is closed by the authorised zero-material closure (face end points, not H2431's coordinates); the separated piece is a pure band interior and leaves the HALL; NEAR_MISS_BOUNDARY_GAP is gone from the HALL",
+  "the_0_3813_m2_core": "STILL INSIDE the HALL: H2430's band is not established (see H2430) - the HALL keeps ROLE_CONFLICT_SEPARATOR for it",
+  "the_2_3914_m2_pocket": "H1663 dining set against the wall: a FURNITURE object, never a wall; its footprint is a trade-policy question (ceiling: included by the Q-14 claim; floor: no authority)"
+ },
+ "separation": [
+  "A SOURCE GEOMETRY: never rewritten",
+  "B TOPOLOGY CLOSURE: these records",
+  "C SOURCE CORRECTION CLAIM: none in R8.11"
+ ],
+ "material": "NONE for every closure: no wall length, wall area, plaster, paint, skirting or opening width"
+}

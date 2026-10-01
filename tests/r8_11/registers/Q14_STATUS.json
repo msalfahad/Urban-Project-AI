@@ -1,0 +1,127 @@
+{
+ "SCHEMA": "URBAN_R8_11_Q14_STATUS_V1",
+ "row": "Q-14",
+ "state": "BLOCKED_ROLE",
+ "value": null,
+ "blocker_classes": [
+  "ROLE_AUTHORITY"
+ ],
+ "blockers": [
+  {
+   "site": "SITE-6d1ce80253b53f83",
+   "zones": [
+    "HALL",
+    "whgm"
+   ],
+   "area_m2": 43.180638,
+   "blockers": [
+    {
+     "class": "ROLE_AUTHORITY",
+     "issue": "ROLE_CONFLICT_SEPARATOR",
+     "detail": {
+      "source": "2430",
+      "roles": [
+       "DIMENSION_GRAPHICS"
+      ],
+      "pockets_m2": [
+       0.3813
+      ],
+      "why": "a line closing a wall core / a possible partition: material to every area trade whatever the footprint policy"
+     }
+    }
+   ]
+  }
+ ],
+ "sites_used": [
+  {
+   "site": "SITE-1c4abf65f9b5db1e",
+   "zones": [
+    "BATH"
+   ],
+   "area_m2": 8.5525,
+   "decision": "SINGLE_SEMANTIC_ZONE"
+  },
+  {
+   "site": "SITE-5f1762f1a93b91ca",
+   "zones": [
+    "BED.ROOM"
+   ],
+   "area_m2": 19.2725,
+   "decision": "SINGLE_SEMANTIC_ZONE"
+  },
+  {
+   "site": "SITE-8c1c7563d5252c50",
+   "zones": [
+    "PAINTRY"
+   ],
+   "area_m2": 11.685,
+   "decision": "SINGLE_SEMANTIC_ZONE"
+  },
+  {
+   "site": "SITE-a2b19efc492a6d0b",
+   "zones": [
+    "BATH"
+   ],
+   "area_m2": 5.1,
+   "decision": "SINGLE_SEMANTIC_ZONE"
+  },
+  {
+   "site": "SITE-a6405850100155ac",
+   "zones": [
+    "DRESS",
+    "M.B.ROOM"
+   ],
+   "area_m2": 33.2,
+   "decision": "SEMANTIC_SUBDIVISION_NOT_REQUIRED_FOR_TRADE"
+  },
+  {
+   "site": "SITE-daca396d6d730e60",
+   "zones": [
+    "BED.ROOM"
+   ],
+   "area_m2": 16.327,
+   "decision": "SINGLE_SEMANTIC_ZONE"
+  },
+  {
+   "site": "SITE-fe8ed5548fb4310e",
+   "zones": [
+    "BATH"
+   ],
+   "area_m2": 4.09,
+   "decision": "SINGLE_SEMANTIC_ZONE"
+  }
+ ],
+ "trade_authority": {
+  "rule": "QORTUBA-Q14-CEILING-TREATMENT@v1",
+  "authority": "OWNER_CLAIM",
+  "refs": [
+   "QORTUBA-Q14-CEILING-FOOTPRINT-OWNER-001"
+  ],
+  "row_treatment": "CEILING_BY_AREA",
+  "semantic_class_rule": null
+ },
+ "footprint_authority": {
+  "treatment": "FOOTPRINT_INCLUDED",
+  "policy": "QORTUBA-CEILING-OBJECT-FOOTPRINT@v1"
+ },
+ "release_blockers": [
+  "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+  "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+ ],
+ "r8_10": {
+  "state": "BLOCKED_MULTIPLE: BLOCKED_PHYSICAL, BLOCKED_ROLE",
+  "value": null,
+  "blocker_classes": [
+   "PHYSICAL_TOPOLOGY",
+   "ROLE_AUTHORITY"
+  ]
+ },
+ "old_revision": {
+  "state": "BLOCKED_OWNER_FACT",
+  "value": null
+ },
+ "final": false,
+ "run_input_digest": "645dff01bd02218557203c6e1d5d5d999e1b3ca7abdc091e0b4a36bf0bf1ec68",
+ "row_input_digest": "cbb1d3cc6778faa5f01463d7c474e8690278712986a80f59f132368fc8e341d0",
+ "path_to_computed_shadow": "only the H2430 wall core (0.3813 m2) still blocks: under the frozen band policy its faces form no band. A fragment-aware band rule (E-R8.12-01) frozen with synthetic tests BEFORE a blind re-run is the only route that does not calibrate to this drawing; a reviewed SOURCE_CORRECTION or TOPOLOGY_CLOSURE claim is the other"
+}

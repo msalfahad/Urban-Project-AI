@@ -1,0 +1,29 @@
+{
+ "SCHEMA": "URBAN_OWNER_ACTION_REGISTER_V8",
+ "required_now": [],
+ "owner_review_open": [],
+ "headline": "NO OWNER ACTION REQUIRED.",
+ "prepared_not_asked": [
+  {
+   "action_id": "QORTUBA_FLOOR_UNDER_BUILT_IN_WARDROBES",
+   "question": "Qortuba porcelain floor: is it laid over the whole room, under the built-in wardrobes of the dressing room and under loose furniture as well? YES - whole room / NO - the wardrobe footprint is deducted / NOT SURE",
+   "why_not_asked": "the sole-blocker test fails: Q-13 is also blocked by ROLE_AUTHORITY:ROLE_CONFLICT_SEPARATOR:2430, ROLE_AUTHORITY:TOPOLOGY_ROLE_UNRESOLVED - an answer now would not release Q-13",
+   "never": "an expected quantity"
+  },
+  {
+   "action_id": "QORTUBA_CORRECTED_DRAWING_HALL_LOBBY_CAPS",
+   "request": "a corrected drawing with the Hall / Lobby wall-end lines on the WALL layer meeting the faces",
+   "why_not_asked": "a new drawing is a new source revision (every claim re-anchored); the engine route (E-R8.12-01) is tried first"
+  }
+ ],
+ "do_not_ask": [
+  "7116-7119",
+  "the selected plan",
+  "the units",
+  "the two xrefs",
+  "the Q-14 ceiling condition",
+  "FIRNTUR / SF3 meaning",
+  "threshold or passage allocation",
+  "any expected quantity"
+ ]
+}

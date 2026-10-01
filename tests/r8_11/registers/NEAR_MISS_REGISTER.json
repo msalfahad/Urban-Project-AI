@@ -1,0 +1,47 @@
+{
+ "SCHEMA": "URBAN_R8_11_NEAR_MISS_REGISTER_V1",
+ "band_mm": 50.0,
+ "basis": "REVIEW-ONLY engine method parameter: an opening narrower than 50 mm is not a passage, door or window in any building trade, so a boundary end stopping within 50 mm of another boundary is a drafting near-miss or a joint; its consequence is reviewed, never silently measured. It can only withhold a site; it never joins geometry in the authority arrangement and never certifies",
+ "review_only": true,
+ "NEW_K2_R8_10": [
+  {
+   "source": "1316",
+   "origin": "UNKNOWN",
+   "admitted": false,
+   "gap_mm": [
+    1.4,
+    1.4
+   ],
+   "sites": {
+    "SITE-17f5f8c97fc16343": "CHANGES_AREA"
+   }
+  },
+  {
+   "source": "2431",
+   "origin": "GR-13",
+   "admitted": false,
+   "gap_mm": [
+    9.19
+   ],
+   "sites": {
+    "SITE-27d6688454aaf8de": "CHANGES_AREA"
+   }
+  }
+ ],
+ "NEW_K2_R8_11": [
+  {
+   "source": "1316",
+   "origin": "UNKNOWN",
+   "admitted": false,
+   "gap_mm": [
+    1.4,
+    1.4
+   ],
+   "sites": {
+    "SITE-17f5f8c97fc16343": "CHANGES_AREA"
+   }
+  }
+ ],
+ "OLD_K1_R8_11": [],
+ "reading": "H2431 is still 9.2 mm short (a source fact, never edited); with the closure in place the slit opens into nothing, so it is no longer a near-miss that changes a site. H1316 (window jamb, 1.4 mm gaps) is a near-miss in an unlabelled window strip site that no row uses. Nothing was joined because it was < 50 mm away."
+}

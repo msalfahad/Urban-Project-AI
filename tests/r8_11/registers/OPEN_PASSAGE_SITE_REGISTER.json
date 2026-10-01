@@ -1,0 +1,938 @@
+{
+ "SCHEMA": "URBAN_R8_11_OPEN_PASSAGE_SITE_REGISTER_V1",
+ "NEW_K2": [
+  {
+   "passage_id": "OP-1f95424c0504e5a7",
+   "kind": "OPEN_PASSAGE_SITE",
+   "band_id": "WB-69d17535068ea469",
+   "band_end": 1,
+   "end_kind": "CAPPED",
+   "target": "BANDEND|WB-4527d3a2609c5c42|0",
+   "width_mm": 900.0,
+   "wall_thickness_mm": 150.0,
+   "area_m2": 0.135,
+   "polygon": [
+    [
+     110523.08,
+     14989.72
+    ],
+    [
+     110538.08,
+     14989.72
+    ],
+    [
+     110538.08,
+     15079.72
+    ],
+    [
+     110523.08,
+     15079.72
+    ]
+   ],
+   "jamb_faces": [
+    {
+     "band_id": "WB-69d17535068ea469",
+     "segment": [
+      [
+       110523.08,
+       14989.72
+      ],
+      [
+       110538.08,
+       14989.72
+      ]
+     ]
+    }
+   ],
+   "head_condition": "NOT_ESTABLISHED_IN_SOURCE",
+   "physically_connected": true,
+   "strip_in_site": "SITE-788f30878ba9d2b3",
+   "site_zones": [],
+   "adjacent_sites": [
+    "SITE-788f30878ba9d2b3",
+    "SITE-788f30878ba9d2b3"
+   ],
+   "trade_allocation": "NOT_ALLOCATED",
+   "reveals": {
+    "jambs": [
+     {
+      "band_id": "WB-69d17535068ea469",
+      "segment": [
+       [
+        110523.0817449839,
+        14989.71961437816
+       ],
+       [
+        110538.0817449838,
+        14989.71961437816
+       ]
+      ]
+     }
+    ],
+    "soffit": "the strip footprint (only if a head exists)",
+    "double_count_guard": "jamb faces and soffit are opening surfaces: never also a room wall perimeter or a ceiling area"
+   },
+   "kind_note": "OPEN_PASSAGE_SITE: a doorless strip through a wall line; a DOOR_THRESHOLD_SITE is a separate record"
+  },
+  {
+   "passage_id": "OP-358c62a203fd6982",
+   "kind": "OPEN_PASSAGE_SITE",
+   "band_id": "WB-fa3143c0ea1ff5a1",
+   "band_end": 1,
+   "end_kind": "CAPPED",
+   "target": "518",
+   "width_mm": 1200.0,
+   "wall_thickness_mm": 150.0,
+   "area_m2": 0.18,
+   "polygon": [
+    [
+     109858.08,
+     15709.72
+    ],
+    [
+     109873.08,
+     15709.72
+    ],
+    [
+     109873.08,
+     15589.72
+    ],
+    [
+     109858.08,
+     15589.72
+    ]
+   ],
+   "jamb_faces": [
+    {
+     "band_id": "WB-fa3143c0ea1ff5a1",
+     "segment": [
+      [
+       109858.08,
+       15709.72
+      ],
+      [
+       109873.08,
+       15709.72
+      ]
+     ]
+    }
+   ],
+   "head_condition": "NOT_ESTABLISHED_IN_SOURCE",
+   "physically_connected": true,
+   "strip_in_site": "SITE-a6405850100155ac",
+   "site_zones": [
+    "DRESS",
+    "M.B.ROOM"
+   ],
+   "adjacent_sites": [
+    "SITE-a6405850100155ac",
+    "SITE-a6405850100155ac"
+   ],
+   "trade_allocation": "NOT_ALLOCATED",
+   "reveals": {
+    "jambs": [
+     {
+      "band_id": "WB-fa3143c0ea1ff5a1",
+      "segment": [
+       [
+        109858.0817449839,
+        15709.71961437815
+       ],
+       [
+        109873.081744984,
+        15709.71961437815
+       ]
+      ]
+     }
+    ],
+    "soffit": "the strip footprint (only if a head exists)",
+    "double_count_guard": "jamb faces and soffit are opening surfaces: never also a room wall perimeter or a ceiling area"
+   },
+   "kind_note": "OPEN_PASSAGE_SITE: a doorless strip through a wall line; a DOOR_THRESHOLD_SITE is a separate record"
+  },
+  {
+   "passage_id": "OP-6983f5ce59b5a92c",
+   "kind": "OPEN_PASSAGE_SITE",
+   "band_id": "WB-03e3abac62c69e25",
+   "band_end": 1,
+   "end_kind": "CAPPED",
+   "target": "1895",
+   "width_mm": 3450.0,
+   "wall_thickness_mm": 200.0,
+   "area_m2": 0.69,
+   "polygon": [
+    [
+     110218.08,
+     16009.72
+    ],
+    [
+     110218.08,
+     15989.72
+    ],
+    [
+     109873.08,
+     15989.72
+    ],
+    [
+     109873.08,
+     16009.72
+    ]
+   ],
+   "jamb_faces": [
+    {
+     "band_id": "WB-03e3abac62c69e25",
+     "segment": [
+      [
+       110218.08,
+       16009.72
+      ],
+      [
+       110218.08,
+       15989.72
+      ]
+     ]
+    }
+   ],
+   "head_condition": "NOT_ESTABLISHED_IN_SOURCE",
+   "physically_connected": true,
+   "strip_in_site": "SITE-a6405850100155ac",
+   "site_zones": [
+    "DRESS",
+    "M.B.ROOM"
+   ],
+   "adjacent_sites": [
+    "SITE-a6405850100155ac",
+    "SITE-a6405850100155ac"
+   ],
+   "trade_allocation": "NOT_ALLOCATED",
+   "reveals": {
+    "jambs": [
+     {
+      "band_id": "WB-03e3abac62c69e25",
+      "segment": [
+       [
+        110218.0817449839,
+        16009.71961437816
+       ],
+       [
+        110218.0817449839,
+        15989.71961437816
+       ]
+      ]
+     }
+    ],
+    "soffit": "the strip footprint (only if a head exists)",
+    "double_count_guard": "jamb faces and soffit are opening surfaces: never also a room wall perimeter or a ceiling area"
+   },
+   "kind_note": "OPEN_PASSAGE_SITE: a doorless strip through a wall line; a DOOR_THRESHOLD_SITE is a separate record"
+  },
+  {
+   "passage_id": "OP-7839dee3d54915dd",
+   "kind": "OPEN_PASSAGE_SITE",
+   "band_id": "WB-03e3abac62c69e25",
+   "band_end": 0,
+   "end_kind": "CAPPED",
+   "target": "512",
+   "width_mm": 850.0,
+   "wall_thickness_mm": 200.0,
+   "area_m2": 0.17,
+   "polygon": [
+    [
+     110278.08,
+     16009.72
+    ],
+    [
+     110278.08,
+     15989.72
+    ],
+    [
+     110363.08,
+     15989.72
+    ],
+    [
+     110363.08,
+     16009.72
+    ]
+   ],
+   "jamb_faces": [
+    {
+     "band_id": "WB-03e3abac62c69e25",
+     "segment": [
+      [
+       110278.08,
+       16009.72
+      ],
+      [
+       110278.08,
+       15989.72
+      ]
+     ]
+    }
+   ],
+   "head_condition": "NOT_ESTABLISHED_IN_SOURCE",
+   "physically_connected": true,
+   "strip_in_site": "SITE-a6405850100155ac",
+   "site_zones": [
+    "DRESS",
+    "M.B.ROOM"
+   ],
+   "adjacent_sites": [
+    "SITE-a6405850100155ac",
+    "SITE-a6405850100155ac"
+   ],
+   "trade_allocation": "NOT_ALLOCATED",
+   "reveals": {
+    "jambs": [
+     {
+      "band_id": "WB-03e3abac62c69e25",
+      "segment": [
+       [
+        110278.0817449839,
+        16009.71961437816
+       ],
+       [
+        110278.0817449839,
+        15989.71961437816
+       ]
+      ]
+     }
+    ],
+    "soffit": "the strip footprint (only if a head exists)",
+    "double_count_guard": "jamb faces and soffit are opening surfaces: never also a room wall perimeter or a ceiling area"
+   },
+   "kind_note": "OPEN_PASSAGE_SITE: a doorless strip through a wall line; a DOOR_THRESHOLD_SITE is a separate record"
+  },
+  {
+   "passage_id": "OP-bb3673bae80b4a3f",
+   "kind": "OPEN_PASSAGE_SITE",
+   "band_id": "WB-97e74e1ca5e1cef7",
+   "band_end": 0,
+   "end_kind": "CAPPED",
+   "target": "489",
+   "width_mm": 1200.0,
+   "wall_thickness_mm": 100.0,
+   "area_m2": 0.12,
+   "polygon": [
+    [
+     110373.08,
+     14649.72
+    ],
+    [
+     110383.08,
+     14649.72
+    ],
+    [
+     110383.08,
+     14529.72
+    ],
+    [
+     110373.08,
+     14529.72
+    ]
+   ],
+   "jamb_faces": [
+    {
+     "band_id": "WB-97e74e1ca5e1cef7",
+     "segment": [
+      [
+       110373.08,
+       14649.72
+      ],
+      [
+       110383.08,
+       14649.72
+      ]
+     ]
+    }
+   ],
+   "head_condition": "NOT_ESTABLISHED_IN_SOURCE",
+   "physically_connected": true,
+   "strip_in_site": "SITE-788f30878ba9d2b3",
+   "site_zones": [],
+   "adjacent_sites": [
+    "SITE-788f30878ba9d2b3",
+    "SITE-788f30878ba9d2b3"
+   ],
+   "trade_allocation": "NOT_ALLOCATED",
+   "reveals": {
+    "jambs": [
+     {
+      "band_id": "WB-97e74e1ca5e1cef7",
+      "segment": [
+       [
+        110373.0817449839,
+        14649.71961437816
+       ],
+       [
+        110383.0817449839,
+        14649.71961437816
+       ]
+      ]
+     }
+    ],
+    "soffit": "the strip footprint (only if a head exists)",
+    "double_count_guard": "jamb faces and soffit are opening surfaces: never also a room wall perimeter or a ceiling area"
+   },
+   "kind_note": "OPEN_PASSAGE_SITE: a doorless strip through a wall line; a DOOR_THRESHOLD_SITE is a separate record"
+  },
+  {
+   "passage_id": "OP-e4c1b2a96225be8e",
+   "kind": "OPEN_PASSAGE_SITE",
+   "band_id": "WB-97e74e1ca5e1cef7",
+   "band_end": 1,
+   "end_kind": "CAPPED",
+   "target": "573",
+   "width_mm": 1200.0,
+   "wall_thickness_mm": 100.0,
+   "area_m2": 0.12,
+   "polygon": [
+    [
+     110373.08,
+     14979.72
+    ],
+    [
+     110383.08,
+     14979.72
+    ],
+    [
+     110383.08,
+     15099.72
+    ],
+    [
+     110373.08,
+     15099.72
+    ]
+   ],
+   "jamb_faces": [
+    {
+     "band_id": "WB-97e74e1ca5e1cef7",
+     "segment": [
+      [
+       110373.08,
+       14979.72
+      ],
+      [
+       110383.08,
+       14979.72
+      ]
+     ]
+    }
+   ],
+   "head_condition": "NOT_ESTABLISHED_IN_SOURCE",
+   "physically_connected": true,
+   "strip_in_site": "SITE-788f30878ba9d2b3",
+   "site_zones": [],
+   "adjacent_sites": [
+    "SITE-788f30878ba9d2b3",
+    "SITE-788f30878ba9d2b3"
+   ],
+   "trade_allocation": "NOT_ALLOCATED",
+   "reveals": {
+    "jambs": [
+     {
+      "band_id": "WB-97e74e1ca5e1cef7",
+      "segment": [
+       [
+        110373.0817449839,
+        14979.71961437816
+       ],
+       [
+        110383.0817449839,
+        14979.71961437816
+       ]
+      ]
+     }
+    ],
+    "soffit": "the strip footprint (only if a head exists)",
+    "double_count_guard": "jamb faces and soffit are opening surfaces: never also a room wall perimeter or a ceiling area"
+   },
+   "kind_note": "OPEN_PASSAGE_SITE: a doorless strip through a wall line; a DOOR_THRESHOLD_SITE is a separate record"
+  }
+ ],
+ "OLD_K1": [
+  {
+   "passage_id": "OP-2ce79a218ee511ac",
+   "kind": "OPEN_PASSAGE_SITE",
+   "band_id": "WB-b37fd407b21d8870",
+   "band_end": 1,
+   "end_kind": "CAPPED",
+   "target": "1895",
+   "width_mm": 3450.0,
+   "wall_thickness_mm": 200.0,
+   "area_m2": 0.69,
+   "polygon": [
+    [
+     110218.08,
+     16009.72
+    ],
+    [
+     110218.08,
+     15989.72
+    ],
+    [
+     109873.08,
+     15989.72
+    ],
+    [
+     109873.08,
+     16009.72
+    ]
+   ],
+   "jamb_faces": [
+    {
+     "band_id": "WB-b37fd407b21d8870",
+     "segment": [
+      [
+       110218.08,
+       16009.72
+      ],
+      [
+       110218.08,
+       15989.72
+      ]
+     ]
+    }
+   ],
+   "head_condition": "NOT_ESTABLISHED_IN_SOURCE",
+   "physically_connected": true,
+   "strip_in_site": "SITE-8e1f0b3a736abb02",
+   "site_zones": [
+    "DRESS",
+    "M.B.ROOM"
+   ],
+   "adjacent_sites": [
+    "SITE-8e1f0b3a736abb02",
+    "SITE-8e1f0b3a736abb02"
+   ],
+   "trade_allocation": "NOT_ALLOCATED",
+   "reveals": {
+    "jambs": [
+     {
+      "band_id": "WB-b37fd407b21d8870",
+      "segment": [
+       [
+        110218.08174498397,
+        16009.719614378162
+       ],
+       [
+        110218.08174498397,
+        15989.719614378162
+       ]
+      ]
+     }
+    ],
+    "soffit": "the strip footprint (only if a head exists)",
+    "double_count_guard": "jamb faces and soffit are opening surfaces: never also a room wall perimeter or a ceiling area"
+   },
+   "kind_note": "OPEN_PASSAGE_SITE: a doorless strip through a wall line; a DOOR_THRESHOLD_SITE is a separate record"
+  },
+  {
+   "passage_id": "OP-3f142b26b59a67c3",
+   "kind": "OPEN_PASSAGE_SITE",
+   "band_id": "WB-d1e7a2aa4ac08a11",
+   "band_end": 1,
+   "end_kind": "CAPPED",
+   "target": "518",
+   "width_mm": 1200.0,
+   "wall_thickness_mm": 150.0,
+   "area_m2": 0.18,
+   "polygon": [
+    [
+     109858.08,
+     15709.72
+    ],
+    [
+     109873.08,
+     15709.72
+    ],
+    [
+     109873.08,
+     15589.72
+    ],
+    [
+     109858.08,
+     15589.72
+    ]
+   ],
+   "jamb_faces": [
+    {
+     "band_id": "WB-d1e7a2aa4ac08a11",
+     "segment": [
+      [
+       109858.08,
+       15709.72
+      ],
+      [
+       109873.08,
+       15709.72
+      ]
+     ]
+    }
+   ],
+   "head_condition": "NOT_ESTABLISHED_IN_SOURCE",
+   "physically_connected": true,
+   "strip_in_site": "SITE-8e1f0b3a736abb02",
+   "site_zones": [
+    "DRESS",
+    "M.B.ROOM"
+   ],
+   "adjacent_sites": [
+    "SITE-8e1f0b3a736abb02",
+    "SITE-8e1f0b3a736abb02"
+   ],
+   "trade_allocation": "NOT_ALLOCATED",
+   "reveals": {
+    "jambs": [
+     {
+      "band_id": "WB-d1e7a2aa4ac08a11",
+      "segment": [
+       [
+        109858.08174498397,
+        15709.719614378155
+       ],
+       [
+        109873.08174498397,
+        15709.719614378155
+       ]
+      ]
+     }
+    ],
+    "soffit": "the strip footprint (only if a head exists)",
+    "double_count_guard": "jamb faces and soffit are opening surfaces: never also a room wall perimeter or a ceiling area"
+   },
+   "kind_note": "OPEN_PASSAGE_SITE: a doorless strip through a wall line; a DOOR_THRESHOLD_SITE is a separate record"
+  },
+  {
+   "passage_id": "OP-5467467eccf31dbb",
+   "kind": "OPEN_PASSAGE_SITE",
+   "band_id": "WB-b37fd407b21d8870",
+   "band_end": 0,
+   "end_kind": "CAPPED",
+   "target": "512",
+   "width_mm": 850.0,
+   "wall_thickness_mm": 200.0,
+   "area_m2": 0.17,
+   "polygon": [
+    [
+     110278.08,
+     16009.72
+    ],
+    [
+     110278.08,
+     15989.72
+    ],
+    [
+     110363.08,
+     15989.72
+    ],
+    [
+     110363.08,
+     16009.72
+    ]
+   ],
+   "jamb_faces": [
+    {
+     "band_id": "WB-b37fd407b21d8870",
+     "segment": [
+      [
+       110278.08,
+       16009.72
+      ],
+      [
+       110278.08,
+       15989.72
+      ]
+     ]
+    }
+   ],
+   "head_condition": "NOT_ESTABLISHED_IN_SOURCE",
+   "physically_connected": true,
+   "strip_in_site": "SITE-8e1f0b3a736abb02",
+   "site_zones": [
+    "DRESS",
+    "M.B.ROOM"
+   ],
+   "adjacent_sites": [
+    "SITE-8e1f0b3a736abb02",
+    "SITE-8e1f0b3a736abb02"
+   ],
+   "trade_allocation": "NOT_ALLOCATED",
+   "reveals": {
+    "jambs": [
+     {
+      "band_id": "WB-b37fd407b21d8870",
+      "segment": [
+       [
+        110278.08174498397,
+        16009.719614378162
+       ],
+       [
+        110278.08174498397,
+        15989.719614378162
+       ]
+      ]
+     }
+    ],
+    "soffit": "the strip footprint (only if a head exists)",
+    "double_count_guard": "jamb faces and soffit are opening surfaces: never also a room wall perimeter or a ceiling area"
+   },
+   "kind_note": "OPEN_PASSAGE_SITE: a doorless strip through a wall line; a DOOR_THRESHOLD_SITE is a separate record"
+  },
+  {
+   "passage_id": "OP-627a420569e39e60",
+   "kind": "OPEN_PASSAGE_SITE",
+   "band_id": "WB-51e48c843bfcedb1",
+   "band_end": 0,
+   "end_kind": "CAPPED",
+   "target": "BANDEND|WB-342bde9608da2d3b|1",
+   "width_mm": 900.0,
+   "wall_thickness_mm": 150.0,
+   "area_m2": 0.135,
+   "polygon": [
+    [
+     110523.08,
+     15079.72
+    ],
+    [
+     110538.08,
+     15079.72
+    ],
+    [
+     110538.08,
+     14989.72
+    ],
+    [
+     110523.08,
+     14989.72
+    ]
+   ],
+   "jamb_faces": [
+    {
+     "band_id": "WB-51e48c843bfcedb1",
+     "segment": [
+      [
+       110523.08,
+       15079.72
+      ],
+      [
+       110538.08,
+       15079.72
+      ]
+     ]
+    }
+   ],
+   "head_condition": "NOT_ESTABLISHED_IN_SOURCE",
+   "physically_connected": true,
+   "strip_in_site": "SITE-1e8835fb33cb1a98",
+   "site_zones": [],
+   "adjacent_sites": [
+    "SITE-1e8835fb33cb1a98",
+    "SITE-1e8835fb33cb1a98"
+   ],
+   "trade_allocation": "NOT_ALLOCATED",
+   "reveals": {
+    "jambs": [
+     {
+      "band_id": "WB-51e48c843bfcedb1",
+      "segment": [
+       [
+        110523.08174498397,
+        15079.719614378162
+       ],
+       [
+        110538.08174498385,
+        15079.719614378162
+       ]
+      ]
+     }
+    ],
+    "soffit": "the strip footprint (only if a head exists)",
+    "double_count_guard": "jamb faces and soffit are opening surfaces: never also a room wall perimeter or a ceiling area"
+   },
+   "kind_note": "OPEN_PASSAGE_SITE: a doorless strip through a wall line; a DOOR_THRESHOLD_SITE is a separate record"
+  },
+  {
+   "passage_id": "OP-e25d9aae676f8a4e",
+   "kind": "OPEN_PASSAGE_SITE",
+   "band_id": "WB-f654fd9f5c1410ee",
+   "band_end": 0,
+   "end_kind": "CAPPED",
+   "target": "489",
+   "width_mm": 1200.0,
+   "wall_thickness_mm": 100.0,
+   "area_m2": 0.12,
+   "polygon": [
+    [
+     110373.08,
+     14649.72
+    ],
+    [
+     110383.08,
+     14649.72
+    ],
+    [
+     110383.08,
+     14529.72
+    ],
+    [
+     110373.08,
+     14529.72
+    ]
+   ],
+   "jamb_faces": [
+    {
+     "band_id": "WB-f654fd9f5c1410ee",
+     "segment": [
+      [
+       110373.08,
+       14649.72
+      ],
+      [
+       110383.08,
+       14649.72
+      ]
+     ]
+    }
+   ],
+   "head_condition": "NOT_ESTABLISHED_IN_SOURCE",
+   "physically_connected": true,
+   "strip_in_site": "SITE-1e8835fb33cb1a98",
+   "site_zones": [],
+   "adjacent_sites": [
+    "SITE-1e8835fb33cb1a98",
+    "SITE-1e8835fb33cb1a98"
+   ],
+   "trade_allocation": "NOT_ALLOCATED",
+   "reveals": {
+    "jambs": [
+     {
+      "band_id": "WB-f654fd9f5c1410ee",
+      "segment": [
+       [
+        110373.08174498397,
+        14649.719614378162
+       ],
+       [
+        110383.08174498397,
+        14649.719614378162
+       ]
+      ]
+     }
+    ],
+    "soffit": "the strip footprint (only if a head exists)",
+    "double_count_guard": "jamb faces and soffit are opening surfaces: never also a room wall perimeter or a ceiling area"
+   },
+   "kind_note": "OPEN_PASSAGE_SITE: a doorless strip through a wall line; a DOOR_THRESHOLD_SITE is a separate record"
+  },
+  {
+   "passage_id": "OP-fcd7e35e78da516d",
+   "kind": "OPEN_PASSAGE_SITE",
+   "band_id": "WB-f654fd9f5c1410ee",
+   "band_end": 1,
+   "end_kind": "CAPPED",
+   "target": "573",
+   "width_mm": 1200.0,
+   "wall_thickness_mm": 100.0,
+   "area_m2": 0.12,
+   "polygon": [
+    [
+     110373.08,
+     14979.72
+    ],
+    [
+     110383.08,
+     14979.72
+    ],
+    [
+     110383.08,
+     15099.72
+    ],
+    [
+     110373.08,
+     15099.72
+    ]
+   ],
+   "jamb_faces": [
+    {
+     "band_id": "WB-f654fd9f5c1410ee",
+     "segment": [
+      [
+       110373.08,
+       14979.72
+      ],
+      [
+       110383.08,
+       14979.72
+      ]
+     ]
+    }
+   ],
+   "head_condition": "NOT_ESTABLISHED_IN_SOURCE",
+   "physically_connected": true,
+   "strip_in_site": "SITE-1e8835fb33cb1a98",
+   "site_zones": [],
+   "adjacent_sites": [
+    "SITE-1e8835fb33cb1a98",
+    "SITE-1e8835fb33cb1a98"
+   ],
+   "trade_allocation": "NOT_ALLOCATED",
+   "reveals": {
+    "jambs": [
+     {
+      "band_id": "WB-f654fd9f5c1410ee",
+      "segment": [
+       [
+        110373.08174498397,
+        14979.719614378162
+       ],
+       [
+        110383.08174498397,
+        14979.719614378162
+       ]
+      ]
+     }
+    ],
+    "soffit": "the strip footprint (only if a head exists)",
+    "double_count_guard": "jamb faces and soffit are opening surfaces: never also a room wall perimeter or a ceiling area"
+   },
+   "kind_note": "OPEN_PASSAGE_SITE: a doorless strip through a wall line; a DOOR_THRESHOLD_SITE is a separate record"
+  }
+ ],
+ "frozen_v1_passages": {
+  "NEW_K2": 17,
+  "OLD_K1": 15,
+  "removed_by_A1": "every 150-200 mm strip through a receiving wall's core"
+ },
+ "qp_audit": {
+  "QP-17_M.B.ROOM/DRESS_1.200": {
+   "new_revision": [
+    "OP-358c62a203fd6982"
+   ],
+   "old_revision": [
+    "OP-3f142b26b59a67c3"
+   ],
+   "status": "CORROBORATED_BY_OWNER_RULE",
+   "basis": "CORROBORATION_ONLY: the owner rule is about the old revision"
+  },
+  "QP-17_HALL/LOBBY_1.200": {
+   "new_revision": [],
+   "old_revision": [],
+   "status": "NOT_DETECTED_AS_PASSAGE_SITE",
+   "geometric_gap_between_face_ends_mm": 1196.4,
+   "why": "the passage's west jamb is the H471/H477 wall end, which is no established band (face fragmentation, see H2430); the east jamb (H2296/H2297) is a band end and is closed by the authorised zero-material closure",
+   "basis": "CORROBORATION_ONLY"
+  },
+  "QP-18": {
+   "HALL/LOBBY": "OPEN_PASSAGE_FULL_HEIGHT (no head, no soffit)",
+   "M.B.ROOM/DRESS": "OPEN_PASSAGE_WITH_HEAD (left, right and top reveals)",
+   "new_revision_head_in_source": "NOT_ESTABLISHED_IN_SOURCE (plan geometry carries no head)",
+   "basis": "CORROBORATION_ONLY: never transferred to the new revision as a claim"
+  },
+  "QP-19": {
+   "M.B.ROOM/DRESS_head_m": 2.2,
+   "basis": "CORROBORATION_ONLY (old revision)",
+   "soffit_guard": "if a head exists its soffit is an opening surface: never also ceiling area (Q-14) nor a room wall face"
+  }
+ },
+ "no_width_rule": "a 3.45 m strip and a 1.2 m strip are both recorded: the engine applies no size rule; what a trade does with a strip is an allocation rule (none exists: NOT_ALLOCATED)"
+}
