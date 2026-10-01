@@ -45,6 +45,11 @@
    "what": "run TS01 shadow on P7757 to test the door / glazing closure rules on a second drafting style (no change to its published outputs)"
   },
   {
+   "action_id": "ADMIT_BLOCK_HOSTED_BUILDING_GEOMETRY",
+   "status": "OPEN",
+   "what": "an evidence rule for walls inside an insert occurrence whose block definition is a building assembly (F-R88-18); until then such plans fail closed"
+  },
+  {
    "action_id": "RETIRE_QS01_FOR_ROUND1_ROWS",
    "status": "NOT_NOW",
    "what": "QS01 stays research/legacy; no migration while TS01 rows are blocked"

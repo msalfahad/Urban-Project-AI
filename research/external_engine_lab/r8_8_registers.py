@@ -91,6 +91,9 @@ def engineering_actions(regdir):
                 {"action_id": "TS01_SECOND_DRAWING_FAMILY_SHADOW", "status": "PROPOSED_NEXT_ROUND",
                  "what": "run TS01 shadow on P7757 to test the door / glazing closure rules on a second drafting style "
                          "(no change to its published outputs)"},
+                {"action_id": "ADMIT_BLOCK_HOSTED_BUILDING_GEOMETRY", "status": "OPEN",
+                 "what": "an evidence rule for walls inside an insert occurrence whose block definition is a building "
+                         "assembly (F-R88-18); until then such plans fail closed"},
                 {"action_id": "RETIRE_QS01_FOR_ROUND1_ROWS", "status": "NOT_NOW",
                  "what": "QS01 stays research/legacy; no migration while TS01 rows are blocked"}],
             "six_row_snapshot": {k: {r: v["state"] for r, v in rows.items()} for k, rows in six["rows"].items()}}
@@ -204,7 +207,11 @@ def decision_register(regdir):
             {"id": "F-R88-16", "finding": "any visible text inside a site counts as a label occurrence (conservative); "
                                           "no annotation text sits inside a Qortuba apartment room"},
             {"id": "F-R88-17", "finding": "no frozen / off layer exists in either Qortuba revision (both routes agree); "
-                                          "three unresolved dynamic blocks exist in the new file, none in the region"}],
+                                          "three unresolved dynamic blocks exist in the new file, none in the region"},
+            {"id": "F-R88-18", "finding": "walls drawn INSIDE a block occurrence (a plan inserted or xref-bound as a "
+                                          "block) are not admitted by GR-05 (model space only): such a plan fails "
+                                          "closed (UNKNOWN), it is never measured; an assembly-context rule is needed "
+                                          "before TS01 can read block-hosted plans (synthetic test, not a Qortuba case)"}],
         "post_freeze_changes": {"tolerance_numbers": "unchanged", "fixes": ["F-R88-08", "F-R88-09", "F-R88-10"],
                                 "freeze_commit": "9f77e4d"},
         "gates": {"MIGRATION_PLANNING_READY": "YES", "MIGRATION_EXECUTION_READY": "NO", "PRODUCTION_MIGRATION": "NO",

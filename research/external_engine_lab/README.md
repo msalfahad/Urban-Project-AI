@@ -105,5 +105,8 @@ bridges it to the legacy QS01 method. Owner decisions are scoped claims in `data
 | `r8_7_registers.py` | `tests/r8_7/registers/{QORTUBA_SOURCE_REVISION_REGISTER,OWNER_ACTION_REGISTER,OWNER_PROJECT_CLAIMS,CANONICAL_MEASUREMENT_INPUT_SCHEMA,R8_7_DECISION_REGISTER}.json` | revisions, owner actions V4, claim scope checks, schema, decisions / gates / findings |
 | `r8_7_dwg_anchor.py` | `tests/r8_7/registers/NEW_DWG_SOURCE_IDENTITY.json` | candidate original DWG vs the new-revision DXF with the pinned decoder; verdict by fixed rules, never forced |
 | `r8_7_package.py` | `data/reports/URBAN_QTO_R8_7_CANONICAL_INPUT/` + zip | review package from the registers and the final suite's junit |
+| `r8_8_topology.py` | `tests/r8_8/registers/{OLD_QORTUBA_CROSS_ROUTE,NEW_QORTUBA_TOPOLOGY,QORTUBA_SIX_ROW_STATUS,ELLIPSE_EXCLUSION_AUDIT,GEOMETRY_ROLE_REGISTER,VISIBILITY_AUTHORITY_REGISTER,REGION_MEMBERSHIP_POLICY,SITES_*}.json` | TS01 certified topology on old K1 / old K2 / new K2, cross-route control, six-row status (project semantics live here only) |
+| `r8_8_registers.py` | `tests/r8_8/registers/{OWNER_ACTION_REGISTER,ENGINEERING_ACTION_REGISTER,SOURCE_SUBPART_IDENTITY_SCHEMA,R8_8_DECISION_REGISTER}.json` | owner actions V5 (owner-doable only), engineering actions, decisions / findings / gates / answers |
+| `r8_8_package.py` | `data/reports/URBAN_QTO_R8_8_TOPOLOGY_STABILITY/` + zip | review package (17 md + 13 json + 2 site overlays) |
 
 `<work>` must hold `old_k2.pkl` (K2 on LibreDWG's DXF of the old DWG) and `new_k2.pkl` (K2 on the hash-addressed new DXF).

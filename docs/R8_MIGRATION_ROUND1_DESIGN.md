@@ -201,3 +201,37 @@ baseline approval. The work needed is:
 - route-stable tolerances, because one wall line differing by 4e-11 moves 1.6 m² between rooms;
 - separating furniture from walls by role;
 - refusing merged labelled spaces.
+
+## 9. R8.8 addendum — certified room topology (TS01) replaces the raster path in shadow
+
+**Why.** H584 showed that the legacy QS01 path — a raster grid, exact axis predicates and band heuristics — moved
+1.64 m² between rooms because of a 4.4e-11 coordinate difference between two routes reading the same DWG. A better
+decoder cannot fix that sensitivity, so QS01 stays research/legacy.
+
+**Pipeline.**
+
+    canonical input --validate(TS01)--> role admission --> opening closures --> certified topology --> sites
+
+**Modules** (in `engine/source`, project-agnostic):
+
+| Module | Role |
+|---|---|
+| `region_membership.py` | Exact curve membership; no sampling. |
+| `geometry_role.py` | Frozen evidence policy (GR-01..GR-16, GR-99): only positively admitted geometry bounds a room; unknown geometry blocks the sites it touches. |
+| `topology_policy.py` | TOPOLOGY_TOLERANCE_POLICY_V1: eps_n = 2^-30 × max\|coord\|, eps_r = 1 mm via the unit claim. A site counts only if it is identical at both. No axis predicate exists. |
+| `topology.py` | Exact planar arrangement, holes, source-identity site ids, label occurrences, door / glazing closures, exact probe location. |
+| `room_topology.py` | The TS01 contract and runner, plus accounting for unrealised source entities. |
+
+**Identity, visibility and exclusions.**
+- Source sub-part identity comes from the kernels (`Lineage.sub_part`), not from output order.
+- Visibility is an authority for every record type.
+- Method exclusions need role authority (`MethodExclusion`).
+
+**Qortuba results.**
+- **Old revision, two routes:** identical topology — 75 sites, ΔA ≤ 6e-11 m².
+  - Q-03 / Q-11 = 17.7425 and Q-03P / Q-12 = 11.685, certified.
+  - Q-13 and Q-14 are blocked.
+- **New revision:** Q-03P / Q-12 = 11.685; all other rows blocked.
+- **Package:** `data/reports/URBAN_QTO_R8_8_TOPOLOGY_STABILITY/`.
+
+**Gates.** No migration: MIGRATION_EXECUTION_READY = NO, PRODUCTION_MIGRATION = NO.

@@ -119,6 +119,10 @@
   {
    "id": "F-R88-17",
    "finding": "no frozen / off layer exists in either Qortuba revision (both routes agree); three unresolved dynamic blocks exist in the new file, none in the region"
+  },
+  {
+   "id": "F-R88-18",
+   "finding": "walls drawn INSIDE a block occurrence (a plan inserted or xref-bound as a block) are not admitted by GR-05 (model space only): such a plan fails closed (UNKNOWN), it is never measured; an assembly-context rule is needed before TS01 can read block-hosted plans (synthetic test, not a Qortuba case)"
   }
  ],
  "post_freeze_changes": {
