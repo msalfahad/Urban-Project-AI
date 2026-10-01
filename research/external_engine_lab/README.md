@@ -61,3 +61,11 @@ Run order: qualification → regions → shadow_diff → (final suite) → packa
 | `r8_5_qualification.py` | `CAPABILITY_SIGNATURE_REGISTER.json`, `DECODER_QUALIFICATION_V2.json`, `INDEPENDENT_RECONCILIATION_RESULTS.json` | target signatures, V2 records, DXF search |
 | `r8_5_value_shadow.py` | `SHADOW_VALUE_DIFF.json`, `CANONICAL_SHADOW_QUANTITIES.json`, `REAL_PROJECT_R8_5_STATUS.json` | canonical remeasurement (Qortuba), canonical status (P7757), native cross-check (Al Rashed) |
 | `r8_5_package.py` | `data/reports/URBAN_QTO_R8_5_VALUE_SHADOW/` + zip | review package from the outputs and the final suite's junit |
+
+### R8.5 follow-up (no independent DXF required)
+
+| script | writes (tests/r8_5/registers/) | purpose |
+|---|---|---|
+| `r8_5_export_intake.py` | `R8_INDEPENDENT_EXPORT_INTAKE.json` | admission + measured verification of supplied DXFs (the two ezdxf DXFs: DIAGNOSTIC_NONQUALIFYING_CONVERSION) |
+| `r8_5_adapter_defect.py` | `R8_ADAPTER_DEFECT_CLOSED_FLAG.json` | active-path defect report (project reader closed bit); reported, not fixed |
+| `r8_5_migration_round1_scope.py` | `R8_MIGRATION_ROUND1_SCOPE.json` | scope of the design-only migration round 1 (`docs/R8_MIGRATION_ROUND1_DESIGN.md`) |
