@@ -1,0 +1,2898 @@
+{
+ "SCHEMA": "URBAN_R8_14_BLIND_QORTUBA_V5_RESULT_V1",
+ "freeze": "926eb243dda5c0af559244f298a17683061fa67a",
+ "wall_band_policy": {
+  "id": "WALL_BAND_POLICY_V5",
+  "digest": "d1ff58e755bb88f4bbb7a9813427b7ac6f054ece851df7d9a048866641f3e6d3"
+ },
+ "blind": {
+  "owner_fact_used": false,
+  "floor_fact_used": false,
+  "finish_fact_used": false,
+  "expected_h2430_given": false,
+  "expected_q14_given": false,
+  "historical_totals_given": false,
+  "inputs": [
+   "canonical inputs (both revisions)",
+   "R8.10 TS01 claims (7116-7119, xref occurrences)",
+   "the frozen engine"
+  ]
+ },
+ "NEW_K2": {
+  "counts": {
+   "chains": 149,
+   "assemblies": 55,
+   "established": 44,
+   "spans": 63,
+   "closures": 2,
+   "authorised": 2,
+   "passages": 5
+  },
+  "watched_bands": [
+   {
+    "band_id": "WB-0644b40d07c861d6",
+    "state": "WALL_BAND_ESTABLISHED",
+    "faces": [
+     "470",
+     "471",
+     "477"
+    ],
+    "width_mm": 200.0,
+    "interval": [
+     109308.0817,
+     109773.7561
+    ],
+    "intervals": [
+     {
+      "class": "WALL_BAND_SPAN",
+      "role": null,
+      "s": [
+       109308.081745,
+       109443.081745
+      ],
+      "by": []
+     },
+     {
+      "class": "OBSTACLE_OVERLAP",
+      "role": "STRUCTURAL_OBSTACLE",
+      "s": [
+       109443.081745,
+       109583.081745
+      ],
+      "by": [
+       "718",
+       "718"
+      ]
+     },
+     {
+      "class": "WALL_BAND_SPAN",
+      "role": null,
+      "s": [
+       109583.081745,
+       109773.756121
+      ],
+      "by": []
+     }
+    ],
+    "ends": [
+     {
+      "end": 0,
+      "kind": "RECEIVING_FACE_JUNCTION",
+      "faces": [
+       "470",
+       "477"
+      ],
+      "caps": []
+     },
+     {
+      "end": 1,
+      "kind": "ALIGNED_FREE_END",
+      "faces": [
+       "471",
+       "477"
+      ],
+      "caps": [
+       {
+        "source": "2430",
+        "role": "DIMENSION_GRAPHICS",
+        "grade": "WALL_END_CAP_PROVEN",
+        "gap_mm": [
+         0.0,
+         0.0
+        ]
+       }
+      ]
+     }
+    ],
+    "spans": [
+     "BS-fce81abef769d019",
+     "BS-5a479a903e48863d"
+    ],
+    "span_records": [
+     {
+      "span_id": "BS-fce81abef769d019",
+      "s": [
+       109308.0817,
+       109443.0817
+      ],
+      "source_intervals": [
+       {
+        "source": "477",
+        "parameter_interval": [
+         0.0,
+         135.0
+        ],
+        "source_length": 465.674376
+       },
+       {
+        "source": "470",
+        "parameter_interval": [
+         0.0,
+         135.0
+        ],
+        "source_length": 300.0
+       }
+      ]
+     },
+     {
+      "span_id": "BS-5a479a903e48863d",
+      "s": [
+       109583.0817,
+       109773.7561
+      ],
+      "source_intervals": [
+       {
+        "source": "477",
+        "parameter_interval": [
+         275.0,
+         465.674376
+        ],
+        "source_length": 465.674376
+       },
+       {
+        "source": "470",
+        "parameter_interval": [
+         275.0,
+         300.0
+        ],
+        "source_length": 300.0
+       },
+       {
+        "source": "471",
+        "parameter_interval": [
+         0.0,
+         165.674376
+        ],
+        "source_length": 165.674376
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "band_id": "WB-6c882c7cafa843e5",
+    "state": "WALL_BAND_ESTABLISHED",
+    "faces": [
+     "2296",
+     "2297"
+    ],
+    "width_mm": 200.0,
+    "interval": [
+     109893.4009,
+     110218.0817
+    ],
+    "intervals": [
+     {
+      "class": "WALL_BAND_SPAN",
+      "role": null,
+      "s": [
+       109893.400852,
+       110218.081745
+      ],
+      "by": []
+     }
+    ],
+    "ends": [
+     {
+      "end": 0,
+      "kind": "ALIGNED_FREE_END",
+      "faces": [
+       "2296",
+       "2297"
+      ],
+      "caps": [
+       {
+        "source": "2431",
+        "role": "DIMENSION_GRAPHICS",
+        "grade": "WALL_END_CAP_CANDIDATE",
+        "gap_mm": [
+         9.2,
+         0.49
+        ]
+       }
+      ]
+     },
+     {
+      "end": 1,
+      "kind": "RECEIVING_FACE_JUNCTION",
+      "faces": [
+       "2296",
+       "2297"
+      ],
+      "caps": []
+     }
+    ],
+    "spans": [
+     "BS-880387e32f3c7851"
+    ],
+    "span_records": [
+     {
+      "span_id": "BS-880387e32f3c7851",
+      "s": [
+       109893.4009,
+       110218.0817
+      ],
+      "source_intervals": [
+       {
+        "source": "2297",
+        "parameter_interval": [
+         0.0,
+         324.680893
+        ],
+        "source_length": 324.680893
+       },
+       {
+        "source": "2296",
+        "parameter_interval": [
+         0.0,
+         324.680893
+        ],
+        "source_length": 324.680893
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "watched_chains": [
+   {
+    "chain_id": "FC-45a9b018c97e1832",
+    "fragments": [
+     "477"
+    ],
+    "nodes": [
+     {
+      "kind": "BRANCH_NODE",
+      "s": 109443.081744984,
+      "point": [
+       109443.081745,
+       15049.719614
+      ],
+      "by": "718",
+      "between": []
+     },
+     {
+      "kind": "BRANCH_NODE",
+      "s": 109583.0817449839,
+      "point": [
+       109583.081745,
+       15049.719614
+      ],
+      "by": "718",
+      "between": []
+     },
+     {
+      "kind": "BRANCH_NODE",
+      "s": 109593.081744984,
+      "point": [
+       109593.081745,
+       15049.719614
+      ],
+      "by": "535",
+      "between": []
+     },
+     {
+      "kind": "BRANCH_NODE",
+      "s": 109608.0817449839,
+      "point": [
+       109608.081745,
+       15049.719614
+      ],
+      "by": "543",
+      "between": []
+     }
+    ]
+   },
+   {
+    "chain_id": "FC-83c1246271ec3e10",
+    "fragments": [
+     "2297"
+    ],
+    "nodes": [
+     {
+      "kind": "BRANCH_NODE",
+      "s": 109988.081744984,
+      "point": [
+       109988.081745,
+       15049.719614
+      ],
+      "by": "551",
+      "between": []
+     }
+    ]
+   },
+   {
+    "chain_id": "FC-861f9599996a9030",
+    "fragments": [
+     "2296"
+    ],
+    "nodes": [
+     {
+      "kind": "BRANCH_NODE",
+      "s": 109928.081744984,
+      "point": [
+       109928.081745,
+       15029.719614
+      ],
+      "by": "7118",
+      "between": []
+     },
+     {
+      "kind": "BRANCH_NODE",
+      "s": 109943.0817449839,
+      "point": [
+       109943.081745,
+       15029.719614
+      ],
+      "by": "7119",
+      "between": []
+     }
+    ]
+   },
+   {
+    "chain_id": "FC-a0d9063d437ff3c3",
+    "fragments": [
+     "470",
+     "471"
+    ],
+    "nodes": [
+     {
+      "kind": "BRANCH_NODE",
+      "s": 109443.081744984,
+      "point": [
+       109443.081745,
+       15029.719614
+      ],
+      "by": "718",
+      "between": []
+     },
+     {
+      "kind": "BRANCH_NODE",
+      "s": 109583.0817449839,
+      "point": [
+       109583.081745,
+       15029.719614
+      ],
+      "by": "718",
+      "between": []
+     },
+     {
+      "kind": "BRANCH_NODE",
+      "s": 109608.081744984,
+      "point": [
+       109608.081745,
+       15029.719614
+      ],
+      "between": [
+       "470",
+       "471"
+      ],
+      "by": null
+     },
+     {
+      "kind": "BRANCH_NODE",
+      "s": 109623.0817449839,
+      "point": [
+       109623.081745,
+       15029.719614
+      ],
+      "by": "7116",
+      "between": []
+     }
+    ]
+   }
+  ],
+  "closures": [
+   {
+    "closure_id": "TC-1013dbb787e56f65",
+    "band_id": "WB-0644b40d07c861d6",
+    "release": "AUTHORISED_FOR_SHADOW",
+    "geometry": [
+     109773.7561,
+     15029.7196,
+     109773.7561,
+     15049.7196
+    ],
+    "evidence": [
+     "471",
+     "477",
+     "2430"
+    ],
+    "material": "NONE",
+    "safety": {
+     "label_partition_unchanged": true,
+     "area_balance_ok": true,
+     "passes": true,
+     "separated_pieces": [
+      {
+       "area_m2": 0.3813,
+       "pure_band_interior": true,
+       "boundary": [
+        "470",
+        "471",
+        "477",
+        "718",
+        "TCLOSURE|TC-1013dbb787e56f65"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "closure_id": "TC-5f9f2014f83ab0d4",
+    "band_id": "WB-6c882c7cafa843e5",
+    "release": "AUTHORISED_FOR_SHADOW",
+    "geometry": [
+     109893.4009,
+     15029.7196,
+     109893.4009,
+     15049.7196
+    ],
+    "evidence": [
+     "2296",
+     "2297",
+     "2431"
+    ],
+    "material": "NONE",
+    "safety": {
+     "label_partition_unchanged": true,
+     "area_balance_ok": true,
+     "passes": true,
+     "separated_pieces": [
+      {
+       "area_m2": 0.6494,
+       "pure_band_interior": true,
+       "boundary": [
+        "2296",
+        "2297",
+        "549",
+        "TCLOSURE|TC-5f9f2014f83ab0d4"
+       ]
+      }
+     ]
+    }
+   }
+  ],
+  "passages": [
+   {
+    "passage_id": "OP-0165f08fad9e3b42",
+    "band_id": "WB-2516d4915f702ebd",
+    "end_kind": "CAPPED",
+    "target": "489",
+    "width_mm": 1200.0,
+    "thickness_mm": 100.0,
+    "strip_in_site": "SITE-788f30878ba9d2b3"
+   },
+   {
+    "passage_id": "OP-35e4f04842d93fd7",
+    "band_id": "WB-2516d4915f702ebd",
+    "end_kind": "CAPPED",
+    "target": "573",
+    "width_mm": 1200.0,
+    "thickness_mm": 100.0,
+    "strip_in_site": "SITE-788f30878ba9d2b3"
+   },
+   {
+    "passage_id": "OP-997f14d12b8e9bc1",
+    "band_id": "WB-0644b40d07c861d6",
+    "end_kind": "ALIGNED_FREE_END",
+    "target": "BANDEND|WB-6c882c7cafa843e5|0",
+    "width_mm": 1196.45,
+    "thickness_mm": 200.0,
+    "strip_in_site": "SITE-fdfa89fe0f5809a4"
+   },
+   {
+    "passage_id": "OP-9e0fd219ca5cd391",
+    "band_id": "WB-8549cc78e5a3af40",
+    "end_kind": "CAPPED",
+    "target": "518",
+    "width_mm": 1200.0,
+    "thickness_mm": 150.0,
+    "strip_in_site": "SITE-a6405850100155ac"
+   },
+   {
+    "passage_id": "OP-a136ccb3608d1bff",
+    "band_id": "WB-8478ffb53dccd5c4",
+    "end_kind": "CAPPED",
+    "target": "BANDEND|WB-12ea196dd7f4dcf0|0",
+    "width_mm": 900.0,
+    "thickness_mm": 150.0,
+    "strip_in_site": "SITE-788f30878ba9d2b3"
+   }
+  ],
+  "hall": {
+   "site": "SITE-fdfa89fe0f5809a4",
+   "area_m2": 42.7993,
+   "issues": [
+    "ROLE_CONFLICT_SEPARATOR",
+    "TOPOLOGY_ROLE_UNRESOLVED"
+   ]
+  },
+  "labelled_sites": [
+   [
+    42.7993,
+    [
+     "HALL",
+     "whgm"
+    ]
+   ],
+   [
+    33.2,
+    [
+     "DRESS",
+     "M.B.ROOM",
+     "k,LVzdsD",
+     "lBfS"
+    ]
+   ],
+   [
+    19.2725,
+    [
+     "BED.ROOM",
+     "yvtmk,L"
+    ]
+   ],
+   [
+    16.327,
+    [
+     "BED.ROOM",
+     "yvtmk,L"
+    ]
+   ],
+   [
+    11.685,
+    [
+     "PAINTRY",
+     "jpqdV"
+    ]
+   ],
+   [
+    8.5525,
+    [
+     "BATH",
+     "plHL"
+    ]
+   ],
+   [
+    5.1,
+    [
+     "BATH",
+     "plHL"
+    ]
+   ],
+   [
+    4.09,
+    [
+     "BATH",
+     "plHL"
+    ]
+   ]
+  ],
+  "run_input_digest": "4bd11660f9b6679007584a104aa28b59b2d4440d88bfcf99055b6eab89d74927",
+  "v4": {
+   "chain_id_collisions": [],
+   "chains_line_disambiguated": [
+    [
+     "2060|0"
+    ],
+    [
+     "2060|1"
+    ],
+    [
+     "2060|2"
+    ],
+    [
+     "2060|3"
+    ],
+    [
+     "2061|0"
+    ],
+    [
+     "2061|1"
+    ],
+    [
+     "2061|2"
+    ],
+    [
+     "2061|3"
+    ]
+   ],
+   "band_ids_unique": true,
+   "chain_ids_unique": true,
+   "support_counts": {
+    "SELF_SUPPORTED": 55,
+    "INHERITED_SUPPORT": 0
+   },
+   "inherited": [],
+   "unsupported_runs": 5,
+   "boundary_cases": [],
+   "geometric_candidates": [
+    {
+     "band_id": "WB-1f25031a72c046df",
+     "faces": [
+      "2060",
+      "2061"
+     ],
+     "width_mm": 100.0,
+     "authority": {
+      "state": "WALL_BAND_GEOMETRIC_CANDIDATE",
+      "why": "ISOLATED_CLOSED_LOOP",
+      "entities": [
+       "QORTUBA_REV_NEW|H2060||SEGMENT",
+       "QORTUBA_REV_NEW|H2061||SEGMENT"
+      ]
+     }
+    },
+    {
+     "band_id": "WB-58b032f7787ee215",
+     "faces": [
+      "2060",
+      "2061"
+     ],
+     "width_mm": 100.0,
+     "authority": {
+      "state": "WALL_BAND_GEOMETRIC_CANDIDATE",
+      "why": "ISOLATED_CLOSED_LOOP",
+      "entities": [
+       "QORTUBA_REV_NEW|H2060||SEGMENT",
+       "QORTUBA_REV_NEW|H2061||SEGMENT"
+      ]
+     }
+    },
+    {
+     "band_id": "WB-7a4329bf22b71dce",
+     "faces": [
+      "2060",
+      "2061"
+     ],
+     "width_mm": 100.0,
+     "authority": {
+      "state": "WALL_BAND_GEOMETRIC_CANDIDATE",
+      "why": "ISOLATED_CLOSED_LOOP",
+      "entities": [
+       "QORTUBA_REV_NEW|H2060||SEGMENT",
+       "QORTUBA_REV_NEW|H2061||SEGMENT"
+      ]
+     }
+    },
+    {
+     "band_id": "WB-9829fe007133f3cf",
+     "faces": [
+      "2060",
+      "2061"
+     ],
+     "width_mm": 100.0,
+     "authority": {
+      "state": "WALL_BAND_GEOMETRIC_CANDIDATE",
+      "why": "ISOLATED_CLOSED_LOOP",
+      "entities": [
+       "QORTUBA_REV_NEW|H2060||SEGMENT",
+       "QORTUBA_REV_NEW|H2061||SEGMENT"
+      ]
+     }
+    }
+   ],
+   "isolated_loops": [
+    "2060",
+    "2061"
+   ],
+   "physical_authority_entities": [
+    "7116",
+    "7117",
+    "7118",
+    "7119"
+   ],
+   "unsupported_touching_r8_12_findings": [
+    {
+     "chain_a": [
+      "584"
+     ],
+     "chain_b": [
+      "574"
+     ],
+     "s": [
+      110738.081745,
+      110753.081745
+     ],
+     "local_run": 15.000000000087311,
+     "separation": 180.0,
+     "raw_chain_overlap": 215.0000000000873,
+     "state": "UNSUPPORTED",
+     "reason": "NOT_ELONGATED_LOCAL_RUN",
+     "means": "NON_AUTHORITATIVE_PAIR_RUN: no band, no passage, no ambiguity"
+    },
+    {
+     "chain_a": [
+      "2060"
+     ],
+     "chain_b": [
+      "2060"
+     ],
+     "s": [
+      109828.172762,
+      109838.172762
+     ],
+     "local_run": 10.0,
+     "separation": 40.0,
+     "raw_chain_overlap": 210.0,
+     "state": "UNSUPPORTED",
+     "reason": "NOT_ELONGATED_LOCAL_RUN",
+     "means": "NON_AUTHORITATIVE_PAIR_RUN: no band, no passage, no ambiguity"
+    },
+    {
+     "chain_a": [
+      "2060"
+     ],
+     "chain_b": [
+      "2060"
+     ],
+     "s": [
+      110028.172762,
+      110038.172762
+     ],
+     "local_run": 10.0,
+     "separation": 40.0,
+     "raw_chain_overlap": 210.0,
+     "state": "UNSUPPORTED",
+     "reason": "NOT_ELONGATED_LOCAL_RUN",
+     "means": "NON_AUTHORITATIVE_PAIR_RUN: no band, no passage, no ambiguity"
+    },
+    {
+     "chain_a": [
+      "2060"
+     ],
+     "chain_b": [
+      "552"
+     ],
+     "s": [
+      14549.719614,
+      14559.719614
+     ],
+     "local_run": 10.0,
+     "separation": 20.091016828402644,
+     "raw_chain_overlap": 40.0,
+     "state": "UNSUPPORTED",
+     "reason": "NOT_ELONGATED_LOCAL_RUN",
+     "means": "NON_AUTHORITATIVE_PAIR_RUN: no band, no passage, no ambiguity"
+    },
+    {
+     "chain_a": [
+      "2060"
+     ],
+     "chain_b": [
+      "552"
+     ],
+     "s": [
+      14579.719614,
+      14589.719614
+     ],
+     "local_run": 10.0,
+     "separation": 20.091016828402644,
+     "raw_chain_overlap": 40.0,
+     "state": "UNSUPPORTED",
+     "reason": "NOT_ELONGATED_LOCAL_RUN",
+     "means": "NON_AUTHORITATIVE_PAIR_RUN: no band, no passage, no ambiguity"
+    }
+   ],
+   "bands_touching_r8_12_findings": [
+    {
+     "band_id": "WB-181d009d08c60317",
+     "state": "WALL_BAND_ESTABLISHED",
+     "faces": [
+      "552",
+      "555"
+     ],
+     "width_mm": 150.0,
+     "interval": [
+      14859.7196,
+      14894.7196
+     ],
+     "intervals": [
+      {
+       "class": "WALL_BAND_SPAN",
+       "role": null,
+       "s": [
+        14859.719614,
+        14894.719614
+       ],
+       "by": []
+      }
+     ],
+     "ends": [
+      {
+       "end": 0,
+       "kind": "JUNCTION_OR_CONTINUATION",
+       "faces": [],
+       "caps": []
+      },
+      {
+       "end": 1,
+       "kind": "JUNCTION_OR_CONTINUATION",
+       "faces": [],
+       "caps": []
+      }
+     ],
+     "spans": [
+      "BS-6bcb1637eb5c53d8"
+     ]
+    },
+    {
+     "band_id": "WB-1f25031a72c046df",
+     "state": "WALL_BAND_GEOMETRIC_CANDIDATE",
+     "faces": [
+      "2060",
+      "2061"
+     ],
+     "width_mm": 100.0,
+     "interval": [
+      14559.7196,
+      14579.7196
+     ],
+     "intervals": [
+      {
+       "class": "WALL_BAND_SPAN",
+       "role": null,
+       "s": [
+        14559.719614,
+        14579.719614
+       ],
+       "by": []
+      }
+     ],
+     "ends": [],
+     "spans": [
+      "BS-01ebadf7e15e331d"
+     ]
+    },
+    {
+     "band_id": "WB-26ff7ba493e35000",
+     "state": "WALL_BAND_ESTABLISHED",
+     "faces": [
+      "459",
+      "464"
+     ],
+     "width_mm": 200.0,
+     "interval": [
+      14859.7196,
+      15029.7196
+     ],
+     "intervals": [
+      {
+       "class": "WALL_BAND_SPAN",
+       "role": null,
+       "s": [
+        14859.719614,
+        15029.719614
+       ],
+       "by": []
+      }
+     ],
+     "ends": [
+      {
+       "end": 0,
+       "kind": "JUNCTION_OR_CONTINUATION",
+       "faces": [],
+       "caps": []
+      },
+      {
+       "end": 1,
+       "kind": "JUNCTION_OR_CONTINUATION",
+       "faces": [],
+       "caps": []
+      }
+     ],
+     "spans": [
+      "BS-17604081a93069c9"
+     ]
+    },
+    {
+     "band_id": "WB-2ffd1d736689c8c8",
+     "state": "WALL_BAND_ESTABLISHED",
+     "faces": [
+      "552",
+      "554"
+     ],
+     "width_mm": 210.14,
+     "interval": [
+      14494.7196,
+      14549.7196
+     ],
+     "intervals": [
+      {
+       "class": "WALL_BAND_SPAN",
+       "role": null,
+       "s": [
+        14494.719614,
+        14549.719614
+       ],
+       "by": []
+      }
+     ],
+     "ends": [
+      {
+       "end": 0,
+       "kind": "RECEIVING_FACE_JUNCTION",
+       "faces": [
+        "552",
+        "554"
+       ],
+       "caps": []
+      },
+      {
+       "end": 1,
+       "kind": "JUNCTION_OR_CONTINUATION",
+       "faces": [],
+       "caps": []
+      }
+     ],
+     "spans": [
+      "BS-3033bc3010d82519"
+     ]
+    },
+    {
+     "band_id": "WB-4262b664fe5e76f1",
+     "state": "WALL_BAND_ESTABLISHED",
+     "faces": [
+      "459",
+      "460"
+     ],
+     "width_mm": 200.0,
+     "interval": [
+      15689.7196,
+      16024.7196
+     ],
+     "intervals": [
+      {
+       "class": "WALL_BAND_SPAN",
+       "role": null,
+       "s": [
+        15689.719614,
+        16024.719614
+       ],
+       "by": []
+      }
+     ],
+     "ends": [
+      {
+       "end": 0,
+       "kind": "JUNCTION_OR_CONTINUATION",
+       "faces": [],
+       "caps": []
+      },
+      {
+       "end": 1,
+       "kind": "JUNCTION_OR_CONTINUATION",
+       "faces": [],
+       "caps": []
+      }
+     ],
+     "spans": [
+      "BS-d3c476a930ffca22"
+     ]
+    },
+    {
+     "band_id": "WB-53dc1053f942880e",
+     "state": "WALL_BAND_ESTABLISHED",
+     "faces": [
+      "583",
+      "584"
+     ],
+     "width_mm": 150.0,
+     "interval": [
+      110538.0817,
+      110738.0817
+     ],
+     "intervals": [
+      {
+       "class": "WALL_BAND_SPAN",
+       "role": null,
+       "s": [
+        110538.081745,
+        110738.081745
+       ],
+       "by": []
+      }
+     ],
+     "ends": [
+      {
+       "end": 0,
+       "kind": "RECEIVING_FACE_JUNCTION",
+       "faces": [
+        "583",
+        "584"
+       ],
+       "caps": []
+      },
+      {
+       "end": 1,
+       "kind": "JUNCTION_OR_CONTINUATION",
+       "faces": [],
+       "caps": []
+      }
+     ],
+     "spans": [
+      "BS-05f92cdb31dc7fb3"
+     ]
+    },
+    {
+     "band_id": "WB-58b032f7787ee215",
+     "state": "WALL_BAND_GEOMETRIC_CANDIDATE",
+     "faces": [
+      "2060",
+      "2061"
+     ],
+     "width_mm": 100.0,
+     "interval": [
+      14559.7196,
+      14579.7196
+     ],
+     "intervals": [
+      {
+       "class": "WALL_BAND_SPAN",
+       "role": null,
+       "s": [
+        14559.719614,
+        14579.719614
+       ],
+       "by": []
+      }
+     ],
+     "ends": [],
+     "spans": [
+      "BS-0ec2c6a26ff00e5a"
+     ]
+    },
+    {
+     "band_id": "WB-6cb8336cff975ff2",
+     "state": "WALL_BAND_ESTABLISHED",
+     "faces": [
+      "1672",
+      "459"
+     ],
+     "width_mm": 550.0,
+     "interval": [
+      14494.7196,
+      14559.7196
+     ],
+     "intervals": [
+      {
+       "class": "WALL_BAND_SPAN",
+       "role": null,
+       "s": [
+        14494.719614,
+        14559.719614
+       ],
+       "by": []
+      }
+     ],
+     "ends": [
+      {
+       "end": 0,
+       "kind": "JUNCTION_OR_CONTINUATION",
+       "faces": [],
+       "caps": []
+      },
+      {
+       "end": 1,
+       "kind": "JUNCTION_OR_CONTINUATION",
+       "faces": [],
+       "caps": []
+      }
+     ],
+     "spans": [
+      "BS-dde9ee144c1ad438"
+     ]
+    },
+    {
+     "band_id": "WB-74f68d3eaf3b41d9",
+     "state": "WALL_BAND_AMBIGUOUS",
+     "faces": [
+      "552",
+      "554"
+     ],
+     "width_mm": 210.14,
+     "interval": [
+      14589.7196,
+      14844.7196
+     ],
+     "intervals": [
+      {
+       "class": "OBSTACLE_OVERLAP",
+       "role": "STRUCTURAL_OBSTACLE",
+       "s": [
+        14589.719614,
+        14589.819614
+       ],
+       "by": []
+      },
+      {
+       "class": "AMBIGUOUS_CENTRELINE",
+       "role": null,
+       "s": [
+        14589.819614,
+        14619.719614
+       ],
+       "by": []
+      },
+      {
+       "class": "WALL_BAND_SPAN",
+       "role": null,
+       "s": [
+        14619.719614,
+        14844.719614
+       ],
+       "by": []
+      }
+     ],
+     "ends": [],
+     "spans": [
+      "BS-d7fed812c11fa7bd"
+     ]
+    },
+    {
+     "band_id": "WB-772a3698e828114c",
+     "state": "WALL_BAND_ESTABLISHED",
+     "faces": [
+      "546",
+      "549"
+     ],
+     "width_mm": 150.0,
+     "interval": [
+      14529.7196,
+      15099.7196
+     ],
+     "intervals": [
+      {
+       "class": "WALL_BAND_SPAN",
+       "role": null,
+       "s": [
+        14529.719614,
+        15054.719614
+       ],
+       "by": []
+      },
+      {
+       "class": "OBSTACLE_OVERLAP",
+       "role": "STRUCTURAL_OBSTACLE",
+       "s": [
+        15054.719614,
+        15099.719614
+       ],
+       "by": [
+        "704"
+       ]
+      }
+     ],
+     "ends": [
+      {
+       "end": 0,
+       "kind": "JUNCTION_OR_CONTINUATION",
+       "faces": [],
+       "caps": []
+      },
+      {
+       "end": 1,
+       "kind": "JUNCTION_OR_CONTINUATION",
+       "faces": [],
+       "caps": []
+      }
+     ],
+     "spans": [
+      "BS-a0c916715c032770"
+     ]
+    },
+    {
+     "band_id": "WB-7a4329bf22b71dce",
+     "state": "WALL_BAND_GEOMETRIC_CANDIDATE",
+     "faces": [
+      "2060",
+      "2061"
+     ],
+     "width_mm": 100.0,
+     "interval": [
+      109838.1728,
+      110028.1728
+     ],
+     "intervals": [
+      {
+       "class": "WALL_BAND_SPAN",
+       "role": null,
+       "s": [
+        109838.172762,
+        110028.172762
+       ],
+       "by": []
+      }
+     ],
+     "ends": [],
+     "spans": [
+      "BS-908795ce0e2d7282"
+     ]
+    },
+    {
+     "band_id": "WB-86d1b08c4353aa58",
+     "state": "WALL_BAND_AMBIGUOUS",
+     "faces": [
+      "459",
+      "469"
+     ],
+     "width_mm": 200.0,
+     "interval": [
+      14619.7196,
+      14844.7196
+     ],
+     "intervals": [
+      {
+       "class": "WALL_BAND_SPAN",
+       "role": null,
+       "s": [
+        14619.719614,
+        14679.719614
+       ],
+       "by": []
+      },
+      {
+       "class": "AMBIGUOUS_CENTRELINE",
+       "role": null,
+       "s": [
+        14679.719614,
+        14813.948318
+       ],
+       "by": []
+      },
+      {
+       "class": "WALL_BAND_SPAN",
+       "role": null,
+       "s": [
+        14813.948318,
+        14844.719614
+       ],
+       "by": []
+      }
+     ],
+     "ends": [],
+     "spans": [
+      "BS-83ba48008c2f729f",
+      "BS-0d9a0626a2552c6d"
+     ]
+    },
+    {
+     "band_id": "WB-9829fe007133f3cf",
+     "state": "WALL_BAND_GEOMETRIC_CANDIDATE",
+     "faces": [
+      "2060",
+      "2061"
+     ],
+     "width_mm": 100.0,
+     "interval": [
+      109838.1728,
+      110028.1728
+     ],
+     "intervals": [
+      {
+       "class": "WALL_BAND_SPAN",
+       "role": null,
+       "s": [
+        109838.172762,
+        110028.172762
+       ],
+       "by": []
+      }
+     ],
+     "ends": [],
+     "spans": [
+      "BS-d351850bea48e8c7"
+     ]
+    },
+    {
+     "band_id": "WB-b0142e06e6c19f2b",
+     "state": "WALL_BAND_ESTABLISHED",
+     "faces": [
+      "459",
+      "462"
+     ],
+     "width_mm": 200.0,
+     "interval": [
+      15474.7196,
+      15574.7196
+     ],
+     "intervals": [
+      {
+       "class": "WALL_BAND_SPAN",
+       "role": null,
+       "s": [
+        15474.719614,
+        15574.719614
+       ],
+       "by": []
+      }
+     ],
+     "ends": [
+      {
+       "end": 0,
+       "kind": "JUNCTION_OR_CONTINUATION",
+       "faces": [],
+       "caps": []
+      },
+      {
+       "end": 1,
+       "kind": "JUNCTION_OR_CONTINUATION",
+       "faces": [],
+       "caps": []
+      }
+     ],
+     "spans": [
+      "BS-a270b09672be8bdc"
+     ]
+    },
+    {
+     "band_id": "WB-bc1439ae67e4ecc3",
+     "state": "WALL_BAND_ESTABLISHED",
+     "faces": [
+      "572",
+      "574"
+     ],
+     "width_mm": 150.0,
+     "interval": [
+      110488.0817,
+      110523.0817
+     ],
+     "intervals": [
+      {
+       "class": "WALL_BAND_SPAN",
+       "role": null,
+       "s": [
+        110488.081745,
+        110523.081745
+       ],
+       "by": []
+      }
+     ],
+     "ends": [
+      {
+       "end": 0,
+       "kind": "OPENING_JAMB",
+       "faces": [
+        "572",
+        "574"
+       ],
+       "caps": []
+      },
+      {
+       "end": 1,
+       "kind": "JUNCTION_OR_CONTINUATION",
+       "faces": [],
+       "caps": []
+      }
+     ],
+     "spans": [
+      "BS-4353d4c4d5264cf7"
+     ]
+    },
+    {
+     "band_id": "WB-c3d22fad3fc41634",
+     "state": "WALL_BAND_ESTABLISHED",
+     "faces": [
+      "571",
+      "574"
+     ],
+     "width_mm": 150.0,
+     "interval": [
+      110538.0817,
+      110738.0817
+     ],
+     "intervals": [
+      {
+       "class": "WALL_BAND_SPAN",
+       "role": null,
+       "s": [
+        110538.081745,
+        110738.081745
+       ],
+       "by": []
+      }
+     ],
+     "ends": [
+      {
+       "end": 0,
+       "kind": "JUNCTION_OR_CONTINUATION",
+       "faces": [],
+       "caps": []
+      },
+      {
+       "end": 1,
+       "kind": "JUNCTION_OR_CONTINUATION",
+       "faces": [],
+       "caps": []
+      }
+     ],
+     "spans": [
+      "BS-e9fa4b9d95b59dfa"
+     ]
+    },
+    {
+     "band_id": "WB-db6cc62117bf89a7",
+     "state": "WALL_BAND_ESTABLISHED",
+     "faces": [
+      "459",
+      "461"
+     ],
+     "width_mm": 200.0,
+     "interval": [
+      15634.7196,
+      15674.7196
+     ],
+     "intervals": [
+      {
+       "class": "WALL_BAND_SPAN",
+       "role": null,
+       "s": [
+        15634.719615,
+        15674.719615
+       ],
+       "by": []
+      }
+     ],
+     "ends": [
+      {
+       "end": 0,
+       "kind": "JUNCTION_OR_CONTINUATION",
+       "faces": [],
+       "caps": []
+      },
+      {
+       "end": 1,
+       "kind": "JUNCTION_OR_CONTINUATION",
+       "faces": [],
+       "caps": []
+      }
+     ],
+     "spans": [
+      "BS-9eb3fc2289b4c554"
+     ]
+    },
+    {
+     "band_id": "WB-fe67a8e9e58df579",
+     "state": "WALL_BAND_AMBIGUOUS",
+     "faces": [
+      "459",
+      "463"
+     ],
+     "width_mm": 200.0,
+     "interval": [
+      15049.7196,
+      15459.7196
+     ],
+     "intervals": [
+      {
+       "class": "WALL_BAND_SPAN",
+       "role": null,
+       "s": [
+        15049.719614,
+        15166.670013
+       ],
+       "by": []
+      },
+      {
+       "class": "AMBIGUOUS_CENTRELINE",
+       "role": null,
+       "s": [
+        15166.670013,
+        15327.769215
+       ],
+       "by": []
+      },
+      {
+       "class": "WALL_BAND_SPAN",
+       "role": null,
+       "s": [
+        15327.769215,
+        15459.719614
+       ],
+       "by": []
+      }
+     ],
+     "ends": [],
+     "spans": [
+      "BS-d9529dfcf63698d6",
+      "BS-c7401cbc3c0fe2d9"
+     ]
+    }
+   ]
+  }
+ },
+ "OLD_K1": {
+  "counts": {
+   "chains": 153,
+   "assemblies": 56,
+   "established": 46,
+   "spans": 65,
+   "closures": 0,
+   "authorised": 0,
+   "passages": 5
+  },
+  "watched_bands": [
+   {
+    "band_id": "WB-276041cfe8ac267d",
+    "state": "WALL_BAND_ESTABLISHED",
+    "faces": [
+     "470",
+     "477"
+    ],
+    "width_mm": 200.0,
+    "interval": [
+     109308.0817,
+     109608.0817
+    ],
+    "intervals": [
+     {
+      "class": "WALL_BAND_SPAN",
+      "role": null,
+      "s": [
+       109308.081745,
+       109443.081745
+      ],
+      "by": []
+     },
+     {
+      "class": "OBSTACLE_OVERLAP",
+      "role": "STRUCTURAL_OBSTACLE",
+      "s": [
+       109443.081745,
+       109583.081745
+      ],
+      "by": [
+       "718",
+       "718"
+      ]
+     },
+     {
+      "class": "WALL_BAND_SPAN",
+      "role": null,
+      "s": [
+       109583.081745,
+       109608.081745
+      ],
+      "by": []
+     }
+    ],
+    "ends": [
+     {
+      "end": 0,
+      "kind": "RECEIVING_FACE_JUNCTION",
+      "faces": [
+       "470",
+       "477"
+      ],
+      "caps": []
+     },
+     {
+      "end": 1,
+      "kind": "JUNCTION_OR_CONTINUATION",
+      "faces": [],
+      "caps": []
+     }
+    ],
+    "spans": [
+     "BS-f7f69fd2686f315f",
+     "BS-d5ea9b86f34f0ce4"
+    ],
+    "span_records": [
+     {
+      "span_id": "BS-f7f69fd2686f315f",
+      "s": [
+       109308.0817,
+       109443.0817
+      ],
+      "source_intervals": [
+       {
+        "source": "470",
+        "parameter_interval": [
+         0.0,
+         135.0
+        ],
+        "source_length": 300.0
+       },
+       {
+        "source": "477",
+        "parameter_interval": [
+         0.0,
+         135.0
+        ],
+        "source_length": 500.0
+       }
+      ]
+     },
+     {
+      "span_id": "BS-d5ea9b86f34f0ce4",
+      "s": [
+       109583.0817,
+       109608.0817
+      ],
+      "source_intervals": [
+       {
+        "source": "470",
+        "parameter_interval": [
+         275.0,
+         300.0
+        ],
+        "source_length": 300.0
+       },
+       {
+        "source": "477",
+        "parameter_interval": [
+         275.0,
+         300.0
+        ],
+        "source_length": 500.0
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "band_id": "WB-d113bf9b8326879d",
+    "state": "WALL_BAND_ESTABLISHED",
+    "faces": [
+     "471",
+     "477"
+    ],
+    "width_mm": 200.0,
+    "interval": [
+     109623.0817,
+     109808.0817
+    ],
+    "intervals": [
+     {
+      "class": "WALL_BAND_SPAN",
+      "role": null,
+      "s": [
+       109623.081745,
+       109808.081745
+      ],
+      "by": []
+     }
+    ],
+    "ends": [
+     {
+      "end": 0,
+      "kind": "JUNCTION_OR_CONTINUATION",
+      "faces": [],
+      "caps": []
+     },
+     {
+      "end": 1,
+      "kind": "CAPPED",
+      "faces": [
+       "471",
+       "477"
+      ],
+      "caps": []
+     }
+    ],
+    "spans": [
+     "BS-ee595741db9cf320"
+    ],
+    "span_records": [
+     {
+      "span_id": "BS-ee595741db9cf320",
+      "s": [
+       109623.0817,
+       109808.0817
+      ],
+      "source_intervals": [
+       {
+        "source": "477",
+        "parameter_interval": [
+         315.0,
+         500.0
+        ],
+        "source_length": 500.0
+       },
+       {
+        "source": "471",
+        "parameter_interval": [
+         0.0,
+         185.0
+        ],
+        "source_length": 185.0
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "watched_chains": [
+   {
+    "chain_id": "FC-2aaab53e2d886e27",
+    "fragments": [
+     "470"
+    ],
+    "nodes": [
+     {
+      "kind": "BRANCH_NODE",
+      "s": 109443.08174498352,
+      "point": [
+       109443.081745,
+       15029.719614
+      ],
+      "by": "718",
+      "between": []
+     },
+     {
+      "kind": "BRANCH_NODE",
+      "s": 109583.08174498352,
+      "point": [
+       109583.081745,
+       15029.719614
+      ],
+      "by": "718",
+      "between": []
+     }
+    ]
+   },
+   {
+    "chain_id": "FC-5b0317dac43c0b67",
+    "fragments": [
+     "477"
+    ],
+    "nodes": [
+     {
+      "kind": "BRANCH_NODE",
+      "s": 109443.08174498397,
+      "point": [
+       109443.081745,
+       15049.719614
+      ],
+      "by": "718",
+      "between": []
+     },
+     {
+      "kind": "BRANCH_NODE",
+      "s": 109583.08174498397,
+      "point": [
+       109583.081745,
+       15049.719614
+      ],
+      "by": "718",
+      "between": []
+     },
+     {
+      "kind": "BRANCH_NODE",
+      "s": 109593.08174498397,
+      "point": [
+       109593.081745,
+       15049.719614
+      ],
+      "by": "535",
+      "between": []
+     },
+     {
+      "kind": "BRANCH_NODE",
+      "s": 109608.08174498397,
+      "point": [
+       109608.081745,
+       15049.719614
+      ],
+      "by": "543",
+      "between": []
+     }
+    ]
+   },
+   {
+    "chain_id": "FC-5de3ccf392291316",
+    "fragments": [
+     "1316"
+    ],
+    "nodes": [
+     {
+      "kind": "BRANCH_NODE",
+      "s": 14481.719614378162,
+      "point": [
+       109913.081745,
+       14481.719614
+      ],
+      "by": "1318",
+      "between": []
+     },
+     {
+      "kind": "BRANCH_NODE",
+      "s": 14487.719614378162,
+      "point": [
+       109913.081745,
+       14487.719614
+      ],
+      "by": "1320",
+      "between": []
+     }
+    ]
+   },
+   {
+    "chain_id": "FC-d3dfb709ea386550",
+    "fragments": [
+     "471"
+    ],
+    "nodes": []
+   }
+  ],
+  "closures": [],
+  "passages": [
+   {
+    "passage_id": "OP-31153ab2a722b6ed",
+    "band_id": "WB-38184e356069c274",
+    "end_kind": "CAPPED",
+    "target": "489",
+    "width_mm": 1200.0,
+    "thickness_mm": 100.0,
+    "strip_in_site": "SITE-1e8835fb33cb1a98"
+   },
+   {
+    "passage_id": "OP-3a213f526f5f3f5b",
+    "band_id": "WB-cc3cc7298278d4ae",
+    "end_kind": "CAPPED",
+    "target": "BANDEND|WB-7666105468c1eba3|0",
+    "width_mm": 900.0,
+    "thickness_mm": 150.0,
+    "strip_in_site": "SITE-1e8835fb33cb1a98"
+   },
+   {
+    "passage_id": "OP-3e311c99710eb905",
+    "band_id": "WB-38184e356069c274",
+    "end_kind": "CAPPED",
+    "target": "573",
+    "width_mm": 1200.0,
+    "thickness_mm": 100.0,
+    "strip_in_site": "SITE-1e8835fb33cb1a98"
+   },
+   {
+    "passage_id": "OP-49410ba76efd5858",
+    "band_id": "WB-d113bf9b8326879d",
+    "end_kind": "CAPPED",
+    "target": "817",
+    "width_mm": 1200.0,
+    "thickness_mm": 200.0,
+    "strip_in_site": "SITE-56af91bb145d30cc"
+   },
+   {
+    "passage_id": "OP-c33c6b68cbecc5f9",
+    "band_id": "WB-f9bceeffacc68410",
+    "end_kind": "CAPPED",
+    "target": "518",
+    "width_mm": 1200.0,
+    "thickness_mm": 150.0,
+    "strip_in_site": "SITE-8e1f0b3a736abb02"
+   }
+  ],
+  "hall": {
+   "site": "SITE-56af91bb145d30cc",
+   "area_m2": 42.41,
+   "issues": [
+    "TOPOLOGY_ROLE_UNRESOLVED"
+   ]
+  },
+  "labelled_sites": [
+   [
+    42.41,
+    [
+     "HALL",
+     "whgm"
+    ]
+   ],
+   [
+    33.2,
+    [
+     "DRESS",
+     "M.B.ROOM",
+     "k,LVzdsD",
+     "lBfS"
+    ]
+   ],
+   [
+    20.1525,
+    [
+     "BED.ROOM",
+     "yvtmk,L"
+    ]
+   ],
+   [
+    16.5075,
+    [
+     "BED.ROOM",
+     "yvtmk,L"
+    ]
+   ],
+   [
+    11.685,
+    [
+     "PAINTRY",
+     "jpqdV"
+    ]
+   ],
+   [
+    8.5525,
+    [
+     "BATH",
+     "plHL"
+    ]
+   ],
+   [
+    5.1,
+    [
+     "BATH",
+     "plHL"
+    ]
+   ],
+   [
+    4.09,
+    [
+     "BATH",
+     "plHL"
+    ]
+   ]
+  ],
+  "run_input_digest": "76fa537f8827c8f203852122fc063dad74f325f5424f8eeda6a75f39edd47288",
+  "v4": {
+   "chain_id_collisions": [],
+   "chains_line_disambiguated": [
+    [
+     "2060|0"
+    ],
+    [
+     "2060|1"
+    ],
+    [
+     "2060|2"
+    ],
+    [
+     "2060|3"
+    ],
+    [
+     "2061|0"
+    ],
+    [
+     "2061|1"
+    ],
+    [
+     "2061|2"
+    ],
+    [
+     "2061|3"
+    ]
+   ],
+   "band_ids_unique": true,
+   "chain_ids_unique": true,
+   "support_counts": {
+    "SELF_SUPPORTED": 56,
+    "INHERITED_SUPPORT": 0
+   },
+   "inherited": [],
+   "unsupported_runs": 5,
+   "boundary_cases": [],
+   "geometric_candidates": [
+    {
+     "band_id": "WB-0823f6424ec74af5",
+     "faces": [
+      "2060",
+      "2061"
+     ],
+     "width_mm": 100.0,
+     "authority": {
+      "state": "WALL_BAND_GEOMETRIC_CANDIDATE",
+      "why": "ISOLATED_CLOSED_LOOP",
+      "entities": [
+       "QORTUBA_REV_OLD|H2060||SEGMENT",
+       "QORTUBA_REV_OLD|H2061||SEGMENT"
+      ]
+     }
+    },
+    {
+     "band_id": "WB-483d432a1e4b1c34",
+     "faces": [
+      "2060",
+      "2061"
+     ],
+     "width_mm": 100.0,
+     "authority": {
+      "state": "WALL_BAND_GEOMETRIC_CANDIDATE",
+      "why": "ISOLATED_CLOSED_LOOP",
+      "entities": [
+       "QORTUBA_REV_OLD|H2060||SEGMENT",
+       "QORTUBA_REV_OLD|H2061||SEGMENT"
+      ]
+     }
+    },
+    {
+     "band_id": "WB-59657a470a34a710",
+     "faces": [
+      "2060",
+      "2061"
+     ],
+     "width_mm": 100.0,
+     "authority": {
+      "state": "WALL_BAND_GEOMETRIC_CANDIDATE",
+      "why": "ISOLATED_CLOSED_LOOP",
+      "entities": [
+       "QORTUBA_REV_OLD|H2060||SEGMENT",
+       "QORTUBA_REV_OLD|H2061||SEGMENT"
+      ]
+     }
+    },
+    {
+     "band_id": "WB-c38890263039fc7f",
+     "faces": [
+      "2060",
+      "2061"
+     ],
+     "width_mm": 100.0,
+     "authority": {
+      "state": "WALL_BAND_GEOMETRIC_CANDIDATE",
+      "why": "ISOLATED_CLOSED_LOOP",
+      "entities": [
+       "QORTUBA_REV_OLD|H2060||SEGMENT",
+       "QORTUBA_REV_OLD|H2061||SEGMENT"
+      ]
+     }
+    }
+   ],
+   "isolated_loops": [
+    "2060",
+    "2061"
+   ],
+   "physical_authority_entities": [],
+   "unsupported_touching_r8_12_findings": [
+    {
+     "chain_a": [
+      "2060"
+     ],
+     "chain_b": [
+      "2060"
+     ],
+     "s": [
+      109908.081745,
+      109918.081745
+     ],
+     "local_run": 10.0,
+     "separation": 40.0,
+     "raw_chain_overlap": 210.0,
+     "state": "UNSUPPORTED",
+     "reason": "NOT_ELONGATED_LOCAL_RUN",
+     "means": "NON_AUTHORITATIVE_PAIR_RUN: no band, no passage, no ambiguity"
+    },
+    {
+     "chain_a": [
+      "2060"
+     ],
+     "chain_b": [
+      "2060"
+     ],
+     "s": [
+      110108.081745,
+      110118.081745
+     ],
+     "local_run": 10.0,
+     "separation": 40.0,
+     "raw_chain_overlap": 210.0,
+     "state": "UNSUPPORTED",
+     "reason": "NOT_ELONGATED_LOCAL_RUN",
+     "means": "NON_AUTHORITATIVE_PAIR_RUN: no band, no passage, no ambiguity"
+    },
+    {
+     "chain_a": [
+      "549"
+     ],
+     "chain_b": [
+      "550"
+     ],
+     "s": [
+      15099.719614,
+      15114.719614
+     ],
+     "local_run": 14.999999995925464,
+     "separation": 40.0,
+     "raw_chain_overlap": 70.0,
+     "state": "UNSUPPORTED",
+     "reason": "NOT_ELONGATED_LOCAL_RUN",
+     "means": "NON_AUTHORITATIVE_PAIR_RUN: no band, no passage, no ambiguity"
+    },
+    {
+     "chain_a": [
+      "817"
+     ],
+     "chain_b": [
+      "551"
+     ],
+     "s": [
+      15099.719614,
+      15114.719614
+     ],
+     "local_run": 14.999999995738108,
+     "separation": 59.99999999990541,
+     "raw_chain_overlap": 69.99999999996544,
+     "state": "UNSUPPORTED",
+     "reason": "NOT_ELONGATED_LOCAL_RUN",
+     "means": "NON_AUTHORITATIVE_PAIR_RUN: no band, no passage, no ambiguity"
+    },
+    {
+     "chain_a": [
+      "584"
+     ],
+     "chain_b": [
+      "574"
+     ],
+     "s": [
+      110738.081745,
+      110753.081745
+     ],
+     "local_run": 15.000000000101863,
+     "separation": 180.00000000000216,
+     "raw_chain_overlap": 215.00000000010186,
+     "state": "UNSUPPORTED",
+     "reason": "NOT_ELONGATED_LOCAL_RUN",
+     "means": "NON_AUTHORITATIVE_PAIR_RUN: no band, no passage, no ambiguity"
+    }
+   ],
+   "bands_touching_r8_12_findings": [
+    {
+     "band_id": "WB-079667b83dd57129",
+     "state": "WALL_BAND_ESTABLISHED",
+     "faces": [
+      "459",
+      "464"
+     ],
+     "width_mm": 200.0,
+     "interval": [
+      14859.7196,
+      15029.7196
+     ],
+     "intervals": [
+      {
+       "class": "WALL_BAND_SPAN",
+       "role": null,
+       "s": [
+        14859.719614,
+        15029.719614
+       ],
+       "by": []
+      }
+     ],
+     "ends": [
+      {
+       "end": 0,
+       "kind": "JUNCTION_OR_CONTINUATION",
+       "faces": [],
+       "caps": []
+      },
+      {
+       "end": 1,
+       "kind": "JUNCTION_OR_CONTINUATION",
+       "faces": [],
+       "caps": []
+      }
+     ],
+     "spans": [
+      "BS-afb5b4f890bcea2f"
+     ]
+    },
+    {
+     "band_id": "WB-0823f6424ec74af5",
+     "state": "WALL_BAND_GEOMETRIC_CANDIDATE",
+     "faces": [
+      "2060",
+      "2061"
+     ],
+     "width_mm": 100.0,
+     "interval": [
+      14549.7196,
+      14569.7196
+     ],
+     "intervals": [
+      {
+       "class": "WALL_BAND_SPAN",
+       "role": null,
+       "s": [
+        14549.719614,
+        14569.719614
+       ],
+       "by": []
+      }
+     ],
+     "ends": [],
+     "spans": [
+      "BS-039dbf652b205aa5"
+     ]
+    },
+    {
+     "band_id": "WB-1c12a74fb901344c",
+     "state": "WALL_BAND_ESTABLISHED",
+     "faces": [
+      "1672",
+      "459"
+     ],
+     "width_mm": 550.0,
+     "interval": [
+      14494.7196,
+      14559.7196
+     ],
+     "intervals": [
+      {
+       "class": "WALL_BAND_SPAN",
+       "role": null,
+       "s": [
+        14494.719614,
+        14559.719614
+       ],
+       "by": []
+      }
+     ],
+     "ends": [
+      {
+       "end": 0,
+       "kind": "JUNCTION_OR_CONTINUATION",
+       "faces": [],
+       "caps": []
+      },
+      {
+       "end": 1,
+       "kind": "JUNCTION_OR_CONTINUATION",
+       "faces": [],
+       "caps": []
+      }
+     ],
+     "spans": [
+      "BS-caed457c86c3018c"
+     ]
+    },
+    {
+     "band_id": "WB-2e2ebd932c26b00e",
+     "state": "WALL_BAND_ESTABLISHED",
+     "faces": [
+      "513",
+      "817"
+     ],
+     "width_mm": 150.0,
+     "interval": [
+      14909.7196,
+      15099.7196
+     ],
+     "intervals": [
+      {
+       "class": "WALL_BAND_SPAN",
+       "role": null,
+       "s": [
+        14909.719614,
+        15099.719614
+       ],
+       "by": []
+      }
+     ],
+     "ends": [
+      {
+       "end": 0,
+       "kind": "JUNCTION_OR_CONTINUATION",
+       "faces": [],
+       "caps": []
+      },
+      {
+       "end": 1,
+       "kind": "JUNCTION_OR_CONTINUATION",
+       "faces": [],
+       "caps": []
+      }
+     ],
+     "spans": [
+      "BS-e1631e6864827234"
+     ]
+    },
+    {
+     "band_id": "WB-3ec383d42883cb8d",
+     "state": "WALL_BAND_ESTABLISHED",
+     "faces": [
+      "459",
+      "461"
+     ],
+     "width_mm": 200.0,
+     "interval": [
+      15634.7196,
+      15674.7196
+     ],
+     "intervals": [
+      {
+       "class": "WALL_BAND_SPAN",
+       "role": null,
+       "s": [
+        15634.719614,
+        15674.719614
+       ],
+       "by": []
+      }
+     ],
+     "ends": [
+      {
+       "end": 0,
+       "kind": "JUNCTION_OR_CONTINUATION",
+       "faces": [],
+       "caps": []
+      },
+      {
+       "end": 1,
+       "kind": "JUNCTION_OR_CONTINUATION",
+       "faces": [],
+       "caps": []
+      }
+     ],
+     "spans": [
+      "BS-22ab5db8f0c72b32"
+     ]
+    },
+    {
+     "band_id": "WB-482ccfc2bb717eae",
+     "state": "WALL_BAND_ESTABLISHED",
+     "faces": [
+      "552",
+      "554"
+     ],
+     "width_mm": 150.0,
+     "interval": [
+      14494.7196,
+      14844.7196
+     ],
+     "intervals": [
+      {
+       "class": "WALL_BAND_SPAN",
+       "role": null,
+       "s": [
+        14494.719614,
+        14559.719614
+       ],
+       "by": []
+      },
+      {
+       "class": "OBSTACLE_OVERLAP",
+       "role": "STRUCTURAL_OBSTACLE",
+       "s": [
+        14559.719614,
+        14619.719614
+       ],
+       "by": [
+        "708",
+        "708"
+       ]
+      },
+      {
+       "class": "WALL_BAND_SPAN",
+       "role": null,
+       "s": [
+        14619.719614,
+        14844.719614
+       ],
+       "by": []
+      }
+     ],
+     "ends": [
+      {
+       "end": 0,
+       "kind": "RECEIVING_FACE_JUNCTION",
+       "faces": [
+        "552",
+        "554"
+       ],
+       "caps": []
+      },
+      {
+       "end": 1,
+       "kind": "JUNCTION_OR_CONTINUATION",
+       "faces": [],
+       "caps": []
+      }
+     ],
+     "spans": [
+      "BS-747f1922f9eae4ed",
+      "BS-b22d40810b07d529"
+     ]
+    },
+    {
+     "band_id": "WB-483d432a1e4b1c34",
+     "state": "WALL_BAND_GEOMETRIC_CANDIDATE",
+     "faces": [
+      "2060",
+      "2061"
+     ],
+     "width_mm": 100.0,
+     "interval": [
+      109918.0817,
+      110108.0817
+     ],
+     "intervals": [
+      {
+       "class": "WALL_BAND_SPAN",
+       "role": null,
+       "s": [
+        109918.081745,
+        110108.081745
+       ],
+       "by": []
+      }
+     ],
+     "ends": [],
+     "spans": [
+      "BS-02139ba663b2632b"
+     ]
+    },
+    {
+     "band_id": "WB-56475d3cbef6efe0",
+     "state": "WALL_BAND_AMBIGUOUS",
+     "faces": [
+      "459",
+      "469"
+     ],
+     "width_mm": 200.0,
+     "interval": [
+      14619.7196,
+      14844.7196
+     ],
+     "intervals": [
+      {
+       "class": "WALL_BAND_SPAN",
+       "role": null,
+       "s": [
+        14619.719614,
+        14679.719614
+       ],
+       "by": []
+      },
+      {
+       "class": "AMBIGUOUS_CENTRELINE",
+       "role": null,
+       "s": [
+        14679.719614,
+        14813.948318
+       ],
+       "by": []
+      },
+      {
+       "class": "WALL_BAND_SPAN",
+       "role": null,
+       "s": [
+        14813.948318,
+        14844.719614
+       ],
+       "by": []
+      }
+     ],
+     "ends": [],
+     "spans": [
+      "BS-10f1e6c0fd2435cd",
+      "BS-f77f66ab986c666e"
+     ]
+    },
+    {
+     "band_id": "WB-59657a470a34a710",
+     "state": "WALL_BAND_GEOMETRIC_CANDIDATE",
+     "faces": [
+      "2060",
+      "2061"
+     ],
+     "width_mm": 100.0,
+     "interval": [
+      109918.0817,
+      110108.0817
+     ],
+     "intervals": [
+      {
+       "class": "WALL_BAND_SPAN",
+       "role": null,
+       "s": [
+        109918.081745,
+        110108.081745
+       ],
+       "by": []
+      }
+     ],
+     "ends": [],
+     "spans": [
+      "BS-fc31d9addd647b14"
+     ]
+    },
+    {
+     "band_id": "WB-62aa8a125754e792",
+     "state": "WALL_BAND_ESTABLISHED",
+     "faces": [
+      "552",
+      "555"
+     ],
+     "width_mm": 150.0,
+     "interval": [
+      14859.7196,
+      14894.7196
+     ],
+     "intervals": [
+      {
+       "class": "WALL_BAND_SPAN",
+       "role": null,
+       "s": [
+        14859.719614,
+        14894.719614
+       ],
+       "by": []
+      }
+     ],
+     "ends": [
+      {
+       "end": 0,
+       "kind": "JUNCTION_OR_CONTINUATION",
+       "faces": [],
+       "caps": []
+      },
+      {
+       "end": 1,
+       "kind": "JUNCTION_OR_CONTINUATION",
+       "faces": [],
+       "caps": []
+      }
+     ],
+     "spans": [
+      "BS-29035534413fdccb"
+     ]
+    },
+    {
+     "band_id": "WB-654ac6869d0dbc26",
+     "state": "WALL_BAND_AMBIGUOUS",
+     "faces": [
+      "459",
+      "463"
+     ],
+     "width_mm": 200.0,
+     "interval": [
+      15049.7196,
+      15459.7196
+     ],
+     "intervals": [
+      {
+       "class": "WALL_BAND_SPAN",
+       "role": null,
+       "s": [
+        15049.719614,
+        15166.670013
+       ],
+       "by": []
+      },
+      {
+       "class": "AMBIGUOUS_CENTRELINE",
+       "role": null,
+       "s": [
+        15166.670013,
+        15327.769215
+       ],
+       "by": []
+      },
+      {
+       "class": "WALL_BAND_SPAN",
+       "role": null,
+       "s": [
+        15327.769215,
+        15459.719614
+       ],
+       "by": []
+      }
+     ],
+     "ends": [],
+     "spans": [
+      "BS-31057bc091da973f",
+      "BS-dc83dd5b6970d2dc"
+     ]
+    },
+    {
+     "band_id": "WB-8beeec326688ef06",
+     "state": "WALL_BAND_ESTABLISHED",
+     "faces": [
+      "546",
+      "549"
+     ],
+     "width_mm": 150.0,
+     "interval": [
+      14529.7196,
+      15099.7196
+     ],
+     "intervals": [
+      {
+       "class": "WALL_BAND_SPAN",
+       "role": null,
+       "s": [
+        14529.719614,
+        15054.719614
+       ],
+       "by": []
+      },
+      {
+       "class": "OBSTACLE_OVERLAP",
+       "role": "STRUCTURAL_OBSTACLE",
+       "s": [
+        15054.719614,
+        15099.719614
+       ],
+       "by": [
+        "704"
+       ]
+      }
+     ],
+     "ends": [
+      {
+       "end": 0,
+       "kind": "JUNCTION_OR_CONTINUATION",
+       "faces": [],
+       "caps": []
+      },
+      {
+       "end": 1,
+       "kind": "JUNCTION_OR_CONTINUATION",
+       "faces": [],
+       "caps": []
+      }
+     ],
+     "spans": [
+      "BS-d98769a606b903e4"
+     ]
+    },
+    {
+     "band_id": "WB-95b535a55ddf6b0b",
+     "state": "WALL_BAND_ESTABLISHED",
+     "faces": [
+      "459",
+      "462"
+     ],
+     "width_mm": 200.0,
+     "interval": [
+      15474.7196,
+      15574.7196
+     ],
+     "intervals": [
+      {
+       "class": "WALL_BAND_SPAN",
+       "role": null,
+       "s": [
+        15474.719614,
+        15574.719614
+       ],
+       "by": []
+      }
+     ],
+     "ends": [
+      {
+       "end": 0,
+       "kind": "JUNCTION_OR_CONTINUATION",
+       "faces": [],
+       "caps": []
+      },
+      {
+       "end": 1,
+       "kind": "JUNCTION_OR_CONTINUATION",
+       "faces": [],
+       "caps": []
+      }
+     ],
+     "spans": [
+      "BS-06ecf166c0621e26"
+     ]
+    },
+    {
+     "band_id": "WB-a7827398f04c88f4",
+     "state": "WALL_BAND_ESTABLISHED",
+     "faces": [
+      "459",
+      "460"
+     ],
+     "width_mm": 200.0,
+     "interval": [
+      15689.7196,
+      16024.7196
+     ],
+     "intervals": [
+      {
+       "class": "WALL_BAND_SPAN",
+       "role": null,
+       "s": [
+        15689.719614,
+        16024.719614
+       ],
+       "by": []
+      }
+     ],
+     "ends": [
+      {
+       "end": 0,
+       "kind": "JUNCTION_OR_CONTINUATION",
+       "faces": [],
+       "caps": []
+      },
+      {
+       "end": 1,
+       "kind": "JUNCTION_OR_CONTINUATION",
+       "faces": [],
+       "caps": []
+      }
+     ],
+     "spans": [
+      "BS-7eaa33e6fac43d38"
+     ]
+    },
+    {
+     "band_id": "WB-c38890263039fc7f",
+     "state": "WALL_BAND_GEOMETRIC_CANDIDATE",
+     "faces": [
+      "2060",
+      "2061"
+     ],
+     "width_mm": 100.0,
+     "interval": [
+      14549.7196,
+      14569.7196
+     ],
+     "intervals": [
+      {
+       "class": "WALL_BAND_SPAN",
+       "role": null,
+       "s": [
+        14549.719614,
+        14569.719614
+       ],
+       "by": []
+      }
+     ],
+     "ends": [],
+     "spans": [
+      "BS-5ee3c16a091f5a4a"
+     ]
+    },
+    {
+     "band_id": "WB-dac81713b5ae96c1",
+     "state": "WALL_BAND_ESTABLISHED",
+     "faces": [
+      "583",
+      "584"
+     ],
+     "width_mm": 150.0,
+     "interval": [
+      110538.0817,
+      110738.0817
+     ],
+     "intervals": [
+      {
+       "class": "WALL_BAND_SPAN",
+       "role": null,
+       "s": [
+        110538.081745,
+        110738.081745
+       ],
+       "by": []
+      }
+     ],
+     "ends": [
+      {
+       "end": 0,
+       "kind": "RECEIVING_FACE_JUNCTION",
+       "faces": [
+        "583",
+        "584"
+       ],
+       "caps": []
+      },
+      {
+       "end": 1,
+       "kind": "JUNCTION_OR_CONTINUATION",
+       "faces": [],
+       "caps": []
+      }
+     ],
+     "spans": [
+      "BS-0d2761de0f6bbf99"
+     ]
+    },
+    {
+     "band_id": "WB-f03f92510bbda85f",
+     "state": "WALL_BAND_ESTABLISHED",
+     "faces": [
+      "572",
+      "574"
+     ],
+     "width_mm": 150.0,
+     "interval": [
+      110488.0817,
+      110523.0817
+     ],
+     "intervals": [
+      {
+       "class": "WALL_BAND_SPAN",
+       "role": null,
+       "s": [
+        110488.081745,
+        110523.081745
+       ],
+       "by": []
+      }
+     ],
+     "ends": [
+      {
+       "end": 0,
+       "kind": "OPENING_JAMB",
+       "faces": [
+        "572",
+        "574"
+       ],
+       "caps": []
+      },
+      {
+       "end": 1,
+       "kind": "JUNCTION_OR_CONTINUATION",
+       "faces": [],
+       "caps": []
+      }
+     ],
+     "spans": [
+      "BS-002709de3db2d9eb"
+     ]
+    },
+    {
+     "band_id": "WB-f94c1a15e7f16eee",
+     "state": "WALL_BAND_ESTABLISHED",
+     "faces": [
+      "571",
+      "574"
+     ],
+     "width_mm": 150.0,
+     "interval": [
+      110538.0817,
+      110738.0817
+     ],
+     "intervals": [
+      {
+       "class": "WALL_BAND_SPAN",
+       "role": null,
+       "s": [
+        110538.081745,
+        110738.081745
+       ],
+       "by": []
+      }
+     ],
+     "ends": [
+      {
+       "end": 0,
+       "kind": "JUNCTION_OR_CONTINUATION",
+       "faces": [],
+       "caps": []
+      },
+      {
+       "end": 1,
+       "kind": "JUNCTION_OR_CONTINUATION",
+       "faces": [],
+       "caps": []
+      }
+     ],
+     "spans": [
+      "BS-d119fd026dd6cdd0"
+     ]
+    }
+   ]
+  }
+ }
+}
