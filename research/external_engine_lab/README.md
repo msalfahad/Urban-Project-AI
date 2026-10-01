@@ -103,6 +103,7 @@ bridges it to the legacy QS01 method. Owner decisions are scoped claims in `data
 | `r8_7_canonical.py` | `<work>/*_k2.pkl` (`build-k2`) | QS01 contract, strict / lenient bridge, isolated stub-decode runner, revision inputs, scoped units |
 | `r8_7_proof.py` | `tests/r8_7/registers/{QS01_METHOD_INPUT_CONTRACT,FAIL_CLOSED_ABLATION_RESULTS,QORTUBA_REVISION_DELTA,Q14_SCOPED_CEILING_RULE,REGION_CLASSIFICATION_NEW_REVISION}.json` | ablations, OLD_K1 / OLD_K2 / NEW_K2 runs, parser-culprit bisection, cause attribution, scoped Q-14, region classes |
 | `r8_7_registers.py` | `tests/r8_7/registers/{QORTUBA_SOURCE_REVISION_REGISTER,OWNER_ACTION_REGISTER,OWNER_PROJECT_CLAIMS,CANONICAL_MEASUREMENT_INPUT_SCHEMA,R8_7_DECISION_REGISTER}.json` | revisions, owner actions V4, claim scope checks, schema, decisions / gates / findings |
+| `r8_7_dwg_anchor.py` | `tests/r8_7/registers/NEW_DWG_SOURCE_IDENTITY.json` | candidate original DWG vs the new-revision DXF with the pinned decoder; verdict by fixed rules, never forced |
 | `r8_7_package.py` | `data/reports/URBAN_QTO_R8_7_CANONICAL_INPUT/` + zip | review package from the registers and the final suite's junit |
 
 `<work>` must hold `old_k2.pkl` (K2 on LibreDWG's DXF of the old DWG) and `new_k2.pkl` (K2 on the hash-addressed new DXF).

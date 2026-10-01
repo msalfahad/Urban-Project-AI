@@ -27,6 +27,17 @@ def load(p):
     return json.loads(Path(p).read_text())
 
 
+def dwg_identity(out):
+    p = Path(out) / "NEW_DWG_SOURCE_IDENTITY.json"
+    if not p.exists():
+        return {"state": "NOT_SUPPLIED"}
+    d = load(p)
+    return {"sha256": d["candidate_dwg"]["sha256"], "bytes": d["candidate_dwg"]["bytes"], "state": "RECEIVED",
+            "source_identity_verdict": d["verdict"], "why": d["why"],
+            "partial_evidence": d["partial_evidence_read"], "anchor_promoted": d["verdict"] == "SAME_EXACT_SOURCE_REVISION",
+            "to_establish": d["to_establish"]}
+
+
 def revisions(out):
     prov = load(R86A / "DXF_PROVENANCE_REGISTER.json")["files"]["QORTUBA"]
     variants = load(R86A / "QORTUBA_ROUND1_DXF_RESULTS.json")["plan_variants"]
@@ -68,13 +79,14 @@ def revisions(out):
                                          "re-anchor revision identity", "re-anchor the plan selection",
                                          "re-anchor the unit claim (supersede, history kept)",
                                          "re-anchor the Q-14 scoped claim", "re-measure the canonical quantities on the DWG"],
-                "variants_from_R8_6A": [v["variant_id"] for v in variants["variants"]]}},
+                "variants_from_R8_6A": [v["variant_id"] for v in variants["variants"]],
+                "candidate_original_dwg": dwg_identity(out)}},
         "region_candidate_note": ("the region candidate's recorded bounds lie ~36 units inside the frame's corner marks; "
                                   "the measurement clip is the frame occurrence's own extent; clipping to the candidate "
                                   "bounds cuts the frame occurrence and is refused (REVIEW_REQUIRED)")}
 
 
-def owner_actions():
+def owner_actions(out):
     prev = {a["action_id"]: a for a in load(R86A / "OWNER_ACTION_REGISTER.json")["actions"]}
     acts = []
 
@@ -111,6 +123,26 @@ def owner_actions():
                  "exact_source_hash": R7.NEW_DXF, "choices": None, "status": "OPEN", "urgency": "HIGH",
                  "what_is_blocked": ["ANCHOR_SELECTED_PLAN_TO_EXACT_NEW_DWG", "any release of a new-revision quantity"],
                  "supersedes_action": "SUPPLY_QORTUBA_SOURCE_DWG_OF_DXF", "resolved_only_by": "a file, then hash + identity checks"})
+    dwg = dwg_identity(out)
+    if dwg["state"] == "RECEIVED":
+        a = acts[-1]
+        a.update({"status": "RESOLVED" if dwg["anchor_promoted"] else "FILE_RECEIVED",
+                  "FILE_RECEIVED": {"sha256": dwg["sha256"], "bytes": dwg["bytes"]},
+                  "SOURCE_IDENTITY": dwg["source_identity_verdict"],
+                  "note": "the owner's part is done: nothing more is asked of him for the DWG; identity is an Urban "
+                          "tooling step (ESTABLISH_NEW_DWG_SOURCE_IDENTITY)"})
+        acts.append({"action_id": "ESTABLISH_NEW_DWG_SOURCE_IDENTITY", "project": "QORTUBA", "status": "OPEN",
+                     "question": "(Urban task) compare DWG e4babbc2 with DXF df0e1d69 using a decoder that reads AutoCAD "
+                                 "2018-format object sections",
+                     "exact_source_hash": dwg["sha256"], "urgency": "HIGH",
+                     "what_is_blocked": ["ANCHOR_SELECTED_PLAN_TO_EXACT_NEW_DWG", "re-anchoring every new-revision claim"],
+                     "blocked_by": ["the pinned LibreDWG 0.13.3 cannot read this file's Header / Classes / AcDbObjects "
+                                    "sections", "the environment denies github.com and ftp.gnu.org (no newer decoder)"]})
+        acts.append({"action_id": "ALLOW_DECODER_INSTALL_IN_ENVIRONMENT", "project": "ALL", "status": "OPEN",
+                     "question": "Optional: allow github.com (LibreDWG source) or the ODA download site in this cloud "
+                                 "environment's network access, so Urban can build, pin and record an AC1032-capable decoder",
+                     "exact_source_hash": dwg["sha256"], "urgency": "MEDIUM", "choices": ["ALLOW", "NOT NOW"],
+                     "what_is_blocked": ["ESTABLISH_NEW_DWG_SOURCE_IDENTITY"]})
     acts.append({"action_id": "ANCHOR_SELECTED_PLAN_TO_EXACT_NEW_DWG", "project": "QORTUBA", "status": "OPEN",
                  "question": "(Urban task, no owner input) re-anchor revision, plan selection, unit and Q-14 claims to the DWG hash",
                  "exact_source_hash": R7.NEW_DXF, "what_is_blocked": ["production publication of the new revision"],
@@ -132,11 +164,12 @@ def owner_actions():
                "APPROVE_QORTUBA_ROUND1_BASELINE (old revision; superseded by APPROVE_QORTUBA_NEW_ROUND1_BASELINE)"]
     return {"SCHEMA": "URBAN_R8_7_OWNER_ACTION_REGISTER_V4", "rule": "no action is resolved without explicit owner input",
             "supersedes": "tests/r8_6a/registers/OWNER_ACTION_REGISTER.json (V3; unchanged)",
-            "open": sum(a["status"].startswith("OPEN") for a in acts), "resolved": sum(a["status"] == "RESOLVED" for a in acts),
+            "open": sum(a["status"].startswith("OPEN") or a["status"] == "FILE_RECEIVED" for a in acts),
+            "resolved": sum(a["status"] == "RESOLVED" for a in acts),
             "actions": acts, "retired_or_superseded": retired}
 
 
-def project_claims():
+def project_claims(out):
     rec = load(R7.CLAIMS)
     cl = R7.claims()
     checks = {}
@@ -153,7 +186,12 @@ def project_claims():
                                       item=next(iter(sorted(c.items)), None))["state"]}
     old_unit = R7.unit_for(R7.rev_old())
     transfer = R7.unit_for(CI.SourceRevision(R7.REV_NEW_ID, CI.EXACT_SOURCE, "0" * 64))
+    dwg = dwg_identity(out)
     return dict(rec, scope_checks=checks,
+                re_anchoring={"candidate_dwg": dwg.get("sha256"), "source_identity": dwg.get("source_identity_verdict"),
+                              "claims_re_anchored": bool(dwg.get("anchor_promoted")),
+                              "rule": "exact-source claims supersede these v1 claims only after SAME_EXACT_SOURCE_REVISION; "
+                                      "until then the v1 claims stay ACTIVE (pending anchor, SHADOW only)"},
                 historical_unit_claim={"claim": R7.OLD_UNIT_CLAIM, "file": "data/registry/OWNER_UNIT_CLAIMS.json (unchanged)",
                                        "applies_to_old_revision": old_unit[1] == R7.OLD_UNIT_CLAIM},
                 no_transfer_check={"new_revision_with_another_anchor": transfer[1]})
@@ -187,6 +225,10 @@ def decisions(out):
                     "recorded as a future requirement."),
         ("R87-D10", "Converter stays CONVERTER_UNKNOWN; nothing qualifies; the owner is not asked about the converter again."),
         ("R87-D11", "MIGRATION_PLANNING_READY = YES; MIGRATION_EXECUTION_READY = NO; PRODUCTION_MIGRATION = NO."),
+        ("R87-D12", "Candidate original DWG e4babbc2 received (35,110,771 bytes, AC1032). Source identity with DXF df0e1d69: "
+                    + dwg_identity(out).get("source_identity_verdict", "NOT_SUPPLIED") + ". The pinned decoder cannot read its "
+                    "Header / Classes / AcDbObjects sections, so the anchor is NOT promoted and no claim is re-anchored; "
+                    "partial evidence is consistent with identity but does not decide it. Parser independence unaffected."),
     ]
     findings = [
         {"id": "F-R87-01", "risk": "silent quantity error (route sensitivity)",
@@ -207,12 +249,19 @@ def decisions(out):
          "finding": "owner_rules.APARTMENT_ROOMS hard-codes 'HALL / whgm'; in the new revision the label texts land in two "
                     "regions ('whgm' 34.609 and a 6 cm 'HALL' sliver), so name-based legacy logic would mis-scope",
          "action": "the canonical contract carries label identity; legacy name sets stay out of new methods"},
+        {"id": "F-R87-07", "risk": "false source identity",
+         "finding": "the pinned LibreDWG 0.13.3 cannot decode the AutoCAD 2023-saved AC1032 DWG (section map: "
+                    "read_R2004_section_info out of range; Invalid num_segidx). Header GUIDs, handle seed and every entity "
+                    "are unreadable; SummaryInfo / AppInfoHistory read: same creation time, same user, DXF editing time = "
+                    "DWG + 125 s, last saved by AutoCAD 2023 on 2026-05-09",
+         "action": "an AC1032-capable decoder, pinned (environment denies github.com / ftp.gnu.org); then the full comparison"},
         {"id": "F-R87-06", "risk": "unsafe human-claim propagation",
          "finding": "the Q-14 claim is label-scoped; it applies to the new revision only if the remeasured label multiset matches; "
                     "it currently does not (BED.ROOM / BATH, whgm, HALL)", "action": "re-check after the DWG"},
     ]
     gates = {"PRODUCTION_MIGRATION": "NO", "MIGRATION_PLANNING_READY": "YES", "MIGRATION_EXECUTION_READY": "NO",
-             "QORTUBA_CURRENT_REVISION": R7.REV_NEW_ID, "QORTUBA_REV_NEW_ANCHOR": "DXF_ONLY_PENDING_DWG",
+             "QORTUBA_CURRENT_REVISION": R7.REV_NEW_ID,
+             "QORTUBA_REV_NEW_ANCHOR": ("DXF_ONLY; DWG e4babbc2 RECEIVED, SOURCE_IDENTITY " + dwg_identity(out).get("source_identity_verdict", "-")),
              "QORTUBA_PLAN_SELECTION": "RESOLVED (PLAN_VARIANT_4_SELECTED; SHADOW until anchored)",
              "QORTUBA_REV_NEW_UNIT": "OWNER_CONFIRMED_PENDING_EXACT_DWG_ANCHOR", "QORTUBA_Q14_CEILING": "RESOLVED_SCOPED",
              "CANONICAL_MEASUREMENT_INPUT": "IMPLEMENTED_SHADOW", "QS01_FAIL_CLOSED": "YES",
@@ -225,7 +274,10 @@ def decisions(out):
         "4_q14_ceiling_resolved": "YES, scoped to the selected apartment's ten labelled spaces and Q-14",
         "5_ceiling_condition_prevented_from_leaking": "YES: OWNER_SCOPE_MISMATCH for another region, revision, project, space "
                                                       "or item; PURPOSE_NOT_AUTHORISED for release",
-        "6_unanchored_because_dwg_missing": ["revision identity", "plan selection", "unit", "Q-14 claim", "every new value"],
+        "6_unanchored_because_dwg_missing": {"still_unanchored": ["revision identity", "plan selection", "unit", "Q-14 claim",
+                                                                  "every new value"],
+                                             "why_now": "the DWG arrived but its identity with the DXF is NOT_ESTABLISHED "
+                                                        "(decoder cannot read it)"},
         "7_canonical_input_implemented": "YES (engine/source/canonical_input.py, canonical_build.py, owner_scope.py)",
         "8_qortuba_room_method_requires": {
             "proven_by_ablation": [f for f, e in load(out / "QS01_METHOD_INPUT_CONTRACT.json")["contract"]["evidence"].items()
@@ -248,7 +300,9 @@ def decisions(out):
     return {"SCHEMA": "URBAN_R8_7_DECISION_REGISTER_V1",
             "decisions": [{"id": i, "decision": t, "status": "DECIDED"} for i, t in d],
             "findings": findings, "gates": gates, "answers": answers,
-            "recommendation": {"next": "SUPPLY the new DWG (external), then: anchor + DWG remeasure; in parallel a QS01 robustness "
+            "recommendation": {"next": "an AC1032-capable pinned DWG decoder (environment network change, or ODA), then the full "
+                                       "DWG-vs-DXF comparison and, only on SAME_EXACT_SOURCE_REVISION, re-anchoring + a K1 "
+                                       "remeasure on the DWG itself; in parallel a QS01 robustness "
                                        "round (route-stable axis/junction tolerances, furniture by role, merged-label refusal) "
                                        "proven on both revisions before any baseline approval",
                                "not_now": ["R9 ceiling trade rules", "migration", "parser qualification"]}}
@@ -258,8 +312,8 @@ def main(out):
     out = Path(out)
     dump = lambda n, o: (out / f"{n}.json").write_text(json.dumps(o, indent=1, ensure_ascii=False, default=str) + "\n")  # noqa: E731
     dump("QORTUBA_SOURCE_REVISION_REGISTER", revisions(out))
-    dump("OWNER_ACTION_REGISTER", owner_actions())
-    dump("OWNER_PROJECT_CLAIMS", project_claims())
+    dump("OWNER_ACTION_REGISTER", owner_actions(out))
+    dump("OWNER_PROJECT_CLAIMS", project_claims(out))
     dump("CANONICAL_MEASUREMENT_INPUT_SCHEMA", dict(CI.SCHEMA, qs01_contract=CI.contract_record(R7.QS01)))
     dump("R8_7_DECISION_REGISTER", decisions(out))
     a = load(out / "OWNER_ACTION_REGISTER.json")

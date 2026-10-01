@@ -43,6 +43,28 @@ def main(junit_path, command, exit_code):
         (OUT / f"{n}.json").write_text(json.dumps(obj, indent=1, ensure_ascii=False))
     (OUT / "R8_7_TEST_RESULTS.json").write_text(json.dumps(res, indent=1))
     shutil.copy(REG / "REGION_CLASSIFICATION_NEW_REVISION.json", OUT / "REGION_CLASSIFICATION_NEW_REVISION.json")
+    shutil.copy(REG / "NEW_DWG_SOURCE_IDENTITY.json", OUT / "NEW_DWG_SOURCE_IDENTITY.json")
+    DWG = jl(REG / "NEW_DWG_SOURCE_IDENTITY.json")
+    pe = DWG["partial_evidence_read"]
+    dwg_md = f"""## Candidate original DWG (supplied during R8.7)
+
+- **File:** `{DWG['candidate_dwg']['sha256'][:12]}…`, {DWG['candidate_dwg']['bytes']:,} bytes, AC1032. It matches the expected
+  hash and size.
+- **Source identity with DXF `df0e1d69…`: {DWG['verdict']}.** {DWG['why']}.
+- **What could be read** (SummaryInfo / AppInfoHistory):
+  - LASTSAVEDBY {pe['LASTSAVEDBY']['dwg_summary_info']} (equal);
+  - creation time equal;
+  - the DXF's editing time is the DWG's + {pe['TDINDWG']['dxf_minus_dwg_seconds']:.0f} s;
+  - last saved by {pe['last_saved_by_application']['product']} ({pe['last_saved_by_application']['build']}) on
+    {pe['last_saved_by_application']['saved_at']}.
+- **Reading:** {DWG['partial_evidence_reading']}.
+- **Consequences:**
+  - source anchor unchanged;
+  - owner claims not re-anchored;
+  - SUPPLY_QORTUBA_NEW_REVISION_DWG = FILE_RECEIVED;
+  - parser independence unaffected.
+- **To establish:** {'; '.join(DWG['to_establish'])}.
+"""
 
     RV, A, C = R["QORTUBA_SOURCE_REVISION_REGISTER"]["revisions"], R["OWNER_ACTION_REGISTER"], R["OWNER_PROJECT_CLAIMS"]
     D, Q14, DEC = R["QORTUBA_REVISION_DELTA"], R["Q14_SCOPED_CEILING_RULE"], R["R8_7_DECISION_REGISTER"]
@@ -80,6 +102,12 @@ room method cannot yet establish three rooms of the new drawing.
 ## New-revision diagnostic (not production)
 
 {row_tbl}
+
+## Candidate original DWG
+
+The DWG `e4babbc2…` was received. Its identity with the DXF is **{DWG['verdict']}**: the pinned decoder cannot read
+its header and object sections, so the match is not forced. The anchor stays on the DXF and no claim is
+re-anchored. Everything that could be read is consistent with it being the source; details are in 02.
 
 ## Two things found that matter beyond Qortuba
 
@@ -125,8 +153,9 @@ One full suite from `{commit}`: {jr['total']} total · {jr['passed']} passed · 
 
 {tbl(("variant", "frame occurrence", "extent"), [(v, x['frame_occurrence'], [round(c, 1) for c in x['extent']]) for v, x in new['plan_variants'].items()])}
 
-**When the DWG arrives:** {'; '.join(new['when_the_dwg_arrives'])}.
-"""
+**When the DWG's identity is established:** {'; '.join(new['when_the_dwg_arrives'])}.
+
+{dwg_md}"""
 
     f["03_QORTUBA_OWNER_DECISIONS.md"] = "# 03 — Owner decisions as scoped claims\n\n" + tbl(
         ("claim", "kind", "scope", "purposes", "anchor", "own scope", "old revision", "release"),

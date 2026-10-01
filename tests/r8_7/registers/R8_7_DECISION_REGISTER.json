@@ -55,6 +55,11 @@
    "id": "R87-D11",
    "decision": "MIGRATION_PLANNING_READY = YES; MIGRATION_EXECUTION_READY = NO; PRODUCTION_MIGRATION = NO.",
    "status": "DECIDED"
+  },
+  {
+   "id": "R87-D12",
+   "decision": "Candidate original DWG e4babbc2 received (35,110,771 bytes, AC1032). Source identity with DXF df0e1d69: NOT_ESTABLISHED. The pinned decoder cannot read its Header / Classes / AcDbObjects sections, so the anchor is NOT promoted and no claim is re-anchored; partial evidence is consistent with identity but does not decide it. Parser independence unaffected.",
+   "status": "DECIDED"
   }
  ],
  "findings": [
@@ -89,6 +94,12 @@
    "action": "the canonical contract carries label identity; legacy name sets stay out of new methods"
   },
   {
+   "id": "F-R87-07",
+   "risk": "false source identity",
+   "finding": "the pinned LibreDWG 0.13.3 cannot decode the AutoCAD 2023-saved AC1032 DWG (section map: read_R2004_section_info out of range; Invalid num_segidx). Header GUIDs, handle seed and every entity are unreadable; SummaryInfo / AppInfoHistory read: same creation time, same user, DXF editing time = DWG + 125 s, last saved by AutoCAD 2023 on 2026-05-09",
+   "action": "an AC1032-capable decoder, pinned (environment denies github.com / ftp.gnu.org); then the full comparison"
+  },
+  {
    "id": "F-R87-06",
    "risk": "unsafe human-claim propagation",
    "finding": "the Q-14 claim is label-scoped; it applies to the new revision only if the remeasured label multiset matches; it currently does not (BED.ROOM / BATH, whgm, HALL)",
@@ -100,7 +111,7 @@
   "MIGRATION_PLANNING_READY": "YES",
   "MIGRATION_EXECUTION_READY": "NO",
   "QORTUBA_CURRENT_REVISION": "QORTUBA_REV_NEW",
-  "QORTUBA_REV_NEW_ANCHOR": "DXF_ONLY_PENDING_DWG",
+  "QORTUBA_REV_NEW_ANCHOR": "DXF_ONLY; DWG e4babbc2 RECEIVED, SOURCE_IDENTITY NOT_ESTABLISHED",
   "QORTUBA_PLAN_SELECTION": "RESOLVED (PLAN_VARIANT_4_SELECTED; SHADOW until anchored)",
   "QORTUBA_REV_NEW_UNIT": "OWNER_CONFIRMED_PENDING_EXACT_DWG_ANCHOR",
   "QORTUBA_Q14_CEILING": "RESOLVED_SCOPED",
@@ -116,13 +127,16 @@
   "3_new_revision_unit_owner_confirmed": "YES (1 cm), pending exact DWG anchor",
   "4_q14_ceiling_resolved": "YES, scoped to the selected apartment's ten labelled spaces and Q-14",
   "5_ceiling_condition_prevented_from_leaking": "YES: OWNER_SCOPE_MISMATCH for another region, revision, project, space or item; PURPOSE_NOT_AUTHORISED for release",
-  "6_unanchored_because_dwg_missing": [
-   "revision identity",
-   "plan selection",
-   "unit",
-   "Q-14 claim",
-   "every new value"
-  ],
+  "6_unanchored_because_dwg_missing": {
+   "still_unanchored": [
+    "revision identity",
+    "plan selection",
+    "unit",
+    "Q-14 claim",
+    "every new value"
+   ],
+   "why_now": "the DWG arrived but its identity with the DXF is NOT_ESTABLISHED (decoder cannot read it)"
+  },
   "7_canonical_input_implemented": "YES (engine/source/canonical_input.py, canonical_build.py, owner_scope.py)",
   "8_qortuba_room_method_requires": {
    "proven_by_ablation": [
@@ -188,7 +202,7 @@
   "17_q14_changes": "BLOCKED: the owner rule does not rescue missing geometry (rooms not established or the space set changed)"
  },
  "recommendation": {
-  "next": "SUPPLY the new DWG (external), then: anchor + DWG remeasure; in parallel a QS01 robustness round (route-stable axis/junction tolerances, furniture by role, merged-label refusal) proven on both revisions before any baseline approval",
+  "next": "an AC1032-capable pinned DWG decoder (environment network change, or ODA), then the full DWG-vs-DXF comparison and, only on SAME_EXACT_SOURCE_REVISION, re-anchoring + a K1 remeasure on the DWG itself; in parallel a QS01 robustness round (route-stable axis/junction tolerances, furniture by role, merged-label refusal) proven on both revisions before any baseline approval",
   "not_now": [
    "R9 ceiling trade rules",
    "migration",

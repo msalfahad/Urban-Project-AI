@@ -34,7 +34,7 @@ def test_owner_actions_reflect_the_decisions_already_given():
     for k in ("CONFIRM_QORTUBA_NATIVE_UNIT", "CONFIRM_QORTUBA_AUTHORITATIVE_REVISION", "SELECT_QORTUBA_BOTTOM_MOST_PLAN",
               "CONFIRM_QORTUBA_NEW_REVISION_NATIVE_UNIT", "REVIEW_QORTUBA_Q14_CEILING_CONDITIONS"):
         assert a[k]["status"] == "RESOLVED" and a[k]["resolved_by_claim"], k
-    assert a["SUPPLY_QORTUBA_NEW_REVISION_DWG"]["status"] == "OPEN"
+    assert a["SUPPLY_QORTUBA_NEW_REVISION_DWG"]["status"] == "FILE_RECEIVED"          # identity not yet established
     assert a["APPROVE_QORTUBA_NEW_ROUND1_BASELINE"]["status"] == "OPEN_AFTER_REMEASUREMENT"
     assert "REVIEW_QORTUBA_SECOND_FLOOR_PLAN_DESIGNATION" not in a and "SUPPLY_DXF_CONVERSION_RECORD" not in a
     for k in ("DECIDE_ALRASHED_COLUMN_DEDUCTION_METHOD", "CONFIRM_P7757_NATIVE_UNIT", "RESOLVE_ALRASHED_UNIT",
@@ -100,3 +100,29 @@ def test_gates_unchanged():
     g = r("R8_7_DECISION_REGISTER")["gates"]
     assert (g["PRODUCTION_MIGRATION"], g["MIGRATION_EXECUTION_READY"], g["MIGRATION_PLANNING_READY"]) == ("NO", "NO", "YES")
     assert g["SIGNATURES_QUALIFIED"] == 0 and g["INDEPENDENT_REAL_RECONCILIATION"] == "BLOCKED_EXTERNAL_PROVENANCE"
+
+
+def test_candidate_dwg_identity_is_not_forced():
+    d = r("NEW_DWG_SOURCE_IDENTITY")
+    assert d["candidate_dwg"]["sha256"] == "e4babbc2ded14d8b01d64fbfd4b373e6a09ba60c4490a56e6305a82c9e47171f"
+    assert d["candidate_dwg"]["bytes"] == 35110771
+    assert d["decoder"]["binary_matches_pin"] is True and d["decoder"]["exit_code"] != 0
+    assert {"Header", "Classes", "AcDbObjects"} <= set(d["decoder_report"]["sections_failed"])
+    assert d["required_comparisons_possible"] is False and d["verdict"] == "NOT_ESTABLISHED"
+    pe = d["partial_evidence_read"]
+    assert pe["file_version"]["equal"] and pe["LASTSAVEDBY"]["equal"] and pe["TDCREATE"]["equal"]
+    assert pe["TDINDWG"]["dxf_minus_dwg_seconds"] == 125.0
+    assert pe["last_saved_by_application"]["product"] == "AutoCAD 2023"
+    # consequences: nothing promoted, nothing re-anchored, parser independence untouched
+    rev = r("QORTUBA_SOURCE_REVISION_REGISTER")["revisions"]["QORTUBA_REV_NEW"]
+    assert rev["anchor_kind"] == "DERIVED_PENDING_SOURCE" and rev["dxf_sha256"] == NEW_DXF
+    assert rev["candidate_original_dwg"]["anchor_promoted"] is False
+    claims = r("OWNER_PROJECT_CLAIMS")
+    assert claims["re_anchoring"]["claims_re_anchored"] is False
+    assert all(c["anchor_state"] == "OWNER_CONFIRMED_PENDING_EXACT_SOURCE_ANCHOR" and c["status"] == "ACTIVE"
+               for c in claims["claims"])
+    a = {x["action_id"]: x for x in r("OWNER_ACTION_REGISTER")["actions"]}
+    assert a["SUPPLY_QORTUBA_NEW_REVISION_DWG"]["status"] == "FILE_RECEIVED"
+    assert a["ESTABLISH_NEW_DWG_SOURCE_IDENTITY"]["status"] == "OPEN"
+    assert a["ANCHOR_SELECTED_PLAN_TO_EXACT_NEW_DWG"]["status"] == "OPEN"
+    assert r("R8_7_DECISION_REGISTER")["gates"]["SIGNATURES_QUALIFIED"] == 0

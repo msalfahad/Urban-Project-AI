@@ -2,7 +2,7 @@
  "SCHEMA": "URBAN_R8_7_OWNER_ACTION_REGISTER_V4",
  "rule": "no action is resolved without explicit owner input",
  "supersedes": "tests/r8_6a/registers/OWNER_ACTION_REGISTER.json (V3; unchanged)",
- "open": 8,
+ "open": 10,
  "resolved": 5,
  "actions": [
   {
@@ -162,14 +162,51 @@
    "why_needed": "every new-revision claim and value is anchored to the DXF only; the DWG anchors revision identity, plan selection, unit, the Q-14 claim and the quantities",
    "exact_source_hash": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
    "choices": null,
-   "status": "OPEN",
+   "status": "FILE_RECEIVED",
    "urgency": "HIGH",
    "what_is_blocked": [
     "ANCHOR_SELECTED_PLAN_TO_EXACT_NEW_DWG",
     "any release of a new-revision quantity"
    ],
    "supersedes_action": "SUPPLY_QORTUBA_SOURCE_DWG_OF_DXF",
-   "resolved_only_by": "a file, then hash + identity checks"
+   "resolved_only_by": "a file, then hash + identity checks",
+   "FILE_RECEIVED": {
+    "sha256": "e4babbc2ded14d8b01d64fbfd4b373e6a09ba60c4490a56e6305a82c9e47171f",
+    "bytes": 35110771
+   },
+   "SOURCE_IDENTITY": "NOT_ESTABLISHED",
+   "note": "the owner's part is done: nothing more is asked of him for the DWG; identity is an Urban tooling step (ESTABLISH_NEW_DWG_SOURCE_IDENTITY)"
+  },
+  {
+   "action_id": "ESTABLISH_NEW_DWG_SOURCE_IDENTITY",
+   "project": "QORTUBA",
+   "status": "OPEN",
+   "question": "(Urban task) compare DWG e4babbc2 with DXF df0e1d69 using a decoder that reads AutoCAD 2018-format object sections",
+   "exact_source_hash": "e4babbc2ded14d8b01d64fbfd4b373e6a09ba60c4490a56e6305a82c9e47171f",
+   "urgency": "HIGH",
+   "what_is_blocked": [
+    "ANCHOR_SELECTED_PLAN_TO_EXACT_NEW_DWG",
+    "re-anchoring every new-revision claim"
+   ],
+   "blocked_by": [
+    "the pinned LibreDWG 0.13.3 cannot read this file's Header / Classes / AcDbObjects sections",
+    "the environment denies github.com and ftp.gnu.org (no newer decoder)"
+   ]
+  },
+  {
+   "action_id": "ALLOW_DECODER_INSTALL_IN_ENVIRONMENT",
+   "project": "ALL",
+   "status": "OPEN",
+   "question": "Optional: allow github.com (LibreDWG source) or the ODA download site in this cloud environment's network access, so Urban can build, pin and record an AC1032-capable decoder",
+   "exact_source_hash": "e4babbc2ded14d8b01d64fbfd4b373e6a09ba60c4490a56e6305a82c9e47171f",
+   "urgency": "MEDIUM",
+   "choices": [
+    "ALLOW",
+    "NOT NOW"
+   ],
+   "what_is_blocked": [
+    "ESTABLISH_NEW_DWG_SOURCE_IDENTITY"
+   ]
   },
   {
    "action_id": "ANCHOR_SELECTED_PLAN_TO_EXACT_NEW_DWG",

@@ -220,6 +220,12 @@
    "release_use": "PURPOSE_NOT_AUTHORISED"
   }
  },
+ "re_anchoring": {
+  "candidate_dwg": "e4babbc2ded14d8b01d64fbfd4b373e6a09ba60c4490a56e6305a82c9e47171f",
+  "source_identity": "NOT_ESTABLISHED",
+  "claims_re_anchored": false,
+  "rule": "exact-source claims supersede these v1 claims only after SAME_EXACT_SOURCE_REVISION; until then the v1 claims stay ACTIVE (pending anchor, SHADOW only)"
+ },
  "historical_unit_claim": {
   "claim": "QORTUBA-NATIVE-UNIT-OWNER-001",
   "file": "data/registry/OWNER_UNIT_CLAIMS.json (unchanged)",
