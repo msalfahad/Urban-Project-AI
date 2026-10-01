@@ -108,5 +108,10 @@ bridges it to the legacy QS01 method. Owner decisions are scoped claims in `data
 | `r8_8_topology.py` | `tests/r8_8/registers/{OLD_QORTUBA_CROSS_ROUTE,NEW_QORTUBA_TOPOLOGY,QORTUBA_SIX_ROW_STATUS,ELLIPSE_EXCLUSION_AUDIT,GEOMETRY_ROLE_REGISTER,VISIBILITY_AUTHORITY_REGISTER,REGION_MEMBERSHIP_POLICY,SITES_*,TOPOLOGY_CROSSCHECK,TOLERANCE_ARCHITECTURE}.json` | TS01 certified topology on old K1 / old K2 / new K2, cross-route control, six-row status, GEOS cross-check, tolerance inventory + H584 ULP study (project semantics live here only) |
 | `r8_8_registers.py` | `tests/r8_8/registers/{OWNER_ACTION_REGISTER,ENGINEERING_ACTION_REGISTER,SOURCE_SUBPART_IDENTITY_SCHEMA,R8_8_DECISION_REGISTER,ARCHITECTURE_REVIEW}.json` | owner actions V5 (owner-doable only), engineering actions, decisions / findings / gates / answers, architecture review |
 | `r8_8_package.py` | `data/reports/URBAN_QTO_R8_8_TOPOLOGY_STABILITY/` + zip | review package (18 md + 16 json + 2 site overlays) |
+| `r8_9_evidence.py` | (library) | ACIS / ASM SAB and spline placement extents for unrealised entities (positive evidence only) |
+| `r8_9_qortuba.py` | `tests/r8_9/registers/{EFFECTIVE_LAYER_REGISTER,ROLE_AUTHORITY_POLICY,SOURCE_LAYER_ROLE_CLAIMS,BLOCK_OCCURRENCE_CONTEXT_REGISTER,UNREALISED_ENTITY_REGISTER,TEXT_ROLE_REGISTER,SEMANTIC_ZONE_REGISTER,THRESHOLD_SITE_REGISTER,DOOR_CLOSURE_AUDIT,TOPOLOGY_CROSSCHECK_V2,QORTUBA_R8_9_STATUS}.json` | R8.9 rerun of old / new Qortuba, FIRNTUR / SF3 / DIM-separator investigations, sandboxed hypotheses (never released) |
+| `r8_9_p7757.py` | `tests/r8_9/registers/P7757_R8_9_SHADOW.json` | P7757 second-family shadow; unit never assumed |
+| `r8_9_registers.py` | `tests/r8_9/registers/{OWNER_ACTION_REGISTER,ENGINEERING_ACTION_REGISTER,R8_9_DECISION_REGISTER}.json` | owner actions V6, engineering actions, decisions / findings / gates / answers 1-27 |
+| `r8_9_package.py` | `data/reports/URBAN_QTO_R8_9_ROLE_AND_SEMANTIC_ZONES/` + zip | review package (19 md + 16 json + owner review picture) |
 
 `<work>` must hold `old_k2.pkl` (K2 on LibreDWG's DXF of the old DWG) and `new_k2.pkl` (K2 on the hash-addressed new DXF).

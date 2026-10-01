@@ -57,7 +57,8 @@ def owner_picture(work, path):
             d.line([v(g[0], g[1]), v(g[2], g[3])], fill=(0, 0, 0), width=3)
         elif p.layer == "DIM" and p.identity.source_handle in ("7116", "7117", "7118", "7119"):
             d.line([v(g[0], g[1]), v(g[2], g[3])], fill=(230, 0, 0), width=4)
-            d.text(v(g[0] + 3, (g[1] + g[3]) / 2), p.identity.source_handle, fill=(230, 0, 0))
+            f = 0.35 if p.identity.source_handle in ("7116", "7118") else 0.65
+            d.text(v(g[0] + 3, g[1] + f * (g[3] - g[1])), p.identity.source_handle, fill=(230, 0, 0))
     for t in new.texts:
         if t.value in ("BATH", "BED.ROOM", "HALL") and t.x is not None and x0 <= t.x <= x1 and y0 <= t.y <= y1:
             d.text(v(t.x, t.y), t.value, fill=(0, 110, 0))

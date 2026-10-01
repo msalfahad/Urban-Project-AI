@@ -260,3 +260,39 @@ decoder cannot fix that sensitivity, so QS01 stays research/legacy.
   - 2 and 5 mm are real openings.
 - Registers: `ARCHITECTURE_REVIEW`, `TOPOLOGY_CROSSCHECK`, `TOLERANCE_ARCHITECTURE`; package page
   `17_ARCHITECTURE_REVIEW.md`.
+
+## 10. R8.9 addendum — role authority, physical space vs semantic / trade zones
+
+**Why.** R8.8 admitted geometry by layer name alone and read only the top insert layer. On the new Qortuba revision
+four lines moved to layer DIM lie exactly on the old bathroom / bedroom wall faces; excluding them silently merged
+HALL + BED.ROOM + BATH into one 68.66 m² site. A layer role is evidence, not authority.
+
+**Pipeline.**
+
+    canonical input (effective layer) --> occurrence contexts --> role candidates --> role admission (grades)
+      --> consequence check of every exclusion --> text roles --> certified topology (unchanged TS01)
+      --> physical sites --> semantic zones --> trade measurement regions (blocked until a trade rule exists)
+
+**Modules** (in `engine/source`, project-agnostic):
+
+| Module | Role |
+|---|---|
+| `canonical_input.py` / `canonical_build.py` | `effective_layer` + authority on every part / text / dimension (layer-0 inheritance through the whole insert chain, both routes; unresolved fails closed). |
+| `geometry_role.py` | GEOMETRY_ROLE_EVIDENCE_POLICY_V2: effective layer, building-assembly occurrences (GR-17), SEMANTIC_BOUNDARY (GR-18). |
+| `role_authority.py` | ROLE_AUTHORITY_POLICY_V1: boundary grades (STRUCTURAL / NETWORK / STUB / CANDIDATE), occurrence contexts, source-scoped `SourceLayerRoleClaim` (revision + anchor sha, REVIEWED only), consequence analysis (ROLE_CONFLICT_SEPARATOR, TOPOLOGY_ROLE_UNRESOLVED, UNKNOWN_OBJECT_IN_SITE, FIXED_OBJECT_AGAINST_BOUNDARY). |
+| `text_role.py` | Text roles TR-01..TR-99: only an established room tag names a space; tag families by scale-free composition; no nearest-label fallback. |
+| `semantic_zones.py` | Physical site / semantic zone / trade region; subdivision only from positive evidence; open plan is a legitimate state; threshold sites keep TRADE_RULE_REQUIRED allocation; OBSTACLE_INTERIOR from role evidence only. |
+| `topology_crosscheck.py` | TOPOLOGY_CROSSCHECK_GEOS_V2: every grid phase evaluated (ALL_PHASES_AGREE / PHASE_SENSITIVE_INCONCLUSIVE / ALL_PHASES_DISAGREE / CHECK_INPUT_INVALID); no buffer(0) repair. |
+| `topology.py` / `room_topology.py` | Outer / hole / interior-stub boundary split, `max_abs_coordinate` over exact extents, door reach audit, unrealised entities excluded only on positive evidence. |
+
+The tolerance policy and its digest are unchanged; AUTHORED_PRECISION_MM is classed ENGINE_METHOD_PARAMETER.
+
+**Qortuba.** Old revision rows unchanged (Q-03 / Q-11 = 17.7425, Q-03P / Q-12 = 11.685, Q-13 / Q-14 blocked). New
+revision: every row blocked — two attached xrefs are not in the source (BLOCKED_SOURCE_COMPLETENESS) and the DIM
+lines are role conflicts (BLOCKED_ROLE). Two YES / NO owner reviews are prepared; no expected quantity is asked.
+
+**P7757 (second drawing family, shadow).** Effective layer decides 3328 parts; the generic lexicon does not survive
+single-letter layer names (about 95% UNKNOWN, fails closed); unit UNIT_UNRESOLVED (mm is a source candidate only).
+
+**Package:** `data/reports/URBAN_QTO_R8_9_ROLE_AND_SEMANTIC_ZONES/`. **Gates:** MIGRATION_PLANNING_READY = YES,
+MIGRATION_EXECUTION_READY = NO, PRODUCTION_MIGRATION = NO.
