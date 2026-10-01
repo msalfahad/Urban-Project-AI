@@ -59,7 +59,7 @@ from . import canonical_input as CI
 from . import geometry_role as GR
 from . import topology as T
 
-POLICY_ID = "ROLE_AUTHORITY_POLICY_V1"
+POLICY_ID = "ROLE_AUTHORITY_POLICY_V2"   # V2 (R8.10): NETWORK review, near-miss review, assembly V2
 STRUCTURAL, NETWORK, STUB, CANDIDATE = "STRUCTURAL", "NETWORK", "STUB", "CANDIDATE"
 GRADE_ORDER = {STRUCTURAL: 3, NETWORK: 2, STUB: 1, CANDIDATE: 0}
 LAYER_ONLY_EXCLUSION_RULES = ("GR-09", "GR-10", "GR-11", "GR-12", "GR-13", "GR-14", "GR-15", "GR-16")

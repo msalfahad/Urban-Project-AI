@@ -343,7 +343,7 @@ def passage_sites(passages, res, unit_native_to_mm):
 
 def run(inp: CI.CanonicalMeasurementInput, *, frame_insert, expected_revision_id=None, selected_region_id=None,
         contract=TS01, unrealised=None, claims=(), occurrence_claims=None, part_claims=(), xref_claims=(),
-        closure_policy=None) -> dict:
+        closure_policy=None, provenance=None) -> dict:
     v = CI.validate(inp, contract, expected_revision_id=expected_revision_id, selected_region_id=selected_region_id)
     out = {"method_id": contract.method_id, "validation": v, "state": v["state"], "sites": None}
     if v["state"] != CI.COMPLETE:
@@ -437,4 +437,7 @@ def run(inp: CI.CanonicalMeasurementInput, *, frame_insert, expected_revision_id
                      "labels": len(labels)}
     out.update(res)
     out["state"] = res["state"]
+    from . import run_manifest as RM                       # R8.11: every result names its exact inputs
+    out["run_manifest"] = RM.build(inp, out, method_id=contract.method_id, contract_version=contract.version,
+                                   closure_policy=closure_policy, provenance=provenance)
     return out

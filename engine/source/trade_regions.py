@@ -33,7 +33,7 @@ from dataclasses import dataclass, field
 
 from . import canonical_input as CI
 
-POLICY_ID = "TRADE_TREATMENT_POLICY_V1"
+POLICY_ID = "TRADE_TREATMENT_POLICY_V2"   # V2 (R8.11): semantic classes, object-footprint policies
 NOT_REQUIRED = "SEMANTIC_SUBDIVISION_NOT_REQUIRED_FOR_TRADE"
 REQUIRED = "SEMANTIC_SUBDIVISION_REQUIRED"
 UNRESOLVED = "TRADE_TREATMENT_UNRESOLVED"
@@ -65,6 +65,83 @@ class TradeTreatmentRule:
         return self.by_name.get(name, self.otherwise)
 
 
+# ======================================================================== R8.11: semantic class authority
+@dataclass(frozen=True)
+class SemanticClassRule:
+    """Exact source label text -> SPACE CLASS, from one authority record, within one scope. Display text is never
+    the generic identity: a spelling not listed here (other case, other spacing, a typo) maps to NOTHING."""
+    rule_id: str
+    version: int
+    authority: str
+    source_refs: tuple
+    scope: dict
+    by_label: dict = field(default_factory=dict)      # exact label text -> class
+    otherwise_class: str | None = None                # class of every OTHER label in `scope_labels`
+    scope_labels: tuple = ()                          # the label texts this rule covers at all
+
+    def space_class(self, label):
+        if label in self.by_label:
+            return self.by_label[label]
+        if self.otherwise_class and label in self.scope_labels:
+            return self.otherwise_class
+        return None
+
+
+def class_treatments(site_labels, class_rule: SemanticClassRule, by_class: dict) -> dict:
+    """{label: (space class, treatment)} - treatment through the authoritative class, never the raw string."""
+    out = {}
+    for n in sorted({x for x in site_labels if x}):
+        c = class_rule.space_class(n)
+        out[n] = (c, by_class.get(c) if c else None)
+    return out
+
+
+def class_rule_as_treatment(rule_id, version, trade, authority, refs, class_rule, by_class, object_footprints):
+    """A TradeTreatmentRule whose by_name map is DERIVED from the semantic class rule (an adapter: the authority
+    chain is label -> class (class_rule) -> treatment (by_class))."""
+    names = {n: by_class.get(c) for n, c in class_rule.by_label.items() if by_class.get(c)}
+    other = by_class.get(class_rule.otherwise_class) if class_rule.otherwise_class else None
+    return TradeTreatmentRule(rule_id, version, trade, authority, tuple(refs) + (f"{class_rule.rule_id}@v"
+                                                                                  f"{class_rule.version}",),
+                              by_name=names, otherwise=other, object_footprints=object_footprints,
+                              scope_names=tuple(sorted(set(class_rule.by_label) | set(class_rule.scope_labels))))
+
+
+# ======================================================================== R8.11: object-footprint authority
+FOOTPRINT_INCLUDED = "FOOTPRINT_INCLUDED"
+FOOTPRINT_DEDUCTED = "FOOTPRINT_DEDUCTED"
+ROLE_REQUIRED = "ROLE_REQUIRED"
+NOT_APPLICABLE = "NOT_APPLICABLE"
+ANY_NON_PARTITION_OBJECT = "ANY_NON_PARTITION_OBJECT"
+IMPLICIT = "IMPLICIT_INCLUDED_BY_TOPOLOGY_CONVENTION"
+
+
+@dataclass(frozen=True)
+class TradeObjectFootprintPolicy:
+    """How ONE trade treats the footprint of ONE object class. Separate from the object's ROLE: an object may stay
+    ROLE_UNRESOLVED while a trade policy covering ANY_NON_PARTITION_OBJECT decides its footprint; a proven role
+    does not by itself answer the footprint question."""
+    policy_id: str
+    version: int
+    trade: str
+    object_class: str                 # LOOSE_FURNITURE, FIXED_JOINERY, SANITARY_FIXTURE, ANY_NON_PARTITION_OBJECT ...
+    treatment: str                    # FOOTPRINT_INCLUDED, FOOTPRINT_DEDUCTED, ROLE_REQUIRED, NOT_APPLICABLE
+    authority: str
+    scope: dict
+    source_refs: tuple
+
+
+def footprint_treatment(trade, object_class, policies) -> tuple:
+    """(treatment, policy id) for an object class in a trade, or (None, None) when no authority exists."""
+    for p in sorted(policies, key=lambda z: (z.policy_id, z.version)):
+        if p.trade == trade and p.object_class == object_class:
+            return p.treatment, f"{p.policy_id}@v{p.version}"
+    for p in sorted(policies, key=lambda z: (z.policy_id, z.version)):
+        if p.trade == trade and p.object_class == ANY_NON_PARTITION_OBJECT:
+            return p.treatment, f"{p.policy_id}@v{p.version}"
+    return None, None
+
+
 def zone_decision(site_names, rule: TradeTreatmentRule, *, unresolved_texts=(), authored_trade_boundary=False):
     """Trade decision for ONE certified physical site with established label values `site_names` (one entry per
     label occurrence; bilingual stamps already reduced to their names)."""
@@ -88,7 +165,7 @@ def zone_decision(site_names, rule: TradeTreatmentRule, *, unresolved_texts=(), 
     return dict(rec, state=NOT_REQUIRED, why="every established label has the same treatment for this trade")
 
 
-def object_materiality(consequence_entry, rule: TradeTreatmentRule) -> dict:
+def object_materiality(consequence_entry, rule: TradeTreatmentRule, footprint_policies=()) -> dict:
     """Materiality of the UNKNOWN-role objects of one site for one trade. consequence_entry: the site's
     consequence["unknown"] record (effect, sources) from role_authority.separator_analysis, or None."""
     if not consequence_entry or consequence_entry.get("effect") == "NONE":
@@ -96,6 +173,14 @@ def object_materiality(consequence_entry, rule: TradeTreatmentRule) -> dict:
     src = sorted(consequence_entry.get("sources", []))
     if consequence_entry.get("effect") == "SEPARATES_LABELS":
         return {"state": MATERIAL, "why": "the object could be a partition between the site's labels", "sources": src}
+    tr, pid = footprint_treatment(rule.trade, ANY_NON_PARTITION_OBJECT, footprint_policies)
+    if tr == FOOTPRINT_INCLUDED:
+        return {"state": NON_MATERIAL, "sources": src, "footprint_policy": pid,
+                "why": f"{pid}: this trade includes the footprint of any non-partition object, and the consequence "
+                       "check proves the object cannot separate the labels (its role may stay unresolved)"}
+    if tr in (ROLE_REQUIRED, FOOTPRINT_DEDUCTED):
+        return {"state": MATERIAL, "sources": src, "footprint_policy": pid,
+                "why": f"{pid}: the footprint treatment depends on the object's role ({tr})"}
     if rule.object_footprints == NOT_DEDUCTED:
         return {"state": NON_MATERIAL, "sources": src,
                 "why": f"{rule.rule_id}: this trade measures the whole physical footprint whatever stands inside it, "
@@ -140,6 +225,8 @@ def policy_record() -> dict:
                                           "same authoritative treatment", "no unresolved text could imply another",
                                           "no authored trade / finish boundary inside", "objects treated identically "
                                           "(object-footprint policy) or non-material"],
+           "semantic_class": "label text -> SPACE CLASS (SemanticClassRule, exact text, scoped) -> treatment",
+           "object_footprint": [FOOTPRINT_INCLUDED, FOOTPRINT_DEDUCTED, ROLE_REQUIRED, NOT_APPLICABLE],
            "never": ["a treatment from a room name by itself", "a historical BOQ quantity as authority",
                      "a boundary invented between labels", "a global role assigned to release one quantity"]}
     rec["digest"] = hashlib.sha256(json.dumps(rec, sort_keys=True).encode()).hexdigest()
