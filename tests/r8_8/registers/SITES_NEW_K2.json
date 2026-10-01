@@ -29,7 +29,8 @@
    "area_difference": 0.0,
    "area_bound": 28.245740690189635
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-16beefe79d1949e3",
@@ -61,7 +62,8 @@
    "area_difference": 0.0,
    "area_bound": 48.32888849449519
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-1bb7f3bf4a602fbf",
@@ -92,7 +94,8 @@
    "area_difference": 0.0,
    "area_bound": 108.00000000002348
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-1c4abf65f9b5db1e",
@@ -142,7 +145,8 @@
    "area_difference": 0.0,
    "area_bound": 119.00000000001074
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-1cc94d2ca98f6229",
@@ -175,7 +179,8 @@
    "area_difference": 0.0,
    "area_bound": 18.99999999994143
   },
-  "opening_of": "I2044"
+  "opening_of": "I2044",
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-1e137bdedfb4a92a",
@@ -220,7 +225,8 @@
    "area_difference": 0.0,
    "area_bound": 178.54433910545924
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-1ee05f19c800b1b0",
@@ -251,7 +257,8 @@
    "area_difference": 0.0,
    "area_bound": 52.99999999999454
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-200fdc0beeaa8739",
@@ -282,7 +289,8 @@
    "area_difference": 0.0,
    "area_bound": 9.999999999925059
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-23db89e96ede6dac",
@@ -313,7 +321,8 @@
    "area_difference": 0.0,
    "area_bound": 28.04574069020964
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-2b7e752d7baa45f5",
@@ -345,7 +354,8 @@
    "area_difference": 0.0,
    "area_bound": 51.39999999999709
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-2bf3db64b092ac64",
@@ -378,7 +388,8 @@
    "area_difference": 0.0,
    "area_bound": 23.000000000167894
   },
-  "opening_of": "I677"
+  "opening_of": "I677",
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-334628841f471bed",
@@ -410,7 +421,8 @@
    "area_difference": 0.0,
    "area_bound": 35.35030640330042
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-3560d030b869ac30",
@@ -443,7 +455,8 @@
    "area_difference": 0.0,
    "area_bound": 44.999999999983814
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-3a6f70f44b93c7b5",
@@ -489,7 +502,8 @@
    "area_difference": 0.0,
    "area_bound": 143.12290673027857
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-3b875c57dda012d3",
@@ -521,7 +535,8 @@
    "area_difference": 0.0,
    "area_bound": 48.32888849449519
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-3c956adac3484dd9",
@@ -557,7 +572,8 @@
    "area_difference": 0.0,
    "area_bound": 56.99999999996217
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-404c077514e2269f",
@@ -592,7 +608,8 @@
    "area_difference": 0.0,
    "area_bound": 15.99999999983229
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-40c6cd00232ce5c2",
@@ -623,7 +640,8 @@
    "area_difference": 0.0,
    "area_bound": 35.15030640330224
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-442b55192e6578ff",
@@ -658,7 +676,8 @@
    "area_difference": 0.0,
    "area_bound": 15.999999999999273
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-44e79002f6975126",
@@ -690,7 +709,8 @@
    "area_difference": 0.0,
    "area_bound": 33.61984040763382
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-47f3ffda2aca56f7",
@@ -753,7 +773,8 @@
    "area_difference": 0.0,
    "area_bound": 417.39007979600814
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-496a42dddca4f8ff",
@@ -784,7 +805,8 @@
    "area_difference": 0.0,
    "area_bound": 51.19999999998254
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-4cd00ecb866fbbb9",
@@ -817,7 +839,8 @@
    "area_difference": 0.0,
    "area_bound": 5.000000000015461
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-4e2a2a3375396340",
@@ -1024,7 +1047,8 @@
    "area_difference": 0.0,
    "area_bound": 752.1421075943605
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-5b8e4f9259cdb19c",
@@ -1057,7 +1081,8 @@
    "area_difference": 0.0,
    "area_bound": 18.999999999934154
   },
-  "opening_of": "I1561"
+  "opening_of": "I1561",
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-605a119624a3ea83",
@@ -1095,7 +1120,8 @@
    "area_difference": 0.0,
    "area_bound": 69.99999999997617
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-646d666d8eb7440a",
@@ -1127,7 +1153,8 @@
    "area_difference": 0.0,
    "area_bound": 7.000000000024738
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-6da5bafb50ce7eeb",
@@ -1159,7 +1186,8 @@
    "area_difference": 0.0,
    "area_bound": 15.999999999973808
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-702c6552f70cf308",
@@ -1192,7 +1220,8 @@
    "area_difference": 0.0,
    "area_bound": 6.999999999992906
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-768c29ef11089119",
@@ -1233,7 +1262,8 @@
    "area_difference": 0.0,
    "area_bound": 625.2548339959516
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-788f30878ba9d2b3",
@@ -1303,7 +1333,8 @@
    "area_difference": 0.0,
    "area_bound": 294.99999999996544
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-7d5d931ecd5b48d4",
@@ -1335,7 +1366,8 @@
    "area_difference": 0.0,
    "area_bound": 15.999999999992543
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-7ee2f86ab3b44106",
@@ -1367,7 +1399,8 @@
    "area_difference": 0.0,
    "area_bound": 25.50717110698188
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-8a49393e37741a5e",
@@ -1399,7 +1432,8 @@
    "area_difference": 0.0,
    "area_bound": 24.999999999981448
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-8c0fce5ecd15953b",
@@ -1431,7 +1465,8 @@
    "area_difference": 0.0,
    "area_bound": 33.61984040765128
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-8c1c7563d5252c50",
@@ -1482,7 +1517,8 @@
    "area_difference": 0.0,
    "area_bound": 139.000000000004
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-91e975ed87398dd5",
@@ -1515,7 +1551,8 @@
    "area_difference": 0.0,
    "area_bound": 15.99999999999418
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-923ecf17dbfed5f7",
@@ -1560,7 +1597,8 @@
    "area_difference": 0.0,
    "area_bound": 225.00000000005787
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-947593841a77310e",
@@ -1600,7 +1638,8 @@
    "area_difference": 0.0,
    "area_bound": 94.99789837187745
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-95292543249f37c6",
@@ -1633,7 +1672,8 @@
    "area_difference": 0.0,
    "area_bound": 23.00000000023156
   },
-  "opening_of": "I1028"
+  "opening_of": "I1028",
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-966568f1df5a6361",
@@ -1666,7 +1706,8 @@
    "area_difference": 0.0,
    "area_bound": 15.99999999999709
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-967a9d31d84fb775",
@@ -1700,7 +1741,8 @@
    "area_difference": 0.0,
    "area_bound": 12.805821633235064
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-9954740764743f8e",
@@ -1733,7 +1775,8 @@
    "area_difference": 0.0,
    "area_bound": 16.0
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-9d115e042e0e1565",
@@ -1765,7 +1808,8 @@
    "area_difference": 0.0,
    "area_bound": 51.39999999999709
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-9f4d8d389cb86869",
@@ -1798,7 +1842,8 @@
    "area_difference": 0.0,
    "area_bound": 23.000000000271214
   },
-  "opening_of": "I1988"
+  "opening_of": "I1988",
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-a6405850100155ac",
@@ -1884,7 +1929,8 @@
    "area_difference": 0.0,
    "area_bound": 313.0000000000348
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-b039f31d6aead19a",
@@ -1918,7 +1964,8 @@
    "area_difference": 0.0,
    "area_bound": 16.000000000004547
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-b165cf6ff5d3dcc3",
@@ -1952,7 +1999,8 @@
    "area_difference": 0.0,
    "area_bound": 66.99999999962328
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-bd2b680527d056fa",
@@ -1985,7 +2033,8 @@
    "area_difference": 0.0,
    "area_bound": 23.00000000028431
   },
-  "opening_of": "I841"
+  "opening_of": "I841",
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-c016d9fe4a46e164",
@@ -2022,7 +2071,8 @@
    "area_difference": 0.0,
    "area_bound": 66.00000000002346
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-c4fbccf601537402",
@@ -2053,7 +2103,8 @@
    "area_difference": 0.0,
    "area_bound": 33.41984040765383
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-c6d6da0958d13931",
@@ -2084,7 +2135,8 @@
    "area_difference": 0.0,
    "area_bound": 48.128888494480634
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-cd37b93b34b56dc4",
@@ -2117,7 +2169,8 @@
    "area_difference": 0.0,
    "area_bound": 23.000000000048203
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-ceba36f0ed088fdd",
@@ -2150,7 +2203,8 @@
    "area_difference": 0.0,
    "area_bound": 31.99999999997672
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-cf6333ee5df94e4b",
@@ -2180,7 +2234,8 @@
    "area_difference": 0.0,
    "area_bound": 68.0
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-d057c5d076178d74",
@@ -2213,7 +2268,8 @@
    "area_difference": 0.0,
    "area_bound": 12.99999999997108
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-d5f9ca6e92211f18",
@@ -2249,7 +2305,8 @@
    "area_difference": 0.0,
    "area_bound": 50.99999999968059
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-daca396d6d730e60",
@@ -2302,7 +2359,8 @@
    "area_difference": 0.0,
    "area_bound": 165.79714269538292
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-dd723ea8c5f6a956",
@@ -2358,7 +2416,8 @@
    "area_difference": 0.0,
    "area_bound": 316.5661759456696
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-e2e4fb046c732aed",
@@ -2389,7 +2448,8 @@
    "area_difference": 0.0,
    "area_bound": 25.307171106978785
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-e639327cc873867d",
@@ -2422,7 +2482,8 @@
    "area_difference": 0.0,
    "area_bound": 18.999999999917055
   },
-  "opening_of": "I1443"
+  "opening_of": "I1443",
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-e7d510fad1583999",
@@ -2454,7 +2515,8 @@
    "area_difference": 0.0,
    "area_bound": 35.35030640330115
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-eaae022599294151",
@@ -2517,7 +2579,8 @@
    "area_difference": 0.0,
    "area_bound": 516.3137084989993
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-ec43024640ae6a95",
@@ -2549,7 +2612,8 @@
    "area_difference": 0.0,
    "area_bound": 28.245740690207096
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-eff54ade32f152fc",
@@ -2581,7 +2645,8 @@
    "area_difference": 0.0,
    "area_bound": 42.0
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-fa55b66bc141aa56",
@@ -2616,7 +2681,8 @@
    "area_difference": 0.0,
    "area_bound": 92.0
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  },
  {
   "site_id": "SITE-fe8ed5548fb4310e",
@@ -2670,6 +2736,7 @@
    "area_difference": 0.0,
    "area_bound": 89.99999999999237
   },
-  "opening_of": null
+  "opening_of": null,
+  "crosscheck": "AGREES"
  }
 ]

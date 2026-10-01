@@ -1,4 +1,4 @@
-"""R8.8 review package: URBAN_QTO_R8_8_TOPOLOGY_STABILITY (17 md + 13 json + 2 overlays + zip).
+"""R8.8 review package: URBAN_QTO_R8_8_TOPOLOGY_STABILITY (18 md + 16 json + 2 overlays + zip).
 
 Built from the committed R8.8 registers, the junit of ONE full suite run from the final commit, and (for the two
 site overlays) the lab's cached inputs.
@@ -23,7 +23,8 @@ OUT = ROOT / "data/reports/URBAN_QTO_R8_8_TOPOLOGY_STABILITY"
 JSONS = ("OWNER_ACTION_REGISTER", "ENGINEERING_ACTION_REGISTER", "REGION_MEMBERSHIP_POLICY",
          "SOURCE_SUBPART_IDENTITY_SCHEMA", "VISIBILITY_AUTHORITY_REGISTER", "GEOMETRY_ROLE_REGISTER",
          "ELLIPSE_EXCLUSION_AUDIT", "TOPOLOGY_TOLERANCE_POLICY", "OLD_QORTUBA_CROSS_ROUTE", "NEW_QORTUBA_TOPOLOGY",
-         "QORTUBA_SIX_ROW_STATUS", "R8_8_DECISION_REGISTER")
+         "QORTUBA_SIX_ROW_STATUS", "R8_8_DECISION_REGISTER", "ARCHITECTURE_REVIEW", "TOPOLOGY_CROSSCHECK",
+         "TOLERANCE_ARCHITECTURE")
 
 
 def jl(p):
@@ -138,6 +139,13 @@ def main(junit_path, command, exit_code, work=None):
   it touches.
 - **Input contract.** Exact curve region membership, source sub-part identity, visibility authority for every
   record type, and method exclusions that need role authority.
+
+## Architecture (addendum)
+- **TS01 stays the single vector authority.** An independent GEOS reconstruction (node + polygonize) cross-checks
+  every straight-edged site for area and boundary provenance; it can only withhold a site. Raster is QA only.
+- **Cross-check result:** {G['TOPOLOGY_CROSSCHECK']}.
+- wall_solid / free_space are not the foundation (axis-only, material-coupled, a calibrated 0.05 mm grid snap);
+  their principles are reused. See 17_ARCHITECTURE_REVIEW.md.
 
 ## Route stability (the H584 control)
 - The old revision read by two routes gives **{xc['common_site_ids']} sites with identical ids, labels, issues and
@@ -288,7 +296,22 @@ run and has a permanent regression test.
     md["15_TEST_RESULTS.md"] = "# Test results\n\n" + tests + "\n\nThe R8.8 tests cover the required list: " \
         "tests/r8_8/test_r8_8_region_membership.py, test_r8_8_subpart_identity.py, test_r8_8_visibility.py, " \
         "test_r8_8_roles_and_exclusions.py, test_r8_8_topology.py, test_r8_8_inspired_risks.py, " \
-        "test_r8_8_qortuba_real.py.\n"
+        "test_r8_8_qortuba_real.py, test_r8_8_architecture.py (addendum).\n"
+    AR = R["ARCHITECTURE_REVIEW"]
+    q, sec = AR["questions"], AR["sections"]
+
+    def item(v):
+        if isinstance(v, str):
+            return v
+        if isinstance(v, list):
+            return "\n" + "\n".join(f"  - {x}" for x in v)
+        return "\n" + "\n".join(f"  - **{k}:** {item(x) if isinstance(x, (str, list)) else json.dumps(x)}"
+                                 for k, x in v.items())
+    md["17_ARCHITECTURE_REVIEW.md"] = "# ARCHITECTURE REVIEW — CLAUDE RECOMMENDATION\n\n**" + AR["recommendation"] + \
+        "**\n\n## The seven questions\n" + "\n".join(f"- **{k}:** {item(v)}" for k, v in q.items()) + \
+        "\n\n## Sections\n" + "\n".join(f"- **{k}:** {item(v)}" for k, v in sec.items()) + \
+        "\n\n## Findings from the review\n" + "\n".join(
+            f"- **{f['id']}:** {f['finding']}" for f in D["findings"] if int(f["id"].split("-")[-1]) >= 19) + "\n"
     md["16_CLAUDE_RECOMMENDATION.md"] = "# Claude recommendation\n\n## Assessment before coding\n" + "\n".join(
         f"- **{k}:** {v}" for k, v in D["assessment_before_coding"].items()) + "\n\n## Answers (§33)\n" + "\n".join(
         f"- **{k}:** {json.dumps(v, ensure_ascii=False) if not isinstance(v, str) else v}" for k, v in A.items()) + \

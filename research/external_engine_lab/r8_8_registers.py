@@ -165,7 +165,18 @@ def decision_register(regdir):
                                           "picks a winner"},
             {"id": "R88-D09", "decision": "owner register V5: only owner-doable actions; tooling / comparison / "
                                           "re-anchoring moved to the engineering register"},
-            {"id": "R88-D10", "decision": "the new DWG identity stays NOT_ESTABLISHED; not on the topology critical path"}],
+            {"id": "R88-D10", "decision": "the new DWG identity stays NOT_ESTABLISHED; not on the topology critical path"},
+            {"id": "R88-D11", "decision": "ADDENDUM: architecture = TS01 vector authority + independent GEOS cross-check "
+                                          "(topology_crosscheck; can only withhold a site) + raster QA only; wall_solid "
+                                          "/ free_space are not the spine"},
+            {"id": "R88-D12", "decision": "ADDENDUM: tolerances are classed (numeric / node / material / region / "
+                                          "comparison); V1 kept unchanged (no V2); the noise / authored separation is "
+                                          "measured per drawing (topology_policy.separation, NOISE_NEAR_EPS_N)"},
+            {"id": "R88-D13", "decision": "ADDENDUM: band(d == eps_r) = AMBIGUOUS (matches the <= of the certificate "
+                                          "build); a site found only in the eps_r build is stated "
+                                          "(SITE_ONLY_IN_AUTHORED_BUILD)"},
+            {"id": "R88-D14", "decision": "ADDENDUM: GEOS output never acquires identity; the cross-check proves "
+                                          "boundary provenance by containment in ALL source items (no nearest rule)"}],
         "findings": [
             {"id": "F-R88-01", "finding": "R8.7 region sampler unsafe: an arc whose 5 samples are inside crossed the "
                                           "boundary (test A); same for an ellipse between parameters (test B)"},
@@ -211,13 +222,51 @@ def decision_register(regdir):
             {"id": "F-R88-18", "finding": "walls drawn INSIDE a block occurrence (a plan inserted or xref-bound as a "
                                           "block) are not admitted by GR-05 (model space only): such a plan fails "
                                           "closed (UNKNOWN), it is never measured; an assembly-context rule is needed "
-                                          "before TS01 can read block-hosted plans (synthetic test, not a Qortuba case)"}],
+                                          "before TS01 can read block-hosted plans (synthetic test, not a Qortuba case)"},
+            {"id": "F-R88-19", "finding": "exact GEOS (no node equivalence) on old Qortuba gives 61 faces with a 280 m2 "
+                                          "merged face vs 75 TS01 sites: end points 1e-12..1e-9 apart are distinct "
+                                          "nodes to GEOS; any GEOS use needs a node equivalence"},
+            {"id": "F-R88-20", "finding": "a precision GRID (set_precision; wall_solid's 0.05 mm) has a cliff at every "
+                                          "grid line, independent of the grid size: two points 1 ULP apart can be "
+                                          "split; the cross-check runs four grid phases for this reason"},
+            {"id": "F-R88-21", "finding": "route noise on old Qortuba reaches 1e-9 units (~70 ULP): a 1-ULP or 16-ULP "
+                                          "equivalence is not noise-safe (1 ULP: K1 58 vs K2 59 sites; 16 ULP: 68 of "
+                                          "75); the measured gap is empty from 1e-9 to 1 unit"},
+            {"id": "F-R88-22", "finding": "the certificate had no flag for a site that exists ONLY at eps_r (a room "
+                                          "whose only gap, inside the band, opens outside): now "
+                                          "SITE_ONLY_IN_AUTHORED_BUILD; its labels are outside every site, so it was "
+                                          "never measured, but it was not stated"},
+            {"id": "F-R88-23", "finding": "band() returned AUTHORED at d == eps_r while the certificate build merges "
+                                          "d <= eps_r: fixed (no number changed)"},
+            {"id": "F-R88-24", "finding": "requirements.txt says the project does not own a geometry kernel; TS01 owns "
+                                          "its noding (needed for exact arcs and source identity); mitigated by the "
+                                          "independent GEOS cross-check, which agrees on every site of all three runs"},
+            {"id": "F-R88-25", "finding": "a stub partition inside a room is in the TS01 site's boundary ids but not in "
+                                          "a GEOS face ring (polygonize drops dangles): any per-room wall-length or "
+                                          "finish measurement must treat stubs (two faces, both inside the room) "
+                                          "explicitly"},
+            {"id": "F-R88-26", "finding": "the core between two faces of a double-line wall is an UNLABELLED_SITE "
+                                          "(an obstacle interior, not free space); classify by role evidence in R8.9, "
+                                          "never by a thickness threshold"},
+            {"id": "F-R88-27", "finding": "wall_solid / free_space recover lineage after the union by touching length "
+                                          "(> 1 mm): a proximity rule that cannot prove which source bounds which room"},
+            {"id": "F-R88-28", "finding": "the legacy paths mix material, semantic and topological thresholds (wall "
+                                          "thickness, room size, shaft area, 600 mm, 2 mm snap) in one pass; TS01 has "
+                                          "none of them and a test keeps them out of engine/source"}],
         "post_freeze_changes": {"tolerance_numbers": "unchanged", "fixes": ["F-R88-08", "F-R88-09", "F-R88-10"],
-                                "freeze_commit": "9f77e4d"},
+                                "freeze_commit": "9f77e4d",
+                                "addendum": ["topology_crosscheck (new; can only withhold a site)",
+                                             "band edge (F-R88-23)", "SITE_ONLY_IN_AUTHORED_BUILD (F-R88-22)",
+                                             "separation measurement / NOISE_NEAR_EPS_N (measurement only)"],
+                                "addendum_effect_on_rows": "none: all six rows identical before and after; the policy "
+                                                          "digest is unchanged"},
         "gates": {"MIGRATION_PLANNING_READY": "YES", "MIGRATION_EXECUTION_READY": "NO", "PRODUCTION_MIGRATION": "NO",
                   "TS01_ROOM_TOPOLOGY": "IMPLEMENTED_SHADOW", "QS01": "LEGACY_RESEARCH_ONLY",
                   "OLD_QORTUBA_ROUTE_STABLE_TOPOLOGY": "YES" if xr["comparison"]["same_topology"] else "NO",
-                  "NEW_DWG_SOURCE_IDENTITY": "NOT_ESTABLISHED", "OWNER_ACTION_REQUIRED_NOW": "NONE"},
+                  "NEW_DWG_SOURCE_IDENTITY": "NOT_ESTABLISHED", "OWNER_ACTION_REQUIRED_NOW": "NONE",
+                  "TOPOLOGY_CROSSCHECK": " / ".join(f"{k} {v['counts']['AGREES']} of {sum(v['counts'].values())} AGREE"
+                                                    for k, v in load(regdir, "TOPOLOGY_CROSSCHECK")["runs"].items()),
+                  "ARCHITECTURE": "TS01_VECTOR_AUTHORITY + GEOS_CROSSCHECK + RASTER_QA_ONLY"},
         "answers": {
             "1_r87_sampler_unsafe": "YES (tests A, B reproduce the miss)",
             "2_membership_now_exact": "YES: exact bounds and edge intersections for SEGMENT / ARC / CIRCLE / "
@@ -266,10 +315,122 @@ def decision_register(regdir):
                           "family before any baseline approval"}
 
 
+def architecture_review(regdir):
+    """R8.8 addendum: the architecture review, recommendation first. Evidence is read from the lab registers."""
+    xc = load(regdir, "TOPOLOGY_CROSSCHECK")["runs"]
+    ta = load(regdir, "TOLERANCE_ARCHITECTURE")
+    h = ta["h584_numeric_study"]
+    sens = {r["eps"]: [r["K1"]["sites"], r["K2"]["sites"], r["routes_agree"]] for r in h["eps_sensitivity"]}
+    cx = {k: v["counts"] for k, v in xc.items()}
+    return {
+        "SCHEMA": "URBAN_R8_8_ARCHITECTURE_REVIEW_V1",
+        "recommendation": "VECTOR AUTHORITY + INDEPENDENT VECTOR CROSS-CHECK + RASTER QA ONLY (a hybrid, option D, "
+                          "with TS01 as the single authority). Do NOT build the room topology on wall_solid / "
+                          "free_space. Reuse their principles, not their code path.",
+        "questions": {
+            "1_wall_solid_free_space_as_foundation": {
+                "answer": "NO",
+                "why": ["axis-aligned only: WallPolygon rings are built from H/V face pairs; skew and curved walls do "
+                        "not exist for it",
+                        "it needs MATERIAL pairing (two faces, thickness >= 40 mm, length >= 50 mm): a single-line "
+                        "partition, a glazing line or a column outline is not an obstacle, so room topology would "
+                        "inherit material semantics (TOPOLOGY_OBSTACLE != MATERIAL_WALL is violated)",
+                        "NODE_SNAP_GRID_MM = 0.05 is a grid snap chosen from one project's outcome (AR-00: 49 -> 46 "
+                        "components); a grid has a cliff at every grid line, so two points 1 ULP apart can be split "
+                        "by any grid size (demonstrated: tests/r8_8/test_r8_8_architecture.py grid-phase test)",
+                        "the envelope is derived from the wall solid itself: inside / outside is assumed, not "
+                        "evidenced",
+                        "lineage is recovered after the union by geometric touching (intersects, exterior "
+                        "intersection length > 1 mm): a proximity rule, not a proof; boundary source identity per "
+                        "room is lost",
+                        "space roles come from size thresholds (700 mm, 1.2 m2, 3.0 m2, aspect 6)",
+                        "portal barriers need a host wall band: an opening in a single-line wall cannot close"]},
+            "2_safer_than_raster": {
+                "answer": "the vector route is safer than raster, YES; wall_solid / free_space is NOT safer than TS01",
+                "why": "a 50 mm cell cannot resolve a <= 1 mm decision, 4-connectivity depends on the cell phase, "
+                       "arcs are sampled every 50 mm and areas are quantised; wall_solid removes those but adds its "
+                       "own grid cliff and material coupling"},
+            "3_reusable": ["FREE = ENVELOPE - OBSTACLES as a DOWNSTREAM trade operation (clear internal area against "
+                           "double-line wall solids), after topology, not as topology",
+                           "assert_non_overlapping as an invariant (TS01 faces partition the plane by construction; "
+                           "kept as a test)",
+                           "MAX_DEFENSIBLE_SNAP_MM = 1.0: the same principle as eps_r (authored precision)",
+                           "snap_tolerance.py's measured noise-vs-gap separation: adopted as "
+                           "topology_policy.separation (measured per drawing, never a chosen number)",
+                           "GEOS as the declared kernel: used as the independent cross-check"],
+            "4_project_or_material_specific": [r["where"] + ": " + r["name"] for r in ta["legacy_inventory"]
+                                               if r["class"].startswith(("MATERIAL", "SEMANTIC", "PROJECT",
+                                                                         "TOPOLOGY_NODE_EQUIVALENCE (implemented",
+                                                                         "TOPOLOGY_NODE_EQUIVALENCE +", "RASTER"))],
+            "5_choice": "D (hybrid) in this form: TS01 = authority (own exact noding, arcs, source identity, "
+                        "two-build certificate); GEOS node + polygonize = independent cross-check that can only "
+                        "withhold a site; raster = QA / localisation only. Not A (material-coupled, axis-only, grid "
+                        "cliff), not C (resolution), not plain B (TS01 already is the principled module; GEOS cannot "
+                        "be the authority because it has no exact arc, keeps no source identity through noding and "
+                        "offers node equivalence only as a grid)",
+            "6_why_this_architecture": [
+                "authority needs exact arcs: GEOS would need flattening (forbidden)",
+                "authority needs source identity through noding: GEOS output would need a nearest-geometry identity "
+                "(forbidden without a proof rule)",
+                "authority needs node equivalence by DISTANCE with a certificate: GEOS offers only a precision grid, "
+                "whose cliffs are not aligned with the noise / authored bands",
+                "an independent kernel still catches TS01 defects: three were found in R8.8 by real data "
+                "(F-R88-08..10); the cross-check now reproduces every straight-edged site with area AND boundary "
+                f"provenance: {cx}"],
+            "7_problems_not_identified_by_the_prompt": "see findings F-R88-19 .. F-R88-28 in R8_8_DECISION_REGISTER"},
+        "sections": {
+            "reuse_or_not": "NOT as the spine; principles reused (Q3)",
+            "raster": "QA / localisation / independent cross-check only; never an authority for topology or area",
+            "vector_area_vs_arrangement": "area is computed from the certified site cycle itself (exact chord polygon + "
+                                          "circular segments, holes subtracted); there is no rectangle "
+                                          "decomposition in TS01; any decomposition is presentation only",
+            "tolerance_architecture": {"classes": ta["classes"], "rule": "one class, one tolerance, one stated basis; "
+                                       "no universal snap; no grid snap as an authority"},
+            "H584": {"route_difference": f"{h['H584_route_difference_units']:.3e} units = "
+                                         f"{h['H584_route_difference_ulps']:.0f} ULP at |coord| {h['coordinate_magnitude_M']:.0f}",
+                     "measured_end_point_distances_by_decade": h["endpoint_pair_distance_decades_K1_admitted"],
+                     "sensitivity_sites_K1_K2_agree": sens,
+                     "geos_exact": h["geos_exact_no_node_equivalence_K1"],
+                     "decision": "keep V1 (eps_n = 2**-30 x max|coord| = {:.1e} units = {:.1e} ULP). Observed route "
+                                 "noise reaches 1e-9 units (~70 ULP): 16 ULP still loses 7 sites, 1 ULP splits the "
+                                 "routes. A ULP-count policy would need calibration on observed noise; V1 sits about "
+                                 "five decades above the noise and three below eps_r. No V2 is introduced; instead the "
+                                 "separation is MEASURED per drawing (topology_policy.separation): ".format(
+                                     h["v1_eps_n"], h["v1_eps_n_in_ulps"]) + json.dumps(ta["separation_per_run"]),
+                     "authored_gaps_mm": ta["authored_gap_behaviour_mm"]},
+            "role_admission": "positive admission before topology (geometry_role, GR-01..GR-16, GR-99); only "
+                              "TOPOLOGY_BOUNDARY / STRUCTURAL_OBSTACLE / GLAZING_BOUNDARY / OPENING_BOUNDARY bound a "
+                              "site; UNKNOWN_* and BOUNDARY_CURVE_UNSUPPORTED block the sites they touch; MATERIAL "
+                              "identity is not consulted",
+            "flow": ["CANONICAL_MEASUREMENT_INPUT: canonical_input.validate (TS01 contract)",
+                     "GEOMETRY_ROLE_ADMISSION: geometry_role.admit",
+                     "TOPOLOGY_OBSTACLE_SET: admitted boundary roles + closures from proven openings",
+                     "VECTOR_FREE_SPACE: bounded faces of the exact arrangement of the obstacle set",
+                     "SPACE_GEOMETRY_CANDIDATES: sites + two-build certificate + GEOS cross-check",
+                     "SEMANTIC_LABEL_ASSIGNMENT: label occurrences; two or more -> MULTIPLE_SEMANTIC_LABELS",
+                     "unknown geometry at any step -> REVIEW / BLOCK"],
+            "curves": "SEGMENT / ARC / CIRCLE exact in TS01; ELLIPTICAL_ARC on a boundary role -> "
+                      "BOUNDARY_CURVE_UNSUPPORTED (blocks); splines etc. are unrealised -> accounted; the cross-check "
+                      "marks arc-bounded sites NOT_APPLICABLE_CURVE (never flattened); nothing pre-empts R11",
+            "provenance_after_geos": "GEOS output is compared and discarded; it never acquires a source identity. "
+                                     "Proof rule used by the cross-check: every boundary piece of the GEOS face must "
+                                     "be contained (both ends within 2 x eps_n) in at least one straight admitted "
+                                     "source item; its identities = ALL items containing it (never the nearest); the "
+                                     "union must equal the TS01 site's boundary + hole ids (less two-sided stubs)",
+            "legacy_project_logic": "STAIR / lift by layer count, 600 mm, 3 m2, BATH / PAINTRY, SNAP_MM 2, H/V-only "
+                                    "arrangement: QS01 and r3 (lab, legacy) only. engine/source holds generic tokens "
+                                    "(exact-token lexicon) and no size threshold; enforced by "
+                                    "test_no_legacy_project_rule_reaches_the_generic_topology",
+            "anything_else": "an obstacle INTERIOR (the core between two faces of a double-line wall) is today an "
+                             "UNLABELLED_SITE: R8.9 should classify it by role evidence (both sides bounded by the "
+                             "same wall's faces), not by a thickness threshold (F-R88-26)"}}
+
+
 def main(regdir):
     regdir = Path(regdir)
     regs = {"OWNER_ACTION_REGISTER": owner_actions(), "ENGINEERING_ACTION_REGISTER": engineering_actions(regdir),
-            "SOURCE_SUBPART_IDENTITY_SCHEMA": subpart_schema(), "R8_8_DECISION_REGISTER": decision_register(regdir)}
+            "SOURCE_SUBPART_IDENTITY_SCHEMA": subpart_schema(), "R8_8_DECISION_REGISTER": decision_register(regdir),
+            "ARCHITECTURE_REVIEW": architecture_review(regdir)}
     for k, v in regs.items():
         (regdir / f"{k}.json").write_text(json.dumps(v, indent=1, default=str) + "\n")
     print(sorted(regs), CI.COMPLETE, GR.POLICY_ID, RM.POLICY["id"])

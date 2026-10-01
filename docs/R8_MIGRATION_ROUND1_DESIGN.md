@@ -235,3 +235,28 @@ decoder cannot fix that sensitivity, so QS01 stays research/legacy.
 - **Package:** `data/reports/URBAN_QTO_R8_8_TOPOLOGY_STABILITY/`.
 
 **Gates.** No migration: MIGRATION_EXECUTION_READY = NO, PRODUCTION_MIGRATION = NO.
+
+### 9.1 Architecture review (R8.8 addendum)
+
+- **Decision:** TS01 stays the single vector authority for room / space topology. An independent GEOS
+  reconstruction (`engine/source/topology_crosscheck.py`: node + polygonize on the straight admitted items, four
+  grid phases, area and boundary provenance) checks every straight-edged site. It can only withhold a site
+  (`GEOS_CROSSCHECK_DISAGREES` -> REVIEW_REQUIRED); it never produces a measured value or a source identity. Arc
+  sites are `NOT_APPLICABLE_CURVE`: curves are never flattened. Raster stays QA / localisation only.
+- **Not the foundation:** `engine/wall_solid.py` / `engine/free_space.py`. They are axis-aligned only, coupled to
+  material pairing (TOPOLOGY_OBSTACLE != MATERIAL_WALL), use a 0.05 mm grid snap calibrated on AR-00, and recover
+  lineage by touching length after a union. Their principles are reused instead: subtractive clear area as a
+  downstream trade operation, the non-overlap invariant, the 1 mm defensible-snap guard, and the measured
+  noise / gap separation.
+- **Tolerances** are classed (numeric, node equivalence, material pairing, region, comparison). V1 is unchanged;
+  no V2 is introduced. Old Qortuba route noise reaches 1e-9 units (~70 ULP), and nothing lies between 1e-9 and
+  1 unit. `topology_policy.separation` now measures this per drawing (`NOISE_NEAR_EPS_N`); all three Qortuba runs
+  are separated, with zero ambiguous decisions.
+- **Fixes** (no number changed, policy digest unchanged):
+  - `band(d == eps_r)` is AMBIGUOUS;
+  - a site found only in the eps_r build is stated (`SITE_ONLY_IN_AUTHORED_BUILD`).
+- **Authored gaps** (tests/r8_8/test_r8_8_architecture.py):
+  - 0.5 and 1 mm are REVIEW (tolerance sensitive);
+  - 2 and 5 mm are real openings.
+- Registers: `ARCHITECTURE_REVIEW`, `TOPOLOGY_CROSSCHECK`, `TOLERANCE_ARCHITECTURE`; package page
+  `17_ARCHITECTURE_REVIEW.md`.

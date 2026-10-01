@@ -21,7 +21,8 @@ Sites
     name, not its coordinates. A room name is an attribute (its label occurrences).
 Certificate
     the build is repeated at eps_r (topology_policy). A site is CERTIFIED only if the eps_r build contains the same
-    site (same id, area within eps_r x perimeter); otherwise TOLERANCE_SENSITIVE.
+    site (same id, area within eps_r x perimeter); otherwise TOLERANCE_SENSITIVE. A site found ONLY in the eps_r
+    build is a SITE_ONLY_IN_AUTHORED_BUILD finding (it is never measured: its labels lie outside every site).
 Labels
     each label text is located exactly (point in face, arcs included). A site holding more than one label
     OCCURRENCE is MULTIPLE_SEMANTIC_LABELS (never merged by rule: no wet-wins / first / largest / alphabetical);
@@ -59,6 +60,8 @@ ZERO_WIDTH_SLIVER = "ZERO_WIDTH_SLIVER"
 NODE_CLUSTER_CHAIN = "NODE_CLUSTER_CHAIN"
 SITE_ID_COLLISION = "SITE_ID_COLLISION"
 UNIT_UNRESOLVED = "UNIT_UNRESOLVED"
+SITE_ONLY_IN_AUTHORED_BUILD = "SITE_ONLY_IN_AUTHORED_BUILD"
+NOISE_NEAR_EPS_N = "NOISE_NEAR_EPS_N"
 CERTIFIED = "CERTIFIED"
 REVIEW_REQUIRED = "REVIEW_REQUIRED"
 
@@ -292,6 +295,28 @@ def _candidate_pairs(prims, eps):
                 pairs.append((min(j, k), max(j, k)))
         active.append(k)
     return sorted(pairs)
+
+
+def end_distances(items, eps):
+    """Distance of every curve end to every OTHER curve within eps (the node-equivalence decisions a build at eps
+    makes), deterministic order. Used only to measure the noise / authored separation (topology_policy)."""
+    prims = [_Prim(i, it) for i, it in enumerate(items)]
+    out = []
+    for j, k in _candidate_pairs(prims, eps):
+        for P, Q in ((prims[j], prims[k]), (prims[k], prims[j])):
+            if P.full:
+                continue
+            for t in P.end_params():
+                pt = P.point(t)
+                if Q.kind == "S":
+                    d = _proj_seg(pt, Q.a, Q.b)[1]
+                else:
+                    s_ = _arc_param(Q, pt, eps)
+                    d = abs(_d(pt, Q.c) - Q.r) if s_ is not None else \
+                        min(_d(pt, Q.point(u)) for u in Q.end_params())
+                if d <= eps:
+                    out.append(d)
+    return out
 
 
 # ====================================================================== the arrangement
@@ -908,10 +933,19 @@ def analyse(items, probes, labels, *, revision_id, region_id, unit_native_to_mm,
     e_n, e_r = tol["eps_n"], tol["eps_r"]
     arr_n = build(items, e_n)
     arr_r = build(items, e_r)
+    out["separation"] = TP.separation(end_distances(items, e_r), e_n, e_r)
+    if not out["separation"]["separated"]:
+        out["findings"].append({"code": NOISE_NEAR_EPS_N, "decisions": out["separation"]["near_eps_n"]})
     sites_n = sites_of(arr_n, revision_id, region_id)
     sites_r = {s["site_id"]: s for s in sites_of(arr_r, revision_id, region_id)}
     out["findings"] += [dict(f, build="eps_n") for f in arr_n.findings] + [dict(f, build="eps_r") for f in arr_r.findings]
     by_id = {s["site_id"]: s for s in sites_n}
+    # a site that exists only when the ambiguous band is closed (eps_r) has no eps_n twin to carry the
+    # TOLERANCE_SENSITIVE issue (e.g. a room whose only gap, inside the band, opens to the outside): it is stated
+    for sid in sorted(set(sites_r) - set(by_id)):
+        t = sites_r[sid]
+        out["findings"].append({"code": SITE_ONLY_IN_AUTHORED_BUILD, "site_id": sid, "area": t["area"],
+                                "boundary_source_ids": t["boundary_source_ids"]})
     for s in sites_n:
         s.setdefault("issues", [])
         twin = sites_r.get(s["site_id"])

@@ -29,6 +29,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 import r8_7_canonical as C                                                               # noqa: E402
 from engine.source import geometry_role as GR, owner_scope as OS                          # noqa: E402
 from engine.source import region_membership as RM, room_topology as RT, topology as T    # noqa: E402
+from engine.source import topology_crosscheck as XC, topology_policy as TP                # noqa: E402
 from engine.source.cad import libredwg_map as L                                          # noqa: E402
 
 OLD_DXF = ROOT / "data/inputs/by_sha256/66ea72057266d006ee111325dac69fbbb8d8e87d6415fcee6a69486e5f62b641.dxf"
@@ -213,7 +214,106 @@ def public_site(s, names):
             "boundary_source_ids": s["boundary_source_ids"], "hole_source_ids": s["hole_source_ids"],
             "boundary_role_lengths": {k: round(v, 6) for k, v in s["boundary_role_lengths"].items()},
             "contents": s["contents"], "blocked_by": s["blocked_by"], "certificate": s["certificate"],
-            "opening_of": s.get("opening_of")}
+            "opening_of": s.get("opening_of"), "crosscheck": s.get("crosscheck")}
+
+
+# ---------------------------------------------------------------------------------- architecture addendum
+# Every tolerance found in the legacy room / wall paths, by class. Values are quoted from the source files; none is
+# copied into the R8.8 topology policy.
+LEGACY_TOLERANCES = [
+    {"where": "engine/wall_solid.py", "name": "NODE_SNAP_GRID_MM", "value": 0.05, "unit": "mm",
+     "class": "TOPOLOGY_NODE_EQUIVALENCE (implemented as a GRID snap)",
+     "basis_stated": "AR-00 saturation: 0.01 -> 49 components, 0.05 / 0.1 -> 46",
+     "verdict": "CALIBRATED on one observed project's outcome; a grid has a cliff at every grid line (two points "
+                "1 ULP apart can land in different cells), so no grid size is noise-safe. NOT ADOPTED"},
+    {"where": "engine/wall_solid.py", "name": "MAX_DEFENSIBLE_SNAP_MM", "value": 1.0, "unit": "mm",
+     "class": "TOPOLOGY_NODE_EQUIVALENCE (upper guard)", "basis_stated": "above it a snap closes a gap",
+     "verdict": "consistent with eps_r = 1 mm (authored precision); kept as a principle, already in V1"},
+    {"where": "engine/wall_solid.py", "name": "MIN_WALL_LENGTH_MM / MIN_WALL_THICKNESS_MM", "value": [50.0, 40.0],
+     "unit": "mm", "class": "MATERIAL_PAIRING_TOLERANCE", "basis_stated": "wall face pairing",
+     "verdict": "material / wall-solid semantics; must not gate room topology (TOPOLOGY_OBSTACLE != MATERIAL_WALL)"},
+    {"where": "engine/free_space.py", "name": "MIN_HABITABLE_MM / MIN_ROOM_AREA_M2 / MAX_SHAFT_AREA_M2 / CAVITY_ASPECT",
+     "value": [700.0, 1.2, 3.0, 6.0], "unit": "mm / m2 / m2 / ratio", "class": "SEMANTIC ROLE THRESHOLD (not a tolerance)",
+     "basis_stated": "space role from size", "verdict": "role by size is a semantic guess; TS01 has no size-based role"},
+    {"where": "engine/free_space.py", "name": "ENVELOPE_BOUNDARY_REACH_MM / lineage intersection length", "value": [1.0, 1.0],
+     "unit": "mm", "class": "REGION_INTERSECTION_TOLERANCE", "basis_stated": "lineage by touching length",
+     "verdict": "lineage by geometric proximity after union: not a proof rule; TS01 carries source ids through noding"},
+    {"where": "engine/ingest/planar_faces.py", "name": "CELL_MM / MIN_FACE_CELLS / SAMPLE_MM", "value": [50.0, 4, 10.0],
+     "unit": "mm / cells / mm", "class": "RASTER RESOLUTION", "basis_stated": "raster face labelling, arc sampling",
+     "verdict": "a 50 mm cell cannot resolve a 1 mm decision; arcs are flattened; QA / localisation only"},
+    {"where": "research/.../r3/floor_regions.py", "name": "SNAP_MM / AREA_AGREEMENT_SHARE", "value": [2.0, 0.03],
+     "unit": "mm / share", "class": "TOPOLOGY_NODE_EQUIVALENCE + MEASUREMENT_COMPARISON",
+     "basis_stated": "H/V line arrangement; raster vs vector agreement",
+     "verdict": "2 mm exceeds authored precision (closes real 2 mm gaps); H/V only (SKEW_SEGMENTS_IGNORED): lab only"},
+    {"where": "research/.../qs01/takeoff.py", "name": "stair / lift by layer count; min bbox side <= 600; area >= 3.0",
+     "value": [600, 3.0], "unit": "mm / m2", "class": "PROJECT SEMANTIC RULE",
+     "basis_stated": "Qortuba legacy room classification", "verdict": "project-specific: stays in QS01 (lab, legacy)"},
+    {"where": "engine/snap_tolerance.py", "name": "measured noise-vs-gap decade histogram", "value": None, "unit": None,
+     "class": "TOPOLOGY_NODE_EQUIVALENCE (measurement, not a number)",
+     "basis_stated": "no recommendation unless noise and gaps separate",
+     "verdict": "the right idea; reproduced below for old Qortuba (the gap between 1e-9 and 1 unit is empty)"},
+]
+
+TOLERANCE_CLASSES = {
+    "NUMERIC_FLOAT_EQUIVALENCE": "two numbers are the same value written twice (route / representation noise). "
+                                 "V1: eps_n = 2**-30 x max|coord| (relative, unit-free)",
+    "TOPOLOGY_NODE_EQUIVALENCE": "two curve ends are one topological node. V1: eps_n for the build, eps_r for the "
+                                 "certificate build; never a grid; a decision between them -> TOLERANCE_SENSITIVE",
+    "MATERIAL_PAIRING_TOLERANCE": "two lines are faces of one wall / material. NOT USED by TS01 (wall_solid only)",
+    "REGION_INTERSECTION_TOLERANCE": "a record is inside / outside a region. eps_n only (RM-EXACT-1)",
+    "MEASUREMENT_COMPARISON_TOLERANCE": "two measured values agree. Site area bound = eps_r x perimeter; never used to "
+                                        "change a value; cross-route equality of rows is exact",
+}
+
+
+def tolerance_architecture(k1, k2, frame="156"):
+    """The H584 numeric study (sensitivity only: the frozen V1 policy is unchanged by it)."""
+    import math
+    M = max(abs(c) for p in k1.parts for c in p.geometry[:2])
+    ulp = math.ulp(M)
+    h1 = next(p for p in k1.parts if p.identity.source_handle == "584").geometry
+    h2 = next(p for p in k2.parts if p.identity.source_handle == "584").geometry
+    h584 = max(abs(a - b) for a, b in zip(h1, h2))
+    its = RT.topology_inputs(k1, frame_insert=frame, eps_n=TP.eps_noise(M))[0]
+    pts = sorted({q for it in its if it.kind == "SEGMENT" for q in ((it.geometry[0], it.geometry[1]),
+                                                                       (it.geometry[2], it.geometry[3]))})
+    dec = Counter()
+    for i, a in enumerate(pts):                                  # sorted by x: stop when dx alone exceeds 10 units
+        for b in pts[i + 1:]:
+            if b[0] - a[0] >= 10.0:
+                break
+            d = math.hypot(a[0] - b[0], a[1] - b[1])
+            if d < 10.0:
+                dec[f"1e{math.floor(math.log10(d))}"] += 1
+    sens = []
+    for label, e in [(f"{k} ULP", k * ulp) for k in (1, 2 ** 4, 2 ** 10, 2 ** 16, 2 ** 22)] + \
+                    [("V1 eps_n", TP.eps_noise(M))]:
+        row = {"eps": label, "eps_units": e, "ulps": round(e / ulp, 1)}
+        for name, inp in (("K1", k1), ("K2", k2)):
+            it, _, _, _, cl, _, _ = RT.topology_inputs(inp, frame_insert=frame, eps_n=e)
+            gc = T.glazing_closures(it, e, TP.eps_authored(inp.unit_native_to_mm))[0]
+            ss = T.sites_of(T.build(it + cl + gc, e), "R", "G")
+            row[name] = {"sites": len(ss), "site_ids": hashlib.sha256("|".join(sorted(s["site_id"] for s in ss))
+                                                                       .encode()).hexdigest()[:16]}
+        row["routes_agree"] = row["K1"] == row["K2"]
+        sens.append(row)
+    import shapely
+    it, _, _, _, cl, _, _ = RT.topology_inputs(k1, frame_insert=frame, eps_n=TP.eps_noise(M))
+    gc = T.glazing_closures(it, TP.eps_noise(M), TP.eps_authored(k1.unit_native_to_mm))[0]
+    segs = [x.geometry for x in sorted(it + cl + gc, key=lambda z: z.source_id) if x.kind == "SEGMENT"]
+    f_exact = list(shapely.polygonize(list(shapely.node(shapely.MultiLineString(
+        [[(g[0], g[1]), (g[2], g[3])] for g in segs])).geoms)).geoms)
+    u2 = (k1.unit_native_to_mm ** 2) / 1e6
+    geos_exact = {"faces": len(f_exact), "largest_face_m2": round(max(f.area for f in f_exact) * u2, 4),
+                  "TS01_sites": 0, "why": "exact GEOS noding keeps end points 1e-12..1e-9 apart as distinct nodes: "
+                                                "rooms leak into each other; a node equivalence is required"}
+    geos_exact["TS01_sites"] = sens[-1]["K1"]["sites"]
+    return {"geos_exact_no_node_equivalence_K1": geos_exact, "coordinate_magnitude_M": M, "ulp_of_M": ulp, "v1_eps_n": TP.eps_noise(M),
+            "v1_eps_n_in_ulps": TP.eps_noise(M) / ulp, "v1_eps_r": TP.eps_authored(k1.unit_native_to_mm),
+            "H584_route_difference_units": h584, "H584_route_difference_ulps": h584 / ulp,
+            "endpoint_pair_distance_decades_K1_admitted": dict(sorted(dec.items(), key=lambda kv: int(kv[0][2:]))),
+            "endpoint_pairs_exactly_coincident": "excluded above (set of distinct points)",
+            "eps_sensitivity": sens}
 
 
 def _unrealised_summary(r):
@@ -431,6 +531,22 @@ def main(work, regdir):
                                         "runs": {k: {"region_review": len(v.region_review),
                                                      "outside": v.notes.get("outside_region"),
                                                      "clip_bounds": v.notes.get("clip_bounds")} for k, v in inps.items()}}
+    regs["TOPOLOGY_CROSSCHECK"] = {
+        "SCHEMA": "URBAN_R8_8_TOPOLOGY_CROSSCHECK_V1", "check": XC.CHECK_ID,
+        "role": "independent QA of TS01 (GEOS node + polygonize on straight admitted items); never an authority",
+        "runs": {k: r["crosscheck"] for k, r in res.items()}}
+    regs["TOLERANCE_ARCHITECTURE"] = {
+        "SCHEMA": "URBAN_R8_8_TOLERANCE_ARCHITECTURE_V1", "frozen_policy": TP.POLICY_ID,
+        "frozen_policy_digest": TP.record()["digest"], "classes": TOLERANCE_CLASSES,
+        "legacy_inventory": LEGACY_TOLERANCES, "h584_numeric_study": tolerance_architecture(inps["OLD_K1"], inps["OLD_K2"]),
+        "authored_gap_behaviour_mm": {"0.5": "AMBIGUOUS -> TOLERANCE_SENSITIVE (REVIEW) / SITE_ONLY_IN_AUTHORED_BUILD",
+                                      "1.0": "AMBIGUOUS (closed end: the eps_r build merges d <= eps_r) -> REVIEW",
+                                      "2.0": "AUTHORED: a real gap; the spaces connect (MULTIPLE_SEMANTIC_LABELS or "
+                                             "the room is open)", "5.0": "AUTHORED: as 2.0",
+                                      "tests": "tests/r8_8/test_r8_8_architecture.py (synthetic, mm units)"},
+        "separation_per_run": {k: r["separation"] for k, r in res.items()},
+        "band_edge_fix": "band(d == eps_r) is AMBIGUOUS (was AUTHORED), matching the <= of the certificate build; "
+                         "no number changed, the policy digest is unchanged"}
     for name, obj in regs.items():
         (regdir / f"{name}.json").write_text(json.dumps(obj, indent=1, sort_keys=False, default=str) + "\n")
     summary = {k: {r: (v["state"], v["value"]) for r, v in rows[k].items()} for k in rows}

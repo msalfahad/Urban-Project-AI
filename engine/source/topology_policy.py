@@ -7,8 +7,8 @@ The problem it answers
 
 The policy: three bands and a stability certificate
     NOISE        d <= eps_n   the two values are the same number written twice (representation noise)
-    AMBIGUOUS    eps_n < d < eps_r   neither noise nor a deliberately drawn distance
-    AUTHORED     d >= eps_r   a drawn, physical distance: the features are distinct
+    AMBIGUOUS    eps_n < d <= eps_r   neither noise nor a deliberately drawn distance
+    AUTHORED     d > eps_r    a drawn, physical distance: the features are distinct
 
     eps_n = max(1, M) * 2**-30   (M = largest coordinate magnitude in the input, native units)
         Basis: NUMERIC REPRESENTATION. float64 has unit roundoff 1.1e-16; a placement composes at most 16 insert
@@ -90,7 +90,29 @@ def eps_authored(native_to_mm) -> float | None:
 
 
 def band(d: float, e_n: float, e_r: float) -> str:
-    return NOISE if d <= e_n else AUTHORED if d >= e_r else AMBIGUOUS
+    # the closed ends match the builds: clustering at eps merges d <= eps, so d == eps_r is merged by the
+    # certificate build and is AMBIGUOUS, not AUTHORED (R8.8 addendum fix; the frozen numbers are unchanged)
+    return NOISE if d <= e_n else AMBIGUOUS if d <= e_r else AUTHORED
+
+
+NOISE_MARGIN = 2.0 ** 10           # a merged pair this close to eps_n sits near the build's cliff (R8.8 addendum)
+
+
+def separation(distances, e_n, e_r) -> dict:
+    """The policy ASSUMES route noise << eps_n and authored distances > eps_r. This MEASURES it per drawing from
+    the node-equivalence decisions themselves: the distance of every curve end to every other curve within eps_r.
+    A decision merged at eps_n but within NOISE_MARGIN of it (eps_n / 2**10 < d <= eps_n) could fall on the other
+    side of eps_n in another route: it is reported (NOISE_NEAR_EPS_N), never silently relied on. Decisions in the
+    ambiguous band are the certificate's business."""
+    counts = {NOISE: 0, AMBIGUOUS: 0}
+    near = 0
+    for d in distances:
+        if d > e_r:
+            continue
+        counts[band(d, e_n, e_r)] += 1
+        near += e_n / NOISE_MARGIN < d <= e_n
+    return {"end_to_curve_decisions": counts[NOISE] + counts[AMBIGUOUS], "noise": counts[NOISE],
+            "ambiguous": counts[AMBIGUOUS], "near_eps_n": near, "noise_margin": NOISE_MARGIN, "separated": near == 0}
 
 
 def tolerances(max_abs_coordinate, native_to_mm) -> dict:

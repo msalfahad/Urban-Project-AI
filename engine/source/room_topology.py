@@ -5,11 +5,13 @@
         --> opening closures from proven doors (topology)     never inferred for an open passage
         --> certified topology (topology + topology_policy)   two builds, eps_n and eps_r
         --> sites with labels, contents, issues, status
+        --> independent GEOS cross-check (topology_crosscheck)  a straight-edged site GEOS cannot reproduce
+                                                                 (area + boundary provenance) -> REVIEW_REQUIRED
 
 A method-input contract (canonical_input.MethodContract) declares what TS01 consumes; any declared field missing,
 duplicated, cross-revision or with unresolved visibility -> METHOD_INPUT_INCOMPLETE and no sites at all.
 
-Project-agnostic; stdlib only.
+Project-agnostic; stdlib only (the cross-check imports shapely lazily).
 """
 
 from __future__ import annotations
@@ -19,6 +21,7 @@ from collections import defaultdict
 from . import canonical_input as CI
 from . import geometry_role as GR
 from . import topology as T
+from . import topology_crosscheck as XC
 from . import topology_policy as TP
 
 TS01 = CI.MethodContract(
@@ -141,6 +144,15 @@ def run(inp: CI.CanonicalMeasurementInput, *, frame_insert, expected_revision_id
                     unit_native_to_mm=inp.unit_native_to_mm, max_abs_coordinate=max(coords),
                     blocking_roles=GR.TOPOLOGY_BLOCKING, opening_status=status,
                     opening_symbol_occurrences=door_probes, glazed_openings=adm["glazed_openings"])
+    xc = XC.check(res, items + closures, tol["eps_n"])
+    for s_ in res["sites"]:
+        st = xc["per_site"].get(s_["site_id"], {}).get("state", xc["state"])
+        s_["crosscheck"] = st
+        if st == XC.DISAGREES:
+            s_["issues"] = sorted(set(s_["issues"]) | {XC.GEOS_CROSSCHECK_DISAGREES})
+            s_["status"] = T.REVIEW_REQUIRED
+    res["crosscheck"] = {k: v for k, v in xc.items() if k != "per_site"}
+    res["crosscheck"]["disagreements"] = {k: v for k, v in sorted(xc["per_site"].items()) if v["state"] == XC.DISAGREES}
     if unrealised is not None:
         acc = unrealised_accounting(unrealised, inp, res, frame_insert)
         res["unrealised"] = {"blocking_input": acc["blocking_input"], "recorded": acc["recorded"],

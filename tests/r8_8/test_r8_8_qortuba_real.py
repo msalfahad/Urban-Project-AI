@@ -117,3 +117,24 @@ def test_committed_registers_are_consistent():
     dec = json.loads((REG / "R8_8_DECISION_REGISTER.json").read_text())
     assert dec["gates"]["PRODUCTION_MIGRATION"] == "NO" and dec["gates"]["MIGRATION_EXECUTION_READY"] == "NO"
     assert dec["gates"]["NEW_DWG_SOURCE_IDENTITY"] == "NOT_ESTABLISHED"
+
+
+def test_addendum_geos_crosscheck_and_separation_on_real_data(old):
+    for r in (old["r1"], old["r2"]):
+        assert r["crosscheck"]["state"] == "AGREES" and r["crosscheck"]["counts"]["DISAGREES"] == 0
+        assert r["crosscheck"]["counts"]["AGREES"] == len(r["sites"]) and r["crosscheck"]["unclaimed_geos_faces"] == []
+        assert r["separation"]["separated"] and r["separation"]["ambiguous"] == 0
+
+
+def test_addendum_registers_are_consistent():
+    xc = json.loads((REG / "TOPOLOGY_CROSSCHECK.json").read_text())
+    assert all(v["state"] == "AGREES" and v["counts"]["DISAGREES"] == 0 for v in xc["runs"].values())
+    ta = json.loads((REG / "TOLERANCE_ARCHITECTURE.json").read_text())
+    pol = json.loads((REG / "TOPOLOGY_TOLERANCE_POLICY.json").read_text())
+    assert ta["frozen_policy_digest"] == pol["digest"]
+    assert all(v["separated"] for v in ta["separation_per_run"].values())
+    sens = {r["eps"]: r for r in ta["h584_numeric_study"]["eps_sensitivity"]}
+    assert not sens["1 ULP"]["routes_agree"] and sens["V1 eps_n"]["routes_agree"]
+    ar = json.loads((REG / "ARCHITECTURE_REVIEW.json").read_text())
+    assert ar["questions"]["1_wall_solid_free_space_as_foundation"]["answer"] == "NO"
+    assert ar["recommendation"].startswith("VECTOR AUTHORITY")
