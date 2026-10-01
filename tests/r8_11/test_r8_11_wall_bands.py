@@ -45,7 +45,9 @@ def test_a_wall_band_is_established_from_real_paired_faces():
     r = run(stub(), L2, closure_policy=POL)
     (b,) = bands(r)
     assert {b["face_a"], b["face_b"]} == {p.identity.key for p in stub() if p.identity.source_handle in ("10", "11")}
-    assert abs(b["width"] - 20) < 1e-9 and [e["kind"] for e in b["ends"]] == [WB.CAPPED, WB.ALIGNED_FREE_END]
+    # A1 (WALL_BAND_POLICY_V2): the stub's start runs into the room's left wall - a RECEIVING_FACE_JUNCTION (V1: CAPPED)
+    assert abs(b["width"] - 20) < 1e-9 and [e["kind"] for e in b["ends"]] == [WB.RECEIVING_FACE_JUNCTION,
+                                                                              WB.ALIGNED_FREE_END]
 
 
 def test_parallel_dimension_lines_never_make_a_wall_band():

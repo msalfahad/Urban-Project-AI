@@ -22,6 +22,10 @@ ids (sorted) - stable across input ordering and traceable to the physical source
 WALL ENDS. At each end of the overlap the band is
   ALIGNED_FREE_END    both faces END there (their end points agree to within eps_r along the band)
   CAPPED              an admitted boundary already joins the two end points
+  RECEIVING_FACE_JUNCTION  (V2) admitted boundary collinear with the end line continues BEYOND BOTH face end
+                      points (away from the band): the band runs into another wall's face line - a T-junction
+                      (the line also joins the end points) or merged wall cores (the receiving face is interrupted
+                      where the band meets it). Not a wall end: no closure, no passage.
   (otherwise)         a junction / continuation: not a wall end
 A drawn segment of ANY role except a door / window symbol (a DIM line included) lying across an aligned end is CAP
 CORROBORATION, graded
@@ -48,11 +52,12 @@ from dataclasses import dataclass, field
 from . import geometry_role as GR
 from . import role_authority as RA
 
-POLICY_ID = "WALL_BAND_POLICY_V1"
+POLICY_ID = "WALL_BAND_POLICY_V2"      # V2 (R8.11 post-freeze amendment A1): RECEIVING_FACE_JUNCTION
 ESTABLISHED = "WALL_BAND_ESTABLISHED"
 AMBIGUOUS = "WALL_BAND_AMBIGUOUS"
 ALIGNED_FREE_END = "ALIGNED_FREE_END"
 CAPPED = "CAPPED"
+RECEIVING_FACE_JUNCTION = "RECEIVING_FACE_JUNCTION"
 CAP_PROVEN = "WALL_END_CAP_PROVEN"
 CAP_CANDIDATE = "WALL_END_CAP_CANDIDATE"
 NOT_WALL_CAP = "NOT_WALL_CAP"
@@ -263,6 +268,10 @@ def _ends(band, a, b, side, items, cap_pool, eps_r, review):
             out.append(dict(rec, kind="JUNCTION_OR_CONTINUATION"))
             continue
         rec.update(face_a_end=pa, face_b_end=pb, kind=ALIGNED_FREE_END)
+        recv_a, recv_b = _beyond(pa, pb, adm, eps_r), _beyond(pb, pa, adm, eps_r)
+        if recv_a and recv_b:
+            out.append(dict(rec, kind=RECEIVING_FACE_JUNCTION, receiving_face=sorted(set(recv_a + recv_b))))
+            continue
         capped = [s.item.source_id for s in adm if _on_seg(pa, s, eps_r) and _on_seg(pb, s, eps_r)]
         if capped:
             rec.update(kind=CAPPED, closed_by=capped)
@@ -285,6 +294,27 @@ def _ends(band, a, b, side, items, cap_pool, eps_r, review):
                          "shortfall_across": max(0.0, tt[0]) + max(0.0, w - tt[1])})
         rec["drawn_caps"] = sorted(caps, key=lambda c: (c["grade"] != CAP_PROVEN, c["source"]))
         out.append(rec)
+    return out
+
+
+def _beyond(p, q, segs, eps):
+    """Admitted segments collinear with the end line p-q that touch p and extend more than eps beyond p, away from q
+    (a receiving wall face continuing past this face end point)."""
+    L = math.dist(p, q)
+    if L <= eps:
+        return []
+    ux, uy = (p[0] - q[0]) / L, (p[1] - q[1]) / L            # outward from q through p
+    out = []
+    for s in segs:
+        ts = []
+        for r in (s.a, s.b):
+            dx, dy = r[0] - p[0], r[1] - p[1]
+            if abs(-dx * uy + dy * ux) > eps:
+                break
+            ts.append(dx * ux + dy * uy)
+        else:
+            if min(ts) <= eps and max(ts) > eps:
+                out.append(s.item.source_id)
     return out
 
 
@@ -428,7 +458,10 @@ def policy_record() -> dict:
                                             "empty strip: no label, no crossing boundary, no arc",
                                             "TOPOLOGY_BOUNDARY faces; not self-dimensioned"],
            "never": ["thickness", "area", "nearest parallel pair alone", "coordinates alone", "material identity"],
-           "ends": [ALIGNED_FREE_END, CAPPED], "caps": [CAP_PROVEN, CAP_CANDIDATE, NOT_WALL_CAP, CAP_UNRESOLVED],
+           "ends": [ALIGNED_FREE_END, CAPPED, RECEIVING_FACE_JUNCTION],
+           "amendments": ["A1 (post-freeze, R8.11): an end whose end line is continued beyond BOTH face end points by "
+                          "admitted boundary is a RECEIVING_FACE_JUNCTION (T-junction / merged cores), never a free "
+                          "end or a passage jamb; it can only remove closure candidates, never add one"], "caps": [CAP_PROVEN, CAP_CANDIDATE, NOT_WALL_CAP, CAP_UNRESOLVED],
            "means": "TOPOLOGY_OBSTACLE_GEOMETRY, not MASONRY_CONFIRMED"}
     rec["digest"] = _digest(rec)
     return rec
