@@ -75,6 +75,82 @@ def row_effect(audits) -> dict:
             "included_area_m2": round(sum(a["area_m2"] for a in inc), 6)}
 
 
+# ======================================================================== V2 (R8.14): allocations and heads
+POLICY_ID_V2 = "STRIP_ALLOCATION_AUDIT_V2"
+CEILING = "CEILING"
+NOT_IN_TRADE = "NOT_IN_TRADE"
+SOFFIT_EXCLUDED = "SOFFIT_EXCLUDED_FROM_CEILING"
+HEAD_UNRESOLVED = "UNRESOLVED_HEAD_CONDITION"
+RESOLVED_V2 = ("CONTINUOUS_SAME_FINISH", "SPLIT_AT_DOOR_PLANE", "MARBLE_THRESHOLD_EXPLICIT")
+BLOCKING_V2 = BLOCKING + ("UNRESOLVED_TRANSITION_PLANE", "UNRESOLVED_FINISH", "UNRESOLVED_GEOMETRY")
+RELEASE_V2 = (EXCLUDED, HEAD_UNRESOLVED)
+
+
+def audit_v2(strip: dict, row_sites, side_treatments: dict, row_treatment: str, *, trade: str, allocation=None,
+             head=None) -> dict:
+    """V2: as audit(), plus (a) a door threshold with an authoritative transition allocation (door_transition) gives
+    the row exactly its region(s); (b) for a CEILING trade a door threshold is the door's top reveal (NOT_IN_TRADE);
+    (c) for a CEILING trade an open-passage strip needs its head condition: WITH_HEAD -> the soffit footprint leaves
+    the ceiling, FULL_HEIGHT -> ceiling continues, unknown -> UNRESOLVED_HEAD_CONDITION (release blocker)."""
+    sides = list(strip.get("sides") or ([strip["site"]] if strip.get("site") else []))
+    rec = {"strip": strip["id"], "kind": strip["kind"], "location": strip["location"], "area_m2": strip["area_m2"],
+           "sides": {x: side_treatments.get(x) for x in sides}, "trade": trade, "contribution_m2": 0.0}
+    row_sites = set(row_sites)
+    touches = (strip["location"] == INSIDE_SITE and strip.get("site") in row_sites) or \
+        (strip["location"] == SEPARATE_SITE and row_sites & set(sides))
+    if not touches:
+        return dict(rec, state=NOT_IN_ROW, in_row_total=False)
+    if strip["location"] == SEPARATE_SITE:
+        if trade == CEILING:
+            return dict(rec, state=NOT_IN_TRADE, in_row_total=False,
+                        why="a door threshold's top is the door head reveal, never room ceiling")
+        if allocation is None:
+            return dict(rec, state=EXCLUDED, in_row_total=False, why="no allocation authority")
+        st = allocation["state"]
+        if st in RESOLVED_V2:
+            c = sum(r["area"] for r in allocation["regions"] if r["treatment"] == row_treatment)
+            return dict(rec, state=st, in_row_total=c > 0, contribution_m2=c, regions=allocation["regions"],
+                        plane=allocation["plane"])
+        return dict(rec, state=st, in_row_total=False, plane=allocation.get("plane"))
+    if trade == CEILING:
+        if head == "WITH_HEAD":
+            return dict(rec, state=SOFFIT_EXCLUDED, in_row_total=False, contribution_m2=-strip["area_m2"])
+        if head != "FULL_HEIGHT":
+            return dict(rec, state=HEAD_UNRESOLVED, in_row_total=True,
+                        why="the strip is inside the ceiling site but its head condition is not established")
+    treats = [side_treatments.get(x) for x in sides]
+    if any(t is None for t in treats):
+        return dict(rec, state=SIDE_UNRESOLVED, in_row_total=True)
+    if any(t != row_treatment for t in treats):
+        return dict(rec, state=SIDES_DIFFER, in_row_total=True)
+    return dict(rec, state=INCLUDED, in_row_total=True,
+                why="inside the measured site and every side carries the row's treatment")
+
+
+def row_effect_v2(audits) -> dict:
+    blk = [a for a in audits if a["state"] in BLOCKING_V2]
+    rel = [a for a in audits if a["state"] in RELEASE_V2]
+    return {"blocking": [a["strip"] for a in blk], "release": [a["strip"] for a in rel],
+            "release_area_m2": round(sum(a["area_m2"] for a in rel), 6),
+            "threshold_contribution_m2": round(sum(a["contribution_m2"] for a in audits
+                                                   if a["state"] in RESOLVED_V2), 6),
+            "soffit_exclusion_m2": round(-sum(a["contribution_m2"] for a in audits if a["state"] == SOFFIT_EXCLUDED), 6),
+            "passages_included": [a["strip"] for a in audits if a["state"] == INCLUDED],
+            "not_in_trade": [a["strip"] for a in audits if a["state"] == NOT_IN_TRADE],
+            "adjustment_m2": round(sum(a["contribution_m2"] for a in audits), 6)}
+
+
+def policy_record_v2() -> dict:
+    rec = {"policy_id": POLICY_ID_V2, "extends": POLICY_ID, "resolved": list(RESOLVED_V2),
+           "blocking": list(BLOCKING_V2), "release_blockers": list(RELEASE_V2),
+           "ceiling": {"door_threshold": NOT_IN_TRADE, "passage_with_head": SOFFIT_EXCLUDED,
+                       "passage_full_height": INCLUDED, "passage_head_unknown": HEAD_UNRESOLVED},
+           "never": ["a strip counted twice", "a strip in no row without a record", "a soffit as ceiling",
+                     "a head condition transferred from another revision"]}
+    rec["digest"] = hashlib.sha256(json.dumps(rec, sort_keys=True).encode()).hexdigest()
+    return rec
+
+
 def policy_record() -> dict:
     rec = {"policy_id": POLICY_ID, "locations": [SEPARATE_SITE, INSIDE_SITE],
            "states": [INCLUDED, EXCLUDED, ALLOCATED, SIDES_DIFFER, SIDE_UNRESOLVED, NOT_IN_ROW],

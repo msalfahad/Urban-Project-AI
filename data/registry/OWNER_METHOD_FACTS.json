@@ -1,0 +1,310 @@
+{
+ "SCHEMA": "URBAN_OWNER_METHOD_FACTS_V1",
+ "policy": "OWNER_METHOD_FACT_POLICY_V2 (engine/source/owner_method_facts.py)",
+ "facts": [
+  {
+   "fact_id": "QORTUBA-NEW-DOOR-THRESHOLD-CONTINUITY-OWNER-001",
+   "version": 1,
+   "kind": "THRESHOLD_ALLOCATION",
+   "authority": [
+    "PROJECT_OWNER"
+   ],
+   "received": "R8.14 brief §1, §3",
+   "scope": {
+    "project": "QORTUBA",
+    "source_revision_id": "QORTUBA_REV_NEW",
+    "source_anchor_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+    "region_id": "RC:MODEL_SPACE:4267:540:1649",
+    "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649",
+    "plan": "PLAN_VARIANT_4_SELECTED",
+    "trade": "FLOOR_FINISH"
+   },
+   "statement": {
+    "text": "FLOOR FINISH CONTINUES THROUGH DOORWAYS FOR ALL ROOMS; there is no unmeasured threshold void",
+    "dry_dry": "the same dry porcelain continues through the doorway (CONTINUOUS_SAME_FINISH, counted once)",
+    "never": [
+     "the whole strip to one side of a dry / wet door",
+     "a strip outside both floor quantities",
+     "a historical quantity match"
+    ]
+   },
+   "unit": "m2",
+   "transfer_forbidden": [
+    "the old Qortuba revision (QP-17 / QP-18 stay old-revision rules)",
+    "any other Qortuba revision, region or plan variant",
+    "the DWG (identity NOT_ESTABLISHED)",
+    "P7757",
+    "Al Rashed",
+    "any future villa or project",
+    "an Urban default"
+   ],
+   "relations": []
+  },
+  {
+   "fact_id": "QORTUBA-NEW-DRY-WET-TRANSITION-AT-DOOR-PLANE-OWNER-001",
+   "version": 1,
+   "kind": "THRESHOLD_ALLOCATION",
+   "authority": [
+    "PROJECT_OWNER"
+   ],
+   "received": "R8.14 brief §1, §2, §4",
+   "scope": {
+    "project": "QORTUBA",
+    "source_revision_id": "QORTUBA_REV_NEW",
+    "source_anchor_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+    "region_id": "RC:MODEL_SPACE:4267:540:1649",
+    "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649",
+    "plan": "PLAN_VARIANT_4_SELECTED",
+    "trade": "FLOOR_FINISH"
+   },
+   "statement": {
+    "text": "DRY <-> BATHROOM / WET-SERVICE: the floor finish changes at the MIDDLE OF THE DOORWAY / DOOR PLANE",
+    "meaning": "from the dry room only the dry porcelain is seen; from inside the wet room only its tile",
+    "door_centred": true,
+    "door_centred_scope": "this Qortuba method / fact only - never a default plane for another door, revision or project",
+    "plane_rule": "SPLIT_AT_DOOR_PLANE (a trade subdivision of ONE physical opening site)"
+   },
+   "unit": "m2",
+   "transfer_forbidden": [
+    "the old Qortuba revision (QP-17 / QP-18 stay old-revision rules)",
+    "any other Qortuba revision, region or plan variant",
+    "the DWG (identity NOT_ESTABLISHED)",
+    "P7757",
+    "Al Rashed",
+    "any future villa or project",
+    "an Urban default"
+   ],
+   "relations": []
+  },
+  {
+   "fact_id": "QORTUBA-NEW-MARBLE-THRESHOLD-ONLY-IF-EXPLICIT-OWNER-001",
+   "version": 1,
+   "kind": "THRESHOLD_ALLOCATION",
+   "authority": [
+    "PROJECT_OWNER"
+   ],
+   "received": "R8.14 brief §5",
+   "scope": {
+    "project": "QORTUBA",
+    "source_revision_id": "QORTUBA_REV_NEW",
+    "source_anchor_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+    "region_id": "RC:MODEL_SPACE:4267:540:1649",
+    "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649",
+    "plan": "PLAN_VARIANT_4_SELECTED",
+    "trade": "FLOOR_FINISH"
+   },
+   "statement": {
+    "text": "a marble threshold / برطاش is installed for the door width only in SOME cases; it is OPTIONAL and never the Qortuba default",
+    "requires": [
+     "explicit drawing text",
+     "a schedule",
+     "a specification",
+     "a project-specific owner fact",
+     "another accepted evidence source"
+    ],
+    "absent": "the continuous floor-transition rule applies"
+   },
+   "unit": null,
+   "transfer_forbidden": [
+    "the old Qortuba revision (QP-17 / QP-18 stay old-revision rules)",
+    "any other Qortuba revision, region or plan variant",
+    "the DWG (identity NOT_ESTABLISHED)",
+    "P7757",
+    "Al Rashed",
+    "any future villa or project",
+    "an Urban default"
+   ],
+   "relations": []
+  },
+  {
+   "fact_id": "QORTUBA-NEW-OPEN-PASSAGE-REVEALS-PLASTERED-OWNER-001",
+   "version": 1,
+   "kind": "OPENING_REVEAL",
+   "authority": [
+    "PROJECT_OWNER"
+   ],
+   "received": "R8.14 brief §8, §11",
+   "scope": {
+    "project": "QORTUBA",
+    "source_revision_id": "QORTUBA_REV_NEW",
+    "source_anchor_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+    "region_id": "RC:MODEL_SPACE:4267:540:1649",
+    "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649",
+    "plan": "PLAN_VARIANT_4_SELECTED",
+    "trade": "PLASTER",
+    "passage_fact": "QORTUBA-NEW-HALL-LOBBY-OPEN-PASSAGE-OWNER-001@v1"
+   },
+   "statement": {
+    "text": "the Hall / Lobby open passage is PLASTERED on the left jamb, the right jamb and the TOP / SOFFIT",
+    "surfaces": {
+     "LEFT_JAMB": "PLASTER",
+     "RIGHT_JAMB": "PLASTER",
+     "TOP_SOFFIT": "PLASTER"
+    },
+    "paint": "NOT stated - paint remains a separate trade authority",
+    "head": "WITH_HEAD (block / plastered head, clear height from the passage fact)"
+   },
+   "unit": null,
+   "transfer_forbidden": [
+    "the old Qortuba revision (QP-17 / QP-18 stay old-revision rules)",
+    "any other Qortuba revision, region or plan variant",
+    "the DWG (identity NOT_ESTABLISHED)",
+    "P7757",
+    "Al Rashed",
+    "any future villa or project",
+    "an Urban default"
+   ],
+   "relations": []
+  },
+  {
+   "fact_id": "QORTUBA-NEW-OPEN-PASSAGE-SOFFIT-NOT-CEILING-OWNER-001",
+   "version": 1,
+   "kind": "OPENING_REVEAL",
+   "authority": [
+    "PROJECT_OWNER"
+   ],
+   "received": "R8.14 brief §8, §9",
+   "scope": {
+    "project": "QORTUBA",
+    "source_revision_id": "QORTUBA_REV_NEW",
+    "source_anchor_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+    "region_id": "RC:MODEL_SPACE:4267:540:1649",
+    "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649",
+    "plan": "PLAN_VARIANT_4_SELECTED",
+    "trade": "CEILING",
+    "passage_fact": "QORTUBA-NEW-HALL-LOBBY-OPEN-PASSAGE-OWNER-001@v1"
+   },
+   "statement": {
+    "text": "the horizontal underside of the Hall / Lobby passage head is an OPENING SOFFIT / REVEAL surface, NOT the normal room ceiling",
+    "ceiling_rule": "ROOM CEILING REGION minus OPEN_PASSAGE_SOFFIT_FOOTPRINT; the soffit is recorded once for the plaster / reveal trade"
+   },
+   "unit": "m2",
+   "transfer_forbidden": [
+    "the old Qortuba revision (QP-17 / QP-18 stay old-revision rules)",
+    "any other Qortuba revision, region or plan variant",
+    "the DWG (identity NOT_ESTABLISHED)",
+    "P7757",
+    "Al Rashed",
+    "any future villa or project",
+    "an Urban default"
+   ],
+   "relations": []
+  },
+  {
+   "fact_id": "QORTUBA-NEW-DRY-ROOM-SKIRTING-ALL-REAL-WALLS-OWNER-001",
+   "version": 1,
+   "kind": "SKIRTING_PATH",
+   "authority": [
+    "PROJECT_OWNER"
+   ],
+   "received": "R8.14 brief §13, §15-§17",
+   "scope": {
+    "project": "QORTUBA",
+    "source_revision_id": "QORTUBA_REV_NEW",
+    "source_anchor_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+    "region_id": "RC:MODEL_SPACE:4267:540:1649",
+    "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649",
+    "plan": "PLAN_VARIANT_4_SELECTED",
+    "trade": "SKIRTING",
+    "space_classes": [
+     "DRY_INTERNAL_ROOM"
+    ]
+   },
+   "statement": {
+    "text": "for dry / internal rooms whose floor is tiled, SKIRTING RUNS AROUND ALL WALLS (lm)",
+    "not_deducted_for": [
+     "built-in wardrobes",
+     "fixed joinery",
+     "loose furniture"
+    ],
+    "stops_at": [
+     "door openings",
+     "open passages",
+     "physical gaps where no wall exists"
+    ],
+    "never": [
+     "a room polygon perimeter",
+     "a topology closure",
+     "a synthetic segment across an opening"
+    ]
+   },
+   "unit": "lm",
+   "transfer_forbidden": [
+    "the old Qortuba revision (QP-17 / QP-18 stay old-revision rules)",
+    "any other Qortuba revision, region or plan variant",
+    "the DWG (identity NOT_ESTABLISHED)",
+    "P7757",
+    "Al Rashed",
+    "any future villa or project",
+    "an Urban default"
+   ],
+   "relations": [
+    {
+     "rule": "QP-08 QORTUBA_FIXED_CABINET_DEDUCTION",
+     "relation": "MORE_SPECIFIC",
+     "why": "states the positive path; the no-deduction rule is the same"
+    },
+    {
+     "rule": "QORTUBA-NEW-DRY-ROOM-FINISH-OWNER-001@v1",
+     "relation": "MORE_SPECIFIC",
+     "why": "from 'floor has skirting (lm)' to the exact path"
+    }
+   ]
+  },
+  {
+   "fact_id": "QORTUBA-NEW-NO-SKIRTING-FULL-WALL-TILE-ROOMS-OWNER-001",
+   "version": 1,
+   "kind": "SKIRTING_PATH",
+   "authority": [
+    "PROJECT_OWNER"
+   ],
+   "received": "R8.14 brief §14, §18",
+   "scope": {
+    "project": "QORTUBA",
+    "source_revision_id": "QORTUBA_REV_NEW",
+    "source_anchor_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+    "region_id": "RC:MODEL_SPACE:4267:540:1649",
+    "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649",
+    "plan": "PLAN_VARIANT_4_SELECTED",
+    "trade": "SKIRTING",
+    "space_classes": [
+     "WET_SERVICE_ROOM",
+     "SERVICE_ROOM"
+    ]
+   },
+   "statement": {
+    "text": "NO SKIRTING in bathrooms, the kitchen, the ironing room and the washing / laundry room: they carry wall ceramic / porcelain",
+    "rooms": [
+     "BATHROOM",
+     "KITCHEN",
+     "IRONING_ROOM",
+     "WASHING_LAUNDRY_ROOM"
+    ],
+    "paintry": "SERVICE_ROOM (QP-07 kitchen / preparation zone, full wall tile): no skirting"
+   },
+   "unit": null,
+   "transfer_forbidden": [
+    "the old Qortuba revision (QP-17 / QP-18 stay old-revision rules)",
+    "any other Qortuba revision, region or plan variant",
+    "the DWG (identity NOT_ESTABLISHED)",
+    "P7757",
+    "Al Rashed",
+    "any future villa or project",
+    "an Urban default"
+   ],
+   "relations": [
+    {
+     "rule": "US-02 NO_SKIRTING_IN_A_FULLY_CERAMIC_ROOM",
+     "relation": "CORROBORATING",
+     "why": "same rule"
+    }
+   ]
+  }
+ ],
+ "never": [
+  "a topology / wall-band / passage-detection input",
+  "a company-global default",
+  "a transfer outside its scope",
+  "a quantity"
+ ]
+}
