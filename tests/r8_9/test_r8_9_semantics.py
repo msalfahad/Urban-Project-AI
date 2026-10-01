@@ -67,8 +67,14 @@ def test_an_ordinary_note_inside_a_room_is_not_a_room_label():
 
 
 def test_an_established_room_tag_names_the_room():
+    # SUPERSEDED in part by R8.10 §24 (text_role V2): vocabulary in a lone tag is a CANDIDATE; TR-03 needs the same
+    # tag composition used for a second, different room name in the same source (repeated family use)
     tag = [H.text(5, "BEDROOM", 100, 100, path=("40",), layer="TEXT"), H.text(6, "2", 100, 80, path=("40",), layer="TEXT")]
-    r = run(H.box(1, 0, 0, 500, 400), tag)
+    alone = run(H.box(1, 0, 0, 500, 400), tag)
+    assert {alone["roles"]["text_roles"][t.identity.key].rule_id for t in tag} == {"TR-06"}
+    other = [H.text(15, "KITCHEN", 2000, 2000, path=("41",), layer="TEXT"),
+             H.text(16, "3", 2000, 1980, path=("41",), layer="TEXT")]
+    r = run(H.box(1, 0, 0, 500, 400), tag + other)
     (s,) = r["sites"]
     assert s["labels"] == ["I40"] and s["status"] == T.CERTIFIED
     assert {r["roles"]["text_roles"][t.identity.key].rule_id for t in tag} == {"TR-03"}
@@ -77,7 +83,10 @@ def test_an_established_room_tag_names_the_room():
 def test_a_tag_of_the_same_source_family_is_established_without_vocabulary():
     a = [H.text(5, "HALL", 100, 100, path=("40",), layer="TEXT"), H.text(6, "xyz", 100, 80, path=("40",), layer="TEXT")]
     b = [H.text(7, "PAINTRYY", 700, 100, path=("41",), layer="TEXT"), H.text(8, "abc", 700, 80, path=("41",), layer="TEXT")]
-    r = run(H.two_rooms(), a + b)
+    # R8.10: the family needs two different room names (HALL + KITCHEN) before it establishes anything
+    c = [H.text(17, "KITCHEN", 3000, 3000, path=("42",), layer="TEXT"),
+         H.text(18, "q", 3000, 2980, path=("42",), layer="TEXT")]
+    r = run(H.two_rooms(), a + b + c)
     assert {r["roles"]["text_roles"][t.identity.key].rule_id for t in b} == {"TR-04"}
     assert all(s["status"] == T.CERTIFIED and len(s["labels"]) == 1 for s in r["sites"])
 

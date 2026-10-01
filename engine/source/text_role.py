@@ -6,8 +6,11 @@ name a space:
 
   TR-01 TITLE_TEXT              in the region's sheet-frame occurrence, or on a sheet-frame layer
   TR-02 DIMENSION_TEXT          on a dimension layer
-  TR-03 ROOM_LABEL_ESTABLISHED  a TAG OCCURRENCE (an insert whose content is text only) with room-vocabulary
-                                corroboration in one of its texts (STRUCTURAL: the occurrence is the label)
+  TR-03 ROOM_LABEL_ESTABLISHED  a TAG OCCURRENCE (an insert whose content is text only) with room vocabulary
+                                AND repeated family use (R8.10): its tag composition is used, in the same source,
+                                for at least two DIFFERENT room names. Vocabulary alone never establishes a tag: a
+                                lone "BATHROOM DETAIL" insert is a candidate. A tag carrying a drafting-document word
+                                (DETAIL, NOTE, CEILING, FINISH, AREA, TYPE, SECTION ...) is never a room label
   TR-04 ROOM_LABEL_ESTABLISHED  a tag occurrence with the same TAG COMPOSITION (text count, effective layers, entity
                                 types; heights are block-local and not compared) as a TR-03 tag of the SAME source (source-scoped family; the vocabulary is
                                 not required: a misspelled room name in the author's own tag is still that tag)
@@ -37,7 +40,7 @@ from . import canonical_input as CI
 from . import geometry_role as GR
 from . import role_authority as RA
 
-POLICY_ID = "TEXT_ROLE_POLICY_V1"
+POLICY_ID = "TEXT_ROLE_POLICY_V2"   # V2 (R8.10): TR-03 needs repeated family use; document words
 ROOM_LABEL_ESTABLISHED, ROOM_LABEL_CANDIDATE = "ROOM_LABEL_ESTABLISHED", "ROOM_LABEL_CANDIDATE"
 DIMENSION_TEXT, GENERAL_NOTE, DOOR_TAG, WINDOW_TAG = "DIMENSION_TEXT", "GENERAL_NOTE", "DOOR_TAG", "WINDOW_TAG"
 LEVEL_MARK, AREA_TEXT, TITLE_TEXT, ANNOTATION_TEXT = "LEVEL_MARK", "AREA_TEXT", "TITLE_TEXT", "ANNOTATION_TEXT"
@@ -52,6 +55,9 @@ ROOM_WORDS = ("ROOM", "ROOMS", "BED", "BEDROOM", "MASTER", "LIVING", "HALL", "LO
               "DIWANIYA", "PRAYER", "GYM", "UTILITY", "SHAFT", "VOID", "STAIR", "STAIRS", "LIFT", "FAMILY", "GUEST",
               "SITTING", "WASH")
 DOOR_WORDS, WINDOW_WORDS = ("DOOR", "DR"), ("WINDOW", "WIN", "WDW")
+DOCUMENT_WORDS = ("DETAIL", "DETAILS", "NOTE", "NOTES", "CEILING", "FINISH", "FINISHES", "AREA", "TYPE", "SECTION",
+                  "ELEVATION", "SCALE", "SCHEDULE", "LEGEND", "TITLE", "SHEET", "DRAWING", "DWG", "SPEC",
+                  "SPECIFICATION", "TYPICAL", "TYP", "ENLARGED", "KEY")
 ROOM_LABEL_LAYER_WORDS = ("ROOM", "ROOMS", "ROOMNAME", "ROOMNAMES", "ROOMTAG", "RMTAG", "SPACE", "SPACES", "SPACENAME")
 _AREA = re.compile(r"(\bm2\b|m²|\bsqm\b|\bAREA\b)", re.I)
 _LEVEL = re.compile(r"(\bLEVEL\b|\bFFL\b|\bSSL\b|[+±-]\s?\d+[.,]\d{2}\b)", re.I)
@@ -87,21 +93,32 @@ def classify(inp: CI.CanonicalMeasurementInput, *, frame_insert=None, claims=())
     tags = {o: ts for o, ts in occ.items() if o not in part_occ and o != frame_insert}   # text-only occurrences
     established_sigs = set()
     tag_role = {}
+    words_of = {o: set().union(*(_words(t.value) for t in ts)) for o, ts in tags.items()}
+    names_by_sig = defaultdict(set)              # repeated family use: distinct room names per tag composition
     for o, ts in tags.items():
-        words = set().union(*(_words(t.value) for t in ts))
-        if words & set(ROOM_WORDS):
-            tag_role[o] = (ROOM_LABEL_ESTABLISHED, "TR-03", sorted(words & set(ROOM_WORDS)))
+        w = words_of[o]
+        if w & set(ROOM_WORDS) and not w & set(DOCUMENT_WORDS):
+            names_by_sig[_signature(ts)].add(tuple(sorted(w & set(ROOM_WORDS))))
+    for o, ts in tags.items():
+        w = words_of[o]
+        if w & set(DOCUMENT_WORDS):
+            tag_role[o] = (ROOM_LABEL_CANDIDATE, "TR-06", "drafting-document word: " + ", ".join(
+                sorted(w & set(DOCUMENT_WORDS))))
+        elif w & set(ROOM_WORDS) and len(names_by_sig[_signature(ts)]) >= 2:
+            tag_role[o] = (ROOM_LABEL_ESTABLISHED, "TR-03", sorted(w & set(ROOM_WORDS)))
             established_sigs.add(_signature(ts))
     for o, ts in tags.items():
         if o in tag_role:
             continue
-        words = set().union(*(_words(t.value) for t in ts))
+        words = words_of[o]
         if _signature(ts) in established_sigs and not words & (set(DOOR_WORDS) | set(WINDOW_WORDS)):
             tag_role[o] = (ROOM_LABEL_ESTABLISHED, "TR-04", "same tag signature as an established room tag")
         elif words and words <= set(DOOR_WORDS) | {w for w in words if w.isdigit()}:
             tag_role[o] = (DOOR_TAG, "TR-05", sorted(words))
         elif words and words <= set(WINDOW_WORDS) | {w for w in words if w.isdigit()}:
             tag_role[o] = (WINDOW_TAG, "TR-05", sorted(words))
+        elif words & set(ROOM_WORDS):
+            tag_role[o] = (ROOM_LABEL_CANDIDATE, "TR-06", "room vocabulary without repeated family use")
         else:
             tag_role[o] = (ROOM_LABEL_CANDIDATE, "TR-06", "tag occurrence without corroboration or family")
     claim_layers = {}
@@ -142,10 +159,12 @@ def classify(inp: CI.CanonicalMeasurementInput, *, frame_insert=None, claims=())
 
 def policy_record() -> dict:
     return {"id": POLICY_ID, "rules": ["TR-01 TITLE_TEXT", "TR-02 DIMENSION_TEXT", "TR-03 tag occurrence + room "
-                                       "vocabulary", "TR-04 tag family (same source)", "TR-05 door / window tag",
+                                       "vocabulary + repeated family use (>= 2 different room names, same "
+                                       "composition, same source)", "TR-04 tag family (same source)", "TR-05 door / window tag",
                                        "TR-06 tag candidate", "TR-07 room-label layer", "TR-08 area / level",
                                        "TR-09 annotation", "TR-10 loose room word: candidate", "TR-11 claim",
                                        "TR-99 unknown"],
             "names_a_space": [ROOM_LABEL_ESTABLISHED], "semantic_review": list(UNRESOLVED),
             "room_vocabulary": list(ROOM_WORDS), "room_label_layers": list(ROOM_LABEL_LAYER_WORDS),
+            "document_words_never_a_label": list(DOCUMENT_WORDS),
             "never": ["inside a polygon alone", "nearest label", "vocabulary alone"]}

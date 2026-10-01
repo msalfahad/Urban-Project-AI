@@ -20,6 +20,7 @@ from collections import defaultdict
 
 from . import canonical_input as CI
 from . import geometry_role as GR
+from . import owner_claims as OC
 from . import region_membership as RM
 from . import role_authority as RA
 from . import text_role as TX
@@ -76,7 +77,8 @@ def topology_inputs(inp: CI.CanonicalMeasurementInput, *, frame_insert, eps_n, e
     UNCONNECTED_BOUNDARY_CANDIDATE, blocking), and the separator candidates for the consequence check (stored in
     the roles result)."""
     adm = GR.admit(inp, frame_insert=frame_insert, eps=eps_n)
-    ctx = RA.occurrence_contexts(inp, adm, frame_insert, occurrence_claims)
+    troles = TX.classify(inp, frame_insert=frame_insert, claims=claims)
+    ctx = RA.occurrence_contexts(inp, adm, frame_insert, occurrence_claims, text_roles=troles, eps=eps_n)
     assemblies = frozenset(o for o, v in ctx.items() if v["context"] == RA.BUILDING_ASSEMBLY)
     if assemblies:
         adm = GR.admit(inp, frame_insert=frame_insert, eps=eps_n, assemblies=assemblies)
@@ -109,6 +111,8 @@ def topology_inputs(inp: CI.CanonicalMeasurementInput, *, frame_insert, eps_n, e
             cands.append((T.BoundaryItem(it.source_id, it.kind, it.geometry, RA.UNCONNECTED_BOUNDARY_CANDIDATE),
                           "UNKNOWN"))
         probes.sort(key=lambda z: z.source_id)
+    adm["near_miss_pool"] = [c for c in cands if c[0].kind == "SEGMENT"
+                             and (c[1] == "UNKNOWN" or c[1] in RA.PRESENTATION_EXCLUSION_RULES)]
     if eps_r:                                     # excluded linework counts only where it bridges the network
         cands = [c for c in cands if c[1] == "UNKNOWN"] + \
             RA.bridging_subset([c for c in cands if c[1] != "UNKNOWN"], items, eps_r)
@@ -125,7 +129,6 @@ def topology_inputs(inp: CI.CanonicalMeasurementInput, *, frame_insert, eps_n, e
     status = dict(status)
     adm["glazing"] = g_status
     adm["glazed_openings"] = g_open
-    troles = TX.classify(inp, frame_insert=frame_insert, claims=claims)
     adm["text_roles"] = troles
     placed = [t for t in sorted(inp.texts, key=lambda q: q.identity.key or "")
               if t.visibility == CI.VISIBLE and t.value and t.x is not None and t.y is not None]
@@ -151,7 +154,7 @@ def _disjoint(a, b):
     return a[2] < b[0] or b[2] < a[0] or a[3] < b[1] or b[3] < a[1]
 
 
-def unrealised_accounting(unrealised, inp, res, frame_insert, occurrence_contexts=None):
+def unrealised_accounting(unrealised, inp, res, frame_insert, occurrence_contexts=None, xref_claims=()):
     """Source entities the route could not realise (custom / proxy / unhandled / xref content / carried fills) have
     no placed geometry, so the topology never sees them. R8.9: they are excluded ONLY on POSITIVE evidence; the
     absence of realised peers on the same layer proves nothing about where an unrealised entity is.
@@ -168,7 +171,12 @@ def unrealised_accounting(unrealised, inp, res, frame_insert, occurrence_context
       wall / column / glazing layer or unknown layer   -> the whole input (a boundary may be missing)
       inside an occurrence present in the region       -> OCCURRENCE_REVIEW_REQUIRED on the sites that occurrence
                                                           touches (or the whole input if it touches none)
-      model space / occurrence not localisable          -> REGION_REVIEW_REQUIRED (the whole input)"""
+      model space / occurrence not localisable          -> REGION_REVIEW_REQUIRED (the whole input)
+
+    R8.10: a MISSING XREF occurrence (content not in the source) is classified by owner_claims.xref_state into the
+    four-state model: proven outside by its own placement, owner-confirmed non-contributing to THIS region (an
+    occurrence-scoped reviewed claim), or XREF_MISSING_POTENTIALLY_CONTRIBUTING (blocks the input). A cleared
+    occurrence stays in `recorded` (provenance is never deleted)."""
     occurrence_contexts = occurrence_contexts or {}
     out = {"blocking_input": [], "site_issues": defaultdict(list), "recorded": []}
     occ_in = {(p.identity.instance_handles or ())[0] for p in inp.parts if p.identity.instance_handles}
@@ -198,7 +206,9 @@ def unrealised_accounting(unrealised, inp, res, frame_insert, occurrence_context
             continue
         if ext is not None:
             if bounds is not None and _disjoint(ext, bounds):
-                out["recorded"].append(dict(u, disposition="OUTSIDE_SELECTED_MEASUREMENT_REGION_BY_PLACEMENT"))
+                out["recorded"].append(dict(u, disposition=OC.XREF_MISSING_BUT_PROVEN_OUTSIDE_REGION
+                                            if u["code"] in OC.XREF_CODES
+                                            else "OUTSIDE_SELECTED_MEASUREMENT_REGION_BY_PLACEMENT"))
                 continue
             hit = sorted(s_["site_id"] for s_ in sites if not _disjoint(ext, s_["bbox"]))
             if not hit:
@@ -212,6 +222,13 @@ def unrealised_accounting(unrealised, inp, res, frame_insert, occurrence_context
             out["recorded"].append(dict(u, disposition="OUTSIDE_REGION_BY_OCCURRENCE",
                                         strength="OCCURRENCE_LEVEL: every realised record of the occurrence is "
                                                  "exactly outside; the unrealised child's own extent is unknown"))
+            continue
+        if u["code"] in OC.XREF_CODES:
+            st, cid, why = OC.xref_state(u, xref_claims, inp)
+            if st == OC.XREF_MISSING_OWNER_CONFIRMED_NONCONTRIBUTING:
+                out["recorded"].append(dict(u, disposition=st, claim=cid))
+            else:
+                out["blocking_input"].append(dict(u, disposition=st, why=why))
             continue
         lr = GR.layer_role(u.get("layer"))
         if u.get("layer") is None:
@@ -234,7 +251,8 @@ def unrealised_accounting(unrealised, inp, res, frame_insert, occurrence_context
 PHYSICAL_ISSUES = (T.TOLERANCE_SENSITIVE, T.ZERO_WIDTH_SLIVER, T.TOPOLOGY_ROLE_UNRESOLVED, T.OPENING_CLOSURE_UNRESOLVED,
                    T.SITE_ID_COLLISION, XC.GEOS_CROSSCHECK_DISAGREES, RA.ROLE_CONFLICT_SEPARATOR,
                    "UNREALISED_ENTITY_ON_BOUNDARY_LAYER", "UNREALISED_ENTITY_POSSIBLY_IN_SITE",
-                   "OCCURRENCE_REVIEW_REQUIRED", "REGION_REVIEW_REQUIRED", "UNREALISED_ENTITY_LAYER_UNKNOWN")
+                   "OCCURRENCE_REVIEW_REQUIRED", "REGION_REVIEW_REQUIRED", "UNREALISED_ENTITY_LAYER_UNKNOWN",
+                   "XREF_MISSING_POTENTIALLY_CONTRIBUTING", RA.NEAR_MISS_BOUNDARY_GAP, RA.NETWORK_ROLE_CONFLICT)
 SEMANTIC_ISSUES = (T.MULTIPLE_SEMANTIC_LABELS, T.LABEL_ON_BOUNDARY, T.LABEL_OCCURRENCE_SPLIT,
                    "TEXT_ROLE_UNRESOLVED_IN_SITE")
 
@@ -249,7 +267,7 @@ def classify_issues(site) -> None:
     site["physical_status"] = T.CERTIFIED if not site["physical_issues"] else T.REVIEW_REQUIRED
 
 
-def consequences(res, items, adm, labels, tol) -> None:
+def consequences(res, items, adm, labels, tol, unit_native_to_mm=None) -> None:
     """R8.9 consequence check (role_authority.separator_analysis), run SEPARATELY for layer-only exclusions and for
     unknown geometry so each effect is attributed to its own origin; folded into the site issues, plus the site's
     weakest boundary authority grade."""
@@ -258,6 +276,17 @@ def consequences(res, items, adm, labels, tol) -> None:
     sep = {g: RA.separator_analysis(res, items, cs, eps_n=tol["eps_n"], eps_r=tol["eps_r"], labels=labels)
            for g, cs in groups.items()}
     res["separators"] = sep
+    nm = {"band_native": None, "near_misses": [], "state": "NOT_RUN: no unit, no physical review band"}
+    if unit_native_to_mm:
+        nm = RA.near_miss_analysis(res, items, adm.get("near_miss_pool", []), eps_n=tol["eps_n"], eps_r=tol["eps_r"],
+                                   band=RA.NEAR_MISS_REVIEW_BAND_MM / float(unit_native_to_mm), labels=labels)
+    res["near_misses"] = nm
+    nm_sites = defaultdict(list)
+    for m in nm["near_misses"]:
+        for sid, e in m["sites"].items():
+            if e["effect"] == "CHANGES_AREA" or not m["admitted"]:   # admitted gap between labelled rooms: R8.8
+                nm_sites[sid].append({"source": m["source"], "origin": m["origin"], "effect": e["effect"],
+                                      "gaps_native": m["gaps_native"]})
     unknown_ids = {c.source_id for c, _ in groups["unknown"]}
     grades = adm.get("grades", {})
     for s_ in res["sites"]:
@@ -274,6 +303,9 @@ def consequences(res, items, adm, labels, tol) -> None:
             # every blocking source is linear geometry that cannot change this site: the PHYSICAL site stands;
             # what the object is remains a trade question
             iss = (iss - {T.TOPOLOGY_ROLE_UNRESOLVED}) | {RA.UNKNOWN_OBJECT_IN_SITE}
+        if s_["site_id"] in nm_sites:
+            iss.add(RA.NEAR_MISS_BOUNDARY_GAP)
+            s_["near_miss"] = nm_sites[s_["site_id"]]
         s_["issues"] = sorted(iss)
         s_["consequence"] = {g: {"effect": e["effect"], "sources": e["sources"], "origins": e["origins"]}
                              for g, e in (("exclusion", ex), ("unknown", un)) if e}
@@ -283,7 +315,7 @@ def consequences(res, items, adm, labels, tol) -> None:
 
 
 def run(inp: CI.CanonicalMeasurementInput, *, frame_insert, expected_revision_id=None, selected_region_id=None,
-        contract=TS01, unrealised=None, claims=(), occurrence_claims=None) -> dict:
+        contract=TS01, unrealised=None, claims=(), occurrence_claims=None, part_claims=(), xref_claims=()) -> dict:
     v = CI.validate(inp, contract, expected_revision_id=expected_revision_id, selected_region_id=selected_region_id)
     out = {"method_id": contract.method_id, "validation": v, "state": v["state"], "sites": None}
     if v["state"] != CI.COMPLETE:
@@ -293,14 +325,21 @@ def run(inp: CI.CanonicalMeasurementInput, *, frame_insert, expected_revision_id
     if not tol["valid"]:
         out.update(state=T.UNIT_UNRESOLVED, tolerances=tol)
         return out
+    pclaims, prec = OC.role_claims(part_claims, inp)           # R8.10: part-scoped claims -> role authority only
     items, probes, labels, adm, closures, status, door_probes = topology_inputs(
-        inp, frame_insert=frame_insert, eps_n=tol["eps_n"], eps_r=tol["eps_r"], claims=claims,
+        inp, frame_insert=frame_insert, eps_n=tol["eps_n"], eps_r=tol["eps_r"], claims=tuple(claims) + tuple(pclaims),
         occurrence_claims=occurrence_claims)
     res = T.analyse(items + closures, probes, labels, revision_id=inp.revision.revision_id, region_id=inp.region_id,
                     unit_native_to_mm=inp.unit_native_to_mm, max_abs_coordinate=m,
                     blocking_roles=GR.TOPOLOGY_BLOCKING + (RA.UNCONNECTED_BOUNDARY_CANDIDATE,), opening_status=status,
                     opening_symbol_occurrences=door_probes, glazed_openings=adm["glazed_openings"])
-    consequences(res, items + closures, adm, labels, tol)
+    consequences(res, items + closures, adm, labels, tol, inp.unit_native_to_mm)
+    net = RA.network_review(res, items, adm.get("grades", {}), adm["roles"], inp.dimensions, eps_r=tol["eps_r"])
+    res["network_review"] = net
+    for sid in sorted({x for v in net.values() if v["state"] == RA.NETWORK_ROLE_CONFLICT for x in v["sites"]}):
+        s_ = next(z for z in res["sites"] if z["site_id"] == sid)
+        s_["issues"] = sorted(set(s_["issues"]) | {RA.NETWORK_ROLE_CONFLICT})
+        s_["status"] = T.REVIEW_REQUIRED
     for lt in adm["unresolved_texts"]:                 # a text of unresolved role inside a site: semantic review
         sid, _ = T.locate(res["_arr"], res["sites"], (lt.x, lt.y), 0.0)
         if sid is not None:
@@ -320,7 +359,7 @@ def run(inp: CI.CanonicalMeasurementInput, *, frame_insert, expected_revision_id
     res["crosscheck"]["inconclusive"] = {k: v for k, v in sorted(xc["per_site"].items())
                                          if v["state"] in (XC.PHASE_SENSITIVE_INCONCLUSIVE, XC.CHECK_INPUT_INVALID)}
     if unrealised is not None:
-        acc = unrealised_accounting(unrealised, inp, res, frame_insert, adm.get("occurrence_contexts"))
+        acc = unrealised_accounting(unrealised, inp, res, frame_insert, adm.get("occurrence_contexts"), xref_claims)
         res["unrealised"] = {"blocking_input": acc["blocking_input"], "recorded": acc["recorded"],
                              "sites": {k: sorted(v) for k, v in acc["site_issues"].items()}}
         block = sorted({b["disposition"] for b in acc["blocking_input"]})
@@ -343,6 +382,8 @@ def run(inp: CI.CanonicalMeasurementInput, *, frame_insert, expected_revision_id
     res["semantic"] = SZ.build(res, items + closures, adm["semantic_candidates"], labels, eps_n=tol["eps_n"],
                                eps_r=tol["eps_r"])
     res["roles"] = adm
+    res["owner_claims"] = {"part_claims": prec, "xref_claims": [f"{c.claim_id}@v{c.version}" for c in xref_claims],
+                           "evidence_version": OC.evidence_version(part_claims, xref_claims, claims)}
     res["openings"] = status
     res["closures"] = closures
     res["counts"] = {"admitted_boundary": len(items), "closures": len(closures), "probes": len(probes),

@@ -132,13 +132,18 @@ def test_a_claim_changes_role_authority_only_never_geometry():
 
 # ------------------------------------------------------------------------------- occurrence contexts
 def test_a_building_assembly_occurrence_admits_its_wall_children():
-    walls = H.box(1, 0, 0, 500, 400, path=("20",))
-    tag = H.text(9, "LIVING", 250, 200, path=("20",))                     # room-label child: corroboration
-    r = RT.run(H.inp(walls, texts=[tag]), frame_insert=None)
+    # SUPERSEDED in part by R8.10 §23 (assembly V2): one room + one label is what a room-DETAIL block looks like; a
+    # building assembly needs closed boundary children AND a nested door or >= 2 different established room labels
+    walls = H.two_rooms()
+    walls = [H.seg(p.identity.source_handle, *p.geometry, path=("20",)) for p in walls]
+    tags = [H.text(9, "LIVING", 250, 200, path=("20",)), H.text(10, "KITCHEN", 750, 200, path=("20",))]
+    r = RT.run(H.inp(walls, texts=tags), frame_insert=None)
     assert r["roles"]["occurrence_contexts"]["20"]["context"] == RA.BUILDING_ASSEMBLY
-    (s,) = r["sites"]
-    assert s["status"] == T.CERTIFIED and abs(s["area"] - 500 * 400) < 1e-6
+    assert len(r["sites"]) == 2 and all(s["status"] == T.CERTIFIED for s in r["sites"])
     assert {a.rule_id for k, a in r["roles"]["roles"].items()} == {"GR-05/GR-17"}
+    one = RT.run(H.inp(H.box(1, 0, 0, 500, 400, path=("20",)), texts=[H.text(9, "LIVING", 250, 200, path=("20",))]),
+                 frame_insert=None)
+    assert one["roles"]["occurrence_contexts"]["20"]["context"] == RA.UNKNOWN_OCC
 
 
 def test_a_symbol_occurrence_with_wall_children_and_no_corroboration_fails_closed():

@@ -84,8 +84,7 @@ def policy_record() -> dict:
                 "object exclusion that would only CHANGE AREA": "FIXED_OBJECT_AGAINST_BOUNDARY (trade note)"},
             "exclusion_candidates": "open curves bridging the admitted network at both ends only",
             "unconnected": UNCONNECTED_BOUNDARY_CANDIDATE,
-            "building_assembly_requires": ["boundary-layer children", "one of: nested door occurrence, room-label "
-                                           "text child, dimension child, reviewed occurrence claim"],
+            "building_assembly_requires": ASSEMBLY_RULE,
             "never": ["layer name alone (either direction)", "size", "nearest geometry", "a desired quantity"],
             "claims": "source-scoped (revision id AND anchor hash); never transferred; change role authority only"}
 
@@ -143,19 +142,39 @@ def apply_claims(inp: CI.CanonicalMeasurementInput, roles: dict, claims=()) -> t
 
 
 # ======================================================================== building-assembly occurrences
-def occurrence_contexts(inp: CI.CanonicalMeasurementInput, adm: dict, frame_insert, occurrence_claims=None) -> dict:
-    """{top-level insert handle: {context, evidence}} from positive evidence only."""
+ASSEMBLY_RULE = ("R8.10 V2: BUILDING_ASSEMBLY needs (1) boundary-layer children that close at least one cycle among "
+                 "themselves AND (2) a nested door occurrence, or >= 2 DIFFERENT established room labels inside the "
+                 "occurrence, or a reviewed occurrence claim. A dimension child or a single text no longer suffices: "
+                 "a detail callout (wall-like lines + a title / dimensions) is not a building")
+
+
+def _closes_a_cycle(ps, eps) -> bool:
+    lin = [T.BoundaryItem(p.identity.key, p.kind, tuple(p.geometry), "PROBE") for p in ps
+           if p.kind in ("SEGMENT", "ARC", "CIRCLE")]
+    if not lin:
+        return False
+    return bool(T.sites_of(T.build(lin, eps), "OCC", "OCC"))
+
+
+def occurrence_contexts(inp: CI.CanonicalMeasurementInput, adm: dict, frame_insert, occurrence_claims=None,
+                        text_roles=None, eps=None) -> dict:
+    """{top-level insert handle: {context, evidence}} from positive evidence only (ASSEMBLY_RULE)."""
     occurrence_claims = occurrence_claims or {}
+    text_roles = text_roles or {}
     children = defaultdict(list)
     for p in inp.parts:
         path = p.identity.instance_handles or ()
         if path:
             children[path[0]].append(p)
     texts = defaultdict(int)
+    room_names = defaultdict(set)
     for t in inp.texts:
         path = t.identity.instance_handles or ()
         if path:
             texts[path[0]] += 1
+            tr = text_roles.get(t.identity.key)
+            if tr is not None and tr.role == "ROOM_LABEL_ESTABLISHED":
+                room_names[path[0]].add((t.value or "").strip().upper())
     dims = defaultdict(int)
     for d in inp.dimensions:
         path = d.identity.instance_handles or ()
@@ -168,14 +187,20 @@ def occurrence_contexts(inp: CI.CanonicalMeasurementInput, adm: dict, frame_inse
         nested = {p.identity.instance_handles[1] for p in ps if len(p.identity.instance_handles) > 1}
         nested_doors = sorted(n for n in nested if GR.door_signature(
             [q for q in ps if len(q.identity.instance_handles) > 1 and q.identity.instance_handles[1] == n]) is not None)
+        rooms = sorted(room_names.get(occ, ()))
+        cyc = None
+        if boundary and (nested_doors or len(rooms) >= 2):
+            bl = [p for p in ps if GR.layer_role(CI.effective_layer(p)[0]) in GR.BOUNDARY_LAYER_ROLES]
+            cyc = _closes_a_cycle(bl, eps if eps is not None else 0.0)
         ev = {"boundary_layer_children": boundary, "nested_door_occurrences": len(nested_doors),
               "text_children": texts.get(occ, 0), "dimension_children": dims.get(occ, 0),
+              "established_room_labels": rooms, "boundary_children_close_a_cycle": cyc,
               "claim": occurrence_claims.get(occ)}
         if frame_insert is not None and occ == frame_insert:
             ctx = SHEET_FRAME
         elif occurrence_claims.get(occ) in (BUILDING_ASSEMBLY, SYMBOL, PRESENTATION):
             ctx = occurrence_claims[occ]
-        elif boundary and (nested_doors or texts.get(occ) or dims.get(occ)):
+        elif boundary and cyc and (nested_doors or len(rooms) >= 2):
             ctx = BUILDING_ASSEMBLY
         elif boundary:
             ctx = UNKNOWN_OCC                     # wall-layer content without corroboration: fail closed
@@ -290,6 +315,120 @@ def consequence_issue(entry) -> tuple:
     if origins & set(PRESENTATION_EXCLUSION_RULES) or effect == "SEPARATES_LABELS":
         return ROLE_CONFLICT_SEPARATOR, "PHYSICAL"
     return FIXED_OBJECT_AGAINST_BOUNDARY, "NOTE"         # positively excluded object against walls: a trade note
+
+
+# ======================================================================== NETWORK grade review (R8.10)
+NETWORK_BOUNDARY_ESTABLISHED = "NETWORK_BOUNDARY_ESTABLISHED"
+NETWORK_BOUNDARY_CANDIDATE = "NETWORK_BOUNDARY_CANDIDATE"
+NETWORK_ROLE_CONFLICT = "NETWORK_ROLE_CONFLICT"
+
+
+def _same_pts(a, b, eps):
+    return T._d(a, b) <= eps
+
+
+def network_review(res, items, grades, roles, dimensions, *, eps_r) -> dict:
+    """R8.10 §21: NETWORK grade (a wall-layer line connected at both ends) says the line is CONNECTED, not that it is
+    a wall. Each NETWORK line that separates two different sites is classified:
+      NETWORK_BOUNDARY_ESTABLISHED  corroborated: it separates two DIFFERENT established label occurrences, or a
+                                    reviewed claim names it
+      NETWORK_ROLE_CONFLICT         positive contrary evidence: its two ends coincide with the measured points of a
+                                    DIMENSION entity of the same source (a dimension line drawn on a wall layer) -
+                                    a PHYSICAL issue on both sites
+      NETWORK_BOUNDARY_CANDIDATE    anything else (recorded, not blocking: a double-line wall face looks exactly
+                                    like this; telling a wall band from a pocket needs a wall-band model, R8.11)"""
+    side = defaultdict(list)
+    for s_ in res["sites"]:
+        for x in set(s_["boundary_source_ids"]) | set(s_.get("hole_source_ids", ())):
+            side[x].append(s_)
+    out = {}
+    for it in items:
+        g = grades.get(it.source_id, {})
+        if g.get("grade") != NETWORK or it.kind != "SEGMENT":
+            continue
+        sites = sorted(side.get(it.source_id, []), key=lambda z: z["site_id"])
+        if len(sites) < 2:
+            continue
+        a, b = (it.geometry[0], it.geometry[1]), (it.geometry[2], it.geometry[3])
+        dim_hit = [d.identity.key for d in dimensions if d.placed_points and len(d.placed_points) >= 2 and
+                   ((_same_pts(a, d.placed_points[0], eps_r) and _same_pts(b, d.placed_points[1], eps_r)) or
+                    (_same_pts(a, d.placed_points[1], eps_r) and _same_pts(b, d.placed_points[0], eps_r)))]
+        occs = [set(s_["labels"]) for s_ in sites]
+        ra = roles.get(it.source_id)
+        claimed = ra is not None and str(ra.rule_id).startswith("CLAIM:")
+        if dim_hit:
+            state, why = NETWORK_ROLE_CONFLICT, {"dimension": sorted(dim_hit)}
+        elif claimed:
+            state, why = NETWORK_BOUNDARY_ESTABLISHED, {"claim": ra.rule_id}
+        elif all(occs) and not set.intersection(*occs):
+            state, why = NETWORK_BOUNDARY_ESTABLISHED, {"separates_label_occurrences": [sorted(o) for o in occs]}
+        else:
+            state, why = NETWORK_BOUNDARY_CANDIDATE, {"labelled_sides": sum(1 for o in occs if o)}
+        out[it.source_id] = {"state": state, "sites": [z["site_id"] for z in sites], "evidence": why}
+    return out
+
+
+# ======================================================================== near-miss gaps (R8.10)
+NEAR_MISS_BOUNDARY_GAP = "NEAR_MISS_BOUNDARY_GAP"
+NEAR_MISS_REVIEW_BAND_MM = 50.0
+NEAR_MISS_BASIS = ("REVIEW-ONLY engine method parameter: an opening narrower than 50 mm is not a passage, door or "
+                   "window in any building trade, so a boundary end stopping within 50 mm of another boundary is a "
+                   "drafting near-miss or a joint; its consequence is reviewed, never silently measured. It can only "
+                   "withhold a site; it never joins geometry in the authority arrangement and never certifies")
+
+
+def _nearest_on(pt, prims, skip, band):
+    best = None
+    for q in prims:
+        if q.item.source_id == skip or q.bbox[0] - band > pt[0] or q.bbox[2] + band < pt[0] or \
+                q.bbox[1] - band > pt[1] or q.bbox[3] + band < pt[1]:
+            continue
+        if q.kind == "S":
+            t, d = T._proj_seg(pt, q.a, q.b)
+            foot = (q.a[0] + t * (q.b[0] - q.a[0]), q.a[1] + t * (q.b[1] - q.a[1]))
+        else:
+            if T._arc_param(q, pt, band) is None:
+                continue
+            r0 = T._d(pt, q.c)
+            if r0 == 0.0:
+                continue
+            d = abs(r0 - q.r)
+            foot = (q.c[0] + (pt[0] - q.c[0]) * q.r / r0, q.c[1] + (pt[1] - q.c[1]) * q.r / r0)
+        if best is None or (d, q.item.source_id) < (best[0], best[2]):
+            best = (d, foot, q.item.source_id)
+    return best
+
+
+def near_miss_analysis(res, items, pool, *, eps_n, eps_r, band, labels=()) -> dict:
+    """R8.10: a straight boundary end that stops in (eps_r, band] of an admitted boundary is a NEAR MISS. For each
+    one, the diagnostic arrangement adds a join from the end to its nearest boundary point (diagnostic only; the
+    authority arrangement is untouched) and reports what the join would do to each TS01 site (separator_analysis).
+    pool: excluded / unknown straight linework [(item, origin)]; admitted straight items are tested too (a wall end
+    stopping short). A candidate qualifies when every end is connected (<= eps_r) or near, at least one near."""
+    prims = [T._Prim(i, it) for i, it in enumerate(items)]
+    admitted_ids = {it.source_id for it in items}
+    cands = [(it, o) for it, o in pool if it.kind == "SEGMENT"] + \
+            [(it, "ADMITTED") for it in items if it.kind == "SEGMENT" and not it.source_id.startswith(("CLOSURE|",
+                                                                                                     "GLAZED|"))]
+    out = []
+    for it, origin in sorted(cands, key=lambda z: z[0].source_id):
+        P = T._Prim(0, it)
+        ends = [P.point(t) for t in P.end_params()]
+        info = [_nearest_on(e, prims, it.source_id, band) for e in ends]
+        near = [(e, n) for e, n in zip(ends, info) if n is not None and eps_r < n[0] <= band]
+        ok = all(n is not None and n[0] <= band for n in info) if origin != "ADMITTED" else True
+        if not near or not ok:
+            continue
+        joins = [T.BoundaryItem(f"NEAR_MISS|{it.source_id}|{k}", "SEGMENT", (e[0], e[1], n[1][0], n[1][1]),
+                                "DIAGNOSTIC_JOIN") for k, (e, n) in enumerate(near)]
+        diag = ([] if it.source_id in admitted_ids else [(it, origin)]) + [(j, "NEAR_MISS") for j in joins]
+        sep = separator_analysis(res, items, diag, eps_n=eps_n, eps_r=eps_r, labels=labels)
+        hit = {sid: e for sid, e in sep["sites"].items() if e["effect"] != "NONE"}
+        if hit:
+            out.append({"source": it.source_id, "origin": origin, "admitted": it.source_id in admitted_ids,
+                        "gaps_native": sorted(round(n[0], 9) for _, n in near),
+                        "targets": sorted({n[2] for _, n in near}), "sites": hit})
+    return {"band_native": band, "near_misses": out}
 
 
 def bridging_subset(candidates, admitted_items, eps) -> list:

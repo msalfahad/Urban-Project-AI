@@ -71,7 +71,10 @@ def test_multiple_conflicting_labels_need_review_and_no_rule_picks_one():
         s = r["sites"][0]
         assert s["issues"] == [T.MULTIPLE_SEMANTIC_LABELS] and s["status"] == T.REVIEW_REQUIRED
         assert sorted(s["labels"]) == ["E5", "E6"]
-    one_stamp = [H.text(5, "BATH", 100, 100, path=("9",)), H.text(6, "plHL", 140, 120, path=("9",))]
+    # R8.10 (text_role V2): a lone tag is only a candidate - TR-03 needs repeated family use - so the source's tag
+    # family is supplied by a second tag of the same composition outside the room
+    one_stamp = [H.text(5, "BATH", 100, 100, path=("9",)), H.text(6, "plHL", 140, 120, path=("9",)),
+                 H.text(7, "BED.ROOM", 2000, 2000, path=("8",)), H.text(8, "yvtmk", 2040, 2020, path=("8",))]
     assert run(i, one_stamp)["sites"][0]["status"] == T.CERTIFIED          # two texts of ONE label occurrence
 
 
