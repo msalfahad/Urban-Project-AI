@@ -17,10 +17,17 @@ def jl(p):
     return json.loads(Path(p).read_text())
 
 
-def owner_actions(q13):
+def owner_actions(q13, fact=None):
     return {
         "SCHEMA": "URBAN_OWNER_ACTION_REGISTER_V8", "required_now": [], "owner_review_open": [],
         "headline": "NO OWNER ACTION REQUIRED.",
+        "answered_in_r8_11": [] if not fact else [
+            {"action_id": "QORTUBA_HALL_LOBBY_PASSAGE_CONSTRUCTION", "status": "ANSWERED (volunteered)",
+             "answer": "real open passage, no door, no blockwork across; ~1.00 m clear (design meaning), 2.20 m clear "
+                       "height with a block / plastered head; block + plaster jambs both sides; the H2430 / H2431 "
+                       "wall-end geometry is real construction; the 9.2 mm H2431 gap is a drafting discontinuity",
+             "recorded_as": f"{fact['fact_id']}@v{fact['version']} (data/registry/OWNER_PHYSICAL_FACTS.json, "
+                            "part-scoped by fingerprint)", "never_ask_again": True}],
         "prepared_not_asked": [
             {"action_id": "QORTUBA_FLOOR_UNDER_BUILT_IN_WARDROBES",
              "question": "Qortuba porcelain floor: is it laid over the whole room, under the built-in wardrobes of "
@@ -31,9 +38,9 @@ def owner_actions(q13):
                               " - an answer now would not release Q-13", "never": "an expected quantity"},
             {"action_id": "QORTUBA_CORRECTED_DRAWING_HALL_LOBBY_CAPS",
              "request": "a corrected drawing with the Hall / Lobby wall-end lines on the WALL layer meeting the faces",
-             "why_not_asked": "a new drawing is a new source revision (every claim re-anchored); the engine route "
-                              "(E-R8.12-01) is tried first"}],
-        "do_not_ask": ["7116-7119", "the selected plan", "the units", "the two xrefs", "the Q-14 ceiling condition",
+             "why_not_asked": "not needed: the physical construction is answered; a corrected drawing would only serve a "
+                              "SOURCE_CORRECTION (a new revision, every claim re-anchored)"}],
+        "do_not_ask": ["the Hall / Lobby passage construction (answered)", "7116-7119", "the selected plan", "the units", "the two xrefs", "the Q-14 ceiling condition",
                        "FIRNTUR / SF3 meaning", "threshold or passage allocation", "any expected quantity"]}
 
 
@@ -171,8 +178,14 @@ def decision_register(regdir):
         "28_new_silent_error_path": rec["9_new_issue"],
         "29_next_round": rec["10_r8_12"],
         "30_disagree_with_chatgpt": rec["6_disagreements"]}
+    addendum = owner_clarification_answers(regdir, R) if (regdir / "OWNER_PHYSICAL_FACT_REGISTER.json").exists() \
+        else None
+    if addendum:
+        answers["13_q14_computed_shadow"] += " (reclassified after the owner clarification: an ENGINE limitation)"
+        answers["17_wardrobe_floor_sole_owner_fact"] = "NO: " + ", ".join(q13["sole_blocker_test"]["other_blockers"])
     return {
         "SCHEMA": "URBAN_R8_11_DECISION_REGISTER_V1", "recommendation_before_coding": rec,
+        "owner_clarification_addendum": addendum,
         "order": ["wall-band, cap, near-miss and closure rules frozen with 24 synthetic tests: commit 5895981",
                   "first Qortuba run (rules as frozen): " + json.dumps(R["WALL_BAND_REGISTER"]["frozen_v1_first_run"]
                                                                       ["NEW_K2"]["rows"]),
@@ -190,7 +203,11 @@ def decision_register(regdir):
                                            "is a release blocker"},
             {"id": "R811-D07", "decision": "QTO run manifest; RUN_INPUT_DIGEST without the commit; row_input_digest "
                                            "for trade-layer authority"},
-            {"id": "R811-D08", "decision": "no owner question (sole-blocker test fails); no row FINAL"}],
+            {"id": "R811-D08", "decision": "no owner question (sole-blocker test fails); no row FINAL"},
+            {"id": "R811-D09", "decision": "owner clarification (Hall / Lobby) recorded as a part-bound PHYSICAL FACT: it "
+                                           "reviews the H2431 closure and reclassifies the H2430 blocker as an engine "
+                                           "limitation; it is NOT applied as a role claim (no wall-core closure, no "
+                                           "Q-14 value) so R8.12's generic rule runs blind"}],
         "rows": {r: (v["state"], v["value"]) for r, v in rows.items()}, "computed_shadow": computed,
         "findings": rec["9_new_issue"],
         "gates": {"MIGRATION_PLANNING_READY": "YES", "MIGRATION_EXECUTION_READY": "NO", "PRODUCTION_MIGRATION": "NO",
@@ -198,10 +215,61 @@ def decision_register(regdir):
         "answers": answers}
 
 
+def owner_clarification_answers(regdir, R):
+    F = jl(regdir / "OWNER_PHYSICAL_FACT_REGISTER.json")
+    op = F["owner_passage"]
+    rev = R["TOPOLOGY_CLOSURE_REGISTER"]["owner_review"]
+    (cid, rv), = rev.items()
+    caps = R["WALL_BAND_REGISTER"]["cap_analysis"]
+    q14 = R["Q14_STATUS"]
+    return {
+        "fact": F["binding"]["NEW_K2"][0], "old_revision": F["binding"]["OLD_K1"][0]["state"],
+        "1_h2431_closure_authoritative_for_shadow": f"YES - it already was ({rv['release_level']}); the owner fact adds "
+                                                    f"an independent review ({rv['state']}) of the physical reading. "
+                                                    f"Not for release: {rv['authorised_for_release']}. Material: "
+                                                    f"{rv['material']}",
+        "2_h2430_real_wall_end_role": f"YES for the PHYSICAL role ({caps['2430']['physical_role']['state']}: owner "
+                                      "fact + the line meets both face end points exactly). NO for the ENGINE "
+                                      "representation: the generic classification stays "
+                                      f"{caps['2430']['physical_role']['generic_classification_unchanged']} (no band, "
+                                      "so no closure)",
+        "3_q14_blocked_by_engine_limitation": "YES: no owner or physical fact is missing; the blocker is the generic "
+                                              "band rule's fragmented-face limitation (plus a deliberate choice not to "
+                                              "apply the owner fact as a role claim before E-R8.12-01 runs blind)",
+        "4_q14_blocker_reclassified": q14["reclassification"],
+        "5_frozen_rule_untouched": {"wall_band_policy": F["unchanged"]["wall_band_policy"],
+                                    "closure_policy": F["unchanged"]["closure_policy"],
+                                    "RUN_INPUT_DIGEST_unchanged": F["unchanged"]["RUN_INPUT_DIGEST_same_as_before_the_fact"],
+                                    "H2430": "kept blocked; fragment-aware pairing = E-R8.12-01"},
+        "6_recommendation": [
+            "keep Q-14 blocked in R8.11 and do NOT compute it under an H2430 claim: a known value would become the "
+            "target the R8.12 generic rule is judged against",
+            "R8.12 order: synthetic fragmented-face tests -> freeze -> blind Qortuba run -> only then compare with "
+            "the owner fact; apply the owner fact as a part-scoped H2430 role claim ONLY if the generic rule cannot "
+            "establish the band",
+            f"width: measured {op['clear_width_mm_measured']} mm vs the owner's ~1.00 m "
+            f"({op['width_discrepancy_mm']:+} mm). Use the measured width (as instructed), but the gap is beyond any "
+            "drafting or plaster tolerance and matches the old revision's QP-17 1.200 m: review it before any "
+            "skirting / reveal quantity",
+            "head: the owner's 2.20 m head contradicts the old revision's QP-18 'full height, no top' for this "
+            "passage; it is a new-revision fact and QP-18 is never transferred. It creates a ceiling vs soffit "
+            "overlap: the strip is inside the HALL ceiling footprint under the Q-14 claim (Q-14 release note)",
+            "two records on one plan segment: the east jamb reveal (real block + plaster) and the topology closure "
+            "(material NONE) share the H2296 / H2297 end segment; quantity may only ever come from the reveal record",
+            "H2430 stays DIMENSION_GRAPHICS in source role; its physical meaning (west jamb end face) lives in the fact "
+            "and the passage reveal record, never as a re-layered source entity"],
+        "passage_record": {k: op[k] for k in ("passage_id", "record_origin", "engine_detection",
+                                              "clear_width_mm_measured", "owner_approx_clear_width_m",
+                                              "wall_thickness_mm", "strip_footprint_m2_geometry", "clear_height_m",
+                                              "door", "side_construction", "head", "strip_in_site", "topology")}}
+
+
 def main(regdir):
     regdir = Path(regdir)
     q13 = jl(regdir / "Q13_STATUS.json")
-    for name, obj in (("OWNER_ACTION_REGISTER", owner_actions(q13)), ("ENGINEERING_ACTION_REGISTER",
+    fr = regdir / "OWNER_PHYSICAL_FACT_REGISTER.json"
+    fact = jl(fr)["facts"][0] if fr.exists() else None
+    for name, obj in (("OWNER_ACTION_REGISTER", owner_actions(q13, fact)), ("ENGINEERING_ACTION_REGISTER",
                                                                        engineering_actions()),
                       ("R8_11_DECISION_REGISTER", decision_register(regdir))):
         (regdir / f"{name}.json").write_text(json.dumps(obj, indent=1, ensure_ascii=False, default=str) + "\n")

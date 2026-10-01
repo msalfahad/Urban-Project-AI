@@ -1,0 +1,107 @@
+{
+ "SCHEMA": "URBAN_OWNER_PHYSICAL_FACTS_V1",
+ "facts": [
+  {
+   "fact_id": "QORTUBA-NEW-HALL-LOBBY-OPEN-PASSAGE-OWNER-001",
+   "version": 1,
+   "kind": "OPEN_PASSAGE_CONSTRUCTION",
+   "authority": [
+    "PROJECT_OWNER"
+   ],
+   "received": "R8.11 owner clarification (after the R8.11 package)",
+   "scope": {
+    "project": "QORTUBA",
+    "source_revision_id": "QORTUBA_REV_NEW",
+    "source_anchor_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+    "region_id": "RC:MODEL_SPACE:4267:540:1649",
+    "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649",
+    "plan": "PLAN_VARIANT_4_SELECTED"
+   },
+   "parts": [
+    {
+     "handle": "2430",
+     "key": "QORTUBA_REV_NEW|H2430||SEGMENT|0",
+     "source_layer": "DIM",
+     "fingerprint": "1e94ff4d6ef24b976f4b875ef34d8240976dc7bfbc5596ba77a847ba6aaffcf6",
+     "physical_reading": "REAL_WALL_END",
+     "note": "west jamb end face (block + plaster); the line meets both face end points exactly"
+    },
+    {
+     "handle": "2431",
+     "key": "QORTUBA_REV_NEW|H2431||SEGMENT|0",
+     "source_layer": "DIM",
+     "fingerprint": "a357b9794ace11fbb972f27afc425c00f0692b6290410f892df55fa0ccee728c",
+     "physical_reading": "REAL_WALL_END",
+     "note": "east jamb end face (block + plaster); its 9.2 mm shortfall is a DRAFTING discontinuity, not an opening through the wall"
+    },
+    {
+     "handle": "470",
+     "key": "QORTUBA_REV_NEW|H470||SEGMENT|0",
+     "source_layer": "WALL",
+     "fingerprint": "bb31314dbc35a6a84a8a97e0b8bc3521870a517a2ce14d23567222c0eba565c5",
+     "physical_reading": "REAL_WALL_FACE",
+     "note": "west jamb wall, lower face (fragment 1 of 2)"
+    },
+    {
+     "handle": "471",
+     "key": "QORTUBA_REV_NEW|H471||SEGMENT|0",
+     "source_layer": "WALL",
+     "fingerprint": "0ab57d3c7edc482dfb443d09876e2bd4c1e7305ef31cc2e0099052ff7d93edb8",
+     "physical_reading": "REAL_WALL_FACE",
+     "note": "west jamb wall, lower face (fragment 2 of 2)"
+    },
+    {
+     "handle": "477",
+     "key": "QORTUBA_REV_NEW|H477||SEGMENT|0",
+     "source_layer": "WALL",
+     "fingerprint": "f65061ce9947bde1e92c383444f28f091cb3857c0ab3f569ee873d83c825981e",
+     "physical_reading": "REAL_WALL_FACE",
+     "note": "west jamb wall, upper face"
+    },
+    {
+     "handle": "2296",
+     "key": "QORTUBA_REV_NEW|H2296||SEGMENT|0",
+     "source_layer": "WALL",
+     "fingerprint": "61dc4b90297516bd325e8a7eebfb05554c17e646bb47e2bf86272d27767b0639",
+     "physical_reading": "REAL_WALL_FACE",
+     "note": "east jamb wall, lower face"
+    },
+    {
+     "handle": "2297",
+     "key": "QORTUBA_REV_NEW|H2297||SEGMENT|0",
+     "source_layer": "WALL",
+     "fingerprint": "33b551abdc38fdfe8c383a771af4dc3f2e7381fef8f6e8478077a8456bf33b0e",
+     "physical_reading": "REAL_WALL_FACE",
+     "note": "east jamb wall, upper face"
+    }
+   ],
+   "statement": {
+    "passage": "the Hall / Lobby connection is a REAL OPEN PASSAGE: no door, no blockwork across the opening",
+    "approx_clear_width_m": 1.0,
+    "approx_width_meaning": "design meaning only - never a calibration target; the deterministic width is measured from source geometry",
+    "clear_height_m": 2.2,
+    "head": "BLOCK / PLASTERED HEAD at 2.20 m clear height",
+    "sides": "BLOCK + PLASTER jambs / wall ends on both sides",
+    "wall_end_lines": "the geometry around H2430 / H2431, including the wall-end lines, is REAL wall / block construction",
+    "gap": "the ~9.2 mm H2431 disconnect is not an intended secondary opening",
+    "closure": "a derived topology-only closure may bridge the drafting discontinuity if the generic wall-band evidence establishes it; it carries ZERO material"
+   },
+   "used_for_in_r8_11": [
+    "REVIEW of the H2431 topology closure (east-jamb continuity)",
+    "CLASSIFICATION of the H2430 blocker (physical role resolved, engine representation pending)",
+    "ATTRIBUTES of the Hall / Lobby OPEN_PASSAGE_SITE record"
+   ],
+   "not_applied_in_r8_11": [
+    "a part-role claim admitting H2430 as boundary (deferred: E-R8.12-01 first, blind; the part-scoped claim is the fallback)"
+   ],
+   "never": [
+    "a wall or block quantity across the opening",
+    "material on a topology closure",
+    "a width, area or quantity (the width is measured from source)",
+    "a source edit or new entity",
+    "transfer to another revision, region or to the DWG",
+    "a generic rule change"
+   ]
+  }
+ ]
+}

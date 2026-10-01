@@ -26,6 +26,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 
 import r8_10_claims as CL                                                                     # noqa: E402
 import r8_10_qortuba as Q10                                                                   # noqa: E402
+import r8_11_owner_facts as OF                                                                # noqa: E402
 import r8_8_topology as LAB                                                                   # noqa: E402
 from engine.source import geometry_role as GR, owner_claims as OC, owner_scope as OS          # noqa: E402
 from engine.source import role_authority as RA, room_topology as RT, run_manifest as RM       # noqa: E402
@@ -35,6 +36,8 @@ from engine.source import trade_regions as TR, wall_bands as WB                 
 C = LAB.C
 ROWS = LAB.ROUND1
 UNL = Q10.UNL
+STATE_OF = dict(Q10.STATE_OF, ENGINE_LIMITATION="BLOCKED_ENGINE_LIMITATION")
+RUN_INPUT_DIGEST_BEFORE_OWNER_FACT = "645dff01bd02218557203c6e1d5d5d999e1b3ca7abdc091e0b4a36bf0bf1ec68"
 handle = Q10.handle
 FROZEN_COMMIT = "5895981"
 FROZEN_V1_RESULT = {          # the first Qortuba run, WALL_BAND_POLICY_V1 exactly as frozen (before amendment A1)
@@ -221,6 +224,16 @@ def site_decision(s, rid, rule, names, internal, res, tp):
                 if g["object_class"] == TR.ANY_NON_PARTITION_OBJECT:
                     bl.append(("TRADE_RULE", "OBJECT_FOOTPRINT_POLICY_UNRESOLVED",
                                {"source": g["source"], "roles": g["roles"], "pockets_m2": g["pockets_m2"]}))
+                elif (res.get("_owner_physical") or {}).get(g["source"], (None,))[0] == OF.REAL_WALL_END:
+                    reading, fact = res["_owner_physical"][g["source"]]
+                    bl.append(("ENGINE_LIMITATION", "WALL_END_REPRESENTATION_PENDING", {
+                        "source": g["source"], "roles": g["roles"], "pockets_m2": g["pockets_m2"],
+                        "physical_role": f"RESOLVED: {reading} ({fact} + the source geometry)",
+                        "engine_representation": "NOT_ESTABLISHED: no ESTABLISHED wall band ends at this line, so "
+                                                 "neither a closure nor a cap admission exists",
+                        "resolution": "E-R8.12-01 generic fragment-aware wall band (synthetic tests, freeze, blind "
+                                      "re-run); fallback: the owner fact as a part-scoped role claim",
+                        "owner_action": "NONE"}))
                 else:
                     bl.append(("ROLE_AUTHORITY", iss, {"source": g["source"], "roles": g["roles"],
                                                        "pockets_m2": g["pockets_m2"], "why": why}))
@@ -275,8 +288,8 @@ def rows_r811(res, tp, revision_id, manifest=None):
                 used.append(dict(rec, decision=dec["state"]))
         classes = sorted({b["class"] for x in blockers for b in x["blockers"]})
         state = ("COMPUTED_SHADOW" if used and not classes else "NO_SITE" if not used and not classes else
-                 Q10.STATE_OF[classes[0]] if len(classes) == 1 else
-                 "BLOCKED_MULTIPLE: " + ", ".join(Q10.STATE_OF[c] for c in classes))
+                 STATE_OF[classes[0]] if len(classes) == 1 else
+                 "BLOCKED_MULTIPLE: " + ", ".join(STATE_OF[c] for c in classes))
         sids = {u["site"] for u in used} | {b["site"] for b in blockers}
         bsrc = {x for s in res["sites"] if s["site_id"] in sids for x in s["boundary_source_ids"]}
         row_bands = sorted(b["band_id"] for b in bands if {b["face_a"], b["face_b"]} & bsrc)
@@ -290,6 +303,11 @@ def rows_r811(res, tp, revision_id, manifest=None):
         if rule.trade == "FLOOR_FINISH" and any(imp.values()):
             release.append("OBJECT_FOOTPRINT_IMPLICIT: proven furniture / fixture footprints are inside the measured "
                            "floor by the topology convention, not by a FLOOR_FINISH footprint authority")
+        op = res.get("_owner_passage")
+        if rule.trade == "CEILING" and op and op.get("strip_in_site") in sids and op.get("clear_height_m"):
+            release.append(f"PASSAGE_SOFFIT_ALLOCATION: the {op['passage_id']} strip "
+                           f"({op['strip_footprint_m2_geometry']} m2) lies inside the ceiling footprint but its top is "
+                           f"a soffit at {op['clear_height_m']} m (owner): ceiling vs reveal allocation rule required")
         release.append("SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed")
         out[rid] = {
             "state": state, "value": round(sum(u["area_m2"] for u in used), 4) if state == "COMPUTED_SHADOW" else None,
@@ -321,7 +339,8 @@ def rows_r811(res, tp, revision_id, manifest=None):
               "footprint_policies": [f"{p_.policy_id}@v{p_.version}:{p_.trade}:{p_.treatment}" for p_ in
                                      FOOTPRINT_POLICIES], "row_claims": out[rid]["claims_applied"],
               "space_classes": [SPACE_CLASSES.rule_id, SPACE_CLASSES.version, sorted(SPACE_CLASSES.by_label.items()),
-                                SPACE_CLASSES.otherwise_class, list(SPACE_CLASSES.scope_labels)]}
+                                SPACE_CLASSES.otherwise_class, list(SPACE_CLASSES.scope_labels)],
+              "owner_physical_facts": sorted({f for _, f in (res.get("_owner_physical") or {}).values()})}
         out[rid]["row_input_digest"] = RM._digest(tl)
         out[rid]["row_input_digest_covers"] = sorted(tl)
     return out
@@ -515,6 +534,12 @@ def registers(work, commit=None):
     tp_new, tp_old = topo(inp_new, pc), topo(inp_old, pc)
     for res, tp in ((new, tp_new), (old, tp_old), (R["new_r810"], tp_new), (R["old_r810"], tp_old)):
         res["_probe_geom"] = {p.source_id: (p.kind, p.geometry) for p in tp["probes"]}
+    facts = OF.load()
+    bind_new = [OF.bind(f, inp_new) for f in facts]
+    bind_old = [OF.bind(f, inp_old) for f in facts]
+    new["_owner_physical"], old["_owner_physical"] = OF.readings(bind_new), OF.readings(bind_old)
+    owner_passage = OF.hall_lobby_passage(inp_new, new, bind_new[0])
+    new["_owner_passage"] = owner_passage
     rows_new = rows_r811(new, tp_new, C.REV_NEW_ID)
     rows_old = rows_r811(old, tp_old, C.REV_OLD_ID)
     rows_new_810 = Q10.rows_r810(R["new_r810"], C.REV_NEW_ID, R["new_r810"]["owner_claims"]["part_claims"])
@@ -567,6 +592,19 @@ def registers(work, commit=None):
         "leak": leak, "separation": ["A SOURCE GEOMETRY: never rewritten", "B TOPOLOGY CLOSURE: these records",
                                      "C SOURCE CORRECTION CLAIM: none in R8.11"],
         "material": "NONE for every closure: no wall length, wall area, plaster, paint, skirting or opening width"}
+    applies = bind_new[0]["state"] == OC.APPLIES
+    tc31 = caps["2431"]["closure"]["closure_id"]
+    regs["TOPOLOGY_CLOSURE_REGISTER"]["owner_review"] = {tc31: {
+        "state": "REVIEWED_BY_OWNER" if applies else "NOT_REVIEWED", "fact": bind_new[0]["fact"],
+        "fact_binding": bind_new[0]["state"],
+        "reviews": "the physical reading only: the east jamb is continuous block + plaster construction and the "
+                   "9.2 mm H2431 shortfall is a drafting discontinuity, not an opening",
+        "release_level": "AUTHORISED_FOR_SHADOW (unchanged: it was already authorised by the generic evidence - "
+                         "established band, aligned free end, drawn-cap corroboration, safety test)",
+        "authorised_for_release": "NO: source anchor NOT_ESTABLISHED, no release gate",
+        "material": "NONE (unchanged; the owner's real block / plaster belongs to the jamb REVEAL record of "
+                    "OP-OWNER-HALL-LOBBY, which shares this plan segment)",
+        "geometry_unchanged": True}}
     regs["NEAR_MISS_REGISTER"] = {
         "SCHEMA": "URBAN_R8_11_NEAR_MISS_REGISTER_V1", "band_mm": RA.NEAR_MISS_REVIEW_BAND_MM,
         "basis": RA.NEAR_MISS_BASIS, "review_only": True,
@@ -581,6 +619,13 @@ def registers(work, commit=None):
                                "OLD_K1": FROZEN_V1_RESULT["OLD_K1"]["passages"],
                                "removed_by_A1": "every 150-200 mm strip through a receiving wall's core"},
         "qp_audit": qp_audit(pas_new, pas_old, new, inp_new),
+        "OWNER_DECLARED": [owner_passage],
+        "owner_vs_old_revision_rules": {
+            "QP-17 (old revision)": "Hall / Lobby 1.200 m - the measured new-revision width is "
+                                    f"{owner_passage['clear_width_mm_measured']} mm; the owner now says ~1.00 m",
+            "QP-18 (old revision)": "Hall / Lobby OPEN_PASSAGE_FULL_HEIGHT, no top - the owner now states a block / "
+                                    "plastered HEAD at 2.20 m for the NEW revision; QP-18 stays scoped to the old "
+                                    "revision and is never transferred"},
         "no_width_rule": "a 3.45 m strip and a 1.2 m strip are both recorded: the engine applies no size rule; what a "
                          "trade does with a strip is an allocation rule (none exists: NOT_ALLOCATED)"}
     regs["THRESHOLD_SITE_REGISTER"] = {
@@ -659,9 +704,17 @@ def registers(work, commit=None):
         "consequence": "no owner question is asked in R8.11"}
     regs["Q14_STATUS"] = _row_status("Q-14", q14, rows_new_810["Q-14"], rows_old["Q-14"])
     regs["Q14_STATUS"]["path_to_computed_shadow"] = (
-        "only the H2430 wall core (0.3813 m2) still blocks: under the frozen band policy its faces form no band. A "
-        "fragment-aware band rule (E-R8.12-01) frozen with synthetic tests BEFORE a blind re-run is the only route "
-        "that does not calibrate to this drawing; a reviewed SOURCE_CORRECTION or TOPOLOGY_CLOSURE claim is the other")
+        "only the H2430 wall core (0.3813 m2) still blocks. Its PHYSICAL role is resolved (owner fact + exact source "
+        "geometry); what is missing is an ENGINE representation: under the frozen band policy its faces form no band. "
+        "Route 1 (first): the fragment-aware band rule E-R8.12-01, frozen with synthetic tests BEFORE a blind re-run. "
+        "Route 2 (fallback only if route 1 cannot establish the band): the owner fact applied as a part-scoped role "
+        "claim on H2430. The Q-14 value is deliberately NOT computed in R8.11 (no target for R8.12)")
+    regs["Q14_STATUS"]["reclassification"] = {
+        "before": "BLOCKED_ROLE: ROLE_AUTHORITY / ROLE_CONFLICT_SEPARATOR [H2430]",
+        "after": f"{q14['state']}: " + "; ".join(f"{b['class']} / {b['issue']} [{(b['detail'] or {}).get('source')}]"
+                                                 for x in q14["blockers"] for b in x["blockers"]),
+        "physical_fact": "RESOLVED (owner + source)", "engine_representation": "PENDING (E-R8.12-01)",
+        "owner_action": "NONE", "value_computed": False}
     regs["QORTUBA_R8_11_STATUS"] = {
         "SCHEMA": "URBAN_R8_11_QORTUBA_STATUS_V1",
         "scope": {"plan": CL.PLAN, "region": C.REGION_ID, "frame": C.FRAME_ID, "revision": C.REV_NEW_ID,
@@ -677,6 +730,29 @@ def registers(work, commit=None):
         "old_revision_unchanged_by_closures": {k: (rows_old[k]["state"], rows_old[k]["value"]) ==
                                                (rows_old_810[k]["state"], rows_old_810[k]["value"]) for k in ROWS},
         "hall": leak, "final": "SHADOW only: no row is FINAL"}
+    for h in ("2430", "2431"):
+        caps[h]["physical_role"] = {
+            "state": f"RESOLVED: {new['_owner_physical'][h][0]}" if h in new["_owner_physical"] else "UNRESOLVED",
+            "authority": [bind_new[0]["fact"], "source geometry: " + (
+                "H2430 meets both face end points exactly (0.0 mm)" if h == "2430" else
+                "the H2296 / H2297 band end it sits across (9.2 mm short)")],
+            "generic_classification_unchanged": caps[h]["classification"],
+            "engine_representation": "ZERO-MATERIAL CLOSURE (authorised for shadow, owner-reviewed)" if h == "2431" else
+            "NONE: no established band ends here (E-R8.12-01)"}
+    regs["OWNER_PHYSICAL_FACT_REGISTER"] = {
+        "SCHEMA": "URBAN_R8_11_OWNER_PHYSICAL_FACT_REGISTER_V1", "file": str(OF.FILE.relative_to(ROOT)),
+        "file_sha256": __import__("hashlib").sha256(OF.FILE.read_bytes()).hexdigest(), "facts": facts,
+        "binding": {"NEW_K2": bind_new, "OLD_K1": bind_old},
+        "changed": ["closure review record (TC review state)", "H2430 blocker class: ROLE_AUTHORITY -> "
+                    "ENGINE_LIMITATION", "the OP-OWNER-HALL-LOBBY passage record and its trade-surface notes",
+                    "a Q-14 release note (passage soffit allocation)", "row_input_digest (the fact is row authority)"],
+        "unchanged": {"RUN_INPUT_DIGEST": man["RUN_INPUT_DIGEST"],
+                      "RUN_INPUT_DIGEST_same_as_before_the_fact": man["RUN_INPUT_DIGEST"] ==
+                      RUN_INPUT_DIGEST_BEFORE_OWNER_FACT,
+                      "wall_band_policy": WB.POLICY_ID, "closure_policy": TC.POLICY_ID,
+                      "sites_and_areas": "unchanged (the fact enters no TS01 input)",
+                      "rows": {r: (v["state"], v["value"]) for r, v in rows_new.items()}},
+        "owner_passage": owner_passage}
     ctx = {"R": R, "rows_new": rows_new, "rows_old": rows_old, "rows_new_810": rows_new_810,
            "rows_old_810": rows_old_810, "tp_new": tp_new, "caps": caps, "leak": leak}
     return regs, ctx

@@ -22,7 +22,7 @@ OUT = ROOT / "data/reports/URBAN_QTO_R8_11_WALL_BANDS_AND_RUN_MANIFEST"
 JSONS = ("OWNER_ACTION_REGISTER", "ENGINEERING_ACTION_REGISTER", "WALL_BAND_REGISTER", "TOPOLOGY_CLOSURE_REGISTER",
          "NEAR_MISS_REGISTER", "OPEN_PASSAGE_SITE_REGISTER", "THRESHOLD_SITE_REGISTER", "OBJECT_FOOTPRINT_POLICY",
          "SEMANTIC_CLASS_REGISTER", "QTO_RUN_MANIFEST", "Q13_STATUS", "Q14_STATUS", "QORTUBA_R8_11_STATUS",
-         "R8_11_DECISION_REGISTER")
+         "R8_11_DECISION_REGISTER", "OWNER_PHYSICAL_FACT_REGISTER")
 PNG = "19_HALL_LOBBY_BANDS_AND_CLOSURE.png"
 
 
@@ -50,6 +50,10 @@ def picture(work, path):
              for x in (b["face_a"], b["face_b"])}
     for p_ in r["passages"]:
         d.polygon([v(*q) for q in p_["polygon"]], fill=(255, 235, 150))
+    op = jl(REG / "OWNER_PHYSICAL_FACT_REGISTER.json")["owner_passage"]
+    d.polygon([v(*q) for q in op["strip_polygon"]], fill=(255, 200, 120), outline=(230, 120, 0))
+    d.text(v(op["strip_polygon"][0][0] + 10, op["strip_polygon"][0][1] - 14),
+           f"OPEN PASSAGE (owner) {op['clear_width_mm_measured']:.0f} mm measured, head 2.20 m", fill=(200, 90, 0))
     hi = {"2430": (200, 0, 200), "2431": (200, 0, 200), "470": (255, 0, 0), "471": (255, 0, 0), "477": (255, 0, 0)}
     for p in new.parts:
         g = p.geometry
@@ -151,6 +155,10 @@ def main(junit_path, command, exit_code, work=None):
   Q-14 claim). The floor has no authority, and none is invented.
 - **Run manifest**: RUN_INPUT_DIGEST over inputs, claims (offered / applied / rejected), policies and method. The code
   commit is provenance only.
+- **Owner clarification (Hall / Lobby)**: a real open passage between real block + plaster jambs, with a 2.20 m head.
+  It is recorded as a part-bound physical fact. It reviews the H2431 closure (REVIEWED_BY_OWNER, still zero material),
+  resolves H2430's physical role and reclassifies Q-14 as **BLOCKED_ENGINE_LIMITATION**. It changes no TS01 input,
+  site or area, and the Q-14 value is deliberately not computed. See 20_OWNER_CLARIFICATION_HALL_LOBBY.md.
 
 ## Qortuba six rows (new revision, PLAN_VARIANT_4_SELECTED)
 {rows_md(rows)}
@@ -282,6 +290,27 @@ STOP AFTER R8.11. NO PRODUCTION MIGRATION.
         "\n\n## Answers 1-30\n" + "\n".join(
             f"- **{k}:** {v if isinstance(v, str) else json.dumps(v, ensure_ascii=False)[:900]}" for k, v in A.items()) + \
         "\n\nSTOP AFTER R8.11. NO PRODUCTION MIGRATION.\n"
+    F = R["OWNER_PHYSICAL_FACT_REGISTER"]
+    add = D.get("owner_clarification_addendum") or {}
+    op = F["owner_passage"]
+    md["20_OWNER_CLARIFICATION_HALL_LOBBY.md"] = "# Owner clarification — Hall / Lobby open passage\n\n" + \
+        "## The fact\n" + "\n".join(f"- **{k}:** {v}" for k, v in F["facts"][0]["statement"].items()) + \
+        f"\n\nRecorded as `{F['facts'][0]['fact_id']}@v{F['facts'][0]['version']}` in `{F['file']}`, bound to " + \
+        ", ".join(f"H{p['handle']} ({p['source_layer']}, {p['physical_reading']})" for p in F["facts"][0]["parts"]) + \
+        f". Binding: new revision **{F['binding']['NEW_K2'][0]['state']}**, old revision " \
+        f"**{F['binding']['OLD_K1'][0]['state']}**.\n\n## Answers\n" + "\n".join(
+            f"- **{k}:** {v if isinstance(v, str) else json.dumps(v, ensure_ascii=False)}" for k, v in add.items()
+            if k[0].isdigit()) + "\n\n## The passage record (owner-declared, geometry measured)\n" + tbl(
+            ["Field", "Value"], [[k, json.dumps(op[k], ensure_ascii=False)[:300]] for k in (
+                "passage_id", "record_origin", "engine_detection", "clear_width_mm_measured",
+                "owner_approx_clear_width_m", "width_discrepancy_mm", "wall_thickness_mm",
+                "strip_footprint_m2_geometry", "clear_height_m", "door", "side_construction", "head", "strip_in_site",
+                "trade_allocation", "material_on_any_closure")]) + "\n\n## Topology\n" + \
+        "\n".join(f"- {k}: {v}" for k, v in op["topology"].items()) + "\n\n## Trade surfaces (record only)\n" + \
+        "\n".join(f"- **{k}:** {json.dumps(v, ensure_ascii=False)}" for k, v in op["trade_surfaces_record_only"].items()) \
+        + "\n\n## Double-count guard\n" + "\n".join(f"- {x}" for x in op["double_count_guard"]) + \
+        "\n\n## What the fact changed / did not change\n" + "\n".join(f"- changed: {x}" for x in F["changed"]) + \
+        "\n- unchanged: " + json.dumps(F["unchanged"], ensure_ascii=False) + "\n\nNO PRODUCTION MIGRATION.\n"
     for name, text in md.items():
         (OUT / name).write_text(text)
     zp = shutil.make_archive(str(OUT), "zip", OUT.parent, OUT.name)
