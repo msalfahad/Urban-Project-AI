@@ -101,8 +101,9 @@ def test_the_passage_width_is_measured_not_the_owners_approximation():
 def test_the_fact_changed_no_ts01_input_and_no_frozen_rule():
     F = _r("OWNER_PHYSICAL_FACT_REGISTER")
     u = F["unchanged"]
-    assert u["RUN_INPUT_DIGEST_same_as_before_the_fact"] and u["wall_band_policy"] == WB.POLICY_ID
-    assert _r("WALL_BAND_REGISTER")["policy"]["digest"] == WB.policy_record()["digest"]
+    # the R8.11 record is about the R8.11 policy (V2); R8.12 supersedes the live engine with V3
+    assert u["RUN_INPUT_DIGEST_same_as_before_the_fact"] and u["wall_band_policy"] == "WALL_BAND_POLICY_V2"
+    assert _r("WALL_BAND_REGISTER")["policy"]["policy_id"] == "WALL_BAND_POLICY_V2"
     assert F["binding"]["OLD_K1"][0]["state"] == OC.SOURCE_SCOPE_MISMATCH
     assert {r: v[1] for r, v in u["rows"].items() if v[1] is not None} == {
         "Q-03": 17.7425, "Q-03P": 11.685, "Q-11": 17.7425, "Q-12": 11.685}

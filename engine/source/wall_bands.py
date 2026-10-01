@@ -1,44 +1,46 @@
-"""WALL BANDS, WALL ENDS AND OPEN PASSAGES (R8.11) - topology-obstacle geometry from structure, never from size.
+"""WALL BANDS, WALL ENDS AND OPEN PASSAGES - topology-obstacle geometry from structure, never from size.
 
-A WALL BAND is TOPOLOGY_OBSTACLE_GEOMETRY: two admitted straight boundary faces that are the two faces of one
-physical obstacle. It is NOT a masonry / material claim. It is established from structure only:
+R8.12 (WALL_BAND_POLICY_V3): FACE CHAINS + LOCAL BAND SPANS + WALL-BAND ASSEMBLIES.
 
-  PARALLEL            the faces' directions agree to within eps_r over their overlap (no angular threshold)
-  OVERLAP             their projections overlap by more than eps_r
-  SEPARATED           their distance exceeds eps_r (a duplicate line is not a band)
-  ELONGATED           the overlap exceeds the separation (shape, not size: two jamb caps across a door are not a
-                      band)
-  MUTUAL NEAREST      across the strip, each is the other's nearest overlapping facing face: no third admitted
-                      face lies nearer on that side over the overlap (a corridor's walls pair with their own
-                      partner faces, never with each other), and a face pairs on ONE side only (its nearer one)
-  EMPTY STRIP         no established label inside the strip; no admitted boundary crosses the strip's interior; no
-                      other parallel admitted line inside it (a centreline makes the band AMBIGUOUS)
-  WALL ROLES          both faces are TOPOLOGY_BOUNDARY (glazing, furniture, dimension graphics never form a band);
-                      neither is self-dimensioned (role_authority.self_dimension_text)
+FACE CHAIN (derived, traceable; never a CAD entity, a material wall or a quantity): admitted TOPOLOGY_BOUNDARY
+source fragments that are ONE continuous face along one supporting line. Fragments join only when continuity is
+positively established: collinear within eps_n, end points coincident within eps_n, the same occurrence path, and no
+opening / glazing segment ending at the joint (OPENING_BREAK). A gap of any size - including one inside the 50 mm
+review band - is never joined. Collinear fragments that OVERLAP are one chain with a DUPLICATE interval (ambiguous,
+never a double wall). Joints and faces ending on the chain are recorded as nodes (CONTINUOUS_JOIN / BRANCH_NODE /
+CROSSING_NODE): a T-junction subdivides, it does not end the face. Identity: revision + region + the source
+ENTITIES + the chain's extent along its canonical direction (stable under fragment order, unrelated insertion and an
+equivalent re-segmentation of the same entity).
 
-No thickness, no area, no nearest-pair-alone rule. Identity: a digest of revision + region + the two face source
-ids (sorted) - stable across input ordering and traceable to the physical sources.
+LOCAL BAND SPAN: two parallel chains facing each other are paired INTERVAL BY INTERVAL. Breakpoints are the
+projections of every parallel overlapping chain of both chains (both sides); at the middle of each elementary
+interval the pair must be LOCALLY mutually nearest (no nearer face on that side, no nearer face on the far side of
+either chain, no tie). Geometry outside the interval never disqualifies it. The pair must be ELONGATED on the raw
+overlap of the two chains (overlap > separation: two jamb caps, a column, a door are no band). The local strip must
+hold no label and no arc; crossings SUBDIVIDE it:
+  WALL_BAND_SPAN       free obstacle strip
+  OBSTACLE_OVERLAP     a crossing passes over the interval, or the strip lies inside a closed admitted loop (a
+                       column outline): only that interval is blocked
+  CROSSING_WALL_NODE   between two full-width crossings by wall faces (a crossing wall's core)
+  ENCLOSED_NODE        between two full-width crossings of other roles
+  AMBIGUOUS_*          a centreline, a duplicate fragment, a chain paired on both sides
+Every span keeps the exact source-part parameter intervals it uses (never just "source H477").
 
-WALL ENDS. At each end of the overlap the band is
-  ALIGNED_FREE_END    both faces END there (their end points agree to within eps_r along the band)
-  CAPPED              an admitted boundary already joins the two end points
-  RECEIVING_FACE_JUNCTION  (V2) admitted boundary collinear with the end line continues BEYOND BOTH face end
-                      points (away from the band): the band runs into another wall's face line - a T-junction
-                      (the line also joins the end points) or merged wall cores (the receiving face is interrupted
-                      where the band meets it). Not a wall end: no closure, no passage.
-  (otherwise)         a junction / continuation: not a wall end
-A drawn segment of ANY role except a door / window symbol (a DIM line included) lying across an aligned end is CAP
-CORROBORATION, graded
-  WALL_END_CAP_PROVEN     both its end points coincide (<= eps_r) with the two face end points
-  WALL_END_CAP_CANDIDATE  it spans the end within the near-miss REVIEW band (role_authority) but not exactly
-The derived closure of an open aligned end is the segment between the two FACE END POINTS (source coordinates of
-the faces, never of the cap): see topology_closures.
+WALL-BAND ASSEMBLY (the `bands` list, id "WB-"): one local pair run of two chains with its spans, overlaps and
+nodes. ESTABLISHED when it holds a span and nothing ambiguous. It is TOPOLOGY_OBSTACLE_GEOMETRY only: no wall
+length, thickness authority, masonry, plaster, paint or skirting follows from it.
 
-OPEN PASSAGES. A band end (aligned, capped or closed) facing, along the band, the first admitted segment that
-spans the band width across an empty strip is an OPEN PASSAGE: a physical strip through the wall line with no door
-in it. It stays physically connected; it is a separate trade object (OPEN_PASSAGE_SITE), like a door threshold.
+ENDS (per assembly end): JUNCTION_OR_CONTINUATION (a chain continues past it), RECEIVING_FACE_JUNCTION (A1: the end
+line continues beyond both chain end points), OPENING_JAMB (an opening / glazing closure meets the end), CAPPED (an
+admitted boundary joins both end points), ALIGNED_FREE_END. A fragmented face that reaches the same end gives the
+same end as a one-piece face. A drawn segment of any role except a door / window symbol across an aligned end is CAP
+CORROBORATION: WALL_END_CAP_PROVEN (exact) / WALL_END_CAP_CANDIDATE (within the review band). The derived closure of
+an open aligned end is the segment between the two chains' END POINTS (source coordinates): topology_closures.
 
-Project-agnostic; stdlib only.
+OPEN PASSAGES: a band end facing, along the band, the first segment (or band end) spanning the band width across an
+empty strip with open long sides: OPEN_PASSAGE_SITE, physically connected.
+
+Every behaviour-changing constant is in PARAMS and in policy_record(). Project-agnostic; stdlib only.
 """
 
 from __future__ import annotations
@@ -52,7 +54,7 @@ from dataclasses import dataclass, field
 from . import geometry_role as GR
 from . import role_authority as RA
 
-POLICY_ID = "WALL_BAND_POLICY_V2"      # V2 (R8.11 post-freeze amendment A1): RECEIVING_FACE_JUNCTION
+POLICY_ID = "WALL_BAND_POLICY_V3"      # V3 (R8.12): face chains + local band spans + assemblies
 ESTABLISHED = "WALL_BAND_ESTABLISHED"
 AMBIGUOUS = "WALL_BAND_AMBIGUOUS"
 ALIGNED_FREE_END = "ALIGNED_FREE_END"
@@ -116,7 +118,7 @@ def _crosses_open_rect(seg, frame, s0, s1, t0, t1):
             u1 = min(u1, r)
         if u0 >= u1:
             return False
-    return u1 - u0 > 1e-12
+    return u1 - u0 > PARAMS["numeric_guards"]["clip_parameter"]
 
 
 def _pt_in_open_rect(p, frame, s0, s1, t0, t1):
@@ -124,153 +126,521 @@ def _pt_in_open_rect(p, frame, s0, s1, t0, t1):
     return s0 < s < s1 and t0 < t < t1
 
 
+# ---------------------------------------------------------------- R8.12 (V3): every behaviour constant is here
+PARAMS = {
+    "chain_join": "collinear within eps_n both ways; end points coincident within eps_n (touching); same occurrence "
+                  "path; TOPOLOGY_BOUNDARY on both sides; NO opening / glazing segment end within eps_r of the "
+                  "joint (OPENING_BREAK). A gap of any size, including inside the 50 mm review band, is never joined",
+    "duplicate": "collinear fragments overlapping by more than eps_n are ONE chain with a DUPLICATE interval; a span "
+                 "over a duplicate interval is AMBIGUOUS",
+    "parallel": "|cross(u_a, u_b)| x overlap <= eps_r",
+    "overlap_min": "eps_r", "separation_min": "eps_r",
+    "elongation_ratio": 1.0, "elongation_basis": "the raw overlap of the two CHAINS (never a sub-interval)",
+    "local_mutual_nearest": "evaluated at the middle of every elementary interval (breakpoints: projections of all "
+                            "parallel overlapping chains of both chains, both sides)",
+    "one_side_margin": "eps_r", "nearest_tie": "eps_r (a tie between two chains is never paired)",
+    "strip": "a label anywhere in the RAW strip of the chain pair (the whole chain overlap) rejects the pair - local "
+             "pairing must never turn an unlabelled slice of a room into a band; labels or arcs in the local strip "
+             "reject the run; crossings subdivide it",
+    "id_coordinate_decimals": 6, "canonical_direction_guard": 1e-9,
+    "eps_n_default_ratio_of_eps_r": 1e-3, "full_width_margin_in_eps_r": 2.0,
+    "numeric_guards": {"ray_parallel": 1e-15, "segment_length_floor": 1e-12, "clip_parameter": 1e-12},
+    "pair_search": "exhaustive over admitted faces (no direction buckets, no neighbourhood window)",
+    "review_band": "role_authority.NEAR_MISS_REVIEW_BAND_MM / unit - cap grading only, never a join"}
+ID_DECIMALS = PARAMS["id_coordinate_decimals"]
+CANON_GUARD = PARAMS["canonical_direction_guard"]
+ELONGATION = PARAMS["elongation_ratio"]
+
+# chain nodes and interval classes
+JOIN, BRANCH, CROSSING, OPENING_BREAK, DUPLICATE = ("CONTINUOUS_JOIN", "BRANCH_NODE", "CROSSING_NODE",
+                                                     "OPENING_BREAK", "DUPLICATE_OVERLAP")
+SPAN = "WALL_BAND_SPAN"
+OBSTACLE_OVERLAP = "OBSTACLE_OVERLAP"
+CROSSING_WALL_NODE = "CROSSING_WALL_NODE"
+ENCLOSED_NODE = "ENCLOSED_NODE"
+AMBIGUOUS_CENTRELINE = "AMBIGUOUS_CENTRELINE"
+AMBIGUOUS_DUPLICATE = "AMBIGUOUS_DUPLICATE"
+AMBIGUOUS_BOTH_SIDES = "AMBIGUOUS_PAIRED_BOTH_SIDES"
+OPENING_JAMB = "OPENING_JAMB"
+JUNCTION = "JUNCTION_OR_CONTINUATION"
+
+
+class _Axis:
+    """A chain's supporting line: s along the canonical direction, t across it (0 on the line)."""
+    __slots__ = ("u", "n", "t0")
+
+    def __init__(self, u, t0):
+        self.u, self.n, self.t0 = u, (-u[1], u[0]), t0
+
+    def st(self, p):
+        return p[0] * self.u[0] + p[1] * self.u[1], p[0] * self.n[0] + p[1] * self.n[1] - self.t0
+
+    def at(self, s, t=0.0):
+        tt = t + self.t0
+        return (s * self.u[0] + tt * self.n[0], s * self.u[1] + tt * self.n[1])
+
+
+def _canon(u):
+    if u[0] < -CANON_GUARD or (abs(u[0]) <= CANON_GUARD and u[1] < 0):
+        return (-u[0], -u[1])
+    return u
+
+
+def _occ(sid):
+    p = sid.split("|")
+    return p[2] if len(p) > 2 else ""
+
+
+def _entity(sid):
+    return sid.rsplit("|", 1)[0]
+
+
+def _r(v):
+    return round(float(v), ID_DECIMALS)
+
+
+@dataclass
+class FaceChain:
+    """A DERIVED face: source fragments that are one continuous face along one supporting line. Not a CAD entity,
+    not a material wall, not a quantity."""
+    chain_id: str
+    occurrence: str
+    fragments: list                 # [{"source", "s": [s0, s1], "low": p, "high": p}] ordered along the chain
+    s_range: tuple
+    nodes: list = field(default_factory=list)
+    duplicate_intervals: list = field(default_factory=list)
+
+
+def _build_chains(faces, allsegs, openers, eps_n, eps_r, revision_id, region_id):
+    n = len(faces)
+    parent = list(range(n))
+
+    def find(i):
+        while parent[i] != i:
+            parent[i] = parent[parent[i]]
+            i = parent[i]
+        return i
+    dups, breaks = [], []
+    for i in range(n):
+        a = faces[i]
+        for j in range(i + 1, n):
+            b = faces[j]
+            if _occ(a.item.source_id) != _occ(b.item.source_id):
+                continue
+            if abs(a.u[0] * b.u[1] - a.u[1] * b.u[0]) * max(a.L, b.L) > eps_n:
+                continue
+            (sa, ta), (sb, tb) = a.st(b.a), a.st(b.b)
+            if max(abs(ta), abs(tb)) > eps_n or max(abs(b.st(a.a)[1]), abs(b.st(a.b)[1])) > eps_n:
+                continue
+            lo, hi = min(sa, sb), max(sa, sb)
+            ov = min(a.L, hi) - max(0.0, lo)
+            if ov > eps_n:
+                dups.append((i, j))
+                parent[find(i)] = find(j)
+                continue
+            if ov < -eps_n:
+                continue                                                    # a gap: never joined
+            p = a.b if abs(lo - a.L) <= eps_n else a.a
+            if any(min(math.dist(o.a, p), math.dist(o.b, p)) <= eps_r for o in openers):
+                breaks.append((i, j, p))
+                continue
+            parent[find(i)] = find(j)
+    groups = defaultdict(list)
+    for i in range(n):
+        groups[find(i)].append(i)
+    chains, member = [], {}
+    for idxs in groups.values():
+        segs = [faces[i] for i in idxs]
+        ref = max(segs, key=lambda f: (f.L, f.item.source_id))
+        u = _canon(ref.u)
+        ax = _Axis(u, ref.a[0] * -u[1] + ref.a[1] * u[0])
+        frs = []
+        for f in segs:
+            s0, s1 = ax.st(f.a)[0], ax.st(f.b)[0]
+            low, high = (f.a, f.b) if s0 <= s1 else (f.b, f.a)
+            frs.append({"source": f.item.source_id, "s": [min(s0, s1), max(s0, s1)], "low": low, "high": high,
+                        "_seg": f})
+        frs.sort(key=lambda z: (z["s"][0], z["source"]))
+        srange = (min(z["s"][0] for z in frs), max(z["s"][1] for z in frs))
+        ents = sorted({_entity(z["source"]) for z in frs})
+        cid = "FC-" + _digest({"rev": revision_id, "region": region_id, "entities": ents,
+                               "s": [_r(srange[0]), _r(srange[1])]})[:16]
+        mine = {z["source"] for z in frs}
+        nodes = []
+        for k in range(len(frs) - 1):                                      # joints between consecutive fragments
+            if abs(frs[k]["s"][1] - frs[k + 1]["s"][0]) <= eps_n:
+                p = frs[k]["high"]
+                kind = JOIN
+                for o in allsegs:
+                    if o.item.source_id in mine:
+                        continue
+                    if min(math.dist(o.a, p), math.dist(o.b, p)) <= eps_n:
+                        kind = BRANCH
+                        break
+                    if _on_seg(p, o, eps_n):
+                        kind = CROSSING
+                nodes.append({"kind": kind, "s": frs[k]["s"][1], "point": [_r(p[0]), _r(p[1])],
+                              "between": [frs[k]["source"], frs[k + 1]["source"]]})
+        for o in allsegs:                                                    # branches ending on the chain
+            if o.item.source_id in mine:
+                continue
+            for q in (o.a, o.b):
+                s, t = ax.st(q)
+                if abs(t) <= eps_n and srange[0] + eps_n < s < srange[1] - eps_n and \
+                        not any(abs(s - nd["s"]) <= eps_n for nd in nodes):
+                    nodes.append({"kind": BRANCH, "s": s, "point": [_r(q[0]), _r(q[1])], "by": o.item.source_id})
+        nodes.sort(key=lambda z: z["s"])
+        di = []
+        for x in range(len(frs)):
+            for y in range(x + 1, len(frs)):
+                lo, hi = max(frs[x]["s"][0], frs[y]["s"][0]), min(frs[x]["s"][1], frs[y]["s"][1])
+                if hi - lo > eps_n:
+                    di.append([lo, hi])
+        ch = FaceChain(cid, _occ(frs[0]["source"]), frs, srange, nodes, di)
+        ch._axis = ax
+        ch._ents = ents
+        chains.append(ch)
+        for z in frs:
+            member[z["source"]] = ch
+    chains.sort(key=lambda c: c.chain_id)
+    brk = [{"kind": OPENING_BREAK, "between": sorted([faces[i].item.source_id, faces[j].item.source_id]),
+            "point": [_r(p[0]), _r(p[1])]} for i, j, p in breaks]
+    return chains, member, brk
+
+
+def _chain_points(ch, ax):
+    """The chain's extreme points projected into another axis."""
+    lo = min(ch.fragments, key=lambda z: z["s"][0])["low"]
+    hi = max(ch.fragments, key=lambda z: z["s"][1])["high"]
+    return ax.st(lo), ax.st(hi), lo, hi
+
+
+def _clip(seg, ax, s0, s1, t0, t1):
+    """(c0, c1, tmin, tmax) of the part of seg inside the open rectangle, in ax coordinates, or None."""
+    (sa, ta), (sb, tb) = ax.st(seg.a), ax.st(seg.b)
+    u0, u1 = 0.0, 1.0
+    ds, dt = sb - sa, tb - ta
+    for p, q in ((-ds, sa - s0), (ds, s1 - sa), (-dt, ta - t0), (dt, t1 - ta)):
+        if p == 0.0:
+            if q <= 0.0:
+                return None
+            continue
+        r = q / p
+        if p < 0:
+            u0 = max(u0, r)
+        else:
+            u1 = min(u1, r)
+        if u0 >= u1:
+            return None
+    if u1 - u0 <= PARAMS["numeric_guards"]["clip_parameter"]:
+        return None
+    sA, sB = sa + u0 * ds, sa + u1 * ds
+    tA, tB = ta + u0 * dt, ta + u1 * dt
+    return min(sA, sB), max(sA, sB), min(tA, tB), max(tA, tB)
+
+
+def _closed_loops(allsegs, eps_n):
+    """Entities whose straight segments form one closed loop (every end point shared by exactly two segments)."""
+    by = defaultdict(list)
+    for s in allsegs:
+        by[_entity(s.item.source_id)].append(s)
+    out = {}
+    for ent, ss in by.items():
+        if len(ss) < 3:
+            continue
+        pts = [p for s in ss for p in (s.a, s.b)]
+        if all(sum(1 for q in pts if math.dist(p, q) <= eps_n) == 2 for p in pts):
+            out[ent] = ss
+    return out
+
+
+def _inside(p, segs):
+    x, y = p
+    c = False
+    for s in segs:
+        (x1, y1), (x2, y2) = s.a, s.b
+        if (y1 > y) != (y2 > y):
+            xi = x1 + (y - y1) * (x2 - x1) / (y2 - y1)
+            if xi > x:
+                c = not c
+    return c
+
+
 def detect(items, *, eps_r, band_review, revision_id, region_id, labels=(), texts=(), unit_native_to_mm=None,
-           cap_pool=(), extra_targets=()) -> dict:
-    """{bands, ends, passages} for the admitted boundary `items` (BoundaryItem). `cap_pool`: every other straight
-    visible linework [(BoundaryItem, role)] that may corroborate a cap (any role). `extra_targets`: further
-    admitted segments (door / glazing closures) a passage ray may stop at."""
+           cap_pool=(), extra_targets=(), eps_n=None) -> dict:
+    """R8.12 (WALL_BAND_POLICY_V3): FACE CHAINS (strict contiguity) + LOCAL BAND SPANS (local mutual nearest over
+    elementary intervals) + WALL_BAND ASSEMBLIES (contiguous spans / obstacle overlaps / nodes of one chain pair).
+    `bands` are the assemblies (they carry ends, closures and passages); `spans` and `chains` are their provenance."""
+    eps_n = eps_r * PARAMS["eps_n_default_ratio_of_eps_r"] if eps_n is None else eps_n
     faces = [_Seg(it) for it in items if it.kind == "SEGMENT" and it.role == GR.TOPOLOGY_BOUNDARY
              and not it.source_id.startswith(("CLOSURE|", "GLAZED|", "TCLOSURE|"))]
     faces = [f for f in faces if f.L > eps_r]
     selfdim = {f.item.source_id for f in faces if RA.self_dimension_text(f.item, texts, unit_native_to_mm)}
+    faces = [f for f in faces if f.item.source_id not in selfdim]
     allsegs = [_Seg(it) for it in list(items) + list(extra_targets) if it.kind == "SEGMENT"]
+    allsegs = [s for s in allsegs if s.L > PARAMS["numeric_guards"]["segment_length_floor"]]
+    openers = [s for s in allsegs if s.item.source_id.startswith(("CLOSURE|", "GLAZED|")) or
+               s.item.role in (GR.GLAZING_BOUNDARY, GR.OPENING_BOUNDARY)]
     arcs = [it for it in items if it.kind != "SEGMENT"]
     lab_pts = [(lt.x, lt.y) for lt in labels]
+    chains, member, chain_breaks = _build_chains(faces, allsegs, openers, eps_n, eps_r, revision_id, region_id)
+    byc = {c.chain_id: c for c in chains}
+    loops = _closed_loops(allsegs, eps_n)
 
-    # ------------------------------------------------ candidate partners per face side (direction buckets)
-    def ang(f):
-        a = math.atan2(f.u[1], f.u[0]) % math.pi
-        return a if a < math.pi - 1e-9 else 0.0
-    buckets = defaultdict(list)
-    for f in faces:
-        buckets[round(ang(f) / 2e-3)].append(f)
-    nbr = defaultdict(list)                      # face id -> [(side, d, other, (s0, s1))]
-    for k, fs in buckets.items():
-        pool = fs + buckets.get(k - 1, []) + buckets.get(k + 1, [])
-        last = round(math.pi / 2e-3)
-        if k == 0:
-            pool += buckets.get(last, []) + buckets.get(last - 1, [])
-        for a in fs:
-            for b in pool:
-                if b is a:
-                    continue
-                (s0, t0), (s1, t1) = a.st(b.a), a.st(b.b)
-                lo, hi = max(0.0, min(s0, s1)), min(a.L, max(s0, s1))
-                if hi - lo <= eps_r:
-                    continue
-                cross = abs(a.u[0] * b.u[1] - a.u[1] * b.u[0])
-                if cross * (hi - lo) > eps_r:                       # not parallel over the overlap
-                    continue
-                d = (t0 + t1) / 2.0
-                if abs(d) <= eps_r:                                  # duplicate / collinear
-                    continue
-                nbr[a.item.source_id].append((1 if d > 0 else -1, abs(d), b, (lo, hi)))
-    byid = {f.item.source_id: f for f in faces}
+    # ------------------------------------------------ facing candidates per chain, in that chain's own frame
+    cand = defaultdict(list)                     # chain id -> [(side, d, other id, lo, hi)]
+    def facing(X, Y):
+        ax = X._axis
+        (s0, t0), (s1, t1), _, _ = _chain_points(Y, ax)
+        lo, hi = max(X.s_range[0], min(s0, s1)), min(X.s_range[1], max(s0, s1))
+        if hi - lo <= eps_r:
+            return None
+        if abs(X._axis.u[0] * Y._axis.u[1] - X._axis.u[1] * Y._axis.u[0]) * (hi - lo) > eps_r:
+            return None
+        mid = (lo + hi) / 2
+        t = t0 + (t1 - t0) * ((mid - s0) / (s1 - s0)) if s1 != s0 else t0
+        if abs(t) <= eps_r:
+            return None
+        return (1 if t > 0 else -1, abs(t), Y.chain_id, lo, hi)
+    for i, A in enumerate(chains):
+        for B in chains[i + 1:]:
+            fab, fba = facing(A, B), facing(B, A)
+            if fab is not None and fba is not None:
+                cand[A.chain_id].append(fab)
+                cand[B.chain_id].append(fba)
 
-    def nearest(fid, side, interval):
-        best = None
-        for sd, d, b, iv in nbr.get(fid, []):
-            if sd != side or iv[1] <= interval[0] + eps_r or iv[0] >= interval[1] - eps_r:
+    def nearest(cid, side, s):
+        hits = sorted((d, o) for sd, d, o, lo, hi in cand[cid] if sd == side and lo < s < hi)
+        if not hits:
+            return None, False
+        tie = len(hits) > 1 and hits[1][0] - hits[0][0] <= eps_r and hits[1][1] != hits[0][1]
+        return hits[0], tie
+
+    # ------------------------------------------------ local pair runs
+    runs = []
+    for A in chains:
+        for side, d, bid, lo, hi in sorted(cand[A.chain_id], key=lambda z: (z[2], z[0])):
+            if bid < A.chain_id:
+                continue                                      # each pair once, in the frame of the smaller id
+            B = byc[bid]
+            if hi - lo <= ELONGATION * d:
+                continue                                      # not elongated: jamb caps, a column, a door
+            rt = (0.0, d) if side > 0 else (-d, 0.0)
+            if any(_pt_in_open_rect(p, A._axis, lo + eps_r, hi - eps_r, rt[0] + eps_r, rt[1] - eps_r)
+                   for p in lab_pts):
+                continue                                      # a label in the RAW pair strip: a room, never a band
+            bk = {lo, hi}
+            bk |= {x for sd, dd, o, l_, h_ in cand[A.chain_id] for x in (l_, h_)}
+            for sd, dd, o, l_, h_ in cand[bid]:
+                for x in (l_, h_):
+                    bk.add(A._axis.st(B._axis.at(x))[0])
+            pts = sorted(x for x in bk if lo - eps_n <= x <= hi + eps_n)
+            sideB = next(sd for sd, dd, o, l_, h_ in cand[bid] if o == A.chain_id)
+            ok = []
+            for x0, x1 in zip(pts, pts[1:]):
+                if x1 - x0 <= eps_r:
+                    continue
+                m = (x0 + x1) / 2
+                (na, tie_a) = nearest(A.chain_id, side, m)
+                if na is None or tie_a or na[1] != bid:
+                    continue
+                oa, _ = nearest(A.chain_id, -side, m)
+                if oa is not None and oa[0] < na[0] - eps_r:
+                    continue
+                sb = B._axis.st(A._axis.at(m))[0]
+                (nb, tie_b) = nearest(bid, sideB, sb)
+                if nb is None or tie_b or nb[1] != A.chain_id:
+                    continue
+                ob, _ = nearest(bid, -sideB, sb)
+                if ob is not None and ob[0] < nb[0] - eps_r:
+                    continue
+                ok.append([x0, x1])
+            merged = []
+            for iv in ok:
+                if merged and iv[0] - merged[-1][1] <= eps_n:
+                    merged[-1][1] = iv[1]
+                else:
+                    merged.append(list(iv))
+            for iv in merged:
+                runs.append({"A": A, "B": B, "side": side, "sideB": sideB, "d": d, "lo": iv[0], "hi": iv[1],
+                             "raw_overlap": hi - lo})
+
+    # ------------------------------------------------ a chain paired on BOTH sides over the same interval: ambiguous
+    per = defaultdict(list)
+    for k, r in enumerate(runs):
+        per[(r["A"].chain_id, r["side"])].append((r["lo"], r["hi"], k))
+        bl, bh = sorted(r["B"]._axis.st(r["A"]._axis.at(x))[0] for x in (r["lo"], r["hi"]))
+        per[(r["B"].chain_id, r["sideB"])].append((bl, bh, k))
+    amb = set()
+    for (cid, side), ivs in per.items():
+        for lo1, hi1, k1 in ivs:
+            for lo2, hi2, k2 in per.get((cid, -side), []):
+                if min(hi1, hi2) - max(lo1, lo2) > eps_r:
+                    amb |= {k1, k2}
+
+    # ------------------------------------------------ strip analysis: spans, overlaps, nodes -> assemblies
+    bands, spans_out = [], []
+    for k, r in enumerate(runs):
+        A, B, side, d, lo, hi = r["A"], r["B"], r["side"], r["d"], r["lo"], r["hi"]
+        ax = A._axis
+        e = eps_r
+        tlo, thi = (0.0, d) if side > 0 else (-d, 0.0)
+        mine = {z["source"] for z in A.fragments} | {z["source"] for z in B.fragments}
+        ev = {"separation": d, "overlap": hi - lo, "raw_chain_overlap": r["raw_overlap"], "local_mutual_nearest": True}
+        lab_in = [p for p in lab_pts if _pt_in_open_rect(p, ax, lo + e, hi - e, tlo + e, thi - e)]
+        arc_in = [it.source_id for it in arcs if _arc_bbox_hits(it, ax, (lo, hi), tlo, thi, e)]
+        if lab_in or arc_in:
+            continue                                           # the strip is a room / holds a curve: no band at all
+        cross, centre = [], []
+        for s in allsegs:
+            if s.item.source_id in mine:
                 continue
-            if best is None or (d, b.item.source_id) < (best[0], best[1].item.source_id):
-                best = (d, b)
-        return best
-
-    bands, seen = [], set()
-    for fid in sorted(byid):
-        a = byid[fid]
-        sides = sorted({sd for sd, *_ in nbr.get(fid, [])})
-        for side in sides:
-            cand = nearest(fid, side, (0.0, a.L))
-            if cand is None:
+            c = _clip(s, ax, lo + e, hi - e, tlo + e, thi - e)
+            if c is None:
                 continue
-            d, b = cand
-            key = tuple(sorted((fid, b.item.source_id)))
-            if key in seen:
+            if abs(s.u[0] * ax.u[1] - s.u[1] * ax.u[0]) * s.L <= eps_r:
+                centre.append((c[0], c[1], s.item.source_id))
+            else:
+                fm = PARAMS["full_width_margin_in_eps_r"] * e
+                full = c[2] <= tlo + fm and c[3] >= thi - fm
+                cross.append((c[0], c[1], s.item.source_id, s.item.role, full))
+        bk = sorted({lo, hi} | {x for c0, c1, *_ in cross for x in (c0, c1)} |
+                    {x for c0, c1, _ in centre for x in (c0, c1)})
+        bk = [x for x in bk if lo - eps_n <= x <= hi + eps_n]
+        dupA = A.duplicate_intervals
+        dupB = [sorted(ax.st(B._axis.at(v))[0] for v in iv) for iv in B.duplicate_intervals]
+        subs = []
+        for x0, x1 in zip(bk, bk[1:]):
+            if x1 - x0 <= eps_n:
                 continue
-            (s0, t0), (s1, t1) = a.st(b.a), a.st(b.b)
-            iv = (max(0.0, min(s0, s1)), min(a.L, max(s0, s1)))
-            bside = 1 if b.st(a.at((iv[0] + iv[1]) / 2))[1] > 0 else -1
-            back = nearest(b.item.source_id, bside, (0.0, b.L))
-            ev = {"parallel": True, "separation": d, "overlap": iv[1] - iv[0]}
-            if back is None or back[1] is not a:
-                continue                                              # not mutual nearest
-            other_side = [x for x in nbr.get(fid, []) if x[0] != side]
-            near_other = min((x[1] for x in other_side), default=None)
-            if near_other is not None and near_other < d - eps_r:
-                continue                                              # A pairs on its nearer side only
-            if iv[1] - iv[0] <= d:
-                continue                                              # not elongated: two jamb caps, a column
-            seen.add(key)
-            tlo, thi = (0.0, d) if side > 0 else (-d, 0.0)
-            e = eps_r
-            lab_in = [p for p in lab_pts if _pt_in_open_rect(p, a, iv[0] + e, iv[1] - e, tlo + e, thi - e)]
-            crossing = sorted(s.item.source_id for s in allsegs if s.item.source_id not in key and
-                              _crosses_open_rect((s.a, s.b), a, iv[0] + e, iv[1] - e, tlo + e, thi - e))
-            arc_in = [it.source_id for it in arcs if _arc_bbox_hits(it, a, iv, tlo, thi, e)]
-            parallel_inside = [c for c in crossing if c in byid and
-                               abs(byid[c].u[0] * a.u[1] - byid[c].u[1] * a.u[0]) * byid[c].L <= eps_r]
-            ev.update(mutual_nearest=True, labels_inside=len(lab_in), crossing_boundaries=crossing[:12],
-                      arcs_in_strip=arc_in[:6], parallel_inside=parallel_inside[:6],
-                      self_dimensioned=sorted(set(key) & selfdim))
-            if lab_in or (crossing and not parallel_inside) or arc_in or (set(key) & selfdim):
-                continue                                              # not a band at all
-            state = AMBIGUOUS if parallel_inside else ESTABLISHED
-            bid = "WB-" + _digest({"rev": revision_id, "region": region_id, "faces": list(key)})[:16]
-            band = WallBand(bid, fid, b.item.source_id, d, iv, state, ev)
-            band._geo = (a, b, side)
-            bands.append(band)
-    # a face that is a band face on BOTH of its sides (a centreline between two faces, a layered wall) makes every
-    # band it is in AMBIGUOUS: which pair is the obstacle is not decided by structure
-    sides_of = defaultdict(set)
-    for bd in bands:
-        a, b, side = bd._geo
-        sides_of[bd.face_a].add(side)
-        sides_of[bd.face_b].add(1 if b.st(a.at((bd.interval[0] + bd.interval[1]) / 2))[1] > 0 else -1)
-    for bd in bands:
-        if len(sides_of[bd.face_a]) > 1 or len(sides_of[bd.face_b]) > 1:
-            bd.state = AMBIGUOUS
-            bd.evidence["face_paired_on_both_sides"] = True
-    for bd in bands:
-        a, b, side = bd._geo
-        del bd._geo
-        if bd.state == ESTABLISHED:
-            bd.ends = _ends(bd, a, b, side, items, cap_pool, eps_r, band_review)
-    passages = _passages(bands, byid, allsegs, eps_r, revision_id, region_id, items, extra_targets)
-    return {"policy_id": POLICY_ID, "bands": bands, "passages": passages,
-            "face_ids_in_bands": sorted({x for bd in bands if bd.state == ESTABLISHED for x in (bd.face_a, bd.face_b)})}
-
-
-def _arc_bbox_hits(it, frame, iv, tlo, thi, e):
-    cx, cy, r = it.geometry[0], it.geometry[1], it.geometry[2]
-    pts = [(cx - r, cy - r), (cx + r, cy - r), (cx + r, cy + r), (cx - r, cy + r)]
-    st = [frame.st(p) for p in pts]
-    s_lo, s_hi = min(p[0] for p in st), max(p[0] for p in st)
-    t_lo, t_hi = min(p[1] for p in st), max(p[1] for p in st)
-    return s_hi > iv[0] + e and s_lo < iv[1] - e and t_hi > tlo + e and t_lo < thi - e
-
-
-def _endpoint_at(seg, frame, s_target, eps):
-    for p in (seg.a, seg.b):
-        if abs(frame.st(p)[0] - s_target) <= eps:
-            return p
-    return None
-
-
-def _ends(band, a, b, side, items, cap_pool, eps_r, review):
-    out = []
-    adm = [_Seg(it) for it in items if it.kind == "SEGMENT" and it.source_id not in (band.face_a, band.face_b)]
-    pool = [(_Seg(it), role) for it, role in cap_pool if it.kind == "SEGMENT" and role != GR.OPENING_SYMBOL]
-    for k, s_end in enumerate(band.interval):
-        pa, pb = _endpoint_at(a, a, s_end, eps_r), _endpoint_at(b, a, s_end, eps_r)
-        rec = {"end": k, "s": s_end, "outward": -1 if k == 0 else 1}
-        if pa is None or pb is None:
-            out.append(dict(rec, kind="JUNCTION_OR_CONTINUATION"))
+            m = (x0 + x1) / 2
+            role = None
+            if any(a0 < m < a1 for a0, a1 in dupA) or any(a0 < m < a1 for a0, a1 in dupB):
+                cls = AMBIGUOUS_DUPLICATE
+            elif any(c0 < m < c1 for c0, c1, _ in centre):
+                cls = AMBIGUOUS_CENTRELINE
+            elif any(c0 < m < c1 and c1 - c0 > eps_r for c0, c1, *_ in cross):
+                cls, role = OBSTACLE_OVERLAP, next(rl for c0, c1, _, rl, _f in cross if c0 < m < c1)
+            else:
+                w = ax.at(m, (tlo + thi) / 2)
+                ent = next((en for en, ss in loops.items() if en not in {_entity(x) for x in mine}
+                            and _inside(w, ss)), None)
+                lb = [c for c in cross if c[4] and min(abs(c[0] - x0), abs(c[1] - x0)) <= eps_r]
+                rb = [c for c in cross if c[4] and min(abs(c[0] - x1), abs(c[1] - x1)) <= eps_r]
+                if ent is not None:
+                    cls, role = OBSTACLE_OVERLAP, next(s.item.role for s in loops[ent])
+                elif lb and rb:
+                    both_walls = lb[0][3] == GR.TOPOLOGY_BOUNDARY and rb[0][3] == GR.TOPOLOGY_BOUNDARY
+                    cls = CROSSING_WALL_NODE if both_walls else ENCLOSED_NODE
+                else:
+                    cls = AMBIGUOUS_BOTH_SIDES if k in amb else SPAN
+            if subs and subs[-1]["class"] == cls and subs[-1].get("role") == role:
+                subs[-1]["s"][1] = x1
+            else:
+                subs.append({"class": cls, "role": role, "s": [x0, x1]})
+        for sb in subs:
+            if sb["class"] in (OBSTACLE_OVERLAP, CROSSING_WALL_NODE, ENCLOSED_NODE):
+                sb["by"] = sorted({c[2] for c in cross if c[0] <= sb["s"][1] + e and c[1] >= sb["s"][0] - e})[:8]
+        if not any(sb["class"] == SPAN for sb in subs) and not any(sb["class"].startswith("AMBIGUOUS") for sb in subs):
             continue
-        rec.update(face_a_end=pa, face_b_end=pb, kind=ALIGNED_FREE_END)
+        state = AMBIGUOUS if any(sb["class"].startswith("AMBIGUOUS") for sb in subs) else ESTABLISHED
+        ea, eb = sorted([A._ents, B._ents])
+        bid = "WB-" + _digest({"rev": revision_id, "region": region_id, "chains": [ea, eb],
+                               "s": [_r(lo), _r(hi)]})[:16]
+        frA = [z for z in A.fragments if z["s"][1] > lo + eps_n and z["s"][0] < hi - eps_n]
+        blo, bhi = sorted(B._axis.st(ax.at(x))[0] for x in (lo, hi))
+        frB = [z for z in B.fragments if z["s"][1] > blo + eps_n and z["s"][0] < bhi - eps_n]
+        band_spans = []
+        for sb in subs:
+            if sb["class"] != SPAN:
+                continue
+            x0, x1 = sb["s"]
+            sid = "BS-" + _digest({"band": bid, "s": [_r(x0), _r(x1)]})[:16]
+            band_spans.append(sid)
+            spans_out.append({"span_id": sid, "band_id": bid, "state": state, "chain_a": A.chain_id,
+                              "chain_b": B.chain_id, "s": [x0, x1], "width": d,
+                              "source_intervals": _intervals(A, ax, x0, x1, eps_n) +
+                              _intervals(B, ax, x0, x1, eps_n)})
+        fa_, fb_ = sorted([frA[0]["source"], frB[0]["source"]])
+        bd = WallBand(bid, fa_, fb_, d, (lo, hi), state,
+                      dict(ev, intervals=[{"class": sb["class"], "role": sb.get("role"),
+                                           "s": [_r(sb["s"][0]), _r(sb["s"][1])],
+                                           "by": sb.get("by", [])} for sb in subs]))
+        bd.chain_a, bd.chain_b = A.chain_id, B.chain_id
+        bd.faces = sorted({z["source"] for z in frA} | {z["source"] for z in frB})
+        bd.spans = band_spans
+        bd.axis = tuple(ax.u)
+        bd._run = (A, B, side, ax)
+        bands.append(bd)
+    for bd in bands:
+        A, B, side, ax = bd._run
+        del bd._run
+        if bd.state == ESTABLISHED:
+            bd.ends = _ends_v3(bd, A, B, side, ax, items, extra_targets, cap_pool, eps_r, eps_n, band_review)
+    bands.sort(key=lambda b: b.band_id)
+    passages = _passages(bands, allsegs, eps_r, revision_id, region_id, items, extra_targets)
+    return {"policy_id": POLICY_ID, "bands": bands, "passages": passages,
+            "spans": sorted(spans_out, key=lambda z: z["span_id"]),
+            "chains": [{"chain_id": c.chain_id, "occurrence": c.occurrence,
+                        "fragments": [{"source": z["source"], "s": z["s"]} for z in c.fragments],
+                        "s_range": list(c.s_range), "nodes": c.nodes, "duplicate_intervals": c.duplicate_intervals}
+                       for c in chains],
+            "chain_breaks": chain_breaks,
+            "face_ids_in_bands": sorted({x for bd in bands if bd.state == ESTABLISHED for x in bd.faces})}
+
+
+def _intervals(ch, ax, x0, x1, eps_n):
+    """Exact source-part intervals of chain `ch` that lie under [x0, x1] of axis `ax` (parameter along each source
+    segment from its first point, in native units)."""
+    lo, hi = sorted(ch._axis.st(ax.at(x))[0] for x in (x0, x1))
+    out = []
+    for z in ch.fragments:
+        a, b = max(lo, z["s"][0]), min(hi, z["s"][1])
+        if b - a <= eps_n:
+            continue
+        seg = z["_seg"]
+        s_first = ch._axis.st(seg.a)[0]
+        p0, p1 = sorted((abs(a - s_first), abs(b - s_first)))
+        out.append({"source": z["source"], "parameter_interval": [_r(p0), _r(min(p1, seg.L))],
+                    "source_length": _r(seg.L)})
+    return out
+
+
+def _ends_v3(band, A, B, side, ax, items, extra_targets, cap_pool, eps_r, eps_n, review):
+    out = []
+    keys = set(band.faces) | {z["source"] for z in A.fragments} | {z["source"] for z in B.fragments}
+    adm = [_Seg(it) for it in items if it.kind == "SEGMENT" and it.source_id not in keys]
+    openings = [_Seg(it) for it in extra_targets if it.kind == "SEGMENT"]
+    pool = [(_Seg(it), role) for it, role in cap_pool if it.kind == "SEGMENT" and role != GR.OPENING_SYMBOL]
+    (bs0, _), (bs1, _), blo_p, bhi_p = _chain_points(B, ax)
+    b_low, b_high = (blo_p, bhi_p) if bs0 <= bs1 else (bhi_p, blo_p)
+    b_range = (min(bs0, bs1), max(bs0, bs1))
+    a_low = min(A.fragments, key=lambda z: z["s"][0])
+    a_high = max(A.fragments, key=lambda z: z["s"][1])
+    for k, s_end in enumerate(band.interval):
+        rec = {"end": k, "s": s_end, "outward": -1 if k == 0 else 1}
+        a_end = abs(A.s_range[k] - s_end) <= eps_r
+        b_end = abs(b_range[k] - s_end) <= eps_r
+        if not (a_end and b_end):
+            out.append(dict(rec, kind=JUNCTION, continues=[c for c, e_ in ((A.chain_id, a_end), (B.chain_id, b_end))
+                                                          if not e_]))
+            continue
+        fa = a_low if k == 0 else a_high
+        pa = fa["low"] if k == 0 else fa["high"]
+        pb = b_low if k == 0 else b_high
+        fb = next(z for z in B.fragments if math.dist(z["low"], pb) <= eps_n or math.dist(z["high"], pb) <= eps_n)
+        if fb["source"] < fa["source"]:                         # source order, never chain-id order
+            fa, fb, pa, pb = fb, fa, pb, pa
+        rec.update(face_a_end=pa, face_b_end=pb, faces=[fa["source"], fb["source"]], kind=ALIGNED_FREE_END)
         recv_a, recv_b = _beyond(pa, pb, adm, eps_r), _beyond(pb, pa, adm, eps_r)
         if recv_a and recv_b:
             out.append(dict(rec, kind=RECEIVING_FACE_JUNCTION, receiving_face=sorted(set(recv_a + recv_b))))
+            continue
+        jamb = [o.item.source_id for o in openings if min(math.dist(o.a, pa), math.dist(o.b, pa),
+                                                          math.dist(o.a, pb), math.dist(o.b, pb)) <= eps_r
+                or (_on_seg(pa, o, eps_r) and _on_seg(pb, o, eps_r))]
+        if jamb:
+            out.append(dict(rec, kind=OPENING_JAMB, opening=sorted(jamb)))
             continue
         capped = [s.item.source_id for s in adm if _on_seg(pa, s, eps_r) and _on_seg(pb, s, eps_r)]
         if capped:
@@ -278,9 +648,9 @@ def _ends(band, a, b, side, items, cap_pool, eps_r, review):
         caps = []
         w = band.width
         for s, role in pool:
-            if abs(s.u[0] * a.u[0] + s.u[1] * a.u[1]) * s.L > eps_r:     # not perpendicular
+            if abs(s.u[0] * ax.u[0] + s.u[1] * ax.u[1]) * s.L > eps_r:      # not perpendicular
                 continue
-            (sa, ta), (sb, tb) = a.st(s.a), a.st(s.b)
+            (sa, ta), (sb, tb) = ax.st(s.a), ax.st(s.b)
             if max(abs(sa - s_end), abs(sb - s_end)) > review:
                 continue
             tt = sorted((ta * side, tb * side))
@@ -295,6 +665,15 @@ def _ends(band, a, b, side, items, cap_pool, eps_r, review):
         rec["drawn_caps"] = sorted(caps, key=lambda c: (c["grade"] != CAP_PROVEN, c["source"]))
         out.append(rec)
     return out
+
+
+def _arc_bbox_hits(it, frame, iv, tlo, thi, e):
+    cx, cy, r = it.geometry[0], it.geometry[1], it.geometry[2]
+    pts = [(cx - r, cy - r), (cx + r, cy - r), (cx + r, cy + r), (cx - r, cy + r)]
+    st = [frame.st(p) for p in pts]
+    s_lo, s_hi = min(p[0] for p in st), max(p[0] for p in st)
+    t_lo, t_hi = min(p[1] for p in st), max(p[1] for p in st)
+    return s_hi > iv[0] + e and s_lo < iv[1] - e and t_hi > tlo + e and t_lo < thi - e
 
 
 def _beyond(p, q, segs, eps):
@@ -332,7 +711,7 @@ class _EndSeg(_Seg):
         super().__init__(BoundaryItem(sid, "SEGMENT", (p[0], p[1], q[0], q[1]), "BAND_END"))
 
 
-def _passages(bands, byid, allsegs, eps_r, revision_id, region_id, items=(), extra_targets=()):
+def _passages(bands, allsegs, eps_r, revision_id, region_id, items=(), extra_targets=()):
     """Band end -> the first segment along the band (an admitted segment, or another band's END) that spans the band
     width across an empty strip whose long sides are open (no wall, door or glazing closure along them)."""
     out, seen = [], set()
@@ -343,19 +722,19 @@ def _passages(bands, byid, allsegs, eps_r, revision_id, region_id, items=(), ext
     for bd in bands:
         if bd.state != ESTABLISHED:
             continue
-        a = byid[bd.face_a]
+        u = bd.axis
         for end in bd.ends:
             if end["kind"] not in (ALIGNED_FREE_END, CAPPED):
                 continue
             pa, pb = end["face_a_end"], end["face_b_end"]
             o = end["outward"]
-            ux, uy = a.u[0] * o, a.u[1] * o
+            ux, uy = u[0] * o, u[1] * o
             best = None
             for s in allsegs:
-                if s.item.source_id in (bd.face_a, bd.face_b) or s.item.source_id in end.get("closed_by", ()) or \
+                if s.item.source_id in bd.faces or s.item.source_id in end.get("closed_by", ()) or \
                         s.item.source_id == f"BANDEND|{bd.band_id}|{end['end']}":
                     continue
-                if abs(s.u[0] * a.u[0] + s.u[1] * a.u[1]) * s.L > eps_r:      # must cross the band line
+                if abs(s.u[0] * u[0] + s.u[1] * u[1]) * s.L > eps_r:          # must cross the band line
                     continue
                 hits = []
                 for p in (pa, pb):
@@ -370,7 +749,7 @@ def _passages(bands, byid, allsegs, eps_r, revision_id, region_id, items=(), ext
                 continue
             g, target = best
             strip = [pa, pb, (pb[0] + ux * g, pb[1] + uy * g), (pa[0] + ux * g, pa[1] + uy * g)]
-            blocked = [s.item.source_id for s in allsegs if s.item.source_id not in (bd.face_a, bd.face_b, target)
+            blocked = [s.item.source_id for s in allsegs if s.item.source_id not in set(bd.faces) | {target}
                        and _seg_hits_quad(s, strip, eps_r)]
             sides = [s.item.source_id for s in lines if _along(s, strip[0], strip[3], eps_r) or
                      _along(s, strip[1], strip[2], eps_r)]
@@ -411,12 +790,13 @@ def _ray_hit(p, d, s, eps):
     """Distance along ray p + k d to segment s (None when it misses)."""
     ex, ey = s.b[0] - s.a[0], s.b[1] - s.a[1]
     den = d[0] * ey - d[1] * ex
-    if abs(den) < 1e-15:
+    if abs(den) < PARAMS["numeric_guards"]["ray_parallel"]:
         return None
     wx, wy = s.a[0] - p[0], s.a[1] - p[1]
     k = (wx * ey - wy * ex) / den
     m = (wx * d[1] - wy * d[0]) / den
-    if k < -eps or m < -eps / max(s.L, 1e-12) or m > 1 + eps / max(s.L, 1e-12):
+    floor = PARAMS["numeric_guards"]["segment_length_floor"]
+    if k < -eps or m < -eps / max(s.L, floor) or m > 1 + eps / max(s.L, floor):
         return None
     return k
 
@@ -442,26 +822,30 @@ def _dedupe_collinear(ps, eps):
     """Two band ends facing each other give the same strip twice: keep one (the lower passage id)."""
     out = []
     for p in sorted(ps, key=lambda z: z["passage_id"]):
-        c = sorted((round(x, 6), round(y, 6)) for x, y in p["polygon"])
-        if any(all(math.dist(a, b) <= eps for a, b in zip(c, sorted((round(x, 6), round(y, 6))
-                                                                       for x, y in q["polygon"]))) for q in out):
+        c = sorted((_r(x), _r(y)) for x, y in p["polygon"])
+        if any(all(math.dist(a, b) <= eps for a, b in zip(c, sorted((_r(x), _r(y)) for x, y in q["polygon"])))
+               for q in out):
             continue
         out.append(p)
     return out
 
 
 def policy_record() -> dict:
-    rec = {"policy_id": POLICY_ID, "band": ["parallel within eps_r over the overlap", "overlap > eps_r",
-                                            "separation > eps_r", "elongated: overlap > separation (shape, not size)",
-                                            "mutual nearest facing faces; one side only; a face paired on both sides "
-                                            "makes its bands AMBIGUOUS",
-                                            "empty strip: no label, no crossing boundary, no arc",
-                                            "TOPOLOGY_BOUNDARY faces; not self-dimensioned"],
-           "never": ["thickness", "area", "nearest parallel pair alone", "coordinates alone", "material identity"],
-           "ends": [ALIGNED_FREE_END, CAPPED, RECEIVING_FACE_JUNCTION],
-           "amendments": ["A1 (post-freeze, R8.11): an end whose end line is continued beyond BOTH face end points by "
-                          "admitted boundary is a RECEIVING_FACE_JUNCTION (T-junction / merged cores), never a free "
-                          "end or a passage jamb; it can only remove closure candidates, never add one"], "caps": [CAP_PROVEN, CAP_CANDIDATE, NOT_WALL_CAP, CAP_UNRESOLVED],
+    rec = {"policy_id": POLICY_ID,
+           "model": ["FACE_CHAIN (strict contiguity, typed nodes)", "LOCAL BAND SPAN (local mutual nearest per "
+                     "elementary interval)", "WALL_BAND_ASSEMBLY (spans + obstacle overlaps + nodes of one chain pair)"],
+           "params": PARAMS,
+           "interval_classes": [SPAN, OBSTACLE_OVERLAP, CROSSING_WALL_NODE, ENCLOSED_NODE, AMBIGUOUS_CENTRELINE,
+                                AMBIGUOUS_DUPLICATE, AMBIGUOUS_BOTH_SIDES],
+           "chain_nodes": [JOIN, BRANCH, CROSSING, OPENING_BREAK, DUPLICATE],
+           "ends": [JUNCTION, RECEIVING_FACE_JUNCTION, OPENING_JAMB, CAPPED, ALIGNED_FREE_END],
+           "caps": [CAP_PROVEN, CAP_CANDIDATE, NOT_WALL_CAP, CAP_UNRESOLVED],
+           "never": ["thickness", "area", "nearest parallel pair alone", "coordinates alone", "material identity",
+                     "a join across any gap", "the 50 mm review band as continuity", "whole-face disqualification by "
+                     "geometry outside the local interval"],
+           "history": ["V1 (R8.11 freeze 5895981): whole-face pairing",
+                       "V2 (R8.11 amendment A1): RECEIVING_FACE_JUNCTION",
+                       "V3 (R8.12): face chains + local spans + assemblies + OPENING_JAMB; A1 kept"],
            "means": "TOPOLOGY_OBSTACLE_GEOMETRY, not MASONRY_CONFIRMED"}
     rec["digest"] = _digest(rec)
     return rec

@@ -94,7 +94,8 @@ def derive(bands, *, revision_id, region_id) -> list:
                                    "pa": [round(v, 9) for v in pa], "pb": [round(v, 9) for v in pb]})[:16]
             caps = e.get("drawn_caps", [])
             out.append(TopologyClosure(cid, revision_id, region_id, "WALL_END_CLOSURE", (pa[0], pa[1], pb[0], pb[1]),
-                                       (bd.face_a, bd.face_b) + tuple(c["source"] for c in caps), bd.band_id,
+                                       tuple(e.get("faces") or (bd.face_a, bd.face_b)) +
+                                       tuple(c["source"] for c in caps), bd.band_id,
                                        corroboration=caps))
     return sorted(out, key=lambda c: c.closure_id)
 
@@ -119,7 +120,8 @@ def diagnose(items, opening_closures, candidates, labels, bands, *, eps_n, eps_r
     arr0, s0 = _sites(base, eps_n)
     lab0 = _label_partition(arr0, s0, labels)
     by0 = {s["site_id"]: s for s in s0}
-    faces = {x for bd in bands if bd.state == WB.ESTABLISHED for x in (bd.face_a, bd.face_b)}
+    faces = {x for bd in bands if bd.state == WB.ESTABLISHED
+             for x in (getattr(bd, "faces", None) or (bd.face_a, bd.face_b))}     # every member face of the band
     opening_ids = {c.source_id for c in opening_closures}
     out = {}
     for c in candidates:

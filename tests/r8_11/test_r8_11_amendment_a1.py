@@ -58,5 +58,6 @@ def test_a_one_sided_flush_line_is_not_a_receiving_face():
 
 
 def test_the_amendment_is_versioned():
-    rec = WB.policy_record()
-    assert WB.POLICY_ID == "WALL_BAND_POLICY_V2" and rec["amendments"] and WB.RECEIVING_FACE_JUNCTION in rec["ends"]
+    rec = WB.policy_record()          # R8.12: V3 supersedes V2 and keeps A1 (RECEIVING_FACE_JUNCTION)
+    assert WB.POLICY_ID == "WALL_BAND_POLICY_V3" and WB.RECEIVING_FACE_JUNCTION in rec["ends"]
+    assert any(h.startswith("V2 (R8.11 amendment A1)") for h in rec["history"])

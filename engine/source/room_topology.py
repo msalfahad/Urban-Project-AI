@@ -366,7 +366,7 @@ def run(inp: CI.CanonicalMeasurementInput, *, frame_insert, expected_revision_id
         wb = WB.detect(items, eps_r=tol["eps_r"], band_review=RA.NEAR_MISS_REVIEW_BAND_MM / inp.unit_native_to_mm,
                        revision_id=inp.revision.revision_id, region_id=inp.region_id, labels=labels,
                        texts=inp.texts, unit_native_to_mm=inp.unit_native_to_mm, cap_pool=pool,
-                       extra_targets=closures)
+                       extra_targets=closures, eps_n=tol["eps_n"])
         tcs = TC.derive(wb["bands"], revision_id=inp.revision.revision_id, region_id=inp.region_id)
         TC.diagnose(items, closures, tcs, labels, wb["bands"], eps_n=tol["eps_n"], eps_r=tol["eps_r"])
         closures = closures + [c.as_item() for c in tcs if c.release == TC.AUTHORISED_FOR_SHADOW]
@@ -425,7 +425,8 @@ def run(inp: CI.CanonicalMeasurementInput, *, frame_insert, expected_revision_id
     res["semantic"] = SZ.build(res, items + closures, adm["semantic_candidates"], labels, eps_n=tol["eps_n"],
                                eps_r=tol["eps_r"])
     if wb is not None:
-        res["wall_bands"] = {"policy": WB.policy_record(), "bands": [vars(b) for b in wb["bands"]]}
+        res["wall_bands"] = {"policy": WB.policy_record(), "bands": [vars(b) for b in wb["bands"]],
+                             "spans": wb["spans"], "chains": wb["chains"], "chain_breaks": wb["chain_breaks"]}
         res["topology_closures"] = {"policy": TC.policy_record(), "closures": [c.record() for c in tcs]}
         res["passages"] = passage_sites(wb["passages"], res, inp.unit_native_to_mm)
     res["roles"] = adm
