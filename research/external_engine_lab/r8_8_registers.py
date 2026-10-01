@@ -257,7 +257,10 @@ def decision_register(regdir):
                                 "freeze_commit": "9f77e4d",
                                 "addendum": ["topology_crosscheck (new; can only withhold a site)",
                                              "band edge (F-R88-23)", "SITE_ONLY_IN_AUTHORED_BUILD (F-R88-22)",
-                                             "separation measurement / NOISE_NEAR_EPS_N (measurement only)"],
+                                             "separation measurement / NOISE_NEAR_EPS_N (measurement only)",
+                                             "boundary test: topology_crosscheck.py may import shapely (registered, "
+                                             "pinned 2.1.2, B-5) - the only engine/source module besides "
+                                             "kernel_ezdxf.py with a third-party import; TS01 stays stdlib-only"],
                                 "addendum_effect_on_rows": "none: all six rows identical before and after; the policy "
                                                           "digest is unchanged"},
         "gates": {"MIGRATION_PLANNING_READY": "YES", "MIGRATION_EXECUTION_READY": "NO", "PRODUCTION_MIGRATION": "NO",

@@ -55,12 +55,18 @@ def test_B5_B6_live_engine_source_dependencies_registered():
 
 def test_k1_is_stdlib_only_in_r8_1():
     """Stronger than B-5: K1 uses no third-party library at all. (R8.2: the K2 route,
-    kernel_ezdxf.py, uses ezdxf by design and is covered by B-5's register instead.)"""
+    kernel_ezdxf.py, uses ezdxf by design and is covered by B-5's register instead.
+    R8.8 addendum: the independent GEOS cross-check, topology_crosscheck.py, uses shapely - and
+    only shapely - by design; it is not K1, never an authority, and is covered by B-5's register.
+    Every other engine/source module, the TS01 topology authority included, stays stdlib-only.)"""
     std = set(sys.stdlib_module_names) | {"__future__"}
+    by_design = {"kernel_ezdxf.py": None, "topology_crosscheck.py": {"shapely"}}
     for p in _files(SOURCE):
-        if p.name == "kernel_ezdxf.py":
+        if p.name in by_design and by_design[p.name] is None:
             continue
         for name in imports_of_text(p.read_text(), p, members=False):
+            if p.name in by_design and name.split(".")[0] in by_design[p.name]:
+                continue
             assert name.split(".")[0] in std or _is_source(name), (_rel(p), name)
 
 
