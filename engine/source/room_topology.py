@@ -20,12 +20,14 @@ from collections import defaultdict
 
 from . import canonical_input as CI
 from . import geometry_role as GR
+from . import wall_bands as WB
 from . import owner_claims as OC
 from . import region_membership as RM
 from . import role_authority as RA
 from . import text_role as TX
 from . import semantic_zones as SZ
 from . import topology as T
+from . import topology_closures as TC
 from . import topology_crosscheck as XC
 from . import topology_policy as TP
 
@@ -314,8 +316,34 @@ def consequences(res, items, adm, labels, tol, unit_native_to_mm=None) -> None:
         s_["status"] = T.CERTIFIED if not s_["issues"] else T.REVIEW_REQUIRED
 
 
+def passage_sites(passages, res, unit_native_to_mm):
+    """OPEN_PASSAGE_SITE records with the sites on both sides of the strip (it stays physically connected)."""
+    out = []
+    arr, sites = res["_arr"], res["sites"]
+    for p in passages:
+        (a, b, c, d) = p["polygon"]
+        w = p["wall_thickness"]
+        mid_long = [((a[0] + d[0]) / 2, (a[1] + d[1]) / 2), ((b[0] + c[0]) / 2, (b[1] + c[1]) / 2)]
+        cen = ((a[0] + c[0]) / 2, (a[1] + c[1]) / 2)
+        sides = []
+        for m in mid_long:
+            vx, vy = m[0] - cen[0], m[1] - cen[1]
+            n = (vx * vx + vy * vy) ** 0.5 or 1.0
+            q = (m[0] + vx / n * w / 2, m[1] + vy / n * w / 2)
+            sides.append(T.locate(arr, sites, q, 0.0)[0])
+        inside, _ = T.locate(arr, sites, cen, 0.0)
+        out.append(dict(p, area_m2=p["area_native"] * unit_native_to_mm ** 2 / 1e6,
+                        width_mm=p["width"] * unit_native_to_mm, thickness_mm=w * unit_native_to_mm,
+                        strip_in_site=inside, adjacent_sites=sides,
+                        reveals={"jambs": p["jamb_faces"], "soffit": "the strip footprint (only if a head exists)",
+                                 "double_count_guard": "jamb faces and soffit are opening surfaces: never also a room "
+                                                       "wall perimeter or a ceiling area"}))
+    return out
+
+
 def run(inp: CI.CanonicalMeasurementInput, *, frame_insert, expected_revision_id=None, selected_region_id=None,
-        contract=TS01, unrealised=None, claims=(), occurrence_claims=None, part_claims=(), xref_claims=()) -> dict:
+        contract=TS01, unrealised=None, claims=(), occurrence_claims=None, part_claims=(), xref_claims=(),
+        closure_policy=None) -> dict:
     v = CI.validate(inp, contract, expected_revision_id=expected_revision_id, selected_region_id=selected_region_id)
     out = {"method_id": contract.method_id, "validation": v, "state": v["state"], "sites": None}
     if v["state"] != CI.COMPLETE:
@@ -329,13 +357,27 @@ def run(inp: CI.CanonicalMeasurementInput, *, frame_insert, expected_revision_id
     items, probes, labels, adm, closures, status, door_probes = topology_inputs(
         inp, frame_insert=frame_insert, eps_n=tol["eps_n"], eps_r=tol["eps_r"], claims=tuple(claims) + tuple(pclaims),
         occurrence_claims=occurrence_claims)
+    wb, tcs = None, []
+    if closure_policy is not None:                      # R8.11: wall bands + zero-material wall-end closures
+        if closure_policy != TC.POLICY_ID:
+            raise ValueError(f"unknown closure policy {closure_policy!r}")
+        pool = [(T.BoundaryItem(p.source_id, p.kind, p.geometry, p.role), p.role) for p in probes
+                if p.kind == "SEGMENT"]
+        wb = WB.detect(items, eps_r=tol["eps_r"], band_review=RA.NEAR_MISS_REVIEW_BAND_MM / inp.unit_native_to_mm,
+                       revision_id=inp.revision.revision_id, region_id=inp.region_id, labels=labels,
+                       texts=inp.texts, unit_native_to_mm=inp.unit_native_to_mm, cap_pool=pool,
+                       extra_targets=closures)
+        tcs = TC.derive(wb["bands"], revision_id=inp.revision.revision_id, region_id=inp.region_id)
+        TC.diagnose(items, closures, tcs, labels, wb["bands"], eps_n=tol["eps_n"], eps_r=tol["eps_r"])
+        closures = closures + [c.as_item() for c in tcs if c.release == TC.AUTHORISED_FOR_SHADOW]
     res = T.analyse(items + closures, probes, labels, revision_id=inp.revision.revision_id, region_id=inp.region_id,
                     unit_native_to_mm=inp.unit_native_to_mm, max_abs_coordinate=m,
                     blocking_roles=GR.TOPOLOGY_BLOCKING + (RA.UNCONNECTED_BOUNDARY_CANDIDATE,), opening_status=status,
                     opening_symbol_occurrences=door_probes, glazed_openings=adm["glazed_openings"])
     consequences(res, items + closures, adm, labels, tol, inp.unit_native_to_mm)
     net = RA.network_review(res, items, adm.get("grades", {}), adm["roles"], inp.texts, eps_r=tol["eps_r"],
-                            unit_native_to_mm=inp.unit_native_to_mm)
+                            unit_native_to_mm=inp.unit_native_to_mm,
+                            paired_faces=set(wb["face_ids_in_bands"]) if wb else ())
     res["network_review"] = net
     for sid in sorted({x for v in net.values() if v["state"] == RA.NETWORK_ROLE_CONFLICT for x in v["sites"]}):
         s_ = next(z for z in res["sites"] if z["site_id"] == sid)
@@ -382,6 +424,10 @@ def run(inp: CI.CanonicalMeasurementInput, *, frame_insert, expected_revision_id
             s_["obstacle"] = obst[s_["site_id"]]
     res["semantic"] = SZ.build(res, items + closures, adm["semantic_candidates"], labels, eps_n=tol["eps_n"],
                                eps_r=tol["eps_r"])
+    if wb is not None:
+        res["wall_bands"] = {"policy": WB.policy_record(), "bands": [vars(b) for b in wb["bands"]]}
+        res["topology_closures"] = {"policy": TC.policy_record(), "closures": [c.record() for c in tcs]}
+        res["passages"] = passage_sites(wb["passages"], res, inp.unit_native_to_mm)
     res["roles"] = adm
     res["owner_claims"] = {"part_claims": prec, "xref_claims": [f"{c.claim_id}@v{c.version}" for c in xref_claims],
                            "evidence_version": OC.evidence_version(part_claims, xref_claims, claims)}

@@ -359,7 +359,7 @@ def self_dimension_text(it, texts, unit_native_to_mm):
     return None
 
 
-def network_review(res, items, grades, roles, texts, *, eps_r, unit_native_to_mm=None) -> dict:
+def network_review(res, items, grades, roles, texts, *, eps_r, unit_native_to_mm=None, paired_faces=()) -> dict:
     """R8.10 §21: NETWORK grade (a wall-layer line connected at both ends) says the line is CONNECTED, not that it is
     a wall. Each NETWORK line that separates two different sites is classified:
       NETWORK_BOUNDARY_ESTABLISHED  corroborated: it separates two DIFFERENT established label occurrences, or a
@@ -394,6 +394,8 @@ def network_review(res, items, grades, roles, texts, *, eps_r, unit_native_to_mm
             state, why = NETWORK_BOUNDARY_ESTABLISHED, {"claim": ra.rule_id}
         elif all(occs) and not set.intersection(*occs):
             state, why = NETWORK_BOUNDARY_ESTABLISHED, {"separates_label_occurrences": [sorted(o) for o in occs]}
+        elif it.source_id in paired_faces:
+            state, why = NETWORK_BOUNDARY_ESTABLISHED, {"paired_wall_face": True}            # R8.11 wall band
         else:
             state, why = NETWORK_BOUNDARY_CANDIDATE, {"labelled_sides": sum(1 for o in occs if o)}
         out[it.source_id] = {"state": state, "sites": [z["site_id"] for z in sites], "evidence": why}
