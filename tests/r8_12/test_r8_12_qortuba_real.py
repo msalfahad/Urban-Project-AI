@@ -24,12 +24,20 @@ def _r(name):
 
 
 # ------------------------------------------------------------------------------- the freeze
-def test_the_live_engine_is_the_frozen_policy_and_the_frozen_tests_are_unchanged():
+def test_the_r8_12_freeze_is_intact_and_superseded_only_by_the_recorded_r8_13_v4_freeze():
+    """R8.13: the live engine is WALL_BAND_POLICY_V4 (its own freeze); V3 survives as this record. A frozen R8.12 test
+    may differ from its R8.12 hash only by the supersession the V4 freeze records for it."""
     fz = _r("R8_12_FRAGMENT_BAND_FREEZE")
-    assert (WB.POLICY_ID, WB.policy_record()["digest"]) == (fz["wall_band_policy"]["id"], fz["wall_band_policy"]["digest"])
+    v4 = json.loads((ROOT / "tests/r8_13/registers/R8_13_V4_FREEZE.json").read_text())
+    assert fz["wall_band_policy"]["id"] == "WALL_BAND_POLICY_V3" and v4["supersedes"]["wall_band_policy"] == \
+        fz["wall_band_policy"]
+    assert (WB.POLICY_ID, WB.policy_record()["digest"]) == (v4["wall_band_policy"]["id"], v4["wall_band_policy"]["digest"])
     assert (TC.POLICY_ID, TC.policy_record()["digest"]) == (fz["closure_policy"]["id"], fz["closure_policy"]["digest"])
     for f, h in fz["synthetic_test_sha256"].items():
-        assert hashlib.sha256((ROOT / f).read_bytes()).hexdigest() == h, f"frozen test edited after the freeze: {f}"
+        live = hashlib.sha256((ROOT / f).read_bytes()).hexdigest()
+        sup = v4["superseded_frozen_tests"].get(f)
+        assert live == h or (sup and sup["r8_12_sha256"] == h and sup["r8_13_sha256"] == live), \
+            f"frozen test edited outside a recorded supersession: {f}"
     assert fz["qortuba_runs_before_freeze"] == 0
 
 
