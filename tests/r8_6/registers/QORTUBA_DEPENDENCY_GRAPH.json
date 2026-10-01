@@ -57,8 +57,8 @@
   },
   {
    "node": "UNIT_CONTEXT",
-   "status": "PENDING_OWNER",
-   "evidence": "UNCONFIRMED; active INSUNITS reading not accepted",
+   "status": "READY",
+   "evidence": "CONFIRMED_BY_HUMAN 10.0 mm per unit by owner claim QORTUBA-NATIVE-UNIT-OWNER-001; INSUNITS declaration kept",
    "depends_on": [
     "SOURCE_FILE"
    ]
@@ -66,7 +66,7 @@
   {
    "node": "MEASUREMENT_FRAME",
    "status": "BLOCKED",
-   "evidence": "UNCONFIRMED until unit and region are authorised",
+   "evidence": "UNCONFIRMED: the only missing input is the CAD drawing-region designation (with it the frame would be CONFIRMED_BY_HUMAN); the independent parser is a release blocker, not a frame input",
    "depends_on": [
     "UNIT_CONTEXT",
     "REGION_DESIGNATION"
@@ -134,8 +134,7 @@
     "METHOD_INPUT_CONTRACT",
     "REGION_DESIGNATION",
     "ROOM_METHOD",
-    "TRADE_METHOD",
-    "UNIT_CONTEXT"
+    "TRADE_METHOD"
    ]
   },
   {
@@ -156,8 +155,7 @@
     "METHOD_INPUT_CONTRACT",
     "REGION_DESIGNATION",
     "ROOM_METHOD",
-    "TRADE_METHOD",
-    "UNIT_CONTEXT"
+    "TRADE_METHOD"
    ]
   },
   {
@@ -178,8 +176,7 @@
     "METHOD_INPUT_CONTRACT",
     "REGION_DESIGNATION",
     "ROOM_METHOD",
-    "TRADE_METHOD",
-    "UNIT_CONTEXT"
+    "TRADE_METHOD"
    ]
   },
   {
@@ -200,8 +197,7 @@
     "METHOD_INPUT_CONTRACT",
     "REGION_DESIGNATION",
     "ROOM_METHOD",
-    "TRADE_METHOD",
-    "UNIT_CONTEXT"
+    "TRADE_METHOD"
    ]
   },
   {
@@ -222,8 +218,7 @@
     "METHOD_INPUT_CONTRACT",
     "REGION_DESIGNATION",
     "ROOM_METHOD",
-    "TRADE_METHOD",
-    "UNIT_CONTEXT"
+    "TRADE_METHOD"
    ]
   },
   {
@@ -246,8 +241,7 @@
     "METHOD_INPUT_CONTRACT",
     "REGION_DESIGNATION",
     "ROOM_METHOD",
-    "TRADE_METHOD",
-    "UNIT_CONTEXT"
+    "TRADE_METHOD"
    ]
   }
  ],
@@ -269,14 +263,6 @@
    "QUANTITY_ROW:Q-14"
   ],
   "REGION_DESIGNATION": [
-   "QUANTITY_ROW:Q-03",
-   "QUANTITY_ROW:Q-03P",
-   "QUANTITY_ROW:Q-11",
-   "QUANTITY_ROW:Q-12",
-   "QUANTITY_ROW:Q-13",
-   "QUANTITY_ROW:Q-14"
-  ],
-  "UNIT_CONTEXT": [
    "QUANTITY_ROW:Q-03",
    "QUANTITY_ROW:Q-03P",
    "QUANTITY_ROW:Q-11",

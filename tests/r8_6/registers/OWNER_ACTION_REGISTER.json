@@ -1,5 +1,5 @@
 {
- "SCHEMA": "URBAN_R8_6_OWNER_ACTION_REGISTER_V1",
+ "SCHEMA": "URBAN_R8_6_OWNER_ACTION_REGISTER_V2",
  "rule": "no action is marked resolved without explicit owner input; nothing in this register is inferred",
  "actions": [
   {
@@ -20,14 +20,23 @@
     "physical value of Q-03, Q-03P, Q-11, Q-12, Q-13, Q-14"
    ],
    "urgency": "HIGH",
-   "status": "OPEN",
-   "resolved_only_by": "explicit owner input recorded as an authorised claim (release V3)"
+   "status": "RESOLVED",
+   "resolved_only_by": "explicit owner input recorded as an authorised claim (release V3)",
+   "resolved_by_claim": "QORTUBA-NATIVE-UNIT-OWNER-001",
+   "resolved_value": {
+    "unit": "cm",
+    "native_to_mm": 10.0
+   },
+   "resolved_by": "Mohammad",
+   "resolved_role": "PROJECT_OWNER",
+   "resolved_at": "2026-10-01",
+   "effect": "UNIT_CONTEXT CONFIRMED_BY_HUMAN for this exact source hash only; the INSUNITS declaration is kept as evidence; nothing transferred to P7757, Al Rashed or any other source"
   },
   {
    "action_id": "REVIEW_QORTUBA_SECOND_FLOOR_PLAN_DESIGNATION",
    "project": "QORTUBA",
-   "question": "Is region RC:MODEL_SPACE:4267:540:1649 (title text handle 428 'SECOND FLOOR PLAN') the second-floor plan these rows are measured in?",
-   "why_needed": "a detected label is a candidate; only a reviewer with authority makes it a designation",
+   "question": "Inside the Qortuba DWG, is the CAD drawing view labelled 'SECOND FLOOR PLAN' (text handle 428; drawing region RC:MODEL_SPACE:4267:540:1649) the correct second-floor plan to measure the quantities from? (This is a region of the drawing sheet, not a geographical region.)",
+   "why_needed": "a detected label is a candidate; only a reviewer with authority makes it a designation. An earlier answer read 'region' as a geographical region and is not a designation",
    "exact_source_hash": "2ec3a9c8b66eb2e129275b87010f4a8d79d7e5bdcc31c1897c14fd7e5647d355",
    "choices": [
     "ACCEPT",
@@ -182,6 +191,6 @@
    "resolved_only_by": "explicit owner input recorded as an authorised claim (release V3)"
   }
  ],
- "open": 10,
- "resolved": 0
+ "open": 9,
+ "resolved": 1
 }

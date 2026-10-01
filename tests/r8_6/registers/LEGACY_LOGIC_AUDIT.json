@@ -33,7 +33,7 @@
    "dependency": "unit selection: INSUNITS first, accepted SOURCE_ESTABLISHED",
    "where": "engine/ingest/source_units.py",
    "class": "LEGACY_PROJECT_LOGIC",
-   "evidence": "legacy active-path policy, not project-specific: INSUNITS 5 -> cm accepted although the method's own secondary check failed (modal wall pair 714.5 mm, outside 50-600 mm). Superseded by the canonical unit policy (UNCONFIRMED); the round may not use it",
+   "evidence": "legacy active-path policy, not project-specific: INSUNITS 5 -> cm accepted although the method's own secondary check failed (modal wall pair 714.5 mm, outside 50-600 mm). For this Qortuba source the value it uses (10.0) now equals the owner-confirmed unit, so it no longer changes a value here - but the migration must take the unit from the owner claim, never from INSUNITS (abort METHOD_UNIT_DIFFERS_FROM_CONFIRMED_UNIT)",
    "rows_affected": "ALL"
   },
   {
@@ -131,6 +131,6 @@
   "unit selection: INSUNITS first, accepted SOURCE_ESTABLISHED",
   "ceiling area = floor region; VOID / STAIR_OPENING / SHAFT / OPEN_TO_ABOVE all False"
  ],
- "verdict": "the six values are produced by generic method code plus two project adapter facts (layer names, QP-07 membership); two LEGACY items reach values - the INSUNITS unit (blocked: unit UNCONFIRMED) and the untested ceiling conditions (Q-14 only) - and two LEGACY items are metadata only. The method itself lives in a project research folder and is NOT_MIGRATED",
- "unused": 0
+ "verdict": "the six values are produced by generic method code plus two project adapter facts (layer names, QP-07 membership); two LEGACY items sit in the value path - the INSUNITS unit policy (its value now coincides with the owner-confirmed 10.0 mm, guarded by an abort condition) and the untested ceiling conditions (Q-14 only) - and two LEGACY items are metadata only. The method itself lives in a project research folder and is NOT_MIGRATED",
+ "unused": 1
 }

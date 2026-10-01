@@ -13,7 +13,7 @@
   {
    "step": 1,
    "name": "CREATE_RUN",
-   "does": "create a new QTO run/version id; record the frozen inputs (source, decode, decoder pin, qualification id, unit claim id, designation id, frame id, evidence version, method hashes, baseline row versions)",
+   "does": "create a new QTO run/version id; record the frozen inputs (source, decode, decoder pin, qualification id, unit claim id QORTUBA-NATIVE-UNIT-OWNER-001, designation id, frame id, evidence version, method hashes, baseline row versions)",
    "abort_checks": [
     "SOURCE_HASH_CHANGED",
     "BASELINE_NOT_APPROVED"
@@ -47,6 +47,7 @@
    "does": "rooms (Method A) then the six row expressions",
    "abort_checks": [
     "METHOD_REVISION_CHANGED",
+    "METHOD_UNIT_DIFFERS_FROM_CONFIRMED_UNIT",
     "ROOM_SET_CHANGED",
     "ROW_PROVENANCE_MISSING"
    ]
@@ -72,6 +73,7 @@
     "REGION_CHANGED",
     "FRAME_EVIDENCE_CHANGED",
     "UNIT_CHANGED",
+    "METHOD_UNIT_DIFFERS_FROM_CONFIRMED_UNIT",
     "METHOD_REVISION_CHANGED",
     "METHOD_INPUT_CONTRACT_BROKEN",
     "SOURCE_BLOCKER_APPEARED",
@@ -149,8 +151,14 @@
   },
   {
    "code": "UNIT_CHANGED",
-   "condition": "unit claim id / value differs, or the claim was superseded",
+   "condition": "unit claim id / value differs from QORTUBA-NATIVE-UNIT-OWNER-001 (10.0 mm per unit), or the claim was superseded",
    "measured_by": "unit claim (release V3)",
+   "on_trigger": "ABORT_FAIL_CLOSED"
+  },
+  {
+   "code": "METHOD_UNIT_DIFFERS_FROM_CONFIRMED_UNIT",
+   "condition": "the scale the room method applies differs from the owner-confirmed unit (the method must take the unit from the claim, never from INSUNITS)",
+   "measured_by": "method unit register vs unit claim",
    "on_trigger": "ABORT_FAIL_CLOSED"
   },
   {

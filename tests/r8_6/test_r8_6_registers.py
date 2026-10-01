@@ -19,7 +19,14 @@ def test_no_owner_action_is_resolved_without_owner_input():
     for need in ("CONFIRM_QORTUBA_NATIVE_UNIT", "REVIEW_QORTUBA_SECOND_FLOOR_PLAN_DESIGNATION",
                  "DECIDE_COLUMN_DEDUCTION_METHOD", "SUPPLY_INDEPENDENT_QORTUBA_DXF", "SUPPLY_INDEPENDENT_P7757_DXF"):
         assert need in ids
-    assert a["resolved"] == 0 and all(x["status"] == "OPEN" for x in a["actions"])
+    resolved = [x for x in a["actions"] if x["status"] == "RESOLVED"]
+    # the only resolved action is the one the owner answered explicitly, and it points at the recorded claim
+    assert [x["action_id"] for x in resolved] == ["CONFIRM_QORTUBA_NATIVE_UNIT"] and a["resolved"] == 1
+    claims = json.loads((Path(__file__).resolve().parents[2] / "data/registry/OWNER_UNIT_CLAIMS.json").read_text())
+    c = next(c for c in claims["claims"] if c["evidence_id"] == resolved[0]["resolved_by_claim"])
+    assert c["source_sha256"] == resolved[0]["exact_source_hash"] and c["native_to_mm"] == 10.0
+    assert all(x["status"] == "OPEN" for x in a["actions"] if x is not resolved[0])
+    assert next(x for x in a["actions"] if x["action_id"] == "REVIEW_QORTUBA_SECOND_FLOOR_PLAN_DESIGNATION")["status"] == "OPEN"
     for x in a["actions"]:
         assert len(x["exact_source_hash"]) == 64 and x["what_is_blocked"]
 
@@ -28,7 +35,8 @@ def test_every_gate_stays_where_the_evidence_puts_it():
     g = r("R8_6_DECISION_REGISTER")["gates"]
     assert g["PRODUCTION_MIGRATION"] == "NO" and g["MIGRATION_EXECUTION_READY"] == "NO"
     assert g["INDEPENDENT_REAL_RECONCILIATION"] == "BLOCKED_EXTERNAL_INPUT"
-    assert g["QORTUBA_UNIT_CONTEXT"] == "UNCONFIRMED"
+    assert g["QORTUBA_UNIT_CONTEXT"] == "CONFIRMED_BY_HUMAN"
+    assert g["QORTUBA_REGION_DESIGNATION"] == "PENDING_OWNER" and g["QORTUBA_MEASUREMENT_FRAME"] == "UNCONFIRMED"
     assert g["ALRASHED_COLUMN_RULE"] == "TRADE_DEDUCTION_RULE_UNDECIDED"
     t = r("MIGRATION_TRANSACTION")
     assert t["status"] == "DESIGN_ONLY_NOT_EXECUTED" and t["MIGRATION_EXECUTION_READY"] == "NO"
@@ -39,12 +47,13 @@ def test_dependency_graph_blocks_every_row_and_names_what_blocks_it():
     states = set(g["states"])
     assert all(n["status"] in states for n in g["nodes"])
     nodes = {n["node"]: n["status"] for n in g["nodes"]}
-    assert nodes["UNIT_CONTEXT"] == "PENDING_OWNER" and nodes["REGION_DESIGNATION"] == "PENDING_OWNER"
+    assert nodes["UNIT_CONTEXT"] == "READY" and nodes["REGION_DESIGNATION"] == "PENDING_OWNER"
     assert nodes["CAPABILITY_SIGNATURES"] == "PENDING_EXTERNAL" and nodes["MEASUREMENT_FRAME"] == "BLOCKED"
     assert sorted(x["node"].split(":")[1] for x in g["rows"]) == sorted(ROUND1)
     assert all(x["status"] == "BLOCKED" and x["blocking_ancestors"] for x in g["rows"])
     assert g["what_one_missing_fact_blocks"]["CEILING_CONDITIONS"] == ["QUANTITY_ROW:Q-14"]
-    assert len(g["what_one_missing_fact_blocks"]["UNIT_CONTEXT"]) == 6
+    assert "UNIT_CONTEXT" not in g["what_one_missing_fact_blocks"]
+    assert len(g["what_one_missing_fact_blocks"]["REGION_DESIGNATION"]) == 6
 
 
 def test_round1_signatures_are_listed_one_by_one_and_none_is_qualified():

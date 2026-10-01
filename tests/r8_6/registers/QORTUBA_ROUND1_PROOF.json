@@ -469,15 +469,25 @@
    "canonical_region_id": "RC:MODEL_SPACE:4267:540:1649",
    "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649",
    "unit_context": {
-    "status": "UNCONFIRMED",
+    "status": "CONFIRMED_BY_HUMAN",
+    "native_to_mm": 10.0,
     "canonical_policy": "URBAN_FRAME_RELEASE_V3",
+    "owner_claims_applied": [
+     "QORTUBA-NATIVE-UNIT-OWNER-001"
+    ],
+    "evidence_kept": [
+     "MODEL_SPACE:INSUNITS:LIBREDWG",
+     "MODEL_SPACE:DIMFAMILY:r=1",
+     "QORTUBA-NATIVE-UNIT-OWNER-001"
+    ],
     "active_path_reading": {
      "UNIT_CANDIDATE": "cm",
      "UNIT_SCALE_TO_MM": 10.0,
      "PROVENANCE": "INSUNITS",
      "STATUS": "SOURCE_ESTABLISHED"
     },
-    "note": "the active path takes the unit from INSUNITS; the canonical policy does not accept that as confirmation, so no physical value is released"
+    "method_unit_equals_confirmed_unit": true,
+    "note": "unit confirmed by the owner for this exact source (claim beside the INSUNITS declaration); the method ran at the same scale, so its rooms are proven at the confirmed unit"
    },
    "source_capability_signatures": [
     "KIND=LINE|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
@@ -512,7 +522,7 @@
    ],
    "canonical_native_value": 178625.0,
    "canonical_physical_value": null,
-   "canonical_physical_value_reason": "frame UNCONFIRMED: no physical value may be released",
+   "canonical_physical_value_reason": "frame UNCONFIRMED: the CAD drawing-region designation is PENDING_OWNER, so no physical value may be released",
    "preview_value_m2_under_active_unit_reading": 17.8625,
    "current_value": 17.8625,
    "current_status": "FINAL",
@@ -520,16 +530,15 @@
    "status": "PREVIEW",
    "blockers": [
     "D_ROUTES: K1 realised; parser: no QUALIFIED V2 record for this decoder build; independent-parser reconciliation not available",
-    "E_UNIT: UNCONFIRMED: ['ANNOTATION_MAPPING', 'COUNT_ONLY', 'PREVIEW_MEASUREMENT']",
     "F_REGION: UNCONFIRMED: ['ANNOTATION_MAPPING', 'COUNT_ONLY', 'PREVIEW_MEASUREMENT']",
     "G_FRAME: UNCONFIRMED: ['ANNOTATION_MAPPING', 'COUNT_ONLY', 'PREVIEW_MEASUREMENT']"
    ],
    "release_eligibility": "NOT_ELIGIBLE",
    "release_eligibility_reasons": [
-    "unit UNCONFIRMED",
-    "region designation PENDING_REVIEW",
+    "CAD drawing-region designation PENDING_OWNER (frame UNCONFIRMED)",
     "no independent-parser qualification",
-    "method not promoted (legacy audit)"
+    "method / input contract not promoted (legacy audit)",
+    "baseline rows not approved"
    ]
   },
   {
@@ -610,15 +619,25 @@
    "canonical_region_id": "RC:MODEL_SPACE:4267:540:1649",
    "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649",
    "unit_context": {
-    "status": "UNCONFIRMED",
+    "status": "CONFIRMED_BY_HUMAN",
+    "native_to_mm": 10.0,
     "canonical_policy": "URBAN_FRAME_RELEASE_V3",
+    "owner_claims_applied": [
+     "QORTUBA-NATIVE-UNIT-OWNER-001"
+    ],
+    "evidence_kept": [
+     "MODEL_SPACE:INSUNITS:LIBREDWG",
+     "MODEL_SPACE:DIMFAMILY:r=1",
+     "QORTUBA-NATIVE-UNIT-OWNER-001"
+    ],
     "active_path_reading": {
      "UNIT_CANDIDATE": "cm",
      "UNIT_SCALE_TO_MM": 10.0,
      "PROVENANCE": "INSUNITS",
      "STATUS": "SOURCE_ESTABLISHED"
     },
-    "note": "the active path takes the unit from INSUNITS; the canonical policy does not accept that as confirmation, so no physical value is released"
+    "method_unit_equals_confirmed_unit": true,
+    "note": "unit confirmed by the owner for this exact source (claim beside the INSUNITS declaration); the method ran at the same scale, so its rooms are proven at the confirmed unit"
    },
    "source_capability_signatures": [
     "KIND=LINE|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
@@ -644,7 +663,7 @@
    ],
    "canonical_native_value": 116850.0,
    "canonical_physical_value": null,
-   "canonical_physical_value_reason": "frame UNCONFIRMED: no physical value may be released",
+   "canonical_physical_value_reason": "frame UNCONFIRMED: the CAD drawing-region designation is PENDING_OWNER, so no physical value may be released",
    "preview_value_m2_under_active_unit_reading": 11.685,
    "current_value": 11.685,
    "current_status": "FINAL",
@@ -652,16 +671,15 @@
    "status": "PREVIEW",
    "blockers": [
     "D_ROUTES: K1 realised; parser: no QUALIFIED V2 record for this decoder build; independent-parser reconciliation not available",
-    "E_UNIT: UNCONFIRMED: ['ANNOTATION_MAPPING', 'COUNT_ONLY', 'PREVIEW_MEASUREMENT']",
     "F_REGION: UNCONFIRMED: ['ANNOTATION_MAPPING', 'COUNT_ONLY', 'PREVIEW_MEASUREMENT']",
     "G_FRAME: UNCONFIRMED: ['ANNOTATION_MAPPING', 'COUNT_ONLY', 'PREVIEW_MEASUREMENT']"
    ],
    "release_eligibility": "NOT_ELIGIBLE",
    "release_eligibility_reasons": [
-    "unit UNCONFIRMED",
-    "region designation PENDING_REVIEW",
+    "CAD drawing-region designation PENDING_OWNER (frame UNCONFIRMED)",
     "no independent-parser qualification",
-    "method not promoted (legacy audit)"
+    "method / input contract not promoted (legacy audit)",
+    "baseline rows not approved"
    ]
   },
   {
@@ -871,15 +889,25 @@
    "canonical_region_id": "RC:MODEL_SPACE:4267:540:1649",
    "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649",
    "unit_context": {
-    "status": "UNCONFIRMED",
+    "status": "CONFIRMED_BY_HUMAN",
+    "native_to_mm": 10.0,
     "canonical_policy": "URBAN_FRAME_RELEASE_V3",
+    "owner_claims_applied": [
+     "QORTUBA-NATIVE-UNIT-OWNER-001"
+    ],
+    "evidence_kept": [
+     "MODEL_SPACE:INSUNITS:LIBREDWG",
+     "MODEL_SPACE:DIMFAMILY:r=1",
+     "QORTUBA-NATIVE-UNIT-OWNER-001"
+    ],
     "active_path_reading": {
      "UNIT_CANDIDATE": "cm",
      "UNIT_SCALE_TO_MM": 10.0,
      "PROVENANCE": "INSUNITS",
      "STATUS": "SOURCE_ESTABLISHED"
     },
-    "note": "the active path takes the unit from INSUNITS; the canonical policy does not accept that as confirmation, so no physical value is released"
+    "method_unit_equals_confirmed_unit": true,
+    "note": "unit confirmed by the owner for this exact source (claim beside the INSUNITS declaration); the method ran at the same scale, so its rooms are proven at the confirmed unit"
    },
    "source_capability_signatures": [
     "KIND=LINE|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
@@ -915,7 +943,7 @@
    ],
    "canonical_native_value": 178625.0,
    "canonical_physical_value": null,
-   "canonical_physical_value_reason": "frame UNCONFIRMED: no physical value may be released",
+   "canonical_physical_value_reason": "frame UNCONFIRMED: the CAD drawing-region designation is PENDING_OWNER, so no physical value may be released",
    "preview_value_m2_under_active_unit_reading": 17.8625,
    "current_value": 17.8625,
    "current_status": "FINAL",
@@ -923,16 +951,15 @@
    "status": "PREVIEW",
    "blockers": [
     "D_ROUTES: K1 realised; parser: no QUALIFIED V2 record for this decoder build; independent-parser reconciliation not available",
-    "E_UNIT: UNCONFIRMED: ['ANNOTATION_MAPPING', 'COUNT_ONLY', 'PREVIEW_MEASUREMENT']",
     "F_REGION: UNCONFIRMED: ['ANNOTATION_MAPPING', 'COUNT_ONLY', 'PREVIEW_MEASUREMENT']",
     "G_FRAME: UNCONFIRMED: ['ANNOTATION_MAPPING', 'COUNT_ONLY', 'PREVIEW_MEASUREMENT']"
    ],
    "release_eligibility": "NOT_ELIGIBLE",
    "release_eligibility_reasons": [
-    "unit UNCONFIRMED",
-    "region designation PENDING_REVIEW",
+    "CAD drawing-region designation PENDING_OWNER (frame UNCONFIRMED)",
     "no independent-parser qualification",
-    "method not promoted (legacy audit)"
+    "method / input contract not promoted (legacy audit)",
+    "baseline rows not approved"
    ]
   },
   {
@@ -1013,15 +1040,25 @@
    "canonical_region_id": "RC:MODEL_SPACE:4267:540:1649",
    "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649",
    "unit_context": {
-    "status": "UNCONFIRMED",
+    "status": "CONFIRMED_BY_HUMAN",
+    "native_to_mm": 10.0,
     "canonical_policy": "URBAN_FRAME_RELEASE_V3",
+    "owner_claims_applied": [
+     "QORTUBA-NATIVE-UNIT-OWNER-001"
+    ],
+    "evidence_kept": [
+     "MODEL_SPACE:INSUNITS:LIBREDWG",
+     "MODEL_SPACE:DIMFAMILY:r=1",
+     "QORTUBA-NATIVE-UNIT-OWNER-001"
+    ],
     "active_path_reading": {
      "UNIT_CANDIDATE": "cm",
      "UNIT_SCALE_TO_MM": 10.0,
      "PROVENANCE": "INSUNITS",
      "STATUS": "SOURCE_ESTABLISHED"
     },
-    "note": "the active path takes the unit from INSUNITS; the canonical policy does not accept that as confirmation, so no physical value is released"
+    "method_unit_equals_confirmed_unit": true,
+    "note": "unit confirmed by the owner for this exact source (claim beside the INSUNITS declaration); the method ran at the same scale, so its rooms are proven at the confirmed unit"
    },
    "source_capability_signatures": [
     "KIND=LINE|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
@@ -1048,7 +1085,7 @@
    ],
    "canonical_native_value": 116850.0,
    "canonical_physical_value": null,
-   "canonical_physical_value_reason": "frame UNCONFIRMED: no physical value may be released",
+   "canonical_physical_value_reason": "frame UNCONFIRMED: the CAD drawing-region designation is PENDING_OWNER, so no physical value may be released",
    "preview_value_m2_under_active_unit_reading": 11.685,
    "current_value": 11.685,
    "current_status": "FINAL",
@@ -1056,16 +1093,15 @@
    "status": "PREVIEW",
    "blockers": [
     "D_ROUTES: K1 realised; parser: no QUALIFIED V2 record for this decoder build; independent-parser reconciliation not available",
-    "E_UNIT: UNCONFIRMED: ['ANNOTATION_MAPPING', 'COUNT_ONLY', 'PREVIEW_MEASUREMENT']",
     "F_REGION: UNCONFIRMED: ['ANNOTATION_MAPPING', 'COUNT_ONLY', 'PREVIEW_MEASUREMENT']",
     "G_FRAME: UNCONFIRMED: ['ANNOTATION_MAPPING', 'COUNT_ONLY', 'PREVIEW_MEASUREMENT']"
    ],
    "release_eligibility": "NOT_ELIGIBLE",
    "release_eligibility_reasons": [
-    "unit UNCONFIRMED",
-    "region designation PENDING_REVIEW",
+    "CAD drawing-region designation PENDING_OWNER (frame UNCONFIRMED)",
     "no independent-parser qualification",
-    "method not promoted (legacy audit)"
+    "method / input contract not promoted (legacy audit)",
+    "baseline rows not approved"
    ]
   },
   {
@@ -1689,15 +1725,25 @@
    "canonical_region_id": "RC:MODEL_SPACE:4267:540:1649",
    "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649",
    "unit_context": {
-    "status": "UNCONFIRMED",
+    "status": "CONFIRMED_BY_HUMAN",
+    "native_to_mm": 10.0,
     "canonical_policy": "URBAN_FRAME_RELEASE_V3",
+    "owner_claims_applied": [
+     "QORTUBA-NATIVE-UNIT-OWNER-001"
+    ],
+    "evidence_kept": [
+     "MODEL_SPACE:INSUNITS:LIBREDWG",
+     "MODEL_SPACE:DIMFAMILY:r=1",
+     "QORTUBA-NATIVE-UNIT-OWNER-001"
+    ],
     "active_path_reading": {
      "UNIT_CANDIDATE": "cm",
      "UNIT_SCALE_TO_MM": 10.0,
      "PROVENANCE": "INSUNITS",
      "STATUS": "SOURCE_ESTABLISHED"
     },
-    "note": "the active path takes the unit from INSUNITS; the canonical policy does not accept that as confirmation, so no physical value is released"
+    "method_unit_equals_confirmed_unit": true,
+    "note": "unit confirmed by the owner for this exact source (claim beside the INSUNITS declaration); the method ran at the same scale, so its rooms are proven at the confirmed unit"
    },
    "source_capability_signatures": [
     "KIND=LINE|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
@@ -1755,7 +1801,7 @@
    ],
    "canonical_native_value": 1089625.0,
    "canonical_physical_value": null,
-   "canonical_physical_value_reason": "frame UNCONFIRMED: no physical value may be released",
+   "canonical_physical_value_reason": "frame UNCONFIRMED: the CAD drawing-region designation is PENDING_OWNER, so no physical value may be released",
    "preview_value_m2_under_active_unit_reading": 108.9625,
    "current_value": 108.9625,
    "current_status": "FINAL",
@@ -1763,16 +1809,15 @@
    "status": "PREVIEW",
    "blockers": [
     "D_ROUTES: K1 realised; parser: no QUALIFIED V2 record for this decoder build; independent-parser reconciliation not available",
-    "E_UNIT: UNCONFIRMED: ['ANNOTATION_MAPPING', 'COUNT_ONLY', 'PREVIEW_MEASUREMENT']",
     "F_REGION: UNCONFIRMED: ['ANNOTATION_MAPPING', 'COUNT_ONLY', 'PREVIEW_MEASUREMENT']",
     "G_FRAME: UNCONFIRMED: ['ANNOTATION_MAPPING', 'COUNT_ONLY', 'PREVIEW_MEASUREMENT']"
    ],
    "release_eligibility": "NOT_ELIGIBLE",
    "release_eligibility_reasons": [
-    "unit UNCONFIRMED",
-    "region designation PENDING_REVIEW",
+    "CAD drawing-region designation PENDING_OWNER (frame UNCONFIRMED)",
     "no independent-parser qualification",
-    "method not promoted (legacy audit)"
+    "method / input contract not promoted (legacy audit)",
+    "baseline rows not approved"
    ]
   },
   {
@@ -2593,15 +2638,25 @@
    "canonical_region_id": "RC:MODEL_SPACE:4267:540:1649",
    "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649",
    "unit_context": {
-    "status": "UNCONFIRMED",
+    "status": "CONFIRMED_BY_HUMAN",
+    "native_to_mm": 10.0,
     "canonical_policy": "URBAN_FRAME_RELEASE_V3",
+    "owner_claims_applied": [
+     "QORTUBA-NATIVE-UNIT-OWNER-001"
+    ],
+    "evidence_kept": [
+     "MODEL_SPACE:INSUNITS:LIBREDWG",
+     "MODEL_SPACE:DIMFAMILY:r=1",
+     "QORTUBA-NATIVE-UNIT-OWNER-001"
+    ],
     "active_path_reading": {
      "UNIT_CANDIDATE": "cm",
      "UNIT_SCALE_TO_MM": 10.0,
      "PROVENANCE": "INSUNITS",
      "STATUS": "SOURCE_ESTABLISHED"
     },
-    "note": "the active path takes the unit from INSUNITS; the canonical policy does not accept that as confirmation, so no physical value is released"
+    "method_unit_equals_confirmed_unit": true,
+    "note": "unit confirmed by the owner for this exact source (claim beside the INSUNITS declaration); the method ran at the same scale, so its rooms are proven at the confirmed unit"
    },
    "source_capability_signatures": [
     "KIND=LINE|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
@@ -2679,7 +2734,7 @@
    ],
    "canonical_native_value": 1385100.0,
    "canonical_physical_value": null,
-   "canonical_physical_value_reason": "frame UNCONFIRMED: no physical value may be released",
+   "canonical_physical_value_reason": "frame UNCONFIRMED: the CAD drawing-region designation is PENDING_OWNER, so no physical value may be released",
    "preview_value_m2_under_active_unit_reading": 138.51,
    "current_value": 138.51,
    "current_status": "FINAL",
@@ -2687,16 +2742,16 @@
    "status": "PREVIEW",
    "blockers": [
     "D_ROUTES: K1 realised; parser: no QUALIFIED V2 record for this decoder build; independent-parser reconciliation not available",
-    "E_UNIT: UNCONFIRMED: ['ANNOTATION_MAPPING', 'COUNT_ONLY', 'PREVIEW_MEASUREMENT']",
     "F_REGION: UNCONFIRMED: ['ANNOTATION_MAPPING', 'COUNT_ONLY', 'PREVIEW_MEASUREMENT']",
     "G_FRAME: UNCONFIRMED: ['ANNOTATION_MAPPING', 'COUNT_ONLY', 'PREVIEW_MEASUREMENT']"
    ],
    "release_eligibility": "NOT_ELIGIBLE",
    "release_eligibility_reasons": [
-    "unit UNCONFIRMED",
-    "region designation PENDING_REVIEW",
+    "CAD drawing-region designation PENDING_OWNER (frame UNCONFIRMED)",
     "no independent-parser qualification",
-    "method not promoted (legacy audit)"
+    "method / input contract not promoted (legacy audit)",
+    "baseline rows not approved",
+    "ceiling conditions not confirmed"
    ]
   }
  ],
@@ -4427,7 +4482,8 @@
   }
  ],
  "canonical_context": {
-  "unit": "UNCONFIRMED",
+  "unit": "CONFIRMED_BY_HUMAN",
+  "native_to_mm": 10.0,
   "region": "UNCONFIRMED",
   "frame": "UNCONFIRMED",
   "release": "PREVIEW",
@@ -4440,6 +4496,55 @@
    "V-CAD-6": "RECORDED"
   },
   "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649",
-  "evidence_version": "d8177b0728f614e92fdd4fd16f18291ee0e27d2975d8ed3e4c7c9b2c33abd32d"
+  "evidence_version": "c058a3486a260a239c00c8ebb09a2044f013f24866ea73b0976de334f4104e34",
+  "blockers": [
+   "D_ROUTES: K1 realised; parser: no QUALIFIED V2 record for this decoder build; independent-parser reconciliation not available",
+   "F_REGION: UNCONFIRMED: ['ANNOTATION_MAPPING', 'COUNT_ONLY', 'PREVIEW_MEASUREMENT']",
+   "G_FRAME: UNCONFIRMED: ['ANNOTATION_MAPPING', 'COUNT_ONLY', 'PREVIEW_MEASUREMENT']"
+  ],
+  "unit_evidence": [
+   {
+    "evidence_id": "MODEL_SPACE:INSUNITS:LIBREDWG",
+    "kind": "UNIT_HEADER_DECLARATION",
+    "producer": "DECODER",
+    "native_to_mm": 10.0,
+    "review_status": "ADMITTED",
+    "author": null,
+    "author_role": null,
+    "timestamp": null
+   },
+   {
+    "evidence_id": "MODEL_SPACE:DIMFAMILY:r=1",
+    "kind": "DIMENSION_STYLE",
+    "producer": "ENGINE",
+    "native_to_mm": null,
+    "review_status": "CANDIDATE",
+    "author": null,
+    "author_role": null,
+    "timestamp": null
+   },
+   {
+    "evidence_id": "QORTUBA-NATIVE-UNIT-OWNER-001",
+    "kind": "HUMAN_CONFIRMATION",
+    "producer": "HUMAN",
+    "native_to_mm": 10.0,
+    "review_status": "ADMITTED",
+    "author": "Mohammad",
+    "author_role": "PROJECT_OWNER",
+    "timestamp": "2026-10-01"
+   }
+  ],
+  "owner_claims_applied": [
+   "QORTUBA-NATIVE-UNIT-OWNER-001"
+  ]
+ },
+ "if_designation_accepted_diagnostic": {
+  "note": "diagnostic only; the designation is NOT accepted. Shows what the CAD drawing-region designation alone would change",
+  "region": "VERIFIED",
+  "frame": "CONFIRMED_BY_HUMAN",
+  "release": "PREVIEW",
+  "blockers": [
+   "D_ROUTES: K1 realised; parser: no QUALIFIED V2 record for this decoder build; independent-parser reconciliation not available"
+  ]
  }
 }

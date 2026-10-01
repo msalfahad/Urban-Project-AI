@@ -66,9 +66,12 @@ def owner_actions():
         "affects which rooms exist, not only their scale", QORTUBA_SHA, ["mm", "cm", "m", "other (state it)"],
         ["unit context", "measurement frame", "physical value of Q-03, Q-03P, Q-11, Q-12, Q-13, Q-14"], "HIGH")
     add("REVIEW_QORTUBA_SECOND_FLOOR_PLAN_DESIGNATION", "QORTUBA",
-        "Is region RC:MODEL_SPACE:4267:540:1649 (title text handle 428 'SECOND FLOOR PLAN') the second-floor plan "
-        "these rows are measured in?", "a detected label is a candidate; only a reviewer with authority makes it a "
-        "designation", QORTUBA_SHA, ["ACCEPT", "REJECT", "ACCEPT_WITH_CHANGED_EXTENT"],
+        "Inside the Qortuba DWG, is the CAD drawing view labelled 'SECOND FLOOR PLAN' (text handle 428; drawing "
+        "region RC:MODEL_SPACE:4267:540:1649) the correct second-floor plan to measure the quantities from? "
+        "(This is a region of the drawing sheet, not a geographical region.)",
+        "a detected label is a candidate; only a reviewer with authority makes it a designation. An earlier answer "
+        "read 'region' as a geographical region and is not a designation", QORTUBA_SHA,
+        ["ACCEPT", "REJECT", "ACCEPT_WITH_CHANGED_EXTENT"],
         ["region status", "measurement frame", "all round-1 rows"], "HIGH")
     add("APPROVE_QORTUBA_ROUND1_BASELINE_ROWS", "QORTUBA",
         "Are the current six rows (Q-03, Q-03P, Q-11, Q-12, Q-13, Q-14) the approved baseline that a migration "
@@ -104,9 +107,19 @@ def owner_actions():
     add("REVIEW_ALRASHED_ADAPTER_WINDOWS", "ALRASHED", "Are the adapter's three floor windows the plan regions?",
         "the windows are adapter constants, PENDING_REVIEW", ALRASHED_SHA, ["ACCEPT", "REJECT", "CHANGE"],
         ["Al Rashed region designation"], "LOW")
-    return {"SCHEMA": "URBAN_R8_6_OWNER_ACTION_REGISTER_V1",
+    claims = {c["evidence_id"]: c for c in jl(ROOT / "data/registry/OWNER_UNIT_CLAIMS.json")["claims"]}
+    unit = claims.get("QORTUBA-NATIVE-UNIT-OWNER-001")
+    if unit and unit["source_sha256"] == QORTUBA_SHA:
+        a = next(x for x in A if x["action_id"] == "CONFIRM_QORTUBA_NATIVE_UNIT")
+        a.update(status="RESOLVED", resolved_by_claim=unit["evidence_id"], resolved_value={
+            "unit": unit["unit"], "native_to_mm": unit["native_to_mm"]}, resolved_by=unit["author"],
+            resolved_role=unit["author_role"], resolved_at=unit["timestamp"],
+            effect="UNIT_CONTEXT CONFIRMED_BY_HUMAN for this exact source hash only; the INSUNITS declaration is kept as "
+                   "evidence; nothing transferred to P7757, Al Rashed or any other source")
+    return {"SCHEMA": "URBAN_R8_6_OWNER_ACTION_REGISTER_V2",
             "rule": "no action is marked resolved without explicit owner input; nothing in this register is inferred",
-            "actions": A, "open": len(A), "resolved": 0}
+            "actions": A, "open": sum(1 for x in A if x["status"] == "OPEN"),
+            "resolved": sum(1 for x in A if x["status"] == "RESOLVED")}
 
 
 # ====================================================================== legacy logic audit (§10)
@@ -117,8 +130,9 @@ def legacy_audit(proof):
         ("unit selection: INSUNITS first, accepted SOURCE_ESTABLISHED", "engine/ingest/source_units.py",
          "LEGACY_PROJECT_LOGIC",
          "legacy active-path policy, not project-specific: INSUNITS 5 -> cm accepted although the method's own secondary "
-         "check failed (modal wall pair 714.5 mm, outside 50-600 mm). Superseded by the canonical unit policy "
-         "(UNCONFIRMED); the round may not use it", "ALL"),
+         "check failed (modal wall pair 714.5 mm, outside 50-600 mm). For this Qortuba source the value it uses (10.0) "
+         "now equals the owner-confirmed unit, so it no longer changes a value here - but the migration must take the "
+         "unit from the owner claim, never from INSUNITS (abort METHOD_UNIT_DIFFERS_FROM_CONFIRMED_UNIT)", "ALL"),
         ("method thresholds in millimetres (snap 2 mm, shaft 600 mm, terrace 3.0 m2, guard 0.9 m2, raster cell)",
          "r3/floor_regions.py, qs01/takeoff.py", "GENERIC_URBAN_METHOD",
          "generic heuristics, but they make the method NOT scale-invariant: the unit decides which cells are rooms",
@@ -163,9 +177,10 @@ def legacy_audit(proof):
             "legacy_logic_in_value_path": [x["dependency"] for x in out if x["class"] == "LEGACY_PROJECT_LOGIC"
                                            and x["dependency"].startswith(("unit selection", "ceiling area"))],
             "verdict": ("the six values are produced by generic method code plus two project adapter facts (layer "
-                        "names, QP-07 membership); two LEGACY items reach values - the INSUNITS unit (blocked: unit "
-                        "UNCONFIRMED) and the untested ceiling conditions (Q-14 only) - and two LEGACY items are "
-                        "metadata only. The method itself lives in a project research folder and is NOT_MIGRATED"),
+                        "names, QP-07 membership); two LEGACY items sit in the value path - the INSUNITS unit policy "
+                        "(its value now coincides with the owner-confirmed 10.0 mm, guarded by an abort condition) and "
+                        "the untested ceiling conditions (Q-14 only) - and two LEGACY items are metadata only. The "
+                        "method itself lives in a project research folder and is NOT_MIGRATED"),
             "unused": len(blocking)}
 
 
@@ -321,6 +336,15 @@ def blocker_register():
 
 # ====================================================================== dependency graph (§8)
 def dependency_graph(proof, sigs):
+    cx = proof["canonical_context"]
+    unit_state = "READY" if cx["unit"] == "CONFIRMED_BY_HUMAN" else "PENDING_OWNER"
+    unit_evidence = (f"CONFIRMED_BY_HUMAN {cx['native_to_mm']} mm per unit by owner claim "
+                     f"{', '.join(cx['owner_claims_applied'])}; INSUNITS declaration kept" if unit_state == "READY"
+                     else "UNCONFIRMED; active INSUNITS reading not accepted")
+    wi = proof.get("if_designation_accepted_diagnostic", {})
+    frame_evidence = (f"{cx['frame']}: the only missing input is the CAD drawing-region designation "
+                      f"(with it the frame would be {wi.get('frame')}); the independent parser is a release blocker, "
+                      "not a frame input" if unit_state == "READY" else "UNCONFIRMED until unit and region are authorised")
     N = [
         ("SOURCE_FILE", "READY", "source DWG sha256 " + QORTUBA_SHA[:16] + "... matches the pinned decode", []),
         ("SOURCE_OBSERVATIONS", "READY", f"D1 decode; {sigs['round1_observations']} observations bound the ten rooms",
@@ -335,9 +359,8 @@ def dependency_graph(proof, sigs):
          "capability", ["PHYSICAL_GEOMETRY"]),
         ("REGION_DESIGNATION", "PENDING_OWNER", "candidate RC:MODEL_SPACE:4267:540:1649, PENDING_REVIEW",
          ["SOURCE_OBSERVATIONS"]),
-        ("UNIT_CONTEXT", "PENDING_OWNER", "UNCONFIRMED; active INSUNITS reading not accepted", ["SOURCE_FILE"]),
-        ("MEASUREMENT_FRAME", "BLOCKED", "UNCONFIRMED until unit and region are authorised",
-         ["UNIT_CONTEXT", "REGION_DESIGNATION"]),
+        ("UNIT_CONTEXT", unit_state, unit_evidence, ["SOURCE_FILE"]),
+        ("MEASUREMENT_FRAME", "BLOCKED", frame_evidence, ["UNIT_CONTEXT", "REGION_DESIGNATION"]),
         ("ROOM_METHOD", "NOT_MIGRATED", "QS01 Method A on pipeline7, research code in a project folder",
          ["PHYSICAL_GEOMETRY", "METHOD_INPUT_CONTRACT", "MEASUREMENT_FRAME"]),
         ("ROOM_IDENTITY", "READY", "labels from D1 (61 of 61 equal), wet/dry classes generic, QP-07 approved",
@@ -428,7 +451,10 @@ ABORTS = [
     ("REGION_CHANGED", "designation id, extent or review status differs from the frozen accepted designation",
      "designation record"),
     ("FRAME_EVIDENCE_CHANGED", "frame evidence digest differs from the frozen one", "measurement_frame().evidence_digest"),
-    ("UNIT_CHANGED", "unit claim id / value differs, or the claim was superseded", "unit claim (release V3)"),
+    ("UNIT_CHANGED", "unit claim id / value differs from QORTUBA-NATIVE-UNIT-OWNER-001 (10.0 mm per unit), or the claim "
+     "was superseded", "unit claim (release V3)"),
+    ("METHOD_UNIT_DIFFERS_FROM_CONFIRMED_UNIT", "the scale the room method applies differs from the owner-confirmed unit "
+     "(the method must take the unit from the claim, never from INSUNITS)", "method unit register vs unit claim"),
     ("METHOD_REVISION_CHANGED", "any file of the frozen calculation path changed", "method_code_sha256"),
     ("METHOD_INPUT_CONTRACT_BROKEN", "a canonical input the contract requires is missing (block names, part ids, texts, "
      "dimensions) or differs from the frozen check", "contract ablation + text/dimension equality"),
@@ -449,15 +475,16 @@ ABORTS = [
 def transaction():
     steps = [
         (1, "CREATE_RUN", "create a new QTO run/version id; record the frozen inputs (source, decode, decoder pin, "
-                          "qualification id, unit claim id, designation id, frame id, evidence version, method hashes, "
-                          "baseline row versions)", ["SOURCE_HASH_CHANGED", "BASELINE_NOT_APPROVED"]),
+                          "qualification id, unit claim id QORTUBA-NATIVE-UNIT-OWNER-001, designation id, frame id, "
+                          "evidence version, method hashes, baseline row versions)", ["SOURCE_HASH_CHANGED", "BASELINE_NOT_APPROVED"]),
         (2, "RUN_CANONICAL_SOURCE", "D1 -> K1 -> method-input contract", ["DECODE_CHANGED", "DECODER_CHANGED_OR_UNQUALIFIED",
                                                                          "SIGNATURE_OUTSIDE_QUALIFICATION",
                                                                          "METHOD_INPUT_CONTRACT_BROKEN"]),
         (3, "APPLY_APPROVED_REGION_AND_FRAME", "accepted designation + confirmed unit -> measurement frame (V3)",
          ["REGION_CHANGED", "UNIT_CHANGED", "FRAME_EVIDENCE_CHANGED", "SOURCE_BLOCKER_APPEARED"]),
         (4, "RUN_SIX_APPROVED_METHODS", "rooms (Method A) then the six row expressions",
-         ["METHOD_REVISION_CHANGED", "ROOM_SET_CHANGED", "ROW_PROVENANCE_MISSING"]),
+         ["METHOD_REVISION_CHANGED", "METHOD_UNIT_DIFFERS_FROM_CONFIRMED_UNIT", "ROOM_SET_CHANGED",
+          "ROW_PROVENANCE_MISSING"]),
         (5, "COMPARE_OLD_VS_NEW", "every row: canonical (rounded to published precision) vs approved baseline",
          ["VALUE_DELTA_OUTSIDE_TOLERANCE", "UNEXPECTED_ROW_SET"]),
         (6, "ABORT_ON_ANY_NON_APPROVED_DIFFERENCE", "any abort condition -> the run is closed ABORTED, nothing published",
@@ -503,6 +530,10 @@ def decisions(proof):
         ("R86-D08", "The closed-bit defect stays NOT_APPLIED; fix only after the column-deduction rule, and the fix must "
                     "carry the column footprint as its own quantity.", "DECIDED"),
         ("R86-D09", "MIGRATION_PLANNING_READY = YES; MIGRATION_EXECUTION_READY = NO; PRODUCTION_MIGRATION = NO.", "DECIDED"),
+        ("R86-D10", "Owner claim QORTUBA-NATIVE-UNIT-OWNER-001 (1 unit = 1 cm, native_to_mm 10.0) recorded for source "
+                    "2ec3a9c8... only, beside the INSUNITS declaration: Qortuba UNIT_CONTEXT = CONFIRMED_BY_HUMAN. Not "
+                    "transferred to any other source. The CAD drawing-region designation stays PENDING_OWNER.",
+         "RECORDED_FROM_OWNER_INPUT"),
     ]
     return {"SCHEMA": "URBAN_R8_6_DECISION_REGISTER_V1",
             "decisions": [{"id": i, "decision": t, "status": s} for i, t, s in D],
@@ -510,6 +541,8 @@ def decisions(proof):
                       "INDEPENDENT_REAL_RECONCILIATION": "BLOCKED_EXTERNAL_INPUT",
                       "QORTUBA_UNIT_CONTEXT": proof["canonical_context"]["unit"],
                       "QORTUBA_REGION": proof["canonical_context"]["region"],
+                      "QORTUBA_REGION_DESIGNATION": "PENDING_OWNER",
+                      "QORTUBA_MEASUREMENT_FRAME": proof["canonical_context"]["frame"],
                       "ALRASHED_COLUMN_RULE": "TRADE_DEDUCTION_RULE_UNDECIDED"}}
 
 

@@ -71,8 +71,13 @@ def test_the_rooms_behind_the_rows_are_identical_on_two_runs(first, second):
     assert first["rooms_digest"] == second["rooms_digest"] == MANIFEST["canonical_rooms_digest"]
 
 
-def test_the_unit_is_still_the_active_reading_and_not_a_confirmation(first):
-    assert first["unit"]["PROVENANCE"] == "INSUNITS"
+def test_the_method_ran_at_the_owner_confirmed_unit_and_nothing_is_released(first):
+    """The method still reads INSUNITS internally; the owner claim confirms the same 10.0 mm per unit, so the rooms
+    are proven at the confirmed unit. The frame stays UNCONFIRMED (CAD drawing-region designation pending)."""
     proof = json.loads((Path(__file__).parent / "registers" / "QORTUBA_ROUND1_PROOF.json").read_text())
-    assert proof["canonical_context"]["unit"] == "UNCONFIRMED"
-    assert all(r["canonical_physical_value"] is None and r["release_eligibility"] == "NOT_ELIGIBLE" for r in proof["rows"])
+    assert proof["canonical_context"]["unit"] == "CONFIRMED_BY_HUMAN"
+    assert first["unit"]["UNIT_SCALE_TO_MM"] == proof["canonical_context"]["native_to_mm"] == 10.0
+    assert proof["canonical_context"]["frame"] == "UNCONFIRMED"
+    for r in proof["rows"]:
+        assert r["unit_context"]["method_unit_equals_confirmed_unit"] is True
+        assert r["canonical_physical_value"] is None and r["release_eligibility"] == "NOT_ELIGIBLE"

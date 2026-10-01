@@ -328,6 +328,58 @@ def canonical_round1(can: "Canonical | None" = None) -> dict:
             "unit": res["unit"]}
 
 
+# ====================================================================== owner claims (exact source only)
+OWNER_CLAIMS = ROOT / "data/registry/OWNER_UNIT_CLAIMS.json"
+
+
+def owner_unit_claims(source_sha256: str) -> list:
+    """HUMAN_CONFIRMATION evidence for THIS source hash only. A claim recorded for another hash is never applied
+    (the frame policy also rejects it: HUMAN_CONFIRMATION_SOURCE_MISMATCH); nothing is transferred between projects."""
+    from engine.source import frame as FR
+    if not OWNER_CLAIMS.exists():
+        return []
+    out = []
+    for c in json.loads(OWNER_CLAIMS.read_text())["claims"]:
+        if c["source_sha256"] != source_sha256:
+            continue
+        out.append(FR.human_confirmation(c["evidence_id"], c["source_sha256"], c["coordinate_space_id"],
+                                         float(c["native_to_mm"]), author=c["author"], author_role=c["author_role"],
+                                         timestamp=c["timestamp"], scope=tuple(c["claim_scope"]),
+                                         supersedes=c.get("supersedes"), notes=c.get("statement", "")))
+    return out
+
+
+def canonical_context_with_claims(src, cand, designation=None):
+    """The R8.5 canonical evaluation context plus the recorded owner claims for this exact source. The source
+    declaration evidence (INSUNITS) is kept; the claim is added beside it, never in place of it."""
+    from engine.source import cad_profile as P, decoder_pins as PINS, frame as FR
+    from engine.source import source_exceptions as SX
+    from engine.source.cad import unit_evidence as UE
+    from r8_5_value_shadow import Q_sha
+    ex = UE.extract(src.decode, src.src)
+    claims = owner_unit_claims(src.src)
+    evidence = list(ex["evidence"]) + claims
+    uc = FR.unit_context(src.src, "MODEL_SPACE", FR.MODEL_SPACE, evidence,
+                         insunits=src.decode.get("HEADER", {}).get("INSUNITS"), policy=FR.RELEASE_V3)
+    rt = FR.region_transform(uc, cand.candidate_id, cand.region_kind, bounds=cand.bounds, policy=FR.RELEASE_V3,
+                             reference=designation is not None, designation=designation)
+    mf = FR.measurement_frame(uc, rt, policy=FR.RELEASE_V3)
+    exc = src.classify(cand.candidate_id, cand.bounds)
+    rfind = SX.region_findings(exc) + list(ex["findings"])
+    sigs = Q.capability_signatures(src.doc)
+    ctx = P.SourceValidationContext(True, PINS.decode_status(Q_sha(src.path)), PINS.PINS["LIBREDWG_DWGREAD"][0]["sha256"],
+                                    tuple(f for f in src.doc.findings if f.obs_id is None), capability_signatures=sigs)
+    res = P.evaluate("LINE", "REGION_REPRESENTATIVE", (), P.MeasurementMethod("SCALE_DEPENDENT", True), ctx, mf, uc, rt,
+                     region_findings=rfind, parser_policy=P.PARSER_POLICY_V3)
+    return {"unit": uc, "region": rt, "frame": mf, "profile": res, "release": P.region_release(res),
+            "v_cad": P.v_cad_view(res, rfind), "blockers": [f"{r[0]}: {r[2][:140]}" for r in res.blocking],
+            "evidence": [{"evidence_id": e.evidence_id, "kind": e.kind, "producer": e.producer,
+                          "native_to_mm": e.derived_value, "review_status": e.review_status,
+                          "author": e.author, "author_role": e.author_role, "timestamp": e.timestamp}
+                         for e in evidence],
+            "owner_claims_applied": [c.evidence_id for c in claims]}
+
+
 # ====================================================================== the proof
 def room_trace(res, can: Canonical):
     """Room -> boundary segments -> canonical primitives on them -> K1 lineage -> D1 observation."""
@@ -381,7 +433,6 @@ def signatures_by_occurrence(doc):
 
 def proof(out_dir: Path):
     from r8_5_source_exceptions import Source
-    from r8_5_value_shadow import canonical_context
 
     can = Canonical()
     approved = {r["SUBITEM"]: r for r in json.loads(APPROVED.read_text())["ROWS"]}
@@ -472,7 +523,13 @@ def proof(out_dir: Path):
 
     src = Source("QORTUBA")
     cand = next(c for c in src.cands.values() if any("SECOND FLOOR PLAN" in e[2] for e in c.role_evidence))
-    ctx = canonical_context(src, cand)
+    ctx = canonical_context_with_claims(src, cand)
+    from engine.source import frame as FR
+    accepted = FR.ReferenceRegionDesignation(f"DES:QORTUBA:{cand.candidate_id}", src.src, "MODEL_SPACE", cand.candidate_id,
+                                             FR.SOURCE_PLAN_LABEL, "TEXT handle 428", FR.ENGINE, FR.ACCEPTED)
+    what_if = canonical_context_with_claims(src, cand, accepted)      # diagnostic only: nothing is accepted here
+    confirmed = ctx["unit"].native_to_mm if ctx["unit"].status == FR.CONFIRMED_BY_HUMAN else None
+    method_unit = canon["unit"]["UNIT_SCALE_TO_MM"]
     trace = room_trace(canon, can)
     sig_by_occ = signatures_by_occurrence(can.doc)
     scale = canon["unit"]["UNIT_SCALE_TO_MM"]
@@ -521,11 +578,16 @@ def proof(out_dir: Path):
             "source_observations": obs, "source_occurrences": [[o, list(p)] for o, p in occs],
             "source_geometry_ids": [by_room[rid]["measurement_region_id"] for rid in rids],
             "canonical_region_id": cand.candidate_id, "frame_id": ctx["frame"].frame_id,
-            "unit_context": {"status": ctx["unit"].status, "canonical_policy": "URBAN_FRAME_RELEASE_V3",
+            "unit_context": {"status": ctx["unit"].status, "native_to_mm": ctx["unit"].native_to_mm,
+                             "canonical_policy": "URBAN_FRAME_RELEASE_V3",
+                             "owner_claims_applied": ctx["owner_claims_applied"],
+                             "evidence_kept": [e["evidence_id"] for e in ctx["evidence"]],
                              "active_path_reading": {k: canon["unit"][k] for k in
                                                      ("UNIT_CANDIDATE", "UNIT_SCALE_TO_MM", "PROVENANCE", "STATUS")},
-                             "note": "the active path takes the unit from INSUNITS; the canonical policy does not accept "
-                                     "that as confirmation, so no physical value is released"},
+                             "method_unit_equals_confirmed_unit": confirmed is not None and method_unit == confirmed,
+                             "note": "unit confirmed by the owner for this exact source (claim beside the INSUNITS "
+                                     "declaration); the method ran at the same scale, so its rooms are proven at the "
+                                     "confirmed unit"},
             "source_capability_signatures": sigs,
             "decoder_qualification_requirement": "every listed signature EXERCISED_AND_PASS against an ADMITTED "
                                                  "independent export of this source (V2); currently 0 qualified",
@@ -536,14 +598,18 @@ def proof(out_dir: Path):
                                for rid in rids],
             "canonical_native_value": round(sum(by_room[rid]["canonical_native_geometry"]["area_native_sq"] for rid in rids), 4),
             "canonical_physical_value": None,
-            "canonical_physical_value_reason": "frame UNCONFIRMED: no physical value may be released",
+            "canonical_physical_value_reason": (f"frame {ctx['frame'].status}: the CAD drawing-region designation is "
+                                                "PENDING_OWNER, so no physical value may be released"),
             "preview_value_m2_under_active_unit_reading": value,
             "current_value": cur, "current_status": ar["STATUS"] if ar else None,
             "difference_preview_minus_current": None if cur is None else round(value - cur, 10),
             "status": ctx["release"], "blockers": ctx["blockers"],
             "release_eligibility": "NOT_ELIGIBLE",
-            "release_eligibility_reasons": ["unit UNCONFIRMED", "region designation PENDING_REVIEW",
-                                            "no independent-parser qualification", "method not promoted (legacy audit)"],
+            "release_eligibility_reasons": ["CAD drawing-region designation PENDING_OWNER (frame UNCONFIRMED)",
+                                            "no independent-parser qualification",
+                                            "method / input contract not promoted (legacy audit)",
+                                            "baseline rows not approved"] + (
+                                               ["ceiling conditions not confirmed"] if qid == "Q-14" else []),
         })
 
     res = {
@@ -572,9 +638,15 @@ def proof(out_dir: Path):
                     "canonical_deterministic": digest(rooms_key(canon)) == digest(rooms_key(canon2)),
                     "canonical_rooms_digest": digest(rooms_key(canon))},
         "rows": rows, "rooms": rooms,
-        "canonical_context": {"unit": ctx["unit"].status, "region": ctx["region"].status, "frame": ctx["frame"].status,
+        "canonical_context": {"unit": ctx["unit"].status, "native_to_mm": ctx["unit"].native_to_mm,
+                              "region": ctx["region"].status, "frame": ctx["frame"].status,
                               "release": ctx["release"], "V-CAD-5": ctx["v_cad"], "frame_id": ctx["frame"].frame_id,
-                              "evidence_version": ctx["frame"].evidence_digest},
+                              "evidence_version": ctx["frame"].evidence_digest, "blockers": ctx["blockers"],
+                              "unit_evidence": ctx["evidence"], "owner_claims_applied": ctx["owner_claims_applied"]},
+        "if_designation_accepted_diagnostic": {
+            "note": "diagnostic only; the designation is NOT accepted. Shows what the CAD drawing-region designation alone "
+                    "would change", "region": what_if["region"].status, "frame": what_if["frame"].status,
+            "release": what_if["release"], "blockers": what_if["blockers"]},
     }
     out_dir.mkdir(parents=True, exist_ok=True)
     (out_dir / "QORTUBA_ROUND1_PROOF.json").write_text(json.dumps(res, indent=1, ensure_ascii=False, default=str))

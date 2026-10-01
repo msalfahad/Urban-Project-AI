@@ -112,19 +112,28 @@ No session upload is read. No current value, cut line or room enters the computa
 A lossy canonical mapping silently changes four rooms (HALL 36.37 → 25.09). The method-input contract is now
 explicit and tested.
 
-**2. Two legacy assumptions reach values:**
+**2. Two legacy assumptions sit in the value path:**
 
 - **Unit:** the active path takes the unit from INSUNITS. It accepted cm even though its own secondary check
-  failed (wall-pair mode 714.5 mm).
+  failed (wall-pair mode 714.5 mm). The owner has since confirmed the same 10.0 mm per unit for this source,
+  so it changes no value here. The migration must still take the unit from the owner claim, and an abort
+  condition enforces that.
 - **Ceilings:** Q-14 sets ceiling area to the floor region and records void / stair opening / shaft /
   open-to-above as False **without testing them**.
 
 **3. The approval baseline is not set.** All six rows are FINAL but approval DRAFT.
 
+## Owner input received this round
+
+Qortuba native unit: **1 drawing unit = 1 cm** (native_to_mm = 10.0). It is recorded as claim
+`QORTUBA-NATIVE-UNIT-OWNER-001`, for source `2ec3a9c8…` only, beside the INSUNITS declaration (both kept), and
+is not transferred to P7757, Al Rashed or any other source.
+
 ## Gates (none lowered)
 
-- **Unit:** UNCONFIRMED.
-- **Region designation:** PENDING_REVIEW.
+- **Unit:** **CONFIRMED_BY_HUMAN** (owner claim, exact source).
+- **CAD drawing-region designation ("SECOND FLOOR PLAN" view):** PENDING_OWNER.
+- **Measurement frame:** UNCONFIRMED. Its only missing input is the drawing-region designation.
 - **Qualification:** 0/{S['required_count']} signatures.
 - **INDEPENDENT_REAL_RECONCILIATION:** BLOCKED_EXTERNAL_INPUT.
 - **Al Rashed:** the closed-bit defect is NOT_APPLIED, and the column rule is TRADE_DEDUCTION_RULE_UNDECIDED.
@@ -170,8 +179,17 @@ The determinism guard was enforced.
 {tbl(("row", "item", "rooms", "obs", "occurrences", "signatures", "canonical native (unit²)",
       "preview m² (active unit reading)", "current", "difference", "status", "release"), rows)}
 
-There is no physical value: the frame is UNCONFIRMED. The preview figure uses the active INSUNITS reading only
-so that it can be compared with the current figure. It is not a release value.
+There is no physical value yet. The unit is CONFIRMED_BY_HUMAN (10.0 mm per unit, owner claim), but the frame
+is UNCONFIRMED until the CAD drawing-region designation is accepted.
+
+The method ran at the same 10.0 mm per unit, so the preview figures are the values at the confirmed unit.
+They are still not release values.
+
+**Diagnostic only, nothing accepted:** with the designation accepted, the frame would be
+{P['if_designation_accepted_diagnostic']['frame']} and the release would stay
+{P['if_designation_accepted_diagnostic']['release']}, held back only by
+{', '.join(b.split(':')[0] for b in P['if_designation_accepted_diagnostic']['blockers'])} (the independent
+parser).
 
 ## Reproducibility
 
@@ -447,8 +465,10 @@ coordinates, room ids, manual totals or benchmark values were found.
 
 ## 3. Which owner facts block them?
 
-- The Qortuba native unit, for the exact hash `2ec3a9c8…`.
-- Acceptance of the "SECOND FLOOR PLAN" region designation.
+The Qortuba native unit is **resolved**: claim QORTUBA-NATIVE-UNIT-OWNER-001, 1 unit = 1 cm. These remain:
+
+- Acceptance of the "SECOND FLOOR PLAN" **CAD drawing view** as the plan to measure. This is the only input
+  the measurement frame still lacks.
 - Approval of the six current rows as the baseline. They are FINAL but approval DRAFT.
 - For Q-14 only: confirmation that the ten ceilings have no void, opening, shaft or open-to-above condition.
 
@@ -479,10 +499,11 @@ own tests, not a lab mapping.
 ## 7. The rule / method risk that worries me most
 
 **Unit dependence.** The method's thresholds are in millimetres (shaft 600 mm, terrace 3.0 m², snap 2 mm,
-raster cell), so the unit decides which cells are rooms, not only their scale. If Mohammad confirms anything
-other than cm, the room decomposition has to be re-proven, not rescaled.
+raster cell), so the unit decides which cells are rooms, not only their scale.
 
-The active unit resolver accepted cm even though its own secondary check failed (wall-pair mode 714.5 mm).
+The owner's cm confirmation equals the scale the proof ran at, so the decomposition is proven at the confirmed
+unit. The method must nevertheless read that unit from the claim, not from INSUNITS, because the active
+resolver accepted cm even though its own secondary check failed.
 
 ## 8. Is the Al Rashed closed-flag issue unquestionably a source-reader defect?
 
@@ -507,8 +528,7 @@ Yes, from an unchanged tree and the declared fixture set:
 
 ## 11. What Mohammad should personally review before migration
 
-- The unit.
-- The designation (one look at the region extent).
+- The CAD drawing-region designation (one look at the extent of the "SECOND FLOOR PLAN" view).
 - The six-row before/after table in 02.
 - The Q-14 ceiling question.
 - The approval of the baseline rows.
