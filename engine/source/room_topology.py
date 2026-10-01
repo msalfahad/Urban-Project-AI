@@ -118,6 +118,7 @@ def topology_inputs(inp: CI.CanonicalMeasurementInput, *, frame_insert, eps_n, e
                                   if p.visibility == CI.VISIBLE and p.kind in LINEAR
                                   and roles[p.identity.key].role == GR.SEMANTIC_BOUNDARY]
     closures, status = T.opening_closures(adm["doors"], items, eps_n)
+    adm["door_audit"] = T.opening_audit(adm["doors"], items, eps_n)
     e_r = eps_r if eps_r else TP.eps_authored(inp.unit_native_to_mm)
     g_closures, g_status, g_open = T.glazing_closures(items, eps_n, e_r) if e_r else ([], {}, {})
     closures = closures + g_closures
@@ -316,6 +317,8 @@ def run(inp: CI.CanonicalMeasurementInput, *, frame_insert, expected_revision_id
             s_["status"] = T.REVIEW_REQUIRED
     res["crosscheck"] = {k: v for k, v in xc.items() if k != "per_site"}
     res["crosscheck"]["disagreements"] = {k: v for k, v in sorted(xc["per_site"].items()) if v["state"] == XC.DISAGREES}
+    res["crosscheck"]["inconclusive"] = {k: v for k, v in sorted(xc["per_site"].items())
+                                         if v["state"] in (XC.PHASE_SENSITIVE_INCONCLUSIVE, XC.CHECK_INPUT_INVALID)}
     if unrealised is not None:
         acc = unrealised_accounting(unrealised, inp, res, frame_insert, adm.get("occurrence_contexts"))
         res["unrealised"] = {"blocking_input": acc["blocking_input"], "recorded": acc["recorded"],

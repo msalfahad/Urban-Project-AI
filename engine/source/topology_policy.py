@@ -124,6 +124,26 @@ def tolerances(max_abs_coordinate, native_to_mm) -> dict:
                                        else "degenerate: eps_r is not at least 10 x eps_n")}
 
 
+def authority_classes() -> dict:
+    """R8.9 §22: what KIND of authority each policy number is (not part of the frozen digest). None of them is a
+    source fact: they are the engine's method; the 1 mm band is the one that could become an Urban method rule."""
+    return {
+        "NOISE_RELATIVE": {"value": NOISE_RELATIVE, "class": "ENGINE_METHOD_PARAMETER",
+                           "basis": "numeric representation (float64); measured per drawing by separation()",
+                           "owner_approval": "NOT_NEEDED (numeric, not a construction statement)"},
+        "AUTHORED_PRECISION_MM": {"value": AUTHORED_PRECISION_MM, "class": "ENGINE_METHOD_PARAMETER",
+                                  "basis": "conservative topology policy: below 1 mm a separation is not evidence "
+                                           "of intent either way; it is NOT a SOURCE_FACT or a PROJECT_FACT",
+                                  "owner_approval": "RECOMMENDED_LATER as an URBAN_METHOD_RULE (company method), "
+                                                    "not blocking R8.9: it only decides REVIEW vs CERTIFIED"},
+        "JAMB_ALLOWANCE_RATIO": {"value": JAMB_ALLOWANCE_RATIO, "class": "ENGINE_METHOD_PARAMETER",
+                                 "basis": "door-closure reach; R8.9 audit: Qortuba doors need 1/15 of the leaf radius "
+                                          "and the rejected hypothesis never closes within a full radius",
+                                 "owner_approval": "NOT_NEEDED; NEEDS_MORE_EVIDENCE (second drawing family)"},
+        "MIN_BAND_RATIO": {"value": MIN_BAND_RATIO, "class": "ENGINE_METHOD_PARAMETER",
+                           "basis": "degeneracy guard", "owner_approval": "NOT_NEEDED"}}
+
+
 def record() -> dict:
     rec = {"id": POLICY_ID, "noise_relative": NOISE_RELATIVE, "noise_basis": "numeric representation (float64, "
            "<= 16 insert levels, DXF 16-17 digit text); relative, unit-free",

@@ -106,7 +106,10 @@ def test_crosscheck_is_robust_to_grid_lines_through_route_noise():
              H.seg(102, 10000, 4000, 0, 4000), H.seg(103, 0, 4000, 0, 0), H.seg(104, a, 0, a, 4000)]
     r = run(parts, LABELS)
     assert all(s["status"] == T.CERTIFIED for s in r["sites"]) and len(r["sites"]) == 2
-    assert r["crosscheck"]["state"] == XC.AGREES and set(r["crosscheck"]["agreed_in_phase"]) - {"0"}
+    # SUPERSEDED by R8.9 §19 (cross-check V2): an answer that depends on the grid origin is reported as
+    # PHASE_SENSITIVE_INCONCLUSIVE, never as agreement; TS01's own certificate still decides (sites CERTIFIED)
+    assert r["crosscheck"]["state"] == XC.PHASE_SENSITIVE_INCONCLUSIVE
+    assert XC.PHASE_SENSITIVE_INCONCLUSIVE in {s["crosscheck"] for s in r["sites"]}
 
 
 def _mutating(monkeypatch, mutate):

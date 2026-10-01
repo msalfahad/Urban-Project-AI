@@ -883,6 +883,39 @@ def opening_closures(doors: dict, items, eps, jamb_ratio=TP.JAMB_ALLOWANCE_RATIO
     return closures, status
 
 
+def opening_audit(doors: dict, items, eps, jamb_ratio=TP.JAMB_ALLOWANCE_RATIO) -> dict:
+    """R8.9 audit of the door-closure reach (no decision changes): for each proven door, both leaf hypotheses are
+    probed with a reach of one full leaf radius. Reported: radius, the forward / backward hit distance and source of
+    each hypothesis, the ratio the ACCEPTED hypothesis actually needs (max hit distance / radius), and the ratio
+    at which the REJECTED hypothesis would also succeed (its margin). The policy ratio is fixed; this only shows
+    how much of it the evidence uses."""
+    out = {}
+    for occ in sorted(doors):
+        sig = doors[occ]
+        c, r = sig["hinge"], sig["radius"]
+        hyps = []
+        for end in sig["ends"]:
+            L = _d(end, c)
+            if L == 0:
+                continue
+            d = ((end[0] - c[0]) / L, (end[1] - c[1]) / L)
+            f = _ray_hit(end, d, items, eps, r)
+            b = _ray_hit(c, (-d[0], -d[1]), items, eps, r)
+            need = None if f is None or b is None else max(f[0], b[0], 0.0) / r
+            hyps.append({"forward_hit": None if f is None else {"distance": f[0], "source": f[2].source_id},
+                         "backward_hit": None if b is None else {"distance": b[0], "source": b[2].source_id},
+                         "ratio_needed": need, "within_policy": need is not None and need <= jamb_ratio})
+        ok = [h for h in hyps if h["within_policy"]]
+        acc = ok[0] if len(ok) == 1 else None
+        rej = [h for h in hyps if h is not acc]
+        rej_need = min([h["ratio_needed"] for h in rej if h["ratio_needed"] is not None], default=None)
+        out[occ] = {"radius": r, "policy_ratio": jamb_ratio, "hypotheses": hyps,
+                    "accepted_ratio_needed": None if acc is None else acc["ratio_needed"],
+                    "rejected_ratio_needed": rej_need,
+                    "decision": "CLOSED" if acc is not None else OPENING_CLOSURE_UNRESOLVED}
+    return out
+
+
 def glazing_closures(items, eps_n, eps_r):
     """Wall-face closures across GLAZED openings. A glazed opening is proven by structure, not by a layer alone:
     a glazing line G, and on EACH side of it the nearest parallel wall-face line (wall / column role) with a GAP

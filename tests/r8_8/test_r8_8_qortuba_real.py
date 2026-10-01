@@ -121,8 +121,10 @@ def test_committed_registers_are_consistent():
 
 def test_addendum_geos_crosscheck_and_separation_on_real_data(old):
     for r in (old["r1"], old["r2"]):
-        assert r["crosscheck"]["state"] == "AGREES" and r["crosscheck"]["counts"]["DISAGREES"] == 0
-        assert r["crosscheck"]["counts"]["AGREES"] == len(r["sites"]) and r["crosscheck"]["unclaimed_geos_faces"] == []
+        # R8.9 cross-check V2: every site must agree in ALL grid phases (no lucky phase)
+        assert r["crosscheck"]["state"] == "ALL_PHASES_AGREE" and r["crosscheck"]["counts"]["ALL_PHASES_DISAGREE"] == 0
+        assert r["crosscheck"]["counts"]["ALL_PHASES_AGREE"] == len(r["sites"])
+        assert r["crosscheck"]["unclaimed_geos_faces"] == []
         assert r["separation"]["separated"] and r["separation"]["ambiguous"] == 0
 
 

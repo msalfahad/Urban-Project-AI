@@ -18,12 +18,16 @@ Method
     1  the straight admitted items (opening closures included) are noded by GEOS (`node`) after precision
        reduction to a grid of cell eps_n (topology_policy NOISE). Exact GEOS without a grid cannot be used:
        route noise of a few ULP leaves near-miss end points that GEOS keeps apart, and faces leak.
-    2  a grid has a cliff at EVERY grid line - two end points 1 ULP apart can fall in different cells. That
-       cliff is unrelated to the noise/authored bands, so the check is run at GRID_PHASES (offsets of the grid
-       origin). The grid origin is an arbitrary representation choice: a disagreement that disappears in some
-       phase is a grid artefact; a defect of TS01 is phase-independent. A site AGREES if it agrees in any phase;
-       it DISAGREES only if it disagrees in every phase.
-    3  `polygonize`; for each TS01 site, the GEOS face containing the site's representative point must
+    2  a grid has a cliff at EVERY grid line - two end points 1 ULP apart can fall in different cells. The check is
+       therefore run at ALL GRID_PHASES (offsets of the grid origin) and reported per site (R8.9 V2):
+         ALL_PHASES_AGREE              independent confirmation of TS01
+         PHASE_SENSITIVE_INCONCLUSIVE  the answer depends on the arbitrary grid origin: evidence about the CHECK's
+                                       instability, not confirmation of TS01 (TS01's own two-build certificate
+                                       still decides; it is never reported as agreement)
+         ALL_PHASES_DISAGREE           GEOS_CROSSCHECK_DISAGREES -> REVIEW_REQUIRED
+    3  `polygonize`; the TS01 site polygon is built from its ONE-SIDED boundary (interior stubs removed exactly,
+       never repaired): if that polygon is invalid the check reports CHECK_INPUT_INVALID - it never repairs what it
+       is meant to challenge (no buffer(0)). For each site, the GEOS face containing its representative point must
          a. exist,
          b. have the same area within the site's certificate bound (eps_r x perimeter), and
          c. PROVENANCE PROOF: every boundary piece of that GEOS face must lie, within 2 x eps_n, on at least one
@@ -41,9 +45,14 @@ from __future__ import annotations
 
 from collections import defaultdict
 
-CHECK_ID = "TOPOLOGY_CROSSCHECK_GEOS_V1"
-AGREES, DISAGREES, NOT_APPLICABLE_CURVE = "AGREES", "DISAGREES", "NOT_APPLICABLE_CURVE"
+CHECK_ID = "TOPOLOGY_CROSSCHECK_GEOS_V2"
+ALL_PHASES_AGREE, PHASE_SENSITIVE_INCONCLUSIVE, ALL_PHASES_DISAGREE = (
+    "ALL_PHASES_AGREE", "PHASE_SENSITIVE_INCONCLUSIVE", "ALL_PHASES_DISAGREE")
+AGREES, DISAGREES = ALL_PHASES_AGREE, ALL_PHASES_DISAGREE          # R8.8 names, kept as aliases
+NOT_APPLICABLE_CURVE, CHECK_INPUT_INVALID = "NOT_APPLICABLE_CURVE", "CHECK_INPUT_INVALID"
 UNAVAILABLE = "UNAVAILABLE"
+STATES = (ALL_PHASES_AGREE, PHASE_SENSITIVE_INCONCLUSIVE, ALL_PHASES_DISAGREE, NOT_APPLICABLE_CURVE,
+          CHECK_INPUT_INVALID)
 GEOS_CROSSCHECK_DISAGREES = "GEOS_CROSSCHECK_DISAGREES"
 GRID_PHASES = ((0.0, 0.0), (0.5, 0.5), (0.5, 0.0), (0.0, 0.5))      # in grid cells
 CONTAINMENT_FACTOR = 2.0                                               # x eps_n (TS01 edge merge uses 2 x eps)
@@ -107,9 +116,37 @@ def _faces(geos, segs, eps_n, phase):
     return [shapely.affinity.translate(p, -ox, -oy) for p in polys]
 
 
+def _despiked(nodes):
+    """A closed node sequence with every out-and-back spike (a stub the face walk passes on both sides) removed."""
+    v = list(nodes)
+    changed = True
+    while changed and len(v) >= 3:
+        changed = False
+        n = len(v)
+        for i in range(n):
+            if v[(i - 1) % n] == v[(i + 1) % n]:
+                drop = {i, (i + 1) % n}
+                v = [x for k, x in enumerate(v) if k not in drop]
+                changed = True
+                break
+    return v
+
+
+def _site_polygon(Polygon, arr, s):
+    def ring(cyc):
+        nodes = _despiked([arr.edges[k]["n0"] if fw else arr.edges[k]["n1"] for k, fw in cyc])
+        return [arr.nodes[n] for n in nodes]
+    outer = ring(s["cycle"])
+    holes = [ring(hc) for hc in s["hole_cycles"]]
+    if len(outer) < 3 or any(len(h) < 3 for h in holes):
+        return None
+    P = Polygon(outer, holes)
+    return P if P.is_valid and not P.is_empty else None
+
+
 def check(res, items, eps_n) -> dict:
     """Cross-check the sites of one TS01 analysis (topology.analyse result with its '_arr'). Returns
-    {state, per_site: {site_id: {state, phase, reason}}, unclaimed_geos_faces, geos} - deterministic."""
+    {state, per_site: {site_id: {state, phases, reasons}}, counts, unclaimed_geos_faces, geos} - deterministic."""
     geos = _geos()
     out = {"check": CHECK_ID, "grid_cell": eps_n, "grid_phases": [list(p) for p in GRID_PHASES],
            "containment_tolerance": CONTAINMENT_FACTOR * eps_n, "per_site": {}, "unclaimed_geos_faces": []}
@@ -142,48 +179,55 @@ def check(res, items, eps_n) -> dict:
             out["per_site"][s["site_id"]] = {"state": NOT_APPLICABLE_CURVE,
                                              "reason": "an arc edge bounds the site; curves are not flattened"}
             continue
-        P = Polygon(_ring(arr, s["cycle"]), [_ring(arr, hc) for hc in s["hole_cycles"]])
-        if not P.is_valid:
-            P = P.buffer(0)
+        P = _site_polygon(Polygon, arr, s)
+        if P is None:
+            out["per_site"][s["site_id"]] = {"state": CHECK_INPUT_INVALID,
+                                             "reason": "the TS01 site's one-sided boundary is not a valid simple "
+                                                       "polygon (e.g. a bridge to an inner loop); not repaired"}
+            continue
         todo.append((s, P.representative_point()))
-    claimed = defaultdict(set)
+    verdict = defaultdict(dict)
     reasons = defaultdict(list)
     for ph_i, phase in enumerate(GRID_PHASES):
-        pending = [(s, rp) for s, rp in todo if s["site_id"] not in out["per_site"]]
-        if not pending:
-            break
         faces = _faces(geos, segs, eps_n, phase) if segs else []
         ftree = STRtree(faces) if faces else None
-        for s, rp in pending:
+        claimed = set()
+        for s, rp in todo:
+            sid = s["site_id"]
             hits = [faces[i] for i in sorted(ftree.query(rp, predicate="within"))] if ftree is not None else []
             if not hits:
-                reasons[s["site_id"]].append(f"phase {ph_i}: no GEOS face contains the site")
+                reasons[sid].append(f"phase {ph_i}: no GEOS face contains the site")
+                verdict[sid][ph_i] = False
                 continue
             f = min(hits, key=lambda g: g.area)
             bound = s["certificate"]["area_bound"]
             if abs(f.area - s["area"]) > bound:
-                reasons[s["site_id"]].append(f"phase {ph_i}: GEOS area {f.area!r} vs TS01 {s['area']!r} "
-                                             f"(bound {bound!r})")
+                reasons[sid].append(f"phase {ph_i}: GEOS area {f.area!r} vs TS01 {s['area']!r} (bound {bound!r})")
+                verdict[sid][ph_i] = False
                 continue
             src = sources_of(f)
             want = (set(s["boundary_source_ids"]) | set(s["hole_source_ids"])) - _dangle_only(arr, s)
             if src != want:
-                reasons[s["site_id"]].append(f"phase {ph_i}: boundary provenance differs "
-                                             f"({'a piece has no source' if src is None else sorted(src ^ want)[:4]})")
+                reasons[sid].append(f"phase {ph_i}: boundary provenance differs "
+                                    f"({'a piece has no source' if src is None else sorted(src ^ want)[:4]})")
+                verdict[sid][ph_i] = False
                 continue
-            out["per_site"][s["site_id"]] = {"state": AGREES, "phase": ph_i}
-            claimed[ph_i].add(f.wkb_hex)
+            verdict[sid][ph_i] = True
+            claimed.add(f.wkb_hex)
         if ph_i == 0:
             out["geos_faces_phase0"] = len(faces)
             out["unclaimed_geos_faces"] = sorted(
                 ({"area": round(g.area, 9), "point": [round(c, 6) for c in g.representative_point().coords[0]]}
-                 for g in faces if g.wkb_hex not in claimed[0]), key=lambda z: (z["area"], z["point"]))
+                 for g in faces if g.wkb_hex not in claimed), key=lambda z: (z["area"], z["point"]))
     for s, _ in todo:
-        if s["site_id"] not in out["per_site"]:
-            out["per_site"][s["site_id"]] = {"state": DISAGREES, "reasons": reasons[s["site_id"]]}
+        v = verdict[s["site_id"]]
+        agree = sorted(k for k, ok in v.items() if ok)
+        st = (ALL_PHASES_AGREE if len(agree) == len(GRID_PHASES) else ALL_PHASES_DISAGREE if not agree
+              else PHASE_SENSITIVE_INCONCLUSIVE)
+        out["per_site"][s["site_id"]] = {"state": st, "phases_agreeing": agree,
+                                         "reasons": reasons[s["site_id"]] if st != ALL_PHASES_AGREE else []}
     states = [v["state"] for v in out["per_site"].values()]
-    out["counts"] = {k: states.count(k) for k in (AGREES, DISAGREES, NOT_APPLICABLE_CURVE)}
-    phases = [str(v["phase"]) for v in out["per_site"].values() if v["state"] == AGREES]
-    out["agreed_in_phase"] = {p: phases.count(p) for p in sorted(set(phases))}
-    out["state"] = DISAGREES if DISAGREES in states else AGREES
+    out["counts"] = {k: states.count(k) for k in STATES}
+    out["state"] = (ALL_PHASES_DISAGREE if ALL_PHASES_DISAGREE in states else
+                    PHASE_SENSITIVE_INCONCLUSIVE if PHASE_SENSITIVE_INCONCLUSIVE in states else ALL_PHASES_AGREE)
     return out
