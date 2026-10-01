@@ -532,3 +532,61 @@ Two post-blind observations go to R8.14:
 cross-route agreement + owner / source corroboration + source anchor + human review. Nothing is released.
 
 **Gates:** MIGRATION_PLANNING_READY = YES, MIGRATION_EXECUTION_READY = NO, PRODUCTION_MIGRATION = NO.
+
+## 15. R8.14 addendum — door thresholds, open-passage soffit / reveals, skirting path, V4-O1 / V4-O2
+
+**Order (anti-calibration):**
+1. recommendation (`r8_14_recommendation.json`);
+2. V5 design and 14 synthetic tests;
+3. freeze (`R8_14_V5_FREEZE`);
+4. blind Qortuba run (`BLIND_QORTUBA_V5_RESULT`, committed first);
+5. trade modules and owner method facts with synthetic tests, committed before the Qortuba rebuild;
+6. rebuild and registers.
+
+**WALL_BAND_POLICY_V5** (`engine/source/wall_bands.py`):
+- **V4-O2.** Elongation is a tie against eps_r: `_elongated` returns True, None (within eps_r of equality) or False.
+  The boundary case is never elongated (fail closed), so the decision no longer depends on floating-point noise.
+- **V4-O1.** A band with a face on an ISOLATED CLOSED LOOP (a closed single-entity loop that touches no admitted
+  segment of another entity) and no physical authority for that entity is a GEOMETRIC_BAND_CANDIDATE. It gets no ends,
+  closures, passages or paired-face corroboration.
+- The room hole it cuts is a role-admission question. It stays as TS01 computes it, carried as an
+  OBSTACLE_AUTHORITY_UNPROVEN release blocker with counterfactual values; the role change is for R8.15.
+
+**Door thresholds** (`engine/source/door_transition.py`):
+- ONE physical opening site per door; the finish transition is a trade subdivision of it.
+- The plane comes from, in order:
+  1. AUTHORED_LEAF_PLANE, only when the hinge lies strictly inside the reveal;
+  2. OWNER_CENTRED_DOOR, a scoped fact applied to the established face pair (closures A / B);
+  3. otherwise UNRESOLVED_TRANSITION_PLANE. Wall thickness / 2 is never a default.
+- Allocation states: MARBLE_THRESHOLD_EXPLICIT (explicit evidence only) / CONTINUOUS_SAME_FINISH /
+  SPLIT_AT_DOOR_PLANE. The parts sum exactly to the site area.
+- CEILING: a door threshold is the door's top reveal (NOT_IN_TRADE).
+- Strip audit V2 (`trade_strips.audit_v2`) gives each row exactly its regions.
+
+**Open passage** (`engine/source/opening_reveals.py`):
+- LEFT_JAMB / RIGHT_JAMB / TOP_SOFFIT are OPENING_REVEAL_SURFACE records, owned once.
+- The CEILING loses the soffit footprint, derived from the source passage strip.
+- A passage whose head condition is unknown is a release blocker for the ceiling, never a silent inclusion.
+- No paint is assumed.
+
+**Skirting** (`engine/source/wall_contact_path.py`):
+- One-sided site edges are classified as REAL_WALL_FACE / DOOR_OPENING / GLAZED_OPENING / TOPOLOGY_CLOSURE (zero) /
+  UNPROVEN_OBSTACLE / OTHER.
+- Wardrobes and joinery are not boundaries, so the wall behind them stays on the path. Full-wall-tile rooms have no
+  path.
+- No quantity is published. A frozen, blind-tested path policy and a jamb-return rule are missing.
+
+**Owner method facts V2:** seven scoped Qortuba facts (`data/registry/OWNER_METHOD_FACTS.json`). They are trade
+layer only and are REJECTED_SCOPE on the old revision.
+
+**Rows (SHADOW, new revision):**
+- Q-03 = Q-11 = 17.9225 (wet halves of three dry / wet thresholds);
+- Q-03P = Q-12 = 11.685 (no threshold);
+- **Q-13 = 112.1538** (two continuous dry / dry thresholds, three dry halves, and the flat-entrance half — the
+  entrance half is a post-run unit-boundary scope decision, disclosed as a release blocker);
+- **Q-14 = 140.787** (ceiling minus the Hall / Lobby soffit).
+
+**Release:** the closures stay AUTHORISED_FOR_SHADOW (missing: cross-route, source anchor, human review). The source
+anchor is NOT_ESTABLISHED: the pinned libredwg cannot read the AC1032 DWG.
+
+**Gates:** MIGRATION_PLANNING_READY = YES, MIGRATION_EXECUTION_READY = NO, PRODUCTION_MIGRATION = NO.

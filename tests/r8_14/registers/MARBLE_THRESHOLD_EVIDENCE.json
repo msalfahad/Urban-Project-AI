@@ -1,0 +1,52 @@
+{
+ "SCHEMA": "URBAN_R8_14_MARBLE_THRESHOLD_EVIDENCE_V1",
+ "searched": {
+  "source_dxf": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315 (raw, every layout / block / text / attribute)",
+  "region_texts": 61,
+  "rule_store": "owner_rules.py + data/registry",
+  "patterns": [
+   "marble",
+   "threshold",
+   "برطاش",
+   "رخام",
+   "عتبة",
+   "عتبه",
+   "granite",
+   "جرانيت",
+   "\\U+0631\\U+062E\\U+0627\\U+0645",
+   "\\U+0628\\U+0631\\U+0637\\U+0627\\U+0634"
+  ]
+ },
+ "raw_counts": {
+  "marble": 0,
+  "threshold": 10,
+  "برطاش": 0,
+  "رخام": 0,
+  "عتبة": 0,
+  "عتبه": 0,
+  "granite": 0,
+  "جرانيت": 0,
+  "\\U+0631\\U+062E\\U+0627\\U+0645": 0,
+  "\\U+0628\\U+0631\\U+0637\\U+0627\\U+0634": 0
+ },
+ "threshold_hits_context": [
+  "aec_disp_props_door_threshold_plan",
+  "aec_disp_props_door_threshold_symbol_plan",
+  "aec_disp_rep_door_threshold_plan",
+  "aec_disp_rep_door_threshold_symbol_plan",
+  "aecdbdisppropsdoorthresholdplan",
+  "aecdbdisppropsdoorthresholdsymbolplan",
+  "aecdbdisprepdoorthresholdplan",
+  "aecdbdisprepdoorthresholdsymbolplan"
+ ],
+ "threshold_hits_meaning": "AEC display-class names (AecDbDispRepDoorThreshold*) in the DXF class table: an Architectural Desktop object type, not a threshold finish or a schedule entry",
+ "region_text_hits": [],
+ "rule_store_hits": [
+  "60:     \"stops at a threshold is not a waterproof room\",",
+  "722:                                     \"the membrane at a threshold, so the 2.625 lm of doorway is restored\"}))"
+ ],
+ "rule_store_meaning": "US-05 (membrane upturn not broken at a threshold) - a waterproofing rule, not marble",
+ "result": "NO EXPLICIT MARBLE THRESHOLD EVIDENCE FOUND",
+ "applies": "continuous floor-transition rule",
+ "owner_question": "NONE (the owner's 'sometimes' is not current-project marble authority)"
+}

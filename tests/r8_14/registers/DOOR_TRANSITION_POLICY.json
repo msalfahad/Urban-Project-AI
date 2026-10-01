@@ -1,0 +1,86 @@
+{
+ "SCHEMA": "URBAN_R8_14_DOOR_TRANSITION_POLICY_V1",
+ "policy": {
+  "policy_id": "DOOR_TRANSITION_POLICY_V1",
+  "plane_authority": [
+   "AUTHORED_LEAF_PLANE",
+   "OWNER_CENTRED_DOOR",
+   "UNRESOLVED_TRANSITION_PLANE"
+  ],
+  "states": [
+   "MARBLE_THRESHOLD_EXPLICIT",
+   "CONTINUOUS_SAME_FINISH",
+   "SPLIT_AT_DOOR_PLANE",
+   "UNRESOLVED_FINISH",
+   "UNRESOLVED_TRANSITION_PLANE",
+   "UNRESOLVED_GEOMETRY",
+   "NOT_IN_TRADE"
+  ],
+  "params": {
+   "inside_reveal_margin": "eps_r (a hinge within eps_r of a face is ON that face)",
+   "parallel": "|cross(u_A, u_B)| x length <= eps_r and equal lengths within eps_r",
+   "area_check": "|site area - width x thickness| <= eps_r x site perimeter",
+   "split_areas": "side A = site area x offset / thickness; side B = site area - side A (exact sum)"
+  },
+  "never": [
+   "wall thickness / 2 without a scoped owner fact",
+   "the whole strip to one side of a split",
+   "a strip outside every floor quantity",
+   "a strip counted twice",
+   "marble without explicit evidence",
+   "a topology split of the building"
+  ],
+  "digest": "bb574f7f0b9bb5e4314c2bd3114b780322cb863f96ed53f75f8bd869ab9b7594"
+ },
+ "strip_audit_policy": {
+  "policy_id": "STRIP_ALLOCATION_AUDIT_V2",
+  "extends": "STRIP_ALLOCATION_AUDIT_V1",
+  "resolved": [
+   "CONTINUOUS_SAME_FINISH",
+   "SPLIT_AT_DOOR_PLANE",
+   "MARBLE_THRESHOLD_EXPLICIT"
+  ],
+  "blocking": [
+   "BLOCKED_SIDES_DIFFER",
+   "BLOCKED_SIDE_UNRESOLVED",
+   "UNRESOLVED_TRANSITION_PLANE",
+   "UNRESOLVED_FINISH",
+   "UNRESOLVED_GEOMETRY"
+  ],
+  "release_blockers": [
+   "EXCLUDED_SEPARATE_SITE",
+   "UNRESOLVED_HEAD_CONDITION"
+  ],
+  "ceiling": {
+   "door_threshold": "NOT_IN_TRADE",
+   "passage_with_head": "SOFFIT_EXCLUDED_FROM_CEILING",
+   "passage_full_height": "INCLUDED_IN_SITE_SAME_TREATMENT",
+   "passage_head_unknown": "UNRESOLVED_HEAD_CONDITION"
+  },
+  "never": [
+   "a strip counted twice",
+   "a strip in no row without a record",
+   "a soffit as ceiling",
+   "a head condition transferred from another revision"
+  ],
+  "digest": "2d5362448e198de6188d3c1cdc69ce24ca0a752bee75d7b74cf72ea546580a05"
+ },
+ "plane_hierarchy_applied": {
+  "1 AUTHORED_LEAF_PLANE": "NOT APPLICABLE on this source: every hinge lies on a wall face (SYMBOL_ANCHORED_AT_FACE)",
+  "2 authored jamb structure": "no frame / jamb line inside any reveal",
+  "3 OWNER_CENTRED_DOOR": "QORTUBA-NEW-DRY-WET-TRANSITION-AT-DOOR-PLANE-OWNER-001@v1 (door_centred, this Qortuba method only) on the ESTABLISHED face pair (closures A / B)"
+ },
+ "unit_boundary_rule": {
+  "rule": "a side whose site lies outside the measured unit is OUTSIDE_MEASURED_UNIT: the unit's finish meets it at the door plane; a threshold with both sides outside the unit is in no row",
+  "where": "lab scope input (research/external_engine_lab/r8_14_qortuba.py), not the engine",
+  "decided": "AFTER the first Qortuba run (disclosed): release blocker UNIT_BOUNDARY_THRESHOLD on the receiving row"
+ },
+ "never": [
+  "wall thickness / 2 without a scoped owner fact",
+  "the whole strip to one side of a split",
+  "a strip outside every floor quantity",
+  "a strip counted twice",
+  "marble without explicit evidence",
+  "a topology split of the building"
+ ]
+}
