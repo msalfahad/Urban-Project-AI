@@ -3,20 +3,30 @@
  "required_now": [],
  "owner_review_open": [],
  "headline": "NO OWNER ACTION REQUIRED.",
+ "answered_in_r8_11": [
+  {
+   "action_id": "QORTUBA_HALL_LOBBY_PASSAGE_CONSTRUCTION",
+   "status": "ANSWERED (volunteered)",
+   "answer": "real open passage, no door, no blockwork across; ~1.00 m clear (design meaning), 2.20 m clear height with a block / plastered head; block + plaster jambs both sides; the H2430 / H2431 wall-end geometry is real construction; the 9.2 mm H2431 gap is a drafting discontinuity",
+   "recorded_as": "QORTUBA-NEW-HALL-LOBBY-OPEN-PASSAGE-OWNER-001@v1 (data/registry/OWNER_PHYSICAL_FACTS.json, part-scoped by fingerprint)",
+   "never_ask_again": true
+  }
+ ],
  "prepared_not_asked": [
   {
    "action_id": "QORTUBA_FLOOR_UNDER_BUILT_IN_WARDROBES",
    "question": "Qortuba porcelain floor: is it laid over the whole room, under the built-in wardrobes of the dressing room and under loose furniture as well? YES - whole room / NO - the wardrobe footprint is deducted / NOT SURE",
-   "why_not_asked": "the sole-blocker test fails: Q-13 is also blocked by ROLE_AUTHORITY:ROLE_CONFLICT_SEPARATOR:2430, ROLE_AUTHORITY:TOPOLOGY_ROLE_UNRESOLVED - an answer now would not release Q-13",
+   "why_not_asked": "the sole-blocker test fails: Q-13 is also blocked by ENGINE_LIMITATION:WALL_END_REPRESENTATION_PENDING:2430, ROLE_AUTHORITY:TOPOLOGY_ROLE_UNRESOLVED - an answer now would not release Q-13",
    "never": "an expected quantity"
   },
   {
    "action_id": "QORTUBA_CORRECTED_DRAWING_HALL_LOBBY_CAPS",
    "request": "a corrected drawing with the Hall / Lobby wall-end lines on the WALL layer meeting the faces",
-   "why_not_asked": "a new drawing is a new source revision (every claim re-anchored); the engine route (E-R8.12-01) is tried first"
+   "why_not_asked": "not needed: the physical construction is answered; a corrected drawing would only serve a SOURCE_CORRECTION (a new revision, every claim re-anchored)"
   }
  ],
  "do_not_ask": [
+  "the Hall / Lobby passage construction (answered)",
   "7116-7119",
   "the selected plan",
   "the units",

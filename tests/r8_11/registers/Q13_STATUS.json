@@ -1,9 +1,10 @@
 {
  "SCHEMA": "URBAN_R8_11_Q13_STATUS_V1",
  "row": "Q-13",
- "state": "BLOCKED_MULTIPLE: BLOCKED_ROLE, BLOCKED_TRADE_RULE",
+ "state": "BLOCKED_MULTIPLE: BLOCKED_ENGINE_LIMITATION, BLOCKED_ROLE, BLOCKED_TRADE_RULE",
  "value": null,
  "blocker_classes": [
+  "ENGINE_LIMITATION",
   "ROLE_AUTHORITY",
   "TRADE_RULE"
  ],
@@ -30,8 +31,8 @@
      }
     },
     {
-     "class": "ROLE_AUTHORITY",
-     "issue": "ROLE_CONFLICT_SEPARATOR",
+     "class": "ENGINE_LIMITATION",
+     "issue": "WALL_END_REPRESENTATION_PENDING",
      "detail": {
       "source": "2430",
       "roles": [
@@ -40,7 +41,10 @@
       "pockets_m2": [
        0.3813
       ],
-      "why": "a line closing a wall core / a possible partition: material to every area trade whatever the footprint policy"
+      "physical_role": "RESOLVED: REAL_WALL_END (QORTUBA-NEW-HALL-LOBBY-OPEN-PASSAGE-OWNER-001@v1 + the source geometry)",
+      "engine_representation": "NOT_ESTABLISHED: no ESTABLISHED wall band ends at this line, so neither a closure nor a cap admission exists",
+      "resolution": "E-R8.12-01 generic fragment-aware wall band (synthetic tests, freeze, blind re-run); fallback: the owner fact as a part-scoped role claim",
+      "owner_action": "NONE"
      }
     },
     {
@@ -150,12 +154,12 @@
  },
  "final": false,
  "run_input_digest": "645dff01bd02218557203c6e1d5d5d999e1b3ca7abdc091e0b4a36bf0bf1ec68",
- "row_input_digest": "bd165f4dc071e6630d56963a6503ec6bdcd113021bda8fb6f4e4e665b2081593",
+ "row_input_digest": "75a41b15e4065ba4663de6b4350f07974a0e12f782229d18669ed233b14e7b4f",
  "sole_blocker_test": {
   "question": "is the floor-under-object fact the ONLY remaining Q-13 blocker?",
   "answer": "NO",
   "other_blockers": [
-   "ROLE_AUTHORITY:ROLE_CONFLICT_SEPARATOR:2430",
+   "ENGINE_LIMITATION:WALL_END_REPRESENTATION_PENDING:2430",
    "ROLE_AUTHORITY:TOPOLOGY_ROLE_UNRESOLVED"
   ],
   "consequence": "no owner question is asked in R8.11"

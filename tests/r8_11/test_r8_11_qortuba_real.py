@@ -91,8 +91,9 @@ def test_new_revision_rows_preserve_r8_10_and_q14_q13_stay_blocked():
     rows = _r("QORTUBA_R8_11_STATUS")["rows"]["NEW_K2_R8_11"]
     assert {r: rows[r]["value"] for r in ("Q-03", "Q-03P", "Q-11", "Q-12")} == {
         "Q-03": 17.7425, "Q-03P": 11.685, "Q-11": 17.7425, "Q-12": 11.685}
-    assert rows["Q-14"]["state"] == "BLOCKED_ROLE" and rows["Q-14"]["value"] is None
-    assert rows["Q-13"]["state"] == "BLOCKED_MULTIPLE: BLOCKED_ROLE, BLOCKED_TRADE_RULE"
+    # owner clarification: H2430's physical role is resolved; what blocks is the engine representation
+    assert rows["Q-14"]["state"] == "BLOCKED_ENGINE_LIMITATION" and rows["Q-14"]["value"] is None
+    assert rows["Q-13"]["state"] == "BLOCKED_MULTIPLE: BLOCKED_ENGINE_LIMITATION, BLOCKED_ROLE, BLOCKED_TRADE_RULE"
     assert all(v["final"] is False for v in (_r("Q13_STATUS"), _r("Q14_STATUS")))
     assert all(v["release_blockers"] and v["run_input_digest"] and v["row_input_digest"] for v in rows.values())
 
@@ -101,7 +102,8 @@ def test_q14_is_blocked_by_the_h2430_wall_core_only():
     (site,) = _r("Q14_STATUS")["blockers"]
     assert site["zones"] == ["HALL", "whgm"]
     (b,) = site["blockers"]
-    assert b["issue"] == "ROLE_CONFLICT_SEPARATOR" and b["detail"]["source"] == "2430"
+    assert (b["class"], b["issue"]) == ("ENGINE_LIMITATION", "WALL_END_REPRESENTATION_PENDING")
+    assert b["detail"]["source"] == "2430" and b["detail"]["owner_action"] == "NONE"
     assert b["detail"]["pockets_m2"] == [0.3813]
 
 

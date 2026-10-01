@@ -394,3 +394,31 @@ claim, the class rule, footprint policies) is bound per row by a row_input_diges
 
 **Package:** `data/reports/URBAN_QTO_R8_11_WALL_BANDS_AND_RUN_MANIFEST/`. **Gates:** MIGRATION_PLANNING_READY = YES,
 MIGRATION_EXECUTION_READY = NO, PRODUCTION_MIGRATION = NO.
+
+### 12.1 Owner clarification — Hall / Lobby open passage
+
+The owner has confirmed that the Hall / Lobby connection is a real open passage:
+- no door, and no blockwork across the opening;
+- about 1.00 m clear, with a 2.20 m block / plastered head;
+- block + plaster jambs on both sides.
+
+The H2430 / H2431 wall-end geometry is real construction, and the 9.2 mm H2431 gap is a drafting discontinuity.
+
+This is recorded as a **part-bound physical fact** (`data/registry/OWNER_PHYSICAL_FACTS.json`): revision + DXF anchor +
+region + frame + seven part fingerprints. It is never a role claim and never a quantity. It does three things:
+1. it **reviews** the H2431 closure (REVIEWED_BY_OWNER). The closure stays AUTHORISED_FOR_SHADOW, zero material and
+   not released;
+2. it **reclassifies** the H2430 blocker from ROLE_AUTHORITY to ENGINE_LIMITATION (WALL_END_REPRESENTATION_PENDING),
+   because the physical role is resolved and only the engine representation is missing;
+3. it supplies the attributes of the owner-declared OPEN_PASSAGE_SITE: door, head and side construction.
+
+The passage width is the measured 1196.45 mm, not the owner's ~1.00 m. The 196 mm difference is recorded for review
+before any skirting or reveal trade.
+
+The east jamb reveal (real material) and the topology closure (no material) share one plan segment. Quantity may
+only ever come from the reveal record.
+
+The fact enters no TS01 input: RUN_INPUT_DIGEST, sites, areas and the frozen rules are unchanged. Q-14 =
+BLOCKED_ENGINE_LIMITATION, and its value is deliberately not computed. R8.12 runs the fragment-aware band rule
+(E-R8.12-01) blind first. The owner fact becomes a part-scoped role claim on H2430 only if that generic rule cannot
+establish the band.

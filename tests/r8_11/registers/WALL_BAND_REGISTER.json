@@ -2573,7 +2573,16 @@
     ],
     "not_done_in_r8_11": "a fragment-aware pairing (mutual nearest over the OVERLAP; collinear face fragments as one face in the safety test) is generic, but it was identified AFTER seeing the Qortuba result; adopting it now would calibrate the frozen rule to H2430. It is engineering action E-R8.12-01 (synthetic tests first, then a blind re-run)."
    },
-   "old_revision_counterpart": "H553 (WALL layer) caps the band at x = 109808.08 in the old revision: corroboration only (a different drawing; never transferred)"
+   "old_revision_counterpart": "H553 (WALL layer) caps the band at x = 109808.08 in the old revision: corroboration only (a different drawing; never transferred)",
+   "physical_role": {
+    "state": "RESOLVED: REAL_WALL_END",
+    "authority": [
+     "QORTUBA-NEW-HALL-LOBBY-OPEN-PASSAGE-OWNER-001@v1",
+     "source geometry: H2430 meets both face end points exactly (0.0 mm)"
+    ],
+    "generic_classification_unchanged": "UNRESOLVED",
+    "engine_representation": "NONE: no established band ends here (E-R8.12-01)"
+   }
   },
   "2431": {
    "handle": "2431",
@@ -2615,7 +2624,16 @@
     "reversible": true
    },
    "closure_geometry_is_face_end_points": true,
-   "old_revision_counterpart": "none drawn on DIM; the old revision's passage geometry differs"
+   "old_revision_counterpart": "none drawn on DIM; the old revision's passage geometry differs",
+   "physical_role": {
+    "state": "RESOLVED: REAL_WALL_END",
+    "authority": [
+     "QORTUBA-NEW-HALL-LOBBY-OPEN-PASSAGE-OWNER-001@v1",
+     "source geometry: the H2296 / H2297 band end it sits across (9.2 mm short)"
+    ],
+    "generic_classification_unchanged": "WALL_END_CAP_CANDIDATE",
+    "engine_representation": "ZERO-MATERIAL CLOSURE (authorised for shadow, owner-reviewed)"
+   }
   },
   "1316": {
    "handle": "1316",

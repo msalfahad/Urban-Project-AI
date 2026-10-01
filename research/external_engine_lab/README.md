@@ -120,6 +120,7 @@ bridges it to the legacy QS01 method. Owner decisions are scoped claims in `data
 | `r8_10_package.py` | `data/reports/URBAN_QTO_R8_10_OWNER_CLAIMS_AND_TRADE_EQUIVALENCE/` + zip | review package (18 md + 15 json + picture) |
 | `r8_11_qortuba.py` | `tests/r8_11/registers/{WALL_BAND_REGISTER,TOPOLOGY_CLOSURE_REGISTER,NEAR_MISS_REGISTER,OPEN_PASSAGE_SITE_REGISTER,THRESHOLD_SITE_REGISTER,OBJECT_FOOTPRINT_POLICY,SEMANTIC_CLASS_REGISTER,QTO_RUN_MANIFEST,Q13_STATUS,Q14_STATUS,QORTUBA_R8_11_STATUS}.json` | rebuild with wall bands + zero-material closures, blind cap analysis (H2430 / H2431 / H1316), passages, footprint policies, six rows with provenance and run manifest |
 | `r8_11_registers.py` | `tests/r8_11/registers/{OWNER_ACTION_REGISTER,ENGINEERING_ACTION_REGISTER,R8_11_DECISION_REGISTER}.json` | owner actions V8, engineering actions, recommendation, decisions, gates, answers 1-30 |
+| `r8_11_owner_facts.py` | `data/registry/OWNER_PHYSICAL_FACTS.json` | owner clarification (Hall / Lobby open passage) as a part-bound physical fact; binding; owner-declared OPEN_PASSAGE_SITE with measured geometry |
 | `r8_11_package.py` | `data/reports/URBAN_QTO_R8_11_WALL_BANDS_AND_RUN_MANIFEST/` + zip | review package (19 md + 15 json + picture) |
 
 `<work>` must hold `old_k2.pkl` (K2 on LibreDWG's DXF of the old DWG) and `new_k2.pkl` (K2 on the hash-addressed new DXF).

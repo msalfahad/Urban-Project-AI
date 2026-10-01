@@ -241,5 +241,17 @@
   "B TOPOLOGY CLOSURE: these records",
   "C SOURCE CORRECTION CLAIM: none in R8.11"
  ],
- "material": "NONE for every closure: no wall length, wall area, plaster, paint, skirting or opening width"
+ "material": "NONE for every closure: no wall length, wall area, plaster, paint, skirting or opening width",
+ "owner_review": {
+  "TC-aea10821cffe20ff": {
+   "state": "REVIEWED_BY_OWNER",
+   "fact": "QORTUBA-NEW-HALL-LOBBY-OPEN-PASSAGE-OWNER-001@v1",
+   "fact_binding": "APPLIES",
+   "reviews": "the physical reading only: the east jamb is continuous block + plaster construction and the 9.2 mm H2431 shortfall is a drafting discontinuity, not an opening",
+   "release_level": "AUTHORISED_FOR_SHADOW (unchanged: it was already authorised by the generic evidence - established band, aligned free end, drawn-cap corroboration, safety test)",
+   "authorised_for_release": "NO: source anchor NOT_ESTABLISHED, no release gate",
+   "material": "NONE (unchanged; the owner's real block / plaster belongs to the jamb REVEAL record of OP-OWNER-HALL-LOBBY, which shares this plan segment)",
+   "geometry_unchanged": true
+  }
+ }
 }

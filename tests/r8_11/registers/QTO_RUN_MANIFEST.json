@@ -117,8 +117,8 @@
   },
   "run_id": "RUN-645dff01bd022185",
   "RUN_INPUT_DIGEST": "645dff01bd02218557203c6e1d5d5d999e1b3ca7abdc091e0b4a36bf0bf1ec68",
-  "code_commit": "f5a9043",
-  "CODE_BOUND_DIGEST": "66f80eaea91b24f30589547021f3d0426c4aec923bfb1234b05a2b8c8dbef5b0",
+  "code_commit": "ee0bdb6",
+  "CODE_BOUND_DIGEST": "0c8e1cadd50e34fc041e8939628f3407191370d6298c832ac0376e9bf0c4dcb0",
   "metadata": {
    "lab": "research/external_engine_lab/r8_11_qortuba.py",
    "geos_loaded": "3.13.1"
@@ -239,8 +239,8 @@
   },
   "run_id": "RUN-893f114fbc734748",
   "RUN_INPUT_DIGEST": "893f114fbc7347481067da03f45af61505172ad5cec3f9979b3e1d0106a1230f",
-  "code_commit": "f5a9043",
-  "CODE_BOUND_DIGEST": "3190d21a628ae58a2507c169c3b62f16a9ebff71c6d292dac4b0b6f3f737b6a2",
+  "code_commit": "ee0bdb6",
+  "CODE_BOUND_DIGEST": "91ae9cf38e2cdbe394d1ea350d8e1a7c440b3cd41ac46b2e57999584c531f3da",
   "metadata": {
    "lab": "research/external_engine_lab/r8_11_qortuba.py",
    "geos_loaded": "3.13.1"

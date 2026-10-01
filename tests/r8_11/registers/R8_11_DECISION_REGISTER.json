@@ -30,6 +30,94 @@
   ],
   "10_r8_12": "fragment-aware wall bands frozen with synthetic tests then a blind re-run (E-R8.12-01); the DWG <-> DXF anchor (E-R8.12-02); reviewed closure records (E-R8.12-03); still no migration"
  },
+ "owner_clarification_addendum": {
+  "fact": {
+   "fact": "QORTUBA-NEW-HALL-LOBBY-OPEN-PASSAGE-OWNER-001@v1",
+   "state": "APPLIES",
+   "parts": [
+    {
+     "handle": "2430",
+     "state": "APPLIES",
+     "physical_reading": "REAL_WALL_END"
+    },
+    {
+     "handle": "2431",
+     "state": "APPLIES",
+     "physical_reading": "REAL_WALL_END"
+    },
+    {
+     "handle": "470",
+     "state": "APPLIES",
+     "physical_reading": "REAL_WALL_FACE"
+    },
+    {
+     "handle": "471",
+     "state": "APPLIES",
+     "physical_reading": "REAL_WALL_FACE"
+    },
+    {
+     "handle": "477",
+     "state": "APPLIES",
+     "physical_reading": "REAL_WALL_FACE"
+    },
+    {
+     "handle": "2296",
+     "state": "APPLIES",
+     "physical_reading": "REAL_WALL_FACE"
+    },
+    {
+     "handle": "2297",
+     "state": "APPLIES",
+     "physical_reading": "REAL_WALL_FACE"
+    }
+   ]
+  },
+  "old_revision": "SOURCE_SCOPE_MISMATCH",
+  "1_h2431_closure_authoritative_for_shadow": "YES - it already was (AUTHORISED_FOR_SHADOW (unchanged: it was already authorised by the generic evidence - established band, aligned free end, drawn-cap corroboration, safety test)); the owner fact adds an independent review (REVIEWED_BY_OWNER) of the physical reading. Not for release: NO: source anchor NOT_ESTABLISHED, no release gate. Material: NONE (unchanged; the owner's real block / plaster belongs to the jamb REVEAL record of OP-OWNER-HALL-LOBBY, which shares this plan segment)",
+  "2_h2430_real_wall_end_role": "YES for the PHYSICAL role (RESOLVED: REAL_WALL_END: owner fact + the line meets both face end points exactly). NO for the ENGINE representation: the generic classification stays UNRESOLVED (no band, so no closure)",
+  "3_q14_blocked_by_engine_limitation": "YES: no owner or physical fact is missing; the blocker is the generic band rule's fragmented-face limitation (plus a deliberate choice not to apply the owner fact as a role claim before E-R8.12-01 runs blind)",
+  "4_q14_blocker_reclassified": {
+   "before": "BLOCKED_ROLE: ROLE_AUTHORITY / ROLE_CONFLICT_SEPARATOR [H2430]",
+   "after": "BLOCKED_ENGINE_LIMITATION: ENGINE_LIMITATION / WALL_END_REPRESENTATION_PENDING [2430]",
+   "physical_fact": "RESOLVED (owner + source)",
+   "engine_representation": "PENDING (E-R8.12-01)",
+   "owner_action": "NONE",
+   "value_computed": false
+  },
+  "5_frozen_rule_untouched": {
+   "wall_band_policy": "WALL_BAND_POLICY_V2",
+   "closure_policy": "TOPOLOGY_CLOSURE_POLICY_V1",
+   "RUN_INPUT_DIGEST_unchanged": true,
+   "H2430": "kept blocked; fragment-aware pairing = E-R8.12-01"
+  },
+  "6_recommendation": [
+   "keep Q-14 blocked in R8.11 and do NOT compute it under an H2430 claim: a known value would become the target the R8.12 generic rule is judged against",
+   "R8.12 order: synthetic fragmented-face tests -> freeze -> blind Qortuba run -> only then compare with the owner fact; apply the owner fact as a part-scoped H2430 role claim ONLY if the generic rule cannot establish the band",
+   "width: measured 1196.45 mm vs the owner's ~1.00 m (+196.4 mm). Use the measured width (as instructed), but the gap is beyond any drafting or plaster tolerance and matches the old revision's QP-17 1.200 m: review it before any skirting / reveal quantity",
+   "head: the owner's 2.20 m head contradicts the old revision's QP-18 'full height, no top' for this passage; it is a new-revision fact and QP-18 is never transferred. It creates a ceiling vs soffit overlap: the strip is inside the HALL ceiling footprint under the Q-14 claim (Q-14 release note)",
+   "two records on one plan segment: the east jamb reveal (real block + plaster) and the topology closure (material NONE) share the H2296 / H2297 end segment; quantity may only ever come from the reveal record",
+   "H2430 stays DIMENSION_GRAPHICS in source role; its physical meaning (west jamb end face) lives in the fact and the passage reveal record, never as a re-layered source entity"
+  ],
+  "passage_record": {
+   "passage_id": "OP-OWNER-HALL-LOBBY",
+   "record_origin": "OWNER_DECLARED (geometry measured from source)",
+   "engine_detection": "NOT_DETECTED: the west jamb (H470 + H471 / H477) is no established wall band under WALL_BAND_POLICY_V2 (fragmented face; E-R8.12-01)",
+   "clear_width_mm_measured": 1196.45,
+   "owner_approx_clear_width_m": 1.0,
+   "wall_thickness_mm": 200.0,
+   "strip_footprint_m2_geometry": 0.2393,
+   "clear_height_m": 2.2,
+   "door": "NONE",
+   "side_construction": "BLOCK + PLASTER",
+   "head": "BLOCK / PLASTERED HEAD at 2.20 m clear height",
+   "strip_in_site": "SITE-6d1ce80253b53f83",
+   "topology": {
+    "west_end": "OPEN into the H2430 wall core (the core stays in the HALL until the band is established or a claim applies)",
+    "east_end": "closed by TC-aea10821cffe20ff (zero material)",
+    "across_the_opening": "NOTHING: no closure, no wall, no block crosses the passage"
+   }
+  }
+ },
  "order": [
   "wall-band, cap, near-miss and closure rules frozen with 24 synthetic tests: commit 5895981",
   "first Qortuba run (rules as frozen): {\"Q-03\": 17.7425, \"Q-03P\": 11.685, \"Q-11\": 17.7425, \"Q-12\": 11.685, \"Q-13\": \"BLOCKED_MULTIPLE: BLOCKED_ROLE, BLOCKED_TRADE_RULE\", \"Q-14\": \"BLOCKED_ROLE\"}",
@@ -68,6 +156,10 @@
   {
    "id": "R811-D08",
    "decision": "no owner question (sole-blocker test fails); no row FINAL"
+  },
+  {
+   "id": "R811-D09",
+   "decision": "owner clarification (Hall / Lobby) recorded as a part-bound PHYSICAL FACT: it reviews the H2431 closure and reclassifies the H2430 blocker as an engine limitation; it is NOT applied as a role claim (no wall-core closure, no Q-14 value) so R8.12's generic rule runs blind"
   }
  ],
  "rows": {
@@ -88,11 +180,11 @@
    11.685
   ],
   "Q-13": [
-   "BLOCKED_MULTIPLE: BLOCKED_ROLE, BLOCKED_TRADE_RULE",
+   "BLOCKED_MULTIPLE: BLOCKED_ENGINE_LIMITATION, BLOCKED_ROLE, BLOCKED_TRADE_RULE",
    null
   ],
   "Q-14": [
-   "BLOCKED_ROLE",
+   "BLOCKED_ENGINE_LIMITATION",
    null
   ]
  },
@@ -137,7 +229,7 @@
   "10_label_changed_sides": "NO (label_partition_unchanged=True)",
   "11_h1316": "NOT_WALL_CAP: glazing ['1317', '1318', '1319', '1320'] ends on it; no closure; its near-miss lies in an unlabelled window-strip site no row uses",
   "12_50mm_band_review_only": "YES: it grades caps and flags gaps; it never joins anything",
-  "13_q14_computed_shadow": "NO: BLOCKED_ROLE",
+  "13_q14_computed_shadow": "NO: BLOCKED_ENGINE_LIMITATION (reclassified after the owner clarification: an ENGINE limitation)",
   "14_q14_blocker": [
    {
     "site": "SITE-6d1ce80253b53f83",
@@ -148,8 +240,8 @@
     "area_m2": 43.180638,
     "blockers": [
      {
-      "class": "ROLE_AUTHORITY",
-      "issue": "ROLE_CONFLICT_SEPARATOR",
+      "class": "ENGINE_LIMITATION",
+      "issue": "WALL_END_REPRESENTATION_PENDING",
       "detail": {
        "source": "2430",
        "roles": [
@@ -158,13 +250,16 @@
        "pockets_m2": [
         0.3813
        ],
-       "why": "a line closing a wall core / a possible partition: material to every area trade whatever the footprint policy"
+       "physical_role": "RESOLVED: REAL_WALL_END (QORTUBA-NEW-HALL-LOBBY-OPEN-PASSAGE-OWNER-001@v1 + the source geometry)",
+       "engine_representation": "NOT_ESTABLISHED: no ESTABLISHED wall band ends at this line, so neither a closure nor a cap admission exists",
+       "resolution": "E-R8.12-01 generic fragment-aware wall band (synthetic tests, freeze, blind re-run); fallback: the owner fact as a part-scoped role claim",
+       "owner_action": "NONE"
       }
      }
     ]
    }
   ],
-  "15_q13_computed_shadow": "NO: BLOCKED_MULTIPLE: BLOCKED_ROLE, BLOCKED_TRADE_RULE",
+  "15_q13_computed_shadow": "NO: BLOCKED_MULTIPLE: BLOCKED_ENGINE_LIMITATION, BLOCKED_ROLE, BLOCKED_TRADE_RULE",
   "16_q13_blockers": [
    {
     "site": "SITE-6d1ce80253b53f83",
@@ -188,8 +283,8 @@
       }
      },
      {
-      "class": "ROLE_AUTHORITY",
-      "issue": "ROLE_CONFLICT_SEPARATOR",
+      "class": "ENGINE_LIMITATION",
+      "issue": "WALL_END_REPRESENTATION_PENDING",
       "detail": {
        "source": "2430",
        "roles": [
@@ -198,7 +293,10 @@
        "pockets_m2": [
         0.3813
        ],
-       "why": "a line closing a wall core / a possible partition: material to every area trade whatever the footprint policy"
+       "physical_role": "RESOLVED: REAL_WALL_END (QORTUBA-NEW-HALL-LOBBY-OPEN-PASSAGE-OWNER-001@v1 + the source geometry)",
+       "engine_representation": "NOT_ESTABLISHED: no ESTABLISHED wall band ends at this line, so neither a closure nor a cap admission exists",
+       "resolution": "E-R8.12-01 generic fragment-aware wall band (synthetic tests, freeze, blind re-run); fallback: the owner fact as a part-scoped role claim",
+       "owner_action": "NONE"
       }
      },
      {
@@ -254,7 +352,7 @@
     ]
    }
   ],
-  "17_wardrobe_floor_sole_owner_fact": "NO: ROLE_AUTHORITY:ROLE_CONFLICT_SEPARATOR:2430, ROLE_AUTHORITY:TOPOLOGY_ROLE_UNRESOLVED",
+  "17_wardrobe_floor_sole_owner_fact": "NO: ENGINE_LIMITATION:WALL_END_REPRESENTATION_PENDING:2430, ROLE_AUTHORITY:TOPOLOGY_ROLE_UNRESOLVED",
   "18_sf3_floor": "ROLE_UNRESOLVED and material to FLOOR_FINISH (no footprint authority): blocks the HALL for Q-13; non-material to the ceiling (Q-14 policy)",
   "19_firntur_floor": "ROLE_UNRESOLVED and material to FLOOR_FINISH: blocks M.B.ROOM + DRESS for Q-13; non-material to the ceiling",
   "20_open_passage_explicit": "YES: 6 OPEN_PASSAGE_SITE records (new), 6 (old), each with width, thickness, polygon, jamb faces, head condition, adjacent sites and allocation",

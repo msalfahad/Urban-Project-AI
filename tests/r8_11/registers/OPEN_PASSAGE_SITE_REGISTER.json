@@ -934,5 +934,117 @@
    "soffit_guard": "if a head exists its soffit is an opening surface: never also ceiling area (Q-14) nor a room wall face"
   }
  },
+ "OWNER_DECLARED": [
+  {
+   "passage_id": "OP-OWNER-HALL-LOBBY",
+   "kind": "OPEN_PASSAGE_SITE",
+   "record_origin": "OWNER_DECLARED (geometry measured from source)",
+   "engine_detection": "NOT_DETECTED: the west jamb (H470 + H471 / H477) is no established wall band under WALL_BAND_POLICY_V2 (fragmented face; E-R8.12-01)",
+   "owner_fact": "QORTUBA-NEW-HALL-LOBBY-OPEN-PASSAGE-OWNER-001@v1",
+   "owner_fact_state": "APPLIES",
+   "clear_width_mm_measured": 1196.45,
+   "owner_approx_clear_width_m": 1.0,
+   "width_discrepancy_mm": 196.4,
+   "width_note": "deterministic width = measured face-to-face distance; the owner's ~1.00 m is design meaning. The 196 mm difference exceeds any drafting / plaster tolerance and matches the old revision's QP-17 1.200 m: recorded for review before any skirting / reveal quantity, not a value change",
+   "wall_thickness_mm": 200.0,
+   "strip_polygon": [
+    [
+     109773.7561,
+     15029.7196
+    ],
+    [
+     109893.4009,
+     15029.7196
+    ],
+    [
+     109893.4009,
+     15049.7196
+    ],
+    [
+     109773.7561,
+     15049.7196
+    ]
+   ],
+   "strip_footprint_m2_geometry": 0.2393,
+   "clear_height_m": 2.2,
+   "door": "NONE",
+   "side_construction": "BLOCK + PLASTER",
+   "head": "BLOCK / PLASTERED HEAD at 2.20 m clear height",
+   "physically_connected": true,
+   "strip_in_site": "SITE-6d1ce80253b53f83",
+   "trade_allocation": "NOT_ALLOCATED",
+   "topology": {
+    "west_end": "OPEN into the H2430 wall core (the core stays in the HALL until the band is established or a claim applies)",
+    "east_end": "closed by TC-aea10821cffe20ff (zero material)",
+    "across_the_opening": "NOTHING: no closure, no wall, no block crosses the passage"
+   },
+   "trade_surfaces_record_only": {
+    "floor_strip": {
+     "plan": "strip_polygon",
+     "now": "inside site SITE-6d1ce80253b53f83 (HALL floor footprint)"
+    },
+    "left_reveal_west_jamb": {
+     "plan_segment": [
+      [
+       109773.7561,
+       15029.7196
+      ],
+      [
+       109773.7561,
+       15049.7196
+      ]
+     ],
+     "source": "H2430 (DIM layer, owner: real wall end) = H471 / H477 end points",
+     "height_m": 2.2,
+     "material": "BLOCK + PLASTER (owner)"
+    },
+    "right_reveal_east_jamb": {
+     "plan_segment": [
+      [
+       109893.4009,
+       15029.7196
+      ],
+      [
+       109893.4009,
+       15049.7196
+      ]
+     ],
+     "source": "H2296 / H2297 start points (H2431 is 9.2 mm short and is not used)",
+     "height_m": 2.2,
+     "material": "BLOCK + PLASTER (owner)",
+     "same_plan_segment_as": "TC-aea10821cffe20ff",
+     "two_records_rule": "the closure (material NONE) and this reveal (real material) share one plan segment: quantity may only ever come from the reveal record"
+    },
+    "top_reveal_soffit": {
+     "plan": "strip_polygon",
+     "level_m": 2.2,
+     "material": "BLOCK / PLASTERED HEAD (owner)"
+    },
+    "wall_faces_around": {
+     "west": [
+      "H471",
+      "H477",
+      "(H470)"
+     ],
+     "east": [
+      "H2296",
+      "H2297"
+     ],
+     "above_head": "wall face between 2.20 m and the wall height on both room sides"
+    }
+   },
+   "double_count_guard": [
+    "wall plaster / paint: the jamb end faces and the soffit are REVEAL surfaces, never also room wall perimeter; the room-side wall faces lose the opening (width x 2.20 m), not more",
+    "floor finish: the strip is one floor region; it is never also a threshold and never moved into a room to match a total",
+    "ceiling (Q-14): the strip lies inside the HALL footprint, so the owner's Q-14 claim (ceiling = floor footprint) counts it; its top is a soffit at 2.20 m - the reveal trade must not count it again unless an allocation rule removes it from the ceiling",
+    "opening / reveal quantities: computed once, from the reveal records, never from the topology closure"
+   ],
+   "material_on_any_closure": "NONE"
+  }
+ ],
+ "owner_vs_old_revision_rules": {
+  "QP-17 (old revision)": "Hall / Lobby 1.200 m - the measured new-revision width is 1196.45 mm; the owner now says ~1.00 m",
+  "QP-18 (old revision)": "Hall / Lobby OPEN_PASSAGE_FULL_HEIGHT, no top - the owner now states a block / plastered HEAD at 2.20 m for the NEW revision; QP-18 stays scoped to the old revision and is never transferred"
+ },
  "no_width_rule": "a 3.45 m strip and a 1.2 m strip are both recorded: the engine applies no size rule; what a trade does with a strip is an allocation rule (none exists: NOT_ALLOCATED)"
 }

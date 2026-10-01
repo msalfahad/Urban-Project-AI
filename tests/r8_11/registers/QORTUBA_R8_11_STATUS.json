@@ -188,9 +188,10 @@
      "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
      "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
     ],
-    "row_input_digest": "00ed7fee8bdc807d55d248bcce856b74bf0d64b6deb47cca8b885960f465e454",
+    "row_input_digest": "265b58c519387974ef4f261796b13fd1ec0c30a6c6ce2fc958bd91e482ad8e02",
     "row_input_digest_covers": [
      "footprint_policies",
+     "owner_physical_facts",
      "row",
      "row_claims",
      "run_input_digest",
@@ -284,9 +285,10 @@
      "OBJECT_FOOTPRINT_IMPLICIT: proven furniture / fixture footprints are inside the measured floor by the topology convention, not by a FLOOR_FINISH footprint authority",
      "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
     ],
-    "row_input_digest": "62728a42a9c8c6506128e878e9f93c9e66ceaf50210092f7d29ca5115b1c513d",
+    "row_input_digest": "dca747b4506b0b1460f06c948410827148a8715015b229d78b682f754d17ec22",
     "row_input_digest_covers": [
      "footprint_policies",
+     "owner_physical_facts",
      "row",
      "row_claims",
      "run_input_digest",
@@ -469,9 +471,10 @@
      "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
      "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
     ],
-    "row_input_digest": "ce3b62619aba505b382f56295390dcd27f446c3b0ecf717bea590649d207bd8e",
+    "row_input_digest": "d71682fdcff0da16b781ee541df7720671c36e88d40182ffe380d9a404a490c7",
     "row_input_digest_covers": [
      "footprint_policies",
+     "owner_physical_facts",
      "row",
      "row_claims",
      "run_input_digest",
@@ -565,9 +568,10 @@
      "OBJECT_FOOTPRINT_IMPLICIT: proven furniture / fixture footprints are inside the measured floor by the topology convention, not by a FLOOR_FINISH footprint authority",
      "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
     ],
-    "row_input_digest": "c34ba43c86477d96d397ab8a47fb63a8b7f2a14049f7ddd5d1448546b9463382",
+    "row_input_digest": "74ce4aa5feaac3257a0eb663c88afb74ae4c730a79c54272a5923616fbee2dd3",
     "row_input_digest_covers": [
      "footprint_policies",
+     "owner_physical_facts",
      "row",
      "row_claims",
      "run_input_digest",
@@ -576,7 +580,7 @@
     ]
    },
    "Q-13": {
-    "state": "BLOCKED_MULTIPLE: BLOCKED_ROLE, BLOCKED_TRADE_RULE",
+    "state": "BLOCKED_MULTIPLE: BLOCKED_ENGINE_LIMITATION, BLOCKED_ROLE, BLOCKED_TRADE_RULE",
     "value": null,
     "physical_site_ids": [
      "SITE-5f1762f1a93b91ca",
@@ -625,8 +629,8 @@
         }
        },
        {
-        "class": "ROLE_AUTHORITY",
-        "issue": "ROLE_CONFLICT_SEPARATOR",
+        "class": "ENGINE_LIMITATION",
+        "issue": "WALL_END_REPRESENTATION_PENDING",
         "detail": {
          "source": "2430",
          "roles": [
@@ -635,7 +639,10 @@
          "pockets_m2": [
           0.3813
          ],
-         "why": "a line closing a wall core / a possible partition: material to every area trade whatever the footprint policy"
+         "physical_role": "RESOLVED: REAL_WALL_END (QORTUBA-NEW-HALL-LOBBY-OPEN-PASSAGE-OWNER-001@v1 + the source geometry)",
+         "engine_representation": "NOT_ESTABLISHED: no ESTABLISHED wall band ends at this line, so neither a closure nor a cap admission exists",
+         "resolution": "E-R8.12-01 generic fragment-aware wall band (synthetic tests, freeze, blind re-run); fallback: the owner fact as a part-scoped role claim",
+         "owner_action": "NONE"
         }
        },
        {
@@ -692,6 +699,7 @@
      }
     ],
     "blocker_classes": [
+     "ENGINE_LIMITATION",
      "ROLE_AUTHORITY",
      "TRADE_RULE"
     ],
@@ -1071,9 +1079,10 @@
      "OBJECT_FOOTPRINT_IMPLICIT: proven furniture / fixture footprints are inside the measured floor by the topology convention, not by a FLOOR_FINISH footprint authority",
      "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
     ],
-    "row_input_digest": "bd165f4dc071e6630d56963a6503ec6bdcd113021bda8fb6f4e4e665b2081593",
+    "row_input_digest": "75a41b15e4065ba4663de6b4350f07974a0e12f782229d18669ed233b14e7b4f",
     "row_input_digest_covers": [
      "footprint_policies",
+     "owner_physical_facts",
      "row",
      "row_claims",
      "run_input_digest",
@@ -1082,7 +1091,7 @@
     ]
    },
    "Q-14": {
-    "state": "BLOCKED_ROLE",
+    "state": "BLOCKED_ENGINE_LIMITATION",
     "value": null,
     "physical_site_ids": [
      "SITE-1c4abf65f9b5db1e",
@@ -1163,8 +1172,8 @@
       "area_m2": 43.180638,
       "blockers": [
        {
-        "class": "ROLE_AUTHORITY",
-        "issue": "ROLE_CONFLICT_SEPARATOR",
+        "class": "ENGINE_LIMITATION",
+        "issue": "WALL_END_REPRESENTATION_PENDING",
         "detail": {
          "source": "2430",
          "roles": [
@@ -1173,14 +1182,17 @@
          "pockets_m2": [
           0.3813
          ],
-         "why": "a line closing a wall core / a possible partition: material to every area trade whatever the footprint policy"
+         "physical_role": "RESOLVED: REAL_WALL_END (QORTUBA-NEW-HALL-LOBBY-OPEN-PASSAGE-OWNER-001@v1 + the source geometry)",
+         "engine_representation": "NOT_ESTABLISHED: no ESTABLISHED wall band ends at this line, so neither a closure nor a cap admission exists",
+         "resolution": "E-R8.12-01 generic fragment-aware wall band (synthetic tests, freeze, blind re-run); fallback: the owner fact as a part-scoped role claim",
+         "owner_action": "NONE"
         }
        }
       ]
      }
     ],
     "blocker_classes": [
-     "ROLE_AUTHORITY"
+     "ENGINE_LIMITATION"
     ],
     "trade_authority": {
      "rule": "QORTUBA-Q14-CEILING-TREATMENT@v1",
@@ -1620,11 +1632,13 @@
     "run_input_digest": "645dff01bd02218557203c6e1d5d5d999e1b3ca7abdc091e0b4a36bf0bf1ec68",
     "release_blockers": [
      "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+     "PASSAGE_SOFFIT_ALLOCATION: the OP-OWNER-HALL-LOBBY strip (0.2393 m2) lies inside the ceiling footprint but its top is a soffit at 2.2 m (owner): ceiling vs reveal allocation rule required",
      "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
     ],
-    "row_input_digest": "cbb1d3cc6778faa5f01463d7c474e8690278712986a80f59f132368fc8e341d0",
+    "row_input_digest": "74ee08c2aeb34e207512c0fa8821b436889d1167f5fc0c8b93bb76536206cd51",
     "row_input_digest_covers": [
      "footprint_policies",
+     "owner_physical_facts",
      "row",
      "row_claims",
      "run_input_digest",
