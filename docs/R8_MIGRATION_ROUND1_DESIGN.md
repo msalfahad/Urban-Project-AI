@@ -296,3 +296,35 @@ single-letter layer names (about 95% UNKNOWN, fails closed); unit UNIT_UNRESOLVE
 
 **Package:** `data/reports/URBAN_QTO_R8_9_ROLE_AND_SEMANTIC_ZONES/`. **Gates:** MIGRATION_PLANNING_READY = YES,
 MIGRATION_EXECUTION_READY = NO, PRODUCTION_MIGRATION = NO.
+
+## 11. R8.10 addendum — owner claims, trade-specific semantic necessity, adversarial review
+
+**Owner answers as evidence.** `engine/source/owner_claims.py` binds every owner answer to source identity:
+revision id + anchor sha, region + frame (the plan), part key + fingerprint, xref occurrence + its source facts. A
+claim changes role or source-completeness authority only, never a record or a quantity, and never transfers. The two
+Qortuba answers are evidence version 2 (`data/registry/OWNER_SOURCE_CLAIMS.json`); every run records an
+evidence-version digest. Missing xrefs have four states (present / proven outside / owner-confirmed non-contributing
+/ potentially contributing); there is no IGNORE_XREF.
+
+**Adversarial review of R8.9.**
+
+| Path | Finding | R8.10 |
+|---|---|---|
+| NETWORK grade | a dimension line, wardrobe front or centreline on a wall layer is admitted silently | ESTABLISHED / CANDIDATE / ROLE_CONFLICT (a self-dimensioned line); CANDIDATE recorded, a wall-band model is R8.11 |
+| dimension coincidence | real walls are dimensioned corner to corner | not contrary evidence (tested on five old-revision walls) |
+| near-miss gaps | a line stopping 9.2 mm short leaked a wall core into the HALL with no flag | NEAR_MISS_BOUNDARY_GAP: review-only 50 mm band, diagnostic join, never released |
+| building assembly | a detail callout or a one-room block passed | V2: closed boundary children + nested door or two different room labels |
+| room tags | a lone "BATHROOM DETAIL" tag named a space | V2: repeated family use; drafting-document words never name a space |
+
+**Trade layer.** `engine/source/trade_regions.py`: each established zone gets a treatment per trade from an authority
+record; a multi-label site is one trade region only when the treatment set is a singleton (SEMANTIC_SUBDIVISION_NOT_
+REQUIRED_FOR_TRADE). Unresolved objects are ROLE_UNRESOLVED_BUT_NON_MATERIAL_TO_TRADE where the trade measures the
+whole footprint. Duplicate source occurrences are recorded, never deleted.
+
+**Qortuba (PLAN_VARIANT_4_SELECTED).** Q-03 / Q-11 = 17.7425, Q-03P / Q-12 = 11.685 (COMPUTED_SHADOW). Q-14 is blocked
+only by the Hall / Lobby wall-end caps drawn on DIM (one exact, one 9.2 mm short); Q-13 additionally by the SF3 /
+FIRNTUR objects and the missing floor object-footprint rule. M.B.ROOM + DRESS: one site joined through a 1.2 m open
+passage in a WALL stub (R8.9 wording corrected). Source anchor (DWG <-> DXF) stays a migration blocker.
+
+**Package:** `data/reports/URBAN_QTO_R8_10_OWNER_CLAIMS_AND_TRADE_EQUIVALENCE/`. **Gates:** MIGRATION_PLANNING_READY =
+YES, MIGRATION_EXECUTION_READY = NO, PRODUCTION_MIGRATION = NO.

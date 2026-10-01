@@ -113,5 +113,10 @@ bridges it to the legacy QS01 method. Owner decisions are scoped claims in `data
 | `r8_9_p7757.py` | `tests/r8_9/registers/P7757_R8_9_SHADOW.json` | P7757 second-family shadow; unit never assumed |
 | `r8_9_registers.py` | `tests/r8_9/registers/{OWNER_ACTION_REGISTER,ENGINEERING_ACTION_REGISTER,R8_9_DECISION_REGISTER}.json` | owner actions V6, engineering actions, decisions / findings / gates / answers 1-27 |
 | `r8_9_package.py` | `data/reports/URBAN_QTO_R8_9_ROLE_AND_SEMANTIC_ZONES/` + zip | review package (19 md + 16 json + owner review picture) |
+| `r8_10_claims.py` | `data/registry/OWNER_SOURCE_CLAIMS.json` | the two Qortuba owner answers as source-identity-bound claims (evidence version 2); xref facts read from the DXF |
+| `r8_10_qortuba.py` | `tests/r8_10/registers/{OWNER_CLAIM_REGISTER,XREF_SCOPE_CLAIMS,DIM_WALL_CLAIMS,TRADE_SEMANTIC_EQUIVALENCE,UNRESOLVED_ROLE_MATERIALITY,DUPLICATE_OCCURRENCE_REGISTER,THRESHOLD_SITE_REGISTER,ROLE_AUTHORITY_ADVERSARIAL,BUILDING_ASSEMBLY_ADVERSARIAL,TEXT_TAG_ADVERSARIAL,QORTUBA_R8_10_STATUS}.json` | rebuild from the claims, trade treatment from the owner rule store, six rows with blocker classes |
+| `r8_10_p7757.py` | `tests/r8_10/registers/P7757_R8_10_SHADOW.json` | second family: attacks the generic assumptions; unit never assumed |
+| `r8_10_registers.py` | `tests/r8_10/registers/{OWNER_ACTION_REGISTER,R8_10_DECISION_REGISTER}.json` | owner actions V7, recommendation, decisions, gates, answers 1-24 |
+| `r8_10_package.py` | `data/reports/URBAN_QTO_R8_10_OWNER_CLAIMS_AND_TRADE_EQUIVALENCE/` + zip | review package (18 md + 15 json + picture) |
 
 `<work>` must hold `old_k2.pkl` (K2 on LibreDWG's DXF of the old DWG) and `new_k2.pkl` (K2 on the hash-addressed new DXF).
