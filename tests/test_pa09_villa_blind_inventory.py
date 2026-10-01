@@ -7,6 +7,7 @@ and that when no villa set is present the remaining steps stop rather than proce
 
 from __future__ import annotations
 
+import hashlib
 import json
 from pathlib import Path
 
@@ -82,9 +83,20 @@ def test_the_two_projects_that_cannot_be_measured_blind_are_still_set_apart():
     assert "ALRASHED" in SI.KNOWN and SI.KNOWN["ALRASHED"][0] == "BLIND_VALIDATION_PROJECT"
 
 
+def _digest(rows):
+    return hashlib.sha256(json.dumps(rows, sort_keys=True, ensure_ascii=False, default=str).encode()).hexdigest()[:16]
+
+
 def test_the_inventory_is_reproducible_and_hashed():
+    """R8.6 §15: this test used to call SI.finish(), which rescans the session's upload folder and OVERWRITES the
+    stored inventory, so the first run after a new upload failed and repaired its own expected truth for the second.
+    Uploads live outside the repository and are not regression truth. The test now writes nothing: it checks that
+    the stored artifact's digest is the hash of its own rows, and that the generator is deterministic in memory.
+    Drift between the stored inventory and a later upload folder is reported by a separate status step
+    (research/external_engine_lab/r8_6_upload_drift.py), never repaired by a test."""
     a = inv()
-    b = SI.finish()
-    assert b["DIGEST"] == a["DIGEST"]
-    assert len(b["DIGEST"]) == 16
-    assert b["COUNT"] == len(b["ROWS"]) > 0
+    assert a["DIGEST"] == _digest(a["ROWS"])
+    assert len(a["DIGEST"]) == 16
+    assert a["COUNT"] == len(a["ROWS"]) > 0
+    b1, b2 = SI.scan(), SI.scan()
+    assert _digest(b1) == _digest(b2)
