@@ -31,13 +31,19 @@ def test_the_r8_12_freeze_is_intact_and_superseded_only_by_the_recorded_r8_13_v4
     v4 = json.loads((ROOT / "tests/r8_13/registers/R8_13_V4_FREEZE.json").read_text())
     assert fz["wall_band_policy"]["id"] == "WALL_BAND_POLICY_V3" and v4["supersedes"]["wall_band_policy"] == \
         fz["wall_band_policy"]
-    assert (WB.POLICY_ID, WB.policy_record()["digest"]) == (v4["wall_band_policy"]["id"], v4["wall_band_policy"]["digest"])
+    assert v4["wall_band_policy"]["id"] == "WALL_BAND_POLICY_V4"                  # superseded by V5 (R8.14)
     assert (TC.POLICY_ID, TC.policy_record()["digest"]) == (fz["closure_policy"]["id"], fz["closure_policy"]["digest"])
+    v5 = json.loads((ROOT / "tests/r8_14/registers/R8_14_V5_FREEZE.json").read_text())
     for f, h in fz["synthetic_test_sha256"].items():
         live = hashlib.sha256((ROOT / f).read_bytes()).hexdigest()
-        sup = v4["superseded_frozen_tests"].get(f)
-        assert live == h or (sup and sup["r8_12_sha256"] == h and sup["r8_13_sha256"] == live), \
-            f"frozen test edited outside a recorded supersession: {f}"
+        chain = [h]                                            # R8.12 -> (R8.13 V4) -> (R8.14 V5), recorded hops only
+        s4 = v4["superseded_frozen_tests"].get(f)
+        if s4 and s4["r8_12_sha256"] == chain[-1]:
+            chain.append(s4["r8_13_sha256"])
+        s5 = v5["superseded_frozen_tests"].get(f)
+        if s5 and s5["previous_sha256"] == chain[-1]:
+            chain.append(s5["r8_14_sha256"])
+        assert live == chain[-1], f"frozen test edited outside a recorded supersession: {f}"
     assert fz["qortuba_runs_before_freeze"] == 0
 
 

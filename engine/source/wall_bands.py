@@ -1,5 +1,15 @@
 """WALL BANDS, WALL ENDS AND OPEN PASSAGES - topology-obstacle geometry from structure, never from size.
 
+R8.14 (WALL_BAND_POLICY_V5) = V4 + two hardenings of the R8.13 post-blind observations:
+  O2 TIE        elongation is decided against the declared tolerance: a run is elongated only when
+                run - elongation_ratio x separation > eps_r; within eps_r of equality it is NOT elongated
+                (ELONGATION_BOUNDARY_CASE, fail closed) - never by binary floating-point equality.
+  O1 AUTHORITY  band GEOMETRY is not band PHYSICAL AUTHORITY: a band with a face on an ISOLATED CLOSED LOOP (a closed
+                single-entity polyline whose segments touch no admitted segment of any other entity) and no positive
+                physical authority for that entity is a GEOMETRIC_BAND_CANDIDATE - recorded, but it carries no ends,
+                closures, passages or paired-face corroboration. Positive authority: a part-scoped owner role claim on
+                the entity (physical_authority). Never by thickness, size or location.
+
 R8.13 (WALL_BAND_POLICY_V4) = V3 + three generic corrections of the two R8.12 post-blind defects:
   D1 IDENTITY   a face chain is identified by its source entities + its SUPPORTING LINE (canonical direction and
                 signed offset) + its parameter interval along that line: two parallel sides of one closed polyline with
@@ -70,7 +80,7 @@ from dataclasses import dataclass, field
 from . import geometry_role as GR
 from . import role_authority as RA
 
-POLICY_ID = "WALL_BAND_POLICY_V4"      # V4 (R8.13): V3 + supporting-line identity + structural run support
+POLICY_ID = "WALL_BAND_POLICY_V5"      # V5 (R8.14): V4 + tolerance tie + geometric vs physical band authority
 ESTABLISHED = "WALL_BAND_ESTABLISHED"
 AMBIGUOUS = "WALL_BAND_AMBIGUOUS"
 ALIGNED_FREE_END = "ALIGNED_FREE_END"
@@ -160,6 +170,13 @@ PARAMS = {
                           "inside the loop). Never inherited from a group's total length; an UNSUPPORTED run is "
                           "recorded, never a band",
     "support_loop_roles": ["TOPOLOGY_BOUNDARY", "STRUCTURAL_OBSTACLE"],
+    "elongation_tie": "V5: elongated only when length - elongation_ratio x separation > eps_r (raw overlap pre-check and "
+                      "local run alike); within eps_r of equality -> NOT elongated (ELONGATION_BOUNDARY_CASE, fail "
+                      "closed)",
+    "physical_authority": "V5: a band with a face on an ISOLATED CLOSED LOOP (closed single-entity loop touching no "
+                          "admitted segment of another entity, within eps_n) is a GEOMETRIC_BAND_CANDIDATE unless that "
+                          "entity carries positive physical authority (a part-scoped owner role claim); candidates "
+                          "carry no ends, closures, passages or paired-face corroboration",
     "chain_identity": "entities + parameter interval along the canonical direction (V3, kept wherever it is unique "
                       "so a nudged face and an equivalent re-segmentation keep their id); chains of the SAME entities "
                       "and extent (parallel sides of one closed polyline) are told apart by their SUPPORTING LINE "
@@ -197,6 +214,10 @@ OPENING_JAMB = "OPENING_JAMB"
 JUNCTION = "JUNCTION_OR_CONTINUATION"
 IDENTITY_EXTENT = "ENTITIES_AND_EXTENT"            # V4 chain identity bases
 IDENTITY_LINE = "ENTITIES_EXTENT_AND_SUPPORTING_LINE"
+GEOMETRIC_CANDIDATE = "WALL_BAND_GEOMETRIC_CANDIDATE"   # V5: geometry without physical authority
+PHYSICAL = "PHYSICAL_WALL_BAND_ESTABLISHED"
+ISOLATED_CLOSED_LOOP = "ISOLATED_CLOSED_LOOP"
+BOUNDARY_CASE = "ELONGATION_BOUNDARY_CASE"
 SELF_SUPPORTED = "SELF_SUPPORTED"                     # V4 structural support of a local run
 INHERITED_SUPPORT = "INHERITED_SUPPORT"
 UNSUPPORTED = "UNSUPPORTED"
@@ -413,8 +434,39 @@ def _inside(p, segs):
     return c
 
 
+def _elongated(length, d, eps_r):
+    """V5 tie rule: True / False, or None at the boundary (within eps_r of length == ratio x separation)."""
+    m = length - ELONGATION * d
+    if m > eps_r:
+        return True
+    return None if m >= -eps_r else False
+
+
+def _isolated_loops(loops, items, eps_n):
+    """Closed single-entity loops whose segments touch no admitted segment of another entity."""
+    adm = [_Seg(it) for it in items if it.kind == "SEGMENT"]
+    out = {}
+    for ent, ss in sorted(loops.items()):
+        mine = {x.item.source_id for x in ss}
+        if not mine <= {a.item.source_id for a in adm}:
+            continue                                      # not an admitted boundary loop
+        touch = False
+        for o in adm:
+            if o.item.source_id in mine:
+                continue
+            for x in ss:
+                if any(_on_seg(q, x, eps_n) for q in (o.a, o.b)) or any(_on_seg(q, o, eps_n) for q in (x.a, x.b)):
+                    touch = True
+                    break
+            if touch:
+                break
+        if not touch:
+            out[ent] = sorted(mine)
+    return out
+
+
 def detect(items, *, eps_r, band_review, revision_id, region_id, labels=(), texts=(), unit_native_to_mm=None,
-           cap_pool=(), extra_targets=(), eps_n=None) -> dict:
+           cap_pool=(), extra_targets=(), eps_n=None, physical_authority=()) -> dict:
     """R8.13 (WALL_BAND_POLICY_V4): FACE CHAINS (strict contiguity, supporting-line identity) + LOCAL BAND SPANS
     (local mutual nearest over elementary intervals) + WALL_BAND ASSEMBLIES (contiguous spans / obstacle overlaps /
     nodes of one chain pair) whose LOCAL run is structurally supported. `bands` are the assemblies (they carry ends,
@@ -442,6 +494,8 @@ def detect(items, *, eps_r, band_review, revision_id, region_id, labels=(), text
     byc = {c.chain_id: c for c in chains}
     loops = _closed_loops(allsegs, eps_n)
     support_roles = set(PARAMS["support_loop_roles"])
+    proven = {_entity(x) for x in physical_authority}
+    isolated = {e: v for e, v in _isolated_loops(loops, items, eps_n).items() if e not in proven}
 
     # ------------------------------------------------ facing candidates per chain, in that chain's own frame
     cand = defaultdict(list)                     # chain id -> [(side, d, other id, lo, hi)]
@@ -479,7 +533,7 @@ def detect(items, *, eps_r, band_review, revision_id, region_id, labels=(), text
             if bid < A.chain_id:
                 continue                                      # each pair once, in the frame of the smaller id
             B = byc[bid]
-            if hi - lo <= ELONGATION * d:
+            if not _elongated(hi - lo, d, eps_r):
                 continue                                      # the raw overlap is not elongated: nothing can be
             rt = (0.0, d) if side > 0 else (-d, 0.0)
             if any(_pt_in_open_rect(p, A._axis, lo + eps_r, hi - eps_r, rt[0] + eps_r, rt[1] - eps_r)
@@ -550,9 +604,12 @@ def detect(items, *, eps_r, band_review, revision_id, region_id, labels=(), text
             else:
                 comps.append([k1])
         for comp in comps:
-            selfs = [k for k in comp if runs[k]["hi"] - runs[k]["lo"] > ELONGATION * runs[k]["d"]]
+            el = {k: _elongated(runs[k]["hi"] - runs[k]["lo"], runs[k]["d"], eps_r) for k in comp}
+            selfs = [k for k in comp if el[k]]
             for k in comp:
-                if k in selfs:
+                if el[k] is None:
+                    runs[k]["support"] = {"state": UNSUPPORTED, "reason": BOUNDARY_CASE}
+                elif k in selfs:
                     runs[k]["support"] = {"state": SELF_SUPPORTED}
                 elif selfs:
                     runs[k]["support"] = {"state": INHERITED_SUPPORT,
@@ -561,7 +618,8 @@ def detect(items, *, eps_r, band_review, revision_id, region_id, labels=(), text
                     runs[k]["support"] = {"state": UNSUPPORTED}
     unsupported = [{"chain_a": r["A"].chain_id, "chain_b": r["B"].chain_id, "s": [_r(r["lo"]), _r(r["hi"])],
                     "local_run": r["hi"] - r["lo"], "separation": r["d"], "raw_chain_overlap": r["raw_overlap"],
-                    "state": UNSUPPORTED, "means": "NON_AUTHORITATIVE_PAIR_RUN: no band, no passage, no ambiguity"}
+                    "state": UNSUPPORTED, "reason": r["support"].get("reason", "NOT_ELONGATED_LOCAL_RUN"),
+                    "means": "NON_AUTHORITATIVE_PAIR_RUN: no band, no passage, no ambiguity"}
                    for r in runs if r["support"]["state"] == UNSUPPORTED]
     runs = [r for r in runs if r["support"]["state"] != UNSUPPORTED]
 
@@ -645,6 +703,9 @@ def detect(items, *, eps_r, band_review, revision_id, region_id, labels=(), text
         if not any(sb["class"] == SPAN for sb in subs) and not any(sb["class"].startswith("AMBIGUOUS") for sb in subs):
             continue
         state = AMBIGUOUS if any(sb["class"].startswith("AMBIGUOUS") for sb in subs) else ESTABLISHED
+        iso = sorted({_entity(z["source"]) for z in A.fragments + B.fragments} & set(isolated))
+        if iso and state == ESTABLISHED:
+            state = GEOMETRIC_CANDIDATE                       # V5: geometry without physical authority
         bid = "WB-" + _digest({"rev": revision_id, "region": region_id, "chains": [A.chain_id, B.chain_id],
                                "s": [_r(lo), _r(hi)]})[:16]
         frA = [z for z in A.fragments if z["s"][1] > lo + eps_n and z["s"][0] < hi - eps_n]
@@ -662,6 +723,8 @@ def detect(items, *, eps_r, band_review, revision_id, region_id, labels=(), text
                               "source_intervals": _intervals(A, ax, x0, x1, eps_n) +
                               _intervals(B, ax, x0, x1, eps_n)})
         fa_, fb_ = sorted([frA[0]["source"], frB[0]["source"]])
+        ev = dict(ev, physical_authority={"state": GEOMETRIC_CANDIDATE, "why": ISOLATED_CLOSED_LOOP, "entities": iso}
+                  if iso else {"state": PHYSICAL})
         bd = WallBand(bid, fa_, fb_, d, (lo, hi), state,
                       dict(ev, intervals=[{"class": sb["class"], "role": sb.get("role"),
                                            "s": [_r(sb["s"][0]), _r(sb["s"][1])],
@@ -681,6 +744,8 @@ def detect(items, *, eps_r, band_review, revision_id, region_id, labels=(), text
     passages = _passages(bands, allsegs, eps_r, revision_id, region_id, items, extra_targets)
     return {"policy_id": POLICY_ID, "bands": bands, "passages": passages, "unsupported_runs": unsupported,
             "chain_id_collisions": collisions,
+            "isolated_loops": [{"entity": e, "segments": v} for e, v in sorted(isolated.items())],
+            "physical_authority_entities": sorted(proven),
             "spans": sorted(spans_out, key=lambda z: z["span_id"]),
             "chains": [{"chain_id": c.chain_id, "identity_basis": c.identity_basis, "occurrence": c.occurrence,
                         "fragments": [{"source": z["source"], "s": z["s"]} for z in c.fragments],
@@ -943,6 +1008,8 @@ def policy_record() -> dict:
                      "+ nodes of one chain pair) with ASSEMBLY_STRUCTURAL_SUPPORT on the local run",
                      "OPEN_PASSAGE between two STRUCTURAL sides"],
            "support": [SELF_SUPPORTED, INHERITED_SUPPORT, UNSUPPORTED],
+           "unsupported_reasons": ["NOT_ELONGATED_LOCAL_RUN", BOUNDARY_CASE],
+           "band_authority": [PHYSICAL, GEOMETRIC_CANDIDATE],
            "params": PARAMS,
            "interval_classes": [SPAN, OBSTACLE_OVERLAP, CROSSING_WALL_NODE, ENCLOSED_NODE, AMBIGUOUS_CENTRELINE,
                                 AMBIGUOUS_DUPLICATE, AMBIGUOUS_BOTH_SIDES],
@@ -953,13 +1020,16 @@ def policy_record() -> dict:
                      "a join across any gap", "the 50 mm review band as continuity", "whole-face disqualification by "
                      "geometry outside the local interval", "elongation on the raw chain overlap", "support inherited "
                      "from a group's total length", "an id from entities + extent alone", "a passage to a "
-                     "non-structural line"],
+                     "non-structural line", "binary floating-point equality as an elongation decision", "physical "
+                     "authority from band geometry alone"],
            "history": ["V1 (R8.11 freeze 5895981): whole-face pairing",
                        "V2 (R8.11 amendment A1): RECEIVING_FACE_JUNCTION",
                        "V3 (R8.12): face chains + local spans + assemblies + OPENING_JAMB; A1 kept",
                        "V4 (R8.13): D1 supporting-line chain identity + chain-id band identity + fail-closed "
                        "collisions; D2 structural support on the LOCAL run (inherited only across a full-width "
-                       "structural loop); structural passage targets"],
+                       "structural loop); structural passage targets",
+                       "V5 (R8.14): O2 elongation tie against eps_r (fail closed); O1 geometric band candidate for "
+                       "isolated closed loops without positive physical authority"],
            "means": "TOPOLOGY_OBSTACLE_GEOMETRY, not MASONRY_CONFIRMED"}
     rec["digest"] = _digest(rec)
     return rec

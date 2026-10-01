@@ -291,9 +291,9 @@ def test_a_duplicate_fragment_stays_an_ambiguity():
 # ------------------------------------------------------------------------------- policy
 def test_v4_policy_record():
     rec = WB.policy_record()
-    assert WB.POLICY_ID == "WALL_BAND_POLICY_V4" and rec["params"] == WB.PARAMS
+    assert WB.POLICY_ID == "WALL_BAND_POLICY_V5" and rec["params"] == WB.PARAMS   # R8.14: V5 supersedes V4
     assert rec["support"] == [WB.SELF_SUPPORTED, WB.INHERITED_SUPPORT, WB.UNSUPPORTED]
-    assert rec["history"][-1].startswith("V4 (R8.13)") and len(rec["history"]) == 4
+    assert rec["history"][3].startswith("V4 (R8.13)") and len(rec["history"]) == 5   # R8.14: + V5
     assert "elongation on the raw chain overlap" in rec["never"]
     assert WB.PARAMS["elongation_ratio"] == 1.0 and WB.PARAMS["support_loop_roles"] == ["TOPOLOGY_BOUNDARY",
                                                                                       "STRUCTURAL_OBSTACLE"]

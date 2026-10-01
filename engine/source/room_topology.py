@@ -366,7 +366,8 @@ def run(inp: CI.CanonicalMeasurementInput, *, frame_insert, expected_revision_id
         wb = WB.detect(items, eps_r=tol["eps_r"], band_review=RA.NEAR_MISS_REVIEW_BAND_MM / inp.unit_native_to_mm,
                        revision_id=inp.revision.revision_id, region_id=inp.region_id, labels=labels,
                        texts=inp.texts, unit_native_to_mm=inp.unit_native_to_mm, cap_pool=pool,
-                       extra_targets=closures, eps_n=tol["eps_n"])
+                       extra_targets=closures, eps_n=tol["eps_n"],
+                       physical_authority={k for c in prec for k in c["applied_parts"]})
         tcs = TC.derive(wb["bands"], revision_id=inp.revision.revision_id, region_id=inp.region_id)
         TC.diagnose(items, closures, tcs, labels, wb["bands"], eps_n=tol["eps_n"], eps_r=tol["eps_r"])
         closures = closures + [c.as_item() for c in tcs if c.release == TC.AUTHORISED_FOR_SHADOW]
@@ -428,7 +429,9 @@ def run(inp: CI.CanonicalMeasurementInput, *, frame_insert, expected_revision_id
         res["wall_bands"] = {"policy": WB.policy_record(), "bands": [vars(b) for b in wb["bands"]],
                              "spans": wb["spans"], "chains": wb["chains"], "chain_breaks": wb["chain_breaks"],
                              "unsupported_runs": wb["unsupported_runs"],
-                             "chain_id_collisions": wb["chain_id_collisions"]}
+                             "chain_id_collisions": wb["chain_id_collisions"],
+                             "isolated_loops": wb["isolated_loops"],
+                             "physical_authority_entities": wb["physical_authority_entities"]}
         res["topology_closures"] = {"policy": TC.policy_record(), "closures": [c.record() for c in tcs]}
         res["passages"] = passage_sites(wb["passages"], res, inp.unit_native_to_mm)
     res["roles"] = adm

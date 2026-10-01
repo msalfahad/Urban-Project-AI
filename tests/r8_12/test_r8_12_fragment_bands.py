@@ -344,7 +344,7 @@ def test_corridor_walls_do_not_pair_across_the_corridor():
 # ------------------------------------------------------------------------------- policy provenance (§32)
 def test_every_behaviour_constant_is_in_the_policy_record():
     rec = WB.policy_record()
-    assert rec["params"] == WB.PARAMS and WB.POLICY_ID == "WALL_BAND_POLICY_V4"   # R8.13: V4 supersedes V3
+    assert rec["params"] == WB.PARAMS and WB.POLICY_ID == "WALL_BAND_POLICY_V5"   # R8.14: V5 supersedes V4
     assert (WB.ELONGATION, WB.ID_DECIMALS, WB.CANON_GUARD) == (
         WB.PARAMS["elongation_ratio"], WB.PARAMS["id_coordinate_decimals"], WB.PARAMS["canonical_direction_guard"])
     tree = ast.parse(Path(WB.__file__).read_text())

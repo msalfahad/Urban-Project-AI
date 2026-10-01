@@ -17,15 +17,22 @@ def sha(f):
     return hashlib.sha256((ROOT / f).read_bytes()).hexdigest()
 
 
-def test_the_live_engine_is_the_frozen_v4():
-    assert (WB.POLICY_ID, WB.policy_record()["digest"]) == (FZ["wall_band_policy"]["id"], FZ["wall_band_policy"]["digest"])
+V5 = json.loads((ROOT / "tests/r8_14/registers/R8_14_V5_FREEZE.json").read_text())
+
+
+def test_the_v4_freeze_is_intact_and_superseded_only_by_the_recorded_v5_freeze():
+    assert FZ["wall_band_policy"]["id"] == "WALL_BAND_POLICY_V4" and V5["supersedes"]["wall_band_policy"] == \
+        FZ["wall_band_policy"]
+    assert (WB.POLICY_ID, WB.policy_record()["digest"]) == (V5["wall_band_policy"]["id"], V5["wall_band_policy"]["digest"])
     assert (TC.POLICY_ID, TC.policy_record()["digest"]) == (FZ["closure_policy"]["id"], FZ["closure_policy"]["digest"])
     assert FZ["closure_policy"]["changed"] is False
 
 
-def test_the_frozen_tests_and_the_recommendation_are_unchanged():
+def test_the_frozen_tests_and_the_recommendation_are_unchanged_or_superseded_by_record():
     for f, h in FZ["synthetic_test_sha256"].items():
-        assert sha(f) == h, f"frozen test edited after the V4 freeze: {f}"
+        sup = V5["superseded_frozen_tests"].get(f)
+        assert sha(f) == h or (sup and sup["previous_sha256"] == h and sup["r8_14_sha256"] == sha(f)), \
+            f"frozen test edited outside a recorded supersession: {f}"
     rec = FZ["recommendation_written_first"]
     assert sha(rec["file"]) == rec["sha256"] and rec["committed_in"] == FZ["frozen_commit"]
 

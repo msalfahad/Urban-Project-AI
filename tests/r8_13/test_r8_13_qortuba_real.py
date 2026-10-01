@@ -23,7 +23,7 @@ def test_the_blind_run_used_no_owner_fact_and_the_frozen_v4():
     assert not any(b["blind"][k] for k in ("owner_fact_used", "floor_fact_used", "finish_fact_used",
                                             "expected_h2430_given", "expected_q14_given", "historical_totals_given"))
     assert b["wall_band_policy"] == _r("R8_13_V4_FREEZE")["wall_band_policy"]
-    assert b["wall_band_policy"]["id"] == WB.POLICY_ID and b["freeze"] == _r("R8_13_V4_FREEZE")["frozen_commit"]
+    assert b["wall_band_policy"]["id"] == "WALL_BAND_POLICY_V4" and b["freeze"] == _r("R8_13_V4_FREEZE")["frozen_commit"]
 
 
 def test_v3_d1_no_collision_and_unique_ids_on_both_revisions():
@@ -63,7 +63,7 @@ def test_h2430_h2431_h1316_keep_their_v3_geometry_and_areas():
 def test_post_blind_observations_are_recorded_not_patched():
     obs = {o["id"]: o for o in _r("V3_DEFECT_RESOLUTION")["post_blind_observations_for_r8_14"]}
     assert set(obs) == {"V4-O1", "V4-O2"} and all(o["action"].startswith("R8.14") for o in obs.values())
-    assert _r("R8_13_V4_FREEZE")["wall_band_policy"]["digest"] == WB.policy_record()["digest"]
+    assert _r("WALL_BAND_V4_POLICY")["policy"]["digest"] == _r("R8_13_V4_FREEZE")["wall_band_policy"]["digest"]
 
 
 # ------------------------------------------------------------------------------- rows
