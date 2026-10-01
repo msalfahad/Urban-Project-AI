@@ -140,7 +140,8 @@ def test_determinism_and_policy_audit():
     s = _r("QORTUBA_R8_12_STATUS")
     assert all(s["determinism"].values()) and s["lab_reproduces_blind_record"]
     a = _r("POLICY_PROVENANCE_AUDIT")
-    assert a["wall_bands"]["params_in_policy_record"] == WB.PARAMS
+    v3 = a["wall_bands"]["params_in_policy_record"]                 # the R8.12 (V3) record; R8.13 V4 only adds keys
+    assert v3["elongation_basis"].startswith("the raw overlap") and set(v3) <= set(WB.PARAMS)
     assert set(a["wall_bands"]["integer_literals_outside_params"]) <= {0, 1, 2, -1, 3, 4, 8, 16}
 
 

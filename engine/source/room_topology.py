@@ -426,7 +426,9 @@ def run(inp: CI.CanonicalMeasurementInput, *, frame_insert, expected_revision_id
                                eps_r=tol["eps_r"])
     if wb is not None:
         res["wall_bands"] = {"policy": WB.policy_record(), "bands": [vars(b) for b in wb["bands"]],
-                             "spans": wb["spans"], "chains": wb["chains"], "chain_breaks": wb["chain_breaks"]}
+                             "spans": wb["spans"], "chains": wb["chains"], "chain_breaks": wb["chain_breaks"],
+                             "unsupported_runs": wb["unsupported_runs"],
+                             "chain_id_collisions": wb["chain_id_collisions"]}
         res["topology_closures"] = {"policy": TC.policy_record(), "closures": [c.record() for c in tcs]}
         res["passages"] = passage_sites(wb["passages"], res, inp.unit_native_to_mm)
     res["roles"] = adm

@@ -1,5 +1,20 @@
 """WALL BANDS, WALL ENDS AND OPEN PASSAGES - topology-obstacle geometry from structure, never from size.
 
+R8.13 (WALL_BAND_POLICY_V4) = V3 + three generic corrections of the two R8.12 post-blind defects:
+  D1 IDENTITY   a face chain is identified by its source entities + its SUPPORTING LINE (canonical direction and
+                signed offset) + its parameter interval along that line: two parallel sides of one closed polyline with
+                the same extent no longer share an id. Band ids are built from the two chain ids. A residual id
+                collision is never silent: the chains are recorded and excluded from pairing (fail closed).
+  D2 SUPPORT    ASSEMBLY_STRUCTURAL_SUPPORT: elongation is tested on the LOCAL RUN (the contiguous locally mutual
+                nearest interval with its spans, overlaps and nodes), not on the raw chain overlap. A run longer than
+                elongation_ratio x separation is SELF_SUPPORTED; a shorter run is INHERITED_SUPPORT only when it is
+                joined to a self-supported run of the SAME chain pair and side across gaps each filled by a full-width
+                closed structural loop (a column through the wall); otherwise it is UNSUPPORTED - a non-authoritative
+                pair-run candidate, never a band, a passage source or an ambiguity source.
+  PASSAGE       both sides structural: the source is an ESTABLISHED supported band end, the far side a wall face /
+                structural obstacle segment or another established band end (never furniture, a dimension, glazing,
+                an opening closure or an unresolved-role line).
+
 R8.12 (WALL_BAND_POLICY_V3): FACE CHAINS + LOCAL BAND SPANS + WALL-BAND ASSEMBLIES.
 
 FACE CHAIN (derived, traceable; never a CAD entity, a material wall or a quantity): admitted TOPOLOGY_BOUNDARY
@@ -8,15 +23,16 @@ positively established: collinear within eps_n, end points coincident within eps
 opening / glazing segment ending at the joint (OPENING_BREAK). A gap of any size - including one inside the 50 mm
 review band - is never joined. Collinear fragments that OVERLAP are one chain with a DUPLICATE interval (ambiguous,
 never a double wall). Joints and faces ending on the chain are recorded as nodes (CONTINUOUS_JOIN / BRANCH_NODE /
-CROSSING_NODE): a T-junction subdivides, it does not end the face. Identity: revision + region + the source
-ENTITIES + the chain's extent along its canonical direction (stable under fragment order, unrelated insertion and an
-equivalent re-segmentation of the same entity).
+CROSSING_NODE): a T-junction subdivides, it does not end the face. Identity (V4): revision + region + the source
+ENTITIES + the SUPPORTING LINE + the chain's extent along its canonical direction (stable under fragment order,
+reversed orientation, unrelated insertion and an equivalent re-segmentation of the same entity).
 
 LOCAL BAND SPAN: two parallel chains facing each other are paired INTERVAL BY INTERVAL. Breakpoints are the
 projections of every parallel overlapping chain of both chains (both sides); at the middle of each elementary
 interval the pair must be LOCALLY mutually nearest (no nearer face on that side, no nearer face on the far side of
-either chain, no tie). Geometry outside the interval never disqualifies it. The pair must be ELONGATED on the raw
-overlap of the two chains (overlap > separation: two jamb caps, a column, a door are no band). The local strip must
+either chain, no tie). Geometry outside the interval never disqualifies it. V4: the LOCAL RUN must be structurally
+supported (see D2 above); V3 tested the raw overlap of the two chains, which let a pair that is mutually nearest over
+a sliver (another wall's core seen crosswise) become a band. The local strip must
 hold no label and no arc; crossings SUBDIVIDE it:
   WALL_BAND_SPAN       free obstacle strip
   OBSTACLE_OVERLAP     a crossing passes over the interval, or the strip lies inside a closed admitted loop (a
@@ -54,7 +70,7 @@ from dataclasses import dataclass, field
 from . import geometry_role as GR
 from . import role_authority as RA
 
-POLICY_ID = "WALL_BAND_POLICY_V3"      # V3 (R8.12): face chains + local band spans + assemblies
+POLICY_ID = "WALL_BAND_POLICY_V4"      # V4 (R8.13): V3 + supporting-line identity + structural run support
 ESTABLISHED = "WALL_BAND_ESTABLISHED"
 AMBIGUOUS = "WALL_BAND_AMBIGUOUS"
 ALIGNED_FREE_END = "ALIGNED_FREE_END"
@@ -135,7 +151,23 @@ PARAMS = {
                  "over a duplicate interval is AMBIGUOUS",
     "parallel": "|cross(u_a, u_b)| x overlap <= eps_r",
     "overlap_min": "eps_r", "separation_min": "eps_r",
-    "elongation_ratio": 1.0, "elongation_basis": "the raw overlap of the two CHAINS (never a sub-interval)",
+    "elongation_ratio": 1.0,
+    "elongation_basis": "V4: the LOCAL RUN (contiguous locally mutual nearest interval incl. its spans, obstacle "
+                        "overlaps and nodes); never the raw chain overlap (V3-D2), never a single span",
+    "structural_support": "SELF_SUPPORTED: run length > elongation_ratio x separation. INHERITED_SUPPORT: a shorter run "
+                          "of the SAME chain pair and side joined to a self-supported run across gaps each filled by a "
+                          "full-width closed loop of a support role (every corner of the gap strip, inset by eps_r, "
+                          "inside the loop). Never inherited from a group's total length; an UNSUPPORTED run is "
+                          "recorded, never a band",
+    "support_loop_roles": ["TOPOLOGY_BOUNDARY", "STRUCTURAL_OBSTACLE"],
+    "chain_identity": "entities + parameter interval along the canonical direction (V3, kept wherever it is unique "
+                      "so a nudged face and an equivalent re-segmentation keep their id); chains of the SAME entities "
+                      "and extent (parallel sides of one closed polyline) are told apart by their SUPPORTING LINE "
+                      "(canonical direction + signed offset). The sub-part index is provenance only (a "
+                      "re-segmentation renumbers it); -0.0 -> 0.0",
+    "band_identity": "the two chain ids + the run interval in the frame of the lower chain id",
+    "id_collision": "colliding chains are recorded and excluded from pairing (fail closed)",
+    "passage_target_roles": ["TOPOLOGY_BOUNDARY", "STRUCTURAL_OBSTACLE", "an ESTABLISHED band end"],
     "local_mutual_nearest": "evaluated at the middle of every elementary interval (breakpoints: projections of all "
                             "parallel overlapping chains of both chains, both sides)",
     "one_side_margin": "eps_r", "nearest_tie": "eps_r (a tie between two chains is never paired)",
@@ -163,6 +195,11 @@ AMBIGUOUS_DUPLICATE = "AMBIGUOUS_DUPLICATE"
 AMBIGUOUS_BOTH_SIDES = "AMBIGUOUS_PAIRED_BOTH_SIDES"
 OPENING_JAMB = "OPENING_JAMB"
 JUNCTION = "JUNCTION_OR_CONTINUATION"
+IDENTITY_EXTENT = "ENTITIES_AND_EXTENT"            # V4 chain identity bases
+IDENTITY_LINE = "ENTITIES_EXTENT_AND_SUPPORTING_LINE"
+SELF_SUPPORTED = "SELF_SUPPORTED"                     # V4 structural support of a local run
+INHERITED_SUPPORT = "INHERITED_SUPPORT"
+UNSUPPORTED = "UNSUPPORTED"
 
 
 class _Axis:
@@ -196,7 +233,7 @@ def _entity(sid):
 
 
 def _r(v):
-    return round(float(v), ID_DECIMALS)
+    return round(float(v), ID_DECIMALS) + 0.0          # + 0.0: -0.0 and 0.0 are one id coordinate
 
 
 @dataclass
@@ -263,8 +300,8 @@ def _build_chains(faces, allsegs, openers, eps_n, eps_r, revision_id, region_id)
         frs.sort(key=lambda z: (z["s"][0], z["source"]))
         srange = (min(z["s"][0] for z in frs), max(z["s"][1] for z in frs))
         ents = sorted({_entity(z["source"]) for z in frs})
-        cid = "FC-" + _digest({"rev": revision_id, "region": region_id, "entities": ents,
-                               "s": [_r(srange[0]), _r(srange[1])]})[:16]
+        base = {"rev": revision_id, "region": region_id, "entities": ents, "s": [_r(srange[0]), _r(srange[1])]}
+        cid = "FC-" + _digest(base)[:16]
         mine = {z["source"] for z in frs}
         nodes = []
         for k in range(len(frs) - 1):                                      # joints between consecutive fragments
@@ -299,9 +336,19 @@ def _build_chains(faces, allsegs, openers, eps_n, eps_r, revision_id, region_id)
         ch = FaceChain(cid, _occ(frs[0]["source"]), frs, srange, nodes, di)
         ch._axis = ax
         ch._ents = ents
+        ch._line = dict(base, line={"u": [_r(u[0]), _r(u[1])], "offset": _r(ax.t0)})
+        ch.identity_basis = IDENTITY_EXTENT
         chains.append(ch)
         for z in frs:
             member[z["source"]] = ch
+    same = defaultdict(list)                         # V4 (D1): chains of the SAME entities + extent are told apart
+    for c in chains:                                 # by their supporting line; every other id stays the V3 id
+        same[c.chain_id].append(c)
+    for cs in same.values():
+        if len(cs) > 1:
+            for c in cs:
+                c.chain_id = "FC-" + _digest(c._line)[:16]
+                c.identity_basis = IDENTITY_LINE
     chains.sort(key=lambda c: c.chain_id)
     brk = [{"kind": OPENING_BREAK, "between": sorted([faces[i].item.source_id, faces[j].item.source_id]),
             "point": [_r(p[0]), _r(p[1])]} for i, j, p in breaks]
@@ -368,9 +415,11 @@ def _inside(p, segs):
 
 def detect(items, *, eps_r, band_review, revision_id, region_id, labels=(), texts=(), unit_native_to_mm=None,
            cap_pool=(), extra_targets=(), eps_n=None) -> dict:
-    """R8.12 (WALL_BAND_POLICY_V3): FACE CHAINS (strict contiguity) + LOCAL BAND SPANS (local mutual nearest over
-    elementary intervals) + WALL_BAND ASSEMBLIES (contiguous spans / obstacle overlaps / nodes of one chain pair).
-    `bands` are the assemblies (they carry ends, closures and passages); `spans` and `chains` are their provenance."""
+    """R8.13 (WALL_BAND_POLICY_V4): FACE CHAINS (strict contiguity, supporting-line identity) + LOCAL BAND SPANS
+    (local mutual nearest over elementary intervals) + WALL_BAND ASSEMBLIES (contiguous spans / obstacle overlaps /
+    nodes of one chain pair) whose LOCAL run is structurally supported. `bands` are the assemblies (they carry ends,
+    closures and passages); `spans` and `chains` are their provenance; `unsupported_runs` and `chain_id_collisions`
+    are recorded, never used."""
     eps_n = eps_r * PARAMS["eps_n_default_ratio_of_eps_r"] if eps_n is None else eps_n
     faces = [_Seg(it) for it in items if it.kind == "SEGMENT" and it.role == GR.TOPOLOGY_BOUNDARY
              and not it.source_id.startswith(("CLOSURE|", "GLAZED|", "TCLOSURE|"))]
@@ -384,8 +433,15 @@ def detect(items, *, eps_r, band_review, revision_id, region_id, labels=(), text
     arcs = [it for it in items if it.kind != "SEGMENT"]
     lab_pts = [(lt.x, lt.y) for lt in labels]
     chains, member, chain_breaks = _build_chains(faces, allsegs, openers, eps_n, eps_r, revision_id, region_id)
+    seen_ids = defaultdict(list)
+    for c in chains:
+        seen_ids[c.chain_id].append(c)
+    collisions = [{"chain_id": cid, "fragments": sorted([z["source"] for z in c.fragments] for c in cs)}
+                  for cid, cs in sorted(seen_ids.items()) if len(cs) > 1]
+    chains = [c for c in chains if len(seen_ids[c.chain_id]) == 1]          # V4: a collision fails closed
     byc = {c.chain_id: c for c in chains}
     loops = _closed_loops(allsegs, eps_n)
+    support_roles = set(PARAMS["support_loop_roles"])
 
     # ------------------------------------------------ facing candidates per chain, in that chain's own frame
     cand = defaultdict(list)                     # chain id -> [(side, d, other id, lo, hi)]
@@ -424,7 +480,7 @@ def detect(items, *, eps_r, band_review, revision_id, region_id, labels=(), text
                 continue                                      # each pair once, in the frame of the smaller id
             B = byc[bid]
             if hi - lo <= ELONGATION * d:
-                continue                                      # not elongated: jamb caps, a column, a door
+                continue                                      # the raw overlap is not elongated: nothing can be
             rt = (0.0, d) if side > 0 else (-d, 0.0)
             if any(_pt_in_open_rect(p, A._axis, lo + eps_r, hi - eps_r, rt[0] + eps_r, rt[1] - eps_r)
                    for p in lab_pts):
@@ -465,6 +521,50 @@ def detect(items, *, eps_r, band_review, revision_id, region_id, labels=(), text
                 runs.append({"A": A, "B": B, "side": side, "sideB": sideB, "d": d, "lo": iv[0], "hi": iv[1],
                              "raw_overlap": hi - lo})
 
+    # ------------------------------------------------ V4 ASSEMBLY_STRUCTURAL_SUPPORT (D2): the LOCAL run must carry it
+    def obstacle_gap(r1, r2):
+        ax, d = r1["A"]._axis, r1["d"]
+        tlo, thi = (0.0, d) if r1["side"] > 0 else (-d, 0.0)
+        g0, g1 = r1["hi"], r2["lo"]
+        if g1 - g0 <= 2 * eps_r:
+            return None
+        own = {_entity(z["source"]) for z in r1["A"].fragments} | {_entity(z["source"]) for z in r1["B"].fragments}
+        corners = [ax.at(x, t) for x in (g0 + eps_r, g1 - eps_r) for t in (tlo + eps_r, thi - eps_r)]
+        for ent, ss in sorted(loops.items()):
+            if ent in own or not {x.item.role for x in ss} <= support_roles:
+                continue
+            if all(_inside(q, ss) for q in corners):
+                return ent
+        return None
+    groups = defaultdict(list)
+    for k, r in enumerate(runs):
+        groups[(r["A"].chain_id, r["B"].chain_id, r["side"])].append(k)
+    for ks in groups.values():
+        ks.sort(key=lambda k: runs[k]["lo"])
+        comps, links = [[ks[0]]], {}
+        for k0, k1 in zip(ks, ks[1:]):
+            ent = obstacle_gap(runs[k0], runs[k1])
+            if ent is not None:
+                comps[-1].append(k1)
+                links[k1] = ent
+            else:
+                comps.append([k1])
+        for comp in comps:
+            selfs = [k for k in comp if runs[k]["hi"] - runs[k]["lo"] > ELONGATION * runs[k]["d"]]
+            for k in comp:
+                if k in selfs:
+                    runs[k]["support"] = {"state": SELF_SUPPORTED}
+                elif selfs:
+                    runs[k]["support"] = {"state": INHERITED_SUPPORT,
+                                          "across": sorted({links[x] for x in comp if x in links})}
+                else:
+                    runs[k]["support"] = {"state": UNSUPPORTED}
+    unsupported = [{"chain_a": r["A"].chain_id, "chain_b": r["B"].chain_id, "s": [_r(r["lo"]), _r(r["hi"])],
+                    "local_run": r["hi"] - r["lo"], "separation": r["d"], "raw_chain_overlap": r["raw_overlap"],
+                    "state": UNSUPPORTED, "means": "NON_AUTHORITATIVE_PAIR_RUN: no band, no passage, no ambiguity"}
+                   for r in runs if r["support"]["state"] == UNSUPPORTED]
+    runs = [r for r in runs if r["support"]["state"] != UNSUPPORTED]
+
     # ------------------------------------------------ a chain paired on BOTH sides over the same interval: ambiguous
     per = defaultdict(list)
     for k, r in enumerate(runs):
@@ -486,7 +586,8 @@ def detect(items, *, eps_r, band_review, revision_id, region_id, labels=(), text
         e = eps_r
         tlo, thi = (0.0, d) if side > 0 else (-d, 0.0)
         mine = {z["source"] for z in A.fragments} | {z["source"] for z in B.fragments}
-        ev = {"separation": d, "overlap": hi - lo, "raw_chain_overlap": r["raw_overlap"], "local_mutual_nearest": True}
+        ev = {"separation": d, "overlap": hi - lo, "raw_chain_overlap": r["raw_overlap"], "local_mutual_nearest": True,
+              "structural_support": r["support"]}
         lab_in = [p for p in lab_pts if _pt_in_open_rect(p, ax, lo + e, hi - e, tlo + e, thi - e)]
         arc_in = [it.source_id for it in arcs if _arc_bbox_hits(it, ax, (lo, hi), tlo, thi, e)]
         if lab_in or arc_in:
@@ -544,8 +645,7 @@ def detect(items, *, eps_r, band_review, revision_id, region_id, labels=(), text
         if not any(sb["class"] == SPAN for sb in subs) and not any(sb["class"].startswith("AMBIGUOUS") for sb in subs):
             continue
         state = AMBIGUOUS if any(sb["class"].startswith("AMBIGUOUS") for sb in subs) else ESTABLISHED
-        ea, eb = sorted([A._ents, B._ents])
-        bid = "WB-" + _digest({"rev": revision_id, "region": region_id, "chains": [ea, eb],
+        bid = "WB-" + _digest({"rev": revision_id, "region": region_id, "chains": [A.chain_id, B.chain_id],
                                "s": [_r(lo), _r(hi)]})[:16]
         frA = [z for z in A.fragments if z["s"][1] > lo + eps_n and z["s"][0] < hi - eps_n]
         blo, bhi = sorted(B._axis.st(ax.at(x))[0] for x in (lo, hi))
@@ -579,9 +679,10 @@ def detect(items, *, eps_r, band_review, revision_id, region_id, labels=(), text
             bd.ends = _ends_v3(bd, A, B, side, ax, items, extra_targets, cap_pool, eps_r, eps_n, band_review)
     bands.sort(key=lambda b: b.band_id)
     passages = _passages(bands, allsegs, eps_r, revision_id, region_id, items, extra_targets)
-    return {"policy_id": POLICY_ID, "bands": bands, "passages": passages,
+    return {"policy_id": POLICY_ID, "bands": bands, "passages": passages, "unsupported_runs": unsupported,
+            "chain_id_collisions": collisions,
             "spans": sorted(spans_out, key=lambda z: z["span_id"]),
-            "chains": [{"chain_id": c.chain_id, "occurrence": c.occurrence,
+            "chains": [{"chain_id": c.chain_id, "identity_basis": c.identity_basis, "occurrence": c.occurrence,
                         "fragments": [{"source": z["source"], "s": z["s"]} for z in c.fragments],
                         "s_range": list(c.s_range), "nodes": c.nodes, "duplicate_intervals": c.duplicate_intervals}
                        for c in chains],
@@ -719,6 +820,8 @@ def _passages(bands, allsegs, eps_r, revision_id, region_id, items=(), extra_tar
             for bd in bands if bd.state == ESTABLISHED for e in bd.ends if e["kind"] in (ALIGNED_FREE_END, CAPPED)]
     lines = [_Seg(it) for it in list(items) + list(extra_targets) if it.kind == "SEGMENT"]
     allsegs = list(allsegs) + ends
+    target_roles = set(PARAMS["passage_target_roles"][:2])
+    end_ids = {e.item.source_id for e in ends}
     for bd in bands:
         if bd.state != ESTABLISHED:
             continue
@@ -736,6 +839,9 @@ def _passages(bands, allsegs, eps_r, revision_id, region_id, items=(), extra_tar
                     continue
                 if abs(s.u[0] * u[0] + s.u[1] * u[1]) * s.L > eps_r:          # must cross the band line
                     continue
+                if s.item.source_id not in end_ids and (s.item.role not in target_roles or
+                                                        s.item.source_id.startswith(("CLOSURE|", "GLAZED|"))):
+                    continue                                  # V4: the far side must be structural too
                 hits = []
                 for p in (pa, pb):
                     h = _ray_hit(p, (ux, uy), s, eps_r)
@@ -832,8 +938,11 @@ def _dedupe_collinear(ps, eps):
 
 def policy_record() -> dict:
     rec = {"policy_id": POLICY_ID,
-           "model": ["FACE_CHAIN (strict contiguity, typed nodes)", "LOCAL BAND SPAN (local mutual nearest per "
-                     "elementary interval)", "WALL_BAND_ASSEMBLY (spans + obstacle overlaps + nodes of one chain pair)"],
+           "model": ["FACE_CHAIN (strict contiguity, typed nodes, supporting-line identity)", "LOCAL BAND SPAN "
+                     "(local mutual nearest per elementary interval)", "WALL_BAND_ASSEMBLY (spans + obstacle overlaps "
+                     "+ nodes of one chain pair) with ASSEMBLY_STRUCTURAL_SUPPORT on the local run",
+                     "OPEN_PASSAGE between two STRUCTURAL sides"],
+           "support": [SELF_SUPPORTED, INHERITED_SUPPORT, UNSUPPORTED],
            "params": PARAMS,
            "interval_classes": [SPAN, OBSTACLE_OVERLAP, CROSSING_WALL_NODE, ENCLOSED_NODE, AMBIGUOUS_CENTRELINE,
                                 AMBIGUOUS_DUPLICATE, AMBIGUOUS_BOTH_SIDES],
@@ -842,10 +951,15 @@ def policy_record() -> dict:
            "caps": [CAP_PROVEN, CAP_CANDIDATE, NOT_WALL_CAP, CAP_UNRESOLVED],
            "never": ["thickness", "area", "nearest parallel pair alone", "coordinates alone", "material identity",
                      "a join across any gap", "the 50 mm review band as continuity", "whole-face disqualification by "
-                     "geometry outside the local interval"],
+                     "geometry outside the local interval", "elongation on the raw chain overlap", "support inherited "
+                     "from a group's total length", "an id from entities + extent alone", "a passage to a "
+                     "non-structural line"],
            "history": ["V1 (R8.11 freeze 5895981): whole-face pairing",
                        "V2 (R8.11 amendment A1): RECEIVING_FACE_JUNCTION",
-                       "V3 (R8.12): face chains + local spans + assemblies + OPENING_JAMB; A1 kept"],
+                       "V3 (R8.12): face chains + local spans + assemblies + OPENING_JAMB; A1 kept",
+                       "V4 (R8.13): D1 supporting-line chain identity + chain-id band identity + fail-closed "
+                       "collisions; D2 structural support on the LOCAL run (inherited only across a full-width "
+                       "structural loop); structural passage targets"],
            "means": "TOPOLOGY_OBSTACLE_GEOMETRY, not MASONRY_CONFIRMED"}
     rec["digest"] = _digest(rec)
     return rec
