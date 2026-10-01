@@ -154,3 +154,24 @@ The signature columns are in the register. Two consequences follow:
 - R9 trade rules.
 - PDF or document routes.
 - Flattening exact ellipses.
+
+## 7. R8.6A addendum — the Qortuba source has moved on
+
+The Qortuba DXF supplied in R8.6A (`df0e1d69…`) is a later revision of the measured DWG (`2ec3a9c8…`):
+
+- the same FINGERPRINTGUID, but a different VERSIONGUID;
+- about 12.6 hours more editing time (TDINDWG);
+- 21 measured entities absent, 19 added inside the plan region.
+
+Ten round-1 source observations are among the absent entities, so Q-03, Q-11, Q-13 and Q-14 depend on content
+that has since changed. Precondition G1 (exact source) therefore gains an owner decision:
+`DECIDE_QORTUBA_DRAWING_REVISION`.
+
+If the later revision is chosen, round 1 is re-anchored to its DWG. That DWG then needs its own:
+
+- unit claim;
+- region designation;
+- full-substitution proof.
+
+The unit claim on `2ec3a9c8…` is not transferred. No DXF has a proven decoder, so G4 (qualification) stays at
+0 signatures. See `tests/r8_6a/registers/`.

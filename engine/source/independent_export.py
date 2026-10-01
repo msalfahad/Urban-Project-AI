@@ -120,3 +120,131 @@ def verify(d1_entities, dxf_entities, d1_blocks: dict, dxf_blocks: dict, d1_cust
     }
     out["handle_keyed_comparison_possible"] = out["HANDLE_IDENTITY"]["verdict"] == VERIFIED
     return out
+
+
+# ====================================================================== V2 (R8.6A): writer, decoder, revision, scoped states
+# The three facts a DXF carries are kept apart and never inferred from one another:
+#   DXF_WRITER                  what wrote the DXF bytes (measured from the file's own fingerprint)
+#   DWG_DECODER                 what read the DWG (provable only from a conversion record with evidence)
+#   SOURCE_METADATA_LASTSAVEDBY the $LASTSAVEDBY string the DWG already carried (a user name, not a tool)
+PROVENANCE_UNVERIFIED = "PROVENANCE_UNVERIFIED"          # no known non-qualifying writer, but the decoder is unproven
+DECODER_STATES = ("AUTOCAD_PROVEN", "ODA_FILE_CONVERTER_PROVEN", "OTHER_INDEPENDENT_DWG_PARSER_PROVEN",
+                  "LIBREDWG_LINEAGE_PROVEN", "SHARED_OR_DEPENDENT_LINEAGE", "CONVERTER_UNKNOWN")
+INDEPENDENT_DECODER_STATES = DECODER_STATES[:3]
+WRITER_EZDXF, WRITER_LIBREDWG = "EZDXF_WRITER", "LIBREDWG_WRITER"
+WRITER_AUTOCAD_ODA_FORMAT = "AUTOCAD_OR_ODA_FAMILY_FORMAT"     # formatting family only: never names the decoder
+WRITER_UNKNOWN = "WRITER_UNKNOWN"
+SAME_REVISION = "SAME_REVISION"
+SAME_LINEAGE_DIFFERENT_REVISION = "SAME_LINEAGE_DIFFERENT_REVISION"
+UNRELATED_SOURCE = "UNRELATED_SOURCE"
+REVISION_NOT_ESTABLISHED = "REVISION_NOT_ESTABLISHED"
+PROVENANCE_NOT_INDEPENDENT = "PROVENANCE_NOT_INDEPENDENT"
+
+
+def writer_fingerprint(header: dict, comments=(), sections=(), maintver_group_code=None) -> dict:
+    """What the DXF's own bytes say about its writer. Rules are observations of known writers, not guesses:
+    ezdxf stamps $LASTSAVEDBY 'ezdxf'; LibreDWG writes a '999 LibreDWG <version>' comment and copies the DWG's
+    maintenance version with group code 70; AutoCAD and ODA-based writers emit an ACDSDATA section and, for
+    AC1032, $ACADMAINTVER with group code 90. The last class names a FORMAT FAMILY: it cannot tell AutoCAD from
+    an ODA-based tool, and it says nothing about which library decoded the DWG."""
+    text = " ".join(str(c) for c in comments).lower()
+    saved = str(header.get("$LASTSAVEDBY") or "")
+    evidence = []
+    if "ezdxf" in saved.lower() or "ezdxf" in text:
+        cls = WRITER_EZDXF
+        evidence.append("$LASTSAVEDBY / comment names ezdxf")
+    elif "libredwg" in text:
+        cls = WRITER_LIBREDWG
+        evidence.append("999 comment names LibreDWG")
+    elif "ACDSDATA" in sections and maintver_group_code == 90:
+        cls = WRITER_AUTOCAD_ODA_FORMAT
+        evidence += ["ACDSDATA section present", "$ACADMAINTVER written with group code 90"]
+    else:
+        cls = WRITER_UNKNOWN
+    return {"class": cls, "evidence": evidence, "source_metadata_lastsavedby": saved or None,
+            "note": "the writer class never establishes the DWG decoder"}
+
+
+def decoder_provenance(writer: dict, conversion_record: dict | None = None) -> dict:
+    """DWG_DECODER state. Only a conversion record with hashed evidence (log, tool output) can PROVE a decoder;
+    a writer fingerprint alone can only prove LibreDWG lineage (its own stamp) or leave the decoder UNKNOWN."""
+    rec = conversion_record or {}
+    tool, ev = (rec.get("tool") or "").upper(), rec.get("evidence_sha256")
+    if writer["class"] == WRITER_LIBREDWG:
+        state = "LIBREDWG_LINEAGE_PROVEN"
+    elif tool == "AUTOCAD" and ev:
+        state = "AUTOCAD_PROVEN"
+    elif tool == "ODA_FILE_CONVERTER" and ev:
+        state = "ODA_FILE_CONVERTER_PROVEN"
+    elif tool and ev and rec.get("independent_of_libredwg") is True:
+        state = "OTHER_INDEPENDENT_DWG_PARSER_PROVEN"
+    elif rec.get("shares_libredwg") is True:
+        state = "SHARED_OR_DEPENDENT_LINEAGE"
+    else:
+        state = "CONVERTER_UNKNOWN"
+    return {"state": state, "independent": state in INDEPENDENT_DECODER_STATES,
+            "basis": ("conversion record with hashed evidence" if ev else
+                      "writer stamp" if state == "LIBREDWG_LINEAGE_PROVEN" else "no conversion record")}
+
+
+def revision_identity(source_header: dict, dxf_header: dict, source_entities_missing: int,
+                      entities_added_in_scope: int) -> dict:
+    """Is the DXF an export of THIS DWG revision? Drawing lineage (FINGERPRINTGUID) is necessary, not
+    sufficient: the source's own entities must all be present, and no entity may be added inside the scope.
+    VERSIONGUID equality is recorded as supporting evidence only (some writers renew it on save)."""
+    fs, fd = source_header.get("FINGERPRINTGUID"), dxf_header.get("$FINGERPRINTGUID")
+    vs, vd = source_header.get("VERSIONGUID"), dxf_header.get("$VERSIONGUID")
+    if not fs or not fd:
+        state = REVISION_NOT_ESTABLISHED
+    elif fs != fd:
+        state = UNRELATED_SOURCE
+    elif source_entities_missing == 0 and entities_added_in_scope == 0:
+        state = SAME_REVISION
+    else:
+        state = SAME_LINEAGE_DIFFERENT_REVISION
+    return {"state": state, "fingerprintguid_equal": bool(fs) and fs == fd, "versionguid_equal": bool(vs) and vs == vd,
+            "source_entities_missing": source_entities_missing, "entities_added_in_scope": entities_added_in_scope}
+
+
+def admission_v2(file_sha256: str, header: dict, writer: dict, decoder: dict, revision: dict,
+                 declared: dict, source_sha256: str) -> dict:
+    """V2 admission. Order of checks: revision (is it the exact source at all), writer, decoder, operations,
+    version. Admission still qualifies nothing."""
+    reasons, status = [], ADMITTED_FOR_VERIFICATION
+    if revision["state"] != SAME_REVISION:
+        status = REJECTED
+        reasons.append(f"SOURCE_REVISION_MISMATCH: {revision['state']} (missing source entities "
+                       f"{revision['source_entities_missing']}, added in scope {revision['entities_added_in_scope']})")
+    if writer["class"] in (WRITER_EZDXF, WRITER_LIBREDWG):
+        status = DIAGNOSTIC_NONQUALIFYING_CONVERSION if status != REJECTED else status
+        reasons.append(f"writer {writer['class']}: not an independent route")
+    if not decoder["independent"]:
+        if status == ADMITTED_FOR_VERIFICATION:
+            status = PROVENANCE_UNVERIFIED
+        reasons.append(f"DWG decoder {decoder['state']}: parser independence not established")
+    ops = declared.get("operations")
+    if ops is None:
+        reasons.append("export operations not documented")
+        if status == ADMITTED_FOR_VERIFICATION:
+            status = PROVENANCE_UNVERIFIED
+    elif any(o.upper() in FORBIDDEN_OPERATIONS for o in ops):
+        status = REJECTED
+        reasons.append(f"forbidden operations {ops}")
+    req = declared.get("requested_format")
+    if req in ACADVER and header.get("$ACADVER") != ACADVER[req]:
+        status = REJECTED
+        reasons.append(f"requested {req} requires $ACADVER {ACADVER[req]}, file has {header.get('$ACADVER')!r}")
+    return {"file_sha256": file_sha256, "source_sha256": source_sha256, "status": status, "reasons": reasons,
+            "DXF_WRITER": writer["class"], "DWG_DECODER": decoder["state"],
+            "SOURCE_METADATA_LASTSAVEDBY": writer.get("source_metadata_lastsavedby"),
+            "revision": revision["state"],
+            "parser_independence": "INDEPENDENT_PARSER" if status == ADMITTED_FOR_VERIFICATION else "NOT_ESTABLISHED",
+            "qualifies_anything": False}
+
+
+def scoped_signature_states(diagnostic_states: dict, admission: dict) -> dict:
+    """{signature: state}. A diagnostic reconciliation of a route that is not admitted never yields a
+    qualification state: every signature reads PROVENANCE_NOT_INDEPENDENT, the diagnostic outcome kept beside it."""
+    if admission["status"] == ADMITTED_FOR_VERIFICATION:
+        return {s: {"state": st, "diagnostic": st} for s, st in diagnostic_states.items()}
+    return {s: {"state": PROVENANCE_NOT_INDEPENDENT, "diagnostic": st} for s, st in diagnostic_states.items()}

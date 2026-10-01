@@ -84,6 +84,12 @@ def load(path):
         return None, [SourceFinding(F.ROUTE_DECODE_FAILED, None, (), f"{type(err).__name__}: {err}")]
 
 
+def _attr(entity, name, default=None):
+    """A DXF attribute the entity's class may not define (e.g. RTEXT has no 'layer' in ezdxf): the default,
+    never an exception - an unknown entity type must reach the UNHANDLED finding, not stop the route."""
+    return entity.dxf.get(name, default) if entity.dxf.is_supported(name) else default
+
+
 def _hid(entity):
     src = entity if entity.dxf.hasattr("handle") and entity.dxf.handle else getattr(entity, "source_of_copy", None)
     h = src.dxf.handle if src is not None and src.dxf.hasattr("handle") else None
@@ -129,7 +135,7 @@ class _K2:
         t = e.dxftype()
         hid = _hid(source if source is not None else e)
         obs_id = f"D2:{hid}" if hid is not None else None
-        layer = e.dxf.get("layer", None)
+        layer = _attr(e, "layer")
         if t == "OLE2FRAME":
             self.finding(F.SKIPPED, obs_id, path, "OLE2FRAME is an embedded OLE object, not vector geometry")
             return self.dispose(FINDING, obs_id)
@@ -139,7 +145,7 @@ class _K2:
         if t in ("WIPEOUT", "IMAGE"):
             self.finding(F.CUSTOM_CLASS, obs_id, path, f"{t} is not vector geometry", CAP.impacts_for_kind(t))
             return self.dispose(FINDING, obs_id)
-        if not (visible and not e.dxf.get("invisible", 0)):
+        if not (visible and not _attr(e, "invisible", 0)):
             self.out.hidden.append({"obs_id": obs_id, "kind": t, "instance_path": list(path)})
             return self.dispose(HIDDEN, obs_id)
         if t in CARRIED_DXF:

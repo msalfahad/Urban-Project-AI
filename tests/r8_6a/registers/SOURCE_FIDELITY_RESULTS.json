@@ -1,0 +1,168 @@
+{
+ "SCHEMA": "URBAN_R8_6A_SOURCE_FIDELITY_V1",
+ "files": {
+  "QORTUBA": {
+   "result": "SOURCE_FIDELITY_FAIL",
+   "against_source": "2ec3a9c8b66eb2e129275b87010f4a8d79d7e5bdcc31c1897c14fd7e5647d355",
+   "identity": {
+    "d1_model_space_entities": 660,
+    "same_handle_type_layer": 639,
+    "different": 0,
+    "different_examples": {},
+    "missing_in_dxf": 21,
+    "missing_obs": [
+     "D1:465",
+     "D1:467",
+     "D1:511",
+     "D1:513",
+     "D1:524",
+     "D1:550",
+     "D1:553",
+     "D1:815",
+     "D1:816",
+     "D1:817",
+     "D1:953",
+     "D1:1548",
+     "D1:1549",
+     "D1:1587",
+     "D1:1588",
+     "D1:1589",
+     "D1:1590",
+     "D1:1962",
+     "D1:1974",
+     "D1:2016",
+     "D1:2047"
+    ],
+    "d1_unsupported_read_by_dxf_route": 38,
+    "dxf_model_space_entities": 2701,
+    "d1_block_headers": 116,
+    "dxf_block_definitions": 3158
+   },
+   "geometry_reconciliation": {
+    "verdict": "SOURCE_DECODE_CONFLICT",
+    "field_class": "GEOMETRY",
+    "scope": "SOURCE",
+    "correlated_by": "BLOCK_RECORD_HANDLE",
+    "correlation_bases": {
+     "SOURCE_HANDLE": 552
+    },
+    "lineage_bases": {
+     "SOURCE_HANDLE": 38
+    },
+    "lineage_outcomes": {
+     "PASS": 38,
+     "UNMATCHED_INSERT_LINEAGE": 8361
+    },
+    "tolerance": {
+     "name": "REAL",
+     "position_pass": 2.555455345288919e-08,
+     "position_warn": 2.4955618606337098e-05,
+     "basis": "1024*eps*M with M=112390; text step 16 digits"
+    },
+    "counts": {
+     "PASS": 1112,
+     "BLOCK": 9870,
+     "UNMATCHED_A": 15,
+     "UNMATCHED_B": 260
+    },
+    "non_pass_by_field": {
+     "POSITION": 21,
+     "PRESENCE": 275,
+     "VISIBILITY": 1488,
+     "BLOCK_LINEAGE": 8361
+    }
+   },
+   "visibility_rows_nonpass": 1488,
+   "intake_class": "DIFFERENT_SOURCE_REVISION_PROVENANCE_UNVERIFIED_DXF",
+   "basis": "measured from the files; no quantity agreement is used"
+  },
+  "P7757": {
+   "result": "SOURCE_FIDELITY_PASS",
+   "against_source": "7f61f3acdd62d62dc745f8b522f8136cb41c575df36ec6d9f27c2fe48fea41e3",
+   "identity": {
+    "d1_model_space_entities": 5966,
+    "same_handle_type_layer": 5966,
+    "different": 0,
+    "different_examples": {},
+    "missing_in_dxf": 0,
+    "missing_obs": [],
+    "d1_unsupported_read_by_dxf_route": 4,
+    "dxf_model_space_entities": 5966,
+    "d1_block_headers": 442,
+    "dxf_block_definitions": 442
+   },
+   "geometry_reconciliation": {
+    "verdict": "PASS",
+    "field_class": null,
+    "scope": null,
+    "correlated_by": "BLOCK_RECORD_HANDLE",
+    "correlation_bases": {
+     "SOURCE_HANDLE": 9424
+    },
+    "lineage_bases": {
+     "SOURCE_HANDLE": 931
+    },
+    "lineage_outcomes": {
+     "PASS": 931
+    },
+    "tolerance": {
+     "name": "REAL",
+     "position_pass": 1.846084305007542e-07,
+     "position_warn": 0.00018028167041089278,
+     "basis": "1024*eps*M with M=811916; text step 16 digits"
+    },
+    "counts": {
+     "PASS": 10815
+    },
+    "non_pass_by_field": {}
+   },
+   "visibility_rows_nonpass": 0,
+   "intake_class": "HIGH_FIDELITY_PROVENANCE_UNVERIFIED_DXF",
+   "basis": "measured from the files; no quantity agreement is used"
+  },
+  "ST7757": {
+   "result": "SOURCE_FIDELITY_PASS",
+   "against_source": "3f7a556c69786834c16c355504437b5abcd1f5aa3a9625b33a2c5b14213f0227",
+   "identity": {
+    "d1_model_space_entities": 4473,
+    "same_handle_type_layer": 4473,
+    "different": 0,
+    "different_examples": {},
+    "missing_in_dxf": 0,
+    "missing_obs": [],
+    "d1_unsupported_read_by_dxf_route": 13,
+    "dxf_model_space_entities": 5512,
+    "d1_block_headers": 420,
+    "dxf_block_definitions": 420
+   },
+   "geometry_reconciliation": {
+    "verdict": "PASS",
+    "field_class": null,
+    "scope": null,
+    "correlated_by": "BLOCK_RECORD_HANDLE",
+    "correlation_bases": {
+     "SOURCE_HANDLE": 2992
+    },
+    "lineage_bases": {
+     "SOURCE_HANDLE": 998
+    },
+    "lineage_outcomes": {
+     "PASS": 998
+    },
+    "tolerance": {
+     "name": "REAL",
+     "position_pass": 4.3558661432753e-08,
+     "position_warn": 4.253775530542285e-05,
+     "basis": "1024*eps*M with M=191573; text step 16 digits"
+    },
+    "counts": {
+     "PASS": 5936
+    },
+    "non_pass_by_field": {}
+   },
+   "visibility_rows_nonpass": 0,
+   "intake_class": "HIGH_FIDELITY_PROVENANCE_UNVERIFIED_DXF",
+   "basis": "measured from the files; no quantity agreement is used"
+  }
+ }
+}

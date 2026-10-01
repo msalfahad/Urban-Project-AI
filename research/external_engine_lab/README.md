@@ -78,3 +78,17 @@ Run order: qualification → regions → shadow_diff → (final suite) → packa
 | `r8_6_pre_migration.py` | `tests/r8_6/registers/*.json` | owner actions, dependency graph, blocker register, legacy audit, round-1 signatures, parser plan, defect, transaction, decisions |
 | `r8_6_upload_drift.py` | `outputs/r8_6/UPLOAD_DRIFT_STATUS.json` | stored villa inventory vs the session upload folder (status step, never a test) |
 | `r8_6_package.py` | `data/reports/URBAN_QTO_R8_6_PRE_MIGRATION_PROOF/` + zip | review package from the registers and the final suite's junit |
+
+## R8.6A (DXF intake, source fidelity, parser independence; shadow)
+
+External DXFs are read from the hash-addressed store `data/inputs/by_sha256/<sha256>.dxf` (untracked; declared in
+`tests/r8_6a/FIXTURE_MANIFEST.json`). Run the scripts outside any test session (the determinism guard forbids
+test-time writes). `<work>` holds the K2 pickles, indexes and D1 decodes the intake reads.
+
+| script | writes | purpose |
+|---|---|---|
+| `r8_6a_reconcile.py` | `<work>/*_reconcile.json` | D1/K1 vs DXF/K2 diagnostic reconciliation (REAL tolerance, handle + instance path, no nearest-neighbour) |
+| `r8_6a_intake.py` | `tests/r8_6a/registers/{DXF_INTAKE,DXF_PROVENANCE,SOURCE_FIDELITY,QORTUBA_ROUND1_DXF,P7757_DXF}*.json` | hash identification, streaming header/census/handle scan, writer vs decoder vs LASTSAVEDBY, revision identity, editing-time evidence, admission V2, scoped signature states, plan variants |
+| `r8_6a_registers.py` | `tests/r8_6a/registers/{OWNER_ACTION_REGISTER,R8_6A_DECISION_REGISTER}.json` | owner actions V3 (FILE_RECEIVED vs INDEPENDENT_PROVENANCE_ESTABLISHED), decisions, contract review, findings, gates |
+| `r8_6a_owner_images.py` | the two owner-review PNGs | Qortuba SECOND FLOOR PLAN variants (DXF as stored) and the Q-14 ten-space ceiling question |
+| `r8_6a_package.py` | `data/reports/URBAN_QTO_R8_6A_DXF_INTAKE/` + zip | review package from the registers, the images and the final suite's junit |

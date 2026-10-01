@@ -1,0 +1,200 @@
+{
+ "SCHEMA": "URBAN_R8_6A_DECISION_REGISTER_V1",
+ "decisions": [
+  {
+   "id": "R86A-D01",
+   "decision": "Files identified by SHA-256 only. Qortuba df0e1d69, P7757 ab54dd55, ST7757 9f9d1179 found; no re-upload requested.",
+   "status": "DECIDED"
+  },
+  {
+   "id": "R86A-D02",
+   "decision": "Writer, decoder and source metadata are recorded as three separate facts. All three DXFs: DXF_WRITER = AUTOCAD_OR_ODA_FAMILY_FORMAT, DWG_DECODER = CONVERTER_UNKNOWN, SOURCE_METADATA_LASTSAVEDBY = 'Msalf'.",
+   "status": "DECIDED"
+  },
+  {
+   "id": "R86A-D03",
+   "decision": "Qortuba DXF is SAME_LINEAGE_DIFFERENT_REVISION of DWG 2ec3a9c8 (same FINGERPRINTGUID, different VERSIONGUID, +45,537 s editing time, 21 measured entities missing, 19 added in the plan region): SOURCE_FIDELITY_FAIL against 2ec3a9c8, NOT_ESTABLISHED against its own DWG, admission REJECTED.",
+   "status": "DECIDED"
+  },
+  {
+   "id": "R86A-D04",
+   "decision": "P7757 and ST7757 DXFs: SOURCE_FIDELITY_PASS (P7757: 5966/5966 model-space entities same handle/type/layer; geometry PASS; 0x929 kept as ARC_DIMENSION), class HIGH_FIDELITY_PROVENANCE_UNVERIFIED_DXF.",
+   "status": "DECIDED"
+  },
+  {
+   "id": "R86A-D05",
+   "decision": "No signature qualified (Qortuba 0/10, P7757 0). Every signature reads PROVENANCE_NOT_INDEPENDENT with its diagnostic outcome kept beside it. No numerical-percentage qualification.",
+   "status": "DECIDED"
+  },
+  {
+   "id": "R86A-D06",
+   "decision": "INDEPENDENT_QORTUBA_RECONCILIATION = BLOCKED_EXTERNAL_PROVENANCE (and SOURCE_REVISION_MISMATCH).",
+   "status": "DECIDED"
+  },
+  {
+   "id": "R86A-D07",
+   "decision": "ST7757 is structural supporting evidence only; nothing from it enters architectural quantities.",
+   "status": "DECIDED"
+  },
+  {
+   "id": "R86A-D08",
+   "decision": "The owner's unit claim stays bound to 2ec3a9c8; it is not transferred to the DXF or the later DWG.",
+   "status": "DECIDED"
+  },
+  {
+   "id": "R86A-D09",
+   "decision": "Plan selection: bottom-most layout = PLAN_VARIANT_4_SELECTED_CANDIDATE, the same title handle and position as the measured plan. A candidate only; the designation stays PENDING_OWNER.",
+   "status": "DECIDED"
+  },
+  {
+   "id": "R86A-D10",
+   "decision": "K2 (ezdxf route) fixed to read optional attributes without raising (RTEXT has no layer in ezdxf): one unknown entity type no longer stops the route. SHADOW code; no quantity path touched.",
+   "status": "DECIDED"
+  },
+  {
+   "id": "R86A-D11",
+   "decision": "Next coding round: A (CANONICAL_MEASUREMENT_INPUT contract, fail-closed) now; independent qualification (B) when a conversion record and the right Qortuba DWG arrive.",
+   "status": "DECIDED"
+  },
+  {
+   "id": "R86A-D12",
+   "decision": "MIGRATION_PLANNING_READY = YES (round 1 must be re-anchored after the revision decision); MIGRATION_EXECUTION_READY = NO; PRODUCTION_MIGRATION = NO.",
+   "status": "DECIDED"
+  }
+ ],
+ "canonical_input_contract_review": {
+  "lesson": "identical segments with lossy provenance changed HALL 36.37 -> 25.0925 m2 (R8.6 ablation)",
+  "fields": [
+   {
+    "field": "block identity along the instance path",
+    "carried_now": "YES",
+    "how": "block names derived from the K1 instance path (D1 INSERT -> block record)",
+    "fail_closed_today": "NO"
+   },
+   {
+    "field": "stable source part id",
+    "carried_now": "PARTIAL",
+    "how": "sub_id = hash(K1 obs id + canonical coordinates): unique within one decode, NOT stable across revisions or after any coordinate change",
+    "fail_closed_today": "NO"
+   },
+   {
+    "field": "source observation id",
+    "carried_now": "YES",
+    "how": "K1 lineage obs_id",
+    "fail_closed_today": "NO"
+   },
+   {
+    "field": "instance path",
+    "carried_now": "YES",
+    "how": "K1 lineage instance_path",
+    "fail_closed_today": "NO"
+   },
+   {
+    "field": "placed text identity",
+    "carried_now": "YES",
+    "how": "D1 TEXT/MTEXT placed through K1 instance paths (lab mapping)",
+    "fail_closed_today": "NO"
+   },
+   {
+    "field": "placed dimension identity",
+    "carried_now": "YES",
+    "how": "D1 definition points + measurement (lab mapping)",
+    "fail_closed_today": "NO"
+   },
+   {
+    "field": "layer",
+    "carried_now": "YES",
+    "how": "K1 lineage layer",
+    "fail_closed_today": "NO"
+   },
+   {
+    "field": "visibility",
+    "carried_now": "PARTIAL",
+    "how": "K1 removes hidden entities into rg.hidden; the method input carries no visibility flag",
+    "fail_closed_today": "NO"
+   },
+   {
+    "field": "curve identity",
+    "carried_now": "YES",
+    "how": "one primitive per K1 segment / arc / circle with its lineage",
+    "fail_closed_today": "NO"
+   },
+   {
+    "field": "source handle / correlation identity",
+    "carried_now": "YES",
+    "how": "K1 lineage source_handle",
+    "fail_closed_today": "NO"
+   }
+  ],
+  "gap": "the method accepts a primitive with a blank block path or colliding part id and silently changes rooms; no input declares its required provenance",
+  "proposal": "CANONICAL_MEASUREMENT_INPUT: each method declares the provenance fields it reads; the adapter refuses (fail closed, named field) when a declared field is absent or not unique; part id = (source handle, instance path, part index), never a coordinate hash",
+  "recommendation": "A",
+  "why": [
+   "B cannot start: no DXF has proven decoder provenance and the Qortuba DXF is the wrong revision",
+   "A is fully inside our control and removes a proven silent-error path (HALL 36.37 -> 25.09)",
+   "A defines what a qualified parser must deliver, so B qualifies against the real contract",
+   "C would couple an internal change with an external dependency and stall on the external part"
+  ]
+ },
+ "findings": [
+  {
+   "id": "F-R86A-01",
+   "risk": "silent quantity error / source omission",
+   "finding": "the Qortuba drawing has moved on: the owner's current file is a later revision than the DWG the six rows were measured on; 10 round-1 source observations are gone (HALL, BED.ROOM 18.7525, BATH 5.1, UNLABELLED 4.51 are built from them). Approving the R8.6 rows as baseline now would freeze an outdated drawing",
+   "action": "DECIDE_QORTUBA_DRAWING_REVISION"
+  },
+  {
+   "id": "F-R86A-02",
+   "risk": "incorrect region authority",
+   "finding": "the owner's 'four stacked layouts' description fits the later revision, not the measured DWG (one layout). A designation answer must bind to one exact hash; 'last' is ambiguous (bottom-most vs most recently created copy 0x3690)",
+   "action": "REVIEW_QORTUBA_SECOND_FLOOR_PLAN_DESIGNATION"
+  },
+  {
+   "id": "F-R86A-03",
+   "risk": "false parser qualification",
+   "finding": "the three DXFs were written within 14 minutes on a machine with a UTC+3 clock, by a program that keeps TDINDWG and writes AC1032 with ACDSDATA; P7757/ST7757 were open 21 s / 10 s. This narrows the story (a desktop CAD program, not a Python library) but names no tool: still CONVERTER_UNKNOWN",
+   "action": "SUPPLY_DXF_CONVERSION_RECORD"
+  },
+  {
+   "id": "F-R86A-04",
+   "risk": "identity loss",
+   "finding": "sub_id in the canonical rebuild hashes coordinates: unique within a decode but not stable across revisions. A cross-revision comparison must correlate by handle + instance path, never by sub_id",
+   "action": "CANONICAL_MEASUREMENT_INPUT contract (next round)"
+  },
+  {
+   "id": "F-R86A-05",
+   "risk": "source omission (diagnostic route)",
+   "finding": "the K2 route raised on RTEXT (no 'layer' attribute in ezdxf) and stopped for the whole document; fixed so the entity reaches the UNHANDLED finding",
+   "action": "fixed in engine/source/cad/kernel_ezdxf.py (SHADOW)"
+  },
+  {
+   "id": "F-R86A-06",
+   "risk": "test nondeterminism",
+   "finding": "intake paths under the session upload folder were kept out of frozen truth: registers record file names and hashes only, tests read committed registers",
+   "action": "none (guard holds)"
+  },
+  {
+   "id": "F-R86A-07",
+   "risk": "incorrect frame authority",
+   "finding": "the Qortuba DXF declares $INSUNITS 5 (cm) like the DWG; that agreement is not a confirmation for the later revision, which needs its own owner unit claim",
+   "action": "SUPPLY_QORTUBA_SOURCE_DWG_OF_DXF"
+  }
+ ],
+ "gates": {
+  "PRODUCTION_MIGRATION": "NO",
+  "MIGRATION_PLANNING_READY": "YES",
+  "MIGRATION_EXECUTION_READY": "NO",
+  "INDEPENDENT_REAL_RECONCILIATION": "BLOCKED_EXTERNAL_PROVENANCE",
+  "INDEPENDENT_QORTUBA_RECONCILIATION": "BLOCKED_EXTERNAL_PROVENANCE",
+  "INDEPENDENT_P7757_RECONCILIATION": "BLOCKED_EXTERNAL_PROVENANCE",
+  "QORTUBA_DXF_REVISION": "SAME_LINEAGE_DIFFERENT_REVISION",
+  "QORTUBA_SOURCE_FIDELITY": "SOURCE_FIDELITY_FAIL",
+  "P7757_SOURCE_FIDELITY": "SOURCE_FIDELITY_PASS",
+  "ST7757_SOURCE_FIDELITY": "SOURCE_FIDELITY_PASS",
+  "SIGNATURES_QUALIFIED": 0,
+  "QORTUBA_UNIT_CONTEXT": "CONFIRMED_BY_HUMAN",
+  "QORTUBA_REGION_DESIGNATION": "PENDING_OWNER",
+  "QORTUBA_MEASUREMENT_FRAME": "UNCONFIRMED",
+  "ALRASHED_COLUMN_RULE": "TRADE_DEDUCTION_RULE_UNDECIDED"
+ }
+}

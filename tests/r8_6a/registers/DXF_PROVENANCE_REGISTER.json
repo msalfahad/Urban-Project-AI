@@ -1,0 +1,184 @@
+{
+ "SCHEMA": "URBAN_R8_6A_DXF_PROVENANCE_REGISTER_V1",
+ "decoder_states": [
+  "AUTOCAD_PROVEN",
+  "ODA_FILE_CONVERTER_PROVEN",
+  "OTHER_INDEPENDENT_DWG_PARSER_PROVEN",
+  "LIBREDWG_LINEAGE_PROVEN",
+  "SHARED_OR_DEPENDENT_LINEAGE",
+  "CONVERTER_UNKNOWN"
+ ],
+ "files": {
+  "QORTUBA": {
+   "DXF_WRITER": {
+    "class": "AUTOCAD_OR_ODA_FAMILY_FORMAT",
+    "evidence": [
+     "ACDSDATA section present",
+     "$ACADMAINTVER written with group code 90"
+    ],
+    "source_metadata_lastsavedby": "Msalf",
+    "note": "the writer class never establishes the DWG decoder"
+   },
+   "DWG_DECODER": {
+    "state": "CONVERTER_UNKNOWN",
+    "independent": false,
+    "basis": "no conversion record"
+   },
+   "editing_time_evidence": {
+    "source_dwg_TDINDWG_days": 56.15396990740741,
+    "dxf_TDINDWG_days": 56.6810185185,
+    "added_editing_time_seconds": 45537.0,
+    "source_dwg_TDUUPDATE_julian": 2460780.7484027776,
+    "dxf_TDUUPDATE_julian": 2461315.278958333,
+    "dxf_writer_clock_utc_offset_hours": 3.0,
+    "reading": "hours of additional editing: the DXF's drawing was edited after the measured DWG was saved"
+   },
+   "SOURCE_METADATA_LASTSAVEDBY": "Msalf",
+   "converter_provenance": "CONVERTER_UNKNOWN: converted for the owner through ChatGPT; no tool name, version, settings or log was supplied",
+   "revision": {
+    "state": "SAME_LINEAGE_DIFFERENT_REVISION",
+    "fingerprintguid_equal": true,
+    "versionguid_equal": false,
+    "source_entities_missing": 21,
+    "entities_added_in_scope": 19
+   },
+   "revision_evidence": {
+    "source_entities_missing_from_dxf": 21,
+    "entities_added_inside_region": 19,
+    "added_by_type_layer": {
+     "LINE/WALL": 2,
+     "DIMENSION/DIM": 7,
+     "LINE/DIM": 6,
+     "INSERT/DIM": 4
+    },
+    "added_handle_range": [
+     "8F8",
+     "AAE94"
+    ]
+   },
+   "admission_v2": {
+    "file_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+    "source_sha256": "2ec3a9c8b66eb2e129275b87010f4a8d79d7e5bdcc31c1897c14fd7e5647d355",
+    "status": "REJECTED",
+    "reasons": [
+     "SOURCE_REVISION_MISMATCH: SAME_LINEAGE_DIFFERENT_REVISION (missing source entities 21, added in scope 19)",
+     "DWG decoder CONVERTER_UNKNOWN: parser independence not established",
+     "export operations not documented"
+    ],
+    "DXF_WRITER": "AUTOCAD_OR_ODA_FAMILY_FORMAT",
+    "DWG_DECODER": "CONVERTER_UNKNOWN",
+    "SOURCE_METADATA_LASTSAVEDBY": "Msalf",
+    "revision": "SAME_LINEAGE_DIFFERENT_REVISION",
+    "parser_independence": "NOT_ESTABLISHED",
+    "qualifies_anything": false
+   }
+  },
+  "P7757": {
+   "DXF_WRITER": {
+    "class": "AUTOCAD_OR_ODA_FAMILY_FORMAT",
+    "evidence": [
+     "ACDSDATA section present",
+     "$ACADMAINTVER written with group code 90"
+    ],
+    "source_metadata_lastsavedby": "Msalf",
+    "note": "the writer class never establishes the DWG decoder"
+   },
+   "DWG_DECODER": {
+    "state": "CONVERTER_UNKNOWN",
+    "independent": false,
+    "basis": "no conversion record"
+   },
+   "editing_time_evidence": {
+    "source_dwg_TDINDWG_days": 2.7347130092592593,
+    "dxf_TDINDWG_days": 2.7349560648,
+    "added_editing_time_seconds": 21.0,
+    "source_dwg_TDUUPDATE_julian": 2461167.3743820833,
+    "dxf_TDUUPDATE_julian": 2461315.269293982,
+    "dxf_writer_clock_utc_offset_hours": 3.0,
+    "reading": "open only for the save (seconds): consistent with a straight conversion"
+   },
+   "SOURCE_METADATA_LASTSAVEDBY": "Msalf",
+   "converter_provenance": "CONVERTER_UNKNOWN: converted for the owner through ChatGPT; no tool name, version, settings or log was supplied",
+   "revision": {
+    "state": "SAME_REVISION",
+    "fingerprintguid_equal": true,
+    "versionguid_equal": true,
+    "source_entities_missing": 0,
+    "entities_added_in_scope": 0
+   },
+   "revision_evidence": {
+    "source_entities_missing_from_dxf": 0,
+    "dxf_entities_with_handle_above_source_handseed": 0
+   },
+   "admission_v2": {
+    "file_sha256": "ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4",
+    "source_sha256": "7f61f3acdd62d62dc745f8b522f8136cb41c575df36ec6d9f27c2fe48fea41e3",
+    "status": "PROVENANCE_UNVERIFIED",
+    "reasons": [
+     "DWG decoder CONVERTER_UNKNOWN: parser independence not established",
+     "export operations not documented"
+    ],
+    "DXF_WRITER": "AUTOCAD_OR_ODA_FAMILY_FORMAT",
+    "DWG_DECODER": "CONVERTER_UNKNOWN",
+    "SOURCE_METADATA_LASTSAVEDBY": "Msalf",
+    "revision": "SAME_REVISION",
+    "parser_independence": "NOT_ESTABLISHED",
+    "qualifies_anything": false
+   }
+  },
+  "ST7757": {
+   "DXF_WRITER": {
+    "class": "AUTOCAD_OR_ODA_FAMILY_FORMAT",
+    "evidence": [
+     "ACDSDATA section present",
+     "$ACADMAINTVER written with group code 90"
+    ],
+    "source_metadata_lastsavedby": "Msalf",
+    "note": "the writer class never establishes the DWG decoder"
+   },
+   "DWG_DECODER": {
+    "state": "CONVERTER_UNKNOWN",
+    "independent": false,
+    "basis": "no conversion record"
+   },
+   "editing_time_evidence": {
+    "source_dwg_TDINDWG_days": 1.1687040277777778,
+    "dxf_TDINDWG_days": 1.1688197685,
+    "added_editing_time_seconds": 10.0,
+    "source_dwg_TDUUPDATE_julian": 2461167.347617176,
+    "dxf_TDUUPDATE_julian": 2461315.269733796,
+    "dxf_writer_clock_utc_offset_hours": 3.0,
+    "reading": "open only for the save (seconds): consistent with a straight conversion"
+   },
+   "SOURCE_METADATA_LASTSAVEDBY": "Msalf",
+   "converter_provenance": "CONVERTER_UNKNOWN: converted for the owner through ChatGPT; no tool name, version, settings or log was supplied",
+   "revision": {
+    "state": "SAME_REVISION",
+    "fingerprintguid_equal": true,
+    "versionguid_equal": true,
+    "source_entities_missing": 0,
+    "entities_added_in_scope": 0
+   },
+   "revision_evidence": {
+    "source_entities_missing_from_dxf": 0,
+    "dxf_entities_with_handle_above_source_handseed": 0
+   },
+   "admission_v2": {
+    "file_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+    "source_sha256": "3f7a556c69786834c16c355504437b5abcd1f5aa3a9625b33a2c5b14213f0227",
+    "status": "PROVENANCE_UNVERIFIED",
+    "reasons": [
+     "DWG decoder CONVERTER_UNKNOWN: parser independence not established",
+     "export operations not documented"
+    ],
+    "DXF_WRITER": "AUTOCAD_OR_ODA_FAMILY_FORMAT",
+    "DWG_DECODER": "CONVERTER_UNKNOWN",
+    "SOURCE_METADATA_LASTSAVEDBY": "Msalf",
+    "revision": "SAME_REVISION",
+    "parser_independence": "NOT_ESTABLISHED",
+    "qualifies_anything": false
+   }
+  }
+ },
+ "rule": "writer, decoder and source metadata are separate facts; only a conversion record with hashed evidence can prove a decoder"
+}
