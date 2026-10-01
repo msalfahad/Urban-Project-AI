@@ -22,6 +22,8 @@ from . import canonical_input as CI
 from . import geometry_role as GR
 from . import region_membership as RM
 from . import role_authority as RA
+from . import text_role as TX
+from . import semantic_zones as SZ
 from . import topology as T
 from . import topology_crosscheck as XC
 from . import topology_policy as TP
@@ -111,6 +113,10 @@ def topology_inputs(inp: CI.CanonicalMeasurementInput, *, frame_insert, eps_n, e
         cands = [c for c in cands if c[1] == "UNKNOWN"] + \
             RA.bridging_subset([c for c in cands if c[1] != "UNKNOWN"], items, eps_r)
     adm["grades"], adm["separator_candidates"] = grades, cands
+    adm["semantic_candidates"] = [T.BoundaryItem(p.identity.key, p.kind, tuple(p.geometry), GR.SEMANTIC_BOUNDARY)
+                                  for p in sorted(inp.parts, key=lambda q: q.identity.key or "")
+                                  if p.visibility == CI.VISIBLE and p.kind in LINEAR
+                                  and roles[p.identity.key].role == GR.SEMANTIC_BOUNDARY]
     closures, status = T.opening_closures(adm["doors"], items, eps_n)
     e_r = eps_r if eps_r else TP.eps_authored(inp.unit_native_to_mm)
     g_closures, g_status, g_open = T.glazing_closures(items, eps_n, e_r) if e_r else ([], {}, {})
@@ -118,9 +124,14 @@ def topology_inputs(inp: CI.CanonicalMeasurementInput, *, frame_insert, eps_n, e
     status = dict(status)
     adm["glazing"] = g_status
     adm["glazed_openings"] = g_open
-    labels = [T.LabelText(t.identity.key, _occ(t, assemblies), t.value, t.x, t.y)
-              for t in sorted(inp.texts, key=lambda q: q.identity.key or "")
+    troles = TX.classify(inp, frame_insert=frame_insert, claims=claims)
+    adm["text_roles"] = troles
+    placed = [t for t in sorted(inp.texts, key=lambda q: q.identity.key or "")
               if t.visibility == CI.VISIBLE and t.value and t.x is not None and t.y is not None]
+    labels = [T.LabelText(t.identity.key, _occ(t, assemblies), t.value, t.x, t.y) for t in placed
+              if troles[t.identity.key].role == TX.ROOM_LABEL_ESTABLISHED]
+    adm["unresolved_texts"] = [T.LabelText(t.identity.key, _occ(t, assemblies), t.value, t.x, t.y) for t in placed
+                               if troles[t.identity.key].role in TX.UNRESOLVED]
     return items, probes, labels, adm, closures, status, door_probes
 
 
@@ -131,28 +142,75 @@ UNREALISED_BOUNDARY_LAYER = "UNREALISED_ENTITY_ON_BOUNDARY_LAYER"
 UNREALISED_IN_SITE = "UNREALISED_ENTITY_POSSIBLY_IN_SITE"
 
 
-def unrealised_accounting(unrealised, inp, res, frame_insert):
+UNREALISED_REVIEW_REGION = "REGION_REVIEW_REQUIRED"
+OCCURRENCE_REVIEW = "OCCURRENCE_REVIEW_REQUIRED"
+
+
+def _disjoint(a, b):
+    return a[2] < b[0] or b[2] < a[0] or a[3] < b[1] or b[3] < a[1]
+
+
+def unrealised_accounting(unrealised, inp, res, frame_insert, occurrence_contexts=None):
     """Source entities the route could not realise (custom / proxy / unhandled / xref content / carried fills) have
-    no placed geometry, so the topology never sees them. They are never ignored silently:
-      * inside the region's frame occurrence -> they belong to the sheet frame (no room content);
-      * on a WALL / COLUMN / GLAZING layer -> the whole input is INCOMPLETE (a boundary may be missing);
-      * on a layer whose realised parts touch a bounded site -> every such site gets UNREALISED_IN_SITE (blocking);
-      * otherwise -> recorded, with the evidence (no realised part of that layer lies in any bounded site)."""
+    no placed geometry, so the topology never sees them. R8.9: they are excluded ONLY on POSITIVE evidence; the
+    absence of realised peers on the same layer proves nothing about where an unrealised entity is.
+
+    Positive evidence, in order:
+      IN_SHEET_FRAME_OCCURRENCE          its top-level occurrence is the region's sheet-frame occurrence
+      PRESENTATION_OCCURRENCE            its top-level occurrence is an established presentation / frame occurrence
+      PLACEMENT (u["extent"])            its own source placement (e.g. the ACIS body's vertices and B-spline
+                                         control points through the body transform - convex-hull bound) is
+                                         OUTSIDE the region, or meets no bounded site, or meets these sites
+      OCCURRENCE_FULLY_OUTSIDE           every realised record of its occurrence is exactly outside the region
+                                         (occurrence-level evidence, recorded as such)
+    Otherwise it is LOCALISED as far as the source structure allows and blocks there:
+      wall / column / glazing layer or unknown layer   -> the whole input (a boundary may be missing)
+      inside an occurrence present in the region       -> OCCURRENCE_REVIEW_REQUIRED on the sites that occurrence
+                                                          touches (or the whole input if it touches none)
+      model space / occurrence not localisable          -> REGION_REVIEW_REQUIRED (the whole input)"""
+    occurrence_contexts = occurrence_contexts or {}
     out = {"blocking_input": [], "site_issues": defaultdict(list), "recorded": []}
-    occ_in = {_occ(p) for p in inp.parts}
-    layer_sites = defaultdict(set)
+    occ_in = {(p.identity.instance_handles or ())[0] for p in inp.parts if p.identity.instance_handles}
+    outside_occ = set(inp.notes.get("occurrences_fully_outside", ()))
+    bounds = inp.notes.get("clip_bounds")
+    occ_sites = defaultdict(set)
     for p in inp.parts:
-        for sid in res["probe_sites"].get(p.identity.key, ()):
-            layer_sites[p.layer].add(sid)
+        top = (p.identity.instance_handles or (None,))[0]
+        if top is not None:
+            occ_sites[top] |= set(res["probe_sites"].get(p.identity.key, ()))
+            for s_ in res["sites"]:
+                if p.identity.key in s_["boundary_source_ids"]:
+                    occ_sites[top].add(s_["site_id"])
+    sites = res["sites"]
     for u in sorted(unrealised, key=lambda z: (z["obs_id"] or "", z["code"])):
         if u["code"] not in UNREALISED_CODES:
             continue
         path = tuple(u.get("path") or ())
-        top = ("I" + path[0]) if path else None
-        if top is not None and top not in occ_in:
-            continue                                            # inside an occurrence outside the region
-        if path and frame_insert is not None and path[0] == frame_insert:
+        top = path[0] if path else None
+        ctx = occurrence_contexts.get(top, {}).get("context") if top else None
+        ext = u.get("extent")
+        if top is not None and frame_insert is not None and top == frame_insert:
             out["recorded"].append(dict(u, disposition="IN_SHEET_FRAME_OCCURRENCE"))
+            continue
+        if ctx in (RA.SHEET_FRAME, RA.PRESENTATION):
+            out["recorded"].append(dict(u, disposition="PRESENTATION_OCCURRENCE"))
+            continue
+        if ext is not None:
+            if bounds is not None and _disjoint(ext, bounds):
+                out["recorded"].append(dict(u, disposition="OUTSIDE_SELECTED_MEASUREMENT_REGION_BY_PLACEMENT"))
+                continue
+            hit = sorted(s_["site_id"] for s_ in sites if not _disjoint(ext, s_["bbox"]))
+            if not hit:
+                out["recorded"].append(dict(u, disposition="NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"))
+                continue
+            for sid in hit:
+                out["site_issues"][sid].append(u["obs_id"])
+            out["recorded"].append(dict(u, disposition=UNREALISED_IN_SITE + "_BY_PLACEMENT", sites=hit))
+            continue
+        if top is not None and top in outside_occ and top not in occ_in:
+            out["recorded"].append(dict(u, disposition="OUTSIDE_REGION_BY_OCCURRENCE",
+                                        strength="OCCURRENCE_LEVEL: every realised record of the occurrence is "
+                                                 "exactly outside; the unrealised child's own extent is unknown"))
             continue
         lr = GR.layer_role(u.get("layer"))
         if u.get("layer") is None:
@@ -161,22 +219,23 @@ def unrealised_accounting(unrealised, inp, res, frame_insert):
         if lr in GR.BOUNDARY_LAYER_ROLES:
             out["blocking_input"].append(dict(u, disposition=UNREALISED_BOUNDARY_LAYER))
             continue
-        sites = sorted(layer_sites.get(u.get("layer"), ()))
-        if sites:
-            for sid in sites:
+        if top is not None and top in occ_in and occ_sites.get(top):
+            for sid in sorted(occ_sites[top]):
                 out["site_issues"][sid].append(u["obs_id"])
-            out["recorded"].append(dict(u, disposition=UNREALISED_IN_SITE, sites=sites))
-        else:
-            out["recorded"].append(dict(u, disposition="NOT_IN_ANY_BOUNDED_SITE_BY_LAYER_EVIDENCE",
-                                        evidence="no realised part of this layer in the region touches a bounded site"))
+            out["recorded"].append(dict(u, disposition=OCCURRENCE_REVIEW, sites=sorted(occ_sites[top])))
+            continue
+        out["blocking_input"].append(dict(u, disposition=UNREALISED_REVIEW_REGION,
+                                          why="no positive evidence of its placement: absence of realised peers "
+                                              "on its layer is not evidence"))
     return out
 
 
 PHYSICAL_ISSUES = (T.TOLERANCE_SENSITIVE, T.ZERO_WIDTH_SLIVER, T.TOPOLOGY_ROLE_UNRESOLVED, T.OPENING_CLOSURE_UNRESOLVED,
                    T.SITE_ID_COLLISION, XC.GEOS_CROSSCHECK_DISAGREES, RA.ROLE_CONFLICT_SEPARATOR,
                    "UNREALISED_ENTITY_ON_BOUNDARY_LAYER", "UNREALISED_ENTITY_POSSIBLY_IN_SITE",
-                   "OCCURRENCE_REVIEW_REQUIRED")
-SEMANTIC_ISSUES = (T.MULTIPLE_SEMANTIC_LABELS, T.LABEL_ON_BOUNDARY, T.LABEL_OCCURRENCE_SPLIT)
+                   "OCCURRENCE_REVIEW_REQUIRED", "REGION_REVIEW_REQUIRED", "UNREALISED_ENTITY_LAYER_UNKNOWN")
+SEMANTIC_ISSUES = (T.MULTIPLE_SEMANTIC_LABELS, T.LABEL_ON_BOUNDARY, T.LABEL_OCCURRENCE_SPLIT,
+                   "TEXT_ROLE_UNRESOLVED_IN_SITE")
 
 
 def classify_issues(site) -> None:
@@ -241,6 +300,13 @@ def run(inp: CI.CanonicalMeasurementInput, *, frame_insert, expected_revision_id
                     blocking_roles=GR.TOPOLOGY_BLOCKING + (RA.UNCONNECTED_BOUNDARY_CANDIDATE,), opening_status=status,
                     opening_symbol_occurrences=door_probes, glazed_openings=adm["glazed_openings"])
     consequences(res, items + closures, adm, labels, tol)
+    for lt in adm["unresolved_texts"]:                 # a text of unresolved role inside a site: semantic review
+        sid, _ = T.locate(res["_arr"], res["sites"], (lt.x, lt.y), 0.0)
+        if sid is not None:
+            s_ = next(z for z in res["sites"] if z["site_id"] == sid)
+            s_["issues"] = sorted(set(s_["issues"]) | {TX.TEXT_ROLE_UNRESOLVED_IN_SITE})
+            s_.setdefault("unresolved_texts", []).append({"text": lt.text_id, "value": lt.value})
+            s_["status"] = T.REVIEW_REQUIRED
     xc = XC.check(res, items + closures, tol["eps_n"])
     for s_ in res["sites"]:
         st = xc["per_site"].get(s_["site_id"], {}).get("state", xc["state"])
@@ -251,18 +317,28 @@ def run(inp: CI.CanonicalMeasurementInput, *, frame_insert, expected_revision_id
     res["crosscheck"] = {k: v for k, v in xc.items() if k != "per_site"}
     res["crosscheck"]["disagreements"] = {k: v for k, v in sorted(xc["per_site"].items()) if v["state"] == XC.DISAGREES}
     if unrealised is not None:
-        acc = unrealised_accounting(unrealised, inp, res, frame_insert)
+        acc = unrealised_accounting(unrealised, inp, res, frame_insert, adm.get("occurrence_contexts"))
         res["unrealised"] = {"blocking_input": acc["blocking_input"], "recorded": acc["recorded"],
                              "sites": {k: sorted(v) for k, v in acc["site_issues"].items()}}
+        block = sorted({b["disposition"] for b in acc["blocking_input"]})
         for s_ in res["sites"]:
-            if s_["site_id"] in acc["site_issues"] or acc["blocking_input"]:
-                s_["issues"] = sorted(set(s_["issues"]) | {UNREALISED_IN_SITE if not acc["blocking_input"]
-                                                          else UNREALISED_BOUNDARY_LAYER})
+            add = set(block)
+            if s_["site_id"] in acc["site_issues"]:
+                add.add(UNREALISED_IN_SITE)
+            if add:
+                s_["issues"] = sorted(set(s_["issues"]) | add)
                 s_["status"] = T.REVIEW_REQUIRED
     else:
         res["unrealised"] = {"state": "NOT_SUPPLIED: the caller did not account for unrealised source entities"}
     for s_ in res["sites"]:
         classify_issues(s_)
+    obst = SZ.obstacle_interiors(res, adm["roles"])
+    for s_ in res["sites"]:
+        if s_["site_id"] in obst:
+            s_["kind"] = "OBSTACLE_INTERIOR"
+            s_["obstacle"] = obst[s_["site_id"]]
+    res["semantic"] = SZ.build(res, items + closures, adm["semantic_candidates"], labels, eps_n=tol["eps_n"],
+                               eps_r=tol["eps_r"])
     res["roles"] = adm
     res["openings"] = status
     res["closures"] = closures

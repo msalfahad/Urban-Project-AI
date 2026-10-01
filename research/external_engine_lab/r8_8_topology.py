@@ -73,6 +73,12 @@ def inputs(work: Path):
         UNREALISED[name] = blob["unrealised"]
         if name == "NEW_K2":
             out["_NEW_ALL_PARTS"] = blob["parts"]
+            cache = work / "acis_new_k2.json"
+            if not cache.exists():
+                import ezdxf
+                import r8_9_evidence as EV
+                cache.write_text(json.dumps(EV.k2_acis_extents(ezdxf.readfile(str(NEW_DXF)))))
+            PLACEMENT[C.REV_NEW_ID] = (json.loads(cache.read_text()), "ACIS_SAB_OF_THE_NEW_DXF (ezdxf, ACDSDATA)")
     return out
 
 
@@ -100,9 +106,27 @@ def variant_isolation(inp, all_parts):
                             for h in hits.values())}
 
 
-def run(inp, unrealised):
+PLACEMENT = {}            # revision id -> {source handle: ACIS world extent} (R8.9 positive placement evidence)
+
+
+def placement_for(revision_id):
+    """ACIS placement evidence of the SOURCE entities of one revision. REV_OLD: from the pinned K1 decode of the
+    DWG (both routes read that same DWG, so the evidence is keyed by its source handles). REV_NEW: must be supplied
+    from its own DXF (inputs() computes and caches it); never transferred between revisions."""
+    if revision_id not in PLACEMENT and revision_id == C.REV_OLD_ID:
+        import r8_9_evidence as EV
+        PLACEMENT[revision_id] = (EV.k1_acis_extents(json.loads(C.DECODE.read_text())),
+                                  "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)")
+    return PLACEMENT.get(revision_id)
+
+
+def run(inp, unrealised, **kw):
+    ev = placement_for(inp.revision.revision_id)
+    if ev is not None and unrealised is not None:
+        import r8_9_evidence as EV
+        unrealised = EV.attach(unrealised, ev[0], ev[1])
     return RT.run(inp, frame_insert=C.FRAME_INSERT, expected_revision_id=inp.revision.revision_id,
-                  selected_region_id=C.REGION_ID, unrealised=unrealised)
+                  selected_region_id=C.REGION_ID, unrealised=unrealised, **kw)
 
 
 # ====================================================================== site semantics (project, lab only)

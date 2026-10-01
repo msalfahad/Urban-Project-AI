@@ -51,19 +51,22 @@ DIMENSION_GRAPHICS = "DIMENSION_GRAPHICS"
 SHEET_FRAME = "SHEET_FRAME"
 TITLE_BLOCK = "TITLE_BLOCK"
 PRESENTATION_OVERHEAD = "PRESENTATION_OVERHEAD"      # hidden / overhead lines: above or below the cut plane
+SEMANTIC_BOUNDARY = "SEMANTIC_BOUNDARY"              # an authored finish / zone / threshold line: never topology,
+                                                     # it may subdivide a physical space into semantic zones (R8.9)
 UNKNOWN_PHYSICAL = "UNKNOWN_PHYSICAL"
 UNKNOWN_PRESENTATION = "UNKNOWN_PRESENTATION"
 BOUNDARY_CURVE_UNSUPPORTED = "BOUNDARY_CURVE_UNSUPPORTED"  # a boundary-layer curve the topology cannot node
 
 ROLES = (TOPOLOGY_BOUNDARY, STRUCTURAL_OBSTACLE, GLAZING_BOUNDARY, OPENING_SYMBOL, OPENING_BOUNDARY, FURNITURE,
          SANITARY_FIXTURE, STAIR_GEOMETRY, LIFT_GEOMETRY, ANNOTATION_GRAPHICS, DIMENSION_GRAPHICS, SHEET_FRAME,
-         TITLE_BLOCK, PRESENTATION_OVERHEAD, UNKNOWN_PHYSICAL, UNKNOWN_PRESENTATION, BOUNDARY_CURVE_UNSUPPORTED)
+         TITLE_BLOCK, PRESENTATION_OVERHEAD, SEMANTIC_BOUNDARY, UNKNOWN_PHYSICAL, UNKNOWN_PRESENTATION,
+         BOUNDARY_CURVE_UNSUPPORTED)
 
 # ROOM TOPOLOGY consumes exactly these (OPENING_BOUNDARY is derived, never a source part)
 TOPOLOGY_ADMITTED = (TOPOLOGY_BOUNDARY, STRUCTURAL_OBSTACLE, GLAZING_BOUNDARY, OPENING_BOUNDARY)
 # positively not topology-bearing: excluded without blocking
 TOPOLOGY_EXCLUDED = (OPENING_SYMBOL, FURNITURE, SANITARY_FIXTURE, STAIR_GEOMETRY, LIFT_GEOMETRY, ANNOTATION_GRAPHICS,
-                     DIMENSION_GRAPHICS, SHEET_FRAME, TITLE_BLOCK, PRESENTATION_OVERHEAD)
+                     DIMENSION_GRAPHICS, SHEET_FRAME, TITLE_BLOCK, PRESENTATION_OVERHEAD, SEMANTIC_BOUNDARY)
 # block every site they touch
 TOPOLOGY_BLOCKING = (UNKNOWN_PHYSICAL, UNKNOWN_PRESENTATION, BOUNDARY_CURVE_UNSUPPORTED)
 
@@ -84,6 +87,7 @@ LAYER_LEXICON = {
     "SHEET_FRAME": ("FRAME", "BORDER", "TITLE", "TITLEBLOCK", "SHEET"),
     "HIDDEN_LINE": ("HIDDEN", "OVERHEAD", "ABOVE"),
     "NON_PLOT": ("DEFPOINTS",),
+    "FINISH": ("FINISH", "FINISHES", "FLOORING", "TILE", "TILES", "TILING", "ZONE", "ZONES", "THRESHOLD"),
 }
 BLOCK_LEXICON = {
     "FURNITURE": ("BED", "SOFA", "COUCH", "CHAIR", "ARMCHAIR", "TABLE", "DESK", "WARDROBE", "CABINET", "BENCH",
@@ -162,6 +166,9 @@ ROLE_RULES = (
      "requires": "LAYER_ROLE=SHEET_FRAME + INSTANCE_CONTEXT=MODEL_SPACE"},
     {"id": "GR-16", "role": PRESENTATION_OVERHEAD, "strength": CORROBORATED,
      "requires": "LAYER_ROLE in {HIDDEN_LINE, NON_PLOT}"},
+    {"id": "GR-18", "role": SEMANTIC_BOUNDARY, "strength": CORROBORATED,
+     "requires": "LAYER_ROLE=FINISH + INSTANCE_CONTEXT=MODEL_SPACE + ENTITY_TYPE in {LINE, LWPOLYLINE, ARC}: an "
+                 "authored finish / zone / threshold line; never topology; semantic subdivision evidence only"},
     {"id": "GR-17", "role": "(as GR-05 .. GR-12, GR-15)", "strength": STRUCTURAL,
      "requires": "INSTANCE_CONTEXT=BUILDING_ASSEMBLY_OCCURRENCE (an occurrence established from positive evidence by "
                  "role_authority.occurrence_contexts, never by size): its children are read as model-space content; "
@@ -323,6 +330,8 @@ def _assign(p, occ_id, info, frame_insert, assemblies=frozenset()) -> RoleAssign
             return r(LIFT_GEOMETRY, "GR-12", CORROBORATED)
         if lr == "SHEET_FRAME":
             return r(SHEET_FRAME, "GR-15", CORROBORATED)
+        if lr == "FINISH" and linear and p.kind != "CIRCLE":
+            return r(SEMANTIC_BOUNDARY, "GR-18", CORROBORATED)
     if lr == "DIMENSION":
         return r(DIMENSION_GRAPHICS, "GR-13", CORROBORATED)
     if lr == "ANNOTATION":

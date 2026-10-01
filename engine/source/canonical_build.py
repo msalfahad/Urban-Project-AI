@@ -429,6 +429,11 @@ def assemble(revision: CI.SourceRevision, region_id: str, bounds, frame_id, unit
             outside[name] += 1
     n = dict(notes or {})
     n["outside_region"] = dict(outside)
+    # R8.9: occurrences whose every realised record is exactly OUTSIDE (positive, occurrence-level evidence for
+    # an unrealised child of the same occurrence) - never inferred for an occurrence with no realised record
+    n["occurrences_fully_outside"] = sorted(o[1:] for o, st in by_occ.items()
+                                            if o.startswith("I") and st == {CI.OUTSIDE_REGION})
+    n["clip_bounds"] = list(bounds) if bounds is not None else n.get("clip_bounds")
     n["region_membership_policy"] = RM.POLICY["id"]
     return CI.CanonicalMeasurementInput(revision, region_id, frame_id, unit_native_to_mm, unit_claim_id,
                                         tuple(kept["parts"]), tuple(kept["texts"]), tuple(kept["dimensions"]),

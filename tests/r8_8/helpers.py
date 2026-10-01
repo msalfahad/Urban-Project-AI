@@ -27,7 +27,9 @@ def seg(h, x1, y1, x2, y2, **kw):
     return part(h, "SEGMENT", (x1, y1, x2, y2), **kw)
 
 
-def text(h, value, x, y, path=(), layer="TEXT", vis=CI.VISIBLE, rid=REV, names=None):
+def text(h, value, x, y, path=(), layer="ROOM-TAG", vis=CI.VISIBLE, rid=REV, names=None):
+    """A synthetic room label. R8.9: a loose text names a space only on a room-label layer (text_role TR-07);
+    pass layer="TEXT" for an ordinary note."""
     return CI.PlacedText(CI.SourceIdentity(rid, str(h), tuple(path), "TEXT", 0), value, x, y, 20.0, layer, vis,
                          steps(path, names), "TEXT")
 

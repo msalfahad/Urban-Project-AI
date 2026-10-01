@@ -73,9 +73,15 @@ def test_custom_entity_on_a_wall_layer_blocks_the_whole_input():
 
 
 def test_custom_entity_on_a_layer_inside_a_room_blocks_that_room_only():
+    # SUPERSEDED by R8.9 §9 (R89-D05): R8.8 localised an unrealised entity by its layer's REALISED peers, which
+    # proves nothing about where the unrealised entity is. Without positive placement it now blocks the region;
+    # with its own placement (e.g. an ACIS body extent) it blocks exactly the rooms it meets.
     parts = H.two_rooms() + [H.seg(60, 100, 100, 200, 100, layer="MISC")]
     i = H.inp(parts, texts=[H.text(5, "A", 250, 200), H.text(6, "B", 750, 200)])
-    r = RT.run(i, frame_insert=None, unrealised=[{"code": "UNHANDLED", "obs_id": "D1:97", "layer": "MISC", "path": []}])
+    u = {"code": "UNHANDLED", "obs_id": "D1:97", "layer": "MISC", "path": []}
+    r = RT.run(i, frame_insert=None, unrealised=[u])
+    assert all("REGION_REVIEW_REQUIRED" in s["issues"] for s in r["sites"])
+    r = RT.run(i, frame_insert=None, unrealised=[dict(u, extent=[100.0, 100.0, 200.0, 150.0], extent_basis="TEST")])
     by = {tuple(s["labels"]): s for s in r["sites"]}
     assert "UNREALISED_ENTITY_POSSIBLY_IN_SITE" in by[("E5",)]["issues"]
     assert "UNREALISED_ENTITY_POSSIBLY_IN_SITE" not in by[("E6",)]["issues"]
