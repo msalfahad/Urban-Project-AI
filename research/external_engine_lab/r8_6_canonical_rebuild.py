@@ -336,7 +336,7 @@ def room_trace(res, can: Canonical):
     segs = [p for p in nd.primitives if p.kind == "SEGMENT"]
     out = {}
     for reg in o["regions"]:
-        obs, basis, virtual = set(), Counter(), []
+        obs, occ, basis, virtual = set(), set(), Counter(), []
         for s in reg["BOUNDARY_SEGMENTS"]:
             basis[s["BOUNDARY_BASIS"]] += 1
             (ax, ay), (bx, by) = s["PTS"]
@@ -352,11 +352,14 @@ def room_trace(res, can: Canonical):
                         hits.append(p)
             lins = [can.lineage_by_object.get(p.object_id) for p in hits]
             obs |= {lin.obs_id for lin in lins if lin is not None}
+            occ |= {(lin.obs_id, tuple(lin.instance_path)) for lin in lins if lin is not None}
             if not hits:
                 virtual.append({"basis": s["BOUNDARY_BASIS"], "site_id": s["SITE_ID"], "pts_mm": s["PTS"],
                                 "counts_as_perimeter": s["COUNTS_AS_PERIMETER"]})
         out[reg["ROOM_ID"]] = {"room": reg["ROOM"], "boundary_segments": len(reg["BOUNDARY_SEGMENTS"]),
                                "boundary_basis": dict(basis), "source_observations": sorted(obs, key=_obs_key),
+                               "source_occurrences": sorted(([o, list(pth)] for o, pth in occ),
+                                                            key=lambda x: (_obs_key(x[0]), x[1])),
                                "segments_without_a_source_line": virtual,
                                "measurement_region_id": reg["FLOOR_MEASUREMENT_REGION_ID"]}
     return out
@@ -366,11 +369,13 @@ def _obs_key(s):
     return int(s.split(":")[1].split("+")[0])
 
 
-def signatures_by_obs(doc):
+def signatures_by_occurrence(doc):
+    """{(obs_id, instance_path): {signature}} - a signature belongs to an occurrence, not to an observation id:
+    the same block entity can be placed once mirrored and once not."""
     out = {}
     for sg, keys in Q.capability_signatures(doc).items():
-        for oid, _ in keys:
-            out.setdefault(oid, set()).add(sg)
+        for oid, path in keys:
+            out.setdefault((oid, tuple(path)), set()).add(sg)
     return out
 
 
@@ -469,7 +474,7 @@ def proof(out_dir: Path):
     cand = next(c for c in src.cands.values() if any("SECOND FLOOR PLAN" in e[2] for e in c.role_evidence))
     ctx = canonical_context(src, cand)
     trace = room_trace(canon, can)
-    sig_by_obs = signatures_by_obs(can.doc)
+    sig_by_occ = signatures_by_occurrence(can.doc)
     scale = canon["unit"]["UNIT_SCALE_TO_MM"]
     floors = {f["ROOM_ID"]: f for f in canon["o"]["floors"]}
     act_floors = {f["ROOM_ID"]: f for f in active["o"]["floors"]}
@@ -491,8 +496,11 @@ def proof(out_dir: Path):
             "active_area_m2": (act_floors.get(rid) or {}).get("METHOD_A_CAD_POLYGON_AREA_M2"),
             "formula": f["FORMULA"],
             "boundary": {k: t[k] for k in ("boundary_segments", "boundary_basis", "segments_without_a_source_line")},
-            "source_observations": t["source_observations"],
-            "capability_signatures": sorted({sg for ob in t["source_observations"] for sg in sig_by_obs.get(ob, ())}),
+            "source_observations": t["source_observations"], "source_occurrences": t["source_occurrences"],
+            "occurrences_without_signature": [o for o in t["source_occurrences"]
+                                              if not sig_by_occ.get((o[0], tuple(o[1])))],
+            "capability_signatures": sorted({sg for o in t["source_occurrences"]
+                                             for sg in sig_by_occ.get((o[0], tuple(o[1])), ())}),
         })
     by_room = {r["room_id"]: r for r in rooms}
 
@@ -502,13 +510,16 @@ def proof(out_dir: Path):
         names = cr.get("ROOMS") or []
         rids = _rows_rooms(qid, canon["o"]["floors"])
         obs = sorted({ob for rid in rids for ob in by_room[rid]["source_observations"]}, key=_obs_key)
+        occs = sorted({(o[0], tuple(o[1])) for rid in rids for o in by_room[rid]["source_occurrences"]},
+                      key=lambda x: (_obs_key(x[0]), x[1]))
         sigs = sorted({sg for rid in rids for sg in by_room[rid]["capability_signatures"]})
         value = cr["MEASURED_NET_QUANTITY"]
         cur = ar["MEASURED_QUANTITY"] if ar else None
         rows.append({
             "row_id": f"{qid}|{cr['BOQ_ITEM']}", "trade": cr["TRADE"], "item": cr["BOQ_ITEM"],
             "rooms": [{"room_id": rid, "room": by_room[rid]["room"]} for rid in rids], "room_names_in_row": names,
-            "source_observations": obs, "source_geometry_ids": [by_room[rid]["measurement_region_id"] for rid in rids],
+            "source_observations": obs, "source_occurrences": [[o, list(p)] for o, p in occs],
+            "source_geometry_ids": [by_room[rid]["measurement_region_id"] for rid in rids],
             "canonical_region_id": cand.candidate_id, "frame_id": ctx["frame"].frame_id,
             "unit_context": {"status": ctx["unit"].status, "canonical_policy": "URBAN_FRAME_RELEASE_V3",
                              "active_path_reading": {k: canon["unit"][k] for k in

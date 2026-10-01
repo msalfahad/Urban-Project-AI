@@ -1,0 +1,59 @@
+{
+ "SCHEMA": "URBAN_R8_6_DECISION_REGISTER_V1",
+ "decisions": [
+  {
+   "id": "R86-D01",
+   "decision": "The R8.5 six-row 'exact match' is not accepted as proof (it snapped current cut lines). Replaced by the full-substitution canonical rebuild.",
+   "status": "DECIDED"
+  },
+  {
+   "id": "R86-D02",
+   "decision": "Round-1 proof inputs: curves from K1, texts and dimensions from D1 placed through K1 instance paths; the remaining active-reader inputs are proven non-dependencies by ablation.",
+   "status": "DECIDED"
+  },
+  {
+   "id": "R86-D03",
+   "decision": "The session-upload PDF is removed from the canonical runs (proven non-dependency); tests never read session uploads.",
+   "status": "DECIDED"
+  },
+  {
+   "id": "R86-D04",
+   "decision": "Session determinism guard: any write under data/ or tests/ fails the session.",
+   "status": "DECIDED"
+  },
+  {
+   "id": "R86-D05",
+   "decision": "Villa-inventory test narrowed: no write; artifact self-consistency + in-memory determinism; upload drift reported by a separate status step.",
+   "status": "DECIDED"
+  },
+  {
+   "id": "R86-D06",
+   "decision": "Round-1 scope unchanged: six rows. Q-14 additionally waits on the ceiling-condition owner action.",
+   "status": "DECIDED"
+  },
+  {
+   "id": "R86-D07",
+   "decision": "No gate lowered: unit UNCONFIRMED, designation PENDING_REVIEW, INDEPENDENT_REAL_RECONCILIATION BLOCKED_EXTERNAL_INPUT, qualification 0/10.",
+   "status": "DECIDED"
+  },
+  {
+   "id": "R86-D08",
+   "decision": "The closed-bit defect stays NOT_APPLIED; fix only after the column-deduction rule, and the fix must carry the column footprint as its own quantity.",
+   "status": "DECIDED"
+  },
+  {
+   "id": "R86-D09",
+   "decision": "MIGRATION_PLANNING_READY = YES; MIGRATION_EXECUTION_READY = NO; PRODUCTION_MIGRATION = NO.",
+   "status": "DECIDED"
+  }
+ ],
+ "gates": {
+  "PRODUCTION_MIGRATION": "NO",
+  "MIGRATION_PLANNING_READY": "YES",
+  "MIGRATION_EXECUTION_READY": "NO",
+  "INDEPENDENT_REAL_RECONCILIATION": "BLOCKED_EXTERNAL_INPUT",
+  "QORTUBA_UNIT_CONTEXT": "UNCONFIRMED",
+  "QORTUBA_REGION": "UNCONFIRMED",
+  "ALRASHED_COLUMN_RULE": "TRADE_DEDUCTION_RULE_UNDECIDED"
+ }
+}

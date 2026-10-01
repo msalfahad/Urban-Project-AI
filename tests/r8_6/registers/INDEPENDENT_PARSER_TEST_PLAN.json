@@ -1,0 +1,207 @@
+{
+ "SCHEMA": "URBAN_R8_6_INDEPENDENT_PARSER_TEST_PLAN_V1",
+ "source_sha256": "2ec3a9c8b66eb2e129275b87010f4a8d79d7e5bdcc31c1897c14fd7e5647d355",
+ "status": "PLANNED_NOT_RUN",
+ "INDEPENDENT_REAL_RECONCILIATION": "BLOCKED_EXTERNAL_INPUT",
+ "step_1_admission": {
+  "function": "engine.source.independent_export.admission",
+  "tools": [
+   "AUTOCAD",
+   "ODA_FILE_CONVERTER"
+  ],
+  "requested_format": "AUTOCAD_2018_DXF",
+  "required_acadver": "AC1032",
+  "forbidden_operations": [
+   "EDIT",
+   "EXPLODE",
+   "PURGE",
+   "AUDIT",
+   "RESCALE",
+   "CLEAN",
+   "RECOVER",
+   "BIND",
+   "OVERKILL"
+  ],
+  "intake_record_fields": [
+   "source DWG sha256",
+   "DXF sha256",
+   "converter product",
+   "converter version",
+   "conversion settings",
+   "target DXF version",
+   "audit enabled (must be no)",
+   "purge / edit / explode / cleanup (must be none)",
+   "operator / source statement"
+  ],
+  "failure_blocks": "ENTIRE_ROUND"
+ },
+ "step_2_verification": {
+  "HANDLE_IDENTITY": {
+   "must": "VERIFIED for every round-1 observation handle",
+   "why": "every required signature is handle-keyed; ODA is NOT assumed to preserve handles",
+   "failure_blocks": "ENTIRE_ROUND"
+  },
+  "ENTITY_CENSUS": {
+   "must": "equal per (space, type, layer) for the layers and kinds the round-1 observations use, inside region RC:MODEL_SPACE:4267:540:1649",
+   "failure_blocks": "ENTIRE_ROUND",
+   "outside_scope": "recorded, not blocking"
+  },
+  "BLOCK_LINEAGE": {
+   "must": "equal for the blocks round-1 observations sit in",
+   "blocks": [
+    "6",
+    "A$C27533508"
+   ],
+   "failure_blocks": "ROWS_ONLY (rows whose observations sit in the failing block)"
+  },
+  "CUSTOM_CLASSES": {
+   "must": "present when used inside the row region",
+   "note": "the source's unsupported entities (REGION, SPLINE, unknown 518) are outside the six rows; V-CAD-5 is PASS in the row region",
+   "failure_blocks": "ENTIRE_ROUND only if a custom object appears inside the region"
+  },
+  "GEOMETRY": {
+   "must": "K1 vs K2 reconciliation PASS per handle and instance path for every required signature occurrence",
+   "failure_blocks": "per signature (below)"
+  }
+ },
+ "step_3_signatures": [
+  {
+   "signature": "KIND=LINE|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+   "must": "PASS",
+   "occurrences_to_compare": 91,
+   "failure_blocks": "ENTIRE_ROUND",
+   "rows_blocked_on_failure": [
+    "Q-03",
+    "Q-03P",
+    "Q-11",
+    "Q-12",
+    "Q-13",
+    "Q-14"
+   ]
+  },
+  {
+   "signature": "KIND=LINE|CHAIN=REFLECTION+ROTATION+TRANSLATION+UNIFORM_SCALE|NET=NET_REFLECTED|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+   "must": "PASS",
+   "occurrences_to_compare": 14,
+   "failure_blocks": "ROWS_ONLY",
+   "rows_blocked_on_failure": [
+    "Q-03",
+    "Q-11",
+    "Q-13",
+    "Q-14"
+   ]
+  },
+  {
+   "signature": "KIND=LINE|CHAIN=REFLECTION+ROTATION+TRANSLATION|NET=NET_REFLECTED|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+   "must": "PASS",
+   "occurrences_to_compare": 4,
+   "failure_blocks": "ROWS_ONLY",
+   "rows_blocked_on_failure": [
+    "Q-13",
+    "Q-14"
+   ]
+  },
+  {
+   "signature": "KIND=LINE|CHAIN=REFLECTION+TRANSLATION+UNIFORM_SCALE|NET=NET_REFLECTED|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+   "must": "PASS",
+   "occurrences_to_compare": 7,
+   "failure_blocks": "ROWS_ONLY",
+   "rows_blocked_on_failure": [
+    "Q-13",
+    "Q-14"
+   ]
+  },
+  {
+   "signature": "KIND=LINE|CHAIN=ROTATION+TRANSLATION+UNIFORM_SCALE|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+   "must": "PASS",
+   "occurrences_to_compare": 5,
+   "failure_blocks": "ROWS_ONLY",
+   "rows_blocked_on_failure": [
+    "Q-13",
+    "Q-14"
+   ]
+  },
+  {
+   "signature": "KIND=LINE|CHAIN=ROTATION+TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+   "must": "PASS",
+   "occurrences_to_compare": 3,
+   "failure_blocks": "ROWS_ONLY",
+   "rows_blocked_on_failure": [
+    "Q-13",
+    "Q-14"
+   ]
+  },
+  {
+   "signature": "KIND=LINE|CHAIN=TRANSLATION+UNIFORM_SCALE|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+   "must": "PASS",
+   "occurrences_to_compare": 5,
+   "failure_blocks": "ROWS_ONLY",
+   "rows_blocked_on_failure": [
+    "Q-13",
+    "Q-14"
+   ]
+  },
+  {
+   "signature": "KIND=LINE|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+   "must": "PASS",
+   "occurrences_to_compare": 2,
+   "failure_blocks": "ROWS_ONLY",
+   "rows_blocked_on_failure": [
+    "Q-03P",
+    "Q-12",
+    "Q-13",
+    "Q-14"
+   ]
+  },
+  {
+   "signature": "KIND=LWPOLYLINE_BULGE|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+   "must": "PASS",
+   "occurrences_to_compare": 1,
+   "failure_blocks": "ROWS_ONLY",
+   "rows_blocked_on_failure": [
+    "Q-13",
+    "Q-14"
+   ]
+  },
+  {
+   "signature": "KIND=LWPOLYLINE_STRAIGHT|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+   "must": "PASS",
+   "occurrences_to_compare": 9,
+   "failure_blocks": "ENTIRE_ROUND",
+   "rows_blocked_on_failure": [
+    "Q-03",
+    "Q-03P",
+    "Q-11",
+    "Q-12",
+    "Q-13",
+    "Q-14"
+   ]
+  }
+ ],
+ "irrelevant_to_round1": [
+  "KIND=ARC|CHAIN=REFLECTION+ROTATION+TRANSLATION|NET=NET_REFLECTED|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+  "KIND=ARC|CHAIN=ROTATION+TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+  "KIND=ARC|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+  "KIND=CIRCLE|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+  "KIND=DIMENSION|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+  "KIND=ELLIPSE_ARC|CHAIN=REFLECTION+ROTATION+TRANSLATION+UNIFORM_SCALE|NET=NET_REFLECTED|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+  "KIND=ELLIPSE_ARC|CHAIN=REFLECTION+TRANSLATION+UNIFORM_SCALE|NET=NET_REFLECTED|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+  "KIND=ELLIPSE_ARC|CHAIN=ROTATION+TRANSLATION+UNIFORM_SCALE|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+  "KIND=ELLIPSE_ARC|CHAIN=TRANSLATION+UNIFORM_SCALE|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+  "KIND=HATCH|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+  "KIND=HATCH|CHAIN=TRANSLATION+UNIFORM_SCALE|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+  "KIND=INSERT|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+  "KIND=LWPOLYLINE_STRAIGHT|CHAIN=TRANSLATION+UNIFORM_SCALE|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+  "KIND=LWPOLYLINE_STRAIGHT|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+  "KIND=MTEXT|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+  "KIND=TEXT|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+  "KIND=TEXT|CHAIN=TRANSLATION+UNIFORM_SCALE|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+  "KIND=TEXT|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+  "KIND=UNSUPPORTED:LIBREDWG:36:SPLINE|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+  "KIND=UNSUPPORTED:LIBREDWG:37:REGION|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+  "KIND=UNSUPPORTED:LIBREDWG:518:UNKNOWN_ENT|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+  "REF=BLOCK_RECORD_LINEAGE|TARGET=H12|DEPTH=1",
+  "REF=INSERT_LINEAGE|HANDLE=H12|TARGET=H12"
+ ],
+ "result_rule": "qualification is scoped: a failure outside the ten signatures blocks nothing in round 1; a failure inside them blocks exactly the rows listed, or the whole round where every row depends on it"
+}

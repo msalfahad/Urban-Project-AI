@@ -1,0 +1,187 @@
+{
+ "SCHEMA": "URBAN_R8_6_OWNER_ACTION_REGISTER_V1",
+ "rule": "no action is marked resolved without explicit owner input; nothing in this register is inferred",
+ "actions": [
+  {
+   "action_id": "CONFIRM_QORTUBA_NATIVE_UNIT",
+   "project": "QORTUBA",
+   "question": "What is the native drawing unit of this exact DWG (one drawing unit = how many millimetres)?",
+   "why_needed": "every round-1 area scales with the square of the unit; the active path read cm from INSUNITS, which the canonical policy does not accept as confirmation. The room method also uses mm thresholds, so the unit affects which rooms exist, not only their scale",
+   "exact_source_hash": "2ec3a9c8b66eb2e129275b87010f4a8d79d7e5bdcc31c1897c14fd7e5647d355",
+   "choices": [
+    "mm",
+    "cm",
+    "m",
+    "other (state it)"
+   ],
+   "what_is_blocked": [
+    "unit context",
+    "measurement frame",
+    "physical value of Q-03, Q-03P, Q-11, Q-12, Q-13, Q-14"
+   ],
+   "urgency": "HIGH",
+   "status": "OPEN",
+   "resolved_only_by": "explicit owner input recorded as an authorised claim (release V3)"
+  },
+  {
+   "action_id": "REVIEW_QORTUBA_SECOND_FLOOR_PLAN_DESIGNATION",
+   "project": "QORTUBA",
+   "question": "Is region RC:MODEL_SPACE:4267:540:1649 (title text handle 428 'SECOND FLOOR PLAN') the second-floor plan these rows are measured in?",
+   "why_needed": "a detected label is a candidate; only a reviewer with authority makes it a designation",
+   "exact_source_hash": "2ec3a9c8b66eb2e129275b87010f4a8d79d7e5bdcc31c1897c14fd7e5647d355",
+   "choices": [
+    "ACCEPT",
+    "REJECT",
+    "ACCEPT_WITH_CHANGED_EXTENT"
+   ],
+   "what_is_blocked": [
+    "region status",
+    "measurement frame",
+    "all round-1 rows"
+   ],
+   "urgency": "HIGH",
+   "status": "OPEN",
+   "resolved_only_by": "explicit owner input recorded as an authorised claim (release V3)"
+  },
+  {
+   "action_id": "APPROVE_QORTUBA_ROUND1_BASELINE_ROWS",
+   "project": "QORTUBA",
+   "question": "Are the current six rows (Q-03, Q-03P, Q-11, Q-12, Q-13, Q-14) the approved baseline that a migration would supersede?",
+   "why_needed": "all six rows are STATUS FINAL but APPROVAL_STATUS DRAFT; a migration supersedes an approved version and never an unreviewed draft",
+   "exact_source_hash": "2ec3a9c8b66eb2e129275b87010f4a8d79d7e5bdcc31c1897c14fd7e5647d355",
+   "choices": [
+    "APPROVE_AS_BASELINE",
+    "REVIEW_FIRST"
+   ],
+   "what_is_blocked": [
+    "migration transaction step 1 (baseline selection)"
+   ],
+   "urgency": "MEDIUM",
+   "status": "OPEN",
+   "resolved_only_by": "explicit owner input recorded as an authorised claim (release V3)"
+  },
+  {
+   "action_id": "CONFIRM_Q14_CEILING_HAS_NO_VOID_OR_OPENING",
+   "project": "QORTUBA",
+   "question": "In the ten apartment rooms, is there any void, stair opening, shaft or open-to-above condition in the ceiling?",
+   "why_needed": "Q-14 sets ceiling area = floor region; the method records VOID / STAIR_OPENING / SHAFT / OPEN_TO_ABOVE = False without testing them (no reflected ceiling plan exists)",
+   "exact_source_hash": "2ec3a9c8b66eb2e129275b87010f4a8d79d7e5bdcc31c1897c14fd7e5647d355",
+   "choices": [
+    "NONE",
+    "YES (name the rooms)"
+   ],
+   "what_is_blocked": [
+    "Q-14 release"
+   ],
+   "urgency": "MEDIUM",
+   "status": "OPEN",
+   "resolved_only_by": "explicit owner input recorded as an authorised claim (release V3)"
+  },
+  {
+   "action_id": "SUPPLY_INDEPENDENT_QORTUBA_DXF",
+   "project": "QORTUBA",
+   "question": "Please export the exact Qortuba DWG to DXF with AutoCAD (2018 DXF, AC1032) or the ODA File Converter, without editing, exploding, purging, auditing, rescaling or cleaning, and state the tool, version and settings.",
+   "why_needed": "round 1 needs its 10 capability signatures exercised by an independent parser; the P7757 export does not cover Qortuba",
+   "exact_source_hash": "2ec3a9c8b66eb2e129275b87010f4a8d79d7e5bdcc31c1897c14fd7e5647d355",
+   "choices": null,
+   "what_is_blocked": [
+    "decoder qualification for round 1",
+    "all round-1 rows"
+   ],
+   "urgency": "HIGH",
+   "status": "OPEN",
+   "resolved_only_by": "explicit owner input recorded as an authorised claim (release V3)"
+  },
+  {
+   "action_id": "SUPPLY_INDEPENDENT_P7757_DXF",
+   "project": "P7757",
+   "question": "Please export the exact P7757 DWG (AutoCAD 2018 DXF, AC1032, or ODA) with no edits, explodes, purges, audits, rescale or cleanup, and state tool, version and settings.",
+   "why_needed": "INDEPENDENT_REAL_RECONCILIATION is BLOCKED_EXTERNAL_INPUT; the two supplied DXFs are ezdxf conversions (DIAGNOSTIC_NONQUALIFYING_CONVERSION)",
+   "exact_source_hash": "7f61f3acdd62d62dc745f8b522f8136cb41c575df36ec6d9f27c2fe48fea41e3",
+   "choices": null,
+   "what_is_blocked": [
+    "P7757 independent reconciliation"
+   ],
+   "urgency": "MEDIUM",
+   "status": "OPEN",
+   "resolved_only_by": "explicit owner input recorded as an authorised claim (release V3)"
+  },
+  {
+   "action_id": "DECIDE_COLUMN_DEDUCTION_METHOD",
+   "project": "ALRASHED",
+   "question": "Are column footprints inside a room deducted from the floor-finish quantity?",
+   "why_needed": "the closed-polyline defect fix would change BA-092 from 146.97 to 146.7697 m2 (column-net); neither value may be chosen until the trade rule is decided",
+   "exact_source_hash": "299c61b1df7660384e027d44c0a29d8b64c92995843c0517cea05d485974660c",
+   "choices": [
+    "DEDUCT_ALL_COLUMN_FOOTPRINTS",
+    "DO_NOT_DEDUCT",
+    "DEDUCT_ABOVE_A_STATED_AREA"
+   ],
+   "what_is_blocked": [
+    "Al Rashed floor-finish rows",
+    "applying the closed-bit fix"
+   ],
+   "urgency": "MEDIUM",
+   "status": "OPEN",
+   "resolved_only_by": "explicit owner input recorded as an authorised claim (release V3)"
+  },
+  {
+   "action_id": "CONFIRM_P7757_NATIVE_UNIT",
+   "project": "P7757",
+   "question": "What is the native drawing unit of this exact DWG?",
+   "why_needed": "P7757 unit context is UNCONFIRMED",
+   "exact_source_hash": "7f61f3acdd62d62dc745f8b522f8136cb41c575df36ec6d9f27c2fe48fea41e3",
+   "choices": [
+    "mm",
+    "cm",
+    "m",
+    "other"
+   ],
+   "what_is_blocked": [
+    "P7757 physical values"
+   ],
+   "urgency": "LOW",
+   "status": "OPEN",
+   "resolved_only_by": "explicit owner input recorded as an authorised claim (release V3)"
+  },
+  {
+   "action_id": "RESOLVE_ALRASHED_UNIT_CONFLICT",
+   "project": "ALRASHED",
+   "question": "Which unit governs this DWG (the evidence conflicts)?",
+   "why_needed": "Al Rashed unit context is CONFLICT: every value is VALUE_NOT_COMPUTABLE",
+   "exact_source_hash": "299c61b1df7660384e027d44c0a29d8b64c92995843c0517cea05d485974660c",
+   "choices": [
+    "mm",
+    "cm",
+    "m",
+    "other"
+   ],
+   "what_is_blocked": [
+    "all Al Rashed physical values"
+   ],
+   "urgency": "LOW",
+   "status": "OPEN",
+   "resolved_only_by": "explicit owner input recorded as an authorised claim (release V3)"
+  },
+  {
+   "action_id": "REVIEW_ALRASHED_ADAPTER_WINDOWS",
+   "project": "ALRASHED",
+   "question": "Are the adapter's three floor windows the plan regions?",
+   "why_needed": "the windows are adapter constants, PENDING_REVIEW",
+   "exact_source_hash": "299c61b1df7660384e027d44c0a29d8b64c92995843c0517cea05d485974660c",
+   "choices": [
+    "ACCEPT",
+    "REJECT",
+    "CHANGE"
+   ],
+   "what_is_blocked": [
+    "Al Rashed region designation"
+   ],
+   "urgency": "LOW",
+   "status": "OPEN",
+   "resolved_only_by": "explicit owner input recorded as an authorised claim (release V3)"
+  }
+ ],
+ "open": 10,
+ "resolved": 0
+}

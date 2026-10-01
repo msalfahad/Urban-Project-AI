@@ -1,0 +1,234 @@
+{
+ "SCHEMA": "URBAN_R8_6_MIGRATION_TRANSACTION_V1",
+ "status": "DESIGN_ONLY_NOT_EXECUTED",
+ "scope": [
+  "Q-03",
+  "Q-03P",
+  "Q-11",
+  "Q-12",
+  "Q-13",
+  "Q-14"
+ ],
+ "steps": [
+  {
+   "step": 1,
+   "name": "CREATE_RUN",
+   "does": "create a new QTO run/version id; record the frozen inputs (source, decode, decoder pin, qualification id, unit claim id, designation id, frame id, evidence version, method hashes, baseline row versions)",
+   "abort_checks": [
+    "SOURCE_HASH_CHANGED",
+    "BASELINE_NOT_APPROVED"
+   ]
+  },
+  {
+   "step": 2,
+   "name": "RUN_CANONICAL_SOURCE",
+   "does": "D1 -> K1 -> method-input contract",
+   "abort_checks": [
+    "DECODE_CHANGED",
+    "DECODER_CHANGED_OR_UNQUALIFIED",
+    "SIGNATURE_OUTSIDE_QUALIFICATION",
+    "METHOD_INPUT_CONTRACT_BROKEN"
+   ]
+  },
+  {
+   "step": 3,
+   "name": "APPLY_APPROVED_REGION_AND_FRAME",
+   "does": "accepted designation + confirmed unit -> measurement frame (V3)",
+   "abort_checks": [
+    "REGION_CHANGED",
+    "UNIT_CHANGED",
+    "FRAME_EVIDENCE_CHANGED",
+    "SOURCE_BLOCKER_APPEARED"
+   ]
+  },
+  {
+   "step": 4,
+   "name": "RUN_SIX_APPROVED_METHODS",
+   "does": "rooms (Method A) then the six row expressions",
+   "abort_checks": [
+    "METHOD_REVISION_CHANGED",
+    "ROOM_SET_CHANGED",
+    "ROW_PROVENANCE_MISSING"
+   ]
+  },
+  {
+   "step": 5,
+   "name": "COMPARE_OLD_VS_NEW",
+   "does": "every row: canonical (rounded to published precision) vs approved baseline",
+   "abort_checks": [
+    "VALUE_DELTA_OUTSIDE_TOLERANCE",
+    "UNEXPECTED_ROW_SET"
+   ]
+  },
+  {
+   "step": 6,
+   "name": "ABORT_ON_ANY_NON_APPROVED_DIFFERENCE",
+   "does": "any abort condition -> the run is closed ABORTED, nothing published",
+   "abort_checks": [
+    "SOURCE_HASH_CHANGED",
+    "DECODE_CHANGED",
+    "DECODER_CHANGED_OR_UNQUALIFIED",
+    "SIGNATURE_OUTSIDE_QUALIFICATION",
+    "REGION_CHANGED",
+    "FRAME_EVIDENCE_CHANGED",
+    "UNIT_CHANGED",
+    "METHOD_REVISION_CHANGED",
+    "METHOD_INPUT_CONTRACT_BROKEN",
+    "SOURCE_BLOCKER_APPEARED",
+    "VALUE_DELTA_OUTSIDE_TOLERANCE",
+    "ROW_PROVENANCE_MISSING",
+    "UNEXPECTED_ROW_SET",
+    "ROOM_SET_CHANGED",
+    "OWNER_ACTION_REOPENED",
+    "BASELINE_NOT_APPROVED"
+   ]
+  },
+  {
+   "step": 7,
+   "name": "HUMAN_REVIEW",
+   "does": "owner reviews the before/after table and provenance; approval is recorded as a claim",
+   "abort_checks": [
+    "OWNER_ACTION_REOPENED"
+   ]
+  },
+  {
+   "step": 8,
+   "name": "PUBLISH_NEW_VERSION",
+   "does": "new row versions with supersession records pointing to the baseline versions",
+   "abort_checks": []
+  },
+  {
+   "step": 9,
+   "name": "KEEP_OLD_VERSION_UNTOUCHED",
+   "does": "baseline versions stay byte-identical (hash recorded before and after)",
+   "abort_checks": []
+  },
+  {
+   "step": 10,
+   "name": "ROLLBACK_BY_SELECTING_PREVIOUS_VERSION",
+   "does": "rollback = a further supersession selecting the previous version, with author and reason; never a delete or an in-place edit",
+   "abort_checks": []
+  }
+ ],
+ "abort_conditions": [
+  {
+   "code": "SOURCE_HASH_CHANGED",
+   "condition": "source DWG sha256 differs from the frozen value",
+   "measured_by": "sha256 of the source file",
+   "on_trigger": "ABORT_FAIL_CLOSED"
+  },
+  {
+   "code": "DECODE_CHANGED",
+   "condition": "D1 decode sha256 differs from the frozen value",
+   "measured_by": "sha256 of the decode",
+   "on_trigger": "ABORT_FAIL_CLOSED"
+  },
+  {
+   "code": "DECODER_CHANGED_OR_UNQUALIFIED",
+   "condition": "decoder binary differs from the pin, or its V2 qualification is absent / withdrawn",
+   "measured_by": "decoder pin + qualification record",
+   "on_trigger": "ABORT_FAIL_CLOSED"
+  },
+  {
+   "code": "SIGNATURE_OUTSIDE_QUALIFICATION",
+   "condition": "a round-1 observation carries a signature not EXERCISED_AND_PASS",
+   "measured_by": "capability_signatures(doc) vs qualification",
+   "on_trigger": "ABORT_FAIL_CLOSED"
+  },
+  {
+   "code": "REGION_CHANGED",
+   "condition": "designation id, extent or review status differs from the frozen accepted designation",
+   "measured_by": "designation record",
+   "on_trigger": "ABORT_FAIL_CLOSED"
+  },
+  {
+   "code": "FRAME_EVIDENCE_CHANGED",
+   "condition": "frame evidence digest differs from the frozen one",
+   "measured_by": "measurement_frame().evidence_digest",
+   "on_trigger": "ABORT_FAIL_CLOSED"
+  },
+  {
+   "code": "UNIT_CHANGED",
+   "condition": "unit claim id / value differs, or the claim was superseded",
+   "measured_by": "unit claim (release V3)",
+   "on_trigger": "ABORT_FAIL_CLOSED"
+  },
+  {
+   "code": "METHOD_REVISION_CHANGED",
+   "condition": "any file of the frozen calculation path changed",
+   "measured_by": "method_code_sha256",
+   "on_trigger": "ABORT_FAIL_CLOSED"
+  },
+  {
+   "code": "METHOD_INPUT_CONTRACT_BROKEN",
+   "condition": "a canonical input the contract requires is missing (block names, part ids, texts, dimensions) or differs from the frozen check",
+   "measured_by": "contract ablation + text/dimension equality",
+   "on_trigger": "ABORT_FAIL_CLOSED"
+  },
+  {
+   "code": "SOURCE_BLOCKER_APPEARED",
+   "condition": "any BLOCKING finding in the row region (V-CAD-5 or source exception)",
+   "measured_by": "source exceptions",
+   "on_trigger": "ABORT_FAIL_CLOSED"
+  },
+  {
+   "code": "VALUE_DELTA_OUTSIDE_TOLERANCE",
+   "condition": "canonical value rounded to the published precision differs from the approved value (tolerance 0; no widening)",
+   "measured_by": "per-row comparison",
+   "on_trigger": "ABORT_FAIL_CLOSED"
+  },
+  {
+   "code": "ROW_PROVENANCE_MISSING",
+   "condition": "a row lacks observation ids, geometry ids, frame id, evidence version, method id, formula, inputs or qualification id",
+   "measured_by": "provenance check",
+   "on_trigger": "ABORT_FAIL_CLOSED"
+  },
+  {
+   "code": "UNEXPECTED_ROW_SET",
+   "condition": "a row added, removed or renamed relative to the frozen round-1 scope",
+   "measured_by": "row-id set equality",
+   "on_trigger": "ABORT_FAIL_CLOSED"
+  },
+  {
+   "code": "ROOM_SET_CHANGED",
+   "condition": "a room added, removed, renamed or re-classified wet/dry relative to the frozen proof",
+   "measured_by": "rooms digest",
+   "on_trigger": "ABORT_FAIL_CLOSED"
+  },
+  {
+   "code": "OWNER_ACTION_REOPENED",
+   "condition": "an owner action this round depends on is not RESOLVED by an authorised claim",
+   "measured_by": "owner action register",
+   "on_trigger": "ABORT_FAIL_CLOSED"
+  },
+  {
+   "code": "BASELINE_NOT_APPROVED",
+   "condition": "the version being superseded is not APPROVED",
+   "measured_by": "row approval status",
+   "on_trigger": "ABORT_FAIL_CLOSED"
+  }
+ ],
+ "fail_closed": "an abort check that cannot be evaluated (missing evidence, error) counts as triggered",
+ "never": [
+  "overwrite an approved quantity in place",
+  "publish a partial round",
+  "widen a tolerance",
+  "switch the active pipeline",
+  "modify cad_adapter or geometry.py",
+  "begin R9"
+ ],
+ "rollback": {
+  "how": "supersession selecting the previous version",
+  "who": "an authorised reviewer",
+  "triggers": [
+   "unit claim superseded",
+   "designation rejected",
+   "qualification withdrawn",
+   "V-CAD-5 regression in the row region",
+   "owner request"
+  ],
+  "per_row": true
+ },
+ "PRODUCTION_MIGRATION": "NO",
+ "MIGRATION_EXECUTION_READY": "NO"
+}

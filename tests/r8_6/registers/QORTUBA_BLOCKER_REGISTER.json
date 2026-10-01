@@ -1,0 +1,806 @@
+{
+ "SCHEMA": "URBAN_R8_6_QORTUBA_BLOCKER_REGISTER_V1",
+ "kinds": [
+  "ENGINE_MISSING",
+  "RULE_MISSING",
+  "SOURCE_EVIDENCE_MISSING",
+  "OWNER_DECISION_REQUIRED",
+  "EXTERNAL_PARSER_REQUIRED"
+ ],
+ "rows": [
+  {
+   "row_id": "Q-01|HIDDEN_SKIRTING",
+   "r8_5_class": "VALUE_METHOD_NOT_MIGRATED",
+   "current_status": "FINAL",
+   "current_value": 76.389,
+   "unit": "LM",
+   "rules": [
+    "US-02",
+    "US-08",
+    "QP-06",
+    "QP-07",
+    "QP-08",
+    "QP-09",
+    "QP-10"
+   ],
+   "row_specific_missing": [
+    {
+     "what": "OPENING_IDENTITY",
+     "kind": "ENGINE_MISSING"
+    },
+    {
+     "what": "OPENING_WIDTH",
+     "kind": "ENGINE_MISSING"
+    },
+    {
+     "what": "WALL_PERIMETER_METHOD",
+     "kind": "ENGINE_MISSING"
+    }
+   ],
+   "shared_missing": [
+    {
+     "what": "UNIT_AUTHORITY",
+     "kind": "OWNER_DECISION_REQUIRED"
+    },
+    {
+     "what": "REGION_AUTHORITY",
+     "kind": "OWNER_DECISION_REQUIRED"
+    },
+    {
+     "what": "SOURCE_CAPABILITY (independent parser)",
+     "kind": "EXTERNAL_PARSER_REQUIRED"
+    }
+   ]
+  },
+  {
+   "row_id": "Q-02|HIDDEN_PROFILE_ABOVE_SKIRTING",
+   "r8_5_class": "VALUE_METHOD_NOT_MIGRATED",
+   "current_status": "FINAL",
+   "current_value": 76.389,
+   "unit": "LM",
+   "rules": [
+    "US-02",
+    "US-08",
+    "QP-06",
+    "QP-07",
+    "QP-08",
+    "QP-09",
+    "QP-11"
+   ],
+   "row_specific_missing": [
+    {
+     "what": "OPENING_IDENTITY",
+     "kind": "ENGINE_MISSING"
+    },
+    {
+     "what": "OPENING_WIDTH",
+     "kind": "ENGINE_MISSING"
+    },
+    {
+     "what": "WALL_PERIMETER_METHOD",
+     "kind": "ENGINE_MISSING"
+    }
+   ],
+   "shared_missing": [
+    {
+     "what": "UNIT_AUTHORITY",
+     "kind": "OWNER_DECISION_REQUIRED"
+    },
+    {
+     "what": "REGION_AUTHORITY",
+     "kind": "OWNER_DECISION_REQUIRED"
+    },
+    {
+     "what": "SOURCE_CAPABILITY (independent parser)",
+     "kind": "EXTERNAL_PARSER_REQUIRED"
+    }
+   ]
+  },
+  {
+   "row_id": "Q-04|WET_AREA_WATERPROOFING_UPTURN",
+   "r8_5_class": "VALUE_METHOD_NOT_MIGRATED",
+   "current_status": "FINAL",
+   "current_value": 30.225,
+   "unit": "LM",
+   "rules": [
+    "US-04",
+    "US-05"
+   ],
+   "row_specific_missing": [
+    {
+     "what": "WALL_PERIMETER_METHOD",
+     "kind": "ENGINE_MISSING"
+    },
+    {
+     "what": "WATERPROOFING_RULE (classified wall-boundary path)",
+     "kind": "ENGINE_MISSING"
+    }
+   ],
+   "shared_missing": [
+    {
+     "what": "UNIT_AUTHORITY",
+     "kind": "OWNER_DECISION_REQUIRED"
+    },
+    {
+     "what": "REGION_AUTHORITY",
+     "kind": "OWNER_DECISION_REQUIRED"
+    },
+    {
+     "what": "SOURCE_CAPABILITY (independent parser)",
+     "kind": "EXTERNAL_PARSER_REQUIRED"
+    }
+   ]
+  },
+  {
+   "row_id": "Q-04P|PANTRY_WATERPROOFING_UPTURN",
+   "r8_5_class": "VALUE_METHOD_NOT_MIGRATED",
+   "current_status": "FINAL",
+   "current_value": 11.15,
+   "unit": "LM",
+   "rules": [
+    "US-14",
+    "US-05",
+    "QP-13"
+   ],
+   "row_specific_missing": [
+    {
+     "what": "WALL_PERIMETER_METHOD",
+     "kind": "ENGINE_MISSING"
+    },
+    {
+     "what": "WATERPROOFING_RULE (classified wall-boundary path)",
+     "kind": "ENGINE_MISSING"
+    }
+   ],
+   "shared_missing": [
+    {
+     "what": "UNIT_AUTHORITY",
+     "kind": "OWNER_DECISION_REQUIRED"
+    },
+    {
+     "what": "REGION_AUTHORITY",
+     "kind": "OWNER_DECISION_REQUIRED"
+    },
+    {
+     "what": "SOURCE_CAPABILITY (independent parser)",
+     "kind": "EXTERNAL_PARSER_REQUIRED"
+    }
+   ]
+  },
+  {
+   "row_id": "Q-04PR|PANTRY_UPTURN_VERTICAL_AREA_REFERENCE",
+   "r8_5_class": "VALUE_METHOD_NOT_MIGRATED",
+   "current_status": "FINAL",
+   "current_value": 1.6725,
+   "unit": "M2",
+   "rules": [
+    "US-14"
+   ],
+   "row_specific_missing": [
+    {
+     "what": "derived from Q-04P",
+     "kind": "ENGINE_MISSING"
+    }
+   ],
+   "shared_missing": [
+    {
+     "what": "UNIT_AUTHORITY",
+     "kind": "OWNER_DECISION_REQUIRED"
+    },
+    {
+     "what": "REGION_AUTHORITY",
+     "kind": "OWNER_DECISION_REQUIRED"
+    },
+    {
+     "what": "SOURCE_CAPABILITY (independent parser)",
+     "kind": "EXTERNAL_PARSER_REQUIRED"
+    }
+   ]
+  },
+  {
+   "row_id": "Q-04R|WET_AREA_UPTURN_VERTICAL_AREA_REFERENCE",
+   "r8_5_class": "VALUE_METHOD_NOT_MIGRATED",
+   "current_status": "FINAL",
+   "current_value": 4.5338,
+   "unit": "M2",
+   "rules": [
+    "US-04"
+   ],
+   "row_specific_missing": [
+    {
+     "what": "derived from Q-04",
+     "kind": "ENGINE_MISSING"
+    }
+   ],
+   "shared_missing": [
+    {
+     "what": "UNIT_AUTHORITY",
+     "kind": "OWNER_DECISION_REQUIRED"
+    },
+    {
+     "what": "REGION_AUTHORITY",
+     "kind": "OWNER_DECISION_REQUIRED"
+    },
+    {
+     "what": "SOURCE_CAPABILITY (independent parser)",
+     "kind": "EXTERNAL_PARSER_REQUIRED"
+    }
+   ]
+  },
+  {
+   "row_id": "Q-05|WALL_CERAMIC_BATHROOMS",
+   "r8_5_class": "VALUE_METHOD_NOT_MIGRATED",
+   "current_status": "FINAL",
+   "current_value": 84.9,
+   "unit": "M2",
+   "rules": [
+    "US-01",
+    "US-06",
+    "QP-01",
+    "QP-21"
+   ],
+   "row_specific_missing": [
+    {
+     "what": "OPENING_IDENTITY",
+     "kind": "ENGINE_MISSING"
+    },
+    {
+     "what": "OPENING_WIDTH",
+     "kind": "ENGINE_MISSING"
+    },
+    {
+     "what": "WALL_PERIMETER_METHOD",
+     "kind": "ENGINE_MISSING"
+    }
+   ],
+   "shared_missing": [
+    {
+     "what": "UNIT_AUTHORITY",
+     "kind": "OWNER_DECISION_REQUIRED"
+    },
+    {
+     "what": "REGION_AUTHORITY",
+     "kind": "OWNER_DECISION_REQUIRED"
+    },
+    {
+     "what": "SOURCE_CAPABILITY (independent parser)",
+     "kind": "EXTERNAL_PARSER_REQUIRED"
+    }
+   ]
+  },
+  {
+   "row_id": "Q-06|WALL_CERAMIC_SERVICE_ROOM",
+   "r8_5_class": "VALUE_METHOD_NOT_MIGRATED",
+   "current_status": "FINAL",
+   "current_value": 24.9835,
+   "unit": "M2",
+   "rules": [
+    "US-01",
+    "QP-01",
+    "QP-07"
+   ],
+   "row_specific_missing": [
+    {
+     "what": "OPENING_IDENTITY",
+     "kind": "ENGINE_MISSING"
+    },
+    {
+     "what": "OPENING_WIDTH",
+     "kind": "ENGINE_MISSING"
+    },
+    {
+     "what": "OPENING HOST SIDE (2.750 m HALL/PAINTRY opening)",
+     "kind": "OWNER_DECISION_REQUIRED"
+    }
+   ],
+   "shared_missing": [
+    {
+     "what": "UNIT_AUTHORITY",
+     "kind": "OWNER_DECISION_REQUIRED"
+    },
+    {
+     "what": "REGION_AUTHORITY",
+     "kind": "OWNER_DECISION_REQUIRED"
+    },
+    {
+     "what": "SOURCE_CAPABILITY (independent parser)",
+     "kind": "EXTERNAL_PARSER_REQUIRED"
+    }
+   ]
+  },
+  {
+   "row_id": "Q-07-200|BLOCKWORK_200",
+   "r8_5_class": "VALUE_METHOD_NOT_MIGRATED",
+   "current_status": "PARTIAL",
+   "current_value": 218.4942,
+   "unit": "M2",
+   "rules": [
+    "US-06",
+    "QP-02",
+    "QP-21"
+   ],
+   "row_specific_missing": [
+    {
+     "what": "MASONRY_MATERIAL_IDENTITY",
+     "kind": "ENGINE_MISSING"
+    },
+    {
+     "what": "HEIGHT (openings without height)",
+     "kind": "SOURCE_EVIDENCE_MISSING"
+    }
+   ],
+   "shared_missing": [
+    {
+     "what": "UNIT_AUTHORITY",
+     "kind": "OWNER_DECISION_REQUIRED"
+    },
+    {
+     "what": "REGION_AUTHORITY",
+     "kind": "OWNER_DECISION_REQUIRED"
+    },
+    {
+     "what": "SOURCE_CAPABILITY (independent parser)",
+     "kind": "EXTERNAL_PARSER_REQUIRED"
+    }
+   ]
+  },
+  {
+   "row_id": "Q-07-150|BLOCKWORK_150",
+   "r8_5_class": "VALUE_METHOD_NOT_MIGRATED",
+   "current_status": "PARTIAL",
+   "current_value": 128.87,
+   "unit": "M2",
+   "rules": [
+    "US-06",
+    "QP-02",
+    "QP-21"
+   ],
+   "row_specific_missing": [
+    {
+     "what": "MASONRY_MATERIAL_IDENTITY",
+     "kind": "ENGINE_MISSING"
+    },
+    {
+     "what": "HEIGHT (openings without height)",
+     "kind": "SOURCE_EVIDENCE_MISSING"
+    }
+   ],
+   "shared_missing": [
+    {
+     "what": "UNIT_AUTHORITY",
+     "kind": "OWNER_DECISION_REQUIRED"
+    },
+    {
+     "what": "REGION_AUTHORITY",
+     "kind": "OWNER_DECISION_REQUIRED"
+    },
+    {
+     "what": "SOURCE_CAPABILITY (independent parser)",
+     "kind": "EXTERNAL_PARSER_REQUIRED"
+    }
+   ]
+  },
+  {
+   "row_id": "Q-07-300|BLOCKWORK_300",
+   "r8_5_class": "VALUE_NOT_COMPUTABLE",
+   "current_status": "NOT_APPLICABLE",
+   "current_value": null,
+   "unit": "M2",
+   "rules": [],
+   "row_specific_missing": [
+    {
+     "what": "no quantity exists at this thickness (NOT_APPLICABLE row)",
+     "kind": "SOURCE_EVIDENCE_MISSING"
+    }
+   ],
+   "shared_missing": [
+    {
+     "what": "UNIT_AUTHORITY",
+     "kind": "OWNER_DECISION_REQUIRED"
+    },
+    {
+     "what": "REGION_AUTHORITY",
+     "kind": "OWNER_DECISION_REQUIRED"
+    },
+    {
+     "what": "SOURCE_CAPABILITY (independent parser)",
+     "kind": "EXTERNAL_PARSER_REQUIRED"
+    }
+   ]
+  },
+  {
+   "row_id": "Q-07-600|BLOCKWORK_600",
+   "r8_5_class": "VALUE_NOT_COMPUTABLE",
+   "current_status": "NOT_APPLICABLE",
+   "current_value": null,
+   "unit": "M2",
+   "rules": [],
+   "row_specific_missing": [
+    {
+     "what": "no quantity exists at this thickness (NOT_APPLICABLE row)",
+     "kind": "SOURCE_EVIDENCE_MISSING"
+    }
+   ],
+   "shared_missing": [
+    {
+     "what": "UNIT_AUTHORITY",
+     "kind": "OWNER_DECISION_REQUIRED"
+    },
+    {
+     "what": "REGION_AUTHORITY",
+     "kind": "OWNER_DECISION_REQUIRED"
+    },
+    {
+     "what": "SOURCE_CAPABILITY (independent parser)",
+     "kind": "EXTERNAL_PARSER_REQUIRED"
+    }
+   ]
+  },
+  {
+   "row_id": "Q-07-550|BLOCKWORK_550",
+   "r8_5_class": "VALUE_NOT_COMPUTABLE",
+   "current_status": "NOT_APPLICABLE",
+   "current_value": null,
+   "unit": "M2",
+   "rules": [],
+   "row_specific_missing": [
+    {
+     "what": "no quantity exists at this thickness (NOT_APPLICABLE row)",
+     "kind": "SOURCE_EVIDENCE_MISSING"
+    }
+   ],
+   "shared_missing": [
+    {
+     "what": "UNIT_AUTHORITY",
+     "kind": "OWNER_DECISION_REQUIRED"
+    },
+    {
+     "what": "REGION_AUTHORITY",
+     "kind": "OWNER_DECISION_REQUIRED"
+    },
+    {
+     "what": "SOURCE_CAPABILITY (independent parser)",
+     "kind": "EXTERNAL_PARSER_REQUIRED"
+    }
+   ]
+  },
+  {
+   "row_id": "Q-07-450|BLOCKWORK_450",
+   "r8_5_class": "VALUE_NOT_COMPUTABLE",
+   "current_status": "NOT_APPLICABLE",
+   "current_value": null,
+   "unit": "M2",
+   "rules": [],
+   "row_specific_missing": [
+    {
+     "what": "no quantity exists at this thickness (NOT_APPLICABLE row)",
+     "kind": "SOURCE_EVIDENCE_MISSING"
+    }
+   ],
+   "shared_missing": [
+    {
+     "what": "UNIT_AUTHORITY",
+     "kind": "OWNER_DECISION_REQUIRED"
+    },
+    {
+     "what": "REGION_AUTHORITY",
+     "kind": "OWNER_DECISION_REQUIRED"
+    },
+    {
+     "what": "SOURCE_CAPABILITY (independent parser)",
+     "kind": "EXTERNAL_PARSER_REQUIRED"
+    }
+   ]
+  },
+  {
+   "row_id": "Q-07-350|BLOCKWORK_350",
+   "r8_5_class": "VALUE_NOT_COMPUTABLE",
+   "current_status": "NOT_APPLICABLE",
+   "current_value": null,
+   "unit": "M2",
+   "rules": [],
+   "row_specific_missing": [
+    {
+     "what": "no quantity exists at this thickness (NOT_APPLICABLE row)",
+     "kind": "SOURCE_EVIDENCE_MISSING"
+    }
+   ],
+   "shared_missing": [
+    {
+     "what": "UNIT_AUTHORITY",
+     "kind": "OWNER_DECISION_REQUIRED"
+    },
+    {
+     "what": "REGION_AUTHORITY",
+     "kind": "OWNER_DECISION_REQUIRED"
+    },
+    {
+     "what": "SOURCE_CAPABILITY (independent parser)",
+     "kind": "EXTERNAL_PARSER_REQUIRED"
+    }
+   ]
+  },
+  {
+   "row_id": "Q-07-219|BLOCKWORK_219",
+   "r8_5_class": "VALUE_NOT_COMPUTABLE",
+   "current_status": "NOT_APPLICABLE",
+   "current_value": null,
+   "unit": "M2",
+   "rules": [],
+   "row_specific_missing": [
+    {
+     "what": "no quantity exists at this thickness (NOT_APPLICABLE row)",
+     "kind": "SOURCE_EVIDENCE_MISSING"
+    }
+   ],
+   "shared_missing": [
+    {
+     "what": "UNIT_AUTHORITY",
+     "kind": "OWNER_DECISION_REQUIRED"
+    },
+    {
+     "what": "REGION_AUTHORITY",
+     "kind": "OWNER_DECISION_REQUIRED"
+    },
+    {
+     "what": "SOURCE_CAPABILITY (independent parser)",
+     "kind": "EXTERNAL_PARSER_REQUIRED"
+    }
+   ]
+  },
+  {
+   "row_id": "Q-08|INTERNAL_PLASTER",
+   "r8_5_class": "VALUE_METHOD_NOT_MIGRATED",
+   "current_status": "FINAL",
+   "current_value": 268.1731,
+   "unit": "M2",
+   "rules": [
+    "US-06",
+    "US-07",
+    "US-03",
+    "QP-03",
+    "QP-21"
+   ],
+   "row_specific_missing": [
+    {
+     "what": "OPENING_IDENTITY",
+     "kind": "ENGINE_MISSING"
+    },
+    {
+     "what": "REVEAL_METHOD",
+     "kind": "RULE_MISSING"
+    },
+    {
+     "what": "WALL_PERIMETER_METHOD",
+     "kind": "ENGINE_MISSING"
+    }
+   ],
+   "shared_missing": [
+    {
+     "what": "UNIT_AUTHORITY",
+     "kind": "OWNER_DECISION_REQUIRED"
+    },
+    {
+     "what": "REGION_AUTHORITY",
+     "kind": "OWNER_DECISION_REQUIRED"
+    },
+    {
+     "what": "SOURCE_CAPABILITY (independent parser)",
+     "kind": "EXTERNAL_PARSER_REQUIRED"
+    }
+   ]
+  },
+  {
+   "row_id": "Q-09|WALL_PAINT",
+   "r8_5_class": "VALUE_METHOD_NOT_MIGRATED",
+   "current_status": "FINAL",
+   "current_value": 268.1731,
+   "unit": "M2",
+   "rules": [
+    "US-06",
+    "US-07",
+    "US-03",
+    "QP-04",
+    "QP-21"
+   ],
+   "row_specific_missing": [
+    {
+     "what": "OPENING_IDENTITY",
+     "kind": "ENGINE_MISSING"
+    },
+    {
+     "what": "REVEAL_METHOD",
+     "kind": "RULE_MISSING"
+    },
+    {
+     "what": "WALL_PERIMETER_METHOD",
+     "kind": "ENGINE_MISSING"
+    }
+   ],
+   "shared_missing": [
+    {
+     "what": "UNIT_AUTHORITY",
+     "kind": "OWNER_DECISION_REQUIRED"
+    },
+    {
+     "what": "REGION_AUTHORITY",
+     "kind": "OWNER_DECISION_REQUIRED"
+    },
+    {
+     "what": "SOURCE_CAPABILITY (independent parser)",
+     "kind": "EXTERNAL_PARSER_REQUIRED"
+    }
+   ]
+  },
+  {
+   "row_id": "Q-10|TILE_PREPARATION_TARTUSHA",
+   "r8_5_class": "VALUE_METHOD_NOT_MIGRATED",
+   "current_status": "FINAL",
+   "current_value": 109.8835,
+   "unit": "M2",
+   "rules": [
+    "US-03",
+    "US-01",
+    "QP-03",
+    "QP-21"
+   ],
+   "row_specific_missing": [
+    {
+     "what": "OPENING_IDENTITY",
+     "kind": "ENGINE_MISSING"
+    },
+    {
+     "what": "WALL_PERIMETER_METHOD",
+     "kind": "ENGINE_MISSING"
+    }
+   ],
+   "shared_missing": [
+    {
+     "what": "UNIT_AUTHORITY",
+     "kind": "OWNER_DECISION_REQUIRED"
+    },
+    {
+     "what": "REGION_AUTHORITY",
+     "kind": "OWNER_DECISION_REQUIRED"
+    },
+    {
+     "what": "SOURCE_CAPABILITY (independent parser)",
+     "kind": "EXTERNAL_PARSER_REQUIRED"
+    }
+   ]
+  },
+  {
+   "row_id": "Q-15|ALUMINIUM_EXTERNAL_WINDOWS",
+   "r8_5_class": "VALUE_METHOD_NOT_MIGRATED",
+   "current_status": "FINAL",
+   "current_value": 17.2459,
+   "unit": "M2",
+   "rules": [
+    "US-11",
+    "US-13"
+   ],
+   "row_specific_missing": [
+    {
+     "what": "OPENING_IDENTITY",
+     "kind": "ENGINE_MISSING"
+    },
+    {
+     "what": "OPENING_WIDTH",
+     "kind": "ENGINE_MISSING"
+    },
+    {
+     "what": "GLAZING_RULE",
+     "kind": "RULE_MISSING"
+    }
+   ],
+   "shared_missing": [
+    {
+     "what": "UNIT_AUTHORITY",
+     "kind": "OWNER_DECISION_REQUIRED"
+    },
+    {
+     "what": "REGION_AUTHORITY",
+     "kind": "OWNER_DECISION_REQUIRED"
+    },
+    {
+     "what": "SOURCE_CAPABILITY (independent parser)",
+     "kind": "EXTERNAL_PARSER_REQUIRED"
+    }
+   ]
+  },
+  {
+   "row_id": "Q-16|PVC_INTERNAL_DOORS",
+   "r8_5_class": "VALUE_METHOD_NOT_MIGRATED",
+   "current_status": "PRICING_BASIS_REQUIRED",
+   "current_value": 16.665,
+   "unit": "M2",
+   "rules": [
+    "US-13",
+    "QP-21",
+    "QP-16"
+   ],
+   "row_specific_missing": [
+    {
+     "what": "OPENING_IDENTITY",
+     "kind": "ENGINE_MISSING"
+    },
+    {
+     "what": "OPENING_WIDTH",
+     "kind": "ENGINE_MISSING"
+    },
+    {
+     "what": "PRICING BASIS (per door / set / m2, O-09)",
+     "kind": "OWNER_DECISION_REQUIRED"
+    }
+   ],
+   "shared_missing": [
+    {
+     "what": "UNIT_AUTHORITY",
+     "kind": "OWNER_DECISION_REQUIRED"
+    },
+    {
+     "what": "REGION_AUTHORITY",
+     "kind": "OWNER_DECISION_REQUIRED"
+    },
+    {
+     "what": "SOURCE_CAPABILITY (independent parser)",
+     "kind": "EXTERNAL_PARSER_REQUIRED"
+    }
+   ]
+  },
+  {
+   "row_id": "Q-17|INTERNAL_GLAZED_OPENING",
+   "r8_5_class": "VALUE_TRADE_RULE_UNDECIDED",
+   "current_status": "TRADE_CLASSIFICATION_PENDING",
+   "current_value": 6.05,
+   "unit": "M2",
+   "rules": [
+    "US-13",
+    "QP-12"
+   ],
+   "row_specific_missing": [
+    {
+     "what": "GLAZING_RULE (trade classification, O-10)",
+     "kind": "OWNER_DECISION_REQUIRED"
+    }
+   ],
+   "shared_missing": [
+    {
+     "what": "UNIT_AUTHORITY",
+     "kind": "OWNER_DECISION_REQUIRED"
+    },
+    {
+     "what": "REGION_AUTHORITY",
+     "kind": "OWNER_DECISION_REQUIRED"
+    },
+    {
+     "what": "SOURCE_CAPABILITY (independent parser)",
+     "kind": "EXTERNAL_PARSER_REQUIRED"
+    }
+   ]
+  }
+ ],
+ "count": 22,
+ "row_specific_by_kind": {
+  "ENGINE_MISSING": 29,
+  "OWNER_DECISION_REQUIRED": 3,
+  "SOURCE_EVIDENCE_MISSING": 8,
+  "RULE_MISSING": 3
+ },
+ "row_specific_by_what": {
+  "OPENING_IDENTITY": 9,
+  "OPENING_WIDTH": 6,
+  "WALL_PERIMETER_METHOD": 8,
+  "WATERPROOFING_RULE": 2,
+  "derived from Q-04P": 1,
+  "derived from Q-04": 1,
+  "OPENING HOST SIDE": 1,
+  "MASONRY_MATERIAL_IDENTITY": 2,
+  "HEIGHT": 2,
+  "no quantity exists at this thickness": 6,
+  "REVEAL_METHOD": 2,
+  "GLAZING_RULE": 2,
+  "PRICING BASIS": 1
+ },
+ "planning_note": "R9 planning: OPENING_IDENTITY / OPENING_WIDTH (an opening register on canonical geometry) and WALL_PERIMETER_METHOD unblock 11 rows; masonry identity 2; reveal and glazing rules are rule work; three rows wait on an owner decision"
+}
