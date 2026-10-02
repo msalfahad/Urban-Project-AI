@@ -1,0 +1,117 @@
+{
+ "SCHEMA": "URBAN_R8_20_HUMAN_REVIEW_REGISTER_V1",
+ "policy": {
+  "policy_id": "CLOSURE_HUMAN_REVIEW_POLICY_V1",
+  "human_roles": [
+   "PROJECT_OWNER",
+   "QS_REVIEWER"
+  ],
+  "satisfies": "decision ACCEPT by a human role, bound to the CURRENT closure record digest, for this closure",
+  "effect": "HUMAN_REVIEW condition only (authority / review state)",
+  "never": [
+   "self-approval by the engine / Claude / a script",
+   "a review transferred to another closure",
+   "a review surviving a changed closure record",
+   "a geometry, topology, quantity or trade change",
+   "a release"
+  ],
+  "digest": "679c505bf7d7f4d68fa1ca723e541ba0b821040757945246c6deed3533417f0b"
+ },
+ "file": "data/registry/OWNER_CLOSURE_REVIEWS.json",
+ "reviews": [
+  {
+   "review_id": "QORTUBA-NEW-H2430-CLOSURE-REVIEW-OWNER-001",
+   "version": 1,
+   "closure": "TC-1013dbb787e56f65",
+   "closure_name": "H2430",
+   "packet": "R8.19 CLOSURE_RELEASE_STATUS.review_packets.H2430",
+   "packet_digest": "3c01667edcfb76252a739648c58a59f83d7a59c98288f33361c6b1da04d874d6",
+   "decision": "ACCEPT",
+   "reviewer": "Mohammad",
+   "reviewer_role": "PROJECT_OWNER",
+   "received": "R8.20 brief §1-§2",
+   "statement": "the zero-material topology cap correctly represents the end of a real wall at the open Hall / Lobby passage; the passage stays OPEN; the cap is no blockwork, closes nothing physically and creates no plaster, paint, skirting or ceiling",
+   "effect": "HUMAN_REVIEW condition of CLOSURE_RELEASE_MODEL_V1 for this exact closure record only",
+   "never": [
+    "geometry",
+    "topology",
+    "quantity",
+    "trade",
+    "a release"
+   ]
+  },
+  {
+   "review_id": "QORTUBA-NEW-H2431-CLOSURE-REVIEW-OWNER-001",
+   "version": 1,
+   "closure": "TC-5f9f2014f83ab0d4",
+   "closure_name": "H2431",
+   "packet": "R8.19 CLOSURE_RELEASE_STATUS.review_packets.H2431",
+   "packet_digest": "ec65868d17e37ba82a035102bff289b3a8d8c2cbe95340801111ab1c62d5286e",
+   "decision": "ACCEPT",
+   "reviewer": "Mohammad",
+   "reviewer_role": "PROJECT_OWNER",
+   "received": "R8.20 brief §1-§2",
+   "statement": "the zero-material topology cap correctly represents the end of a real wall at the open Hall / Lobby passage; the passage stays OPEN; the cap is no blockwork, closes nothing physically and creates no plaster, paint, skirting or ceiling",
+   "effect": "HUMAN_REVIEW condition of CLOSURE_RELEASE_MODEL_V1 for this exact closure record only",
+   "never": [
+    "geometry",
+    "topology",
+    "quantity",
+    "trade",
+    "a release"
+   ]
+  },
+  {
+   "review_id": "QORTUBA-NEW-I1471-CLOSURE-REVIEW-OWNER-001",
+   "version": 1,
+   "closure": "I1471",
+   "closure_name": "I1471",
+   "packet": "R8.19 CLOSURE_RELEASE_STATUS.review_packets.I1471",
+   "packet_digest": "581633373b225865cd662326aa9d37d0d4a735dfbe38a48a0c97f01d645ad14b",
+   "decision": "ACCEPT",
+   "reviewer": "Mohammad",
+   "reviewer_role": "PROJECT_OWNER",
+   "received": "R8.20 brief §1-§2",
+   "statement": "the door-strip interpretation is correct: the doorway passes through walls of ~150 mm and ~200 mm; the offset / stagger is intentional",
+   "effect": "HUMAN_REVIEW condition of CLOSURE_RELEASE_MODEL_V1 for this exact closure record only",
+   "never": [
+    "geometry",
+    "topology",
+    "quantity",
+    "trade",
+    "a release"
+   ]
+  }
+ ],
+ "states": {
+  "H2430": {
+   "state": "ACCEPTED",
+   "satisfies_human_review": true,
+   "review": "QORTUBA-NEW-H2430-CLOSURE-REVIEW-OWNER-001",
+   "decision": "ACCEPT",
+   "packet_digest_now": "3c01667edcfb76252a739648c58a59f83d7a59c98288f33361c6b1da04d874d6",
+   "packet_digest_reviewed": "3c01667edcfb76252a739648c58a59f83d7a59c98288f33361c6b1da04d874d6",
+   "digest_match": true
+  },
+  "H2431": {
+   "state": "ACCEPTED",
+   "satisfies_human_review": true,
+   "review": "QORTUBA-NEW-H2431-CLOSURE-REVIEW-OWNER-001",
+   "decision": "ACCEPT",
+   "packet_digest_now": "ec65868d17e37ba82a035102bff289b3a8d8c2cbe95340801111ab1c62d5286e",
+   "packet_digest_reviewed": "ec65868d17e37ba82a035102bff289b3a8d8c2cbe95340801111ab1c62d5286e",
+   "digest_match": true
+  },
+  "I1471": {
+   "state": "ACCEPTED",
+   "satisfies_human_review": true,
+   "review": "QORTUBA-NEW-I1471-CLOSURE-REVIEW-OWNER-001",
+   "decision": "ACCEPT",
+   "packet_digest_now": "581633373b225865cd662326aa9d37d0d4a735dfbe38a48a0c97f01d645ad14b",
+   "packet_digest_reviewed": "581633373b225865cd662326aa9d37d0d4a735dfbe38a48a0c97f01d645ad14b",
+   "digest_match": true
+  }
+ },
+ "self_approved": false,
+ "effect": "HUMAN_REVIEW condition only; geometry, topology, quantities and trades unchanged (QUANTITY_REGRESSION)"
+}

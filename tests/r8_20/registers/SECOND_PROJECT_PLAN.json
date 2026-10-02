@@ -1,0 +1,46 @@
+{
+ "SCHEMA": "URBAN_R8_20_SECOND_PROJECT_PLAN_V1",
+ "requirements": [
+  "resolved units (source declaration + owner statement)",
+  "authoritative plan scope",
+  "certified source (hashed DWG + controlled DXF)",
+  "no expected quantity visible before the freeze",
+  "comparable architectural trades"
+ ],
+ "candidates": {
+  "P7757": {
+   "blind_eligible": false,
+   "why": "UNIT_UNRESOLVED; its QS benchmark was unsealed in WT01.8 - it can only be a NON-blind regression once its unit is stated"
+  },
+  "Al Rashed": {
+   "blind_eligible": false,
+   "why": "IMAGE / OLE content (not computable); its QS takeoff has been seen"
+  },
+  "unseen Kuwait villa": {
+   "blind_eligible": true,
+   "why": "the only clean route",
+   "recommended": true
+  }
+ },
+ "protocol": [
+  "owner sends DWG + controlled export + unit + plan scope + SHA-256 of the sealed QS file",
+  "intake, admission, unit / frame / region records",
+  "engine + method FROZEN and committed",
+  "blind run, record committed",
+  "owner sends the sealed QS file (hash checked)",
+  "comparison, metrics, disclosure - no tuning after gold"
+ ],
+ "metrics": [
+  "room detection completeness",
+  "floor area error",
+  "wall tile error",
+  "skirting error",
+  "wall plaster error",
+  "paint error",
+  "opening count / size",
+  "waterproofing",
+  "ceiling",
+  "silent-error count"
+ ],
+ "state": "NOT_RUN (no clean project yet)"
+}

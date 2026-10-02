@@ -1,0 +1,135 @@
+{
+ "rows": {
+  "DRY_WALL_PAINT": {
+   "R8.19": 307.361518,
+   "R8.20": 307.361518,
+   "unchanged": true
+  },
+  "DRY_WALL_PLASTER": {
+   "R8.19": 307.361518,
+   "R8.20": 307.361518,
+   "unchanged": true
+  },
+  "HIDDEN_PROFILE": {
+   "R8.19": 94.13682,
+   "R8.20": 94.13682,
+   "unchanged": true
+  },
+  "MARBLE_THRESHOLD_LENGTH_LM": {
+   "R8.19": 3.4,
+   "R8.20": 3.4,
+   "unchanged": true
+  },
+  "MARBLE_THRESHOLD_PLAN_AREA_M2": {
+   "R8.19": 0.51,
+   "R8.20": 0.51,
+   "unchanged": true
+  },
+  "Q-03": {
+   "R8.19": 17.7425,
+   "R8.20": 17.7425,
+   "unchanged": true
+  },
+  "Q-03P": {
+   "R8.19": 11.685,
+   "R8.20": 11.685,
+   "unchanged": true
+  },
+  "Q-11": {
+   "R8.19": 17.7425,
+   "R8.20": 17.7425,
+   "unchanged": true
+  },
+  "Q-12": {
+   "R8.19": 11.685,
+   "R8.20": 11.685,
+   "unchanged": true
+  },
+  "Q-13": {
+   "R8.19": 111.8988,
+   "R8.20": 111.8988,
+   "unchanged": true
+  },
+  "Q-14": {
+   "R8.19": 140.637,
+   "R8.20": 140.637,
+   "unchanged": true
+  },
+  "SKIRTING": {
+   "R8.19": 94.13682,
+   "R8.20": 94.13682,
+   "unchanged": true
+  },
+  "WATERPROOFING_FLOOR_M2": {
+   "R8.19": 29.4275,
+   "R8.20": 29.4275,
+   "unchanged": true
+  },
+  "WATERPROOFING_UPTURN_LM": {
+   "R8.19": 44.2,
+   "R8.20": 44.2,
+   "unchanged": true
+  },
+  "WET_SERVICE_REVEAL_PLASTER": {
+   "R8.19": 1.510248,
+   "R8.20": 1.510248,
+   "unchanged": true
+  },
+  "WET_SERVICE_WALL_TILE": {
+   "R8.19": 127.693512,
+   "R8.20": 127.693512,
+   "unchanged": true
+  },
+  "WET_WALL_TILE_PREP": {
+   "R8.19": 127.693512,
+   "R8.20": 127.693512,
+   "unchanged": true
+  }
+ },
+ "all_unchanged": true,
+ "digests": {
+  "Q-03": {
+   "TOPOLOGY_DIGEST": "SAME",
+   "ROW_AUTHORITY_DIGEST": "SAME",
+   "RELEASE_INPUT_DIGEST": "SAME"
+  },
+  "Q-03P": {
+   "TOPOLOGY_DIGEST": "SAME",
+   "ROW_AUTHORITY_DIGEST": "SAME",
+   "RELEASE_INPUT_DIGEST": "SAME"
+  },
+  "Q-11": {
+   "TOPOLOGY_DIGEST": "SAME",
+   "ROW_AUTHORITY_DIGEST": "SAME",
+   "RELEASE_INPUT_DIGEST": "SAME"
+  },
+  "Q-12": {
+   "TOPOLOGY_DIGEST": "SAME",
+   "ROW_AUTHORITY_DIGEST": "SAME",
+   "RELEASE_INPUT_DIGEST": "SAME"
+  },
+  "Q-13": {
+   "TOPOLOGY_DIGEST": "SAME",
+   "ROW_AUTHORITY_DIGEST": "SAME",
+   "RELEASE_INPUT_DIGEST": "SAME"
+  },
+  "Q-14": {
+   "TOPOLOGY_DIGEST": "SAME",
+   "ROW_AUTHORITY_DIGEST": "SAME",
+   "RELEASE_INPUT_DIGEST": "SAME"
+  }
+ },
+ "all_digests_same": true,
+ "reproduces_r8_19_blind": {
+  "trade_rows": true,
+  "reveals": true,
+  "object_exposure": true,
+  "waterproofing": true,
+  "heights": true,
+  "sliding_door_physicality": true,
+  "paint_vs_plaster": true,
+  "surface_guard": true
+ },
+ "SCHEMA": "URBAN_R8_20_QUANTITY_REGRESSION_V1",
+ "expected": "no change: review / rationale change authority only"
+}

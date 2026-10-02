@@ -1,0 +1,26 @@
+{
+ "SCHEMA": "URBAN_R8_20_BOQ_XLSX_STATUS_V1",
+ "implemented": true,
+ "file": "URBAN_QTO_R8_20_SHADOW_BOQ.xlsx (package)",
+ "readback_validation": {
+  "state": "PASS",
+  "differences": [],
+  "formulas": [],
+  "missing_status": [],
+  "approved_without_release": [],
+  "summary_lines": 17,
+  "breakdown_lines": 33,
+  "trace_lines": 50,
+  "content_digest": "8401e9aff4ac38e7172089d786e46fa4d30b589505fca1c1012fc4e24cf1ebaf"
+ },
+ "content_digest": "8401e9aff4ac38e7172089d786e46fa4d30b589505fca1c1012fc4e24cf1ebaf",
+ "rows_exported": {
+  "summary": 17,
+  "breakdown": 33,
+  "traceability": 50
+ },
+ "statuses_visible": true,
+ "formulas": [],
+ "approved_lines": 0,
+ "note": "the file bytes carry zip timestamps; identity is the content digest of every cell"
+}
