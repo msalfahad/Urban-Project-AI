@@ -1,0 +1,74 @@
+{
+ "SCHEMA": "URBAN_R8_19_COLUMN_FINISH_POLICY_V1",
+ "policy": {
+  "policy_id": "EXPOSED_OBJECT_FINISH_POLICY_V1",
+  "classes": [
+   "COLUMN_FACE",
+   "OBSTACLE_FACE"
+  ],
+  "exposure": "one-sided certified site-boundary spans attributed to the object's own part segments; hidden = segment length - exposed (listed per segment)",
+  "assignment": "the room's wall trades under a rule requiring PHYSICAL_EXPOSURE (+ OWNER_PHYSICAL_AUTHORITY for a built obstacle) for the listed room classes; otherwise UNRESOLVED",
+  "skirting": "never created here (frozen contact path only)",
+  "never": [
+   "a finish because an object is a column or duct",
+   "a hidden / embedded / internal face",
+   "an obstacle finish without owner physical authority",
+   "an object face merged into WALL_FACE",
+   "a duct rule applied to a room class it does not cover",
+   "new skirting"
+  ],
+  "digest": "5db6e435f45ee5d15f6ae96fbf401b57e2789f60b2192059cd7f81fe720773fb"
+ },
+ "urban_rule": {
+  "rule_id": "URBAN-EXPOSED-COLUMN-FINISH-METHOD",
+  "version": 1,
+  "authority": [
+   "PROJECT_OWNER",
+   "URBAN_OWNER_METHOD"
+  ],
+  "received": "R8.19 brief §1-§5",
+  "scope": {
+   "applies_to": "every Urban project unless a project specification states the column finish",
+   "revision_scoped": false
+  },
+  "method": {
+   "principle": "an EXPOSED column face inside a room follows the surrounding room treatment",
+   "requires": [
+    "PHYSICAL_EXPOSURE (the face is a room-facing boundary of the certified room)"
+   ],
+   "dry_area": [
+    "SKIRTING (on the existing wall-contact path only)",
+    "PLASTER",
+    "PAINT"
+   ],
+   "wet_full_wall_tile_area": [
+    "PORCELAIN / WALL TILE (the room's wall-tile trade and height)"
+   ],
+   "height": "the room's own authorised wall-finish height for that trade",
+   "physical_class": "COLUMN_FACE stays its own class; it is never merged into WALL_FACE"
+  },
+  "never": [
+   "a finish because an object is structurally a column",
+   "a finish on a hidden / embedded / wall-buried face",
+   "paint on a wet / full-wall-tile column",
+   "normal skirting in a full-wall-tile room",
+   "new skirting where the contact path already covers the face"
+  ]
+ },
+ "qortuba_method_rule": {
+  "rule_id": "URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1",
+  "face_class": "COLUMN_FACE",
+  "requires": [
+   "PHYSICAL_EXPOSURE"
+  ],
+  "room_classes": [
+   "DRY_INTERNAL_ROOM",
+   "WET_SERVICE_ROOM",
+   "SERVICE_ROOM"
+  ],
+  "follows": "ROOM_WALL_TRADES"
+ },
+ "identity": "every SEGMENT part whose geometry role is STRUCTURAL_OBSTACLE (all segments of each column entity, exposed or not)",
+ "exposure": "certified site-boundary spans of the class, attributed to the object's own segments",
+ "skirting": "unchanged V4 path (COLUMN_FACE component); wet / full-tile rooms NO_SKIRTING"
+}

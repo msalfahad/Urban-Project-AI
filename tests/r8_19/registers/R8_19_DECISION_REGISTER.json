@@ -1,0 +1,334 @@
+{
+ "SCHEMA": "URBAN_R8_19_DECISION_REGISTER_V1",
+ "recommendation_before_coding": {
+  "SCHEMA": "URBAN_R8_19_RECOMMENDATION_BEFORE_CODING_V1",
+  "written": "after inspecting the R8.18 PLASTER / PAINT / WALL_TILE / COLUMN_DUCT_FINISH registers, the V2 per-site spans (every COLUMN_FACE / OBSTACLE_FACE span with its source parts), the column parts (layer COL, role STRUCTURAL_OBSTACLE, 4 segments each), the duct parts H2060 / H2061 and the owner physical fact QORTUBA-NEW-BED-ROOM-DUCT-OWNER-001, the V4 skirting components per room, the sliding-door south jamb geometry (H480 / H1512 / H533 / H535 / H542 / H543) and its WALL_BAND_POLICY_V5 band ends, the closure release records (TC-1013dbb787e56f65 = H2430, TC-5f9f2014f83ab0d4 = H2431, door closure I1471), the input routes (REV_NEW has only the K2 / ezdxf route; K1 is DWG-based) and the source-anchor record; before any R8.19 code and before any new Qortuba trade result",
+  "inspected": [
+   "columns: every Qortuba COLUMN_FACE span carries exactly one COL-layer column segment in its sources (H699, H704, H706, H708, H712, H714, H716, H718, H720); a column face is on the certified TS01 site boundary only where it is exposed - an embedded segment is never an edge of a site. Some segments are split between rooms (H716 seg 2: 0.40 + 0.05 m exposed to HALL of 0.60 m; seg 3 to a BATH), so exposure must be per (column, segment, site), and hidden length per segment = segment length - exposed length",
+   "duct: H2060 (outer, 2.10 x 0.40 m, WALL layer) is a free-standing hole in the BED.ROOM site - all four faces are one-sided boundary edges (5.00 m); H2061 (inner lining) never touches a site - every one of its faces is hidden / internal. V4 already pays 5.00 lm AUTHORISED_OBSTACLE_FACE skirting on exactly these four faces",
+   "skirting: the V4 dry-room COLUMN_FACE skirting lengths (0.80 / 0.65 / 1.20 / 0.80 lm) are the SAME physical column spans the wall-face engine books as COLUMN_FACE (same sources, same geometry); wet / full-tile rooms have NO_SKIRTING. The new finish rules therefore add no skirting at all",
+   "sliding-door south jamb (PAINTRY side, 0.05 m deep): the 5 cm jamb segment (x 109593.08 -> 109598.08 at y 15109.72) is drawn only by H480 (FIXTURE, no topology role) - correctly rejected in R8.18; H1512 (WALL) draws only the 10 cm from the H533 track to the HALL face. BUT the masonry is independently established: WALL_BAND_POLICY_V5 band WB-fa9e752f77ae497d (faces H535 PAINTRY / H543 HALL, WALL_BAND_ESTABLISHED, PHYSICAL_WALL_BAND_ESTABLISHED) has its end 1 at y 15109.72 classified OPENING_JAMB for exactly this glazed opening, spanning face_a_end (109593.08) to face_b_end (109608.08): both masonry faces terminate on the jamb line, so the band end face - including the 5 cm PAINTRY-side portion - is a physical masonry surface. The north jamb is drawn by H1513 (WALL) across the full 150 mm",
+   "BOQ: every shadow row already carries state, value, unit, sites, digests, authorities and release blockers in its register; a presentation layer only needs to COPY them into report rows (no arithmetic) with a status vocabulary that can never show a subtotal or blocked value as an approved quantity",
+   "closures: H2430 / H2431 are AUTHORISED_FOR_SHADOW; missing CROSS_ROUTE_AGREEMENT, SOURCE_ANCHOR, HUMAN_REVIEW. REV_NEW has ONE input route (K2 ezdxf DXF): the K1 route reads the DWG, which the pinned libredwg 0.13.3 cannot decode - so cross-route agreement is not achievable this round and is tied to the source anchor. I1471 is a TS01 door strip under DOOR_OPENING_CLOSURE_POLICY_V2 (offset jambs): shadow only, not a release-graded closure",
+   "source anchor: DXF anchored; DWG (AC1032) not decodable by the pinned binary (sha fe49cf28...); no other DWG-capable tool is installed or pinned"
+  ],
+  "1_column_authority_resolved": "YES for finish, conditional on PHYSICAL EXPOSURE: URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1 makes the finish follow the room's own wall trades; exposure is the certified site boundary (a one-sided TS01 edge whose source is a column part), recorded per column segment with exposed / hidden length. Every Qortuba column face span has a column identity, so nothing stays unresolved",
+  "2_duct_authority_resolved": "YES for the H2060 BED.ROOM duct: owner physical authority (QORTUBA-NEW-BED-ROOM-DUCT-OWNER-001) + URBAN-EXPOSED-INTERIOR-DUCT-FINISH-METHOD@v1 (dry surrounding treatment). An obstacle WITHOUT owner physical authority, or a duct in a wet room, gets no inferred finish (UNRESOLVED)",
+  "3_dry_columns": "PLASTER + PAINT at the dry 3.15 m (rank-4 owner fact for this scope); SKIRTING stays exactly the existing V4 COLUMN_FACE path - same faces, nothing added",
+  "4_wet_columns": "WALL_TILE (the room's porcelain / ceramic wall-tile trade) at the wet 3.20 m, and WET_WALL_TILE_PREP on the same surface as its own BOQ row; never plaster-and-paint, never a separate 'porcelain column' row",
+  "5_no_skirting_wet": "YES: V4 gives full-wall-tile rooms NO_SKIRTING; a column in such a room inherits it - no rule change, nothing added",
+  "6_duct": "PLASTER + PAINT on the 4 exposed H2060 faces at 3.15 m; its 5.00 lm skirting is already the V4 AUTHORISED_OBSTACLE_FACE path - unchanged; H2061 (internal lining) zero",
+  "7_hidden_face_guard": "Finish is computed ONLY from certified site-boundary spans (one-sided TS01 edges) attributed to the object's own part segments; the object class alone never creates a surface. The register lists every segment of every column / duct part with exposed length per site and hidden length, so exclusion is PROVEN (not merely absent); exposed > segment length fails closed; a span classified COLUMN_FACE with no column part source fails closed (identity unresolved)",
+  "8_complete_rows": "YES as COMPUTED_SHADOW_COMPLETE, provided every contributor is resolved: column and duct faces now have authority, and the sliding-door south reveal is physically established by the band end. Rows are rebuilt from surface records (wall plane surfaces + object face surfaces + physically established reveals), never by adding the R8.18 diagnostic areas",
+  "9_sliding_reveal": "Not a blocker any more: PHYSICAL_REVEAL_ESTABLISHED by the established wall-band OPENING_JAMB end (masonry), PLASTER_DEFAULT (PAINTRY owner). H480 stays rejected. Had the band end not been established, it would stay PHYSICALITY_UNRESOLVED and the PLASTER complete total would be null (zero materiality tolerance) - a separately blocked contributor never hides inside a 'complete' row",
+  "10_boq_ready": "YES as a PRESENTATION layer: engine/source/boq_report.py maps evidence rows to report rows by copying (qty is the evidence value verbatim, or null), statuses COMPUTED_SHADOW_COMPLETE / AUTHORISED_SUBTOTAL / BLOCKED / RELEASED (RELEASED only with a release record - none exists), traceability per row, validate() refuses any report whose number differs from its evidence row. No pricing, no sums",
+  "11_closures_and_anchor": "Prepare review packets for I1471 / H2430 / H2431 (geometry, evidence parts, policy digests, conditions met / missing, closure digest) with HUMAN_REVIEW = PENDING - never self-approved; CROSS_ROUTE_AGREEMENT = NOT_ACHIEVABLE (one route for REV_NEW until the DWG decodes). Re-run the pinned libredwg on the DWG and record; no download. Maximum level stays AUTHORISED_FOR_SHADOW",
+  "12_disagreements_with_chatgpt": [
+   "The sliding-door question is not 'aluminium vs masonry' on the H480 line: the deciding evidence is the frozen wall-band model (two admitted masonry faces terminating on the jamb, band end OPENING_JAMB for this opening). The track position decides ownership and depth only; H480 stays rejected either way",
+   "'PORCELAIN / WALL TILE' for a wet column is the room's WALL_TILE trade, not a new porcelain row; a separate porcelain column item would double-book the same surface",
+   "No new 'wet column no skirting' rule is needed: V4 already gives full-tile rooms NO_SKIRTING - adding a rule would be a second authority for the same fact",
+   "The hidden-face guard is not a filter on object class: it is the certified topology (only exposed faces are site edges) PLUS a per-segment hidden-length register - without the register, exclusion is invisible rather than proven",
+   "The duct rule should not be extended to wet rooms by analogy with columns: the owner stated the dry treatment; a wet-room duct stays UNRESOLVED until stated",
+   "DRY_WALL_PLASTER must not absorb the PAINTRY reveal plaster: the wet / service-owned reveal plaster stays its own row (WET_SERVICE_REVEAL_PLASTER); the BOQ layer must not add them into a 'plaster total' it computes itself",
+   "PAINT equal to DRY_WALL_PLASTER must be PROVEN by set identity of the surface records assigned to both trades, not by comparing two totals"
+  ],
+  "13_r8_20": "R8.20: (1) human closure review session on the prepared I1471 / H2430 / H2431 packets (owner / QS signs or rejects - no self-approval); (2) source anchor: an owner-supplied DWG/DXF pair re-exported with checksums, or a reproducibly built and checksummed DWG reader - not a random download; (3) BOQ workbook export (Arabic / English xlsx) generated from the report layer only; (4) extend wall-height scopes to the other Qortuba floors (each floor its own height evidence); (5) a second project with a resolved unit and certified topology"
+ },
+ "order": [
+  "recommendation (6910087)",
+  "engines + rules + facts + tests + blind script (frozen commit)",
+  "THIS freeze",
+  "commit",
+  "THEN the blind Qortuba run",
+  "THEN rebuild / registers / BOQ",
+  "amendment 1 (c622f01)",
+  "blind (f1e8e04)",
+  "rebuild / registers / BOQ (WF3-L1 / WF3-L2 disclosed)"
+ ],
+ "decisions": [
+  {
+   "id": "R819-D01",
+   "decision": "exposed column faces follow the room's wall trades (dry plaster + paint at 3.15 m, wet tile + prep at 3.20 m); skirting stays V4"
+  },
+  {
+   "id": "R819-D02",
+   "decision": "the H2060 duct: plaster + paint at 3.15 m on its 4 exposed faces; H2061 lining hidden; skirting stays V4"
+  },
+  {
+   "id": "R819-D03",
+   "decision": "REVEAL_PHYSICALITY_POLICY_V1: the PAINTRY south sliding jamb is established by the band OPENING_JAMB end; H480 rejected"
+  },
+  {
+   "id": "R819-D04",
+   "decision": "all five wall-finish rows COMPUTED_SHADOW_COMPLETE (not FINAL)"
+  },
+  {
+   "id": "R819-D05",
+   "decision": "BOQ_REPORT_LAYER_V1: presentation only, shadow report published, no row approved"
+  },
+  {
+   "id": "R819-D06",
+   "decision": "closure review packets prepared; nothing self-approved or released"
+  },
+  {
+   "id": "R819-D07",
+   "decision": "second-project regression NOT_RUN; source anchor NOT_ESTABLISHED"
+  }
+ ],
+ "gates": {
+  "MIGRATION_PLANNING_READY": "YES",
+  "MIGRATION_EXECUTION_READY": "NO",
+  "PRODUCTION_MIGRATION": "NO"
+ },
+ "answers": {
+  "1_column_rule_encoded": "YES: URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1 (Urban rule store) + EXPOSED_OBJECT_FINISH_POLICY_V1 + QORTUBA-NEW-WALL-FACE-METHOD@v3, frozen before the blind run",
+  "2_dry_columns_plaster_paint": "YES: dry column faces in ['DRY_WALL_PAINT', 'DRY_WALL_PLASTER'] - {'SITE-5f1762f1a93b91ca': 2.52, 'SITE-77a2130eb275604c': 2.0475, 'SITE-a6405850100155ac': 3.78, 'SITE-daca396d6d730e60': 2.52, 'total_m2': 10.8675}",
+  "3_dry_column_skirting_no_duplicate": "YES: every dry room's exposed column length equals its V4 COLUMN_FACE skirting (True); SKIRTING {'R8.18': 94.13682, 'R8.19': 94.13682, 'unchanged': True, 'v4_edited': False, 'is_target': False}",
+  "4_wet_columns_wall_tile": "YES: {'SITE-1c4abf65f9b5db1e': 2.08, 'SITE-8c1c7563d5252c50': 4.48, 'SITE-a2b19efc492a6d0b': 4.48, 'SITE-fe8ed5548fb4310e': 3.84, 'total_m2': 14.88} (3.20 m)",
+  "5_wet_columns_no_paint_no_skirting": "YES: wet column faces only in ['WET_SERVICE_WALL_TILE', 'WET_WALL_TILE_PREP']; wet rooms NO_SKIRTING_FULL_WALL_TILE",
+  "6_hidden_column_faces_excluded": "YES: 22 hidden column segments, 2 partially exposed ({'QORTUBA_REV_NEW|H714||SEGMENT|2': 0.15, 'QORTUBA_REV_NEW|H716||SEGMENT|2': 0.15} m hidden), finish on hidden faces 0.0 m2",
+  "7_duct_rule_encoded": "YES: URBAN-EXPOSED-INTERIOR-DUCT-FINISH-METHOD@v1 + QORTUBA-NEW-BED-ROOM-DUCT-FINISH-OWNER-001@v1 (requires owner physical authority QORTUBA-NEW-BED-ROOM-DUCT-OWNER-001@v1)",
+  "8_duct_plaster_paint": "YES: {'DRY_WALL_PLASTER': {'SITE-5f1762f1a93b91ca': 15.75, 'total_m2': 15.75}, 'DRY_WALL_PAINT': {'SITE-5f1762f1a93b91ca': 15.75, 'total_m2': 15.75}}",
+  "9_duct_skirting_unchanged": {
+   "SITE-5f1762f1a93b91ca": {
+    "zones": [
+     "BED.ROOM"
+    ],
+    "v4_duct_lm": 5.0,
+    "exposed_duct_m": 5.0,
+    "same_faces": true
+   },
+   "SKIRTING": "unchanged"
+  },
+  "10_hidden_duct_faces_excluded": "YES: ['QORTUBA_REV_NEW|H2061||SEGMENT|0', 'QORTUBA_REV_NEW|H2061||SEGMENT|1', 'QORTUBA_REV_NEW|H2061||SEGMENT|2', 'QORTUBA_REV_NEW|H2061||SEGMENT|3'] (H2061 inner lining) carry no finish",
+  "11_plaster_independent": "YES: rebuilt from surface records (wall plane + exposed object faces + physically established reveals); no R8.18 total or diagnostic area was read",
+  "12_plaster": {
+   "DRY_WALL_PLASTER": {
+    "state": "COMPUTED_SHADOW_COMPLETE",
+    "AUTHORISED_SUBTOTAL_M2": 307.361518,
+    "COMPLETE_M2": 307.361518
+   },
+   "WET_SERVICE_REVEAL_PLASTER": {
+    "state": "COMPUTED_SHADOW_COMPLETE",
+    "AUTHORISED_SUBTOTAL_M2": 1.510248,
+    "COMPLETE_M2": 1.510248
+   },
+   "PLASTER_ALL_SURFACES_M2": 308.871766
+  },
+  "13_plaster_per_room": {
+   "BED.ROOM (SITE-5f1762f1a93b91ca)": 72.328302,
+   "HALL/whgm (SITE-77a2130eb275604c)": 94.266868,
+   "DRESS/M.B.ROOM (SITE-a6405850100155ac)": 91.668106,
+   "BED.ROOM (SITE-daca396d6d730e60)": 49.098242,
+   "WET reveals": {
+    "BATH (SITE-1c4abf65f9b5db1e)": 0.0,
+    "PAINTRY (SITE-8c1c7563d5252c50)": 1.510248,
+    "BATH (SITE-a2b19efc492a6d0b)": 0.0,
+    "BATH (SITE-fe8ed5548fb4310e)": 0.0
+   }
+  },
+  "14_paint_independent": "YES: its own row from its own surface assignments; equality proven by surface-set identity (True)",
+  "15_paint": {
+   "state": "COMPUTED_SHADOW_COMPLETE",
+   "AUTHORISED_SUBTOTAL_M2": 307.361518,
+   "COMPLETE_M2": 307.361518
+  },
+  "16_paint_vs_plaster": "the SAME surface records (identity set) carry PLASTER and PAINT in every dry room: wall plane, exposed columns, the duct and dry-owned PLASTER_AND_PAINT reveals; the wet / service plaster-only reveals carry no paint",
+  "17_wall_tile_independent": "YES: from wet / service wall-plane surfaces + exposed wet column faces",
+  "18_bathroom_tile": {
+   "BATH (SITE-1c4abf65f9b5db1e)": 36.32,
+   "BATH (SITE-a2b19efc492a6d0b)": 28.32,
+   "BATH (SITE-fe8ed5548fb4310e)": 27.04
+  },
+  "19_paintry_tile": {
+   "PAINTRY (SITE-8c1c7563d5252c50)": 36.013512
+  },
+  "20_column_tile_contribution": {
+   "SITE-1c4abf65f9b5db1e": 2.08,
+   "SITE-8c1c7563d5252c50": 4.48,
+   "SITE-a2b19efc492a6d0b": 4.48,
+   "SITE-fe8ed5548fb4310e": 3.84,
+   "total_m2": 14.88
+  },
+  "21_wet_wall_tile_prep": "127.693512 m2 - US-03 preparation on the SAME physical surfaces as the wall tile (True), its own BOQ row",
+  "22_south_reveal_established": "YES: PHYSICAL_REVEAL_ESTABLISHED",
+  "23_geometry": "PHYSICAL_REVEAL_ESTABLISHED for both PAINTRY-side jambs: north by H1513 (WALL) + band end; south by the established band WB-fa9e752f77ae497d OPENING_JAMB end (masonry faces H535 / H543 both end on the jamb line). H480 (FIXTURE / SANITARY_FIXTURE role) is recorded as REJECTED evidence",
+  "24_if_not": "n/a - no wall-finish physicality blocker remains",
+  "25_fixture_rejected": "YES: rejected evidence [{'part': 'QORTUBA_REV_NEW|H480||SEGMENT|0', 'layer': 'FIXTURE', 'why': 'not an admitted wall / structural part'}]",
+  "26_waterproofing_changed": "NO: {'WATERPROOFING_FLOOR_M2': True, 'WATERPROOFING_UPTURN_LM': True}",
+  "27_skirting_hidden_profile_changed": {
+   "SKIRTING": {
+    "R8.18": 94.13682,
+    "R8.19": 94.13682,
+    "unchanged": true,
+    "v4_edited": false,
+    "is_target": false
+   },
+   "HIDDEN_PROFILE": {
+    "R8.18": 94.13682,
+    "R8.19": 94.13682,
+    "unchanged": true
+   }
+  },
+  "28_floor_ceiling_rows_changed": {
+   "Q-03": {
+    "R8.18": 17.7425,
+    "R8.19": 17.7425,
+    "delta": 0.0
+   },
+   "Q-03P": {
+    "R8.18": 11.685,
+    "R8.19": 11.685,
+    "delta": 0.0
+   },
+   "Q-11": {
+    "R8.18": 17.7425,
+    "R8.19": 17.7425,
+    "delta": 0.0
+   },
+   "Q-12": {
+    "R8.18": 11.685,
+    "R8.19": 11.685,
+    "delta": 0.0
+   },
+   "Q-13": {
+    "R8.18": 111.8988,
+    "R8.19": 111.8988,
+    "delta": 0.0
+   },
+   "Q-14": {
+    "R8.18": 140.637,
+    "R8.19": 140.637,
+    "delta": 0.0
+   }
+  },
+  "29_marble_changed": {
+   "R8.18": {
+    "MARBLE_THRESHOLD_PLAN_AREA_M2": 0.51,
+    "MARBLE_THRESHOLD_LENGTH_LM": 3.4,
+    "count": 4,
+    "blocked": []
+   },
+   "R8.19": {
+    "MARBLE_THRESHOLD_PLAN_AREA_M2": 0.51,
+    "MARBLE_THRESHOLD_LENGTH_LM": 3.4,
+    "count": 4,
+    "blocked": []
+   },
+   "unchanged": true
+  },
+  "30_boq_layer": "YES: BOQ_REPORT_LAYER_V1 (engine/source/boq_report.py), 50 report rows, validation PASS",
+  "31_boq_calculates": "NO: every QTY is copied from one evidence field; validate() re-derives every row and refuses any difference (tested with a manual edit)",
+  "32_boq_traceability": "YES: every row carries ['run_id', 'source_revision', 'trade_row', 'sites', 'surface_ids', 'authority_digest', 'rule_ids', 'owner_facts', 'release_state'] (untraced: [])",
+  "33_statuses_distinguished": "YES: {'COMPUTED_SHADOW_COMPLETE': 50, 'AUTHORISED_SUBTOTAL': 0, 'BLOCKED': 0, 'RELEASED': 0}; approved_for_boq 0",
+  "34_i1471": {
+   "POLICY_FROZEN": "YES (R8.16 freeze)",
+   "OWNER_OR_SOURCE_CORROBORATION": "SOURCE (door block geometry, offset jambs)",
+   "CROSS_ROUTE_AGREEMENT": "NOT_ACHIEVABLE_THIS_ROUND",
+   "SOURCE_ANCHOR": "NOT_ESTABLISHED",
+   "HUMAN_REVIEW": "PENDING (packet prepared, never self-approved)",
+   "maximum_level_now": "SHADOW"
+  },
+  "35_h2430": {
+   "POLICY_FROZEN": true,
+   "OWNER_OR_SOURCE_CORROBORATION": true,
+   "CROSS_ROUTE_AGREEMENT": "NOT_ACHIEVABLE_THIS_ROUND (REV_NEW has one input route; K1 needs the DWG decode)",
+   "SOURCE_ANCHOR": "NOT_ESTABLISHED",
+   "HUMAN_REVIEW": "PENDING (packet prepared, never self-approved)",
+   "maximum_level_now": "AUTHORISED_FOR_SHADOW"
+  },
+  "36_h2431": {
+   "POLICY_FROZEN": true,
+   "OWNER_OR_SOURCE_CORROBORATION": true,
+   "CROSS_ROUTE_AGREEMENT": "NOT_ACHIEVABLE_THIS_ROUND (REV_NEW has one input route; K1 needs the DWG decode)",
+   "SOURCE_ANCHOR": "NOT_ESTABLISHED",
+   "HUMAN_REVIEW": "PENDING (packet prepared, never self-approved)",
+   "maximum_level_now": "AUTHORISED_FOR_SHADOW"
+  },
+  "37_dwg_dxf_identity": "NOT_ESTABLISHED",
+  "38_second_project": "NOT_RUN",
+  "39_release_blockers": {
+   "Q-03": [
+    "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "Q-03P": [
+    "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+    "OBJECT_FOOTPRINT_IMPLICIT: proven furniture / fixture footprints are inside the measured floor by the topology convention, not by a FLOOR_FINISH footprint authority",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "Q-11": [
+    "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "Q-12": [
+    "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+    "OBJECT_FOOTPRINT_IMPLICIT: proven furniture / fixture footprints are inside the measured floor by the topology convention, not by a FLOOR_FINISH footprint authority",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "Q-13": [
+    "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "Q-14": [
+    "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "DRY_WALL_PLASTER": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "DRY_WALL_PAINT": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "WET_SERVICE_WALL_TILE": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "WET_WALL_TILE_PREP": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "WET_SERVICE_REVEAL_PLASTER": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "SKIRTING": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "HIDDEN_PROFILE": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "MARBLE_THRESHOLD": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "WATERPROOFING_FLOOR_M2": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "WATERPROOFING_UPTURN_LM": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ]
+  },
+  "40_new_silent_errors": [
+   "WF3-L1 (blind-script wiring, found after the blind run): the blind script admitted every wall-face V2 surface record as wall plane, but V2 also carries COLUMN_FACE / OBSTACLE_FACE records as separate classes - every exposed column / duct face was counted twice (blind DRY_WALL_PLASTER / PAINT +26.6175 m2, WALL_TILE / PREP +14.88 m2). The rebuild admits only the V2 plane classes; each rebuilt room plane equals the R8.18 V2 METHOD B net",
+   "WF3-L2 (blind-script guard): the surface guard keyed records by id, so it missed WF3-L1, and keyed object faces by (site, class, segment), so it flagged one column segment exposed as two physical spans. The rebuild guard keys by physical identity and catches all 15 + 8 blind copies",
+   "amendment 1 (pre-output crash): band ends without face points were not skipped - fixed before any value was written"
+  ],
+  "41_r8_20": "R8.20: (1) human closure review session on the prepared I1471 / H2430 / H2431 packets (owner / QS signs or rejects - no self-approval); (2) source anchor: an owner-supplied DWG/DXF pair re-exported with checksums, or a reproducibly built and checksummed DWG reader - not a random download; (3) BOQ workbook export (Arabic / English xlsx) generated from the report layer only; (4) extend wall-height scopes to the other Qortuba floors (each floor its own height evidence); (5) a second project with a resolved unit and certified topology",
+  "42_disagreements": [
+   "The sliding-door question is not 'aluminium vs masonry' on the H480 line: the deciding evidence is the frozen wall-band model (two admitted masonry faces terminating on the jamb, band end OPENING_JAMB for this opening). The track position decides ownership and depth only; H480 stays rejected either way",
+   "'PORCELAIN / WALL TILE' for a wet column is the room's WALL_TILE trade, not a new porcelain row; a separate porcelain column item would double-book the same surface",
+   "No new 'wet column no skirting' rule is needed: V4 already gives full-tile rooms NO_SKIRTING - adding a rule would be a second authority for the same fact",
+   "The hidden-face guard is not a filter on object class: it is the certified topology (only exposed faces are site edges) PLUS a per-segment hidden-length register - without the register, exclusion is invisible rather than proven",
+   "The duct rule should not be extended to wet rooms by analogy with columns: the owner stated the dry treatment; a wet-room duct stays UNRESOLVED until stated",
+   "DRY_WALL_PLASTER must not absorb the PAINTRY reveal plaster: the wet / service-owned reveal plaster stays its own row (WET_SERVICE_REVEAL_PLASTER); the BOQ layer must not add them into a 'plaster total' it computes itself",
+   "PAINT equal to DRY_WALL_PLASTER must be PROVEN by set identity of the surface records assigned to both trades, not by comparing two totals"
+  ]
+ }
+}

@@ -1,0 +1,322 @@
+{
+ "SCHEMA": "URBAN_R8_19_SLIDING_DOOR_REVEAL_PHYSICALITY_V1",
+ "policy": {
+  "policy_id": "REVEAL_PHYSICALITY_POLICY_V1",
+  "states": [
+   "PHYSICAL_REVEAL_ESTABLISHED",
+   "NO_PHYSICAL_REVEAL",
+   "PHYSICALITY_UNRESOLVED"
+  ],
+  "admitted_roles": [
+   "TOPOLOGY_BOUNDARY",
+   "STRUCTURAL_OBSTACLE"
+  ],
+  "band_end": "WALL_BAND_ESTABLISHED band, end kind OPENING_JAMB for the same opening, covering the face",
+  "order": "physicality first; finish (REVEAL_FINISH_POLICY_V1) only on an established surface",
+  "never": [
+   "a fixture / furniture / glazing / window / frame / aluminium line as a reveal surface",
+   "a finish default as proof of a surface",
+   "symmetry with the opposite jamb",
+   "a reveal surface with zero depth",
+   "an unresolved reveal inside a complete total"
+  ],
+  "digest": "d156eaf040b3035036dcc506be47e5d346fce2c3f0b58421f1d8674775008b06"
+ },
+ "opening": "HALL <-> PAINTRY floor-reaching sliding glass door (owner fact, unchanged)",
+ "ownership_and_depth": {
+  "split": {
+   "SITE-8c1c7563d5252c50": 0.05,
+   "SITE-77a2130eb275604c": 0.0,
+   "state": "ESTABLISHED",
+   "frame_offsets_m": [
+    0.05,
+    0.14999999999898136
+   ]
+  },
+  "basis": "aluminium tracks H542 (flush with the HALL face) / H533 (0.05 m from the PAINTRY face): ownership and depth only - never proof of masonry"
+ },
+ "jambs": [
+  {
+   "reveal": [
+    "GLAZED|QORTUBA_REV_NEW|H533||SEGMENT|0",
+    "SITE-8c1c7563d5252c50",
+    "LEFT_JAMB"
+   ],
+   "state": "PHYSICAL_REVEAL_ESTABLISHED",
+   "segment": [
+    [
+     109593.081744984,
+     15384.71961437815
+    ],
+    [
+     109598.081744984,
+     15384.719614378153
+    ]
+   ],
+   "evidence": [
+    {
+     "kind": "ADMITTED_WALL_PART",
+     "part": "QORTUBA_REV_NEW|H1513||SEGMENT|0",
+     "roles": [
+      "TOPOLOGY_BOUNDARY"
+     ]
+    },
+    {
+     "kind": "ESTABLISHED_WALL_BAND_END",
+     "band_id": "WB-76611b3ce4331f87",
+     "end_kind": "OPENING_JAMB"
+    }
+   ],
+   "rejected": [],
+   "why": "physical surface established"
+  },
+  {
+   "reveal": [
+    "GLAZED|QORTUBA_REV_NEW|H533||SEGMENT|0",
+    "SITE-8c1c7563d5252c50",
+    "RIGHT_JAMB"
+   ],
+   "state": "PHYSICAL_REVEAL_ESTABLISHED",
+   "segment": [
+    [
+     109593.081744984,
+     15109.71961437816
+    ],
+    [
+     109598.081744984,
+     15109.719614378164
+    ]
+   ],
+   "evidence": [
+    {
+     "kind": "ESTABLISHED_WALL_BAND_END",
+     "band_id": "WB-fa9e752f77ae497d",
+     "end_kind": "OPENING_JAMB"
+    }
+   ],
+   "rejected": [
+    {
+     "part": "QORTUBA_REV_NEW|H480||SEGMENT|0",
+     "layer": "FIXTURE",
+     "why": "not an admitted wall / structural part"
+    }
+   ],
+   "why": "physical surface established"
+  }
+ ],
+ "south_jamb": {
+  "reveal": [
+   "GLAZED|QORTUBA_REV_NEW|H533||SEGMENT|0",
+   "SITE-8c1c7563d5252c50",
+   "RIGHT_JAMB"
+  ],
+  "state": "PHYSICAL_REVEAL_ESTABLISHED",
+  "segment": [
+   [
+    109593.081744984,
+    15109.71961437816
+   ],
+   [
+    109598.081744984,
+    15109.719614378164
+   ]
+  ],
+  "evidence": [
+   {
+    "kind": "ESTABLISHED_WALL_BAND_END",
+    "band_id": "WB-fa9e752f77ae497d",
+    "end_kind": "OPENING_JAMB"
+   }
+  ],
+  "rejected": [
+   {
+    "part": "QORTUBA_REV_NEW|H480||SEGMENT|0",
+    "layer": "FIXTURE",
+    "why": "not an admitted wall / structural part"
+   }
+  ],
+  "why": "physical surface established"
+ },
+ "bands_used": {
+  "WB-76611b3ce4331f87": {
+   "band_id": "WB-76611b3ce4331f87",
+   "state": "WALL_BAND_ESTABLISHED",
+   "face_a": "QORTUBA_REV_NEW|H539||SEGMENT|0",
+   "face_b": "QORTUBA_REV_NEW|H540||SEGMENT|0",
+   "width": 14.999999999898137,
+   "interval": [
+    15384.71961437816,
+    15459.71961437816
+   ],
+   "ends": [
+    {
+     "end": 0,
+     "s": 15384.71961437816,
+     "outward": -1,
+     "face_a_end": [
+      109608.0817449839,
+      15384.71961437816
+     ],
+     "face_b_end": [
+      109593.081744984,
+      15384.71961437815
+     ],
+     "faces": [
+      "QORTUBA_REV_NEW|H539||SEGMENT|0",
+      "QORTUBA_REV_NEW|H540||SEGMENT|0"
+     ],
+     "kind": "OPENING_JAMB",
+     "opening": [
+      "CLOSURE|GLAZED|QORTUBA_REV_NEW|H533||SEGMENT|0|F1",
+      "CLOSURE|GLAZED|QORTUBA_REV_NEW|H533||SEGMENT|0|F2",
+      "CLOSURE|GLAZED|QORTUBA_REV_NEW|H542||SEGMENT|0|F1",
+      "CLOSURE|GLAZED|QORTUBA_REV_NEW|H542||SEGMENT|0|F2"
+     ]
+    },
+    {
+     "end": 1,
+     "s": 15459.71961437816,
+     "outward": 1,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "continues": [
+      "FC-008a54637f099b2a"
+     ]
+    }
+   ]
+  },
+  "WB-fa9e752f77ae497d": {
+   "band_id": "WB-fa9e752f77ae497d",
+   "state": "WALL_BAND_ESTABLISHED",
+   "face_a": "QORTUBA_REV_NEW|H535||SEGMENT|0",
+   "face_b": "QORTUBA_REV_NEW|H543||SEGMENT|0",
+   "width": 14.999999999898137,
+   "interval": [
+    15049.71961437816,
+    15109.71961437816
+   ],
+   "ends": [
+    {
+     "end": 0,
+     "s": 15049.71961437816,
+     "outward": -1,
+     "face_a_end": [
+      109593.081744984,
+      15049.71961437816
+     ],
+     "face_b_end": [
+      109608.0817449839,
+      15049.71961437816
+     ],
+     "faces": [
+      "QORTUBA_REV_NEW|H535||SEGMENT|0",
+      "QORTUBA_REV_NEW|H543||SEGMENT|0"
+     ],
+     "kind": "RECEIVING_FACE_JUNCTION",
+     "receiving_face": [
+      "QORTUBA_REV_NEW|H477||SEGMENT|0"
+     ]
+    },
+    {
+     "end": 1,
+     "s": 15109.71961437816,
+     "outward": 1,
+     "face_a_end": [
+      109593.081744984,
+      15109.71961437816
+     ],
+     "face_b_end": [
+      109608.0817449839,
+      15109.71961437816
+     ],
+     "faces": [
+      "QORTUBA_REV_NEW|H535||SEGMENT|0",
+      "QORTUBA_REV_NEW|H543||SEGMENT|0"
+     ],
+     "kind": "OPENING_JAMB",
+     "opening": [
+      "CLOSURE|GLAZED|QORTUBA_REV_NEW|H533||SEGMENT|0|F1",
+      "CLOSURE|GLAZED|QORTUBA_REV_NEW|H533||SEGMENT|0|F2",
+      "CLOSURE|GLAZED|QORTUBA_REV_NEW|H542||SEGMENT|0|F1",
+      "CLOSURE|GLAZED|QORTUBA_REV_NEW|H542||SEGMENT|0|F2"
+     ]
+    }
+   ]
+  }
+ },
+ "source_parts": {
+  "QORTUBA_REV_NEW|H480||SEGMENT|0": {
+   "layer": "FIXTURE",
+   "geometry": [
+    109593.0817,
+    15109.7196,
+    109598.0817,
+    15109.7196
+   ],
+   "role": "SANITARY_FIXTURE"
+  },
+  "QORTUBA_REV_NEW|H1512||SEGMENT|0": {
+   "layer": "WALL",
+   "geometry": [
+    109598.0817,
+    15109.7196,
+    109608.0817,
+    15109.7196
+   ],
+   "role": "TOPOLOGY_BOUNDARY"
+  },
+  "QORTUBA_REV_NEW|H1513||SEGMENT|0": {
+   "layer": "WALL",
+   "geometry": [
+    109593.0817,
+    15384.7196,
+    109608.0817,
+    15384.7196
+   ],
+   "role": "TOPOLOGY_BOUNDARY"
+  },
+  "QORTUBA_REV_NEW|H533||SEGMENT|0": {
+   "layer": "WINDOW",
+   "geometry": [
+    109598.0817,
+    15384.7196,
+    109598.0817,
+    15109.7196
+   ],
+   "role": "GLAZING_BOUNDARY"
+  },
+  "QORTUBA_REV_NEW|H542||SEGMENT|0": {
+   "layer": "WINDOW",
+   "geometry": [
+    109608.0817,
+    15384.7196,
+    109608.0817,
+    15109.7196
+   ],
+   "role": "GLAZING_BOUNDARY"
+  },
+  "QORTUBA_REV_NEW|H535||SEGMENT|0": {
+   "layer": "WALL",
+   "geometry": [
+    109593.0817,
+    15109.7196,
+    109593.0817,
+    15049.7196
+   ],
+   "role": "TOPOLOGY_BOUNDARY"
+  },
+  "QORTUBA_REV_NEW|H543||SEGMENT|0": {
+   "layer": "WALL",
+   "geometry": [
+    109608.0817,
+    15109.7196,
+    109608.0817,
+    15049.7196
+   ],
+   "role": "TOPOLOGY_BOUNDARY"
+  }
+ },
+ "outcome": "PHYSICAL_REVEAL_ESTABLISHED for both PAINTRY-side jambs: north by H1513 (WALL) + band end; south by the established band WB-fa9e752f77ae497d OPENING_JAMB end (masonry faces H535 / H543 both end on the jamb line). H480 (FIXTURE / SANITARY_FIXTURE role) is recorded as REJECTED evidence",
+ "finish": "PLASTER_DEFAULT (PAINTRY owner, plaster only), 0.11 m2 per jamb",
+ "history": "R8.18 blind: H480 wrongly accepted (WF2-L1); R8.18 rebuild: UNRESOLVED; R8.19: established by independent physical evidence under a frozen policy",
+ "cannot_recur": "REVEAL_PHYSICALITY_POLICY_V1 admits only TOPOLOGY_BOUNDARY / STRUCTURAL_OBSTACLE parts or an ESTABLISHED band OPENING_JAMB end of the same opening (frozen, tested)"
+}
