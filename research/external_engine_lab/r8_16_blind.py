@@ -141,7 +141,7 @@ def main(work, closure_out, skirting_out):
                       "r8_15_values_read": False}}
     cr = dict(head, SCHEMA="URBAN_R8_16_CLOSURE_BLIND_RESULT_V1", NEW_K2=closure_record(new, inp_new),
               OLD_K1=closure_record(old, inp_old))
-    sk = dict(head, SCHEMA="URBAN_R8_16_SKIRTING_BLIND_RESULT_V1", method=fz["qortuba_method"]["ref"],
+    sk = dict(head, SCHEMA="URBAN_R8_16_SKIRTING_BLIND_RESULT_V1",
               run_input_digest=new["run_manifest"]["RUN_INPUT_DIGEST"], **skirting_record(new, inp_new, fz))
     Path(closure_out).write_text(json.dumps(cr, indent=1, ensure_ascii=False, default=str) + "\n")
     Path(skirting_out).write_text(json.dumps(sk, indent=1, ensure_ascii=False, default=str) + "\n")
