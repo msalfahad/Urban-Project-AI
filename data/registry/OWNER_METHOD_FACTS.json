@@ -529,6 +529,68 @@
      "why": "a CHANGE of value (3.00 -> 3.15 m) for the new revision"
     }
    ]
+  },
+  {
+   "fact_id": "QORTUBA-NEW-BED-ROOM-DUCT-FINISH-OWNER-001",
+   "version": 1,
+   "kind": "FINISH_SCOPE",
+   "authority": [
+    "PROJECT_OWNER"
+   ],
+   "received": "R8.19 brief §6-§7",
+   "scope": {
+    "project": "QORTUBA",
+    "source_revision_id": "QORTUBA_REV_NEW",
+    "source_anchor_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+    "region_id": "RC:MODEL_SPACE:4267:540:1649",
+    "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649",
+    "plan": "PLAN_VARIANT_4_SELECTED",
+    "trades": [
+     "PLASTER",
+     "PAINT",
+     "SKIRTING"
+    ],
+    "space_classes": [
+     "DRY_INTERNAL_ROOM"
+    ]
+   },
+   "statement": {
+    "text": "the current exposed BED.ROOM duct (H2060 / H2061) receives SKIRTING, PLASTER and PAINT on its exposed room-facing faces",
+    "object": "QORTUBA-NEW-BED-ROOM-DUCT-OWNER-001@v1",
+    "parts": [
+     "QORTUBA_REV_NEW|H2060||SEGMENT|0",
+     "QORTUBA_REV_NEW|H2060||SEGMENT|1",
+     "QORTUBA_REV_NEW|H2060||SEGMENT|2",
+     "QORTUBA_REV_NEW|H2060||SEGMENT|3",
+     "QORTUBA_REV_NEW|H2061||SEGMENT|0",
+     "QORTUBA_REV_NEW|H2061||SEGMENT|1",
+     "QORTUBA_REV_NEW|H2061||SEGMENT|2",
+     "QORTUBA_REV_NEW|H2061||SEGMENT|3"
+    ],
+    "trades": {
+     "PLASTER": "exposed vertical faces at the dry 3.15 m height",
+     "PAINT": "exposed vertical faces at the dry 3.15 m height",
+     "SKIRTING": "unchanged: the existing V4 AUTHORISED_OBSTACLE_FACE path"
+    },
+    "exposure": "room-facing faces of the certified BED.ROOM site only"
+   },
+   "unit": null,
+   "transfer_forbidden": [
+    "the old Qortuba revision",
+    "any other region, plan or floor",
+    "the DWG (identity NOT_ESTABLISHED)",
+    "P7757",
+    "Al Rashed",
+    "any future project (the Urban rule governs there)"
+   ],
+   "relations": [
+    {
+     "rule": "URBAN-EXPOSED-INTERIOR-DUCT-FINISH-METHOD@v1",
+     "relation": "CORROBORATING",
+     "scope": "this duct",
+     "why": "the project statement the Urban rule generalises"
+    }
+   ]
   }
  ],
  "never": [

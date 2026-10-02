@@ -161,6 +161,75 @@
     "every reveal one finish",
     "one reveal in two room finishes"
    ]
+  },
+  {
+   "rule_id": "URBAN-EXPOSED-COLUMN-FINISH-METHOD",
+   "version": 1,
+   "authority": [
+    "PROJECT_OWNER",
+    "URBAN_OWNER_METHOD"
+   ],
+   "received": "R8.19 brief §1-§5",
+   "scope": {
+    "applies_to": "every Urban project unless a project specification states the column finish",
+    "revision_scoped": false
+   },
+   "method": {
+    "principle": "an EXPOSED column face inside a room follows the surrounding room treatment",
+    "requires": [
+     "PHYSICAL_EXPOSURE (the face is a room-facing boundary of the certified room)"
+    ],
+    "dry_area": [
+     "SKIRTING (on the existing wall-contact path only)",
+     "PLASTER",
+     "PAINT"
+    ],
+    "wet_full_wall_tile_area": [
+     "PORCELAIN / WALL TILE (the room's wall-tile trade and height)"
+    ],
+    "height": "the room's own authorised wall-finish height for that trade",
+    "physical_class": "COLUMN_FACE stays its own class; it is never merged into WALL_FACE"
+   },
+   "never": [
+    "a finish because an object is structurally a column",
+    "a finish on a hidden / embedded / wall-buried face",
+    "paint on a wet / full-wall-tile column",
+    "normal skirting in a full-wall-tile room",
+    "new skirting where the contact path already covers the face"
+   ]
+  },
+  {
+   "rule_id": "URBAN-EXPOSED-INTERIOR-DUCT-FINISH-METHOD",
+   "version": 1,
+   "authority": [
+    "PROJECT_OWNER",
+    "URBAN_OWNER_METHOD"
+   ],
+   "received": "R8.19 brief §6-§8",
+   "scope": {
+    "applies_to": "every Urban project: exposed interior duct / boxed-out faces where the surrounding DRY room treatment applies",
+    "revision_scoped": false
+   },
+   "method": {
+    "principle": "an exposed interior duct / boxed-out face takes the surrounding dry-room treatment",
+    "requires": [
+     "OWNER_PHYSICAL_AUTHORITY (the duct is established as a built obstacle)",
+     "PHYSICAL_EXPOSURE (room-facing faces of the certified room only)"
+    ],
+    "dry_area": [
+     "SKIRTING (on the existing wall-contact path only)",
+     "PLASTER",
+     "PAINT"
+    ],
+    "height": "the room's own authorised dry wall-finish height",
+    "physical_class": "OBSTACLE / DUCT_FACE stays its own class; it is never merged into WALL_FACE"
+   },
+   "never": [
+    "a finish on faces against existing walls, internal faces, non-room-facing faces or faces outside the measurement region",
+    "a finish for a generic obstacle without owner physical authority",
+    "a wet-room treatment by analogy (not stated)",
+    "new skirting where the contact path already covers the face"
+   ]
   }
  ]
 }
