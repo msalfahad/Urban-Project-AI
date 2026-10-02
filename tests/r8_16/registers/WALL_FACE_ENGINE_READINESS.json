@@ -1,0 +1,26 @@
+{
+ "SCHEMA": "URBAN_R8_16_WALL_FACE_ENGINE_READINESS_V1",
+ "ready_to_publish": false,
+ "assessment": "DESIGN READY, NOT IMPLEMENTED: no plaster / paint / wall-tile quantity this round",
+ "has": [
+  "per-room wall face path (V3 edges, classified)",
+  "door / passage strip sites with jamb and head reveal surfaces",
+  "owner heights: 3.20 m wet / service tile (Qortuba new revision only), QP-21 door 2.20 m, QP-12 glazed opening 2.20 m, QP-22 window 1.50 m",
+  "PAINTRY = QP-07 service room",
+  "Hall passage soffit / M.B full-height facts"
+ ],
+ "missing": [
+  "face sets per room side with height (ceiling height per room)",
+  "US-06 opening deductions per opening with its own height authority",
+  "reveal adds (source depth first, US-07 fallback)",
+  "a frozen, blind-tested WALL_FACE_SURFACE policy",
+  "the HALL / PAINTRY glazed opening sill"
+ ],
+ "preserved": {
+  "wet_service_tile_m": 3.2,
+  "scope": "Qortuba new revision wet / service rooms only",
+  "paintry": "QP-07",
+  "hall_plaster": "Hall / Lobby passage WITH_HEAD soffit facts"
+ },
+ "next": "R8.17 (design -> synthetic -> freeze -> blind)"
+}

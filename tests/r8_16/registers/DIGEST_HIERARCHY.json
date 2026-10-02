@@ -1,0 +1,267 @@
+{
+ "SCHEMA": "URBAN_R8_16_DIGEST_HIERARCHY_V1",
+ "layers": [
+  "TOPOLOGY_RUN_INPUT_DIGEST",
+  "ROW_AUTHORITY_DIGEST",
+  "RELEASE_INPUT_DIGEST"
+ ],
+ "rows": {
+  "Q-03": {
+   "TOPOLOGY_RUN_INPUT_DIGEST": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+   "ROW_AUTHORITY_DIGEST": {
+    "layer": "ROW_AUTHORITY_DIGEST",
+    "topology": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+    "row": "Q-03",
+    "method": "TS01 (WALL_BAND_POLICY_V5) + trade layer + STRIP_ALLOCATION_AUDIT_V2 + DOOR_TRANSITION_POLICY_V1 + MARBLE_THRESHOLD_POLICY_V1 + OBSTACLE_AUTHORITY_POLICY_V1 + OPENING_REVEAL_POLICY_V2 (lab rows)",
+    "trade_rules": [
+     "QORTUBA-FLOOR-TREATMENT@v3"
+    ],
+    "semantic_class_rules": [
+     "QORTUBA-SPACE-CLASS@v2"
+    ],
+    "footprint_policies": [],
+    "row_claims": [
+     "QORTUBA-NEW-DIM-LINES-7116-7119-ARE-WALLS-OWNER-001@v1"
+    ],
+    "owner_facts_applied": [
+     "URBAN-WET-SERVICE-MARBLE-THRESHOLD@v1"
+    ],
+    "digest": "4ba5280563aad8912d64953fab427f958fa6bd12753b8ff00ff943347d26235d"
+   },
+   "RELEASE_INPUT_DIGEST": {
+    "layer": "RELEASE_INPUT_DIGEST",
+    "row": "4ba5280563aad8912d64953fab427f958fa6bd12753b8ff00ff943347d26235d",
+    "source_anchor_state": "DWG_DXF_IDENTITY_NOT_ESTABLISHED",
+    "reviews": [],
+    "release_policy": "SHADOW_ONLY_NO_RELEASE_GATE",
+    "release_blockers": [
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed",
+     "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED"
+    ],
+    "owner_facts_applied": [],
+    "digest": "e5fb8dac747638a9201c881b71865cb2b8c40f202600bcc99a9f3711dc8233b7"
+   }
+  },
+  "Q-03P": {
+   "TOPOLOGY_RUN_INPUT_DIGEST": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+   "ROW_AUTHORITY_DIGEST": {
+    "layer": "ROW_AUTHORITY_DIGEST",
+    "topology": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+    "row": "Q-03P",
+    "method": "TS01 (WALL_BAND_POLICY_V5) + trade layer + STRIP_ALLOCATION_AUDIT_V2 + DOOR_TRANSITION_POLICY_V1 + MARBLE_THRESHOLD_POLICY_V1 + OBSTACLE_AUTHORITY_POLICY_V1 + OPENING_REVEAL_POLICY_V2 (lab rows)",
+    "trade_rules": [
+     "QORTUBA-FLOOR-TREATMENT@v3"
+    ],
+    "semantic_class_rules": [
+     "QORTUBA-SPACE-CLASS@v2"
+    ],
+    "footprint_policies": [],
+    "row_claims": [],
+    "owner_facts_applied": [],
+    "digest": "12cbb5ec8e1657ad174b5767863237f6bb9e6e0a2b2545037b53c588efc42fdc"
+   },
+   "RELEASE_INPUT_DIGEST": {
+    "layer": "RELEASE_INPUT_DIGEST",
+    "row": "12cbb5ec8e1657ad174b5767863237f6bb9e6e0a2b2545037b53c588efc42fdc",
+    "source_anchor_state": "DWG_DXF_IDENTITY_NOT_ESTABLISHED",
+    "reviews": [],
+    "release_policy": "SHADOW_ONLY_NO_RELEASE_GATE",
+    "release_blockers": [
+     "OBJECT_FOOTPRINT_IMPLICIT: proven furniture / fixture footprints are inside the measured floor by the topology convention, not by a FLOOR_FINISH footprint authority",
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed",
+     "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED"
+    ],
+    "owner_facts_applied": [],
+    "digest": "c009e63cdc0789ed80ad63d9e470f7a1f70fce9f49a6f880580d2e18d6823b93"
+   }
+  },
+  "Q-11": {
+   "TOPOLOGY_RUN_INPUT_DIGEST": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+   "ROW_AUTHORITY_DIGEST": {
+    "layer": "ROW_AUTHORITY_DIGEST",
+    "topology": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+    "row": "Q-11",
+    "method": "TS01 (WALL_BAND_POLICY_V5) + trade layer + STRIP_ALLOCATION_AUDIT_V2 + DOOR_TRANSITION_POLICY_V1 + MARBLE_THRESHOLD_POLICY_V1 + OBSTACLE_AUTHORITY_POLICY_V1 + OPENING_REVEAL_POLICY_V2 (lab rows)",
+    "trade_rules": [
+     "QORTUBA-FLOOR-TREATMENT@v3"
+    ],
+    "semantic_class_rules": [
+     "QORTUBA-SPACE-CLASS@v2"
+    ],
+    "footprint_policies": [],
+    "row_claims": [
+     "QORTUBA-NEW-DIM-LINES-7116-7119-ARE-WALLS-OWNER-001@v1"
+    ],
+    "owner_facts_applied": [
+     "URBAN-WET-SERVICE-MARBLE-THRESHOLD@v1"
+    ],
+    "digest": "4a6e54181439fc9a2b6df0f38ab723dd1919156fee23e8901e0239ff31114bf0"
+   },
+   "RELEASE_INPUT_DIGEST": {
+    "layer": "RELEASE_INPUT_DIGEST",
+    "row": "4a6e54181439fc9a2b6df0f38ab723dd1919156fee23e8901e0239ff31114bf0",
+    "source_anchor_state": "DWG_DXF_IDENTITY_NOT_ESTABLISHED",
+    "reviews": [],
+    "release_policy": "SHADOW_ONLY_NO_RELEASE_GATE",
+    "release_blockers": [
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed",
+     "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED"
+    ],
+    "owner_facts_applied": [],
+    "digest": "084900947e954cda71897dbbe130c07df833ad7b3b1e694f70fa8fc38eba21a0"
+   }
+  },
+  "Q-12": {
+   "TOPOLOGY_RUN_INPUT_DIGEST": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+   "ROW_AUTHORITY_DIGEST": {
+    "layer": "ROW_AUTHORITY_DIGEST",
+    "topology": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+    "row": "Q-12",
+    "method": "TS01 (WALL_BAND_POLICY_V5) + trade layer + STRIP_ALLOCATION_AUDIT_V2 + DOOR_TRANSITION_POLICY_V1 + MARBLE_THRESHOLD_POLICY_V1 + OBSTACLE_AUTHORITY_POLICY_V1 + OPENING_REVEAL_POLICY_V2 (lab rows)",
+    "trade_rules": [
+     "QORTUBA-FLOOR-TREATMENT@v3"
+    ],
+    "semantic_class_rules": [
+     "QORTUBA-SPACE-CLASS@v2"
+    ],
+    "footprint_policies": [],
+    "row_claims": [],
+    "owner_facts_applied": [],
+    "digest": "36c55cb88cd6fcae629b58541083ba4f82728e1a5d3c56801de3f9bcf7ae0a4b"
+   },
+   "RELEASE_INPUT_DIGEST": {
+    "layer": "RELEASE_INPUT_DIGEST",
+    "row": "36c55cb88cd6fcae629b58541083ba4f82728e1a5d3c56801de3f9bcf7ae0a4b",
+    "source_anchor_state": "DWG_DXF_IDENTITY_NOT_ESTABLISHED",
+    "reviews": [],
+    "release_policy": "SHADOW_ONLY_NO_RELEASE_GATE",
+    "release_blockers": [
+     "OBJECT_FOOTPRINT_IMPLICIT: proven furniture / fixture footprints are inside the measured floor by the topology convention, not by a FLOOR_FINISH footprint authority",
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed",
+     "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED"
+    ],
+    "owner_facts_applied": [],
+    "digest": "36693d5b41e4d0d682a9678209bf8b464e8ce73fb8e8051f64be6b51278a8d94"
+   }
+  },
+  "Q-13": {
+   "TOPOLOGY_RUN_INPUT_DIGEST": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+   "ROW_AUTHORITY_DIGEST": {
+    "layer": "ROW_AUTHORITY_DIGEST",
+    "topology": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+    "row": "Q-13",
+    "method": "TS01 (WALL_BAND_POLICY_V5) + trade layer + STRIP_ALLOCATION_AUDIT_V2 + DOOR_TRANSITION_POLICY_V1 + MARBLE_THRESHOLD_POLICY_V1 + OBSTACLE_AUTHORITY_POLICY_V1 + OPENING_REVEAL_POLICY_V2 (lab rows)",
+    "trade_rules": [
+     "QORTUBA-FLOOR-TREATMENT@v3"
+    ],
+    "semantic_class_rules": [
+     "QORTUBA-SPACE-CLASS@v2"
+    ],
+    "footprint_policies": [
+     "QORTUBA-NEW-FLOOR-OBJECT-FOOTPRINT-OWNER-001@v1:FLOOR_FINISH:FOOTPRINT_INCLUDED"
+    ],
+    "row_claims": [
+     "QORTUBA-NEW-DIM-LINES-7116-7119-ARE-WALLS-OWNER-001@v1"
+    ],
+    "owner_facts_applied": [
+     "QORTUBA-NEW-BED-ROOM-DUCT-OWNER-001@v1",
+     "QORTUBA-NEW-DOOR-THRESHOLD-CONTINUITY-OWNER-001@v1",
+     "QORTUBA-NEW-FLOOR-OBJECT-FOOTPRINT-OWNER-001@v1",
+     "QORTUBA-NEW-MAIN-ENTRANCE-MARBLE-OWNER-001@v1",
+     "URBAN-WET-SERVICE-MARBLE-THRESHOLD@v1"
+    ],
+    "digest": "b53ed8ac248365a10b58bd862ddc180827b6b4d55db2ba55b67b4e89398a65b9"
+   },
+   "RELEASE_INPUT_DIGEST": {
+    "layer": "RELEASE_INPUT_DIGEST",
+    "row": "b53ed8ac248365a10b58bd862ddc180827b6b4d55db2ba55b67b4e89398a65b9",
+    "source_anchor_state": "DWG_DXF_IDENTITY_NOT_ESTABLISHED",
+    "reviews": [],
+    "release_policy": "SHADOW_ONLY_NO_RELEASE_GATE",
+    "release_blockers": [
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed",
+     "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED"
+    ],
+    "owner_facts_applied": [],
+    "digest": "6082330059236262a7525ad62c3c7bec4359c376374cbfbf1599680f2ece4e55"
+   }
+  },
+  "Q-14": {
+   "TOPOLOGY_RUN_INPUT_DIGEST": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+   "ROW_AUTHORITY_DIGEST": {
+    "layer": "ROW_AUTHORITY_DIGEST",
+    "topology": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+    "row": "Q-14",
+    "method": "TS01 (WALL_BAND_POLICY_V5) + trade layer + STRIP_ALLOCATION_AUDIT_V2 + DOOR_TRANSITION_POLICY_V1 + MARBLE_THRESHOLD_POLICY_V1 + OBSTACLE_AUTHORITY_POLICY_V1 + OPENING_REVEAL_POLICY_V2 (lab rows)",
+    "trade_rules": [
+     "QORTUBA-Q14-CEILING-TREATMENT@v1"
+    ],
+    "semantic_class_rules": [],
+    "footprint_policies": [
+     "QORTUBA-CEILING-OBJECT-FOOTPRINT@v1:CEILING:FOOTPRINT_INCLUDED"
+    ],
+    "row_claims": [
+     "QORTUBA-NEW-DIM-LINES-7116-7119-ARE-WALLS-OWNER-001@v1",
+     "QORTUBA-Q14-CEILING-FOOTPRINT-OWNER-001"
+    ],
+    "owner_facts_applied": [
+     "QORTUBA-NEW-BED-ROOM-DUCT-OWNER-001@v1",
+     "QORTUBA-NEW-MB-DRESS-PASSAGE-FULL-HEIGHT-OWNER-001@v1",
+     "QORTUBA-NEW-OPEN-PASSAGE-SOFFIT-NOT-CEILING-OWNER-001@v1"
+    ],
+    "digest": "d1c2f2a87820c25916f1d31732e74d7c774086b0369882a0b9dbc81b8bc0139b"
+   },
+   "RELEASE_INPUT_DIGEST": {
+    "layer": "RELEASE_INPUT_DIGEST",
+    "row": "d1c2f2a87820c25916f1d31732e74d7c774086b0369882a0b9dbc81b8bc0139b",
+    "source_anchor_state": "DWG_DXF_IDENTITY_NOT_ESTABLISHED",
+    "reviews": [
+     "TC-1013dbb787e56f65:CORROBORATED_BY_OWNER(QORTUBA-NEW-HALL-LOBBY-OPEN-PASSAGE-OWNER-001@v1)",
+     "TC-5f9f2014f83ab0d4:CORROBORATED_BY_OWNER(QORTUBA-NEW-HALL-LOBBY-OPEN-PASSAGE-OWNER-001@v1)"
+    ],
+    "release_policy": "SHADOW_ONLY_NO_RELEASE_GATE",
+    "release_blockers": [
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed",
+     "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED"
+    ],
+    "owner_facts_applied": [
+     "QORTUBA-NEW-HALL-LOBBY-OPEN-PASSAGE-OWNER-001@v1"
+    ],
+    "digest": "3152437d199c8a1c328e4bfc4bc4fdd9bf5dd5811e9cd484805b4f2973fe9547"
+   }
+  }
+ },
+ "vs_r8_15": {
+  "Q-03": {
+   "TOPOLOGY_RUN_INPUT_DIGEST": "CHANGED",
+   "ROW_AUTHORITY_DIGEST": "CHANGED",
+   "RELEASE_INPUT_DIGEST": "CHANGED"
+  },
+  "Q-03P": {
+   "TOPOLOGY_RUN_INPUT_DIGEST": "CHANGED",
+   "ROW_AUTHORITY_DIGEST": "CHANGED",
+   "RELEASE_INPUT_DIGEST": "CHANGED"
+  },
+  "Q-11": {
+   "TOPOLOGY_RUN_INPUT_DIGEST": "CHANGED",
+   "ROW_AUTHORITY_DIGEST": "CHANGED",
+   "RELEASE_INPUT_DIGEST": "CHANGED"
+  },
+  "Q-12": {
+   "TOPOLOGY_RUN_INPUT_DIGEST": "CHANGED",
+   "ROW_AUTHORITY_DIGEST": "CHANGED",
+   "RELEASE_INPUT_DIGEST": "CHANGED"
+  },
+  "Q-13": {
+   "TOPOLOGY_RUN_INPUT_DIGEST": "CHANGED",
+   "ROW_AUTHORITY_DIGEST": "CHANGED",
+   "RELEASE_INPUT_DIGEST": "CHANGED"
+  },
+  "Q-14": {
+   "TOPOLOGY_RUN_INPUT_DIGEST": "CHANGED",
+   "ROW_AUTHORITY_DIGEST": "CHANGED",
+   "RELEASE_INPUT_DIGEST": "CHANGED"
+  }
+ },
+ "reason": "the run manifest now records DOOR_OPENING_CLOSURE_POLICY_V2 (a TS01 input: the I1471 strip is a new site) - every layer above changes with it"
+}
