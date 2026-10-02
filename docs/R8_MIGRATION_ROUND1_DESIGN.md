@@ -590,3 +590,48 @@ layer only and are REJECTED_SCOPE on the old revision.
 anchor is NOT_ESTABLISHED: the pinned libredwg cannot read the AC1032 DWG.
 
 **Gates:** MIGRATION_PLANNING_READY = YES, MIGRATION_EXECUTION_READY = NO, PRODUCTION_MIGRATION = NO.
+
+## 16. R8.15 addendum — duct authority, wet / service marble thresholds, skirting freeze, Q-13 / Q-14 rebuild
+
+**Order (anti-calibration):**
+1. recommendation (`r8_15_recommendation.json`);
+2. owner facts, the Urban marble rule, engine modules and synthetic tests;
+3. skirting freeze (`R8_15_SKIRTING_FREEZE`);
+4. blind Qortuba skirting run (`BLIND_QORTUBA_SKIRTING_RESULT`, committed first);
+5. rows and registers.
+
+**Owner physical facts V2** (`engine/source/owner_facts.py`, `data/registry/OWNER_PHYSICAL_FACTS.json`): BUILT_OBSTACLE
+(the BED.ROOM duct, all eight H2060 / H2061 segments), PASSAGE_HEAD_CONDITION (M.B.ROOM / DRESS FULL_HEIGHT) and
+THRESHOLD_FINISH_CONSTRUCTION (the entrance marble). None reaches TOPOLOGY_ROLE.
+
+**Obstacle authority** (`engine/source/obstacle_authority.py`): a hole cut by an isolated closed loop is
+OWNER_PHYSICAL_OBSTACLE only when an applying BUILT_OBSTACLE fact binds every segment of the entity. Topology is
+unchanged: the V5 band stays a GEOMETRIC_BAND_CANDIDATE, and a dashed X is never a bound part.
+
+**Marble thresholds** (`engine/source/marble_thresholds.py`, `data/registry/URBAN_OWNER_METHOD_RULES.json`):
+- Authority comes from the explicit project fact first, then URBAN-WET-SERVICE-MARBLE-THRESHOLD@v1 (BATHROOM / KITCHEN /
+  WASHING_LAUNDRY_ROOM / IRONING_ROOM on a trade-scoped room-type map).
+- Geometry comes only from the threshold OPENING_SITE (width = face-closure length, depth = face separation).
+- The 20 mm is a vertical rise. Water containment is recorded intent with no waterproofing inference, and there is
+  no price.
+
+**Skirting** (`WALL_CONTACT_PATH_POLICY_V2`):
+- The physical path is kept apart from the measurement region.
+- The Qortuba method comes from the rule store: QP-09 deducts every window width; jamb returns are NO_RETURN (with a
+  counterfactual); column and owner-authorised obstacle faces are included (section E).
+- Full-wall-tile rooms have no skirting.
+
+**Reveals** (`OPENING_REVEAL_POLICY_V2`): source depth first; US-07 0.25 m is fallback-only (US-10).
+
+**Rows (SHADOW, new revision):**
+- Q-03 = Q-11 = 17.7425;
+- Q-03P = Q-12 = 11.685;
+- **Q-13 = 111.8988**;
+- **Q-14 = 140.787**;
+- SKIRTING = 84.795214 lm;
+- MARBLE_THRESHOLD = 0.51 m2 / 3.4 lm (4 thresholds).
+
+**New silent error:** door I1471 has no second face closure (its wall faces are offset at the door), so its 0.15 m2
+reveal lies inside the HALL site. It is carried as DOOR_REVEAL_INSIDE_ROOM_SITE on Q-14 and on skirting.
+
+**Gates:** MIGRATION_PLANNING_READY = YES, MIGRATION_EXECUTION_READY = NO, PRODUCTION_MIGRATION = NO.

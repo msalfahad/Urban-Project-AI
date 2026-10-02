@@ -137,5 +137,11 @@ bridges it to the legacy QS01 method. Owner decisions are scoped claims in `data
 | `r8_14_qortuba.py` | (built by `r8_14_registers.py`) | after the blind run: door-threshold allocations (door_transition), Hall / Lobby soffit out of the ceiling (opening_reveals), V4-O1 obstacle audit, skirting readiness (wall_contact_path), six-row rebuild, digests, source anchor, closure release |
 | `r8_14_registers.py` | `tests/r8_14/registers/{OWNER_ACTION_REGISTER,OWNER_METHOD_FACT_REGISTER,DOOR_THRESHOLD_REGISTER,DOOR_TRANSITION_POLICY,MARBLE_THRESHOLD_EVIDENCE,OPEN_PASSAGE_REVEAL_REGISTER,SOFFIT_ALLOCATION_POLICY,SKIRTING_METHOD_POLICY,SKIRTING_READINESS,V4_O1_REGISTER,V4_O2_REGISTER,WALL_BAND_POLICY_STATUS,SOURCE_ANCHOR_STATUS,CLOSURE_RELEASE_STATUS,Q13_STATUS,Q14_STATUS,QORTUBA_R8_14_STATUS,DIGEST_HIERARCHY,R8_14_DECISION_REGISTER}.json` | every R8.14 register (answers 1-36) |
 | `r8_14_package.py` | `data/reports/URBAN_QTO_R8_14_THRESHOLD_SOFFIT_SKIRTING_RELEASE/` + zip | review package (22 md + 20 json + 2 supporting) |
+| `r8_15_recommendation.json` | - | the R8.15 recommendation, written before any R8.15 code |
+| `r8_15_owner_facts.py` | `data/registry/OWNER_PHYSICAL_FACTS.json` + `data/registry/URBAN_OWNER_METHOD_RULES.json` | the duct / M.B.ROOM-DRESS full-height / entrance marble physical facts (part-bound) and URBAN-WET-SERVICE-MARBLE-THRESHOLD@v1 |
+| `r8_15_skirting_blind.py` | `tests/r8_15/registers/BLIND_QORTUBA_SKIRTING_RESULT.json` | the BLIND run of the frozen WALL_CONTACT_PATH_POLICY_V2 + QORTUBA-NEW-SKIRTING-METHOD@v1 |
+| `r8_15_qortuba.py` | (built by `r8_15_registers.py`) | after the blind run: duct obstacle authority, marble thresholds, passage heads, six rows, skirting row, reveals, doors without a threshold site |
+| `r8_15_registers.py` | `tests/r8_15/registers/*.json` | every R8.15 register (answers 1-34) |
+| `r8_15_package.py` | `data/reports/URBAN_QTO_R8_15_DUCT_MARBLE_SKIRTING/` + zip | review package (20 md + 19 json + 3 supporting) |
 
 `<work>` must hold `old_k2.pkl` (K2 on LibreDWG's DXF of the old DWG) and `new_k2.pkl` (K2 on the hash-addressed new DXF).
