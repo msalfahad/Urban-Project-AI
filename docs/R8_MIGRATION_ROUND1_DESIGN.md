@@ -733,3 +733,64 @@ reveal lies inside the HALL site. It is carried as DOOR_REVEAL_INSIDE_ROOM_SITE 
 - **WF-L1 / WF-L2** (blind-script wiring): wrong passage-head constants, and a door's own strip site counted as a room. Both are corrected in the rebuild and disclosed.
 
 **Gates:** MIGRATION_PLANNING_READY = YES, MIGRATION_EXECUTION_READY = NO, PRODUCTION_MIGRATION = NO.
+
+## 19. R8.18 addendum — wall-face V2, dynamic wall height, dry plaster / paint, wet tile, reveal finish, waterproofing
+
+Protocol order: recommendation (0107408) → engines, facts, rules, synthetic tests and blind script (bcac8a3) → freeze (9007834) → blind Qortuba run (583d726) → rebuild and registers. The freeze had no amendments.
+
+**WALL_HEIGHT_AUTHORITY_POLICY_V1** (`engine/source/wall_height.py`):
+- A wall-finish height is an evidence object for one scope: project, revision, floor or region, plan, space class and trade. There is no Urban constant.
+- Candidates are ranked: source finish height > section clear height > derived clear height > owner / project fact > permitted project default > BLOCKED.
+- A derivation with any unknown required component is BLOCKED and is never filled with a default.
+- Floor-to-floor (a level) alone is never a wall height.
+- Qortuba (new revision, selected plan):
+  - Only "LEVEL R.F = 4.00 m" exists in the source, so the derivation is BLOCKED.
+  - Dry PLASTER / PAINT therefore take the owner fact, 3.15 m (rank 4). The owner's 4.00 − 0.60 − 0.15 − 0.10 is stored as rationale only.
+  - Wet / service WALL_TILE stays at 3.20 m. The 3.20 / 3.15 relation is flagged as POTENTIAL_PHYSICAL_CONFLICT_NOT_PROVEN and nothing is clipped.
+
+**WALL_FACE_SURFACE_POLICY_V2** (`engine/source/wall_faces_v2.py`) fixes WF-O1 generically:
+- There is one wall-plane identity, and every opening removes exactly its own rectangle, clipped to [0, H].
+- Method A: aggregated plane span lengths × H − rectangles + head faces.
+- Method B: the sum of the generated surface records (WALL_FACE, BELOW_SILL, ABOVE_OPENING, BESIDE_OPENING, HEAD_FACE).
+- Method A and Method B read different data. Any mismatch beyond 1e-6 × (1 + n) puts the site in BLOCKED.
+- 22 synthetic tests assert state == COMPUTED. One of them (test 22) feeds a broken surface list and reproduces WF-O1 on V1.
+
+**REVEAL_FINISH_POLICY_V1** (`engine/source/reveal_finish.py`):
+- Ownership comes from the frame / leaf / track position:
+  - A hinged door's closed-leaf line lies on one face, so the full depth faces the other room.
+  - On the sliding door, H542 is flush with the HALL face and H533 sits 0.05 m from the PAINTRY face.
+- Finish states:
+  - PLASTER_DEFAULT is the default;
+  - PLASTER_AND_PAINT applies only on a painted dry owner;
+  - porcelain only with explicit authority;
+  - UNRESOLVED when ownership or the reveal face is not shown.
+
+**WATERPROOFING_POLICY_V1** (`engine/source/waterproofing.py`):
+- Floor = the wet-room site area.
+- Upturn = the gross site boundary, 0.15 m (US-04). Doorways are not deducted (US-05).
+- Independent of skirting, wall tile and marble.
+
+**Rows** (SHADOW, all from the rebuild):
+
+| Row | Value | Note |
+|---|---|---|
+| DRY_WALL_PLASTER | 280.744014 m² | authorised |
+| PAINT | 280.744014 m² | authorised |
+| WALL_TILE | 112.813512 m² | authorised |
+| WET_WALL_TILE_PREP | 112.813512 m² | authorised |
+| WET_SERVICE_REVEAL_PLASTER | 1.400248 m² | — |
+| WATERPROOFING_FLOOR_M2 | 29.4275 | — |
+| WATERPROOFING_UPTURN_LM | 44.2 | — |
+
+- COMPLETE is null for plaster, paint and tile: column faces and the duct have no finish authority, and they are listed with their areas.
+- The six area rows, SKIRTING = HIDDEN_PROFILE = 94.13682 lm and MARBLE are unchanged. Topology digests are the same as R8.17.
+
+**Disclosed:**
+- **WF2-L1** (blind-script wiring): a FIXTURE line closed the PAINTRY-side south sliding jamb. The rebuild reads wall parts only, so that one reveal is now UNRESOLVED. Authorised subtotals are unchanged.
+- **R8.17 R-13 misreading:** R-13 is the blockwork sheet's column, not a column-finish rule.
+- **Waterproofing label:** the PAINTRY openings carry the label FLOOR_CONTACT_UNPROVEN. It is a label only; the length is counted.
+- **Pre-freeze grep:** it surfaced historical old-revision waterproofing figures. They were not used as targets, and no parameter could be tuned to them.
+
+**Second-project regression:** NOT_RUN. **Source anchor:** NOT_ESTABLISHED.
+
+**Gates:** MIGRATION_PLANNING_READY = YES, MIGRATION_EXECUTION_READY = NO, PRODUCTION_MIGRATION = NO.

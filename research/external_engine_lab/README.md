@@ -155,5 +155,11 @@ bridges it to the legacy QS01 method. Owner decisions are scoped claims in `data
 | `r8_17_qortuba.py` | (built by `r8_17_registers.py`) | after the blind runs: the R8.16 assembly, the V4 skirting row (must equal the blind record), the wall-face rebuild (WF-L1 / WF-L2 wiring corrected, disclosed), WF-O1 check |
 | `r8_17_registers.py` | `tests/r8_17/registers/*.json` | every R8.17 register (answers 1-42) |
 | `r8_17_package.py` | `data/reports/URBAN_QTO_R8_17_SKIRTING_V4_WALL_FACES/` + zip | review package (24 md + 23 json + 3 supporting) |
+| `r8_18_recommendation.json` | - | the R8.18 recommendation, written before any R8.18 code |
+| `r8_18_owner_facts.py` | `data/registry/OWNER_METHOD_FACTS.json` + `data/registry/URBAN_OWNER_METHOD_RULES.json` | the Qortuba dry plaster / paint 3.15 m fact, URBAN-WALL-FINISH-HEIGHT-METHOD and URBAN-REVEAL-FINISH-METHOD |
+| `r8_18_blind.py` | `tests/r8_18/registers/WALL_FACE_V2_BLIND_RESULT.json` | the BLIND run of the frozen wall-face V2 / wall-height / reveal-finish / waterproofing policies + QORTUBA-NEW-WALL-FACE-METHOD@v2 |
+| `r8_18_qortuba.py` | (built by `r8_18_registers.py`) | after the blind run: the R8.17 assembly, the frozen run recomputed (must equal the blind record), the rebuild with the disclosed WF2-L1 correction |
+| `r8_18_registers.py` | `tests/r8_18/registers/*.json` | every R8.18 register (answers 1-43) |
+| `r8_18_package.py` | `data/reports/URBAN_QTO_R8_18_WALL_FACE_V2_FINISHES_WATERPROOFING/` + zip | review package (25 md + 28 json) |
 
 `<work>` must hold `old_k2.pkl` (K2 on LibreDWG's DXF of the old DWG) and `new_k2.pkl` (K2 on the hash-addressed new DXF).
