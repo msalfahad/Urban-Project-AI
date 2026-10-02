@@ -1,0 +1,6155 @@
+{
+ "SCHEMA": "URBAN_R8_17_WALL_FACE_BLIND_RESULT_V1",
+ "freeze": "e0d2781be307071ccc85cad2578529d920446beb",
+ "wall_face_policy": {
+  "id": "WALL_FACE_SURFACE_POLICY_V1",
+  "digest": "a2ba3bfb96cdab5f0d45b1d024a63bfff2bce325a274e9a5df9f5cecba570258"
+ },
+ "method": "QORTUBA-NEW-WALL-FACE-METHOD@v1",
+ "blind": {
+  "expected_value_given": false,
+  "historical_quantities_used": false
+ },
+ "run_input_digest": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+ "per_site": {
+  "SITE-5f1762f1a93b91ca": {
+   "zones": [
+    "BED.ROOM"
+   ],
+   "class": "DRY_INTERNAL_ROOM",
+   "trades": {
+    "PAINT": {
+     "state": "APPLIES",
+     "height_m": null,
+     "authority": null,
+     "blocker": "NOT ESTABLISHED for the selected NEW revision: QP-03 / QP-04 (3.00 m) were set on the OLD revision and were never re-stated; the owner moved the new-revision wet / service tile height to 3.20 m"
+    },
+    "PLASTER": {
+     "state": "APPLIES",
+     "height_m": null,
+     "authority": null,
+     "blocker": "NOT ESTABLISHED for the selected NEW revision: QP-03 / QP-04 (3.00 m) were set on the OLD revision and were never re-stated; the owner moved the new-revision wet / service tile height to 3.20 m"
+    }
+   },
+   "passages_in_site": [],
+   "faces": {
+    "PAINT": {
+     "policy": "WALL_FACE_SURFACE_POLICY_V1",
+     "height_m": null,
+     "height_authority": null,
+     "lengths_m": {
+      "COLUMN_FACE": 0.8,
+      "OBSTACLE_FACE": 5.0,
+      "OPENING_SPAN": 2.205359,
+      "WALL_FACE": 15.894641
+     },
+     "spans": [
+      {
+       "class": "OPENING",
+       "kind": "WINDOW",
+       "length_m": 1.205359,
+       "sources": [
+        "QORTUBA_REV_NEW|H1319||SEGMENT|0",
+        "QORTUBA_REV_NEW|H448||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         110083.5168,
+         14494.7196
+        ],
+        [
+         110204.0526,
+         14494.7196
+        ]
+       ]
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.140291,
+       "sources": [
+        "QORTUBA_REV_NEW|H448||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         110204.0526,
+         14494.7196
+        ],
+        [
+         110218.0817,
+         14494.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.15,
+       "sources": [
+        "QORTUBA_REV_NEW|H549||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         110218.0817,
+         14494.7196
+        ],
+        [
+         110218.0817,
+         14509.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "COLUMN_FACE",
+       "length_m": 0.2,
+       "sources": [
+        "QORTUBA_REV_NEW|H549||SEGMENT|0",
+        "QORTUBA_REV_NEW|H699||SEGMENT|3"
+       ],
+       "geom": [
+        [
+         110218.0817,
+         14509.7196
+        ],
+        [
+         110218.0817,
+         14529.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 5.0,
+       "sources": [
+        "QORTUBA_REV_NEW|H549||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         110218.0817,
+         14529.7196
+        ],
+        [
+         110218.0817,
+         15029.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 2.75,
+       "sources": [
+        "QORTUBA_REV_NEW|H2296||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109943.0817,
+         15029.7196
+        ],
+        [
+         110218.0817,
+         15029.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 1.35,
+       "sources": [
+        "QORTUBA_REV_NEW|H7119||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109943.0817,
+         14894.7196
+        ],
+        [
+         109943.0817,
+         15029.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.25,
+       "sources": [
+        "QORTUBA_REV_NEW|H486||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109918.0817,
+         14894.7196
+        ],
+        [
+         109943.0817,
+         14894.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "OPENING",
+       "kind": "DOOR",
+       "length_m": 1.0,
+       "sources": [
+        "CLOSURE|I841|A"
+       ],
+       "geom": [
+        [
+         109818.0817,
+         14894.7196
+        ],
+        [
+         109918.0817,
+         14894.7196
+        ]
+       ]
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.1,
+       "sources": [
+        "QORTUBA_REV_NEW|H485||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109808.0817,
+         14894.7196
+        ],
+        [
+         109818.0817,
+         14894.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 2.75,
+       "sources": [
+        "QORTUBA_REV_NEW|H552||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109808.0817,
+         14619.7196
+        ],
+        [
+         109808.0817,
+         14894.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "COLUMN_FACE",
+       "length_m": 0.6,
+       "sources": [
+        "QORTUBA_REV_NEW|H552||SEGMENT|0",
+        "QORTUBA_REV_NEW|H708||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109808.0817,
+         14559.7196
+        ],
+        [
+         109808.0817,
+         14619.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.65,
+       "sources": [
+        "QORTUBA_REV_NEW|H552||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109808.0817,
+         14494.7196
+        ],
+        [
+         109808.0817,
+         14559.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 2.75435,
+       "sources": [
+        "QORTUBA_REV_NEW|H448||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109808.0817,
+         14494.7196
+        ],
+        [
+         110083.5168,
+         14494.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "OBSTACLE_FACE",
+       "length_m": 0.4,
+       "sources": [
+        "QORTUBA_REV_NEW|H2060||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109828.1728,
+         14549.7196
+        ],
+        [
+         109828.1728,
+         14589.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "OBSTACLE_FACE",
+       "length_m": 2.1,
+       "sources": [
+        "QORTUBA_REV_NEW|H2060||SEGMENT|1"
+       ],
+       "geom": [
+        [
+         109828.1728,
+         14589.7196
+        ],
+        [
+         110038.1728,
+         14589.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "OBSTACLE_FACE",
+       "length_m": 0.4,
+       "sources": [
+        "QORTUBA_REV_NEW|H2060||SEGMENT|2"
+       ],
+       "geom": [
+        [
+         110038.1728,
+         14589.7196
+        ],
+        [
+         110038.1728,
+         14549.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "OBSTACLE_FACE",
+       "length_m": 2.1,
+       "sources": [
+        "QORTUBA_REV_NEW|H2060||SEGMENT|3"
+       ],
+       "geom": [
+        [
+         110038.1728,
+         14549.7196
+        ],
+        [
+         109828.1728,
+         14549.7196
+        ]
+       ],
+       "area_m2": null
+      }
+     ],
+     "openings": [
+      {
+       "opening": "QORTUBA_REV_NEW|H1319||SEGMENT",
+       "kind": "WINDOW",
+       "width_m": 1.205359,
+       "height_m": 1.5,
+       "height_authority": "QP-22 owner: 1.500 m for every Qortuba window whose height the drawing does not state",
+       "sill_m": 1.0,
+       "sill_authority": "QORTUBA-NEW-NORMAL-WINDOWS-ABOVE-FLOOR-OWNER-001@v2",
+       "sources": [
+        "QORTUBA_REV_NEW|H1319||SEGMENT|0",
+        "QORTUBA_REV_NEW|H448||SEGMENT|0"
+       ]
+      },
+      {
+       "opening": "I841",
+       "kind": "DOOR",
+       "width_m": 1.0,
+       "height_m": 2.2,
+       "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+       "sill_m": 0.0,
+       "sill_authority": "reaches the floor",
+       "sources": [
+        "CLOSURE|I841|A"
+       ]
+      }
+     ],
+     "head_faces": [],
+     "conservation": {
+      "boundary_m": 23.9,
+      "consumed_by_physical_jambs_m": 0.0,
+      "classified_m": 23.9,
+      "residual_m": 0.0,
+      "reconciles": true
+     },
+     "blockers": [
+      "TRADE_HEIGHT_NOT_ESTABLISHED"
+     ],
+     "state": "BLOCKED"
+    },
+    "PLASTER": {
+     "policy": "WALL_FACE_SURFACE_POLICY_V1",
+     "height_m": null,
+     "height_authority": null,
+     "lengths_m": {
+      "COLUMN_FACE": 0.8,
+      "OBSTACLE_FACE": 5.0,
+      "OPENING_SPAN": 2.205359,
+      "WALL_FACE": 15.894641
+     },
+     "spans": [
+      {
+       "class": "OPENING",
+       "kind": "WINDOW",
+       "length_m": 1.205359,
+       "sources": [
+        "QORTUBA_REV_NEW|H1319||SEGMENT|0",
+        "QORTUBA_REV_NEW|H448||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         110083.5168,
+         14494.7196
+        ],
+        [
+         110204.0526,
+         14494.7196
+        ]
+       ]
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.140291,
+       "sources": [
+        "QORTUBA_REV_NEW|H448||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         110204.0526,
+         14494.7196
+        ],
+        [
+         110218.0817,
+         14494.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.15,
+       "sources": [
+        "QORTUBA_REV_NEW|H549||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         110218.0817,
+         14494.7196
+        ],
+        [
+         110218.0817,
+         14509.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "COLUMN_FACE",
+       "length_m": 0.2,
+       "sources": [
+        "QORTUBA_REV_NEW|H549||SEGMENT|0",
+        "QORTUBA_REV_NEW|H699||SEGMENT|3"
+       ],
+       "geom": [
+        [
+         110218.0817,
+         14509.7196
+        ],
+        [
+         110218.0817,
+         14529.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 5.0,
+       "sources": [
+        "QORTUBA_REV_NEW|H549||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         110218.0817,
+         14529.7196
+        ],
+        [
+         110218.0817,
+         15029.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 2.75,
+       "sources": [
+        "QORTUBA_REV_NEW|H2296||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109943.0817,
+         15029.7196
+        ],
+        [
+         110218.0817,
+         15029.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 1.35,
+       "sources": [
+        "QORTUBA_REV_NEW|H7119||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109943.0817,
+         14894.7196
+        ],
+        [
+         109943.0817,
+         15029.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.25,
+       "sources": [
+        "QORTUBA_REV_NEW|H486||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109918.0817,
+         14894.7196
+        ],
+        [
+         109943.0817,
+         14894.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "OPENING",
+       "kind": "DOOR",
+       "length_m": 1.0,
+       "sources": [
+        "CLOSURE|I841|A"
+       ],
+       "geom": [
+        [
+         109818.0817,
+         14894.7196
+        ],
+        [
+         109918.0817,
+         14894.7196
+        ]
+       ]
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.1,
+       "sources": [
+        "QORTUBA_REV_NEW|H485||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109808.0817,
+         14894.7196
+        ],
+        [
+         109818.0817,
+         14894.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 2.75,
+       "sources": [
+        "QORTUBA_REV_NEW|H552||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109808.0817,
+         14619.7196
+        ],
+        [
+         109808.0817,
+         14894.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "COLUMN_FACE",
+       "length_m": 0.6,
+       "sources": [
+        "QORTUBA_REV_NEW|H552||SEGMENT|0",
+        "QORTUBA_REV_NEW|H708||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109808.0817,
+         14559.7196
+        ],
+        [
+         109808.0817,
+         14619.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.65,
+       "sources": [
+        "QORTUBA_REV_NEW|H552||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109808.0817,
+         14494.7196
+        ],
+        [
+         109808.0817,
+         14559.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 2.75435,
+       "sources": [
+        "QORTUBA_REV_NEW|H448||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109808.0817,
+         14494.7196
+        ],
+        [
+         110083.5168,
+         14494.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "OBSTACLE_FACE",
+       "length_m": 0.4,
+       "sources": [
+        "QORTUBA_REV_NEW|H2060||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109828.1728,
+         14549.7196
+        ],
+        [
+         109828.1728,
+         14589.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "OBSTACLE_FACE",
+       "length_m": 2.1,
+       "sources": [
+        "QORTUBA_REV_NEW|H2060||SEGMENT|1"
+       ],
+       "geom": [
+        [
+         109828.1728,
+         14589.7196
+        ],
+        [
+         110038.1728,
+         14589.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "OBSTACLE_FACE",
+       "length_m": 0.4,
+       "sources": [
+        "QORTUBA_REV_NEW|H2060||SEGMENT|2"
+       ],
+       "geom": [
+        [
+         110038.1728,
+         14589.7196
+        ],
+        [
+         110038.1728,
+         14549.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "OBSTACLE_FACE",
+       "length_m": 2.1,
+       "sources": [
+        "QORTUBA_REV_NEW|H2060||SEGMENT|3"
+       ],
+       "geom": [
+        [
+         110038.1728,
+         14549.7196
+        ],
+        [
+         109828.1728,
+         14549.7196
+        ]
+       ],
+       "area_m2": null
+      }
+     ],
+     "openings": [
+      {
+       "opening": "QORTUBA_REV_NEW|H1319||SEGMENT",
+       "kind": "WINDOW",
+       "width_m": 1.205359,
+       "height_m": 1.5,
+       "height_authority": "QP-22 owner: 1.500 m for every Qortuba window whose height the drawing does not state",
+       "sill_m": 1.0,
+       "sill_authority": "QORTUBA-NEW-NORMAL-WINDOWS-ABOVE-FLOOR-OWNER-001@v2",
+       "sources": [
+        "QORTUBA_REV_NEW|H1319||SEGMENT|0",
+        "QORTUBA_REV_NEW|H448||SEGMENT|0"
+       ]
+      },
+      {
+       "opening": "I841",
+       "kind": "DOOR",
+       "width_m": 1.0,
+       "height_m": 2.2,
+       "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+       "sill_m": 0.0,
+       "sill_authority": "reaches the floor",
+       "sources": [
+        "CLOSURE|I841|A"
+       ]
+      }
+     ],
+     "head_faces": [],
+     "conservation": {
+      "boundary_m": 23.9,
+      "consumed_by_physical_jambs_m": 0.0,
+      "classified_m": 23.9,
+      "residual_m": 0.0,
+      "reconciles": true
+     },
+     "blockers": [
+      "TRADE_HEIGHT_NOT_ESTABLISHED"
+     ],
+     "state": "BLOCKED"
+    }
+   },
+   "counterfactual": {
+    "PAINT": {
+     "height": {
+      "height_m": 3.0,
+      "authority": "COUNTERFACTUAL ONLY: QP-04 (OLD revision) - never published"
+     },
+     "state": "BLOCKED",
+     "areas_m2": {
+      "wall_plane_gross": 54.3,
+      "opening_deductions": 4.008038,
+      "lintels": 0.8,
+      "passage_head_faces": 0.0,
+      "WALL_FACE_NET": 50.291962,
+      "COLUMN_FACE": 2.4,
+      "OBSTACLE_FACE": 15.0,
+      "check_two_ways": false
+     },
+     "blockers": [
+      "AREA_RECONCILIATION_FAILED"
+     ],
+     "NOT_PUBLISHED": true
+    },
+    "PLASTER": {
+     "height": {
+      "height_m": 3.0,
+      "authority": "COUNTERFACTUAL ONLY: QP-03 (OLD revision) - never published"
+     },
+     "state": "BLOCKED",
+     "areas_m2": {
+      "wall_plane_gross": 54.3,
+      "opening_deductions": 4.008038,
+      "lintels": 0.8,
+      "passage_head_faces": 0.0,
+      "WALL_FACE_NET": 50.291962,
+      "COLUMN_FACE": 2.4,
+      "OBSTACLE_FACE": 15.0,
+      "check_two_ways": false
+     },
+     "blockers": [
+      "AREA_RECONCILIATION_FAILED"
+     ],
+     "NOT_PUBLISHED": true
+    }
+   }
+  },
+  "SITE-77a2130eb275604c": {
+   "zones": [
+    "HALL",
+    "whgm"
+   ],
+   "class": "DRY_INTERNAL_ROOM",
+   "trades": {
+    "PAINT": {
+     "state": "APPLIES",
+     "height_m": null,
+     "authority": null,
+     "blocker": "NOT ESTABLISHED for the selected NEW revision: QP-03 / QP-04 (3.00 m) were set on the OLD revision and were never re-stated; the owner moved the new-revision wet / service tile height to 3.20 m"
+    },
+    "PLASTER": {
+     "state": "APPLIES",
+     "height_m": null,
+     "authority": null,
+     "blocker": "NOT ESTABLISHED for the selected NEW revision: QP-03 / QP-04 (3.00 m) were set on the OLD revision and were never re-stated; the owner moved the new-revision wet / service tile height to 3.20 m"
+    }
+   },
+   "passages_in_site": [
+    {
+     "passage_id": "OP-997f14d12b8e9bc1",
+     "width_m": 1.196447,
+     "head": null,
+     "head_height_m": null,
+     "head_authority": "QORTUBA-NEW-OPEN-PASSAGE-SOFFIT-NOT-CEILING-OWNER-001@v1"
+    }
+   ],
+   "faces": {
+    "PAINT": {
+     "policy": "WALL_FACE_SURFACE_POLICY_V1",
+     "height_m": null,
+     "height_authority": null,
+     "lengths_m": {
+      "COLUMN_FACE": 0.65,
+      "OPENING_SPAN": 10.696444,
+      "WALL_FACE": 22.760661
+     },
+     "spans": [
+      {
+       "class": "OPENING",
+       "kind": "DOOR",
+       "length_m": 1.0,
+       "sources": [
+        "CLOSURE|I677|A"
+       ],
+       "geom": [
+        [
+         110358.0817,
+         15114.7196
+        ],
+        [
+         110258.0817,
+         15114.7196
+        ]
+       ]
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.05,
+       "sources": [
+        "QORTUBA_REV_NEW|H578||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         110363.0817,
+         15114.7196
+        ],
+        [
+         110358.0817,
+         15114.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 2.1,
+       "sources": [
+        "QORTUBA_REV_NEW|H510||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         110363.0817,
+         15114.7196
+        ],
+        [
+         110363.0817,
+         15324.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "OPENING",
+       "kind": "WINDOW",
+       "length_m": 2.346444,
+       "sources": [
+        "QORTUBA_REV_NEW|H1518||SEGMENT|0",
+        "QORTUBA_REV_NEW|H510||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         110363.0817,
+         15324.7196
+        ],
+        [
+         110363.0817,
+         15559.3641
+        ]
+       ]
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.153556,
+       "sources": [
+        "QORTUBA_REV_NEW|H510||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         110363.0817,
+         15559.3641
+        ],
+        [
+         110363.0817,
+         15574.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 5.85,
+       "sources": [
+        "QORTUBA_REV_NEW|H523||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         110363.0817,
+         15574.7196
+        ],
+        [
+         109778.0817,
+         15574.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "OPENING",
+       "kind": "DOOR",
+       "length_m": 1.0,
+       "sources": [
+        "CLOSURE|I1471|B"
+       ],
+       "geom": [
+        [
+         109678.0817,
+         15574.7196
+        ],
+        [
+         109778.0817,
+         15574.7196
+        ]
+       ]
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.95,
+       "sources": [
+        "QORTUBA_REV_NEW|H525||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109678.0817,
+         15574.7196
+        ],
+        [
+         109583.0817,
+         15574.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "COLUMN_FACE",
+       "length_m": 0.4,
+       "sources": [
+        "QORTUBA_REV_NEW|H525||SEGMENT|0",
+        "QORTUBA_REV_NEW|H716||SEGMENT|2"
+       ],
+       "geom": [
+        [
+         109583.0817,
+         15574.7196
+        ],
+        [
+         109543.0817,
+         15574.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "COLUMN_FACE",
+       "length_m": 0.05,
+       "sources": [
+        "QORTUBA_REV_NEW|H716||SEGMENT|2"
+       ],
+       "geom": [
+        [
+         109543.0817,
+         15574.7196
+        ],
+        [
+         109538.0817,
+         15574.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.1,
+       "sources": [
+        "QORTUBA_REV_NEW|H538||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109538.0817,
+         15574.7196
+        ],
+        [
+         109538.0817,
+         15564.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "OPENING",
+       "kind": "DOOR",
+       "length_m": 0.8,
+       "sources": [
+        "CLOSURE|I1561|B"
+       ],
+       "geom": [
+        [
+         109538.0817,
+         15484.7196
+        ],
+        [
+         109538.0817,
+         15564.7196
+        ]
+       ]
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.1,
+       "sources": [
+        "QORTUBA_REV_NEW|H530||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109538.0817,
+         15484.7196
+        ],
+        [
+         109538.0817,
+         15474.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.7,
+       "sources": [
+        "QORTUBA_REV_NEW|H484||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109538.0817,
+         15474.7196
+        ],
+        [
+         109608.0817,
+         15474.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.9,
+       "sources": [
+        "QORTUBA_REV_NEW|H539||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109608.0817,
+         15474.7196
+        ],
+        [
+         109608.0817,
+         15384.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "OPENING",
+       "kind": "SLIDING_GLAZED_DOOR",
+       "length_m": 2.75,
+       "sources": [
+        "CLOSURE|GLAZED|QORTUBA_REV_NEW|H533||SEGMENT|0|F2",
+        "CLOSURE|GLAZED|QORTUBA_REV_NEW|H542||SEGMENT|0|F1",
+        "QORTUBA_REV_NEW|H542||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109608.0817,
+         15384.7196
+        ],
+        [
+         109608.0817,
+         15109.7196
+        ]
+       ]
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.6,
+       "sources": [
+        "QORTUBA_REV_NEW|H543||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109608.0817,
+         15109.7196
+        ],
+        [
+         109608.0817,
+         15049.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 1.656744,
+       "sources": [
+        "QORTUBA_REV_NEW|H477||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109608.0817,
+         15049.7196
+        ],
+        [
+         109773.7561,
+         15049.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 1.506744,
+       "sources": [
+        "QORTUBA_REV_NEW|H471||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109623.0817,
+         15029.7196
+        ],
+        [
+         109773.7561,
+         15029.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.8,
+       "sources": [
+        "QORTUBA_REV_NEW|H7116||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109623.0817,
+         14949.7196
+        ],
+        [
+         109623.0817,
+         15029.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "OPENING",
+       "kind": "DOOR",
+       "length_m": 0.8,
+       "sources": [
+        "CLOSURE|I2044|B"
+       ],
+       "geom": [
+        [
+         109623.0817,
+         14869.7196
+        ],
+        [
+         109623.0817,
+         14949.7196
+        ]
+       ]
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.1,
+       "sources": [
+        "QORTUBA_REV_NEW|H468||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109623.0817,
+         14869.7196
+        ],
+        [
+         109623.0817,
+         14859.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.6,
+       "sources": [
+        "QORTUBA_REV_NEW|H473||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109623.0817,
+         14859.7196
+        ],
+        [
+         109683.0817,
+         14859.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "OPENING",
+       "kind": "DOOR",
+       "length_m": 1.0,
+       "sources": [
+        "CLOSURE|I1988|B"
+       ],
+       "geom": [
+        [
+         109783.0817,
+         14859.7196
+        ],
+        [
+         109683.0817,
+         14859.7196
+        ]
+       ]
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.1,
+       "sources": [
+        "QORTUBA_REV_NEW|H474||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109783.0817,
+         14859.7196
+        ],
+        [
+         109793.0817,
+         14859.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.5,
+       "sources": [
+        "QORTUBA_REV_NEW|H555||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109793.0817,
+         14859.7196
+        ],
+        [
+         109793.0817,
+         14909.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.25,
+       "sources": [
+        "QORTUBA_REV_NEW|H487||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109793.0817,
+         14909.7196
+        ],
+        [
+         109818.0817,
+         14909.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "OPENING",
+       "kind": "DOOR",
+       "length_m": 1.0,
+       "sources": [
+        "CLOSURE|I841|B"
+       ],
+       "geom": [
+        [
+         109818.0817,
+         14909.7196
+        ],
+        [
+         109918.0817,
+         14909.7196
+        ]
+       ]
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.1,
+       "sources": [
+        "QORTUBA_REV_NEW|H488||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109918.0817,
+         14909.7196
+        ],
+        [
+         109928.0817,
+         14909.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 1.2,
+       "sources": [
+        "QORTUBA_REV_NEW|H7118||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109928.0817,
+         14909.7196
+        ],
+        [
+         109928.0817,
+         15029.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.346809,
+       "sources": [
+        "QORTUBA_REV_NEW|H2296||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109893.4009,
+         15029.7196
+        ],
+        [
+         109928.0817,
+         15029.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.946809,
+       "sources": [
+        "QORTUBA_REV_NEW|H2297||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109893.4009,
+         15049.7196
+        ],
+        [
+         109988.0817,
+         15049.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.65,
+       "sources": [
+        "QORTUBA_REV_NEW|H551||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109988.0817,
+         15049.7196
+        ],
+        [
+         109988.0817,
+         15114.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 1.9,
+       "sources": [
+        "QORTUBA_REV_NEW|H1547||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         110178.0817,
+         15114.7196
+        ],
+        [
+         109988.0817,
+         15114.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.4,
+       "sources": [
+        "QORTUBA_REV_NEW|H1947||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         110178.0817,
+         15114.7196
+        ],
+        [
+         110218.0817,
+         15114.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "COLUMN_FACE",
+       "length_m": 0.2,
+       "sources": [
+        "QORTUBA_REV_NEW|H1271||SEGMENT|0",
+        "QORTUBA_REV_NEW|H704||SEGMENT|3"
+       ],
+       "geom": [
+        [
+         110238.0817,
+         15114.7196
+        ],
+        [
+         110218.0817,
+         15114.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.2,
+       "sources": [
+        "QORTUBA_REV_NEW|H1271||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         110258.0817,
+         15114.7196
+        ],
+        [
+         110238.0817,
+         15114.7196
+        ]
+       ],
+       "area_m2": null
+      }
+     ],
+     "openings": [
+      {
+       "opening": "I677",
+       "kind": "DOOR",
+       "width_m": 1.0,
+       "height_m": 2.2,
+       "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+       "sill_m": 0.0,
+       "sill_authority": "reaches the floor",
+       "sources": [
+        "CLOSURE|I677|A"
+       ]
+      },
+      {
+       "opening": "QORTUBA_REV_NEW|H1518||SEGMENT",
+       "kind": "WINDOW",
+       "width_m": 2.346444,
+       "height_m": 1.5,
+       "height_authority": "QP-22 owner: 1.500 m for every Qortuba window whose height the drawing does not state",
+       "sill_m": 1.0,
+       "sill_authority": "QORTUBA-NEW-NORMAL-WINDOWS-ABOVE-FLOOR-OWNER-001@v2",
+       "sources": [
+        "QORTUBA_REV_NEW|H1518||SEGMENT|0",
+        "QORTUBA_REV_NEW|H510||SEGMENT|0"
+       ]
+      },
+      {
+       "opening": "I1471",
+       "kind": "DOOR",
+       "width_m": 1.0,
+       "height_m": 2.2,
+       "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+       "sill_m": 0.0,
+       "sill_authority": "reaches the floor",
+       "sources": [
+        "CLOSURE|I1471|B"
+       ]
+      },
+      {
+       "opening": "I1561",
+       "kind": "DOOR",
+       "width_m": 0.8,
+       "height_m": 2.2,
+       "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+       "sill_m": 0.0,
+       "sill_authority": "reaches the floor",
+       "sources": [
+        "CLOSURE|I1561|B"
+       ]
+      },
+      {
+       "opening": "GLAZED|QORTUBA_REV_NEW|H533||SEGMENT|0",
+       "kind": "SLIDING_GLAZED_DOOR",
+       "width_m": 2.75,
+       "height_m": 2.2,
+       "height_authority": "QP-12 owner: the HALL / PAINTRY glazed opening 2.750 x 2.200 (same occurrence: glazing H533 / H542, 2.75 m, in both revisions) + QP-23 corroborating; floor contact from QORTUBA-NEW-HALL-PAINTRY-SLIDING-GLASS-DOOR-OWNER-001@v1",
+       "sill_m": 0.0,
+       "sill_authority": "reaches the floor",
+       "sources": [
+        "CLOSURE|GLAZED|QORTUBA_REV_NEW|H533||SEGMENT|0|F2",
+        "CLOSURE|GLAZED|QORTUBA_REV_NEW|H542||SEGMENT|0|F1",
+        "QORTUBA_REV_NEW|H542||SEGMENT|0"
+       ]
+      },
+      {
+       "opening": "I2044",
+       "kind": "DOOR",
+       "width_m": 0.8,
+       "height_m": 2.2,
+       "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+       "sill_m": 0.0,
+       "sill_authority": "reaches the floor",
+       "sources": [
+        "CLOSURE|I2044|B"
+       ]
+      },
+      {
+       "opening": "I1988",
+       "kind": "DOOR",
+       "width_m": 1.0,
+       "height_m": 2.2,
+       "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+       "sill_m": 0.0,
+       "sill_authority": "reaches the floor",
+       "sources": [
+        "CLOSURE|I1988|B"
+       ]
+      },
+      {
+       "opening": "I841",
+       "kind": "DOOR",
+       "width_m": 1.0,
+       "height_m": 2.2,
+       "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+       "sill_m": 0.0,
+       "sill_authority": "reaches the floor",
+       "sources": [
+        "CLOSURE|I841|B"
+       ]
+      }
+     ],
+     "head_faces": [],
+     "conservation": {
+      "boundary_m": 34.507105,
+      "consumed_by_physical_jambs_m": 0.4,
+      "classified_m": 34.107105,
+      "residual_m": 0.0,
+      "reconciles": true
+     },
+     "blockers": [
+      "TRADE_HEIGHT_NOT_ESTABLISHED",
+      "PASSAGE_HEAD_NOT_ESTABLISHED: OP-997f14d12b8e9bc1"
+     ],
+     "state": "BLOCKED"
+    },
+    "PLASTER": {
+     "policy": "WALL_FACE_SURFACE_POLICY_V1",
+     "height_m": null,
+     "height_authority": null,
+     "lengths_m": {
+      "COLUMN_FACE": 0.65,
+      "OPENING_SPAN": 10.696444,
+      "WALL_FACE": 22.760661
+     },
+     "spans": [
+      {
+       "class": "OPENING",
+       "kind": "DOOR",
+       "length_m": 1.0,
+       "sources": [
+        "CLOSURE|I677|A"
+       ],
+       "geom": [
+        [
+         110358.0817,
+         15114.7196
+        ],
+        [
+         110258.0817,
+         15114.7196
+        ]
+       ]
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.05,
+       "sources": [
+        "QORTUBA_REV_NEW|H578||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         110363.0817,
+         15114.7196
+        ],
+        [
+         110358.0817,
+         15114.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 2.1,
+       "sources": [
+        "QORTUBA_REV_NEW|H510||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         110363.0817,
+         15114.7196
+        ],
+        [
+         110363.0817,
+         15324.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "OPENING",
+       "kind": "WINDOW",
+       "length_m": 2.346444,
+       "sources": [
+        "QORTUBA_REV_NEW|H1518||SEGMENT|0",
+        "QORTUBA_REV_NEW|H510||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         110363.0817,
+         15324.7196
+        ],
+        [
+         110363.0817,
+         15559.3641
+        ]
+       ]
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.153556,
+       "sources": [
+        "QORTUBA_REV_NEW|H510||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         110363.0817,
+         15559.3641
+        ],
+        [
+         110363.0817,
+         15574.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 5.85,
+       "sources": [
+        "QORTUBA_REV_NEW|H523||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         110363.0817,
+         15574.7196
+        ],
+        [
+         109778.0817,
+         15574.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "OPENING",
+       "kind": "DOOR",
+       "length_m": 1.0,
+       "sources": [
+        "CLOSURE|I1471|B"
+       ],
+       "geom": [
+        [
+         109678.0817,
+         15574.7196
+        ],
+        [
+         109778.0817,
+         15574.7196
+        ]
+       ]
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.95,
+       "sources": [
+        "QORTUBA_REV_NEW|H525||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109678.0817,
+         15574.7196
+        ],
+        [
+         109583.0817,
+         15574.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "COLUMN_FACE",
+       "length_m": 0.4,
+       "sources": [
+        "QORTUBA_REV_NEW|H525||SEGMENT|0",
+        "QORTUBA_REV_NEW|H716||SEGMENT|2"
+       ],
+       "geom": [
+        [
+         109583.0817,
+         15574.7196
+        ],
+        [
+         109543.0817,
+         15574.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "COLUMN_FACE",
+       "length_m": 0.05,
+       "sources": [
+        "QORTUBA_REV_NEW|H716||SEGMENT|2"
+       ],
+       "geom": [
+        [
+         109543.0817,
+         15574.7196
+        ],
+        [
+         109538.0817,
+         15574.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.1,
+       "sources": [
+        "QORTUBA_REV_NEW|H538||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109538.0817,
+         15574.7196
+        ],
+        [
+         109538.0817,
+         15564.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "OPENING",
+       "kind": "DOOR",
+       "length_m": 0.8,
+       "sources": [
+        "CLOSURE|I1561|B"
+       ],
+       "geom": [
+        [
+         109538.0817,
+         15484.7196
+        ],
+        [
+         109538.0817,
+         15564.7196
+        ]
+       ]
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.1,
+       "sources": [
+        "QORTUBA_REV_NEW|H530||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109538.0817,
+         15484.7196
+        ],
+        [
+         109538.0817,
+         15474.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.7,
+       "sources": [
+        "QORTUBA_REV_NEW|H484||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109538.0817,
+         15474.7196
+        ],
+        [
+         109608.0817,
+         15474.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.9,
+       "sources": [
+        "QORTUBA_REV_NEW|H539||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109608.0817,
+         15474.7196
+        ],
+        [
+         109608.0817,
+         15384.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "OPENING",
+       "kind": "SLIDING_GLAZED_DOOR",
+       "length_m": 2.75,
+       "sources": [
+        "CLOSURE|GLAZED|QORTUBA_REV_NEW|H533||SEGMENT|0|F2",
+        "CLOSURE|GLAZED|QORTUBA_REV_NEW|H542||SEGMENT|0|F1",
+        "QORTUBA_REV_NEW|H542||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109608.0817,
+         15384.7196
+        ],
+        [
+         109608.0817,
+         15109.7196
+        ]
+       ]
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.6,
+       "sources": [
+        "QORTUBA_REV_NEW|H543||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109608.0817,
+         15109.7196
+        ],
+        [
+         109608.0817,
+         15049.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 1.656744,
+       "sources": [
+        "QORTUBA_REV_NEW|H477||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109608.0817,
+         15049.7196
+        ],
+        [
+         109773.7561,
+         15049.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 1.506744,
+       "sources": [
+        "QORTUBA_REV_NEW|H471||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109623.0817,
+         15029.7196
+        ],
+        [
+         109773.7561,
+         15029.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.8,
+       "sources": [
+        "QORTUBA_REV_NEW|H7116||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109623.0817,
+         14949.7196
+        ],
+        [
+         109623.0817,
+         15029.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "OPENING",
+       "kind": "DOOR",
+       "length_m": 0.8,
+       "sources": [
+        "CLOSURE|I2044|B"
+       ],
+       "geom": [
+        [
+         109623.0817,
+         14869.7196
+        ],
+        [
+         109623.0817,
+         14949.7196
+        ]
+       ]
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.1,
+       "sources": [
+        "QORTUBA_REV_NEW|H468||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109623.0817,
+         14869.7196
+        ],
+        [
+         109623.0817,
+         14859.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.6,
+       "sources": [
+        "QORTUBA_REV_NEW|H473||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109623.0817,
+         14859.7196
+        ],
+        [
+         109683.0817,
+         14859.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "OPENING",
+       "kind": "DOOR",
+       "length_m": 1.0,
+       "sources": [
+        "CLOSURE|I1988|B"
+       ],
+       "geom": [
+        [
+         109783.0817,
+         14859.7196
+        ],
+        [
+         109683.0817,
+         14859.7196
+        ]
+       ]
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.1,
+       "sources": [
+        "QORTUBA_REV_NEW|H474||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109783.0817,
+         14859.7196
+        ],
+        [
+         109793.0817,
+         14859.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.5,
+       "sources": [
+        "QORTUBA_REV_NEW|H555||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109793.0817,
+         14859.7196
+        ],
+        [
+         109793.0817,
+         14909.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.25,
+       "sources": [
+        "QORTUBA_REV_NEW|H487||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109793.0817,
+         14909.7196
+        ],
+        [
+         109818.0817,
+         14909.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "OPENING",
+       "kind": "DOOR",
+       "length_m": 1.0,
+       "sources": [
+        "CLOSURE|I841|B"
+       ],
+       "geom": [
+        [
+         109818.0817,
+         14909.7196
+        ],
+        [
+         109918.0817,
+         14909.7196
+        ]
+       ]
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.1,
+       "sources": [
+        "QORTUBA_REV_NEW|H488||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109918.0817,
+         14909.7196
+        ],
+        [
+         109928.0817,
+         14909.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 1.2,
+       "sources": [
+        "QORTUBA_REV_NEW|H7118||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109928.0817,
+         14909.7196
+        ],
+        [
+         109928.0817,
+         15029.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.346809,
+       "sources": [
+        "QORTUBA_REV_NEW|H2296||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109893.4009,
+         15029.7196
+        ],
+        [
+         109928.0817,
+         15029.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.946809,
+       "sources": [
+        "QORTUBA_REV_NEW|H2297||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109893.4009,
+         15049.7196
+        ],
+        [
+         109988.0817,
+         15049.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.65,
+       "sources": [
+        "QORTUBA_REV_NEW|H551||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109988.0817,
+         15049.7196
+        ],
+        [
+         109988.0817,
+         15114.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 1.9,
+       "sources": [
+        "QORTUBA_REV_NEW|H1547||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         110178.0817,
+         15114.7196
+        ],
+        [
+         109988.0817,
+         15114.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.4,
+       "sources": [
+        "QORTUBA_REV_NEW|H1947||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         110178.0817,
+         15114.7196
+        ],
+        [
+         110218.0817,
+         15114.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "COLUMN_FACE",
+       "length_m": 0.2,
+       "sources": [
+        "QORTUBA_REV_NEW|H1271||SEGMENT|0",
+        "QORTUBA_REV_NEW|H704||SEGMENT|3"
+       ],
+       "geom": [
+        [
+         110238.0817,
+         15114.7196
+        ],
+        [
+         110218.0817,
+         15114.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.2,
+       "sources": [
+        "QORTUBA_REV_NEW|H1271||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         110258.0817,
+         15114.7196
+        ],
+        [
+         110238.0817,
+         15114.7196
+        ]
+       ],
+       "area_m2": null
+      }
+     ],
+     "openings": [
+      {
+       "opening": "I677",
+       "kind": "DOOR",
+       "width_m": 1.0,
+       "height_m": 2.2,
+       "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+       "sill_m": 0.0,
+       "sill_authority": "reaches the floor",
+       "sources": [
+        "CLOSURE|I677|A"
+       ]
+      },
+      {
+       "opening": "QORTUBA_REV_NEW|H1518||SEGMENT",
+       "kind": "WINDOW",
+       "width_m": 2.346444,
+       "height_m": 1.5,
+       "height_authority": "QP-22 owner: 1.500 m for every Qortuba window whose height the drawing does not state",
+       "sill_m": 1.0,
+       "sill_authority": "QORTUBA-NEW-NORMAL-WINDOWS-ABOVE-FLOOR-OWNER-001@v2",
+       "sources": [
+        "QORTUBA_REV_NEW|H1518||SEGMENT|0",
+        "QORTUBA_REV_NEW|H510||SEGMENT|0"
+       ]
+      },
+      {
+       "opening": "I1471",
+       "kind": "DOOR",
+       "width_m": 1.0,
+       "height_m": 2.2,
+       "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+       "sill_m": 0.0,
+       "sill_authority": "reaches the floor",
+       "sources": [
+        "CLOSURE|I1471|B"
+       ]
+      },
+      {
+       "opening": "I1561",
+       "kind": "DOOR",
+       "width_m": 0.8,
+       "height_m": 2.2,
+       "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+       "sill_m": 0.0,
+       "sill_authority": "reaches the floor",
+       "sources": [
+        "CLOSURE|I1561|B"
+       ]
+      },
+      {
+       "opening": "GLAZED|QORTUBA_REV_NEW|H533||SEGMENT|0",
+       "kind": "SLIDING_GLAZED_DOOR",
+       "width_m": 2.75,
+       "height_m": 2.2,
+       "height_authority": "QP-12 owner: the HALL / PAINTRY glazed opening 2.750 x 2.200 (same occurrence: glazing H533 / H542, 2.75 m, in both revisions) + QP-23 corroborating; floor contact from QORTUBA-NEW-HALL-PAINTRY-SLIDING-GLASS-DOOR-OWNER-001@v1",
+       "sill_m": 0.0,
+       "sill_authority": "reaches the floor",
+       "sources": [
+        "CLOSURE|GLAZED|QORTUBA_REV_NEW|H533||SEGMENT|0|F2",
+        "CLOSURE|GLAZED|QORTUBA_REV_NEW|H542||SEGMENT|0|F1",
+        "QORTUBA_REV_NEW|H542||SEGMENT|0"
+       ]
+      },
+      {
+       "opening": "I2044",
+       "kind": "DOOR",
+       "width_m": 0.8,
+       "height_m": 2.2,
+       "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+       "sill_m": 0.0,
+       "sill_authority": "reaches the floor",
+       "sources": [
+        "CLOSURE|I2044|B"
+       ]
+      },
+      {
+       "opening": "I1988",
+       "kind": "DOOR",
+       "width_m": 1.0,
+       "height_m": 2.2,
+       "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+       "sill_m": 0.0,
+       "sill_authority": "reaches the floor",
+       "sources": [
+        "CLOSURE|I1988|B"
+       ]
+      },
+      {
+       "opening": "I841",
+       "kind": "DOOR",
+       "width_m": 1.0,
+       "height_m": 2.2,
+       "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+       "sill_m": 0.0,
+       "sill_authority": "reaches the floor",
+       "sources": [
+        "CLOSURE|I841|B"
+       ]
+      }
+     ],
+     "head_faces": [],
+     "conservation": {
+      "boundary_m": 34.507105,
+      "consumed_by_physical_jambs_m": 0.4,
+      "classified_m": 34.107105,
+      "residual_m": 0.0,
+      "reconciles": true
+     },
+     "blockers": [
+      "TRADE_HEIGHT_NOT_ESTABLISHED",
+      "PASSAGE_HEAD_NOT_ESTABLISHED: OP-997f14d12b8e9bc1"
+     ],
+     "state": "BLOCKED"
+    }
+   },
+   "counterfactual": {
+    "PAINT": {
+     "height": {
+      "height_m": 3.0,
+      "authority": "COUNTERFACTUAL ONLY: QP-04 (OLD revision) - never published"
+     },
+     "state": "BLOCKED",
+     "areas_m2": null,
+     "blockers": [
+      "PASSAGE_HEAD_NOT_ESTABLISHED: OP-997f14d12b8e9bc1"
+     ],
+     "NOT_PUBLISHED": true
+    },
+    "PLASTER": {
+     "height": {
+      "height_m": 3.0,
+      "authority": "COUNTERFACTUAL ONLY: QP-03 (OLD revision) - never published"
+     },
+     "state": "BLOCKED",
+     "areas_m2": null,
+     "blockers": [
+      "PASSAGE_HEAD_NOT_ESTABLISHED: OP-997f14d12b8e9bc1"
+     ],
+     "NOT_PUBLISHED": true
+    }
+   }
+  },
+  "SITE-a6405850100155ac": {
+   "zones": [
+    "DRESS",
+    "M.B.ROOM"
+   ],
+   "class": "DRY_INTERNAL_ROOM",
+   "trades": {
+    "PAINT": {
+     "state": "APPLIES",
+     "height_m": null,
+     "authority": null,
+     "blocker": "NOT ESTABLISHED for the selected NEW revision: QP-03 / QP-04 (3.00 m) were set on the OLD revision and were never re-stated; the owner moved the new-revision wet / service tile height to 3.20 m"
+    },
+    "PLASTER": {
+     "state": "APPLIES",
+     "height_m": null,
+     "authority": null,
+     "blocker": "NOT ESTABLISHED for the selected NEW revision: QP-03 / QP-04 (3.00 m) were set on the OLD revision and were never re-stated; the owner moved the new-revision wet / service tile height to 3.20 m"
+    }
+   },
+   "passages_in_site": [
+    {
+     "passage_id": "OP-9e0fd219ca5cd391",
+     "width_m": 1.2,
+     "head": null,
+     "head_height_m": null,
+     "head_authority": "QORTUBA-NEW-MB-DRESS-PASSAGE-FULL-HEIGHT-OWNER-001@v1"
+    }
+   ],
+   "faces": {
+    "PAINT": {
+     "policy": "WALL_FACE_SURFACE_POLICY_V1",
+     "height_m": null,
+     "height_authority": null,
+     "lengths_m": {
+      "COLUMN_FACE": 1.2,
+      "OPENING_SPAN": 5.997515,
+      "WALL_FACE": 23.952485
+     },
+     "spans": [
+      {
+       "class": "OPENING",
+       "kind": "WINDOW",
+       "length_m": 1.697515,
+       "sources": [
+        "QORTUBA_REV_NEW|H1026||SEGMENT|0",
+        "QORTUBA_REV_NEW|H457||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         110047.8333,
+         16024.7196
+        ],
+        [
+         109878.0817,
+         16024.7196
+        ]
+       ]
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.05,
+       "sources": [
+        "QORTUBA_REV_NEW|H457||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109878.0817,
+         16024.7196
+        ],
+        [
+         109873.0817,
+         16024.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 3.15,
+       "sources": [
+        "QORTUBA_REV_NEW|H1895||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109873.0817,
+         15709.7196
+        ],
+        [
+         109873.0817,
+         16024.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 3.15,
+       "sources": [
+        "QORTUBA_REV_NEW|H1893||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109858.0817,
+         16024.7196
+        ],
+        [
+         109858.0817,
+         15709.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 2.75,
+       "sources": [
+        "QORTUBA_REV_NEW|H457||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109858.0817,
+         16024.7196
+        ],
+        [
+         109583.0817,
+         16024.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.15,
+       "sources": [
+        "QORTUBA_REV_NEW|H1676||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109583.0817,
+         16009.7196
+        ],
+        [
+         109583.0817,
+         16024.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "COLUMN_FACE",
+       "length_m": 0.2,
+       "sources": [
+        "QORTUBA_REV_NEW|H1676||SEGMENT|0",
+        "QORTUBA_REV_NEW|H714||SEGMENT|1"
+       ],
+       "geom": [
+        [
+         109583.0817,
+         15989.7196
+        ],
+        [
+         109583.0817,
+         16009.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 2.1,
+       "sources": [
+        "QORTUBA_REV_NEW|H531||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109583.0817,
+         15989.7196
+        ],
+        [
+         109583.0817,
+         15779.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "OPENING",
+       "kind": "DOOR",
+       "length_m": 0.8,
+       "sources": [
+        "CLOSURE|I1443|B"
+       ],
+       "geom": [
+        [
+         109583.0817,
+         15699.7196
+        ],
+        [
+         109583.0817,
+         15779.7196
+        ]
+       ]
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.25,
+       "sources": [
+        "QORTUBA_REV_NEW|H537||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109583.0817,
+         15699.7196
+        ],
+        [
+         109583.0817,
+         15674.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.8,
+       "sources": [
+        "QORTUBA_REV_NEW|H1892||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109583.0817,
+         15674.7196
+        ],
+        [
+         109583.0817,
+         15594.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.95,
+       "sources": [
+        "QORTUBA_REV_NEW|H519||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109678.0817,
+         15594.7196
+        ],
+        [
+         109583.0817,
+         15594.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.05,
+       "sources": [
+        "QORTUBA_REV_NEW|H1472||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109678.0817,
+         15594.7196
+        ],
+        [
+         109678.0817,
+         15589.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "OPENING",
+       "kind": "DOOR",
+       "length_m": 1.0,
+       "sources": [
+        "CLOSURE|I1471|A"
+       ],
+       "geom": [
+        [
+         109678.0817,
+         15589.7196
+        ],
+        [
+         109778.0817,
+         15589.7196
+        ]
+       ]
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 5.85,
+       "sources": [
+        "QORTUBA_REV_NEW|H518||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         110363.0817,
+         15589.7196
+        ],
+        [
+         109778.0817,
+         15589.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.80259,
+       "sources": [
+        "QORTUBA_REV_NEW|H512||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         110363.0817,
+         15589.7196
+        ],
+        [
+         110363.0817,
+         15669.9786
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "OPENING",
+       "kind": "WINDOW",
+       "length_m": 2.5,
+       "sources": [
+        "QORTUBA_REV_NEW|H1325||SEGMENT|0",
+        "QORTUBA_REV_NEW|H512||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         110363.0817,
+         15669.9786
+        ],
+        [
+         110363.0817,
+         15919.9786
+        ]
+       ]
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 1.04741,
+       "sources": [
+        "QORTUBA_REV_NEW|H512||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         110363.0817,
+         15919.9786
+        ],
+        [
+         110363.0817,
+         16024.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.85,
+       "sources": [
+        "QORTUBA_REV_NEW|H456||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         110363.0817,
+         16024.7196
+        ],
+        [
+         110278.0817,
+         16024.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.15,
+       "sources": [
+        "QORTUBA_REV_NEW|H1678||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         110278.0817,
+         16009.7196
+        ],
+        [
+         110278.0817,
+         16024.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "COLUMN_FACE",
+       "length_m": 0.2,
+       "sources": [
+        "QORTUBA_REV_NEW|H1678||SEGMENT|0",
+        "QORTUBA_REV_NEW|H712||SEGMENT|1"
+       ],
+       "geom": [
+        [
+         110278.0817,
+         15989.7196
+        ],
+        [
+         110278.0817,
+         16009.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "COLUMN_FACE",
+       "length_m": 0.6,
+       "sources": [
+        "QORTUBA_REV_NEW|H516||SEGMENT|0",
+        "QORTUBA_REV_NEW|H712||SEGMENT|2"
+       ],
+       "geom": [
+        [
+         110278.0817,
+         15989.7196
+        ],
+        [
+         110218.0817,
+         15989.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "COLUMN_FACE",
+       "length_m": 0.2,
+       "sources": [
+        "QORTUBA_REV_NEW|H1677||SEGMENT|0",
+        "QORTUBA_REV_NEW|H712||SEGMENT|3"
+       ],
+       "geom": [
+        [
+         110218.0817,
+         15989.7196
+        ],
+        [
+         110218.0817,
+         16009.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.15,
+       "sources": [
+        "QORTUBA_REV_NEW|H1677||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         110218.0817,
+         16009.7196
+        ],
+        [
+         110218.0817,
+         16024.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 1.702485,
+       "sources": [
+        "QORTUBA_REV_NEW|H457||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         110218.0817,
+         16024.7196
+        ],
+        [
+         110047.8333,
+         16024.7196
+        ]
+       ],
+       "area_m2": null
+      }
+     ],
+     "openings": [
+      {
+       "opening": "QORTUBA_REV_NEW|H1026||SEGMENT",
+       "kind": "WINDOW",
+       "width_m": 1.697515,
+       "height_m": 1.5,
+       "height_authority": "QP-22 owner: 1.500 m for every Qortuba window whose height the drawing does not state",
+       "sill_m": 1.0,
+       "sill_authority": "QORTUBA-NEW-NORMAL-WINDOWS-ABOVE-FLOOR-OWNER-001@v2",
+       "sources": [
+        "QORTUBA_REV_NEW|H1026||SEGMENT|0",
+        "QORTUBA_REV_NEW|H457||SEGMENT|0"
+       ]
+      },
+      {
+       "opening": "I1443",
+       "kind": "DOOR",
+       "width_m": 0.8,
+       "height_m": 2.2,
+       "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+       "sill_m": 0.0,
+       "sill_authority": "reaches the floor",
+       "sources": [
+        "CLOSURE|I1443|B"
+       ]
+      },
+      {
+       "opening": "I1471",
+       "kind": "DOOR",
+       "width_m": 1.0,
+       "height_m": 2.2,
+       "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+       "sill_m": 0.0,
+       "sill_authority": "reaches the floor",
+       "sources": [
+        "CLOSURE|I1471|A"
+       ]
+      },
+      {
+       "opening": "QORTUBA_REV_NEW|H1325||SEGMENT",
+       "kind": "WINDOW",
+       "width_m": 2.5,
+       "height_m": 1.5,
+       "height_authority": "QP-22 owner: 1.500 m for every Qortuba window whose height the drawing does not state",
+       "sill_m": 1.0,
+       "sill_authority": "QORTUBA-NEW-NORMAL-WINDOWS-ABOVE-FLOOR-OWNER-001@v2",
+       "sources": [
+        "QORTUBA_REV_NEW|H1325||SEGMENT|0",
+        "QORTUBA_REV_NEW|H512||SEGMENT|0"
+       ]
+      }
+     ],
+     "head_faces": [],
+     "conservation": {
+      "boundary_m": 31.3,
+      "consumed_by_physical_jambs_m": 0.15,
+      "classified_m": 31.15,
+      "residual_m": 0.0,
+      "reconciles": true
+     },
+     "blockers": [
+      "TRADE_HEIGHT_NOT_ESTABLISHED",
+      "PASSAGE_HEAD_NOT_ESTABLISHED: OP-9e0fd219ca5cd391"
+     ],
+     "state": "BLOCKED"
+    },
+    "PLASTER": {
+     "policy": "WALL_FACE_SURFACE_POLICY_V1",
+     "height_m": null,
+     "height_authority": null,
+     "lengths_m": {
+      "COLUMN_FACE": 1.2,
+      "OPENING_SPAN": 5.997515,
+      "WALL_FACE": 23.952485
+     },
+     "spans": [
+      {
+       "class": "OPENING",
+       "kind": "WINDOW",
+       "length_m": 1.697515,
+       "sources": [
+        "QORTUBA_REV_NEW|H1026||SEGMENT|0",
+        "QORTUBA_REV_NEW|H457||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         110047.8333,
+         16024.7196
+        ],
+        [
+         109878.0817,
+         16024.7196
+        ]
+       ]
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.05,
+       "sources": [
+        "QORTUBA_REV_NEW|H457||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109878.0817,
+         16024.7196
+        ],
+        [
+         109873.0817,
+         16024.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 3.15,
+       "sources": [
+        "QORTUBA_REV_NEW|H1895||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109873.0817,
+         15709.7196
+        ],
+        [
+         109873.0817,
+         16024.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 3.15,
+       "sources": [
+        "QORTUBA_REV_NEW|H1893||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109858.0817,
+         16024.7196
+        ],
+        [
+         109858.0817,
+         15709.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 2.75,
+       "sources": [
+        "QORTUBA_REV_NEW|H457||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109858.0817,
+         16024.7196
+        ],
+        [
+         109583.0817,
+         16024.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.15,
+       "sources": [
+        "QORTUBA_REV_NEW|H1676||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109583.0817,
+         16009.7196
+        ],
+        [
+         109583.0817,
+         16024.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "COLUMN_FACE",
+       "length_m": 0.2,
+       "sources": [
+        "QORTUBA_REV_NEW|H1676||SEGMENT|0",
+        "QORTUBA_REV_NEW|H714||SEGMENT|1"
+       ],
+       "geom": [
+        [
+         109583.0817,
+         15989.7196
+        ],
+        [
+         109583.0817,
+         16009.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 2.1,
+       "sources": [
+        "QORTUBA_REV_NEW|H531||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109583.0817,
+         15989.7196
+        ],
+        [
+         109583.0817,
+         15779.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "OPENING",
+       "kind": "DOOR",
+       "length_m": 0.8,
+       "sources": [
+        "CLOSURE|I1443|B"
+       ],
+       "geom": [
+        [
+         109583.0817,
+         15699.7196
+        ],
+        [
+         109583.0817,
+         15779.7196
+        ]
+       ]
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.25,
+       "sources": [
+        "QORTUBA_REV_NEW|H537||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109583.0817,
+         15699.7196
+        ],
+        [
+         109583.0817,
+         15674.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.8,
+       "sources": [
+        "QORTUBA_REV_NEW|H1892||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109583.0817,
+         15674.7196
+        ],
+        [
+         109583.0817,
+         15594.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.95,
+       "sources": [
+        "QORTUBA_REV_NEW|H519||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109678.0817,
+         15594.7196
+        ],
+        [
+         109583.0817,
+         15594.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.05,
+       "sources": [
+        "QORTUBA_REV_NEW|H1472||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109678.0817,
+         15594.7196
+        ],
+        [
+         109678.0817,
+         15589.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "OPENING",
+       "kind": "DOOR",
+       "length_m": 1.0,
+       "sources": [
+        "CLOSURE|I1471|A"
+       ],
+       "geom": [
+        [
+         109678.0817,
+         15589.7196
+        ],
+        [
+         109778.0817,
+         15589.7196
+        ]
+       ]
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 5.85,
+       "sources": [
+        "QORTUBA_REV_NEW|H518||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         110363.0817,
+         15589.7196
+        ],
+        [
+         109778.0817,
+         15589.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.80259,
+       "sources": [
+        "QORTUBA_REV_NEW|H512||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         110363.0817,
+         15589.7196
+        ],
+        [
+         110363.0817,
+         15669.9786
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "OPENING",
+       "kind": "WINDOW",
+       "length_m": 2.5,
+       "sources": [
+        "QORTUBA_REV_NEW|H1325||SEGMENT|0",
+        "QORTUBA_REV_NEW|H512||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         110363.0817,
+         15669.9786
+        ],
+        [
+         110363.0817,
+         15919.9786
+        ]
+       ]
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 1.04741,
+       "sources": [
+        "QORTUBA_REV_NEW|H512||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         110363.0817,
+         15919.9786
+        ],
+        [
+         110363.0817,
+         16024.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.85,
+       "sources": [
+        "QORTUBA_REV_NEW|H456||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         110363.0817,
+         16024.7196
+        ],
+        [
+         110278.0817,
+         16024.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.15,
+       "sources": [
+        "QORTUBA_REV_NEW|H1678||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         110278.0817,
+         16009.7196
+        ],
+        [
+         110278.0817,
+         16024.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "COLUMN_FACE",
+       "length_m": 0.2,
+       "sources": [
+        "QORTUBA_REV_NEW|H1678||SEGMENT|0",
+        "QORTUBA_REV_NEW|H712||SEGMENT|1"
+       ],
+       "geom": [
+        [
+         110278.0817,
+         15989.7196
+        ],
+        [
+         110278.0817,
+         16009.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "COLUMN_FACE",
+       "length_m": 0.6,
+       "sources": [
+        "QORTUBA_REV_NEW|H516||SEGMENT|0",
+        "QORTUBA_REV_NEW|H712||SEGMENT|2"
+       ],
+       "geom": [
+        [
+         110278.0817,
+         15989.7196
+        ],
+        [
+         110218.0817,
+         15989.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "COLUMN_FACE",
+       "length_m": 0.2,
+       "sources": [
+        "QORTUBA_REV_NEW|H1677||SEGMENT|0",
+        "QORTUBA_REV_NEW|H712||SEGMENT|3"
+       ],
+       "geom": [
+        [
+         110218.0817,
+         15989.7196
+        ],
+        [
+         110218.0817,
+         16009.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.15,
+       "sources": [
+        "QORTUBA_REV_NEW|H1677||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         110218.0817,
+         16009.7196
+        ],
+        [
+         110218.0817,
+         16024.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 1.702485,
+       "sources": [
+        "QORTUBA_REV_NEW|H457||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         110218.0817,
+         16024.7196
+        ],
+        [
+         110047.8333,
+         16024.7196
+        ]
+       ],
+       "area_m2": null
+      }
+     ],
+     "openings": [
+      {
+       "opening": "QORTUBA_REV_NEW|H1026||SEGMENT",
+       "kind": "WINDOW",
+       "width_m": 1.697515,
+       "height_m": 1.5,
+       "height_authority": "QP-22 owner: 1.500 m for every Qortuba window whose height the drawing does not state",
+       "sill_m": 1.0,
+       "sill_authority": "QORTUBA-NEW-NORMAL-WINDOWS-ABOVE-FLOOR-OWNER-001@v2",
+       "sources": [
+        "QORTUBA_REV_NEW|H1026||SEGMENT|0",
+        "QORTUBA_REV_NEW|H457||SEGMENT|0"
+       ]
+      },
+      {
+       "opening": "I1443",
+       "kind": "DOOR",
+       "width_m": 0.8,
+       "height_m": 2.2,
+       "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+       "sill_m": 0.0,
+       "sill_authority": "reaches the floor",
+       "sources": [
+        "CLOSURE|I1443|B"
+       ]
+      },
+      {
+       "opening": "I1471",
+       "kind": "DOOR",
+       "width_m": 1.0,
+       "height_m": 2.2,
+       "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+       "sill_m": 0.0,
+       "sill_authority": "reaches the floor",
+       "sources": [
+        "CLOSURE|I1471|A"
+       ]
+      },
+      {
+       "opening": "QORTUBA_REV_NEW|H1325||SEGMENT",
+       "kind": "WINDOW",
+       "width_m": 2.5,
+       "height_m": 1.5,
+       "height_authority": "QP-22 owner: 1.500 m for every Qortuba window whose height the drawing does not state",
+       "sill_m": 1.0,
+       "sill_authority": "QORTUBA-NEW-NORMAL-WINDOWS-ABOVE-FLOOR-OWNER-001@v2",
+       "sources": [
+        "QORTUBA_REV_NEW|H1325||SEGMENT|0",
+        "QORTUBA_REV_NEW|H512||SEGMENT|0"
+       ]
+      }
+     ],
+     "head_faces": [],
+     "conservation": {
+      "boundary_m": 31.3,
+      "consumed_by_physical_jambs_m": 0.15,
+      "classified_m": 31.15,
+      "residual_m": 0.0,
+      "reconciles": true
+     },
+     "blockers": [
+      "TRADE_HEIGHT_NOT_ESTABLISHED",
+      "PASSAGE_HEAD_NOT_ESTABLISHED: OP-9e0fd219ca5cd391"
+     ],
+     "state": "BLOCKED"
+    }
+   },
+   "counterfactual": {
+    "PAINT": {
+     "height": {
+      "height_m": 3.0,
+      "authority": "COUNTERFACTUAL ONLY: QP-04 (OLD revision) - never published"
+     },
+     "state": "BLOCKED",
+     "areas_m2": null,
+     "blockers": [
+      "PASSAGE_HEAD_NOT_ESTABLISHED: OP-9e0fd219ca5cd391"
+     ],
+     "NOT_PUBLISHED": true
+    },
+    "PLASTER": {
+     "height": {
+      "height_m": 3.0,
+      "authority": "COUNTERFACTUAL ONLY: QP-03 (OLD revision) - never published"
+     },
+     "state": "BLOCKED",
+     "areas_m2": null,
+     "blockers": [
+      "PASSAGE_HEAD_NOT_ESTABLISHED: OP-9e0fd219ca5cd391"
+     ],
+     "NOT_PUBLISHED": true
+    }
+   }
+  },
+  "SITE-daca396d6d730e60": {
+   "zones": [
+    "BED.ROOM"
+   ],
+   "class": "DRY_INTERNAL_ROOM",
+   "trades": {
+    "PAINT": {
+     "state": "APPLIES",
+     "height_m": null,
+     "authority": null,
+     "blocker": "NOT ESTABLISHED for the selected NEW revision: QP-03 / QP-04 (3.00 m) were set on the OLD revision and were never re-stated; the owner moved the new-revision wet / service tile height to 3.20 m"
+    },
+    "PLASTER": {
+     "state": "APPLIES",
+     "height_m": null,
+     "authority": null,
+     "blocker": "NOT ESTABLISHED for the selected NEW revision: QP-03 / QP-04 (3.00 m) were set on the OLD revision and were never re-stated; the owner moved the new-revision wet / service tile height to 3.20 m"
+    }
+   },
+   "passages_in_site": [],
+   "faces": {
+    "PAINT": {
+     "policy": "WALL_FACE_SURFACE_POLICY_V1",
+     "height_m": null,
+     "height_authority": null,
+     "lengths_m": {
+      "COLUMN_FACE": 0.8,
+      "OPENING_SPAN": 2.342287,
+      "WALL_FACE": 13.437427
+     },
+     "spans": [
+      {
+       "class": "OPENING",
+       "kind": "WINDOW",
+       "length_m": 1.342287,
+       "sources": [
+        "QORTUBA_REV_NEW|H1020||SEGMENT|0",
+        "QORTUBA_REV_NEW|H469||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109308.0817,
+         14813.9483
+        ],
+        [
+         109308.0817,
+         14679.7196
+        ]
+       ]
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.6,
+       "sources": [
+        "QORTUBA_REV_NEW|H469||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109308.0817,
+         14679.7196
+        ],
+        [
+         109308.0817,
+         14619.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.15,
+       "sources": [
+        "QORTUBA_REV_NEW|H1671||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109323.0817,
+         14619.7196
+        ],
+        [
+         109308.0817,
+         14619.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "COLUMN_FACE",
+       "length_m": 0.2,
+       "sources": [
+        "QORTUBA_REV_NEW|H1671||SEGMENT|0",
+        "QORTUBA_REV_NEW|H706||SEGMENT|3"
+       ],
+       "geom": [
+        [
+         109343.0817,
+         14619.7196
+        ],
+        [
+         109323.0817,
+         14619.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "COLUMN_FACE",
+       "length_m": 0.6,
+       "sources": [
+        "QORTUBA_REV_NEW|H706||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109343.0817,
+         14619.7196
+        ],
+        [
+         109343.0817,
+         14559.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.65,
+       "sources": [
+        "QORTUBA_REV_NEW|H1672||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109343.0817,
+         14559.7196
+        ],
+        [
+         109343.0817,
+         14494.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 4.439857,
+       "sources": [
+        "QORTUBA_REV_NEW|H447||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109343.0817,
+         14494.7196
+        ],
+        [
+         109787.0675,
+         14494.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 3.5,
+       "sources": [
+        "QORTUBA_REV_NEW|H554||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109787.0675,
+         14494.7196
+        ],
+        [
+         109787.0675,
+         14844.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.039857,
+       "sources": [
+        "QORTUBA_REV_NEW|H476||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109783.0817,
+         14844.7196
+        ],
+        [
+         109787.0675,
+         14844.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "OPENING",
+       "kind": "DOOR",
+       "length_m": 1.0,
+       "sources": [
+        "CLOSURE|I1988|A"
+       ],
+       "geom": [
+        [
+         109783.0817,
+         14844.7196
+        ],
+        [
+         109683.0817,
+         14844.7196
+        ]
+       ]
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 3.75,
+       "sources": [
+        "QORTUBA_REV_NEW|H475||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109308.0817,
+         14844.7196
+        ],
+        [
+         109683.0817,
+         14844.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.307713,
+       "sources": [
+        "QORTUBA_REV_NEW|H469||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109308.0817,
+         14844.7196
+        ],
+        [
+         109308.0817,
+         14813.9483
+        ]
+       ],
+       "area_m2": null
+      }
+     ],
+     "openings": [
+      {
+       "opening": "QORTUBA_REV_NEW|H1020||SEGMENT",
+       "kind": "WINDOW",
+       "width_m": 1.342287,
+       "height_m": 1.5,
+       "height_authority": "QP-22 owner: 1.500 m for every Qortuba window whose height the drawing does not state",
+       "sill_m": 1.0,
+       "sill_authority": "QORTUBA-NEW-NORMAL-WINDOWS-ABOVE-FLOOR-OWNER-001@v2",
+       "sources": [
+        "QORTUBA_REV_NEW|H1020||SEGMENT|0",
+        "QORTUBA_REV_NEW|H469||SEGMENT|0"
+       ]
+      },
+      {
+       "opening": "I1988",
+       "kind": "DOOR",
+       "width_m": 1.0,
+       "height_m": 2.2,
+       "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+       "sill_m": 0.0,
+       "sill_authority": "reaches the floor",
+       "sources": [
+        "CLOSURE|I1988|A"
+       ]
+      }
+     ],
+     "head_faces": [],
+     "conservation": {
+      "boundary_m": 16.579714,
+      "consumed_by_physical_jambs_m": 0.0,
+      "classified_m": 16.579714,
+      "residual_m": -0.0,
+      "reconciles": true
+     },
+     "blockers": [
+      "TRADE_HEIGHT_NOT_ESTABLISHED"
+     ],
+     "state": "BLOCKED"
+    },
+    "PLASTER": {
+     "policy": "WALL_FACE_SURFACE_POLICY_V1",
+     "height_m": null,
+     "height_authority": null,
+     "lengths_m": {
+      "COLUMN_FACE": 0.8,
+      "OPENING_SPAN": 2.342287,
+      "WALL_FACE": 13.437427
+     },
+     "spans": [
+      {
+       "class": "OPENING",
+       "kind": "WINDOW",
+       "length_m": 1.342287,
+       "sources": [
+        "QORTUBA_REV_NEW|H1020||SEGMENT|0",
+        "QORTUBA_REV_NEW|H469||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109308.0817,
+         14813.9483
+        ],
+        [
+         109308.0817,
+         14679.7196
+        ]
+       ]
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.6,
+       "sources": [
+        "QORTUBA_REV_NEW|H469||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109308.0817,
+         14679.7196
+        ],
+        [
+         109308.0817,
+         14619.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.15,
+       "sources": [
+        "QORTUBA_REV_NEW|H1671||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109323.0817,
+         14619.7196
+        ],
+        [
+         109308.0817,
+         14619.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "COLUMN_FACE",
+       "length_m": 0.2,
+       "sources": [
+        "QORTUBA_REV_NEW|H1671||SEGMENT|0",
+        "QORTUBA_REV_NEW|H706||SEGMENT|3"
+       ],
+       "geom": [
+        [
+         109343.0817,
+         14619.7196
+        ],
+        [
+         109323.0817,
+         14619.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "COLUMN_FACE",
+       "length_m": 0.6,
+       "sources": [
+        "QORTUBA_REV_NEW|H706||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109343.0817,
+         14619.7196
+        ],
+        [
+         109343.0817,
+         14559.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.65,
+       "sources": [
+        "QORTUBA_REV_NEW|H1672||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109343.0817,
+         14559.7196
+        ],
+        [
+         109343.0817,
+         14494.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 4.439857,
+       "sources": [
+        "QORTUBA_REV_NEW|H447||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109343.0817,
+         14494.7196
+        ],
+        [
+         109787.0675,
+         14494.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 3.5,
+       "sources": [
+        "QORTUBA_REV_NEW|H554||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109787.0675,
+         14494.7196
+        ],
+        [
+         109787.0675,
+         14844.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.039857,
+       "sources": [
+        "QORTUBA_REV_NEW|H476||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109783.0817,
+         14844.7196
+        ],
+        [
+         109787.0675,
+         14844.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "OPENING",
+       "kind": "DOOR",
+       "length_m": 1.0,
+       "sources": [
+        "CLOSURE|I1988|A"
+       ],
+       "geom": [
+        [
+         109783.0817,
+         14844.7196
+        ],
+        [
+         109683.0817,
+         14844.7196
+        ]
+       ]
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 3.75,
+       "sources": [
+        "QORTUBA_REV_NEW|H475||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109308.0817,
+         14844.7196
+        ],
+        [
+         109683.0817,
+         14844.7196
+        ]
+       ],
+       "area_m2": null
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.307713,
+       "sources": [
+        "QORTUBA_REV_NEW|H469||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109308.0817,
+         14844.7196
+        ],
+        [
+         109308.0817,
+         14813.9483
+        ]
+       ],
+       "area_m2": null
+      }
+     ],
+     "openings": [
+      {
+       "opening": "QORTUBA_REV_NEW|H1020||SEGMENT",
+       "kind": "WINDOW",
+       "width_m": 1.342287,
+       "height_m": 1.5,
+       "height_authority": "QP-22 owner: 1.500 m for every Qortuba window whose height the drawing does not state",
+       "sill_m": 1.0,
+       "sill_authority": "QORTUBA-NEW-NORMAL-WINDOWS-ABOVE-FLOOR-OWNER-001@v2",
+       "sources": [
+        "QORTUBA_REV_NEW|H1020||SEGMENT|0",
+        "QORTUBA_REV_NEW|H469||SEGMENT|0"
+       ]
+      },
+      {
+       "opening": "I1988",
+       "kind": "DOOR",
+       "width_m": 1.0,
+       "height_m": 2.2,
+       "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+       "sill_m": 0.0,
+       "sill_authority": "reaches the floor",
+       "sources": [
+        "CLOSURE|I1988|A"
+       ]
+      }
+     ],
+     "head_faces": [],
+     "conservation": {
+      "boundary_m": 16.579714,
+      "consumed_by_physical_jambs_m": 0.0,
+      "classified_m": 16.579714,
+      "residual_m": -0.0,
+      "reconciles": true
+     },
+     "blockers": [
+      "TRADE_HEIGHT_NOT_ESTABLISHED"
+     ],
+     "state": "BLOCKED"
+    }
+   },
+   "counterfactual": {
+    "PAINT": {
+     "height": {
+      "height_m": 3.0,
+      "authority": "COUNTERFACTUAL ONLY: QP-04 (OLD revision) - never published"
+     },
+     "state": "BLOCKED",
+     "areas_m2": {
+      "wall_plane_gross": 47.339143,
+      "opening_deductions": 4.213431,
+      "lintels": 0.8,
+      "passage_head_faces": 0.0,
+      "WALL_FACE_NET": 43.125712,
+      "COLUMN_FACE": 2.4,
+      "OBSTACLE_FACE": 0.0,
+      "check_two_ways": false
+     },
+     "blockers": [
+      "AREA_RECONCILIATION_FAILED"
+     ],
+     "NOT_PUBLISHED": true
+    },
+    "PLASTER": {
+     "height": {
+      "height_m": 3.0,
+      "authority": "COUNTERFACTUAL ONLY: QP-03 (OLD revision) - never published"
+     },
+     "state": "BLOCKED",
+     "areas_m2": {
+      "wall_plane_gross": 47.339143,
+      "opening_deductions": 4.213431,
+      "lintels": 0.8,
+      "passage_head_faces": 0.0,
+      "WALL_FACE_NET": 43.125712,
+      "COLUMN_FACE": 2.4,
+      "OBSTACLE_FACE": 0.0,
+      "check_two_ways": false
+     },
+     "blockers": [
+      "AREA_RECONCILIATION_FAILED"
+     ],
+     "NOT_PUBLISHED": true
+    }
+   }
+  },
+  "SITE-1c4abf65f9b5db1e": {
+   "zones": [
+    "BATH"
+   ],
+   "class": "WET_SERVICE_ROOM",
+   "trades": {
+    "PAINT": {
+     "state": "NONE",
+     "authority": "US-03: normal paint is zero on a fully ceramic wall"
+    },
+    "PLASTER": {
+     "state": "NONE",
+     "authority": "US-03: no normal plaster as ceramic backing"
+    },
+    "WALL_TILE": {
+     "state": "APPLIES",
+     "height_m": 3.2,
+     "authority": "QORTUBA-NEW-WET-SERVICE-FINISH-OWNER-001@v1"
+    }
+   },
+   "passages_in_site": [],
+   "faces": {
+    "WALL_TILE": {
+     "policy": "WALL_FACE_SURFACE_POLICY_V1",
+     "height_m": 3.2,
+     "height_authority": "QORTUBA-NEW-WET-SERVICE-FINISH-OWNER-001@v1",
+     "lengths_m": {
+      "COLUMN_FACE": 0.65,
+      "OPENING_SPAN": 0.8,
+      "WALL_FACE": 10.45
+     },
+     "spans": [
+      {
+       "class": "OPENING",
+       "kind": "DOOR",
+       "length_m": 0.8,
+       "sources": [
+        "CLOSURE|I1443|A"
+       ],
+       "geom": [
+        [
+         109568.0817,
+         15699.7196
+        ],
+        [
+         109568.0817,
+         15779.7196
+        ]
+       ]
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 2.1,
+       "sources": [
+        "QORTUBA_REV_NEW|H526||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109568.0817,
+         15989.7196
+        ],
+        [
+         109568.0817,
+         15779.7196
+        ]
+       ],
+       "area_m2": 6.72
+      },
+      {
+       "class": "COLUMN_FACE",
+       "length_m": 0.45,
+       "sources": [
+        "QORTUBA_REV_NEW|H714||SEGMENT|2"
+       ],
+       "geom": [
+        [
+         109568.0817,
+         15989.7196
+        ],
+        [
+         109523.0817,
+         15989.7196
+        ]
+       ],
+       "area_m2": 1.44
+      },
+      {
+       "class": "COLUMN_FACE",
+       "length_m": 0.2,
+       "sources": [
+        "QORTUBA_REV_NEW|H1675||SEGMENT|0",
+        "QORTUBA_REV_NEW|H714||SEGMENT|3"
+       ],
+       "geom": [
+        [
+         109523.0817,
+         15989.7196
+        ],
+        [
+         109523.0817,
+         16009.7196
+        ]
+       ],
+       "area_m2": 0.64
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.15,
+       "sources": [
+        "QORTUBA_REV_NEW|H1675||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109523.0817,
+         16009.7196
+        ],
+        [
+         109523.0817,
+         16024.7196
+        ]
+       ],
+       "area_m2": 0.48
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 2.15,
+       "sources": [
+        "QORTUBA_REV_NEW|H458||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109523.0817,
+         16024.7196
+        ],
+        [
+         109308.0817,
+         16024.7196
+        ]
+       ],
+       "area_m2": 6.88
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 3.35,
+       "sources": [
+        "QORTUBA_REV_NEW|H460||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109308.0817,
+         16024.7196
+        ],
+        [
+         109308.0817,
+         15689.7196
+        ]
+       ],
+       "area_m2": 10.72
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 2.6,
+       "sources": [
+        "QORTUBA_REV_NEW|H522||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109568.0817,
+         15689.7196
+        ],
+        [
+         109308.0817,
+         15689.7196
+        ]
+       ],
+       "area_m2": 8.32
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.1,
+       "sources": [
+        "QORTUBA_REV_NEW|H527||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109568.0817,
+         15699.7196
+        ],
+        [
+         109568.0817,
+         15689.7196
+        ]
+       ],
+       "area_m2": 0.32
+      }
+     ],
+     "openings": [
+      {
+       "opening": "I1443",
+       "kind": "DOOR",
+       "width_m": 0.8,
+       "height_m": 2.2,
+       "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+       "sill_m": 0.0,
+       "sill_authority": "reaches the floor",
+       "sources": [
+        "CLOSURE|I1443|A"
+       ],
+       "state": "COMPUTED",
+       "contained": true,
+       "gross_plane_m2": 2.56,
+       "deduction_m2": 1.76,
+       "lintel_m2": 0.8
+      }
+     ],
+     "head_faces": [],
+     "conservation": {
+      "boundary_m": 11.9,
+      "consumed_by_physical_jambs_m": 0.0,
+      "classified_m": 11.9,
+      "residual_m": 0.0,
+      "reconciles": true
+     },
+     "blockers": [],
+     "state": "COMPUTED",
+     "areas_m2": {
+      "wall_plane_gross": 36.0,
+      "opening_deductions": 1.76,
+      "lintels": 0.8,
+      "passage_head_faces": 0.0,
+      "WALL_FACE_NET": 34.24,
+      "COLUMN_FACE": 2.08,
+      "OBSTACLE_FACE": 0.0,
+      "check_two_ways": true
+     }
+    }
+   }
+  },
+  "SITE-8c1c7563d5252c50": {
+   "zones": [
+    "PAINTRY"
+   ],
+   "class": "SERVICE_ROOM",
+   "trades": {
+    "PAINT": {
+     "state": "NONE",
+     "authority": "US-03"
+    },
+    "PLASTER": {
+     "state": "NONE",
+     "authority": "US-03"
+    },
+    "WALL_TILE": {
+     "state": "APPLIES",
+     "height_m": 3.2,
+     "authority": "QORTUBA-NEW-WET-SERVICE-FINISH-OWNER-001@v1 (SERVICE_ROOM) + QP-07 PAINTRY"
+    }
+   },
+   "passages_in_site": [],
+   "faces": {
+    "WALL_TILE": {
+     "policy": "WALL_FACE_SURFACE_POLICY_V1",
+     "height_m": 3.2,
+     "height_authority": "QORTUBA-NEW-WET-SERVICE-FINISH-OWNER-001@v1 (SERVICE_ROOM) + QP-07 PAINTRY",
+     "lengths_m": {
+      "COLUMN_FACE": 1.4,
+      "OPENING_SPAN": 4.360992,
+      "WALL_FACE": 8.139008
+     },
+     "spans": [
+      {
+       "class": "OPENING",
+       "kind": "WINDOW",
+       "length_m": 1.610992,
+       "sources": [
+        "QORTUBA_REV_NEW|H1342||SEGMENT|0",
+        "QORTUBA_REV_NEW|H463||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109308.0817,
+         15327.7692
+        ],
+        [
+         109308.0817,
+         15166.67
+        ]
+       ]
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 1.169504,
+       "sources": [
+        "QORTUBA_REV_NEW|H463||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109308.0817,
+         15166.67
+        ],
+        [
+         109308.0817,
+         15049.7196
+        ]
+       ],
+       "area_m2": 3.742413
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 1.35,
+       "sources": [
+        "QORTUBA_REV_NEW|H477||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109308.0817,
+         15049.7196
+        ],
+        [
+         109443.0817,
+         15049.7196
+        ]
+       ],
+       "area_m2": 4.32
+      },
+      {
+       "class": "COLUMN_FACE",
+       "length_m": 1.4,
+       "sources": [
+        "QORTUBA_REV_NEW|H477||SEGMENT|0",
+        "QORTUBA_REV_NEW|H718||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109443.0817,
+         15049.7196
+        ],
+        [
+         109583.0817,
+         15049.7196
+        ]
+       ],
+       "area_m2": 4.48
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.1,
+       "sources": [
+        "QORTUBA_REV_NEW|H477||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109583.0817,
+         15049.7196
+        ],
+        [
+         109593.0817,
+         15049.7196
+        ]
+       ],
+       "area_m2": 0.32
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.6,
+       "sources": [
+        "QORTUBA_REV_NEW|H535||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109593.0817,
+         15109.7196
+        ],
+        [
+         109593.0817,
+         15049.7196
+        ]
+       ],
+       "area_m2": 1.92
+      },
+      {
+       "class": "OPENING",
+       "kind": "SLIDING_GLAZED_DOOR",
+       "length_m": 2.75,
+       "sources": [
+        "CLOSURE|GLAZED|QORTUBA_REV_NEW|H533||SEGMENT|0|F1",
+        "CLOSURE|GLAZED|QORTUBA_REV_NEW|H542||SEGMENT|0|F2"
+       ],
+       "geom": [
+        [
+         109593.0817,
+         15384.7196
+        ],
+        [
+         109593.0817,
+         15109.7196
+        ]
+       ]
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.75,
+       "sources": [
+        "QORTUBA_REV_NEW|H540||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109593.0817,
+         15459.7196
+        ],
+        [
+         109593.0817,
+         15384.7196
+        ]
+       ],
+       "area_m2": 2.4
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 2.85,
+       "sources": [
+        "QORTUBA_REV_NEW|H481||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109308.0817,
+         15459.7196
+        ],
+        [
+         109593.0817,
+         15459.7196
+        ]
+       ],
+       "area_m2": 9.12
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 1.319504,
+       "sources": [
+        "QORTUBA_REV_NEW|H463||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109308.0817,
+         15459.7196
+        ],
+        [
+         109308.0817,
+         15327.7692
+        ]
+       ],
+       "area_m2": 4.222413
+      }
+     ],
+     "openings": [
+      {
+       "opening": "QORTUBA_REV_NEW|H1342||SEGMENT",
+       "kind": "WINDOW",
+       "width_m": 1.610992,
+       "height_m": 1.5,
+       "height_authority": "QP-22 owner: 1.500 m for every Qortuba window whose height the drawing does not state",
+       "sill_m": 1.0,
+       "sill_authority": "QORTUBA-NEW-NORMAL-WINDOWS-ABOVE-FLOOR-OWNER-001@v2",
+       "sources": [
+        "QORTUBA_REV_NEW|H1342||SEGMENT|0",
+        "QORTUBA_REV_NEW|H463||SEGMENT|0"
+       ],
+       "state": "COMPUTED",
+       "contained": true,
+       "gross_plane_m2": 5.155174,
+       "deduction_m2": 2.416488,
+       "lintel_m2": null
+      },
+      {
+       "opening": "GLAZED|QORTUBA_REV_NEW|H533||SEGMENT|0",
+       "kind": "SLIDING_GLAZED_DOOR",
+       "width_m": 2.75,
+       "height_m": 2.2,
+       "height_authority": "QP-12 owner: the HALL / PAINTRY glazed opening 2.750 x 2.200 (same occurrence: glazing H533 / H542, 2.75 m, in both revisions) + QP-23 corroborating; floor contact from QORTUBA-NEW-HALL-PAINTRY-SLIDING-GLASS-DOOR-OWNER-001@v1",
+       "sill_m": 0.0,
+       "sill_authority": "reaches the floor",
+       "sources": [
+        "CLOSURE|GLAZED|QORTUBA_REV_NEW|H533||SEGMENT|0|F1",
+        "CLOSURE|GLAZED|QORTUBA_REV_NEW|H542||SEGMENT|0|F2"
+       ],
+       "state": "COMPUTED",
+       "contained": true,
+       "gross_plane_m2": 8.8,
+       "deduction_m2": 6.05,
+       "lintel_m2": 2.75
+      }
+     ],
+     "head_faces": [],
+     "conservation": {
+      "boundary_m": 13.9,
+      "consumed_by_physical_jambs_m": 0.0,
+      "classified_m": 13.9,
+      "residual_m": 0.0,
+      "reconciles": true
+     },
+     "blockers": [
+      "AREA_RECONCILIATION_FAILED"
+     ],
+     "state": "BLOCKED",
+     "areas_m2": {
+      "wall_plane_gross": 40.0,
+      "opening_deductions": 8.466488,
+      "lintels": 2.75,
+      "passage_head_faces": 0.0,
+      "WALL_FACE_NET": 31.533512,
+      "COLUMN_FACE": 4.48,
+      "OBSTACLE_FACE": 0.0,
+      "check_two_ways": false
+     }
+    }
+   }
+  },
+  "SITE-a2b19efc492a6d0b": {
+   "zones": [
+    "BATH"
+   ],
+   "class": "WET_SERVICE_ROOM",
+   "trades": {
+    "PAINT": {
+     "state": "NONE",
+     "authority": "US-03: normal paint is zero on a fully ceramic wall"
+    },
+    "PLASTER": {
+     "state": "NONE",
+     "authority": "US-03: no normal plaster as ceramic backing"
+    },
+    "WALL_TILE": {
+     "state": "APPLIES",
+     "height_m": 3.2,
+     "authority": "QORTUBA-NEW-WET-SERVICE-FINISH-OWNER-001@v1"
+    }
+   },
+   "passages_in_site": [],
+   "faces": {
+    "WALL_TILE": {
+     "policy": "WALL_FACE_SURFACE_POLICY_V1",
+     "height_m": 3.2,
+     "height_authority": "QORTUBA-NEW-WET-SERVICE-FINISH-OWNER-001@v1",
+     "lengths_m": {
+      "COLUMN_FACE": 1.4,
+      "OPENING_SPAN": 0.8,
+      "WALL_FACE": 7.2
+     },
+     "spans": [
+      {
+       "class": "OPENING",
+       "kind": "DOOR",
+       "length_m": 0.8,
+       "sources": [
+        "CLOSURE|I2044|A"
+       ],
+       "geom": [
+        [
+         109608.0817,
+         14869.7196
+        ],
+        [
+         109608.0817,
+         14949.7196
+        ]
+       ]
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.8,
+       "sources": [
+        "QORTUBA_REV_NEW|H7117||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109608.0817,
+         14949.7196
+        ],
+        [
+         109608.0817,
+         15029.7196
+        ]
+       ],
+       "area_m2": 2.56
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.25,
+       "sources": [
+        "QORTUBA_REV_NEW|H470||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109583.0817,
+         15029.7196
+        ],
+        [
+         109608.0817,
+         15029.7196
+        ]
+       ],
+       "area_m2": 0.8
+      },
+      {
+       "class": "COLUMN_FACE",
+       "length_m": 1.4,
+       "sources": [
+        "QORTUBA_REV_NEW|H470||SEGMENT|0",
+        "QORTUBA_REV_NEW|H718||SEGMENT|2"
+       ],
+       "geom": [
+        [
+         109443.0817,
+         15029.7196
+        ],
+        [
+         109583.0817,
+         15029.7196
+        ]
+       ],
+       "area_m2": 4.48
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 1.35,
+       "sources": [
+        "QORTUBA_REV_NEW|H470||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109308.0817,
+         15029.7196
+        ],
+        [
+         109443.0817,
+         15029.7196
+        ]
+       ],
+       "area_m2": 4.32
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 1.7,
+       "sources": [
+        "QORTUBA_REV_NEW|H464||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109308.0817,
+         15029.7196
+        ],
+        [
+         109308.0817,
+         14859.7196
+        ]
+       ],
+       "area_m2": 5.44
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 3.0,
+       "sources": [
+        "QORTUBA_REV_NEW|H472||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109308.0817,
+         14859.7196
+        ],
+        [
+         109608.0817,
+         14859.7196
+        ]
+       ],
+       "area_m2": 9.6
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.1,
+       "sources": [
+        "QORTUBA_REV_NEW|H466||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109608.0817,
+         14869.7196
+        ],
+        [
+         109608.0817,
+         14859.7196
+        ]
+       ],
+       "area_m2": 0.32
+      }
+     ],
+     "openings": [
+      {
+       "opening": "I2044",
+       "kind": "DOOR",
+       "width_m": 0.8,
+       "height_m": 2.2,
+       "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+       "sill_m": 0.0,
+       "sill_authority": "reaches the floor",
+       "sources": [
+        "CLOSURE|I2044|A"
+       ],
+       "state": "COMPUTED",
+       "contained": true,
+       "gross_plane_m2": 2.56,
+       "deduction_m2": 1.76,
+       "lintel_m2": 0.8
+      }
+     ],
+     "head_faces": [],
+     "conservation": {
+      "boundary_m": 9.4,
+      "consumed_by_physical_jambs_m": 0.0,
+      "classified_m": 9.4,
+      "residual_m": -0.0,
+      "reconciles": true
+     },
+     "blockers": [],
+     "state": "COMPUTED",
+     "areas_m2": {
+      "wall_plane_gross": 25.6,
+      "opening_deductions": 1.76,
+      "lintels": 0.8,
+      "passage_head_faces": 0.0,
+      "WALL_FACE_NET": 23.84,
+      "COLUMN_FACE": 4.48,
+      "OBSTACLE_FACE": 0.0,
+      "check_two_ways": true
+     }
+    }
+   }
+  },
+  "SITE-fe8ed5548fb4310e": {
+   "zones": [
+    "BATH"
+   ],
+   "class": "WET_SERVICE_ROOM",
+   "trades": {
+    "PAINT": {
+     "state": "NONE",
+     "authority": "US-03: normal paint is zero on a fully ceramic wall"
+    },
+    "PLASTER": {
+     "state": "NONE",
+     "authority": "US-03: no normal plaster as ceramic backing"
+    },
+    "WALL_TILE": {
+     "state": "APPLIES",
+     "height_m": 3.2,
+     "authority": "QORTUBA-NEW-WET-SERVICE-FINISH-OWNER-001@v1"
+    }
+   },
+   "passages_in_site": [],
+   "faces": {
+    "WALL_TILE": {
+     "policy": "WALL_FACE_SURFACE_POLICY_V1",
+     "height_m": 3.2,
+     "height_authority": "QORTUBA-NEW-WET-SERVICE-FINISH-OWNER-001@v1",
+     "lengths_m": {
+      "COLUMN_FACE": 1.2,
+      "OPENING_SPAN": 0.8,
+      "WALL_FACE": 7.0
+     },
+     "spans": [
+      {
+       "class": "OPENING",
+       "kind": "DOOR",
+       "length_m": 0.8,
+       "sources": [
+        "CLOSURE|I1561|A"
+       ],
+       "geom": [
+        [
+         109523.0817,
+         15484.7196
+        ],
+        [
+         109523.0817,
+         15564.7196
+        ]
+       ]
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.1,
+       "sources": [
+        "QORTUBA_REV_NEW|H528||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109523.0817,
+         15574.7196
+        ],
+        [
+         109523.0817,
+         15564.7196
+        ]
+       ],
+       "area_m2": 0.32
+      },
+      {
+       "class": "COLUMN_FACE",
+       "length_m": 0.2,
+       "sources": [
+        "QORTUBA_REV_NEW|H528||SEGMENT|0",
+        "QORTUBA_REV_NEW|H716||SEGMENT|3"
+       ],
+       "geom": [
+        [
+         109523.0817,
+         15594.7196
+        ],
+        [
+         109523.0817,
+         15574.7196
+        ]
+       ],
+       "area_m2": 0.64
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.8,
+       "sources": [
+        "QORTUBA_REV_NEW|H528||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109523.0817,
+         15674.7196
+        ],
+        [
+         109523.0817,
+         15594.7196
+        ]
+       ],
+       "area_m2": 2.56
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 2.15,
+       "sources": [
+        "QORTUBA_REV_NEW|H521||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109523.0817,
+         15674.7196
+        ],
+        [
+         109308.0817,
+         15674.7196
+        ]
+       ],
+       "area_m2": 6.88
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.4,
+       "sources": [
+        "QORTUBA_REV_NEW|H461||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109308.0817,
+         15674.7196
+        ],
+        [
+         109308.0817,
+         15634.7196
+        ]
+       ],
+       "area_m2": 1.28
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.15,
+       "sources": [
+        "QORTUBA_REV_NEW|H1674||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109323.0817,
+         15634.7196
+        ],
+        [
+         109308.0817,
+         15634.7196
+        ]
+       ],
+       "area_m2": 0.48
+      },
+      {
+       "class": "COLUMN_FACE",
+       "length_m": 0.2,
+       "sources": [
+        "QORTUBA_REV_NEW|H1674||SEGMENT|0",
+        "QORTUBA_REV_NEW|H720||SEGMENT|3"
+       ],
+       "geom": [
+        [
+         109343.0817,
+         15634.7196
+        ],
+        [
+         109323.0817,
+         15634.7196
+        ]
+       ],
+       "area_m2": 0.64
+      },
+      {
+       "class": "COLUMN_FACE",
+       "length_m": 0.6,
+       "sources": [
+        "QORTUBA_REV_NEW|H720||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109343.0817,
+         15634.7196
+        ],
+        [
+         109343.0817,
+         15574.7196
+        ]
+       ],
+       "area_m2": 1.92
+      },
+      {
+       "class": "COLUMN_FACE",
+       "length_m": 0.2,
+       "sources": [
+        "QORTUBA_REV_NEW|H1673||SEGMENT|0",
+        "QORTUBA_REV_NEW|H720||SEGMENT|1"
+       ],
+       "geom": [
+        [
+         109343.0817,
+         15574.7196
+        ],
+        [
+         109323.0817,
+         15574.7196
+        ]
+       ],
+       "area_m2": 0.64
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.15,
+       "sources": [
+        "QORTUBA_REV_NEW|H1673||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109323.0817,
+         15574.7196
+        ],
+        [
+         109308.0817,
+         15574.7196
+        ]
+       ],
+       "area_m2": 0.48
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 1.0,
+       "sources": [
+        "QORTUBA_REV_NEW|H462||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109308.0817,
+         15574.7196
+        ],
+        [
+         109308.0817,
+         15474.7196
+        ]
+       ],
+       "area_m2": 3.2
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 2.15,
+       "sources": [
+        "QORTUBA_REV_NEW|H483||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109308.0817,
+         15474.7196
+        ],
+        [
+         109523.0817,
+         15474.7196
+        ]
+       ],
+       "area_m2": 6.88
+      },
+      {
+       "class": "WALL_FACE",
+       "length_m": 0.1,
+       "sources": [
+        "QORTUBA_REV_NEW|H529||SEGMENT|0"
+       ],
+       "geom": [
+        [
+         109523.0817,
+         15484.7196
+        ],
+        [
+         109523.0817,
+         15474.7196
+        ]
+       ],
+       "area_m2": 0.32
+      }
+     ],
+     "openings": [
+      {
+       "opening": "I1561",
+       "kind": "DOOR",
+       "width_m": 0.8,
+       "height_m": 2.2,
+       "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+       "sill_m": 0.0,
+       "sill_authority": "reaches the floor",
+       "sources": [
+        "CLOSURE|I1561|A"
+       ],
+       "state": "COMPUTED",
+       "contained": true,
+       "gross_plane_m2": 2.56,
+       "deduction_m2": 1.76,
+       "lintel_m2": 0.8
+      }
+     ],
+     "head_faces": [],
+     "conservation": {
+      "boundary_m": 9.0,
+      "consumed_by_physical_jambs_m": 0.0,
+      "classified_m": 9.0,
+      "residual_m": 0.0,
+      "reconciles": true
+     },
+     "blockers": [],
+     "state": "COMPUTED",
+     "areas_m2": {
+      "wall_plane_gross": 24.96,
+      "opening_deductions": 1.76,
+      "lintels": 0.8,
+      "passage_head_faces": 0.0,
+      "WALL_FACE_NET": 23.2,
+      "COLUMN_FACE": 3.84,
+      "OBSTACLE_FACE": 0.0,
+      "check_two_ways": true
+     }
+    }
+   }
+  }
+ },
+ "reveals": [
+  {
+   "opening": "I1028",
+   "surface": "LEFT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.15,
+   "height_m": 2.2,
+   "area_m2": 0.33,
+   "depth_basis": "SOURCE (door strip thickness)",
+   "state": "COMPUTED",
+   "kind": "DOOR",
+   "rooms": [
+    "OUTSIDE_MEASURED_UNIT"
+   ],
+   "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+   "trade": "NOT_ESTABLISHED (a wet / service or outside-unit side: tile vs plaster not stated)"
+  },
+  {
+   "opening": "I1028",
+   "surface": "RIGHT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.15,
+   "height_m": 2.2,
+   "area_m2": 0.33,
+   "depth_basis": "SOURCE (door strip thickness)",
+   "state": "COMPUTED",
+   "kind": "DOOR",
+   "rooms": [
+    "OUTSIDE_MEASURED_UNIT"
+   ],
+   "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+   "trade": "NOT_ESTABLISHED (a wet / service or outside-unit side: tile vs plaster not stated)"
+  },
+  {
+   "opening": "I1028",
+   "surface": "TOP_REVEAL",
+   "class": "HEAD_REVEAL",
+   "depth_m": 0.15,
+   "width_m": 1.0,
+   "area_m2": 0.15,
+   "depth_basis": "SOURCE (door strip thickness)",
+   "state": "COMPUTED",
+   "kind": "DOOR",
+   "rooms": [
+    "OUTSIDE_MEASURED_UNIT"
+   ],
+   "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+   "trade": "NOT_ESTABLISHED (a wet / service or outside-unit side: tile vs plaster not stated)"
+  },
+  {
+   "opening": "I1443",
+   "surface": "LEFT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.15,
+   "height_m": 2.2,
+   "area_m2": 0.33,
+   "depth_basis": "SOURCE (door strip thickness)",
+   "state": "COMPUTED",
+   "kind": "DOOR",
+   "rooms": [
+    "DRY_INTERNAL_ROOM",
+    "OUTSIDE_MEASURED_UNIT",
+    "WET_SERVICE_ROOM"
+   ],
+   "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+   "trade": "NOT_ESTABLISHED (a wet / service or outside-unit side: tile vs plaster not stated)"
+  },
+  {
+   "opening": "I1443",
+   "surface": "RIGHT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.15,
+   "height_m": 2.2,
+   "area_m2": 0.33,
+   "depth_basis": "SOURCE (door strip thickness)",
+   "state": "COMPUTED",
+   "kind": "DOOR",
+   "rooms": [
+    "DRY_INTERNAL_ROOM",
+    "OUTSIDE_MEASURED_UNIT",
+    "WET_SERVICE_ROOM"
+   ],
+   "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+   "trade": "NOT_ESTABLISHED (a wet / service or outside-unit side: tile vs plaster not stated)"
+  },
+  {
+   "opening": "I1443",
+   "surface": "TOP_REVEAL",
+   "class": "HEAD_REVEAL",
+   "depth_m": 0.15,
+   "width_m": 0.8,
+   "area_m2": 0.12,
+   "depth_basis": "SOURCE (door strip thickness)",
+   "state": "COMPUTED",
+   "kind": "DOOR",
+   "rooms": [
+    "DRY_INTERNAL_ROOM",
+    "OUTSIDE_MEASURED_UNIT",
+    "WET_SERVICE_ROOM"
+   ],
+   "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+   "trade": "NOT_ESTABLISHED (a wet / service or outside-unit side: tile vs plaster not stated)"
+  },
+  {
+   "opening": "I1471",
+   "surface": "LEFT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.15,
+   "height_m": 2.2,
+   "area_m2": 0.33,
+   "depth_basis": "SOURCE (door strip thickness)",
+   "state": "COMPUTED",
+   "kind": "DOOR",
+   "rooms": [
+    "DRY_INTERNAL_ROOM",
+    "OUTSIDE_MEASURED_UNIT"
+   ],
+   "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+   "trade": "NOT_ESTABLISHED (a wet / service or outside-unit side: tile vs plaster not stated)"
+  },
+  {
+   "opening": "I1471",
+   "surface": "RIGHT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.15,
+   "height_m": 2.2,
+   "area_m2": 0.33,
+   "depth_basis": "SOURCE (door strip thickness)",
+   "state": "COMPUTED",
+   "kind": "DOOR",
+   "rooms": [
+    "DRY_INTERNAL_ROOM",
+    "OUTSIDE_MEASURED_UNIT"
+   ],
+   "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+   "trade": "NOT_ESTABLISHED (a wet / service or outside-unit side: tile vs plaster not stated)"
+  },
+  {
+   "opening": "I1471",
+   "surface": "TOP_REVEAL",
+   "class": "HEAD_REVEAL",
+   "depth_m": 0.15,
+   "width_m": 1.0,
+   "area_m2": 0.15,
+   "depth_basis": "SOURCE (door strip thickness)",
+   "state": "COMPUTED",
+   "kind": "DOOR",
+   "rooms": [
+    "DRY_INTERNAL_ROOM",
+    "OUTSIDE_MEASURED_UNIT"
+   ],
+   "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+   "trade": "NOT_ESTABLISHED (a wet / service or outside-unit side: tile vs plaster not stated)"
+  },
+  {
+   "opening": "I1561",
+   "surface": "LEFT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.15,
+   "height_m": 2.2,
+   "area_m2": 0.33,
+   "depth_basis": "SOURCE (door strip thickness)",
+   "state": "COMPUTED",
+   "kind": "DOOR",
+   "rooms": [
+    "DRY_INTERNAL_ROOM",
+    "OUTSIDE_MEASURED_UNIT",
+    "WET_SERVICE_ROOM"
+   ],
+   "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+   "trade": "NOT_ESTABLISHED (a wet / service or outside-unit side: tile vs plaster not stated)"
+  },
+  {
+   "opening": "I1561",
+   "surface": "RIGHT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.15,
+   "height_m": 2.2,
+   "area_m2": 0.33,
+   "depth_basis": "SOURCE (door strip thickness)",
+   "state": "COMPUTED",
+   "kind": "DOOR",
+   "rooms": [
+    "DRY_INTERNAL_ROOM",
+    "OUTSIDE_MEASURED_UNIT",
+    "WET_SERVICE_ROOM"
+   ],
+   "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+   "trade": "NOT_ESTABLISHED (a wet / service or outside-unit side: tile vs plaster not stated)"
+  },
+  {
+   "opening": "I1561",
+   "surface": "TOP_REVEAL",
+   "class": "HEAD_REVEAL",
+   "depth_m": 0.15,
+   "width_m": 0.8,
+   "area_m2": 0.12,
+   "depth_basis": "SOURCE (door strip thickness)",
+   "state": "COMPUTED",
+   "kind": "DOOR",
+   "rooms": [
+    "DRY_INTERNAL_ROOM",
+    "OUTSIDE_MEASURED_UNIT",
+    "WET_SERVICE_ROOM"
+   ],
+   "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+   "trade": "NOT_ESTABLISHED (a wet / service or outside-unit side: tile vs plaster not stated)"
+  },
+  {
+   "opening": "I1988",
+   "surface": "LEFT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.15,
+   "height_m": 2.2,
+   "area_m2": 0.33,
+   "depth_basis": "SOURCE (door strip thickness)",
+   "state": "COMPUTED",
+   "kind": "DOOR",
+   "rooms": [
+    "DRY_INTERNAL_ROOM",
+    "OUTSIDE_MEASURED_UNIT"
+   ],
+   "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+   "trade": "NOT_ESTABLISHED (a wet / service or outside-unit side: tile vs plaster not stated)"
+  },
+  {
+   "opening": "I1988",
+   "surface": "RIGHT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.15,
+   "height_m": 2.2,
+   "area_m2": 0.33,
+   "depth_basis": "SOURCE (door strip thickness)",
+   "state": "COMPUTED",
+   "kind": "DOOR",
+   "rooms": [
+    "DRY_INTERNAL_ROOM",
+    "OUTSIDE_MEASURED_UNIT"
+   ],
+   "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+   "trade": "NOT_ESTABLISHED (a wet / service or outside-unit side: tile vs plaster not stated)"
+  },
+  {
+   "opening": "I1988",
+   "surface": "TOP_REVEAL",
+   "class": "HEAD_REVEAL",
+   "depth_m": 0.15,
+   "width_m": 1.0,
+   "area_m2": 0.15,
+   "depth_basis": "SOURCE (door strip thickness)",
+   "state": "COMPUTED",
+   "kind": "DOOR",
+   "rooms": [
+    "DRY_INTERNAL_ROOM",
+    "OUTSIDE_MEASURED_UNIT"
+   ],
+   "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+   "trade": "NOT_ESTABLISHED (a wet / service or outside-unit side: tile vs plaster not stated)"
+  },
+  {
+   "opening": "I2044",
+   "surface": "LEFT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.15,
+   "height_m": 2.2,
+   "area_m2": 0.33,
+   "depth_basis": "SOURCE (door strip thickness)",
+   "state": "COMPUTED",
+   "kind": "DOOR",
+   "rooms": [
+    "DRY_INTERNAL_ROOM",
+    "OUTSIDE_MEASURED_UNIT",
+    "WET_SERVICE_ROOM"
+   ],
+   "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+   "trade": "NOT_ESTABLISHED (a wet / service or outside-unit side: tile vs plaster not stated)"
+  },
+  {
+   "opening": "I2044",
+   "surface": "RIGHT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.15,
+   "height_m": 2.2,
+   "area_m2": 0.33,
+   "depth_basis": "SOURCE (door strip thickness)",
+   "state": "COMPUTED",
+   "kind": "DOOR",
+   "rooms": [
+    "DRY_INTERNAL_ROOM",
+    "OUTSIDE_MEASURED_UNIT",
+    "WET_SERVICE_ROOM"
+   ],
+   "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+   "trade": "NOT_ESTABLISHED (a wet / service or outside-unit side: tile vs plaster not stated)"
+  },
+  {
+   "opening": "I2044",
+   "surface": "TOP_REVEAL",
+   "class": "HEAD_REVEAL",
+   "depth_m": 0.15,
+   "width_m": 0.8,
+   "area_m2": 0.12,
+   "depth_basis": "SOURCE (door strip thickness)",
+   "state": "COMPUTED",
+   "kind": "DOOR",
+   "rooms": [
+    "DRY_INTERNAL_ROOM",
+    "OUTSIDE_MEASURED_UNIT",
+    "WET_SERVICE_ROOM"
+   ],
+   "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+   "trade": "NOT_ESTABLISHED (a wet / service or outside-unit side: tile vs plaster not stated)"
+  },
+  {
+   "opening": "I677",
+   "surface": "LEFT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.15,
+   "height_m": 2.2,
+   "area_m2": 0.33,
+   "depth_basis": "SOURCE (door strip thickness)",
+   "state": "COMPUTED",
+   "kind": "DOOR",
+   "rooms": [
+    "DRY_INTERNAL_ROOM",
+    "OUTSIDE_MEASURED_UNIT"
+   ],
+   "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+   "trade": "NOT_ESTABLISHED (a wet / service or outside-unit side: tile vs plaster not stated)"
+  },
+  {
+   "opening": "I677",
+   "surface": "RIGHT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.15,
+   "height_m": 2.2,
+   "area_m2": 0.33,
+   "depth_basis": "SOURCE (door strip thickness)",
+   "state": "COMPUTED",
+   "kind": "DOOR",
+   "rooms": [
+    "DRY_INTERNAL_ROOM",
+    "OUTSIDE_MEASURED_UNIT"
+   ],
+   "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+   "trade": "NOT_ESTABLISHED (a wet / service or outside-unit side: tile vs plaster not stated)"
+  },
+  {
+   "opening": "I677",
+   "surface": "TOP_REVEAL",
+   "class": "HEAD_REVEAL",
+   "depth_m": 0.15,
+   "width_m": 1.0,
+   "area_m2": 0.15,
+   "depth_basis": "SOURCE (door strip thickness)",
+   "state": "COMPUTED",
+   "kind": "DOOR",
+   "rooms": [
+    "DRY_INTERNAL_ROOM",
+    "OUTSIDE_MEASURED_UNIT"
+   ],
+   "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+   "trade": "NOT_ESTABLISHED (a wet / service or outside-unit side: tile vs plaster not stated)"
+  },
+  {
+   "opening": "I841",
+   "surface": "LEFT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.15,
+   "height_m": 2.2,
+   "area_m2": 0.33,
+   "depth_basis": "SOURCE (door strip thickness)",
+   "state": "COMPUTED",
+   "kind": "DOOR",
+   "rooms": [
+    "DRY_INTERNAL_ROOM",
+    "OUTSIDE_MEASURED_UNIT"
+   ],
+   "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+   "trade": "NOT_ESTABLISHED (a wet / service or outside-unit side: tile vs plaster not stated)"
+  },
+  {
+   "opening": "I841",
+   "surface": "RIGHT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.15,
+   "height_m": 2.2,
+   "area_m2": 0.33,
+   "depth_basis": "SOURCE (door strip thickness)",
+   "state": "COMPUTED",
+   "kind": "DOOR",
+   "rooms": [
+    "DRY_INTERNAL_ROOM",
+    "OUTSIDE_MEASURED_UNIT"
+   ],
+   "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+   "trade": "NOT_ESTABLISHED (a wet / service or outside-unit side: tile vs plaster not stated)"
+  },
+  {
+   "opening": "I841",
+   "surface": "TOP_REVEAL",
+   "class": "HEAD_REVEAL",
+   "depth_m": 0.15,
+   "width_m": 1.0,
+   "area_m2": 0.15,
+   "depth_basis": "SOURCE (door strip thickness)",
+   "state": "COMPUTED",
+   "kind": "DOOR",
+   "rooms": [
+    "DRY_INTERNAL_ROOM",
+    "OUTSIDE_MEASURED_UNIT"
+   ],
+   "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+   "trade": "NOT_ESTABLISHED (a wet / service or outside-unit side: tile vs plaster not stated)"
+  },
+  {
+   "opening": "GLAZED|QORTUBA_REV_NEW|H533||SEGMENT|0",
+   "surface": "LEFT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.15,
+   "height_m": 2.2,
+   "area_m2": 0.33,
+   "depth_basis": "SOURCE (glazed strip thickness)",
+   "state": "COMPUTED",
+   "kind": "SLIDING_GLAZED_DOOR",
+   "rooms": [
+    "DRY_INTERNAL_ROOM",
+    "OUTSIDE_MEASURED_UNIT",
+    "SERVICE_ROOM"
+   ],
+   "height_authority": "QP-12 owner: the HALL / PAINTRY glazed opening 2.750 x 2.200 (same occurrence: glazing H533 / H542, 2.75 m, in both revisions) + QP-23 corroborating; floor contact from QORTUBA-NEW-HALL-PAINTRY-SLIDING-GLASS-DOOR-OWNER-001@v1",
+   "trade": "NOT_ESTABLISHED (a wet / service or outside-unit side: tile vs plaster not stated)"
+  },
+  {
+   "opening": "GLAZED|QORTUBA_REV_NEW|H533||SEGMENT|0",
+   "surface": "RIGHT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.15,
+   "height_m": 2.2,
+   "area_m2": 0.33,
+   "depth_basis": "SOURCE (glazed strip thickness)",
+   "state": "COMPUTED",
+   "kind": "SLIDING_GLAZED_DOOR",
+   "rooms": [
+    "DRY_INTERNAL_ROOM",
+    "OUTSIDE_MEASURED_UNIT",
+    "SERVICE_ROOM"
+   ],
+   "height_authority": "QP-12 owner: the HALL / PAINTRY glazed opening 2.750 x 2.200 (same occurrence: glazing H533 / H542, 2.75 m, in both revisions) + QP-23 corroborating; floor contact from QORTUBA-NEW-HALL-PAINTRY-SLIDING-GLASS-DOOR-OWNER-001@v1",
+   "trade": "NOT_ESTABLISHED (a wet / service or outside-unit side: tile vs plaster not stated)"
+  },
+  {
+   "opening": "GLAZED|QORTUBA_REV_NEW|H533||SEGMENT|0",
+   "surface": "TOP_REVEAL",
+   "class": "HEAD_REVEAL",
+   "depth_m": 0.15,
+   "width_m": 2.75,
+   "area_m2": 0.4125,
+   "depth_basis": "SOURCE (glazed strip thickness)",
+   "state": "COMPUTED",
+   "kind": "SLIDING_GLAZED_DOOR",
+   "rooms": [
+    "DRY_INTERNAL_ROOM",
+    "OUTSIDE_MEASURED_UNIT",
+    "SERVICE_ROOM"
+   ],
+   "height_authority": "QP-12 owner: the HALL / PAINTRY glazed opening 2.750 x 2.200 (same occurrence: glazing H533 / H542, 2.75 m, in both revisions) + QP-23 corroborating; floor contact from QORTUBA-NEW-HALL-PAINTRY-SLIDING-GLASS-DOOR-OWNER-001@v1",
+   "trade": "NOT_ESTABLISHED (a wet / service or outside-unit side: tile vs plaster not stated)"
+  },
+  {
+   "opening": "OP-997f14d12b8e9bc1",
+   "surface": "LEFT_JAMB",
+   "state": "BLOCKED",
+   "depth_basis": "SOURCE (band thickness)",
+   "kind": "WITH_HEAD",
+   "rooms": [
+    "DRY_INTERNAL_ROOM"
+   ],
+   "height_authority": "QORTUBA-NEW-OPEN-PASSAGE-SOFFIT-NOT-CEILING-OWNER-001@v1",
+   "trade": "PLASTER (US-07 add-back; source depth first); PAINT only where the paint row applies (US-07)",
+   "non_physical_sides": []
+  },
+  {
+   "opening": "OP-997f14d12b8e9bc1",
+   "surface": "RIGHT_JAMB",
+   "state": "BLOCKED",
+   "depth_basis": "SOURCE (band thickness)",
+   "kind": "WITH_HEAD",
+   "rooms": [
+    "DRY_INTERNAL_ROOM"
+   ],
+   "height_authority": "QORTUBA-NEW-OPEN-PASSAGE-SOFFIT-NOT-CEILING-OWNER-001@v1",
+   "trade": "PLASTER (US-07 add-back; source depth first); PAINT only where the paint row applies (US-07)",
+   "non_physical_sides": []
+  },
+  {
+   "opening": "OP-9e0fd219ca5cd391",
+   "surface": "LEFT_JAMB",
+   "state": "BLOCKED",
+   "depth_basis": "SOURCE (band thickness)",
+   "kind": "FULL_HEIGHT",
+   "rooms": [
+    "DRY_INTERNAL_ROOM"
+   ],
+   "height_authority": "QORTUBA-NEW-MB-DRESS-PASSAGE-FULL-HEIGHT-OWNER-001@v1",
+   "trade": "PLASTER (US-07 add-back; source depth first); PAINT only where the paint row applies (US-07)",
+   "non_physical_sides": [
+    "RIGHT"
+   ]
+  },
+  {
+   "opening": "QORTUBA_REV_NEW|H1020||SEGMENT",
+   "surface": "LEFT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.25,
+   "height_m": 1.5,
+   "area_m2": 0.375,
+   "depth_basis": "US-07 FALLBACK: the glazing is drawn on the wall face line, the frame position in the wall is not in the source",
+   "state": "COMPUTED",
+   "kind": "WINDOW",
+   "rooms": [
+    "DRY_INTERNAL_ROOM"
+   ],
+   "height_authority": "QP-22 owner: 1.500 m for every Qortuba window whose height the drawing does not state",
+   "trade": "PLASTER (US-07 add-back; source depth first); PAINT only where the paint row applies (US-07)"
+  },
+  {
+   "opening": "QORTUBA_REV_NEW|H1020||SEGMENT",
+   "surface": "RIGHT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.25,
+   "height_m": 1.5,
+   "area_m2": 0.375,
+   "depth_basis": "US-07 FALLBACK: the glazing is drawn on the wall face line, the frame position in the wall is not in the source",
+   "state": "COMPUTED",
+   "kind": "WINDOW",
+   "rooms": [
+    "DRY_INTERNAL_ROOM"
+   ],
+   "height_authority": "QP-22 owner: 1.500 m for every Qortuba window whose height the drawing does not state",
+   "trade": "PLASTER (US-07 add-back; source depth first); PAINT only where the paint row applies (US-07)"
+  },
+  {
+   "opening": "QORTUBA_REV_NEW|H1020||SEGMENT",
+   "surface": "TOP_REVEAL",
+   "class": "HEAD_REVEAL",
+   "depth_m": 0.25,
+   "width_m": 1.342287,
+   "area_m2": 0.335572,
+   "depth_basis": "US-07 FALLBACK: the glazing is drawn on the wall face line, the frame position in the wall is not in the source",
+   "state": "COMPUTED",
+   "kind": "WINDOW",
+   "rooms": [
+    "DRY_INTERNAL_ROOM"
+   ],
+   "height_authority": "QP-22 owner: 1.500 m for every Qortuba window whose height the drawing does not state",
+   "trade": "PLASTER (US-07 add-back; source depth first); PAINT only where the paint row applies (US-07)"
+  },
+  {
+   "opening": "QORTUBA_REV_NEW|H1026||SEGMENT",
+   "surface": "LEFT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.25,
+   "height_m": 1.5,
+   "area_m2": 0.375,
+   "depth_basis": "US-07 FALLBACK: the glazing is drawn on the wall face line, the frame position in the wall is not in the source",
+   "state": "COMPUTED",
+   "kind": "WINDOW",
+   "rooms": [
+    "DRY_INTERNAL_ROOM"
+   ],
+   "height_authority": "QP-22 owner: 1.500 m for every Qortuba window whose height the drawing does not state",
+   "trade": "PLASTER (US-07 add-back; source depth first); PAINT only where the paint row applies (US-07)"
+  },
+  {
+   "opening": "QORTUBA_REV_NEW|H1026||SEGMENT",
+   "surface": "RIGHT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.25,
+   "height_m": 1.5,
+   "area_m2": 0.375,
+   "depth_basis": "US-07 FALLBACK: the glazing is drawn on the wall face line, the frame position in the wall is not in the source",
+   "state": "COMPUTED",
+   "kind": "WINDOW",
+   "rooms": [
+    "DRY_INTERNAL_ROOM"
+   ],
+   "height_authority": "QP-22 owner: 1.500 m for every Qortuba window whose height the drawing does not state",
+   "trade": "PLASTER (US-07 add-back; source depth first); PAINT only where the paint row applies (US-07)"
+  },
+  {
+   "opening": "QORTUBA_REV_NEW|H1026||SEGMENT",
+   "surface": "TOP_REVEAL",
+   "class": "HEAD_REVEAL",
+   "depth_m": 0.25,
+   "width_m": 1.697515,
+   "area_m2": 0.424379,
+   "depth_basis": "US-07 FALLBACK: the glazing is drawn on the wall face line, the frame position in the wall is not in the source",
+   "state": "COMPUTED",
+   "kind": "WINDOW",
+   "rooms": [
+    "DRY_INTERNAL_ROOM"
+   ],
+   "height_authority": "QP-22 owner: 1.500 m for every Qortuba window whose height the drawing does not state",
+   "trade": "PLASTER (US-07 add-back; source depth first); PAINT only where the paint row applies (US-07)"
+  },
+  {
+   "opening": "QORTUBA_REV_NEW|H1319||SEGMENT",
+   "surface": "LEFT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.25,
+   "height_m": 1.5,
+   "area_m2": 0.375,
+   "depth_basis": "US-07 FALLBACK: the glazing is drawn on the wall face line, the frame position in the wall is not in the source",
+   "state": "COMPUTED",
+   "kind": "WINDOW",
+   "rooms": [
+    "DRY_INTERNAL_ROOM"
+   ],
+   "height_authority": "QP-22 owner: 1.500 m for every Qortuba window whose height the drawing does not state",
+   "trade": "PLASTER (US-07 add-back; source depth first); PAINT only where the paint row applies (US-07)"
+  },
+  {
+   "opening": "QORTUBA_REV_NEW|H1319||SEGMENT",
+   "surface": "RIGHT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.25,
+   "height_m": 1.5,
+   "area_m2": 0.375,
+   "depth_basis": "US-07 FALLBACK: the glazing is drawn on the wall face line, the frame position in the wall is not in the source",
+   "state": "COMPUTED",
+   "kind": "WINDOW",
+   "rooms": [
+    "DRY_INTERNAL_ROOM"
+   ],
+   "height_authority": "QP-22 owner: 1.500 m for every Qortuba window whose height the drawing does not state",
+   "trade": "PLASTER (US-07 add-back; source depth first); PAINT only where the paint row applies (US-07)"
+  },
+  {
+   "opening": "QORTUBA_REV_NEW|H1319||SEGMENT",
+   "surface": "TOP_REVEAL",
+   "class": "HEAD_REVEAL",
+   "depth_m": 0.25,
+   "width_m": 1.205359,
+   "area_m2": 0.30134,
+   "depth_basis": "US-07 FALLBACK: the glazing is drawn on the wall face line, the frame position in the wall is not in the source",
+   "state": "COMPUTED",
+   "kind": "WINDOW",
+   "rooms": [
+    "DRY_INTERNAL_ROOM"
+   ],
+   "height_authority": "QP-22 owner: 1.500 m for every Qortuba window whose height the drawing does not state",
+   "trade": "PLASTER (US-07 add-back; source depth first); PAINT only where the paint row applies (US-07)"
+  },
+  {
+   "opening": "QORTUBA_REV_NEW|H1325||SEGMENT",
+   "surface": "LEFT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.25,
+   "height_m": 1.5,
+   "area_m2": 0.375,
+   "depth_basis": "US-07 FALLBACK: the glazing is drawn on the wall face line, the frame position in the wall is not in the source",
+   "state": "COMPUTED",
+   "kind": "WINDOW",
+   "rooms": [
+    "DRY_INTERNAL_ROOM"
+   ],
+   "height_authority": "QP-22 owner: 1.500 m for every Qortuba window whose height the drawing does not state",
+   "trade": "PLASTER (US-07 add-back; source depth first); PAINT only where the paint row applies (US-07)"
+  },
+  {
+   "opening": "QORTUBA_REV_NEW|H1325||SEGMENT",
+   "surface": "RIGHT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.25,
+   "height_m": 1.5,
+   "area_m2": 0.375,
+   "depth_basis": "US-07 FALLBACK: the glazing is drawn on the wall face line, the frame position in the wall is not in the source",
+   "state": "COMPUTED",
+   "kind": "WINDOW",
+   "rooms": [
+    "DRY_INTERNAL_ROOM"
+   ],
+   "height_authority": "QP-22 owner: 1.500 m for every Qortuba window whose height the drawing does not state",
+   "trade": "PLASTER (US-07 add-back; source depth first); PAINT only where the paint row applies (US-07)"
+  },
+  {
+   "opening": "QORTUBA_REV_NEW|H1325||SEGMENT",
+   "surface": "TOP_REVEAL",
+   "class": "HEAD_REVEAL",
+   "depth_m": 0.25,
+   "width_m": 2.5,
+   "area_m2": 0.625,
+   "depth_basis": "US-07 FALLBACK: the glazing is drawn on the wall face line, the frame position in the wall is not in the source",
+   "state": "COMPUTED",
+   "kind": "WINDOW",
+   "rooms": [
+    "DRY_INTERNAL_ROOM"
+   ],
+   "height_authority": "QP-22 owner: 1.500 m for every Qortuba window whose height the drawing does not state",
+   "trade": "PLASTER (US-07 add-back; source depth first); PAINT only where the paint row applies (US-07)"
+  },
+  {
+   "opening": "QORTUBA_REV_NEW|H1342||SEGMENT",
+   "surface": "LEFT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.25,
+   "height_m": 1.5,
+   "area_m2": 0.375,
+   "depth_basis": "US-07 FALLBACK: the glazing is drawn on the wall face line, the frame position in the wall is not in the source",
+   "state": "COMPUTED",
+   "kind": "WINDOW",
+   "rooms": [
+    "SERVICE_ROOM"
+   ],
+   "height_authority": "QP-22 owner: 1.500 m for every Qortuba window whose height the drawing does not state",
+   "trade": "NOT_ESTABLISHED (a wet / service or outside-unit side: tile vs plaster not stated)"
+  },
+  {
+   "opening": "QORTUBA_REV_NEW|H1342||SEGMENT",
+   "surface": "RIGHT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.25,
+   "height_m": 1.5,
+   "area_m2": 0.375,
+   "depth_basis": "US-07 FALLBACK: the glazing is drawn on the wall face line, the frame position in the wall is not in the source",
+   "state": "COMPUTED",
+   "kind": "WINDOW",
+   "rooms": [
+    "SERVICE_ROOM"
+   ],
+   "height_authority": "QP-22 owner: 1.500 m for every Qortuba window whose height the drawing does not state",
+   "trade": "NOT_ESTABLISHED (a wet / service or outside-unit side: tile vs plaster not stated)"
+  },
+  {
+   "opening": "QORTUBA_REV_NEW|H1342||SEGMENT",
+   "surface": "TOP_REVEAL",
+   "class": "HEAD_REVEAL",
+   "depth_m": 0.25,
+   "width_m": 1.610992,
+   "area_m2": 0.402748,
+   "depth_basis": "US-07 FALLBACK: the glazing is drawn on the wall face line, the frame position in the wall is not in the source",
+   "state": "COMPUTED",
+   "kind": "WINDOW",
+   "rooms": [
+    "SERVICE_ROOM"
+   ],
+   "height_authority": "QP-22 owner: 1.500 m for every Qortuba window whose height the drawing does not state",
+   "trade": "NOT_ESTABLISHED (a wet / service or outside-unit side: tile vs plaster not stated)"
+  },
+  {
+   "opening": "QORTUBA_REV_NEW|H1518||SEGMENT",
+   "surface": "LEFT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.25,
+   "height_m": 1.5,
+   "area_m2": 0.375,
+   "depth_basis": "US-07 FALLBACK: the glazing is drawn on the wall face line, the frame position in the wall is not in the source",
+   "state": "COMPUTED",
+   "kind": "WINDOW",
+   "rooms": [
+    "DRY_INTERNAL_ROOM"
+   ],
+   "height_authority": "QP-22 owner: 1.500 m for every Qortuba window whose height the drawing does not state",
+   "trade": "PLASTER (US-07 add-back; source depth first); PAINT only where the paint row applies (US-07)"
+  },
+  {
+   "opening": "QORTUBA_REV_NEW|H1518||SEGMENT",
+   "surface": "RIGHT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.25,
+   "height_m": 1.5,
+   "area_m2": 0.375,
+   "depth_basis": "US-07 FALLBACK: the glazing is drawn on the wall face line, the frame position in the wall is not in the source",
+   "state": "COMPUTED",
+   "kind": "WINDOW",
+   "rooms": [
+    "DRY_INTERNAL_ROOM"
+   ],
+   "height_authority": "QP-22 owner: 1.500 m for every Qortuba window whose height the drawing does not state",
+   "trade": "PLASTER (US-07 add-back; source depth first); PAINT only where the paint row applies (US-07)"
+  },
+  {
+   "opening": "QORTUBA_REV_NEW|H1518||SEGMENT",
+   "surface": "TOP_REVEAL",
+   "class": "HEAD_REVEAL",
+   "depth_m": 0.25,
+   "width_m": 2.346444,
+   "area_m2": 0.586611,
+   "depth_basis": "US-07 FALLBACK: the glazing is drawn on the wall face line, the frame position in the wall is not in the source",
+   "state": "COMPUTED",
+   "kind": "WINDOW",
+   "rooms": [
+    "DRY_INTERNAL_ROOM"
+   ],
+   "height_authority": "QP-22 owner: 1.500 m for every Qortuba window whose height the drawing does not state",
+   "trade": "PLASTER (US-07 add-back; source depth first); PAINT only where the paint row applies (US-07)"
+  }
+ ],
+ "double_count_guard": {
+  "surfaces": 181,
+  "duplicates": [],
+  "state": "PASS"
+ },
+ "trade_rows": {
+  "WALL_TILE": {
+   "state": "BLOCKED",
+   "value_m2": null,
+   "sites": [
+    "SITE-1c4abf65f9b5db1e",
+    "SITE-8c1c7563d5252c50",
+    "SITE-a2b19efc492a6d0b",
+    "SITE-fe8ed5548fb4310e"
+   ],
+   "blockers": [
+    "AREA_RECONCILIATION_FAILED"
+   ],
+   "column_faces": "INCLUDED",
+   "obstacle_faces": "NOT_ESTABLISHED",
+   "reveals": "EXCLUDED (wet / service reveal treatment NOT_ESTABLISHED - reported separately)"
+  },
+  "PLASTER": {
+   "state": "BLOCKED",
+   "value_m2": null,
+   "sites": [
+    "SITE-5f1762f1a93b91ca",
+    "SITE-77a2130eb275604c",
+    "SITE-a6405850100155ac",
+    "SITE-daca396d6d730e60"
+   ],
+   "blockers": [
+    "PASSAGE_HEAD_NOT_ESTABLISHED: OP-997f14d12b8e9bc1",
+    "PASSAGE_HEAD_NOT_ESTABLISHED: OP-9e0fd219ca5cd391",
+    "TRADE_HEIGHT_NOT_ESTABLISHED"
+   ],
+   "column_faces": "INCLUDED",
+   "obstacle_faces": "NOT_ESTABLISHED",
+   "reveals": "SEPARATE (US-07 add-back, its own register)"
+  },
+  "PAINT": {
+   "state": "BLOCKED",
+   "value_m2": null,
+   "sites": [
+    "SITE-5f1762f1a93b91ca",
+    "SITE-77a2130eb275604c",
+    "SITE-a6405850100155ac",
+    "SITE-daca396d6d730e60"
+   ],
+   "blockers": [
+    "PASSAGE_HEAD_NOT_ESTABLISHED: OP-997f14d12b8e9bc1",
+    "PASSAGE_HEAD_NOT_ESTABLISHED: OP-9e0fd219ca5cd391",
+    "TRADE_HEIGHT_NOT_ESTABLISHED"
+   ],
+   "column_faces": "NOT_ESTABLISHED",
+   "obstacle_faces": "NOT_ESTABLISHED",
+   "reveals": "SEPARATE (US-07)"
+  }
+ },
+ "sliding_door": {
+  "fact": "QORTUBA-NEW-HALL-PAINTRY-SLIDING-GLASS-DOOR-OWNER-001@v1",
+  "binding": "APPLIES"
+ },
+ "window_sill_fact_binding": "APPLIES",
+ "glazed_door_jambs": 2,
+ "physical_passage_jambs": 7,
+ "non_physical_passage_sides": 3
+}
