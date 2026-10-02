@@ -1,0 +1,171 @@
+{
+ "row": "Q-13",
+ "STATE": "COMPUTED_SHADOW",
+ "VALUE": 111.8988,
+ "unit": "m2",
+ "final": false,
+ "BASE_PHYSICAL_SITES": [
+  {
+   "site": "SITE-5f1762f1a93b91ca",
+   "zones": [
+    "BED.ROOM"
+   ],
+   "area_m2": 19.2725
+  },
+  {
+   "site": "SITE-77a2130eb275604c",
+   "zones": [
+    "HALL",
+    "whgm"
+   ],
+   "area_m2": 42.649289
+  },
+  {
+   "site": "SITE-a6405850100155ac",
+   "zones": [
+    "DRESS",
+    "M.B.ROOM"
+   ],
+   "area_m2": 33.2
+  },
+  {
+   "site": "SITE-daca396d6d730e60",
+   "zones": [
+    "BED.ROOM"
+   ],
+   "area_m2": 16.327
+  }
+ ],
+ "BASE_SITE_AREA_M2": 111.448789,
+ "THRESHOLD_TREATMENT": [
+  {
+   "strip": "THRESHOLD-cf12fcdfd3e6a4a6",
+   "state": "MARBLE_THRESHOLD_EXPLICIT",
+   "contribution_m2": 0.0
+  },
+  {
+   "strip": "THRESHOLD-bfcea08375237224",
+   "state": "MARBLE_THRESHOLD_EXPLICIT",
+   "contribution_m2": 0.0
+  },
+  {
+   "strip": "THRESHOLD-28f50f8dc18c1e90",
+   "state": "MARBLE_THRESHOLD_EXPLICIT",
+   "contribution_m2": 0.0
+  },
+  {
+   "strip": "THRESHOLD-c82365dd41b94abe",
+   "state": "CONTINUOUS_SAME_FINISH",
+   "contribution_m2": 0.15
+  },
+  {
+   "strip": "THRESHOLD-04910e5deeeed2fc",
+   "state": "CONTINUOUS_SAME_FINISH",
+   "contribution_m2": 0.15
+  },
+  {
+   "strip": "THRESHOLD-d4633eabc844b274",
+   "state": "CONTINUOUS_SAME_FINISH",
+   "contribution_m2": 0.15
+  },
+  {
+   "strip": "THRESHOLD-f9846605acbce828",
+   "state": "MARBLE_THRESHOLD_EXPLICIT",
+   "contribution_m2": 0.0
+  }
+ ],
+ "THRESHOLD_CONTRIBUTION_M2": 0.45,
+ "MARBLE": {
+  "thresholds": [
+   {
+    "threshold": "THRESHOLD-cf12fcdfd3e6a4a6",
+    "marble_area_m2": 0.12,
+    "row_contribution_m2": 0.0
+   },
+   {
+    "threshold": "THRESHOLD-bfcea08375237224",
+    "marble_area_m2": 0.15,
+    "row_contribution_m2": 0.0
+   },
+   {
+    "threshold": "THRESHOLD-28f50f8dc18c1e90",
+    "marble_area_m2": 0.12,
+    "row_contribution_m2": 0.0
+   },
+   {
+    "threshold": "THRESHOLD-f9846605acbce828",
+    "marble_area_m2": 0.12,
+    "row_contribution_m2": 0.0
+   }
+  ],
+  "excluded_from_this_row_m2": 0.51,
+  "marble_counted_in": "MARBLE_THRESHOLD row only"
+ },
+ "PASSAGE_TREATMENT": [
+  {
+   "strip": "OP-997f14d12b8e9bc1",
+   "state": "INCLUDED_IN_SITE_SAME_TREATMENT",
+   "area_m2": 0.239289,
+   "head_authority": "QORTUBA-NEW-OPEN-PASSAGE-SOFFIT-NOT-CEILING-OWNER-001@v1"
+  },
+  {
+   "strip": "OP-9e0fd219ca5cd391",
+   "state": "INCLUDED_IN_SITE_SAME_TREATMENT",
+   "area_m2": 0.18,
+   "head_authority": "QORTUBA-NEW-MB-DRESS-PASSAGE-FULL-HEIGHT-OWNER-001@v1"
+  }
+ ],
+ "SOFFIT_EXCLUSION_M2": 0,
+ "DUCT_TREATMENT": [
+  {
+   "site": "SITE-5f1762f1a93b91ca",
+   "hole_area_m2": 0.84,
+   "authorised": true,
+   "facts": [
+    "QORTUBA-NEW-BED-ROOM-DUCT-OWNER-001@v1"
+   ],
+   "effect": "EXCLUDED_FROM_ROOM_FLOOR"
+  }
+ ],
+ "OBJECT_FOOTPRINT_POLICY": [
+  "QORTUBA-NEW-FLOOR-OBJECT-FOOTPRINT-OWNER-001@v1:FLOOR_FINISH:FOOTPRINT_INCLUDED"
+ ],
+ "SEMANTIC_CLASSES": [
+  "DRY_INTERNAL_ROOM"
+ ],
+ "TRADE_AUTHORITY": [
+  "QORTUBA-FLOOR-TREATMENT@v3",
+  "QORTUBA-SPACE-CLASS@v2"
+ ],
+ "TOPOLOGY_POLICY": "WALL_BAND_POLICY_V5 (d1ff58e755bb88f4) + TOPOLOGY_CLOSURE_POLICY_V1",
+ "TOPOLOGY_DIGEST": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+ "ROW_AUTHORITY_DIGEST": "b53ed8ac248365a10b58bd862ddc180827b6b4d55db2ba55b67b4e89398a65b9",
+ "RELEASE_INPUT_DIGEST": "6082330059236262a7525ad62c3c7bec4359c376374cbfbf1599680f2ece4e55",
+ "OWNER_FACTS_APPLIED": [
+  "QORTUBA-NEW-BED-ROOM-DUCT-OWNER-001@v1",
+  "QORTUBA-NEW-DOOR-THRESHOLD-CONTINUITY-OWNER-001@v1",
+  "QORTUBA-NEW-FLOOR-OBJECT-FOOTPRINT-OWNER-001@v1",
+  "QORTUBA-NEW-MAIN-ENTRANCE-MARBLE-OWNER-001@v1",
+  "URBAN-WET-SERVICE-MARBLE-THRESHOLD@v1"
+ ],
+ "SOURCE_ANCHOR": {
+  "revision": "QORTUBA_REV_NEW",
+  "dxf_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+  "dwg_identity": "NOT_ESTABLISHED"
+ },
+ "RELEASE_BLOCKERS": [
+  "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+  "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+ ],
+ "COUNTERFACTUALS": {},
+ "blockers": [],
+ "blocker_classes": [],
+ "SCHEMA": "URBAN_R8_17_Q13_STATUS_V1",
+ "regression_vs_r8_16": {
+  "R8.16": 111.8988,
+  "R8.17": 111.8988,
+  "delta_m2": 0.0,
+  "is_target": false
+ },
+ "historical_matching": "NONE"
+}

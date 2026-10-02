@@ -1,0 +1,213 @@
+{
+ "SCHEMA": "URBAN_R8_17_WALL_FACE_ENGINE_DESIGN_V1",
+ "policy": {
+  "policy_id": "WALL_FACE_SURFACE_POLICY_V1",
+  "path_classes_from": "WALL_CONTACT_PATH_POLICY_V4",
+  "physical_classes": [
+   "WALL_FACE",
+   "COLUMN_FACE",
+   "OBSTACLE_FACE",
+   "LINTEL_FACE",
+   "HEAD_FACE",
+   "JAMB_REVEAL",
+   "HEAD_REVEAL",
+   "ZERO_TOPOLOGY_CLOSURE",
+   "UNPROVEN"
+  ],
+  "opening_kinds": [
+   "DOOR",
+   "SLIDING_GLAZED_DOOR",
+   "FLOOR_REACHING_GLAZING",
+   "WINDOW"
+  ],
+  "passage_heads": [
+   "OPEN_PASSAGE_WITH_HEAD",
+   "OPEN_PASSAGE_FULL_HEIGHT"
+  ],
+  "deduction": "US-06: the FULL opening area (width x height, inside the trade height) for every door, window, sliding door and glazed opening; the wall plane above a lower opening is a lintel face",
+  "reveals": "opening surfaces (left / right jamb, top), counted once per opening, never the sill; source depth first, the US-07 fallback only where no source depth exists",
+  "height_hierarchy": [
+   "source dimension / schedule / section",
+   "source-bound owner / project fact",
+   "permitted fallback",
+   "BLOCKED"
+  ],
+  "window_position": "deducted in full only when sill + height inside the trade height is proven",
+  "reconciliation": [
+   "span conservation per site",
+   "net area computed two ways",
+   "one identity per surface"
+  ],
+  "never": [
+   "room perimeter x height",
+   "a topology closure with material or area",
+   "an opening width as an m2 deduction",
+   "a material decided by geometry",
+   "a height without authority",
+   "a jamb counted as room wall face",
+   "a published trade quantity without a frozen, blind-tested policy"
+  ],
+  "digest": "a2ba3bfb96cdab5f0d45b1d024a63bfff2bce325a274e9a5df9f5cecba570258"
+ },
+ "method": {
+  "method_id": "QORTUBA-NEW-WALL-FACE-METHOD",
+  "version": 1,
+  "scope": {
+   "project": "QORTUBA",
+   "source_revision_id": "QORTUBA_REV_NEW",
+   "region_id": "RC:MODEL_SPACE:4267:540:1649",
+   "plan": "PLAN_VARIANT_4_SELECTED"
+  },
+  "trade_rules": {
+   "WET_SERVICE_ROOM": {
+    "WALL_TILE": {
+     "state": "APPLIES",
+     "height_m": 3.2,
+     "authority": "QORTUBA-NEW-WET-SERVICE-FINISH-OWNER-001@v1"
+    },
+    "PLASTER": {
+     "state": "NONE",
+     "authority": "US-03: no normal plaster as ceramic backing"
+    },
+    "PAINT": {
+     "state": "NONE",
+     "authority": "US-03: normal paint is zero on a fully ceramic wall"
+    }
+   },
+   "SERVICE_ROOM": {
+    "WALL_TILE": {
+     "state": "APPLIES",
+     "height_m": 3.2,
+     "authority": "QORTUBA-NEW-WET-SERVICE-FINISH-OWNER-001@v1 (SERVICE_ROOM) + QP-07 PAINTRY"
+    },
+    "PLASTER": {
+     "state": "NONE",
+     "authority": "US-03"
+    },
+    "PAINT": {
+     "state": "NONE",
+     "authority": "US-03"
+    }
+   },
+   "DRY_INTERNAL_ROOM": {
+    "PLASTER": {
+     "state": "APPLIES",
+     "height_m": null,
+     "authority": null,
+     "blocker": "NOT ESTABLISHED for the selected NEW revision: QP-03 / QP-04 (3.00 m) were set on the OLD revision and were never re-stated; the owner moved the new-revision wet / service tile height to 3.20 m"
+    },
+    "PAINT": {
+     "state": "APPLIES",
+     "height_m": null,
+     "authority": null,
+     "blocker": "NOT ESTABLISHED for the selected NEW revision: QP-03 / QP-04 (3.00 m) were set on the OLD revision and were never re-stated; the owner moved the new-revision wet / service tile height to 3.20 m"
+    }
+   }
+  },
+  "counterfactual_heights": {
+   "PLASTER": {
+    "height_m": 3.0,
+    "authority": "COUNTERFACTUAL ONLY: QP-03 (OLD revision) - never published"
+   },
+   "PAINT": {
+    "height_m": 3.0,
+    "authority": "COUNTERFACTUAL ONLY: QP-04 (OLD revision) - never published"
+   }
+  },
+  "opening_heights": {
+   "DOOR": {
+    "height_m": 2.2,
+    "authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none"
+   },
+   "SLIDING_GLAZED_DOOR": {
+    "height_m": 2.2,
+    "authority": "QP-12 owner: the HALL / PAINTRY glazed opening 2.750 x 2.200 (same occurrence: glazing H533 / H542, 2.75 m, in both revisions) + QP-23 corroborating; floor contact from QORTUBA-NEW-HALL-PAINTRY-SLIDING-GLASS-DOOR-OWNER-001@v1"
+   },
+   "WINDOW": {
+    "height_m": 1.5,
+    "authority": "QP-22 owner: 1.500 m for every Qortuba window whose height the drawing does not state"
+   }
+  },
+  "window_sill_fact": [
+   "QORTUBA-NEW-NORMAL-WINDOWS-ABOVE-FLOOR-OWNER-001",
+   2
+  ],
+  "window_reveal_depth": {
+   "depth_m": 0.25,
+   "basis": "US-07 FALLBACK: the glazing is drawn on the wall face line, the frame position in the wall is not in the source"
+  },
+  "column_faces": {
+   "WALL_TILE": "INCLUDED",
+   "PLASTER": "INCLUDED",
+   "PAINT": "NOT_ESTABLISHED"
+  },
+  "column_authority": "US-01 (every wall face of a fully tiled room) + R-13 'the owner chose the full column' (Qortuba); paint on columns not stated",
+  "obstacle_faces": {
+   "WALL_TILE": "NOT_ESTABLISHED",
+   "PLASTER": "NOT_ESTABLISHED",
+   "PAINT": "NOT_ESTABLISHED"
+  },
+  "reveal_trades": {
+   "DRY_ONLY": "PLASTER (US-07 add-back; source depth first); PAINT only where the paint row applies (US-07)",
+   "OTHER": "NOT_ESTABLISHED (a wet / service or outside-unit side: tile vs plaster not stated)"
+  },
+  "reveal_inclusion": {
+   "WALL_TILE": "EXCLUDED (wet / service reveal treatment NOT_ESTABLISHED - reported separately)",
+   "PLASTER": "SEPARATE (US-07 add-back, its own register)",
+   "PAINT": "SEPARATE (US-07)"
+  },
+  "never": [
+   "room perimeter x height",
+   "QP-03 / QP-04 3.00 m as the new-revision plaster height",
+   "3.20 m outside the wet / service rooms",
+   "a topology closure with area",
+   "a low wall under the sliding glass door",
+   "a default window / sliding-door height (US-11)"
+  ],
+  "ref": "QORTUBA-NEW-WALL-FACE-METHOD@v1",
+  "digest": "71ae9b33db7f6c3eb77a46ac80d68f61d33c756e3a50f8115aa291c574e24326"
+ },
+ "freeze": {
+  "frozen_commit": "e0d2781be307071ccc85cad2578529d920446beb",
+  "wall_face_policy": {
+   "id": "WALL_FACE_SURFACE_POLICY_V1",
+   "digest": "a2ba3bfb96cdab5f0d45b1d024a63bfff2bce325a274e9a5df9f5cecba570258"
+  },
+  "synthetic_tests": [
+   "test_a_rectangular_dry_room_is_its_boundary_spans_times_the_height",
+   "test_no_height_authority_means_no_area",
+   "test_a_door_deducts_its_full_area_and_leaves_a_lintel",
+   "test_a_window_above_the_floor_is_deducted_only_with_its_position_proven",
+   "test_a_floor_reaching_sliding_glass_door_is_a_full_opening_with_no_low_wall",
+   "test_a_doorless_low_head_passage_has_head_faces_and_jamb_reveals",
+   "test_a_doorless_full_height_passage_has_jambs_only_and_no_head_face",
+   "test_the_offset_jamb_door_analogue_is_a_door_opening_on_both_sides",
+   "test_column_and_duct_faces_are_their_own_classes",
+   "test_wet_room_tile_and_no_paint_come_from_rule_data_not_geometry",
+   "test_reveal_depth_from_source_first_and_the_fallback_is_labelled",
+   "test_opening_deductions_use_area_never_width_and_reconcile_two_ways",
+   "test_no_surface_is_counted_twice_and_topology_closures_have_zero_area",
+   "test_shuffled_input_gives_the_same_wall_faces"
+  ],
+  "synthetic_test_count": 14,
+  "order": [
+   "V4 skirting frozen + blind (d3f9f85 / be98f71)",
+   "wall-face engine + synthetic tests + blind script (e0d2781)",
+   "THIS freeze",
+   "commit",
+   "THEN the blind Qortuba wall-face run",
+   "THEN registers"
+  ],
+  "rule": "no post-result edit inside the frozen wall-face policy or method; amendments recorded here",
+  "amendments": [
+   {
+    "n": 1,
+    "what": "blind script: skip the reveal record of a window glazing entity that bounds no measured site (outside the measured unit) - the first attempt crashed in opening_reveals(width None) BEFORE any output was written; no policy, method or engine change, no value seen"
+   }
+  ]
+ },
+ "layers": [
+  "PHYSICAL (wall_faces.site_faces / opening_reveals: geometry, heights with authority, reconciliation)",
+  "TRADE (trade_assignment from rule DATA: which trade on which class, at which authorised height)"
+ ]
+}
