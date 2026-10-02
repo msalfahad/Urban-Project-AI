@@ -855,3 +855,42 @@ Protocol order:
 **Closures:** review packets are prepared for I1471, H2430 and H2431, none self-approved. Cross-route agreement is not achievable: REV_NEW has one input route. **Source anchor:** NOT_ESTABLISHED. **Second project:** NOT_RUN.
 
 **Gates:** MIGRATION_PLANNING_READY = YES, MIGRATION_EXECUTION_READY = NO, PRODUCTION_MIGRATION = NO.
+
+## 21. R8.20 addendum — human closure review, I1471 rationale, release review, BOQ XLSX, source-anchor / second-project plan
+
+The recommendation was committed first (a68dd2b). This round makes **no quantity change**: every published row and every topology, authority and release digest equals R8.19.
+
+**Human review** (`engine/source/closure_review.py`, CLOSURE_HUMAN_REVIEW_POLICY_V1; records in `data/registry/OWNER_CLOSURE_REVIEWS.json`):
+- The owner's ACCEPT for H2430, H2431 and I1471 is versioned evidence bound to each closure record digest. A changed closure voids it, and it never transfers or self-approves.
+- HUMAN_REVIEW is now satisfied for all three.
+
+**I1471:** `QORTUBA-NEW-I1471-200MM-WALL-COLUMN-CONCEALMENT-OWNER-001@v1`.
+- Kind PHYSICAL_CONSTRUCTION_RATIONALE with **no allowed domain**, fingerprint-bound to:
+  - the 200 mm wall faces H519 / H525 (band WB-d0fa2ebe87cedccd);
+  - the 150 mm wall faces H518 / H523 (band WB-2c6e6cc37179fbc6);
+  - the jamb caps H1472 / H1473;
+  - column H716.
+- The geometry is untouched: 200 / 150 mm walls with a 50 mm stagger.
+- H716 is identified **by geometry**: both long faces are collinear with the 200 mm band faces, its depth equals the band width, and it overlaps the band faces by 450 mm. H720 is a rejected candidate.
+
+**Release:** CLOSURE_RELEASE_MODEL_V1 has no released level.
+- All three closures are AUTHORISED_FOR_SHADOW, missing CROSS_ROUTE_AGREEMENT and SOURCE_ANCHOR.
+- I1471 is graded under the model for the first time.
+
+**BOQ:**
+- BOQ_EVIDENCE_MAPPING_V1 (`engine/source/boq_evidence.py`): quantity-affecting release blockers, and unknown blockers (fail closed), keep a row out of COMPUTED_SHADOW_COMPLETE. Q-03P and Q-12 (OBJECT_FOOTPRINT_IMPLICIT) are now AUTHORISED_SUBTOTAL. This was the silent-error path found this round.
+- BOQ_XLSX_EXPORT_V1 (`engine/source/boq_xlsx.py`): a view over the report rows.
+  - Sheets: READ_ME / SUMMARY (TOTAL lines) / ROOM_BREAKDOWN (non-additive) / TRACEABILITY / BLOCKERS / RUN_INFO.
+  - No formulas, no sums, no prices, a SHADOW banner and the status on every line.
+  - A readback validator checks every cell.
+
+**Source anchor** (`engine/source/source_anchor.py`, SOURCE_EXPORT_IDENTITY_POLICY_V1):
+- Entity-by-entity identity between the current DXF and a controlled owner re-export.
+- The protocol is in `SOURCE_ANCHOR_PLAN`: AutoCAD, no edits, SAVEAS DXF plus DWG 2013 for the pinned K1 route, all hashes recorded.
+- Recommended now. It closes the anchor and makes cross-route agreement evaluable.
+
+**Second project:** an unseen Kuwait villa with sealed QS gold. P7757 and Al Rashed are not blind-eligible.
+
+**PDF lane:** a main track after the re-export and the first unseen-villa blind run (target R8.22). It feeds the same claim pipeline.
+
+**Gates:** MIGRATION_PLANNING_READY = YES, MIGRATION_EXECUTION_READY = NO, PRODUCTION_MIGRATION = NO.

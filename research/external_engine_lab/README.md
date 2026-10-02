@@ -168,5 +168,10 @@ bridges it to the legacy QS01 method. Owner decisions are scoped claims in `data
 | `r8_19_qortuba.py` | (built by `r8_19_registers.py`) | after the blind run: the frozen run recomputed (must equal the blind record), the rebuild with WF3-L1 / WF3-L2 disclosed, plane and skirting checks |
 | `r8_19_registers.py` | `tests/r8_19/registers/*.json` | every R8.19 register (answers 1-42), BOQ shadow report, closure review packets |
 | `r8_19_package.py` | `data/reports/URBAN_QTO_R8_19_COLUMN_DUCT_FINISH_BOQ_RELEASE/` + zip | review package (25 md + 25 json + 2 supporting) |
+| `r8_20_recommendation.json` | - | the R8.20 recommendation, written before any R8.20 code |
+| `r8_20_owner_facts.py` | `data/registry/OWNER_PHYSICAL_FACTS.json` + `data/registry/OWNER_CLOSURE_REVIEWS.json` | the I1471 column-concealment rationale (no domain) and the owner closure reviews (bound to the R8.19 packet digests) |
+| `r8_20_qortuba.py` | (built by `r8_20_registers.py`) | the R8.19 rebuild recomputed (quantity regression), I1471 geometry evidence, closure review / release evaluation |
+| `r8_20_registers.py` | `tests/r8_20/registers/*.json` | every R8.20 register (answers 1-31), corrected BOQ shadow report, XLSX readback status, plans, gates |
+| `r8_20_package.py` | `data/reports/URBAN_QTO_R8_20_HUMAN_REVIEW_BOQ_EXPORT_SOURCE_ANCHOR/` + zip | review package (18 md + 19 json + the shadow BOQ xlsx, validated) |
 
 `<work>` must hold `old_k2.pkl` (K2 on LibreDWG's DXF of the old DWG) and `new_k2.pkl` (K2 on the hash-addressed new DXF).
