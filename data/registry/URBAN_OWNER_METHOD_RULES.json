@@ -99,6 +99,68 @@
     "a window deduction from plan geometry alone",
     "a sill height transferred between projects"
    ]
+  },
+  {
+   "rule_id": "URBAN-WALL-FINISH-HEIGHT-METHOD",
+   "version": 1,
+   "authority": [
+    "PROJECT_OWNER",
+    "URBAN_OWNER_METHOD"
+   ],
+   "received": "R8.18 brief §1, §3",
+   "scope": {
+    "applies_to": "every Urban project",
+    "revision_scoped": false
+   },
+   "method": {
+    "principle": "WALL FINISH HEIGHT IS NOT A COMPANY-WIDE NUMBER: it is established per floor / measurement scope and per trade",
+    "hierarchy": [
+     "explicit source wall / finish height",
+     "section / elevation clear height",
+     "derived clear height from authoritative vertical components",
+     "project / source-bound owner fact",
+     "permitted project default",
+     "BLOCKED"
+    ],
+    "derivation_evidence": [
+     "floor-to-floor / level",
+     "beam depth",
+     "suspended / decorative ceiling depth",
+     "floor build-up / finishing depth",
+     "other vertical constraints"
+    ]
+   },
+   "never": [
+    "URBAN_DEFAULT_WALL_HEIGHT",
+    "a wall height from floor-to-floor alone",
+    "one floor's height on another",
+    "a derivation with an unknown component"
+   ]
+  },
+  {
+   "rule_id": "URBAN-REVEAL-FINISH-METHOD",
+   "version": 1,
+   "authority": [
+    "PROJECT_OWNER",
+    "URBAN_OWNER_METHOD"
+   ],
+   "received": "R8.18 brief §14-§17",
+   "scope": {
+    "applies_to": "every Urban project unless a project instruction states the reveal finish",
+    "revision_scoped": false
+   },
+   "method": {
+    "default": "PLASTER",
+    "porcelain": "ONLY when explicitly requested / shown / project-authorised",
+    "paint": "on a reveal owned by a painted dry surface; never invented in a wet / service room",
+    "sliding_doors": "side-jamb ownership follows the aluminium profile / frame position where the source shows it; otherwise PLASTER default",
+    "ambiguity": "a reveal whose owning side the source does not establish is QUESTION / BLOCK for that reveal only"
+   },
+   "never": [
+    "porcelain because an adjacent room is wet",
+    "every reveal one finish",
+    "one reveal in two room finishes"
+   ]
   }
  ]
 }

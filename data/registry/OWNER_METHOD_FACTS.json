@@ -447,6 +447,88 @@
      "why": "same meaning and value (sill ~1.00 m); v2 only names the wall-face trades the owner statement already covers - v1 stays on file for the frozen R8.16 records"
     }
    ]
+  },
+  {
+   "fact_id": "QORTUBA-NEW-DRY-WALL-FINISH-HEIGHT-OWNER-001",
+   "version": 1,
+   "kind": "WALL_FINISH_HEIGHT",
+   "authority": [
+    "PROJECT_OWNER"
+   ],
+   "received": "R8.18 brief §1-§2 (owner answer to the R8.17 dry-room wall height question)",
+   "scope": {
+    "project": "QORTUBA",
+    "source_revision_id": "QORTUBA_REV_NEW",
+    "source_anchor_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+    "region_id": "RC:MODEL_SPACE:4267:540:1649",
+    "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649",
+    "plan": "PLAN_VARIANT_4_SELECTED",
+    "trades": [
+     "PLASTER",
+     "PAINT"
+    ],
+    "space_classes": [
+     "DRY_INTERNAL_ROOM"
+    ],
+    "floor": "the selected SECOND FLOOR apartment plan (PLAN_VARIANT_4_SELECTED)"
+   },
+   "statement": {
+    "text": "for the CURRENT selected Qortuba scope, DRY INTERNAL WALL PLASTER and PAINT run to 3.15 m",
+    "plaster_height_m": 3.15,
+    "paint_height_m": 3.15,
+    "values": [
+     {
+      "trade": "PLASTER",
+      "attribute": "HEIGHT_M",
+      "value": 3.15
+     },
+     {
+      "trade": "PAINT",
+      "attribute": "HEIGHT_M",
+      "value": 3.15
+     }
+    ],
+    "is": "the owner-authorised RESULT for this scope (wall-height authority rank 4)",
+    "owner_rationale": {
+     "floor_to_floor_m": 4.0,
+     "beam_zone_m": 0.6,
+     "ceiling_decor_zone_m": 0.15,
+     "floor_buildup_m": 0.1,
+     "result_m": 3.15,
+     "status": "OWNER_RATIONALE (example arithmetic) - the components are NOT source-established and form no formula"
+    },
+    "source_corroboration": "the region text 'LEVEL R.F = 4.00 m' (a level, never a wall height by itself)",
+    "does_not_apply_to": [
+     "wet / service wall tile (3.20 m fact)",
+     "PAINTRY",
+     "ceilings"
+    ]
+   },
+   "unit": "m",
+   "transfer_forbidden": [
+    "the old Qortuba revision (QP-03 / QP-04 3.00 m stay old-revision rules)",
+    "any other Qortuba revision, region, plan variant or floor",
+    "the DWG (identity NOT_ESTABLISHED)",
+    "the wet / service rooms (their own 3.20 m tile fact)",
+    "P7757",
+    "Al Rashed",
+    "any future villa or project",
+    "an Urban default"
+   ],
+   "relations": [
+    {
+     "rule": "QP-03 QORTUBA_INTERNAL_PLASTER_HEIGHT = 3.00 m",
+     "relation": "SUPERSEDED_IN_SCOPE",
+     "scope": "the selected NEW revision dry internal rooms only; QP-03 stays for the old revision",
+     "why": "a CHANGE of value (3.00 -> 3.15 m) for the new revision"
+    },
+    {
+     "rule": "QP-04 QORTUBA_INTERNAL_PAINT_HEIGHT = 3.00 m",
+     "relation": "SUPERSEDED_IN_SCOPE",
+     "scope": "the selected NEW revision dry internal rooms only; QP-04 stays for the old revision",
+     "why": "a CHANGE of value (3.00 -> 3.15 m) for the new revision"
+    }
+   ]
   }
  ],
  "never": [
