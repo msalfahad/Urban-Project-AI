@@ -12,7 +12,7 @@
  "engine_file_sha256": {
   "engine/source/wall_faces.py": "f719fd86efffc6c3771f1399472105d794652f06a7a9b349c58bb6635553c172"
  },
- "blind_script_sha256": "4898262196b33fff60c20509c8aae6ad8c9778ae67d815ebd3c7a4b904efe60f",
+ "blind_script_sha256": "ea99b71efe2c4433b7573155fc6e3b3bdfe4c4f638c294323a583471c7947b9b",
  "synthetic_test_sha256": {
   "tests/r8_17/test_r8_17_wall_faces.py": "a0622bd5e58a66fb1239ad5c76c34b09a355714d7294fa634884b0ec035af205"
  },
@@ -163,5 +163,10 @@
   "THEN registers"
  ],
  "rule": "no post-result edit inside the frozen wall-face policy or method; amendments recorded here",
- "amendments": []
+ "amendments": [
+  {
+   "n": 1,
+   "what": "blind script: skip the reveal record of a window glazing entity that bounds no measured site (outside the measured unit) - the first attempt crashed in opening_reveals(width None) BEFORE any output was written; no policy, method or engine change, no value seen"
+  }
+ ]
 }

@@ -173,6 +173,8 @@ def run(res, inp, fz):
                                               for x in e["sources"])]
         width = max((e["length"] for sid in sids for e in WC.site_edges(res["_arr"], sites[sid])
                      if any(WC._entity(x) == k for x in e["sources"])), default=None)
+        if width is None:                                     # glazing bounding no measured site: out of scope
+            continue
         rv = WF.opening_reveals(k, width_m=None if width is None else round(width * u, 6),
                                 depth_m=wm["window_reveal_depth"]["depth_m"],
                                 depth_basis=wm["window_reveal_depth"]["basis"], height_m=oh_win["height_m"])
