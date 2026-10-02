@@ -31,7 +31,7 @@ from dataclasses import dataclass, field
 
 from . import owner_claims as OC
 
-POLICY_ID = "OWNER_PHYSICAL_FACT_POLICY_V1"
+POLICY_ID = "OWNER_PHYSICAL_FACT_POLICY_V2"      # V2 (R8.15): + obstacle authority / threshold treatment domains
 OFFERED, APPLIED, CORROBORATING_ONLY = "OFFERED", "APPLIED", "CORROBORATING_ONLY"
 REJECTED_SCOPE, STALE, CONFLICT = "REJECTED_SCOPE", "STALE", "CONFLICT"
 OUTCOMES = (OFFERED, APPLIED, CORROBORATING_ONLY, REJECTED_SCOPE, STALE, CONFLICT)
@@ -40,8 +40,14 @@ TOPOLOGY_ROLE = "TOPOLOGY_ROLE"                         # only through an explic
 TOPOLOGY_CLOSURE_REVIEW = "TOPOLOGY_CLOSURE_REVIEW"
 BLOCKER_CLASSIFICATION = "BLOCKER_CLASSIFICATION"
 PASSAGE_ATTRIBUTES = "PASSAGE_ATTRIBUTES"
-DOMAINS = (TOPOLOGY_ROLE, TOPOLOGY_CLOSURE_REVIEW, BLOCKER_CLASSIFICATION, PASSAGE_ATTRIBUTES)
-KIND_DOMAINS = {"OPEN_PASSAGE_CONSTRUCTION": (TOPOLOGY_CLOSURE_REVIEW, BLOCKER_CLASSIFICATION, PASSAGE_ATTRIBUTES)}
+OBSTACLE_AUTHORITY = "OBSTACLE_AUTHORITY"             # V2: a built obstacle the engine geometry already realises
+THRESHOLD_TREATMENT = "THRESHOLD_TREATMENT"           # V2: what is built in one door threshold (e.g. marble)
+DOMAINS = (TOPOLOGY_ROLE, TOPOLOGY_CLOSURE_REVIEW, BLOCKER_CLASSIFICATION, PASSAGE_ATTRIBUTES, OBSTACLE_AUTHORITY,
+           THRESHOLD_TREATMENT)
+KIND_DOMAINS = {"OPEN_PASSAGE_CONSTRUCTION": (TOPOLOGY_CLOSURE_REVIEW, BLOCKER_CLASSIFICATION, PASSAGE_ATTRIBUTES),
+                "BUILT_OBSTACLE": (OBSTACLE_AUTHORITY, BLOCKER_CLASSIFICATION),
+                "PASSAGE_HEAD_CONDITION": (PASSAGE_ATTRIBUTES, BLOCKER_CLASSIFICATION),
+                "THRESHOLD_FINISH_CONSTRUCTION": (THRESHOLD_TREATMENT, BLOCKER_CLASSIFICATION)}
 
 AGREES = "ENGINE_ESTABLISHED_OWNER_AGREES"
 DISAGREES = "ENGINE_ESTABLISHED_OWNER_DISAGREES"
@@ -127,6 +133,9 @@ def policy_record() -> dict:
     rec = {"policy_id": POLICY_ID, "outcomes": list(OUTCOMES), "domains": list(DOMAINS),
            "kind_domains": {k: list(v) for k, v in KIND_DOMAINS.items()}, "matrix": MATRIX,
            "binding": "revision + anchor + region + frame + every bound part's fingerprint (all or nothing)",
+           "history": ["V1 (R8.12): topology role / closure review / blocker classification / passage attributes",
+                       "V2 (R8.15): + OBSTACLE_AUTHORITY (BUILT_OBSTACLE) and THRESHOLD_TREATMENT "
+                       "(THRESHOLD_FINISH_CONSTRUCTION) and PASSAGE_HEAD_CONDITION kinds - none reaches TOPOLOGY_ROLE"],
            "never": ["edits a source record", "creates geometry", "carries a quantity", "overwrites contradictory "
                      "geometry (CONFLICT -> review)", "enters a domain not allowed by its kind", "is project logic in "
                      "code"]}

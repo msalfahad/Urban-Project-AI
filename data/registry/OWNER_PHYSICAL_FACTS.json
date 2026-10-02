@@ -1,5 +1,5 @@
 {
- "SCHEMA": "URBAN_OWNER_PHYSICAL_FACTS_V1",
+ "SCHEMA": "URBAN_OWNER_PHYSICAL_FACTS_V2",
  "facts": [
   {
    "fact_id": "QORTUBA-NEW-HALL-LOBBY-OPEN-PASSAGE-OWNER-001",
@@ -101,6 +101,343 @@
     "a source edit or new entity",
     "transfer to another revision, region or to the DWG",
     "a generic rule change"
+   ]
+  },
+  {
+   "fact_id": "QORTUBA-NEW-BED-ROOM-DUCT-OWNER-001",
+   "version": 1,
+   "kind": "BUILT_OBSTACLE",
+   "authority": [
+    "PROJECT_OWNER"
+   ],
+   "received": "R8.15 brief §1-§2 (owner reviewed the source-plan crop)",
+   "scope": {
+    "project": "QORTUBA",
+    "source_revision_id": "QORTUBA_REV_NEW",
+    "source_anchor_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+    "region_id": "RC:MODEL_SPACE:4267:540:1649",
+    "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649",
+    "plan": "PLAN_VARIANT_4_SELECTED"
+   },
+   "parts": [
+    {
+     "handle": "2060",
+     "key": "QORTUBA_REV_NEW|H2060||SEGMENT|0",
+     "source_layer": "WALL",
+     "fingerprint": "32b7dfeb680e952f353a063c8fa7e787584eda95a5d9f00bfecfad4aea5c513d",
+     "physical_reading": "DUCT_ENCLOSURE_OUTER_FACE"
+    },
+    {
+     "handle": "2060",
+     "key": "QORTUBA_REV_NEW|H2060||SEGMENT|1",
+     "source_layer": "WALL",
+     "fingerprint": "d6f788b4e20aad6eea1f8a44c05f137ec67f5e92a9e59e8a3dacd6ce4945ca73",
+     "physical_reading": "DUCT_ENCLOSURE_OUTER_FACE"
+    },
+    {
+     "handle": "2060",
+     "key": "QORTUBA_REV_NEW|H2060||SEGMENT|2",
+     "source_layer": "WALL",
+     "fingerprint": "54fb837aa7ddf25c739a94f493d1a45b8416be7dcaa03b76e0a8d12d1f7b0531",
+     "physical_reading": "DUCT_ENCLOSURE_OUTER_FACE"
+    },
+    {
+     "handle": "2060",
+     "key": "QORTUBA_REV_NEW|H2060||SEGMENT|3",
+     "source_layer": "WALL",
+     "fingerprint": "ab961a5d9852b10aab1278a8eb93bf2382d0f98dbc98e920c79f0c54add33879",
+     "physical_reading": "DUCT_ENCLOSURE_OUTER_FACE"
+    },
+    {
+     "handle": "2061",
+     "key": "QORTUBA_REV_NEW|H2061||SEGMENT|0",
+     "source_layer": "WALL",
+     "fingerprint": "4d4872c22265778731e8c076fdcd2417c4ce6122f293547c7f63aef3379f1a63",
+     "physical_reading": "DUCT_ENCLOSURE_INNER_FACE"
+    },
+    {
+     "handle": "2061",
+     "key": "QORTUBA_REV_NEW|H2061||SEGMENT|1",
+     "source_layer": "WALL",
+     "fingerprint": "a6a79607278827245316068fc1a0967b0abccb3c1fab0a4fd5350987991f5411",
+     "physical_reading": "DUCT_ENCLOSURE_INNER_FACE"
+    },
+    {
+     "handle": "2061",
+     "key": "QORTUBA_REV_NEW|H2061||SEGMENT|2",
+     "source_layer": "WALL",
+     "fingerprint": "ac180418c8c908b6a5a071fc305165450c29c20b9b1dc593b14458252252c1b6",
+     "physical_reading": "DUCT_ENCLOSURE_INNER_FACE"
+    },
+    {
+     "handle": "2061",
+     "key": "QORTUBA_REV_NEW|H2061||SEGMENT|3",
+     "source_layer": "WALL",
+     "fingerprint": "607c6a982685804e4a4853c759b6f0ba437433481de7a289f4f71ec3ee16b4f7",
+     "physical_reading": "DUCT_ENCLOSURE_INNER_FACE"
+    }
+   ],
+   "statement": {
+    "text": "the 2.10 x 0.40 m rectangle in the BED.ROOM is a REAL DUCT",
+    "physical_class": "DUCT",
+    "physical_role": "DUCT / BUILT_OBSTACLE",
+    "topology_effect": "PHYSICAL_OBSTACLE",
+    "floor_effect": "EXCLUDED_FROM_ROOM_FLOOR",
+    "ceiling_effect": "EXCLUDED_FROM_NORMAL_CEILING",
+    "footprint": "derived from source geometry (never a target value)",
+    "material": "NOT STATED (the role implies no material)",
+    "corroborating_presentation": {
+     "parts": [
+      "QORTUBA_REV_NEW|H2062||SEGMENT|0",
+      "QORTUBA_REV_NEW|H2065||SEGMENT|0"
+     ],
+     "role": "a dashed X on a hidden layer - corroboration only, never a bound part, never a duct identity elsewhere"
+    }
+   },
+   "transfer_forbidden": [
+    "the old Qortuba revision (QP-17 / QP-18 stay old-revision rules)",
+    "any other Qortuba revision, region or plan variant",
+    "the DWG (identity NOT_ESTABLISHED)",
+    "P7757",
+    "Al Rashed",
+    "any future villa or project",
+    "an Urban default",
+    "any other entity of the same shape, layer or presentation"
+   ],
+   "never": [
+    "closed rectangle + X = duct",
+    "a duct anywhere else",
+    "a re-layered CAD entity",
+    "a quantity"
+   ]
+  },
+  {
+   "fact_id": "QORTUBA-NEW-MB-DRESS-PASSAGE-FULL-HEIGHT-OWNER-001",
+   "version": 1,
+   "kind": "PASSAGE_HEAD_CONDITION",
+   "authority": [
+    "PROJECT_OWNER"
+   ],
+   "received": "R8.15 brief §3 (owner reviewed the plan crop)",
+   "scope": {
+    "project": "QORTUBA",
+    "source_revision_id": "QORTUBA_REV_NEW",
+    "source_anchor_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+    "region_id": "RC:MODEL_SPACE:4267:540:1649",
+    "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649",
+    "plan": "PLAN_VARIANT_4_SELECTED"
+   },
+   "parts": [
+    {
+     "handle": "1894",
+     "key": "QORTUBA_REV_NEW|H1894||SEGMENT|0",
+     "source_layer": "WALL",
+     "fingerprint": "6a96c88ff1648797dc6aa1a2710d7a7ecfdae4206da3d28c1ffdb8088f6a6498",
+     "physical_reading": "PASSAGE_JAMB_FACE (band end)"
+    },
+    {
+     "handle": "1893",
+     "key": "QORTUBA_REV_NEW|H1893||SEGMENT|0",
+     "source_layer": "WALL",
+     "fingerprint": "eb40a2d54ebe2fbb7773ade6f4dd37cc55311412f4d2295ad53d14c34a547046",
+     "physical_reading": "REAL_WALL_FACE (passage wall, M.B.ROOM side)"
+    },
+    {
+     "handle": "1895",
+     "key": "QORTUBA_REV_NEW|H1895||SEGMENT|0",
+     "source_layer": "WALL",
+     "fingerprint": "2ea149cfdd4701ef65ce0bc1e0675244b4a76ae5ca2f52b45db870a0d243ea0f",
+     "physical_reading": "REAL_WALL_FACE (passage wall, DRESS side)"
+    },
+    {
+     "handle": "518",
+     "key": "QORTUBA_REV_NEW|H518||SEGMENT|0",
+     "source_layer": "WALL",
+     "fingerprint": "1e402da9b8051f8a776eaefb801a5e5a0b8cbc4a004ba735cd6a145818b97562",
+     "physical_reading": "REAL_WALL_FACE (continuous face the passage meets)"
+    }
+   ],
+   "statement": {
+    "text": "the ~1.20 m passage between M.B.ROOM and DRESS is FULL HEIGHT: no head, no soffit",
+    "head_condition": "FULL_HEIGHT",
+    "top_soffit": "NONE",
+    "ceiling": "NORMAL CEILING CONTINUES through the passage footprint (no deduction)",
+    "passage": "remains physically open",
+    "side_jambs": "may exist (source decides)"
+   },
+   "supersedes_in_scope": [
+    "PASSAGE_HEAD_CONDITION_NOT_ESTABLISHED for this passage (R8.14)"
+   ],
+   "does_not_use": [
+    "QP-18 (old revision: it states the opposite and does not transfer)"
+   ],
+   "transfer_forbidden": [
+    "the old Qortuba revision (QP-17 / QP-18 stay old-revision rules)",
+    "any other Qortuba revision, region or plan variant",
+    "the DWG (identity NOT_ESTABLISHED)",
+    "P7757",
+    "Al Rashed",
+    "any future villa or project",
+    "an Urban default",
+    "any other entity of the same shape, layer or presentation"
+   ],
+   "never": [
+    "a head height",
+    "a soffit",
+    "a transfer to another passage"
+   ]
+  },
+  {
+   "fact_id": "QORTUBA-NEW-MAIN-ENTRANCE-MARBLE-OWNER-001",
+   "version": 1,
+   "kind": "THRESHOLD_FINISH_CONSTRUCTION",
+   "authority": [
+    "PROJECT_OWNER"
+   ],
+   "received": "R8.15 brief §5-§6 (owner reviewed the entrance threshold; construction photo of the TYPE)",
+   "scope": {
+    "project": "QORTUBA",
+    "source_revision_id": "QORTUBA_REV_NEW",
+    "source_anchor_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+    "region_id": "RC:MODEL_SPACE:4267:540:1649",
+    "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649",
+    "plan": "PLAN_VARIANT_4_SELECTED"
+   },
+   "parts": [
+    {
+     "handle": "680",
+     "key": "QORTUBA_REV_NEW|H680|677|SEGMENT|0",
+     "source_layer": "DOOR",
+     "fingerprint": "a0cb1e9f18eda6c44c4ab2d2ae13541be45fb86e3262f12afb49b44e74d63b9a",
+     "physical_reading": "MAIN_APARTMENT_ENTRANCE_DOOR_SYMBOL"
+    },
+    {
+     "handle": "681",
+     "key": "QORTUBA_REV_NEW|H681|677|SEGMENT|0",
+     "source_layer": "DOOR",
+     "fingerprint": "cfa8341983b0247f5b0066d828074c27ae84258c0fe83ac61ae5ff4dedce82d5",
+     "physical_reading": "MAIN_APARTMENT_ENTRANCE_DOOR_SYMBOL"
+    },
+    {
+     "handle": "682",
+     "key": "QORTUBA_REV_NEW|H682|677|SEGMENT|0",
+     "source_layer": "DOOR",
+     "fingerprint": "129530cb0219bb67b8bf582890043165137a0127ded9dbc6e95ae92e2c7f0082",
+     "physical_reading": "MAIN_APARTMENT_ENTRANCE_DOOR_SYMBOL"
+    },
+    {
+     "handle": "683",
+     "key": "QORTUBA_REV_NEW|H683|677|SEGMENT|0",
+     "source_layer": "DOOR",
+     "fingerprint": "247a0a87cafe981ce6ec8f83a395d3630555afa13c318cedf75a6e1bbd307333",
+     "physical_reading": "MAIN_APARTMENT_ENTRANCE_DOOR_SYMBOL"
+    },
+    {
+     "handle": "684",
+     "key": "QORTUBA_REV_NEW|H684|677|ELLIPTICAL_ARC|0",
+     "source_layer": "DOOR",
+     "fingerprint": "8af9e0fa227fbd4726064b743d2c5e19e0631e4af20f4d9676d09e7d5014c14d",
+     "physical_reading": "MAIN_APARTMENT_ENTRANCE_DOOR_SYMBOL"
+    },
+    {
+     "handle": "685",
+     "key": "QORTUBA_REV_NEW|H685|677|SEGMENT|0",
+     "source_layer": "DOOR",
+     "fingerprint": "564dd9e2dd725484d1fda58cb683f6a9975925ebcb77c5f1c547b415665e3a45",
+     "physical_reading": "MAIN_APARTMENT_ENTRANCE_DOOR_SYMBOL"
+    },
+    {
+     "handle": "686",
+     "key": "QORTUBA_REV_NEW|H686|677|SEGMENT|0",
+     "source_layer": "DOOR",
+     "fingerprint": "23d6dd9db4db8939c8009257a15dadb2954728d473bf7290afbd40589f5f60c3",
+     "physical_reading": "MAIN_APARTMENT_ENTRANCE_DOOR_SYMBOL"
+    },
+    {
+     "handle": "687",
+     "key": "QORTUBA_REV_NEW|H687|677|SEGMENT|0",
+     "source_layer": "DOOR",
+     "fingerprint": "a8a992e9884bfd1f68fc0e72dc6e06acb834b1f0eb1cdebf70c64b2460135b0d",
+     "physical_reading": "MAIN_APARTMENT_ENTRANCE_DOOR_SYMBOL"
+    },
+    {
+     "handle": "688",
+     "key": "QORTUBA_REV_NEW|H688|677|SEGMENT|0",
+     "source_layer": "DOOR",
+     "fingerprint": "a02186340e3078f870eeceb7e447c8207193399f1bb8f5220720e12e1c576511",
+     "physical_reading": "MAIN_APARTMENT_ENTRANCE_DOOR_SYMBOL"
+    },
+    {
+     "handle": "689",
+     "key": "QORTUBA_REV_NEW|H689|677|SEGMENT|0",
+     "source_layer": "DOOR",
+     "fingerprint": "f3542499146ff706bb36494dc33035db2820f69952f721e567355235f686bba4",
+     "physical_reading": "MAIN_APARTMENT_ENTRANCE_DOOR_SYMBOL"
+    },
+    {
+     "handle": "690",
+     "key": "QORTUBA_REV_NEW|H690|677|SEGMENT|0",
+     "source_layer": "DOOR",
+     "fingerprint": "dd53a9f0e6b34bd8e5545d1145639a68d7f13a09cd6bcc96302dde77375061b2",
+     "physical_reading": "MAIN_APARTMENT_ENTRANCE_DOOR_SYMBOL"
+    },
+    {
+     "handle": "691",
+     "key": "QORTUBA_REV_NEW|H691|677|SEGMENT|0",
+     "source_layer": "DOOR",
+     "fingerprint": "03fa52068c623d7f77a32f17eb8db6dd059d8c09abb90496a70f747f963e83da",
+     "physical_reading": "MAIN_APARTMENT_ENTRANCE_DOOR_SYMBOL"
+    },
+    {
+     "handle": "692",
+     "key": "QORTUBA_REV_NEW|H692|677|SEGMENT|0",
+     "source_layer": "DOOR",
+     "fingerprint": "61fb9033b626aa042c94c2948dcd153680519abfc517872ff9809d61466e3aac",
+     "physical_reading": "MAIN_APARTMENT_ENTRANCE_DOOR_SYMBOL"
+    },
+    {
+     "handle": "693",
+     "key": "QORTUBA_REV_NEW|H693|677|SEGMENT|0",
+     "source_layer": "DOOR",
+     "fingerprint": "99cffbbdc4526a0da1299a4129300c213eb45fa9a96892d72ff0bc5e38e2efd2",
+     "physical_reading": "MAIN_APARTMENT_ENTRANCE_DOOR_SYMBOL"
+    },
+    {
+     "handle": "694",
+     "key": "QORTUBA_REV_NEW|H694|677|SEGMENT|0",
+     "source_layer": "DOOR",
+     "fingerprint": "bb70a403dd5e68af861fba40cdce8b96dd82485212f94428f693976b4abd922f",
+     "physical_reading": "MAIN_APARTMENT_ENTRANCE_DOOR_SYMBOL"
+    }
+   ],
+   "statement": {
+    "text": "MAIN APARTMENT ENTRANCE: an explicit MARBLE THRESHOLD / برطاش is installed; the threshold is part of the apartment scope",
+    "threshold_treatment": "MARBLE_THRESHOLD_EXPLICIT",
+    "scope_side": "APARTMENT",
+    "floor_interface": "apartment porcelain ends at the apartment-side marble edge; the common-area finish begins after the opposite edge",
+    "geometry": "the physical threshold strip from source",
+    "rise_mm": "NOT_STATED",
+    "photo": "shows the threshold TYPE only - never a dimension source",
+    "boq": "a separate MARBLE_THRESHOLD trade item (no price)"
+   },
+   "supersedes_in_scope": [
+    "the R8.14 post-run unit-boundary 50 / 50 porcelain split for this door"
+   ],
+   "transfer_forbidden": [
+    "the old Qortuba revision (QP-17 / QP-18 stay old-revision rules)",
+    "any other Qortuba revision, region or plan variant",
+    "the DWG (identity NOT_ESTABLISHED)",
+    "P7757",
+    "Al Rashed",
+    "any future villa or project",
+    "an Urban default",
+    "any other entity of the same shape, layer or presentation"
+   ],
+   "never": [
+    "porcelain inside the threshold",
+    "a 50 / 50 split with the landing",
+    "a rise or water-containment function copied from the Urban wet / service rule",
+    "dimensions from the photograph"
    ]
   }
  ]
