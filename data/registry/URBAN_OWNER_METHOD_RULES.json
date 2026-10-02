@@ -53,6 +53,52 @@
     "a universal horizontal depth",
     "a hydraulic claim"
    ]
+  },
+  {
+   "rule_id": "URBAN-SKIRTING-OPENING-METHOD",
+   "version": 1,
+   "authority": [
+    "PROJECT_OWNER",
+    "URBAN_OWNER_METHOD"
+   ],
+   "received": "R8.16 brief §3, §6-§9, §40",
+   "scope": {
+    "applies_to": "every Urban project unless a project specification explicitly overrides it",
+    "revision_scoped": false
+   },
+   "method": {
+    "DOOR_PRESENT": {
+     "path": "STOP_AT_OPENING",
+     "across_opening": "NONE",
+     "jamb_skirting": "NONE"
+    },
+    "DOORLESS_OPENING": {
+     "across_opening": "NONE",
+     "real_floor_side_jambs": "INCLUDED",
+     "conditions": [
+      "the opening genuinely has no door",
+      "the jamb is a real physical vertical surface",
+      "that side is skirting-eligible",
+      "the floor finish reaches the jamb",
+      "not a full-wall-tile / no-skirting room"
+     ]
+    },
+    "WINDOW_ABOVE_FLOOR": {
+     "wall_below": "INCLUDED"
+    },
+    "FULL_HEIGHT_FLOOR_OPENING": {
+     "path": "BREAK"
+    }
+   },
+   "principle": "SKIRTING FOLLOWS REAL SKIRTING-ELIGIBLE WALL SURFACE AT FLOOR LEVEL; a plan-cut opening is not a floor opening without vertical evidence",
+   "trade": "SKIRTING (and the hidden profile on the same path, US-08)",
+   "never": [
+    "skirting across a clear opening",
+    "a door jamb return",
+    "a topology closure as material",
+    "a window deduction from plan geometry alone",
+    "a sill height transferred between projects"
+   ]
   }
  ]
 }

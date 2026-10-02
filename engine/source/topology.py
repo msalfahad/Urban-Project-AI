@@ -41,6 +41,7 @@ Project-agnostic; stdlib only.
 from __future__ import annotations
 
 import hashlib
+import json
 import math
 from collections import defaultdict
 from dataclasses import dataclass, field
@@ -835,7 +836,90 @@ def _other_end(item, pt, eps):
     return None
 
 
-def opening_closures(doors: dict, items, eps, jamb_ratio=TP.JAMB_ALLOWANCE_RATIO):
+DOOR_CLOSURE_POLICY_ID = "DOOR_OPENING_CLOSURE_POLICY_V2"
+B_END_POINT, B_OFFSET_JAMB = "END_POINT_JAMB_CAPS", "OFFSET_JAMB_CAPS"
+B_AMBIGUOUS, B_STAGGER_TOO_DEEP, B_INTERVENING, B_NOT_PARALLEL, B_LEAF_INSIDE = (
+    "CLOSURE_B_AMBIGUOUS_FAR_SIDE", "CLOSURE_B_STAGGER_EXCEEDS_DEPTH", "CLOSURE_B_INTERVENING_BOUNDARY",
+    "CLOSURE_B_CAPS_NOT_COMPATIBLE", "CLOSURE_B_LEAF_INSIDE_REVEAL")
+
+
+def door_closure_policy_record() -> dict:
+    rec = {"policy_id": DOOR_CLOSURE_POLICY_ID,
+           "closure_a": "along the closed leaf, between the two forward / backward ray hits (JAMB_ALLOWANCE_RATIO)",
+           "closure_b": {
+               B_END_POINT: "V1 (R8.9): both A hits are END points of straight caps whose far ends are parallel to A "
+                            "at A's length",
+               B_OFFSET_JAMB: "V2 (R8.16): both A hits lie on straight caps perpendicular to A (a hit may be "
+                              "mid-cap); A lies ON the face of at least one jamb wall (that cap does not extend past A: "
+                              "an authored leaf strictly inside the reveal splits the rooms itself and gets no B); both "
+                              "caps reach ONE far line parallel to A at equal depth t (within eps); the near-side "
+                              "stagger of the other cap is <= t; B has A's length and direction; no admitted segment "
+                              "enters the strip interior; exactly one far side qualifies"},
+           "blocked": [B_AMBIGUOUS, B_STAGGER_TOO_DEEP, B_INTERVENING, B_NOT_PARALLEL, B_LEAF_INSIDE],
+           "never": ["a closure without a proven door occurrence", "a bridge chosen by gap size alone",
+                     "a project coordinate", "material on a closure"],
+           "history": ["V1 (R8.9): end-point rule only", "V2 (R8.16): + offset-jamb rule (walls of different "
+                                                          "thickness flush on one side of the door)"]}
+    rec["digest"] = hashlib.sha256(json.dumps(rec, sort_keys=True).encode()).hexdigest()
+    return rec
+
+
+def _offset_closure_b(h1, h2, it1, it2, items, eps):
+    """V2: closure B for a door whose caps are offset (one hit mid-cap). Returns ((f2, f1), evidence) or (None, why)."""
+    ax, ay = h1[0] - h2[0], h1[1] - h2[1]
+    la = math.hypot(ax, ay)
+    if la <= eps or it1.kind != "SEGMENT" or it2.kind != "SEGMENT":
+        return None, B_NOT_PARALLEL
+    u = (ax / la, ay / la)
+    n = (-u[1], u[0])
+    caps = []
+    for it, h in ((it1, h1), (it2, h2)):
+        a, b = (it.geometry[0], it.geometry[1]), (it.geometry[2], it.geometry[3])
+        lc = _d(a, b)
+        if lc <= eps or abs(((b[0] - a[0]) * u[0] + (b[1] - a[1]) * u[1]) / lc) * lc > eps:
+            return None, B_NOT_PARALLEL                      # a cap must be perpendicular to A
+        offs = [((q[0] - h2[0]) * n[0] + (q[1] - h2[1]) * n[1], q) for q in (a, b)]
+        caps.append(offs)
+    best = []
+    for side in (1, -1):
+        ext = [max(side * o for o, _ in c) for c in caps]
+        near = [max(-side * o for o, _ in c) for c in caps]
+        if min(ext) <= eps or abs(ext[0] - ext[1]) > eps:
+            continue
+        t = (ext[0] + ext[1]) / 2
+        if min(near) > eps:
+            best.append((side, None, B_LEAF_INSIDE))
+            continue
+        if max(near) > t + eps:
+            best.append((side, None, B_STAGGER_TOO_DEEP))
+            continue
+        far = [max(c, key=lambda z: side * z[0])[1] for c in caps]
+        best.append((side, (far, t, near), None))
+    ok = [b for b in best if b[1] is not None]
+    if not ok:
+        return None, best[0][2] if best else B_NOT_PARALLEL
+    if len(ok) > 1:
+        return None, B_AMBIGUOUS
+    side, (far, t, near), _ = ok[0]
+    f1, f2 = far
+    if abs(_d(f1, f2) - la) > 2 * eps:
+        return None, B_NOT_PARALLEL
+    poly = [h2, h1, f1, f2]
+    for it in items:
+        if it.kind != "SEGMENT" or it is it1 or it is it2:
+            continue
+        p, q = (it.geometry[0], it.geometry[1]), (it.geometry[2], it.geometry[3])
+        for k in range(1, 8):                                   # sample the segment; any point strictly inside
+            m = (p[0] + (q[0] - p[0]) * k / 8, p[1] + (q[1] - p[1]) * k / 8)
+            su = (m[0] - h2[0]) * u[0] + (m[1] - h2[1]) * u[1]
+            sn = side * ((m[0] - h2[0]) * n[0] + (m[1] - h2[1]) * n[1])
+            if eps < su < la - eps and eps < sn < t - eps:
+                return None, B_INTERVENING
+    del poly
+    return (f2, f1), {"rule": B_OFFSET_JAMB, "depth": t, "stagger": max(near), "side": side}
+
+
+def opening_closures(doors: dict, items, eps, jamb_ratio=TP.JAMB_ALLOWANCE_RATIO, policy=DOOR_CLOSURE_POLICY_ID):
     """Virtual closures for proven doors. For each door (hinge, radius, two swing ends), each end is tried as the
     closed-leaf end: a ray forward from it and a ray backward from the hinge must both meet an admitted boundary
     within jamb_ratio x radius. Exactly one hypothesis must succeed (else OPENING_CLOSURE_UNRESOLVED).
@@ -879,6 +963,19 @@ def opening_closures(doors: dict, items, eps, jamb_ratio=TP.JAMB_ALLOWANCE_RATIO
                 closures.append(BoundaryItem(b_id, "SEGMENT", (f2[0], f2[1], f1[0], f1[1]), "OPENING_BOUNDARY",
                                              (sig["swing_part"], it1.source_id, it2.source_id)))
                 rec["closure_b"] = b_id
+                rec["closure_b_rule"] = B_END_POINT
+        if rec["closure_b"] is None and policy == DOOR_CLOSURE_POLICY_ID:
+            fb, ev = _offset_closure_b(h1, h2, it1, it2, items, eps)
+            if fb is not None:
+                (g2, g1) = fb
+                b_id = f"CLOSURE|{occ}|B"
+                closures.append(BoundaryItem(b_id, "SEGMENT", (g2[0], g2[1], g1[0], g1[1]), "OPENING_BOUNDARY",
+                                             (sig["swing_part"], it1.source_id, it2.source_id)))
+                rec["closure_b"] = b_id
+                rec["closure_b_rule"] = B_OFFSET_JAMB
+                rec["closure_b_evidence"] = ev
+            else:
+                rec["closure_b_blocked"] = ev
         status[occ] = rec
     return closures, status
 

@@ -29,6 +29,7 @@ from . import owner_claims as OC
 from . import role_authority as RA
 from . import semantic_zones as SZ
 from . import text_role as TX
+from . import topology as T
 from . import topology_closures as TC
 from . import topology_crosscheck as XC
 from . import topology_policy as TP
@@ -75,6 +76,7 @@ def policy_digests() -> dict:
         "trade_treatment": [TR.POLICY_ID, TR.policy_record()["digest"]],
         "wall_band": [WB.POLICY_ID, WB.policy_record()["digest"]],
         "topology_closure": [TC.POLICY_ID, TC.policy_record()["digest"]],
+        "door_opening_closure": [T.DOOR_CLOSURE_POLICY_ID, T.door_closure_policy_record()["digest"]],
         "near_miss_review_band_mm": [RA.NEAR_MISS_REVIEW_BAND_MM, "REVIEW_ONLY"]}
 
 
