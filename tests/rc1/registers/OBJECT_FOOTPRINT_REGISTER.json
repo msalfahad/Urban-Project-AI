@@ -1,14 +1,16 @@
 {
  "SCHEMA": "URBAN_QORTUBA_RC1_OBJECT_FOOTPRINT_REGISTER_V1",
  "policy": {
-  "policy_id": "OBJECT_FOOTPRINT_AUTHORITY_V1",
-  "rule": "RESOLVED only when one accepted policy covers trade + space class + every object class present",
+  "policy_id": "OBJECT_FOOTPRINT_AUTHORITY_V2",
+  "rule": "RESOLVED only when an accepted policy covers trade + space class + every object class present and no object is an excluded built-obstacle class; identity facts re-class only the exact keys they name, and only from an accepted observed role",
   "never": [
    "a topology convention as authority",
    "a dry-room fact transferred to a wet / service room",
-   "a silent zero or a silent full-room assumption"
+   "a silent zero or a silent full-room assumption",
+   "cabinetry inferred from shape or layer",
+   "a finish carried through a built obstacle"
   ],
-  "digest": "7904fdcd07ffc78cfeb204f13825fa0ae507ec2316d9e146d3375bc1a50a858a"
+  "digest": "fefc6b965f3026fe906b6063d49f87657ebe4ffefbcd2c14fc5b91c9e3eaaa63"
  },
  "sites": {
   "Q-13|SITE-77a2130eb275604c": {
@@ -713,11 +715,20 @@
     "QORTUBA-NEW-FLOOR-OBJECT-FOOTPRINT-OWNER-001@v1"
    ],
    "treatment": "FOOTPRINT_INCLUDED",
-   "rejected": [],
+   "rejected": [
+    {
+     "policy": "URBAN-FLOOR-FINISH-BEFORE-CABINETRY-METHOD@v1",
+     "why": [
+      "object classes ['FIXED_JOINERY', 'LATER_INSTALLED_CABINETRY', 'VANITY_UNIT', 'WARDROBE'] do not cover ['FURNITURE']"
+     ]
+    }
+   ],
    "row": "Q-13",
    "counts": {
     "FURNITURE": 74
-   }
+   },
+   "identity_facts": [],
+   "identity_bindings": []
   },
   "Q-13|SITE-a6405850100155ac": {
    "site": "SITE-a6405850100155ac",
@@ -2753,21 +2764,30 @@
     "QORTUBA-NEW-FLOOR-OBJECT-FOOTPRINT-OWNER-001@v1"
    ],
    "treatment": "FOOTPRINT_INCLUDED",
-   "rejected": [],
+   "rejected": [
+    {
+     "policy": "URBAN-FLOOR-FINISH-BEFORE-CABINETRY-METHOD@v1",
+     "why": [
+      "object classes ['FIXED_JOINERY', 'LATER_INSTALLED_CABINETRY', 'VANITY_UNIT', 'WARDROBE'] do not cover ['FURNITURE']"
+     ]
+    }
+   ],
    "row": "Q-13",
    "counts": {
     "FURNITURE": 170
-   }
+   },
+   "identity_facts": [],
+   "identity_bindings": []
   },
   "Q-12|SITE-8c1c7563d5252c50": {
    "site": "SITE-8c1c7563d5252c50",
    "trade": "FLOOR_FINISH",
    "space_class": "SERVICE_ROOM",
-   "state": "UNRESOLVED",
+   "state": "RESOLVED",
    "objects": [
     {
      "key": "QORTUBA_REV_NEW|H478||SEGMENT|0",
-     "object_class": "SANITARY_FIXTURE",
+     "object_class": "LATER_INSTALLED_CABINETRY",
      "layer": "FIXTURE",
      "entity_type": "LINE",
      "geometry": [
@@ -2775,11 +2795,13 @@
       15109.7196,
       109523.0817,
       15109.7196
-     ]
+     ],
+     "observed_class": "SANITARY_FIXTURE",
+     "identity_authority": "QORTUBA-NEW-PAINTRY-COUNTER-CABINETRY-OWNER-001@v1"
     },
     {
      "key": "QORTUBA_REV_NEW|H482||SEGMENT|0",
-     "object_class": "SANITARY_FIXTURE",
+     "object_class": "LATER_INSTALLED_CABINETRY",
      "layer": "FIXTURE",
      "entity_type": "LINE",
      "geometry": [
@@ -2787,11 +2809,13 @@
       15384.7196,
       109593.0817,
       15384.7196
-     ]
+     ],
+     "observed_class": "SANITARY_FIXTURE",
+     "identity_authority": "QORTUBA-NEW-PAINTRY-COUNTER-CABINETRY-OWNER-001@v1"
     },
     {
      "key": "QORTUBA_REV_NEW|H532||SEGMENT|0",
-     "object_class": "SANITARY_FIXTURE",
+     "object_class": "LATER_INSTALLED_CABINETRY",
      "layer": "FIXTURE",
      "entity_type": "LINE",
      "geometry": [
@@ -2799,11 +2823,13 @@
       15384.7196,
       109403.0817,
       15109.7196
-     ]
+     ],
+     "observed_class": "SANITARY_FIXTURE",
+     "identity_authority": "QORTUBA-NEW-PAINTRY-COUNTER-CABINETRY-OWNER-001@v1"
     },
     {
      "key": "QORTUBA_REV_NEW|H536||SEGMENT|0",
-     "object_class": "SANITARY_FIXTURE",
+     "object_class": "LATER_INSTALLED_CABINETRY",
      "layer": "FIXTURE",
      "entity_type": "LINE",
      "geometry": [
@@ -2811,11 +2837,13 @@
       15109.7196,
       109523.0817,
       15049.7196
-     ]
+     ],
+     "observed_class": "SANITARY_FIXTURE",
+     "identity_authority": "QORTUBA-NEW-PAINTRY-COUNTER-CABINETRY-OWNER-001@v1"
     },
     {
      "key": "QORTUBA_REV_NEW|H541||SEGMENT|0",
-     "object_class": "SANITARY_FIXTURE",
+     "object_class": "LATER_INSTALLED_CABINETRY",
      "layer": "FIXTURE",
      "entity_type": "LINE",
      "geometry": [
@@ -2823,14 +2851,18 @@
       15459.7196,
       109513.0817,
       15384.7196
-     ]
+     ],
+     "observed_class": "SANITARY_FIXTURE",
+     "identity_authority": "QORTUBA-NEW-PAINTRY-COUNTER-CABINETRY-OWNER-001@v1"
     }
    ],
    "object_classes": [
-    "SANITARY_FIXTURE"
+    "LATER_INSTALLED_CABINETRY"
    ],
-   "policy": null,
-   "treatment": null,
+   "policy": [
+    "URBAN-FLOOR-FINISH-BEFORE-CABINETRY-METHOD@v1"
+   ],
+   "treatment": "FOOTPRINT_INCLUDED",
    "rejected": [
     {
      "policy": "QORTUBA-NEW-FLOOR-OBJECT-FOOTPRINT-OWNER-001@v1",
@@ -2844,6 +2876,48 @@
    "counts": {
     "SANITARY_FIXTURE": 5
    },
+   "identity_facts": [
+    "QORTUBA-NEW-PAINTRY-COUNTER-CABINETRY-OWNER-001@v1"
+   ],
+   "identity_bindings": [
+    {
+     "fact_id": "QORTUBA-NEW-PAINTRY-COUNTER-CABINETRY-OWNER-001@v1",
+     "binding": "APPLIES",
+     "parts": [
+      {
+       "key": "QORTUBA_REV_NEW|H478||SEGMENT|0",
+       "state": "APPLIES"
+      },
+      {
+       "key": "QORTUBA_REV_NEW|H482||SEGMENT|0",
+       "state": "APPLIES"
+      },
+      {
+       "key": "QORTUBA_REV_NEW|H532||SEGMENT|0",
+       "state": "APPLIES"
+      },
+      {
+       "key": "QORTUBA_REV_NEW|H536||SEGMENT|0",
+       "state": "APPLIES"
+      },
+      {
+       "key": "QORTUBA_REV_NEW|H541||SEGMENT|0",
+       "state": "APPLIES"
+      }
+     ],
+     "object_keys": [
+      "QORTUBA_REV_NEW|H478||SEGMENT|0",
+      "QORTUBA_REV_NEW|H482||SEGMENT|0",
+      "QORTUBA_REV_NEW|H532||SEGMENT|0",
+      "QORTUBA_REV_NEW|H536||SEGMENT|0",
+      "QORTUBA_REV_NEW|H541||SEGMENT|0"
+     ],
+     "accepts_roles": [
+      "SANITARY_FIXTURE"
+     ],
+     "object_class": "LATER_INSTALLED_CABINETRY"
+    }
+   ],
    "outline_faces": {
     "site_is_rectangle": true,
     "faces_m2": [
@@ -2957,28 +3031,112 @@
      }
     ],
     "sum_m2": 11.685,
-    "note": "planar faces of the source FIXTURE lines + the site boundary; WHICH face is the counter is not stated by geometry"
+    "note": "planar faces of the source object lines + the site boundary (report diagnostic only; nothing is deducted from them)"
    }
   }
  },
  "resolved": [
+  "Q-12|SITE-8c1c7563d5252c50",
   "Q-13|SITE-77a2130eb275604c",
   "Q-13|SITE-a6405850100155ac"
  ],
- "unresolved": [
-  "Q-12|SITE-8c1c7563d5252c50"
- ],
+ "unresolved": [],
  "facts_searched": "QORTUBA-NEW-FLOOR-OBJECT-FOOTPRINT-OWNER-001@v1 scope = trade FLOOR_FINISH, space_classes [DRY_INTERNAL_ROOM], finish PORCELAIN_DRY_FLOOR; its is_not list explicitly says 'a rule for wet / service floors'. QP-08 covers skirting / profile only. US-01 / US-14 / QORTUBA-NEW-WET-SERVICE-FINISH-OWNER-001 set finish and waterproofing scope but say nothing about counters. QORTUBA-Q14-CEILING-FOOTPRINT-OWNER-001 is ceiling-only. No accepted fact establishes the PAINTRY floor under the counter",
  "why_not_paintry": "PAINTRY is SERVICE_ROOM (QP-07); the dry-floor fact names DRY_INTERNAL_ROOM only and forbids its own use for wet / service floors; the objects are fixed kitchen counters (FIXTURE layer), not the wardrobes / joinery / loose furniture the fact lists. Extending it would be a transfer the fact itself forbids",
- "owner_question": "PAINTRY (تحضير): is the ceramic floor laid UNDER the fixed kitchen counter drawn by the five FIXTURE lines? YES -> 11.685 m2 stands; NO -> which outlined area is the counter footprint (U-shaped run along the west / south / north walls 5.440 m2; north-east pocket 0.600 m2)? Waterproofing is not affected (US-14 measures the membrane over the whole room floor)",
+ "owner_question": "NONE (answered: floor finish laid before the cabinets)",
  "assumed": "NOTHING (no zero, no full-room assumption)",
- "effect_bounds_m2": {
-  "if_included": 11.685,
-  "if_excluded_candidates": {
-   "minus face 0.6": 11.085,
-   "minus face 5.44": 6.245
+ "policies": [
+  {
+   "policy_id": "QORTUBA-NEW-FLOOR-OBJECT-FOOTPRINT-OWNER-001@v1",
+   "kind": "QORTUBA_PROJECT_FACT",
+   "trade": "FLOOR_FINISH",
+   "space_classes": [
+    "DRY_INTERNAL_ROOM"
+   ],
+   "object_classes": [
+    "ANY_NON_PARTITION_OBJECT"
+   ],
+   "treatment": "FOOTPRINT_INCLUDED",
+   "excludes": [
+    {
+     "space_class": "WET_SERVICE_ROOM",
+     "text": "is_not: a rule for wet / service floors"
+    },
+    {
+     "space_class": "SERVICE_ROOM",
+     "text": "is_not: a rule for wet / service floors"
+    }
+   ]
   },
-  "largest_face": "the largest face is the open floor in front of the counter (it holds the sliding-door side) - not a counter candidate"
- },
+  {
+   "policy_id": "URBAN-FLOOR-FINISH-BEFORE-CABINETRY-METHOD@v1",
+   "kind": "URBAN_OWNER_METHOD",
+   "trade": "FLOOR_FINISH",
+   "space_classes": [
+    "DRY_INTERNAL_ROOM",
+    "WET_SERVICE_ROOM",
+    "SERVICE_ROOM"
+   ],
+   "object_classes": [
+    "LATER_INSTALLED_CABINETRY",
+    "FIXED_JOINERY",
+    "WARDROBE",
+    "VANITY_UNIT"
+   ],
+   "treatment": "FOOTPRINT_INCLUDED",
+   "excluded_object_classes": [
+    "STRUCTURAL_OBSTACLE",
+    "STRUCTURAL_COLUMN",
+    "MASONRY_WALL",
+    "CONCRETE_WALL",
+    "SHAFT",
+    "DUCT",
+    "BUILT_OBSTACLE",
+    "BUILT_PLINTH",
+    "PERMANENT_CURB",
+    "VOID",
+    "OPENING"
+   ]
+  }
+ ],
+ "identity_facts": [
+  {
+   "fact_id": "QORTUBA-NEW-PAINTRY-COUNTER-CABINETRY-OWNER-001@v1",
+   "binding": "APPLIES",
+   "parts": [
+    {
+     "key": "QORTUBA_REV_NEW|H478||SEGMENT|0",
+     "state": "APPLIES"
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H482||SEGMENT|0",
+     "state": "APPLIES"
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H532||SEGMENT|0",
+     "state": "APPLIES"
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H536||SEGMENT|0",
+     "state": "APPLIES"
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H541||SEGMENT|0",
+     "state": "APPLIES"
+    }
+   ],
+   "object_keys": [
+    "QORTUBA_REV_NEW|H478||SEGMENT|0",
+    "QORTUBA_REV_NEW|H482||SEGMENT|0",
+    "QORTUBA_REV_NEW|H532||SEGMENT|0",
+    "QORTUBA_REV_NEW|H536||SEGMENT|0",
+    "QORTUBA_REV_NEW|H541||SEGMENT|0"
+   ],
+   "accepts_roles": [
+    "SANITARY_FIXTURE"
+   ],
+   "object_class": "LATER_INSTALLED_CABINETRY"
+  }
+ ],
  "waterproofing": "not affected (US-14: membrane over the whole measured room floor)"
 }

@@ -101,9 +101,13 @@
     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
    ],
    "evidence": "rows_new.Q-13 (R8.20 build; QUANTITY_REGRESSION Q-13)",
-   "notes": [],
+   "notes": [
+    "object footprint RESOLVED on SITE-77a2130eb275604c by QORTUBA-NEW-FLOOR-OBJECT-FOOTPRINT-OWNER-001@v1: FOOTPRINT_INCLUDED (no deduction)",
+    "object footprint RESOLVED on SITE-a6405850100155ac by QORTUBA-NEW-FLOOR-OBJECT-FOOTPRINT-OWNER-001@v1: FOOTPRINT_INCLUDED (no deduction)"
+   ],
    "approved_for_boq": false,
-   "additive_in_summary": true
+   "additive_in_summary": true,
+   "resolved_blockers": []
   },
   {
    "canonical_item_id": "FLR-02",
@@ -179,7 +183,8 @@
    "evidence": "rows_new.Q-11 (R8.20 build; QUANTITY_REGRESSION Q-11)",
    "notes": [],
    "approved_for_boq": false,
-   "additive_in_summary": true
+   "additive_in_summary": true,
+   "resolved_blockers": []
   },
   {
    "canonical_item_id": "FLR-03",
@@ -187,7 +192,7 @@
    "layer": "FLOOR_FINISH_SURFACE",
    "unit": "m2",
    "qty": 11.685,
-   "status": "AUTHORISED_SUBTOTAL",
+   "status": "COMPUTED_SHADOW_COMPLETE",
    "description_ar": "أرضيات سيراميك - غرفة التحضير (PAINTRY)",
    "description_en": "Ceramic floor tile - PAINTRY (service room)",
    "room_breakdown": [
@@ -232,15 +237,23 @@
    ],
    "blockers": [
     "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
-    "OBJECT_FOOTPRINT_IMPLICIT: proven furniture / fixture footprints are inside the measured floor by the topology convention, not by a FLOOR_FINISH footprint authority",
     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
    ],
    "evidence": "rows_new.Q-12 (R8.20 build; QUANTITY_REGRESSION Q-12)",
    "notes": [
-    "OPEN OWNER QUESTION: is the ceramic floor laid under the fixed kitchen counter drawn by FIXTURE lines H478, H482, H532, H536, H541? YES -> 11.685 m2 stands; NO -> the counter footprint face(s) [0.6, 5.44, 5.645] m2 come off"
+    "object footprint RESOLVED on SITE-8c1c7563d5252c50 by URBAN-FLOOR-FINISH-BEFORE-CABINETRY-METHOD@v1 with object identity QORTUBA-NEW-PAINTRY-COUNTER-CABINETRY-OWNER-001@v1: FOOTPRINT_INCLUDED (no deduction)"
    ],
    "approved_for_boq": false,
-   "additive_in_summary": true
+   "additive_in_summary": true,
+   "resolved_blockers": [
+    {
+     "blocker": "OBJECT_FOOTPRINT_IMPLICIT: proven furniture / fixture footprints are inside the measured floor by the topology convention, not by a FLOOR_FINISH footprint authority",
+     "resolved_by": [
+      "QORTUBA-NEW-PAINTRY-COUNTER-CABINETRY-OWNER-001@v1",
+      "URBAN-FLOOR-FINISH-BEFORE-CABINETRY-METHOD@v1"
+     ]
+    }
+   ]
   },
   {
    "canonical_item_id": "MRB-01",
@@ -1581,7 +1594,7 @@
  "pricing": null,
  "calculates": false,
  "summary_rule": "ONE additive summary line per canonical item; legacy ids are attributes, never lines; a measure pair is two lines of ONE physical item - price one basis",
- "digest": "76f30a38d5b085ec7d4f3dcaf7e9c7ec4814b4e9f7ec16f6637392a94455c766",
+ "digest": "6b6eaf546e85a8851a98a7e436503ef24d7c7aa14a06e71f4a8ec0fd8856e2c9",
  "validation": {
   "state": "PASS",
   "errors": [],

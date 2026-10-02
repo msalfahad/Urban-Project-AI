@@ -67,7 +67,10 @@
     "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
    ],
-   "notes": []
+   "notes": [
+    "object footprint RESOLVED on SITE-77a2130eb275604c by QORTUBA-NEW-FLOOR-OBJECT-FOOTPRINT-OWNER-001@v1: FOOTPRINT_INCLUDED (no deduction)",
+    "object footprint RESOLVED on SITE-a6405850100155ac by QORTUBA-NEW-FLOOR-OBJECT-FOOTPRINT-OWNER-001@v1: FOOTPRINT_INCLUDED (no deduction)"
+   ]
   },
   "FLR-02": {
    "qty": 17.7425,
@@ -108,7 +111,7 @@
   "FLR-03": {
    "qty": 11.685,
    "unit": "m2",
-   "status": "AUTHORISED_SUBTOTAL",
+   "status": "COMPUTED_SHADOW_COMPLETE",
    "room_breakdown": [
     {
      "key": "SITE-8c1c7563d5252c50",
@@ -121,11 +124,10 @@
    ],
    "blockers": [
     "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
-    "OBJECT_FOOTPRINT_IMPLICIT: proven furniture / fixture footprints are inside the measured floor by the topology convention, not by a FLOOR_FINISH footprint authority",
     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
    ],
    "notes": [
-    "OPEN OWNER QUESTION: is the ceramic floor laid under the fixed kitchen counter drawn by FIXTURE lines H478, H482, H532, H536, H541? YES -> 11.685 m2 stands; NO -> the counter footprint face(s) [0.6, 5.44, 5.645] m2 come off"
+    "object footprint RESOLVED on SITE-8c1c7563d5252c50 by URBAN-FLOOR-FINISH-BEFORE-CABINETRY-METHOD@v1 with object identity QORTUBA-NEW-PAINTRY-COUNTER-CABINETRY-OWNER-001@v1: FOOTPRINT_INCLUDED (no deduction)"
    ]
   },
   "MRB-01": {

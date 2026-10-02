@@ -1,28 +1,34 @@
 {
- "SCHEMA": "URBAN_QORTUBA_RC1_FREEZE_V1",
+ "SCHEMA": "URBAN_QORTUBA_RC1_FREEZE_V2",
  "name": "URBAN_ARCHITECTURAL_QTO_QORTUBA_RC1",
  "frozen": true,
  "release_status": "SHADOW / RC1_REFERENCE",
  "contractual_approval": false,
  "canonical_dxf_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
- "dwg_known_sha256_prefix": "e4babbc2ded1",
+ "dwg_sha256": "e4babbc2ded14d8b01d64fbfd4b373e6a09ba60c4490a56e6305a82c9e47171f",
  "dwg_dxf_anchor": "NOT_ESTABLISHED",
  "selected_plan_scope": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+ "code_commit": "7402880",
  "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+ "source_canonical_input_digest": "6938d104ab6f5f82aa9bf94b45a3317e9416ba338f5d0eed0bc027fed54fbc97",
+ "topology_input_digest": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+ "topology_result_digest": "b451464314ef01c6de500858a5d0316978356627497229660a4b7ff3051da706",
+ "topology_policy_digest": "263d2adf1d1770e1db963ac9bfde852dcedbdbd77e0040730322848c49acb450",
  "room_register_digest": "9e9b3d76844853b48c7eca8e6db18a58f7a1568505e9572c5f21000c9ec12553",
  "owner_fact_and_rule_files_sha256": {
   "OWNER_PHYSICAL_FACTS.json": "64fdafdf425267d95274cd91d446ea1ee3bdfd86a404b271bdfeb97425aadc2e",
   "OWNER_METHOD_FACTS.json": "0ddb63c7c934b66470c1c74cc48e3d65462c789f48de19def3f2a4328345eeff",
   "OWNER_FINISH_FACTS.json": "58105213d7c87734f27b281bcc39b0cc546671a4b9096dc9514caaccdedb0c86",
-  "URBAN_OWNER_METHOD_RULES.json": "3ea3d0ff7c545a7c1d9306ee0c352b3c3dacc2d8c288cd514d6060dbc22d3159",
+  "URBAN_OWNER_METHOD_RULES.json": "8639b64b23ff0745178d61257618159bd4dc499ff9116e2e63c940edaf8bd84c",
   "OWNER_PROJECT_CLAIMS.json": "994c8bf1bb2114d8c5e65b8208dffd90708e265431ea240e180b1002ff12ae25",
-  "OWNER_CLOSURE_REVIEWS.json": "192cb4dc38c13e738c1483910e9157d1fa20143e7f8dcf3a2a6104c583216113"
+  "OWNER_CLOSURE_REVIEWS.json": "192cb4dc38c13e738c1483910e9157d1fa20143e7f8dcf3a2a6104c583216113",
+  "OWNER_OBJECT_FACTS.json": "637b44200761677dbeae3d77a17fb94f839ebde9cee297bb93395f03762e087b"
  },
  "engine_policies": {
   "CANONICAL_BOQ_ITEM_MODEL_V1": "e72dad5351fd0a7d7f6ab42a70e9e488d690d847db7b074047f4b634a35d4059",
   "ROOM_QUANTITY_MATRIX_V1": "d391bd8ea3bc37c5f8df22887bc1057e3f8a0143a6ff04ab34ac82bb3c2fc932",
   "OPENING_REGISTER_V1": "8c65c0a9b31953e7dbb5ce43032d438ff3b014336ea45f7e71c774668ef3b639",
-  "OBJECT_FOOTPRINT_AUTHORITY_V1": "7904fdcd07ffc78cfeb204f13825fa0ae507ec2316d9e146d3375bc1a50a858a",
+  "OBJECT_FOOTPRINT_AUTHORITY_V2": "fefc6b965f3026fe906b6063d49f87657ebe4ffefbcd2c14fc5b91c9e3eaaa63",
   "BOQ_XLSX_EXPORT_V2": "37f3416fe4d64b1fa0e098536a57504f0b94a5ab6b48f4e74e03ff7c642b7327"
  },
  "inherited_freezes": {
@@ -31,43 +37,42 @@
  },
  "row_digests": {
   "Q-03": {
-   "TOPOLOGY_DIGEST": "SAME",
-   "ROW_AUTHORITY_DIGEST": "SAME",
-   "RELEASE_INPUT_DIGEST": "SAME"
+   "TOPOLOGY_RUN_INPUT_DIGEST": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+   "ROW_AUTHORITY_DIGEST": "4ba5280563aad8912d64953fab427f958fa6bd12753b8ff00ff943347d26235d",
+   "RELEASE_INPUT_DIGEST": "e5fb8dac747638a9201c881b71865cb2b8c40f202600bcc99a9f3711dc8233b7"
   },
   "Q-03P": {
-   "TOPOLOGY_DIGEST": "SAME",
-   "ROW_AUTHORITY_DIGEST": "SAME",
-   "RELEASE_INPUT_DIGEST": "SAME"
+   "TOPOLOGY_RUN_INPUT_DIGEST": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+   "ROW_AUTHORITY_DIGEST": "12cbb5ec8e1657ad174b5767863237f6bb9e6e0a2b2545037b53c588efc42fdc",
+   "RELEASE_INPUT_DIGEST": "c009e63cdc0789ed80ad63d9e470f7a1f70fce9f49a6f880580d2e18d6823b93"
   },
   "Q-11": {
-   "TOPOLOGY_DIGEST": "SAME",
-   "ROW_AUTHORITY_DIGEST": "SAME",
-   "RELEASE_INPUT_DIGEST": "SAME"
+   "TOPOLOGY_RUN_INPUT_DIGEST": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+   "ROW_AUTHORITY_DIGEST": "4a6e54181439fc9a2b6df0f38ab723dd1919156fee23e8901e0239ff31114bf0",
+   "RELEASE_INPUT_DIGEST": "084900947e954cda71897dbbe130c07df833ad7b3b1e694f70fa8fc38eba21a0"
   },
   "Q-12": {
-   "TOPOLOGY_DIGEST": "SAME",
-   "ROW_AUTHORITY_DIGEST": "SAME",
-   "RELEASE_INPUT_DIGEST": "SAME"
+   "TOPOLOGY_RUN_INPUT_DIGEST": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+   "ROW_AUTHORITY_DIGEST": "36c55cb88cd6fcae629b58541083ba4f82728e1a5d3c56801de3f9bcf7ae0a4b",
+   "RELEASE_INPUT_DIGEST": "36693d5b41e4d0d682a9678209bf8b464e8ce73fb8e8051f64be6b51278a8d94"
   },
   "Q-13": {
-   "TOPOLOGY_DIGEST": "SAME",
-   "ROW_AUTHORITY_DIGEST": "SAME",
-   "RELEASE_INPUT_DIGEST": "SAME"
+   "TOPOLOGY_RUN_INPUT_DIGEST": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+   "ROW_AUTHORITY_DIGEST": "b53ed8ac248365a10b58bd862ddc180827b6b4d55db2ba55b67b4e89398a65b9",
+   "RELEASE_INPUT_DIGEST": "6082330059236262a7525ad62c3c7bec4359c376374cbfbf1599680f2ece4e55"
   },
   "Q-14": {
-   "TOPOLOGY_DIGEST": "SAME",
-   "ROW_AUTHORITY_DIGEST": "SAME",
-   "RELEASE_INPUT_DIGEST": "SAME"
+   "TOPOLOGY_RUN_INPUT_DIGEST": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+   "ROW_AUTHORITY_DIGEST": "d1c2f2a87820c25916f1d31732e74d7c774086b0369882a0b9dbc81b8bc0139b",
+   "RELEASE_INPUT_DIGEST": "3152437d199c8a1c328e4bfc4bc4fdd9bf5dd5811e9cd484805b4f2973fe9547"
   }
  },
- "topology_digest": false,
  "opening_digest": "0462d68c14f43585bfc72d5998e68c472eb877905fcb278b58e162d451347275",
  "surface_digest": "f647565aa49ac9c283ecf3a04575532c89b40013daaf04024303d92ecf249c33",
  "trade_item_digests": {
-  "FLR-01": "ed1e2855ff18e2e85fa8a823868935395e1c18dd4efc4e8a18c66abd27e97235",
-  "FLR-02": "db5ef4b163e8ea267aeeff8fc47154f4ebea09e620af647838b77e8818ee468f",
-  "FLR-03": "6612f96ad9eac356742646f4a1d92c470aa9641f47cbf4712f5b5a533ab32586",
+  "FLR-01": "9c523301050dabcb5ae29e6e4a437af780e3f3d49dbe1404a41c4ae0a1d3b07e",
+  "FLR-02": "8e4884aa63fa31f98c0d30e91fd9d37d6bdb822734aee838f14c465221599172",
+  "FLR-03": "a5104fcf921446c280f6394d1e17325d53ee4e8a031f98862d14a88469956f67",
   "MRB-01": "15972fa351e6c1066e9ac8925b5257894a5cf801bdac4d7915a83b6e01ed5d26",
   "MRB-02": "875f6af6f83f28cfda9832efa9535d69489399eabd4a7f49f22b548e9aef1d5c",
   "CLG-01": "ed6c39cc9ae63e63cd7f0c1727852de3b3820c8aebf67613323829aaa7f4a540",
@@ -87,13 +92,12 @@
   "WIN-01": "5e64bc8efa9ae580ee066bf0ae5d1bad93ede54dab274e89fd61e812462ef819",
   "WIN-02": "ec4762a13e1af00c2204e993c65f25f279942031040e65645bf3c0ef9dd87526"
  },
- "canonical_boq_digest": "76f30a38d5b085ec7d4f3dcaf7e9c7ec4814b4e9f7ec16f6637392a94455c766",
- "xlsx_content_digest": "7ad4b727682e83dc7b22d297cc56a7c2b673031b48a27a6320a3b3d060a1cf58",
- "xlsx_file_sha256": "a9be156e2328d04e9e9fbbfa094085055750cc843a48ded607207a36a0bad296",
- "open_items": [
-  "FLR-03"
- ],
- "open_owner_question": "PAINTRY (تحضير): is the ceramic floor laid UNDER the fixed kitchen counter drawn by the five FIXTURE lines? YES -> 11.685 m2 stands; NO -> which outlined area is the counter footprint (U-shaped run along the west / south / north walls 5.440 m2; north-east pocket 0.600 m2)? Waterproofing is not affected (US-14 measures the membrane over the whole room floor)",
- "test_results": "TEST_RESULTS.json of the package (one full suite from the final commit)",
- "after_freeze": "NO MORE QORTUBA-SPECIFIC TUNING: a generic fix found on an unseen villa is versioned, implemented generically and Qortuba is rerun as regression; never tuned to restore a number"
+ "canonical_boq_digest": "6b6eaf546e85a8851a98a7e436503ef24d7c7aa14a06e71f4a8ec0fd8856e2c9",
+ "xlsx_content_digest": "647fa151d3e0cf5c9b53a022c6555d988025f31680907cbe161a1de9b012bbc8",
+ "xlsx_file_sha256": "796d117eac08da3704114fdb8bae9faa138810e1b860f3930165bee4c63f7e7b",
+ "open_items": [],
+ "open_owner_question": "NONE",
+ "test_results": "PACKAGE_FILLED: TEST_RESULTS.json of the package (one full suite from the final commit)",
+ "after_freeze": "NO MORE QORTUBA-SPECIFIC TUNING: a generic fix found on an unseen villa is versioned, implemented generically and Qortuba is rerun as regression; never tuned to restore a number",
+ "freeze_schema": "FREEZE_SCHEMA_V1"
 }

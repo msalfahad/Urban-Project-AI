@@ -68,7 +68,7 @@
      7,
      "DXF (K2 ezdxf), TS01 certified topology",
      "QORTUBA-FLOOR-TREATMENT@v3; QORTUBA-SPACE-CLASS@v2",
-     "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED | SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed",
+     "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED | SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed | object footprint RESOLVED on SITE-77a2130eb275604c by QORTUBA-NEW-FLOOR-OBJECT-FOOTPRINT-OWNER-001@v1: FOOTPRINT_INCLUDED (no deduction) | object footprint RESOLVED on SITE-a6405850100155ac by QORTUBA-NEW-FLOOR-OBJECT-FOOTPRINT-OWNER-001@v1: FOOTPRINT_INCLUDED (no deduction)",
      "NO - SHADOW"
     ],
     [
@@ -94,13 +94,13 @@
      "Ceramic floor tile - PAINTRY (service room)",
      11.685,
      "m2",
-     "AUTHORISED_SUBTOTAL",
+     "COMPUTED_SHADOW_COMPLETE",
      "",
      "QOR-R819-Q-12 (SAME_QUANTITY); OWNER-RULES-V1:Q-12 (HISTORICAL_MEANING); QOR-R819-Q-03P (MISLABELLED_DUPLICATE)",
      1,
      "DXF (K2 ezdxf), TS01 certified topology",
      "QORTUBA-FLOOR-TREATMENT@v3; QORTUBA-SPACE-CLASS@v2",
-     "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED | OBJECT_FOOTPRINT_IMPLICIT: proven furniture / fixture footprints are inside the measured floor by the topology convention, not by a FLOOR_FINISH footprint authority | SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed | OPEN OWNER QUESTION: is the ceramic floor laid under the fixed kitchen counter drawn by FIXTURE lines H478, H482, H532, H536, H541? YES -> 11.685 m2 stands; NO -> the counter footprint face(s) [0.6, 5.44, 5.645] m2 come off",
+     "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED | SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed | object footprint RESOLVED on SITE-8c1c7563d5252c50 by URBAN-FLOOR-FINISH-BEFORE-CABINETRY-METHOD@v1 with object identity QORTUBA-NEW-PAINTRY-COUNTER-CABINETRY-OWNER-001@v1: FOOTPRINT_INCLUDED (no deduction)",
      "NO - SHADOW"
     ],
     [
@@ -602,7 +602,7 @@
      13.9,
      "SGD-H533",
      "W-H1342",
-     "FLR-03 AUTHORISED_SUBTOTAL: OBJECT_FOOTPRINT_IMPLICIT (open owner question)"
+     ""
     ],
     [
      "DOOR STRIP I841 (BED.ROOM (1) [5f1762f1] / HALL / whgm)",
@@ -893,7 +893,7 @@
      "FLR-03",
      "Ceramic floor tile - PAINTRY (service room)",
      11.685,
-     "AUTHORISED_SUBTOTAL",
+     "COMPUTED_SHADOW_COMPLETE",
      11.685,
      "COMPUTED_SHADOW_COMPLETE",
      ""
@@ -3172,7 +3172,7 @@
      "[\"SITE-5f1762f1a93b91ca\", \"SITE-77a2130eb275604c\", \"SITE-a6405850100155ac\", \"SITE-daca396d6d730e60\", \"THRESHOLD-04910e5deeeed2fc\", \"THRESHOLD-c82365dd41b94abe\", \"THRESHOLD-d4633eabc844b274\"]",
      "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
      "QORTUBA_REV_NEW",
-     "ed1e2855ff18e2e85fa8a823868935395e1c18dd4efc4e8a18c66abd27e97235"
+     "9c523301050dabcb5ae29e6e4a437af780e3f3d49dbe1404a41c4ae0a1d3b07e"
     ],
     [
      "FLR-02",
@@ -3183,7 +3183,7 @@
      "[\"SITE-1c4abf65f9b5db1e\", \"SITE-a2b19efc492a6d0b\", \"SITE-fe8ed5548fb4310e\"]",
      "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
      "QORTUBA_REV_NEW",
-     "db5ef4b163e8ea267aeeff8fc47154f4ebea09e620af647838b77e8818ee468f"
+     "8e4884aa63fa31f98c0d30e91fd9d37d6bdb822734aee838f14c465221599172"
     ],
     [
      "FLR-03",
@@ -3194,7 +3194,7 @@
      "[\"SITE-8c1c7563d5252c50\"]",
      "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
      "QORTUBA_REV_NEW",
-     "6612f96ad9eac356742646f4a1d92c470aa9641f47cbf4712f5b5a533ab32586"
+     "a5104fcf921446c280f6394d1e17325d53ee4e8a031f98862d14a88469956f67"
     ],
     [
      "MRB-01",
@@ -3427,6 +3427,16 @@
      "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
     ],
     [
+     "FLR-01",
+     "COMPUTED_SHADOW_COMPLETE",
+     "object footprint RESOLVED on SITE-77a2130eb275604c by QORTUBA-NEW-FLOOR-OBJECT-FOOTPRINT-OWNER-001@v1: FOOTPRINT_INCLUDED (no deduction)"
+    ],
+    [
+     "FLR-01",
+     "COMPUTED_SHADOW_COMPLETE",
+     "object footprint RESOLVED on SITE-a6405850100155ac by QORTUBA-NEW-FLOOR-OBJECT-FOOTPRINT-OWNER-001@v1: FOOTPRINT_INCLUDED (no deduction)"
+    ],
+    [
      "FLR-02",
      "COMPUTED_SHADOW_COMPLETE",
      "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED"
@@ -3438,23 +3448,18 @@
     ],
     [
      "FLR-03",
-     "AUTHORISED_SUBTOTAL",
+     "COMPUTED_SHADOW_COMPLETE",
      "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED"
     ],
     [
      "FLR-03",
-     "AUTHORISED_SUBTOTAL",
-     "OBJECT_FOOTPRINT_IMPLICIT: proven furniture / fixture footprints are inside the measured floor by the topology convention, not by a FLOOR_FINISH footprint authority"
-    ],
-    [
-     "FLR-03",
-     "AUTHORISED_SUBTOTAL",
+     "COMPUTED_SHADOW_COMPLETE",
      "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
     ],
     [
      "FLR-03",
-     "AUTHORISED_SUBTOTAL",
-     "OPEN OWNER QUESTION: is the ceramic floor laid under the fixed kitchen counter drawn by FIXTURE lines H478, H482, H532, H536, H541? YES -> 11.685 m2 stands; NO -> the counter footprint face(s) [0.6, 5.44, 5.645] m2 come off"
+     "COMPUTED_SHADOW_COMPLETE",
+     "object footprint RESOLVED on SITE-8c1c7563d5252c50 by URBAN-FLOOR-FINISH-BEFORE-CABINETRY-METHOD@v1 with object identity QORTUBA-NEW-PAINTRY-COUNTER-CABINETRY-OWNER-001@v1: FOOTPRINT_INCLUDED (no deduction)"
     ],
     [
      "MRB-01",
@@ -3665,11 +3670,6 @@
      "WIN-02",
      "COMPUTED_SHADOW_COMPLETE",
      "heights are owner project parameters (no height is drawn)"
-    ],
-    [
-     "Q-12|SITE-8c1c7563d5252c50",
-     "OPEN",
-     "OBJECT_FOOTPRINT_IMPLICIT: QORTUBA_REV_NEW|H478||SEGMENT|0, QORTUBA_REV_NEW|H482||SEGMENT|0, QORTUBA_REV_NEW|H532||SEGMENT|0, QORTUBA_REV_NEW|H536||SEGMENT|0, QORTUBA_REV_NEW|H541||SEGMENT|0 (faces [0.6, 5.44, 5.645] m2)"
     ]
    ],
    "status_col": 1,
@@ -3709,7 +3709,7 @@
     ],
     [
      "canonical_boq_digest",
-     "76f30a38d5b085ec7d4f3dcaf7e9c7ec4814b4e9f7ec16f6637392a94455c766"
+     "6b6eaf546e85a8851a98a7e436503ef24d7c7aa14a06e71f4a8ec0fd8856e2c9"
     ],
     [
      "canonical_model_validation",

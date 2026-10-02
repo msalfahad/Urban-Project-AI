@@ -1,11 +1,9 @@
 {
  "SCHEMA": "URBAN_QORTUBA_RC1_DECISION_REGISTER_V1",
  "answers": {
-  "1_rc1_complete": "YES - frozen as URBAN_ARCHITECTURAL_QTO_QORTUBA_RC1 (SHADOW / RC1_REFERENCE) with ONE open item: FLR-03 PAINTRY ceramic floor AUTHORISED_SUBTOTAL (counter footprint question)",
+  "1_rc1_complete": "YES - frozen as URBAN_ARCHITECTURAL_QTO_QORTUBA_RC1 (SHADOW / RC1_REFERENCE), no open quantity item",
   "2_blocked": {
-   "quantity": [
-    "FLR-03"
-   ],
+   "quantity": [],
    "release": [
     "SOURCE_ANCHOR (DWG <-> DXF NOT_ESTABLISHED)",
     "CROSS_ROUTE_AGREEMENT",
@@ -337,12 +335,30 @@
   "33_q03_q11": "NOT two payable floor quantities. Same physical surface (the three BATH sites, 17.7425 m2) but historically two DIFFERENT trades: Q-03 = wet-area WATERPROOFING floor, Q-11 = wet-room CERAMIC floor. The R8.18 waterproofing register now owns the membrane (WATERPROOFING_FLOOR_M2), so RC1: Q-11 -> canonical FLOOR CERAMIC WET item; Q-03 -> LEGACY alias of the bathroom part of the canonical WATERPROOFING FLOOR item (and it must never again be shown as a floor-finish row)",
   "34_q03p_q12": "Same: Q-12 -> canonical PAINTRY CERAMIC FLOOR item; Q-03P -> legacy alias of the PAINTRY part of the WATERPROOFING FLOOR item",
   "35_excel_double_count": "NO in RC1: every legacy id is an attribute of its canonical line (readback refuses an alias line); R8.20 XLSX: YES (see BOQ_ALIAS_REGISTER)",
-  "36_footprint_resolved": "NO for PAINTRY (FLR-03); YES for the dry rooms (fact scope covers them)",
-  "37_authority": [
-   "Q-13|SITE-77a2130eb275604c",
-   "Q-13|SITE-a6405850100155ac"
-  ],
-  "38_remaining_blocker": "PAINTRY (تحضير): is the ceramic floor laid UNDER the fixed kitchen counter drawn by the five FIXTURE lines? YES -> 11.685 m2 stands; NO -> which outlined area is the counter footprint (U-shaped run along the west / south / north walls 5.440 m2; north-east pocket 0.600 m2)? Waterproofing is not affected (US-14 measures the membrane over the whole room floor)",
+  "36_footprint_resolved": "YES for every site",
+  "37_authority": {
+   "Q-13|SITE-77a2130eb275604c": {
+    "policies": [
+     "QORTUBA-NEW-FLOOR-OBJECT-FOOTPRINT-OWNER-001@v1"
+    ],
+    "identity": []
+   },
+   "Q-13|SITE-a6405850100155ac": {
+    "policies": [
+     "QORTUBA-NEW-FLOOR-OBJECT-FOOTPRINT-OWNER-001@v1"
+    ],
+    "identity": []
+   },
+   "Q-12|SITE-8c1c7563d5252c50": {
+    "policies": [
+     "URBAN-FLOOR-FINISH-BEFORE-CABINETRY-METHOD@v1"
+    ],
+    "identity": [
+     "QORTUBA-NEW-PAINTRY-COUNTER-CABINETRY-OWNER-001@v1"
+    ]
+   }
+  },
+  "38_remaining_blocker": "NONE (answered: floor finish laid before the cabinets)",
   "39_every_room_reconciles": true,
   "40_trade_totals_equal_breakdowns": true,
   "41_duplicate_physical_surface": "NONE (wall_plane_vs_column_vs_duct_vs_reveals (R8.19 guard): PASS, all_wall_surfaces_once (R8.18 guard, 190 surfaces): PASS, below_sill_and_above_opening_vs_wall: PASS, passage_soffit_vs_ceiling: PASS, threshold_vs_floor_finish: PASS, duct_footprint_vs_floor_and_ceiling: PASS)",
@@ -368,7 +384,7 @@
   ],
   "47_xlsx_formulas": "NO",
   "48_xlsx_equals_engine": true,
-  "49_xlsx_content_digest": "7ad4b727682e83dc7b22d297cc56a7c2b673031b48a27a6320a3b3d060a1cf58",
+  "49_xlsx_content_digest": "647fa151d3e0cf5c9b53a022c6555d988025f31680907cbe161a1de9b012bbc8",
   "50_canonical_source": "DXF sha256 df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315 (QORTUBA_REV_NEW)",
   "51_dwg_dxf_identity": "NOT_ESTABLISHED",
   "52_blocks_rc1_reference": "NO",
@@ -433,11 +449,6 @@
   "PRODUCTION_MIGRATION": "NO"
  },
  "owner_actions": [
-  {
-   "id": "PAINTRY_COUNTER_FOOTPRINT",
-   "question": "PAINTRY (تحضير): is the ceramic floor laid UNDER the fixed kitchen counter drawn by the five FIXTURE lines? YES -> 11.685 m2 stands; NO -> which outlined area is the counter footprint (U-shaped run along the west / south / north walls 5.440 m2; north-east pocket 0.600 m2)? Waterproofing is not affected (US-14 measures the membrane over the whole room floor)",
-   "changes": "FLR-03 only (and nothing else)"
-  },
   {
    "id": "QORTUBA_CONTROLLED_REEXPORT",
    "when": "in parallel or after RC1 (not blocking)",
