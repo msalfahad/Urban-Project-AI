@@ -42,6 +42,16 @@ def bullets(d):
     return "\n".join(f"- **{k}:** {v if isinstance(v, str) else j(v, 900)}" for k, v in d.items())
 
 
+PRIOR_RUNS = [{"commit": "426063b", "exit_code": 1, "passed": 5398, "xfailed": 92, "skipped": 3, "failed": 3,
+               "failed_tests": ["tests/r8_0/test_r8_0_import_boundaries.py::test_B5_B6_engine_source_dependencies_registered",
+                                "tests/r8_1/test_r8_1_boundaries.py::test_B5_B6_live_engine_source_dependencies_registered",
+                                "tests/r8_1/test_r8_1_boundaries.py::test_k1_is_stdlib_only_in_r8_1"],
+               "cause": "the XLSX exporter was placed in engine/source and imports openpyxl; engine/source is "
+                        "stdlib-only (source dependency register)",
+               "fix": "1ce63bb moved it to engine/boq_xlsx.py; no quantity, register or exporter content changed",
+               "superseded_by": "the final run below"}]
+
+
 def main(junit_path, command, exit_code):
     commit = subprocess.run(["git", "rev-parse", "--short", "HEAD"], capture_output=True, text=True,
                             cwd=ROOT).stdout.strip()
@@ -55,7 +65,7 @@ def main(junit_path, command, exit_code):
     w = BX.write(rep, xp, created=datetime.datetime(2026, 10, 2))
     xv = BX.validate(xp, rep)
     res = {"SCHEMA": "URBAN_R8_20_TEST_RESULTS_V1", "commit": commit, "command": command, **jr, "exit_code": exit_code,
-           "determinism_guard": "enforce (repository conftest)",
+           "determinism_guard": "enforce (repository conftest)", "prior_full_suite_runs": PRIOR_RUNS,
            "r8_20_test_files": sorted(p.name for p in (ROOT / "tests/r8_20").glob("test_*.py")),
            "package_xlsx": {"validation": xv["state"], "content_digest": w["content_digest"],
                             "matches_register": w["content_digest"] == R["BOQ_XLSX_STATUS"]["content_digest"]}}
@@ -126,8 +136,11 @@ def main(junit_path, command, exit_code):
     md["15_OPEN_GATES.md"] = "# Open gates\n\n" + tbl(["Gate", "State"], [[k, v] for k, v in G.items()]) + \
         "\n\n## Decisions\n" + "\n".join(f"- **{d['id']}:** {d['decision']}" for d in D["decisions"]) + \
         f"\n\n## R8.21\n{A['30_r8_21']}\n\n{STOP}\n"
-    md["16_TEST_RESULTS.md"] = "# Test results\n\n" + tests + "\n\nR8.20 test files: " + \
-        ", ".join(res["r8_20_test_files"]) + "\n"
+    prior = tbl(["Commit", "Exit", "Passed", "XFailed", "Skipped", "Failed", "Failed tests", "Cause", "Fix"],
+                [[r["commit"], r["exit_code"], r["passed"], r["xfailed"], r["skipped"], r["failed"],
+                  "<br>".join(r["failed_tests"]), r["cause"], r["fix"]] for r in PRIOR_RUNS])
+    md["16_TEST_RESULTS.md"] = "# Test results\n\n## Final run\n\n" + tests + "\n\n## Earlier full-suite run " \
+        "(failed, superseded)\n\n" + prior + "\n\nR8.20 test files: " + ", ".join(res["r8_20_test_files"]) + "\n"
     md["17_CLAUDE_FINAL_RECOMMENDATION.md"] = "# Final recommendation\n\n" + "\n".join(
         f"{i}. **{k.split('_', 1)[1].replace('_', ' ')}:** {v if isinstance(v, str) else j(v, 900)}"
         for i, (k, v) in enumerate(A.items(), 1)) + f"\n\n{STOP}\n"
