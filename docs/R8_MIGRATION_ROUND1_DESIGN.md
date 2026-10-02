@@ -635,3 +635,55 @@ unchanged: the V5 band stays a GEOMETRIC_BAND_CANDIDATE, and a dashed X is never
 reveal lies inside the HALL site. It is carried as DOOR_REVEAL_INSIDE_ROOM_SITE on Q-14 and on skirting.
 
 **Gates:** MIGRATION_PLANNING_READY = YES, MIGRATION_EXECUTION_READY = NO, PRODUCTION_MIGRATION = NO.
+
+## 17. R8.16 addendum — floor-contact skirting, door / doorless jambs, I1471 offset-jamb closure, Q-14 rebuild
+
+**Order (anti-calibration):**
+1. recommendation (`r8_16_recommendation.json`);
+2. DOOR_OPENING_CLOSURE_POLICY_V2, WALL_CONTACT_PATH_POLICY_V3, the owner facts and the rule, plus synthetic tests;
+3. freeze (`R8_16_FREEZE`);
+4. blind Qortuba run (`CLOSURE_BLIND_RESULT` and `SKIRTING_BLIND_RESULT`, committed first);
+5. rows and registers.
+
+**Closure V2** (`engine/source/topology.py`, recorded in the run manifest as `door_opening_closure`):
+- The V1 end-point rule is kept.
+- A new OFFSET_JAMB_CAPS rule forms closure B when:
+  - both caps are perpendicular to A, and A is anchored on a cap face;
+  - both caps reach one far line at equal depth t;
+  - the stagger is ≤ t;
+  - |B| = |A|;
+  - no admitted segment lies inside the strip;
+  - the far side is unique.
+- Each failure is recorded as a named block: LEAF_INSIDE, STAGGER_TOO_DEEP, INTERVENING, AMBIGUOUS or NOT_PARALLEL.
+- I1471 (a 200 mm wall meets a 150 mm wall, flush on the HALL side, with a 50 mm step on the M.B side) now has its own
+  door strip. The topology digest changes for this reason only.
+- WALL_BAND_POLICY_V5 and TOPOLOGY_CLOSURE_POLICY_V1 are unchanged.
+
+**Skirting V3** (`WALL_CONTACT_PATH_POLICY_V3` + QORTUBA-NEW-SKIRTING-METHOD@v2):
+- Floor-contact classes:
+  - A plan-cut window is never floor contact by itself.
+  - WINDOW_ABOVE_FLOOR keeps the path, as a trade-only SKIRTING_CONTINUITY_UNDER_WINDOW span. Its authority is a
+    source sill or a scoped owner fact.
+  - Full-height glazing, sliding doors and external doors break the path.
+  - An unknown sill is withheld, never guessed.
+- Doors: stop at the opening, zero across, zero jamb skirting (URBAN-SKIRTING-OPENING-METHOD@v1).
+- Doorless openings: zero across. A physical side jamb is counted once when it is the end of an ESTABLISHED band
+  (CAPPED / ALIGNED_FREE_END). A continuous wall face is never a jamb. Topology closures are zero.
+- QP-09 is superseded in scope only (QORTUBA-NEW-SKIRTING-WINDOW-FLOOR-CONTACT-OWNER-001@v1). It stays on file.
+
+**Rows (SHADOW, new revision):**
+- Q-03 = Q-11 = 17.7425;
+- Q-03P = Q-12 = 11.685;
+- Q-13 = 111.8988 (unchanged: HALL −0.15, offset by the I1471 continuous threshold +0.15);
+- **Q-14 = 140.637** (the I1471 reveal left the ceiling);
+- **SKIRTING = HIDDEN_PROFILE = 93.98682 lm** (separate rows on the same path, US-08), with 2.75 lm withheld (the
+  HALL / PAINTRY glazed screen);
+- MARBLE_THRESHOLD = 0.51 m2 / 3.4 lm (unchanged).
+
+**New silent error V3-O1:**
+- measure_v3 also subtracts a CONTINUOUS_WALL_FACE side, which is not a jamb, so 0.15 lm at M.B.ROOM / DRESS counts
+  nowhere.
+- It is carried as a release blocker, with a counterfactual of 94.13682 lm. It will be fixed in V4 (R8.17), not by a
+  post-result edit.
+
+**Gates:** MIGRATION_PLANNING_READY = YES, MIGRATION_EXECUTION_READY = NO, PRODUCTION_MIGRATION = NO.

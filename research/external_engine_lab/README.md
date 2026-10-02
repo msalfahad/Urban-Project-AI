@@ -143,5 +143,10 @@ bridges it to the legacy QS01 method. Owner decisions are scoped claims in `data
 | `r8_15_qortuba.py` | (built by `r8_15_registers.py`) | after the blind run: duct obstacle authority, marble thresholds, passage heads, six rows, skirting row, reveals, doors without a threshold site |
 | `r8_15_registers.py` | `tests/r8_15/registers/*.json` | every R8.15 register (answers 1-34) |
 | `r8_15_package.py` | `data/reports/URBAN_QTO_R8_15_DUCT_MARBLE_SKIRTING/` + zip | review package (20 md + 19 json + 3 supporting) |
+| `r8_16_recommendation.json` | - | the R8.16 recommendation, written before any R8.16 code |
+| `r8_16_blind.py` | `tests/r8_16/registers/{CLOSURE_BLIND_RESULT,SKIRTING_BLIND_RESULT}.json` | the BLIND run of the frozen DOOR_OPENING_CLOSURE_POLICY_V2 + WALL_CONTACT_PATH_POLICY_V3 / QORTUBA-NEW-SKIRTING-METHOD@v2 |
+| `r8_16_qortuba.py` | (built by `r8_16_registers.py`) | after the blind run: the R8.15 assembly on the closure-V2 topology, the V3 skirting row (must equal the blind record), V3-O1, I1471 audit, door reveals |
+| `r8_16_registers.py` | `tests/r8_16/registers/*.json` | every R8.16 register (answers 1-36) |
+| `r8_16_package.py` | `data/reports/URBAN_QTO_R8_16_OPENINGS_SKIRTING_CLOSURE/` + zip | review package (24 md + 22 json + 2 supporting) |
 
 `<work>` must hold `old_k2.pkl` (K2 on LibreDWG's DXF of the old DWG) and `new_k2.pkl` (K2 on the hash-addressed new DXF).

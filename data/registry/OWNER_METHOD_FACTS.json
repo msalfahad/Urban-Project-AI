@@ -385,6 +385,7 @@
     {
      "rule": "QP-09 QORTUBA_SKIRTING_WINDOW_DEDUCTION = DEDUCT_EVERY_WINDOW_WIDTH",
      "relation": "SUPERSEDED_IN_SCOPE",
+     "scope": "the selected NEW revision (QORTUBA_REV_NEW, DXF df0e1d69...), region RC:MODEL_SPACE:4267:540:1649, PLAN_VARIANT_4_SELECTED, dry internal rooms, normal windows with wall below only; QP-09 stays in force for its own historical scope",
      "why": "the owner rejected the window deduction for the selected new-revision plan; QP-09 stays on file unchanged for its own scope (old revision / history)"
     }
    ]
