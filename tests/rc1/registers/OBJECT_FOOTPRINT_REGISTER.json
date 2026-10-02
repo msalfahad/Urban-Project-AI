@@ -1,0 +1,2984 @@
+{
+ "SCHEMA": "URBAN_QORTUBA_RC1_OBJECT_FOOTPRINT_REGISTER_V1",
+ "policy": {
+  "policy_id": "OBJECT_FOOTPRINT_AUTHORITY_V1",
+  "rule": "RESOLVED only when one accepted policy covers trade + space class + every object class present",
+  "never": [
+   "a topology convention as authority",
+   "a dry-room fact transferred to a wet / service room",
+   "a silent zero or a silent full-room assumption"
+  ],
+  "digest": "7904fdcd07ffc78cfeb204f13825fa0ae507ec2316d9e146d3375bc1a50a858a"
+ },
+ "sites": {
+  "Q-13|SITE-77a2130eb275604c": {
+   "site": "SITE-77a2130eb275604c",
+   "trade": "FLOOR_FINISH",
+   "space_class": "DRY_INTERNAL_ROOM",
+   "state": "RESOLVED",
+   "objects": [
+    {
+     "key": "QORTUBA_REV_NEW|H1648|1641|ARC|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "ARC",
+     "geometry": null
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1648|1664|ARC|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "ARC",
+     "geometry": null
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1648|1665|ARC|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "ARC",
+     "geometry": null
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1648|1666|ARC|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "ARC",
+     "geometry": null
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1648|1667|ARC|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "ARC",
+     "geometry": null
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1648|1668|ARC|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "ARC",
+     "geometry": null
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1651|1641|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "LINE",
+     "geometry": [
+      109798.0817,
+      15134.7196,
+      109798.0817,
+      15194.7196
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1651|1664|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "LINE",
+     "geometry": [
+      109798.0817,
+      15294.7196,
+      109798.0817,
+      15234.7196
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1651|1665|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "LINE",
+     "geometry": [
+      109668.0817,
+      15134.7196,
+      109668.0817,
+      15194.7196
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1651|1666|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "LINE",
+     "geometry": [
+      109668.0817,
+      15294.7196,
+      109668.0817,
+      15234.7196
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1651|1667|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "LINE",
+     "geometry": [
+      109703.0817,
+      15319.7196,
+      109763.0817,
+      15319.7196
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1651|1668|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "LINE",
+     "geometry": [
+      109703.0817,
+      15109.7196,
+      109763.0817,
+      15109.7196
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1652|1641|ARC|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "ARC",
+     "geometry": null
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1652|1664|ARC|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "ARC",
+     "geometry": null
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1652|1665|ARC|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "ARC",
+     "geometry": null
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1652|1666|ARC|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "ARC",
+     "geometry": null
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1652|1667|ARC|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "ARC",
+     "geometry": null
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1652|1668|ARC|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "ARC",
+     "geometry": null
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1653|1641|ARC|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "ARC",
+     "geometry": null
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1653|1664|ARC|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "ARC",
+     "geometry": null
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1653|1665|ARC|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "ARC",
+     "geometry": null
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1653|1666|ARC|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "ARC",
+     "geometry": null
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1653|1667|ARC|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "ARC",
+     "geometry": null
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1653|1668|ARC|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "ARC",
+     "geometry": null
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1654|1641|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "LINE",
+     "geometry": [
+      109798.0817,
+      15194.7196,
+      109844.7484,
+      15194.7196
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1654|1664|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "LINE",
+     "geometry": [
+      109798.0817,
+      15234.7196,
+      109844.7484,
+      15234.7196
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1654|1665|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "LINE",
+     "geometry": [
+      109668.0817,
+      15194.7196,
+      109621.4151,
+      15194.7196
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1654|1666|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "LINE",
+     "geometry": [
+      109668.0817,
+      15234.7196,
+      109621.4151,
+      15234.7196
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1654|1667|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "LINE",
+     "geometry": [
+      109763.0817,
+      15319.7196,
+      109763.0817,
+      15366.3863
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1654|1668|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "LINE",
+     "geometry": [
+      109763.0817,
+      15109.7196,
+      109763.0817,
+      15063.0529
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1655|1641|ARC|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "ARC",
+     "geometry": null
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1655|1664|ARC|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "ARC",
+     "geometry": null
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1655|1665|ARC|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "ARC",
+     "geometry": null
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1655|1666|ARC|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "ARC",
+     "geometry": null
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1655|1667|ARC|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "ARC",
+     "geometry": null
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1655|1668|ARC|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "ARC",
+     "geometry": null
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1656|1641|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "LINE",
+     "geometry": [
+      109848.0817,
+      15148.0529,
+      109848.0817,
+      15181.3863
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1656|1664|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "LINE",
+     "geometry": [
+      109848.0817,
+      15281.3863,
+      109848.0817,
+      15248.0529
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1656|1665|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "LINE",
+     "geometry": [
+      109618.0817,
+      15148.0529,
+      109618.0817,
+      15181.3863
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1656|1666|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "LINE",
+     "geometry": [
+      109618.0817,
+      15281.3863,
+      109618.0817,
+      15248.0529
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1656|1667|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "LINE",
+     "geometry": [
+      109716.4151,
+      15369.7196,
+      109749.7484,
+      15369.7196
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1656|1668|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "LINE",
+     "geometry": [
+      109716.4151,
+      15059.7196,
+      109749.7484,
+      15059.7196
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1657|1641|ARC|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "ARC",
+     "geometry": null
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1657|1664|ARC|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "ARC",
+     "geometry": null
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1657|1665|ARC|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "ARC",
+     "geometry": null
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1657|1666|ARC|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "ARC",
+     "geometry": null
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1657|1667|ARC|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "ARC",
+     "geometry": null
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1657|1668|ARC|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "ARC",
+     "geometry": null
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1658|1641|ARC|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "ARC",
+     "geometry": null
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1658|1664|ARC|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "ARC",
+     "geometry": null
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1658|1665|ARC|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "ARC",
+     "geometry": null
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1658|1666|ARC|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "ARC",
+     "geometry": null
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1658|1667|ARC|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "ARC",
+     "geometry": null
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1658|1668|ARC|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "ARC",
+     "geometry": null
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1659|1641|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "LINE",
+     "geometry": [
+      109858.0817,
+      15148.0529,
+      109858.0817,
+      15181.3863
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1659|1664|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "LINE",
+     "geometry": [
+      109858.0817,
+      15281.3863,
+      109858.0817,
+      15248.0529
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1659|1665|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "LINE",
+     "geometry": [
+      109608.0817,
+      15148.0529,
+      109608.0817,
+      15181.3863
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1659|1666|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "LINE",
+     "geometry": [
+      109608.0817,
+      15281.3863,
+      109608.0817,
+      15248.0529
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1659|1667|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "LINE",
+     "geometry": [
+      109716.4151,
+      15379.7196,
+      109749.7484,
+      15379.7196
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1659|1668|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "LINE",
+     "geometry": [
+      109716.4151,
+      15049.7196,
+      109749.7484,
+      15049.7196
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1660|1641|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "LINE",
+     "geometry": [
+      109798.0817,
+      15134.7196,
+      109844.7484,
+      15134.7196
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1660|1664|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "LINE",
+     "geometry": [
+      109798.0817,
+      15294.7196,
+      109844.7484,
+      15294.7196
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1660|1665|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "LINE",
+     "geometry": [
+      109668.0817,
+      15134.7196,
+      109621.4151,
+      15134.7196
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1660|1666|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "LINE",
+     "geometry": [
+      109668.0817,
+      15294.7196,
+      109621.4151,
+      15294.7196
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1660|1667|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "LINE",
+     "geometry": [
+      109703.0817,
+      15319.7196,
+      109703.0817,
+      15366.3863
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1660|1668|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "LINE",
+     "geometry": [
+      109703.0817,
+      15109.7196,
+      109703.0817,
+      15063.0529
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1663||ARC|1",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "LWPOLYLINE",
+     "geometry": null
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1663||ARC|3",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "LWPOLYLINE",
+     "geometry": null
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1663||ARC|5",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "LWPOLYLINE",
+     "geometry": null
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1663||ARC|7",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "LWPOLYLINE",
+     "geometry": null
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1663||SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "LWPOLYLINE",
+     "geometry": [
+      109793.0817,
+      15124.7196,
+      109793.0817,
+      15304.7196
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1663||SEGMENT|2",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "LWPOLYLINE",
+     "geometry": [
+      109783.0817,
+      15314.7196,
+      109683.0817,
+      15314.7196
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1663||SEGMENT|4",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "LWPOLYLINE",
+     "geometry": [
+      109673.0817,
+      15304.7196,
+      109673.0817,
+      15124.7196
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H1663||SEGMENT|6",
+     "object_class": "FURNITURE",
+     "layer": "B-FURNI",
+     "entity_type": "LWPOLYLINE",
+     "geometry": [
+      109683.0817,
+      15114.7196,
+      109783.0817,
+      15114.7196
+     ]
+    }
+   ],
+   "object_classes": [
+    "FURNITURE"
+   ],
+   "policy": [
+    "QORTUBA-NEW-FLOOR-OBJECT-FOOTPRINT-OWNER-001@v1"
+   ],
+   "treatment": "FOOTPRINT_INCLUDED",
+   "rejected": [],
+   "row": "Q-13",
+   "counts": {
+    "FURNITURE": 74
+   }
+  },
+  "Q-13|SITE-a6405850100155ac": {
+   "site": "SITE-a6405850100155ac",
+   "trade": "FLOOR_FINISH",
+   "space_class": "DRY_INTERNAL_ROOM",
+   "state": "RESOLVED",
+   "objects": [
+    {
+     "key": "QORTUBA_REV_NEW|H385130|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      110079.5675,
+      15762.6001,
+      110082.0857,
+      15762.6001
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385131|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      110082.0857,
+      15762.6001,
+      110082.0857,
+      15964.0497
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385132|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      110082.0857,
+      15964.0497,
+      110079.5675,
+      15964.0497
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385133|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      110079.5675,
+      15762.6001,
+      109878.118,
+      15762.6001
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385134|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109878.118,
+      15762.6001,
+      109878.118,
+      15964.0497
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385135|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109878.118,
+      15964.0497,
+      110079.5675,
+      15964.0497
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385136|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109878.118,
+      15966.5678,
+      109905.3137,
+      15966.5678
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385137|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109908.3354,
+      15969.5895,
+      109908.3354,
+      16013.9084
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385138|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109905.3137,
+      16016.9302,
+      109878.118,
+      16016.9302
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385139|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109878.118,
+      16016.9302,
+      109878.118,
+      15966.5678
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385140|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109878.118,
+      15709.7196,
+      109878.118,
+      15760.082
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385141|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109908.3354,
+      15757.0603,
+      109908.3354,
+      15712.7414
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385142|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109878.118,
+      15760.082,
+      109905.3137,
+      15760.082
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385143|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109905.3137,
+      15709.7196,
+      109878.118,
+      15709.7196
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385144|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109875.5999,
+      16016.9302,
+      109875.5999,
+      15709.7196
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385145|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109875.5999,
+      15709.7196,
+      109873.0817,
+      15709.7196
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385147|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109873.0817,
+      16016.9302,
+      109875.5999,
+      16016.9302
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385148|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109878.118,
+      15863.3249,
+      109908.3354,
+      15863.3249
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385149|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109938.5528,
+      15762.6001,
+      109958.6978,
+      15785.2632
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385150|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109958.6978,
+      15785.2632,
+      109908.3354,
+      15863.3249
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385151|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109958.6978,
+      15941.3866,
+      109908.3354,
+      15863.3249
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385152|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109908.3354,
+      15863.3249,
+      109938.5528,
+      15964.0497
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385153|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109908.3354,
+      15863.3249,
+      109908.3354,
+      15964.0497
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385154|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109938.5528,
+      15964.0497,
+      109958.6978,
+      15941.3866
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385155|700045|ARC|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "ARC",
+     "geometry": null
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385156|700045|ARC|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "ARC",
+     "geometry": null
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385157|700045|ARC|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "ARC",
+     "geometry": null
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385158|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109937.7974,
+      15961.5316,
+      109908.3354,
+      15961.5316
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385159|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109937.042,
+      15959.0134,
+      109908.3354,
+      15959.0134
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385160|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109936.2865,
+      15956.4953,
+      109908.3354,
+      15956.4953
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385161|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109935.5311,
+      15953.9772,
+      109908.3354,
+      15953.9772
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385162|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109934.7757,
+      15951.4591,
+      109908.3354,
+      15951.4591
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385163|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109934.0202,
+      15948.941,
+      109908.3354,
+      15948.941
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385164|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109933.2648,
+      15946.4228,
+      109908.3354,
+      15946.4228
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385165|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109932.5094,
+      15943.9047,
+      109908.3354,
+      15943.9047
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385166|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109931.7539,
+      15941.3866,
+      109908.3354,
+      15941.3866
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385167|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109930.9985,
+      15938.8685,
+      109908.3354,
+      15938.8685
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385168|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109930.2431,
+      15936.3504,
+      109908.3354,
+      15936.3504
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385169|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109929.4876,
+      15933.8322,
+      109908.3354,
+      15933.8322
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385170|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109928.7322,
+      15931.3141,
+      109908.3354,
+      15931.3141
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385171|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109927.9767,
+      15928.796,
+      109908.3354,
+      15928.796
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385172|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109927.2213,
+      15926.2779,
+      109908.3354,
+      15926.2779
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385173|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109926.4659,
+      15923.7598,
+      109908.3354,
+      15923.7598
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385174|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109925.7104,
+      15921.2416,
+      109908.3354,
+      15921.2416
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385175|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109924.955,
+      15918.7235,
+      109908.3354,
+      15918.7235
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385176|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109924.1996,
+      15916.2054,
+      109908.3354,
+      15916.2054
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385177|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109923.4441,
+      15913.6873,
+      109908.3354,
+      15913.6873
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385178|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109922.6887,
+      15911.1692,
+      109908.3354,
+      15911.1692
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385179|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109921.9333,
+      15908.651,
+      109908.3354,
+      15908.651
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385180|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109921.1778,
+      15906.1329,
+      109908.3354,
+      15906.1329
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385181|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109920.4224,
+      15903.6148,
+      109908.3354,
+      15903.6148
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385182|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109919.667,
+      15901.0967,
+      109908.3354,
+      15901.0967
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385183|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109918.9115,
+      15898.5786,
+      109908.3354,
+      15898.5786
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385184|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109918.1561,
+      15896.0605,
+      109908.3354,
+      15896.0605
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385185|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109917.4006,
+      15893.5423,
+      109908.3354,
+      15893.5423
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385186|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109916.6452,
+      15891.0242,
+      109908.3354,
+      15891.0242
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385187|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109915.8898,
+      15888.5061,
+      109908.3354,
+      15888.5061
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385188|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109915.1343,
+      15885.988,
+      109908.3354,
+      15885.988
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385189|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109914.3789,
+      15883.4699,
+      109908.3354,
+      15883.4699
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385190|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109913.6235,
+      15880.9517,
+      109908.3354,
+      15880.9517
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385191|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109912.868,
+      15878.4336,
+      109908.3354,
+      15878.4336
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385192|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109912.1126,
+      15875.9155,
+      109908.3354,
+      15875.9155
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385193|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109911.3572,
+      15873.3974,
+      109908.3354,
+      15873.3974
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385194|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109910.6017,
+      15870.8793,
+      109908.3354,
+      15870.8793
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385195|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109910.6017,
+      15855.7705,
+      109908.3354,
+      15855.7705
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385196|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109911.3572,
+      15853.2524,
+      109908.3354,
+      15853.2524
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385197|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109912.1126,
+      15850.7343,
+      109908.3354,
+      15850.7343
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385198|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109912.868,
+      15848.2162,
+      109908.3354,
+      15848.2162
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385199|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109913.6235,
+      15845.6981,
+      109908.3354,
+      15845.6981
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385200|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109914.3789,
+      15843.1799,
+      109908.3354,
+      15843.1799
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385201|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109915.1343,
+      15840.6618,
+      109908.3354,
+      15840.6618
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385202|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109915.8898,
+      15838.1437,
+      109908.3354,
+      15838.1437
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385203|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109916.6452,
+      15835.6256,
+      109908.3354,
+      15835.6256
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385204|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109917.4006,
+      15833.1075,
+      109908.3354,
+      15833.1075
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385205|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109918.1561,
+      15830.5893,
+      109908.3354,
+      15830.5893
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385206|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109918.9115,
+      15828.0712,
+      109908.3354,
+      15828.0712
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385207|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109919.667,
+      15825.5531,
+      109908.3354,
+      15825.5531
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385208|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109920.4224,
+      15823.035,
+      109908.3354,
+      15823.035
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385209|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109921.1778,
+      15820.5169,
+      109908.3354,
+      15820.5169
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385210|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109921.9333,
+      15817.9987,
+      109908.3354,
+      15817.9987
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385211|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109922.6887,
+      15815.4806,
+      109908.3354,
+      15815.4806
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385212|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109923.4441,
+      15812.9625,
+      109908.3354,
+      15812.9625
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385213|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109924.1996,
+      15810.4444,
+      109908.3354,
+      15810.4444
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385214|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109924.955,
+      15807.9263,
+      109908.3354,
+      15807.9263
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385215|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109925.7104,
+      15805.4082,
+      109908.3354,
+      15805.4082
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385216|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109926.4659,
+      15802.89,
+      109908.3354,
+      15802.89
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385217|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109927.2213,
+      15800.3719,
+      109908.3354,
+      15800.3719
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385218|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109927.9767,
+      15797.8538,
+      109908.3354,
+      15797.8538
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385219|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109928.7322,
+      15795.3357,
+      109908.3354,
+      15795.3357
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385220|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109929.4876,
+      15792.8176,
+      109908.3354,
+      15792.8176
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385221|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109930.2431,
+      15790.2994,
+      109908.3354,
+      15790.2994
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385222|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109930.9985,
+      15787.7813,
+      109908.3354,
+      15787.7813
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385223|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109931.7539,
+      15785.2632,
+      109908.3354,
+      15785.2632
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385224|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109932.5094,
+      15782.7451,
+      109908.3354,
+      15782.7451
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385225|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109933.2648,
+      15780.227,
+      109908.3354,
+      15780.227
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385226|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109934.0202,
+      15777.7088,
+      109908.3354,
+      15777.7088
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385227|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109934.7757,
+      15775.1907,
+      109908.3354,
+      15775.1907
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385228|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109935.5311,
+      15772.6726,
+      109908.3354,
+      15772.6726
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385229|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109936.2865,
+      15770.1545,
+      109908.3354,
+      15770.1545
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385230|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109937.042,
+      15767.6364,
+      109908.3354,
+      15767.6364
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385231|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109937.7974,
+      15765.1182,
+      109908.3354,
+      15765.1182
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385232|700045|ARC|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "ARC",
+     "geometry": null
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385233|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109908.3354,
+      15863.3249,
+      109908.3354,
+      15762.6001
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385234|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109908.3354,
+      15863.3249,
+      109938.5528,
+      15762.6001
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385235|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      110072.0132,
+      15762.6001,
+      110069.4951,
+      15762.6001
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385236|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      110069.4951,
+      15964.0497,
+      110066.9769,
+      15964.0497
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385237|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109971.2884,
+      15964.0497,
+      109971.2884,
+      15762.6001
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385238|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109968.7703,
+      15762.6001,
+      109968.7703,
+      15964.0497
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385239|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109966.2522,
+      15964.0497,
+      109966.2522,
+      15762.6001
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385240|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109958.6978,
+      15964.0497,
+      109958.6978,
+      15762.6001
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385241|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109956.1797,
+      15762.6001,
+      109956.1797,
+      15782.4303
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385242|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109953.6616,
+      15964.0497,
+      109953.6616,
+      15947.0524
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385243|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109946.1072,
+      15964.0497,
+      109946.1072,
+      15955.551
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385244|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109943.5891,
+      15762.6001,
+      109943.5891,
+      15768.2659
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385245|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109941.071,
+      15964.0497,
+      109941.071,
+      15961.2168
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385246|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109953.6616,
+      15964.0497,
+      109953.6616,
+      15947.0524
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385247|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109946.1072,
+      15771.0988,
+      109946.1072,
+      15762.6001
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385248|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109941.071,
+      15765.433,
+      109941.071,
+      15762.6001
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385249|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109943.5891,
+      15808.6817,
+      109943.5891,
+      15917.9681
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385250|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109953.6616,
+      15779.5974,
+      109953.6616,
+      15762.6001
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385251|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109953.6616,
+      15779.5974,
+      109953.6616,
+      15762.6001
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385252|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109956.1797,
+      15789.1663,
+      109956.1797,
+      15937.4835
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385253|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109943.5891,
+      15958.3839,
+      109943.5891,
+      15964.0497
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385254|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109941.071,
+      15914.065,
+      109941.071,
+      15812.5848
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385255|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109946.1072,
+      15921.8712,
+      109946.1072,
+      15804.7786
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385256|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109953.6616,
+      15933.5804,
+      109953.6616,
+      15793.0694
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385257|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109956.1797,
+      15944.2195,
+      109956.1797,
+      15964.0497
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385258|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109932.7043,
+      15901.0967,
+      110079.5675,
+      15901.0967
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385259|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109931.0797,
+      15898.5786,
+      110079.5675,
+      15898.5786
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385260|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      110079.5675,
+      15896.0605,
+      109929.4551,
+      15896.0605
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385261|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109944.0765,
+      15918.7235,
+      110079.5675,
+      15918.7235
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385262|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109942.4519,
+      15916.2054,
+      110079.5675,
+      15916.2054
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385263|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      110079.5675,
+      15913.6873,
+      109940.8273,
+      15913.6873
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385264|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109955.4486,
+      15936.3504,
+      110079.5675,
+      15936.3504
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385265|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109953.824,
+      15933.8322,
+      110079.5675,
+      15933.8322
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385266|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      110079.5675,
+      15931.3141,
+      109952.1994,
+      15931.3141
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385267|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109953.6616,
+      15933.5804,
+      109953.6616,
+      15793.0694
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385268|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109930.2553,
+      15936.3913,
+      109944.8686,
+      15919.9514
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385269|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109929.5072,
+      15933.8975,
+      109943.6217,
+      15918.0187
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385270|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109928.7591,
+      15931.4037,
+      109942.3748,
+      15916.086
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385271|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109925.0184,
+      15918.9348,
+      109936.1404,
+      15906.4226
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385272|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109924.2703,
+      15916.441,
+      109934.8935,
+      15904.4899
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385273|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109923.5221,
+      15913.9472,
+      109933.6466,
+      15902.5572
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385274|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109919.7814,
+      15901.4783,
+      109927.4121,
+      15892.8938
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385275|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109919.0333,
+      15898.9845,
+      109926.1652,
+      15890.9611
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385276|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109918.2852,
+      15896.4907,
+      109924.9183,
+      15889.0284
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385277|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109909.3075,
+      15866.5653,
+      109909.9556,
+      15865.8362
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385278|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109908.5594,
+      15864.0715,
+      109908.7087,
+      15863.9035
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385279|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109910.8535,
+      15964.0497,
+      109910.8535,
+      15865.843
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385280|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109913.3717,
+      15964.0497,
+      109913.3717,
+      15880.1124
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385281|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109915.8898,
+      15964.0497,
+      109915.8898,
+      15888.5061
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385282|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109918.4079,
+      15964.0497,
+      109918.4079,
+      15896.8998
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385283|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109920.926,
+      15964.0497,
+      109920.926,
+      15905.2936
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385284|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109923.4441,
+      15964.0497,
+      109923.4441,
+      15913.6873
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385285|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109925.9623,
+      15964.0497,
+      109925.9623,
+      15922.081
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385286|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109928.4804,
+      15964.0497,
+      109928.4804,
+      15930.4747
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385287|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109930.9985,
+      15964.0497,
+      109930.9985,
+      15938.8685
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385288|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109933.5166,
+      15964.0497,
+      109933.5166,
+      15947.2622
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385289|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109936.0347,
+      15964.0497,
+      109936.0347,
+      15955.6559
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385290|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109910.8535,
+      15762.6001,
+      109910.8535,
+      15860.8068
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385291|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109913.3717,
+      15762.6001,
+      109913.3717,
+      15846.5374
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385292|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109915.8898,
+      15762.6001,
+      109915.8898,
+      15838.1437
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385293|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109918.4079,
+      15762.6001,
+      109918.4079,
+      15829.75
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385294|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109920.926,
+      15762.6001,
+      109920.926,
+      15821.3562
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385295|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109923.4441,
+      15762.6001,
+      109923.4441,
+      15812.9625
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385296|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109925.9623,
+      15762.6001,
+      109925.9623,
+      15804.5688
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385297|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109928.4804,
+      15762.6001,
+      109928.4804,
+      15796.175
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385298|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109930.9985,
+      15762.6001,
+      109930.9985,
+      15787.7813
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385299|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109933.5166,
+      15762.6001,
+      109933.5166,
+      15779.3876
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H385300|700045|SEGMENT|0",
+     "object_class": "FURNITURE",
+     "layer": "MY BLOCKS$0$FIRNTUR",
+     "entity_type": "LINE",
+     "geometry": [
+      109936.0347,
+      15762.6001,
+      109936.0347,
+      15770.9939
+     ]
+    }
+   ],
+   "object_classes": [
+    "FURNITURE"
+   ],
+   "policy": [
+    "QORTUBA-NEW-FLOOR-OBJECT-FOOTPRINT-OWNER-001@v1"
+   ],
+   "treatment": "FOOTPRINT_INCLUDED",
+   "rejected": [],
+   "row": "Q-13",
+   "counts": {
+    "FURNITURE": 170
+   }
+  },
+  "Q-12|SITE-8c1c7563d5252c50": {
+   "site": "SITE-8c1c7563d5252c50",
+   "trade": "FLOOR_FINISH",
+   "space_class": "SERVICE_ROOM",
+   "state": "UNRESOLVED",
+   "objects": [
+    {
+     "key": "QORTUBA_REV_NEW|H478||SEGMENT|0",
+     "object_class": "SANITARY_FIXTURE",
+     "layer": "FIXTURE",
+     "entity_type": "LINE",
+     "geometry": [
+      109403.0817,
+      15109.7196,
+      109523.0817,
+      15109.7196
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H482||SEGMENT|0",
+     "object_class": "SANITARY_FIXTURE",
+     "layer": "FIXTURE",
+     "entity_type": "LINE",
+     "geometry": [
+      109403.0817,
+      15384.7196,
+      109593.0817,
+      15384.7196
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H532||SEGMENT|0",
+     "object_class": "SANITARY_FIXTURE",
+     "layer": "FIXTURE",
+     "entity_type": "LINE",
+     "geometry": [
+      109403.0817,
+      15384.7196,
+      109403.0817,
+      15109.7196
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H536||SEGMENT|0",
+     "object_class": "SANITARY_FIXTURE",
+     "layer": "FIXTURE",
+     "entity_type": "LINE",
+     "geometry": [
+      109523.0817,
+      15109.7196,
+      109523.0817,
+      15049.7196
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H541||SEGMENT|0",
+     "object_class": "SANITARY_FIXTURE",
+     "layer": "FIXTURE",
+     "entity_type": "LINE",
+     "geometry": [
+      109513.0817,
+      15459.7196,
+      109513.0817,
+      15384.7196
+     ]
+    }
+   ],
+   "object_classes": [
+    "SANITARY_FIXTURE"
+   ],
+   "policy": null,
+   "treatment": null,
+   "rejected": [
+    {
+     "policy": "QORTUBA-NEW-FLOOR-OBJECT-FOOTPRINT-OWNER-001@v1",
+     "why": [
+      "space classes ['DRY_INTERNAL_ROOM'] do not include SERVICE_ROOM",
+      "explicitly excluded: is_not: a rule for wet / service floors"
+     ]
+    }
+   ],
+   "row": "Q-12",
+   "counts": {
+    "SANITARY_FIXTURE": 5
+   },
+   "outline_faces": {
+    "site_is_rectangle": true,
+    "faces_m2": [
+     0.6,
+     5.44,
+     5.645
+    ],
+    "faces": [
+     {
+      "area_m2": 0.6,
+      "ring": [
+       [
+        109593.08,
+        15384.72
+       ],
+       [
+        109513.08,
+        15384.72
+       ],
+       [
+        109513.08,
+        15459.72
+       ],
+       [
+        109593.08,
+        15459.72
+       ],
+       [
+        109593.08,
+        15384.72
+       ]
+      ]
+     },
+     {
+      "area_m2": 5.44,
+      "ring": [
+       [
+        109403.08,
+        15109.72
+       ],
+       [
+        109523.08,
+        15109.72
+       ],
+       [
+        109523.08,
+        15049.72
+       ],
+       [
+        109308.08,
+        15049.72
+       ],
+       [
+        109308.08,
+        15459.72
+       ],
+       [
+        109513.08,
+        15459.72
+       ],
+       [
+        109513.08,
+        15384.72
+       ],
+       [
+        109403.08,
+        15384.72
+       ],
+       [
+        109403.08,
+        15109.72
+       ]
+      ]
+     },
+     {
+      "area_m2": 5.645,
+      "ring": [
+       [
+        109523.08,
+        15109.72
+       ],
+       [
+        109403.08,
+        15109.72
+       ],
+       [
+        109403.08,
+        15384.72
+       ],
+       [
+        109513.08,
+        15384.72
+       ],
+       [
+        109593.08,
+        15384.72
+       ],
+       [
+        109593.08,
+        15049.72
+       ],
+       [
+        109523.08,
+        15049.72
+       ],
+       [
+        109523.08,
+        15109.72
+       ]
+      ]
+     }
+    ],
+    "sum_m2": 11.685,
+    "note": "planar faces of the source FIXTURE lines + the site boundary; WHICH face is the counter is not stated by geometry"
+   }
+  }
+ },
+ "resolved": [
+  "Q-13|SITE-77a2130eb275604c",
+  "Q-13|SITE-a6405850100155ac"
+ ],
+ "unresolved": [
+  "Q-12|SITE-8c1c7563d5252c50"
+ ],
+ "facts_searched": "QORTUBA-NEW-FLOOR-OBJECT-FOOTPRINT-OWNER-001@v1 scope = trade FLOOR_FINISH, space_classes [DRY_INTERNAL_ROOM], finish PORCELAIN_DRY_FLOOR; its is_not list explicitly says 'a rule for wet / service floors'. QP-08 covers skirting / profile only. US-01 / US-14 / QORTUBA-NEW-WET-SERVICE-FINISH-OWNER-001 set finish and waterproofing scope but say nothing about counters. QORTUBA-Q14-CEILING-FOOTPRINT-OWNER-001 is ceiling-only. No accepted fact establishes the PAINTRY floor under the counter",
+ "why_not_paintry": "PAINTRY is SERVICE_ROOM (QP-07); the dry-floor fact names DRY_INTERNAL_ROOM only and forbids its own use for wet / service floors; the objects are fixed kitchen counters (FIXTURE layer), not the wardrobes / joinery / loose furniture the fact lists. Extending it would be a transfer the fact itself forbids",
+ "owner_question": "PAINTRY (تحضير): is the ceramic floor laid UNDER the fixed kitchen counter drawn by the five FIXTURE lines? YES -> 11.685 m2 stands; NO -> which outlined area is the counter footprint (U-shaped run along the west / south / north walls 5.440 m2; north-east pocket 0.600 m2)? Waterproofing is not affected (US-14 measures the membrane over the whole room floor)",
+ "assumed": "NOTHING (no zero, no full-room assumption)",
+ "effect_bounds_m2": {
+  "if_included": 11.685,
+  "if_excluded_candidates": {
+   "minus face 0.6": 11.085,
+   "minus face 5.44": 6.245
+  },
+  "largest_face": "the largest face is the open floor in front of the counter (it holds the sliding-door side) - not a counter candidate"
+ },
+ "waterproofing": "not affected (US-14: membrane over the whole measured room floor)"
+}

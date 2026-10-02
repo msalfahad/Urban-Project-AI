@@ -1,0 +1,330 @@
+{
+ "SCHEMA": "URBAN_QORTUBA_RC1_FLOOR_REGISTER_V1",
+ "items": {
+  "FLR-01": {
+   "qty": 111.8988,
+   "unit": "m2",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "room_breakdown": [
+    {
+     "key": "SITE-5f1762f1a93b91ca",
+     "label": "BED.ROOM (1) [5f1762f1]",
+     "qty": 19.2725,
+     "kind": "ROOM",
+     "site_area_m2": 19.2725,
+     "inside_effects": []
+    },
+    {
+     "key": "SITE-77a2130eb275604c",
+     "label": "HALL / whgm",
+     "qty": 42.649289,
+     "kind": "ROOM",
+     "site_area_m2": 42.649289,
+     "inside_effects": []
+    },
+    {
+     "key": "SITE-a6405850100155ac",
+     "label": "DRESS / M.B.ROOM",
+     "qty": 33.2,
+     "kind": "ROOM",
+     "site_area_m2": 33.2,
+     "inside_effects": []
+    },
+    {
+     "key": "SITE-daca396d6d730e60",
+     "label": "BED.ROOM (2) [daca396d]",
+     "qty": 16.327,
+     "kind": "ROOM",
+     "site_area_m2": 16.327,
+     "inside_effects": []
+    },
+    {
+     "key": "THRESHOLD-04910e5deeeed2fc",
+     "label": "door strip THRESHOLD-04910e5deeeed2fc",
+     "qty": 0.15,
+     "kind": "STRIP",
+     "site_area_m2": null,
+     "inside_effects": null
+    },
+    {
+     "key": "THRESHOLD-c82365dd41b94abe",
+     "label": "door strip THRESHOLD-c82365dd41b94abe",
+     "qty": 0.15,
+     "kind": "STRIP",
+     "site_area_m2": null,
+     "inside_effects": null
+    },
+    {
+     "key": "THRESHOLD-d4633eabc844b274",
+     "label": "door strip THRESHOLD-d4633eabc844b274",
+     "qty": 0.15,
+     "kind": "STRIP",
+     "site_area_m2": null,
+     "inside_effects": null
+    }
+   ],
+   "blockers": [
+    "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "notes": []
+  },
+  "FLR-02": {
+   "qty": 17.7425,
+   "unit": "m2",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "room_breakdown": [
+    {
+     "key": "SITE-1c4abf65f9b5db1e",
+     "label": "BATH (1) [1c4abf65]",
+     "qty": 8.5525,
+     "kind": "ROOM",
+     "site_area_m2": 8.5525,
+     "inside_effects": []
+    },
+    {
+     "key": "SITE-a2b19efc492a6d0b",
+     "label": "BATH (2) [a2b19efc]",
+     "qty": 5.1,
+     "kind": "ROOM",
+     "site_area_m2": 5.1,
+     "inside_effects": []
+    },
+    {
+     "key": "SITE-fe8ed5548fb4310e",
+     "label": "BATH (3) [fe8ed554]",
+     "qty": 4.09,
+     "kind": "ROOM",
+     "site_area_m2": 4.09,
+     "inside_effects": []
+    }
+   ],
+   "blockers": [
+    "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "notes": []
+  },
+  "FLR-03": {
+   "qty": 11.685,
+   "unit": "m2",
+   "status": "AUTHORISED_SUBTOTAL",
+   "room_breakdown": [
+    {
+     "key": "SITE-8c1c7563d5252c50",
+     "label": "PAINTRY",
+     "qty": 11.685,
+     "kind": "ROOM",
+     "site_area_m2": 11.685,
+     "inside_effects": []
+    }
+   ],
+   "blockers": [
+    "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+    "OBJECT_FOOTPRINT_IMPLICIT: proven furniture / fixture footprints are inside the measured floor by the topology convention, not by a FLOOR_FINISH footprint authority",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "notes": [
+    "OPEN OWNER QUESTION: is the ceramic floor laid under the fixed kitchen counter drawn by FIXTURE lines H478, H482, H532, H536, H541? YES -> 11.685 m2 stands; NO -> the counter footprint face(s) [0.6, 5.44, 5.645] m2 come off"
+   ]
+  },
+  "MRB-01": {
+   "qty": 0.51,
+   "unit": "m2",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "room_breakdown": [
+    {
+     "key": "THRESHOLD-28f50f8dc18c1e90",
+     "label": "threshold THRESHOLD-28f50f8dc18c1e90 (door I1561)",
+     "qty": 0.12,
+     "kind": "STRIP"
+    },
+    {
+     "key": "THRESHOLD-bfcea08375237224",
+     "label": "threshold THRESHOLD-bfcea08375237224 (door I677)",
+     "qty": 0.15,
+     "kind": "STRIP"
+    },
+    {
+     "key": "THRESHOLD-cf12fcdfd3e6a4a6",
+     "label": "threshold THRESHOLD-cf12fcdfd3e6a4a6 (door I2044)",
+     "qty": 0.12,
+     "kind": "STRIP"
+    },
+    {
+     "key": "THRESHOLD-f9846605acbce828",
+     "label": "threshold THRESHOLD-f9846605acbce828 (door I1443)",
+     "qty": 0.12,
+     "kind": "STRIP"
+    }
+   ],
+   "blockers": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "notes": [
+    "MEASURE PAIR with MRB-02: the SAME four thresholds - price ONE basis"
+   ]
+  }
+ },
+ "row_breakdowns": {
+  "Q-13": {
+   "entries": [
+    {
+     "key": "SITE-5f1762f1a93b91ca",
+     "kind": "ROOM",
+     "zones": [
+      "BED.ROOM"
+     ],
+     "qty": 19.2725,
+     "site_area_m2": 19.2725,
+     "inside_effects": []
+    },
+    {
+     "key": "SITE-77a2130eb275604c",
+     "kind": "ROOM",
+     "zones": [
+      "HALL",
+      "whgm"
+     ],
+     "qty": 42.649289,
+     "site_area_m2": 42.649289,
+     "inside_effects": []
+    },
+    {
+     "key": "SITE-a6405850100155ac",
+     "kind": "ROOM",
+     "zones": [
+      "DRESS",
+      "M.B.ROOM"
+     ],
+     "qty": 33.2,
+     "site_area_m2": 33.2,
+     "inside_effects": []
+    },
+    {
+     "key": "SITE-daca396d6d730e60",
+     "kind": "ROOM",
+     "zones": [
+      "BED.ROOM"
+     ],
+     "qty": 16.327,
+     "site_area_m2": 16.327,
+     "inside_effects": []
+    },
+    {
+     "key": "THRESHOLD-04910e5deeeed2fc",
+     "kind": "STRIP",
+     "qty": 0.15,
+     "sides": [
+      "SITE-5f1762f1a93b91ca",
+      "SITE-77a2130eb275604c"
+     ],
+     "state": "CONTINUOUS_SAME_FINISH",
+     "strip_area_m2": 0.15
+    },
+    {
+     "key": "THRESHOLD-c82365dd41b94abe",
+     "kind": "STRIP",
+     "qty": 0.15,
+     "sides": [
+      "SITE-77a2130eb275604c",
+      "SITE-daca396d6d730e60"
+     ],
+     "state": "CONTINUOUS_SAME_FINISH",
+     "strip_area_m2": 0.15
+    },
+    {
+     "key": "THRESHOLD-d4633eabc844b274",
+     "kind": "STRIP",
+     "qty": 0.15,
+     "sides": [
+      "SITE-77a2130eb275604c",
+      "SITE-a6405850100155ac"
+     ],
+     "state": "CONTINUOUS_SAME_FINISH",
+     "strip_area_m2": 0.15
+    }
+   ],
+   "sum": 111.89878900000002,
+   "value": 111.8988,
+   "reconciles": true,
+   "tol": 5e-05
+  },
+  "Q-11": {
+   "entries": [
+    {
+     "key": "SITE-1c4abf65f9b5db1e",
+     "kind": "ROOM",
+     "zones": [
+      "BATH"
+     ],
+     "qty": 8.5525,
+     "site_area_m2": 8.5525,
+     "inside_effects": []
+    },
+    {
+     "key": "SITE-a2b19efc492a6d0b",
+     "kind": "ROOM",
+     "zones": [
+      "BATH"
+     ],
+     "qty": 5.1,
+     "site_area_m2": 5.1,
+     "inside_effects": []
+    },
+    {
+     "key": "SITE-fe8ed5548fb4310e",
+     "kind": "ROOM",
+     "zones": [
+      "BATH"
+     ],
+     "qty": 4.09,
+     "site_area_m2": 4.09,
+     "inside_effects": []
+    }
+   ],
+   "sum": 17.7425,
+   "value": 17.7425,
+   "reconciles": true,
+   "tol": 5e-05
+  },
+  "Q-12": {
+   "entries": [
+    {
+     "key": "SITE-8c1c7563d5252c50",
+     "kind": "ROOM",
+     "zones": [
+      "PAINTRY"
+     ],
+     "qty": 11.685,
+     "site_area_m2": 11.685,
+     "inside_effects": []
+    }
+   ],
+   "sum": 11.685,
+   "value": 11.685,
+   "reconciles": true,
+   "tol": 5e-05
+  }
+ },
+ "partition": {
+  "items": [
+   "FLR-01",
+   "FLR-02",
+   "FLR-03",
+   "MRB-01"
+  ],
+  "keys": 15,
+  "in_two_items": {},
+  "in_no_item": [],
+  "extra": [],
+  "physical_floor_m2": 141.836289,
+  "finish_items_sum_m2": 141.8363,
+  "difference_m2": 1.1e-05,
+  "within_row_rounding": true,
+  "state": "PASS"
+ },
+ "dry_rule": "QORTUBA-NEW-FLOOR-OBJECT-FOOTPRINT-OWNER-001@v1: porcelain wall to wall, wardrobes / joinery / loose furniture NOT deducted (dry rooms only)",
+ "wet_rule": "US-01 / QP-07 / QORTUBA-NEW-WET-SERVICE-FINISH-OWNER-001@v1: bathrooms + PAINTRY ceramic; marble thresholds are their own regions"
+}

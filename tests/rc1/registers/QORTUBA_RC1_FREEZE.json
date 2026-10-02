@@ -1,0 +1,99 @@
+{
+ "SCHEMA": "URBAN_QORTUBA_RC1_FREEZE_V1",
+ "name": "URBAN_ARCHITECTURAL_QTO_QORTUBA_RC1",
+ "frozen": true,
+ "release_status": "SHADOW / RC1_REFERENCE",
+ "contractual_approval": false,
+ "canonical_dxf_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+ "dwg_known_sha256_prefix": "e4babbc2ded1",
+ "dwg_dxf_anchor": "NOT_ESTABLISHED",
+ "selected_plan_scope": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+ "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+ "room_register_digest": "9e9b3d76844853b48c7eca8e6db18a58f7a1568505e9572c5f21000c9ec12553",
+ "owner_fact_and_rule_files_sha256": {
+  "OWNER_PHYSICAL_FACTS.json": "64fdafdf425267d95274cd91d446ea1ee3bdfd86a404b271bdfeb97425aadc2e",
+  "OWNER_METHOD_FACTS.json": "0ddb63c7c934b66470c1c74cc48e3d65462c789f48de19def3f2a4328345eeff",
+  "OWNER_FINISH_FACTS.json": "58105213d7c87734f27b281bcc39b0cc546671a4b9096dc9514caaccdedb0c86",
+  "URBAN_OWNER_METHOD_RULES.json": "3ea3d0ff7c545a7c1d9306ee0c352b3c3dacc2d8c288cd514d6060dbc22d3159",
+  "OWNER_PROJECT_CLAIMS.json": "994c8bf1bb2114d8c5e65b8208dffd90708e265431ea240e180b1002ff12ae25",
+  "OWNER_CLOSURE_REVIEWS.json": "192cb4dc38c13e738c1483910e9157d1fa20143e7f8dcf3a2a6104c583216113"
+ },
+ "engine_policies": {
+  "CANONICAL_BOQ_ITEM_MODEL_V1": "e72dad5351fd0a7d7f6ab42a70e9e488d690d847db7b074047f4b634a35d4059",
+  "ROOM_QUANTITY_MATRIX_V1": "d391bd8ea3bc37c5f8df22887bc1057e3f8a0143a6ff04ab34ac82bb3c2fc932",
+  "OPENING_REGISTER_V1": "8c65c0a9b31953e7dbb5ce43032d438ff3b014336ea45f7e71c774668ef3b639",
+  "OBJECT_FOOTPRINT_AUTHORITY_V1": "7904fdcd07ffc78cfeb204f13825fa0ae507ec2316d9e146d3375bc1a50a858a",
+  "BOQ_XLSX_EXPORT_V2": "37f3416fe4d64b1fa0e098536a57504f0b94a5ab6b48f4e74e03ff7c642b7327"
+ },
+ "inherited_freezes": {
+  "R8.19": "644197641e1b2f5756b84d80e19faeb8227d6fd7",
+  "R8.18": "bcac8a30b5a17006dd80391d85cd76e7b257c651"
+ },
+ "row_digests": {
+  "Q-03": {
+   "TOPOLOGY_DIGEST": "SAME",
+   "ROW_AUTHORITY_DIGEST": "SAME",
+   "RELEASE_INPUT_DIGEST": "SAME"
+  },
+  "Q-03P": {
+   "TOPOLOGY_DIGEST": "SAME",
+   "ROW_AUTHORITY_DIGEST": "SAME",
+   "RELEASE_INPUT_DIGEST": "SAME"
+  },
+  "Q-11": {
+   "TOPOLOGY_DIGEST": "SAME",
+   "ROW_AUTHORITY_DIGEST": "SAME",
+   "RELEASE_INPUT_DIGEST": "SAME"
+  },
+  "Q-12": {
+   "TOPOLOGY_DIGEST": "SAME",
+   "ROW_AUTHORITY_DIGEST": "SAME",
+   "RELEASE_INPUT_DIGEST": "SAME"
+  },
+  "Q-13": {
+   "TOPOLOGY_DIGEST": "SAME",
+   "ROW_AUTHORITY_DIGEST": "SAME",
+   "RELEASE_INPUT_DIGEST": "SAME"
+  },
+  "Q-14": {
+   "TOPOLOGY_DIGEST": "SAME",
+   "ROW_AUTHORITY_DIGEST": "SAME",
+   "RELEASE_INPUT_DIGEST": "SAME"
+  }
+ },
+ "topology_digest": false,
+ "opening_digest": "0462d68c14f43585bfc72d5998e68c472eb877905fcb278b58e162d451347275",
+ "surface_digest": "f647565aa49ac9c283ecf3a04575532c89b40013daaf04024303d92ecf249c33",
+ "trade_item_digests": {
+  "FLR-01": "ed1e2855ff18e2e85fa8a823868935395e1c18dd4efc4e8a18c66abd27e97235",
+  "FLR-02": "db5ef4b163e8ea267aeeff8fc47154f4ebea09e620af647838b77e8818ee468f",
+  "FLR-03": "6612f96ad9eac356742646f4a1d92c470aa9641f47cbf4712f5b5a533ab32586",
+  "MRB-01": "15972fa351e6c1066e9ac8925b5257894a5cf801bdac4d7915a83b6e01ed5d26",
+  "MRB-02": "875f6af6f83f28cfda9832efa9535d69489399eabd4a7f49f22b548e9aef1d5c",
+  "CLG-01": "ed6c39cc9ae63e63cd7f0c1727852de3b3820c8aebf67613323829aaa7f4a540",
+  "PLS-01": "3cdb811856566a7867704ead94d1bf086a82664018c18d2b67e8286c36efc515",
+  "PLS-02": "4e71303f197a011df515d9b777645c0c975f6305e55a11edfe44ebf9c044311d",
+  "PNT-01": "025fe1036cda7ab2383db8fbb5c914ebfe9a8306e787e46fc7fac83087ffa4dc",
+  "WTL-01": "bd3f505a905209446bb3a430c69b01a6629cc57d48cafcf0280bf9b1c6a53250",
+  "WTP-01": "b1823a7bb954eea91ab81936bf43795348a7dc251049f38a47e7b8f4efe83644",
+  "SKT-01": "40207c65eb6cb0f7219c376643aae56f04f1847454035aa51addda66d2cdee6d",
+  "HPR-01": "2b09aed021fe0e7dbe87e2a7548bcdd675db5ddffa67fd9d2dc90182333d6911",
+  "WPF-01": "909ba07365b10d96740491513c59568de09e35f444d311ae979263ecd4e33aac",
+  "WPU-01": "337a334534598791febf6f424ce68ee9c4dd4d6ea6b30868b7269abb29bccc6b",
+  "DOR-01": "8e58e132375c5c8e9b4ed8afbafe44a2f6673ed6db1c78f3cf8c1c5c766a8ccb",
+  "DOR-02": "e35e17f3cc884206fe5960f3ee8d6bdbfcf4b6643d86936978a3e4161566016d",
+  "SGD-01": "2e7b880e91d0586392785df6e9bbd7b2234b5a3b21b98dcc9106936149f434a6",
+  "SGD-02": "a39fcf8562f63119a5405f5414c0442120ea9d0d87cc03221d4fa601334766bb",
+  "WIN-01": "5e64bc8efa9ae580ee066bf0ae5d1bad93ede54dab274e89fd61e812462ef819",
+  "WIN-02": "ec4762a13e1af00c2204e993c65f25f279942031040e65645bf3c0ef9dd87526"
+ },
+ "canonical_boq_digest": "76f30a38d5b085ec7d4f3dcaf7e9c7ec4814b4e9f7ec16f6637392a94455c766",
+ "xlsx_content_digest": "7ad4b727682e83dc7b22d297cc56a7c2b673031b48a27a6320a3b3d060a1cf58",
+ "xlsx_file_sha256": "a9be156e2328d04e9e9fbbfa094085055750cc843a48ded607207a36a0bad296",
+ "open_items": [
+  "FLR-03"
+ ],
+ "open_owner_question": "PAINTRY (تحضير): is the ceramic floor laid UNDER the fixed kitchen counter drawn by the five FIXTURE lines? YES -> 11.685 m2 stands; NO -> which outlined area is the counter footprint (U-shaped run along the west / south / north walls 5.440 m2; north-east pocket 0.600 m2)? Waterproofing is not affected (US-14 measures the membrane over the whole room floor)",
+ "test_results": "TEST_RESULTS.json of the package (one full suite from the final commit)",
+ "after_freeze": "NO MORE QORTUBA-SPECIFIC TUNING: a generic fix found on an unseen villa is versioned, implemented generically and Qortuba is rerun as regression; never tuned to restore a number"
+}

@@ -1,0 +1,13 @@
+{
+ "SCHEMA": "URBAN_QORTUBA_RC1_SOURCE_ANCHOR_STATUS_V1",
+ "QORTUBA_RC1_CANONICAL_MEASUREMENT_SOURCE": {
+  "dxf_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+  "revision": "QORTUBA_REV_NEW"
+ },
+ "dwg_known_sha256_prefix": "e4babbc2ded1",
+ "dwg_dxf_identity": "NOT_ESTABLISHED",
+ "blocks_rc1_reference_freeze": false,
+ "blocks_release_authority": true,
+ "protocol_ready": "SOURCE_ANCHOR_PLAN (R8.20)",
+ "next": "controlled owner re-export (DXF 2018 + DWG AC1027 + hashes + AutoCAD build), in parallel or after RC1"
+}

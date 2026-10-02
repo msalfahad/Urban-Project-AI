@@ -1,0 +1,1606 @@
+{
+ "SCHEMA": "URBAN_QORTUBA_RC1_CANONICAL_BOQ_V1",
+ "policy": "CANONICAL_BOQ_ITEM_MODEL_V1",
+ "run": {
+  "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+  "source_revision": "QORTUBA_REV_NEW",
+  "source_dxf_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+  "floor": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)"
+ },
+ "items": [
+  {
+   "canonical_item_id": "FLR-01",
+   "trade": "ARCHITECTURAL_FLOOR_FINISH",
+   "layer": "FLOOR_FINISH_SURFACE",
+   "unit": "m2",
+   "qty": 111.8988,
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "description_ar": "أرضيات بورسلين - الغرف الجافة (من الجدار إلى الجدار)",
+   "description_en": "Porcelain floor - dry rooms, wall to wall (incl. same-finish door strips)",
+   "room_breakdown": [
+    {
+     "key": "SITE-5f1762f1a93b91ca",
+     "label": "BED.ROOM (1) [5f1762f1]",
+     "qty": 19.2725,
+     "kind": "ROOM",
+     "site_area_m2": 19.2725,
+     "inside_effects": []
+    },
+    {
+     "key": "SITE-77a2130eb275604c",
+     "label": "HALL / whgm",
+     "qty": 42.649289,
+     "kind": "ROOM",
+     "site_area_m2": 42.649289,
+     "inside_effects": []
+    },
+    {
+     "key": "SITE-a6405850100155ac",
+     "label": "DRESS / M.B.ROOM",
+     "qty": 33.2,
+     "kind": "ROOM",
+     "site_area_m2": 33.2,
+     "inside_effects": []
+    },
+    {
+     "key": "SITE-daca396d6d730e60",
+     "label": "BED.ROOM (2) [daca396d]",
+     "qty": 16.327,
+     "kind": "ROOM",
+     "site_area_m2": 16.327,
+     "inside_effects": []
+    },
+    {
+     "key": "THRESHOLD-04910e5deeeed2fc",
+     "label": "door strip THRESHOLD-04910e5deeeed2fc",
+     "qty": 0.15,
+     "kind": "STRIP",
+     "site_area_m2": null,
+     "inside_effects": null
+    },
+    {
+     "key": "THRESHOLD-c82365dd41b94abe",
+     "label": "door strip THRESHOLD-c82365dd41b94abe",
+     "qty": 0.15,
+     "kind": "STRIP",
+     "site_area_m2": null,
+     "inside_effects": null
+    },
+    {
+     "key": "THRESHOLD-d4633eabc844b274",
+     "label": "door strip THRESHOLD-d4633eabc844b274",
+     "qty": 0.15,
+     "kind": "STRIP",
+     "site_area_m2": null,
+     "inside_effects": null
+    }
+   ],
+   "breakdown_additive": true,
+   "legacy_row_ids": [
+    {
+     "id": "QOR-R819-Q-13",
+     "relation": "SAME_QUANTITY",
+     "value": 111.8988,
+     "note": "R8.19 / R8.20 BOQ shadow line"
+    },
+    {
+     "id": "OWNER-RULES-V1:Q-13",
+     "relation": "HISTORICAL_MEANING",
+     "value": null,
+     "note": "old revision takeoff (OWNER RULES V1), same meaning, another source"
+    }
+   ],
+   "measure_pair": null,
+   "source": "DXF (K2 ezdxf), TS01 certified topology",
+   "rules": [
+    "QORTUBA-FLOOR-TREATMENT@v3",
+    "QORTUBA-SPACE-CLASS@v2"
+   ],
+   "blockers": [
+    "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "evidence": "rows_new.Q-13 (R8.20 build; QUANTITY_REGRESSION Q-13)",
+   "notes": [],
+   "approved_for_boq": false,
+   "additive_in_summary": true
+  },
+  {
+   "canonical_item_id": "FLR-02",
+   "trade": "ARCHITECTURAL_FLOOR_FINISH",
+   "layer": "FLOOR_FINISH_SURFACE",
+   "unit": "m2",
+   "qty": 17.7425,
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "description_ar": "أرضيات سيراميك - الحمامات",
+   "description_en": "Ceramic floor tile - bathrooms",
+   "room_breakdown": [
+    {
+     "key": "SITE-1c4abf65f9b5db1e",
+     "label": "BATH (1) [1c4abf65]",
+     "qty": 8.5525,
+     "kind": "ROOM",
+     "site_area_m2": 8.5525,
+     "inside_effects": []
+    },
+    {
+     "key": "SITE-a2b19efc492a6d0b",
+     "label": "BATH (2) [a2b19efc]",
+     "qty": 5.1,
+     "kind": "ROOM",
+     "site_area_m2": 5.1,
+     "inside_effects": []
+    },
+    {
+     "key": "SITE-fe8ed5548fb4310e",
+     "label": "BATH (3) [fe8ed554]",
+     "qty": 4.09,
+     "kind": "ROOM",
+     "site_area_m2": 4.09,
+     "inside_effects": []
+    }
+   ],
+   "breakdown_additive": true,
+   "legacy_row_ids": [
+    {
+     "id": "QOR-R819-Q-11",
+     "relation": "SAME_QUANTITY",
+     "value": 17.7425,
+     "note": "R8.19 / R8.20 BOQ shadow line"
+    },
+    {
+     "id": "OWNER-RULES-V1:Q-11",
+     "relation": "HISTORICAL_MEANING",
+     "value": null,
+     "note": "old revision takeoff (OWNER RULES V1), same meaning, another source"
+    },
+    {
+     "id": "QOR-R819-Q-03",
+     "relation": "MISLABELLED_DUPLICATE",
+     "value": 17.7425,
+     "keys": [
+      "SITE-1c4abf65f9b5db1e",
+      "SITE-a2b19efc492a6d0b",
+      "SITE-fe8ed5548fb4310e"
+     ],
+     "note": "Q-03 was historically WATERPROOFING floor (OWNER RULES V1) but the R8.19 / R8.20 BOQ shadow described it as ceramic floor - same sites, same m2: a duplicate line"
+    }
+   ],
+   "measure_pair": null,
+   "source": "DXF (K2 ezdxf), TS01 certified topology",
+   "rules": [
+    "QORTUBA-FLOOR-TREATMENT@v3",
+    "QORTUBA-SPACE-CLASS@v2"
+   ],
+   "blockers": [
+    "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "evidence": "rows_new.Q-11 (R8.20 build; QUANTITY_REGRESSION Q-11)",
+   "notes": [],
+   "approved_for_boq": false,
+   "additive_in_summary": true
+  },
+  {
+   "canonical_item_id": "FLR-03",
+   "trade": "ARCHITECTURAL_FLOOR_FINISH",
+   "layer": "FLOOR_FINISH_SURFACE",
+   "unit": "m2",
+   "qty": 11.685,
+   "status": "AUTHORISED_SUBTOTAL",
+   "description_ar": "أرضيات سيراميك - غرفة التحضير (PAINTRY)",
+   "description_en": "Ceramic floor tile - PAINTRY (service room)",
+   "room_breakdown": [
+    {
+     "key": "SITE-8c1c7563d5252c50",
+     "label": "PAINTRY",
+     "qty": 11.685,
+     "kind": "ROOM",
+     "site_area_m2": 11.685,
+     "inside_effects": []
+    }
+   ],
+   "breakdown_additive": true,
+   "legacy_row_ids": [
+    {
+     "id": "QOR-R819-Q-12",
+     "relation": "SAME_QUANTITY",
+     "value": 11.685,
+     "note": "R8.19 / R8.20 BOQ shadow line"
+    },
+    {
+     "id": "OWNER-RULES-V1:Q-12",
+     "relation": "HISTORICAL_MEANING",
+     "value": null,
+     "note": "old revision takeoff (OWNER RULES V1), same meaning, another source"
+    },
+    {
+     "id": "QOR-R819-Q-03P",
+     "relation": "MISLABELLED_DUPLICATE",
+     "value": 11.685,
+     "keys": [
+      "SITE-8c1c7563d5252c50"
+     ],
+     "note": "Q-03P was historically WATERPROOFING floor (OWNER RULES V1) but the R8.19 / R8.20 BOQ shadow described it as ceramic floor - same sites, same m2: a duplicate line"
+    }
+   ],
+   "measure_pair": null,
+   "source": "DXF (K2 ezdxf), TS01 certified topology",
+   "rules": [
+    "QORTUBA-FLOOR-TREATMENT@v3",
+    "QORTUBA-SPACE-CLASS@v2"
+   ],
+   "blockers": [
+    "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+    "OBJECT_FOOTPRINT_IMPLICIT: proven furniture / fixture footprints are inside the measured floor by the topology convention, not by a FLOOR_FINISH footprint authority",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "evidence": "rows_new.Q-12 (R8.20 build; QUANTITY_REGRESSION Q-12)",
+   "notes": [
+    "OPEN OWNER QUESTION: is the ceramic floor laid under the fixed kitchen counter drawn by FIXTURE lines H478, H482, H532, H536, H541? YES -> 11.685 m2 stands; NO -> the counter footprint face(s) [0.6, 5.44, 5.645] m2 come off"
+   ],
+   "approved_for_boq": false,
+   "additive_in_summary": true
+  },
+  {
+   "canonical_item_id": "MRB-01",
+   "trade": "MARBLE_STONE",
+   "layer": "FLOOR_FINISH_SURFACE",
+   "unit": "m2",
+   "qty": 0.51,
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "description_ar": "عتبات رخام (برطاش) - المساحة",
+   "description_en": "Marble thresholds - plan area",
+   "room_breakdown": [
+    {
+     "key": "THRESHOLD-28f50f8dc18c1e90",
+     "label": "threshold THRESHOLD-28f50f8dc18c1e90 (door I1561)",
+     "qty": 0.12,
+     "kind": "STRIP"
+    },
+    {
+     "key": "THRESHOLD-bfcea08375237224",
+     "label": "threshold THRESHOLD-bfcea08375237224 (door I677)",
+     "qty": 0.15,
+     "kind": "STRIP"
+    },
+    {
+     "key": "THRESHOLD-cf12fcdfd3e6a4a6",
+     "label": "threshold THRESHOLD-cf12fcdfd3e6a4a6 (door I2044)",
+     "qty": 0.12,
+     "kind": "STRIP"
+    },
+    {
+     "key": "THRESHOLD-f9846605acbce828",
+     "label": "threshold THRESHOLD-f9846605acbce828 (door I1443)",
+     "qty": 0.12,
+     "kind": "STRIP"
+    }
+   ],
+   "breakdown_additive": true,
+   "legacy_row_ids": [
+    {
+     "id": "QOR-R819-MARBLE-THRESHOLD-PLAN-AREA-M2",
+     "relation": "SAME_QUANTITY",
+     "value": 0.51
+    }
+   ],
+   "measure_pair": "MRB-02",
+   "source": "door face closures (source)",
+   "rules": [
+    "QORTUBA-NEW-MAIN-ENTRANCE-MARBLE-OWNER-001@v1",
+    "URBAN-WET-SERVICE-MARBLE-THRESHOLD@v1"
+   ],
+   "blockers": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "evidence": "marble_quantities.MARBLE_THRESHOLD_PLAN_AREA_M2",
+   "notes": [
+    "MEASURE PAIR with MRB-02: the SAME four thresholds - price ONE basis"
+   ],
+   "approved_for_boq": false,
+   "additive_in_summary": true
+  },
+  {
+   "canonical_item_id": "MRB-02",
+   "trade": "MARBLE_STONE",
+   "layer": "FLOOR_FINISH_SURFACE",
+   "unit": "lm",
+   "qty": 3.4,
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "description_ar": "عتبات رخام (برطاش) - الطول",
+   "description_en": "Marble thresholds - length",
+   "room_breakdown": [
+    {
+     "key": "THRESHOLD-28f50f8dc18c1e90",
+     "label": "threshold THRESHOLD-28f50f8dc18c1e90 (door I1561)",
+     "qty": 0.8,
+     "kind": "STRIP"
+    },
+    {
+     "key": "THRESHOLD-bfcea08375237224",
+     "label": "threshold THRESHOLD-bfcea08375237224 (door I677)",
+     "qty": 1.0,
+     "kind": "STRIP"
+    },
+    {
+     "key": "THRESHOLD-cf12fcdfd3e6a4a6",
+     "label": "threshold THRESHOLD-cf12fcdfd3e6a4a6 (door I2044)",
+     "qty": 0.8,
+     "kind": "STRIP"
+    },
+    {
+     "key": "THRESHOLD-f9846605acbce828",
+     "label": "threshold THRESHOLD-f9846605acbce828 (door I1443)",
+     "qty": 0.8,
+     "kind": "STRIP"
+    }
+   ],
+   "breakdown_additive": true,
+   "legacy_row_ids": [
+    {
+     "id": "QOR-R819-MARBLE-THRESHOLD-LENGTH-LM",
+     "relation": "SAME_QUANTITY",
+     "value": 3.4
+    }
+   ],
+   "measure_pair": "MRB-01",
+   "source": "door face closures (source)",
+   "rules": [
+    "QORTUBA-NEW-MAIN-ENTRANCE-MARBLE-OWNER-001@v1",
+    "URBAN-WET-SERVICE-MARBLE-THRESHOLD@v1"
+   ],
+   "blockers": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "evidence": "marble_quantities.MARBLE_THRESHOLD_LENGTH_LM",
+   "notes": [
+    "MEASURE PAIR with MRB-01 - price ONE basis; 2 cm = vertical rise only"
+   ],
+   "approved_for_boq": false,
+   "additive_in_summary": true
+  },
+  {
+   "canonical_item_id": "CLG-01",
+   "trade": "CEILING",
+   "layer": "CEILING",
+   "unit": "m2",
+   "qty": 140.637,
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "description_ar": "أسقف - حسب المساحة",
+   "description_en": "Ceiling by area (duct footprint and Hall / Lobby passage soffit excluded)",
+   "room_breakdown": [
+    {
+     "key": "SITE-1c4abf65f9b5db1e",
+     "label": "BATH (1) [1c4abf65]",
+     "qty": 8.5525,
+     "kind": "ROOM",
+     "site_area_m2": 8.5525,
+     "inside_effects": []
+    },
+    {
+     "key": "SITE-5f1762f1a93b91ca",
+     "label": "BED.ROOM (1) [5f1762f1]",
+     "qty": 19.2725,
+     "kind": "ROOM",
+     "site_area_m2": 19.2725,
+     "inside_effects": []
+    },
+    {
+     "key": "SITE-77a2130eb275604c",
+     "label": "HALL / whgm",
+     "qty": 42.41,
+     "kind": "ROOM",
+     "site_area_m2": 42.649289,
+     "inside_effects": [
+      {
+       "strip": "OP-997f14d12b8e9bc1",
+       "effect_m2": -0.239289,
+       "state": "SOFFIT_EXCLUDED_FROM_CEILING"
+      }
+     ]
+    },
+    {
+     "key": "SITE-8c1c7563d5252c50",
+     "label": "PAINTRY",
+     "qty": 11.685,
+     "kind": "ROOM",
+     "site_area_m2": 11.685,
+     "inside_effects": []
+    },
+    {
+     "key": "SITE-a2b19efc492a6d0b",
+     "label": "BATH (2) [a2b19efc]",
+     "qty": 5.1,
+     "kind": "ROOM",
+     "site_area_m2": 5.1,
+     "inside_effects": []
+    },
+    {
+     "key": "SITE-a6405850100155ac",
+     "label": "DRESS / M.B.ROOM",
+     "qty": 33.2,
+     "kind": "ROOM",
+     "site_area_m2": 33.2,
+     "inside_effects": []
+    },
+    {
+     "key": "SITE-daca396d6d730e60",
+     "label": "BED.ROOM (2) [daca396d]",
+     "qty": 16.327,
+     "kind": "ROOM",
+     "site_area_m2": 16.327,
+     "inside_effects": []
+    },
+    {
+     "key": "SITE-fe8ed5548fb4310e",
+     "label": "BATH (3) [fe8ed554]",
+     "qty": 4.09,
+     "kind": "ROOM",
+     "site_area_m2": 4.09,
+     "inside_effects": []
+    }
+   ],
+   "breakdown_additive": true,
+   "legacy_row_ids": [
+    {
+     "id": "QOR-R819-Q-14",
+     "relation": "SAME_QUANTITY",
+     "value": 140.637
+    },
+    {
+     "id": "OWNER-RULES-V1:Q-14",
+     "relation": "HISTORICAL_MEANING",
+     "value": null
+    }
+   ],
+   "measure_pair": null,
+   "source": "DXF (K2 ezdxf), TS01 certified topology",
+   "rules": [
+    "QORTUBA-Q14-CEILING-TREATMENT@v1"
+   ],
+   "blockers": [
+    "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "evidence": "rows_new.Q-14",
+   "notes": [],
+   "approved_for_boq": false,
+   "additive_in_summary": true
+  },
+  {
+   "canonical_item_id": "PLS-01",
+   "trade": "PLASTER_INTERNAL",
+   "layer": "PLASTER",
+   "unit": "m2",
+   "qty": 307.361518,
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "description_ar": "لياسة داخلية للجدران والأعمدة والدكت المكشوف - المناطق الجافة حتى 3.15 م",
+   "description_en": "Internal plaster - dry rooms (walls, exposed columns, duct, reveals) to 3.15 m",
+   "room_breakdown": [
+    {
+     "key": "SITE-5f1762f1a93b91ca",
+     "label": "BED.ROOM (1) [5f1762f1]",
+     "qty": 72.328302,
+     "kind": "ROOM",
+     "components": {
+      "wall_plane_m2": 53.006962,
+      "column_face_m2": 2.52,
+      "obstacle_face_m2": 15.75,
+      "jamb_reveals_m2": 0.75,
+      "head_reveals_m2": 0.30134
+     },
+     "height_m": 3.15,
+     "height_authority": "QORTUBA-NEW-DRY-WALL-FINISH-HEIGHT-OWNER-001@v1"
+    },
+    {
+     "key": "SITE-77a2130eb275604c",
+     "label": "HALL / whgm",
+     "qty": 94.266868,
+     "kind": "ROOM",
+     "components": {
+      "wall_plane_m2": 85.773468,
+      "column_face_m2": 2.0475,
+      "obstacle_face_m2": 0.0,
+      "jamb_reveals_m2": 4.93,
+      "head_reveals_m2": 1.5159
+     },
+     "height_m": 3.15,
+     "height_authority": "QORTUBA-NEW-DRY-WALL-FINISH-HEIGHT-OWNER-001@v1"
+    },
+    {
+     "key": "SITE-a6405850100155ac",
+     "label": "DRESS / M.B.ROOM",
+     "qty": 91.668106,
+     "kind": "ROOM",
+     "components": {
+      "wall_plane_m2": 84.086227,
+      "column_face_m2": 3.78,
+      "obstacle_face_m2": 0.0,
+      "jamb_reveals_m2": 2.6325,
+      "head_reveals_m2": 1.169379
+     },
+     "height_m": 3.15,
+     "height_authority": "QORTUBA-NEW-DRY-WALL-FINISH-HEIGHT-OWNER-001@v1"
+    },
+    {
+     "key": "SITE-daca396d6d730e60",
+     "label": "BED.ROOM (2) [daca396d]",
+     "qty": 49.098242,
+     "kind": "ROOM",
+     "components": {
+      "wall_plane_m2": 45.49267,
+      "column_face_m2": 2.52,
+      "obstacle_face_m2": 0.0,
+      "jamb_reveals_m2": 0.75,
+      "head_reveals_m2": 0.335572
+     },
+     "height_m": 3.15,
+     "height_authority": "QORTUBA-NEW-DRY-WALL-FINISH-HEIGHT-OWNER-001@v1"
+    }
+   ],
+   "breakdown_additive": true,
+   "legacy_row_ids": [
+    {
+     "id": "QOR-R819-DRY-WALL-PLASTER",
+     "relation": "SAME_QUANTITY",
+     "value": 307.361518
+    },
+    {
+     "id": "OWNER-RULES-V1:Q-08",
+     "relation": "HISTORICAL_MEANING",
+     "value": null
+    }
+   ],
+   "measure_pair": null,
+   "source": "wall-face V2 surfaces (R8.19 rebuild)",
+   "rules": [
+    "URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1",
+    "URBAN-EXPOSED-INTERIOR-DUCT-FINISH-METHOD@v1",
+    "QORTUBA-NEW-WALL-FACE-METHOD@v3"
+   ],
+   "blockers": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "evidence": "r8_19.trade_rows.DRY_WALL_PLASTER",
+   "notes": [],
+   "approved_for_boq": false,
+   "additive_in_summary": true
+  },
+  {
+   "canonical_item_id": "PLS-02",
+   "trade": "PLASTER_INTERNAL",
+   "layer": "PLASTER",
+   "unit": "m2",
+   "qty": 1.510248,
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "description_ar": "لياسة جوانب الفتحات - الحمامات وغرفة التحضير",
+   "description_en": "Plaster to reveals owned by wet / service rooms",
+   "room_breakdown": [
+    {
+     "key": "SITE-8c1c7563d5252c50",
+     "label": "PAINTRY",
+     "qty": 1.510248,
+     "kind": "ROOM",
+     "components": {
+      "wall_plane_m2": 0.0,
+      "column_face_m2": 0.0,
+      "obstacle_face_m2": 0.0,
+      "jamb_reveals_m2": 0.97,
+      "head_reveals_m2": 0.540248
+     },
+     "height_m": null,
+     "height_authority": null
+    }
+   ],
+   "breakdown_additive": true,
+   "legacy_row_ids": [
+    {
+     "id": "QOR-R819-WET-SERVICE-REVEAL-PLASTER",
+     "relation": "SAME_QUANTITY",
+     "value": 1.510248
+    }
+   ],
+   "measure_pair": null,
+   "source": "wall-face V2 surfaces (R8.19 rebuild)",
+   "rules": [
+    "QORTUBA-NEW-WALL-FACE-METHOD@v3"
+   ],
+   "blockers": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "evidence": "r8_19.trade_rows.WET_SERVICE_REVEAL_PLASTER",
+   "notes": [],
+   "approved_for_boq": false,
+   "additive_in_summary": true
+  },
+  {
+   "canonical_item_id": "PNT-01",
+   "trade": "PAINT",
+   "layer": "PAINT",
+   "unit": "m2",
+   "qty": 307.361518,
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "description_ar": "دهانات داخلية للجدران والأعمدة والدكت المكشوف - المناطق الجافة حتى 3.15 م",
+   "description_en": "Internal paint - dry rooms (walls, exposed columns, duct, reveals) to 3.15 m",
+   "room_breakdown": [
+    {
+     "key": "SITE-5f1762f1a93b91ca",
+     "label": "BED.ROOM (1) [5f1762f1]",
+     "qty": 72.328302,
+     "kind": "ROOM",
+     "components": {
+      "wall_plane_m2": 53.006962,
+      "column_face_m2": 2.52,
+      "obstacle_face_m2": 15.75,
+      "jamb_reveals_m2": 0.75,
+      "head_reveals_m2": 0.30134
+     },
+     "height_m": 3.15,
+     "height_authority": "QORTUBA-NEW-DRY-WALL-FINISH-HEIGHT-OWNER-001@v1"
+    },
+    {
+     "key": "SITE-77a2130eb275604c",
+     "label": "HALL / whgm",
+     "qty": 94.266868,
+     "kind": "ROOM",
+     "components": {
+      "wall_plane_m2": 85.773468,
+      "column_face_m2": 2.0475,
+      "obstacle_face_m2": 0.0,
+      "jamb_reveals_m2": 4.93,
+      "head_reveals_m2": 1.5159
+     },
+     "height_m": 3.15,
+     "height_authority": "QORTUBA-NEW-DRY-WALL-FINISH-HEIGHT-OWNER-001@v1"
+    },
+    {
+     "key": "SITE-a6405850100155ac",
+     "label": "DRESS / M.B.ROOM",
+     "qty": 91.668106,
+     "kind": "ROOM",
+     "components": {
+      "wall_plane_m2": 84.086227,
+      "column_face_m2": 3.78,
+      "obstacle_face_m2": 0.0,
+      "jamb_reveals_m2": 2.6325,
+      "head_reveals_m2": 1.169379
+     },
+     "height_m": 3.15,
+     "height_authority": "QORTUBA-NEW-DRY-WALL-FINISH-HEIGHT-OWNER-001@v1"
+    },
+    {
+     "key": "SITE-daca396d6d730e60",
+     "label": "BED.ROOM (2) [daca396d]",
+     "qty": 49.098242,
+     "kind": "ROOM",
+     "components": {
+      "wall_plane_m2": 45.49267,
+      "column_face_m2": 2.52,
+      "obstacle_face_m2": 0.0,
+      "jamb_reveals_m2": 0.75,
+      "head_reveals_m2": 0.335572
+     },
+     "height_m": 3.15,
+     "height_authority": "QORTUBA-NEW-DRY-WALL-FINISH-HEIGHT-OWNER-001@v1"
+    }
+   ],
+   "breakdown_additive": true,
+   "legacy_row_ids": [
+    {
+     "id": "QOR-R819-DRY-WALL-PAINT",
+     "relation": "SAME_QUANTITY",
+     "value": 307.361518
+    },
+    {
+     "id": "OWNER-RULES-V1:Q-09",
+     "relation": "HISTORICAL_MEANING",
+     "value": null
+    }
+   ],
+   "measure_pair": null,
+   "source": "wall-face V2 surfaces (R8.19 rebuild)",
+   "rules": [
+    "URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1",
+    "URBAN-EXPOSED-INTERIOR-DUCT-FINISH-METHOD@v1",
+    "QORTUBA-NEW-WALL-FACE-METHOD@v3"
+   ],
+   "blockers": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "evidence": "r8_19.trade_rows.DRY_WALL_PAINT",
+   "notes": [],
+   "approved_for_boq": false,
+   "additive_in_summary": true
+  },
+  {
+   "canonical_item_id": "WTL-01",
+   "trade": "ARCHITECTURAL_WALL_FINISH",
+   "layer": "WALL_TILE",
+   "unit": "m2",
+   "qty": 127.693512,
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "description_ar": "تكسيات جدران بورسلين / سيراميك - المناطق الرطبة حتى 3.20 م",
+   "description_en": "Porcelain / ceramic wall tile - wet / service rooms (walls, exposed columns) to 3.20 m",
+   "room_breakdown": [
+    {
+     "key": "SITE-1c4abf65f9b5db1e",
+     "label": "BATH (1) [1c4abf65]",
+     "qty": 36.32,
+     "kind": "ROOM",
+     "components": {
+      "wall_plane_m2": 34.24,
+      "column_face_m2": 2.08,
+      "obstacle_face_m2": 0.0,
+      "jamb_reveals_m2": 0.0,
+      "head_reveals_m2": 0.0
+     },
+     "height_m": 3.2,
+     "height_authority": "QORTUBA-NEW-WET-SERVICE-FINISH-OWNER-001@v1"
+    },
+    {
+     "key": "SITE-8c1c7563d5252c50",
+     "label": "PAINTRY",
+     "qty": 36.013512,
+     "kind": "ROOM",
+     "components": {
+      "wall_plane_m2": 31.533512,
+      "column_face_m2": 4.48,
+      "obstacle_face_m2": 0.0,
+      "jamb_reveals_m2": 0.0,
+      "head_reveals_m2": 0.0
+     },
+     "height_m": 3.2,
+     "height_authority": "QORTUBA-NEW-WET-SERVICE-FINISH-OWNER-001@v1 (SERVICE_ROOM; PAINTRY via QP-07 = kitchen / preparation zone for the ceramic takeoff)"
+    },
+    {
+     "key": "SITE-a2b19efc492a6d0b",
+     "label": "BATH (2) [a2b19efc]",
+     "qty": 28.32,
+     "kind": "ROOM",
+     "components": {
+      "wall_plane_m2": 23.84,
+      "column_face_m2": 4.48,
+      "obstacle_face_m2": 0.0,
+      "jamb_reveals_m2": 0.0,
+      "head_reveals_m2": 0.0
+     },
+     "height_m": 3.2,
+     "height_authority": "QORTUBA-NEW-WET-SERVICE-FINISH-OWNER-001@v1"
+    },
+    {
+     "key": "SITE-fe8ed5548fb4310e",
+     "label": "BATH (3) [fe8ed554]",
+     "qty": 27.04,
+     "kind": "ROOM",
+     "components": {
+      "wall_plane_m2": 23.2,
+      "column_face_m2": 3.84,
+      "obstacle_face_m2": 0.0,
+      "jamb_reveals_m2": 0.0,
+      "head_reveals_m2": 0.0
+     },
+     "height_m": 3.2,
+     "height_authority": "QORTUBA-NEW-WET-SERVICE-FINISH-OWNER-001@v1"
+    }
+   ],
+   "breakdown_additive": true,
+   "legacy_row_ids": [
+    {
+     "id": "QOR-R819-WET-SERVICE-WALL-TILE",
+     "relation": "SAME_QUANTITY",
+     "value": 127.693512
+    },
+    {
+     "id": "OWNER-RULES-V1:Q-05 + Q-06",
+     "relation": "HISTORICAL_MEANING",
+     "value": null
+    }
+   ],
+   "measure_pair": null,
+   "source": "wall-face V2 surfaces (R8.19 rebuild)",
+   "rules": [
+    "URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1",
+    "QORTUBA-NEW-WALL-FACE-METHOD@v3"
+   ],
+   "blockers": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "evidence": "r8_19.trade_rows.WET_SERVICE_WALL_TILE",
+   "notes": [],
+   "approved_for_boq": false,
+   "additive_in_summary": true
+  },
+  {
+   "canonical_item_id": "WTP-01",
+   "trade": "ARCHITECTURAL_WALL_FINISH",
+   "layer": "WALL_TILE_PREP",
+   "unit": "m2",
+   "qty": 127.693512,
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "description_ar": "تحضير الجدران تحت التكسيات - المناطق الرطبة",
+   "description_en": "Wall preparation under the wall tile - wet / service rooms",
+   "room_breakdown": [
+    {
+     "key": "SITE-1c4abf65f9b5db1e",
+     "label": "BATH (1) [1c4abf65]",
+     "qty": 36.32,
+     "kind": "ROOM",
+     "components": {
+      "wall_plane_m2": 34.24,
+      "column_face_m2": 2.08,
+      "obstacle_face_m2": 0.0,
+      "jamb_reveals_m2": 0.0,
+      "head_reveals_m2": 0.0
+     },
+     "height_m": 3.2,
+     "height_authority": "QORTUBA-NEW-WET-SERVICE-FINISH-OWNER-001@v1"
+    },
+    {
+     "key": "SITE-8c1c7563d5252c50",
+     "label": "PAINTRY",
+     "qty": 36.013512,
+     "kind": "ROOM",
+     "components": {
+      "wall_plane_m2": 31.533512,
+      "column_face_m2": 4.48,
+      "obstacle_face_m2": 0.0,
+      "jamb_reveals_m2": 0.0,
+      "head_reveals_m2": 0.0
+     },
+     "height_m": 3.2,
+     "height_authority": "QORTUBA-NEW-WET-SERVICE-FINISH-OWNER-001@v1 (SERVICE_ROOM; PAINTRY via QP-07 = kitchen / preparation zone for the ceramic takeoff)"
+    },
+    {
+     "key": "SITE-a2b19efc492a6d0b",
+     "label": "BATH (2) [a2b19efc]",
+     "qty": 28.32,
+     "kind": "ROOM",
+     "components": {
+      "wall_plane_m2": 23.84,
+      "column_face_m2": 4.48,
+      "obstacle_face_m2": 0.0,
+      "jamb_reveals_m2": 0.0,
+      "head_reveals_m2": 0.0
+     },
+     "height_m": 3.2,
+     "height_authority": "QORTUBA-NEW-WET-SERVICE-FINISH-OWNER-001@v1"
+    },
+    {
+     "key": "SITE-fe8ed5548fb4310e",
+     "label": "BATH (3) [fe8ed554]",
+     "qty": 27.04,
+     "kind": "ROOM",
+     "components": {
+      "wall_plane_m2": 23.2,
+      "column_face_m2": 3.84,
+      "obstacle_face_m2": 0.0,
+      "jamb_reveals_m2": 0.0,
+      "head_reveals_m2": 0.0
+     },
+     "height_m": 3.2,
+     "height_authority": "QORTUBA-NEW-WET-SERVICE-FINISH-OWNER-001@v1"
+    }
+   ],
+   "breakdown_additive": true,
+   "legacy_row_ids": [
+    {
+     "id": "QOR-R819-WET-WALL-TILE-PREP",
+     "relation": "SAME_QUANTITY",
+     "value": 127.693512
+    },
+    {
+     "id": "OWNER-RULES-V1:Q-10",
+     "relation": "HISTORICAL_MEANING",
+     "value": null
+    }
+   ],
+   "measure_pair": null,
+   "source": "wall-face V2 surfaces (R8.19 rebuild)",
+   "rules": [
+    "URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1",
+    "QORTUBA-NEW-WALL-FACE-METHOD@v3"
+   ],
+   "blockers": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "evidence": "r8_19.trade_rows.WET_WALL_TILE_PREP",
+   "notes": [],
+   "approved_for_boq": false,
+   "additive_in_summary": true
+  },
+  {
+   "canonical_item_id": "SKT-01",
+   "trade": "SKIRTING_PROFILE",
+   "layer": "SKIRTING",
+   "unit": "lm",
+   "qty": 94.13682,
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "description_ar": "نعلة مخفية - المناطق الجافة",
+   "description_en": "Hidden skirting - dry rooms",
+   "room_breakdown": [
+    {
+     "key": "SITE-1c4abf65f9b5db1e",
+     "label": "BATH (1) [1c4abf65]",
+     "qty": 0.0,
+     "kind": "ROOM",
+     "state": "NO_SKIRTING_FULL_WALL_TILE"
+    },
+    {
+     "key": "SITE-5f1762f1a93b91ca",
+     "label": "BED.ROOM (1) [5f1762f1]",
+     "qty": 22.9,
+     "kind": "ROOM",
+     "state": "COMPUTED"
+    },
+    {
+     "key": "SITE-77a2130eb275604c",
+     "label": "HALL / whgm",
+     "qty": 26.157105,
+     "kind": "ROOM",
+     "state": "COMPUTED"
+    },
+    {
+     "key": "SITE-8c1c7563d5252c50",
+     "label": "PAINTRY",
+     "qty": 0.0,
+     "kind": "ROOM",
+     "state": "NO_SKIRTING_FULL_WALL_TILE"
+    },
+    {
+     "key": "SITE-a2b19efc492a6d0b",
+     "label": "BATH (2) [a2b19efc]",
+     "qty": 0.0,
+     "kind": "ROOM",
+     "state": "NO_SKIRTING_FULL_WALL_TILE"
+    },
+    {
+     "key": "SITE-a6405850100155ac",
+     "label": "DRESS / M.B.ROOM",
+     "qty": 29.5,
+     "kind": "ROOM",
+     "state": "COMPUTED"
+    },
+    {
+     "key": "SITE-daca396d6d730e60",
+     "label": "BED.ROOM (2) [daca396d]",
+     "qty": 15.579714,
+     "kind": "ROOM",
+     "state": "COMPUTED"
+    },
+    {
+     "key": "SITE-fe8ed5548fb4310e",
+     "label": "BATH (3) [fe8ed554]",
+     "qty": 0.0,
+     "kind": "ROOM",
+     "state": "NO_SKIRTING_FULL_WALL_TILE"
+    }
+   ],
+   "breakdown_additive": true,
+   "legacy_row_ids": [
+    {
+     "id": "QOR-R819-SKIRTING",
+     "relation": "SAME_QUANTITY",
+     "value": 94.13682
+    },
+    {
+     "id": "OWNER-RULES-V1:Q-01",
+     "relation": "HISTORICAL_MEANING",
+     "value": null
+    }
+   ],
+   "measure_pair": null,
+   "source": "WALL_CONTACT_PATH_POLICY_V4 (skirting V4)",
+   "rules": [
+    "QORTUBA-NEW-SKIRTING-METHOD@v3"
+   ],
+   "blockers": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "evidence": "skirting_v4.PAYABLE_LM",
+   "notes": [
+    "SKT-01 and HPR-01 share ONE path (US-08) but are two materials: two items, never merged and never one quantity"
+   ],
+   "approved_for_boq": false,
+   "additive_in_summary": true
+  },
+  {
+   "canonical_item_id": "HPR-01",
+   "trade": "SKIRTING_PROFILE",
+   "layer": "HIDDEN_PROFILE",
+   "unit": "lm",
+   "qty": 94.13682,
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "description_ar": "بروفايل ألمنيوم مخفي للنعلة",
+   "description_en": "Hidden aluminium skirting profile",
+   "room_breakdown": [
+    {
+     "key": "SITE-1c4abf65f9b5db1e",
+     "label": "BATH (1) [1c4abf65]",
+     "qty": 0.0,
+     "kind": "ROOM",
+     "state": "NO_SKIRTING_FULL_WALL_TILE"
+    },
+    {
+     "key": "SITE-5f1762f1a93b91ca",
+     "label": "BED.ROOM (1) [5f1762f1]",
+     "qty": 22.9,
+     "kind": "ROOM",
+     "state": "COMPUTED"
+    },
+    {
+     "key": "SITE-77a2130eb275604c",
+     "label": "HALL / whgm",
+     "qty": 26.157105,
+     "kind": "ROOM",
+     "state": "COMPUTED"
+    },
+    {
+     "key": "SITE-8c1c7563d5252c50",
+     "label": "PAINTRY",
+     "qty": 0.0,
+     "kind": "ROOM",
+     "state": "NO_SKIRTING_FULL_WALL_TILE"
+    },
+    {
+     "key": "SITE-a2b19efc492a6d0b",
+     "label": "BATH (2) [a2b19efc]",
+     "qty": 0.0,
+     "kind": "ROOM",
+     "state": "NO_SKIRTING_FULL_WALL_TILE"
+    },
+    {
+     "key": "SITE-a6405850100155ac",
+     "label": "DRESS / M.B.ROOM",
+     "qty": 29.5,
+     "kind": "ROOM",
+     "state": "COMPUTED"
+    },
+    {
+     "key": "SITE-daca396d6d730e60",
+     "label": "BED.ROOM (2) [daca396d]",
+     "qty": 15.579714,
+     "kind": "ROOM",
+     "state": "COMPUTED"
+    },
+    {
+     "key": "SITE-fe8ed5548fb4310e",
+     "label": "BATH (3) [fe8ed554]",
+     "qty": 0.0,
+     "kind": "ROOM",
+     "state": "NO_SKIRTING_FULL_WALL_TILE"
+    }
+   ],
+   "breakdown_additive": true,
+   "legacy_row_ids": [
+    {
+     "id": "QOR-R819-HIDDEN-PROFILE",
+     "relation": "SAME_QUANTITY",
+     "value": 94.13682
+    },
+    {
+     "id": "OWNER-RULES-V1:Q-02",
+     "relation": "HISTORICAL_MEANING",
+     "value": null
+    }
+   ],
+   "measure_pair": null,
+   "source": "WALL_CONTACT_PATH_POLICY_V4 (skirting V4)",
+   "rules": [
+    "QORTUBA-NEW-SKIRTING-METHOD@v3"
+   ],
+   "blockers": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "evidence": "skirting_v4.PAYABLE_LM",
+   "notes": [
+    "SKT-01 and HPR-01 share ONE path (US-08) but are two materials: two items, never merged and never one quantity"
+   ],
+   "approved_for_boq": false,
+   "additive_in_summary": true
+  },
+  {
+   "canonical_item_id": "WPF-01",
+   "trade": "WATERPROOFING",
+   "layer": "WATERPROOF_FLOOR",
+   "unit": "m2",
+   "qty": 29.4275,
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "description_ar": "عزل مائي - أرضيات الحمامات وغرفة التحضير",
+   "description_en": "Waterproofing membrane - floor (bathrooms + PAINTRY)",
+   "room_breakdown": [
+    {
+     "key": "SITE-1c4abf65f9b5db1e",
+     "label": "BATH (1) [1c4abf65]",
+     "qty": 8.5525,
+     "kind": "ROOM",
+     "authority": "US-14 bathroom"
+    },
+    {
+     "key": "SITE-8c1c7563d5252c50",
+     "label": "PAINTRY",
+     "qty": 11.685,
+     "kind": "ROOM",
+     "authority": "US-14 pantry / preparation kitchen + QP-13 (PAINTRY, GROSS perimeter)"
+    },
+    {
+     "key": "SITE-a2b19efc492a6d0b",
+     "label": "BATH (2) [a2b19efc]",
+     "qty": 5.1,
+     "kind": "ROOM",
+     "authority": "US-14 bathroom"
+    },
+    {
+     "key": "SITE-fe8ed5548fb4310e",
+     "label": "BATH (3) [fe8ed554]",
+     "qty": 4.09,
+     "kind": "ROOM",
+     "authority": "US-14 bathroom"
+    }
+   ],
+   "breakdown_additive": true,
+   "legacy_row_ids": [
+    {
+     "id": "QOR-R819-WATERPROOFING-FLOOR-M2",
+     "relation": "SAME_QUANTITY",
+     "value": 29.4275
+    },
+    {
+     "id": "OWNER-RULES-V1:Q-03",
+     "relation": "HISTORICAL_MEANING",
+     "value": null,
+     "note": "old-revision waterproofing row of the same meaning"
+    },
+    {
+     "id": "OWNER-RULES-V1:Q-03P",
+     "relation": "HISTORICAL_MEANING",
+     "value": null,
+     "note": "old-revision waterproofing row of the same meaning"
+    }
+   ],
+   "measure_pair": null,
+   "source": "WATERPROOFING_POLICY_V1",
+   "rules": [
+    "US-04",
+    "US-05",
+    "US-14",
+    "QP-13"
+   ],
+   "blockers": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "evidence": "r8_19.waterproofing.totals.WATERPROOFING_FLOOR_M2",
+   "notes": [],
+   "approved_for_boq": false,
+   "additive_in_summary": true
+  },
+  {
+   "canonical_item_id": "WPU-01",
+   "trade": "WATERPROOFING",
+   "layer": "WATERPROOF_UPTURN",
+   "unit": "lm",
+   "qty": 44.2,
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "description_ar": "عزل مائي - الرفرف الرأسي 15 سم",
+   "description_en": "Waterproofing upturn 0.15 m - gross wet-room perimeter",
+   "room_breakdown": [
+    {
+     "key": "SITE-1c4abf65f9b5db1e",
+     "label": "BATH (1) [1c4abf65]",
+     "qty": 11.9,
+     "kind": "ROOM",
+     "authority": "US-14 bathroom"
+    },
+    {
+     "key": "SITE-8c1c7563d5252c50",
+     "label": "PAINTRY",
+     "qty": 13.9,
+     "kind": "ROOM",
+     "authority": "US-14 pantry / preparation kitchen + QP-13 (PAINTRY, GROSS perimeter)"
+    },
+    {
+     "key": "SITE-a2b19efc492a6d0b",
+     "label": "BATH (2) [a2b19efc]",
+     "qty": 9.4,
+     "kind": "ROOM",
+     "authority": "US-14 bathroom"
+    },
+    {
+     "key": "SITE-fe8ed5548fb4310e",
+     "label": "BATH (3) [fe8ed554]",
+     "qty": 9.0,
+     "kind": "ROOM",
+     "authority": "US-14 bathroom"
+    }
+   ],
+   "breakdown_additive": true,
+   "legacy_row_ids": [
+    {
+     "id": "QOR-R819-WATERPROOFING-UPTURN-LM",
+     "relation": "SAME_QUANTITY",
+     "value": 44.2
+    },
+    {
+     "id": "OWNER-RULES-V1:Q-04",
+     "relation": "HISTORICAL_MEANING",
+     "value": null,
+     "note": "old-revision waterproofing row of the same meaning"
+    },
+    {
+     "id": "OWNER-RULES-V1:Q-04P",
+     "relation": "HISTORICAL_MEANING",
+     "value": null,
+     "note": "old-revision waterproofing row of the same meaning"
+    }
+   ],
+   "measure_pair": null,
+   "source": "WATERPROOFING_POLICY_V1",
+   "rules": [
+    "US-04",
+    "US-05",
+    "US-14",
+    "QP-13"
+   ],
+   "blockers": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "evidence": "r8_19.waterproofing.totals.WATERPROOFING_UPTURN_LM",
+   "notes": [],
+   "approved_for_boq": false,
+   "additive_in_summary": true
+  },
+  {
+   "canonical_item_id": "DOR-01",
+   "trade": "OPENINGS",
+   "layer": "DOOR_INTERNAL",
+   "unit": "nr",
+   "qty": 6,
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "description_ar": "أبواب داخلية",
+   "description_en": "Internal doors (hinged swing; width from source, height QP-21 owner parameter)",
+   "room_breakdown": [
+    {
+     "key": "I1443",
+     "label": "I1443 BATH (1) [1c4abf65] / DRESS / M.B.ROOM",
+     "qty": 1,
+     "kind": "OPENING"
+    },
+    {
+     "key": "I1471",
+     "label": "I1471 HALL / whgm / DRESS / M.B.ROOM",
+     "qty": 1,
+     "kind": "OPENING"
+    },
+    {
+     "key": "I1561",
+     "label": "I1561 HALL / whgm / BATH (3) [fe8ed554]",
+     "qty": 1,
+     "kind": "OPENING"
+    },
+    {
+     "key": "I1988",
+     "label": "I1988 HALL / whgm / BED.ROOM (2) [daca396d]",
+     "qty": 1,
+     "kind": "OPENING"
+    },
+    {
+     "key": "I2044",
+     "label": "I2044 HALL / whgm / BATH (2) [a2b19efc]",
+     "qty": 1,
+     "kind": "OPENING"
+    },
+    {
+     "key": "I841",
+     "label": "I841 BED.ROOM (1) [5f1762f1] / HALL / whgm",
+     "qty": 1,
+     "kind": "OPENING"
+    }
+   ],
+   "breakdown_additive": true,
+   "legacy_row_ids": [
+    {
+     "id": "OWNER-RULES-V1:Q-16",
+     "relation": "HISTORICAL_MEANING",
+     "value": null
+    }
+   ],
+   "measure_pair": null,
+   "source": "opening register (wall-face V2 opening records + door closures)",
+   "rules": [
+    "OPENING_REGISTER_V1"
+   ],
+   "blockers": [
+    "SOURCE_ANCHOR: DWG <-> DXF identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction"
+   ],
+   "evidence": "OPENING_REGISTER",
+   "notes": [],
+   "approved_for_boq": false,
+   "additive_in_summary": true
+  },
+  {
+   "canonical_item_id": "DOR-02",
+   "trade": "OPENINGS",
+   "layer": "DOOR_ENTRANCE",
+   "unit": "nr",
+   "qty": 1,
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "description_ar": "باب المدخل الرئيسي للشقة",
+   "description_en": "Main apartment entrance door",
+   "room_breakdown": [
+    {
+     "key": "I677",
+     "label": "I677 HALL / whgm / OUTSIDE_UNIT (SITE-788f30878ba9d2b3)",
+     "qty": 1,
+     "kind": "OPENING"
+    }
+   ],
+   "breakdown_additive": true,
+   "legacy_row_ids": [],
+   "measure_pair": null,
+   "source": "opening register (wall-face V2 opening records + door closures)",
+   "rules": [
+    "OPENING_REGISTER_V1"
+   ],
+   "blockers": [
+    "SOURCE_ANCHOR: DWG <-> DXF identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction"
+   ],
+   "evidence": "OPENING_REGISTER",
+   "notes": [],
+   "approved_for_boq": false,
+   "additive_in_summary": true
+  },
+  {
+   "canonical_item_id": "SGD-01",
+   "trade": "OPENINGS",
+   "layer": "SLIDING_GLAZED_DOOR",
+   "unit": "nr",
+   "qty": 1,
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "description_ar": "باب زجاج سحاب داخلي (الصالة / التحضير)",
+   "description_en": "Internal sliding glass door (HALL / PAINTRY) - count",
+   "room_breakdown": [
+    {
+     "key": "SGD-H533",
+     "label": "SGD-H533 HALL / whgm / PAINTRY",
+     "qty": 1,
+     "kind": "OPENING"
+    }
+   ],
+   "breakdown_additive": true,
+   "legacy_row_ids": [
+    {
+     "id": "OWNER-RULES-V1:Q-17",
+     "relation": "HISTORICAL_MEANING",
+     "value": null
+    }
+   ],
+   "measure_pair": "SGD-02",
+   "source": "opening register (wall-face V2 opening records + door closures)",
+   "rules": [
+    "OPENING_REGISTER_V1"
+   ],
+   "blockers": [
+    "SOURCE_ANCHOR: DWG <-> DXF identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction"
+   ],
+   "evidence": "OPENING_REGISTER",
+   "notes": [],
+   "approved_for_boq": false,
+   "additive_in_summary": true
+  },
+  {
+   "canonical_item_id": "SGD-02",
+   "trade": "OPENINGS",
+   "layer": "SLIDING_GLAZED_DOOR",
+   "unit": "m2",
+   "qty": 6.05,
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "description_ar": "باب زجاج سحاب داخلي - المساحة",
+   "description_en": "Internal sliding glass door - opening area",
+   "room_breakdown": [
+    {
+     "key": "SGD-H533",
+     "label": "SGD-H533 2.75 x 2.2",
+     "qty": 6.05,
+     "kind": "OPENING",
+     "basis": "OWNER_PROJECT_PARAMETER"
+    }
+   ],
+   "breakdown_additive": true,
+   "legacy_row_ids": [],
+   "measure_pair": "SGD-01",
+   "source": "opening register (wall-face V2 opening records + door closures)",
+   "rules": [
+    "OPENING_REGISTER_V1"
+   ],
+   "blockers": [
+    "SOURCE_ANCHOR: DWG <-> DXF identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction"
+   ],
+   "evidence": "OPENING_REGISTER",
+   "notes": [
+    "heights are owner project parameters (no height is drawn)"
+   ],
+   "approved_for_boq": false,
+   "additive_in_summary": true
+  },
+  {
+   "canonical_item_id": "WIN-01",
+   "trade": "OPENINGS",
+   "layer": "WINDOW",
+   "unit": "nr",
+   "qty": 6,
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "description_ar": "شبابيك",
+   "description_en": "Windows - count",
+   "room_breakdown": [
+    {
+     "key": "W-H1020",
+     "label": "W-H1020 BED.ROOM (2) [daca396d] / EXTERIOR (outside the drawn building)",
+     "qty": 1,
+     "kind": "OPENING"
+    },
+    {
+     "key": "W-H1026",
+     "label": "W-H1026 DRESS / M.B.ROOM / EXTERIOR (outside the drawn building)",
+     "qty": 1,
+     "kind": "OPENING"
+    },
+    {
+     "key": "W-H1319",
+     "label": "W-H1319 BED.ROOM (1) [5f1762f1] / EXTERIOR (outside the drawn building)",
+     "qty": 1,
+     "kind": "OPENING"
+    },
+    {
+     "key": "W-H1325",
+     "label": "W-H1325 DRESS / M.B.ROOM / UNLABELLED REGION SITE-2b7e752d7baa45f5,SITE-9d115e042e0e1565,SITE-eaae022599294151",
+     "qty": 1,
+     "kind": "OPENING"
+    },
+    {
+     "key": "W-H1342",
+     "label": "W-H1342 PAINTRY / EXTERIOR (outside the drawn building)",
+     "qty": 1,
+     "kind": "OPENING"
+    },
+    {
+     "key": "W-H1518",
+     "label": "W-H1518 HALL / whgm / UNLABELLED REGION SITE-16beefe79d1949e3,SITE-3b875c57dda012d3,SITE-eaae022599294151",
+     "qty": 1,
+     "kind": "OPENING"
+    }
+   ],
+   "breakdown_additive": true,
+   "legacy_row_ids": [
+    {
+     "id": "OWNER-RULES-V1:Q-15",
+     "relation": "HISTORICAL_MEANING",
+     "value": null
+    }
+   ],
+   "measure_pair": "WIN-02",
+   "source": "opening register (wall-face V2 opening records + door closures)",
+   "rules": [
+    "OPENING_REGISTER_V1"
+   ],
+   "blockers": [
+    "SOURCE_ANCHOR: DWG <-> DXF identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction"
+   ],
+   "evidence": "OPENING_REGISTER",
+   "notes": [],
+   "approved_for_boq": false,
+   "additive_in_summary": true
+  },
+  {
+   "canonical_item_id": "WIN-02",
+   "trade": "OPENINGS",
+   "layer": "WINDOW",
+   "unit": "m2",
+   "qty": 16.053897,
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "description_ar": "شبابيك - المساحة",
+   "description_en": "Windows - opening area (width source x height QP-22 1.50 m)",
+   "room_breakdown": [
+    {
+     "key": "W-H1020",
+     "label": "W-H1020 1.342287 x 1.5",
+     "qty": 2.013431,
+     "kind": "OPENING",
+     "basis": "OWNER_PROJECT_PARAMETER"
+    },
+    {
+     "key": "W-H1026",
+     "label": "W-H1026 1.697515 x 1.5",
+     "qty": 2.546273,
+     "kind": "OPENING",
+     "basis": "OWNER_PROJECT_PARAMETER"
+    },
+    {
+     "key": "W-H1319",
+     "label": "W-H1319 1.205359 x 1.5",
+     "qty": 1.808039,
+     "kind": "OPENING",
+     "basis": "OWNER_PROJECT_PARAMETER"
+    },
+    {
+     "key": "W-H1325",
+     "label": "W-H1325 2.5 x 1.5",
+     "qty": 3.75,
+     "kind": "OPENING",
+     "basis": "OWNER_PROJECT_PARAMETER"
+    },
+    {
+     "key": "W-H1342",
+     "label": "W-H1342 1.610992 x 1.5",
+     "qty": 2.416488,
+     "kind": "OPENING",
+     "basis": "OWNER_PROJECT_PARAMETER"
+    },
+    {
+     "key": "W-H1518",
+     "label": "W-H1518 2.346444 x 1.5",
+     "qty": 3.519666,
+     "kind": "OPENING",
+     "basis": "OWNER_PROJECT_PARAMETER"
+    }
+   ],
+   "breakdown_additive": true,
+   "legacy_row_ids": [],
+   "measure_pair": "WIN-01",
+   "source": "opening register (wall-face V2 opening records + door closures)",
+   "rules": [
+    "OPENING_REGISTER_V1"
+   ],
+   "blockers": [
+    "SOURCE_ANCHOR: DWG <-> DXF identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction"
+   ],
+   "evidence": "OPENING_REGISTER",
+   "notes": [
+    "heights are owner project parameters (no height is drawn)"
+   ],
+   "approved_for_boq": false,
+   "additive_in_summary": true
+  }
+ ],
+ "pricing": null,
+ "calculates": false,
+ "summary_rule": "ONE additive summary line per canonical item; legacy ids are attributes, never lines; a measure pair is two lines of ONE physical item - price one basis",
+ "digest": "76f30a38d5b085ec7d4f3dcaf7e9c7ec4814b4e9f7ec16f6637392a94455c766",
+ "validation": {
+  "state": "PASS",
+  "errors": [],
+  "items": 21,
+  "aliases": 34,
+  "measure_pairs": [
+   [
+    "MRB-01",
+    "MRB-02"
+   ],
+   [
+    "SGD-01",
+    "SGD-02"
+   ],
+   [
+    "WIN-01",
+    "WIN-02"
+   ]
+  ],
+  "digest_ok": true
+ }
+}
