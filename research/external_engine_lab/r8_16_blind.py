@@ -39,7 +39,8 @@ def closure_record(res, inp):
                  "caps": [handle(x) for x in st.get("hits", [])]} for occ, st in sorted(res["openings"].items())}
     tcs = [{"closure_id": c["closure_id"], "release": c["release"], "geometry": [round(v, 4) for v in c["geometry"]],
             "evidence": sorted(map(handle, c["source_evidence_ids"])),
-            "separated_m2": [p["area_m2"] for p in (c.get("safety") or {}).get("separated_pieces", [])]}
+            "separated_m2": [round(p["area"] * res["_unit2"], 4)
+                             for p in (c.get("safety") or {}).get("separated_pieces", [])]}
            for c in res["topology_closures"]["closures"]]
     labelled = sorted((sorted({v for vs in R14.LAB.stamps(s).values() for v in vs}), round(s["area_m2"], 4))
                       for s in res["sites"] if R14.LAB.stamps(s))

@@ -37,7 +37,7 @@
   "engine/source/wall_contact_path.py": "106ad7abef5ff6780cee00c470af0f97b17c154f6720d76ac9bc5059c841cb70",
   "engine/source/run_manifest.py": "75e8485af6bc6740e761d423aea7b57078133c433bc9c5de562e6e737753b170"
  },
- "blind_script_sha256": "5697308451b0235a33e9aec3283bdf067e1ecbf43f9fd398466457d29140343d",
+ "blind_script_sha256": "90b61765f41aae74a38f1a91c4f29c5436a6dfad6ce6953252b5cd33ca9ab2d8",
  "synthetic_test_sha256": {
   "tests/r8_16/test_r8_16_offset_closure.py": "06964c2c9103e4ab691a154309794b1f4b42480cc58f8dfa3c683b9ce2ab8289",
   "tests/r8_16/test_r8_16_skirting_v3.py": "9d0dd2dd17384d90b552b008eddc7a9cca91473a1be17e2fffff6bbdd5975cbc"
@@ -136,5 +136,13 @@
   "THEN rows, hidden profile, registers"
  ],
  "rule": "no post-result edit inside DOOR_OPENING_CLOSURE_POLICY_V2, WALL_CONTACT_PATH_POLICY_V3 or QORTUBA-NEW-SKIRTING-METHOD@v2; a defect found after the blind run is the next round",
- "synthetic_test_count": 29
+ "synthetic_test_count": 29,
+ "amendments": [
+  {
+   "what": "blind script record formatting: the topology-closure safety pieces carry 'area' (native), not 'area_m2' - the first blind attempt raised KeyError BEFORE writing any output",
+   "policy_or_method_changed": false,
+   "qortuba_values_seen": "NONE (no file written, no total printed)",
+   "previous_blind_script_sha256": "5697308451b0235a33e9aec3283bdf067e1ecbf43f9fd398466457d29140343d"
+  }
+ ]
 }
