@@ -40,3 +40,17 @@ def test_no_qortuba_v4_output_before_the_freeze_and_the_method_has_authority():
     m = FZ["qortuba_method"]
     assert m["ref"] == "QORTUBA-NEW-SKIRTING-METHOD@v3" and m["authority"]["path_policy"] == WC.POLICY_ID_V4
     assert m["authority"]["sliding_glazed_door"].startswith("QORTUBA-NEW-HALL-PAINTRY-SLIDING-GLASS-DOOR")
+
+
+WFZ = json.loads((ROOT / "tests/r8_17/registers/R8_17_WALL_FACE_FREEZE.json").read_text())
+
+
+def test_the_wall_face_freeze_is_live_and_its_tests_and_script_unchanged():
+    from engine.source import wall_faces as WF
+    assert (WF.POLICY_ID, WF.policy_record()["digest"]) == tuple(WFZ["wall_face_policy"].values())
+    for f, h in WFZ["synthetic_test_sha256"].items():
+        assert sha(f) == h, f"frozen test edited after the wall-face freeze: {f}"
+    assert sha("research/external_engine_lab/r8_17_wall_blind.py") == WFZ["blind_script_sha256"]
+    m = WFZ["qortuba_wall_face_method"]
+    assert m["trade_rules"]["DRY_INTERNAL_ROOM"]["PLASTER"]["height_m"] is None             # no silent 3.00 transfer
+    assert m["trade_rules"]["WET_SERVICE_ROOM"]["WALL_TILE"]["height_m"] == 3.2
