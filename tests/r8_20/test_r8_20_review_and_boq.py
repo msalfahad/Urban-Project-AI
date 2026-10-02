@@ -8,7 +8,8 @@ import datetime
 
 from openpyxl import load_workbook
 
-from engine.source import boq_evidence as BE, boq_report as BR, boq_xlsx as BX, closure_release as CR
+from engine import boq_xlsx as BX
+from engine.source import boq_evidence as BE, boq_report as BR, closure_release as CR
 from engine.source import closure_review as RV, owner_facts as OF, source_anchor as SA
 
 REC = {"closure_id": "TC-1", "geometry": [0.0, 0.0, 0.0, 20.0], "source_evidence_ids": ["A|H1||SEGMENT|0"]}

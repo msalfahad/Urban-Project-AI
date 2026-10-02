@@ -17,7 +17,7 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(Path(__file__).parent))
 from r8_6a_package import junit, tbl                                            # noqa: E402
-from engine.source import boq_xlsx as BX                                        # noqa: E402
+from engine import boq_xlsx as BX                                               # noqa: E402
 
 REG = ROOT / "tests/r8_20/registers"
 NAME = "URBAN_QTO_R8_20_HUMAN_REVIEW_BOQ_EXPORT_SOURCE_ANCHOR"

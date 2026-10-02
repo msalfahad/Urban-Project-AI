@@ -879,7 +879,7 @@ The recommendation was committed first (a68dd2b). This round makes **no quantity
 
 **BOQ:**
 - BOQ_EVIDENCE_MAPPING_V1 (`engine/source/boq_evidence.py`): quantity-affecting release blockers, and unknown blockers (fail closed), keep a row out of COMPUTED_SHADOW_COMPLETE. Q-03P and Q-12 (OBJECT_FOOTPRINT_IMPLICIT) are now AUTHORISED_SUBTOTAL. This was the silent-error path found this round.
-- BOQ_XLSX_EXPORT_V1 (`engine/source/boq_xlsx.py`): a view over the report rows.
+- BOQ_XLSX_EXPORT_V1 (`engine/boq_xlsx.py`, outside engine/source because it uses openpyxl and engine/source is stdlib-only): a view over the report rows.
   - Sheets: READ_ME / SUMMARY (TOTAL lines) / ROOM_BREAKDOWN (non-additive) / TRACEABILITY / BLOCKERS / RUN_INFO.
   - No formulas, no sums, no prices, a SHADOW banner and the status on every line.
   - A readback validator checks every cell.

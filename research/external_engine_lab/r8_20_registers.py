@@ -12,7 +12,8 @@ from pathlib import Path
 
 import r8_19_registers as R19G
 import r8_20_qortuba as Q
-from engine.source import boq_evidence as BE, boq_report as BR, boq_xlsx as BX, closure_release as CR
+from engine import boq_xlsx as BX
+from engine.source import boq_evidence as BE, boq_report as BR, closure_release as CR
 from engine.source import closure_review as RV, owner_facts as OF, source_anchor as SA
 
 ROOT = Path(__file__).resolve().parents[2]
