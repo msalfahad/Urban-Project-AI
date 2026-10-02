@@ -50,8 +50,9 @@ def evidence(res, inp):
     others = [(p.identity.key, p.layer, tuple(p.geometry[:4])) for p in segs if p.identity.key not in wk]
     ends = [{"band_id": b["band_id"], "state": b["state"], "kind": e["kind"], "opening": e.get("opening") or [],
              "segment": tuple(e["face_a_end"]) + tuple(e["face_b_end"])}
-            for b in res["wall_bands"]["bands"] for e in b["ends"]]
-    return walls, ends, others
+            for b in res["wall_bands"]["bands"] for e in b["ends"]
+            if e.get("face_a_end") is not None and e.get("face_b_end") is not None]   # amendment 1: an end with no
+    return walls, ends, others                                                          # face points has no segment
 
 
 def object_segments(res, inp, states, u):

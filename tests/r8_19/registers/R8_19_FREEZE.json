@@ -58,7 +58,7 @@
   "data/registry/URBAN_OWNER_METHOD_RULES.json": "3ea3d0ff7c545a7c1d9306ee0c352b3c3dacc2d8c288cd514d6060dbc22d3159",
   "data/registry/OWNER_PHYSICAL_FACTS.json": "a49923884fbcda8ee85b5f76cb849a62d58b100e328495d66515d10100d03cbf"
  },
- "blind_script_sha256": "918c8cdc4f1be624dd4a7c12dbb39f1f94246b8d523ec8b34d602bff82a848ce",
+ "blind_script_sha256": "d64c75e47735067595a6879425bab6f41dea1ed0c684eb5c5176d713ceb4ca5f",
  "synthetic_test_sha256": {
   "tests/r8_19/test_r8_19_exposed_finish.py": "131a8334bf803585670fe7051c021a73618352da231afffa81b768db58d804df",
   "tests/r8_19/test_r8_19_reveal_physicality.py": "a53c3830c8f888807ed558651d2c96394e1454c9889a8bcb04bedbfdca2a6605",
@@ -182,7 +182,13 @@
   "THEN rebuild / registers / BOQ"
  ],
  "rule": "no engine, test, rule, fact or blind-script change after this record without a disclosed amendment",
- "amendments": [],
+ "amendments": [
+  {
+   "n": 1,
+   "what": "blind script: the band-end evidence pool skips wall-band ends that carry no face end points (no segment, so they can never cover a reveal face) - the first attempt crashed in evidence() (KeyError face_a_end) BEFORE any output was written; no policy, method, engine or test change, no value seen",
+   "blind_script_sha256_before": "918c8cdc4f1be624dd4a7c12dbb39f1f94246b8d523ec8b34d602bff82a848ce"
+  }
+ ],
  "synthetic_tests": [
   "test_r8_19_exposed_finish::test_c1_dry_room_exposed_column_gets_plaster_and_paint",
   "test_r8_19_exposed_finish::test_c2_dry_column_skirting_is_the_existing_path_never_a_duplicate",
