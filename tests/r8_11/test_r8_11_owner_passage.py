@@ -58,7 +58,8 @@ def test_the_fact_never_transfers_to_another_revision_or_region(OF):
 
 def test_the_committed_fact_carries_no_quantity_and_defers_the_role_claim():
     raw = json.loads((ROOT / "data/registry/OWNER_PHYSICAL_FACTS.json").read_text())
-    (f,) = raw["facts"]
+    # R8.15 added three facts to the registry; this test is about the R8.11 Hall / Lobby fact only
+    (f,) = [x for x in raw["facts"] if x["fact_id"] == "QORTUBA-NEW-HALL-LOBBY-OPEN-PASSAGE-OWNER-001"]
     assert {p["handle"] for p in f["parts"]} == {"470", "471", "477", "2430", "2431", "2296", "2297"}
     assert all(len(p["fingerprint"]) == 64 for p in f["parts"])
     assert not {"value", "quantity", "area", "area_m2", "width_mm"} & set(f)
