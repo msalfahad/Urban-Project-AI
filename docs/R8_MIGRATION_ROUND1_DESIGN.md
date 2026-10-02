@@ -687,3 +687,49 @@ reveal lies inside the HALL site. It is carried as DOOR_REVEAL_INSIDE_ROOM_SITE 
   post-result edit.
 
 **Gates:** MIGRATION_PLANNING_READY = YES, MIGRATION_EXECUTION_READY = NO, PRODUCTION_MIGRATION = NO.
+
+## 18. R8.17 addendum — sliding glass door, skirting path V4 (V3-O1), hidden profile, wall-face surface engine
+
+**Order (anti-calibration):**
+1. recommendation (`r8_17_recommendation.json`);
+2. V4 + opening-class facts + owner facts + 20 synthetic tests;
+3. V4 freeze (`R8_17_V4_FREEZE`);
+4. blind V4 skirting run (`SKIRTING_V4_BLIND_RESULT`);
+5. wall-face engine + 14 synthetic tests;
+6. wall-face freeze (`R8_17_WALL_FACE_FREEZE`, one pre-output crash amendment);
+7. blind wall-face run (`WALL_FACE_BLIND_RESULT`);
+8. rebuild and registers.
+
+**Owner fact:** QORTUBA-NEW-HALL-PAINTRY-SLIDING-GLASS-DOOR-OWNER-001@v1.
+- Kind OPENING_CONSTRUCTION, bound to the glazing lines H533 / H542.
+- The opening is a SLIDING_GLAZED_DOOR reaching the floor.
+- It has its own versioned domain (`engine/source/opening_facts.py`, OPENING_PHYSICAL_CLASS_POLICY_V1). OWNER_PHYSICAL_FACT_POLICY_V2 is unchanged.
+- The window sill fact v2 restates the same owner statement, with its trade scope widened to wall-face surfaces. It is used for window position only.
+
+**WALL_CONTACT_PATH_POLICY_V4:**
+- Only a PHYSICAL jamb record (a strip reveal side, or an ESTABLISHED band end) may consume path length.
+- A non-physical opening side is an annotation. A topology-closure source is never a jamb.
+- Every edge length is conserved per site.
+- Physical class is resolved before any sill fact, so a door-class glazed occurrence is never a window.
+- Result: V3-O1 is fixed generically, and the sliding door is SLIDING_GLAZED_DOOR_TO_FLOOR: zero across, zero jambs.
+
+**WALL_FACE_SURFACE_POLICY_V1** (`engine/source/wall_faces.py`):
+- Physical surfaces from the V4 spans: wall, column and obstacle faces.
+- Openings deducted at full area (US-06), with lintel faces and passage head faces.
+- Opening reveals: source depth first, US-07 fallback only where there is none, never the sill.
+- Span conservation, a two-way area check, and a one-identity-per-surface guard.
+- Trades come from rule data only.
+
+**Rows (SHADOW):**
+- The six area rows are unchanged from R8.16 (Q-14 = 140.637), as is MARBLE_THRESHOLD.
+- **SKIRTING = HIDDEN_PROFILE = 94.13682 lm** (separate rows), nothing withheld, no open path defect.
+- **WALL_TILE / PLASTER / PAINT are not published:**
+  - the dry-room wall height for the new revision is not established (QP-03 / QP-04 are old-revision rules);
+  - the wet-room reveal finish is not stated;
+  - WF-O1 (below).
+
+**New silent errors:**
+- **WF-O1** (frozen engine): the second form of the two-way area check omits the wall plane across a window, so every room with a window fails closed. The primary US-06 form was verified independently.
+- **WF-L1 / WF-L2** (blind-script wiring): wrong passage-head constants, and a door's own strip site counted as a room. Both are corrected in the rebuild and disclosed.
+
+**Gates:** MIGRATION_PLANNING_READY = YES, MIGRATION_EXECUTION_READY = NO, PRODUCTION_MIGRATION = NO.

@@ -148,5 +148,12 @@ bridges it to the legacy QS01 method. Owner decisions are scoped claims in `data
 | `r8_16_qortuba.py` | (built by `r8_16_registers.py`) | after the blind run: the R8.15 assembly on the closure-V2 topology, the V3 skirting row (must equal the blind record), V3-O1, I1471 audit, door reveals |
 | `r8_16_registers.py` | `tests/r8_16/registers/*.json` | every R8.16 register (answers 1-36) |
 | `r8_16_package.py` | `data/reports/URBAN_QTO_R8_16_OPENINGS_SKIRTING_CLOSURE/` + zip | review package (24 md + 22 json + 2 supporting) |
+| `r8_17_recommendation.json` | - | the R8.17 recommendation, written before any R8.17 code |
+| `r8_17_owner_facts.py` | `data/registry/OWNER_PHYSICAL_FACTS.json` + `data/registry/OWNER_METHOD_FACTS.json` | the HALL / PAINTRY sliding glass door (H533 / H542) and the window sill fact v2 |
+| `r8_17_blind.py` | `tests/r8_17/registers/SKIRTING_V4_BLIND_RESULT.json` | the BLIND run of the frozen WALL_CONTACT_PATH_POLICY_V4 + QORTUBA-NEW-SKIRTING-METHOD@v3 |
+| `r8_17_wall_blind.py` | `tests/r8_17/registers/WALL_FACE_BLIND_RESULT.json` | the BLIND run of the frozen WALL_FACE_SURFACE_POLICY_V1 + QORTUBA-NEW-WALL-FACE-METHOD@v1 |
+| `r8_17_qortuba.py` | (built by `r8_17_registers.py`) | after the blind runs: the R8.16 assembly, the V4 skirting row (must equal the blind record), the wall-face rebuild (WF-L1 / WF-L2 wiring corrected, disclosed), WF-O1 check |
+| `r8_17_registers.py` | `tests/r8_17/registers/*.json` | every R8.17 register (answers 1-42) |
+| `r8_17_package.py` | `data/reports/URBAN_QTO_R8_17_SKIRTING_V4_WALL_FACES/` + zip | review package (24 md + 23 json + 3 supporting) |
 
 `<work>` must hold `old_k2.pkl` (K2 on LibreDWG's DXF of the old DWG) and `new_k2.pkl` (K2 on the hash-addressed new DXF).
