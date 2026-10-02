@@ -794,3 +794,64 @@ Protocol order: recommendation (0107408) → engines, facts, rules, synthetic te
 **Second-project regression:** NOT_RUN. **Source anchor:** NOT_ESTABLISHED.
 
 **Gates:** MIGRATION_PLANNING_READY = YES, MIGRATION_EXECUTION_READY = NO, PRODUCTION_MIGRATION = NO.
+
+## 20. R8.19 addendum — column / duct finish authority, complete wall-finish rows, reveal physicality, BOQ report layer
+
+Protocol order:
+1. recommendation (6910087)
+2. engines, rules, facts, 29 synthetic tests and blind script (6441976)
+3. freeze (dc9fd6d)
+4. amendment 1 (c622f01): a pre-output crash, no value seen
+5. blind Qortuba run (f1e8e04)
+6. rebuild, registers and BOQ
+
+**Owner rules (Urban, rule store):**
+- `URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1`: an exposed column face follows the room.
+  - Dry rooms: skirting on the existing path, plaster, paint.
+  - Wet / full-tile rooms: wall tile.
+- `URBAN-EXPOSED-INTERIOR-DUCT-FINISH-METHOD@v1`: exposed duct faces take the dry treatment. Owner physical authority is required.
+- Qortuba fact `QORTUBA-NEW-BED-ROOM-DUCT-FINISH-OWNER-001@v1` uses the existing FINISH_SCOPE kind, so there is no fact-policy bump.
+
+**EXPOSED_OBJECT_FINISH_POLICY_V1** (`engine/source/exposed_finish.py`):
+- Exposure means a one-sided certified site-boundary span attributed to the object's own part segment.
+- Each segment records its exposed length per site and its hidden length. Hidden, embedded and internal faces get nothing.
+- An obstacle without owner physical authority gets no finish. A rule never covers a room class it does not list.
+- No skirting is created here.
+- On Qortuba: 10 columns (22 hidden segments, 2 partially exposed) and the H2060 duct (all 4 faces exposed). The H2061 lining is fully hidden.
+
+**REVEAL_PHYSICALITY_POLICY_V1** (`engine/source/reveal_physicality.py`):
+- Physicality is decided before finish.
+- PHYSICAL_REVEAL_ESTABLISHED requires one of:
+  - an admitted wall / structural part covering the reveal face;
+  - an ESTABLISHED wall band whose OPENING_JAMB end belongs to the same opening.
+- Fixture, glazing and frame lines never count.
+- On Qortuba, the PAINTRY-side south jamb of the HALL / PAINTRY sliding door is established by band WB-fa9e752f77ae497d: both masonry faces, H535 and H543, end on the jamb line. H480 (FIXTURE) is recorded as rejected evidence.
+
+**BOQ_REPORT_LAYER_V1** (`engine/source/boq_report.py`):
+- Presentation only: it copies quantities from evidence rows, derives statuses and keeps a trace on every row.
+- `validate()` re-derives every row and refuses any edit.
+- Statuses: COMPUTED_SHADOW_COMPLETE, AUTHORISED_SUBTOTAL, BLOCKED, RELEASED (RELEASED only with a release record).
+- No pricing.
+
+**Rows** (SHADOW, rebuilt from surface records):
+
+| Row | Value | State |
+|---|---|---|
+| DRY_WALL_PLASTER | 307.361518 m² | COMPUTED_SHADOW_COMPLETE |
+| DRY_WALL_PAINT | 307.361518 m² | COMPUTED_SHADOW_COMPLETE |
+| WET_SERVICE_WALL_TILE | 127.693512 m² | COMPUTED_SHADOW_COMPLETE |
+| WET_WALL_TILE_PREP | 127.693512 m² | COMPUTED_SHADOW_COMPLETE |
+| WET_SERVICE_REVEAL_PLASTER | 1.510248 m² | COMPUTED_SHADOW_COMPLETE |
+
+- PAINT equals DRY_WALL_PLASTER by surface-set identity.
+- Every rebuilt wall plane equals the R8.18 V2 Method B net.
+- Unchanged: skirting = hidden profile = 94.13682 lm, waterproofing, Q-03 to Q-14, marble.
+
+**Disclosed:**
+- **WF3-L1** (blind script): every V2 surface record was admitted as wall plane, including the separate COLUMN_FACE / OBSTACLE_FACE records, so exposed object faces were counted twice (+26.6175 m² dry, +14.88 m² wet). The rebuild admits plane classes only.
+- **WF3-L2** (blind guard): the guard used id keys and missed WF3-L1. The rebuild keys surfaces by physical identity and catches every copy.
+- **Amendment 1:** band ends without face points crashed the first attempt before any output was written.
+
+**Closures:** review packets are prepared for I1471, H2430 and H2431, none self-approved. Cross-route agreement is not achievable: REV_NEW has one input route. **Source anchor:** NOT_ESTABLISHED. **Second project:** NOT_RUN.
+
+**Gates:** MIGRATION_PLANNING_READY = YES, MIGRATION_EXECUTION_READY = NO, PRODUCTION_MIGRATION = NO.

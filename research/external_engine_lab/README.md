@@ -161,5 +161,12 @@ bridges it to the legacy QS01 method. Owner decisions are scoped claims in `data
 | `r8_18_qortuba.py` | (built by `r8_18_registers.py`) | after the blind run: the R8.17 assembly, the frozen run recomputed (must equal the blind record), the rebuild with the disclosed WF2-L1 correction |
 | `r8_18_registers.py` | `tests/r8_18/registers/*.json` | every R8.18 register (answers 1-43) |
 | `r8_18_package.py` | `data/reports/URBAN_QTO_R8_18_WALL_FACE_V2_FINISHES_WATERPROOFING/` + zip | review package (25 md + 28 json) |
+| `r8_19_recommendation.json` | - | the R8.19 recommendation, written before any R8.19 code |
+| `r8_19_owner_facts.py` | `data/registry/URBAN_OWNER_METHOD_RULES.json` + `data/registry/OWNER_METHOD_FACTS.json` | the exposed column / duct Urban rules and the Qortuba BED.ROOM duct finish fact |
+| `r8_19_freeze.py` | `tests/r8_19/registers/R8_19_FREEZE.json` | the freeze record (policies, hashes, QORTUBA-NEW-WALL-FACE-METHOD@v3) before the blind run |
+| `r8_19_blind.py` | `tests/r8_19/registers/R8_19_BLIND_RESULT.json` | the BLIND run of the frozen exposed-object finish + reveal physicality policies over the R8.18 surface model |
+| `r8_19_qortuba.py` | (built by `r8_19_registers.py`) | after the blind run: the frozen run recomputed (must equal the blind record), the rebuild with WF3-L1 / WF3-L2 disclosed, plane and skirting checks |
+| `r8_19_registers.py` | `tests/r8_19/registers/*.json` | every R8.19 register (answers 1-42), BOQ shadow report, closure review packets |
+| `r8_19_package.py` | `data/reports/URBAN_QTO_R8_19_COLUMN_DUCT_FINISH_BOQ_RELEASE/` + zip | review package (25 md + 25 json + 2 supporting) |
 
 `<work>` must hold `old_k2.pkl` (K2 on LibreDWG's DXF of the old DWG) and `new_k2.pkl` (K2 on the hash-addressed new DXF).
