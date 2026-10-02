@@ -12,8 +12,8 @@ from pathlib import Path
 
 import rc1_qortuba as Q
 from engine import boq_rc1_xlsx as BX
-from engine.source import boq_canonical as BC, footprint_authority as FA, opening_register as OR
-from engine.source import room_matrix as RM
+from engine.source import boq_canonical as BC, footprint_authority as FA, freeze_schema as FS
+from engine.source import opening_register as OR, room_matrix as RM, topology_digest as TD
 
 ROOT = Path(__file__).resolve().parents[2]
 REG20 = ROOT / "tests/r8_20/registers"
@@ -24,6 +24,27 @@ GATES = {"QORTUBA_RC1_REFERENCE_READY": None, "FULL_VILLA_BLIND_TEST_READY": "YE
          "PRODUCTION_MIGRATION": "NO"}
 DXF = "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315"
 DWG = "e4babbc2ded1"
+FREEZE_SCHEMA = {
+    "SCHEMA": {"class": "TEXT"}, "name": {"class": "TEXT"},
+    "frozen": {"class": "BOOLEAN", "why": "the freeze decision itself (all RC1 gates pass)"},
+    "release_status": {"class": "TEXT"},
+    "contractual_approval": {"class": "BOOLEAN", "why": "RC1 is a reference / shadow freeze, never a contract"},
+    "canonical_dxf_sha256": {"class": "SHA256"}, "dwg_sha256": {"class": "SHA256"},
+    "dwg_dxf_anchor": {"class": "TEXT"}, "selected_plan_scope": {"class": "TEXT"},
+    "code_commit": {"class": "GIT_COMMIT"}, "run_id": {"class": "SHA256"},
+    "source_canonical_input_digest": {"class": "SHA256"}, "topology_input_digest": {"class": "SHA256"},
+    "topology_result_digest": {"class": "SHA256"}, "topology_policy_digest": {"class": "SHA256"},
+    "room_register_digest": {"class": "SHA256"}, "owner_fact_and_rule_files_sha256": {"class": "SHA256_MAP"},
+    "engine_policies": {"class": "SHA256_MAP"}, "inherited_freezes": {"class": "GIT_COMMIT_MAP"},
+    "row_digests": {"class": "SHA256_MAP"}, "opening_digest": {"class": "SHA256"},
+    "surface_digest": {"class": "SHA256"}, "trade_item_digests": {"class": "SHA256_MAP"},
+    "canonical_boq_digest": {"class": "SHA256"}, "xlsx_content_digest": {"class": "SHA256"},
+    "xlsx_file_sha256": {"class": "SHA256"}, "open_items": {"class": "LIST"},
+    "open_owner_question": {"class": "OPTIONAL", "why": "text of an open owner question, or NONE when nothing is "
+                                                        "open"},
+    "test_results": {"class": "OPTIONAL", "why": "filled by the package from the ONE full suite run on the final "
+                                                 "commit (the suite runs after the registers are committed)"},
+    "after_freeze": {"class": "TEXT"}, "freeze_schema": {"class": "TEXT"}}
 
 
 def jl(p):
@@ -411,14 +432,10 @@ def registers(ctx):
         "resolved": sorted(k for k, v in fp.items() if v["state"] == FA.RESOLVED),
         "unresolved": sorted(k for k, v in fp.items() if v["state"] != FA.RESOLVED),
         "facts_searched": rec["9_existing_fact"], "why_not_paintry": rec["10_why_not_paintry"],
-        "owner_question": rec["10b_exact_question"], "assumed": "NOTHING (no zero, no full-room assumption)",
-        "effect_bounds_m2": {"if_included": it["FLR-03"]["qty"],
-                             "if_excluded_candidates": {f"minus face {a}": round(it["FLR-03"]["qty"] - a, 6)
-                                                        for a in sorted(next(iter(
-                                                            v["outline_faces"]["faces_m2"] for v in fp.values()
-                                                            if v["state"] != FA.RESOLVED)))[:-1]},
-                             "largest_face": "the largest face is the open floor in front of the counter "
-                                             "(it holds the sliding-door side) - not a counter candidate"},
+        "owner_question": rec["10b_exact_question"] if any(v["state"] != FA.RESOLVED for v in fp.values())
+        else "NONE (answered: floor finish laid before the cabinets)",
+        "assumed": "NOTHING (no zero, no full-room assumption)",
+        "policies": Q.footprint_policies(), "identity_facts": Q.identity_facts(ctx["inp_new"]),
         "waterproofing": "not affected (US-14: membrane over the whole measured room floor)"}
     regs["BOQ_XLSX_STATUS"] = {"SCHEMA": "URBAN_QORTUBA_RC1_BOQ_XLSX_STATUS_V1", "policy": BX.policy_record(),
                                "file": XLSX_NAME, "sheets": list(sheets), "roles": {k: v["role"] for k, v in sheets.items()},
@@ -523,26 +540,76 @@ def registers(ctx):
     regs["QA_RECONCILIATION"] = {"SCHEMA": "URBAN_QORTUBA_RC1_QA_RECONCILIATION_V1", **recon}
     facts = {f: sha(ROOT / "data/registry" / f) for f in Q.FACT_FILES}
     surf = dg({sid: v["faces"] for sid, v in ctx["r8_18"]["per_site"].items()})
+    open_q = rec["10b_exact_question"] if regs["OBJECT_FOOTPRINT_REGISTER"]["unresolved"] else "NONE"
+    tr = r["topology_result"]
+    man = ctx["new"]["run_manifest"]
     regs["QORTUBA_RC1_FREEZE"] = {
-        "SCHEMA": "URBAN_QORTUBA_RC1_FREEZE_V1", "name": "URBAN_ARCHITECTURAL_QTO_QORTUBA_RC1",
+        "SCHEMA": "URBAN_QORTUBA_RC1_FREEZE_V2", "name": "URBAN_ARCHITECTURAL_QTO_QORTUBA_RC1",
         "frozen": rc1_ready, "release_status": "SHADOW / RC1_REFERENCE", "contractual_approval": False,
-        "canonical_dxf_sha256": DXF, "dwg_known_sha256_prefix": DWG, "dwg_dxf_anchor": "NOT_ESTABLISHED",
-        "selected_plan_scope": model["run"]["floor"], "run_id": model["run"]["run_id"],
+        "canonical_dxf_sha256": DXF, "dwg_sha256": ctx["source_anchor"]["dwg_sha256"],
+        "dwg_dxf_anchor": "NOT_ESTABLISHED", "selected_plan_scope": model["run"]["floor"],
+        "code_commit": ctx.get("code_commit"), "run_id": model["run"]["run_id"],
+        "source_canonical_input_digest": man["canonical_input_digest"],
+        "topology_input_digest": man["RUN_INPUT_DIGEST"], "topology_result_digest": tr["sha256"],
+        "topology_policy_digest": ctx["new"]["policy_digest"],
         "room_register_digest": dg(rooms), "owner_fact_and_rule_files_sha256": facts,
         "engine_policies": {p["policy_id"]: p["digest"] for p in (BC.policy_record(), RM.policy_record(),
                                                                   OR.policy_record(), FA.policy_record(),
                                                                   BX.policy_record())},
         "inherited_freezes": {"R8.19": jl(ROOT / "tests/r8_19/registers/R8_19_FREEZE.json").get("frozen_commit"),
                               "R8.18": jl(ROOT / "tests/r8_18/registers/R8_18_FREEZE.json").get("frozen_commit")},
-        "row_digests": {k: v for k, v in ctx["regression_20"]["digests"].items()},
-        "topology_digest": ctx["reproduces"].get("topology_digest"), "opening_digest": r["opening_validation"]["digest"],
+        "row_digests": {rid: {"TOPOLOGY_RUN_INPUT_DIGEST": d["TOPOLOGY_RUN_INPUT_DIGEST"],
+                              "ROW_AUTHORITY_DIGEST": d["ROW_AUTHORITY_DIGEST"]["digest"],
+                              "RELEASE_INPUT_DIGEST": d["RELEASE_INPUT_DIGEST"]["digest"]}
+                        for rid, d in sorted(ctx["dig"].items())},
+        "opening_digest": r["opening_validation"]["digest"],
         "surface_digest": surf, "trade_item_digests": {i["canonical_item_id"]: dg(i) for i in model["items"]},
         "canonical_boq_digest": model["digest"], "xlsx_content_digest": w["content_digest"],
-        "xlsx_file_sha256": w["file_sha256"], "open_items": open_items,
-        "open_owner_question": rec["10b_exact_question"],
-        "test_results": "TEST_RESULTS.json of the package (one full suite from the final commit)",
+        "xlsx_file_sha256": w["file_sha256"], "open_items": open_items, "open_owner_question": open_q,
+        "test_results": "PACKAGE_FILLED: TEST_RESULTS.json of the package (one full suite from the final commit)",
         "after_freeze": "NO MORE QORTUBA-SPECIFIC TUNING: a generic fix found on an unseen villa is versioned, "
-                        "implemented generically and Qortuba is rerun as regression; never tuned to restore a number"}
+                        "implemented generically and Qortuba is rerun as regression; never tuned to restore a number",
+        "freeze_schema": FS.POLICY_ID}
+    fz = regs["QORTUBA_RC1_FREEZE"]
+    import subprocess
+    old = json.loads(subprocess.run(["git", "show", "76a9771:tests/rc1/registers/QORTUBA_RC1_FREEZE.json"],
+                                    capture_output=True, text=True, cwd=ROOT, check=True).stdout)
+    regs["FREEZE_DIGEST_AUDIT"] = {
+        "SCHEMA": "URBAN_QORTUBA_RC1_FREEZE_DIGEST_AUDIT_V1", "schema": FREEZE_SCHEMA,
+        "validation": FS.validate(fz, FREEZE_SCHEMA),
+        "rc1_76a9771_findings": [
+            {"field": "topology_digest", "was": "false", "class": "INVALID (boolean placeholder)",
+             "cause": "rc1_registers copied ctx['reproduces']['topology_digest'] - an R8.13-era reproduction FLAG "
+                      "(lab run-input digest == the R8.13 V4 blind digest), false since WALL_BAND_POLICY_V5 changed the "
+                      "run input; wrong field and wrong type",
+             "now": {"topology_input_digest": fz["topology_input_digest"],
+                     "topology_result_digest": fz["topology_result_digest"]}},
+            {"field": "row_digests", "was": "{'TOPOLOGY_DIGEST': 'SAME', ...}", "class": "INVALID (comparison flags)",
+             "cause": "the R8.20 regression's SAME / CHANGED comparison was stored instead of the digests",
+             "now": "the three layer digests per row (TOPOLOGY_RUN_INPUT / ROW_AUTHORITY / RELEASE_INPUT)"},
+            {"field": "dwg_known_sha256_prefix", "was": DWG, "class": "INCOMPLETE (12-character prefix)",
+             "cause": "a display prefix reused as the identity", "now": {"dwg_sha256": fz["dwg_sha256"]}},
+            {"field": "code_commit", "was": "missing", "class": "MISSING", "now": fz["code_commit"]},
+            {"field": "test_results", "was": "a placeholder string", "class": "UNDECLARED OPTIONAL",
+             "now": "declared OPTIONAL (PACKAGE_FILLED) in the schema"}],
+        "old_values_source": "git 76a9771:tests/rc1/registers/QORTUBA_RC1_FREEZE.json",
+        "old_values": {k: old.get(k) for k in ("topology_digest", "row_digests", "dwg_known_sha256_prefix")},
+        "intentional_booleans": {k: v["why"] for k, v in FREEZE_SCHEMA.items() if v["class"] == "BOOLEAN"},
+        "optional": {k: v["why"] for k, v in FREEZE_SCHEMA.items() if v["class"] == "OPTIONAL"}}
+    regs["TOPOLOGY_FREEZE"] = {"SCHEMA": "URBAN_QORTUBA_RC1_TOPOLOGY_FREEZE_V1",
+                               "topology_input_digest": {"value": fz["topology_input_digest"],
+                                                         "layer": "TOPOLOGY_RUN_INPUT_DIGEST (engine/source/"
+                                                                  "run_manifest.py)",
+                                                         "covers": "canonical source input digest + applied claims + "
+                                                                   "policies + kernel versions: everything that can "
+                                                                   "change TS01 topology"},
+                               "topology_result_digest": {"value": tr["sha256"], "policy": TD.POLICY_ID,
+                                                          "counts": tr["counts"], "bytes": tr["bytes"],
+                                                          "covers": tr["covers"], "excludes": tr["excludes"],
+                                                          "module": "engine/source/topology_digest.py"},
+                               "topology_policy_digest": fz["topology_policy_digest"],
+                               "reused_utility": "engine/source/digests.quantise (no new hashing utility; no donor "
+                                                 "code needed)"}
     regs["BLIND_VILLA_INTAKE_SCHEMA"] = {
         "SCHEMA": "URBAN_BLIND_VILLA_INTAKE_SCHEMA_V1",
         "files": [{"role": "ORIGINAL_DWG", "required": True}, {"role": "CONTROLLED_DXF", "required": "preferred",
@@ -575,6 +642,37 @@ def registers(ctx):
                            "PROJECT_FACT_GAP", "DOCUMENT_EVIDENCE_GAP", "REPORTING_DEFECT", "GOLD/MANUAL_QS_QUESTION"],
         "after_result": ["classify every mismatch with exactly one defect class", "fix the GENERIC system (versioned)",
                          "rerun Qortuba RC1 as regression", "never fix the test villa"]}
+    um = next(x for x in jl(ROOT / "data/registry/URBAN_OWNER_METHOD_RULES.json")["rules"]
+              if x["rule_id"] == "URBAN-FLOOR-FINISH-BEFORE-CABINETRY-METHOD")
+    ofact = jl(ROOT / "data/registry/OWNER_OBJECT_FACTS.json")["facts"][0]
+    pk = next(k for k in fp if k.startswith("Q-12|"))
+    pv = fp[pk]
+    regs["URBAN_FLOOR_CABINET_METHOD"] = {
+        "SCHEMA": "URBAN_FLOOR_CABINET_METHOD_REGISTER_V1", "rule": um,
+        "object_identity_fact": ofact,
+        "as_policy": next(x for x in Q.footprint_policies() if x["kind"] == "URBAN_OWNER_METHOD"),
+        "relation_to_qortuba_fact": um["relations"],
+        "qortuba_fact_kept": "QORTUBA-NEW-FLOOR-OBJECT-FOOTPRINT-OWNER-001@v1 remains (project corroboration; loose "
+                             "furniture in dry rooms); both give FOOTPRINT_INCLUDED, so they agree",
+        "geometry_changed": False}
+    regs["PAINTRY_FLOOR_RESOLUTION"] = {
+        "SCHEMA": "URBAN_QORTUBA_PAINTRY_FLOOR_RESOLUTION_V1", "site": pv["site"], "row": "Q-12",
+        "canonical_item": "FLR-03",
+        "trail": [{"step": "fixture geometry observed", "objects": [{k: o[k] for k in ("key", "observed_class",
+                                                                                     "layer", "geometry")
+                                                                      if k in o} for o in pv["objects"]]},
+                  {"step": "cabinet interpretation relevant to the floor finish",
+                   "authority": pv["identity_facts"], "bindings": pv["identity_bindings"],
+                   "object_class": sorted({o["object_class"] for o in pv["objects"]})},
+                  {"step": "owner sequencing method", "authority": pv["policy"],
+                   "rejected": pv["rejected"]},
+                  {"step": "floor finish continues underneath", "treatment": pv["treatment"]},
+                  {"step": "no deduction", "deducted_m2": 0.0, "outline_faces_m2_not_deducted":
+                   pv.get("outline_faces", {}).get("faces_m2")}],
+        "state": pv["state"], "flr03": {k: it["FLR-03"][k] for k in ("qty", "unit", "status", "blockers", "notes")},
+        "resolved_blockers": it["FLR-03"].get("resolved_blockers"),
+        "site_area_m2": next(x["floor_area_m2"] for x in rooms if x["key"] == pv["site"]),
+        "geometry_changed": False, "hardcoded_value": False}
     regs["BOQ_XLSX_MODEL"] = {"SCHEMA": "URBAN_QORTUBA_RC1_BOQ_XLSX_MODEL_V1", "sheets": sheets, "cell_sources": src,
                               "legacy_ids": legacy, "canonical_ids": [i["canonical_item_id"] for i in model["items"]],
                               "created": CREATED.isoformat(), "approved_col": 13}
@@ -593,9 +691,9 @@ def decision(ctx, regs, gates, rec):
                                                  "height_m", "height_basis", "area_m2", "material")} for i in ids]
     fr = regs["QORTUBA_RC1_FREEZE"]
     a = {
-        "1_rc1_complete": "YES - frozen as URBAN_ARCHITECTURAL_QTO_QORTUBA_RC1 (SHADOW / RC1_REFERENCE) with ONE open "
-                          "item: FLR-03 PAINTRY ceramic floor AUTHORISED_SUBTOTAL (counter footprint question)"
-                          if fr["frozen"] else "NO",
+        "1_rc1_complete": ("YES - frozen as URBAN_ARCHITECTURAL_QTO_QORTUBA_RC1 (SHADOW / RC1_REFERENCE)" +
+                           (f", open items {fr['open_items']}" if fr["open_items"] else ", no open quantity item"))
+        if fr["frozen"] else "NO",
         "2_blocked": {"quantity": fr["open_items"], "release": ["SOURCE_ANCHOR (DWG <-> DXF NOT_ESTABLISHED)",
                                                                  "CROSS_ROUTE_AGREEMENT", "SHADOW_ONLY"]},
         "3_total_physical_floor_m2": r["floor_partition"]["physical_floor_m2"],
@@ -629,9 +727,11 @@ def decision(ctx, regs, gates, rec):
         "33_q03_q11": rec["4_q03_q11"], "34_q03p_q12": rec["5_q03p_q12"],
         "35_excel_double_count": "NO in RC1: every legacy id is an attribute of its canonical line (readback refuses "
                                  "an alias line); R8.20 XLSX: YES (see BOQ_ALIAS_REGISTER)",
-        "36_footprint_resolved": "NO for PAINTRY (FLR-03); YES for the dry rooms (fact scope covers them)",
-        "37_authority": regs["OBJECT_FOOTPRINT_REGISTER"]["resolved"],
-        "38_remaining_blocker": rec["10b_exact_question"],
+        "36_footprint_resolved": "YES for every site" if not regs["OBJECT_FOOTPRINT_REGISTER"]["unresolved"] else
+        f"NO for {regs['OBJECT_FOOTPRINT_REGISTER']['unresolved']}",
+        "37_authority": {k: {"policies": v["policy"], "identity": v["identity_facts"]}
+                         for k, v in r["footprint"].items()},
+        "38_remaining_blocker": regs["OBJECT_FOOTPRINT_REGISTER"]["owner_question"],
         "39_every_room_reconciles": r["matrix"]["state"] == "PASS" and ctx["r8_19"]["all_sites_reconcile"],
         "40_trade_totals_equal_breakdowns": r["model_validation"]["state"] == "PASS",
         "41_duplicate_physical_surface": "NONE (" + ", ".join(f"{k}: {v}" for k, v in
@@ -653,8 +753,9 @@ def decision(ctx, regs, gates, rec):
         "59_after_blind": regs["BLIND_VALIDATION_PLAN"]["after_result"],
         "60_disagreements": rec["21_disagreements_with_chatgpt"]}
     return {"SCHEMA": "URBAN_QORTUBA_RC1_DECISION_REGISTER_V1", "answers": a, "gates": gates,
-            "owner_actions": [{"id": "PAINTRY_COUNTER_FOOTPRINT", "question": rec["10b_exact_question"],
-                               "changes": "FLR-03 only (and nothing else)"},
+            "owner_actions": ([{"id": "PAINTRY_COUNTER_FOOTPRINT", "question": rec["10b_exact_question"],
+                                "changes": "FLR-03 only (and nothing else)"}]
+                              if regs["OBJECT_FOOTPRINT_REGISTER"]["unresolved"] else []) + [
                               {"id": "QORTUBA_CONTROLLED_REEXPORT", "when": "in parallel or after RC1 (not blocking)",
                                "protocol": "R8.20 SOURCE_ANCHOR_PLAN"},
                               {"id": "UNSEEN_VILLA_FILES", "what": "files per BLIND_VILLA_INTAKE_SCHEMA; seal the QS "

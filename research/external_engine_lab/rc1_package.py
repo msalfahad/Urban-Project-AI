@@ -121,7 +121,8 @@ def main(junit_path, command, exit_code):
         f"{R['ROOM_REGISTER']['counts']['door_strips']} door strips; every room and trade reconciles.\n"
         f"- Openings: {A['22_internal_door_count']} internal doors, 1 entrance, 1 sliding glass door, "
         f"{A['26_window_count']} windows, 2 open passages.\n"
-        f"- One open item: FLR-03 PAINTRY ceramic floor (counter footprint) - AUTHORISED_SUBTOTAL.\n"
+        + (f"- Open items: {R['QORTUBA_RC1_FREEZE']['open_items']}.\n" if R["QORTUBA_RC1_FREEZE"]["open_items"]
+           else "- No open quantity item.\n") +
         "- No quantity changed from R8.20. Workbook: no formulas; every quantity cell equals its register row.\n\n"
         "## BOQ summary\n\n" + summary + "\n\n## Gates\n\n" + tbl(["Gate", "Value"], [[k, v] for k, v in G.items()]) +
         f"\n\n{STOP}\n")
@@ -179,7 +180,7 @@ def main(junit_path, command, exit_code):
           (" ..." if len(v["objects"]) > 6 else ""), v["treatment"] or "", j(v["policy"] or v["rejected"], 300)]
          for k, v in fp["sites"].items()]) + f"\n\n**Open question:** {fp['owner_question']}\n\n" \
         f"Facts searched: {fp['facts_searched']}\n\nWhy not PAINTRY: {fp['why_not_paintry']}\n\n" \
-        f"Effect bounds: {j(fp['effect_bounds_m2'])}\n\nAssumed: {fp['assumed']}. {fp['waterproofing']}.\n"
+        f"Assumed: {fp['assumed']}. {fp['waterproofing']}.\n"
     md["16_XLSX_VALIDATION.md"] = "# Workbook validation\n\n" + tbl(["Check", "Result"], [
         ["readback (register)", st["readback_validation"]["state"]], ["readback (package)", xv["state"]],
         ["formulas", len(xv["formulas"])], ["quantity cells checked", xv["quantity_cells_checked"]],

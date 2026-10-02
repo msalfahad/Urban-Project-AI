@@ -946,3 +946,36 @@ Quantities were never wrong; only their presentation was.
 - Every mismatch gets a defect class, and the fix goes into the generic system.
 
 **Gates:** MIGRATION_PLANNING_READY = YES, MIGRATION_EXECUTION_READY = NO, PRODUCTION_MIGRATION = NO.
+
+## 23. Qortuba RC1 finalization (floor-before-cabinetry method, freeze digests)
+
+The recommendation was written before code: `research/external_engine_lab/rc1_final_recommendation.json`, commit c4487e1.
+
+**Owner method:** `URBAN-FLOOR-FINISH-BEFORE-CABINETRY-METHOD@v1` (`data/registry/URBAN_OWNER_METHOD_RULES.json`).
+- Authority: PROJECT_OWNER + URBAN_OWNER_METHOD. It applies to every Urban project unless a specification overrides it.
+- Principle: tile is laid first and cabinetry is installed after. The floor finish therefore continues under later-installed cabinetry / joinery (wardrobes, fixed joinery, vanity units) that sits on the finished floor. The footprint is FOOTPRINT_INCLUDED.
+- The object must be CLASSED as cabinetry by an owner object fact, a specification or a class map. Shape or layer alone never establishes it.
+- Excluded object classes (built obstacles) reject the method: column, masonry / concrete wall, shaft, built duct, plinth, curb, void, opening.
+- Columns, walls and ducts are site boundaries or holes in the certified topology, so the method never sees them.
+- The Qortuba dry-room fact `QORTUBA-NEW-FLOOR-OBJECT-FOOTPRINT-OWNER-001@v1` stays as project corroboration and as the authority for loose furniture. The method generalises it and does not conflict with it.
+
+**PAINTRY:** `QORTUBA-NEW-PAINTRY-COUNTER-CABINETRY-OWNER-001@v1` (`data/registry/OWNER_OBJECT_FACTS.json`).
+- Fingerprint-bound to H478 / H482 / H532 / H536 / H541.
+- It re-classes those five FIXTURE-layer SANITARY_FIXTURE lines as LATER_INSTALLED_CABINETRY.
+- OBJECT_FOOTPRINT_AUTHORITY_V2 (`engine/source/footprint_authority.py`, adding `identify()` and excluded object classes) then resolves FLR-03.
+- Result: 11.685 m2, COMPUTED_SHADOW_COMPLETE. Nothing is deducted and no geometry changes.
+
+**Freeze audit:**
+- The RC1 freeze held `topology_digest: false`. That was a stale R8.13 reproduction flag copied by mistake.
+- `row_digests` held "SAME" comparison flags instead of digests.
+- The DWG hash was stored as a 12-character prefix, and no code commit was recorded.
+
+New modules:
+- TOPOLOGY_RESULT_DIGEST_V1 (`engine/source/topology_digest.py`): a sha256 over the normalised certified topology output (sites, wall bands, closures, openings, passages). It is quantised with `digests.quantise`, sorted, and excludes indices, timestamps and paths.
+- FREEZE_SCHEMA_V1 (`engine/source/freeze_schema.py`): every freeze field is declared SHA256 / SHA256_MAP / GIT_COMMIT / BOOLEAN / TEXT / LIST / OPTIONAL. Booleans and optionals must state why. Placeholders and undeclared fields are refused.
+
+The freeze is now URBAN_QORTUBA_RC1_FREEZE_V2, and it validates.
+
+**Package:** `rc1_final_package.py` writes URBAN_QTO_QORTUBA_ARCHITECTURAL_RC1_FINAL (17 md + 13 json + the workbook).
+
+Qortuba-specific development stops here. The next stage is the unseen-villa blind test.

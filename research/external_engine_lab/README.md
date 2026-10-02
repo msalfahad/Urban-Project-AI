@@ -177,5 +177,8 @@ bridges it to the legacy QS01 method. Owner decisions are scoped claims in `data
 | `rc1_qortuba.py` | (built by `rc1_registers.py`) | RC1 layout of the R8.20 build: room register, floor / ceiling breakdowns, canonical BOQ + aliases, opening register, footprint authority, identity / reconciliation audits |
 | `rc1_registers.py` | `tests/rc1/registers/*.json` | the RC1 registers (answers 1-60 except the suite), the owner workbook model and its readback status, freeze, blind-villa intake + validation plan |
 | `rc1_package.py` | `data/reports/URBAN_QTO_QORTUBA_ARCHITECTURAL_RC1/` + zip | owner package (26 md + registers + TEST_RESULTS + `URBAN_QTO_QORTUBA_ARCHITECTURAL_RC1.xlsx`) |
+| `rc1_final_recommendation.json` | - | the RC1 finalization recommendation, written before code |
+| `rc1_final_owner_facts.py` | `data/registry/URBAN_OWNER_METHOD_RULES.json` + `data/registry/OWNER_OBJECT_FACTS.json` | the floor-before-cabinetry Urban method and the PAINTRY counter identity fact (fingerprint-bound) |
+| `rc1_final_package.py` | `data/reports/URBAN_QTO_QORTUBA_ARCHITECTURAL_RC1_FINAL/` + zip | final package (17 md + 13 json + workbook; freeze re-validated) |
 
 `<work>` must hold `old_k2.pkl` (K2 on LibreDWG's DXF of the old DWG) and `new_k2.pkl` (K2 on the hash-addressed new DXF).

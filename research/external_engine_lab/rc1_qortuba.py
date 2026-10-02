@@ -232,20 +232,50 @@ def opening_register(ctx, names):
 
 
 # ----------------------------------------------------------------------------------------------- footprint
+def identity_facts(inp):
+    """OWNER_OBJECT_FACTS bound to the source: a fact is usable only when its revision matches and EVERY bound part's
+    fingerprint matches the admitted part (all or nothing)."""
+    from engine.source import owner_claims as OC
+    by = {p.identity.key: p for p in inp.parts}
+    out = []
+    for f in jl(ROOT / "data/registry/OWNER_OBJECT_FACTS.json")["facts"]:
+        per = [{"key": p["key"], "state": "APPLIES" if p["key"] in by and OC.part_fingerprint(by[p["key"]]) ==
+                p["fingerprint"] else "STALE_OR_MISSING"} for p in f["parts"]]
+        ok = f["scope"]["source_revision_id"] == inp.revision.revision_id and f["scope"]["region_id"] == inp.region_id and all(x["state"] == "APPLIES" for x in per)
+        out.append({"fact_id": f"{f['fact_id']}@v{f['version']}", "binding": "APPLIES" if ok else "STALE",
+                    "parts": per, "object_keys": [p["key"] for p in f["parts"]] if ok else [],
+                    "accepts_roles": f["statement"]["accepts_observed_roles"],
+                    "object_class": f["statement"]["object_class"]})
+    return out
+
+
+def footprint_policies():
+    ff = jl(ROOT / "data/registry/OWNER_FINISH_FACTS.json")["facts"]
+    fp = next(f for f in ff if f["fact_id"] == "QORTUBA-NEW-FLOOR-OBJECT-FOOTPRINT-OWNER-001")
+    um = next(r for r in jl(ROOT / "data/registry/URBAN_OWNER_METHOD_RULES.json")["rules"]
+              if r["rule_id"] == "URBAN-FLOOR-FINISH-BEFORE-CABINETRY-METHOD")
+    return [{"policy_id": f"{fp['fact_id']}@v{fp['version']}", "kind": "QORTUBA_PROJECT_FACT",
+             "trade": fp["scope"]["trade"], "space_classes": fp["scope"]["space_classes"],
+             "object_classes": [fp["statement"]["object_class"]], "treatment": fp["statement"]["treatment"],
+             "excludes": [{"space_class": c, "text": "is_not: a rule for wet / service floors"}
+                          for c in ("WET_SERVICE_ROOM", "SERVICE_ROOM")]},
+            {"policy_id": f"{um['rule_id']}@v{um['version']}", "kind": "URBAN_OWNER_METHOD", "trade": um["trade"],
+             "space_classes": um["applicability"]["space_classes"],
+             "object_classes": um["applicability"]["object_classes"], "treatment": um["treatment"],
+             "excluded_object_classes": um["excluded_object_classes"]}]
+
+
 def footprint(ctx):
-    """OBJECT_FOOTPRINT_AUTHORITY_V1 for every floor-finish site with proven objects; the PAINTRY fixture outline is
+    """OBJECT_FOOTPRINT_AUTHORITY_V2 for every floor-finish site with proven objects: owner object-identity facts are
+    applied first (exact keys, accepted observed roles), then the accepted policies; the PAINTRY fixture outline is
     described by the planar faces it makes with the site boundary (shapely, lab-only, report diagnostic)."""
     import shapely
     from shapely.geometry import LineString, Polygon
     from shapely.ops import polygonize, unary_union
     res = ctx["new"]
-    ff = jl(ROOT / "data/registry/OWNER_FINISH_FACTS.json")["facts"]
-    fp = next(f for f in ff if f["fact_id"] == "QORTUBA-NEW-FLOOR-OBJECT-FOOTPRINT-OWNER-001")
-    pol = [{"policy_id": f"{fp['fact_id']}@v{fp['version']}", "trade": fp["scope"]["trade"],
-            "space_classes": fp["scope"]["space_classes"], "object_classes": [fp["statement"]["object_class"]],
-            "treatment": fp["statement"]["treatment"],
-            "excludes": [{"space_class": c, "text": "is_not: a rule for wet / service floors"}
-                         for c in ("WET_SERVICE_ROOM", "SERVICE_ROOM")]}]
+    pol = footprint_policies()
+    ids = identity_facts(ctx["inp_new"])
+    usable = [f for f in ids if f["binding"] == "APPLIES"]
     cls = {sid: v["class"] for sid, v in ctx["r8_18"]["per_site"].items()}
     out = {}
     for rid in FLOOR_ITEMS:
@@ -260,10 +290,13 @@ def footprint(ctx):
                     objs.append({"key": k, "object_class": a.role, "layer": a.evidence.get("source_layer"),
                                  "entity_type": a.evidence.get("ENTITY_TYPE"),
                                  "geometry": [round(x, 4) for x in g] if kind == "SEGMENT" else None})
+            objs = FA.identify(objs, usable)
             r = FA.resolve(site=sid, space_class=cls[sid], trade="FLOOR_FINISH", objects=objs, policies=pol)
             r["row"] = rid
             r["counts"] = counts
-            if r["state"] != FA.RESOLVED:
+            r["identity_facts"] = sorted({o["identity_authority"] for o in objs if o.get("identity_authority")})
+            r["identity_bindings"] = [f for f in ids if f["fact_id"] in r["identity_facts"]]
+            if r["state"] != FA.RESOLVED or r["identity_facts"]:
                 site = next(s for s in res["sites"] if s["site_id"] == sid)
                 x0, y0, x1, y1 = site["bbox"]
                 ring = Polygon([(x0, y0), (x1, y0), (x1, y1), (x0, y1)])
@@ -277,8 +310,8 @@ def footprint(ctx):
                 r["outline_faces"] = {"site_is_rectangle": rect, "faces_m2": [f[0] for f in faces],
                                       "faces": [{"area_m2": a, "ring": ring_} for a, ring_ in faces],
                                       "sum_m2": round(sum(f[0] for f in faces), 6),
-                                      "note": "planar faces of the source FIXTURE lines + the site boundary; WHICH "
-                                              "face is the counter is not stated by geometry"}
+                                      "note": "planar faces of the source object lines + the site boundary (report "
+                                              "diagnostic only; nothing is deducted from them)"}
             out[f"{rid}|{sid}"] = r
     return out
 
@@ -321,12 +354,18 @@ def canonical(ctx, names, bd, recs, fp):
                            "note": f"{a} was historically WATERPROOFING floor (OWNER RULES V1) but the R8.19 / R8.20 BOQ "
                                    "shadow described it as ceramic floor - same sites, same m2: a duplicate line"})
         blockers = list(r["release_blockers"])
-        notes = []
-        if cid == "FLR-03":
-            p = fp.get(f"{rid}|{r['sites_used'][0]['site']}")
-            notes.append("OPEN OWNER QUESTION: is the ceramic floor laid under the fixed kitchen counter drawn by "
-                         f"FIXTURE lines {', '.join(FIXTURE_KEYS)}? YES -> {r['value']} m2 stands; NO -> the counter "
-                         f"footprint face(s) {p['outline_faces']['faces_m2'] if p else None} m2 come off")
+        notes, resolved = [], []
+        sites_fp = [fp[k] for k in fp if k.startswith(rid + "|")]
+        if sites_fp and all(v["state"] == FA.RESOLVED for v in sites_fp):
+            resolved = [b for b in blockers if b.startswith("OBJECT_FOOTPRINT_IMPLICIT")]
+            blockers = [b for b in blockers if not b.startswith("OBJECT_FOOTPRINT_IMPLICIT")]
+            for v in sites_fp:
+                notes.append(f"object footprint RESOLVED on {v['site']} by {', '.join(v['policy'])}" +
+                             (f" with object identity {', '.join(v['identity_facts'])}" if v["identity_facts"] else "")
+                             + f": {v['treatment']} (no deduction)")
+        elif sites_fp:
+            notes.append("OBJECT_FOOTPRINT_IMPLICIT unresolved: " + "; ".join(
+                f"{v['site']} {[o['key'] for o in v['objects']]}" for v in sites_fp if v["state"] != FA.RESOLVED))
         items.append(BC.item(cid, trade="ARCHITECTURAL_FLOOR_FINISH", layer="FLOOR_FINISH_SURFACE", unit="m2",
                              qty=r["value"], status=_status(blockers), description_ar=desc[cid][0],
                              description_en=desc[cid][1], breakdown=[ent(e) for e in bd[rid]["entries"]],
@@ -334,6 +373,10 @@ def canonical(ctx, names, bd, recs, fp):
                              rules=[r["trade_authority"]["rule"], r["trade_authority"]["semantic_class_rule"]],
                              blockers=blockers, notes=notes,
                              evidence=f"rows_new.{rid} (R8.20 build; QUANTITY_REGRESSION {rid})"))
+        items[-1]["resolved_blockers"] = [{"blocker": b, "resolved_by": sorted({x for v in sites_fp
+                                                                                 for x in (v["policy"] or []) +
+                                                                                 v["identity_facts"]})}
+                                          for b in resolved]
     mq, mar = ctx["marble_quantities"], {m["threshold"]: m for m in ctx["marble"]}
     mrb_bd = lambda f: [{"key": k, "label": f"threshold {k} (door {next(t['door_occurrence'] for t in ctx['thresholds_new'] if t['threshold'] == k)})",  # noqa: E501,E731
                          "qty": mar[k][f], "kind": RM.STRIP} for k in sorted(mar)]
@@ -529,6 +572,7 @@ def regression(ctx, model):
 
 def build(work, commit=None):
     ctx = Q20.build(work, commit)
+    ctx["code_commit"] = commit
     return rc1(ctx)
 
 
@@ -538,7 +582,8 @@ def rc1(ctx):
     recs, ov = opening_register(ctx, names)
     fp = footprint(ctx)
     model = canonical(ctx, names, bd, recs, fp)
-    ctx["rc1"] = {"rooms": rooms, "names": names, "breakdowns": bd, "openings": recs, "opening_validation": ov,
+    from engine.source import topology_digest as TD
+    ctx["rc1"] = {"topology_result": TD.digest(ctx["new"]), "rooms": rooms, "names": names, "breakdowns": bd, "openings": recs, "opening_validation": ov,
                   "footprint": fp, "model": model, "model_validation": BC.validate(model, tol=ROW_TOL),
                   "floor_partition": floor_partition(model, rooms, ctx),
                   "surface_identity": surface_identity(ctx, model, bd, recs), "regression": regression(ctx, model)}
