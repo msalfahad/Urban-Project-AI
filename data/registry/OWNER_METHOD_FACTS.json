@@ -389,6 +389,64 @@
      "why": "the owner rejected the window deduction for the selected new-revision plan; QP-09 stays on file unchanged for its own scope (old revision / history)"
     }
    ]
+  },
+  {
+   "fact_id": "QORTUBA-NEW-NORMAL-WINDOWS-ABOVE-FLOOR-OWNER-001",
+   "version": 2,
+   "kind": "WINDOW_FLOOR_CONTACT",
+   "authority": [
+    "PROJECT_OWNER"
+   ],
+   "received": "R8.16 brief §1, §4 (after source exhaustion: no sill / schedule / section in the DXF); v2 (R8.17): the SAME owner statement, trade scope widened",
+   "scope": {
+    "project": "QORTUBA",
+    "source_revision_id": "QORTUBA_REV_NEW",
+    "source_anchor_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+    "region_id": "RC:MODEL_SPACE:4267:540:1649",
+    "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649",
+    "plan": "PLAN_VARIANT_4_SELECTED",
+    "trades": [
+     "SKIRTING",
+     "WALL_FACE_SURFACE"
+    ],
+    "space_classes": [
+     "DRY_INTERNAL_ROOM",
+     "WET_SERVICE_ROOM",
+     "SERVICE_ROOM"
+    ]
+   },
+   "statement": {
+    "text": "for the CURRENT selected Qortuba plan, NORMAL WINDOWS START APPROXIMATELY 1.00 m ABOVE FINISHED FLOOR: there is real wall between the finished floor and the sill",
+    "sill_height_m": 1.0,
+    "sill_is": "approximate; a vertical fact, never a plan dimension",
+    "applies_to": "normal windows: a glazing occurrence hosted IN a wall whose face line runs across the opening (the plan draws the wall below the sill)",
+    "does_not_apply_to": [
+     "full-height glazing",
+     "sliding doors",
+     "external doors",
+     "a glazed opening with no wall line across it (e.g. a glazed screen)"
+    ],
+    "source_first": "a source sill / schedule / section would override this fact",
+    "wall_face_use": "POSITION ONLY: proves that a normal window lies within a stated wall-finish height (sill + window height); never a quantity, never a sill dimension in an area"
+   },
+   "unit": "m",
+   "transfer_forbidden": [
+    "the old Qortuba revision (QP-17 / QP-18 stay old-revision rules)",
+    "any other Qortuba revision, region or plan variant",
+    "the DWG (identity NOT_ESTABLISHED)",
+    "P7757",
+    "Al Rashed",
+    "any future villa or project",
+    "an Urban default",
+    "any other window type"
+   ],
+   "relations": [
+    {
+     "rule": "QORTUBA-NEW-NORMAL-WINDOWS-ABOVE-FLOOR-OWNER-001@v1",
+     "relation": "CORROBORATING",
+     "why": "same meaning and value (sill ~1.00 m); v2 only names the wall-face trades the owner statement already covers - v1 stays on file for the frozen R8.16 records"
+    }
+   ]
   }
  ],
  "never": [

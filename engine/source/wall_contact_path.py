@@ -487,3 +487,208 @@ def policy_record_v3() -> dict:
                      "skirting in a full-wall-tile room", "a published quantity without a frozen, blind-tested policy"]}
     rec["digest"] = hashlib.sha256(json.dumps(rec, sort_keys=True).encode()).hexdigest()
     return rec
+
+
+# ====================================================================================== V4 (R8.17)
+"""WALL_CONTACT_PATH_POLICY_V4 - V3 with OPENING-SIDE RELATIONS kept apart from PHYSICAL JAMB SURFACES.
+
+V3-O1 (R8.16): measure_v3 subtracted the overlap of EVERY jamb record from the wall path before testing whether the
+record was physical, so a non-physical opening side (the continuous face of another wall) consumed real wall contact
+that no class then counted. V4:
+  * only a PHYSICAL jamb record may consume path length: a door / glazed-door strip reveal side, or the end of an
+    ESTABLISHED band (drawn cap / faces ending flush); a record whose source is a topology closure is never physical;
+  * a non-physical record is an OPENING_SIDE annotation: it never shortens an edge;
+  * every edge length is conserved: consumed by a physical jamb + classified span (payable / excluded / withheld);
+  * opening PHYSICAL CLASS is resolved before any sill fact: a glazed occurrence whose authority says it is a DOOR
+    (e.g. SLIDING_GLAZED_DOOR reaching the floor) is SLIDING_GLAZED_DOOR_TO_FLOOR / DOOR_PRESENT - zero across, its
+    jambs zero - and can never receive SKIRTING_CONTINUITY_UNDER_WINDOW;
+  * trade eligibility is applied after geometry: door / glazed-door jambs 0, doorless physical jambs once.
+Topology is never touched (trade measurement only).
+"""
+
+POLICY_ID_V4 = "WALL_CONTACT_PATH_POLICY_V4"
+SLIDING_GLAZED_DOOR_TO_FLOOR = "SLIDING_GLAZED_DOOR_TO_FLOOR"
+SLIDING_GLAZED_DOOR, GLAZED_DOOR, EXTERNAL_DOOR = "SLIDING_GLAZED_DOOR", "GLAZED_DOOR", "EXTERNAL_DOOR"
+DOOR_CLASSES = (SLIDING_GLAZED_DOOR, GLAZED_DOOR, EXTERNAL_DOOR)
+GLAZED_DOOR_JAMB = "GLAZED_DOOR"
+CLASSES_V4 = (PHYSICAL_OPENING_JAMB, TOPOLOGY_CLOSURE, DOOR_PRESENT, SLIDING_GLAZED_DOOR_TO_FLOOR,
+              FULL_HEIGHT_GLAZED, WINDOW_ABOVE_FLOOR, FLOOR_CONTACT_UNPROVEN, AUTHORISED_OBSTACLE_FACE, COLUMN_FACE,
+              REAL_WALL_FACE, UNPROVEN_EDGE)
+PAYABLE_V4 = PAYABLE_V3
+EXCLUDED_V4 = (DOOR_PRESENT, SLIDING_GLAZED_DOOR_TO_FLOOR, TOPOLOGY_CLOSURE, FULL_HEIGHT_GLAZED)
+ZERO_JAMB_KINDS = (DOOR_JAMB, GLAZED_DOOR_JAMB)
+
+
+def opening_contact(*, physical_class=None, contact=None, authority=None, sill_m=None, sill_authority=None) -> dict:
+    """Floor contact + physical class of ONE glazed occurrence. A physical-class authority (an owner / source fact
+    saying what the object IS) is resolved FIRST: a door class is never a window, whatever sill fact exists."""
+    to_floor = contact in ("OPENING_TO_FLOOR", FLOOR_LEVEL)
+    if physical_class and authority:
+        if physical_class in DOOR_CLASSES:
+            return {"state": FLOOR_LEVEL if to_floor else FLOOR_CONTACT_UNPROVEN, "physical_class": physical_class,
+                    "authority": authority}
+        if to_floor:
+            return {"state": FLOOR_LEVEL, "physical_class": physical_class, "authority": authority}
+    st = floor_contact(sill_m=sill_m, sill_authority=sill_authority)
+    return dict(st, physical_class=physical_class or ("NORMAL_WINDOW" if st["state"] == ABOVE_FLOOR else None))
+
+
+def is_physical_jamb(j) -> bool:
+    """Positive physical evidence only: the record says physical AND its source is a real surface, never a topology
+    closure or a helper relation."""
+    src = str(j.get("source") or "")
+    return bool(j.get("physical")) and not src.startswith(("TCLOSURE|", "CLOSURE|")) and \
+        not j.get("continuous_wall_face")
+
+
+def glazed_door_jambs(closures, contact_by_opening) -> list:
+    """The two reveal sides of every glazed occurrence whose physical class is a DOOR (from its face closures F1 / F2)
+    as zero-skirting door jamb records."""
+    by = defaultdict(dict)
+    for c in closures:
+        sid = c.source_id
+        if sid.startswith("CLOSURE|GLAZED|") and sid.rsplit("|", 1)[1] in ("F1", "F2"):
+            by[sid.split("|", 1)[1].rsplit("|", 1)[0]][sid.rsplit("|", 1)[1]] = c.geometry
+    out, seen = [], set()
+    for oid, fs in sorted(by.items()):
+        st = contact_by_opening.get(oid) or {}
+        if st.get("physical_class") not in DOOR_CLASSES or set(fs) != {"F1", "F2"}:
+            continue
+        a, b = fs["F1"], fs["F2"]
+        pa, pb = [(a[0], a[1]), (a[2], a[3])], [(b[0], b[1]), (b[2], b[3])]
+        for p in pa:
+            q = min(pb, key=lambda z: math.dist(p, z))
+            key = tuple(sorted((tuple(round(v, 6) for v in p), tuple(round(v, 6) for v in q))))
+            if key in seen:                                   # two glazing lines of ONE door share its reveal sides
+                continue
+            seen.add(key)
+            out.append({"opening": oid, "kind": GLAZED_DOOR_JAMB, "segment": (p, q), "length": math.dist(p, q),
+                        "physical": True, "source": "glazed door strip reveal side",
+                        "physical_class": st["physical_class"]})
+    return out
+
+
+def classify_v4(edge, *, obstacle_authority=None, floor_contact_by_entity=None) -> str:
+    src = edge["sources"]
+    fc = floor_contact_by_entity or {}
+    if any(s.startswith("TCLOSURE|") for s in src):
+        return TOPOLOGY_CLOSURE
+    if any(s.startswith("CLOSURE|GLAZED|") for s in src) or GLAZING_ROLE in edge["roles"]:
+        recs = [fc.get(s) or fc.get(_entity(s)) for s in src]
+        recs = [r for r in recs if r]
+        if any(r.get("physical_class") in DOOR_CLASSES for r in recs):     # the object IS a door: never a window
+            door = [r for r in recs if r.get("physical_class") in DOOR_CLASSES]
+            if any(r["physical_class"] == SLIDING_GLAZED_DOOR and r["state"] == FLOOR_LEVEL for r in door):
+                return SLIDING_GLAZED_DOOR_TO_FLOOR
+            return DOOR_PRESENT if all(r["state"] == FLOOR_LEVEL for r in door) else FLOOR_CONTACT_UNPROVEN
+        st = {r["state"] for r in recs}
+        if FLOOR_LEVEL in st:
+            return FULL_HEIGHT_GLAZED
+        if ABOVE_FLOOR in st:
+            return WINDOW_ABOVE_FLOOR
+        return FLOOR_CONTACT_UNPROVEN
+    return classify_v3(edge, obstacle_authority=obstacle_authority)
+
+
+def measure_v4(edges, method: SkirtingMethodV3, *, full_wall_tile=False, jambs=(), eps=0.0, obstacle_authority=None,
+               floor_contact_by_entity=None) -> dict:
+    """The skirting measurement of ONE room site (native units) under V4: only physical jamb records consume path
+    length; every edge length is conserved and reported."""
+    boundary = math.fsum(e["length"] for e in edges)
+    if full_wall_tile:
+        return {"state": NO_SKIRTING, "length": 0.0, "components": {}, "excluded": {}, "withheld": [],
+                "continuity_under_windows": [], "jambs_counted": [], "opening_side_annotations": [],
+                "conservation": {"boundary": boundary, "reconciles": True, "note": "no skirting path"},
+                "method": method.ref}
+    comp, excl, withheld, cont, touched, notes = defaultdict(float), defaultdict(float), [], [], {}, {}
+    consumed_total, classified_total = 0.0, 0.0
+    for e in edges:
+        ln = e["length"]
+        jpart = 0.0
+        if "p0" in e:
+            for i, j in enumerate(jambs):
+                ov = _overlap(e["p0"], e["p1"], j["segment"][0], j["segment"][1], eps)
+                if ov <= eps:
+                    continue
+                if is_physical_jamb(j):
+                    touched[i] = touched.get(i, 0.0) + ov
+                    jpart += ov
+                else:
+                    notes[i] = notes.get(i, 0.0) + ov             # annotation only: the edge keeps its length
+        jpart = min(jpart, ln)
+        rest = ln - jpart
+        consumed_total += jpart
+        if rest <= eps:
+            continue
+        classified_total += rest
+        c = classify_v4(e, obstacle_authority=obstacle_authority, floor_contact_by_entity=floor_contact_by_entity)
+        if c == REAL_WALL_FACE:
+            comp[c] += rest
+        elif c in (COLUMN_FACE, AUTHORISED_OBSTACLE_FACE):
+            mode = method.column_faces if c == COLUMN_FACE else method.obstacle_faces
+            if mode == INCLUDED:
+                comp[c] += rest
+            elif mode == EXCLUDED:
+                excl[c] += rest
+            else:
+                withheld.append({"class": c, "length": rest, "sources": e["sources"][:3]})
+        elif c == WINDOW_ABOVE_FLOOR:
+            comp[c] += rest
+            cont.append({"span": "SKIRTING_CONTINUITY_UNDER_WINDOW", "length": rest, "sources": e["sources"][:3],
+                         "material_authority": "real wall below the window (floor contact)"})
+        elif c in EXCLUDED_V4:
+            excl[c] += rest
+        else:
+            withheld.append({"class": c, "length": rest, "sources": e["sources"][:3]})
+    counted = []
+    for i, ov in sorted(touched.items()):
+        j = jambs[i]
+        if j["kind"] in ZERO_JAMB_KINDS:
+            excl["DOOR_JAMB"] += j["length"]
+            counted.append(dict(j, counted=0.0, consumed=ov, why="DOOR_PRESENT: no jamb skirting"))
+        elif method.doorless_jambs == INCLUDED:
+            comp[PHYSICAL_OPENING_JAMB] += j["length"]
+            counted.append(dict(j, counted=j["length"], consumed=ov))
+        else:
+            excl["DOORLESS_JAMB_NOT_COUNTED"] += j["length"]
+            counted.append(dict(j, counted=0.0, consumed=ov, why="method excludes"))
+    annotations = [dict(jambs[i], overlap=ov, consumed=0.0, why="OPENING_SIDE relation, not a physical jamb")
+                   for i, ov in sorted(notes.items())]
+    total = math.fsum(comp.values())
+    wl = math.fsum(w["length"] for w in withheld)
+    span_sum = math.fsum(v for k, v in comp.items() if k != PHYSICAL_OPENING_JAMB) + \
+        math.fsum(v for k, v in excl.items() if k not in ("DOOR_JAMB", "DOORLESS_JAMB_NOT_COUNTED")) + wl
+    cons = {"boundary": boundary, "consumed_by_physical_jambs": consumed_total, "classified": classified_total,
+            "class_sum": span_sum, "residual": boundary - consumed_total - span_sum}
+    cons["reconciles"] = abs(cons["residual"]) <= max(eps, 1e-9) * (1 + len(edges)) and \
+        abs(classified_total - span_sum) <= max(eps, 1e-9) * (1 + len(edges))
+    return {"state": COMPUTED_WITH_WITHHELD if withheld else COMPUTED, "length": total,
+            "components": dict(sorted(comp.items())), "excluded": dict(sorted(excl.items())), "withheld": withheld,
+            "withheld_length": wl, "continuity_under_windows": cont, "jambs_counted": counted,
+            "opening_side_annotations": annotations, "conservation": cons, "method": method.ref}
+
+
+def policy_record_v4() -> dict:
+    rec = {"policy_id": POLICY_ID_V4, "extends": POLICY_ID_V3, "classes": list(CLASSES_V4),
+           "payable": list(PAYABLE_V4), "excluded": list(EXCLUDED_V4), "withheld": list(WITHHELD_V3),
+           "door_classes": list(DOOR_CLASSES),
+           "jamb_records": {DOOR_JAMB: "zero (STOP_AT_OPENING)", GLAZED_DOOR_JAMB: "zero (a glazed DOOR is a door)",
+                            DOORLESS_JAMB: "physical short sides counted once"},
+           "physical_jamb": "physical = true by positive source evidence (strip reveal side, or an ESTABLISHED band "
+                            "end CAPPED / ALIGNED_FREE_END / OPENING_JAMB); never a topology closure source; never a "
+                            "CONTINUOUS_WALL_FACE side",
+           "consumption": "only a physical jamb record may consume path length; a non-physical record is an "
+                          "OPENING_SIDE annotation and never shortens an edge",
+           "conservation": "per site: boundary = consumed by physical jambs + payable spans + excluded spans + "
+                           "withheld spans (checked)",
+           "resolution_order": ["physical class authority (a door is never a window)", "floor-level authority",
+                                "sill authority", "otherwise FLOOR_CONTACT_UNPROVEN (withheld)"],
+           "physical_wall_ends": list(PHYSICAL_WALL_ENDS),
+           "fixes": ["V3-O1: non-physical opening-side records consumed continuous wall face"],
+           "never": ["a non-physical record consuming wall contact", "a topology closure as material, skirting or a "
+                     "jamb", "SKIRTING_CONTINUITY_UNDER_WINDOW at a door-class glazed occurrence", "skirting across "
+                     "any clear opening", "a door / glazed-door jamb return", "a room polygon perimeter",
+                     "a furniture / wardrobe deduction", "skirting in a full-wall-tile room",
+                     "a published quantity without a frozen, blind-tested policy"]}
+    rec["digest"] = hashlib.sha256(json.dumps(rec, sort_keys=True).encode()).hexdigest()
+    return rec

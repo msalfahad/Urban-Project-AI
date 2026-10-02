@@ -1,5 +1,5 @@
 {
- "SCHEMA": "URBAN_OWNER_PHYSICAL_FACTS_V2",
+ "SCHEMA": "URBAN_OWNER_PHYSICAL_FACTS_V3",
  "facts": [
   {
    "fact_id": "QORTUBA-NEW-HALL-LOBBY-OPEN-PASSAGE-OWNER-001",
@@ -438,6 +438,88 @@
     "a 50 / 50 split with the landing",
     "a rise or water-containment function copied from the Urban wet / service rule",
     "dimensions from the photograph"
+   ]
+  },
+  {
+   "fact_id": "QORTUBA-NEW-HALL-PAINTRY-SLIDING-GLASS-DOOR-OWNER-001",
+   "version": 1,
+   "kind": "OPENING_CONSTRUCTION",
+   "authority": [
+    "PROJECT_OWNER"
+   ],
+   "received": "R8.17 brief §1-§2 (owner reviewed the exact highlighted source-plan location)",
+   "scope": {
+    "project": "QORTUBA",
+    "source_revision_id": "QORTUBA_REV_NEW",
+    "source_anchor_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+    "region_id": "RC:MODEL_SPACE:4267:540:1649",
+    "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649",
+    "plan": "PLAN_VARIANT_4_SELECTED"
+   },
+   "allowed_domains": [
+    "OPENING_PHYSICAL_CLASS",
+    "BLOCKER_CLASSIFICATION"
+   ],
+   "parts": [
+    {
+     "handle": "533",
+     "key": "QORTUBA_REV_NEW|H533||SEGMENT|0",
+     "source_layer": "WINDOW",
+     "fingerprint": "b2d91ee6ed6c4c535c4f16f2161214552a91d40c8cfbe4ef8699d442f72332fb",
+     "physical_reading": "SLIDING_GLASS_DOOR_GLAZING (PAINTRY-side track)"
+    },
+    {
+     "handle": "542",
+     "key": "QORTUBA_REV_NEW|H542||SEGMENT|0",
+     "source_layer": "WINDOW",
+     "fingerprint": "44bde5648ebaff4122216b5002d4454425a1b0f46b2dcf9204ab57bd2e8a49d3",
+     "physical_reading": "SLIDING_GLASS_DOOR_GLAZING (HALL-side track, on the HALL face)"
+    }
+   ],
+   "statement": {
+    "text": "the ~2.75 m internal glazed opening between HALL and PAINTRY is A SLIDING GLASS DOOR that reaches the FINISHED FLOOR",
+    "physical_class": "SLIDING_GLAZED_DOOR",
+    "floor_contact": "OPENING_TO_FLOOR",
+    "wall_below": "NONE",
+    "skirting_across_opening": "NONE",
+    "hidden_profile_across_opening": "NONE (US-08: same path)",
+    "jambs": "door jambs: ZERO skirting (URBAN-SKIRTING-OPENING-METHOD@v1 DOOR_PRESENT)",
+    "occurrence": {
+     "rooms": [
+      "HALL",
+      "PAINTRY"
+     ],
+     "approx_width_m": 2.75,
+     "width_meaning": "identification only - the deterministic width is the source geometry",
+     "closures": [
+      "CLOSURE|GLAZED|QORTUBA_REV_NEW|H533||SEGMENT|0|F1",
+      "CLOSURE|GLAZED|QORTUBA_REV_NEW|H533||SEGMENT|0|F2",
+      "CLOSURE|GLAZED|QORTUBA_REV_NEW|H542||SEGMENT|0|F1",
+      "CLOSURE|GLAZED|QORTUBA_REV_NEW|H542||SEGMENT|0|F2"
+     ]
+    },
+    "resolves": "R8.16 FLOOR_CONTACT_UNPROVEN (withheld 2.75 lm) for THIS occurrence only",
+    "window_fact": "QORTUBA-NEW-NORMAL-WINDOWS-ABOVE-FLOOR-OWNER-001 does NOT apply (not a normal window)",
+    "height": "NOT stated by this fact (wall-face opening height: QP-12, recorded separately)"
+   },
+   "transfer_forbidden": [
+    "the old Qortuba revision (QP-17 / QP-18 stay old-revision rules)",
+    "any other Qortuba revision, region or plan variant",
+    "the DWG (identity NOT_ESTABLISHED)",
+    "P7757",
+    "Al Rashed",
+    "any future villa or project",
+    "an Urban default",
+    "any other entity of the same shape, layer or presentation",
+    "any other glazed opening ('all glazed openings are sliding doors')"
+   ],
+   "never": [
+    "a normal window",
+    "SKIRTING_CONTINUITY_UNDER_WINDOW",
+    "a low wall under the glass",
+    "a doorless opening",
+    "a topology edit",
+    "a quantity"
    ]
   }
  ]
