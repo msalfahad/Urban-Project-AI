@@ -1,0 +1,11 @@
+{
+ "SCHEMA": "URBAN_R8_18_SECOND_PROJECT_REGRESSION_V1",
+ "state": "NOT_RUN",
+ "candidates": {
+  "P7757": "UNIT_UNRESOLVED (R8.9 / R8.10: no eps_r, so no certified topology and no sites; adopting the candidate mm unit would itself be a calibration)",
+  "Al Rashed": "physical values not computable (R8.5: IMAGE / OLE content, unmapped regions)"
+ },
+ "substitute": "the generic synthetic families of R8.13-R8.17 plus the 22 wall-face V2, 7 waterproofing and 7 height / reveal synthetic tests of R8.18 (frozen before the Qortuba run)",
+ "next": "R8.19: a second project with a resolved unit and certified topology",
+ "why_not_run": "no second project has a resolved unit AND a certified topology; running one anyway would need an adopted unit (a calibration) or an uncertified topology"
+}
