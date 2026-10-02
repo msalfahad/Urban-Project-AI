@@ -173,5 +173,9 @@ bridges it to the legacy QS01 method. Owner decisions are scoped claims in `data
 | `r8_20_qortuba.py` | (built by `r8_20_registers.py`) | the R8.19 rebuild recomputed (quantity regression), I1471 geometry evidence, closure review / release evaluation |
 | `r8_20_registers.py` | `tests/r8_20/registers/*.json` | every R8.20 register (answers 1-31), corrected BOQ shadow report, XLSX readback status, plans, gates |
 | `r8_20_package.py` | `data/reports/URBAN_QTO_R8_20_HUMAN_REVIEW_BOQ_EXPORT_SOURCE_ANCHOR/` + zip | review package (18 md + 19 json + the shadow BOQ xlsx, validated) |
+| `rc1_recommendation.json` | - | the Qortuba RC1 recommendation, written before any RC1 code |
+| `rc1_qortuba.py` | (built by `rc1_registers.py`) | RC1 layout of the R8.20 build: room register, floor / ceiling breakdowns, canonical BOQ + aliases, opening register, footprint authority, identity / reconciliation audits |
+| `rc1_registers.py` | `tests/rc1/registers/*.json` | the RC1 registers (answers 1-60 except the suite), the owner workbook model and its readback status, freeze, blind-villa intake + validation plan |
+| `rc1_package.py` | `data/reports/URBAN_QTO_QORTUBA_ARCHITECTURAL_RC1/` + zip | owner package (26 md + registers + TEST_RESULTS + `URBAN_QTO_QORTUBA_ARCHITECTURAL_RC1.xlsx`) |
 
 `<work>` must hold `old_k2.pkl` (K2 on LibreDWG's DXF of the old DWG) and `new_k2.pkl` (K2 on the hash-addressed new DXF).

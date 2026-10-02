@@ -894,3 +894,55 @@ The recommendation was committed first (a68dd2b). This round makes **no quantity
 **PDF lane:** a main track after the re-export and the first unseen-villa blind run (target R8.22). It feeds the same claim pipeline.
 
 **Gates:** MIGRATION_PLANNING_READY = YES, MIGRATION_EXECUTION_READY = NO, PRODUCTION_MIGRATION = NO.
+
+## 22. Qortuba Architectural RC1 (owner-review BOQ, freeze, blind-villa preparation)
+
+The recommendation was written before any RC1 code (`research/external_engine_lab/rc1_recommendation.json`, commit 3f1d20d).
+
+**Reporting defect found and removed.** In OWNER RULES V1, Q-03 / Q-03P were the WATERPROOFING floor rows and Q-11 / Q-12 were the CERAMIC floor rows. The R8.19 / R8.20 BOQ shadow labelled Q-03 / Q-03P as ceramic floor, so:
+- the floor-finish lines of the R8.20 workbook summed to 170.7538 m2, against a physical floor of 141.8363 m2;
+- the membrane appeared twice (Q-03 + Q-03P, and WATERPROOFING_FLOOR_M2).
+
+Quantities were never wrong; only their presentation was.
+
+**New generic modules:**
+- CANONICAL_BOQ_ITEM_MODEL_V1 (`engine/source/boq_canonical.py`): one payable identity per physical item.
+  - Legacy ids live inside their item: SAME_QUANTITY / COMPONENT / MISLABELLED_DUPLICATE / HISTORICAL_MEANING.
+  - Measure pairs (one item in two units, price one basis).
+  - Refused: two additive items on the same layer, unit and site; a breakdown that does not reconcile.
+- ROOM_QUANTITY_MATRIX_V1 (`engine/source/room_matrix.py`): row breakdowns by site.
+  - Inside-site strip effects stay on their site; door strips are their own physical sites.
+  - Equal labels never merge two sites.
+  - Every matrix column must sum to its item.
+- OPENING_REGISTER_V1 (`engine/source/opening_register.py`): one record per occurrence, with FROM / TO sites.
+  - Each attribute carries a basis: SOURCE / OWNER_FACT / OWNER_PROJECT_PARAMETER / URBAN_STANDARD / NOT_ESTABLISHED.
+  - An open passage is never a door.
+  - A material needs authority: glazed is not aluminium.
+- OBJECT_FOOTPRINT_AUTHORITY_V1 (`engine/source/footprint_authority.py`): a site is resolved only when one accepted policy covers the trade, the space class and every object class present.
+- BOQ_XLSX_EXPORT_V2 (`engine/boq_rc1_xlsx.py`, openpyxl, outside engine/source): a 14-sheet owner workbook.
+  - Exactly one ADDITIVE_SUMMARY sheet; every other sheet is labelled BREAKDOWN or SCHEDULE.
+  - No formulas.
+  - Readback of every quantity cell against its register value.
+  - Legacy aliases are never summary lines.
+  - Byte-identical rebuild: fixed zip entry times, and the openpyxl save-time stamp pinned.
+
+**Qortuba RC1:**
+- Lab files: `rc1_qortuba.py`, `rc1_registers.py`, `rc1_package.py`.
+- 21 canonical lines.
+- Physical floor 141.836289 m2 = 8 certified sites + 7 door strips, one floor partition.
+- 6 internal doors (PVC by US-13), 1 entrance, 1 sliding glass door, 6 windows (4 aluminium where exteriority is proven by geometry), 2 open passages.
+- Every quantity is unchanged from R8.20.
+- One open item: the PAINTRY ceramic floor (FLR-03, AUTHORISED_SUBTOTAL).
+  - Cause: five FIXTURE-layer counter lines that no accepted fact covers. The dry-room footprint fact excludes wet / service floors.
+  - The exact owner question is recorded; nothing is assumed.
+
+**Freeze:** URBAN_ARCHITECTURAL_QTO_QORTUBA_RC1, release status SHADOW / RC1_REFERENCE.
+- DWG <-> DXF identity stays NOT_ESTABLISHED. This is a release blocker, not a reference-freeze blocker.
+- After RC1 there is no Qortuba-specific tuning: generic fixes are versioned and Qortuba is rerun as regression.
+
+**Next:** the full unseen-villa blind test, following BLIND_VILLA_INTAKE_SCHEMA and BLIND_VALIDATION_PLAN.
+- Gold is sealed before intake.
+- Per-metric reporting, never one global accuracy figure.
+- Every mismatch gets a defect class, and the fix goes into the generic system.
+
+**Gates:** MIGRATION_PLANNING_READY = YES, MIGRATION_EXECUTION_READY = NO, PRODUCTION_MIGRATION = NO.
