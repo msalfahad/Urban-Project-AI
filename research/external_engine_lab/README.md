@@ -194,5 +194,9 @@ bridges it to the legacy QS01 method. Owner decisions are scoped claims in `data
 | `alsenan_a3_registers.py` | `tests/alsenan/registers_a3/*.json` | the Phase A3 registers, classed BOQ rows, manual-QS views, XLSX (readback) and freeze |
 | `alsenan_a3_qortuba_regression.py` | `tests/alsenan/registers_a3/QORTUBA_REGRESSION.json` | rebuilt Qortuba RC1 registers vs the frozen ones |
 | `alsenan_a3_package.py` | `data/reports/URBAN_QTO_ALSENAN_P7757_ST7757_PHASE_A3/` + zip | Phase A3 package (30 md + json + xlsx) |
+| `alsenan_phase_b1_recommendation.json` | - | Alsenan Phase B1 recommendation (answers 1-15, tolerances), committed before comparison code |
+| `alsenan_b1_benchmark.py` | (used by `alsenan_phase_b1.py`) | hash-pinned benchmark readers: raw rows, normalised model, web-app PDF rows |
+| `alsenan_phase_b1.py` | `tests/alsenan/registers_b1/*.json` | Phase B1 comparison: comparability gate, differences, manual-BOQ QA, web mapping, backlog, freeze, XLSX |
+| `alsenan_b1_package.py` | `data/reports/URBAN_QTO_ALSENAN_PHASE_B1_COMPARISON/` + zip | Phase B1 package (31 md + 16 json + xlsx) |
 
 `<work>` must hold `old_k2.pkl` (K2 on LibreDWG's DXF of the old DWG) and `new_k2.pkl` (K2 on the hash-addressed new DXF).

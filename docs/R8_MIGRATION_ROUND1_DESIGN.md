@@ -1080,3 +1080,29 @@ The recommendation (answers 1-16, F / F10 / FN forensics) was committed before a
   `alsenan_a3_qortuba_regression.py`.
 
 Phase B (comparison) has not started.
+
+## 27. Alsenan Phase B1 (benchmark reveal + forensic comparison only)
+
+The recommendation (answers 1-15, benchmark roles, dependency, tolerances) was committed before any comparison code
+(11d661c). Phase B1 changes no engine. The engine tree is identical to the A3 code commit, and this is recorded in
+the freeze and tested.
+
+- `alsenan_b1_benchmark.py`:
+  - hash-pinned readers (fail closed);
+  - raw extraction of every non-empty row: cell refs, Arabic text, values, xlsx formulas;
+  - a declarative normaliser: section / floor context, totals marked, no label inheritance where it would
+    reinterpret a row;
+  - web-app PDF text-layer parser with category and grand-total checks.
+- `alsenan_phase_b1.py` runs the comparability gate first, then the comparison:
+  - only EXACT_COMPARABLE pairs get a percentage;
+  - identity between a benchmark row and an Urban object never comes from the compared value (a value coincidence
+    is LOW-confidence diagnostic);
+  - one primary class per row;
+  - a generic manual-BOQ QA: SUM ranges that skip leading rows, products that reference another row, totals
+    containing another reported total, broken references, xls subtotal sums, typed constants on covers;
+  - web-app mapping;
+  - P0-P4 backlog of proposed fixes, none implemented;
+  - the B1 freeze, the anti-calibration boundary for Phase B2.
+- Registers in `tests/alsenan/registers_b1/`; package `alsenan_b1_package.py`; tests in
+  `tests/alsenan/test_alsenan_b1_comparison.py`. The benchmark binaries are not committed (hash-pinned in the
+  manifest).
