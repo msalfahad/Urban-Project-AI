@@ -1157,8 +1157,12 @@ the freeze and tested.
 - Generic package `engine/reporting_v2/` (outside `engine/source`; imports no QTO engine): presentation model with row
   classes (ADDITIVE / BREAKDOWN_ONLY / ALTERNATIVE_MEASURE / TRACE_ONLY), register pointers and declared sums (the only
   arithmetic: exact decimal sums of ADDITIVE register values of one group and unit), status aliases that fail closed,
-  bilingual glossary, XLSX renderer (no formulas, print-ready, deterministic bytes), PDF renderer (Chromium, same
-  sections), readback.
+  bilingual glossary, XLSX renderer (engine values locked; formulas only for report totals and the QS check -
+  addendum), PDF renderer (Chromium, same sections), readback + LibreOffice recalculation + what-if check.
+- QS reconciliation addendum (recommendation `reporting_v2_qs_addendum_recommendation.json`, committed before the
+  code): 08_QS_RECONCILIATION - Urban value locked beside a manual check (yellow input), difference / % /
+  reconciliation status formulas, floor blocks with subtotals, structural manual-check blocks; 00 trade and floor
+  totals are SUM formulas over the frozen lines, validated against the deterministic sums. No input flows back.
 - Adapters per register family: Alsenan (A3 + B2A.1, B2A.1 supersedes A3 where the delta lists a change) and Qortuba
   (RC1, read only). Build, regression (zero quantity / status change), readback QA and freeze:
   `research/external_engine_lab/reporting_v2_build.py`; records frozen in `tests/reporting_v2/frozen/`.

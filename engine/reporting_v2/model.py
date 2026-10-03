@@ -1,5 +1,12 @@
 """REPORTING MODEL V2 - the one presentation model both renderers (XLSX, PDF) draw from. It measures NOTHING.
 
+FORMULA POLICY (Reporting V2 + QS reconciliation addendum): no formula ever creates or replaces an engine quantity;
+engine quantities are register values copied verbatim (locked cells). Formulas are allowed ONLY for report totals /
+subtotals, manual QS check arithmetic, differences, percentages, reconciliation status and coverage counts. A formula
+cell is a structured spec {"f": {"op", "args"}, "v": evaluated value, "expect": deterministic value or None}: the
+renderer writes it as an Excel formula, evaluate() computes it in Python (exact decimal sums), validate() requires
+v == expect for every report total. Manual input cells {"input": value} are the only editable cells.
+
 A quantity cell is one of:
     {"q": v, "src": "REGISTER:/json/pointer"}    a value copied from a frozen register (re-resolved by validate())
     {"q": v, "sum": [src, ...]}                   DECLARED_SUM: a plain sum of register values (same trade + unit),
@@ -25,11 +32,12 @@ from decimal import Decimal
 from pathlib import Path
 
 POLICY_ID = "URBAN_REPORTING_MODEL_V2"
+STATUS_TEXT = {"COMPUTED": "Computed", "PARTIAL": "Partial", "REVIEW": "Review", "BLOCKED": "Blocked", "INFO": "Info"}
 CLASSES = ("ADDITIVE", "BREAKDOWN_ONLY", "ALTERNATIVE_MEASURE", "TRACE_ONLY")
 ROLES = ("ITEM", "SUBTOTAL", "TOTAL", "NOTE")
 DISPLAY = ("COMPUTED", "PARTIAL", "REVIEW", "BLOCKED", "INFO")
 UNITS = ("m3", "m2", "lm", "m", "nr", "kg")
-SHEET_ROLES = ("SUMMARY", "BREAKDOWN", "SCHEDULE", "INFO", "TECH")
+SHEET_ROLES = ("SUMMARY", "BREAKDOWN", "SCHEDULE", "INFO", "TECH", "RECON")
 TOL = 1e-9
 
 # exact technical code -> display state (presentation alias only; the code stays on the row)
@@ -135,6 +143,167 @@ def is_q(c) -> bool:
     return isinstance(c, dict) and "q" in c
 
 
+# ------------------------------------------------------------------ formulas and manual inputs
+FORMULA_OPS = ("SUM", "SUMNB", "DIFF", "PCT", "RSTATUS", "PROD", "COUNTIFS", "COUNT", "DIV")
+RSTATUS = ("MATCH", "CLOSE", "REVIEW", "NOT COMPARABLE", "ENGINE BLOCKED", "NOT CHECKED")
+
+
+def ref(sec, rowkey, colkey) -> dict:
+    """A cell of the same sheet: section id, row key, column key."""
+    return {"ref": [sec, rowkey, colkey]}
+
+
+def rng(sec, rk1, rk2, colkey) -> dict:
+    return {"range": [sec, rk1, rk2, colkey]}
+
+
+def sub(a, b) -> dict:
+    """A PROD factor (a - b), e.g. beam depth below the slab D - t."""
+    return {"sub": [a, b]}
+
+
+def fcell(op, *args, expect=None, fmt=None) -> dict:
+    if op not in FORMULA_OPS:
+        raise ValueError(op)
+    return {"f": {"op": op, "args": list(args)}, "v": None, "expect": expect, "fmt": fmt}
+
+
+def inp(value=None, itype="num") -> dict:
+    """A manual-check input cell (the only editable cells); value = an optional pre-fill from the source schedule."""
+    return {"input": value, "itype": itype}
+
+
+def qty_text(c) -> str:
+    """The text written for an empty quantity: BLOCKED (never 0) or the not-applicable text."""
+    return "BLOCKED" if "blocked" in c else (c.get("na") or "—")
+
+
+def is_f(c) -> bool:
+    return isinstance(c, dict) and "f" in c
+
+
+def is_in(c) -> bool:
+    return isinstance(c, dict) and "input" in c
+
+
+def _sheet_index(sheet):
+    idx = {}
+    for sec in sheet["sections"]:
+        keys = {c["key"]: j for j, c in enumerate(sec["columns"])}
+        keys["__kinds__"] = [c["kind"] for c in sec["columns"]]
+        for i, r in enumerate(sec["rows"]):
+            rk = r.get("key", i)
+            idx[(sec["id"], rk)] = (r, keys, i)
+        idx[("__order__", sec["id"])] = [r.get("key", i) for i, r in enumerate(sec["rows"])]
+    return idx
+
+
+def _num(v):
+    return isinstance(v, (int, float)) and not isinstance(v, bool)
+
+
+def evaluate(model) -> int:
+    """Compute v for every formula cell (Python mirror of the Excel formulas). Returns the number of formula cells."""
+    n = 0
+    for s in model["sheets"]:
+        idx = _sheet_index(s)
+        memo = {}
+
+        def cell_value(sec, rk, ck):
+            r, keys, _ = idx[(sec, rk)]
+            j = keys[ck]
+            if j >= len(r["cells"]):
+                return None
+            c = r["cells"][j]
+            if keys["__kinds__"][j] == "status" and c in STATUS_TEXT:
+                return STATUS_TEXT[c]
+            if is_q(c):
+                return c["q"] if c["q"] is not None else qty_text(c)
+            if is_in(c):
+                return c["input"]
+            if is_f(c):
+                return fval(c, (sec, rk, ck))
+            return c
+
+        def values(a):
+            if "ref" in a:
+                return [cell_value(*a["ref"])]
+            sec, k1, k2, ck = a["range"]
+            order = idx[("__order__", sec)]
+            i1, i2 = order.index(k1), order.index(k2)
+            return [cell_value(sec, k, ck) for k in order[i1:i2 + 1]]
+
+        def fval(c, key):
+            if key in memo:
+                return memo[key]
+            op, args = c["f"]["op"], c["f"]["args"]
+            if op == "SUM":
+                v = dsum([x for a in args for x in values(a) if _num(x)])
+            elif op == "SUMNB":
+                xs = [x for a in args for x in values(a) if _num(x)]
+                v = dsum(xs) if xs else ""
+            elif op == "DIFF":
+                u, mm = values(args[0])[0], values(args[1])[0]
+                v = round(mm - u, 9) if _num(u) and _num(mm) else ""        # ROUND(m-u, 9): no -0.000 from float noise
+            elif op == "PCT":
+                u, mm = values(args[0])[0], values(args[1])[0]
+                v = round((mm - u) / u, 9) if _num(u) and _num(mm) and u != 0 else ""
+            elif op == "RSTATUS":
+                u, mm = values(args[0])[0], values(args[1])[0]
+                t1, t2 = values(args[2])[0], values(args[3])[0]
+                if u == "BLOCKED":
+                    v = "ENGINE BLOCKED"
+                elif not _num(u):
+                    v = "NOT COMPARABLE"
+                elif mm is None or mm == "":
+                    v = "NOT CHECKED"
+                elif not _num(mm):
+                    v = "NOT COMPARABLE"
+                elif u == 0:
+                    v = "MATCH" if abs(mm) <= 1e-9 else "REVIEW"
+                else:
+                    e = abs(mm / u - 1)
+                    v = "MATCH" if e <= t1 else ("CLOSE" if e <= t2 else "REVIEW")
+            elif op == "PROD":
+                *fs, div = args
+                xs = []
+                for a in fs:
+                    if "sub" in a:                                       # (a - b) factor
+                        x, y = values(a["sub"][0])[0], values(a["sub"][1])[0]
+                        xs.append(x - y if _num(x) and _num(y) else None)
+                    else:
+                        xs.extend(values(a))
+                if all(_num(x) for x in xs):
+                    p = 1.0
+                    for x in xs:
+                        p *= x
+                    v = p / div
+                else:
+                    v = ""
+            elif op == "COUNTIFS":
+                pairs = list(zip(args[0::2], args[1::2]))
+                cols = [values(a) for a, _ in pairs]
+                hit = lambda x, crit: x not in (None, "") if crit == "<>" else x == crit
+                v = sum(1 for row_vals in zip(*cols) if all(hit(x, crit) for x, (_, crit) in zip(row_vals, pairs)))
+            elif op == "COUNT":
+                v = sum(1 for a in args for x in values(a) if _num(x))
+            elif op == "DIV":
+                a, b = values(args[0])[0], values(args[1])[0]
+                v = a / b if _num(a) and _num(b) and b else ""
+            memo[key] = v
+            c["v"] = v
+            return v
+
+        for sec in s["sections"]:
+            keys = [c["key"] for c in sec["columns"]]
+            for i, r in enumerate(sec["rows"]):
+                for j, c in enumerate(r["cells"]):
+                    if is_f(c):
+                        fval(c, (sec["id"], r.get("key", i), keys[j]))
+                        n += 1
+    return n
+
+
 def worst(states) -> str:
     states = [s for s in states if s]
     return max(states, key=lambda s: SEVERITY[s]) if states else "INFO"
@@ -168,14 +337,17 @@ def line(lid, trade, desc_en, desc_ar, unit, parts, *, cls="ADDITIVE", note=None
 
 
 def col(key, en, ar="", kind="text", unit=None, width=None):
-    """kind: text | ar | qty | count | dim | status | code | cls | pct"""
+    """kind: text | ar | qty | count | dim | status | code | cls | pct | num | rstatus"""
     return {"key": key, "en": en, "ar": ar, "kind": kind, "unit": unit, "width": width}
 
 
-def row(cells, *, role="ITEM", cls=None, status=None, tech=None, explains=None, note=None):
+def row(cells, *, role="ITEM", cls=None, status=None, tech=None, explains=None, note=None, key=None):
     if role == "ITEM" and cls is None and any(is_q(c) for c in cells):
         raise ValueError("an item row with a quantity needs a class")
-    return {"role": role, "cls": cls, "status": status, "tech": tech, "explains": explains, "note": note, "cells": list(cells)}
+    r = {"role": role, "cls": cls, "status": status, "tech": tech, "explains": explains, "note": note, "cells": list(cells)}
+    if key is not None:
+        r["key"] = key
+    return r
 
 
 def section(sid, title, columns, rows, *, kind="table", note=None):
@@ -281,11 +453,23 @@ def validate(model, regs: Registers) -> dict:
             for x in r["cells"]:
                 if is_q(x) and x["q"] is None and r["status"] == "COMPUTED" and "na" not in x:
                     problems.append(f"{where}: blocked quantity on a COMPUTED row")
+    try:
+        nf = evaluate(model)
+    except (KeyError, ValueError) as e:                                  # a formula that points at a removed row fails closed
+        problems.append(f"formula reference unresolved: {e}")
+        nf = 0
+    for s, sec, i, r, j, c in iter_cells(model):
+        if is_f(c) and c.get("expect") is not None:
+            v = c["v"]
+            if not (_num(v) and abs(v - c["expect"]) <= TOL):
+                problems.append(f"{s['name']}/{sec['id']}/{i}/{j}: formula {c['f']['op']} = {v!r} != deterministic {c['expect']!r}")
+        if (is_f(c) or is_in(c)) and r["cls"] == "ADDITIVE" and sec["columns"][j]["kind"] == "qty" and is_f(c) is False:
+            problems.append(f"{s['name']}/{sec['id']}/{i}/{j}: input cell in an ADDITIVE quantity")
     missing = set(lines) - seen_add
     if missing:
         problems.append(f"ADDITIVE lines not on the summary: {sorted(missing)}")
     return {"state": "PASS" if not problems else "FAIL", "problems": problems, "quantity_cells": nq, "declared_sums": nsum,
-            "lines": len(lines)}
+            "formula_cells": nf, "lines": len(lines)}
 
 
 def digest(o) -> str:

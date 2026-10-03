@@ -161,7 +161,8 @@ def build(run_date: str, registers_commit: str):
                   [section("TECH", ("INPUT REGISTERS", ""), [col("n", "REGISTER", "", "code", width=40), col("f", "FILE", "", "text", width=50),
                                                             col("s", "SHA256", "", "code", width=66)],
                            [row([n, v["file"], v["sha256"]], role="NOTE") for n, v in R.inputs().items()])])]
-    model = L.assemble(proj, lines, [fs, found, op, bl, me] + tech, R, levels=[LEVEL],
+    qs = L.reconciliation_sheet(lines, [LEVEL])
+    model = L.assemble(proj, lines, [fs, found, op, bl, me, qs] + tech, R, levels=[LEVEL],
                        key_notes=["Qortuba is RC1_REFERENCE (frozen): this report reads its registers and changes nothing.",
                                   "Measure pairs (MRB-01 / 02, SGD-01 / 02, WIN-01 / 02): the first is ADDITIVE, the second the same item "
                                   "on another basis (ALTERNATIVE_MEASURE)."])

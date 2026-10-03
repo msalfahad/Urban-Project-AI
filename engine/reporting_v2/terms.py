@@ -21,6 +21,8 @@ LEVELS = {
     "EXTERNAL": ("OTHER / EXTERNAL", "الأعمال الخارجية", "LABEL"),
     "UNASSIGNED": ("LEVEL NOT ASSIGNED", "غير محدد الدور", "LABEL"),
     "PROJECT": ("TOTAL PROJECT", "إجمالي المشروع", "LABEL"),
+    "2F_ROOF": ("SECOND FLOOR / ROOF", "الدور الثاني / السطح", "LABEL"),
+    "EXT_OTHER": ("EXTERNAL / OTHER", "الأعمال الخارجية / غير محدد الدور", "LABEL"),
 }
 
 TRADES = {

@@ -19,7 +19,7 @@ from engine.reporting_v2 import xlsx as X                                       
 
 FROZEN = ROOT / "tests/reporting_v2/frozen"
 ORDER = ["00_TOTAL_SUMMARY", "01_GROUND_FLOOR", "02_FIRST_FLOOR", "03_ROOF_SECOND_FLOOR", "04_FOUNDATION_SUBSTRUCTURE",
-         "05_OPENINGS_ALUMINIUM", "06_BLOCKERS_OWNER_QUESTIONS", "07_METHODS_TRACEABILITY"]
+         "05_OPENINGS_ALUMINIUM", "06_BLOCKERS_OWNER_QUESTIONS", "07_METHODS_TRACEABILITY", "08_QS_RECONCILIATION"]
 
 
 @pytest.fixture(scope="module")
@@ -43,7 +43,7 @@ def test_alsenan_model_valid_and_every_value_from_a_register(alsenan):
 def test_sheet_order_and_one_sheet_per_floor(alsenan):
     m, _ = alsenan
     names = [s["name"] for s in m["sheets"]]
-    assert names[:8] == ORDER and all(n.startswith("TECH_") for n in names[8:])
+    assert names[:9] == ORDER and all(n.startswith("TECH_") for n in names[9:])
     roles = {s["name"]: s["role"] for s in m["sheets"]}
     assert roles["00_TOTAL_SUMMARY"] == "SUMMARY" and sum(r == "SUMMARY" for r in roles.values()) == 1
     floors = [s for s in m["sheets"] if s["name"] in ORDER[1:4]]
@@ -104,7 +104,87 @@ def test_alsenan_xlsx_readback(alsenan, tmp_path):
     m, _ = alsenan
     x = X.render(m, tmp_path / "a.xlsx", logo=ROOT / "assets/logo.png")
     rb = RB.validate(tmp_path / "a.xlsx", m, x["cell_map"])
-    assert rb["state"] == "PASS" and rb["formula_cells"] == 0 and rb["validated_quantity_cells"] > 700
+    nf = sum(1 for *_, c in M.iter_cells(m) if M.is_f(c))
+    assert rb["state"] == "PASS" and rb["formula_cells"] == nf > 1000 and rb["validated_quantity_cells"] > 900
+    if RB.soffice():
+        rc = RB.recalc(tmp_path / "a.xlsx", x["cell_map"])
+        assert rc["state"] == "PASS" and rc["formula_cells_checked"] == nf
+
+
+def _recon(m):
+    s = [x for x in m["sheets"] if x["name"] == "08_QS_RECONCILIATION"][0]
+    return s, {x["id"]: x for x in s["sections"]}
+
+
+def _get(sec, r, k):
+    return r["cells"][[c["key"] for c in sec["columns"]].index(k)]
+
+
+def test_summary_totals_are_formulas_over_frozen_lines(alsenan):
+    m, R = alsenan
+    secs = {x["id"]: x for x in m["sheets"][0]["sections"]}
+    tt = secs["TRADE_TOTALS"]
+    for r in tt["rows"]:
+        q = _get(tt, r, "qty")
+        if M.is_f(q):
+            assert q["f"]["op"] == "SUM" and all(a["ref"][0] == "BOQ_LINES" and a["ref"][2] == "total" for a in q["f"]["args"])
+            assert q["v"] == pytest.approx(q["expect"], abs=1e-9)
+        else:
+            assert q["q"] is None and "blocked" in q                  # an all-blocked group is BLOCKED, never 0
+    lines = secs["BOQ_LINES"]
+    assert all(M.is_q(_get(lines, r, "total")) for r in lines["rows"] if r["role"] == "ITEM")
+    con = [r for r in tt["rows"] if "CON-SUPER" in r["cells"][6]][0]
+    assert _get(tt, con, "qty")["v"] == pytest.approx(m["lines"][0]["qty"]["q"] + sum(
+        ln["qty"]["q"] for ln in m["lines"][1:] if ln["trade"] == "STRUCTURAL_CONCRETE" and ln["qty"]["q"] is not None))
+
+
+def test_reconciliation_sheet_alsenan(alsenan):
+    m, _ = alsenan
+    s, secs = _recon(m)
+    assert s["role"] == "RECON" and [x for x in secs] == ["PARAMS", "PROGRESS", "ITEMS", "ARCH", "FOOT_CHECK", "BEAM_CHECK",
+                                                           "COL_CHECK", "SLAB_CHECK"]
+    items = secs["ITEMS"]
+    bands = [r["cells"][2] for r in items["rows"] if r.get("key", "").startswith("B:")]
+    assert bands == ["FOUNDATION / SUBSTRUCTURE", "GROUND FLOOR", "FIRST FLOOR", "SECOND FLOOR / ROOF", "EXTERNAL / OTHER",
+                     "TOTAL PROJECT"]
+    assert items["filter"] and items["floor_blocks"]
+    for sec in secs.values():
+        for r in sec["rows"]:
+            assert r["cls"] != "ADDITIVE"
+            if r["role"] == "ITEM" and "urban" in [c["key"] for c in sec["columns"]]:
+                u, st = _get(sec, r, "urban"), _get(sec, r, "rstatus")
+                assert M.is_q(u)                                         # Urban value: frozen, never a formula
+                if "blocked" in u:
+                    assert st["v"] == "ENGINE BLOCKED" and _get(sec, r, "pct")["v"] == ""
+    foot = secs["FOOT_CHECK"]
+    by = {r["cells"][0]: r for r in foot["rows"]}
+    assert _get(foot, by["F"], "rstatus")["v"] == "REVIEW"              # 5 plan tags vs 4 computed (F / F10 conflict)
+    assert _get(foot, by["F10"], "rstatus")["v"] == "ENGINE BLOCKED"
+    assert _get(foot, by["F2"], "rstatus")["v"] == "MATCH"
+    assert _get(foot, by["TOTAL"], "urban")["v"] == pytest.approx(64.346)
+    # PROJECT totals of the item table equal the summary trade totals
+    tt = {r["key"][2:]: _get([x for x in m["sheets"][0]["sections"] if x["id"] == "TRADE_TOTALS"][0], r, "qty")
+          for r in [x for x in m["sheets"][0]["sections"] if x["id"] == "TRADE_TOTALS"][0]["rows"]}
+    for r in items["rows"]:
+        if r["role"] == "TOTAL":
+            assert _get(items, r, "urban")["v"] == pytest.approx(tt[r["key"][2:]]["v"], abs=1e-9)
+
+
+def test_structural_checks_reproduce_urban_with_urban_dimensions(alsenan):
+    """Typing the Urban measured length / height / area into the check inputs gives MATCH on every computed row: the
+    check formulas follow the Urban basis (L x B x (D - t), B x D x H, area x t)."""
+    import copy
+    m = copy.deepcopy(alsenan[0])
+    _, secs = _recon(m)
+    pairs = {"BEAM_CHECK": ("ulen", "clen"), "COL_CHECK": ("uh", "ch"), "SLAB_CHECK": ("ua", "ca")}
+    for sid, (u, c) in pairs.items():
+        for r in secs[sid]["rows"]:
+            if r["role"] == "ITEM" and _get(secs[sid], r, u).get("q") is not None:
+                _get(secs[sid], r, c)["input"] = _get(secs[sid], r, u)["q"]
+    M.evaluate(m)
+    for sid in pairs:
+        sts = {_get(secs[sid], r, "rstatus")["v"] for r in secs[sid]["rows"] if r["role"] == "ITEM"}
+        assert sts <= {"MATCH", "ENGINE BLOCKED"} and "MATCH" in sts
 
 
 def test_qortuba_renders_without_quantity_change(qortuba, tmp_path):
@@ -117,6 +197,8 @@ def test_qortuba_renders_without_quantity_change(qortuba, tmp_path):
     assert cls["MRB-01"] == "ADDITIVE" and cls["MRB-02"] == "ALTERNATIVE_MEASURE" and cls["WIN-02"] == "ALTERNATIVE_MEASURE"
     x = X.render(m, tmp_path / "q.xlsx")
     assert RB.validate(tmp_path / "q.xlsx", m, x["cell_map"])["state"] == "PASS"
+    names = [s["name"] for s in m["sheets"]]
+    assert names.index("08_QS_RECONCILIATION") + 1 == min(i for i, n in enumerate(names) if n.startswith("TECH_"))
 
 
 @pytest.mark.skipif(not (FROZEN / "REPORTING_MODEL_V2.json").exists(), reason="report records not frozen yet")
@@ -131,7 +213,10 @@ def test_frozen_report_records_are_reproduced(alsenan, qortuba):
     assert reg["state"] == "PASS" and reg["engine_changed"] is False
     assert reg["alsenan"]["quantity_changes"] == [] and reg["qortuba"]["canonical_items_unchanged"] is True
     qa = json.loads((FROZEN / "REPORTING_READBACK_QA.json").read_text())
-    assert qa["state"] == "PASS" and qa["alsenan"]["xlsx"]["formula_cells"] == 0 and qa["alsenan"]["pdf"]["sections_in_order"]
+    nf = sum(1 for *_, c in M.iter_cells(alsenan[0]) if M.is_f(c))
+    assert qa["state"] == "PASS" and qa["alsenan"]["xlsx"]["formula_cells"] == nf and qa["alsenan"]["pdf"]["sections_in_order"]
+    for p in ("alsenan", "qortuba"):
+        assert qa[p]["xlsx"]["libreoffice_recalc"]["state"] == "PASS" and qa[p]["xlsx"]["what_if"]["state"] == "PASS"
 
 
 def test_engine_and_frozen_registers_untouched_since_b2a1():

@@ -16,12 +16,14 @@ import re
 from pathlib import Path
 
 from . import terms as T
-from .model import is_q
+from .model import is_f, is_in, is_q
 from .xlsx import QTY_FMT, SUMMARY_FMT, qty_text
 
 NAVY, NAVY_2 = "#1F3A5F", "#2C4E78"
 STATUS_CSS = {"COMPUTED": "#E2EFDA", "PARTIAL": "#FFF2CC", "REVIEW": "#FFF2CC", "BLOCKED": "#F8D7DA", "INFO": "#EDEDED"}
 BAR = {"COMPUTED": "#5B9A3C", "PARTIAL": "#D9822B", "REVIEW": "#C9A227", "BLOCKED": "#C0504D"}
+RSTATUS_CSS = {"MATCH": ("#C6EFCE", "#006100"), "CLOSE": ("#FFEB9C", "#7F6000"), "REVIEW": ("#FFC7CE", "#9C0006")}
+INPUT_BG, FORMULA_BG = "#FFF9C4", "#DDEBF7"
 TECH_ROWS = 25
 FIXED_DATE = b"D:20261003000000+00'00'"
 
@@ -57,7 +59,13 @@ def _esc(v):
     return html.escape(str(v))
 
 
+def _plain(c):
+    """The value shown for a cell: a formula's evaluated value, an input's pre-fill, otherwise the cell itself."""
+    return c["v"] if is_f(c) else (c["input"] if is_in(c) else c)
+
+
 def _bar(rows):
+    rows = [dict(r, cells=[_plain(c) for c in r["cells"]]) for r in rows if r["status"] in BAR]
     n = sum(r["cells"][2] for r in rows) or 1
     x, out = 0.0, []
     for r in rows:
@@ -84,7 +92,12 @@ def _table(sec, role, tech=False):
         h.append('<table class="info">' + "".join(f"<tr><th>{_esc(r['cells'][0])}</th><td>{_esc(r['cells'][1])}</td></tr>"
                                                   for r in rows) + "</table>")
         return "".join(h)
-    h.append('<table class="grid"><thead><tr>')
+    if role == "RECON":                                   # working sheet: fixed column widths as in the workbook grid
+        ws_ = [c.get("width") or 12 for c in cols]
+        h.append('<table class="grid recon"><colgroup>' + "".join(f'<col style="width:{100 * w / sum(ws_):.2f}%">' for w in ws_) +
+                 "</colgroup><thead><tr>")
+    else:
+        h.append('<table class="grid"><thead><tr>')
     for c in cols:
         lab = _esc(c["en"]) + (f" ({_esc(c['unit'])})" if c.get("unit") and c["kind"] == "qty" and c["en"] != "QTY" else "")
         ar = f'<br><span class="ar">{_esc(c["ar"])}</span>' if c.get("ar") else ""
@@ -97,7 +110,27 @@ def _table(sec, role, tech=False):
         for j, c in enumerate(cols):
             v = r["cells"][j] if j < len(r["cells"]) else ""
             k = c["kind"]
-            if is_q(v):
+            if is_f(v) or is_in(v):
+                x, bg = _plain(v), (FORMULA_BG if is_f(v) else INPUT_BG)
+                if k == "rstatus" and x in RSTATUS_CSS:
+                    bg, fg = RSTATUS_CSS[x]
+                    h.append(f'<td class="st" style="background:{bg};color:{fg}">{_esc(x)}</td>')
+                elif k == "rstatus":
+                    h.append(f'<td class="st" style="background:#EDEDED;color:#555">{_esc(x or "")}</td>')
+                elif isinstance(x, (int, float)) and not isinstance(x, bool):
+                    if k == "pct" or (is_in(v) and v["itype"] == "pct"):
+                        t = f"{x * 100:+.1f}%" if is_f(v) and c["key"] == "pct" else f"{x * 100:.1f}%"
+                    elif c["key"] == "diff":
+                        t = f"{x:+,.3f}" if abs(x) >= 0.0005 else "0.000"
+                    elif k == "count":
+                        t = f"{x:,.0f}"
+                    else:
+                        t = fmt_num(x, _cell_fmt({}, dict(c, unit=(v.get("fmt") if is_f(v) else None) or c.get("unit")), role) if k == "qty"
+                                    else "0.000" if k == "dim" else "General")
+                    h.append(f'<td class="num" style="background:{bg}">{t}</td>')
+                else:
+                    h.append(f'<td style="background:{bg}">{_esc("" if x is None else x)}</td>')
+            elif is_q(v):
                 if v["q"] is None:
                     t = qty_text(v)
                     h.append(f'<td class="num {"blk" if t == "BLOCKED" else "na"}">{_esc(t)}</td>')
@@ -110,7 +143,8 @@ def _table(sec, role, tech=False):
             elif k == "ar":
                 h.append(f'<td class="ar" dir="rtl">{_esc(v or "")}</td>')
             else:
-                h.append(f'<td class="{k if k in ("code", "cls") else ""}">{_esc("" if v is None else v)}</td>')
+                nw = " nw" if k == "code" and isinstance(v, str) and len(v) <= 18 else ""      # short ids never break
+                h.append(f'<td class="{(k if k in ("code", "cls") else "") + nw}">{_esc("" if v is None else v)}</td>')
         h.append("</tr>")
     h.append("</tbody></table>")
     if tech and len(sec["rows"]) > TECH_ROWS:
@@ -147,6 +181,10 @@ td.na { color: #6B7280; text-align: center; }
 td.st { text-align: center; font-weight: 700; font-size: 7.4pt; white-space: nowrap; }
 td.ar, .ar { direction: rtl; text-align: right; }
 td.code { font-family: 'DejaVu Sans Mono', monospace; font-size: 6.4pt; color: #444; word-break: break-all; }
+td.nw { white-space: nowrap; word-break: normal; }
+table.recon { table-layout: fixed; font-size: 6.9pt; }
+table.recon th { font-size: 6.4pt; }
+table.recon td { overflow-wrap: anywhere; }
 td.cls { font-family: 'DejaVu Sans Mono', monospace; font-size: 6.2pt; color: #444; white-space: nowrap; }
 tr.group td { background: #E9EEF4; font-weight: 700; color: %(navy)s; }
 tr.tot td { background: #F2F4F7; font-weight: 700; border-top: 1.2pt solid %(navy)s; }

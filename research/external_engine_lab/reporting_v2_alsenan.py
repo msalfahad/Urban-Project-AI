@@ -18,8 +18,8 @@ sys.path.insert(0, str(ROOT))
 
 from engine.reporting_v2 import layout as L                                                         # noqa: E402
 from engine.reporting_v2 import terms as T                                                          # noqa: E402
-from engine.reporting_v2.model import (Registers, blocked, col, display_status, line, na, part, qsum, row,  # noqa: E402
-                                       section, sheet, worst)
+from engine.reporting_v2.model import (Registers, blocked, col, display_status, dsum, fcell, inp, line, na, part,  # noqa: E402
+                                       qsum, ref, rng, row, section, sheet, sub, worst)
 
 B2A1 = ROOT / "tests/alsenan/registers_b2a1"
 A3 = ROOT / "tests/alsenan/registers_a3"
@@ -30,6 +30,7 @@ B2A1_FILES = ["PHYSICAL_CONCRETE_REGISTER", "STRUCTURAL_VERTICAL_INTERVAL_REGIST
               "ALSENAN_REGRESSION", "QORTUBA_REGRESSION"]
 A3_FILES = ["ARCH_BOQ", "ROOM_REGISTER", "FOOTING_REGISTER", "STRAP_BEAM_REGISTER", "OWNER_QUESTION_REGISTER", "SOURCE_MANIFEST"]
 FLOORS = ("GF", "1F", "2F")
+LEVELS = ["FOUNDATION", "GF", "1F", "2F", "ROOF", "EXTERNAL", "UNASSIGNED"]
 SUPERSEDED = {"A3-WIN-GF": "OPENING_AUTHORITY functions (B2A)", "A3-WIN-1F": "OPENING_AUTHORITY functions (B2A)",
               "A3-WIN-2F": "OPENING_AUTHORITY functions (B2A)", "A3-WNW-GF": "includes 4 openings now doors (B2A)",
               "A3-WNW-1F": "window widths superseded by OPENING_AUTHORITY rows", "A3-WNW-2F": "window widths superseded by OPENING_AUTHORITY rows",
@@ -820,8 +821,8 @@ def tech_sheets(a: A, lines):
     for ln in lines:
         for p in ln["parts"]:
             refs = p["cell"].get("sum") or [p["cell"].get("src") or "(blocked - no value)"]
-            for ref in refs:
-                rows.append(row([f"{ln['id']}@{p['level']}", ref, p["tech"]], role="NOTE", tech=p["tech"]))
+            for pointer in refs:
+                rows.append(row([f"{ln['id']}@{p['level']}", pointer, p["tech"]], role="NOTE", tech=p["tech"]))
     for item, why in SUPERSEDED.items():
         rows.append(row([f"SUPERSEDED {item}", f"A3.ARCH_BOQ:/rows/{a.abi[item]} -> {why}", "INFO"], role="NOTE", tech="INFO"))
     out.append(sheet("TECH_SOURCE_HANDLES", ("SOURCE HANDLES / VALUE POINTERS", "مصادر القيم"), "TECH",
@@ -838,6 +839,159 @@ def tech_sheets(a: A, lines):
     rows = [row([n, v["file"], v["sha256"]], role="NOTE") for n, v in R.inputs().items()]
     out.append(sheet("TECH_RUN_INFO", ("RUN INFO - REPORT INPUT DIGESTS", "معلومات التشغيل"), "TECH", [section("TECH", ("INPUT REGISTERS", ""), cols, rows)]))
     return out
+
+
+# ------------------------------------------------------------------ QS reconciliation: structural manual-check blocks
+PREFILL = "pre-filled from the source schedule / plan tags - overwrite with your own check"
+
+
+def _check_rows(sec, rows, unit, keys_by_floor):
+    """Close each floor run of ITEM rows with a SUBTOTAL (SUM over the run) and add a TOTAL over the floors."""
+    out, subs = [], []
+    width = len(rows[0][1]["cells"]) if rows else 0
+    for fl, ks in keys_by_floor.items():
+        run = [r for k, r in rows if k in ks]
+        out += run
+        nums = [c["q"] for r in run for c in r["cells"][-8:-7] if c.get("q") is not None]
+        if len(keys_by_floor) == 1 and nums:                              # one run: the TOTAL is the SUM over it
+            subs.append(((rng(sec, ks[0], ks[-1], "urban"), rng(sec, ks[0], ks[-1], "manual")), dsum(nums)))
+        elif len(run) >= 2 and nums:
+            k = f"S:{fl}"
+            lead = [f"{T.level(fl)[0]} - subtotal"] + [None] * (width - 9)
+            out.append(row(lead + L.total_tail(sec, k, unit, [rng(sec, ks[0], ks[-1], "urban")], [rng(sec, ks[0], ks[-1], "manual")],
+                                               dsum(nums)) + [""], role="SUBTOTAL", key=k))
+            subs.append((k, dsum(nums)))
+        elif nums:
+            subs.append((ks[0] if len(run) == 1 else None, dsum(nums)))
+    if subs:
+        lead = ["TOTAL"] + [None] * (width - 9)
+        uref = lambda k, c: k[0 if c == "urban" else 1] if isinstance(k, tuple) else ref(sec, k, c)
+        out.append(row(lead + L.total_tail(sec, "TOTAL", unit, [uref(k, "urban") for k, _ in subs if k],
+                                           [uref(k, "manual") for k, _ in subs if k], dsum(q for _, q in subs)) + [""],
+                       role="TOTAL", key="TOTAL"))
+    return out
+
+
+def qs_structural_sections(a: A):
+    """Footings / beams / columns / slabs: the Urban m3 (locked register values) beside a manual-check m3 that Excel
+    computes from the QS's own count and dimensions (yellow inputs). The check never feeds back into Urban."""
+    R = a.R
+    notes = col("notes", "CHECK NOTES", "ملاحظات التدقيق", "text", width=22)
+    man = ("MANUAL CHECK M3 (formula)", "حجم التدقيق")
+    # footings
+    sec = "FOOT_CHECK"
+    cols = L.recon_cols([col("type", "TYPE", "النوع", "text", width=10), col("n", "COUNT (plan tags)", "العدد", "count", width=9),
+                         col("l", "L (m)", "", "dim", width=8), col("w", "W (m)", "", "dim", width=8), col("h", "H (m)", "", "dim", width=8)],
+                        man) + [notes]
+    rows = []
+    for k, t in enumerate(a.ft["type_summary"]):
+        b = f"A3.FOOTING_REGISTER:/type_summary/{k}"
+        tech = t["status"]
+        urban = R.q(f"{b}/m3_total_computed") if t["count_computed"] else (blocked(tech) if t["count_tagged"] else na("NOT ON PLAN"))
+        key = f"F:{t['type']}"
+        man_f = fcell("PROD", *[ref(sec, key, c) for c in ("n", "l", "w", "h")], 1, fmt="m3")
+        rows.append((key, row([t["type"], inp(t["count_tagged"], "num"), inp(t["L_m"], "num"), inp(t["W_m"], "num"), inp(t["H_m"], "num")] +
+                              L.recon_tail(sec, key, urban | ({"unit": "m3"} if urban.get("q") is not None else {}), "m3",
+                                           display_status(tech), manual=man_f) + [inp(None, "text")],
+                              cls="BREAKDOWN_ONLY", status=display_status(tech), tech=tech, explains="CON-FOOT@FOUNDATION", key=key)))
+    foot = section(sec, ("FOOTINGS - MANUAL CHECK", "القواعد - التدقيق اليدوي"), cols,
+                   _check_rows(sec, rows, "m3", {"FOUNDATION": [k for k, _ in rows]}),
+                   note=f"MANUAL CHECK M3 = COUNT x L x W x H (a check view only). COUNT, L, W, H are {PREFILL}. COUNT is the number "
+                        "of tags on the plan: Urban computes only geometry-confirmed outlines (F / F10 SOURCE_CONFLICT excluded), so a "
+                        "difference there is expected and is the owner question on 06.")
+    # beams (downstand below the slab)
+    sec = "BEAM_CHECK"
+    cols = L.recon_cols([col("type", "FLOOR · TYPE", "النوع", "text", width=12), col("n", "OCCURRENCES (measured / found)", "العدد", "text", width=11),
+                         col("b", "B (cm)", "", "num", width=7), col("d", "D (cm)", "", "num", width=7),
+                         col("t", "SLAB t (cm)", "", "num", width=7), col("basis", "LENGTH BASIS", "أساس الطول", "text", width=16),
+                         col("ulen", "URBAN LENGTH (m)", "طول أوربن", "qty", "m", width=10),
+                         col("clen", "CHECK LENGTH (m)", "طول التدقيق", "qty", "m", width=10)], man) + [notes]
+    rows, by_fl = [], OrderedDict()
+    for fl in FLOORS:
+        m = a.pc["storeys"][fl]["model"]
+        tcm = a.pc["storeys"][fl]["slab_thickness_cm"]
+        occ = a.bb["sheets"][fl]["occurrences"]
+        types = OrderedDict()
+        for k, o in enumerate(occ):
+            types.setdefault(o["type"], []).append(k)
+        for t, ks in types.items():
+            meas = [k for k in ks if occ[k]["state"] == "MEASURED" and (occ[k]["lengths"] or {}).get("CLEAR_FACE_TO_FACE_LENGTH") is not None]
+            lens = [R.q(f"B2A1.BEAM_BINDING_REGISTER:/sheets/{fl}/occurrences/{k}/lengths/CLEAR_FACE_TO_FACE_LENGTH") for k in meas]
+            vols = [R.q(f"B2A1.PHYSICAL_CONCRETE_REGISTER:/storeys/{fl}/model/components/{j}/volume_m3")
+                    for j, c in enumerate(m["components"]) if c["component"] == "DOWNSTAND_BEAM" and c["id"].split(":")[0] == t]
+            o0 = occ[ks[0]]
+            st_ = "COMPUTED" if len(meas) == len(ks) else ("PARTIAL" if meas else "BLOCKED")
+            tech = {"COMPUTED": "COMPUTED", "PARTIAL": "COMPUTED_PARTIAL"}.get(st_, "BLOCKED")
+            key = f"B:{fl}:{t}"
+            urban = ((qsum(vols) if len(vols) > 1 else dict(vols[0])) | {"unit": "m3"}) if vols else blocked("NOT_MEASURED")
+            ulen = ((qsum(lens) if len(lens) > 1 else dict(lens[0])) | {"unit": "m"}) if lens else blocked("NOT_MEASURED")
+            man_b = fcell("PROD", ref(sec, key, "clen"), ref(sec, key, "b"), sub(ref(sec, key, "d"), ref(sec, key, "t")), 10000, fmt="m3")
+            rows.append((key, row([f"{fl} · {t}", f"{len(meas)} / {len(ks)}", inp(o0["B_cm"]), inp(o0["D_cm"]), inp(tcm),
+                                   "clear face-to-face", ulen, inp(None)] +
+                                  L.recon_tail(sec, key, urban, "m3", st_, manual=man_b) + [inp(None, "text")],
+                                  cls="BREAKDOWN_ONLY", status=st_, tech=tech, explains=f"CON-SUPER@{fl}", key=key)))
+            by_fl.setdefault(fl, []).append(key)
+    beams = section(sec, ("BEAMS - MANUAL CHECK (DOWNSTAND)", "الجسور - التدقيق اليدوي"), cols, _check_rows(sec, rows, "m3", by_fl),
+                    note="MANUAL CHECK M3 = CHECK LENGTH x B x (D - t) / 10000: the beam below the slab, the Urban basis (the slab "
+                         f"depth is in the slab check). B, D and slab t are {PREFILL}; type your own measured clear length per type.")
+    # columns (clear height below the controlling member; joints are separate on the floor sheets)
+    sec = "COL_CHECK"
+    cols = L.recon_cols([col("type", "FLOOR · TYPE", "النوع", "text", width=12), col("n", "COUNT", "العدد", "count", width=8),
+                         col("b", "B (cm)", "", "num", width=7), col("d", "D (cm)", "", "num", width=7),
+                         col("uh", "URBAN HEIGHT (m)", "ارتفاع أوربن", "qty", "m", width=10),
+                         col("ch", "CHECK HEIGHT (m)", "ارتفاع التدقيق", "qty", "m", width=10)], man) + [notes]
+    rows, by_fl = [], OrderedDict()
+    for fl in FLOORS:
+        grp = OrderedDict()
+        for k, r in enumerate(a.sv["rows"]):
+            if r["floor"] != fl or r["state"] in ("NOT_IN_STOREY", "NOT_DRAWN_ON_STOREY_SHEET"):
+                continue
+            g = (r["type"], r.get("B_cm"), r.get("D_cm"), r.get("height_m") if r.get("volume_m3") is not None else r["state"])
+            grp.setdefault(g, []).append(k)
+        for gi, ((t, bcm, dcm, h), ks) in enumerate(grp.items()):
+            key = f"C:{fl}:{gi}"
+            done = [k for k in ks if a.sv["rows"][k].get("volume_m3") is not None]
+            if done:
+                vols = [R.q(f"B2A1.STRUCTURAL_VERTICAL_INTERVAL_REGISTER:/rows/{k}/volume_m3") for k in done]
+                urban = (qsum(vols) if len(vols) > 1 else dict(vols[0])) | {"unit": "m3"}
+                uh = R.q(f"B2A1.STRUCTURAL_VERTICAL_INTERVAL_REGISTER:/rows/{done[0]}/height_m") | {"unit": "m"}
+                tech = "COMPUTED"
+            else:
+                urban, uh, tech = blocked(h), blocked(h), h
+            st_ = display_status(tech)
+            man_c = fcell("PROD", *[ref(sec, key, c) for c in ("n", "b", "d", "ch")], 10000, fmt="m3")
+            rows.append((key, row([f"{fl} · {t}", inp(len(ks)), inp(bcm), inp(dcm), uh, inp(None)] +
+                                  L.recon_tail(sec, key, urban, "m3", st_, manual=man_c) + [inp(None, "text")],
+                                  cls="BREAKDOWN_ONLY", status=st_, tech=tech, explains=f"CON-SUPER@{fl}", key=key)))
+            by_fl.setdefault(fl, []).append(key)
+    columns = section(sec, ("COLUMNS - MANUAL CHECK", "الأعمدة - التدقيق اليدوي"), cols, _check_rows(sec, rows, "m3", by_fl),
+                      note="One row per floor, type, size and Urban clear height. MANUAL CHECK M3 = COUNT x B x D x CHECK HEIGHT / "
+                           f"10000. COUNT, B and D are {PREFILL}; type your own clear height (storey interval minus the depth of "
+                           "the member framing in). Beam-column joints are a separate Urban component (floor sheets).")
+    # slabs
+    sec = "SLAB_CHECK"
+    cols = L.recon_cols([col("fl", "FLOOR / SLAB", "الدور", "text", width=16),
+                         col("ua", "URBAN NET AREA (m2)", "مساحة أوربن", "qty", "m2", width=11),
+                         col("ca", "CHECK AREA (m2)", "مساحة التدقيق", "qty", "m2", width=11),
+                         col("t", "THICKNESS (cm)", "السماكة", "num", width=9)], man) + [notes]
+    rows = []
+    for fl in FLOORS:
+        st = a.pc["storeys"][fl]
+        key = f"SL:{fl}"
+        urban = R.q(f"B2A1.PHYSICAL_CONCRETE_REGISTER:/storeys/{fl}/model/by_component_m3/SLAB") | {"unit": "m3"}
+        ua = R.q(f"B2A1.SLAB_REGION_REGISTER:/sheets/{fl}/net_plate_area_m2") | {"unit": "m2"}
+        man_s = fcell("PROD", ref(sec, key, "ca"), ref(sec, key, "t"), 100, fmt="m3")
+        rows.append((key, row([f"{T.level(fl)[0]} - {st['sheet']}", ua, inp(None), inp(st["slab_thickness_cm"])] +
+                              L.recon_tail(sec, key, urban, "m3", "COMPUTED", manual=man_s) + [inp(None, "text")],
+                              cls="BREAKDOWN_ONLY", status="COMPUTED", tech="COMPUTED", explains=f"CON-SUPER@{fl}", key=key)))
+    slabs = section(sec, ("SLABS - MANUAL CHECK", "البلاطات - التدقيق اليدوي"), cols, _check_rows(sec, rows, "m3", {k: [k] for k, _ in rows}),
+                    note=f"MANUAL CHECK M3 = CHECK AREA x THICKNESS / 100 (net plate area: gross outline minus openings). Thickness is "
+                         f"{PREFILL}; type your own net slab area.")
+    return [foot, beams, columns, slabs]
+
+
+QS_BLOCKS = [("FOUNDATION", ["FOUNDATION"]), ("GF", ["GF"]), ("1F", ["1F"]), ("2F_ROOF", ["2F", "ROOF"]),
+             ("EXT_OTHER", ["EXTERNAL", "UNASSIGNED"])]
 
 
 # ------------------------------------------------------------------ assemble
@@ -867,10 +1021,11 @@ def build(run_date: str, registers_commit: str) -> tuple:
            ("Authority", "B2A.1 supersedes A3 where ALSENAN_B2A_DELTA lists a change; otherwise A3 (preserved)")]
     sheets = [floor_sheet(a, "01_GROUND_FLOOR", "GF", lines), floor_sheet(a, "02_FIRST_FLOOR", "1F", lines),
               floor_sheet(a, "03_ROOF_SECOND_FLOOR", "2F", lines, roof=True), foundation_sheet(a), openings_sheet(a),
-              blockers_sheet(a), methods_sheet(a, lines, run)] + tech_sheets(a, lines)
+              blockers_sheet(a), methods_sheet(a, lines, run),
+              L.reconciliation_sheet(lines, LEVELS, qs_structural_sections(a), blocks=QS_BLOCKS)] + tech_sheets(a, lines)
     notes = ["Not measured in this run (no register): marble, railings, hidden profile, external works.",
              "Structural storey = the columns of that storey + the slab over it (register definition).",
              "Curved glazing is measured on MIN_RADIUS_ARC (method default); on Alsenan that face is the exterior side."]
-    model = L.assemble(proj, lines, sheets, R, levels=["FOUNDATION", "GF", "1F", "2F", "ROOF", "EXTERNAL", "UNASSIGNED"],
+    model = L.assemble(proj, lines, sheets, R, levels=LEVELS,
                        key_notes=notes)
     return model, R

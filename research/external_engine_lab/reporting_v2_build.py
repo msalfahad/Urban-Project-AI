@@ -21,6 +21,7 @@ import json
 import shutil
 import subprocess
 import sys
+import tempfile
 import xml.etree.ElementTree as ET
 import zipfile
 from pathlib import Path
@@ -128,6 +129,70 @@ def cross_checks(model, regs) -> list:
     return out
 
 
+RECON = "08_QS_RECONCILIATION"
+CHECK_PAIRS = {"BEAM_CHECK": ("ulen", "clen"), "COL_CHECK": ("uh", "ch"), "SLAB_CHECK": ("ua", "ca")}
+
+
+def scenario(model):
+    """A what-if a QS would type: manual values on item rows at +0.1 % / +2 % / +20 %, a value on an ENGINE BLOCKED row,
+    a non-numeric note, an architectural MATCH, and the Urban measured length / height / area typed into every structural
+    check. Returns the edits and the reconciliation status each edited row must reach."""
+    s = [x for x in model["sheets"] if x["name"] == RECON][0]
+    secs = {x["id"]: x for x in s["sections"]}
+    edits, expect = [], []
+
+    def cell(sec, r, ck):
+        return r["cells"][[c["key"] for c in sec["columns"]].index(ck)]
+    items = secs["ITEMS"]
+    num = [r for r in items["rows"] if r["cells"][0] == "ITEM" and cell(items, r, "urban").get("q")]
+    blk = [r for r in items["rows"] if r["cells"][0] == "ITEM" and "blocked" in cell(items, r, "urban")]
+    for r, f, st in zip(num, (1.001, 1.02, 1.2), ("MATCH", "CLOSE", "REVIEW")):
+        edits.append([RECON, "ITEMS", r["key"], "manual", round(cell(items, r, "urban")["q"] * f, 6)])
+        expect.append(["ITEMS", r["key"], st])
+    if len(num) > 3:
+        edits.append([RECON, "ITEMS", num[3]["key"], "manual", "n/a"])
+        expect.append(["ITEMS", num[3]["key"], "NOT COMPARABLE"])
+    if blk:
+        edits.append([RECON, "ITEMS", blk[0]["key"], "manual", 5.0])
+        expect.append(["ITEMS", blk[0]["key"], "ENGINE BLOCKED"])
+    arch = [r for r in secs["ARCH"]["rows"] if cell(secs["ARCH"], r, "urban").get("q")]
+    if arch:
+        edits.append([RECON, "ARCH", arch[0]["key"], "manual", cell(secs["ARCH"], arch[0], "urban")["q"]])
+        expect.append(["ARCH", arch[0]["key"], "MATCH"])
+    for sid, (u, c) in CHECK_PAIRS.items():
+        if sid not in secs:
+            continue
+        for r in secs[sid]["rows"]:
+            if r["role"] == "ITEM" and cell(secs[sid], r, u).get("q") is not None:
+                edits.append([RECON, sid, r["key"], c, cell(secs[sid], r, u)["q"]])
+                expect.append([sid, r["key"], "MATCH"])
+    return edits, expect
+
+
+def whatif_check(path, model, cell_map, workdir):
+    edits, expect = scenario(model)
+    w = RB.whatif(path, model, cell_map, edits, workdir)
+    if w["state"] == "SKIPPED":
+        return w
+    after = w.pop("model_after")
+    secs = {x["id"]: x for x in [s for s in after["sheets"] if s["name"] == RECON][0]["sections"]}
+    got = {}
+    for sid, rk, st in expect:
+        sec = secs[sid]
+        r = [x for x in sec["rows"] if x.get("key") == rk][0]
+        got[f"{sid}/{rk}"] = [st, r["cells"][[c["key"] for c in sec["columns"]].index("rstatus")]["v"]]
+    engine = lambda m: [(s["name"], sec["id"], i, j, c) for s, sec, i, r, j, c in M.iter_cells(m) if M.is_q(c)]
+    q0, q1 = engine(model), engine(after)
+    summ = lambda m: [c["v"] for c in [x for *_, x in M.iter_cells({"sheets": [m["sheets"][0]]})] if M.is_f(c)]
+    w["expected_statuses"] = got
+    w["expected_statuses_hold"] = all(a == b for a, b in got.values())
+    w["engine_quantities_unchanged_by_inputs"] = q0 == q1
+    w["summary_totals_unchanged_by_inputs"] = summ(model) == summ(after)
+    w["state"] = "PASS" if w["state"] == "PASS" and w["expected_statuses_hold"] and w["engine_quantities_unchanged_by_inputs"] \
+        and w["summary_totals_unchanged_by_inputs"] else "FAIL"
+    return w
+
+
 def build_one(build, out, stem, regs_commit, run_date):
     model, regs = build(run_date, regs_commit)
     v = M.validate(model, regs)
@@ -135,6 +200,11 @@ def build_one(build, out, stem, regs_commit, run_date):
         raise SystemExit(f"{stem}: reporting model invalid: {v['problems'][:5]}")
     x = X.render(model, out / f"{stem}.xlsx", logo=LOGO)
     rb = RB.validate(out / f"{stem}.xlsx", model, x["cell_map"])
+    with tempfile.TemporaryDirectory() as td:
+        rb["libreoffice_recalc"] = RB.recalc(out / f"{stem}.xlsx", x["cell_map"])
+        rb["what_if"] = whatif_check(out / f"{stem}.xlsx", model, x["cell_map"], td)
+    if rb["libreoffice_recalc"]["state"] != "PASS" or rb["what_if"]["state"] != "PASS":
+        rb["state"] = "FAIL"                                  # LibreOffice is required for the build (installed here)
     p = P.render(model, out / f"{stem}.pdf", logo=LOGO, cairo=CAIRO)
     pc = pdf_checks(out / f"{stem}.pdf", model)
     return model, regs, v, x, rb, p, pc
@@ -152,8 +222,10 @@ def main(out, regs_commit, junit=None, rc=None):
     (pkg / "REPORTING_MODEL_V2.json").write_text(dumps(am))
     (pkg / "qortuba_check" / "REPORTING_MODEL_V2_QORTUBA.json").write_text(dumps(qm))
     qa = {"SCHEMA": "URBAN_REPORTING_V2_READBACK_QA_V1",
-          "alsenan": {"xlsx": {k: v for k, v in arb.items()}, "pdf": apc, "model_validation": {k: av[k] for k in ("state", "quantity_cells", "declared_sums", "lines")}},
-          "qortuba": {"xlsx": {k: v for k, v in qrb.items()}, "pdf": qpc, "model_validation": {k: qv[k] for k in ("state", "quantity_cells", "declared_sums", "lines")}},
+          "alsenan": {"xlsx": {k: v for k, v in arb.items()}, "pdf": apc,
+                      "model_validation": {k: av[k] for k in ("state", "quantity_cells", "declared_sums", "formula_cells", "lines")}},
+          "qortuba": {"xlsx": {k: v for k, v in qrb.items()}, "pdf": qpc,
+                      "model_validation": {k: qv[k] for k in ("state", "quantity_cells", "declared_sums", "formula_cells", "lines")}},
           "state": "PASS" if all(s == "PASS" for s in (arb["state"], apc["state"], qrb["state"], qpc["state"], av["state"], qv["state"])) else "FAIL"}
     (pkg / "REPORTING_READBACK_QA.json").write_text(dumps(qa))
     diff = {d: git("diff", "--stat", regs_commit, "--", d) for d in FROZEN}
