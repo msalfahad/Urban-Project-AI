@@ -200,17 +200,30 @@ def jd(v):
     return (dt.datetime(1858, 11, 17) + dt.timedelta(days=float(v) - 2400000.5)).replace(microsecond=0).isoformat()
 
 
+def raw_header(path, names=("$TDCREATE", "$TDUPDATE", "$TDINDWG", "$LASTSAVEDBY")) -> dict:
+    """Header values exactly as stored in the DXF bytes (ezdxf rewrites $TDCREATE with the load time on reading)."""
+    out = {}
+    lines = _bytes(path).decode("cp1252", errors="replace").splitlines()
+    end = next((i for i in range(len(lines) - 1) if lines[i].strip() == "0" and lines[i + 1].strip() == "ENDSEC"), 0)
+    for i in range(0, end - 3):
+        if lines[i].strip() == "9" and lines[i + 1].strip() in names:
+            out[lines[i + 1].strip()] = lines[i + 3].strip()
+    return out
+
+
 def dxf_facts(path) -> dict:
     d = ezdxf.readfile(str(path))
     h = d.header
+    raw = raw_header(path)
     msp = d.modelspace()
     c = Counter(e.dxftype() for e in msp)
     ext = (h.get("$EXTMIN"), h.get("$EXTMAX"))
     return {"cad_version": d.dxfversion, "release": d.acad_release, "maintenance": h.get("$ACADMAINTVER"),
             "insunits_declared": h.get("$INSUNITS"), "insunits_name": FR.INSUNITS.get(h.get("$INSUNITS"), ("?",))[0],
             "measurement": h.get("$MEASUREMENT"), "dimlfac": h.get("$DIMLFAC"), "dimscale": h.get("$DIMSCALE"),
-            "ltscale": h.get("$LTSCALE"), "last_saved_by": h.get("$LASTSAVEDBY"), "tdcreate": jd(h.get("$TDCREATE")),
-            "tdupdate": jd(h.get("$TDUPDATE")), "fingerprint_guid": h.get("$FINGERPRINTGUID"),
+            "ltscale": h.get("$LTSCALE"), "last_saved_by": raw.get("$LASTSAVEDBY"), "tdcreate": jd(float(raw["$TDCREATE"])) if "$TDCREATE" in raw else None,
+            "tdupdate": jd(float(raw["$TDUPDATE"])) if "$TDUPDATE" in raw else None,
+            "header_dates_basis": "raw DXF HEADER values (ezdxf restamps $TDCREATE on load)", "fingerprint_guid": h.get("$FINGERPRINTGUID"),
             "version_guid": h.get("$VERSIONGUID"), "codepage": h.get("$DWGCODEPAGE"),
             "extents": [[round(v, 3) for v in list(e)[:2]] for e in ext if e is not None],
             "layouts": [{"name": lay.name, "entities": len(lay)} for lay in d.layouts],
