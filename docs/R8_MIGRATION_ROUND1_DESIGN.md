@@ -1106,3 +1106,28 @@ the freeze and tested.
 - Registers in `tests/alsenan/registers_b1/`; package `alsenan_b1_package.py`; tests in
   `tests/alsenan/test_alsenan_b1_comparison.py`. The benchmark binaries are not committed (hash-pinned in the
   manifest).
+
+## 28. Alsenan Phase B2A (generic engine improvement + owner methods)
+
+- Recommendation (answers 1-16) committed before any code: `alsenan_phase_b2a_recommendation.json`.
+- New generic engines in `engine/source/` (project-agnostic; the benchmark is never read by them):
+  - `beam_binding` (BEAM_BINDING_V2): beam tag -> plan band by breadth of the tag's own schedule type, band
+    parallel to the tag baseline, tag inside the span, tag inside or within one text height of the band with nothing
+    between, unique within 1.5 text heights; simple / continuous / strap namespaces (B1 never resolves to CB1);
+    occurrences between supports; four length bases (drawn, clear face to face, support centre line, schedule spans);
+    two types on one segment -> BAND_TYPE_CONFLICT.
+  - `structural_vertical` (STRUCTURAL_VERTICAL_INTERVAL_V1): per column, the deepest member framing into its outline
+    (an unbound band only through its breadth-bounded depth), interval - D_ctrl, beam-column joint as a separate
+    component, neck BLOCKED_HEIGHT without a founding level.
+  - `slab_region` (SLAB_REGION_V1): polygonised plate, VOID / opening-cross / stair openings, thickness per face or
+    sheet-uniform printed value, closure audit (a band outside the plate blocks).
+  - `concrete_model`: non-overlapping physical model (slab / downstand / joint / column), gross beam view separately,
+    stair waist + wedges + landings (fail-closed).
+  - `opening_authority`, `curved_opening`, `finish_height`, `waterproofing_policy`, `urban_methods`.
+- Adapter `alsenan_phase_b2a.py` on the A3 adapter (rebuilt from the original source): cross-document registration
+  of each architectural plan to its roof-slab sheet by column outlines (one translation, all outlines), column tags
+  bound by printed size + adjacency + margin, salon beam (CB1), GF master bedroom certified with the wardrobe fact and
+  the door-frame-tick rule, Reception region from the slab opening, door evidence from door closures / swings.
+- Registers in `tests/alsenan/registers_b2a/` (+ A3 -> B2A delta, A3 preservation, QA gates, freeze); benchmark
+  evaluation only after the freeze in `tests/alsenan/registers_b2a_eval/`; tests in
+  `tests/alsenan/test_b2a_engines_synthetic.py` and `tests/alsenan/test_alsenan_b2a_real.py`.

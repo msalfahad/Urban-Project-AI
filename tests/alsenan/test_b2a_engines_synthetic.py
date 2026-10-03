@@ -211,6 +211,12 @@ def test_physical_model_never_double_counts_and_gross_view_is_separate():
     assert g[0]["volume_m3"] == pytest.approx(0.55) and m["computed_total_m3"] == pytest.approx(3.0 + 0.4 + 0.036 + 0.27)
 
 
+def test_printed_thickness_keeps_downstands_when_the_outline_is_blocked():
+    m = CM.physical_model(slab={"blocked": "SLAB_OUTLINE_NOT_ESTABLISHED", "t_cm": 15},
+                          beams=[{"id": "b", "length_m": 3.0, "B_cm": 20, "D_cm": 50}])
+    assert m["by_component_m3"] == {"DOWNSTAND_BEAM": pytest.approx(0.21)} and m["total_state"].startswith("PARTIAL")
+
+
 def test_blocked_components_never_enter_the_total():
     m = CM.physical_model(slab={"blocked": "SLAB_OUTLINE_NOT_ESTABLISHED"},
                           beams=[{"id": "b", "length_m": 3.0, "B_cm": 20, "D_cm": 50}])
@@ -316,6 +322,10 @@ def test_curved_bases_and_inner_default_with_override():
     assert CO.commercial(b)["basis"] == "INNER"
     assert CO.commercial(b, override={"id": "P1", "basis": "OUTER"})["length_mm"] == b["OUTER"]
     assert CO.bases(arcs + [{"cx": 30, "cy": 0, "r": 2200.0, "sweep_rad": math.pi / 3}])["state"] == "NOT_CONCENTRIC"
+    cut = [{"cx": 0, "cy": 0, "r": 2000.0, "sweep_rad": 1.0}, {"cx": 0, "cy": 0, "r": 2100.0, "sweep_rad": 0.97}]
+    bc = CO.bases(cut)                                       # straight jambs: sweeps differ, centre shared
+    assert bc["INNER"] == pytest.approx(2000.0) and bc["OUTER"] == pytest.approx(2037.0)
+    assert bc["CENTRE"] == pytest.approx(2018.5)
 
 
 # ------------------------------------------------------------------ wall heights

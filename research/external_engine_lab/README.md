@@ -198,5 +198,10 @@ bridges it to the legacy QS01 method. Owner decisions are scoped claims in `data
 | `alsenan_b1_benchmark.py` | (used by `alsenan_phase_b1.py`) | hash-pinned benchmark readers: raw rows, normalised model, web-app PDF rows |
 | `alsenan_phase_b1.py` | `tests/alsenan/registers_b1/*.json` | Phase B1 comparison: comparability gate, differences, manual-BOQ QA, web mapping, backlog, freeze, XLSX |
 | `alsenan_b1_package.py` | `data/reports/URBAN_QTO_ALSENAN_PHASE_B1_COMPARISON/` + zip | Phase B1 package (31 md + 16 json + xlsx) |
+| `alsenan_phase_b2a_recommendation.json` | - | Alsenan Phase B2A recommendation (answers 1-16), committed before B2A code |
+| `alsenan_phase_b2a.py` | (used by `alsenan_b2a_registers.py`) | Phase B2A adapter: beam binding, column intervals, slabs, concrete model, openings, curved, MBR, Reception, wall heights, waterproofing, review image |
+| `alsenan_b2a_registers.py` | `tests/alsenan/registers_b2a/*.json` | Phase B2A registers, A3 -> B2A delta, A3 preservation, QA gates, freeze, XLSX |
+| `alsenan_b2a_evaluation.py` | `tests/alsenan/registers_b2a_eval/BENCHMARK_EVALUATION.json` | benchmark evaluation after the B2A freeze (reads frozen files only) |
+| `alsenan_b2a_package.py` | `data/reports/URBAN_QTO_ALSENAN_PHASE_B2A_OWNER_METHODS/` + zip | Phase B2A package (21 md + 14 json + xlsx + review image) |
 
 `<work>` must hold `old_k2.pkl` (K2 on LibreDWG's DXF of the old DWG) and `new_k2.pkl` (K2 on the hash-addressed new DXF).

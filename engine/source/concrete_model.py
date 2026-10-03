@@ -33,7 +33,8 @@ def downstand(*, length_m, B_cm, D_cm, t_cm) -> float:
 
 
 def physical_model(*, slab=None, beams=(), joints=(), columns=()) -> dict:
-    """slab {"net_area_m2", "t_cm"} or {"blocked": reason}; beams [{"id", "length_m"|None, "B_cm", "D_cm", "blocked"?}];
+    """slab {"net_area_m2", "t_cm"} or {"blocked": reason, "t_cm"?} (a printed thickness keeps the downstands
+    measurable while the plate outline is blocked); beams [{"id", "length_m"|None, "B_cm", "D_cm", "blocked"?}];
     joints [{"id", "volume_m3"|None}]; columns [{"id", "volume_m3"|None, "blocked"?}]."""
     comp, blocked = [], []
     if slab and slab.get("net_area_m2") is not None and slab.get("t_cm"):
@@ -42,7 +43,7 @@ def physical_model(*, slab=None, beams=(), joints=(), columns=()) -> dict:
         t = slab["t_cm"]
     else:
         blocked.append({"component": "SLAB", "id": "SLAB", "reason": (slab or {}).get("blocked", "SLAB_NOT_ESTABLISHED")})
-        t = None
+        t = (slab or {}).get("t_cm")
     for b in beams:
         if b.get("blocked") or b.get("length_m") is None or t is None:
             blocked.append({"component": "DOWNSTAND_BEAM", "id": b["id"],
