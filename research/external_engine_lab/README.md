@@ -184,5 +184,10 @@ bridges it to the legacy QS01 method. Owner decisions are scoped claims in `data
 | `alsenan_phase_a.py` | (built by `alsenan_registers.py`) | Phase A adapter (facts only: hashes, frames, titles, tags, schedule grids) + the audited build through the generic engines |
 | `alsenan_registers.py` | `tests/alsenan/registers/*.json` | the 19 Phase A registers, the 13-column BOQ, the XLSX view (readback) and the freeze |
 | `alsenan_package.py` | `data/reports/URBAN_QTO_ALSENAN_P7757_ST7757_PHASE_A/` + zip | Phase A package (26 md + 19 json + xlsx; XLSX rebuilt from the registers and matched to the freeze) |
+| `alsenan_phase_a2_recommendation.json` | - | Alsenan Phase A2 recommendation (answers 1-14), committed before code |
+| `alsenan_phase_a2.py` | (built by `alsenan_a2_registers.py`) | Phase A2 adapter: CAD tables, RTEXT placement, two-pass entity-role inference, topology, vertical evidence, footing completion |
+| `alsenan_a2_registers.py` | `tests/alsenan/registers_a2/*.json` | the Phase A2 registers, classed BOQ rows, XLSX view (readback) and freeze |
+| `alsenan_a2_qortuba_regression.py` | `tests/alsenan/registers_a2/QORTUBA_REGRESSION.json` | rebuilt Qortuba RC1 registers vs the frozen ones |
+| `alsenan_a2_package.py` | `data/reports/URBAN_QTO_ALSENAN_P7757_ST7757_PHASE_A2/` + zip | Phase A2 package (28 md + json + xlsx) |
 
 `<work>` must hold `old_k2.pkl` (K2 on LibreDWG's DXF of the old DWG) and `new_k2.pkl` (K2 on the hash-addressed new DXF).

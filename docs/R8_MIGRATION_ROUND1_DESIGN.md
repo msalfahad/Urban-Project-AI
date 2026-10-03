@@ -1014,3 +1014,31 @@ The recommendation was written and committed before code: `research/external_eng
 - Qortuba regression: every RC1 register is reproduced unchanged except the engine-inventory hash of the edited exporter file.
 
 Phase B (comparison) has not started.
+
+## 25. Alsenan P7757 + ST7757 Phase A2 (source-only generic engine improvement)
+
+The owner confirmed the nine delivered files are the complete available source set (not called ISSUED). Phase A2
+improves the ONE engine generically; no layer map, handle list or coordinate list exists in code.
+
+- `engine/source/entity_role_inference.py` (ENTITY_ROLE_INFERENCE_V1): OBSERVATION -> ROLE_CANDIDATE (per-channel
+  scores) -> CLAIM -> ACCEPTED / BLOCKED. Channels: wall-face pairs at a wall-thickness offset, joins, linetype
+  DEFINITIONS (dash patterns, never names), solid fills over closed rectangles, door motif (swing 0.7-2.1 rad, radius
+  500-1300 mm, leaf from the hinge, hinge on a wall face), glazing inside wall gaps (gaps between collinear wall-face
+  pairs), treads, plot boundary, service lines crossing both faces of a band, isolated small circles, gap infill without
+  a swing, symbol / annotation occurrences, same-source corroboration across plan regions (pass 2). Claims are
+  `SourceLayerRoleClaim` with review state POLICY_ACCEPTED, authority ENTITY_ROLE_INFERENCE_V1, explicit part keys,
+  region scope; `role_authority.claim_applies` honours that state only with that authority and evidence.
+- `room_topology.run(inferred_doors=...)` merges door-motif occurrences into the door set the frozen opening closure
+  uses; `text_role` ignores inference claims (they name geometry parts, not texts). Defaults unchanged: the policy
+  records digested in every run manifest are untouched, so Qortuba manifests stay identical.
+- `level_marks.cross_document_plot_evidence`: plot sides printed in one drawing vs the plot rectangle drawn in the
+  other -> OTHER_SOURCE_DOCUMENT unit evidence (distinct printed values only; two ratios = contradiction).
+- `structural_qto.template_outlines` / `complete_by_count` (STRUCTURAL_COMPLETION_V1): schedule-size template outlines
+  (strap-beam entry gaps explained only by entering elements; one side clippable by a support line), containment
+  first, then type-level count uniqueness; never by distance.
+- Adapter `alsenan_phase_a2.py` (RTEXT placement from proxy graphics, CAD tables, two-pass inference, raster section
+  transcriptions), registers `alsenan_a2_registers.py` (`tests/alsenan/registers_a2/`, rows classed
+  PHYSICAL_MEASUREMENT / TRADE_ASSIGNMENT / BLOCKED_MATERIAL / BLOCKED_HEIGHT), package `alsenan_a2_package.py`,
+  Qortuba check `alsenan_a2_qortuba_regression.py`.
+
+Phase B (comparison) has not started.

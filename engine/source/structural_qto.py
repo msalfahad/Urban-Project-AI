@@ -145,3 +145,164 @@ def policy_record() -> dict:
                      "a schedule size the drawing contradicts"]}
     rec["digest"] = hashlib.sha256(json.dumps(rec, sort_keys=True).encode()).hexdigest()
     return rec
+
+
+# ======================================================================== A2: constraint-unique completion
+COMPLETION_POLICY_ID = "STRUCTURAL_COMPLETION_V1"
+COUNT_UNIQUE, COUNT_MISMATCH, NO_CANDIDATE = "COUNT_UNIQUE", "COUNT_MISMATCH", "NO_TEMPLATE_CANDIDATE"
+FULL, CLIPPED = "FULLY_DRAWN", "CLIPPED_ONE_SIDE_BY_SUPPORT_LINE"
+
+
+def _coverage(edge_list, at, lo, hi, eps):
+    """Fraction of [lo, hi] covered by the merged edges lying at `at`."""
+    iv = sorted((max(e[1], lo), min(e[2], hi)) for e in edge_list if abs(e[0] - at) <= eps and e[2] > lo and e[1] < hi)
+    cov, cur = 0.0, None
+    for a, b in iv:
+        if cur is None or a > cur[1]:
+            if cur is not None:
+                cov += cur[1] - cur[0]
+            cur = [a, b]
+        else:
+            cur[1] = max(cur[1], b)
+    if cur is not None:
+        cov += cur[1] - cur[0]
+    return cov / (hi - lo) if hi > lo else 0.0
+
+
+def _uncovered(edge_list, at, lo, hi, eps):
+    iv = sorted((max(e[1], lo), min(e[2], hi)) for e in edge_list if abs(e[0] - at) <= eps and e[2] > lo and e[1] < hi)
+    gaps, cur = [], lo
+    for a, b in iv:
+        if a > cur + eps:
+            gaps.append((cur, a))
+        cur = max(cur, b)
+    if hi > cur + eps:
+        gaps.append((cur, hi))
+    return gaps
+
+
+def template_outlines(segments, length_mm, width_mm, native_to_mm, *, eps, min_cover=0.8, support=(),
+                      entry_cover=0.5) -> list:
+    """Axis-aligned outlines of EXACTLY the schedule plan size (either orientation) in one element layer's
+    linework: the lower-left corner is a drawn end point, and each side is covered >= min_cover by the layer's
+    merged edges. A side covered >= entry_cover whose every uncovered stretch is bounded at BOTH ends by end points
+    of segments of the layer that do NOT run along the side (an element entering the outline: a strap / tie beam)
+    passes as ENTRY_GAPS_EXPLAINED; a bare gap (only the side's own pieces end there) does not. `support` (another layer's segments, e.g. a site boundary) may cover AT MOST ONE side
+    (CLIPPED). Nothing is snapped or scaled; the schedule size is the template, the drawing must carry it."""
+    H, V = edges(segments, eps=eps)
+    sH, sV = edges(support, eps=eps) if support else ([], [])
+    ends = [(x, y) for _, x1, y1, x2, y2 in segments for x, y in ((x1, y1), (x2, y2))]
+    grid = {}
+    for _, x1, y1, x2, y2 in segments:
+        horiz_seg = abs(y1 - y2) <= eps
+        vert_seg = abs(x1 - x2) <= eps
+        for x, y in ((x1, y1), (x2, y2)):
+            grid.setdefault((round(x / eps), round(y / eps)), []).append((x, y, horiz_seg, vert_seg))
+
+    def entering_end(x, y, horiz):
+        """an end point here of a segment NOT running along the side (an element entering the outline)"""
+        k = (round(x / eps), round(y / eps))
+        return any(abs(px - x) <= eps and abs(py - y) <= eps and not (hs if horiz else vs)
+                   for dx in (-1, 0, 1) for dy in (-1, 0, 1) for px, py, hs, vs in grid.get((k[0] + dx, k[1] + dy), ()))
+    out, seen = [], set()
+    sizes = {(length_mm / native_to_mm, width_mm / native_to_mm), (width_mm / native_to_mm, length_mm / native_to_mm)}
+    corners = sorted({(round(x, 6), round(y, 6)) for x, y in ends})
+    for x, y in corners:
+        for a, b in sorted(sizes):
+            x1, y1 = x + a, y + b
+            spec = {"S": (H, y, x, x1, True), "N": (H, y1, x, x1, True), "W": (V, x, y, y1, False),
+                    "E": (V, x1, y, y1, False)}
+            sides, how, weak = {}, {}, []
+            for k, (E_, at, lo, hi, horiz) in spec.items():
+                c = _coverage(E_, at, lo, hi, eps)
+                sides[k] = c
+                if c >= min_cover:
+                    how[k] = "COVERED"
+                    continue
+                gaps = _uncovered(E_, at, lo, hi, eps)
+                pts = [((g0, at), (g1, at)) if horiz else ((at, g0), (at, g1)) for g0, g1 in gaps]
+                if c >= entry_cover and gaps and all(entering_end(*p0, horiz) and entering_end(*p1, horiz)
+                                                      for p0, p1 in pts):
+                    how[k] = "ENTRY_GAPS_EXPLAINED"
+                    continue
+                weak.append(k)
+            state = FULL if all(v == "COVERED" for v in how.values()) and not weak else "ENTRY_GAPS_EXPLAINED"
+            if len(weak) == 1 and support:
+                k = weak[0]
+                c = (_coverage(sH, y if k == "S" else y1, x, x1, eps) if k in "SN"
+                     else _coverage(sV, x if k == "W" else x1, y, y1, eps))
+                if c >= min_cover:
+                    state, how[k], weak = CLIPPED, "SUPPORT_LINE", []
+            if weak:
+                continue
+            bnd = (round(x, 6), round(y, 6), round(x1, 6), round(y1, 6))
+            if bnd in seen:
+                continue
+            seen.add(bnd)
+            out.append({"bounds": bnd, "width": a, "height": b, "state": state, "sides": dict(sorted(how.items())),
+                        "side_cover": {k: round(v, 4) for k, v in sorted(sides.items())}})
+    return sorted(out, key=lambda r: r["bounds"])
+
+
+def _overlap(a, b):
+    return a[0] < b[2] and b[0] < a[2] and a[1] < b[3] and b[1] < a[3]
+
+
+def complete_by_count(orphans: dict, candidates: dict, taken=(), carriers=(), tags=()) -> dict:
+    """Type-level constraint-unique completion. orphans {type: [tag records with x, y]} (tags matched to no drawn
+    outline), candidates {type: [template outlines]}. A candidate is admissible only if it overlaps no outline
+    already matched (`taken`) and carries a supported element inside (`carriers`: [(x, y)], e.g. column centres).
+      1 CONTAINED      an admissible candidate holding exactly one tag of all `tags`, and that tag is an orphan of
+                       this type -> that orphan is matched to it
+      2 COUNT_UNIQUE   the admissible candidates holding no tag, pairwise disjoint, EXACTLY as many as the orphans
+                       still unmatched -> those orphans are complete by two independent channels (tag; drawn outline
+                       of the scheduled size) without deciding which tag names which outline
+    Anything else stays blocked and says why. Never by nearest distance."""
+    out = {}
+    inside = lambda b, x, y: b[0] < x < b[2] and b[1] < y < b[3]
+    for typ in sorted(orphans):
+        adm = []
+        for c in candidates.get(typ, []):
+            b = c["bounds"]
+            if any(_overlap(b, t) for t in taken):
+                continue
+            if carriers and not any(inside(b, x, y) for x, y in carriers):
+                continue
+            adm.append(c)
+        left = list(orphans[typ])
+        contained, free = [], []
+        for c in adm:
+            held = [(x, y) for x, y in tags if inside(c["bounds"], x, y)]
+            if not held:
+                free.append(c)
+                continue
+            mine = [o for o in left if inside(c["bounds"], o["x"], o["y"])]
+            if len(held) == 1 and len(mine) == 1:
+                contained.append(dict(c, matched_tag=mine[0]["key"], rule="CONTAINED"))
+                left = [o for o in left if o is not mine[0]]
+        free = [c for c in free if not any(_overlap(c["bounds"], k["bounds"]) for k in contained)]
+        disjoint = all(not _overlap(a["bounds"], b["bounds"]) for i, a in enumerate(free) for b in free[i + 1:])
+        n, m = len(left), len(free)
+        if n == 0:
+            state = COUNT_UNIQUE if contained else NO_CANDIDATE
+        else:
+            state = COUNT_UNIQUE if (n == m and disjoint) else (NO_CANDIDATE if m == 0 and not contained
+                                                                 else COUNT_MISMATCH)
+        out[typ] = {"state": state, "orphan_tags": len(orphans[typ]), "contained": contained,
+                    "unmatched_after_containment": n, "free_candidates": m, "disjoint": disjoint,
+                    "outlines": [dict(c, rule="COUNT_UNIQUE") for c in free] if state == COUNT_UNIQUE else
+                    [dict(c, rule="CANDIDATE_ONLY") for c in free]}
+    return out
+
+
+def completion_policy_record() -> dict:
+    rec = {"id": COMPLETION_POLICY_ID,
+           "template": "schedule plan size L x W (either orientation) drawn in the element layer; corner at a drawn "
+                       "end point; every side covered >= 0.8, or >= 0.5 with every gap bounded by drawn end points "
+                       "(an entering strap / tie beam); one side may be covered by a support line (CLIPPED)",
+           "uniqueness": "per type: candidates overlapping no matched outline and carrying a supported element; "
+                         "CONTAINED when a candidate holds exactly one tag and it is this type's orphan; then "
+                         "COUNT_UNIQUE iff the tag-free disjoint candidates equal the orphans left",
+           "never": ["nearest-distance matching", "snapping", "scaling", "a candidate holding another tag"]}
+    rec["digest"] = hashlib.sha256(json.dumps(rec, sort_keys=True).encode()).hexdigest()
+    return rec

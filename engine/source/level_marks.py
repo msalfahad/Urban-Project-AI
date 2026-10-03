@@ -89,3 +89,55 @@ def policy_record() -> dict:
     return {"policy_id": POLICY_ID, "kind": FR.SECTION_ELEVATION_DIMENSION, "agreement_rel": FR.AGREEMENT_REL,
             "requires": "one view, one annotation family (layer + text height), >= 2 distinct values",
             "never": ["an average of disagreeing pairs", "a plan level tag (no vertical axis)", "a status set here"]}
+
+
+# ======================================================================== A2: cross-document plot sides
+_PLOT_VALUE = re.compile(r"^\s*(\d{1,3}\.\d{2})\s*$")
+
+
+def plot_side_values(texts) -> list:
+    """Printed site-side values: a bare number with exactly two decimals (the metre-to-centimetre convention of
+    site / plot dimensions). [(value_m, text key)] - sorted, duplicates kept (each is one printed occurrence)."""
+    out = []
+    for key, value in texts:
+        m = _PLOT_VALUE.match(value or "")
+        if m:
+            out.append((float(m.group(1)), key))
+    return sorted(out)
+
+
+def cross_document_plot_evidence(printed, rectangles, *, printed_sha256: str, drawing_sha256: str,
+                                 evidence_id: str, space_id: str = "MODEL_SPACE") -> dict:
+    """OTHER_SOURCE_DOCUMENT unit evidence: a closed rectangle drawn in THIS drawing whose two side lengths are
+    printed (as metre values) in ANOTHER document, with ONE ratio for both sides (agreement <= frame.AGREEMENT_REL).
+    printed     [(value_m, key)] from the other document (plot_side_values)
+    rectangles  [{"width", "height", "edge_keys"}] native, from this drawing
+    The metre reading of a two-decimal site value is a stated CONVENTION (recorded); the two printed values must be
+    DISTINCT (a square rectangle gives no evidence); a rectangle matching only one printed value gives none; matches
+    at different ratios are a contradiction (RATIOS_DISAGREE), never averaged. The family lineage is the OTHER
+    document's (EXTERNAL_DOCUMENT), so it is independent of this drawing's own annotation."""
+    vals = sorted({v for v, _ in printed if v > 0})
+    hits = []
+    for r in rectangles:
+        w, h = sorted((r["width"], r["height"]))
+        if w <= 0 or w == h:
+            continue                                   # a square cannot tell which printed side is which
+        for i, a in enumerate(vals):
+            for b in vals[i + 1:]:                     # two DISTINCT printed sides, short with short
+                k1, k2 = a * 1000.0 / w, b * 1000.0 / h
+                if abs(k1 - k2) <= FR.AGREEMENT_REL * max(k1, k2):
+                    hits.append({"rect": r.get("edge_keys", [])[:8], "sides_native": [w, h], "printed_m": [a, b],
+                                 "mm_per_native": (k1 + k2) / 2.0})
+    ratios = sorted({round(h_["mm_per_native"], 9) for h_ in hits})
+    state = "NO_MATCH" if not hits else ("AGREE" if all(abs(r - ratios[0]) <= FR.AGREEMENT_REL * ratios[0]
+                                                        for r in ratios) else "RATIOS_DISAGREE")
+    ev = []
+    if state == "AGREE":
+        ev.append(FR.UnitEvidence(evidence_id, FR.NATIVE_UNIT, FR.OTHER_SOURCE_DOCUMENT, space_id,
+                                  (FR.family_lineage(FR.OTHER_SOURCE_DOCUMENT, printed_sha256),
+                                   "AUTHORED:PRINTED_PLOT_SIDES", "DRAWN:" + str(drawing_sha256)),
+                                  derived_value=ratios[0], observed_value=len(hits), source_ref="PLOT_SIDES",
+                                  source_sha256=printed_sha256, unit="m",
+                                  notes="convention: a two-decimal site / plot side value is metres"))
+    return {"state": state, "matches": hits, "ratios": ratios, "evidence": ev,
+            "convention": "two-decimal site value = metres (recorded, not hidden)"}
