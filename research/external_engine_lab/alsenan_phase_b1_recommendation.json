@@ -1,0 +1,95 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_PHASE_B1_RECOMMENDATION_V1",
+ "phase": "PHASE_B1 - benchmark reveal + forensic comparison only",
+ "base_commit": "9aa2741",
+ "phase_a3_freeze": "tests/alsenan/registers_a3/ALSENAN_P7757_ST7757_PHASE_A3_FREEZE.json (sha256 de01b42d1478628e618a508f09316c4f9a879d4883d451224653866e18d5c849, code commit 7ac5d9e)",
+ "written_before_comparison_code": true,
+ "inspection_disclosure": "Before this recommendation every sheet of the seven attached files was read (the brief requires inspection first). The tolerances below are the brief's own suggested thresholds, declared unchanged; none was chosen after looking at an individual difference.",
+ "1_benchmark_files_supplied": [
+  {"upload": "d901e652-____________________________1.xlsx", "sha256": "de448191fb9d0ababd33298289047c610366aba23912499c280146100be1151a", "cover_title": "كشف حصر مقاسات تنفيذ اعمال: ارضيات وعازل وديكور ودرابزين (NO:3, 2026-06-22)", "sheets": ["الغلاف", "العازل", "رخام+حوش", "ديكور", "سيراميك"], "role": "freelancer manual QS - floors / wall tile / pool tile / yard / marble stairs / waterproofing / gypsum decor / railing"},
+  {"upload": "5aab715f-_______.xlsx", "sha256": "873308bb6a3c99fd49332d6db881c41f51c94412a1caed986fe5d4a25179175d", "cover_title": "مبانى الطابوق (NO:2, 2026-06-22)", "sheets": ["الغلاف", "الكميات"], "role": "freelancer manual QS - blockwork (external, 15 cm internal, 20 cm internal)"},
+  {"upload": "e1c1f202-_____.xls", "sha256": "d1b459e531d78767041fe43a1ffa2f4560ad99939793044bfcbd1dbd13fa68f1", "cover_title": "الصبغ (NO:6)", "sheets": ["البيــــــــــــان", "فاتورة كبــــــيرة", "الفاتورة"], "role": "freelancer manual QS - internal paint (walls, decor + cove light)"},
+  {"upload": "d025d9f0-_________________1.xlsx", "sha256": "ae608411ed5b9e64811a15c353adbdd017fa3e51abfdffcf0aa1454b85d1957c", "cover_title": "خرسانة مسلحة (NO:1, 2026-06-21)", "sheets": ["ورقة1", "القواعد", "الشناجات", "الحوائط + الأعمدة", "كمرات", "بلاطات ", "السلم", "حمام السباحة"], "role": "freelancer manual QS - concrete (blinding, footings, straps, ground slab / beams, necks, columns, beams, slabs, stairs, pool) + rebar tonnage"},
+  {"upload": "64f4b7fc-__________.xlsx", "sha256": "7826608fc716ca0cdcd587aaf5ff9dd003d6968d6f77bca3289819844b2703e4", "cover_title": "الالمونيوم (NO:3, 2026-06-22)", "sheets": ["الغلاف", "الكميات"], "role": "freelancer manual QS - aluminium doors and windows (m2 by floor)"},
+  {"upload": "563d9805-______________________.xls", "sha256": "bf6e3123b988534dafcc488978eb8371e4f07a5f52857d01eb472db1aed22121", "cover_title": "مساح داخلى وخارجى (NO:5)", "sheets": ["البيــــــــــــان", "فاتورة كبــــــيرة", "الفاتورة"], "role": "freelancer manual QS - internal / external plaster, corners, spatter coat, external sigma"},
+  {"upload": "01e19893-Alsenan_Chalet_by_category.pdf", "sha256": "e92938e9b8df6f336a3b74ccf7962d1245f2e46e6d3645a71e95be6800ebc3bb", "title": "Alsenan Chalet - Cost By Category (03/10/2026), 8 pages, grand total 120,974.50 KWD", "role": "web-app commercial report (Urban Projects manager)"}
+ ],
+ "1_notes": [
+  "The cover numbering runs NO:1, 2, 3, 3, 5, 6: two covers say NO:3 and no NO:4 was supplied. Recorded as a numbering gap, not an owner request (files are not asked for).",
+  "Byte-identical copies of the six workbooks have been in the upload store since 2026-09-09 under other prefixes; they were never opened while the firewall was closed. The older web-app PDF (737b63b5, different hash) is NOT part of Phase B1 and is not opened.",
+  ".xls files are BIFF: values are readable, formulas are not (recorded as VALUES_ONLY)."
+ ],
+ "2_direct_manual_qs": "The six freelancer workbooks. Their detail sheets carry dimension x count rows (xlsx with live formulas; xls values only). The cover sheets are summaries of the detail sheets through cell references.",
+ "3_commercial_only": "The web-app PDF. In the freelancer covers the price columns (سعرالوحدة, المستحق) exist but are empty - no prices in the freelancer files.",
+ "4_web_app_independent": "NO. WEB_APP_DEPENDENCY = DERIVED_FROM_FREELANCER_BOQ (owner statement, and the numbers show it: concrete 380 m3 against 352.436, blinding 50 against 47.055, steel 45 t against 44.19, internal plaster 1,160 against 1,151.14, corners 780 against 770.75, spatter 440 against 433.83, external plaster 1,500 against 1,469.97, marble stairs 300 against 295.44, waterproofing 360 / 340 against 357.01 / 338.61, yard 155 / 85 against 151.8 / 81.32: rounded up for purchasing). It is never a second vote.",
+ "5_duplicated_quantities": [
+  "INSIDE the finishes workbook: 'اجمالي الدرج والبسطات' = 295.44 m2 is SUM(H13:H41) of sheet رخام+حوش, and H13 is the yard floor (151.8 m2), which the cover also reports separately as yard floor. Stairs + landings alone = 143.64 m2. Candidate BENCHMARK_POSSIBLE_ERROR (duplicate) - it propagates into the web-app (300).",
+  "Legitimate multi-trade reuse (not duplicates): the 72.01 m2 wet-room floors appear in floor tile, wet waterproofing and bathroom decor; the 337.57 m2 dry-room floors appear in floor tile and gypsum decor; aluminium openings appear as deductions in blockwork, paint and plaster.",
+  "Web-app rows duplicate freelancer quantities (derived) - never counted twice."
+ ],
+ "6_scopes": {
+  "concrete": ["blinding (plain)", "footings F..F.N", "strap beams STB1-3", "perimeter strap", "ground slab 10 cm", "ground beams (longitudinal / transverse / fence)", "elevator walls", "column necks", "columns GF / 1F / roof", "beams GF / 1F / roof", "slabs GF / 1F / roof", "stairs + domes", "pool", "rebar tonnage per group"],
+  "blockwork": ["external walls by floor (+ projections)", "15 cm internal by floor (+ fence, parapets)", "20 cm internal by floor", "opening deductions"],
+  "aluminium": ["doors m2", "windows m2 by floor (incl. pool windows)"],
+  "finishes": ["ceramic floors by room", "skirting", "wall tile wet rooms (height 3.0)", "pool floor / walls", "yard floor + skirting", "marble stairs / landings / nosings", "wet-room and roof waterproofing", "gypsum decor + cornices", "internal railing"],
+  "paint": ["internal walls by room (height per floor)", "door lintels", "opening deductions (half)", "decor + cove light"],
+  "plaster": ["internal plaster by room", "corners and ends", "spatter coat wet rooms / under skirting", "external plaster by facade", "external corners", "parapets / fence"]
+ },
+ "7_units": "Freelancer: م3 (concrete), طن (rebar, constants), م2 (areas), م.ط (linear), عدد (counts / nosings). Web-app: 'qty' (unit not stated), 'item' (lump sum), m3, ton.",
+ "8_mapping": "Most freelancer rows map to an Urban trade. No Urban counterpart (BENCHMARK_ONLY): blinding, ground slab, perimeter strap, ground-beam lengths, elevator walls, planted columns PC / PC1 / PC2, pool, domes, cornices, cove light, railing, external sigma, corner beads, yard, marble nosings. Web-app lump sums (AC, electrical, sanitary, ventilation, scaffold, labour, demolition) are not quantities.",
+ "9_price_only_rows": "Every web-app rate / total is recorded (WEB_APP_ROWS) but never compared. Web-app rows with unit 'item' and qty 1 are lump sums - no quantity. Freelancer price columns are empty.",
+ "10_totals_vs_details": {
+  "detailed": ["footings / straps / necks / columns / beams / stairs / pool (dimension x count)", "blockwork walls", "aluminium openings", "rooms (floor area + perimeter)", "wet-room walls", "paint / plaster rooms and facades"],
+  "totals_only": ["slab areas 207 / 120 / 31.84 / 13.35 m2", "ground slab 295.5 m2", "ground-beam lengths 100 / 111 / 42 m", "perimeter strap 71.7 m", "roof waterproofing 285 m2 / 194 m", "yard 151.8 m2 / 81.32 m", "pool floor 21 / walls 19.8 m2", "railing 18.95 m", "rebar tonnage per group (typed constants, no formula)"]
+ },
+ "11_comparison_hierarchy": [
+  "1. DRAWINGS / SOURCE = physical authority (every difference is investigated against them)",
+  "2. URBAN PHASE A3 (frozen) = machine interpretation",
+  "3. FREELANCER detailed rows = independent manual-QS benchmark, compared at the finest common grain: occurrence / type > room > floor > trade",
+  "4. FREELANCER totals-only rows = scope evidence, never an accuracy metric",
+  "5. WEB-APP = commercial representation derived from 3/4; category mapping only"
+ ],
+ "12_exactly_comparable": ["footing type counts and per-type concrete (both use the schedule size)", "strap beams SB1-3: B, D, length, volume", "column type counts at neck level and the sections per storey band", "certified room floor areas and perimeters (KITCHEN by unique label; W.C / BATH by room class + area + perimeter, MEDIUM)", "salon opening width 6.33 m", "window widths per floor (multiset)", "1F curved glazing length"],
+ "13_diagnostic_only": ["F10 and the F inside H6939 (blocked)", "column / beam / slab / ground-beam / stair / pool volumes (Urban blocked)", "uncertified room candidates (GF master bedroom 16.55 m2, dewaneya 24.94 m2)", "blockwork / paint / plaster / wall-tile areas (heights blocked; Urban lengths are established-band subtotals)", "salon aluminium area (height authority differs)", "master-bedroom curved glazing (manual row identity is inferred)", "waterproofing, marble stairs, rebar (allowance)"],
+ "14_firewall_into_engine": [
+  "Phase B1 code lives in research/external_engine_lab (never engine/) and reads only the frozen A3 JSON registers plus the pinned benchmark files.",
+  "It imports no engine quantity module (static import test).",
+  "It writes only tests/alsenan/registers_b1/ and data/reports/.",
+  "A test proves the A3 registers are byte-identical to commit 9aa2741 and that engine/ has the same git tree as the A3 code commit.",
+  "Every benchmark value carries origin BENCHMARK in its record; the B1 freeze becomes the anti-calibration boundary for Phase B2: any later change to an A3 quantity must cite a generic defect from PROPOSED_FIX_BACKLOG, never a benchmark row.",
+  "The benchmark binaries are not committed (they stay in the upload store, hash-pinned in BENCHMARK_SOURCE_MANIFEST); the extracted rows are committed."
+ ],
+ "tolerances_declared": {
+  "area_volume": {"close_match_pct": 1.0, "investigate_pct": 2.0, "material_above_pct": 2.0},
+  "linear": {"close_match": "<= max(0.05 m, 1 %)", "investigate": "<= max(0.10 m, 2 %)"},
+  "count": "exact (any difference is a classified difference)",
+  "width_match_for_openings_mm": 10,
+  "rule": "tolerance never hides a structural count / type difference; only EXACT_COMPARABLE rows get a percentage"
+ },
+ "inspection_observations": [
+  "Footings: the freelancer uses the schedule size for every type (F 0.8 x 0.9 x 0.3 = 0.216). Counts: F 4, F3 1 (source shows two separately drawn F3 outlines), F10 1 at the schedule size, FN 4.",
+  "Straps: STB1 0.5 x 0.7 x 4.55, STB2 0.5 x 1.0 x 2.3, STB3 0.4 x 0.5 x 3.25 - lengths within 0.3 % of Urban's measured clear lengths.",
+  "Columns: neck height 1.5 m (assumed), GF 3.75 m, 1F / roof 3.45 m = floor-to-floor (4.50 / 4.20) minus 0.75 m (main-beam depth).",
+  "Beams: one length per occurrence row, full depth D (no slab deduction); continuous-beam lengths differ from the schedule spans by -6.4 % to +12.1 %.",
+  "Slabs: one area per floor, thickness 0.16 (roof part 0.18), no void / beam deduction shown.",
+  "Rebar: tonnage typed as constants per group (5.8 / 9.75 / 7.95 / 9.89 / 5.4 / 3.9 / 1.5 t = 44.19 t), ratios 75-200 kg/m3: an allowance, not a bar schedule.",
+  "Rooms: reception + dining (+ saloon) is ONE manual row of 137.5 m2; GF master bedroom 16.66 m2; entrance hall 10.46 m2 as its own room.",
+  "Aluminium: two GF pool windows 6.57 x 4.3 and 6.33 x 4.3 (the salon width is 6.33; the manual height is 4.30 m, not 3.65); 1F pool window 3.15 x 3.0.",
+  "Arithmetic: 1F beam subtotal I82 = SUM(I60:I78) skips I59 (0.128 m3) while the carried value I79 includes it; blockwork H74 multiplies D75 instead of D74 (same value, no numeric effect); pool sheet D19 = #REF!."
+ ],
+ "15_disagreements_with_chatgpt_plan": [
+  "The web-app is not just 'derived': its quantities are procurement-rounded (+0.4 % to +8 %) and several categories are lump sums, so it cannot even serve as a rounded copy of the freelancer quantity for comparison - category mapping only.",
+  "Footing 'type-by-type concrete' comparison adds nothing beyond counts: both sides use the schedule size, so every footing difference is a COUNT / IDENTITY difference; percentages on per-type volumes would only restate counts.",
+  "Salon / reception / dining: the manual merges them into one 137.5 m2 row (and includes the entrance as a separate room), so a room-by-room comparison of that zone is impossible; it can only show what the manual assumed about closure.",
+  "Master-bedroom curved glazing: the manual has no curved item; attributing the 6.57 x 4.3 'pool window' to it is itself an identity inference and must be graded MEDIUM, not used to choose Urban's curve basis.",
+  "The manual BOQ needs auditing before any Urban difference is called an Urban error: the marble-stair total already double-counts the yard (151.8 m2), and one beam subtotal omits a row.",
+  "A single 'foundation concrete' comparison is misleading even after decomposition, because the manual 'footings' total (77.63) silently includes the perimeter strap (8.60) and the straps; only the occurrence-level rows are comparable."
+ ],
+ "plan": [
+  "Hash manifest + dependency record (no quantity read before hashing).",
+  "Raw extraction of every non-empty row (cell refs, Arabic text, values, formulas; xls values only); web-app rows from the PDF text layer (NFKC-normalised, raw kept).",
+  "Normalised model (taxonomy + original description + original unit) by declarative rules (sheet + section + label), no value is changed.",
+  "Comparability gate, then metrics for EXACT_COMPARABLE only; difference register with a primary class; manual BOQ QA; backlog P0-P4; owner questions.",
+  "B1 freeze, registers twice (byte-identical), one full suite, package (31 md + 16 json + xlsx). No engine change."
+ ]
+}
