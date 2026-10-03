@@ -92,9 +92,11 @@ def evaluate(regdir) -> dict:
         "the benchmark 4.30 m exceeds the structural soffit bound of the beam over the opening (interval 4.50 - CB1 0.75 = "
         "3.75 above GF FFL, less any 1F build-up): BENCHMARK_EXCEEDS_SOURCE_BOUND unless measured from a lower level")
     g = [r for r in cu["rows"] if r["id"] == "GF-CG01"][0]
-    add("CMP-158", g["commercial_m"], f"inner arc (method); centre {g['bases_m']['CENTRE']}, outer {g['bases_m']['OUTER']}",
-        "the inner-face method moves the Urban length from the mean arc towards the manual; the manual is still "
-        f"{round(g['bases_m']['INNER'] - 6.57, 4) if diff['CMP-158']['bench_qty'] == 6.57 else 'n/a'} m below the inner arc")
+    gb = g["bases_m"]
+    lo, mid, hi = (gb.get(k, gb.get(a)) for k, a in (("MIN_RADIUS_ARC", "INNER"), ("MID_BAND_ARC", "CENTRE"), ("MAX_RADIUS_ARC", "OUTER")))
+    add("CMP-158", g["commercial_m"], f"minimum-radius arc (method); mid-band {mid}, maximum-radius {hi}",
+        "the method moves the Urban length from the mean arc towards the manual; the manual is still "
+        f"{round(lo - diff['CMP-158']['bench_qty'], 4)} m below the minimum-radius arc")
     gfw = [r for r in op["rows"] if r["floor"] == "GF" and r["id"] != "GF-W09"]
     add("CMP-161", sum(1 for r in gfw if r["function"] == "WINDOW_CANDIDATE"),
         f"GF straight window candidates; {sum(1 for r in gfw if r['function'] == 'DOOR')} former windows are doors (closure / "

@@ -10,7 +10,7 @@ through generic engines (engine/source):
     slab_region           slab plate / openings / thickness per roof sheet
     concrete_model        physical non-overlapping storey model + gross beam view + stair (fail-closed)
     opening_authority     door evidence from closures / swings, function UNKNOWN when ambiguous
-    curved_opening        inner / centre / outer / chord + the inner-face method
+    curved_opening        MIN / MID-BAND / MAX radius arcs + chord, room side where established, the method
     finish_height         blockwork / plaster / paint / wall-tile heights per room face
     waterproofing_policy  roof (0.20 upturn) / wet (0.15 upturn); laps separate
     urban_methods         versioned method register
@@ -512,15 +512,42 @@ def _items(ctx, out) -> list:
     return rows
 
 
+A3_STAIRS = ROOT / "tests/alsenan/registers_a3/STAIR_REGISTER.json"
+
+
 def _stairs(ctx) -> dict:
-    s = CM.stair(flights=[{"risers": None, "riser_m": None, "going_m": 0.30, "width_m": None, "waist_m": None}])
-    return {"evidence": {"tread_going_cm": 30, "source": "ST7757.pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION (N.T.S.); "
+    """STAIR_CONCRETE_V2 inputs with their authority: every observed tread run of the plans is a flight CANDIDATE
+    (its tread-line count is what the plan cut shows, not a certified tread count); riser count, riser height, waist
+    and landing thickness are not printed. The engine therefore blocks, listing each missing input."""
+    runs = [r for fl in FLOORS for r in (json.loads(A3_STAIRS.read_text())["tread_runs"].get(fl) or [])]
+    flights = [{"riser_count": None, "tread_count": r["tread_lines"], "riser_height_m": None,
+                "tread_going_m": r["going_mm"] / 1000.0, "flight_width_m": r["width_mm"] / 1000.0, "waist_thickness_m": None,
+                "authority": {"riser_count": "UNKNOWN", "tread_count": "CANDIDATE", "riser_height_m": "UNKNOWN",
+                              "tread_going_m": "SOURCE", "flight_width_m": "SOURCE_PLAN_MEASURED", "waist_thickness_m": "UNKNOWN"}}
+               for r in runs]
+    s = CM.stair(flights=flights, landings=[{"area_m2": None, "thickness_m": None}])
+    known = {"tread_going_m": {"value": 0.30, "authority": "SOURCE (ST7757.pdf p.16 typical section prints 30; plan tread "
+                                                           "spacing 300 mm)"},
+             "flight_width_m": {"values": sorted({r["width_mm"] / 1000.0 for r in runs}), "authority": "SOURCE_PLAN_MEASURED "
+                                "(tread-line length on the architectural plans)"},
+             "observed_tread_line_runs": [{"floor": r["floor"], "layer": r["layer"], "linetype": r["linetype_class"],
+                                           "tread_lines": r["tread_lines"], "width_m": r["width_mm"] / 1000.0} for r in runs],
+             "tread_count": {"authority": "CANDIDATE", "why": "tread lines shown on a plan cut are not a certified tread "
+                             "count per flight (part of each flight is above the cut or dashed)"}}
+    unknown = {"riser_count": "not printed (no stair section with counted risers)",
+               "riser_height_m": "not printed",
+               "waist_thickness_m": "not printed ('THICK' without a value on p.16)",
+               "landing_thickness_m": "not printed", "landing_area_m2": "not established"}
+    return {"policy": CM.STAIR_POLICY_ID, "known_inputs": known, "unknown_inputs": unknown, "result": s,
+            "evidence": {"tread_going_cm": 30, "source": "ST7757.pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION (N.T.S.); "
                          "architectural tread runs (A3 STAIR_REGISTER: going 300 mm, flight widths 1150 / 2800 mm)",
                          "waist": "NOT_PRINTED ('THICK' without value)", "riser": "NOT_PRINTED",
                          "landing_thickness": "NOT_PRINTED", "stair_beam": "G.B 30 wide on 10 cm blinding 50 wide (typical)",
                          "riser_count": "not proved (tread lines are not risers; a count from the storey height would be "
                                         "an assumption)"},
-            "result": s, "never": "steps x 0.30 x 0.15"}
+            "never": "steps x 0.30 x 0.15",
+            "never_inferred": ["tread_count from riser_count", "riser_count from tread_count or tread lines",
+                               "riser_count from the storey height"]}
 
 
 # ------------------------------------------------------------------ architecture
@@ -556,7 +583,7 @@ def _architecture(ctx, A, out) -> dict:
     res = {}
     res["openings"] = _openings(ctx, A)
     res["salon"] = _salon(ctx, out, res["openings"])
-    res["curved"] = _curved(ctx)
+    res["curved"] = _curved(ctx, A)
     res["mbr"] = _mbr(ctx, A)
     res["gf_open_site"] = _open_site(ctx)
     res["reception"] = _reception(ctx, A, out)
@@ -653,19 +680,51 @@ def _salon(ctx, out, openings) -> dict:
                 rule="the beam soffit is an upper bound for the aluminium head; the head itself is not printed")
 
 
-def _curved(ctx) -> dict:
+def _curved(ctx, A) -> dict:
     rows = []
+    keys = {p.identity.key: p for p in A["parts"] if p.kind == "ARC"}
     for g in ctx["a3"]["architecture"]["curved_glazing"]["items"]:
         arcs = [{"cx": g["centre"][0], "cy": g["centre"][1], "r": r, "sweep_rad": s} for r, s in zip(g["radii_mm"], g["sweep_rad"])]
         b = CO.bases(arcs)
-        c = CO.commercial(b)
+        side, probe = _curved_side(ctx, g, keys)
+        c = CO.commercial(b, room_side=side)
         rows.append({"id": g["id"], "floor": g["floor"], "host_labels": g["host_labels"],
-                     "bases_m": {k: round(b[k] / 1000.0, 6) for k in CO.BASES} if b["state"] == "COMPUTED" else None,
+                     "bases_m": ({k: round(b[k] / 1000.0, 6) for k in CO.GEOMETRIC + tuple(CO.ALIASES)}
+                                 if b["state"] == "COMPUTED" else None),
+                     "aliases": dict(CO.ALIASES), "orientation": c.get("orientation"), "side_probe": probe,
                      "commercial_m": round(c["length_mm"] / 1000.0, 6) if c["state"] == "COMPUTED" else None,
                      "commercial_basis": c.get("basis"), "authority": c.get("authority"),
                      "a3_developed_length_m": round(g["developed_length_mm"] / 1000.0, 6),
                      "height": g["height"], "area_m2": None})
-    return {"rows": rows, "method": CO.METHOD_ID, "override": None}
+    return {"rows": rows, "method": CO.METHOD_ID, "policy": CO.POLICY_ID, "override": None,
+            "rule": "geometric bases named by radius; ROOM_SIDE / EXTERIOR_SIDE only where a probe establishes them"}
+
+
+def _curved_side(ctx, g, arcs_by_key, d=300.0):
+    """Probe just inside the smallest radius and just outside the largest at mid sweep of the smallest-radius arc:
+    the side is established only when exactly one probe lies inside a room site and the other in no site."""
+    rmin, rmax = min(g["radii_mm"]), max(g["radii_mm"])
+    a = [arcs_by_key[k] for k in g["parts"] if k in arcs_by_key and abs(arcs_by_key[k].geometry[2] - rmin) <= 1.0]
+    if len(a) != 1:
+        return None, {"state": "NOT_ESTABLISHED", "why": "smallest-radius arc not unique"}
+    cx, cy, r, a0, a1 = a[0].geometry[:5]
+    if a1 < a0:
+        a1 += 2 * math.pi
+    m = (a0 + a1) / 2.0
+    res = ctx["a2_raw"][g["floor"]]["res"]
+    arr, sites = res.get("_arr"), res.get("sites") or []
+    by = {s["site_id"]: s for s in sites}
+    out = {}
+    for name, rr in (("MIN_RADIUS", rmin - d), ("MAX_RADIUS", rmax + d)):
+        pt = (cx + rr * math.cos(m), cy + rr * math.sin(m))
+        sid = T.locate(arr, sites, pt, 1.0)[0] if arr is not None else None
+        st = by.get(sid)
+        out[name] = {"site": sid, "room": bool(st) and (st["kind"] == "LABELLED_SITE" or st.get("status") == "CERTIFIED")}
+    rooms = [k for k, v in out.items() if v["room"]]
+    none = [k for k, v in out.items() if v["site"] is None]
+    if len(rooms) == 1 and len(none) == 1:
+        return rooms[0], {"state": "ESTABLISHED", "probes": out, "offset_mm": d}
+    return None, {"state": "NOT_ESTABLISHED", "probes": out, "offset_mm": d}
 
 
 def _mbr(ctx, A) -> dict:

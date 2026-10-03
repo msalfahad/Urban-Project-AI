@@ -223,13 +223,66 @@ def test_blocked_components_never_enter_the_total():
     assert m["computed_total_m3"] == 0.0 and m["total_state"].startswith("PARTIAL") and len(m["blocked"]) == 2
 
 
-def test_stair_waist_wedges_landings_and_blocked_inputs():
-    s = CM.stair(flights=[{"risers": 10, "riser_m": 0.17, "going_m": 0.28, "width_m": 1.1, "waist_m": 0.14}],
-                 landings=[{"area_m2": 1.21, "thickness_m": 0.14}])
-    slope = math.hypot(2.8, 1.7)
-    assert s["volume_m3"] == pytest.approx(slope * 1.1 * 0.14 + 0.5 * 0.17 * 0.28 * 1.1 * 10 + 1.21 * 0.14)
-    b = CM.stair(flights=[{"risers": 10, "riser_m": None, "going_m": 0.28, "width_m": 1.1, "waist_m": None}])
-    assert b["state"] == "BLOCKED_INPUT_MISSING" and b["missing"] == ["riser_m", "waist_m"] and b["volume_m3"] is None
+def F(rc, tc, R=0.17, G=0.28, W=1.1, t=0.14, **kw):
+    return dict({"riser_count": rc, "tread_count": tc, "riser_height_m": R, "tread_going_m": G, "flight_width_m": W,
+                 "waist_thickness_m": t}, **kw)
+
+
+def flight_volume(rc, tc, R, G, W, t):
+    return math.hypot(rc * R, tc * G) * W * t + 0.5 * R * G * W * tc
+
+
+def test_stair_A_20_risers_19_treads():
+    s = CM.stair(flights=[F(20, 19)])
+    f = s["flights"][0]
+    assert s["state"] == "COMPUTED" and f["vertical_rise_m"] == pytest.approx(3.4) and f["horizontal_run_m"] == pytest.approx(5.32)
+    assert s["volume_m3"] == pytest.approx(flight_volume(20, 19, 0.17, 0.28, 1.1, 0.14))
+
+
+def test_stair_B_10_risers_10_treads():
+    s = CM.stair(flights=[F(10, 10)])
+    assert s["volume_m3"] == pytest.approx(flight_volume(10, 10, 0.17, 0.28, 1.1, 0.14))
+
+
+def test_stair_C_tread_count_missing_blocks():
+    s = CM.stair(flights=[F(20, None)])
+    assert s["state"] == "BLOCKED_INPUT_MISSING" and s["missing"] == ["flight 1: tread_count"] and s["volume_m3"] is None
+
+
+def test_stair_D_riser_count_missing_blocks():
+    s = CM.stair(flights=[F(None, 19)])
+    assert s["state"] == "BLOCKED_INPUT_MISSING" and s["missing"] == ["flight 1: riser_count"]
+
+
+def test_stair_E_two_flights_with_different_counts():
+    s = CM.stair(flights=[F(11, 10), F(9, 8, W=1.2)])
+    assert [(f["riser_count"], f["tread_count"]) for f in s["flights"]] == [(11, 10), (9, 8)]
+    assert s["volume_m3"] == pytest.approx(flight_volume(11, 10, 0.17, 0.28, 1.1, 0.14) + flight_volume(9, 8, 0.17, 0.28, 1.2, 0.14))
+
+
+def test_stair_F_flight_and_landing():
+    s = CM.stair(flights=[F(10, 9)], landings=[{"area_m2": 1.21, "thickness_m": 0.14}])
+    assert s["volume_m3"] == pytest.approx(flight_volume(10, 9, 0.17, 0.28, 1.1, 0.14) + 1.21 * 0.14)
+    b = CM.stair(flights=[F(10, 9)], landings=[{"area_m2": 1.21, "thickness_m": None}])
+    assert b["state"] == "BLOCKED_INPUT_MISSING" and b["missing"] == ["landing 1: thickness_m"]
+
+
+def test_stair_G_missing_waist_blocks():
+    s = CM.stair(flights=[F(10, 9, t=None)])
+    assert s["state"] == "BLOCKED_INPUT_MISSING" and s["missing"] == ["flight 1: waist_thickness_m"]
+
+
+def test_stair_old_implicit_equality_can_no_longer_occur():
+    old_schema = {"risers": 10, "riser_m": 0.17, "going_m": 0.28, "width_m": 1.1, "waist_m": 0.14}
+    assert CM.stair(flights=[old_schema])["state"] == "BLOCKED_INPUT_MISSING"     # no tread count -> no volume
+    a, b = CM.stair(flights=[F(10, 9)]), CM.stair(flights=[F(10, 10)])
+    assert a["volume_m3"] != b["volume_m3"] and a["flights"][0]["horizontal_run_m"] == pytest.approx(9 * 0.28)
+    cand = CM.stair(flights=[F(10, 9, authority={"tread_count": "CANDIDATE"})])
+    assert cand["state"] == "BLOCKED_INPUT_MISSING"                                 # a candidate count is not an input
+    rel = CM.stair(flights=[F(10, None, tread_relation="SOURCE_ESTABLISHED: tread_count = riser_count - 1")])
+    assert rel["flights"][0]["tread_count"] == 9
+    assert CM.stair(flights=[F(10, None, tread_relation="ASSUMED")])["state"] == "BLOCKED_INPUT_MISSING"
+    assert CM.STAIR_POLICY_ID == "STAIR_CONCRETE_V2"
 
 
 # ------------------------------------------------------------------ slab regions
@@ -312,20 +365,37 @@ def test_height_hierarchy_and_no_fallback_for_unknown():
 
 
 # ------------------------------------------------------------------ curved
-def test_curved_bases_and_inner_default_with_override():
+def test_curved_explicit_bases_aliases_and_min_radius_default():
     arcs = [{"cx": 0, "cy": 0, "r": r, "sweep_rad": math.pi / 3} for r in (2000.0, 2050.0, 2100.0)]
     b = CO.bases(arcs)
-    assert b["INNER"] == pytest.approx(2000 * math.pi / 3, abs=1e-3)
-    assert b["CENTRE"] == pytest.approx(2050 * math.pi / 3, abs=1e-3)
-    assert b["OUTER"] == pytest.approx(2100 * math.pi / 3, abs=1e-3)
+    assert b["MIN_RADIUS_ARC"] == pytest.approx(2000 * math.pi / 3, abs=1e-3)
+    assert b["MID_BAND_ARC"] == pytest.approx(2050 * math.pi / 3, abs=1e-3)
+    assert b["MAX_RADIUS_ARC"] == pytest.approx(2100 * math.pi / 3, abs=1e-3)
     assert b["CHORD"] == pytest.approx(2000.0, abs=1e-3)
-    assert CO.commercial(b)["basis"] == "INNER"
-    assert CO.commercial(b, override={"id": "P1", "basis": "OUTER"})["length_mm"] == b["OUTER"]
+    assert (b["INNER"], b["CENTRE"], b["OUTER"]) == (b["MIN_RADIUS_ARC"], b["MID_BAND_ARC"], b["MAX_RADIUS_ARC"])
+    assert CO.BASES == ("MIN_RADIUS_ARC", "MID_BAND_ARC", "MAX_RADIUS_ARC", "CHORD")
+    c = CO.commercial(b)
+    assert c["basis"] == "MIN_RADIUS_ARC" and c["length_mm"] == b["MIN_RADIUS_ARC"]
+    assert c["orientation"]["state"] == "NOT_ESTABLISHED"
+    assert CO.commercial(b, override={"id": "P1", "basis": "MAX_RADIUS"})["length_mm"] == b["MAX_RADIUS_ARC"]
     assert CO.bases(arcs + [{"cx": 30, "cy": 0, "r": 2200.0, "sweep_rad": math.pi / 3}])["state"] == "NOT_CONCENTRIC"
     cut = [{"cx": 0, "cy": 0, "r": 2000.0, "sweep_rad": 1.0}, {"cx": 0, "cy": 0, "r": 2100.0, "sweep_rad": 0.97}]
     bc = CO.bases(cut)                                       # straight jambs: sweeps differ, centre shared
-    assert bc["INNER"] == pytest.approx(2000.0) and bc["OUTER"] == pytest.approx(2037.0)
-    assert bc["CENTRE"] == pytest.approx(2018.5)
+    assert bc["MIN_RADIUS_ARC"] == pytest.approx(2000.0) and bc["MAX_RADIUS_ARC"] == pytest.approx(2037.0)
+    assert bc["MID_BAND_ARC"] == pytest.approx(2018.5)
+
+
+def test_room_side_is_never_assumed_to_be_min_radius():
+    b = CO.bases([{"cx": 0, "cy": 0, "r": r, "sweep_rad": 1.0} for r in (2000.0, 2100.0)])
+    assert CO.orient(b)["state"] == "NOT_ESTABLISHED"
+    o = CO.orient(b, "MAX_RADIUS")                           # a curve bulging into the room
+    assert o["ROOM_SIDE_ARC"] == b["MAX_RADIUS_ARC"] and o["EXTERIOR_SIDE_ARC"] == b["MIN_RADIUS_ARC"]
+    assert CO.commercial(b, override={"id": "P2", "basis": "ROOM_SIDE"})["state"] == "BLOCKED"
+    r = CO.commercial(b, override={"id": "P2", "basis": "ROOM_SIDE"}, room_side="MAX_RADIUS")
+    assert r["basis"] == "ROOM_SIDE_ARC" and r["length_mm"] == b["MAX_RADIUS_ARC"]
+    assert CO.commercial(b, room_side="MAX_RADIUS")["basis"] == "MIN_RADIUS_ARC"   # default names the geometry
+    with pytest.raises(ValueError):
+        CO.commercial(b, override={"id": "P3", "basis": "INNER"})                   # aliases are not override bases
 
 
 # ------------------------------------------------------------------ wall heights

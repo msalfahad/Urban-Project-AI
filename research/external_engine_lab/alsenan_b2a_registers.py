@@ -19,13 +19,14 @@ sys.path.insert(0, str(Path(__file__).parent))
 
 import alsenan_phase_b2a as B2                                                                      # noqa: E402
 
-FREEZE = "ALSENAN_PHASE_B2A_FREEZE"
-XLSX_NAME = "URBAN_QTO_ALSENAN_PHASE_B2A.xlsx"
-BANNER = ("SHADOW / PHASE B2A - GENERIC ENGINE IMPROVEMENT + OWNER METHODS - ALSENAN P7757 + ST7757 - FROZEN BEFORE THE "
+FREEZE = "ALSENAN_PHASE_B2A1_REGISTER_FREEZE"           # B2A.1: the B2A freeze stays frozen in registers_b2a
+PARENT_FREEZE = ROOT / "tests/alsenan/registers_b2a/ALSENAN_PHASE_B2A_FREEZE.json"
+XLSX_NAME = "URBAN_QTO_ALSENAN_PHASE_B2A1.xlsx"
+BANNER = ("SHADOW / PHASE B2A.1 - GENERIC QA PATCH ON B2A - ALSENAN P7757 + ST7757 - FROZEN BEFORE THE "
           "BENCHMARK EVALUATION - NO PRICING - NO PRODUCTION MIGRATION")
 A3_DIR = ROOT / "tests/alsenan/registers_a3"
 B1_DIR = ROOT / "tests/alsenan/registers_b1"
-RECOMMENDATION = "research/external_engine_lab/alsenan_phase_b2a_recommendation.json"
+RECOMMENDATION = "research/external_engine_lab/alsenan_phase_b2a1_recommendation.json"
 B2A_ENGINES = ["beam_binding", "structural_vertical", "concrete_model", "slab_region", "opening_authority",
                "curved_opening", "finish_height", "waterproofing_policy", "urban_methods"]
 
@@ -93,7 +94,7 @@ def registers(ctx) -> dict:
         "storeys": b["concrete"], "explicit_items": b["structural_items"],
         "rule": "physical total never double counts; gross beam view reported separately; blocked components excluded "
                 "and listed"}
-    regs["STAIR_REGISTER"] = {"SCHEMA": "URBAN_ALSENAN_B2A_STAIR_V1", **b["stairs"],
+    regs["STAIR_REGISTER"] = {"SCHEMA": "URBAN_ALSENAN_B2A1_STAIR_V2", **b["stairs"],
                               "a3_tread_runs": _a3("STAIR_REGISTER").get("tread_runs")}
     arch = b["architecture"]
     regs["OPENING_AUTHORITY_REGISTER"] = {
@@ -115,9 +116,19 @@ def registers(ctx) -> dict:
     regs["QA_GATES"] = qa(ctx, regs)
     regs["TEST_RESULTS"] = {"SCHEMA": "URBAN_ALSENAN_B2A_TEST_RESULTS_V1", "state": "RECORDED_BY_THE_PACKAGE_STEP",
                             "why": "the one full suite runs from the final commit",
-                            "b2a_test_files": ["tests/alsenan/test_b2a_engines_synthetic.py", "tests/alsenan/test_alsenan_b2a_real.py"]}
+                            "b2a_test_files": ["tests/alsenan/test_b2a_engines_synthetic.py", "tests/alsenan/test_alsenan_b2a_real.py",
+                                               "tests/alsenan/test_alsenan_b2a1_real.py"]}
     regs[FREEZE] = freeze(ctx, regs)
     return regs
+
+
+ALIAS = {"MIN_RADIUS_ARC": "INNER", "MID_BAND_ARC": "CENTRE", "MAX_RADIUS_ARC": "OUTER"}
+
+
+def _base(r, k):
+    """Explicit geometric basis, reading the B2A alias names of a frozen B2A register when needed."""
+    b = r["bases_m"] or {}
+    return b.get(k, b.get(ALIAS.get(k, k)))
 
 
 def _door_id(basis):
@@ -181,7 +192,7 @@ def delta(ctx, regs) -> dict:
     a3cg = {g["id"]: g for g in ctx["a3"]["architecture"]["curved_glazing"]["items"]}
     for r in regs["CURVED_OPENING_REGISTER"]["rows"]:
         add(item=f"CURVED {r['id']} length", family="ALUMINIUM", a3_status="COMPLETE (developed mean)",
-            a3_value=round(a3cg[r["id"]]["developed_length_mm"] / 1000.0, 6), b2a_status="COMPLETE (INNER, method)",
+            a3_value=round(a3cg[r["id"]]["developed_length_mm"] / 1000.0, 6), b2a_status=f"COMPLETE ({r['commercial_basis']}, method)",
             b2a_value=r["commercial_m"], unit="m", generic_fix="CURVED_OPENING_V1 all bases published",
             source="concentric source arcs", fact_or_method="URBAN_CURVED_ALUMINIUM_INNER_FACE_METHOD@v1")
     m = regs["WALL_HEIGHT_REGISTER"]["mbr"]
@@ -304,8 +315,10 @@ def qa(ctx, regs) -> dict:
 def freeze(ctx, regs) -> dict:
     body = {n: digest(o) for n, o in sorted(regs.items())}
     eng = {m: hashlib.sha256((ROOT / "engine" / "source" / f"{m}.py").read_bytes()).hexdigest() for m in B2A_ENGINES}
-    return {"SCHEMA": "URBAN_ALSENAN_PHASE_B2A_FREEZE_V1", "phase": B2.PHASE, "code_commit": ctx.get("code_commit"),
+    return {"SCHEMA": "URBAN_ALSENAN_PHASE_B2A1_REGISTER_FREEZE_V1", "phase": B2.PHASE + "_B2A1", "code_commit": ctx.get("code_commit"),
             "recommendation": RECOMMENDATION, "base_commit": "f820263",
+            "parent_b2a_freeze": {"file": "tests/alsenan/registers_b2a/ALSENAN_PHASE_B2A_FREEZE.json",
+                                  "sha256": hashlib.sha256(PARENT_FREEZE.read_bytes()).hexdigest()},
             "phase_b1_freeze": {"file": "ALSENAN_PHASE_B1_COMPARISON_FREEZE.json",
                                 "sha256": hashlib.sha256((B1_DIR / "ALSENAN_PHASE_B1_COMPARISON_FREEZE.json").read_bytes()).hexdigest()},
             "phase_a3_freeze": {"file": "ALSENAN_P7757_ST7757_PHASE_A3_FREEZE.json",
@@ -363,8 +376,10 @@ def workbook(regs) -> dict:
     W["07_OPENINGS"] = {"header": ["id", "width_mm", "function", "basis", "height"],
                         "rows": [[r["id"], r["geometry"]["width_mm"], r["function"], r["function_basis"][:200], r["height"]]
                                  for r in regs["OPENING_AUTHORITY_REGISTER"]["rows"]]}
-    W["08_CURVED"] = {"header": ["id", "inner_m", "centre_m", "outer_m", "chord_m", "commercial_m", "basis"],
-                      "rows": [[r["id"]] + [r["bases_m"][k] for k in ("INNER", "CENTRE", "OUTER", "CHORD")] + [r["commercial_m"], r["commercial_basis"]]
+    W["08_CURVED"] = {"header": ["id", "min_radius_arc_m", "mid_band_arc_m", "max_radius_arc_m", "chord_m", "commercial_m",
+                                 "basis", "room_side"],
+                      "rows": [[r["id"]] + [_base(r, k) for k in ("MIN_RADIUS_ARC", "MID_BAND_ARC", "MAX_RADIUS_ARC", "CHORD")] +
+                               [r["commercial_m"], r["commercial_basis"], (r.get("orientation") or {}).get("room_side")]
                                for r in regs["CURVED_OPENING_REGISTER"]["rows"]]}
     W["09_WALL_HEIGHTS"] = {"header": ["floor", "room", "wet", "faces_terminated", "faces_total", "plaster_gross_terminated_m2", "paint"],
                             "rows": [[r["floor"], r["room"], r["wet"], r["faces_terminated"], r["faces_total"],

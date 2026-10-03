@@ -36,8 +36,14 @@ def test_register_digests_match_the_freeze():
         assert hashlib.sha256(json.dumps(o, sort_keys=True, ensure_ascii=False, default=str).encode()).hexdigest() == d, n
 
 
-def test_b2a_engines_unchanged_since_the_freeze():
-    for m, h in R("ALSENAN_PHASE_B2A_FREEZE")["b2a_engine_sha256"].items():
+def test_b2a_engines_unchanged_since_the_latest_freeze():
+    """B2A.1 legitimately patched concrete_model (stair) and curved_opening (names): the engines are pinned to the newest
+    freeze (B2A.1), which pins this B2A freeze by digest."""
+    latest = ROOT / "tests/alsenan/registers_b2a1/ALSENAN_PHASE_B2A1_REGISTER_FREEZE.json"
+    fz = json.loads(latest.read_text()) if latest.exists() else R("ALSENAN_PHASE_B2A_FREEZE")
+    if latest.exists():
+        assert fz["parent_b2a_freeze"]["sha256"] == hashlib.sha256((REG / "ALSENAN_PHASE_B2A_FREEZE.json").read_bytes()).hexdigest()
+    for m, h in fz["b2a_engine_sha256"].items():
         assert hashlib.sha256((ROOT / "engine/source" / f"{m}.py").read_bytes()).hexdigest() == h, m
 
 
