@@ -636,10 +636,21 @@ def footing_tag_types(value):
     return None
 
 
+def scratch_disclosure(work: Path) -> dict:
+    """NAMES ONLY of files in the session scratch area that mention a project token (earlier sessions left some
+    there, e.g. a quotation and a pricing note). None is opened; the audited build proves it."""
+    root = work.resolve().parents[1]
+    names = sorted(p.name for p in root.iterdir() if any(t in p.name.lower() for t in TOKENS)
+                   and p.name != "alsenan_work") if root.exists() else []
+    return {"area": "<SESSION_SCRATCH>", "names": names, "opened": False,
+            "why_listed": "disclosure: earlier-session artefacts whose names suggest prices / quotations / old runs"}
+
+
 def build(work, commit=None) -> dict:
     work = Path(work)
     work.mkdir(parents=True, exist_ok=True)
     fw_census = firewall_census()
+    fw_census["scratch_disclosure"] = scratch_disclosure(work)
     loaded_before = set(sys.modules)
     with FW.OpenAudit() as audit:
         ctx = _build(work)

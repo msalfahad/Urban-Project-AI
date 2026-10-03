@@ -979,3 +979,38 @@ The freeze is now URBAN_QORTUBA_RC1_FREEZE_V2, and it validates.
 **Package:** `rc1_final_package.py` writes URBAN_QTO_QORTUBA_ARCHITECTURAL_RC1_FINAL (17 md + 13 json + the workbook).
 
 Qortuba-specific development stops here. The next stage is the unseen-villa blind test.
+
+## 24. Alsenan P7757 + ST7757 Phase A (full-villa development validation, frozen before any benchmark)
+
+The recommendation was written and committed before code: `research/external_engine_lab/alsenan_phase_a_recommendation.json`, commit 3ef390d.
+
+**Nature.** This is a development validation, not a blind test. The delivered files hash to sources that earlier rounds already processed, and the engine itself was partly developed on P7757. Phase A therefore discloses the history instead of claiming blindness.
+
+**Firewall (BENCHMARK_FIREWALL_V1, `engine/source/benchmark_firewall.py`).**
+- Every tracked file mentioning a project token is classified by path / role only; no file is opened to classify it.
+- The measurement build runs inside an audit hook that records every file opened. The build fails closed on a denied class (historical result, benchmark, manual BOQ, cost data, project fact, unrelated upload) or a denied module.
+- Upload and scratch files whose names suggest prices or quotations are listed by name and never opened.
+
+**New generic engines (stdlib, project-agnostic).**
+- SCHEDULE_TABLE_READER_V1 (`schedule_table.py`): a drawn schedule as bands, cells and merged groups. A value belongs to the column it is drawn in, never to its attribute tag. Unplaced values are reported, never dropped. Clean reimplementation of the OpenTakeoff schedule-scan idea, without its silent row drop.
+- STRUCTURAL_QTO_V1 (`structural_qto.py`):
+  - axis-aligned element rectangles;
+  - tag association into the smallest containing rectangle, never by distance;
+  - drawn-size confirmation against the schedule;
+  - concrete rows with every dimension sourced;
+  - `rebar_gate`, which needs diameter, count / spacing, length, shape, laps and cover and refuses a kg/m3 ratio.
+- LEVEL_MARK_UNIT_EVIDENCE_V1 (`level_marks.py`): authored elevation level marks become SECTION_ELEVATION_DIMENSION evidence for the frozen frame rule. Disagreeing pairs conflict; they are never averaged.
+- CAD_TEXT_CONTROL_V1 (`cad_text.py`): %%c / %%d / %%p / %%u / %%o. Legacy-codepage values are flagged and left undecoded.
+- BOQ_XLSX_EXPORT_V2 (`engine/boq_rc1_xlsx.py`):
+  - the banner and the summary-sheet name are now parameters, whose defaults reproduce the Qortuba workbook byte for byte;
+  - several ADDITIVE_SUMMARY sheets are accepted only with distinct declared scopes.
+
+**Outcome (SHADOW).**
+- Units: PROVISIONAL for both drawings, at 1.0 mm per native unit. The declaration plus one independent class (elevation level marks; footing schedule cm vs drawn footings) gives PROVISIONAL; VERIFIED needs a second class.
+- Architecture: TS01 certifies 0 rooms on GF / 1F / 2F. Numeric layers have no role authority, and the obvious "W = wall" guess is the plot boundary. Every architectural row is BLOCKED with machine blockers; labels and door-signature candidates are kept as observations.
+- Structure: footing concrete is computed only for footings whose tag lies in a drawn rectangle of the scheduled size. Columns, beams, slabs and stairs are BLOCKED. Rebar is fail-closed.
+- Freeze: `tests/alsenan/registers/ALSENAN_P7757_ST7757_PHASE_A_FREEZE.json` (FREEZE_SCHEMA_V1, PASS).
+- Package: `alsenan_package.py` writes URBAN_QTO_ALSENAN_P7757_ST7757_PHASE_A (26 md + 19 json + the XLSX view).
+- Qortuba regression: every RC1 register is reproduced unchanged except the engine-inventory hash of the edited exporter file.
+
+Phase B (comparison) has not started.

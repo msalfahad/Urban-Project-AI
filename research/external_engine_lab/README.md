@@ -180,5 +180,9 @@ bridges it to the legacy QS01 method. Owner decisions are scoped claims in `data
 | `rc1_final_recommendation.json` | - | the RC1 finalization recommendation, written before code |
 | `rc1_final_owner_facts.py` | `data/registry/URBAN_OWNER_METHOD_RULES.json` + `data/registry/OWNER_OBJECT_FACTS.json` | the floor-before-cabinetry Urban method and the PAINTRY counter identity fact (fingerprint-bound) |
 | `rc1_final_package.py` | `data/reports/URBAN_QTO_QORTUBA_ARCHITECTURAL_RC1_FINAL/` + zip | final package (17 md + 13 json + workbook; freeze re-validated) |
+| `alsenan_phase_a_recommendation.json` | - | Alsenan P7757 + ST7757 Phase A recommendation (answers 1-24), committed before code |
+| `alsenan_phase_a.py` | (built by `alsenan_registers.py`) | Phase A adapter (facts only: hashes, frames, titles, tags, schedule grids) + the audited build through the generic engines |
+| `alsenan_registers.py` | `tests/alsenan/registers/*.json` | the 19 Phase A registers, the 13-column BOQ, the XLSX view (readback) and the freeze |
+| `alsenan_package.py` | `data/reports/URBAN_QTO_ALSENAN_P7757_ST7757_PHASE_A/` + zip | Phase A package (26 md + 19 json + xlsx; XLSX rebuilt from the registers and matched to the freeze) |
 
 `<work>` must hold `old_k2.pkl` (K2 on LibreDWG's DXF of the old DWG) and `new_k2.pkl` (K2 on the hash-addressed new DXF).

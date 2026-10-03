@@ -373,19 +373,21 @@ def sheet(role, header, rows, qty_cols=(), status_col=None, widths=None, wrap=()
     return s
 
 
-def workbook(ctx, regs) -> dict:
+def workbook(regs) -> dict:
+    """The XLSX model from the REGISTERS only (so the package rebuilds it from the committed files)."""
     ab, sb = regs["ARCH_BOQ"]["rows"], regs["CONCRETE_REGISTER"]["boq_rows"]
+    units = regs["SOURCE_AUTHORITY_REGISTER"]["units"]
+    slabs = regs["STRUCTURAL_ELEMENT_REGISTER"]["slabs"]
     W13 = {0: 14, 4: 30, 5: 30, 6: 40, 10: 34, 11: 40, 12: 80}
     m = {}
-    fr = regs["ALSENAN_P7757_ST7757_PHASE_A_FREEZE"] if "ALSENAN_P7757_ST7757_PHASE_A_FREEZE" in regs else None
     m["00_READ_ME"] = sheet("INFO", ["TOPIC", "TEXT"], [
         ["WHAT", "Phase A development validation of the ONE Urban engine on Alsenan Chalet P7757 + ST7757 (shadow)."],
         ["NOT BLIND", "The same source files and the engine carry P7757 history; contamination is disclosed (03)."],
         ["FROZEN", "Frozen before any manual BOQ / freelancer / web-app value was opened. Phase B compares later."],
         ["ADDING", "Only 02_ARCH_BOQ_SUMMARY and 15_STRUCTURAL_SUMMARY lines may be added, each within its own scope."],
         ["BLOCKED", "A BLOCKED line has no quantity and is in no total; its blocker says what is missing."],
-        ["UNITS", f"P7757: {ctx['units']['ARCHITECTURAL']['status']} ({ctx['units']['ARCHITECTURAL']['native_to_mm']} mm "
-                  f"per unit); ST7757: {ctx['units']['STRUCTURAL']['status']} ({ctx['units']['STRUCTURAL']['native_to_mm']})."],
+        ["UNITS", f"P7757: {units['ARCHITECTURAL']['status']} ({units['ARCHITECTURAL']['native_to_mm']} mm "
+                  f"per unit); ST7757: {units['STRUCTURAL']['status']} ({units['STRUCTURAL']['native_to_mm']})."],
         ["NO PRICES", "No price, no calibration, no production migration."]], widths={1: 120})
     m["01_PROJECT_SOURCE"] = sheet("INFO", ["FILE", "DISCIPLINE", "TYPE", "BYTES", "SHA256", "VERSION", "ROLE",
                                             "AUTHORITY"],
@@ -446,7 +448,7 @@ def workbook(ctx, regs) -> dict:
                           status_col=2, widths={1: 140})
     m["19_SLABS"] = sheet("SCHEDULE", ["SLAB SHEET", "THICKNESS LABELS (cm)", "REINFORCEMENT LABELS", "STATUS"],
                           [[k, v["thickness_labels_cm"], v["reinforcement_labels"], "INFO"]
-                           for k, v in sorted(ctx["slabs"].items())], status_col=3, widths={1: 30, 2: 120})
+                           for k, v in sorted(slabs.items())], status_col=3, widths={1: 30, 2: 120})
     m["20_STAIRS_STRUCTURE"] = sheet("BREAKDOWN", COLUMNS, [boq_line(r) for r in sb if r["item"] == "S-STR-01"],
                                      (7,), 9, W13, (12,))
     m["21_REBAR"] = sheet("SCHEDULE", ["ELEMENT", "DIRECTION / COLUMN", "SPEC", "GATE", "MISSING", "kg", "STATUS"],
@@ -462,23 +464,31 @@ def workbook(ctx, regs) -> dict:
     return m
 
 
-def xlsx(ctx, regs):
-    model = workbook(ctx, regs)
+def xlsx_sources(regs):
     ab, sb = regs["ARCH_BOQ"]["rows"], regs["CONCRETE_REGISTER"]["boq_rows"]
     src = [{"sheet": "02_ARCH_BOQ_SUMMARY", "row": i, "col": 7, "value": r6(r["qty"]), "ref": f"ARCH_BOQ.rows[{i}].qty"}
            for i, r in enumerate(ab)]
-    src += [{"sheet": "15_STRUCTURAL_SUMMARY", "row": i, "col": 7, "value": r6(r["qty"]),
-             "ref": f"CONCRETE_REGISTER.boq_rows[{i}].qty"} for i, r in enumerate(sb)]
+    return src + [{"sheet": "15_STRUCTURAL_SUMMARY", "row": i, "col": 7, "value": r6(r["qty"]),
+                   "ref": f"CONCRETE_REGISTER.boq_rows[{i}].qty"} for i, r in enumerate(sb)]
+
+
+SUMMARY_NAME = "02_ARCH_BOQ_SUMMARY / 15_STRUCTURAL_SUMMARY"
+
+
+def xlsx(ctx, regs):
+    model = workbook(regs)
+    ab, sb = regs["ARCH_BOQ"]["rows"], regs["CONCRETE_REGISTER"]["boq_rows"]
+    src = xlsx_sources(regs)
     with tempfile.TemporaryDirectory() as d:
         p = Path(d) / XLSX_NAME
-        w = BX.write(model, p, created=CREATED, banner=BANNER, summary_name="02_ARCH_BOQ_SUMMARY / 15_STRUCTURAL_SUMMARY")
+        w = BX.write(model, p, created=CREATED, banner=BANNER, summary_name=SUMMARY_NAME)
         va = BX.validate(p, model, sources=src, summary_sheet="02_ARCH_BOQ_SUMMARY", canonical_ids=[r["item"] for r in ab],
-                         banner=BANNER, summary_name="02_ARCH_BOQ_SUMMARY / 15_STRUCTURAL_SUMMARY")
+                         banner=BANNER, summary_name=SUMMARY_NAME)
         vs = BX.validate(p, model, sources=[], summary_sheet="15_STRUCTURAL_SUMMARY",
                          canonical_ids=[r["item"] for r in sb], banner=BANNER,
-                         summary_name="02_ARCH_BOQ_SUMMARY / 15_STRUCTURAL_SUMMARY")
+                         summary_name=SUMMARY_NAME)
         w2 = BX.write(model, Path(d) / ("2_" + XLSX_NAME), created=CREATED, banner=BANNER,
-                      summary_name="02_ARCH_BOQ_SUMMARY / 15_STRUCTURAL_SUMMARY")
+                      summary_name=SUMMARY_NAME)
         data = p.read_bytes()
     state = "PASS" if va["state"] == vs["state"] == "PASS" and w["file_sha256"] == w2["file_sha256"] else "FAIL"
     return model, data, {"sheets": w["sheets"], "content_digest": w["content_digest"], "file_sha256": w["file_sha256"],
@@ -689,7 +699,7 @@ def registers(ctx) -> dict:
                   for r in AP.FIREWALL_RULES],
         "census": {k: cen[k] for k in ("tokens", "tracked_files_mentioning_tokens", "by_class", "unclassified",
                                        "this_phase_files_excluded")} | {"entries": cen["entries"]},
-        "uploads": cen["uploads"], "audit_verdict": av,
+        "uploads": cen["uploads"], "scratch_disclosure": cen["scratch_disclosure"], "audit_verdict": av,
         "module_verdict": {"state": mv["state"], "violations": mv["violations"], "denied_patterns": mv["denied_patterns"]},
         "denylist": ["historical quantities", "manual BOQ", "freelancer values", "web-app values", "prices"],
         "statements": {"FREELANCER_BOQ_SEEN": "NO", "WEB_APP_QUANTITIES_SEEN": "NO", "EXPECTED_TOTALS_USED": "NO",
