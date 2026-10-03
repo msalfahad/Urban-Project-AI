@@ -24,7 +24,7 @@
      {
       "component": "SLAB",
       "id": "SLAB",
-      "volume_m3": 44.346289,
+      "volume_m3": 44.286118,
       "formula": "net plate area x t"
      },
      {
@@ -667,12 +667,12 @@
      }
     ],
     "by_component_m3": {
-     "SLAB": 44.346289,
+     "SLAB": 44.286118,
      "DOWNSTAND_BEAM": 21.413573,
      "BEAM_COLUMN_JOINT": 1.87825,
      "COLUMN": 13.42025
     },
-    "computed_total_m3": 81.058362,
+    "computed_total_m3": 80.998191,
     "total_state": "PARTIAL (blocked components excluded, listed)",
     "invariant": "each cubic metre in exactly one component: slab owns the plate depth everywhere; beams own only the part below the slab between support faces; joints own the node under the slab; columns stop at the controlling soffit"
    },
@@ -1368,7 +1368,7 @@
      {
       "component": "SLAB",
       "id": "SLAB",
-      "volume_m3": 27.384549,
+      "volume_m3": 27.160228,
       "formula": "net plate area x t"
      },
      {
@@ -1746,12 +1746,12 @@
      }
     ],
     "by_component_m3": {
-     "SLAB": 27.384549,
+     "SLAB": 27.160228,
      "DOWNSTAND_BEAM": 13.522703,
      "BEAM_COLUMN_JOINT": 0.921,
      "COLUMN": 6.755
     },
-    "computed_total_m3": 48.583252,
+    "computed_total_m3": 48.358931,
     "total_state": "PARTIAL (blocked components excluded, listed)",
     "invariant": "each cubic metre in exactly one component: slab owns the plate depth everywhere; beams own only the part below the slab between support faces; joints own the node under the slab; columns stop at the controlling soffit"
    },
@@ -2162,6 +2162,12 @@
    "model": {
     "components": [
      {
+      "component": "SLAB",
+      "id": "SLAB",
+      "volume_m3": 9.98611,
+      "formula": "net plate area x t"
+     },
+     {
       "component": "DOWNSTAND_BEAM",
       "id": "B3:ALSENAN_ST7757_DXF|H1908||TEXT|0",
       "volume_m3": 0.1078,
@@ -2334,11 +2340,6 @@
     ],
     "blocked": [
      {
-      "component": "SLAB",
-      "id": "SLAB",
-      "reason": "SLAB_OUTLINE_NOT_ESTABLISHED"
-     },
-     {
       "component": "BEAM_COLUMN_JOINT",
       "id": "ALSENAN_ST7757_DXF|H4199||TEXT|0",
       "reason": "BLOCKED_TAG_NOT_BOUND"
@@ -2350,11 +2351,12 @@
      }
     ],
     "by_component_m3": {
+     "SLAB": 9.98611,
      "DOWNSTAND_BEAM": 2.649863,
      "BEAM_COLUMN_JOINT": 0.4148,
      "COLUMN": 2.962
     },
-    "computed_total_m3": 6.026663,
+    "computed_total_m3": 16.012773,
     "total_state": "PARTIAL (blocked components excluded, listed)",
     "invariant": "each cubic metre in exactly one component: slab owns the plate depth everywhere; beams own only the part below the slab between support faces; joints own the node under the slab; columns stop at the controlling soffit"
    },
@@ -2626,8 +2628,8 @@
   {
    "item": "SLAB GF ROOF",
    "state": "COMPUTED",
-   "volume_m3": 44.346288,
-   "net_area_m2": 277.164304,
+   "volume_m3": 44.286118,
+   "net_area_m2": 276.788238,
    "why": null
   },
   {
@@ -2648,8 +2650,8 @@
   {
    "item": "SLAB 1F ROOF",
    "state": "COMPUTED",
-   "volume_m3": 27.38455,
-   "net_area_m2": 171.153432,
+   "volume_m3": 27.160228,
+   "net_area_m2": 169.751427,
    "why": null
   },
   {
@@ -2669,10 +2671,10 @@
   },
   {
    "item": "SLAB 2F ROOF",
-   "state": "BLOCKED",
-   "volume_m3": null,
-   "net_area_m2": 37.974,
-   "why": "SLAB_OUTLINE_NOT_ESTABLISHED"
+   "state": "COMPUTED",
+   "volume_m3": 9.98611,
+   "net_area_m2": 55.478391,
+   "why": null
   },
   {
    "item": "STAIRS",

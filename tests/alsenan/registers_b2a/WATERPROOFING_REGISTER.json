@@ -3,19 +3,29 @@
  "roof": [
   {
    "region": "2F ROOF (top)",
-   "state": "BLOCKED_REGION",
-   "physical_m2": null
+   "state": "COMPUTED",
+   "flat_m2": 55.478383,
+   "upturn_m2": 6.134218,
+   "physical_m2": 61.612601,
+   "upturn_m": 0.2,
+   "method": "URBAN-ROOF-WATERPROOF-UPTURN-200@v1",
+   "laps": "NOT_INCLUDED (procurement factor)"
   },
   {
    "region": "1F ROOF exposed (not under 2F)",
-   "state": "BLOCKED_REGION",
-   "physical_m2": null,
+   "state": "COMPUTED",
+   "flat_m2": 161.72891,
+   "upturn_m2": 14.480256,
+   "physical_m2": 176.209166,
+   "upturn_m": 0.2,
+   "method": "URBAN-ROOF-WATERPROOF-UPTURN-200@v1",
+   "laps": "NOT_INCLUDED (procurement factor)",
    "alignment": {
     "frame_same_size": true,
     "columns_above_on_columns_below": "9/9",
     "aligned": true
    },
-   "why": "2F or 1F plate not closed / sheets not aligned"
+   "note": "candidate: plate minus the plate above; covered terraces under an overhang are not separated (UNRESOLVED)"
   },
   {
    "region": "GF ROOF exposed (not under 1F)",

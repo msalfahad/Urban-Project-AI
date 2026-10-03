@@ -17,11 +17,6 @@
    "why": "no ground-slab thickness / outline is printed (the details show 'Ground Floor slab level' only)"
   },
   {
-   "item": "SLAB 2F ROOF",
-   "state": "BLOCKED",
-   "why": "SLAB_OUTLINE_NOT_ESTABLISHED"
-  },
-  {
    "item": "STAIRS",
    "state": "BLOCKED_INPUT_MISSING",
    "why": "waist thickness and riser height not printed"
@@ -137,5 +132,5 @@
    "why": "bar lengths, cover, hooks, laps not defensible; no kg/m3"
   }
  ],
- "count": 27
+ "count": 26
 }

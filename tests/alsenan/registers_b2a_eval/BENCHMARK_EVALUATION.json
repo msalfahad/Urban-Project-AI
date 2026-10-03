@@ -1,7 +1,7 @@
 {
  "SCHEMA": "URBAN_ALSENAN_B2A_BENCHMARK_EVALUATION_V1",
  "run": "AFTER_FREEZE",
- "b2a_freeze_sha256": "c1131d8f1fb092b734d91486ece3538b1a257e95b3f6e4379691a442e3c60913",
+ "b2a_freeze_sha256": "860ec7891c7aaa0ef0b6936060ba46d72668e8f26bd80e51eccc9e35bb9436e3",
  "b2a_freeze_benchmark_opened": false,
  "b1_difference_register_sha256": "deac0596bcf0b594ce9667fc82219f05603eec61fe22bc9bba56c29f5f20f451",
  "rows": [
@@ -192,8 +192,8 @@
    "unit": "m3",
    "bench": 33.12,
    "a3_urban": null,
-   "b2a_urban": 44.346288,
-   "b2a_basis": "net plate 277.164304 m2 x t (plate continuous over beams; closure CLOSED)",
+   "b2a_urban": 44.286118,
+   "b2a_basis": "net plate 276.788238 m2 x t (plate continuous over beams; closure CLOSED)",
    "b1_comparability": "URBAN_BLOCKED",
    "b1_class": "SOURCE_GAP",
    "b2a_comparability": "SCOPE_MISMATCH",
@@ -207,8 +207,8 @@
    "unit": "m3",
    "bench": 19.2,
    "a3_urban": null,
-   "b2a_urban": 27.38455,
-   "b2a_basis": "net plate 171.153432 m2 x t (plate continuous over beams; closure CLOSED)",
+   "b2a_urban": 27.160228,
+   "b2a_basis": "net plate 169.751427 m2 x t (plate continuous over beams; closure CLOSED)",
    "b1_comparability": "URBAN_BLOCKED",
    "b1_class": "SOURCE_GAP",
    "b2a_comparability": "SCOPE_MISMATCH",
@@ -222,8 +222,8 @@
    "unit": "m3",
    "bench": 7.4974,
    "a3_urban": null,
-   "b2a_urban": null,
-   "b2a_basis": "net plate 37.974 m2 x t (plate continuous over beams; closure SLAB_OUTLINE_NOT_ESTABLISHED)",
+   "b2a_urban": 9.98611,
+   "b2a_basis": "net plate 55.478391 m2 x t (plate continuous over beams; closure CLOSED)",
    "b1_comparability": "URBAN_BLOCKED",
    "b1_class": "SOURCE_GAP",
    "b2a_comparability": "SCOPE_MISMATCH",
@@ -382,9 +382,9 @@
   }
  ],
  "slab_plus_downstand_m3": {
-  "GF": 65.759861,
-  "1F": 40.907253,
-  "2F": 2.649863
+  "GF": 65.699691,
+  "1F": 40.682931,
+  "2F": 12.635973
  },
  "rule": "evaluation only: no value here is read by any engine or adapter; no threshold, height, length, count or formula was chosen from it"
 }
