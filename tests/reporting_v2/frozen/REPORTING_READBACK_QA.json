@@ -1,0 +1,158 @@
+{
+ "SCHEMA": "URBAN_REPORTING_V2_READBACK_QA_V1",
+ "alsenan": {
+  "xlsx": {
+   "state": "PASS",
+   "differences": [],
+   "difference_count": 0,
+   "formula_cells": 0,
+   "validated_quantity_cells": 723,
+   "validated_blocked_cells": 427,
+   "validated_cells_by_kind": {
+    "text": 4118,
+    "qty": 723,
+    "status": 645,
+    "qty_text": 427,
+    "count": 187,
+    "pct": 4,
+    "num": 72,
+    "dim": 195
+   },
+   "validated_cells": 6371,
+   "sheets": [
+    "00_TOTAL_SUMMARY",
+    "01_GROUND_FLOOR",
+    "02_FIRST_FLOOR",
+    "03_ROOF_SECOND_FLOOR",
+    "04_FOUNDATION_SUBSTRUCTURE",
+    "05_OPENINGS_ALUMINIUM",
+    "06_BLOCKERS_OWNER_QUESTIONS",
+    "07_METHODS_TRACEABILITY",
+    "TECH_COLUMN_OCCURRENCES",
+    "TECH_BEAM_OCCURRENCES",
+    "TECH_SLAB_REGIONS",
+    "TECH_OPENING_EVIDENCE",
+    "TECH_SOURCE_HANDLES",
+    "TECH_QA",
+    "TECH_RUN_INFO"
+   ]
+  },
+  "pdf": {
+   "pages": 49,
+   "sections_in_order": true,
+   "section_positions": [
+    [
+     "00_TOTAL_SUMMARY",
+     178
+    ],
+    [
+     "01_GROUND_FLOOR",
+     12765
+    ],
+    [
+     "02_FIRST_FLOOR",
+     27304
+    ],
+    [
+     "03_ROOF_SECOND_FLOOR",
+     38610
+    ],
+    [
+     "04_FOUNDATION_SUBSTRUCTURE",
+     45697
+    ],
+    [
+     "05_OPENINGS_ALUMINIUM",
+     49337
+    ],
+    [
+     "06_BLOCKERS_OWNER_QUESTIONS",
+     56601
+    ],
+    [
+     "07_METHODS_TRACEABILITY",
+     70750
+    ]
+   ],
+   "lines_checked": 39,
+   "lines_missing_in_pdf": [],
+   "state": "PASS"
+  },
+  "model_validation": {
+   "state": "PASS",
+   "quantity_cells": 769,
+   "declared_sums": 104,
+   "lines": 39
+  }
+ },
+ "qortuba": {
+  "xlsx": {
+   "state": "PASS",
+   "differences": [],
+   "difference_count": 0,
+   "formula_cells": 0,
+   "validated_quantity_cells": 161,
+   "validated_blocked_cells": 107,
+   "validated_cells_by_kind": {
+    "text": 751,
+    "qty": 161,
+    "status": 123,
+    "count": 4,
+    "pct": 4,
+    "qty_text": 107,
+    "dim": 64
+   },
+   "validated_cells": 1214,
+   "sheets": [
+    "00_TOTAL_SUMMARY",
+    "01_SECOND_FLOOR",
+    "04_FOUNDATION_SUBSTRUCTURE",
+    "05_OPENINGS_ALUMINIUM",
+    "06_BLOCKERS_OWNER_QUESTIONS",
+    "07_METHODS_TRACEABILITY",
+    "TECH_SOURCE_HANDLES",
+    "TECH_RUN_INFO"
+   ]
+  },
+  "pdf": {
+   "pages": 16,
+   "sections_in_order": true,
+   "section_positions": [
+    [
+     "00_TOTAL_SUMMARY",
+     214
+    ],
+    [
+     "01_SECOND_FLOOR",
+     10422
+    ],
+    [
+     "04_FOUNDATION_SUBSTRUCTURE",
+     19180
+    ],
+    [
+     "05_OPENINGS_ALUMINIUM",
+     19680
+    ],
+    [
+     "06_BLOCKERS_OWNER_QUESTIONS",
+     22338
+    ],
+    [
+     "07_METHODS_TRACEABILITY",
+     23316
+    ]
+   ],
+   "lines_checked": 21,
+   "lines_missing_in_pdf": [],
+   "state": "PASS"
+  },
+  "model_validation": {
+   "state": "PASS",
+   "quantity_cells": 182,
+   "declared_sums": 13,
+   "lines": 21
+  }
+ },
+ "state": "PASS"
+}

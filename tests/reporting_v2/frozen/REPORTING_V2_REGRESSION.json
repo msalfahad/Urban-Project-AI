@@ -1,0 +1,219 @@
+{
+ "SCHEMA": "URBAN_REPORTING_V2_REGRESSION_V1",
+ "registers_commit": "02feef8",
+ "frozen_trees_unchanged_since_registers_commit": {
+  "tests/alsenan/registers_b2a1": true,
+  "tests/alsenan/registers_a3": true,
+  "tests/rc1/registers": true,
+  "engine/source": true
+ },
+ "engine_changed": false,
+ "alsenan": {
+  "project": "ALSENAN (A3 + B2A.1 frozen registers)",
+  "validation": "PASS",
+  "problems": [],
+  "line_parts": 94,
+  "quantity_cells_traced": 769,
+  "declared_sums": 104,
+  "quantity_changes": [],
+  "status_rule": "every part shows the register's own technical code; the display state is the alias table",
+  "input_registers": {
+   "A3.ARCH_BOQ": {
+    "file": "tests/alsenan/registers_a3/ARCH_BOQ.json",
+    "sha256": "d4fe8a48522bcb2b0265b20fd51f6f5f748e14f798c0c5d33eac1fad22ea93af"
+   },
+   "A3.FOOTING_REGISTER": {
+    "file": "tests/alsenan/registers_a3/FOOTING_REGISTER.json",
+    "sha256": "be8b77fda0616248e71abd29aaa09215a0d7cb31ad7f7b10ba91e194036ebb3f"
+   },
+   "A3.OWNER_QUESTION_REGISTER": {
+    "file": "tests/alsenan/registers_a3/OWNER_QUESTION_REGISTER.json",
+    "sha256": "7485aa70cebcef73e652d6e82b2de8dafba69e2c03052d47b6321af30d6b57d5"
+   },
+   "A3.ROOM_REGISTER": {
+    "file": "tests/alsenan/registers_a3/ROOM_REGISTER.json",
+    "sha256": "659630fd8a78a50a7efdd8aa96bb22cd0d3cdc16872a83d368b34a43d32075ec"
+   },
+   "A3.SOURCE_MANIFEST": {
+    "file": "tests/alsenan/registers_a3/SOURCE_MANIFEST.json",
+    "sha256": "52d824edad4b0fde93f68a19a11a3ea456c29e43345b3173b88735a581d809f7"
+   },
+   "A3.STRAP_BEAM_REGISTER": {
+    "file": "tests/alsenan/registers_a3/STRAP_BEAM_REGISTER.json",
+    "sha256": "7e5fec6032fac1b2a55498be624da49712ad147eda4b824e64425342797c6900"
+   },
+   "B2A1.ALSENAN_B2A_DELTA": {
+    "file": "tests/alsenan/registers_b2a1/ALSENAN_B2A_DELTA.json",
+    "sha256": "b9bf33a71840b20661b532a48ec3fc380398e7855491c023b893383c1ae4cac3"
+   },
+   "B2A1.ALSENAN_PHASE_B2A1_REGISTER_FREEZE": {
+    "file": "tests/alsenan/registers_b2a1/ALSENAN_PHASE_B2A1_REGISTER_FREEZE.json",
+    "sha256": "64ba6fd24179c6a3b629738b19910ca45275f1e54a0a30ee59d87a9d3d670370"
+   },
+   "B2A1.ALSENAN_REGRESSION": {
+    "file": "tests/alsenan/registers_b2a1/ALSENAN_REGRESSION.json",
+    "sha256": "d8cdc0adeb493234bbb2db68205e726344d69d9a81a6eb746d3f0d6baf681fee"
+   },
+   "B2A1.BEAM_BINDING_REGISTER": {
+    "file": "tests/alsenan/registers_b2a1/BEAM_BINDING_REGISTER.json",
+    "sha256": "ed4b0546dd800d9d2f2ed51a84957ba9ae0c42039d68e54694bba57d30914db6"
+   },
+   "B2A1.CURVED_OPENING_REGISTER": {
+    "file": "tests/alsenan/registers_b2a1/CURVED_OPENING_REGISTER.json",
+    "sha256": "5cfa682efcb6b71b7c762e4f132e8cc52cf283bd1867aacddf7d46a08eecae64"
+   },
+   "B2A1.OPENING_AUTHORITY_REGISTER": {
+    "file": "tests/alsenan/registers_b2a1/OPENING_AUTHORITY_REGISTER.json",
+    "sha256": "9f58ea2575d6acb8b86e713f191a7aaab7b5c9c5145ee49944aef769df81d5cf"
+   },
+   "B2A1.OWNER_FACT_REGISTER": {
+    "file": "tests/alsenan/registers_b2a1/OWNER_FACT_REGISTER.json",
+    "sha256": "5c889f3e334ddb28fbeb8bcb4284e862e7233aa0b3d4e2bf638ce23354cf27dd"
+   },
+   "B2A1.PHYSICAL_CONCRETE_REGISTER": {
+    "file": "tests/alsenan/registers_b2a1/PHYSICAL_CONCRETE_REGISTER.json",
+    "sha256": "3900aa35263e136ba92d09562628d59d7589611f50a2d96972eae118c7e23fe1"
+   },
+   "B2A1.QA_GATES": {
+    "file": "tests/alsenan/registers_b2a1/QA_GATES.json",
+    "sha256": "ab5206f5b535ef0942cb2f898140108da88d012d8433bcfc69a2d949b84c0c32"
+   },
+   "B2A1.QORTUBA_REGRESSION": {
+    "file": "tests/alsenan/registers_b2a1/QORTUBA_REGRESSION.json",
+    "sha256": "bb565379ebf2600253d38f9b458be41bbf99058ec3f94ceaeb510119f1340b1d"
+   },
+   "B2A1.REMAINING_BLOCKERS": {
+    "file": "tests/alsenan/registers_b2a1/REMAINING_BLOCKERS.json",
+    "sha256": "2f1d5d5df4e764ba250b114b1587f1a410d4b6fe04708cd3bd15396e5dc4d471"
+   },
+   "B2A1.SLAB_REGION_REGISTER": {
+    "file": "tests/alsenan/registers_b2a1/SLAB_REGION_REGISTER.json",
+    "sha256": "3bbdd3771434429b2843da164b4936024e5ebc53caa7a4772423555e4ff848cf"
+   },
+   "B2A1.STAIR_REGISTER": {
+    "file": "tests/alsenan/registers_b2a1/STAIR_REGISTER.json",
+    "sha256": "c3af47d7f63edd1ca0540d7b0804467b766f4b1e4222f318908be60ed1a5e163"
+   },
+   "B2A1.STRUCTURAL_VERTICAL_INTERVAL_REGISTER": {
+    "file": "tests/alsenan/registers_b2a1/STRUCTURAL_VERTICAL_INTERVAL_REGISTER.json",
+    "sha256": "34cdda69dcafe42771487e4af0bc32704b603814eced90a2da6b1e48f50f21c3"
+   },
+   "B2A1.URBAN_METHOD_REGISTER": {
+    "file": "tests/alsenan/registers_b2a1/URBAN_METHOD_REGISTER.json",
+    "sha256": "7f20648c3cd1489e94ee3ec83696c6c85a2d6ab53812caf5f38709fb5e8fce7b"
+   },
+   "B2A1.WALL_HEIGHT_REGISTER": {
+    "file": "tests/alsenan/registers_b2a1/WALL_HEIGHT_REGISTER.json",
+    "sha256": "0760f4dbc7ace5d34f70768b7b3dda423b7d736224e276a026b3da3a67631554"
+   },
+   "B2A1.WATERPROOFING_REGISTER": {
+    "file": "tests/alsenan/registers_b2a1/WATERPROOFING_REGISTER.json",
+    "sha256": "a5c38af14dbc6eefff3ff5527482c972efaecea92ce0c669c13986ba30f0cbf8"
+   }
+  },
+  "state": "PASS",
+  "cross_checks": [
+   {
+    "check": "storey GF total = sum of components",
+    "report": 80.998191,
+    "register": 80.998191,
+    "equal": true
+   },
+   {
+    "check": "storey 1F total = sum of components",
+    "report": 48.358931,
+    "register": 48.358931,
+    "equal": true
+   },
+   {
+    "check": "storey 2F total = sum of components",
+    "report": 16.012773,
+    "register": 16.012773,
+    "equal": true
+   },
+   {
+    "check": "FOOTINGS: type rows add to the register item",
+    "report": 64.346,
+    "register": 64.346,
+    "equal": true
+   },
+   {
+    "check": "STRAPS: type rows add to the register item",
+    "report": 3.391739,
+    "register": 3.391739,
+    "equal": true
+   },
+   {
+    "check": "A3 certified rooms GF = A3 floor-area subtotal",
+    "report": 19.992721,
+    "register": 19.992721,
+    "equal": true
+   },
+   {
+    "check": "A3 certified rooms 1F = A3 floor-area subtotal",
+    "report": 29.665,
+    "register": 29.665,
+    "equal": true
+   },
+   {
+    "check": "columns 1F: rows add to by_storey",
+    "report": 6.755,
+    "register": 6.755,
+    "equal": true
+   },
+   {
+    "check": "columns 2F: rows add to by_storey",
+    "report": 2.962,
+    "register": 2.962,
+    "equal": true
+   },
+   {
+    "check": "columns GF: rows add to by_storey",
+    "report": 13.42025,
+    "register": 13.42025,
+    "equal": true
+   }
+  ]
+ },
+ "qortuba": {
+  "project": "QORTUBA (RC1 frozen registers)",
+  "validation": "PASS",
+  "problems": [],
+  "line_parts": 21,
+  "quantity_cells_traced": 182,
+  "declared_sums": 13,
+  "quantity_changes": [],
+  "status_rule": "every part shows the register's own technical code; the display state is the alias table",
+  "input_registers": {
+   "RC1.CANONICAL_BOQ": {
+    "file": "tests/rc1/registers/CANONICAL_BOQ.json",
+    "sha256": "e7dd93499b682a6f1bf4028f9f30735addf9187d6d13b98c81efd767438764fe"
+   },
+   "RC1.OPENING_REGISTER": {
+    "file": "tests/rc1/registers/OPENING_REGISTER.json",
+    "sha256": "cf3df59befc09f8308b607da971fd8cdaef2836745bf56e0ff425f50ee36168d"
+   },
+   "RC1.QA_RECONCILIATION": {
+    "file": "tests/rc1/registers/QA_RECONCILIATION.json",
+    "sha256": "43aeb6b77e8f1f6af5c2cf186b4970fb58375de11c9483c15c34e6a59358782e"
+   },
+   "RC1.QORTUBA_RC1_FREEZE": {
+    "file": "tests/rc1/registers/QORTUBA_RC1_FREEZE.json",
+    "sha256": "79b95989c87706f4ecd2abb953283b275143d694e331839cc5df0776ecd82ee4"
+   },
+   "RC1.RC1_DECISION_REGISTER": {
+    "file": "tests/rc1/registers/RC1_DECISION_REGISTER.json",
+    "sha256": "3a05e13a786da17bd3e1123935f8239d04a15cd299184fa46df646285e9b19e8"
+   },
+   "RC1.ROOM_QUANTITY_MATRIX": {
+    "file": "tests/rc1/registers/ROOM_QUANTITY_MATRIX.json",
+    "sha256": "a9775b6c2bbe74f98969fdd0788bcbe9d2ec1cf2831d481b8f037c09cb798a7d"
+   }
+  },
+  "state": "PASS",
+  "canonical_items_unchanged": true,
+  "canonical_items": 21,
+  "rc1_xlsx_sha256_frozen": "796d117eac08da3704114fdb8bae9faa138810e1b860f3930165bee4c63f7e7b"
+ },
+ "state": "PASS"
+}
