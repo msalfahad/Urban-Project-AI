@@ -1131,3 +1131,21 @@ the freeze and tested.
 - Registers in `tests/alsenan/registers_b2a/` (+ A3 -> B2A delta, A3 preservation, QA gates, freeze); benchmark
   evaluation only after the freeze in `tests/alsenan/registers_b2a_eval/`; tests in
   `tests/alsenan/test_b2a_engines_synthetic.py` and `tests/alsenan/test_alsenan_b2a_real.py`.
+
+### 28.1 Phase B2A.1 (generic QA patch: stair count model, curved-basis terminology, self-contained freeze)
+
+- Recommendation (answers 1-6) committed before code: `alsenan_phase_b2a1_recommendation.json`.
+- `concrete_model.stair` is STAIR_CONCRETE_V2: per flight RISER_COUNT, TREAD_COUNT, RISER_HEIGHT, TREAD_GOING,
+  FLIGHT_WIDTH, WAIST_THICKNESS are independent inputs, each with an authority (CANDIDATE / UNKNOWN never compute).
+  rise = risers x riser height, run = treads x going, waist = sloping length x width x waist, wedges =
+  0.5 x riser x going x width x treads, landings = area x thickness; stair beams stay separate. A missing count or
+  dimension -> BLOCKED_INPUT_MISSING; tread = riser - 1 only on the stated relation
+  `SOURCE_ESTABLISHED: tread_count = riser_count - 1`. V1 silently used one count for both.
+- `curved_opening` (CURVED_OPENING_V1_1): MIN_RADIUS_ARC / MID_BAND_ARC / MAX_RADIUS_ARC / CHORD; ROOM_SIDE_ARC /
+  EXTERIOR_SIDE_ARC only where the source establishes the side (the adapter probes 300 mm either side of the band at
+  mid sweep); INNER / CENTRE / OUTER are aliases only; commercial default MIN_RADIUS_ARC; overrides MIN_RADIUS,
+  MID_BAND, MAX_RADIUS, CHORD, ROOM_SIDE, EXTERIOR_SIDE.
+- Registers in `tests/alsenan/registers_b2a1/` (freeze ALSENAN_PHASE_B2A1_REGISTER_FREEZE pins the B2A freeze by
+  digest); `alsenan_b2a1_regression.py` proves no numeric / state leaf of the frozen B2A registers changed.
+- Packages carry their canonical freeze: `alsenan_b2a1_package.py` puts ALSENAN_PHASE_B2A1_FREEZE.json, the parent
+  freeze, every register, both regression records, the engine sources, the junit and a stdlib `verify.py` in the ZIP.

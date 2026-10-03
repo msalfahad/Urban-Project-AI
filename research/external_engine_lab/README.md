@@ -203,5 +203,9 @@ bridges it to the legacy QS01 method. Owner decisions are scoped claims in `data
 | `alsenan_b2a_registers.py` | `tests/alsenan/registers_b2a/*.json` | Phase B2A registers, A3 -> B2A delta, A3 preservation, QA gates, freeze, XLSX |
 | `alsenan_b2a_evaluation.py` | `tests/alsenan/registers_b2a_eval/BENCHMARK_EVALUATION.json` | benchmark evaluation after the B2A freeze (reads frozen files only) |
 | `alsenan_b2a_package.py` | `data/reports/URBAN_QTO_ALSENAN_PHASE_B2A_OWNER_METHODS/` + zip | Phase B2A package (21 md + 14 json + xlsx + review image) |
+| `alsenan_phase_b2a1_recommendation.json` | - | Phase B2A.1 recommendation (answers 1-6: stair count defect, riser / tread model, curved names, freeze packaging), committed before code |
+| `alsenan_b2a_registers.py` (B2A.1) | `tests/alsenan/registers_b2a1/*.json` | Phase B2A.1 registers (STAIR_CONCRETE_V2 evidence, explicit curved bases) + ALSENAN_PHASE_B2A1_REGISTER_FREEZE pinning the B2A freeze by digest |
+| `alsenan_b2a1_regression.py` | `tests/alsenan/registers_b2a1/ALSENAN_REGRESSION.json` | B2A.1 vs frozen B2A: numeric / state leaves must be unchanged; schema / terminology / provenance only |
+| `alsenan_b2a1_package.py` | `data/reports/URBAN_QTO_ALSENAN_PHASE_B2A1_GENERIC_QA_PATCH/` + zip | self-contained package: ALSENAN_PHASE_B2A1_FREEZE.json, parent freeze, all registers, regressions, engine sources, junit, stdlib verify.py |
 
 `<work>` must hold `old_k2.pkl` (K2 on LibreDWG's DXF of the old DWG) and `new_k2.pkl` (K2 on the hash-addressed new DXF).
