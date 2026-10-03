@@ -1,0 +1,557 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_A2_CONCRETE_V1",
+ "boq_rows": [
+  {
+   "item": "S-FTG-F",
+   "discipline": "STRUCTURAL",
+   "trade": "FOOTINGS",
+   "floor": "FOUNDATION",
+   "element": "footing type F x5 tag(s): 2 matched + size-confirmed, 3 blocked",
+   "ar": "خرسانة مسلحة للقواعد - نوع F",
+   "en": "Reinforced concrete footings type F (90.0 x 80.0 x 30.0 cm)",
+   "qty": 0.432,
+   "unit": "m3",
+   "status": "AUTHORISED_SUBTOTAL",
+   "source": "ST7757.dxf FOUNDATION PLAN tags + S-FOOTINGS rectangles; SCHEDULE OF FOOTINGS (cm)",
+   "rule": "STRUCTURAL_QTO_V1 + STRUCTURAL_COMPLETION_V1: tag-in-outline matches, then constraint-unique completion; L x W x H from the schedule",
+   "blockers": [
+    "COMPLETION_COUNT_MISMATCH: 3 orphan tag(s), 0 contained, 2 free template outline(s) of the scheduled size",
+    "COUNT_NOT_ESTABLISHED",
+    "TAG_OUTSIDE_EVERY_DRAWN_FOOTING_RECTANGLE (boundary-clipped / rotated / tag drawn beside: never matched by distance)"
+   ],
+   "complete_rows": [
+    "F@H5757|5760|TEXT|0",
+    "F@H5757|5759|TEXT|0"
+   ],
+   "blocked_rows": [
+    "F@H4261||TEXT|0",
+    "F@H5757|5752|TEXT|0",
+    "F@H5757|5762|TEXT|0"
+   ],
+   "class": "PHYSICAL_MEASUREMENT"
+  },
+  {
+   "item": "S-FTG-F2",
+   "discipline": "STRUCTURAL",
+   "trade": "FOOTINGS",
+   "floor": "FOUNDATION",
+   "element": "footing type F2 x2 tag(s): 2 matched + size-confirmed, 0 blocked",
+   "ar": "خرسانة مسلحة للقواعد - نوع F2",
+   "en": "Reinforced concrete footings type F2 (190.0 x 170.0 x 35.0 cm)",
+   "qty": 2.261,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "source": "ST7757.dxf FOUNDATION PLAN tags + S-FOOTINGS rectangles; SCHEDULE OF FOOTINGS (cm)",
+   "rule": "STRUCTURAL_QTO_V1 + STRUCTURAL_COMPLETION_V1: tag-in-outline matches, then constraint-unique completion; L x W x H from the schedule",
+   "blockers": [],
+   "complete_rows": [
+    "F2@H5749||TEXT|0",
+    "F2@H5748||TEXT|0"
+   ],
+   "blocked_rows": [],
+   "class": "PHYSICAL_MEASUREMENT"
+  },
+  {
+   "item": "S-FTG-F3",
+   "discipline": "STRUCTURAL",
+   "trade": "FOOTINGS",
+   "floor": "FOUNDATION",
+   "element": "footing type F3 x2 tag(s): 2 matched + size-confirmed, 0 blocked",
+   "ar": "خرسانة مسلحة للقواعد - نوع F3",
+   "en": "Reinforced concrete footings type F3 (160.0 x 140.0 x 30.0 cm)",
+   "qty": 1.344,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "source": "ST7757.dxf FOUNDATION PLAN tags + S-FOOTINGS rectangles; SCHEDULE OF FOOTINGS (cm)",
+   "rule": "STRUCTURAL_QTO_V1 + STRUCTURAL_COMPLETION_V1: tag-in-outline matches, then constraint-unique completion; L x W x H from the schedule",
+   "blockers": [],
+   "complete_rows": [
+    "F3@H5775||TEXT|0",
+    "F3@H5774||TEXT|0"
+   ],
+   "blocked_rows": [],
+   "class": "PHYSICAL_MEASUREMENT"
+  },
+  {
+   "item": "S-FTG-F4",
+   "discipline": "STRUCTURAL",
+   "trade": "FOOTINGS",
+   "floor": "FOUNDATION",
+   "element": "footing type F4 x2 tag(s): 2 matched + size-confirmed, 0 blocked",
+   "ar": "خرسانة مسلحة للقواعد - نوع F4",
+   "en": "Reinforced concrete footings type F4 (220.0 x 200.0 x 40.0 cm)",
+   "qty": 3.52,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "source": "ST7757.dxf FOUNDATION PLAN tags + S-FOOTINGS rectangles; SCHEDULE OF FOOTINGS (cm)",
+   "rule": "STRUCTURAL_QTO_V1 + STRUCTURAL_COMPLETION_V1: tag-in-outline matches, then constraint-unique completion; L x W x H from the schedule",
+   "blockers": [],
+   "complete_rows": [
+    "F4@H5746||TEXT|0",
+    "F4@H5745||TEXT|0"
+   ],
+   "blocked_rows": [],
+   "class": "PHYSICAL_MEASUREMENT"
+  },
+  {
+   "item": "S-FTG-F5",
+   "discipline": "STRUCTURAL",
+   "trade": "FOOTINGS",
+   "floor": "FOUNDATION",
+   "element": "footing type F5 x2 tag(s): 2 matched + size-confirmed, 0 blocked",
+   "ar": "خرسانة مسلحة للقواعد - نوع F5",
+   "en": "Reinforced concrete footings type F5 (240.0 x 210.0 x 40.0 cm)",
+   "qty": 4.032,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "source": "ST7757.dxf FOUNDATION PLAN tags + S-FOOTINGS rectangles; SCHEDULE OF FOOTINGS (cm)",
+   "rule": "STRUCTURAL_QTO_V1 + STRUCTURAL_COMPLETION_V1: tag-in-outline matches, then constraint-unique completion; L x W x H from the schedule",
+   "blockers": [],
+   "complete_rows": [
+    "F5@H5747||TEXT|0",
+    "F5@H5743||TEXT|0"
+   ],
+   "blocked_rows": [],
+   "class": "PHYSICAL_MEASUREMENT"
+  },
+  {
+   "item": "S-FTG-F6",
+   "discipline": "STRUCTURAL",
+   "trade": "FOOTINGS",
+   "floor": "FOUNDATION",
+   "element": "footing type F6 x1 tag(s): 1 matched + size-confirmed, 0 blocked",
+   "ar": "خرسانة مسلحة للقواعد - نوع F6",
+   "en": "Reinforced concrete footings type F6 (260.0 x 220.0 x 50.0 cm)",
+   "qty": 2.86,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "source": "ST7757.dxf FOUNDATION PLAN tags + S-FOOTINGS rectangles; SCHEDULE OF FOOTINGS (cm)",
+   "rule": "STRUCTURAL_QTO_V1 + STRUCTURAL_COMPLETION_V1: tag-in-outline matches, then constraint-unique completion; L x W x H from the schedule",
+   "blockers": [],
+   "complete_rows": [
+    "F6@H5773||TEXT|0"
+   ],
+   "blocked_rows": [],
+   "class": "PHYSICAL_MEASUREMENT"
+  },
+  {
+   "item": "S-FTG-F8",
+   "discipline": "STRUCTURAL",
+   "trade": "FOOTINGS",
+   "floor": "FOUNDATION",
+   "element": "footing type F8 x1 tag(s): 1 matched + size-confirmed, 0 blocked",
+   "ar": "خرسانة مسلحة للقواعد - نوع F8",
+   "en": "Reinforced concrete footings type F8 (400.0 x 360.0 x 50.0 cm)",
+   "qty": 7.2,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "source": "ST7757.dxf FOUNDATION PLAN tags + S-FOOTINGS rectangles; SCHEDULE OF FOOTINGS (cm)",
+   "rule": "STRUCTURAL_QTO_V1 + STRUCTURAL_COMPLETION_V1: tag-in-outline matches, then constraint-unique completion; L x W x H from the schedule",
+   "blockers": [],
+   "complete_rows": [
+    "F8@H6949||TEXT|0"
+   ],
+   "blocked_rows": [],
+   "class": "PHYSICAL_MEASUREMENT"
+  },
+  {
+   "item": "S-FTG-F9",
+   "discipline": "STRUCTURAL",
+   "trade": "FOOTINGS",
+   "floor": "FOUNDATION",
+   "element": "footing type F9 x1 tag(s): 1 matched + size-confirmed, 0 blocked",
+   "ar": "خرسانة مسلحة للقواعد - نوع F9",
+   "en": "Reinforced concrete footings type F9 (340.0 x 270.0 x 55.0 cm)",
+   "qty": 5.049,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "source": "ST7757.dxf FOUNDATION PLAN tags + S-FOOTINGS rectangles; SCHEDULE OF FOOTINGS (cm)",
+   "rule": "STRUCTURAL_QTO_V1 + STRUCTURAL_COMPLETION_V1: tag-in-outline matches, then constraint-unique completion; L x W x H from the schedule",
+   "blockers": [],
+   "complete_rows": [
+    "F9@H5751||TEXT|0"
+   ],
+   "blocked_rows": [],
+   "class": "PHYSICAL_MEASUREMENT"
+  },
+  {
+   "item": "S-FTG-FF",
+   "discipline": "STRUCTURAL",
+   "trade": "FOOTINGS",
+   "floor": "FOUNDATION",
+   "element": "footing type FF x1 tag(s): 1 matched + size-confirmed, 0 blocked",
+   "ar": "خرسانة مسلحة للقواعد - نوع FF",
+   "en": "Reinforced concrete footings type FF (460.0 x 450.0 x 55.0 cm)",
+   "qty": 11.385,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "source": "ST7757.dxf FOUNDATION PLAN tags + S-FOOTINGS rectangles; SCHEDULE OF FOOTINGS (cm)",
+   "rule": "STRUCTURAL_QTO_V1 + STRUCTURAL_COMPLETION_V1: tag-in-outline matches, then constraint-unique completion; L x W x H from the schedule",
+   "blockers": [],
+   "complete_rows": [
+    "FF@H5750||TEXT|0"
+   ],
+   "blocked_rows": [],
+   "class": "PHYSICAL_MEASUREMENT"
+  },
+  {
+   "item": "S-FTG-FN",
+   "discipline": "STRUCTURAL",
+   "trade": "FOOTINGS",
+   "floor": "FOUNDATION",
+   "element": "footing type FN x4 tag(s): 2 matched + size-confirmed, 2 blocked",
+   "ar": "خرسانة مسلحة للقواعد - نوع FN",
+   "en": "Reinforced concrete footings type FN (100.0 x 100.0 x 30.0 cm)",
+   "qty": 0.6,
+   "unit": "m3",
+   "status": "AUTHORISED_SUBTOTAL",
+   "source": "ST7757.dxf FOUNDATION PLAN tags + S-FOOTINGS rectangles; SCHEDULE OF FOOTINGS (cm)",
+   "rule": "STRUCTURAL_QTO_V1 + STRUCTURAL_COMPLETION_V1: tag-in-outline matches, then constraint-unique completion; L x W x H from the schedule",
+   "blockers": [
+    "COMPLETION_COUNT_MISMATCH: 2 orphan tag(s), 0 contained, 1 free template outline(s) of the scheduled size",
+    "COUNT_NOT_ESTABLISHED",
+    "TAG_OUTSIDE_EVERY_DRAWN_FOOTING_RECTANGLE (boundary-clipped / rotated / tag drawn beside: never matched by distance)"
+   ],
+   "complete_rows": [
+    "FN@H4333||TEXT|0",
+    "FN@H5770||TEXT|0"
+   ],
+   "blocked_rows": [
+    "FN@H4341||TEXT|0",
+    "FN@H6160||TEXT|0"
+   ],
+   "class": "PHYSICAL_MEASUREMENT"
+  },
+  {
+   "item": "S-FTG-F10",
+   "discipline": "STRUCTURAL",
+   "trade": "FOOTINGS",
+   "floor": "FOUNDATION",
+   "element": "footing type F10 x1 tag(s): 0 matched + size-confirmed, 1 blocked",
+   "ar": "خرسانة مسلحة للقواعد - نوع F10",
+   "en": "Reinforced concrete footings type F10 (280.0 x 140.0 x 50.0 cm)",
+   "qty": null,
+   "unit": "m3",
+   "status": "BLOCKED",
+   "source": "ST7757.dxf FOUNDATION PLAN tags + S-FOOTINGS rectangles; SCHEDULE OF FOOTINGS (cm)",
+   "rule": "STRUCTURAL_QTO_V1 + STRUCTURAL_COMPLETION_V1: tag-in-outline matches, then constraint-unique completion; L x W x H from the schedule",
+   "blockers": [
+    "COMPLETION_NO_TEMPLATE_CANDIDATE: 1 orphan tag(s), 0 contained, 0 free template outline(s) of the scheduled size",
+    "COUNT_NOT_ESTABLISHED",
+    "TAG_OUTSIDE_EVERY_DRAWN_FOOTING_RECTANGLE (boundary-clipped / rotated / tag drawn beside: never matched by distance)"
+   ],
+   "complete_rows": [],
+   "blocked_rows": [
+    "F10@H5771||TEXT|0"
+   ],
+   "class": "BLOCKED_GEOMETRY"
+  },
+  {
+   "item": "S-FTG-F11",
+   "discipline": "STRUCTURAL",
+   "trade": "FOOTINGS",
+   "floor": "FOUNDATION",
+   "element": "footing type F11 x1 tag(s): 1 matched + size-confirmed, 0 blocked",
+   "ar": "خرسانة مسلحة للقواعد - نوع F11",
+   "en": "Reinforced concrete footings type F11 (350.0 x 150.0 x 50.0 cm)",
+   "qty": 2.625,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "source": "ST7757.dxf FOUNDATION PLAN tags + S-FOOTINGS rectangles; SCHEDULE OF FOOTINGS (cm)",
+   "rule": "STRUCTURAL_QTO_V1 + STRUCTURAL_COMPLETION_V1: tag-in-outline matches, then constraint-unique completion; L x W x H from the schedule",
+   "blockers": [],
+   "complete_rows": [
+    "F11@H5767|5764|TEXT|0"
+   ],
+   "blocked_rows": [],
+   "class": "PHYSICAL_MEASUREMENT"
+  },
+  {
+   "item": "S-FTG-F12",
+   "discipline": "STRUCTURAL",
+   "trade": "FOOTINGS",
+   "floor": "FOUNDATION",
+   "element": "footing type F12 x1 tag(s): 1 matched + size-confirmed, 0 blocked",
+   "ar": "خرسانة مسلحة للقواعد - نوع F12",
+   "en": "Reinforced concrete footings type F12 (440.0 x 320.0 x 70.0 cm)",
+   "qty": 9.856,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "source": "ST7757.dxf FOUNDATION PLAN tags + S-FOOTINGS rectangles; SCHEDULE OF FOOTINGS (cm)",
+   "rule": "STRUCTURAL_QTO_V1 + STRUCTURAL_COMPLETION_V1: tag-in-outline matches, then constraint-unique completion; L x W x H from the schedule",
+   "blockers": [],
+   "complete_rows": [
+    "F12@H6874||TEXT|0"
+   ],
+   "blocked_rows": [],
+   "class": "PHYSICAL_MEASUREMENT"
+  },
+  {
+   "item": "S-FTG-F13",
+   "discipline": "STRUCTURAL",
+   "trade": "FOOTINGS",
+   "floor": "FOUNDATION",
+   "element": "footing type F13 x1 tag(s): 1 matched + size-confirmed, 0 blocked",
+   "ar": "خرسانة مسلحة للقواعد - نوع F13",
+   "en": "Reinforced concrete footings type F13 (430.0 x 240.0 x 50.0 cm)",
+   "qty": 5.16,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "source": "ST7757.dxf FOUNDATION PLAN tags + S-FOOTINGS rectangles; SCHEDULE OF FOOTINGS (cm)",
+   "rule": "STRUCTURAL_QTO_V1 + STRUCTURAL_COMPLETION_V1: tag-in-outline matches, then constraint-unique completion; L x W x H from the schedule",
+   "blockers": [],
+   "complete_rows": [
+    "F13@H6876||TEXT|0"
+   ],
+   "blocked_rows": [],
+   "class": "PHYSICAL_MEASUREMENT"
+  },
+  {
+   "item": "S-FTG-F14",
+   "discipline": "STRUCTURAL",
+   "trade": "FOOTINGS",
+   "floor": "FOUNDATION",
+   "element": "footing type F14 x1 tag(s): 1 matched + size-confirmed, 0 blocked",
+   "ar": "خرسانة مسلحة للقواعد - نوع F14",
+   "en": "Reinforced concrete footings type F14 (380.0 x 330.0 x 50.0 cm)",
+   "qty": 6.27,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "source": "ST7757.dxf FOUNDATION PLAN tags + S-FOOTINGS rectangles; SCHEDULE OF FOOTINGS (cm)",
+   "rule": "STRUCTURAL_QTO_V1 + STRUCTURAL_COMPLETION_V1: tag-in-outline matches, then constraint-unique completion; L x W x H from the schedule",
+   "blockers": [],
+   "complete_rows": [
+    "F14@H5763||TEXT|0"
+   ],
+   "blocked_rows": [],
+   "class": "PHYSICAL_MEASUREMENT"
+  },
+  {
+   "item": "S-FTG-F15",
+   "discipline": "STRUCTURAL",
+   "trade": "FOOTINGS",
+   "floor": "FOUNDATION",
+   "element": "footing type F15 x1 tag(s): 1 matched + size-confirmed, 0 blocked",
+   "ar": "خرسانة مسلحة للقواعد - نوع F15",
+   "en": "Reinforced concrete footings type F15 (180.0 x 100.0 x 40.0 cm)",
+   "qty": 0.72,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "source": "ST7757.dxf FOUNDATION PLAN tags + S-FOOTINGS rectangles; SCHEDULE OF FOOTINGS (cm)",
+   "rule": "STRUCTURAL_QTO_V1 + STRUCTURAL_COMPLETION_V1: tag-in-outline matches, then constraint-unique completion; L x W x H from the schedule",
+   "blockers": [],
+   "complete_rows": [
+    "F15@H6953||TEXT|0"
+   ],
+   "blocked_rows": [],
+   "class": "PHYSICAL_MEASUREMENT"
+  },
+  {
+   "item": "S2-COL-CNT",
+   "discipline": "STRUCTURAL",
+   "trade": "COLUMNS",
+   "floor": "ALL",
+   "element": "35 tagged columns on the column plan",
+   "ar": "عدد الأعمدة",
+   "en": "Columns - count by type (column & axis plan)",
+   "qty": 35,
+   "unit": "nr",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "class": "PHYSICAL_MEASUREMENT",
+   "source": "ST7757.dxf COLUMN & AXIS PLAN tags + SCHEDULE OF COLUMNS",
+   "rule": "tag count per scheduled type",
+   "blockers": []
+  },
+  {
+   "item": "S2-COL-PLAN-GF",
+   "discipline": "STRUCTURAL",
+   "trade": "COLUMNS",
+   "floor": "GF",
+   "element": "ground-floor sections x count",
+   "ar": "مساحة مقطع الأعمدة - الأرضي",
+   "en": "Column plan section area, ground-floor sections",
+   "qty": 4.5,
+   "unit": "m2",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "class": "PHYSICAL_MEASUREMENT",
+   "source": "SCHEDULE OF COLUMNS (cm) x count",
+   "rule": "sum count x b x h (schedule, ground floor)",
+   "blockers": []
+  },
+  {
+   "item": "S2-COL-VOL",
+   "discipline": "STRUCTURAL",
+   "trade": "COLUMNS",
+   "floor": "ALL",
+   "element": "all storeys",
+   "ar": "خرسانة الأعمدة",
+   "en": "Column concrete",
+   "qty": null,
+   "unit": "m3",
+   "status": "BLOCKED",
+   "class": "BLOCKED_HEIGHT",
+   "source": "ST7757.dxf",
+   "rule": "section x storey height",
+   "blockers": [
+    "COLUMN_HEIGHT_NOT_PROVED"
+   ]
+  },
+  {
+   "item": "S2-BM-VOL",
+   "discipline": "STRUCTURAL",
+   "trade": "BEAMS",
+   "floor": "ALL",
+   "element": "34 scheduled types",
+   "ar": "خرسانة الجسور",
+   "en": "Beam concrete",
+   "qty": null,
+   "unit": "m3",
+   "status": "BLOCKED",
+   "class": "BLOCKED_GEOMETRY",
+   "source": "ST7757.dxf schedules + slab plans",
+   "rule": "section x length",
+   "blockers": [
+    "BEAM_PLAN_EXTENT_NOT_PROVED"
+   ]
+  },
+  {
+   "item": "S2-SLB-VOL",
+   "discipline": "STRUCTURAL",
+   "trade": "SLABS",
+   "floor": "ALL",
+   "element": "GF_ROOF_SLAB: ['16'] cm, 1F_ROOF_SLAB: ['16'] cm, 2F_ROOF_SLAB: ['18'] cm",
+   "ar": "خرسانة البلاطات",
+   "en": "Slab concrete",
+   "qty": null,
+   "unit": "m3",
+   "status": "BLOCKED",
+   "class": "BLOCKED_GEOMETRY",
+   "source": "ST7757.dxf slab plans",
+   "rule": "footprint x thickness, beams once",
+   "blockers": [
+    "SLAB_OUTLINE_NOT_ESTABLISHED"
+   ]
+  },
+  {
+   "item": "S2-GB-VOL",
+   "discipline": "STRUCTURAL",
+   "trade": "GROUND_BEAMS",
+   "floor": "FOUNDATION",
+   "element": "ground beams",
+   "ar": "خرسانة الميد",
+   "en": "Ground beams",
+   "qty": null,
+   "unit": "m3",
+   "status": "BLOCKED",
+   "class": "BLOCKED_HEIGHT",
+   "source": "ST7757.dxf GROUND BEAMS PLAN",
+   "rule": "section x length",
+   "blockers": [
+    "GROUND_BEAM_LEVEL_AND_EXTENT_NOT_PROVED"
+   ]
+  },
+  {
+   "item": "S2-STR-VOL",
+   "discipline": "STRUCTURAL",
+   "trade": "STAIRS_STRUCTURE",
+   "floor": "ALL",
+   "element": "stair flights",
+   "ar": "خرسانة الدرج",
+   "en": "Stair concrete",
+   "qty": null,
+   "unit": "m3",
+   "status": "BLOCKED",
+   "class": "BLOCKED_HEIGHT",
+   "source": "ST7757 typical stair detail",
+   "rule": "waist x length x width",
+   "blockers": [
+    "RISER_COUNT_PER_FLIGHT_NOT_PROVED"
+   ]
+  },
+  {
+   "item": "S2-RBR-FTG",
+   "discipline": "STRUCTURAL",
+   "trade": "REBAR",
+   "floor": "ALL",
+   "element": "rebar",
+   "ar": "حديد القواعد",
+   "en": "Rebar - footings",
+   "qty": null,
+   "unit": "kg",
+   "status": "BLOCKED",
+   "class": "BLOCKED_MATERIAL",
+   "source": "ST7757.dxf schedules",
+   "rule": "rebar_gate (fail closed, no kg/m3)",
+   "blockers": [
+    "REBAR_FAIL_CLOSED: bar length / shape / laps / cover not stated"
+   ]
+  },
+  {
+   "item": "S2-RBR-COL",
+   "discipline": "STRUCTURAL",
+   "trade": "REBAR",
+   "floor": "ALL",
+   "element": "rebar",
+   "ar": "حديد الأعمدة",
+   "en": "Rebar - columns",
+   "qty": null,
+   "unit": "kg",
+   "status": "BLOCKED",
+   "class": "BLOCKED_MATERIAL",
+   "source": "ST7757.dxf schedules",
+   "rule": "rebar_gate (fail closed, no kg/m3)",
+   "blockers": [
+    "REBAR_FAIL_CLOSED: bar length / shape / laps / cover not stated"
+   ]
+  },
+  {
+   "item": "S2-RBR-BM",
+   "discipline": "STRUCTURAL",
+   "trade": "REBAR",
+   "floor": "ALL",
+   "element": "rebar",
+   "ar": "حديد الجسور",
+   "en": "Rebar - beams",
+   "qty": null,
+   "unit": "kg",
+   "status": "BLOCKED",
+   "class": "BLOCKED_MATERIAL",
+   "source": "ST7757.dxf schedules",
+   "rule": "rebar_gate (fail closed, no kg/m3)",
+   "blockers": [
+    "REBAR_FAIL_CLOSED: bar length / shape / laps / cover not stated"
+   ]
+  },
+  {
+   "item": "S2-RBR-SLB",
+   "discipline": "STRUCTURAL",
+   "trade": "REBAR",
+   "floor": "ALL",
+   "element": "rebar",
+   "ar": "حديد البلاطات",
+   "en": "Rebar - slabs",
+   "qty": null,
+   "unit": "kg",
+   "status": "BLOCKED",
+   "class": "BLOCKED_MATERIAL",
+   "source": "ST7757.dxf schedules",
+   "rule": "rebar_gate (fail closed, no kg/m3)",
+   "blockers": [
+    "REBAR_FAIL_CLOSED: bar length / shape / laps / cover not stated"
+   ]
+  }
+ ],
+ "footing_summary": {
+  "occurrences": 27,
+  "complete": 21,
+  "blocked": 6,
+  "complete_m3": 63.314,
+  "phase_a": {
+   "occurrences": 27,
+   "complete": 19,
+   "blocked": 8,
+   "complete_m3": 57.829
+  }
+ },
+ "rule": "count x dimension with named sources; blocked rows in no total"
+}

@@ -1,0 +1,70 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_A2_DONORS_V1",
+ "donors": [
+  {
+   "donor": "OpenTakeoff (Apache-2.0, e6d2251c)",
+   "capability": "door seal from the swing (hinge on wall, strike end, sweep 0.7-2.1 rad)",
+   "class": "CLEAN_REIMPLEMENT",
+   "where": "engine/source/entity_role_inference.door_motifs (vector; leaf + hinge anchoring; closure by the frozen opening closure)",
+   "inspected": "web/src/lib/doorseal.ts"
+  },
+  {
+   "donor": "OpenTakeoff",
+   "capability": "stated non-boundary ink (hidden / annotation)",
+   "class": "CLEAN_REIMPLEMENT",
+   "where": "linetype_class from the LTYPE definition (not the name)",
+   "inspected": "web/src/lib/oneclick.ts, layers.ts"
+  },
+  {
+   "donor": "OpenTakeoff",
+   "capability": "layer-name classifier",
+   "class": "REJECT (as authority)",
+   "where": "-",
+   "inspected": "web/src/lib/layers.ts (numeric layers -> unknown)"
+  },
+  {
+   "donor": "OpenTakeoff",
+   "capability": "detectRooms / netroom raster rooms",
+   "class": "BENCHMARK_ONLY",
+   "where": "-",
+   "inspected": "web/src/lib/detectRooms.ts, netroom.js"
+  },
+  {
+   "donor": "U-C4N (MIT, cdb10638)",
+   "capability": "arch/walls.py wall authoring",
+   "class": "BENCHMARK_ONLY",
+   "where": "-",
+   "inspected": "engineering/arch/walls.py, rooms.py"
+  },
+  {
+   "donor": "U-C4N",
+   "capability": "labels.plain",
+   "class": "ALREADY CLEAN_REIMPLEMENTED (cad_text)",
+   "where": "engine/source/cad_text.py",
+   "inspected": "engineering/understand/labels.py"
+  },
+  {
+   "donor": "U-C4N",
+   "capability": "Arabic / SHX glyph decoding",
+   "class": "NOT AVAILABLE",
+   "where": "-",
+   "inspected": "no Arabic or SHX glyph map in the donor"
+  },
+  {
+   "donor": "beiming183 (MIT)",
+   "capability": "readback diff",
+   "class": "PATTERN_IN_USE",
+   "where": "r8_6a_reconcile",
+   "inspected": "lock only"
+  },
+  {
+   "donor": "Slacker (Apache-2.0) / puran-water (MIT)",
+   "capability": "-",
+   "class": "BENCHMARK_ONLY",
+   "where": "-",
+   "inspected": "lock only"
+  }
+ ],
+ "copied_code": "NONE",
+ "fetched": "U-C4N cdb10638 and OpenTakeoff e6d2251c read-only into the session scratch at their DONORS.lock commits (source only, never imported)"
+}

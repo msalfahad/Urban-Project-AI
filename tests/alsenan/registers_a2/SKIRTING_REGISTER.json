@@ -1,0 +1,110 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_A2_SKIRTING_V1",
+ "rooms": [
+  {
+   "floor": "GF",
+   "room": "W.C",
+   "status": "BLOCKED",
+   "perimeter_m": null,
+   "door_closure_length_m": null,
+   "skirting_path_m": null
+  },
+  {
+   "floor": "GF",
+   "room": "DEWANEYA / Wash",
+   "status": "BLOCKED",
+   "perimeter_m": null,
+   "door_closure_length_m": null,
+   "skirting_path_m": null
+  },
+  {
+   "floor": "GF",
+   "room": "KITCHEN",
+   "status": "BLOCKED",
+   "perimeter_m": null,
+   "door_closure_length_m": null,
+   "skirting_path_m": null
+  },
+  {
+   "floor": "GF",
+   "room": "W.C",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "perimeter_m": 7.414038,
+   "door_closure_length_m": 0.8,
+   "skirting_path_m": 6.614038
+  },
+  {
+   "floor": "GF",
+   "room": "W.C",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "perimeter_m": 5.6,
+   "door_closure_length_m": 0.8,
+   "skirting_path_m": 4.8
+  },
+  {
+   "floor": "GF",
+   "room": "W.C",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "perimeter_m": 6.2,
+   "door_closure_length_m": 0.797039,
+   "skirting_path_m": 5.402961
+  },
+  {
+   "floor": "GF",
+   "room": "(label not decoded)",
+   "status": "BLOCKED",
+   "perimeter_m": null,
+   "door_closure_length_m": null,
+   "skirting_path_m": null
+  },
+  {
+   "floor": "GF",
+   "room": "W.C",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "perimeter_m": 7.5,
+   "door_closure_length_m": 0.8,
+   "skirting_path_m": 6.7
+  },
+  {
+   "floor": "1F",
+   "room": "BATH",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "perimeter_m": 9.0,
+   "door_closure_length_m": 1.1,
+   "skirting_path_m": 7.9
+  },
+  {
+   "floor": "1F",
+   "room": "BATH",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "perimeter_m": 8.7,
+   "door_closure_length_m": 1.033651,
+   "skirting_path_m": 7.666349
+  },
+  {
+   "floor": "1F",
+   "room": "MASTER BED ROOM",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "perimeter_m": 16.2,
+   "door_closure_length_m": 1.4,
+   "skirting_path_m": 14.8
+  },
+  {
+   "floor": "1F",
+   "room": "MASTER BED ROOM / MASTER BED ROOM",
+   "status": "BLOCKED",
+   "perimeter_m": null,
+   "door_closure_length_m": null,
+   "skirting_path_m": null
+  },
+  {
+   "floor": "1F",
+   "room": "BATH",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "perimeter_m": 7.6,
+   "door_closure_length_m": 0.8,
+   "skirting_path_m": 6.8
+  }
+ ],
+ "rule": "perimeter minus door closures; windows are NOT deducted (none proved floor-reaching); material BLOCKED"
+}
