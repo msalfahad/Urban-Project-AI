@@ -204,13 +204,29 @@ def _sheet(ctx, S, key, rot, libs) -> dict:
         bp.append((r["mark_key"], b["u"][0] * b["tag_t"] + b["n"][0] * mid, b["u"][1] * b["tag_t"] + b["n"][1] * mid))
     slab = SR.regions(segments=segs, arcs=arcs, columns=cols, void_labels=voids, opening_segments=ops, stair_segments=sts,
                       thickness_tags=tags, band_points=bp, umm=1.0, eps=AP.EPS)
-    plate, gross = slab.pop("_plate"), slab.pop("_gross")
+    rings = slab.pop("_rings")
     dang = slab.pop("_dangles", [])
+    gross, plate = _polygons(rings)
     return {"sheet": key, "bounds": sb, "element_segments": len(segs), "element_arcs": len(arcs), "merged_lines": len(lines),
             "columns": cols, "marks": len(marks), "binding": bound, "binding_states": dict(Counter(r["state"] for r in bound)),
             "occurrences": occ["occurrences"], "occurrence_notes": occ["notes"],
             "occurrence_states": dict(Counter(o["state"] for o in occ["occurrences"])),
             "slab": slab, "dangles": dang, "_plate": plate, "_gross": gross, "_lines": lines, "_segs": segs}
+
+
+def _polygons(rings):
+    """Shapely views of the slab-region rings (research side only; engine/source stays stdlib)."""
+    from shapely.ops import unary_union
+    def poly(r):
+        p = Polygon(r)
+        return p if p.is_valid else p.buffer(0)
+    outer = [poly(r) for r in rings["outer"] if len(r) >= 3]
+    if not outer:
+        return None, None
+    gross = unary_union(outer)
+    ops = [poly(r) for r in rings["openings"] if len(r) >= 3]
+    plate = gross.difference(unary_union(ops)) if ops else gross
+    return gross, plate
 
 
 # ------------------------------------------------------------------ cross-document registration

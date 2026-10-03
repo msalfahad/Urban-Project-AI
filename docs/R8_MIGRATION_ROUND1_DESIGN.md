@@ -1119,7 +1119,7 @@ the freeze and tested.
   - `structural_vertical` (STRUCTURAL_VERTICAL_INTERVAL_V1): per column, the deepest member framing into its outline
     (an unbound band only through its breadth-bounded depth), interval - D_ctrl, beam-column joint as a separate
     component, neck BLOCKED_HEIGHT without a founding level.
-  - `slab_region` (SLAB_REGION_V1): polygonised plate, VOID / opening-cross / stair openings, thickness per face or
+  - `slab_region` (SLAB_REGION_V1, stdlib on the TS01 arrangement of `topology`): plate, VOID / opening-cross / stair openings, thickness per face or
     sheet-uniform printed value, closure audit (a band outside the plate blocks).
   - `concrete_model`: non-overlapping physical model (slab / downstand / joint / column), gross beam view separately,
     stair waist + wedges + landings (fail-closed).

@@ -74,8 +74,11 @@ def test_blocked_columns_have_no_height():
 
 def test_slabs_and_stairs():
     sl = R("SLAB_REGION_REGISTER")["sheets"]
-    assert sl["GF"]["closure"] == "CLOSED" and sl["1F"]["closure"] == "CLOSED"
-    assert sl["2F"]["closure"] == "SLAB_OUTLINE_NOT_ESTABLISHED" and sl["2F"]["volume_m3"] is None
+    for fl in ("GF", "1F", "2F"):
+        s = sl[fl]
+        assert s["closure"] == "CLOSED" and s["bands_outside_plate"] == []
+        assert s["net_plate_area_m2"] == pytest.approx(s["gross_outline_area_m2"] - s["openings_area_m2"])
+        assert s["volume_m3"] is not None and len(s["sheet_thickness_tags_cm"]) == 1
     assert R("STAIR_REGISTER")["result"]["state"] == "BLOCKED_INPUT_MISSING"
 
 

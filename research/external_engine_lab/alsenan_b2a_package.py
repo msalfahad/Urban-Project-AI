@@ -143,7 +143,7 @@ NO BENCHMARK CALIBRATION. NO PRICING. NO PRODUCTION MIGRATION.
         [[r["id"], r["item"][:45], r["a3_urban"], r["b2a_urban"], r["bench"], r["pct_b2a_vs_bench"], r["b2a_comparability"], r["finding"][:120]]
          for r in ev["rows"]]) + "\n\nSlab + downstand per storey (B2A): " + json.dumps(ev["slab_plus_downstand_m3"]) + "\n"
     q = regs["QORTUBA_REGRESSION"]
-    M["16_QORTUBA_REGRESSION"] = f"# Qortuba regression\n\nState: **{q['state']}**; registers {q['registers']}; identical {len(q['identical'])}; changed {q['changed']}; extra {q['extra']}.\n\nNo Qortuba file edited; no Qortuba-specific code.\n"
+    M["16_QORTUBA_REGRESSION"] = f"# Qortuba regression\n\nState: **{q['state']}**; registers {q['registers']}; identical {q['identical']}; changed {q['changed']}; extra {q['extra']}.\n\nNo Qortuba file edited; no Qortuba-specific code.\n"
     M["17_REMAINING_BLOCKERS"] = "# Remaining blockers\n\n" + table(["item", "state", "count / why"],
         [[r["item"], r["state"], r.get("count", r.get("why"))] for r in regs["REMAINING_BLOCKERS"]["rows"]])
     M["18_NEXT_BLIND_TEST"] = """# Next blind test
