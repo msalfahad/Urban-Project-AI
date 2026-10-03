@@ -4,7 +4,9 @@ The XLSX is rebuilt from the COMMITTED registers (alsenan_registers.workbook), r
 digest and file sha256 are compared with the frozen values. The freeze is re-validated against its schema. The test
 results come from the one full suite run from the final commit (junit file + real exit code).
 
-    python3 research/external_engine_lab/alsenan_package.py <junit.xml> "<command>" <exit_code>
+    python3 research/external_engine_lab/alsenan_package.py <junit.xml> "<command>" <exit_code> [earlier_runs.json]
+
+earlier_runs.json: every earlier full-suite run of this round that did not count, with its real exit code and cause.
 """
 
 from __future__ import annotations
@@ -229,7 +231,7 @@ Windows: {op['windows']}. Basis: {op['basis']}.
     return D
 
 
-def main(junit_path, command, exit_code):
+def main(junit_path, command, exit_code, earlier=None):
     commit = subprocess.run(["git", "rev-parse", "--short", "HEAD"], capture_output=True, text=True,
                             cwd=ROOT).stdout.strip()
     R = {n: jl(REG / f"{n}.json") for n in NAMES}
@@ -259,7 +261,7 @@ def main(junit_path, command, exit_code):
            "alsenan_test_files": sorted(p.name for p in (ROOT / "tests/alsenan").glob("test_*.py")),
            "package_xlsx": xv, "package_freeze_schema": fv["state"],
            "freeze_file_sha256": hashlib.sha256((REG / "ALSENAN_P7757_ST7757_PHASE_A_FREEZE.json").read_bytes()).hexdigest(),
-           "earlier_failed_runs_this_round": []}
+           "earlier_failed_runs_this_round": jl(earlier) if earlier else []}
     R["TEST_RESULTS"] = res
     for n in NAMES:
         (OUT / f"{n}.json").write_text(json.dumps(R[n], indent=1, ensure_ascii=False) + "\n")
@@ -272,4 +274,4 @@ def main(junit_path, command, exit_code):
 
 
 if __name__ == "__main__":
-    main(*sys.argv[1:4])
+    main(*sys.argv[1:5])
