@@ -13,6 +13,12 @@ vocabulary, an approved line without RELEASED, a legacy alias code as a summary 
 exactly once in the summary, a row-count drop on any sheet.
 
 The saved zip is re-packed with fixed entry timestamps, so the same model gives the same bytes.
+
+Parameters (Alsenan Phase A; defaults reproduce the Qortuba RC1 workbook byte for byte): `banner` (row 1 of every
+sheet - a project's name belongs to the caller, not to this module), `summary_name` (the additive sheet named in the
+breakdown / schedule role lines) and SCOPED additive summaries: more than one ADDITIVE_SUMMARY sheet is accepted only
+when every one declares a distinct non-empty "scope" (e.g. ARCHITECTURAL / STRUCTURAL); each line is then added within
+its own scope only, and the role line says so.
 """
 
 from __future__ import annotations
@@ -90,20 +96,34 @@ def _repack(path):
         f.write(buf.getvalue())
 
 
-def write(model: dict, path, *, created) -> dict:
+def role_text(sheet: dict, summary_name: str = "01_BOQ_SUMMARY") -> str:
+    t = ROLE_TEXT[sheet["role"]].replace("01_BOQ_SUMMARY", summary_name)
+    if sheet["role"] == "ADDITIVE_SUMMARY" and sheet.get("scope"):
+        t += f" SCOPE: {sheet['scope']} - add these lines only to each other, never to another scope."
+    return t
+
+
+def check_additive(model: dict) -> None:
+    add = [s for s in model.values() if s["role"] == "ADDITIVE_SUMMARY"]
+    if len(add) == 1:
+        return
+    scopes = [s.get("scope") for s in add]
+    if not add or not all(scopes) or len(set(scopes)) != len(scopes):
+        raise ValueError("exactly one ADDITIVE_SUMMARY sheet is required, or several with distinct declared scopes")
+
+
+def write(model: dict, path, *, created, banner: str = BANNER, summary_name: str = "01_BOQ_SUMMARY") -> dict:
     from openpyxl import Workbook
     from openpyxl.styles import Alignment, Font, PatternFill
     from openpyxl.utils import get_column_letter
-    roles = [s["role"] for s in model.values()]
-    if roles.count("ADDITIVE_SUMMARY") != 1:
-        raise ValueError("exactly one ADDITIVE_SUMMARY sheet is required")
+    check_additive(model)
     c = content(model)
     wb = Workbook()
     wb.remove(wb.active)
     for name, s in model.items():
         ws = wb.create_sheet(name)
-        ws.append([BANNER])
-        ws.append([ROLE_TEXT[s["role"]]])
+        ws.append([banner])
+        ws.append([role_text(s, summary_name)])
         ws.append(c[name]["header"])
         for r in c[name]["rows"]:
             ws.append(r)
@@ -151,7 +171,7 @@ def read(path) -> dict:
 
 
 def validate(path, model: dict, *, sources=(), summary_sheet="01_BOQ_SUMMARY", item_col=0, approved_col=None,
-             canonical_ids=(), legacy_ids=(), tol=0.0) -> dict:
+             canonical_ids=(), legacy_ids=(), tol=0.0, banner: str = BANNER, summary_name: str | None = None) -> dict:
     """sources: [{"sheet", "row" (0-based data row), "col", "value", "ref"}] - the register value each quantity cell
     was copied from (fetched by the caller from the register, not from the model)."""
     got, exp = read(path), content(model)
@@ -161,9 +181,9 @@ def validate(path, model: dict, *, sources=(), summary_sheet="01_BOQ_SUMMARY", i
         if rows is None:
             diffs.append({"sheet": name, "error": "missing"})
             continue
-        if rows[0][:1] != [BANNER]:
+        if rows[0][:1] != [banner]:
             diffs.append({"sheet": name, "error": "banner"})
-        if rows[1][:1] != [ROLE_TEXT[model[name]["role"]]]:
+        if rows[1][:1] != [role_text(model[name], summary_name or summary_sheet)]:
             diffs.append({"sheet": name, "error": "role line"})
         body = [_trim(r) for r in rows[HEADER_ROW:]]
         while body and not body[-1]:
