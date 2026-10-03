@@ -290,6 +290,7 @@ def _build(work: Path) -> dict:
         floors[fl] = {"inp": inp, "eri": r, "res": res, "pass1_decisions": pass1[fl]["decisions"]}
     a2["floors"] = {fl: _floor_facts(fl, v["inp"], v["eri"], v["res"], v["pass1_decisions"], umm)
                     for fl, v in floors.items()}
+    ctx["a2_raw"] = floors                                   # engine objects for later phases (never serialised)
     a2["region_leakage"] = _leakage(inputs)
     # ---------------- vertical evidence
     a2["vertical"] = _vertical(ctx, a2)

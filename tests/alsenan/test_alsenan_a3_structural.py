@@ -180,8 +180,12 @@ def test_strap_band_measured_between_footing_faces_only_when_the_mark_is_inside(
     assert SS.beam_bands([m_out], lib, lines, umm=1.0, tol_mm=2.0, eps=EPS, supports=[f1, f2])[0]["state"] == \
         "NO_BAND_HOLDS_THE_MARK"
     wrong = {"SB1": {"B_cm": 100, "D_cm": 50}}
-    assert SS.beam_bands([m_in], wrong, lines, umm=1.0, tol_mm=2.0, eps=EPS, supports=[f1, f2])[0]["state"] == \
-        "NO_BAND_HOLDS_THE_MARK"
+    r_wrong = SS.beam_bands([m_in], wrong, lines, umm=1.0, tol_mm=2.0, eps=EPS, supports=[f1, f2])[0]
+    assert r_wrong["state"] == "NO_BAND_HOLDS_THE_MARK" and r_wrong["pairs_between_mm"] == [700.0]
+    near = {"SB1": {"B_cm": 72, "D_cm": 50}}                       # drawn 700 vs scheduled 720: 2.8 % -> flagged
+    r_near = SS.beam_bands([m_in], near, lines, umm=1.0, tol_mm=2.0, eps=EPS, supports=[f1, f2])[0]
+    assert r_near["state"] == "MEASURED_WITH_WIDTH_DEVIATION" and r_near["width_deviation_mm"] == -20.0
+    assert r_near["volume_m3"] == pytest.approx(r_near["length_m"] * 0.72 * 0.5)     # schedule section governs
     free = SS.beam_bands([m_in], lib, lines, umm=1.0, tol_mm=2.0, eps=EPS, supports=[f1])[0]
     assert free["state"] == "SPAN_ENDS_NOT_AT_SUPPORTS" and free["volume_m3"] is None
     cb = SS.beam_bands([dict(m_in, type="CB3")], lib, lines, umm=1.0, tol_mm=2.0, eps=EPS, supports=[f1, f2])[0]

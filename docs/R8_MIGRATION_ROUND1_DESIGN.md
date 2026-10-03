@@ -1042,3 +1042,41 @@ improves the ONE engine generically; no layer map, handle list or coordinate lis
   Qortuba check `alsenan_a2_qortuba_regression.py`.
 
 Phase B (comparison) has not started.
+
+## 26. Alsenan P7757 + ST7757 Phase A3 (schedule-driven structure, owner facts, room recovery)
+
+The recommendation (answers 1-16, F / F10 / FN forensics) was committed before any A3 code (38ae9ae).
+
+- `engine/source/structural_schedule.py` (STRUCTURAL_SCHEDULE_QTO_V1):
+  - Authority split: the plan mark is the type identity (exact '/'-token match; '.'-removal only when unique). The
+    schedule row gives the nominal size and reinforcement. Plan geometry only validates. An explicit local dimension
+    bound to the occurrence is the only override.
+  - Candidates: per-entity polyline rings (one gap closes only when entering, non-collinear element lines meet both
+    gap ends), rectangles and schedule-size templates, merged by bounds. A mark binds to the smallest containing
+    candidate.
+  - States:
+    - CASE A, GEOMETRY_CONFIRMED;
+    - CASE B, SCHEDULE_AUTHORITY_INTERRUPTED (strap gap, notch at an adjacent outline) or COUNT_UNIQUE;
+    - CASE C, SOURCE_CONFLICT_DRAWN_SIZE / SOURCE_CONFLICT_COMBINED_OUTLINE, blocked;
+    - CASE D, a larger detector candidate is rejected;
+    - otherwise TAG_WITHOUT_BOUND_GEOMETRY or TYPE_NOT_IN_SCHEDULE.
+  - Type totals are derived from the occurrence rows, and `reconcile` proves tags = computed + blocked per type.
+  - Per-storey column bands with corroboration against printed size labels and drawn outlines.
+  - Strap / beam bands: the mark must lie strictly between a parallel pair at the scheduled breadth (a deviation of up
+    to 5 % is recorded); the clear span is cut at the support outlines.
+  - Rebar definitions only: weight blocked, kg/m3 refused.
+- `entity_role_inference` motifs (POLICY_ID unchanged; recorded under `motifs_v2`):
+  - CURVED_GLAZING: concentric arcs on a proven glazing layer, anchored on wall faces.
+  - COUNTER_RUN joinery: role JOINERY, which becomes furniture, never a wall.
+  - WALL_END_CAP: a perpendicular cap between the ends of a wall-face pair, used as a topology boundary.
+  - Door-frame segments inside a hinged wall gap.
+- Adapter `alsenan_phase_a3.py`:
+  - owner facts (Salon material and owner-derived height, Reception double height, Master Bedroom curved glazing);
+  - unique-width salon binding;
+  - double-height zone, projecting the label by the sheet-frame offset;
+  - continuous-beam schedules transcribed from ST7757.pdf;
+  - room-like rule for unlabelled sites.
+- Registers `alsenan_a3_registers.py` (`tests/alsenan/registers_a3/`); package `alsenan_a3_package.py`; Qortuba check
+  `alsenan_a3_qortuba_regression.py`.
+
+Phase B (comparison) has not started.

@@ -87,3 +87,30 @@ def test_motif_policy_is_recorded():
     rec = ERI.policy_record()
     assert rec["motifs_v2"]["curved_glazing"]["min_arcs"] == 2 and rec["motifs_v2"]["counter_run"]["offset_mm"] == [450.0, 750.0]
     assert rec["to_geometry_role"]["JOINERY"] == "FURNITURE"
+
+
+# ------------------------------------------------------------------ wall-end caps and door frames
+def test_wall_end_cap_on_another_layer_closes_the_band_and_needs_both_face_ends():
+    # a wall stub in room 2 (faces y=3000 / 3200 from the east wall to x=8000) whose free end is drawn on a FRAME layer
+    stub = [seg(8000, 3000, 9800, 3000, "7"), seg(8000, 3200, 9800, 3200, "7")]
+    cap = seg(8000, 3000, 8000, 3200, "FR")
+    inp, r = with_extra(stub + [cap])
+    assert r["part_roles"][cap.identity.key] == ERI.WALL_END_CAP
+    assert ERI.TO_GR[ERI.WALL_END_CAP] == "TOPOLOGY_BOUNDARY"
+    # a frame line that stops short of a face end is not a cap
+    short = seg(8000, 3000, 8000, 3150, "FR")
+    inp, r = with_extra(stub + [short])
+    assert r["part_roles"].get(short.identity.key) != ERI.WALL_END_CAP
+    # a line between the two faces but away from their END points (mid-stub) is not a cap
+    mid = seg(9000, 3000, 9000, 3200, "FR")
+    inp, r = with_extra(stub + [mid])
+    assert r["part_roles"].get(mid.identity.key) != ERI.WALL_END_CAP
+
+
+def test_door_frame_lines_inside_a_door_gap_join_the_door_symbol():
+    frame = [seg(5000, 1000, 5050, 1000, "D9"), seg(5050, 1000, 5050, 1100, "D9")]   # jamb frame in the gap
+    inp, r = with_extra(frame)
+    assert all(r["part_roles"][p.identity.key] == ERI.DOOR_SYMBOL for p in frame)
+    res = _topo(inp, r)
+    lab = _labelled(res)
+    assert len(lab) == 2 and all(s["status"] == "CERTIFIED" for s in lab)

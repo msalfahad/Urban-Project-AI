@@ -63,6 +63,8 @@ PARTIAL_STATES = (INTERRUPTED, COUNT_UNIQUE)
 CONFLICT_STATES = (COMBINED, DRAWN_SIZE)
 GAP_EXPLAINED, CLOSED, NOTCHED = "GAP_EXPLAINED_BY_ENTERING_ELEMENT", "CLOSED", "NOTCH_AT_ADJACENT_OUTLINE"
 FORBIDDEN_REBAR_KEYS = SQ.FORBIDDEN_REBAR_KEYS
+BAND_WIDTH_DEVIATION_MAX = 0.05   # a band whose drawn width is within 5 % of the scheduled breadth still holds the
+                                  # mark (schedule authority for the section; the deviation is reported)
 
 
 # ------------------------------------------------------------------ marks
@@ -500,8 +502,28 @@ def beam_bands(marks, library, lines, *, umm, tol_mm, eps, supports=()) -> list:
                     found.append(pair)
         uniq = {(round(p["t0"], 3), round(p["t1"], 3), round(p["offset"], 3)): p for p in found}
         found = list(uniq.values())
+        deviation = None
         if not found:
-            out.append(dict(rec, state="NO_BAND_HOLDS_THE_MARK", length_m=None, volume_m3=None))
+            wide = []
+            for i, a in enumerate(lines):
+                for b in lines[i + 1:]:
+                    pair = _band(a, b, m["x"], m["y"], width, BAND_WIDTH_DEVIATION_MAX * width, eps)
+                    if pair:
+                        wide.append(pair)
+            wide = list({(round(p["t0"], 3), round(p["t1"], 3), round(p["offset"], 3)): p for p in wide}.values())
+            if len(wide) == 1:
+                found = wide
+                deviation = round(abs(wide[0]["offset"]) * umm - sec["B_cm"] * 10.0, 1)
+        if not found:
+            seps = set()                                   # diagnostic only: pairs the mark lies between at any width
+            for i, a in enumerate(lines):
+                for b in lines[i + 1:]:
+                    p = _band(a, b, m["x"], m["y"], None, None, eps)
+                    if p and abs(p["offset"]) * umm <= 3 * sec["B_cm"] * 10.0:
+                        seps.add(round(abs(p["offset"]) * umm, 1))
+            out.append(dict(rec, state="NO_BAND_HOLDS_THE_MARK", length_m=None, volume_m3=None,
+                            pairs_between_mm=sorted(seps), scheduled_breadth_mm=sec["B_cm"] * 10.0,
+                            tolerance_mm=tol_mm))
             continue
         if len(found) > 1:
             out.append(dict(rec, state="AMBIGUOUS_BAND", candidates=len(found), length_m=None, volume_m3=None))
@@ -512,7 +534,9 @@ def beam_bands(marks, library, lines, *, umm, tol_mm, eps, supports=()) -> list:
             out.append(dict(rec, state="SPAN_ENDS_NOT_AT_SUPPORTS", band=p["keys"], length_m=None, volume_m3=None))
             continue
         L = clear["length"] * umm / 1000.0
-        out.append(dict(rec, state="MEASURED", band=p["keys"], span_native=[round(p["t0"], 3), round(p["t1"], 3)],
+        out.append(dict(rec, state="MEASURED" if deviation is None else "MEASURED_WITH_WIDTH_DEVIATION",
+                        width_deviation_mm=deviation, drawn_width_mm=round(abs(p["offset"]) * umm, 1),
+                        band=p["keys"], span_native=[round(p["t0"], 3), round(p["t1"], 3)],
                         clear=clear["cut_by"], length_m=round(L, 6),
                         volume_m3=round(L * sec["B_cm"] / 100.0 * sec["D_cm"] / 100.0, 6),
                         formula="clear length x B x D"))
@@ -531,7 +555,11 @@ def _band(a, b, x, y, width, tol, eps):
     off = lambda px, py: (px - ax1) * n[0] + (py - ay1) * n[1]
     t = lambda px, py: (px - ax1) * u[0] + (py - ay1) * u[1]
     ob = off(bx1, by1)
-    if abs(abs(ob) - width) > tol:
+    if abs(off(bx2, by2) - ob) > max(eps, 1e-9) * 4 and width is not None:
+        return None                                                             # not a constant offset
+    if width is not None and abs(abs(ob) - width) > tol:
+        return None
+    if abs(ob) <= eps:
         return None
     om = off(x, y)
     if not (min(0.0, ob) < om < max(0.0, ob)):                                  # mark strictly between the lines
@@ -608,6 +636,7 @@ def policy_record() -> dict:
                          "geometry": "validation: confirmed / interrupted / count-unique / conflict",
                          "override": "explicit local dimension bound to the occurrence only"},
            "computed_states": list(COMPUTED_STATES), "blocked_states": [COMBINED, DRAWN_SIZE, UNBOUND, NOT_SCHEDULED],
+           "band_width_deviation_max": BAND_WIDTH_DEVIATION_MAX,
            "never": ["nearest-distance association", "a matcher-assembled outline as authority",
                      "a type total written by hand", "a kg/m3 ratio", "an architectural height as a column height"]}
     rec["digest"] = hashlib.sha256(json.dumps(rec, sort_keys=True).encode()).hexdigest()

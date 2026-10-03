@@ -189,5 +189,10 @@ bridges it to the legacy QS01 method. Owner decisions are scoped claims in `data
 | `alsenan_a2_registers.py` | `tests/alsenan/registers_a2/*.json` | the Phase A2 registers, classed BOQ rows, XLSX view (readback) and freeze |
 | `alsenan_a2_qortuba_regression.py` | `tests/alsenan/registers_a2/QORTUBA_REGRESSION.json` | rebuilt Qortuba RC1 registers vs the frozen ones |
 | `alsenan_a2_package.py` | `data/reports/URBAN_QTO_ALSENAN_P7757_ST7757_PHASE_A2/` + zip | Phase A2 package (28 md + json + xlsx) |
+| `alsenan_phase_a3_recommendation.json` | - | Alsenan Phase A3 recommendation (answers 1-16, F / F10 / FN forensics), committed before code |
+| `alsenan_phase_a3.py` | (built by `alsenan_a3_registers.py`) | Phase A3 adapter: schedule-driven footings / straps / columns / beams / slabs / rebar definitions, owner facts, salon binding, curved glazing, double-height zone, joinery, unlabelled sites |
+| `alsenan_a3_registers.py` | `tests/alsenan/registers_a3/*.json` | the Phase A3 registers, classed BOQ rows, manual-QS views, XLSX (readback) and freeze |
+| `alsenan_a3_qortuba_regression.py` | `tests/alsenan/registers_a3/QORTUBA_REGRESSION.json` | rebuilt Qortuba RC1 registers vs the frozen ones |
+| `alsenan_a3_package.py` | `data/reports/URBAN_QTO_ALSENAN_P7757_ST7757_PHASE_A3/` + zip | Phase A3 package (30 md + json + xlsx) |
 
 `<work>` must hold `old_k2.pkl` (K2 on LibreDWG's DXF of the old DWG) and `new_k2.pkl` (K2 on the hash-addressed new DXF).
