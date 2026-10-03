@@ -3,7 +3,7 @@
  "policy": "URBAN_REPORTING_MODEL_V2",
  "registers_commit": "02feef8",
  "run_date": "2026-10-03",
- "code_head": "6b67f6139e81a52450f9c0228528470434effbf6",
+ "code_head": "9ef9353ba6ed606d44b0e031d5a21277240f28d1",
  "input_register_digests": {
   "alsenan": {
    "A3.ARCH_BOQ": {
@@ -128,19 +128,19 @@
  },
  "model_input_digests_equal_registers": true,
  "model_content_digest": {
-  "alsenan": "89711983e581b46b7a3035bcfa9f6294bc942e06a85079637dec5ec23b83ff49",
-  "qortuba": "1bbe95f01bcb3c5999269206d6c6532861144dfa106d86186b3bfa8669d43060"
+  "alsenan": "74850c4f3cab3a1c94bb45b60510d6028d0e4d468b6f5ca16e88ec8e99847bf7",
+  "qortuba": "c42fa8a9f7597326174c2d57bf7a0a15de8c60187387a96ac6f11382cd2665bb"
  },
  "outputs": {
-  "REPORTING_MODEL_V2.json": "952538f0dc2a7d89b5b8b1c3eacb7cf591ff643cd28a74a861cea16c38c197e3",
-  "REPORTING_READBACK_QA.json": "d1aa736341a48749c3224a342ee8311d56d7402e7367b1e5e64e1656b9fa88e9",
-  "REPORTING_V2_DESIGN_SPEC.md": "cbf125136096801c5fff26b2ba8b44399fc6d77f50152af042abd1a6ba4ea6ce",
-  "REPORTING_V2_REGRESSION.json": "56224fb1ed6be6c50a28069e65eb6fb1d9b72616b6671e20a5d3757e068c65b6",
-  "URBAN_QTO_ALSENAN_REPORTING_V2.pdf": "27a27a56016799f9f40081adcebe73999c0ee3e3a9fb1e0f8dfd3aa588f0e25f",
-  "URBAN_QTO_ALSENAN_REPORTING_V2.xlsx": "12ae4bc97450ee42092a79bb3cb8b2b4e5f324dea3c14e994fd4dbf05fcbfe5f",
-  "qortuba_check/REPORTING_MODEL_V2_QORTUBA.json": "5e482540a01ab5b347ad5a4bad3ca9c1fbc4e92eb15fdb71e1d721f0cfe2f623",
-  "qortuba_check/URBAN_QTO_QORTUBA_REPORTING_V2.pdf": "7caddeff4fc08b73fea7e52a77f27185f1fcb968cb9bd77e60e0d85c78166564",
-  "qortuba_check/URBAN_QTO_QORTUBA_REPORTING_V2.xlsx": "bf1c98a80a0d4966d987e55e8dc61a0507af878589681ed59eb3c612fded50dd"
+  "REPORTING_MODEL_V2.json": "afed88b658fecf73797e133a7c969740bf878f192ac64caf0013206993e3183c",
+  "REPORTING_READBACK_QA.json": "70a51ef53c77f1fdf48677ea80e8bcf63fa5028ec0838e1909a3a8ca9a85f322",
+  "REPORTING_V2_DESIGN_SPEC.md": "e5f70112489e2cb6704e7f1924323e7cdbdc390f429c5730bfced4e153b3ba98",
+  "REPORTING_V2_REGRESSION.json": "433cbcf5fe5db17d5d14fa48028a563b9ffbd610ee0f964a2158b3410b40ccdc",
+  "URBAN_QTO_ALSENAN_REPORTING_V2.pdf": "ec372f10d80e0e96ebe1b97606a35b356846e4080fec20c6ed53c866aa8bf011",
+  "URBAN_QTO_ALSENAN_REPORTING_V2.xlsx": "560da71b1f4d18cff23c202ca750710ae37aa388be66ce1018f86183250a584f",
+  "qortuba_check/REPORTING_MODEL_V2_QORTUBA.json": "b9e67149d72894531cc384aed60c011b32fe4a23c4d9ce17030f07b530a39e57",
+  "qortuba_check/URBAN_QTO_QORTUBA_REPORTING_V2.pdf": "a4f9d5770f40194f3e2ec0719820e4af90acd976127601e7a2000bd5435b3cc8",
+  "qortuba_check/URBAN_QTO_QORTUBA_REPORTING_V2.xlsx": "e43f3afe327e1424909935a453f4f73da1fedf274718d65858b8e7befc8b1567"
  },
  "rule": "the report transforms layout only: every quantity is a register value (pointer) or a declared sum of them"
 }

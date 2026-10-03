@@ -5,20 +5,23 @@
    "state": "PASS",
    "differences": [],
    "difference_count": 0,
-   "formula_cells": 0,
-   "validated_quantity_cells": 723,
-   "validated_blocked_cells": 427,
+   "formula_cells": 1058,
+   "input_cells": 793,
+   "sheets_protected": 16,
+   "validated_quantity_cells": 950,
+   "validated_blocked_cells": 752,
    "validated_cells_by_kind": {
-    "text": 4118,
-    "qty": 723,
-    "status": 645,
-    "qty_text": 427,
-    "count": 187,
-    "pct": 4,
+    "text": 5525,
+    "status": 874,
+    "qty_text": 752,
+    "qty": 950,
+    "formula": 1058,
+    "count": 183,
     "num": 72,
-    "dim": 195
+    "dim": 195,
+    "input": 793
    },
-   "validated_cells": 6371,
+   "validated_cells": 10402,
    "sheets": [
     "00_TOTAL_SUMMARY",
     "01_GROUND_FLOOR",
@@ -28,6 +31,7 @@
     "05_OPENINGS_ALUMINIUM",
     "06_BLOCKERS_OWNER_QUESTIONS",
     "07_METHODS_TRACEABILITY",
+    "08_QS_RECONCILIATION",
     "TECH_COLUMN_OCCURRENCES",
     "TECH_BEAM_OCCURRENCES",
     "TECH_SLAB_REGIONS",
@@ -35,10 +39,380 @@
     "TECH_SOURCE_HANDLES",
     "TECH_QA",
     "TECH_RUN_INFO"
-   ]
+   ],
+   "libreoffice_recalc": {
+    "state": "PASS",
+    "engine": "LibreOffice Calc (headless)",
+    "formula_cells_checked": 1058,
+    "differences": [],
+    "difference_count": 0,
+    "error_cells": []
+   },
+   "what_if": {
+    "state": "PASS",
+    "error_cells": [],
+    "edits": 87,
+    "formula_cells_checked": 1058,
+    "formula_cells_changed_by_edits": 399,
+    "differences": [],
+    "difference_count": 0,
+    "expected_statuses": {
+     "ITEMS/I:CON-FOOT:0": [
+      "MATCH",
+      "MATCH"
+     ],
+     "ITEMS/I:CON-STRAP:0": [
+      "CLOSE",
+      "CLOSE"
+     ],
+     "ITEMS/I:PCC-BLIND:0": [
+      "REVIEW",
+      "REVIEW"
+     ],
+     "ITEMS/I:CON-SUPER:0": [
+      "NOT COMPARABLE",
+      "NOT COMPARABLE"
+     ],
+     "ITEMS/I:CON-GBEAM:0": [
+      "ENGINE BLOCKED",
+      "ENGINE BLOCKED"
+     ],
+     "ARCH/A:BLK150": [
+      "MATCH",
+      "MATCH"
+     ],
+     "BEAM_CHECK/B:GF:B16": [
+      "MATCH",
+      "MATCH"
+     ],
+     "BEAM_CHECK/B:GF:B13": [
+      "MATCH",
+      "MATCH"
+     ],
+     "BEAM_CHECK/B:GF:B11": [
+      "MATCH",
+      "MATCH"
+     ],
+     "BEAM_CHECK/B:GF:B1": [
+      "MATCH",
+      "MATCH"
+     ],
+     "BEAM_CHECK/B:GF:B4": [
+      "MATCH",
+      "MATCH"
+     ],
+     "BEAM_CHECK/B:GF:B7": [
+      "MATCH",
+      "MATCH"
+     ],
+     "BEAM_CHECK/B:GF:B20": [
+      "MATCH",
+      "MATCH"
+     ],
+     "BEAM_CHECK/B:GF:B3": [
+      "MATCH",
+      "MATCH"
+     ],
+     "BEAM_CHECK/B:GF:B8": [
+      "MATCH",
+      "MATCH"
+     ],
+     "BEAM_CHECK/B:GF:CB7": [
+      "MATCH",
+      "MATCH"
+     ],
+     "BEAM_CHECK/B:GF:B24": [
+      "MATCH",
+      "MATCH"
+     ],
+     "BEAM_CHECK/B:GF:B5": [
+      "MATCH",
+      "MATCH"
+     ],
+     "BEAM_CHECK/B:GF:B2": [
+      "MATCH",
+      "MATCH"
+     ],
+     "BEAM_CHECK/B:GF:CB4": [
+      "MATCH",
+      "MATCH"
+     ],
+     "BEAM_CHECK/B:GF:B22": [
+      "MATCH",
+      "MATCH"
+     ],
+     "BEAM_CHECK/B:GF:B14": [
+      "MATCH",
+      "MATCH"
+     ],
+     "BEAM_CHECK/B:GF:CB1": [
+      "MATCH",
+      "MATCH"
+     ],
+     "BEAM_CHECK/B:GF:B9": [
+      "MATCH",
+      "MATCH"
+     ],
+     "BEAM_CHECK/B:GF:B28": [
+      "MATCH",
+      "MATCH"
+     ],
+     "BEAM_CHECK/B:GF:B17": [
+      "MATCH",
+      "MATCH"
+     ],
+     "BEAM_CHECK/B:GF:B27": [
+      "MATCH",
+      "MATCH"
+     ],
+     "BEAM_CHECK/B:GF:B26": [
+      "MATCH",
+      "MATCH"
+     ],
+     "BEAM_CHECK/B:1F:B3": [
+      "MATCH",
+      "MATCH"
+     ],
+     "BEAM_CHECK/B:1F:CB9": [
+      "MATCH",
+      "MATCH"
+     ],
+     "BEAM_CHECK/B:1F:B4": [
+      "MATCH",
+      "MATCH"
+     ],
+     "BEAM_CHECK/B:1F:CB11": [
+      "MATCH",
+      "MATCH"
+     ],
+     "BEAM_CHECK/B:1F:B7": [
+      "MATCH",
+      "MATCH"
+     ],
+     "BEAM_CHECK/B:1F:B1": [
+      "MATCH",
+      "MATCH"
+     ],
+     "BEAM_CHECK/B:1F:B2": [
+      "MATCH",
+      "MATCH"
+     ],
+     "BEAM_CHECK/B:1F:B18": [
+      "MATCH",
+      "MATCH"
+     ],
+     "BEAM_CHECK/B:1F:B23": [
+      "MATCH",
+      "MATCH"
+     ],
+     "BEAM_CHECK/B:1F:CB13": [
+      "MATCH",
+      "MATCH"
+     ],
+     "BEAM_CHECK/B:1F:B19": [
+      "MATCH",
+      "MATCH"
+     ],
+     "BEAM_CHECK/B:1F:B6": [
+      "MATCH",
+      "MATCH"
+     ],
+     "BEAM_CHECK/B:1F:B25": [
+      "MATCH",
+      "MATCH"
+     ],
+     "BEAM_CHECK/B:1F:B11": [
+      "MATCH",
+      "MATCH"
+     ],
+     "BEAM_CHECK/B:1F:B5": [
+      "MATCH",
+      "MATCH"
+     ],
+     "BEAM_CHECK/B:2F:B3": [
+      "MATCH",
+      "MATCH"
+     ],
+     "BEAM_CHECK/B:2F:B8": [
+      "MATCH",
+      "MATCH"
+     ],
+     "BEAM_CHECK/B:2F:B2": [
+      "MATCH",
+      "MATCH"
+     ],
+     "BEAM_CHECK/B:2F:B1": [
+      "MATCH",
+      "MATCH"
+     ],
+     "BEAM_CHECK/B:2F:B15": [
+      "MATCH",
+      "MATCH"
+     ],
+     "BEAM_CHECK/B:2F:B7": [
+      "MATCH",
+      "MATCH"
+     ],
+     "COL_CHECK/C:GF:0": [
+      "MATCH",
+      "MATCH"
+     ],
+     "COL_CHECK/C:GF:1": [
+      "MATCH",
+      "MATCH"
+     ],
+     "COL_CHECK/C:GF:2": [
+      "MATCH",
+      "MATCH"
+     ],
+     "COL_CHECK/C:GF:3": [
+      "MATCH",
+      "MATCH"
+     ],
+     "COL_CHECK/C:GF:4": [
+      "MATCH",
+      "MATCH"
+     ],
+     "COL_CHECK/C:GF:5": [
+      "MATCH",
+      "MATCH"
+     ],
+     "COL_CHECK/C:GF:6": [
+      "MATCH",
+      "MATCH"
+     ],
+     "COL_CHECK/C:GF:7": [
+      "MATCH",
+      "MATCH"
+     ],
+     "COL_CHECK/C:GF:10": [
+      "MATCH",
+      "MATCH"
+     ],
+     "COL_CHECK/C:GF:11": [
+      "MATCH",
+      "MATCH"
+     ],
+     "COL_CHECK/C:GF:12": [
+      "MATCH",
+      "MATCH"
+     ],
+     "COL_CHECK/C:GF:13": [
+      "MATCH",
+      "MATCH"
+     ],
+     "COL_CHECK/C:GF:14": [
+      "MATCH",
+      "MATCH"
+     ],
+     "COL_CHECK/C:GF:18": [
+      "MATCH",
+      "MATCH"
+     ],
+     "COL_CHECK/C:GF:19": [
+      "MATCH",
+      "MATCH"
+     ],
+     "COL_CHECK/C:GF:20": [
+      "MATCH",
+      "MATCH"
+     ],
+     "COL_CHECK/C:1F:2": [
+      "MATCH",
+      "MATCH"
+     ],
+     "COL_CHECK/C:1F:3": [
+      "MATCH",
+      "MATCH"
+     ],
+     "COL_CHECK/C:1F:4": [
+      "MATCH",
+      "MATCH"
+     ],
+     "COL_CHECK/C:1F:5": [
+      "MATCH",
+      "MATCH"
+     ],
+     "COL_CHECK/C:1F:6": [
+      "MATCH",
+      "MATCH"
+     ],
+     "COL_CHECK/C:1F:7": [
+      "MATCH",
+      "MATCH"
+     ],
+     "COL_CHECK/C:1F:8": [
+      "MATCH",
+      "MATCH"
+     ],
+     "COL_CHECK/C:1F:10": [
+      "MATCH",
+      "MATCH"
+     ],
+     "COL_CHECK/C:1F:11": [
+      "MATCH",
+      "MATCH"
+     ],
+     "COL_CHECK/C:1F:12": [
+      "MATCH",
+      "MATCH"
+     ],
+     "COL_CHECK/C:1F:13": [
+      "MATCH",
+      "MATCH"
+     ],
+     "COL_CHECK/C:1F:14": [
+      "MATCH",
+      "MATCH"
+     ],
+     "COL_CHECK/C:2F:0": [
+      "MATCH",
+      "MATCH"
+     ],
+     "COL_CHECK/C:2F:1": [
+      "MATCH",
+      "MATCH"
+     ],
+     "COL_CHECK/C:2F:2": [
+      "MATCH",
+      "MATCH"
+     ],
+     "COL_CHECK/C:2F:4": [
+      "MATCH",
+      "MATCH"
+     ],
+     "COL_CHECK/C:2F:5": [
+      "MATCH",
+      "MATCH"
+     ],
+     "COL_CHECK/C:2F:6": [
+      "MATCH",
+      "MATCH"
+     ],
+     "COL_CHECK/C:2F:7": [
+      "MATCH",
+      "MATCH"
+     ],
+     "SLAB_CHECK/SL:GF": [
+      "MATCH",
+      "MATCH"
+     ],
+     "SLAB_CHECK/SL:1F": [
+      "MATCH",
+      "MATCH"
+     ],
+     "SLAB_CHECK/SL:2F": [
+      "MATCH",
+      "MATCH"
+     ]
+    },
+    "expected_statuses_hold": true,
+    "engine_quantities_unchanged_by_inputs": true,
+    "summary_totals_unchanged_by_inputs": true
+   }
   },
   "pdf": {
-   "pages": 49,
+   "pages": 72,
    "sections_in_order": true,
    "section_positions": [
     [
@@ -47,31 +421,35 @@
     ],
     [
      "01_GROUND_FLOOR",
-     12765
+     15147
     ],
     [
      "02_FIRST_FLOOR",
-     27304
+     29685
     ],
     [
      "03_ROOF_SECOND_FLOOR",
-     38610
+     40982
     ],
     [
      "04_FOUNDATION_SUBSTRUCTURE",
-     45697
+     48069
     ],
     [
      "05_OPENINGS_ALUMINIUM",
-     49337
+     51709
     ],
     [
      "06_BLOCKERS_OWNER_QUESTIONS",
-     56601
+     59042
     ],
     [
      "07_METHODS_TRACEABILITY",
-     70750
+     73163
+    ],
+    [
+     "08_QS_RECONCILIATION",
+     78606
     ]
    ],
    "lines_checked": 39,
@@ -80,8 +458,9 @@
   },
   "model_validation": {
    "state": "PASS",
-   "quantity_cells": 769,
-   "declared_sums": 104,
+   "quantity_cells": 996,
+   "declared_sums": 141,
+   "formula_cells": 1058,
    "lines": 39
   }
  },
@@ -90,19 +469,21 @@
    "state": "PASS",
    "differences": [],
    "difference_count": 0,
-   "formula_cells": 0,
-   "validated_quantity_cells": 161,
+   "formula_cells": 255,
+   "input_cells": 74,
+   "sheets_protected": 9,
+   "validated_quantity_cells": 186,
    "validated_blocked_cells": 107,
    "validated_cells_by_kind": {
-    "text": 751,
-    "qty": 161,
-    "status": 123,
-    "count": 4,
-    "pct": 4,
+    "text": 1145,
+    "status": 159,
+    "qty": 186,
+    "formula": 255,
     "qty_text": 107,
-    "dim": 64
+    "dim": 64,
+    "input": 74
    },
-   "validated_cells": 1214,
+   "validated_cells": 1990,
    "sheets": [
     "00_TOTAL_SUMMARY",
     "01_SECOND_FLOOR",
@@ -110,12 +491,55 @@
     "05_OPENINGS_ALUMINIUM",
     "06_BLOCKERS_OWNER_QUESTIONS",
     "07_METHODS_TRACEABILITY",
+    "08_QS_RECONCILIATION",
     "TECH_SOURCE_HANDLES",
     "TECH_RUN_INFO"
-   ]
+   ],
+   "libreoffice_recalc": {
+    "state": "PASS",
+    "engine": "LibreOffice Calc (headless)",
+    "formula_cells_checked": 255,
+    "differences": [],
+    "difference_count": 0,
+    "error_cells": []
+   },
+   "what_if": {
+    "state": "PASS",
+    "error_cells": [],
+    "edits": 5,
+    "formula_cells_checked": 255,
+    "formula_cells_changed_by_edits": 37,
+    "differences": [],
+    "difference_count": 0,
+    "expected_statuses": {
+     "ITEMS/I:FLR-01:0": [
+      "MATCH",
+      "MATCH"
+     ],
+     "ITEMS/I:FLR-02:0": [
+      "CLOSE",
+      "CLOSE"
+     ],
+     "ITEMS/I:FLR-03:0": [
+      "REVIEW",
+      "REVIEW"
+     ],
+     "ITEMS/I:MRB-01:0": [
+      "NOT COMPARABLE",
+      "NOT COMPARABLE"
+     ],
+     "ARCH/A:FLR-01": [
+      "MATCH",
+      "MATCH"
+     ]
+    },
+    "expected_statuses_hold": true,
+    "engine_quantities_unchanged_by_inputs": true,
+    "summary_totals_unchanged_by_inputs": true
+   }
   },
   "pdf": {
-   "pages": 16,
+   "pages": 23,
    "sections_in_order": true,
    "section_positions": [
     [
@@ -124,23 +548,27 @@
     ],
     [
      "01_SECOND_FLOOR",
-     10422
+     10721
     ],
     [
      "04_FOUNDATION_SUBSTRUCTURE",
-     19180
+     19479
     ],
     [
      "05_OPENINGS_ALUMINIUM",
-     19680
+     19979
     ],
     [
      "06_BLOCKERS_OWNER_QUESTIONS",
-     22338
+     22637
     ],
     [
      "07_METHODS_TRACEABILITY",
-     23316
+     23615
+    ],
+    [
+     "08_QS_RECONCILIATION",
+     24909
     ]
    ],
    "lines_checked": 21,
@@ -149,8 +577,9 @@
   },
   "model_validation": {
    "state": "PASS",
-   "quantity_cells": 182,
-   "declared_sums": 13,
+   "quantity_cells": 207,
+   "declared_sums": 9,
+   "formula_cells": 255,
    "lines": 21
   }
  },

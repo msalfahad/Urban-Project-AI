@@ -13,8 +13,8 @@
   "validation": "PASS",
   "problems": [],
   "line_parts": 94,
-  "quantity_cells_traced": 769,
-  "declared_sums": 104,
+  "quantity_cells_traced": 996,
+  "declared_sums": 141,
   "quantity_changes": [],
   "status_rule": "every part shows the register's own technical code; the display state is the alias table",
   "input_registers": {
@@ -180,8 +180,8 @@
   "validation": "PASS",
   "problems": [],
   "line_parts": 21,
-  "quantity_cells_traced": 182,
-  "declared_sums": 13,
+  "quantity_cells_traced": 207,
+  "declared_sums": 9,
   "quantity_changes": [],
   "status_rule": "every part shows the register's own technical code; the display state is the alias table",
   "input_registers": {
