@@ -1,0 +1,240 @@
+{
+ "SCHEMA": "URBAN_R8_19_DUCT_FINISH_POLICY_V1",
+ "policy": {
+  "policy_id": "EXPOSED_OBJECT_FINISH_POLICY_V1",
+  "classes": [
+   "COLUMN_FACE",
+   "OBSTACLE_FACE"
+  ],
+  "exposure": "one-sided certified site-boundary spans attributed to the object's own part segments; hidden = segment length - exposed (listed per segment)",
+  "assignment": "the room's wall trades under a rule requiring PHYSICAL_EXPOSURE (+ OWNER_PHYSICAL_AUTHORITY for a built obstacle) for the listed room classes; otherwise UNRESOLVED",
+  "skirting": "never created here (frozen contact path only)",
+  "never": [
+   "a finish because an object is a column or duct",
+   "a hidden / embedded / internal face",
+   "an obstacle finish without owner physical authority",
+   "an object face merged into WALL_FACE",
+   "a duct rule applied to a room class it does not cover",
+   "new skirting"
+  ],
+  "digest": "5db6e435f45ee5d15f6ae96fbf401b57e2789f60b2192059cd7f81fe720773fb"
+ },
+ "urban_rule": {
+  "rule_id": "URBAN-EXPOSED-INTERIOR-DUCT-FINISH-METHOD",
+  "version": 1,
+  "authority": [
+   "PROJECT_OWNER",
+   "URBAN_OWNER_METHOD"
+  ],
+  "received": "R8.19 brief §6-§8",
+  "scope": {
+   "applies_to": "every Urban project: exposed interior duct / boxed-out faces where the surrounding DRY room treatment applies",
+   "revision_scoped": false
+  },
+  "method": {
+   "principle": "an exposed interior duct / boxed-out face takes the surrounding dry-room treatment",
+   "requires": [
+    "OWNER_PHYSICAL_AUTHORITY (the duct is established as a built obstacle)",
+    "PHYSICAL_EXPOSURE (room-facing faces of the certified room only)"
+   ],
+   "dry_area": [
+    "SKIRTING (on the existing wall-contact path only)",
+    "PLASTER",
+    "PAINT"
+   ],
+   "height": "the room's own authorised dry wall-finish height",
+   "physical_class": "OBSTACLE / DUCT_FACE stays its own class; it is never merged into WALL_FACE"
+  },
+  "never": [
+   "a finish on faces against existing walls, internal faces, non-room-facing faces or faces outside the measurement region",
+   "a finish for a generic obstacle without owner physical authority",
+   "a wet-room treatment by analogy (not stated)",
+   "new skirting where the contact path already covers the face"
+  ]
+ },
+ "qortuba_method_rule": {
+  "rule_id": "URBAN-EXPOSED-INTERIOR-DUCT-FINISH-METHOD@v1",
+  "face_class": "OBSTACLE_FACE",
+  "requires": [
+   "PHYSICAL_EXPOSURE",
+   "OWNER_PHYSICAL_AUTHORITY"
+  ],
+  "room_classes": [
+   "DRY_INTERNAL_ROOM"
+  ],
+  "follows": "ROOM_WALL_TRADES",
+  "project_statement": "QORTUBA-NEW-BED-ROOM-DUCT-FINISH-OWNER-001@v1"
+ },
+ "project_fact": {
+  "fact_id": "QORTUBA-NEW-BED-ROOM-DUCT-FINISH-OWNER-001",
+  "version": 1,
+  "kind": "FINISH_SCOPE",
+  "authority": [
+   "PROJECT_OWNER"
+  ],
+  "received": "R8.19 brief §6-§7",
+  "scope": {
+   "project": "QORTUBA",
+   "source_revision_id": "QORTUBA_REV_NEW",
+   "source_anchor_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+   "region_id": "RC:MODEL_SPACE:4267:540:1649",
+   "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649",
+   "plan": "PLAN_VARIANT_4_SELECTED",
+   "trades": [
+    "PLASTER",
+    "PAINT",
+    "SKIRTING"
+   ],
+   "space_classes": [
+    "DRY_INTERNAL_ROOM"
+   ]
+  },
+  "statement": {
+   "text": "the current exposed BED.ROOM duct (H2060 / H2061) receives SKIRTING, PLASTER and PAINT on its exposed room-facing faces",
+   "object": "QORTUBA-NEW-BED-ROOM-DUCT-OWNER-001@v1",
+   "parts": [
+    "QORTUBA_REV_NEW|H2060||SEGMENT|0",
+    "QORTUBA_REV_NEW|H2060||SEGMENT|1",
+    "QORTUBA_REV_NEW|H2060||SEGMENT|2",
+    "QORTUBA_REV_NEW|H2060||SEGMENT|3",
+    "QORTUBA_REV_NEW|H2061||SEGMENT|0",
+    "QORTUBA_REV_NEW|H2061||SEGMENT|1",
+    "QORTUBA_REV_NEW|H2061||SEGMENT|2",
+    "QORTUBA_REV_NEW|H2061||SEGMENT|3"
+   ],
+   "trades": {
+    "PLASTER": "exposed vertical faces at the dry 3.15 m height",
+    "PAINT": "exposed vertical faces at the dry 3.15 m height",
+    "SKIRTING": "unchanged: the existing V4 AUTHORISED_OBSTACLE_FACE path"
+   },
+   "exposure": "room-facing faces of the certified BED.ROOM site only"
+  },
+  "unit": null,
+  "transfer_forbidden": [
+   "the old Qortuba revision",
+   "any other region, plan or floor",
+   "the DWG (identity NOT_ESTABLISHED)",
+   "P7757",
+   "Al Rashed",
+   "any future project (the Urban rule governs there)"
+  ],
+  "relations": [
+   {
+    "rule": "URBAN-EXPOSED-INTERIOR-DUCT-FINISH-METHOD@v1",
+    "relation": "CORROBORATING",
+    "scope": "this duct",
+    "why": "the project statement the Urban rule generalises"
+   }
+  ]
+ },
+ "physical_authority": {
+  "fact_id": "QORTUBA-NEW-BED-ROOM-DUCT-OWNER-001",
+  "version": 1,
+  "kind": "BUILT_OBSTACLE",
+  "authority": [
+   "PROJECT_OWNER"
+  ],
+  "received": "R8.15 brief §1-§2 (owner reviewed the source-plan crop)",
+  "scope": {
+   "project": "QORTUBA",
+   "source_revision_id": "QORTUBA_REV_NEW",
+   "source_anchor_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+   "region_id": "RC:MODEL_SPACE:4267:540:1649",
+   "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649",
+   "plan": "PLAN_VARIANT_4_SELECTED"
+  },
+  "parts": [
+   {
+    "handle": "2060",
+    "key": "QORTUBA_REV_NEW|H2060||SEGMENT|0",
+    "source_layer": "WALL",
+    "fingerprint": "32b7dfeb680e952f353a063c8fa7e787584eda95a5d9f00bfecfad4aea5c513d",
+    "physical_reading": "DUCT_ENCLOSURE_OUTER_FACE"
+   },
+   {
+    "handle": "2060",
+    "key": "QORTUBA_REV_NEW|H2060||SEGMENT|1",
+    "source_layer": "WALL",
+    "fingerprint": "d6f788b4e20aad6eea1f8a44c05f137ec67f5e92a9e59e8a3dacd6ce4945ca73",
+    "physical_reading": "DUCT_ENCLOSURE_OUTER_FACE"
+   },
+   {
+    "handle": "2060",
+    "key": "QORTUBA_REV_NEW|H2060||SEGMENT|2",
+    "source_layer": "WALL",
+    "fingerprint": "54fb837aa7ddf25c739a94f493d1a45b8416be7dcaa03b76e0a8d12d1f7b0531",
+    "physical_reading": "DUCT_ENCLOSURE_OUTER_FACE"
+   },
+   {
+    "handle": "2060",
+    "key": "QORTUBA_REV_NEW|H2060||SEGMENT|3",
+    "source_layer": "WALL",
+    "fingerprint": "ab961a5d9852b10aab1278a8eb93bf2382d0f98dbc98e920c79f0c54add33879",
+    "physical_reading": "DUCT_ENCLOSURE_OUTER_FACE"
+   },
+   {
+    "handle": "2061",
+    "key": "QORTUBA_REV_NEW|H2061||SEGMENT|0",
+    "source_layer": "WALL",
+    "fingerprint": "4d4872c22265778731e8c076fdcd2417c4ce6122f293547c7f63aef3379f1a63",
+    "physical_reading": "DUCT_ENCLOSURE_INNER_FACE"
+   },
+   {
+    "handle": "2061",
+    "key": "QORTUBA_REV_NEW|H2061||SEGMENT|1",
+    "source_layer": "WALL",
+    "fingerprint": "a6a79607278827245316068fc1a0967b0abccb3c1fab0a4fd5350987991f5411",
+    "physical_reading": "DUCT_ENCLOSURE_INNER_FACE"
+   },
+   {
+    "handle": "2061",
+    "key": "QORTUBA_REV_NEW|H2061||SEGMENT|2",
+    "source_layer": "WALL",
+    "fingerprint": "ac180418c8c908b6a5a071fc305165450c29c20b9b1dc593b14458252252c1b6",
+    "physical_reading": "DUCT_ENCLOSURE_INNER_FACE"
+   },
+   {
+    "handle": "2061",
+    "key": "QORTUBA_REV_NEW|H2061||SEGMENT|3",
+    "source_layer": "WALL",
+    "fingerprint": "607c6a982685804e4a4853c759b6f0ba437433481de7a289f4f71ec3ee16b4f7",
+    "physical_reading": "DUCT_ENCLOSURE_INNER_FACE"
+   }
+  ],
+  "statement": {
+   "text": "the 2.10 x 0.40 m rectangle in the BED.ROOM is a REAL DUCT",
+   "physical_class": "DUCT",
+   "physical_role": "DUCT / BUILT_OBSTACLE",
+   "topology_effect": "PHYSICAL_OBSTACLE",
+   "floor_effect": "EXCLUDED_FROM_ROOM_FLOOR",
+   "ceiling_effect": "EXCLUDED_FROM_NORMAL_CEILING",
+   "footprint": "derived from source geometry (never a target value)",
+   "material": "NOT STATED (the role implies no material)",
+   "corroborating_presentation": {
+    "parts": [
+     "QORTUBA_REV_NEW|H2062||SEGMENT|0",
+     "QORTUBA_REV_NEW|H2065||SEGMENT|0"
+    ],
+    "role": "a dashed X on a hidden layer - corroboration only, never a bound part, never a duct identity elsewhere"
+   }
+  },
+  "transfer_forbidden": [
+   "the old Qortuba revision (QP-17 / QP-18 stay old-revision rules)",
+   "any other Qortuba revision, region or plan variant",
+   "the DWG (identity NOT_ESTABLISHED)",
+   "P7757",
+   "Al Rashed",
+   "any future villa or project",
+   "an Urban default",
+   "any other entity of the same shape, layer or presentation"
+  ],
+  "never": [
+   "closed rectangle + X = duct",
+   "a duct anywhere else",
+   "a re-layered CAD entity",
+   "a quantity"
+  ]
+ },
+ "identity": "every SEGMENT part of an entity with an obstacle state (OWNER_PHYSICAL_OBSTACLE = owner physical authority)",
+ "skirting": "unchanged V4 path (AUTHORISED_OBSTACLE_FACE component)"
+}

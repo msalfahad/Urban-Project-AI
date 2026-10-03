@@ -1,0 +1,201 @@
+{
+ "SCHEMA": "URBAN_R8_15_OWNER_PHYSICAL_FACT_REGISTER_V1",
+ "policy": {
+  "policy_id": "OWNER_PHYSICAL_FACT_POLICY_V2",
+  "outcomes": [
+   "OFFERED",
+   "APPLIED",
+   "CORROBORATING_ONLY",
+   "REJECTED_SCOPE",
+   "STALE",
+   "CONFLICT"
+  ],
+  "domains": [
+   "TOPOLOGY_ROLE",
+   "TOPOLOGY_CLOSURE_REVIEW",
+   "BLOCKER_CLASSIFICATION",
+   "PASSAGE_ATTRIBUTES",
+   "OBSTACLE_AUTHORITY",
+   "THRESHOLD_TREATMENT"
+  ],
+  "kind_domains": {
+   "OPEN_PASSAGE_CONSTRUCTION": [
+    "TOPOLOGY_CLOSURE_REVIEW",
+    "BLOCKER_CLASSIFICATION",
+    "PASSAGE_ATTRIBUTES"
+   ],
+   "BUILT_OBSTACLE": [
+    "OBSTACLE_AUTHORITY",
+    "BLOCKER_CLASSIFICATION"
+   ],
+   "PASSAGE_HEAD_CONDITION": [
+    "PASSAGE_ATTRIBUTES",
+    "BLOCKER_CLASSIFICATION"
+   ],
+   "THRESHOLD_FINISH_CONSTRUCTION": [
+    "THRESHOLD_TREATMENT",
+    "BLOCKER_CLASSIFICATION"
+   ]
+  },
+  "matrix": {
+   "ENGINE_ESTABLISHED_OWNER_AGREES": "CORROBORATING_ONLY",
+   "ENGINE_ESTABLISHED_OWNER_DISAGREES": "CONFLICT",
+   "ENGINE_UNRESOLVED_OWNER_ESTABLISHES": "MAY_APPLY_AS_OWNER_ROLE_AUTHORITY",
+   "ENGINE_DISAGREES_OWNER_ESTABLISHES": "CONFLICT"
+  },
+  "binding": "revision + anchor + region + frame + every bound part's fingerprint (all or nothing)",
+  "history": [
+   "V1 (R8.12): topology role / closure review / blocker classification / passage attributes",
+   "V2 (R8.15): + OBSTACLE_AUTHORITY (BUILT_OBSTACLE) and THRESHOLD_TREATMENT (THRESHOLD_FINISH_CONSTRUCTION) and PASSAGE_HEAD_CONDITION kinds - none reaches TOPOLOGY_ROLE"
+  ],
+  "never": [
+   "edits a source record",
+   "creates geometry",
+   "carries a quantity",
+   "overwrites contradictory geometry (CONFLICT -> review)",
+   "enters a domain not allowed by its kind",
+   "is project logic in code"
+  ],
+  "digest": "d219d96e8197587aa81cbd19dc935771155b27217e9db42d7a4cbf616da1735e"
+ },
+ "file": "data/registry/OWNER_PHYSICAL_FACTS.json",
+ "facts": [
+  {
+   "ref": "QORTUBA-NEW-HALL-LOBBY-OPEN-PASSAGE-OWNER-001@v1",
+   "kind": "OPEN_PASSAGE_CONSTRUCTION",
+   "scope": {
+    "project": "QORTUBA",
+    "source_revision_id": "QORTUBA_REV_NEW",
+    "source_anchor_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+    "region_id": "RC:MODEL_SPACE:4267:540:1649",
+    "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649",
+    "plan": "PLAN_VARIANT_4_SELECTED"
+   },
+   "statement": {
+    "passage": "the Hall / Lobby connection is a REAL OPEN PASSAGE: no door, no blockwork across the opening",
+    "approx_clear_width_m": 1.0,
+    "approx_width_meaning": "design meaning only - never a calibration target; the deterministic width is measured from source geometry",
+    "clear_height_m": 2.2,
+    "head": "BLOCK / PLASTERED HEAD at 2.20 m clear height",
+    "sides": "BLOCK + PLASTER jambs / wall ends on both sides",
+    "wall_end_lines": "the geometry around H2430 / H2431, including the wall-end lines, is REAL wall / block construction",
+    "gap": "the ~9.2 mm H2431 disconnect is not an intended secondary opening",
+    "closure": "a derived topology-only closure may bridge the drafting discontinuity if the generic wall-band evidence establishes it; it carries ZERO material"
+   },
+   "allowed_domains": [
+    "TOPOLOGY_CLOSURE_REVIEW",
+    "BLOCKER_CLASSIFICATION",
+    "PASSAGE_ATTRIBUTES"
+   ],
+   "parts_bound": 7,
+   "binding": {
+    "NEW_K2": "APPLIES",
+    "OLD_K1": "REJECTED_SCOPE"
+   }
+  },
+  {
+   "ref": "QORTUBA-NEW-BED-ROOM-DUCT-OWNER-001@v1",
+   "kind": "BUILT_OBSTACLE",
+   "scope": {
+    "project": "QORTUBA",
+    "source_revision_id": "QORTUBA_REV_NEW",
+    "source_anchor_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+    "region_id": "RC:MODEL_SPACE:4267:540:1649",
+    "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649",
+    "plan": "PLAN_VARIANT_4_SELECTED"
+   },
+   "statement": {
+    "text": "the 2.10 x 0.40 m rectangle in the BED.ROOM is a REAL DUCT",
+    "physical_class": "DUCT",
+    "physical_role": "DUCT / BUILT_OBSTACLE",
+    "topology_effect": "PHYSICAL_OBSTACLE",
+    "floor_effect": "EXCLUDED_FROM_ROOM_FLOOR",
+    "ceiling_effect": "EXCLUDED_FROM_NORMAL_CEILING",
+    "footprint": "derived from source geometry (never a target value)",
+    "material": "NOT STATED (the role implies no material)",
+    "corroborating_presentation": {
+     "parts": [
+      "QORTUBA_REV_NEW|H2062||SEGMENT|0",
+      "QORTUBA_REV_NEW|H2065||SEGMENT|0"
+     ],
+     "role": "a dashed X on a hidden layer - corroboration only, never a bound part, never a duct identity elsewhere"
+    }
+   },
+   "allowed_domains": [
+    "OBSTACLE_AUTHORITY",
+    "BLOCKER_CLASSIFICATION"
+   ],
+   "parts_bound": 8,
+   "binding": {
+    "NEW_K2": "APPLIES",
+    "OLD_K1": "REJECTED_SCOPE"
+   }
+  },
+  {
+   "ref": "QORTUBA-NEW-MB-DRESS-PASSAGE-FULL-HEIGHT-OWNER-001@v1",
+   "kind": "PASSAGE_HEAD_CONDITION",
+   "scope": {
+    "project": "QORTUBA",
+    "source_revision_id": "QORTUBA_REV_NEW",
+    "source_anchor_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+    "region_id": "RC:MODEL_SPACE:4267:540:1649",
+    "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649",
+    "plan": "PLAN_VARIANT_4_SELECTED"
+   },
+   "statement": {
+    "text": "the ~1.20 m passage between M.B.ROOM and DRESS is FULL HEIGHT: no head, no soffit",
+    "head_condition": "FULL_HEIGHT",
+    "top_soffit": "NONE",
+    "ceiling": "NORMAL CEILING CONTINUES through the passage footprint (no deduction)",
+    "passage": "remains physically open",
+    "side_jambs": "may exist (source decides)"
+   },
+   "allowed_domains": [
+    "PASSAGE_ATTRIBUTES",
+    "BLOCKER_CLASSIFICATION"
+   ],
+   "parts_bound": 4,
+   "binding": {
+    "NEW_K2": "APPLIES",
+    "OLD_K1": "REJECTED_SCOPE"
+   }
+  },
+  {
+   "ref": "QORTUBA-NEW-MAIN-ENTRANCE-MARBLE-OWNER-001@v1",
+   "kind": "THRESHOLD_FINISH_CONSTRUCTION",
+   "scope": {
+    "project": "QORTUBA",
+    "source_revision_id": "QORTUBA_REV_NEW",
+    "source_anchor_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+    "region_id": "RC:MODEL_SPACE:4267:540:1649",
+    "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649",
+    "plan": "PLAN_VARIANT_4_SELECTED"
+   },
+   "statement": {
+    "text": "MAIN APARTMENT ENTRANCE: an explicit MARBLE THRESHOLD / برطاش is installed; the threshold is part of the apartment scope",
+    "threshold_treatment": "MARBLE_THRESHOLD_EXPLICIT",
+    "scope_side": "APARTMENT",
+    "floor_interface": "apartment porcelain ends at the apartment-side marble edge; the common-area finish begins after the opposite edge",
+    "geometry": "the physical threshold strip from source",
+    "rise_mm": "NOT_STATED",
+    "photo": "shows the threshold TYPE only - never a dimension source",
+    "boq": "a separate MARBLE_THRESHOLD trade item (no price)"
+   },
+   "allowed_domains": [
+    "THRESHOLD_TREATMENT",
+    "BLOCKER_CLASSIFICATION"
+   ],
+   "parts_bound": 15,
+   "binding": {
+    "NEW_K2": "APPLIES",
+    "OLD_K1": "REJECTED_SCOPE"
+   }
+  }
+ ],
+ "topology_effect": "NONE: no fact is a TS01 input (the duct hole already exists; the passage strip and the threshold sites already exist) - the topology digest is the frozen blind V5 digest",
+ "never": [
+  "a topology role",
+  "a re-layered CAD entity",
+  "a transfer to the old revision / DWG / another project"
+ ]
+}

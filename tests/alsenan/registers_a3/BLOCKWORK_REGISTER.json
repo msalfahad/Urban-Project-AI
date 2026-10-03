@@ -1,0 +1,226 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_A3_BLOCKWORK_V1",
+ "rows": [
+  {
+   "item": "A3-BLK-GF-T150",
+   "discipline": "ARCHITECTURAL",
+   "trade": "BLOCKWORK_LENGTH",
+   "floor": "GF",
+   "element": "20 established bands, 150 mm",
+   "ar": "طول البلوك سماكة 150 مم",
+   "en": "Blockwork length, 150 mm wall bands (column overlaps excluded)",
+   "qty": 26.054482,
+   "unit": "m",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "class": "PHYSICAL_MEASUREMENT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "WALL_BAND_ESTABLISHED interval length minus OBSTACLE_OVERLAP",
+   "blockers": [
+    "9 ambiguous band(s) on GF not included (WALL_BAND_AMBIGUOUS)",
+    "1 established band(s) outside the 80-400 mm wall range not included (920 mm: sheet / title-block linework)"
+   ]
+  },
+  {
+   "item": "A3-BLA-GF-T150",
+   "discipline": "ARCHITECTURAL",
+   "trade": "BLOCKWORK_AREA",
+   "floor": "GF",
+   "element": "150 mm",
+   "ar": "مساحة البلوك سماكة 150 مم",
+   "en": "Blockwork area, 150 mm",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "class": "BLOCKED_HEIGHT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "length x wall height",
+   "blockers": [
+    "HEIGHT_NOT_PROVED: floor-to-floor is corroborated on the sections (GF->1F 4.50, 1F->2F 4.20, 2F->roof 4.20 m) but the clear height also needs the floor build-up and any false ceiling, which are not in the source"
+   ]
+  },
+  {
+   "item": "A3-BLK-GF-T200",
+   "discipline": "ARCHITECTURAL",
+   "trade": "BLOCKWORK_LENGTH",
+   "floor": "GF",
+   "element": "34 established bands, 200 mm",
+   "ar": "طول البلوك سماكة 200 مم",
+   "en": "Blockwork length, 200 mm wall bands (column overlaps excluded)",
+   "qty": 34.381162,
+   "unit": "m",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "class": "PHYSICAL_MEASUREMENT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "WALL_BAND_ESTABLISHED interval length minus OBSTACLE_OVERLAP",
+   "blockers": [
+    "9 ambiguous band(s) on GF not included (WALL_BAND_AMBIGUOUS)",
+    "1 established band(s) outside the 80-400 mm wall range not included (920 mm: sheet / title-block linework)"
+   ]
+  },
+  {
+   "item": "A3-BLA-GF-T200",
+   "discipline": "ARCHITECTURAL",
+   "trade": "BLOCKWORK_AREA",
+   "floor": "GF",
+   "element": "200 mm",
+   "ar": "مساحة البلوك سماكة 200 مم",
+   "en": "Blockwork area, 200 mm",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "class": "BLOCKED_HEIGHT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "length x wall height",
+   "blockers": [
+    "HEIGHT_NOT_PROVED: floor-to-floor is corroborated on the sections (GF->1F 4.50, 1F->2F 4.20, 2F->roof 4.20 m) but the clear height also needs the floor build-up and any false ceiling, which are not in the source"
+   ]
+  },
+  {
+   "item": "A3-BLK-1F-T150",
+   "discipline": "ARCHITECTURAL",
+   "trade": "BLOCKWORK_LENGTH",
+   "floor": "1F",
+   "element": "24 established bands, 150 mm",
+   "ar": "طول البلوك سماكة 150 مم",
+   "en": "Blockwork length, 150 mm wall bands (column overlaps excluded)",
+   "qty": 41.013013,
+   "unit": "m",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "class": "PHYSICAL_MEASUREMENT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "WALL_BAND_ESTABLISHED interval length minus OBSTACLE_OVERLAP",
+   "blockers": [
+    "4 ambiguous band(s) on 1F not included (WALL_BAND_AMBIGUOUS)",
+    "1 established band(s) outside the 80-400 mm wall range not included (920 mm: sheet / title-block linework)"
+   ]
+  },
+  {
+   "item": "A3-BLA-1F-T150",
+   "discipline": "ARCHITECTURAL",
+   "trade": "BLOCKWORK_AREA",
+   "floor": "1F",
+   "element": "150 mm",
+   "ar": "مساحة البلوك سماكة 150 مم",
+   "en": "Blockwork area, 150 mm",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "class": "BLOCKED_HEIGHT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "length x wall height",
+   "blockers": [
+    "HEIGHT_NOT_PROVED: floor-to-floor is corroborated on the sections (GF->1F 4.50, 1F->2F 4.20, 2F->roof 4.20 m) but the clear height also needs the floor build-up and any false ceiling, which are not in the source"
+   ]
+  },
+  {
+   "item": "A3-BLK-1F-T200",
+   "discipline": "ARCHITECTURAL",
+   "trade": "BLOCKWORK_LENGTH",
+   "floor": "1F",
+   "element": "25 established bands, 200 mm",
+   "ar": "طول البلوك سماكة 200 مم",
+   "en": "Blockwork length, 200 mm wall bands (column overlaps excluded)",
+   "qty": 24.963392,
+   "unit": "m",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "class": "PHYSICAL_MEASUREMENT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "WALL_BAND_ESTABLISHED interval length minus OBSTACLE_OVERLAP",
+   "blockers": [
+    "4 ambiguous band(s) on 1F not included (WALL_BAND_AMBIGUOUS)",
+    "1 established band(s) outside the 80-400 mm wall range not included (920 mm: sheet / title-block linework)"
+   ]
+  },
+  {
+   "item": "A3-BLA-1F-T200",
+   "discipline": "ARCHITECTURAL",
+   "trade": "BLOCKWORK_AREA",
+   "floor": "1F",
+   "element": "200 mm",
+   "ar": "مساحة البلوك سماكة 200 مم",
+   "en": "Blockwork area, 200 mm",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "class": "BLOCKED_HEIGHT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "length x wall height",
+   "blockers": [
+    "HEIGHT_NOT_PROVED: floor-to-floor is corroborated on the sections (GF->1F 4.50, 1F->2F 4.20, 2F->roof 4.20 m) but the clear height also needs the floor build-up and any false ceiling, which are not in the source"
+   ]
+  },
+  {
+   "item": "A3-BLK-2F-T150",
+   "discipline": "ARCHITECTURAL",
+   "trade": "BLOCKWORK_LENGTH",
+   "floor": "2F",
+   "element": "5 established bands, 150 mm",
+   "ar": "طول البلوك سماكة 150 مم",
+   "en": "Blockwork length, 150 mm wall bands (column overlaps excluded)",
+   "qty": 8.7,
+   "unit": "m",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "class": "PHYSICAL_MEASUREMENT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "WALL_BAND_ESTABLISHED interval length minus OBSTACLE_OVERLAP",
+   "blockers": [
+    "1 established band(s) outside the 80-400 mm wall range not included (920 mm: sheet / title-block linework)"
+   ]
+  },
+  {
+   "item": "A3-BLA-2F-T150",
+   "discipline": "ARCHITECTURAL",
+   "trade": "BLOCKWORK_AREA",
+   "floor": "2F",
+   "element": "150 mm",
+   "ar": "مساحة البلوك سماكة 150 مم",
+   "en": "Blockwork area, 150 mm",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "class": "BLOCKED_HEIGHT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "length x wall height",
+   "blockers": [
+    "HEIGHT_NOT_PROVED: floor-to-floor is corroborated on the sections (GF->1F 4.50, 1F->2F 4.20, 2F->roof 4.20 m) but the clear height also needs the floor build-up and any false ceiling, which are not in the source"
+   ]
+  },
+  {
+   "item": "A3-BLK-2F-T200",
+   "discipline": "ARCHITECTURAL",
+   "trade": "BLOCKWORK_LENGTH",
+   "floor": "2F",
+   "element": "13 established bands, 200 mm",
+   "ar": "طول البلوك سماكة 200 مم",
+   "en": "Blockwork length, 200 mm wall bands (column overlaps excluded)",
+   "qty": 19.898394,
+   "unit": "m",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "class": "PHYSICAL_MEASUREMENT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "WALL_BAND_ESTABLISHED interval length minus OBSTACLE_OVERLAP",
+   "blockers": [
+    "1 established band(s) outside the 80-400 mm wall range not included (920 mm: sheet / title-block linework)"
+   ]
+  },
+  {
+   "item": "A3-BLA-2F-T200",
+   "discipline": "ARCHITECTURAL",
+   "trade": "BLOCKWORK_AREA",
+   "floor": "2F",
+   "element": "200 mm",
+   "ar": "مساحة البلوك سماكة 200 مم",
+   "en": "Blockwork area, 200 mm",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "class": "BLOCKED_HEIGHT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "length x wall height",
+   "blockers": [
+    "HEIGHT_NOT_PROVED: floor-to-floor is corroborated on the sections (GF->1F 4.50, 1F->2F 4.20, 2F->roof 4.20 m) but the clear height also needs the floor build-up and any false ceiling, which are not in the source"
+   ]
+  }
+ ],
+ "rule": "length per thickness from ESTABLISHED wall bands (column overlaps out); area BLOCKED_HEIGHT; ambiguous bands reported"
+}

@@ -1,0 +1,154 @@
+{
+ "SCHEMA": "URBAN_R8_20_I1471_COLUMN_CONCEALMENT_REGISTER_V1",
+ "geometry_evidence": {
+  "bands": {
+   "WB-2c6e6cc37179fbc6": {
+    "faces": [
+     "QORTUBA_REV_NEW|H518||SEGMENT|0",
+     "QORTUBA_REV_NEW|H523||SEGMENT|0"
+    ],
+    "width_mm": 150.0,
+    "jamb_end": {
+     "face_a_end": [
+      109778.0817449848,
+      15589.71961437816
+     ],
+     "face_b_end": [
+      109778.0817449848,
+      15574.71961437816
+     ],
+     "closures": [
+      "CLOSURE|I1471|A",
+      "CLOSURE|I1471|B"
+     ]
+    }
+   },
+   "WB-d0fa2ebe87cedccd": {
+    "faces": [
+     "QORTUBA_REV_NEW|H519||SEGMENT|0",
+     "QORTUBA_REV_NEW|H525||SEGMENT|0"
+    ],
+    "width_mm": 200.0,
+    "jamb_end": {
+     "face_a_end": [
+      109678.0817449841,
+      15594.71961437816
+     ],
+     "face_b_end": [
+      109678.0817449841,
+      15574.71961437816
+     ],
+     "closures": [
+      "CLOSURE|I1471|B"
+     ]
+    }
+   }
+  },
+  "stagger_mm": 50.0,
+  "door_record": {
+   "state": "CLOSED",
+   "closure_a": "CLOSURE|I1471|A",
+   "closure_b": "CLOSURE|I1471|B",
+   "closure_b_rule": "OFFSET_JAMB_CAPS",
+   "closure_b_evidence": {
+    "rule": "OFFSET_JAMB_CAPS",
+    "depth": 15.00000000095315,
+    "stagger": 5.000000000118234,
+    "side": -1
+   },
+   "width": 100.00000000069849
+  },
+  "column": {
+   "deterministic": true,
+   "column": "QORTUBA_REV_NEW|H716||SEGMENT",
+   "candidates": {
+    "QORTUBA_REV_NEW|H716||SEGMENT": {
+     "depth_mm": 200.0,
+     "length_mm": 600.0,
+     "collinear_faces": [
+      "QORTUBA_REV_NEW|H716||SEGMENT|0",
+      "QORTUBA_REV_NEW|H716||SEGMENT|2"
+     ],
+     "both_long_faces_collinear": true,
+     "overlaps_band_faces_mm": 450.0,
+     "depth_equals_band_width": true,
+     "matches": true
+    },
+    "QORTUBA_REV_NEW|H720||SEGMENT": {
+     "depth_mm": 600.0,
+     "length_mm": 200.0,
+     "collinear_faces": [
+      "QORTUBA_REV_NEW|H720||SEGMENT|1"
+     ],
+     "both_long_faces_collinear": false,
+     "overlaps_band_faces_mm": 0.0,
+     "depth_equals_band_width": false,
+     "matches": false
+    }
+   },
+   "rule": "a STRUCTURAL_OBSTACLE column whose two long faces are collinear with the two faces of the 200 mm band, whose depth equals the band width and whose extent overlaps the band faces"
+  }
+ },
+ "owner_rationale": "QORTUBA-NEW-I1471-200MM-WALL-COLUMN-CONCEALMENT-OWNER-001@v1",
+ "owner_statement": {
+  "text": "the LEFT wall at I1471 is intentionally ~200 mm thick: it is thickened / aligned to conceal the structural column; the other wall is ~150 mm; the 50 mm stagger is intentional construction geometry",
+  "is_not": [
+   "a drafting error",
+   "a snap error",
+   "a finish offset",
+   "a dimension error",
+   "a wall-band reconstruction error"
+  ],
+  "geometry_change": "NONE - the deterministic geometry stays exactly what the admitted source proves (200 / 150 mm, 50 mm stagger)",
+  "role": "CORROBORATING RATIONALE (why the geometry exists); authorises no topology, geometry, quantity or trade change"
+ },
+ "column_identity": "DETERMINISTIC from geometry",
+ "column_finish_unchanged": {
+  "QORTUBA_REV_NEW|H716||SEGMENT|0": {
+   "object": "QORTUBA_REV_NEW|H716||SEGMENT",
+   "length_m": 0.6,
+   "exposed_m": {},
+   "exposed_total_m": 0.0,
+   "hidden_m": 0.6,
+   "state": "HIDDEN"
+  },
+  "QORTUBA_REV_NEW|H716||SEGMENT|1": {
+   "object": "QORTUBA_REV_NEW|H716||SEGMENT",
+   "length_m": 0.2,
+   "exposed_m": {},
+   "exposed_total_m": 0.0,
+   "hidden_m": 0.2,
+   "state": "HIDDEN"
+  },
+  "QORTUBA_REV_NEW|H716||SEGMENT|2": {
+   "object": "QORTUBA_REV_NEW|H716||SEGMENT",
+   "length_m": 0.6,
+   "exposed_m": {
+    "SITE-77a2130eb275604c": 0.45
+   },
+   "exposed_total_m": 0.45,
+   "hidden_m": 0.15,
+   "state": "PARTIALLY_EXPOSED"
+  },
+  "QORTUBA_REV_NEW|H716||SEGMENT|3": {
+   "object": "QORTUBA_REV_NEW|H716||SEGMENT",
+   "length_m": 0.2,
+   "exposed_m": {
+    "SITE-fe8ed5548fb4310e": 0.2
+   },
+   "exposed_total_m": 0.2,
+   "hidden_m": 0.0,
+   "state": "EXPOSED"
+  }
+ },
+ "geometry_changed": false,
+ "normalised_to_150mm": false,
+ "quantity_effect": "NONE",
+ "never": [
+  "the 200 mm wall normalised to 150 mm",
+  "the door centred",
+  "a jamb or column moved",
+  "the stagger removed",
+  "an Urban 'walls beside columns are 200 mm' rule"
+ ]
+}

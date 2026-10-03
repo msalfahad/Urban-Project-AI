@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+*.egg-info/
+
+# Secrets — never commit these
+.env
+*.key
+*-service-account.json
+firebase-credentials.json
+serviceAccountKey.json
+
+# Client data — drawings, takeoffs, contracts stay out of git
+/data/*
+# ...except the trade rule library: that is Urban Projects' own policy about
+# what each trade does to a room, not a client document, and the engine cannot
+# run without it. Space maps stay out — they carry a client's room dimensions.
+!/data/trade_rules/
+# ...and the canonical registries: trade ids and space-label aliases are Urban
+# Projects vocabulary, not client documents, and the schema validates against them.
+!/data/registry/
+*.dwg
+*.dxf
+*.xlsx
+!tests/**/*.xlsx
+
+# OS
+.DS_Store
+.secrets/

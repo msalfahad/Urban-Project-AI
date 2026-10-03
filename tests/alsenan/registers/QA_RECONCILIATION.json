@@ -1,0 +1,312 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_QA_RECONCILIATION_V1",
+ "checks": [
+  {
+   "check": "ROOM_CLOSURE_GF",
+   "state": "BLOCKED_REPORTED",
+   "critical": true,
+   "detail": "TS01 60 sites, 0 certified"
+  },
+  {
+   "check": "ROOM_CLOSURE_1F",
+   "state": "BLOCKED_REPORTED",
+   "critical": true,
+   "detail": "TS01 40 sites, 0 certified"
+  },
+  {
+   "check": "ROOM_CLOSURE_2F",
+   "state": "BLOCKED_REPORTED",
+   "critical": true,
+   "detail": "TS01 18 sites, 0 certified"
+  },
+  {
+   "check": "FLOOR_AREA",
+   "state": "BLOCKED_REPORTED",
+   "critical": true,
+   "detail": "no certified room / role: every dependent row is BLOCKED with its blocker"
+  },
+  {
+   "check": "CEILING",
+   "state": "BLOCKED_REPORTED",
+   "critical": true,
+   "detail": "no certified room / role: every dependent row is BLOCKED with its blocker"
+  },
+  {
+   "check": "WALL_SURFACES",
+   "state": "BLOCKED_REPORTED",
+   "critical": true,
+   "detail": "no certified room / role: every dependent row is BLOCKED with its blocker"
+  },
+  {
+   "check": "OPENING_HOSTING",
+   "state": "BLOCKED_REPORTED",
+   "critical": true,
+   "detail": "no certified room / role: every dependent row is BLOCKED with its blocker"
+  },
+  {
+   "check": "WALL_BAND_DUPLICATION",
+   "state": "BLOCKED_REPORTED",
+   "critical": true,
+   "detail": "no certified room / role: every dependent row is BLOCKED with its blocker"
+  },
+  {
+   "check": "SURFACE_IDENTITY",
+   "state": "BLOCKED_REPORTED",
+   "critical": true,
+   "detail": "no certified room / role: every dependent row is BLOCKED with its blocker"
+  },
+  {
+   "check": "FLOOR_FINISH_PARTITION",
+   "state": "BLOCKED_REPORTED",
+   "critical": true,
+   "detail": "no certified room / role: every dependent row is BLOCKED with its blocker"
+  },
+  {
+   "check": "WET_ROOMS",
+   "state": "BLOCKED_REPORTED",
+   "critical": true,
+   "detail": "no certified room / role: every dependent row is BLOCKED with its blocker"
+  },
+  {
+   "check": "STAIRS",
+   "state": "BLOCKED_REPORTED",
+   "critical": true,
+   "detail": "no certified room / role: every dependent row is BLOCKED with its blocker"
+  },
+  {
+   "check": "ARCH_ROWS_BLOCKED_WITHOUT_QTY",
+   "state": "PASS",
+   "critical": true,
+   "detail": "77 rows"
+  },
+  {
+   "check": "STRUCT_NO_TAG_IN_TWO_RECTANGLES",
+   "state": "PASS",
+   "critical": true,
+   "detail": "associate() places each tag in exactly one (smallest) rectangle or none"
+  },
+  {
+   "check": "STRUCT_NO_RECTANGLE_WITH_TWO_TAGS",
+   "state": "PASS",
+   "critical": true,
+   "detail": "0 found"
+  },
+  {
+   "check": "STRUCT_COMPLETE_ROWS_SIZE_CONFIRMED",
+   "state": "PASS",
+   "critical": true,
+   "detail": "19 complete footing rows, every drawn rectangle equals its schedule L x W (1 mm)"
+  },
+  {
+   "check": "STRUCT_SCHEDULE_TYPES_UNIQUE",
+   "state": "PASS",
+   "critical": true,
+   "detail": "17 types"
+  },
+  {
+   "check": "STRUCT_SCHEDULE_DATA_ALL_PLACED",
+   "state": "PASS",
+   "critical": true,
+   "detail": "SCHEDULE_TABLE_READER_V1 placed every schedule value; 1 header word(s) on a grid line reported, not dropped: ['OF']"
+  },
+  {
+   "check": "STRUCT_SUMMARY_EQUALS_COMPLETE_ROWS",
+   "state": "PASS",
+   "critical": true,
+   "detail": "each footing-type line = sum of its complete occurrence rows exactly; blocked rows in no total"
+  },
+  {
+   "check": "STRUCT_EVERY_ROW_ONCE",
+   "state": "PASS",
+   "critical": true,
+   "detail": "27 occurrence rows, each in exactly one summary line"
+  },
+  {
+   "check": "SOURCE_ROUTE_P7757_DWG_DXF",
+   "state": "PASS",
+   "critical": true,
+   "detail": "K1 vs K2 reconciliation"
+  },
+  {
+   "check": "SOURCE_ROUTE_ST7757_DWG_DXF",
+   "state": "BLOCKED_REPORTED",
+   "critical": false,
+   "detail": "no pinned decode of ST7757.dwg"
+  },
+  {
+   "check": "UNITS_ARCHITECTURAL",
+   "state": "PASS",
+   "critical": true,
+   "detail": "PROVISIONAL (ONE_INDEPENDENT_CLASS); allowed ['PREVIEW_MEASUREMENT', 'COUNT_ONLY', 'ANNOTATION_MAPPING']"
+  },
+  {
+   "check": "UNITS_STRUCTURAL",
+   "state": "PASS",
+   "critical": true,
+   "detail": "PROVISIONAL (ONE_INDEPENDENT_CLASS); allowed ['PREVIEW_MEASUREMENT', 'COUNT_ONLY', 'ANNOTATION_MAPPING']"
+  },
+  {
+   "check": "REBAR_FAIL_CLOSED",
+   "state": "PASS",
+   "critical": true,
+   "detail": "no tonnage"
+  },
+  {
+   "check": "XLSX_READBACK",
+   "state": "PASS",
+   "critical": true,
+   "detail": "every cell vs model; quantity cells vs registers; deterministic rewrite"
+  }
+ ],
+ "weaknesses": [
+  {
+   "id": "G-01",
+   "weakness": "Layer-role authority for numeric / single-letter layer drawings: only reviewed claims exist; the drawing itself offers no admissible role path, so TS01 certifies no room.",
+   "impact": "ARCH: every room-based row"
+  },
+  {
+   "id": "G-02",
+   "weakness": "Multi-sheet model space with POLYLINE frames: handled in the Phase A adapter by rule; not yet an engine region designation (frame.ReferenceRegionDesignation needs an accepted basis).",
+   "impact": "floor assignment"
+  },
+  {
+   "id": "G-03",
+   "weakness": "Door / window closure for block-door families when walls share a layer with the sheet frame; glazing role.",
+   "impact": "openings, room closure"
+  },
+  {
+   "id": "G-04",
+   "weakness": "Height authority when sections exist only as raster.",
+   "impact": "plaster, paint, tiles, blockwork"
+  },
+  {
+   "id": "G-05",
+   "weakness": "Schedule tables as block ATTRIBUTES were invisible to the canonical TEXT layer (now read through the realised attributes by SCHEDULE_TABLE_READER_V1).",
+   "impact": "structural schedules"
+  },
+  {
+   "id": "G-06",
+   "weakness": "Structural tag -> element association for beams / slabs / columns (only footing rectangles are associated).",
+   "impact": "beams, slabs, columns"
+  },
+  {
+   "id": "G-07",
+   "weakness": "Continuous-beam graphic schedules (multi-span) are not read.",
+   "impact": "beams"
+  },
+  {
+   "id": "G-08",
+   "weakness": "Rebar needs bar length / shape / laps / cover; the source gives counts and diameters only.",
+   "impact": "rebar"
+  },
+  {
+   "id": "G-09",
+   "weakness": "Legacy-codepage Arabic text is undecoded (English twins used for identity).",
+   "impact": "labels"
+  },
+  {
+   "id": "G-10",
+   "weakness": "BOQ_XLSX_EXPORT_V2 hard-coded the Qortuba banner and summary name (fixed: parameters, defaults unchanged).",
+   "impact": "exporter"
+  },
+  {
+   "id": "G-11",
+   "weakness": "Unit status reaches PROVISIONAL from in-source evidence; VERIFIED needs a second independent class.",
+   "impact": "FINAL measurement"
+  },
+  {
+   "id": "G-12",
+   "weakness": "No PDF raster text lane (no OCR engine): raster sheets localise only.",
+   "impact": "PDF-only sheets"
+  },
+  {
+   "id": "G-13",
+   "weakness": "Boundary-clipped and rotated footings are not drawn as closed axis-aligned rectangles; their tags lie outside any rectangle.",
+   "impact": "8 footing occurrences"
+  },
+  {
+   "id": "G-14",
+   "weakness": "Inclined structural elements (strap beams) are not measured.",
+   "impact": "strap beams"
+  }
+ ],
+ "target": "zero silent critical errors: every critical check is PASS or BLOCKED_REPORTED with its reason",
+ "xlsx": {
+  "sheets": [
+   "00_READ_ME",
+   "01_PROJECT_SOURCE",
+   "02_ARCH_BOQ_SUMMARY",
+   "03_ROOM_MATRIX",
+   "04_FLOOR_CEILING",
+   "05_BLOCKWORK",
+   "06_WALL_FINISHES",
+   "07_SKIRTING_PROFILE",
+   "08_DOORS",
+   "09_WINDOWS_GLAZING",
+   "10_STAIRS_RAILINGS",
+   "11_WATERPROOFING",
+   "12_MARBLE",
+   "13_ARCH_TRACEABILITY",
+   "14_ARCH_BLOCKERS",
+   "15_STRUCTURAL_SUMMARY",
+   "16_FOUNDATIONS",
+   "17_COLUMNS",
+   "18_BEAMS",
+   "19_SLABS",
+   "20_STAIRS_STRUCTURE",
+   "21_REBAR",
+   "22_STRUCT_TRACEABILITY",
+   "23_STRUCT_BLOCKERS"
+  ],
+  "content_digest": "c49d366e30e46f16a790bbe06aea73903e735883f2dd33581e1ac5ec8ab5b73f",
+  "file_sha256": "5434d7ebc5e5df25844c6b3e30f7181632b9bb4f8672fa83ace1fd6c9ba36b8a",
+  "bytes": 68606,
+  "rewrite_identical": true,
+  "readback": {
+   "state": "PASS",
+   "architectural": {
+    "state": "PASS",
+    "differences": [],
+    "formulas": [],
+    "register_mismatches": [],
+    "quantity_cells_checked": 114,
+    "canonical_not_exactly_once": [],
+    "row_drops": []
+   },
+   "structural": {
+    "state": "PASS",
+    "differences": [],
+    "formulas": [],
+    "canonical_not_exactly_once": [],
+    "row_drops": []
+   }
+  },
+  "rows_per_sheet": {
+   "00_READ_ME": 7,
+   "01_PROJECT_SOURCE": 9,
+   "02_ARCH_BOQ_SUMMARY": 77,
+   "03_ROOM_MATRIX": 39,
+   "04_FLOOR_CEILING": 9,
+   "05_BLOCKWORK": 3,
+   "06_WALL_FINISHES": 23,
+   "07_SKIRTING_PROFILE": 6,
+   "08_DOORS": 26,
+   "09_WINDOWS_GLAZING": 9,
+   "10_STAIRS_RAILINGS": 9,
+   "11_WATERPROOFING": 6,
+   "12_MARBLE": 3,
+   "13_ARCH_TRACEABILITY": 77,
+   "14_ARCH_BLOCKERS": 10,
+   "15_STRUCTURAL_SUMMARY": 37,
+   "16_FOUNDATIONS": 27,
+   "17_COLUMNS": 13,
+   "18_BEAMS": 34,
+   "19_SLABS": 3,
+   "20_STAIRS_STRUCTURE": 1,
+   "21_REBAR": 73,
+   "22_STRUCT_TRACEABILITY": 37,
+   "23_STRUCT_BLOCKERS": 17
+  }
+ },
+ "silent_critical_errors": 0
+}

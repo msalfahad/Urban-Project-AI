@@ -1,0 +1,33 @@
+{
+ "SCHEMA": "URBAN_R8_12_FRAGMENT_BAND_FREEZE_V1",
+ "frozen_commit": "b72d866b590c4d73be873342bcf9c7ee138f1c5f",
+ "wall_band_policy": {
+  "id": "WALL_BAND_POLICY_V3",
+  "digest": "ecd6ba5fe51bc89924adf79ba5f790b2b9b9e33abfbd2b97c5ce31dab2c3ae39"
+ },
+ "closure_policy": {
+  "id": "TOPOLOGY_CLOSURE_POLICY_V1",
+  "digest": "46742c570b4d8a036fd6b7446f28055bfd4e1adbff51966e800e5986ca99ccb2"
+ },
+ "engine_file_sha256": {
+  "engine/source/wall_bands.py": "bf501b6f8df03ff76a2de2cc844f1bb28c4912d434a5556f576b452881dd1c31",
+  "engine/source/topology_closures.py": "ccb2e52c16c592272ee3d717bba6954f3267f759bb5bf4746c8c269fc2a2cd66",
+  "engine/source/room_topology.py": "220504c99a52d6a45e172a566d4fe4acf00015706be2ede8cffcca98436adf2f"
+ },
+ "synthetic_test_sha256": {
+  "tests/r8_12/test_r8_12_fragment_bands.py": "77b05d4f5c719c2809f3592d39de3ae0b2032aafbdb774c6ea7d57581aaf8404",
+  "tests/r8_11/test_r8_11_wall_bands.py": "248e92c87d3c4068a7b665ac706296f1236b4a8bcc4b427ac741b9b320513cfa",
+  "tests/r8_11/test_r8_11_amendment_a1.py": "32d3642e2cdb1adcdc3b9ad54361f12bb740271d376787347b864e4553c919c9",
+  "tests/r8_11/test_r8_11_second_family.py": "1c4711d8629a7d121f361ba464b0b08d617f7b5600f4d10438950b648e3b7d2d"
+ },
+ "synthetic_test_digest": "9dcaff20b52fde6a2a349a4d9275b5cdcdddc980a073342877d8a840b1b2bb9c",
+ "qortuba_runs_before_freeze": 0,
+ "order": [
+  "design",
+  "synthetic fixtures",
+  "freeze policy + digest",
+  "commit",
+  "THEN the blind Qortuba run"
+ ],
+ "rule": "no post-result edit inside WALL_BAND_POLICY_V3; an independent defect found after the blind run is the NEXT amendment / round"
+}

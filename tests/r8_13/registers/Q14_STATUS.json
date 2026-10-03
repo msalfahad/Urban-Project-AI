@@ -1,0 +1,305 @@
+{
+ "row": "Q-14",
+ "STATE": "COMPUTED_SHADOW",
+ "VALUE": 141.0263,
+ "unit": "m2",
+ "final": false,
+ "TOPOLOGY_POLICY": "WALL_BAND_POLICY_V4 (8ed1a5cff22b8057) + TOPOLOGY_CLOSURE_POLICY_V1",
+ "RUN_DIGEST": "fb2d46ed2f49e42f2060872c517ec368b5cf8c814019d36fd17679cdcd71683a",
+ "ROW_AUTHORITY_DIGEST": "4f1372745f84440dee049fbf9a025f01c8f0981e192cecb1380ad9d334e80e9e",
+ "RELEASE_INPUT_DIGEST": "53398f2c2e4f607f868a1a21dfed0cd01c7c3ac85bc6561d95643e0b76a5042e",
+ "PHYSICAL_SITES": [
+  {
+   "site": "SITE-1c4abf65f9b5db1e",
+   "zones": [
+    "BATH"
+   ],
+   "area_m2": 8.5525
+  },
+  {
+   "site": "SITE-5f1762f1a93b91ca",
+   "zones": [
+    "BED.ROOM"
+   ],
+   "area_m2": 19.2725
+  },
+  {
+   "site": "SITE-8c1c7563d5252c50",
+   "zones": [
+    "PAINTRY"
+   ],
+   "area_m2": 11.685
+  },
+  {
+   "site": "SITE-a2b19efc492a6d0b",
+   "zones": [
+    "BATH"
+   ],
+   "area_m2": 5.1
+  },
+  {
+   "site": "SITE-a6405850100155ac",
+   "zones": [
+    "DRESS",
+    "M.B.ROOM"
+   ],
+   "area_m2": 33.2
+  },
+  {
+   "site": "SITE-daca396d6d730e60",
+   "zones": [
+    "BED.ROOM"
+   ],
+   "area_m2": 16.327
+  },
+  {
+   "site": "SITE-fdfa89fe0f5809a4",
+   "zones": [
+    "HALL",
+    "whgm"
+   ],
+   "area_m2": 42.799289
+  },
+  {
+   "site": "SITE-fe8ed5548fb4310e",
+   "zones": [
+    "BATH"
+   ],
+   "area_m2": 4.09
+  }
+ ],
+ "SEMANTIC_CLASSES": null,
+ "TRADE_RULES": [
+  "QORTUBA-Q14-CEILING-TREATMENT@v1"
+ ],
+ "OBJECT_FOOTPRINT_POLICY": [
+  "QORTUBA-CEILING-OBJECT-FOOTPRINT@v1:CEILING:FOOTPRINT_INCLUDED"
+ ],
+ "THRESHOLD_PASSAGE_TREATMENT": {
+  "policy": "STRIP_ALLOCATION_AUDIT_V1",
+  "blocking": [],
+  "release": [
+   "THRESHOLD-cf12fcdfd3e6a4a6",
+   "THRESHOLD-bfcea08375237224",
+   "THRESHOLD-28f50f8dc18c1e90",
+   "THRESHOLD-c82365dd41b94abe",
+   "THRESHOLD-04910e5deeeed2fc",
+   "THRESHOLD-f9846605acbce828"
+  ],
+  "included": [
+   "OP-997f14d12b8e9bc1",
+   "OP-9e0fd219ca5cd391"
+  ],
+  "excluded_area_m2": 0.81,
+  "included_area_m2": 0.419289,
+  "audit": [
+   {
+    "strip": "THRESHOLD-cf12fcdfd3e6a4a6",
+    "kind": "THRESHOLD",
+    "location": "SEPARATE_SITE",
+    "area_m2": 0.12,
+    "sides": {
+     "SITE-a2b19efc492a6d0b": "CEILING_BY_AREA",
+     "SITE-fdfa89fe0f5809a4": "CEILING_BY_AREA"
+    },
+    "state": "EXCLUDED_SEPARATE_SITE",
+    "in_row_total": false,
+    "why": "the strip is its own site; no allocation authority assigns it to a room"
+   },
+   {
+    "strip": "THRESHOLD-bfcea08375237224",
+    "kind": "THRESHOLD",
+    "location": "SEPARATE_SITE",
+    "area_m2": 0.15,
+    "sides": {
+     "SITE-788f30878ba9d2b3": null,
+     "SITE-fdfa89fe0f5809a4": "CEILING_BY_AREA"
+    },
+    "state": "EXCLUDED_SEPARATE_SITE",
+    "in_row_total": false,
+    "why": "the strip is its own site; no allocation authority assigns it to a room"
+   },
+   {
+    "strip": "THRESHOLD-28f50f8dc18c1e90",
+    "kind": "THRESHOLD",
+    "location": "SEPARATE_SITE",
+    "area_m2": 0.12,
+    "sides": {
+     "SITE-fdfa89fe0f5809a4": "CEILING_BY_AREA",
+     "SITE-fe8ed5548fb4310e": "CEILING_BY_AREA"
+    },
+    "state": "EXCLUDED_SEPARATE_SITE",
+    "in_row_total": false,
+    "why": "the strip is its own site; no allocation authority assigns it to a room"
+   },
+   {
+    "strip": "THRESHOLD-c82365dd41b94abe",
+    "kind": "THRESHOLD",
+    "location": "SEPARATE_SITE",
+    "area_m2": 0.15,
+    "sides": {
+     "SITE-daca396d6d730e60": "CEILING_BY_AREA",
+     "SITE-fdfa89fe0f5809a4": "CEILING_BY_AREA"
+    },
+    "state": "EXCLUDED_SEPARATE_SITE",
+    "in_row_total": false,
+    "why": "the strip is its own site; no allocation authority assigns it to a room"
+   },
+   {
+    "strip": "THRESHOLD-04910e5deeeed2fc",
+    "kind": "THRESHOLD",
+    "location": "SEPARATE_SITE",
+    "area_m2": 0.15,
+    "sides": {
+     "SITE-5f1762f1a93b91ca": "CEILING_BY_AREA",
+     "SITE-fdfa89fe0f5809a4": "CEILING_BY_AREA"
+    },
+    "state": "EXCLUDED_SEPARATE_SITE",
+    "in_row_total": false,
+    "why": "the strip is its own site; no allocation authority assigns it to a room"
+   },
+   {
+    "strip": "THRESHOLD-f9846605acbce828",
+    "kind": "THRESHOLD",
+    "location": "SEPARATE_SITE",
+    "area_m2": 0.12,
+    "sides": {
+     "SITE-1c4abf65f9b5db1e": "CEILING_BY_AREA",
+     "SITE-a6405850100155ac": "CEILING_BY_AREA"
+    },
+    "state": "EXCLUDED_SEPARATE_SITE",
+    "in_row_total": false,
+    "why": "the strip is its own site; no allocation authority assigns it to a room"
+   },
+   {
+    "strip": "OP-997f14d12b8e9bc1",
+    "kind": "OPEN_PASSAGE",
+    "location": "INSIDE_SITE",
+    "area_m2": 0.239289,
+    "sides": {
+     "SITE-fdfa89fe0f5809a4": "CEILING_BY_AREA"
+    },
+    "state": "INCLUDED_IN_SITE_SAME_TREATMENT",
+    "in_row_total": true,
+    "why": "inside the measured site and every side carries the row's treatment"
+   },
+   {
+    "strip": "OP-9e0fd219ca5cd391",
+    "kind": "OPEN_PASSAGE",
+    "location": "INSIDE_SITE",
+    "area_m2": 0.18,
+    "sides": {
+     "SITE-a6405850100155ac": "CEILING_BY_AREA"
+    },
+    "state": "INCLUDED_IN_SITE_SAME_TREATMENT",
+    "in_row_total": true,
+    "why": "inside the measured site and every side carries the row's treatment"
+   }
+  ]
+ },
+ "OWNER_FACTS_CLAIMS": {
+  "row_claims": [
+   "QORTUBA-NEW-DIM-LINES-7116-7119-ARE-WALLS-OWNER-001@v1",
+   "QORTUBA-Q14-CEILING-FOOTPRINT-OWNER-001"
+  ],
+  "facts_applied_to_row": [],
+  "facts_applied_at_release": [
+   "QORTUBA-NEW-HALL-LOBBY-OPEN-PASSAGE-OWNER-001@v1"
+  ],
+  "fact_outcomes": {
+   "QORTUBA-NEW-FLOOR-OBJECT-FOOTPRINT-OWNER-001@v1": "REJECTED_SCOPE",
+   "QORTUBA-NEW-DRY-ROOM-FINISH-OWNER-001@v1": "REJECTED_SCOPE",
+   "QORTUBA-NEW-WET-SERVICE-FINISH-OWNER-001@v1": "REJECTED_SCOPE",
+   "QORTUBA-NEW-HALL-LOBBY-OPEN-PASSAGE-OWNER-001@v1": "APPLIED"
+  }
+ },
+ "SOURCE_ANCHOR": {
+  "revision": "QORTUBA_REV_NEW",
+  "dxf_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+  "dwg_identity": "NOT_ESTABLISHED"
+ },
+ "RELEASE_BLOCKERS": [
+  "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+  "PASSAGE_SOFFIT_ALLOCATION: the OP-OWNER-HALL-LOBBY strip (0.2393 m2) lies inside the ceiling footprint but its top is a soffit at 2.2 m (owner): ceiling vs reveal allocation rule required",
+  "STRIP_ALLOCATION: 6 door-threshold strip(s) (0.81 m2) are separate sites outside this row; no allocation authority assigns them",
+  "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+ ],
+ "blockers": [],
+ "blocker_classes": [],
+ "SCHEMA": "URBAN_R8_13_Q14_STATUS_V1",
+ "regression": {
+  "R8.12": 141.0263,
+  "R8.13": 141.0263,
+  "result": "SAME",
+  "reason": "V4 changed no apartment site: the two authorised closures keep their geometry and every labelled site its area; the removed pseudo-band / passage lay outside the apartment",
+  "is_target": false
+ },
+ "sites_r8_12": [
+  {
+   "site": "SITE-1c4abf65f9b5db1e",
+   "zones": [
+    "BATH"
+   ],
+   "area_m2": 8.5525,
+   "decision": "SINGLE_SEMANTIC_ZONE"
+  },
+  {
+   "site": "SITE-5f1762f1a93b91ca",
+   "zones": [
+    "BED.ROOM"
+   ],
+   "area_m2": 19.2725,
+   "decision": "SINGLE_SEMANTIC_ZONE"
+  },
+  {
+   "site": "SITE-621f9bce1e5ec52a",
+   "zones": [
+    "HALL",
+    "whgm"
+   ],
+   "area_m2": 42.799289,
+   "decision": "SEMANTIC_SUBDIVISION_NOT_REQUIRED_FOR_TRADE"
+  },
+  {
+   "site": "SITE-8c1c7563d5252c50",
+   "zones": [
+    "PAINTRY"
+   ],
+   "area_m2": 11.685,
+   "decision": "SINGLE_SEMANTIC_ZONE"
+  },
+  {
+   "site": "SITE-a2b19efc492a6d0b",
+   "zones": [
+    "BATH"
+   ],
+   "area_m2": 5.1,
+   "decision": "SINGLE_SEMANTIC_ZONE"
+  },
+  {
+   "site": "SITE-a6405850100155ac",
+   "zones": [
+    "DRESS",
+    "M.B.ROOM"
+   ],
+   "area_m2": 33.2,
+   "decision": "SEMANTIC_SUBDIVISION_NOT_REQUIRED_FOR_TRADE"
+  },
+  {
+   "site": "SITE-daca396d6d730e60",
+   "zones": [
+    "BED.ROOM"
+   ],
+   "area_m2": 16.327,
+   "decision": "SINGLE_SEMANTIC_ZONE"
+  },
+  {
+   "site": "SITE-fe8ed5548fb4310e",
+   "zones": [
+    "BATH"
+   ],
+   "area_m2": 4.09,
+   "decision": "SINGLE_SEMANTIC_ZONE"
+  }
+ ]
+}

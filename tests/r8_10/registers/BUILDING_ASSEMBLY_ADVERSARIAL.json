@@ -1,0 +1,25 @@
+{
+ "SCHEMA": "URBAN_R8_10_BUILDING_ASSEMBLY_ADVERSARIAL_V1",
+ "rule": "R8.10 V2: BUILDING_ASSEMBLY needs (1) boundary-layer children that close at least one cycle among themselves AND (2) a nested door occurrence, or >= 2 DIFFERENT established room labels inside the occurrence, or a reviewed occurrence claim. A dimension child or a single text no longer suffices: a detail callout (wall-like lines + a title / dimensions) is not a building",
+ "real_drawings": {
+  "NEW_K2": {
+   "SYMBOL_OCCURRENCE": 19,
+   "SHEET_FRAME_OCCURRENCE": 1
+  },
+  "OLD_K1": {
+   "SYMBOL_OCCURRENCE": 15,
+   "SHEET_FRAME_OCCURRENCE": 1
+  }
+ },
+ "real_assemblies_before_and_after": "none in either Qortuba revision (or P7757): the stronger rule changes no real result",
+ "tests": [
+  "detail callout + title -> UNKNOWN (fail closed)",
+  "window detail + dimensions -> UNKNOWN",
+  "fixture block + label -> SYMBOL",
+  "room-detail block (1 room, 1 label) -> UNKNOWN",
+  "full floor-plan block -> BUILDING_ASSEMBLY",
+  "bound xref floor plan -> BUILDING_ASSEMBLY",
+  "wall children closing no cycle -> UNKNOWN"
+ ],
+ "size_used": false
+}

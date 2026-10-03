@@ -1,0 +1,149 @@
+{
+ "SCHEMA": "URBAN_R8_18_WATERPROOFING_REGISTER_V1",
+ "state": "COMPUTED_SHADOW",
+ "rows": {
+  "WATERPROOFING_FLOOR_M2": {
+   "unit": "m2",
+   "value": 29.4275
+  },
+  "WATERPROOFING_UPTURN_LM": {
+   "unit": "lm",
+   "value": 44.2,
+   "upturn_height_m": 0.15
+  }
+ },
+ "per_floor": {
+  "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)": {
+   "WATERPROOFING_FLOOR_M2": 29.4275,
+   "WATERPROOFING_UPTURN_LM": 44.2
+  }
+ },
+ "per_room": {
+  "SITE-1c4abf65f9b5db1e": {
+   "policy": "WATERPROOFING_POLICY_V1",
+   "state": "COMPUTED",
+   "WATERPROOFING_FLOOR_M2": 8.5525,
+   "WATERPROOFING_UPTURN_LM": 11.9,
+   "upturn_height_m": 0.15,
+   "upturn_authority": "US-04 (0.15 m upturn) + US-05 (doorway not deducted)",
+   "upturn_m2_informational": 1.785,
+   "perimeter_by_class_m": {
+    "COLUMN_FACE": 0.65,
+    "DOOR_PRESENT": 0.8,
+    "REAL_WALL_FACE": 10.45
+   },
+   "doorways_deducted": false,
+   "holes_included": true,
+   "zones": [
+    "BATH"
+   ],
+   "class_": "WET_SERVICE_ROOM",
+   "authority": "US-14 bathroom",
+   "floor": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+   "perimeter_reconciles": true
+  },
+  "SITE-8c1c7563d5252c50": {
+   "policy": "WATERPROOFING_POLICY_V1",
+   "state": "COMPUTED",
+   "WATERPROOFING_FLOOR_M2": 11.685,
+   "WATERPROOFING_UPTURN_LM": 13.9,
+   "upturn_height_m": 0.15,
+   "upturn_authority": "US-04 (0.15 m upturn) + US-05 (doorway not deducted)",
+   "upturn_m2_informational": 2.085,
+   "perimeter_by_class_m": {
+    "COLUMN_FACE": 1.4,
+    "FLOOR_CONTACT_UNPROVEN": 4.360992,
+    "REAL_WALL_FACE": 8.139008
+   },
+   "doorways_deducted": false,
+   "holes_included": true,
+   "zones": [
+    "PAINTRY"
+   ],
+   "class_": "SERVICE_ROOM",
+   "authority": "US-14 pantry / preparation kitchen + QP-13 (PAINTRY, GROSS perimeter)",
+   "floor": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+   "perimeter_reconciles": true
+  },
+  "SITE-a2b19efc492a6d0b": {
+   "policy": "WATERPROOFING_POLICY_V1",
+   "state": "COMPUTED",
+   "WATERPROOFING_FLOOR_M2": 5.1,
+   "WATERPROOFING_UPTURN_LM": 9.4,
+   "upturn_height_m": 0.15,
+   "upturn_authority": "US-04 (0.15 m upturn) + US-05 (doorway not deducted)",
+   "upturn_m2_informational": 1.41,
+   "perimeter_by_class_m": {
+    "COLUMN_FACE": 1.4,
+    "DOOR_PRESENT": 0.8,
+    "REAL_WALL_FACE": 7.2
+   },
+   "doorways_deducted": false,
+   "holes_included": true,
+   "zones": [
+    "BATH"
+   ],
+   "class_": "WET_SERVICE_ROOM",
+   "authority": "US-14 bathroom",
+   "floor": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+   "perimeter_reconciles": true
+  },
+  "SITE-fe8ed5548fb4310e": {
+   "policy": "WATERPROOFING_POLICY_V1",
+   "state": "COMPUTED",
+   "WATERPROOFING_FLOOR_M2": 4.09,
+   "WATERPROOFING_UPTURN_LM": 9.0,
+   "upturn_height_m": 0.15,
+   "upturn_authority": "US-04 (0.15 m upturn) + US-05 (doorway not deducted)",
+   "upturn_m2_informational": 1.35,
+   "perimeter_by_class_m": {
+    "COLUMN_FACE": 1.2,
+    "DOOR_PRESENT": 0.8,
+    "REAL_WALL_FACE": 7.0
+   },
+   "doorways_deducted": false,
+   "holes_included": true,
+   "zones": [
+    "BATH"
+   ],
+   "class_": "WET_SERVICE_ROOM",
+   "authority": "US-14 bathroom",
+   "floor": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+   "perimeter_reconciles": true
+  }
+ },
+ "doorways_deducted": false,
+ "opening_lengths_in_upturn_m": {
+  "SITE-1c4abf65f9b5db1e": 0.8,
+  "SITE-8c1c7563d5252c50": 4.360992,
+  "SITE-a2b19efc492a6d0b": 0.8,
+  "SITE-fe8ed5548fb4310e": 0.8
+ },
+ "skirting_path_used": false,
+ "vs_skirting": {
+  "skirting_payable_lm": 94.13682,
+  "independent": "the upturn is the GROSS site boundary of the wet / service rooms; skirting is the dry payable path - different sites, different policy"
+ },
+ "marble": {
+  "separate": true,
+  "marble_quantities": {
+   "MARBLE_THRESHOLD_PLAN_AREA_M2": 0.51,
+   "MARBLE_THRESHOLD_LENGTH_LM": 3.4,
+   "count": 4,
+   "blocked": []
+  },
+  "effect_on_waterproofing": "NONE (no explicit rule links a threshold to the membrane)"
+ },
+ "label_note": "the PAINTRY window / sliding-door spans carry the label FLOOR_CONTACT_UNPROVEN in perimeter_by_class_m because classify_v4 was called without the floor-contact map: a LABEL only - the length is in the gross upturn either way (doorways and openings are never deducted)",
+ "anti_calibration": {
+  "what": "a pre-freeze repository grep for 'waterproof' surfaced historical OLD-revision figures in APPROVED_QUANTITIES.json (bathroom upturn 30.225 lm, PAINTRY 11.150 lm)",
+  "effect": "NONE: the waterproofing policy has no tunable parameter (floor = certified site area; upturn = gross site boundary; 0.15 m from US-04); the frozen run was blind (expected_value_given False, historical_quantities_used False); the R8.18 values are not compared to them",
+  "is_target": false
+ },
+ "blind_equal": true,
+ "release_blockers": [
+  "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+  "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+ ],
+ "final": false
+}

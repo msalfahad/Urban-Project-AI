@@ -1,0 +1,81 @@
+{
+  "SCHEMA": "URBAN_ALSENAN_P7757_ST7757_PHASE_A2_RECOMMENDATION_BEFORE_CODING_V1",
+  "base_commit": "07a373a",
+  "written": "after re-reading the Phase A freeze, the current role-admission chain (geometry_role.admit -> role_authority.apply_claims -> room_topology.topology_inputs / run), the unrealised-entity accounting, the raw DXF of the 3 + 10 RTEXT entities, the Arabic label text styles, the pinned donor sources (U-C4N cdb10638, OpenTakeoff e6d2251c, fetched read-only into scratch at their DONORS.lock commits) and ONE read-only feasibility probe on the ground-floor sheet - BEFORE any Phase A2 code. No freelancer file, web-app report, historical quantity or price was opened.",
+  "source_set": "The 9 delivered files are the COMPLETE AVAILABLE OWNER SOURCE SET (owner statement). They are not called ISSUED. No further source request is made this round.",
+  "feasibility_probe": {
+    "what": "Ground-floor sheet, strict TS01 + closure policy, with HYPOTHETICAL layer roles supplied by hand and door occurrences admitted wherever geometry_role.door_signature finds one swing. Diagnostic only; the hand map is NOT carried into code.",
+    "result": "181 sites (140 certified, mostly small), 55 established wall bands, 9 ambiguous; W.C / bath sites close (one certified ~2.4 m2); DEWANEYA + WASH merge (an opening without a door symbol); KITCHEN TOPOLOGY_ROLE_UNRESOLVED (counter / plot linework on the mixed layer 5).",
+    "lesson": "Rooms close on this drawing once (a) walls, columns, glazing and negatives have role authority and (b) door swings close their openings. Both must come from EVIDENCE the engine computes, not from a layer map."
+  },
+  "1_blockers_solvable_by_engine_improvement": [
+    "B-ROLE: no role authority for numeric / single-letter layers (1, 2, 4, 5, W, D, CC). Solvable by a generic ENTITY_ROLE_INFERENCE engine that scores geometry + CAD-structure + context evidence per layer and per part, and emits source-scoped POLICY_ACCEPTED claims (never REVIEWED, never transferred).",
+    "B-DOOR: door occurrences are recognised only by a DOOR layer / block NAME. Solvable: a door MOTIF (one swing < pi + a straight leaf ~= radius from the hinge, hinge anchored on an accepted wall face / band end) yields an inferred door-occurrence claim that geometry_role admits as OPENING_SYMBOL (new optional input, default empty -> Qortuba unchanged).",
+    "B-FRAME: sheet frames are closed polylines on the wall layer. Solvable: repeated identical closed rectangles enclosing a whole drawing cluster + a title-text band -> part-scoped SHEET_FRAME claims; plan region = frame interior.",
+    "B-UNREAL: 3 RTEXT plot stamps reach the topology with layer None and block every site (UNREALISED_ENTITY_LAYER_UNKNOWN). Solvable: read the RTEXT layer and its proxy-graphics placement from the raw DXF (generic proxy-graphic vertex decode) so the frozen accounting can locate it by PLACEMENT.",
+    "B-WINDOW: window multi-lines share the plot-boundary layer. Solvable: a window-in-gap motif (2-4 parallel short segments spanning a wall-band gap, inside the band thickness) -> part-scoped GLAZING_BOUNDARY claims; the remaining long lines of that layer get a PLOT/SITE negative role only if they lie outside every wall band and enclose the building.",
+    "B-COLUMN: column outlines are small closed rectangles with a SOLID fill. Solvable: closed rectangle + fill motif + contact with wall bands -> STRUCTURAL_OBSTACLE claims.",
+    "B-NEG: overhead / centre lines are distinguishable by LINETYPE (HIDDEN, CENTER), level / stair-arrow / text-leader linework by its association with text and symbol inserts. Solvable as negative-role evidence.",
+    "B-FOOT: 8 footing occurrences failed tag association. Partly solvable by constraint-unique matching (schedule size + orientation + rotation + clipping + grid position + uniqueness); anything not unique stays BLOCKED."
+  ],
+  "2_blockers_that_stay_unresolved": [
+    "every FINISH MATERIAL (no finish schedule): floor / wall / ceiling material, tile vs marble vs paint, skirting material",
+    "storey heights / ceiling heights: raster sections give level marks only as TRANSCRIBED evidence; no slab build-up, no false-ceiling heights -> wall-face AREA stays BLOCKED_HEIGHT unless a floor-to-soffit pair is proven per floor",
+    "door / window HEIGHTS and types (no schedule); sill heights; frame / leaf materials",
+    "founding level, ground-beam levels, slab levels (no structural sections with levels) -> column / ground-beam volumes stay BLOCKED_HEIGHT",
+    "rebar tonnage (no bar schedule with lengths) - fail closed",
+    "Arabic room-label text: stored in a font-glyph encoding (style X-ARAB1B over ANSI_1252); no font map in the repository or donors -> UNKNOWN, never decoded by guess",
+    "the 7 PDF-only raster sheets: no CAD geometry, no authorised scale -> evidence only",
+    "external wall finishes on SW / NE elevations (raster only)",
+    "DWG == DXF identity for ST7757 (no pinned decode) - a RELEASE blocker, not a development blocker"
+  ],
+  "3_generic_topology_strategy": "Layer names carry NO authority. Per effective layer and per part the engine computes OBSERVATIONS: linetype and lineweight, entity type mix, block-occurrence share, parallel-pair share and the pair-offset distribution in mm, collinear-band share, endpoint join / T-junction share, closed-rectangle share (and fill association), closure contribution to label-bearing cycles, distance to door hinges / window motifs, position relative to the detected plan region and frame. A ROLE_CANDIDATE is scored from at least two independent evidence channels; a candidate becomes a CLAIM only when its score clears the frozen threshold AND no competing candidate is within the frozen margin; mixed layers are decided per PART (part-scoped claims) or left UNKNOWN (which then blocks exactly the sites it separates). Claims are POLICY_ACCEPTED, source-scoped (revision id + anchor hash + region), versioned, and never applied to another source.",
+  "4_how_evidence_combines": {
+    "WALL_FACE": "paired parallel continuous lines at a wall-thickness offset (80-400 mm) over most of their length + T / L joins + participation in closed cycles that hold room labels + door hinges / window motifs anchored on them. A single-line layer or a layer whose pairs sit at furniture offsets fails.",
+    "DOOR": "existence = a physical opening (a wall-band gap) + a door-symbol motif (one swing arc < pi, a leaf line from the hinge of length ~= radius, hinge within the band thickness of a gap jamb). Width = the swing radius (source geometry) cross-checked against the gap width. No door layer or block name is required; a name only corroborates.",
+    "WINDOW": "existence = a wall-band gap closed by 2-4 parallel lines inside the band thickness, spanning the gap; NO swing. Geometry = gap width + band thickness. Height / sill = vertical evidence only (elevation transcription), else BLOCKED_HEIGHT. Material = BLOCKED.",
+    "COLUMN": "small closed rectangle (or circle) with a fill and contact with wall bands, repeated at grid positions; corroborated by the structural column plan footprint where both exist.",
+    "NEGATIVES": "sheet frame (repeated identical closed rectangles bounding a drawing cluster), title block (text-dense band inside the frame), plot boundary (long lines enclosing every wall band, outside all bands), dimension (DIMENSION entities and their layers), hatch, grid / centre lines (CENTER linetype + grid bubbles), overhead (HIDDEN linetype), furniture / fixtures (closed symbol occurrences without boundary content), annotation (text-associated short linework, level marks, stair arrows).",
+    "TEXT": "room labels are semantic only and are attached AFTER a site exists; level marks are vertical evidence; dimensions corroborate widths."
+  },
+  "5_donors": {
+    "U-C4N (MIT) @cdb10638": "inspected: engineering/arch/walls.py is a wall AUTHORING engine (axis -> outlines, junction mitres); rooms.py draws rooms; labels.plain decodes CAD control codes (already reimplemented in engine/source/cad_text). No Arabic / SHX glyph-map decoder exists in the donor.",
+    "OpenTakeoff (Apache-2.0) @e6d2251c": "inspected: lib/doorseal.ts reads a door from its own swing (hinge = arc centre ON wall ink, strike end meets a wall, sweep 0.7-2.1 rad, radius bounded by door sizes); lib/layers.ts classifies layers by NAME only (numeric layers -> unknown); oneclick.ts drops hidden / annotation / pattern ink as stated non-boundary; scheduleScan / scheduleParse for schedules.",
+    "beiming183 (MIT)": "readback-diff pattern only (already used).",
+    "Slacker (Apache-2.0)": "reference only (COM readback oracle; unitless-as-mm rejected).",
+    "puran-water (MIT)": "benchmark reference only."
+  },
+  "6_classification": {
+    "COPY_ADAPT": "NONE (nothing is copied this round).",
+    "CLEAN_REIMPLEMENT": ["OpenTakeoff door-seal idea in VECTOR form: hinge anchored on an accepted wall face, strike end at the opposite jamb, sweep and radius bounds as physical door facts; both ends tried, exactly one must close (the frozen topology.opening_closures already does this)", "OpenTakeoff 'stated non-boundary ink' idea, but from LINETYPE / structure evidence instead of layer names", "RTEXT proxy-graphic placement (generic AutoCAD proxy-graphics vertex records)"],
+    "BENCHMARK_ONLY": ["OpenTakeoff detectRooms / One-Click / netroom (raster flood room finder)", "U-C4N arch/walls.py (authoring)", "puran-water autocad-mcp"],
+    "REJECT": ["layer-name-only role classification (OpenTakeoff layers.ts) as authority", "raster flood-fill rooms as quantity authority", "door dilation 'seal ladder'", "any donor calculator as quantity authority", "inferred-unit override of INSUNITS", "kg/m3 rebar ratios"]
+  },
+  "7_pdf_only_sheets": "OpenTakeoff-style help = SHEET CLASSIFICATION + localisation, not measurement: per page, record kind (area plan / elevation / section / fence detail), title text as transcribed, the views it shows, and the CAD sheet it corresponds to (if any). The raster pages have no text layer and no authorised scale; no pixel is measured. They contribute vertical EVIDENCE items (level marks, parapet marks, opening head / sill marks where printed) with page, crop box, transcription and confidence.",
+  "8_raster_sections_as_vertical_evidence": "Each transcribed mark becomes a VERTICAL_EVIDENCE item {page, crop (pixel box), transcription, kind (FFL / roof / parapet / window head / sill / door head / beam soffit), floor, confidence, corroboration with CAD level marks}. A floor-to-floor or floor-to-soffit HEIGHT is computed only from two transcribed level values on the same section (difference of printed values, never pixels) and is published as EVIDENCE (SHADOW), never as a global height; a wall-face area may use it only where it is proven for that floor and the gate says so.",
+  "9_role_inference_architecture": "engine/source/entity_role_inference.py (ENTITY_ROLE_INFERENCE_V1, stdlib, project-agnostic): observe(input) -> OBSERVATIONS per layer / part / occurrence; candidates(observations) -> ROLE_CANDIDATES with per-channel scores and reasons; decide(candidates, policy) -> ACCEPTED claims | BLOCKED (with the competing candidates); claims are role_authority.SourceLayerRoleClaim with review_state POLICY_ACCEPTED and authority ENTITY_ROLE_INFERENCE_V1 (role_authority.claim_applies honours that state only with that authority and non-empty evidence). Inferred door occurrences are a separate output passed to room_topology.run(inferred_door_occurrences=...). Region detection (frames, plan regions, floor assignment from title text) is a separate generic function. Nothing in it names a layer, handle, coordinate or project.",
+  "10_structural_expansion": [
+    "footings: constraint-unique tag -> outline matching for the 8 orphan tags; rotated / clipped outlines measured on their own axes; a match counts only if it is the UNIQUE outline consistent with the schedule size and the tag",
+    "columns: occurrence register from the column plan (tag + outline), section from the schedule, plan area; count and section COMPUTED; volume BLOCKED_HEIGHT (no founding / slab levels)",
+    "beams: schedule widths and depths per type; plan lengths only where a tagged beam band is unambiguous between supports; volume only where width + depth + length are all proven; ambiguous occurrences BLOCKED",
+    "slabs: outline per slab plan, thickness from the slab label; volume only where the outline closes and the thickness is unique; beam / slab overlap deducted once (beam depth below slab) or the row is BLOCKED",
+    "rebar: REBAR_EVIDENCE completeness per element (bar marks, diameters, spacings found vs lengths / laps / counts missing); tonnage stays BLOCKED"
+  ],
+  "11_stays_blocked": ["finish materials (all trades)", "wall / ceiling heights not proven per floor", "opening heights / types / materials", "false ceilings", "external finishes on raster-only elevations", "stair finishes and railings beyond counted geometry", "column / ground-beam volumes without levels", "rebar tonnage", "any raster pixel measurement", "sanitary / plumbing quantities"],
+  "12_p7757_logic_not_introduced": ["layer 1 = wall, W = window, D = door, S-COL.BON = column, 2 = overhead (no layer map anywhere in code)", "handle lists, frame coordinates, room coordinates", "the P7757 door block names", "Qortuba facts: 3.15 / 3.20 m heights, door sizes, sills, ducts", "the hand roles of the feasibility probe", "any threshold tuned to make a P7757 room close; thresholds are physical facts (wall 80-400 mm, door leaf 500-1300 mm, swing sweep 0.7-2.1 rad) frozen before the P7757 run"],
+  "13_disagreements": [
+    "'Certify real rooms': rooms whose roles rest on POLICY_ACCEPTED inference are certified as SHADOW geometry with role authority recorded as INFERRED; they are not human-reviewed and the units are still PROVISIONAL, so nothing here is a release quantity.",
+    "Wall-face area and blockwork AREA need a height per floor; the source set has only raster level marks. Lengths and thicknesses are published; areas stay BLOCKED_HEIGHT unless the per-floor height gate passes.",
+    "Wet-room semantics: sanitary fixture symbols + a wet-room label corroborate a WET classification; waterproofing material stays blocked.",
+    "Mixed layers (counters, stairs, plot lines and drains on one layer) are decided per part or left UNKNOWN; a site they separate stays REVIEW_REQUIRED rather than being forced closed."
+  ],
+  "14_fastest_safe_plan": [
+    "1 commit this recommendation",
+    "2 engine (stdlib): entity_role_inference V1 (observations, candidates, decisions, regions, door / window / column motifs); role_authority POLICY_ACCEPTED state; geometry_role inferred door occurrences; room_topology pass-through (all defaults unchanged)",
+    "3 synthetic tests written to fail first: frame / plot / furniture / dimension / hidden rejection, door motif (true + false positives), window-in-gap, wall-pair admission, mixed-layer -> UNKNOWN, claim scope, Qortuba-path invariance",
+    "4 adapter alsenan_phase_a2.py: RTEXT placement from raw DXF, per-floor runs, door / window registers, rooms, floor / base-ceiling area, blockwork lengths by thickness, physical wall-face lengths (areas gated by height), skirting-eligible path, stairs, wet-room semantics, PDF vertical evidence register",
+    "5 structural: constraint-unique footing matching, column / beam / slab registers, rebar evidence",
+    "6 Qortuba regression rerun (registers unchanged except engine-inventory hashes)",
+    "7 freeze, XLSX (PHYSICAL_MEASUREMENT / TRADE_ASSIGNMENT / BLOCKED_MATERIAL / BLOCKED_HEIGHT), registers built twice, ONE full suite, package, report"
+  ]
+}

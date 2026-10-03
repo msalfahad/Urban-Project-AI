@@ -1,0 +1,1831 @@
+{
+ "SCHEMA": "URBAN_R8_7_QORTUBA_REVISION_DELTA_V1",
+ "label": "NEW_REVISION_DXF_DIAGNOSTIC (SHADOW; not production-authoritative)",
+ "runs": {
+  "OLD_K1": {
+   "state": "COMPLETE",
+   "six_contract_rows": {
+    "Q-03": 17.8625,
+    "Q-03P": 11.685,
+    "Q-11": 17.8625,
+    "Q-12": 11.685,
+    "Q-13": 108.9625,
+    "Q-14": 138.51
+   },
+   "rooms": [
+    [
+     "HALL / whgm",
+     36.37,
+     "DRY"
+    ],
+    [
+     "M.B.ROOM",
+     20.8075,
+     "DRY"
+    ],
+    [
+     "BED.ROOM",
+     18.7525,
+     "DRY"
+    ],
+    [
+     "BED.ROOM",
+     16.5375,
+     "DRY"
+    ],
+    [
+     "PAINTRY",
+     11.685,
+     "DRY"
+    ],
+    [
+     "DRESS",
+     11.985,
+     "DRY"
+    ],
+    [
+     "BATH",
+     8.5525,
+     "WET"
+    ],
+    [
+     "BATH",
+     5.1,
+     "WET"
+    ],
+    [
+     "UNLABELLED_INTERNAL_SPACE",
+     4.51,
+     "DRY"
+    ],
+    [
+     "BATH",
+     4.21,
+     "WET"
+    ]
+   ],
+   "rooms_digest": "165a7cd8206ae2a8d3bc872b54ec7213c50cb66500514ce9b3491f750f102630",
+   "method_unit": {
+    "UNIT_CANDIDATE": "cm",
+    "UNIT_SCALE_TO_MM": 10.0,
+    "PROVENANCE": "INSUNITS",
+    "STATUS": "SOURCE_ESTABLISHED"
+   },
+   "input": {
+    "revision": "QORTUBA_REV_OLD",
+    "anchor": "2ec3a9c8b66eb2e129275b87010f4a8d79d7e5bdcc31c1897c14fd7e5647d355",
+    "route": "K1",
+    "parts": 1118,
+    "texts": 61,
+    "dimensions": 101,
+    "clip_bounds": [
+     108360.11465629998,
+     13671.647511931791,
+     112440.11465629998,
+     16521.64751193179
+    ],
+    "unit_native_to_mm": 10.0,
+    "unit_claim_id": "QORTUBA-NATIVE-UNIT-OWNER-001",
+    "excluded_by_declaration": {
+     "ELLIPTICAL_ARC": 8
+    }
+   }
+  },
+  "OLD_K2": {
+   "state": "COMPLETE",
+   "six_contract_rows": {
+    "Q-03": 17.8625,
+    "Q-03P": 11.685,
+    "Q-11": 17.8625,
+    "Q-12": 11.685,
+    "Q-13": 108.985,
+    "Q-14": 138.5325
+   },
+   "rooms": [
+    [
+     "HALL / whgm",
+     36.37,
+     "DRY"
+    ],
+    [
+     "M.B.ROOM",
+     20.8075,
+     "DRY"
+    ],
+    [
+     "BED.ROOM",
+     20.395,
+     "DRY"
+    ],
+    [
+     "BED.ROOM",
+     16.5375,
+     "DRY"
+    ],
+    [
+     "PAINTRY",
+     11.685,
+     "DRY"
+    ],
+    [
+     "DRESS",
+     11.985,
+     "DRY"
+    ],
+    [
+     "BATH",
+     8.5525,
+     "WET"
+    ],
+    [
+     "BATH",
+     5.1,
+     "WET"
+    ],
+    [
+     "BATH",
+     4.21,
+     "WET"
+    ],
+    [
+     "UNLABELLED_INTERNAL_SPACE",
+     2.89,
+     "DRY"
+    ]
+   ],
+   "rooms_digest": "943426fea31e9cda8609e7432753100e311ed4199badd13ccd705cbedd729218",
+   "method_unit": {
+    "UNIT_CANDIDATE": "cm",
+    "UNIT_SCALE_TO_MM": 10.0,
+    "PROVENANCE": "INSUNITS",
+    "STATUS": "SOURCE_ESTABLISHED"
+   },
+   "input": {
+    "revision": "QORTUBA_REV_OLD",
+    "anchor": "2ec3a9c8b66eb2e129275b87010f4a8d79d7e5bdcc31c1897c14fd7e5647d355",
+    "route": "K2",
+    "parts": 1118,
+    "texts": 61,
+    "dimensions": 101,
+    "clip_bounds": [
+     108360.1146563,
+     13671.64751193179,
+     112440.1146563,
+     16521.64751193179
+    ],
+    "unit_native_to_mm": 10.0,
+    "unit_claim_id": "QORTUBA-NATIVE-UNIT-OWNER-001",
+    "excluded_by_declaration": {
+     "ELLIPTICAL_ARC": 8
+    }
+   }
+  },
+  "NEW_K2": {
+   "state": "COMPLETE",
+   "six_contract_rows": {
+    "Q-03": null,
+    "Q-03P": null,
+    "Q-11": null,
+    "Q-12": null,
+    "Q-13": null,
+    "Q-14": null
+   },
+   "rooms": [
+    [
+     "whgm",
+     34.609,
+     "DRY"
+    ],
+    [
+     "BED.ROOM / BATH",
+     24.6257,
+     "WET"
+    ],
+    [
+     "BED.ROOM",
+     17.1538,
+     "DRY"
+    ],
+    [
+     "M.B.ROOM",
+     null,
+     "DRY"
+    ],
+    [
+     "PAINTRY",
+     11.685,
+     "DRY"
+    ],
+    [
+     "DRESS",
+     11.985,
+     "DRY"
+    ],
+    [
+     "BATH",
+     8.5525,
+     "WET"
+    ],
+    [
+     "BATH",
+     4.21,
+     "WET"
+    ],
+    [
+     "HALL",
+     null,
+     "DRY"
+    ],
+    [
+     "UNLABELLED_INTERNAL_SPACE",
+     null,
+     "DRY"
+    ]
+   ],
+   "rooms_digest": "c0243ef7e5005f9e78fd92f8eabcf7ebbe93c36ecf3c7c60f0677837528930ca",
+   "method_unit": {
+    "UNIT_CANDIDATE": "cm",
+    "UNIT_SCALE_TO_MM": 10.0,
+    "PROVENANCE": "INSUNITS",
+    "STATUS": "SOURCE_ESTABLISHED"
+   },
+   "input": {
+    "revision": "QORTUBA_REV_NEW",
+    "anchor": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+    "route": "K2",
+    "parts": 1363,
+    "texts": 61,
+    "dimensions": 102,
+    "clip_bounds": [
+     108360.1146563,
+     13671.64751193179,
+     112440.1146563,
+     16521.64751193179
+    ],
+    "unit_native_to_mm": 10.0,
+    "unit_claim_id": "QORTUBA-NEW-REVISION-NATIVE-UNIT-OWNER-001",
+    "excluded_by_declaration": {
+     "ELLIPTICAL_ARC": 8
+    }
+   }
+  }
+ },
+ "rows": [
+  {
+   "row": "Q-03",
+   "old_revision_value_R8_6": 17.8625,
+   "old_revision_value_contract_K1": 17.8625,
+   "old_revision_value_K2_route": 17.8625,
+   "new_revision_value": 37.3882,
+   "delta_new_minus_old_same_route": 19.5257,
+   "new_rooms": [
+    "BED.ROOM / BATH 24.6257",
+    "BATH 8.5525",
+    "BATH 4.21"
+   ],
+   "new_rooms_not_established": [],
+   "merged_labelled_spaces_in_row": [
+    "BED.ROOM / BATH"
+   ],
+   "state": "NEW_REVISION_DXF_DIAGNOSTIC_REVIEW_REQUIRED: merged labelled space BED.ROOM / BATH",
+   "causes": [
+    "SOURCE_REVISION_CHANGE"
+   ],
+   "METHOD_DIFFERENCE": "NONE (same frozen method code in every run)"
+  },
+  {
+   "row": "Q-03P",
+   "old_revision_value_R8_6": 11.685,
+   "old_revision_value_contract_K1": 11.685,
+   "old_revision_value_K2_route": 11.685,
+   "new_revision_value": 11.685,
+   "delta_new_minus_old_same_route": 0.0,
+   "new_rooms": [
+    "PAINTRY 11.685"
+   ],
+   "new_rooms_not_established": [],
+   "merged_labelled_spaces_in_row": [],
+   "state": "NEW_REVISION_DXF_DIAGNOSTIC",
+   "causes": [
+    "NO_CHANGE"
+   ],
+   "METHOD_DIFFERENCE": "NONE (same frozen method code in every run)"
+  },
+  {
+   "row": "Q-11",
+   "old_revision_value_R8_6": 17.8625,
+   "old_revision_value_contract_K1": 17.8625,
+   "old_revision_value_K2_route": 17.8625,
+   "new_revision_value": 37.3882,
+   "delta_new_minus_old_same_route": 19.5257,
+   "new_rooms": [
+    "BED.ROOM / BATH 24.6257",
+    "BATH 8.5525",
+    "BATH 4.21"
+   ],
+   "new_rooms_not_established": [],
+   "merged_labelled_spaces_in_row": [
+    "BED.ROOM / BATH"
+   ],
+   "state": "NEW_REVISION_DXF_DIAGNOSTIC_REVIEW_REQUIRED: merged labelled space BED.ROOM / BATH",
+   "causes": [
+    "SOURCE_REVISION_CHANGE"
+   ],
+   "METHOD_DIFFERENCE": "NONE (same frozen method code in every run)"
+  },
+  {
+   "row": "Q-12",
+   "old_revision_value_R8_6": 11.685,
+   "old_revision_value_contract_K1": 11.685,
+   "old_revision_value_K2_route": 11.685,
+   "new_revision_value": 11.685,
+   "delta_new_minus_old_same_route": 0.0,
+   "new_rooms": [
+    "PAINTRY 11.685"
+   ],
+   "new_rooms_not_established": [],
+   "merged_labelled_spaces_in_row": [],
+   "state": "NEW_REVISION_DXF_DIAGNOSTIC",
+   "causes": [
+    "NO_CHANGE"
+   ],
+   "METHOD_DIFFERENCE": "NONE (same frozen method code in every run)"
+  },
+  {
+   "row": "Q-13",
+   "old_revision_value_R8_6": 108.9625,
+   "old_revision_value_contract_K1": 108.9625,
+   "old_revision_value_K2_route": 108.985,
+   "new_revision_value": null,
+   "delta_new_minus_old_same_route": null,
+   "new_rooms": [
+    "whgm 34.609",
+    "BED.ROOM / BATH 24.6257",
+    "BED.ROOM 17.1538",
+    "M.B.ROOM None",
+    "DRESS 11.985",
+    "HALL None",
+    "UNLABELLED_INTERNAL_SPACE None"
+   ],
+   "new_rooms_not_established": [
+    "M.B.ROOM",
+    "HALL",
+    "UNLABELLED_INTERNAL_SPACE"
+   ],
+   "merged_labelled_spaces_in_row": [
+    "BED.ROOM / BATH"
+   ],
+   "state": "BLOCKED: METHOD_DID_NOT_ESTABLISH_ROOMS M.B.ROOM, HALL, UNLABELLED_INTERNAL_SPACE",
+   "causes": [
+    "PARSER_DIFFERENCE",
+    "SOURCE_REVISION_CHANGE"
+   ],
+   "METHOD_DIFFERENCE": "NONE (same frozen method code in every run)"
+  },
+  {
+   "row": "Q-14",
+   "old_revision_value_R8_6": 138.51,
+   "old_revision_value_contract_K1": 138.51,
+   "old_revision_value_K2_route": 138.5325,
+   "new_revision_value": null,
+   "delta_new_minus_old_same_route": null,
+   "new_rooms": [
+    "whgm 34.609",
+    "BED.ROOM / BATH 24.6257",
+    "BED.ROOM 17.1538",
+    "M.B.ROOM None",
+    "PAINTRY 11.685",
+    "DRESS 11.985",
+    "BATH 8.5525",
+    "BATH 4.21",
+    "HALL None",
+    "UNLABELLED_INTERNAL_SPACE None"
+   ],
+   "new_rooms_not_established": [
+    "M.B.ROOM",
+    "HALL",
+    "UNLABELLED_INTERNAL_SPACE"
+   ],
+   "merged_labelled_spaces_in_row": [
+    "BED.ROOM / BATH"
+   ],
+   "state": "BLOCKED: METHOD_DID_NOT_ESTABLISH_ROOMS M.B.ROOM, HALL, UNLABELLED_INTERNAL_SPACE",
+   "causes": [
+    "PARSER_DIFFERENCE",
+    "SOURCE_REVISION_CHANGE"
+   ],
+   "METHOD_DIFFERENCE": "NONE (same frozen method code in every run)"
+  }
+ ],
+ "rows_by_legacy_predicates": {
+  "OLD_K1": {
+   "Q-03": {
+    "value": 17.8625,
+    "rooms": [
+     "BATH 8.5525",
+     "BATH 5.1",
+     "BATH 4.21"
+    ],
+    "rooms_not_established": []
+   },
+   "Q-11": {
+    "value": 17.8625,
+    "rooms": [
+     "BATH 8.5525",
+     "BATH 5.1",
+     "BATH 4.21"
+    ],
+    "rooms_not_established": []
+   },
+   "Q-03P": {
+    "value": 11.685,
+    "rooms": [
+     "PAINTRY 11.685"
+    ],
+    "rooms_not_established": []
+   },
+   "Q-12": {
+    "value": 11.685,
+    "rooms": [
+     "PAINTRY 11.685"
+    ],
+    "rooms_not_established": []
+   },
+   "Q-13": {
+    "value": 108.9625,
+    "rooms": [
+     "HALL / whgm 36.37",
+     "M.B.ROOM 20.8075",
+     "BED.ROOM 18.7525",
+     "BED.ROOM 16.5375",
+     "DRESS 11.985",
+     "UNLABELLED_INTERNAL_SPACE 4.51"
+    ],
+    "rooms_not_established": []
+   },
+   "Q-14": {
+    "value": 138.51,
+    "rooms": [
+     "HALL / whgm 36.37",
+     "M.B.ROOM 20.8075",
+     "BED.ROOM 18.7525",
+     "BED.ROOM 16.5375",
+     "PAINTRY 11.685",
+     "DRESS 11.985",
+     "BATH 8.5525",
+     "BATH 5.1",
+     "UNLABELLED_INTERNAL_SPACE 4.51",
+     "BATH 4.21"
+    ],
+    "rooms_not_established": []
+   }
+  },
+  "OLD_K2": {
+   "Q-03": {
+    "value": 17.8625,
+    "rooms": [
+     "BATH 8.5525",
+     "BATH 5.1",
+     "BATH 4.21"
+    ],
+    "rooms_not_established": []
+   },
+   "Q-11": {
+    "value": 17.8625,
+    "rooms": [
+     "BATH 8.5525",
+     "BATH 5.1",
+     "BATH 4.21"
+    ],
+    "rooms_not_established": []
+   },
+   "Q-03P": {
+    "value": 11.685,
+    "rooms": [
+     "PAINTRY 11.685"
+    ],
+    "rooms_not_established": []
+   },
+   "Q-12": {
+    "value": 11.685,
+    "rooms": [
+     "PAINTRY 11.685"
+    ],
+    "rooms_not_established": []
+   },
+   "Q-13": {
+    "value": 108.985,
+    "rooms": [
+     "HALL / whgm 36.37",
+     "M.B.ROOM 20.8075",
+     "BED.ROOM 20.395",
+     "BED.ROOM 16.5375",
+     "DRESS 11.985",
+     "UNLABELLED_INTERNAL_SPACE 2.89"
+    ],
+    "rooms_not_established": []
+   },
+   "Q-14": {
+    "value": 138.5325,
+    "rooms": [
+     "HALL / whgm 36.37",
+     "M.B.ROOM 20.8075",
+     "BED.ROOM 20.395",
+     "BED.ROOM 16.5375",
+     "PAINTRY 11.685",
+     "DRESS 11.985",
+     "BATH 8.5525",
+     "BATH 5.1",
+     "BATH 4.21",
+     "UNLABELLED_INTERNAL_SPACE 2.89"
+    ],
+    "rooms_not_established": []
+   }
+  },
+  "NEW_K2": {
+   "Q-03": {
+    "value": 37.3882,
+    "rooms": [
+     "BED.ROOM / BATH 24.6257",
+     "BATH 8.5525",
+     "BATH 4.21"
+    ],
+    "rooms_not_established": []
+   },
+   "Q-11": {
+    "value": 37.3882,
+    "rooms": [
+     "BED.ROOM / BATH 24.6257",
+     "BATH 8.5525",
+     "BATH 4.21"
+    ],
+    "rooms_not_established": []
+   },
+   "Q-03P": {
+    "value": 11.685,
+    "rooms": [
+     "PAINTRY 11.685"
+    ],
+    "rooms_not_established": []
+   },
+   "Q-12": {
+    "value": 11.685,
+    "rooms": [
+     "PAINTRY 11.685"
+    ],
+    "rooms_not_established": []
+   },
+   "Q-13": {
+    "value": null,
+    "rooms": [
+     "whgm 34.609",
+     "BED.ROOM / BATH 24.6257",
+     "BED.ROOM 17.1538",
+     "M.B.ROOM None",
+     "DRESS 11.985",
+     "HALL None",
+     "UNLABELLED_INTERNAL_SPACE None"
+    ],
+    "rooms_not_established": [
+     "M.B.ROOM",
+     "HALL",
+     "UNLABELLED_INTERNAL_SPACE"
+    ]
+   },
+   "Q-14": {
+    "value": null,
+    "rooms": [
+     "whgm 34.609",
+     "BED.ROOM / BATH 24.6257",
+     "BED.ROOM 17.1538",
+     "M.B.ROOM None",
+     "PAINTRY 11.685",
+     "DRESS 11.985",
+     "BATH 8.5525",
+     "BATH 4.21",
+     "HALL None",
+     "UNLABELLED_INTERNAL_SPACE None"
+    ],
+    "rooms_not_established": [
+     "M.B.ROOM",
+     "HALL",
+     "UNLABELLED_INTERNAL_SPACE"
+    ]
+   }
+  }
+ },
+ "rooms": [
+  {
+   "old_room_K1": [
+    "HALL / whgm",
+    36.37
+   ],
+   "old_room_K2": [
+    "HALL / whgm",
+    36.37
+   ],
+   "label_text_occurrences": [
+    "1004@999",
+    "1005@999"
+   ],
+   "new_rooms": [
+    [
+     "whgm",
+     34.609
+    ]
+   ],
+   "delta_m2_same_route": -1.761,
+   "value_changed_between_revisions": true,
+   "merged_labelled_spaces": [],
+   "source_changes_near_room": {
+    "parts": {
+     "removed": [
+      "H1548",
+      "H1587",
+      "H1588",
+      "H1589",
+      "H1590",
+      "H465",
+      "H467",
+      "H511",
+      "H513",
+      "H524",
+      "H550",
+      "H553",
+      "H815",
+      "H816",
+      "H817"
+     ],
+     "added": [
+      "H2296",
+      "H2297",
+      "H2430",
+      "H2431",
+      "H612083",
+      "H612084",
+      "H612085",
+      "H612086",
+      "H612087",
+      "H612088",
+      "H612089",
+      "H612090",
+      "H612091",
+      "H612092",
+      "H612093",
+      "H612094",
+      "H612095",
+      "H612096",
+      "H612097",
+      "H612098",
+      "H612099",
+      "H612100",
+      "H612101",
+      "H612102",
+      "H612103",
+      "H612104",
+      "H612105",
+      "H612106",
+      "H612107",
+      "H612108",
+      "H612109",
+      "H7116",
+      "H7117",
+      "H7118",
+      "H7119"
+     ],
+     "changed": [
+      "H471",
+      "H477",
+      "H551"
+     ],
+     "records": {
+      "removed": 15,
+      "added": 89,
+      "changed": 3
+     },
+     "layers": {
+      "DIM": 6,
+      "FIRNTUR": 6,
+      "MY BLOCKS$0$PM": 81,
+      "WALL": 14
+     }
+    },
+    "dimensions": {
+     "removed": [
+      "H1549",
+      "H1962",
+      "H1974"
+     ],
+     "added": [
+      "H2360",
+      "H7330"
+     ],
+     "changed": [
+      "H1576",
+      "H1949",
+      "H2005"
+     ],
+     "records": {
+      "removed": 3,
+      "added": 2,
+      "changed": 3
+     },
+     "layers": {
+      "DIM": 7,
+      "WALL": 1
+     }
+    }
+   },
+   "cause": [
+    "SOURCE_REVISION_CHANGE"
+   ]
+  },
+  {
+   "old_room_K1": [
+    "M.B.ROOM",
+    20.8075
+   ],
+   "old_room_K2": [
+    "M.B.ROOM",
+    20.8075
+   ],
+   "label_text_occurrences": [
+    "1279@1274",
+    "1281@1274"
+   ],
+   "new_rooms": [
+    [
+     "M.B.ROOM",
+     null
+    ]
+   ],
+   "delta_m2_same_route": null,
+   "value_changed_between_revisions": true,
+   "merged_labelled_spaces": [],
+   "source_changes_near_room": {
+    "parts": {
+     "removed": [],
+     "added": [
+      "H385130",
+      "H385131",
+      "H385132",
+      "H385133",
+      "H385134",
+      "H385135",
+      "H385136",
+      "H385137",
+      "H385138",
+      "H385139",
+      "H385140",
+      "H385141",
+      "H385142",
+      "H385143",
+      "H385144",
+      "H385145",
+      "H385146",
+      "H385147",
+      "H385148",
+      "H385149",
+      "H385150",
+      "H385151",
+      "H385152",
+      "H385153",
+      "H385154",
+      "H385155",
+      "H385156",
+      "H385157",
+      "H385158",
+      "H385159",
+      "H385160",
+      "H385161",
+      "H385162",
+      "H385163",
+      "H385164",
+      "H385165",
+      "H385166",
+      "H385167",
+      "H385168",
+      "H385169",
+      "H385170",
+      "H385171",
+      "H385172",
+      "H385173",
+      "H385174",
+      "H385175",
+      "H385176",
+      "H385177",
+      "H385178",
+      "H385179",
+      "H385180",
+      "H385181",
+      "H385182",
+      "H385183",
+      "H385184",
+      "H385185",
+      "H385186",
+      "H385187",
+      "H385188",
+      "H385189",
+      "H385190",
+      "H385191",
+      "H385192",
+      "H385193",
+      "H385194",
+      "H385195",
+      "H385196",
+      "H385197",
+      "H385198",
+      "H385199",
+      "H385200",
+      "H385201",
+      "H385202",
+      "H385203",
+      "H385204",
+      "H385205",
+      "H385206",
+      "H385207",
+      "H385208",
+      "H385209",
+      "H385210",
+      "H385211",
+      "H385212",
+      "H385213",
+      "H385214",
+      "H385215",
+      "H385216",
+      "H385217",
+      "H385218",
+      "H385219",
+      "H385220",
+      "H385221",
+      "H385222",
+      "H385223",
+      "H385224",
+      "H385225",
+      "H385226",
+      "H385227",
+      "H385228",
+      "H385229",
+      "H385230",
+      "H385231",
+      "H385232",
+      "H385233",
+      "H385234",
+      "H385235",
+      "H385236",
+      "H385237",
+      "H385238",
+      "H385239",
+      "H385240",
+      "H385241",
+      "H385242",
+      "H385243",
+      "H385244",
+      "H385245",
+      "H385246",
+      "H385247",
+      "H385248",
+      "H385249",
+      "H385250",
+      "H385251",
+      "H385252",
+      "H385253",
+      "H385254",
+      "H385255",
+      "H385256",
+      "H385257",
+      "H385258",
+      "H385259",
+      "H385260",
+      "H385261",
+      "H385262",
+      "H385263",
+      "H385264",
+      "H385265",
+      "H385266",
+      "H385267",
+      "H385268",
+      "H385269",
+      "H385270",
+      "H385271",
+      "H385272",
+      "H385273",
+      "H385274",
+      "H385275",
+      "H385276",
+      "H385277",
+      "H385278",
+      "H385279",
+      "H385280",
+      "H385281",
+      "H385282",
+      "H385283",
+      "H385284",
+      "H385285",
+      "H385286",
+      "H385287",
+      "H385288",
+      "H385289",
+      "H385290",
+      "H385291",
+      "H385292",
+      "H385293",
+      "H385294",
+      "H385295",
+      "H385296",
+      "H385297",
+      "H385298",
+      "H385299",
+      "H385300",
+      "H612087",
+      "H612088",
+      "H612089",
+      "H612091",
+      "H612092",
+      "H612093",
+      "H612094",
+      "H612095",
+      "H612096",
+      "H612097",
+      "H612098",
+      "H612099",
+      "H612100",
+      "H612104",
+      "H612106",
+      "H612107",
+      "H612108"
+     ],
+     "changed": [],
+     "records": {
+      "removed": 0,
+      "added": 205,
+      "changed": 0
+     },
+     "layers": {
+      "MY BLOCKS$0$FIRNTUR": 171,
+      "MY BLOCKS$0$PM": 34
+     }
+    }
+   },
+   "cause": [
+    "SOURCE_REVISION_CHANGE"
+   ]
+  },
+  {
+   "old_room_K1": [
+    "BED.ROOM",
+    18.7525
+   ],
+   "old_room_K2": [
+    "BED.ROOM",
+    20.395
+   ],
+   "label_text_occurrences": [
+    "1256@1251",
+    "1257@1251"
+   ],
+   "new_rooms": [
+    [
+     "BED.ROOM",
+     17.1538
+    ]
+   ],
+   "delta_m2_same_route": -3.2412,
+   "value_changed_between_revisions": true,
+   "merged_labelled_spaces": [],
+   "source_changes_near_room": {
+    "parts": {
+     "removed": [
+      "H1548",
+      "H513",
+      "H550",
+      "H553",
+      "H815",
+      "H816",
+      "H817"
+     ],
+     "added": [
+      "H2296",
+      "H2297",
+      "H2431",
+      "H7118",
+      "H7119"
+     ],
+     "changed": [
+      "H2060",
+      "H2061",
+      "H2062",
+      "H2065",
+      "H471",
+      "H477",
+      "H551",
+      "H554"
+     ],
+     "records": {
+      "removed": 7,
+      "added": 5,
+      "changed": 14
+     },
+     "layers": {
+      "DIM": 3,
+      "HIDDEN": 2,
+      "WALL": 21
+     }
+    },
+    "dimensions": {
+     "removed": [
+      "H1549",
+      "H1962",
+      "H1974",
+      "H2047",
+      "H953"
+     ],
+     "added": [
+      "H2360",
+      "H2520",
+      "H2653",
+      "H2732",
+      "H7159",
+      "H7238",
+      "H7330"
+     ],
+     "changed": [
+      "H1576",
+      "H1949",
+      "H2005",
+      "H2066",
+      "H2079",
+      "H855",
+      "H866",
+      "H880"
+     ],
+     "records": {
+      "removed": 5,
+      "added": 7,
+      "changed": 8
+     },
+     "layers": {
+      "DIM": 19,
+      "WALL": 1
+     }
+    }
+   },
+   "cause": [
+    "PARSER_DIFFERENCE (old revision, K1 vs K2 route)",
+    "SOURCE_REVISION_CHANGE"
+   ]
+  },
+  {
+   "old_room_K1": [
+    "BED.ROOM",
+    16.5375
+   ],
+   "old_room_K2": [
+    "BED.ROOM",
+    16.5375
+   ],
+   "label_text_occurrences": [
+    "1256@1259",
+    "1257@1259"
+   ],
+   "new_rooms": [
+    [
+     "BED.ROOM / BATH",
+     24.6257
+    ]
+   ],
+   "delta_m2_same_route": 8.0882,
+   "value_changed_between_revisions": true,
+   "merged_labelled_spaces": [
+    "BED.ROOM / BATH"
+   ],
+   "source_changes_near_room": {
+    "parts": {
+     "removed": [],
+     "added": [],
+     "changed": [
+      "H447",
+      "H554"
+     ],
+     "records": {
+      "removed": 0,
+      "added": 0,
+      "changed": 2
+     },
+     "layers": {
+      "WALL": 2
+     }
+    },
+    "dimensions": {
+     "removed": [],
+     "added": [
+      "H2732",
+      "H7238"
+     ],
+     "changed": [
+      "H2005",
+      "H855",
+      "H866"
+     ],
+     "records": {
+      "removed": 0,
+      "added": 2,
+      "changed": 3
+     },
+     "layers": {
+      "DIM": 5
+     }
+    }
+   },
+   "cause": [
+    "SOURCE_REVISION_CHANGE"
+   ]
+  },
+  {
+   "old_room_K1": [
+    "PAINTRY",
+    11.685
+   ],
+   "old_room_K2": [
+    "PAINTRY",
+    11.685
+   ],
+   "label_text_occurrences": [
+    "1013@1008",
+    "1014@1008"
+   ],
+   "new_rooms": [
+    [
+     "PAINTRY",
+     11.685
+    ]
+   ],
+   "delta_m2_same_route": 0.0,
+   "value_changed_between_revisions": false,
+   "merged_labelled_spaces": [],
+   "source_changes_near_room": {
+    "parts": {
+     "removed": [
+      "H465"
+     ],
+     "added": [
+      "H7117"
+     ],
+     "changed": [
+      "H471",
+      "H477"
+     ],
+     "records": {
+      "removed": 1,
+      "added": 1,
+      "changed": 2
+     },
+     "layers": {
+      "DIM": 1,
+      "WALL": 3
+     }
+    },
+    "dimensions": {
+     "removed": [],
+     "added": [],
+     "changed": [
+      "H1485",
+      "H1499",
+      "H1576",
+      "H2005"
+     ],
+     "records": {
+      "removed": 0,
+      "added": 0,
+      "changed": 4
+     },
+     "layers": {
+      "DIM": 4
+     }
+    }
+   },
+   "cause": [
+    "NO_VALUE_CHANGE (source records changed nearby)"
+   ]
+  },
+  {
+   "old_room_K1": [
+    "DRESS",
+    11.985
+   ],
+   "old_room_K2": [
+    "DRESS",
+    11.985
+   ],
+   "label_text_occurrences": [
+    "1457@1454",
+    "1458@1454"
+   ],
+   "new_rooms": [
+    [
+     "DRESS",
+     11.985
+    ]
+   ],
+   "delta_m2_same_route": 0.0,
+   "value_changed_between_revisions": false,
+   "merged_labelled_spaces": [],
+   "source_changes_near_room": {
+    "parts": {
+     "removed": [
+      "H1587"
+     ],
+     "added": [
+      "H385133",
+      "H385134",
+      "H385135",
+      "H385136",
+      "H385138",
+      "H385139",
+      "H385140",
+      "H385142",
+      "H385143",
+      "H385144",
+      "H385145",
+      "H385146",
+      "H385147",
+      "H385148"
+     ],
+     "changed": [],
+     "records": {
+      "removed": 1,
+      "added": 14,
+      "changed": 0
+     },
+     "layers": {
+      "FIRNTUR": 1,
+      "MY BLOCKS$0$FIRNTUR": 14
+     }
+    }
+   },
+   "cause": [
+    "NO_VALUE_CHANGE (source records changed nearby)"
+   ]
+  },
+  {
+   "old_room_K1": [
+    "BATH",
+    8.5525
+   ],
+   "old_room_K2": [
+    "BATH",
+    8.5525
+   ],
+   "label_text_occurrences": [
+    "1450@1453",
+    "1451@1453"
+   ],
+   "new_rooms": [
+    [
+     "BATH",
+     8.5525
+    ]
+   ],
+   "delta_m2_same_route": 0.0,
+   "value_changed_between_revisions": false,
+   "merged_labelled_spaces": [],
+   "source_changes_near_room": {},
+   "cause": [
+    "NO_VALUE_CHANGE"
+   ]
+  },
+  {
+   "old_room_K1": [
+    "BATH",
+    5.1
+   ],
+   "old_room_K2": [
+    "BATH",
+    5.1
+   ],
+   "label_text_occurrences": [
+    "1450@2046",
+    "1451@2046"
+   ],
+   "new_rooms": [
+    [
+     "BED.ROOM / BATH",
+     24.6257
+    ]
+   ],
+   "delta_m2_same_route": 19.5257,
+   "value_changed_between_revisions": true,
+   "merged_labelled_spaces": [
+    "BED.ROOM / BATH"
+   ],
+   "source_changes_near_room": {
+    "parts": {
+     "removed": [
+      "H465",
+      "H467"
+     ],
+     "added": [
+      "H7116",
+      "H7117"
+     ],
+     "changed": [
+      "H471",
+      "H477"
+     ],
+     "records": {
+      "removed": 2,
+      "added": 2,
+      "changed": 2
+     },
+     "layers": {
+      "DIM": 2,
+      "WALL": 4
+     }
+    },
+    "dimensions": {
+     "removed": [
+      "H2016"
+     ],
+     "added": [
+      "H7330"
+     ],
+     "changed": [
+      "H1499",
+      "H2005"
+     ],
+     "records": {
+      "removed": 1,
+      "added": 1,
+      "changed": 2
+     },
+     "layers": {
+      "DIM": 4
+     }
+    }
+   },
+   "cause": [
+    "SOURCE_REVISION_CHANGE"
+   ]
+  },
+  {
+   "old_room_K1": [
+    "BATH",
+    4.21
+   ],
+   "old_room_K2": [
+    "BATH",
+    4.21
+   ],
+   "label_text_occurrences": [
+    "1450@1447",
+    "1451@1447"
+   ],
+   "new_rooms": [
+    [
+     "BATH",
+     4.21
+    ]
+   ],
+   "delta_m2_same_route": 0.0,
+   "value_changed_between_revisions": false,
+   "merged_labelled_spaces": [],
+   "source_changes_near_room": {
+    "dimensions": {
+     "removed": [],
+     "added": [],
+     "changed": [
+      "H1485",
+      "H1499"
+     ],
+     "records": {
+      "removed": 0,
+      "added": 0,
+      "changed": 2
+     },
+     "layers": {
+      "DIM": 2
+     }
+    }
+   },
+   "cause": [
+    "NO_VALUE_CHANGE (source records changed nearby)"
+   ]
+  },
+  {
+   "old_room_K1": [
+    "UNLABELLED_INTERNAL_SPACE",
+    4.51
+   ],
+   "old_room_K2": [
+    "UNLABELLED_INTERNAL_SPACE",
+    2.89
+   ],
+   "label_text_occurrences": [],
+   "new_rooms": [],
+   "delta_m2_same_route": null,
+   "value_changed_between_revisions": true,
+   "merged_labelled_spaces": [],
+   "source_changes_near_room": {
+    "parts": {
+     "removed": [
+      "H465",
+      "H467",
+      "H553"
+     ],
+     "added": [
+      "H2430",
+      "H7116",
+      "H7117"
+     ],
+     "changed": [
+      "H471",
+      "H477",
+      "H554"
+     ],
+     "records": {
+      "removed": 3,
+      "added": 3,
+      "changed": 3
+     },
+     "layers": {
+      "DIM": 3,
+      "WALL": 6
+     }
+    },
+    "dimensions": {
+     "removed": [
+      "H2016"
+     ],
+     "added": [
+      "H2360",
+      "H7238",
+      "H7330"
+     ],
+     "changed": [],
+     "records": {
+      "removed": 1,
+      "added": 3,
+      "changed": 0
+     },
+     "layers": {
+      "DIM": 4
+     }
+    }
+   },
+   "cause": [
+    "PARSER_DIFFERENCE (old revision, K1 vs K2 route)",
+    "SOURCE_REVISION_CHANGE"
+   ]
+  }
+ ],
+ "new_rooms_without_an_old_label_pair": [
+  [
+   "HALL",
+   null
+  ],
+  [
+   "UNLABELLED_INTERNAL_SPACE",
+   null
+  ]
+ ],
+ "parser_difference": {
+  "compared": "OLD revision: K1 (pinned LibreDWG decode) vs K2 (ezdxf on LibreDWG's DXF of the same DWG)",
+  "records": {
+   "parts": {
+    "unchanged": 1116,
+    "changed": 2,
+    "removed": 0,
+    "added": 0,
+    "removed_examples": [],
+    "added_examples": []
+   },
+   "texts": {
+    "unchanged": 61,
+    "changed": 0,
+    "removed": 0,
+    "added": 0,
+    "removed_examples": [],
+    "added_examples": []
+   },
+   "dimensions": {
+    "unchanged": 101,
+    "changed": 0,
+    "removed": 0,
+    "added": 0,
+    "removed_examples": [],
+    "added_examples": []
+   }
+  },
+  "largest_part_coordinate_differences": [
+   [
+    [
+     "378",
+     "()",
+     "ARC",
+     "3"
+    ],
+    6.283185307177767
+   ],
+   [
+    [
+     "381",
+     "()",
+     "ARC",
+     "3"
+    ],
+    6.283185307177767
+   ],
+   [
+    [
+     "282",
+     "()",
+     "ARC",
+     "7"
+    ],
+    1.0677467798814178e-09
+   ],
+   [
+    [
+     "330",
+     "()",
+     "ARC",
+     "5"
+    ],
+    3.8633252152919795e-10
+   ],
+   [
+    [
+     "330",
+     "()",
+     "ARC",
+     "3"
+    ],
+    2.582964953035116e-10
+   ]
+  ],
+  "bisected_culprits": {
+   "parts_with_any_coordinate_difference": 1115,
+   "culprits": [
+    {
+     "part": [
+      "584",
+      "()",
+      "SEGMENT",
+      "0"
+     ],
+     "layer": "WALL",
+     "k1_geometry": [
+      110753.08174498397,
+      14934.719614378158,
+      110538.08174498385,
+      14934.719614378162
+     ],
+     "k2_geometry": [
+      110753.081744984,
+      14934.71961437816,
+      110538.0817449839,
+      14934.71961437816
+     ],
+     "max_abs_difference": 4.3655745685100555e-11
+    }
+   ]
+  },
+  "finding": "the curves agree to < 1e-9 units except two arcs written 2*pi vs 0 (same arc); one WALL segment (H584) is horizontal to 4e-12 in K1 and exactly horizontal in K2 (DXF 16-digit text step); that alone moves 1.6425 m2 between BED.ROOM and the unlabelled space. The room method is numerically sensitive at 1e-12: room splits are route-stable only on the exact same route"
+ },
+ "source_revision_difference": {
+  "compared": "K2 route: OLD (LibreDWG DXF of 2ec3a9c8) vs NEW (df0e1d69)",
+  "records": {
+   "parts": {
+    "unchanged": 1082,
+    "changed": 21,
+    "removed": 15,
+    "added": 260,
+    "removed_examples": [
+     [
+      "1548",
+      "()",
+      "SEGMENT",
+      "0"
+     ],
+     [
+      "1587",
+      "()",
+      "SEGMENT",
+      "0"
+     ],
+     [
+      "1588",
+      "()",
+      "SEGMENT",
+      "0"
+     ],
+     [
+      "1589",
+      "()",
+      "SEGMENT",
+      "0"
+     ],
+     [
+      "1590",
+      "()",
+      "SEGMENT",
+      "0"
+     ],
+     [
+      "465",
+      "()",
+      "SEGMENT",
+      "0"
+     ],
+     [
+      "467",
+      "()",
+      "SEGMENT",
+      "0"
+     ],
+     [
+      "511",
+      "()",
+      "SEGMENT",
+      "0"
+     ],
+     [
+      "513",
+      "()",
+      "SEGMENT",
+      "0"
+     ],
+     [
+      "524",
+      "()",
+      "SEGMENT",
+      "0"
+     ]
+    ],
+    "added_examples": [
+     [
+      "2296",
+      "()",
+      "SEGMENT",
+      "0"
+     ],
+     [
+      "2297",
+      "()",
+      "SEGMENT",
+      "0"
+     ],
+     [
+      "2430",
+      "()",
+      "SEGMENT",
+      "0"
+     ],
+     [
+      "2431",
+      "()",
+      "SEGMENT",
+      "0"
+     ],
+     [
+      "385130",
+      "('700045',)",
+      "SEGMENT",
+      "0"
+     ],
+     [
+      "385131",
+      "('700045',)",
+      "SEGMENT",
+      "0"
+     ],
+     [
+      "385132",
+      "('700045',)",
+      "SEGMENT",
+      "0"
+     ],
+     [
+      "385133",
+      "('700045',)",
+      "SEGMENT",
+      "0"
+     ],
+     [
+      "385134",
+      "('700045',)",
+      "SEGMENT",
+      "0"
+     ],
+     [
+      "385135",
+      "('700045',)",
+      "SEGMENT",
+      "0"
+     ]
+    ]
+   },
+   "texts": {
+    "unchanged": 61,
+    "changed": 0,
+    "removed": 0,
+    "added": 0,
+    "removed_examples": [],
+    "added_examples": []
+   },
+   "dimensions": {
+    "unchanged": 83,
+    "changed": 12,
+    "removed": 6,
+    "added": 7,
+    "removed_examples": [
+     [
+      "1549",
+      "()",
+      "DIMENSION",
+      "0"
+     ],
+     [
+      "1962",
+      "()",
+      "DIMENSION",
+      "0"
+     ],
+     [
+      "1974",
+      "()",
+      "DIMENSION",
+      "0"
+     ],
+     [
+      "2016",
+      "()",
+      "DIMENSION",
+      "0"
+     ],
+     [
+      "2047",
+      "()",
+      "DIMENSION",
+      "0"
+     ],
+     [
+      "953",
+      "()",
+      "DIMENSION",
+      "0"
+     ]
+    ],
+    "added_examples": [
+     [
+      "2360",
+      "()",
+      "DIMENSION",
+      "0"
+     ],
+     [
+      "2520",
+      "()",
+      "DIMENSION",
+      "0"
+     ],
+     [
+      "2653",
+      "()",
+      "DIMENSION",
+      "0"
+     ],
+     [
+      "2732",
+      "()",
+      "DIMENSION",
+      "0"
+     ],
+     [
+      "7159",
+      "()",
+      "DIMENSION",
+      "0"
+     ],
+     [
+      "7238",
+      "()",
+      "DIMENSION",
+      "0"
+     ],
+     [
+      "7330",
+      "()",
+      "DIMENSION",
+      "0"
+     ]
+    ]
+   }
+  }
+ },
+ "method_difference": {
+  "state": "NONE",
+  "evidence": "every run uses the same frozen calculation path (R8.6 manifest hashes)"
+ },
+ "no_calibration": "no value is tuned toward the old result; differences are reported, not reconciled"
+}

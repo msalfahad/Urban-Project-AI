@@ -1,0 +1,45 @@
+{
+ "SCHEMA": "URBAN_R8_17_SKIRTING_V3_O1_REGISTER_V1",
+ "id": "V3-O1",
+ "found": "R8.16 (after its blind run)",
+ "root_cause": "measure_v3 lets ANY jamb record consume wall-path length: the overlap of every jamb record is subtracted from each edge before classification, and the record is only afterwards tested for 'physical'. A non-physical opening-side record (CONTINUOUS_WALL_FACE, H518 at the M.B.ROOM / DRESS passage) therefore removed 0.15 of real wall face that no class then counted.",
+ "design_error": "the design error: ONE record type serves both as an OPENING-SIDE RELATION (what bounds the opening) and as a PHYSICAL SURFACE (what carries a trade); only the second may ever replace wall contact",
+ "fix": "Separate OPENING_SIDE relations from PHYSICAL_JAMB surfaces. A path span may be consumed ONLY by a jamb record that is physical by positive source evidence (a drawn cap / band end CAPPED / ALIGNED_FREE_END / OPENING_JAMB of an ESTABLISHED band, or a door / glazed-door strip reveal side); a non-physical record is an annotation and never shortens an edge; a topology closure is classified by its own sources and never consumes or creates wall. Every edge length is conserved per site: wall + column + obstacle + window continuity + physical jamb overlap + excluded + withheld = boundary length (checked, not assumed). Trade eligibility is applied after geometry: door / sliding-door jambs = 0, doorless physical jambs counted once.",
+ "policy": "WALL_CONTACT_PATH_POLICY_V4",
+ "evidence": {
+  "site": "SITE-a6405850100155ac",
+  "zones": [
+   "DRESS",
+   "M.B.ROOM"
+  ],
+  "V3_payable_lm": 29.35,
+  "V4_payable_lm": 29.5,
+  "V4_annotations": [
+   {
+    "opening": "OP-9e0fd219ca5cd391",
+    "side": "RIGHT",
+    "source": "QORTUBA_REV_NEW|H518||SEGMENT|0",
+    "end_kind": "CONTINUOUS_WALL_FACE",
+    "overlap_lm": 0.15,
+    "consumed_lm": 0.0
+   }
+  ],
+  "V4_conservation": {
+   "boundary": 31.3,
+   "consumed_by_physical_jambs": 0.15,
+   "classified": 31.15,
+   "class_sum": 31.15,
+   "residual": 0.0,
+   "reconciles": true
+  }
+ },
+ "special_cased": "NOTHING: no handle, no project, no site id in the rule (engine/source has no project name)",
+ "tests": [
+  "test_02_one_jamb_and_one_continuous_face_counts_the_jamb_and_keeps_the_face",
+  "test_03_the_continuous_wall_face_stays_payable_and_is_only_annotated",
+  "test_04_a_topology_closure_record_can_never_consume_real_wall",
+  "test_05_a_non_physical_jamb_record_can_never_consume_wall",
+  "test_15_mb_dress_analogue_one_cap_jamb_and_the_continuous_face_on_the_path"
+ ],
+ "topology_effect": "NONE"
+}

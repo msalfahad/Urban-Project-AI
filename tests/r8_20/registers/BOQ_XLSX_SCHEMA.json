@@ -1,0 +1,67 @@
+{
+ "SCHEMA": "URBAN_R8_20_BOQ_XLSX_SCHEMA_V1",
+ "policy": {
+  "policy_id": "BOQ_XLSX_EXPORT_V1",
+  "sheets": [
+   "00_READ_ME",
+   "01_BOQ_SUMMARY",
+   "02_ROOM_BREAKDOWN",
+   "03_TRACEABILITY",
+   "04_BLOCKERS_NOTES",
+   "05_RUN_INFO"
+  ],
+  "columns": [
+   "ITEM CODE",
+   "TRADE",
+   "DESCRIPTION AR",
+   "DESCRIPTION EN",
+   "FLOOR",
+   "ROOM / ZONE",
+   "QUANTITY",
+   "UNIT",
+   "STATUS",
+   "SOURCE REVISION",
+   "RULE / AUTHORITY",
+   "BLOCKER / NOTE",
+   "APPROVED FOR BOQ"
+  ],
+  "trace": [
+   "ITEM CODE",
+   "ROW KIND",
+   "ROOM / ZONE",
+   "STATUS",
+   "RUN ID",
+   "SOURCE REVISION",
+   "TRADE ROW",
+   "SITES",
+   "SURFACE IDS",
+   "AUTHORITY DIGEST",
+   "RULE IDS",
+   "OWNER FACTS",
+   "RELEASE STATE",
+   "EVIDENCE ROW"
+  ],
+  "banner": "SHADOW BOQ - NOT APPROVED FOR TENDER / CONTRACT - PRESENTATION VIEW OVER EVIDENCE - NO PRODUCTION MIGRATION",
+  "quantity_format": "0.000000",
+  "never": [
+   "a formula",
+   "a sum or subtotal computed in the workbook",
+   "a quantity not copied from a report row",
+   "a summary and a breakdown presented as additive",
+   "a SHADOW line marked approved",
+   "a price"
+  ],
+  "digest": "9e48ae149edf546134c98343e0ab9ed24182b033910cfc3555ce72d11f79880b"
+ },
+ "sheets": {
+  "00_READ_ME": "banner, how to read, status legend, no formulas / prices",
+  "01_BOQ_SUMMARY": "the TOTAL line of every item (one line per item)",
+  "02_ROOM_BREAKDOWN": "room lines of the same items, each marked 'BREAKDOWN OF <item> (not additive)'",
+  "03_TRACEABILITY": "one line per report row with every trace field",
+  "04_BLOCKERS_NOTES": "one line per blocker of every item",
+  "05_RUN_INFO": "run id, source revision, policies, report digest"
+ },
+ "why_not_the_suggested_trade_sheets": "trade sheets (floors / wall finishes / waterproofing) would repeat the summary quantities in a second place and invite adding them; there is no OPENINGS BOQ item (reveals are inside the finish rows)",
+ "calculates": false,
+ "pricing": null
+}

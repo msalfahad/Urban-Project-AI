@@ -1,0 +1,83 @@
+{
+ "SCHEMA": "URBAN_R8_11_OBJECT_FOOTPRINT_POLICY_V1",
+ "treatments": [
+  "FOOTPRINT_INCLUDED",
+  "FOOTPRINT_DEDUCTED",
+  "ROLE_REQUIRED",
+  "NOT_APPLICABLE"
+ ],
+ "policies": [
+  {
+   "policy_id": "QORTUBA-CEILING-OBJECT-FOOTPRINT",
+   "version": 1,
+   "trade": "CEILING",
+   "object_class": "ANY_NON_PARTITION_OBJECT",
+   "treatment": "FOOTPRINT_INCLUDED",
+   "authority": "OWNER_CLAIM",
+   "scope": {
+    "revision": "QORTUBA_REV_NEW",
+    "region": "RC:MODEL_SPACE:4267:540:1649",
+    "spaces": "the Q-14 claim's space ids"
+   },
+   "source_refs": [
+    "QORTUBA-Q14-CEILING-FOOTPRINT-OWNER-001"
+   ]
+  }
+ ],
+ "CEILING": {
+  "policy": "QORTUBA-CEILING-OBJECT-FOOTPRINT@v1",
+  "authority": "QORTUBA-Q14-CEILING-FOOTPRINT-OWNER-001",
+  "reading": "the owner's Q-14 claim: ceiling footprint = the space's floor footprint with no deduction; an object standing in the space is no deduction class"
+ },
+ "FLOOR_FINISH": {
+  "policy": null,
+  "state": "UNRESOLVED",
+  "searched": [
+   "research/qs_wall_treatment_01/pa08/qortuba/boq/owner_rules.py: US-01..US-20, QP-01..QP-22 (QP-08 covers skirting / profile only: no wardrobe deduction from SKIRTING - not floor)",
+   "data/registry/OWNER_SOURCE_CLAIMS.json (2 claims, neither about objects)",
+   "PA08 R2 cells method (historical precedent, not authority)",
+   "the Q-14 claim (ceiling only; never transferred to the floor)"
+  ],
+  "not_used": [
+   "historic quantity",
+   "desired Q-13 total",
+   "common construction practice alone"
+  ]
+ },
+ "implicit_path": {
+  "state": "IMPLICIT_INCLUDED_BY_TOPOLOGY_CONVENTION",
+  "finding": "proven furniture / sanitary-fixture footprints are inside every measured floor area by the topology convention (they are not boundaries). For FLOOR_FINISH no authority states this: recorded per row as a RELEASE blocker (SHADOW rows unchanged)",
+  "rows_affected": {
+   "Q-03P": {
+    "SITE-8c1c7563d5252c50": {
+     "SANITARY_FIXTURE": 5
+    }
+   },
+   "Q-12": {
+    "SITE-8c1c7563d5252c50": {
+     "SANITARY_FIXTURE": 5
+    }
+   },
+   "Q-13": {
+    "SITE-6d1ce80253b53f83": {
+     "FURNITURE": 74
+    },
+    "SITE-a6405850100155ac": {
+     "FURNITURE": 170
+    }
+   },
+   "Q-14": {
+    "SITE-6d1ce80253b53f83": {
+     "FURNITURE": 74
+    },
+    "SITE-8c1c7563d5252c50": {
+     "SANITARY_FIXTURE": 5
+    },
+    "SITE-a6405850100155ac": {
+     "FURNITURE": 170
+    }
+   }
+  }
+ },
+ "role_vs_footprint": "object role (what it is) and footprint treatment (what a trade does with it) are separate records: H1663 stays FURNITURE, the wardrobes stay ROLE_UNRESOLVED; the ceiling proceeds through its footprint policy, the floor does not"
+}

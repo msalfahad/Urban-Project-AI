@@ -1,0 +1,256 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_A2_QA_V1",
+ "checks": [
+  {
+   "check": "REGION_LEAKAGE",
+   "state": "PASS",
+   "critical": true,
+   "detail": "{\"GF\": 2531, \"1F\": 2067, \"2F\": 1601}"
+  },
+  {
+   "check": "UNREALISED_PLACED_GF",
+   "state": "PASS",
+   "critical": true,
+   "detail": "recorded Counter({'OUTSIDE_SELECTED_MEASUREMENT_REGION_BY_PLACEMENT': 2, 'NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT': 1})"
+  },
+  {
+   "check": "ROOM_CLOSURE_GF",
+   "state": "PASS",
+   "critical": true,
+   "detail": "4 of 8 labelled sites certified; issues {'GEOS_CROSSCHECK_DISAGREES': 1, 'LABEL_OCCURRENCE_SPLIT': 2, 'MULTIPLE_SEMANTIC_LABELS': 1, 'NEAR_MISS_BOUNDARY_GAP': 3, 'ROLE_CONFLICT_SEPARATOR': 2, 'TEXT_ROLE_UNRESOLVED_IN_SITE': 3, 'TOLERANCE_SENSITIVE': 11, 'TOPOLOGY_ROLE_UNRESOLVED': 11, 'UNKNOWN_OBJECT_IN_SITE': 6, 'ZERO_WIDTH_SLIVER': 2}"
+  },
+  {
+   "check": "CLAIMS_SCOPED_GF",
+   "state": "PASS",
+   "critical": true,
+   "detail": "21 claims, all POLICY_ACCEPTED with explicit parts and region scope"
+  },
+  {
+   "check": "FRAME_REJECTED_GF",
+   "state": "PASS",
+   "critical": true,
+   "detail": "1 sheet frame(s) found"
+  },
+  {
+   "check": "DOORS_ADMITTED_GF",
+   "state": "PASS",
+   "critical": true,
+   "detail": "13 door motifs; rejected {'NO_LEAF_FROM_HINGE': 12, 'HINGE_NOT_ANCHORED_ON_A_WALL_FACE_CANDIDATE': 1}"
+  },
+  {
+   "check": "UNREALISED_PLACED_1F",
+   "state": "PASS",
+   "critical": true,
+   "detail": "recorded Counter({'OUTSIDE_SELECTED_MEASUREMENT_REGION_BY_PLACEMENT': 2, 'NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT': 1})"
+  },
+  {
+   "check": "ROOM_CLOSURE_1F",
+   "state": "PASS",
+   "critical": true,
+   "detail": "4 of 5 labelled sites certified; issues {'MULTIPLE_SEMANTIC_LABELS': 1, 'NEAR_MISS_BOUNDARY_GAP': 1, 'ROLE_CONFLICT_SEPARATOR': 2, 'TEXT_ROLE_UNRESOLVED_IN_SITE': 2, 'TOLERANCE_SENSITIVE': 8, 'TOPOLOGY_ROLE_UNRESOLVED': 5, 'UNKNOWN_OBJECT_IN_SITE': 3}"
+  },
+  {
+   "check": "CLAIMS_SCOPED_1F",
+   "state": "PASS",
+   "critical": true,
+   "detail": "17 claims, all POLICY_ACCEPTED with explicit parts and region scope"
+  },
+  {
+   "check": "FRAME_REJECTED_1F",
+   "state": "PASS",
+   "critical": true,
+   "detail": "1 sheet frame(s) found"
+  },
+  {
+   "check": "DOORS_ADMITTED_1F",
+   "state": "PASS",
+   "critical": true,
+   "detail": "10 door motifs; rejected {'NO_LEAF_FROM_HINGE': 12}"
+  },
+  {
+   "check": "UNREALISED_PLACED_2F",
+   "state": "PASS",
+   "critical": true,
+   "detail": "recorded Counter({'OUTSIDE_SELECTED_MEASUREMENT_REGION_BY_PLACEMENT': 2, 'NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT': 1})"
+  },
+  {
+   "check": "ROOM_CLOSURE_2F",
+   "state": "BLOCKED_REPORTED",
+   "critical": true,
+   "detail": "0 of 0 labelled sites certified; issues {'NEAR_MISS_BOUNDARY_GAP': 1, 'ROLE_CONFLICT_SEPARATOR': 2, 'TEXT_ROLE_UNRESOLVED_IN_SITE': 4, 'TOLERANCE_SENSITIVE': 3, 'TOPOLOGY_ROLE_UNRESOLVED': 3, 'UNKNOWN_OBJECT_IN_SITE': 2}"
+  },
+  {
+   "check": "CLAIMS_SCOPED_2F",
+   "state": "PASS",
+   "critical": true,
+   "detail": "12 claims, all POLICY_ACCEPTED with explicit parts and region scope"
+  },
+  {
+   "check": "FRAME_REJECTED_2F",
+   "state": "PASS",
+   "critical": true,
+   "detail": "1 sheet frame(s) found"
+  },
+  {
+   "check": "DOORS_ADMITTED_2F",
+   "state": "PASS",
+   "critical": true,
+   "detail": "3 door motifs; rejected {'NO_LEAF_FROM_HINGE': 8}"
+  },
+  {
+   "check": "BLOCKED_ROWS_WITHOUT_QTY",
+   "state": "PASS",
+   "critical": true,
+   "detail": "all rows"
+  },
+  {
+   "check": "FLOOR_AREA_EQUALS_ROOMS",
+   "state": "PASS",
+   "critical": true,
+   "detail": "floor line = sum of certified rooms exactly"
+  },
+  {
+   "check": "NO_MATERIAL_WITHOUT_SCHEDULE",
+   "state": "PASS",
+   "critical": true,
+   "detail": "every BLOCKED_MATERIAL row is blocked"
+  },
+  {
+   "check": "NO_HEIGHT_QUANTITY",
+   "state": "PASS",
+   "critical": true,
+   "detail": "no area / volume that needs an unproved height"
+  },
+  {
+   "check": "FOOTINGS_EXPANDED",
+   "state": "PASS",
+   "critical": true,
+   "detail": "A2 21 / 27 (63.314 m3) vs Phase A 19 (57.829 m3)"
+  },
+  {
+   "check": "FOOTING_ROW_ONCE",
+   "state": "PASS",
+   "critical": true,
+   "detail": "27 rows"
+  },
+  {
+   "check": "FOOTING_SUMMARY_EXACT",
+   "state": "PASS",
+   "critical": true,
+   "detail": "each type line = sum of its complete rows"
+  },
+  {
+   "check": "REBAR_FAIL_CLOSED",
+   "state": "PASS",
+   "critical": true,
+   "detail": "no tonnage"
+  },
+  {
+   "check": "UNITS_ARCHITECTURAL",
+   "state": "PASS",
+   "critical": true,
+   "detail": "VERIFIED (TWO_INDEPENDENT_KINDS_AGREE)"
+  },
+  {
+   "check": "UNITS_STRUCTURAL",
+   "state": "PASS",
+   "critical": true,
+   "detail": "PROVISIONAL (ONE_INDEPENDENT_CLASS)"
+  },
+  {
+   "check": "ARABIC_TEXT",
+   "state": "BLOCKED_REPORTED",
+   "critical": false,
+   "detail": "font-glyph encoded labels (X-ARAB1B over ANSI_1252): UNKNOWN, never decoded by guess"
+  },
+  {
+   "check": "ST7757_DWG_DXF",
+   "state": "BLOCKED_REPORTED",
+   "critical": false,
+   "detail": "no pinned decode: release blocker, not development blocker"
+  },
+  {
+   "check": "XLSX_READBACK",
+   "state": "PASS",
+   "critical": true,
+   "detail": "every cell vs model; deterministic rewrite"
+  }
+ ],
+ "target": "zero silent critical errors: every critical check PASS or BLOCKED_REPORTED with its reason",
+ "xlsx": {
+  "sheets": [
+   "00_READ_ME",
+   "01_SOURCES",
+   "02_ARCH_SUMMARY",
+   "03_ROOMS",
+   "04_FLOOR_CEILING",
+   "05_BLOCKWORK",
+   "06_WALL_SURFACES",
+   "07_SKIRTING",
+   "08_DOORS",
+   "09_WINDOWS",
+   "10_STAIRS",
+   "11_WET_ROOMS",
+   "12_VERTICAL_EVIDENCE",
+   "13_ROLE_INFERENCE",
+   "14_ARCH_BLOCKERS",
+   "15_STRUCTURAL_SUMMARY",
+   "16_FOOTINGS",
+   "17_COLUMNS",
+   "18_BEAMS",
+   "19_SLABS",
+   "20_REBAR_EVIDENCE",
+   "21_STRUCT_BLOCKERS"
+  ],
+  "content_digest": "25c66581e747b08307faf75d1d70e707b5f0fc54d1fceadcaf468f97703468bc",
+  "file_sha256": "c6d560078fb196cd69091070011681a41080e0e2f2a7bd2272accf35cf745d29",
+  "bytes": 59171,
+  "rewrite_identical": true,
+  "readback": {
+   "state": "PASS",
+   "architectural": {
+    "state": "PASS",
+    "differences": [],
+    "formulas": [],
+    "register_mismatches": [],
+    "quantity_cells_checked": 67,
+    "canonical_not_exactly_once": [],
+    "row_drops": []
+   },
+   "structural": {
+    "state": "PASS",
+    "differences": [],
+    "formulas": [],
+    "register_mismatches": [],
+    "quantity_cells_checked": 27,
+    "canonical_not_exactly_once": [],
+    "row_drops": []
+   }
+  },
+  "rows_per_sheet": {
+   "00_READ_ME": 8,
+   "01_SOURCES": 9,
+   "02_ARCH_SUMMARY": 67,
+   "03_ROOMS": 13,
+   "04_FLOOR_CEILING": 12,
+   "05_BLOCKWORK": 12,
+   "06_WALL_SURFACES": 10,
+   "07_SKIRTING": 6,
+   "08_DOORS": 26,
+   "09_WINDOWS": 33,
+   "10_STAIRS": 6,
+   "11_WET_ROOMS": 6,
+   "12_VERTICAL_EVIDENCE": 21,
+   "13_ROLE_INFERENCE": 32,
+   "14_ARCH_BLOCKERS": 19,
+   "15_STRUCTURAL_SUMMARY": 27,
+   "16_FOOTINGS": 27,
+   "17_COLUMNS": 13,
+   "18_BEAMS": 34,
+   "19_SLABS": 3,
+   "20_REBAR_EVIDENCE": 30,
+   "21_STRUCT_BLOCKERS": 10
+  }
+ },
+ "silent_critical_errors": 0
+}

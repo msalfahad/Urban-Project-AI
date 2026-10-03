@@ -1,0 +1,244 @@
+{
+ "row": "Q-13",
+ "STATE": "COMPUTED_SHADOW",
+ "VALUE": 112.1538,
+ "unit": "m2",
+ "final": false,
+ "BASE_SITE_AREA_M2": 111.598789,
+ "THRESHOLD_CONTRIBUTION_M2": 0.555,
+ "THRESHOLDS": [
+  {
+   "strip": "THRESHOLD-cf12fcdfd3e6a4a6",
+   "state": "SPLIT_AT_DOOR_PLANE",
+   "contribution_m2": 0.06
+  },
+  {
+   "strip": "THRESHOLD-bfcea08375237224",
+   "state": "SPLIT_AT_DOOR_PLANE",
+   "contribution_m2": 0.075
+  },
+  {
+   "strip": "THRESHOLD-28f50f8dc18c1e90",
+   "state": "SPLIT_AT_DOOR_PLANE",
+   "contribution_m2": 0.06
+  },
+  {
+   "strip": "THRESHOLD-c82365dd41b94abe",
+   "state": "CONTINUOUS_SAME_FINISH",
+   "contribution_m2": 0.15
+  },
+  {
+   "strip": "THRESHOLD-04910e5deeeed2fc",
+   "state": "CONTINUOUS_SAME_FINISH",
+   "contribution_m2": 0.15
+  },
+  {
+   "strip": "THRESHOLD-f9846605acbce828",
+   "state": "SPLIT_AT_DOOR_PLANE",
+   "contribution_m2": 0.06
+  }
+ ],
+ "PASSAGE_TREATMENT": {
+  "soffit_exclusion_m2": 0,
+  "passages_included_in_site": [
+   "OP-997f14d12b8e9bc1",
+   "OP-9e0fd219ca5cd391"
+  ],
+  "head_unresolved": []
+ },
+ "OBJECT_FOOTPRINT_POLICY": [
+  "QORTUBA-NEW-FLOOR-OBJECT-FOOTPRINT-OWNER-001@v1:FLOOR_FINISH:FOOTPRINT_INCLUDED"
+ ],
+ "SEMANTIC_CLASSES": [
+  "DRY_INTERNAL_ROOM"
+ ],
+ "TRADE_AUTHORITY": [
+  "QORTUBA-FLOOR-TREATMENT@v3",
+  "QORTUBA-SPACE-CLASS@v2"
+ ],
+ "TOPOLOGY_POLICY": "WALL_BAND_POLICY_V5 (d1ff58e755bb88f4) + TOPOLOGY_CLOSURE_POLICY_V1",
+ "TOPOLOGY_DIGEST": "4bd11660f9b6679007584a104aa28b59b2d4440d88bfcf99055b6eab89d74927",
+ "ROW_AUTHORITY_DIGEST": "719a8f91e32c3c7bc18f340dc7e3f96ad1ac08af9af3754becadd0963cfcd031",
+ "RELEASE_INPUT_DIGEST": "e9da0a49b4ed2e051e36ebd5c17c028d94d5a62ce1228c7b374195d30622090c",
+ "PHYSICAL_SITES": [
+  {
+   "site": "SITE-5f1762f1a93b91ca",
+   "zones": [
+    "BED.ROOM"
+   ],
+   "area_m2": 19.2725
+  },
+  {
+   "site": "SITE-a6405850100155ac",
+   "zones": [
+    "DRESS",
+    "M.B.ROOM"
+   ],
+   "area_m2": 33.2
+  },
+  {
+   "site": "SITE-daca396d6d730e60",
+   "zones": [
+    "BED.ROOM"
+   ],
+   "area_m2": 16.327
+  },
+  {
+   "site": "SITE-fdfa89fe0f5809a4",
+   "zones": [
+    "HALL",
+    "whgm"
+   ],
+   "area_m2": 42.799289
+  }
+ ],
+ "OWNER_FACTS_APPLIED": [
+  "QORTUBA-NEW-DOOR-THRESHOLD-CONTINUITY-OWNER-001@v1",
+  "QORTUBA-NEW-DRY-WET-TRANSITION-AT-DOOR-PLANE-OWNER-001@v1",
+  "QORTUBA-NEW-FLOOR-OBJECT-FOOTPRINT-OWNER-001@v1"
+ ],
+ "SOURCE_ANCHOR": {
+  "revision": "QORTUBA_REV_NEW",
+  "dxf_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+  "dwg_identity": "NOT_ESTABLISHED"
+ },
+ "RELEASE_BLOCKERS": [
+  "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+  "UNIT_BOUNDARY_THRESHOLD: THRESHOLD-bfcea08375237224 (0.15 m2, 1000.0 mm door to a space outside the measured unit) is split at the owner-centred door plane - the owner facts name dry / wet doors; applying the split at the unit entrance is a scope decision taken after the run (not blind-tested)",
+  "OBSTACLE_AUTHORITY_UNPROVEN: 0.84 m2 excluded from BED.ROOM by isolated closed loop(s) H2060 (layer-only; no physical authority)",
+  "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+ ],
+ "COUNTERFACTUALS": {
+  "counterfactual_if_not_an_obstacle": 112.9938,
+  "counterfactual_unit_boundary": {
+   "unit_floor_stops_at_unit_face": 112.0788,
+   "split_at_door_plane (computed)": 112.1538,
+   "whole_strip_to_unit": 112.2288
+  }
+ },
+ "blockers": [],
+ "blocker_classes": [],
+ "SCHEMA": "URBAN_R8_14_Q13_STATUS_V1",
+ "rebuild": "from the TS01 sites of the frozen V5 run + the threshold allocations; no R8.13 value is used",
+ "regression_vs_r8_13": {
+  "R8.13": 111.5988,
+  "R8.14": 112.1538,
+  "delta_m2": 0.555,
+  "is_target": false
+ },
+ "thresholds": [
+  {
+   "threshold": "THRESHOLD-cf12fcdfd3e6a4a6",
+   "state": "SPLIT_AT_DOOR_PLANE",
+   "regions": [
+    {
+     "side": "A",
+     "site": "SITE-a2b19efc492a6d0b",
+     "treatment": "CERAMIC_WET_FLOOR",
+     "area": 600.0,
+     "area_m2": 0.06
+    },
+    {
+     "side": "B",
+     "site": "SITE-fdfa89fe0f5809a4",
+     "treatment": "PORCELAIN_DRY_FLOOR",
+     "area": 600.0,
+     "area_m2": 0.06
+    }
+   ]
+  },
+  {
+   "threshold": "THRESHOLD-bfcea08375237224",
+   "state": "SPLIT_AT_DOOR_PLANE",
+   "regions": [
+    {
+     "side": "A",
+     "site": "SITE-fdfa89fe0f5809a4",
+     "treatment": "PORCELAIN_DRY_FLOOR",
+     "area": 750.0000000596046,
+     "area_m2": 0.075
+    },
+    {
+     "side": "B",
+     "site": "SITE-788f30878ba9d2b3",
+     "treatment": "OUTSIDE_MEASURED_UNIT",
+     "area": 750.0000000596046,
+     "area_m2": 0.075
+    }
+   ]
+  },
+  {
+   "threshold": "THRESHOLD-28f50f8dc18c1e90",
+   "state": "SPLIT_AT_DOOR_PLANE",
+   "regions": [
+    {
+     "side": "A",
+     "site": "SITE-fe8ed5548fb4310e",
+     "treatment": "CERAMIC_WET_FLOOR",
+     "area": 600.0000000596046,
+     "area_m2": 0.06
+    },
+    {
+     "side": "B",
+     "site": "SITE-fdfa89fe0f5809a4",
+     "treatment": "PORCELAIN_DRY_FLOOR",
+     "area": 600.0000000596046,
+     "area_m2": 0.06
+    }
+   ]
+  },
+  {
+   "threshold": "THRESHOLD-c82365dd41b94abe",
+   "state": "CONTINUOUS_SAME_FINISH",
+   "regions": [
+    {
+     "side": "AB",
+     "site": [
+      "SITE-daca396d6d730e60",
+      "SITE-fdfa89fe0f5809a4"
+     ],
+     "treatment": "PORCELAIN_DRY_FLOOR",
+     "area": 1500.0,
+     "area_m2": 0.15
+    }
+   ]
+  },
+  {
+   "threshold": "THRESHOLD-04910e5deeeed2fc",
+   "state": "CONTINUOUS_SAME_FINISH",
+   "regions": [
+    {
+     "side": "AB",
+     "site": [
+      "SITE-5f1762f1a93b91ca",
+      "SITE-fdfa89fe0f5809a4"
+     ],
+     "treatment": "PORCELAIN_DRY_FLOOR",
+     "area": 1499.9999998807907,
+     "area_m2": 0.15
+    }
+   ]
+  },
+  {
+   "threshold": "THRESHOLD-f9846605acbce828",
+   "state": "SPLIT_AT_DOOR_PLANE",
+   "regions": [
+    {
+     "side": "A",
+     "site": "SITE-1c4abf65f9b5db1e",
+     "treatment": "CERAMIC_WET_FLOOR",
+     "area": 599.9999999403954,
+     "area_m2": 0.06
+    },
+    {
+     "side": "B",
+     "site": "SITE-a6405850100155ac",
+     "treatment": "PORCELAIN_DRY_FLOOR",
+     "area": 599.9999999403954,
+     "area_m2": 0.06
+    }
+   ]
+  }
+ ],
+ "historical_matching": "NONE"
+}

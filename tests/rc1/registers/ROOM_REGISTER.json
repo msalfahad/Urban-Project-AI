@@ -1,0 +1,361 @@
+{
+ "SCHEMA": "URBAN_QORTUBA_RC1_ROOM_REGISTER_V1",
+ "policy": {
+  "policy_id": "ROOM_QUANTITY_MATRIX_V1",
+  "breakdown": "site area + inside-site strip effects; separate-site strips in the row total are their own STRIP entries; entries must sum to the row value",
+  "names": "equal labels never merge sites: ordinal + short site id",
+  "never": [
+   "a matrix cell computed from geometry here",
+   "a label as room authority",
+   "a column that does not reconcile to its canonical item"
+  ],
+  "digest": "d391bd8ea3bc37c5f8df22887bc1057e3f8a0143a6ff04ab34ac82bb3c2fc932"
+ },
+ "rooms": [
+  {
+   "key": "SITE-1c4abf65f9b5db1e",
+   "kind": "ROOM",
+   "display": "BATH (1) [1c4abf65]",
+   "site_id": "SITE-1c4abf65f9b5db1e",
+   "semantic_zones": [
+    "BATH"
+   ],
+   "semantic_class": "WET_SERVICE_ROOM",
+   "zone_decision": "SINGLE_SEMANTIC_ZONE",
+   "certified": "CERTIFIED",
+   "label_occurrences": [
+    "I1453"
+   ],
+   "floor_area_m2": 8.5525,
+   "floor_trade_row": "Q-11",
+   "floor_treatment": "CERAMIC_WET_FLOOR",
+   "skirting": "NO_SKIRTING_FULL_WALL_TILE",
+   "wall_finish": [
+    "WALL_TILE",
+    "WET_WALL_TILE_PREP"
+   ],
+   "waterproofing": "US-14",
+   "duct_hole_m2": 0.0
+  },
+  {
+   "key": "SITE-a2b19efc492a6d0b",
+   "kind": "ROOM",
+   "display": "BATH (2) [a2b19efc]",
+   "site_id": "SITE-a2b19efc492a6d0b",
+   "semantic_zones": [
+    "BATH"
+   ],
+   "semantic_class": "WET_SERVICE_ROOM",
+   "zone_decision": "SINGLE_SEMANTIC_ZONE",
+   "certified": "CERTIFIED",
+   "label_occurrences": [
+    "I2046"
+   ],
+   "floor_area_m2": 5.1,
+   "floor_trade_row": "Q-11",
+   "floor_treatment": "CERAMIC_WET_FLOOR",
+   "skirting": "NO_SKIRTING_FULL_WALL_TILE",
+   "wall_finish": [
+    "WALL_TILE",
+    "WET_WALL_TILE_PREP"
+   ],
+   "waterproofing": "US-14",
+   "duct_hole_m2": 0.0
+  },
+  {
+   "key": "SITE-fe8ed5548fb4310e",
+   "kind": "ROOM",
+   "display": "BATH (3) [fe8ed554]",
+   "site_id": "SITE-fe8ed5548fb4310e",
+   "semantic_zones": [
+    "BATH"
+   ],
+   "semantic_class": "WET_SERVICE_ROOM",
+   "zone_decision": "SINGLE_SEMANTIC_ZONE",
+   "certified": "CERTIFIED",
+   "label_occurrences": [
+    "I1447"
+   ],
+   "floor_area_m2": 4.09,
+   "floor_trade_row": "Q-11",
+   "floor_treatment": "CERAMIC_WET_FLOOR",
+   "skirting": "NO_SKIRTING_FULL_WALL_TILE",
+   "wall_finish": [
+    "WALL_TILE",
+    "WET_WALL_TILE_PREP"
+   ],
+   "waterproofing": "US-14",
+   "duct_hole_m2": 0.0
+  },
+  {
+   "key": "SITE-5f1762f1a93b91ca",
+   "kind": "ROOM",
+   "display": "BED.ROOM (1) [5f1762f1]",
+   "site_id": "SITE-5f1762f1a93b91ca",
+   "semantic_zones": [
+    "BED.ROOM"
+   ],
+   "semantic_class": "DRY_INTERNAL_ROOM",
+   "zone_decision": "SINGLE_SEMANTIC_ZONE",
+   "certified": "CERTIFIED",
+   "label_occurrences": [
+    "I1251"
+   ],
+   "floor_area_m2": 19.2725,
+   "floor_trade_row": "Q-13",
+   "floor_treatment": "PORCELAIN_DRY_FLOOR",
+   "skirting": "COMPUTED",
+   "wall_finish": [
+    "PAINT",
+    "PLASTER"
+   ],
+   "waterproofing": "NONE",
+   "duct_hole_m2": 0.84
+  },
+  {
+   "key": "SITE-daca396d6d730e60",
+   "kind": "ROOM",
+   "display": "BED.ROOM (2) [daca396d]",
+   "site_id": "SITE-daca396d6d730e60",
+   "semantic_zones": [
+    "BED.ROOM"
+   ],
+   "semantic_class": "DRY_INTERNAL_ROOM",
+   "zone_decision": "SINGLE_SEMANTIC_ZONE",
+   "certified": "CERTIFIED",
+   "label_occurrences": [
+    "I1259"
+   ],
+   "floor_area_m2": 16.327,
+   "floor_trade_row": "Q-13",
+   "floor_treatment": "PORCELAIN_DRY_FLOOR",
+   "skirting": "COMPUTED",
+   "wall_finish": [
+    "PAINT",
+    "PLASTER"
+   ],
+   "waterproofing": "NONE",
+   "duct_hole_m2": 0.0
+  },
+  {
+   "key": "SITE-a6405850100155ac",
+   "kind": "ROOM",
+   "display": "DRESS / M.B.ROOM",
+   "site_id": "SITE-a6405850100155ac",
+   "semantic_zones": [
+    "DRESS",
+    "M.B.ROOM"
+   ],
+   "semantic_class": "DRY_INTERNAL_ROOM",
+   "zone_decision": "SEMANTIC_SUBDIVISION_NOT_REQUIRED_FOR_TRADE",
+   "certified": "REVIEW_REQUIRED",
+   "label_occurrences": [
+    "I1274",
+    "I1454"
+   ],
+   "floor_area_m2": 33.2,
+   "floor_trade_row": "Q-13",
+   "floor_treatment": "PORCELAIN_DRY_FLOOR",
+   "skirting": "COMPUTED",
+   "wall_finish": [
+    "PAINT",
+    "PLASTER"
+   ],
+   "waterproofing": "NONE",
+   "duct_hole_m2": 0.0
+  },
+  {
+   "key": "SITE-77a2130eb275604c",
+   "kind": "ROOM",
+   "display": "HALL / whgm",
+   "site_id": "SITE-77a2130eb275604c",
+   "semantic_zones": [
+    "HALL",
+    "whgm"
+   ],
+   "semantic_class": "DRY_INTERNAL_ROOM",
+   "zone_decision": "SEMANTIC_SUBDIVISION_NOT_REQUIRED_FOR_TRADE",
+   "certified": "REVIEW_REQUIRED",
+   "label_occurrences": [
+    "I999"
+   ],
+   "floor_area_m2": 42.649289,
+   "floor_trade_row": "Q-13",
+   "floor_treatment": "PORCELAIN_DRY_FLOOR",
+   "skirting": "COMPUTED",
+   "wall_finish": [
+    "PAINT",
+    "PLASTER"
+   ],
+   "waterproofing": "NONE",
+   "duct_hole_m2": 0.0
+  },
+  {
+   "key": "SITE-8c1c7563d5252c50",
+   "kind": "ROOM",
+   "display": "PAINTRY",
+   "site_id": "SITE-8c1c7563d5252c50",
+   "semantic_zones": [
+    "PAINTRY"
+   ],
+   "semantic_class": "SERVICE_ROOM",
+   "zone_decision": "SINGLE_SEMANTIC_ZONE",
+   "certified": "CERTIFIED",
+   "label_occurrences": [
+    "I1008"
+   ],
+   "floor_area_m2": 11.685,
+   "floor_trade_row": "Q-12",
+   "floor_treatment": "CERAMIC_SERVICE_FLOOR",
+   "skirting": "NO_SKIRTING_FULL_WALL_TILE",
+   "wall_finish": [
+    "WALL_TILE",
+    "WET_WALL_TILE_PREP"
+   ],
+   "waterproofing": "US-14",
+   "duct_hole_m2": 0.0
+  }
+ ],
+ "door_strips": [
+  {
+   "key": "THRESHOLD-04910e5deeeed2fc",
+   "kind": "STRIP",
+   "site_id": "SITE-bd2b680527d056fa",
+   "display": "DOOR STRIP I841 (BED.ROOM (1) [5f1762f1] / HALL / whgm)",
+   "semantic_zones": [],
+   "semantic_class": "DOOR_STRIP",
+   "door": "I841",
+   "floor_area_m2": 0.15,
+   "floor_treatment": "CONTINUOUS_SAME_FINISH",
+   "sides": [
+    "SITE-5f1762f1a93b91ca",
+    "SITE-77a2130eb275604c"
+   ],
+   "certified": "CERTIFIED",
+   "skirting": "NONE (doorway)",
+   "wall_finish": [],
+   "waterproofing": "NONE (membrane is measured on the room floors; upturn not broken)"
+  },
+  {
+   "key": "THRESHOLD-28f50f8dc18c1e90",
+   "kind": "STRIP",
+   "site_id": "SITE-5b8e4f9259cdb19c",
+   "display": "DOOR STRIP I1561 (HALL / whgm / BATH (3) [fe8ed554])",
+   "semantic_zones": [],
+   "semantic_class": "DOOR_STRIP",
+   "door": "I1561",
+   "floor_area_m2": 0.12,
+   "floor_treatment": "MARBLE_THRESHOLD_EXPLICIT",
+   "sides": [
+    "SITE-77a2130eb275604c",
+    "SITE-fe8ed5548fb4310e"
+   ],
+   "certified": "CERTIFIED",
+   "skirting": "NONE (doorway)",
+   "wall_finish": [],
+   "waterproofing": "NONE (membrane is measured on the room floors; upturn not broken)"
+  },
+  {
+   "key": "THRESHOLD-bfcea08375237224",
+   "kind": "STRIP",
+   "site_id": "SITE-2bf3db64b092ac64",
+   "display": "DOOR STRIP I677 (HALL / whgm / OUTSIDE UNIT)",
+   "semantic_zones": [],
+   "semantic_class": "DOOR_STRIP",
+   "door": "I677",
+   "floor_area_m2": 0.15,
+   "floor_treatment": "MARBLE_THRESHOLD_EXPLICIT",
+   "sides": [
+    "SITE-77a2130eb275604c",
+    "SITE-788f30878ba9d2b3"
+   ],
+   "certified": "CERTIFIED",
+   "skirting": "NONE (doorway)",
+   "wall_finish": [],
+   "waterproofing": "NONE (membrane is measured on the room floors; upturn not broken)"
+  },
+  {
+   "key": "THRESHOLD-c82365dd41b94abe",
+   "kind": "STRIP",
+   "site_id": "SITE-9f4d8d389cb86869",
+   "display": "DOOR STRIP I1988 (HALL / whgm / BED.ROOM (2) [daca396d])",
+   "semantic_zones": [],
+   "semantic_class": "DOOR_STRIP",
+   "door": "I1988",
+   "floor_area_m2": 0.15,
+   "floor_treatment": "CONTINUOUS_SAME_FINISH",
+   "sides": [
+    "SITE-77a2130eb275604c",
+    "SITE-daca396d6d730e60"
+   ],
+   "certified": "CERTIFIED",
+   "skirting": "NONE (doorway)",
+   "wall_finish": [],
+   "waterproofing": "NONE (membrane is measured on the room floors; upturn not broken)"
+  },
+  {
+   "key": "THRESHOLD-cf12fcdfd3e6a4a6",
+   "kind": "STRIP",
+   "site_id": "SITE-1cc94d2ca98f6229",
+   "display": "DOOR STRIP I2044 (HALL / whgm / BATH (2) [a2b19efc])",
+   "semantic_zones": [],
+   "semantic_class": "DOOR_STRIP",
+   "door": "I2044",
+   "floor_area_m2": 0.12,
+   "floor_treatment": "MARBLE_THRESHOLD_EXPLICIT",
+   "sides": [
+    "SITE-77a2130eb275604c",
+    "SITE-a2b19efc492a6d0b"
+   ],
+   "certified": "CERTIFIED",
+   "skirting": "NONE (doorway)",
+   "wall_finish": [],
+   "waterproofing": "NONE (membrane is measured on the room floors; upturn not broken)"
+  },
+  {
+   "key": "THRESHOLD-d4633eabc844b274",
+   "kind": "STRIP",
+   "site_id": "SITE-befd4d1f269dd310",
+   "display": "DOOR STRIP I1471 (HALL / whgm / DRESS / M.B.ROOM)",
+   "semantic_zones": [],
+   "semantic_class": "DOOR_STRIP",
+   "door": "I1471",
+   "floor_area_m2": 0.15,
+   "floor_treatment": "CONTINUOUS_SAME_FINISH",
+   "sides": [
+    "SITE-77a2130eb275604c",
+    "SITE-a6405850100155ac"
+   ],
+   "certified": "CERTIFIED",
+   "skirting": "NONE (doorway)",
+   "wall_finish": [],
+   "waterproofing": "NONE (membrane is measured on the room floors; upturn not broken)"
+  },
+  {
+   "key": "THRESHOLD-f9846605acbce828",
+   "kind": "STRIP",
+   "site_id": "SITE-e639327cc873867d",
+   "display": "DOOR STRIP I1443 (BATH (1) [1c4abf65] / DRESS / M.B.ROOM)",
+   "semantic_zones": [],
+   "semantic_class": "DOOR_STRIP",
+   "door": "I1443",
+   "floor_area_m2": 0.12,
+   "floor_treatment": "MARBLE_THRESHOLD_EXPLICIT",
+   "sides": [
+    "SITE-1c4abf65f9b5db1e",
+    "SITE-a6405850100155ac"
+   ],
+   "certified": "CERTIFIED",
+   "skirting": "NONE (doorway)",
+   "wall_finish": [],
+   "waterproofing": "NONE (membrane is measured on the room floors; upturn not broken)"
+  }
+ ],
+ "counts": {
+  "rooms": 8,
+  "door_strips": 7
+ },
+ "physical_floor_m2": 141.836289,
+ "label_is_not_authority": "sites are certified topology faces; labels only name them; equal labels get ordinals (never merged)",
+ "hall_lobby": "ONE certified site with zones HALL + whgm; the Hall / Lobby open passage lies inside it"
+}

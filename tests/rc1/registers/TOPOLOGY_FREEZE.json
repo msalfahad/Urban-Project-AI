@@ -1,0 +1,39 @@
+{
+ "SCHEMA": "URBAN_QORTUBA_RC1_TOPOLOGY_FREEZE_V1",
+ "topology_input_digest": {
+  "value": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+  "layer": "TOPOLOGY_RUN_INPUT_DIGEST (engine/source/run_manifest.py)",
+  "covers": "canonical source input digest + applied claims + policies + kernel versions: everything that can change TS01 topology"
+ },
+ "topology_result_digest": {
+  "value": "b451464314ef01c6de500858a5d0316978356627497229660a4b7ff3051da706",
+  "policy": "TOPOLOGY_RESULT_DIGEST_V1",
+  "counts": {
+   "sites": 72,
+   "wall_bands": 55,
+   "topology_closures": 2,
+   "closures": 22,
+   "openings": 8,
+   "passages": 5
+  },
+  "bytes": 60316,
+  "covers": [
+   "sites",
+   "wall_bands",
+   "topology_closures",
+   "closures",
+   "openings",
+   "passages"
+  ],
+  "excludes": [
+   "arrangement face / cycle indices",
+   "timestamps",
+   "paths",
+   "object ids",
+   "evidence prose"
+  ],
+  "module": "engine/source/topology_digest.py"
+ },
+ "topology_policy_digest": "263d2adf1d1770e1db963ac9bfde852dcedbdbd77e0040730322848c49acb450",
+ "reused_utility": "engine/source/digests.quantise (no new hashing utility; no donor code needed)"
+}

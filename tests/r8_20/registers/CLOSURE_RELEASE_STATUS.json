@@ -1,0 +1,92 @@
+{
+ "SCHEMA": "URBAN_R8_20_CLOSURE_RELEASE_STATUS_V1",
+ "policy": {
+  "policy_id": "CLOSURE_RELEASE_MODEL_V1",
+  "levels": [
+   "CANDIDATE",
+   "DIAGNOSTIC_PASS",
+   "AUTHORISED_FOR_SHADOW",
+   "REVIEWED_FOR_RELEASE_CANDIDATE"
+  ],
+  "reviewed_requires": [
+   "POLICY_FROZEN",
+   "CROSS_ROUTE_AGREEMENT",
+   "OWNER_OR_SOURCE_CORROBORATION",
+   "SOURCE_ANCHOR",
+   "HUMAN_REVIEW"
+  ],
+  "never": [
+   "a release",
+   "a level inferred from a missing condition",
+   "an owner fact as topology authority",
+   "a review record without the closure digest"
+  ],
+  "digest": "8f64ecc50048796da79a6d7cd5ecfb36bd3d46896ed61ab2b57a72bcf3e29f51"
+ },
+ "levels": [
+  "CANDIDATE",
+  "DIAGNOSTIC_PASS",
+  "AUTHORISED_FOR_SHADOW",
+  "REVIEWED_FOR_RELEASE_CANDIDATE"
+ ],
+ "released_level_exists": false,
+ "closures": {
+  "H2430": {
+   "closure_id": "TC-1013dbb787e56f65",
+   "current_level_before_review": "AUTHORISED_FOR_SHADOW",
+   "maximum_justified_level": "AUTHORISED_FOR_SHADOW",
+   "missing_for_next_level": [
+    "CROSS_ROUTE_AGREEMENT",
+    "SOURCE_ANCHOR"
+   ],
+   "evidence": {
+    "POLICY_FROZEN": true,
+    "CROSS_ROUTE_AGREEMENT": null,
+    "OWNER_OR_SOURCE_CORROBORATION": true,
+    "SOURCE_ANCHOR": false,
+    "HUMAN_REVIEW": true
+   },
+   "human_review": "ACCEPTED",
+   "releases_anything": false
+  },
+  "H2431": {
+   "closure_id": "TC-5f9f2014f83ab0d4",
+   "current_level_before_review": "AUTHORISED_FOR_SHADOW",
+   "maximum_justified_level": "AUTHORISED_FOR_SHADOW",
+   "missing_for_next_level": [
+    "CROSS_ROUTE_AGREEMENT",
+    "SOURCE_ANCHOR"
+   ],
+   "evidence": {
+    "POLICY_FROZEN": true,
+    "CROSS_ROUTE_AGREEMENT": null,
+    "OWNER_OR_SOURCE_CORROBORATION": true,
+    "SOURCE_ANCHOR": false,
+    "HUMAN_REVIEW": true
+   },
+   "human_review": "ACCEPTED",
+   "releases_anything": false
+  },
+  "I1471": {
+   "closure_id": "I1471",
+   "current_level_before_review": "AUTHORISED_FOR_SHADOW",
+   "maximum_justified_level": "AUTHORISED_FOR_SHADOW",
+   "missing_for_next_level": [
+    "CROSS_ROUTE_AGREEMENT",
+    "SOURCE_ANCHOR"
+   ],
+   "evidence": {
+    "POLICY_FROZEN": true,
+    "CROSS_ROUTE_AGREEMENT": null,
+    "OWNER_OR_SOURCE_CORROBORATION": true,
+    "SOURCE_ANCHOR": false,
+    "HUMAN_REVIEW": true
+   },
+   "human_review": "ACCEPTED",
+   "releases_anything": false
+  }
+ },
+ "i1471_grading": "I1471 is graded under the model for the first time (TS01 door-strip closure, frozen DOOR_OPENING_CLOSURE_POLICY_V2, base AUTHORISED_FOR_SHADOW as used by the shadow rows)",
+ "cross_route": "NOT_ACHIEVABLE: REV_NEW has one input route (K2 ezdxf); K1 needs a decodable DWG",
+ "production": "NO"
+}

@@ -1,0 +1,45 @@
+{
+ "SCHEMA": "URBAN_ENGINEERING_ACTION_REGISTER_R8_13_V1",
+ "actions": [
+  {
+   "id": "E-R8.14-01",
+   "priority": 1,
+   "title": "door-threshold strip allocation rule (Q-13 / Q-11 / Q-14 release)"
+  },
+  {
+   "id": "E-R8.14-02",
+   "priority": 1,
+   "title": "DWG <-> DXF source anchor with a pinned decoder"
+  },
+  {
+   "id": "E-R8.14-03",
+   "priority": 2,
+   "title": "passage soffit vs ceiling allocation (Q-14 release)"
+  },
+  {
+   "id": "E-R8.14-04",
+   "priority": 2,
+   "title": "REVIEWED_FOR_RELEASE_CANDIDATE: cross-route + signed human review record for the two closures"
+  },
+  {
+   "id": "E-R8.14-05",
+   "priority": 3,
+   "title": "V4-O1 nested closed polylines on a wall layer (role)"
+  },
+  {
+   "id": "E-R8.14-06",
+   "priority": 3,
+   "title": "V4-O2 explicit elongation tie rule"
+  },
+  {
+   "id": "E-R8.14-07",
+   "priority": 4,
+   "title": "wall ceramic 3.20 m only on a tested face-set path"
+  },
+  {
+   "id": "E-R8.14-08",
+   "priority": 4,
+   "title": "closure-id rounding into the closure policy record"
+  }
+ ]
+}

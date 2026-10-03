@@ -1,0 +1,83 @@
+{
+ "SCHEMA": "URBAN_QORTUBA_RC1_PAINT_REGISTER_V1",
+ "items": {
+  "PNT-01": {
+   "qty": 307.361518,
+   "unit": "m2",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "room_breakdown": [
+    {
+     "key": "SITE-5f1762f1a93b91ca",
+     "label": "BED.ROOM (1) [5f1762f1]",
+     "qty": 72.328302,
+     "kind": "ROOM",
+     "components": {
+      "wall_plane_m2": 53.006962,
+      "column_face_m2": 2.52,
+      "obstacle_face_m2": 15.75,
+      "jamb_reveals_m2": 0.75,
+      "head_reveals_m2": 0.30134
+     },
+     "height_m": 3.15,
+     "height_authority": "QORTUBA-NEW-DRY-WALL-FINISH-HEIGHT-OWNER-001@v1"
+    },
+    {
+     "key": "SITE-77a2130eb275604c",
+     "label": "HALL / whgm",
+     "qty": 94.266868,
+     "kind": "ROOM",
+     "components": {
+      "wall_plane_m2": 85.773468,
+      "column_face_m2": 2.0475,
+      "obstacle_face_m2": 0.0,
+      "jamb_reveals_m2": 4.93,
+      "head_reveals_m2": 1.5159
+     },
+     "height_m": 3.15,
+     "height_authority": "QORTUBA-NEW-DRY-WALL-FINISH-HEIGHT-OWNER-001@v1"
+    },
+    {
+     "key": "SITE-a6405850100155ac",
+     "label": "DRESS / M.B.ROOM",
+     "qty": 91.668106,
+     "kind": "ROOM",
+     "components": {
+      "wall_plane_m2": 84.086227,
+      "column_face_m2": 3.78,
+      "obstacle_face_m2": 0.0,
+      "jamb_reveals_m2": 2.6325,
+      "head_reveals_m2": 1.169379
+     },
+     "height_m": 3.15,
+     "height_authority": "QORTUBA-NEW-DRY-WALL-FINISH-HEIGHT-OWNER-001@v1"
+    },
+    {
+     "key": "SITE-daca396d6d730e60",
+     "label": "BED.ROOM (2) [daca396d]",
+     "qty": 49.098242,
+     "kind": "ROOM",
+     "components": {
+      "wall_plane_m2": 45.49267,
+      "column_face_m2": 2.52,
+      "obstacle_face_m2": 0.0,
+      "jamb_reveals_m2": 0.75,
+      "head_reveals_m2": 0.335572
+     },
+     "height_m": 3.15,
+     "height_authority": "QORTUBA-NEW-DRY-WALL-FINISH-HEIGHT-OWNER-001@v1"
+    }
+   ],
+   "rules": [
+    "URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1",
+    "URBAN-EXPOSED-INTERIOR-DUCT-FINISH-METHOD@v1",
+    "QORTUBA-NEW-WALL-FACE-METHOD@v3"
+   ],
+   "blockers": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "notes": [],
+   "evidence": "r8_19.trade_rows.DRY_WALL_PAINT"
+  }
+ }
+}

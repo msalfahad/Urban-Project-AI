@@ -1,0 +1,185 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_STAIR_REGISTER_V1",
+ "observations": {
+  "GF": {
+   "stair_arrow_blocks": [
+    "1179",
+    "211",
+    "332",
+    "883"
+   ]
+  },
+  "1F": {
+   "stair_arrow_blocks": [
+    "2757",
+    "2758",
+    "2931"
+   ]
+  },
+  "2F": {
+   "stair_arrow_blocks": [
+    "5004",
+    "5005"
+   ]
+  }
+ },
+ "rows": [
+  {
+   "item": "A-STR-01-GF",
+   "discipline": "ARCHITECTURAL",
+   "trade": "STAIRS",
+   "floor": "GF",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "درج (قوائم ونوائم)",
+   "en": "Stair treads / risers / landings",
+   "qty": null,
+   "unit": "no.",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S05 (GROUND FLOOR PLAN 1:100)",
+   "rule": "deterministic stair geometry only",
+   "blockers": [
+    "STAIR_ROLE_NOT_ESTABLISHED: 4 stair-arrow blocks observed; tread / riser lines have no role authority; nothing counted"
+   ]
+  },
+  {
+   "item": "A-STR-02-GF",
+   "discipline": "ARCHITECTURAL",
+   "trade": "STAIR_FINISH",
+   "floor": "GF",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "تكسية الدرج ووزرة الدرج",
+   "en": "Stair finish + stair skirting",
+   "qty": null,
+   "unit": "lm",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S05 (GROUND FLOOR PLAN 1:100)",
+   "rule": "deterministic stair geometry only",
+   "blockers": [
+    "FINISH_SCHEDULE_ABSENT: no finish schedule in the source - OQ-F1",
+    "STAIR_ROLE_NOT_ESTABLISHED: 4 stair-arrow blocks observed; tread / riser lines have no role authority; nothing counted"
+   ]
+  },
+  {
+   "item": "A-HRL-01-GF",
+   "discipline": "ARCHITECTURAL",
+   "trade": "HANDRAIL",
+   "floor": "GF",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "درابزين",
+   "en": "Handrails / balustrades",
+   "qty": null,
+   "unit": "lm",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S05 (GROUND FLOOR PLAN 1:100)",
+   "rule": "deterministic stair geometry only",
+   "blockers": [
+    "STAIR_ROLE_NOT_ESTABLISHED: 4 stair-arrow blocks observed; tread / riser lines have no role authority; nothing counted"
+   ]
+  },
+  {
+   "item": "A-STR-01-1F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "STAIRS",
+   "floor": "1F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "درج (قوائم ونوائم)",
+   "en": "Stair treads / risers / landings",
+   "qty": null,
+   "unit": "no.",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S04 (1st.FLOOR PLAN 1:100)",
+   "rule": "deterministic stair geometry only",
+   "blockers": [
+    "STAIR_ROLE_NOT_ESTABLISHED: 3 stair-arrow blocks observed; tread / riser lines have no role authority; nothing counted"
+   ]
+  },
+  {
+   "item": "A-STR-02-1F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "STAIR_FINISH",
+   "floor": "1F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "تكسية الدرج ووزرة الدرج",
+   "en": "Stair finish + stair skirting",
+   "qty": null,
+   "unit": "lm",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S04 (1st.FLOOR PLAN 1:100)",
+   "rule": "deterministic stair geometry only",
+   "blockers": [
+    "FINISH_SCHEDULE_ABSENT: no finish schedule in the source - OQ-F1",
+    "STAIR_ROLE_NOT_ESTABLISHED: 3 stair-arrow blocks observed; tread / riser lines have no role authority; nothing counted"
+   ]
+  },
+  {
+   "item": "A-HRL-01-1F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "HANDRAIL",
+   "floor": "1F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "درابزين",
+   "en": "Handrails / balustrades",
+   "qty": null,
+   "unit": "lm",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S04 (1st.FLOOR PLAN 1:100)",
+   "rule": "deterministic stair geometry only",
+   "blockers": [
+    "STAIR_ROLE_NOT_ESTABLISHED: 3 stair-arrow blocks observed; tread / riser lines have no role authority; nothing counted"
+   ]
+  },
+  {
+   "item": "A-STR-01-2F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "STAIRS",
+   "floor": "2F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "درج (قوائم ونوائم)",
+   "en": "Stair treads / risers / landings",
+   "qty": null,
+   "unit": "no.",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S03 (2nd.FLOOR PLAN 1:100)",
+   "rule": "deterministic stair geometry only",
+   "blockers": [
+    "STAIR_ROLE_NOT_ESTABLISHED: 2 stair-arrow blocks observed; tread / riser lines have no role authority; nothing counted"
+   ]
+  },
+  {
+   "item": "A-STR-02-2F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "STAIR_FINISH",
+   "floor": "2F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "تكسية الدرج ووزرة الدرج",
+   "en": "Stair finish + stair skirting",
+   "qty": null,
+   "unit": "lm",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S03 (2nd.FLOOR PLAN 1:100)",
+   "rule": "deterministic stair geometry only",
+   "blockers": [
+    "FINISH_SCHEDULE_ABSENT: no finish schedule in the source - OQ-F1",
+    "STAIR_ROLE_NOT_ESTABLISHED: 2 stair-arrow blocks observed; tread / riser lines have no role authority; nothing counted"
+   ]
+  },
+  {
+   "item": "A-HRL-01-2F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "HANDRAIL",
+   "floor": "2F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "درابزين",
+   "en": "Handrails / balustrades",
+   "qty": null,
+   "unit": "lm",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S03 (2nd.FLOOR PLAN 1:100)",
+   "rule": "deterministic stair geometry only",
+   "blockers": [
+    "STAIR_ROLE_NOT_ESTABLISHED: 2 stair-arrow blocks observed; tread / riser lines have no role authority; nothing counted"
+   ]
+  }
+ ],
+ "state": "BLOCKED: stair geometry has no role authority; nothing counted"
+}

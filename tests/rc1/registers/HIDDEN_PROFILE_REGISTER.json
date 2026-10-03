@@ -1,0 +1,79 @@
+{
+ "SCHEMA": "URBAN_QORTUBA_RC1_HIDDEN_PROFILE_REGISTER_V1",
+ "items": {
+  "HPR-01": {
+   "qty": 94.13682,
+   "unit": "lm",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "room_breakdown": [
+    {
+     "key": "SITE-1c4abf65f9b5db1e",
+     "label": "BATH (1) [1c4abf65]",
+     "qty": 0.0,
+     "kind": "ROOM",
+     "state": "NO_SKIRTING_FULL_WALL_TILE"
+    },
+    {
+     "key": "SITE-5f1762f1a93b91ca",
+     "label": "BED.ROOM (1) [5f1762f1]",
+     "qty": 22.9,
+     "kind": "ROOM",
+     "state": "COMPUTED"
+    },
+    {
+     "key": "SITE-77a2130eb275604c",
+     "label": "HALL / whgm",
+     "qty": 26.157105,
+     "kind": "ROOM",
+     "state": "COMPUTED"
+    },
+    {
+     "key": "SITE-8c1c7563d5252c50",
+     "label": "PAINTRY",
+     "qty": 0.0,
+     "kind": "ROOM",
+     "state": "NO_SKIRTING_FULL_WALL_TILE"
+    },
+    {
+     "key": "SITE-a2b19efc492a6d0b",
+     "label": "BATH (2) [a2b19efc]",
+     "qty": 0.0,
+     "kind": "ROOM",
+     "state": "NO_SKIRTING_FULL_WALL_TILE"
+    },
+    {
+     "key": "SITE-a6405850100155ac",
+     "label": "DRESS / M.B.ROOM",
+     "qty": 29.5,
+     "kind": "ROOM",
+     "state": "COMPUTED"
+    },
+    {
+     "key": "SITE-daca396d6d730e60",
+     "label": "BED.ROOM (2) [daca396d]",
+     "qty": 15.579714,
+     "kind": "ROOM",
+     "state": "COMPUTED"
+    },
+    {
+     "key": "SITE-fe8ed5548fb4310e",
+     "label": "BATH (3) [fe8ed554]",
+     "qty": 0.0,
+     "kind": "ROOM",
+     "state": "NO_SKIRTING_FULL_WALL_TILE"
+    }
+   ],
+   "rules": [
+    "QORTUBA-NEW-SKIRTING-METHOD@v3"
+   ],
+   "blockers": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "notes": [
+    "SKT-01 and HPR-01 share ONE path (US-08) but are two materials: two items, never merged and never one quantity"
+   ],
+   "evidence": "skirting_v4.PAYABLE_LM"
+  }
+ }
+}

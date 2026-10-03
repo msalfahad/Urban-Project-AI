@@ -1,0 +1,278 @@
+{
+ "SCHEMA": "URBAN_R8_15_BLIND_QORTUBA_SKIRTING_V1",
+ "freeze": "e3705b753ebdee3548715cb91f4681ab0fa39610",
+ "policy": {
+  "id": "WALL_CONTACT_PATH_POLICY_V2",
+  "digest": "5b5d6e5ec6397cf1c09fa678c95197db971f0867ae741becb9ac3b51bfc0c5b3"
+ },
+ "method": "QORTUBA-NEW-SKIRTING-METHOD@v1",
+ "blind": {
+  "expected_value_given": false,
+  "historical_total_used": false,
+  "qp10_compared": false,
+  "inputs": [
+   "the frozen V5 topology run (new revision)",
+   "the class rule (dry tiled rooms)",
+   "owner physical facts (duct authority)",
+   "passage jamb faces"
+  ]
+ },
+ "run_input_digest": "4bd11660f9b6679007584a104aa28b59b2d4440d88bfcf99055b6eab89d74927",
+ "eps_r": 0.1,
+ "dry_sites": [
+  "SITE-5f1762f1a93b91ca",
+  "SITE-a6405850100155ac",
+  "SITE-daca396d6d730e60",
+  "SITE-fdfa89fe0f5809a4"
+ ],
+ "no_skirting_sites": [
+  "SITE-1c4abf65f9b5db1e",
+  "SITE-8c1c7563d5252c50",
+  "SITE-a2b19efc492a6d0b",
+  "SITE-fe8ed5548fb4310e"
+ ],
+ "per_site": {
+  "SITE-5f1762f1a93b91ca": {
+   "zones": [
+    "BED.ROOM"
+   ],
+   "class": "DRY_INTERNAL_ROOM (tiled floor)",
+   "state": "COMPUTED",
+   "lm": 21.694641,
+   "components_lm": {
+    "COLUMN_FACE": 0.8,
+    "OBSTACLE_FACE": 5.0,
+    "REAL_WALL_FACE": 15.894641
+   },
+   "excluded_lm": {
+    "DOOR_OPENING": 1.0,
+    "WINDOW_OPENING": 1.205359
+   },
+   "withheld": [],
+   "physical_path_lm": {
+    "COLUMN_FACE": {
+     "edges": 2,
+     "lm": 0.8
+    },
+    "DOOR_OPENING": {
+     "edges": 1,
+     "lm": 1.0
+    },
+    "OBSTACLE_FACE": {
+     "edges": 4,
+     "lm": 5.0
+    },
+    "REAL_WALL_FACE": {
+     "edges": 10,
+     "lm": 15.894641
+    },
+    "WINDOW_OPENING": {
+     "edges": 1,
+     "lm": 1.205359
+    }
+   },
+   "floor_contact_lm": 21.694641
+  },
+  "SITE-a6405850100155ac": {
+   "zones": [
+    "DRESS",
+    "M.B.ROOM"
+   ],
+   "class": "DRY_INTERNAL_ROOM (tiled floor)",
+   "state": "COMPUTED",
+   "lm": 25.152485,
+   "components_lm": {
+    "COLUMN_FACE": 1.2,
+    "REAL_WALL_FACE": 23.952485
+   },
+   "excluded_lm": {
+    "DOOR_OPENING": 1.8,
+    "OPENING_JAMB": 0.15,
+    "WINDOW_OPENING": 4.197515
+   },
+   "withheld": [],
+   "physical_path_lm": {
+    "COLUMN_FACE": {
+     "edges": 4,
+     "lm": 1.2
+    },
+    "DOOR_OPENING": {
+     "edges": 2,
+     "lm": 1.8
+    },
+    "OPENING_JAMB": {
+     "edges": 1,
+     "lm": 0.15
+    },
+    "REAL_WALL_FACE": {
+     "edges": 17,
+     "lm": 23.952485
+    },
+    "WINDOW_OPENING": {
+     "edges": 2,
+     "lm": 4.197515
+    }
+   },
+   "floor_contact_lm": 25.302485
+  },
+  "SITE-daca396d6d730e60": {
+   "zones": [
+    "BED.ROOM"
+   ],
+   "class": "DRY_INTERNAL_ROOM (tiled floor)",
+   "state": "COMPUTED",
+   "lm": 14.237427,
+   "components_lm": {
+    "COLUMN_FACE": 0.8,
+    "REAL_WALL_FACE": 13.437427
+   },
+   "excluded_lm": {
+    "DOOR_OPENING": 1.0,
+    "WINDOW_OPENING": 1.342287
+   },
+   "withheld": [],
+   "physical_path_lm": {
+    "COLUMN_FACE": {
+     "edges": 2,
+     "lm": 0.8
+    },
+    "DOOR_OPENING": {
+     "edges": 1,
+     "lm": 1.0
+    },
+    "REAL_WALL_FACE": {
+     "edges": 8,
+     "lm": 13.437427
+    },
+    "WINDOW_OPENING": {
+     "edges": 1,
+     "lm": 1.342287
+    }
+   },
+   "floor_contact_lm": 14.237427
+  },
+  "SITE-fdfa89fe0f5809a4": {
+   "zones": [
+    "HALL",
+    "whgm"
+   ],
+   "class": "DRY_INTERNAL_ROOM (tiled floor)",
+   "state": "COMPUTED",
+   "lm": 23.710661,
+   "components_lm": {
+    "COLUMN_FACE": 0.65,
+    "REAL_WALL_FACE": 23.060661
+   },
+   "excluded_lm": {
+    "DOOR_OPENING": 5.6,
+    "GLAZED_OPENING": 2.75,
+    "OPENING_JAMB": 0.2,
+    "TOPOLOGY_CLOSURE": 0.2,
+    "WINDOW_OPENING": 2.346444
+   },
+   "withheld": [],
+   "physical_path_lm": {
+    "COLUMN_FACE": {
+     "edges": 3,
+     "lm": 0.65
+    },
+    "DOOR_OPENING": {
+     "edges": 6,
+     "lm": 5.6
+    },
+    "GLAZED_OPENING": {
+     "edges": 1,
+     "lm": 2.75
+    },
+    "OPENING_JAMB": {
+     "edges": 1,
+     "lm": 0.2
+    },
+    "REAL_WALL_FACE": {
+     "edges": 28,
+     "lm": 23.060661
+    },
+    "TOPOLOGY_CLOSURE": {
+     "edges": 1,
+     "lm": 0.2
+    },
+    "WINDOW_OPENING": {
+     "edges": 1,
+     "lm": 2.346444
+    }
+   },
+   "floor_contact_lm": 23.910661
+  },
+  "SITE-1c4abf65f9b5db1e": {
+   "zones": [
+    "BATH"
+   ],
+   "class": "WET_SERVICE_ROOM - full wall tile (no skirting: owner fact + US-02)",
+   "state": "NO_SKIRTING_FULL_WALL_TILE",
+   "lm": 0.0,
+   "floor_contact_lm": 11.1
+  },
+  "SITE-8c1c7563d5252c50": {
+   "zones": [
+    "PAINTRY"
+   ],
+   "class": "SERVICE_ROOM - full wall tile (no skirting: owner fact + US-02)",
+   "state": "NO_SKIRTING_FULL_WALL_TILE",
+   "lm": 0.0,
+   "floor_contact_lm": 9.539008
+  },
+  "SITE-a2b19efc492a6d0b": {
+   "zones": [
+    "BATH"
+   ],
+   "class": "WET_SERVICE_ROOM - full wall tile (no skirting: owner fact + US-02)",
+   "state": "NO_SKIRTING_FULL_WALL_TILE",
+   "lm": 0.0,
+   "floor_contact_lm": 8.6
+  },
+  "SITE-fe8ed5548fb4310e": {
+   "zones": [
+    "BATH"
+   ],
+   "class": "WET_SERVICE_ROOM - full wall tile (no skirting: owner fact + US-02)",
+   "state": "NO_SKIRTING_FULL_WALL_TILE",
+   "lm": 0.0,
+   "floor_contact_lm": 8.2
+  }
+ },
+ "complete": true,
+ "SKIRTING_LM": 84.795214,
+ "components_lm": {
+  "REAL_WALL_FACE": 76.345214,
+  "COLUMN_FACE": 3.45,
+  "OBSTACLE_FACE": 5.0
+ },
+ "excluded_lm": {
+  "DOOR_OPENING": 9.4,
+  "GLAZED_OPENING": 2.75,
+  "WINDOW_OPENING": 9.091605,
+  "OPENING_JAMB": 0.35,
+  "TOPOLOGY_CLOSURE": 0.2
+ },
+ "passage_jamb_return_counterfactual_lm": 0.35,
+ "obstacle_authority": {
+  "QORTUBA_REV_NEW|H2060||SEGMENT": {
+   "state": "OWNER_PHYSICAL_OBSTACLE",
+   "fact": "QORTUBA-NEW-BED-ROOM-DUCT-OWNER-001@v1",
+   "physical_class": "DUCT",
+   "segments": 4,
+   "topology_effect": "PHYSICAL_OBSTACLE",
+   "floor_effect": "EXCLUDED_FROM_ROOM_FLOOR",
+   "ceiling_effect": "EXCLUDED_FROM_NORMAL_CEILING"
+  },
+  "QORTUBA_REV_NEW|H2061||SEGMENT": {
+   "state": "OWNER_PHYSICAL_OBSTACLE",
+   "fact": "QORTUBA-NEW-BED-ROOM-DUCT-OWNER-001@v1",
+   "physical_class": "DUCT",
+   "segments": 4,
+   "topology_effect": "PHYSICAL_OBSTACLE",
+   "floor_effect": "EXCLUDED_FROM_ROOM_FLOOR",
+   "ceiling_effect": "EXCLUDED_FROM_NORMAL_CEILING"
+  }
+ }
+}

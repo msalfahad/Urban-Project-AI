@@ -1,0 +1,181 @@
+{
+ "SCHEMA": "URBAN_R8_10_THRESHOLD_SITE_REGISTER_V1",
+ "old_revision_wet_rows": {
+  "ROOM_FOOTPRINT_m2": 17.7425,
+  "THRESHOLD_FOOTPRINT_m2": 0.36,
+  "POSSIBLE_FINISH_FOOTPRINT_m2": 18.1025,
+  "legacy_qs01_wet_floor_m2": 17.8625,
+  "legacy_minus_room_m2": 0.12,
+  "reading": "three wet-room door strips of 0.12 m2 exist; the legacy QS01 wet floor exceeds the TS01 room footprint by exactly ONE of them: the legacy method absorbed one strip into a room. TS01 keeps all three separate (allocation TRADE_RULE_REQUIRED); no strip is moved to match a total",
+  "thresholds": [
+   {
+    "threshold": "THRESHOLD-8639087a5492f6c5",
+    "site": "SITE-04cdde7c375a2ff7",
+    "opening": "I1443",
+    "area_m2": 0.12,
+    "sides": [
+     "SITE-8e1f0b3a736abb02",
+     "SITE-9cd4555183e82aa2"
+    ],
+    "allocation": "TRADE_RULE_REQUIRED"
+   },
+   {
+    "threshold": "THRESHOLD-8732ee1c2cb4f9da",
+    "site": "SITE-8bd86fd47559dcf6",
+    "opening": "I1561",
+    "area_m2": 0.12,
+    "sides": [
+     "SITE-50b24a2e0df863f2",
+     "SITE-56af91bb145d30cc"
+    ],
+    "allocation": "TRADE_RULE_REQUIRED"
+   },
+   {
+    "threshold": "THRESHOLD-aa3fea7d5ebcdca0",
+    "site": "SITE-ee74da53975a6dc5",
+    "opening": "I2044",
+    "area_m2": 0.12,
+    "sides": [
+     "SITE-56af91bb145d30cc",
+     "SITE-dd2d6c85412cee23"
+    ],
+    "allocation": "TRADE_RULE_REQUIRED"
+   }
+  ]
+ },
+ "new_revision_wet_rows": {
+  "ROOM_FOOTPRINT_m2": 17.7425,
+  "THRESHOLD_FOOTPRINT_m2": 0.36,
+  "POSSIBLE_FINISH_FOOTPRINT_m2": 18.1025,
+  "thresholds": [
+   {
+    "threshold": "THRESHOLD-cf12fcdfd3e6a4a6",
+    "site": "SITE-1cc94d2ca98f6229",
+    "opening": "I2044",
+    "area_m2": 0.12,
+    "sides": [
+     "SITE-27d6688454aaf8de",
+     "SITE-a2b19efc492a6d0b"
+    ],
+    "allocation": "TRADE_RULE_REQUIRED"
+   },
+   {
+    "threshold": "THRESHOLD-28f50f8dc18c1e90",
+    "site": "SITE-5b8e4f9259cdb19c",
+    "opening": "I1561",
+    "area_m2": 0.12,
+    "sides": [
+     "SITE-27d6688454aaf8de",
+     "SITE-fe8ed5548fb4310e"
+    ],
+    "allocation": "TRADE_RULE_REQUIRED"
+   },
+   {
+    "threshold": "THRESHOLD-f9846605acbce828",
+    "site": "SITE-e639327cc873867d",
+    "opening": "I1443",
+    "area_m2": 0.12,
+    "sides": [
+     "SITE-1c4abf65f9b5db1e",
+     "SITE-a6405850100155ac"
+    ],
+    "allocation": "TRADE_RULE_REQUIRED"
+   }
+  ]
+ },
+ "all_new_thresholds": [
+  {
+   "threshold": "THRESHOLD-cf12fcdfd3e6a4a6",
+   "site": "SITE-1cc94d2ca98f6229",
+   "opening": "I2044",
+   "area_m2": 0.12,
+   "sides": [
+    "SITE-27d6688454aaf8de",
+    "SITE-a2b19efc492a6d0b"
+   ],
+   "allocation": "TRADE_RULE_REQUIRED"
+  },
+  {
+   "threshold": "THRESHOLD-bfcea08375237224",
+   "site": "SITE-2bf3db64b092ac64",
+   "opening": "I677",
+   "area_m2": 0.15,
+   "sides": [
+    "SITE-27d6688454aaf8de",
+    "SITE-788f30878ba9d2b3"
+   ],
+   "allocation": "TRADE_RULE_REQUIRED"
+  },
+  {
+   "threshold": "THRESHOLD-28f50f8dc18c1e90",
+   "site": "SITE-5b8e4f9259cdb19c",
+   "opening": "I1561",
+   "area_m2": 0.12,
+   "sides": [
+    "SITE-27d6688454aaf8de",
+    "SITE-fe8ed5548fb4310e"
+   ],
+   "allocation": "TRADE_RULE_REQUIRED"
+  },
+  {
+   "threshold": "THRESHOLD-e84ea1bf89bb6701",
+   "site": "SITE-95292543249f37c6",
+   "opening": "I1028",
+   "area_m2": 0.15,
+   "sides": [
+    "SITE-788f30878ba9d2b3",
+    "SITE-eaae022599294151"
+   ],
+   "allocation": "TRADE_RULE_REQUIRED"
+  },
+  {
+   "threshold": "THRESHOLD-c82365dd41b94abe",
+   "site": "SITE-9f4d8d389cb86869",
+   "opening": "I1988",
+   "area_m2": 0.15,
+   "sides": [
+    "SITE-27d6688454aaf8de",
+    "SITE-daca396d6d730e60"
+   ],
+   "allocation": "TRADE_RULE_REQUIRED"
+  },
+  {
+   "threshold": "THRESHOLD-04910e5deeeed2fc",
+   "site": "SITE-bd2b680527d056fa",
+   "opening": "I841",
+   "area_m2": 0.15,
+   "sides": [
+    "SITE-27d6688454aaf8de",
+    "SITE-5f1762f1a93b91ca"
+   ],
+   "allocation": "TRADE_RULE_REQUIRED"
+  },
+  {
+   "threshold": "THRESHOLD-f9846605acbce828",
+   "site": "SITE-e639327cc873867d",
+   "opening": "I1443",
+   "area_m2": 0.12,
+   "sides": [
+    "SITE-1c4abf65f9b5db1e",
+    "SITE-a6405850100155ac"
+   ],
+   "allocation": "TRADE_RULE_REQUIRED"
+  }
+ ],
+ "passage_strips": {
+  "M.B.ROOM / DRESS": {
+   "width_mm": 1200.0,
+   "wall_thickness_mm": 150.0,
+   "strip_m2": 0.18,
+   "owner_rule": "QP-17 / QP-18 / QP-19: open passage WITH HEAD at 2.200 m (old revision)",
+   "treatment": "the strip is part of the whole-site footprint (no closure exists); a door threshold is its own site - the two are not yet treated alike: POSSIBLE_FINISH_FOOTPRINT, allocation TRADE_RULE_REQUIRED, no value moved"
+  },
+  "HALL / LOBBY": {
+   "width_mm": 1196.9,
+   "wall_thickness_mm": 200.0,
+   "strip_m2": 0.2394,
+   "owner_rule": "QP-17 / QP-18: open passage FULL HEIGHT (old revision)"
+  }
+ },
+ "allocation": "TRADE_RULE_REQUIRED - no authoritative rule answers it; the strip is never moved into a room to match a total; the owner is not asked (not the only remaining issue)"
+}

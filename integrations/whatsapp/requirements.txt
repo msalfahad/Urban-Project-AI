@@ -1,0 +1,4 @@
+# Deploy-time deps for the WhatsApp bridge Cloud Function.
+# The `agents/` and `engine/` packages ship alongside this folder.
+functions-framework==3.*
+anthropic>=0.40

@@ -1,0 +1,259 @@
+{
+ "SCHEMA": "URBAN_R8_8_TOLERANCE_ARCHITECTURE_V1",
+ "frozen_policy": "TOPOLOGY_TOLERANCE_POLICY_V1",
+ "frozen_policy_digest": "263d2adf1d1770e1db963ac9bfde852dcedbdbd77e0040730322848c49acb450",
+ "classes": {
+  "NUMERIC_FLOAT_EQUIVALENCE": "two numbers are the same value written twice (route / representation noise). V1: eps_n = 2**-30 x max|coord| (relative, unit-free)",
+  "TOPOLOGY_NODE_EQUIVALENCE": "two curve ends are one topological node. V1: eps_n for the build, eps_r for the certificate build; never a grid; a decision between them -> TOLERANCE_SENSITIVE",
+  "MATERIAL_PAIRING_TOLERANCE": "two lines are faces of one wall / material. NOT USED by TS01 (wall_solid only)",
+  "REGION_INTERSECTION_TOLERANCE": "a record is inside / outside a region. eps_n only (RM-EXACT-1)",
+  "MEASUREMENT_COMPARISON_TOLERANCE": "two measured values agree. Site area bound = eps_r x perimeter; never used to change a value; cross-route equality of rows is exact"
+ },
+ "legacy_inventory": [
+  {
+   "where": "engine/wall_solid.py",
+   "name": "NODE_SNAP_GRID_MM",
+   "value": 0.05,
+   "unit": "mm",
+   "class": "TOPOLOGY_NODE_EQUIVALENCE (implemented as a GRID snap)",
+   "basis_stated": "AR-00 saturation: 0.01 -> 49 components, 0.05 / 0.1 -> 46",
+   "verdict": "CALIBRATED on one observed project's outcome; a grid has a cliff at every grid line (two points 1 ULP apart can land in different cells), so no grid size is noise-safe. NOT ADOPTED"
+  },
+  {
+   "where": "engine/wall_solid.py",
+   "name": "MAX_DEFENSIBLE_SNAP_MM",
+   "value": 1.0,
+   "unit": "mm",
+   "class": "TOPOLOGY_NODE_EQUIVALENCE (upper guard)",
+   "basis_stated": "above it a snap closes a gap",
+   "verdict": "consistent with eps_r = 1 mm (authored precision); kept as a principle, already in V1"
+  },
+  {
+   "where": "engine/wall_solid.py",
+   "name": "MIN_WALL_LENGTH_MM / MIN_WALL_THICKNESS_MM",
+   "value": [
+    50.0,
+    40.0
+   ],
+   "unit": "mm",
+   "class": "MATERIAL_PAIRING_TOLERANCE",
+   "basis_stated": "wall face pairing",
+   "verdict": "material / wall-solid semantics; must not gate room topology (TOPOLOGY_OBSTACLE != MATERIAL_WALL)"
+  },
+  {
+   "where": "engine/free_space.py",
+   "name": "MIN_HABITABLE_MM / MIN_ROOM_AREA_M2 / MAX_SHAFT_AREA_M2 / CAVITY_ASPECT",
+   "value": [
+    700.0,
+    1.2,
+    3.0,
+    6.0
+   ],
+   "unit": "mm / m2 / m2 / ratio",
+   "class": "SEMANTIC ROLE THRESHOLD (not a tolerance)",
+   "basis_stated": "space role from size",
+   "verdict": "role by size is a semantic guess; TS01 has no size-based role"
+  },
+  {
+   "where": "engine/free_space.py",
+   "name": "ENVELOPE_BOUNDARY_REACH_MM / lineage intersection length",
+   "value": [
+    1.0,
+    1.0
+   ],
+   "unit": "mm",
+   "class": "REGION_INTERSECTION_TOLERANCE",
+   "basis_stated": "lineage by touching length",
+   "verdict": "lineage by geometric proximity after union: not a proof rule; TS01 carries source ids through noding"
+  },
+  {
+   "where": "engine/ingest/planar_faces.py",
+   "name": "CELL_MM / MIN_FACE_CELLS / SAMPLE_MM",
+   "value": [
+    50.0,
+    4,
+    10.0
+   ],
+   "unit": "mm / cells / mm",
+   "class": "RASTER RESOLUTION",
+   "basis_stated": "raster face labelling, arc sampling",
+   "verdict": "a 50 mm cell cannot resolve a 1 mm decision; arcs are flattened; QA / localisation only"
+  },
+  {
+   "where": "research/.../r3/floor_regions.py",
+   "name": "SNAP_MM / AREA_AGREEMENT_SHARE",
+   "value": [
+    2.0,
+    0.03
+   ],
+   "unit": "mm / share",
+   "class": "TOPOLOGY_NODE_EQUIVALENCE + MEASUREMENT_COMPARISON",
+   "basis_stated": "H/V line arrangement; raster vs vector agreement",
+   "verdict": "2 mm exceeds authored precision (closes real 2 mm gaps); H/V only (SKEW_SEGMENTS_IGNORED): lab only"
+  },
+  {
+   "where": "research/.../qs01/takeoff.py",
+   "name": "stair / lift by layer count; min bbox side <= 600; area >= 3.0",
+   "value": [
+    600,
+    3.0
+   ],
+   "unit": "mm / m2",
+   "class": "PROJECT SEMANTIC RULE",
+   "basis_stated": "Qortuba legacy room classification",
+   "verdict": "project-specific: stays in QS01 (lab, legacy)"
+  },
+  {
+   "where": "engine/snap_tolerance.py",
+   "name": "measured noise-vs-gap decade histogram",
+   "value": null,
+   "unit": null,
+   "class": "TOPOLOGY_NODE_EQUIVALENCE (measurement, not a number)",
+   "basis_stated": "no recommendation unless noise and gaps separate",
+   "verdict": "the right idea; reproduced below for old Qortuba (the gap between 1e-9 and 1 unit is empty)"
+  }
+ ],
+ "h584_numeric_study": {
+  "geos_exact_no_node_equivalence_K1": {
+   "faces": 61,
+   "largest_face_m2": 280.1868,
+   "TS01_sites": 75,
+   "why": "exact GEOS noding keeps end points 1e-12..1e-9 apart as distinct nodes: rooms leak into each other; a node equivalence is required"
+  },
+  "coordinate_magnitude_M": 112440.11465629998,
+  "ulp_of_M": 1.4551915228366852e-11,
+  "v1_eps_n": 0.0001047180170717649,
+  "v1_eps_n_in_ulps": 7196167.338003199,
+  "v1_eps_r": 0.1,
+  "H584_route_difference_units": 4.3655745685100555e-11,
+  "H584_route_difference_ulps": 3.0,
+  "endpoint_pair_distance_decades_K1_admitted": {
+   "1e-12": 16,
+   "1e-11": 40,
+   "1e-10": 2,
+   "1e-9": 5,
+   "1e0": 57
+  },
+  "endpoint_pairs_exactly_coincident": "excluded above (set of distinct points)",
+  "eps_sensitivity": [
+   {
+    "eps": "1 ULP",
+    "eps_units": 1.4551915228366852e-11,
+    "ulps": 1.0,
+    "K1": {
+     "sites": 58,
+     "site_ids": "5314c0173a1162ea"
+    },
+    "K2": {
+     "sites": 59,
+     "site_ids": "9b3f179262732f86"
+    },
+    "routes_agree": false
+   },
+   {
+    "eps": "16 ULP",
+    "eps_units": 2.3283064365386963e-10,
+    "ulps": 16.0,
+    "K1": {
+     "sites": 68,
+     "site_ids": "405d3325a5484de9"
+    },
+    "K2": {
+     "sites": 68,
+     "site_ids": "405d3325a5484de9"
+    },
+    "routes_agree": true
+   },
+   {
+    "eps": "1024 ULP",
+    "eps_units": 1.4901161193847656e-08,
+    "ulps": 1024.0,
+    "K1": {
+     "sites": 75,
+     "site_ids": "4fb2838f4d5a6e13"
+    },
+    "K2": {
+     "sites": 75,
+     "site_ids": "4fb2838f4d5a6e13"
+    },
+    "routes_agree": true
+   },
+   {
+    "eps": "65536 ULP",
+    "eps_units": 9.5367431640625e-07,
+    "ulps": 65536.0,
+    "K1": {
+     "sites": 75,
+     "site_ids": "4fb2838f4d5a6e13"
+    },
+    "K2": {
+     "sites": 75,
+     "site_ids": "4fb2838f4d5a6e13"
+    },
+    "routes_agree": true
+   },
+   {
+    "eps": "4194304 ULP",
+    "eps_units": 6.103515625e-05,
+    "ulps": 4194304.0,
+    "K1": {
+     "sites": 75,
+     "site_ids": "4fb2838f4d5a6e13"
+    },
+    "K2": {
+     "sites": 75,
+     "site_ids": "4fb2838f4d5a6e13"
+    },
+    "routes_agree": true
+   },
+   {
+    "eps": "V1 eps_n",
+    "eps_units": 0.0001047180170717649,
+    "ulps": 7196167.3,
+    "K1": {
+     "sites": 75,
+     "site_ids": "4fb2838f4d5a6e13"
+    },
+    "K2": {
+     "sites": 75,
+     "site_ids": "4fb2838f4d5a6e13"
+    },
+    "routes_agree": true
+   }
+  ]
+ },
+ "authored_gap_behaviour_mm": {
+  "0.5": "AMBIGUOUS -> TOLERANCE_SENSITIVE (REVIEW) / SITE_ONLY_IN_AUTHORED_BUILD",
+  "1.0": "AMBIGUOUS (closed end: the eps_r build merges d <= eps_r) -> REVIEW",
+  "2.0": "AUTHORED: a real gap; the spaces connect (MULTIPLE_SEMANTIC_LABELS or the room is open)",
+  "5.0": "AUTHORED: as 2.0",
+  "tests": "tests/r8_8/test_r8_8_architecture.py (synthetic, mm units)"
+ },
+ "separation_per_run": {
+  "OLD_K1": {
+   "end_to_curve_decisions": 816,
+   "noise": 816,
+   "ambiguous": 0,
+   "near_eps_n": 0,
+   "noise_margin": 1024.0,
+   "separated": true
+  },
+  "OLD_K2": {
+   "end_to_curve_decisions": 816,
+   "noise": 816,
+   "ambiguous": 0,
+   "near_eps_n": 0,
+   "noise_margin": 1024.0,
+   "separated": true
+  },
+  "NEW_K2": {
+   "end_to_curve_decisions": 777,
+   "noise": 777,
+   "ambiguous": 0,
+   "near_eps_n": 0,
+   "noise_margin": 1024.0,
+   "separated": true
+  }
+ },
+ "band_edge_fix": "band(d == eps_r) is AMBIGUOUS (was AUTHORED), matching the <= of the certificate build; no number changed, the policy digest is unchanged"
+}

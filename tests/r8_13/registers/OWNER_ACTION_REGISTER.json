@@ -1,0 +1,25 @@
+{
+ "SCHEMA": "URBAN_OWNER_ACTION_REGISTER_V10",
+ "headline": "NO OWNER ACTION REQUIRED.",
+ "required_now": [],
+ "answered": [
+  {
+   "action_id": "QORTUBA_FLOOR_UNDER_BUILT_IN_WARDROBES",
+   "answer": "PORCELAIN FLOOR IS MEASURED OVER THE WHOLE ROOM FLOOR AREA",
+   "recorded_as": "QORTUBA-NEW-FLOOR-OBJECT-FOOTPRINT-OWNER-001@v1 -> QORTUBA-NEW-FLOOR-OBJECT-FOOTPRINT-OWNER-001@v1 FLOOR_FINISH FOOTPRINT_INCLUDED"
+  }
+ ],
+ "why_none": "all six new-revision rows compute in SHADOW; every remaining item is an engineering / release item (source anchor, strip allocation, passage soffit, cross-route, human review)",
+ "do_not_ask": [
+  "the selected plan",
+  "the unit",
+  "7116-7119",
+  "the xref scope",
+  "H2430 / H2431",
+  "the Hall / Lobby passage",
+  "passage width / height",
+  "the Q-14 ceiling footprint",
+  "the floor under wardrobes / furniture",
+  "any expected quantity"
+ ]
+}

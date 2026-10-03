@@ -1,0 +1,77 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_DONOR_REUSE_V1",
+ "donors": [
+  {
+   "donor": "OpenTakeoff (OT, Apache-2.0, e6d2251c)",
+   "capability": "schedule scan (row / column grouping)",
+   "class": "CLEAN_REIMPLEMENT",
+   "where": "engine/source/schedule_table.py",
+   "rejected": "silent row drop"
+  },
+  {
+   "donor": "OpenTakeoff",
+   "capability": "document structure / sheet detection",
+   "class": "CLEAN_REIMPLEMENT",
+   "where": "alsenan_phase_a.frames (repeated identical closed frames)",
+   "rejected": "-"
+  },
+  {
+   "donor": "OpenTakeoff",
+   "capability": "PDF vector extraction / page census",
+   "class": "CLEAN_REIMPLEMENT",
+   "where": "alsenan_phase_a.pdf_facts (PyMuPDF census only; no PDF quantity)",
+   "rejected": "quantities on scaleConfirmed:false; mixedScaleWarning warn-not-block"
+  },
+  {
+   "donor": "OpenTakeoff",
+   "capability": "One-Click / detectRooms",
+   "class": "BENCHMARK_ONLY",
+   "where": "-",
+   "rejected": "a room detector as quantity authority"
+  },
+  {
+   "donor": "U-C4N (UC4N, MIT, cdb10638)",
+   "capability": "labels.plain (CAD text control codes)",
+   "class": "CLEAN_REIMPLEMENT (COPY_ADAPT stays planned: clone absent)",
+   "where": "engine/source/cad_text.py",
+   "rejected": "takeoff.unit_of (inferred unit overrides INSUNITS)"
+  },
+  {
+   "donor": "U-C4N",
+   "capability": "CAD text / transform / blocks",
+   "class": "ALREADY_REIMPLEMENTED (R8.1 kernel_ocs)",
+   "where": "engine/source/cad",
+   "rejected": "silent identity on unreadable extrusion"
+  },
+  {
+   "donor": "beiming183 AutoCAD-MCP (BM, MIT)",
+   "capability": "field-level readback diff",
+   "class": "PATTERN_IN_USE",
+   "where": "r8_6a_reconcile (DWG vs DXF)",
+   "rejected": "geometry_digest as proof of physical geometry"
+  },
+  {
+   "donor": "Slacker autocad-mcp (SL, Apache-2.0)",
+   "capability": "live handle readback",
+   "class": "BENCHMARK_ONLY",
+   "where": "-",
+   "rejected": "unitless INSUNITS as mm"
+  },
+  {
+   "donor": "puran-water autocad-mcp (PW, MIT)",
+   "capability": "-",
+   "class": "BENCHMARK_ONLY",
+   "where": "-",
+   "rejected": "-"
+  },
+  {
+   "donor": "any MCP / donor calculator",
+   "capability": "quantities",
+   "class": "REJECT",
+   "where": "-",
+   "rejected": "ONE Urban engine only"
+  }
+ ],
+ "lock": "research/external_engine_lab/DONORS.lock (commits pinned; clones absent)",
+ "copied_code": "NONE"
+}

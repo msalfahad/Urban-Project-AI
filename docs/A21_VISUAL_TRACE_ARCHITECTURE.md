@@ -1,0 +1,239 @@
+# A21 Visual Trace and Source Sufficiency Architecture
+
+Status: hardening after `A21_VISUAL_TRACE_AND_SOURCE_SUFFICIENCY_01`.
+Code: `research/a21_trace_sufficiency_01/`. Tests: `tests/test_a21_trace_invariants.py`.
+
+**Agents extract and explain. Code calculates. Humans approve. Database remembers.**
+
+## 1. The problem this layer solves
+
+Two frozen presentation experiments established that better pixels do not
+create missing construction information. What remained was:
+
+- **source sufficiency** — a case can legitimately need a sheet its packet
+  omitted (DEV-02, DEV-03), and the resulting UNKNOWN is indistinguishable
+  from a real one;
+- **evidence traceability** — a correct number attached to the wrong wall is
+  worthless, and no reader output could be pointed at on the drawing;
+- **missing QS inputs** — the drawing establishes geometry, not every input a
+  quantity needs.
+
+## 2. Source sufficiency: two paths, conservative union, two records
+
+```
+SHEET_INDEX (all sheets, upright, hashed, per-sheet inverse transform)
+        │
+        ├── PATH A  DOCUMENT_GRAPH   deterministic: floor identity, facade
+        │                             direction, roof relationship, vertical
+        │                             condition, schedule existence
+        └── PATH B  VISUAL_PREREAD   sealed reader: sheet titles, markers,
+                                      cross references. Measures nothing.
+                          │
+                          ▼
+              CASE_SOURCE_REQUIREMENTS   union of justified REQUIRED sheets,
+                                          never a vote; disagreement preserved
+                          │
+          ┌───────────────┴────────────────┐
+          ▼                                ▼
+CONTROLLER_SOURCE_REQUIREMENTS    A21_READER_SOURCE_MANIFEST
+  every reason, every pre-read      sheet id, file, page id, hashes,
+  interpretation, every             document type, image size,
+  disagreement. NEVER mounted.      available / missing. Nothing else.
+```
+
+Why two records: the first packet built in this phase told the reader which
+sheet drew the curved stair and which dimensions to look for. That is the
+answer wearing a source's clothes. A shingle screen over every reader-visible
+file now fails the build if any pre-read sentence survives (`reader_manifest.py`).
+
+Missing sources are reported to the reader as **document types**
+(`STAIR_SECTION_DETAIL`), never descriptions ("the curved main stair detail"),
+for the same reason. `SOURCE_SET_INCOMPLETE` is recorded before any reader
+runs and means one thing only: the missing information cannot be silently
+replaced. It does not make visible geometry unknown.
+
+What the document path cannot do, and says so: resolve which section cuts
+which room. The CAD decode carries no sheet titles and no section markers, and
+long-line candidates are indistinguishable from plot boundaries. So when a
+height is needed both sections are raised. Omission is the asymmetric risk.
+
+## 3. Traces
+
+A trace is a claim with a place. Every trace carries identity
+(`TRACE_ID, CASE_ID, SHEET_ID, SOURCE_FILE_HASH, SOURCE_PRESENTATION_HASH,
+SOURCE_COORDINATE_SYSTEM, ORIGINAL_PDF_PAGE`), geometry in processed-sheet
+pixels, and the sheet's stored inverse transform. The register projects every
+geometry back to the original PDF page.
+
+**A printed dimension is separate evidence from what it measures.** A
+`PRINTED_DIMENSION` carries `TEXT_BBOX`, `DIMENSION_LINE_TRACE`,
+`EXTENSION_LINE_A/B`; the geometry it supports names it in `SUPPORTED_BY`.
+The extension lines are the point — they show which faces the dimension runs
+between, and in CASE-4 three dimensions passing near the stair turned out to
+terminate on room walls, not stair faces.
+
+### 3.1 Three statuses, never collapsed
+
+| status | values | meaning |
+|---|---|---|
+| `TRACE_RECORD_STATUS` | VALID / INVALID | is the record well-formed |
+| `TRACE_LOCATABILITY_STATUS` | LOCATABLE / NOT_ESTABLISHED | does it carry drawable geometry |
+| five semantic statuses | ESTABLISHED / NOT_ESTABLISHED / AMBIGUOUS / NOT_APPLICABLE | GEOMETRY, IDENTITY, DIMENSION, TREATMENT, PARAMETER |
+
+A VALID, NOT_ESTABLISHED trace is a legitimate result: "there is something
+here I cannot place". The register reports `VALID_TRACE_RECORDS`,
+`LOCATABLE_TRACES`, `NON_LOCATABLE_VALID_TRACES`, `INVALID_TRACE_RECORDS`
+separately. One established semantic field never establishes another.
+
+### 3.2 Cross-sheet relations
+
+Two sheets whose projected graphics differ are not thereby contradictory. An
+`ESTABLISHED_CROSS_SHEET_CONTRADICTION` needs: both claims traced, both sheet
+identities established, `SAME_PHYSICAL_LOCATION_ESTABLISHED`, the drawings
+expected to describe the same condition, and the conditions incompatible.
+Anything less is `POTENTIAL_CROSS_SHEET_CONTRADICTION`. A plan labelled VOID
+against a continuous slab line on an elevation is POTENTIAL: an elevation
+projection can hide an internal void.
+
+### 3.3 What the mapping tests prove, and do not
+
+| test | proves |
+|---|---|
+| `COORDINATE_ROUNDTRIP_PASS` | the transform inverts at ~0.0 px |
+| `SOURCE_INK_CORRESPONDENCE_PASS` | random processed ink lands on the same original ink, at equal physical area |
+| `TRACE_COORDINATE_MAPPING_PASS` | the coordinates readers actually produced land on the same ink |
+
+None of them proves `SEMANTIC_ACCURACY`, `GEOMETRY_CORRECTNESS` or
+`MEASUREMENT_CORRECTNESS`. A trace can map perfectly to ink and still identify
+the wrong architectural object. "Trace accuracy" is never used to mean both.
+
+## 4. Overlays
+
+Drawn from stored coordinates only. A trace with no geometry is listed as
+undrawable, never invented onto the sheet. Line style plus a short id carries
+the meaning; colour is redundant. Dimension traces draw all four geometries,
+extension lines thinner. The renderer is deliberately dense and is frozen for
+the experiment; `FOLLOW_ON_DESIGN_ITEM = TRACE_REVIEW_UI`.
+
+## 5. Parameters and the three quantity states
+
+A parameter is UNKNOWN because **no currently accepted project source or
+owner project input establishes it** — a property of the project's evidence,
+not of any experiment. Reader history is validation evidence only.
+
+A quantity inherits the **weakest** provenance among its inputs:
+
+| state | when |
+|---|---|
+| `SOURCE_ESTABLISHED_QUANTITY` | every input from a permitted project source |
+| `OWNER_PARAMETRIC_QUANTITY` | geometry from source, a QS input from the owner |
+| `PROVISIONAL_DEFAULT_QUANTITY` | any input is a temporary default |
+| `NOT_ESTABLISHED` | any input unknown |
+
+The constructor makes the dangerous states unrepresentable: a `DRAWING`
+parameter cannot be owner-confirmed, a default cannot be unmarked. An owner
+value is stored `OWNER_PROJECT_INPUT / PROJECT_INPUT / ESTABLISHED_FOR_PROJECT`
+and never relabelled drawing-derived. Changing a parameter recalculates
+dependent arithmetic; the trace-derived geometry hash does not move and no
+reader reruns (`recalculation_test.py`, synthetic values only).
+
+## 6. Generic guards
+
+- `source_access_guard.py` — every reading's cited and mentioned sheets
+  checked against its manifest; verdict stamped into the register.
+- `reader_manifest.py` — shingle screen: no pre-read sentence in any
+  reader-visible file; question text exempt.
+- `phase_registry.py` / `PARTIAL_STATE_FREEZE` — raw outputs frozen by hash
+  before any validator change; a validator defect is fixed generically and the
+  FINAL validator runs over every frozen raw output. Raw outputs are never edited.
+
+## 7. Recorded limitations
+
+- `SUBSET_SELECTION_PROTOCOL_STATUS = E1_4_INFLUENCED_MEMBERSHIP_UNCHANGED`.
+  Three subset clauses consulted E1.4 boundary classifications; no quantity,
+  no prior A21 result; declared-category re-derivation gives the same four
+  cases. The selection is not described as blind. E1.4 is sealed from
+  everything downstream.
+- The pre-read stage is itself a reader. Its output decides access, never
+  interpretation, and its interpretations live only in the controller record.
+
+## 8. From traces to quantities: the deterministic path
+
+```
+TRACE_REGISTER ──▶ engine/trace_to_region ──▶ engine/qs_measurement_region ──▶ engine/plaster_trade_engine
+   (A21 evidence)      (adapter, no invention)     (regions, closures, lm basis)     (m2 sheet, per-line states)
+```
+
+- **Adapter** (`trace_to_region.py`): takes a length only from an ESTABLISHED
+  dimension status; promotes an open edge to a closable site only when both
+  ends land on traced wall terminations; never invents a wall; records every
+  endpoint it snapped under tolerance. A polygon-traced face becomes a run
+  along its long axis.
+- **Region builder**: two shapes. `CELL` requires a ring and may close sites
+  under the declared basis; `LINEAR_RUN` (a parapet, a stair wall, a facade)
+  requires no ring and never closes a site. Under both, a synthetic closure
+  contributes zero, an `UNRESOLVED_EDGE` blocks, reversibility is proven by
+  hash on every build, and the gross basis is the sum of contributing edge
+  lengths — never a polygon perimeter.
+- **Trade engine**: a QS sheet with no hidden arithmetic. Each result line
+  (principal wall face, reveals, profiles) carries the weakest provenance
+  among *its own* inputs; there is no single state for the sheet. m² and lm
+  are never combined. Reader source types are bridged explicitly to
+  provenance ranks; scaled and visually interpreted reads are flagged.
+
+### 8.1 P7757 through this path (DETERMINISTIC_QS_PATH_01)
+
+With the parameter registry as it stands, every traced case ends at the
+owner-input gate and nothing is forced:
+
+| case | shape | region | why |
+|---|---|---|---|
+| CASE-1 RECEPTION | cell | NOT_ESTABLISHED | boundary does not meet itself; unresolved edges on it |
+| CASE-3 SALOON | cell | NOT_ESTABLISHED | boundary does not meet itself (open to RECEPTION, curved pool wall) |
+| CASE-4 stair walls | run | RUN_ESTABLISHED, gross NOT_ESTABLISHED | no contributing face carries a printed length |
+| CASE-6 SE parapet | run | NOT_ESTABLISHED | unresolved roof-edge portions on the run |
+
+This is consistent with four independent visual readings and with what
+E1.4 recorded independently: the drawing does not enclose these spaces and
+does not print the lengths a QS would need. The next inputs are the owner's,
+not the engine's.
+
+## 9. After the gate: P7757_WALL_TREATMENT_ESTIMATE_01
+
+The owner answered the gate (normal internal plaster 3.20 m; external
+storey heights 4.00 / 4.50 / 4.00; door 1.00 × 2.20 and window 1.50 × 1.50
+as temporary defaults; reveals ~0.20 / 0.15) and set two rules from the
+CASE-6 overlay review: **trace overlap ≠ material overlap**, and wall
+plaster needs **faces, not a ring**. Code under `research/qs_wall_treatment_01/`
+and the engine modules it uses:
+
+| step | module | output (gitignored, hashed in FREEZE_*.json) |
+|---|---|---|
+| material-role overlap audit, §4 balustrade rule, double-count guard | `engine/material_role_audit.py` | `OVERLAP_AUDIT.json` |
+| dimension owner from traced extension lines + orchestrator re-check of every CASE-6 height | `engine/dimension_owner.py` | `DIMENSION_OWNER_REGISTER.json` |
+| exact arcs from the DWG, correspondence only proposed | `engine/cad_curve_register.py` | `CAD_CURVE_REGISTER.json` |
+| owner parameters (§7) with scope rules (§8) | `owner_parameters.py` | `P7757_OWNER_PARAMETERS.json` |
+| face-set basis and partial-quantity architecture | `engine/wall_face_set.py`, `engine/wall_treatment_engine.py` | `P7757_WALL_TREATMENT_ESTIMATE.json`, `QS_TRACE.md`, `SENSITIVITY.json` |
+| source inventory (§25) | `source_inventory.py` | `SOURCE_INVENTORY.json` |
+| trace review UI (§26) | `review_ui.py` | `TRACE_REVIEW_UI.html` |
+| structural comparison (§34–36) after the estimate freeze | `a22_structural_comparison.py` | `A22_STRUCTURAL_COMPARISON.json` |
+| benchmark survey and reconciliation, after the A22 freeze | `benchmark_survey.py`, `benchmark_reconciliation.py` | `BENCHMARK_ACCESS_LOG.json`, `BENCHMARK_RECONCILIATION.json` |
+
+What the traced subset established, truthfully small: SALOON normal
+internal plaster on two printed faces (5.15 + 2.00) × 3.20 =
+22.88 m² `OWNER_PARAMETRIC_QUANTITY`, SALOON column bonding + plaster
+(0.90 + 0.90) × 3.20 = 5.76 m² (flagged by A22 for human review), 0.69 ×
+3.20 = 2.21 m² provisional, SE parapet capping 7.10 × 0.20 = 1.42 m²
+provisional (chain-derived length). Everything else on the four cases is
+`UNRESOLVED_SCOPE` with a reason per face: double-height reception (height
+unknown), stair walls (no printed face lengths), facades (exposure not
+established), parapet faces (heights ambiguous or lengths not printed).
+Coverage is `PARTIAL` everywhere and `COMPLETE_TOTAL_STATUS` is
+`NOT_ESTABLISHED` everywhere.
+
+The independent re-check of the CASE-6 heights confirmed the register with
+one prose correction: the "155" on the SE elevation runs from the tower top
+to the **dome apex**, not to the parapet rail (the rail is the end of the
+"193"); the chain values are unchanged. The B-B stack at the cut (kerb 0.54 +
+lattice 0.52 + cap 0.17 above +9.70) reconciles with the elevation chain
+(rail top +10.92) within a pixel.

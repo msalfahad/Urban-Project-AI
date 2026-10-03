@@ -1,0 +1,70 @@
+{
+ "SCHEMA": "URBAN_OWNER_ACTION_REGISTER_V11",
+ "headline": "NO OWNER ACTION REQUIRED.",
+ "required_now": [],
+ "answered_this_round": [
+  {
+   "fact": "QORTUBA-NEW-DOOR-THRESHOLD-CONTINUITY-OWNER-001@v1",
+   "kind": "THRESHOLD_ALLOCATION"
+  },
+  {
+   "fact": "QORTUBA-NEW-DRY-WET-TRANSITION-AT-DOOR-PLANE-OWNER-001@v1",
+   "kind": "THRESHOLD_ALLOCATION"
+  },
+  {
+   "fact": "QORTUBA-NEW-MARBLE-THRESHOLD-ONLY-IF-EXPLICIT-OWNER-001@v1",
+   "kind": "THRESHOLD_ALLOCATION"
+  },
+  {
+   "fact": "QORTUBA-NEW-OPEN-PASSAGE-REVEALS-PLASTERED-OWNER-001@v1",
+   "kind": "OPENING_REVEAL"
+  },
+  {
+   "fact": "QORTUBA-NEW-OPEN-PASSAGE-SOFFIT-NOT-CEILING-OWNER-001@v1",
+   "kind": "OPENING_REVEAL"
+  },
+  {
+   "fact": "QORTUBA-NEW-DRY-ROOM-SKIRTING-ALL-REAL-WALLS-OWNER-001@v1",
+   "kind": "SKIRTING_PATH"
+  },
+  {
+   "fact": "QORTUBA-NEW-NO-SKIRTING-FULL-WALL-TILE-ROOMS-OWNER-001@v1",
+   "kind": "SKIRTING_PATH"
+  }
+ ],
+ "why_none": "all six new-revision rows compute in SHADOW; what remains are release items carried as explicit release blockers with counterfactual values",
+ "prepared_for_release_stage_not_asked": [
+  {
+   "id": "QORTUBA_BED_ROOM_RECTANGLE_ROLE",
+   "only_if": "release of Q-13 / Q-14 is requested",
+   "question": "BED.ROOM: the 2.10 x 0.40 m double rectangle on the WALL layer (H2060 / H2061, dashed X inside) - a built shaft / duct (floor and ceiling stop at it) or a drawn symbol / overhead item?",
+   "effect": "0.84 m2 on Q-13 and on Q-14"
+  },
+  {
+   "id": "QORTUBA_MB_DRESS_PASSAGE_HEAD",
+   "only_if": "release of Q-14 is requested",
+   "question": "M.B.ROOM / DRESS open passage (1.20 m): is there a head (soffit) over it, or is it full height?",
+   "effect": "0.18 m2 on Q-14"
+  },
+  {
+   "id": "QORTUBA_ENTRANCE_THRESHOLD",
+   "only_if": "release of Q-13 is requested",
+   "question": "flat entrance door (HALL -> common landing, 1.00 m): does the flat's porcelain stop at the door centre like the dry / wet doors?",
+   "effect": "0.075 m2 on Q-13 (0 / 0.075 / 0.15)"
+  }
+ ],
+ "do_not_ask": [
+  "the selected plan",
+  "the unit",
+  "7116-7119",
+  "the xref scope",
+  "H2430 / H2431",
+  "Hall / Lobby geometry and height",
+  "the floor under wardrobes",
+  "the 3.20 m height",
+  "basic skirting",
+  "the door-threshold transition",
+  "the Hall / Lobby soffit",
+  "any expected quantity"
+ ]
+}

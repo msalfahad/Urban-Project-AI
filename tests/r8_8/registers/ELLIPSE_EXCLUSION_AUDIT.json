@@ -1,0 +1,468 @@
+{
+ "SCHEMA": "URBAN_R8_8_ELLIPSE_EXCLUSION_AUDIT_V1",
+ "revision": "QORTUBA_REV_OLD",
+ "route": "K1",
+ "count": 8,
+ "classification_counts": {
+  "TOPOLOGY_IRRELEVANT_PROVEN": 8
+ },
+ "rule": "TOPOLOGY_IRRELEVANT_PROVEN needs a positively established role that cannot bound a room (GR-02 door symbol) AND the door's closure established; the R8.7 'excluded by declaration' alone is not authority",
+ "records": [
+  {
+   "part": "QORTUBA_REV_OLD|H684|677|ELLIPTICAL_ARC|0",
+   "source_handle": "684",
+   "instance_path": [
+    "677"
+   ],
+   "block_record": "678",
+   "block_name": "6",
+   "layer": "DOOR",
+   "source_entity_type": "ELLIPSE",
+   "transform": {
+    "insertion": [
+     110374.7484116514,
+     15114.719614377616
+    ],
+    "scale": [
+     1.11111111111111,
+     1.11111111111111
+    ],
+    "rotation_rad": 0.0,
+    "extrusion": [
+     0.0,
+     0.0,
+     1.0
+    ]
+   },
+   "world_geometry": [
+    110352.199392,
+    15114.719614,
+    75.834353,
+    45.10674,
+    -45.10674,
+    75.834353,
+    1.100921,
+    2.605001
+   ],
+   "region_membership": "FULLY_INSIDE",
+   "role": "OPENING_SYMBOL",
+   "rule": "GR-02",
+   "physical_role_evidence": {
+    "LAYER_ROLE": "DOOR",
+    "layer": "DOOR",
+    "INSTANCE_CONTEXT": "SYMBOL_OCCURRENCE",
+    "BLOCK_NAME_ROLE": null,
+    "ENTITY_TYPE": "ELLIPSE",
+    "KIND": "ELLIPTICAL_ARC",
+    "BLOCK_DEFINITION": {
+     "NO_BOUNDARY_LAYER": true,
+     "DOOR_SIGNATURE": true
+    }
+   },
+   "door_closure": "CLOSED",
+   "door_closure_width": 100.0000000007567,
+   "sites_blocked": [],
+   "could_affect_topology": "only if admitted as a boundary; it is not: GR-02 proves a door symbol, and the door's own opening closure is established",
+   "classification": "TOPOLOGY_IRRELEVANT_PROVEN"
+  },
+  {
+   "part": "QORTUBA_REV_OLD|H684|841|ELLIPTICAL_ARC|0",
+   "source_handle": "684",
+   "instance_path": [
+    "841"
+   ],
+   "block_record": "678",
+   "block_name": "6",
+   "layer": "DOOR",
+   "source_entity_type": "ELLIPSE",
+   "transform": {
+    "insertion": [
+     109801.41507831738,
+     14894.719614378708
+    ],
+    "scale": [
+     1.11111111111111,
+     1.11111111111111
+    ],
+    "rotation_rad": 3.14159265358979,
+    "extrusion": [
+     0.0,
+     0.0,
+     1.0
+    ]
+   },
+   "world_geometry": [
+    109823.964098,
+    14894.719614,
+    -75.834353,
+    -45.10674,
+    45.10674,
+    -75.834353,
+    1.100921,
+    2.605001
+   ],
+   "region_membership": "FULLY_INSIDE",
+   "role": "OPENING_SYMBOL",
+   "rule": "GR-02",
+   "physical_role_evidence": {
+    "LAYER_ROLE": "DOOR",
+    "layer": "DOOR",
+    "INSTANCE_CONTEXT": "SYMBOL_OCCURRENCE",
+    "BLOCK_NAME_ROLE": null,
+    "ENTITY_TYPE": "ELLIPSE",
+    "KIND": "ELLIPTICAL_ARC",
+    "BLOCK_DEFINITION": {
+     "NO_BOUNDARY_LAYER": true,
+     "DOOR_SIGNATURE": true
+    }
+   },
+   "door_closure": "CLOSED",
+   "door_closure_width": 100.0000000007567,
+   "sites_blocked": [],
+   "could_affect_topology": "only if admitted as a boundary; it is not: GR-02 proves a door symbol, and the door's own opening closure is established",
+   "classification": "TOPOLOGY_IRRELEVANT_PROVEN"
+  },
+  {
+   "part": "QORTUBA_REV_OLD|H684|1028|ELLIPTICAL_ARC|0",
+   "source_handle": "684",
+   "instance_path": [
+    "1028"
+   ],
+   "block_record": "678",
+   "block_name": "6",
+   "layer": "DOOR",
+   "source_entity_type": "ELLIPSE",
+   "transform": {
+    "insertion": [
+     110371.4150783158,
+     15114.719614377613
+    ],
+    "scale": [
+     -1.11111111111111,
+     1.11111111111111
+    ],
+    "rotation_rad": 0.0,
+    "extrusion": [
+     0.0,
+     0.0,
+     1.0
+    ]
+   },
+   "world_geometry": [
+    110393.964098,
+    15114.719614,
+    -75.834353,
+    45.10674,
+    45.10674,
+    75.834353,
+    1.100921,
+    2.605001
+   ],
+   "region_membership": "FULLY_INSIDE",
+   "role": "OPENING_SYMBOL",
+   "rule": "GR-02",
+   "physical_role_evidence": {
+    "LAYER_ROLE": "DOOR",
+    "layer": "DOOR",
+    "INSTANCE_CONTEXT": "SYMBOL_OCCURRENCE",
+    "BLOCK_NAME_ROLE": null,
+    "ENTITY_TYPE": "ELLIPSE",
+    "KIND": "ELLIPTICAL_ARC",
+    "BLOCK_DEFINITION": {
+     "NO_BOUNDARY_LAYER": true,
+     "DOOR_SIGNATURE": true
+    }
+   },
+   "door_closure": "CLOSED",
+   "door_closure_width": 100.0000000007567,
+   "sites_blocked": [],
+   "could_affect_topology": "only if admitted as a boundary; it is not: GR-02 proves a door symbol, and the door's own opening closure is established",
+   "classification": "TOPOLOGY_IRRELEVANT_PROVEN"
+  },
+  {
+   "part": "QORTUBA_REV_OLD|H684|1443|ELLIPTICAL_ARC|0",
+   "source_handle": "684",
+   "instance_path": [
+    "1443"
+   ],
+   "block_record": "678",
+   "block_name": "6",
+   "layer": "DOOR",
+   "source_entity_type": "ELLIPSE",
+   "transform": {
+    "insertion": [
+     109568.08174498602,
+     15686.386281044212
+    ],
+    "scale": [
+     -0.88888888888889,
+     0.88888888888889
+    ],
+    "rotation_rad": 1.5707963267949,
+    "extrusion": [
+     0.0,
+     0.0,
+     1.0
+    ]
+   },
+   "world_geometry": [
+    109568.081745,
+    15704.425497,
+    -36.085392,
+    -60.667482,
+    -60.667482,
+    36.085392,
+    1.100921,
+    2.605001
+   ],
+   "region_membership": "FULLY_INSIDE",
+   "role": "OPENING_SYMBOL",
+   "rule": "GR-02",
+   "physical_role_evidence": {
+    "LAYER_ROLE": "DOOR",
+    "layer": "DOOR",
+    "INSTANCE_CONTEXT": "SYMBOL_OCCURRENCE",
+    "BLOCK_NAME_ROLE": null,
+    "ENTITY_TYPE": "ELLIPSE",
+    "KIND": "ELLIPTICAL_ARC",
+    "BLOCK_DEFINITION": {
+     "NO_BOUNDARY_LAYER": true,
+     "DOOR_SIGNATURE": true
+    }
+   },
+   "door_closure": "CLOSED",
+   "door_closure_width": 80.0,
+   "sites_blocked": [],
+   "could_affect_topology": "only if admitted as a boundary; it is not: GR-02 proves a door symbol, and the door's own opening closure is established",
+   "classification": "TOPOLOGY_IRRELEVANT_PROVEN"
+  },
+  {
+   "part": "QORTUBA_REV_OLD|H684|1471|ELLIPTICAL_ARC|0",
+   "source_handle": "684",
+   "instance_path": [
+    "1471"
+   ],
+   "block_record": "678",
+   "block_name": "6",
+   "layer": "DOOR",
+   "source_entity_type": "ELLIPSE",
+   "transform": {
+    "insertion": [
+     109661.41507831738,
+     15589.719614377613
+    ],
+    "scale": [
+     -1.11111111111111,
+     1.11111111111111
+    ],
+    "rotation_rad": 0.0,
+    "extrusion": [
+     0.0,
+     0.0,
+     1.0
+    ]
+   },
+   "world_geometry": [
+    109683.964098,
+    15589.719614,
+    -75.834353,
+    45.10674,
+    45.10674,
+    75.834353,
+    1.100921,
+    2.605001
+   ],
+   "region_membership": "FULLY_INSIDE",
+   "role": "OPENING_SYMBOL",
+   "rule": "GR-02",
+   "physical_role_evidence": {
+    "LAYER_ROLE": "DOOR",
+    "layer": "DOOR",
+    "INSTANCE_CONTEXT": "SYMBOL_OCCURRENCE",
+    "BLOCK_NAME_ROLE": null,
+    "ENTITY_TYPE": "ELLIPSE",
+    "KIND": "ELLIPTICAL_ARC",
+    "BLOCK_DEFINITION": {
+     "NO_BOUNDARY_LAYER": true,
+     "DOOR_SIGNATURE": true
+    }
+   },
+   "door_closure": "CLOSED",
+   "door_closure_width": 100.0000000007567,
+   "sites_blocked": [],
+   "could_affect_topology": "only if admitted as a boundary; it is not: GR-02 proves a door symbol, and the door's own opening closure is established",
+   "classification": "TOPOLOGY_IRRELEVANT_PROVEN"
+  },
+  {
+   "part": "QORTUBA_REV_OLD|H684|1561|ELLIPTICAL_ARC|0",
+   "source_handle": "684",
+   "instance_path": [
+    "1561"
+   ],
+   "block_record": "678",
+   "block_name": "6",
+   "layer": "DOOR",
+   "source_entity_type": "ELLIPSE",
+   "transform": {
+    "insertion": [
+     109523.08174498603,
+     15471.386281044219
+    ],
+    "scale": [
+     -0.88888888888889,
+     0.88888888888889
+    ],
+    "rotation_rad": 1.5707963267949,
+    "extrusion": [
+     0.0,
+     0.0,
+     1.0
+    ]
+   },
+   "world_geometry": [
+    109523.081745,
+    15489.425497,
+    -36.085392,
+    -60.667482,
+    -60.667482,
+    36.085392,
+    1.100921,
+    2.605001
+   ],
+   "region_membership": "FULLY_INSIDE",
+   "role": "OPENING_SYMBOL",
+   "rule": "GR-02",
+   "physical_role_evidence": {
+    "LAYER_ROLE": "DOOR",
+    "layer": "DOOR",
+    "INSTANCE_CONTEXT": "SYMBOL_OCCURRENCE",
+    "BLOCK_NAME_ROLE": null,
+    "ENTITY_TYPE": "ELLIPSE",
+    "KIND": "ELLIPTICAL_ARC",
+    "BLOCK_DEFINITION": {
+     "NO_BOUNDARY_LAYER": true,
+     "DOOR_SIGNATURE": true
+    }
+   },
+   "door_closure": "CLOSED",
+   "door_closure_width": 80.00000000000364,
+   "sites_blocked": [],
+   "could_affect_topology": "only if admitted as a boundary; it is not: GR-02 proves a door symbol, and the door's own opening closure is established",
+   "classification": "TOPOLOGY_IRRELEVANT_PROVEN"
+  },
+  {
+   "part": "QORTUBA_REV_OLD|H684|1988|ELLIPTICAL_ARC|0",
+   "source_handle": "684",
+   "instance_path": [
+    "1988"
+   ],
+   "block_record": "678",
+   "block_name": "6",
+   "layer": "DOOR",
+   "source_entity_type": "ELLIPSE",
+   "transform": {
+    "insertion": [
+     109799.74841164851,
+     14844.71961437866
+    ],
+    "scale": [
+     -1.11111111111111,
+     1.11111111111111
+    ],
+    "rotation_rad": 3.14159265358979,
+    "extrusion": [
+     0.0,
+     0.0,
+     1.0
+    ]
+   },
+   "world_geometry": [
+    109777.199392,
+    14844.719614,
+    75.834353,
+    -45.10674,
+    -45.10674,
+    -75.834353,
+    1.100921,
+    2.605001
+   ],
+   "region_membership": "FULLY_INSIDE",
+   "role": "OPENING_SYMBOL",
+   "rule": "GR-02",
+   "physical_role_evidence": {
+    "LAYER_ROLE": "DOOR",
+    "layer": "DOOR",
+    "INSTANCE_CONTEXT": "SYMBOL_OCCURRENCE",
+    "BLOCK_NAME_ROLE": null,
+    "ENTITY_TYPE": "ELLIPSE",
+    "KIND": "ELLIPTICAL_ARC",
+    "BLOCK_DEFINITION": {
+     "NO_BOUNDARY_LAYER": true,
+     "DOOR_SIGNATURE": true
+    }
+   },
+   "door_closure": "CLOSED",
+   "door_closure_width": 100.0000000007567,
+   "sites_blocked": [],
+   "could_affect_topology": "only if admitted as a boundary; it is not: GR-02 proves a door symbol, and the door's own opening closure is established",
+   "classification": "TOPOLOGY_IRRELEVANT_PROVEN"
+  },
+  {
+   "part": "QORTUBA_REV_OLD|H684|2044|ELLIPTICAL_ARC|0",
+   "source_handle": "684",
+   "instance_path": [
+    "2044"
+   ],
+   "block_record": "678",
+   "block_name": "6",
+   "layer": "DOOR",
+   "source_entity_type": "ELLIPSE",
+   "transform": {
+    "insertion": [
+     109608.08174498602,
+     14856.38628104422
+    ],
+    "scale": [
+     -0.88888888888889,
+     0.88888888888889
+    ],
+    "rotation_rad": 1.5707963267949,
+    "extrusion": [
+     0.0,
+     0.0,
+     1.0
+    ]
+   },
+   "world_geometry": [
+    109608.081745,
+    14874.425497,
+    -36.085392,
+    -60.667482,
+    -60.667482,
+    36.085392,
+    1.100921,
+    2.605001
+   ],
+   "region_membership": "FULLY_INSIDE",
+   "role": "OPENING_SYMBOL",
+   "rule": "GR-02",
+   "physical_role_evidence": {
+    "LAYER_ROLE": "DOOR",
+    "layer": "DOOR",
+    "INSTANCE_CONTEXT": "SYMBOL_OCCURRENCE",
+    "BLOCK_NAME_ROLE": null,
+    "ENTITY_TYPE": "ELLIPSE",
+    "KIND": "ELLIPTICAL_ARC",
+    "BLOCK_DEFINITION": {
+     "NO_BOUNDARY_LAYER": true,
+     "DOOR_SIGNATURE": true
+    }
+   },
+   "door_closure": "CLOSED",
+   "door_closure_width": 80.00000000000364,
+   "sites_blocked": [],
+   "could_affect_topology": "only if admitted as a boundary; it is not: GR-02 proves a door symbol, and the door's own opening closure is established",
+   "classification": "TOPOLOGY_IRRELEVANT_PROVEN"
+  }
+ ]
+}

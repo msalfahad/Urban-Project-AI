@@ -1,0 +1,314 @@
+{
+ "SCHEMA": "URBAN_R8_18_QORTUBA_WALL_HEIGHT_REGISTER_V1",
+ "floor": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+ "scopes": {
+  "DRY_INTERNAL_ROOM|PLASTER": {
+   "scope": {
+    "class": "DRY_INTERNAL_ROOM",
+    "trade": "PLASTER",
+    "project": "QORTUBA",
+    "source_revision_id": "QORTUBA_REV_NEW",
+    "region_id": "RC:MODEL_SPACE:4267:540:1649",
+    "plan": "PLAN_VARIANT_4_SELECTED",
+    "floor": "the selected SECOND FLOOR apartment"
+   },
+   "candidates": [
+    {
+     "kind": "DERIVED_CLEAR_HEIGHT",
+     "rank": 3,
+     "value_m": null,
+     "authority": null,
+     "state": "BLOCKED",
+     "derivation": {
+      "kind": "DERIVED_CLEAR_HEIGHT",
+      "gross_m": 4.0,
+      "gross_authority": "SOURCE TEXT 'LEVEL R.F = 4.00 m' (measured region)",
+      "components": {
+       "beam_or_soffit_zone": {
+        "value_m": null,
+        "authority": null,
+        "required": true
+       },
+       "ceiling_service_decor_zone": {
+        "value_m": null,
+        "authority": null,
+        "required": true
+       },
+       "floor_buildup": {
+        "value_m": null,
+        "authority": null,
+        "required": true
+       }
+      },
+      "formula": "gross - beam_or_soffit_zone - ceiling_service_decor_zone - floor_buildup",
+      "state": "BLOCKED",
+      "value_m": null,
+      "missing": [
+       "beam_or_soffit_zone",
+       "ceiling_service_decor_zone",
+       "floor_buildup"
+      ]
+     }
+    },
+    {
+     "kind": "OWNER_PROJECT_FACT",
+     "rank": 4,
+     "value_m": 3.15,
+     "authority": "QORTUBA-NEW-DRY-WALL-FINISH-HEIGHT-OWNER-001@v1",
+     "state": "ESTABLISHED"
+    }
+   ],
+   "policy": "WALL_HEIGHT_AUTHORITY_POLICY_V1",
+   "state": "ESTABLISHED",
+   "value_m": 3.15,
+   "authority": "QORTUBA-NEW-DRY-WALL-FINISH-HEIGHT-OWNER-001@v1",
+   "governing": "OWNER_PROJECT_FACT"
+  },
+  "DRY_INTERNAL_ROOM|PAINT": {
+   "scope": {
+    "class": "DRY_INTERNAL_ROOM",
+    "trade": "PAINT",
+    "project": "QORTUBA",
+    "source_revision_id": "QORTUBA_REV_NEW",
+    "region_id": "RC:MODEL_SPACE:4267:540:1649",
+    "plan": "PLAN_VARIANT_4_SELECTED",
+    "floor": "the selected SECOND FLOOR apartment"
+   },
+   "candidates": [
+    {
+     "kind": "DERIVED_CLEAR_HEIGHT",
+     "rank": 3,
+     "value_m": null,
+     "authority": null,
+     "state": "BLOCKED",
+     "derivation": {
+      "kind": "DERIVED_CLEAR_HEIGHT",
+      "gross_m": 4.0,
+      "gross_authority": "SOURCE TEXT 'LEVEL R.F = 4.00 m' (measured region)",
+      "components": {
+       "beam_or_soffit_zone": {
+        "value_m": null,
+        "authority": null,
+        "required": true
+       },
+       "ceiling_service_decor_zone": {
+        "value_m": null,
+        "authority": null,
+        "required": true
+       },
+       "floor_buildup": {
+        "value_m": null,
+        "authority": null,
+        "required": true
+       }
+      },
+      "formula": "gross - beam_or_soffit_zone - ceiling_service_decor_zone - floor_buildup",
+      "state": "BLOCKED",
+      "value_m": null,
+      "missing": [
+       "beam_or_soffit_zone",
+       "ceiling_service_decor_zone",
+       "floor_buildup"
+      ]
+     }
+    },
+    {
+     "kind": "OWNER_PROJECT_FACT",
+     "rank": 4,
+     "value_m": 3.15,
+     "authority": "QORTUBA-NEW-DRY-WALL-FINISH-HEIGHT-OWNER-001@v1",
+     "state": "ESTABLISHED"
+    }
+   ],
+   "policy": "WALL_HEIGHT_AUTHORITY_POLICY_V1",
+   "state": "ESTABLISHED",
+   "value_m": 3.15,
+   "authority": "QORTUBA-NEW-DRY-WALL-FINISH-HEIGHT-OWNER-001@v1",
+   "governing": "OWNER_PROJECT_FACT"
+  },
+  "WET_SERVICE_ROOM|WALL_TILE": {
+   "scope": {
+    "class": "WET_SERVICE_ROOM",
+    "trade": "WALL_TILE",
+    "project": "QORTUBA",
+    "source_revision_id": "QORTUBA_REV_NEW",
+    "region_id": "RC:MODEL_SPACE:4267:540:1649",
+    "plan": "PLAN_VARIANT_4_SELECTED",
+    "floor": "the selected SECOND FLOOR apartment"
+   },
+   "candidates": [
+    {
+     "kind": "OWNER_PROJECT_FACT",
+     "rank": 4,
+     "value_m": 3.2,
+     "authority": "QORTUBA-NEW-WET-SERVICE-FINISH-OWNER-001@v1",
+     "state": "ESTABLISHED"
+    }
+   ],
+   "policy": "WALL_HEIGHT_AUTHORITY_POLICY_V1",
+   "state": "ESTABLISHED",
+   "value_m": 3.2,
+   "authority": "QORTUBA-NEW-WET-SERVICE-FINISH-OWNER-001@v1",
+   "governing": "OWNER_PROJECT_FACT"
+  },
+  "SERVICE_ROOM|WALL_TILE": {
+   "scope": {
+    "class": "SERVICE_ROOM",
+    "trade": "WALL_TILE",
+    "project": "QORTUBA",
+    "source_revision_id": "QORTUBA_REV_NEW",
+    "region_id": "RC:MODEL_SPACE:4267:540:1649",
+    "plan": "PLAN_VARIANT_4_SELECTED",
+    "floor": "the selected SECOND FLOOR apartment"
+   },
+   "candidates": [
+    {
+     "kind": "OWNER_PROJECT_FACT",
+     "rank": 4,
+     "value_m": 3.2,
+     "authority": "QORTUBA-NEW-WET-SERVICE-FINISH-OWNER-001@v1 (SERVICE_ROOM; PAINTRY via QP-07 = kitchen / preparation zone for the ceramic takeoff)",
+     "state": "ESTABLISHED"
+    }
+   ],
+   "policy": "WALL_HEIGHT_AUTHORITY_POLICY_V1",
+   "state": "ESTABLISHED",
+   "value_m": 3.2,
+   "authority": "QORTUBA-NEW-WET-SERVICE-FINISH-OWNER-001@v1 (SERVICE_ROOM; PAINTRY via QP-07 = kitchen / preparation zone for the ceramic takeoff)",
+   "governing": "OWNER_PROJECT_FACT"
+  }
+ },
+ "governing": {
+  "DRY_INTERNAL_ROOM|PLASTER": {
+   "value_m": 3.15,
+   "governing": "OWNER_PROJECT_FACT",
+   "authority": "QORTUBA-NEW-DRY-WALL-FINISH-HEIGHT-OWNER-001@v1",
+   "state": "ESTABLISHED"
+  },
+  "DRY_INTERNAL_ROOM|PAINT": {
+   "value_m": 3.15,
+   "governing": "OWNER_PROJECT_FACT",
+   "authority": "QORTUBA-NEW-DRY-WALL-FINISH-HEIGHT-OWNER-001@v1",
+   "state": "ESTABLISHED"
+  },
+  "WET_SERVICE_ROOM|WALL_TILE": {
+   "value_m": 3.2,
+   "governing": "OWNER_PROJECT_FACT",
+   "authority": "QORTUBA-NEW-WET-SERVICE-FINISH-OWNER-001@v1",
+   "state": "ESTABLISHED"
+  },
+  "SERVICE_ROOM|WALL_TILE": {
+   "value_m": 3.2,
+   "governing": "OWNER_PROJECT_FACT",
+   "authority": "QORTUBA-NEW-WET-SERVICE-FINISH-OWNER-001@v1 (SERVICE_ROOM; PAINTRY via QP-07 = kitchen / preparation zone for the ceramic takeoff)",
+   "state": "ESTABLISHED"
+  }
+ },
+ "derivation": {
+  "DRY_INTERNAL_ROOM|PLASTER": {
+   "kind": "DERIVED_CLEAR_HEIGHT",
+   "rank": 3,
+   "value_m": null,
+   "authority": null,
+   "state": "BLOCKED",
+   "derivation": {
+    "kind": "DERIVED_CLEAR_HEIGHT",
+    "gross_m": 4.0,
+    "gross_authority": "SOURCE TEXT 'LEVEL R.F = 4.00 m' (measured region)",
+    "components": {
+     "beam_or_soffit_zone": {
+      "value_m": null,
+      "authority": null,
+      "required": true
+     },
+     "ceiling_service_decor_zone": {
+      "value_m": null,
+      "authority": null,
+      "required": true
+     },
+     "floor_buildup": {
+      "value_m": null,
+      "authority": null,
+      "required": true
+     }
+    },
+    "formula": "gross - beam_or_soffit_zone - ceiling_service_decor_zone - floor_buildup",
+    "state": "BLOCKED",
+    "value_m": null,
+    "missing": [
+     "beam_or_soffit_zone",
+     "ceiling_service_decor_zone",
+     "floor_buildup"
+    ]
+   }
+  },
+  "DRY_INTERNAL_ROOM|PAINT": {
+   "kind": "DERIVED_CLEAR_HEIGHT",
+   "rank": 3,
+   "value_m": null,
+   "authority": null,
+   "state": "BLOCKED",
+   "derivation": {
+    "kind": "DERIVED_CLEAR_HEIGHT",
+    "gross_m": 4.0,
+    "gross_authority": "SOURCE TEXT 'LEVEL R.F = 4.00 m' (measured region)",
+    "components": {
+     "beam_or_soffit_zone": {
+      "value_m": null,
+      "authority": null,
+      "required": true
+     },
+     "ceiling_service_decor_zone": {
+      "value_m": null,
+      "authority": null,
+      "required": true
+     },
+     "floor_buildup": {
+      "value_m": null,
+      "authority": null,
+      "required": true
+     }
+    },
+    "formula": "gross - beam_or_soffit_zone - ceiling_service_decor_zone - floor_buildup",
+    "state": "BLOCKED",
+    "value_m": null,
+    "missing": [
+     "beam_or_soffit_zone",
+     "ceiling_service_decor_zone",
+     "floor_buildup"
+    ]
+   }
+  },
+  "WET_SERVICE_ROOM|WALL_TILE": null,
+  "SERVICE_ROOM|WALL_TILE": null
+ },
+ "owner_rationale": {
+  "floor_to_floor_m": 4.0,
+  "beam_zone_m": 0.6,
+  "ceiling_decor_zone_m": 0.15,
+  "floor_buildup_m": 0.1,
+  "result_m": 3.15,
+  "status": "OWNER_RATIONALE (example arithmetic) - the components are NOT source-established and form no formula"
+ },
+ "rationale_is_formula": false,
+ "conflicts": [
+  {
+   "trade": "WALL_TILE",
+   "finish_height_m": 3.2,
+   "available_m": 3.15,
+   "state": "POTENTIAL_PHYSICAL_CONFLICT_NOT_PROVEN",
+   "basis": "the owner's DRY rationale (4.00 - 0.60 - 0.15 - 0.10): components not source",
+   "action": "flag only - never clipped"
+  }
+ ],
+ "conflict_action": "flag only: WALL_TILE stays 3.20 m, never clipped to 3.15 m; not asked (the wet height is on the do-not-ask list)",
+ "never": [
+  "a company-wide wall height",
+  "3.15 m in a wet / service room",
+  "3.20 m clipped to 3.15 m",
+  "porcelain reveals without explicit authority",
+  "paint in a wet / service room",
+  "a column or duct face finished by assumption",
+  "the skirting path as the waterproofing perimeter"
+ ],
+ "blind_equal": true
+}

@@ -1,0 +1,154 @@
+{
+ "SCHEMA": "URBAN_R8_16_FREEZE_V1",
+ "recommendation_written_first": {
+  "file": "research/external_engine_lab/r8_16_recommendation.json",
+  "sha256": "d923500588664b75049fba3899e5e3405bc9dea2b4fdf97770bdcd478c348e02",
+  "committed_in": "55a484e"
+ },
+ "frozen_commit": "2ded82aaba4437513860b56ff8987e4713a5be05",
+ "door_closure_policy": {
+  "id": "DOOR_OPENING_CLOSURE_POLICY_V2",
+  "digest": "23142e50a6f92ac4e540e973ba580d067e2983f6bb15b72d83c98a5666e7a790"
+ },
+ "wall_contact_path_policy": {
+  "id": "WALL_CONTACT_PATH_POLICY_V3",
+  "digest": "d2e6263a794acbd406b9903261640a6b8a786dff4f23607d6d3c1ebccfebbc99"
+ },
+ "unchanged": {
+  "wall_band_policy": [
+   "WALL_BAND_POLICY_V5",
+   "d1ff58e755bb88f4bbb7a9813427b7ac6f054ece851df7d9a048866641f3e6d3"
+  ],
+  "topology_closure_policy": [
+   "TOPOLOGY_CLOSURE_POLICY_V1",
+   "46742c570b4d8a036fd6b7446f28055bfd4e1adbff51966e800e5986ca99ccb2"
+  ],
+  "topology_tolerance_policy": [
+   "TOPOLOGY_TOLERANCE_POLICY_V1",
+   "263d2adf1d1770e1db963ac9bfde852dcedbdbd77e0040730322848c49acb450"
+  ],
+  "wall_contact_path_policy_v2": [
+   "WALL_CONTACT_PATH_POLICY_V2",
+   "5b5d6e5ec6397cf1c09fa678c95197db971f0867ae741becb9ac3b51bfc0c5b3"
+  ]
+ },
+ "engine_file_sha256": {
+  "engine/source/topology.py": "f87ce3cffe9c3d3d54cc20cfb28413b1e168f3b7289ae7264723eeca7d4bc795",
+  "engine/source/wall_contact_path.py": "106ad7abef5ff6780cee00c470af0f97b17c154f6720d76ac9bc5059c841cb70",
+  "engine/source/run_manifest.py": "75e8485af6bc6740e761d423aea7b57078133c433bc9c5de562e6e737753b170"
+ },
+ "blind_script_sha256": "63b77feaadcc0f7a254ea8493c383c64315a4532896651c175f78cd0dca3c4fd",
+ "synthetic_test_sha256": {
+  "tests/r8_16/test_r8_16_offset_closure.py": "06964c2c9103e4ab691a154309794b1f4b42480cc58f8dfa3c683b9ce2ab8289",
+  "tests/r8_16/test_r8_16_skirting_v3.py": "9d0dd2dd17384d90b552b008eddc7a9cca91473a1be17e2fffff6bbdd5975cbc"
+ },
+ "synthetic_tests": [
+  "test_a_normal_aligned_door_keeps_the_v1_end_point_closure",
+  "test_an_offset_jamb_door_gets_its_closure_b_and_its_own_strip_site",
+  "test_the_same_offset_geometry_without_a_door_forms_no_closure",
+  "test_a_leaf_inside_the_reveal_gets_no_closure_b",
+  "test_two_competing_far_faces_block_closure_b",
+  "test_a_stagger_deeper_than_the_strip_blocks_closure_b",
+  "test_an_intervening_boundary_inside_the_strip_blocks_closure_b",
+  "test_a_door_next_to_a_t_junction_still_closes",
+  "test_a_door_next_to_a_column_still_closes",
+  "test_a_door_next_to_an_open_passage_still_closes",
+  "test_wet_and_dry_door_fixtures_both_get_a_strip_with_two_sides",
+  "test_shuffled_input_gives_the_same_closures_and_sites",
+  "test_the_policy_is_versioned_and_in_the_run_manifest",
+  "test_a_window_1_m_above_the_floor_keeps_the_skirting_continuous_below",
+  "test_a_window_0_5_m_above_the_floor_also_keeps_the_path",
+  "test_a_source_schedule_sill_and_an_owner_scoped_sill_both_prove_floor_contact",
+  "test_full_height_glazing_and_a_sliding_door_break_the_path",
+  "test_an_unknown_sill_is_withheld_not_guessed",
+  "test_a_plan_window_never_breaks_the_floor_path_by_itself_and_never_touches_topology",
+  "test_an_installed_door_stops_the_path_with_zero_jambs_and_zero_across",
+  "test_the_offset_door_behaves_the_same_on_both_sides",
+  "test_a_dry_wet_marble_door_has_the_same_stop_on_the_dry_side",
+  "test_door_plaster_jambs_exist_while_skirting_jambs_are_zero_and_the_swing_is_never_measured",
+  "test_a_doorless_passage_has_no_skirting_across_and_both_physical_jambs",
+  "test_the_topology_closure_is_zero_but_the_real_jamb_behind_it_is_measured_from_the_band",
+  "test_a_capped_doorless_passage_counts_its_cap_and_not_the_continuous_far_face",
+  "test_full_height_and_low_head_passages_use_the_same_floor_jamb_rule",
+  "test_a_full_wall_tile_side_has_no_skirting_even_at_a_doorless_jamb",
+  "test_a_method_without_doorless_jambs_excludes_them_and_the_v3_policy_is_versioned"
+ ],
+ "qortuba_method": {
+  "method_id": "QORTUBA-NEW-SKIRTING-METHOD",
+  "version": 2,
+  "supersedes": "QORTUBA-NEW-SKIRTING-METHOD@v1 (R8.15: DEDUCT_EVERY_WINDOW_WIDTH, NO_RETURN)",
+  "scope": {
+   "project": "QORTUBA",
+   "source_revision_id": "QORTUBA_REV_NEW",
+   "rows": "dry tiled rooms (Q-13 sites)"
+  },
+  "system": "QP-06: hidden skirting + hidden profile on one payable path (US-08)",
+  "parameters": {
+   "door": "STOP_AT_OPENING_NO_JAMB",
+   "doorless_jambs": "INCLUDED",
+   "obstacle_faces": "INCLUDED",
+   "column_faces": "INCLUDED"
+  },
+  "rules": [
+   "1 dry / internal tiled room -> skirting on all eligible real wall contact",
+   "2 wardrobes / joinery / furniture do not deduct",
+   "3 authorised duct faces at floor contact are eligible",
+   "4 normal window above floor -> skirting continues below (SKIRTING_CONTINUITY_UNDER_WINDOW)",
+   "5 full-height floor opening -> no skirting across",
+   "6 installed door -> stop at opening, no jamb return",
+   "7 doorless opening -> physical side jambs included",
+   "8 no skirting in full-wall-tile rooms",
+   "9 topology closure always zero material",
+   "10 no room-perimeter shortcut"
+  ],
+  "authority": {
+   "rooms": "QORTUBA-NEW-DRY-ROOM-SKIRTING-ALL-REAL-WALLS-OWNER-001@v1 + QORTUBA-NEW-NO-SKIRTING-FULL-WALL-TILE-ROOMS-OWNER-001@v1",
+   "windows": "QORTUBA-NEW-SKIRTING-WINDOW-FLOOR-CONTACT-OWNER-001@v1 (supersedes QP-09 in scope) + QORTUBA-NEW-NORMAL-WINDOWS-ABOVE-FLOOR-OWNER-001@v1 (sill ~1.00 m, normal windows only)",
+   "door": "URBAN-SKIRTING-OPENING-METHOD@v1 DOOR_PRESENT",
+   "doorless_jambs": "URBAN-SKIRTING-OPENING-METHOD@v1 DOORLESS_OPENING",
+   "obstacle_faces": "QORTUBA-NEW-BED-ROOM-DUCT-OWNER-001@v1 + owner 'all real walls' + rule-store section E",
+   "column_faces": "rule-store section E ('a column is not an opening')"
+  },
+  "never": [
+   "84.795214 / 9.091605 / 1.75 / 0.55 / 0.30 / QP-10 76.389 as a target",
+   "a room polygon perimeter"
+  ],
+  "ref": "QORTUBA-NEW-SKIRTING-METHOD@v2",
+  "digest": "3365f18129c55a98c507dfa712efef837280d029f3bd8b9b7cabd7ee8fc51841"
+ },
+ "qortuba_before_freeze": {
+  "closure_v2_runs_on_qortuba": 0,
+  "skirting_v3_measurements_on_qortuba": 0,
+  "inspected_before_freeze": "the R8.16 section-0 inspection read the I1471 source parts and wall bands, the window lines on the dry-room boundaries and the DXF text / class table - no V2 closure, no V3 class and no total was computed on Qortuba",
+  "historical_values_seen": "the R8.15 skirting result and its counterfactuals (84.795214, 9.091605, 1.75, 0.55, 0.30) and QP-10 (76.389, old revision) are known from earlier rounds - never targets, never compared before the blind record is committed"
+ },
+ "timestamp_metadata": {
+  "frozen_at_utc": "2026-10-02T12:06:03+00:00",
+  "in_digest": false
+ },
+ "order": [
+  "recommendation",
+  "closure V2 + skirting V3 + facts + rule",
+  "synthetic tests",
+  "freeze",
+  "commit",
+  "THEN the blind Qortuba run (closure + skirting)",
+  "THEN rows, hidden profile, registers"
+ ],
+ "rule": "no post-result edit inside DOOR_OPENING_CLOSURE_POLICY_V2, WALL_CONTACT_PATH_POLICY_V3 or QORTUBA-NEW-SKIRTING-METHOD@v2; a defect found after the blind run is the next round",
+ "synthetic_test_count": 29,
+ "amendments": [
+  {
+   "what": "blind script record formatting: the topology-closure safety pieces carry 'area' (native), not 'area_m2' - the first blind attempt raised KeyError BEFORE writing any output",
+   "policy_or_method_changed": false,
+   "qortuba_values_seen": "NONE (no file written, no total printed)",
+   "previous_blind_script_sha256": "5697308451b0235a33e9aec3283bdf067e1ecbf43f9fd398466457d29140343d"
+  },
+  {
+   "what": "blind script: a duplicate 'method' keyword in the skirting record dict raised TypeError BEFORE any file was written or any value printed",
+   "policy_or_method_changed": false,
+   "qortuba_values_seen": "NONE",
+   "previous_blind_script_sha256": "90b61765f41aae74a38f1a91c4f29c5436a6dfad6ce6953252b5cd33ca9ab2d8"
+  }
+ ]
+}

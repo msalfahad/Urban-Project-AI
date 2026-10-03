@@ -1,0 +1,54 @@
+{
+ "SCHEMA": "URBAN_R8_8_REGION_MEMBERSHIP_POLICY_V1",
+ "policy": {
+  "id": "RM-EXACT-1",
+  "region": "closed axis-aligned box in world coordinates",
+  "method": "exact bounding box (end points + in-sweep axis extrema) and exact edge intersections; no sampling, no flattening",
+  "tangent_rule": "RM-TANGENT-1: touching from inside = FULLY_INSIDE; touching only from outside = CROSSES_BOUNDARY (REVIEW_REQUIRED)",
+  "noise": "a curve leaving the region by <= eps (numeric-representation tolerance) counts as touching",
+  "states": [
+   "FULLY_INSIDE",
+   "FULLY_OUTSIDE",
+   "CROSSES_BOUNDARY",
+   "UNRESOLVED"
+  ]
+ },
+ "occurrence_rule": "membership is judged per top-level occurrence; an occurrence with any record not FULLY_INSIDE is REVIEW_REQUIRED (never cut)",
+ "eps": "numeric-representation tolerance only (topology policy eps_n)",
+ "runs": {
+  "OLD_K1": {
+   "region_review": 0,
+   "outside": {},
+   "clip_bounds": [
+    108360.11465629998,
+    13671.647511931791,
+    112440.11465629998,
+    16521.64751193179
+   ]
+  },
+  "OLD_K2": {
+   "region_review": 0,
+   "outside": {},
+   "clip_bounds": [
+    108360.1146563,
+    13671.64751193179,
+    112440.1146563,
+    16521.64751193179
+   ]
+  },
+  "NEW_K2": {
+   "region_review": 0,
+   "outside": {
+    "parts": 728762,
+    "texts": 1080,
+    "dimensions": 1625
+   },
+   "clip_bounds": [
+    108360.1146563,
+    13671.64751193179,
+    112440.1146563,
+    16521.64751193179
+   ]
+  }
+ }
+}

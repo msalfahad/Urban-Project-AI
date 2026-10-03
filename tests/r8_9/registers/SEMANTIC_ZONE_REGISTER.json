@@ -1,0 +1,992 @@
+{
+ "SCHEMA": "URBAN_R8_9_SEMANTIC_ZONE_REGISTER_V1",
+ "policy": "SEMANTIC_ZONE_POLICY_V1",
+ "runs": {
+  "OLD_K1": {
+   "site_states": {
+    "UNLABELLED": 59,
+    "ONE_PHYSICAL_SPACE_ONE_SEMANTIC_ZONE": 8,
+    "ONE_PHYSICAL_SPACE_MULTIPLE_SEMANTIC_ZONES_UNRESOLVED": 1
+   },
+   "zones": [
+    {
+     "zone_id": "ZONE-44c5f64b37638cd7",
+     "physical_site_id": "SITE-50b24a2e0df863f2",
+     "label_occurrences": [
+      "I1447"
+     ],
+     "label_values": [
+      "BATH",
+      "plHL"
+     ],
+     "geometry": "WHOLE_PHYSICAL_SITE",
+     "area": 40899.99999964237,
+     "authority": "ONE_LABEL_OCCURRENCE",
+     "state": "ESTABLISHED"
+    },
+    {
+     "zone_id": "ZONE-93e4751b64d3e7d0",
+     "physical_site_id": "SITE-5613caf47fb31d11",
+     "label_occurrences": [
+      "I1283"
+     ],
+     "label_values": [
+      "ROOF",
+      "s'P"
+     ],
+     "geometry": "WHOLE_PHYSICAL_SITE",
+     "area": 1275099.5166003704,
+     "authority": "ONE_LABEL_OCCURRENCE",
+     "state": "ESTABLISHED"
+    },
+    {
+     "zone_id": "ZONE-010f74d84de95a4c",
+     "physical_site_id": "SITE-56af91bb145d30cc",
+     "label_occurrences": [
+      "I999"
+     ],
+     "label_values": [
+      "HALL",
+      "whgm"
+     ],
+     "geometry": "WHOLE_PHYSICAL_SITE",
+     "area": 424100.0000002384,
+     "authority": "ONE_LABEL_OCCURRENCE",
+     "state": "ESTABLISHED"
+    },
+    {
+     "zone_id": "ZONE-49f2a3888fce5207",
+     "physical_site_id": "SITE-72ff1e5a3c150d7d",
+     "label_occurrences": [
+      "I1259"
+     ],
+     "label_values": [
+      "BED.ROOM",
+      "yvtmk,L"
+     ],
+     "geometry": "WHOLE_PHYSICAL_SITE",
+     "area": 165074.99999976158,
+     "authority": "ONE_LABEL_OCCURRENCE",
+     "state": "ESTABLISHED"
+    },
+    {
+     "zone_id": "ZONE-56406589cd47c5bf",
+     "physical_site_id": "SITE-8e1f0b3a736abb02",
+     "label_occurrences": [
+      "I1274"
+     ],
+     "label_values": [
+      "M.B.ROOM",
+      "k,LVzdsD"
+     ],
+     "geometry": "UNRESOLVED_WITHIN_PHYSICAL_SITE",
+     "area": null,
+     "authority": "MULTI_SEMANTIC_PHYSICAL_SPACE",
+     "state": "UNRESOLVED"
+    },
+    {
+     "zone_id": "ZONE-c45ecfc6721ba437",
+     "physical_site_id": "SITE-8e1f0b3a736abb02",
+     "label_occurrences": [
+      "I1454"
+     ],
+     "label_values": [
+      "DRESS",
+      "lBfS"
+     ],
+     "geometry": "UNRESOLVED_WITHIN_PHYSICAL_SITE",
+     "area": null,
+     "authority": "MULTI_SEMANTIC_PHYSICAL_SPACE",
+     "state": "UNRESOLVED"
+    },
+    {
+     "zone_id": "ZONE-1099757dfe289796",
+     "physical_site_id": "SITE-9cd4555183e82aa2",
+     "label_occurrences": [
+      "I1453"
+     ],
+     "label_values": [
+      "BATH",
+      "plHL"
+     ],
+     "geometry": "WHOLE_PHYSICAL_SITE",
+     "area": 85525.00000011921,
+     "authority": "ONE_LABEL_OCCURRENCE",
+     "state": "ESTABLISHED"
+    },
+    {
+     "zone_id": "ZONE-122a8b3611cba1c9",
+     "physical_site_id": "SITE-b324fca08f742b0d",
+     "label_occurrences": [
+      "I1008"
+     ],
+     "label_values": [
+      "PAINTRY",
+      "jpqdV"
+     ],
+     "geometry": "WHOLE_PHYSICAL_SITE",
+     "area": 116850.00000047684,
+     "authority": "ONE_LABEL_OCCURRENCE",
+     "state": "ESTABLISHED"
+    },
+    {
+     "zone_id": "ZONE-c017db953def1f4c",
+     "physical_site_id": "SITE-dd2d6c85412cee23",
+     "label_occurrences": [
+      "I2046"
+     ],
+     "label_values": [
+      "BATH",
+      "plHL"
+     ],
+     "geometry": "WHOLE_PHYSICAL_SITE",
+     "area": 51000.0,
+     "authority": "ONE_LABEL_OCCURRENCE",
+     "state": "ESTABLISHED"
+    },
+    {
+     "zone_id": "ZONE-e2b30f4cda695918",
+     "physical_site_id": "SITE-fec6c675b81ee36d",
+     "label_occurrences": [
+      "I1251"
+     ],
+     "label_values": [
+      "BED.ROOM",
+      "yvtmk,L"
+     ],
+     "geometry": "WHOLE_PHYSICAL_SITE",
+     "area": 201524.99999904633,
+     "authority": "ONE_LABEL_OCCURRENCE",
+     "state": "ESTABLISHED"
+    }
+   ],
+   "trade_regions_floor_finish": [
+    {
+     "region_id": "TMR-f4547f031df047b4",
+     "trade": "FLOOR_FINISH",
+     "zone_id": "ZONE-44c5f64b37638cd7",
+     "physical_site_id": "SITE-50b24a2e0df863f2",
+     "area": 40899.99999964237,
+     "blockers": [],
+     "trade_notes": [],
+     "state": "READY_FOR_TRADE_RULE"
+    },
+    {
+     "region_id": "TMR-1bb0e0ba14d64e7b",
+     "trade": "FLOOR_FINISH",
+     "zone_id": "ZONE-93e4751b64d3e7d0",
+     "physical_site_id": "SITE-5613caf47fb31d11",
+     "area": 1275099.5166003704,
+     "blockers": [
+      {
+       "class": "BLOCKED_ROLE",
+       "issues": [
+        "TOPOLOGY_ROLE_UNRESOLVED"
+       ]
+      }
+     ],
+     "trade_notes": [],
+     "state": "BLOCKED"
+    },
+    {
+     "region_id": "TMR-ba3b35152eba81e2",
+     "trade": "FLOOR_FINISH",
+     "zone_id": "ZONE-010f74d84de95a4c",
+     "physical_site_id": "SITE-56af91bb145d30cc",
+     "area": 424100.0000002384,
+     "blockers": [
+      {
+       "class": "BLOCKED_ROLE",
+       "issues": [
+        "TOPOLOGY_ROLE_UNRESOLVED"
+       ]
+      }
+     ],
+     "trade_notes": [
+      "FIXED_OBJECT_AGAINST_BOUNDARY"
+     ],
+     "state": "BLOCKED"
+    },
+    {
+     "region_id": "TMR-84937f1b93a956aa",
+     "trade": "FLOOR_FINISH",
+     "zone_id": "ZONE-49f2a3888fce5207",
+     "physical_site_id": "SITE-72ff1e5a3c150d7d",
+     "area": 165074.99999976158,
+     "blockers": [],
+     "trade_notes": [],
+     "state": "READY_FOR_TRADE_RULE"
+    },
+    {
+     "region_id": "TMR-633fc18191d4e328",
+     "trade": "FLOOR_FINISH",
+     "zone_id": "ZONE-56406589cd47c5bf",
+     "physical_site_id": "SITE-8e1f0b3a736abb02",
+     "area": null,
+     "blockers": [
+      {
+       "class": "BLOCKED_ROLE",
+       "issues": [
+        "TOPOLOGY_ROLE_UNRESOLVED"
+       ]
+      },
+      {
+       "class": "BLOCKED_SEMANTIC_ZONE",
+       "issues": [
+        "MULTI_SEMANTIC_PHYSICAL_SPACE"
+       ]
+      }
+     ],
+     "trade_notes": [],
+     "state": "BLOCKED"
+    },
+    {
+     "region_id": "TMR-71d44aef11f7c113",
+     "trade": "FLOOR_FINISH",
+     "zone_id": "ZONE-c45ecfc6721ba437",
+     "physical_site_id": "SITE-8e1f0b3a736abb02",
+     "area": null,
+     "blockers": [
+      {
+       "class": "BLOCKED_ROLE",
+       "issues": [
+        "TOPOLOGY_ROLE_UNRESOLVED"
+       ]
+      },
+      {
+       "class": "BLOCKED_SEMANTIC_ZONE",
+       "issues": [
+        "MULTI_SEMANTIC_PHYSICAL_SPACE"
+       ]
+      }
+     ],
+     "trade_notes": [],
+     "state": "BLOCKED"
+    },
+    {
+     "region_id": "TMR-14e362dfec8635ae",
+     "trade": "FLOOR_FINISH",
+     "zone_id": "ZONE-1099757dfe289796",
+     "physical_site_id": "SITE-9cd4555183e82aa2",
+     "area": 85525.00000011921,
+     "blockers": [],
+     "trade_notes": [],
+     "state": "READY_FOR_TRADE_RULE"
+    },
+    {
+     "region_id": "TMR-ea505a17efcb2391",
+     "trade": "FLOOR_FINISH",
+     "zone_id": "ZONE-122a8b3611cba1c9",
+     "physical_site_id": "SITE-b324fca08f742b0d",
+     "area": 116850.00000047684,
+     "blockers": [],
+     "trade_notes": [
+      "FIXED_OBJECT_AGAINST_BOUNDARY"
+     ],
+     "state": "READY_FOR_TRADE_RULE"
+    },
+    {
+     "region_id": "TMR-509e55e5b2595458",
+     "trade": "FLOOR_FINISH",
+     "zone_id": "ZONE-c017db953def1f4c",
+     "physical_site_id": "SITE-dd2d6c85412cee23",
+     "area": 51000.0,
+     "blockers": [],
+     "trade_notes": [],
+     "state": "READY_FOR_TRADE_RULE"
+    },
+    {
+     "region_id": "TMR-6dcf816a7b5eb025",
+     "trade": "FLOOR_FINISH",
+     "zone_id": "ZONE-e2b30f4cda695918",
+     "physical_site_id": "SITE-fec6c675b81ee36d",
+     "area": 201524.99999904633,
+     "blockers": [],
+     "trade_notes": [],
+     "state": "READY_FOR_TRADE_RULE"
+    }
+   ]
+  },
+  "OLD_K2": {
+   "site_states": {
+    "UNLABELLED": 59,
+    "ONE_PHYSICAL_SPACE_ONE_SEMANTIC_ZONE": 8,
+    "ONE_PHYSICAL_SPACE_MULTIPLE_SEMANTIC_ZONES_UNRESOLVED": 1
+   },
+   "zones": [
+    {
+     "zone_id": "ZONE-44c5f64b37638cd7",
+     "physical_site_id": "SITE-50b24a2e0df863f2",
+     "label_occurrences": [
+      "I1447"
+     ],
+     "label_values": [
+      "BATH",
+      "plHL"
+     ],
+     "geometry": "WHOLE_PHYSICAL_SITE",
+     "area": 40900.00000011921,
+     "authority": "ONE_LABEL_OCCURRENCE",
+     "state": "ESTABLISHED"
+    },
+    {
+     "zone_id": "ZONE-93e4751b64d3e7d0",
+     "physical_site_id": "SITE-5613caf47fb31d11",
+     "label_occurrences": [
+      "I1283"
+     ],
+     "label_values": [
+      "ROOF",
+      "s'P"
+     ],
+     "geometry": "WHOLE_PHYSICAL_SITE",
+     "area": 1275099.516600132,
+     "authority": "ONE_LABEL_OCCURRENCE",
+     "state": "ESTABLISHED"
+    },
+    {
+     "zone_id": "ZONE-010f74d84de95a4c",
+     "physical_site_id": "SITE-56af91bb145d30cc",
+     "label_occurrences": [
+      "I999"
+     ],
+     "label_values": [
+      "HALL",
+      "whgm"
+     ],
+     "geometry": "WHOLE_PHYSICAL_SITE",
+     "area": 424100.00000083447,
+     "authority": "ONE_LABEL_OCCURRENCE",
+     "state": "ESTABLISHED"
+    },
+    {
+     "zone_id": "ZONE-49f2a3888fce5207",
+     "physical_site_id": "SITE-72ff1e5a3c150d7d",
+     "label_occurrences": [
+      "I1259"
+     ],
+     "label_values": [
+      "BED.ROOM",
+      "yvtmk,L"
+     ],
+     "geometry": "WHOLE_PHYSICAL_SITE",
+     "area": 165074.9999998808,
+     "authority": "ONE_LABEL_OCCURRENCE",
+     "state": "ESTABLISHED"
+    },
+    {
+     "zone_id": "ZONE-56406589cd47c5bf",
+     "physical_site_id": "SITE-8e1f0b3a736abb02",
+     "label_occurrences": [
+      "I1274"
+     ],
+     "label_values": [
+      "M.B.ROOM",
+      "k,LVzdsD"
+     ],
+     "geometry": "UNRESOLVED_WITHIN_PHYSICAL_SITE",
+     "area": null,
+     "authority": "MULTI_SEMANTIC_PHYSICAL_SPACE",
+     "state": "UNRESOLVED"
+    },
+    {
+     "zone_id": "ZONE-c45ecfc6721ba437",
+     "physical_site_id": "SITE-8e1f0b3a736abb02",
+     "label_occurrences": [
+      "I1454"
+     ],
+     "label_values": [
+      "DRESS",
+      "lBfS"
+     ],
+     "geometry": "UNRESOLVED_WITHIN_PHYSICAL_SITE",
+     "area": null,
+     "authority": "MULTI_SEMANTIC_PHYSICAL_SPACE",
+     "state": "UNRESOLVED"
+    },
+    {
+     "zone_id": "ZONE-1099757dfe289796",
+     "physical_site_id": "SITE-9cd4555183e82aa2",
+     "label_occurrences": [
+      "I1453"
+     ],
+     "label_values": [
+      "BATH",
+      "plHL"
+     ],
+     "geometry": "WHOLE_PHYSICAL_SITE",
+     "area": 85525.00000011921,
+     "authority": "ONE_LABEL_OCCURRENCE",
+     "state": "ESTABLISHED"
+    },
+    {
+     "zone_id": "ZONE-122a8b3611cba1c9",
+     "physical_site_id": "SITE-b324fca08f742b0d",
+     "label_occurrences": [
+      "I1008"
+     ],
+     "label_values": [
+      "PAINTRY",
+      "jpqdV"
+     ],
+     "geometry": "WHOLE_PHYSICAL_SITE",
+     "area": 116850.00000023842,
+     "authority": "ONE_LABEL_OCCURRENCE",
+     "state": "ESTABLISHED"
+    },
+    {
+     "zone_id": "ZONE-c017db953def1f4c",
+     "physical_site_id": "SITE-dd2d6c85412cee23",
+     "label_occurrences": [
+      "I2046"
+     ],
+     "label_values": [
+      "BATH",
+      "plHL"
+     ],
+     "geometry": "WHOLE_PHYSICAL_SITE",
+     "area": 51000.00000023842,
+     "authority": "ONE_LABEL_OCCURRENCE",
+     "state": "ESTABLISHED"
+    },
+    {
+     "zone_id": "ZONE-e2b30f4cda695918",
+     "physical_site_id": "SITE-fec6c675b81ee36d",
+     "label_occurrences": [
+      "I1251"
+     ],
+     "label_values": [
+      "BED.ROOM",
+      "yvtmk,L"
+     ],
+     "geometry": "WHOLE_PHYSICAL_SITE",
+     "area": 201524.99999916553,
+     "authority": "ONE_LABEL_OCCURRENCE",
+     "state": "ESTABLISHED"
+    }
+   ],
+   "trade_regions_floor_finish": [
+    {
+     "region_id": "TMR-f4547f031df047b4",
+     "trade": "FLOOR_FINISH",
+     "zone_id": "ZONE-44c5f64b37638cd7",
+     "physical_site_id": "SITE-50b24a2e0df863f2",
+     "area": 40900.00000011921,
+     "blockers": [],
+     "trade_notes": [],
+     "state": "READY_FOR_TRADE_RULE"
+    },
+    {
+     "region_id": "TMR-1bb0e0ba14d64e7b",
+     "trade": "FLOOR_FINISH",
+     "zone_id": "ZONE-93e4751b64d3e7d0",
+     "physical_site_id": "SITE-5613caf47fb31d11",
+     "area": 1275099.516600132,
+     "blockers": [
+      {
+       "class": "BLOCKED_ROLE",
+       "issues": [
+        "TOPOLOGY_ROLE_UNRESOLVED"
+       ]
+      }
+     ],
+     "trade_notes": [],
+     "state": "BLOCKED"
+    },
+    {
+     "region_id": "TMR-ba3b35152eba81e2",
+     "trade": "FLOOR_FINISH",
+     "zone_id": "ZONE-010f74d84de95a4c",
+     "physical_site_id": "SITE-56af91bb145d30cc",
+     "area": 424100.00000083447,
+     "blockers": [
+      {
+       "class": "BLOCKED_ROLE",
+       "issues": [
+        "TOPOLOGY_ROLE_UNRESOLVED"
+       ]
+      }
+     ],
+     "trade_notes": [
+      "FIXED_OBJECT_AGAINST_BOUNDARY"
+     ],
+     "state": "BLOCKED"
+    },
+    {
+     "region_id": "TMR-84937f1b93a956aa",
+     "trade": "FLOOR_FINISH",
+     "zone_id": "ZONE-49f2a3888fce5207",
+     "physical_site_id": "SITE-72ff1e5a3c150d7d",
+     "area": 165074.9999998808,
+     "blockers": [],
+     "trade_notes": [],
+     "state": "READY_FOR_TRADE_RULE"
+    },
+    {
+     "region_id": "TMR-633fc18191d4e328",
+     "trade": "FLOOR_FINISH",
+     "zone_id": "ZONE-56406589cd47c5bf",
+     "physical_site_id": "SITE-8e1f0b3a736abb02",
+     "area": null,
+     "blockers": [
+      {
+       "class": "BLOCKED_ROLE",
+       "issues": [
+        "TOPOLOGY_ROLE_UNRESOLVED"
+       ]
+      },
+      {
+       "class": "BLOCKED_SEMANTIC_ZONE",
+       "issues": [
+        "MULTI_SEMANTIC_PHYSICAL_SPACE"
+       ]
+      }
+     ],
+     "trade_notes": [],
+     "state": "BLOCKED"
+    },
+    {
+     "region_id": "TMR-71d44aef11f7c113",
+     "trade": "FLOOR_FINISH",
+     "zone_id": "ZONE-c45ecfc6721ba437",
+     "physical_site_id": "SITE-8e1f0b3a736abb02",
+     "area": null,
+     "blockers": [
+      {
+       "class": "BLOCKED_ROLE",
+       "issues": [
+        "TOPOLOGY_ROLE_UNRESOLVED"
+       ]
+      },
+      {
+       "class": "BLOCKED_SEMANTIC_ZONE",
+       "issues": [
+        "MULTI_SEMANTIC_PHYSICAL_SPACE"
+       ]
+      }
+     ],
+     "trade_notes": [],
+     "state": "BLOCKED"
+    },
+    {
+     "region_id": "TMR-14e362dfec8635ae",
+     "trade": "FLOOR_FINISH",
+     "zone_id": "ZONE-1099757dfe289796",
+     "physical_site_id": "SITE-9cd4555183e82aa2",
+     "area": 85525.00000011921,
+     "blockers": [],
+     "trade_notes": [],
+     "state": "READY_FOR_TRADE_RULE"
+    },
+    {
+     "region_id": "TMR-ea505a17efcb2391",
+     "trade": "FLOOR_FINISH",
+     "zone_id": "ZONE-122a8b3611cba1c9",
+     "physical_site_id": "SITE-b324fca08f742b0d",
+     "area": 116850.00000023842,
+     "blockers": [],
+     "trade_notes": [
+      "FIXED_OBJECT_AGAINST_BOUNDARY"
+     ],
+     "state": "READY_FOR_TRADE_RULE"
+    },
+    {
+     "region_id": "TMR-509e55e5b2595458",
+     "trade": "FLOOR_FINISH",
+     "zone_id": "ZONE-c017db953def1f4c",
+     "physical_site_id": "SITE-dd2d6c85412cee23",
+     "area": 51000.00000023842,
+     "blockers": [],
+     "trade_notes": [],
+     "state": "READY_FOR_TRADE_RULE"
+    },
+    {
+     "region_id": "TMR-6dcf816a7b5eb025",
+     "trade": "FLOOR_FINISH",
+     "zone_id": "ZONE-e2b30f4cda695918",
+     "physical_site_id": "SITE-fec6c675b81ee36d",
+     "area": 201524.99999916553,
+     "blockers": [],
+     "trade_notes": [],
+     "state": "READY_FOR_TRADE_RULE"
+    }
+   ]
+  },
+  "NEW_K2": {
+   "site_states": {
+    "UNLABELLED": 51,
+    "ONE_PHYSICAL_SPACE_ONE_SEMANTIC_ZONE": 5,
+    "TOPOLOGY_BOUNDARY_MISSING_FROM_ROLE_ADMISSION": 1,
+    "ONE_PHYSICAL_SPACE_MULTIPLE_SEMANTIC_ZONES_UNRESOLVED": 1
+   },
+   "zones": [
+    {
+     "zone_id": "ZONE-e02fda0197f6650f",
+     "physical_site_id": "SITE-1c4abf65f9b5db1e",
+     "label_occurrences": [
+      "I1453"
+     ],
+     "label_values": [
+      "BATH",
+      "plHL"
+     ],
+     "geometry": "WHOLE_PHYSICAL_SITE",
+     "area": 85525.0,
+     "authority": "ONE_LABEL_OCCURRENCE",
+     "state": "ESTABLISHED"
+    },
+    {
+     "zone_id": "ZONE-c3db0d0942f4914e",
+     "physical_site_id": "SITE-2201f5d1b83158c0",
+     "label_occurrences": [
+      "I1251"
+     ],
+     "label_values": [
+      "BED.ROOM",
+      "yvtmk,L"
+     ],
+     "geometry": "UNRESOLVED_WITHIN_PHYSICAL_SITE",
+     "area": null,
+     "authority": "MULTI_SEMANTIC_PHYSICAL_SPACE",
+     "state": "UNRESOLVED"
+    },
+    {
+     "zone_id": "ZONE-1b137af9f25c79bb",
+     "physical_site_id": "SITE-2201f5d1b83158c0",
+     "label_occurrences": [
+      "I2046"
+     ],
+     "label_values": [
+      "BATH",
+      "plHL"
+     ],
+     "geometry": "UNRESOLVED_WITHIN_PHYSICAL_SITE",
+     "area": null,
+     "authority": "MULTI_SEMANTIC_PHYSICAL_SPACE",
+     "state": "UNRESOLVED"
+    },
+    {
+     "zone_id": "ZONE-1e736a3763e46f93",
+     "physical_site_id": "SITE-2201f5d1b83158c0",
+     "label_occurrences": [
+      "I999"
+     ],
+     "label_values": [
+      "HALL",
+      "whgm"
+     ],
+     "geometry": "UNRESOLVED_WITHIN_PHYSICAL_SITE",
+     "area": null,
+     "authority": "MULTI_SEMANTIC_PHYSICAL_SPACE",
+     "state": "UNRESOLVED"
+    },
+    {
+     "zone_id": "ZONE-3db6e83acfb43dc3",
+     "physical_site_id": "SITE-8c1c7563d5252c50",
+     "label_occurrences": [
+      "I1008"
+     ],
+     "label_values": [
+      "PAINTRY",
+      "jpqdV"
+     ],
+     "geometry": "WHOLE_PHYSICAL_SITE",
+     "area": 116850.00000023842,
+     "authority": "ONE_LABEL_OCCURRENCE",
+     "state": "ESTABLISHED"
+    },
+    {
+     "zone_id": "ZONE-48c157a56848b72f",
+     "physical_site_id": "SITE-a6405850100155ac",
+     "label_occurrences": [
+      "I1274"
+     ],
+     "label_values": [
+      "M.B.ROOM",
+      "k,LVzdsD"
+     ],
+     "geometry": "UNRESOLVED_WITHIN_PHYSICAL_SITE",
+     "area": null,
+     "authority": "MULTI_SEMANTIC_PHYSICAL_SPACE",
+     "state": "UNRESOLVED"
+    },
+    {
+     "zone_id": "ZONE-ab1fa8d63631d70a",
+     "physical_site_id": "SITE-a6405850100155ac",
+     "label_occurrences": [
+      "I1454"
+     ],
+     "label_values": [
+      "DRESS",
+      "lBfS"
+     ],
+     "geometry": "UNRESOLVED_WITHIN_PHYSICAL_SITE",
+     "area": null,
+     "authority": "MULTI_SEMANTIC_PHYSICAL_SPACE",
+     "state": "UNRESOLVED"
+    },
+    {
+     "zone_id": "ZONE-9a374fd0e98bd89b",
+     "physical_site_id": "SITE-daca396d6d730e60",
+     "label_occurrences": [
+      "I1259"
+     ],
+     "label_values": [
+      "BED.ROOM",
+      "yvtmk,L"
+     ],
+     "geometry": "WHOLE_PHYSICAL_SITE",
+     "area": 163269.99971663952,
+     "authority": "ONE_LABEL_OCCURRENCE",
+     "state": "ESTABLISHED"
+    },
+    {
+     "zone_id": "ZONE-b77d6bb73893aa35",
+     "physical_site_id": "SITE-eaae022599294151",
+     "label_occurrences": [
+      "I1283"
+     ],
+     "label_values": [
+      "ROOF",
+      "s'P"
+     ],
+     "geometry": "WHOLE_PHYSICAL_SITE",
+     "area": 1275099.5166003704,
+     "authority": "ONE_LABEL_OCCURRENCE",
+     "state": "ESTABLISHED"
+    },
+    {
+     "zone_id": "ZONE-521333605fee9dad",
+     "physical_site_id": "SITE-fe8ed5548fb4310e",
+     "label_occurrences": [
+      "I1447"
+     ],
+     "label_values": [
+      "BATH",
+      "plHL"
+     ],
+     "geometry": "WHOLE_PHYSICAL_SITE",
+     "area": 40900.0,
+     "authority": "ONE_LABEL_OCCURRENCE",
+     "state": "ESTABLISHED"
+    }
+   ],
+   "trade_regions_floor_finish": [
+    {
+     "region_id": "TMR-d7b80bb58edf7568",
+     "trade": "FLOOR_FINISH",
+     "zone_id": "ZONE-e02fda0197f6650f",
+     "physical_site_id": "SITE-1c4abf65f9b5db1e",
+     "area": 85525.0,
+     "blockers": [
+      {
+       "class": "BLOCKED_PHYSICAL",
+       "issues": [
+        "REGION_REVIEW_REQUIRED"
+       ]
+      }
+     ],
+     "trade_notes": [],
+     "state": "BLOCKED"
+    },
+    {
+     "region_id": "TMR-0b8d1408d33bda0a",
+     "trade": "FLOOR_FINISH",
+     "zone_id": "ZONE-c3db0d0942f4914e",
+     "physical_site_id": "SITE-2201f5d1b83158c0",
+     "area": null,
+     "blockers": [
+      {
+       "class": "BLOCKED_ROLE",
+       "issues": [
+        "OPENING_CLOSURE_UNRESOLVED",
+        "REGION_REVIEW_REQUIRED",
+        "ROLE_CONFLICT_SEPARATOR",
+        "TOPOLOGY_ROLE_UNRESOLVED"
+       ]
+      },
+      {
+       "class": "BLOCKED_SEMANTIC_ZONE",
+       "issues": [
+        "MULTI_SEMANTIC_PHYSICAL_SPACE"
+       ]
+      }
+     ],
+     "trade_notes": [],
+     "state": "BLOCKED"
+    },
+    {
+     "region_id": "TMR-5de98de21fd6d533",
+     "trade": "FLOOR_FINISH",
+     "zone_id": "ZONE-1b137af9f25c79bb",
+     "physical_site_id": "SITE-2201f5d1b83158c0",
+     "area": null,
+     "blockers": [
+      {
+       "class": "BLOCKED_ROLE",
+       "issues": [
+        "OPENING_CLOSURE_UNRESOLVED",
+        "REGION_REVIEW_REQUIRED",
+        "ROLE_CONFLICT_SEPARATOR",
+        "TOPOLOGY_ROLE_UNRESOLVED"
+       ]
+      },
+      {
+       "class": "BLOCKED_SEMANTIC_ZONE",
+       "issues": [
+        "MULTI_SEMANTIC_PHYSICAL_SPACE"
+       ]
+      }
+     ],
+     "trade_notes": [],
+     "state": "BLOCKED"
+    },
+    {
+     "region_id": "TMR-0bdc62de08f91c7e",
+     "trade": "FLOOR_FINISH",
+     "zone_id": "ZONE-1e736a3763e46f93",
+     "physical_site_id": "SITE-2201f5d1b83158c0",
+     "area": null,
+     "blockers": [
+      {
+       "class": "BLOCKED_ROLE",
+       "issues": [
+        "OPENING_CLOSURE_UNRESOLVED",
+        "REGION_REVIEW_REQUIRED",
+        "ROLE_CONFLICT_SEPARATOR",
+        "TOPOLOGY_ROLE_UNRESOLVED"
+       ]
+      },
+      {
+       "class": "BLOCKED_SEMANTIC_ZONE",
+       "issues": [
+        "MULTI_SEMANTIC_PHYSICAL_SPACE"
+       ]
+      }
+     ],
+     "trade_notes": [],
+     "state": "BLOCKED"
+    },
+    {
+     "region_id": "TMR-2a8a2cce15aa1ef7",
+     "trade": "FLOOR_FINISH",
+     "zone_id": "ZONE-3db6e83acfb43dc3",
+     "physical_site_id": "SITE-8c1c7563d5252c50",
+     "area": 116850.00000023842,
+     "blockers": [
+      {
+       "class": "BLOCKED_PHYSICAL",
+       "issues": [
+        "REGION_REVIEW_REQUIRED"
+       ]
+      }
+     ],
+     "trade_notes": [
+      "FIXED_OBJECT_AGAINST_BOUNDARY"
+     ],
+     "state": "BLOCKED"
+    },
+    {
+     "region_id": "TMR-df242d82a0395164",
+     "trade": "FLOOR_FINISH",
+     "zone_id": "ZONE-48c157a56848b72f",
+     "physical_site_id": "SITE-a6405850100155ac",
+     "area": null,
+     "blockers": [
+      {
+       "class": "BLOCKED_ROLE",
+       "issues": [
+        "REGION_REVIEW_REQUIRED",
+        "TOPOLOGY_ROLE_UNRESOLVED"
+       ]
+      },
+      {
+       "class": "BLOCKED_SEMANTIC_ZONE",
+       "issues": [
+        "MULTI_SEMANTIC_PHYSICAL_SPACE"
+       ]
+      }
+     ],
+     "trade_notes": [],
+     "state": "BLOCKED"
+    },
+    {
+     "region_id": "TMR-6fc75fe5e22b7f1d",
+     "trade": "FLOOR_FINISH",
+     "zone_id": "ZONE-ab1fa8d63631d70a",
+     "physical_site_id": "SITE-a6405850100155ac",
+     "area": null,
+     "blockers": [
+      {
+       "class": "BLOCKED_ROLE",
+       "issues": [
+        "REGION_REVIEW_REQUIRED",
+        "TOPOLOGY_ROLE_UNRESOLVED"
+       ]
+      },
+      {
+       "class": "BLOCKED_SEMANTIC_ZONE",
+       "issues": [
+        "MULTI_SEMANTIC_PHYSICAL_SPACE"
+       ]
+      }
+     ],
+     "trade_notes": [],
+     "state": "BLOCKED"
+    },
+    {
+     "region_id": "TMR-2c5204ad013ee3ed",
+     "trade": "FLOOR_FINISH",
+     "zone_id": "ZONE-9a374fd0e98bd89b",
+     "physical_site_id": "SITE-daca396d6d730e60",
+     "area": 163269.99971663952,
+     "blockers": [
+      {
+       "class": "BLOCKED_PHYSICAL",
+       "issues": [
+        "REGION_REVIEW_REQUIRED"
+       ]
+      }
+     ],
+     "trade_notes": [],
+     "state": "BLOCKED"
+    },
+    {
+     "region_id": "TMR-68ce404bd79ce622",
+     "trade": "FLOOR_FINISH",
+     "zone_id": "ZONE-b77d6bb73893aa35",
+     "physical_site_id": "SITE-eaae022599294151",
+     "area": 1275099.5166003704,
+     "blockers": [
+      {
+       "class": "BLOCKED_ROLE",
+       "issues": [
+        "REGION_REVIEW_REQUIRED",
+        "TOPOLOGY_ROLE_UNRESOLVED"
+       ]
+      }
+     ],
+     "trade_notes": [],
+     "state": "BLOCKED"
+    },
+    {
+     "region_id": "TMR-d3c10d73c1b70645",
+     "trade": "FLOOR_FINISH",
+     "zone_id": "ZONE-521333605fee9dad",
+     "physical_site_id": "SITE-fe8ed5548fb4310e",
+     "area": 40900.0,
+     "blockers": [
+      {
+       "class": "BLOCKED_PHYSICAL",
+       "issues": [
+        "REGION_REVIEW_REQUIRED"
+       ]
+      }
+     ],
+     "trade_notes": [],
+     "state": "BLOCKED"
+    }
+   ]
+  }
+ }
+}

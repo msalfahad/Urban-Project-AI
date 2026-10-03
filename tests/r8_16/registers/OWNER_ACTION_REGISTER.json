@@ -1,0 +1,53 @@
+{
+ "SCHEMA": "URBAN_OWNER_ACTION_REGISTER_V13",
+ "headline": "NO OWNER ACTION REQUIRED FOR THE SHADOW ROWS. ONE OPTIONAL QUESTION FOR THE SKIRTING RELEASE.",
+ "required_now": [],
+ "optional_for_release": [
+  {
+   "id": "QORTUBA_HALL_PAINTRY_GLAZED_SCREEN_FLOOR_CONTACT",
+   "blocks": "SKIRTING / HIDDEN_PROFILE release only",
+   "question": "The internal glazed opening between HALL and PAINTRY (2.75 m wide, no wall line under it in the DXF): does the glass stand on a low wall (skirting continues under it) or reach the floor (skirting stops)?",
+   "why_new": "it is not a 'normal window' of the owner's 1.00 m statement: no wall face line runs across it, it is an internal screen, and QP-12 gives it a 2.20 m HEIGHT (door-like), not a sill. Source exhausted: no section, elevation, schedule or sill text in the DXF",
+   "effect_lm": 2.75,
+   "current": "FLOOR_CONTACT_UNPROVEN (withheld, never guessed)",
+   "occurrences": [
+    {
+     "site": "SITE-77a2130eb275604c",
+     "sources": [
+      "CLOSURE|GLAZED|QORTUBA_REV_NEW|H533||SEGMENT|0|F2",
+      "CLOSURE|GLAZED|QORTUBA_REV_NEW|H542||SEGMENT|0|F1",
+      "542"
+     ],
+     "length_mm": 2750.0
+    }
+   ]
+  }
+ ],
+ "answered_this_round": [
+  {
+   "fact": "QORTUBA-NEW-NORMAL-WINDOWS-ABOVE-FLOOR-OWNER-001@v1",
+   "kind": "WINDOW_FLOOR_CONTACT"
+  },
+  {
+   "fact": "QORTUBA-NEW-SKIRTING-WINDOW-FLOOR-CONTACT-OWNER-001@v1",
+   "kind": "SKIRTING_PATH (scoped supersession of QP-09)"
+  },
+  {
+   "rule": "URBAN-SKIRTING-OPENING-METHOD@v1",
+   "kind": "URBAN_OWNER_METHOD_RULE"
+  }
+ ],
+ "do_not_ask": [
+  "window skirting",
+  "window sill in the selected Qortuba scope",
+  "door jamb skirting",
+  "doorless-opening jamb skirting",
+  "duct",
+  "marble",
+  "M.B.ROOM / DRESS passage head",
+  "Hall / Lobby passage",
+  "the selected plan",
+  "the unit",
+  "any expected quantity"
+ ]
+}

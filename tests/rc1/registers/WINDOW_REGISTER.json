@@ -1,0 +1,292 @@
+{
+ "SCHEMA": "URBAN_QORTUBA_RC1_WINDOW_REGISTER_V1",
+ "windows": [
+  {
+   "opening_id": "W-H1020",
+   "kind": "WINDOW",
+   "from_site": "SITE-daca396d6d730e60",
+   "to_site": "EXTERIOR (outside the drawn building)",
+   "clear_width_m": 1.342287,
+   "width_basis": "SOURCE",
+   "height_m": 1.5,
+   "height_basis": "OWNER_PROJECT_PARAMETER",
+   "height_authority": "QP-22 owner: 1.500 m for every Qortuba window whose height the drawing does not state",
+   "area_m2": 2.013431,
+   "area_basis": "OWNER_PROJECT_PARAMETER",
+   "sill_m": 1.0,
+   "sill_basis": "OWNER_FACT",
+   "sill_authority": "QORTUBA-NEW-NORMAL-WINDOWS-ABOVE-FLOOR-OWNER-001@v2",
+   "door_present": false,
+   "sources": [
+    "QORTUBA_REV_NEW|H1020||SEGMENT|0",
+    "QORTUBA_REV_NEW|H469||SEGMENT|0"
+   ],
+   "seen_from": [
+    "SITE-daca396d6d730e60"
+   ],
+   "state": "IN_SCOPE",
+   "conflicts": [],
+   "entity": "QORTUBA_REV_NEW|H1020||SEGMENT",
+   "exteriority": {
+    "state": "EXTERIOR_PROVEN",
+    "far_side_probe": [
+     "SITE-ec43024640ae6a95",
+     null,
+     null,
+     null,
+     null
+    ],
+    "beyond_sites": [
+     "SITE-ec43024640ae6a95"
+    ]
+   },
+   "other_side": "EXTERIOR (outside the drawn building)",
+   "material": "ALUMINIUM",
+   "material_basis": "URBAN_STANDARD",
+   "material_authority": "US-13 INTERIOR_DOORS_ARE_PVC_EXTERIOR_OPENINGS_ARE_ALUMINIUM (exterior window; far side outside the drawing by geometry)",
+   "from_display": "BED.ROOM (2) [daca396d]",
+   "to_display": "EXTERIOR (outside the drawn building)"
+  },
+  {
+   "opening_id": "W-H1026",
+   "kind": "WINDOW",
+   "from_site": "SITE-a6405850100155ac",
+   "to_site": "EXTERIOR (outside the drawn building)",
+   "clear_width_m": 1.697515,
+   "width_basis": "SOURCE",
+   "height_m": 1.5,
+   "height_basis": "OWNER_PROJECT_PARAMETER",
+   "height_authority": "QP-22 owner: 1.500 m for every Qortuba window whose height the drawing does not state",
+   "area_m2": 2.546273,
+   "area_basis": "OWNER_PROJECT_PARAMETER",
+   "sill_m": 1.0,
+   "sill_basis": "OWNER_FACT",
+   "sill_authority": "QORTUBA-NEW-NORMAL-WINDOWS-ABOVE-FLOOR-OWNER-001@v2",
+   "door_present": false,
+   "sources": [
+    "QORTUBA_REV_NEW|H1026||SEGMENT|0",
+    "QORTUBA_REV_NEW|H457||SEGMENT|0"
+   ],
+   "seen_from": [
+    "SITE-a6405850100155ac"
+   ],
+   "state": "IN_SCOPE",
+   "conflicts": [],
+   "entity": "QORTUBA_REV_NEW|H1026||SEGMENT",
+   "exteriority": {
+    "state": "EXTERIOR_PROVEN",
+    "far_side_probe": [
+     "SITE-e7d510fad1583999",
+     "SITE-334628841f471bed",
+     null,
+     null,
+     null
+    ],
+    "beyond_sites": [
+     "SITE-334628841f471bed",
+     "SITE-e7d510fad1583999"
+    ]
+   },
+   "other_side": "EXTERIOR (outside the drawn building)",
+   "material": "ALUMINIUM",
+   "material_basis": "URBAN_STANDARD",
+   "material_authority": "US-13 INTERIOR_DOORS_ARE_PVC_EXTERIOR_OPENINGS_ARE_ALUMINIUM (exterior window; far side outside the drawing by geometry)",
+   "from_display": "DRESS / M.B.ROOM",
+   "to_display": "EXTERIOR (outside the drawn building)"
+  },
+  {
+   "opening_id": "W-H1319",
+   "kind": "WINDOW",
+   "from_site": "SITE-5f1762f1a93b91ca",
+   "to_site": "EXTERIOR (outside the drawn building)",
+   "clear_width_m": 1.205359,
+   "width_basis": "SOURCE",
+   "height_m": 1.5,
+   "height_basis": "OWNER_PROJECT_PARAMETER",
+   "height_authority": "QP-22 owner: 1.500 m for every Qortuba window whose height the drawing does not state",
+   "area_m2": 1.808039,
+   "area_basis": "OWNER_PROJECT_PARAMETER",
+   "sill_m": 1.0,
+   "sill_basis": "OWNER_FACT",
+   "sill_authority": "QORTUBA-NEW-NORMAL-WINDOWS-ABOVE-FLOOR-OWNER-001@v2",
+   "door_present": false,
+   "sources": [
+    "QORTUBA_REV_NEW|H1319||SEGMENT|0",
+    "QORTUBA_REV_NEW|H448||SEGMENT|0"
+   ],
+   "seen_from": [
+    "SITE-5f1762f1a93b91ca"
+   ],
+   "state": "IN_SCOPE",
+   "conflicts": [],
+   "entity": "QORTUBA_REV_NEW|H1319||SEGMENT",
+   "exteriority": {
+    "state": "EXTERIOR_PROVEN",
+    "far_side_probe": [
+     "SITE-17f5f8c97fc16343",
+     null,
+     null,
+     null,
+     null
+    ],
+    "beyond_sites": [
+     "SITE-17f5f8c97fc16343"
+    ]
+   },
+   "other_side": "EXTERIOR (outside the drawn building)",
+   "material": "ALUMINIUM",
+   "material_basis": "URBAN_STANDARD",
+   "material_authority": "US-13 INTERIOR_DOORS_ARE_PVC_EXTERIOR_OPENINGS_ARE_ALUMINIUM (exterior window; far side outside the drawing by geometry)",
+   "from_display": "BED.ROOM (1) [5f1762f1]",
+   "to_display": "EXTERIOR (outside the drawn building)"
+  },
+  {
+   "opening_id": "W-H1325",
+   "kind": "WINDOW",
+   "from_site": "SITE-a6405850100155ac",
+   "to_site": "UNLABELLED REGION SITE-2b7e752d7baa45f5,SITE-9d115e042e0e1565,SITE-eaae022599294151",
+   "clear_width_m": 2.5,
+   "width_basis": "SOURCE",
+   "height_m": 1.5,
+   "height_basis": "OWNER_PROJECT_PARAMETER",
+   "height_authority": "QP-22 owner: 1.500 m for every Qortuba window whose height the drawing does not state",
+   "area_m2": 3.75,
+   "area_basis": "OWNER_PROJECT_PARAMETER",
+   "sill_m": 1.0,
+   "sill_basis": "OWNER_FACT",
+   "sill_authority": "QORTUBA-NEW-NORMAL-WINDOWS-ABOVE-FLOOR-OWNER-001@v2",
+   "door_present": false,
+   "sources": [
+    "QORTUBA_REV_NEW|H1325||SEGMENT|0",
+    "QORTUBA_REV_NEW|H512||SEGMENT|0"
+   ],
+   "seen_from": [
+    "SITE-a6405850100155ac"
+   ],
+   "state": "IN_SCOPE",
+   "conflicts": [],
+   "entity": "QORTUBA_REV_NEW|H1325||SEGMENT",
+   "exteriority": {
+    "state": "NOT_PROVEN",
+    "far_side_probe": [
+     "SITE-2b7e752d7baa45f5",
+     "SITE-9d115e042e0e1565",
+     "SITE-eaae022599294151",
+     "SITE-eaae022599294151",
+     "SITE-eaae022599294151"
+    ],
+    "beyond_sites": [
+     "SITE-2b7e752d7baa45f5",
+     "SITE-9d115e042e0e1565",
+     "SITE-eaae022599294151"
+    ]
+   },
+   "other_side": "UNLABELLED REGION SITE-2b7e752d7baa45f5,SITE-9d115e042e0e1565,SITE-eaae022599294151",
+   "material_note": "US-13 makes an EXTERIOR window aluminium; the far side is an unlabelled region ['SITE-2b7e752d7baa45f5', 'SITE-9d115e042e0e1565', 'SITE-eaae022599294151'] - exterior not proven",
+   "material": null,
+   "material_basis": "NOT_ESTABLISHED",
+   "material_authority": null,
+   "from_display": "DRESS / M.B.ROOM",
+   "to_display": "UNLABELLED REGION SITE-2b7e752d7baa45f5,SITE-9d115e042e0e1565,SITE-eaae022599294151"
+  },
+  {
+   "opening_id": "W-H1342",
+   "kind": "WINDOW",
+   "from_site": "SITE-8c1c7563d5252c50",
+   "to_site": "EXTERIOR (outside the drawn building)",
+   "clear_width_m": 1.610992,
+   "width_basis": "SOURCE",
+   "height_m": 1.5,
+   "height_basis": "OWNER_PROJECT_PARAMETER",
+   "height_authority": "QP-22 owner: 1.500 m for every Qortuba window whose height the drawing does not state",
+   "area_m2": 2.416488,
+   "area_basis": "OWNER_PROJECT_PARAMETER",
+   "sill_m": 1.0,
+   "sill_basis": "OWNER_FACT",
+   "sill_authority": "QORTUBA-NEW-NORMAL-WINDOWS-ABOVE-FLOOR-OWNER-001@v2",
+   "door_present": false,
+   "sources": [
+    "QORTUBA_REV_NEW|H1342||SEGMENT|0",
+    "QORTUBA_REV_NEW|H463||SEGMENT|0"
+   ],
+   "seen_from": [
+    "SITE-8c1c7563d5252c50"
+   ],
+   "state": "IN_SCOPE",
+   "conflicts": [],
+   "entity": "QORTUBA_REV_NEW|H1342||SEGMENT",
+   "exteriority": {
+    "state": "EXTERIOR_PROVEN",
+    "far_side_probe": [
+     "SITE-8c0fce5ecd15953b",
+     null,
+     null,
+     null,
+     null
+    ],
+    "beyond_sites": [
+     "SITE-8c0fce5ecd15953b"
+    ]
+   },
+   "other_side": "EXTERIOR (outside the drawn building)",
+   "material": "ALUMINIUM",
+   "material_basis": "URBAN_STANDARD",
+   "material_authority": "US-13 INTERIOR_DOORS_ARE_PVC_EXTERIOR_OPENINGS_ARE_ALUMINIUM (exterior window; far side outside the drawing by geometry)",
+   "from_display": "PAINTRY",
+   "to_display": "EXTERIOR (outside the drawn building)"
+  },
+  {
+   "opening_id": "W-H1518",
+   "kind": "WINDOW",
+   "from_site": "SITE-77a2130eb275604c",
+   "to_site": "UNLABELLED REGION SITE-16beefe79d1949e3,SITE-3b875c57dda012d3,SITE-eaae022599294151",
+   "clear_width_m": 2.346444,
+   "width_basis": "SOURCE",
+   "height_m": 1.5,
+   "height_basis": "OWNER_PROJECT_PARAMETER",
+   "height_authority": "QP-22 owner: 1.500 m for every Qortuba window whose height the drawing does not state",
+   "area_m2": 3.519666,
+   "area_basis": "OWNER_PROJECT_PARAMETER",
+   "sill_m": 1.0,
+   "sill_basis": "OWNER_FACT",
+   "sill_authority": "QORTUBA-NEW-NORMAL-WINDOWS-ABOVE-FLOOR-OWNER-001@v2",
+   "door_present": false,
+   "sources": [
+    "QORTUBA_REV_NEW|H1518||SEGMENT|0",
+    "QORTUBA_REV_NEW|H510||SEGMENT|0"
+   ],
+   "seen_from": [
+    "SITE-77a2130eb275604c"
+   ],
+   "state": "IN_SCOPE",
+   "conflicts": [],
+   "entity": "QORTUBA_REV_NEW|H1518||SEGMENT",
+   "exteriority": {
+    "state": "NOT_PROVEN",
+    "far_side_probe": [
+     "SITE-16beefe79d1949e3",
+     "SITE-3b875c57dda012d3",
+     "SITE-eaae022599294151",
+     "SITE-eaae022599294151",
+     "SITE-eaae022599294151"
+    ],
+    "beyond_sites": [
+     "SITE-16beefe79d1949e3",
+     "SITE-3b875c57dda012d3",
+     "SITE-eaae022599294151"
+    ]
+   },
+   "other_side": "UNLABELLED REGION SITE-16beefe79d1949e3,SITE-3b875c57dda012d3,SITE-eaae022599294151",
+   "material_note": "US-13 makes an EXTERIOR window aluminium; the far side is an unlabelled region ['SITE-16beefe79d1949e3', 'SITE-3b875c57dda012d3', 'SITE-eaae022599294151'] - exterior not proven",
+   "material": null,
+   "material_basis": "NOT_ESTABLISHED",
+   "material_authority": null,
+   "from_display": "HALL / whgm",
+   "to_display": "UNLABELLED REGION SITE-16beefe79d1949e3,SITE-3b875c57dda012d3,SITE-eaae022599294151"
+  }
+ ],
+ "count": 6,
+ "area_m2": 16.053897,
+ "sill": "1.00 m above floor (QORTUBA-NEW-NORMAL-WINDOWS-ABOVE-FLOOR-OWNER-001@v2); the wall below is physical and skirting continues below every normal window",
+ "height": "QP-22 owner project parameter 1.50 m"
+}

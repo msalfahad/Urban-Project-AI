@@ -1,0 +1,156 @@
+{
+ "SCHEMA": "URBAN_R8_14_SKIRTING_READINESS_V1",
+ "policy": {
+  "policy_id": "WALL_CONTACT_PATH_POLICY_V1",
+  "classes": [
+   "REAL_WALL_FACE",
+   "DOOR_OPENING",
+   "GLAZED_OPENING",
+   "TOPOLOGY_CLOSURE",
+   "UNPROVEN_OBSTACLE",
+   "OTHER"
+  ],
+  "on_path": [
+   "REAL_WALL_FACE"
+  ],
+  "never": [
+   "a room polygon perimeter",
+   "skirting across a door or an open passage",
+   "skirting on a topology closure",
+   "a furniture / wardrobe deduction",
+   "skirting in a full-wall-tile room",
+   "a published quantity without a frozen, blind-tested policy"
+  ],
+  "digest": "b4f0d2d94976d232a2d83d21c38402e0488592394e25e39ee68852d43266b8af"
+ },
+ "facts": [
+  "QORTUBA-NEW-DRY-ROOM-SKIRTING-ALL-REAL-WALLS-OWNER-001@v1",
+  "QORTUBA-NEW-NO-SKIRTING-FULL-WALL-TILE-ROOMS-OWNER-001@v1"
+ ],
+ "dry_rooms_classified": {
+  "SITE-5f1762f1a93b91ca": {
+   "zones": [
+    "BED.ROOM"
+   ],
+   "edges_by_class": {
+    "DOOR_OPENING": 1,
+    "OTHER": 1,
+    "REAL_WALL_FACE": 12,
+    "UNPROVEN_OBSTACLE": 4
+   },
+   "withheld": [
+    {
+     "class": "OTHER",
+     "sources": [
+      "QORTUBA_REV_NEW|H1319||SEGMENT|0",
+      "QORTUBA_REV_NEW|H448||SEGMENT|0"
+     ]
+    },
+    {
+     "class": "UNPROVEN_OBSTACLE",
+     "sources": [
+      "QORTUBA_REV_NEW|H2060||SEGMENT|0"
+     ]
+    },
+    {
+     "class": "UNPROVEN_OBSTACLE",
+     "sources": [
+      "QORTUBA_REV_NEW|H2060||SEGMENT|1"
+     ]
+    },
+    {
+     "class": "UNPROVEN_OBSTACLE",
+     "sources": [
+      "QORTUBA_REV_NEW|H2060||SEGMENT|2"
+     ]
+    },
+    {
+     "class": "UNPROVEN_OBSTACLE",
+     "sources": [
+      "QORTUBA_REV_NEW|H2060||SEGMENT|3"
+     ]
+    }
+   ]
+  },
+  "SITE-a6405850100155ac": {
+   "zones": [
+    "DRESS",
+    "M.B.ROOM"
+   ],
+   "edges_by_class": {
+    "DOOR_OPENING": 2,
+    "OTHER": 2,
+    "REAL_WALL_FACE": 22
+   },
+   "withheld": [
+    {
+     "class": "OTHER",
+     "sources": [
+      "QORTUBA_REV_NEW|H1026||SEGMENT|0",
+      "QORTUBA_REV_NEW|H457||SEGMENT|0"
+     ]
+    },
+    {
+     "class": "OTHER",
+     "sources": [
+      "QORTUBA_REV_NEW|H1325||SEGMENT|0",
+      "QORTUBA_REV_NEW|H512||SEGMENT|0"
+     ]
+    }
+   ]
+  },
+  "SITE-daca396d6d730e60": {
+   "zones": [
+    "BED.ROOM"
+   ],
+   "edges_by_class": {
+    "DOOR_OPENING": 1,
+    "OTHER": 1,
+    "REAL_WALL_FACE": 10
+   },
+   "withheld": [
+    {
+     "class": "OTHER",
+     "sources": [
+      "QORTUBA_REV_NEW|H1020||SEGMENT|0",
+      "QORTUBA_REV_NEW|H469||SEGMENT|0"
+     ]
+    }
+   ]
+  },
+  "SITE-fdfa89fe0f5809a4": {
+   "zones": [
+    "HALL",
+    "whgm"
+   ],
+   "edges_by_class": {
+    "DOOR_OPENING": 6,
+    "GLAZED_OPENING": 1,
+    "OTHER": 1,
+    "REAL_WALL_FACE": 31,
+    "TOPOLOGY_CLOSURE": 2
+   },
+   "withheld": [
+    {
+     "class": "OTHER",
+     "sources": [
+      "QORTUBA_REV_NEW|H1518||SEGMENT|0",
+      "QORTUBA_REV_NEW|H510||SEGMENT|0"
+     ]
+    }
+   ]
+  }
+ },
+ "no_skirting_classes": [
+  "WET_SERVICE_ROOM",
+  "SERVICE_ROOM"
+ ],
+ "quantity": "NOT PRODUCED",
+ "missing_components": [
+  "a FROZEN, blind-tested WALL_CONTACT_PATH policy (built and synthetically tested this round; never run under freeze + blind protocol)",
+  "a jamb-return rule: the Hall / Lobby jamb faces are TOPOLOGY_CLOSURE edges (zero by rule); their physical 200 mm returns need source / owner length authority before they can carry skirting",
+  "a glazed-opening rule for the new revision (QP-09 is an old-revision rule store entry)",
+  "the V4-O1 hole edges (UNPROVEN_OBSTACLE) withheld until the obstacle has physical authority"
+ ],
+ "never_used": "a room polygon perimeter"
+}

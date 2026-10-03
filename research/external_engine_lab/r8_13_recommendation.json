@@ -1,0 +1,42 @@
+{
+ "SCHEMA": "URBAN_R8_13_RECOMMENDATION_BEFORE_CODING_V1",
+ "written": "before any V4 code and before any V4 Qortuba run; committed with the frozen WALL_BAND_POLICY_V4. The only Qortuba inspection made was of the R8.12 V3 record of the two recorded defects (root cause, section 9 of the brief), never of a V4 candidate",
+ "1_are_d1_d2_the_highest_priority": "YES. D1 is a correctness defect, not only a label defect: detect() indexes chains by id (byc = {chain_id: chain}) and candidates by id, so two colliding chains become ONE dictionary entry and pairing then runs against the wrong geometry (that is where the 8 duplicate WB- ids with faces ['2060', '2060'] come from). D2 is the only path by which V3 can create an OPEN_PASSAGE_SITE that is not real. Neither touches a row today, and both have to be fixed before any passage or closure becomes release evidence.",
+ "2_generic_fix_without_moving_h2430_h2431": "YES by construction, and it can be tested before the blind run. D1 changes identity only: chains that did not collide get a different id string (version bump) but the same membership, pairing and geometry. D2 rejects only a run whose LOCAL support is not longer than its separation; the H2430 run is one contiguous run of about 465 native units against a 20-unit separation (the column interval is INSIDE the run, as an OBSTACLE_OVERLAP), and the H2431 run is likewise long. Both are expected to stay; they are checked blind, and any change is reported, not tuned.",
+ "3_what_v4_changes": [
+  "D1 identity: a FACE CHAIN keeps its V3 id (revision + region + source entities incl. the occurrence path + parameter interval along the canonical direction) wherever that id is unique; chains of the SAME entities and extent - the parallel sides of one closed polyline - are told apart by their SUPPORTING LINE (canonical direction + signed offset). So a nudged face (frozen R8.11 test) and an equivalent re-segmentation (frozen R8.12 test) keep their ids, reversed orientation leaves the canonical line unchanged, an unrelated insertion changes nothing, and two parallel sides never share an id. -0.0 is normalised to 0.0 in every id coordinate.",
+  "D1 band id: built from the two (now unique) chain ids + the run interval, never from entity lists alone. Span ids follow the band id. A residual id collision is never silent: the colliding chains are recorded (chain_id_collisions) and excluded from pairing (fail closed).",
+  "D2 ASSEMBLY_STRUCTURAL_SUPPORT: elongation is tested on the LOCAL RUN (the contiguous locally-mutual-nearest interval, which already contains its spans, obstacle overlaps and nodes), not on the raw chain overlap. A run is SELF_SUPPORTED when its length exceeds elongation_ratio x separation. A run that is not self-supported is INHERITED_SUPPORT only when it is joined to a self-supported run of the SAME chain pair and side by gaps each of which is occupied by a full-width closed obstacle loop (a column through the wall); otherwise it is UNSUPPORTED: recorded as a non-authoritative pair-run candidate, never a band, never a passage source, never an ambiguity source for another band.",
+  "Passage source and target must both be structural: the source is an ESTABLISHED, supported band end; the target is a TOPOLOGY_BOUNDARY / STRUCTURAL_OBSTACLE segment or an established band end. A furniture, dimension, glazing, opening-closure or unresolved-role line can never be the far jamb of an OPEN_PASSAGE_SITE."
+ ],
+ "4_what_v4_must_not_change": [
+  "face-chain contiguity (eps_n, same occurrence, OPENING_BREAK, gaps never joined)",
+  "local mutual nearest per elementary interval",
+  "the raw-pair-strip label rule",
+  "crossing subdivision (SPAN / OBSTACLE_OVERLAP / nodes / AMBIGUOUS_*)",
+  "end classification incl. A1 RECEIVING_FACE_JUNCTION and OPENING_JAMB",
+  "cap grading",
+  "TOPOLOGY_CLOSURE_POLICY_V1 (unchanged digest)",
+  "zero material, no thickness / masonry / quantity from a band",
+  "no width, length, coordinate, area or expected-result threshold anywhere"
+ ],
+ "5_owner_floor_answer_sufficient": "YES for the object-footprint question: it is a FLOOR_FINISH TradeObjectFootprintPolicy FOOTPRINT_INCLUDED for any non-partition object (built-in / fixed joinery wardrobes, loose furniture, sofas), scoped to the selected new Qortuba revision + region + plan + the dry/internal porcelain floor. It makes SF3 / FIRNTUR / joinery footprints NON_MATERIAL to Q-13 (ROLE_UNRESOLVED_BUT_NON_MATERIAL_TO_TRADE) without resolving what they are. It is NOT a topology fact and must not reach V4, the blind run or passage detection.",
+ "6_hidden_q13_blocker": "Yes, two strips must be audited, not absorbed. (a) DOOR THRESHOLDS are separate TS01 sites outside every room site: the room-floor sum excludes them by construction, so Q-13 is not wrong but the threshold floor is in NO row - it must be listed with its area and carried as a THRESHOLD_FLOOR_ALLOCATION release blocker (no authority says whether a threshold takes porcelain, a marble threshold or nothing; Q-13 is the ROOM floor the owner defined). (b) OPEN-PASSAGE strips lie INSIDE a site (the Hall / Lobby strip is inside the Hall site), so they ARE in the room-floor sum; that is acceptable only when every side of the strip carries the same floor treatment, which must be checked per strip and recorded; a strip whose sides disagree blocks the row (BLOCKED_TRADE_RULE). I expect Q-13 to compute in shadow with a THRESHOLD release blocker; the rebuild must prove it.",
+ "7_what_must_not_enter_the_engine": [
+  "the 3.20 m wall-finish height",
+  "the room-name -> class mapping (BATHROOM / IRONING / WASHING / LAUNDRY / KITCHEN / PAINTRY / HALL ...)",
+  "the FOOTPRINT_INCLUDED decision itself",
+  "any Qortuba handle, coordinate, area or row value",
+  "the porcelain / ceramic material names"
+ ],
+ "7_what_may_enter_the_engine": "only the generic types: a scoped semantic-class rule, a scoped object-footprint policy (already TradeObjectFootprintPolicy), a scoped finish-height fact type, the strip-allocation audit and the digest hierarchy functions.",
+ "8_disagreements_with_chatgpt": [
+  "The chain id should contain neither the sub-part index (an equivalent re-segmentation renumbers sub-parts - frozen R8.12 test) nor, unconditionally, the line offset (a 1-unit nudge of one face must keep the band id - frozen R8.11 test). The supporting line is the right discriminator, but only among chains whose V3 identity (entities + extent) coincides; the sub-part keys stay in the chain record as provenance.",
+  "ASSEMBLY_STRUCTURAL_SUPPORT should be inherited only across an OBSTACLE gap (a full-width closed loop through the strip) and only from a SELF-supported run; inheriting from the group's total length would let a column plus two slivers bootstrap a band.",
+  "Requiring TWO wall bands for an open passage is too strict: a passage between a band end and a single-line wall face is real. The requirement should be two STRUCTURAL sides (an established supported band end + a TOPOLOGY_BOUNDARY / STRUCTURAL_OBSTACLE face or another band end).",
+  "Door-threshold strips should not block Q-13's room-floor value; they are a separate allocation (release blocker), because the owner fact defines the ROOM floor. Open-passage strips inside a site must pass a same-treatment-on-both-sides check, otherwise block.",
+  "3.20 m changes QP-01 (3.00 m wall tile height) for the new revision: that is a versioned, scoped supersession (new revision wet / service rooms), not a corroboration; QP-01 stays for the old revision."
+ ],
+ "9_new_issue": "D1 is a dictionary-collapse bug inside detect(), so in V3 some candidate lists were built against the wrong chain: band COUNTS in R8.12 near the H2060 / H2061 rectangles are unreliable, not just their ids. Also: V3 let any segment (furniture, dimension, glazing) be the far side of a passage; tightened in V4.",
+ "10_r8_14_if_r8_13_succeeds": "R8.14: (1) the threshold floor allocation rule (one owner statement if it is then the only Q-13 release blocker), (2) the passage soffit allocation for Q-14, (3) the DWG <-> DXF source anchor with a pinned decoder, (4) the reviewed closure release record (REVIEWED_FOR_RELEASE_CANDIDATE) on H2430 / H2431, (5) the wall-ceramic 3.20 m quantity only on a tested face-set engine path."
+}

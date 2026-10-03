@@ -1,0 +1,65 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_A3_OWNER_QUESTIONS_V1",
+ "questions": [
+  {
+   "id": "OQ3-S1",
+   "group": "STRUCTURAL",
+   "question": "At the east end of the foundation plan ONE footing outline (3.25 x 1.40 m) is drawn under columns C10 and C, carrying the marks F10 and F; the schedule gives F10 = 280 x 140 x 50 cm and F = 90 x 80 x 30 cm. Is this one combined footing built to the drawn outline (and at which depth), or two scheduled footings overlapping each other?",
+   "evidence": "FOOTING_REGISTER.forensic (outline H6939, strap H5769 / H6940 entering it, columns H4328 / H4260)",
+   "unblocks": [
+    "footing F10 (1)",
+    "footing F at C (1)",
+    "confirms the S.B1 clear end (measured to the drawn face of this outline)"
+   ],
+   "supersedes": [
+    "OQ2-S1",
+    "OQ2-S2"
+   ]
+  },
+  {
+   "id": "OQ3-A1",
+   "group": "ARCHITECTURAL",
+   "question": "Ground floor, west side at the entry arrow: the hall that joins dining, reception and saloon is drawn with no door or screen to the outside. Is the entrance closed by a door or glazed screen (not drawn), or is it an open entrance?",
+   "evidence": "ROOM_TOPOLOGY: the DINING / RECEPTION / SALOON labels lie in no bounded site; the flood from the saloon reaches outside through the entrance hall",
+   "unblocks": [
+    "GF hall / dining / reception / saloon room areas (geometry only)"
+   ],
+   "supersedes": [
+    "OQ2-A1"
+   ]
+  },
+  {
+   "id": "OQ3-A2",
+   "group": "ARCHITECTURAL",
+   "question": "Ground-floor master bedroom, west corner: two single lines form a 0.50 x 1.46 m box with a diagonal against the wall. Is it a fixed wardrobe (does the floor finish run under it?) or a closed store?",
+   "evidence": "ROOM_REGISTER: MASTER BED ROOM GF site 16.55 m2 REVIEW_REQUIRED (TOPOLOGY_ROLE_UNRESOLVED)",
+   "unblocks": [
+    "GF master bedroom floor / ceiling area"
+   ]
+  }
+ ],
+ "resolved_since_a2": [
+  {
+   "id": "OQ2-A1",
+   "how": "owner facts (salon aluminium glass; master-bedroom curved glazing) + the engine now reads curved glazing arcs; the remaining open edge is the entrance -> OQ3-A1"
+  },
+  {
+   "id": "OQ2-A2",
+   "how": "COUNTER_RUN joinery motif (engine inference): kitchen U-run and pantry L-run are fixed counters; the kitchen certifies 9.63 m2"
+  },
+  {
+   "id": "OQ2-S1",
+   "how": "forensics: the 1.50 x 1.40 'outline' was the east part of ONE combined outline clipped by the strap; F at H5757 occurrences are count-unique -> OQ3-S1 for the combined outline only"
+  },
+  {
+   "id": "OQ2-S2",
+   "how": "forensics: the 1.05 x 1.40 'F10 candidate' was the west part of the same outline -> OQ3-S1"
+  }
+ ],
+ "never_asked": [
+  "expected quantities",
+  "freelancer BOQ",
+  "web-app report",
+  "files the owner already said do not exist"
+ ]
+}

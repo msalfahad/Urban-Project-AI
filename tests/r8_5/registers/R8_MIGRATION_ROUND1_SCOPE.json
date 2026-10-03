@@ -1,0 +1,377 @@
+{
+ "SCHEMA": "URBAN_R8_5_MIGRATION_ROUND1_SCOPE_V1",
+ "status": "DESIGN_ONLY_NOT_EXECUTED",
+ "project": "QORTUBA",
+ "source_sha256": "2ec3a9c8b66eb2e129275b87010f4a8d79d7e5bdcc31c1897c14fd7e5647d355",
+ "selection_rule": "FINAL rows whose value is a sum of room floor-polygon areas and that the canonical method reproduces exactly from the current inputs (VALUE_EXACT_MATCH); nothing else",
+ "rows": [
+  {
+   "row_id": "Q-03|WET_AREA_WATERPROOFING_FLOOR",
+   "unit": "M2",
+   "rules": [
+    "US-04"
+   ],
+   "current_value": 17.8625,
+   "canonical_preview_value": 17.862500000036704,
+   "abs_delta": 3.6703085015687975e-11,
+   "room_ids": [
+    "RM-a8bebaab",
+    "RM-3ef43270",
+    "RM-2618ef17"
+   ]
+  },
+  {
+   "row_id": "Q-03P|PANTRY_WATERPROOFING_FLOOR",
+   "unit": "M2",
+   "rules": [
+    "US-14",
+    "QP-13"
+   ],
+   "current_value": 11.685,
+   "canonical_preview_value": 11.685000000000102,
+   "abs_delta": 1.0125233984581428e-13,
+   "room_ids": [
+    "RM-45ddc40d"
+   ]
+  },
+  {
+   "row_id": "Q-11|FLOOR_CERAMIC_WET_ROOMS",
+   "unit": "M2",
+   "rules": [
+    "US-01",
+    "M"
+   ],
+   "current_value": 17.8625,
+   "canonical_preview_value": 17.862500000036704,
+   "abs_delta": 3.6703085015687975e-11,
+   "room_ids": [
+    "RM-a8bebaab",
+    "RM-3ef43270",
+    "RM-2618ef17"
+   ]
+  },
+  {
+   "row_id": "Q-12|FLOOR_CERAMIC_SERVICE_ROOM",
+   "unit": "M2",
+   "rules": [
+    "US-01",
+    "QP-07",
+    "M"
+   ],
+   "current_value": 11.685,
+   "canonical_preview_value": 11.685000000000102,
+   "abs_delta": 1.0125233984581428e-13,
+   "room_ids": [
+    "RM-45ddc40d"
+   ]
+  },
+  {
+   "row_id": "Q-13|PORCELAIN_FLOOR_DRY_ROOMS",
+   "unit": "M2",
+   "rules": [
+    "QP-14",
+    "US-01"
+   ],
+   "current_value": 108.9625,
+   "canonical_preview_value": 108.96249999991421,
+   "abs_delta": -8.57909299156745e-11,
+   "room_ids": [
+    "RM-2eaf198b",
+    "RM-1bf02f9e",
+    "RM-dd405ee7",
+    "RM-c9bc432b",
+    "RM-894527f7",
+    "RM-1a81d91e"
+   ]
+  },
+  {
+   "row_id": "Q-14|CEILING_BY_AREA",
+   "unit": "M2",
+   "rules": [
+    "US-15",
+    "QP-15"
+   ],
+   "current_value": 138.51,
+   "canonical_preview_value": 138.509999999951,
+   "abs_delta": -4.899902705801651e-11,
+   "room_ids": [
+    "RM-2eaf198b",
+    "RM-1bf02f9e",
+    "RM-dd405ee7",
+    "RM-c9bc432b",
+    "RM-45ddc40d",
+    "RM-894527f7",
+    "RM-a8bebaab",
+    "RM-3ef43270",
+    "RM-1a81d91e",
+    "RM-2618ef17"
+   ]
+  }
+ ],
+ "rows_excluded_by_class": {
+  "VALUE_METHOD_NOT_MIGRATED": 15,
+  "VALUE_NOT_COMPUTABLE": 6,
+  "VALUE_TRADE_RULE_UNDECIDED": 1
+ },
+ "rooms": [
+  {
+   "room_id": "RM-1a81d91e",
+   "room": "UNLABELLED_INTERNAL_SPACE",
+   "current_area_m2": 4.51,
+   "canonical_area_m2": 4.510000000001025,
+   "max_edge_residual_mm": 0.01745,
+   "canonical_quantity_id": "CQ:QORTUBA:RM-1a81d91e:AREA",
+   "method_id": "URBAN_SHADOW_ROOM_FROM_CANONICAL_EDGES_V1",
+   "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649"
+  },
+  {
+   "room_id": "RM-1bf02f9e",
+   "room": "M.B.ROOM",
+   "current_area_m2": 20.8075,
+   "canonical_area_m2": 20.8075,
+   "max_edge_residual_mm": 0.01745,
+   "canonical_quantity_id": "CQ:QORTUBA:RM-1bf02f9e:AREA",
+   "method_id": "URBAN_SHADOW_ROOM_FROM_CANONICAL_EDGES_V1",
+   "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649"
+  },
+  {
+   "room_id": "RM-2618ef17",
+   "room": "BATH",
+   "current_area_m2": 4.21,
+   "canonical_area_m2": 4.2100000000099085,
+   "max_edge_residual_mm": 0.01745,
+   "canonical_quantity_id": "CQ:QORTUBA:RM-2618ef17:AREA",
+   "method_id": "URBAN_SHADOW_ROOM_FROM_CANONICAL_EDGES_V1",
+   "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649"
+  },
+  {
+   "room_id": "RM-2eaf198b",
+   "room": "HALL / whgm",
+   "current_area_m2": 36.37,
+   "canonical_area_m2": 36.37000000001958,
+   "max_edge_residual_mm": 0.01745,
+   "canonical_quantity_id": "CQ:QORTUBA:RM-2eaf198b:AREA",
+   "method_id": "URBAN_SHADOW_ROOM_FROM_CANONICAL_EDGES_V1",
+   "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649"
+  },
+  {
+   "room_id": "RM-3ef43270",
+   "room": "BATH",
+   "current_area_m2": 5.1,
+   "canonical_area_m2": 5.1000000000094845,
+   "max_edge_residual_mm": 0.01745,
+   "canonical_quantity_id": "CQ:QORTUBA:RM-3ef43270:AREA",
+   "method_id": "URBAN_SHADOW_ROOM_FROM_CANONICAL_EDGES_V1",
+   "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649"
+  },
+  {
+   "room_id": "RM-45ddc40d",
+   "room": "PAINTRY",
+   "current_area_m2": 11.685,
+   "canonical_area_m2": 11.685000000000102,
+   "max_edge_residual_mm": 0.01745,
+   "canonical_quantity_id": "CQ:QORTUBA:RM-45ddc40d:AREA",
+   "method_id": "URBAN_SHADOW_ROOM_FROM_CANONICAL_EDGES_V1",
+   "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649"
+  },
+  {
+   "room_id": "RM-894527f7",
+   "room": "DRESS",
+   "current_area_m2": 11.985,
+   "canonical_area_m2": 11.98499999998193,
+   "max_edge_residual_mm": 0.01745,
+   "canonical_quantity_id": "CQ:QORTUBA:RM-894527f7:AREA",
+   "method_id": "URBAN_SHADOW_ROOM_FROM_CANONICAL_EDGES_V1",
+   "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649"
+  },
+  {
+   "room_id": "RM-a8bebaab",
+   "room": "BATH",
+   "current_area_m2": 8.5525,
+   "canonical_area_m2": 8.552500000017309,
+   "max_edge_residual_mm": 0.01745,
+   "canonical_quantity_id": "CQ:QORTUBA:RM-a8bebaab:AREA",
+   "method_id": "URBAN_SHADOW_ROOM_FROM_CANONICAL_EDGES_V1",
+   "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649"
+  },
+  {
+   "room_id": "RM-c9bc432b",
+   "room": "BED.ROOM",
+   "current_area_m2": 16.5375,
+   "canonical_area_m2": 16.53749999997444,
+   "max_edge_residual_mm": 0.01745,
+   "canonical_quantity_id": "CQ:QORTUBA:RM-c9bc432b:AREA",
+   "method_id": "URBAN_SHADOW_ROOM_FROM_CANONICAL_EDGES_V1",
+   "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649"
+  },
+  {
+   "room_id": "RM-dd405ee7",
+   "room": "BED.ROOM",
+   "current_area_m2": 18.7525,
+   "canonical_area_m2": 18.752499999937243,
+   "max_edge_residual_mm": 0.01745,
+   "canonical_quantity_id": "CQ:QORTUBA:RM-dd405ee7:AREA",
+   "method_id": "URBAN_SHADOW_ROOM_FROM_CANONICAL_EDGES_V1",
+   "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649"
+  }
+ ],
+ "source_observations": [
+  "D1:447",
+  "D1:456",
+  "D1:457",
+  "D1:458",
+  "D1:460",
+  "D1:461",
+  "D1:462",
+  "D1:463",
+  "D1:464",
+  "D1:465",
+  "D1:466",
+  "D1:467",
+  "D1:468",
+  "D1:469",
+  "D1:470",
+  "D1:471",
+  "D1:472",
+  "D1:473",
+  "D1:474",
+  "D1:475",
+  "D1:476",
+  "D1:477",
+  "D1:481",
+  "D1:482",
+  "D1:483",
+  "D1:484",
+  "D1:485",
+  "D1:486",
+  "D1:487",
+  "D1:488",
+  "D1:510",
+  "D1:512",
+  "D1:513",
+  "D1:516",
+  "D1:518",
+  "D1:519",
+  "D1:520",
+  "D1:521",
+  "D1:522",
+  "D1:523",
+  "D1:525",
+  "D1:526",
+  "D1:527",
+  "D1:528",
+  "D1:529",
+  "D1:530",
+  "D1:531",
+  "D1:535",
+  "D1:537",
+  "D1:538",
+  "D1:539",
+  "D1:540",
+  "D1:542",
+  "D1:543",
+  "D1:549",
+  "D1:552",
+  "D1:553",
+  "D1:554",
+  "D1:555",
+  "D1:578",
+  "D1:681",
+  "D1:685",
+  "D1:686",
+  "D1:704",
+  "D1:706",
+  "D1:708",
+  "D1:712",
+  "D1:714",
+  "D1:716",
+  "D1:718",
+  "D1:720",
+  "D1:815",
+  "D1:816",
+  "D1:817",
+  "D1:1020",
+  "D1:1026",
+  "D1:1325",
+  "D1:1342",
+  "D1:1513",
+  "D1:1518",
+  "D1:1547",
+  "D1:1587",
+  "D1:1588",
+  "D1:1590",
+  "D1:1659",
+  "D1:1663",
+  "D1:1669",
+  "D1:1671",
+  "D1:1672",
+  "D1:1673",
+  "D1:1674",
+  "D1:1675",
+  "D1:1676",
+  "D1:1677",
+  "D1:1892",
+  "D1:1893",
+  "D1:1895",
+  "D1:1947",
+  "D1:1948",
+  "D1:2060",
+  "D1:2061"
+ ],
+ "source_observations_without_signature": [],
+ "required_signatures": [
+  {
+   "signature": "KIND=LINE|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+   "observations": 86
+  },
+  {
+   "signature": "KIND=LINE|CHAIN=REFLECTION+ROTATION+TRANSLATION+UNIFORM_SCALE|NET=NET_REFLECTED|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+   "observations": 3
+  },
+  {
+   "signature": "KIND=LINE|CHAIN=REFLECTION+ROTATION+TRANSLATION|NET=NET_REFLECTED|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+   "observations": 1
+  },
+  {
+   "signature": "KIND=LINE|CHAIN=REFLECTION+TRANSLATION+UNIFORM_SCALE|NET=NET_REFLECTED|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+   "observations": 3
+  },
+  {
+   "signature": "KIND=LINE|CHAIN=ROTATION+TRANSLATION+UNIFORM_SCALE|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+   "observations": 3
+  },
+  {
+   "signature": "KIND=LINE|CHAIN=ROTATION+TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+   "observations": 1
+  },
+  {
+   "signature": "KIND=LINE|CHAIN=TRANSLATION+UNIFORM_SCALE|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+   "observations": 3
+  },
+  {
+   "signature": "KIND=LINE|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+   "observations": 1
+  },
+  {
+   "signature": "KIND=LWPOLYLINE_BULGE|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+   "observations": 1
+  },
+  {
+   "signature": "KIND=LWPOLYLINE_STRAIGHT|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+   "observations": 10
+  }
+ ],
+ "required_signature_count": 10,
+ "project_signature_count": 33,
+ "current_gate_state": {
+  "unit": "UNCONFIRMED",
+  "region": "UNCONFIRMED",
+  "frame": "UNCONFIRMED",
+  "release": "PREVIEW",
+  "V-CAD-5": "PASS",
+  "designation_review": "PENDING_REVIEW",
+  "qualified_required_signatures": 0,
+  "independent_real_reconciliation": "BLOCKED_EXTERNAL_INPUT"
+ },
+ "execution_ready": false
+}

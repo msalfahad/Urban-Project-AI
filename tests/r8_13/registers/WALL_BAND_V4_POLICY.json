@@ -1,0 +1,233 @@
+{
+ "SCHEMA": "URBAN_R8_13_WALL_BAND_V4_POLICY_V1",
+ "policy": {
+  "policy_id": "WALL_BAND_POLICY_V4",
+  "model": [
+   "FACE_CHAIN (strict contiguity, typed nodes, supporting-line identity)",
+   "LOCAL BAND SPAN (local mutual nearest per elementary interval)",
+   "WALL_BAND_ASSEMBLY (spans + obstacle overlaps + nodes of one chain pair) with ASSEMBLY_STRUCTURAL_SUPPORT on the local run",
+   "OPEN_PASSAGE between two STRUCTURAL sides"
+  ],
+  "support": [
+   "SELF_SUPPORTED",
+   "INHERITED_SUPPORT",
+   "UNSUPPORTED"
+  ],
+  "params": {
+   "chain_join": "collinear within eps_n both ways; end points coincident within eps_n (touching); same occurrence path; TOPOLOGY_BOUNDARY on both sides; NO opening / glazing segment end within eps_r of the joint (OPENING_BREAK). A gap of any size, including inside the 50 mm review band, is never joined",
+   "duplicate": "collinear fragments overlapping by more than eps_n are ONE chain with a DUPLICATE interval; a span over a duplicate interval is AMBIGUOUS",
+   "parallel": "|cross(u_a, u_b)| x overlap <= eps_r",
+   "overlap_min": "eps_r",
+   "separation_min": "eps_r",
+   "elongation_ratio": 1.0,
+   "elongation_basis": "V4: the LOCAL RUN (contiguous locally mutual nearest interval incl. its spans, obstacle overlaps and nodes); never the raw chain overlap (V3-D2), never a single span",
+   "structural_support": "SELF_SUPPORTED: run length > elongation_ratio x separation. INHERITED_SUPPORT: a shorter run of the SAME chain pair and side joined to a self-supported run across gaps each filled by a full-width closed loop of a support role (every corner of the gap strip, inset by eps_r, inside the loop). Never inherited from a group's total length; an UNSUPPORTED run is recorded, never a band",
+   "support_loop_roles": [
+    "TOPOLOGY_BOUNDARY",
+    "STRUCTURAL_OBSTACLE"
+   ],
+   "chain_identity": "entities + parameter interval along the canonical direction (V3, kept wherever it is unique so a nudged face and an equivalent re-segmentation keep their id); chains of the SAME entities and extent (parallel sides of one closed polyline) are told apart by their SUPPORTING LINE (canonical direction + signed offset). The sub-part index is provenance only (a re-segmentation renumbers it); -0.0 -> 0.0",
+   "band_identity": "the two chain ids + the run interval in the frame of the lower chain id",
+   "id_collision": "colliding chains are recorded and excluded from pairing (fail closed)",
+   "passage_target_roles": [
+    "TOPOLOGY_BOUNDARY",
+    "STRUCTURAL_OBSTACLE",
+    "an ESTABLISHED band end"
+   ],
+   "local_mutual_nearest": "evaluated at the middle of every elementary interval (breakpoints: projections of all parallel overlapping chains of both chains, both sides)",
+   "one_side_margin": "eps_r",
+   "nearest_tie": "eps_r (a tie between two chains is never paired)",
+   "strip": "a label anywhere in the RAW strip of the chain pair (the whole chain overlap) rejects the pair - local pairing must never turn an unlabelled slice of a room into a band; labels or arcs in the local strip reject the run; crossings subdivide it",
+   "id_coordinate_decimals": 6,
+   "canonical_direction_guard": 1e-09,
+   "eps_n_default_ratio_of_eps_r": 0.001,
+   "full_width_margin_in_eps_r": 2.0,
+   "numeric_guards": {
+    "ray_parallel": 1e-15,
+    "segment_length_floor": 1e-12,
+    "clip_parameter": 1e-12
+   },
+   "pair_search": "exhaustive over admitted faces (no direction buckets, no neighbourhood window)",
+   "review_band": "role_authority.NEAR_MISS_REVIEW_BAND_MM / unit - cap grading only, never a join"
+  },
+  "interval_classes": [
+   "WALL_BAND_SPAN",
+   "OBSTACLE_OVERLAP",
+   "CROSSING_WALL_NODE",
+   "ENCLOSED_NODE",
+   "AMBIGUOUS_CENTRELINE",
+   "AMBIGUOUS_DUPLICATE",
+   "AMBIGUOUS_PAIRED_BOTH_SIDES"
+  ],
+  "chain_nodes": [
+   "CONTINUOUS_JOIN",
+   "BRANCH_NODE",
+   "CROSSING_NODE",
+   "OPENING_BREAK",
+   "DUPLICATE_OVERLAP"
+  ],
+  "ends": [
+   "JUNCTION_OR_CONTINUATION",
+   "RECEIVING_FACE_JUNCTION",
+   "OPENING_JAMB",
+   "CAPPED",
+   "ALIGNED_FREE_END"
+  ],
+  "caps": [
+   "WALL_END_CAP_PROVEN",
+   "WALL_END_CAP_CANDIDATE",
+   "NOT_WALL_CAP",
+   "UNRESOLVED"
+  ],
+  "never": [
+   "thickness",
+   "area",
+   "nearest parallel pair alone",
+   "coordinates alone",
+   "material identity",
+   "a join across any gap",
+   "the 50 mm review band as continuity",
+   "whole-face disqualification by geometry outside the local interval",
+   "elongation on the raw chain overlap",
+   "support inherited from a group's total length",
+   "an id from entities + extent alone",
+   "a passage to a non-structural line"
+  ],
+  "history": [
+   "V1 (R8.11 freeze 5895981): whole-face pairing",
+   "V2 (R8.11 amendment A1): RECEIVING_FACE_JUNCTION",
+   "V3 (R8.12): face chains + local spans + assemblies + OPENING_JAMB; A1 kept",
+   "V4 (R8.13): D1 supporting-line chain identity + chain-id band identity + fail-closed collisions; D2 structural support on the LOCAL run (inherited only across a full-width structural loop); structural passage targets"
+  ],
+  "means": "TOPOLOGY_OBSTACLE_GEOMETRY, not MASONRY_CONFIRMED",
+  "digest": "8ed1a5cff22b8057457b05622a3f3f25ee14add57eb3c1ae9b88af35f25741fc"
+ },
+ "closure_policy": {
+  "policy_id": "TOPOLOGY_CLOSURE_POLICY_V1",
+  "rule": "WALL_END_CLOSURE_V1",
+  "material": "NONE: never wall length, area or finish",
+  "geometry": "the segment between the two face end points of an aligned free end (source coordinates of the faces; never a cap's coordinates; never a moved end point)",
+  "authorised_for_shadow_requires": [
+   "established band",
+   "aligned free end",
+   "drawn cap corroboration",
+   "label partition unchanged",
+   "separated pieces are pure band interiors (band faces, closures, cross edges parallel to the closure)",
+   "area balance"
+  ],
+  "release_levels": [
+   "TOPOLOGY_CLOSURE_CANDIDATE",
+   "DIAGNOSTIC_PASS",
+   "REVIEWED",
+   "AUTHORISED_FOR_SHADOW",
+   "AUTHORISED_FOR_RELEASE",
+   "TOPOLOGY_CLOSURE_UNRESOLVED"
+  ],
+  "never": [
+   "distance alone (a near-miss < 50 mm never joins anything)",
+   "a closure between two labelled rooms without stronger authority",
+   "an opening width change",
+   "a source edit"
+  ],
+  "digest": "46742c570b4d8a036fd6b7446f28055bfd4e1adbff51966e800e5986ca99ccb2"
+ },
+ "freeze": {
+  "SCHEMA": "URBAN_R8_13_V4_FREEZE_V1",
+  "recommendation_written_first": {
+   "file": "research/external_engine_lab/r8_13_recommendation.json",
+   "sha256": "76b3b3bceec7538fa712d8e99f4292ab3b84e0bebc852864017e06a9a0834f72",
+   "committed_in": "d852e2cbfa8a6fd378a4e765dbae419f5920cc13"
+  },
+  "frozen_commit": "d852e2cbfa8a6fd378a4e765dbae419f5920cc13",
+  "wall_band_policy": {
+   "id": "WALL_BAND_POLICY_V4",
+   "digest": "8ed1a5cff22b8057457b05622a3f3f25ee14add57eb3c1ae9b88af35f25741fc"
+  },
+  "closure_policy": {
+   "id": "TOPOLOGY_CLOSURE_POLICY_V1",
+   "digest": "46742c570b4d8a036fd6b7446f28055bfd4e1adbff51966e800e5986ca99ccb2",
+   "changed": false
+  },
+  "supersedes": {
+   "wall_band_policy": {
+    "id": "WALL_BAND_POLICY_V3",
+    "digest": "ecd6ba5fe51bc89924adf79ba5f790b2b9b9e33abfbd2b97c5ce31dab2c3ae39"
+   },
+   "freeze": "tests/r8_12/registers/R8_12_FRAGMENT_BAND_FREEZE.json"
+  },
+  "engine_file_sha256": {
+   "engine/source/wall_bands.py": "7d5843e924b54ccb9f12fb8e0fdab95d18da33b1a8e79711dd75e146cbbb1901",
+   "engine/source/topology_closures.py": "ccb2e52c16c592272ee3d717bba6954f3267f759bb5bf4746c8c269fc2a2cd66",
+   "engine/source/room_topology.py": "d36848db7af9b04e125422c920928eb754319f180e58a1820296d2dfbff81d60"
+  },
+  "synthetic_test_sha256": {
+   "tests/r8_13/test_r8_13_wall_band_v4.py": "5a8cd84e11dd99527d606586d69b066819ce7ce5a5ede01c4a7c0f50fa60a3f5",
+   "tests/r8_12/test_r8_12_fragment_bands.py": "ef8d669b9f68e40e6ceb62814aea0a6f151152434540247bf4341306b30aeace",
+   "tests/r8_11/test_r8_11_wall_bands.py": "248e92c87d3c4068a7b665ac706296f1236b4a8bcc4b427ac741b9b320513cfa",
+   "tests/r8_11/test_r8_11_amendment_a1.py": "27ff7ffea16b8d2b1b7a1e8934ea7b077b5a7827044f53272fb6217e852d46a8",
+   "tests/r8_11/test_r8_11_second_family.py": "1c4711d8629a7d121f361ba464b0b08d617f7b5600f4d10438950b648e3b7d2d"
+  },
+  "synthetic_test_digest": "e63e3b07b5cd65551320751c9e22fddda9c3017c5fcafe29bdd690c40af8f3bd",
+  "v4_synthetic_tests": [
+   "test_parallel_opposite_sides_of_one_polyline_with_the_same_extent_have_distinct_ids",
+   "test_closed_polyline_sides_never_collide_and_a_unique_face_keeps_the_v3_identity_basis",
+   "test_identity_is_stable_under_shuffle_reversal_and_unrelated_insertion",
+   "test_a_nudged_face_keeps_its_band_id_and_a_resegmented_entity_keeps_chain_and_band_ids",
+   "test_v3_d2_regression_no_band_and_no_passage_from_another_walls_core",
+   "test_the_real_walls_around_the_false_pair_stay_bands",
+   "test_an_isolated_short_pairing_is_rejected_even_when_the_raw_overlap_is_long",
+   "test_a_long_assembly_keeps_a_short_column_local_span",
+   "test_a_short_run_inherits_support_across_a_full_width_column_from_the_long_run",
+   "test_short_runs_with_no_self_supported_neighbour_are_rejected",
+   "test_support_needs_one_closed_structural_entity_a_furniture_loop_never_carries_it",
+   "test_an_unsupported_run_is_never_an_ambiguity_source",
+   "test_an_open_passage_needs_two_structural_sides",
+   "test_a_false_band_cannot_bootstrap_a_passage_even_to_a_real_wall",
+   "test_door_and_window_openings_are_preserved",
+   "test_h2430_class_positive_control_fragmented_face_column_and_proven_cap",
+   "test_h2431_class_drafting_disconnect_closes_from_the_face_end_points",
+   "test_h1316_class_window_jamb_is_never_a_wall_end",
+   "test_a_single_line_wall_is_unaffected",
+   "test_dimension_and_furniture_rectangles_make_no_band",
+   "test_a_column_overlap_blocks_only_its_interval",
+   "test_a_duplicate_fragment_stays_an_ambiguity",
+   "test_v4_policy_record",
+   "test_a_band_still_carries_no_material"
+  ],
+  "v4_synthetic_test_count": 24,
+  "superseded_frozen_tests": {
+   "tests/r8_12/test_r8_12_fragment_bands.py": {
+    "r8_12_sha256": "77b05d4f5c719c2809f3592d39de3ae0b2032aafbdb774c6ea7d57581aaf8404",
+    "r8_13_sha256": "ef8d669b9f68e40e6ceb62814aea0a6f151152434540247bf4341306b30aeace",
+    "change": "ONE line: the policy-id assertion WALL_BAND_POLICY_V3 -> WALL_BAND_POLICY_V4 (no behaviour expectation edited; the same precedent R8.12 used for V2 -> V3)"
+   },
+   "tests/r8_11/test_r8_11_amendment_a1.py": {
+    "r8_12_sha256": "32d3642e2cdb1adcdc3b9ad54361f12bb740271d376787347b864e4553c919c9",
+    "r8_13_sha256": "27ff7ffea16b8d2b1b7a1e8934ea7b077b5a7827044f53272fb6217e852d46a8",
+    "change": "ONE line: the policy-id assertion WALL_BAND_POLICY_V3 -> WALL_BAND_POLICY_V4 (no behaviour expectation edited; the same precedent R8.12 used for V2 -> V3)"
+   }
+  },
+  "qortuba_before_freeze": {
+   "new_revision_v4_runs": 0,
+   "v4_qortuba_outputs_inspected": 0,
+   "v3_inspection_for_root_cause": "the R8.12 V3 record and a V3 re-run of the recorded D2 neighbourhood (faces 574 / 584 and the walls around them) - the defect brief §9 asks to root-cause; no V4 candidate was ever run on it",
+   "pass_fail_regressions_run_against_v4": "the pre-existing R8.8-R8.12 suites, which include an OLD-revision real-fixture order-independence / no-authorised-closure test; pass / fail only, no value inspected"
+  },
+  "floor_fact_available_to_v4": false,
+  "timestamp_metadata": {
+   "frozen_at_utc": "2026-10-01T20:49:34+00:00",
+   "in_digest": false
+  },
+  "order": [
+   "recommendation",
+   "root cause D1 / D2",
+   "design V4",
+   "synthetic fixtures",
+   "freeze policy + digest",
+   "commit",
+   "THEN the blind Qortuba run",
+   "THEN the row comparison"
+  ],
+  "rule": "no post-result edit inside WALL_BAND_POLICY_V4; a defect found after the blind run is R8.14"
+ }
+}

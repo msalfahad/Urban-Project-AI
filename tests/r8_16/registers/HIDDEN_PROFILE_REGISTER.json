@@ -1,0 +1,36 @@
+{
+ "SCHEMA": "URBAN_R8_16_HIDDEN_PROFILE_REGISTER_V1",
+ "row": "HIDDEN_PROFILE_LM",
+ "unit": "lm",
+ "authority": [
+  "US-08: the hidden system is two BOQ items measured along the SAME payable path, kept as two rows whose amounts are never merged",
+  "QP-06 QORTUBA skirting system = HIDDEN"
+ ],
+ "state": "COMPUTED_SHADOW_WITH_WITHHELD_SPANS",
+ "HIDDEN_PROFILE_LM": 93.98682,
+ "path": "IDENTICAL to SKIRTING (same per-room path, same exclusions, same withheld spans)",
+ "per_room_lm": {
+  "SITE-5f1762f1a93b91ca": 22.9,
+  "SITE-77a2130eb275604c": 26.157105,
+  "SITE-a6405850100155ac": 29.35,
+  "SITE-daca396d6d730e60": 15.579714,
+  "SITE-1c4abf65f9b5db1e": 0.0,
+  "SITE-8c1c7563d5252c50": 0.0,
+  "SITE-a2b19efc492a6d0b": 0.0,
+  "SITE-fe8ed5548fb4310e": 0.0
+ },
+ "release_blockers": [
+  "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+  "WITHHELD_SPAN: 2.75 lm whose floor contact is not proven (SITE-77a2130eb275604c FLOOR_CONTACT_UNPROVEN 2.75 lm)",
+  "V3_O1_CONTINUOUS_FACE_UNDERCOUNT: 0.15 lm of continuous wall face at a passage side is consumed by a non-jamb record (frozen V3 defect, fixed next round)",
+  "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+ ],
+ "inherits_from": "SKIRTING",
+ "merged_with_skirting": false,
+ "why_separate": "a separate BOQ item (material + labour of the aluminium profile), never summed into the skirting row; equal by method, not by coincidence",
+ "never": [
+  "a different path",
+  "a rate",
+  "a price"
+ ]
+}

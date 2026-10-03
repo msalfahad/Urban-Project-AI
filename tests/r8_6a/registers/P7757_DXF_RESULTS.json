@@ -1,0 +1,1988 @@
+{
+ "SCHEMA": "URBAN_R8_6A_P7757_DXF_V1",
+ "handle_0x929": {
+  "dxf_type": "ARC_DIMENSION",
+  "d1_type": "UNSUPPORTED (LIBREDWG:763)",
+  "previous_rejected_ezdxf_rebuild": "LINE (R8.5 intake: custom classes missing)"
+ },
+ "signatures": {
+  "signature_states": {
+   "KIND=LWPOLYLINE_STRAIGHT|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   },
+   "KIND=LINE|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   },
+   "KIND=INSERT|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "NOT_EXERCISED"
+   },
+   "REF=INSERT_LINEAGE|HANDLE=H12|TARGET=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   },
+   "REF=BLOCK_RECORD_LINEAGE|TARGET=H12|DEPTH=1": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   },
+   "KIND=LWPOLYLINE_STRAIGHT|CHAIN=ROTATION+TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   },
+   "KIND=TEXT|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "NOT_EXERCISED"
+   },
+   "KIND=ARC|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   },
+   "KIND=LWPOLYLINE_STRAIGHT|CHAIN=REFLECTION+ROTATION+TRANSLATION|NET=NET_REFLECTED|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   },
+   "KIND=LINE|CHAIN=REFLECTION+ROTATION+TRANSLATION|NET=NET_REFLECTED|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   },
+   "KIND=ARC|CHAIN=REFLECTION+ROTATION+TRANSLATION|NET=NET_REFLECTED|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   },
+   "KIND=LWPOLYLINE_BULGE|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   },
+   "KIND=TEXT|CHAIN=ROTATION+TRANSLATION+UNIFORM_SCALE|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "NOT_EXERCISED"
+   },
+   "KIND=LINE|CHAIN=ROTATION+TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   },
+   "KIND=ARC|CHAIN=ROTATION+TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   },
+   "KIND=TEXT|CHAIN=TRANSLATION+UNIFORM_SCALE|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "NOT_EXERCISED"
+   },
+   "KIND=LWPOLYLINE_BULGE|CHAIN=ROTATION+TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   },
+   "KIND=CIRCLE|CHAIN=ROTATION+TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   },
+   "KIND=HATCH|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "NOT_EXERCISED"
+   },
+   "KIND=TEXT|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "NOT_EXERCISED"
+   },
+   "KIND=ARC|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   },
+   "KIND=LINE|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   },
+   "KIND=LWPOLYLINE_STRAIGHT|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   },
+   "KIND=INSERT|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "NOT_EXERCISED"
+   },
+   "REF=BLOCK_RECORD_LINEAGE|TARGET=H12|DEPTH=2": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   },
+   "KIND=LINE|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=2|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   },
+   "KIND=LWPOLYLINE_BULGE|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=2|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   },
+   "KIND=CIRCLE|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=2|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   },
+   "KIND=LWPOLYLINE_BULGE|CHAIN=TRANSLATION+UNIFORM_SCALE|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   },
+   "KIND=LINE|CHAIN=TRANSLATION+UNIFORM_SCALE|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   },
+   "KIND=CIRCLE|CHAIN=TRANSLATION+UNIFORM_SCALE|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   },
+   "KIND=LINE|CHAIN=TRANSLATION+UNIFORM_SCALE|NET=NET_DIRECT|DEPTH=2|EXT=DEFAULT|CTX=DYNAMIC_ANONYMOUS|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   },
+   "KIND=LWPOLYLINE_BULGE|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   },
+   "KIND=LINE|CHAIN=ROTATION+TRANSLATION+UNIFORM_SCALE|NET=NET_DIRECT|DEPTH=2|EXT=DEFAULT|CTX=DYNAMIC_ANONYMOUS|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   },
+   "KIND=DIMENSION|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "NOT_EXERCISED"
+   },
+   "KIND=UNSUPPORTED:LIBREDWG:763:|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "NOT_EXERCISED"
+   },
+   "KIND=CIRCLE|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   },
+   "KIND=TEXT|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=2|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "NOT_EXERCISED"
+   },
+   "KIND=ARC|CHAIN=REFLECTION+TRANSLATION|NET=NET_REFLECTED|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   },
+   "KIND=LINE|CHAIN=REFLECTION+TRANSLATION|NET=NET_REFLECTED|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   },
+   "KIND=UNSUPPORTED:LIBREDWG:504:|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "NOT_EXERCISED"
+   },
+   "KIND=ARC|CHAIN=ROTATION+TRANSLATION+UNIFORM_SCALE|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   },
+   "KIND=INSERT|CHAIN=ROTATION+TRANSLATION+UNIFORM_SCALE|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "NOT_EXERCISED"
+   },
+   "KIND=LINE|CHAIN=ROTATION+TRANSLATION+UNIFORM_SCALE|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   },
+   "KIND=HATCH|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "NOT_EXERCISED"
+   },
+   "KIND=HATCH|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=2|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "NOT_EXERCISED"
+   }
+  },
+  "signature_detail": {
+   "KIND=LWPOLYLINE_STRAIGHT|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 104,
+    "compared": 104,
+    "pass": 104,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   },
+   "KIND=LINE|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 4988,
+    "compared": 4988,
+    "pass": 4988,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   },
+   "KIND=INSERT|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 145,
+    "compared": 0,
+    "pass": 0,
+    "nonpass_by_status": {
+     "NOT_COMPARED": 145
+    },
+    "examples_nonpass": [
+     [
+      "D1:211",
+      [],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:228",
+      [],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:239",
+      [],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:240",
+      [],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:249",
+      [],
+      "NOT_COMPARED"
+     ]
+    ]
+   },
+   "REF=INSERT_LINEAGE|HANDLE=H12|TARGET=H12": {
+    "source_occurrences": 180,
+    "compared": 180,
+    "pass": 180,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   },
+   "REF=BLOCK_RECORD_LINEAGE|TARGET=H12|DEPTH=1": {
+    "source_occurrences": 145,
+    "compared": 145,
+    "pass": 145,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   },
+   "KIND=LWPOLYLINE_STRAIGHT|CHAIN=ROTATION+TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 8,
+    "compared": 8,
+    "pass": 8,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   },
+   "KIND=TEXT|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 116,
+    "compared": 0,
+    "pass": 0,
+    "nonpass_by_status": {
+     "NOT_COMPARED": 116
+    },
+    "examples_nonpass": [
+     [
+      "D1:233",
+      [
+       "D1:228"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:235",
+      [
+       "D1:228"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:237",
+      [
+       "D1:228"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:233",
+      [
+       "D1:239"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:235",
+      [
+       "D1:239"
+      ],
+      "NOT_COMPARED"
+     ]
+    ]
+   },
+   "KIND=ARC|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 83,
+    "compared": 83,
+    "pass": 83,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   },
+   "KIND=LWPOLYLINE_STRAIGHT|CHAIN=REFLECTION+ROTATION+TRANSLATION|NET=NET_REFLECTED|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 1,
+    "compared": 1,
+    "pass": 1,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   },
+   "KIND=LINE|CHAIN=REFLECTION+ROTATION+TRANSLATION|NET=NET_REFLECTED|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 100,
+    "compared": 100,
+    "pass": 100,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   },
+   "KIND=ARC|CHAIN=REFLECTION+ROTATION+TRANSLATION|NET=NET_REFLECTED|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 8,
+    "compared": 8,
+    "pass": 8,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   },
+   "KIND=LWPOLYLINE_BULGE|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 10,
+    "compared": 10,
+    "pass": 10,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   },
+   "KIND=TEXT|CHAIN=ROTATION+TRANSLATION+UNIFORM_SCALE|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 14,
+    "compared": 0,
+    "pass": 0,
+    "nonpass_by_status": {
+     "NOT_COMPARED": 14
+    },
+    "examples_nonpass": [
+     [
+      "D1:399",
+      [
+       "D1:396"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:400",
+      [
+       "D1:396"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:6412",
+      [
+       "D1:5650"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:6415",
+      [
+       "D1:5650"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:6556",
+      [
+       "D1:5650"
+      ],
+      "NOT_COMPARED"
+     ]
+    ]
+   },
+   "KIND=LINE|CHAIN=ROTATION+TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 199,
+    "compared": 199,
+    "pass": 199,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   },
+   "KIND=ARC|CHAIN=ROTATION+TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 54,
+    "compared": 54,
+    "pass": 54,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   },
+   "KIND=TEXT|CHAIN=TRANSLATION+UNIFORM_SCALE|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 29,
+    "compared": 0,
+    "pass": 0,
+    "nonpass_by_status": {
+     "NOT_COMPARED": 29
+    },
+    "examples_nonpass": [
+     [
+      "D1:459",
+      [
+       "D1:456"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:460",
+      [
+       "D1:456"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:459",
+      [
+       "D1:503"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:460",
+      [
+       "D1:503"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:634",
+      [
+       "D1:630"
+      ],
+      "NOT_COMPARED"
+     ]
+    ]
+   },
+   "KIND=LWPOLYLINE_BULGE|CHAIN=ROTATION+TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 10,
+    "compared": 10,
+    "pass": 10,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   },
+   "KIND=CIRCLE|CHAIN=ROTATION+TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 30,
+    "compared": 30,
+    "pass": 30,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   },
+   "KIND=HATCH|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 88,
+    "compared": 0,
+    "pass": 0,
+    "nonpass_by_status": {
+     "NOT_COMPARED": 88
+    },
+    "examples_nonpass": [
+     [
+      "D1:519",
+      [],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:745",
+      [],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:1636",
+      [],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:1637",
+      [],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:1794",
+      [],
+      "NOT_COMPARED"
+     ]
+    ]
+   },
+   "KIND=TEXT|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 109,
+    "compared": 0,
+    "pass": 0,
+    "nonpass_by_status": {
+     "NOT_COMPARED": 109
+    },
+    "examples_nonpass": [
+     [
+      "D1:749",
+      [],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:750",
+      [],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:916",
+      [],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:1025",
+      [],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:1027",
+      [],
+      "NOT_COMPARED"
+     ]
+    ]
+   },
+   "KIND=ARC|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 3,
+    "compared": 3,
+    "pass": 3,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   },
+   "KIND=LINE|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 73,
+    "compared": 73,
+    "pass": 73,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   },
+   "KIND=LWPOLYLINE_STRAIGHT|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 37,
+    "compared": 37,
+    "pass": 37,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   },
+   "KIND=INSERT|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 26,
+    "compared": 0,
+    "pass": 0,
+    "nonpass_by_status": {
+     "NOT_COMPARED": 26
+    },
+    "examples_nonpass": [
+     [
+      "D1:894",
+      [
+       "D1:890"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:1052",
+      [
+       "D1:1044"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:1126",
+      [
+       "D1:1044"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:1137",
+      [
+       "D1:1044"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:1145",
+      [
+       "D1:1044"
+      ],
+      "NOT_COMPARED"
+     ]
+    ]
+   },
+   "REF=BLOCK_RECORD_LINEAGE|TARGET=H12|DEPTH=2": {
+    "source_occurrences": 35,
+    "compared": 35,
+    "pass": 35,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   },
+   "KIND=LINE|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=2|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 32,
+    "compared": 32,
+    "pass": 32,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   },
+   "KIND=LWPOLYLINE_BULGE|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=2|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 12,
+    "compared": 12,
+    "pass": 12,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   },
+   "KIND=CIRCLE|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=2|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 6,
+    "compared": 6,
+    "pass": 6,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   },
+   "KIND=LWPOLYLINE_BULGE|CHAIN=TRANSLATION+UNIFORM_SCALE|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 46,
+    "compared": 46,
+    "pass": 46,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   },
+   "KIND=LINE|CHAIN=TRANSLATION+UNIFORM_SCALE|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 48,
+    "compared": 48,
+    "pass": 48,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   },
+   "KIND=CIRCLE|CHAIN=TRANSLATION+UNIFORM_SCALE|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 23,
+    "compared": 23,
+    "pass": 23,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   },
+   "KIND=LINE|CHAIN=TRANSLATION+UNIFORM_SCALE|NET=NET_DIRECT|DEPTH=2|EXT=DEFAULT|CTX=DYNAMIC_ANONYMOUS|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 384,
+    "compared": 384,
+    "pass": 384,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   },
+   "KIND=LWPOLYLINE_BULGE|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 12,
+    "compared": 12,
+    "pass": 12,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   },
+   "KIND=LINE|CHAIN=ROTATION+TRANSLATION+UNIFORM_SCALE|NET=NET_DIRECT|DEPTH=2|EXT=DEFAULT|CTX=DYNAMIC_ANONYMOUS|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 2943,
+    "compared": 2943,
+    "pass": 2943,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   },
+   "KIND=DIMENSION|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 388,
+    "compared": 0,
+    "pass": 0,
+    "nonpass_by_status": {
+     "NOT_COMPARED": 388
+    },
+    "examples_nonpass": [
+     [
+      "D1:1207",
+      [],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:1220",
+      [],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:1232",
+      [],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:1244",
+      [],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:1257",
+      [],
+      "NOT_COMPARED"
+     ]
+    ]
+   },
+   "KIND=UNSUPPORTED:LIBREDWG:763:|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 1,
+    "compared": 0,
+    "pass": 0,
+    "nonpass_by_status": {
+     "NOT_COMPARED": 1
+    },
+    "examples_nonpass": [
+     [
+      "D1:2345",
+      [],
+      "NOT_COMPARED"
+     ]
+    ]
+   },
+   "KIND=CIRCLE|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 47,
+    "compared": 47,
+    "pass": 47,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   },
+   "KIND=TEXT|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=2|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 8,
+    "compared": 0,
+    "pass": 0,
+    "nonpass_by_status": {
+     "NOT_COMPARED": 8
+    },
+    "examples_nonpass": [
+     [
+      "D1:774",
+      [
+       "D1:2958",
+       "D1:2961"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:775",
+      [
+       "D1:2958",
+       "D1:2961"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:774",
+      [
+       "D1:3072",
+       "D1:2961"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:775",
+      [
+       "D1:3072",
+       "D1:2961"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:774",
+      [
+       "D1:3080",
+       "D1:2961"
+      ],
+      "NOT_COMPARED"
+     ]
+    ]
+   },
+   "KIND=ARC|CHAIN=REFLECTION+TRANSLATION|NET=NET_REFLECTED|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 3,
+    "compared": 3,
+    "pass": 3,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   },
+   "KIND=LINE|CHAIN=REFLECTION+TRANSLATION|NET=NET_REFLECTED|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 36,
+    "compared": 36,
+    "pass": 36,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   },
+   "KIND=UNSUPPORTED:LIBREDWG:504:|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 3,
+    "compared": 0,
+    "pass": 0,
+    "nonpass_by_status": {
+     "NOT_COMPARED": 3
+    },
+    "examples_nonpass": [
+     [
+      "D1:5483",
+      [],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:5488",
+      [],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:5489",
+      [],
+      "NOT_COMPARED"
+     ]
+    ]
+   },
+   "KIND=ARC|CHAIN=ROTATION+TRANSLATION+UNIFORM_SCALE|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 24,
+    "compared": 24,
+    "pass": 24,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   },
+   "KIND=INSERT|CHAIN=ROTATION+TRANSLATION+UNIFORM_SCALE|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 9,
+    "compared": 0,
+    "pass": 0,
+    "nonpass_by_status": {
+     "NOT_COMPARED": 9
+    },
+    "examples_nonpass": [
+     [
+      "D1:5657",
+      [
+       "D1:5650"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:6009",
+      [
+       "D1:5650"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:6422",
+      [
+       "D1:5650"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:5657",
+      [
+       "D1:6562"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:6009",
+      [
+       "D1:6562"
+      ],
+      "NOT_COMPARED"
+     ]
+    ]
+   },
+   "KIND=LINE|CHAIN=ROTATION+TRANSLATION+UNIFORM_SCALE|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 90,
+    "compared": 90,
+    "pass": 90,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   },
+   "KIND=HATCH|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 6,
+    "compared": 0,
+    "pass": 0,
+    "nonpass_by_status": {
+     "NOT_COMPARED": 6
+    },
+    "examples_nonpass": [
+     [
+      "D1:9271",
+      [
+       "D1:9261"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:9271",
+      [
+       "D1:9290"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:9271",
+      [
+       "D1:9292"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:9271",
+      [
+       "D1:10372"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:9271",
+      [
+       "D1:10374"
+      ],
+      "NOT_COMPARED"
+     ]
+    ]
+   },
+   "KIND=HATCH|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=2|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 4,
+    "compared": 0,
+    "pass": 0,
+    "nonpass_by_status": {
+     "NOT_COMPARED": 4
+    },
+    "examples_nonpass": [
+     [
+      "D1:9284",
+      [
+       "D1:9273",
+       "D1:9276"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:9284",
+      [
+       "D1:9288",
+       "D1:9276"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:9284",
+      [
+       "D1:10818",
+       "D1:9276"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:9284",
+      [
+       "D1:10819",
+       "D1:9276"
+      ],
+      "NOT_COMPARED"
+     ]
+    ]
+   }
+  },
+  "summary": {
+   "verdict": "PASS",
+   "field_class": null,
+   "scope": null,
+   "correlated_by": "BLOCK_RECORD_HANDLE",
+   "correlation_bases": {
+    "SOURCE_HANDLE": 9424
+   },
+   "lineage_bases": {
+    "SOURCE_HANDLE": 931
+   },
+   "lineage_outcomes": {
+    "PASS": 931
+   },
+   "tolerance": {
+    "name": "REAL",
+    "position_pass": 1.846084305007542e-07,
+    "position_warn": 0.00018028167041089278,
+    "basis": "1024*eps*M with M=811916; text step 16 digits"
+   },
+   "counts": {
+    "PASS": 10815
+   },
+   "non_pass_by_field": {}
+  }
+ },
+ "structural_ST7757": {
+  "signature_states": {
+   "KIND=TEXT|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "NOT_EXERCISED"
+   },
+   "KIND=INSERT|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "NOT_EXERCISED"
+   },
+   "REF=INSERT_LINEAGE|HANDLE=H12|TARGET=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   },
+   "REF=BLOCK_RECORD_LINEAGE|TARGET=H12|DEPTH=1": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   },
+   "KIND=TEXT|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "NOT_EXERCISED"
+   },
+   "KIND=LINE|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   },
+   "KIND=LWPOLYLINE_STRAIGHT|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   },
+   "KIND=UNSUPPORTED:LIBREDWG:517:UNKNOWN_ENT|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "NOT_EXERCISED"
+   },
+   "KIND=LINE|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   },
+   "KIND=ARC|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   },
+   "KIND=TEXT|CHAIN=ROTATION+TRANSLATION+UNIFORM_SCALE|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "NOT_EXERCISED"
+   },
+   "KIND=HATCH|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "NOT_EXERCISED"
+   },
+   "KIND=INSERT|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "NOT_EXERCISED"
+   },
+   "REF=BLOCK_RECORD_LINEAGE|TARGET=H12|DEPTH=2": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   },
+   "KIND=LINE|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=2|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   },
+   "KIND=LWPOLYLINE_BULGE|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=2|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   },
+   "KIND=CIRCLE|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=2|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   },
+   "KIND=LWPOLYLINE_BULGE|CHAIN=TRANSLATION+UNIFORM_SCALE|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   },
+   "KIND=LINE|CHAIN=TRANSLATION+UNIFORM_SCALE|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   },
+   "KIND=CIRCLE|CHAIN=TRANSLATION+UNIFORM_SCALE|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   },
+   "KIND=CIRCLE|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   },
+   "KIND=TEXT|CHAIN=TRANSLATION+UNIFORM_SCALE|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "NOT_EXERCISED"
+   },
+   "KIND=TEXT|CHAIN=ROTATION+TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "NOT_EXERCISED"
+   },
+   "KIND=LWPOLYLINE_BULGE|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   },
+   "KIND=DIMENSION|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "NOT_EXERCISED"
+   },
+   "KIND=LWPOLYLINE_STRAIGHT|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   },
+   "KIND=UNSUPPORTED:LIBREDWG:753:WIPEOUT|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "NOT_EXERCISED"
+   },
+   "KIND=UNSUPPORTED:LIBREDWG:753:WIPEOUT|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "NOT_EXERCISED"
+   },
+   "KIND=SOLID|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "NOT_EXERCISED"
+   },
+   "KIND=LWPOLYLINE_STRAIGHT|CHAIN=NON_UNIFORM_SCALE+TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   },
+   "KIND=HATCH|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "NOT_EXERCISED"
+   },
+   "KIND=CIRCLE|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   },
+   "KIND=INSERT|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=DYNAMIC_ANONYMOUS|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "NOT_EXERCISED"
+   },
+   "KIND=HATCH|CHAIN=ROTATION+TRANSLATION|NET=NET_DIRECT|DEPTH=2|EXT=DEFAULT|CTX=DYNAMIC_ANONYMOUS|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "NOT_EXERCISED"
+   },
+   "KIND=CIRCLE|CHAIN=ROTATION+TRANSLATION|NET=NET_DIRECT|DEPTH=2|EXT=DEFAULT|CTX=DYNAMIC_ANONYMOUS|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   },
+   "KIND=POINT|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "NOT_EXERCISED"
+   },
+   "KIND=MTEXT|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "NOT_EXERCISED"
+   },
+   "KIND=ATTDEF|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "NOT_EXERCISED"
+   },
+   "KIND=LWPOLYLINE_STRAIGHT|CHAIN=TRANSLATION+UNIFORM_SCALE|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   }
+  },
+  "signature_detail": {
+   "KIND=TEXT|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 890,
+    "compared": 0,
+    "pass": 0,
+    "nonpass_by_status": {
+     "NOT_COMPARED": 890
+    },
+    "examples_nonpass": [
+     [
+      "D1:120",
+      [],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:125",
+      [],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:126",
+      [],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:184",
+      [],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:210",
+      [],
+      "NOT_COMPARED"
+     ]
+    ]
+   },
+   "KIND=INSERT|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 181,
+    "compared": 0,
+    "pass": 0,
+    "nonpass_by_status": {
+     "NOT_COMPARED": 181
+    },
+    "examples_nonpass": [
+     [
+      "D1:127",
+      [],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:144",
+      [],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:152",
+      [],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:160",
+      [],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:168",
+      [],
+      "NOT_COMPARED"
+     ]
+    ]
+   },
+   "REF=INSERT_LINEAGE|HANDLE=H12|TARGET=H12": {
+    "source_occurrences": 249,
+    "compared": 249,
+    "pass": 249,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   },
+   "REF=BLOCK_RECORD_LINEAGE|TARGET=H12|DEPTH=1": {
+    "source_occurrences": 181,
+    "compared": 181,
+    "pass": 181,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   },
+   "KIND=TEXT|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 385,
+    "compared": 0,
+    "pass": 0,
+    "nonpass_by_status": {
+     "NOT_COMPARED": 385
+    },
+    "examples_nonpass": [
+     [
+      "D1:133",
+      [
+       "D1:127"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:137",
+      [
+       "D1:127"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:140",
+      [
+       "D1:127"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:147",
+      [
+       "D1:144"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:149",
+      [
+       "D1:144"
+      ],
+      "NOT_COMPARED"
+     ]
+    ]
+   },
+   "KIND=LINE|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 6,
+    "compared": 6,
+    "pass": 6,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   },
+   "KIND=LWPOLYLINE_STRAIGHT|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 435,
+    "compared": 435,
+    "pass": 435,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   },
+   "KIND=UNSUPPORTED:LIBREDWG:517:UNKNOWN_ENT|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 10,
+    "compared": 0,
+    "pass": 0,
+    "nonpass_by_status": {
+     "NOT_COMPARED": 10
+    },
+    "examples_nonpass": [
+     [
+      "D1:237",
+      [],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:242",
+      [],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:243",
+      [],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:244",
+      [],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:245",
+      [],
+      "NOT_COMPARED"
+     ]
+    ]
+   },
+   "KIND=LINE|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 1907,
+    "compared": 1907,
+    "pass": 1907,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   },
+   "KIND=ARC|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 73,
+    "compared": 73,
+    "pass": 73,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   },
+   "KIND=TEXT|CHAIN=ROTATION+TRANSLATION+UNIFORM_SCALE|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 2,
+    "compared": 0,
+    "pass": 0,
+    "nonpass_by_status": {
+     "NOT_COMPARED": 2
+    },
+    "examples_nonpass": [
+     [
+      "D1:330",
+      [
+       "D1:327"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:331",
+      [
+       "D1:327"
+      ],
+      "NOT_COMPARED"
+     ]
+    ]
+   },
+   "KIND=HATCH|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 236,
+    "compared": 0,
+    "pass": 0,
+    "nonpass_by_status": {
+     "NOT_COMPARED": 236
+    },
+    "examples_nonpass": [
+     [
+      "D1:345",
+      [],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:472",
+      [],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:479",
+      [],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:483",
+      [],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:487",
+      [],
+      "NOT_COMPARED"
+     ]
+    ]
+   },
+   "KIND=INSERT|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 6,
+    "compared": 0,
+    "pass": 0,
+    "nonpass_by_status": {
+     "NOT_COMPARED": 6
+    },
+    "examples_nonpass": [
+     [
+      "D1:402",
+      [
+       "D1:395"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:402",
+      [
+       "D1:462"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:402",
+      [
+       "D1:463"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:402",
+      [
+       "D1:464"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:402",
+      [
+       "D1:465"
+      ],
+      "NOT_COMPARED"
+     ]
+    ]
+   },
+   "REF=BLOCK_RECORD_LINEAGE|TARGET=H12|DEPTH=2": {
+    "source_occurrences": 68,
+    "compared": 68,
+    "pass": 68,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   },
+   "KIND=LINE|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=2|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 12,
+    "compared": 12,
+    "pass": 12,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   },
+   "KIND=LWPOLYLINE_BULGE|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=2|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 12,
+    "compared": 12,
+    "pass": 12,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   },
+   "KIND=CIRCLE|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=2|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 6,
+    "compared": 6,
+    "pass": 6,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   },
+   "KIND=LWPOLYLINE_BULGE|CHAIN=TRANSLATION+UNIFORM_SCALE|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 32,
+    "compared": 32,
+    "pass": 32,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   },
+   "KIND=LINE|CHAIN=TRANSLATION+UNIFORM_SCALE|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 82,
+    "compared": 82,
+    "pass": 82,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   },
+   "KIND=CIRCLE|CHAIN=TRANSLATION+UNIFORM_SCALE|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 16,
+    "compared": 16,
+    "pass": 16,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   },
+   "KIND=CIRCLE|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 38,
+    "compared": 38,
+    "pass": 38,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   },
+   "KIND=TEXT|CHAIN=TRANSLATION+UNIFORM_SCALE|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 2,
+    "compared": 0,
+    "pass": 0,
+    "nonpass_by_status": {
+     "NOT_COMPARED": 2
+    },
+    "examples_nonpass": [
+     [
+      "D1:945",
+      [
+       "D1:942"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:946",
+      [
+       "D1:942"
+      ],
+      "NOT_COMPARED"
+     ]
+    ]
+   },
+   "KIND=TEXT|CHAIN=ROTATION+TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 4,
+    "compared": 0,
+    "pass": 0,
+    "nonpass_by_status": {
+     "NOT_COMPARED": 4
+    },
+    "examples_nonpass": [
+     [
+      "D1:1154",
+      [
+       "D1:1149"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:1184",
+      [
+       "D1:1179"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:6935",
+      [
+       "D1:6930"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:6946",
+      [
+       "D1:6941"
+      ],
+      "NOT_COMPARED"
+     ]
+    ]
+   },
+   "KIND=LWPOLYLINE_BULGE|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 252,
+    "compared": 252,
+    "pass": 252,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   },
+   "KIND=DIMENSION|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 377,
+    "compared": 0,
+    "pass": 0,
+    "nonpass_by_status": {
+     "NOT_COMPARED": 377
+    },
+    "examples_nonpass": [
+     [
+      "D1:1377",
+      [],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:1394",
+      [],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:1420",
+      [],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:1434",
+      [],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:1448",
+      [],
+      "NOT_COMPARED"
+     ]
+    ]
+   },
+   "KIND=LWPOLYLINE_STRAIGHT|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 7,
+    "compared": 7,
+    "pass": 7,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   },
+   "KIND=UNSUPPORTED:LIBREDWG:753:WIPEOUT|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 5,
+    "compared": 0,
+    "pass": 0,
+    "nonpass_by_status": {
+     "NOT_COMPARED": 5
+    },
+    "examples_nonpass": [
+     [
+      "D1:1416",
+      [
+       "D1:1408"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:1416",
+      [
+       "D1:1462"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:1416",
+      [
+       "D1:1709"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:1416",
+      [
+       "D1:1710"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:1416",
+      [
+       "D1:1866"
+      ],
+      "NOT_COMPARED"
+     ]
+    ]
+   },
+   "KIND=UNSUPPORTED:LIBREDWG:753:WIPEOUT|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 3,
+    "compared": 0,
+    "pass": 0,
+    "nonpass_by_status": {
+     "NOT_COMPARED": 3
+    },
+    "examples_nonpass": [
+     [
+      "D1:1895",
+      [],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:1970",
+      [],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:6780",
+      [],
+      "NOT_COMPARED"
+     ]
+    ]
+   },
+   "KIND=SOLID|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 62,
+    "compared": 0,
+    "pass": 0,
+    "nonpass_by_status": {
+     "NOT_COMPARED": 62
+    },
+    "examples_nonpass": [
+     [
+      "D1:2027",
+      [],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:2035",
+      [],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:2055",
+      [],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:2190",
+      [],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:2193",
+      [],
+      "NOT_COMPARED"
+     ]
+    ]
+   },
+   "KIND=LWPOLYLINE_STRAIGHT|CHAIN=NON_UNIFORM_SCALE+TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 12,
+    "compared": 12,
+    "pass": 12,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   },
+   "KIND=HATCH|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 2,
+    "compared": 0,
+    "pass": 0,
+    "nonpass_by_status": {
+     "NOT_COMPARED": 2
+    },
+    "examples_nonpass": [
+     [
+      "D1:5784",
+      [
+       "D1:5776"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:5784",
+      [
+       "D1:5789"
+      ],
+      "NOT_COMPARED"
+     ]
+    ]
+   },
+   "KIND=CIRCLE|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 2,
+    "compared": 2,
+    "pass": 2,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   },
+   "KIND=INSERT|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=DYNAMIC_ANONYMOUS|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 62,
+    "compared": 0,
+    "pass": 0,
+    "nonpass_by_status": {
+     "NOT_COMPARED": 62
+    },
+    "examples_nonpass": [
+     [
+      "D1:6595",
+      [
+       "D1:6592"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:6601",
+      [
+       "D1:6592"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:6602",
+      [
+       "D1:6592"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:6603",
+      [
+       "D1:6592"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:6604",
+      [
+       "D1:6592"
+      ],
+      "NOT_COMPARED"
+     ]
+    ]
+   },
+   "KIND=HATCH|CHAIN=ROTATION+TRANSLATION|NET=NET_DIRECT|DEPTH=2|EXT=DEFAULT|CTX=DYNAMIC_ANONYMOUS|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 62,
+    "compared": 0,
+    "pass": 0,
+    "nonpass_by_status": {
+     "NOT_COMPARED": 62
+    },
+    "examples_nonpass": [
+     [
+      "D1:6598",
+      [
+       "D1:6592",
+       "D1:6595"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:6598",
+      [
+       "D1:6592",
+       "D1:6601"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:6598",
+      [
+       "D1:6592",
+       "D1:6602"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:6598",
+      [
+       "D1:6592",
+       "D1:6603"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:6598",
+      [
+       "D1:6592",
+       "D1:6604"
+      ],
+      "NOT_COMPARED"
+     ]
+    ]
+   },
+   "KIND=CIRCLE|CHAIN=ROTATION+TRANSLATION|NET=NET_DIRECT|DEPTH=2|EXT=DEFAULT|CTX=DYNAMIC_ANONYMOUS|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 62,
+    "compared": 62,
+    "pass": 62,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   },
+   "KIND=POINT|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 1,
+    "compared": 0,
+    "pass": 0,
+    "nonpass_by_status": {
+     "NOT_COMPARED": 1
+    },
+    "examples_nonpass": [
+     [
+      "D1:6790",
+      [],
+      "NOT_COMPARED"
+     ]
+    ]
+   },
+   "KIND=MTEXT|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 8,
+    "compared": 0,
+    "pass": 0,
+    "nonpass_by_status": {
+     "NOT_COMPARED": 8
+    },
+    "examples_nonpass": [
+     [
+      "D1:7206",
+      [],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:7207",
+      [],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:7208",
+      [],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:7209",
+      [],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:7210",
+      [],
+      "NOT_COMPARED"
+     ]
+    ]
+   },
+   "KIND=ATTDEF|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 962,
+    "compared": 0,
+    "pass": 0,
+    "nonpass_by_status": {
+     "NOT_COMPARED": 962
+    },
+    "examples_nonpass": [
+     [
+      "D1:7296",
+      [
+       "D1:7289"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:7298",
+      [
+       "D1:7289"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:7299",
+      [
+       "D1:7289"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:7300",
+      [
+       "D1:7289"
+      ],
+      "NOT_COMPARED"
+     ],
+     [
+      "D1:7301",
+      [
+       "D1:7289"
+      ],
+      "NOT_COMPARED"
+     ]
+    ]
+   },
+   "KIND=LWPOLYLINE_STRAIGHT|CHAIN=TRANSLATION+UNIFORM_SCALE|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 25,
+    "compared": 25,
+    "pass": 25,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   }
+  },
+  "summary": {
+   "verdict": "PASS",
+   "field_class": null,
+   "scope": null,
+   "correlated_by": "BLOCK_RECORD_HANDLE",
+   "correlation_bases": {
+    "SOURCE_HANDLE": 2992
+   },
+   "lineage_bases": {
+    "SOURCE_HANDLE": 998
+   },
+   "lineage_outcomes": {
+    "PASS": 998
+   },
+   "tolerance": {
+    "name": "REAL",
+    "position_pass": 4.3558661432753e-08,
+    "position_warn": 4.253775530542285e-05,
+    "basis": "1024*eps*M with M=191573; text step 16 digits"
+   },
+   "counts": {
+    "PASS": 5936
+   },
+   "non_pass_by_field": {}
+  }
+ },
+ "qualified": 0,
+ "classification": "HIGH_FIDELITY_PROVENANCE_UNVERIFIED_DXF"
+}

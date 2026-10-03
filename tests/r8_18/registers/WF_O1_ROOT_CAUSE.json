@@ -1,0 +1,157 @@
+{
+ "SCHEMA": "URBAN_R8_18_WF_O1_ROOT_CAUSE_V1",
+ "id": "WF-O1",
+ "found": "R8.17 (its own fail-closed check)",
+ "root_cause": "One classification mistake shared by intent but not by code: window spans live in OPENING_SPAN, so the second form (WALL_FACE x H - window rectangles + lintels + heads) loses the wall plane through every window and then also deducts the window rectangle; windows have no below-sill / above-head surfaces at all in V1.",
+ "detail": "WF-O1: V1 computes its second form as WALL_FACE x H - window deductions + lintels + head faces, but WALL_FACE excludes the window spans (they are booked as OPENING_SPAN): the wall plane across a window is dropped AND the window rectangle is deducted, and a window gets neither a below-sill nor an above-head surface. The primary form (gross plane incl. opening spans - rectangles) is right. The synthetic window test asserted the area of the primary form, never state == COMPUTED - that is how WF-O1 passed the freeze",
+ "v1_failure_on_qortuba": [
+  {
+   "site": "SITE-8c1c7563d5252c50",
+   "zones": [
+    "PAINTRY"
+   ],
+   "trade": "WALL_TILE",
+   "net_primary_m2": 31.533512,
+   "net_second_form_corrected_m2": 31.533512,
+   "agree_when_the_window_plane_is_included": true,
+   "windows": [
+    "QORTUBA_REV_NEW|H1342||SEGMENT"
+   ]
+  }
+ ],
+ "v1_failure_on_a_synthetic_window": "test_r8_18_wall_faces_v2::test_22 runs the frozen V1 on the same window fixture and asserts AREA_RECONCILIATION_FAILED (and test_03 asserts V2 state == COMPUTED with below-sill and above-opening surfaces)",
+ "why_it_passed_the_r8_17_freeze": "the synthetic window test asserted the area of the primary form, never state == COMPUTED",
+ "fix": "One wall-plane identity: every span on a wall line (wall face, window, door, sliding door, floor-reaching glazing) belongs to the plane; an opening removes exactly its rectangle clipped to [0, H]. METHOD A from the conservation pass: (sum of plane span lengths) x H - sum of rectangles + head faces. METHOD B from explicitly generated surface records: WALL_FACE (full-height spans) + BELOW_SILL (w x sill) + ABOVE_OPENING (w x (H - top)) + HEAD_FACE. Different data paths, predeclared tolerance, any mismatch -> BLOCKED; a separate reconcile() is tested against a deliberately broken surface list; every area test asserts state == COMPUTED.",
+ "v2_reconciliation_on_qortuba": {
+  "SITE-5f1762f1a93b91ca": {
+   "PLASTER": {
+    "method_a_m2": 53.006961,
+    "method_b_m2": 53.006962,
+    "difference_m2": -0.0,
+    "tolerance_m2": 1.9999999999999998e-05,
+    "state": "PASS"
+   },
+   "PAINT": {
+    "method_a_m2": 53.006961,
+    "method_b_m2": 53.006962,
+    "difference_m2": -0.0,
+    "tolerance_m2": 1.9999999999999998e-05,
+    "state": "PASS"
+   }
+  },
+  "SITE-77a2130eb275604c": {
+   "PLASTER": {
+    "method_a_m2": 85.773465,
+    "method_b_m2": 85.773467,
+    "difference_m2": -2e-06,
+    "tolerance_m2": 4.1e-05,
+    "state": "PASS"
+   },
+   "PAINT": {
+    "method_a_m2": 85.773465,
+    "method_b_m2": 85.773467,
+    "difference_m2": -2e-06,
+    "tolerance_m2": 4.1e-05,
+    "state": "PASS"
+   }
+  },
+  "SITE-a6405850100155ac": {
+   "PLASTER": {
+    "method_a_m2": 84.086228,
+    "method_b_m2": 84.086227,
+    "difference_m2": 0.0,
+    "tolerance_m2": 2.8e-05,
+    "state": "PASS"
+   },
+   "PAINT": {
+    "method_a_m2": 84.086228,
+    "method_b_m2": 84.086227,
+    "difference_m2": 0.0,
+    "tolerance_m2": 2.8e-05,
+    "state": "PASS"
+   }
+  },
+  "SITE-daca396d6d730e60": {
+   "PLASTER": {
+    "method_a_m2": 45.492669,
+    "method_b_m2": 45.492669,
+    "difference_m2": 1e-06,
+    "tolerance_m2": 1.4e-05,
+    "state": "PASS"
+   },
+   "PAINT": {
+    "method_a_m2": 45.492669,
+    "method_b_m2": 45.492669,
+    "difference_m2": 1e-06,
+    "tolerance_m2": 1.4e-05,
+    "state": "PASS"
+   }
+  },
+  "SITE-1c4abf65f9b5db1e": {
+   "WALL_TILE": {
+    "method_a_m2": 34.24,
+    "method_b_m2": 34.24,
+    "difference_m2": 0.0,
+    "tolerance_m2": 9.999999999999999e-06,
+    "state": "PASS"
+   },
+   "WET_WALL_TILE_PREP": {
+    "method_a_m2": 34.24,
+    "method_b_m2": 34.24,
+    "difference_m2": 0.0,
+    "tolerance_m2": 9.999999999999999e-06,
+    "state": "PASS"
+   }
+  },
+  "SITE-8c1c7563d5252c50": {
+   "WALL_TILE": {
+    "method_a_m2": 31.533512,
+    "method_b_m2": 31.533512,
+    "difference_m2": 0.0,
+    "tolerance_m2": 1.2e-05,
+    "state": "PASS"
+   },
+   "WET_WALL_TILE_PREP": {
+    "method_a_m2": 31.533512,
+    "method_b_m2": 31.533512,
+    "difference_m2": 0.0,
+    "tolerance_m2": 1.2e-05,
+    "state": "PASS"
+   }
+  },
+  "SITE-a2b19efc492a6d0b": {
+   "WALL_TILE": {
+    "method_a_m2": 23.84,
+    "method_b_m2": 23.84,
+    "difference_m2": 0.0,
+    "tolerance_m2": 9e-06,
+    "state": "PASS"
+   },
+   "WET_WALL_TILE_PREP": {
+    "method_a_m2": 23.84,
+    "method_b_m2": 23.84,
+    "difference_m2": 0.0,
+    "tolerance_m2": 9e-06,
+    "state": "PASS"
+   }
+  },
+  "SITE-fe8ed5548fb4310e": {
+   "WALL_TILE": {
+    "method_a_m2": 23.2,
+    "method_b_m2": 23.2,
+    "difference_m2": -0.0,
+    "tolerance_m2": 1.4999999999999999e-05,
+    "state": "PASS"
+   },
+   "WET_WALL_TILE_PREP": {
+    "method_a_m2": 23.2,
+    "method_b_m2": 23.2,
+    "difference_m2": -0.0,
+    "tolerance_m2": 1.4999999999999999e-05,
+    "state": "PASS"
+   }
+  }
+ },
+ "all_sites_reconcile": true,
+ "special_cased": "NOTHING: no handle, project or site id in engine/source/wall_faces_v2.py"
+}

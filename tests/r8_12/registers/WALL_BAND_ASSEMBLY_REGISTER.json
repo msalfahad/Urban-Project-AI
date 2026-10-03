@@ -1,0 +1,4771 @@
+{
+ "SCHEMA": "URBAN_R8_12_WALL_BAND_ASSEMBLY_REGISTER_V1",
+ "NEW_K2": [
+  {
+   "band_id": "WB-003de0bbd8ac8fb7",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "459",
+    "463"
+   ],
+   "width_mm": 200.0,
+   "length_mm": 4100.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      15049.719614,
+      15166.670013
+     ],
+     "by": []
+    },
+    {
+     "class": "AMBIGUOUS_CENTRELINE",
+     "role": null,
+     "s": [
+      15166.670013,
+      15327.769215
+     ],
+     "by": []
+    },
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      15327.769215,
+      15459.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": [
+    "BS-ac4ac1135d144350",
+    "BS-114e669ece29c7f4"
+   ]
+  },
+  {
+   "band_id": "WB-006aaa6c7bf56187",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "547",
+    "548"
+   ],
+   "width_mm": 100.0,
+   "length_mm": 3300.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      14649.719614,
+      14979.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "CAPPED",
+    "CAPPED"
+   ],
+   "spans": [
+    "BS-52a3c4e15a5b6ee0"
+   ]
+  },
+  {
+   "band_id": "WB-04c5f7ad7eefd33a",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "1947",
+    "1948"
+   ],
+   "width_mm": 150.0,
+   "length_mm": 400.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      110178.081745,
+      110218.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-d01791bd6882a288"
+   ]
+  },
+  {
+   "band_id": "WB-07772c3bae70b9d2",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "7118",
+    "7119"
+   ],
+   "width_mm": 150.0,
+   "length_mm": 1200.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      14909.719614,
+      15029.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "RECEIVING_FACE_JUNCTION"
+   ],
+   "spans": [
+    "BS-87e29ed32be97b17"
+   ]
+  },
+  {
+   "band_id": "WB-094d0bd29a2a051b",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "453",
+    "515"
+   ],
+   "width_mm": 200.0,
+   "length_mm": 8617.2,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      110383.081745,
+      111244.797474
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "RECEIVING_FACE_JUNCTION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-90cc0ca5e088f7e3"
+   ]
+  },
+  {
+   "band_id": "WB-0e397c7d26933e82",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "459",
+    "469"
+   ],
+   "width_mm": 200.0,
+   "length_mm": 2250.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      14619.719614,
+      14679.719614
+     ],
+     "by": []
+    },
+    {
+     "class": "AMBIGUOUS_CENTRELINE",
+     "role": null,
+     "s": [
+      14679.719614,
+      14813.948318
+     ],
+     "by": []
+    },
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      14813.948318,
+      14844.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": [
+    "BS-2c70724dfd7f859a",
+    "BS-2e9f612fcb8f2328"
+   ]
+  },
+  {
+   "band_id": "WB-1567bb474e02284f",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "2060",
+    "552"
+   ],
+   "width_mm": 200.91,
+   "length_mm": 100.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      14579.719614,
+      14589.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-421cf86f5bdd017b"
+   ]
+  },
+  {
+   "band_id": "WB-1567bb474e02284f",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "2060",
+    "552"
+   ],
+   "width_mm": 200.91,
+   "length_mm": 100.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      14579.719614,
+      14589.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-421cf86f5bdd017b"
+   ]
+  },
+  {
+   "band_id": "WB-15be5ce1c34a2873",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "539",
+    "540"
+   ],
+   "width_mm": 150.0,
+   "length_mm": 750.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      15384.719614,
+      15459.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "OPENING_JAMB",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-a6299e193c5dcf95"
+   ]
+  },
+  {
+   "band_id": "WB-1bb50b95e0357657",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "572",
+    "574"
+   ],
+   "width_mm": 150.0,
+   "length_mm": 350.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      110488.081745,
+      110523.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "OPENING_JAMB",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-2fe1766b29cbb6e2"
+   ]
+  },
+  {
+   "band_id": "WB-1e48b902ef5e317f",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "459",
+    "460"
+   ],
+   "width_mm": 200.0,
+   "length_mm": 3350.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      15689.719614,
+      16024.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-5004b809add038df"
+   ]
+  },
+  {
+   "band_id": "WB-1fb2745be012afd0",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "583",
+    "584"
+   ],
+   "width_mm": 150.0,
+   "length_mm": 2000.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      110538.081745,
+      110738.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "RECEIVING_FACE_JUNCTION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-7d97ee836932548b"
+   ]
+  },
+  {
+   "band_id": "WB-26c22b6b7db1c393",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "520",
+    "522"
+   ],
+   "width_mm": 150.0,
+   "length_mm": 300.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      109538.081745,
+      109568.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-f455796bc8f5ddef"
+   ]
+  },
+  {
+   "band_id": "WB-2eaf560d0ffa9ed0",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "481",
+    "484"
+   ],
+   "width_mm": 150.0,
+   "length_mm": 550.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      109538.081745,
+      109593.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-7d2901211d518ae1"
+   ]
+  },
+  {
+   "band_id": "WB-2ef2c74bf60c48a0",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "459",
+    "461"
+   ],
+   "width_mm": 200.0,
+   "length_mm": 400.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      15634.719615,
+      15674.719615
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-fccb787ef64565d5"
+   ]
+  },
+  {
+   "band_id": "WB-348b2a042f8dbd42",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "521",
+    "522"
+   ],
+   "width_mm": 150.0,
+   "length_mm": 2150.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      109308.081745,
+      109523.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "RECEIVING_FACE_JUNCTION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-7da34f97f75d0007"
+   ]
+  },
+  {
+   "band_id": "WB-3654d592eda4476f",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "1893",
+    "1895"
+   ],
+   "width_mm": 150.0,
+   "length_mm": 3150.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      15709.719614,
+      16024.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "CAPPED",
+    "RECEIVING_FACE_JUNCTION"
+   ],
+   "spans": [
+    "BS-7a8a83d1dd435f0e"
+   ]
+  },
+  {
+   "band_id": "WB-37282fdfc4aec2b3",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "2060",
+    "552"
+   ],
+   "width_mm": 200.91,
+   "length_mm": 100.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      14549.719614,
+      14559.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-0de30ad41e3883fd"
+   ]
+  },
+  {
+   "band_id": "WB-37282fdfc4aec2b3",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "2060",
+    "552"
+   ],
+   "width_mm": 200.91,
+   "length_mm": 100.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      14549.719614,
+      14559.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-0de30ad41e3883fd"
+   ]
+  },
+  {
+   "band_id": "WB-3ec48d66e4ae938a",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "528",
+    "538"
+   ],
+   "width_mm": 150.0,
+   "length_mm": 1100.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      15564.719614,
+      15574.719614
+     ],
+     "by": []
+    },
+    {
+     "class": "OBSTACLE_OVERLAP",
+     "role": "STRUCTURAL_OBSTACLE",
+     "s": [
+      15574.719614,
+      15594.719614
+     ],
+     "by": [
+      "716",
+      "716"
+     ]
+    },
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      15594.719614,
+      15674.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "OPENING_JAMB",
+    "RECEIVING_FACE_JUNCTION"
+   ],
+   "spans": [
+    "BS-2060bd1939aadd6f",
+    "BS-e4507e918655fe22"
+   ]
+  },
+  {
+   "band_id": "WB-41f7ee382fabcd8c",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "450",
+    "505"
+   ],
+   "width_mm": 200.0,
+   "length_mm": 12434.3,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      14638.003886,
+      15881.435343
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-ea363bee3e8cd78a"
+   ]
+  },
+  {
+   "band_id": "WB-5027ea5843e36ae8",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "546",
+    "549"
+   ],
+   "width_mm": 150.0,
+   "length_mm": 5700.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      14529.719614,
+      15054.719614
+     ],
+     "by": []
+    },
+    {
+     "class": "OBSTACLE_OVERLAP",
+     "role": "STRUCTURAL_OBSTACLE",
+     "s": [
+      15054.719614,
+      15099.719614
+     ],
+     "by": [
+      "704"
+     ]
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-664051df40ea1d4a"
+   ]
+  },
+  {
+   "band_id": "WB-526abeb9a871292d",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "444",
+    "489"
+   ],
+   "width_mm": 200.0,
+   "length_mm": 2900.0,
+   "intervals": [
+    {
+     "class": "OBSTACLE_OVERLAP",
+     "role": "STRUCTURAL_OBSTACLE",
+     "s": [
+      110233.081745,
+      110278.081745
+     ],
+     "by": [
+      "699"
+     ]
+    },
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      110278.081745,
+      110523.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-e5170b803a1a20f2"
+   ]
+  },
+  {
+   "band_id": "WB-53152ac189d709f0",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "2060",
+    "2061"
+   ],
+   "width_mm": 100.0,
+   "length_mm": 1900.0,
+   "intervals": [
+    {
+     "class": "AMBIGUOUS_PAIRED_BOTH_SIDES",
+     "role": null,
+     "s": [
+      109838.172762,
+      110028.172762
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": []
+  },
+  {
+   "band_id": "WB-53152ac189d709f0",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "2060",
+    "2061"
+   ],
+   "width_mm": 300.0,
+   "length_mm": 1900.0,
+   "intervals": [
+    {
+     "class": "AMBIGUOUS_PAIRED_BOTH_SIDES",
+     "role": null,
+     "s": [
+      109838.172762,
+      109838.272762
+     ],
+     "by": []
+    },
+    {
+     "class": "AMBIGUOUS_CENTRELINE",
+     "role": null,
+     "s": [
+      109838.272762,
+      110028.072762
+     ],
+     "by": []
+    },
+    {
+     "class": "AMBIGUOUS_PAIRED_BOTH_SIDES",
+     "role": null,
+     "s": [
+      110028.072762,
+      110028.172762
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": []
+  },
+  {
+   "band_id": "WB-53152ac189d709f0",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "2060",
+    "2061"
+   ],
+   "width_mm": 300.0,
+   "length_mm": 1900.0,
+   "intervals": [
+    {
+     "class": "AMBIGUOUS_PAIRED_BOTH_SIDES",
+     "role": null,
+     "s": [
+      109838.172762,
+      110028.172762
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": []
+  },
+  {
+   "band_id": "WB-53152ac189d709f0",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "2060",
+    "2061"
+   ],
+   "width_mm": 100.0,
+   "length_mm": 1900.0,
+   "intervals": [
+    {
+     "class": "AMBIGUOUS_PAIRED_BOTH_SIDES",
+     "role": null,
+     "s": [
+      109838.172762,
+      110028.172762
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": []
+  },
+  {
+   "band_id": "WB-53152ac189d709f0",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "2060",
+    "2061"
+   ],
+   "width_mm": 100.0,
+   "length_mm": 1900.0,
+   "intervals": [
+    {
+     "class": "AMBIGUOUS_PAIRED_BOTH_SIDES",
+     "role": null,
+     "s": [
+      109838.172762,
+      110028.172762
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": []
+  },
+  {
+   "band_id": "WB-53152ac189d709f0",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "2060",
+    "2061"
+   ],
+   "width_mm": 300.0,
+   "length_mm": 1900.0,
+   "intervals": [
+    {
+     "class": "AMBIGUOUS_PAIRED_BOTH_SIDES",
+     "role": null,
+     "s": [
+      109838.172762,
+      110028.172762
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": []
+  },
+  {
+   "band_id": "WB-53152ac189d709f0",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "2060",
+    "2061"
+   ],
+   "width_mm": 300.0,
+   "length_mm": 1900.0,
+   "intervals": [
+    {
+     "class": "AMBIGUOUS_PAIRED_BOTH_SIDES",
+     "role": null,
+     "s": [
+      109838.172762,
+      110028.172762
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": []
+  },
+  {
+   "band_id": "WB-53152ac189d709f0",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "2060",
+    "2061"
+   ],
+   "width_mm": 100.0,
+   "length_mm": 1900.0,
+   "intervals": [
+    {
+     "class": "AMBIGUOUS_PAIRED_BOTH_SIDES",
+     "role": null,
+     "s": [
+      109838.172762,
+      110028.172762
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": []
+  },
+  {
+   "band_id": "WB-545a50f20a1c97a0",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "526",
+    "531"
+   ],
+   "width_mm": 150.0,
+   "length_mm": 2100.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      15779.719614,
+      15989.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "OPENING_JAMB",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-8b5515a287a0c16b"
+   ]
+  },
+  {
+   "band_id": "WB-566cd40972fb4ca5",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "544",
+    "580"
+   ],
+   "width_mm": 150.0,
+   "length_mm": 4050.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      14529.719614,
+      14934.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "RECEIVING_FACE_JUNCTION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-bbb6b7871dff69d9"
+   ]
+  },
+  {
+   "band_id": "WB-5807171034af7fb1",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "459",
+    "464"
+   ],
+   "width_mm": 200.0,
+   "length_mm": 1700.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      14859.719614,
+      15029.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-2bb1d4eee5c362a0"
+   ]
+  },
+  {
+   "band_id": "WB-5f84d83837febf25",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "556",
+    "582"
+   ],
+   "width_mm": 150.0,
+   "length_mm": 200.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      15079.719614,
+      15099.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "CAPPED",
+    "RECEIVING_FACE_JUNCTION"
+   ],
+   "spans": [
+    "BS-8623c51110b08920"
+   ]
+  },
+  {
+   "band_id": "WB-60fc64ce1230b3ba",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "455",
+    "457"
+   ],
+   "width_mm": 200.0,
+   "length_mm": 6350.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      109583.081745,
+      109878.081745
+     ],
+     "by": []
+    },
+    {
+     "class": "AMBIGUOUS_CENTRELINE",
+     "role": null,
+     "s": [
+      109878.081745,
+      110047.833277
+     ],
+     "by": []
+    },
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      110047.833277,
+      110218.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": [
+    "BS-5ec7419ff7f3354e",
+    "BS-68d6305d13996104"
+   ]
+  },
+  {
+   "band_id": "WB-7136e1c6741b6985",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "455",
+    "456"
+   ],
+   "width_mm": 200.0,
+   "length_mm": 850.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      110278.081745,
+      110363.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-5b669687bc8d9bc8"
+   ]
+  },
+  {
+   "band_id": "WB-799051cb6aa8ec60",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "2060",
+    "2060"
+   ],
+   "width_mm": 400.0,
+   "length_mm": 100.0,
+   "intervals": [
+    {
+     "class": "AMBIGUOUS_PAIRED_BOTH_SIDES",
+     "role": null,
+     "s": [
+      109828.172762,
+      109838.172762
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": []
+  },
+  {
+   "band_id": "WB-799051cb6aa8ec60",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "2060",
+    "2060"
+   ],
+   "width_mm": 400.0,
+   "length_mm": 100.0,
+   "intervals": [
+    {
+     "class": "AMBIGUOUS_PAIRED_BOTH_SIDES",
+     "role": null,
+     "s": [
+      109828.172762,
+      109838.172762
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": []
+  },
+  {
+   "band_id": "WB-799051cb6aa8ec60",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "2060"
+   ],
+   "width_mm": 400.0,
+   "length_mm": 100.0,
+   "intervals": [
+    {
+     "class": "AMBIGUOUS_PAIRED_BOTH_SIDES",
+     "role": null,
+     "s": [
+      109828.172762,
+      109838.172762
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": []
+  },
+  {
+   "band_id": "WB-799051cb6aa8ec60",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "2060"
+   ],
+   "width_mm": 400.0,
+   "length_mm": 100.0,
+   "intervals": [
+    {
+     "class": "AMBIGUOUS_PAIRED_BOTH_SIDES",
+     "role": null,
+     "s": [
+      109828.172762,
+      109838.172762
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": []
+  },
+  {
+   "band_id": "WB-7b3ad095cb4bcecb",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "2296",
+    "2297"
+   ],
+   "width_mm": 200.0,
+   "length_mm": 3246.8,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      109893.400852,
+      110218.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "ALIGNED_FREE_END",
+    "RECEIVING_FACE_JUNCTION"
+   ],
+   "spans": [
+    "BS-653ae9bb530a4b00"
+   ]
+  },
+  {
+   "band_id": "WB-7c3293414c33a9cb",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "2060",
+    "2061"
+   ],
+   "width_mm": 100.0,
+   "length_mm": 200.0,
+   "intervals": [
+    {
+     "class": "AMBIGUOUS_PAIRED_BOTH_SIDES",
+     "role": null,
+     "s": [
+      14559.719614,
+      14579.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": []
+  },
+  {
+   "band_id": "WB-7c3293414c33a9cb",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "2060",
+    "2061"
+   ],
+   "width_mm": 100.0,
+   "length_mm": 200.0,
+   "intervals": [
+    {
+     "class": "AMBIGUOUS_PAIRED_BOTH_SIDES",
+     "role": null,
+     "s": [
+      14559.719614,
+      14579.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": []
+  },
+  {
+   "band_id": "WB-7c3293414c33a9cb",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "2060",
+    "2061"
+   ],
+   "width_mm": 100.0,
+   "length_mm": 200.0,
+   "intervals": [
+    {
+     "class": "AMBIGUOUS_PAIRED_BOTH_SIDES",
+     "role": null,
+     "s": [
+      14559.719614,
+      14579.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": []
+  },
+  {
+   "band_id": "WB-7c3293414c33a9cb",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "2060",
+    "2061"
+   ],
+   "width_mm": 100.0,
+   "length_mm": 200.0,
+   "intervals": [
+    {
+     "class": "AMBIGUOUS_PAIRED_BOTH_SIDES",
+     "role": null,
+     "s": [
+      14559.719614,
+      14579.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": []
+  },
+  {
+   "band_id": "WB-87c8552f83e32a2d",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "470",
+    "471",
+    "477"
+   ],
+   "width_mm": 200.0,
+   "length_mm": 4656.7,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      109308.081745,
+      109443.081745
+     ],
+     "by": []
+    },
+    {
+     "class": "OBSTACLE_OVERLAP",
+     "role": "STRUCTURAL_OBSTACLE",
+     "s": [
+      109443.081745,
+      109583.081745
+     ],
+     "by": [
+      "718",
+      "718"
+     ]
+    },
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      109583.081745,
+      109773.756121
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "RECEIVING_FACE_JUNCTION",
+    "ALIGNED_FREE_END"
+   ],
+   "spans": [
+    "BS-980aca6c0da8fdbc",
+    "BS-65e918fc060a7d07"
+   ]
+  },
+  {
+   "band_id": "WB-8ab73bc1a6bb71fb",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "444",
+    "449",
+    "504"
+   ],
+   "width_mm": 200.0,
+   "length_mm": 7067.2,
+   "intervals": [
+    {
+     "class": "OBSTACLE_OVERLAP",
+     "role": "STRUCTURAL_OBSTACLE",
+     "s": [
+      110538.081745,
+      110583.081745
+     ],
+     "by": [
+      "702"
+     ]
+    },
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      110583.081745,
+      111244.797474
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-786e2364d73f4f13"
+   ]
+  },
+  {
+   "band_id": "WB-903a11c420cfc393",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "473",
+    "475"
+   ],
+   "width_mm": 150.0,
+   "length_mm": 600.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      109623.081745,
+      109683.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "OPENING_JAMB"
+   ],
+   "spans": [
+    "BS-a82ba89e54e8bf1e"
+   ]
+  },
+  {
+   "band_id": "WB-9fc19b0b33989811",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "2060",
+    "2060"
+   ],
+   "width_mm": 400.0,
+   "length_mm": 100.0,
+   "intervals": [
+    {
+     "class": "AMBIGUOUS_PAIRED_BOTH_SIDES",
+     "role": null,
+     "s": [
+      110028.172762,
+      110038.172762
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": []
+  },
+  {
+   "band_id": "WB-9fc19b0b33989811",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "2060",
+    "2060"
+   ],
+   "width_mm": 400.0,
+   "length_mm": 100.0,
+   "intervals": [
+    {
+     "class": "AMBIGUOUS_PAIRED_BOTH_SIDES",
+     "role": null,
+     "s": [
+      110028.172762,
+      110038.172762
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": []
+  },
+  {
+   "band_id": "WB-9fc19b0b33989811",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "2060"
+   ],
+   "width_mm": 400.0,
+   "length_mm": 100.0,
+   "intervals": [
+    {
+     "class": "AMBIGUOUS_PAIRED_BOTH_SIDES",
+     "role": null,
+     "s": [
+      110028.172762,
+      110038.172762
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": []
+  },
+  {
+   "band_id": "WB-9fc19b0b33989811",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "2060"
+   ],
+   "width_mm": 400.0,
+   "length_mm": 100.0,
+   "intervals": [
+    {
+     "class": "AMBIGUOUS_PAIRED_BOTH_SIDES",
+     "role": null,
+     "s": [
+      110028.172762,
+      110038.172762
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": []
+  },
+  {
+   "band_id": "WB-a1d57b5cbebeadc8",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "535",
+    "543"
+   ],
+   "width_mm": 150.0,
+   "length_mm": 600.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      15049.719614,
+      15109.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "RECEIVING_FACE_JUNCTION",
+    "OPENING_JAMB"
+   ],
+   "spans": [
+    "BS-135eff0c946c66f5"
+   ]
+  },
+  {
+   "band_id": "WB-a5ba73aea84116cd",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "1672",
+    "459"
+   ],
+   "width_mm": 550.0,
+   "length_mm": 650.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      14494.719614,
+      14559.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-f23974e3cec0b2de"
+   ]
+  },
+  {
+   "band_id": "WB-b28d317a26b5ab8b",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "451",
+    "452"
+   ],
+   "width_mm": 200.0,
+   "length_mm": 1531.4,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      88936.013933,
+      89089.151018
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-c6a62939f132a630"
+   ]
+  },
+  {
+   "band_id": "WB-b71a34e13da43ab4",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "552",
+    "554"
+   ],
+   "width_mm": 210.14,
+   "length_mm": 2550.0,
+   "intervals": [
+    {
+     "class": "OBSTACLE_OVERLAP",
+     "role": "STRUCTURAL_OBSTACLE",
+     "s": [
+      14589.719614,
+      14589.819614
+     ],
+     "by": []
+    },
+    {
+     "class": "AMBIGUOUS_CENTRELINE",
+     "role": null,
+     "s": [
+      14589.819614,
+      14619.719614
+     ],
+     "by": []
+    },
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      14619.719614,
+      14844.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": [
+    "BS-f89f50e48d483b7a"
+   ]
+  },
+  {
+   "band_id": "WB-b88b3b20bb03b46d",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "571",
+    "574"
+   ],
+   "width_mm": 150.0,
+   "length_mm": 2000.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      110538.081745,
+      110738.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-3551e9b6839aaaee"
+   ]
+  },
+  {
+   "band_id": "WB-b98f5ef4b983f03c",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "446",
+    "448"
+   ],
+   "width_mm": 200.0,
+   "length_mm": 4100.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      109808.081745,
+      110083.516781
+     ],
+     "by": []
+    },
+    {
+     "class": "AMBIGUOUS_CENTRELINE",
+     "role": null,
+     "s": [
+      110083.516781,
+      110204.052637
+     ],
+     "by": []
+    },
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      110204.052637,
+      110218.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": [
+    "BS-499a9212e4d30a5a",
+    "BS-da10e3dd2eaf77ae"
+   ]
+  },
+  {
+   "band_id": "WB-c0b70306b128d173",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "518",
+    "523"
+   ],
+   "width_mm": 150.0,
+   "length_mm": 5850.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      109778.081745,
+      110363.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "OPENING_JAMB",
+    "RECEIVING_FACE_JUNCTION"
+   ],
+   "spans": [
+    "BS-30e36483bc8de68e"
+   ]
+  },
+  {
+   "band_id": "WB-c1d6accfada738cf",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "1271",
+    "1272"
+   ],
+   "width_mm": 150.0,
+   "length_mm": 250.0,
+   "intervals": [
+    {
+     "class": "OBSTACLE_OVERLAP",
+     "role": "STRUCTURAL_OBSTACLE",
+     "s": [
+      110233.081747,
+      110238.081747
+     ],
+     "by": [
+      "704"
+     ]
+    },
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      110238.081747,
+      110258.081747
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "OPENING_JAMB"
+   ],
+   "spans": [
+    "BS-ace0ab640312b9dd"
+   ]
+  },
+  {
+   "band_id": "WB-c21a42c500636d5e",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "7116",
+    "7117"
+   ],
+   "width_mm": 150.0,
+   "length_mm": 800.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      14949.719615,
+      15029.719615
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "OPENING_JAMB",
+    "RECEIVING_FACE_JUNCTION"
+   ],
+   "spans": [
+    "BS-63b1560ca92411cd"
+   ]
+  },
+  {
+   "band_id": "WB-c285e436ecdbf42c",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "446",
+    "447"
+   ],
+   "width_mm": 200.0,
+   "length_mm": 4439.9,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      109343.081745,
+      109787.067458
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-e0f0d02fcbc8ee17"
+   ]
+  },
+  {
+   "band_id": "WB-c2c9b76062ebaac8",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "506",
+    "510"
+   ],
+   "width_mm": 200.0,
+   "length_mm": 4600.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      15114.719614,
+      15324.719614
+     ],
+     "by": []
+    },
+    {
+     "class": "AMBIGUOUS_CENTRELINE",
+     "role": null,
+     "s": [
+      15324.719614,
+      15559.364057
+     ],
+     "by": []
+    },
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      15559.364057,
+      15574.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": [
+    "BS-496dca9732ffb649",
+    "BS-8ebc48b9531fa2c0"
+   ]
+  },
+  {
+   "band_id": "WB-c957c88f82988939",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "459",
+    "462"
+   ],
+   "width_mm": 200.0,
+   "length_mm": 1000.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      15474.719614,
+      15574.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-106f41a587fddad1"
+   ]
+  },
+  {
+   "band_id": "WB-ce5da0a04fd55c86",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "552",
+    "555"
+   ],
+   "width_mm": 150.0,
+   "length_mm": 350.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      14859.719614,
+      14894.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-f73b8a32b67669bd"
+   ]
+  },
+  {
+   "band_id": "WB-d9bbc05523872f82",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "570",
+    "579"
+   ],
+   "width_mm": 150.0,
+   "length_mm": 1500.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      14949.719614,
+      15099.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-f33084e6ee7caf5a"
+   ]
+  },
+  {
+   "band_id": "WB-d9e43c661abd72ca",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "552",
+    "554"
+   ],
+   "width_mm": 210.14,
+   "length_mm": 550.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      14494.719614,
+      14549.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "RECEIVING_FACE_JUNCTION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-267e57464aeca4b7"
+   ]
+  },
+  {
+   "band_id": "WB-daab0cfad91a81bc",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "506",
+    "512"
+   ],
+   "width_mm": 200.0,
+   "length_mm": 4350.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      15589.719614,
+      15669.978591
+     ],
+     "by": []
+    },
+    {
+     "class": "AMBIGUOUS_CENTRELINE",
+     "role": null,
+     "s": [
+      15669.978591,
+      15919.978591
+     ],
+     "by": []
+    },
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      15919.978591,
+      16024.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": [
+    "BS-c008aebfc19ff71a",
+    "BS-c33c03a7ed989a96"
+   ]
+  },
+  {
+   "band_id": "WB-e00510a0d58838b1",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "455",
+    "458"
+   ],
+   "width_mm": 200.0,
+   "length_mm": 2150.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      109308.081745,
+      109523.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-f77c0c161a46ed6c"
+   ]
+  },
+  {
+   "band_id": "WB-e1ce84df8618a355",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "544",
+    "581"
+   ],
+   "width_mm": 150.0,
+   "length_mm": 400.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      14949.719614,
+      14989.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "CAPPED"
+   ],
+   "spans": [
+    "BS-b51a5e2f249cf181"
+   ]
+  },
+  {
+   "band_id": "WB-eeb4fc032cff8699",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "574",
+    "584"
+   ],
+   "width_mm": 1800.0,
+   "length_mm": 150.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      110738.081745,
+      110753.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "CAPPED"
+   ],
+   "spans": [
+    "BS-2926201caee0caa5"
+   ]
+  },
+  {
+   "band_id": "WB-efb69156aa050622",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "709",
+    "710"
+   ],
+   "width_mm": 200.0,
+   "length_mm": 1531.4,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      67355.511497,
+      67508.648582
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-0dd01bc90bdccb77"
+   ]
+  },
+  {
+   "band_id": "WB-f002b0911be00cd8",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "519",
+    "525"
+   ],
+   "width_mm": 200.0,
+   "length_mm": 1350.0,
+   "intervals": [
+    {
+     "class": "OBSTACLE_OVERLAP",
+     "role": "STRUCTURAL_OBSTACLE",
+     "s": [
+      109543.081745,
+      109583.081745
+     ],
+     "by": [
+      "716"
+     ]
+    },
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      109583.081745,
+      109678.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "CAPPED"
+   ],
+   "spans": [
+    "BS-5afec7384c71ee05"
+   ]
+  },
+  {
+   "band_id": "WB-f6ace28ab76f5ec1",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "481",
+    "483"
+   ],
+   "width_mm": 150.0,
+   "length_mm": 2150.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      109308.081745,
+      109523.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "RECEIVING_FACE_JUNCTION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-e6df8d8fe71436c7"
+   ]
+  },
+  {
+   "band_id": "WB-fb59fd8ea0ae205c",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "472",
+    "475"
+   ],
+   "width_mm": 150.0,
+   "length_mm": 3000.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      109308.081745,
+      109608.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "RECEIVING_FACE_JUNCTION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-689b32c97ae1a54e"
+   ]
+  }
+ ],
+ "OLD_K1": [
+  {
+   "band_id": "WB-03e36a08ad95074d",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "539",
+    "540"
+   ],
+   "width_mm": 150.0,
+   "length_mm": 750.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      15384.719614,
+      15459.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "OPENING_JAMB",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-ca47ab46276c3cde"
+   ]
+  },
+  {
+   "band_id": "WB-0afe47108aea7112",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "2060",
+    "2061"
+   ],
+   "width_mm": 100.0,
+   "length_mm": 200.0,
+   "intervals": [
+    {
+     "class": "AMBIGUOUS_PAIRED_BOTH_SIDES",
+     "role": null,
+     "s": [
+      14549.719614,
+      14569.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": []
+  },
+  {
+   "band_id": "WB-0afe47108aea7112",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "2060",
+    "2061"
+   ],
+   "width_mm": 100.0,
+   "length_mm": 200.0,
+   "intervals": [
+    {
+     "class": "AMBIGUOUS_PAIRED_BOTH_SIDES",
+     "role": null,
+     "s": [
+      14549.719614,
+      14569.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": []
+  },
+  {
+   "band_id": "WB-0afe47108aea7112",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "2060",
+    "2061"
+   ],
+   "width_mm": 100.0,
+   "length_mm": 200.0,
+   "intervals": [
+    {
+     "class": "AMBIGUOUS_PAIRED_BOTH_SIDES",
+     "role": null,
+     "s": [
+      14549.719614,
+      14569.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": []
+  },
+  {
+   "band_id": "WB-0afe47108aea7112",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "2060",
+    "2061"
+   ],
+   "width_mm": 100.0,
+   "length_mm": 200.0,
+   "intervals": [
+    {
+     "class": "AMBIGUOUS_PAIRED_BOTH_SIDES",
+     "role": null,
+     "s": [
+      14549.719614,
+      14569.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": []
+  },
+  {
+   "band_id": "WB-0ba9611961c9105b",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "450",
+    "505"
+   ],
+   "width_mm": 200.0,
+   "length_mm": 12434.3,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      14638.003886,
+      15881.435343
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-a61d228297c334fa"
+   ]
+  },
+  {
+   "band_id": "WB-1b9958947d8ff8ed",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "551",
+    "817"
+   ],
+   "width_mm": 600.0,
+   "length_mm": 150.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      15099.719614,
+      15114.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "CAPPED"
+   ],
+   "spans": [
+    "BS-b9b531cae5c534e5"
+   ]
+  },
+  {
+   "band_id": "WB-1d17223a0d93a833",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "709",
+    "710"
+   ],
+   "width_mm": 200.0,
+   "length_mm": 1531.4,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      67355.511497,
+      67508.648582
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-22b06cbb84ea79e3"
+   ]
+  },
+  {
+   "band_id": "WB-1fba681d79d03874",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "572",
+    "574"
+   ],
+   "width_mm": 150.0,
+   "length_mm": 350.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      110488.081745,
+      110523.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "OPENING_JAMB",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-3f0bc65ed968d9fd"
+   ]
+  },
+  {
+   "band_id": "WB-21d6957f38f88c63",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "552",
+    "554"
+   ],
+   "width_mm": 150.0,
+   "length_mm": 3500.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      14494.719614,
+      14559.719614
+     ],
+     "by": []
+    },
+    {
+     "class": "OBSTACLE_OVERLAP",
+     "role": "STRUCTURAL_OBSTACLE",
+     "s": [
+      14559.719614,
+      14619.719614
+     ],
+     "by": [
+      "708",
+      "708"
+     ]
+    },
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      14619.719614,
+      14844.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "RECEIVING_FACE_JUNCTION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-21841623e0ff5c69",
+    "BS-c8b49b7307e2632b"
+   ]
+  },
+  {
+   "band_id": "WB-2385ccaca480e389",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "459",
+    "464"
+   ],
+   "width_mm": 200.0,
+   "length_mm": 1700.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      14859.719614,
+      15029.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-a68d6e14a5f8987d"
+   ]
+  },
+  {
+   "band_id": "WB-25f9356bd9fc981a",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "506",
+    "510"
+   ],
+   "width_mm": 200.0,
+   "length_mm": 4600.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      15114.719614,
+      15324.719614
+     ],
+     "by": []
+    },
+    {
+     "class": "AMBIGUOUS_CENTRELINE",
+     "role": null,
+     "s": [
+      15324.719614,
+      15559.364057
+     ],
+     "by": []
+    },
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      15559.364057,
+      15574.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": [
+    "BS-9eb3509d334ec4da",
+    "BS-19e8212aa0372bea"
+   ]
+  },
+  {
+   "band_id": "WB-3357b6188b4e3f8e",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "521",
+    "522"
+   ],
+   "width_mm": 150.0,
+   "length_mm": 2150.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      109308.081745,
+      109523.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "RECEIVING_FACE_JUNCTION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-6b528e823a7bc672"
+   ]
+  },
+  {
+   "band_id": "WB-3399d0d4b83df746",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "471",
+    "477"
+   ],
+   "width_mm": 200.0,
+   "length_mm": 1850.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      109623.081745,
+      109808.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "CAPPED"
+   ],
+   "spans": [
+    "BS-e8ae1792419e8c20"
+   ]
+  },
+  {
+   "band_id": "WB-347bc3872b22ec9d",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "481",
+    "484"
+   ],
+   "width_mm": 150.0,
+   "length_mm": 550.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      109538.081745,
+      109593.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-9e2c7847adc8be9c"
+   ]
+  },
+  {
+   "band_id": "WB-37798e7f0a154c0d",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "2060",
+    "2060"
+   ],
+   "width_mm": 400.0,
+   "length_mm": 100.0,
+   "intervals": [
+    {
+     "class": "AMBIGUOUS_PAIRED_BOTH_SIDES",
+     "role": null,
+     "s": [
+      110108.081745,
+      110118.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": []
+  },
+  {
+   "band_id": "WB-37798e7f0a154c0d",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "2060",
+    "2060"
+   ],
+   "width_mm": 400.0,
+   "length_mm": 100.0,
+   "intervals": [
+    {
+     "class": "AMBIGUOUS_PAIRED_BOTH_SIDES",
+     "role": null,
+     "s": [
+      110108.081745,
+      110118.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": []
+  },
+  {
+   "band_id": "WB-37798e7f0a154c0d",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "2060"
+   ],
+   "width_mm": 400.0,
+   "length_mm": 100.0,
+   "intervals": [
+    {
+     "class": "AMBIGUOUS_PAIRED_BOTH_SIDES",
+     "role": null,
+     "s": [
+      110108.081745,
+      110118.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": []
+  },
+  {
+   "band_id": "WB-37798e7f0a154c0d",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "2060"
+   ],
+   "width_mm": 400.0,
+   "length_mm": 100.0,
+   "intervals": [
+    {
+     "class": "AMBIGUOUS_PAIRED_BOTH_SIDES",
+     "role": null,
+     "s": [
+      110108.081745,
+      110118.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": []
+  },
+  {
+   "band_id": "WB-3e5be4a91c2d78e3",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "470",
+    "477"
+   ],
+   "width_mm": 200.0,
+   "length_mm": 3000.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      109308.081745,
+      109443.081745
+     ],
+     "by": []
+    },
+    {
+     "class": "OBSTACLE_OVERLAP",
+     "role": "STRUCTURAL_OBSTACLE",
+     "s": [
+      109443.081745,
+      109583.081745
+     ],
+     "by": [
+      "718",
+      "718"
+     ]
+    },
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      109583.081745,
+      109608.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "RECEIVING_FACE_JUNCTION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-c006fa367aa9b0ea",
+    "BS-beb140a38f708c9e"
+   ]
+  },
+  {
+   "band_id": "WB-3f17b5b39937b54e",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "544",
+    "581"
+   ],
+   "width_mm": 150.0,
+   "length_mm": 400.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      14949.719614,
+      14989.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "CAPPED"
+   ],
+   "spans": [
+    "BS-e2d7725630d237d6"
+   ]
+  },
+  {
+   "band_id": "WB-460395b72e6b4294",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "570",
+    "579"
+   ],
+   "width_mm": 150.0,
+   "length_mm": 1500.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      14949.719614,
+      15099.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-6536b5884377cfa7"
+   ]
+  },
+  {
+   "band_id": "WB-50c75efed57ddb37",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "547",
+    "548"
+   ],
+   "width_mm": 100.0,
+   "length_mm": 3300.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      14649.719614,
+      14979.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "CAPPED",
+    "CAPPED"
+   ],
+   "spans": [
+    "BS-4a73fe68e137981b"
+   ]
+  },
+  {
+   "band_id": "WB-523db7f02010c809",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "446",
+    "447"
+   ],
+   "width_mm": 200.0,
+   "length_mm": 4500.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      109343.081745,
+      109793.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-dc6e6dc3010cd697"
+   ]
+  },
+  {
+   "band_id": "WB-5d27b55649e4a5e9",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "571",
+    "574"
+   ],
+   "width_mm": 150.0,
+   "length_mm": 2000.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      110538.081745,
+      110738.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-bcdd1078b17fd2c5"
+   ]
+  },
+  {
+   "band_id": "WB-67141203307d8f27",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "556",
+    "582"
+   ],
+   "width_mm": 150.0,
+   "length_mm": 200.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      15079.719614,
+      15099.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "CAPPED",
+    "RECEIVING_FACE_JUNCTION"
+   ],
+   "spans": [
+    "BS-36a8369e3715781f"
+   ]
+  },
+  {
+   "band_id": "WB-6a4f6f89a383aecb",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "446",
+    "448"
+   ],
+   "width_mm": 200.0,
+   "length_mm": 4100.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      109808.081745,
+      109913.081745
+     ],
+     "by": []
+    },
+    {
+     "class": "AMBIGUOUS_CENTRELINE",
+     "role": null,
+     "s": [
+      109913.081745,
+      110113.081745
+     ],
+     "by": []
+    },
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      110113.081745,
+      110218.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": [
+    "BS-ab5fabbb743162b3",
+    "BS-80ef7665ae45d6af"
+   ]
+  },
+  {
+   "band_id": "WB-70c6a7bc301da80c",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "472",
+    "475"
+   ],
+   "width_mm": 150.0,
+   "length_mm": 3000.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      109308.081745,
+      109608.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "RECEIVING_FACE_JUNCTION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-b2370a15adfe092f"
+   ]
+  },
+  {
+   "band_id": "WB-70dc4551040b5d7c",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "473",
+    "475"
+   ],
+   "width_mm": 150.0,
+   "length_mm": 600.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      109623.081745,
+      109683.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "OPENING_JAMB"
+   ],
+   "spans": [
+    "BS-4e33f080db760a23"
+   ]
+  },
+  {
+   "band_id": "WB-73a77cb1c4815e8c",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "528",
+    "538"
+   ],
+   "width_mm": 150.0,
+   "length_mm": 1100.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      15564.719614,
+      15574.719614
+     ],
+     "by": []
+    },
+    {
+     "class": "OBSTACLE_OVERLAP",
+     "role": "STRUCTURAL_OBSTACLE",
+     "s": [
+      15574.719614,
+      15594.719614
+     ],
+     "by": [
+      "716",
+      "716"
+     ]
+    },
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      15594.719614,
+      15674.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "OPENING_JAMB",
+    "RECEIVING_FACE_JUNCTION"
+   ],
+   "spans": [
+    "BS-c6d531063c1f772a",
+    "BS-1e711a64a3ef844f"
+   ]
+  },
+  {
+   "band_id": "WB-742c78405409b213",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "455",
+    "458"
+   ],
+   "width_mm": 200.0,
+   "length_mm": 2150.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      109308.081745,
+      109523.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-6da43f7c22c76d0f"
+   ]
+  },
+  {
+   "band_id": "WB-7e9c8ed783f4a15d",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "544",
+    "580"
+   ],
+   "width_mm": 150.0,
+   "length_mm": 4050.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      14529.719614,
+      14934.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "RECEIVING_FACE_JUNCTION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-d6c2463b694e604b"
+   ]
+  },
+  {
+   "band_id": "WB-827e91003f532386",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "1893",
+    "1895"
+   ],
+   "width_mm": 150.0,
+   "length_mm": 3150.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      15709.719614,
+      16024.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "CAPPED",
+    "RECEIVING_FACE_JUNCTION"
+   ],
+   "spans": [
+    "BS-ece078c09a2374a8"
+   ]
+  },
+  {
+   "band_id": "WB-877e5cfc82393fb8",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "1672",
+    "459"
+   ],
+   "width_mm": 550.0,
+   "length_mm": 650.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      14494.719614,
+      14559.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-6ebd395bb02d1ebd"
+   ]
+  },
+  {
+   "band_id": "WB-88cddb13955740f7",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "481",
+    "483"
+   ],
+   "width_mm": 150.0,
+   "length_mm": 2150.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      109308.081745,
+      109523.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "RECEIVING_FACE_JUNCTION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-8e1a5dd5822bbd19"
+   ]
+  },
+  {
+   "band_id": "WB-8b6ce85f869770de",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "519",
+    "525"
+   ],
+   "width_mm": 200.0,
+   "length_mm": 1350.0,
+   "intervals": [
+    {
+     "class": "OBSTACLE_OVERLAP",
+     "role": "STRUCTURAL_OBSTACLE",
+     "s": [
+      109543.081745,
+      109583.081745
+     ],
+     "by": [
+      "716"
+     ]
+    },
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      109583.081745,
+      109678.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "CAPPED"
+   ],
+   "spans": [
+    "BS-eeac6eaad1012f0c"
+   ]
+  },
+  {
+   "band_id": "WB-8bcee11be0fe791b",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "518",
+    "523"
+   ],
+   "width_mm": 150.0,
+   "length_mm": 5850.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      109778.081745,
+      110363.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "OPENING_JAMB",
+    "RECEIVING_FACE_JUNCTION"
+   ],
+   "spans": [
+    "BS-5132e8b7c4d6ae43"
+   ]
+  },
+  {
+   "band_id": "WB-8c9c51edc42eee9c",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "459",
+    "461"
+   ],
+   "width_mm": 200.0,
+   "length_mm": 400.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      15634.719614,
+      15674.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-cb5b58b41b695c17"
+   ]
+  },
+  {
+   "band_id": "WB-8dc01dc392cfcdb7",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "455",
+    "456"
+   ],
+   "width_mm": 200.0,
+   "length_mm": 850.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      110278.081745,
+      110363.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-0b4e429bea86cf6c"
+   ]
+  },
+  {
+   "band_id": "WB-8eb0e18f193d1af6",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "2060",
+    "2061"
+   ],
+   "width_mm": 100.0,
+   "length_mm": 1900.0,
+   "intervals": [
+    {
+     "class": "AMBIGUOUS_PAIRED_BOTH_SIDES",
+     "role": null,
+     "s": [
+      109918.081745,
+      110108.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": []
+  },
+  {
+   "band_id": "WB-8eb0e18f193d1af6",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "2060",
+    "2061"
+   ],
+   "width_mm": 300.0,
+   "length_mm": 1900.0,
+   "intervals": [
+    {
+     "class": "AMBIGUOUS_PAIRED_BOTH_SIDES",
+     "role": null,
+     "s": [
+      109918.081745,
+      109918.181745
+     ],
+     "by": []
+    },
+    {
+     "class": "AMBIGUOUS_CENTRELINE",
+     "role": null,
+     "s": [
+      109918.181745,
+      110107.981745
+     ],
+     "by": []
+    },
+    {
+     "class": "AMBIGUOUS_PAIRED_BOTH_SIDES",
+     "role": null,
+     "s": [
+      110107.981745,
+      110108.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": []
+  },
+  {
+   "band_id": "WB-8eb0e18f193d1af6",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "2060",
+    "2061"
+   ],
+   "width_mm": 300.0,
+   "length_mm": 1900.0,
+   "intervals": [
+    {
+     "class": "AMBIGUOUS_PAIRED_BOTH_SIDES",
+     "role": null,
+     "s": [
+      109918.081745,
+      110108.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": []
+  },
+  {
+   "band_id": "WB-8eb0e18f193d1af6",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "2060",
+    "2061"
+   ],
+   "width_mm": 100.0,
+   "length_mm": 1900.0,
+   "intervals": [
+    {
+     "class": "AMBIGUOUS_PAIRED_BOTH_SIDES",
+     "role": null,
+     "s": [
+      109918.081745,
+      110108.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": []
+  },
+  {
+   "band_id": "WB-8eb0e18f193d1af6",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "2060",
+    "2061"
+   ],
+   "width_mm": 100.0,
+   "length_mm": 1900.0,
+   "intervals": [
+    {
+     "class": "AMBIGUOUS_PAIRED_BOTH_SIDES",
+     "role": null,
+     "s": [
+      109918.081745,
+      110108.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": []
+  },
+  {
+   "band_id": "WB-8eb0e18f193d1af6",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "2060",
+    "2061"
+   ],
+   "width_mm": 300.0,
+   "length_mm": 1900.0,
+   "intervals": [
+    {
+     "class": "AMBIGUOUS_PAIRED_BOTH_SIDES",
+     "role": null,
+     "s": [
+      109918.081745,
+      110108.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": []
+  },
+  {
+   "band_id": "WB-8eb0e18f193d1af6",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "2060",
+    "2061"
+   ],
+   "width_mm": 300.0,
+   "length_mm": 1900.0,
+   "intervals": [
+    {
+     "class": "AMBIGUOUS_PAIRED_BOTH_SIDES",
+     "role": null,
+     "s": [
+      109918.081745,
+      110108.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": []
+  },
+  {
+   "band_id": "WB-8eb0e18f193d1af6",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "2060",
+    "2061"
+   ],
+   "width_mm": 100.0,
+   "length_mm": 1900.0,
+   "intervals": [
+    {
+     "class": "AMBIGUOUS_PAIRED_BOTH_SIDES",
+     "role": null,
+     "s": [
+      109918.081745,
+      110108.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": []
+  },
+  {
+   "band_id": "WB-8fb75f55d821496b",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "552",
+    "555"
+   ],
+   "width_mm": 150.0,
+   "length_mm": 350.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      14859.719614,
+      14894.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-c2b9f5435f84da14"
+   ]
+  },
+  {
+   "band_id": "WB-937817df59895bcd",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "526",
+    "531"
+   ],
+   "width_mm": 150.0,
+   "length_mm": 2100.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      15779.719614,
+      15989.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "OPENING_JAMB",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-5804a23ea4d9739a"
+   ]
+  },
+  {
+   "band_id": "WB-95838c777aa27914",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "1947",
+    "1948"
+   ],
+   "width_mm": 150.0,
+   "length_mm": 400.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      110178.081745,
+      110218.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-cb21c41a1c8ad1ca"
+   ]
+  },
+  {
+   "band_id": "WB-9c6f20f057ba0fd5",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "455",
+    "457"
+   ],
+   "width_mm": 200.0,
+   "length_mm": 6350.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      109583.081745,
+      109878.081745
+     ],
+     "by": []
+    },
+    {
+     "class": "AMBIGUOUS_CENTRELINE",
+     "role": null,
+     "s": [
+      109878.081745,
+      110047.833277
+     ],
+     "by": []
+    },
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      110047.833277,
+      110218.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": [
+    "BS-1f8d0c78c86a6df7",
+    "BS-fab43ef65e822507"
+   ]
+  },
+  {
+   "band_id": "WB-9da40c5695b58bdc",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "1271",
+    "1272"
+   ],
+   "width_mm": 150.0,
+   "length_mm": 250.0,
+   "intervals": [
+    {
+     "class": "OBSTACLE_OVERLAP",
+     "role": "STRUCTURAL_OBSTACLE",
+     "s": [
+      110233.081747,
+      110238.081747
+     ],
+     "by": [
+      "704"
+     ]
+    },
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      110238.081747,
+      110258.081747
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "OPENING_JAMB"
+   ],
+   "spans": [
+    "BS-75fa642f642afac0"
+   ]
+  },
+  {
+   "band_id": "WB-a3746f4dc0f7f6ea",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "459",
+    "463"
+   ],
+   "width_mm": 200.0,
+   "length_mm": 4100.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      15049.719614,
+      15166.670013
+     ],
+     "by": []
+    },
+    {
+     "class": "AMBIGUOUS_CENTRELINE",
+     "role": null,
+     "s": [
+      15166.670013,
+      15327.769215
+     ],
+     "by": []
+    },
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      15327.769215,
+      15459.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": [
+    "BS-7d38fa833f009d2f",
+    "BS-b67b49534183c24a"
+   ]
+  },
+  {
+   "band_id": "WB-a3a88d0aa8e4225b",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "549",
+    "550"
+   ],
+   "width_mm": 400.0,
+   "length_mm": 150.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      15099.719614,
+      15114.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "RECEIVING_FACE_JUNCTION"
+   ],
+   "spans": [
+    "BS-648c502ee6abb901"
+   ]
+  },
+  {
+   "band_id": "WB-a5eb2299f0df9952",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "459",
+    "460"
+   ],
+   "width_mm": 200.0,
+   "length_mm": 3350.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      15689.719614,
+      16024.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-3419faa1ad2c4530"
+   ]
+  },
+  {
+   "band_id": "WB-a6bfcc9dc374e089",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "545",
+    "549"
+   ],
+   "width_mm": 150.0,
+   "length_mm": 150.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      14494.719614,
+      14509.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-12581ad1b9fe9fe3"
+   ]
+  },
+  {
+   "band_id": "WB-aac773e14c3e8e42",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "574",
+    "584"
+   ],
+   "width_mm": 1800.0,
+   "length_mm": 150.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      110738.081745,
+      110753.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "CAPPED"
+   ],
+   "spans": [
+    "BS-70bc844d5c3d5765"
+   ]
+  },
+  {
+   "band_id": "WB-acd8c186eb268434",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "520",
+    "522"
+   ],
+   "width_mm": 150.0,
+   "length_mm": 300.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      109538.081745,
+      109568.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-5d8bd58e443dc3a8"
+   ]
+  },
+  {
+   "band_id": "WB-b38a90a0b3d5fd31",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "459",
+    "469"
+   ],
+   "width_mm": 200.0,
+   "length_mm": 2250.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      14619.719614,
+      14679.719614
+     ],
+     "by": []
+    },
+    {
+     "class": "AMBIGUOUS_CENTRELINE",
+     "role": null,
+     "s": [
+      14679.719614,
+      14813.948318
+     ],
+     "by": []
+    },
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      14813.948318,
+      14844.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": [
+    "BS-bfc2d5d8b6593baa",
+    "BS-316de015f8069fbd"
+   ]
+  },
+  {
+   "band_id": "WB-c0a9540a50bd5415",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "451",
+    "452"
+   ],
+   "width_mm": 200.0,
+   "length_mm": 1531.4,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      88936.013933,
+      89089.151018
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-645df065c8012a35"
+   ]
+  },
+  {
+   "band_id": "WB-c7690fd10992942c",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "465",
+    "467"
+   ],
+   "width_mm": 150.0,
+   "length_mm": 800.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      14949.719614,
+      15029.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "OPENING_JAMB",
+    "RECEIVING_FACE_JUNCTION"
+   ],
+   "spans": [
+    "BS-a33d2eaae7f7b34a"
+   ]
+  },
+  {
+   "band_id": "WB-c7921188bf942ae2",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "453",
+    "515"
+   ],
+   "width_mm": 200.0,
+   "length_mm": 8617.2,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      110383.081745,
+      111244.797474
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "RECEIVING_FACE_JUNCTION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-a24afee671985cce"
+   ]
+  },
+  {
+   "band_id": "WB-c8ca17bf288f4b85",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "459",
+    "462"
+   ],
+   "width_mm": 200.0,
+   "length_mm": 1000.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      15474.719614,
+      15574.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-a9357e5f36ea5ca9"
+   ]
+  },
+  {
+   "band_id": "WB-c9884a2e59228bb0",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "2060",
+    "2060"
+   ],
+   "width_mm": 400.0,
+   "length_mm": 100.0,
+   "intervals": [
+    {
+     "class": "AMBIGUOUS_PAIRED_BOTH_SIDES",
+     "role": null,
+     "s": [
+      109908.081745,
+      109918.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": []
+  },
+  {
+   "band_id": "WB-c9884a2e59228bb0",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "2060",
+    "2060"
+   ],
+   "width_mm": 400.0,
+   "length_mm": 100.0,
+   "intervals": [
+    {
+     "class": "AMBIGUOUS_PAIRED_BOTH_SIDES",
+     "role": null,
+     "s": [
+      109908.081745,
+      109918.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": []
+  },
+  {
+   "band_id": "WB-c9884a2e59228bb0",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "2060"
+   ],
+   "width_mm": 400.0,
+   "length_mm": 100.0,
+   "intervals": [
+    {
+     "class": "AMBIGUOUS_PAIRED_BOTH_SIDES",
+     "role": null,
+     "s": [
+      109908.081745,
+      109918.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": []
+  },
+  {
+   "band_id": "WB-c9884a2e59228bb0",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "2060"
+   ],
+   "width_mm": 400.0,
+   "length_mm": 100.0,
+   "intervals": [
+    {
+     "class": "AMBIGUOUS_PAIRED_BOTH_SIDES",
+     "role": null,
+     "s": [
+      109908.081745,
+      109918.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": []
+  },
+  {
+   "band_id": "WB-c99307b1c8ed3f07",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "815",
+    "816"
+   ],
+   "width_mm": 150.0,
+   "length_mm": 450.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      109943.081745,
+      109988.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-3165660dff8709fa"
+   ]
+  },
+  {
+   "band_id": "WB-cb47b111ce085291",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "583",
+    "584"
+   ],
+   "width_mm": 150.0,
+   "length_mm": 2000.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      110538.081745,
+      110738.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "RECEIVING_FACE_JUNCTION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-d77405b32d832604"
+   ]
+  },
+  {
+   "band_id": "WB-ce82d49047cbdb8b",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "444",
+    "449",
+    "504"
+   ],
+   "width_mm": 200.0,
+   "length_mm": 7067.2,
+   "intervals": [
+    {
+     "class": "OBSTACLE_OVERLAP",
+     "role": "STRUCTURAL_OBSTACLE",
+     "s": [
+      110538.081745,
+      110583.081745
+     ],
+     "by": [
+      "702"
+     ]
+    },
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      110583.081745,
+      111244.797474
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-db44f6bfff04cd4c"
+   ]
+  },
+  {
+   "band_id": "WB-cf0848874f460155",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "513",
+    "817"
+   ],
+   "width_mm": 150.0,
+   "length_mm": 1900.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      14909.719614,
+      15099.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-270d468e8d226627"
+   ]
+  },
+  {
+   "band_id": "WB-d570f17f1e69683c",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "546",
+    "549"
+   ],
+   "width_mm": 150.0,
+   "length_mm": 5700.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      14529.719614,
+      15054.719614
+     ],
+     "by": []
+    },
+    {
+     "class": "OBSTACLE_OVERLAP",
+     "role": "STRUCTURAL_OBSTACLE",
+     "s": [
+      15054.719614,
+      15099.719614
+     ],
+     "by": [
+      "704"
+     ]
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-73f5143ee55f1754"
+   ]
+  },
+  {
+   "band_id": "WB-d58676287b80b534",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "1547",
+    "1548"
+   ],
+   "width_mm": 700.0,
+   "length_mm": 1900.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      109988.081745,
+      110178.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-6de0e1d4eab0550d"
+   ]
+  },
+  {
+   "band_id": "WB-dade28305c185313",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "444",
+    "489"
+   ],
+   "width_mm": 200.0,
+   "length_mm": 2900.0,
+   "intervals": [
+    {
+     "class": "OBSTACLE_OVERLAP",
+     "role": "STRUCTURAL_OBSTACLE",
+     "s": [
+      110233.081745,
+      110278.081745
+     ],
+     "by": [
+      "699"
+     ]
+    },
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      110278.081745,
+      110523.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-d70e61e2374809a2"
+   ]
+  },
+  {
+   "band_id": "WB-e7b788bdc3a7bc85",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "535",
+    "543"
+   ],
+   "width_mm": 150.0,
+   "length_mm": 600.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      15049.719614,
+      15109.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "RECEIVING_FACE_JUNCTION",
+    "OPENING_JAMB"
+   ],
+   "spans": [
+    "BS-1737355ce3cd0603"
+   ]
+  },
+  {
+   "band_id": "WB-ff95e5482a85c53d",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "506",
+    "512"
+   ],
+   "width_mm": 200.0,
+   "length_mm": 4350.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      15589.719614,
+      15669.978591
+     ],
+     "by": []
+    },
+    {
+     "class": "AMBIGUOUS_CENTRELINE",
+     "role": null,
+     "s": [
+      15669.978591,
+      15919.978591
+     ],
+     "by": []
+    },
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      15919.978591,
+      16024.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": [
+    "BS-4b56421f7f3f7bb0",
+    "BS-97bd5f12696d79c0"
+   ]
+  }
+ ],
+ "counts": {
+  "NEW_K2": {
+   "WALL_BAND_AMBIGUOUS": 27,
+   "WALL_BAND_ESTABLISHED": 49
+  },
+  "OLD_K1": {
+   "WALL_BAND_ESTABLISHED": 50,
+   "WALL_BAND_AMBIGUOUS": 26
+  }
+ },
+ "means": "TOPOLOGY_OBSTACLE_GEOMETRY - no wall length, thickness authority, masonry, plaster, paint or skirting",
+ "finding_V3_D2": "elongation is tested on the raw CHAIN overlap; one pair (574 / 584, 1.80 m apart) is locally mutual-nearest over only 150 mm and still forms a 'band' in an unlabelled site outside the apartment, with a false 6.0 m passage record. No closure, no row. Fix in R8.13: test elongation on the LOCAL RUN (spans + overlaps + nodes) - NOT inside the frozen V3",
+ "wide_bands": [
+  {
+   "band_id": "WB-799051cb6aa8ec60",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "2060",
+    "2060"
+   ],
+   "width_mm": 400.0,
+   "length_mm": 100.0,
+   "intervals": [
+    {
+     "class": "AMBIGUOUS_PAIRED_BOTH_SIDES",
+     "role": null,
+     "s": [
+      109828.172762,
+      109838.172762
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": []
+  },
+  {
+   "band_id": "WB-799051cb6aa8ec60",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "2060",
+    "2060"
+   ],
+   "width_mm": 400.0,
+   "length_mm": 100.0,
+   "intervals": [
+    {
+     "class": "AMBIGUOUS_PAIRED_BOTH_SIDES",
+     "role": null,
+     "s": [
+      109828.172762,
+      109838.172762
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": []
+  },
+  {
+   "band_id": "WB-799051cb6aa8ec60",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "2060"
+   ],
+   "width_mm": 400.0,
+   "length_mm": 100.0,
+   "intervals": [
+    {
+     "class": "AMBIGUOUS_PAIRED_BOTH_SIDES",
+     "role": null,
+     "s": [
+      109828.172762,
+      109838.172762
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": []
+  },
+  {
+   "band_id": "WB-799051cb6aa8ec60",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "2060"
+   ],
+   "width_mm": 400.0,
+   "length_mm": 100.0,
+   "intervals": [
+    {
+     "class": "AMBIGUOUS_PAIRED_BOTH_SIDES",
+     "role": null,
+     "s": [
+      109828.172762,
+      109838.172762
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": []
+  },
+  {
+   "band_id": "WB-9fc19b0b33989811",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "2060",
+    "2060"
+   ],
+   "width_mm": 400.0,
+   "length_mm": 100.0,
+   "intervals": [
+    {
+     "class": "AMBIGUOUS_PAIRED_BOTH_SIDES",
+     "role": null,
+     "s": [
+      110028.172762,
+      110038.172762
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": []
+  },
+  {
+   "band_id": "WB-9fc19b0b33989811",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "2060",
+    "2060"
+   ],
+   "width_mm": 400.0,
+   "length_mm": 100.0,
+   "intervals": [
+    {
+     "class": "AMBIGUOUS_PAIRED_BOTH_SIDES",
+     "role": null,
+     "s": [
+      110028.172762,
+      110038.172762
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": []
+  },
+  {
+   "band_id": "WB-9fc19b0b33989811",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "2060"
+   ],
+   "width_mm": 400.0,
+   "length_mm": 100.0,
+   "intervals": [
+    {
+     "class": "AMBIGUOUS_PAIRED_BOTH_SIDES",
+     "role": null,
+     "s": [
+      110028.172762,
+      110038.172762
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": []
+  },
+  {
+   "band_id": "WB-9fc19b0b33989811",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "faces": [
+    "2060"
+   ],
+   "width_mm": 400.0,
+   "length_mm": 100.0,
+   "intervals": [
+    {
+     "class": "AMBIGUOUS_PAIRED_BOTH_SIDES",
+     "role": null,
+     "s": [
+      110028.172762,
+      110038.172762
+     ],
+     "by": []
+    }
+   ],
+   "ends": [],
+   "spans": []
+  },
+  {
+   "band_id": "WB-a5ba73aea84116cd",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "1672",
+    "459"
+   ],
+   "width_mm": 550.0,
+   "length_mm": 650.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      14494.719614,
+      14559.719614
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "JUNCTION_OR_CONTINUATION"
+   ],
+   "spans": [
+    "BS-f23974e3cec0b2de"
+   ]
+  },
+  {
+   "band_id": "WB-eeb4fc032cff8699",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "574",
+    "584"
+   ],
+   "width_mm": 1800.0,
+   "length_mm": 150.0,
+   "intervals": [
+    {
+     "class": "WALL_BAND_SPAN",
+     "role": null,
+     "s": [
+      110738.081745,
+      110753.081745
+     ],
+     "by": []
+    }
+   ],
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "CAPPED"
+   ],
+   "spans": [
+    "BS-2926201caee0caa5"
+   ]
+  }
+ ]
+}

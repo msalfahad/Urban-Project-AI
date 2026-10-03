@@ -1,0 +1,124 @@
+{
+ "SCHEMA": "URBAN_R8_19_PAINT_REGISTER_V1",
+ "floor": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+ "DRY_WALL_PAINT": {
+  "state": "COMPUTED_SHADOW_COMPLETE",
+  "trade": "PAINT",
+  "room_classes": [
+   "DRY_INTERNAL_ROOM"
+  ],
+  "unit": "m2",
+  "AUTHORISED_SUBTOTAL_M2": 307.361518,
+  "COMPLETE_M2": 307.361518,
+  "FINAL": null,
+  "per_floor": {
+   "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)": {
+    "COMPLETE_M2": 307.361518,
+    "rooms": [
+     "SITE-5f1762f1a93b91ca",
+     "SITE-77a2130eb275604c",
+     "SITE-a6405850100155ac",
+     "SITE-daca396d6d730e60"
+    ]
+   }
+  },
+  "per_room": {
+   "SITE-5f1762f1a93b91ca": {
+    "zones": [
+     "BED.ROOM"
+    ],
+    "class": "DRY_INTERNAL_ROOM",
+    "height_m": 3.15,
+    "height_authority": "QORTUBA-NEW-DRY-WALL-FINISH-HEIGHT-OWNER-001@v1",
+    "wall_plane_m2": 53.006962,
+    "column_face_m2": 2.52,
+    "obstacle_face_m2": 15.75,
+    "jamb_reveals_m2": 0.75,
+    "head_reveals_m2": 0.30134,
+    "total_m2": 72.328302,
+    "surfaces": 22,
+    "floor": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)"
+   },
+   "SITE-77a2130eb275604c": {
+    "zones": [
+     "HALL",
+     "whgm"
+    ],
+    "class": "DRY_INTERNAL_ROOM",
+    "height_m": 3.15,
+    "height_authority": "QORTUBA-NEW-DRY-WALL-FINISH-HEIGHT-OWNER-001@v1",
+    "wall_plane_m2": 85.773468,
+    "column_face_m2": 2.0475,
+    "obstacle_face_m2": 0.0,
+    "jamb_reveals_m2": 4.93,
+    "head_reveals_m2": 1.5159,
+    "total_m2": 94.266868,
+    "surfaces": 61,
+    "floor": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)"
+   },
+   "SITE-a6405850100155ac": {
+    "zones": [
+     "DRESS",
+     "M.B.ROOM"
+    ],
+    "class": "DRY_INTERNAL_ROOM",
+    "height_m": 3.15,
+    "height_authority": "QORTUBA-NEW-DRY-WALL-FINISH-HEIGHT-OWNER-001@v1",
+    "wall_plane_m2": 84.086227,
+    "column_face_m2": 3.78,
+    "obstacle_face_m2": 0.0,
+    "jamb_reveals_m2": 2.6325,
+    "head_reveals_m2": 1.169379,
+    "total_m2": 91.668106,
+    "surfaces": 37,
+    "floor": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)"
+   },
+   "SITE-daca396d6d730e60": {
+    "zones": [
+     "BED.ROOM"
+    ],
+    "class": "DRY_INTERNAL_ROOM",
+    "height_m": 3.15,
+    "height_authority": "QORTUBA-NEW-DRY-WALL-FINISH-HEIGHT-OWNER-001@v1",
+    "wall_plane_m2": 45.49267,
+    "column_face_m2": 2.52,
+    "obstacle_face_m2": 0.0,
+    "jamb_reveals_m2": 0.75,
+    "head_reveals_m2": 0.335572,
+    "total_m2": 49.098242,
+    "surfaces": 16,
+    "floor": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)"
+   }
+  },
+  "reconciliation": {
+   "sum_of_rooms_m2": 307.361518,
+   "row_m2": 307.361518,
+   "reconciles": true
+  },
+  "surfaces": 136,
+  "surface_ids_sha256": "f2afe8464c2d9d08714d317afa81acf3d4775184943ff9a63aa5241ffcb9b7b8",
+  "by_kind_m2": {
+   "WALL_PLANE": 268.359327,
+   "OBJECT_FACE": 26.6175,
+   "REVEAL": 12.384691
+  },
+  "unresolved_contributors": [],
+  "blocked_rooms": [],
+  "release_blockers": [
+   "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+   "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+  ],
+  "height_m": 3.15,
+  "height_authority": "QORTUBA-NEW-DRY-WALL-FINISH-HEIGHT-OWNER-001@v1"
+ },
+ "vs_dry_plaster": {
+  "same_surface_set": true,
+  "only_plaster": [],
+  "only_paint": [],
+  "surfaces": 135,
+  "paint_m2": 307.361518,
+  "dry_plaster_m2": 307.361518,
+  "why": "the SAME surface records (identity set) carry PLASTER and PAINT in every dry room: wall plane, exposed columns, the duct and dry-owned PLASTER_AND_PAINT reveals; the wet / service plaster-only reveals carry no paint"
+ },
+ "paintry": "NO PAINT (QP-07 full wall tile)"
+}

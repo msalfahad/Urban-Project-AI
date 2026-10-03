@@ -1,0 +1,94 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_A3_WET_ROOMS_V1",
+ "rooms": [
+  {
+   "floor": "GF",
+   "room": "W.C",
+   "status": "BLOCKED",
+   "wet_semantics": "WET_LABEL_ONLY",
+   "fixture_symbols_in_site": 0,
+   "floor_area_m2": null
+  },
+  {
+   "floor": "GF",
+   "room": "DEWANEYA / Wash",
+   "status": "BLOCKED",
+   "wet_semantics": "WET_CORROBORATED (wet label + fixture symbol inside the site)",
+   "fixture_symbols_in_site": 5,
+   "floor_area_m2": null
+  },
+  {
+   "floor": "GF",
+   "room": "KITCHEN",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "wet_semantics": "WET_CORROBORATED (wet label + fixture symbol inside the site)",
+   "fixture_symbols_in_site": 7,
+   "floor_area_m2": 9.63
+  },
+  {
+   "floor": "GF",
+   "room": "W.C",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "wet_semantics": "WET_CORROBORATED (wet label + fixture symbol inside the site)",
+   "fixture_symbols_in_site": 1,
+   "floor_area_m2": 2.675221
+  },
+  {
+   "floor": "GF",
+   "room": "W.C",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "wet_semantics": "WET_CORROBORATED (wet label + fixture symbol inside the site)",
+   "fixture_symbols_in_site": 1,
+   "floor_area_m2": 1.95
+  },
+  {
+   "floor": "GF",
+   "room": "W.C",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "wet_semantics": "WET_LABEL_ONLY",
+   "fixture_symbols_in_site": 0,
+   "floor_area_m2": 2.3625
+  },
+  {
+   "floor": "GF",
+   "room": "W.C",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "wet_semantics": "WET_CORROBORATED (wet label + fixture symbol inside the site)",
+   "fixture_symbols_in_site": 1,
+   "floor_area_m2": 3.375
+  },
+  {
+   "floor": "1F",
+   "room": "BATH",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "wet_semantics": "WET_LABEL_ONLY",
+   "fixture_symbols_in_site": 0,
+   "floor_area_m2": 5.0225
+  },
+  {
+   "floor": "1F",
+   "room": "BATH",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "wet_semantics": "WET_LABEL_ONLY",
+   "fixture_symbols_in_site": 0,
+   "floor_area_m2": 4.725
+  },
+  {
+   "floor": "1F",
+   "room": "VOID / LAUNDRY / MASTER BED ROOM",
+   "status": "BLOCKED",
+   "wet_semantics": "WET_CORROBORATED (wet label + fixture symbol inside the site)",
+   "fixture_symbols_in_site": 11,
+   "floor_area_m2": null
+  },
+  {
+   "floor": "1F",
+   "room": "BATH",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "wet_semantics": "WET_LABEL_ONLY",
+   "fixture_symbols_in_site": 0,
+   "floor_area_m2": 3.5775
+  }
+ ],
+ "rule": "wet = wet label AND a fixture symbol in the certified site; sanitary PDF is supporting only; membrane BLOCKED_MATERIAL"
+}

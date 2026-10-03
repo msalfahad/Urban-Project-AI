@@ -1,0 +1,1009 @@
+{
+ "SCHEMA": "URBAN_R8_6_ROUND1_CAPABILITY_SIGNATURES_V1",
+ "source_sha256": "2ec3a9c8b66eb2e129275b87010f4a8d79d7e5bdcc31c1897c14fd7e5647d355",
+ "required": [
+  {
+   "signature": "KIND=LINE|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+   "entity_kind": "LINE",
+   "curve_class": "STRAIGHT_SEGMENT",
+   "transform_chain": "DEFAULT_FRAME",
+   "reflection_orientation": "NET_DIRECT",
+   "block_depth": 0,
+   "ocs_extrusion": "DEFAULT",
+   "context": "-",
+   "visibility": "VISIBLE",
+   "handle_representation": "H12",
+   "source_count": 250,
+   "round1_occurrence_count": 91,
+   "round1_occurrences": [
+    [
+     "D1:447",
+     []
+    ],
+    [
+     "D1:454",
+     []
+    ],
+    [
+     "D1:457",
+     []
+    ],
+    [
+     "D1:458",
+     []
+    ],
+    [
+     "D1:460",
+     []
+    ],
+    [
+     "D1:461",
+     []
+    ],
+    [
+     "D1:462",
+     []
+    ],
+    [
+     "D1:463",
+     []
+    ],
+    [
+     "D1:464",
+     []
+    ],
+    [
+     "D1:465",
+     []
+    ],
+    [
+     "D1:466",
+     []
+    ],
+    [
+     "D1:467",
+     []
+    ],
+    [
+     "D1:468",
+     []
+    ],
+    [
+     "D1:469",
+     []
+    ],
+    [
+     "D1:470",
+     []
+    ],
+    [
+     "D1:471",
+     []
+    ],
+    [
+     "D1:472",
+     []
+    ],
+    [
+     "D1:473",
+     []
+    ],
+    [
+     "D1:474",
+     []
+    ],
+    [
+     "D1:475",
+     []
+    ],
+    [
+     "D1:476",
+     []
+    ],
+    [
+     "D1:477",
+     []
+    ],
+    [
+     "D1:478",
+     []
+    ],
+    [
+     "D1:480",
+     []
+    ],
+    [
+     "D1:481",
+     []
+    ],
+    [
+     "D1:483",
+     []
+    ],
+    [
+     "D1:484",
+     []
+    ],
+    [
+     "D1:485",
+     []
+    ],
+    [
+     "D1:486",
+     []
+    ],
+    [
+     "D1:487",
+     []
+    ],
+    [
+     "D1:488",
+     []
+    ],
+    [
+     "D1:510",
+     []
+    ],
+    [
+     "D1:512",
+     []
+    ],
+    [
+     "D1:513",
+     []
+    ],
+    [
+     "D1:514",
+     []
+    ],
+    [
+     "D1:516",
+     []
+    ],
+    [
+     "D1:517",
+     []
+    ],
+    [
+     "D1:518",
+     []
+    ],
+    [
+     "D1:519",
+     []
+    ],
+    [
+     "D1:520",
+     []
+    ],
+    [
+     "D1:521",
+     []
+    ],
+    [
+     "D1:522",
+     []
+    ],
+    [
+     "D1:523",
+     []
+    ],
+    [
+     "D1:525",
+     []
+    ],
+    [
+     "D1:526",
+     []
+    ],
+    [
+     "D1:527",
+     []
+    ],
+    [
+     "D1:528",
+     []
+    ],
+    [
+     "D1:529",
+     []
+    ],
+    [
+     "D1:530",
+     []
+    ],
+    [
+     "D1:531",
+     []
+    ],
+    [
+     "D1:535",
+     []
+    ],
+    [
+     "D1:537",
+     []
+    ],
+    [
+     "D1:538",
+     []
+    ],
+    [
+     "D1:539",
+     []
+    ],
+    [
+     "D1:540",
+     []
+    ],
+    [
+     "D1:542",
+     []
+    ],
+    [
+     "D1:543",
+     []
+    ],
+    [
+     "D1:549",
+     []
+    ],
+    [
+     "D1:550",
+     []
+    ],
+    [
+     "D1:552",
+     []
+    ],
+    [
+     "D1:554",
+     []
+    ],
+    [
+     "D1:555",
+     []
+    ],
+    [
+     "D1:577",
+     []
+    ],
+    [
+     "D1:578",
+     []
+    ],
+    [
+     "D1:815",
+     []
+    ],
+    [
+     "D1:816",
+     []
+    ],
+    [
+     "D1:817",
+     []
+    ],
+    [
+     "D1:1020",
+     []
+    ],
+    [
+     "D1:1026",
+     []
+    ],
+    [
+     "D1:1271",
+     []
+    ],
+    [
+     "D1:1325",
+     []
+    ],
+    [
+     "D1:1342",
+     []
+    ],
+    [
+     "D1:1512",
+     []
+    ],
+    [
+     "D1:1518",
+     []
+    ],
+    [
+     "D1:1547",
+     []
+    ],
+    [
+     "D1:1587",
+     []
+    ],
+    [
+     "D1:1588",
+     []
+    ],
+    [
+     "D1:1590",
+     []
+    ],
+    [
+     "D1:1669",
+     []
+    ],
+    [
+     "D1:1671",
+     []
+    ],
+    [
+     "D1:1672",
+     []
+    ],
+    [
+     "D1:1673",
+     []
+    ],
+    [
+     "D1:1674",
+     []
+    ],
+    [
+     "D1:1675",
+     []
+    ],
+    [
+     "D1:1676",
+     []
+    ],
+    [
+     "D1:1677",
+     []
+    ],
+    [
+     "D1:1892",
+     []
+    ],
+    [
+     "D1:1893",
+     []
+    ],
+    [
+     "D1:1895",
+     []
+    ],
+    [
+     "D1:1947",
+     []
+    ],
+    [
+     "D1:1948",
+     []
+    ]
+   ],
+   "blocks": [],
+   "rows_using_it": [
+    "Q-03",
+    "Q-03P",
+    "Q-11",
+    "Q-12",
+    "Q-13",
+    "Q-14"
+   ],
+   "QUALIFIED": "NO",
+   "qualified_when": "EXERCISED_AND_PASS on every compared occurrence against an ADMITTED independent export; no equivalence rule admitted (EQUIVALENCE_RULES = ())"
+  },
+  {
+   "signature": "KIND=LINE|CHAIN=REFLECTION+ROTATION+TRANSLATION+UNIFORM_SCALE|NET=NET_REFLECTED|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+   "entity_kind": "LINE",
+   "curve_class": "STRAIGHT_SEGMENT",
+   "transform_chain": "REFLECTION+ROTATION+TRANSLATION+UNIFORM_SCALE",
+   "reflection_orientation": "NET_REFLECTED",
+   "block_depth": 1,
+   "ocs_extrusion": "DEFAULT",
+   "context": "-",
+   "visibility": "VISIBLE",
+   "handle_representation": "H12",
+   "source_count": 56,
+   "round1_occurrence_count": 14,
+   "round1_occurrences": [
+    [
+     "D1:681",
+     [
+      "D1:1443"
+     ]
+    ],
+    [
+     "D1:681",
+     [
+      "D1:1561"
+     ]
+    ],
+    [
+     "D1:681",
+     [
+      "D1:1988"
+     ]
+    ],
+    [
+     "D1:681",
+     [
+      "D1:2044"
+     ]
+    ],
+    [
+     "D1:685",
+     [
+      "D1:1443"
+     ]
+    ],
+    [
+     "D1:685",
+     [
+      "D1:1561"
+     ]
+    ],
+    [
+     "D1:685",
+     [
+      "D1:1988"
+     ]
+    ],
+    [
+     "D1:685",
+     [
+      "D1:2044"
+     ]
+    ],
+    [
+     "D1:686",
+     [
+      "D1:1443"
+     ]
+    ],
+    [
+     "D1:686",
+     [
+      "D1:1561"
+     ]
+    ],
+    [
+     "D1:686",
+     [
+      "D1:1988"
+     ]
+    ],
+    [
+     "D1:686",
+     [
+      "D1:2044"
+     ]
+    ],
+    [
+     "D1:693",
+     [
+      "D1:1988"
+     ]
+    ],
+    [
+     "D1:694",
+     [
+      "D1:1988"
+     ]
+    ]
+   ],
+   "blocks": [
+    "6"
+   ],
+   "rows_using_it": [
+    "Q-03",
+    "Q-11",
+    "Q-13",
+    "Q-14"
+   ],
+   "QUALIFIED": "NO",
+   "qualified_when": "EXERCISED_AND_PASS on every compared occurrence against an ADMITTED independent export; no equivalence rule admitted (EQUIVALENCE_RULES = ())"
+  },
+  {
+   "signature": "KIND=LINE|CHAIN=REFLECTION+ROTATION+TRANSLATION|NET=NET_REFLECTED|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+   "entity_kind": "LINE",
+   "curve_class": "STRAIGHT_SEGMENT",
+   "transform_chain": "REFLECTION+ROTATION+TRANSLATION",
+   "reflection_orientation": "NET_REFLECTED",
+   "block_depth": 1,
+   "ocs_extrusion": "DEFAULT",
+   "context": "-",
+   "visibility": "VISIBLE",
+   "handle_representation": "H12",
+   "source_count": 15,
+   "round1_occurrence_count": 4,
+   "round1_occurrences": [
+    [
+     "D1:1651",
+     [
+      "D1:1664"
+     ]
+    ],
+    [
+     "D1:1651",
+     [
+      "D1:1665"
+     ]
+    ],
+    [
+     "D1:1651",
+     [
+      "D1:1667"
+     ]
+    ],
+    [
+     "D1:1659",
+     [
+      "D1:1665"
+     ]
+    ]
+   ],
+   "blocks": [
+    "A$C27533508"
+   ],
+   "rows_using_it": [
+    "Q-13",
+    "Q-14"
+   ],
+   "QUALIFIED": "NO",
+   "qualified_when": "EXERCISED_AND_PASS on every compared occurrence against an ADMITTED independent export; no equivalence rule admitted (EQUIVALENCE_RULES = ())"
+  },
+  {
+   "signature": "KIND=LINE|CHAIN=REFLECTION+TRANSLATION+UNIFORM_SCALE|NET=NET_REFLECTED|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+   "entity_kind": "LINE",
+   "curve_class": "STRAIGHT_SEGMENT",
+   "transform_chain": "REFLECTION+TRANSLATION+UNIFORM_SCALE",
+   "reflection_orientation": "NET_REFLECTED",
+   "block_depth": 1,
+   "ocs_extrusion": "DEFAULT",
+   "context": "-",
+   "visibility": "VISIBLE",
+   "handle_representation": "H12",
+   "source_count": 28,
+   "round1_occurrence_count": 7,
+   "round1_occurrences": [
+    [
+     "D1:681",
+     [
+      "D1:1028"
+     ]
+    ],
+    [
+     "D1:681",
+     [
+      "D1:1471"
+     ]
+    ],
+    [
+     "D1:685",
+     [
+      "D1:1028"
+     ]
+    ],
+    [
+     "D1:686",
+     [
+      "D1:1028"
+     ]
+    ],
+    [
+     "D1:686",
+     [
+      "D1:1471"
+     ]
+    ],
+    [
+     "D1:693",
+     [
+      "D1:1471"
+     ]
+    ],
+    [
+     "D1:694",
+     [
+      "D1:1471"
+     ]
+    ]
+   ],
+   "blocks": [
+    "6"
+   ],
+   "rows_using_it": [
+    "Q-13",
+    "Q-14"
+   ],
+   "QUALIFIED": "NO",
+   "qualified_when": "EXERCISED_AND_PASS on every compared occurrence against an ADMITTED independent export; no equivalence rule admitted (EQUIVALENCE_RULES = ())"
+  },
+  {
+   "signature": "KIND=LINE|CHAIN=ROTATION+TRANSLATION+UNIFORM_SCALE|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+   "entity_kind": "LINE",
+   "curve_class": "STRAIGHT_SEGMENT",
+   "transform_chain": "ROTATION+TRANSLATION+UNIFORM_SCALE",
+   "reflection_orientation": "NET_DIRECT",
+   "block_depth": 1,
+   "ocs_extrusion": "DEFAULT",
+   "context": "-",
+   "visibility": "VISIBLE",
+   "handle_representation": "H12",
+   "source_count": 14,
+   "round1_occurrence_count": 5,
+   "round1_occurrences": [
+    [
+     "D1:681",
+     [
+      "D1:841"
+     ]
+    ],
+    [
+     "D1:685",
+     [
+      "D1:841"
+     ]
+    ],
+    [
+     "D1:686",
+     [
+      "D1:841"
+     ]
+    ],
+    [
+     "D1:693",
+     [
+      "D1:841"
+     ]
+    ],
+    [
+     "D1:694",
+     [
+      "D1:841"
+     ]
+    ]
+   ],
+   "blocks": [
+    "6"
+   ],
+   "rows_using_it": [
+    "Q-13",
+    "Q-14"
+   ],
+   "QUALIFIED": "NO",
+   "qualified_when": "EXERCISED_AND_PASS on every compared occurrence against an ADMITTED independent export; no equivalence rule admitted (EQUIVALENCE_RULES = ())"
+  },
+  {
+   "signature": "KIND=LINE|CHAIN=ROTATION+TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+   "entity_kind": "LINE",
+   "curve_class": "STRAIGHT_SEGMENT",
+   "transform_chain": "ROTATION+TRANSLATION",
+   "reflection_orientation": "NET_DIRECT",
+   "block_depth": 1,
+   "ocs_extrusion": "DEFAULT",
+   "context": "-",
+   "visibility": "VISIBLE",
+   "handle_representation": "H12",
+   "source_count": 10,
+   "round1_occurrence_count": 3,
+   "round1_occurrences": [
+    [
+     "D1:1651",
+     [
+      "D1:1641"
+     ]
+    ],
+    [
+     "D1:1651",
+     [
+      "D1:1666"
+     ]
+    ],
+    [
+     "D1:1659",
+     [
+      "D1:1666"
+     ]
+    ]
+   ],
+   "blocks": [
+    "A$C27533508"
+   ],
+   "rows_using_it": [
+    "Q-13",
+    "Q-14"
+   ],
+   "QUALIFIED": "NO",
+   "qualified_when": "EXERCISED_AND_PASS on every compared occurrence against an ADMITTED independent export; no equivalence rule admitted (EQUIVALENCE_RULES = ())"
+  },
+  {
+   "signature": "KIND=LINE|CHAIN=TRANSLATION+UNIFORM_SCALE|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+   "entity_kind": "LINE",
+   "curve_class": "STRAIGHT_SEGMENT",
+   "transform_chain": "TRANSLATION+UNIFORM_SCALE",
+   "reflection_orientation": "NET_DIRECT",
+   "block_depth": 1,
+   "ocs_extrusion": "DEFAULT",
+   "context": "-",
+   "visibility": "VISIBLE",
+   "handle_representation": "H12",
+   "source_count": 14,
+   "round1_occurrence_count": 5,
+   "round1_occurrences": [
+    [
+     "D1:681",
+     [
+      "D1:677"
+     ]
+    ],
+    [
+     "D1:685",
+     [
+      "D1:677"
+     ]
+    ],
+    [
+     "D1:686",
+     [
+      "D1:677"
+     ]
+    ],
+    [
+     "D1:693",
+     [
+      "D1:677"
+     ]
+    ],
+    [
+     "D1:694",
+     [
+      "D1:677"
+     ]
+    ]
+   ],
+   "blocks": [
+    "6"
+   ],
+   "rows_using_it": [
+    "Q-13",
+    "Q-14"
+   ],
+   "QUALIFIED": "NO",
+   "qualified_when": "EXERCISED_AND_PASS on every compared occurrence against an ADMITTED independent export; no equivalence rule admitted (EQUIVALENCE_RULES = ())"
+  },
+  {
+   "signature": "KIND=LINE|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+   "entity_kind": "LINE",
+   "curve_class": "STRAIGHT_SEGMENT",
+   "transform_chain": "TRANSLATION",
+   "reflection_orientation": "NET_DIRECT",
+   "block_depth": 1,
+   "ocs_extrusion": "DEFAULT",
+   "context": "-",
+   "visibility": "VISIBLE",
+   "handle_representation": "H12",
+   "source_count": 5,
+   "round1_occurrence_count": 2,
+   "round1_occurrences": [
+    [
+     "D1:1651",
+     [
+      "D1:1668"
+     ]
+    ],
+    [
+     "D1:1659",
+     [
+      "D1:1668"
+     ]
+    ]
+   ],
+   "blocks": [
+    "A$C27533508"
+   ],
+   "rows_using_it": [
+    "Q-03P",
+    "Q-12",
+    "Q-13",
+    "Q-14"
+   ],
+   "QUALIFIED": "NO",
+   "qualified_when": "EXERCISED_AND_PASS on every compared occurrence against an ADMITTED independent export; no equivalence rule admitted (EQUIVALENCE_RULES = ())"
+  },
+  {
+   "signature": "KIND=LWPOLYLINE_BULGE|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+   "entity_kind": "LWPOLYLINE_BULGE",
+   "curve_class": "POLYLINE_WITH_BULGE_ARCS",
+   "transform_chain": "DEFAULT_FRAME",
+   "reflection_orientation": "NET_DIRECT",
+   "block_depth": 0,
+   "ocs_extrusion": "DEFAULT",
+   "context": "-",
+   "visibility": "VISIBLE",
+   "handle_representation": "H12",
+   "source_count": 20,
+   "round1_occurrence_count": 1,
+   "round1_occurrences": [
+    [
+     "D1:1663",
+     []
+    ]
+   ],
+   "blocks": [],
+   "rows_using_it": [
+    "Q-13",
+    "Q-14"
+   ],
+   "QUALIFIED": "NO",
+   "qualified_when": "EXERCISED_AND_PASS on every compared occurrence against an ADMITTED independent export; no equivalence rule admitted (EQUIVALENCE_RULES = ())"
+  },
+  {
+   "signature": "KIND=LWPOLYLINE_STRAIGHT|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+   "entity_kind": "LWPOLYLINE_STRAIGHT",
+   "curve_class": "POLYLINE_STRAIGHT_SPANS",
+   "transform_chain": "DEFAULT_FRAME",
+   "reflection_orientation": "NET_DIRECT",
+   "block_depth": 0,
+   "ocs_extrusion": "DEFAULT",
+   "context": "-",
+   "visibility": "VISIBLE",
+   "handle_representation": "H12",
+   "source_count": 83,
+   "round1_occurrence_count": 9,
+   "round1_occurrences": [
+    [
+     "D1:704",
+     []
+    ],
+    [
+     "D1:706",
+     []
+    ],
+    [
+     "D1:708",
+     []
+    ],
+    [
+     "D1:712",
+     []
+    ],
+    [
+     "D1:714",
+     []
+    ],
+    [
+     "D1:716",
+     []
+    ],
+    [
+     "D1:718",
+     []
+    ],
+    [
+     "D1:720",
+     []
+    ],
+    [
+     "D1:2060",
+     []
+    ]
+   ],
+   "blocks": [],
+   "rows_using_it": [
+    "Q-03",
+    "Q-03P",
+    "Q-11",
+    "Q-12",
+    "Q-13",
+    "Q-14"
+   ],
+   "QUALIFIED": "NO",
+   "qualified_when": "EXERCISED_AND_PASS on every compared occurrence against an ADMITTED independent export; no equivalence rule admitted (EQUIVALENCE_RULES = ())"
+  }
+ ],
+ "required_count": 10,
+ "source_signature_count": 33,
+ "round1_observations": 108,
+ "round1_occurrences": 141,
+ "occurrences_inside_block_instances": 40,
+ "distinct_block_observations": 7,
+ "net_reflected_occurrences": 25,
+ "not_required_for_round1": [
+  {
+   "signature": "KIND=ARC|CHAIN=REFLECTION+ROTATION+TRANSLATION|NET=NET_REFLECTED|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+   "source_count": 18
+  },
+  {
+   "signature": "KIND=ARC|CHAIN=ROTATION+TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+   "source_count": 12
+  },
+  {
+   "signature": "KIND=ARC|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+   "source_count": 6
+  },
+  {
+   "signature": "KIND=CIRCLE|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+   "source_count": 3
+  },
+  {
+   "signature": "KIND=DIMENSION|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+   "source_count": 101
+  },
+  {
+   "signature": "KIND=ELLIPSE_ARC|CHAIN=REFLECTION+ROTATION+TRANSLATION+UNIFORM_SCALE|NET=NET_REFLECTED|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+   "source_count": 4
+  },
+  {
+   "signature": "KIND=ELLIPSE_ARC|CHAIN=REFLECTION+TRANSLATION+UNIFORM_SCALE|NET=NET_REFLECTED|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+   "source_count": 2
+  },
+  {
+   "signature": "KIND=ELLIPSE_ARC|CHAIN=ROTATION+TRANSLATION+UNIFORM_SCALE|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+   "source_count": 1
+  },
+  {
+   "signature": "KIND=ELLIPSE_ARC|CHAIN=TRANSLATION+UNIFORM_SCALE|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+   "source_count": 1
+  },
+  {
+   "signature": "KIND=HATCH|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+   "source_count": 98
+  },
+  {
+   "signature": "KIND=HATCH|CHAIN=TRANSLATION+UNIFORM_SCALE|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+   "source_count": 4
+  },
+  {
+   "signature": "KIND=INSERT|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+   "source_count": 26
+  },
+  {
+   "signature": "KIND=LWPOLYLINE_STRAIGHT|CHAIN=TRANSLATION+UNIFORM_SCALE|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+   "source_count": 1
+  },
+  {
+   "signature": "KIND=LWPOLYLINE_STRAIGHT|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+   "source_count": 8
+  },
+  {
+   "signature": "KIND=MTEXT|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+   "source_count": 4
+  },
+  {
+   "signature": "KIND=TEXT|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+   "source_count": 37
+  },
+  {
+   "signature": "KIND=TEXT|CHAIN=TRANSLATION+UNIFORM_SCALE|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+   "source_count": 14
+  },
+  {
+   "signature": "KIND=TEXT|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+   "source_count": 6
+  },
+  {
+   "signature": "KIND=UNSUPPORTED:LIBREDWG:36:SPLINE|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+   "source_count": 1
+  },
+  {
+   "signature": "KIND=UNSUPPORTED:LIBREDWG:37:REGION|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+   "source_count": 37
+  },
+  {
+   "signature": "KIND=UNSUPPORTED:LIBREDWG:518:UNKNOWN_ENT|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+   "source_count": 1
+  },
+  {
+   "signature": "REF=BLOCK_RECORD_LINEAGE|TARGET=H12|DEPTH=1",
+   "source_count": 26
+  },
+  {
+   "signature": "REF=INSERT_LINEAGE|HANDLE=H12|TARGET=H12",
+   "source_count": 26
+  }
+ ],
+ "qualified": 0,
+ "rule": "no flat-set shortcut: each signature is qualified on its own"
+}

@@ -1,0 +1,2789 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_STRUCTURAL_ELEMENT_REGISTER_V1",
+ "sheets": {
+  "SIMPLE_BEAMS": {
+   "discipline": "STRUCTURAL",
+   "sheet": "STRU-S01",
+   "frame_handle": "6957",
+   "frame_layer": "DEFPOINTS",
+   "bounds": [
+    94532.0,
+    -7596.0,
+    129727.0,
+    20434.0
+   ],
+   "size_native": [
+    35195,
+    28030
+   ],
+   "titles": [
+    "Schedule of Simple Beams"
+   ],
+   "floor": null,
+   "view": null,
+   "structural_role": "SIMPLE_BEAMS"
+  },
+  "SCHEDULES": {
+   "discipline": "STRUCTURAL",
+   "sheet": "STRU-S02",
+   "frame_handle": "6956",
+   "frame_layer": "DEFPOINTS",
+   "bounds": [
+    137729.0,
+    -7596.0,
+    172924.0,
+    20434.0
+   ],
+   "size_native": [
+    35195,
+    28030
+   ],
+   "titles": [
+    "Schedule  of  Footings",
+    "Schedule  of Columns",
+    "DETAILS OF COLUMN REINFORCEMENT."
+   ],
+   "floor": null,
+   "view": null,
+   "structural_role": "SCHEDULES"
+  },
+  "POOL_DOME": {
+   "discipline": "STRUCTURAL",
+   "sheet": "STRU-S03",
+   "frame_handle": "183",
+   "frame_layer": "DEFPOINTS",
+   "bounds": [
+    -75968.0,
+    29036.0,
+    -40773.0,
+    57066.0
+   ],
+   "size_native": [
+    35195,
+    28030
+   ],
+   "titles": [
+    "DETAIL OF DOME",
+    "DETAIL OF SWIMMING POOL."
+   ],
+   "floor": null,
+   "view": null,
+   "structural_role": "POOL_DOME"
+  },
+  "2F_ROOF_SLAB": {
+   "discipline": "STRUCTURAL",
+   "sheet": "STRU-S04",
+   "frame_handle": "182",
+   "frame_layer": "DEFPOINTS",
+   "bounds": [
+    -37243.0,
+    29036.0,
+    -2049.0,
+    57066.0
+   ],
+   "size_native": [
+    35194,
+    28030
+   ],
+   "titles": [
+    "SECOND FLOOR ROOF SLAB.",
+    "CHECK  ARCHITECTURAL DETAIL OF"
+   ],
+   "floor": null,
+   "view": null,
+   "structural_role": "2F_ROOF_SLAB"
+  },
+  "1F_ROOF_SLAB": {
+   "discipline": "STRUCTURAL",
+   "sheet": "STRU-S05",
+   "frame_handle": "181",
+   "frame_layer": "DEFPOINTS",
+   "bounds": [
+    1481.0,
+    29036.0,
+    36675.0,
+    57066.0
+   ],
+   "size_native": [
+    35194,
+    28030
+   ],
+   "titles": [
+    "FIRST FLOOR ROOF SLAB.",
+    "SECTION B-B",
+    "SEE DETAIL",
+    "SEE DETAIL",
+    "SEE DETAIL",
+    "SEE DETAIL",
+    "SEE DETAIL",
+    "SEE DETAIL",
+    "SEE DETAIL",
+    "SEE DETAIL",
+    "CHECK  ARCHITECTURAL DETAIL OF"
+   ],
+   "floor": null,
+   "view": null,
+   "structural_role": "1F_ROOF_SLAB"
+  },
+  "GF_ROOF_SLAB": {
+   "discipline": "STRUCTURAL",
+   "sheet": "STRU-S06",
+   "frame_handle": "180",
+   "frame_layer": "DEFPOINTS",
+   "bounds": [
+    40205.0,
+    29036.0,
+    75400.0,
+    57066.0
+   ],
+   "size_native": [
+    35195,
+    28030
+   ],
+   "titles": [
+    "GROUND FLOOR ROOF SLAB.",
+    "SECTION A-A",
+    "SECTION C-C",
+    "SECTION D-D",
+    "CHECK  ARCHITECTURAL DETAIL OF"
+   ],
+   "floor": null,
+   "view": null,
+   "structural_role": "GF_ROOF_SLAB"
+  },
+  "GROUND_BEAMS": {
+   "discipline": "STRUCTURAL",
+   "sheet": "STRU-S07",
+   "frame_handle": "179",
+   "frame_layer": "DEFPOINTS",
+   "bounds": [
+    78930.0,
+    29036.0,
+    114124.0,
+    57066.0
+   ],
+   "size_native": [
+    35194,
+    28030
+   ],
+   "titles": [
+    "GROUND BEAMS PLAN"
+   ],
+   "floor": null,
+   "view": null,
+   "structural_role": "GROUND_BEAMS"
+  },
+  "FOUNDATION": {
+   "discipline": "STRUCTURAL",
+   "sheet": "STRU-S08",
+   "frame_handle": "178",
+   "frame_layer": "DEFPOINTS",
+   "bounds": [
+    117654.0,
+    29036.0,
+    152849.0,
+    57066.0
+   ],
+   "size_native": [
+    35195,
+    28030
+   ],
+   "titles": [
+    "FOUNDATION PLAN."
+   ],
+   "floor": null,
+   "view": null,
+   "structural_role": "FOUNDATION"
+  },
+  "COLUMN_AXIS": {
+   "discipline": "STRUCTURAL",
+   "sheet": "STRU-S09",
+   "frame_handle": "176",
+   "frame_layer": "DEFPOINTS",
+   "bounds": [
+    156379.0,
+    29036.0,
+    191573.0,
+    57066.0
+   ],
+   "size_native": [
+    35194,
+    28030
+   ],
+   "titles": [
+    "COLUMN & AXIS PLAN."
+   ],
+   "floor": null,
+   "view": null,
+   "structural_role": "COLUMN_AXIS"
+  }
+ },
+ "schedules": {
+  "FOOTINGS": {
+   "title": "Schedule  of  Footings",
+   "state": "COMPLETE",
+   "unplaced": [],
+   "header_bands": [
+    1,
+    2
+   ],
+   "leaf_columns": [
+    [
+     "TYPE OF FOOT."
+    ],
+    [],
+    [
+     "FOOTING SIZE (cm)",
+     "L"
+    ],
+    [
+     "FOOTING SIZE (cm)",
+     "W"
+    ],
+    [
+     "FOOTING SIZE (cm)",
+     "H"
+    ],
+    [],
+    [
+     "R E I N F O R C E M E N T",
+     "SHORT BARS"
+    ],
+    [
+     "R E I N F O R C E M E N T",
+     "LONG BARS"
+    ],
+    [],
+    [
+     "BOXED"
+    ],
+    [],
+    [
+     "R E M A R K S"
+    ]
+   ],
+   "table_digest": "3770daef0ad56b67842f1e6e7ffb652380653869bd256778656b8e41381ccd09",
+   "bounds": [
+    138451.322,
+    -5469.104,
+    155052.522,
+    8373.759
+   ]
+  },
+  "COLUMNS": {
+   "title": "Schedule  of Columns",
+   "state": "ITEMS_UNPLACED",
+   "unplaced": [
+    {
+     "key": "ALSENAN_ST7757_DXF|H6984||TEXT|0",
+     "value": "OF",
+     "x": 156228.2796042684,
+     "y": 18131.71539158853,
+     "why": "ON_GRID_LINE"
+    }
+   ],
+   "header_bands": [
+    2,
+    3,
+    4
+   ],
+   "leaf_columns": [
+    [
+     "TYPE COL.",
+     "C"
+    ],
+    [],
+    [
+     "FOUNDATION",
+     "SIZE",
+     "30"
+    ],
+    [
+     "FOUNDATION",
+     "SIZE",
+     "50"
+    ],
+    [
+     "FOUNDATION",
+     "REINF",
+     "%%C 16 8"
+    ],
+    [],
+    [
+     "GROUND FLOOR",
+     "SIZE",
+     "20"
+    ],
+    [
+     "GROUND FLOOR",
+     "SIZE",
+     "50"
+    ],
+    [
+     "GROUND FLOOR",
+     "REINF",
+     "%%C 16 8"
+    ],
+    [],
+    [
+     ")1 1st  floor",
+     "SIZE"
+    ],
+    [
+     ")1 1st  floor",
+     "SIZE"
+    ],
+    [
+     ")1 1st  floor",
+     "REINF"
+    ],
+    [],
+    [
+     "2nd floor  & Top 2)",
+     "SIZE"
+    ],
+    [
+     "2nd floor  & Top 2)",
+     "SIZE"
+    ],
+    [
+     "2nd floor  & Top 2)",
+     "REINF",
+     "%%C"
+    ],
+    [],
+    [
+     "DES. LOAD"
+    ]
+   ],
+   "table_digest": "d13aa5926f6d00839cc2a876b3353b303944ace7f6603f50397891ae56ed8894",
+   "bounds": [
+    155848.131,
+    8768.013,
+    172429.24,
+    19689.208
+   ]
+  },
+  "SIMPLE_BEAMS": {
+   "title": "Schedule of Simple Beams",
+   "state": "COMPLETE",
+   "unplaced": [],
+   "header_bands": [
+    1,
+    2
+   ],
+   "leaf_columns": [
+    [
+     "TYPE OF BEAM"
+    ],
+    [],
+    [
+     "S I Z E",
+     "B-(Bredth)"
+    ],
+    [
+     "S I Z E",
+     "D-(Depth)"
+    ],
+    [
+     "B A R S"
+    ],
+    [
+     "B O T T O M"
+    ],
+    [],
+    [
+     "T O P B A R S"
+    ],
+    [],
+    [
+     "STIRRUPS/m"
+    ],
+    [],
+    [
+     "REMARKS"
+    ]
+   ],
+   "table_digest": "e6f1b37865f0022dd11f228ae62c9cf9724f3e3d02fe6e2ac475c7154e95f178",
+   "bounds": [
+    105724.485,
+    -6585.998,
+    118534.485,
+    19622.663
+   ]
+  }
+ },
+ "footing_schedule": {
+  "F": {
+   "L_cm": 90.0,
+   "W_cm": 80.0,
+   "H_cm": 30.0,
+   "short_bars": "8 Ø 12",
+   "short_bars_sub_rows": null,
+   "long_bars": "7 Ø 12",
+   "long_bars_sub_rows": null,
+   "keys": [
+    "ATTRIB|7289|DEPHT",
+    "ATTRIB|7289|H",
+    "ATTRIB|7289|W"
+   ],
+   "unit_note": "(cm) - header text of the FOOTING SIZE columns",
+   "attribute_tags_seen": [
+    "DEPHT",
+    "H",
+    "W"
+   ]
+  },
+  "F2": {
+   "L_cm": 190.0,
+   "W_cm": 170.0,
+   "H_cm": 35.0,
+   "short_bars": "13 Ø 12",
+   "short_bars_sub_rows": null,
+   "long_bars": "13 Ø 12",
+   "long_bars_sub_rows": null,
+   "keys": [
+    "ATTRIB|7317|DEPHT",
+    "ATTRIB|7317|H",
+    "ATTRIB|7317|W"
+   ],
+   "unit_note": "(cm) - header text of the FOOTING SIZE columns",
+   "attribute_tags_seen": [
+    "DEPHT",
+    "H",
+    "W"
+   ]
+  },
+  "F3": {
+   "L_cm": 160.0,
+   "W_cm": 140.0,
+   "H_cm": 30.0,
+   "short_bars": "8 Ø 12",
+   "short_bars_sub_rows": null,
+   "long_bars": "8 Ø 12",
+   "long_bars_sub_rows": null,
+   "keys": [
+    "ATTRIB|7328|DEPHT",
+    "ATTRIB|7328|H",
+    "ATTRIB|7328|W"
+   ],
+   "unit_note": "(cm) - header text of the FOOTING SIZE columns",
+   "attribute_tags_seen": [
+    "DEPHT",
+    "H",
+    "W"
+   ]
+  },
+  "F4": {
+   "L_cm": 220.0,
+   "W_cm": 200.0,
+   "H_cm": 40.0,
+   "short_bars": "18 Ø 12",
+   "short_bars_sub_rows": null,
+   "long_bars": "17 Ø 12",
+   "long_bars_sub_rows": null,
+   "keys": [
+    "ATTRIB|7339|DEPHT",
+    "ATTRIB|7339|H",
+    "ATTRIB|7339|W"
+   ],
+   "unit_note": "(cm) - header text of the FOOTING SIZE columns",
+   "attribute_tags_seen": [
+    "DEPHT",
+    "H",
+    "W"
+   ]
+  },
+  "F5": {
+   "L_cm": 240.0,
+   "W_cm": 210.0,
+   "H_cm": 40.0,
+   "short_bars": "22 Ø 12",
+   "short_bars_sub_rows": null,
+   "long_bars": "20 Ø 12",
+   "long_bars_sub_rows": null,
+   "keys": [
+    "ATTRIB|7350|DEPHT",
+    "ATTRIB|7350|H",
+    "ATTRIB|7350|W"
+   ],
+   "unit_note": "(cm) - header text of the FOOTING SIZE columns",
+   "attribute_tags_seen": [
+    "DEPHT",
+    "H",
+    "W"
+   ]
+  },
+  "F6": {
+   "L_cm": 260.0,
+   "W_cm": 220.0,
+   "H_cm": 50.0,
+   "short_bars": "24 Ø 12",
+   "short_bars_sub_rows": null,
+   "long_bars": "22 Ø 12",
+   "long_bars_sub_rows": null,
+   "keys": [
+    "ATTRIB|7361|DEPHT",
+    "ATTRIB|7361|H",
+    "ATTRIB|7361|W"
+   ],
+   "unit_note": "(cm) - header text of the FOOTING SIZE columns",
+   "attribute_tags_seen": [
+    "DEPHT",
+    "H",
+    "W"
+   ]
+  },
+  "F7": {
+   "L_cm": 300.0,
+   "W_cm": 250.0,
+   "H_cm": 50.0,
+   "short_bars": "24 Ø 14",
+   "short_bars_sub_rows": null,
+   "long_bars": "21 Ø 14",
+   "long_bars_sub_rows": null,
+   "keys": [
+    "ATTRIB|7372|DEPHT",
+    "ATTRIB|7372|H",
+    "ATTRIB|7372|W"
+   ],
+   "unit_note": "(cm) - header text of the FOOTING SIZE columns",
+   "attribute_tags_seen": [
+    "DEPHT",
+    "H",
+    "W"
+   ]
+  },
+  "F8": {
+   "L_cm": 400.0,
+   "W_cm": 360.0,
+   "H_cm": 50.0,
+   "short_bars": "6 Ø 14/m",
+   "short_bars_sub_rows": [
+    "9 Ø 14/m"
+   ],
+   "long_bars": "6 Ø 14/m",
+   "long_bars_sub_rows": [
+    "9 Ø 14/m"
+   ],
+   "keys": [
+    "ATTRIB|10998|DEPHT",
+    "ATTRIB|10998|H",
+    "ATTRIB|10998|W"
+   ],
+   "unit_note": "(cm) - header text of the FOOTING SIZE columns",
+   "attribute_tags_seen": [
+    "DEPHT",
+    "H",
+    "W"
+   ]
+  },
+  "F9": {
+   "L_cm": 340.0,
+   "W_cm": 270.0,
+   "H_cm": 55.0,
+   "short_bars": "28 Ø 14",
+   "short_bars_sub_rows": null,
+   "long_bars": "24 Ø 14",
+   "long_bars_sub_rows": null,
+   "keys": [
+    "ATTRIB|7383|DEPHT",
+    "ATTRIB|7383|H",
+    "ATTRIB|7383|W"
+   ],
+   "unit_note": "(cm) - header text of the FOOTING SIZE columns",
+   "attribute_tags_seen": [
+    "DEPHT",
+    "H",
+    "W"
+   ]
+  },
+  "F10": {
+   "L_cm": 280.0,
+   "W_cm": 140.0,
+   "H_cm": 50.0,
+   "short_bars": "20 Ø 14",
+   "short_bars_sub_rows": null,
+   "long_bars": "10 Ø 14",
+   "long_bars_sub_rows": null,
+   "keys": [
+    "ATTRIB|7394|DEPHT",
+    "ATTRIB|7394|H",
+    "ATTRIB|7394|W"
+   ],
+   "unit_note": "(cm) - header text of the FOOTING SIZE columns",
+   "attribute_tags_seen": [
+    "DEPHT",
+    "H",
+    "W"
+   ]
+  },
+  "F11": {
+   "L_cm": 350.0,
+   "W_cm": 150.0,
+   "H_cm": 50.0,
+   "short_bars": "32 Ø 14",
+   "short_bars_sub_rows": null,
+   "long_bars": "14 Ø 14",
+   "long_bars_sub_rows": null,
+   "keys": [
+    "ATTRIB|7405|DEPHT",
+    "ATTRIB|7405|H",
+    "ATTRIB|7405|W"
+   ],
+   "unit_note": "(cm) - header text of the FOOTING SIZE columns",
+   "attribute_tags_seen": [
+    "DEPHT",
+    "H",
+    "W"
+   ]
+  },
+  "F12": {
+   "L_cm": 440.0,
+   "W_cm": 320.0,
+   "H_cm": 70.0,
+   "short_bars": "10 Ø 14/m",
+   "short_bars_sub_rows": [
+    "9 Ø 16/m"
+   ],
+   "long_bars": "10 Ø 14/m",
+   "long_bars_sub_rows": [
+    "9 Ø 16/m"
+   ],
+   "keys": [
+    "ATTRIB|10846|DEPHT",
+    "ATTRIB|10846|H",
+    "ATTRIB|10846|W"
+   ],
+   "unit_note": "(cm) - header text of the FOOTING SIZE columns",
+   "attribute_tags_seen": [
+    "DEPHT",
+    "H",
+    "W"
+   ]
+  },
+  "F13": {
+   "L_cm": 430.0,
+   "W_cm": 240.0,
+   "H_cm": 50.0,
+   "short_bars": "7 Ø 14/m",
+   "short_bars_sub_rows": [
+    "8 Ø 16/m"
+   ],
+   "long_bars": "7 Ø 14/m",
+   "long_bars_sub_rows": [
+    "8 Ø 16/m"
+   ],
+   "keys": [
+    "ATTRIB|10904|DEPHT",
+    "ATTRIB|10904|H",
+    "ATTRIB|10904|W"
+   ],
+   "unit_note": "(cm) - header text of the FOOTING SIZE columns",
+   "attribute_tags_seen": [
+    "DEPHT",
+    "H",
+    "W"
+   ]
+  },
+  "F14": {
+   "L_cm": 380.0,
+   "W_cm": 330.0,
+   "H_cm": 50.0,
+   "short_bars": "6 Ø 14/m",
+   "short_bars_sub_rows": [
+    "9 Ø 14/m"
+   ],
+   "long_bars": "6 Ø 14/m",
+   "long_bars_sub_rows": [
+    "9 Ø 14/m"
+   ],
+   "keys": [
+    "ATTRIB|10965|DEPHT",
+    "ATTRIB|10965|H",
+    "ATTRIB|10965|W"
+   ],
+   "unit_note": "(cm) - header text of the FOOTING SIZE columns",
+   "attribute_tags_seen": [
+    "DEPHT",
+    "H",
+    "W"
+   ]
+  },
+  "F15": {
+   "L_cm": 180.0,
+   "W_cm": 100.0,
+   "H_cm": 40.0,
+   "short_bars": "15 Ø 12",
+   "short_bars_sub_rows": null,
+   "long_bars": "8 Ø 12",
+   "long_bars_sub_rows": null,
+   "keys": [
+    "ATTRIB|11027|DEPHT",
+    "ATTRIB|11027|H",
+    "ATTRIB|11027|W"
+   ],
+   "unit_note": "(cm) - header text of the FOOTING SIZE columns",
+   "attribute_tags_seen": [
+    "DEPHT",
+    "H",
+    "W"
+   ]
+  },
+  "FF": {
+   "L_cm": 460.0,
+   "W_cm": 450.0,
+   "H_cm": 55.0,
+   "short_bars": "6 9 Ø Ø 14/m 14/m",
+   "short_bars_sub_rows": null,
+   "long_bars": "6 9 Ø Ø 14/m 14/m",
+   "long_bars_sub_rows": null,
+   "keys": [
+    "ATTRIB|11038|DEPHT",
+    "ATTRIB|11038|H",
+    "ATTRIB|11038|W"
+   ],
+   "unit_note": "(cm) - header text of the FOOTING SIZE columns",
+   "attribute_tags_seen": [
+    "DEPHT",
+    "H",
+    "W"
+   ]
+  },
+  "FN": {
+   "L_cm": 100.0,
+   "W_cm": 100.0,
+   "H_cm": 30.0,
+   "short_bars": "8 Ø 12",
+   "short_bars_sub_rows": null,
+   "long_bars": "8 Ø 12",
+   "long_bars_sub_rows": null,
+   "keys": [
+    "ATTRIB|7416|DEPHT",
+    "ATTRIB|7416|H",
+    "ATTRIB|7416|W"
+   ],
+   "unit_note": "(cm) - header text of the FOOTING SIZE columns",
+   "attribute_tags_seen": [
+    "DEPHT",
+    "H",
+    "W"
+   ]
+  }
+ },
+ "columns": [
+  {
+   "type": "C",
+   "count_on_column_plan": 5,
+   "foundation": "30 / 50 / 8 Ø 16",
+   "ground_floor": "20 / 50 / 8 Ø 16",
+   "first_floor": " /  / Ø",
+   "second_floor": " /  / Ø",
+   "cells": [
+    {
+     "path": [
+      "TYPE COL.",
+      "C"
+     ],
+     "value": "C"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      "FOUNDATION",
+      "SIZE",
+      "30"
+     ],
+     "value": "30"
+    },
+    {
+     "path": [
+      "FOUNDATION",
+      "SIZE",
+      "50"
+     ],
+     "value": "50"
+    },
+    {
+     "path": [
+      "FOUNDATION",
+      "REINF",
+      "%%C 16 8"
+     ],
+     "value": "8 Ø 16"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      "GROUND FLOOR",
+      "SIZE",
+      "20"
+     ],
+     "value": "20"
+    },
+    {
+     "path": [
+      "GROUND FLOOR",
+      "SIZE",
+      "50"
+     ],
+     "value": "50"
+    },
+    {
+     "path": [
+      "GROUND FLOOR",
+      "REINF",
+      "%%C 16 8"
+     ],
+     "value": "8 Ø 16"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      ")1 1st  floor",
+      "SIZE"
+     ],
+     "value": ""
+    },
+    {
+     "path": [
+      ")1 1st  floor",
+      "SIZE"
+     ],
+     "value": ""
+    },
+    {
+     "path": [
+      ")1 1st  floor",
+      "REINF"
+     ],
+     "value": "Ø"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      "2nd floor  & Top 2)",
+      "SIZE"
+     ],
+     "value": ""
+    },
+    {
+     "path": [
+      "2nd floor  & Top 2)",
+      "SIZE"
+     ],
+     "value": ""
+    },
+    {
+     "path": [
+      "2nd floor  & Top 2)",
+      "REINF",
+      "%%C"
+     ],
+     "value": "Ø"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      "DES. LOAD"
+     ],
+     "value": ""
+    }
+   ]
+  },
+  {
+   "type": "C1",
+   "count_on_column_plan": 1,
+   "foundation": "30 / 50 / 8 Ø 16",
+   "ground_floor": "20 / 50 / 8 Ø 16",
+   "first_floor": "20 / 50 / 6 Ø 16",
+   "second_floor": "20 / 50 / 6 Ø 16",
+   "cells": [
+    {
+     "path": [
+      "TYPE COL.",
+      "C"
+     ],
+     "value": "C1"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      "FOUNDATION",
+      "SIZE",
+      "30"
+     ],
+     "value": "30"
+    },
+    {
+     "path": [
+      "FOUNDATION",
+      "SIZE",
+      "50"
+     ],
+     "value": "50"
+    },
+    {
+     "path": [
+      "FOUNDATION",
+      "REINF",
+      "%%C 16 8"
+     ],
+     "value": "8 Ø 16"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      "GROUND FLOOR",
+      "SIZE",
+      "20"
+     ],
+     "value": "20"
+    },
+    {
+     "path": [
+      "GROUND FLOOR",
+      "SIZE",
+      "50"
+     ],
+     "value": "50"
+    },
+    {
+     "path": [
+      "GROUND FLOOR",
+      "REINF",
+      "%%C 16 8"
+     ],
+     "value": "8 Ø 16"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      ")1 1st  floor",
+      "SIZE"
+     ],
+     "value": "20"
+    },
+    {
+     "path": [
+      ")1 1st  floor",
+      "SIZE"
+     ],
+     "value": "50"
+    },
+    {
+     "path": [
+      ")1 1st  floor",
+      "REINF"
+     ],
+     "value": "6 Ø 16"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      "2nd floor  & Top 2)",
+      "SIZE"
+     ],
+     "value": "20"
+    },
+    {
+     "path": [
+      "2nd floor  & Top 2)",
+      "SIZE"
+     ],
+     "value": "50"
+    },
+    {
+     "path": [
+      "2nd floor  & Top 2)",
+      "REINF",
+      "%%C"
+     ],
+     "value": "6 Ø 16"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      "DES. LOAD"
+     ],
+     "value": "50"
+    }
+   ]
+  },
+  {
+   "type": "C2",
+   "count_on_column_plan": 4,
+   "foundation": "30 / 50 / 8 Ø 16",
+   "ground_floor": "20 / 50 / 8 Ø 16",
+   "first_floor": "20 / 50 / 8 Ø 16",
+   "second_floor": "20 / 50 / 6 Ø 16",
+   "cells": [
+    {
+     "path": [
+      "TYPE COL.",
+      "C"
+     ],
+     "value": "C2"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      "FOUNDATION",
+      "SIZE",
+      "30"
+     ],
+     "value": "30"
+    },
+    {
+     "path": [
+      "FOUNDATION",
+      "SIZE",
+      "50"
+     ],
+     "value": "50"
+    },
+    {
+     "path": [
+      "FOUNDATION",
+      "REINF",
+      "%%C 16 8"
+     ],
+     "value": "8 Ø 16"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      "GROUND FLOOR",
+      "SIZE",
+      "20"
+     ],
+     "value": "20"
+    },
+    {
+     "path": [
+      "GROUND FLOOR",
+      "SIZE",
+      "50"
+     ],
+     "value": "50"
+    },
+    {
+     "path": [
+      "GROUND FLOOR",
+      "REINF",
+      "%%C 16 8"
+     ],
+     "value": "8 Ø 16"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      ")1 1st  floor",
+      "SIZE"
+     ],
+     "value": "20"
+    },
+    {
+     "path": [
+      ")1 1st  floor",
+      "SIZE"
+     ],
+     "value": "50"
+    },
+    {
+     "path": [
+      ")1 1st  floor",
+      "REINF"
+     ],
+     "value": "8 Ø 16"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      "2nd floor  & Top 2)",
+      "SIZE"
+     ],
+     "value": "20"
+    },
+    {
+     "path": [
+      "2nd floor  & Top 2)",
+      "SIZE"
+     ],
+     "value": "50"
+    },
+    {
+     "path": [
+      "2nd floor  & Top 2)",
+      "REINF",
+      "%%C"
+     ],
+     "value": "6 Ø 16"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      "DES. LOAD"
+     ],
+     "value": "90"
+    }
+   ]
+  },
+  {
+   "type": "C3",
+   "count_on_column_plan": 6,
+   "foundation": "30 / 50 / 8 Ø 16",
+   "ground_floor": "25 / 50 / 8 Ø 16",
+   "first_floor": "20 / 50 / 6 Ø 16",
+   "second_floor": "20 / 50 / 6 Ø 16",
+   "cells": [
+    {
+     "path": [
+      "TYPE COL.",
+      "C"
+     ],
+     "value": "C3"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      "FOUNDATION",
+      "SIZE",
+      "30"
+     ],
+     "value": "30"
+    },
+    {
+     "path": [
+      "FOUNDATION",
+      "SIZE",
+      "50"
+     ],
+     "value": "50"
+    },
+    {
+     "path": [
+      "FOUNDATION",
+      "REINF",
+      "%%C 16 8"
+     ],
+     "value": "8 Ø 16"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      "GROUND FLOOR",
+      "SIZE",
+      "20"
+     ],
+     "value": "25"
+    },
+    {
+     "path": [
+      "GROUND FLOOR",
+      "SIZE",
+      "50"
+     ],
+     "value": "50"
+    },
+    {
+     "path": [
+      "GROUND FLOOR",
+      "REINF",
+      "%%C 16 8"
+     ],
+     "value": "8 Ø 16"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      ")1 1st  floor",
+      "SIZE"
+     ],
+     "value": "20"
+    },
+    {
+     "path": [
+      ")1 1st  floor",
+      "SIZE"
+     ],
+     "value": "50"
+    },
+    {
+     "path": [
+      ")1 1st  floor",
+      "REINF"
+     ],
+     "value": "6 Ø 16"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      "2nd floor  & Top 2)",
+      "SIZE"
+     ],
+     "value": "20"
+    },
+    {
+     "path": [
+      "2nd floor  & Top 2)",
+      "SIZE"
+     ],
+     "value": "50"
+    },
+    {
+     "path": [
+      "2nd floor  & Top 2)",
+      "REINF",
+      "%%C"
+     ],
+     "value": "6 Ø 16"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      "DES. LOAD"
+     ],
+     "value": "70"
+    }
+   ]
+  },
+  {
+   "type": "C4",
+   "count_on_column_plan": 2,
+   "foundation": "30 / 50 / 8 Ø 16",
+   "ground_floor": "25 / 50 / 8 Ø 16",
+   "first_floor": "20 / 50 / 8 Ø 16",
+   "second_floor": "20 / 50 / 6 Ø 16",
+   "cells": [
+    {
+     "path": [
+      "TYPE COL.",
+      "C"
+     ],
+     "value": "C4"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      "FOUNDATION",
+      "SIZE",
+      "30"
+     ],
+     "value": "30"
+    },
+    {
+     "path": [
+      "FOUNDATION",
+      "SIZE",
+      "50"
+     ],
+     "value": "50"
+    },
+    {
+     "path": [
+      "FOUNDATION",
+      "REINF",
+      "%%C 16 8"
+     ],
+     "value": "8 Ø 16"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      "GROUND FLOOR",
+      "SIZE",
+      "20"
+     ],
+     "value": "25"
+    },
+    {
+     "path": [
+      "GROUND FLOOR",
+      "SIZE",
+      "50"
+     ],
+     "value": "50"
+    },
+    {
+     "path": [
+      "GROUND FLOOR",
+      "REINF",
+      "%%C 16 8"
+     ],
+     "value": "8 Ø 16"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      ")1 1st  floor",
+      "SIZE"
+     ],
+     "value": "20"
+    },
+    {
+     "path": [
+      ")1 1st  floor",
+      "SIZE"
+     ],
+     "value": "50"
+    },
+    {
+     "path": [
+      ")1 1st  floor",
+      "REINF"
+     ],
+     "value": "8 Ø 16"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      "2nd floor  & Top 2)",
+      "SIZE"
+     ],
+     "value": "20"
+    },
+    {
+     "path": [
+      "2nd floor  & Top 2)",
+      "SIZE"
+     ],
+     "value": "50"
+    },
+    {
+     "path": [
+      "2nd floor  & Top 2)",
+      "REINF",
+      "%%C"
+     ],
+     "value": "6 Ø 16"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      "DES. LOAD"
+     ],
+     "value": "120"
+    }
+   ]
+  },
+  {
+   "type": "C5",
+   "count_on_column_plan": 3,
+   "foundation": "30 / 60 / 10 Ø 16",
+   "ground_floor": "25 / 60 / 10 Ø 16",
+   "first_floor": "20 / 50 / 8 Ø 16",
+   "second_floor": "20 / 50 / 6 Ø 16",
+   "cells": [
+    {
+     "path": [
+      "TYPE COL.",
+      "C"
+     ],
+     "value": "C5"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      "FOUNDATION",
+      "SIZE",
+      "30"
+     ],
+     "value": "30"
+    },
+    {
+     "path": [
+      "FOUNDATION",
+      "SIZE",
+      "50"
+     ],
+     "value": "60"
+    },
+    {
+     "path": [
+      "FOUNDATION",
+      "REINF",
+      "%%C 16 8"
+     ],
+     "value": "10 Ø 16"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      "GROUND FLOOR",
+      "SIZE",
+      "20"
+     ],
+     "value": "25"
+    },
+    {
+     "path": [
+      "GROUND FLOOR",
+      "SIZE",
+      "50"
+     ],
+     "value": "60"
+    },
+    {
+     "path": [
+      "GROUND FLOOR",
+      "REINF",
+      "%%C 16 8"
+     ],
+     "value": "10 Ø 16"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      ")1 1st  floor",
+      "SIZE"
+     ],
+     "value": "20"
+    },
+    {
+     "path": [
+      ")1 1st  floor",
+      "SIZE"
+     ],
+     "value": "50"
+    },
+    {
+     "path": [
+      ")1 1st  floor",
+      "REINF"
+     ],
+     "value": "8 Ø 16"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      "2nd floor  & Top 2)",
+      "SIZE"
+     ],
+     "value": "20"
+    },
+    {
+     "path": [
+      "2nd floor  & Top 2)",
+      "SIZE"
+     ],
+     "value": "50"
+    },
+    {
+     "path": [
+      "2nd floor  & Top 2)",
+      "REINF",
+      "%%C"
+     ],
+     "value": "6 Ø 16"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      "DES. LOAD"
+     ],
+     "value": "160"
+    }
+   ]
+  },
+  {
+   "type": "C6",
+   "count_on_column_plan": 1,
+   "foundation": "30 / 70 / 10 Ø 16",
+   "ground_floor": "25 / 70 / 10 Ø 16",
+   "first_floor": "20 / 60 / 8 Ø 16",
+   "second_floor": "20 / 50 / 8 Ø 16",
+   "cells": [
+    {
+     "path": [
+      "TYPE COL.",
+      "C"
+     ],
+     "value": "C6"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      "FOUNDATION",
+      "SIZE",
+      "30"
+     ],
+     "value": "30"
+    },
+    {
+     "path": [
+      "FOUNDATION",
+      "SIZE",
+      "50"
+     ],
+     "value": "70"
+    },
+    {
+     "path": [
+      "FOUNDATION",
+      "REINF",
+      "%%C 16 8"
+     ],
+     "value": "10 Ø 16"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      "GROUND FLOOR",
+      "SIZE",
+      "20"
+     ],
+     "value": "25"
+    },
+    {
+     "path": [
+      "GROUND FLOOR",
+      "SIZE",
+      "50"
+     ],
+     "value": "70"
+    },
+    {
+     "path": [
+      "GROUND FLOOR",
+      "REINF",
+      "%%C 16 8"
+     ],
+     "value": "10 Ø 16"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      ")1 1st  floor",
+      "SIZE"
+     ],
+     "value": "20"
+    },
+    {
+     "path": [
+      ")1 1st  floor",
+      "SIZE"
+     ],
+     "value": "60"
+    },
+    {
+     "path": [
+      ")1 1st  floor",
+      "REINF"
+     ],
+     "value": "8 Ø 16"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      "2nd floor  & Top 2)",
+      "SIZE"
+     ],
+     "value": "20"
+    },
+    {
+     "path": [
+      "2nd floor  & Top 2)",
+      "SIZE"
+     ],
+     "value": "50"
+    },
+    {
+     "path": [
+      "2nd floor  & Top 2)",
+      "REINF",
+      "%%C"
+     ],
+     "value": "8 Ø 16"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      "DES. LOAD"
+     ],
+     "value": "170"
+    }
+   ]
+  },
+  {
+   "type": "C7",
+   "count_on_column_plan": 1,
+   "foundation": "30 / 80 / 12 Ø 16",
+   "ground_floor": "25 / 80 / 12 Ø 16",
+   "first_floor": "20 / 80 / 10 Ø 16",
+   "second_floor": "20 / 60 / 8 Ø 16",
+   "cells": [
+    {
+     "path": [
+      "TYPE COL.",
+      "C"
+     ],
+     "value": "C7"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      "FOUNDATION",
+      "SIZE",
+      "30"
+     ],
+     "value": "30"
+    },
+    {
+     "path": [
+      "FOUNDATION",
+      "SIZE",
+      "50"
+     ],
+     "value": "80"
+    },
+    {
+     "path": [
+      "FOUNDATION",
+      "REINF",
+      "%%C 16 8"
+     ],
+     "value": "12 Ø 16"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      "GROUND FLOOR",
+      "SIZE",
+      "20"
+     ],
+     "value": "25"
+    },
+    {
+     "path": [
+      "GROUND FLOOR",
+      "SIZE",
+      "50"
+     ],
+     "value": "80"
+    },
+    {
+     "path": [
+      "GROUND FLOOR",
+      "REINF",
+      "%%C 16 8"
+     ],
+     "value": "12 Ø 16"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      ")1 1st  floor",
+      "SIZE"
+     ],
+     "value": "20"
+    },
+    {
+     "path": [
+      ")1 1st  floor",
+      "SIZE"
+     ],
+     "value": "80"
+    },
+    {
+     "path": [
+      ")1 1st  floor",
+      "REINF"
+     ],
+     "value": "10 Ø 16"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      "2nd floor  & Top 2)",
+      "SIZE"
+     ],
+     "value": "20"
+    },
+    {
+     "path": [
+      "2nd floor  & Top 2)",
+      "SIZE"
+     ],
+     "value": "60"
+    },
+    {
+     "path": [
+      "2nd floor  & Top 2)",
+      "REINF",
+      "%%C"
+     ],
+     "value": "8 Ø 16"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      "DES. LOAD"
+     ],
+     "value": "220"
+    }
+   ]
+  },
+  {
+   "type": "C8",
+   "count_on_column_plan": 2,
+   "foundation": "30 / 90 / 12 Ø 16",
+   "ground_floor": "25 / 90 / 12 Ø 16",
+   "first_floor": "20 / 90 / 12 Ø 16",
+   "second_floor": "20 / 70 / 10 Ø 16",
+   "cells": [
+    {
+     "path": [
+      "TYPE COL.",
+      "C"
+     ],
+     "value": "C8"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      "FOUNDATION",
+      "SIZE",
+      "30"
+     ],
+     "value": "30"
+    },
+    {
+     "path": [
+      "FOUNDATION",
+      "SIZE",
+      "50"
+     ],
+     "value": "90"
+    },
+    {
+     "path": [
+      "FOUNDATION",
+      "REINF",
+      "%%C 16 8"
+     ],
+     "value": "12 Ø 16"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      "GROUND FLOOR",
+      "SIZE",
+      "20"
+     ],
+     "value": "25"
+    },
+    {
+     "path": [
+      "GROUND FLOOR",
+      "SIZE",
+      "50"
+     ],
+     "value": "90"
+    },
+    {
+     "path": [
+      "GROUND FLOOR",
+      "REINF",
+      "%%C 16 8"
+     ],
+     "value": "12 Ø 16"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      ")1 1st  floor",
+      "SIZE"
+     ],
+     "value": "20"
+    },
+    {
+     "path": [
+      ")1 1st  floor",
+      "SIZE"
+     ],
+     "value": "90"
+    },
+    {
+     "path": [
+      ")1 1st  floor",
+      "REINF"
+     ],
+     "value": "12 Ø 16"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      "2nd floor  & Top 2)",
+      "SIZE"
+     ],
+     "value": "20"
+    },
+    {
+     "path": [
+      "2nd floor  & Top 2)",
+      "SIZE"
+     ],
+     "value": "70"
+    },
+    {
+     "path": [
+      "2nd floor  & Top 2)",
+      "REINF",
+      "%%C"
+     ],
+     "value": "10 Ø 16"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      "DES. LOAD"
+     ],
+     "value": "240"
+    }
+   ]
+  },
+  {
+   "type": "C9",
+   "count_on_column_plan": 2,
+   "foundation": "30 / 100 / 14 Ø 16",
+   "ground_floor": "25 / 100 / 14 Ø 16",
+   "first_floor": "20 / 90 / 12 Ø 16",
+   "second_floor": "20 / 70 / 10 Ø 16",
+   "cells": [
+    {
+     "path": [
+      "TYPE COL.",
+      "C"
+     ],
+     "value": "C9"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      "FOUNDATION",
+      "SIZE",
+      "30"
+     ],
+     "value": "30"
+    },
+    {
+     "path": [
+      "FOUNDATION",
+      "SIZE",
+      "50"
+     ],
+     "value": "100"
+    },
+    {
+     "path": [
+      "FOUNDATION",
+      "REINF",
+      "%%C 16 8"
+     ],
+     "value": "14 Ø 16"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      "GROUND FLOOR",
+      "SIZE",
+      "20"
+     ],
+     "value": "25"
+    },
+    {
+     "path": [
+      "GROUND FLOOR",
+      "SIZE",
+      "50"
+     ],
+     "value": "100"
+    },
+    {
+     "path": [
+      "GROUND FLOOR",
+      "REINF",
+      "%%C 16 8"
+     ],
+     "value": "14 Ø 16"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      ")1 1st  floor",
+      "SIZE"
+     ],
+     "value": "20"
+    },
+    {
+     "path": [
+      ")1 1st  floor",
+      "SIZE"
+     ],
+     "value": "90"
+    },
+    {
+     "path": [
+      ")1 1st  floor",
+      "REINF"
+     ],
+     "value": "12 Ø 16"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      "2nd floor  & Top 2)",
+      "SIZE"
+     ],
+     "value": "20"
+    },
+    {
+     "path": [
+      "2nd floor  & Top 2)",
+      "SIZE"
+     ],
+     "value": "70"
+    },
+    {
+     "path": [
+      "2nd floor  & Top 2)",
+      "REINF",
+      "%%C"
+     ],
+     "value": "10 Ø 16"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      "DES. LOAD"
+     ],
+     "value": "270"
+    }
+   ]
+  },
+  {
+   "type": "C10",
+   "count_on_column_plan": 1,
+   "foundation": "30 / 70 / 10 Ø 16",
+   "ground_floor": "25 / 70 / 10 Ø 16",
+   "first_floor": " /  / ",
+   "second_floor": " /  / Ø",
+   "cells": [
+    {
+     "path": [
+      "TYPE COL.",
+      "C"
+     ],
+     "value": "C10"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      "FOUNDATION",
+      "SIZE",
+      "30"
+     ],
+     "value": "30"
+    },
+    {
+     "path": [
+      "FOUNDATION",
+      "SIZE",
+      "50"
+     ],
+     "value": "70"
+    },
+    {
+     "path": [
+      "FOUNDATION",
+      "REINF",
+      "%%C 16 8"
+     ],
+     "value": "10 Ø 16"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      "GROUND FLOOR",
+      "SIZE",
+      "20"
+     ],
+     "value": "25"
+    },
+    {
+     "path": [
+      "GROUND FLOOR",
+      "SIZE",
+      "50"
+     ],
+     "value": "70"
+    },
+    {
+     "path": [
+      "GROUND FLOOR",
+      "REINF",
+      "%%C 16 8"
+     ],
+     "value": "10 Ø 16"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      ")1 1st  floor",
+      "SIZE"
+     ],
+     "value": ""
+    },
+    {
+     "path": [
+      ")1 1st  floor",
+      "SIZE"
+     ],
+     "value": ""
+    },
+    {
+     "path": [
+      ")1 1st  floor",
+      "REINF"
+     ],
+     "value": ""
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      "2nd floor  & Top 2)",
+      "SIZE"
+     ],
+     "value": ""
+    },
+    {
+     "path": [
+      "2nd floor  & Top 2)",
+      "SIZE"
+     ],
+     "value": ""
+    },
+    {
+     "path": [
+      "2nd floor  & Top 2)",
+      "REINF",
+      "%%C"
+     ],
+     "value": "Ø"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      "DES. LOAD"
+     ],
+     "value": "100"
+    }
+   ]
+  },
+  {
+   "type": "C11",
+   "count_on_column_plan": 2,
+   "foundation": "30 / 110 / 14 Ø 16",
+   "ground_floor": "25 / 110 / 14 Ø 16",
+   "first_floor": " /  / ",
+   "second_floor": " /  / Ø",
+   "cells": [
+    {
+     "path": [
+      "TYPE COL.",
+      "C"
+     ],
+     "value": "C11"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      "FOUNDATION",
+      "SIZE",
+      "30"
+     ],
+     "value": "30"
+    },
+    {
+     "path": [
+      "FOUNDATION",
+      "SIZE",
+      "50"
+     ],
+     "value": "110"
+    },
+    {
+     "path": [
+      "FOUNDATION",
+      "REINF",
+      "%%C 16 8"
+     ],
+     "value": "14 Ø 16"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      "GROUND FLOOR",
+      "SIZE",
+      "20"
+     ],
+     "value": "25"
+    },
+    {
+     "path": [
+      "GROUND FLOOR",
+      "SIZE",
+      "50"
+     ],
+     "value": "110"
+    },
+    {
+     "path": [
+      "GROUND FLOOR",
+      "REINF",
+      "%%C 16 8"
+     ],
+     "value": "14 Ø 16"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      ")1 1st  floor",
+      "SIZE"
+     ],
+     "value": ""
+    },
+    {
+     "path": [
+      ")1 1st  floor",
+      "SIZE"
+     ],
+     "value": ""
+    },
+    {
+     "path": [
+      ")1 1st  floor",
+      "REINF"
+     ],
+     "value": ""
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      "2nd floor  & Top 2)",
+      "SIZE"
+     ],
+     "value": ""
+    },
+    {
+     "path": [
+      "2nd floor  & Top 2)",
+      "SIZE"
+     ],
+     "value": ""
+    },
+    {
+     "path": [
+      "2nd floor  & Top 2)",
+      "REINF",
+      "%%C"
+     ],
+     "value": "Ø"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      "DES. LOAD"
+     ],
+     "value": "150"
+    }
+   ]
+  },
+  {
+   "type": "CN",
+   "count_on_column_plan": 5,
+   "foundation": "30 / 30 / 4 Ø 14",
+   "ground_floor": " /  / ",
+   "first_floor": " /  / ",
+   "second_floor": " /  / ",
+   "cells": [
+    {
+     "path": [
+      "TYPE COL.",
+      "C"
+     ],
+     "value": "CN"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      "FOUNDATION",
+      "SIZE",
+      "30"
+     ],
+     "value": "30"
+    },
+    {
+     "path": [
+      "FOUNDATION",
+      "SIZE",
+      "50"
+     ],
+     "value": "30"
+    },
+    {
+     "path": [
+      "FOUNDATION",
+      "REINF",
+      "%%C 16 8"
+     ],
+     "value": "4 Ø 14"
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      "GROUND FLOOR",
+      "SIZE",
+      "20"
+     ],
+     "value": ""
+    },
+    {
+     "path": [
+      "GROUND FLOOR",
+      "SIZE",
+      "50"
+     ],
+     "value": ""
+    },
+    {
+     "path": [
+      "GROUND FLOOR",
+      "REINF",
+      "%%C 16 8"
+     ],
+     "value": ""
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      ")1 1st  floor",
+      "SIZE"
+     ],
+     "value": ""
+    },
+    {
+     "path": [
+      ")1 1st  floor",
+      "SIZE"
+     ],
+     "value": ""
+    },
+    {
+     "path": [
+      ")1 1st  floor",
+      "REINF"
+     ],
+     "value": ""
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      "2nd floor  & Top 2)",
+      "SIZE"
+     ],
+     "value": ""
+    },
+    {
+     "path": [
+      "2nd floor  & Top 2)",
+      "SIZE"
+     ],
+     "value": ""
+    },
+    {
+     "path": [
+      "2nd floor  & Top 2)",
+      "REINF",
+      "%%C"
+     ],
+     "value": ""
+    },
+    {
+     "path": [],
+     "value": ""
+    },
+    {
+     "path": [
+      "DES. LOAD"
+     ],
+     "value": ""
+    }
+   ]
+  }
+ ],
+ "simple_beams": [
+  {
+   "type": "B1",
+   "cells": "TYPE OF BEAM=B1; S I Z E/B-(Bredth)=20; S I Z E/D-(Depth)=40; B O T T O M=2 Ø 14; T O P B A R S=2 Ø 12; STIRRUPS/m=6 Ø 8"
+  },
+  {
+   "type": "B2",
+   "cells": "TYPE OF BEAM=B2; S I Z E/B-(Bredth)=20; S I Z E/D-(Depth)=40; B O T T O M=3 Ø 16; T O P B A R S=2 Ø 12; STIRRUPS/m=6 Ø 8"
+  },
+  {
+   "type": "B3",
+   "cells": "TYPE OF BEAM=B3; S I Z E/B-(Bredth)=20; S I Z E/D-(Depth)=40; B O T T O M=4 Ø 16; T O P B A R S=2 Ø 12; STIRRUPS/m=6 Ø 8"
+  },
+  {
+   "type": "B4",
+   "cells": "TYPE OF BEAM=B4; S I Z E/B-(Bredth)=20; S I Z E/D-(Depth)=50; B O T T O M=4 Ø 16; T O P B A R S=2 Ø 12; STIRRUPS/m=6 Ø 8"
+  },
+  {
+   "type": "B5",
+   "cells": "TYPE OF BEAM=B5; S I Z E/B-(Bredth)=20; S I Z E/D-(Depth)=50; B O T T O M=4 Ø 18; T O P B A R S=2 Ø 12; STIRRUPS/m=6 Ø 8"
+  },
+  {
+   "type": "B6",
+   "cells": "TYPE OF BEAM=B6; S I Z E/B-(Bredth)=25; S I Z E/D-(Depth)=50; B O T T O M=5 Ø 18; T O P B A R S=2 Ø 12; STIRRUPS/m=6 Ø 8"
+  },
+  {
+   "type": "B7",
+   "cells": "TYPE OF BEAM=B7; S I Z E/B-(Bredth)=20; S I Z E/D-(Depth)=75; B O T T O M=3 Ø 16; T O P B A R S=2 Ø 12; STIRRUPS/m=6 Ø 8; REMARKS=2Ø12/30cm"
+  },
+  {
+   "type": "B8",
+   "cells": "TYPE OF BEAM=B8; S I Z E/B-(Bredth)=20; S I Z E/D-(Depth)=75; B O T T O M=4 Ø 16; T O P B A R S=2 Ø 12; STIRRUPS/m=6 Ø 8; REMARKS=2Ø12/30cm"
+  },
+  {
+   "type": "B9",
+   "cells": "TYPE OF BEAM=B9; S I Z E/B-(Bredth)=20; S I Z E/D-(Depth)=75; B O T T O M=4 Ø 18; T O P B A R S=2 Ø 12; STIRRUPS/m=6 Ø 8; REMARKS=2Ø12/30cm"
+  },
+  {
+   "type": "B10",
+   "cells": "TYPE OF BEAM=B10; S I Z E/B-(Bredth)=20; S I Z E/D-(Depth)=75; B O T T O M=5 Ø 18; T O P B A R S=2 Ø 12; STIRRUPS/m=6 Ø 8; REMARKS=2Ø12/30cm"
+  },
+  {
+   "type": "B11",
+   "cells": "TYPE OF BEAM=B11; S I Z E/B-(Bredth)=20; S I Z E/D-(Depth)=75; B O T T O M=6 Ø 18; T O P B A R S=2 Ø 12; STIRRUPS/m=6 Ø 8; REMARKS=2Ø12/30cm"
+  },
+  {
+   "type": "B12",
+   "cells": "TYPE OF BEAM=B12; S I Z E/B-(Bredth)=25; S I Z E/D-(Depth)=75; B O T T O M=6 Ø 18; T O P B A R S=2 Ø 14; STIRRUPS/m=6 Ø 8; REMARKS=2Ø12/30cm"
+  },
+  {
+   "type": "B13",
+   "cells": "TYPE OF BEAM=B13; S I Z E/B-(Bredth)=25; S I Z E/D-(Depth)=75; B O T T O M=7 Ø 18; T O P B A R S=2 Ø 14; STIRRUPS/m=7 Ø 8; REMARKS=2Ø12/30cm"
+  },
+  {
+   "type": "B14",
+   "cells": "TYPE OF BEAM=B14; S I Z E/B-(Bredth)=20; S I Z E/D-(Depth)=75; B O T T O M=4 Ø 18; T O P B A R S=2 Ø 12; STIRRUPS/m=7 Ø 8; REMARKS=2Ø12/30cm"
+  },
+  {
+   "type": "B15",
+   "cells": "TYPE OF BEAM=B15; S I Z E/B-(Bredth)=20; S I Z E/D-(Depth)=120; B O T T O M=4 Ø 16; T O P B A R S=6 Ø 18; STIRRUPS/m=10 Ø 8; REMARKS=2Ø12/30cm"
+  },
+  {
+   "type": "B16",
+   "cells": "TYPE OF BEAM=B16; S I Z E/B-(Bredth)=30; S I Z E/D-(Depth)=75; B O T T O M=5 Ø 18; T O P B A R S=3 Ø 14; STIRRUPS/m=10 Ø 10; REMARKS=2Ø16/20cm"
+  },
+  {
+   "type": "B17",
+   "cells": "TYPE OF BEAM=B17; S I Z E/B-(Bredth)=45; S I Z E/D-(Depth)=75; B O T T O M=10 Ø 18; T O P B A R S=4 Ø 14; STIRRUPS/m=6 Ø 8; REMARKS=2Ø12/30cm"
+  },
+  {
+   "type": "B18",
+   "cells": "TYPE OF BEAM=B18; S I Z E/B-(Bredth)=35; S I Z E/D-(Depth)=75; B O T T O M=10 Ø 18; T O P B A R S=3 Ø 14; STIRRUPS/m=5 Ø 8; REMARKS=2Ø12/30cm"
+  },
+  {
+   "type": "B19",
+   "cells": "TYPE OF BEAM=B19; S I Z E/B-(Bredth)=40; S I Z E/D-(Depth)=75; B O T T O M=11 Ø 18; T O P B A R S=4 Ø 14; STIRRUPS/m=10 Ø 10; REMARKS=2Ø14/20cm"
+  },
+  {
+   "type": "B20",
+   "cells": "TYPE OF BEAM=B20; S I Z E/B-(Bredth)=40; S I Z E/D-(Depth)=75; B O T T O M=11 Ø 18; T O P B A R S=11 Ø 18; STIRRUPS/m=10 Ø 8; REMARKS=2Ø12/30cm"
+  },
+  {
+   "type": "B21",
+   "cells": "TYPE OF BEAM=B21; S I Z E/B-(Bredth)=45; S I Z E/D-(Depth)=75; B O T T O M=12 Ø 18; T O P B A R S=4 Ø 14; STIRRUPS/m=10 Ø 10; REMARKS=2Ø12/30cm"
+  },
+  {
+   "type": "B22",
+   "cells": "TYPE OF BEAM=B22; S I Z E/B-(Bredth)=50; S I Z E/D-(Depth)=75; B O T T O M=14 Ø 18; T O P B A R S=5 Ø 14; STIRRUPS/m=5 Ø 8; REMARKS=2Ø12/30cm"
+  },
+  {
+   "type": "B23",
+   "cells": "TYPE OF BEAM=B23; S I Z E/B-(Bredth)=45; S I Z E/D-(Depth)=75; B O T T O M=11 Ø 18; T O P B A R S=11 Ø 18; STIRRUPS/m=10 Ø 8; REMARKS=2Ø12/30cm"
+  },
+  {
+   "type": "B24",
+   "cells": "TYPE OF BEAM=B24; S I Z E/B-(Bredth)=50; S I Z E/D-(Depth)=75; B O T T O M=5 Ø 16; T O P B A R S=10 Ø 18; STIRRUPS/m=5 Ø 8; REMARKS=2Ø12/30cm"
+  },
+  {
+   "type": "B25",
+   "cells": "TYPE OF BEAM=B25; S I Z E/B-(Bredth)=55; S I Z E/D-(Depth)=75; B O T T O M=15 Ø 18; T O P B A R S=5 Ø 14; STIRRUPS/m=6 Ø 8; REMARKS=2Ø12/30cm"
+  },
+  {
+   "type": "B26",
+   "cells": "TYPE OF BEAM=B26; S I Z E/B-(Bredth)=65; S I Z E/D-(Depth)=85; B O T T O M=19 Ø 18; T O P B A R S=6 Ø 14; STIRRUPS/m=10 Ø 10; REMARKS=2Ø16/20cm"
+  },
+  {
+   "type": "B27",
+   "cells": "TYPE OF BEAM=B27; S I Z E/B-(Bredth)=90; S I Z E/D-(Depth)=85; B O T T O M=22 Ø 20; T O P B A R S=9 Ø 16; STIRRUPS/m=10 Ø 10; REMARKS=2Ø16/20cm"
+  },
+  {
+   "type": "B28",
+   "cells": "TYPE OF BEAM=B28; S I Z E/B-(Bredth)=25; S I Z E/D-(Depth)=75; B O T T O M=3 Ø 16; T O P B A R S=2 Ø 14; STIRRUPS/m=10 Ø 10; REMARKS=2Ø12/30cm"
+  },
+  {
+   "type": "B29",
+   "cells": "TYPE OF BEAM=B29; S I Z E/B-(Bredth)=25; S I Z E/D-(Depth)=75; B O T T O M=7 Ø 18; T O P B A R S=2 Ø 14; STIRRUPS/m=5 Ø 8; REMARKS=2Ø12/30cm"
+  },
+  {
+   "type": "CA",
+   "cells": "TYPE OF BEAM=CA; S I Z E/B-(Bredth)=30; S I Z E/D-(Depth)=50; B O T T O M=5 Ø 18; T O P B A R S=5 Ø 18; STIRRUPS/m=8 Ø 8"
+  },
+  {
+   "type": "B.W",
+   "cells": "TYPE OF BEAM=B.W; S I Z E/B-(Bredth)=20; S I Z E/D-(Depth)=60; B O T T O M=4 Ø 16; T O P B A R S=2 Ø 14; STIRRUPS/m=7 Ø 8"
+  },
+  {
+   "type": "SB1",
+   "cells": "TYPE OF BEAM=SB1; S I Z E/B-(Bredth)=70; S I Z E/D-(Depth)=50; B O T T O M=7 Ø 16; T O P B A R S=13 Ø 18; STIRRUPS/m=8 Ø 8"
+  },
+  {
+   "type": "SB2",
+   "cells": "TYPE OF BEAM=SB2; S I Z E/B-(Bredth)=100; S I Z E/D-(Depth)=50; B O T T O M=10 Ø 16; T O P B A R S=20 Ø 18; STIRRUPS/m=10 Ø 8"
+  },
+  {
+   "type": "SB3",
+   "cells": "TYPE OF BEAM=SB3; S I Z E/B-(Bredth)=50; S I Z E/D-(Depth)=40; B O T T O M=5 Ø 16; T O P B A R S=5 Ø 18; STIRRUPS/m=7 Ø 8"
+  }
+ ],
+ "slabs": {
+  "GF_ROOF_SLAB": {
+   "thickness_labels_cm": {
+    "16": 4
+   },
+   "reinforcement_labels": {
+    "10Ø16": 1,
+    "11Ø18": 2,
+    "3Ø16/Top": 1,
+    "3Ø18": 1,
+    "5Ø10": 2,
+    "5Ø10/m": 35,
+    "6Ø10/m": 12,
+    "6Ø14/m": 1,
+    "7Ø10/m": 6,
+    "7Ø12/m": 1,
+    "8Ø16": 1,
+    "8Ø16/m": 6
+   }
+  },
+  "1F_ROOF_SLAB": {
+   "thickness_labels_cm": {
+    "16": 2
+   },
+   "reinforcement_labels": {
+    "11Ø18": 2,
+    "3Ø18": 1,
+    "5Ø10": 1,
+    "5Ø10/m": 17,
+    "6Ø10/m": 6,
+    "7Ø10/m": 3,
+    "8Ø10/m": 1,
+    "8Ø16": 1,
+    "8Ø16/m": 3
+   }
+  },
+  "2F_ROOF_SLAB": {
+   "thickness_labels_cm": {
+    "18": 2
+   },
+   "reinforcement_labels": {
+    "4Ø16/Top": 1,
+    "5Ø10/m": 7,
+    "5Ø18/Top": 1,
+    "6Ø10/m": 2,
+    "6Ø12/m": 2,
+    "6Ø14/m": 1,
+    "7Ø10/m": 1,
+    "7Ø14/m": 1
+   }
+  }
+ },
+ "footing_geometry": {
+  "rectangles": 22,
+  "tags": 27,
+  "association": {
+   "matched": 19,
+   "orphan_tags": [
+    "F",
+    "CN/FN",
+    "C/F",
+    "C/F",
+    "C11/F11",
+    "F10",
+    "C6/F6",
+    "CN/FN"
+   ],
+   "issues": [
+    {
+     "rectangle": [
+      121942.0,
+      42498.0,
+      122842.0,
+      43298.0
+     ],
+     "why": "RECTANGLE_WITHOUT_TAG",
+     "tags": []
+    },
+    {
+     "rectangle": [
+      131292.0,
+      36348.0,
+      132192.0,
+      37148.0
+     ],
+     "why": "RECTANGLE_WITHOUT_TAG",
+     "tags": []
+    },
+    {
+     "rectangle": [
+      141212.0,
+      41323.0,
+      142212.0,
+      42323.0
+     ],
+     "why": "RECTANGLE_WITHOUT_TAG",
+     "tags": []
+    }
+   ]
+  },
+  "untagged_rectangles": [
+   {
+    "rectangle": [
+     121942.0,
+     42498.0,
+     122842.0,
+     43298.0
+    ],
+    "why": "RECTANGLE_WITHOUT_TAG",
+    "tags": []
+   },
+   {
+    "rectangle": [
+     131292.0,
+     36348.0,
+     132192.0,
+     37148.0
+    ],
+    "why": "RECTANGLE_WITHOUT_TAG",
+    "tags": []
+   },
+   {
+    "rectangle": [
+     141212.0,
+     41323.0,
+     142212.0,
+     42323.0
+    ],
+    "why": "RECTANGLE_WITHOUT_TAG",
+    "tags": []
+   }
+  ]
+ }
+}

@@ -1,0 +1,53 @@
+{
+ "zones": [
+  {
+   "reception_text": "ALSENAN_P7757_DXF|H394|389|TEXT|0",
+   "projected_to_1F": [
+    -183157.459,
+    -800845.06
+   ],
+   "voids": [
+    {
+     "void_text": "ALSENAN_P7757_DXF|H2943|2938|TEXT|0",
+     "site": "SITE-8bddd8c3b8b698ad",
+     "reception_above_inside": true,
+     "site_status": "REVIEW_REQUIRED",
+     "site_area_m2": 112.064692,
+     "site_labels": [
+      "LAUNDRY",
+      "MASTER BED ROOM",
+      "MN‘—",
+      "OSZl",
+      "O—FtN‘²—XZS‚Zt",
+      "VOID"
+     ]
+    },
+    {
+     "void_text": "ALSENAN_P7757_DXF|H2943|3007|TEXT|0",
+     "site": null,
+     "reception_above_inside": false,
+     "site_status": null,
+     "site_area_m2": null,
+     "site_labels": null
+    }
+   ],
+   "state": "DOUBLE_HEIGHT_ZONE_CORROBORATED",
+   "owner_fact": "OF-A3-RECEPTION-DOUBLE-HEIGHT",
+   "horizontal_extent_m2": null,
+   "vertical_extent": {
+    "from_ffl_m": 1.0,
+    "to_ffl_m": 9.7,
+    "storeys": "GF + 1F",
+    "source": "section levels VE-AA-04 / VE-AA-06 (A2 transcription)"
+   },
+   "ceiling_condition": "NOT_IN_SOURCE",
+   "wall_heights": "BLOCKED (no single-storey assumption)"
+  }
+ ],
+ "plan_offset_native": [
+  -44852.0,
+  0.0
+ ],
+ "rule": "the GF label position carried to 1F by the sheet-frame offset must fall inside a 1F site labelled VOID; then the owner fact is corroborated by the plan",
+ "SCHEMA": "URBAN_ALSENAN_A3_DOUBLE_HEIGHT_V1"
+}

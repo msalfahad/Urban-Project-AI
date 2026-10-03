@@ -1,0 +1,27 @@
+{
+ "SCHEMA": "URBAN_R8_13_SKIRTING_METHOD_FACT_V1",
+ "fact": "QORTUBA-NEW-DRY-ROOM-FINISH-OWNER-001@v1",
+ "statement": {
+  "text": "dry / internal rooms carry FLOOR (m2) + SKIRTING (lm)",
+  "floor_unit": "m2",
+  "skirting_unit": "lm",
+  "skirting_method": "UNCHANGED: the existing skirting methodology (QP-08: no wardrobe / joinery deduction from skirting or profile); no behind-wardrobe skirting path is invented",
+  "values": [
+   {
+    "trade": "SKIRTING",
+    "attribute": "UNIT",
+    "value": "lm"
+   },
+   {
+    "trade": "FLOOR_FINISH",
+    "attribute": "UNIT",
+    "value": "m2"
+   }
+  ],
+  "quantities": "NONE in R8.13 (no skirting row is computed)"
+ },
+ "unit": "lm",
+ "quantity": "NONE (no skirting row in R8.13)",
+ "behind_wardrobe_path": "NOT INVENTED",
+ "method": "UNCHANGED (QP-08: no wardrobe / joinery deduction from skirting or profile)"
+}

@@ -1,0 +1,46 @@
+{
+ "NOTE": "P7757 facts supplied to the PA05 tests as INPUT DATA (never engine constants): the authored DWG void dimensions, the NW arched openings, the plan-copy offsets and the sheet index reads established in PA03 / PA04.",
+ "PLAN_COPY_OFFSETS_MM": [
+  44852.65,
+  89705.3
+ ],
+ "NW_ARCHED_WINDOW": {
+  "WIDTH_M": 1.552,
+  "RECT_HEIGHT_M": 2.161,
+  "EXPECTED_TOTAL_M2": 4.2998
+ },
+ "NW_TOWER_ARCH": {
+  "CHORD_M": 2.691,
+  "RISE_M": 0.839,
+  "RECT_HEIGHT_M": 2.161,
+  "EXPECTED_SEGMENT_M2": 1.6164,
+  "EXPECTED_TOTAL_M2_PA04": 7.4317
+ },
+ "ARCH_PDF_EXPECTED_ROLES": {
+  "1": "FLOOR_PLAN",
+  "2": "FLOOR_PLAN",
+  "3": "ROOF_PLAN",
+  "4": "SECTION",
+  "5": "SECTION",
+  "6": "SECTION_ELEVATION",
+  "7": "SECTION_ELEVATION",
+  "8": "ELEVATION",
+  "9": "ELEVATION",
+  "10": "DETAIL"
+ },
+ "ST_PDF_DETERMINISTIC_ROLES": {
+  "9": "COLUMN_SCHEDULE",
+  "10": "BEAM_SCHEDULE"
+ },
+ "MODEL_SPACE_PLAN_VIEWS_EXPECTED": 3,
+ "AUTHORED_VOID_DIMENSIONS": [
+  {
+   "DISPLAY_TEXT": "587",
+   "MEASURED_MM": 5870
+  },
+  {
+   "DISPLAY_TEXT": "400",
+   "MEASURED_MM": 4000
+  }
+ ]
+}

@@ -1,0 +1,48 @@
+{
+ "SCHEMA": "URBAN_OWNER_ACTION_REGISTER_V7",
+ "required_now": [],
+ "owner_review_open": [],
+ "headline": "NO OWNER ACTION REQUIRED FOR THE NEXT ROUND",
+ "answered_in_r8_10": [
+  {
+   "action_id": "CONFIRM_QORTUBA_NEW_ATTACHED_XREFS_OUTSIDE_PLAN",
+   "status": "ANSWERED",
+   "answer": "the unresolved xref occurrences contribute nothing to PLAN_VARIANT_4_SELECTED",
+   "recorded_as": "QORTUBA-NEW-XREFS-NONCONTRIBUTING-TO-PLAN-VARIANT-4-OWNER-001 (occurrences 16783, 17716)",
+   "never_ask_again": true
+  },
+  {
+   "action_id": "CONFIRM_QORTUBA_NEW_DIM_LINES_ARE_WALLS",
+   "status": "ANSWERED",
+   "answer": "7116 / 7117 / 7118 / 7119 are walls (7116 side: bathroom wall; 7119 side: room wall)",
+   "recorded_as": "QORTUBA-NEW-DIM-LINES-7116-7119-ARE-WALLS-OWNER-001 (part-scoped)",
+   "never_ask_again": true
+  },
+  {
+   "action_id": "QORTUBA_SCOPE_PLAN_VARIANT_4_ONLY",
+   "status": "ANSWERED",
+   "answer": "the BOQ is for the bottom-most plan only; variants 1-3 and other content are not measured"
+  }
+ ],
+ "prepared_not_asked": [
+  {
+   "action_id": "QORTUBA_FLOOR_UNDER_BUILT_IN_WARDROBES",
+   "question": "Qortuba porcelain floor: is it measured over the whole room footprint, under the built-in wardrobes of the dressing room (and under loose furniture) as well? YES - whole room / NO - the wardrobe footprint is deducted / NOT SURE",
+   "why_not_asked": "not the only material blocker: Q-13 is also blocked by the HALL wall-end caps (a drafting defect no owner fact can close) and by the SF3 sofa role; asking now would not release Q-13",
+   "never": "an expected quantity"
+  },
+  {
+   "action_id": "QORTUBA_CORRECTED_DRAWING_HALL_LOBBY_CAPS",
+   "request": "a corrected drawing in which the two short lines closing the wall ends at the Hall / Lobby passage are on the WALL layer and actually meet the wall faces (one of them stops 9 mm short)",
+   "why_not_asked": "a new drawing is a new source revision: every claim must be re-anchored to it; the matching DWG (identity with the DXF still NOT_ESTABLISHED) should come in the same step - a decision for the migration-planning round, not R8.10"
+  }
+ ],
+ "do_not_ask": [
+  "FIRNTUR meaning",
+  "SF3 meaning",
+  "threshold allocation",
+  "P7757 unit",
+  "the two answered R8.9 reviews",
+  "any expected quantity"
+ ]
+}
