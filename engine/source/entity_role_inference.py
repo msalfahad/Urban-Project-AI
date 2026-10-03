@@ -69,8 +69,10 @@ SHEET_FRAME, PLOT_BOUNDARY = "SHEET_FRAME", "PLOT_BOUNDARY"
 TO_GR = {WALL_FACE: GR.TOPOLOGY_BOUNDARY, COLUMN: GR.STRUCTURAL_OBSTACLE, GLAZING: GR.GLAZING_BOUNDARY,
          DOOR_SYMBOL: GR.OPENING_SYMBOL, OVERHEAD: GR.PRESENTATION_OVERHEAD, AXIS_GRID: GR.ANNOTATION_GRAPHICS,
          ANNOTATION: GR.ANNOTATION_GRAPHICS, SYMBOL: GR.FURNITURE, SANITARY: GR.SANITARY_FIXTURE,
-         STAIR: GR.STAIR_GEOMETRY, SHEET_FRAME: GR.SHEET_FRAME, PLOT_BOUNDARY: GR.SEMANTIC_BOUNDARY}
-NEGATIVE_ROLES = (OVERHEAD, AXIS_GRID, ANNOTATION, SYMBOL, SANITARY, STAIR, SHEET_FRAME, PLOT_BOUNDARY, DOOR_SYMBOL)
+         STAIR: GR.STAIR_GEOMETRY, SHEET_FRAME: GR.SHEET_FRAME, PLOT_BOUNDARY: GR.SEMANTIC_BOUNDARY,
+         "JOINERY": GR.FURNITURE}
+NEGATIVE_ROLES = (OVERHEAD, AXIS_GRID, ANNOTATION, SYMBOL, SANITARY, STAIR, SHEET_FRAME, PLOT_BOUNDARY, DOOR_SYMBOL,
+                  "JOINERY")
 
 CONTINUOUS, UNIFORM_DASH, DASH_DOT, LT_UNKNOWN = "CONTINUOUS", "UNIFORM_DASH", "DASH_DOT", "LINETYPE_UNKNOWN"
 
@@ -80,6 +82,8 @@ def policy_record() -> dict:
            "swing_sweep_rad": list(SWING_SWEEP_RAD), "leaf_length_ratio": LEAF_LENGTH_RATIO,
            "parallel_rad": PARALLEL_RAD, "sheet_aspect": list(SHEET_ASPECT),
            "frame_content_share": FRAME_CONTENT_SHARE, "min_treads": MIN_TREADS, "decision": dict(DECISION),
+           "motifs_v2": {"curved_glazing": dict(CURVED_GLAZING),
+                         "counter_run": {k: list(v) if isinstance(v, tuple) else v for k, v in COUNTER.items()}},
            "to_geometry_role": dict(TO_GR),
            "claim": {"review_state": POLICY_ACCEPTED, "authority": POLICY_ID,
                      "scope": "this source revision + anchor + region only; never inherited; versioned",
@@ -503,6 +507,199 @@ def glazing_motifs(inp: CI.CanonicalMeasurementInput, wall_segments, exclude=fro
     return {"parts": sorted(set(parts)), "windows": windows, "gaps": len(gaps)}
 
 
+CURVED_GLAZING = {"min_arcs": 2, "min_radius_mm": PHYSICAL_MM["door_radius"][1], "max_band_mm": 400.0,
+                  "min_sweep_rad": 0.5}
+COUNTER = {"offset_mm": (450.0, 750.0), "min_front_mm": 300.0, "min_run_mm": 900.0, "max_connector_mm": 750.0,
+           "front_cover": 0.8}
+JOINERY = "JOINERY"
+
+
+def curved_glazing_motifs(inp: CI.CanonicalMeasurementInput, wall_segments, glazing_layers, exclude=frozenset()) -> dict:
+    """Curved glazing: on a layer that already carries PROVEN glazing (straight glazing in a wall gap, or an accepted
+    glazing layer), a set of >= 2 concentric ARCS (same centre within the authoring tolerance) whose radii differ by
+    no more than a wall thickness, each larger than any door swing, sweeping >= 0.5 rad, with BOTH ends of the outer
+    and inner arcs within a wall thickness of an accepted wall face (anchored at its jambs). No text inside the
+    glazing band. -> {parts, windows: [{arcs, centre, radii, sweep_rad, developed_length_mm, chord_mm, ...}]}"""
+    mm = inp.unit_native_to_mm
+    tol = PHYSICAL_MM["authoring_tolerance"] / mm
+    reach = PHYSICAL_MM["wall_thickness"][1] / mm
+    arcs = [p for p in sorted(inp.parts, key=lambda q: q.identity.key) if p.visibility == CI.VISIBLE
+            and p.kind == "ARC" and not p.identity.instance_handles and p.identity.key not in exclude
+            and _layer(p) in glazing_layers and p.geometry[2] * mm > CURVED_GLAZING["min_radius_mm"]
+            and _arc_info(p)[4] >= CURVED_GLAZING["min_sweep_rad"]]
+    groups = []
+    for p in arcs:
+        c = (p.geometry[0], p.geometry[1])
+        for g in groups:
+            if g["layer"] == _layer(p) and math.hypot(c[0] - g["c"][0], c[1] - g["c"][1]) <= tol:
+                g["arcs"].append(p)
+                break
+        else:
+            groups.append({"layer": _layer(p), "c": c, "arcs": [p]})
+    out, parts = [], []
+    for g in groups:
+        ps = sorted(g["arcs"], key=lambda q: q.geometry[2])
+        if len(ps) < CURVED_GLAZING["min_arcs"]:
+            continue
+        radii = [q.geometry[2] for q in ps]
+        if (radii[-1] - radii[0]) * mm > CURVED_GLAZING["max_band_mm"]:
+            continue
+        if any((b - a) * mm >= PHYSICAL_MM["wall_thickness"][0] for a, b in zip(radii, radii[1:])):
+            continue                                       # lines a wall thickness apart: a curved wall, not glazing
+        anchored = True
+        for q in (ps[0], ps[-1]):
+            ai = _arc_info(q)
+            for end in (ai[2], ai[3]):
+                if not any(_pt_seg(end, w) <= reach for w in wall_segments):
+                    anchored = False
+        if not anchored:
+            continue
+        lens = [q.geometry[2] * _arc_info(q)[4] * mm for q in ps]
+        mid = ps[len(ps) // 2]
+        ai = _arc_info(mid)
+        ks = sorted(q.identity.key for q in ps)
+        parts += ks
+        out.append({"layer": str(g["layer"]), "parts": ks, "centre": [round(v, 3) for v in g["c"]],
+                    "radii_mm": [round(r * mm, 1) for r in radii],
+                    "sweep_rad": [round(_arc_info(q)[4], 6) for q in ps],
+                    "arc_lengths_mm": [round(v, 1) for v in lens],
+                    "developed_length_mm": round(sum(lens) / len(lens), 1),
+                    "developed_length_range_mm": [round(min(lens), 1), round(max(lens), 1)],
+                    "chord_mm": round(math.hypot(ai[2][0] - ai[3][0], ai[2][1] - ai[3][1]) * mm, 1),
+                    "band_mm": round((radii[-1] - radii[0]) * mm, 1), "form": "CURVED"})
+    return {"parts": sorted(set(parts)), "windows": out}
+
+
+def counter_run_motifs(inp: CI.CanonicalMeasurementInput, wall_segments, exclude=frozenset()) -> dict:
+    """Fixed counters / joinery: a chain of single model-space lines (no wall layer) in which
+       FRONT       a segment >= 300 mm parallel to an accepted wall face at a constant 450 - 750 mm offset, the
+                   face covering >= 80 % of it, no other wall face between them, and NO parallel mate at a wall
+                   thickness (80 - 400 mm) - so it is not a wall face itself;
+       CONNECTOR   a segment <= 750 mm joining two fronts or a front to a wall face;
+    the chain's free ends lie on accepted wall faces, its fronts total >= 900 mm, and no room label lies in the strip
+    between a front and its wall. -> {parts, runs: [{parts, fronts, offsets_mm, front_length_mm}]}"""
+    mm = inp.unit_native_to_mm
+    tol = PHYSICAL_MM["authoring_tolerance"] / mm
+    lo, hi = (v / mm for v in COUNTER["offset_mm"])
+    wlo, whi = (v / mm for v in PHYSICAL_MM["wall_thickness"])
+    vis = [p for p in sorted(inp.parts, key=lambda q: q.identity.key) if p.visibility == CI.VISIBLE
+           and p.kind == "SEGMENT" and not p.identity.instance_handles and p.identity.key not in exclude]
+    segs = {p.identity.key: _seg(p) for p in vis}
+    allseg = list(segs.items())
+    texts = [(t.x, t.y) for t in inp.texts if t.visibility == CI.VISIBLE and t.x is not None and t.value
+             and any(ch.isalpha() for ch in t.value)]
+
+    def frame(s):
+        L = _len(s)
+        u = ((s[2] - s[0]) / L, (s[3] - s[1]) / L)
+        return L, u, (-u[1], u[0])
+
+    openings = []                                             # proven wall gaps: a face line interrupted by an
+    for g in wall_gaps(wall_segments, mm):                    # opening is still that wall line (coverage only)
+        for o in (g["o0"], g["o1"]):
+            a = (g["u"][0] * g["t0"] + g["n"][0] * o, g["u"][1] * g["t0"] + g["n"][1] * o)
+            b = (g["u"][0] * g["t1"] + g["n"][0] * o, g["u"][1] * g["t1"] + g["n"][1] * o)
+            openings.append((a[0], a[1], b[0], b[1]))
+
+    def front_of(k, s):
+        L, u, n = frame(s)
+        if L * mm < COUNTER["min_front_mm"]:
+            return None
+        par = [w for w in wall_segments if _len(w) > 0 and (abs(_angle(w) - _angle(s)) % math.pi <= PARALLEL_RAD or
+                                                           abs(abs(_angle(w) - _angle(s)) - math.pi) <= PARALLEL_RAD)]
+        par_open = [w for w in openings if _len(w) > 0 and (abs(_angle(w) - _angle(s)) % math.pi <= PARALLEL_RAD or
+                                                           abs(abs(_angle(w) - _angle(s)) - math.pi) <= PARALLEL_RAD)]
+        offs = defaultdict(list)
+        for w in par + par_open:
+            o = (w[0] - s[0]) * n[0] + (w[1] - s[1]) * n[1]
+            if lo <= abs(o) <= hi:
+                t0, t1 = sorted(((w[0] - s[0]) * u[0] + (w[1] - s[1]) * u[1], (w[2] - s[0]) * u[0] + (w[3] - s[1]) * u[1]))
+                offs[round(o / tol)].append((max(0.0, t0), min(L, t1), o))
+        best = None
+        for key, iv in offs.items():
+            iv.sort()
+            cov, cur = 0.0, None
+            for a, b, _ in iv:
+                if b <= a:
+                    continue
+                if cur is None or a > cur[1]:
+                    cov += (cur[1] - cur[0]) if cur else 0.0
+                    cur = [a, b]
+                else:
+                    cur[1] = max(cur[1], b)
+            cov += (cur[1] - cur[0]) if cur else 0.0
+            o = iv[0][2]
+            if cov >= COUNTER["front_cover"] * L:
+                # no wall face strictly between the front and that face
+                between = [w for w in par if 0 < ((w[0] - s[0]) * n[0] + (w[1] - s[1]) * n[1]) * (1 if o > 0 else -1)
+                           < abs(o) - tol]
+                if between:
+                    continue
+                if best is None or abs(o) < abs(best):
+                    best = o
+        if best is None:
+            return None
+        for k2, s2 in allseg:                                 # a mate at a wall thickness = a wall, not a counter
+            if k2 == k or _len(s2) == 0:
+                continue
+            if abs(_angle(s2) - _angle(s)) % math.pi > PARALLEL_RAD and abs(abs(_angle(s2) - _angle(s)) - math.pi) > PARALLEL_RAD:
+                continue
+            o2 = abs((s2[0] - s[0]) * n[0] + (s2[1] - s[1]) * n[1])
+            t0, t1 = sorted(((s2[0] - s[0]) * u[0] + (s2[1] - s[1]) * u[1], (s2[2] - s[0]) * u[0] + (s2[3] - s[1]) * u[1]))
+            if wlo <= o2 <= whi and min(L, t1) - max(0.0, t0) >= 0.5 * L:
+                return None
+        for x, y in texts:                                    # a label in the strip: the strip is a room
+            t = (x - s[0]) * u[0] + (y - s[1]) * u[1]
+            o = (x - s[0]) * n[0] + (y - s[1]) * n[1]
+            if 0 <= t <= L and 0 < o * (1 if best > 0 else -1) < abs(best):
+                return None
+        return round(abs(best) * mm, 1)
+    fronts = {k: f for k, s in segs.items() if (f := front_of(k, s)) is not None}
+    # chains: fronts + short connectors joined end to end
+    cand = dict(fronts)
+    for k, s in segs.items():
+        if k not in cand and _len(s) * mm <= COUNTER["max_connector_mm"]:
+            cand[k] = None
+    ends = {k: ((segs[k][0], segs[k][1]), (segs[k][2], segs[k][3])) for k in cand}
+    adj = defaultdict(set)
+    ks = sorted(cand)
+    for i, a in enumerate(ks):
+        for b in ks[i + 1:]:
+            if any(_close(p, q, tol) for p in ends[a] for q in ends[b]):
+                adj[a].add(b)
+                adj[b].add(a)
+    seen, runs, parts = set(), [], []
+    for k0 in sorted(fronts):
+        if k0 in seen:
+            continue
+        comp, stack = set(), [k0]
+        while stack:
+            k = stack.pop()
+            if k in comp:
+                continue
+            comp.add(k)
+            stack += [j for j in adj[k] if j not in comp and (j in fronts or any(m in fronts for m in adj[j]))]
+        seen |= comp
+        conns = [k for k in comp if k not in fronts]
+        if any(not any(m in fronts for m in adj[k] & comp) for k in conns):
+            continue
+        free = []
+        for k in comp:
+            for p in ends[k]:
+                if not any(_close(p, q, tol) for j in comp - {k} for q in ends[j]):
+                    free.append(p)
+        if not free or not all(any(_pt_seg(p, w) <= tol for w in wall_segments) for p in free):
+            continue
+        flen = sum(_len(segs[k]) for k in comp if k in fronts) * mm
+        if flen < COUNTER["min_run_mm"]:
+            continue
+        runs.append({"parts": sorted(comp), "fronts": sorted(k for k in comp if k in fronts),
+                     "offsets_mm": sorted({fronts[k] for k in comp if k in fronts}),
+                     "front_length_mm": round(flen, 1), "free_ends_on_walls": len(free)})
+        parts += sorted(comp)
+    return {"parts": sorted(set(parts)), "runs": runs}
+
+
 def _cross(s, w):
     """Proper interior intersection of two segments (not at an end point)."""
     d1x, d1y, d2x, d2y = s[2] - s[0], s[3] - s[1], w[2] - w[0], w[3] - w[1]
@@ -877,10 +1074,17 @@ def infer(inp: CI.CanonicalMeasurementInput, *, linetypes=None, layer_linetype=N
     pb = plot_boundaries(inp, wall_segs, exclude=frozenset(wall_ms | taken))
     taken |= set(pb["parts"])
     col_ms = {k for l in _accepted(dec, COLUMN) for k in obs[l]["_ms_keys"]}
+    key_lay = {p.identity.key: _layer(p) for p in vis}
+    glz_layers = {key_lay[k] for k in gm["parts"] if k in key_lay} | set(_accepted(dec, GLAZING))
+    cg = curved_glazing_motifs(inp, wall_segs, glz_layers, exclude=frozenset(wall_ms | col_ms | taken))
+    taken |= set(cg["parts"])
+    cr = counter_run_motifs(inp, wall_segs, exclude=frozenset(wall_ms | col_ms | taken))
+    taken |= set(cr["parts"])
     rm = residual_motifs(inp, wall_segs, exclude=frozenset(wall_ms | col_ms | taken))
     occ = occurrence_roles(inp, skip=frozenset(dm["doors"]))
     part_roles = {}
     for role, keys in ((SHEET_FRAME, frame_keys), (DOOR_SYMBOL, door_keys), (GLAZING, set(gm["parts"])),
+                       (GLAZING, set(cg["parts"])), (JOINERY, set(cr["parts"])),
                        (STAIR, tread_keys), (PLOT_BOUNDARY, set(pb["parts"]))):
         for k in sorted(keys):
             part_roles.setdefault(k, role)
@@ -912,7 +1116,7 @@ def infer(inp: CI.CanonicalMeasurementInput, *, linetypes=None, layer_linetype=N
     clean_obs = {l: {k: v for k, v in o.items() if not k.startswith("_")} for l, o in obs.items()}
     return {"policy": policy_record(), "observations": clean_obs, "candidates": cands, "decisions": dec,
             "glazing_share": gshare, "frames": frames, "doors": dm, "glazing": gm, "treads": tm,
-            "plot_boundary": pb, "occurrences": occ, "residual": rm,
+            "plot_boundary": pb, "occurrences": occ, "residual": rm, "curved_glazing": cg, "counter_runs": cr,
             "columns": {l: [{"parts": list(r[0]), "w_mm": r[1], "h_mm": r[2], "centre": r[3]} for r in obs[l]["_rects"]]
                         for l in _accepted(dec, COLUMN)},
             "claims": claims, "inferred_doors": dm["doors"], "part_roles": part_roles}
