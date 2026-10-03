@@ -123,6 +123,8 @@ def classify(inp: CI.CanonicalMeasurementInput, *, frame_insert=None, claims=())
             tag_role[o] = (ROOM_LABEL_CANDIDATE, "TR-06", "tag occurrence without corroboration or family")
     claim_layers = {}
     for c in claims:
+        if c.review_state == RA.POLICY_ACCEPTED and c.part_keys:
+            continue                       # A2: an inference claim names geometry parts only, never texts
         if RA.claim_applies(c, inp.revision, inp.region_id)[0]:
             claim_layers[c.layer] = c
     out = {}

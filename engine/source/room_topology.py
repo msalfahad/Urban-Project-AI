@@ -71,7 +71,7 @@ LINEAR = ("SEGMENT", "ARC", "CIRCLE")
 
 
 def topology_inputs(inp: CI.CanonicalMeasurementInput, *, frame_insert, eps_n, eps_r=None, claims=(),
-                    occurrence_claims=None):
+                    occurrence_claims=None, inferred_doors=None):
     """(items, probes, labels, roles result, closures, opening status, symbol probes per door) - deterministic.
 
     R8.9 role authority (role_authority): occurrence contexts (building assemblies from positive evidence), source-
@@ -86,6 +86,17 @@ def topology_inputs(inp: CI.CanonicalMeasurementInput, *, frame_insert, eps_n, e
         adm = GR.admit(inp, frame_insert=frame_insert, eps=eps_n, assemblies=assemblies)
     roles, claim_rec = RA.apply_claims(inp, adm["roles"], claims)
     adm["roles"], adm["claims"], adm["occurrence_contexts"] = roles, claim_rec, ctx
+    if inferred_doors:                     # A2: door-motif occurrences (entity_role_inference), never by name
+        adm["doors"] = dict(adm["doors"])
+        adm["inferred_doors"] = {}
+        for o, sig in sorted(inferred_doors.items()):
+            keys = [p.identity.key for p in inp.parts if p.visibility == CI.VISIBLE and _occ(p, assemblies) == o]
+            if o in adm["doors"] or not keys or any(roles[k].role != GR.OPENING_SYMBOL for k in keys
+                                                    if k == sig["swing_part"]):
+                adm["inferred_doors"][o] = "NOT_ADMITTED (already a door, absent, or its swing is not OPENING_SYMBOL)"
+                continue
+            adm["doors"][o] = sig
+            adm["inferred_doors"][o] = "ADMITTED"
     items, probes, door_probes, cands = [], [], defaultdict(list), []
     for p in sorted(inp.parts, key=lambda q: q.identity.key or ""):
         if p.visibility != CI.VISIBLE:
@@ -343,7 +354,7 @@ def passage_sites(passages, res, unit_native_to_mm):
 
 def run(inp: CI.CanonicalMeasurementInput, *, frame_insert, expected_revision_id=None, selected_region_id=None,
         contract=TS01, unrealised=None, claims=(), occurrence_claims=None, part_claims=(), xref_claims=(),
-        closure_policy=None, provenance=None) -> dict:
+        closure_policy=None, provenance=None, inferred_doors=None) -> dict:
     v = CI.validate(inp, contract, expected_revision_id=expected_revision_id, selected_region_id=selected_region_id)
     out = {"method_id": contract.method_id, "validation": v, "state": v["state"], "sites": None}
     if v["state"] != CI.COMPLETE:
@@ -356,7 +367,7 @@ def run(inp: CI.CanonicalMeasurementInput, *, frame_insert, expected_revision_id
     pclaims, prec = OC.role_claims(part_claims, inp)           # R8.10: part-scoped claims -> role authority only
     items, probes, labels, adm, closures, status, door_probes = topology_inputs(
         inp, frame_insert=frame_insert, eps_n=tol["eps_n"], eps_r=tol["eps_r"], claims=tuple(claims) + tuple(pclaims),
-        occurrence_claims=occurrence_claims)
+        occurrence_claims=occurrence_claims, inferred_doors=inferred_doors)
     wb, tcs = None, []
     if closure_policy is not None:                      # R8.11: wall bands + zero-material wall-end closures
         if closure_policy != TC.POLICY_ID:

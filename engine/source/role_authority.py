@@ -74,6 +74,10 @@ BUILDING_ASSEMBLY, SYMBOL, SHEET_FRAME, PRESENTATION, UNKNOWN_OCC = (
 
 # claim review states / authorities
 REVIEWED, SOURCE_EVIDENCE_CANDIDATE = "REVIEWED", "SOURCE_EVIDENCE_CANDIDATE"
+# A2 (entity_role_inference): a claim ACCEPTED by the evidence-scored inference policy (not human-reviewed). It
+# applies only with that policy as its authority and with recorded evidence; its own policy record (digested in
+# entity_role_inference.policy_record) documents the decision rule. Claims of any other state never apply.
+POLICY_ACCEPTED, INFERENCE_AUTHORITY = "POLICY_ACCEPTED", "ENTITY_ROLE_INFERENCE_V1"
 
 
 def policy_record() -> dict:
@@ -113,7 +117,8 @@ class SourceLayerRoleClaim:
 
 def claim_applies(c: SourceLayerRoleClaim, revision: CI.SourceRevision, region_id=None) -> tuple:
     """(applies, reason). Never by project name, never across revisions unless explicitly inherited."""
-    if c.review_state != REVIEWED:
+    accepted = c.review_state == POLICY_ACCEPTED and c.authority == INFERENCE_AUTHORITY and bool(c.evidence)
+    if c.review_state != REVIEWED and not accepted:
         return False, f"NOT_REVIEWED ({c.review_state}): a candidate claim never changes a role"
     same = (c.source_revision_id == revision.revision_id and c.source_anchor_sha256 == revision.anchor_sha256)
     inherited = (revision.revision_id, revision.anchor_sha256) in tuple(c.inherits_to)
