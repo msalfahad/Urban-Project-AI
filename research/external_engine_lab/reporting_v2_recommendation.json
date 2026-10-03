@@ -1,0 +1,95 @@
+{
+ "SCHEMA": "URBAN_REPORTING_V2_RECOMMENDATION_V1",
+ "phase": "URBAN_QTO_REPORTING_LAYER_V2",
+ "base_commit": "02feef8",
+ "committed_before": "any Reporting V2 code",
+ "scope": "PRESENTATION ONLY: no engine, geometry, quantity, formula, status, authority, owner fact, method, blocker or release change; Qortuba and the Alsenan frozen registers are read, never written",
+ "inspected": [
+  "data/reports/URBAN_QTO_ALSENAN_PHASE_B2A1_GENERIC_QA_PATCH/URBAN_QTO_ALSENAN_PHASE_B2A1.xlsx (13 sheets)",
+  "research/external_engine_lab/alsenan_b2a_registers.py workbook() / write_xlsx() / readback()",
+  "engine/boq_rc1_xlsx.py (BOQ_XLSX_EXPORT_V2, Qortuba RC1 view: one ADDITIVE_SUMMARY sheet, readback, fixed zip times)",
+  "tests/r8_20/registers/BOQ_REPORT_SCHEMA.json (BOQ_REPORT_LAYER_V1: 'never a calculation, sum or rounding in the report')",
+  "tests/alsenan/registers_b2a1/*.json (B2A.1 frozen) and tests/alsenan/registers_a3/*.json (A3 frozen, preserved by B2A)",
+  "tests/alsenan/registers_a3/ARCH_BOQ.json (bilingual A3 architectural lines), ROOM / FLOOR_CEILING / SKIRTING / FOOTING / STRAP registers",
+  "tests/rc1/registers/CANONICAL_BOQ.json (Qortuba: 21 canonical items, AR + EN, measure pairs), ROOM_QUANTITY_MATRIX, DOOR / WINDOW / GLAZING registers",
+  "documents/render.py (Chromium PDF route), assets/logo.svg + logo.png, assets/fonts/Cairo-Variable.ttf (Arabic + Latin, OFL)",
+  "environment: openpyxl 3.1.5, Playwright + Chromium 1194 (Arabic shaping verified with a test page), pypdf, pymupdf; no reportlab"
+ ],
+ "answers": {
+  "1_whats_wrong_with_the_current_workbook": [
+   "00_SUMMARY is key / JSON-blob pairs ({\"1F\": {\"MEASURED\": 26, ...}}): no project header, no totals, no units, nothing a QS can read.",
+   "Every sheet is a register dump (columns 105 rows, beams 89 occurrence rows) with floors interleaved in one table; the owner scrolls through occurrences before any summary exists.",
+   "The B2A.1 workbook only covers the B2A registers: rooms, floor areas, blockwork, doors, skirting, footing types, straps live in the separate A3 workbook - the villa is split across two files.",
+   "No Arabic, no status colours, raw enum codes (BLOCKED_UPPER_MEMBER_UNBOUND) with no user-facing reason / effect / need.",
+   "No print setup: no print area, no repeated headers, no landscape fit, no footer - it does not print.",
+   "Additivity is stated only as a banner ('SHADOW VIEW - NOT ADDITIVE'); there is no sheet whose lines may be added, so the user cannot get a project total at all."
+  ],
+  "2_technical_only_sheets": [
+   "03_COLUMNS -> TECH_COLUMN_OCCURRENCES", "04_BEAMS -> TECH_BEAM_OCCURRENCES", "05_SLABS + slab faces -> TECH_SLAB_REGIONS",
+   "07_OPENINGS evidence columns (function basis, jambs, previous function) -> TECH_OPENING_EVIDENCE",
+   "11_DELTA (A3 -> B2A) -> TECH_A3_B2A_DELTA", "QA gates, regressions, freeze digests -> TECH_QA, TECH_RUN_INFO",
+   "source handles (DXF handle keys) -> TECH_SOURCE_HANDLES"
+  ],
+  "3_replaced_by_owner_qs_views": {
+   "00_SUMMARY": "00_TOTAL_SUMMARY (project header, totals by trade, totals by floor, coverage)",
+   "05_SLABS / 06_CONCRETE / 09_WALL_HEIGHTS / 10_WATERPROOFING (by floor)": "01_GROUND_FLOOR, 02_FIRST_FLOOR, 03_ROOF_SECOND_FLOOR (same six-section layout each)",
+   "06_CONCRETE foundation rows + A3 footing / strap registers": "04_FOUNDATION_SUBSTRUCTURE",
+   "07_OPENINGS + 08_CURVED": "05_OPENINGS_ALUMINIUM",
+   "12_BLOCKERS (+ A3 owner questions)": "06_BLOCKERS_OWNER_QUESTIONS",
+   "01_OWNER_FACTS + 02_METHODS + freeze": "07_METHODS_TRACEABILITY",
+   "note": "the frozen B2A.1 workbook is NOT modified or deleted; Reporting V2 is a new deliverable over the same frozen registers"
+  },
+  "4_never_recomputes": [
+   "The report is built from the frozen register FILES only (their sha256 recorded as REPORT INPUT DIGESTS); the reporting package imports no QTO engine (AST import test: engine/reporting_v2 may not import engine.source or any measurement module).",
+   "Every quantity cell in the reporting model is either a REGISTER VALUE with its source pointer (register file + JSON path), re-resolved at build and in the tests and required to equal the shown value exactly, or a DECLARED_SUM whose addends are such pointers.",
+   "DECLARED_SUM is the only arithmetic allowed: a plain sum of ADDITIVE register values with the same trade and unit; it records every addend; a sum with any PARTIAL / BLOCKED member is PARTIAL, a BLOCKED value is never 0. Where a register already publishes the same total (footings 64.346 m3, storey physical concrete, column by_storey) the declared sum must equal it (test).",
+   "No Excel formula anywhere (readback refuses any formula cell); values are stored at full engine precision and only the number format rounds.",
+   "Readback compares every quantity / unit / status / item code cell with the reporting model; the regression compares every register value referenced with the frozen register."
+  ],
+  "5_double_count": [
+   "Every row carries one class: ADDITIVE / BREAKDOWN_ONLY / ALTERNATIVE_MEASURE / TRACE_ONLY.",
+   "Each physical item has exactly ONE ADDITIVE line (unique item key) and it appears only on 00_TOTAL_SUMMARY; every floor-sheet row that repeats it is BREAKDOWN_ONLY and names the line it explains.",
+   "One item measured twice (Qortuba MRB-01 / MRB-02, SGD-01 / 02, WIN-01 / 02; Alsenan gross beam view vs downstand; curved MID / MAX arcs vs the selected MIN_RADIUS_ARC) -> one basis ADDITIVE, the others ALTERNATIVE_MEASURE.",
+   "Trade totals add only ADDITIVE lines of that trade and unit; the totals-by-floor matrix adds the same lines by level, and the model checks sum(floors) == trade total for every trade.",
+   "Alsenan specifics: storey concrete = slab + downstand + joint + column (register model, each m3 in one component) so the components are BREAKDOWN_ONLY under the storey line; the 4 GF openings that are doors are the same occurrences as 4 of the 12 GF door symbols (register door_reconciliation) - doors are counted from the door line only; curved glazing length is not added to any window count."
+  ],
+  "6_floor_grouping": [
+   "Every line carries a level from the register's own floor / storey key, mapped to a closed vocabulary: FOUNDATION, GF, 1F, 2F, ROOF, EXTERNAL (other projects: their declared levels in order). A line without a proved level goes to UNASSIGNED and is shown, never hidden.",
+   "One user-facing sheet per floor (01 / 02 / 03), the same six sections in the same order (KPI strip, rooms, structure, openings, finishes, notes / blockers), navy floor band, repeated column headers, a page break before each section that would split, and the note 'Project totals: use 00_TOTAL_SUMMARY only' on every breakdown sheet.",
+   "Register storeys are kept as defined: the Alsenan 'GF' structural storey is the GF columns + the slab over GF (GF_ROOF_SLAB). It is labelled that way, never re-sliced.",
+   "Roof waterproofing (3 regions: GF roof exposed, 1F roof exposed, 2F roof top) is reported on 03_ROOF_SECOND_FLOOR in its own ROOF WATERPROOFING section, separate from wet-room waterproofing on each floor."
+  ],
+  "7_bilingual": [
+   "Arabic order of authority: (1) the register's own Arabic (ARCH_BOQ 'ar', Qortuba CANONICAL_BOQ description_ar); (2) the Urban glossary in engine/reporting_v2/terms.py (terms stated in the owner's brief, e.g. المساح / اللياسة, الصبغ / الدهان, العازل, plus the repo's existing usage); (3) otherwise the Arabic cell stays empty - nothing is machine-invented.",
+   "Room names: the source label (English) plus the Arabic label only when the source carries one; floor / section / status titles from the glossary.",
+   "Excel: Arabic cells right-aligned (reading order RTL); PDF: Cairo font (bundled, OFL) with dir=rtl spans - shaping verified in Chromium."
+  ],
+  "8_pdf_matches_excel": [
+   "One REPORTING_MODEL_V2 -> two renderers. The PDF has one section per main sheet in the same order (page break before each), the same tables with the same rows and the same formatted values, the same status colours, header and footer (project, phase, page X of Y, Urban Projects).",
+   "Technical appendix: in the PDF a short summary page per TECH sheet (row counts + digests) - occurrence lists stay in Excel.",
+   "Test: the PDF text (pymupdf) contains every section title in order and every ADDITIVE line's id and formatted quantity."
+  ],
+  "9_generic_reusable": [
+   "engine/reporting_v2/ (outside engine/source because it uses openpyxl, like engine/boq_rc1_xlsx.py): model.py (schema, row classes, status alias table, declared sums, validation), terms.py (bilingual glossary + generic status explanations: user-facing reason / effect / need per technical code), xlsx.py (renderer + print setup + deterministic zip), pdf.py (HTML + Chromium + deterministic metadata), readback.py.",
+   "Per register family only an ADAPTER: research/external_engine_lab/reporting_v2_alsenan.py (A3 + B2A.1 register schemas) and reporting_v2_qortuba.py (RC1 register schemas). Adapters map, never measure.",
+   "Unknown technical status code -> the build fails (no silent alias); a new project adds codes to the generic table."
+  ],
+  "10_disagreements": [
+   "TOTALS: BOQ_REPORT_LAYER_V1 (R8.20) said 'never a sum in the report'. A project total by trade needs one. I replace it, for V2 only, with DECLARED_SUM of ADDITIVE register values (same trade + unit, addends recorded, blocked never 0, cross-checked against register totals). If you prefer no sums at all, the trade table can show only register-published totals - say so.",
+   "THE MOCK-UP NUMBERS CANNOT APPEAR: Alsenan paint, wall tile, floor tile / porcelain, ceiling finish, door / window area and blockwork area are BLOCKED in the frozen registers (floor build-up, finish materials and opening heights are not in the source). Page 1 will show those trades as BLOCKED with the reason; plaster appears only as the B2A terminated-face gross subtotal (PARTIAL). The report will look emptier than the mock-up - by design.",
+   "Rooms: the room table shows the physical measure (floor area, ceiling base area, skirting path) as COMPUTED and the finish as BLOCKED in separate columns, per your section 26; there is no per-room wall-tile value to show.",
+   "Coverage visual: quantities in m3 / m2 / lm / nr cannot be summed, so the coverage donut / bar counts REPORT LINES by status (computed / partial / review / blocked), and says so.",
+   "Priority on the owner-question page is a reporting rule (structure and foundations HIGH; envelope, openings, finishes MEDIUM; information LOW), not an engine output; it is labelled as such.",
+   "Status alias: engine codes map to four display states (COMPUTED / PARTIAL / REVIEW / BLOCKED) + INFO. Some mappings are judgement (COMPUTED_FROM_TYPICAL_DETAIL -> PARTIAL because blocked footings are excluded; CERTIFIED_WITH_OWNER_FACT -> COMPUTED with the owner fact named). The full alias table is printed on 07_METHODS_TRACEABILITY and every row keeps its technical code.",
+   "Header 'Shadow / Approved': nothing is approved; the header says SHADOW - NOT APPROVED and never shows an approved state.",
+   "Qortuba: its RC1 registers cover one floor (the selected second-floor apartment) and no structure; its report has one floor sheet and states FOUNDATION / STRUCTURE = NOT IN SCOPE OF THE RC1 REGISTERS rather than empty tables.",
+   "PDF bytes: Chromium writes creation dates; I normalise the PDF metadata so two builds are byte-identical and also record a text digest."
+  ]
+ },
+ "plan": [
+  "engine/reporting_v2: model / terms / xlsx / pdf / readback + tests (synthetic model: additivity, declared sums, blocked-not-zero, unknown status fails, no formulas, readback catches an edited cell)",
+  "adapters: Alsenan (A3 + B2A.1 frozen registers) and Qortuba (RC1 frozen registers); every value pointer re-resolved",
+  "build twice -> byte-identical XLSX and PDF; REPORTING_MODEL_V2.json, REPORTING_READBACK_QA.json, REPORTING_V2_REGRESSION.json (Alsenan + Qortuba: zero quantity / status change), REPORTING_V2_DESIGN_SPEC.md, REPORTING_V2_TEST_RESULTS.json, REPORTING_V2.zip",
+  "one full suite from the final commit"
+ ]
+}
