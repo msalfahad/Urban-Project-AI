@@ -48,9 +48,16 @@ def compare(rebuilt: Path) -> dict:
         if d:
             changed.append(n)
     extra = sorted(p.name for p in rebuilt.glob("*.json") if not (FROZEN / p.name).exists())
-    only_inventory = all(all(("ENGINE_INVENTORY" in n) or any(k in x["path"] for k in ("sha256", "digest", "commit",
-                                                                                     "inventory"))
-                             for x in per[n].get("differences", [])) for n in changed)
+    import re
+    hexid = re.compile(r"^[0-9a-f]{7,64}$")
+
+    def provenance(x):
+        """a code-commit id or a module / file hash - provenance of the rebuild, never a quantity or a role"""
+        if any(k in x["path"] for k in ("code_commit", "module_sha256")):
+            return True
+        return bool(hexid.match(str(x.get("frozen", "")).strip("'\"")) and hexid.match(str(x.get("rebuilt", "")).strip("'\"")))
+    only_inventory = all(per[n].get("state") == "DIFFERENT" and all(provenance(x) for x in per[n]["differences"])
+                         for n in changed)
     return {"SCHEMA": "URBAN_ALSENAN_A2_QORTUBA_REGRESSION_V1", "frozen_dir": "tests/rc1/registers",
             "registers": len(files), "identical": len(files) - len(changed), "changed": changed, "extra": extra,
             "per_register": per,
