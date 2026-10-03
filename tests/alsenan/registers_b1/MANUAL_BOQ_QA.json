@@ -1,0 +1,203 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_B1_MANUAL_BOQ_QA_V1",
+ "findings": [
+  {
+   "check": "PRODUCT_REFERENCES_ANOTHER_ROW",
+   "file": "BLK",
+   "sheet": "الكميات",
+   "cell": "H74",
+   "formula": "=D75*C74*B74",
+   "other_row_refs": [
+    "D75"
+   ],
+   "impact": "none (the referenced value equals the own-row value)",
+   "class": "REPORTING_DEFECT"
+  },
+  {
+   "check": "SUM_RANGE_SPANS_EXTRA_COLUMN",
+   "file": "FIN",
+   "sheet": "ديكور",
+   "cell": "H31",
+   "formula": "=SUM(D13:E29)",
+   "extra_column_cells_with_values": [],
+   "impact": "none (no values in the extra column)",
+   "class": "REPORTING_DEFECT"
+  },
+  {
+   "check": "SUM_RANGE_SPANS_EXTRA_COLUMN",
+   "file": "FIN",
+   "sheet": "سيراميك",
+   "cell": "D31",
+   "formula": "=SUM(D13:E29)",
+   "extra_column_cells_with_values": [],
+   "impact": "none (no values in the extra column)",
+   "class": "REPORTING_DEFECT"
+  },
+  {
+   "check": "BROKEN_REFERENCE",
+   "file": "RC",
+   "sheet": "حمام السباحة",
+   "cell": "D19",
+   "formula": "=I16+#REF!+السلم!B25+'بلاطات '!#REF!+كمرات!B142+'الحوائط + الأعمدة'!B74+القواعد!B35",
+   "value": "#REF!",
+   "impact": "display cell only (not carried to any total)",
+   "class": "REPORTING_DEFECT"
+  },
+  {
+   "check": "SUM_SKIPS_LEADING_ROWS",
+   "file": "RC",
+   "sheet": "كمرات",
+   "cell": "I82",
+   "formula": "=SUM(I60:I78)",
+   "skipped_cells": [
+    "I59"
+   ],
+   "skipped_value": 0.128,
+   "same_block_sums_including_them": [
+    "I79"
+   ],
+   "class": "BENCHMARK_POSSIBLE_ERROR"
+  },
+  {
+   "check": "TOTAL_CONTAINS_ANOTHER_REPORTED_TOTAL",
+   "file": "FIN",
+   "sheet": "رخام+حوش",
+   "cell": "H44",
+   "formula": "=SUM(H13:H41)",
+   "contains": "H13",
+   "contained_value": 151.8,
+   "both_reported_on_cover": [
+    "B24",
+    "B22"
+   ],
+   "class": "BENCHMARK_POSSIBLE_ERROR",
+   "secondary": "DUPLICATE_OR_OMITTED_ITEM"
+  },
+  {
+   "check": "XLS_SUBTOTALS_CHECKED",
+   "groups": 5,
+   "class": "INFO"
+  },
+  {
+   "check": "TYPED_CONSTANTS_ON_COVERS",
+   "items": [
+    {
+     "file": "FIN",
+     "row": 18,
+     "label": "ارضيات حمام السباحه",
+     "value": 21
+    },
+    {
+     "file": "FIN",
+     "row": 19,
+     "label": "حوائط حمام السباحه",
+     "value": 19.8
+    },
+    {
+     "file": "FIN",
+     "row": 27,
+     "label": "عازل ارضيات حمامات",
+     "value": 72.01
+    },
+    {
+     "file": "FIN",
+     "row": 28,
+     "label": "نعلات العازل للحمامات",
+     "value": 144.61
+    },
+    {
+     "file": "FIN",
+     "row": 29,
+     "label": "عازل اسطح و ملاحق",
+     "value": 285
+    },
+    {
+     "file": "FIN",
+     "row": 30,
+     "label": "نعلات العازل الاسطح",
+     "value": 194
+    },
+    {
+     "file": "FIN",
+     "row": 39,
+     "label": "دربزين داخلي",
+     "value": 18.95
+    },
+    {
+     "file": "RC",
+     "row": 17,
+     "label": "اجمالى القواعد (rebar t)",
+     "value": 5.8
+    },
+    {
+     "file": "RC",
+     "row": 18,
+     "label": "اجمالي الشناجات والارضيه (rebar t)",
+     "value": 9.75
+    },
+    {
+     "file": "RC",
+     "row": 19,
+     "label": "اجمالى الحوائط والأعمدة (rebar t)",
+     "value": 7.95
+    },
+    {
+     "file": "RC",
+     "row": 20,
+     "label": "الجسور (rebar t)",
+     "value": 9.89
+    },
+    {
+     "file": "RC",
+     "row": 21,
+     "label": "البلاطات (rebar t)",
+     "value": 5.4
+    },
+    {
+     "file": "RC",
+     "row": 22,
+     "label": "الدرج+القبه (rebar t)",
+     "value": 3.9
+    },
+    {
+     "file": "RC",
+     "row": 23,
+     "label": "حمام السباجة (rebar t)",
+     "value": 1.5
+    },
+    {
+     "file": "ALU",
+     "row": 16,
+     "label": "اجمالي الأبواب م2",
+     "value": 12
+    },
+    {
+     "file": "ALU",
+     "row": 17,
+     "label": "اجمالي الشبابيك م2",
+     "value": 116.9
+    }
+   ],
+   "class": "REPORTING_DEFECT",
+   "impact": "values not traceable to a detail row (rebar tonnage, pool, waterproofing, railing)"
+  },
+  {
+   "check": "UNIT_AMBIGUITY",
+   "file": "FIN",
+   "label": "نعلات العازل للحمامات",
+   "detail": "upturn computed as perimeter x 1.0 m (m2) but reported in m.t (numerically equal)",
+   "class": "REPORTING_DEFECT"
+  }
+ ],
+ "counts": {
+  "PRODUCT_REFERENCES_ANOTHER_ROW": 1,
+  "SUM_RANGE_SPANS_EXTRA_COLUMN": 2,
+  "BROKEN_REFERENCE": 1,
+  "SUM_SKIPS_LEADING_ROWS": 1,
+  "TOTAL_CONTAINS_ANOTHER_REPORTED_TOTAL": 1,
+  "XLS_SUBTOTALS_CHECKED": 1,
+  "TYPED_CONSTANTS_ON_COVERS": 1,
+  "UNIT_AMBIGUITY": 1
+ },
+ "rule": "a benchmark defect is recorded as BENCHMARK_POSSIBLE_ERROR; Urban is never forced to match"
+}

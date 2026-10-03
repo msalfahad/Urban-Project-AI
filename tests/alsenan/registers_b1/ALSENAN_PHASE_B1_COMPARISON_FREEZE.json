@@ -1,0 +1,76 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_PHASE_B1_COMPARISON_FREEZE_V1",
+ "phase": "PHASE_B1",
+ "nature": "benchmark reveal + forensic comparison ONLY - anti-calibration boundary for Phase B2",
+ "code_commit": "06cc98b",
+ "recommendation_commit": "11d661c",
+ "phase_a3": {
+  "registers_commit": "9aa2741",
+  "code_commit": "7ac5d9e",
+  "freeze_file": "ALSENAN_P7757_ST7757_PHASE_A3_FREEZE.json",
+  "freeze_sha256": "de01b42d1478628e618a508f09316c4f9a879d4883d451224653866e18d5c849",
+  "registers_digest": "dc5fb9ead016fc23a452a325ad131db11a5261dd920215327722dc2d48fd648a"
+ },
+ "engine_tree": {
+  "at_a3_code_commit": "eb0359f631c62d9279889fd16df5aa910084d3db",
+  "at_b1_build": "eb0359f631c62d9279889fd16df5aa910084d3db",
+  "unchanged": true
+ },
+ "benchmark_sha256": {
+  "FIN": "de448191fb9d0ababd33298289047c610366aba23912499c280146100be1151a",
+  "BLK": "873308bb6a3c99fd49332d6db881c41f51c94412a1caed986fe5d4a25179175d",
+  "PNT": "d1b459e531d78767041fe43a1ffa2f4560ad99939793044bfcbd1dbd13fa68f1",
+  "RC": "ae608411ed5b9e64811a15c353adbdd017fa3e51abfdffcf0aa1454b85d1957c",
+  "ALU": "7826608fc716ca0cdcd587aaf5ff9dd003d6968d6f77bca3289819844b2703e4",
+  "PLS": "bf6e3123b988534dafcc488978eb8371e4f07a5f52857d01eb472db1aed22121",
+  "WEB": "e92938e9b8df6f336a3b74ccf7962d1245f2e46e6d3645a71e95be6800ebc3bb"
+ },
+ "extracted_rows_digest": "14a05b05d924d94f96ac1d844de5eb77dc1550d468301d4d6d806acdbab2b9c9",
+ "normalised_digest": "46464952e8a9861eb29238e6d869f2a6d65479875f15bc48acf428f7b013ce41",
+ "web_rows_digest": "09fc001fbedd8d6ea07fd30159c3b0302addde5e8a807f74b0efe99d5b7ef6da",
+ "mapping_digest": "33b76f930b4bf142ead1cf1c0dda3eae624239ac7ee00f031b330844cb8afc9f",
+ "comparison_digest": "036af7e3de8775a1fb109c7ecb094c88f36b399d85989d952ecb1b92784b3032",
+ "classification_digest": "c438b7a539e56a2e824687c9942d779896ef9957267bf77cd3cadba39b34c42b",
+ "manual_qa_digest": "b1a3715c1ca0aef7ed563a0f08718e8880b72721d2c324c51dec87cbb3ac1eaa",
+ "owner_questions_digest": "36c68011a93f46f9e841c32e855edcf57c0f2985ea6067ca4bd18b325f62f671",
+ "backlog_digest": "5cd099cc0d8cedfe428be36edfa341a1d8687f78ee867999feb7dd7c0de5b52f",
+ "tolerances": {
+  "area_volume": {
+   "close_match_pct": 1.0,
+   "investigate_pct": 2.0,
+   "material_above_pct": 2.0
+  },
+  "linear": {
+   "close_match": "<= max(0.05 m, 1 %)",
+   "investigate": "<= max(0.10 m, 2 %)"
+  },
+  "count": "exact (any difference is a classified difference)",
+  "width_match_for_openings_mm": 10,
+  "rule": "tolerance never hides a structural count / type difference; only EXACT_COMPARABLE rows get a percentage"
+ },
+ "counts": {
+  "raw_rows": 885,
+  "normalised": 616,
+  "comparison_rows": 173,
+  "comparability": {
+   "EXACT_COMPARABLE": 84,
+   "PARTIAL_SCOPE_COMPARABLE": 12,
+   "URBAN_BLOCKED": 25,
+   "BENCHMARK_ONLY": 13,
+   "NOT_COMPARABLE": 35,
+   "SCOPE_MISMATCH": 2,
+   "URBAN_ONLY": 2
+  }
+ },
+ "BENCHMARK_OPENED": true,
+ "ENGINE_CHANGED": false,
+ "QORTUBA_CHANGED": false,
+ "PHASE_A3_FREEZE_PRESERVED": true,
+ "rule": "Phase B2 may change generic engines only against PROPOSED_FIX_BACKLOG items; any A3 quantity that moves toward a benchmark value must cite a generic defect, never a benchmark row",
+ "xlsx": {
+  "content_digest": "1c2ac66f38958a004bf7a66e8f7899431beba63648e6fc195911a52a976d8c9b",
+  "file_sha256": "ff152eda76dd1f519387a8f8e76fb42f8f52a8159da8edc3014b94dee51f0086",
+  "rewrite_identical": true,
+  "readback": "PASS"
+ }
+}
