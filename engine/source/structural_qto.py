@@ -185,25 +185,26 @@ def template_outlines(segments, length_mm, width_mm, native_to_mm, *, eps, min_c
                       entry_cover=0.5) -> list:
     """Axis-aligned outlines of EXACTLY the schedule plan size (either orientation) in one element layer's
     linework: the lower-left corner is a drawn end point, and each side is covered >= min_cover by the layer's
-    merged edges. A side covered >= entry_cover whose every uncovered stretch is bounded at BOTH ends by end points
-    of segments of the layer that do NOT run along the side (an element entering the outline: a strap / tie beam)
+    merged edges. A side covered >= entry_cover whose every uncovered stretch is bounded at BOTH ends by segments of
+    the layer that do NOT run along the side and touch or pass through the gap end (an element entering the outline: a strap / tie beam)
     passes as ENTRY_GAPS_EXPLAINED; a bare gap (only the side's own pieces end there) does not. `support` (another layer's segments, e.g. a site boundary) may cover AT MOST ONE side
     (CLIPPED). Nothing is snapped or scaled; the schedule size is the template, the drawing must carry it."""
     H, V = edges(segments, eps=eps)
     sH, sV = edges(support, eps=eps) if support else ([], [])
     ends = [(x, y) for _, x1, y1, x2, y2 in segments for x, y in ((x1, y1), (x2, y2))]
-    grid = {}
-    for _, x1, y1, x2, y2 in segments:
-        horiz_seg = abs(y1 - y2) <= eps
-        vert_seg = abs(x1 - x2) <= eps
-        for x, y in ((x1, y1), (x2, y2)):
-            grid.setdefault((round(x / eps), round(y / eps)), []).append((x, y, horiz_seg, vert_seg))
+    import math as _m
 
     def entering_end(x, y, horiz):
-        """an end point here of a segment NOT running along the side (an element entering the outline)"""
-        k = (round(x / eps), round(y / eps))
-        return any(abs(px - x) <= eps and abs(py - y) <= eps and not (hs if horiz else vs)
-                   for dx in (-1, 0, 1) for dy in (-1, 0, 1) for px, py, hs, vs in grid.get((k[0] + dx, k[1] + dy), ()))
+        """a segment NOT running along the side touches or passes through this gap end (an entering element)"""
+        for _, x1, y1, x2, y2 in segments:
+            if (abs(y1 - y2) <= eps) if horiz else (abs(x1 - x2) <= eps):
+                continue
+            dx, dy = x2 - x1, y2 - y1
+            L2 = dx * dx + dy * dy
+            t = 0.0 if L2 == 0 else max(0.0, min(1.0, ((x - x1) * dx + (y - y1) * dy) / L2))
+            if _m.hypot(x - x1 - t * dx, y - y1 - t * dy) <= eps:
+                return True
+        return False
     out, seen = [], set()
     sizes = {(length_mm / native_to_mm, width_mm / native_to_mm), (width_mm / native_to_mm, length_mm / native_to_mm)}
     corners = sorted({(round(x, 6), round(y, 6)) for x, y in ends})

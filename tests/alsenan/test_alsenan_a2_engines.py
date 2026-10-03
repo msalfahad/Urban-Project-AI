@@ -44,6 +44,12 @@ def test_strap_entry_gap_is_explained_only_by_an_entering_element():
     strap = [("S1", 600, 1000, 600, 3000), ("S2", 1400, 1000, 1400, 3000)]
     got = SQ.template_outlines(box("A", 0, 0, 2000, 1000, gap=gap) + strap, 2000, 1000, 1.0, eps=1.0)
     assert len(got) == 1 and got[0]["sides"]["N"] == "ENTRY_GAPS_EXPLAINED"
+    # an inclined strap whose side lines pass THROUGH the gap ends into the footing also explains it
+    through = [("T1", 400, 1600, 1000, -200), ("T2", 1200, 1600, 1800, -200)]
+    xa = 600.0                                                             # T1 crosses y = 1000 at x = 600
+    xb = 1400.0                                                            # T2 crosses y = 1000 at x = 1400
+    got2 = SQ.template_outlines(box("A", 0, 0, 2000, 1000, gap=("N", xa, xb)) + through, 2000, 1000, 1.0, eps=1.0)
+    assert len(got2) == 1 and got2[0]["sides"]["N"] == "ENTRY_GAPS_EXPLAINED"
     # the same gap with nothing entering: the side pieces end there, but that explains nothing
     assert SQ.template_outlines(box("A", 0, 0, 2000, 1000, gap=gap), 2000, 1000, 1.0, eps=1.0) == []
     # a side missing altogether is never an outline
