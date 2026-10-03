@@ -1,0 +1,40 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_PHASE_B2A1_RECOMMENDATION_V1",
+ "phase": "ALSENAN_PHASE_B2A1_GENERIC_QA_PATCH",
+ "base_commit": "e2afb69",
+ "committed_before": "any B2A.1 code",
+ "rules_in_force": ["NO BENCHMARK CALIBRATION", "NO NEW ALSENAN OWNER ASSUMPTIONS", "NO PRODUCTION MIGRATION",
+                    "B2A accepted and frozen (tests/alsenan/registers_b2a untouched)"],
+ "inspected": ["engine/source/concrete_model.py stair()", "engine/source/curved_opening.py bases() / commercial()",
+               "tests/alsenan/test_b2a_engines_synthetic.py", "research/external_engine_lab/alsenan_b2a_package.py",
+               "tests/alsenan/registers_b2a/ALSENAN_PHASE_B2A_FREEZE.json"],
+ "answers": {
+  "1_stair_defect": "AGREED. STAIR_CONCRETE_V1 takes one count ('risers') and uses it for BOTH the horizontal run (risers x going) and the wedge count (0.5 x R x G x W x risers): the tread count is silently taken equal to the riser count. A flight of n risers normally has n - 1 treads (the top riser lands on the landing / slab), so the implicit equality overstates the run and the wedges. No Alsenan quantity was produced by it (the stair stayed BLOCKED_INPUT_MISSING).",
+  "2_data_model": {
+   "flight": {"riser_count": "integer, counted from the source (section risers) - required",
+              "tread_count": "integer, counted from the source (tread lines / section treads) - required, independent",
+              "riser_height_m": "required", "tread_going_m": "required", "flight_width_m": "required",
+              "waist_thickness_m": "required"},
+   "derived": {"VERTICAL_RISE": "riser_count x riser_height", "HORIZONTAL_RUN": "tread_count x tread_going",
+               "SLOPING_LENGTH": "sqrt(rise^2 + run^2)", "WAIST": "sloping length x width x waist",
+               "STEP_WEDGES": "0.5 x riser_height x tread_going x width x tread_count"},
+   "landing": {"area_m2": "required", "thickness_m": "required"},
+   "stair_beams": "separate structural elements (beam schedule), never inside the stair volume",
+   "fail_closed": "any missing count or dimension -> BLOCKED_INPUT_MISSING with the list; never infer one count from the other; tread_count = riser_count - 1 only when the caller states a positive source relationship (relation='SOURCE_ESTABLISHED'), recorded as such",
+   "evidence": "each input carries its authority (SOURCE_COUNTED / SOURCE_PRINTED / CANDIDATE / UNKNOWN); a CANDIDATE (e.g. tread lines on a plan cut) is published but never used as a computed input"
+  },
+  "3_no_alsenan_change": "YES. The Alsenan stair is BLOCKED (riser count, riser height, waist thickness and landing thickness are not printed); it stays BLOCKED. The register gains explicit known / unknown input lists only. Every other Alsenan quantity is untouched: the fix lives in stair() alone and the curved change is naming only.",
+  "4_curved_names": "YES. 'INNER' names a geometry (smallest radius) with a word that reads like a room side. Use MIN_RADIUS_ARC / MID_BAND_ARC / MAX_RADIUS_ARC / CHORD for geometry and ROOM_SIDE_ARC / EXTERIOR_SIDE_ARC only where the side is established from source (a probe just inside and just outside the band at mid sweep: exactly one side inside a room site and the other in none). The commercial default keeps selecting MIN_RADIUS_ARC and says so; INNER / CENTRE / OUTER remain as aliases only.",
+  "5_freeze_omitted": "The B2A package builder copied a FIXED list of 14 registers (the brief's list) plus the evaluation and a manifest; the freeze register was not in that list, so the canonical freeze stayed in the repository only. B2A.1 packages carry the freeze, the parent freeze, every register, the regression records and a stdlib verify script, so the package verifies without GitHub.",
+  "6_other": [
+   "The brief's HORIZONTAL_RUN uses tread_count while VERTICAL_RISE uses riser_count; the waist soffit of a real flight also depends on its end conditions (how the waist meets the landings). The formula is adopted as the declared method (STAIR_CONCRETE_V2) and recorded as such; it is not claimed to be the exact soffit length.",
+   "alsenan_b2a_evaluation.py compares the curved length against a literal 6.57 typed in the code instead of reading the frozen benchmark value; it is evaluation-only (never read by an engine) but it is a literal benchmark value in research code - fix it to read the frozen B1 value.",
+   "test_alsenan_b2a_real.test_b2a_engines_unchanged_since_the_freeze pins the engine files to the B2A freeze; after a legitimate engine patch it must pin to the newest freeze (B2A.1) and check the parent freeze by digest instead."
+  ]
+ },
+ "plan": ["STAIR_CONCRETE_V2 in concrete_model (independent counts, authorities, fail closed) + synthetic tests A-G",
+          "curved_opening explicit bases + aliases + room / exterior side + override set",
+          "adapter: stair evidence register (known / unknown), curved side probe",
+          "registers_b2a1 built twice; Alsenan regression vs the frozen B2A registers (quantity leaves); Qortuba regression",
+          "package with ALSENAN_PHASE_B2A1_FREEZE.json + parent freeze + registers + verify.py inside the ZIP"]
+}
