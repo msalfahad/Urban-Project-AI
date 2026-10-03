@@ -1,0 +1,129 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_B2A_WATERPROOFING_V1",
+ "roof": [
+  {
+   "region": "2F ROOF (top)",
+   "state": "BLOCKED_REGION",
+   "physical_m2": null
+  },
+  {
+   "region": "1F ROOF exposed (not under 2F)",
+   "state": "BLOCKED_REGION",
+   "physical_m2": null,
+   "alignment": {
+    "frame_same_size": true,
+    "columns_above_on_columns_below": "9/9",
+    "aligned": true
+   },
+   "why": "2F or 1F plate not closed / sheets not aligned"
+  },
+  {
+   "region": "GF ROOF exposed (not under 1F)",
+   "state": "COMPUTED",
+   "flat_m2": 105.214326,
+   "upturn_m2": 20.994849,
+   "physical_m2": 126.209175,
+   "upturn_m": 0.2,
+   "method": "URBAN-ROOF-WATERPROOF-UPTURN-200@v1",
+   "laps": "NOT_INCLUDED (procurement factor)",
+   "alignment": {
+    "frame_same_size": true,
+    "columns_above_on_columns_below": "20/21",
+    "aligned": true
+   },
+   "note": "candidate: plate minus the plate above; covered terraces under an overhang are not separated (UNRESOLVED)"
+  }
+ ],
+ "wet": [
+  {
+   "room": "GF KITCHEN",
+   "state": "COMPUTED",
+   "floor_m2": 9.63,
+   "upturn_length_m": 14.5,
+   "upturn_basis": "gross perimeter (door widths unknown)",
+   "upturn_m2": 2.175,
+   "physical_m2": 11.805,
+   "upturn_m": 0.15,
+   "laps": "NOT_INCLUDED (procurement factor)"
+  },
+  {
+   "room": "GF W.C",
+   "state": "COMPUTED",
+   "floor_m2": 2.675221,
+   "upturn_length_m": 7.414038,
+   "upturn_basis": "gross perimeter (door widths unknown)",
+   "upturn_m2": 1.112106,
+   "physical_m2": 3.787327,
+   "upturn_m": 0.15,
+   "laps": "NOT_INCLUDED (procurement factor)"
+  },
+  {
+   "room": "GF W.C",
+   "state": "COMPUTED",
+   "floor_m2": 1.95,
+   "upturn_length_m": 5.6,
+   "upturn_basis": "gross perimeter (door widths unknown)",
+   "upturn_m2": 0.84,
+   "physical_m2": 2.79,
+   "upturn_m": 0.15,
+   "laps": "NOT_INCLUDED (procurement factor)"
+  },
+  {
+   "room": "GF W.C",
+   "state": "COMPUTED",
+   "floor_m2": 2.3625,
+   "upturn_length_m": 6.2,
+   "upturn_basis": "gross perimeter (door widths unknown)",
+   "upturn_m2": 0.93,
+   "physical_m2": 3.2925,
+   "upturn_m": 0.15,
+   "laps": "NOT_INCLUDED (procurement factor)"
+  },
+  {
+   "room": "GF W.C",
+   "state": "COMPUTED",
+   "floor_m2": 3.375,
+   "upturn_length_m": 7.5,
+   "upturn_basis": "gross perimeter (door widths unknown)",
+   "upturn_m2": 1.125,
+   "physical_m2": 4.5,
+   "upturn_m": 0.15,
+   "laps": "NOT_INCLUDED (procurement factor)"
+  },
+  {
+   "room": "1F BATH",
+   "state": "COMPUTED",
+   "floor_m2": 5.0225,
+   "upturn_length_m": 9.0,
+   "upturn_basis": "gross perimeter (door widths unknown)",
+   "upturn_m2": 1.35,
+   "physical_m2": 6.3725,
+   "upturn_m": 0.15,
+   "laps": "NOT_INCLUDED (procurement factor)"
+  },
+  {
+   "room": "1F BATH",
+   "state": "COMPUTED",
+   "floor_m2": 4.725,
+   "upturn_length_m": 8.7,
+   "upturn_basis": "gross perimeter (door widths unknown)",
+   "upturn_m2": 1.305,
+   "physical_m2": 6.03,
+   "upturn_m": 0.15,
+   "laps": "NOT_INCLUDED (procurement factor)"
+  },
+  {
+   "room": "1F BATH",
+   "state": "COMPUTED",
+   "floor_m2": 3.5775,
+   "upturn_length_m": 7.6,
+   "upturn_basis": "gross perimeter (door widths unknown)",
+   "upturn_m2": 1.14,
+   "physical_m2": 4.7175,
+   "upturn_m": 0.15,
+   "laps": "NOT_INCLUDED (procurement factor)"
+  }
+ ],
+ "method": "URBAN-ROOF-WATERPROOF-UPTURN-200@v1",
+ "laps": "membrane system / lap not known"
+}

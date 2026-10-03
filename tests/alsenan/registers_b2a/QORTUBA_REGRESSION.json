@@ -1,0 +1,174 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_A3_QORTUBA_REGRESSION_V1",
+ "frozen_dir": "tests/rc1/registers",
+ "registers": 35,
+ "identical": 32,
+ "changed": [
+  "ENGINE_INVENTORY.json",
+  "FREEZE_DIGEST_AUDIT.json",
+  "QORTUBA_RC1_FREEZE.json"
+ ],
+ "extra": [],
+ "per_register": {
+  "BLIND_VALIDATION_PLAN.json": {
+   "state": "IDENTICAL",
+   "differences": []
+  },
+  "BLIND_VILLA_INTAKE_SCHEMA.json": {
+   "state": "IDENTICAL",
+   "differences": []
+  },
+  "BOQ_ALIAS_REGISTER.json": {
+   "state": "IDENTICAL",
+   "differences": []
+  },
+  "BOQ_XLSX_MODEL.json": {
+   "state": "IDENTICAL",
+   "differences": []
+  },
+  "BOQ_XLSX_STATUS.json": {
+   "state": "IDENTICAL",
+   "differences": []
+  },
+  "CANONICAL_BOQ.json": {
+   "state": "IDENTICAL",
+   "differences": []
+  },
+  "CEILING_REGISTER.json": {
+   "state": "IDENTICAL",
+   "differences": []
+  },
+  "DONOR_REUSE_REGISTER.json": {
+   "state": "IDENTICAL",
+   "differences": []
+  },
+  "DOOR_REGISTER.json": {
+   "state": "IDENTICAL",
+   "differences": []
+  },
+  "ENGINE_INVENTORY.json": {
+   "state": "DIFFERENT",
+   "differences": [
+    {
+     "path": "/module_sha256/engine/boq_rc1_xlsx.py",
+     "frozen": "35eb20421e28a56c34cef2734ceeff2e76ce0798070b300c1e46d97529daf911",
+     "rebuilt": "e938c9e584af56f37592fc7816ff35a0baff3634130bf727411661ceaa2ee13e"
+    }
+   ]
+  },
+  "FLOOR_REGISTER.json": {
+   "state": "IDENTICAL",
+   "differences": []
+  },
+  "FREEZE_DIGEST_AUDIT.json": {
+   "state": "DIFFERENT",
+   "differences": [
+    {
+     "path": "/rc1_76a9771_findings[3]/now",
+     "frozen": "7402880",
+     "rebuilt": "ccaaaba"
+    }
+   ]
+  },
+  "GLAZING_REGISTER.json": {
+   "state": "IDENTICAL",
+   "differences": []
+  },
+  "HIDDEN_PROFILE_REGISTER.json": {
+   "state": "IDENTICAL",
+   "differences": []
+  },
+  "LEGACY_PATH_REGISTER.json": {
+   "state": "IDENTICAL",
+   "differences": []
+  },
+  "MARBLE_THRESHOLD_REGISTER.json": {
+   "state": "IDENTICAL",
+   "differences": []
+  },
+  "OBJECT_FOOTPRINT_REGISTER.json": {
+   "state": "IDENTICAL",
+   "differences": []
+  },
+  "OPENING_REGISTER.json": {
+   "state": "IDENTICAL",
+   "differences": []
+  },
+  "PAINTRY_FLOOR_RESOLUTION.json": {
+   "state": "IDENTICAL",
+   "differences": []
+  },
+  "PAINT_REGISTER.json": {
+   "state": "IDENTICAL",
+   "differences": []
+  },
+  "PLASTER_REGISTER.json": {
+   "state": "IDENTICAL",
+   "differences": []
+  },
+  "QA_RECONCILIATION.json": {
+   "state": "IDENTICAL",
+   "differences": []
+  },
+  "QORTUBA_RC1_FREEZE.json": {
+   "state": "DIFFERENT",
+   "differences": [
+    {
+     "path": "/code_commit",
+     "frozen": "7402880",
+     "rebuilt": "ccaaaba"
+    }
+   ]
+  },
+  "RC1_DECISION_REGISTER.json": {
+   "state": "IDENTICAL",
+   "differences": []
+  },
+  "REVEAL_REGISTER.json": {
+   "state": "IDENTICAL",
+   "differences": []
+  },
+  "ROOM_QUANTITY_MATRIX.json": {
+   "state": "IDENTICAL",
+   "differences": []
+  },
+  "ROOM_REGISTER.json": {
+   "state": "IDENTICAL",
+   "differences": []
+  },
+  "SKIRTING_REGISTER.json": {
+   "state": "IDENTICAL",
+   "differences": []
+  },
+  "SOURCE_ANCHOR_STATUS.json": {
+   "state": "IDENTICAL",
+   "differences": []
+  },
+  "TOPOLOGY_FREEZE.json": {
+   "state": "IDENTICAL",
+   "differences": []
+  },
+  "URBAN_FLOOR_CABINET_METHOD.json": {
+   "state": "IDENTICAL",
+   "differences": []
+  },
+  "WALL_TILE_PREP_REGISTER.json": {
+   "state": "IDENTICAL",
+   "differences": []
+  },
+  "WALL_TILE_REGISTER.json": {
+   "state": "IDENTICAL",
+   "differences": []
+  },
+  "WATERPROOFING_REGISTER.json": {
+   "state": "IDENTICAL",
+   "differences": []
+  },
+  "WINDOW_REGISTER.json": {
+   "state": "IDENTICAL",
+   "differences": []
+  }
+ },
+ "state": "PROVENANCE_ONLY",
+ "rule": "Qortuba is frozen as RC1_REFERENCE; the A3 additions (STRUCTURAL_SCHEDULE_QTO_V1, the CURVED_GLAZING / COUNTER_RUN / WALL_END_CAP / door-frame motifs of entity-role inference) run only where the entity-role engine runs, so every Qortuba quantity must stay unchanged; Qortuba files are never edited"
+}

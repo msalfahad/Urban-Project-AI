@@ -1,0 +1,142 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_PHASE_B2A_FREEZE_V1",
+ "phase": "ALSENAN_P7757_ST7757_PHASE_B2A",
+ "code_commit": "ccaaaba",
+ "recommendation": "research/external_engine_lab/alsenan_phase_b2a_recommendation.json",
+ "base_commit": "f820263",
+ "phase_b1_freeze": {
+  "file": "ALSENAN_PHASE_B1_COMPARISON_FREEZE.json",
+  "sha256": "d29a8a27ba45bc82300218388c61f76d92509c751e742544518120adaafff592"
+ },
+ "phase_a3_freeze": {
+  "file": "ALSENAN_P7757_ST7757_PHASE_A3_FREEZE.json",
+  "sha256": "de01b42d1478628e618a508f09316c4f9a879d4883d451224653866e18d5c849"
+ },
+ "b2a_engine_sha256": {
+  "beam_binding": "ad060354c1c953186bbd0b356041782c967f70e2ee947f8dfd2e13fb0de9222a",
+  "structural_vertical": "88afff17113a17bd6f927393fa7dd7d19c9e7c9ab0d3ce07985793903bbc69fa",
+  "concrete_model": "603e30902c4d4bccedb1b62d2a131d73fbc70b1f7e767f906abef2a71dbee3d3",
+  "slab_region": "3293387aea3c2a2c58ad79c34eeefd0feddc340d8a92f63c2f183dca70e5ffd2",
+  "opening_authority": "be9640a5246bce986b75c3140f3a4b4e6830ca8b500d2e85ab2ed3c3bffad5d9",
+  "curved_opening": "831108dbf83d7f9df0e4a3f0d41649668c3b3cf06808953a270d404c1c1e12cd",
+  "finish_height": "4adf23ea403b0fef784209a3189a0ae51cd254b6233c4eda232169ebec3a7829",
+  "waterproofing_policy": "88ebf8c370fb60818ecf16a70fa6c604e03776c6dc5d0918c576cb6878f5d6c4",
+  "urban_methods": "09c62bf244b685b515e8ffaeb8fb2ffad6b769618f3c9d0f4442ab25d23a69dc"
+ },
+ "register_digests": {
+  "A3_PRESERVATION": "7958f35cd85387c19a1b25162d2bc71b782ba60cd30a431502d1244d12322fed",
+  "ALSENAN_B2A_DELTA": "3547b2c04e8088b4d3a9c400e82b7db218a827f3b2da4f4f379401fa67b50662",
+  "BEAM_BINDING_REGISTER": "2f528b4626f4e564e245ba9ac8fb3af81282f89fe92bbbb0c76e7e235d07b953",
+  "CURVED_OPENING_REGISTER": "4561cda09d8d8398c1351eebee0f57262bd1493e67d579b9240143727fea0b60",
+  "OPENING_AUTHORITY_REGISTER": "973782ef0578ae4c1a84280038684825d81eab1b15059dcf99bbcea47fe72dda",
+  "OWNER_FACT_REGISTER": "61e19034fe2ddb894ac265902ee51661d2c008febb4ff6477bc35fe581634ea8",
+  "PHYSICAL_CONCRETE_REGISTER": "640ff200e88351f49f1a5d84bd1ecd4b255f10aabe78a2d66e9b51ce6607bd64",
+  "QA_GATES": "0ac00d2da557dad90652c550ff2b02dd749d3805a2158a48ae3ffb44e4837d34",
+  "REMAINING_BLOCKERS": "bd3a2c9e8618d9e2e163e2898e7b9e6c5d26fa79c99873aedfac9f4449c2ea5f",
+  "SLAB_REGION_REGISTER": "dbddc65931a0fea4e5b7ef78a0d075dc2e5e4c6ffb277a8045f85c00fe0a23f0",
+  "STAIR_REGISTER": "847698ffca397d414bb0779ec17c372c1fa64953eb06cf164af0d4c01ff7d535",
+  "STRUCTURAL_VERTICAL_INTERVAL_REGISTER": "892c554a5312444586473a87206470c8120adaafa4ca2bbe8b8a89a1df2331d8",
+  "TEST_RESULTS": "326afddda909835325b604b42aa3b5244fe53bc4695fc5ebbdedbad531667044",
+  "URBAN_METHOD_REGISTER": "d235f2122c800bed9b6170b86b9e7e6f74dbce844c847227c20da3085a4e30b2",
+  "WALL_HEIGHT_REGISTER": "05ca98367cf96a07ab2742d14cffcd9f58a0f8dcf0b469ae6aad5118795ab05f",
+  "WATERPROOFING_REGISTER": "561c83dfe9e24f514ba5002e72cfbfa29e6850d798b2622bfdfcccedef5ead79"
+ },
+ "summary": {
+  "beam_tags": {
+   "GF": {
+    "NO_BAND_ADJACENT_TO_TAG": 7,
+    "BOUND": 54,
+    "NO_BAND_AT_SCHEDULED_BREADTH": 2,
+    "NO_BAND_PARALLEL_TO_TAG": 3
+   },
+   "1F": {
+    "BOUND": 32,
+    "NO_BAND_ADJACENT_TO_TAG": 4,
+    "NO_BAND_PARALLEL_TO_TAG": 2
+   },
+   "2F": {
+    "BOUND": 15
+   }
+  },
+  "beam_occurrences": {
+   "GF": {
+    "MEASURED": 41,
+    "TAG_INSIDE_SUPPORT": 1,
+    "SPAN_COUNT_MISMATCH": 3,
+    "BAND_TYPE_CONFLICT": 2
+   },
+   "1F": {
+    "MEASURED": 26,
+    "SPAN_COUNT_MISMATCH": 1
+   },
+   "2F": {
+    "MEASURED": 15
+   }
+  },
+  "columns": {
+   "1F": {
+    "computed": 15,
+    "blocked": 3,
+    "volume_m3": 6.755,
+    "joint_m3": 0.921
+   },
+   "2F": {
+    "computed": 8,
+    "blocked": 1,
+    "volume_m3": 2.962,
+    "joint_m3": 0.4148
+   },
+   "GF": {
+    "computed": 25,
+    "blocked": 5,
+    "volume_m3": 13.42025,
+    "joint_m3": 1.87825
+   }
+  },
+  "column_tag_binding": {
+   "BOUND": 34,
+   "NO_OUTLINE_OF_PRINTED_SIZE_ADJACENT": 1
+  },
+  "slabs": {
+   "GF": {
+    "net_area_m2": 277.164304,
+    "closure": "CLOSED",
+    "volume_m3": 44.346288
+   },
+   "1F": {
+    "net_area_m2": 171.153432,
+    "closure": "CLOSED",
+    "volume_m3": 27.38455
+   },
+   "2F": {
+    "net_area_m2": 37.974,
+    "closure": "SLAB_OUTLINE_NOT_ESTABLISHED",
+    "volume_m3": null
+   }
+  },
+  "physical_concrete_m3": {
+   "GF": 81.058362,
+   "1F": 48.583252,
+   "2F": 6.026663
+  },
+  "openings": {
+   "1F|WINDOW_CANDIDATE": 12,
+   "2F|WINDOW_CANDIDATE": 5,
+   "GF|DOOR": 4,
+   "GF|GLAZED_OPENING_FUNCTION_UNKNOWN": 1,
+   "GF|WINDOW_CANDIDATE": 11
+  },
+  "qa": "PASS",
+  "a3_preserved": "PRESERVED",
+  "mbr": "CERTIFIED_WITH_OWNER_FACT",
+  "salon_beam": "CB1"
+ },
+ "BENCHMARK_OPENED": false,
+ "rule": "frozen before any benchmark evaluation; the evaluation reads this freeze and never feeds back",
+ "xlsx": {
+  "content_digest": "43063541ef6080944fdba138461693880c37cb06477896b8ea4090f697bc048b",
+  "file_sha256": "769bfeda5cc0a7db4a6539ec762a9726867b1d971a1d2eb5354bce6c09d4f22a",
+  "rewrite_identical": true,
+  "readback": "PASS"
+ }
+}

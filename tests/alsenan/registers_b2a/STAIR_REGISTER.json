@@ -1,0 +1,140 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_B2A_STAIR_V1",
+ "evidence": {
+  "tread_going_cm": 30,
+  "source": "ST7757.pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION (N.T.S.); architectural tread runs (A3 STAIR_REGISTER: going 300 mm, flight widths 1150 / 2800 mm)",
+  "waist": "NOT_PRINTED ('THICK' without value)",
+  "riser": "NOT_PRINTED",
+  "landing_thickness": "NOT_PRINTED",
+  "stair_beam": "G.B 30 wide on 10 cm blinding 50 wide (typical)",
+  "riser_count": "not proved (tread lines are not risers; a count from the storey height would be an assumption)"
+ },
+ "result": {
+  "name": "STAIR",
+  "state": "BLOCKED_INPUT_MISSING",
+  "missing": [
+   "riser_m",
+   "risers",
+   "waist_m",
+   "width_m"
+  ],
+  "volume_m3": null,
+  "never": "steps x tread x riser"
+ },
+ "never": "steps x 0.30 x 0.15",
+ "a3_tread_runs": {
+  "GF": [
+   {
+    "floor": "GF",
+    "layer": "2",
+    "tread_lines": 4,
+    "going_mm": 300.0,
+    "width_mm": 1150.0,
+    "role": "STAIR_GEOMETRY",
+    "linetype_class": "UNIFORM_DASH"
+   },
+   {
+    "floor": "GF",
+    "layer": "2",
+    "tread_lines": 4,
+    "going_mm": 300.0,
+    "width_mm": 1150.0,
+    "role": "STAIR_GEOMETRY",
+    "linetype_class": "UNIFORM_DASH"
+   },
+   {
+    "floor": "GF",
+    "layer": "2",
+    "tread_lines": 7,
+    "going_mm": 300.0,
+    "width_mm": 1150.0,
+    "role": "STAIR_GEOMETRY",
+    "linetype_class": "UNIFORM_DASH"
+   },
+   {
+    "floor": "GF",
+    "layer": "2",
+    "tread_lines": 5,
+    "going_mm": 300.0,
+    "width_mm": 2800.0,
+    "role": "STAIR_GEOMETRY",
+    "linetype_class": "UNIFORM_DASH"
+   },
+   {
+    "floor": "GF",
+    "layer": "5",
+    "tread_lines": 4,
+    "going_mm": 300.0,
+    "width_mm": 1150.0,
+    "role": "STAIR_GEOMETRY",
+    "linetype_class": "CONTINUOUS"
+   },
+   {
+    "floor": "GF",
+    "layer": "5",
+    "tread_lines": 7,
+    "going_mm": 300.0,
+    "width_mm": 1150.0,
+    "role": "STAIR_GEOMETRY",
+    "linetype_class": "CONTINUOUS"
+   },
+   {
+    "floor": "GF",
+    "layer": "5",
+    "tread_lines": 6,
+    "going_mm": 300.0,
+    "width_mm": 1150.0,
+    "role": "STAIR_GEOMETRY",
+    "linetype_class": "CONTINUOUS"
+   },
+   {
+    "floor": "GF",
+    "layer": "5",
+    "tread_lines": 5,
+    "going_mm": 300.0,
+    "width_mm": 2800.0,
+    "role": "STAIR_GEOMETRY",
+    "linetype_class": "CONTINUOUS"
+   }
+  ],
+  "1F": [
+   {
+    "floor": "1F",
+    "layer": "2",
+    "tread_lines": 5,
+    "going_mm": 300.0,
+    "width_mm": 1150.0,
+    "role": "STAIR_GEOMETRY",
+    "linetype_class": "UNIFORM_DASH"
+   },
+   {
+    "floor": "1F",
+    "layer": "2",
+    "tread_lines": 11,
+    "going_mm": 300.0,
+    "width_mm": 1150.0,
+    "role": "STAIR_GEOMETRY",
+    "linetype_class": "UNIFORM_DASH"
+   },
+   {
+    "floor": "1F",
+    "layer": "5",
+    "tread_lines": 5,
+    "going_mm": 300.0,
+    "width_mm": 1150.0,
+    "role": "STAIR_GEOMETRY",
+    "linetype_class": "CONTINUOUS"
+   },
+   {
+    "floor": "1F",
+    "layer": "5",
+    "tread_lines": 11,
+    "going_mm": 300.0,
+    "width_mm": 1150.0,
+    "role": "STAIR_GEOMETRY",
+    "linetype_class": "CONTINUOUS"
+   }
+  ],
+  "2F": []
+ }
+}

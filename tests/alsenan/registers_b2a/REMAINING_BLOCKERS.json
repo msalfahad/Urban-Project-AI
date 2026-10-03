@@ -1,0 +1,141 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_B2A_REMAINING_BLOCKERS_V1",
+ "rows": [
+  {
+   "item": "COLUMN NECKS",
+   "state": "BLOCKED_HEIGHT",
+   "why": "no footing-top / founding level and no ground-beam or ground-slab level is printed in the structural source (typical footing detail p.13 dimensions none); +1.00 FFL is corroboration only"
+  },
+  {
+   "item": "GROUND BEAMS",
+   "state": "BLOCKED_WITH_REASON",
+   "why": "the GROUND BEAMS plan carries no beam tags; p.13 gives typical sections by length (30x60 > 5 m, 30x40 < 5 m, 30x30, exterior 30 x 'FOLLOW ARCH.') whose exterior depth needs the outer ground level to the ground-slab level - not proved"
+  },
+  {
+   "item": "GROUND SLAB",
+   "state": "BLOCKED_WITH_REASON",
+   "why": "no ground-slab thickness / outline is printed (the details show 'Ground Floor slab level' only)"
+  },
+  {
+   "item": "SLAB 2F ROOF",
+   "state": "BLOCKED",
+   "why": "SLAB_OUTLINE_NOT_ESTABLISHED"
+  },
+  {
+   "item": "STAIRS",
+   "state": "BLOCKED_INPUT_MISSING",
+   "why": "waist thickness and riser height not printed"
+  },
+  {
+   "item": "STRUCTURAL WALLS",
+   "state": "BLOCKED_WITH_REASON",
+   "why": "no structural (shear / retaining) wall is tagged on any plan; the 'B.W' schedule row (20 x 60) is bound to no plan occurrence"
+  },
+  {
+   "item": "POOL",
+   "state": "BLOCKED_WITH_REASON",
+   "why": "DETAIL OF SWIMMING POOL is a section detail (N.T.S.) with no plan extent bound to it"
+  },
+  {
+   "item": "BEAM TAGS GF",
+   "state": "NO_BAND_ADJACENT_TO_TAG",
+   "count": 7
+  },
+  {
+   "item": "BEAM TAGS GF",
+   "state": "NO_BAND_AT_SCHEDULED_BREADTH",
+   "count": 2
+  },
+  {
+   "item": "BEAM TAGS GF",
+   "state": "NO_BAND_PARALLEL_TO_TAG",
+   "count": 3
+  },
+  {
+   "item": "BEAM OCCURRENCES GF",
+   "state": "TAG_INSIDE_SUPPORT",
+   "count": 1
+  },
+  {
+   "item": "BEAM OCCURRENCES GF",
+   "state": "SPAN_COUNT_MISMATCH",
+   "count": 3
+  },
+  {
+   "item": "BEAM OCCURRENCES GF",
+   "state": "BAND_TYPE_CONFLICT",
+   "count": 2
+  },
+  {
+   "item": "BEAM TAGS 1F",
+   "state": "NO_BAND_ADJACENT_TO_TAG",
+   "count": 4
+  },
+  {
+   "item": "BEAM TAGS 1F",
+   "state": "NO_BAND_PARALLEL_TO_TAG",
+   "count": 2
+  },
+  {
+   "item": "BEAM OCCURRENCES 1F",
+   "state": "SPAN_COUNT_MISMATCH",
+   "count": 1
+  },
+  {
+   "item": "COLUMNS 1F",
+   "state": "BLOCKED_TAG_NOT_BOUND",
+   "count": 1
+  },
+  {
+   "item": "COLUMNS 1F",
+   "state": "BLOCKED_UPPER_MEMBER_UNBOUND",
+   "count": 2
+  },
+  {
+   "item": "COLUMNS 2F",
+   "state": "BLOCKED_TAG_NOT_BOUND",
+   "count": 1
+  },
+  {
+   "item": "COLUMNS GF",
+   "state": "BLOCKED_SEVERAL_OUTLINES_ON_STOREY_SHEET",
+   "count": 2
+  },
+  {
+   "item": "COLUMNS GF",
+   "state": "BLOCKED_TAG_NOT_BOUND",
+   "count": 1
+  },
+  {
+   "item": "COLUMNS GF",
+   "state": "BLOCKED_UPPER_MEMBER_UNBOUND",
+   "count": 2
+  },
+  {
+   "item": "F / F10 footing",
+   "state": "SOURCE_CONFLICT",
+   "why": "no owner fact"
+  },
+  {
+   "item": "floor build-up above each storey",
+   "state": "UNRESOLVED",
+   "why": "blocks paint, wall tile, salon head"
+  },
+  {
+   "item": "GF open site (Salon / Reception / Dining)",
+   "state": "NOT_CLOSED (no certified site holds the zone labels)",
+   "why": "exterior entry unresolved; no door invented"
+  },
+  {
+   "item": "opening heights",
+   "state": "BLOCKED_HEIGHT",
+   "why": "no source / section / owner value except the salon"
+  },
+  {
+   "item": "rebar weight",
+   "state": "BLOCKED",
+   "why": "bar lengths, cover, hooks, laps not defensible; no kg/m3"
+  }
+ ],
+ "count": 27
+}

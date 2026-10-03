@@ -1,0 +1,3103 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_B2A_SLAB_REGION_V1",
+ "policy": {
+  "policy_id": "SLAB_REGION_V1",
+  "min_tread_lines": 3,
+  "roles": [
+   "PLATE",
+   "OPENING_VOID",
+   "OPENING_STAIR",
+   "DETAIL_REGION (excluded)"
+  ],
+  "thickness": [
+   "PRINTED_IN_FACE",
+   "SHEET_UNIFORM_PRINTED",
+   "CONFLICTING_TAGS_IN_FACE",
+   "SHEET_TAGS_DIFFER",
+   "NOT_PRINTED"
+  ],
+  "never": [
+   "a target area",
+   "a bounding box as an outline",
+   "a thickness not printed on the sheet"
+  ],
+  "digest": "1cb0069d91114eec711d8cc90ffd3a0a65ce991b4b7329d41bbb36ced2414d88"
+ },
+ "sheets": {
+  "GF": {
+   "policy": "SLAB_REGION_V1",
+   "faces": [
+    {
+     "face": 0,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 1.23,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 1,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.08,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 2,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.02,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 3,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.05,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 4,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.01,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 5,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.52,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 7,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 6.119126,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 8,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 17.99,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 9,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.8,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 10,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.02,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 11,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.04,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 12,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.02,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 13,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 1.13,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 14,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.396513,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 15,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.025,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 16,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.886875,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 17,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.090625,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 18,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.013125,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 19,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.015,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 20,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.009375,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 21,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.030625,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 22,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.035,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 23,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.021875,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 25,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 13.449375,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 26,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.02,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 27,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.04,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 28,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.02,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 29,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.9,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 30,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 1.195,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 31,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 13.455,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 32,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 1.2,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 34,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.123648,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 35,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.489955,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 36,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.127841,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 37,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.76282,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 38,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.025,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 39,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.02,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 40,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.01,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 41,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.26,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 42,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.1,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 43,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.46,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 44,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.08,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 45,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.04,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 46,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.74,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 47,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.325,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 48,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 7.365607,
+     "tags_cm": [
+      16
+     ],
+     "t_cm": 16,
+     "thickness_state": "PRINTED_IN_FACE"
+    },
+    {
+     "face": 49,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.02,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 50,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.06,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 51,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 1.31,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 52,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.00202,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 53,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.11673,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 54,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.05,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 55,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.10625,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 56,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.723392,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 57,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 5.080307,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 58,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 15.4025,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 59,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.099761,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 60,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 6.524271,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 61,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.956136,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 62,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.03125,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 63,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.1,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 64,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.05,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 65,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.01875,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 66,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.365239,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 67,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 2.080424,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 68,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.14,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 69,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.086626,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 70,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.259257,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 71,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.501975,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 72,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.14,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 73,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.64,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 74,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.16,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 75,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.1,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 76,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.54,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 77,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.1,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 78,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.035,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 79,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.025,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 80,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 1.43,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 81,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.10625,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 82,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.16875,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 83,
+     "role": "OPENING_STAIR",
+     "why": "stair line work inside the face",
+     "area_m2": 10.725,
+     "tags_cm": [
+      16
+     ]
+    },
+    {
+     "face": 84,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.5,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 85,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 16.253591,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 86,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.66,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 87,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 5.375,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 88,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.592893,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 89,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 2.937403,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 90,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.1,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 91,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.24,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 92,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.1,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 93,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.54,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 94,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.1,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 95,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 3.9,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 96,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.36,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 97,
+     "role": "OPENING_VOID",
+     "why": "opening-layer cross over the face",
+     "area_m2": 3.24,
+     "tags_cm": []
+    },
+    {
+     "face": 98,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.36,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 99,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 5.31,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 100,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.91125,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 101,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.2,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 102,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.14,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 103,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.1,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 104,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.59,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 105,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.05,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 106,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 5.544392,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 107,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 4.079353,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 108,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.294,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 109,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 2.5725,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 110,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.659,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 111,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.513891,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 112,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.910641,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 113,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.004375,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 114,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.0625,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 115,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.04375,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 116,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.039375,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 117,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 7.6765,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 118,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 1.351431,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 119,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.060625,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 120,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.06875,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 121,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.05,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 122,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.020625,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 123,
+     "role": "OPENING_VOID",
+     "why": "VOID label inside the face",
+     "area_m2": 27.075767,
+     "tags_cm": [
+      16
+     ]
+    },
+    {
+     "face": 124,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 3.285625,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 125,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.03125,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 126,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.075,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 127,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.01875,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 128,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.324375,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 129,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.75,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 130,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.35,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 131,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 28.690994,
+     "tags_cm": [
+      16
+     ],
+     "t_cm": 16,
+     "thickness_state": "PRINTED_IN_FACE"
+    },
+    {
+     "face": 132,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.62,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 133,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 2.8875,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 134,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.025,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 135,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.2,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 136,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.025,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 137,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.235625,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 138,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.09375,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 139,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.03125,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 140,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.004375,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 141,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.05,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 142,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.05625,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 143,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.039375,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 144,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.458781,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 145,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 2.816515,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 146,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.395972,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 147,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 12.32049,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 148,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 4.248432,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 149,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.673271,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 150,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 2.753125,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 151,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.685854,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 152,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 15.10839,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 153,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.704028,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 154,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.067324,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 155,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.088787,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 156,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.056263,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 157,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.118737,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 158,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.1575,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 159,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.1,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 160,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.09375,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 161,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.03125,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 162,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.0675,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 163,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.201215,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 164,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.1125,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 165,
+     "role": "OPENING_VOID",
+     "why": "VOID label inside the face",
+     "area_m2": 4.206352,
+     "tags_cm": []
+    },
+    {
+     "face": 166,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.34,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 167,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 1.053435,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 168,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 20.145127,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 169,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.22948,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 170,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.146866,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 171,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.04934,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 172,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.032132,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 173,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 4.37,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 174,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.08,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 175,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.1,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    }
+   ],
+   "counts": {
+    "PLATE": 169,
+    "OPENING_STAIR": 1,
+    "OPENING_VOID": 3
+   },
+   "detail_regions_excluded": 3,
+   "plate_components": 1,
+   "gross_outline_area_m2": 322.411424,
+   "openings_area_m2": 45.247119,
+   "net_plate_area_m2": 277.164304,
+   "perimeter_m": 96.358234,
+   "plate_perimeter_m": 150.044934,
+   "sheet_thickness_tags_cm": [
+    16
+   ],
+   "thickness_states": {
+    "SHEET_UNIFORM_PRINTED": 167,
+    "PRINTED_IN_FACE": 2
+   },
+   "bands_outside_plate": [],
+   "dangling_line_ends": 16,
+   "closure": "CLOSED",
+   "volume_state": "COMPUTED",
+   "volume_m3": 44.346288,
+   "dangles": [
+    [
+     54259.33,
+     40997.956
+    ],
+    [
+     57543.612,
+     36647.956
+    ],
+    [
+     58662.188,
+     36547.956
+    ],
+    [
+     67013.395,
+     45747.956
+    ],
+    [
+     67065.071,
+     45503.355
+    ],
+    [
+     67308.936,
+     45497.956
+    ],
+    [
+     67713.395,
+     45747.956
+    ],
+    [
+     67713.395,
+     49597.956
+    ],
+    [
+     67713.979,
+     45497.956
+    ],
+    [
+     71319.683,
+     36597.904
+    ],
+    [
+     71496.306,
+     43197.956
+    ],
+    [
+     71511.891,
+     43997.956
+    ],
+    [
+     71713.395,
+     44247.956
+    ],
+    [
+     72162.096,
+     43997.956
+    ],
+    [
+     72163.395,
+     44047.956
+    ],
+    [
+     72163.395,
+     44247.956
+    ]
+   ]
+  },
+  "1F": {
+   "policy": "SLAB_REGION_V1",
+   "faces": [
+    {
+     "face": 1,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.340985,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 2,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.546462,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 3,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.627185,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 4,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.1,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 5,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.12,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 6,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 1.875,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 7,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.470121,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 8,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.470121,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 9,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.757687,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 10,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.757687,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 11,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.51362,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 12,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 1.47375,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 13,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.812346,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 14,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 4.649021,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 15,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 1.025,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 16,
+     "role": "OPENING_VOID",
+     "why": "opening-layer cross over the face",
+     "area_m2": 14.966566,
+     "tags_cm": []
+    },
+    {
+     "face": 17,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 1.025,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 18,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 3.201711,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 19,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.156012,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 20,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.01875,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 21,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.1125,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 22,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.05,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 23,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.01875,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 24,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.16,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 25,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.354385,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 26,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.354385,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 27,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.034567,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 28,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.05,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 29,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.04,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 30,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.086626,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 31,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.099257,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 32,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.015433,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 33,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.16,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 34,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.1,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 35,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.54,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 36,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.1,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 37,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.175,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 38,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.025,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 39,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 1.864567,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 40,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 1.60875,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 41,
+     "role": "OPENING_STAIR",
+     "why": "stair line work inside the face",
+     "area_m2": 10.725,
+     "tags_cm": [
+      16
+     ]
+    },
+    {
+     "face": 42,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.5,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 43,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 20.855,
+     "tags_cm": [
+      16
+     ],
+     "t_cm": 16,
+     "thickness_state": "PRINTED_IN_FACE"
+    },
+    {
+     "face": 44,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.86,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 45,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 6.455,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 46,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.1,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 47,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.24,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 48,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.1,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 49,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.54,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 50,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.06,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 51,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.04,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 52,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 2.146154,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 53,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.36,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 54,
+     "role": "OPENING_VOID",
+     "why": "opening-layer cross over the face",
+     "area_m2": 3.24,
+     "tags_cm": []
+    },
+    {
+     "face": 55,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.36,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 56,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 5.4,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 57,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.729,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 58,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 2.205,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 59,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.2,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 60,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.14,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 61,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.1,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 62,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.6,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 63,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.05,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 64,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 11.028456,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 65,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 13.777811,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 66,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 4.214806,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 67,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 1.191057,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 68,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.05625,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 69,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.05,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 70,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.04375,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 71,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.940996,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 72,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.949563,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 73,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.029004,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 74,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.06875,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 75,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.075,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 76,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.027246,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 77,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.001874,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 78,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.323923,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 79,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.078126,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 80,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.883618,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 81,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 11.001211,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 82,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.73,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 83,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 2.761904,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 84,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.93,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 85,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.896956,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 86,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 10.195308,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 87,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 3.799779,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 88,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.2,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 89,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.584918,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 90,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.584918,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 91,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.04375,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 92,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.05,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 93,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.03125,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 94,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.04375,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 95,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.075,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 96,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.03125,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 97,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 4.521045,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 98,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 1.093046,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 99,
+     "role": "OPENING_VOID",
+     "why": "opening-layer cross over the face",
+     "area_m2": 17.115562,
+     "tags_cm": []
+    },
+    {
+     "face": 100,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 1.093046,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 101,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 4.413508,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 102,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.82,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 103,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 17.68,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 104,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.76,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 105,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 1.0875,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 106,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.524598,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 107,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.524598,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 108,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.021875,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 109,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.005,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 110,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.03,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 111,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.065,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 112,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.071875,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 113,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.03125,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 114,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.0125,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 115,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 1.430726,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 116,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.18,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 117,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 2.70966,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 118,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.860084,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 119,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.385097,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 120,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.202971,
+     "tags_cm": [],
+     "t_cm": 16,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    }
+   ],
+   "counts": {
+    "PLATE": 116,
+    "OPENING_VOID": 3,
+    "OPENING_STAIR": 1
+   },
+   "detail_regions_excluded": 1,
+   "plate_components": 1,
+   "gross_outline_area_m2": 217.20056,
+   "openings_area_m2": 46.047128,
+   "net_plate_area_m2": 171.153432,
+   "perimeter_m": 67.284042,
+   "plate_perimeter_m": 116.890498,
+   "sheet_thickness_tags_cm": [
+    16
+   ],
+   "thickness_states": {
+    "SHEET_UNIFORM_PRINTED": 115,
+    "PRINTED_IN_FACE": 1
+   },
+   "bands_outside_plate": [],
+   "dangling_line_ends": 7,
+   "closure": "CLOSED",
+   "volume_state": "COMPUTED",
+   "volume_m3": 27.38455,
+   "dangles": [
+    [
+     18680.72,
+     38047.956
+    ],
+    [
+     23270.867,
+     44845.051
+    ],
+    [
+     28688.989,
+     49597.956
+    ],
+    [
+     28888.989,
+     49597.956
+    ],
+    [
+     32988.989,
+     38047.956
+    ],
+    [
+     33038.989,
+     49647.956
+    ],
+    [
+     33238.989,
+     49597.956
+    ]
+   ]
+  },
+  "2F": {
+   "policy": "SLAB_REGION_V1",
+   "faces": [
+    {
+     "face": 0,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.62,
+     "tags_cm": [],
+     "t_cm": 18,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 1,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.1,
+     "tags_cm": [],
+     "t_cm": 18,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 2,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.1,
+     "tags_cm": [],
+     "t_cm": 18,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 3,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.025,
+     "tags_cm": [],
+     "t_cm": 18,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 4,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 10.009,
+     "tags_cm": [
+      18
+     ],
+     "t_cm": 18,
+     "thickness_state": "PRINTED_IN_FACE"
+    },
+    {
+     "face": 5,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 7.25,
+     "tags_cm": [],
+     "t_cm": 18,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 6,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.49,
+     "tags_cm": [],
+     "t_cm": 18,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 7,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 1.14,
+     "tags_cm": [],
+     "t_cm": 18,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 8,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.1,
+     "tags_cm": [],
+     "t_cm": 18,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 9,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.1,
+     "tags_cm": [],
+     "t_cm": 18,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 10,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 1.14,
+     "tags_cm": [],
+     "t_cm": 18,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 11,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.06,
+     "tags_cm": [],
+     "t_cm": 18,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 12,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.04,
+     "tags_cm": [],
+     "t_cm": 18,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 13,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 2.16,
+     "tags_cm": [],
+     "t_cm": 18,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 14,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.36,
+     "tags_cm": [],
+     "t_cm": 18,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 15,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 3.24,
+     "tags_cm": [],
+     "t_cm": 18,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 16,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 5.4,
+     "tags_cm": [
+      18
+     ],
+     "t_cm": 18,
+     "thickness_state": "PRINTED_IN_FACE"
+    },
+    {
+     "face": 17,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.28,
+     "tags_cm": [],
+     "t_cm": 18,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 18,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.04,
+     "tags_cm": [],
+     "t_cm": 18,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 19,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.1,
+     "tags_cm": [],
+     "t_cm": 18,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 20,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.2,
+     "tags_cm": [],
+     "t_cm": 18,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 21,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.1,
+     "tags_cm": [],
+     "t_cm": 18,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 22,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.6,
+     "tags_cm": [],
+     "t_cm": 18,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 23,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 3.6,
+     "tags_cm": [],
+     "t_cm": 18,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 24,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.6,
+     "tags_cm": [],
+     "t_cm": 18,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 25,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.04,
+     "tags_cm": [],
+     "t_cm": 18,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 26,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.04,
+     "tags_cm": [],
+     "t_cm": 18,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    },
+    {
+     "face": 27,
+     "role": "PLATE",
+     "why": null,
+     "area_m2": 0.04,
+     "tags_cm": [],
+     "t_cm": 18,
+     "thickness_state": "SHEET_UNIFORM_PRINTED"
+    }
+   ],
+   "counts": {
+    "PLATE": 28
+   },
+   "detail_regions_excluded": 1,
+   "plate_components": 1,
+   "gross_outline_area_m2": 37.974,
+   "openings_area_m2": 0,
+   "net_plate_area_m2": 37.974,
+   "perimeter_m": 35.599504,
+   "plate_perimeter_m": 35.599504,
+   "sheet_thickness_tags_cm": [
+    18
+   ],
+   "thickness_states": {
+    "SHEET_UNIFORM_PRINTED": 26,
+    "PRINTED_IN_FACE": 2
+   },
+   "bands_outside_plate": [
+    "ALSENAN_ST7757_DXF|H1934||TEXT|0",
+    "ALSENAN_ST7757_DXF|H1953||TEXT|0"
+   ],
+   "dangling_line_ends": 0,
+   "closure": "SLAB_OUTLINE_NOT_ESTABLISHED",
+   "volume_state": "BLOCKED",
+   "volume_m3": null,
+   "dangles": []
+  }
+ },
+ "rule": "plate from the sheet's own line work; openings from VOID labels / opening-layer crosses / stair line work; never fitted to a target"
+}
