@@ -1,0 +1,131 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_A3_ROOM_TOPOLOGY_V1",
+ "floors": {
+  "GF": {
+   "state": "BUILT",
+   "sites": 185,
+   "by_status": {
+    "CERTIFIED": 154,
+    "REVIEW_REQUIRED": 31
+   },
+   "issues": {
+    "GEOS_CROSSCHECK_DISAGREES": 1,
+    "LABEL_OCCURRENCE_SPLIT": 2,
+    "MULTIPLE_SEMANTIC_LABELS": 1,
+    "NEAR_MISS_BOUNDARY_GAP": 4,
+    "ROLE_CONFLICT_SEPARATOR": 2,
+    "TEXT_ROLE_UNRESOLVED_IN_SITE": 3,
+    "TOLERANCE_SENSITIVE": 11,
+    "TOPOLOGY_ROLE_UNRESOLVED": 10,
+    "UNKNOWN_OBJECT_IN_SITE": 6,
+    "ZERO_WIDTH_SLIVER": 2
+   },
+   "labelled_sites": 9,
+   "certified_labelled_sites": 5,
+   "wall_bands": {
+    "WALL_BAND_ESTABLISHED": 55,
+    "WALL_BAND_AMBIGUOUS": 9
+   },
+   "openings": {
+    "CLOSED": 12,
+    "OPENING_CLOSURE_UNRESOLVED": 1
+   },
+   "inferred_doors_admitted": {
+    "ADMITTED": 13
+   },
+   "unrealised": {
+    "blocking_input": [],
+    "recorded": [
+     "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT",
+     "OUTSIDE_SELECTED_MEASUREMENT_REGION_BY_PLACEMENT",
+     "OUTSIDE_SELECTED_MEASUREMENT_REGION_BY_PLACEMENT"
+    ]
+   },
+   "result_digest": "27cc157ad45756f62de3e3272ba754f4ad308b60cb8ef7c96eba53d544e400b2",
+   "run_input_digest": "4790704411c054697bd97f354644f038a7a33254c8caaf544e299265838cae7c"
+  },
+  "1F": {
+   "state": "BUILT",
+   "sites": 154,
+   "by_status": {
+    "CERTIFIED": 134,
+    "REVIEW_REQUIRED": 20
+   },
+   "issues": {
+    "MULTIPLE_SEMANTIC_LABELS": 2,
+    "NEAR_MISS_BOUNDARY_GAP": 3,
+    "OPENING_CLOSURE_UNRESOLVED": 1,
+    "ROLE_CONFLICT_SEPARATOR": 2,
+    "TEXT_ROLE_UNRESOLVED_IN_SITE": 3,
+    "TOLERANCE_SENSITIVE": 8,
+    "TOPOLOGY_ROLE_UNRESOLVED": 7,
+    "UNKNOWN_OBJECT_IN_SITE": 3
+   },
+   "labelled_sites": 6,
+   "certified_labelled_sites": 4,
+   "wall_bands": {
+    "WALL_BAND_ESTABLISHED": 50,
+    "WALL_BAND_AMBIGUOUS": 4
+   },
+   "openings": {
+    "CLOSED": 9,
+    "OPENING_CLOSURE_UNRESOLVED": 1
+   },
+   "inferred_doors_admitted": {
+    "ADMITTED": 10
+   },
+   "unrealised": {
+    "blocking_input": [],
+    "recorded": [
+     "OUTSIDE_SELECTED_MEASUREMENT_REGION_BY_PLACEMENT",
+     "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT",
+     "OUTSIDE_SELECTED_MEASUREMENT_REGION_BY_PLACEMENT"
+    ]
+   },
+   "result_digest": "9d5cea5f6070af13cd32d15e4c4dcb91ac6e64769a9a0aeaf680e3617f7c0996",
+   "run_input_digest": "acceaa2c875222ec0699c7db4d654f381572d3d0ec3b38358108947d1196a1d0"
+  },
+  "2F": {
+   "state": "BUILT",
+   "sites": 59,
+   "by_status": {
+    "CERTIFIED": 48,
+    "REVIEW_REQUIRED": 11
+   },
+   "issues": {
+    "NEAR_MISS_BOUNDARY_GAP": 1,
+    "ROLE_CONFLICT_SEPARATOR": 2,
+    "TEXT_ROLE_UNRESOLVED_IN_SITE": 4,
+    "TOLERANCE_SENSITIVE": 3,
+    "TOPOLOGY_ROLE_UNRESOLVED": 3,
+    "UNKNOWN_OBJECT_IN_SITE": 2
+   },
+   "labelled_sites": 0,
+   "certified_labelled_sites": 0,
+   "wall_bands": {
+    "WALL_BAND_ESTABLISHED": 19
+   },
+   "openings": {
+    "CLOSED": 3
+   },
+   "inferred_doors_admitted": {
+    "ADMITTED": 3
+   },
+   "unrealised": {
+    "blocking_input": [],
+    "recorded": [
+     "OUTSIDE_SELECTED_MEASUREMENT_REGION_BY_PLACEMENT",
+     "OUTSIDE_SELECTED_MEASUREMENT_REGION_BY_PLACEMENT",
+     "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+    ]
+   },
+   "result_digest": "0234d18e94113793b8f2b0c129416d72c60b89e6ad8490a86d882a90696c363b",
+   "run_input_digest": "8659468ad9c290ac749aae56aa356785e13250ca2878e7df176b9b3d610037ea"
+  }
+ },
+ "established_label_occurrences": {
+  "GF": 15,
+  "1F": 12,
+  "2F": 0
+ }
+}

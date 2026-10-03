@@ -1,0 +1,2300 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_A3_FOOTINGS_V1",
+ "policy": {
+  "policy_id": "STRUCTURAL_SCHEDULE_QTO_V1",
+  "authority": {
+   "type_identity": "plan mark (exact schedule token)",
+   "nominal_size": "admitted schedule row",
+   "geometry": "validation: confirmed / interrupted / count-unique / conflict",
+   "override": "explicit local dimension bound to the occurrence only"
+  },
+  "computed_states": [
+   "GEOMETRY_CONFIRMED",
+   "SCHEDULE_AUTHORITY_INTERRUPTED",
+   "SCHEDULE_AUTHORITY_COUNT_UNIQUE",
+   "EXPLICIT_LOCAL_OVERRIDE"
+  ],
+  "blocked_states": [
+   "SOURCE_CONFLICT_COMBINED_OUTLINE",
+   "SOURCE_CONFLICT_DRAWN_SIZE",
+   "TAG_WITHOUT_BOUND_GEOMETRY",
+   "TYPE_NOT_IN_SCHEDULE"
+  ],
+  "band_width_deviation_max": 0.05,
+  "never": [
+   "nearest-distance association",
+   "a matcher-assembled outline as authority",
+   "a type total written by hand",
+   "a kg/m3 ratio",
+   "an architectural height as a column height"
+  ],
+  "digest": "cb1e5fe43444b44a1f5a466a55615d190b0807912421c2ad60bff0f8e7f1193d"
+ },
+ "completion_policy": {
+  "id": "STRUCTURAL_COMPLETION_V1",
+  "template": "schedule plan size L x W (either orientation) drawn in the element layer; corner at a drawn end point; every side covered >= 0.8, or >= 0.5 with every gap bounded by drawn end points (an entering strap / tie beam); one side may be covered by a support line (CLIPPED)",
+  "uniqueness": "per type: candidates overlapping no matched outline and carrying a supported element; CONTAINED when a candidate holds exactly one tag and it is this type's orphan; then COUNT_UNIQUE iff the tag-free disjoint candidates equal the orphans left",
+  "never": [
+   "nearest-distance matching",
+   "snapping",
+   "scaling",
+   "a candidate holding another tag"
+  ],
+  "digest": "89e36a22f6f33bb1e696a631440aaef317375a0d958628a6a498f941c9c2297e"
+ },
+ "occurrences": [
+  {
+   "type": "F",
+   "mark_key": "ALSENAN_ST7757_DXF|H4261||TEXT|0",
+   "mark_value": "F",
+   "mark_xy": [
+    150259.805,
+    36861.094
+   ],
+   "schedule_row": {
+    "type": "F",
+    "keys": [
+     "ATTRIB|7289|DEPHT",
+     "ATTRIB|7289|H",
+     "ATTRIB|7289|W"
+    ],
+    "L_cm": 90.0,
+    "W_cm": 80.0,
+    "H_cm": 30.0
+   },
+   "geometry_state": "SOURCE_CONFLICT_COMBINED_OUTLINE",
+   "geometry": {
+    "outline": "RING:ALSENAN_ST7757_DXF|H6939|",
+    "outline_kind": "ENTITY_RING",
+    "outline_state": "GAP_EXPLAINED_BY_ENTERING_ELEMENT",
+    "drawn_mm": [
+     3250.0,
+     1400.0
+    ],
+    "outline_keys": [
+     "ALSENAN_ST7757_DXF|H6939||SEGMENT|0",
+     "ALSENAN_ST7757_DXF|H6939||SEGMENT|1",
+     "ALSENAN_ST7757_DXF|H6939||SEGMENT|2",
+     "ALSENAN_ST7757_DXF|H6939||SEGMENT|3",
+     "ALSENAN_ST7757_DXF|H6939||SEGMENT|4"
+    ],
+    "gap_keys": [
+     "ALSENAN_ST7757_DXF|H5769||SEGMENT|0",
+     "ALSENAN_ST7757_DXF|H6940||SEGMENT|0"
+    ]
+   },
+   "shared_with": [
+    "ALSENAN_ST7757_DXF|H5771||TEXT|0"
+   ],
+   "why": "one source outline [3250.0, 1400.0] mm holds 2 marks (F, F10); the schedule rectangles cannot all equal it",
+   "dims": {
+    "L": {
+     "m": 0.9,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F"
+    },
+    "W": {
+     "m": 0.8,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F"
+    },
+    "H": {
+     "m": 0.3,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F"
+    }
+   },
+   "formula": "1 x L x W x H",
+   "schedule_value_m3": 0.216,
+   "qty": null,
+   "unit": "m3",
+   "status": "BLOCKED",
+   "blockers": [
+    "SOURCE_CONFLICT_COMBINED_OUTLINE: one source outline [3250.0, 1400.0] mm holds 2 marks (F, F10); the schedule rectangles cannot all equal it"
+   ]
+  },
+  {
+   "type": "FN",
+   "mark_key": "ALSENAN_ST7757_DXF|H4333||TEXT|0",
+   "mark_value": "CN/FN",
+   "mark_xy": [
+    146122.945,
+    41337.903
+   ],
+   "schedule_row": {
+    "type": "FN",
+    "keys": [
+     "ATTRIB|7416|DEPHT",
+     "ATTRIB|7416|H",
+     "ATTRIB|7416|W"
+    ],
+    "L_cm": 100.0,
+    "W_cm": 100.0,
+    "H_cm": 30.0
+   },
+   "geometry_state": "GEOMETRY_CONFIRMED",
+   "geometry": {
+    "outline": "RECTANGLE:145737.000,41323.000,146737.000,42323.000",
+    "outline_kind": "RECTANGLE",
+    "outline_state": "CLOSED",
+    "drawn_mm": [
+     1000.0,
+     1000.0
+    ],
+    "outline_keys": [
+     "ALSENAN_ST7757_DXF|H4336||SEGMENT|0",
+     "ALSENAN_ST7757_DXF|H4337||SEGMENT|0",
+     "ALSENAN_ST7757_DXF|H4338||SEGMENT|0",
+     "ALSENAN_ST7757_DXF|H4339||SEGMENT|0"
+    ],
+    "gap_keys": []
+   },
+   "why": "own outline drawn whole at the scheduled plan size",
+   "dims": {
+    "L": {
+     "m": 1.0,
+     "source": "SCHEDULE OF FOOTINGS (cm) row FN"
+    },
+    "W": {
+     "m": 1.0,
+     "source": "SCHEDULE OF FOOTINGS (cm) row FN"
+    },
+    "H": {
+     "m": 0.3,
+     "source": "SCHEDULE OF FOOTINGS (cm) row FN"
+    }
+   },
+   "formula": "1 x L x W x H",
+   "schedule_value_m3": 0.3,
+   "qty": 0.3,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "blockers": []
+  },
+  {
+   "type": "FN",
+   "mark_key": "ALSENAN_ST7757_DXF|H4341||TEXT|0",
+   "mark_value": "CN/FN",
+   "mark_xy": [
+    140889.984,
+    42630.199
+   ],
+   "schedule_row": {
+    "type": "FN",
+    "keys": [
+     "ATTRIB|7416|DEPHT",
+     "ATTRIB|7416|H",
+     "ATTRIB|7416|W"
+    ],
+    "L_cm": 100.0,
+    "W_cm": 100.0,
+    "H_cm": 30.0
+   },
+   "geometry_state": "SCHEDULE_AUTHORITY_COUNT_UNIQUE",
+   "geometry": {
+    "free_outlines": [
+     [
+      141212.207014,
+      41322.955835,
+      142212.207014,
+      42322.955835
+     ]
+    ],
+    "orphans_of_type": 1
+   },
+   "why": "1 unbound mark(s), 1 free disjoint outline(s) of the scheduled size carrying a column",
+   "dims": {
+    "L": {
+     "m": 1.0,
+     "source": "SCHEDULE OF FOOTINGS (cm) row FN"
+    },
+    "W": {
+     "m": 1.0,
+     "source": "SCHEDULE OF FOOTINGS (cm) row FN"
+    },
+    "H": {
+     "m": 0.3,
+     "source": "SCHEDULE OF FOOTINGS (cm) row FN"
+    }
+   },
+   "formula": "1 x L x W x H",
+   "schedule_value_m3": 0.3,
+   "qty": 0.3,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "blockers": []
+  },
+  {
+   "type": "F5",
+   "mark_key": "ALSENAN_ST7757_DXF|H5743||TEXT|0",
+   "mark_value": "C5/F5",
+   "mark_xy": [
+    144472.427,
+    38438.304
+   ],
+   "schedule_row": {
+    "type": "F5",
+    "keys": [
+     "ATTRIB|7350|DEPHT",
+     "ATTRIB|7350|H",
+     "ATTRIB|7350|W"
+    ],
+    "L_cm": 240.0,
+    "W_cm": 210.0,
+    "H_cm": 40.0
+   },
+   "geometry_state": "GEOMETRY_CONFIRMED",
+   "geometry": {
+    "outline": "RECTANGLE:144112.000,36948.000,146512.000,39048.000",
+    "outline_kind": "RECTANGLE",
+    "outline_state": "CLOSED",
+    "drawn_mm": [
+     2400.0,
+     2100.0
+    ],
+    "outline_keys": [
+     "ALSENAN_ST7757_DXF|H5729|5741|SEGMENT|0",
+     "ALSENAN_ST7757_DXF|H5729|5741|SEGMENT|1",
+     "ALSENAN_ST7757_DXF|H5729|5741|SEGMENT|2",
+     "ALSENAN_ST7757_DXF|H5729|5741|SEGMENT|3"
+    ],
+    "gap_keys": []
+   },
+   "why": "own outline drawn whole at the scheduled plan size",
+   "dims": {
+    "L": {
+     "m": 2.4,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F5"
+    },
+    "W": {
+     "m": 2.1,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F5"
+    },
+    "H": {
+     "m": 0.4,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F5"
+    }
+   },
+   "formula": "1 x L x W x H",
+   "schedule_value_m3": 2.016,
+   "qty": 2.016,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "blockers": []
+  },
+  {
+   "type": "F4",
+   "mark_key": "ALSENAN_ST7757_DXF|H5745||TEXT|0",
+   "mark_value": "C4/F4",
+   "mark_xy": [
+    148342.373,
+    50108.793
+   ],
+   "schedule_row": {
+    "type": "F4",
+    "keys": [
+     "ATTRIB|7339|DEPHT",
+     "ATTRIB|7339|H",
+     "ATTRIB|7339|W"
+    ],
+    "L_cm": 220.0,
+    "W_cm": 200.0,
+    "H_cm": 40.0
+   },
+   "geometry_state": "GEOMETRY_CONFIRMED",
+   "geometry": {
+    "outline": "RECTANGLE:148062.000,48723.000,150262.000,50723.000",
+    "outline_kind": "RECTANGLE",
+    "outline_state": "CLOSED",
+    "drawn_mm": [
+     2200.0,
+     2000.0
+    ],
+    "outline_keys": [
+     "ALSENAN_ST7757_DXF|H5729|5734|SEGMENT|0",
+     "ALSENAN_ST7757_DXF|H5729|5734|SEGMENT|1",
+     "ALSENAN_ST7757_DXF|H5729|5734|SEGMENT|2",
+     "ALSENAN_ST7757_DXF|H5729|5734|SEGMENT|3"
+    ],
+    "gap_keys": []
+   },
+   "why": "own outline drawn whole at the scheduled plan size",
+   "dims": {
+    "L": {
+     "m": 2.2,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F4"
+    },
+    "W": {
+     "m": 2.0,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F4"
+    },
+    "H": {
+     "m": 0.4,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F4"
+    }
+   },
+   "formula": "1 x L x W x H",
+   "schedule_value_m3": 1.76,
+   "qty": 1.76,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "blockers": []
+  },
+  {
+   "type": "F4",
+   "mark_key": "ALSENAN_ST7757_DXF|H5746||TEXT|0",
+   "mark_value": "C4/F4",
+   "mark_xy": [
+    144340.38,
+    50189.397
+   ],
+   "schedule_row": {
+    "type": "F4",
+    "keys": [
+     "ATTRIB|7339|DEPHT",
+     "ATTRIB|7339|H",
+     "ATTRIB|7339|W"
+    ],
+    "L_cm": 220.0,
+    "W_cm": 200.0,
+    "H_cm": 40.0
+   },
+   "geometry_state": "GEOMETRY_CONFIRMED",
+   "geometry": {
+    "outline": "RECTANGLE:144012.000,48698.000,146212.000,50698.000",
+    "outline_kind": "RECTANGLE",
+    "outline_state": "CLOSED",
+    "drawn_mm": [
+     2200.0,
+     2000.0
+    ],
+    "outline_keys": [
+     "ALSENAN_ST7757_DXF|H5729|5733|SEGMENT|0",
+     "ALSENAN_ST7757_DXF|H5729|5733|SEGMENT|1",
+     "ALSENAN_ST7757_DXF|H5729|5733|SEGMENT|2",
+     "ALSENAN_ST7757_DXF|H5729|5733|SEGMENT|3"
+    ],
+    "gap_keys": []
+   },
+   "why": "own outline drawn whole at the scheduled plan size",
+   "dims": {
+    "L": {
+     "m": 2.2,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F4"
+    },
+    "W": {
+     "m": 2.0,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F4"
+    },
+    "H": {
+     "m": 0.4,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F4"
+    }
+   },
+   "formula": "1 x L x W x H",
+   "schedule_value_m3": 1.76,
+   "qty": 1.76,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "blockers": []
+  },
+  {
+   "type": "F5",
+   "mark_key": "ALSENAN_ST7757_DXF|H5747||TEXT|0",
+   "mark_value": "C5/F5",
+   "mark_xy": [
+    140479.285,
+    50180.946
+   ],
+   "schedule_row": {
+    "type": "F5",
+    "keys": [
+     "ATTRIB|7350|DEPHT",
+     "ATTRIB|7350|H",
+     "ATTRIB|7350|W"
+    ],
+    "L_cm": 240.0,
+    "W_cm": 210.0,
+    "H_cm": 40.0
+   },
+   "geometry_state": "GEOMETRY_CONFIRMED",
+   "geometry": {
+    "outline": "RECTANGLE:140012.000,48648.000,142412.000,50748.000",
+    "outline_kind": "RECTANGLE",
+    "outline_state": "CLOSED",
+    "drawn_mm": [
+     2400.0,
+     2100.0
+    ],
+    "outline_keys": [
+     "ALSENAN_ST7757_DXF|H5729|5732|SEGMENT|0",
+     "ALSENAN_ST7757_DXF|H5729|5732|SEGMENT|1",
+     "ALSENAN_ST7757_DXF|H5729|5732|SEGMENT|2",
+     "ALSENAN_ST7757_DXF|H5729|5732|SEGMENT|3"
+    ],
+    "gap_keys": []
+   },
+   "why": "own outline drawn whole at the scheduled plan size",
+   "dims": {
+    "L": {
+     "m": 2.4,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F5"
+    },
+    "W": {
+     "m": 2.1,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F5"
+    },
+    "H": {
+     "m": 0.4,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F5"
+    }
+   },
+   "formula": "1 x L x W x H",
+   "schedule_value_m3": 2.016,
+   "qty": 2.016,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "blockers": []
+  },
+  {
+   "type": "F2",
+   "mark_key": "ALSENAN_ST7757_DXF|H5748||TEXT|0",
+   "mark_value": "C2/F2",
+   "mark_xy": [
+    136609.774,
+    50085.263
+   ],
+   "schedule_row": {
+    "type": "F2",
+    "keys": [
+     "ATTRIB|7317|DEPHT",
+     "ATTRIB|7317|H",
+     "ATTRIB|7317|W"
+    ],
+    "L_cm": 190.0,
+    "W_cm": 170.0,
+    "H_cm": 35.0
+   },
+   "geometry_state": "GEOMETRY_CONFIRMED",
+   "geometry": {
+    "outline": "RECTANGLE:136542.000,48648.000,138242.000,50548.000",
+    "outline_kind": "RECTANGLE",
+    "outline_state": "CLOSED",
+    "drawn_mm": [
+     1700.0,
+     1900.0
+    ],
+    "outline_keys": [
+     "ALSENAN_ST7757_DXF|H5729|5731|SEGMENT|0",
+     "ALSENAN_ST7757_DXF|H5729|5731|SEGMENT|1",
+     "ALSENAN_ST7757_DXF|H5729|5731|SEGMENT|2",
+     "ALSENAN_ST7757_DXF|H5729|5731|SEGMENT|3"
+    ],
+    "gap_keys": []
+   },
+   "why": "own outline drawn whole at the scheduled plan size",
+   "dims": {
+    "L": {
+     "m": 1.9,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F2"
+    },
+    "W": {
+     "m": 1.7,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F2"
+    },
+    "H": {
+     "m": 0.35,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F2"
+    }
+   },
+   "formula": "1 x L x W x H",
+   "schedule_value_m3": 1.1305,
+   "qty": 1.1305,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "blockers": []
+  },
+  {
+   "type": "F2",
+   "mark_key": "ALSENAN_ST7757_DXF|H5749||TEXT|0",
+   "mark_value": "C2/F2",
+   "mark_xy": [
+    133874.98,
+    50112.229
+   ],
+   "schedule_row": {
+    "type": "F2",
+    "keys": [
+     "ATTRIB|7317|DEPHT",
+     "ATTRIB|7317|H",
+     "ATTRIB|7317|W"
+    ],
+    "L_cm": 190.0,
+    "W_cm": 170.0,
+    "H_cm": 35.0
+   },
+   "geometry_state": "GEOMETRY_CONFIRMED",
+   "geometry": {
+    "outline": "RECTANGLE:133842.000,48648.000,135542.000,50548.000",
+    "outline_kind": "RECTANGLE",
+    "outline_state": "CLOSED",
+    "drawn_mm": [
+     1700.0,
+     1900.0
+    ],
+    "outline_keys": [
+     "ALSENAN_ST7757_DXF|H5729|5724|SEGMENT|0",
+     "ALSENAN_ST7757_DXF|H5729|5724|SEGMENT|1",
+     "ALSENAN_ST7757_DXF|H5729|5724|SEGMENT|2",
+     "ALSENAN_ST7757_DXF|H5729|5724|SEGMENT|3"
+    ],
+    "gap_keys": []
+   },
+   "why": "own outline drawn whole at the scheduled plan size",
+   "dims": {
+    "L": {
+     "m": 1.9,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F2"
+    },
+    "W": {
+     "m": 1.7,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F2"
+    },
+    "H": {
+     "m": 0.35,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F2"
+    }
+   },
+   "formula": "1 x L x W x H",
+   "schedule_value_m3": 1.1305,
+   "qty": 1.1305,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "blockers": []
+  },
+  {
+   "type": "FF",
+   "mark_key": "ALSENAN_ST7757_DXF|H5750||TEXT|0",
+   "mark_value": "FF",
+   "mark_xy": [
+    138084.627,
+    45422.741
+   ],
+   "schedule_row": {
+    "type": "FF",
+    "keys": [
+     "ATTRIB|11038|DEPHT",
+     "ATTRIB|11038|H",
+     "ATTRIB|11038|W"
+    ],
+    "L_cm": 460.0,
+    "W_cm": 450.0,
+    "H_cm": 55.0
+   },
+   "geometry_state": "GEOMETRY_CONFIRMED",
+   "geometry": {
+    "outline": "RECTANGLE:136342.000,43148.000,140942.000,47648.000",
+    "outline_kind": "RECTANGLE",
+    "outline_state": "CLOSED",
+    "drawn_mm": [
+     4600.0,
+     4500.0
+    ],
+    "outline_keys": [
+     "ALSENAN_ST7757_DXF|H6955||SEGMENT|0",
+     "ALSENAN_ST7757_DXF|H6955||SEGMENT|1",
+     "ALSENAN_ST7757_DXF|H6955||SEGMENT|2",
+     "ALSENAN_ST7757_DXF|H6955||SEGMENT|3"
+    ],
+    "gap_keys": []
+   },
+   "why": "own outline drawn whole at the scheduled plan size",
+   "dims": {
+    "L": {
+     "m": 4.6,
+     "source": "SCHEDULE OF FOOTINGS (cm) row FF"
+    },
+    "W": {
+     "m": 4.5,
+     "source": "SCHEDULE OF FOOTINGS (cm) row FF"
+    },
+    "H": {
+     "m": 0.55,
+     "source": "SCHEDULE OF FOOTINGS (cm) row FF"
+    }
+   },
+   "formula": "1 x L x W x H",
+   "schedule_value_m3": 11.385,
+   "qty": 11.385,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "blockers": []
+  },
+  {
+   "type": "F9",
+   "mark_key": "ALSENAN_ST7757_DXF|H5751||TEXT|0",
+   "mark_value": "C9/F9",
+   "mark_xy": [
+    144229.774,
+    46258.612
+   ],
+   "schedule_row": {
+    "type": "F9",
+    "keys": [
+     "ATTRIB|7383|DEPHT",
+     "ATTRIB|7383|H",
+     "ATTRIB|7383|W"
+    ],
+    "L_cm": 340.0,
+    "W_cm": 270.0,
+    "H_cm": 55.0
+   },
+   "geometry_state": "GEOMETRY_CONFIRMED",
+   "geometry": {
+    "outline": "RECTANGLE:143262.000,44298.000,146662.000,46998.000",
+    "outline_kind": "RECTANGLE",
+    "outline_state": "CLOSED",
+    "drawn_mm": [
+     3400.0,
+     2700.0
+    ],
+    "outline_keys": [
+     "ALSENAN_ST7757_DXF|H6156||SEGMENT|0",
+     "ALSENAN_ST7757_DXF|H6156||SEGMENT|1",
+     "ALSENAN_ST7757_DXF|H6159||SEGMENT|0",
+     "ALSENAN_ST7757_DXF|H6159||SEGMENT|1",
+     "ALSENAN_ST7757_DXF|H6159||SEGMENT|2",
+     "ALSENAN_ST7757_DXF|H6159||SEGMENT|3"
+    ],
+    "gap_keys": []
+   },
+   "why": "own outline drawn whole at the scheduled plan size",
+   "dims": {
+    "L": {
+     "m": 3.4,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F9"
+    },
+    "W": {
+     "m": 2.7,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F9"
+    },
+    "H": {
+     "m": 0.55,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F9"
+    }
+   },
+   "formula": "1 x L x W x H",
+   "schedule_value_m3": 5.049,
+   "qty": 5.049,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "blockers": []
+  },
+  {
+   "type": "F",
+   "mark_key": "ALSENAN_ST7757_DXF|H5757|5752|TEXT|0",
+   "mark_value": "C/F",
+   "mark_xy": [
+    122084.675,
+    43425.773
+   ],
+   "schedule_row": {
+    "type": "F",
+    "keys": [
+     "ATTRIB|7289|DEPHT",
+     "ATTRIB|7289|H",
+     "ATTRIB|7289|W"
+    ],
+    "L_cm": 90.0,
+    "W_cm": 80.0,
+    "H_cm": 30.0
+   },
+   "geometry_state": "SCHEDULE_AUTHORITY_COUNT_UNIQUE",
+   "geometry": {
+    "free_outlines": [
+     [
+      121942.207014,
+      42497.955835,
+      122842.207014,
+      43297.955835
+     ],
+     [
+      131292.207014,
+      36347.955835,
+      132192.207014,
+      37147.955835
+     ]
+    ],
+    "orphans_of_type": 2
+   },
+   "why": "2 unbound mark(s), 2 free disjoint outline(s) of the scheduled size carrying a column",
+   "dims": {
+    "L": {
+     "m": 0.9,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F"
+    },
+    "W": {
+     "m": 0.8,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F"
+    },
+    "H": {
+     "m": 0.3,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F"
+    }
+   },
+   "formula": "1 x L x W x H",
+   "schedule_value_m3": 0.216,
+   "qty": 0.216,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "blockers": []
+  },
+  {
+   "type": "F",
+   "mark_key": "ALSENAN_ST7757_DXF|H5757|5759|TEXT|0",
+   "mark_value": "C/F",
+   "mark_xy": [
+    119898.438,
+    42591.776
+   ],
+   "schedule_row": {
+    "type": "F",
+    "keys": [
+     "ATTRIB|7289|DEPHT",
+     "ATTRIB|7289|H",
+     "ATTRIB|7289|W"
+    ],
+    "L_cm": 90.0,
+    "W_cm": 80.0,
+    "H_cm": 30.0
+   },
+   "geometry_state": "GEOMETRY_CONFIRMED",
+   "geometry": {
+    "outline": "RECTANGLE:119542.000,42348.000,120342.000,43248.000",
+    "outline_kind": "RECTANGLE",
+    "outline_state": "CLOSED",
+    "drawn_mm": [
+     800.0,
+     900.0
+    ],
+    "outline_keys": [
+     "ALSENAN_ST7757_DXF|H5729|5736|SEGMENT|0",
+     "ALSENAN_ST7757_DXF|H5729|5736|SEGMENT|1",
+     "ALSENAN_ST7757_DXF|H5729|5736|SEGMENT|2",
+     "ALSENAN_ST7757_DXF|H5729|5736|SEGMENT|3"
+    ],
+    "gap_keys": []
+   },
+   "why": "own outline drawn whole at the scheduled plan size",
+   "dims": {
+    "L": {
+     "m": 0.9,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F"
+    },
+    "W": {
+     "m": 0.8,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F"
+    },
+    "H": {
+     "m": 0.3,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F"
+    }
+   },
+   "formula": "1 x L x W x H",
+   "schedule_value_m3": 0.216,
+   "qty": 0.216,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "blockers": []
+  },
+  {
+   "type": "F",
+   "mark_key": "ALSENAN_ST7757_DXF|H5757|5760|TEXT|0",
+   "mark_value": "C/F",
+   "mark_xy": [
+    120003.967,
+    36736.247
+   ],
+   "schedule_row": {
+    "type": "F",
+    "keys": [
+     "ATTRIB|7289|DEPHT",
+     "ATTRIB|7289|H",
+     "ATTRIB|7289|W"
+    ],
+    "L_cm": 90.0,
+    "W_cm": 80.0,
+    "H_cm": 30.0
+   },
+   "geometry_state": "GEOMETRY_CONFIRMED",
+   "geometry": {
+    "outline": "RECTANGLE:119542.000,36348.000,120442.000,37148.000",
+    "outline_kind": "RECTANGLE",
+    "outline_state": "CLOSED",
+    "drawn_mm": [
+     900.0,
+     800.0
+    ],
+    "outline_keys": [
+     "ALSENAN_ST7757_DXF|H5729|5737|SEGMENT|0",
+     "ALSENAN_ST7757_DXF|H5729|5737|SEGMENT|1",
+     "ALSENAN_ST7757_DXF|H5729|5737|SEGMENT|2",
+     "ALSENAN_ST7757_DXF|H5729|5737|SEGMENT|3"
+    ],
+    "gap_keys": []
+   },
+   "why": "own outline drawn whole at the scheduled plan size",
+   "dims": {
+    "L": {
+     "m": 0.9,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F"
+    },
+    "W": {
+     "m": 0.8,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F"
+    },
+    "H": {
+     "m": 0.3,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F"
+    }
+   },
+   "formula": "1 x L x W x H",
+   "schedule_value_m3": 0.216,
+   "qty": 0.216,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "blockers": []
+  },
+  {
+   "type": "F",
+   "mark_key": "ALSENAN_ST7757_DXF|H5757|5762|TEXT|0",
+   "mark_value": "C/F",
+   "mark_xy": [
+    131289.617,
+    36755.041
+   ],
+   "schedule_row": {
+    "type": "F",
+    "keys": [
+     "ATTRIB|7289|DEPHT",
+     "ATTRIB|7289|H",
+     "ATTRIB|7289|W"
+    ],
+    "L_cm": 90.0,
+    "W_cm": 80.0,
+    "H_cm": 30.0
+   },
+   "geometry_state": "SCHEDULE_AUTHORITY_COUNT_UNIQUE",
+   "geometry": {
+    "free_outlines": [
+     [
+      121942.207014,
+      42497.955835,
+      122842.207014,
+      43297.955835
+     ],
+     [
+      131292.207014,
+      36347.955835,
+      132192.207014,
+      37147.955835
+     ]
+    ],
+    "orphans_of_type": 2
+   },
+   "why": "2 unbound mark(s), 2 free disjoint outline(s) of the scheduled size carrying a column",
+   "dims": {
+    "L": {
+     "m": 0.9,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F"
+    },
+    "W": {
+     "m": 0.8,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F"
+    },
+    "H": {
+     "m": 0.3,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F"
+    }
+   },
+   "formula": "1 x L x W x H",
+   "schedule_value_m3": 0.216,
+   "qty": 0.216,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "blockers": []
+  },
+  {
+   "type": "F14",
+   "mark_key": "ALSENAN_ST7757_DXF|H5763||TEXT|0",
+   "mark_value": "F14",
+   "mark_xy": [
+    142806.829,
+    38292.412
+   ],
+   "schedule_row": {
+    "type": "F14",
+    "keys": [
+     "ATTRIB|10965|DEPHT",
+     "ATTRIB|10965|H",
+     "ATTRIB|10965|W"
+    ],
+    "L_cm": 380.0,
+    "W_cm": 330.0,
+    "H_cm": 50.0
+   },
+   "geometry_state": "GEOMETRY_CONFIRMED",
+   "geometry": {
+    "outline": "RING:ALSENAN_ST7757_DXF|H6938|",
+    "outline_kind": "ENTITY_RING",
+    "outline_state": "CLOSED",
+    "drawn_mm": [
+     3800.0,
+     3300.0
+    ],
+    "outline_keys": [
+     "ALSENAN_ST7757_DXF|H6938||SEGMENT|0",
+     "ALSENAN_ST7757_DXF|H6938||SEGMENT|1",
+     "ALSENAN_ST7757_DXF|H6938||SEGMENT|2",
+     "ALSENAN_ST7757_DXF|H6938||SEGMENT|3"
+    ],
+    "gap_keys": []
+   },
+   "why": "own outline drawn whole at the scheduled plan size",
+   "dims": {
+    "L": {
+     "m": 3.8,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F14"
+    },
+    "W": {
+     "m": 3.3,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F14"
+    },
+    "H": {
+     "m": 0.5,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F14"
+    }
+   },
+   "formula": "1 x L x W x H",
+   "schedule_value_m3": 6.27,
+   "qty": 6.27,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "blockers": []
+  },
+  {
+   "type": "F11",
+   "mark_key": "ALSENAN_ST7757_DXF|H5767|5764|TEXT|0",
+   "mark_value": "C11/F11",
+   "mark_xy": [
+    133022.429,
+    37046.139
+   ],
+   "schedule_row": {
+    "type": "F11",
+    "keys": [
+     "ATTRIB|7405|DEPHT",
+     "ATTRIB|7405|H",
+     "ATTRIB|7405|W"
+    ],
+    "L_cm": 350.0,
+    "W_cm": 150.0,
+    "H_cm": 50.0
+   },
+   "geometry_state": "SCHEDULE_AUTHORITY_COUNT_UNIQUE",
+   "geometry": {
+    "free_outlines": [
+     [
+      133817.207014,
+      36347.955835,
+      137317.207014,
+      37847.955835
+     ]
+    ],
+    "orphans_of_type": 1
+   },
+   "why": "1 unbound mark(s), 1 free disjoint outline(s) of the scheduled size carrying a column",
+   "dims": {
+    "L": {
+     "m": 3.5,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F11"
+    },
+    "W": {
+     "m": 1.5,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F11"
+    },
+    "H": {
+     "m": 0.5,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F11"
+    }
+   },
+   "formula": "1 x L x W x H",
+   "schedule_value_m3": 2.625,
+   "qty": 2.625,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "blockers": []
+  },
+  {
+   "type": "FN",
+   "mark_key": "ALSENAN_ST7757_DXF|H5770||TEXT|0",
+   "mark_value": "FN",
+   "mark_xy": [
+    149960.772,
+    39972.306
+   ],
+   "schedule_row": {
+    "type": "FN",
+    "keys": [
+     "ATTRIB|7416|DEPHT",
+     "ATTRIB|7416|H",
+     "ATTRIB|7416|W"
+    ],
+    "L_cm": 100.0,
+    "W_cm": 100.0,
+    "H_cm": 30.0
+   },
+   "geometry_state": "GEOMETRY_CONFIRMED",
+   "geometry": {
+    "outline": "RECTANGLE:149912.000,39848.000,150912.000,40848.000",
+    "outline_kind": "RECTANGLE",
+    "outline_state": "CLOSED",
+    "drawn_mm": [
+     1000.0,
+     1000.0
+    ],
+    "outline_keys": [
+     "ALSENAN_ST7757_DXF|H4352||SEGMENT|0",
+     "ALSENAN_ST7757_DXF|H4353||SEGMENT|0",
+     "ALSENAN_ST7757_DXF|H4354||SEGMENT|0",
+     "ALSENAN_ST7757_DXF|H4355||SEGMENT|0"
+    ],
+    "gap_keys": []
+   },
+   "why": "own outline drawn whole at the scheduled plan size",
+   "dims": {
+    "L": {
+     "m": 1.0,
+     "source": "SCHEDULE OF FOOTINGS (cm) row FN"
+    },
+    "W": {
+     "m": 1.0,
+     "source": "SCHEDULE OF FOOTINGS (cm) row FN"
+    },
+    "H": {
+     "m": 0.3,
+     "source": "SCHEDULE OF FOOTINGS (cm) row FN"
+    }
+   },
+   "formula": "1 x L x W x H",
+   "schedule_value_m3": 0.3,
+   "qty": 0.3,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "blockers": []
+  },
+  {
+   "type": "F10",
+   "mark_key": "ALSENAN_ST7757_DXF|H5771||TEXT|0",
+   "mark_value": "F10",
+   "mark_xy": [
+    147842.407,
+    36929.849
+   ],
+   "schedule_row": {
+    "type": "F10",
+    "keys": [
+     "ATTRIB|7394|DEPHT",
+     "ATTRIB|7394|H",
+     "ATTRIB|7394|W"
+    ],
+    "L_cm": 280.0,
+    "W_cm": 140.0,
+    "H_cm": 50.0
+   },
+   "geometry_state": "SOURCE_CONFLICT_COMBINED_OUTLINE",
+   "geometry": {
+    "outline": "RING:ALSENAN_ST7757_DXF|H6939|",
+    "outline_kind": "ENTITY_RING",
+    "outline_state": "GAP_EXPLAINED_BY_ENTERING_ELEMENT",
+    "drawn_mm": [
+     3250.0,
+     1400.0
+    ],
+    "outline_keys": [
+     "ALSENAN_ST7757_DXF|H6939||SEGMENT|0",
+     "ALSENAN_ST7757_DXF|H6939||SEGMENT|1",
+     "ALSENAN_ST7757_DXF|H6939||SEGMENT|2",
+     "ALSENAN_ST7757_DXF|H6939||SEGMENT|3",
+     "ALSENAN_ST7757_DXF|H6939||SEGMENT|4"
+    ],
+    "gap_keys": [
+     "ALSENAN_ST7757_DXF|H5769||SEGMENT|0",
+     "ALSENAN_ST7757_DXF|H6940||SEGMENT|0"
+    ]
+   },
+   "shared_with": [
+    "ALSENAN_ST7757_DXF|H4261||TEXT|0"
+   ],
+   "why": "one source outline [3250.0, 1400.0] mm holds 2 marks (F, F10); the schedule rectangles cannot all equal it",
+   "dims": {
+    "L": {
+     "m": 2.8,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F10"
+    },
+    "W": {
+     "m": 1.4,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F10"
+    },
+    "H": {
+     "m": 0.5,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F10"
+    }
+   },
+   "formula": "1 x L x W x H",
+   "schedule_value_m3": 1.96,
+   "qty": null,
+   "unit": "m3",
+   "status": "BLOCKED",
+   "blockers": [
+    "SOURCE_CONFLICT_COMBINED_OUTLINE: one source outline [3250.0, 1400.0] mm holds 2 marks (F, F10); the schedule rectangles cannot all equal it"
+   ]
+  },
+  {
+   "type": "F6",
+   "mark_key": "ALSENAN_ST7757_DXF|H5773||TEXT|0",
+   "mark_value": "C6/F6",
+   "mark_xy": [
+    134002.416,
+    42127.603
+   ],
+   "schedule_row": {
+    "type": "F6",
+    "keys": [
+     "ATTRIB|7361|DEPHT",
+     "ATTRIB|7361|H",
+     "ATTRIB|7361|W"
+    ],
+    "L_cm": 260.0,
+    "W_cm": 220.0,
+    "H_cm": 50.0
+   },
+   "geometry_state": "SCHEDULE_AUTHORITY_INTERRUPTED",
+   "geometry": {
+    "outline": "RING:ALSENAN_ST7757_DXF|H6937|",
+    "outline_kind": "ENTITY_RING",
+    "outline_state": "GAP_EXPLAINED_BY_ENTERING_ELEMENT",
+    "drawn_mm": [
+     2200.0,
+     2600.0
+    ],
+    "outline_keys": [
+     "ALSENAN_ST7757_DXF|H6937||SEGMENT|0",
+     "ALSENAN_ST7757_DXF|H6937||SEGMENT|1",
+     "ALSENAN_ST7757_DXF|H6937||SEGMENT|2",
+     "ALSENAN_ST7757_DXF|H6937||SEGMENT|3",
+     "ALSENAN_ST7757_DXF|H6937||SEGMENT|4"
+    ],
+    "gap_keys": [
+     "ALSENAN_ST7757_DXF|H6920||SEGMENT|0",
+     "ALSENAN_ST7757_DXF|H6921||SEGMENT|0"
+    ]
+   },
+   "why": "outline GAP_EXPLAINED_BY_ENTERING_ELEMENT (an entering element / support line interrupts it)",
+   "dims": {
+    "L": {
+     "m": 2.6,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F6"
+    },
+    "W": {
+     "m": 2.2,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F6"
+    },
+    "H": {
+     "m": 0.5,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F6"
+    }
+   },
+   "formula": "1 x L x W x H",
+   "schedule_value_m3": 2.86,
+   "qty": 2.86,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "blockers": []
+  },
+  {
+   "type": "F3",
+   "mark_key": "ALSENAN_ST7757_DXF|H5774||TEXT|0",
+   "mark_value": "C3/F3",
+   "mark_xy": [
+    129555.248,
+    38490.048
+   ],
+   "schedule_row": {
+    "type": "F3",
+    "keys": [
+     "ATTRIB|7328|DEPHT",
+     "ATTRIB|7328|H",
+     "ATTRIB|7328|W"
+    ],
+    "L_cm": 160.0,
+    "W_cm": 140.0,
+    "H_cm": 30.0
+   },
+   "geometry_state": "GEOMETRY_CONFIRMED",
+   "geometry": {
+    "outline": "RECTANGLE:129492.000,37298.000,130892.000,38898.000",
+    "outline_kind": "RECTANGLE",
+    "outline_state": "CLOSED",
+    "drawn_mm": [
+     1400.0,
+     1600.0
+    ],
+    "outline_keys": [
+     "ALSENAN_ST7757_DXF|H5729|5740|SEGMENT|0",
+     "ALSENAN_ST7757_DXF|H5729|5740|SEGMENT|1",
+     "ALSENAN_ST7757_DXF|H5729|5740|SEGMENT|2",
+     "ALSENAN_ST7757_DXF|H5729|5740|SEGMENT|3"
+    ],
+    "gap_keys": []
+   },
+   "why": "own outline drawn whole at the scheduled plan size",
+   "dims": {
+    "L": {
+     "m": 1.6,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F3"
+    },
+    "W": {
+     "m": 1.4,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F3"
+    },
+    "H": {
+     "m": 0.3,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F3"
+    }
+   },
+   "formula": "1 x L x W x H",
+   "schedule_value_m3": 0.672,
+   "qty": 0.672,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "blockers": []
+  },
+  {
+   "type": "F3",
+   "mark_key": "ALSENAN_ST7757_DXF|H5775||TEXT|0",
+   "mark_value": "C3/F3",
+   "mark_xy": [
+    123283.905,
+    41372.14
+   ],
+   "schedule_row": {
+    "type": "F3",
+    "keys": [
+     "ATTRIB|7328|DEPHT",
+     "ATTRIB|7328|H",
+     "ATTRIB|7328|W"
+    ],
+    "L_cm": 160.0,
+    "W_cm": 140.0,
+    "H_cm": 30.0
+   },
+   "geometry_state": "GEOMETRY_CONFIRMED",
+   "geometry": {
+    "outline": "RECTANGLE:123192.000,40398.000,124792.000,41798.000",
+    "outline_kind": "RECTANGLE",
+    "outline_state": "CLOSED",
+    "drawn_mm": [
+     1600.0,
+     1400.0
+    ],
+    "outline_keys": [
+     "ALSENAN_ST7757_DXF|H5729|5739|SEGMENT|0",
+     "ALSENAN_ST7757_DXF|H5729|5739|SEGMENT|1",
+     "ALSENAN_ST7757_DXF|H5729|5739|SEGMENT|2",
+     "ALSENAN_ST7757_DXF|H5729|5739|SEGMENT|3"
+    ],
+    "gap_keys": []
+   },
+   "why": "own outline drawn whole at the scheduled plan size",
+   "dims": {
+    "L": {
+     "m": 1.6,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F3"
+    },
+    "W": {
+     "m": 1.4,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F3"
+    },
+    "H": {
+     "m": 0.3,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F3"
+    }
+   },
+   "formula": "1 x L x W x H",
+   "schedule_value_m3": 0.672,
+   "qty": 0.672,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "blockers": []
+  },
+  {
+   "type": "FN",
+   "mark_key": "ALSENAN_ST7757_DXF|H6160||TEXT|0",
+   "mark_value": "CN/FN",
+   "mark_xy": [
+    146847.198,
+    47309.117
+   ],
+   "schedule_row": {
+    "type": "FN",
+    "keys": [
+     "ATTRIB|7416|DEPHT",
+     "ATTRIB|7416|H",
+     "ATTRIB|7416|W"
+    ],
+    "L_cm": 100.0,
+    "W_cm": 100.0,
+    "H_cm": 30.0
+   },
+   "geometry_state": "SCHEDULE_AUTHORITY_INTERRUPTED",
+   "geometry": {
+    "outline": "RING:ALSENAN_ST7757_DXF|H6156|",
+    "outline_kind": "ENTITY_RING",
+    "outline_state": "NOTCH_AT_ADJACENT_OUTLINE",
+    "drawn_mm": [
+     1000.0,
+     1000.0
+    ],
+    "outline_keys": [
+     "ALSENAN_ST7757_DXF|H6156||SEGMENT|0",
+     "ALSENAN_ST7757_DXF|H6156||SEGMENT|1",
+     "ALSENAN_ST7757_DXF|H6156||SEGMENT|2",
+     "ALSENAN_ST7757_DXF|H6156||SEGMENT|3",
+     "ALSENAN_ST7757_DXF|H6156||SEGMENT|4",
+     "ALSENAN_ST7757_DXF|H6156||SEGMENT|5"
+    ],
+    "gap_keys": [],
+    "notch_m2": 0.14,
+    "adjacent_outlines": [
+     "RECTANGLE:143262.000,44298.000,146662.000,46998.000",
+     "RING:ALSENAN_ST7757_DXF|H6159|"
+    ]
+   },
+   "why": "outline notched where an adjacent outline sits",
+   "dims": {
+    "L": {
+     "m": 1.0,
+     "source": "SCHEDULE OF FOOTINGS (cm) row FN"
+    },
+    "W": {
+     "m": 1.0,
+     "source": "SCHEDULE OF FOOTINGS (cm) row FN"
+    },
+    "H": {
+     "m": 0.3,
+     "source": "SCHEDULE OF FOOTINGS (cm) row FN"
+    }
+   },
+   "formula": "1 x L x W x H",
+   "schedule_value_m3": 0.3,
+   "qty": 0.3,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "blockers": []
+  },
+  {
+   "type": "F12",
+   "mark_key": "ALSENAN_ST7757_DXF|H6874||TEXT|0",
+   "mark_value": "F12",
+   "mark_xy": [
+    132723.891,
+    45768.335
+   ],
+   "schedule_row": {
+    "type": "F12",
+    "keys": [
+     "ATTRIB|10846|DEPHT",
+     "ATTRIB|10846|H",
+     "ATTRIB|10846|W"
+    ],
+    "L_cm": 440.0,
+    "W_cm": 320.0,
+    "H_cm": 70.0
+   },
+   "geometry_state": "GEOMETRY_CONFIRMED",
+   "geometry": {
+    "outline": "RING:ALSENAN_ST7757_DXF|H6847|",
+    "outline_kind": "ENTITY_RING",
+    "outline_state": "CLOSED",
+    "drawn_mm": [
+     4400.0,
+     3200.0
+    ],
+    "outline_keys": [
+     "ALSENAN_ST7757_DXF|H6847||SEGMENT|0",
+     "ALSENAN_ST7757_DXF|H6847||SEGMENT|1",
+     "ALSENAN_ST7757_DXF|H6847||SEGMENT|2",
+     "ALSENAN_ST7757_DXF|H6847||SEGMENT|3"
+    ],
+    "gap_keys": []
+   },
+   "why": "own outline drawn whole at the scheduled plan size",
+   "dims": {
+    "L": {
+     "m": 4.4,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F12"
+    },
+    "W": {
+     "m": 3.2,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F12"
+    },
+    "H": {
+     "m": 0.7,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F12"
+    }
+   },
+   "formula": "1 x L x W x H",
+   "schedule_value_m3": 9.856,
+   "qty": 9.856,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "blockers": []
+  },
+  {
+   "type": "F13",
+   "mark_key": "ALSENAN_ST7757_DXF|H6876||TEXT|0",
+   "mark_value": "F13",
+   "mark_xy": [
+    130495.613,
+    41435.263
+   ],
+   "schedule_row": {
+    "type": "F13",
+    "keys": [
+     "ATTRIB|10904|DEPHT",
+     "ATTRIB|10904|H",
+     "ATTRIB|10904|W"
+    ],
+    "L_cm": 430.0,
+    "W_cm": 240.0,
+    "H_cm": 50.0
+   },
+   "geometry_state": "GEOMETRY_CONFIRMED",
+   "geometry": {
+    "outline": "RECTANGLE:128842.000,39748.000,133142.000,42148.000",
+    "outline_kind": "RECTANGLE",
+    "outline_state": "CLOSED",
+    "drawn_mm": [
+     4300.0,
+     2400.0
+    ],
+    "outline_keys": [
+     "ALSENAN_ST7757_DXF|H6875||SEGMENT|0",
+     "ALSENAN_ST7757_DXF|H6875||SEGMENT|1",
+     "ALSENAN_ST7757_DXF|H6875||SEGMENT|2",
+     "ALSENAN_ST7757_DXF|H6875||SEGMENT|3"
+    ],
+    "gap_keys": []
+   },
+   "why": "own outline drawn whole at the scheduled plan size",
+   "dims": {
+    "L": {
+     "m": 4.3,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F13"
+    },
+    "W": {
+     "m": 2.4,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F13"
+    },
+    "H": {
+     "m": 0.5,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F13"
+    }
+   },
+   "formula": "1 x L x W x H",
+   "schedule_value_m3": 5.16,
+   "qty": 5.16,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "blockers": []
+  },
+  {
+   "type": "F8",
+   "mark_key": "ALSENAN_ST7757_DXF|H6949||TEXT|0",
+   "mark_value": "F8",
+   "mark_xy": [
+    147392.838,
+    43411.593
+   ],
+   "schedule_row": {
+    "type": "F8",
+    "keys": [
+     "ATTRIB|10998|DEPHT",
+     "ATTRIB|10998|H",
+     "ATTRIB|10998|W"
+    ],
+    "L_cm": 400.0,
+    "W_cm": 360.0,
+    "H_cm": 50.0
+   },
+   "geometry_state": "GEOMETRY_CONFIRMED",
+   "geometry": {
+    "outline": "RECTANGLE:146912.000,42298.000,150912.000,45898.000",
+    "outline_kind": "RECTANGLE",
+    "outline_state": "CLOSED",
+    "drawn_mm": [
+     4000.0,
+     3600.0
+    ],
+    "outline_keys": [
+     "ALSENAN_ST7757_DXF|H6948||SEGMENT|0",
+     "ALSENAN_ST7757_DXF|H6948||SEGMENT|1",
+     "ALSENAN_ST7757_DXF|H6948||SEGMENT|2",
+     "ALSENAN_ST7757_DXF|H6948||SEGMENT|3"
+    ],
+    "gap_keys": []
+   },
+   "why": "own outline drawn whole at the scheduled plan size",
+   "dims": {
+    "L": {
+     "m": 4.0,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F8"
+    },
+    "W": {
+     "m": 3.6,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F8"
+    },
+    "H": {
+     "m": 0.5,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F8"
+    }
+   },
+   "formula": "1 x L x W x H",
+   "schedule_value_m3": 7.2,
+   "qty": 7.2,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "blockers": []
+  },
+  {
+   "type": "F15",
+   "mark_key": "ALSENAN_ST7757_DXF|H6953||TEXT|0",
+   "mark_value": "F15",
+   "mark_xy": [
+    125746.91,
+    36976.437
+   ],
+   "schedule_row": {
+    "type": "F15",
+    "keys": [
+     "ATTRIB|11027|DEPHT",
+     "ATTRIB|11027|H",
+     "ATTRIB|11027|W"
+    ],
+    "L_cm": 180.0,
+    "W_cm": 100.0,
+    "H_cm": 40.0
+   },
+   "geometry_state": "GEOMETRY_CONFIRMED",
+   "geometry": {
+    "outline": "RING:ALSENAN_ST7757_DXF|H6954|",
+    "outline_kind": "ENTITY_RING",
+    "outline_state": "CLOSED",
+    "drawn_mm": [
+     1800.0,
+     1000.0
+    ],
+    "outline_keys": [
+     "ALSENAN_ST7757_DXF|H6954||SEGMENT|0",
+     "ALSENAN_ST7757_DXF|H6954||SEGMENT|1",
+     "ALSENAN_ST7757_DXF|H6954||SEGMENT|2",
+     "ALSENAN_ST7757_DXF|H6954||SEGMENT|3"
+    ],
+    "gap_keys": []
+   },
+   "why": "own outline drawn whole at the scheduled plan size",
+   "dims": {
+    "L": {
+     "m": 1.8,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F15"
+    },
+    "W": {
+     "m": 1.0,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F15"
+    },
+    "H": {
+     "m": 0.4,
+     "source": "SCHEDULE OF FOOTINGS (cm) row F15"
+    }
+   },
+   "formula": "1 x L x W x H",
+   "schedule_value_m3": 0.72,
+   "qty": 0.72,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "blockers": []
+  }
+ ],
+ "type_summary": [
+  {
+   "type": "F",
+   "count_tagged": 5,
+   "count_geometry_confirmed": 2,
+   "count_partial_geometry": 2,
+   "count_override": 0,
+   "count_conflict": 1,
+   "count_blocked_other": 0,
+   "count_computed": 4,
+   "L_m": 0.9,
+   "W_m": 0.8,
+   "H_m": 0.3,
+   "m3_each": 0.216,
+   "m3_total_computed": 0.864,
+   "tag_keys": [
+    "ALSENAN_ST7757_DXF|H4261||TEXT|0",
+    "ALSENAN_ST7757_DXF|H5757|5752|TEXT|0",
+    "ALSENAN_ST7757_DXF|H5757|5759|TEXT|0",
+    "ALSENAN_ST7757_DXF|H5757|5760|TEXT|0",
+    "ALSENAN_ST7757_DXF|H5757|5762|TEXT|0"
+   ],
+   "status": "PARTIAL"
+  },
+  {
+   "type": "F2",
+   "count_tagged": 2,
+   "count_geometry_confirmed": 2,
+   "count_partial_geometry": 0,
+   "count_override": 0,
+   "count_conflict": 0,
+   "count_blocked_other": 0,
+   "count_computed": 2,
+   "L_m": 1.9,
+   "W_m": 1.7,
+   "H_m": 0.35,
+   "m3_each": 1.1305,
+   "m3_total_computed": 2.261,
+   "tag_keys": [
+    "ALSENAN_ST7757_DXF|H5748||TEXT|0",
+    "ALSENAN_ST7757_DXF|H5749||TEXT|0"
+   ],
+   "status": "COMPUTED_SHADOW_COMPLETE"
+  },
+  {
+   "type": "F3",
+   "count_tagged": 2,
+   "count_geometry_confirmed": 2,
+   "count_partial_geometry": 0,
+   "count_override": 0,
+   "count_conflict": 0,
+   "count_blocked_other": 0,
+   "count_computed": 2,
+   "L_m": 1.6,
+   "W_m": 1.4,
+   "H_m": 0.3,
+   "m3_each": 0.672,
+   "m3_total_computed": 1.344,
+   "tag_keys": [
+    "ALSENAN_ST7757_DXF|H5774||TEXT|0",
+    "ALSENAN_ST7757_DXF|H5775||TEXT|0"
+   ],
+   "status": "COMPUTED_SHADOW_COMPLETE"
+  },
+  {
+   "type": "F4",
+   "count_tagged": 2,
+   "count_geometry_confirmed": 2,
+   "count_partial_geometry": 0,
+   "count_override": 0,
+   "count_conflict": 0,
+   "count_blocked_other": 0,
+   "count_computed": 2,
+   "L_m": 2.2,
+   "W_m": 2.0,
+   "H_m": 0.4,
+   "m3_each": 1.76,
+   "m3_total_computed": 3.52,
+   "tag_keys": [
+    "ALSENAN_ST7757_DXF|H5745||TEXT|0",
+    "ALSENAN_ST7757_DXF|H5746||TEXT|0"
+   ],
+   "status": "COMPUTED_SHADOW_COMPLETE"
+  },
+  {
+   "type": "F5",
+   "count_tagged": 2,
+   "count_geometry_confirmed": 2,
+   "count_partial_geometry": 0,
+   "count_override": 0,
+   "count_conflict": 0,
+   "count_blocked_other": 0,
+   "count_computed": 2,
+   "L_m": 2.4,
+   "W_m": 2.1,
+   "H_m": 0.4,
+   "m3_each": 2.016,
+   "m3_total_computed": 4.032,
+   "tag_keys": [
+    "ALSENAN_ST7757_DXF|H5743||TEXT|0",
+    "ALSENAN_ST7757_DXF|H5747||TEXT|0"
+   ],
+   "status": "COMPUTED_SHADOW_COMPLETE"
+  },
+  {
+   "type": "F6",
+   "count_tagged": 1,
+   "count_geometry_confirmed": 0,
+   "count_partial_geometry": 1,
+   "count_override": 0,
+   "count_conflict": 0,
+   "count_blocked_other": 0,
+   "count_computed": 1,
+   "L_m": 2.6,
+   "W_m": 2.2,
+   "H_m": 0.5,
+   "m3_each": 2.86,
+   "m3_total_computed": 2.86,
+   "tag_keys": [
+    "ALSENAN_ST7757_DXF|H5773||TEXT|0"
+   ],
+   "status": "COMPUTED_SHADOW_COMPLETE"
+  },
+  {
+   "type": "F7",
+   "count_tagged": 0,
+   "count_geometry_confirmed": 0,
+   "count_partial_geometry": 0,
+   "count_override": 0,
+   "count_conflict": 0,
+   "count_blocked_other": 0,
+   "count_computed": 0,
+   "L_m": 3.0,
+   "W_m": 2.5,
+   "H_m": 0.5,
+   "m3_each": 3.75,
+   "m3_total_computed": 0,
+   "tag_keys": [],
+   "status": "NOT_TAGGED_ON_PLAN"
+  },
+  {
+   "type": "F8",
+   "count_tagged": 1,
+   "count_geometry_confirmed": 1,
+   "count_partial_geometry": 0,
+   "count_override": 0,
+   "count_conflict": 0,
+   "count_blocked_other": 0,
+   "count_computed": 1,
+   "L_m": 4.0,
+   "W_m": 3.6,
+   "H_m": 0.5,
+   "m3_each": 7.2,
+   "m3_total_computed": 7.2,
+   "tag_keys": [
+    "ALSENAN_ST7757_DXF|H6949||TEXT|0"
+   ],
+   "status": "COMPUTED_SHADOW_COMPLETE"
+  },
+  {
+   "type": "F9",
+   "count_tagged": 1,
+   "count_geometry_confirmed": 1,
+   "count_partial_geometry": 0,
+   "count_override": 0,
+   "count_conflict": 0,
+   "count_blocked_other": 0,
+   "count_computed": 1,
+   "L_m": 3.4,
+   "W_m": 2.7,
+   "H_m": 0.55,
+   "m3_each": 5.049,
+   "m3_total_computed": 5.049,
+   "tag_keys": [
+    "ALSENAN_ST7757_DXF|H5751||TEXT|0"
+   ],
+   "status": "COMPUTED_SHADOW_COMPLETE"
+  },
+  {
+   "type": "F10",
+   "count_tagged": 1,
+   "count_geometry_confirmed": 0,
+   "count_partial_geometry": 0,
+   "count_override": 0,
+   "count_conflict": 1,
+   "count_blocked_other": 0,
+   "count_computed": 0,
+   "L_m": 2.8,
+   "W_m": 1.4,
+   "H_m": 0.5,
+   "m3_each": 1.96,
+   "m3_total_computed": 0,
+   "tag_keys": [
+    "ALSENAN_ST7757_DXF|H5771||TEXT|0"
+   ],
+   "status": "BLOCKED"
+  },
+  {
+   "type": "F11",
+   "count_tagged": 1,
+   "count_geometry_confirmed": 0,
+   "count_partial_geometry": 1,
+   "count_override": 0,
+   "count_conflict": 0,
+   "count_blocked_other": 0,
+   "count_computed": 1,
+   "L_m": 3.5,
+   "W_m": 1.5,
+   "H_m": 0.5,
+   "m3_each": 2.625,
+   "m3_total_computed": 2.625,
+   "tag_keys": [
+    "ALSENAN_ST7757_DXF|H5767|5764|TEXT|0"
+   ],
+   "status": "COMPUTED_SHADOW_COMPLETE"
+  },
+  {
+   "type": "F12",
+   "count_tagged": 1,
+   "count_geometry_confirmed": 1,
+   "count_partial_geometry": 0,
+   "count_override": 0,
+   "count_conflict": 0,
+   "count_blocked_other": 0,
+   "count_computed": 1,
+   "L_m": 4.4,
+   "W_m": 3.2,
+   "H_m": 0.7,
+   "m3_each": 9.856,
+   "m3_total_computed": 9.856,
+   "tag_keys": [
+    "ALSENAN_ST7757_DXF|H6874||TEXT|0"
+   ],
+   "status": "COMPUTED_SHADOW_COMPLETE"
+  },
+  {
+   "type": "F13",
+   "count_tagged": 1,
+   "count_geometry_confirmed": 1,
+   "count_partial_geometry": 0,
+   "count_override": 0,
+   "count_conflict": 0,
+   "count_blocked_other": 0,
+   "count_computed": 1,
+   "L_m": 4.3,
+   "W_m": 2.4,
+   "H_m": 0.5,
+   "m3_each": 5.16,
+   "m3_total_computed": 5.16,
+   "tag_keys": [
+    "ALSENAN_ST7757_DXF|H6876||TEXT|0"
+   ],
+   "status": "COMPUTED_SHADOW_COMPLETE"
+  },
+  {
+   "type": "F14",
+   "count_tagged": 1,
+   "count_geometry_confirmed": 1,
+   "count_partial_geometry": 0,
+   "count_override": 0,
+   "count_conflict": 0,
+   "count_blocked_other": 0,
+   "count_computed": 1,
+   "L_m": 3.8,
+   "W_m": 3.3,
+   "H_m": 0.5,
+   "m3_each": 6.27,
+   "m3_total_computed": 6.27,
+   "tag_keys": [
+    "ALSENAN_ST7757_DXF|H5763||TEXT|0"
+   ],
+   "status": "COMPUTED_SHADOW_COMPLETE"
+  },
+  {
+   "type": "F15",
+   "count_tagged": 1,
+   "count_geometry_confirmed": 1,
+   "count_partial_geometry": 0,
+   "count_override": 0,
+   "count_conflict": 0,
+   "count_blocked_other": 0,
+   "count_computed": 1,
+   "L_m": 1.8,
+   "W_m": 1.0,
+   "H_m": 0.4,
+   "m3_each": 0.72,
+   "m3_total_computed": 0.72,
+   "tag_keys": [
+    "ALSENAN_ST7757_DXF|H6953||TEXT|0"
+   ],
+   "status": "COMPUTED_SHADOW_COMPLETE"
+  },
+  {
+   "type": "FF",
+   "count_tagged": 1,
+   "count_geometry_confirmed": 1,
+   "count_partial_geometry": 0,
+   "count_override": 0,
+   "count_conflict": 0,
+   "count_blocked_other": 0,
+   "count_computed": 1,
+   "L_m": 4.6,
+   "W_m": 4.5,
+   "H_m": 0.55,
+   "m3_each": 11.385,
+   "m3_total_computed": 11.385,
+   "tag_keys": [
+    "ALSENAN_ST7757_DXF|H5750||TEXT|0"
+   ],
+   "status": "COMPUTED_SHADOW_COMPLETE"
+  },
+  {
+   "type": "FN",
+   "count_tagged": 4,
+   "count_geometry_confirmed": 2,
+   "count_partial_geometry": 2,
+   "count_override": 0,
+   "count_conflict": 0,
+   "count_blocked_other": 0,
+   "count_computed": 4,
+   "L_m": 1.0,
+   "W_m": 1.0,
+   "H_m": 0.3,
+   "m3_each": 0.3,
+   "m3_total_computed": 1.2,
+   "tag_keys": [
+    "ALSENAN_ST7757_DXF|H4333||TEXT|0",
+    "ALSENAN_ST7757_DXF|H4341||TEXT|0",
+    "ALSENAN_ST7757_DXF|H5770||TEXT|0",
+    "ALSENAN_ST7757_DXF|H6160||TEXT|0"
+   ],
+   "status": "COMPUTED_SHADOW_COMPLETE"
+  }
+ ],
+ "reconciliation": {
+  "state": "PASS",
+  "per_type": {
+   "F": {
+    "tags": 5,
+    "computed": 4,
+    "blocked": 1,
+    "state": "PASS"
+   },
+   "F2": {
+    "tags": 2,
+    "computed": 2,
+    "blocked": 0,
+    "state": "PASS"
+   },
+   "F3": {
+    "tags": 2,
+    "computed": 2,
+    "blocked": 0,
+    "state": "PASS"
+   },
+   "F4": {
+    "tags": 2,
+    "computed": 2,
+    "blocked": 0,
+    "state": "PASS"
+   },
+   "F5": {
+    "tags": 2,
+    "computed": 2,
+    "blocked": 0,
+    "state": "PASS"
+   },
+   "F6": {
+    "tags": 1,
+    "computed": 1,
+    "blocked": 0,
+    "state": "PASS"
+   },
+   "F8": {
+    "tags": 1,
+    "computed": 1,
+    "blocked": 0,
+    "state": "PASS"
+   },
+   "F9": {
+    "tags": 1,
+    "computed": 1,
+    "blocked": 0,
+    "state": "PASS"
+   },
+   "F10": {
+    "tags": 1,
+    "computed": 0,
+    "blocked": 1,
+    "state": "PASS"
+   },
+   "F11": {
+    "tags": 1,
+    "computed": 1,
+    "blocked": 0,
+    "state": "PASS"
+   },
+   "F12": {
+    "tags": 1,
+    "computed": 1,
+    "blocked": 0,
+    "state": "PASS"
+   },
+   "F13": {
+    "tags": 1,
+    "computed": 1,
+    "blocked": 0,
+    "state": "PASS"
+   },
+   "F14": {
+    "tags": 1,
+    "computed": 1,
+    "blocked": 0,
+    "state": "PASS"
+   },
+   "F15": {
+    "tags": 1,
+    "computed": 1,
+    "blocked": 0,
+    "state": "PASS"
+   },
+   "FF": {
+    "tags": 1,
+    "computed": 1,
+    "blocked": 0,
+    "state": "PASS"
+   },
+   "FN": {
+    "tags": 4,
+    "computed": 4,
+    "blocked": 0,
+    "state": "PASS"
+   }
+  },
+  "tags_not_exactly_once": [],
+  "computed_types_not_in_schedule": [],
+  "tags": 27,
+  "rows": 27
+ },
+ "forensic": [
+  {
+   "outline": "RING:ALSENAN_ST7757_DXF|H6939|",
+   "kind": "ENTITY_RING",
+   "source_keys": [
+    "ALSENAN_ST7757_DXF|H6939||SEGMENT|0",
+    "ALSENAN_ST7757_DXF|H6939||SEGMENT|1",
+    "ALSENAN_ST7757_DXF|H6939||SEGMENT|2",
+    "ALSENAN_ST7757_DXF|H6939||SEGMENT|3",
+    "ALSENAN_ST7757_DXF|H6939||SEGMENT|4"
+   ],
+   "polygon": [
+    [
+     147662.207014,
+     37747.955835
+    ],
+    [
+     147662.207014,
+     36347.955835
+    ],
+    [
+     150912.207014,
+     36347.955835
+    ],
+    [
+     150912.207014,
+     37747.955835
+    ]
+   ],
+   "bounds": [
+    147662.207014,
+    36347.955835,
+    150912.207014,
+    37747.955835
+   ],
+   "drawn_mm": [
+    3250.0,
+    1400.0
+   ],
+   "state": "GAP_EXPLAINED_BY_ENTERING_ELEMENT",
+   "entering_element_keys": [
+    "ALSENAN_ST7757_DXF|H5769||SEGMENT|0",
+    "ALSENAN_ST7757_DXF|H6940||SEGMENT|0"
+   ],
+   "marks_inside": [
+    {
+     "type": "F",
+     "key": "ALSENAN_ST7757_DXF|H4261||TEXT|0",
+     "xy": [
+      150259.805,
+      36861.094
+     ],
+     "schedule_cm": [
+      90.0,
+      80.0,
+      30.0
+     ]
+    },
+    {
+     "type": "F10",
+     "key": "ALSENAN_ST7757_DXF|H5771||TEXT|0",
+     "xy": [
+      147842.407,
+      36929.849
+     ],
+     "schedule_cm": [
+      280.0,
+      140.0,
+      50.0
+     ]
+    }
+   ],
+   "columns_inside": [
+    {
+     "keys": [
+      "ALSENAN_ST7757_DXF|H4260||SEGMENT|0",
+      "ALSENAN_ST7757_DXF|H4260||SEGMENT|1",
+      "ALSENAN_ST7757_DXF|H4260||SEGMENT|2",
+      "ALSENAN_ST7757_DXF|H4260||SEGMENT|3"
+     ],
+     "w_mm": 300.0,
+     "h_mm": 500.0,
+     "centre": [
+      150762.207,
+      36597.956
+     ]
+    },
+    {
+     "keys": [
+      "ALSENAN_ST7757_DXF|H4328||SEGMENT|0",
+      "ALSENAN_ST7757_DXF|H4328||SEGMENT|1",
+      "ALSENAN_ST7757_DXF|H4328||SEGMENT|2",
+      "ALSENAN_ST7757_DXF|H4328||SEGMENT|3"
+     ],
+     "w_mm": 300.0,
+     "h_mm": 700.0,
+     "centre": [
+      149062.207,
+      36497.904
+     ]
+    }
+   ],
+   "column_tags_inside": [
+    "C10"
+   ],
+   "explicit_local_dimensions": [],
+   "a2_claims_explained": "A2 clipped this ONE outline at the entering element: the parts on either side of it were reported as separate candidate sizes; neither is drawn as a footing",
+   "classification": "COMBINED_OUTLINE (one source outline enclosing differently typed marks)"
+  }
+ ],
+ "footing_layer_dimensions": [
+  {
+   "handle": "6848",
+   "length_mm": 4400.0,
+   "printed_cm": 440.0,
+   "points": [
+    [
+     131342.207,
+     43597.956
+    ],
+    [
+     135742.207,
+     43597.956
+    ]
+   ]
+  },
+  {
+   "handle": "6862",
+   "length_mm": 3200.0,
+   "printed_cm": 320.0,
+   "points": [
+    [
+     132381.212,
+     43597.956
+    ],
+    [
+     132381.212,
+     46797.956
+    ]
+   ]
+  },
+  {
+   "handle": "6877",
+   "length_mm": 1499.8,
+   "printed_cm": 149.981,
+   "points": [
+    [
+     131642.207,
+     42147.956
+    ],
+    [
+     133142.02,
+     42147.956
+    ]
+   ]
+  },
+  {
+   "handle": "6891",
+   "length_mm": 1400.0,
+   "printed_cm": 140.0,
+   "points": [
+    [
+     128842.02,
+     39747.956
+    ],
+    [
+     128842.02,
+     41147.956
+    ]
+   ]
+  },
+  {
+   "handle": "6905",
+   "length_mm": 1000.0,
+   "printed_cm": 100.0,
+   "points": [
+    [
+     128842.02,
+     41147.956
+    ],
+    [
+     128842.02,
+     42147.956
+    ]
+   ]
+  }
+ ],
+ "candidates": {
+  "entity_rings": 23,
+  "rectangles": 22,
+  "templates": 24,
+  "merged": 48
+ },
+ "bindings": {
+  "ALSENAN_ST7757_DXF|H4261||TEXT|0": "RING:ALSENAN_ST7757_DXF|H6939|",
+  "ALSENAN_ST7757_DXF|H4333||TEXT|0": "RECTANGLE:145737.000,41323.000,146737.000,42323.000",
+  "ALSENAN_ST7757_DXF|H5743||TEXT|0": "RECTANGLE:144112.000,36948.000,146512.000,39048.000",
+  "ALSENAN_ST7757_DXF|H5745||TEXT|0": "RECTANGLE:148062.000,48723.000,150262.000,50723.000",
+  "ALSENAN_ST7757_DXF|H5746||TEXT|0": "RECTANGLE:144012.000,48698.000,146212.000,50698.000",
+  "ALSENAN_ST7757_DXF|H5747||TEXT|0": "RECTANGLE:140012.000,48648.000,142412.000,50748.000",
+  "ALSENAN_ST7757_DXF|H5748||TEXT|0": "RECTANGLE:136542.000,48648.000,138242.000,50548.000",
+  "ALSENAN_ST7757_DXF|H5749||TEXT|0": "RECTANGLE:133842.000,48648.000,135542.000,50548.000",
+  "ALSENAN_ST7757_DXF|H5750||TEXT|0": "RECTANGLE:136342.000,43148.000,140942.000,47648.000",
+  "ALSENAN_ST7757_DXF|H5751||TEXT|0": "RECTANGLE:143262.000,44298.000,146662.000,46998.000",
+  "ALSENAN_ST7757_DXF|H5757|5759|TEXT|0": "RECTANGLE:119542.000,42348.000,120342.000,43248.000",
+  "ALSENAN_ST7757_DXF|H5757|5760|TEXT|0": "RECTANGLE:119542.000,36348.000,120442.000,37148.000",
+  "ALSENAN_ST7757_DXF|H5763||TEXT|0": "RING:ALSENAN_ST7757_DXF|H6938|",
+  "ALSENAN_ST7757_DXF|H5770||TEXT|0": "RECTANGLE:149912.000,39848.000,150912.000,40848.000",
+  "ALSENAN_ST7757_DXF|H5771||TEXT|0": "RING:ALSENAN_ST7757_DXF|H6939|",
+  "ALSENAN_ST7757_DXF|H5773||TEXT|0": "RING:ALSENAN_ST7757_DXF|H6937|",
+  "ALSENAN_ST7757_DXF|H5774||TEXT|0": "RECTANGLE:129492.000,37298.000,130892.000,38898.000",
+  "ALSENAN_ST7757_DXF|H5775||TEXT|0": "RECTANGLE:123192.000,40398.000,124792.000,41798.000",
+  "ALSENAN_ST7757_DXF|H6160||TEXT|0": "RING:ALSENAN_ST7757_DXF|H6156|",
+  "ALSENAN_ST7757_DXF|H6874||TEXT|0": "RING:ALSENAN_ST7757_DXF|H6847|",
+  "ALSENAN_ST7757_DXF|H6876||TEXT|0": "RECTANGLE:128842.000,39748.000,133142.000,42148.000",
+  "ALSENAN_ST7757_DXF|H6949||TEXT|0": "RECTANGLE:146912.000,42298.000,150912.000,45898.000",
+  "ALSENAN_ST7757_DXF|H6953||TEXT|0": "RING:ALSENAN_ST7757_DXF|H6954|"
+ },
+ "h_audit": {
+  "state": "PASS",
+  "rows_with_non_schedule_H": [],
+  "F_schedule_H_cm": 30.0,
+  "rule": "every footing H is the schedule H of its type; no 0.60 m exists"
+ },
+ "marks": 27
+}

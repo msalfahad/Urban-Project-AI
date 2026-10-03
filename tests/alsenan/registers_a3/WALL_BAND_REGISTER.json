@@ -1,0 +1,1532 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_A3_WALL_BAND_REGISTER_V1",
+ "bands": {
+  "GF": [
+   {
+    "band": "WB-00725d29ac1d1f5d",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 1.05,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     -0.0
+    ]
+   },
+   {
+    "band": "WB-0119f2dcf7c5a49c",
+    "state": "WALL_BAND_AMBIGUOUS",
+    "thickness_mm": 200.0,
+    "length_m": 1.453126,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     -0.0
+    ]
+   },
+   {
+    "band": "WB-019839880fe9d666",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 0.85,
+    "column_overlap_m": 0.05,
+    "axis": [
+     -0.0,
+     1.0
+    ]
+   },
+   {
+    "band": "WB-037b2417a596d8d4",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 0.4,
+    "column_overlap_m": 0.0,
+    "axis": [
+     -0.0,
+     1.0
+    ]
+   },
+   {
+    "band": "WB-09cc6f70c5cf047c",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 150.0,
+    "length_m": 0.5,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     0.0
+    ]
+   },
+   {
+    "band": "WB-0be7574d079de4ff",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 150.0,
+    "length_m": 1.278577,
+    "column_overlap_m": 0.0,
+    "axis": [
+     0.707107,
+     -0.707107
+    ]
+   },
+   {
+    "band": "WB-1c294ff0ed794b7e",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 150.0,
+    "length_m": 1.1,
+    "column_overlap_m": 0.0,
+    "axis": [
+     -0.0,
+     1.0
+    ]
+   },
+   {
+    "band": "WB-1cef3bd5e65767e7",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 1.270596,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     -0.0
+    ]
+   },
+   {
+    "band": "WB-1d1e663cb1cf50e6",
+    "state": "WALL_BAND_AMBIGUOUS",
+    "thickness_mm": 200.0,
+    "length_m": 0.375,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     0.0
+    ]
+   },
+   {
+    "band": "WB-1dbe16a02e97ac1f",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 1.5,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     -0.0
+    ]
+   },
+   {
+    "band": "WB-251a4c99fa836ada",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 1.45,
+    "column_overlap_m": 0.3,
+    "axis": [
+     1.0,
+     -0.0
+    ]
+   },
+   {
+    "band": "WB-2953cf29fa31a021",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 0.612094,
+    "column_overlap_m": 0.2,
+    "axis": [
+     0.0,
+     1.0
+    ]
+   },
+   {
+    "band": "WB-2a302059f351ab95",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 150.0,
+    "length_m": 0.794348,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     -0.0
+    ]
+   },
+   {
+    "band": "WB-2b2b46032d6f1c90",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 150.0,
+    "length_m": 2.0,
+    "column_overlap_m": 0.0,
+    "axis": [
+     -0.0,
+     1.0
+    ]
+   },
+   {
+    "band": "WB-3151d3ce3e330f6f",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 150.0,
+    "length_m": 2.25,
+    "column_overlap_m": 0.0,
+    "axis": [
+     0.0,
+     1.0
+    ]
+   },
+   {
+    "band": "WB-38027218f500f9fd",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 0.4,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     -0.0
+    ]
+   },
+   {
+    "band": "WB-3aa09e3449de3402",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 150.0,
+    "length_m": 1.256041,
+    "column_overlap_m": 0.0,
+    "axis": [
+     0.707107,
+     0.707107
+    ]
+   },
+   {
+    "band": "WB-3cb85e00e97a25f1",
+    "state": "WALL_BAND_AMBIGUOUS",
+    "thickness_mm": 200.0,
+    "length_m": 1.8,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     -0.0
+    ]
+   },
+   {
+    "band": "WB-3d40e9be7101a26b",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 150.0,
+    "length_m": 0.278661,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     0.0
+    ]
+   },
+   {
+    "band": "WB-453a452edc6afa8a",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 0.468422,
+    "column_overlap_m": 0.3,
+    "axis": [
+     0.0,
+     1.0
+    ]
+   },
+   {
+    "band": "WB-47c9dcdbae8e3269",
+    "state": "WALL_BAND_AMBIGUOUS",
+    "thickness_mm": 400.0,
+    "length_m": 1.4,
+    "column_overlap_m": 0.001,
+    "axis": [
+     1.0,
+     0.0
+    ]
+   },
+   {
+    "band": "WB-4b4d89e988da62df",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 3.4,
+    "column_overlap_m": 0.9,
+    "axis": [
+     -0.0,
+     1.0
+    ]
+   },
+   {
+    "band": "WB-51329d271b21bd43",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 1.75,
+    "column_overlap_m": 0.25,
+    "axis": [
+     1.0,
+     -0.0
+    ]
+   },
+   {
+    "band": "WB-5327c5497e9a91e8",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 150.0,
+    "length_m": 2.355244,
+    "column_overlap_m": 0.0,
+    "axis": [
+     0.707107,
+     -0.707107
+    ]
+   },
+   {
+    "band": "WB-5c345eca557b094b",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 150.0,
+    "length_m": 1.3,
+    "column_overlap_m": 0.0,
+    "axis": [
+     -0.0,
+     1.0
+    ]
+   },
+   {
+    "band": "WB-6642d7da2679cd7e",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 0.3,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     -0.0
+    ]
+   },
+   {
+    "band": "WB-6b91311bb41fa82b",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 150.0,
+    "length_m": 2.1,
+    "column_overlap_m": 0.0,
+    "axis": [
+     0.0,
+     1.0
+    ]
+   },
+   {
+    "band": "WB-6f953f888d37aa0b",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 3.83,
+    "column_overlap_m": 0.03,
+    "axis": [
+     1.0,
+     -0.0
+    ]
+   },
+   {
+    "band": "WB-71ee5d972e9b20d3",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 150.0,
+    "length_m": 3.0,
+    "column_overlap_m": 0.0,
+    "axis": [
+     -0.0,
+     1.0
+    ]
+   },
+   {
+    "band": "WB-766286532e35fb57",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 1.65911,
+    "column_overlap_m": 0.9,
+    "axis": [
+     1.0,
+     0.0
+    ]
+   },
+   {
+    "band": "WB-7bb7618a7f780c37",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 150.0,
+    "length_m": 0.559057,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     -0.0
+    ]
+   },
+   {
+    "band": "WB-7d6873a92b7af440",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 1.4,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     -0.0
+    ]
+   },
+   {
+    "band": "WB-83dc530788831705",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 0.8,
+    "column_overlap_m": 0.5,
+    "axis": [
+     -0.0,
+     1.0
+    ]
+   },
+   {
+    "band": "WB-8cb71de0efaa3dda",
+    "state": "WALL_BAND_AMBIGUOUS",
+    "thickness_mm": 200.0,
+    "length_m": 5.02,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     -0.0
+    ]
+   },
+   {
+    "band": "WB-941bd7373a29bfd1",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 1.05,
+    "column_overlap_m": 0.3,
+    "axis": [
+     -0.0,
+     1.0
+    ]
+   },
+   {
+    "band": "WB-977f0122c85f9a8f",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 150.0,
+    "length_m": 1.637272,
+    "column_overlap_m": 0.0,
+    "axis": [
+     -0.0,
+     1.0
+    ]
+   },
+   {
+    "band": "WB-9acf06e660bcd8ac",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 150.0,
+    "length_m": 0.55,
+    "column_overlap_m": 0.0,
+    "axis": [
+     0.0,
+     1.0
+    ]
+   },
+   {
+    "band": "WB-9f24e42de1ba41a9",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 0.7,
+    "column_overlap_m": 0.2,
+    "axis": [
+     0.0,
+     1.0
+    ]
+   },
+   {
+    "band": "WB-a1312890e7877696",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 0.45,
+    "column_overlap_m": 0.0,
+    "axis": [
+     -0.0,
+     1.0
+    ]
+   },
+   {
+    "band": "WB-a39c4478ab7fd29e",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 2.65,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     -0.0
+    ]
+   },
+   {
+    "band": "WB-a57024ab14c04912",
+    "state": "WALL_BAND_AMBIGUOUS",
+    "thickness_mm": 200.0,
+    "length_m": 1.75,
+    "column_overlap_m": 0.299,
+    "axis": [
+     0.0,
+     1.0
+    ]
+   },
+   {
+    "band": "WB-a6bdd2e3745599f7",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 1.5,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     -0.0
+    ]
+   },
+   {
+    "band": "WB-ab29e8972494d962",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 1.05,
+    "column_overlap_m": 0.0,
+    "axis": [
+     -0.0,
+     1.0
+    ]
+   },
+   {
+    "band": "WB-b29daf58f20e1d45",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 150.0,
+    "length_m": 0.429733,
+    "column_overlap_m": 0.0,
+    "axis": [
+     -0.0,
+     1.0
+    ]
+   },
+   {
+    "band": "WB-b4b5c8a1476ced3c",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 0.375,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     -0.0
+    ]
+   },
+   {
+    "band": "WB-c183875971c5d973",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 150.0,
+    "length_m": 0.961845,
+    "column_overlap_m": 0.0,
+    "axis": [
+     -0.0,
+     1.0
+    ]
+   },
+   {
+    "band": "WB-c546adfab50d0c2d",
+    "state": "WALL_BAND_AMBIGUOUS",
+    "thickness_mm": 200.0,
+    "length_m": 18.97,
+    "column_overlap_m": 0.2,
+    "axis": [
+     1.0,
+     -0.0
+    ]
+   },
+   {
+    "band": "WB-c6f5e6054832528e",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 2.05,
+    "column_overlap_m": 0.5,
+    "axis": [
+     -0.0,
+     1.0
+    ]
+   },
+   {
+    "band": "WB-c77e9fb1ef8d3f72",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 150.0,
+    "length_m": 2.25,
+    "column_overlap_m": 0.0,
+    "axis": [
+     0.0,
+     1.0
+    ]
+   },
+   {
+    "band": "WB-d50f23d3f1a8afbe",
+    "state": "WALL_BAND_AMBIGUOUS",
+    "thickness_mm": 200.0,
+    "length_m": 0.4,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     -0.0
+    ]
+   },
+   {
+    "band": "WB-d5eef3f02d665956",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 0.267874,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     0.0
+    ]
+   },
+   {
+    "band": "WB-d910d7fa84259ae2",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 150.0,
+    "length_m": 0.867238,
+    "column_overlap_m": 0.039919,
+    "axis": [
+     0.707107,
+     0.707107
+    ]
+   },
+   {
+    "band": "WB-dbafb1cbf3656620",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 0.3,
+    "column_overlap_m": 0.0,
+    "axis": [
+     -0.0,
+     1.0
+    ]
+   },
+   {
+    "band": "WB-ddcfe495a3e6153b",
+    "state": "WALL_BAND_AMBIGUOUS",
+    "thickness_mm": 150.0,
+    "length_m": 0.893546,
+    "column_overlap_m": 0.0,
+    "axis": [
+     -0.0,
+     1.0
+    ]
+   },
+   {
+    "band": "WB-dfb9bec05861662b",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 920.0,
+    "length_m": 14.034513,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     -0.0
+    ]
+   },
+   {
+    "band": "WB-e34465120a0342a2",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 0.27,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     -0.0
+    ]
+   },
+   {
+    "band": "WB-e8572ef6924f4ee0",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 0.6,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     -0.0
+    ]
+   },
+   {
+    "band": "WB-e9d3088639adbcc8",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 0.632986,
+    "column_overlap_m": 0.0,
+    "axis": [
+     0.0,
+     1.0
+    ]
+   },
+   {
+    "band": "WB-eaa58874c1d1927e",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 1.35,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     -0.0
+    ]
+   },
+   {
+    "band": "WB-edb7a03bd89db229",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 150.0,
+    "length_m": 0.626385,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     -0.0
+    ]
+   },
+   {
+    "band": "WB-f862f962fc5d2d3d",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 1.5,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     0.0
+    ]
+   },
+   {
+    "band": "WB-f8d49a5c16d612ed",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 1.14508,
+    "column_overlap_m": 0.0,
+    "axis": [
+     0.0,
+     1.0
+    ]
+   },
+   {
+    "band": "WB-fb00121a819e5c86",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 1.23,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     -0.0
+    ]
+   },
+   {
+    "band": "WB-ff1a31af98b65a3f",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 0.6,
+    "column_overlap_m": 0.05,
+    "axis": [
+     1.0,
+     -0.0
+    ]
+   }
+  ],
+  "1F": [
+   {
+    "band": "WB-01e4206f1739fca2",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 150.0,
+    "length_m": 2.842767,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     -0.0
+    ]
+   },
+   {
+    "band": "WB-0e77368edaa3e7dc",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 0.80721,
+    "column_overlap_m": 0.0,
+    "axis": [
+     0.0,
+     1.0
+    ]
+   },
+   {
+    "band": "WB-1108fcac5e00de3a",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 1.142302,
+    "column_overlap_m": 0.867302,
+    "axis": [
+     0.0,
+     1.0
+    ]
+   },
+   {
+    "band": "WB-1afd8c014dda4d0b",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 0.335,
+    "column_overlap_m": 0.05,
+    "axis": [
+     1.0,
+     -0.0
+    ]
+   },
+   {
+    "band": "WB-2bf3920dd9322585",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 3.0,
+    "column_overlap_m": 0.3,
+    "axis": [
+     -0.0,
+     1.0
+    ]
+   },
+   {
+    "band": "WB-2e884b5f96a71f38",
+    "state": "WALL_BAND_AMBIGUOUS",
+    "thickness_mm": 200.0,
+    "length_m": 10.672799,
+    "column_overlap_m": 1.4,
+    "axis": [
+     1.0,
+     0.0
+    ]
+   },
+   {
+    "band": "WB-304fe2303a0f0177",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 150.0,
+    "length_m": 0.5,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     -0.0
+    ]
+   },
+   {
+    "band": "WB-34cfd872abf67606",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 0.875,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     -0.0
+    ]
+   },
+   {
+    "band": "WB-378b231d3e12797b",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 0.831985,
+    "column_overlap_m": 0.0,
+    "axis": [
+     0.0,
+     1.0
+    ]
+   },
+   {
+    "band": "WB-3fe0a0cbf51575a0",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 0.4,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     -0.0
+    ]
+   },
+   {
+    "band": "WB-401438c612f4b64d",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 150.0,
+    "length_m": 2.05,
+    "column_overlap_m": 0.475,
+    "axis": [
+     0.0,
+     1.0
+    ]
+   },
+   {
+    "band": "WB-4234d1629bfd4e0b",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 0.4,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     -0.0
+    ]
+   },
+   {
+    "band": "WB-488b223d73738560",
+    "state": "WALL_BAND_AMBIGUOUS",
+    "thickness_mm": 200.0,
+    "length_m": 2.05,
+    "column_overlap_m": 0.5,
+    "axis": [
+     -0.0,
+     1.0
+    ]
+   },
+   {
+    "band": "WB-48d83d363e52a97c",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 1.04884,
+    "column_overlap_m": 0.111731,
+    "axis": [
+     1.0,
+     0.0
+    ]
+   },
+   {
+    "band": "WB-48f73089c6ec4854",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 1.218241,
+    "column_overlap_m": 0.6,
+    "axis": [
+     0.0,
+     1.0
+    ]
+   },
+   {
+    "band": "WB-4f118cc74e3c3c1f",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 0.235,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     -0.0
+    ]
+   },
+   {
+    "band": "WB-54d0c76459d0947b",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 150.0,
+    "length_m": 2.05,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     -0.0
+    ]
+   },
+   {
+    "band": "WB-5964db85acb6f1b4",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 920.0,
+    "length_m": 14.034513,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     -0.0
+    ]
+   },
+   {
+    "band": "WB-59d9ea63ee44b02b",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 150.0,
+    "length_m": 2.25,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     -0.0
+    ]
+   },
+   {
+    "band": "WB-5abdc4c6ef4135b6",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 4.2,
+    "column_overlap_m": 0.8,
+    "axis": [
+     1.0,
+     -0.0
+    ]
+   },
+   {
+    "band": "WB-603c018e3d30b023",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 0.725,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     0.0
+    ]
+   },
+   {
+    "band": "WB-60ba6d6d572187dd",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 150.0,
+    "length_m": 1.8,
+    "column_overlap_m": 0.05,
+    "axis": [
+     0.0,
+     1.0
+    ]
+   },
+   {
+    "band": "WB-6504b16c768f2dd4",
+    "state": "WALL_BAND_AMBIGUOUS",
+    "thickness_mm": 200.0,
+    "length_m": 1.05,
+    "column_overlap_m": 0.0,
+    "axis": [
+     -0.0,
+     1.0
+    ]
+   },
+   {
+    "band": "WB-660c2f2e51aec9a5",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 1.45,
+    "column_overlap_m": 0.438269,
+    "axis": [
+     1.0,
+     0.0
+    ]
+   },
+   {
+    "band": "WB-7a30ab3ef4b79d6d",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 0.725,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     0.0
+    ]
+   },
+   {
+    "band": "WB-7aac77b9e322f902",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 0.87,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     -0.0
+    ]
+   },
+   {
+    "band": "WB-7b81bee181f3e426",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 0.85,
+    "column_overlap_m": 0.45,
+    "axis": [
+     1.0,
+     -0.0
+    ]
+   },
+   {
+    "band": "WB-849bcebe48aa753b",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 0.55,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     -0.0
+    ]
+   },
+   {
+    "band": "WB-8dced486ea870e7a",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 150.0,
+    "length_m": 1.19074,
+    "column_overlap_m": 0.0,
+    "axis": [
+     0.0,
+     1.0
+    ]
+   },
+   {
+    "band": "WB-8df5022e6b779243",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 150.0,
+    "length_m": 2.1,
+    "column_overlap_m": 0.375,
+    "axis": [
+     -0.0,
+     1.0
+    ]
+   },
+   {
+    "band": "WB-99693c6c39b234ae",
+    "state": "WALL_BAND_AMBIGUOUS",
+    "thickness_mm": 200.0,
+    "length_m": 0.794874,
+    "column_overlap_m": 0.0,
+    "axis": [
+     0.0,
+     1.0
+    ]
+   },
+   {
+    "band": "WB-9e6ba2c89077b9b1",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 150.0,
+    "length_m": 1.05,
+    "column_overlap_m": 0.0,
+    "axis": [
+     -0.0,
+     1.0
+    ]
+   },
+   {
+    "band": "WB-a07f9c9d7af9967f",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 150.0,
+    "length_m": 2.56148,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     0.0
+    ]
+   },
+   {
+    "band": "WB-a78db9c48be9b9fa",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 150.0,
+    "length_m": 2.0,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     -0.0
+    ]
+   },
+   {
+    "band": "WB-aa4ae4a992c870cc",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 150.0,
+    "length_m": 2.4,
+    "column_overlap_m": 0.7,
+    "axis": [
+     0.0,
+     1.0
+    ]
+   },
+   {
+    "band": "WB-b517c99614c9911f",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 150.0,
+    "length_m": 1.8,
+    "column_overlap_m": 0.05,
+    "axis": [
+     -0.0,
+     1.0
+    ]
+   },
+   {
+    "band": "WB-b8a23809e790e089",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 150.0,
+    "length_m": 3.05,
+    "column_overlap_m": 0.0,
+    "axis": [
+     -0.0,
+     1.0
+    ]
+   },
+   {
+    "band": "WB-c18999241e7be1e0",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 1.65,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     0.0
+    ]
+   },
+   {
+    "band": "WB-c528786c10d4e2af",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 1.04884,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     0.0
+    ]
+   },
+   {
+    "band": "WB-c9b44fcc9771e364",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 150.0,
+    "length_m": 0.5,
+    "column_overlap_m": 0.05,
+    "axis": [
+     1.0,
+     0.0
+    ]
+   },
+   {
+    "band": "WB-cd6cf791017153ae",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 150.0,
+    "length_m": 5.0,
+    "column_overlap_m": 0.0,
+    "axis": [
+     0.0,
+     1.0
+    ]
+   },
+   {
+    "band": "WB-cfd0fb0488c3c84e",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 0.375,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     -0.0
+    ]
+   },
+   {
+    "band": "WB-d20eff4552b4dc77",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 150.0,
+    "length_m": 1.8,
+    "column_overlap_m": 0.0,
+    "axis": [
+     -0.0,
+     1.0
+    ]
+   },
+   {
+    "band": "WB-d279fdd970fc62b9",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 1.4,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     -0.0
+    ]
+   },
+   {
+    "band": "WB-d5a57a04d0c3164f",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 1.8,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     -0.0
+    ]
+   },
+   {
+    "band": "WB-dbe07948145fd7d3",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 150.0,
+    "length_m": 2.45,
+    "column_overlap_m": 0.0,
+    "axis": [
+     0.0,
+     1.0
+    ]
+   },
+   {
+    "band": "WB-e87638223481be93",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 2.45,
+    "column_overlap_m": 0.3,
+    "axis": [
+     0.0,
+     1.0
+    ]
+   },
+   {
+    "band": "WB-e8ca7976c38b075c",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 0.493276,
+    "column_overlap_m": 0.0,
+    "axis": [
+     0.0,
+     1.0
+    ]
+   },
+   {
+    "band": "WB-ead4ce0967e46e5d",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 150.0,
+    "length_m": 0.262686,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     -0.0
+    ]
+   },
+   {
+    "band": "WB-ed300723a4a84c73",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 150.0,
+    "length_m": 1.570155,
+    "column_overlap_m": 0.0,
+    "axis": [
+     -0.0,
+     1.0
+    ]
+   },
+   {
+    "band": "WB-ef9c665bf0d6a247",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 150.0,
+    "length_m": 1.172833,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     -0.0
+    ]
+   },
+   {
+    "band": "WB-f02a8d4f0b60fb28",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 150.0,
+    "length_m": 0.89074,
+    "column_overlap_m": 0.0,
+    "axis": [
+     -0.0,
+     1.0
+    ]
+   },
+   {
+    "band": "WB-f0b27ce5e3ef556b",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 150.0,
+    "length_m": 0.596726,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     0.0
+    ]
+   },
+   {
+    "band": "WB-ff1e337b2c08ca57",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 150.0,
+    "length_m": 0.824886,
+    "column_overlap_m": 0.0,
+    "axis": [
+     0.0,
+     1.0
+    ]
+   }
+  ],
+  "2F": [
+   {
+    "band": "WB-0b020e26a78d67a8",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 0.375,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     -0.0
+    ]
+   },
+   {
+    "band": "WB-1cbc7904e870d0ad",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 1.05,
+    "column_overlap_m": 0.3,
+    "axis": [
+     0.0,
+     1.0
+    ]
+   },
+   {
+    "band": "WB-203f8bf4e374783d",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 0.875,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     -0.0
+    ]
+   },
+   {
+    "band": "WB-2b90adc1e31deb16",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 0.248394,
+    "column_overlap_m": 0.0,
+    "axis": [
+     -0.0,
+     1.0
+    ]
+   },
+   {
+    "band": "WB-3f241bfc3a4bf2c5",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 920.0,
+    "length_m": 14.034513,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     -0.0
+    ]
+   },
+   {
+    "band": "WB-3f501762bf58d60d",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 1.8,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     -0.0
+    ]
+   },
+   {
+    "band": "WB-47b48bb2b451002c",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 4.2,
+    "column_overlap_m": 0.5,
+    "axis": [
+     0.0,
+     1.0
+    ]
+   },
+   {
+    "band": "WB-48547f86cdc3bfa4",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 0.4,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     -0.0
+    ]
+   },
+   {
+    "band": "WB-5efacb71f10902f3",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 150.0,
+    "length_m": 0.249298,
+    "column_overlap_m": 0.0,
+    "axis": [
+     -0.0,
+     1.0
+    ]
+   },
+   {
+    "band": "WB-7220f08e4810a975",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 0.27,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     -0.0
+    ]
+   },
+   {
+    "band": "WB-7fe312d58e27ed34",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 1.4,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     -0.0
+    ]
+   },
+   {
+    "band": "WB-870c19d3245cf896",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 150.0,
+    "length_m": 0.415809,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     0.0
+    ]
+   },
+   {
+    "band": "WB-a1345f947dfe61d6",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 150.0,
+    "length_m": 3.0,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     -0.0
+    ]
+   },
+   {
+    "band": "WB-bae2ed5cd4d20a81",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 1.53,
+    "column_overlap_m": 0.6,
+    "axis": [
+     1.0,
+     -0.0
+    ]
+   },
+   {
+    "band": "WB-c62c61699cbb3caa",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 6.45,
+    "column_overlap_m": 0.4,
+    "axis": [
+     -0.0,
+     1.0
+    ]
+   },
+   {
+    "band": "WB-cfaef63b50f99fdf",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 150.0,
+    "length_m": 3.084191,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     -0.0
+    ]
+   },
+   {
+    "band": "WB-dc5cc6a41d490d0f",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 0.4,
+    "column_overlap_m": 0.0,
+    "axis": [
+     1.0,
+     -0.0
+    ]
+   },
+   {
+    "band": "WB-e0cdb9d478b58788",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 150.0,
+    "length_m": 1.950702,
+    "column_overlap_m": 0.0,
+    "axis": [
+     -0.0,
+     1.0
+    ]
+   },
+   {
+    "band": "WB-faf4fb9be1b84943",
+    "state": "WALL_BAND_ESTABLISHED",
+    "thickness_mm": 200.0,
+    "length_m": 3.0,
+    "column_overlap_m": 0.3,
+    "axis": [
+     -0.0,
+     1.0
+    ]
+   }
+  ]
+ },
+ "by_state": {
+  "GF": {
+   "WALL_BAND_ESTABLISHED": 55,
+   "WALL_BAND_AMBIGUOUS": 9
+  },
+  "1F": {
+   "WALL_BAND_ESTABLISHED": 50,
+   "WALL_BAND_AMBIGUOUS": 4
+  },
+  "2F": {
+   "WALL_BAND_ESTABLISHED": 19
+  }
+ },
+ "rule": "WALL_BAND_POLICY (frozen) on the inferred wall faces; ambiguous bands are reported, never measured"
+}
