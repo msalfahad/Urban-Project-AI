@@ -1149,3 +1149,16 @@ the freeze and tested.
   digest); `alsenan_b2a1_regression.py` proves no numeric / state leaf of the frozen B2A registers changed.
 - Packages carry their canonical freeze: `alsenan_b2a1_package.py` puts ALSENAN_PHASE_B2A1_FREEZE.json, the parent
   freeze, every register, both regression records, the engine sources, the junit and a stdlib `verify.py` in the ZIP.
+
+## 29. Reporting Layer V2 (presentation only)
+
+- Recommendation (answers 1-10) committed before code: `research/external_engine_lab/reporting_v2_recommendation.json`;
+  full spec in `docs/REPORTING_V2_DESIGN_SPEC.md`.
+- Generic package `engine/reporting_v2/` (outside `engine/source`; imports no QTO engine): presentation model with row
+  classes (ADDITIVE / BREAKDOWN_ONLY / ALTERNATIVE_MEASURE / TRACE_ONLY), register pointers and declared sums (the only
+  arithmetic: exact decimal sums of ADDITIVE register values of one group and unit), status aliases that fail closed,
+  bilingual glossary, XLSX renderer (no formulas, print-ready, deterministic bytes), PDF renderer (Chromium, same
+  sections), readback.
+- Adapters per register family: Alsenan (A3 + B2A.1, B2A.1 supersedes A3 where the delta lists a change) and Qortuba
+  (RC1, read only). Build, regression (zero quantity / status change), readback QA and freeze:
+  `research/external_engine_lab/reporting_v2_build.py`; records frozen in `tests/reporting_v2/frozen/`.

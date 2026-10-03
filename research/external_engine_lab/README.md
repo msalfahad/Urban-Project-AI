@@ -207,5 +207,9 @@ bridges it to the legacy QS01 method. Owner decisions are scoped claims in `data
 | `alsenan_b2a_registers.py` (B2A.1) | `tests/alsenan/registers_b2a1/*.json` | Phase B2A.1 registers (STAIR_CONCRETE_V2 evidence, explicit curved bases) + ALSENAN_PHASE_B2A1_REGISTER_FREEZE pinning the B2A freeze by digest |
 | `alsenan_b2a1_regression.py` | `tests/alsenan/registers_b2a1/ALSENAN_REGRESSION.json` | B2A.1 vs frozen B2A: numeric / state leaves must be unchanged; schema / terminology / provenance only |
 | `alsenan_b2a1_package.py` | `data/reports/URBAN_QTO_ALSENAN_PHASE_B2A1_GENERIC_QA_PATCH/` + zip | self-contained package: ALSENAN_PHASE_B2A1_FREEZE.json, parent freeze, all registers, regressions, engine sources, junit, stdlib verify.py |
+| `reporting_v2_recommendation.json` | - | Reporting V2 recommendation (answers 1-10), committed before code |
+| `reporting_v2_alsenan.py` | (used by `reporting_v2_build.py`) | Reporting V2 adapter: frozen A3 + B2A.1 registers -> REPORTING_MODEL_V2 (maps, never measures) |
+| `reporting_v2_qortuba.py` | (used by `reporting_v2_build.py`) | Reporting V2 adapter: frozen Qortuba RC1 registers -> REPORTING_MODEL_V2 |
+| `reporting_v2_build.py` | `data/reports/URBAN_QTO_REPORTING_V2/` + `REPORTING_V2.zip`; records in `tests/reporting_v2/frozen/` | XLSX + PDF report, readback QA, regression, freeze (generic code in `engine/reporting_v2/`) |
 
 `<work>` must hold `old_k2.pkl` (K2 on LibreDWG's DXF of the old DWG) and `new_k2.pkl` (K2 on the hash-addressed new DXF).
