@@ -1,0 +1,249 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_B2A1_REGRESSION_V1",
+ "parent_dir": "tests/alsenan/registers_b2a",
+ "parent_freeze_sha256": "860ec7891c7aaa0ef0b6936060ba46d72668e8f26bd80e51eccc9e35bb9436e3",
+ "registers_compared": 16,
+ "unchanged": [
+  "A3_PRESERVATION",
+  "ALSENAN_PHASE_B2A_FREEZE.summary -> ALSENAN_PHASE_B2A1_REGISTER_FREEZE.summary",
+  "BEAM_BINDING_REGISTER",
+  "OPENING_AUTHORITY_REGISTER",
+  "OWNER_FACT_REGISTER",
+  "PHYSICAL_CONCRETE_REGISTER",
+  "QA_GATES",
+  "REMAINING_BLOCKERS",
+  "SLAB_REGION_REGISTER",
+  "STRUCTURAL_VERTICAL_INTERVAL_REGISTER",
+  "URBAN_METHOD_REGISTER",
+  "WALL_HEIGHT_REGISTER",
+  "WATERPROOFING_REGISTER"
+ ],
+ "schema_only": [
+  "ALSENAN_B2A_DELTA",
+  "CURVED_OPENING_REGISTER",
+  "STAIR_REGISTER"
+ ],
+ "failed": [],
+ "new_registers": [],
+ "per_register": {
+  "A3_PRESERVATION": {
+   "state": "UNCHANGED",
+   "classes": [],
+   "changes": [],
+   "change_count": 0,
+   "added_leaves": 0,
+   "added_sample": []
+  },
+  "ALSENAN_B2A_DELTA": {
+   "state": "SCHEMA_ONLY",
+   "classes": [
+    "SCHEMA"
+   ],
+   "changes": [
+    {
+     "leaf": "rows/60/b2a_status",
+     "class": "SCHEMA",
+     "old": "COMPLETE (INNER, method)",
+     "new": "COMPLETE (MIN_RADIUS_ARC, method)"
+    },
+    {
+     "leaf": "rows/61/b2a_status",
+     "class": "SCHEMA",
+     "old": "COMPLETE (INNER, method)",
+     "new": "COMPLETE (MIN_RADIUS_ARC, method)"
+    }
+   ],
+   "change_count": 2,
+   "added_leaves": 0,
+   "added_sample": []
+  },
+  "ALSENAN_PHASE_B2A_FREEZE.summary -> ALSENAN_PHASE_B2A1_REGISTER_FREEZE.summary": {
+   "state": "UNCHANGED",
+   "classes": [],
+   "changes": [],
+   "change_count": 0,
+   "added_leaves": 0,
+   "added_sample": []
+  },
+  "BEAM_BINDING_REGISTER": {
+   "state": "UNCHANGED",
+   "classes": [],
+   "changes": [],
+   "change_count": 0,
+   "added_leaves": 0,
+   "added_sample": []
+  },
+  "CURVED_OPENING_REGISTER": {
+   "state": "SCHEMA_ONLY",
+   "classes": [
+    "TERMINOLOGY"
+   ],
+   "changes": [
+    {
+     "leaf": "rows/0/commercial_basis",
+     "class": "TERMINOLOGY",
+     "old": "INNER",
+     "new": "MIN_RADIUS_ARC"
+    },
+    {
+     "leaf": "rows/1/commercial_basis",
+     "class": "TERMINOLOGY",
+     "old": "INNER",
+     "new": "MIN_RADIUS_ARC"
+    }
+   ],
+   "change_count": 2,
+   "added_leaves": 33,
+   "added_sample": [
+    "rows/0/aliases/CENTRE",
+    "rows/0/aliases/INNER",
+    "rows/0/aliases/OUTER",
+    "rows/0/bases_m/MAX_RADIUS_ARC",
+    "rows/0/bases_m/MID_BAND_ARC",
+    "rows/0/bases_m/MIN_RADIUS_ARC",
+    "rows/0/orientation/EXTERIOR_SIDE_ARC",
+    "rows/0/orientation/ROOM_SIDE_ARC",
+    "rows/0/orientation/room_side",
+    "rows/0/orientation/state",
+    "rows/0/side_probe/offset_mm",
+    "rows/0/side_probe/probes/MAX_RADIUS/room"
+   ]
+  },
+  "OPENING_AUTHORITY_REGISTER": {
+   "state": "UNCHANGED",
+   "classes": [],
+   "changes": [],
+   "change_count": 0,
+   "added_leaves": 0,
+   "added_sample": []
+  },
+  "OWNER_FACT_REGISTER": {
+   "state": "UNCHANGED",
+   "classes": [],
+   "changes": [],
+   "change_count": 0,
+   "added_leaves": 0,
+   "added_sample": []
+  },
+  "PHYSICAL_CONCRETE_REGISTER": {
+   "state": "UNCHANGED",
+   "classes": [],
+   "changes": [],
+   "change_count": 0,
+   "added_leaves": 0,
+   "added_sample": []
+  },
+  "QA_GATES": {
+   "state": "UNCHANGED",
+   "classes": [],
+   "changes": [],
+   "change_count": 0,
+   "added_leaves": 0,
+   "added_sample": []
+  },
+  "REMAINING_BLOCKERS": {
+   "state": "UNCHANGED",
+   "classes": [],
+   "changes": [],
+   "change_count": 0,
+   "added_leaves": 0,
+   "added_sample": []
+  },
+  "SLAB_REGION_REGISTER": {
+   "state": "UNCHANGED",
+   "classes": [],
+   "changes": [],
+   "change_count": 0,
+   "added_leaves": 0,
+   "added_sample": []
+  },
+  "STAIR_REGISTER": {
+   "state": "SCHEMA_ONLY",
+   "classes": [
+    "SCHEMA"
+   ],
+   "changes": [
+    {
+     "leaf": "result/missing/0",
+     "class": "SCHEMA",
+     "old": "riser_m",
+     "new": "flight 10: riser_count"
+    },
+    {
+     "leaf": "result/missing/1",
+     "class": "SCHEMA",
+     "old": "risers",
+     "new": "flight 10: riser_height_m"
+    },
+    {
+     "leaf": "result/missing/2",
+     "class": "SCHEMA",
+     "old": "waist_m",
+     "new": "flight 10: tread_count"
+    },
+    {
+     "leaf": "result/missing/3",
+     "class": "SCHEMA",
+     "old": "width_m",
+     "new": "flight 10: waist_thickness_m"
+    },
+    {
+     "leaf": "result/never",
+     "class": "SCHEMA",
+     "old": "steps x tread x riser",
+     "new": "<absent>"
+    }
+   ],
+   "change_count": 5,
+   "added_leaves": 123,
+   "added_sample": [
+    "known_inputs/flight_width_m/authority",
+    "known_inputs/flight_width_m/values/0",
+    "known_inputs/flight_width_m/values/1",
+    "known_inputs/observed_tread_line_runs/0/floor",
+    "known_inputs/observed_tread_line_runs/0/layer",
+    "known_inputs/observed_tread_line_runs/0/linetype",
+    "known_inputs/observed_tread_line_runs/0/tread_lines",
+    "known_inputs/observed_tread_line_runs/0/width_m",
+    "known_inputs/observed_tread_line_runs/1/floor",
+    "known_inputs/observed_tread_line_runs/1/layer",
+    "known_inputs/observed_tread_line_runs/1/linetype",
+    "known_inputs/observed_tread_line_runs/1/tread_lines"
+   ]
+  },
+  "STRUCTURAL_VERTICAL_INTERVAL_REGISTER": {
+   "state": "UNCHANGED",
+   "classes": [],
+   "changes": [],
+   "change_count": 0,
+   "added_leaves": 0,
+   "added_sample": []
+  },
+  "URBAN_METHOD_REGISTER": {
+   "state": "UNCHANGED",
+   "classes": [],
+   "changes": [],
+   "change_count": 0,
+   "added_leaves": 0,
+   "added_sample": []
+  },
+  "WALL_HEIGHT_REGISTER": {
+   "state": "UNCHANGED",
+   "classes": [],
+   "changes": [],
+   "change_count": 0,
+   "added_leaves": 0,
+   "added_sample": []
+  },
+  "WATERPROOFING_REGISTER": {
+   "state": "UNCHANGED",
+   "classes": [],
+   "changes": [],
+   "change_count": 0,
+   "added_leaves": 0,
+   "added_sample": []
+  }
+ },
+ "state": "PASS",
+ "rule": "no numeric or state leaf of a frozen B2A register may change; only schema / terminology / provenance"
+}
