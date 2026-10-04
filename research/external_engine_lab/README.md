@@ -209,6 +209,7 @@ bridges it to the legacy QS01 method. Owner decisions are scoped claims in `data
 | `alsenan_b2a1_package.py` | `data/reports/URBAN_QTO_ALSENAN_PHASE_B2A1_GENERIC_QA_PATCH/` + zip | self-contained package: ALSENAN_PHASE_B2A1_FREEZE.json, parent freeze, all registers, regressions, engine sources, junit, stdlib verify.py |
 | `reporting_v2_recommendation.json` | - | Reporting V2 recommendation (answers 1-10), committed before code |
 | `reporting_v2_qs_addendum_recommendation.json` | - | Reporting V2 QS reconciliation addendum recommendation (formula policy, 08 sheet), committed before the addendum code |
+| `alsenan_final_boq_v3_recommendation.md` / `.json` | - | Alsenan final BOQ + Reporting V3 recommendation (blocker classes A-G, new source evidence, scope check, work order), committed before code |
 | `reporting_v2_alsenan.py` | (used by `reporting_v2_build.py`) | Reporting V2 adapter: frozen A3 + B2A.1 registers -> REPORTING_MODEL_V2 (maps, never measures) |
 | `reporting_v2_qortuba.py` | (used by `reporting_v2_build.py`) | Reporting V2 adapter: frozen Qortuba RC1 registers -> REPORTING_MODEL_V2 |
 | `reporting_v2_build.py` | `data/reports/URBAN_QTO_REPORTING_V2/` + `REPORTING_V2.zip`; records in `tests/reporting_v2/frozen/` | XLSX + PDF report, readback QA, regression, freeze (generic code in `engine/reporting_v2/`) |
