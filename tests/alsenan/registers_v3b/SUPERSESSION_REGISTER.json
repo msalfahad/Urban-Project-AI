@@ -1,0 +1,3731 @@
+{
+ "SCHEMA": "URBAN_V3A_TO_V3B_SUPERSESSION_V1",
+ "rows": [
+  {
+   "v3a_line": "L0001",
+   "v3a_code": "C-FTG",
+   "v3a_status": "PARTIAL",
+   "v3a_qty": 64.346,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "C-FTG"
+   ]
+  },
+  {
+   "v3a_line": "L0002",
+   "v3a_code": "C-BLD-F",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 15.213,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "C-BLD-F"
+   ]
+  },
+  {
+   "v3a_line": "L0003",
+   "v3a_code": "C-STR",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 3.392,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "C-STR"
+   ]
+  },
+  {
+   "v3a_line": "L0004",
+   "v3a_code": "C-NECK",
+   "v3a_status": "BLOCKED",
+   "v3a_qty": null,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "C-NECK"
+   ]
+  },
+  {
+   "v3a_line": "L0005",
+   "v3a_code": "C-GB-INT",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 11.245,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "C-GB-INT"
+   ]
+  },
+  {
+   "v3a_line": "L0006",
+   "v3a_code": "C-GB-EXT",
+   "v3a_status": "BLOCKED",
+   "v3a_qty": null,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "C-GB-EXT"
+   ]
+  },
+  {
+   "v3a_line": "L0007",
+   "v3a_code": "C-BLD-GB",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 4.425,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "C-BLD-GB"
+   ]
+  },
+  {
+   "v3a_line": "L0008",
+   "v3a_code": "C-GSLAB-ZONE-1",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 7.041,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "C-GSLAB-ZONE-1"
+   ]
+  },
+  {
+   "v3a_line": "L0009",
+   "v3a_code": "C-GSLAB-ZONE-2",
+   "v3a_status": "BLOCKED",
+   "v3a_qty": null,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "C-GSLAB-ZONE-2"
+   ]
+  },
+  {
+   "v3a_line": "L0010",
+   "v3a_code": "C-COL-GF",
+   "v3a_status": "PARTIAL",
+   "v3a_qty": 13.42,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "C-COL-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0011",
+   "v3a_code": "C-JNT-GF",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 1.878,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "C-JNT-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0012",
+   "v3a_code": "C-BEAM-GF",
+   "v3a_status": "PARTIAL",
+   "v3a_qty": 21.414,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "C-BEAM-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0013",
+   "v3a_code": "C-SLAB-GF",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 44.286,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "C-SLAB-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0014",
+   "v3a_code": "C-LINT-GF",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 2.726,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "C-LINT-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0015",
+   "v3a_code": "C-COL-1F",
+   "v3a_status": "PARTIAL",
+   "v3a_qty": 6.755,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "C-COL-1F"
+   ]
+  },
+  {
+   "v3a_line": "L0016",
+   "v3a_code": "C-JNT-1F",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 0.921,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "C-JNT-1F"
+   ]
+  },
+  {
+   "v3a_line": "L0017",
+   "v3a_code": "C-BEAM-1F",
+   "v3a_status": "PARTIAL",
+   "v3a_qty": 13.523,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "C-BEAM-1F"
+   ]
+  },
+  {
+   "v3a_line": "L0018",
+   "v3a_code": "C-SLAB-1F",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 27.16,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "C-SLAB-1F"
+   ]
+  },
+  {
+   "v3a_line": "L0019",
+   "v3a_code": "C-LINT-1F",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 1.493,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "C-LINT-1F"
+   ]
+  },
+  {
+   "v3a_line": "L0020",
+   "v3a_code": "C-COL-2F",
+   "v3a_status": "PARTIAL",
+   "v3a_qty": 2.962,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "C-COL-2F"
+   ]
+  },
+  {
+   "v3a_line": "L0021",
+   "v3a_code": "C-JNT-2F",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 0.415,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "C-JNT-2F"
+   ]
+  },
+  {
+   "v3a_line": "L0022",
+   "v3a_code": "C-BEAM-2F",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 2.65,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "C-BEAM-2F"
+   ]
+  },
+  {
+   "v3a_line": "L0023",
+   "v3a_code": "C-SLAB-2F",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 9.986,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "C-SLAB-2F"
+   ]
+  },
+  {
+   "v3a_line": "L0024",
+   "v3a_code": "C-LINT-2F",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 0.53,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "C-LINT-2F"
+   ]
+  },
+  {
+   "v3a_line": "L0025",
+   "v3a_code": "C-STAIR",
+   "v3a_status": "BLOCKED",
+   "v3a_qty": null,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "C-STAIR"
+   ]
+  },
+  {
+   "v3a_line": "L0026",
+   "v3a_code": "C-DOME",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 2.668,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "C-DOME-RING-12EB",
+    "C-DOME-RING-1300",
+    "C-DOME-RING-2F33",
+    "C-DOME-SHELL-12EB",
+    "C-DOME-SHELL-1300",
+    "C-DOME-SHELL-2F33"
+   ]
+  },
+  {
+   "v3a_line": "L0027",
+   "v3a_code": "C-POOL",
+   "v3a_status": "BLOCKED",
+   "v3a_qty": null,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "C-POOL"
+   ]
+  },
+  {
+   "v3a_line": "L0028",
+   "v3a_code": "C-SWALL",
+   "v3a_status": "BLOCKED",
+   "v3a_qty": null,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "C-SWALL"
+   ]
+  },
+  {
+   "v3a_line": "L0029",
+   "v3a_code": "C-BWALL",
+   "v3a_status": "BLOCKED",
+   "v3a_qty": null,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "C-BWALL"
+   ]
+  },
+  {
+   "v3a_line": "L0030",
+   "v3a_code": "R-BEAM-1F-STRAIGHT",
+   "v3a_status": "PARTIAL",
+   "v3a_qty": 1474.81,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "R-BEAMS-1F",
+    "R-BEAMS-2F_ROOF",
+    "R-BEAMS-GF",
+    "R-BEAM_RESIDUE-1F",
+    "R-BEAM_RESIDUE-GF",
+    "R-BEAM_SIDE_BARS-1F",
+    "R-BEAM_SIDE_BARS-2F_ROOF",
+    "R-BEAM_SIDE_BARS-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0031",
+   "v3a_code": "R-BEAM-1F-BLK",
+   "v3a_status": "BLOCKED",
+   "v3a_qty": null,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "R-BEAMS-1F",
+    "R-BEAMS-2F_ROOF",
+    "R-BEAMS-GF",
+    "R-BEAM_RESIDUE-1F",
+    "R-BEAM_RESIDUE-GF",
+    "R-BEAM_SIDE_BARS-1F",
+    "R-BEAM_SIDE_BARS-2F_ROOF",
+    "R-BEAM_SIDE_BARS-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0032",
+   "v3a_code": "R-COLUMN-1F-NET",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 1194.66,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "R-BEAMS-1F",
+    "R-BEAMS-2F_ROOF",
+    "R-BEAMS-GF",
+    "R-BEAM_RESIDUE-1F",
+    "R-BEAM_RESIDUE-GF",
+    "R-BEAM_SIDE_BARS-1F",
+    "R-BEAM_SIDE_BARS-2F_ROOF",
+    "R-BEAM_SIDE_BARS-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0033",
+   "v3a_code": "R-COLUMN-1F-PROC",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 1376.708,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "R-BEAMS-1F",
+    "R-BEAMS-2F_ROOF",
+    "R-BEAMS-GF",
+    "R-BEAM_RESIDUE-1F",
+    "R-BEAM_RESIDUE-GF",
+    "R-BEAM_SIDE_BARS-1F",
+    "R-BEAM_SIDE_BARS-2F_ROOF",
+    "R-BEAM_SIDE_BARS-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0034",
+   "v3a_code": "R-COLUMN-1F-STRAIGHT",
+   "v3a_status": "PARTIAL",
+   "v3a_qty": 312.257,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "R-BEAMS-1F",
+    "R-BEAMS-2F_ROOF",
+    "R-BEAMS-GF",
+    "R-BEAM_RESIDUE-1F",
+    "R-BEAM_RESIDUE-GF",
+    "R-BEAM_SIDE_BARS-1F",
+    "R-BEAM_SIDE_BARS-2F_ROOF",
+    "R-BEAM_SIDE_BARS-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0035",
+   "v3a_code": "R-LINTEL-1F-NET",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 144.538,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "R-BEAMS-1F",
+    "R-BEAMS-2F_ROOF",
+    "R-BEAMS-GF",
+    "R-BEAM_RESIDUE-1F",
+    "R-BEAM_RESIDUE-GF",
+    "R-BEAM_SIDE_BARS-1F",
+    "R-BEAM_SIDE_BARS-2F_ROOF",
+    "R-BEAM_SIDE_BARS-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0036",
+   "v3a_code": "R-LINTEL-1F-PROC",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 144.538,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "R-BEAMS-1F",
+    "R-BEAMS-2F_ROOF",
+    "R-BEAMS-GF",
+    "R-BEAM_RESIDUE-1F",
+    "R-BEAM_RESIDUE-GF",
+    "R-BEAM_SIDE_BARS-1F",
+    "R-BEAM_SIDE_BARS-2F_ROOF",
+    "R-BEAM_SIDE_BARS-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0037",
+   "v3a_code": "R-LINTEL-1F-STRAIGHT",
+   "v3a_status": "PARTIAL",
+   "v3a_qty": 46.1,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "R-BEAMS-1F",
+    "R-BEAMS-2F_ROOF",
+    "R-BEAMS-GF",
+    "R-BEAM_RESIDUE-1F",
+    "R-BEAM_RESIDUE-GF",
+    "R-BEAM_SIDE_BARS-1F",
+    "R-BEAM_SIDE_BARS-2F_ROOF",
+    "R-BEAM_SIDE_BARS-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0038",
+   "v3a_code": "R-BEAM-2F_ROOF-STRAIGHT",
+   "v3a_status": "PARTIAL",
+   "v3a_qty": 422.485,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "R-BEAMS-1F",
+    "R-BEAMS-2F_ROOF",
+    "R-BEAMS-GF",
+    "R-BEAM_RESIDUE-1F",
+    "R-BEAM_RESIDUE-GF",
+    "R-BEAM_SIDE_BARS-1F",
+    "R-BEAM_SIDE_BARS-2F_ROOF",
+    "R-BEAM_SIDE_BARS-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0039",
+   "v3a_code": "R-BEAM-2F_ROOF-BLK",
+   "v3a_status": "BLOCKED",
+   "v3a_qty": null,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "R-BEAMS-1F",
+    "R-BEAMS-2F_ROOF",
+    "R-BEAMS-GF",
+    "R-BEAM_RESIDUE-1F",
+    "R-BEAM_RESIDUE-GF",
+    "R-BEAM_SIDE_BARS-1F",
+    "R-BEAM_SIDE_BARS-2F_ROOF",
+    "R-BEAM_SIDE_BARS-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0040",
+   "v3a_code": "R-COLUMN-2F_ROOF-NET",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 1008.824,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "R-BEAMS-1F",
+    "R-BEAMS-2F_ROOF",
+    "R-BEAMS-GF",
+    "R-BEAM_RESIDUE-1F",
+    "R-BEAM_RESIDUE-GF",
+    "R-BEAM_SIDE_BARS-1F",
+    "R-BEAM_SIDE_BARS-2F_ROOF",
+    "R-BEAM_SIDE_BARS-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0041",
+   "v3a_code": "R-COLUMN-2F_ROOF-PROC",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 1162.55,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "R-BEAMS-1F",
+    "R-BEAMS-2F_ROOF",
+    "R-BEAMS-GF",
+    "R-BEAM_RESIDUE-1F",
+    "R-BEAM_RESIDUE-GF",
+    "R-BEAM_SIDE_BARS-1F",
+    "R-BEAM_SIDE_BARS-2F_ROOF",
+    "R-BEAM_SIDE_BARS-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0042",
+   "v3a_code": "R-COLUMN-2F_ROOF-STRAIGHT",
+   "v3a_status": "PARTIAL",
+   "v3a_qty": 289.662,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "R-BEAMS-1F",
+    "R-BEAMS-2F_ROOF",
+    "R-BEAMS-GF",
+    "R-BEAM_RESIDUE-1F",
+    "R-BEAM_RESIDUE-GF",
+    "R-BEAM_SIDE_BARS-1F",
+    "R-BEAM_SIDE_BARS-2F_ROOF",
+    "R-BEAM_SIDE_BARS-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0043",
+   "v3a_code": "R-LINTEL-2F_ROOF-NET",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 45.892,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "R-BEAMS-1F",
+    "R-BEAMS-2F_ROOF",
+    "R-BEAMS-GF",
+    "R-BEAM_RESIDUE-1F",
+    "R-BEAM_RESIDUE-GF",
+    "R-BEAM_SIDE_BARS-1F",
+    "R-BEAM_SIDE_BARS-2F_ROOF",
+    "R-BEAM_SIDE_BARS-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0044",
+   "v3a_code": "R-LINTEL-2F_ROOF-PROC",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 45.892,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "R-BEAMS-1F",
+    "R-BEAMS-2F_ROOF",
+    "R-BEAMS-GF",
+    "R-BEAM_RESIDUE-1F",
+    "R-BEAM_RESIDUE-GF",
+    "R-BEAM_SIDE_BARS-1F",
+    "R-BEAM_SIDE_BARS-2F_ROOF",
+    "R-BEAM_SIDE_BARS-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0045",
+   "v3a_code": "R-LINTEL-2F_ROOF-STRAIGHT",
+   "v3a_status": "PARTIAL",
+   "v3a_qty": 16.156,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "R-BEAMS-1F",
+    "R-BEAMS-2F_ROOF",
+    "R-BEAMS-GF",
+    "R-BEAM_RESIDUE-1F",
+    "R-BEAM_RESIDUE-GF",
+    "R-BEAM_SIDE_BARS-1F",
+    "R-BEAM_SIDE_BARS-2F_ROOF",
+    "R-BEAM_SIDE_BARS-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0046",
+   "v3a_code": "R-BEAM-GF-STRAIGHT",
+   "v3a_status": "PARTIAL",
+   "v3a_qty": 2218.594,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "R-BEAMS-1F",
+    "R-BEAMS-2F_ROOF",
+    "R-BEAMS-GF",
+    "R-BEAM_RESIDUE-1F",
+    "R-BEAM_RESIDUE-GF",
+    "R-BEAM_SIDE_BARS-1F",
+    "R-BEAM_SIDE_BARS-2F_ROOF",
+    "R-BEAM_SIDE_BARS-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0047",
+   "v3a_code": "R-BEAM-GF-BLK",
+   "v3a_status": "BLOCKED",
+   "v3a_qty": null,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "R-BEAMS-1F",
+    "R-BEAMS-2F_ROOF",
+    "R-BEAMS-GF",
+    "R-BEAM_RESIDUE-1F",
+    "R-BEAM_RESIDUE-GF",
+    "R-BEAM_SIDE_BARS-1F",
+    "R-BEAM_SIDE_BARS-2F_ROOF",
+    "R-BEAM_SIDE_BARS-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0048",
+   "v3a_code": "R-COLUMN-GF-NET",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 2033.78,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "R-BEAMS-1F",
+    "R-BEAMS-2F_ROOF",
+    "R-BEAMS-GF",
+    "R-BEAM_RESIDUE-1F",
+    "R-BEAM_RESIDUE-GF",
+    "R-BEAM_SIDE_BARS-1F",
+    "R-BEAM_SIDE_BARS-2F_ROOF",
+    "R-BEAM_SIDE_BARS-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0049",
+   "v3a_code": "R-COLUMN-GF-PROC",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 2323.035,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "R-BEAMS-1F",
+    "R-BEAMS-2F_ROOF",
+    "R-BEAMS-GF",
+    "R-BEAM_RESIDUE-1F",
+    "R-BEAM_RESIDUE-GF",
+    "R-BEAM_SIDE_BARS-1F",
+    "R-BEAM_SIDE_BARS-2F_ROOF",
+    "R-BEAM_SIDE_BARS-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0050",
+   "v3a_code": "R-COLUMN-GF-STRAIGHT",
+   "v3a_status": "PARTIAL",
+   "v3a_qty": 490.669,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "R-BEAMS-1F",
+    "R-BEAMS-2F_ROOF",
+    "R-BEAMS-GF",
+    "R-BEAM_RESIDUE-1F",
+    "R-BEAM_RESIDUE-GF",
+    "R-BEAM_SIDE_BARS-1F",
+    "R-BEAM_SIDE_BARS-2F_ROOF",
+    "R-BEAM_SIDE_BARS-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0051",
+   "v3a_code": "R-FOOTING-GF-NET",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 1132.68,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "R-BEAMS-1F",
+    "R-BEAMS-2F_ROOF",
+    "R-BEAMS-GF",
+    "R-BEAM_RESIDUE-1F",
+    "R-BEAM_RESIDUE-GF",
+    "R-BEAM_SIDE_BARS-1F",
+    "R-BEAM_SIDE_BARS-2F_ROOF",
+    "R-BEAM_SIDE_BARS-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0052",
+   "v3a_code": "R-FOOTING-GF-PROC",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 1132.68,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "R-BEAMS-1F",
+    "R-BEAMS-2F_ROOF",
+    "R-BEAMS-GF",
+    "R-BEAM_RESIDUE-1F",
+    "R-BEAM_RESIDUE-GF",
+    "R-BEAM_SIDE_BARS-1F",
+    "R-BEAM_SIDE_BARS-2F_ROOF",
+    "R-BEAM_SIDE_BARS-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0053",
+   "v3a_code": "R-FOOTING-GF-BLK",
+   "v3a_status": "BLOCKED",
+   "v3a_qty": null,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "R-BEAMS-1F",
+    "R-BEAMS-2F_ROOF",
+    "R-BEAMS-GF",
+    "R-BEAM_RESIDUE-1F",
+    "R-BEAM_RESIDUE-GF",
+    "R-BEAM_SIDE_BARS-1F",
+    "R-BEAM_SIDE_BARS-2F_ROOF",
+    "R-BEAM_SIDE_BARS-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0054",
+   "v3a_code": "R-GROUND_BEAM-GF-STRAIGHT",
+   "v3a_status": "PARTIAL",
+   "v3a_qty": 1252.93,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "R-BEAMS-1F",
+    "R-BEAMS-2F_ROOF",
+    "R-BEAMS-GF",
+    "R-BEAM_RESIDUE-1F",
+    "R-BEAM_RESIDUE-GF",
+    "R-BEAM_SIDE_BARS-1F",
+    "R-BEAM_SIDE_BARS-2F_ROOF",
+    "R-BEAM_SIDE_BARS-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0055",
+   "v3a_code": "R-GROUND_SLAB-GF-NET",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 434.604,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "R-BEAMS-1F",
+    "R-BEAMS-2F_ROOF",
+    "R-BEAMS-GF",
+    "R-BEAM_RESIDUE-1F",
+    "R-BEAM_RESIDUE-GF",
+    "R-BEAM_SIDE_BARS-1F",
+    "R-BEAM_SIDE_BARS-2F_ROOF",
+    "R-BEAM_SIDE_BARS-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0056",
+   "v3a_code": "R-GROUND_SLAB-GF-PROC",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 453.616,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "R-BEAMS-1F",
+    "R-BEAMS-2F_ROOF",
+    "R-BEAMS-GF",
+    "R-BEAM_RESIDUE-1F",
+    "R-BEAM_RESIDUE-GF",
+    "R-BEAM_SIDE_BARS-1F",
+    "R-BEAM_SIDE_BARS-2F_ROOF",
+    "R-BEAM_SIDE_BARS-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0057",
+   "v3a_code": "R-LINTEL-GF-NET",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 251.6,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "R-BEAMS-1F",
+    "R-BEAMS-2F_ROOF",
+    "R-BEAMS-GF",
+    "R-BEAM_RESIDUE-1F",
+    "R-BEAM_RESIDUE-GF",
+    "R-BEAM_SIDE_BARS-1F",
+    "R-BEAM_SIDE_BARS-2F_ROOF",
+    "R-BEAM_SIDE_BARS-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0058",
+   "v3a_code": "R-LINTEL-GF-PROC",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 251.6,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "R-BEAMS-1F",
+    "R-BEAMS-2F_ROOF",
+    "R-BEAMS-GF",
+    "R-BEAM_RESIDUE-1F",
+    "R-BEAM_RESIDUE-GF",
+    "R-BEAM_SIDE_BARS-1F",
+    "R-BEAM_SIDE_BARS-2F_ROOF",
+    "R-BEAM_SIDE_BARS-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0059",
+   "v3a_code": "R-LINTEL-GF-STRAIGHT",
+   "v3a_status": "PARTIAL",
+   "v3a_qty": 78.178,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "R-BEAMS-1F",
+    "R-BEAMS-2F_ROOF",
+    "R-BEAMS-GF",
+    "R-BEAM_RESIDUE-1F",
+    "R-BEAM_RESIDUE-GF",
+    "R-BEAM_SIDE_BARS-1F",
+    "R-BEAM_SIDE_BARS-2F_ROOF",
+    "R-BEAM_SIDE_BARS-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0060",
+   "v3a_code": "R-SLAB-ALL",
+   "v3a_status": "BLOCKED",
+   "v3a_qty": null,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "R-BEAMS-1F",
+    "R-BEAMS-2F_ROOF",
+    "R-BEAMS-GF",
+    "R-BEAM_RESIDUE-1F",
+    "R-BEAM_RESIDUE-GF",
+    "R-BEAM_SIDE_BARS-1F",
+    "R-BEAM_SIDE_BARS-2F_ROOF",
+    "R-BEAM_SIDE_BARS-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0061",
+   "v3a_code": "R-COL-FDN",
+   "v3a_status": "BLOCKED",
+   "v3a_qty": null,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "R-BEAMS-1F",
+    "R-BEAMS-2F_ROOF",
+    "R-BEAMS-GF",
+    "R-BEAM_RESIDUE-1F",
+    "R-BEAM_RESIDUE-GF",
+    "R-BEAM_SIDE_BARS-1F",
+    "R-BEAM_SIDE_BARS-2F_ROOF",
+    "R-BEAM_SIDE_BARS-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0062",
+   "v3a_code": "B-150-EXT-1F",
+   "v3a_status": "PARTIAL",
+   "v3a_qty": 28.057,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "B-150-EXT-1F"
+   ]
+  },
+  {
+   "v3a_line": "L0063",
+   "v3a_code": "B-150-INT-1F",
+   "v3a_status": "PARTIAL",
+   "v3a_qty": 110.869,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "B-150-INT-1F"
+   ]
+  },
+  {
+   "v3a_line": "L0064",
+   "v3a_code": "B-200-EXT-1F",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 74.668,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "B-200-EXT-1F"
+   ]
+  },
+  {
+   "v3a_line": "L0065",
+   "v3a_code": "B-200-INT-1F",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 23.126,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "B-200-INT-1F"
+   ]
+  },
+  {
+   "v3a_line": "L0066",
+   "v3a_code": "B-200-UNR-1F",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 8.584,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "B-200-UNR-1F"
+   ]
+  },
+  {
+   "v3a_line": "L0067",
+   "v3a_code": "B-150-EXT-2F_ROOF",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 24.7,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "B-150-EXT-2F_ROOF"
+   ]
+  },
+  {
+   "v3a_line": "L0068",
+   "v3a_code": "B-150-INT-2F_ROOF",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 8.36,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "B-150-INT-2F_ROOF"
+   ]
+  },
+  {
+   "v3a_line": "L0069",
+   "v3a_code": "B-200-EXT-2F_ROOF",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 53.661,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "B-200-EXT-2F_ROOF"
+   ]
+  },
+  {
+   "v3a_line": "L0070",
+   "v3a_code": "B-200-INT-2F_ROOF",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 22.224,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "B-200-INT-2F_ROOF"
+   ]
+  },
+  {
+   "v3a_line": "L0071",
+   "v3a_code": "B-150-EXT-GF",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 33.764,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "B-150-EXT-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0072",
+   "v3a_code": "B-150-INT-GF",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 78.192,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "B-150-INT-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0073",
+   "v3a_code": "B-200-EXT-GF",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 116.636,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "B-200-EXT-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0074",
+   "v3a_code": "B-200-INT-GF",
+   "v3a_status": "PARTIAL",
+   "v3a_qty": 20.851,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "B-200-INT-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0075",
+   "v3a_code": "B-200-UNR-GF",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 6.562,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "B-200-UNR-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0076",
+   "v3a_code": "B-PAR-2F",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 15.336,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "B-PAR-2F"
+   ]
+  },
+  {
+   "v3a_line": "L0077",
+   "v3a_code": "B-PAR-1F",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 27.015,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "B-PAR-1F"
+   ]
+  },
+  {
+   "v3a_line": "L0078",
+   "v3a_code": "B-PAR-GF",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 33.412,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "B-PAR-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0079",
+   "v3a_code": "B-OVER-OPEN",
+   "v3a_status": "BLOCKED",
+   "v3a_qty": null,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "B-OVER-OPEN"
+   ]
+  },
+  {
+   "v3a_line": "L0080",
+   "v3a_code": "B-BWALL",
+   "v3a_status": "BLOCKED",
+   "v3a_qty": null,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "B-BWALL"
+   ]
+  },
+  {
+   "v3a_line": "L0081",
+   "v3a_code": "P-PL-GF-R02",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 29.839,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "T-SD-GF-R02",
+    "T-TP-GF-R02",
+    "T-WT-GF-R02"
+   ]
+  },
+  {
+   "v3a_line": "L0082",
+   "v3a_code": "P-CB-GF-R02",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 0.0,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-BEAD-1F",
+    "P-BEAD-2F_ROOF",
+    "P-BEAD-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0083",
+   "v3a_code": "P-SD-GF-R02",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 29.839,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "T-SD-GF-R02",
+    "T-TP-GF-R02",
+    "T-WT-GF-R02"
+   ]
+  },
+  {
+   "v3a_line": "L0084",
+   "v3a_code": "P-PL-GF-R03",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 29.197,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "T-SD-GF-R03",
+    "T-TP-GF-R03",
+    "T-WT-GF-R03"
+   ]
+  },
+  {
+   "v3a_line": "L0085",
+   "v3a_code": "P-CB-GF-R03",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 0.0,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-BEAD-1F",
+    "P-BEAD-2F_ROOF",
+    "P-BEAD-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0086",
+   "v3a_code": "P-SD-GF-R03",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 29.197,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "T-SD-GF-R03",
+    "T-TP-GF-R03",
+    "T-WT-GF-R03"
+   ]
+  },
+  {
+   "v3a_line": "L0087",
+   "v3a_code": "P-PL-GF-Z04",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 463.255,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-PA-GF-Z04",
+    "P-RP-GF-Z04",
+    "P-SD-GF-Z04",
+    "P-SP-GF-Z04"
+   ]
+  },
+  {
+   "v3a_line": "L0088",
+   "v3a_code": "P-PA-GF-Z04",
+   "v3a_status": "BLOCKED",
+   "v3a_qty": null,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-PA-GF-Z04",
+    "P-RP-GF-Z04",
+    "P-SD-GF-Z04",
+    "P-SP-GF-Z04"
+   ]
+  },
+  {
+   "v3a_line": "L0089",
+   "v3a_code": "P-CB-GF-Z04",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 0.0,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-BEAD-1F",
+    "P-BEAD-2F_ROOF",
+    "P-BEAD-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0090",
+   "v3a_code": "P-SD-GF-Z04",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 463.255,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-PA-GF-Z04",
+    "P-RP-GF-Z04",
+    "P-SD-GF-Z04",
+    "P-SP-GF-Z04"
+   ]
+  },
+  {
+   "v3a_line": "L0091",
+   "v3a_code": "P-PL-GF-R05",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 32.546,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "T-SD-GF-R05",
+    "T-TP-GF-R05",
+    "T-WT-GF-R05"
+   ]
+  },
+  {
+   "v3a_line": "L0092",
+   "v3a_code": "P-CB-GF-R05",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 0.0,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-BEAD-1F",
+    "P-BEAD-2F_ROOF",
+    "P-BEAD-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0093",
+   "v3a_code": "P-SD-GF-R05",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 32.546,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "T-SD-GF-R05",
+    "T-TP-GF-R05",
+    "T-WT-GF-R05"
+   ]
+  },
+  {
+   "v3a_line": "L0094",
+   "v3a_code": "P-PL-GF-Z06",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 78.762,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-PA-GF-Z06",
+    "P-RP-GF-Z06",
+    "P-SD-GF-Z06",
+    "P-SP-GF-Z06"
+   ]
+  },
+  {
+   "v3a_line": "L0095",
+   "v3a_code": "P-PA-GF-Z06",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 70.446,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-PA-GF-Z06",
+    "P-RP-GF-Z06",
+    "P-SD-GF-Z06",
+    "P-SP-GF-Z06"
+   ]
+  },
+  {
+   "v3a_line": "L0096",
+   "v3a_code": "P-CB-GF-Z06",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 0.0,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-BEAD-1F",
+    "P-BEAD-2F_ROOF",
+    "P-BEAD-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0097",
+   "v3a_code": "P-SD-GF-Z06",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 78.762,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-PA-GF-Z06",
+    "P-RP-GF-Z06",
+    "P-SD-GF-Z06",
+    "P-SP-GF-Z06"
+   ]
+  },
+  {
+   "v3a_line": "L0098",
+   "v3a_code": "P-PL-GF-R07",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 59.883,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "T-SD-GF-R07",
+    "T-TP-GF-R07",
+    "T-WT-GF-R07"
+   ]
+  },
+  {
+   "v3a_line": "L0099",
+   "v3a_code": "P-CB-GF-R07",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 4.34,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-BEAD-1F",
+    "P-BEAD-2F_ROOF",
+    "P-BEAD-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0100",
+   "v3a_code": "P-SD-GF-R07",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 59.883,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "T-SD-GF-R07",
+    "T-TP-GF-R07",
+    "T-WT-GF-R07"
+   ]
+  },
+  {
+   "v3a_line": "L0101",
+   "v3a_code": "P-PL-GF-R09",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 31.912,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "T-SD-GF-R09",
+    "T-TP-GF-R09",
+    "T-WT-GF-R09"
+   ]
+  },
+  {
+   "v3a_line": "L0102",
+   "v3a_code": "P-CB-GF-R09",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 0.0,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-BEAD-1F",
+    "P-BEAD-2F_ROOF",
+    "P-BEAD-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0103",
+   "v3a_code": "P-SD-GF-R09",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 31.912,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "T-SD-GF-R09",
+    "T-TP-GF-R09",
+    "T-WT-GF-R09"
+   ]
+  },
+  {
+   "v3a_line": "L0104",
+   "v3a_code": "P-PL-GF-R10",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 23.419,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "T-SD-GF-R10",
+    "T-TP-GF-R10",
+    "T-WT-GF-R10"
+   ]
+  },
+  {
+   "v3a_line": "L0105",
+   "v3a_code": "P-CB-GF-R10",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 0.0,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-BEAD-1F",
+    "P-BEAD-2F_ROOF",
+    "P-BEAD-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0106",
+   "v3a_code": "P-SD-GF-R10",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 23.419,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "T-SD-GF-R10",
+    "T-TP-GF-R10",
+    "T-WT-GF-R10"
+   ]
+  },
+  {
+   "v3a_line": "L0107",
+   "v3a_code": "P-PL-GF-R12",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 91.659,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-PA-GF-R12",
+    "P-RP-GF-R12",
+    "P-SD-GF-R12",
+    "P-SP-GF-R12"
+   ]
+  },
+  {
+   "v3a_line": "L0108",
+   "v3a_code": "P-PA-GF-R12",
+   "v3a_status": "BLOCKED",
+   "v3a_qty": null,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-PA-GF-R12",
+    "P-RP-GF-R12",
+    "P-SD-GF-R12",
+    "P-SP-GF-R12"
+   ]
+  },
+  {
+   "v3a_line": "L0109",
+   "v3a_code": "P-CB-GF-R12",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 0.0,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-BEAD-1F",
+    "P-BEAD-2F_ROOF",
+    "P-BEAD-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0110",
+   "v3a_code": "P-SD-GF-R12",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 91.659,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-PA-GF-R12",
+    "P-RP-GF-R12",
+    "P-SD-GF-R12",
+    "P-SP-GF-R12"
+   ]
+  },
+  {
+   "v3a_line": "L0111",
+   "v3a_code": "P-PL-GF-R13",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 26.488,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "T-SD-GF-R13",
+    "T-TP-GF-R13",
+    "T-WT-GF-R13"
+   ]
+  },
+  {
+   "v3a_line": "L0112",
+   "v3a_code": "P-CB-GF-R13",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 0.0,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-BEAD-1F",
+    "P-BEAD-2F_ROOF",
+    "P-BEAD-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0113",
+   "v3a_code": "P-SD-GF-R13",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 26.488,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "T-SD-GF-R13",
+    "T-TP-GF-R13",
+    "T-WT-GF-R13"
+   ]
+  },
+  {
+   "v3a_line": "L0114",
+   "v3a_code": "P-PL-GF-R14",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 88.716,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-PA-GF-R14",
+    "P-RP-GF-R14",
+    "P-SD-GF-R14",
+    "P-SP-GF-R14"
+   ]
+  },
+  {
+   "v3a_line": "L0115",
+   "v3a_code": "P-PA-GF-R14",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 75.365,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-PA-GF-R14",
+    "P-RP-GF-R14",
+    "P-SD-GF-R14",
+    "P-SP-GF-R14"
+   ]
+  },
+  {
+   "v3a_line": "L0116",
+   "v3a_code": "P-CB-GF-R14",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 0.0,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-BEAD-1F",
+    "P-BEAD-2F_ROOF",
+    "P-BEAD-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0117",
+   "v3a_code": "P-SD-GF-R14",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 88.716,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-PA-GF-R14",
+    "P-RP-GF-R14",
+    "P-SD-GF-R14",
+    "P-SP-GF-R14"
+   ]
+  },
+  {
+   "v3a_line": "L0118",
+   "v3a_code": "P-PL-GF-R15",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 30.883,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "T-SD-GF-R15",
+    "T-TP-GF-R15",
+    "T-WT-GF-R15"
+   ]
+  },
+  {
+   "v3a_line": "L0119",
+   "v3a_code": "P-CB-GF-R15",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 0.0,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-BEAD-1F",
+    "P-BEAD-2F_ROOF",
+    "P-BEAD-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0120",
+   "v3a_code": "P-SD-GF-R15",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 30.883,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "T-SD-GF-R15",
+    "T-TP-GF-R15",
+    "T-WT-GF-R15"
+   ]
+  },
+  {
+   "v3a_line": "L0121",
+   "v3a_code": "P-PL-1F-R01",
+   "v3a_status": "PARTIAL",
+   "v3a_qty": 23.023,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "T-SD-1F-R01",
+    "T-TP-1F-R01",
+    "T-WT-1F-R01"
+   ]
+  },
+  {
+   "v3a_line": "L0122",
+   "v3a_code": "P-CB-1F-R01",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 0.0,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-BEAD-1F",
+    "P-BEAD-2F_ROOF",
+    "P-BEAD-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0123",
+   "v3a_code": "P-SD-1F-R01",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 23.023,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "T-SD-1F-R01",
+    "T-TP-1F-R01",
+    "T-WT-1F-R01"
+   ]
+  },
+  {
+   "v3a_line": "L0124",
+   "v3a_code": "P-PL-1F-R03",
+   "v3a_status": "PARTIAL",
+   "v3a_qty": 77.05,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-PA-1F-R03",
+    "P-RP-1F-R03",
+    "P-SD-1F-R03",
+    "P-SP-1F-R03"
+   ]
+  },
+  {
+   "v3a_line": "L0125",
+   "v3a_code": "P-PA-1F-R03",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 70.879,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-PA-1F-R03",
+    "P-RP-1F-R03",
+    "P-SD-1F-R03",
+    "P-SP-1F-R03"
+   ]
+  },
+  {
+   "v3a_line": "L0126",
+   "v3a_code": "P-CB-1F-R03",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 0.0,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-BEAD-1F",
+    "P-BEAD-2F_ROOF",
+    "P-BEAD-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0127",
+   "v3a_code": "P-SD-1F-R03",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 77.05,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-PA-1F-R03",
+    "P-RP-1F-R03",
+    "P-SD-1F-R03",
+    "P-SP-1F-R03"
+   ]
+  },
+  {
+   "v3a_line": "L0128",
+   "v3a_code": "P-PL-1F-R04",
+   "v3a_status": "PARTIAL",
+   "v3a_qty": 22.932,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "T-SD-1F-R04",
+    "T-TP-1F-R04",
+    "T-WT-1F-R04"
+   ]
+  },
+  {
+   "v3a_line": "L0129",
+   "v3a_code": "P-CB-1F-R04",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 0.0,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-BEAD-1F",
+    "P-BEAD-2F_ROOF",
+    "P-BEAD-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0130",
+   "v3a_code": "P-SD-1F-R04",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 22.932,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "T-SD-1F-R04",
+    "T-TP-1F-R04",
+    "T-WT-1F-R04"
+   ]
+  },
+  {
+   "v3a_line": "L0131",
+   "v3a_code": "P-PL-1F-R05",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 63.976,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-PA-1F-R05",
+    "P-RP-1F-R05",
+    "P-SD-1F-R05",
+    "P-SP-1F-R05"
+   ]
+  },
+  {
+   "v3a_line": "L0132",
+   "v3a_code": "P-PA-1F-R05",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 51.84,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-PA-1F-R05",
+    "P-RP-1F-R05",
+    "P-SD-1F-R05",
+    "P-SP-1F-R05"
+   ]
+  },
+  {
+   "v3a_line": "L0133",
+   "v3a_code": "P-CB-1F-R05",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 0.0,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-BEAD-1F",
+    "P-BEAD-2F_ROOF",
+    "P-BEAD-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0134",
+   "v3a_code": "P-SD-1F-R05",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 63.976,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-PA-1F-R05",
+    "P-RP-1F-R05",
+    "P-SD-1F-R05",
+    "P-SP-1F-R05"
+   ]
+  },
+  {
+   "v3a_line": "L0135",
+   "v3a_code": "P-PL-1F-Z06",
+   "v3a_status": "PARTIAL",
+   "v3a_qty": 329.407,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-PA-1F-Z06",
+    "P-RP-1F-Z06",
+    "P-SD-1F-Z06",
+    "P-SP-1F-Z06"
+   ]
+  },
+  {
+   "v3a_line": "L0136",
+   "v3a_code": "P-PA-1F-Z06",
+   "v3a_status": "BLOCKED",
+   "v3a_qty": null,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-PA-1F-Z06",
+    "P-RP-1F-Z06",
+    "P-SD-1F-Z06",
+    "P-SP-1F-Z06"
+   ]
+  },
+  {
+   "v3a_line": "L0137",
+   "v3a_code": "P-CB-1F-Z06",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 0.0,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-BEAD-1F",
+    "P-BEAD-2F_ROOF",
+    "P-BEAD-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0138",
+   "v3a_code": "P-SD-1F-Z06",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 329.407,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-PA-1F-Z06",
+    "P-RP-1F-Z06",
+    "P-SD-1F-Z06",
+    "P-SP-1F-Z06"
+   ]
+  },
+  {
+   "v3a_line": "L0139",
+   "v3a_code": "P-PL-1F-R07",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 64.635,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "T-SD-1F-R07",
+    "T-TP-1F-R07",
+    "T-WT-1F-R07"
+   ]
+  },
+  {
+   "v3a_line": "L0140",
+   "v3a_code": "P-CB-1F-R07",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 7.6,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-BEAD-1F",
+    "P-BEAD-2F_ROOF",
+    "P-BEAD-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0141",
+   "v3a_code": "P-SD-1F-R07",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 64.635,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "T-SD-1F-R07",
+    "T-TP-1F-R07",
+    "T-WT-1F-R07"
+   ]
+  },
+  {
+   "v3a_line": "L0142",
+   "v3a_code": "P-PL-1F-R08",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 26.72,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-PA-1F-R08",
+    "P-RP-1F-R08",
+    "P-SD-1F-R08",
+    "P-SP-1F-R08"
+   ]
+  },
+  {
+   "v3a_line": "L0143",
+   "v3a_code": "P-PA-1F-R08",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 23.805,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-PA-1F-R08",
+    "P-RP-1F-R08",
+    "P-SD-1F-R08",
+    "P-SP-1F-R08"
+   ]
+  },
+  {
+   "v3a_line": "L0144",
+   "v3a_code": "P-CB-1F-R08",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 0.0,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-BEAD-1F",
+    "P-BEAD-2F_ROOF",
+    "P-BEAD-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0145",
+   "v3a_code": "P-SD-1F-R08",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 26.72,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-PA-1F-R08",
+    "P-RP-1F-R08",
+    "P-SD-1F-R08",
+    "P-SP-1F-R08"
+   ]
+  },
+  {
+   "v3a_line": "L0146",
+   "v3a_code": "P-PL-1F-R09",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 65.117,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-PA-1F-R09",
+    "P-RP-1F-R09",
+    "P-SD-1F-R09",
+    "P-SP-1F-R09"
+   ]
+  },
+  {
+   "v3a_line": "L0147",
+   "v3a_code": "P-PA-1F-R09",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 55.68,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-PA-1F-R09",
+    "P-RP-1F-R09",
+    "P-SD-1F-R09",
+    "P-SP-1F-R09"
+   ]
+  },
+  {
+   "v3a_line": "L0148",
+   "v3a_code": "P-CB-1F-R09",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 0.0,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-BEAD-1F",
+    "P-BEAD-2F_ROOF",
+    "P-BEAD-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0149",
+   "v3a_code": "P-SD-1F-R09",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 65.117,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-PA-1F-R09",
+    "P-RP-1F-R09",
+    "P-SD-1F-R09",
+    "P-SP-1F-R09"
+   ]
+  },
+  {
+   "v3a_line": "L0150",
+   "v3a_code": "P-PL-1F-R10",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 30.177,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "T-SD-1F-R10",
+    "T-TP-1F-R10",
+    "T-WT-1F-R10"
+   ]
+  },
+  {
+   "v3a_line": "L0151",
+   "v3a_code": "P-CB-1F-R10",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 0.0,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-BEAD-1F",
+    "P-BEAD-2F_ROOF",
+    "P-BEAD-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0152",
+   "v3a_code": "P-SD-1F-R10",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 30.177,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "T-SD-1F-R10",
+    "T-TP-1F-R10",
+    "T-WT-1F-R10"
+   ]
+  },
+  {
+   "v3a_line": "L0153",
+   "v3a_code": "P-PL-1F-R11",
+   "v3a_status": "PARTIAL",
+   "v3a_qty": 50.182,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-PA-1F-R11",
+    "P-RP-1F-R11",
+    "P-SD-1F-R11",
+    "P-SP-1F-R11"
+   ]
+  },
+  {
+   "v3a_line": "L0154",
+   "v3a_code": "P-PA-1F-R11",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 56.64,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-PA-1F-R11",
+    "P-RP-1F-R11",
+    "P-SD-1F-R11",
+    "P-SP-1F-R11"
+   ]
+  },
+  {
+   "v3a_line": "L0155",
+   "v3a_code": "P-CB-1F-R11",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 0.0,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-BEAD-1F",
+    "P-BEAD-2F_ROOF",
+    "P-BEAD-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0156",
+   "v3a_code": "P-SD-1F-R11",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 50.182,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-PA-1F-R11",
+    "P-RP-1F-R11",
+    "P-SD-1F-R11",
+    "P-SP-1F-R11"
+   ]
+  },
+  {
+   "v3a_line": "L0157",
+   "v3a_code": "P-PL-2F-R01",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 78.403,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-PA-2F-R01",
+    "P-RP-2F-R01",
+    "P-SD-2F-R01",
+    "P-SP-2F-R01"
+   ]
+  },
+  {
+   "v3a_line": "L0158",
+   "v3a_code": "P-PA-2F-R01",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 60.5,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-PA-2F-R01",
+    "P-RP-2F-R01",
+    "P-SD-2F-R01",
+    "P-SP-2F-R01"
+   ]
+  },
+  {
+   "v3a_line": "L0159",
+   "v3a_code": "P-CB-2F-R01",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 3.8,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-BEAD-1F",
+    "P-BEAD-2F_ROOF",
+    "P-BEAD-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0160",
+   "v3a_code": "P-SD-2F-R01",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 78.403,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-PA-2F-R01",
+    "P-RP-2F-R01",
+    "P-SD-2F-R01",
+    "P-SP-2F-R01"
+   ]
+  },
+  {
+   "v3a_line": "L0161",
+   "v3a_code": "P-PL-2F-R02",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 68.513,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-PA-2F-R02",
+    "P-RP-2F-R02",
+    "P-SD-2F-R02",
+    "P-SP-2F-R02"
+   ]
+  },
+  {
+   "v3a_line": "L0162",
+   "v3a_code": "P-PA-2F-R02",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 60.48,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-PA-2F-R02",
+    "P-RP-2F-R02",
+    "P-SD-2F-R02",
+    "P-SP-2F-R02"
+   ]
+  },
+  {
+   "v3a_line": "L0163",
+   "v3a_code": "P-CB-2F-R02",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 0.0,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-BEAD-1F",
+    "P-BEAD-2F_ROOF",
+    "P-BEAD-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0164",
+   "v3a_code": "P-SD-2F-R02",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 68.513,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-PA-2F-R02",
+    "P-RP-2F-R02",
+    "P-SD-2F-R02",
+    "P-SP-2F-R02"
+   ]
+  },
+  {
+   "v3a_line": "L0165",
+   "v3a_code": "P-PL-2F-R03",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 36.212,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "T-SD-2F-R03",
+    "T-TP-2F-R03",
+    "T-WT-2F-R03"
+   ]
+  },
+  {
+   "v3a_line": "L0166",
+   "v3a_code": "P-CB-2F-R03",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 0.0,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-BEAD-1F",
+    "P-BEAD-2F_ROOF",
+    "P-BEAD-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0167",
+   "v3a_code": "P-SD-2F-R03",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 36.212,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "T-SD-2F-R03",
+    "T-TP-2F-R03",
+    "T-WT-2F-R03"
+   ]
+  },
+  {
+   "v3a_line": "L0168",
+   "v3a_code": "P-EXT",
+   "v3a_status": "BLOCKED",
+   "v3a_qty": null,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-EXT-RP-1F",
+    "P-EXT-RP-2F",
+    "P-EXT-RP-GF",
+    "P-EXT-SD-1F",
+    "P-EXT-SD-2F",
+    "P-EXT-SD-GF",
+    "P-EXT-SIGMA-1F",
+    "P-EXT-SIGMA-2F"
+   ]
+  },
+  {
+   "v3a_line": "L0169",
+   "v3a_code": "P-REVEAL",
+   "v3a_status": "BLOCKED",
+   "v3a_qty": null,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "P-DOOR_REVEAL-1F",
+    "P-DOOR_REVEAL-2F_ROOF",
+    "P-DOOR_REVEAL-GF",
+    "P-WINDOW_REVEAL-1F",
+    "P-WINDOW_REVEAL-2F_ROOF",
+    "P-WINDOW_REVEAL-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0170",
+   "v3a_code": "F-FL-GF-R02",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 3.132,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "F-FL-GF-R02"
+   ]
+  },
+  {
+   "v3a_line": "L0171",
+   "v3a_code": "F-FL-GF-R03",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 2.368,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "F-FL-GF-R03"
+   ]
+  },
+  {
+   "v3a_line": "L0172",
+   "v3a_code": "F-FL-GF-Z04",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 155.655,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "F-FL-GF-Z04"
+   ]
+  },
+  {
+   "v3a_line": "L0173",
+   "v3a_code": "F-SK-GF-Z04",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 87.368,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "F-SK-GF-Z04"
+   ]
+  },
+  {
+   "v3a_line": "L0174",
+   "v3a_code": "F-FL-GF-R05",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 3.718,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "F-FL-GF-R05"
+   ]
+  },
+  {
+   "v3a_line": "L0175",
+   "v3a_code": "F-FL-GF-Z06",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 24.94,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "F-FL-GF-Z06"
+   ]
+  },
+  {
+   "v3a_line": "L0176",
+   "v3a_code": "F-SK-GF-Z06",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 14.217,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "F-SK-GF-Z06"
+   ]
+  },
+  {
+   "v3a_line": "L0177",
+   "v3a_code": "F-FL-GF-R07",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 9.63,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "F-FL-GF-R07"
+   ]
+  },
+  {
+   "v3a_line": "L0178",
+   "v3a_code": "F-FL-GF-R09",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 2.675,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "F-FL-GF-R09"
+   ]
+  },
+  {
+   "v3a_line": "L0179",
+   "v3a_code": "F-FL-GF-R10",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 1.95,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "F-FL-GF-R10"
+   ]
+  },
+  {
+   "v3a_line": "L0180",
+   "v3a_code": "F-FL-GF-R12",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 14.64,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "F-FL-GF-R12"
+   ]
+  },
+  {
+   "v3a_line": "L0181",
+   "v3a_code": "F-SK-GF-R12",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 18.3,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "F-SK-GF-R12"
+   ]
+  },
+  {
+   "v3a_line": "L0182",
+   "v3a_code": "F-FL-GF-R13",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 2.362,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "F-FL-GF-R13"
+   ]
+  },
+  {
+   "v3a_line": "L0183",
+   "v3a_code": "F-FL-GF-R14",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 16.55,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "F-FL-GF-R14"
+   ]
+  },
+  {
+   "v3a_line": "L0184",
+   "v3a_code": "F-SK-GF-R14",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 14.633,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "F-SK-GF-R14"
+   ]
+  },
+  {
+   "v3a_line": "L0185",
+   "v3a_code": "F-FL-GF-R15",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 3.375,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "F-FL-GF-R15"
+   ]
+  },
+  {
+   "v3a_line": "L0186",
+   "v3a_code": "F-FL-1F-R01",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 5.022,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "F-FL-1F-R01"
+   ]
+  },
+  {
+   "v3a_line": "L0187",
+   "v3a_code": "F-FL-1F-R03",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 19.017,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "F-FL-1F-R03"
+   ]
+  },
+  {
+   "v3a_line": "L0188",
+   "v3a_code": "F-SK-1F-R03",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 17.161,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "F-SK-1F-R03"
+   ]
+  },
+  {
+   "v3a_line": "L0189",
+   "v3a_code": "F-FL-1F-R04",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 4.725,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "F-FL-1F-R04"
+   ]
+  },
+  {
+   "v3a_line": "L0190",
+   "v3a_code": "F-FL-1F-R05",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 16.34,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "F-FL-1F-R05"
+   ]
+  },
+  {
+   "v3a_line": "L0191",
+   "v3a_code": "F-SK-1F-R05",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 14.3,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "F-SK-1F-R05"
+   ]
+  },
+  {
+   "v3a_line": "L0192",
+   "v3a_code": "F-FL-1F-Z06",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 63.661,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "F-FL-1F-Z06"
+   ]
+  },
+  {
+   "v3a_line": "L0193",
+   "v3a_code": "F-SK-1F-Z06",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 80.823,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "F-SK-1F-Z06"
+   ]
+  },
+  {
+   "v3a_line": "L0194",
+   "v3a_code": "F-FL-1F-R07",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 10.151,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "F-FL-1F-R07"
+   ]
+  },
+  {
+   "v3a_line": "L0195",
+   "v3a_code": "F-FL-1F-R08",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 2.97,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "F-FL-1F-R08"
+   ]
+  },
+  {
+   "v3a_line": "L0196",
+   "v3a_code": "F-SK-1F-R08",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 5.1,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "F-SK-1F-R08"
+   ]
+  },
+  {
+   "v3a_line": "L0197",
+   "v3a_code": "F-FL-1F-R09",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 18.215,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "F-FL-1F-R09"
+   ]
+  },
+  {
+   "v3a_line": "L0198",
+   "v3a_code": "F-SK-1F-R09",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 14.048,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "F-SK-1F-R09"
+   ]
+  },
+  {
+   "v3a_line": "L0199",
+   "v3a_code": "F-FL-1F-R10",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 3.578,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "F-FL-1F-R10"
+   ]
+  },
+  {
+   "v3a_line": "L0200",
+   "v3a_code": "F-FL-1F-R11",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 19.05,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "F-FL-1F-R11"
+   ]
+  },
+  {
+   "v3a_line": "L0201",
+   "v3a_code": "F-SK-1F-R11",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 13.45,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "F-SK-1F-R11"
+   ]
+  },
+  {
+   "v3a_line": "L0202",
+   "v3a_code": "F-FL-2F-R01",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 18.6,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "F-FL-2F-R01"
+   ]
+  },
+  {
+   "v3a_line": "L0203",
+   "v3a_code": "F-SK-2F-R01",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 16.9,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "F-SK-2F-R01"
+   ]
+  },
+  {
+   "v3a_line": "L0204",
+   "v3a_code": "F-FL-2F-R02",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 19.35,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "F-FL-2F-R02"
+   ]
+  },
+  {
+   "v3a_line": "L0205",
+   "v3a_code": "F-SK-2F-R02",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 16.0,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "F-SK-2F-R02"
+   ]
+  },
+  {
+   "v3a_line": "L0206",
+   "v3a_code": "F-FL-2F-R03",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 5.55,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "F-FL-2F-R03"
+   ]
+  },
+  {
+   "v3a_line": "L0207",
+   "v3a_code": "F-TH-GF-T08",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 0.4,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "F-TH-GF-T08"
+   ]
+  },
+  {
+   "v3a_line": "L0208",
+   "v3a_code": "F-TH-GF-T11",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 0.12,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "F-TH-GF-T11"
+   ]
+  },
+  {
+   "v3a_line": "L0209",
+   "v3a_code": "F-STAIR",
+   "v3a_status": "BLOCKED",
+   "v3a_qty": null,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "F-STAIR"
+   ]
+  },
+  {
+   "v3a_line": "L0210",
+   "v3a_code": "F-COURT",
+   "v3a_status": "BLOCKED",
+   "v3a_qty": null,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "F-COURT"
+   ]
+  },
+  {
+   "v3a_line": "L0211",
+   "v3a_code": "CE-GF-R02",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 3.132,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "CE-GF-R02"
+   ]
+  },
+  {
+   "v3a_line": "L0212",
+   "v3a_code": "CE-CO-GF-R02",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 7.2,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "CE-CO-GF-R02"
+   ]
+  },
+  {
+   "v3a_line": "L0213",
+   "v3a_code": "CE-GF-R03",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 2.368,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "CE-GF-R03"
+   ]
+  },
+  {
+   "v3a_line": "L0214",
+   "v3a_code": "CE-CO-GF-R03",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 6.81,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "CE-CO-GF-R03"
+   ]
+  },
+  {
+   "v3a_line": "L0215",
+   "v3a_code": "CE-GF-Z04",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 139.65,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "CE-GF-Z04"
+   ]
+  },
+  {
+   "v3a_line": "L0216",
+   "v3a_code": "CE-CO-GF-Z04",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 112.303,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "CE-CO-GF-Z04"
+   ]
+  },
+  {
+   "v3a_line": "L0217",
+   "v3a_code": "CE-GF-R05",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 3.718,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "CE-GF-R05"
+   ]
+  },
+  {
+   "v3a_line": "L0218",
+   "v3a_code": "CE-CO-GF-R05",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 7.625,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "CE-CO-GF-R05"
+   ]
+  },
+  {
+   "v3a_line": "L0219",
+   "v3a_code": "CE-GF-Z06",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 24.94,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "CE-GF-Z06"
+   ]
+  },
+  {
+   "v3a_line": "L0220",
+   "v3a_code": "CE-CO-GF-Z06",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 20.127,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "CE-CO-GF-Z06"
+   ]
+  },
+  {
+   "v3a_line": "L0221",
+   "v3a_code": "CE-GF-R07",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 9.63,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "CE-GF-R07"
+   ]
+  },
+  {
+   "v3a_line": "L0222",
+   "v3a_code": "CE-CO-GF-R07",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 14.5,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "CE-CO-GF-R07"
+   ]
+  },
+  {
+   "v3a_line": "L0223",
+   "v3a_code": "CE-GF-R09",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 2.675,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "CE-GF-R09"
+   ]
+  },
+  {
+   "v3a_line": "L0224",
+   "v3a_code": "CE-CO-GF-R09",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 7.414,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "CE-CO-GF-R09"
+   ]
+  },
+  {
+   "v3a_line": "L0225",
+   "v3a_code": "CE-GF-R10",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 1.95,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "CE-GF-R10"
+   ]
+  },
+  {
+   "v3a_line": "L0226",
+   "v3a_code": "CE-CO-GF-R10",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 5.6,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "CE-CO-GF-R10"
+   ]
+  },
+  {
+   "v3a_line": "L0227",
+   "v3a_code": "CE-GF-R12",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 14.64,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "CE-GF-R12"
+   ]
+  },
+  {
+   "v3a_line": "L0228",
+   "v3a_code": "CE-CO-GF-R12",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 22.197,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "CE-CO-GF-R12"
+   ]
+  },
+  {
+   "v3a_line": "L0229",
+   "v3a_code": "CE-GF-R13",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 2.362,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "CE-GF-R13"
+   ]
+  },
+  {
+   "v3a_line": "L0230",
+   "v3a_code": "CE-CO-GF-R13",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 6.2,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "CE-CO-GF-R13"
+   ]
+  },
+  {
+   "v3a_line": "L0231",
+   "v3a_code": "CE-GF-R14",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 16.55,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "CE-GF-R14"
+   ]
+  },
+  {
+   "v3a_line": "L0232",
+   "v3a_code": "CE-CO-GF-R14",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 21.533,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "CE-CO-GF-R14"
+   ]
+  },
+  {
+   "v3a_line": "L0233",
+   "v3a_code": "CE-GF-R15",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 3.375,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "CE-GF-R15"
+   ]
+  },
+  {
+   "v3a_line": "L0234",
+   "v3a_code": "CE-CO-GF-R15",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 7.5,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "CE-CO-GF-R15"
+   ]
+  },
+  {
+   "v3a_line": "L0235",
+   "v3a_code": "CE-1F-R01",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 5.022,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "CE-1F-R01"
+   ]
+  },
+  {
+   "v3a_line": "L0236",
+   "v3a_code": "CE-CO-1F-R01",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 9.0,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "CE-CO-1F-R01"
+   ]
+  },
+  {
+   "v3a_line": "L0237",
+   "v3a_code": "CE-1F-R03",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 19.017,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "CE-1F-R03"
+   ]
+  },
+  {
+   "v3a_line": "L0238",
+   "v3a_code": "CE-CO-1F-R03",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 22.15,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "CE-CO-1F-R03"
+   ]
+  },
+  {
+   "v3a_line": "L0239",
+   "v3a_code": "CE-1F-R04",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 4.725,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "CE-1F-R04"
+   ]
+  },
+  {
+   "v3a_line": "L0240",
+   "v3a_code": "CE-CO-1F-R04",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 8.7,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "CE-CO-1F-R04"
+   ]
+  },
+  {
+   "v3a_line": "L0241",
+   "v3a_code": "CE-1F-R05",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 16.34,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "CE-1F-R05"
+   ]
+  },
+  {
+   "v3a_line": "L0242",
+   "v3a_code": "CE-CO-1F-R05",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 16.2,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "CE-CO-1F-R05"
+   ]
+  },
+  {
+   "v3a_line": "L0243",
+   "v3a_code": "CE-1F-Z06",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 79.666,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "CE-1F-Z06"
+   ]
+  },
+  {
+   "v3a_line": "L0244",
+   "v3a_code": "CE-CO-1F-Z06",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 98.778,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "CE-CO-1F-Z06"
+   ]
+  },
+  {
+   "v3a_line": "L0245",
+   "v3a_code": "CE-1F-R07",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 10.151,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "CE-1F-R07"
+   ]
+  },
+  {
+   "v3a_line": "L0246",
+   "v3a_code": "CE-CO-1F-R07",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 16.94,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "CE-CO-1F-R07"
+   ]
+  },
+  {
+   "v3a_line": "L0247",
+   "v3a_code": "CE-1F-R08",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 2.97,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "CE-1F-R08"
+   ]
+  },
+  {
+   "v3a_line": "L0248",
+   "v3a_code": "CE-CO-1F-R08",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 6.9,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "CE-CO-1F-R08"
+   ]
+  },
+  {
+   "v3a_line": "L0249",
+   "v3a_code": "CE-1F-R09",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 18.215,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "CE-1F-R09"
+   ]
+  },
+  {
+   "v3a_line": "L0250",
+   "v3a_code": "CE-CO-1F-R09",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 17.4,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "CE-CO-1F-R09"
+   ]
+  },
+  {
+   "v3a_line": "L0251",
+   "v3a_code": "CE-1F-R10",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 3.578,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "CE-1F-R10"
+   ]
+  },
+  {
+   "v3a_line": "L0252",
+   "v3a_code": "CE-CO-1F-R10",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 7.6,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "CE-CO-1F-R10"
+   ]
+  },
+  {
+   "v3a_line": "L0253",
+   "v3a_code": "CE-1F-R11",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 19.05,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "CE-1F-R11"
+   ]
+  },
+  {
+   "v3a_line": "L0254",
+   "v3a_code": "CE-CO-1F-R11",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 17.7,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "CE-CO-1F-R11"
+   ]
+  },
+  {
+   "v3a_line": "L0255",
+   "v3a_code": "CE-2F-R01",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 18.6,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "CE-2F-R01"
+   ]
+  },
+  {
+   "v3a_line": "L0256",
+   "v3a_code": "CE-CO-2F-R01",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 22.0,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "CE-CO-2F-R01"
+   ]
+  },
+  {
+   "v3a_line": "L0257",
+   "v3a_code": "CE-2F-R02",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 19.35,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "CE-2F-R02"
+   ]
+  },
+  {
+   "v3a_line": "L0258",
+   "v3a_code": "CE-CO-2F-R02",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 18.9,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "CE-CO-2F-R02"
+   ]
+  },
+  {
+   "v3a_line": "L0259",
+   "v3a_code": "CE-2F-R03",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 5.55,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "CE-2F-R03"
+   ]
+  },
+  {
+   "v3a_line": "L0260",
+   "v3a_code": "CE-CO-2F-R03",
+   "v3a_status": "REVIEW",
+   "v3a_qty": 9.7,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "CE-CO-2F-R03"
+   ]
+  },
+  {
+   "v3a_line": "L0261",
+   "v3a_code": "CE-DECOR",
+   "v3a_status": "NOT_IN_SOURCE",
+   "v3a_qty": null,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "CE-DECOR"
+   ]
+  },
+  {
+   "v3a_line": "L0262",
+   "v3a_code": "T-WT-GF-R02",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 25.2,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "T-SD-GF-R02",
+    "T-TP-GF-R02",
+    "T-WT-GF-R02"
+   ]
+  },
+  {
+   "v3a_line": "L0263",
+   "v3a_code": "T-WP-GF-R02",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 3.942,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "T-WP-FLOOR-GF-R02",
+    "T-WP-UPTURN-H-GF-R02",
+    "T-WP-UPTURN-LM-GF-R02",
+    "T-WP-UPTURN-M2-GF-R02"
+   ]
+  },
+  {
+   "v3a_line": "L0264",
+   "v3a_code": "T-WT-GF-R03",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 23.834,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "T-SD-GF-R03",
+    "T-TP-GF-R03",
+    "T-WT-GF-R03"
+   ]
+  },
+  {
+   "v3a_line": "L0265",
+   "v3a_code": "T-WP-GF-R03",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 3.175,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "T-WP-FLOOR-GF-R03",
+    "T-WP-UPTURN-H-GF-R03",
+    "T-WP-UPTURN-LM-GF-R03",
+    "T-WP-UPTURN-M2-GF-R03"
+   ]
+  },
+  {
+   "v3a_line": "L0266",
+   "v3a_code": "T-WT-GF-R05",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 28.592,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "T-SD-GF-R05",
+    "T-TP-GF-R05",
+    "T-WT-GF-R05"
+   ]
+  },
+  {
+   "v3a_line": "L0267",
+   "v3a_code": "T-WP-GF-R05",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 4.651,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "T-WP-FLOOR-GF-R05",
+    "T-WP-UPTURN-H-GF-R05",
+    "T-WP-UPTURN-LM-GF-R05",
+    "T-WP-UPTURN-M2-GF-R05"
+   ]
+  },
+  {
+   "v3a_line": "L0268",
+   "v3a_code": "T-WT-GF-R07",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 50.75,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "T-SD-GF-R07",
+    "T-TP-GF-R07",
+    "T-WT-GF-R07"
+   ]
+  },
+  {
+   "v3a_line": "L0269",
+   "v3a_code": "T-WP-GF-R07",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 11.43,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "T-WP-FLOOR-GF-R07",
+    "T-WP-UPTURN-H-GF-R07",
+    "T-WP-UPTURN-LM-GF-R07",
+    "T-WP-UPTURN-M2-GF-R07"
+   ]
+  },
+  {
+   "v3a_line": "L0270",
+   "v3a_code": "T-WT-GF-R09",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 28.544,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "T-SD-GF-R09",
+    "T-TP-GF-R09",
+    "T-WT-GF-R09"
+   ]
+  },
+  {
+   "v3a_line": "L0271",
+   "v3a_code": "T-WP-GF-R09",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 3.667,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "T-WP-FLOOR-GF-R09",
+    "T-WP-UPTURN-H-GF-R09",
+    "T-WP-UPTURN-LM-GF-R09",
+    "T-WP-UPTURN-M2-GF-R09"
+   ]
+  },
+  {
+   "v3a_line": "L0272",
+   "v3a_code": "T-WT-GF-R10",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 19.6,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "T-SD-GF-R10",
+    "T-TP-GF-R10",
+    "T-WT-GF-R10"
+   ]
+  },
+  {
+   "v3a_line": "L0273",
+   "v3a_code": "T-WP-GF-R10",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 2.67,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "T-WP-FLOOR-GF-R10",
+    "T-WP-UPTURN-H-GF-R10",
+    "T-WP-UPTURN-LM-GF-R10",
+    "T-WP-UPTURN-M2-GF-R10"
+   ]
+  },
+  {
+   "v3a_line": "L0274",
+   "v3a_code": "T-WT-GF-R13",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 23.87,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "T-SD-GF-R13",
+    "T-TP-GF-R13",
+    "T-WT-GF-R13"
+   ]
+  },
+  {
+   "v3a_line": "L0275",
+   "v3a_code": "T-WP-GF-R13",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 3.083,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "T-WP-FLOOR-GF-R13",
+    "T-WP-UPTURN-H-GF-R13",
+    "T-WP-UPTURN-LM-GF-R13",
+    "T-WP-UPTURN-M2-GF-R13"
+   ]
+  },
+  {
+   "v3a_line": "L0276",
+   "v3a_code": "T-WT-GF-R15",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 26.25,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "T-SD-GF-R15",
+    "T-TP-GF-R15",
+    "T-WT-GF-R15"
+   ]
+  },
+  {
+   "v3a_line": "L0277",
+   "v3a_code": "T-WP-GF-R15",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 4.38,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "T-WP-FLOOR-GF-R15",
+    "T-WP-UPTURN-H-GF-R15",
+    "T-WP-UPTURN-LM-GF-R15",
+    "T-WP-UPTURN-M2-GF-R15"
+   ]
+  },
+  {
+   "v3a_line": "L0278",
+   "v3a_code": "T-WT-1F-R01",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 31.05,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "T-SD-1F-R01",
+    "T-TP-1F-R01",
+    "T-WT-1F-R01"
+   ]
+  },
+  {
+   "v3a_line": "L0279",
+   "v3a_code": "T-WP-1F-R01",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 6.162,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "T-WP-FLOOR-1F-R01",
+    "T-WP-UPTURN-H-1F-R01",
+    "T-WP-UPTURN-LM-1F-R01",
+    "T-WP-UPTURN-M2-1F-R01"
+   ]
+  },
+  {
+   "v3a_line": "L0280",
+   "v3a_code": "T-WT-1F-R04",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 27.84,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "T-SD-1F-R04",
+    "T-TP-1F-R04",
+    "T-WT-1F-R04"
+   ]
+  },
+  {
+   "v3a_line": "L0281",
+   "v3a_code": "T-WP-1F-R04",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 5.835,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "T-WP-FLOOR-1F-R04",
+    "T-WP-UPTURN-H-1F-R04",
+    "T-WP-UPTURN-LM-1F-R04",
+    "T-WP-UPTURN-M2-1F-R04"
+   ]
+  },
+  {
+   "v3a_line": "L0282",
+   "v3a_code": "T-WT-1F-R07",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 54.208,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "T-SD-1F-R07",
+    "T-TP-1F-R07",
+    "T-WT-1F-R07"
+   ]
+  },
+  {
+   "v3a_line": "L0283",
+   "v3a_code": "T-WP-1F-R07",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 12.347,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "T-WP-FLOOR-1F-R07",
+    "T-WP-UPTURN-H-1F-R07",
+    "T-WP-UPTURN-LM-1F-R07",
+    "T-WP-UPTURN-M2-1F-R07"
+   ]
+  },
+  {
+   "v3a_line": "L0284",
+   "v3a_code": "T-WT-1F-R10",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 26.22,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "T-SD-1F-R10",
+    "T-TP-1F-R10",
+    "T-WT-1F-R10"
+   ]
+  },
+  {
+   "v3a_line": "L0285",
+   "v3a_code": "T-WP-1F-R10",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 4.508,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "T-WP-FLOOR-1F-R10",
+    "T-WP-UPTURN-H-1F-R10",
+    "T-WP-UPTURN-LM-1F-R10",
+    "T-WP-UPTURN-M2-1F-R10"
+   ]
+  },
+  {
+   "v3a_line": "L0286",
+   "v3a_code": "T-WT-2F-R03",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 31.04,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "T-SD-2F-R03",
+    "T-TP-2F-R03",
+    "T-WT-2F-R03"
+   ]
+  },
+  {
+   "v3a_line": "L0287",
+   "v3a_code": "T-WP-2F-R03",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 6.795,
+   "fate": "SUPERSEDED",
+   "v3b_codes": [
+    "T-WP-FLOOR-2F-R03",
+    "T-WP-UPTURN-H-2F-R03",
+    "T-WP-UPTURN-LM-2F-R03",
+    "T-WP-UPTURN-M2-2F-R03"
+   ]
+  },
+  {
+   "v3a_line": "L0288",
+   "v3a_code": "T-RWP-2F",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 61.613,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "T-RWP-2F"
+   ]
+  },
+  {
+   "v3a_line": "L0289",
+   "v3a_code": "T-RWP-1F",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 176.209,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "T-RWP-1F"
+   ]
+  },
+  {
+   "v3a_line": "L0290",
+   "v3a_code": "T-RWP-GF",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 126.209,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "T-RWP-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0291",
+   "v3a_code": "T-FWP-FTG",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 222.93,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "T-FWP-FTG"
+   ]
+  },
+  {
+   "v3a_line": "L0292",
+   "v3a_code": "T-FWP-GB",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 74.969,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "T-FWP-GB"
+   ]
+  },
+  {
+   "v3a_line": "L0293",
+   "v3a_code": "T-FMEM",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 152.13,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "T-FMEM"
+   ]
+  },
+  {
+   "v3a_line": "L0294",
+   "v3a_code": "O-DOO-GF",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 13.0,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "O-DOO-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0295",
+   "v3a_code": "O-DOO-GF-W",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 10.725,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "O-DOO-GF-W"
+   ]
+  },
+  {
+   "v3a_line": "L0296",
+   "v3a_code": "O-DOO-GF-A",
+   "v3a_status": "BLOCKED",
+   "v3a_qty": null,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "O-DOO-GF-A"
+   ]
+  },
+  {
+   "v3a_line": "L0297",
+   "v3a_code": "O-DOU-GF",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 1.0,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "O-DOU-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0298",
+   "v3a_code": "O-DOU-GF-W",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 2.0,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "O-DOU-GF-W"
+   ]
+  },
+  {
+   "v3a_line": "L0299",
+   "v3a_code": "O-DOU-GF-A",
+   "v3a_status": "BLOCKED",
+   "v3a_qty": null,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "O-DOU-GF-A"
+   ]
+  },
+  {
+   "v3a_line": "L0300",
+   "v3a_code": "O-WIN-GF",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 16.0,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "O-WIN-GF"
+   ]
+  },
+  {
+   "v3a_line": "L0301",
+   "v3a_code": "O-WIN-GF-W",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 23.042,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "O-WIN-GF-W"
+   ]
+  },
+  {
+   "v3a_line": "L0302",
+   "v3a_code": "O-WIN-GF-A",
+   "v3a_status": "BLOCKED",
+   "v3a_qty": null,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "O-WIN-GF-A"
+   ]
+  },
+  {
+   "v3a_line": "L0303",
+   "v3a_code": "O-DOO-1F",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 10.0,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "O-DOO-1F"
+   ]
+  },
+  {
+   "v3a_line": "L0304",
+   "v3a_code": "O-DOO-1F-W",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 8.7,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "O-DOO-1F-W"
+   ]
+  },
+  {
+   "v3a_line": "L0305",
+   "v3a_code": "O-DOO-1F-A",
+   "v3a_status": "BLOCKED",
+   "v3a_qty": null,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "O-DOO-1F-A"
+   ]
+  },
+  {
+   "v3a_line": "L0306",
+   "v3a_code": "O-WIN-1F",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 12.0,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "O-WIN-1F"
+   ]
+  },
+  {
+   "v3a_line": "L0307",
+   "v3a_code": "O-WIN-1F-W",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 13.606,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "O-WIN-1F-W"
+   ]
+  },
+  {
+   "v3a_line": "L0308",
+   "v3a_code": "O-WIN-1F-A",
+   "v3a_status": "BLOCKED",
+   "v3a_qty": null,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "O-WIN-1F-A"
+   ]
+  },
+  {
+   "v3a_line": "L0309",
+   "v3a_code": "O-DOO-2F",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 3.0,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "O-DOO-2F"
+   ]
+  },
+  {
+   "v3a_line": "L0310",
+   "v3a_code": "O-DOO-2F-W",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 2.7,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "O-DOO-2F-W"
+   ]
+  },
+  {
+   "v3a_line": "L0311",
+   "v3a_code": "O-DOO-2F-A",
+   "v3a_status": "BLOCKED",
+   "v3a_qty": null,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "O-DOO-2F-A"
+   ]
+  },
+  {
+   "v3a_line": "L0312",
+   "v3a_code": "O-WIN-2F",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 5.0,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "O-WIN-2F"
+   ]
+  },
+  {
+   "v3a_line": "L0313",
+   "v3a_code": "O-WIN-2F-W",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 5.0,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "O-WIN-2F-W"
+   ]
+  },
+  {
+   "v3a_line": "L0314",
+   "v3a_code": "O-WIN-2F-A",
+   "v3a_status": "BLOCKED",
+   "v3a_qty": null,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "O-WIN-2F-A"
+   ]
+  },
+  {
+   "v3a_line": "L0315",
+   "v3a_code": "O-SALON",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 23.104,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "O-SALON"
+   ]
+  },
+  {
+   "v3a_line": "L0316",
+   "v3a_code": "O-CURVED-L",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 6.725,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "O-CURVED-L"
+   ]
+  },
+  {
+   "v3a_line": "L0317",
+   "v3a_code": "O-CURVED-A",
+   "v3a_status": "BLOCKED",
+   "v3a_qty": null,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "O-CURVED-A"
+   ]
+  },
+  {
+   "v3a_line": "L0318",
+   "v3a_code": "S-RL-1F-V01",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 14.29,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "S-RL-1F-V01"
+   ]
+  },
+  {
+   "v3a_line": "L0319",
+   "v3a_code": "S-GOING",
+   "v3a_status": "COMPUTED",
+   "v3a_qty": 0.3,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "S-GOING"
+   ]
+  },
+  {
+   "v3a_line": "L0320",
+   "v3a_code": "S-RAIL",
+   "v3a_status": "BLOCKED",
+   "v3a_qty": null,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "S-RAIL"
+   ]
+  },
+  {
+   "v3a_line": "L0321",
+   "v3a_code": "S-TREAD",
+   "v3a_status": "BLOCKED",
+   "v3a_qty": null,
+   "fate": "CARRIED",
+   "v3b_codes": [
+    "S-TREAD"
+   ]
+  }
+ ]
+}

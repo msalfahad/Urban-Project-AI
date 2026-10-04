@@ -1,0 +1,18 @@
+{
+ "SCHEMA": "URBAN_V3_QORTUBA_SHADOW_V1",
+ "project_state": "RC1_REFERENCE (frozen; nothing edited)",
+ "text_roles_v3_identical_sites": true,
+ "v3_two_pass_identical_sites": true,
+ "frozen_sites": 72,
+ "v3_sites": 72,
+ "only_frozen": [],
+ "only_v3": [],
+ "opening_completion": {
+  "doors": {},
+  "wall_gap_records": [],
+  "drafting_gaps": 0,
+  "closures": []
+ },
+ "state": "UNCHANGED",
+ "rule": "Qortuba is RC1_REFERENCE: a V3 change is reported here and explained, never applied to Qortuba"
+}
