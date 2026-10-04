@@ -54,13 +54,17 @@ def _fmt(v):
     return None if v is None else round(v, 3)
 
 
+def _short(text, n=110):
+    text = " ".join((text or "").split())
+    return text if len(text) <= n else text[:n - 1].rstrip() + "…"
+
+
 def final_report(model, regdir) -> dict:
     r = Path(regdir)
     rooms = jl(r / "ROOM_REGISTER_V3.json")
     topo = jl(r / "V3_TOPOLOGY_REGISTER.json")
     trades = {t[1]: (t[0], t[2]) for t in model["trades"]}
-    pages = [{"cover": True, "blocks": [{"p": META["project"] + " | " + META["phase"]},
-                                         {"p": "Quantities from the frozen Urban engine; formulas only for subtotals, totals "
+    pages = [{"cover": True, "blocks": [{"p": "Quantities from the frozen Urban engine; formulas only for subtotals, totals "
                                                "and reconciliation. No benchmark calibration. No pricing."}]}]
     skim = owner_actions(model)
     pages.append({"title_en": "OWNER ACTIONS + QUICK SKIM", "title_ar": "إجراءات المالك وملخص سريع",
@@ -70,7 +74,8 @@ def final_report(model, regdir) -> dict:
         if m["trade"] != cur:
             cur = m["trade"]
             mrows.append({"group": f"{trades[cur][0]} {cur.replace('_', ' ')}  |  {trades[cur][1]}"})
-        mrows.append([m["item"], m["item_ar"], m["unit"]] + [_fmt(m[lv]) for lv in model["levels"]] + [_fmt(m["total"]), m["status"]])
+        mrows.append([m["item"], m["item_ar"], m["unit"]] + [_fmt(m[lv]) or "-" for lv in model["levels"]] +
+                     [_fmt(m["total"]) or "-", m["status"]])
     pages.append({"title_en": "MASTER SUMMARY - TRADE x LEVEL", "title_ar": "الملخص العام",
                   "blocks": [{"table": {"head": ["ITEM", "البند", "UNIT", "GF", "1F", "2F + ROOF", "OTHER + EXT", "TOTAL", "STATUS"],
                                         "rows": mrows, "num": [3, 4, 5, 6, 7], "status": 8, "ar": [1]}},
@@ -93,20 +98,19 @@ def final_report(model, regdir) -> dict:
                                         "num": [5], "ar": [3], "status": 6}}]})
     for code, t, ar, _ in model["trades"]:
         xs = [x for x in model["lines"] if x["trade"] == t]
+        rows = []
         for lv in model["levels"]:
             ys = [x for x in xs if x["level"] == lv]
             if not ys:
                 continue
             en, lar = model["level_names"][lv]
-            rows, g = [], None
-            for x in ys:
-                if x["group"] != g:
-                    g = x["group"]
-                    rows.append({"group": g})
-                rows.append([x["code"], x["desc_en"], x["desc_ar"], x["formula"][:160], x["unit"], _fmt(x["qty"]), x["status"]])
-            pages.append({"title_en": f"{code} {t.replace('_', ' ')} - {en}", "title_ar": f"{ar} - {lar}",
-                          "blocks": [{"table": {"head": ["CODE", "DESCRIPTION", "الوصف", "CALCULATION / REASON", "UNIT", "QTY", "STATUS"],
-                                                "rows": rows, "num": [5], "ar": [2], "status": 6}}]})
+            rows.append({"group": f"{en}  |  {lar}"})
+            rows += [[x["group"], x["code"], x["desc_en"], x["desc_ar"], _short(x["formula"]), x["unit"], _fmt(x["qty"]),
+                      x["status"]] for x in ys]
+        pages.append({"title_en": f"{code} {t.replace('_', ' ')} - BY LEVEL", "title_ar": ar,
+                      "blocks": [{"table": {"head": ["GROUP", "CODE", "DESCRIPTION", "الوصف", "CALCULATION / REASON", "UNIT", "QTY",
+                                                     "STATUS"], "rows": rows, "num": [6], "ar": [3], "status": 7}},
+                                 {"p": "Full calculation text, inputs and source trace: workbook " + code + " (DETAIL and TRACE sheets)."}]})
     pages.append({"title_en": "FINAL BLOCKERS", "title_ar": "المعوقات",
                   "blocks": [{"table": {"head": ["ID", "AREA", "BLOCKER", "LINES", "CLASS", "WHY"],
                                         "rows": [[b["id"], b["area"], b["blocker"], b["lines"], b["class"], b["why"]]

@@ -27,7 +27,8 @@ INPUT_FILL = "FFF9C4"
 FONT = "Arial"
 CREATED = datetime(2026, 10, 4)
 FIXED_ZIP_TIME = (1980, 1, 1, 0, 0, 0)
-QTY_FMT = {"m3": "#,##0.000", "m2": "#,##0.00", "lm": "#,##0.00", "m": "#,##0.000", "nr": "#,##0", "kg": "#,##0.0"}
+QTY_FMT = {u: f'{f};-{f};"-"' for u, f in                   # zero shows as "-" (QS convention; nothing measured there)
+           {"m3": "#,##0.000", "m2": "#,##0.00", "lm": "#,##0.00", "m": "#,##0.000", "nr": "#,##0", "kg": "#,##0.0"}.items()}
 THIN = Side(style="thin", color=GRID)
 THICK = Side(style="thick", color=NAVY)
 
@@ -78,6 +79,8 @@ class Book:
         if sub:
             ws.merge_cells(start_row=r, start_column=1, end_row=r, end_column=ws._ncol)
             c = ws.cell(r, 1, sub)
+            if isinstance(c.value, str) and c.value.startswith("="):
+                c.data_type = "s"
             c.font = Font(name=FONT, italic=True, size=9, color="333333")
             c.alignment = Alignment(horizontal="center", wrap_text=True)
             ws.row_dimensions[r].height = 28
@@ -106,6 +109,8 @@ class Book:
         r = ws._row
         ws.merge_cells(start_row=r, start_column=1, end_row=r, end_column=ws._ncol)
         c = ws.cell(r, 1, text)
+        if isinstance(c.value, str) and c.value.startswith("="):
+            c.data_type = "s"
         c.font = Font(name=FONT, bold=True, size=size, color=WHITE)
         c.fill = _fill(color)
         c.alignment = Alignment(horizontal="left", vertical="center", indent=1)
@@ -133,6 +138,8 @@ class Book:
                 self.cell_map.append({"sheet": ws.title, "cell": c.coordinate, "kind": "input", "expected": v["input"]})
             else:
                 c.value = v
+                if isinstance(v, str) and v.startswith("="):
+                    c.data_type = "s"                   # descriptive text such as "= plastered surface" is not a formula
                 if kinds and i - 1 < len(kinds) and kinds[i - 1] == "qty" and v is not None:
                     kind = "value"
                     self.cell_map.append({"sheet": ws.title, "cell": c.coordinate, "kind": "value", "expected": v})
@@ -173,6 +180,8 @@ class Book:
         r = ws._row
         ws.merge_cells(start_row=r, start_column=1, end_row=r, end_column=ws._ncol)
         c = ws.cell(r, 1, text)
+        if isinstance(c.value, str) and c.value.startswith("="):
+            c.data_type = "s"
         c.font = Font(name=FONT, size=8, italic=italic, color="444444")
         c.alignment = Alignment(wrap_text=True, vertical="top")
         ws.row_dimensions[r].height = max(14, 12 * (1 + len(text) // 160))

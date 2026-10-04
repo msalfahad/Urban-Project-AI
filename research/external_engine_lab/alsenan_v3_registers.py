@@ -450,7 +450,8 @@ def matrix(boq) -> dict:
         v = m[k]
         rows.append({"trade": t, "item": srow, "item_ar": ar[k], "unit": u, **{lv: _r(v.get(lv, 0.0)) for lv in LEVELS},
                      "total": _r(sum(v.values())), "statuses": sorted(st[k]),
-                     "status": "BLOCKED" if not v else ("PARTIAL" if st[k] - {"COMPUTED"} else "COMPUTED")})
+                     "status": ("REVIEW" if "REVIEW" in st[k] else "BLOCKED") if not v else
+                     ("PARTIAL" if st[k] - {"COMPUTED"} else "COMPUTED")})
     return {"rows": rows, "rule": "only COMPUTED and PARTIAL quantities of one unit per trade are added; REVIEW / BLOCKED "
                                   "lines are listed in the trade workbooks, never in a total"}
 

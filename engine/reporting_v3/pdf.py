@@ -18,7 +18,7 @@ from engine.reporting_v2.pdf import _pin, find_chromium
 NAVY, NAVY2 = "#1F3A5F", "#2C4E78"
 ST = {"COMPUTED": ("#C6EFCE", "#006100"), "PARTIAL": ("#FFEB9C", "#7F6000"), "REVIEW": ("#FFEB9C", "#7F6000"),
       "BLOCKED": ("#FFC7CE", "#9C0006"), "NOT_IN_SOURCE": ("#EDEDED", "#555555"), "PASS": ("#C6EFCE", "#006100"),
-      "FAIL": ("#FFC7CE", "#9C0006"), "UNCHANGED": ("#C6EFCE", "#006100")}
+      "FAIL": ("#FFC7CE", "#9C0006"), "UNCHANGED": ("#C6EFCE", "#006100"), "COMPUTED_REVIEW": ("#FFEB9C", "#7F6000")}
 
 CSS = """
 @font-face { font-family: Cairo; src: url('%(cairo)s'); }
