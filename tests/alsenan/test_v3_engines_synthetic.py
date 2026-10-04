@@ -214,3 +214,35 @@ def test_authority_order_and_fallback_labelling():
     assert o["authority"].startswith(UM3.PROJECT_OWNER_FACT) and o["parameters"]["buildup_m"] == 0.08
     assert not UM3.applies("URBAN-DRY-FLOOR-PORCELAIN-DEFAULT@v1", "WET_ROOM_FLOOR")
     assert UM3.register()["methods"] and "URBAN-REBAR-NET-AND-PROCUREMENT@v1" in UM3.ALL_METHODS
+
+
+# ------------------------------------------------------------------ finish_height_v3 (stdlib 1-D intervals)
+def test_face_partly_under_a_beam_splits_into_beam_and_slab_pieces():
+    from engine.source import finish_height_v3 as FH3
+    beam = {"type": "B1", "D_cm": 60, "bound": True}
+    ps = FH3.pieces(1000.0, [(-50.0, 400.0, beam)], inside=lambda t0, t1: True, plate_t_cm=20)
+    assert [(p["t0"], p["t1"], p["termination"]["type"]) for p in ps] == \
+        [(0.0, 400.0, "BEAM_SOFFIT"), (400.0, 1000.0, "SLAB_SOFFIT")]
+    assert ps[0]["termination"]["D_cm"] == 60 and abs(sum(p["length"] for p in ps) - 1000.0) < 1e-9
+
+
+def test_deepest_bound_band_wins_and_an_unbound_band_is_unknown_never_filled():
+    from engine.source import finish_height_v3 as FH3
+    b1 = {"type": "B1", "D_cm": 40, "bound": True}
+    b2 = {"type": "B2", "D_cm": 70, "bound": True}
+    ps = FH3.pieces(500.0, [(0.0, 500.0, b1), (0.0, 500.0, b2)])
+    assert len(ps) == 1 and ps[0]["termination"]["D_cm"] == 70
+    ub = {"type": "B?", "D_cm": None, "bound": False}
+    ps = FH3.pieces(500.0, [(0.0, 500.0, ub)], inside=lambda t0, t1: True, plate_t_cm=20)
+    assert ps[0]["termination"]["type"] == "UNKNOWN" and ps[0]["termination"]["D_cm"] is None
+
+
+def test_no_band_and_no_plate_is_unknown_and_slivers_lose_no_length():
+    from engine.source import finish_height_v3 as FH3
+    beam = {"type": "B1", "D_cm": 50, "bound": True}
+    ps = FH3.pieces(300.0, [(0.0, 299.5, beam)], min_piece=1.0)
+    assert abs(sum(p["length"] for p in ps) - 300.0) < 1e-9 and len(ps) == 1
+    ps = FH3.pieces(300.0, [])
+    assert len(ps) == 1 and ps[0]["termination"]["type"] == "UNKNOWN"
+    assert FH3.pieces(0.0, []) == []
+    assert FH3.policy_record()["digest"] == FH3.policy_record()["digest"]

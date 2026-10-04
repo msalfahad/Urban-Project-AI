@@ -220,6 +220,8 @@ def test_frozen_report_records_are_reproduced(alsenan, qortuba):
 
 
 def test_engine_and_frozen_registers_untouched_since_b2a1():
+    # V3 adds NEW engine modules beside the frozen ones; no file that existed at 02feef8 may be modified, renamed or deleted
     for d in ("engine/source", "tests/alsenan/registers_b2a1", "tests/alsenan/registers_a3", "tests/rc1/registers"):
-        out = subprocess.run(["git", "-C", str(ROOT), "diff", "--stat", "02feef8", "--", d], capture_output=True, text=True)
+        out = subprocess.run(["git", "-C", str(ROOT), "diff", "--stat", "--diff-filter=MDRTC", "02feef8", "--", d],
+                             capture_output=True, text=True)
         assert out.returncode == 0 and out.stdout.strip() == "", (d, out.stdout)

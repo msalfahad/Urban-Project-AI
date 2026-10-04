@@ -5,7 +5,7 @@ from Latin text without the drawing. This reader walks every TEXT / MTEXT / ATTR
 spaces and block definitions and returns the font file of each one's text style, keyed by the decimal handle the
 canonical identity uses (source_handle). A style without a font file, or a missing style, maps to "".
 
-Project-agnostic; ezdxf only.
+Project-agnostic; ezdxf only - so it lives in the lab adapter layer, not engine/source (stdlib-only rule, R8.1 B-5).
 """
 
 from __future__ import annotations
