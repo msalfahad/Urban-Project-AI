@@ -28,7 +28,8 @@ FONT = "Arial"
 CREATED = datetime(2026, 10, 4)
 FIXED_ZIP_TIME = (1980, 1, 1, 0, 0, 0)
 QTY_FMT = {u: f'{f};-{f};"-"' for u, f in                   # zero shows as "-" (QS convention; nothing measured there)
-           {"m3": "#,##0.000", "m2": "#,##0.00", "lm": "#,##0.00", "m": "#,##0.000", "nr": "#,##0", "kg": "#,##0.0"}.items()}
+           {"m3": "#,##0.000", "m2": "#,##0.00", "lm": "#,##0.00", "m": "#,##0.000", "nr": "#,##0", "kg": "#,##0.0",
+            "m³": "#,##0.000", "m²": "#,##0.00", "No.": "#,##0", "t": "#,##0.000"}.items()}
 THIN = Side(style="thin", color=GRID)
 THICK = Side(style="thick", color=NAVY)
 

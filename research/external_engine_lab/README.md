@@ -218,5 +218,6 @@ bridges it to the legacy QS01 method. Owner decisions are scoped claims in `data
 | `alsenan_v3_evaluation.py` | `tests/alsenan/registers_v3_eval/BENCHMARK_EVALUATION_V3.json` | benchmark evaluation after the V3a freeze (frozen B1 register only; evaluation only) |
 | `alsenan_v3_qortuba_shadow.py` | `tests/alsenan/registers_v3_eval/QORTUBA_V3_SHADOW.json` | Qortuba RC1_REFERENCE shadow of the V3 topology engines (never applied to Qortuba) |
 | `reporting_v3_build.py` | `data/reports/URBAN_QTO_ALSENAN_FINAL_BOQ/` + zip (not committed) | 11 trade / master / reconciliation workbooks + completeness xlsx, final report + technical audit PDFs, readback + LibreOffice recalc, freeze (generic code in `engine/reporting_v3/`) |
+| `engine/reporting_v3/units.py` (unit addendum) | `tests/alsenan/registers_v3_eval/UNIT_REGISTER.json` | final-BOQ display units (m³, t, m², lm, No.), rebar bases never summed, UNIT_CONTROL gate (`tests/alsenan/test_v3_unit_control.py`); reporting only, registers unchanged |
 
 `<work>` must hold `old_k2.pkl` (K2 on LibreDWG's DXF of the old DWG) and `new_k2.pkl` (K2 on the hash-addressed new DXF).

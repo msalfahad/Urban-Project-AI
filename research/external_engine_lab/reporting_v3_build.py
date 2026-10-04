@@ -20,7 +20,7 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
 sys.path.insert(0, str(ROOT))
 
-from engine.reporting_v3 import pdf as P, readback as RB, workbooks as W              # noqa: E402
+from engine.reporting_v3 import pdf as P, readback as RB, units as U, workbooks as W  # noqa: E402
 
 NAME = "URBAN_QTO_ALSENAN_FINAL_BOQ"
 LOGO = ROOT / "assets/logo.png"
@@ -42,6 +42,11 @@ def sha(p):
 
 
 def model_from(regdir) -> dict:
+    """The reporting model in final-BOQ display units (UNIT_CONTROL); the engine registers stay in engine units."""
+    return U.display(engine_model(regdir))
+
+
+def engine_model(regdir) -> dict:
     r = Path(regdir)
     boq = jl(r / "BOQ_LINES.json")
     return {"lines": boq["lines"], "levels": boq["levels"], "level_names": boq["level_names"], "trades": boq["trades"],
@@ -74,12 +79,17 @@ def final_report(model, regdir) -> dict:
         if m["trade"] != cur:
             cur = m["trade"]
             mrows.append({"group": f"{trades[cur][0]} {cur.replace('_', ' ')}  |  {trades[cur][1]}"})
+        if m.get("no_total"):
+            mrows.append({"total": True, "cells": [m["item"], m["item_ar"], m["unit"], "", "", "", "", "not summed",
+                                                   m["status"]]})
+            continue
         mrows.append([m["item"], m["item_ar"], m["unit"]] + [_fmt(m[lv]) or "-" for lv in model["levels"]] +
                      [_fmt(m["total"]) or "-", m["status"]])
     pages.append({"title_en": "MASTER SUMMARY - TRADE x LEVEL", "title_ar": "الملخص العام",
                   "blocks": [{"table": {"head": ["ITEM", "البند", "UNIT", "GF", "1F", "2F + ROOF", "OTHER + EXT", "TOTAL", "STATUS"],
                                         "rows": mrows, "num": [3, 4, 5, 6, 7], "status": 8, "ar": [1]}},
-                             {"p": model["master"]["rule"]}]})
+                             {"p": model["master"]["rule"]},
+                             {"p": "Rebar bases (never summed): " + "; ".join(f"{k}: {v}" for k, v in U.REBAR_BASIS.items())}]})
     pages.append({"title_en": "BOQ COMPLETENESS MATRIX", "title_ar": "مصفوفة الاكتمال",
                   "blocks": [{"table": {"head": ["TRADE", "البند", "EXPECTED", "COMPUTED", "PARTIAL", "REVIEW", "BLOCKED",
                                                  "NOT IN SRC", "COVER %", "CORE %"],
@@ -139,20 +149,23 @@ def owner_actions(model) -> dict:
 
     def tot(t, i, u):
         r = m.get((t, i, u))
-        return f"{r['total']:,.2f} {u}" if r else "-"
+        return f"{r['total']:,.{U.UNIT_POLICY[r['engine_unit']][2]}f} {u}" if r else "-"
     blocked = sum(1 for x in model["lines"] if x["status"] == "BLOCKED")
     actions = [f"{q['id']}: {q['question']}" for q in model["questions"]["rows"][:8]]
-    skim = [f"Reinforced concrete {tot('CONCRETE', 'Reinforced concrete', 'm3')} computed scope (necks, exterior ground "
+    skim = [f"Reinforced concrete {tot('CONCRETE', 'Reinforced concrete', 'm³')} computed scope (necks, exterior ground "
             "beams, stairs, pool, annex slab blocked).",
-            f"Rebar NET {tot('REBAR', 'Net design weight (complete sets)', 'kg')}; straight weight of sets awaiting hook "
-            f"detailing {tot('REBAR', 'Straight weight - sets with hooks not detailed', 'kg')}; slab bars blocked.",
-            f"Floor finish {tot('FLOORING_PORCELAIN', 'Floor finish', 'm2')}, ceilings {tot('CEILINGS', 'Ceiling area', 'm2')} "
+            f"Rebar (official basis: procurement incl. laps, complete sets) "
+            f"{tot('REBAR', 'Procurement weight incl. laps (complete sets)', 't')}; net "
+            f"{tot('REBAR', 'Net design weight (complete sets)', 't')} (alternative); partial sets awaiting hook detail "
+            f"{tot('REBAR', 'Straight weight - sets with hooks not detailed', 't')} (separate); never summed - total "
+            "project rebar PARTIAL; slab bars blocked.",
+            f"Floor finish {tot('FLOORING_PORCELAIN', 'Floor finish', 'm²')}, ceilings {tot('CEILINGS', 'Ceiling area', 'm²')} "
             "- every room closed or classified; Arabic names decoded.",
-            f"Blockwork 200 {tot('BLOCKWORK', 'Blockwork 200 mm', 'm2')}, 150 {tot('BLOCKWORK', 'Blockwork 150 mm', 'm2')}, "
-            f"parapets {tot('BLOCKWORK', 'Parapet blockwork', 'm2')}.",
-            f"Internal plaster {tot('PLASTER_PAINT', 'Internal plaster', 'm2')}; paint {tot('PLASTER_PAINT', 'Internal paint', 'm2')} "
+            f"Blockwork 200 {tot('BLOCKWORK', 'Blockwork 200 mm', 'm²')}, 150 {tot('BLOCKWORK', 'Blockwork 150 mm', 'm²')}, "
+            f"parapets {tot('BLOCKWORK', 'Parapet blockwork', 'm²')}.",
+            f"Internal plaster {tot('PLASTER_PAINT', 'Internal plaster', 'm²')}; paint {tot('PLASTER_PAINT', 'Internal paint', 'm²')} "
             "(0.10 m build-up = URBAN_FALLBACK).",
-            f"Wall tile {tot('WALL_TILE_WATERPROOFING', 'Wall tile', 'm2')}; roof WP {tot('WALL_TILE_WATERPROOFING', 'Roof waterproofing', 'm2')}.",
+            f"Wall tile {tot('WALL_TILE_WATERPROOFING', 'Wall tile', 'm²')}; roof WP {tot('WALL_TILE_WATERPROOFING', 'Roof waterproofing', 'm²')}.",
             f"Openings: areas blocked on heights; widths {tot('ALUMINIUM_OPENINGS', 'Opening widths', 'lm')}.",
             f"{blocked} BLOCKED lines carry their reason; nothing blocked enters a total."]
     return {"actions": actions, "skim": skim}
@@ -197,6 +210,16 @@ def tech_audit(model, regdir, extra) -> dict:
     pages.append({"title_en": "QA CHECKS", "title_ar": "فحوصات الجودة",
                   "blocks": [{"table": {"head": ["CHECK", "RESULT"], "rows": [[k, "PASS" if v else "FAIL"] for k, v in qa["checks"].items()],
                                         "status": 1}}] + [{"kv": [[k, v] for k, v in extra["qa"].items()]}]})
+    uc, ur = extra["unit_control"], extra["unit_register"]
+    pages.append({"title_en": "UNIT CONTROL + UNIT REGISTER", "title_ar": "ضبط الوحدات",
+                  "blocks": [{"p": ur["rule"]},
+                             {"table": {"head": ["CHECK", "RESULT"], "rows": [[k, "PASS" if v else "FAIL"]
+                                                                            for k, v in uc["checks"].items()], "status": 1}},
+                             {"table": {"head": ["ITEM", "ENGINE UNIT", "DISPLAY UNIT", "CONVERSION", "STATUS"],
+                                        "rows": [[x["ITEM"], x["ENGINE_UNIT"], x["DISPLAY_UNIT"], x["CONVERSION"], x["STATUS"]]
+                                                 for x in ur["rows"]]}},
+                             {"table": {"head": ["OFFICIAL CONVENTION", "UNIT", "STATUS"],
+                                        "rows": [[c["ITEM"], c["OFFICIAL_UNIT"], c["STATUS"]] for c in ur["convention"]]}}]})
     pages.append({"title_en": "REGISTER DIGESTS (V3a FREEZE)", "title_ar": "بصمات السجلات",
                   "blocks": [{"table": {"head": ["REGISTER", "SHA-256"], "rows": [[k, v] for k, v in fz["register_digests"].items()]}}]})
     q = extra.get("qortuba")
@@ -209,10 +232,12 @@ def tech_audit(model, regdir, extra) -> dict:
     if ev:
         pages.append({"title_en": "BENCHMARK EVALUATION - AFTER FREEZE (EVALUATION ONLY)", "title_ar": "تقييم بعد التجميد",
                       "blocks": [{"p": ev["rule"]},
-                                 {"table": {"head": ["BENCHMARK", "BENCH QTY", "V3 ITEM", "V3 QTY", "V3 STATUS", "DIFF %", "COMPARABILITY"],
-                                            "rows": [[x["benchmark"], x["benchmark_qty"], x["v3_item"], x["v3_qty"], x["v3_status"],
+                                 {"table": {"head": ["BENCHMARK", "BENCH QTY", "UNIT", "V3 ITEM", "V3 QTY (normalised)",
+                                                     "UNIT", "V3 STATUS", "DIFF %", "COMPARABILITY"],
+                                            "rows": [[x["benchmark"], x["benchmark_qty"], x.get("benchmark_unit_normalised"),
+                                                      x["v3_item"], x["v3_qty"], x.get("v3_display_unit"), x["v3_status"],
                                                       x["difference_pct"], x["comparability"]] for x in ev["rows"]],
-                                            "num": [1, 3, 5], "status": 4}}]})
+                                            "num": [1, 4, 7], "status": 6}}]})
     pages.append({"title_en": "DISCLOSURES", "title_ar": "إفصاحات",
                   "blocks": [{"ul": extra["disclosures"]}]})
     return {"title": "URBAN BOQ - TECHNICAL AUDIT - ALSENAN", "title_ar": "التدقيق الفني - السنان",
@@ -233,6 +258,10 @@ DISCLOSURES = [
     "(tolerance buffer); the band's own extent now ends the piece (internal plaster +0.06 m2).",
     "Superseded package render: the first render failed the LibreOffice recalculation (text beginning with '=' written as a "
     "formula, #VALUE!) and the final report ran to 51 pages; both fixed before the frozen package.",
+    "Unit-control addendum (reporting only): reinforcement shown in t (engine kg / 1000, no early rounding), concrete "
+    "m³, areas m², lengths lm, counts No.; rebar NET / PROCUREMENT / PARTIAL shown as separate bases, never summed "
+    "(TOTAL PROJECT REBAR = PARTIAL); the post-freeze comparison normalises units first. The frozen V3a registers are "
+    "byte-identical to the earlier package.",
     "engine/source stays stdlib-only: the ezdxf text-style reader committed in b4eef43 broke that guard and was moved to the "
     "lab adapter layer (cad_text_styles.py); finish_height_v3 is pure 1-D interval logic with a shapely adapter in the lab.",
 ]
@@ -260,22 +289,27 @@ def build(regdir, out, junit=None, rc=None, qortuba=None, evaluation=None) -> di
                  "problems": v["problems"][:3] + rc_.get("mismatches", [])[:3]}
     qrec = jl(qortuba) if qortuba else None
     erec = jl(evaluation) if evaluation else None
+    ucq = U.unit_control(model, evaluation=erec, cell_maps=[res["cell_map"] for res in files.values()])
+    ureg = U.unit_register(model)
     xqa = {"workbooks": len(files), "readback_all_pass": all(x["readback"] == "PASS" for x in qa.values()),
            "recalc_all_pass": all(x["recalc"] == "PASS" for x in qa.values()),
            "formula_cells": sum(x["formulas"] or 0 for x in qa.values()),
-           "value_cells": sum(x["checked"]["value"] for x in qa.values())}
+           "value_cells": sum(x["checked"]["value"] for x in qa.values()), "unit_control": ucq["state"]}
     fr = final_report(model, regdir)
     pr = P.render(fr, pkg / "URBAN_BOQ_FINAL_REPORT.pdf", logo=LOGO, cairo=CAIRO)
-    ta = tech_audit(model, regdir, {"qa": xqa, "qortuba": qrec, "evaluation": erec, "disclosures": DISCLOSURES})
+    ta = tech_audit(model, regdir, {"qa": xqa, "qortuba": qrec, "evaluation": erec, "disclosures": DISCLOSURES,
+                                    "unit_control": ucq, "unit_register": ureg})
     pt = P.render(ta, pkg / "URBAN_BOQ_TECHNICAL_AUDIT.pdf", logo=LOGO, cairo=CAIRO)
     r = Path(regdir)
     for n in ("BOQ_COMPLETENESS_MATRIX", "FINAL_BLOCKER_REGISTER", "FINAL_OWNER_QUESTION_REGISTER"):
         shutil.copy(r / f"{n}.json", pkg / f"{n}.json")
+    (pkg / "UNIT_REGISTER.json").write_text(dumps(ureg))
     eqa = jl(r / "FINAL_QA.json")
     final_qa = {"SCHEMA": "URBAN_ALSENAN_V3_FINAL_QA_PACKAGE_V1", "engine_registers": {"state": eqa["state"], "checks": eqa["checks"]},
                 "workbooks": qa, "summary": xqa, "pdf": {"final_report_pages": len(fr["pages"]), "technical_audit_pages": len(ta["pages"])},
-                "qortuba_shadow": qrec and qrec["state"],
-                "state": "PASS" if eqa["state"] == "PASS" and xqa["readback_all_pass"] and xqa["recalc_all_pass"] else "FAIL"}
+                "qortuba_shadow": qrec and qrec["state"], "unit_control": ucq,
+                "state": "PASS" if (eqa["state"] == "PASS" and xqa["readback_all_pass"] and xqa["recalc_all_pass"]
+                                    and ucq["state"] == "PASS") else "FAIL"}
     (pkg / "FINAL_QA.json").write_text(dumps(final_qa))
     if junit:
         t = ET.parse(junit).getroot()
