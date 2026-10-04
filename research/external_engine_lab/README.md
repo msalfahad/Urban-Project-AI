@@ -213,5 +213,10 @@ bridges it to the legacy QS01 method. Owner decisions are scoped claims in `data
 | `reporting_v2_alsenan.py` | (used by `reporting_v2_build.py`) | Reporting V2 adapter: frozen A3 + B2A.1 registers -> REPORTING_MODEL_V2 (maps, never measures) |
 | `reporting_v2_qortuba.py` | (used by `reporting_v2_build.py`) | Reporting V2 adapter: frozen Qortuba RC1 registers -> REPORTING_MODEL_V2 |
 | `reporting_v2_build.py` | `data/reports/URBAN_QTO_REPORTING_V2/` + `REPORTING_V2.zip`; records in `tests/reporting_v2/frozen/` | XLSX + PDF report, readback QA, regression, freeze (generic code in `engine/reporting_v2/`) |
+| `alsenan_v3.py` (+ `alsenan_v3_layers.py`, `alsenan_v3_structure.py`, `alsenan_v3_geom.py`, `cad_text_styles.py`) | `tests/alsenan/registers_v3/*.json` (17 registers, built twice, byte-identical) | Alsenan V3a final BOQ: A2 -> V3 topology (opening completion, bilingual labels) -> A3 -> B2A -> rooms / voids / finishes / ground / rebar net + procurement / openings / blockwork / parapets / substructure |
+| `alsenan_v3_registers.py` | (used by `alsenan_v3.py`) | BOQ lines, MASTER_MATRIX (like items only), completeness, blockers, batched owner questions, QA, freeze |
+| `alsenan_v3_evaluation.py` | `tests/alsenan/registers_v3_eval/BENCHMARK_EVALUATION_V3.json` | benchmark evaluation after the V3a freeze (frozen B1 register only; evaluation only) |
+| `alsenan_v3_qortuba_shadow.py` | `tests/alsenan/registers_v3_eval/QORTUBA_V3_SHADOW.json` | Qortuba RC1_REFERENCE shadow of the V3 topology engines (never applied to Qortuba) |
+| `reporting_v3_build.py` | `data/reports/URBAN_QTO_ALSENAN_FINAL_BOQ/` + zip (not committed) | 11 trade / master / reconciliation workbooks + completeness xlsx, final report + technical audit PDFs, readback + LibreOffice recalc, freeze (generic code in `engine/reporting_v3/`) |
 
 `<work>` must hold `old_k2.pkl` (K2 on LibreDWG's DXF of the old DWG) and `new_k2.pkl` (K2 on the hash-addressed new DXF).

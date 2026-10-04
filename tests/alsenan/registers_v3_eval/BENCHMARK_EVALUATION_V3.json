@@ -1,0 +1,120 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_V3_BENCHMARK_EVALUATION_V1",
+ "run": "AFTER_FREEZE",
+ "evaluation_only": true,
+ "v3_freeze_sha256": "e3f303a4b812a42bdadd90ec7261f359a7e4ae70e3bec5c8f2058d0d3d1d9259",
+ "b1_register_sha256": "959a8eeb67e3129a3ead75851ef17651dcd005acfc6d6b34add936477fabe613",
+ "rows": [
+  {
+   "benchmark": "FLOOR / ALL",
+   "benchmark_label": "total floors",
+   "benchmark_qty": 409.58,
+   "v3_item": "FLOORING_PORCELAIN / Floor finish",
+   "v3_qty": 447.224,
+   "v3_status": "COMPUTED",
+   "difference_pct": 9.2,
+   "comparability": "internal floors; V3 includes open-plan zones, no yard"
+  },
+  {
+   "benchmark": "SKIRTING / ALL",
+   "benchmark_label": "total skirting",
+   "benchmark_qty": 282.85,
+   "v3_item": "FLOORING_PORCELAIN / Skirting",
+   "v3_qty": 312.3,
+   "v3_status": "COMPUTED",
+   "difference_pct": 10.4,
+   "comparability": "dry rooms only in V3"
+  },
+  {
+   "benchmark": "WALL_TILE / WET_ROOMS",
+   "benchmark_label": "total walls",
+   "benchmark_qty": 433.83,
+   "v3_item": "WALL_TILE_WATERPROOFING / Wall tile",
+   "v3_qty": 396.998,
+   "v3_status": "COMPUTED",
+   "difference_pct": -8.5,
+   "comparability": "V3 gross of openings, full height"
+  },
+  {
+   "benchmark": "WATERPROOFING / WET_ROOM:FLOOR",
+   "benchmark_label": "wet-room floor waterproofing",
+   "benchmark_qty": 72.01,
+   "v3_item": "WALL_TILE_WATERPROOFING / Wet-room waterproofing",
+   "v3_qty": 72.645,
+   "v3_status": "COMPUTED",
+   "difference_pct": 0.9,
+   "comparability": "V3 = floor + upturn"
+  },
+  {
+   "benchmark": "WATERPROOFING / ROOF:FLOOR",
+   "benchmark_label": "roof and annex waterproofing",
+   "benchmark_qty": 285.0,
+   "v3_item": "WALL_TILE_WATERPROOFING / Roof waterproofing",
+   "v3_qty": 364.031,
+   "v3_status": "COMPUTED",
+   "difference_pct": 27.7,
+   "comparability": "V3 = flat + 0.20 upturn"
+  },
+  {
+   "benchmark": "RAILING / INTERNAL",
+   "benchmark_label": "internal railing",
+   "benchmark_qty": 18.95,
+   "v3_item": "STAIRS_RAILINGS / Gallery railing",
+   "v3_qty": 14.29,
+   "v3_status": "COMPUTED",
+   "difference_pct": -24.6,
+   "comparability": "V3 void edge only; stair railing blocked"
+  },
+  {
+   "benchmark": "BLOCKWORK / ALL",
+   "benchmark_label": "total blockwork",
+   "benchmark_qty": 1260.6895,
+   "v3_item": "BLOCKWORK (all thickness rows)",
+   "v3_qty": 686.017,
+   "v3_status": "PARTIAL",
+   "difference_pct": -45.6,
+   "comparability": "V3 net of openings at full height; split by thickness rows"
+  },
+  {
+   "benchmark": "PAINT / INTERNAL_WALL",
+   "benchmark_label": "wall paint m2",
+   "benchmark_qty": 1191.1275,
+   "v3_item": "PLASTER_PAINT / Internal paint",
+   "v3_qty": 525.635,
+   "v3_status": "PARTIAL",
+   "difference_pct": -55.9,
+   "comparability": "V3 partial (zones with unbound beams blocked)"
+  },
+  {
+   "benchmark": "PLASTER / INTERNAL_WALL",
+   "benchmark_label": "plaster m2",
+   "benchmark_qty": 1151.1375,
+   "v3_item": "PLASTER_PAINT / Internal plaster",
+   "v3_qty": 1922.906,
+   "v3_status": "PARTIAL",
+   "difference_pct": 67.0,
+   "comparability": "V3 to masonry termination, gross of openings"
+  },
+  {
+   "benchmark": "BLINDING / PLAIN",
+   "benchmark_label": "plain concrete",
+   "benchmark_qty": 47.05500000000001,
+   "v3_item": "CONCRETE / Plain concrete (blinding)",
+   "v3_qty": 19.638,
+   "v3_status": "COMPUTED",
+   "difference_pct": -58.3,
+   "comparability": "V3 under footings + interior ground beams"
+  },
+  {
+   "benchmark": "OTHER_CONCRETE / ALL_REINFORCED",
+   "benchmark_label": "total reinforced concrete",
+   "benchmark_qty": 352.436075,
+   "v3_item": "CONCRETE / Reinforced concrete",
+   "v3_qty": 236.143,
+   "v3_status": "PARTIAL",
+   "difference_pct": -33.0,
+   "comparability": "V3 excludes blocked necks, exterior GB, stairs, pool"
+  }
+ ],
+ "rule": "no benchmark value chose or changed any V3 quantity (OD-V3-10); differences are findings, not targets"
+}

@@ -228,6 +228,13 @@ DISCLOSURES = [
     "The 3.24 m2 site repeated on every storey is treated as a vertical shaft candidate (lift): no finish is measured in it "
     "until the owner confirms (Q-A1).",
     "Benchmark / freelancer values were opened only after the V3a freeze, through the frozen B1 register; no quantity changed.",
+    "Superseded register builds: the pair built at b15fb84 marked REVIEW-only master rows (plaster extras, cornice) as "
+    "BLOCKED; rebuilt twice at 245b4d3 (identical). An earlier pair measured beam-covered wall pieces 2 mm past the band end "
+    "(tolerance buffer); the band's own extent now ends the piece (internal plaster +0.06 m2).",
+    "Superseded package render: the first render failed the LibreOffice recalculation (text beginning with '=' written as a "
+    "formula, #VALUE!) and the final report ran to 51 pages; both fixed before the frozen package.",
+    "engine/source stays stdlib-only: the ezdxf text-style reader committed in b4eef43 broke that guard and was moved to the "
+    "lab adapter layer (cad_text_styles.py); finish_height_v3 is pure 1-D interval logic with a shapely adapter in the lab.",
 ]
 
 

@@ -1,0 +1,1996 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_V3_TOPOLOGY_V1",
+ "policies": {
+  "text_role": {
+   "id": "TEXT_ROLE_POLICY_V3_SOURCE_SCOPED_FAMILIES",
+   "base": "TEXT_ROLE_POLICY_V2",
+   "change": "tag families (TR-03 / TR-04) counted over all regions of the same source revision; roles returned for the requested region only",
+   "legacy_text": "LEGACY_CAD_TEXT_DECODE_V1",
+   "bilingual_rule": "TR-V3-B: a TR-06 room-word tag whose legacy-Arabic twin decodes to the Arabic term of that room word is established"
+  },
+  "legacy_text": {
+   "id": "LEGACY_CAD_TEXT_DECODE_V1",
+   "families": {
+    "ARABIC_KEYBOARD_101": "xarb-style SHX fonts (Arabic 101 keyboard keys)",
+    "XARAB_GLYPH_V1": "X-ARAB SHX family (one code point per glyph form)"
+   },
+   "xarab_table": {
+    " ": {
+     "letter": " ",
+     "evidence": "word space"
+    },
+    "A": {
+     "letter": "ا",
+     "evidence": "RECEPTION/استقبال, FIRST/الأول, NORTH/شمالية"
+    },
+    "B": {
+     "letter": "ب",
+     "evidence": "RECEPTION/استقبال, KITCHEN/مطبخ"
+    },
+    "C": {
+     "letter": "ث",
+     "evidence": "SECOND/الثاني"
+    },
+    "D": {
+     "letter": "ش",
+     "evidence": "LIVING/معيشة, STREET/شارع"
+    },
+    "E": {
+     "letter": "ض",
+     "evidence": "PANTRY/تحضير, GROUND/الأرضي"
+    },
+    "F": {
+     "letter": "ف",
+     "evidence": "MASTER BED ROOM/غرفة, HORIZONTAL/أفقي"
+    },
+    "G": {
+     "letter": "خ",
+     "evidence": "MAID/خادمة"
+    },
+    "H": {
+     "letter": "ح",
+     "evidence": "BATH/حمام, PANTRY/تحضير, GARDEN/حديقة"
+    },
+    "I": {
+     "letter": "ع",
+     "evidence": "DINING/طعام"
+    },
+    "J": {
+     "letter": "ج",
+     "evidence": "NEIGHBOUR/جار, ELEVATION/واجهة"
+    },
+    "L": {
+     "letter": "ل",
+     "evidence": "RECEPTION/استقبال, SALOON/صالون"
+    },
+    "M": {
+     "letter": "م",
+     "evidence": "BATH/حمام, KITCHEN/مطبخ"
+    },
+    "N": {
+     "letter": "ن",
+     "evidence": "VOID/منور, DEWANEYA/ديوانية"
+    },
+    "O": {
+     "letter": "غ",
+     "evidence": "LAUNDRY/غسيل, WASH/مغسلة"
+    },
+    "P": {
+     "letter": "ع",
+     "evidence": "LIVING/معيشة"
+    },
+    "Q": {
+     "letter": "ق",
+     "evidence": "RECEPTION/استقبال, GARDEN/حديقة"
+    },
+    "R": {
+     "letter": "ص",
+     "evidence": "SALOON/صالون"
+    },
+    "S": {
+     "letter": "س",
+     "evidence": "LAUNDRY/غسيل, ROOF/سطح"
+    },
+    "T": {
+     "letter": "ه",
+     "evidence": "ELEVATION/واجهة"
+    },
+    "V": {
+     "letter": "ت",
+     "evidence": "RECEPTION/استقبال, PANTRY/تحضير"
+    },
+    "W": {
+     "letter": "لأ",
+     "evidence": "FIRST/الأول, GROUND/الأرضي"
+    },
+    "X": {
+     "letter": "ئ",
+     "evidence": "MASTER BED ROOM/رئيسية"
+    },
+    "Z": {
+     "letter": "ي",
+     "evidence": "LAUNDRY/غسيل, DEWANEYA/ديوانية"
+    },
+    "a": {
+     "letter": "ا",
+     "evidence": "BATH/حمام, SALOON/صالون"
+    },
+    "e": {
+     "letter": "ض",
+     "evidence": "W.C/مرحاض"
+    },
+    "h": {
+     "letter": "ح",
+     "evidence": "ROOF/سطح"
+    },
+    "l": {
+     "letter": "ل",
+     "evidence": "LAUNDRY/غسيل, FIRST/الأول"
+    },
+    "m": {
+     "letter": "م",
+     "evidence": "BATH/حمام"
+    },
+    "n": {
+     "letter": "ن",
+     "evidence": "SALOON/صالون"
+    },
+    "p": {
+     "letter": "ع",
+     "evidence": "STREET/شارع"
+    },
+    "t": {
+     "letter": "ة",
+     "evidence": "MASTER BED ROOM/غرفة, ELEVATION/واجهة"
+    },
+    "y": {
+     "letter": "ة",
+     "evidence": "LIVING/معيشة, WASH/مغسلة"
+    },
+    "z": {
+     "letter": "ي",
+     "evidence": "HORIZONTAL/أفقي"
+    },
+    "": {
+     "letter": "ق",
+     "evidence": "FLOOR/للطابق"
+    },
+    "¢": {
+     "letter": "خ",
+     "evidence": "KITCHEN/مطبخ"
+    },
+    "²": {
+     "letter": "م",
+     "evidence": "DINING/طعام, MASTER BED ROOM/نوم"
+    },
+    "—": {
+     "letter": "ر",
+     "evidence": "W.C/مرحاض, VOID/منور"
+    },
+    "‘": {
+     "letter": "و",
+     "evidence": "SALOON/صالون, VOID/منور"
+    },
+    "‚": {
+     "letter": "",
+     "evidence": "EAST/شرقية (kashida)"
+    },
+    "“": {
+     "letter": "ط",
+     "evidence": "KITCHEN/مطبخ, DINING/طعام"
+    },
+    "™": {
+     "letter": "د",
+     "evidence": "DEWANEYA/ديوانية, GARDEN/حديقة"
+    }
+   },
+   "keyboard_table": {
+    " ": " ",
+    "'": "ط",
+    ",": "و",
+    ".": "ز",
+    "/": "ظ",
+    ";": "ك",
+    "[": "ج",
+    "]": "د",
+    "`": "ذ",
+    "a": "ش",
+    "b": "لا",
+    "c": "ؤ",
+    "d": "ي",
+    "e": "ث",
+    "f": "ب",
+    "g": "ل",
+    "h": "ا",
+    "i": "ه",
+    "j": "ت",
+    "k": "ن",
+    "l": "م",
+    "m": "ة",
+    "n": "ى",
+    "o": "خ",
+    "p": "ح",
+    "q": "ض",
+    "r": "ق",
+    "s": "س",
+    "t": "ف",
+    "u": "ع",
+    "v": "ر",
+    "w": "ص",
+    "x": "ء",
+    "y": "غ",
+    "z": "ئ",
+    "{": "ج",
+    "}": "د"
+   },
+   "rule": "a code point not in the table is reported, never guessed; decoded Arabic corroborates or names a room that English / geometry already establishes - it never establishes one on its own",
+   "lexicon": {
+    "BATH": [
+     "حمام"
+    ],
+    "BATHROOM": [
+     "حمام"
+    ],
+    "BED": [
+     "نوم"
+    ],
+    "BEDROOM": [
+     "غرفة نوم",
+     "نوم"
+    ],
+    "CORRIDOR": [
+     "ممر",
+     "طرقة"
+    ],
+    "COURT": [
+     "حوش"
+    ],
+    "DEWANEYA": [
+     "ديوانية"
+    ],
+    "DINING": [
+     "طعام"
+    ],
+    "DIWANIYA": [
+     "ديوانية"
+    ],
+    "DRIVER": [
+     "سائق"
+    ],
+    "ENTRANCE": [
+     "مدخل"
+    ],
+    "GARDEN": [
+     "حديقة"
+    ],
+    "KITCHEN": [
+     "مطبخ"
+    ],
+    "LAUNDRY": [
+     "غسيل"
+    ],
+    "LIVING": [
+     "معيشة",
+     "صالة"
+    ],
+    "MAID": [
+     "خادمة",
+     "غرفة خادمة"
+    ],
+    "MASTER": [
+     "رئيسية"
+    ],
+    "NEIGHBOUR": [
+     "جار"
+    ],
+    "PANTRY": [
+     "تحضير"
+    ],
+    "POOL": [
+     "حمام سباحة",
+     "مسبح"
+    ],
+    "RECEPTION": [
+     "استقبال"
+    ],
+    "ROOF": [
+     "سطح"
+    ],
+    "SALON": [
+     "صالون"
+    ],
+    "SALOON": [
+     "صالون"
+    ],
+    "STAIR": [
+     "درج",
+     "سلم"
+    ],
+    "STORE": [
+     "مخزن"
+    ],
+    "STREET": [
+     "شارع"
+    ],
+    "SWIMMING": [
+     "حمام سباحة",
+     "سباحة"
+    ],
+    "VOID": [
+     "منور",
+     "فراغ"
+    ],
+    "WASH": [
+     "مغسلة",
+     "مغاسل"
+    ],
+    "WC": [
+     "مرحاض",
+     "دورة مياه",
+     "حمام"
+    ]
+   }
+  },
+  "opening_completion": {
+   "id": "OPENING_COMPLETION_V1",
+   "parameters_mm": {
+    "leaf_min": 400.0,
+    "leaf_max": 1700.0,
+    "radius_ratio": 0.05,
+    "meet_ratio": 0.1,
+    "sweep_deg": 10.0,
+    "gap_min": 400.0,
+    "gap_max": 3600.0,
+    "face_tol": 15.0,
+    "width_tol": 30.0,
+    "interior_margin": 5.0,
+    "drafting_gap_max": 10.0
+   },
+   "role": "OPENING_BOUNDARY",
+   "free_end_kinds": [
+    "CAPPED",
+    "OPENING_JAMB",
+    "ALIGNED_FREE_END"
+   ],
+   "release": [
+    "clear wall gap between collinear established bands with facing free ends",
+    "double-leaf motif or OPENING_CLOSURE_UNRESOLVED door inside the gap",
+    "one door evidence per gap and one gap per door evidence",
+    "no closure already on a face line of the gap"
+   ],
+   "closure": "two zero-material segments along the wall face lines across the gap",
+   "never": [
+    "closing a gap without door evidence",
+    "re-closing a door the frozen rule closed",
+    "generating wall, finish or material quantity from a closure"
+   ],
+   "digest": "5e21f4578468ba1d4bd2409fc8bd728a90fc73405c4661c8fd62626366ac7751"
+  },
+  "topology": "TS01_V3_INJECTION_POINTS_V1",
+  "text_styles": "TEXT_STYLE_FONT_MAP_V1"
+ },
+ "floors": {
+  "GF": {
+   "sites_frozen": 185,
+   "sites_v3": 192,
+   "labels_established_frozen": 30,
+   "labels_established_v3": 34,
+   "text_role_changes": {
+    "ALSENAN_P7757_DXF|H676|673|TEXT|0": [
+     "ROOM_LABEL_CANDIDATE",
+     "ROOM_LABEL_ESTABLISHED",
+     "TR-V3-B"
+    ],
+    "ALSENAN_P7757_DXF|H681|673|TEXT|0": [
+     "ROOM_LABEL_CANDIDATE",
+     "ROOM_LABEL_ESTABLISHED",
+     "TR-V3-B"
+    ],
+    "ALSENAN_P7757_DXF|H720|717|TEXT|0": [
+     "ROOM_LABEL_CANDIDATE",
+     "ROOM_LABEL_ESTABLISHED",
+     "TR-V3-B"
+    ],
+    "ALSENAN_P7757_DXF|H724|717|TEXT|0": [
+     "ROOM_LABEL_CANDIDATE",
+     "ROOM_LABEL_ESTABLISHED",
+     "TR-V3-B"
+    ]
+   },
+   "decoded_labels": [
+    {
+     "occurrence": "376",
+     "english": "PANTRY",
+     "arabic": "تحضير",
+     "decodes": [
+      {
+       "text": "تحضير",
+       "family": "XARAB_GLYPH_V1",
+       "unknown": [],
+       "state": "DECODED",
+       "source": "VHEZ—"
+      }
+     ],
+     "corroboration": {
+      "state": "CORROBORATED",
+      "matched": [
+       "تحضير"
+      ],
+      "expected_any_of": [
+       "تحضير"
+      ]
+     },
+     "x": -146570.382297,
+     "y": -802717.269934,
+     "text_keys": [
+      "ALSENAN_P7757_DXF|H379|376|TEXT|0",
+      "ALSENAN_P7757_DXF|H381|376|TEXT|0"
+     ]
+    },
+    {
+     "occurrence": "383",
+     "english": "SALOON",
+     "arabic": "صالون",
+     "decodes": [
+      {
+       "text": "صالون",
+       "family": "XARAB_GLYPH_V1",
+       "unknown": [],
+       "state": "DECODED",
+       "source": "RaL‘n"
+      }
+     ],
+     "corroboration": {
+      "state": "CORROBORATED",
+      "matched": [
+       "صالون"
+      ],
+      "expected_any_of": [
+       "صالون"
+      ]
+     },
+     "x": -132476.484322,
+     "y": -800693.458833,
+     "text_keys": [
+      "ALSENAN_P7757_DXF|H386|383|TEXT|0",
+      "ALSENAN_P7757_DXF|H387|383|TEXT|0"
+     ]
+    },
+    {
+     "occurrence": "389",
+     "english": "RECEPTION",
+     "arabic": "استقبال",
+     "decodes": [
+      {
+       "text": "استقبال",
+       "family": "XARAB_GLYPH_V1",
+       "unknown": [],
+       "state": "DECODED",
+       "source": "ASVQBaL"
+      }
+     ],
+     "corroboration": {
+      "state": "CORROBORATED",
+      "matched": [
+       "استقبال"
+      ],
+      "expected_any_of": [
+       "استقبال"
+      ]
+     },
+     "x": -137669.397548,
+     "y": -800666.135616,
+     "text_keys": [
+      "ALSENAN_P7757_DXF|H392|389|TEXT|0",
+      "ALSENAN_P7757_DXF|H394|389|TEXT|0"
+     ]
+    },
+    {
+     "occurrence": "396",
+     "english": "swimming pool",
+     "arabic": "حمام سباحة",
+     "decodes": [
+      {
+       "text": "حمام سباحة",
+       "family": "ARABIC_KEYBOARD_101",
+       "unknown": [],
+       "state": "DECODED",
+       "source": "plhL sfhpm"
+      }
+     ],
+     "corroboration": {
+      "state": "CORROBORATED",
+      "matched": [
+       "حمام سباحة",
+       "سباحة"
+      ],
+      "expected_any_of": [
+       "حمام سباحة",
+       "سباحة",
+       "مسبح"
+      ]
+     },
+     "x": -130335.595696,
+     "y": -794398.47153,
+     "text_keys": [
+      "ALSENAN_P7757_DXF|H399|396|TEXT|0",
+      "ALSENAN_P7757_DXF|H400|396|TEXT|0"
+     ]
+    },
+    {
+     "occurrence": "431",
+     "english": "DEWANEYA",
+     "arabic": "ديوانية",
+     "decodes": [
+      {
+       "text": "ديوانية",
+       "family": "XARAB_GLYPH_V1",
+       "unknown": [],
+       "state": "DECODED",
+       "source": "™Z‘aNZy"
+      }
+     ],
+     "corroboration": {
+      "state": "CORROBORATED",
+      "matched": [
+       "ديوانية"
+      ],
+      "expected_any_of": [
+       "ديوانية"
+      ]
+     },
+     "x": -158081.683166,
+     "y": -801985.388873,
+     "text_keys": [
+      "ALSENAN_P7757_DXF|H434|431|TEXT|0",
+      "ALSENAN_P7757_DXF|H435|431|TEXT|0"
+     ]
+    },
+    {
+     "occurrence": "456",
+     "english": "W.C",
+     "arabic": "مرحاض",
+     "decodes": [
+      {
+       "text": "مرحاض",
+       "family": "XARAB_GLYPH_V1",
+       "unknown": [],
+       "state": "DECODED",
+       "source": "M—HAe"
+      }
+     ],
+     "corroboration": {
+      "state": "CORROBORATED",
+      "matched": [
+       "مرحاض"
+      ],
+      "expected_any_of": [
+       "حمام",
+       "دورة مياه",
+       "مرحاض"
+      ]
+     },
+     "x": -151338.920748,
+     "y": -804416.171722,
+     "text_keys": [
+      "ALSENAN_P7757_DXF|H459|456|TEXT|0",
+      "ALSENAN_P7757_DXF|H460|456|TEXT|0"
+     ]
+    },
+    {
+     "occurrence": "496",
+     "english": "Wash",
+     "arabic": "مغسلة",
+     "decodes": [
+      {
+       "text": "مغسلة",
+       "family": "XARAB_GLYPH_V1",
+       "unknown": [],
+       "state": "DECODED",
+       "source": "MOSLy"
+      }
+     ],
+     "corroboration": {
+      "state": "CORROBORATED",
+      "matched": [
+       "مغسلة"
+      ],
+      "expected_any_of": [
+       "مغاسل",
+       "مغسلة"
+      ]
+     },
+     "x": -155788.034567,
+     "y": -801690.67634,
+     "text_keys": [
+      "ALSENAN_P7757_DXF|H500|496|TEXT|0",
+      "ALSENAN_P7757_DXF|H501|496|TEXT|0"
+     ]
+    },
+    {
+     "occurrence": "503",
+     "english": "W.C",
+     "arabic": "مرحاض",
+     "decodes": [
+      {
+       "text": "مرحاض",
+       "family": "XARAB_GLYPH_V1",
+       "unknown": [],
+       "state": "DECODED",
+       "source": "M—HAe"
+      }
+     ],
+     "corroboration": {
+      "state": "CORROBORATED",
+      "matched": [
+       "مرحاض"
+      ],
+      "expected_any_of": [
+       "حمام",
+       "دورة مياه",
+       "مرحاض"
+      ]
+     },
+     "x": -155020.428938,
+     "y": -804031.013108,
+     "text_keys": [
+      "ALSENAN_P7757_DXF|H459|503|TEXT|0",
+      "ALSENAN_P7757_DXF|H460|503|TEXT|0"
+     ]
+    },
+    {
+     "occurrence": "630",
+     "english": "KITCHEN",
+     "arabic": "مطبخ",
+     "decodes": [
+      {
+       "text": "مطبخ",
+       "family": "XARAB_GLYPH_V1",
+       "unknown": [],
+       "state": "DECODED",
+       "source": "M“B¢"
+      }
+     ],
+     "corroboration": {
+      "state": "CORROBORATED",
+      "matched": [
+       "مطبخ"
+      ],
+      "expected_any_of": [
+       "مطبخ"
+      ]
+     },
+     "x": -150859.071945,
+     "y": -802430.544216,
+     "text_keys": [
+      "ALSENAN_P7757_DXF|H634|630|TEXT|0",
+      "ALSENAN_P7757_DXF|H635|630|TEXT|0"
+     ]
+    },
+    {
+     "occurrence": "673",
+     "english": "DINING",
+     "arabic": "طعام",
+     "decodes": [
+      {
+       "text": "طعام",
+       "family": "XARAB_GLYPH_V1",
+       "unknown": [],
+       "state": "DECODED",
+       "source": "“Ia²"
+      }
+     ],
+     "corroboration": {
+      "state": "CORROBORATED",
+      "matched": [
+       "طعام"
+      ],
+      "expected_any_of": [
+       "طعام"
+      ]
+     },
+     "x": -143072.775122,
+     "y": -800810.284469,
+     "text_keys": [
+      "ALSENAN_P7757_DXF|H676|673|TEXT|0",
+      "ALSENAN_P7757_DXF|H681|673|TEXT|0"
+     ]
+    },
+    {
+     "occurrence": "709",
+     "english": "Wash",
+     "arabic": "مغسلة",
+     "decodes": [
+      {
+       "text": "مغسلة",
+       "family": "XARAB_GLYPH_V1",
+       "unknown": [],
+       "state": "DECODED",
+       "source": "MOSLy"
+      }
+     ],
+     "corroboration": {
+      "state": "CORROBORATED",
+      "matched": [
+       "مغسلة"
+      ],
+      "expected_any_of": [
+       "مغاسل",
+       "مغسلة"
+      ]
+     },
+     "x": -139605.064959,
+     "y": -795048.688658,
+     "text_keys": [
+      "ALSENAN_P7757_DXF|H500|709|TEXT|0",
+      "ALSENAN_P7757_DXF|H501|709|TEXT|0"
+     ]
+    },
+    {
+     "occurrence": "717",
+     "english": "DRIVER",
+     "arabic": "سائق",
+     "decodes": [
+      {
+       "text": "سائق",
+       "family": "ARABIC_KEYBOARD_101",
+       "unknown": [],
+       "state": "DECODED",
+       "source": "shzR"
+      }
+     ],
+     "corroboration": {
+      "state": "CORROBORATED",
+      "matched": [
+       "سائق"
+      ],
+      "expected_any_of": [
+       "سائق"
+      ]
+     },
+     "x": -153226.607471,
+     "y": -802656.497031,
+     "text_keys": [
+      "ALSENAN_P7757_DXF|H720|717|TEXT|0",
+      "ALSENAN_P7757_DXF|H724|717|TEXT|0"
+     ]
+    },
+    {
+     "occurrence": "730",
+     "english": "W.C",
+     "arabic": "مرحاض",
+     "decodes": [
+      {
+       "text": "مرحاض",
+       "family": "XARAB_GLYPH_V1",
+       "unknown": [],
+       "state": "DECODED",
+       "source": "M—HAe"
+      }
+     ],
+     "corroboration": {
+      "state": "CORROBORATED",
+      "matched": [
+       "مرحاض"
+      ],
+      "expected_any_of": [
+       "حمام",
+       "دورة مياه",
+       "مرحاض"
+      ]
+     },
+     "x": -141444.449666,
+     "y": -792979.479237,
+     "text_keys": [
+      "ALSENAN_P7757_DXF|H459|730|TEXT|0",
+      "ALSENAN_P7757_DXF|H460|730|TEXT|0"
+     ]
+    },
+    {
+     "occurrence": "771",
+     "english": "MASTER BED ROOM",
+     "arabic": "غرفةنومرئيسية",
+     "decodes": [
+      {
+       "text": "غرفةنومرئيسية",
+       "family": "XARAB_GLYPH_V1",
+       "unknown": [],
+       "state": "DECODED",
+       "source": "O—FtN‘²—XZS‚Zt"
+      }
+     ],
+     "corroboration": {
+      "state": "CORROBORATED",
+      "matched": [
+       "رئيسية",
+       "نوم"
+      ],
+      "expected_any_of": [
+       "رئيسية",
+       "نوم"
+      ]
+     },
+     "x": -134663.769215,
+     "y": -793977.508059,
+     "text_keys": [
+      "ALSENAN_P7757_DXF|H774|771|TEXT|0",
+      "ALSENAN_P7757_DXF|H775|771|TEXT|0"
+     ]
+    },
+    {
+     "occurrence": "785",
+     "english": "GARDEN",
+     "arabic": "حديقة",
+     "decodes": [
+      {
+       "text": "حديقة",
+       "family": "XARAB_GLYPH_V1",
+       "unknown": [],
+       "state": "DECODED",
+       "source": "H™ZQy"
+      }
+     ],
+     "corroboration": {
+      "state": "CORROBORATED",
+      "matched": [
+       "حديقة"
+      ],
+      "expected_any_of": [
+       "حديقة"
+      ]
+     },
+     "x": -137237.264171,
+     "y": -804439.704105,
+     "text_keys": [
+      "ALSENAN_P7757_DXF|H788|785|TEXT|0",
+      "ALSENAN_P7757_DXF|H789|785|TEXT|0"
+     ]
+    },
+    {
+     "occurrence": "802",
+     "english": "W.C",
+     "arabic": "مرحاض",
+     "decodes": [
+      {
+       "text": "مرحاض",
+       "family": "XARAB_GLYPH_V1",
+       "unknown": [],
+       "state": "DECODED",
+       "source": "M—HAe"
+      }
+     ],
+     "corroboration": {
+      "state": "CORROBORATED",
+      "matched": [
+       "مرحاض"
+      ],
+      "expected_any_of": [
+       "حمام",
+       "دورة مياه",
+       "مرحاض"
+      ]
+     },
+     "x": -139277.354068,
+     "y": -792683.101228,
+     "text_keys": [
+      "ALSENAN_P7757_DXF|H459|802|TEXT|0",
+      "ALSENAN_P7757_DXF|H460|802|TEXT|0"
+     ]
+    },
+    {
+     "occurrence": "803",
+     "english": "W.C",
+     "arabic": "مرحاض",
+     "decodes": [
+      {
+       "text": "مرحاض",
+       "family": "XARAB_GLYPH_V1",
+       "unknown": [],
+       "state": "DECODED",
+       "source": "M—HAe"
+      }
+     ],
+     "corroboration": {
+      "state": "CORROBORATED",
+      "matched": [
+       "مرحاض"
+      ],
+      "expected_any_of": [
+       "حمام",
+       "دورة مياه",
+       "مرحاض"
+      ]
+     },
+     "x": -140088.148716,
+     "y": -793486.816659,
+     "text_keys": [
+      "ALSENAN_P7757_DXF|H459|803|TEXT|0",
+      "ALSENAN_P7757_DXF|H460|803|TEXT|0"
+     ]
+    }
+   ],
+   "doors": {
+    "I1023": {
+     "state": "OPENING_CLOSURE_UNRESOLVED",
+     "rule": "NEAR_COLLINEAR_RAY_HIT_V1",
+     "why": "no leaf hypothesis lands on admitted boundaries at both ends"
+    },
+    "I350": {
+     "state": "CLOSED",
+     "closure_a": "CLOSURE|I350|A",
+     "closure_b": "CLOSURE|I350|B",
+     "closure_b_rule": "JAMB_FRAME_CLOSURE_B_V1"
+    },
+    "I402": {
+     "state": "CLOSED",
+     "closure_a": "CLOSURE|I402|A",
+     "closure_b": "CLOSURE|I402|B",
+     "closure_b_rule": "JAMB_FRAME_CLOSURE_B_V1"
+    },
+    "I414": {
+     "state": "CLOSED",
+     "closure_a": "CLOSURE|I414|A",
+     "closure_b": "CLOSURE|I414|B",
+     "closure_b_rule": "JAMB_FRAME_CLOSURE_B_V1"
+    },
+    "I437": {
+     "state": "CLOSED",
+     "closure_a": "CLOSURE|I437|A",
+     "closure_b": "CLOSURE|I437|B",
+     "closure_b_rule": "JAMB_FRAME_CLOSURE_B_V1"
+    },
+    "I495": {
+     "state": "CLOSED",
+     "closure_a": "CLOSURE|I495|A",
+     "closure_b": "CLOSURE|I495|B",
+     "closure_b_rule": "JAMB_FRAME_CLOSURE_B_V1"
+    },
+    "I711": {
+     "state": "CLOSED",
+     "closure_a": "CLOSURE|I711|A",
+     "closure_b": "CLOSURE|I711|B",
+     "closure_b_rule": "JAMB_FRAME_CLOSURE_B_V1"
+    },
+    "I754": {
+     "state": "CLOSED",
+     "closure_a": "CLOSURE|I754|A",
+     "closure_b": "CLOSURE|I754|B",
+     "closure_b_rule": "JAMB_FRAME_CLOSURE_B_V1"
+    },
+    "I800": {
+     "state": "CLOSED",
+     "closure_a": "CLOSURE|I800|A",
+     "closure_b": "CLOSURE|I800|B",
+     "closure_b_rule": "JAMB_FRAME_CLOSURE_B_V1"
+    },
+    "I801": {
+     "state": "CLOSED",
+     "closure_a": "CLOSURE|I801|A",
+     "closure_b": "CLOSURE|I801|B",
+     "closure_b_rule": "JAMB_FRAME_CLOSURE_B_V1"
+    },
+    "I825": {
+     "state": "CLOSED",
+     "closure_a": "CLOSURE|I825|A",
+     "closure_b": "CLOSURE|I825|B",
+     "closure_b_rule": "JAMB_FRAME_CLOSURE_B_V1"
+    },
+    "I830": {
+     "state": "CLOSED",
+     "closure_a": "CLOSURE|I830|A",
+     "closure_b": "CLOSURE|I830|B",
+     "closure_b_rule": "JAMB_FRAME_CLOSURE_B_V1"
+    }
+   },
+   "wall_gaps": [
+    {
+     "gap_id": "GAP-5493730aaf0251e9",
+     "state": "RELEASED_ZERO_MATERIAL_CLOSURE",
+     "why": "door evidence in a clear wall gap between collinear bands with free ends",
+     "door_evidence": [
+      {
+       "occurrence": "641",
+       "kind": "DOUBLE_LEAF_DOOR",
+       "leaf_or_width": 1865.692942,
+       "arc_parts": [
+        "ALSENAN_P7757_DXF|H644|641|ARC|0",
+        "ALSENAN_P7757_DXF|H653|641|ARC|0"
+       ],
+       "radius": 933.87648
+      }
+     ],
+     "closures": [
+      {
+       "closure_id": "CLOSURE|641|A",
+       "geometry": [
+        -145039.855537,
+        -799593.540074,
+        -145039.855537,
+        -797593.540074
+       ]
+      },
+      {
+       "closure_id": "CLOSURE|641|B",
+       "geometry": [
+        -145239.855537,
+        -799593.540074,
+        -145239.855537,
+        -797593.540074
+       ]
+      }
+     ],
+     "gap_length": 2000.0,
+     "affects_wall_quantity": false,
+     "affects_finish_quantity": false
+    }
+   ],
+   "drafting_gaps": [
+    {
+     "closure_id": "CLOSURE|DRAFTING_GAP|ALSENAN_P7757_DXF|H1021||SEGMENT|0|29",
+     "rule": "DRAFTING_GAP_JOIN_V1",
+     "class": "DRAWING_GAP",
+     "from": "ALSENAN_P7757_DXF|H1021||SEGMENT|0",
+     "to": "ALSENAN_P7757_DXF|H697||SEGMENT|0",
+     "gap_native": 3.12597,
+     "end": [
+      -142689.855537,
+      -791793.540074
+     ],
+     "physical_material": "NONE",
+     "affects_wall_quantity": false,
+     "affects_finish_quantity": false,
+     "decision": "OD-V3-7"
+    },
+    {
+     "closure_id": "CLOSURE|DRAFTING_GAP|ALSENAN_P7757_DXF|H697||SEGMENT|0|349",
+     "rule": "DRAFTING_GAP_JOIN_V1",
+     "class": "DRAWING_GAP",
+     "from": "ALSENAN_P7757_DXF|H697||SEGMENT|0",
+     "to": "ALSENAN_P7757_DXF|H1021||SEGMENT|0",
+     "gap_native": 3.12597,
+     "end": [
+      -142686.729567,
+      -791793.540074
+     ],
+     "physical_material": "NONE",
+     "affects_wall_quantity": false,
+     "affects_finish_quantity": false,
+     "decision": "OD-V3-7"
+    }
+   ],
+   "double_leaf": {
+    "641": {
+     "width": 1865.692942,
+     "radius": 933.87648,
+     "arc_parts": [
+      "ALSENAN_P7757_DXF|H644|641|ARC|0",
+      "ALSENAN_P7757_DXF|H653|641|ARC|0"
+     ],
+     "kind": "DOUBLE_LEAF_DOOR"
+    }
+   },
+   "closures_added": [
+    "CLOSURE|641|A",
+    "CLOSURE|641|B",
+    "CLOSURE|DRAFTING_GAP|ALSENAN_P7757_DXF|H1021||SEGMENT|0|29",
+    "CLOSURE|DRAFTING_GAP|ALSENAN_P7757_DXF|H697||SEGMENT|0|349",
+    "CLOSURE|I350|B",
+    "CLOSURE|I402|B",
+    "CLOSURE|I414|B",
+    "CLOSURE|I437|B",
+    "CLOSURE|I495|B",
+    "CLOSURE|I711|B",
+    "CLOSURE|I754|B",
+    "CLOSURE|I800|B",
+    "CLOSURE|I801|B",
+    "CLOSURE|I825|B",
+    "CLOSURE|I830|B"
+   ]
+  },
+  "1F": {
+   "sites_frozen": 154,
+   "sites_v3": 161,
+   "labels_established_frozen": 24,
+   "labels_established_v3": 30,
+   "text_role_changes": {
+    "ALSENAN_P7757_DXF|H2948|2945|TEXT|0": [
+     "ROOM_LABEL_CANDIDATE",
+     "ROOM_LABEL_ESTABLISHED",
+     "TR-V3-B"
+    ],
+    "ALSENAN_P7757_DXF|H2948|2957|TEXT|0": [
+     "ROOM_LABEL_CANDIDATE",
+     "ROOM_LABEL_ESTABLISHED",
+     "TR-V3-B"
+    ],
+    "ALSENAN_P7757_DXF|H2949|2945|TEXT|0": [
+     "ROOM_LABEL_CANDIDATE",
+     "ROOM_LABEL_ESTABLISHED",
+     "TR-V3-B"
+    ],
+    "ALSENAN_P7757_DXF|H2949|2957|TEXT|0": [
+     "ROOM_LABEL_CANDIDATE",
+     "ROOM_LABEL_ESTABLISHED",
+     "TR-V3-B"
+    ],
+    "ALSENAN_P7757_DXF|H2954|2951|TEXT|0": [
+     "ROOM_LABEL_CANDIDATE",
+     "ROOM_LABEL_ESTABLISHED",
+     "TR-V3-B"
+    ],
+    "ALSENAN_P7757_DXF|H2955|2951|TEXT|0": [
+     "ROOM_LABEL_CANDIDATE",
+     "ROOM_LABEL_ESTABLISHED",
+     "TR-V3-B"
+    ]
+   },
+   "decoded_labels": [
+    {
+     "occurrence": "2938",
+     "english": "VOID",
+     "arabic": "منور",
+     "decodes": [
+      {
+       "text": "منور",
+       "family": "XARAB_GLYPH_V1",
+       "unknown": [],
+       "state": "DECODED",
+       "source": "MN‘—"
+      }
+     ],
+     "corroboration": {
+      "state": "CORROBORATED",
+      "matched": [
+       "منور"
+      ],
+      "expected_any_of": [
+       "فراغ",
+       "منور"
+      ]
+     },
+     "x": -182843.273185,
+     "y": -800537.601781,
+     "text_keys": [
+      "ALSENAN_P7757_DXF|H2942|2938|TEXT|0",
+      "ALSENAN_P7757_DXF|H2943|2938|TEXT|0"
+     ]
+    },
+    {
+     "occurrence": "2945",
+     "english": "ROOF",
+     "arabic": "سطح",
+     "decodes": [
+      {
+       "text": "سطح",
+       "family": "XARAB_GLYPH_V1",
+       "unknown": [],
+       "state": "DECODED",
+       "source": "S“h"
+      }
+     ],
+     "corroboration": {
+      "state": "CORROBORATED",
+      "matched": [
+       "سطح"
+      ],
+      "expected_any_of": [
+       "سطح"
+      ]
+     },
+     "x": -174573.449319,
+     "y": -802141.5596,
+     "text_keys": [
+      "ALSENAN_P7757_DXF|H2948|2945|TEXT|0",
+      "ALSENAN_P7757_DXF|H2949|2945|TEXT|0"
+     ]
+    },
+    {
+     "occurrence": "2951",
+     "english": "LIVING AREA",
+     "arabic": "معيشة",
+     "decodes": [
+      {
+       "text": "معيشة",
+       "family": "XARAB_GLYPH_V1",
+       "unknown": [],
+       "state": "DECODED",
+       "source": "MPZDy"
+      }
+     ],
+     "corroboration": {
+      "state": "CORROBORATED",
+      "matched": [
+       "معيشة"
+      ],
+      "expected_any_of": [
+       "صالة",
+       "معيشة"
+      ]
+     },
+     "x": -177771.525281,
+     "y": -800892.551091,
+     "text_keys": [
+      "ALSENAN_P7757_DXF|H2954|2951|TEXT|0",
+      "ALSENAN_P7757_DXF|H2955|2951|TEXT|0"
+     ]
+    },
+    {
+     "occurrence": "2957",
+     "english": "ROOF",
+     "arabic": "سطح",
+     "decodes": [
+      {
+       "text": "سطح",
+       "family": "XARAB_GLYPH_V1",
+       "unknown": [],
+       "state": "DECODED",
+       "source": "S“h"
+      }
+     ],
+     "corroboration": {
+      "state": "CORROBORATED",
+      "matched": [
+       "سطح"
+      ],
+      "expected_any_of": [
+       "سطح"
+      ]
+     },
+     "x": -200921.769394,
+     "y": -802375.033545,
+     "text_keys": [
+      "ALSENAN_P7757_DXF|H2948|2957|TEXT|0",
+      "ALSENAN_P7757_DXF|H2949|2957|TEXT|0"
+     ]
+    },
+    {
+     "occurrence": "2958",
+     "english": "MASTER BED ROOM",
+     "arabic": "غرفةنومرئيسية",
+     "decodes": [
+      {
+       "text": "غرفةنومرئيسية",
+       "family": "XARAB_GLYPH_V1",
+       "unknown": [],
+       "state": "DECODED",
+       "source": "O—FtN‘²—XZS‚Zt"
+      }
+     ],
+     "corroboration": {
+      "state": "CORROBORATED",
+      "matched": [
+       "رئيسية",
+       "نوم"
+      ],
+      "expected_any_of": [
+       "رئيسية",
+       "نوم"
+      ]
+     },
+     "x": -192318.617801,
+     "y": -798841.687813,
+     "text_keys": [
+      "ALSENAN_P7757_DXF|H774|2958/2961|TEXT|0",
+      "ALSENAN_P7757_DXF|H775|2958/2961|TEXT|0"
+     ]
+    },
+    {
+     "occurrence": "3007",
+     "english": "VOID",
+     "arabic": "منور",
+     "decodes": [
+      {
+       "text": "منور",
+       "family": "XARAB_GLYPH_V1",
+       "unknown": [],
+       "state": "DECODED",
+       "source": "MN‘—"
+      }
+     ],
+     "corroboration": {
+      "state": "CORROBORATED",
+      "matched": [
+       "منور"
+      ],
+      "expected_any_of": [
+       "فراغ",
+       "منور"
+      ]
+     },
+     "x": -175098.533958,
+     "y": -794168.571087,
+     "text_keys": [
+      "ALSENAN_P7757_DXF|H2942|3007|TEXT|0",
+      "ALSENAN_P7757_DXF|H2943|3007|TEXT|0"
+     ]
+    },
+    {
+     "occurrence": "3037",
+     "english": "LAUNDRY",
+     "arabic": "غسيل",
+     "decodes": [
+      {
+       "text": "غسيل",
+       "family": "XARAB_GLYPH_V1",
+       "unknown": [],
+       "state": "DECODED",
+       "source": "OSZl"
+      }
+     ],
+     "corroboration": {
+      "state": "CORROBORATED",
+      "matched": [
+       "غسيل"
+      ],
+      "expected_any_of": [
+       "غسيل"
+      ]
+     },
+     "x": -186073.799427,
+     "y": -793554.701919,
+     "text_keys": [
+      "ALSENAN_P7757_DXF|H3040|3037|TEXT|0",
+      "ALSENAN_P7757_DXF|H3041|3037|TEXT|0"
+     ]
+    },
+    {
+     "occurrence": "3072",
+     "english": "MASTER BED ROOM",
+     "arabic": "غرفةنومرئيسية",
+     "decodes": [
+      {
+       "text": "غرفةنومرئيسية",
+       "family": "XARAB_GLYPH_V1",
+       "unknown": [],
+       "state": "DECODED",
+       "source": "O—FtN‘²—XZS‚Zt"
+      }
+     ],
+     "corroboration": {
+      "state": "CORROBORATED",
+      "matched": [
+       "رئيسية",
+       "نوم"
+      ],
+      "expected_any_of": [
+       "رئيسية",
+       "نوم"
+      ]
+     },
+     "x": -177927.456218,
+     "y": -793793.382548,
+     "text_keys": [
+      "ALSENAN_P7757_DXF|H774|3072/2961|TEXT|0",
+      "ALSENAN_P7757_DXF|H775|3072/2961|TEXT|0"
+     ]
+    },
+    {
+     "occurrence": "3073",
+     "english": "BATH",
+     "arabic": "حمام",
+     "decodes": [
+      {
+       "text": "حمام",
+       "family": "XARAB_GLYPH_V1",
+       "unknown": [],
+       "state": "DECODED",
+       "source": "HMam"
+      }
+     ],
+     "corroboration": {
+      "state": "CORROBORATED",
+      "matched": [
+       "حمام"
+      ],
+      "expected_any_of": [
+       "حمام"
+      ]
+     },
+     "x": -182514.783495,
+     "y": -793036.972989,
+     "text_keys": [
+      "ALSENAN_P7757_DXF|H3077|3073|TEXT|0",
+      "ALSENAN_P7757_DXF|H3078|3073|TEXT|0"
+     ]
+    },
+    {
+     "occurrence": "3080",
+     "english": "MASTER BED ROOM",
+     "arabic": "غرفةنومرئيسية",
+     "decodes": [
+      {
+       "text": "غرفةنومرئيسية",
+       "family": "XARAB_GLYPH_V1",
+       "unknown": [],
+       "state": "DECODED",
+       "source": "O—FtN‘²—XZS‚Zt"
+      }
+     ],
+     "corroboration": {
+      "state": "CORROBORATED",
+      "matched": [
+       "رئيسية",
+       "نوم"
+      ],
+      "expected_any_of": [
+       "رئيسية",
+       "نوم"
+      ]
+     },
+     "x": -181654.308098,
+     "y": -796130.202633,
+     "text_keys": [
+      "ALSENAN_P7757_DXF|H774|3080/2961|TEXT|0",
+      "ALSENAN_P7757_DXF|H775|3080/2961|TEXT|0"
+     ]
+    },
+    {
+     "occurrence": "3089",
+     "english": "BATH",
+     "arabic": "حمام",
+     "decodes": [
+      {
+       "text": "حمام",
+       "family": "XARAB_GLYPH_V1",
+       "unknown": [],
+       "state": "DECODED",
+       "source": "HMam"
+      }
+     ],
+     "corroboration": {
+      "state": "CORROBORATED",
+      "matched": [
+       "حمام"
+      ],
+      "expected_any_of": [
+       "حمام"
+      ]
+     },
+     "x": -176141.8083,
+     "y": -797075.903136,
+     "text_keys": [
+      "ALSENAN_P7757_DXF|H3077|3089|TEXT|0",
+      "ALSENAN_P7757_DXF|H3078|3089|TEXT|0"
+     ]
+    },
+    {
+     "occurrence": "3097",
+     "english": "W.C",
+     "arabic": "مرحاض",
+     "decodes": [
+      {
+       "text": "مرحاض",
+       "family": "XARAB_GLYPH_V1",
+       "unknown": [],
+       "state": "DECODED",
+       "source": "M—HAe"
+      }
+     ],
+     "corroboration": {
+      "state": "CORROBORATED",
+      "matched": [
+       "مرحاض"
+      ],
+      "expected_any_of": [
+       "حمام",
+       "دورة مياه",
+       "مرحاض"
+      ]
+     },
+     "x": -184463.177435,
+     "y": -793034.689814,
+     "text_keys": [
+      "ALSENAN_P7757_DXF|H459|3097|TEXT|0",
+      "ALSENAN_P7757_DXF|H460|3097|TEXT|0"
+     ]
+    },
+    {
+     "occurrence": "3116",
+     "english": "BATH",
+     "arabic": "حمام",
+     "decodes": [
+      {
+       "text": "حمام",
+       "family": "XARAB_GLYPH_V1",
+       "unknown": [],
+       "state": "DECODED",
+       "source": "HMam"
+      }
+     ],
+     "corroboration": {
+      "state": "CORROBORATED",
+      "matched": [
+       "حمام"
+      ],
+      "expected_any_of": [
+       "حمام"
+      ]
+     },
+     "x": -190923.203488,
+     "y": -802417.514323,
+     "text_keys": [
+      "ALSENAN_P7757_DXF|H3077|3116|TEXT|0",
+      "ALSENAN_P7757_DXF|H3078|3116|TEXT|0"
+     ]
+    },
+    {
+     "occurrence": "3119",
+     "english": "BATH",
+     "arabic": "حمام",
+     "decodes": [
+      {
+       "text": "حمام",
+       "family": "XARAB_GLYPH_V1",
+       "unknown": [],
+       "state": "DECODED",
+       "source": "HMam"
+      }
+     ],
+     "corroboration": {
+      "state": "CORROBORATED",
+      "matched": [
+       "حمام"
+      ],
+      "expected_any_of": [
+       "حمام"
+      ]
+     },
+     "x": -193191.104101,
+     "y": -802417.514323,
+     "text_keys": [
+      "ALSENAN_P7757_DXF|H3077|3119|TEXT|0",
+      "ALSENAN_P7757_DXF|H3078|3119|TEXT|0"
+     ]
+    },
+    {
+     "occurrence": "3120",
+     "english": "MASTER BED ROOM",
+     "arabic": "غرفةنومرئيسية",
+     "decodes": [
+      {
+       "text": "غرفةنومرئيسية",
+       "family": "XARAB_GLYPH_V1",
+       "unknown": [],
+       "state": "DECODED",
+       "source": "O—FtN‘²—XZS‚Zt"
+      }
+     ],
+     "corroboration": {
+      "state": "CORROBORATED",
+      "matched": [
+       "رئيسية",
+       "نوم"
+      ],
+      "expected_any_of": [
+       "رئيسية",
+       "نوم"
+      ]
+     },
+     "x": -188096.34095,
+     "y": -801083.499002,
+     "text_keys": [
+      "ALSENAN_P7757_DXF|H774|3120/2961|TEXT|0",
+      "ALSENAN_P7757_DXF|H775|3120/2961|TEXT|0"
+     ]
+    }
+   ],
+   "doors": {
+    "I3054": {
+     "state": "CLOSED",
+     "closure_a": "CLOSURE|I3054|A",
+     "closure_b": "CLOSURE|I3054|B",
+     "closure_b_rule": "JAMB_FRAME_CLOSURE_B_V1"
+    },
+    "I3055": {
+     "state": "CLOSED",
+     "rule": "NEAR_COLLINEAR_RAY_HIT_V1",
+     "closure_a": "CLOSURE|I3055|A",
+     "closure_b": "CLOSURE|I3055|B",
+     "closure_b_rule": "JAMB_FRAME_CLOSURE_B_V1"
+    },
+    "I3090": {
+     "state": "CLOSED",
+     "closure_a": "CLOSURE|I3090|A",
+     "closure_b": "CLOSURE|I3090|B",
+     "closure_b_rule": "JAMB_FRAME_CLOSURE_B_V1"
+    },
+    "I3096": {
+     "state": "CLOSED",
+     "closure_a": "CLOSURE|I3096|A",
+     "closure_b": "CLOSURE|I3096|B",
+     "closure_b_rule": "JAMB_FRAME_CLOSURE_B_V1"
+    },
+    "I3098": {
+     "state": "CLOSED",
+     "closure_a": "CLOSURE|I3098|A",
+     "closure_b": "CLOSURE|I3098|B",
+     "closure_b_rule": "JAMB_FRAME_CLOSURE_B_V1"
+    },
+    "I3115": {
+     "state": "CLOSED",
+     "closure_a": "CLOSURE|I3115|A",
+     "closure_b": "CLOSURE|I3115|B",
+     "closure_b_rule": "JAMB_FRAME_CLOSURE_B_V1"
+    },
+    "I3118": {
+     "state": "CLOSED",
+     "closure_a": "CLOSURE|I3118|A",
+     "closure_b": "CLOSURE|I3118|B",
+     "closure_b_rule": "JAMB_FRAME_CLOSURE_B_V1"
+    },
+    "I3121": {
+     "state": "CLOSED",
+     "closure_a": "CLOSURE|I3121|A",
+     "closure_b": "CLOSURE|I3121|B",
+     "closure_b_rule": "JAMB_FRAME_CLOSURE_B_V1"
+    },
+    "I3122": {
+     "state": "CLOSED",
+     "closure_a": "CLOSURE|I3122|A",
+     "closure_b": "CLOSURE|I3122|B",
+     "closure_b_rule": "JAMB_FRAME_CLOSURE_B_V1"
+    },
+    "I4532": {
+     "state": "CLOSED",
+     "closure_a": "CLOSURE|I4532|A",
+     "closure_b": "CLOSURE|I4532|B",
+     "closure_b_rule": "JAMB_FRAME_CLOSURE_B_V1"
+    }
+   },
+   "wall_gaps": [],
+   "drafting_gaps": [
+    {
+     "closure_id": "CLOSURE|DRAFTING_GAP|ALSENAN_P7757_DXF|H2796||SEGMENT|0|144",
+     "rule": "DRAFTING_GAP_JOIN_V1",
+     "class": "DRAWING_GAP",
+     "from": "ALSENAN_P7757_DXF|H2796||SEGMENT|0",
+     "to": "ALSENAN_P7757_DXF|H2807||SEGMENT|0",
+     "gap_native": 2.798572,
+     "end": [
+      -186095.309163,
+      -803593.540074
+     ],
+     "physical_material": "NONE",
+     "affects_wall_quantity": false,
+     "affects_finish_quantity": false,
+     "decision": "OD-V3-7"
+    }
+   ],
+   "double_leaf": {},
+   "closures_added": [
+    "CLOSURE|DRAFTING_GAP|ALSENAN_P7757_DXF|H2796||SEGMENT|0|144",
+    "CLOSURE|I3054|B",
+    "CLOSURE|I3055|A",
+    "CLOSURE|I3055|B",
+    "CLOSURE|I3090|B",
+    "CLOSURE|I3096|B",
+    "CLOSURE|I3098|B",
+    "CLOSURE|I3115|B",
+    "CLOSURE|I3118|B",
+    "CLOSURE|I3121|B",
+    "CLOSURE|I3122|B",
+    "CLOSURE|I4532|B"
+   ]
+  },
+  "2F": {
+   "sites_frozen": 59,
+   "sites_v3": 61,
+   "labels_established_frozen": 0,
+   "labels_established_v3": 8,
+   "text_role_changes": {
+    "ALSENAN_P7757_DXF|H2948|4778|TEXT|0": [
+     "ROOM_LABEL_CANDIDATE",
+     "ROOM_LABEL_ESTABLISHED",
+     "TR-V3-B"
+    ],
+    "ALSENAN_P7757_DXF|H2948|4803|TEXT|0": [
+     "ROOM_LABEL_CANDIDATE",
+     "ROOM_LABEL_ESTABLISHED",
+     "TR-V3-B"
+    ],
+    "ALSENAN_P7757_DXF|H2949|4778|TEXT|0": [
+     "ROOM_LABEL_CANDIDATE",
+     "ROOM_LABEL_ESTABLISHED",
+     "TR-V3-B"
+    ],
+    "ALSENAN_P7757_DXF|H2949|4803|TEXT|0": [
+     "ROOM_LABEL_CANDIDATE",
+     "ROOM_LABEL_ESTABLISHED",
+     "TR-V3-B"
+    ],
+    "ALSENAN_P7757_DXF|H459|4790|TEXT|0": [
+     "ROOM_LABEL_CANDIDATE",
+     "ROOM_LABEL_ESTABLISHED",
+     "TR-04"
+    ],
+    "ALSENAN_P7757_DXF|H460|4790|TEXT|0": [
+     "ROOM_LABEL_CANDIDATE",
+     "ROOM_LABEL_ESTABLISHED",
+     "TR-04"
+    ],
+    "ALSENAN_P7757_DXF|H4799|4796|TEXT|0": [
+     "ROOM_LABEL_CANDIDATE",
+     "ROOM_LABEL_ESTABLISHED",
+     "TR-V3-B"
+    ],
+    "ALSENAN_P7757_DXF|H4800|4796|TEXT|0": [
+     "ROOM_LABEL_CANDIDATE",
+     "ROOM_LABEL_ESTABLISHED",
+     "TR-V3-B"
+    ]
+   },
+   "decoded_labels": [
+    {
+     "occurrence": "4778",
+     "english": "ROOF",
+     "arabic": "سطح",
+     "decodes": [
+      {
+       "text": "سطح",
+       "family": "XARAB_GLYPH_V1",
+       "unknown": [],
+       "state": "DECODED",
+       "source": "S“h"
+      }
+     ],
+     "corroboration": {
+      "state": "CORROBORATED",
+      "matched": [
+       "سطح"
+      ],
+      "expected_any_of": [
+       "سطح"
+      ]
+     },
+     "x": -229851.654195,
+     "y": -801628.719201,
+     "text_keys": [
+      "ALSENAN_P7757_DXF|H2948|4778|TEXT|0",
+      "ALSENAN_P7757_DXF|H2949|4778|TEXT|0"
+     ]
+    },
+    {
+     "occurrence": "4790",
+     "english": "W.C",
+     "arabic": "مرحاض",
+     "decodes": [
+      {
+       "text": "مرحاض",
+       "family": "XARAB_GLYPH_V1",
+       "unknown": [],
+       "state": "DECODED",
+       "source": "M—HAe"
+      }
+     ],
+     "corroboration": {
+      "state": "CORROBORATED",
+      "matched": [
+       "مرحاض"
+      ],
+      "expected_any_of": [
+       "حمام",
+       "دورة مياه",
+       "مرحاض"
+      ]
+     },
+     "x": -230908.746437,
+     "y": -793549.338265,
+     "text_keys": [
+      "ALSENAN_P7757_DXF|H459|4790|TEXT|0",
+      "ALSENAN_P7757_DXF|H460|4790|TEXT|0"
+     ]
+    },
+    {
+     "occurrence": "4796",
+     "english": "MAID R.",
+     "arabic": "غرفةخادمة",
+     "decodes": [
+      {
+       "text": "غرفةخادمة",
+       "family": "XARAB_GLYPH_V1",
+       "unknown": [],
+       "state": "DECODED",
+       "source": "O—F_yGa™M_y"
+      }
+     ],
+     "corroboration": {
+      "state": "CORROBORATED",
+      "matched": [
+       "خادمة",
+       "غرفة خادمة"
+      ],
+      "expected_any_of": [
+       "خادمة",
+       "غرفة خادمة"
+      ]
+     },
+     "x": -228372.183409,
+     "y": -795138.812418,
+     "text_keys": [
+      "ALSENAN_P7757_DXF|H4799|4796|TEXT|0",
+      "ALSENAN_P7757_DXF|H4800|4796|TEXT|0"
+     ]
+    },
+    {
+     "occurrence": "4803",
+     "english": "ROOF",
+     "arabic": "سطح",
+     "decodes": [
+      {
+       "text": "سطح",
+       "family": "XARAB_GLYPH_V1",
+       "unknown": [],
+       "state": "DECODED",
+       "source": "S“h"
+      }
+     ],
+     "corroboration": {
+      "state": "CORROBORATED",
+      "matched": [
+       "سطح"
+      ],
+      "expected_any_of": [
+       "سطح"
+      ]
+     },
+     "x": -223128.600034,
+     "y": -796724.36513,
+     "text_keys": [
+      "ALSENAN_P7757_DXF|H2948|4803|TEXT|0",
+      "ALSENAN_P7757_DXF|H2949|4803|TEXT|0"
+     ]
+    }
+   ],
+   "doors": {
+    "I4794": {
+     "state": "CLOSED",
+     "closure_a": "CLOSURE|I4794|A",
+     "closure_b": "CLOSURE|I4794|B",
+     "closure_b_rule": "JAMB_FRAME_CLOSURE_B_V1"
+    },
+    "I4795": {
+     "state": "CLOSED",
+     "closure_a": "CLOSURE|I4795|A",
+     "closure_b": "CLOSURE|I4795|B",
+     "closure_b_rule": "JAMB_FRAME_CLOSURE_B_V1"
+    },
+    "I4802": {
+     "state": "CLOSED",
+     "closure_a": "CLOSURE|I4802|A",
+     "closure_b": "CLOSURE|I4802|B",
+     "closure_b_rule": "JAMB_FRAME_CLOSURE_B_V1"
+    }
+   },
+   "wall_gaps": [],
+   "drafting_gaps": [],
+   "double_leaf": {},
+   "closures_added": [
+    "CLOSURE|I4794|B",
+    "CLOSURE|I4795|B",
+    "CLOSURE|I4802|B"
+   ]
+  }
+ },
+ "fonts_legacy": {
+  "235": "X-ARAB1B.SHX",
+  "246": "X-ARAB1B.SHX",
+  "256": "xarb.shx",
+  "379": "X-ARAB1B.SHX",
+  "386": "X-ARAB1B.SHX",
+  "392": "X-ARAB1B",
+  "399": "xarb.shx",
+  "406": "xarb.shx",
+  "434": "X-ARAB1B.SHX",
+  "460": "X-ARAB1B.SHX",
+  "501": "X-ARAB1B.SHX",
+  "635": "X-ARAB1B.SHX",
+  "681": "X-ARAB1B",
+  "720": "xarb.shx",
+  "750": "X-ARAB1B.SHX",
+  "774": "X-ARAB1B",
+  "788": "X-ARAB1B",
+  "920": "X-ARAB1B",
+  "2685": "xarb.shx",
+  "2942": "X-ARAB1B.SHX",
+  "2949": "X-ARAB1B.SHX",
+  "2955": "X-ARAB1B.SHX",
+  "3041": "X-ARAB1B.SHX",
+  "3078": "X-ARAB1B.SHX",
+  "3191": "X-ARAB1B",
+  "4800": "X-ARAB1B",
+  "4868": "X-ARAB1B",
+  "5492": "xarb.shx",
+  "5496": "xarb.shx",
+  "5500": "xarb.shx",
+  "5504": "xarb.shx",
+  "5505": "xarb.shx",
+  "5506": "xarb.shx",
+  "5507": "xarb.shx",
+  "5513": "xarb.shx",
+  "5517": "xarb.shx",
+  "5518": "xarb.shx",
+  "5519": "xarb.shx",
+  "5524": "xarb.shx",
+  "5528": "xarb.shx",
+  "5532": "xarb.shx",
+  "5536": "xarb.shx",
+  "5537": "xarb.shx",
+  "5538": "xarb.shx",
+  "5539": "xarb.shx",
+  "5545": "xarb.shx",
+  "5549": "xarb.shx",
+  "5550": "xarb.shx",
+  "5551": "xarb.shx",
+  "5556": "xarb.shx",
+  "5560": "xarb.shx",
+  "5564": "xarb.shx",
+  "5568": "xarb.shx",
+  "5569": "xarb.shx",
+  "5570": "xarb.shx",
+  "5571": "xarb.shx",
+  "5577": "xarb.shx",
+  "5581": "xarb.shx",
+  "5582": "xarb.shx",
+  "5583": "xarb.shx",
+  "5588": "xarb.shx",
+  "5592": "xarb.shx",
+  "5596": "xarb.shx",
+  "5600": "xarb.shx",
+  "5601": "xarb.shx",
+  "5602": "xarb.shx",
+  "5603": "xarb.shx",
+  "5609": "xarb.shx",
+  "5613": "xarb.shx",
+  "5614": "xarb.shx",
+  "5615": "xarb.shx",
+  "5620": "xarb.shx",
+  "5624": "xarb.shx",
+  "5628": "xarb.shx",
+  "5632": "xarb.shx",
+  "5633": "xarb.shx",
+  "5634": "xarb.shx",
+  "5635": "xarb.shx",
+  "5641": "xarb.shx",
+  "5645": "xarb.shx",
+  "5646": "xarb.shx",
+  "5647": "xarb.shx",
+  "9438": "X-ARAB1B",
+  "9440": "X-ARAB1B",
+  "10858": "X-ARAB1B",
+  "10859": "X-ARAB1B",
+  "12054": "xarb.shx",
+  "12055": "xarb.shx",
+  "12056": "xarb.shx",
+  "12057": "xarb.shx",
+  "12058": "xarb.shx"
+ },
+ "text_role_rule_counts": {
+  "GF": {
+   "GENERAL_NOTE|TR-09": 10,
+   "LEVEL_MARK|TR-08": 14,
+   "ROOM_LABEL_CANDIDATE|TR-06": 19,
+   "ROOM_LABEL_CANDIDATE|TR-10": 1,
+   "ROOM_LABEL_ESTABLISHED|TR-03": 14,
+   "ROOM_LABEL_ESTABLISHED|TR-04": 16,
+   "ROOM_LABEL_ESTABLISHED|TR-V3-B": 4,
+   "UNKNOWN_TEXT_ROLE|TR-99": 25
+  },
+  "1F": {
+   "GENERAL_NOTE|TR-09": 10,
+   "LEVEL_MARK|TR-08": 6,
+   "ROOM_LABEL_CANDIDATE|TR-06": 12,
+   "ROOM_LABEL_ESTABLISHED|TR-03": 22,
+   "ROOM_LABEL_ESTABLISHED|TR-04": 2,
+   "ROOM_LABEL_ESTABLISHED|TR-V3-B": 6,
+   "UNKNOWN_TEXT_ROLE|TR-99": 18
+  },
+  "2F": {
+   "GENERAL_NOTE|TR-09": 10,
+   "LEVEL_MARK|TR-08": 3,
+   "ROOM_LABEL_CANDIDATE|TR-06": 12,
+   "ROOM_LABEL_ESTABLISHED|TR-04": 2,
+   "ROOM_LABEL_ESTABLISHED|TR-V3-B": 6,
+   "UNKNOWN_TEXT_ROLE|TR-99": 18
+  }
+ }
+}

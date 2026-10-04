@@ -1,0 +1,44 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_V3_VOIDS_V1",
+ "items": [
+  {
+   "id": "1F-V01",
+   "floor": "1F",
+   "label": "ALSENAN_P7757_DXF|H2942|2938|TEXT|0",
+   "label_value": "منور",
+   "site": "SITE-60a08def069f0e48",
+   "evidence": {
+    "rule": "X-RECT",
+    "diagonal": "ALSENAN_P7757_DXF|H2936||SEGMENT|0",
+    "second": "ALSENAN_P7757_DXF|H2937||SEGMENT|0",
+    "rect_mm": [
+     5820.0,
+     2750.0
+    ]
+   },
+   "area_m2": 16.005,
+   "area_in_site_m2": 16.005,
+   "state": "COMPUTED"
+  },
+  {
+   "id": "1F-V02",
+   "floor": "1F",
+   "label": "ALSENAN_P7757_DXF|H2942|3007|TEXT|0",
+   "label_value": "منور",
+   "site": null,
+   "evidence": {
+    "rule": "ARCS",
+    "centre": [
+     -175472.5,
+     -794493.5
+    ],
+    "radius_mm": 1550.0,
+    "sweep_deg": 108.0
+   },
+   "area_m2": 7.546919,
+   "area_in_site_m2": 0.0,
+   "state": "VOID_EXTENT_UNRESOLVED"
+  }
+ ],
+ "rule": "VOID label + positive outline (X-marked rectangle or concentric arcs), clipped to the site holding the label; floor finish excludes it, the ceiling of the storey below excludes its projection (double height), the ceiling of its own storey keeps it"
+}

@@ -1,0 +1,553 @@
+{
+ "rows": [
+  {
+   "trade": "CONCRETE",
+   "item": "Plain concrete (blinding)",
+   "item_ar": "خرسانة عادية",
+   "unit": "m3",
+   "GF": 19.638,
+   "1F": 0.0,
+   "2F_ROOF": 0.0,
+   "OTHER_EXTERNAL": 0.0,
+   "total": 19.638,
+   "statuses": [
+    "COMPUTED"
+   ],
+   "status": "COMPUTED"
+  },
+  {
+   "trade": "CONCRETE",
+   "item": "Reinforced concrete",
+   "item_ar": "خرسانة مسلحة",
+   "unit": "m3",
+   "GF": 169.748,
+   "1F": 49.852,
+   "2F_ROOF": 16.543,
+   "OTHER_EXTERNAL": 0.0,
+   "total": 236.143,
+   "statuses": [
+    "BLOCKED",
+    "COMPUTED",
+    "PARTIAL",
+    "REVIEW"
+   ],
+   "status": "PARTIAL"
+  },
+  {
+   "trade": "REBAR",
+   "item": "Bar sets / members not computable",
+   "item_ar": "تسليح غير قابل للحساب",
+   "unit": "kg",
+   "GF": 0.0,
+   "1F": 0.0,
+   "2F_ROOF": 0.0,
+   "OTHER_EXTERNAL": 0.0,
+   "total": 0.0,
+   "statuses": [
+    "BLOCKED"
+   ],
+   "status": "BLOCKED"
+  },
+  {
+   "trade": "REBAR",
+   "item": "Net design weight (complete sets)",
+   "item_ar": "الوزن الصافي",
+   "unit": "kg",
+   "GF": 3852.664,
+   "1F": 1339.198,
+   "2F_ROOF": 1054.716,
+   "OTHER_EXTERNAL": 0.0,
+   "total": 6246.578,
+   "statuses": [
+    "COMPUTED"
+   ],
+   "status": "COMPUTED"
+  },
+  {
+   "trade": "REBAR",
+   "item": "Procurement weight incl. laps (complete sets)",
+   "item_ar": "وزن التوريد",
+   "unit": "kg",
+   "GF": 4160.931,
+   "1F": 1521.246,
+   "2F_ROOF": 1208.442,
+   "OTHER_EXTERNAL": 0.0,
+   "total": 6890.619,
+   "statuses": [
+    "COMPUTED"
+   ],
+   "status": "COMPUTED"
+  },
+  {
+   "trade": "REBAR",
+   "item": "Straight weight - sets with hooks not detailed",
+   "item_ar": "وزن مستقيم",
+   "unit": "kg",
+   "GF": 4040.371,
+   "1F": 1833.167,
+   "2F_ROOF": 728.303,
+   "OTHER_EXTERNAL": 0.0,
+   "total": 6601.841,
+   "statuses": [
+    "PARTIAL"
+   ],
+   "status": "PARTIAL"
+  },
+  {
+   "trade": "BLOCKWORK",
+   "item": "Blockwork 150 mm",
+   "item_ar": "طابوق 150 mm",
+   "unit": "m2",
+   "GF": 111.956,
+   "1F": 138.926,
+   "2F_ROOF": 33.06,
+   "OTHER_EXTERNAL": 0.0,
+   "total": 283.942,
+   "statuses": [
+    "COMPUTED",
+    "PARTIAL"
+   ],
+   "status": "PARTIAL"
+  },
+  {
+   "trade": "BLOCKWORK",
+   "item": "Blockwork 200 mm",
+   "item_ar": "طابوق 200 mm",
+   "unit": "m2",
+   "GF": 144.049,
+   "1F": 106.378,
+   "2F_ROOF": 75.885,
+   "OTHER_EXTERNAL": 0.0,
+   "total": 326.312,
+   "statuses": [
+    "COMPUTED",
+    "PARTIAL"
+   ],
+   "status": "PARTIAL"
+  },
+  {
+   "trade": "BLOCKWORK",
+   "item": "Blockwork OVER OPENINGS",
+   "item_ar": "طابوق OVER OPENINGS",
+   "unit": "m2",
+   "GF": 0.0,
+   "1F": 0.0,
+   "2F_ROOF": 0.0,
+   "OTHER_EXTERNAL": 0.0,
+   "total": 0.0,
+   "statuses": [
+    "BLOCKED"
+   ],
+   "status": "BLOCKED"
+  },
+  {
+   "trade": "BLOCKWORK",
+   "item": "Boundary wall blockwork",
+   "item_ar": "طابوق السور",
+   "unit": "m2",
+   "GF": 0.0,
+   "1F": 0.0,
+   "2F_ROOF": 0.0,
+   "OTHER_EXTERNAL": 0.0,
+   "total": 0.0,
+   "statuses": [
+    "BLOCKED"
+   ],
+   "status": "BLOCKED"
+  },
+  {
+   "trade": "BLOCKWORK",
+   "item": "Parapet blockwork",
+   "item_ar": "طابوق الدروة",
+   "unit": "m2",
+   "GF": 0.0,
+   "1F": 0.0,
+   "2F_ROOF": 75.763,
+   "OTHER_EXTERNAL": 0.0,
+   "total": 75.763,
+   "statuses": [
+    "COMPUTED"
+   ],
+   "status": "COMPUTED"
+  },
+  {
+   "trade": "PLASTER_PAINT",
+   "item": "External plaster / paint",
+   "item_ar": "لياسة خارجية",
+   "unit": "m2",
+   "GF": 0.0,
+   "1F": 0.0,
+   "2F_ROOF": 0.0,
+   "OTHER_EXTERNAL": 0.0,
+   "total": 0.0,
+   "statuses": [
+    "BLOCKED"
+   ],
+   "status": "BLOCKED"
+  },
+  {
+   "trade": "PLASTER_PAINT",
+   "item": "Extras (review)",
+   "item_ar": "إضافات",
+   "unit": "lm",
+   "GF": 0.0,
+   "1F": 0.0,
+   "2F_ROOF": 0.0,
+   "OTHER_EXTERNAL": 0.0,
+   "total": 0.0,
+   "statuses": [
+    "REVIEW"
+   ],
+   "status": "REVIEW"
+  },
+  {
+   "trade": "PLASTER_PAINT",
+   "item": "Extras (review)",
+   "item_ar": "إضافات",
+   "unit": "m2",
+   "GF": 0.0,
+   "1F": 0.0,
+   "2F_ROOF": 0.0,
+   "OTHER_EXTERNAL": 0.0,
+   "total": 0.0,
+   "statuses": [
+    "BLOCKED",
+    "REVIEW"
+   ],
+   "status": "REVIEW"
+  },
+  {
+   "trade": "PLASTER_PAINT",
+   "item": "Internal paint",
+   "item_ar": "دهان داخلي",
+   "unit": "m2",
+   "GF": 145.811,
+   "1F": 258.844,
+   "2F_ROOF": 120.98,
+   "OTHER_EXTERNAL": 0.0,
+   "total": 525.635,
+   "statuses": [
+    "BLOCKED",
+    "COMPUTED"
+   ],
+   "status": "PARTIAL"
+  },
+  {
+   "trade": "PLASTER_PAINT",
+   "item": "Internal plaster",
+   "item_ar": "لياسة داخلية",
+   "unit": "m2",
+   "GF": 986.559,
+   "1F": 753.219,
+   "2F_ROOF": 183.128,
+   "OTHER_EXTERNAL": 0.0,
+   "total": 1922.906,
+   "statuses": [
+    "COMPUTED",
+    "PARTIAL"
+   ],
+   "status": "PARTIAL"
+  },
+  {
+   "trade": "FLOORING_PORCELAIN",
+   "item": "Door thresholds",
+   "item_ar": "عتبات",
+   "unit": "m2",
+   "GF": 0.52,
+   "1F": 0.0,
+   "2F_ROOF": 0.0,
+   "OTHER_EXTERNAL": 0.0,
+   "total": 0.52,
+   "statuses": [
+    "COMPUTED"
+   ],
+   "status": "COMPUTED"
+  },
+  {
+   "trade": "FLOORING_PORCELAIN",
+   "item": "Floor finish",
+   "item_ar": "أرضيات",
+   "unit": "m2",
+   "GF": 240.995,
+   "1F": 162.729,
+   "2F_ROOF": 43.5,
+   "OTHER_EXTERNAL": 0.0,
+   "total": 447.224,
+   "statuses": [
+    "COMPUTED"
+   ],
+   "status": "COMPUTED"
+  },
+  {
+   "trade": "FLOORING_PORCELAIN",
+   "item": "Skirting",
+   "item_ar": "نعلات",
+   "unit": "lm",
+   "GF": 134.518,
+   "1F": 144.882,
+   "2F_ROOF": 32.9,
+   "OTHER_EXTERNAL": 0.0,
+   "total": 312.3,
+   "statuses": [
+    "COMPUTED"
+   ],
+   "status": "COMPUTED"
+  },
+  {
+   "trade": "CEILINGS",
+   "item": "Ceiling area",
+   "item_ar": "مساحة الأسقف",
+   "unit": "m2",
+   "GF": 224.99,
+   "1F": 178.734,
+   "2F_ROOF": 43.5,
+   "OTHER_EXTERNAL": 0.0,
+   "total": 447.224,
+   "statuses": [
+    "COMPUTED"
+   ],
+   "status": "COMPUTED"
+  },
+  {
+   "trade": "CEILINGS",
+   "item": "Cornice (review)",
+   "item_ar": "كرانيش",
+   "unit": "lm",
+   "GF": 0.0,
+   "1F": 0.0,
+   "2F_ROOF": 0.0,
+   "OTHER_EXTERNAL": 0.0,
+   "total": 0.0,
+   "statuses": [
+    "REVIEW"
+   ],
+   "status": "REVIEW"
+  },
+  {
+   "trade": "WALL_TILE_WATERPROOFING",
+   "item": "Foundation waterproofing / membrane",
+   "item_ar": "عزل الأساسات",
+   "unit": "m2",
+   "GF": 450.029,
+   "1F": 0.0,
+   "2F_ROOF": 0.0,
+   "OTHER_EXTERNAL": 0.0,
+   "total": 450.029,
+   "statuses": [
+    "COMPUTED"
+   ],
+   "status": "COMPUTED"
+  },
+  {
+   "trade": "WALL_TILE_WATERPROOFING",
+   "item": "Roof waterproofing",
+   "item_ar": "عزل الأسطح",
+   "unit": "m2",
+   "GF": 0.0,
+   "1F": 0.0,
+   "2F_ROOF": 364.031,
+   "OTHER_EXTERNAL": 0.0,
+   "total": 364.031,
+   "statuses": [
+    "COMPUTED"
+   ],
+   "status": "COMPUTED"
+  },
+  {
+   "trade": "WALL_TILE_WATERPROOFING",
+   "item": "Wall tile",
+   "item_ar": "سيراميك جدران",
+   "unit": "m2",
+   "GF": 226.64,
+   "1F": 139.318,
+   "2F_ROOF": 31.04,
+   "OTHER_EXTERNAL": 0.0,
+   "total": 396.998,
+   "statuses": [
+    "COMPUTED"
+   ],
+   "status": "COMPUTED"
+  },
+  {
+   "trade": "WALL_TILE_WATERPROOFING",
+   "item": "Wet-room waterproofing",
+   "item_ar": "عزل الحمامات",
+   "unit": "m2",
+   "GF": 36.998,
+   "1F": 28.852,
+   "2F_ROOF": 6.795,
+   "OTHER_EXTERNAL": 0.0,
+   "total": 72.645,
+   "statuses": [
+    "COMPUTED"
+   ],
+   "status": "COMPUTED"
+  },
+  {
+   "trade": "ALUMINIUM_OPENINGS",
+   "item": "Curved glazing area",
+   "item_ar": "مساحة الزجاج المنحني",
+   "unit": "m2",
+   "GF": 0.0,
+   "1F": 0.0,
+   "2F_ROOF": 0.0,
+   "OTHER_EXTERNAL": 0.0,
+   "total": 0.0,
+   "statuses": [
+    "BLOCKED"
+   ],
+   "status": "BLOCKED"
+  },
+  {
+   "trade": "ALUMINIUM_OPENINGS",
+   "item": "Curved glazing length",
+   "item_ar": "طول الزجاج المنحني",
+   "unit": "lm",
+   "GF": 6.725,
+   "1F": 0.0,
+   "2F_ROOF": 0.0,
+   "OTHER_EXTERNAL": 0.0,
+   "total": 6.725,
+   "statuses": [
+    "COMPUTED"
+   ],
+   "status": "COMPUTED"
+  },
+  {
+   "trade": "ALUMINIUM_OPENINGS",
+   "item": "Doors double leaf",
+   "item_ar": "أبواب ضلفتين",
+   "unit": "m2",
+   "GF": 0.0,
+   "1F": 0.0,
+   "2F_ROOF": 0.0,
+   "OTHER_EXTERNAL": 0.0,
+   "total": 0.0,
+   "statuses": [
+    "BLOCKED"
+   ],
+   "status": "BLOCKED"
+  },
+  {
+   "trade": "ALUMINIUM_OPENINGS",
+   "item": "Doors double leaf",
+   "item_ar": "أبواب ضلفتين",
+   "unit": "nr",
+   "GF": 1.0,
+   "1F": 0.0,
+   "2F_ROOF": 0.0,
+   "OTHER_EXTERNAL": 0.0,
+   "total": 1.0,
+   "statuses": [
+    "COMPUTED"
+   ],
+   "status": "COMPUTED"
+  },
+  {
+   "trade": "ALUMINIUM_OPENINGS",
+   "item": "Doors single leaf",
+   "item_ar": "أبواب",
+   "unit": "m2",
+   "GF": 0.0,
+   "1F": 0.0,
+   "2F_ROOF": 0.0,
+   "OTHER_EXTERNAL": 0.0,
+   "total": 0.0,
+   "statuses": [
+    "BLOCKED"
+   ],
+   "status": "BLOCKED"
+  },
+  {
+   "trade": "ALUMINIUM_OPENINGS",
+   "item": "Doors single leaf",
+   "item_ar": "أبواب",
+   "unit": "nr",
+   "GF": 13.0,
+   "1F": 10.0,
+   "2F_ROOF": 3.0,
+   "OTHER_EXTERNAL": 0.0,
+   "total": 26.0,
+   "statuses": [
+    "COMPUTED"
+   ],
+   "status": "COMPUTED"
+  },
+  {
+   "trade": "ALUMINIUM_OPENINGS",
+   "item": "Opening widths",
+   "item_ar": "عروض الفتحات",
+   "unit": "lm",
+   "GF": 35.767,
+   "1F": 22.306,
+   "2F_ROOF": 7.7,
+   "OTHER_EXTERNAL": 0.0,
+   "total": 65.773,
+   "statuses": [
+    "COMPUTED"
+   ],
+   "status": "COMPUTED"
+  },
+  {
+   "trade": "ALUMINIUM_OPENINGS",
+   "item": "Salon glazing",
+   "item_ar": "زجاج الصالون",
+   "unit": "m2",
+   "GF": 23.104,
+   "1F": 0.0,
+   "2F_ROOF": 0.0,
+   "OTHER_EXTERNAL": 0.0,
+   "total": 23.104,
+   "statuses": [
+    "COMPUTED"
+   ],
+   "status": "COMPUTED"
+  },
+  {
+   "trade": "ALUMINIUM_OPENINGS",
+   "item": "Windows / glazed openings",
+   "item_ar": "نوافذ",
+   "unit": "m2",
+   "GF": 0.0,
+   "1F": 0.0,
+   "2F_ROOF": 0.0,
+   "OTHER_EXTERNAL": 0.0,
+   "total": 0.0,
+   "statuses": [
+    "BLOCKED"
+   ],
+   "status": "BLOCKED"
+  },
+  {
+   "trade": "ALUMINIUM_OPENINGS",
+   "item": "Windows / glazed openings",
+   "item_ar": "نوافذ",
+   "unit": "nr",
+   "GF": 16.0,
+   "1F": 12.0,
+   "2F_ROOF": 5.0,
+   "OTHER_EXTERNAL": 0.0,
+   "total": 33.0,
+   "statuses": [
+    "COMPUTED"
+   ],
+   "status": "COMPUTED"
+  },
+  {
+   "trade": "STAIRS_RAILINGS",
+   "item": "Gallery railing",
+   "item_ar": "درابزين",
+   "unit": "lm",
+   "GF": 0.0,
+   "1F": 14.29,
+   "2F_ROOF": 0.0,
+   "OTHER_EXTERNAL": 0.0,
+   "total": 14.29,
+   "statuses": [
+    "COMPUTED"
+   ],
+   "status": "COMPUTED"
+  }
+ ],
+ "rule": "only COMPUTED and PARTIAL quantities of one unit per trade are added; REVIEW / BLOCKED lines are listed in the trade workbooks, never in a total"
+}
