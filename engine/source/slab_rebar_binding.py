@@ -21,7 +21,14 @@ Binding (never nearest text alone):
   5. Route B (check): the drawn bar length vs the clear span is reported, never used as the quantity.
 
 Diagonal (corner) bars are bars like any other: their direction is their own angle. A record whose width or span is
-open (a ray found no support) is UNBOUND, never estimated. Units: model units (mm). Stdlib only, project-agnostic.
+open (a ray found no support) is UNBOUND, never estimated - except a COUNT annotation bound to a drawn bar whose span
+rays are open (an edge / cantilever bar outside the panel grid): DRAWN_EXTENT, length = the drawn developed length of
+the bar (a polyline bar with its bends), reported as such for the caller to label.
+A drawn bar may be a polyline ("path": [(x, y), ...]): its direction is its longest leg, its drawn length the developed
+length of the path.
+dedupe(records): a later annotation with the same bar family (kind, n, Ø, top) and direction over the same panel
+(the clear panel rectangle in the bar frame, rounded to PANEL_ROUND) is DUPLICATE_LABEL and never counted.
+Units: model units (mm). Stdlib only, project-agnostic.
 """
 
 from __future__ import annotations
@@ -39,6 +46,7 @@ MIN_HIT = 30.0
 MAX_RAY = 15000.0
 MAX_SUPPORT = 600.0
 EMBED_RULE = "BAR_TO_FAR_SUPPORT_FACE_LESS_COVER"
+PANEL_ROUND = 50.0
 RE_PER_M = re.compile(r"^\s*(\d+)\s*(?:%%[cC]|[ØøΦφ])\s*(\d+)\s*/\s*m\b", re.I)
 RE_COUNT = re.compile(r"^\s*(\d+)\s*(?:%%[cC]|[ØøΦφ])\s*(\d+)\s*(/\s*top)?\s*$", re.I)
 
@@ -117,7 +125,7 @@ def bind(annotations, bars, supports, cover_mm=25.0) -> list:
         p = (a["x"], a["y"])
         cands = []
         for b in bars:
-            pa, pb = (b["x0"], b["y0"]), (b["x1"], b["y1"])
+            pa, pb = _leg(b)
             u = _unit(pa, pb)
             if u == (0.0, 0.0) or _ang(u, dt) > ANGLE_TOL_DEG:
                 continue
@@ -136,18 +144,31 @@ def bind(annotations, bars, supports, cover_mm=25.0) -> list:
             continue
         if cands:
             _, b, u, L = cands[0]
-            q = ((b["x0"] + b["x1"]) / 2.0, (b["y0"] + b["y1"]) / 2.0)
-            rec.update(bar=b["id"], binding="DRAWN_BAR", drawn_length_mm=L)
+            pa, pb = _leg(b)
+            q = ((pa[0] + pb[0]) / 2.0, (pa[1] + pb[1]) / 2.0)
+            rec.update(bar=b["id"], binding="DRAWN_BAR", drawn_length_mm=_developed(b))
         else:
             u, q = dt, p
             rec.update(bar=None, binding="TEXT_ONLY_PANEL", drawn_length_mm=None)
         n_ = (-u[1], u[0])
-        width, _, _ = _clear(q, n_, supports)
+        width, a1, a2 = _clear(q, n_, supports)
         span, s1, s2 = _clear(q, u, supports)
+        if span is not None and width is not None:
+            cu = _canon(u)
+            cn = (-cu[1], cu[0])
+            pu = sorted((q[0] + u[0] * t) * cu[0] + (q[1] + u[1] * t) * cu[1] for t in (s1, -s2))
+            pn = sorted((q[0] + n_[0] * t) * cn[0] + (q[1] + n_[1] * t) * cn[1] for t in (a1, -a2))
+            rec["panel"] = [round(v / PANEL_ROUND) for v in pu + pn]
         w1 = support_width(q, u, s1, supports)
         w2 = support_width(q, (-u[0], -u[1]), s2, supports)
         rec.update(direction=[round(u[0], 6), round(u[1], 6)], width_mm=width, clear_span_mm=span,
                    support_widths_mm=[w1, w2], embed_rule=EMBED_RULE, cover_mm=cover_mm)
+        if span is None and sp["kind"] == "COUNT" and rec["binding"] == "DRAWN_BAR":
+            rec.update(state="DRAWN_EXTENT", count=sp["n"], length_mm=rec["drawn_length_mm"], anchorage="AS_DRAWN",
+                       why="count bar outside the panel grid: drawn developed length (not dimensioned)")
+            rec["total_length_m"] = rec["count"] * rec["length_mm"] / 1000.0
+            out.append(rec)
+            continue
         if span is None or (sp["kind"] == "PER_M" and width is None):
             rec.update(state="UNBOUND", why="a ray found no support line (open panel) - not estimated")
             out.append(rec)
@@ -168,6 +189,45 @@ def bind(annotations, bars, supports, cover_mm=25.0) -> list:
             rec["route_b_drawn_vs_span"] = {"drawn_mm": rec["drawn_length_mm"], "clear_span_mm": span,
                                            "note": "drawn bar is a symbol; never the quantity"}
         out.append(rec)
+    return out
+
+
+def _canon(u):
+    return (u[0], u[1]) if (u[0] > 1e-9 or (abs(u[0]) <= 1e-9 and u[1] > 0)) else (-u[0], -u[1])
+
+
+def _leg(b):
+    """The bar's governing leg: the segment itself, or the longest leg of a polyline path."""
+    path = b.get("path")
+    if not path:
+        return (b["x0"], b["y0"]), (b["x1"], b["y1"])
+    legs = [(math.hypot(q[0] - p[0], q[1] - p[1]), i) for i, (p, q) in enumerate(zip(path, path[1:]))]
+    _, i = max(legs, key=lambda t: (t[0], -t[1]))
+    return tuple(path[i]), tuple(path[i + 1])
+
+
+def _developed(b):
+    path = b.get("path")
+    if not path:
+        return math.hypot(b["x1"] - b["x0"], b["y1"] - b["y0"])
+    return sum(math.hypot(q[0] - p[0], q[1] - p[1]) for p, q in zip(path, path[1:]))
+
+
+def dedupe(records) -> list:
+    """Mark later labels of the same bar family over the same panel and direction as DUPLICATE_LABEL."""
+    seen = {}
+    out = []
+    for r in sorted(records, key=lambda x: str(x["annotation"])):
+        r = dict(r)
+        if "panel" in r and r.get("count") is not None:
+            d = _canon(r["direction"])
+            k = (r["kind"], r["n"], r["dia_mm"], r["top"], round(d[0], 2), round(d[1], 2), tuple(r["panel"]))
+            if k in seen:
+                r.update(state="DUPLICATE_LABEL", duplicate_of=seen[k],
+                         why="same bar family, direction and panel as an earlier label - counted once")
+            else:
+                seen[k] = r["annotation"]
+        out.append(r)
     return out
 
 
