@@ -1,0 +1,84 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_ARCH_R5_CONSERVATION",
+ "violations": [],
+ "pass": true,
+ "checks": [
+  "floor plate",
+  "internal area reconciliation",
+  "wall length (ledger)",
+  "opening count",
+  "wet-label terminal states",
+  "skirting path conservation",
+  "wall-face single treatment",
+  "no region overlap (no double-counted region)",
+  "no negative quantity",
+  "cross-trade completeness",
+  "region_class",
+  "wet_label_conservation",
+  "masonry_identity",
+  "masonry_through_rc",
+  "opening_function",
+  "skirting_segments",
+  "height_consistency",
+  "internal_floor",
+  "face_uniqueness"
+ ],
+ "mutation_proof_checks": {
+  "region_class": {
+   "violations": [],
+   "pass": true
+  },
+  "wet_label_conservation": {
+   "violations": [],
+   "pass": true
+  },
+  "masonry_identity": {
+   "violations": [],
+   "pass": true
+  },
+  "masonry_through_rc": {
+   "violations": [],
+   "pass": true
+  },
+  "opening_function": {
+   "violations": [],
+   "pass": true
+  },
+  "skirting_segments": {
+   "violations": [],
+   "pass": true
+  },
+  "height_consistency": {
+   "violations": [],
+   "pass": true
+  },
+  "internal_floor": {
+   "violations": [],
+   "pass": true
+  },
+  "face_uniqueness": {
+   "violations": [],
+   "pass": true
+  }
+ },
+ "provenance": {
+  "quantity_rows": 311,
+  "rows_with_full_provenance": 311,
+  "coverage_pct": 100.0
+ },
+ "cross_discipline_findings": [
+  {
+   "type": "CROSS_DISCIPLINE_FINDING",
+   "floor": "GF",
+   "finding": "structural slab outline 322.411424 m2 vs architect area sheet 319.99 m2 (difference 2.421424 m2)",
+   "action": "future structural round: slab edge / cantilever vs the permit area polygon"
+  },
+  {
+   "type": "CROSS_DISCIPLINE_FINDING",
+   "floor": "1F",
+   "finding": "structural slab outline 217.200553 m2 vs architect area sheet 211.44 m2 (difference 5.760553 m2)",
+   "action": "future structural round: slab edge / cantilever vs the permit area polygon"
+  }
+ ],
+ "silent_disappearances": 0
+}

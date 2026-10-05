@@ -1,0 +1,291 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_ARCH_R5_SEMANTIC_ZONES",
+ "rows": [
+  {
+   "zone_id": "SZ:GF:496",
+   "floor": "GF",
+   "host": "PS:GF:SITE-0e9a7a85e795446f",
+   "label": "Wash",
+   "label_ar": "مغسلة",
+   "class": "WET",
+   "authority": "ROOM_LABEL (EN + corroborated AR) | BILINGUAL_TWIN_PLACEMENT (one text in a space with no other label; the other text overhangs into a neighbour)"
+  },
+  {
+   "zone_id": "SZ:GF:802",
+   "floor": "GF",
+   "host": "PS:GF:SITE-5191e28052b00088",
+   "label": "W.C",
+   "label_ar": "مرحاض",
+   "class": "WET",
+   "authority": "ROOM_LABEL (EN + corroborated AR) | LABEL_INSIDE_SPACE"
+  },
+  {
+   "zone_id": "SZ:GF:376",
+   "floor": "GF",
+   "host": "PS:GF:SITE-67547ed37daadb5a",
+   "label": "PANTRY",
+   "label_ar": "تحضير",
+   "class": "SERVICE",
+   "authority": "ROOM_LABEL (EN + corroborated AR) | LABEL_INSIDE_SPACE"
+  },
+  {
+   "zone_id": "SZ:GF:383",
+   "floor": "GF",
+   "host": "PS:GF:SITE-67547ed37daadb5a",
+   "label": "SALOON",
+   "label_ar": "صالون",
+   "class": "DRY",
+   "authority": "ROOM_LABEL (EN + corroborated AR) | LABEL_INSIDE_SPACE"
+  },
+  {
+   "zone_id": "SZ:GF:389",
+   "floor": "GF",
+   "host": "PS:GF:SITE-67547ed37daadb5a",
+   "label": "RECEPTION",
+   "label_ar": "استقبال",
+   "class": "DRY",
+   "authority": "ROOM_LABEL (EN + corroborated AR) | LABEL_INSIDE_SPACE"
+  },
+  {
+   "zone_id": "SZ:GF:673",
+   "floor": "GF",
+   "host": "PS:GF:SITE-67547ed37daadb5a",
+   "label": "DINING",
+   "label_ar": "طعام",
+   "class": "DRY",
+   "authority": "ROOM_LABEL (EN + corroborated AR) | LABEL_INSIDE_SPACE"
+  },
+  {
+   "zone_id": "SZ:GF:709",
+   "floor": "GF",
+   "host": "PS:GF:SITE-67547ed37daadb5a",
+   "label": "Wash",
+   "label_ar": "مغسلة",
+   "class": "WET",
+   "authority": "ROOM_LABEL (EN + corroborated AR) | LABEL_INSIDE_SPACE"
+  },
+  {
+   "zone_id": "SZ:GF:785",
+   "floor": "GF",
+   "host": "PS:GF:SITE-67547ed37daadb5a",
+   "label": "GARDEN",
+   "label_ar": "حديقة",
+   "class": "EXTERNAL",
+   "authority": "ROOM_LABEL (EN + corroborated AR) | LABEL_INSIDE_SPACE"
+  },
+  {
+   "zone_id": "SZ:GF:E749",
+   "floor": "GF",
+   "host": "PS:GF:SITE-714889aea3e329c7",
+   "label": "BATH",
+   "label_ar": null,
+   "class": "WET",
+   "authority": "ROOM_LABEL (EN) | LABEL_INSIDE_SPACE"
+  },
+  {
+   "zone_id": "SZ:GF:431",
+   "floor": "GF",
+   "host": "PS:GF:SITE-810cacd9be443703",
+   "label": "DEWANEYA",
+   "label_ar": "ديوانية",
+   "class": "DRY",
+   "authority": "ROOM_LABEL (EN + corroborated AR) | LABEL_INSIDE_SPACE"
+  },
+  {
+   "zone_id": "SZ:GF:630",
+   "floor": "GF",
+   "host": "PS:GF:SITE-88d9dbffd47c417a",
+   "label": "KITCHEN",
+   "label_ar": "مطبخ",
+   "class": "SERVICE",
+   "authority": "ROOM_LABEL (EN + corroborated AR) | LABEL_INSIDE_SPACE"
+  },
+  {
+   "zone_id": "SZ:GF:803",
+   "floor": "GF",
+   "host": "PS:GF:SITE-9810548752edbe40",
+   "label": "W.C",
+   "label_ar": "مرحاض",
+   "class": "WET",
+   "authority": "ROOM_LABEL (EN + corroborated AR) | LABEL_INSIDE_SPACE"
+  },
+  {
+   "zone_id": "SZ:GF:456",
+   "floor": "GF",
+   "host": "PS:GF:SITE-9b585230d0877a35",
+   "label": "W.C",
+   "label_ar": "مرحاض",
+   "class": "WET",
+   "authority": "ROOM_LABEL (EN + corroborated AR) | LABEL_INSIDE_SPACE"
+  },
+  {
+   "zone_id": "SZ:GF:730",
+   "floor": "GF",
+   "host": "PS:GF:SITE-ce2d2c3a4b7da280",
+   "label": "W.C",
+   "label_ar": "مرحاض",
+   "class": "WET",
+   "authority": "ROOM_LABEL (EN + corroborated AR) | LABEL_INSIDE_SPACE"
+  },
+  {
+   "zone_id": "SZ:GF:771",
+   "floor": "GF",
+   "host": "PS:GF:SITE-dda89794d15dfb61",
+   "label": "MASTER BED ROOM",
+   "label_ar": "غرفةنومرئيسية",
+   "class": "DRY",
+   "authority": "ROOM_LABEL (EN + corroborated AR) | LABEL_INSIDE_SPACE"
+  },
+  {
+   "zone_id": "SZ:GF:503",
+   "floor": "GF",
+   "host": "PS:GF:SITE-eac7a1be6566b2d0",
+   "label": "W.C",
+   "label_ar": "مرحاض",
+   "class": "WET",
+   "authority": "ROOM_LABEL (EN + corroborated AR) | LABEL_INSIDE_SPACE"
+  },
+  {
+   "zone_id": "SZ:GF:717",
+   "floor": "GF",
+   "host": "PS:GF:RR:GF:RB-a1191769a247d0ff",
+   "label": "DRIVER",
+   "label_ar": "سائق",
+   "class": "DRY",
+   "authority": "ROOM_LABEL (EN + corroborated AR) | LABEL_INSIDE_SPACE"
+  },
+  {
+   "zone_id": "SZ:GF:396",
+   "floor": "GF",
+   "host": "PS:GF:RR:GF:RB-682db83b9b101479",
+   "label": "swimming pool",
+   "label_ar": "حمام سباحة",
+   "class": "EXTERNAL",
+   "authority": "ROOM_LABEL (EN + corroborated AR) | LABEL_INSIDE_SPACE"
+  },
+  {
+   "zone_id": "SZ:1F:3119",
+   "floor": "1F",
+   "host": "PS:1F:SITE-16f76cd141ed8273",
+   "label": "BATH",
+   "label_ar": "حمام",
+   "class": "WET",
+   "authority": "ROOM_LABEL (EN + corroborated AR) | LABEL_INSIDE_SPACE"
+  },
+  {
+   "zone_id": "SZ:1F:3072",
+   "floor": "1F",
+   "host": "PS:1F:SITE-22b96446836c3d8d",
+   "label": "MASTER BED ROOM",
+   "label_ar": "غرفةنومرئيسية",
+   "class": "DRY",
+   "authority": "ROOM_LABEL (EN + corroborated AR) | LABEL_INSIDE_SPACE"
+  },
+  {
+   "zone_id": "SZ:1F:3089",
+   "floor": "1F",
+   "host": "PS:1F:SITE-2f6cf2b5bebbd966",
+   "label": "BATH",
+   "label_ar": "حمام",
+   "class": "WET",
+   "authority": "ROOM_LABEL (EN + corroborated AR) | LABEL_INSIDE_SPACE"
+  },
+  {
+   "zone_id": "SZ:1F:3080",
+   "floor": "1F",
+   "host": "PS:1F:SITE-3cde308552cf977c",
+   "label": "MASTER BED ROOM",
+   "label_ar": "غرفةنومرئيسية",
+   "class": "DRY",
+   "authority": "ROOM_LABEL (EN + corroborated AR) | LABEL_INSIDE_SPACE"
+  },
+  {
+   "zone_id": "SZ:1F:2938",
+   "floor": "1F",
+   "host": "PS:1F:SITE-60a08def069f0e48",
+   "label": "VOID",
+   "label_ar": "منور",
+   "class": "VOID",
+   "authority": "ROOM_LABEL (EN + corroborated AR) | LABEL_INSIDE_SPACE"
+  },
+  {
+   "zone_id": "SZ:1F:2951",
+   "floor": "1F",
+   "host": "PS:1F:SITE-60a08def069f0e48",
+   "label": "LIVING AREA",
+   "label_ar": "معيشة",
+   "class": "DRY",
+   "authority": "ROOM_LABEL (EN + corroborated AR) | LABEL_INSIDE_SPACE"
+  },
+  {
+   "zone_id": "SZ:1F:3037",
+   "floor": "1F",
+   "host": "PS:1F:SITE-69e2d39bee49fa7e",
+   "label": "LAUNDRY",
+   "label_ar": "غسيل",
+   "class": "SERVICE",
+   "authority": "ROOM_LABEL (EN + corroborated AR) | LABEL_INSIDE_SPACE"
+  },
+  {
+   "zone_id": "SZ:1F:3120",
+   "floor": "1F",
+   "host": "PS:1F:SITE-c46cb88cea7decbb",
+   "label": "MASTER BED ROOM",
+   "label_ar": "غرفةنومرئيسية",
+   "class": "DRY",
+   "authority": "ROOM_LABEL (EN + corroborated AR) | LABEL_INSIDE_SPACE"
+  },
+  {
+   "zone_id": "SZ:1F:3073",
+   "floor": "1F",
+   "host": "PS:1F:SITE-cdc894c0f0fd69c9",
+   "label": "BATH",
+   "label_ar": "حمام",
+   "class": "WET",
+   "authority": "ROOM_LABEL (EN + corroborated AR) | LABEL_INSIDE_SPACE"
+  },
+  {
+   "zone_id": "SZ:1F:2958",
+   "floor": "1F",
+   "host": "PS:1F:SITE-da154e7546d18013",
+   "label": "MASTER BED ROOM",
+   "label_ar": "غرفةنومرئيسية",
+   "class": "DRY",
+   "authority": "ROOM_LABEL (EN + corroborated AR) | LABEL_INSIDE_SPACE"
+  },
+  {
+   "zone_id": "SZ:1F:3116",
+   "floor": "1F",
+   "host": "PS:1F:RR:1F:RB-5757373d9f615fe5",
+   "label": "BATH",
+   "label_ar": "حمام",
+   "class": "WET",
+   "authority": "ROOM_LABEL (EN + corroborated AR) | LABEL_INSIDE_SPACE"
+  },
+  {
+   "zone_id": "SZ:2F:4796",
+   "floor": "2F",
+   "host": "PS:2F:SITE-2e3bac611a8fb491",
+   "label": "MAID R.",
+   "label_ar": "غرفةخادمة",
+   "class": "DRY",
+   "authority": "ROOM_LABEL (EN + corroborated AR) | LABEL_INSIDE_SPACE"
+  },
+  {
+   "zone_id": "SZ:2F:4790",
+   "floor": "2F",
+   "host": "PS:2F:SITE-ae46ec7518ab613e",
+   "label": "W.C",
+   "label_ar": "مرحاض",
+   "class": "WET",
+   "authority": "ROOM_LABEL (EN + corroborated AR) | LABEL_INSIDE_SPACE"
+  }
+ ],
+ "counts": {
+  "WET": 13,
+  "SERVICE": 3,
+  "DRY": 12,
+  "EXTERNAL": 2,
+  "VOID": 1
+ }
+}

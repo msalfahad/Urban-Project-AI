@@ -1,0 +1,588 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_ARCH_R5_TOPOLOGY_SHADOW",
+ "policy": "PLANAR_SHADOW_TOPOLOGY_V1",
+ "route_a": "room_topology_v3 (production; unchanged)",
+ "route_b": "planar_shadow_topology: endpoint merge (1 mm) + T / intersection / collinear splitting + dangling peel + half-edge walk + holes; layers 1, W, S-COL.BON, 5; door-swing closures and facing-gap bridges (0.30 - 3.60 m) as recorded zero-material closures",
+ "summary": {
+  "GF": {
+   "route_a_spaces": 12,
+   "route_b_faces_ge_1m2": 28,
+   "relations": {
+    "PARTIAL_OVERLAP": 2,
+    "MATCH": 8,
+    "A_COARSER_SPLIT_IN_B": 2
+   },
+   "missing_in_a": 6,
+   "missing_in_a_m2": 25.096156,
+   "route_b_counts": {
+    "input_segments": 1784,
+    "faces": 353,
+    "component_outers": 13,
+    "dangling": 112,
+    "dangling_length_m": 119.480533
+   },
+   "route_b_bridges": 37,
+   "route_b_door_closures": 14
+  },
+  "1F": {
+   "route_a_spaces": 10,
+   "route_b_faces_ge_1m2": 18,
+   "relations": {
+    "MATCH": 6,
+    "B_COARSER_MERGED_IN_B": 2,
+    "PARTIAL_OVERLAP": 2
+   },
+   "missing_in_a": 3,
+   "missing_in_a_m2": 7.416556,
+   "route_b_counts": {
+    "input_segments": 1255,
+    "faces": 340,
+    "component_outers": 9,
+    "dangling": 120,
+    "dangling_length_m": 57.902322
+   },
+   "route_b_bridges": 27,
+   "route_b_door_closures": 10
+  },
+  "2F": {
+   "route_a_spaces": 3,
+   "route_b_faces_ge_1m2": 8,
+   "relations": {
+    "PARTIAL_OVERLAP": 1,
+    "MATCH": 2
+   },
+   "missing_in_a": 2,
+   "missing_in_a_m2": 2.394056,
+   "route_b_counts": {
+    "input_segments": 846,
+    "faces": 192,
+    "component_outers": 10,
+    "dangling": 63,
+    "dangling_length_m": 18.74242
+   },
+   "route_b_bridges": 16,
+   "route_b_door_closures": 3
+  }
+ },
+ "rows": [
+  {
+   "floor": "GF",
+   "route_a_site": "SITE-0e9a7a85e795446f",
+   "labels": [],
+   "a_area_m2": 3.1325,
+   "a_perimeter_m": 7.2,
+   "b_face": "RB-874ed9e058760b64",
+   "b_area_m2": 1.05,
+   "b_perimeter_m": 5.2,
+   "iou": 0.3352,
+   "centroid_shift_m": 0.497,
+   "b_faces_covering": 1,
+   "relation": "PARTIAL_OVERLAP",
+   "disagreement": "different boundary"
+  },
+  {
+   "floor": "GF",
+   "route_a_site": "SITE-5191e28052b00088",
+   "labels": [
+    "W.C"
+   ],
+   "a_area_m2": 2.367609,
+   "a_perimeter_m": 6.809808,
+   "b_face": "RB-1b59cc85942e853a",
+   "b_area_m2": 2.35911,
+   "b_perimeter_m": 6.625426,
+   "iou": 0.9964,
+   "centroid_shift_m": 0.005,
+   "b_faces_covering": 1,
+   "relation": "MATCH"
+  },
+  {
+   "floor": "GF",
+   "route_a_site": "SITE-67547ed37daadb5a",
+   "labels": [
+    "PANTRY",
+    "SALOON",
+    "RECEPTION",
+    "DINING",
+    "Wash",
+    "GARDEN"
+   ],
+   "a_area_m2": 155.655211,
+   "a_perimeter_m": 121.003866,
+   "b_face": "RB-684fc26661ba7dfc",
+   "b_area_m2": 121.512121,
+   "b_perimeter_m": 70.56083,
+   "iou": 0.7806,
+   "centroid_shift_m": 1.16,
+   "b_faces_covering": 6,
+   "relation": "A_COARSER_SPLIT_IN_B",
+   "disagreement": "Route B splits this space (thin / non-wall lines or closures Route A does not use)"
+  },
+  {
+   "floor": "GF",
+   "route_a_site": "SITE-714889aea3e329c7",
+   "labels": [
+    "BATH"
+   ],
+   "a_area_m2": 3.717683,
+   "a_perimeter_m": 7.624665,
+   "b_face": "RB-c17f70a1d0b233d1",
+   "b_area_m2": 3.717683,
+   "b_perimeter_m": 7.624665,
+   "iou": 1.0,
+   "centroid_shift_m": 0.0,
+   "b_faces_covering": 1,
+   "relation": "MATCH"
+  },
+  {
+   "floor": "GF",
+   "route_a_site": "SITE-810cacd9be443703",
+   "labels": [
+    "DEWANEYA",
+    "Wash"
+   ],
+   "a_area_m2": 24.940332,
+   "a_perimeter_m": 20.127876,
+   "b_face": "RB-b23d9e7fdf191536",
+   "b_area_m2": 27.171626,
+   "b_perimeter_m": 24.627328,
+   "iou": 0.9178,
+   "centroid_shift_m": 0.218,
+   "b_faces_covering": 1,
+   "relation": "MATCH"
+  },
+  {
+   "floor": "GF",
+   "route_a_site": "SITE-88d9dbffd47c417a",
+   "labels": [
+    "KITCHEN"
+   ],
+   "a_area_m2": 9.63,
+   "a_perimeter_m": 14.5,
+   "b_face": "RB-3d251243ba38e206",
+   "b_area_m2": 7.05,
+   "b_perimeter_m": 12.5,
+   "iou": 0.7321,
+   "centroid_shift_m": 0.408,
+   "b_faces_covering": 2,
+   "relation": "A_COARSER_SPLIT_IN_B",
+   "disagreement": "Route B splits this space (thin / non-wall lines or closures Route A does not use)"
+  },
+  {
+   "floor": "GF",
+   "route_a_site": "SITE-9810548752edbe40",
+   "labels": [
+    "W.C"
+   ],
+   "a_area_m2": 2.675221,
+   "a_perimeter_m": 7.414038,
+   "b_face": "RB-93fbedcf91b29d67",
+   "b_area_m2": 2.64739,
+   "b_perimeter_m": 8.32913,
+   "iou": 0.9896,
+   "centroid_shift_m": 0.012,
+   "b_faces_covering": 1,
+   "relation": "MATCH"
+  },
+  {
+   "floor": "GF",
+   "route_a_site": "SITE-9b585230d0877a35",
+   "labels": [
+    "W.C"
+   ],
+   "a_area_m2": 1.95,
+   "a_perimeter_m": 5.6,
+   "b_face": "RB-58f74f0262b0d83b",
+   "b_area_m2": 1.834092,
+   "b_perimeter_m": 6.914993,
+   "iou": 0.9406,
+   "centroid_shift_m": 0.038,
+   "b_faces_covering": 1,
+   "relation": "MATCH"
+  },
+  {
+   "floor": "GF",
+   "route_a_site": "SITE-b2553428a3dc90a0",
+   "labels": [],
+   "a_area_m2": 14.64,
+   "a_perimeter_m": 22.2,
+   "b_face": "RB-8967ffcbc40202e6",
+   "b_area_m2": 6.23226,
+   "b_perimeter_m": 26.918909,
+   "iou": 0.2878,
+   "centroid_shift_m": 1.141,
+   "b_faces_covering": 1,
+   "relation": "PARTIAL_OVERLAP",
+   "disagreement": "different boundary"
+  },
+  {
+   "floor": "GF",
+   "route_a_site": "SITE-ce2d2c3a4b7da280",
+   "labels": [
+    "W.C"
+   ],
+   "a_area_m2": 2.3625,
+   "a_perimeter_m": 6.2,
+   "b_face": "RB-314d93acf99dcd6b",
+   "b_area_m2": 2.3625,
+   "b_perimeter_m": 6.2,
+   "iou": 1.0,
+   "centroid_shift_m": 0.0,
+   "b_faces_covering": 1,
+   "relation": "MATCH"
+  },
+  {
+   "floor": "GF",
+   "route_a_site": "SITE-dda89794d15dfb61",
+   "labels": [
+    "MASTER BED ROOM"
+   ],
+   "a_area_m2": 16.54964,
+   "a_perimeter_m": 21.534453,
+   "b_face": "RB-6a24593b40b09464",
+   "b_area_m2": 16.225327,
+   "b_perimeter_m": 21.302574,
+   "iou": 0.9475,
+   "centroid_shift_m": 0.138,
+   "b_faces_covering": 1,
+   "relation": "MATCH"
+  },
+  {
+   "floor": "GF",
+   "route_a_site": "SITE-eac7a1be6566b2d0",
+   "labels": [
+    "W.C"
+   ],
+   "a_area_m2": 3.375,
+   "a_perimeter_m": 7.5,
+   "b_face": "RB-63d0176c5d023d7b",
+   "b_area_m2": 3.259092,
+   "b_perimeter_m": 8.814993,
+   "iou": 0.9657,
+   "centroid_shift_m": 0.033,
+   "b_faces_covering": 1,
+   "relation": "MATCH"
+  },
+  {
+   "floor": "GF",
+   "b_face": "RB-0c23a4168fceca91",
+   "b_area_m2": 1.197028,
+   "interior_point": [
+    -141847.8,
+    -796146.1
+   ],
+   "relation": "MISSING_IN_A"
+  },
+  {
+   "floor": "GF",
+   "b_face": "RB-2365eaef717b0fe9",
+   "b_area_m2": 5.0,
+   "interior_point": [
+    -145939.9,
+    -800393.5
+   ],
+   "relation": "MISSING_IN_A"
+  },
+  {
+   "floor": "GF",
+   "b_face": "RB-682db83b9b101479",
+   "b_area_m2": 8.57405,
+   "interior_point": [
+    -130618.4,
+    -794561.1
+   ],
+   "relation": "MISSING_IN_A"
+  },
+  {
+   "floor": "GF",
+   "b_face": "RB-a1191769a247d0ff",
+   "b_area_m2": 7.875,
+   "interior_point": [
+    -153364.9,
+    -804878.7
+   ],
+   "relation": "MISSING_IN_A"
+  },
+  {
+   "floor": "GF",
+   "b_face": "RB-c00e254c4b828eed",
+   "b_area_m2": 1.197028,
+   "interior_point": [
+    -141031.9,
+    -796146.1
+   ],
+   "relation": "MISSING_IN_A"
+  },
+  {
+   "floor": "GF",
+   "b_face": "RB-d86c0e084612ae59",
+   "b_area_m2": 1.25305,
+   "interior_point": [
+    -130232.0,
+    -792925.5
+   ],
+   "relation": "MISSING_IN_A"
+  },
+  {
+   "floor": "1F",
+   "route_a_site": "SITE-16f76cd141ed8273",
+   "labels": [
+    "BATH"
+   ],
+   "a_area_m2": 5.0225,
+   "a_perimeter_m": 9.0,
+   "b_face": "RB-4ec1c85e7f59de74",
+   "b_area_m2": 5.0225,
+   "b_perimeter_m": 9.0,
+   "iou": 1.0,
+   "centroid_shift_m": 0.0,
+   "b_faces_covering": 1,
+   "relation": "MATCH"
+  },
+  {
+   "floor": "1F",
+   "route_a_site": "SITE-22b96446836c3d8d",
+   "labels": [
+    "MASTER BED ROOM"
+   ],
+   "a_area_m2": 19.016545,
+   "a_perimeter_m": 22.15067,
+   "b_face": "RB-87f9cdc898275020",
+   "b_area_m2": 17.989636,
+   "b_perimeter_m": 21.149653,
+   "iou": 0.9457,
+   "centroid_shift_m": 0.171,
+   "b_faces_covering": 1,
+   "relation": "MATCH"
+  },
+  {
+   "floor": "1F",
+   "route_a_site": "SITE-2f6cf2b5bebbd966",
+   "labels": [
+    "BATH"
+   ],
+   "a_area_m2": 4.725,
+   "a_perimeter_m": 8.7,
+   "b_face": "RB-65ad62eb64a288ec",
+   "b_area_m2": 4.725,
+   "b_perimeter_m": 8.7,
+   "iou": 1.0,
+   "centroid_shift_m": 0.0,
+   "b_faces_covering": 1,
+   "relation": "MATCH"
+  },
+  {
+   "floor": "1F",
+   "route_a_site": "SITE-3cde308552cf977c",
+   "labels": [
+    "MASTER BED ROOM"
+   ],
+   "a_area_m2": 16.34,
+   "a_perimeter_m": 16.2,
+   "b_face": "RB-6f2bde447677a441",
+   "b_area_m2": 18.56,
+   "b_perimeter_m": 20.4,
+   "iou": 0.8804,
+   "centroid_shift_m": 0.388,
+   "b_faces_covering": 1,
+   "relation": "B_COARSER_MERGED_IN_B",
+   "disagreement": "Route B merges this space with a neighbour (an opening Route A closes is not closed in B)"
+  },
+  {
+   "floor": "1F",
+   "route_a_site": "SITE-60a08def069f0e48",
+   "labels": [
+    "VOID",
+    "LIVING AREA"
+   ],
+   "a_area_m2": 79.666379,
+   "a_perimeter_m": 98.777591,
+   "b_face": "RB-4b9c70b263fdc9bd",
+   "b_area_m2": 56.720671,
+   "b_perimeter_m": 91.529095,
+   "iou": 0.4542,
+   "centroid_shift_m": 1.524,
+   "b_faces_covering": 6,
+   "relation": "PARTIAL_OVERLAP",
+   "disagreement": "different boundary"
+  },
+  {
+   "floor": "1F",
+   "route_a_site": "SITE-69e2d39bee49fa7e",
+   "labels": [
+    "LAUNDRY"
+   ],
+   "a_area_m2": 10.151,
+   "a_perimeter_m": 16.94,
+   "b_face": "RB-4b9c70b263fdc9bd",
+   "b_area_m2": 56.720671,
+   "b_perimeter_m": 91.529095,
+   "iou": 0.179,
+   "centroid_shift_m": 5.131,
+   "b_faces_covering": 0,
+   "relation": "B_COARSER_MERGED_IN_B",
+   "disagreement": "Route B merges this space with a neighbour (an opening Route A closes is not closed in B)"
+  },
+  {
+   "floor": "1F",
+   "route_a_site": "SITE-aa3f3d9cc41ec54a",
+   "labels": [],
+   "a_area_m2": 2.97,
+   "a_perimeter_m": 6.9,
+   "b_face": "RB-6f2bde447677a441",
+   "b_area_m2": 18.56,
+   "b_perimeter_m": 20.4,
+   "iou": 0.1064,
+   "centroid_shift_m": 2.989,
+   "b_faces_covering": 0,
+   "relation": "PARTIAL_OVERLAP",
+   "disagreement": "different boundary"
+  },
+  {
+   "floor": "1F",
+   "route_a_site": "SITE-c46cb88cea7decbb",
+   "labels": [
+    "MASTER BED ROOM"
+   ],
+   "a_area_m2": 18.215,
+   "a_perimeter_m": 17.4,
+   "b_face": "RB-480bc1de8b701a05",
+   "b_area_m2": 18.215,
+   "b_perimeter_m": 17.4,
+   "iou": 1.0,
+   "centroid_shift_m": 0.0,
+   "b_faces_covering": 1,
+   "relation": "MATCH"
+  },
+  {
+   "floor": "1F",
+   "route_a_site": "SITE-cdc894c0f0fd69c9",
+   "labels": [
+    "BATH"
+   ],
+   "a_area_m2": 3.5775,
+   "a_perimeter_m": 7.6,
+   "b_face": "RB-10ead8d2d588e1c3",
+   "b_area_m2": 3.5775,
+   "b_perimeter_m": 7.6,
+   "iou": 1.0,
+   "centroid_shift_m": 0.0,
+   "b_faces_covering": 1,
+   "relation": "MATCH"
+  },
+  {
+   "floor": "1F",
+   "route_a_site": "SITE-da154e7546d18013",
+   "labels": [
+    "MASTER BED ROOM"
+   ],
+   "a_area_m2": 19.05,
+   "a_perimeter_m": 17.7,
+   "b_face": "RB-c4d3a20c31438ef6",
+   "b_area_m2": 19.05,
+   "b_perimeter_m": 17.7,
+   "iou": 1.0,
+   "centroid_shift_m": 0.0,
+   "b_faces_covering": 1,
+   "relation": "MATCH"
+  },
+  {
+   "floor": "1F",
+   "b_face": "RB-5757373d9f615fe5",
+   "b_area_m2": 5.0225,
+   "interior_point": [
+    -191067.5,
+    -802738.7
+   ],
+   "relation": "MISSING_IN_A"
+  },
+  {
+   "floor": "1F",
+   "b_face": "RB-5c42fe8e380e8e08",
+   "b_area_m2": 1.197028,
+   "interior_point": [
+    -186700.5,
+    -796146.1
+   ],
+   "relation": "MISSING_IN_A"
+  },
+  {
+   "floor": "1F",
+   "b_face": "RB-9cbba03dae9055fa",
+   "b_area_m2": 1.197028,
+   "interior_point": [
+    -185884.6,
+    -796146.1
+   ],
+   "relation": "MISSING_IN_A"
+  },
+  {
+   "floor": "2F",
+   "route_a_site": "SITE-22c718c6fc156ebe",
+   "labels": [],
+   "a_area_m2": 18.6,
+   "a_perimeter_m": 22.0,
+   "b_face": "RB-867872e026a7a7ac",
+   "b_area_m2": 7.71,
+   "b_perimeter_m": 13.6,
+   "iou": 0.4145,
+   "centroid_shift_m": 2.017,
+   "b_faces_covering": 2,
+   "relation": "PARTIAL_OVERLAP",
+   "disagreement": "different boundary"
+  },
+  {
+   "floor": "2F",
+   "route_a_site": "SITE-2e3bac611a8fb491",
+   "labels": [
+    "MAID R."
+   ],
+   "a_area_m2": 19.35,
+   "a_perimeter_m": 18.9,
+   "b_face": "RB-76a374373bb65a9b",
+   "b_area_m2": 19.35,
+   "b_perimeter_m": 18.9,
+   "iou": 1.0,
+   "centroid_shift_m": 0.0,
+   "b_faces_covering": 1,
+   "relation": "MATCH"
+  },
+  {
+   "floor": "2F",
+   "route_a_site": "SITE-ae46ec7518ab613e",
+   "labels": [
+    "W.C"
+   ],
+   "a_area_m2": 5.55,
+   "a_perimeter_m": 9.7,
+   "b_face": "RB-27d08a3a564f351e",
+   "b_area_m2": 5.55,
+   "b_perimeter_m": 9.7,
+   "iou": 1.0,
+   "centroid_shift_m": 0.0,
+   "b_faces_covering": 1,
+   "relation": "MATCH"
+  },
+  {
+   "floor": "2F",
+   "b_face": "RB-796a1544adaaa89e",
+   "b_area_m2": 1.197028,
+   "interior_point": [
+    -231553.1,
+    -796146.1
+   ],
+   "relation": "MISSING_IN_A"
+  },
+  {
+   "floor": "2F",
+   "b_face": "RB-f543f88fefaf2d5b",
+   "b_area_m2": 1.197028,
+   "interior_point": [
+    -230737.2,
+    -796146.1
+   ],
+   "relation": "MISSING_IN_A"
+  }
+ ],
+ "rule": "independent validation, not replacement: a disagreement is recorded, never resolved by picking the route closer to any benchmark"
+}
