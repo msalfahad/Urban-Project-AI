@@ -1,0 +1,88 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_DONOR_DELTA_V1",
+ "rows": [
+  {
+   "donor": "kentucky-ai/opentakeoff",
+   "licence": "Apache-2.0",
+   "lock": "e6d2251",
+   "upstream_head": "c7e02eb",
+   "commits_ahead": 42,
+   "use": "PATTERNS ONLY (TypeScript)",
+   "new_ideas": [
+    "63a86e5 measured that OCR confidence does not separate misreads (247 correct / 23 misread; below 0.9: 21 correct + 10 misreads) -> never gate a schedule value on OCR confidence alone",
+    "24d1d95 wordClean ruling cleanup + repairKey with a read_as flag -> keep the raw read beside the repair",
+    "256ef63 public regression fixtures for high-confidence OCR code errors -> adversarial schedule fixtures",
+    "c3ec135 duplicate re-import prevention -> idempotent schedule ingest (SB2 duplicate rows)",
+    "1f2919e sheetgraph finish-table headings; sheetgraph.ts classifySheetRole / extractTables / roomTags / detailCallouts / resolveTag; MCP find_schedule / resolve_tag -> a schedule-to-tag resolver with an explicit unresolved state",
+    "RFI model with tombstones -> owner questions that cannot silently vanish",
+    "scalewarn.ts / gate.ts -> scale warnings as a gate, not a log line"
+   ],
+   "existing_urban_use": "schedule-reading ideas behind A3 (V3c audit)",
+   "implemented_wrongly": "A3 reads schedules from PDF text and hand transcription when the DXF carries the same table as ATTRIBs; no find_schedule-style coverage check exists"
+  },
+  {
+   "donor": "jeremylongshore/cad-ai-agent",
+   "licence": "Apache-2.0",
+   "lock": "3215dc0",
+   "use": "PATTERNS ONLY",
+   "new_ideas": [
+    "tests/property/test_fuzz_matching.py: seeded-RNG fuzz (Random(42), bounded iterations) - property tests without a runtime dependency (hypothesis is declared there but not needed for the pattern)",
+    "models/health_schema.py: deterministic HealthReport (issues with evidence refs, checks_run list, score) -> every register lists checks_run so a missing check is visible",
+    "core/cross_drawing_checker.py: pure, order-stable cross-sheet consistency passes (labels, layers, blocks, counts, alignment) -> architectural vs structural sheet cross-check (column tags, lift, stair)",
+    "models/comparison_schema.py: typed revision comparison"
+   ],
+   "existing_urban_use": "none",
+   "implemented_wrongly": null
+  },
+  {
+   "donor": "userfypp/plan-measure",
+   "licence": "MIT",
+   "lock": "ec5c475",
+   "use": "PATTERNS ONLY (TypeScript)",
+   "new_ideas": [
+    "types/domain.ts: PageCalibration = UniformPageCalibration | XyPageCalibration with separate xReference / yReference two-point references -> per-axis scale for raster sheets (L)",
+    "measurements carry calibrationId -> every raster-derived quantity names the calibration it used",
+    "persistenceCodec.ts versioned decode with validation -> register schema migration (D)"
+   ],
+   "existing_urban_use": "V3b raster lane uses one uniform scale per sheet",
+   "implemented_wrongly": "V3b.1 sheet calibration is uniform; a per-axis residual is not measured or recorded"
+  },
+  {
+   "donor": "ContractorKeith/conmcp",
+   "licence": "MIT",
+   "lock": "0a08f63",
+   "use": "PATTERNS ONLY",
+   "new_ideas": [
+    "domain/sheets.py: unknown pages fall back to 'unclassified' rather than guessing",
+    "domain/quantities.py: one explicit UOM vocabulary as the single source of truth",
+    "audit.py: audit_event per tool call",
+    "TakeoffItem.source sheet reference on every item"
+   ],
+   "existing_urban_use": "unit guard exists (V3 UNIT_REGISTER)",
+   "implemented_wrongly": null
+  },
+  {
+   "donor": "braedonsaunders/bidwright",
+   "licence": "AGPL-3.0-only",
+   "lock": "4f20096",
+   "use": "IDEAS ONLY - no code, no copied structure",
+   "new_ideas": [
+    "evidence gate: a worksheet item is rejected unless it carries a structured source reference; prose ('best judgment', 'see notes') must keep failing - and the gate itself has a contract test",
+    "drawing-evidence atlas: documents not classified as drawing evidence are listed as excluded, with an explicit 'add with rationale' path"
+   ],
+   "existing_urban_use": "none",
+   "implemented_wrongly": null
+  },
+  {
+   "donor": "U-C4N (prior lock)",
+   "licence": "see DONORS.lock",
+   "use": "SHADOW EXPERIMENT DESIGN ONLY",
+   "new_ideas": [
+    "run as a shadow reader of the same DXF and compare per-entity counts / attribute values against K2 (no production path)"
+   ],
+   "existing_urban_use": "R8 donor audit",
+   "implemented_wrongly": null
+  }
+ ],
+ "rule": "no donor code enters production; AGPL donors are ideas only; every idea maps to a control gate or a test in the review, never to a quantity"
+}

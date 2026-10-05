@@ -1,0 +1,260 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_SILENT_DROP_V1",
+ "rows": [
+  {
+   "id": "SD-01",
+   "code_location": "research/external_engine_lab/alsenan_v3_structure.py:277",
+   "anchor": "if not str(f.get(\"status\", \"\")).startswith(\"COMPUTED\") or f[\"type\"] not in defs:",
+   "condition": "footing not COMPUTED or type has no definition",
+   "input_population": "F, F10 (BLOCKED); any unparsed type",
+   "current_behaviour": "skipped - no rebar row, no BLOCKED row",
+   "correct_future_behaviour": "emit REBAR_BLOCKED row naming the concrete blocker",
+   "severity": "MEDIUM",
+   "test_required": "test_sd01_footing_skip_is_silent"
+  },
+  {
+   "id": "SD-02",
+   "code_location": "research/external_engine_lab/alsenan_v3_structure.py:300",
+   "anchor": "if d is None or r.get(\"B_cm\") is None:",
+   "condition": "column type without definition / section",
+   "input_population": "column occurrences",
+   "current_behaviour": "skipped silently; occurrence STATE is never consulted (D5: rebar for NOT_DRAWN / BLOCKED occurrences)",
+   "correct_future_behaviour": "rebar state must follow the occurrence state; BLOCKED concrete => REBAR_BLOCKED",
+   "severity": "HIGH",
+   "test_required": "test_d5_column_rebar_ignores_occurrence_state"
+  },
+  {
+   "id": "SD-03",
+   "code_location": "research/external_engine_lab/alsenan_v3_structure.py:325",
+   "anchor": "if d is None or o[\"state\"] != \"MEASURED\":",
+   "condition": "beam type without BEAM definition, or occurrence not MEASURED",
+   "input_population": "all CB (13 types), all non-MEASURED beams",
+   "current_behaviour": "skipped - no row",
+   "correct_future_behaviour": "REBAR_BLOCKED row with reason; CB definitions from the DXF attributes",
+   "severity": "HIGH",
+   "test_required": "test_d1_cb_measured_occurrence_emits_nothing"
+  },
+  {
+   "id": "SD-04",
+   "code_location": "research/external_engine_lab/alsenan_v3_structure.py:329",
+   "anchor": "if not Ls or not Lc:",
+   "condition": "beam lengths missing",
+   "input_population": "MEASURED beams with a missing support / clear length",
+   "current_behaviour": "skipped - no row",
+   "correct_future_behaviour": "REBAR_BLOCKED row",
+   "severity": "MEDIUM",
+   "test_required": "test_sd04_beam_without_length_is_silent"
+  },
+  {
+   "id": "SD-05",
+   "code_location": "research/external_engine_lab/alsenan_v3_structure.py:379",
+   "anchor": "if o.get(\"width_m\") is None:",
+   "condition": "opening without width",
+   "input_population": "openings",
+   "current_behaviour": "no lintel, no row",
+   "correct_future_behaviour": "LINTEL_BLOCKED row",
+   "severity": "LOW",
+   "test_required": "test_sd_code_anchors_hold"
+  },
+  {
+   "id": "SD-06",
+   "code_location": "research/external_engine_lab/alsenan_v3_structure.py:401",
+   "anchor": "if l.get(\"status\") != \"COMPUTED\":",
+   "condition": "lintel not COMPUTED",
+   "input_population": "lintels",
+   "current_behaviour": "no rebar, no row",
+   "correct_future_behaviour": "REBAR_BLOCKED row",
+   "severity": "LOW",
+   "test_required": "test_sd_code_anchors_hold"
+  },
+  {
+   "id": "SD-07",
+   "code_location": "research/external_engine_lab/alsenan_v3_structure.py:431",
+   "anchor": "if b[\"state\"] != \"WALL_BAND_ESTABLISHED\":",
+   "condition": "wall band AMBIGUOUS",
+   "input_population": "46.63 m of ambiguous wall-band centreline",
+   "current_behaviour": "dropped from blockwork with no row",
+   "correct_future_behaviour": "BLOCKWORK_BLOCKED (or PARTIAL lower bound) row carrying the length",
+   "severity": "HIGH",
+   "test_required": "test_i_ambiguous_band_length_not_in_blockwork"
+  },
+  {
+   "id": "SD-08",
+   "code_location": "research/external_engine_lab/alsenan_phase_a.py",
+   "anchor": "BOXED",
+   "condition": "footing BOXED column",
+   "input_population": "F, F2-F7, F9-F11, F15",
+   "current_behaviour": "never parsed, never flagged",
+   "correct_future_behaviour": "parse; REBAR_BLOCKED (shape) row per occurrence until dimensioned",
+   "severity": "MEDIUM",
+   "test_required": "test_sd08_boxed_column_unread"
+  },
+  {
+   "id": "SD-09",
+   "code_location": "research/external_engine_lab/alsenan_v3_layers.py:391",
+   "anchor": "if r[\"class\"] not in (\"ROOM\", \"OPEN_PLAN_ZONE\", \"UNNAMED_ROOM\") or r[\"room_class\"] in (\"SHAFT\", \"ROOF\", \"EXTERNAL\"):",
+   "condition": "room class SHAFT / ROOF / EXTERNAL or strip",
+   "input_population": "shafts, opening strips",
+   "current_behaviour": "no finish row",
+   "correct_future_behaviour": "explicit NOT_IN_SCOPE row (scope decision recorded)",
+   "severity": "LOW",
+   "test_required": "test_sd_code_anchors_hold"
+  },
+  {
+   "id": "SD-10",
+   "code_location": "research/external_engine_lab/alsenan_v3_registers.py:293",
+   "anchor": "if r[\"room_class\"] not in (\"WET\", \"SERVICE\"):",
+   "condition": "room classed DRY / UNKNOWN",
+   "input_population": "wet labels inside DRY zones (GF-Z04 Wash, GF-Z06 Wash)",
+   "current_behaviour": "no wall tile / WP row - the wet label is lost",
+   "correct_future_behaviour": "zone with a wet label and unresolved semantics => TILE_WP_BLOCKED row",
+   "severity": "HIGH",
+   "test_required": "test_j_wet_label_in_dry_zone_gets_no_tile"
+  },
+  {
+   "id": "SD-11",
+   "code_location": "research/external_engine_lab/alsenan_v3_structure.py:344",
+   "anchor": "if o[\"D_cm\"] and o[\"D_cm\"] > 60:",
+   "condition": "beam deeper than 60 cm",
+   "input_population": "B7-B29 occurrences",
+   "current_behaviour": "side bars BLOCKED ('width-to-count mapping not printed') though REMARKS prints them",
+   "correct_future_behaviour": "consume REMARKS (2Ø12/30cm etc.)",
+   "severity": "MEDIUM",
+   "test_required": "test_sd11_side_bar_remarks_unused"
+  },
+  {
+   "id": "SD-12",
+   "code_location": "research/external_engine_lab/alsenan_phase_a3.py",
+   "anchor": "_simple_beam_library",
+   "condition": "duplicate schedule name",
+   "input_population": "SB2 (two rows 80x50 and 100x50)",
+   "current_behaviour": "one row kept, conflict not recorded",
+   "correct_future_behaviour": "SOURCE_CONFLICT row; drawn width selects",
+   "severity": "MEDIUM",
+   "test_required": "test_sd12_sb2_duplicate_rows"
+  },
+  {
+   "id": "SD-13",
+   "code_location": null,
+   "anchor": null,
+   "condition": "planted column texts",
+   "input_population": "P.C 20x70, 2 x P.C 20x50",
+   "current_behaviour": "no consumer",
+   "correct_future_behaviour": "UNREAD row in coverage; owner question",
+   "severity": "MEDIUM",
+   "test_required": "test_e_every_schedule_block_has_a_state"
+  },
+  {
+   "id": "SD-14",
+   "code_location": null,
+   "anchor": null,
+   "condition": "(T&B) qualifier",
+   "input_population": "2F slab bars x4",
+   "current_behaviour": "qualifier ignored",
+   "correct_future_behaviour": "layer count read",
+   "severity": "LOW",
+   "test_required": "test_e_every_schedule_block_has_a_state"
+  },
+  {
+   "id": "SD-15",
+   "code_location": null,
+   "anchor": null,
+   "condition": "section B-B bars",
+   "input_population": "p.5 11Ø18 / 3Ø18",
+   "current_behaviour": "unbound",
+   "correct_future_behaviour": "bind to member or BLOCKED",
+   "severity": "LOW",
+   "test_required": "test_e_every_schedule_block_has_a_state"
+  },
+  {
+   "id": "SD-16",
+   "code_location": null,
+   "anchor": null,
+   "condition": "p.8 notes (raster), p.15 temperature steel",
+   "input_population": "slab top steel / general notes",
+   "current_behaviour": "unread",
+   "correct_future_behaviour": "OCR or owner transcription; BLOCKED rows",
+   "severity": "MEDIUM",
+   "test_required": "test_e_every_schedule_block_has_a_state"
+  },
+  {
+   "id": "SD-17",
+   "code_location": "research/external_engine_lab/alsenan_v3b_struct.py",
+   "anchor": "no callout bound",
+   "condition": "stair rebar",
+   "input_population": "stairs",
+   "current_behaviour": "BLOCKED although p.16 prints a typical stair steel layout",
+   "correct_future_behaviour": "bind the typical layout as SOURCE_RULE (provisional until owner confirms)",
+   "severity": "MEDIUM",
+   "test_required": "test_sd_code_anchors_hold"
+  },
+  {
+   "id": "SD-18",
+   "code_location": "research/external_engine_lab/alsenan_v3b_rebar.py:166",
+   "anchor": "if not c or not b.get(\"length_m\"):",
+   "condition": "residue beam without commercial / length",
+   "input_population": "V3b residue beams",
+   "current_behaviour": "skipped",
+   "correct_future_behaviour": "REBAR_BLOCKED row",
+   "severity": "LOW",
+   "test_required": "test_sd_code_anchors_hold"
+  },
+  {
+   "id": "SD-19",
+   "code_location": "research/external_engine_lab/alsenan_v3b_rebar.py:169",
+   "anchor": "if k is None:",
+   "condition": "residue beam type without measured kg/m (every CB)",
+   "input_population": "CB residue occurrences",
+   "current_behaviour": "skipped - CB never gets rebar even as budget",
+   "correct_future_behaviour": "REBAR_BLOCKED row",
+   "severity": "MEDIUM",
+   "test_required": "test_sd_code_anchors_hold"
+  },
+  {
+   "id": "SD-20",
+   "code_location": "research/external_engine_lab/alsenan_v3b_struct.py:329",
+   "anchor": "if r.get(\"volume_m3\") is not None or r[\"state\"] in (\"NOT_IN_STOREY\", \"NOT_DRAWN_ON_STOREY_SHEET\"):",
+   "condition": "column NOT_DRAWN_ON_STOREY_SHEET",
+   "input_population": "17 occurrences",
+   "current_behaviour": "no concrete (but rebar is emitted: D5)",
+   "correct_future_behaviour": "consistent state across concrete and rebar",
+   "severity": "HIGH",
+   "test_required": "test_d5_column_rebar_ignores_occurrence_state"
+  },
+  {
+   "id": "SD-21",
+   "code_location": "research/external_engine_lab/alsenan_v3b_finish.py:287",
+   "anchor": "if not H:",
+   "condition": "floor without wall height",
+   "input_population": "lintel/reveal rows",
+   "current_behaviour": "skipped",
+   "correct_future_behaviour": "BLOCKED row",
+   "severity": "LOW",
+   "test_required": "test_sd_code_anchors_hold"
+  },
+  {
+   "id": "SD-22",
+   "code_location": "research/external_engine_lab/alsenan_v3_structure.py:108",
+   "anchor": "outer = min(hit, key=lambda p: p.area)",
+   "condition": "ground zone label inside several cells",
+   "input_population": "ground zones",
+   "current_behaviour": "binds to the SMALLEST containing cell (D6)",
+   "correct_future_behaviour": "bind to the cell whose boundary is the zone outline; ambiguity => BLOCKED",
+   "severity": "HIGH",
+   "test_required": "test_d6_ground_zone_binds_smallest_cell"
+  },
+  {
+   "id": "SD-23",
+   "code_location": null,
+   "anchor": null,
+   "condition": "wet label outside every room site",
+   "input_population": "1F W.C / مرحاض, 1F BATH / حمام",
+   "current_behaviour": "label silently unused (NO_SITE)",
+   "correct_future_behaviour": "WET_LABEL_UNPLACED row + owner question",
+   "severity": "HIGH",
+   "test_required": "test_j_unplaced_wet_labels"
+  }
+ ],
+ "rule": "a silent drop is a code path that removes an input object from every output without writing a BLOCKED / NOT_IN_SCOPE row; anchors are verified against the source by the tests",
+ "continue_sites_scanned": "136 `continue` statements in the active Alsenan modules were read; the rows above are the ones that drop a quantity-bearing object"
+}

@@ -1,0 +1,238 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_BENCHMARK_CONFIDENCE_V1",
+ "classes": [
+  "VERIFIED_SOURCE_TRUTH",
+  "STRONG_HUMAN_REFERENCE",
+  "WEAK_HUMAN_REFERENCE",
+  "HUMAN_FORMULA_ERROR",
+  "UNRESOLVED"
+ ],
+ "rows": [
+  {
+   "benchmark": "FLOOR / ALL",
+   "qty": 409.58,
+   "unit": "m²",
+   "unit_source": "STATED",
+   "cover_formula": "=B15",
+   "source_formula": "=سيراميك!H70",
+   "class": "STRONG_HUMAN_REFERENCE",
+   "urban_v3b_technical": 447.224,
+   "urban_v3b_commercial": 447.224,
+   "diff_technical_pct": 9.2,
+   "diff_commercial_pct": 9.2,
+   "notes": [
+    "formula-backed (=سيراميك!H70)"
+   ],
+   "use": "FINDING_ONLY - never a target"
+  },
+  {
+   "benchmark": "SKIRTING / ALL",
+   "qty": 282.85,
+   "unit": "lm",
+   "unit_source": "STATED",
+   "cover_formula": "=B16",
+   "source_formula": "=سيراميك!H71",
+   "class": "STRONG_HUMAN_REFERENCE",
+   "urban_v3b_technical": 312.3,
+   "urban_v3b_commercial": 312.3,
+   "diff_technical_pct": 10.4,
+   "diff_commercial_pct": 10.4,
+   "notes": [
+    "formula-backed (=سيراميك!H71)"
+   ],
+   "use": "FINDING_ONLY - never a target"
+  },
+  {
+   "benchmark": "WALL_TILE / WET_ROOMS",
+   "qty": 433.83,
+   "unit": "m²",
+   "unit_source": "STATED",
+   "cover_formula": "=B17-D17",
+   "source_formula": "=سيراميك!H72",
+   "class": "STRONG_HUMAN_REFERENCE",
+   "urban_v3b_technical": 26.36,
+   "urban_v3b_commercial": 369.123,
+   "diff_technical_pct": -93.9,
+   "diff_commercial_pct": -14.9,
+   "notes": [
+    "formula-backed (=سيراميك!H72)"
+   ],
+   "use": "FINDING_ONLY - never a target"
+  },
+  {
+   "benchmark": "WATERPROOFING / WET_ROOM:FLOOR",
+   "qty": 72.01,
+   "unit": "m²",
+   "unit_source": "STATED",
+   "cover_formula": "=B27",
+   "source_formula": null,
+   "class": "WEAK_HUMAN_REFERENCE",
+   "urban_v3b_technical": 58.237,
+   "urban_v3b_commercial": 58.237,
+   "diff_technical_pct": -19.1,
+   "diff_commercial_pct": -19.1,
+   "notes": [
+    "cover value 72.01 is a typed constant; it equals the formula-backed wet-floor tile subtotal (سيراميك!H65 =SUM(H42:H63)) and is reused for wet ceilings and decor paint - the WP area equals the tile area with no separate measurement"
+   ],
+   "use": "FINDING_ONLY - never a target"
+  },
+  {
+   "benchmark": "WATERPROOFING / ROOF:FLOOR",
+   "qty": 285.0,
+   "unit": "m²",
+   "unit_source": "STATED",
+   "cover_formula": "=B29",
+   "source_formula": null,
+   "class": "WEAK_HUMAN_REFERENCE",
+   "urban_v3b_technical": 364.031,
+   "urban_v3b_commercial": 364.031,
+   "diff_technical_pct": 27.7,
+   "diff_commercial_pct": 27.7,
+   "notes": [
+    "typed constant on the cover, not traceable to a detail row"
+   ],
+   "use": "FINDING_ONLY - never a target"
+  },
+  {
+   "benchmark": "RAILING / INTERNAL",
+   "qty": 18.95,
+   "unit": "lm",
+   "unit_source": "STATED",
+   "cover_formula": "=B39",
+   "source_formula": null,
+   "class": "WEAK_HUMAN_REFERENCE",
+   "urban_v3b_technical": 14.29,
+   "urban_v3b_commercial": 14.29,
+   "diff_technical_pct": -24.6,
+   "diff_commercial_pct": -24.6,
+   "notes": [
+    "typed constant on the cover, not traceable to a detail row"
+   ],
+   "use": "FINDING_ONLY - never a target"
+  },
+  {
+   "benchmark": "BLOCKWORK / ALL",
+   "qty": 1260.6895,
+   "unit": "m²",
+   "unit_source": "STATED",
+   "cover_formula": "=SUM(E15:E18)",
+   "source_formula": null,
+   "class": "STRONG_HUMAN_REFERENCE",
+   "urban_v3b_technical": 703.024,
+   "urban_v3b_commercial": 801.075,
+   "diff_technical_pct": -44.2,
+   "diff_commercial_pct": -36.5,
+   "notes": [
+    "formula-backed (=SUM(E15:E18))"
+   ],
+   "use": "FINDING_ONLY - never a target"
+  },
+  {
+   "benchmark": "PAINT / INTERNAL_WALL",
+   "qty": 1191.1275,
+   "unit": "m²",
+   "unit_source": "INFERRED_FROM_TRADE (B1 unit cell blank)",
+   "cover_formula": null,
+   "source_formula": null,
+   "class": "STRONG_HUMAN_REFERENCE",
+   "urban_v3b_technical": 0.0,
+   "urban_v3b_commercial": 1199.23,
+   "diff_technical_pct": -100.0,
+   "diff_commercial_pct": 0.7,
+   "notes": [
+    "gross 1249.375 - deduction 58.2475; unit cell blank in B1 (unit inferred from trade)"
+   ],
+   "use": "FINDING_ONLY - never a target"
+  },
+  {
+   "benchmark": "PLASTER / INTERNAL_WALL",
+   "qty": 1151.1375,
+   "unit": "m²",
+   "unit_source": "INFERRED_FROM_TRADE (B1 unit cell blank)",
+   "cover_formula": null,
+   "source_formula": null,
+   "class": "STRONG_HUMAN_REFERENCE",
+   "urban_v3b_technical": 0.0,
+   "urban_v3b_commercial": 1367.565,
+   "diff_technical_pct": -100.0,
+   "diff_commercial_pct": 18.8,
+   "notes": [
+    "gross 1209.385 - deduction 58.2475; unit cell blank in B1 (unit inferred from trade)"
+   ],
+   "use": "FINDING_ONLY - never a target"
+  },
+  {
+   "benchmark": "BLINDING / PLAIN",
+   "qty": 47.05500000000001,
+   "unit": "m³",
+   "unit_source": "STATED",
+   "cover_formula": "=القواعد!I11",
+   "source_formula": null,
+   "class": "STRONG_HUMAN_REFERENCE",
+   "urban_v3b_technical": 29.623,
+   "urban_v3b_commercial": 29.623,
+   "diff_technical_pct": -37.0,
+   "diff_commercial_pct": -37.0,
+   "notes": [
+    "formula-backed (=القواعد!I11)"
+   ],
+   "use": "FINDING_ONLY - never a target"
+  },
+  {
+   "benchmark": "OTHER_CONCRETE / ALL_REINFORCED",
+   "qty": 352.436075,
+   "unit": "m³",
+   "unit_source": "STATED",
+   "cover_formula": "=SUM(E17:E23)",
+   "source_formula": null,
+   "class": "STRONG_HUMAN_REFERENCE",
+   "urban_v3b_technical": 253.217,
+   "urban_v3b_commercial": 316.058,
+   "diff_technical_pct": -28.2,
+   "diff_commercial_pct": -10.3,
+   "notes": [
+    "=SUM of detail rows; one SUM_SKIPS_LEADING_ROWS finding (I59 = 0.128 m3) -> HUMAN_FORMULA_ERROR of +0.128 m3 inside it"
+   ],
+   "use": "FINDING_ONLY - never a target"
+  },
+  {
+   "benchmark": "REBAR / ALL",
+   "qty": 44.19,
+   "unit": "t",
+   "unit_source": "STATED",
+   "cover_formula": null,
+   "source_formula": null,
+   "class": "WEAK_HUMAN_REFERENCE",
+   "urban_v3b_technical": 20.651,
+   "urban_v3b_commercial": 26.24,
+   "diff_technical_pct": -53.3,
+   "diff_commercial_pct": -40.6,
+   "notes": [
+    "44.19 t = sum of seven typed constants on the RC cover (5.8+9.75+7.95+9.89+5.4+3.9+1.5); no bar schedule behind it; RC كمرات!I82 also skips I59 (0.128 m3)"
+   ],
+   "use": "FINDING_ONLY - never a target"
+  },
+  {
+   "benchmark": "FIN رخام+حوش!H44",
+   "class": "HUMAN_FORMULA_ERROR",
+   "notes": [
+    "=SUM(H13:H41) contains H13 (151.8) which is also reported on the cover (B22 and B24) - double count or omitted item"
+   ],
+   "use": "FINDING_ONLY"
+  },
+  {
+   "benchmark": "RC كمرات!I82",
+   "class": "HUMAN_FORMULA_ERROR",
+   "notes": [
+    "=SUM(I60:I78) skips I59 (0.128); the same block's I79 includes it"
+   ],
+   "use": "FINDING_ONLY"
+  }
+ ],
+ "counts": {
+  "STRONG_HUMAN_REFERENCE": 8,
+  "WEAK_HUMAN_REFERENCE": 4,
+  "HUMAN_FORMULA_ERROR": 2
+ },
+ "rule": "no freelancer value is VERIFIED_SOURCE_TRUTH - only a value re-derived from the drawings can be; a human reference ranks a disagreement for review and never moves a quantity"
+}

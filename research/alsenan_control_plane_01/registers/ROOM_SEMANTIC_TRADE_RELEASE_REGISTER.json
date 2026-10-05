@@ -1,0 +1,2264 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_ROOM_SEMANTIC_TRADE_RELEASE_V1",
+ "rows": [
+  {
+   "room": "GF-R01",
+   "floor": "GF",
+   "physical_space": "SITE-0bb9132c5c034229",
+   "physical_class": "UNNAMED_ROOM",
+   "physical_status": "REVIEW_REQUIRED",
+   "area_m2": 3.24,
+   "semantic_zone_state_ts01": "UNLABELLED",
+   "semantic_zones": [],
+   "name_en": "UNKNOWN",
+   "name_ar": "",
+   "alsenan_room_class": "SHAFT",
+   "wet_labels_inside": [],
+   "wet_room_labels_inside_en": [],
+   "room_status_v3": "COMPUTED_REVIEW",
+   "trade_region": {
+    "floor_m2": null,
+    "floor_material": null,
+    "skirting_m": null,
+    "ceiling_m2": null,
+    "wall_tile_gross_m2": null,
+    "wall_state": null
+   },
+   "release": {
+    "floor": null,
+    "skirting": null,
+    "ceiling": null,
+    "plaster_seq_P-SP": null,
+    "paint_P-PA": null,
+    "wall_tile_T-WT": null,
+    "wp_floor": null
+   },
+   "flags": []
+  },
+  {
+   "room": "GF-R02",
+   "floor": "GF",
+   "physical_space": "SITE-0e9a7a85e795446f",
+   "physical_class": "ROOM",
+   "physical_status": "CERTIFIED",
+   "area_m2": 3.132,
+   "semantic_zone_state_ts01": "ONE_PHYSICAL_SPACE_ONE_SEMANTIC_ZONE",
+   "semantic_zones": [
+    [
+     "MOSLy",
+     "Wash"
+    ]
+   ],
+   "name_en": "",
+   "name_ar": "مغسلة",
+   "alsenan_room_class": "WET",
+   "wet_labels_inside": [
+    "مغسلة"
+   ],
+   "wet_room_labels_inside_en": [],
+   "room_status_v3": "COMPUTED_REVIEW",
+   "trade_region": {
+    "floor_m2": 3.1325,
+    "floor_material": "TILE (type BY_SPEC)",
+    "skirting_m": null,
+    "ceiling_m2": 3.1325,
+    "wall_tile_gross_m2": 25.2,
+    "wall_state": "COMPUTED"
+   },
+   "release": {
+    "floor": {
+     "line_id": "B0164",
+     "qty": 3.132,
+     "v3a_status": "COMPUTED",
+     "technical_class": "URBAN_STANDARD",
+     "in_total": true,
+     "commercial_class": "URBAN_STANDARD",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "skirting": null,
+    "ceiling": {
+     "line_id": "B0205",
+     "qty": 3.132,
+     "v3a_status": "COMPUTED",
+     "technical_class": "URBAN_STANDARD",
+     "in_total": true,
+     "commercial_class": "URBAN_STANDARD",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "plaster_seq_P-SP": null,
+    "paint_P-PA": null,
+    "wall_tile_T-WT": {
+     "line_id": "B0258",
+     "qty": null,
+     "v3a_status": "BLOCKED",
+     "technical_class": "BLOCKED",
+     "in_total": false,
+     "commercial_class": "PROVISIONAL_SOURCE_DERIVED",
+     "procurement_eligible": false,
+     "confidence": "M"
+    },
+    "wp_floor": null
+   },
+   "flags": [
+    "REVIEW_ROOM_FLOOR_IN_TOTAL"
+   ]
+  },
+  {
+   "room": "GF-R03",
+   "floor": "GF",
+   "physical_space": "SITE-5191e28052b00088",
+   "physical_class": "ROOM",
+   "physical_status": "REVIEW_REQUIRED",
+   "area_m2": 2.368,
+   "semantic_zone_state_ts01": "ONE_PHYSICAL_SPACE_ONE_SEMANTIC_ZONE",
+   "semantic_zones": [
+    [
+     "M—HAe",
+     "W.C"
+    ]
+   ],
+   "name_en": "W.C",
+   "name_ar": "مرحاض",
+   "alsenan_room_class": "WET",
+   "wet_labels_inside": [
+    "W.C",
+    "مرحاض"
+   ],
+   "wet_room_labels_inside_en": [
+    "W.C"
+   ],
+   "room_status_v3": "COMPUTED_REVIEW",
+   "trade_region": {
+    "floor_m2": 2.367609,
+    "floor_material": "TILE (type BY_SPEC)",
+    "skirting_m": null,
+    "ceiling_m2": 2.367609,
+    "wall_tile_gross_m2": 23.834329,
+    "wall_state": "COMPUTED"
+   },
+   "release": {
+    "floor": {
+     "line_id": "B0165",
+     "qty": 2.368,
+     "v3a_status": "COMPUTED",
+     "technical_class": "URBAN_STANDARD",
+     "in_total": true,
+     "commercial_class": "URBAN_STANDARD",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "skirting": null,
+    "ceiling": {
+     "line_id": "B0207",
+     "qty": 2.368,
+     "v3a_status": "COMPUTED",
+     "technical_class": "URBAN_STANDARD",
+     "in_total": true,
+     "commercial_class": "URBAN_STANDARD",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "plaster_seq_P-SP": null,
+    "paint_P-PA": null,
+    "wall_tile_T-WT": {
+     "line_id": "B0265",
+     "qty": null,
+     "v3a_status": "BLOCKED",
+     "technical_class": "BLOCKED",
+     "in_total": false,
+     "commercial_class": "PROVISIONAL_SOURCE_DERIVED",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "wp_floor": null
+   },
+   "flags": [
+    "REVIEW_ROOM_FLOOR_IN_TOTAL"
+   ]
+  },
+  {
+   "room": "GF-Z04",
+   "floor": "GF",
+   "physical_space": "SITE-67547ed37daadb5a",
+   "physical_class": "OPEN_PLAN_ZONE",
+   "physical_status": "REVIEW_REQUIRED",
+   "area_m2": 155.655,
+   "semantic_zone_state_ts01": "ONE_PHYSICAL_SPACE_MULTIPLE_SEMANTIC_ZONES_UNRESOLVED",
+   "semantic_zones": [
+    [
+     "PANTRY",
+     "VHEZ—"
+    ],
+    [
+     "RaL‘n",
+     "SALOON"
+    ],
+    [
+     "ASVQBaL",
+     "RECEPTION"
+    ],
+    [
+     "DINING",
+     "“Ia²"
+    ],
+    [
+     "MOSLy",
+     "Wash"
+    ],
+    [
+     "GARDEN",
+     "H™ZQy"
+    ]
+   ],
+   "name_en": "PANTRY / SALOON / RECEPTION / Wash / DINING / GARDEN",
+   "name_ar": "تحضير / صالون / استقبال / مغسلة / طعام / حديقة",
+   "alsenan_room_class": "DRY",
+   "wet_labels_inside": [
+    "PANTRY",
+    "Wash",
+    "تحضير",
+    "مغسلة"
+   ],
+   "wet_room_labels_inside_en": [
+    "Wash"
+   ],
+   "room_status_v3": "COMPUTED_REVIEW",
+   "trade_region": {
+    "floor_m2": 155.655211,
+    "floor_material": "PORCELAIN",
+    "skirting_m": 87.368148,
+    "ceiling_m2": 139.650211,
+    "wall_tile_gross_m2": null,
+    "wall_state": "COMPUTED"
+   },
+   "release": {
+    "floor": {
+     "line_id": "B0166",
+     "qty": 155.655,
+     "v3a_status": "COMPUTED",
+     "technical_class": "URBAN_STANDARD",
+     "in_total": true,
+     "commercial_class": "URBAN_STANDARD",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "skirting": {
+     "line_id": "B0167",
+     "qty": 87.368,
+     "v3a_status": "COMPUTED",
+     "technical_class": "DERIVED",
+     "in_total": true,
+     "commercial_class": "DERIVED",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "ceiling": {
+     "line_id": "B0209",
+     "qty": 139.65,
+     "v3a_status": "COMPUTED",
+     "technical_class": "URBAN_STANDARD",
+     "in_total": true,
+     "commercial_class": "URBAN_STANDARD",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "plaster_seq_P-SP": {
+     "line_id": "B0094",
+     "qty": null,
+     "v3a_status": "BLOCKED",
+     "technical_class": "BLOCKED",
+     "in_total": false,
+     "commercial_class": "PROVISIONAL_SOURCE_DERIVED",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "paint_P-PA": {
+     "line_id": "B0095",
+     "qty": null,
+     "v3a_status": "BLOCKED",
+     "technical_class": "BLOCKED",
+     "in_total": false,
+     "commercial_class": "PROVISIONAL_GEOMETRIC_INFERENCE",
+     "procurement_eligible": false,
+     "confidence": "M"
+    },
+    "wall_tile_T-WT": null,
+    "wp_floor": null
+   },
+   "flags": [
+    "TS01_UNRESOLVED_BUT_RELEASED",
+    "REVIEW_ROOM_FLOOR_IN_TOTAL",
+    "WET_LABEL_IN_DRY_ZONE",
+    "MULTI_NAME_DRY_WINS"
+   ]
+  },
+  {
+   "room": "GF-R05",
+   "floor": "GF",
+   "physical_space": "SITE-714889aea3e329c7",
+   "physical_class": "UNNAMED_ROOM",
+   "physical_status": "CERTIFIED",
+   "area_m2": 3.718,
+   "semantic_zone_state_ts01": "UNLABELLED",
+   "semantic_zones": [],
+   "name_en": "BATH",
+   "name_ar": "حمام",
+   "alsenan_room_class": "WET",
+   "wet_labels_inside": [
+    "BATH",
+    "حمام"
+   ],
+   "wet_room_labels_inside_en": [
+    "BATH"
+   ],
+   "room_status_v3": "COMPUTED_REVIEW",
+   "trade_region": {
+    "floor_m2": 3.717683,
+    "floor_material": "TILE (type BY_SPEC)",
+    "skirting_m": null,
+    "ceiling_m2": 3.717683,
+    "wall_tile_gross_m2": 28.592495,
+    "wall_state": "COMPUTED"
+   },
+   "release": {
+    "floor": {
+     "line_id": "B0168",
+     "qty": 3.718,
+     "v3a_status": "COMPUTED",
+     "technical_class": "URBAN_STANDARD",
+     "in_total": true,
+     "commercial_class": "URBAN_STANDARD",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "skirting": null,
+    "ceiling": {
+     "line_id": "B0211",
+     "qty": 3.718,
+     "v3a_status": "COMPUTED",
+     "technical_class": "URBAN_STANDARD",
+     "in_total": true,
+     "commercial_class": "URBAN_STANDARD",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "plaster_seq_P-SP": null,
+    "paint_P-PA": null,
+    "wall_tile_T-WT": {
+     "line_id": "B0272",
+     "qty": null,
+     "v3a_status": "BLOCKED",
+     "technical_class": "BLOCKED",
+     "in_total": false,
+     "commercial_class": "PROVISIONAL_SOURCE_DERIVED",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "wp_floor": null
+   },
+   "flags": [
+    "REVIEW_ROOM_FLOOR_IN_TOTAL"
+   ]
+  },
+  {
+   "room": "GF-Z06",
+   "floor": "GF",
+   "physical_space": "SITE-810cacd9be443703",
+   "physical_class": "OPEN_PLAN_ZONE",
+   "physical_status": "CERTIFIED",
+   "area_m2": 24.94,
+   "semantic_zone_state_ts01": "ONE_PHYSICAL_SPACE_MULTIPLE_SEMANTIC_ZONES_UNRESOLVED",
+   "semantic_zones": [
+    [
+     "DEWANEYA",
+     "™Z‘aNZy"
+    ],
+    [
+     "MOSLy",
+     "Wash"
+    ]
+   ],
+   "name_en": "DEWANEYA / Wash",
+   "name_ar": "ديوانية",
+   "alsenan_room_class": "DRY",
+   "wet_labels_inside": [
+    "Wash"
+   ],
+   "wet_room_labels_inside_en": [
+    "Wash"
+   ],
+   "room_status_v3": "COMPUTED_REVIEW",
+   "trade_region": {
+    "floor_m2": 24.940332,
+    "floor_material": "PORCELAIN",
+    "skirting_m": 14.217488,
+    "ceiling_m2": 24.940332,
+    "wall_tile_gross_m2": null,
+    "wall_state": "COMPUTED"
+   },
+   "release": {
+    "floor": {
+     "line_id": "B0169",
+     "qty": 24.94,
+     "v3a_status": "COMPUTED",
+     "technical_class": "URBAN_STANDARD",
+     "in_total": true,
+     "commercial_class": "URBAN_STANDARD",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "skirting": {
+     "line_id": "B0170",
+     "qty": 14.217,
+     "v3a_status": "COMPUTED",
+     "technical_class": "DERIVED",
+     "in_total": true,
+     "commercial_class": "DERIVED",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "ceiling": {
+     "line_id": "B0213",
+     "qty": 24.94,
+     "v3a_status": "COMPUTED",
+     "technical_class": "URBAN_STANDARD",
+     "in_total": true,
+     "commercial_class": "URBAN_STANDARD",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "plaster_seq_P-SP": {
+     "line_id": "B0098",
+     "qty": null,
+     "v3a_status": "BLOCKED",
+     "technical_class": "BLOCKED",
+     "in_total": false,
+     "commercial_class": "PROVISIONAL_SOURCE_DERIVED",
+     "procurement_eligible": false,
+     "confidence": "L"
+    },
+    "paint_P-PA": {
+     "line_id": "B0099",
+     "qty": null,
+     "v3a_status": "BLOCKED",
+     "technical_class": "BLOCKED",
+     "in_total": false,
+     "commercial_class": "PROVISIONAL_SOURCE_DERIVED",
+     "procurement_eligible": false,
+     "confidence": "L"
+    },
+    "wall_tile_T-WT": null,
+    "wp_floor": null
+   },
+   "flags": [
+    "TS01_UNRESOLVED_BUT_RELEASED",
+    "REVIEW_ROOM_FLOOR_IN_TOTAL",
+    "WET_LABEL_IN_DRY_ZONE",
+    "MULTI_NAME_DRY_WINS"
+   ]
+  },
+  {
+   "room": "GF-R07",
+   "floor": "GF",
+   "physical_space": "SITE-88d9dbffd47c417a",
+   "physical_class": "ROOM",
+   "physical_status": "CERTIFIED",
+   "area_m2": 9.63,
+   "semantic_zone_state_ts01": "ONE_PHYSICAL_SPACE_ONE_SEMANTIC_ZONE",
+   "semantic_zones": [
+    [
+     "KITCHEN",
+     "M“B¢"
+    ]
+   ],
+   "name_en": "KITCHEN",
+   "name_ar": "مطبخ",
+   "alsenan_room_class": "SERVICE",
+   "wet_labels_inside": [
+    "KITCHEN",
+    "مطبخ"
+   ],
+   "wet_room_labels_inside_en": [],
+   "room_status_v3": "COMPUTED",
+   "trade_region": {
+    "floor_m2": 9.63,
+    "floor_material": "TILE (type BY_SPEC)",
+    "skirting_m": null,
+    "ceiling_m2": 9.63,
+    "wall_tile_gross_m2": 50.75,
+    "wall_state": "COMPUTED"
+   },
+   "release": {
+    "floor": {
+     "line_id": "B0171",
+     "qty": 9.63,
+     "v3a_status": "COMPUTED",
+     "technical_class": "URBAN_STANDARD",
+     "in_total": true,
+     "commercial_class": "URBAN_STANDARD",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "skirting": null,
+    "ceiling": {
+     "line_id": "B0215",
+     "qty": 9.63,
+     "v3a_status": "COMPUTED",
+     "technical_class": "URBAN_STANDARD",
+     "in_total": true,
+     "commercial_class": "URBAN_STANDARD",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "plaster_seq_P-SP": null,
+    "paint_P-PA": null,
+    "wall_tile_T-WT": {
+     "line_id": "B0279",
+     "qty": null,
+     "v3a_status": "BLOCKED",
+     "technical_class": "BLOCKED",
+     "in_total": false,
+     "commercial_class": "PROVISIONAL_SOURCE_DERIVED",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "wp_floor": null
+   },
+   "flags": []
+  },
+  {
+   "room": "GF-T08",
+   "floor": "GF",
+   "physical_space": "SITE-92d772778d0e5bef",
+   "physical_class": "OPENING_STRIP",
+   "physical_status": "CERTIFIED",
+   "area_m2": 0.4,
+   "semantic_zone_state_ts01": null,
+   "semantic_zones": [],
+   "name_en": "UNKNOWN",
+   "name_ar": "",
+   "alsenan_room_class": "UNKNOWN",
+   "wet_labels_inside": [],
+   "wet_room_labels_inside_en": [],
+   "room_status_v3": "COMPUTED",
+   "trade_region": {
+    "floor_m2": null,
+    "floor_material": null,
+    "skirting_m": null,
+    "ceiling_m2": null,
+    "wall_tile_gross_m2": null,
+    "wall_state": null
+   },
+   "release": {
+    "floor": null,
+    "skirting": null,
+    "ceiling": null,
+    "plaster_seq_P-SP": null,
+    "paint_P-PA": null,
+    "wall_tile_T-WT": null,
+    "wp_floor": null
+   },
+   "flags": []
+  },
+  {
+   "room": "GF-R09",
+   "floor": "GF",
+   "physical_space": "SITE-9810548752edbe40",
+   "physical_class": "ROOM",
+   "physical_status": "CERTIFIED",
+   "area_m2": 2.675,
+   "semantic_zone_state_ts01": "ONE_PHYSICAL_SPACE_ONE_SEMANTIC_ZONE",
+   "semantic_zones": [
+    [
+     "M—HAe",
+     "W.C"
+    ]
+   ],
+   "name_en": "W.C",
+   "name_ar": "مرحاض",
+   "alsenan_room_class": "WET",
+   "wet_labels_inside": [
+    "W.C",
+    "مرحاض"
+   ],
+   "wet_room_labels_inside_en": [
+    "W.C"
+   ],
+   "room_status_v3": "COMPUTED",
+   "trade_region": {
+    "floor_m2": 2.675221,
+    "floor_material": "TILE (type BY_SPEC)",
+    "skirting_m": null,
+    "ceiling_m2": 2.675221,
+    "wall_tile_gross_m2": 28.544045,
+    "wall_state": "COMPUTED"
+   },
+   "release": {
+    "floor": {
+     "line_id": "B0172",
+     "qty": 2.675,
+     "v3a_status": "COMPUTED",
+     "technical_class": "URBAN_STANDARD",
+     "in_total": true,
+     "commercial_class": "URBAN_STANDARD",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "skirting": null,
+    "ceiling": {
+     "line_id": "B0217",
+     "qty": 2.675,
+     "v3a_status": "COMPUTED",
+     "technical_class": "URBAN_STANDARD",
+     "in_total": true,
+     "commercial_class": "URBAN_STANDARD",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "plaster_seq_P-SP": null,
+    "paint_P-PA": null,
+    "wall_tile_T-WT": {
+     "line_id": "B0286",
+     "qty": null,
+     "v3a_status": "BLOCKED",
+     "technical_class": "BLOCKED",
+     "in_total": false,
+     "commercial_class": "PROVISIONAL_SOURCE_DERIVED",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "wp_floor": null
+   },
+   "flags": []
+  },
+  {
+   "room": "GF-R10",
+   "floor": "GF",
+   "physical_space": "SITE-9b585230d0877a35",
+   "physical_class": "ROOM",
+   "physical_status": "CERTIFIED",
+   "area_m2": 1.95,
+   "semantic_zone_state_ts01": "ONE_PHYSICAL_SPACE_ONE_SEMANTIC_ZONE",
+   "semantic_zones": [
+    [
+     "M—HAe",
+     "W.C"
+    ]
+   ],
+   "name_en": "W.C",
+   "name_ar": "مرحاض",
+   "alsenan_room_class": "WET",
+   "wet_labels_inside": [
+    "W.C",
+    "مرحاض"
+   ],
+   "wet_room_labels_inside_en": [
+    "W.C"
+   ],
+   "room_status_v3": "COMPUTED",
+   "trade_region": {
+    "floor_m2": 1.95,
+    "floor_material": "TILE (type BY_SPEC)",
+    "skirting_m": null,
+    "ceiling_m2": 1.95,
+    "wall_tile_gross_m2": 19.6,
+    "wall_state": "COMPUTED"
+   },
+   "release": {
+    "floor": {
+     "line_id": "B0173",
+     "qty": 1.95,
+     "v3a_status": "COMPUTED",
+     "technical_class": "URBAN_STANDARD",
+     "in_total": true,
+     "commercial_class": "URBAN_STANDARD",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "skirting": null,
+    "ceiling": {
+     "line_id": "B0219",
+     "qty": 1.95,
+     "v3a_status": "COMPUTED",
+     "technical_class": "URBAN_STANDARD",
+     "in_total": true,
+     "commercial_class": "URBAN_STANDARD",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "plaster_seq_P-SP": null,
+    "paint_P-PA": null,
+    "wall_tile_T-WT": {
+     "line_id": "B0293",
+     "qty": null,
+     "v3a_status": "BLOCKED",
+     "technical_class": "BLOCKED",
+     "in_total": false,
+     "commercial_class": "PROVISIONAL_SOURCE_DERIVED",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "wp_floor": null
+   },
+   "flags": []
+  },
+  {
+   "room": "GF-T11",
+   "floor": "GF",
+   "physical_space": "SITE-a797936abec0d1a7",
+   "physical_class": "OPENING_STRIP",
+   "physical_status": "REVIEW_REQUIRED",
+   "area_m2": 0.12,
+   "semantic_zone_state_ts01": null,
+   "semantic_zones": [],
+   "name_en": "UNKNOWN",
+   "name_ar": "",
+   "alsenan_room_class": "UNKNOWN",
+   "wet_labels_inside": [],
+   "wet_room_labels_inside_en": [],
+   "room_status_v3": "COMPUTED_REVIEW",
+   "trade_region": {
+    "floor_m2": null,
+    "floor_material": null,
+    "skirting_m": null,
+    "ceiling_m2": null,
+    "wall_tile_gross_m2": null,
+    "wall_state": null
+   },
+   "release": {
+    "floor": null,
+    "skirting": null,
+    "ceiling": null,
+    "plaster_seq_P-SP": null,
+    "paint_P-PA": null,
+    "wall_tile_T-WT": null,
+    "wp_floor": null
+   },
+   "flags": []
+  },
+  {
+   "room": "GF-R12",
+   "floor": "GF",
+   "physical_space": "SITE-b2553428a3dc90a0",
+   "physical_class": "UNNAMED_ROOM",
+   "physical_status": "REVIEW_REQUIRED",
+   "area_m2": 14.64,
+   "semantic_zone_state_ts01": "UNLABELLED",
+   "semantic_zones": [],
+   "name_en": "UNKNOWN",
+   "name_ar": "",
+   "alsenan_room_class": "UNKNOWN",
+   "wet_labels_inside": [],
+   "wet_room_labels_inside_en": [],
+   "room_status_v3": "COMPUTED_REVIEW",
+   "trade_region": {
+    "floor_m2": 14.64,
+    "floor_material": "BY_SPEC",
+    "skirting_m": 18.299835,
+    "ceiling_m2": 14.64,
+    "wall_tile_gross_m2": null,
+    "wall_state": "COMPUTED"
+   },
+   "release": {
+    "floor": {
+     "line_id": "B0174",
+     "qty": 14.64,
+     "v3a_status": "COMPUTED",
+     "technical_class": "DERIVED",
+     "in_total": true,
+     "commercial_class": "DERIVED",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "skirting": {
+     "line_id": "B0175",
+     "qty": 18.3,
+     "v3a_status": "COMPUTED",
+     "technical_class": "DERIVED",
+     "in_total": true,
+     "commercial_class": "DERIVED",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "ceiling": {
+     "line_id": "B0221",
+     "qty": 14.64,
+     "v3a_status": "COMPUTED",
+     "technical_class": "URBAN_STANDARD",
+     "in_total": true,
+     "commercial_class": "URBAN_STANDARD",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "plaster_seq_P-SP": {
+     "line_id": "B0102",
+     "qty": null,
+     "v3a_status": "BLOCKED",
+     "technical_class": "BLOCKED",
+     "in_total": false,
+     "commercial_class": "PROVISIONAL_SOURCE_DERIVED",
+     "procurement_eligible": false,
+     "confidence": "M"
+    },
+    "paint_P-PA": {
+     "line_id": "B0103",
+     "qty": null,
+     "v3a_status": "BLOCKED",
+     "technical_class": "BLOCKED",
+     "in_total": false,
+     "commercial_class": "PROVISIONAL_GEOMETRIC_INFERENCE",
+     "procurement_eligible": false,
+     "confidence": "M"
+    },
+    "wall_tile_T-WT": null,
+    "wp_floor": null
+   },
+   "flags": [
+    "REVIEW_ROOM_FLOOR_IN_TOTAL"
+   ]
+  },
+  {
+   "room": "GF-R13",
+   "floor": "GF",
+   "physical_space": "SITE-ce2d2c3a4b7da280",
+   "physical_class": "ROOM",
+   "physical_status": "CERTIFIED",
+   "area_m2": 2.362,
+   "semantic_zone_state_ts01": "ONE_PHYSICAL_SPACE_ONE_SEMANTIC_ZONE",
+   "semantic_zones": [
+    [
+     "M—HAe",
+     "W.C"
+    ]
+   ],
+   "name_en": "W.C",
+   "name_ar": "مرحاض",
+   "alsenan_room_class": "WET",
+   "wet_labels_inside": [
+    "W.C",
+    "مرحاض"
+   ],
+   "wet_room_labels_inside_en": [
+    "W.C"
+   ],
+   "room_status_v3": "COMPUTED",
+   "trade_region": {
+    "floor_m2": 2.3625,
+    "floor_material": "TILE (type BY_SPEC)",
+    "skirting_m": null,
+    "ceiling_m2": 2.3625,
+    "wall_tile_gross_m2": 23.87,
+    "wall_state": "COMPUTED"
+   },
+   "release": {
+    "floor": {
+     "line_id": "B0176",
+     "qty": 2.362,
+     "v3a_status": "COMPUTED",
+     "technical_class": "URBAN_STANDARD",
+     "in_total": true,
+     "commercial_class": "URBAN_STANDARD",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "skirting": null,
+    "ceiling": {
+     "line_id": "B0223",
+     "qty": 2.362,
+     "v3a_status": "COMPUTED",
+     "technical_class": "URBAN_STANDARD",
+     "in_total": true,
+     "commercial_class": "URBAN_STANDARD",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "plaster_seq_P-SP": null,
+    "paint_P-PA": null,
+    "wall_tile_T-WT": {
+     "line_id": "B0300",
+     "qty": null,
+     "v3a_status": "BLOCKED",
+     "technical_class": "BLOCKED",
+     "in_total": false,
+     "commercial_class": "PROVISIONAL_SOURCE_DERIVED",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "wp_floor": null
+   },
+   "flags": []
+  },
+  {
+   "room": "GF-R14",
+   "floor": "GF",
+   "physical_space": "SITE-dda89794d15dfb61",
+   "physical_class": "ROOM",
+   "physical_status": "REVIEW_REQUIRED",
+   "area_m2": 16.55,
+   "semantic_zone_state_ts01": "ONE_PHYSICAL_SPACE_ONE_SEMANTIC_ZONE",
+   "semantic_zones": [
+    [
+     "MASTER BED ROOM",
+     "O—FtN‘²—XZS‚Zt"
+    ]
+   ],
+   "name_en": "MASTER BED ROOM",
+   "name_ar": "غرفةنومرئيسية",
+   "alsenan_room_class": "DRY",
+   "wet_labels_inside": [],
+   "wet_room_labels_inside_en": [],
+   "room_status_v3": "COMPUTED_REVIEW",
+   "trade_region": {
+    "floor_m2": 16.54964,
+    "floor_material": "PORCELAIN",
+    "skirting_m": 14.632594,
+    "ceiling_m2": 16.54964,
+    "wall_tile_gross_m2": null,
+    "wall_state": "COMPUTED"
+   },
+   "release": {
+    "floor": {
+     "line_id": "B0177",
+     "qty": 16.55,
+     "v3a_status": "COMPUTED",
+     "technical_class": "URBAN_STANDARD",
+     "in_total": true,
+     "commercial_class": "URBAN_STANDARD",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "skirting": {
+     "line_id": "B0178",
+     "qty": 14.633,
+     "v3a_status": "COMPUTED",
+     "technical_class": "DERIVED",
+     "in_total": true,
+     "commercial_class": "DERIVED",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "ceiling": {
+     "line_id": "B0225",
+     "qty": 16.55,
+     "v3a_status": "COMPUTED",
+     "technical_class": "URBAN_STANDARD",
+     "in_total": true,
+     "commercial_class": "URBAN_STANDARD",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "plaster_seq_P-SP": {
+     "line_id": "B0106",
+     "qty": null,
+     "v3a_status": "BLOCKED",
+     "technical_class": "BLOCKED",
+     "in_total": false,
+     "commercial_class": "PROVISIONAL_SOURCE_DERIVED",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "paint_P-PA": {
+     "line_id": "B0107",
+     "qty": null,
+     "v3a_status": "BLOCKED",
+     "technical_class": "BLOCKED",
+     "in_total": false,
+     "commercial_class": "PROVISIONAL_SOURCE_DERIVED",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "wall_tile_T-WT": null,
+    "wp_floor": null
+   },
+   "flags": [
+    "REVIEW_ROOM_FLOOR_IN_TOTAL"
+   ]
+  },
+  {
+   "room": "GF-R15",
+   "floor": "GF",
+   "physical_space": "SITE-eac7a1be6566b2d0",
+   "physical_class": "ROOM",
+   "physical_status": "CERTIFIED",
+   "area_m2": 3.375,
+   "semantic_zone_state_ts01": "ONE_PHYSICAL_SPACE_ONE_SEMANTIC_ZONE",
+   "semantic_zones": [
+    [
+     "M—HAe",
+     "W.C"
+    ]
+   ],
+   "name_en": "W.C",
+   "name_ar": "مرحاض",
+   "alsenan_room_class": "WET",
+   "wet_labels_inside": [
+    "W.C",
+    "مرحاض"
+   ],
+   "wet_room_labels_inside_en": [
+    "W.C"
+   ],
+   "room_status_v3": "COMPUTED",
+   "trade_region": {
+    "floor_m2": 3.375,
+    "floor_material": "TILE (type BY_SPEC)",
+    "skirting_m": null,
+    "ceiling_m2": 3.375,
+    "wall_tile_gross_m2": 26.25,
+    "wall_state": "COMPUTED"
+   },
+   "release": {
+    "floor": {
+     "line_id": "B0179",
+     "qty": 3.375,
+     "v3a_status": "COMPUTED",
+     "technical_class": "URBAN_STANDARD",
+     "in_total": true,
+     "commercial_class": "URBAN_STANDARD",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "skirting": null,
+    "ceiling": {
+     "line_id": "B0227",
+     "qty": 3.375,
+     "v3a_status": "COMPUTED",
+     "technical_class": "URBAN_STANDARD",
+     "in_total": true,
+     "commercial_class": "URBAN_STANDARD",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "plaster_seq_P-SP": null,
+    "paint_P-PA": null,
+    "wall_tile_T-WT": {
+     "line_id": "B0307",
+     "qty": null,
+     "v3a_status": "BLOCKED",
+     "technical_class": "BLOCKED",
+     "in_total": false,
+     "commercial_class": "PROVISIONAL_SOURCE_DERIVED",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "wp_floor": null
+   },
+   "flags": []
+  },
+  {
+   "room": "1F-R01",
+   "floor": "1F",
+   "physical_space": "SITE-16f76cd141ed8273",
+   "physical_class": "ROOM",
+   "physical_status": "CERTIFIED",
+   "area_m2": 5.022,
+   "semantic_zone_state_ts01": "ONE_PHYSICAL_SPACE_ONE_SEMANTIC_ZONE",
+   "semantic_zones": [
+    [
+     "BATH",
+     "HMam"
+    ]
+   ],
+   "name_en": "BATH",
+   "name_ar": "حمام",
+   "alsenan_room_class": "WET",
+   "wet_labels_inside": [
+    "BATH",
+    "حمام"
+   ],
+   "wet_room_labels_inside_en": [
+    "BATH"
+   ],
+   "room_status_v3": "COMPUTED",
+   "trade_region": {
+    "floor_m2": 5.0225,
+    "floor_material": "TILE (type BY_SPEC)",
+    "skirting_m": null,
+    "ceiling_m2": 5.0225,
+    "wall_tile_gross_m2": 31.05,
+    "wall_state": "PARTIAL"
+   },
+   "release": {
+    "floor": {
+     "line_id": "B0180",
+     "qty": 5.022,
+     "v3a_status": "COMPUTED",
+     "technical_class": "URBAN_STANDARD",
+     "in_total": true,
+     "commercial_class": "URBAN_STANDARD",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "skirting": null,
+    "ceiling": {
+     "line_id": "B0229",
+     "qty": 5.022,
+     "v3a_status": "COMPUTED",
+     "technical_class": "URBAN_STANDARD",
+     "in_total": true,
+     "commercial_class": "URBAN_STANDARD",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "plaster_seq_P-SP": null,
+    "paint_P-PA": null,
+    "wall_tile_T-WT": {
+     "line_id": "B0314",
+     "qty": null,
+     "v3a_status": "BLOCKED",
+     "technical_class": "BLOCKED",
+     "in_total": false,
+     "commercial_class": "PROVISIONAL_SOURCE_DERIVED",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "wp_floor": null
+   },
+   "flags": []
+  },
+  {
+   "room": "1F-R02",
+   "floor": "1F",
+   "physical_space": "SITE-195dbe4bca9e732e",
+   "physical_class": "UNNAMED_ROOM",
+   "physical_status": "REVIEW_REQUIRED",
+   "area_m2": 3.24,
+   "semantic_zone_state_ts01": "UNLABELLED",
+   "semantic_zones": [],
+   "name_en": "UNKNOWN",
+   "name_ar": "",
+   "alsenan_room_class": "SHAFT",
+   "wet_labels_inside": [],
+   "wet_room_labels_inside_en": [],
+   "room_status_v3": "COMPUTED_REVIEW",
+   "trade_region": {
+    "floor_m2": null,
+    "floor_material": null,
+    "skirting_m": null,
+    "ceiling_m2": null,
+    "wall_tile_gross_m2": null,
+    "wall_state": null
+   },
+   "release": {
+    "floor": null,
+    "skirting": null,
+    "ceiling": null,
+    "plaster_seq_P-SP": null,
+    "paint_P-PA": null,
+    "wall_tile_T-WT": null,
+    "wp_floor": null
+   },
+   "flags": []
+  },
+  {
+   "room": "1F-R03",
+   "floor": "1F",
+   "physical_space": "SITE-22b96446836c3d8d",
+   "physical_class": "ROOM",
+   "physical_status": "REVIEW_REQUIRED",
+   "area_m2": 19.017,
+   "semantic_zone_state_ts01": "ONE_PHYSICAL_SPACE_ONE_SEMANTIC_ZONE",
+   "semantic_zones": [
+    [
+     "MASTER BED ROOM",
+     "O—FtN‘²—XZS‚Zt"
+    ]
+   ],
+   "name_en": "MASTER BED ROOM",
+   "name_ar": "غرفةنومرئيسية",
+   "alsenan_room_class": "DRY",
+   "wet_labels_inside": [],
+   "wet_room_labels_inside_en": [],
+   "room_status_v3": "COMPUTED_REVIEW",
+   "trade_region": {
+    "floor_m2": 19.016545,
+    "floor_material": "PORCELAIN",
+    "skirting_m": 17.161159,
+    "ceiling_m2": 19.016545,
+    "wall_tile_gross_m2": null,
+    "wall_state": "PARTIAL"
+   },
+   "release": {
+    "floor": {
+     "line_id": "B0181",
+     "qty": 19.017,
+     "v3a_status": "COMPUTED",
+     "technical_class": "URBAN_STANDARD",
+     "in_total": true,
+     "commercial_class": "URBAN_STANDARD",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "skirting": {
+     "line_id": "B0182",
+     "qty": 17.161,
+     "v3a_status": "COMPUTED",
+     "technical_class": "DERIVED",
+     "in_total": true,
+     "commercial_class": "DERIVED",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "ceiling": {
+     "line_id": "B0231",
+     "qty": 19.017,
+     "v3a_status": "COMPUTED",
+     "technical_class": "URBAN_STANDARD",
+     "in_total": true,
+     "commercial_class": "URBAN_STANDARD",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "plaster_seq_P-SP": {
+     "line_id": "B0110",
+     "qty": null,
+     "v3a_status": "BLOCKED",
+     "technical_class": "BLOCKED",
+     "in_total": false,
+     "commercial_class": "PROVISIONAL_SOURCE_DERIVED",
+     "procurement_eligible": false,
+     "confidence": "M"
+    },
+    "paint_P-PA": {
+     "line_id": "B0111",
+     "qty": null,
+     "v3a_status": "BLOCKED",
+     "technical_class": "BLOCKED",
+     "in_total": false,
+     "commercial_class": "PROVISIONAL_SOURCE_DERIVED",
+     "procurement_eligible": false,
+     "confidence": "M"
+    },
+    "wall_tile_T-WT": null,
+    "wp_floor": null
+   },
+   "flags": [
+    "REVIEW_ROOM_FLOOR_IN_TOTAL"
+   ]
+  },
+  {
+   "room": "1F-R04",
+   "floor": "1F",
+   "physical_space": "SITE-2f6cf2b5bebbd966",
+   "physical_class": "ROOM",
+   "physical_status": "CERTIFIED",
+   "area_m2": 4.725,
+   "semantic_zone_state_ts01": "ONE_PHYSICAL_SPACE_ONE_SEMANTIC_ZONE",
+   "semantic_zones": [
+    [
+     "BATH",
+     "HMam"
+    ]
+   ],
+   "name_en": "BATH",
+   "name_ar": "حمام",
+   "alsenan_room_class": "WET",
+   "wet_labels_inside": [
+    "BATH",
+    "حمام"
+   ],
+   "wet_room_labels_inside_en": [
+    "BATH"
+   ],
+   "room_status_v3": "COMPUTED",
+   "trade_region": {
+    "floor_m2": 4.725,
+    "floor_material": "TILE (type BY_SPEC)",
+    "skirting_m": null,
+    "ceiling_m2": 4.725,
+    "wall_tile_gross_m2": 27.84,
+    "wall_state": "PARTIAL"
+   },
+   "release": {
+    "floor": {
+     "line_id": "B0183",
+     "qty": 4.725,
+     "v3a_status": "COMPUTED",
+     "technical_class": "URBAN_STANDARD",
+     "in_total": true,
+     "commercial_class": "URBAN_STANDARD",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "skirting": null,
+    "ceiling": {
+     "line_id": "B0233",
+     "qty": 4.725,
+     "v3a_status": "COMPUTED",
+     "technical_class": "URBAN_STANDARD",
+     "in_total": true,
+     "commercial_class": "URBAN_STANDARD",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "plaster_seq_P-SP": null,
+    "paint_P-PA": null,
+    "wall_tile_T-WT": {
+     "line_id": "B0321",
+     "qty": 26.36,
+     "v3a_status": "COMPUTED",
+     "technical_class": "DERIVED",
+     "in_total": true,
+     "commercial_class": "DERIVED",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "wp_floor": null
+   },
+   "flags": []
+  },
+  {
+   "room": "1F-R05",
+   "floor": "1F",
+   "physical_space": "SITE-3cde308552cf977c",
+   "physical_class": "ROOM",
+   "physical_status": "CERTIFIED",
+   "area_m2": 16.34,
+   "semantic_zone_state_ts01": "ONE_PHYSICAL_SPACE_ONE_SEMANTIC_ZONE",
+   "semantic_zones": [
+    [
+     "MASTER BED ROOM",
+     "O—FtN‘²—XZS‚Zt"
+    ]
+   ],
+   "name_en": "MASTER BED ROOM",
+   "name_ar": "غرفةنومرئيسية",
+   "alsenan_room_class": "DRY",
+   "wet_labels_inside": [],
+   "wet_room_labels_inside_en": [],
+   "room_status_v3": "COMPUTED",
+   "trade_region": {
+    "floor_m2": 16.34,
+    "floor_material": "PORCELAIN",
+    "skirting_m": 14.3,
+    "ceiling_m2": 16.34,
+    "wall_tile_gross_m2": null,
+    "wall_state": "COMPUTED"
+   },
+   "release": {
+    "floor": {
+     "line_id": "B0184",
+     "qty": 16.34,
+     "v3a_status": "COMPUTED",
+     "technical_class": "URBAN_STANDARD",
+     "in_total": true,
+     "commercial_class": "URBAN_STANDARD",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "skirting": {
+     "line_id": "B0185",
+     "qty": 14.3,
+     "v3a_status": "COMPUTED",
+     "technical_class": "DERIVED",
+     "in_total": true,
+     "commercial_class": "DERIVED",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "ceiling": {
+     "line_id": "B0235",
+     "qty": 16.34,
+     "v3a_status": "COMPUTED",
+     "technical_class": "URBAN_STANDARD",
+     "in_total": true,
+     "commercial_class": "URBAN_STANDARD",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "plaster_seq_P-SP": {
+     "line_id": "B0114",
+     "qty": null,
+     "v3a_status": "BLOCKED",
+     "technical_class": "BLOCKED",
+     "in_total": false,
+     "commercial_class": "PROVISIONAL_SOURCE_DERIVED",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "paint_P-PA": {
+     "line_id": "B0115",
+     "qty": null,
+     "v3a_status": "BLOCKED",
+     "technical_class": "BLOCKED",
+     "in_total": false,
+     "commercial_class": "PROVISIONAL_SOURCE_DERIVED",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "wall_tile_T-WT": null,
+    "wp_floor": null
+   },
+   "flags": []
+  },
+  {
+   "room": "1F-Z06",
+   "floor": "1F",
+   "physical_space": "SITE-60a08def069f0e48",
+   "physical_class": "OPEN_PLAN_ZONE",
+   "physical_status": "REVIEW_REQUIRED",
+   "area_m2": 79.666,
+   "semantic_zone_state_ts01": "ONE_PHYSICAL_SPACE_MULTIPLE_SEMANTIC_ZONES_UNRESOLVED",
+   "semantic_zones": [
+    [
+     "MN‘—",
+     "VOID"
+    ],
+    [
+     "LIVING AREA",
+     "MPZDy"
+    ]
+   ],
+   "name_en": "VOID / LIVING AREA",
+   "name_ar": "منور / معيشة",
+   "alsenan_room_class": "DRY",
+   "wet_labels_inside": [],
+   "wet_room_labels_inside_en": [],
+   "room_status_v3": "COMPUTED_REVIEW",
+   "trade_region": {
+    "floor_m2": 63.661379,
+    "floor_material": "PORCELAIN",
+    "skirting_m": 80.822875,
+    "ceiling_m2": 79.666379,
+    "wall_tile_gross_m2": null,
+    "wall_state": "PARTIAL"
+   },
+   "release": {
+    "floor": {
+     "line_id": "B0186",
+     "qty": 63.661,
+     "v3a_status": "COMPUTED",
+     "technical_class": "URBAN_STANDARD",
+     "in_total": true,
+     "commercial_class": "URBAN_STANDARD",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "skirting": {
+     "line_id": "B0187",
+     "qty": 80.823,
+     "v3a_status": "COMPUTED",
+     "technical_class": "DERIVED",
+     "in_total": true,
+     "commercial_class": "DERIVED",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "ceiling": {
+     "line_id": "B0237",
+     "qty": 79.666,
+     "v3a_status": "COMPUTED",
+     "technical_class": "URBAN_STANDARD",
+     "in_total": true,
+     "commercial_class": "URBAN_STANDARD",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "plaster_seq_P-SP": {
+     "line_id": "B0118",
+     "qty": null,
+     "v3a_status": "BLOCKED",
+     "technical_class": "BLOCKED",
+     "in_total": false,
+     "commercial_class": "PROVISIONAL_SOURCE_DERIVED",
+     "procurement_eligible": false,
+     "confidence": "M"
+    },
+    "paint_P-PA": {
+     "line_id": "B0119",
+     "qty": null,
+     "v3a_status": "BLOCKED",
+     "technical_class": "BLOCKED",
+     "in_total": false,
+     "commercial_class": "PROVISIONAL_GEOMETRIC_INFERENCE",
+     "procurement_eligible": false,
+     "confidence": "M"
+    },
+    "wall_tile_T-WT": null,
+    "wp_floor": null
+   },
+   "flags": [
+    "TS01_UNRESOLVED_BUT_RELEASED",
+    "REVIEW_ROOM_FLOOR_IN_TOTAL",
+    "MULTI_NAME_DRY_WINS"
+   ]
+  },
+  {
+   "room": "1F-R07",
+   "floor": "1F",
+   "physical_space": "SITE-69e2d39bee49fa7e",
+   "physical_class": "ROOM",
+   "physical_status": "CERTIFIED",
+   "area_m2": 10.151,
+   "semantic_zone_state_ts01": "ONE_PHYSICAL_SPACE_ONE_SEMANTIC_ZONE",
+   "semantic_zones": [
+    [
+     "LAUNDRY",
+     "OSZl"
+    ]
+   ],
+   "name_en": "LAUNDRY",
+   "name_ar": "غسيل",
+   "alsenan_room_class": "SERVICE",
+   "wet_labels_inside": [
+    "LAUNDRY",
+    "غسيل"
+   ],
+   "wet_room_labels_inside_en": [],
+   "room_status_v3": "COMPUTED",
+   "trade_region": {
+    "floor_m2": 10.151,
+    "floor_material": "TILE (type BY_SPEC)",
+    "skirting_m": null,
+    "ceiling_m2": 10.151,
+    "wall_tile_gross_m2": 54.208,
+    "wall_state": "COMPUTED"
+   },
+   "release": {
+    "floor": {
+     "line_id": "B0188",
+     "qty": 10.151,
+     "v3a_status": "COMPUTED",
+     "technical_class": "URBAN_STANDARD",
+     "in_total": true,
+     "commercial_class": "URBAN_STANDARD",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "skirting": null,
+    "ceiling": {
+     "line_id": "B0239",
+     "qty": 10.151,
+     "v3a_status": "COMPUTED",
+     "technical_class": "URBAN_STANDARD",
+     "in_total": true,
+     "commercial_class": "URBAN_STANDARD",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "plaster_seq_P-SP": null,
+    "paint_P-PA": null,
+    "wall_tile_T-WT": {
+     "line_id": "B0328",
+     "qty": null,
+     "v3a_status": "BLOCKED",
+     "technical_class": "BLOCKED",
+     "in_total": false,
+     "commercial_class": "PROVISIONAL_SOURCE_DERIVED",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "wp_floor": null
+   },
+   "flags": []
+  },
+  {
+   "room": "1F-R08",
+   "floor": "1F",
+   "physical_space": "SITE-aa3f3d9cc41ec54a",
+   "physical_class": "UNNAMED_ROOM",
+   "physical_status": "REVIEW_REQUIRED",
+   "area_m2": 2.97,
+   "semantic_zone_state_ts01": "UNLABELLED",
+   "semantic_zones": [],
+   "name_en": "UNKNOWN",
+   "name_ar": "",
+   "alsenan_room_class": "UNKNOWN",
+   "wet_labels_inside": [],
+   "wet_room_labels_inside_en": [],
+   "room_status_v3": "COMPUTED_REVIEW",
+   "trade_region": {
+    "floor_m2": 2.97,
+    "floor_material": "BY_SPEC",
+    "skirting_m": 5.1,
+    "ceiling_m2": 2.97,
+    "wall_tile_gross_m2": null,
+    "wall_state": "COMPUTED"
+   },
+   "release": {
+    "floor": {
+     "line_id": "B0189",
+     "qty": 2.97,
+     "v3a_status": "COMPUTED",
+     "technical_class": "DERIVED",
+     "in_total": true,
+     "commercial_class": "DERIVED",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "skirting": {
+     "line_id": "B0190",
+     "qty": 5.1,
+     "v3a_status": "COMPUTED",
+     "technical_class": "DERIVED",
+     "in_total": true,
+     "commercial_class": "DERIVED",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "ceiling": {
+     "line_id": "B0241",
+     "qty": 2.97,
+     "v3a_status": "COMPUTED",
+     "technical_class": "URBAN_STANDARD",
+     "in_total": true,
+     "commercial_class": "URBAN_STANDARD",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "plaster_seq_P-SP": {
+     "line_id": "B0122",
+     "qty": null,
+     "v3a_status": "BLOCKED",
+     "technical_class": "BLOCKED",
+     "in_total": false,
+     "commercial_class": "PROVISIONAL_SOURCE_DERIVED",
+     "procurement_eligible": false,
+     "confidence": "M"
+    },
+    "paint_P-PA": {
+     "line_id": "B0123",
+     "qty": null,
+     "v3a_status": "BLOCKED",
+     "technical_class": "BLOCKED",
+     "in_total": false,
+     "commercial_class": "PROVISIONAL_SOURCE_DERIVED",
+     "procurement_eligible": false,
+     "confidence": "M"
+    },
+    "wall_tile_T-WT": null,
+    "wp_floor": null
+   },
+   "flags": [
+    "REVIEW_ROOM_FLOOR_IN_TOTAL"
+   ]
+  },
+  {
+   "room": "1F-R09",
+   "floor": "1F",
+   "physical_space": "SITE-c46cb88cea7decbb",
+   "physical_class": "ROOM",
+   "physical_status": "CERTIFIED",
+   "area_m2": 18.215,
+   "semantic_zone_state_ts01": "ONE_PHYSICAL_SPACE_ONE_SEMANTIC_ZONE",
+   "semantic_zones": [
+    [
+     "MASTER BED ROOM",
+     "O—FtN‘²—XZS‚Zt"
+    ]
+   ],
+   "name_en": "MASTER BED ROOM",
+   "name_ar": "غرفةنومرئيسية",
+   "alsenan_room_class": "DRY",
+   "wet_labels_inside": [],
+   "wet_room_labels_inside_en": [],
+   "room_status_v3": "COMPUTED",
+   "trade_region": {
+    "floor_m2": 18.215,
+    "floor_material": "PORCELAIN",
+    "skirting_m": 14.04768,
+    "ceiling_m2": 18.215,
+    "wall_tile_gross_m2": null,
+    "wall_state": "COMPUTED"
+   },
+   "release": {
+    "floor": {
+     "line_id": "B0191",
+     "qty": 18.215,
+     "v3a_status": "COMPUTED",
+     "technical_class": "URBAN_STANDARD",
+     "in_total": true,
+     "commercial_class": "URBAN_STANDARD",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "skirting": {
+     "line_id": "B0192",
+     "qty": 14.048,
+     "v3a_status": "COMPUTED",
+     "technical_class": "DERIVED",
+     "in_total": true,
+     "commercial_class": "DERIVED",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "ceiling": {
+     "line_id": "B0243",
+     "qty": 18.215,
+     "v3a_status": "COMPUTED",
+     "technical_class": "URBAN_STANDARD",
+     "in_total": true,
+     "commercial_class": "URBAN_STANDARD",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "plaster_seq_P-SP": {
+     "line_id": "B0126",
+     "qty": null,
+     "v3a_status": "BLOCKED",
+     "technical_class": "BLOCKED",
+     "in_total": false,
+     "commercial_class": "PROVISIONAL_SOURCE_DERIVED",
+     "procurement_eligible": false,
+     "confidence": "M"
+    },
+    "paint_P-PA": {
+     "line_id": "B0127",
+     "qty": null,
+     "v3a_status": "BLOCKED",
+     "technical_class": "BLOCKED",
+     "in_total": false,
+     "commercial_class": "PROVISIONAL_SOURCE_DERIVED",
+     "procurement_eligible": false,
+     "confidence": "M"
+    },
+    "wall_tile_T-WT": null,
+    "wp_floor": null
+   },
+   "flags": []
+  },
+  {
+   "room": "1F-R10",
+   "floor": "1F",
+   "physical_space": "SITE-cdc894c0f0fd69c9",
+   "physical_class": "ROOM",
+   "physical_status": "CERTIFIED",
+   "area_m2": 3.578,
+   "semantic_zone_state_ts01": "ONE_PHYSICAL_SPACE_ONE_SEMANTIC_ZONE",
+   "semantic_zones": [
+    [
+     "BATH",
+     "HMam"
+    ]
+   ],
+   "name_en": "BATH",
+   "name_ar": "حمام",
+   "alsenan_room_class": "WET",
+   "wet_labels_inside": [
+    "BATH",
+    "حمام"
+   ],
+   "wet_room_labels_inside_en": [
+    "BATH"
+   ],
+   "room_status_v3": "COMPUTED",
+   "trade_region": {
+    "floor_m2": 3.5775,
+    "floor_material": "TILE (type BY_SPEC)",
+    "skirting_m": null,
+    "ceiling_m2": 3.5775,
+    "wall_tile_gross_m2": 26.22,
+    "wall_state": "COMPUTED"
+   },
+   "release": {
+    "floor": {
+     "line_id": "B0193",
+     "qty": 3.578,
+     "v3a_status": "COMPUTED",
+     "technical_class": "URBAN_STANDARD",
+     "in_total": true,
+     "commercial_class": "URBAN_STANDARD",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "skirting": null,
+    "ceiling": {
+     "line_id": "B0245",
+     "qty": 3.578,
+     "v3a_status": "COMPUTED",
+     "technical_class": "URBAN_STANDARD",
+     "in_total": true,
+     "commercial_class": "URBAN_STANDARD",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "plaster_seq_P-SP": null,
+    "paint_P-PA": null,
+    "wall_tile_T-WT": {
+     "line_id": "B0335",
+     "qty": null,
+     "v3a_status": "BLOCKED",
+     "technical_class": "BLOCKED",
+     "in_total": false,
+     "commercial_class": "PROVISIONAL_SOURCE_DERIVED",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "wp_floor": null
+   },
+   "flags": []
+  },
+  {
+   "room": "1F-R11",
+   "floor": "1F",
+   "physical_space": "SITE-da154e7546d18013",
+   "physical_class": "ROOM",
+   "physical_status": "CERTIFIED",
+   "area_m2": 19.05,
+   "semantic_zone_state_ts01": "ONE_PHYSICAL_SPACE_ONE_SEMANTIC_ZONE",
+   "semantic_zones": [
+    [
+     "MASTER BED ROOM",
+     "O—FtN‘²—XZS‚Zt"
+    ]
+   ],
+   "name_en": "MASTER BED ROOM",
+   "name_ar": "غرفةنومرئيسية",
+   "alsenan_room_class": "DRY",
+   "wet_labels_inside": [],
+   "wet_room_labels_inside_en": [],
+   "room_status_v3": "COMPUTED",
+   "trade_region": {
+    "floor_m2": 19.05,
+    "floor_material": "PORCELAIN",
+    "skirting_m": 13.450226,
+    "ceiling_m2": 19.05,
+    "wall_tile_gross_m2": null,
+    "wall_state": "PARTIAL"
+   },
+   "release": {
+    "floor": {
+     "line_id": "B0194",
+     "qty": 19.05,
+     "v3a_status": "COMPUTED",
+     "technical_class": "URBAN_STANDARD",
+     "in_total": true,
+     "commercial_class": "URBAN_STANDARD",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "skirting": {
+     "line_id": "B0195",
+     "qty": 13.45,
+     "v3a_status": "COMPUTED",
+     "technical_class": "DERIVED",
+     "in_total": true,
+     "commercial_class": "DERIVED",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "ceiling": {
+     "line_id": "B0247",
+     "qty": 19.05,
+     "v3a_status": "COMPUTED",
+     "technical_class": "URBAN_STANDARD",
+     "in_total": true,
+     "commercial_class": "URBAN_STANDARD",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "plaster_seq_P-SP": {
+     "line_id": "B0130",
+     "qty": null,
+     "v3a_status": "BLOCKED",
+     "technical_class": "BLOCKED",
+     "in_total": false,
+     "commercial_class": "PROVISIONAL_SOURCE_DERIVED",
+     "procurement_eligible": false,
+     "confidence": "M"
+    },
+    "paint_P-PA": {
+     "line_id": "B0131",
+     "qty": null,
+     "v3a_status": "BLOCKED",
+     "technical_class": "BLOCKED",
+     "in_total": false,
+     "commercial_class": "PROVISIONAL_SOURCE_DERIVED",
+     "procurement_eligible": false,
+     "confidence": "M"
+    },
+    "wall_tile_T-WT": null,
+    "wp_floor": null
+   },
+   "flags": []
+  },
+  {
+   "room": "2F-R01",
+   "floor": "2F",
+   "physical_space": "SITE-22c718c6fc156ebe",
+   "physical_class": "UNNAMED_ROOM",
+   "physical_status": "REVIEW_REQUIRED",
+   "area_m2": 18.6,
+   "semantic_zone_state_ts01": "UNLABELLED",
+   "semantic_zones": [],
+   "name_en": "UNKNOWN",
+   "name_ar": "",
+   "alsenan_room_class": "UNKNOWN",
+   "wet_labels_inside": [],
+   "wet_room_labels_inside_en": [],
+   "room_status_v3": "COMPUTED_REVIEW",
+   "trade_region": {
+    "floor_m2": 18.6,
+    "floor_material": "BY_SPEC",
+    "skirting_m": 16.9,
+    "ceiling_m2": 18.6,
+    "wall_tile_gross_m2": null,
+    "wall_state": "COMPUTED"
+   },
+   "release": {
+    "floor": {
+     "line_id": "B0196",
+     "qty": 18.6,
+     "v3a_status": "COMPUTED",
+     "technical_class": "DERIVED",
+     "in_total": true,
+     "commercial_class": "DERIVED",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "skirting": {
+     "line_id": "B0197",
+     "qty": 16.9,
+     "v3a_status": "COMPUTED",
+     "technical_class": "DERIVED",
+     "in_total": true,
+     "commercial_class": "DERIVED",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "ceiling": {
+     "line_id": "B0249",
+     "qty": 18.6,
+     "v3a_status": "COMPUTED",
+     "technical_class": "URBAN_STANDARD",
+     "in_total": true,
+     "commercial_class": "URBAN_STANDARD",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "plaster_seq_P-SP": {
+     "line_id": "B0134",
+     "qty": null,
+     "v3a_status": "BLOCKED",
+     "technical_class": "BLOCKED",
+     "in_total": false,
+     "commercial_class": "PROVISIONAL_SOURCE_DERIVED",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "paint_P-PA": {
+     "line_id": "B0135",
+     "qty": null,
+     "v3a_status": "BLOCKED",
+     "technical_class": "BLOCKED",
+     "in_total": false,
+     "commercial_class": "PROVISIONAL_SOURCE_DERIVED",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "wall_tile_T-WT": null,
+    "wp_floor": null
+   },
+   "flags": [
+    "REVIEW_ROOM_FLOOR_IN_TOTAL"
+   ]
+  },
+  {
+   "room": "2F-R02",
+   "floor": "2F",
+   "physical_space": "SITE-2e3bac611a8fb491",
+   "physical_class": "ROOM",
+   "physical_status": "CERTIFIED",
+   "area_m2": 19.35,
+   "semantic_zone_state_ts01": "ONE_PHYSICAL_SPACE_ONE_SEMANTIC_ZONE",
+   "semantic_zones": [
+    [
+     "MAID R.",
+     "O—F_yGa™M_y"
+    ]
+   ],
+   "name_en": "MAID R.",
+   "name_ar": "غرفةخادمة",
+   "alsenan_room_class": "DRY",
+   "wet_labels_inside": [],
+   "wet_room_labels_inside_en": [],
+   "room_status_v3": "COMPUTED",
+   "trade_region": {
+    "floor_m2": 19.35,
+    "floor_material": "PORCELAIN",
+    "skirting_m": 16.0,
+    "ceiling_m2": 19.35,
+    "wall_tile_gross_m2": null,
+    "wall_state": "COMPUTED"
+   },
+   "release": {
+    "floor": {
+     "line_id": "B0198",
+     "qty": 19.35,
+     "v3a_status": "COMPUTED",
+     "technical_class": "URBAN_STANDARD",
+     "in_total": true,
+     "commercial_class": "URBAN_STANDARD",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "skirting": {
+     "line_id": "B0199",
+     "qty": 16.0,
+     "v3a_status": "COMPUTED",
+     "technical_class": "DERIVED",
+     "in_total": true,
+     "commercial_class": "DERIVED",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "ceiling": {
+     "line_id": "B0251",
+     "qty": 19.35,
+     "v3a_status": "COMPUTED",
+     "technical_class": "URBAN_STANDARD",
+     "in_total": true,
+     "commercial_class": "URBAN_STANDARD",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "plaster_seq_P-SP": {
+     "line_id": "B0138",
+     "qty": null,
+     "v3a_status": "BLOCKED",
+     "technical_class": "BLOCKED",
+     "in_total": false,
+     "commercial_class": "PROVISIONAL_SOURCE_DERIVED",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "paint_P-PA": {
+     "line_id": "B0139",
+     "qty": null,
+     "v3a_status": "BLOCKED",
+     "technical_class": "BLOCKED",
+     "in_total": false,
+     "commercial_class": "PROVISIONAL_SOURCE_DERIVED",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "wall_tile_T-WT": null,
+    "wp_floor": null
+   },
+   "flags": []
+  },
+  {
+   "room": "2F-R03",
+   "floor": "2F",
+   "physical_space": "SITE-ae46ec7518ab613e",
+   "physical_class": "ROOM",
+   "physical_status": "CERTIFIED",
+   "area_m2": 5.55,
+   "semantic_zone_state_ts01": "ONE_PHYSICAL_SPACE_ONE_SEMANTIC_ZONE",
+   "semantic_zones": [
+    [
+     "M—HAe",
+     "W.C"
+    ]
+   ],
+   "name_en": "W.C",
+   "name_ar": "مرحاض",
+   "alsenan_room_class": "WET",
+   "wet_labels_inside": [
+    "W.C",
+    "مرحاض"
+   ],
+   "wet_room_labels_inside_en": [
+    "W.C"
+   ],
+   "room_status_v3": "COMPUTED",
+   "trade_region": {
+    "floor_m2": 5.55,
+    "floor_material": "TILE (type BY_SPEC)",
+    "skirting_m": null,
+    "ceiling_m2": 5.55,
+    "wall_tile_gross_m2": 31.04,
+    "wall_state": "COMPUTED"
+   },
+   "release": {
+    "floor": {
+     "line_id": "B0200",
+     "qty": 5.55,
+     "v3a_status": "COMPUTED",
+     "technical_class": "URBAN_STANDARD",
+     "in_total": true,
+     "commercial_class": "URBAN_STANDARD",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "skirting": null,
+    "ceiling": {
+     "line_id": "B0253",
+     "qty": 5.55,
+     "v3a_status": "COMPUTED",
+     "technical_class": "URBAN_STANDARD",
+     "in_total": true,
+     "commercial_class": "URBAN_STANDARD",
+     "procurement_eligible": true,
+     "confidence": "H"
+    },
+    "plaster_seq_P-SP": null,
+    "paint_P-PA": null,
+    "wall_tile_T-WT": {
+     "line_id": "B0342",
+     "qty": null,
+     "v3a_status": "BLOCKED",
+     "technical_class": "BLOCKED",
+     "in_total": false,
+     "commercial_class": "PROVISIONAL_SOURCE_DERIVED",
+     "procurement_eligible": false,
+     "confidence": "M"
+    },
+    "wp_floor": null
+   },
+   "flags": []
+  },
+  {
+   "room": "2F-R04",
+   "floor": "2F",
+   "physical_space": "SITE-fd5fd08ac9eb9313",
+   "physical_class": "UNNAMED_ROOM",
+   "physical_status": "REVIEW_REQUIRED",
+   "area_m2": 3.24,
+   "semantic_zone_state_ts01": "UNLABELLED",
+   "semantic_zones": [],
+   "name_en": "UNKNOWN",
+   "name_ar": "",
+   "alsenan_room_class": "SHAFT",
+   "wet_labels_inside": [],
+   "wet_room_labels_inside_en": [],
+   "room_status_v3": "COMPUTED_REVIEW",
+   "trade_region": {
+    "floor_m2": null,
+    "floor_material": null,
+    "skirting_m": null,
+    "ceiling_m2": null,
+    "wall_tile_gross_m2": null,
+    "wall_state": null
+   },
+   "release": {
+    "floor": null,
+    "skirting": null,
+    "ceiling": null,
+    "plaster_seq_P-SP": null,
+    "paint_P-PA": null,
+    "wall_tile_T-WT": null,
+    "wp_floor": null
+   },
+   "flags": []
+  }
+ ],
+ "floor_decomposition_m2": {
+  "floor_COMPUTED_REVIEW": 325.251,
+  "floor_clean_COMPUTED": 121.974,
+  "floor_total": 447.225,
+  "review_DRY": 279.823,
+  "review_SHAFT": 0.0,
+  "review_UNKNOWN": 36.21,
+  "review_WET": 9.218
+ },
+ "wet_labels_not_in_a_room_row": [
+  {
+   "floor": "GF",
+   "text": "حمام سباحة",
+   "key": "ALSENAN_P7757_DXF|H399|396|TEXT|0",
+   "xy": [
+    -129805.9,
+    -793606.3
+   ],
+   "site": null,
+   "room": null,
+   "located": "NO_SITE",
+   "text_role": "ROOM_LABEL_ESTABLISHED",
+   "rule": "TR-04"
+  },
+  {
+   "floor": "1F",
+   "text": "W.C",
+   "key": "ALSENAN_P7757_DXF|H459|3097|TEXT|0",
+   "xy": [
+    -184822.1,
+    -793185.5
+   ],
+   "site": null,
+   "room": null,
+   "located": "NO_SITE",
+   "text_role": "ROOM_LABEL_ESTABLISHED",
+   "rule": "TR-04"
+  },
+  {
+   "floor": "1F",
+   "text": "مرحاض",
+   "key": "ALSENAN_P7757_DXF|H460|3097|TEXT|0",
+   "xy": [
+    -184104.2,
+    -792883.9
+   ],
+   "site": null,
+   "room": null,
+   "located": "NO_SITE",
+   "text_role": "ROOM_LABEL_ESTABLISHED",
+   "rule": "TR-04"
+  },
+  {
+   "floor": "1F",
+   "text": "BATH",
+   "key": "ALSENAN_P7757_DXF|H3077|3116|TEXT|0",
+   "xy": [
+    -191319.5,
+    -802628.2
+   ],
+   "site": null,
+   "room": null,
+   "located": "NO_SITE",
+   "text_role": "ROOM_LABEL_ESTABLISHED",
+   "rule": "TR-03"
+  },
+  {
+   "floor": "1F",
+   "text": "حمام",
+   "key": "ALSENAN_P7757_DXF|H3078|3116|TEXT|0",
+   "xy": [
+    -190526.9,
+    -802206.9
+   ],
+   "site": null,
+   "room": null,
+   "located": "NO_SITE",
+   "text_role": "ROOM_LABEL_ESTABLISHED",
+   "rule": "TR-03"
+  }
+ ],
+ "wet_rooms_lost": [
+  {
+   "floor": "GF",
+   "label": "Wash",
+   "where": "GF-Z04",
+   "why": "WET_LABEL_IN_DRY_ZONE"
+  },
+  {
+   "floor": "GF",
+   "label": "Wash",
+   "where": "GF-Z06",
+   "why": "WET_LABEL_IN_DRY_ZONE"
+  },
+  {
+   "floor": "1F",
+   "label": "W.C",
+   "where": "NO_SITE",
+   "xy": [
+    -184822.1,
+    -793185.5
+   ],
+   "why": "WET_LABEL_UNPLACED"
+  },
+  {
+   "floor": "1F",
+   "label": "BATH",
+   "where": "NO_SITE",
+   "xy": [
+    -191319.5,
+    -802628.2
+   ],
+   "why": "WET_LABEL_UNPLACED"
+  }
+ ],
+ "rule": "physical space (site) != semantic zone (TS01) != trade region (finish row) != release line; each column is read from its own register - a mismatch is a flag, never a correction"
+}
