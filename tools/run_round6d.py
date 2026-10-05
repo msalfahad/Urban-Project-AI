@@ -30,6 +30,7 @@ from engine import round6d_selftest as r6d
 from engine import semantic_seed as seeds_mod
 from engine import space_register as sreg
 from tools import run_round6c as r6c
+from engine.legacy_cad_guard import require_legacy_opt_in  # noqa: E402
 
 STAGE = "ROUND_6D_GEOMETRY_REPAIRS_PANTRY_AND_STAIRS"
 
@@ -286,6 +287,7 @@ def run(decode_json: str, *, supervised_json: str = "",
 
 
 def main(argv=None) -> int:
+    argv = require_legacy_opt_in("tools/run_round6d.py", argv)
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--decode-json", required=True)
     ap.add_argument("--supervised", default="")

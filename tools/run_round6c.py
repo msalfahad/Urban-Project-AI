@@ -23,6 +23,7 @@ from engine import drawing_role as drole
 from engine import floor_register as freg
 from engine import semantic_seed as seeds_mod
 from engine import space_register as sreg
+from engine.legacy_cad_guard import require_legacy_opt_in  # noqa: E402
 
 STAGE = "ROUND_6C_REGISTER_ONLY"
 
@@ -236,6 +237,7 @@ def run(decode_json: str, *, supervised_json: str = "") -> dict:
 
 
 def main(argv=None) -> int:
+    argv = require_legacy_opt_in("tools/run_round6c.py", argv)
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--decode-json", required=True)
     ap.add_argument("--supervised", default="")

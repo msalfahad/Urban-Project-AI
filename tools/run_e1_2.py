@@ -51,6 +51,7 @@ from engine import label_ontology as lo
 from engine import raster_qa as rq
 from engine import stair_completeness as stc
 from engine import visual_challenger as vc
+from engine.legacy_cad_guard import require_legacy_opt_in  # noqa: E402
 
 E1_2_MODEL = "E1_2_ATOMIC_ENTITY_ROLE_INTERVALS_AND_TRUE_VISUAL_CHALLENGER_V1"
 RUN_ID = "E1_2-P7757-GF-001"
@@ -1602,6 +1603,7 @@ def _whole_floor(sheet, reg, gf, interp, rows, path):
 
 
 def main(argv=None) -> int:
+    argv = require_legacy_opt_in("tools/run_e1_2.py", argv)
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--phase", required=True,
                     choices=("geometry", "v2-inputs", "finalize"))

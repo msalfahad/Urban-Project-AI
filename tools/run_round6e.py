@@ -36,6 +36,7 @@ from engine import vertical_evidence as ve
 from tools import lineage_chain as lchain
 from tools import run_round6c as r6c
 from tools import run_round6d as r6d
+from engine.legacy_cad_guard import require_legacy_opt_in  # noqa: E402
 
 STAGE = "ROUND_6E_STABLE_LINEAGE_STAIR_COMPLETENESS_REPRODUCIBLE_EXPORT"
 
@@ -482,6 +483,7 @@ def run_full(decode_json: str, *, supervised_json: str = "",
 
 
 def main(argv=None) -> int:
+    argv = require_legacy_opt_in("tools/run_round6e.py", argv)
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--decode-json", required=True)
     ap.add_argument("--supervised", default="")

@@ -1,0 +1,298 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_GATE_TRANSITION_V1",
+ "rows": [
+  {
+   "gate": "G01",
+   "defect": "C-1",
+   "final_state": "PASS",
+   "old_failure": "R1: 325.251 m2 of COMPUTED_REVIEW room floor released as COMPUTED (registers.py 'COMPUTED' if .. else 'COMPUTED')",
+   "production_change": "alsenan_v3_registers.propagate(): every room-derived line is capped by its room status; alsenan_v3b_lines.cap_by_room_status() caps V3b re-derivations",
+   "new_behaviour": "a COMPUTED_REVIEW room yields REVIEW lines (V1) and at most PROVISIONAL (V2)",
+   "real_alsenan_evidence": "RELEASE_V2_MIGRATION_REGISTER: no F-FL line of a non-COMPUTED room is VERIFIED_COMPLETE",
+   "proving_test": "tests/alsenan_control_plane/test_control_plane_r2_gates.py::test_G01_review_room_floor_never_verified"
+  },
+  {
+   "gate": "G02",
+   "defect": "B-1",
+   "final_state": "PASS",
+   "old_failure": "R1: TS01 MULTI_UNRESOLVED zones released as one clean zone",
+   "production_change": "rooms carry TS01 semantic_state; ALSENAN_CONTROL_V2 evaluates every room trade through TRADE_DEPENDENCY_MATRIX",
+   "new_behaviour": "split-dependent trades of GF-Z04 / GF-Z06 are BLOCKED_SEMANTIC_TRADE_BOUNDARY; no line of an unresolved space is VERIFIED_COMPLETE",
+   "real_alsenan_evidence": "GF-Z04 floor 155.655 BLOCKED (audit), GF-Z06 floor 24.94 BLOCKED",
+   "proving_test": "tests/alsenan_control_plane/test_control_plane_r2_gates.py::test_G02_unresolved_semantic_space_never_released_as_one_clean_zone"
+  },
+  {
+   "gate": "G03",
+   "defect": "B-2",
+   "final_state": "PASS",
+   "old_failure": "R1: _room_class('DEWANEYA / Wash') == 'DRY' (DRY wins)",
+   "production_change": "alsenan_v3_layers._room_class returns MIXED_SEMANTIC_ZONE for names of different classes",
+   "new_behaviour": "mixed spaces get no default dry material and no dry-only quantity",
+   "real_alsenan_evidence": "GF-Z04, GF-Z06, 1F-Z06 = MIXED",
+   "proving_test": "tests/alsenan_control_plane/test_control_plane_r2_gates.py::test_G03_dry_wins_removed"
+  },
+  {
+   "gate": "G04",
+   "defect": "J-1",
+   "final_state": "PASS (semantics corrected)",
+   "old_failure": "R1 gate asked wet_rooms_lost == [] (forces labels into rooms)",
+   "production_change": "WET_LABEL_ACCOUNTING_REGISTER: every wet label ends in a terminal state; mixed-zone wet trades emit BLOCKED lines (registers.tile_wp)",
+   "new_behaviour": "unaccounted_wet_labels == []; blocked labels keep the wet population incomplete",
+   "real_alsenan_evidence": "35 labels: 25 bound, 5 blocked semantic boundary, 4 blocked no physical site, 1 not in scope (pool)",
+   "proving_test": "tests/alsenan_control_plane/test_control_plane_r2_gates.py::test_G04_every_wet_label_accounted"
+  },
+  {
+   "gate": "G05",
+   "defect": "C-2",
+   "final_state": "PASS",
+   "old_failure": "R1: skirting hard-coded COMPUTED",
+   "production_change": "propagate() on F-SK",
+   "new_behaviour": "skirting follows room status",
+   "real_alsenan_evidence": "F-SK lines of review rooms REVIEW",
+   "proving_test": "tests/alsenan_control_plane/test_control_plane_r2_gates.py::test_G05_skirting_status_propagates"
+  },
+  {
+   "gate": "G06",
+   "defect": "C-3",
+   "final_state": "PASS",
+   "old_failure": "R1: ceiling hard-coded COMPUTED",
+   "production_change": "propagate() on CE",
+   "new_behaviour": "ceiling follows room status",
+   "real_alsenan_evidence": "CE lines of review rooms REVIEW",
+   "proving_test": "tests/alsenan_control_plane/test_control_plane_r2_gates.py::test_G06_ceiling_status_propagates"
+  },
+  {
+   "gate": "G07",
+   "defect": "D",
+   "final_state": "PASS (V2 field)",
+   "old_failure": "R1: release('PARTIAL') procurement_eligible (V1)",
+   "production_change": "engine/source/release_model_v2: PARTIAL -> VERIFIED_PARTIAL_LOWER_BOUND, never procurement eligible without owner approval; V1 kept as procurement_eligible_v1",
+   "new_behaviour": "lower bounds shown '>= q', not procurable by default",
+   "real_alsenan_evidence": "every VERIFIED_PARTIAL_LOWER_BOUND line has procurement_eligible_v2 = False",
+   "proving_test": "tests/alsenan_control_plane/test_control_plane_r2_gates.py::test_G07_partial_never_procurement_eligible_v2"
+  },
+  {
+   "gate": "G08",
+   "defect": "E-1",
+   "final_state": "PASS (semantics corrected)",
+   "old_failure": "R1 gate asked every source object CONSUMED_COMPLETE (parse success)",
+   "production_change": "alsenan_structural_source_v2 + STRUCTURAL_SOURCE_COVERAGE_V2: every admitted source object has a terminal coverage state; interpretation reported separately",
+   "new_behaviour": "accounting 100 %, interpretation < 100 % stated",
+   "real_alsenan_evidence": "332 source objects accounted",
+   "proving_test": "tests/alsenan_control_plane/test_control_plane_r2_gates.py::test_G08_every_structural_source_object_has_a_terminal_state"
+  },
+  {
+   "gate": "G09",
+   "defect": "F-1",
+   "final_state": "PASS (semantics corrected)",
+   "old_failure": "R1 gate asked zero silent occurrences only via a register count",
+   "production_change": "production terminal records (alsenan_v3_structure.terminal) + STRUCTURAL_POPULATION_COVERAGE_V2 + ledger",
+   "new_behaviour": "every concrete / rebar occurrence ends in a terminal state; BLOCKED allowed",
+   "real_alsenan_evidence": "ledger conserved",
+   "proving_test": "tests/alsenan_control_plane/test_control_plane_r2_gates.py::test_G09_every_structural_population_has_a_terminal_state"
+  },
+  {
+   "gate": "G10",
+   "defect": "D1",
+   "final_state": "PASS (definitions only)",
+   "old_failure": "R1: no CB definition in any register",
+   "production_change": "STRUCTURAL_DEFINITION_REGISTER_V2 reads C-BEAM2 / C-BEAM3 ATTRIBs",
+   "new_behaviour": "13 typed CB definitions; CB rebar populations stay BLOCKED (REBAR_BLOCKED_PENDING_REBAR_CONSUMER_V2)",
+   "real_alsenan_evidence": "CB1-CB13",
+   "proving_test": "tests/alsenan_control_plane/test_control_plane_r2_gates.py::test_G10_cb_definitions_captured_from_source"
+  },
+  {
+   "gate": "G11",
+   "defect": "D2",
+   "final_state": "XFAIL (by design this round)",
+   "old_failure": "per-metre footing counts used as bar counts",
+   "production_change": "per-metre sets now BLOCKED terminal records (no wrong kg released)",
+   "new_behaviour": "quantity consumer is Round 3",
+   "real_alsenan_evidence": "F8 / F12 / F13 / F14 BLOCKED",
+   "proving_test": "tests/alsenan_control_plane/test_control_plane_r2_gates.py::test_G11_two_layer_footing_quantity_consumer"
+  },
+  {
+   "gate": "G12",
+   "defect": "D3",
+   "final_state": "PASS",
+   "old_failure": "R1: FF emitted nothing",
+   "production_change": "footing_rebar emits REBAR_BLOCKED_SCHEDULE_CELL_UNREAD",
+   "new_behaviour": "FF has a blocked population row",
+   "real_alsenan_evidence": "FF #? BLOCKED",
+   "proving_test": "tests/alsenan_control_plane/test_control_plane_r2_gates.py::test_G12_ff_emits_a_blocked_population"
+  },
+  {
+   "gate": "G13",
+   "defect": "D4",
+   "final_state": "XFAIL (by design this round)",
+   "old_failure": "straps filtered out",
+   "production_change": "strap_rebar emits REBAR_BLOCKED_NO_CONSUMER terminals (accounted)",
+   "new_behaviour": "strap quantity consumer is Round 3",
+   "real_alsenan_evidence": "SB1-SB3 BLOCKED",
+   "proving_test": "tests/alsenan_control_plane/test_control_plane_r2_gates.py::test_G13_strap_rebar_quantity_consumer"
+  },
+  {
+   "gate": "G14",
+   "defect": "D5",
+   "final_state": "PASS",
+   "old_failure": "R1: 1,739.7 kg on 26 occurrences with no concrete",
+   "production_change": "column_rebar emits REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED with the kg in audit only",
+   "new_behaviour": "no verified rebar without an established occurrence",
+   "real_alsenan_evidence": "26 occurrences BLOCKED",
+   "proving_test": "tests/alsenan_control_plane/test_control_plane_r2_gates.py::test_G14_no_verified_rebar_without_an_established_occurrence"
+  },
+  {
+   "gate": "G15",
+   "defect": "D6",
+   "final_state": "XFAIL (owner / engineer question Q-S4)",
+   "old_failure": "min-area ground binding",
+   "production_change": "none this round",
+   "new_behaviour": "unchanged",
+   "real_alsenan_evidence": "-",
+   "proving_test": "tests/alsenan_control_plane/test_control_plane_r2_gates.py::test_G15_ground_zone_not_bound_by_minimum_area"
+  },
+  {
+   "gate": "G16",
+   "defect": "I-1",
+   "final_state": "PASS (semantics corrected)",
+   "old_failure": "R1 gate asked ambiguous_m == 0",
+   "production_change": "blockwork() writes BLOCKWORK_BLOCKED_AMBIGUOUS_BAND rows; WALL_LENGTH_CONSERVATION_V2",
+   "new_behaviour": "raw 46.63 m kept; accounted 46.63; unaccounted 0; blockwork LOWER_BOUND",
+   "real_alsenan_evidence": "13 ambiguous bands",
+   "proving_test": "tests/alsenan_control_plane/test_control_plane_r2_gates.py::test_G16_ambiguous_wall_length_accounted_not_erased"
+  },
+  {
+   "gate": "G17",
+   "defect": "I-2",
+   "final_state": "PASS (semantics corrected)",
+   "old_failure": "R1 gate asked unpaired boundary == 0",
+   "production_change": "every boundary item outside a band is classified in the ledger",
+   "new_behaviour": "raw 187.82 m kept as AMBIGUOUS_BLOCKED; glazing / obstacle edges classified; unaccounted 0",
+   "real_alsenan_evidence": "772 unpaired items",
+   "proving_test": "tests/alsenan_control_plane/test_control_plane_r2_gates.py::test_G17_unpaired_boundary_accounted"
+  },
+  {
+   "gate": "G18",
+   "defect": "K-1",
+   "final_state": "PASS",
+   "old_failure": "R1: 59 V3a openings COMPUTED with a BLOCKED height",
+   "production_change": "openings() rows PARTIAL with per-attribute states; OPENING_EVIDENCE_V2",
+   "new_behaviour": "area never more certain than height",
+   "real_alsenan_evidence": "0 COMPUTED-with-blocked-height",
+   "proving_test": "tests/alsenan_control_plane/test_control_plane_r2_gates.py::test_G18_opening_area_never_computed_with_blocked_height"
+  },
+  {
+   "gate": "G19",
+   "defect": "SD-12",
+   "final_state": "PASS",
+   "old_failure": "R1: SB2 duplicate kept silently",
+   "production_change": "schedule_grammar.key_conflicts in the V2 reader",
+   "new_behaviour": "SOURCE_CONFLICT_DUPLICATE_SCHEDULE_KEY with both rows; SB2 population BLOCKED",
+   "real_alsenan_evidence": "SB2 80x50 / 100x50",
+   "proving_test": "tests/alsenan_control_plane/test_control_plane_r2_gates.py::test_G19_duplicate_sb2_is_an_explicit_conflict"
+  },
+  {
+   "gate": "G20",
+   "defect": "SD-08",
+   "final_state": "PASS (semantics corrected)",
+   "old_failure": "R1 gate asked BOXED interpreted",
+   "production_change": "FT definitions keep raw_boxed_value + BLOCKED_SEMANTICS; affected footings LOWER_BOUND",
+   "new_behaviour": "captured, not guessed",
+   "real_alsenan_evidence": "11 FT types",
+   "proving_test": "tests/alsenan_control_plane/test_control_plane_r2_gates.py::test_G20_boxed_captured_and_accounted"
+  },
+  {
+   "gate": "G21",
+   "defect": "SD-11",
+   "final_state": "PASS (semantics corrected)",
+   "old_failure": "R1 gate asked side bars in bar definitions",
+   "production_change": "REMARKS bound to rows as typed tokens (TOKENS_PARSED_SEMANTICS_CANDIDATE)",
+   "new_behaviour": "accounted; no kg added",
+   "real_alsenan_evidence": "23 beams B7-B29",
+   "proving_test": "tests/alsenan_control_plane/test_control_plane_r2_gates.py::test_G21_side_bar_remarks_accounted"
+  },
+  {
+   "gate": "G22",
+   "defect": "O-1",
+   "final_state": "PASS",
+   "old_failure": "R1: tools/run_cad_pipeline.py reaches cad_adapter unguarded",
+   "production_change": "engine/legacy_cad_guard.py called first in main() of 17 tools",
+   "new_behaviour": "refusal (exit 2) without explicit opt-in",
+   "real_alsenan_evidence": "17 / 17 user CLIs guarded",
+   "proving_test": "tests/alsenan_control_plane/test_control_plane_r2_gates.py::test_G22_user_cli_legacy_adapter_guarded"
+  },
+  {
+   "gate": "G23",
+   "defect": "SD-17",
+   "final_state": "XFAIL (applicability unproved)",
+   "old_failure": "stair rebar BLOCKED",
+   "production_change": "none (page-16 layout captured as BLOCKED_UNREAD source object, not applied)",
+   "new_behaviour": "unchanged",
+   "real_alsenan_evidence": "-",
+   "proving_test": "tests/alsenan_control_plane/test_control_plane_r2_gates.py::test_G23_stair_rebar_bound_to_typical_layout"
+  }
+ ],
+ "superseded_round1_tests": [
+  {
+   "test": "tests/alsenan_control_plane/test_control_plane_r1.py::test_c_flooring_status_is_computed_whatever_the_room_status",
+   "why": "pinned the defect; replaced by G01 / G05"
+  },
+  {
+   "test": "tests/alsenan_control_plane/test_control_plane_r1.py::test_c_skirting_and_ceiling_status_hardcoded_computed",
+   "why": "replaced by G05 / G06"
+  },
+  {
+   "test": "tests/alsenan_control_plane/test_control_plane_r1.py::test_b_room_class_multi_name_dry_wins",
+   "why": "replaced by G03"
+  },
+  {
+   "test": "tests/alsenan_control_plane/test_control_plane_r1.py::test_j_tile_wp_skips_a_dry_zone_with_a_wet_label",
+   "why": "mixed zones now emit BLOCKED wet lines (G04)"
+  },
+  {
+   "test": "tests/alsenan_control_plane/test_control_plane_r1.py::test_d2_footing_per_metre_count_used_as_absolute_count",
+   "why": "per-metre sets now BLOCKED (G11 stays XFAIL)"
+  },
+  {
+   "test": "tests/alsenan_control_plane/test_control_plane_r1.py::test_d3_ff_empty_bar_definition_emits_nothing",
+   "why": "replaced by G12"
+  },
+  {
+   "test": "tests/alsenan_control_plane/test_control_plane_r1.py::test_sd01_footing_skip_is_silent",
+   "why": "replaced by test_terminal_records_footing_blocked_concrete"
+  },
+  {
+   "test": "tests/alsenan_control_plane/test_control_plane_r1.py::test_d1_cb_measured_occurrence_emits_nothing",
+   "why": "replaced by test_terminal_records_beams"
+  },
+  {
+   "test": "tests/alsenan_control_plane/test_control_plane_r1.py::test_d4_strap_definition_filtered_out",
+   "why": "replaced by test_terminal_records_straps / G13"
+  },
+  {
+   "test": "tests/alsenan_control_plane/test_control_plane_r1.py::test_sd04_beam_without_length_is_silent",
+   "why": "replaced by test_terminal_records_beams"
+  },
+  {
+   "test": "tests/alsenan_control_plane/test_control_plane_r1.py::test_d5_column_rebar_ignores_occurrence_state",
+   "why": "replaced by G14"
+  },
+  {
+   "test": "tests/alsenan_control_plane/test_control_plane_r1.py::test_mutation_room_status_does_not_reach_floor_status",
+   "why": "replaced by test_mutation_room_status_reaches_lines"
+  },
+  {
+   "test": "tests/alsenan_control_plane/test_control_plane_r1.py::test_d6_ground_zone_binds_the_smallest_containing_cell",
+   "why": "line anchor moved; replaced by G15 (XFAIL)"
+  },
+  {
+   "test": "tests/alsenan_control_plane/test_control_plane_r1.py::test_sd_code_anchors_hold",
+   "why": "R1 anchors describe the 47dac56 code; R2 terminal records replace the drops"
+  },
+  {
+   "test": "G01-G23 (round 1)",
+   "why": "evaluated the frozen R1 diagnostic registers (which can never change); re-homed in test_control_plane_r2_gates.py against production behaviour and the R2 registers"
+  }
+ ],
+ "rule": "a gate passes only because production behaviour changed; never because a diagnostic register was redefined, a count was set to zero, an object was removed from admission or a benchmark was used"
+}

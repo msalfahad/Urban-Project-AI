@@ -1,0 +1,2625 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_OPENING_EVIDENCE_V2",
+ "policy": "OPENING_EVIDENCE_V2",
+ "rows": [
+  {
+   "id": "GF-D-641",
+   "floor": "GF",
+   "kind": "DOUBLE_LEAF_DOOR",
+   "width_m": 2.0,
+   "height_m": 2.237,
+   "height_source_state": "NO_WIDTH_MATCH",
+   "height_class": "PROVISIONAL_GEOMETRIC_INFERENCE",
+   "sill_m": 0.0,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "PROVISIONAL",
+    "reason": "height PROVISIONAL_GEOMETRIC_INFERENCE"
+   },
+   "area": {
+    "state": "PROVISIONAL",
+    "reason": "width x height: height provisional"
+   },
+   "function": {
+    "state": "VERIFIED",
+    "reason": "DOUBLE_LEAF_DOOR by source symbol / glazing role"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": []
+  },
+  {
+   "id": "GF-D-E820",
+   "floor": "GF",
+   "kind": "DOOR",
+   "width_m": 0.8,
+   "height_m": 2.137,
+   "height_source_state": "RASTER_AMBIGUOUS",
+   "height_class": "PROVISIONAL_SOURCE_DERIVED",
+   "sill_m": 0.0,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "PROVISIONAL",
+    "reason": "height PROVISIONAL_SOURCE_DERIVED"
+   },
+   "area": {
+    "state": "PROVISIONAL",
+    "reason": "width x height: height provisional"
+   },
+   "function": {
+    "state": "VERIFIED",
+    "reason": "DOOR by source symbol / glazing role"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": []
+  },
+  {
+   "id": "GF-D-I1023",
+   "floor": "GF",
+   "kind": "DOOR",
+   "width_m": null,
+   "height_m": null,
+   "height_source_state": "NO_WIDTH",
+   "height_class": "BLOCKED",
+   "sill_m": null,
+   "v3a_record_status": "BLOCKED",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "BLOCKED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "BLOCKED",
+    "reason": "no width (closure not established)"
+   },
+   "height": {
+    "state": "BLOCKED",
+    "reason": "no source / raster height; no default height inserted"
+   },
+   "area": {
+    "state": "BLOCKED",
+    "reason": "width x height: width or height blocked"
+   },
+   "function": {
+    "state": "VERIFIED",
+    "reason": "DOOR by source symbol / glazing role"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": []
+  },
+  {
+   "id": "GF-D-I350",
+   "floor": "GF",
+   "kind": "DOOR",
+   "width_m": 1.0,
+   "height_m": 2.607,
+   "height_source_state": "RASTER_TYPE_MATCH",
+   "height_class": "RASTER_DERIVED",
+   "sill_m": 0.0,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "VERIFIED",
+    "reason": "height RASTER_DERIVED"
+   },
+   "area": {
+    "state": "VERIFIED",
+    "reason": "width x height: both verified"
+   },
+   "function": {
+    "state": "VERIFIED",
+    "reason": "DOOR by source symbol / glazing role"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": []
+  },
+  {
+   "id": "GF-D-I402",
+   "floor": "GF",
+   "kind": "DOOR",
+   "width_m": 1.0,
+   "height_m": 2.607,
+   "height_source_state": "RASTER_TYPE_MATCH",
+   "height_class": "RASTER_DERIVED",
+   "sill_m": 0.0,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "VERIFIED",
+    "reason": "height RASTER_DERIVED"
+   },
+   "area": {
+    "state": "VERIFIED",
+    "reason": "width x height: both verified"
+   },
+   "function": {
+    "state": "VERIFIED",
+    "reason": "DOOR by source symbol / glazing role"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": []
+  },
+  {
+   "id": "GF-D-I414",
+   "floor": "GF",
+   "kind": "DOOR",
+   "width_m": 0.8,
+   "height_m": 2.137,
+   "height_source_state": "RASTER_AMBIGUOUS",
+   "height_class": "PROVISIONAL_SOURCE_DERIVED",
+   "sill_m": 0.0,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "PROVISIONAL",
+    "reason": "height PROVISIONAL_SOURCE_DERIVED"
+   },
+   "area": {
+    "state": "PROVISIONAL",
+    "reason": "width x height: height provisional"
+   },
+   "function": {
+    "state": "VERIFIED",
+    "reason": "DOOR by source symbol / glazing role"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": []
+  },
+  {
+   "id": "GF-D-I437",
+   "floor": "GF",
+   "kind": "DOOR",
+   "width_m": 0.9,
+   "height_m": 2.117,
+   "height_source_state": "RASTER_AMBIGUOUS",
+   "height_class": "PROVISIONAL_SOURCE_DERIVED",
+   "sill_m": 0.0,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "PROVISIONAL",
+    "reason": "height PROVISIONAL_SOURCE_DERIVED"
+   },
+   "area": {
+    "state": "PROVISIONAL",
+    "reason": "width x height: height provisional"
+   },
+   "function": {
+    "state": "VERIFIED",
+    "reason": "DOOR by source symbol / glazing role"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": []
+  },
+  {
+   "id": "GF-D-I495",
+   "floor": "GF",
+   "kind": "DOOR",
+   "width_m": 0.8,
+   "height_m": 2.137,
+   "height_source_state": "RASTER_AMBIGUOUS",
+   "height_class": "PROVISIONAL_SOURCE_DERIVED",
+   "sill_m": 0.0,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "PROVISIONAL",
+    "reason": "height PROVISIONAL_SOURCE_DERIVED"
+   },
+   "area": {
+    "state": "PROVISIONAL",
+    "reason": "width x height: height provisional"
+   },
+   "function": {
+    "state": "VERIFIED",
+    "reason": "DOOR by source symbol / glazing role"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": []
+  },
+  {
+   "id": "GF-D-I711",
+   "floor": "GF",
+   "kind": "DOOR",
+   "width_m": 1.0,
+   "height_m": 2.607,
+   "height_source_state": "RASTER_TYPE_MATCH",
+   "height_class": "RASTER_DERIVED",
+   "sill_m": 0.0,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "VERIFIED",
+    "reason": "height RASTER_DERIVED"
+   },
+   "area": {
+    "state": "VERIFIED",
+    "reason": "width x height: both verified"
+   },
+   "function": {
+    "state": "VERIFIED",
+    "reason": "DOOR by source symbol / glazing role"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": []
+  },
+  {
+   "id": "GF-D-I754",
+   "floor": "GF",
+   "kind": "DOOR",
+   "width_m": 1.0,
+   "height_m": 2.607,
+   "height_source_state": "RASTER_TYPE_MATCH",
+   "height_class": "RASTER_DERIVED",
+   "sill_m": 0.0,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "VERIFIED",
+    "reason": "height RASTER_DERIVED"
+   },
+   "area": {
+    "state": "VERIFIED",
+    "reason": "width x height: both verified"
+   },
+   "function": {
+    "state": "VERIFIED",
+    "reason": "DOOR by source symbol / glazing role"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": []
+  },
+  {
+   "id": "GF-D-I800",
+   "floor": "GF",
+   "kind": "DOOR",
+   "width_m": 0.828,
+   "height_m": 2.209,
+   "height_source_state": "RASTER_AMBIGUOUS",
+   "height_class": "PROVISIONAL_SOURCE_DERIVED",
+   "sill_m": 0.0,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "PROVISIONAL",
+    "reason": "height PROVISIONAL_SOURCE_DERIVED"
+   },
+   "area": {
+    "state": "PROVISIONAL",
+    "reason": "width x height: height provisional"
+   },
+   "function": {
+    "state": "VERIFIED",
+    "reason": "DOOR by source symbol / glazing role"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": []
+  },
+  {
+   "id": "GF-D-I801",
+   "floor": "GF",
+   "kind": "DOOR",
+   "width_m": 0.8,
+   "height_m": 2.137,
+   "height_source_state": "RASTER_AMBIGUOUS",
+   "height_class": "PROVISIONAL_SOURCE_DERIVED",
+   "sill_m": 0.0,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "PROVISIONAL",
+    "reason": "height PROVISIONAL_SOURCE_DERIVED"
+   },
+   "area": {
+    "state": "PROVISIONAL",
+    "reason": "width x height: height provisional"
+   },
+   "function": {
+    "state": "VERIFIED",
+    "reason": "DOOR by source symbol / glazing role"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": []
+  },
+  {
+   "id": "GF-D-I825",
+   "floor": "GF",
+   "kind": "DOOR",
+   "width_m": 0.797,
+   "height_m": 2.137,
+   "height_source_state": "RASTER_AMBIGUOUS",
+   "height_class": "PROVISIONAL_SOURCE_DERIVED",
+   "sill_m": 0.0,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "PROVISIONAL",
+    "reason": "height PROVISIONAL_SOURCE_DERIVED"
+   },
+   "area": {
+    "state": "PROVISIONAL",
+    "reason": "width x height: height provisional"
+   },
+   "function": {
+    "state": "VERIFIED",
+    "reason": "DOOR by source symbol / glazing role"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": []
+  },
+  {
+   "id": "GF-D-I830",
+   "floor": "GF",
+   "kind": "DOOR",
+   "width_m": 1.0,
+   "height_m": 2.607,
+   "height_source_state": "RASTER_TYPE_MATCH",
+   "height_class": "RASTER_DERIVED",
+   "sill_m": 0.0,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "VERIFIED",
+    "reason": "height RASTER_DERIVED"
+   },
+   "area": {
+    "state": "VERIFIED",
+    "reason": "width x height: both verified"
+   },
+   "function": {
+    "state": "VERIFIED",
+    "reason": "DOOR by source symbol / glazing role"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": []
+  },
+  {
+   "id": "GF-W01",
+   "floor": "GF",
+   "kind": "WINDOW",
+   "width_m": 0.9,
+   "height_m": 0.938,
+   "height_source_state": "RASTER_AMBIGUOUS",
+   "height_class": "BUDGET_ESTIMATE",
+   "sill_m": 0.071,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "PROVISIONAL",
+    "reason": "height BUDGET_ESTIMATE"
+   },
+   "area": {
+    "state": "PROVISIONAL",
+    "reason": "width x height: height provisional"
+   },
+   "function": {
+    "state": "BLOCKED",
+    "reason": "BLOCKED_FUNCTION_UNRESOLVED: window or glazed door - geometry alone cannot decide"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": [
+    "GLAZED_DOOR_CANDIDATE"
+   ]
+  },
+  {
+   "id": "GF-W02",
+   "floor": "GF",
+   "kind": "WINDOW",
+   "width_m": 1.5,
+   "height_m": 2.854,
+   "height_source_state": "RASTER_AMBIGUOUS",
+   "height_class": "BUDGET_ESTIMATE",
+   "sill_m": 1.249,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "PROVISIONAL",
+    "reason": "height BUDGET_ESTIMATE"
+   },
+   "area": {
+    "state": "PROVISIONAL",
+    "reason": "width x height: height provisional"
+   },
+   "function": {
+    "state": "BLOCKED",
+    "reason": "BLOCKED_FUNCTION_UNRESOLVED: window or glazed door - geometry alone cannot decide"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": [
+    "GLAZED_DOOR_CANDIDATE"
+   ]
+  },
+  {
+   "id": "GF-W03",
+   "floor": "GF",
+   "kind": "WINDOW",
+   "width_m": 1.0,
+   "height_m": 2.607,
+   "height_source_state": "RASTER_AMBIGUOUS",
+   "height_class": "BUDGET_ESTIMATE",
+   "sill_m": 0.369,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "PROVISIONAL",
+    "reason": "height BUDGET_ESTIMATE"
+   },
+   "area": {
+    "state": "PROVISIONAL",
+    "reason": "width x height: height provisional"
+   },
+   "function": {
+    "state": "BLOCKED",
+    "reason": "BLOCKED_FUNCTION_UNRESOLVED: window or glazed door - geometry alone cannot decide"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": [
+    "GLAZED_DOOR_CANDIDATE"
+   ]
+  },
+  {
+   "id": "GF-W04",
+   "floor": "GF",
+   "kind": "WINDOW",
+   "width_m": 1.0,
+   "height_m": 2.607,
+   "height_source_state": "RASTER_AMBIGUOUS",
+   "height_class": "BUDGET_ESTIMATE",
+   "sill_m": 0.369,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "PROVISIONAL",
+    "reason": "height BUDGET_ESTIMATE"
+   },
+   "area": {
+    "state": "PROVISIONAL",
+    "reason": "width x height: height provisional"
+   },
+   "function": {
+    "state": "BLOCKED",
+    "reason": "BLOCKED_FUNCTION_UNRESOLVED: window or glazed door - geometry alone cannot decide"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": [
+    "GLAZED_DOOR_CANDIDATE"
+   ]
+  },
+  {
+   "id": "GF-W05",
+   "floor": "GF",
+   "kind": "WINDOW",
+   "width_m": 0.9,
+   "height_m": 0.938,
+   "height_source_state": "RASTER_AMBIGUOUS",
+   "height_class": "BUDGET_ESTIMATE",
+   "sill_m": 0.071,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "PROVISIONAL",
+    "reason": "height BUDGET_ESTIMATE"
+   },
+   "area": {
+    "state": "PROVISIONAL",
+    "reason": "width x height: height provisional"
+   },
+   "function": {
+    "state": "BLOCKED",
+    "reason": "BLOCKED_FUNCTION_UNRESOLVED: window or glazed door - geometry alone cannot decide"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": [
+    "GLAZED_DOOR_CANDIDATE"
+   ]
+  },
+  {
+   "id": "GF-W06",
+   "floor": "GF",
+   "kind": "WINDOW",
+   "width_m": 0.6,
+   "height_m": 0.729,
+   "height_source_state": "RASTER_AMBIGUOUS",
+   "height_class": "BUDGET_ESTIMATE",
+   "sill_m": 1.04,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "PROVISIONAL",
+    "reason": "height BUDGET_ESTIMATE"
+   },
+   "area": {
+    "state": "PROVISIONAL",
+    "reason": "width x height: height provisional"
+   },
+   "function": {
+    "state": "VERIFIED",
+    "reason": "WINDOW by source symbol / glazing role"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": []
+  },
+  {
+   "id": "GF-W07",
+   "floor": "GF",
+   "kind": "WINDOW",
+   "width_m": 0.6,
+   "height_m": 0.729,
+   "height_source_state": "RASTER_AMBIGUOUS",
+   "height_class": "BUDGET_ESTIMATE",
+   "sill_m": 1.04,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "PROVISIONAL",
+    "reason": "height BUDGET_ESTIMATE"
+   },
+   "area": {
+    "state": "PROVISIONAL",
+    "reason": "width x height: height provisional"
+   },
+   "function": {
+    "state": "VERIFIED",
+    "reason": "WINDOW by source symbol / glazing role"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": []
+  },
+  {
+   "id": "GF-W08",
+   "floor": "GF",
+   "kind": "WINDOW",
+   "width_m": 0.6,
+   "height_m": 0.729,
+   "height_source_state": "RASTER_AMBIGUOUS",
+   "height_class": "BUDGET_ESTIMATE",
+   "sill_m": 1.04,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "PROVISIONAL",
+    "reason": "height BUDGET_ESTIMATE"
+   },
+   "area": {
+    "state": "PROVISIONAL",
+    "reason": "width x height: height provisional"
+   },
+   "function": {
+    "state": "VERIFIED",
+    "reason": "WINDOW by source symbol / glazing role"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": []
+  },
+  {
+   "id": "GF-W09",
+   "floor": "GF",
+   "kind": "WINDOW",
+   "width_m": 6.332,
+   "height_m": 3.65,
+   "height_source_state": "PRINTED",
+   "height_class": "RASTER_DERIVED",
+   "sill_m": null,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "VERIFIED",
+    "reason": "height RASTER_DERIVED"
+   },
+   "area": {
+    "state": "VERIFIED",
+    "reason": "width x height: both verified"
+   },
+   "function": {
+    "state": "BLOCKED",
+    "reason": "BLOCKED_FUNCTION_UNRESOLVED: window or glazed door - geometry alone cannot decide"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": [
+    "GLAZED_DOOR_CANDIDATE"
+   ]
+  },
+  {
+   "id": "GF-W10",
+   "floor": "GF",
+   "kind": "WINDOW",
+   "width_m": 1.2,
+   "height_m": 2.338,
+   "height_source_state": "RASTER_AMBIGUOUS",
+   "height_class": "BUDGET_ESTIMATE",
+   "sill_m": 0.729,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "PROVISIONAL",
+    "reason": "height BUDGET_ESTIMATE"
+   },
+   "area": {
+    "state": "PROVISIONAL",
+    "reason": "width x height: height provisional"
+   },
+   "function": {
+    "state": "BLOCKED",
+    "reason": "BLOCKED_FUNCTION_UNRESOLVED: window or glazed door - geometry alone cannot decide"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": [
+    "GLAZED_DOOR_CANDIDATE"
+   ]
+  },
+  {
+   "id": "GF-W11",
+   "floor": "GF",
+   "kind": "WINDOW",
+   "width_m": 1.0,
+   "height_m": 2.607,
+   "height_source_state": "RASTER_AMBIGUOUS",
+   "height_class": "BUDGET_ESTIMATE",
+   "sill_m": 0.369,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "PROVISIONAL",
+    "reason": "height BUDGET_ESTIMATE"
+   },
+   "area": {
+    "state": "PROVISIONAL",
+    "reason": "width x height: height provisional"
+   },
+   "function": {
+    "state": "BLOCKED",
+    "reason": "BLOCKED_FUNCTION_UNRESOLVED: window or glazed door - geometry alone cannot decide"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": [
+    "GLAZED_DOOR_CANDIDATE"
+   ]
+  },
+  {
+   "id": "GF-W12",
+   "floor": "GF",
+   "kind": "WINDOW",
+   "width_m": 1.5,
+   "height_m": 2.854,
+   "height_source_state": "RASTER_AMBIGUOUS",
+   "height_class": "BUDGET_ESTIMATE",
+   "sill_m": 1.249,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "PROVISIONAL",
+    "reason": "height BUDGET_ESTIMATE"
+   },
+   "area": {
+    "state": "PROVISIONAL",
+    "reason": "width x height: height provisional"
+   },
+   "function": {
+    "state": "BLOCKED",
+    "reason": "BLOCKED_FUNCTION_UNRESOLVED: window or glazed door - geometry alone cannot decide"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": [
+    "GLAZED_DOOR_CANDIDATE"
+   ]
+  },
+  {
+   "id": "GF-W13",
+   "floor": "GF",
+   "kind": "WINDOW",
+   "width_m": 1.0,
+   "height_m": 2.607,
+   "height_source_state": "RASTER_AMBIGUOUS",
+   "height_class": "BUDGET_ESTIMATE",
+   "sill_m": 0.369,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "PROVISIONAL",
+    "reason": "height BUDGET_ESTIMATE"
+   },
+   "area": {
+    "state": "PROVISIONAL",
+    "reason": "width x height: height provisional"
+   },
+   "function": {
+    "state": "BLOCKED",
+    "reason": "BLOCKED_FUNCTION_UNRESOLVED: window or glazed door - geometry alone cannot decide"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": [
+    "GLAZED_DOOR_CANDIDATE"
+   ]
+  },
+  {
+   "id": "GF-W14",
+   "floor": "GF",
+   "kind": "WINDOW",
+   "width_m": 1.0,
+   "height_m": 2.607,
+   "height_source_state": "RASTER_AMBIGUOUS",
+   "height_class": "BUDGET_ESTIMATE",
+   "sill_m": 0.369,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "PROVISIONAL",
+    "reason": "height BUDGET_ESTIMATE"
+   },
+   "area": {
+    "state": "PROVISIONAL",
+    "reason": "width x height: height provisional"
+   },
+   "function": {
+    "state": "BLOCKED",
+    "reason": "BLOCKED_FUNCTION_UNRESOLVED: window or glazed door - geometry alone cannot decide"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": [
+    "GLAZED_DOOR_CANDIDATE"
+   ]
+  },
+  {
+   "id": "GF-W15",
+   "floor": "GF",
+   "kind": "WINDOW",
+   "width_m": 1.955,
+   "height_m": 2.063,
+   "height_source_state": "NO_WIDTH_MATCH",
+   "height_class": "BUDGET_ESTIMATE",
+   "sill_m": null,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "PROVISIONAL",
+    "reason": "height BUDGET_ESTIMATE"
+   },
+   "area": {
+    "state": "PROVISIONAL",
+    "reason": "width x height: height provisional"
+   },
+   "function": {
+    "state": "BLOCKED",
+    "reason": "BLOCKED_FUNCTION_UNRESOLVED: window or glazed door - geometry alone cannot decide"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": [
+    "GLAZED_DOOR_CANDIDATE"
+   ]
+  },
+  {
+   "id": "GF-W16",
+   "floor": "GF",
+   "kind": "WINDOW",
+   "width_m": 1.955,
+   "height_m": 2.063,
+   "height_source_state": "NO_WIDTH_MATCH",
+   "height_class": "BUDGET_ESTIMATE",
+   "sill_m": null,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "PROVISIONAL",
+    "reason": "height BUDGET_ESTIMATE"
+   },
+   "area": {
+    "state": "PROVISIONAL",
+    "reason": "width x height: height provisional"
+   },
+   "function": {
+    "state": "BLOCKED",
+    "reason": "BLOCKED_FUNCTION_UNRESOLVED: window or glazed door - geometry alone cannot decide"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": [
+    "GLAZED_DOOR_CANDIDATE"
+   ]
+  },
+  {
+   "id": "1F-D-I3054",
+   "floor": "1F",
+   "kind": "DOOR",
+   "width_m": 0.8,
+   "height_m": 2.117,
+   "height_source_state": "RASTER_TYPE_MATCH",
+   "height_class": "RASTER_DERIVED",
+   "sill_m": 0.0,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "VERIFIED",
+    "reason": "height RASTER_DERIVED"
+   },
+   "area": {
+    "state": "VERIFIED",
+    "reason": "width x height: both verified"
+   },
+   "function": {
+    "state": "VERIFIED",
+    "reason": "DOOR by source symbol / glazing role"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": []
+  },
+  {
+   "id": "1F-D-I3055",
+   "floor": "1F",
+   "kind": "DOOR",
+   "width_m": 0.9,
+   "height_m": 2.123,
+   "height_source_state": "RASTER_TYPE_MATCH_SINGLE",
+   "height_class": "PROVISIONAL_SOURCE_DERIVED",
+   "sill_m": 0.0,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "PROVISIONAL",
+    "reason": "height PROVISIONAL_SOURCE_DERIVED"
+   },
+   "area": {
+    "state": "PROVISIONAL",
+    "reason": "width x height: height provisional"
+   },
+   "function": {
+    "state": "VERIFIED",
+    "reason": "DOOR by source symbol / glazing role"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": []
+  },
+  {
+   "id": "1F-D-I3090",
+   "floor": "1F",
+   "kind": "DOOR",
+   "width_m": 0.8,
+   "height_m": 2.117,
+   "height_source_state": "RASTER_TYPE_MATCH",
+   "height_class": "RASTER_DERIVED",
+   "sill_m": 0.0,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "VERIFIED",
+    "reason": "height RASTER_DERIVED"
+   },
+   "area": {
+    "state": "VERIFIED",
+    "reason": "width x height: both verified"
+   },
+   "function": {
+    "state": "VERIFIED",
+    "reason": "DOOR by source symbol / glazing role"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": []
+  },
+  {
+   "id": "1F-D-I3096",
+   "floor": "1F",
+   "kind": "DOOR",
+   "width_m": 0.9,
+   "height_m": 2.123,
+   "height_source_state": "RASTER_TYPE_MATCH_SINGLE",
+   "height_class": "PROVISIONAL_SOURCE_DERIVED",
+   "sill_m": 0.0,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "PROVISIONAL",
+    "reason": "height PROVISIONAL_SOURCE_DERIVED"
+   },
+   "area": {
+    "state": "PROVISIONAL",
+    "reason": "width x height: height provisional"
+   },
+   "function": {
+    "state": "VERIFIED",
+    "reason": "DOOR by source symbol / glazing role"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": []
+  },
+  {
+   "id": "1F-D-I3098",
+   "floor": "1F",
+   "kind": "DOOR",
+   "width_m": 0.9,
+   "height_m": 2.123,
+   "height_source_state": "RASTER_TYPE_MATCH_SINGLE",
+   "height_class": "PROVISIONAL_SOURCE_DERIVED",
+   "sill_m": 0.0,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "PROVISIONAL",
+    "reason": "height PROVISIONAL_SOURCE_DERIVED"
+   },
+   "area": {
+    "state": "PROVISIONAL",
+    "reason": "width x height: height provisional"
+   },
+   "function": {
+    "state": "VERIFIED",
+    "reason": "DOOR by source symbol / glazing role"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": []
+  },
+  {
+   "id": "1F-D-I3115",
+   "floor": "1F",
+   "kind": "DOOR",
+   "width_m": 0.8,
+   "height_m": 2.117,
+   "height_source_state": "RASTER_TYPE_MATCH",
+   "height_class": "RASTER_DERIVED",
+   "sill_m": 0.0,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "VERIFIED",
+    "reason": "height RASTER_DERIVED"
+   },
+   "area": {
+    "state": "VERIFIED",
+    "reason": "width x height: both verified"
+   },
+   "function": {
+    "state": "VERIFIED",
+    "reason": "DOOR by source symbol / glazing role"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": []
+  },
+  {
+   "id": "1F-D-I3118",
+   "floor": "1F",
+   "kind": "DOOR",
+   "width_m": 0.8,
+   "height_m": 2.117,
+   "height_source_state": "RASTER_TYPE_MATCH",
+   "height_class": "RASTER_DERIVED",
+   "sill_m": 0.0,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "VERIFIED",
+    "reason": "height RASTER_DERIVED"
+   },
+   "area": {
+    "state": "VERIFIED",
+    "reason": "width x height: both verified"
+   },
+   "function": {
+    "state": "VERIFIED",
+    "reason": "DOOR by source symbol / glazing role"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": []
+  },
+  {
+   "id": "1F-D-I3121",
+   "floor": "1F",
+   "kind": "DOOR",
+   "width_m": 1.0,
+   "height_m": 2.117,
+   "height_source_state": "RASTER_TYPE_MATCH_SINGLE",
+   "height_class": "PROVISIONAL_SOURCE_DERIVED",
+   "sill_m": 0.0,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "PROVISIONAL",
+    "reason": "height PROVISIONAL_SOURCE_DERIVED"
+   },
+   "area": {
+    "state": "PROVISIONAL",
+    "reason": "width x height: height provisional"
+   },
+   "function": {
+    "state": "VERIFIED",
+    "reason": "DOOR by source symbol / glazing role"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": []
+  },
+  {
+   "id": "1F-D-I3122",
+   "floor": "1F",
+   "kind": "DOOR",
+   "width_m": 1.0,
+   "height_m": 2.117,
+   "height_source_state": "RASTER_TYPE_MATCH_SINGLE",
+   "height_class": "PROVISIONAL_SOURCE_DERIVED",
+   "sill_m": 0.0,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "PROVISIONAL",
+    "reason": "height PROVISIONAL_SOURCE_DERIVED"
+   },
+   "area": {
+    "state": "PROVISIONAL",
+    "reason": "width x height: height provisional"
+   },
+   "function": {
+    "state": "VERIFIED",
+    "reason": "DOOR by source symbol / glazing role"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": []
+  },
+  {
+   "id": "1F-D-I4532",
+   "floor": "1F",
+   "kind": "DOOR",
+   "width_m": 0.8,
+   "height_m": 2.117,
+   "height_source_state": "RASTER_TYPE_MATCH",
+   "height_class": "RASTER_DERIVED",
+   "sill_m": 0.0,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "VERIFIED",
+    "reason": "height RASTER_DERIVED"
+   },
+   "area": {
+    "state": "VERIFIED",
+    "reason": "width x height: both verified"
+   },
+   "function": {
+    "state": "VERIFIED",
+    "reason": "DOOR by source symbol / glazing role"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": []
+  },
+  {
+   "id": "1F-W01",
+   "floor": "1F",
+   "kind": "WINDOW",
+   "width_m": 0.6,
+   "height_m": 2.097,
+   "height_source_state": "RASTER_AMBIGUOUS",
+   "height_class": "BUDGET_ESTIMATE",
+   "sill_m": 0.113,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "PROVISIONAL",
+    "reason": "height BUDGET_ESTIMATE"
+   },
+   "area": {
+    "state": "PROVISIONAL",
+    "reason": "width x height: height provisional"
+   },
+   "function": {
+    "state": "BLOCKED",
+    "reason": "BLOCKED_FUNCTION_UNRESOLVED: window or glazed door - geometry alone cannot decide"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": [
+    "GLAZED_DOOR_CANDIDATE"
+   ]
+  },
+  {
+   "id": "1F-W02",
+   "floor": "1F",
+   "kind": "WINDOW",
+   "width_m": 1.552,
+   "height_m": 2.097,
+   "height_source_state": "NO_WIDTH_MATCH",
+   "height_class": "BUDGET_ESTIMATE",
+   "sill_m": null,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "PROVISIONAL",
+    "reason": "height BUDGET_ESTIMATE"
+   },
+   "area": {
+    "state": "PROVISIONAL",
+    "reason": "width x height: height provisional"
+   },
+   "function": {
+    "state": "BLOCKED",
+    "reason": "BLOCKED_FUNCTION_UNRESOLVED: window or glazed door - geometry alone cannot decide"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": [
+    "GLAZED_DOOR_CANDIDATE"
+   ]
+  },
+  {
+   "id": "1F-W03",
+   "floor": "1F",
+   "kind": "WINDOW",
+   "width_m": 1.0,
+   "height_m": 1.35,
+   "height_source_state": "RASTER_AMBIGUOUS",
+   "height_class": "BUDGET_ESTIMATE",
+   "sill_m": 0.0,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "PROVISIONAL",
+    "reason": "height BUDGET_ESTIMATE"
+   },
+   "area": {
+    "state": "PROVISIONAL",
+    "reason": "width x height: height provisional"
+   },
+   "function": {
+    "state": "BLOCKED",
+    "reason": "BLOCKED_FUNCTION_UNRESOLVED: window or glazed door - geometry alone cannot decide"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": [
+    "GLAZED_DOOR_CANDIDATE"
+   ]
+  },
+  {
+   "id": "1F-W04",
+   "floor": "1F",
+   "kind": "WINDOW",
+   "width_m": 1.0,
+   "height_m": 1.35,
+   "height_source_state": "RASTER_AMBIGUOUS",
+   "height_class": "BUDGET_ESTIMATE",
+   "sill_m": 0.0,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "PROVISIONAL",
+    "reason": "height BUDGET_ESTIMATE"
+   },
+   "area": {
+    "state": "PROVISIONAL",
+    "reason": "width x height: height provisional"
+   },
+   "function": {
+    "state": "BLOCKED",
+    "reason": "BLOCKED_FUNCTION_UNRESOLVED: window or glazed door - geometry alone cannot decide"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": [
+    "GLAZED_DOOR_CANDIDATE"
+   ]
+  },
+  {
+   "id": "1F-W05",
+   "floor": "1F",
+   "kind": "WINDOW",
+   "width_m": 1.0,
+   "height_m": 1.35,
+   "height_source_state": "RASTER_AMBIGUOUS",
+   "height_class": "BUDGET_ESTIMATE",
+   "sill_m": 0.0,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "PROVISIONAL",
+    "reason": "height BUDGET_ESTIMATE"
+   },
+   "area": {
+    "state": "PROVISIONAL",
+    "reason": "width x height: height provisional"
+   },
+   "function": {
+    "state": "BLOCKED",
+    "reason": "BLOCKED_FUNCTION_UNRESOLVED: window or glazed door - geometry alone cannot decide"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": [
+    "GLAZED_DOOR_CANDIDATE"
+   ]
+  },
+  {
+   "id": "1F-W06",
+   "floor": "1F",
+   "kind": "WINDOW",
+   "width_m": 0.6,
+   "height_m": 2.097,
+   "height_source_state": "RASTER_AMBIGUOUS",
+   "height_class": "BUDGET_ESTIMATE",
+   "sill_m": 0.113,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "PROVISIONAL",
+    "reason": "height BUDGET_ESTIMATE"
+   },
+   "area": {
+    "state": "PROVISIONAL",
+    "reason": "width x height: height provisional"
+   },
+   "function": {
+    "state": "BLOCKED",
+    "reason": "BLOCKED_FUNCTION_UNRESOLVED: window or glazed door - geometry alone cannot decide"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": [
+    "GLAZED_DOOR_CANDIDATE"
+   ]
+  },
+  {
+   "id": "1F-W07",
+   "floor": "1F",
+   "kind": "WINDOW",
+   "width_m": 0.6,
+   "height_m": 2.097,
+   "height_source_state": "RASTER_AMBIGUOUS",
+   "height_class": "BUDGET_ESTIMATE",
+   "sill_m": 0.113,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "PROVISIONAL",
+    "reason": "height BUDGET_ESTIMATE"
+   },
+   "area": {
+    "state": "PROVISIONAL",
+    "reason": "width x height: height provisional"
+   },
+   "function": {
+    "state": "BLOCKED",
+    "reason": "BLOCKED_FUNCTION_UNRESOLVED: window or glazed door - geometry alone cannot decide"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": [
+    "GLAZED_DOOR_CANDIDATE"
+   ]
+  },
+  {
+   "id": "1F-W08",
+   "floor": "1F",
+   "kind": "WINDOW",
+   "width_m": 1.552,
+   "height_m": 2.097,
+   "height_source_state": "NO_WIDTH_MATCH",
+   "height_class": "BUDGET_ESTIMATE",
+   "sill_m": null,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "PROVISIONAL",
+    "reason": "height BUDGET_ESTIMATE"
+   },
+   "area": {
+    "state": "PROVISIONAL",
+    "reason": "width x height: height provisional"
+   },
+   "function": {
+    "state": "BLOCKED",
+    "reason": "BLOCKED_FUNCTION_UNRESOLVED: window or glazed door - geometry alone cannot decide"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": [
+    "GLAZED_DOOR_CANDIDATE"
+   ]
+  },
+  {
+   "id": "1F-W09",
+   "floor": "1F",
+   "kind": "WINDOW",
+   "width_m": 1.552,
+   "height_m": 2.097,
+   "height_source_state": "NO_WIDTH_MATCH",
+   "height_class": "BUDGET_ESTIMATE",
+   "sill_m": null,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "PROVISIONAL",
+    "reason": "height BUDGET_ESTIMATE"
+   },
+   "area": {
+    "state": "PROVISIONAL",
+    "reason": "width x height: height provisional"
+   },
+   "function": {
+    "state": "BLOCKED",
+    "reason": "BLOCKED_FUNCTION_UNRESOLVED: window or glazed door - geometry alone cannot decide"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": [
+    "GLAZED_DOOR_CANDIDATE"
+   ]
+  },
+  {
+   "id": "1F-W10",
+   "floor": "1F",
+   "kind": "WINDOW",
+   "width_m": 0.5,
+   "height_m": 0.713,
+   "height_source_state": "RASTER_TYPE_MATCH",
+   "height_class": "RASTER_DERIVED",
+   "sill_m": 1.687,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "VERIFIED",
+    "reason": "height RASTER_DERIVED"
+   },
+   "area": {
+    "state": "VERIFIED",
+    "reason": "width x height: both verified"
+   },
+   "function": {
+    "state": "VERIFIED",
+    "reason": "WINDOW by source symbol / glazing role"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": []
+  },
+  {
+   "id": "1F-W11",
+   "floor": "1F",
+   "kind": "WINDOW",
+   "width_m": 1.2,
+   "height_m": 2.363,
+   "height_source_state": "RASTER_TYPE_MATCH_SINGLE",
+   "height_class": "PROVISIONAL_SOURCE_DERIVED",
+   "sill_m": 0.715,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "PROVISIONAL",
+    "reason": "height PROVISIONAL_SOURCE_DERIVED"
+   },
+   "area": {
+    "state": "PROVISIONAL",
+    "reason": "width x height: height provisional"
+   },
+   "function": {
+    "state": "BLOCKED",
+    "reason": "BLOCKED_FUNCTION_UNRESOLVED: window or glazed door - geometry alone cannot decide"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": [
+    "GLAZED_DOOR_CANDIDATE"
+   ]
+  },
+  {
+   "id": "1F-W12",
+   "floor": "1F",
+   "kind": "WINDOW",
+   "width_m": 2.45,
+   "height_m": 2.097,
+   "height_source_state": "NO_WIDTH_MATCH",
+   "height_class": "BUDGET_ESTIMATE",
+   "sill_m": null,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "PROVISIONAL",
+    "reason": "height BUDGET_ESTIMATE"
+   },
+   "area": {
+    "state": "PROVISIONAL",
+    "reason": "width x height: height provisional"
+   },
+   "function": {
+    "state": "BLOCKED",
+    "reason": "BLOCKED_FUNCTION_UNRESOLVED: window or glazed door - geometry alone cannot decide"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": [
+    "GLAZED_DOOR_CANDIDATE"
+   ]
+  },
+  {
+   "id": "2F-D-I4794",
+   "floor": "2F",
+   "kind": "DOOR",
+   "width_m": 1.0,
+   "height_m": 2.123,
+   "height_source_state": "NO_WIDTH_MATCH",
+   "height_class": "PROVISIONAL_GEOMETRIC_INFERENCE",
+   "sill_m": 0.0,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "PROVISIONAL",
+    "reason": "height PROVISIONAL_GEOMETRIC_INFERENCE"
+   },
+   "area": {
+    "state": "PROVISIONAL",
+    "reason": "width x height: height provisional"
+   },
+   "function": {
+    "state": "VERIFIED",
+    "reason": "DOOR by source symbol / glazing role"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": []
+  },
+  {
+   "id": "2F-D-I4795",
+   "floor": "2F",
+   "kind": "DOOR",
+   "width_m": 0.8,
+   "height_m": 2.123,
+   "height_source_state": "NO_WIDTH_MATCH",
+   "height_class": "PROVISIONAL_GEOMETRIC_INFERENCE",
+   "sill_m": 0.0,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "PROVISIONAL",
+    "reason": "height PROVISIONAL_GEOMETRIC_INFERENCE"
+   },
+   "area": {
+    "state": "PROVISIONAL",
+    "reason": "width x height: height provisional"
+   },
+   "function": {
+    "state": "VERIFIED",
+    "reason": "DOOR by source symbol / glazing role"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": []
+  },
+  {
+   "id": "2F-D-I4802",
+   "floor": "2F",
+   "kind": "DOOR",
+   "width_m": 0.9,
+   "height_m": 2.123,
+   "height_source_state": "RASTER_TYPE_MATCH_SINGLE",
+   "height_class": "PROVISIONAL_SOURCE_DERIVED",
+   "sill_m": 0.0,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "PROVISIONAL",
+    "reason": "height PROVISIONAL_SOURCE_DERIVED"
+   },
+   "area": {
+    "state": "PROVISIONAL",
+    "reason": "width x height: height provisional"
+   },
+   "function": {
+    "state": "VERIFIED",
+    "reason": "DOOR by source symbol / glazing role"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": []
+  },
+  {
+   "id": "2F-W01",
+   "floor": "2F",
+   "kind": "WINDOW",
+   "width_m": 1.0,
+   "height_m": 0.589,
+   "height_source_state": "RASTER_TYPE_MATCH_SINGLE",
+   "height_class": "PROVISIONAL_SOURCE_DERIVED",
+   "sill_m": 1.584,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "PROVISIONAL",
+    "reason": "height PROVISIONAL_SOURCE_DERIVED"
+   },
+   "area": {
+    "state": "PROVISIONAL",
+    "reason": "width x height: height provisional"
+   },
+   "function": {
+    "state": "VERIFIED",
+    "reason": "WINDOW by source symbol / glazing role"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": []
+  },
+  {
+   "id": "2F-W02",
+   "floor": "2F",
+   "kind": "WINDOW",
+   "width_m": 1.0,
+   "height_m": 0.589,
+   "height_source_state": "RASTER_TYPE_MATCH_SINGLE",
+   "height_class": "PROVISIONAL_SOURCE_DERIVED",
+   "sill_m": 1.584,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "PROVISIONAL",
+    "reason": "height PROVISIONAL_SOURCE_DERIVED"
+   },
+   "area": {
+    "state": "PROVISIONAL",
+    "reason": "width x height: height provisional"
+   },
+   "function": {
+    "state": "VERIFIED",
+    "reason": "WINDOW by source symbol / glazing role"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": []
+  },
+  {
+   "id": "2F-W03",
+   "floor": "2F",
+   "kind": "WINDOW",
+   "width_m": 0.6,
+   "height_m": 1.439,
+   "height_source_state": "NO_WIDTH_MATCH",
+   "height_class": "BUDGET_ESTIMATE",
+   "sill_m": null,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "PROVISIONAL",
+    "reason": "height BUDGET_ESTIMATE"
+   },
+   "area": {
+    "state": "PROVISIONAL",
+    "reason": "width x height: height provisional"
+   },
+   "function": {
+    "state": "VERIFIED",
+    "reason": "WINDOW by source symbol / glazing role"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": []
+  },
+  {
+   "id": "2F-W04",
+   "floor": "2F",
+   "kind": "WINDOW",
+   "width_m": 1.2,
+   "height_m": 1.433,
+   "height_source_state": "RASTER_TYPE_MATCH_SINGLE",
+   "height_class": "PROVISIONAL_SOURCE_DERIVED",
+   "sill_m": 1.002,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "PROVISIONAL",
+    "reason": "height PROVISIONAL_SOURCE_DERIVED"
+   },
+   "area": {
+    "state": "PROVISIONAL",
+    "reason": "width x height: height provisional"
+   },
+   "function": {
+    "state": "VERIFIED",
+    "reason": "WINDOW by source symbol / glazing role"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": []
+  },
+  {
+   "id": "2F-W05",
+   "floor": "2F",
+   "kind": "WINDOW",
+   "width_m": 1.2,
+   "height_m": 1.433,
+   "height_source_state": "RASTER_TYPE_MATCH_SINGLE",
+   "height_class": "PROVISIONAL_SOURCE_DERIVED",
+   "sill_m": 1.002,
+   "v3a_record_status": "PARTIAL",
+   "v3a_attribute_states": {
+    "count_state": "COMPUTED",
+    "width_state": "COMPUTED",
+    "height_state_v2": "BLOCKED",
+    "area_state": "BLOCKED_OPENING_AREA_HEIGHT"
+   },
+   "count": {
+    "state": "VERIFIED",
+    "reason": "opening object in source"
+   },
+   "width": {
+    "state": "VERIFIED",
+    "reason": "source closure"
+   },
+   "height": {
+    "state": "PROVISIONAL",
+    "reason": "height PROVISIONAL_SOURCE_DERIVED"
+   },
+   "area": {
+    "state": "PROVISIONAL",
+    "reason": "width x height: height provisional"
+   },
+   "function": {
+    "state": "VERIFIED",
+    "reason": "WINDOW by source symbol / glazing role"
+   },
+   "material": {
+    "state": "PROVISIONAL",
+    "reason": "material by specification (not in source)"
+   },
+   "flags": []
+  }
+ ],
+ "counts": {
+  "count": {
+   "VERIFIED": 60
+  },
+  "width": {
+   "VERIFIED": 59,
+   "BLOCKED": 1
+  },
+  "height": {
+   "PROVISIONAL": 47,
+   "BLOCKED": 1,
+   "VERIFIED": 12
+  },
+  "area": {
+   "PROVISIONAL": 47,
+   "BLOCKED": 1,
+   "VERIFIED": 12
+  },
+  "function": {
+   "VERIFIED": 36,
+   "BLOCKED": 24
+  }
+ },
+ "glazed_door_candidates": [
+  "GF-W01",
+  "GF-W02",
+  "GF-W03",
+  "GF-W04",
+  "GF-W05",
+  "GF-W09",
+  "GF-W10",
+  "GF-W11",
+  "GF-W12",
+  "GF-W13",
+  "GF-W14",
+  "GF-W15",
+  "GF-W16",
+  "1F-W01",
+  "1F-W02",
+  "1F-W03",
+  "1F-W04",
+  "1F-W05",
+  "1F-W06",
+  "1F-W07",
+  "1F-W08",
+  "1F-W09",
+  "1F-W11",
+  "1F-W12"
+ ],
+ "v3a_computed_with_blocked_height": [],
+ "rule": "count, width, height, area, function and material each carry their own state; area is never more certain than width and height; no default height"
+}

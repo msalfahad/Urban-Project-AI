@@ -1,0 +1,3518 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_STRUCTURAL_POPULATION_COVERAGE_V2",
+ "rows": [
+  {
+   "population": "FOOTING",
+   "occurrence": "FOOTING:F#1",
+   "source_ref": "H4261",
+   "concrete_state": "BLOCKED",
+   "release_state": "BLOCKED",
+   "terminal_state": "REBAR_BLOCKED_CONCRETE_NOT_ESTABLISHED",
+   "reasons": [
+    "REBAR_BLOCKED_CONCRETE_NOT_ESTABLISHED: footing concrete BLOCKED"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "type": "F"
+  },
+  {
+   "population": "FOOTING",
+   "occurrence": "FOOTING:FN#2",
+   "source_ref": "H4333",
+   "concrete_state": "COMPUTED_SHADOW_COMPLETE",
+   "release_state": "VERIFIED_COMPLETE",
+   "terminal_state": "REBAR_COMPLETE",
+   "reasons": [],
+   "verified_kg": 12.232,
+   "lower_bound_kg": null,
+   "type": "FN"
+  },
+  {
+   "population": "FOOTING",
+   "occurrence": "FOOTING:FN#3",
+   "source_ref": "H4341",
+   "concrete_state": "COMPUTED_SHADOW_COMPLETE",
+   "release_state": "VERIFIED_COMPLETE",
+   "terminal_state": "REBAR_COMPLETE",
+   "reasons": [],
+   "verified_kg": 12.232,
+   "lower_bound_kg": null,
+   "type": "FN"
+  },
+  {
+   "population": "FOOTING",
+   "occurrence": "FOOTING:F5#4",
+   "source_ref": "H5743",
+   "concrete_state": "COMPUTED_SHADOW_COMPLETE",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "REBAR_BLOCKED_BOXED_SEMANTICS (raw '3+4')"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 78.507,
+   "type": "F5"
+  },
+  {
+   "population": "FOOTING",
+   "occurrence": "FOOTING:F4#5",
+   "source_ref": "H5745",
+   "concrete_state": "COMPUTED_SHADOW_COMPLETE",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "REBAR_BLOCKED_BOXED_SEMANTICS (raw '3+4')"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 60.889,
+   "type": "F4"
+  },
+  {
+   "population": "FOOTING",
+   "occurrence": "FOOTING:F4#6",
+   "source_ref": "H5746",
+   "concrete_state": "COMPUTED_SHADOW_COMPLETE",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "REBAR_BLOCKED_BOXED_SEMANTICS (raw '3+4')"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 60.889,
+   "type": "F4"
+  },
+  {
+   "population": "FOOTING",
+   "occurrence": "FOOTING:F5#7",
+   "source_ref": "H5747",
+   "concrete_state": "COMPUTED_SHADOW_COMPLETE",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "REBAR_BLOCKED_BOXED_SEMANTICS (raw '3+4')"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 78.507,
+   "type": "F5"
+  },
+  {
+   "population": "FOOTING",
+   "occurrence": "FOOTING:F2#8",
+   "source_ref": "H5748",
+   "concrete_state": "COMPUTED_SHADOW_COMPLETE",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "REBAR_BLOCKED_BOXED_SEMANTICS (raw '3+4')"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 38.365,
+   "type": "F2"
+  },
+  {
+   "population": "FOOTING",
+   "occurrence": "FOOTING:F2#9",
+   "source_ref": "H5749",
+   "concrete_state": "COMPUTED_SHADOW_COMPLETE",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "REBAR_BLOCKED_BOXED_SEMANTICS (raw '3+4')"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 38.365,
+   "type": "F2"
+  },
+  {
+   "population": "FOOTING",
+   "occurrence": "FOOTING:FF#10",
+   "source_ref": "H5750",
+   "concrete_state": "COMPUTED_SHADOW_COMPLETE",
+   "release_state": "BLOCKED",
+   "terminal_state": "REBAR_BLOCKED_SCHEDULE_CELL_UNREAD",
+   "reasons": [
+    "REBAR_BLOCKED_SCHEDULE_CELL_UNREAD: schedule cell for FF not parsed into bars"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "type": "FF"
+  },
+  {
+   "population": "FOOTING",
+   "occurrence": "FOOTING:F9#11",
+   "source_ref": "H5751",
+   "concrete_state": "COMPUTED_SHADOW_COMPLETE",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "REBAR_BLOCKED_BOXED_SEMANTICS (raw '3+8')"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 181.385,
+   "type": "F9"
+  },
+  {
+   "population": "FOOTING",
+   "occurrence": "FOOTING:F#12",
+   "source_ref": "H5757",
+   "concrete_state": "COMPUTED_SHADOW_COMPLETE",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "REBAR_BLOCKED_BOXED_SEMANTICS (raw '3+4')"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 9.422,
+   "type": "F"
+  },
+  {
+   "population": "FOOTING",
+   "occurrence": "FOOTING:F#13",
+   "source_ref": "H5757",
+   "concrete_state": "COMPUTED_SHADOW_COMPLETE",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "REBAR_BLOCKED_BOXED_SEMANTICS (raw '3+4')"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 9.422,
+   "type": "F"
+  },
+  {
+   "population": "FOOTING",
+   "occurrence": "FOOTING:F#14",
+   "source_ref": "H5757",
+   "concrete_state": "COMPUTED_SHADOW_COMPLETE",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "REBAR_BLOCKED_BOXED_SEMANTICS (raw '3+4')"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 9.422,
+   "type": "F"
+  },
+  {
+   "population": "FOOTING",
+   "occurrence": "FOOTING:F#15",
+   "source_ref": "H5757",
+   "concrete_state": "COMPUTED_SHADOW_COMPLETE",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "REBAR_BLOCKED_BOXED_SEMANTICS (raw '3+4')"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 9.422,
+   "type": "F"
+  },
+  {
+   "population": "FOOTING",
+   "occurrence": "FOOTING:F14#16",
+   "source_ref": "H5763",
+   "concrete_state": "COMPUTED_SHADOW_COMPLETE",
+   "release_state": "BLOCKED",
+   "terminal_state": "REBAR_BLOCKED_PER_METRE_PENDING_CONSUMER_V2",
+   "reasons": [
+    "REBAR_BLOCKED_PER_METRE_PENDING_CONSUMER_V2: 6 Ø14 per metre; count over the footing not derived",
+    "REBAR_BLOCKED_PER_METRE_PENDING_CONSUMER_V2: 6 Ø14 per metre; count over the footing not derived",
+    "REBAR_BLOCKED_PER_METRE_PENDING_CONSUMER_V2: two-layer footing BOTTOM layer ['9 Ø 14/m'] (per metre) - consumer pending"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "type": "F14"
+  },
+  {
+   "population": "FOOTING",
+   "occurrence": "FOOTING:F11#17",
+   "source_ref": "H5767",
+   "concrete_state": "COMPUTED_SHADOW_COMPLETE",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "REBAR_BLOCKED_BOXED_SEMANTICS (raw '3+8')"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 109.567,
+   "type": "F11"
+  },
+  {
+   "population": "FOOTING",
+   "occurrence": "FOOTING:FN#18",
+   "source_ref": "H5770",
+   "concrete_state": "COMPUTED_SHADOW_COMPLETE",
+   "release_state": "VERIFIED_COMPLETE",
+   "terminal_state": "REBAR_COMPLETE",
+   "reasons": [],
+   "verified_kg": 12.232,
+   "lower_bound_kg": null,
+   "type": "FN"
+  },
+  {
+   "population": "FOOTING",
+   "occurrence": "FOOTING:F10#19",
+   "source_ref": "H5771",
+   "concrete_state": "BLOCKED",
+   "release_state": "BLOCKED",
+   "terminal_state": "REBAR_BLOCKED_CONCRETE_NOT_ESTABLISHED",
+   "reasons": [
+    "REBAR_BLOCKED_CONCRETE_NOT_ESTABLISHED: footing concrete BLOCKED"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "type": "F10"
+  },
+  {
+   "population": "FOOTING",
+   "occurrence": "FOOTING:F6#20",
+   "source_ref": "H5773",
+   "concrete_state": "COMPUTED_SHADOW_COMPLETE",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "REBAR_BLOCKED_BOXED_SEMANTICS (raw '3+5')"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 92.054,
+   "type": "F6"
+  },
+  {
+   "population": "FOOTING",
+   "occurrence": "FOOTING:F3#21",
+   "source_ref": "H5774",
+   "concrete_state": "COMPUTED_SHADOW_COMPLETE",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "REBAR_BLOCKED_BOXED_SEMANTICS (raw '3+4')"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 19.342,
+   "type": "F3"
+  },
+  {
+   "population": "FOOTING",
+   "occurrence": "FOOTING:F3#22",
+   "source_ref": "H5775",
+   "concrete_state": "COMPUTED_SHADOW_COMPLETE",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "REBAR_BLOCKED_BOXED_SEMANTICS (raw '3+4')"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 19.342,
+   "type": "F3"
+  },
+  {
+   "population": "FOOTING",
+   "occurrence": "FOOTING:FN#23",
+   "source_ref": "H6160",
+   "concrete_state": "COMPUTED_SHADOW_COMPLETE",
+   "release_state": "VERIFIED_COMPLETE",
+   "terminal_state": "REBAR_COMPLETE",
+   "reasons": [],
+   "verified_kg": 12.232,
+   "lower_bound_kg": null,
+   "type": "FN"
+  },
+  {
+   "population": "FOOTING",
+   "occurrence": "FOOTING:F12#24",
+   "source_ref": "H6874",
+   "concrete_state": "COMPUTED_SHADOW_COMPLETE",
+   "release_state": "BLOCKED",
+   "terminal_state": "REBAR_BLOCKED_PER_METRE_PENDING_CONSUMER_V2",
+   "reasons": [
+    "REBAR_BLOCKED_PER_METRE_PENDING_CONSUMER_V2: 10 Ø14 per metre; count over the footing not derived",
+    "REBAR_BLOCKED_PER_METRE_PENDING_CONSUMER_V2: 10 Ø14 per metre; count over the footing not derived",
+    "REBAR_BLOCKED_PER_METRE_PENDING_CONSUMER_V2: two-layer footing BOTTOM layer ['9 Ø 16/m'] (per metre) - consumer pending"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "type": "F12"
+  },
+  {
+   "population": "FOOTING",
+   "occurrence": "FOOTING:F13#25",
+   "source_ref": "H6876",
+   "concrete_state": "COMPUTED_SHADOW_COMPLETE",
+   "release_state": "BLOCKED",
+   "terminal_state": "REBAR_BLOCKED_PER_METRE_PENDING_CONSUMER_V2",
+   "reasons": [
+    "REBAR_BLOCKED_PER_METRE_PENDING_CONSUMER_V2: 7 Ø14 per metre; count over the footing not derived",
+    "REBAR_BLOCKED_PER_METRE_PENDING_CONSUMER_V2: 7 Ø14 per metre; count over the footing not derived",
+    "REBAR_BLOCKED_PER_METRE_PENDING_CONSUMER_V2: two-layer footing BOTTOM layer ['8 Ø 16/m'] (per metre) - consumer pending"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "type": "F13"
+  },
+  {
+   "population": "FOOTING",
+   "occurrence": "FOOTING:F8#26",
+   "source_ref": "H6949",
+   "concrete_state": "COMPUTED_SHADOW_COMPLETE",
+   "release_state": "BLOCKED",
+   "terminal_state": "REBAR_BLOCKED_PER_METRE_PENDING_CONSUMER_V2",
+   "reasons": [
+    "REBAR_BLOCKED_PER_METRE_PENDING_CONSUMER_V2: 6 Ø14 per metre; count over the footing not derived",
+    "REBAR_BLOCKED_PER_METRE_PENDING_CONSUMER_V2: 6 Ø14 per metre; count over the footing not derived",
+    "REBAR_BLOCKED_PER_METRE_PENDING_CONSUMER_V2: two-layer footing BOTTOM layer ['9 Ø 14/m'] (per metre) - consumer pending"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "type": "F8"
+  },
+  {
+   "population": "FOOTING",
+   "occurrence": "FOOTING:F15#27",
+   "source_ref": "H6953",
+   "concrete_state": "COMPUTED_SHADOW_COMPLETE",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "REBAR_BLOCKED_BOXED_SEMANTICS (raw '3+4')"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 23.271,
+   "type": "F15"
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:GF:C:H2125",
+   "source_ref": "H2125",
+   "concrete_state": "PROVEN",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 69.689,
+   "type": "C",
+   "audit_kg_not_released": null
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:GF:C:H4100",
+   "source_ref": "H4100",
+   "concrete_state": "PROVEN",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 69.689,
+   "type": "C",
+   "audit_kg_not_released": null
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:GF:C3:H4102",
+   "source_ref": "H4102",
+   "concrete_state": "PROVEN",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 70.756,
+   "type": "C3",
+   "audit_kg_not_released": null
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:GF:C:H4104",
+   "source_ref": "H4104",
+   "concrete_state": "PROVEN",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 69.689,
+   "type": "C",
+   "audit_kg_not_released": null
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:GF:C3:H4106",
+   "source_ref": "H4106",
+   "concrete_state": "PROVEN",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 70.756,
+   "type": "C3",
+   "audit_kg_not_released": null
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:GF:C:H4108",
+   "source_ref": "H4108",
+   "concrete_state": "SLAB_SOFFIT",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 69.689,
+   "type": "C",
+   "audit_kg_not_released": null
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:GF:C3:H4110",
+   "source_ref": "H4110",
+   "concrete_state": "PROVEN",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 70.756,
+   "type": "C3",
+   "audit_kg_not_released": null
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:GF:C5:H4112",
+   "source_ref": "H4112",
+   "concrete_state": "PROVEN",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 87.111,
+   "type": "C5",
+   "audit_kg_not_released": null
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:GF:C11:H4114",
+   "source_ref": "H4114",
+   "concrete_state": "PROVEN",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 126.223,
+   "type": "C11",
+   "audit_kg_not_released": null
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:GF:C6:H4116",
+   "source_ref": "H4116",
+   "concrete_state": "PROVEN",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 89.244,
+   "type": "C6",
+   "audit_kg_not_released": null
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:GF:C11:H4118",
+   "source_ref": "H4118",
+   "concrete_state": "PROVEN",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 126.223,
+   "type": "C11",
+   "audit_kg_not_released": null
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:GF:C3:H4120",
+   "source_ref": "H4120",
+   "concrete_state": "PROVEN",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 70.756,
+   "type": "C3",
+   "audit_kg_not_released": null
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:GF:C8:H4122",
+   "source_ref": "H4122",
+   "concrete_state": "BLOCKED_UPPER_MEMBER_UNBOUND",
+   "release_state": "BLOCKED",
+   "terminal_state": "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED",
+   "reasons": [
+    "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED: column occurrence state BLOCKED_UPPER_MEMBER_UNBOUND: concrete not established"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "type": "C8",
+   "audit_kg_not_released": 107.733
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:GF:C5:H4124",
+   "source_ref": "H4124",
+   "concrete_state": "BLOCKED_UPPER_MEMBER_UNBOUND",
+   "release_state": "BLOCKED",
+   "terminal_state": "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED",
+   "reasons": [
+    "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED: column occurrence state BLOCKED_UPPER_MEMBER_UNBOUND: concrete not established"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "type": "C5",
+   "audit_kg_not_released": 87.111
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:GF:C10:H4185",
+   "source_ref": "H4185",
+   "concrete_state": "PROVEN",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 89.244,
+   "type": "C10",
+   "audit_kg_not_released": null
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:GF:C:H4187",
+   "source_ref": "H4187",
+   "concrete_state": "PROVEN",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 69.689,
+   "type": "C",
+   "audit_kg_not_released": null
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:GF:C7:H4189",
+   "source_ref": "H4189",
+   "concrete_state": "PROVEN",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 105.6,
+   "type": "C7",
+   "audit_kg_not_released": null
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:GF:C3:H4191",
+   "source_ref": "H4191",
+   "concrete_state": "PROVEN",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 70.756,
+   "type": "C3",
+   "audit_kg_not_released": null
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:GF:C2:H4193",
+   "source_ref": "H4193",
+   "concrete_state": "PROVEN",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 69.689,
+   "type": "C2",
+   "audit_kg_not_released": null
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:GF:C2:H4195",
+   "source_ref": "H4195",
+   "concrete_state": "PROVEN",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 69.689,
+   "type": "C2",
+   "audit_kg_not_released": null
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:GF:C4:H4197",
+   "source_ref": "H4197",
+   "concrete_state": "PROVEN",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 70.756,
+   "type": "C4",
+   "audit_kg_not_released": null
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:GF:C4:H4199",
+   "source_ref": "H4199",
+   "concrete_state": "BLOCKED_TAG_NOT_BOUND",
+   "release_state": "BLOCKED",
+   "terminal_state": "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED",
+   "reasons": [
+    "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED: column occurrence state BLOCKED_TAG_NOT_BOUND: concrete not established"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "type": "C4",
+   "audit_kg_not_released": 70.756
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:GF:C5:H4201",
+   "source_ref": "H4201",
+   "concrete_state": "PROVEN",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 87.111,
+   "type": "C5",
+   "audit_kg_not_released": null
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:GF:C9:H4203",
+   "source_ref": "H4203",
+   "concrete_state": "BLOCKED_SEVERAL_OUTLINES_ON_STOREY_SHEET",
+   "release_state": "BLOCKED",
+   "terminal_state": "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED",
+   "reasons": [
+    "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED: column occurrence state BLOCKED_SEVERAL_OUTLINES_ON_STOREY_SHEET: concrete not established"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "type": "C9",
+   "audit_kg_not_released": 124.089
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:GF:C8:H4205",
+   "source_ref": "H4205",
+   "concrete_state": "BLOCKED_SEVERAL_OUTLINES_ON_STOREY_SHEET",
+   "release_state": "BLOCKED",
+   "terminal_state": "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED",
+   "reasons": [
+    "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED: column occurrence state BLOCKED_SEVERAL_OUTLINES_ON_STOREY_SHEET: concrete not established"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "type": "C8",
+   "audit_kg_not_released": 107.733
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:GF:C3:H4207",
+   "source_ref": "H4207",
+   "concrete_state": "PROVEN",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 70.756,
+   "type": "C3",
+   "audit_kg_not_released": null
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:GF:CN:H4209",
+   "source_ref": "H4209",
+   "concrete_state": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "terminal_state": "NOT_REQUIRED",
+   "reasons": [
+    "the column type has no section in this storey"
+   ]
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:GF:CN:H4211",
+   "source_ref": "H4211",
+   "concrete_state": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "terminal_state": "NOT_REQUIRED",
+   "reasons": [
+    "the column type has no section in this storey"
+   ]
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:GF:C9:H4213",
+   "source_ref": "H4213",
+   "concrete_state": "PROVEN",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 124.089,
+   "type": "C9",
+   "audit_kg_not_released": null
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:GF:C2:H4215",
+   "source_ref": "H4215",
+   "concrete_state": "PROVEN",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 69.689,
+   "type": "C2",
+   "audit_kg_not_released": null
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:GF:C1:H4217",
+   "source_ref": "H4217",
+   "concrete_state": "PROVEN",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 69.689,
+   "type": "C1",
+   "audit_kg_not_released": null
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:GF:C2:H4219",
+   "source_ref": "H4219",
+   "concrete_state": "PROVEN",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 69.689,
+   "type": "C2",
+   "audit_kg_not_released": null
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:GF:CN:H6070",
+   "source_ref": "H6070",
+   "concrete_state": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "terminal_state": "NOT_REQUIRED",
+   "reasons": [
+    "the column type has no section in this storey"
+   ]
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:GF:CN:H6096",
+   "source_ref": "H6096",
+   "concrete_state": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "terminal_state": "NOT_REQUIRED",
+   "reasons": [
+    "the column type has no section in this storey"
+   ]
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:GF:CN:H6098",
+   "source_ref": "H6098",
+   "concrete_state": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "terminal_state": "NOT_REQUIRED",
+   "reasons": [
+    "the column type has no section in this storey"
+   ]
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:1F:C:H2125",
+   "source_ref": "H2125",
+   "concrete_state": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "terminal_state": "NOT_REQUIRED",
+   "reasons": [
+    "the column type has no section in this storey"
+   ]
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:1F:C:H4100",
+   "source_ref": "H4100",
+   "concrete_state": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "terminal_state": "NOT_REQUIRED",
+   "reasons": [
+    "the column type has no section in this storey"
+   ]
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:1F:C3:H4102",
+   "source_ref": "H4102",
+   "concrete_state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "release_state": "BLOCKED",
+   "terminal_state": "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED",
+   "reasons": [
+    "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED: column occurrence state NOT_DRAWN_ON_STOREY_SHEET: concrete not established"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "type": "C3",
+   "audit_kg_not_released": 52.148
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:1F:C:H4104",
+   "source_ref": "H4104",
+   "concrete_state": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "terminal_state": "NOT_REQUIRED",
+   "reasons": [
+    "the column type has no section in this storey"
+   ]
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:1F:C3:H4106",
+   "source_ref": "H4106",
+   "concrete_state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "release_state": "BLOCKED",
+   "terminal_state": "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED",
+   "reasons": [
+    "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED: column occurrence state NOT_DRAWN_ON_STOREY_SHEET: concrete not established"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "type": "C3",
+   "audit_kg_not_released": 52.148
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:1F:C:H4108",
+   "source_ref": "H4108",
+   "concrete_state": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "terminal_state": "NOT_REQUIRED",
+   "reasons": [
+    "the column type has no section in this storey"
+   ]
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:1F:C3:H4110",
+   "source_ref": "H4110",
+   "concrete_state": "BLOCKED_UPPER_MEMBER_UNBOUND",
+   "release_state": "BLOCKED",
+   "terminal_state": "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED",
+   "reasons": [
+    "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED: column occurrence state BLOCKED_UPPER_MEMBER_UNBOUND: concrete not established"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "type": "C3",
+   "audit_kg_not_released": 52.148
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:1F:C5:H4112",
+   "source_ref": "H4112",
+   "concrete_state": "BLOCKED_UPPER_MEMBER_UNBOUND",
+   "release_state": "BLOCKED",
+   "terminal_state": "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED",
+   "reasons": [
+    "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED: column occurrence state BLOCKED_UPPER_MEMBER_UNBOUND: concrete not established"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "type": "C5",
+   "audit_kg_not_released": 65.422
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:1F:C11:H4114",
+   "source_ref": "H4114",
+   "concrete_state": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "terminal_state": "NOT_REQUIRED",
+   "reasons": [
+    "the column type has no section in this storey"
+   ]
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:1F:C6:H4116",
+   "source_ref": "H4116",
+   "concrete_state": "PROVEN",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 67.476,
+   "type": "C6",
+   "audit_kg_not_released": null
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:1F:C11:H4118",
+   "source_ref": "H4118",
+   "concrete_state": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "terminal_state": "NOT_REQUIRED",
+   "reasons": [
+    "the column type has no section in this storey"
+   ]
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:1F:C3:H4120",
+   "source_ref": "H4120",
+   "concrete_state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "release_state": "BLOCKED",
+   "terminal_state": "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED",
+   "reasons": [
+    "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED: column occurrence state NOT_DRAWN_ON_STOREY_SHEET: concrete not established"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "type": "C3",
+   "audit_kg_not_released": 52.148
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:1F:C8:H4122",
+   "source_ref": "H4122",
+   "concrete_state": "PROVEN",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 100.187,
+   "type": "C8",
+   "audit_kg_not_released": null
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:1F:C5:H4124",
+   "source_ref": "H4124",
+   "concrete_state": "PROVEN",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 65.422,
+   "type": "C5",
+   "audit_kg_not_released": null
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:1F:C10:H4185",
+   "source_ref": "H4185",
+   "concrete_state": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "terminal_state": "NOT_REQUIRED",
+   "reasons": [
+    "the column type has no section in this storey"
+   ]
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:1F:C:H4187",
+   "source_ref": "H4187",
+   "concrete_state": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "terminal_state": "NOT_REQUIRED",
+   "reasons": [
+    "the column type has no section in this storey"
+   ]
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:1F:C7:H4189",
+   "source_ref": "H4189",
+   "concrete_state": "PROVEN",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 84.859,
+   "type": "C7",
+   "audit_kg_not_released": null
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:1F:C3:H4191",
+   "source_ref": "H4191",
+   "concrete_state": "PROVEN",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 52.148,
+   "type": "C3",
+   "audit_kg_not_released": null
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:1F:C2:H4193",
+   "source_ref": "H4193",
+   "concrete_state": "PROVEN",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 65.422,
+   "type": "C2",
+   "audit_kg_not_released": null
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:1F:C2:H4195",
+   "source_ref": "H4195",
+   "concrete_state": "PROVEN",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 65.422,
+   "type": "C2",
+   "audit_kg_not_released": null
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:1F:C4:H4197",
+   "source_ref": "H4197",
+   "concrete_state": "PROVEN",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 65.422,
+   "type": "C4",
+   "audit_kg_not_released": null
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:1F:C4:H4199",
+   "source_ref": "H4199",
+   "concrete_state": "BLOCKED_TAG_NOT_BOUND",
+   "release_state": "BLOCKED",
+   "terminal_state": "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED",
+   "reasons": [
+    "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED: column occurrence state BLOCKED_TAG_NOT_BOUND: concrete not established"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "type": "C4",
+   "audit_kg_not_released": 65.422
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:1F:C5:H4201",
+   "source_ref": "H4201",
+   "concrete_state": "PROVEN",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 65.422,
+   "type": "C5",
+   "audit_kg_not_released": null
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:1F:C9:H4203",
+   "source_ref": "H4203",
+   "concrete_state": "PROVEN",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 100.187,
+   "type": "C9",
+   "audit_kg_not_released": null
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:1F:C8:H4205",
+   "source_ref": "H4205",
+   "concrete_state": "PROVEN_UNBOUND_DOMINATED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 100.187,
+   "type": "C8",
+   "audit_kg_not_released": null
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:1F:C3:H4207",
+   "source_ref": "H4207",
+   "concrete_state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "release_state": "BLOCKED",
+   "terminal_state": "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED",
+   "reasons": [
+    "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED: column occurrence state NOT_DRAWN_ON_STOREY_SHEET: concrete not established"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "type": "C3",
+   "audit_kg_not_released": 52.148
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:1F:CN:H4209",
+   "source_ref": "H4209",
+   "concrete_state": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "terminal_state": "NOT_REQUIRED",
+   "reasons": [
+    "the column type has no section in this storey"
+   ]
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:1F:CN:H4211",
+   "source_ref": "H4211",
+   "concrete_state": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "terminal_state": "NOT_REQUIRED",
+   "reasons": [
+    "the column type has no section in this storey"
+   ]
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:1F:C9:H4213",
+   "source_ref": "H4213",
+   "concrete_state": "PROVEN",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 100.187,
+   "type": "C9",
+   "audit_kg_not_released": null
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:1F:C2:H4215",
+   "source_ref": "H4215",
+   "concrete_state": "PROVEN",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 65.422,
+   "type": "C2",
+   "audit_kg_not_released": null
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:1F:C1:H4217",
+   "source_ref": "H4217",
+   "concrete_state": "PROVEN",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 52.148,
+   "type": "C1",
+   "audit_kg_not_released": null
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:1F:C2:H4219",
+   "source_ref": "H4219",
+   "concrete_state": "PROVEN",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 65.422,
+   "type": "C2",
+   "audit_kg_not_released": null
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:1F:CN:H6070",
+   "source_ref": "H6070",
+   "concrete_state": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "terminal_state": "NOT_REQUIRED",
+   "reasons": [
+    "the column type has no section in this storey"
+   ]
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:1F:CN:H6096",
+   "source_ref": "H6096",
+   "concrete_state": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "terminal_state": "NOT_REQUIRED",
+   "reasons": [
+    "the column type has no section in this storey"
+   ]
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:1F:CN:H6098",
+   "source_ref": "H6098",
+   "concrete_state": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "terminal_state": "NOT_REQUIRED",
+   "reasons": [
+    "the column type has no section in this storey"
+   ]
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:2F:C:H2125",
+   "source_ref": "H2125",
+   "concrete_state": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "terminal_state": "NOT_REQUIRED",
+   "reasons": [
+    "the column type has no section in this storey"
+   ]
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:2F:C:H4100",
+   "source_ref": "H4100",
+   "concrete_state": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "terminal_state": "NOT_REQUIRED",
+   "reasons": [
+    "the column type has no section in this storey"
+   ]
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:2F:C3:H4102",
+   "source_ref": "H4102",
+   "concrete_state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "release_state": "BLOCKED",
+   "terminal_state": "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED",
+   "reasons": [
+    "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED: column occurrence state NOT_DRAWN_ON_STOREY_SHEET: concrete not established"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "type": "C3",
+   "audit_kg_not_released": 52.148
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:2F:C:H4104",
+   "source_ref": "H4104",
+   "concrete_state": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "terminal_state": "NOT_REQUIRED",
+   "reasons": [
+    "the column type has no section in this storey"
+   ]
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:2F:C3:H4106",
+   "source_ref": "H4106",
+   "concrete_state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "release_state": "BLOCKED",
+   "terminal_state": "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED",
+   "reasons": [
+    "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED: column occurrence state NOT_DRAWN_ON_STOREY_SHEET: concrete not established"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "type": "C3",
+   "audit_kg_not_released": 52.148
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:2F:C:H4108",
+   "source_ref": "H4108",
+   "concrete_state": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "terminal_state": "NOT_REQUIRED",
+   "reasons": [
+    "the column type has no section in this storey"
+   ]
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:2F:C3:H4110",
+   "source_ref": "H4110",
+   "concrete_state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "release_state": "BLOCKED",
+   "terminal_state": "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED",
+   "reasons": [
+    "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED: column occurrence state NOT_DRAWN_ON_STOREY_SHEET: concrete not established"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "type": "C3",
+   "audit_kg_not_released": 52.148
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:2F:C5:H4112",
+   "source_ref": "H4112",
+   "concrete_state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "release_state": "BLOCKED",
+   "terminal_state": "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED",
+   "reasons": [
+    "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED: column occurrence state NOT_DRAWN_ON_STOREY_SHEET: concrete not established"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "type": "C5",
+   "audit_kg_not_released": 52.148
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:2F:C11:H4114",
+   "source_ref": "H4114",
+   "concrete_state": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "terminal_state": "NOT_REQUIRED",
+   "reasons": [
+    "the column type has no section in this storey"
+   ]
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:2F:C6:H4116",
+   "source_ref": "H4116",
+   "concrete_state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "release_state": "BLOCKED",
+   "terminal_state": "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED",
+   "reasons": [
+    "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED: column occurrence state NOT_DRAWN_ON_STOREY_SHEET: concrete not established"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "type": "C6",
+   "audit_kg_not_released": 65.422
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:2F:C11:H4118",
+   "source_ref": "H4118",
+   "concrete_state": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "terminal_state": "NOT_REQUIRED",
+   "reasons": [
+    "the column type has no section in this storey"
+   ]
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:2F:C3:H4120",
+   "source_ref": "H4120",
+   "concrete_state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "release_state": "BLOCKED",
+   "terminal_state": "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED",
+   "reasons": [
+    "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED: column occurrence state NOT_DRAWN_ON_STOREY_SHEET: concrete not established"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "type": "C3",
+   "audit_kg_not_released": 52.148
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:2F:C8:H4122",
+   "source_ref": "H4122",
+   "concrete_state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "release_state": "BLOCKED",
+   "terminal_state": "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED",
+   "reasons": [
+    "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED: column occurrence state NOT_DRAWN_ON_STOREY_SHEET: concrete not established"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "type": "C8",
+   "audit_kg_not_released": 82.805
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:2F:C5:H4124",
+   "source_ref": "H4124",
+   "concrete_state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "release_state": "BLOCKED",
+   "terminal_state": "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED",
+   "reasons": [
+    "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED: column occurrence state NOT_DRAWN_ON_STOREY_SHEET: concrete not established"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "type": "C5",
+   "audit_kg_not_released": 52.148
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:2F:C10:H4185",
+   "source_ref": "H4185",
+   "concrete_state": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "terminal_state": "NOT_REQUIRED",
+   "reasons": [
+    "the column type has no section in this storey"
+   ]
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:2F:C:H4187",
+   "source_ref": "H4187",
+   "concrete_state": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "terminal_state": "NOT_REQUIRED",
+   "reasons": [
+    "the column type has no section in this storey"
+   ]
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:2F:C7:H4189",
+   "source_ref": "H4189",
+   "concrete_state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "release_state": "BLOCKED",
+   "terminal_state": "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED",
+   "reasons": [
+    "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED: column occurrence state NOT_DRAWN_ON_STOREY_SHEET: concrete not established"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "type": "C7",
+   "audit_kg_not_released": 67.476
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:2F:C3:H4191",
+   "source_ref": "H4191",
+   "concrete_state": "PROVEN",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 52.148,
+   "type": "C3",
+   "audit_kg_not_released": null
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:2F:C2:H4193",
+   "source_ref": "H4193",
+   "concrete_state": "PROVEN",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 52.148,
+   "type": "C2",
+   "audit_kg_not_released": null
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:2F:C2:H4195",
+   "source_ref": "H4195",
+   "concrete_state": "PROVEN",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 52.148,
+   "type": "C2",
+   "audit_kg_not_released": null
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:2F:C4:H4197",
+   "source_ref": "H4197",
+   "concrete_state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "release_state": "BLOCKED",
+   "terminal_state": "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED",
+   "reasons": [
+    "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED: column occurrence state NOT_DRAWN_ON_STOREY_SHEET: concrete not established"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "type": "C4",
+   "audit_kg_not_released": 52.148
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:2F:C4:H4199",
+   "source_ref": "H4199",
+   "concrete_state": "BLOCKED_TAG_NOT_BOUND",
+   "release_state": "BLOCKED",
+   "terminal_state": "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED",
+   "reasons": [
+    "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED: column occurrence state BLOCKED_TAG_NOT_BOUND: concrete not established"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "type": "C4",
+   "audit_kg_not_released": 52.148
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:2F:C5:H4201",
+   "source_ref": "H4201",
+   "concrete_state": "PROVEN",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 52.148,
+   "type": "C5",
+   "audit_kg_not_released": null
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:2F:C9:H4203",
+   "source_ref": "H4203",
+   "concrete_state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "release_state": "BLOCKED",
+   "terminal_state": "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED",
+   "reasons": [
+    "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED: column occurrence state NOT_DRAWN_ON_STOREY_SHEET: concrete not established"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "type": "C9",
+   "audit_kg_not_released": 82.805
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:2F:C8:H4205",
+   "source_ref": "H4205",
+   "concrete_state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "release_state": "BLOCKED",
+   "terminal_state": "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED",
+   "reasons": [
+    "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED: column occurrence state NOT_DRAWN_ON_STOREY_SHEET: concrete not established"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "type": "C8",
+   "audit_kg_not_released": 82.805
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:2F:C3:H4207",
+   "source_ref": "H4207",
+   "concrete_state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "release_state": "BLOCKED",
+   "terminal_state": "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED",
+   "reasons": [
+    "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED: column occurrence state NOT_DRAWN_ON_STOREY_SHEET: concrete not established"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "type": "C3",
+   "audit_kg_not_released": 52.148
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:2F:CN:H4209",
+   "source_ref": "H4209",
+   "concrete_state": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "terminal_state": "NOT_REQUIRED",
+   "reasons": [
+    "the column type has no section in this storey"
+   ]
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:2F:CN:H4211",
+   "source_ref": "H4211",
+   "concrete_state": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "terminal_state": "NOT_REQUIRED",
+   "reasons": [
+    "the column type has no section in this storey"
+   ]
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:2F:C9:H4213",
+   "source_ref": "H4213",
+   "concrete_state": "PROVEN",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 82.805,
+   "type": "C9",
+   "audit_kg_not_released": null
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:2F:C2:H4215",
+   "source_ref": "H4215",
+   "concrete_state": "PROVEN",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 52.148,
+   "type": "C2",
+   "audit_kg_not_released": null
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:2F:C1:H4217",
+   "source_ref": "H4217",
+   "concrete_state": "PROVEN",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 52.148,
+   "type": "C1",
+   "audit_kg_not_released": null
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:2F:C2:H4219",
+   "source_ref": "H4219",
+   "concrete_state": "PROVEN",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 52.148,
+   "type": "C2",
+   "audit_kg_not_released": null
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:2F:CN:H6070",
+   "source_ref": "H6070",
+   "concrete_state": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "terminal_state": "NOT_REQUIRED",
+   "reasons": [
+    "the column type has no section in this storey"
+   ]
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:2F:CN:H6096",
+   "source_ref": "H6096",
+   "concrete_state": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "terminal_state": "NOT_REQUIRED",
+   "reasons": [
+    "the column type has no section in this storey"
+   ]
+  },
+  {
+   "population": "COLUMN",
+   "occurrence": "COLUMN:2F:CN:H6098",
+   "source_ref": "H6098",
+   "concrete_state": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "terminal_state": "NOT_REQUIRED",
+   "reasons": [
+    "the column type has no section in this storey"
+   ]
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:GF:B16:H1139",
+   "source_ref": "H1139",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "p.8 note 21: 2/3/4 Ø12 by beam width - the width-to-count mapping is not printed",
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 95.758,
+   "type": "B16",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:GF:B13:H1127",
+   "source_ref": "H1127",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "p.8 note 21: 2/3/4 Ø12 by beam width - the width-to-count mapping is not printed",
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 121.608,
+   "type": "B13",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:GF:B11:H1092",
+   "source_ref": "H1092",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "p.8 note 21: 2/3/4 Ø12 by beam width - the width-to-count mapping is not printed",
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 85.322,
+   "type": "B11",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:GF:B1:H1093",
+   "source_ref": "H1093",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 10.566,
+   "type": "B1",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:GF:B4:H1094",
+   "source_ref": "H1094",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 43.299,
+   "type": "B4",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:GF:B7:H1234",
+   "source_ref": "H1234",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "p.8 note 21: 2/3/4 Ø12 by beam width - the width-to-count mapping is not printed",
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 20.262,
+   "type": "B7",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:GF:B20:H1110",
+   "source_ref": "H1110",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "p.8 note 21: 2/3/4 Ø12 by beam width - the width-to-count mapping is not printed",
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 197.067,
+   "type": "B20",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:GF:B3:H1122",
+   "source_ref": "H1122",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 37.462,
+   "type": "B3",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:GF:B1:H1126",
+   "source_ref": "H1126",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 18.063,
+   "type": "B1",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:GF:B4:H1243",
+   "source_ref": "H1243",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 42.001,
+   "type": "B4",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:GF:B8:H1138",
+   "source_ref": "H1138",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "p.8 note 21: 2/3/4 Ø12 by beam width - the width-to-count mapping is not printed",
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 47.13,
+   "type": "B8",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:GF:B1:H1294",
+   "source_ref": "H1294",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 9.247,
+   "type": "B1",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:GF:CA:H1694",
+   "source_ref": "H1694",
+   "concrete_state": "TAG_INSIDE_SUPPORT",
+   "release_state": "BLOCKED",
+   "terminal_state": "REBAR_BLOCKED_OCCURRENCE_NOT_MEASURED",
+   "reasons": [
+    "REBAR_BLOCKED_OCCURRENCE_NOT_MEASURED: occurrence state TAG_INSIDE_SUPPORT"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "type": "CA",
+   "v3b_residue_commercial": "PROVISIONAL_GEOMETRIC_INFERENCE"
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:GF:B1:H1697",
+   "source_ref": "H1697",
+   "concrete_state": "MEASURED",
+   "release_state": "BLOCKED",
+   "terminal_state": "REBAR_BLOCKED_LENGTH_MISSING",
+   "reasons": [
+    "REBAR_BLOCKED_LENGTH_MISSING: support-centreline or clear length not measured"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "type": "B1",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "CONTINUOUS_BEAM",
+   "occurrence": "BEAM:GF:CB8:H1695",
+   "source_ref": "H1695",
+   "concrete_state": "SPAN_COUNT_MISMATCH",
+   "release_state": "BLOCKED",
+   "terminal_state": "REBAR_BLOCKED_PENDING_REBAR_CONSUMER_V2",
+   "reasons": [
+    "REBAR_BLOCKED_PENDING_REBAR_CONSUMER_V2: continuous-beam definition read from the DXF schedule (V2 source reader); no rebar consumer yet"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "type": "CB8",
+   "v3b_residue_commercial": "PROVISIONAL_GEOMETRIC_INFERENCE"
+  },
+  {
+   "population": "CONTINUOUS_BEAM",
+   "occurrence": "BEAM:GF:CB7:H1145",
+   "source_ref": "H1145",
+   "concrete_state": "MEASURED",
+   "release_state": "BLOCKED",
+   "terminal_state": "REBAR_BLOCKED_PENDING_REBAR_CONSUMER_V2",
+   "reasons": [
+    "REBAR_BLOCKED_PENDING_REBAR_CONSUMER_V2: continuous-beam definition read from the DXF schedule (V2 source reader); no rebar consumer yet"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "type": "CB7",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:GF:B24:H6170",
+   "source_ref": "H6170",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "p.8 note 21: 2/3/4 Ø12 by beam width - the width-to-count mapping is not printed",
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 130.264,
+   "type": "B24",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:GF:B3:H1719",
+   "source_ref": "H1719",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 27.793,
+   "type": "B3",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:GF:B5:H1176",
+   "source_ref": "H1176",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 52.487,
+   "type": "B5",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:GF:B4:H1175",
+   "source_ref": "H1175",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 39.096,
+   "type": "B4",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:GF:B3:H6183",
+   "source_ref": "H6183",
+   "concrete_state": "BAND_TYPE_CONFLICT",
+   "release_state": "BLOCKED",
+   "terminal_state": "REBAR_BLOCKED_OCCURRENCE_NOT_MEASURED",
+   "reasons": [
+    "REBAR_BLOCKED_OCCURRENCE_NOT_MEASURED: occurrence state BAND_TYPE_CONFLICT"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "type": "B3",
+   "v3b_residue_commercial": null
+  },
+  {
+   "population": "CONTINUOUS_BEAM",
+   "occurrence": "BEAM:GF:CB3:H1171",
+   "source_ref": "H1171",
+   "concrete_state": "BAND_TYPE_CONFLICT",
+   "release_state": "BLOCKED",
+   "terminal_state": "REBAR_BLOCKED_PENDING_REBAR_CONSUMER_V2",
+   "reasons": [
+    "REBAR_BLOCKED_PENDING_REBAR_CONSUMER_V2: continuous-beam definition read from the DXF schedule (V2 source reader); no rebar consumer yet"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "type": "CB3",
+   "v3b_residue_commercial": "PROVISIONAL_SOURCE_RANGE"
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:GF:B2:H1170",
+   "source_ref": "H1170",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 27.575,
+   "type": "B2",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "CONTINUOUS_BEAM",
+   "occurrence": "BEAM:GF:CB4:H1116",
+   "source_ref": "H1116",
+   "concrete_state": "MEASURED",
+   "release_state": "BLOCKED",
+   "terminal_state": "REBAR_BLOCKED_PENDING_REBAR_CONSUMER_V2",
+   "reasons": [
+    "REBAR_BLOCKED_PENDING_REBAR_CONSUMER_V2: continuous-beam definition read from the DXF schedule (V2 source reader); no rebar consumer yet"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "type": "CB4",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:GF:B22:H1174",
+   "source_ref": "H1174",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "p.8 note 21: 2/3/4 Ø12 by beam width - the width-to-count mapping is not printed",
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 309.535,
+   "type": "B22",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:GF:B14:H1119",
+   "source_ref": "H1119",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "p.8 note 21: 2/3/4 Ø12 by beam width - the width-to-count mapping is not printed",
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 28.531,
+   "type": "B14",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:GF:B1:H1095",
+   "source_ref": "H1095",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 12.636,
+   "type": "B1",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:GF:B1:H1207",
+   "source_ref": "H1207",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 8.062,
+   "type": "B1",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:GF:B3:H1096",
+   "source_ref": "H1096",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 34.039,
+   "type": "B3",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:GF:B2:H1097",
+   "source_ref": "H1097",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 27.575,
+   "type": "B2",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:GF:B7:H1206",
+   "source_ref": "H1206",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "p.8 note 21: 2/3/4 Ø12 by beam width - the width-to-count mapping is not printed",
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 16.454,
+   "type": "B7",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:GF:B1:H1118",
+   "source_ref": "H1118",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 12.742,
+   "type": "B1",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "CONTINUOUS_BEAM",
+   "occurrence": "BEAM:GF:CB1:H1249",
+   "source_ref": "H1249",
+   "concrete_state": "MEASURED",
+   "release_state": "BLOCKED",
+   "terminal_state": "REBAR_BLOCKED_PENDING_REBAR_CONSUMER_V2",
+   "reasons": [
+    "REBAR_BLOCKED_PENDING_REBAR_CONSUMER_V2: continuous-beam definition read from the DXF schedule (V2 source reader); no rebar consumer yet"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "type": "CB1",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:GF:B1:H1142",
+   "source_ref": "H1142",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 11.821,
+   "type": "B1",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:GF:B1:H1143",
+   "source_ref": "H1143",
+   "concrete_state": "MEASURED",
+   "release_state": "BLOCKED",
+   "terminal_state": "REBAR_BLOCKED_LENGTH_MISSING",
+   "reasons": [
+    "REBAR_BLOCKED_LENGTH_MISSING: support-centreline or clear length not measured"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "type": "B1",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "CONTINUOUS_BEAM",
+   "occurrence": "BEAM:GF:CB6:H1148",
+   "source_ref": "H1148",
+   "concrete_state": "SPAN_COUNT_MISMATCH",
+   "release_state": "BLOCKED",
+   "terminal_state": "REBAR_BLOCKED_PENDING_REBAR_CONSUMER_V2",
+   "reasons": [
+    "REBAR_BLOCKED_PENDING_REBAR_CONSUMER_V2: continuous-beam definition read from the DXF schedule (V2 source reader); no rebar consumer yet"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "type": "CB6",
+   "v3b_residue_commercial": "PROVISIONAL_GEOMETRIC_INFERENCE"
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:GF:B9:H1469",
+   "source_ref": "H1469",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "p.8 note 21: 2/3/4 Ø12 by beam width - the width-to-count mapping is not printed",
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 86.756,
+   "type": "B9",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:GF:B4:H1288",
+   "source_ref": "H1288",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 50.865,
+   "type": "B4",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "CONTINUOUS_BEAM",
+   "occurrence": "BEAM:GF:CB5:H1140",
+   "source_ref": "H1140",
+   "concrete_state": "SPAN_COUNT_MISMATCH",
+   "release_state": "BLOCKED",
+   "terminal_state": "REBAR_BLOCKED_PENDING_REBAR_CONSUMER_V2",
+   "reasons": [
+    "REBAR_BLOCKED_PENDING_REBAR_CONSUMER_V2: continuous-beam definition read from the DXF schedule (V2 source reader); no rebar consumer yet"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "type": "CB5",
+   "v3b_residue_commercial": "PROVISIONAL_GEOMETRIC_INFERENCE"
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:GF:B1:H1144",
+   "source_ref": "H1144",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 10.086,
+   "type": "B1",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:GF:B2:H1157",
+   "source_ref": "H1157",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 24.573,
+   "type": "B2",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:GF:B28:H1132",
+   "source_ref": "H1132",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "p.8 note 21: 2/3/4 Ø12 by beam width - the width-to-count mapping is not printed",
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 20.597,
+   "type": "B28",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:GF:B1:H1072",
+   "source_ref": "H1072",
+   "concrete_state": "MEASURED",
+   "release_state": "BLOCKED",
+   "terminal_state": "REBAR_BLOCKED_LENGTH_MISSING",
+   "reasons": [
+    "REBAR_BLOCKED_LENGTH_MISSING: support-centreline or clear length not measured"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "type": "B1",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:GF:B17:H1074",
+   "source_ref": "H1074",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "p.8 note 21: 2/3/4 Ø12 by beam width - the width-to-count mapping is not printed",
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 172.129,
+   "type": "B17",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:GF:B4:H1131",
+   "source_ref": "H1131",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 24.356,
+   "type": "B4",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:GF:B27:H1330",
+   "source_ref": "H1330",
+   "concrete_state": "MEASURED",
+   "release_state": "BLOCKED",
+   "terminal_state": "REBAR_BLOCKED_LENGTH_MISSING",
+   "reasons": [
+    "REBAR_BLOCKED_LENGTH_MISSING: support-centreline or clear length not measured"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "type": "B27",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:GF:B26:H1228",
+   "source_ref": "H1228",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "p.8 note 21: 2/3/4 Ø12 by beam width - the width-to-count mapping is not printed",
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 362.837,
+   "type": "B26",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:1F:B3:H1721",
+   "source_ref": "H1721",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 27.793,
+   "type": "B3",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "CONTINUOUS_BEAM",
+   "occurrence": "BEAM:1F:CB9:H1734",
+   "source_ref": "H1734",
+   "concrete_state": "MEASURED",
+   "release_state": "BLOCKED",
+   "terminal_state": "REBAR_BLOCKED_PENDING_REBAR_CONSUMER_V2",
+   "reasons": [
+    "REBAR_BLOCKED_PENDING_REBAR_CONSUMER_V2: continuous-beam definition read from the DXF schedule (V2 source reader); no rebar consumer yet"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "type": "CB9",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:1F:B4:H1809",
+   "source_ref": "H1809",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 46.366,
+   "type": "B4",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "CONTINUOUS_BEAM",
+   "occurrence": "BEAM:1F:CB11:H1754",
+   "source_ref": "H1754",
+   "concrete_state": "MEASURED",
+   "release_state": "BLOCKED",
+   "terminal_state": "REBAR_BLOCKED_PENDING_REBAR_CONSUMER_V2",
+   "reasons": [
+    "REBAR_BLOCKED_PENDING_REBAR_CONSUMER_V2: continuous-beam definition read from the DXF schedule (V2 source reader); no rebar consumer yet"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "type": "CB11",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:1F:B7:H1740",
+   "source_ref": "H1740",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "p.8 note 21: 2/3/4 Ø12 by beam width - the width-to-count mapping is not printed",
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 20.588,
+   "type": "B7",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:1F:B1:H1742",
+   "source_ref": "H1742",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 8.062,
+   "type": "B1",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:1F:B2:H1737",
+   "source_ref": "H1737",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 28.948,
+   "type": "B2",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:1F:B18:H1773",
+   "source_ref": "H1773",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "p.8 note 21: 2/3/4 Ø12 by beam width - the width-to-count mapping is not printed",
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 189.51,
+   "type": "B18",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:1F:B1:H1744",
+   "source_ref": "H1744",
+   "concrete_state": "MEASURED",
+   "release_state": "BLOCKED",
+   "terminal_state": "REBAR_BLOCKED_LENGTH_MISSING",
+   "reasons": [
+    "REBAR_BLOCKED_LENGTH_MISSING: support-centreline or clear length not measured"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "type": "B1",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:1F:B2:H1738",
+   "source_ref": "H1738",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 27.575,
+   "type": "B2",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:1F:B7:H1741",
+   "source_ref": "H1741",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "p.8 note 21: 2/3/4 Ø12 by beam width - the width-to-count mapping is not printed",
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 16.454,
+   "type": "B7",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:1F:B1:H1739",
+   "source_ref": "H1739",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 12.742,
+   "type": "B1",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "CONTINUOUS_BEAM",
+   "occurrence": "BEAM:1F:CB12:H1758",
+   "source_ref": "H1758",
+   "concrete_state": "SPAN_COUNT_MISMATCH",
+   "release_state": "BLOCKED",
+   "terminal_state": "REBAR_BLOCKED_PENDING_REBAR_CONSUMER_V2",
+   "reasons": [
+    "REBAR_BLOCKED_PENDING_REBAR_CONSUMER_V2: continuous-beam definition read from the DXF schedule (V2 source reader); no rebar consumer yet"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "type": "CB12",
+   "v3b_residue_commercial": "PROVISIONAL_GEOMETRIC_INFERENCE"
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:1F:B2:H1722",
+   "source_ref": "H1722",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 27.575,
+   "type": "B2",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:1F:B23:H1867",
+   "source_ref": "H1867",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "p.8 note 21: 2/3/4 Ø12 by beam width - the width-to-count mapping is not printed",
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 198.489,
+   "type": "B23",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "CONTINUOUS_BEAM",
+   "occurrence": "BEAM:1F:CB13:H1898",
+   "source_ref": "H1898",
+   "concrete_state": "MEASURED",
+   "release_state": "BLOCKED",
+   "terminal_state": "REBAR_BLOCKED_PENDING_REBAR_CONSUMER_V2",
+   "reasons": [
+    "REBAR_BLOCKED_PENDING_REBAR_CONSUMER_V2: continuous-beam definition read from the DXF schedule (V2 source reader); no rebar consumer yet"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "type": "CB13",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:1F:B19:H1743",
+   "source_ref": "H1743",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "p.8 note 21: 2/3/4 Ø12 by beam width - the width-to-count mapping is not printed",
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 124.728,
+   "type": "B19",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:1F:B4:H1717",
+   "source_ref": "H1717",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 46.879,
+   "type": "B4",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:1F:B6:H1725",
+   "source_ref": "H1725",
+   "concrete_state": "MEASURED",
+   "release_state": "BLOCKED",
+   "terminal_state": "REBAR_BLOCKED_LENGTH_MISSING",
+   "reasons": [
+    "REBAR_BLOCKED_LENGTH_MISSING: support-centreline or clear length not measured"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "type": "B6",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:1F:B4:H1753",
+   "source_ref": "H1753",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 49.783,
+   "type": "B4",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:1F:B25:H1745",
+   "source_ref": "H1745",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "p.8 note 21: 2/3/4 Ø12 by beam width - the width-to-count mapping is not printed",
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 301.546,
+   "type": "B25",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:1F:B11:H1752",
+   "source_ref": "H1752",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "p.8 note 21: 2/3/4 Ø12 by beam width - the width-to-count mapping is not printed",
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 91.092,
+   "type": "B11",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:1F:B5:H1732",
+   "source_ref": "H1732",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 50.763,
+   "type": "B5",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:1F:B6:H1748",
+   "source_ref": "H1748",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 72.459,
+   "type": "B6",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:1F:B6:H1751",
+   "source_ref": "H1751",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 70.073,
+   "type": "B6",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:1F:B6:H1900",
+   "source_ref": "H1900",
+   "concrete_state": "MEASURED",
+   "release_state": "BLOCKED",
+   "terminal_state": "REBAR_BLOCKED_LENGTH_MISSING",
+   "reasons": [
+    "REBAR_BLOCKED_LENGTH_MISSING: support-centreline or clear length not measured"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "type": "B6",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:1F:B5:H1772",
+   "source_ref": "H1772",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 63.385,
+   "type": "B5",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:2F:B3:H1908",
+   "source_ref": "H1908",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 27.591,
+   "type": "B3",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:2F:B3:H1949",
+   "source_ref": "H1949",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 27.793,
+   "type": "B3",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:2F:B8:H1950",
+   "source_ref": "H1950",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "p.8 note 21: 2/3/4 Ø12 by beam width - the width-to-count mapping is not printed",
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 46.789,
+   "type": "B8",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:2F:B2:H1936",
+   "source_ref": "H1936",
+   "concrete_state": "MEASURED",
+   "release_state": "BLOCKED",
+   "terminal_state": "REBAR_BLOCKED_LENGTH_MISSING",
+   "reasons": [
+    "REBAR_BLOCKED_LENGTH_MISSING: support-centreline or clear length not measured"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "type": "B2",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:2F:B1:H1935",
+   "source_ref": "H1935",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 12.742,
+   "type": "B1",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:2F:B2:H1934",
+   "source_ref": "H1934",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 27.97,
+   "type": "B2",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:2F:B15:H1961",
+   "source_ref": "H1961",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "p.8 note 21: 2/3/4 Ø12 by beam width - the width-to-count mapping is not printed",
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 86.36,
+   "type": "B15",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:2F:B2:H1930",
+   "source_ref": "H1930",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 17.383,
+   "type": "B2",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:2F:B2:H1909",
+   "source_ref": "H1909",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 27.97,
+   "type": "B2",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:2F:B1:H1931",
+   "source_ref": "H1931",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 9.086,
+   "type": "B1",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:2F:B3:H1947",
+   "source_ref": "H1947",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 34.242,
+   "type": "B3",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:2F:B7:H1953",
+   "source_ref": "H1953",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "p.8 note 21: 2/3/4 Ø12 by beam width - the width-to-count mapping is not printed",
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 48.889,
+   "type": "B7",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:2F:B3:H1948",
+   "source_ref": "H1948",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 32.632,
+   "type": "B3",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:2F:B1:H1932",
+   "source_ref": "H1932",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 10.296,
+   "type": "B1",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "BEAM",
+   "occurrence": "BEAM:2F:B1:H1933",
+   "source_ref": "H1933",
+   "concrete_state": "MEASURED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "terminal_state": "REBAR_PARTIAL",
+   "reasons": [
+    "hooks / anchorage BLOCKED_DETAILING (straight part measured)"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": 12.742,
+   "type": "B1",
+   "v3b_residue_commercial": {}
+  },
+  {
+   "population": "STRAP_BEAM",
+   "occurrence": "STRAP:FOUNDATION SB2 H6935 bars",
+   "source_ref": "FOUNDATION SB2 H6935 bars",
+   "concrete_state": "COMPUTED_SHADOW_COMPLETE",
+   "release_state": "BLOCKED",
+   "terminal_state": "REBAR_BLOCKED_SOURCE_CONFLICT",
+   "reasons": [
+    "SOURCE_CONFLICT_DUPLICATE_SCHEDULE_KEY SB2",
+    "REBAR_BLOCKED_NO_CONSUMER: strap beam SB2: definition parsed, no rebar consumer"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "type": "SB2"
+  },
+  {
+   "population": "STRAP_BEAM",
+   "occurrence": "STRAP:FOUNDATION SB1 H6946 bars",
+   "source_ref": "FOUNDATION SB1 H6946 bars",
+   "concrete_state": "COMPUTED_SHADOW_COMPLETE",
+   "release_state": "BLOCKED",
+   "terminal_state": "REBAR_BLOCKED_NO_CONSUMER",
+   "reasons": [
+    "REBAR_BLOCKED_NO_CONSUMER: strap beam SB1: definition parsed, no rebar consumer"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "type": "SB1"
+  },
+  {
+   "population": "STRAP_BEAM",
+   "occurrence": "STRAP:FOUNDATION SB3 H6952 bars",
+   "source_ref": "FOUNDATION SB3 H6952 bars",
+   "concrete_state": "COMPUTED_SHADOW_COMPLETE",
+   "release_state": "BLOCKED",
+   "terminal_state": "REBAR_BLOCKED_NO_CONSUMER",
+   "reasons": [
+    "REBAR_BLOCKED_NO_CONSUMER: strap beam SB3: definition parsed, no rebar consumer"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "type": "SB3"
+  },
+  {
+   "population": "LINTEL",
+   "occurrence": "LINTEL:GF-D-I1023 lintel bars",
+   "source_ref": "GF-D-I1023 lintel bars",
+   "concrete_state": "BLOCKED",
+   "release_state": "BLOCKED",
+   "terminal_state": "REBAR_BLOCKED_LINTEL_NOT_ESTABLISHED",
+   "reasons": [
+    "REBAR_BLOCKED_LINTEL_NOT_ESTABLISHED: LINTEL_BLOCKED_NO_OPENING_WIDTH: opening closure not established"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null
+  },
+  {
+   "population": "POPULATION:SLAB",
+   "occurrence": "POPULATION:SLAB",
+   "source_ref": "V3b REBAR_POPULATION_REGISTER",
+   "concrete_state": null,
+   "release_state": "PROVISIONAL",
+   "terminal_state": "POPULATION_ROW",
+   "reasons": [
+    "V3b classes ['DERIVED', 'PROVISIONAL_GEOMETRIC_INFERENCE', 'PROVISIONAL_SOURCE_DERIVED']"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "v3b_classes": [
+    "DERIVED",
+    "PROVISIONAL_GEOMETRIC_INFERENCE",
+    "PROVISIONAL_SOURCE_DERIVED"
+   ]
+  },
+  {
+   "population": "POPULATION:GROUND",
+   "occurrence": "POPULATION:GROUND",
+   "source_ref": "V3b REBAR_POPULATION_REGISTER",
+   "concrete_state": null,
+   "release_state": "PROVISIONAL",
+   "terminal_state": "POPULATION_ROW",
+   "reasons": [
+    "V3b classes ['DERIVED', 'PROVISIONAL_CODE_METHOD']"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "v3b_classes": [
+    "DERIVED",
+    "PROVISIONAL_CODE_METHOD"
+   ]
+  },
+  {
+   "population": "POPULATION:GROUND_SLAB",
+   "occurrence": "POPULATION:GROUND_SLAB",
+   "source_ref": "V3b REBAR_POPULATION_REGISTER",
+   "concrete_state": null,
+   "release_state": "VERIFIED_COMPLETE",
+   "terminal_state": "POPULATION_ROW",
+   "reasons": [
+    "V3b classes ['DERIVED']"
+   ],
+   "verified_kg": 286.087,
+   "lower_bound_kg": null,
+   "v3b_classes": [
+    "DERIVED"
+   ]
+  },
+  {
+   "population": "POPULATION:DOME",
+   "occurrence": "POPULATION:DOME",
+   "source_ref": "V3b REBAR_POPULATION_REGISTER",
+   "concrete_state": null,
+   "release_state": "PROVISIONAL",
+   "terminal_state": "POPULATION_ROW",
+   "reasons": [
+    "V3b classes ['DERIVED', 'PROVISIONAL_CODE_METHOD']"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "v3b_classes": [
+    "DERIVED",
+    "PROVISIONAL_CODE_METHOD"
+   ]
+  },
+  {
+   "population": "POPULATION:POOL",
+   "occurrence": "POPULATION:POOL",
+   "source_ref": "V3b REBAR_POPULATION_REGISTER",
+   "concrete_state": null,
+   "release_state": "VERIFIED_COMPLETE",
+   "terminal_state": "POPULATION_ROW",
+   "reasons": [
+    "V3b classes ['DERIVED']"
+   ],
+   "verified_kg": 585.738,
+   "lower_bound_kg": null,
+   "v3b_classes": [
+    "DERIVED"
+   ]
+  },
+  {
+   "population": "POPULATION:BOUNDARY_WALL",
+   "occurrence": "POPULATION:BOUNDARY_WALL",
+   "source_ref": "V3b REBAR_POPULATION_REGISTER",
+   "concrete_state": null,
+   "release_state": "PROVISIONAL",
+   "terminal_state": "POPULATION_ROW",
+   "reasons": [
+    "V3b classes ['PROVISIONAL_SOURCE_DERIVED']"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "v3b_classes": [
+    "PROVISIONAL_SOURCE_DERIVED"
+   ]
+  },
+  {
+   "population": "POPULATION:GROUND_BEAM_EXT",
+   "occurrence": "POPULATION:GROUND_BEAM_EXT",
+   "source_ref": "V3b REBAR_POPULATION_REGISTER",
+   "concrete_state": null,
+   "release_state": "PROVISIONAL",
+   "terminal_state": "POPULATION_ROW",
+   "reasons": [
+    "V3b classes ['PROVISIONAL_SOURCE_DERIVED']"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "v3b_classes": [
+    "PROVISIONAL_SOURCE_DERIVED"
+   ]
+  },
+  {
+   "population": "POPULATION:COLUMN_STARTERS",
+   "occurrence": "POPULATION:COLUMN_STARTERS",
+   "source_ref": "V3b REBAR_POPULATION_REGISTER",
+   "concrete_state": null,
+   "release_state": "PROVISIONAL",
+   "terminal_state": "POPULATION_ROW",
+   "reasons": [
+    "V3b classes ['PROVISIONAL_URBAN_FALLBACK']"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "v3b_classes": [
+    "PROVISIONAL_URBAN_FALLBACK"
+   ]
+  },
+  {
+   "population": "POPULATION:STAIRS",
+   "occurrence": "POPULATION:STAIRS",
+   "source_ref": "V3b REBAR_POPULATION_REGISTER",
+   "concrete_state": null,
+   "release_state": "BLOCKED",
+   "terminal_state": "STAIR_REBAR_BLOCKED_APPLICABILITY_UNPROVED",
+   "reasons": [
+    "V3b classes ['BLOCKED']",
+    "p.16 typical stair layout not proven applicable"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "v3b_classes": [
+    "BLOCKED"
+   ]
+  },
+  {
+   "population": "POPULATION:BEAM_RESIDUE",
+   "occurrence": "POPULATION:BEAM_RESIDUE",
+   "source_ref": "V3b REBAR_POPULATION_REGISTER",
+   "concrete_state": null,
+   "release_state": "PROVISIONAL",
+   "terminal_state": "POPULATION_ROW",
+   "reasons": [
+    "V3b classes ['BUDGET_ESTIMATE']"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "v3b_classes": [
+    "BUDGET_ESTIMATE"
+   ]
+  },
+  {
+   "population": "POPULATION:BEAM_SIDE_BARS",
+   "occurrence": "POPULATION:BEAM_SIDE_BARS",
+   "source_ref": "V3b REBAR_POPULATION_REGISTER",
+   "concrete_state": null,
+   "release_state": "PROVISIONAL",
+   "terminal_state": "POPULATION_ROW",
+   "reasons": [
+    "V3b classes ['PROVISIONAL_SOURCE_RANGE']"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "v3b_classes": [
+    "PROVISIONAL_SOURCE_RANGE"
+   ]
+  },
+  {
+   "population": "POPULATION:FOOTING_F_F10",
+   "occurrence": "POPULATION:FOOTING_F_F10",
+   "source_ref": "V3b REBAR_POPULATION_REGISTER",
+   "concrete_state": null,
+   "release_state": "PROVISIONAL",
+   "terminal_state": "POPULATION_ROW",
+   "reasons": [
+    "V3b classes ['PROVISIONAL_SOURCE_RANGE']"
+   ],
+   "verified_kg": null,
+   "lower_bound_kg": null,
+   "v3b_classes": [
+    "PROVISIONAL_SOURCE_RANGE"
+   ]
+  }
+ ],
+ "occurrence_counts": {
+  "complete": 4,
+  "partial": 132,
+  "blocked": 58,
+  "not_required": 31
+ },
+ "by_population": {
+  "BEAM": {
+   "VERIFIED_PARTIAL_LOWER_BOUND": 68,
+   "BLOCKED": 10
+  },
+  "COLUMN": {
+   "VERIFIED_PARTIAL_LOWER_BOUND": 48,
+   "BLOCKED": 26,
+   "NOT_IN_SCOPE": 31
+  },
+  "CONTINUOUS_BEAM": {
+   "BLOCKED": 11
+  },
+  "FOOTING": {
+   "BLOCKED": 7,
+   "VERIFIED_COMPLETE": 4,
+   "VERIFIED_PARTIAL_LOWER_BOUND": 16
+  },
+  "LINTEL": {
+   "BLOCKED": 1
+  },
+  "POPULATION:BEAM_RESIDUE": {
+   "PROVISIONAL": 1
+  },
+  "POPULATION:BEAM_SIDE_BARS": {
+   "PROVISIONAL": 1
+  },
+  "POPULATION:BOUNDARY_WALL": {
+   "PROVISIONAL": 1
+  },
+  "POPULATION:COLUMN_STARTERS": {
+   "PROVISIONAL": 1
+  },
+  "POPULATION:DOME": {
+   "PROVISIONAL": 1
+  },
+  "POPULATION:FOOTING_F_F10": {
+   "PROVISIONAL": 1
+  },
+  "POPULATION:GROUND": {
+   "PROVISIONAL": 1
+  },
+  "POPULATION:GROUND_BEAM_EXT": {
+   "PROVISIONAL": 1
+  },
+  "POPULATION:GROUND_SLAB": {
+   "VERIFIED_COMPLETE": 1
+  },
+  "POPULATION:POOL": {
+   "VERIFIED_COMPLETE": 1
+  },
+  "POPULATION:SLAB": {
+   "PROVISIONAL": 1
+  },
+  "POPULATION:STAIRS": {
+   "BLOCKED": 1
+  },
+  "STRAP_BEAM": {
+   "BLOCKED": 3
+  }
+ },
+ "d5_excluded_from_verified": {
+  "occurrences": 26,
+  "audit_kg": 1739.651
+ },
+ "rule": "every concrete / rebar population has a terminal state; BLOCKED is allowed, disappearance is not; rebar of an occurrence whose concrete is not established never enters a verified total"
+}

@@ -62,6 +62,7 @@ from engine import visual_challenger_v2 as vc
 from engine import visual_finding as vf
 from tools import run_e1_2 as r12
 from tools import run_e1_3 as r13
+from engine.legacy_cad_guard import require_legacy_opt_in  # noqa: E402
 
 E1_4_MODEL = e14.MODEL
 RUN_ID = e14.E1_4Run().run_id
@@ -2291,6 +2292,7 @@ def _freeze(a, st, artifacts, released, withheld) -> dict:
 
 
 def main(argv=None) -> int:
+    argv = require_legacy_opt_in("tools/run_e1_4.py", argv)
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--phase", required=True,
                     choices=("geometry", "v2-inputs", "finalize"))

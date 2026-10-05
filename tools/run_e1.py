@@ -31,6 +31,7 @@ from engine import drawing_region as dreg
 from engine import e1_inputs as ei
 from engine import e1_region as er
 from engine import export_provenance as prov
+from engine.legacy_cad_guard import require_legacy_opt_in  # noqa: E402
 
 E1_MODEL = "E1_CAD_PHYSICAL_GEOMETRY_ALIGNMENT_V1"
 
@@ -596,6 +597,7 @@ def code_hashes() -> dict:
 
 
 def main(argv=None) -> int:
+    argv = require_legacy_opt_in("tools/run_e1.py", argv)
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--decode",
                     default="data/runs/cad_convert/P7757_ARCHITECTURAL.json")

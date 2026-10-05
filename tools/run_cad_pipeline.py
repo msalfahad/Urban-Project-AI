@@ -32,6 +32,7 @@ from engine import round5_selftest as round5
 from engine import space_enclosure as enc
 from engine import wall_role as wroles
 from engine.reference_mapping import refuse_if_sealed
+from engine.legacy_cad_guard import require_legacy_opt_in  # noqa: E402
 
 
 # The Project-2 freezes the client asked to be preserved. Each is a
@@ -540,6 +541,7 @@ def _baseline(nd, prof, rep, src_hash: str) -> str:
 
 
 def main(argv=None) -> int:
+    argv = require_legacy_opt_in("tools/run_cad_pipeline.py", argv)
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("dwg")
     ap.add_argument("--json", default="")

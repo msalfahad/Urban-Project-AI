@@ -44,6 +44,7 @@ from engine import stair_completeness as stc
 from engine import visible_boundary as vb
 from engine import visual_challenger_v2 as vc
 from tools import run_e1_2 as r12
+from engine.legacy_cad_guard import require_legacy_opt_in  # noqa: E402
 
 E1_3_MODEL = "E1_3_PHYSICAL_BOUNDARY_BASIS_GAP_ONTOLOGY_AND_OPEN_CHAINS_V1"
 RUN_ID = "E1_3-P7757-GF-001"
@@ -2571,6 +2572,7 @@ def _freeze(a, st, artifacts, released, withheld) -> dict:
 
 
 def main(argv=None) -> int:
+    argv = require_legacy_opt_in("tools/run_e1_3.py", argv)
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--phase", required=True,
                     choices=("geometry", "v2-inputs", "finalize"))

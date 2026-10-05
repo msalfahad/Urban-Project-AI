@@ -49,6 +49,7 @@ from engine import round5_selftest as round5
 from engine import space_topologies as topo
 from engine.reference_mapping import refuse_if_sealed
 from tools import run_cad_pipeline as pipeline
+from engine.legacy_cad_guard import require_legacy_opt_in  # noqa: E402
 
 EXPORT = "P7757_ROUND5_BENCHMARK_EXPORT_V1"
 
@@ -818,6 +819,7 @@ def _freezes() -> tuple:
 
 
 def main(argv=None) -> int:
+    argv = require_legacy_opt_in("tools/export_round5_benchmark.py", argv)
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("dwg")
     ap.add_argument("--decode-json", required=True)

@@ -24,6 +24,7 @@ BUILDUP = UM3.resolve("URBAN-RESIDENTIAL-FLOOR-BUILDUP-FALLBACK@v1")
 WET = ("BATH", "W.C", "WC", "WASH", "TOILET", "SHOWER")
 SERVICE = ("KITCHEN", "LAUNDRY", "PANTRY")
 VOID_WORDS = ("VOID",)
+MIXED_SEMANTIC_ZONE = "MIXED_SEMANTIC_ZONE"     # several named zones of different classes in one physical space
 VOID_AR = ("منور", "فراغ")
 ROOM_LIKE = {"min_area_m2": 1.0, "min_effective_width_m": 0.6}
 COMPUTED, REVIEW, PARTIAL, BLOCKED = "COMPUTED", "COMPUTED_REVIEW", "PARTIAL", "BLOCKED"
@@ -42,7 +43,7 @@ def layers(ctx, work) -> dict:
     out["openings"] = ST.openings(ctx, out["rooms"])
     out["blockwork"] = ST.blockwork(ctx, out["rooms"])
     out["substructure"] = ST.substructure(ctx, gi)
-    out["rebar"] = {"footings": ST.footing_rebar(ctx), "columns": ST.column_rebar(ctx), "beams": ST.beam_rebar(ctx),
+    out["rebar"] = {"footings": ST.footing_rebar(ctx), "columns": ST.column_rebar(ctx), "beams": ST.beam_rebar(ctx) + ST.strap_rebar(ctx),
                     "ground": gi["rebar"], "lintels": ST.lintel_rebar(out["openings"]["lintels"]),
                     "slabs": {"status": "BLOCKED", "why": "slab panel annotations (e.g. 5Ø10/m, 8Ø16/m) are printed per "
                               "panel but their distribution extents are not bound to the bars (generic slab-bar binding "
@@ -128,7 +129,9 @@ def _room_class(en, ar):
     words = set(re.findall(r"[A-Z]+", en.upper().replace("W.C", "WC"))) | _ar_words(ar)
     if len([n for n in en.split(" / ") if n.strip()]) >= 2:          # open-plan zone: classify each name
         cls = {_room_class(n, "") for n in en.split(" / ") if n.strip()}
-        return "DRY" if "DRY" in cls else sorted(cls)[0]
+        # control-plane R2: no "DRY wins". One class for every name -> that class; different classes -> the space
+        # holds several semantic zones whose trade boundaries the source does not establish
+        return cls.pop() if len(cls) == 1 else MIXED_SEMANTIC_ZONE
     if words & {"BATH", "WC", "WASH", "TOILET", "SHOWER"}:
         return "WET"
     if words & set(SERVICE):
@@ -210,10 +213,21 @@ def rooms(ctx, vd) -> dict:
                 "issues": s["issues"], "voids": [v["id"] for v in vs],
                 "void_area_m2": _r(sum(v["area_in_site_m2"] for v in vs)),
                 "boundary_role_lengths_m": {k: _r(v * u / 1000.0) for k, v in sorted(s["boundary_role_lengths"].items())},
+                **_semantic(res, s["site_id"]),
                 "_polygon": P})
         out["floors"][fl] = dict(sorted(counts.items()))
     _shafts(ctx, out)
     return out
+
+
+def _semantic(res, site_id) -> dict:
+    """TS01 semantic-zone evidence of one physical site (room_topology_v3 SEMANTIC_ZONE_POLICY_V1), carried on the
+    room row so that trades read it instead of re-deriving semantics from the joined name string."""
+    sem = res.get("semantic") or {}
+    st = (sem.get("sites") or {}).get(site_id) or {}
+    zones = [{"label_values": z.get("label_values"), "state": z.get("state")} for z in sem.get("zones") or []
+             if z.get("physical_site_id") == site_id]
+    return {"semantic_state": st.get("state"), "semantic_zones": zones}
 
 
 def _shafts(ctx, out):
@@ -409,7 +423,8 @@ def finishes(ctx, rm, vd) -> dict:
         ceil_area = r["area_m2"] - below
         floor_mat = ("TILE (type BY_SPEC)", "URBAN_FALLBACK URBAN-WET-FLOOR-TILED@v1") if wet else \
             ("PORCELAIN", "URBAN_FALLBACK URBAN-DRY-FLOOR-PORCELAIN-DEFAULT@v1") if rc == "DRY" else \
-            (UM3.BY_SPEC, "no default for this room class")
+            (UM3.BY_SPEC, "no default: MIXED_SEMANTIC_ZONE (zones need different finishes; no source boundary)"
+             if rc == MIXED_SEMANTIC_ZONE else "no default for this room class")
         # ---------------- wall faces
         room_poly = Polygon(r["_polygon"]) if len(r["_polygon"]) >= 3 else None
         if dx is not None and room_poly is not None and room_poly.is_valid:
@@ -478,7 +493,9 @@ def finishes(ctx, rm, vd) -> dict:
         plaster_h = _modal(faces, r["id"], "plaster_h_m")
         row = {
             "room": r["id"], "floor": fl, "name_en": r["name_en"], "name_ar": r["name_ar"], "room_class": rc,
-            "class": r["class"], "status": r["status"],
+            "class": r["class"], "status": r["status"], "semantic_state": r.get("semantic_state"),
+            "zone_classes": sorted({_room_class(n, "") for n in r["name_en"].split(" / ") if n.strip()})
+            if rc == MIXED_SEMANTIC_ZONE else [rc],
             "floor_area_m2": _r(floor_area), "floor_formula": f"site {r['area_m2']:.3f} - void {void_own:.3f}",
             "floor_material": floor_mat[0], "floor_material_authority": floor_mat[1],
             "floor_under_joinery": "included (OD-V3-2: floor finish continues beneath fixed joinery)",

@@ -49,6 +49,19 @@ def line(trade, level, group, code, en, ar, unit, qty, status, formula="", autho
             "details": details or []}
 
 
+# control-plane R2: a line derived from a room is never more certain than the room (status propagation)
+ROOM_STATUS_CAP = {"COMPUTED": None, "COMPUTED_REVIEW": "REVIEW", "REVIEW": "REVIEW", "BLOCKED": "BLOCKED"}
+_LINE_ORDER = {"COMPUTED": 0, "PARTIAL": 1, "REVIEW": 2, "BLOCKED": 3, "NOT_IN_SOURCE": 3}
+
+
+def propagate(status, room_status):
+    """The less certain of a line's own status and its room's status; an unknown room status blocks."""
+    ceiling = ROOM_STATUS_CAP.get(room_status, "BLOCKED")
+    if ceiling is None:
+        return status
+    return status if _LINE_ORDER.get(status, 3) >= _LINE_ORDER[ceiling] else ceiling
+
+
 def _det(ref, formula, qty, status, **kw):
     d = {"ref": ref, "formula": formula, "qty": _r(qty), "status": status}
     d.update(kw)
@@ -116,7 +129,8 @@ def concrete(ctx, L) -> list:
                         f"أعتاب الفتحات {fl}", "m3", sum(x["volume_m3"] for x in ok),
                         "COMPUTED" if len(ok) == len(li) else "PARTIAL", "(opening + 2 x 0.40) x wall t x schedule depth",
                         "SOURCE (p.13 lintel schedule + plan opening widths)", "OPENING_LINTEL_REGISTER",
-                        [_det(x["opening"], x["formula"], x.get("volume_m3"), x["status"]) for x in li]))
+                        [_det(x["opening"], x.get("formula") or x.get("why", ""), x.get("volume_m3"), x["status"])
+                         for x in li]))
     out.append(line(T, "GF", "SUPERSTRUCTURE", "C-STAIR", "Stairs (waist slab, steps, landings)", "الدرج", "m3", None,
                     "BLOCKED", items["STAIRS"]["why"]))
     d = L["substructure"]["dome"]
@@ -194,13 +208,14 @@ def blockwork(L) -> list:
         a["blk"] += r["blocked_length_m"] or 0.0
         a["rows"].append(r)
     for (lv, t, pos), a in sorted(agg.items()):
-        st = "COMPUTED" if a["blk"] < 1e-6 else "PARTIAL"
+        st = "COMPUTED" if a["blk"] < 1e-6 else ("PARTIAL" if a["area"] > 1e-9 else "BLOCKED")
         ar = {"EXTERNAL": "خارجي", "INTERNAL": "داخلي", "UNRESOLVED_SIDES": "غير محدد"}[pos]
         out.append(line(T, lv, f"{t} mm", f"B-{t}-{pos[:3]}-{lv}", f"Blockwork {t} mm - {pos.lower().replace('_', ' ')}",
                         f"طابوق {t} مم {ar}", "m2", a["area"], st,
                         f"length {a['len']:.2f} m x height per piece (interval - member depth); blocked {a['blk']:.2f} m",
                         "SOURCE (plan bands + structural interval + beam / slab termination)", "BLOCKWORK_REGISTER",
-                        [_det(r["band"], r["formula"], r["area_m2"], r["status"], length_m=r["length_m"]) for r in a["rows"]]))
+                        [_det(r["band"], r.get("formula") or r.get("why", ""), r["area_m2"], r["status"], length_m=r["length_m"])
+                         for r in a["rows"]]))
     for p in L["blockwork"]["parapets"]:
         out.append(line(T, "2F_ROOF", "PARAPET", f"B-PAR-{p['region'][:2]}", f"Parapet - {p['region']} (h 0.50 m)",
                         "دروة السطح", "m2", p["area_m2"], p["status"], p.get("formula") or "", "SOURCE (sections + slab plates)"))
@@ -216,7 +231,7 @@ def plaster_paint(L) -> list:
     T = "PLASTER_PAINT"
     for r in L["finishes"]["rows"]:
         lv = FL2LV[r["floor"]]
-        st = "COMPUTED" if r["faces_blocked_length_m"] < 1e-6 else "PARTIAL"
+        st = propagate("COMPUTED" if r["faces_blocked_length_m"] < 1e-6 else "PARTIAL", r["status"])
         out.append(line(T, lv, "INTERNAL PLASTER", f"P-PL-{r['room']}", f"Internal plaster - {r['name_en'] or 'UNKNOWN'}",
                         f"لياسة داخلية - {r['name_ar']}", "m2", r["plaster_gross_m2"], st,
                         "wall length x (interval - member depth) per piece, gross of openings",
@@ -224,7 +239,7 @@ def plaster_paint(L) -> list:
         if r["paint_gross_m2"] is not None:
             out.append(line(T, lv, "PAINT", f"P-PA-{r['room']}", f"Internal paint - {r['name_en'] or 'UNKNOWN'}",
                             f"دهان داخلي - {r['name_ar']}", "m2", r["paint_gross_m2"],
-                            "COMPUTED" if r["paint_blocked_length_m"] < 1e-6 else "PARTIAL",
+                            propagate("COMPUTED" if r["paint_blocked_length_m"] < 1e-6 else "PARTIAL", r["status"]),
                             "wall length x (interval - 0.10 build-up - controlling soffit - 0.15)",
                             "URBAN_FALLBACK build-up 0.10 m (OD-V3-1)", r["room"]))
         elif r["room_class"] not in ("WET", "SERVICE"):
@@ -252,16 +267,18 @@ def flooring(L) -> list:
         lv = FL2LV[r["floor"]]
         out.append(line(T, lv, "FLOOR FINISH", f"F-FL-{r['room']}", f"Floor finish - {r['name_en'] or 'UNKNOWN'} ({r['floor_material']})",
                         f"أرضيات - {r['name_ar']}", "m2", r["floor_area_m2"],
-                        "COMPUTED" if r["status"] == "COMPUTED" else "COMPUTED", r["floor_formula"],
+                        propagate("COMPUTED", r["status"]), r["floor_formula"],
                         r["floor_material_authority"], r["room"]))
         if r["skirting_m"] is not None:
             out.append(line(T, lv, "SKIRTING", f"F-SK-{r['room']}", f"Skirting - {r['name_en'] or 'UNKNOWN'}", "نعلات",
-                            "lm", r["skirting_m"], "COMPUTED", "wall edges of the room boundary; openings excluded",
+                            "lm", r["skirting_m"], propagate("COMPUTED", r["status"]),
+                            "wall edges of the room boundary; openings excluded",
                             "SOURCE geometry", r["room"]))
     for r in L["rooms"]["rows"]:
         if r["class"] == "OPENING_STRIP":
             out.append(line(T, FL2LV[r["floor"]], "THRESHOLDS", f"F-TH-{r['id']}", "Door threshold strip", "عتبة باب", "m2",
-                            r["area_m2"], "COMPUTED", "site between the two door closures", "SOURCE geometry", r["id"]))
+                            r["area_m2"], propagate("COMPUTED", r["status"]), "site between the two door closures",
+                            "SOURCE geometry", r["id"]))
     out.append(line(T, "GF", "STAIRS", "F-STAIR", "Stair treads / risers finish", "تكسية الدرج", "m2", None, "BLOCKED",
                     "riser count / height not proved"))
     out.append(line(T, "OTHER_EXTERNAL", "EXTERNAL", "F-COURT", "Courtyard paving", "تبليط الحوش", "m2", None, "BLOCKED",
@@ -275,7 +292,8 @@ def ceilings(L) -> list:
     for r in L["finishes"]["rows"]:
         lv = FL2LV[r["floor"]]
         out.append(line(T, lv, "CEILING", f"CE-{r['room']}", f"Ceiling - {r['name_en'] or 'UNKNOWN'} (material BY_SPEC)",
-                        f"سقف - {r['name_ar']}", "m2", r["ceiling_area_m2"], "COMPUTED", r["ceiling_formula"],
+                        f"سقف - {r['name_ar']}", "m2", r["ceiling_area_m2"], propagate("COMPUTED", r["status"]),
+                        r["ceiling_formula"],
                         "URBAN-CEILING-QUANTITY-WITHOUT-MATERIAL@v1", r["room"]))
         out.append(line(T, lv, "CORNICE", f"CE-CO-{r['room']}", f"Cornice (perimeter) - {r['name_en'] or 'UNKNOWN'}",
                         "كرانيش", "lm", r["cornice_m"], "REVIEW", "room perimeter; cornice existence by specification",
@@ -290,19 +308,32 @@ def tile_wp(ctx, L) -> list:
     out = []
     T = "WALL_TILE_WATERPROOFING"
     for r in L["finishes"]["rows"]:
+        if r["room_class"] == "MIXED_SEMANTIC_ZONE" and set(r.get("zone_classes") or []) & {"WET", "SERVICE"}:
+            # control-plane R2: a wet zone inside a mixed space is never dropped - its wet trades are BLOCKED
+            why = ("BLOCKED_SEMANTIC_TRADE_BOUNDARY: wet zone(s) " + "/".join(
+                n for n in r["name_en"].split(" / ") if n.strip()) + " share one physical space with dry zones; "
+                "the source draws no boundary for the wet region")
+            lv = FL2LV[r["floor"]]
+            out.append(line(T, lv, "WALL TILE", f"T-WT-{r['room']}", f"Wall tile - wet zone in {r['name_en']}",
+                            f"سيراميك جدران - {r['name_ar']}", "m2", None, "BLOCKED", why, "", r["room"]))
+            out.append(line(T, lv, "WET ROOM WATERPROOFING", f"T-WP-{r['room']}",
+                            f"Floor waterproofing - wet zone in {r['name_en']}", "عزل مائي للأرضية", "m2", None,
+                            "BLOCKED", why, "", r["room"]))
+            continue
         if r["room_class"] not in ("WET", "SERVICE"):
             continue
         lv = FL2LV[r["floor"]]
         out.append(line(T, lv, "WALL TILE", f"T-WT-{r['room']}", f"Wall tile full height - {r['name_en']}",
                         f"سيراميك جدران - {r['name_ar']}", "m2", r["wall_tile_gross_m2"],
-                        "COMPUTED" if r["wall_tile_gross_m2"] is not None and r["paint_blocked_length_m"] < 1e-6 else
-                        ("PARTIAL" if r["wall_tile_gross_m2"] else "BLOCKED"),
+                        propagate("COMPUTED" if r["wall_tile_gross_m2"] is not None and r["paint_blocked_length_m"] < 1e-6
+                                  else ("PARTIAL" if r["wall_tile_gross_m2"] else "BLOCKED"), r["status"]),
                         "wall length x (interval - 0.10 build-up - soffit - 0.15), gross of openings",
                         "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1 + URBAN_FALLBACK build-up", r["room"]))
         w = WP.wet(floor_m2=r["floor_area_m2"], perimeter_m=_perim(L, r["room"]),
                    door_widths_m=[r["opening_widths_m"]] if r["opening_widths_m"] else None, room=r["room"])
         out.append(line(T, lv, "WET ROOM WATERPROOFING", f"T-WP-{r['room']}", f"Floor waterproofing + upturn - {r['name_en']}",
-                        "عزل مائي للأرضية", "m2", w.get("physical_m2"), "COMPUTED" if w.get("physical_m2") else "BLOCKED",
+                        "عزل مائي للأرضية", "m2", w.get("physical_m2"),
+                        propagate("COMPUTED" if w.get("physical_m2") else "BLOCKED", r["status"]),
                         f"floor {w.get('floor_m2')} + upturn {w.get('upturn_length_m')} x {w.get('upturn_m')}",
                         "URBAN-WET-ROOM-WP method (waterproofing_policy)", r["room"]))
     for rf in ctx["b2a"]["architecture"]["waterproofing"]["roof"]:

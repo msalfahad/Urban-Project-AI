@@ -62,6 +62,8 @@ def mk(trade, level, group, code, en, ar, unit, tclass, tqty, formula, authority
     ln = REGS.line(trade, level, group, code, en, ar, unit, tqty if tclass in RM.TECH_IN_TOTAL else None, st,
                    formula, authority, trace, details)
     ln["release"] = rel
+    if tclass not in RM.TECH_IN_TOTAL and tqty is not None:
+        ln["measured_qty"] = _r(tqty)            # the measured number of a REVIEW / BLOCKED line: audit only
     ln["supersedes"] = list(supersedes)
     ln["sumrow"], ln["sumrow_ar"] = sumrow if sumrow else (None, None)
     if concrete:
@@ -249,12 +251,39 @@ def build(ctx, v3a_lines, V) -> list:
     out += opening_lines(ctx, v3a_lines, V, used)
     out += stair_lines(v3a_lines, V, used)
     out += external_lines(V)
+    cap_by_room_status(ctx, out)
     for i, ln in enumerate(out):
         ln["line_id"] = f"B{i + 1:04d}"
         if "sumrow" not in ln or ln.get("sumrow") is None and "v3a_line" in ln:
             pass
         ln["waste"] = waste_of(ln, RB)
     return out
+
+
+def _room_of(ln, rooms):
+    t = ln.get("trace") or ""
+    if t in rooms:
+        return t
+    return next((rid for rid in rooms if ln["code"].endswith("-" + rid)), None)
+
+
+def cap_by_room_status(ctx, lines) -> None:
+    """Control-plane R2 choke point: a V3b line re-derived from a room (net plaster, tile split, WP split ...) is never
+    more certain than the room. A technical class that would enter the total on a room whose status is not COMPUTED
+    becomes REVIEW; the measured number is kept in measured_qty (never in a total)."""
+    rooms = {r["id"]: r for r in ctx["v3"]["rooms"]["rows"]}
+    for ln in lines:
+        rid = _room_of(ln, rooms)
+        if rid is None or rooms[rid]["status"] == "COMPUTED":
+            continue
+        tc = ln["release"]["technical"]["class"]
+        if tc not in RM.TECH_IN_TOTAL:
+            continue
+        ln["measured_qty"] = ln["release"]["technical"]["qty"]
+        ln["release"] = RM.release("REVIEW", None, None)
+        ln["status"] = "REVIEW"
+        ln["qty"] = None
+        ln["formula"] = (ln.get("formula") or "") + f" | capped: room {rid} {rooms[rid]['status']}"
 
 
 # ================================================================== rebar
@@ -543,6 +572,9 @@ def tile_wp_lines(ctx, v3a, V, used) -> list:
             continue
         c = ln["code"]
         used.add(c)
+        if ln["status"] == "BLOCKED" and (c.startswith("T-WT-") or c.startswith("T-WP-")):
+            out.append(from_v3a(ln))                # a blocked wet trade is carried as blocked, never re-derived
+            continue
         if c.startswith("T-WT-"):
             rid = c[len("T-WT-"):]
             r = net.get(rid)

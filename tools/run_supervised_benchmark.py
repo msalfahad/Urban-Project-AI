@@ -35,6 +35,7 @@ from engine import round6a_selftest as round6a
 from engine import supervised_benchmark as supervised
 from engine.reference_mapping import refuse_if_sealed
 from tools import run_cad_pipeline as pipeline
+from engine.legacy_cad_guard import require_legacy_opt_in  # noqa: E402
 
 # What round 5 recorded, for a side-by-side. Read out of the frozen
 # artefact's own numbers and never recomputed.
@@ -272,6 +273,7 @@ def _outside(rep) -> dict:
 
 
 def main(argv=None) -> int:
+    argv = require_legacy_opt_in("tools/run_supervised_benchmark.py", argv)
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("dwg")
     ap.add_argument("--decode-json", required=True)

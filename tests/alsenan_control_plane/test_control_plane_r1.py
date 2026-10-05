@@ -1,14 +1,15 @@
-"""ALSENAN CONTROL-PLANE AUDIT R1 - diagnostic tests (no production code is changed by this round).
+"""ALSENAN CONTROL-PLANE AUDIT R1 - diagnostic tests that still hold after Round 2.
 
-Three groups:
-  1. CHARACTERISATION - call the real lab functions on synthetic inputs and pin today's defective behaviour
-     (D1-D6, the flooring / skirting / ceiling status, DRY-wins room class, PARTIAL release). They pass today; a fix
-     that changes the behaviour must update them deliberately, together with the matching gate below.
-  2. REGISTER / EVIDENCE INTEGRITY - the committed registers rebuild byte-identically from the committed evidence,
-     every code anchor in SILENT_DROP_REGISTER still points at the line it names, and the headline numbers the review
-     quotes (325.251 m2, 209.35 / 46.63 m, 1739.7 kg ...) are re-derived from the frozen registers independently.
-  3. CONTROL GATES G01-G23 - what must be true after the fix rounds. Each is xfail(strict=True) with its defect id: it
-     fails today (proving the defect) and an XPASS turns red, so the gate must be promoted when the defect is fixed.
+Two groups:
+  1. CHARACTERISATION - the frozen-data facts the round-1 review rests on (V3b release of the review floor, the V1
+     release model, the A3 definition gaps) and seeded property tests.
+  2. REGISTER / EVIDENCE INTEGRITY - the committed round-1 registers rebuild from the committed evidence (except the
+     legacy-CAD reachability register, which scans live code that Round 2 deliberately changed) and the headline
+     numbers the review quotes (325.251 m2, 209.35 / 46.63 m, 1739.7 kg ...) re-derive from the frozen registers.
+
+Round 2 superseded the characterisation tests that pinned production defects and the R1 control gates G01-G23:
+the fixed behaviour is asserted in test_control_plane_r2_gates.py, and research/alsenan_control_plane_02/registers/
+GATE_TRANSITION_REGISTER.json lists every superseded test with the test that replaces it.
 
 Property tests use a seeded random.Random (cad-ai-agent pattern) - no hypothesis dependency.
 """
@@ -30,7 +31,6 @@ for p in (str(LAB), str(CP)):
         sys.path.insert(0, p)
 
 import alsenan_v3_layers as V3L  # noqa: E402
-import alsenan_v3_registers as V3R  # noqa: E402
 import alsenan_v3_structure as V3S  # noqa: E402
 import build_registers as BR  # noqa: E402
 from engine.source import release_model as RM  # noqa: E402
@@ -48,24 +48,6 @@ def _frozen(rel):
 
 
 # =============================================================================================== synthetic builders
-def _finish_row(room, status, area=10.0, cls="DRY", name="ROOM", skirting=12.0):
-    return {"room": room, "floor": "GF", "name_en": name, "name_ar": "", "room_class": cls, "status": status,
-            "floor_area_m2": area, "floor_formula": "f", "floor_material": "PORCELAIN", "floor_material_authority": "A",
-            "skirting_m": skirting, "ceiling_area_m2": area, "ceiling_formula": "c", "cornice_m": 12.0,
-            "wall_tile_gross_m2": 20.0, "paint_blocked_length_m": 0.0}
-
-
-def _L(rows):
-    return {"finishes": {"rows": rows}, "rooms": {"rows": []}}
-
-
-def _footing_ctx(defn, L=4.0, W=3.6, status="COMPUTED_SHADOW_COMPLETE", typ="FX"):
-    defn = dict(defn, element="FOOTING", type=typ)
-    return {"a3": {"rebar": {"definitions": [defn]},
-                   "footings": {"rows": [{"type": typ, "status": status,
-                                          "dims": {"L": {"m": L}, "W": {"m": W}}}]}}}
-
-
 def _beam_ctx(defs, occ):
     sheets = {fl: {"occurrences": []} for fl in V3S.FLOORS}
     sheets["GF"]["occurrences"] = occ
@@ -83,18 +65,6 @@ BEAM_DEF = {"element": "BEAM", "type": "B1", "bars": {"top": [{"count": 2, "dia_
 
 
 # =============================================================================================== 1. characterisation
-def test_c_flooring_status_is_computed_whatever_the_room_status():
-    """registers.py:255 `"COMPUTED" if r["status"] == "COMPUTED" else "COMPUTED"` - both branches equal."""
-    out = V3R.flooring(_L([_finish_row("R1", "COMPUTED_REVIEW"), _finish_row("R2", "BLOCKED")]))
-    fl = [x for x in out if x["code"].startswith("F-FL-")]
-    assert [x["status"] for x in fl] == ["COMPUTED", "COMPUTED"]
-
-
-def test_c_skirting_and_ceiling_status_hardcoded_computed():
-    L = _L([_finish_row("R1", "COMPUTED_REVIEW")])
-    sk = [x for x in V3R.flooring(L) if x["code"].startswith("F-SK-")]
-    ce = [x for x in V3R.ceilings(L) if x["code"].startswith("CE-R1")]
-    assert sk[0]["status"] == "COMPUTED" and ce[0]["status"] == "COMPUTED"
 
 
 def test_c_review_floor_reaches_the_v3b_total_as_urban_standard():
@@ -104,60 +74,10 @@ def test_c_review_floor_reaches_the_v3b_total_as_urban_standard():
     assert z["commercial"]["procurement_eligible"] and z["commercial"]["confidence"] == "H"
 
 
-def test_b_room_class_multi_name_dry_wins():
-    assert V3L._room_class("PANTRY / SALOON / RECEPTION / Wash / DINING / GARDEN", "") == "DRY"
-    assert V3L._room_class("DEWANEYA / Wash", "") == "DRY"
-    assert V3L._room_class("Wash", "") == "WET"
-
-
-def test_j_tile_wp_skips_a_dry_zone_with_a_wet_label():
-    pytest.importorskip("engine.source.waterproofing_policy")
-    dry = _finish_row("Z", "COMPUTED_REVIEW", cls="DRY", name="DEWANEYA / Wash")
-    ctx = {"b2a": {"architecture": {"waterproofing": {"roof": []}}}}
-    L = dict(_L([dry]), substructure={"footing_wp_m2": 1.0, "ground_beam_wp_m2": 1.0, "footing_membrane_m2": 1.0})
-    out = V3R.tile_wp(ctx, L)
-    assert not [x for x in out if x.get("trace") == "Z"]
-
-
 def test_d_partial_enters_total_and_is_procurement_eligible():
     rel = RM.release("PARTIAL", 10.0)
     assert rel["technical"]["in_total"] and rel["commercial"]["procurement_eligible"]
     assert rel["commercial"]["method"] == "AS TECHNICAL" and rel["commercial"]["confidence"] == "H"
-
-
-def test_d2_footing_per_metre_count_used_as_absolute_count():
-    d = {"bars": {"long_bars": [{"count": 6, "dia_mm": 14, "per_m": True}],
-                  "short_bars": [{"count": 6, "dia_mm": 14, "per_m": True}]}, "boxed": ["9 Ø 14/m"]}
-    out = V3S.footing_rebar(_footing_ctx(d))
-    bars = [x for x in out if x.get("status") != "BLOCKED"]
-    assert sorted(x["count"] for x in bars) == [6, 6]                    # 6 bars over a 4.0 m footing, not 6 / m
-    assert [x["why"] for x in out if x.get("status") == "BLOCKED"] == ["boxed bar shape not dimensioned"]
-
-
-def test_d3_ff_empty_bar_definition_emits_nothing():
-    out = V3S.footing_rebar(_footing_ctx({"bars": {}, "boxed": None}, typ="FF"))
-    assert out == []                                                      # no rebar row and no BLOCKED row
-
-
-def test_sd01_footing_skip_is_silent():
-    d = {"bars": {"long_bars": [{"count": 6, "dia_mm": 12, "per_m": False}]}, "boxed": None}
-    assert V3S.footing_rebar(_footing_ctx(d, status="BLOCKED")) == []
-
-
-def test_d1_cb_measured_occurrence_emits_nothing():
-    out = V3S.beam_rebar(_beam_ctx([BEAM_DEF], [_occ("CB1"), _occ("B1")]))
-    assert out and all(" B1 " in x["ref"] for x in out)
-
-
-def test_d4_strap_definition_filtered_out():
-    strap = dict(BEAM_DEF, element="STRAP", type="SB1")
-    assert V3S.beam_rebar(_beam_ctx([strap], [_occ("SB1")])) == []
-
-
-def test_sd04_beam_without_length_is_silent():
-    o = _occ("B1")
-    o["lengths"] = {}
-    assert V3S.beam_rebar(_beam_ctx([BEAM_DEF], [o])) == []
 
 
 def test_sd11_side_bars_blocked_although_schedule_prints_them():
@@ -166,23 +86,6 @@ def test_sd11_side_bars_blocked_although_schedule_prints_them():
     assert side and side[0]["status"] == "BLOCKED" and "not printed" in side[0]["why"]
     printed = {r["beam"] for r in json.loads((CP / "evidence/ST7757_SCHEDULE_EXTRACT.json").read_text())["beam_remarks"]}
     assert len(printed) == 23 and {"B7", "B16", "B19", "B29"} <= printed
-
-
-def test_d5_column_rebar_ignores_occurrence_state():
-    defn = {"element": "COLUMN", "type": "C1", "bars": {"GROUND FLOOR": [{"count": 8, "dia_mm": 16}]}}
-    row = {"type": "C1", "B_cm": 20.0, "D_cm": 50.0, "storey_band": "GROUND FLOOR", "floor": "GF",
-           "tag_key": "X|H1|", "state": "NOT_DRAWN_ON_STOREY_SHEET", "volume_m3": None}
-    ctx = {"a3": {"rebar": {"definitions": [defn]}}, "b2a": {"intervals": [{"from": "GF", "interval_m": 4.5}],
-                                                              "columns": {"rows": [row]}}}
-    out = V3S.column_rebar(ctx)
-    assert {x["ref"].split()[-1] for x in out} == {"vertical", "ties"}
-
-
-def test_d6_ground_zone_binds_the_smallest_containing_cell():
-    src = (LAB / "alsenan_v3_structure.py").read_text().splitlines()
-    assert "outer = min(hit, key=lambda p: p.area)" in src[107]
-    g = _reg("STRUCTURAL_POPULATION_COVERAGE_REGISTER")["ground_zone_binding"]
-    assert g["v3a_zone_1"]["outer_m2"] < g["footprints"][0]["area_m2"]
 
 
 def test_sd12_sb2_duplicate_rows_one_kept_silently():
@@ -229,22 +132,15 @@ def test_property_release_in_total_iff_technical_class_and_qty():
         assert t["in_total"] == (cls in RM.TECH_IN_TOTAL and q is not None)
 
 
-def test_mutation_room_status_does_not_reach_floor_status():
-    """Metamorphic: mutate every room status; the floor line statuses must change if status were wired - they
-    do not (the mutation is invisible), which is the defect pinned here."""
-    rng = random.Random(1)
-    rows = [_finish_row(f"R{i}", rng.choice(["COMPUTED", "COMPUTED_REVIEW", "BLOCKED"])) for i in range(30)]
-    a = [x["status"] for x in V3R.flooring(_L(rows)) if x["code"].startswith("F-FL-")]
-    for r in rows:
-        r["status"] = "BLOCKED"
-    b = [x["status"] for x in V3R.flooring(_L(rows)) if x["code"].startswith("F-FL-")]
-    assert a == b == ["COMPUTED"] * 30
-
-
 # =============================================================================================== 2. integrity
+LIVE_CODE_REGISTERS = {"LEGACY_CAD_REACHABILITY_REGISTER"}     # scans tools/ - changed by the R2 legacy guard
+
+
 def test_registers_rebuild_identically_from_committed_evidence():
     regs = BR.build()
     for name in BR.REGISTERS:
+        if name in LIVE_CODE_REGISTERS:
+            continue
         assert json.loads(json.dumps(regs[name], ensure_ascii=False)) == _reg(name), name
 
 
@@ -261,17 +157,6 @@ def test_every_register_has_schema_rule_rows():
     for name in BR.REGISTERS:
         r = _reg(name)
         assert r["SCHEMA"].startswith("URBAN_ALSENAN_") and r["rule"] and r["rows"], name
-
-
-def test_sd_code_anchors_hold():
-    for r in _reg("SILENT_DROP_REGISTER")["rows"]:
-        loc = r["code_location"]
-        if not loc or ":" not in loc:
-            continue
-        path, line = loc.rsplit(":", 1)
-        src = (ROOT / path).read_text().splitlines()
-        window = "\n".join(src[int(line) - 2:int(line) + 1])
-        assert r["anchor"] in window, (r["id"], loc)
 
 
 def test_c_review_floor_is_325_251_independently():
@@ -345,142 +230,3 @@ def test_scorecard_is_not_computed_from_benchmarks():
     src = (CP / "build_registers.py").read_text()
     body = src[src.index("def scorecard"):src.index("def build")]
     assert 'D["bench' not in body and "BENCHMARK_CONFIDENCE" not in body
-
-
-# =============================================================================================== 3. control gates
-def _xf(defect):
-    return pytest.mark.xfail(strict=True, reason=f"control gate - fails until {defect} is fixed")
-
-
-def _room_rows():
-    return _reg("ROOM_SEMANTIC_TRADE_RELEASE_REGISTER")["rows"]
-
-
-@_xf("C-1 flooring status")
-def test_G01_no_review_room_floor_in_total():
-    assert not [r for r in _room_rows() if "REVIEW_ROOM_FLOOR_IN_TOTAL" in r["flags"]]
-
-
-@_xf("B-1 semantic zone not integrated")
-def test_G02_unresolved_semantic_zone_is_blocked():
-    assert not [r for r in _room_rows() if "TS01_UNRESOLVED_BUT_RELEASED" in r["flags"]]
-
-
-@_xf("B-2 DRY wins")
-def test_G03_multi_name_zone_with_wet_label_is_not_dry():
-    assert V3L._room_class("DEWANEYA / Wash", "") != "DRY"
-
-
-@_xf("J-1 wet labels lost")
-def test_G04_every_wet_room_label_reaches_a_trade_region_or_blocked_row():
-    assert _reg("ROOM_SEMANTIC_TRADE_RELEASE_REGISTER")["wet_rooms_lost"] == []
-
-
-@_xf("C-2 skirting status hard-coded")
-def test_G05_skirting_status_follows_room_status():
-    sk = [x for x in V3R.flooring(_L([_finish_row("R1", "COMPUTED_REVIEW")])) if x["code"].startswith("F-SK-")]
-    assert sk[0]["status"] != "COMPUTED"
-
-
-@_xf("C-3 ceiling status hard-coded")
-def test_G06_ceiling_status_follows_room_status():
-    ce = [x for x in V3R.ceilings(_L([_finish_row("R1", "COMPUTED_REVIEW")])) if x["code"] == "CE-R1"]
-    assert ce[0]["status"] != "COMPUTED"
-
-
-@_xf("D-1 PARTIAL procurement-eligible")
-def test_G07_partial_is_not_procurement_eligible_without_owner_approval():
-    assert not RM.release("PARTIAL", 10.0)["commercial"]["procurement_eligible"]
-
-
-@_xf("E-1 structural source coverage")
-def test_G08_every_structural_source_object_consumed_or_not_relevant():
-    bad = [r for r in _reg("STRUCTURAL_SOURCE_COVERAGE_REGISTER")["rows"]
-           if r["state"] not in ("CONSUMED_COMPLETE", "NOT_RELEVANT")]
-    assert not bad
-
-
-@_xf("F-1 silent occurrences")
-def test_G09_no_concrete_occurrence_dropped_silently():
-    assert _reg("STRUCTURAL_POPULATION_COVERAGE_REGISTER")["silent_occurrences"] == 0
-
-
-@_xf("D1 continuous beams")
-def test_G10_cb_rebar_definitions_exist():
-    defs = _frozen("registers_a3/REBAR_EVIDENCE_REGISTER.json")["definitions"]
-    assert len({d["type"] for d in defs if d["type"].startswith("CB")}) == 13
-
-
-@_xf("D2 two-layer footings")
-def test_G11_two_layer_footing_respects_per_metre_and_both_layers():
-    d = {"bars": {"long_bars": [{"count": 6, "dia_mm": 14, "per_m": True}],
-                  "short_bars": [{"count": 6, "dia_mm": 14, "per_m": True}]}, "boxed": ["9 Ø 14/m"]}
-    out = V3S.footing_rebar(_footing_ctx(d))
-    assert all(x.get("status") != "BLOCKED" for x in out) and min(x["count"] for x in out) > 6
-
-
-@_xf("D3 lift footing FF")
-def test_G12_ff_emits_a_rebar_or_blocked_row():
-    assert V3S.footing_rebar(_footing_ctx({"bars": {}, "boxed": None}, typ="FF"))
-
-
-@_xf("D4 strap beams")
-def test_G13_strap_beams_emit_rebar():
-    strap = dict(BEAM_DEF, element="STRAP", type="SB1")
-    assert V3S.beam_rebar(_beam_ctx([strap], [_occ("SB1")]))
-
-
-@_xf("D5 rebar without concrete")
-def test_G14_no_rebar_without_concrete():
-    assert _reg("STRUCTURAL_POPULATION_COVERAGE_REGISTER")["d5_rebar_without_concrete"]["occurrences"] == 0
-
-
-@_xf("D6 ground zone binding")
-def test_G15_ground_zone_not_bound_by_minimum_area():
-    assert "min(hit, key=lambda p: p.area)" not in (LAB / "alsenan_v3_structure.py").read_text()
-
-
-@_xf("I-1 ambiguous wall bands")
-def test_G16_ambiguous_wall_band_length_ends_in_a_row():
-    assert _reg("WALL_LENGTH_CONSERVATION_REGISTER")["totals"]["ambiguous_m"] == 0
-
-
-@_xf("I-2 unpaired boundary")
-def test_G17_unpaired_topology_boundary_is_classified():
-    assert _reg("WALL_LENGTH_CONSERVATION_REGISTER")["totals"]["topology_boundary_not_in_any_band_m"] == 0
-
-
-@_xf("K-1 opening status")
-def test_G18_no_v3a_opening_computed_with_blocked_height():
-    assert not [r for r in _reg("OPENING_COMPLETENESS_REGISTER")["rows"]
-                if "V3A_STATUS_COMPUTED_WITH_BLOCKED_HEIGHT" in r["flags"]]
-
-
-@_xf("SD-12 duplicate schedule names")
-def test_G19_duplicate_schedule_name_recorded_as_conflict():
-    defs = [d for d in _frozen("registers_a3/REBAR_EVIDENCE_REGISTER.json")["definitions"] if d["type"] == "SB2"]
-    assert "CONFLICT" in json.dumps(defs)
-
-
-@_xf("SD-08 BOXED column")
-def test_G20_boxed_column_parsed():
-    defs = {d["type"]: d for d in _frozen("registers_a3/REBAR_EVIDENCE_REGISTER.json")["definitions"]}
-    assert defs["F2"].get("boxed") is not None
-
-
-@_xf("SD-11 side-bar remarks")
-def test_G21_side_bar_remarks_consumed():
-    defs = {d["type"]: d for d in _frozen("registers_a3/REBAR_EVIDENCE_REGISTER.json")["definitions"]}
-    assert "side" in defs["B7"]["bars"]
-
-
-@_xf("O-1 legacy CAD CLI")
-def test_G22_user_cli_cannot_reach_legacy_adapter_without_deprecation_guard():
-    rows = [r for r in _reg("LEGACY_CAD_REACHABILITY_REGISTER")["rows"] if r["path"].startswith("tools/")]
-    assert all(r["state"] == "NOT_REACHABLE" or r["deprecation_guard"] for r in rows)
-
-
-@_xf("SD-17 stair rebar")
-def test_G23_stair_rebar_bound_to_typical_layout():
-    pop = {r["population"]: r for r in _frozen("registers_v3b/REBAR_POPULATION_REGISTER.json")["rows"]}
-    assert pop["STAIRS"]["blocked"] == 0

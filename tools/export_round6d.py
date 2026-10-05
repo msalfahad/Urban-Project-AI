@@ -43,6 +43,7 @@ from tools import export_round6b as x6b
 from tools import export_round6c as x6c
 from tools import run_round6c as r6c
 from tools import run_round6d as r6dr
+from engine.legacy_cad_guard import require_legacy_opt_in  # noqa: E402
 
 EXPORT = "P7757_ROUND6D_EXPORT_V1"
 
@@ -306,6 +307,7 @@ def run(decode_json: str, out_dir: str, *, supervised_json: str = "",
 
 
 def main(argv=None) -> int:
+    argv = require_legacy_opt_in("tools/export_round6d.py", argv)
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--decode-json", required=True)
     ap.add_argument("--out-dir", required=True)

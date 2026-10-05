@@ -27,6 +27,7 @@ from engine import pantry_alignment as palign
 from engine import sanitary_source as ss
 from engine import semantic_seed as seeds_mod
 from tools import run_round6d as r6d
+from engine.legacy_cad_guard import require_legacy_opt_in  # noqa: E402
 
 LONG_WALL_MM = ss.LONG_WALL_MM
 
@@ -167,6 +168,7 @@ def run(decode_json: str, sanitary_pdf: str, *, supervised_json: str = "",
 
 
 def main(argv=None) -> int:
+    argv = require_legacy_opt_in("tools/align_sanitary.py", argv)
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--decode-json", required=True)
     ap.add_argument("--sanitary", required=True)

@@ -32,6 +32,7 @@ from pathlib import Path
 
 from engine import vertical_evidence as ve
 from engine.reference_mapping import refuse_if_sealed
+from engine.legacy_cad_guard import require_legacy_opt_in  # noqa: E402
 
 DESIGN_CAD = "DESIGN_CAD"
 DESIGN_DWF = "DESIGN_DWF"
@@ -215,6 +216,7 @@ def placement_attempts(cad: str, dwf: str = "", pdfs=()) -> list:
 
 
 def main() -> int:
+    require_legacy_opt_in("tools/scan_vertical_evidence.py")
     ap = argparse.ArgumentParser()
     ap.add_argument("--cad")
     ap.add_argument("--dwf", action="append", default=[])

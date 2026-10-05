@@ -1,0 +1,121 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_CALIBRATION_V2",
+ "policy": "CALIBRATION_V2",
+ "rows": [
+  {
+   "sheet": "ARCH-P06-SE-ELEV",
+   "legacy_state": "CALIBRATED",
+   "legacy_px_per_cm": 1.5784447442046363,
+   "v2_mode": "XY",
+   "v2_status": "AXIS_NOT_OBSERVED",
+   "v2_flags": [
+    "X_NOT_OBSERVED"
+   ],
+   "v2_sy_mm_per_px": 6.335350058813361,
+   "v2_sx_mm_per_px": null,
+   "v2_calibration_id": "XY:1a3aef07f926e39b",
+   "v2_reproduces_legacy_px_per_cm": 1.5784447437262912,
+   "reproduction_rel_diff": 0.0,
+   "observations": 4,
+   "rms_residual_mm": 13.59731885379791,
+   "max_residual_mm": 24.356090942742412,
+   "finding": "vertical (level chain) only: X_NOT_OBSERVED. Heights are measured along Y (valid); raster opening widths used to match CAD widths assume X = Y scale (flagged, no quantity changed this round)"
+  },
+  {
+   "sheet": "ARCH-P07-SW-ELEV",
+   "legacy_state": "CALIBRATED",
+   "legacy_px_per_cm": 1.563251898481215,
+   "v2_mode": "XY",
+   "v2_status": "AXIS_NOT_OBSERVED",
+   "v2_flags": [
+    "X_NOT_OBSERVED"
+   ],
+   "v2_sy_mm_per_px": 6.3969217137834935,
+   "v2_sx_mm_per_px": null,
+   "v2_calibration_id": "XY:3c54d15be72ad930",
+   "v2_reproduces_legacy_px_per_cm": 1.563251896369613,
+   "reproduction_rel_diff": 1e-09,
+   "observations": 4,
+   "rms_residual_mm": 9.162388613184257,
+   "max_residual_mm": 17.838091287546376,
+   "finding": "vertical (level chain) only: X_NOT_OBSERVED. Heights are measured along Y (valid); raster opening widths used to match CAD widths assume X = Y scale (flagged, no quantity changed this round)"
+  },
+  {
+   "sheet": "ARCH-P08-NW-ELEV",
+   "legacy_state": "CALIBRATED",
+   "legacy_px_per_cm": 1.5784172661870504,
+   "v2_mode": "XY",
+   "v2_status": "AXIS_NOT_OBSERVED",
+   "v2_flags": [
+    "X_NOT_OBSERVED"
+   ],
+   "v2_sy_mm_per_px": 6.3354603463992705,
+   "v2_sx_mm_per_px": null,
+   "v2_calibration_id": "XY:85368f3de1928110",
+   "v2_reproduces_legacy_px_per_cm": 1.5784172661870504,
+   "reproduction_rel_diff": 0.0,
+   "observations": 5,
+   "rms_residual_mm": 10.51995041823968,
+   "max_residual_mm": 13.673655423883247,
+   "finding": "vertical (level chain) only: X_NOT_OBSERVED. Heights are measured along Y (valid); raster opening widths used to match CAD widths assume X = Y scale (flagged, no quantity changed this round)"
+  },
+  {
+   "sheet": "ARCH-P09-NE-ELEV",
+   "legacy_state": "CALIBRATED",
+   "legacy_px_per_cm": 1.578383890825484,
+   "v2_mode": "XY",
+   "v2_status": "AXIS_NOT_OBSERVED",
+   "v2_flags": [
+    "X_NOT_OBSERVED"
+   ],
+   "v2_sy_mm_per_px": 6.3355943142838935,
+   "v2_sx_mm_per_px": null,
+   "v2_calibration_id": "XY:c25ef8f1304e58d3",
+   "v2_reproduces_legacy_px_per_cm": 1.5783838901197529,
+   "reproduction_rel_diff": 0.0,
+   "observations": 4,
+   "rms_residual_mm": 6.70218592130436,
+   "max_residual_mm": 13.375323830147863,
+   "finding": "vertical (level chain) only: X_NOT_OBSERVED. Heights are measured along Y (valid); raster opening widths used to match CAD widths assume X = Y scale (flagged, no quantity changed this round)"
+  },
+  {
+   "sheet": "ARCH-P10-SECTION-AA",
+   "legacy_state": "CALIBRATED",
+   "legacy_px_per_cm": 1.573611111111111,
+   "v2_mode": "XY",
+   "v2_status": "AXIS_NOT_OBSERVED",
+   "v2_flags": [
+    "X_NOT_OBSERVED"
+   ],
+   "v2_sy_mm_per_px": 6.354810238305384,
+   "v2_sx_mm_per_px": null,
+   "v2_calibration_id": "XY:60b80d8b53d1ba45",
+   "v2_reproduces_legacy_px_per_cm": 1.573611111111111,
+   "reproduction_rel_diff": 0.0,
+   "observations": 5,
+   "rms_residual_mm": 11.215987813387956,
+   "max_residual_mm": 17.034421888791258,
+   "finding": "vertical (level chain) only: X_NOT_OBSERVED. Heights are measured along Y (valid); raster opening widths used to match CAD widths assume X = Y scale (flagged, no quantity changed this round)"
+  },
+  {
+   "sheet": "ARCH-P11-SECTION-BB",
+   "legacy_state": "CALIBRATED",
+   "legacy_px_per_cm": 1.5776978417266188,
+   "v2_mode": "XY",
+   "v2_status": "AXIS_NOT_OBSERVED",
+   "v2_flags": [
+    "X_NOT_OBSERVED"
+   ],
+   "v2_sy_mm_per_px": 6.338349293205654,
+   "v2_sx_mm_per_px": null,
+   "v2_calibration_id": "XY:5d0ef05b31ce7a4f",
+   "v2_reproduces_legacy_px_per_cm": 1.5776978417266188,
+   "reproduction_rel_diff": 0.0,
+   "observations": 5,
+   "rms_residual_mm": 12.373879232964919,
+   "max_residual_mm": 20.47423620611039,
+   "finding": "vertical (level chain) only: X_NOT_OBSERVED. Heights are measured along Y (valid); raster opening widths used to match CAD widths assume X = Y scale (flagged, no quantity changed this round)"
+  }
+ ],
+ "rule": "UNIFORM / XY / AFFINE calibration objects; an unobserved axis is never copied from the other; the Alsenan sheets are re-expressed as XY calibrations from the same level-chain observations and no Alsenan quantity is recomputed"
+}

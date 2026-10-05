@@ -33,6 +33,7 @@ from engine import round6b_selftest as round6b
 from engine import semantic_seed as seeds_mod
 from engine import single_line_partition as slp
 from engine import wall_face_ownership as wface
+from engine.legacy_cad_guard import require_legacy_opt_in  # noqa: E402
 
 EXPORT = "P7757_ROUND6B_GEOMETRY_EXPORT_V1"
 
@@ -349,6 +350,7 @@ def run(decode_json: str, out_dir: str) -> dict:
 
 
 def main(argv=None) -> int:
+    argv = require_legacy_opt_in("tools/export_round6b.py", argv)
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--decode-json", required=True)
     ap.add_argument("--out-dir", required=True)

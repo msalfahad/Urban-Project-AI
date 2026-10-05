@@ -270,22 +270,55 @@ def _laps(run, dia):
 
 
 # ================================================================== footings, columns, beams rebar
+def terminal(element, ref, floor, terminal_state, why, **audit) -> dict:
+    """Control-plane R2: an admitted quantity-bearing object that yields no bar set still ends in a record. The
+    record is BLOCKED (never in a total); what is known is kept under 'audit' and is never released."""
+    rec = {"element": element, "ref": ref, "floor": floor, "status": "BLOCKED", "terminal_state": terminal_state,
+           "why": f"{terminal_state}: {why}"}
+    if audit:
+        rec["audit"] = audit
+    return rec
+
+
 def footing_rebar(ctx) -> list:
     defs = {d["type"]: d for d in ctx["a3"]["rebar"]["definitions"] if d["element"] == "FOOTING"}
     out = []
     for i, f in enumerate(ctx["a3"]["footings"]["rows"]):
-        if not str(f.get("status", "")).startswith("COMPUTED") or f["type"] not in defs:
+        ref = f"{f['type']} #{i + 1}"
+        if not str(f.get("status", "")).startswith("COMPUTED"):
+            out.append(terminal("FOOTING", ref + " bars", "FOUNDATION", "REBAR_BLOCKED_CONCRETE_NOT_ESTABLISHED",
+                                f"footing concrete {f.get('status')}"))
+            continue
+        if f["type"] not in defs:
+            out.append(terminal("FOOTING", ref + " bars", "FOUNDATION", "REBAR_BLOCKED_NO_DEFINITION",
+                                f"no reinforcement definition for type {f['type']}"))
             continue
         d = defs[f["type"]]
+        if not d.get("bars"):
+            out.append(terminal("FOOTING", ref + " bars", "FOUNDATION", "REBAR_BLOCKED_SCHEDULE_CELL_UNREAD",
+                                f"schedule cell for {f['type']} not parsed into bars", raw_fields=d.get("fields")))
+            continue
         L, W = f["dims"]["L"]["m"], f["dims"]["W"]["m"]
         c = COVER["soil"]
-        ref = f"{f['type']} #{i + 1}"
         for key, span in (("long_bars", L), ("short_bars", W)):
             for b in d["bars"].get(key, []):
+                if b.get("per_m"):
+                    # a per-metre count is not a bar count: it needs the span-based consumer (Round 3)
+                    out.append(terminal("FOOTING", f"{ref} {key}", "FOUNDATION",
+                                        "REBAR_BLOCKED_PER_METRE_PENDING_CONSUMER_V2",
+                                        f"{b['count']} Ø{b['dia_mm']} per metre; count over the footing not derived",
+                                        per_m_count=b["count"], dia_mm=b["dia_mm"], span_m=span))
+                    continue
                 out.append(barset("FOOTING", f"{ref} {key}", "FOUNDATION", dia=b["dia_mm"], count=b["count"],
                                   length_m=span - 2 * c, hook=None,
                                   basis="p.13 typical footing: bottom bars drawn straight; length = side - 2 x 7 cm cover"))
-        if d.get("boxed"):
+        if d.get("boxed") and any("/m" in str(x) for x in d["boxed"]):
+            # A3 stores the BOTTOM layer of a two-layer (FTB) footing under 'boxed': it is a per-metre mesh, not boxes
+            out.append(terminal("FOOTING", ref + " bottom layer", "FOUNDATION",
+                                "REBAR_BLOCKED_PER_METRE_PENDING_CONSUMER_V2",
+                                f"two-layer footing BOTTOM layer {d['boxed']} (per metre) - consumer pending",
+                                raw=d["boxed"]))
+        elif d.get("boxed"):
             out.append({"element": "FOOTING", "ref": ref + " boxed bars", "floor": "FOUNDATION", "status": "BLOCKED",
                         "why": "boxed bar shape not dimensioned"})
     return out
@@ -297,11 +330,27 @@ def column_rebar(ctx) -> list:
     out = []
     for r in ctx["b2a"]["columns"]["rows"]:
         d = defs.get(r["type"])
+        ref = f"{r['floor']} {r['type']} {r['tag_key'].split('|')[1]}"
+        if r.get("state") == "NOT_IN_STOREY":
+            continue                                   # the column type has no section in this storey (not admitted)
         if d is None or r.get("B_cm") is None:
+            out.append(terminal("COLUMN", ref + " bars", r["floor"], "REBAR_BLOCKED_NO_DEFINITION",
+                                f"no definition / section for {r['type']} ({r.get('state')})"))
             continue
         bars = d["bars"].get(r["storey_band"]) or []
         h = ivs.get(r["floor"])
-        ref = f"{r['floor']} {r['type']} {r['tag_key'].split('|')[1]}"
+        if r.get("volume_m3") is None:
+            # D5: the occurrence's concrete is not established - its bars may not enter any verified total
+            aud = sum(b["count"] * h * kgm(b["dia_mm"]) for b in bars) if h else None
+            ties = None
+            if h and r.get("D_cm"):
+                B_, D_ = r["B_cm"] / 100.0, r["D_cm"] / 100.0
+                ties = math.ceil(6 * h) * (2 * (B_ - 2 * COVER["member"]) + 2 * (D_ - 2 * COVER["member"])) * kgm(8)
+            out.append(terminal("COLUMN", ref + " bars", r["floor"], "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED",
+                                f"column occurrence state {r.get('state')}: concrete not established",
+                                occurrence_state=r.get("state"), vertical_straight_kg=_r(aud, 3) if aud else None,
+                                ties_straight_kg=_r(ties, 3) if ties else None))
+            continue
         for b in bars:
             out.append(barset("COLUMN", ref + " vertical", r["floor"], dia=b["dia_mm"], count=b["count"], length_m=h,
                               lap_kind="compression",
@@ -322,13 +371,25 @@ def beam_rebar(ctx) -> list:
     for fl in FLOORS:
         for o in ctx["b2a"]["sheets"][fl]["occurrences"]:
             d = defs.get(o["type"])
-            if d is None or o["state"] != "MEASURED":
+            ref = f"{fl} {o['type']} {o['tags'][0].split('|')[1] if o['tags'] else ''}"
+            if d is None:
+                st = ("REBAR_BLOCKED_PENDING_REBAR_CONSUMER_V2" if o["type"].startswith("CB") else
+                      "REBAR_BLOCKED_NO_DEFINITION")
+                out.append(terminal("BEAM", ref + " bars", fl, st,
+                                    "continuous-beam definition read from the DXF schedule (V2 source reader); no "
+                                    "rebar consumer yet" if st.endswith("V2") else f"no definition for {o['type']}",
+                                    occurrence_state=o["state"]))
+                continue
+            if o["state"] != "MEASURED":
+                out.append(terminal("BEAM", ref + " bars", fl, "REBAR_BLOCKED_OCCURRENCE_NOT_MEASURED",
+                                    f"occurrence state {o['state']}", occurrence_state=o["state"]))
                 continue
             Ls = o["lengths"].get("SUPPORT_CENTRELINE_LENGTH")
             Lc = o["lengths"].get("CLEAR_FACE_TO_FACE_LENGTH")
             if not Ls or not Lc:
+                out.append(terminal("BEAM", ref + " bars", fl, "REBAR_BLOCKED_LENGTH_MISSING",
+                                    "support-centreline or clear length not measured"))
                 continue
-            ref = f"{fl} {o['type']} {o['tags'][0].split('|')[1] if o['tags'] else ''}"
             for pos in ("top", "bottom"):
                 for b in d["bars"].get(pos, []):
                     out.append(barset("BEAM", f"{ref} {pos}", fl, dia=b["dia_mm"], count=b["count"], length_m=Ls,
@@ -347,7 +408,22 @@ def beam_rebar(ctx) -> list:
     return out
 
 
+def strap_rebar(ctx) -> list:
+    """D4: strap beams have definitions (element STRAP) but no rebar consumer yet - one terminal record each."""
+    return [terminal("STRAP", f"FOUNDATION {s['type']} {s['mark_key'].split('|')[1]} bars", "FOUNDATION",
+                     "REBAR_BLOCKED_NO_CONSUMER", f"strap beam {s['type']}: definition parsed, no rebar consumer",
+                     concrete_status=s.get("status"))
+            for s in ctx["a3"]["straps"]["rows"]]
+
+
 # ================================================================== openings, lintels
+def _opening_states(width_known) -> dict:
+    """Control-plane R2: each opening attribute carries its own state; the record status is PARTIAL (count and width
+    established, height not) - never COMPUTED while the height is BLOCKED (no default height is inserted)."""
+    return {"count_state": "COMPUTED", "width_state": "COMPUTED" if width_known else "BLOCKED",
+            "height_state_v2": "BLOCKED", "area_state": "BLOCKED_OPENING_AREA_HEIGHT"}
+
+
 def openings(ctx, rooms) -> dict:
     rows = []
     for fl in FLOORS:
@@ -360,7 +436,7 @@ def openings(ctx, rooms) -> dict:
             if occ.startswith("GLAZED") or s.get("state") != "CLOSED":
                 if occ in doors and s.get("state") != "CLOSED":
                     rows.append({"floor": fl, "id": f"{fl}-D-{occ}", "kind": "DOOR", "width_m": None, "status": "BLOCKED",
-                                 "why": s.get("why")})
+                                 "why": s.get("why"), **_opening_states(False)})
                 continue
             a = geom.get(s.get("closure_a"))
             b = geom.get(s.get("closure_b"))
@@ -369,19 +445,24 @@ def openings(ctx, rooms) -> dict:
             kind = "DOUBLE_LEAF_DOOR" if s.get("rule") == "DOOR_IN_WALL_GAP_V1" else "DOOR"
             rows.append({"floor": fl, "id": f"{fl}-D-{occ}", "kind": kind, "width_m": _r(w, 3), "wall_t_m": _r(t, 3),
                          "height_m": None, "height_state": "BLOCKED_OPENING_HEIGHT (no door schedule / elevation value)",
-                         "status": "COMPUTED", "rule": s.get("rule", "FROZEN_DOOR_CLOSURE")})
+                         "status": "PARTIAL", "rule": s.get("rule", "FROZEN_DOOR_CLOSURE"),
+                         **_opening_states(w is not None)})
         for i, w in enumerate(ctx["a2_raw"][fl]["eri"]["glazing"]["windows"]):
             rows.append({"floor": fl, "id": f"{fl}-W{i + 1:02d}", "kind": "WINDOW", "width_m": _r(w["width_mm"] / 1000.0, 3),
                          "wall_t_m": _r(w["thickness_mm"] / 1000.0, 3), "height_m": None,
-                         "height_state": "BLOCKED_OPENING_HEIGHT (no head / sill printed)", "status": "COMPUTED"})
+                         "height_state": "BLOCKED_OPENING_HEIGHT (no head / sill printed)", "status": "PARTIAL",
+                         **_opening_states(True)})
     lint = []
     for o in rows:
         if o.get("width_m") is None:
+            lint.append({"opening": o["id"], "floor": o["floor"], "status": "BLOCKED",
+                         "why": "LINTEL_BLOCKED_NO_OPENING_WIDTH: opening closure not established"})
             continue
         wcm = o["width_m"] * 100.0
         sch = next((x for x in LINTELS if wcm <= x[0] + 0.5), None)
         if sch is None:
-            lint.append({"opening": o["id"], "status": "BLOCKED", "why": "opening wider than the lintel schedule (750 cm)"})
+            lint.append({"opening": o["id"], "floor": o["floor"], "status": "BLOCKED",
+                         "why": "opening wider than the lintel schedule (750 cm)"})
             continue
         B = o.get("wall_t_m")
         L = o["width_m"] + 2 * LINTEL_BEARING_M
@@ -399,6 +480,8 @@ def lintel_rebar(lint) -> list:
     out = []
     for l in lint:
         if l.get("status") != "COMPUTED":
+            out.append(terminal("LINTEL", f"{l['opening']} lintel bars", l.get("floor") or l["opening"].split("-")[0],
+                                "REBAR_BLOCKED_LINTEL_NOT_ESTABLISHED", l.get("why") or "lintel not established"))
             continue
         sch = next(x for x in LINTELS if l["opening_width_m"] * 100 <= x[0] + 0.5)
         L = l["length_m"] - 2 * COVER["member"]
@@ -429,10 +512,22 @@ def blockwork(ctx, rm) -> dict:
         geom = {p.identity.key: p.geometry for p in ctx["a2_raw"][fl]["inp"].parts if p.kind == "SEGMENT"}
         for b in (res.get("wall_bands") or {}).get("bands") or []:
             if b["state"] != "WALL_BAND_ESTABLISHED":
+                Lm = (b["interval"][1] - b["interval"][0]) * u / 1000.0
+                rows.append({"floor": fl, "band": b["band_id"], "thickness_mm": round(float(b["width"]) * u),
+                             "position": "UNRESOLVED_SIDES", "length_m": _r(Lm), "pieces": [], "area_m2": None,
+                             "blocked_length_m": _r(Lm), "status": "BLOCKED",
+                             "terminal_state": "BLOCKWORK_BLOCKED_AMBIGUOUS_BAND",
+                             "why": f"wall band {b['state']}: masonry identity not established"})
                 continue
             ga = geom.get(b["faces"][0])
             gb = geom.get(b["faces"][1]) if len(b["faces"]) > 1 else None
             if ga is None or gb is None:
+                Lm = (b["interval"][1] - b["interval"][0]) * u / 1000.0
+                rows.append({"floor": fl, "band": b["band_id"], "thickness_mm": round(float(b["width"]) * u),
+                             "position": "UNRESOLVED_SIDES", "length_m": _r(Lm), "pieces": [], "area_m2": None,
+                             "blocked_length_m": _r(Lm), "status": "BLOCKED",
+                             "terminal_state": "BLOCKWORK_BLOCKED_FACE_GEOMETRY_MISSING",
+                             "why": "a face segment of the band is not in the input parts"})
                 continue
             ux, uy = b["axis"]
             nx, ny = -uy, ux

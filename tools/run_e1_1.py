@@ -51,6 +51,7 @@ from engine import export_provenance as prov
 from engine import label_grouping as lg
 from engine import raster_qa as rq
 from engine import stair_completeness as stc
+from engine.legacy_cad_guard import require_legacy_opt_in  # noqa: E402
 
 E1_1_MODEL = "E1_1_CAD_ENTITY_ROLE_AND_REGION_OWNERSHIP_CORRECTION_V1"
 RUN_ID = "E1_1-P7757-GF-001"
@@ -853,6 +854,7 @@ def _roles_corrected(row, interp, gf=None) -> list:
 # ------------------------------------------------------------------ main
 
 def main(argv=None) -> int:
+    argv = require_legacy_opt_in("tools/run_e1_1.py", argv)
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--decode",
                     default="data/runs/cad_convert/P7757_ARCHITECTURAL.json")
