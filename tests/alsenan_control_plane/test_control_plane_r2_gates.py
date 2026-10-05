@@ -5,7 +5,7 @@ Each gate has two kinds of proof:
     only because the code changed, not because a register was redefined);
   * REAL EVIDENCE - the committed R2 registers (research/alsenan_control_plane_02/registers, hash-frozen in INDEX.json)
     show the same behaviour on Alsenan.
-G11, G13, G15 and G23 stay xfail(strict=True): the quantity consumers are Round 3 work (or need an engineer's answer),
+G15 and G23 stay xfail(strict=True) (engineer answers needed); G11 / G13 were promoted in Round 3 with their consumers,
 so an XPASS turns red. A no-gaming group pins the raw counts that must NOT have been zeroed (46.63 m ambiguous wall,
 187.82 m unpaired boundary, 35 wet labels, 26 D5 occurrences) and a firewall group proves the builders never read a
 benchmark.
@@ -254,10 +254,20 @@ def test_G10_cb_definitions_captured_from_source():
     assert all(cov[f"CONTINUOUS_BEAM CB{i}"]["consumer_state"] == "PENDING_REBAR_CONSUMER_V2" for i in range(1, 14))
 
 
-@pytest.mark.xfail(strict=True, reason="D2 per-metre two-layer footing consumer is Round 3 work (definitions only)")
 def test_G11_two_layer_footing_quantity_consumer():
-    out = V3S.footing_rebar(_footing_ctx(PER_M_DEF))
-    assert all(x.get("status") != "BLOCKED" for x in out) and min(x["count"] for x in out) > 6
+    """Round 3 consumer (alsenan_rebar_v3): per-metre counts over side - 2 x cover, both layers; the V3a function
+    keeps its BLOCKED terminal records (V3b is frozen and not re-run)."""
+    import alsenan_rebar_v3 as R3
+    from engine.source import rebar_model as RM
+    b = R3.Build.__new__(R3.Build)
+    b.sha = "f" * 64
+    df = {"element": "FOOTING_2_LAYER", "type": "FX", "block": "FTB", "insert_handle": "H", "page": 9,
+          "raw_attributes": {}, "fields": {k: {"count": 6, "dia_mm": 14, "per_m": True} for k in
+                                           ("TOP_short", "TOP_long", "BOTTOM_short", "BOTTOM_long")}}
+    out = b._ftb("P", "O", df, 4.0, 3.6, 0.5, 0.07)
+    mesh = [c for c in out if c["bar_role"] in ("TOP_SHORT", "TOP_LONG", "BOTTOM_SHORT", "BOTTOM_LONG")]
+    assert len(mesh) == 4 and all(c["count_mode"] == "BARS_PER_METRE" for c in mesh)
+    assert min(c["count"]["verified"] for c in mesh) > 6 and all(c["state"] != RM.BLOCKED for c in mesh)
 
 
 def test_G12_ff_emits_a_blocked_population():
@@ -269,10 +279,27 @@ def test_G12_ff_emits_a_blocked_population():
     assert len(rows) == 1 and "FF" in json.dumps(rows[0])
 
 
-@pytest.mark.xfail(strict=True, reason="D4 strap-beam rebar consumer is Round 3 work (SB2 also needs Q-S conflict)")
 def test_G13_strap_rebar_quantity_consumer():
-    ctx = {"a3": {"straps": {"rows": [{"type": "SB1", "mark_key": "X|H1|", "status": "COMPUTED"}]}}}
-    assert _barsets(V3S.strap_rebar(ctx))
+    """Round 3 consumer (alsenan_rebar_v3.Build.straps): SB1 / SB3 bars and stirrups; SB2 stays a BLOCKED conflict."""
+    import alsenan_rebar_v3 as R3
+    from engine.source import rebar_model as RM
+    from collections import defaultdict
+    b = R3.Build.__new__(R3.Build)
+    b.sha, b.comps, b.pops, b.rc_occ, b.registers = "f" * 64, [], [], [], defaultdict(list)
+    bar = lambda n, d, **k: dict({"count": n, "dia_mm": d, "per_m": False, "tags": ["A", "B"]}, **k)
+    sb = lambda h, B, n1: {"element": "STRAP_BEAM", "type": "SB2" if h != "H1" else "SB1", "block": "SBT",
+                           "insert_handle": h, "page": 10, "raw_attributes": {"W": str(B)},
+                           "fields": {"B_cm": B, "H_cm": 50.0, "bottom": bar(n1, 16), "top": bar(5, 18),
+                                      "stirrups_per_m": bar(8, 8, semantics="STIRRUPS_PER_METRE")}}
+    b.dmap = defaultdict(list)
+    for d in (sb("H1", 70.0, 7), sb("H2", 100.0, 10), sb("H3", 80.0, 10)):
+        b.dmap[(d["element"], d["type"])].append(d)
+    b.ctx = {"a3": {"straps": {"rows": [{"type": "SB1", "mark_key": "X|H9|", "length_m": 4.0},
+                                        {"type": "SB2", "mark_key": "X|H8|", "length_m": 2.0}]}}}
+    b.straps()
+    st = {p["occurrence_id"].split(":")[1]: p["release_state"] for p in b.pops}
+    assert st == {"SB1": RM.LB, "SB2": RM.BLK}
+    assert len(b.registers["STRAP_CONFLICTS"][0]["candidates"]) == 2
 
 
 def test_G14_no_verified_rebar_without_an_established_occurrence():
@@ -442,7 +469,10 @@ def test_gate_register_matches_static_definition():
     here = Path(__file__).read_text()
     assert all(f"def {n}(" in here for n in names)
     xfail = {r["gate"] for r in g["rows"] if r["final_state"].startswith("XFAIL")}
-    assert xfail == {"G11", "G13", "G15", "G23"}
+    assert xfail == {"G11", "G13", "G15", "G23"}          # frozen round-2 record
+    r3 = json.loads((ROOT / "research/alsenan_rebar_truth_03/registers/REBAR_GATE_TRANSITIONS.json").read_text())
+    r3x = {r["gate"] for r in r3["rows"] if r["final_state"] == "XFAIL"}
+    assert r3x == {"G15", "G23"}                          # round 3 promoted G11 / G13 with their consumers
 
 
 @pytest.mark.parametrize("path", ["research/external_engine_lab/alsenan_control_v2.py",

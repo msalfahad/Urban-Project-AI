@@ -1,0 +1,6188 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_BEAM_REBAR_V3",
+ "rows": [
+  {
+   "occurrence": "STRAP:SB2:H6935",
+   "element_type": "STRAP_BEAM",
+   "occurrence_state": "BLOCKED",
+   "why": "SOURCE_CONFLICT_DUPLICATE_SCHEDULE_KEY",
+   "release_state": "BLOCKED",
+   "missing": [
+    "POP:STRAP:SB2:H6935|ALL"
+   ],
+   "components": [
+    {
+     "role": "ALL",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "BLOCKED",
+     "why": "SOURCE_CONFLICT_DUPLICATE_SCHEDULE_KEY: two SB2 rows (80x50 / 100x50); no row is selected",
+     "source_raw": [
+      {
+       "BEAM": "SB2",
+       "W": "100",
+       "H": "50",
+       "BOT-B": "10",
+       "BOT-D": "16",
+       "TOP-B": "20",
+       "TOP-D": "18",
+       "STI-B": "10",
+       "D": "8"
+      },
+      {
+       "BEAM": "SB2",
+       "W": "80",
+       "H": "50",
+       "BOT-B": "10",
+       "BOT-D": "18",
+       "TOP-B": "10",
+       "TOP-D": "18",
+       "STI-B": "10",
+       "D": "8"
+      }
+     ]
+    }
+   ],
+   "new_verified_kg": 0.0,
+   "new_provisional_kg": 0.0,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 0.0,
+    "v3b_technical_kg": 0.0
+   }
+  },
+  {
+   "occurrence": "STRAP:SB1:H6946",
+   "element_type": "STRAP_BEAM",
+   "occurrence_state": "PROVISIONAL",
+   "why": "clear length measured to the face of a footing outline whose size is a SOURCE_CONFLICT (F / F10)",
+   "release_state": "PROVISIONAL",
+   "missing": [
+    "POP:STRAP:SB1:H6946|BOTTOM",
+    "POP:STRAP:SB1:H6946|TOP",
+    "POP:STRAP:SB1:H6946|STIRRUPS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 16,
+     "count": 7,
+     "count_convention": 7,
+     "verified_length_m": 4.551032,
+     "provisional_length_m": 0,
+     "verified_kg": 50.34228,
+     "provisional_kg": 0.0,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "7",
+      "BOT-D": "16"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 18,
+     "count": 13,
+     "count_convention": 13,
+     "verified_length_m": 4.551032,
+     "provisional_length_m": 0,
+     "verified_kg": 118.326832,
+     "provisional_kg": 0.0,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "13",
+      "TOP-D": "18"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 37,
+     "count_convention": 38,
+     "verified_length_m": 1.84,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 26.895802,
+     "provisional_kg": 3.673056,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "8",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "NOT_REQUIRED",
+     "why": "depth 50 cm <= 60 (note 21)",
+     "source_raw": null
+    }
+   ],
+   "new_verified_kg": 0.0,
+   "new_provisional_kg": 199.237971,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 0.0,
+    "v3b_technical_kg": 0.0
+   }
+  },
+  {
+   "occurrence": "STRAP:SB3:H6952",
+   "element_type": "STRAP_BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:STRAP:SB3:H6952|BOTTOM",
+    "POP:STRAP:SB3:H6952|TOP",
+    "POP:STRAP:SB3:H6952|STIRRUPS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 16,
+     "count": 5,
+     "count_convention": 5,
+     "verified_length_m": 3.259261,
+     "provisional_length_m": 0,
+     "verified_kg": 25.752186,
+     "provisional_kg": 0.0,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "5",
+      "BOT-D": "16"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 18,
+     "count": 5,
+     "count_convention": 5,
+     "verified_length_m": 3.259261,
+     "provisional_length_m": 0,
+     "verified_kg": 32.59261,
+     "provisional_kg": 0.0,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "5",
+      "TOP-D": "18"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 23,
+     "count_convention": 24,
+     "verified_length_m": 1.24,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 11.26716,
+     "provisional_kg": 2.350598,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "7",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "NOT_REQUIRED",
+     "why": "depth 40 cm <= 60 (note 21)",
+     "source_raw": null
+    }
+   ],
+   "new_verified_kg": 69.611956,
+   "new_provisional_kg": 2.350598,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 0.0,
+    "v3b_technical_kg": 0.0
+   }
+  },
+  {
+   "occurrence": "BEAM:GF:B16:H1139",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:GF:B16:H1139|BOTTOM",
+    "POP:BEAM:GF:B16:H1139|TOP",
+    "POP:BEAM:GF:B16:H1139|STIRRUPS",
+    "POP:BEAM:GF:B16:H1139|SIDE_BARS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 18,
+     "count": 5,
+     "count_convention": 5,
+     "verified_length_m": 3.35,
+     "provisional_length_m": 0.75,
+     "verified_kg": 33.5,
+     "provisional_kg": 7.5,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "5",
+      "BOT-D": "18"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 14,
+     "count": 3,
+     "count_convention": 3,
+     "verified_length_m": 3.35,
+     "provisional_length_m": 0.75,
+     "verified_kg": 12.159259,
+     "provisional_kg": 2.722222,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "3",
+      "TOP-D": "14"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 10,
+     "count": 34,
+     "count_convention": 35,
+     "verified_length_m": 1.9,
+     "provisional_length_m": 0.20781,
+     "verified_kg": 39.876543,
+     "provisional_kg": 5.662562,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "10",
+      "D": "10"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "BLOCKED",
+     "why": "REMARKS token '2%%C16/20cm' captured; count per face / levels need the typical detail",
+     "source_raw": "2%%C16/20cm"
+    }
+   ],
+   "new_verified_kg": 85.535802,
+   "new_provisional_kg": 15.884784,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 106.350444,
+    "v3b_technical_kg": 95.758025
+   }
+  },
+  {
+   "occurrence": "BEAM:GF:B13:H1127",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:GF:B13:H1127|BOTTOM",
+    "POP:BEAM:GF:B13:H1127|TOP",
+    "POP:BEAM:GF:B13:H1127|STIRRUPS",
+    "POP:BEAM:GF:B13:H1127|SIDE_BARS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 18,
+     "count": 7,
+     "count_convention": 7,
+     "verified_length_m": 5.461771,
+     "provisional_length_m": 0.255462,
+     "verified_kg": 76.464794,
+     "provisional_kg": 3.576468,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "7",
+      "BOT-D": "18"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 14,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 5.461771,
+     "provisional_length_m": 0.255462,
+     "verified_kg": 13.216137,
+     "provisional_kg": 0.618155,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "2",
+      "TOP-D": "14"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 39,
+     "count_convention": 40,
+     "verified_length_m": 1.8,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 27.733333,
+     "provisional_kg": 3.812314,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "7",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "BLOCKED",
+     "why": "REMARKS token '2%%C12/30cm' captured; count per face / levels need the typical detail",
+     "source_raw": "2%%C12/30cm"
+    }
+   ],
+   "new_verified_kg": 117.414265,
+   "new_provisional_kg": 8.006937,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 132.349957,
+    "v3b_technical_kg": 121.608888
+   }
+  },
+  {
+   "occurrence": "BEAM:GF:B11:H1092",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:GF:B11:H1092|BOTTOM",
+    "POP:BEAM:GF:B11:H1092|TOP",
+    "POP:BEAM:GF:B11:H1092|STIRRUPS",
+    "POP:BEAM:GF:B11:H1092|SIDE_BARS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 18,
+     "count": 6,
+     "count_convention": 6,
+     "verified_length_m": 4.575082,
+     "provisional_length_m": 0.252731,
+     "verified_kg": 54.900984,
+     "provisional_kg": 3.032772,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "6",
+      "BOT-D": "18"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 12,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 4.575082,
+     "provisional_length_m": 0.252731,
+     "verified_kg": 8.133479,
+     "provisional_kg": 0.4493,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "2",
+      "TOP-D": "12"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 28,
+     "count_convention": 29,
+     "verified_length_m": 1.7,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 18.804938,
+     "provisional_kg": 2.919977,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "6",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "BLOCKED",
+     "why": "REMARKS token '2%%C12/30cm' captured; count per face / levels need the typical detail",
+     "source_raw": "2%%C12/30cm"
+    }
+   ],
+   "new_verified_kg": 81.839401,
+   "new_provisional_kg": 6.402049,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 93.899259,
+    "v3b_technical_kg": 85.321473
+   }
+  },
+  {
+   "occurrence": "BEAM:GF:B1:H1093",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:GF:B1:H1093|BOTTOM",
+    "POP:BEAM:GF:B1:H1093|TOP",
+    "POP:BEAM:GF:B1:H1093|STIRRUPS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 14,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 1.47,
+     "provisional_length_m": 0.2,
+     "verified_kg": 3.557037,
+     "provisional_kg": 0.483951,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "2",
+      "BOT-D": "14"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 12,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 1.47,
+     "provisional_length_m": 0.2,
+     "verified_kg": 2.613333,
+     "provisional_kg": 0.355556,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "2",
+      "TOP-D": "12"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 9,
+     "count_convention": 10,
+     "verified_length_m": 1.0,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 3.555556,
+     "provisional_kg": 1.170362,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "6",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "NOT_REQUIRED",
+     "why": "depth 40 cm <= 60 (note 21)",
+     "source_raw": null
+    }
+   ],
+   "new_verified_kg": 9.725926,
+   "new_provisional_kg": 2.009869,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 12.753623,
+    "v3b_technical_kg": 10.565432
+   }
+  },
+  {
+   "occurrence": "BEAM:GF:B4:H1094",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:GF:B4:H1094|BOTTOM",
+    "POP:BEAM:GF:B4:H1094|TOP",
+    "POP:BEAM:GF:B4:H1094|STIRRUPS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 16,
+     "count": 4,
+     "count_convention": 4,
+     "verified_length_m": 3.75,
+     "provisional_length_m": 0.25,
+     "verified_kg": 23.703704,
+     "provisional_kg": 1.580247,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "4",
+      "BOT-D": "16"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 12,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 3.75,
+     "provisional_length_m": 0.25,
+     "verified_kg": 6.666667,
+     "provisional_kg": 0.444444,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "2",
+      "TOP-D": "12"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 23,
+     "count_convention": 24,
+     "verified_length_m": 1.2,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 10.903704,
+     "provisional_kg": 2.334796,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "6",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "NOT_REQUIRED",
+     "why": "depth 50 cm <= 60 (note 21)",
+     "source_raw": null
+    }
+   ],
+   "new_verified_kg": 41.274074,
+   "new_provisional_kg": 4.359487,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 48.388085,
+    "v3b_technical_kg": 43.298765
+   }
+  },
+  {
+   "occurrence": "BEAM:GF:B7:H1234",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:GF:B7:H1234|BOTTOM",
+    "POP:BEAM:GF:B7:H1234|TOP",
+    "POP:BEAM:GF:B7:H1234|STIRRUPS",
+    "POP:BEAM:GF:B7:H1234|SIDE_BARS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 16,
+     "count": 3,
+     "count_convention": 3,
+     "verified_length_m": 1.7,
+     "provisional_length_m": 0.275,
+     "verified_kg": 8.059259,
+     "provisional_kg": 1.303704,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "3",
+      "BOT-D": "16"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 12,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 1.7,
+     "provisional_length_m": 0.275,
+     "verified_kg": 3.022222,
+     "provisional_kg": 0.488889,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "2",
+      "TOP-D": "12"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 11,
+     "count_convention": 12,
+     "verified_length_m": 1.7,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 7.387654,
+     "provisional_kg": 1.601966,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "6",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "BLOCKED",
+     "why": "REMARKS token '2%%C12/30cm' captured; count per face / levels need the typical detail",
+     "source_raw": "2%%C12/30cm"
+    }
+   ],
+   "new_verified_kg": 18.469136,
+   "new_provisional_kg": 3.394558,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 23.738131,
+    "v3b_technical_kg": 20.261728
+   }
+  },
+  {
+   "occurrence": "BEAM:GF:B20:H1110",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:GF:B20:H1110|BOTTOM",
+    "POP:BEAM:GF:B20:H1110|TOP",
+    "POP:BEAM:GF:B20:H1110|STIRRUPS",
+    "POP:BEAM:GF:B20:H1110|SIDE_BARS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 18,
+     "count": 11,
+     "count_convention": 11,
+     "verified_length_m": 3.575,
+     "provisional_length_m": 0.225,
+     "verified_kg": 78.65,
+     "provisional_kg": 4.95,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "11",
+      "BOT-D": "18"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 18,
+     "count": 11,
+     "count_convention": 11,
+     "verified_length_m": 3.575,
+     "provisional_length_m": 0.225,
+     "verified_kg": 78.65,
+     "provisional_kg": 4.95,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "11",
+      "TOP-D": "18"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 36,
+     "count_convention": 37,
+     "verified_length_m": 2.1,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 29.866667,
+     "provisional_kg": 3.698242,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "10",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "BLOCKED",
+     "why": "REMARKS token '2%%C12/30cm' captured; count per face / levels need the typical detail",
+     "source_raw": "2%%C12/30cm"
+    }
+   ],
+   "new_verified_kg": 187.166667,
+   "new_provisional_kg": 13.598242,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 221.238229,
+    "v3b_technical_kg": 197.066667
+   }
+  },
+  {
+   "occurrence": "BEAM:GF:B3:H1122",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:GF:B3:H1122|BOTTOM",
+    "POP:BEAM:GF:B3:H1122|TOP",
+    "POP:BEAM:GF:B3:H1122|STIRRUPS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 16,
+     "count": 4,
+     "count_convention": 4,
+     "verified_length_m": 3.3,
+     "provisional_length_m": 0.35,
+     "verified_kg": 20.859259,
+     "provisional_kg": 2.212346,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "4",
+      "BOT-D": "16"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 12,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 3.3,
+     "provisional_length_m": 0.35,
+     "verified_kg": 5.866667,
+     "provisional_kg": 0.622222,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "2",
+      "TOP-D": "12"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 20,
+     "count_convention": 21,
+     "verified_length_m": 1.0,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 7.901235,
+     "provisional_kg": 2.023193,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "6",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "NOT_REQUIRED",
+     "why": "depth 40 cm <= 60 (note 21)",
+     "source_raw": null
+    }
+   ],
+   "new_verified_kg": 34.62716,
+   "new_provisional_kg": 4.857761,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 42.318458,
+    "v3b_technical_kg": 37.461728
+   }
+  },
+  {
+   "occurrence": "BEAM:GF:B1:H1126",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:GF:B1:H1126|BOTTOM",
+    "POP:BEAM:GF:B1:H1126|TOP",
+    "POP:BEAM:GF:B1:H1126|STIRRUPS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 14,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 2.569456,
+     "provisional_length_m": 0.227731,
+     "verified_kg": 6.217449,
+     "provisional_kg": 0.551053,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "2",
+      "BOT-D": "14"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 12,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 2.569456,
+     "provisional_length_m": 0.227731,
+     "verified_kg": 4.567922,
+     "provisional_kg": 0.404855,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "2",
+      "TOP-D": "12"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 16,
+     "count_convention": 17,
+     "verified_length_m": 1.0,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 6.320988,
+     "provisional_kg": 1.713073,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "6",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "NOT_REQUIRED",
+     "why": "depth 40 cm <= 60 (note 21)",
+     "source_raw": null
+    }
+   ],
+   "new_verified_kg": 17.106359,
+   "new_provisional_kg": 2.668981,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 20.793168,
+    "v3b_technical_kg": 18.062266
+   }
+  },
+  {
+   "occurrence": "BEAM:GF:B4:H1243",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:GF:B4:H1243|BOTTOM",
+    "POP:BEAM:GF:B4:H1243|TOP",
+    "POP:BEAM:GF:B4:H1243|STIRRUPS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 16,
+     "count": 4,
+     "count_convention": 4,
+     "verified_length_m": 3.429272,
+     "provisional_length_m": 0.527625,
+     "verified_kg": 21.676386,
+     "provisional_kg": 3.335111,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "4",
+      "BOT-D": "16"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 12,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 3.429272,
+     "provisional_length_m": 0.527625,
+     "verified_kg": 6.096484,
+     "provisional_kg": 0.938,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "2",
+      "TOP-D": "12"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 21,
+     "count_convention": 22,
+     "verified_length_m": 1.2,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 9.955556,
+     "provisional_kg": 2.179736,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "6",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "NOT_REQUIRED",
+     "why": "depth 50 cm <= 60 (note 21)",
+     "source_raw": null
+    }
+   ],
+   "new_verified_kg": 37.728425,
+   "new_provisional_kg": 6.452847,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 46.935796,
+    "v3b_technical_kg": 42.001536
+   }
+  },
+  {
+   "occurrence": "BEAM:GF:B8:H1138",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:GF:B8:H1138|BOTTOM",
+    "POP:BEAM:GF:B8:H1138|TOP",
+    "POP:BEAM:GF:B8:H1138|STIRRUPS",
+    "POP:BEAM:GF:B8:H1138|SIDE_BARS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 16,
+     "count": 4,
+     "count_convention": 4,
+     "verified_length_m": 3.52014,
+     "provisional_length_m": 0.475,
+     "verified_kg": 22.250761,
+     "provisional_kg": 3.002469,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "4",
+      "BOT-D": "16"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 12,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 3.52014,
+     "provisional_length_m": 0.475,
+     "verified_kg": 6.258027,
+     "provisional_kg": 0.844444,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "2",
+      "TOP-D": "12"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 22,
+     "count_convention": 23,
+     "verified_length_m": 1.7,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 14.775309,
+     "provisional_kg": 2.454797,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "6",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "BLOCKED",
+     "why": "REMARKS token '2%%C12/30cm' captured; count per face / levels need the typical detail",
+     "source_raw": "2%%C12/30cm"
+    }
+   ],
+   "new_verified_kg": 43.284097,
+   "new_provisional_kg": 6.30171,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 52.1428,
+    "v3b_technical_kg": 47.13101
+   }
+  },
+  {
+   "occurrence": "BEAM:GF:B1:H1294",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:GF:B1:H1294|BOTTOM",
+    "POP:BEAM:GF:B1:H1294|TOP",
+    "POP:BEAM:GF:B1:H1294|STIRRUPS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 14,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 1.2,
+     "provisional_length_m": 0.25,
+     "verified_kg": 2.903704,
+     "provisional_kg": 0.604938,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "2",
+      "BOT-D": "14"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 12,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 1.2,
+     "provisional_length_m": 0.25,
+     "verified_kg": 2.133333,
+     "provisional_kg": 0.444444,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "2",
+      "TOP-D": "12"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 8,
+     "count_convention": 9,
+     "verified_length_m": 1.0,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 3.160494,
+     "provisional_kg": 1.092832,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "6",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "NOT_REQUIRED",
+     "why": "depth 40 cm <= 60 (note 21)",
+     "source_raw": null
+    }
+   ],
+   "new_verified_kg": 8.197531,
+   "new_provisional_kg": 2.142215,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 11.357575,
+    "v3b_technical_kg": 9.246914
+   }
+  },
+  {
+   "occurrence": "BEAM:GF:CA:H1694",
+   "element_type": "BEAM",
+   "occurrence_state": "BLOCKED",
+   "why": "REBAR_BLOCKED_OCCURRENCE_NOT_MEASURED (TAG_INSIDE_SUPPORT)",
+   "release_state": "BLOCKED",
+   "missing": [
+    "POP:BEAM:GF:CA:H1694|ALL"
+   ],
+   "components": [
+    {
+     "role": "ALL",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "BLOCKED",
+     "why": "REBAR_BLOCKED_OCCURRENCE_NOT_MEASURED (TAG_INSIDE_SUPPORT)",
+     "source_raw": "TAG_INSIDE_SUPPORT"
+    }
+   ],
+   "new_verified_kg": 0.0,
+   "new_provisional_kg": 0.0,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 0.0,
+    "v3b_technical_kg": 0.0
+   }
+  },
+  {
+   "occurrence": "BEAM:GF:B1:H1697",
+   "element_type": "BEAM",
+   "occurrence_state": "BLOCKED",
+   "why": "REBAR_BLOCKED_LENGTH_MISSING",
+   "release_state": "BLOCKED",
+   "missing": [
+    "POP:BEAM:GF:B1:H1697|ALL"
+   ],
+   "components": [
+    {
+     "role": "ALL",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "BLOCKED",
+     "why": "REBAR_BLOCKED_LENGTH_MISSING",
+     "source_raw": "MEASURED"
+    }
+   ],
+   "new_verified_kg": 0.0,
+   "new_provisional_kg": 0.0,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 0.0,
+    "v3b_technical_kg": 0.0
+   }
+  },
+  {
+   "occurrence": "BEAM:GF:B24:H6170",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:GF:B24:H6170|BOTTOM",
+    "POP:BEAM:GF:B24:H6170|TOP",
+    "POP:BEAM:GF:B24:H6170|STIRRUPS",
+    "POP:BEAM:GF:B24:H6170|SIDE_BARS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 16,
+     "count": 5,
+     "count_convention": 5,
+     "verified_length_m": 3.8,
+     "provisional_length_m": 0.25,
+     "verified_kg": 30.024691,
+     "provisional_kg": 1.975309,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "5",
+      "BOT-D": "16"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 18,
+     "count": 10,
+     "count_convention": 10,
+     "verified_length_m": 3.8,
+     "provisional_length_m": 0.25,
+     "verified_kg": 76.0,
+     "provisional_kg": 5.0,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "10",
+      "TOP-D": "18"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 19,
+     "count_convention": 20,
+     "verified_length_m": 2.3,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 17.264198,
+     "provisional_kg": 2.459243,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "5",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "BLOCKED",
+     "why": "REMARKS token '2%%C12/30cm' captured; count per face / levels need the typical detail",
+     "source_raw": "2%%C12/30cm"
+    }
+   ],
+   "new_verified_kg": 123.288889,
+   "new_provisional_kg": 9.434552,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 144.868449,
+    "v3b_technical_kg": 130.264198
+   }
+  },
+  {
+   "occurrence": "BEAM:GF:B3:H1719",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:GF:B3:H1719|BOTTOM",
+    "POP:BEAM:GF:B3:H1719|TOP",
+    "POP:BEAM:GF:B3:H1719|STIRRUPS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 16,
+     "count": 4,
+     "count_convention": 4,
+     "verified_length_m": 2.5,
+     "provisional_length_m": 0.2,
+     "verified_kg": 15.802469,
+     "provisional_kg": 1.264198,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "4",
+      "BOT-D": "16"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 12,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 2.5,
+     "provisional_length_m": 0.2,
+     "verified_kg": 4.444444,
+     "provisional_kg": 0.355556,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "2",
+      "TOP-D": "12"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 15,
+     "count_convention": 16,
+     "verified_length_m": 1.0,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 5.925926,
+     "provisional_kg": 1.635543,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "6",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "NOT_REQUIRED",
+     "why": "depth 40 cm <= 60 (note 21)",
+     "source_raw": null
+    }
+   ],
+   "new_verified_kg": 26.17284,
+   "new_provisional_kg": 3.255296,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 32.261672,
+    "v3b_technical_kg": 27.792593
+   }
+  },
+  {
+   "occurrence": "BEAM:GF:B5:H1176",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:GF:B5:H1176|BOTTOM",
+    "POP:BEAM:GF:B5:H1176|TOP",
+    "POP:BEAM:GF:B5:H1176|STIRRUPS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 18,
+     "count": 4,
+     "count_convention": 4,
+     "verified_length_m": 3.61696,
+     "provisional_length_m": 0.684288,
+     "verified_kg": 28.93568,
+     "provisional_kg": 5.474304,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "4",
+      "BOT-D": "18"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 12,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 3.61696,
+     "provisional_length_m": 0.684288,
+     "verified_kg": 6.430151,
+     "provisional_kg": 1.216512,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "2",
+      "TOP-D": "12"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 22,
+     "count_convention": 23,
+     "verified_length_m": 1.2,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 10.42963,
+     "provisional_kg": 2.257266,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "6",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "NOT_REQUIRED",
+     "why": "depth 50 cm <= 60 (note 21)",
+     "source_raw": null
+    }
+   ],
+   "new_verified_kg": 45.795461,
+   "new_provisional_kg": 8.948082,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 58.655202,
+    "v3b_technical_kg": 52.486277
+   }
+  },
+  {
+   "occurrence": "BEAM:GF:B4:H1175",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:GF:B4:H1175|BOTTOM",
+    "POP:BEAM:GF:B4:H1175|TOP",
+    "POP:BEAM:GF:B4:H1175|STIRRUPS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 16,
+     "count": 4,
+     "count_convention": 4,
+     "verified_length_m": 2.964465,
+     "provisional_length_m": 0.809287,
+     "verified_kg": 18.738347,
+     "provisional_kg": 5.115493,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "4",
+      "BOT-D": "16"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 12,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 2.964465,
+     "provisional_length_m": 0.809287,
+     "verified_kg": 5.27016,
+     "provisional_kg": 1.438732,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "2",
+      "TOP-D": "12"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 18,
+     "count_convention": 19,
+     "verified_length_m": 1.2,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 8.533333,
+     "provisional_kg": 1.947145,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "6",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "NOT_REQUIRED",
+     "why": "depth 50 cm <= 60 (note 21)",
+     "source_raw": null
+    }
+   ],
+   "new_verified_kg": 32.54184,
+   "new_provisional_kg": 8.501371,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 43.797735,
+    "v3b_technical_kg": 39.096066
+   }
+  },
+  {
+   "occurrence": "BEAM:GF:B3:H6183",
+   "element_type": "BEAM",
+   "occurrence_state": "BLOCKED",
+   "why": "REBAR_BLOCKED_OCCURRENCE_NOT_MEASURED (BAND_TYPE_CONFLICT)",
+   "release_state": "BLOCKED",
+   "missing": [
+    "POP:BEAM:GF:B3:H6183|ALL"
+   ],
+   "components": [
+    {
+     "role": "ALL",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "BLOCKED",
+     "why": "REBAR_BLOCKED_OCCURRENCE_NOT_MEASURED (BAND_TYPE_CONFLICT)",
+     "source_raw": "BAND_TYPE_CONFLICT"
+    }
+   ],
+   "new_verified_kg": 0.0,
+   "new_provisional_kg": 0.0,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 0.0,
+    "v3b_technical_kg": 0.0
+   }
+  },
+  {
+   "occurrence": "BEAM:GF:B2:H1170",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:GF:B2:H1170|BOTTOM",
+    "POP:BEAM:GF:B2:H1170|TOP",
+    "POP:BEAM:GF:B2:H1170|STIRRUPS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 16,
+     "count": 3,
+     "count_convention": 3,
+     "verified_length_m": 2.7,
+     "provisional_length_m": 0.5,
+     "verified_kg": 12.8,
+     "provisional_kg": 2.37037,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "3",
+      "BOT-D": "16"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 12,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 2.7,
+     "provisional_length_m": 0.5,
+     "verified_kg": 4.8,
+     "provisional_kg": 0.888889,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "2",
+      "TOP-D": "12"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 17,
+     "count_convention": 18,
+     "verified_length_m": 1.0,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 6.716049,
+     "provisional_kg": 1.790603,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "6",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "NOT_REQUIRED",
+     "why": "depth 40 cm <= 60 (note 21)",
+     "source_raw": null
+    }
+   ],
+   "new_verified_kg": 24.316049,
+   "new_provisional_kg": 5.049862,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 31.516892,
+    "v3b_technical_kg": 27.575309
+   }
+  },
+  {
+   "occurrence": "BEAM:GF:B22:H1174",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:GF:B22:H1174|BOTTOM",
+    "POP:BEAM:GF:B22:H1174|TOP",
+    "POP:BEAM:GF:B22:H1174|STIRRUPS",
+    "POP:BEAM:GF:B22:H1174|SIDE_BARS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 18,
+     "count": 14,
+     "count_convention": 14,
+     "verified_length_m": 7.8,
+     "provisional_length_m": 0.25,
+     "verified_kg": 218.4,
+     "provisional_kg": 7.0,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "14",
+      "BOT-D": "18"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 14,
+     "count": 5,
+     "count_convention": 5,
+     "verified_length_m": 7.8,
+     "provisional_length_m": 0.25,
+     "verified_kg": 47.185185,
+     "provisional_kg": 1.512346,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "5",
+      "TOP-D": "14"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 39,
+     "count_convention": 40,
+     "verified_length_m": 2.3,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 35.437037,
+     "provisional_kg": 4.009845,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "5",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "BLOCKED",
+     "why": "REMARKS token '2%%C12/30cm' captured; count per face / levels need the typical detail",
+     "source_raw": "2%%C12/30cm"
+    }
+   ],
+   "new_verified_kg": 301.022222,
+   "new_provisional_kg": 12.522191,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 328.450292,
+    "v3b_technical_kg": 309.534568
+   }
+  },
+  {
+   "occurrence": "BEAM:GF:B14:H1119",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:GF:B14:H1119|BOTTOM",
+    "POP:BEAM:GF:B14:H1119|TOP",
+    "POP:BEAM:GF:B14:H1119|STIRRUPS",
+    "POP:BEAM:GF:B14:H1119|SIDE_BARS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 18,
+     "count": 4,
+     "count_convention": 4,
+     "verified_length_m": 1.8,
+     "provisional_length_m": 0.225,
+     "verified_kg": 14.4,
+     "provisional_kg": 1.8,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "4",
+      "BOT-D": "18"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 12,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 1.8,
+     "provisional_length_m": 0.225,
+     "verified_kg": 3.2,
+     "provisional_kg": 0.4,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "2",
+      "TOP-D": "12"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 13,
+     "count_convention": 14,
+     "verified_length_m": 1.7,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 8.730864,
+     "provisional_kg": 1.757026,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "7",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "BLOCKED",
+     "why": "REMARKS token '2%%C12/30cm' captured; count per face / levels need the typical detail",
+     "source_raw": "2%%C12/30cm"
+    }
+   ],
+   "new_verified_kg": 26.330864,
+   "new_provisional_kg": 3.957026,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 34.002019,
+    "v3b_technical_kg": 28.530864
+   }
+  },
+  {
+   "occurrence": "BEAM:GF:B1:H1095",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:GF:B1:H1095|BOTTOM",
+    "POP:BEAM:GF:B1:H1095|TOP",
+    "POP:BEAM:GF:B1:H1095|STIRRUPS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 14,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 1.75,
+     "provisional_length_m": 0.225,
+     "verified_kg": 4.234568,
+     "provisional_kg": 0.544444,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "2",
+      "BOT-D": "14"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 12,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 1.75,
+     "provisional_length_m": 0.225,
+     "verified_kg": 3.111111,
+     "provisional_kg": 0.4,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "2",
+      "TOP-D": "12"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 11,
+     "count_convention": 12,
+     "verified_length_m": 1.0,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 4.345679,
+     "provisional_kg": 1.325423,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "6",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "NOT_REQUIRED",
+     "why": "depth 40 cm <= 60 (note 21)",
+     "source_raw": null
+    }
+   ],
+   "new_verified_kg": 11.691358,
+   "new_provisional_kg": 2.269867,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 14.979054,
+    "v3b_technical_kg": 12.635802
+   }
+  },
+  {
+   "occurrence": "BEAM:GF:B1:H1207",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:GF:B1:H1207|BOTTOM",
+    "POP:BEAM:GF:B1:H1207|TOP",
+    "POP:BEAM:GF:B1:H1207|STIRRUPS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 14,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 0.7,
+     "provisional_length_m": 0.75,
+     "verified_kg": 1.693827,
+     "provisional_kg": 1.814815,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "2",
+      "BOT-D": "14"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 12,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 0.7,
+     "provisional_length_m": 0.75,
+     "verified_kg": 1.244444,
+     "provisional_kg": 1.333333,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "2",
+      "TOP-D": "12"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 5,
+     "count_convention": 6,
+     "verified_length_m": 1.0,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 1.975309,
+     "provisional_kg": 0.860242,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "6",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "NOT_REQUIRED",
+     "why": "depth 40 cm <= 60 (note 21)",
+     "source_raw": null
+    }
+   ],
+   "new_verified_kg": 4.91358,
+   "new_provisional_kg": 4.00839,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 9.939799,
+    "v3b_technical_kg": 8.061728
+   }
+  },
+  {
+   "occurrence": "BEAM:GF:B3:H1096",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:GF:B3:H1096|BOTTOM",
+    "POP:BEAM:GF:B3:H1096|TOP",
+    "POP:BEAM:GF:B3:H1096|STIRRUPS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 16,
+     "count": 4,
+     "count_convention": 4,
+     "verified_length_m": 2.95,
+     "provisional_length_m": 0.375,
+     "verified_kg": 18.646914,
+     "provisional_kg": 2.37037,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "4",
+      "BOT-D": "16"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 12,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 2.95,
+     "provisional_length_m": 0.375,
+     "verified_kg": 5.244444,
+     "provisional_kg": 0.666667,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "2",
+      "TOP-D": "12"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 18,
+     "count_convention": 19,
+     "verified_length_m": 1.0,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 7.111111,
+     "provisional_kg": 1.868133,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "6",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "NOT_REQUIRED",
+     "why": "depth 40 cm <= 60 (note 21)",
+     "source_raw": null
+    }
+   ],
+   "new_verified_kg": 31.002469,
+   "new_provisional_kg": 4.90517,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 38.741176,
+    "v3b_technical_kg": 34.039506
+   }
+  },
+  {
+   "occurrence": "BEAM:GF:B2:H1097",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:GF:B2:H1097|BOTTOM",
+    "POP:BEAM:GF:B2:H1097|TOP",
+    "POP:BEAM:GF:B2:H1097|STIRRUPS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 16,
+     "count": 3,
+     "count_convention": 3,
+     "verified_length_m": 2.7,
+     "provisional_length_m": 0.5,
+     "verified_kg": 12.8,
+     "provisional_kg": 2.37037,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "3",
+      "BOT-D": "16"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 12,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 2.7,
+     "provisional_length_m": 0.5,
+     "verified_kg": 4.8,
+     "provisional_kg": 0.888889,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "2",
+      "TOP-D": "12"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 17,
+     "count_convention": 18,
+     "verified_length_m": 1.0,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 6.716049,
+     "provisional_kg": 1.790603,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "6",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "NOT_REQUIRED",
+     "why": "depth 40 cm <= 60 (note 21)",
+     "source_raw": null
+    }
+   ],
+   "new_verified_kg": 24.316049,
+   "new_provisional_kg": 5.049862,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 31.516892,
+    "v3b_technical_kg": 27.575309
+   }
+  },
+  {
+   "occurrence": "BEAM:GF:B7:H1206",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:GF:B7:H1206|BOTTOM",
+    "POP:BEAM:GF:B7:H1206|TOP",
+    "POP:BEAM:GF:B7:H1206|STIRRUPS",
+    "POP:BEAM:GF:B7:H1206|SIDE_BARS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 16,
+     "count": 3,
+     "count_convention": 3,
+     "verified_length_m": 1.2,
+     "provisional_length_m": 0.5,
+     "verified_kg": 5.688889,
+     "provisional_kg": 2.37037,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "3",
+      "BOT-D": "16"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 12,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 1.2,
+     "provisional_length_m": 0.5,
+     "verified_kg": 2.133333,
+     "provisional_kg": 0.888889,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "2",
+      "TOP-D": "12"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 8,
+     "count_convention": 9,
+     "verified_length_m": 1.7,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 5.37284,
+     "provisional_kg": 1.369376,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "6",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "BLOCKED",
+     "why": "REMARKS token '2%%C12/30cm' captured; count per face / levels need the typical detail",
+     "source_raw": "2%%C12/30cm"
+    }
+   ],
+   "new_verified_kg": 13.195062,
+   "new_provisional_kg": 4.628635,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 19.698134,
+    "v3b_technical_kg": 16.454321
+   }
+  },
+  {
+   "occurrence": "BEAM:GF:B1:H1118",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:GF:B1:H1118|BOTTOM",
+    "POP:BEAM:GF:B1:H1118|TOP",
+    "POP:BEAM:GF:B1:H1118|STIRRUPS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 14,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 1.8,
+     "provisional_length_m": 0.2,
+     "verified_kg": 4.355556,
+     "provisional_kg": 0.483951,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "2",
+      "BOT-D": "14"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 12,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 1.8,
+     "provisional_length_m": 0.2,
+     "verified_kg": 3.2,
+     "provisional_kg": 0.355556,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "2",
+      "TOP-D": "12"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 11,
+     "count_convention": 12,
+     "verified_length_m": 1.0,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 4.345679,
+     "provisional_kg": 1.325423,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "6",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "NOT_REQUIRED",
+     "why": "depth 40 cm <= 60 (note 21)",
+     "source_raw": null
+    }
+   ],
+   "new_verified_kg": 11.901235,
+   "new_provisional_kg": 2.164929,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 15.083992,
+    "v3b_technical_kg": 12.740741
+   }
+  },
+  {
+   "occurrence": "BEAM:GF:B1:H1142",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:GF:B1:H1142|BOTTOM",
+    "POP:BEAM:GF:B1:H1142|TOP",
+    "POP:BEAM:GF:B1:H1142|STIRRUPS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 14,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 1.625,
+     "provisional_length_m": 0.25,
+     "verified_kg": 3.932099,
+     "provisional_kg": 0.604938,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "2",
+      "BOT-D": "14"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 12,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 1.625,
+     "provisional_length_m": 0.25,
+     "verified_kg": 2.888889,
+     "provisional_kg": 0.444444,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "2",
+      "TOP-D": "12"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 10,
+     "count_convention": 11,
+     "verified_length_m": 1.0,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 3.950617,
+     "provisional_kg": 1.247893,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "6",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "NOT_REQUIRED",
+     "why": "depth 40 cm <= 60 (note 21)",
+     "source_raw": null
+    }
+   ],
+   "new_verified_kg": 10.771605,
+   "new_provisional_kg": 2.297275,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 14.086709,
+    "v3b_technical_kg": 11.820988
+   }
+  },
+  {
+   "occurrence": "BEAM:GF:B1:H1143",
+   "element_type": "BEAM",
+   "occurrence_state": "BLOCKED",
+   "why": "REBAR_BLOCKED_LENGTH_MISSING",
+   "release_state": "BLOCKED",
+   "missing": [
+    "POP:BEAM:GF:B1:H1143|ALL"
+   ],
+   "components": [
+    {
+     "role": "ALL",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "BLOCKED",
+     "why": "REBAR_BLOCKED_LENGTH_MISSING",
+     "source_raw": "MEASURED"
+    }
+   ],
+   "new_verified_kg": 0.0,
+   "new_provisional_kg": 0.0,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 0.0,
+    "v3b_technical_kg": 0.0
+   }
+  },
+  {
+   "occurrence": "BEAM:GF:B9:H1469",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:GF:B9:H1469|BOTTOM",
+    "POP:BEAM:GF:B9:H1469|TOP",
+    "POP:BEAM:GF:B9:H1469|STIRRUPS",
+    "POP:BEAM:GF:B9:H1469|SIDE_BARS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 18,
+     "count": 4,
+     "count_convention": 4,
+     "verified_length_m": 6.0,
+     "provisional_length_m": 0.4,
+     "verified_kg": 48.0,
+     "provisional_kg": 3.2,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "4",
+      "BOT-D": "18"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 12,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 6.0,
+     "provisional_length_m": 0.4,
+     "verified_kg": 10.666667,
+     "provisional_kg": 0.711111,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "2",
+      "TOP-D": "12"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 36,
+     "count_convention": 37,
+     "verified_length_m": 1.7,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 24.177778,
+     "provisional_kg": 3.540218,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "6",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "BLOCKED",
+     "why": "REMARKS token '2%%C12/30cm' captured; count per face / levels need the typical detail",
+     "source_raw": "2%%C12/30cm"
+    }
+   ],
+   "new_verified_kg": 82.844444,
+   "new_provisional_kg": 7.451329,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 94.009902,
+    "v3b_technical_kg": 86.755556
+   }
+  },
+  {
+   "occurrence": "BEAM:GF:B4:H1288",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:GF:B4:H1288|BOTTOM",
+    "POP:BEAM:GF:B4:H1288|TOP",
+    "POP:BEAM:GF:B4:H1288|STIRRUPS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 16,
+     "count": 4,
+     "count_convention": 4,
+     "verified_length_m": 4.5,
+     "provisional_length_m": 0.2,
+     "verified_kg": 28.444444,
+     "provisional_kg": 1.264198,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "4",
+      "BOT-D": "16"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 12,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 4.5,
+     "provisional_length_m": 0.2,
+     "verified_kg": 8.0,
+     "provisional_kg": 0.355556,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "2",
+      "TOP-D": "12"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 27,
+     "count_convention": 28,
+     "verified_length_m": 1.2,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 12.8,
+     "provisional_kg": 2.644916,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "6",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "NOT_REQUIRED",
+     "why": "depth 50 cm <= 60 (note 21)",
+     "source_raw": null
+    }
+   ],
+   "new_verified_kg": 49.244444,
+   "new_provisional_kg": 4.264669,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 56.263638,
+    "v3b_technical_kg": 50.864198
+   }
+  },
+  {
+   "occurrence": "BEAM:GF:B1:H1144",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:GF:B1:H1144|BOTTOM",
+    "POP:BEAM:GF:B1:H1144|TOP",
+    "POP:BEAM:GF:B1:H1144|STIRRUPS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 14,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 1.3,
+     "provisional_length_m": 0.35,
+     "verified_kg": 3.145679,
+     "provisional_kg": 0.846914,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "2",
+      "BOT-D": "14"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 12,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 1.3,
+     "provisional_length_m": 0.35,
+     "verified_kg": 2.311111,
+     "provisional_kg": 0.622222,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "2",
+      "TOP-D": "12"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 8,
+     "count_convention": 9,
+     "verified_length_m": 1.0,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 3.160494,
+     "provisional_kg": 1.092832,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "6",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "NOT_REQUIRED",
+     "why": "depth 40 cm <= 60 (note 21)",
+     "source_raw": null
+    }
+   ],
+   "new_verified_kg": 8.617284,
+   "new_provisional_kg": 2.561968,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 12.197081,
+    "v3b_technical_kg": 10.08642
+   }
+  },
+  {
+   "occurrence": "BEAM:GF:B2:H1157",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:GF:B2:H1157|BOTTOM",
+    "POP:BEAM:GF:B2:H1157|TOP",
+    "POP:BEAM:GF:B2:H1157|STIRRUPS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 16,
+     "count": 3,
+     "count_convention": 3,
+     "verified_length_m": 2.6,
+     "provisional_length_m": 0.2,
+     "verified_kg": 12.325926,
+     "provisional_kg": 0.948148,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "3",
+      "BOT-D": "16"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 12,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 2.6,
+     "provisional_length_m": 0.2,
+     "verified_kg": 4.622222,
+     "provisional_kg": 0.355556,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "2",
+      "TOP-D": "12"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 16,
+     "count_convention": 17,
+     "verified_length_m": 1.0,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 6.320988,
+     "provisional_kg": 1.713073,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "6",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "NOT_REQUIRED",
+     "why": "depth 40 cm <= 60 (note 21)",
+     "source_raw": null
+    }
+   ],
+   "new_verified_kg": 23.269136,
+   "new_provisional_kg": 3.016777,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 28.436893,
+    "v3b_technical_kg": 24.57284
+   }
+  },
+  {
+   "occurrence": "BEAM:GF:B28:H1132",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:GF:B28:H1132|BOTTOM",
+    "POP:BEAM:GF:B28:H1132|TOP",
+    "POP:BEAM:GF:B28:H1132|STIRRUPS",
+    "POP:BEAM:GF:B28:H1132|SIDE_BARS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 16,
+     "count": 3,
+     "count_convention": 3,
+     "verified_length_m": 0.80486,
+     "provisional_length_m": 0.675,
+     "verified_kg": 3.815633,
+     "provisional_kg": 3.2,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "3",
+      "BOT-D": "16"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 14,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 0.80486,
+     "provisional_length_m": 0.675,
+     "verified_kg": 1.947562,
+     "provisional_kg": 1.633333,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "2",
+      "TOP-D": "14"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 10,
+     "count": 9,
+     "count_convention": 10,
+     "verified_length_m": 1.8,
+     "provisional_length_m": 0.20781,
+     "verified_kg": 10.0,
+     "provisional_kg": 2.393889,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "10",
+      "D": "10"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "BLOCKED",
+     "why": "REMARKS token '2%%C12/30cm' captured; count per face / levels need the typical detail",
+     "source_raw": "2%%C12/30cm"
+    }
+   ],
+   "new_verified_kg": 15.763195,
+   "new_provisional_kg": 7.227222,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 24.713213,
+    "v3b_technical_kg": 20.596528
+   }
+  },
+  {
+   "occurrence": "BEAM:GF:B1:H1072",
+   "element_type": "BEAM",
+   "occurrence_state": "BLOCKED",
+   "why": "REBAR_BLOCKED_LENGTH_MISSING",
+   "release_state": "BLOCKED",
+   "missing": [
+    "POP:BEAM:GF:B1:H1072|ALL"
+   ],
+   "components": [
+    {
+     "role": "ALL",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "BLOCKED",
+     "why": "REBAR_BLOCKED_LENGTH_MISSING",
+     "source_raw": "MEASURED"
+    }
+   ],
+   "new_verified_kg": 0.0,
+   "new_provisional_kg": 0.0,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 0.0,
+    "v3b_technical_kg": 0.0
+   }
+  },
+  {
+   "occurrence": "BEAM:GF:B17:H1074",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:GF:B17:H1074|BOTTOM",
+    "POP:BEAM:GF:B17:H1074|TOP",
+    "POP:BEAM:GF:B17:H1074|STIRRUPS",
+    "POP:BEAM:GF:B17:H1074|SIDE_BARS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 18,
+     "count": 10,
+     "count_convention": 10,
+     "verified_length_m": 5.475,
+     "provisional_length_m": 0.3,
+     "verified_kg": 109.5,
+     "provisional_kg": 6.0,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "10",
+      "BOT-D": "18"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 14,
+     "count": 4,
+     "count_convention": 4,
+     "verified_length_m": 5.475,
+     "provisional_length_m": 0.3,
+     "verified_kg": 26.496296,
+     "provisional_kg": 1.451852,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "4",
+      "TOP-D": "14"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 33,
+     "count_convention": 34,
+     "verified_length_m": 2.2,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 28.681481,
+     "provisional_kg": 3.505158,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "6",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "BLOCKED",
+     "why": "REMARKS token '2%%C12/30cm' captured; count per face / levels need the typical detail",
+     "source_raw": "2%%C12/30cm"
+    }
+   ],
+   "new_verified_kg": 164.677778,
+   "new_provisional_kg": 10.95701,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 186.235555,
+    "v3b_technical_kg": 172.12963
+   }
+  },
+  {
+   "occurrence": "BEAM:GF:B4:H1131",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:GF:B4:H1131|BOTTOM",
+    "POP:BEAM:GF:B4:H1131|TOP",
+    "POP:BEAM:GF:B4:H1131|STIRRUPS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 16,
+     "count": 4,
+     "count_convention": 4,
+     "verified_length_m": 1.97986,
+     "provisional_length_m": 0.325,
+     "verified_kg": 12.514671,
+     "provisional_kg": 2.054321,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "4",
+      "BOT-D": "16"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 12,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 1.97986,
+     "provisional_length_m": 0.325,
+     "verified_kg": 3.519751,
+     "provisional_kg": 0.577778,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "2",
+      "TOP-D": "12"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 12,
+     "count_convention": 13,
+     "verified_length_m": 1.2,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 5.688889,
+     "provisional_kg": 1.481965,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "6",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "NOT_REQUIRED",
+     "why": "depth 50 cm <= 60 (note 21)",
+     "source_raw": null
+    }
+   ],
+   "new_verified_kg": 21.723311,
+   "new_provisional_kg": 4.114064,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 28.591898,
+    "v3b_technical_kg": 24.355409
+   }
+  },
+  {
+   "occurrence": "BEAM:GF:B27:H1330",
+   "element_type": "BEAM",
+   "occurrence_state": "BLOCKED",
+   "why": "REBAR_BLOCKED_LENGTH_MISSING",
+   "release_state": "BLOCKED",
+   "missing": [
+    "POP:BEAM:GF:B27:H1330|ALL"
+   ],
+   "components": [
+    {
+     "role": "ALL",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "BLOCKED",
+     "why": "REBAR_BLOCKED_LENGTH_MISSING",
+     "source_raw": "MEASURED"
+    }
+   ],
+   "new_verified_kg": 0.0,
+   "new_provisional_kg": 0.0,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 0.0,
+    "v3b_technical_kg": 0.0
+   }
+  },
+  {
+   "occurrence": "BEAM:GF:B26:H1228",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:GF:B26:H1228|BOTTOM",
+    "POP:BEAM:GF:B26:H1228|TOP",
+    "POP:BEAM:GF:B26:H1228|STIRRUPS",
+    "POP:BEAM:GF:B26:H1228|SIDE_BARS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 18,
+     "count": 19,
+     "count_convention": 19,
+     "verified_length_m": 5.476847,
+     "provisional_length_m": 0.439624,
+     "verified_kg": 208.120186,
+     "provisional_kg": 16.705712,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "19",
+      "BOT-D": "18"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 14,
+     "count": 6,
+     "count_convention": 6,
+     "verified_length_m": 5.476847,
+     "provisional_length_m": 0.439624,
+     "verified_kg": 39.757852,
+     "provisional_kg": 3.191345,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "6",
+      "TOP-D": "14"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 10,
+     "count": 55,
+     "count_convention": 56,
+     "verified_length_m": 2.8,
+     "provisional_length_m": 0.20781,
+     "verified_kg": 95.061728,
+     "provisional_kg": 8.911951,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "10",
+      "D": "10"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "BLOCKED",
+     "why": "REMARKS token '2%%C16/20cm' captured; count per face / levels need the typical detail",
+     "source_raw": "2%%C16/20cm"
+    }
+   ],
+   "new_verified_kg": 342.939767,
+   "new_provisional_kg": 28.809007,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 391.100611,
+    "v3b_technical_kg": 362.836823
+   }
+  },
+  {
+   "occurrence": "BEAM:1F:B3:H1721",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:1F:B3:H1721|BOTTOM",
+    "POP:BEAM:1F:B3:H1721|TOP",
+    "POP:BEAM:1F:B3:H1721|STIRRUPS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 16,
+     "count": 4,
+     "count_convention": 4,
+     "verified_length_m": 2.5,
+     "provisional_length_m": 0.2,
+     "verified_kg": 15.802469,
+     "provisional_kg": 1.264198,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "4",
+      "BOT-D": "16"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 12,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 2.5,
+     "provisional_length_m": 0.2,
+     "verified_kg": 4.444444,
+     "provisional_kg": 0.355556,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "2",
+      "TOP-D": "12"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 15,
+     "count_convention": 16,
+     "verified_length_m": 1.0,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 5.925926,
+     "provisional_kg": 1.635543,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "6",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "NOT_REQUIRED",
+     "why": "depth 40 cm <= 60 (note 21)",
+     "source_raw": null
+    }
+   ],
+   "new_verified_kg": 26.17284,
+   "new_provisional_kg": 3.255296,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 32.261672,
+    "v3b_technical_kg": 27.792593
+   }
+  },
+  {
+   "occurrence": "BEAM:1F:B4:H1809",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:1F:B4:H1809|BOTTOM",
+    "POP:BEAM:1F:B4:H1809|TOP",
+    "POP:BEAM:1F:B4:H1809|STIRRUPS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 16,
+     "count": 4,
+     "count_convention": 4,
+     "verified_length_m": 4.061731,
+     "provisional_length_m": 0.2,
+     "verified_kg": 25.674152,
+     "provisional_kg": 1.264198,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "4",
+      "BOT-D": "16"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 12,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 4.061731,
+     "provisional_length_m": 0.2,
+     "verified_kg": 7.220855,
+     "provisional_kg": 0.355556,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "2",
+      "TOP-D": "12"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 25,
+     "count_convention": 26,
+     "verified_length_m": 1.2,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 11.851852,
+     "provisional_kg": 2.489856,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "6",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "NOT_REQUIRED",
+     "why": "depth 50 cm <= 60 (note 21)",
+     "source_raw": null
+    }
+   ],
+   "new_verified_kg": 44.746858,
+   "new_provisional_kg": 4.109609,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 51.610992,
+    "v3b_technical_kg": 46.366612
+   }
+  },
+  {
+   "occurrence": "BEAM:1F:B7:H1740",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:1F:B7:H1740|BOTTOM",
+    "POP:BEAM:1F:B7:H1740|TOP",
+    "POP:BEAM:1F:B7:H1740|STIRRUPS",
+    "POP:BEAM:1F:B7:H1740|SIDE_BARS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 16,
+     "count": 3,
+     "count_convention": 3,
+     "verified_length_m": 1.8,
+     "provisional_length_m": 0.225,
+     "verified_kg": 8.533333,
+     "provisional_kg": 1.066667,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "3",
+      "BOT-D": "16"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 12,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 1.8,
+     "provisional_length_m": 0.225,
+     "verified_kg": 3.2,
+     "provisional_kg": 0.4,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "2",
+      "TOP-D": "12"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 11,
+     "count_convention": 12,
+     "verified_length_m": 1.7,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 7.387654,
+     "provisional_kg": 1.601966,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "6",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "BLOCKED",
+     "why": "REMARKS token '2%%C12/30cm' captured; count per face / levels need the typical detail",
+     "source_raw": "2%%C12/30cm"
+    }
+   ],
+   "new_verified_kg": 19.120988,
+   "new_provisional_kg": 3.068632,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 24.064057,
+    "v3b_technical_kg": 20.587654
+   }
+  },
+  {
+   "occurrence": "BEAM:1F:B1:H1742",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:1F:B1:H1742|BOTTOM",
+    "POP:BEAM:1F:B1:H1742|TOP",
+    "POP:BEAM:1F:B1:H1742|STIRRUPS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 14,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 0.7,
+     "provisional_length_m": 0.75,
+     "verified_kg": 1.693827,
+     "provisional_kg": 1.814815,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "2",
+      "BOT-D": "14"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 12,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 0.7,
+     "provisional_length_m": 0.75,
+     "verified_kg": 1.244444,
+     "provisional_kg": 1.333333,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "2",
+      "TOP-D": "12"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 5,
+     "count_convention": 6,
+     "verified_length_m": 1.0,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 1.975309,
+     "provisional_kg": 0.860242,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "6",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "NOT_REQUIRED",
+     "why": "depth 40 cm <= 60 (note 21)",
+     "source_raw": null
+    }
+   ],
+   "new_verified_kg": 4.91358,
+   "new_provisional_kg": 4.00839,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 9.939799,
+    "v3b_technical_kg": 8.061728
+   }
+  },
+  {
+   "occurrence": "BEAM:1F:B2:H1737",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:1F:B2:H1737|BOTTOM",
+    "POP:BEAM:1F:B2:H1737|TOP",
+    "POP:BEAM:1F:B2:H1737|STIRRUPS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 16,
+     "count": 3,
+     "count_convention": 3,
+     "verified_length_m": 3.0,
+     "provisional_length_m": 0.35,
+     "verified_kg": 14.222222,
+     "provisional_kg": 1.659259,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "3",
+      "BOT-D": "16"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 12,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 3.0,
+     "provisional_length_m": 0.35,
+     "verified_kg": 5.333333,
+     "provisional_kg": 0.622222,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "2",
+      "TOP-D": "12"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 18,
+     "count_convention": 19,
+     "verified_length_m": 1.0,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 7.111111,
+     "provisional_kg": 1.868133,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "6",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "NOT_REQUIRED",
+     "why": "depth 40 cm <= 60 (note 21)",
+     "source_raw": null
+    }
+   ],
+   "new_verified_kg": 26.666667,
+   "new_provisional_kg": 4.149615,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 32.967262,
+    "v3b_technical_kg": 28.948148
+   }
+  },
+  {
+   "occurrence": "BEAM:1F:B18:H1773",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:1F:B18:H1773|BOTTOM",
+    "POP:BEAM:1F:B18:H1773|TOP",
+    "POP:BEAM:1F:B18:H1773|STIRRUPS",
+    "POP:BEAM:1F:B18:H1773|SIDE_BARS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 18,
+     "count": 10,
+     "count_convention": 10,
+     "verified_length_m": 6.3,
+     "provisional_length_m": 0.65,
+     "verified_kg": 126.0,
+     "provisional_kg": 13.0,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "10",
+      "BOT-D": "18"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 14,
+     "count": 3,
+     "count_convention": 3,
+     "verified_length_m": 6.3,
+     "provisional_length_m": 0.65,
+     "verified_kg": 22.866667,
+     "provisional_kg": 2.359259,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "3",
+      "TOP-D": "14"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 32,
+     "count_convention": 33,
+     "verified_length_m": 2.0,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 25.283951,
+     "provisional_kg": 3.348616,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "5",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "BLOCKED",
+     "why": "REMARKS token '2%%C12/30cm' captured; count per face / levels need the typical detail",
+     "source_raw": "2%%C12/30cm"
+    }
+   ],
+   "new_verified_kg": 174.150617,
+   "new_provisional_kg": 18.707875,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 203.081014,
+    "v3b_technical_kg": 189.509877
+   }
+  },
+  {
+   "occurrence": "BEAM:1F:B1:H1744",
+   "element_type": "BEAM",
+   "occurrence_state": "BLOCKED",
+   "why": "REBAR_BLOCKED_LENGTH_MISSING",
+   "release_state": "BLOCKED",
+   "missing": [
+    "POP:BEAM:1F:B1:H1744|ALL"
+   ],
+   "components": [
+    {
+     "role": "ALL",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "BLOCKED",
+     "why": "REBAR_BLOCKED_LENGTH_MISSING",
+     "source_raw": "MEASURED"
+    }
+   ],
+   "new_verified_kg": 0.0,
+   "new_provisional_kg": 0.0,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 0.0,
+    "v3b_technical_kg": 0.0
+   }
+  },
+  {
+   "occurrence": "BEAM:1F:B2:H1738",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:1F:B2:H1738|BOTTOM",
+    "POP:BEAM:1F:B2:H1738|TOP",
+    "POP:BEAM:1F:B2:H1738|STIRRUPS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 16,
+     "count": 3,
+     "count_convention": 3,
+     "verified_length_m": 2.7,
+     "provisional_length_m": 0.5,
+     "verified_kg": 12.8,
+     "provisional_kg": 2.37037,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "3",
+      "BOT-D": "16"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 12,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 2.7,
+     "provisional_length_m": 0.5,
+     "verified_kg": 4.8,
+     "provisional_kg": 0.888889,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "2",
+      "TOP-D": "12"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 17,
+     "count_convention": 18,
+     "verified_length_m": 1.0,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 6.716049,
+     "provisional_kg": 1.790603,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "6",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "NOT_REQUIRED",
+     "why": "depth 40 cm <= 60 (note 21)",
+     "source_raw": null
+    }
+   ],
+   "new_verified_kg": 24.316049,
+   "new_provisional_kg": 5.049862,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 31.516892,
+    "v3b_technical_kg": 27.575309
+   }
+  },
+  {
+   "occurrence": "BEAM:1F:B7:H1741",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:1F:B7:H1741|BOTTOM",
+    "POP:BEAM:1F:B7:H1741|TOP",
+    "POP:BEAM:1F:B7:H1741|STIRRUPS",
+    "POP:BEAM:1F:B7:H1741|SIDE_BARS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 16,
+     "count": 3,
+     "count_convention": 3,
+     "verified_length_m": 1.2,
+     "provisional_length_m": 0.5,
+     "verified_kg": 5.688889,
+     "provisional_kg": 2.37037,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "3",
+      "BOT-D": "16"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 12,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 1.2,
+     "provisional_length_m": 0.5,
+     "verified_kg": 2.133333,
+     "provisional_kg": 0.888889,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "2",
+      "TOP-D": "12"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 8,
+     "count_convention": 9,
+     "verified_length_m": 1.7,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 5.37284,
+     "provisional_kg": 1.369376,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "6",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "BLOCKED",
+     "why": "REMARKS token '2%%C12/30cm' captured; count per face / levels need the typical detail",
+     "source_raw": "2%%C12/30cm"
+    }
+   ],
+   "new_verified_kg": 13.195062,
+   "new_provisional_kg": 4.628635,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 19.698134,
+    "v3b_technical_kg": 16.454321
+   }
+  },
+  {
+   "occurrence": "BEAM:1F:B1:H1739",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:1F:B1:H1739|BOTTOM",
+    "POP:BEAM:1F:B1:H1739|TOP",
+    "POP:BEAM:1F:B1:H1739|STIRRUPS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 14,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 1.8,
+     "provisional_length_m": 0.2,
+     "verified_kg": 4.355556,
+     "provisional_kg": 0.483951,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "2",
+      "BOT-D": "14"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 12,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 1.8,
+     "provisional_length_m": 0.2,
+     "verified_kg": 3.2,
+     "provisional_kg": 0.355556,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "2",
+      "TOP-D": "12"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 11,
+     "count_convention": 12,
+     "verified_length_m": 1.0,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 4.345679,
+     "provisional_kg": 1.325423,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "6",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "NOT_REQUIRED",
+     "why": "depth 40 cm <= 60 (note 21)",
+     "source_raw": null
+    }
+   ],
+   "new_verified_kg": 11.901235,
+   "new_provisional_kg": 2.164929,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 15.083992,
+    "v3b_technical_kg": 12.740741
+   }
+  },
+  {
+   "occurrence": "BEAM:1F:B2:H1722",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:1F:B2:H1722|BOTTOM",
+    "POP:BEAM:1F:B2:H1722|TOP",
+    "POP:BEAM:1F:B2:H1722|STIRRUPS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 16,
+     "count": 3,
+     "count_convention": 3,
+     "verified_length_m": 2.7,
+     "provisional_length_m": 0.5,
+     "verified_kg": 12.8,
+     "provisional_kg": 2.37037,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "3",
+      "BOT-D": "16"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 12,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 2.7,
+     "provisional_length_m": 0.5,
+     "verified_kg": 4.8,
+     "provisional_kg": 0.888889,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "2",
+      "TOP-D": "12"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 17,
+     "count_convention": 18,
+     "verified_length_m": 1.0,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 6.716049,
+     "provisional_kg": 1.790603,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "6",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "NOT_REQUIRED",
+     "why": "depth 40 cm <= 60 (note 21)",
+     "source_raw": null
+    }
+   ],
+   "new_verified_kg": 24.316049,
+   "new_provisional_kg": 5.049862,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 31.516892,
+    "v3b_technical_kg": 27.575309
+   }
+  },
+  {
+   "occurrence": "BEAM:1F:B23:H1867",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:1F:B23:H1867|BOTTOM",
+    "POP:BEAM:1F:B23:H1867|TOP",
+    "POP:BEAM:1F:B23:H1867|STIRRUPS",
+    "POP:BEAM:1F:B23:H1867|SIDE_BARS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 18,
+     "count": 11,
+     "count_convention": 11,
+     "verified_length_m": 3.575,
+     "provisional_length_m": 0.225,
+     "verified_kg": 78.65,
+     "provisional_kg": 4.95,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "11",
+      "BOT-D": "18"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 18,
+     "count": 11,
+     "count_convention": 11,
+     "verified_length_m": 3.575,
+     "provisional_length_m": 0.225,
+     "verified_kg": 78.65,
+     "provisional_kg": 4.95,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "11",
+      "TOP-D": "18"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 36,
+     "count_convention": 37,
+     "verified_length_m": 2.2,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 31.288889,
+     "provisional_kg": 3.737749,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "10",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "BLOCKED",
+     "why": "REMARKS token '2%%C12/30cm' captured; count per face / levels need the typical detail",
+     "source_raw": "2%%C12/30cm"
+    }
+   ],
+   "new_verified_kg": 188.588889,
+   "new_provisional_kg": 13.637749,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 222.660452,
+    "v3b_technical_kg": 198.488889
+   }
+  },
+  {
+   "occurrence": "BEAM:1F:B19:H1743",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:1F:B19:H1743|BOTTOM",
+    "POP:BEAM:1F:B19:H1743|TOP",
+    "POP:BEAM:1F:B19:H1743|STIRRUPS",
+    "POP:BEAM:1F:B19:H1743|SIDE_BARS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 18,
+     "count": 11,
+     "count_convention": 11,
+     "verified_length_m": 2.971583,
+     "provisional_length_m": 0.226646,
+     "verified_kg": 65.374826,
+     "provisional_kg": 4.986212,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "11",
+      "BOT-D": "18"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 14,
+     "count": 4,
+     "count_convention": 4,
+     "verified_length_m": 2.971583,
+     "provisional_length_m": 0.226646,
+     "verified_kg": 14.380994,
+     "provisional_kg": 1.096855,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "4",
+      "TOP-D": "14"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 10,
+     "count": 30,
+     "count_convention": 31,
+     "verified_length_m": 2.1,
+     "provisional_length_m": 0.20781,
+     "verified_kg": 38.888889,
+     "provisional_kg": 5.272907,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "10",
+      "D": "10"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "BLOCKED",
+     "why": "REMARKS token '2%%C14/20cm' captured; count per face / levels need the typical detail",
+     "source_raw": "2%%C14/20cm"
+    }
+   ],
+   "new_verified_kg": 118.644709,
+   "new_provisional_kg": 11.355974,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 141.095382,
+    "v3b_technical_kg": 124.727776
+   }
+  },
+  {
+   "occurrence": "BEAM:1F:B4:H1717",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:1F:B4:H1717|BOTTOM",
+    "POP:BEAM:1F:B4:H1717|TOP",
+    "POP:BEAM:1F:B4:H1717|STIRRUPS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 16,
+     "count": 4,
+     "count_convention": 4,
+     "verified_length_m": 4.1,
+     "provisional_length_m": 0.225,
+     "verified_kg": 25.916049,
+     "provisional_kg": 1.422222,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "4",
+      "BOT-D": "16"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 12,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 4.1,
+     "provisional_length_m": 0.225,
+     "verified_kg": 7.288889,
+     "provisional_kg": 0.4,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "2",
+      "TOP-D": "12"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 25,
+     "count_convention": 26,
+     "verified_length_m": 1.2,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 11.851852,
+     "provisional_kg": 2.489856,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "6",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "NOT_REQUIRED",
+     "why": "depth 50 cm <= 60 (note 21)",
+     "source_raw": null
+    }
+   ],
+   "new_verified_kg": 45.05679,
+   "new_provisional_kg": 4.312078,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 52.123392,
+    "v3b_technical_kg": 46.879012
+   }
+  },
+  {
+   "occurrence": "BEAM:1F:B6:H1725",
+   "element_type": "BEAM",
+   "occurrence_state": "BLOCKED",
+   "why": "REBAR_BLOCKED_LENGTH_MISSING",
+   "release_state": "BLOCKED",
+   "missing": [
+    "POP:BEAM:1F:B6:H1725|ALL"
+   ],
+   "components": [
+    {
+     "role": "ALL",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "BLOCKED",
+     "why": "REBAR_BLOCKED_LENGTH_MISSING",
+     "source_raw": "MEASURED"
+    }
+   ],
+   "new_verified_kg": 0.0,
+   "new_provisional_kg": 0.0,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 0.0,
+    "v3b_technical_kg": 0.0
+   }
+  },
+  {
+   "occurrence": "BEAM:1F:B4:H1753",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:1F:B4:H1753|BOTTOM",
+    "POP:BEAM:1F:B4:H1753|TOP",
+    "POP:BEAM:1F:B4:H1753|STIRRUPS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 16,
+     "count": 4,
+     "count_convention": 4,
+     "verified_length_m": 4.3,
+     "provisional_length_m": 0.325,
+     "verified_kg": 27.180247,
+     "provisional_kg": 2.054321,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "4",
+      "BOT-D": "16"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 12,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 4.3,
+     "provisional_length_m": 0.325,
+     "verified_kg": 7.644444,
+     "provisional_kg": 0.577778,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "2",
+      "TOP-D": "12"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 26,
+     "count_convention": 27,
+     "verified_length_m": 1.2,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 12.325926,
+     "provisional_kg": 2.567386,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "6",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "NOT_REQUIRED",
+     "why": "depth 50 cm <= 60 (note 21)",
+     "source_raw": null
+    }
+   ],
+   "new_verified_kg": 47.150617,
+   "new_provisional_kg": 5.199485,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 55.104626,
+    "v3b_technical_kg": 49.782716
+   }
+  },
+  {
+   "occurrence": "BEAM:1F:B25:H1745",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:1F:B25:H1745|BOTTOM",
+    "POP:BEAM:1F:B25:H1745|TOP",
+    "POP:BEAM:1F:B25:H1745|STIRRUPS",
+    "POP:BEAM:1F:B25:H1745|SIDE_BARS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 18,
+     "count": 15,
+     "count_convention": 15,
+     "verified_length_m": 6.90869,
+     "provisional_length_m": 0.351463,
+     "verified_kg": 207.2607,
+     "provisional_kg": 10.54389,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "15",
+      "BOT-D": "18"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 14,
+     "count": 5,
+     "count_convention": 5,
+     "verified_length_m": 6.90869,
+     "provisional_length_m": 0.351463,
+     "verified_kg": 41.79331,
+     "provisional_kg": 2.126134,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "5",
+      "TOP-D": "14"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 42,
+     "count_convention": 43,
+     "verified_length_m": 2.4,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 39.822222,
+     "provisional_kg": 4.281941,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "6",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "BLOCKED",
+     "why": "REMARKS token '2%%C12/30cm' captured; count per face / levels need the typical detail",
+     "source_raw": "2%%C12/30cm"
+    }
+   ],
+   "new_verified_kg": 288.876232,
+   "new_provisional_kg": 16.951966,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 321.666411,
+    "v3b_technical_kg": 301.546256
+   }
+  },
+  {
+   "occurrence": "BEAM:1F:B11:H1752",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:1F:B11:H1752|BOTTOM",
+    "POP:BEAM:1F:B11:H1752|TOP",
+    "POP:BEAM:1F:B11:H1752|STIRRUPS",
+    "POP:BEAM:1F:B11:H1752|SIDE_BARS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 18,
+     "count": 6,
+     "count_convention": 6,
+     "verified_length_m": 4.747817,
+     "provisional_length_m": 0.45,
+     "verified_kg": 56.973804,
+     "provisional_kg": 5.4,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "6",
+      "BOT-D": "18"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 12,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 4.747817,
+     "provisional_length_m": 0.45,
+     "verified_kg": 8.440564,
+     "provisional_kg": 0.8,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "2",
+      "TOP-D": "12"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 29,
+     "count_convention": 30,
+     "verified_length_m": 1.7,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 19.476543,
+     "provisional_kg": 2.997507,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "6",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "BLOCKED",
+     "why": "REMARKS token '2%%C12/30cm' captured; count per face / levels need the typical detail",
+     "source_raw": "2%%C12/30cm"
+    }
+   ],
+   "new_verified_kg": 84.890911,
+   "new_provisional_kg": 9.197507,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 99.746227,
+    "v3b_technical_kg": 91.090911
+   }
+  },
+  {
+   "occurrence": "BEAM:1F:B5:H1732",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:1F:B5:H1732|BOTTOM",
+    "POP:BEAM:1F:B5:H1732|TOP",
+    "POP:BEAM:1F:B5:H1732|STIRRUPS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 18,
+     "count": 4,
+     "count_convention": 4,
+     "verified_length_m": 3.525,
+     "provisional_length_m": 0.6,
+     "verified_kg": 28.2,
+     "provisional_kg": 4.8,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "4",
+      "BOT-D": "18"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 12,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 3.525,
+     "provisional_length_m": 0.6,
+     "verified_kg": 6.266667,
+     "provisional_kg": 1.066667,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "2",
+      "TOP-D": "12"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 22,
+     "count_convention": 23,
+     "verified_length_m": 1.2,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 10.42963,
+     "provisional_kg": 2.257266,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "6",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "NOT_REQUIRED",
+     "why": "depth 50 cm <= 60 (note 21)",
+     "source_raw": null
+    }
+   ],
+   "new_verified_kg": 44.896296,
+   "new_provisional_kg": 8.123932,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 56.931889,
+    "v3b_technical_kg": 50.762963
+   }
+  },
+  {
+   "occurrence": "BEAM:1F:B6:H1748",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:1F:B6:H1748|BOTTOM",
+    "POP:BEAM:1F:B6:H1748|TOP",
+    "POP:BEAM:1F:B6:H1748|STIRRUPS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 18,
+     "count": 5,
+     "count_convention": 5,
+     "verified_length_m": 4.372183,
+     "provisional_length_m": 0.602611,
+     "verified_kg": 43.72183,
+     "provisional_kg": 6.02611,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "5",
+      "BOT-D": "18"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 12,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 4.372183,
+     "provisional_length_m": 0.602611,
+     "verified_kg": 7.77277,
+     "provisional_kg": 1.071308,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "2",
+      "TOP-D": "12"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 27,
+     "count_convention": 28,
+     "verified_length_m": 1.3,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 13.866667,
+     "provisional_kg": 2.684422,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "6",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "NOT_REQUIRED",
+     "why": "depth 50 cm <= 60 (note 21)",
+     "source_raw": null
+    }
+   ],
+   "new_verified_kg": 65.361266,
+   "new_provisional_kg": 9.781841,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 79.987101,
+    "v3b_technical_kg": 72.458685
+   }
+  },
+  {
+   "occurrence": "BEAM:1F:B6:H1751",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:1F:B6:H1751|BOTTOM",
+    "POP:BEAM:1F:B6:H1751|TOP",
+    "POP:BEAM:1F:B6:H1751|STIRRUPS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 18,
+     "count": 5,
+     "count_convention": 5,
+     "verified_length_m": 4.372183,
+     "provisional_length_m": 0.4,
+     "verified_kg": 43.72183,
+     "provisional_kg": 4.0,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "5",
+      "BOT-D": "18"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 12,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 4.372183,
+     "provisional_length_m": 0.4,
+     "verified_kg": 7.77277,
+     "provisional_kg": 0.711111,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "2",
+      "TOP-D": "12"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 27,
+     "count_convention": 28,
+     "verified_length_m": 1.3,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 13.866667,
+     "provisional_kg": 2.684422,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "6",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "NOT_REQUIRED",
+     "why": "depth 50 cm <= 60 (note 21)",
+     "source_raw": null
+    }
+   ],
+   "new_verified_kg": 65.361266,
+   "new_provisional_kg": 7.395533,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 77.600794,
+    "v3b_technical_kg": 70.072378
+   }
+  },
+  {
+   "occurrence": "BEAM:1F:B6:H1900",
+   "element_type": "BEAM",
+   "occurrence_state": "BLOCKED",
+   "why": "REBAR_BLOCKED_LENGTH_MISSING",
+   "release_state": "BLOCKED",
+   "missing": [
+    "POP:BEAM:1F:B6:H1900|ALL"
+   ],
+   "components": [
+    {
+     "role": "ALL",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "BLOCKED",
+     "why": "REBAR_BLOCKED_LENGTH_MISSING",
+     "source_raw": "MEASURED"
+    }
+   ],
+   "new_verified_kg": 0.0,
+   "new_provisional_kg": 0.0,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 0.0,
+    "v3b_technical_kg": 0.0
+   }
+  },
+  {
+   "occurrence": "BEAM:1F:B5:H1772",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:1F:B5:H1772|BOTTOM",
+    "POP:BEAM:1F:B5:H1772|TOP",
+    "POP:BEAM:1F:B5:H1772|STIRRUPS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 18,
+     "count": 4,
+     "count_convention": 4,
+     "verified_length_m": 4.625,
+     "provisional_length_m": 0.5,
+     "verified_kg": 37.0,
+     "provisional_kg": 4.0,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "4",
+      "BOT-D": "18"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 12,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 4.625,
+     "provisional_length_m": 0.5,
+     "verified_kg": 8.222222,
+     "provisional_kg": 0.888889,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "2",
+      "TOP-D": "12"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 28,
+     "count_convention": 29,
+     "verified_length_m": 1.2,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 13.274074,
+     "provisional_kg": 2.722446,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "6",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "NOT_REQUIRED",
+     "why": "depth 50 cm <= 60 (note 21)",
+     "source_raw": null
+    }
+   ],
+   "new_verified_kg": 58.496296,
+   "new_provisional_kg": 7.611335,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 70.019291,
+    "v3b_technical_kg": 63.385185
+   }
+  },
+  {
+   "occurrence": "BEAM:2F:B3:H1908",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:2F:B3:H1908|BOTTOM",
+    "POP:BEAM:2F:B3:H1908|TOP",
+    "POP:BEAM:2F:B3:H1908|STIRRUPS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 16,
+     "count": 4,
+     "count_convention": 4,
+     "verified_length_m": 2.45,
+     "provisional_length_m": 0.225,
+     "verified_kg": 15.48642,
+     "provisional_kg": 1.422222,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "4",
+      "BOT-D": "16"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 12,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 2.45,
+     "provisional_length_m": 0.225,
+     "verified_kg": 4.355556,
+     "provisional_kg": 0.4,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "2",
+      "TOP-D": "12"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 15,
+     "count_convention": 16,
+     "verified_length_m": 1.0,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 5.925926,
+     "provisional_kg": 1.635543,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "6",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "NOT_REQUIRED",
+     "why": "depth 40 cm <= 60 (note 21)",
+     "source_raw": null
+    }
+   ],
+   "new_verified_kg": 25.767901,
+   "new_provisional_kg": 3.457765,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 32.059203,
+    "v3b_technical_kg": 27.590123
+   }
+  },
+  {
+   "occurrence": "BEAM:2F:B3:H1949",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:2F:B3:H1949|BOTTOM",
+    "POP:BEAM:2F:B3:H1949|TOP",
+    "POP:BEAM:2F:B3:H1949|STIRRUPS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 16,
+     "count": 4,
+     "count_convention": 4,
+     "verified_length_m": 2.5,
+     "provisional_length_m": 0.2,
+     "verified_kg": 15.802469,
+     "provisional_kg": 1.264198,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "4",
+      "BOT-D": "16"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 12,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 2.5,
+     "provisional_length_m": 0.2,
+     "verified_kg": 4.444444,
+     "provisional_kg": 0.355556,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "2",
+      "TOP-D": "12"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 15,
+     "count_convention": 16,
+     "verified_length_m": 1.0,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 5.925926,
+     "provisional_kg": 1.635543,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "6",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "NOT_REQUIRED",
+     "why": "depth 40 cm <= 60 (note 21)",
+     "source_raw": null
+    }
+   ],
+   "new_verified_kg": 26.17284,
+   "new_provisional_kg": 3.255296,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 32.261672,
+    "v3b_technical_kg": 27.792593
+   }
+  },
+  {
+   "occurrence": "BEAM:2F:B8:H1950",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:2F:B8:H1950|BOTTOM",
+    "POP:BEAM:2F:B8:H1950|TOP",
+    "POP:BEAM:2F:B8:H1950|STIRRUPS",
+    "POP:BEAM:2F:B8:H1950|SIDE_BARS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 16,
+     "count": 4,
+     "count_convention": 4,
+     "verified_length_m": 3.67,
+     "provisional_length_m": 0.2,
+     "verified_kg": 23.198025,
+     "provisional_kg": 1.264198,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "4",
+      "BOT-D": "16"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 12,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 3.67,
+     "provisional_length_m": 0.2,
+     "verified_kg": 6.524444,
+     "provisional_kg": 0.355556,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "2",
+      "TOP-D": "12"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 23,
+     "count_convention": 24,
+     "verified_length_m": 1.7,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 15.446914,
+     "provisional_kg": 2.532327,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "6",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "BLOCKED",
+     "why": "REMARKS token '2%%C12/30cm' captured; count per face / levels need the typical detail",
+     "source_raw": "2%%C12/30cm"
+    }
+   ],
+   "new_verified_kg": 45.169383,
+   "new_provisional_kg": 4.15208,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 51.878456,
+    "v3b_technical_kg": 46.789136
+   }
+  },
+  {
+   "occurrence": "BEAM:2F:B2:H1936",
+   "element_type": "BEAM",
+   "occurrence_state": "BLOCKED",
+   "why": "REBAR_BLOCKED_LENGTH_MISSING",
+   "release_state": "BLOCKED",
+   "missing": [
+    "POP:BEAM:2F:B2:H1936|ALL"
+   ],
+   "components": [
+    {
+     "role": "ALL",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "BLOCKED",
+     "why": "REBAR_BLOCKED_LENGTH_MISSING",
+     "source_raw": "MEASURED"
+    }
+   ],
+   "new_verified_kg": 0.0,
+   "new_provisional_kg": 0.0,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 0.0,
+    "v3b_technical_kg": 0.0
+   }
+  },
+  {
+   "occurrence": "BEAM:2F:B1:H1935",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:2F:B1:H1935|BOTTOM",
+    "POP:BEAM:2F:B1:H1935|TOP",
+    "POP:BEAM:2F:B1:H1935|STIRRUPS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 14,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 1.8,
+     "provisional_length_m": 0.2,
+     "verified_kg": 4.355556,
+     "provisional_kg": 0.483951,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "2",
+      "BOT-D": "14"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 12,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 1.8,
+     "provisional_length_m": 0.2,
+     "verified_kg": 3.2,
+     "provisional_kg": 0.355556,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "2",
+      "TOP-D": "12"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 11,
+     "count_convention": 12,
+     "verified_length_m": 1.0,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 4.345679,
+     "provisional_kg": 1.325423,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "6",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "NOT_REQUIRED",
+     "why": "depth 40 cm <= 60 (note 21)",
+     "source_raw": null
+    }
+   ],
+   "new_verified_kg": 11.901235,
+   "new_provisional_kg": 2.164929,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 15.083992,
+    "v3b_technical_kg": 12.740741
+   }
+  },
+  {
+   "occurrence": "BEAM:2F:B2:H1934",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:2F:B2:H1934|BOTTOM",
+    "POP:BEAM:2F:B2:H1934|TOP",
+    "POP:BEAM:2F:B2:H1934|STIRRUPS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 16,
+     "count": 3,
+     "count_convention": 3,
+     "verified_length_m": 3.0,
+     "provisional_length_m": 0.2,
+     "verified_kg": 14.222222,
+     "provisional_kg": 0.948148,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "3",
+      "BOT-D": "16"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 12,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 3.0,
+     "provisional_length_m": 0.2,
+     "verified_kg": 5.333333,
+     "provisional_kg": 0.355556,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "2",
+      "TOP-D": "12"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 18,
+     "count_convention": 19,
+     "verified_length_m": 1.0,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 7.111111,
+     "provisional_kg": 1.868133,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "6",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "NOT_REQUIRED",
+     "why": "depth 40 cm <= 60 (note 21)",
+     "source_raw": null
+    }
+   ],
+   "new_verified_kg": 26.666667,
+   "new_provisional_kg": 3.171837,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 31.989484,
+    "v3b_technical_kg": 27.97037
+   }
+  },
+  {
+   "occurrence": "BEAM:2F:B15:H1961",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:2F:B15:H1961|BOTTOM",
+    "POP:BEAM:2F:B15:H1961|TOP",
+    "POP:BEAM:2F:B15:H1961|STIRRUPS",
+    "POP:BEAM:2F:B15:H1961|SIDE_BARS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 16,
+     "count": 4,
+     "count_convention": 4,
+     "verified_length_m": 2.7,
+     "provisional_length_m": 0.5,
+     "verified_kg": 17.066667,
+     "provisional_kg": 3.160494,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "4",
+      "BOT-D": "16"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 18,
+     "count": 6,
+     "count_convention": 6,
+     "verified_length_m": 2.7,
+     "provisional_length_m": 0.5,
+     "verified_kg": 32.4,
+     "provisional_kg": 6.0,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "6",
+      "TOP-D": "18"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 27,
+     "count_convention": 28,
+     "verified_length_m": 2.6,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 27.733333,
+     "provisional_kg": 3.198003,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "10",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "BLOCKED",
+     "why": "REMARKS token '2%%C12/30cm' captured; count per face / levels need the typical detail",
+     "source_raw": "2%%C12/30cm"
+    }
+   ],
+   "new_verified_kg": 77.2,
+   "new_provisional_kg": 12.358496,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 97.01507,
+    "v3b_technical_kg": 86.360494
+   }
+  },
+  {
+   "occurrence": "BEAM:2F:B2:H1930",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:2F:B2:H1930|BOTTOM",
+    "POP:BEAM:2F:B2:H1930|TOP",
+    "POP:BEAM:2F:B2:H1930|STIRRUPS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 16,
+     "count": 3,
+     "count_convention": 3,
+     "verified_length_m": 1.8,
+     "provisional_length_m": 0.2,
+     "verified_kg": 8.533333,
+     "provisional_kg": 0.948148,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "3",
+      "BOT-D": "16"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 12,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 1.8,
+     "provisional_length_m": 0.2,
+     "verified_kg": 3.2,
+     "provisional_kg": 0.355556,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "2",
+      "TOP-D": "12"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 11,
+     "count_convention": 12,
+     "verified_length_m": 1.0,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 4.345679,
+     "provisional_kg": 1.325423,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "6",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "NOT_REQUIRED",
+     "why": "depth 40 cm <= 60 (note 21)",
+     "source_raw": null
+    }
+   ],
+   "new_verified_kg": 16.079012,
+   "new_provisional_kg": 2.629126,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 20.859119,
+    "v3b_technical_kg": 17.382716
+   }
+  },
+  {
+   "occurrence": "BEAM:2F:B2:H1909",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:2F:B2:H1909|BOTTOM",
+    "POP:BEAM:2F:B2:H1909|TOP",
+    "POP:BEAM:2F:B2:H1909|STIRRUPS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 16,
+     "count": 3,
+     "count_convention": 3,
+     "verified_length_m": 3.0,
+     "provisional_length_m": 0.2,
+     "verified_kg": 14.222222,
+     "provisional_kg": 0.948148,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "3",
+      "BOT-D": "16"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 12,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 3.0,
+     "provisional_length_m": 0.2,
+     "verified_kg": 5.333333,
+     "provisional_kg": 0.355556,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "2",
+      "TOP-D": "12"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 18,
+     "count_convention": 19,
+     "verified_length_m": 1.0,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 7.111111,
+     "provisional_kg": 1.868133,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "6",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "NOT_REQUIRED",
+     "why": "depth 40 cm <= 60 (note 21)",
+     "source_raw": null
+    }
+   ],
+   "new_verified_kg": 26.666667,
+   "new_provisional_kg": 3.171837,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 31.989484,
+    "v3b_technical_kg": 27.97037
+   }
+  },
+  {
+   "occurrence": "BEAM:2F:B1:H1931",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:2F:B1:H1931|BOTTOM",
+    "POP:BEAM:2F:B1:H1931|TOP",
+    "POP:BEAM:2F:B1:H1931|STIRRUPS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 14,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 1.0,
+     "provisional_length_m": 0.6,
+     "verified_kg": 2.419753,
+     "provisional_kg": 1.451852,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "2",
+      "BOT-D": "14"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 12,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 1.0,
+     "provisional_length_m": 0.6,
+     "verified_kg": 1.777778,
+     "provisional_kg": 1.066667,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "2",
+      "TOP-D": "12"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 6,
+     "count_convention": 7,
+     "verified_length_m": 1.0,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 2.37037,
+     "provisional_kg": 0.937772,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "6",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "NOT_REQUIRED",
+     "why": "depth 40 cm <= 60 (note 21)",
+     "source_raw": null
+    }
+   ],
+   "new_verified_kg": 6.567901,
+   "new_provisional_kg": 3.456291,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 11.042021,
+    "v3b_technical_kg": 9.08642
+   }
+  },
+  {
+   "occurrence": "BEAM:2F:B3:H1947",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:2F:B3:H1947|BOTTOM",
+    "POP:BEAM:2F:B3:H1947|TOP",
+    "POP:BEAM:2F:B3:H1947|STIRRUPS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 16,
+     "count": 4,
+     "count_convention": 4,
+     "verified_length_m": 3.0,
+     "provisional_length_m": 0.35,
+     "verified_kg": 18.962963,
+     "provisional_kg": 2.212346,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "4",
+      "BOT-D": "16"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 12,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 3.0,
+     "provisional_length_m": 0.35,
+     "verified_kg": 5.333333,
+     "provisional_kg": 0.622222,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "2",
+      "TOP-D": "12"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 18,
+     "count_convention": 19,
+     "verified_length_m": 1.0,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 7.111111,
+     "provisional_kg": 1.868133,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "6",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "NOT_REQUIRED",
+     "why": "depth 40 cm <= 60 (note 21)",
+     "source_raw": null
+    }
+   ],
+   "new_verified_kg": 31.407407,
+   "new_provisional_kg": 4.702701,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 38.943645,
+    "v3b_technical_kg": 34.241975
+   }
+  },
+  {
+   "occurrence": "BEAM:2F:B7:H1953",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:2F:B7:H1953|BOTTOM",
+    "POP:BEAM:2F:B7:H1953|TOP",
+    "POP:BEAM:2F:B7:H1953|STIRRUPS",
+    "POP:BEAM:2F:B7:H1953|SIDE_BARS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 16,
+     "count": 3,
+     "count_convention": 3,
+     "verified_length_m": 4.418268,
+     "provisional_length_m": 0.3,
+     "verified_kg": 20.945863,
+     "provisional_kg": 1.422222,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "3",
+      "BOT-D": "16"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 12,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 4.418268,
+     "provisional_length_m": 0.3,
+     "verified_kg": 7.854699,
+     "provisional_kg": 0.533333,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "2",
+      "TOP-D": "12"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 27,
+     "count_convention": 28,
+     "verified_length_m": 1.7,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 18.133333,
+     "provisional_kg": 2.842447,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "6",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "BLOCKED",
+     "why": "REMARKS token '2%%C12/30cm' captured; count per face / levels need the typical detail",
+     "source_raw": "2%%C12/30cm"
+    }
+   ],
+   "new_verified_kg": 46.933895,
+   "new_provisional_kg": 4.798003,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 53.606335,
+    "v3b_technical_kg": 48.889451
+   }
+  },
+  {
+   "occurrence": "BEAM:2F:B3:H1948",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:2F:B3:H1948|BOTTOM",
+    "POP:BEAM:2F:B3:H1948|TOP",
+    "POP:BEAM:2F:B3:H1948|STIRRUPS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 16,
+     "count": 4,
+     "count_convention": 4,
+     "verified_length_m": 2.7,
+     "provisional_length_m": 0.5,
+     "verified_kg": 17.066667,
+     "provisional_kg": 3.160494,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "4",
+      "BOT-D": "16"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 12,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 2.7,
+     "provisional_length_m": 0.5,
+     "verified_kg": 4.8,
+     "provisional_kg": 0.888889,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "2",
+      "TOP-D": "12"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 17,
+     "count_convention": 18,
+     "verified_length_m": 1.0,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 6.716049,
+     "provisional_kg": 1.790603,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "6",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "NOT_REQUIRED",
+     "why": "depth 40 cm <= 60 (note 21)",
+     "source_raw": null
+    }
+   ],
+   "new_verified_kg": 28.582716,
+   "new_provisional_kg": 5.839986,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 37.256238,
+    "v3b_technical_kg": 32.632099
+   }
+  },
+  {
+   "occurrence": "BEAM:2F:B1:H1932",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:2F:B1:H1932|BOTTOM",
+    "POP:BEAM:2F:B1:H1932|TOP",
+    "POP:BEAM:2F:B1:H1932|STIRRUPS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 14,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 1.2,
+     "provisional_length_m": 0.5,
+     "verified_kg": 2.903704,
+     "provisional_kg": 1.209877,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "2",
+      "BOT-D": "14"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 12,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 1.2,
+     "provisional_length_m": 0.5,
+     "verified_kg": 2.133333,
+     "provisional_kg": 0.888889,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "2",
+      "TOP-D": "12"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 8,
+     "count_convention": 9,
+     "verified_length_m": 1.0,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 3.160494,
+     "provisional_kg": 1.092832,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "6",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "NOT_REQUIRED",
+     "why": "depth 40 cm <= 60 (note 21)",
+     "source_raw": null
+    }
+   ],
+   "new_verified_kg": 8.197531,
+   "new_provisional_kg": 3.191598,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 12.406958,
+    "v3b_technical_kg": 10.296296
+   }
+  },
+  {
+   "occurrence": "BEAM:2F:B1:H1933",
+   "element_type": "BEAM",
+   "occurrence_state": "ESTABLISHED",
+   "why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "missing": [
+    "POP:BEAM:2F:B1:H1933|BOTTOM",
+    "POP:BEAM:2F:B1:H1933|TOP",
+    "POP:BEAM:2F:B1:H1933|STIRRUPS"
+   ],
+   "components": [
+    {
+     "role": "BOTTOM",
+     "dia_mm": 14,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 1.8,
+     "provisional_length_m": 0.2,
+     "verified_kg": 4.355556,
+     "provisional_kg": 0.483951,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "BOT-B": "2",
+      "BOT-D": "14"
+     }
+    },
+    {
+     "role": "TOP",
+     "dia_mm": 12,
+     "count": 2,
+     "count_convention": 2,
+     "verified_length_m": 1.8,
+     "provisional_length_m": 0.2,
+     "verified_kg": 3.2,
+     "provisional_kg": 0.355556,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "TOP-B": "2",
+      "TOP-D": "12"
+     }
+    },
+    {
+     "role": "STIRRUPS",
+     "dia_mm": 8,
+     "count": 11,
+     "count_convention": 12,
+     "verified_length_m": 1.0,
+     "provisional_length_m": 0.196248,
+     "verified_kg": 4.345679,
+     "provisional_kg": 1.325423,
+     "state": "PARTIAL",
+     "why": null,
+     "source_raw": {
+      "STI-B": "6",
+      "D": "8"
+     }
+    },
+    {
+     "role": "SIDE_BARS",
+     "dia_mm": null,
+     "count": null,
+     "count_convention": null,
+     "verified_length_m": 0,
+     "provisional_length_m": 0,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "state": "NOT_REQUIRED",
+     "why": "depth 40 cm <= 60 (note 21)",
+     "source_raw": null
+    }
+   ],
+   "new_verified_kg": 11.901235,
+   "new_provisional_kg": 2.164929,
+   "audit_kg": 0.0,
+   "old": {
+    "v3b_net_kg": 15.083992,
+    "v3b_technical_kg": 12.740741
+   }
+  }
+ ],
+ "strap_conflicts": [
+  {
+   "occurrence": "STRAP:SB2:H6935",
+   "state": "SOURCE_CONFLICT_DUPLICATE_SCHEDULE_KEY",
+   "candidates": [
+    {
+     "insert_handle": "2ABA",
+     "B_cm": 100.0,
+     "H_cm": 50.0,
+     "raw": {
+      "BEAM": "SB2",
+      "W": "100",
+      "H": "50",
+      "BOT-B": "10",
+      "BOT-D": "16",
+      "TOP-B": "20",
+      "TOP-D": "18",
+      "STI-B": "10",
+      "D": "8"
+     },
+     "longitudinal_audit_kg": 128.013766
+    },
+    {
+     "insert_handle": "1FBB",
+     "B_cm": 80.0,
+     "H_cm": 50.0,
+     "raw": {
+      "BEAM": "SB2",
+      "W": "80",
+      "H": "50",
+      "BOT-B": "10",
+      "BOT-D": "18",
+      "TOP-B": "10",
+      "TOP-D": "18",
+      "STI-B": "10",
+      "D": "8"
+     },
+     "longitudinal_audit_kg": 91.76208
+    }
+   ],
+   "selected": null
+  }
+ ],
+ "rule": "verified core = clear span; embedment to centrelines PROVISIONAL; end anchorage BLOCKED; side bars BLOCKED where depth > 60 (note 21 / REMARKS)"
+}

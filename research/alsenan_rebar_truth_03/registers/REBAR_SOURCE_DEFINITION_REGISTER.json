@@ -1,0 +1,6136 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_REBAR_SOURCE_DEFINITION_V3",
+ "drawing": "ST7757.dxf",
+ "source_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+ "cover_rules": {
+  "COVER-SOIL-70": {
+   "value_mm": 70.0,
+   "kind": "MINIMUM",
+   "applies_to": [
+    "FOOTING",
+    "FOOTING_2_LAYER",
+    "FOOTING_LIFT",
+    "STRAP_BEAM",
+    "GROUND_BEAM",
+    "GROUND_SLAB"
+   ],
+   "source": "ST7757.pdf p.8 note 22: concrete in contact with soil >= 7 cm"
+  },
+  "COVER-MEMBER-25": {
+   "value_mm": 25.0,
+   "kind": "MINIMUM",
+   "applies_to": [
+    "COLUMN",
+    "BEAM",
+    "CONTINUOUS_BEAM",
+    "SLAB",
+    "LINTEL"
+   ],
+   "source": "ST7757.pdf p.8 note 22: columns, slabs and beams >= 2.5 cm"
+  },
+  "COVER-STAIR-NOT-SPECIFIED": {
+   "value_mm": null,
+   "kind": "NOT_SPECIFIED",
+   "applies_to": [
+    "STAIR"
+   ],
+   "source": "note 22 names columns, slabs, beams and soil contact only"
+  }
+ },
+ "lap_rules": {
+  "LAP-TENSION-70D": {
+   "factor": 70,
+   "source": "ST7757.pdf p.8 note 9 (starter bars, tension zones)"
+  },
+  "LAP-COMPRESSION-40D": {
+   "factor": 40,
+   "source": "ST7757.pdf p.8 note 9 (starter bars, compression zones)"
+  },
+  "STOCK-12M": {
+   "stock_m": 12.0,
+   "source": "Urban procurement stock length (OD-V3B-12) - procurement, not engineering"
+  }
+ },
+ "weight_formula": "kg/m = D^2 / 162 (D in mm)",
+ "count_rules": {
+  "COUNT_ABSOLUTE": "printed count",
+  "COUNT_PER_METRE_LB_PLUS_END_BAR": "verified = ceil(rate x distribution); convention = ceil(distribution / spacing) + 1 (PROVISIONAL end bar)",
+  "SLAB_BINDER_COUNT_SPLIT": "binder floor(w/s)+1 kept as the convention count; verified part = ceil(rate x w)"
+ },
+ "definitions": [
+  {
+   "element": "CONTINUOUS_BEAM",
+   "type": "CB1",
+   "block": "C-BEAM2",
+   "insert_handle": "2851",
+   "page": 11,
+   "interpretation_state": "PARTIALLY_INTERPRETED",
+   "fields": {
+    "B_cm": 35.0,
+    "H_cm": 75.0,
+    "spans_m": [
+     7.5,
+     5.7
+    ],
+    "design_load_t_per_m": {
+     "T/M-1": "3.0",
+     "T/M-2": "2.5"
+    },
+    "bottom_bars_per_span": [
+     {
+      "grammar": "COUNT_DIA",
+      "count": 4,
+      "dia_mm": 18,
+      "per_m": false,
+      "raw": [
+       "4",
+       "18"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "BOT1-B",
+       "BOT1-D"
+      ]
+     },
+     {
+      "grammar": "COUNT_DIA",
+      "count": 5,
+      "dia_mm": 18,
+      "per_m": false,
+      "raw": [
+       "5",
+       "18"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "BOT2-B",
+       "BOT2-D"
+      ]
+     }
+    ],
+    "support_top_bars": {
+     "support_MID": {
+      "grammar": "COUNT_DIA",
+      "count": 8,
+      "dia_mm": 18,
+      "per_m": false,
+      "raw": [
+       "8",
+       "18"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "MID-B",
+       "MID-D"
+      ]
+     }
+    },
+    "stirrups_per_span": [
+     {
+      "grammar": "COUNT_DIA",
+      "count": 5,
+      "dia_mm": 8,
+      "per_m": false,
+      "raw": [
+       "5",
+       "8"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "STR1-B",
+       "STR1-D"
+      ],
+      "semantics": "STIRRUPS_PER_METRE (schedule header)"
+     },
+     {
+      "grammar": "COUNT_DIA",
+      "count": 9,
+      "dia_mm": 10,
+      "per_m": false,
+      "raw": [
+       "9",
+       "10"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "STR2-B",
+       "STR2-D"
+      ],
+      "semantics": "STIRRUPS_PER_METRE (schedule header)"
+     }
+    ],
+    "continuous_top_bars": {
+     "state": "BLOCKED_INTERPRETATION",
+     "why": "drawn as split TEXT fragments (count / Ø / diameter) in the schedule frame; proximity assembly not verified"
+    },
+    "side_bars": {
+     "state": "BLOCKED_INTERPRETATION",
+     "why": "split text '2Ø12' + '30cm' in the schedule frame; binding to a beam row not verified"
+    }
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "CONTINUOUS_BEAM",
+   "type": "CB7",
+   "block": "C-BEAM2",
+   "insert_handle": "22EC",
+   "page": 11,
+   "interpretation_state": "PARTIALLY_INTERPRETED",
+   "fields": {
+    "B_cm": 20.0,
+    "H_cm": 75.0,
+    "spans_m": [
+     6.0,
+     6.1
+    ],
+    "design_load_t_per_m": {
+     "T/M-1": "3.5",
+     "T/M-2": "3.5"
+    },
+    "bottom_bars_per_span": [
+     {
+      "grammar": "COUNT_DIA",
+      "count": 3,
+      "dia_mm": 16,
+      "per_m": false,
+      "raw": [
+       "3",
+       "16"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "BOT1-B",
+       "BOT1-D"
+      ]
+     },
+     {
+      "grammar": "COUNT_DIA",
+      "count": 3,
+      "dia_mm": 16,
+      "per_m": false,
+      "raw": [
+       "3",
+       "16"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "BOT2-B",
+       "BOT2-D"
+      ]
+     }
+    ],
+    "support_top_bars": {
+     "support_MID": {
+      "grammar": "COUNT_DIA",
+      "count": 5,
+      "dia_mm": 18,
+      "per_m": false,
+      "raw": [
+       "5",
+       "18"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "MID-B",
+       "MID-D"
+      ]
+     }
+    },
+    "stirrups_per_span": [
+     {
+      "grammar": "COUNT_DIA",
+      "count": 7,
+      "dia_mm": 8,
+      "per_m": false,
+      "raw": [
+       "7",
+       "8"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "STR1-B",
+       "STR1-D"
+      ],
+      "semantics": "STIRRUPS_PER_METRE (schedule header)"
+     },
+     {
+      "grammar": "COUNT_DIA",
+      "count": 7,
+      "dia_mm": 8,
+      "per_m": false,
+      "raw": [
+       "7",
+       "8"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "STR2-B",
+       "STR2-D"
+      ],
+      "semantics": "STIRRUPS_PER_METRE (schedule header)"
+     }
+    ],
+    "continuous_top_bars": {
+     "state": "BLOCKED_INTERPRETATION",
+     "why": "drawn as split TEXT fragments (count / Ø / diameter) in the schedule frame; proximity assembly not verified"
+    },
+    "side_bars": {
+     "state": "BLOCKED_INTERPRETATION",
+     "why": "split text '2Ø12' + '30cm' in the schedule frame; binding to a beam row not verified"
+    }
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "CONTINUOUS_BEAM",
+   "type": "CB2",
+   "block": "C-BEAM2",
+   "insert_handle": "28C7",
+   "page": 11,
+   "interpretation_state": "PARTIALLY_INTERPRETED",
+   "fields": {
+    "B_cm": 20.0,
+    "H_cm": 50.0,
+    "spans_m": [
+     4.0,
+     4.0
+    ],
+    "design_load_t_per_m": {
+     "T/M-1": "3.0",
+     "T/M-2": "3.0"
+    },
+    "bottom_bars_per_span": [
+     {
+      "grammar": "COUNT_DIA",
+      "count": 3,
+      "dia_mm": 16,
+      "per_m": false,
+      "raw": [
+       "3",
+       "16"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "BOT1-B",
+       "BOT1-D"
+      ]
+     },
+     {
+      "grammar": "COUNT_DIA",
+      "count": 3,
+      "dia_mm": 14,
+      "per_m": false,
+      "raw": [
+       "3",
+       "14"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "BOT2-B",
+       "BOT2-D"
+      ]
+     }
+    ],
+    "support_top_bars": {
+     "support_MID": {
+      "grammar": "COUNT_DIA",
+      "count": 4,
+      "dia_mm": 16,
+      "per_m": false,
+      "raw": [
+       "4",
+       "16"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "MID-B",
+       "MID-D"
+      ]
+     }
+    },
+    "stirrups_per_span": [
+     {
+      "grammar": "COUNT_DIA",
+      "count": 6,
+      "dia_mm": 8,
+      "per_m": false,
+      "raw": [
+       "6",
+       "8"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "STR1-B",
+       "STR1-D"
+      ],
+      "semantics": "STIRRUPS_PER_METRE (schedule header)"
+     },
+     {
+      "grammar": "COUNT_DIA",
+      "count": 6,
+      "dia_mm": 8,
+      "per_m": false,
+      "raw": [
+       "6",
+       "8"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "STR2-B",
+       "STR2-D"
+      ],
+      "semantics": "STIRRUPS_PER_METRE (schedule header)"
+     }
+    ],
+    "continuous_top_bars": {
+     "state": "BLOCKED_INTERPRETATION",
+     "why": "drawn as split TEXT fragments (count / Ø / diameter) in the schedule frame; proximity assembly not verified"
+    },
+    "side_bars": {
+     "state": "BLOCKED_INTERPRETATION",
+     "why": "split text '2Ø12' + '30cm' in the schedule frame; binding to a beam row not verified"
+    }
+   },
+   "feeds_quantity": false
+  },
+  {
+   "element": "CONTINUOUS_BEAM",
+   "type": "CB10",
+   "block": "C-BEAM2",
+   "insert_handle": "23F0",
+   "page": 11,
+   "interpretation_state": "PARTIALLY_INTERPRETED",
+   "fields": {
+    "B_cm": 25.0,
+    "H_cm": 50.0,
+    "spans_m": [
+     3.0,
+     4.1
+    ],
+    "design_load_t_per_m": {
+     "T/M-1": "3.9",
+     "T/M-2": "4.2"
+    },
+    "bottom_bars_per_span": [
+     {
+      "grammar": "COUNT_DIA",
+      "count": 3,
+      "dia_mm": 16,
+      "per_m": false,
+      "raw": [
+       "3",
+       "16"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "BOT1-B",
+       "BOT1-D"
+      ]
+     },
+     {
+      "grammar": "COUNT_DIA",
+      "count": 4,
+      "dia_mm": 18,
+      "per_m": false,
+      "raw": [
+       "4",
+       "18"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "BOT2-B",
+       "BOT2-D"
+      ]
+     }
+    ],
+    "support_top_bars": {
+     "support_MID": {
+      "grammar": "COUNT_DIA",
+      "count": 4,
+      "dia_mm": 18,
+      "per_m": false,
+      "raw": [
+       "4",
+       "18"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "MID-B",
+       "MID-D"
+      ]
+     }
+    },
+    "stirrups_per_span": [
+     {
+      "grammar": "COUNT_DIA",
+      "count": 6,
+      "dia_mm": 8,
+      "per_m": false,
+      "raw": [
+       "6",
+       "8"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "STR1-B",
+       "STR1-D"
+      ],
+      "semantics": "STIRRUPS_PER_METRE (schedule header)"
+     },
+     {
+      "grammar": "COUNT_DIA",
+      "count": 6,
+      "dia_mm": 8,
+      "per_m": false,
+      "raw": [
+       "6",
+       "8"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "STR2-B",
+       "STR2-D"
+      ],
+      "semantics": "STIRRUPS_PER_METRE (schedule header)"
+     }
+    ],
+    "continuous_top_bars": {
+     "state": "BLOCKED_INTERPRETATION",
+     "why": "drawn as split TEXT fragments (count / Ø / diameter) in the schedule frame; proximity assembly not verified"
+    },
+    "side_bars": {
+     "state": "BLOCKED_INTERPRETATION",
+     "why": "split text '2Ø12' + '30cm' in the schedule frame; binding to a beam row not verified"
+    }
+   },
+   "feeds_quantity": false
+  },
+  {
+   "element": "CONTINUOUS_BEAM",
+   "type": "CB4",
+   "block": "C-BEAM2",
+   "insert_handle": "2933",
+   "page": 11,
+   "interpretation_state": "PARTIALLY_INTERPRETED",
+   "fields": {
+    "B_cm": 20.0,
+    "H_cm": 50.0,
+    "spans_m": [
+     3.3,
+     3.7
+    ],
+    "design_load_t_per_m": {
+     "T/M-1": "4.8",
+     "T/M-2": "4.5"
+    },
+    "bottom_bars_per_span": [
+     {
+      "grammar": "COUNT_DIA",
+      "count": 3,
+      "dia_mm": 14,
+      "per_m": false,
+      "raw": [
+       "3",
+       "14"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "BOT1-B",
+       "BOT1-D"
+      ]
+     },
+     {
+      "grammar": "COUNT_DIA",
+      "count": 3,
+      "dia_mm": 16,
+      "per_m": false,
+      "raw": [
+       "3",
+       "16"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "BOT2-B",
+       "BOT2-D"
+      ]
+     }
+    ],
+    "support_top_bars": {
+     "support_MID": {
+      "grammar": "COUNT_DIA",
+      "count": 4,
+      "dia_mm": 16,
+      "per_m": false,
+      "raw": [
+       "4",
+       "16"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "MID-B",
+       "MID-D"
+      ]
+     }
+    },
+    "stirrups_per_span": [
+     {
+      "grammar": "COUNT_DIA",
+      "count": 6,
+      "dia_mm": 8,
+      "per_m": false,
+      "raw": [
+       "6",
+       "8"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "STR1-B",
+       "STR1-D"
+      ],
+      "semantics": "STIRRUPS_PER_METRE (schedule header)"
+     },
+     {
+      "grammar": "COUNT_DIA",
+      "count": 8,
+      "dia_mm": 8,
+      "per_m": false,
+      "raw": [
+       "8",
+       "8"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "STR2-B",
+       "STR2-D"
+      ],
+      "semantics": "STIRRUPS_PER_METRE (schedule header)"
+     }
+    ],
+    "continuous_top_bars": {
+     "state": "BLOCKED_INTERPRETATION",
+     "why": "drawn as split TEXT fragments (count / Ø / diameter) in the schedule frame; proximity assembly not verified"
+    },
+    "side_bars": {
+     "state": "BLOCKED_INTERPRETATION",
+     "why": "split text '2Ø12' + '30cm' in the schedule frame; binding to a beam row not verified"
+    }
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "CONTINUOUS_BEAM",
+   "type": "CB12",
+   "block": "C-BEAM2",
+   "insert_handle": "2469",
+   "page": 11,
+   "interpretation_state": "PARTIALLY_INTERPRETED",
+   "fields": {
+    "B_cm": 25.0,
+    "H_cm": 75.0,
+    "spans_m": [
+     6.1,
+     5.5
+    ],
+    "design_load_t_per_m": {
+     "T/M-1": "4.7",
+     "T/M-2": "4.2"
+    },
+    "bottom_bars_per_span": [
+     {
+      "grammar": "COUNT_DIA",
+      "count": 5,
+      "dia_mm": 18,
+      "per_m": false,
+      "raw": [
+       "5",
+       "18"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "BOT1-B",
+       "BOT1-D"
+      ]
+     },
+     {
+      "grammar": "COUNT_DIA",
+      "count": 3,
+      "dia_mm": 16,
+      "per_m": false,
+      "raw": [
+       "3",
+       "16"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "BOT2-B",
+       "BOT2-D"
+      ]
+     }
+    ],
+    "support_top_bars": {
+     "support_MID": {
+      "grammar": "COUNT_DIA",
+      "count": 6,
+      "dia_mm": 18,
+      "per_m": false,
+      "raw": [
+       "6",
+       "18"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "MID-B",
+       "MID-D"
+      ]
+     }
+    },
+    "stirrups_per_span": [
+     {
+      "grammar": "COUNT_DIA",
+      "count": 9,
+      "dia_mm": 8,
+      "per_m": false,
+      "raw": [
+       "9",
+       "8"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "STR1-B",
+       "STR1-D"
+      ],
+      "semantics": "STIRRUPS_PER_METRE (schedule header)"
+     },
+     {
+      "grammar": "COUNT_DIA",
+      "count": 7,
+      "dia_mm": 8,
+      "per_m": false,
+      "raw": [
+       "7",
+       "8"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "STR2-B",
+       "STR2-D"
+      ],
+      "semantics": "STIRRUPS_PER_METRE (schedule header)"
+     }
+    ],
+    "continuous_top_bars": {
+     "state": "BLOCKED_INTERPRETATION",
+     "why": "drawn as split TEXT fragments (count / Ø / diameter) in the schedule frame; proximity assembly not verified"
+    },
+    "side_bars": {
+     "state": "BLOCKED_INTERPRETATION",
+     "why": "split text '2Ø12' + '30cm' in the schedule frame; binding to a beam row not verified"
+    }
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "CONTINUOUS_BEAM",
+   "type": "CB5",
+   "block": "C-BEAM2",
+   "insert_handle": "299F",
+   "page": 11,
+   "interpretation_state": "PARTIALLY_INTERPRETED",
+   "fields": {
+    "B_cm": 20.0,
+    "H_cm": 40.0,
+    "spans_m": [
+     2.5,
+     4.5
+    ],
+    "design_load_t_per_m": {
+     "T/M-1": "3.7",
+     "T/M-2": "4.5"
+    },
+    "bottom_bars_per_span": [
+     {
+      "grammar": "COUNT_DIA",
+      "count": 3,
+      "dia_mm": 14,
+      "per_m": false,
+      "raw": [
+       "3",
+       "14"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "BOT1-B",
+       "BOT1-D"
+      ]
+     },
+     {
+      "grammar": "COUNT_DIA",
+      "count": 4,
+      "dia_mm": 16,
+      "per_m": false,
+      "raw": [
+       "4",
+       "16"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "BOT2-B",
+       "BOT2-D"
+      ]
+     }
+    ],
+    "support_top_bars": {
+     "support_MID": {
+      "grammar": "COUNT_DIA",
+      "count": 4,
+      "dia_mm": 16,
+      "per_m": false,
+      "raw": [
+       "4",
+       "16"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "MID-B",
+       "MID-D"
+      ]
+     }
+    },
+    "stirrups_per_span": [
+     {
+      "grammar": "COUNT_DIA",
+      "count": 7,
+      "dia_mm": 8,
+      "per_m": false,
+      "raw": [
+       "7",
+       "8"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "STR1-B",
+       "STR1-D"
+      ],
+      "semantics": "STIRRUPS_PER_METRE (schedule header)"
+     },
+     {
+      "grammar": "COUNT_DIA",
+      "count": 7,
+      "dia_mm": 8,
+      "per_m": false,
+      "raw": [
+       "7",
+       "8"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "STR2-B",
+       "STR2-D"
+      ],
+      "semantics": "STIRRUPS_PER_METRE (schedule header)"
+     }
+    ],
+    "continuous_top_bars": {
+     "state": "BLOCKED_INTERPRETATION",
+     "why": "drawn as split TEXT fragments (count / Ø / diameter) in the schedule frame; proximity assembly not verified"
+    },
+    "side_bars": {
+     "state": "BLOCKED_INTERPRETATION",
+     "why": "split text '2Ø12' + '30cm' in the schedule frame; binding to a beam row not verified"
+    }
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "CONTINUOUS_BEAM",
+   "type": "CB13",
+   "block": "C-BEAM2",
+   "insert_handle": "24DF",
+   "page": 11,
+   "interpretation_state": "PARTIALLY_INTERPRETED",
+   "fields": {
+    "B_cm": 30.0,
+    "H_cm": 50.0,
+    "spans_m": [
+     3.7,
+     3.6
+    ],
+    "design_load_t_per_m": {
+     "T/M-1": "5.1",
+     "T/M-2": "4.5"
+    },
+    "bottom_bars_per_span": [
+     {
+      "grammar": "COUNT_DIA",
+      "count": 4,
+      "dia_mm": 16,
+      "per_m": false,
+      "raw": [
+       "4",
+       "16"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "BOT1-B",
+       "BOT1-D"
+      ]
+     },
+     {
+      "grammar": "COUNT_DIA",
+      "count": 4,
+      "dia_mm": 18,
+      "per_m": false,
+      "raw": [
+       "4",
+       "18"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "BOT2-B",
+       "BOT2-D"
+      ]
+     }
+    ],
+    "support_top_bars": {
+     "support_MID": {
+      "grammar": "COUNT_DIA",
+      "count": 5,
+      "dia_mm": 18,
+      "per_m": false,
+      "raw": [
+       "5",
+       "18"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "MID-B",
+       "MID-D"
+      ]
+     }
+    },
+    "stirrups_per_span": [
+     {
+      "grammar": "COUNT_DIA",
+      "count": 7,
+      "dia_mm": 8,
+      "per_m": false,
+      "raw": [
+       "7",
+       "8"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "STR1-B",
+       "STR1-D"
+      ],
+      "semantics": "STIRRUPS_PER_METRE (schedule header)"
+     },
+     {
+      "grammar": "COUNT_DIA",
+      "count": 7,
+      "dia_mm": 10,
+      "per_m": false,
+      "raw": [
+       "7",
+       "10"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "STR2-B",
+       "STR2-D"
+      ],
+      "semantics": "STIRRUPS_PER_METRE (schedule header)"
+     }
+    ],
+    "continuous_top_bars": {
+     "state": "BLOCKED_INTERPRETATION",
+     "why": "drawn as split TEXT fragments (count / Ø / diameter) in the schedule frame; proximity assembly not verified"
+    },
+    "side_bars": {
+     "state": "BLOCKED_INTERPRETATION",
+     "why": "split text '2Ø12' + '30cm' in the schedule frame; binding to a beam row not verified"
+    }
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "CONTINUOUS_BEAM",
+   "type": "CB6",
+   "block": "C-BEAM2",
+   "insert_handle": "2A04",
+   "page": 11,
+   "interpretation_state": "PARTIALLY_INTERPRETED",
+   "fields": {
+    "B_cm": 20.0,
+    "H_cm": 75.0,
+    "spans_m": [
+     4.4,
+     6.3
+    ],
+    "design_load_t_per_m": {
+     "T/M-1": "3.7",
+     "T/M-2": "3.9"
+    },
+    "bottom_bars_per_span": [
+     {
+      "grammar": "COUNT_DIA",
+      "count": 3,
+      "dia_mm": 16,
+      "per_m": false,
+      "raw": [
+       "3",
+       "16"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "BOT1-B",
+       "BOT1-D"
+      ]
+     },
+     {
+      "grammar": "COUNT_DIA",
+      "count": 4,
+      "dia_mm": 18,
+      "per_m": false,
+      "raw": [
+       "4",
+       "18"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "BOT2-B",
+       "BOT2-D"
+      ]
+     }
+    ],
+    "support_top_bars": {
+     "support_MID": {
+      "grammar": "COUNT_DIA",
+      "count": 4,
+      "dia_mm": 18,
+      "per_m": false,
+      "raw": [
+       "4",
+       "18"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "MID-B",
+       "MID-D"
+      ]
+     }
+    },
+    "stirrups_per_span": [
+     {
+      "grammar": "COUNT_DIA",
+      "count": 5,
+      "dia_mm": 8,
+      "per_m": false,
+      "raw": [
+       "5",
+       "8"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "STR1-B",
+       "STR1-D"
+      ],
+      "semantics": "STIRRUPS_PER_METRE (schedule header)"
+     },
+     {
+      "grammar": "COUNT_DIA",
+      "count": 6,
+      "dia_mm": 8,
+      "per_m": false,
+      "raw": [
+       "6",
+       "8"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "STR2-B",
+       "STR2-D"
+      ],
+      "semantics": "STIRRUPS_PER_METRE (schedule header)"
+     }
+    ],
+    "continuous_top_bars": {
+     "state": "BLOCKED_INTERPRETATION",
+     "why": "drawn as split TEXT fragments (count / Ø / diameter) in the schedule frame; proximity assembly not verified"
+    },
+    "side_bars": {
+     "state": "BLOCKED_INTERPRETATION",
+     "why": "split text '2Ø12' + '30cm' in the schedule frame; binding to a beam row not verified"
+    }
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "CONTINUOUS_BEAM",
+   "type": "CB3",
+   "block": "C-BEAM3",
+   "insert_handle": "2344",
+   "page": 12,
+   "interpretation_state": "PARTIALLY_INTERPRETED",
+   "fields": {
+    "B_cm": 20.0,
+    "H_cm": 75.0,
+    "spans_m": [
+     3.4,
+     3.3,
+     3.8
+    ],
+    "design_load_t_per_m": {
+     "T/M-1": "3.8",
+     "T/M-2": "3.8",
+     "T/M-3": "5.0"
+    },
+    "bottom_bars_per_span": [
+     {
+      "grammar": "COUNT_DIA",
+      "count": 3,
+      "dia_mm": 16,
+      "per_m": false,
+      "raw": [
+       "3",
+       "16"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "BOT1-B",
+       "BOT1-D"
+      ]
+     },
+     {
+      "grammar": "COUNT_DIA",
+      "count": 3,
+      "dia_mm": 16,
+      "per_m": false,
+      "raw": [
+       "3",
+       "16"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "BOT2-B",
+       "BOT2-D"
+      ]
+     },
+     {
+      "grammar": "COUNT_DIA",
+      "count": 3,
+      "dia_mm": 16,
+      "per_m": false,
+      "raw": [
+       "3",
+       "16"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "BOT3-B",
+       "BOT3-D"
+      ]
+     }
+    ],
+    "support_top_bars": {
+     "support_MID1": {
+      "grammar": "EMPTY",
+      "count": null,
+      "dia_mm": null,
+      "per_m": false,
+      "raw": [
+       "",
+       ""
+      ],
+      "interpretation_state": "NOT_APPLICABLE",
+      "tags": [
+       "MID1-B",
+       "MID1-D"
+      ]
+     },
+     "support_MID2": {
+      "grammar": "EMPTY",
+      "count": null,
+      "dia_mm": null,
+      "per_m": false,
+      "raw": [
+       "",
+       ""
+      ],
+      "interpretation_state": "NOT_APPLICABLE",
+      "tags": [
+       "MID2-B",
+       "MID2-D"
+      ]
+     }
+    },
+    "stirrups_per_span": [
+     {
+      "grammar": "COUNT_DIA",
+      "count": 5,
+      "dia_mm": 8,
+      "per_m": false,
+      "raw": [
+       "5",
+       "8"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "STR1-B",
+       "STR1-D"
+      ],
+      "semantics": "STIRRUPS_PER_METRE (schedule header)"
+     },
+     {
+      "grammar": "COUNT_DIA",
+      "count": 5,
+      "dia_mm": 8,
+      "per_m": false,
+      "raw": [
+       "5",
+       "8"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "STR2-B",
+       "STR2-D"
+      ],
+      "semantics": "STIRRUPS_PER_METRE (schedule header)"
+     },
+     {
+      "grammar": "COUNT_DIA",
+      "count": 9,
+      "dia_mm": 8,
+      "per_m": false,
+      "raw": [
+       "9",
+       "8"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "STR3-B",
+       "STR3-D"
+      ],
+      "semantics": "STIRRUPS_PER_METRE (schedule header)"
+     }
+    ],
+    "continuous_top_bars": {
+     "state": "BLOCKED_INTERPRETATION",
+     "why": "drawn as split TEXT fragments (count / Ø / diameter) in the schedule frame; proximity assembly not verified"
+    },
+    "side_bars": {
+     "state": "BLOCKED_INTERPRETATION",
+     "why": "split text '2Ø12' + '30cm' in the schedule frame; binding to a beam row not verified"
+    }
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "CONTINUOUS_BEAM",
+   "type": "CB8",
+   "block": "C-BEAM3",
+   "insert_handle": "2574",
+   "page": 12,
+   "interpretation_state": "PARTIALLY_INTERPRETED",
+   "fields": {
+    "B_cm": 30.0,
+    "H_cm": 75.0,
+    "spans_m": [
+     3.7,
+     6.4,
+     6.8
+    ],
+    "design_load_t_per_m": {
+     "T/M-1": "3.3",
+     "T/M-2": "3.3",
+     "T/M-3": "3.3"
+    },
+    "bottom_bars_per_span": [
+     {
+      "grammar": "COUNT_DIA",
+      "count": 3,
+      "dia_mm": 14,
+      "per_m": false,
+      "raw": [
+       "3",
+       "14"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "BOT1-B",
+       "BOT1-D"
+      ]
+     },
+     {
+      "grammar": "COUNT_DIA",
+      "count": 7,
+      "dia_mm": 18,
+      "per_m": false,
+      "raw": [
+       "7",
+       "18"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "BOT2-B",
+       "BOT2-D"
+      ]
+     },
+     {
+      "grammar": "COUNT_DIA",
+      "count": 4,
+      "dia_mm": 16,
+      "per_m": false,
+      "raw": [
+       "4",
+       "16"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "BOT3-B",
+       "BOT3-D"
+      ]
+     }
+    ],
+    "support_top_bars": {
+     "support_MID1": {
+      "grammar": "EMPTY",
+      "count": null,
+      "dia_mm": null,
+      "per_m": false,
+      "raw": [
+       "",
+       ""
+      ],
+      "interpretation_state": "NOT_APPLICABLE",
+      "tags": [
+       "MID1-B",
+       "MID1-D"
+      ]
+     },
+     "support_MID2": {
+      "grammar": "COUNT_DIA",
+      "count": 6,
+      "dia_mm": 18,
+      "per_m": false,
+      "raw": [
+       "6",
+       "18"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "MID2-B",
+       "MID2-D"
+      ]
+     }
+    },
+    "stirrups_per_span": [
+     {
+      "grammar": "COUNT_DIA",
+      "count": 5,
+      "dia_mm": 8,
+      "per_m": false,
+      "raw": [
+       "5",
+       "8"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "STR1-B",
+       "STR1-D"
+      ],
+      "semantics": "STIRRUPS_PER_METRE (schedule header)"
+     },
+     {
+      "grammar": "COUNT_DIA",
+      "count": 8,
+      "dia_mm": 8,
+      "per_m": false,
+      "raw": [
+       "8",
+       "8"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "STR2-B",
+       "STR2-D"
+      ],
+      "semantics": "STIRRUPS_PER_METRE (schedule header)"
+     },
+     {
+      "grammar": "COUNT_DIA",
+      "count": 5,
+      "dia_mm": 8,
+      "per_m": false,
+      "raw": [
+       "5",
+       "8"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "STR3-B",
+       "STR3-D"
+      ],
+      "semantics": "STIRRUPS_PER_METRE (schedule header)"
+     }
+    ],
+    "continuous_top_bars": {
+     "state": "BLOCKED_INTERPRETATION",
+     "why": "drawn as split TEXT fragments (count / Ø / diameter) in the schedule frame; proximity assembly not verified"
+    },
+    "side_bars": {
+     "state": "BLOCKED_INTERPRETATION",
+     "why": "split text '2Ø12' + '30cm' in the schedule frame; binding to a beam row not verified"
+    }
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "CONTINUOUS_BEAM",
+   "type": "CB9",
+   "block": "C-BEAM3",
+   "insert_handle": "2619",
+   "page": 12,
+   "interpretation_state": "PARTIALLY_INTERPRETED",
+   "fields": {
+    "B_cm": 20.0,
+    "H_cm": 50.0,
+    "spans_m": [
+     4.1,
+     4.0,
+     3.7
+    ],
+    "design_load_t_per_m": {
+     "T/M-1": "3.7",
+     "T/M-2": "3.7",
+     "T/M-3": "4.0"
+    },
+    "bottom_bars_per_span": [
+     {
+      "grammar": "COUNT_DIA",
+      "count": 4,
+      "dia_mm": 16,
+      "per_m": false,
+      "raw": [
+       "4",
+       "16"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "BOT1-B",
+       "BOT1-D"
+      ]
+     },
+     {
+      "grammar": "COUNT_DIA",
+      "count": 3,
+      "dia_mm": 14,
+      "per_m": false,
+      "raw": [
+       "3",
+       "14"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "BOT2-B",
+       "BOT2-D"
+      ]
+     },
+     {
+      "grammar": "COUNT_DIA",
+      "count": 3,
+      "dia_mm": 14,
+      "per_m": false,
+      "raw": [
+       "3",
+       "14"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "BOT3-B",
+       "BOT3-D"
+      ]
+     }
+    ],
+    "support_top_bars": {
+     "support_MID1": {
+      "grammar": "COUNT_DIA",
+      "count": 4,
+      "dia_mm": 18,
+      "per_m": false,
+      "raw": [
+       "4",
+       "18"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "MID1-B",
+       "MID1-D"
+      ]
+     },
+     "support_MID2": {
+      "grammar": "COUNT_DIA",
+      "count": 3,
+      "dia_mm": 16,
+      "per_m": false,
+      "raw": [
+       "3",
+       "16"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "MID2-B",
+       "MID2-D"
+      ]
+     }
+    },
+    "stirrups_per_span": [
+     {
+      "grammar": "COUNT_DIA",
+      "count": 7,
+      "dia_mm": 8,
+      "per_m": false,
+      "raw": [
+       "7",
+       "8"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "STR1-B",
+       "STR1-D"
+      ],
+      "semantics": "STIRRUPS_PER_METRE (schedule header)"
+     },
+     {
+      "grammar": "COUNT_DIA",
+      "count": 10,
+      "dia_mm": 8,
+      "per_m": false,
+      "raw": [
+       "10",
+       "8"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "STR2-B",
+       "STR2-D"
+      ],
+      "semantics": "STIRRUPS_PER_METRE (schedule header)"
+     },
+     {
+      "grammar": "COUNT_DIA",
+      "count": 6,
+      "dia_mm": 8,
+      "per_m": false,
+      "raw": [
+       "6",
+       "8"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "STR3-B",
+       "STR3-D"
+      ],
+      "semantics": "STIRRUPS_PER_METRE (schedule header)"
+     }
+    ],
+    "continuous_top_bars": {
+     "state": "BLOCKED_INTERPRETATION",
+     "why": "drawn as split TEXT fragments (count / Ø / diameter) in the schedule frame; proximity assembly not verified"
+    },
+    "side_bars": {
+     "state": "BLOCKED_INTERPRETATION",
+     "why": "split text '2Ø12' + '30cm' in the schedule frame; binding to a beam row not verified"
+    }
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "CONTINUOUS_BEAM",
+   "type": "CB11",
+   "block": "C-BEAM3",
+   "insert_handle": "26C1",
+   "page": 12,
+   "interpretation_state": "PARTIALLY_INTERPRETED",
+   "fields": {
+    "B_cm": 30.0,
+    "H_cm": 75.0,
+    "spans_m": [
+     7.1,
+     3.2,
+     3.7
+    ],
+    "design_load_t_per_m": {
+     "T/M-1": "4.1",
+     "T/M-2": "3.8",
+     "T/M-3": "3.8"
+    },
+    "bottom_bars_per_span": [
+     {
+      "grammar": "COUNT_DIA",
+      "count": 6,
+      "dia_mm": 18,
+      "per_m": false,
+      "raw": [
+       "6",
+       "18"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "BOT1-B",
+       "BOT1-D"
+      ]
+     },
+     {
+      "grammar": "COUNT_DIA",
+      "count": 4,
+      "dia_mm": 16,
+      "per_m": false,
+      "raw": [
+       "4",
+       "16"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "BOT2-B",
+       "BOT2-D"
+      ]
+     },
+     {
+      "grammar": "COUNT_DIA",
+      "count": 4,
+      "dia_mm": 16,
+      "per_m": false,
+      "raw": [
+       "4",
+       "16"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "BOT3-B",
+       "BOT3-D"
+      ]
+     }
+    ],
+    "support_top_bars": {
+     "support_MID1": {
+      "grammar": "COUNT_DIA",
+      "count": 8,
+      "dia_mm": 18,
+      "per_m": false,
+      "raw": [
+       "8",
+       "18"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "MID1-B",
+       "MID1-D"
+      ]
+     },
+     "support_MID2": {
+      "grammar": "COUNT_DIA",
+      "count": 4,
+      "dia_mm": 16,
+      "per_m": false,
+      "raw": [
+       "4",
+       "16"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "MID2-B",
+       "MID2-D"
+      ]
+     }
+    },
+    "stirrups_per_span": [
+     {
+      "grammar": "COUNT_DIA",
+      "count": 10,
+      "dia_mm": 8,
+      "per_m": false,
+      "raw": [
+       "10",
+       "8"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "STR1-B",
+       "STR1-D"
+      ],
+      "semantics": "STIRRUPS_PER_METRE (schedule header)"
+     },
+     {
+      "grammar": "COUNT_DIA",
+      "count": 6,
+      "dia_mm": 8,
+      "per_m": false,
+      "raw": [
+       "6",
+       "8"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "STR2-B",
+       "STR2-D"
+      ],
+      "semantics": "STIRRUPS_PER_METRE (schedule header)"
+     },
+     {
+      "grammar": "COUNT_DIA",
+      "count": 5,
+      "dia_mm": 8,
+      "per_m": false,
+      "raw": [
+       "5",
+       "8"
+      ],
+      "interpretation_state": "TOKENS_PARSED",
+      "tags": [
+       "STR3-B",
+       "STR3-D"
+      ],
+      "semantics": "STIRRUPS_PER_METRE (schedule header)"
+     }
+    ],
+    "continuous_top_bars": {
+     "state": "BLOCKED_INTERPRETATION",
+     "why": "drawn as split TEXT fragments (count / Ø / diameter) in the schedule frame; proximity assembly not verified"
+    },
+    "side_bars": {
+     "state": "BLOCKED_INTERPRETATION",
+     "why": "split text '2Ø12' + '30cm' in the schedule frame; binding to a beam row not verified"
+    }
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "SIMPLE_BEAM",
+   "type": "B1",
+   "block": "SBT",
+   "insert_handle": "1E5C",
+   "page": 10,
+   "interpretation_state": "INTERPRETED",
+   "fields": {
+    "B_cm": 20.0,
+    "H_cm": 40.0,
+    "bottom": {
+     "grammar": "COUNT_DIA",
+     "count": 2,
+     "dia_mm": 14,
+     "per_m": false,
+     "raw": [
+      "2",
+      "14"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "BOT-B",
+      "BOT-D"
+     ]
+    },
+    "top": {
+     "grammar": "COUNT_DIA",
+     "count": 2,
+     "dia_mm": 12,
+     "per_m": false,
+     "raw": [
+      "2",
+      "12"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "TOP-B",
+      "TOP-D"
+     ]
+    },
+    "stirrups_per_m": {
+     "grammar": "COUNT_DIA",
+     "count": 6,
+     "dia_mm": 8,
+     "per_m": false,
+     "raw": [
+      "6",
+      "8"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "STI-B",
+      "D"
+     ],
+     "semantics": "STIRRUPS_PER_METRE (schedule header)"
+    }
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "SIMPLE_BEAM",
+   "type": "B2",
+   "block": "SBT",
+   "insert_handle": "1E78",
+   "page": 10,
+   "interpretation_state": "INTERPRETED",
+   "fields": {
+    "B_cm": 20.0,
+    "H_cm": 40.0,
+    "bottom": {
+     "grammar": "COUNT_DIA",
+     "count": 3,
+     "dia_mm": 16,
+     "per_m": false,
+     "raw": [
+      "3",
+      "16"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "BOT-B",
+      "BOT-D"
+     ]
+    },
+    "top": {
+     "grammar": "COUNT_DIA",
+     "count": 2,
+     "dia_mm": 12,
+     "per_m": false,
+     "raw": [
+      "2",
+      "12"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "TOP-B",
+      "TOP-D"
+     ]
+    },
+    "stirrups_per_m": {
+     "grammar": "COUNT_DIA",
+     "count": 6,
+     "dia_mm": 8,
+     "per_m": false,
+     "raw": [
+      "6",
+      "8"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "STI-B",
+      "D"
+     ],
+     "semantics": "STIRRUPS_PER_METRE (schedule header)"
+    }
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "SIMPLE_BEAM",
+   "type": "B3",
+   "block": "SBT",
+   "insert_handle": "1E83",
+   "page": 10,
+   "interpretation_state": "INTERPRETED",
+   "fields": {
+    "B_cm": 20.0,
+    "H_cm": 40.0,
+    "bottom": {
+     "grammar": "COUNT_DIA",
+     "count": 4,
+     "dia_mm": 16,
+     "per_m": false,
+     "raw": [
+      "4",
+      "16"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "BOT-B",
+      "BOT-D"
+     ]
+    },
+    "top": {
+     "grammar": "COUNT_DIA",
+     "count": 2,
+     "dia_mm": 12,
+     "per_m": false,
+     "raw": [
+      "2",
+      "12"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "TOP-B",
+      "TOP-D"
+     ]
+    },
+    "stirrups_per_m": {
+     "grammar": "COUNT_DIA",
+     "count": 6,
+     "dia_mm": 8,
+     "per_m": false,
+     "raw": [
+      "6",
+      "8"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "STI-B",
+      "D"
+     ],
+     "semantics": "STIRRUPS_PER_METRE (schedule header)"
+    }
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "SIMPLE_BEAM",
+   "type": "B4",
+   "block": "SBT",
+   "insert_handle": "1E8E",
+   "page": 10,
+   "interpretation_state": "INTERPRETED",
+   "fields": {
+    "B_cm": 20.0,
+    "H_cm": 50.0,
+    "bottom": {
+     "grammar": "COUNT_DIA",
+     "count": 4,
+     "dia_mm": 16,
+     "per_m": false,
+     "raw": [
+      "4",
+      "16"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "BOT-B",
+      "BOT-D"
+     ]
+    },
+    "top": {
+     "grammar": "COUNT_DIA",
+     "count": 2,
+     "dia_mm": 12,
+     "per_m": false,
+     "raw": [
+      "2",
+      "12"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "TOP-B",
+      "TOP-D"
+     ]
+    },
+    "stirrups_per_m": {
+     "grammar": "COUNT_DIA",
+     "count": 6,
+     "dia_mm": 8,
+     "per_m": false,
+     "raw": [
+      "6",
+      "8"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "STI-B",
+      "D"
+     ],
+     "semantics": "STIRRUPS_PER_METRE (schedule header)"
+    }
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "SIMPLE_BEAM",
+   "type": "B5",
+   "block": "SBT",
+   "insert_handle": "1E99",
+   "page": 10,
+   "interpretation_state": "INTERPRETED",
+   "fields": {
+    "B_cm": 20.0,
+    "H_cm": 50.0,
+    "bottom": {
+     "grammar": "COUNT_DIA",
+     "count": 4,
+     "dia_mm": 18,
+     "per_m": false,
+     "raw": [
+      "4",
+      "18"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "BOT-B",
+      "BOT-D"
+     ]
+    },
+    "top": {
+     "grammar": "COUNT_DIA",
+     "count": 2,
+     "dia_mm": 12,
+     "per_m": false,
+     "raw": [
+      "2",
+      "12"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "TOP-B",
+      "TOP-D"
+     ]
+    },
+    "stirrups_per_m": {
+     "grammar": "COUNT_DIA",
+     "count": 6,
+     "dia_mm": 8,
+     "per_m": false,
+     "raw": [
+      "6",
+      "8"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "STI-B",
+      "D"
+     ],
+     "semantics": "STIRRUPS_PER_METRE (schedule header)"
+    }
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "SIMPLE_BEAM",
+   "type": "B6",
+   "block": "SBT",
+   "insert_handle": "1EA4",
+   "page": 10,
+   "interpretation_state": "INTERPRETED",
+   "fields": {
+    "B_cm": 25.0,
+    "H_cm": 50.0,
+    "bottom": {
+     "grammar": "COUNT_DIA",
+     "count": 5,
+     "dia_mm": 18,
+     "per_m": false,
+     "raw": [
+      "5",
+      "18"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "BOT-B",
+      "BOT-D"
+     ]
+    },
+    "top": {
+     "grammar": "COUNT_DIA",
+     "count": 2,
+     "dia_mm": 12,
+     "per_m": false,
+     "raw": [
+      "2",
+      "12"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "TOP-B",
+      "TOP-D"
+     ]
+    },
+    "stirrups_per_m": {
+     "grammar": "COUNT_DIA",
+     "count": 6,
+     "dia_mm": 8,
+     "per_m": false,
+     "raw": [
+      "6",
+      "8"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "STI-B",
+      "D"
+     ],
+     "semantics": "STIRRUPS_PER_METRE (schedule header)"
+    }
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "SIMPLE_BEAM",
+   "type": "B7",
+   "block": "SBT",
+   "insert_handle": "1EAF",
+   "page": 10,
+   "interpretation_state": "INTERPRETED",
+   "fields": {
+    "B_cm": 20.0,
+    "H_cm": 75.0,
+    "bottom": {
+     "grammar": "COUNT_DIA",
+     "count": 3,
+     "dia_mm": 16,
+     "per_m": false,
+     "raw": [
+      "3",
+      "16"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "BOT-B",
+      "BOT-D"
+     ]
+    },
+    "top": {
+     "grammar": "COUNT_DIA",
+     "count": 2,
+     "dia_mm": 12,
+     "per_m": false,
+     "raw": [
+      "2",
+      "12"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "TOP-B",
+      "TOP-D"
+     ]
+    },
+    "stirrups_per_m": {
+     "grammar": "COUNT_DIA",
+     "count": 6,
+     "dia_mm": 8,
+     "per_m": false,
+     "raw": [
+      "6",
+      "8"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "STI-B",
+      "D"
+     ],
+     "semantics": "STIRRUPS_PER_METRE (schedule header)"
+    },
+    "remarks_side_bars": {
+     "raw": "2%%C12/30cm",
+     "normalised": "2Ø12/30cm",
+     "grammar": "COUNT_DIA_AT_SPACING",
+     "count": 2,
+     "dia_mm": 12,
+     "per_m": false,
+     "spacing_cm": 30,
+     "position": [
+      116233.2,
+      13181.8
+     ],
+     "each_way": false,
+     "interpretation_state": "TOKENS_PARSED_SEMANTICS_CANDIDATE",
+     "text_handle": "1FC6",
+     "interpretation": "CANDIDATE: side bars, count per level at the printed vertical spacing - the count / face semantics need the typical detail"
+    }
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "SIMPLE_BEAM",
+   "type": "B8",
+   "block": "SBT",
+   "insert_handle": "1EBA",
+   "page": 10,
+   "interpretation_state": "INTERPRETED",
+   "fields": {
+    "B_cm": 20.0,
+    "H_cm": 75.0,
+    "bottom": {
+     "grammar": "COUNT_DIA",
+     "count": 4,
+     "dia_mm": 16,
+     "per_m": false,
+     "raw": [
+      "4",
+      "16"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "BOT-B",
+      "BOT-D"
+     ]
+    },
+    "top": {
+     "grammar": "COUNT_DIA",
+     "count": 2,
+     "dia_mm": 12,
+     "per_m": false,
+     "raw": [
+      "2",
+      "12"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "TOP-B",
+      "TOP-D"
+     ]
+    },
+    "stirrups_per_m": {
+     "grammar": "COUNT_DIA",
+     "count": 6,
+     "dia_mm": 8,
+     "per_m": false,
+     "raw": [
+      "6",
+      "8"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "STI-B",
+      "D"
+     ],
+     "semantics": "STIRRUPS_PER_METRE (schedule header)"
+    },
+    "remarks_side_bars": {
+     "raw": "2%%C12/30cm",
+     "normalised": "2Ø12/30cm",
+     "grammar": "COUNT_DIA_AT_SPACING",
+     "count": 2,
+     "dia_mm": 12,
+     "per_m": false,
+     "spacing_cm": 30,
+     "position": [
+      116233.2,
+      12509.8
+     ],
+     "each_way": false,
+     "interpretation_state": "TOKENS_PARSED_SEMANTICS_CANDIDATE",
+     "text_handle": "1FC7",
+     "interpretation": "CANDIDATE: side bars, count per level at the printed vertical spacing - the count / face semantics need the typical detail"
+    }
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "SIMPLE_BEAM",
+   "type": "B9",
+   "block": "SBT",
+   "insert_handle": "1EC5",
+   "page": 10,
+   "interpretation_state": "INTERPRETED",
+   "fields": {
+    "B_cm": 20.0,
+    "H_cm": 75.0,
+    "bottom": {
+     "grammar": "COUNT_DIA",
+     "count": 4,
+     "dia_mm": 18,
+     "per_m": false,
+     "raw": [
+      "4",
+      "18"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "BOT-B",
+      "BOT-D"
+     ]
+    },
+    "top": {
+     "grammar": "COUNT_DIA",
+     "count": 2,
+     "dia_mm": 12,
+     "per_m": false,
+     "raw": [
+      "2",
+      "12"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "TOP-B",
+      "TOP-D"
+     ]
+    },
+    "stirrups_per_m": {
+     "grammar": "COUNT_DIA",
+     "count": 6,
+     "dia_mm": 8,
+     "per_m": false,
+     "raw": [
+      "6",
+      "8"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "STI-B",
+      "D"
+     ],
+     "semantics": "STIRRUPS_PER_METRE (schedule header)"
+    },
+    "remarks_side_bars": {
+     "raw": "2%%C12/30cm",
+     "normalised": "2Ø12/30cm",
+     "grammar": "COUNT_DIA_AT_SPACING",
+     "count": 2,
+     "dia_mm": 12,
+     "per_m": false,
+     "spacing_cm": 30,
+     "position": [
+      116233.2,
+      11837.8
+     ],
+     "each_way": false,
+     "interpretation_state": "TOKENS_PARSED_SEMANTICS_CANDIDATE",
+     "text_handle": "1FC8",
+     "interpretation": "CANDIDATE: side bars, count per level at the printed vertical spacing - the count / face semantics need the typical detail"
+    }
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "SIMPLE_BEAM",
+   "type": "B10",
+   "block": "SBT",
+   "insert_handle": "1ED0",
+   "page": 10,
+   "interpretation_state": "INTERPRETED",
+   "fields": {
+    "B_cm": 20.0,
+    "H_cm": 75.0,
+    "bottom": {
+     "grammar": "COUNT_DIA",
+     "count": 5,
+     "dia_mm": 18,
+     "per_m": false,
+     "raw": [
+      "5",
+      "18"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "BOT-B",
+      "BOT-D"
+     ]
+    },
+    "top": {
+     "grammar": "COUNT_DIA",
+     "count": 2,
+     "dia_mm": 12,
+     "per_m": false,
+     "raw": [
+      "2",
+      "12"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "TOP-B",
+      "TOP-D"
+     ]
+    },
+    "stirrups_per_m": {
+     "grammar": "COUNT_DIA",
+     "count": 6,
+     "dia_mm": 8,
+     "per_m": false,
+     "raw": [
+      "6",
+      "8"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "STI-B",
+      "D"
+     ],
+     "semantics": "STIRRUPS_PER_METRE (schedule header)"
+    },
+    "remarks_side_bars": {
+     "raw": "2%%C12/30cm",
+     "normalised": "2Ø12/30cm",
+     "grammar": "COUNT_DIA_AT_SPACING",
+     "count": 2,
+     "dia_mm": 12,
+     "per_m": false,
+     "spacing_cm": 30,
+     "position": [
+      116233.2,
+      11165.8
+     ],
+     "each_way": false,
+     "interpretation_state": "TOKENS_PARSED_SEMANTICS_CANDIDATE",
+     "text_handle": "1FC9",
+     "interpretation": "CANDIDATE: side bars, count per level at the printed vertical spacing - the count / face semantics need the typical detail"
+    }
+   },
+   "feeds_quantity": false
+  },
+  {
+   "element": "SIMPLE_BEAM",
+   "type": "B11",
+   "block": "SBT",
+   "insert_handle": "1EDB",
+   "page": 10,
+   "interpretation_state": "INTERPRETED",
+   "fields": {
+    "B_cm": 20.0,
+    "H_cm": 75.0,
+    "bottom": {
+     "grammar": "COUNT_DIA",
+     "count": 6,
+     "dia_mm": 18,
+     "per_m": false,
+     "raw": [
+      "6",
+      "18"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "BOT-B",
+      "BOT-D"
+     ]
+    },
+    "top": {
+     "grammar": "COUNT_DIA",
+     "count": 2,
+     "dia_mm": 12,
+     "per_m": false,
+     "raw": [
+      "2",
+      "12"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "TOP-B",
+      "TOP-D"
+     ]
+    },
+    "stirrups_per_m": {
+     "grammar": "COUNT_DIA",
+     "count": 6,
+     "dia_mm": 8,
+     "per_m": false,
+     "raw": [
+      "6",
+      "8"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "STI-B",
+      "D"
+     ],
+     "semantics": "STIRRUPS_PER_METRE (schedule header)"
+    },
+    "remarks_side_bars": {
+     "raw": "2%%C12/30cm",
+     "normalised": "2Ø12/30cm",
+     "grammar": "COUNT_DIA_AT_SPACING",
+     "count": 2,
+     "dia_mm": 12,
+     "per_m": false,
+     "spacing_cm": 30,
+     "position": [
+      116233.2,
+      10493.8
+     ],
+     "each_way": false,
+     "interpretation_state": "TOKENS_PARSED_SEMANTICS_CANDIDATE",
+     "text_handle": "1FCA",
+     "interpretation": "CANDIDATE: side bars, count per level at the printed vertical spacing - the count / face semantics need the typical detail"
+    }
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "SIMPLE_BEAM",
+   "type": "B12",
+   "block": "SBT",
+   "insert_handle": "1EE6",
+   "page": 10,
+   "interpretation_state": "INTERPRETED",
+   "fields": {
+    "B_cm": 25.0,
+    "H_cm": 75.0,
+    "bottom": {
+     "grammar": "COUNT_DIA",
+     "count": 6,
+     "dia_mm": 18,
+     "per_m": false,
+     "raw": [
+      "6",
+      "18"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "BOT-B",
+      "BOT-D"
+     ]
+    },
+    "top": {
+     "grammar": "COUNT_DIA",
+     "count": 2,
+     "dia_mm": 14,
+     "per_m": false,
+     "raw": [
+      "2",
+      "14"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "TOP-B",
+      "TOP-D"
+     ]
+    },
+    "stirrups_per_m": {
+     "grammar": "COUNT_DIA",
+     "count": 6,
+     "dia_mm": 8,
+     "per_m": false,
+     "raw": [
+      "6",
+      "8"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "STI-B",
+      "D"
+     ],
+     "semantics": "STIRRUPS_PER_METRE (schedule header)"
+    },
+    "remarks_side_bars": {
+     "raw": "2%%C12/30cm",
+     "normalised": "2Ø12/30cm",
+     "grammar": "COUNT_DIA_AT_SPACING",
+     "count": 2,
+     "dia_mm": 12,
+     "per_m": false,
+     "spacing_cm": 30,
+     "position": [
+      116233.2,
+      9821.8
+     ],
+     "each_way": false,
+     "interpretation_state": "TOKENS_PARSED_SEMANTICS_CANDIDATE",
+     "text_handle": "1FCB",
+     "interpretation": "CANDIDATE: side bars, count per level at the printed vertical spacing - the count / face semantics need the typical detail"
+    }
+   },
+   "feeds_quantity": false
+  },
+  {
+   "element": "SIMPLE_BEAM",
+   "type": "B13",
+   "block": "SBT",
+   "insert_handle": "1EF1",
+   "page": 10,
+   "interpretation_state": "INTERPRETED",
+   "fields": {
+    "B_cm": 25.0,
+    "H_cm": 75.0,
+    "bottom": {
+     "grammar": "COUNT_DIA",
+     "count": 7,
+     "dia_mm": 18,
+     "per_m": false,
+     "raw": [
+      "7",
+      "18"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "BOT-B",
+      "BOT-D"
+     ]
+    },
+    "top": {
+     "grammar": "COUNT_DIA",
+     "count": 2,
+     "dia_mm": 14,
+     "per_m": false,
+     "raw": [
+      "2",
+      "14"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "TOP-B",
+      "TOP-D"
+     ]
+    },
+    "stirrups_per_m": {
+     "grammar": "COUNT_DIA",
+     "count": 7,
+     "dia_mm": 8,
+     "per_m": false,
+     "raw": [
+      "7",
+      "8"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "STI-B",
+      "D"
+     ],
+     "semantics": "STIRRUPS_PER_METRE (schedule header)"
+    },
+    "remarks_side_bars": {
+     "raw": "2%%C12/30cm",
+     "normalised": "2Ø12/30cm",
+     "grammar": "COUNT_DIA_AT_SPACING",
+     "count": 2,
+     "dia_mm": 12,
+     "per_m": false,
+     "spacing_cm": 30,
+     "position": [
+      116233.2,
+      9149.8
+     ],
+     "each_way": false,
+     "interpretation_state": "TOKENS_PARSED_SEMANTICS_CANDIDATE",
+     "text_handle": "1FCC",
+     "interpretation": "CANDIDATE: side bars, count per level at the printed vertical spacing - the count / face semantics need the typical detail"
+    }
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "SIMPLE_BEAM",
+   "type": "B14",
+   "block": "SBT",
+   "insert_handle": "1EFC",
+   "page": 10,
+   "interpretation_state": "INTERPRETED",
+   "fields": {
+    "B_cm": 20.0,
+    "H_cm": 75.0,
+    "bottom": {
+     "grammar": "COUNT_DIA",
+     "count": 4,
+     "dia_mm": 18,
+     "per_m": false,
+     "raw": [
+      "4",
+      "18"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "BOT-B",
+      "BOT-D"
+     ]
+    },
+    "top": {
+     "grammar": "COUNT_DIA",
+     "count": 2,
+     "dia_mm": 12,
+     "per_m": false,
+     "raw": [
+      "2",
+      "12"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "TOP-B",
+      "TOP-D"
+     ]
+    },
+    "stirrups_per_m": {
+     "grammar": "COUNT_DIA",
+     "count": 7,
+     "dia_mm": 8,
+     "per_m": false,
+     "raw": [
+      "7",
+      "8"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "STI-B",
+      "D"
+     ],
+     "semantics": "STIRRUPS_PER_METRE (schedule header)"
+    },
+    "remarks_side_bars": {
+     "raw": "2%%C12/30cm",
+     "normalised": "2Ø12/30cm",
+     "grammar": "COUNT_DIA_AT_SPACING",
+     "count": 2,
+     "dia_mm": 12,
+     "per_m": false,
+     "spacing_cm": 30,
+     "position": [
+      116233.2,
+      8477.8
+     ],
+     "each_way": false,
+     "interpretation_state": "TOKENS_PARSED_SEMANTICS_CANDIDATE",
+     "text_handle": "1FCD",
+     "interpretation": "CANDIDATE: side bars, count per level at the printed vertical spacing - the count / face semantics need the typical detail"
+    }
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "SIMPLE_BEAM",
+   "type": "B15",
+   "block": "SBT",
+   "insert_handle": "1F07",
+   "page": 10,
+   "interpretation_state": "INTERPRETED",
+   "fields": {
+    "B_cm": 20.0,
+    "H_cm": 120.0,
+    "bottom": {
+     "grammar": "COUNT_DIA",
+     "count": 4,
+     "dia_mm": 16,
+     "per_m": false,
+     "raw": [
+      "4",
+      "16"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "BOT-B",
+      "BOT-D"
+     ]
+    },
+    "top": {
+     "grammar": "COUNT_DIA",
+     "count": 6,
+     "dia_mm": 18,
+     "per_m": false,
+     "raw": [
+      "6",
+      "18"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "TOP-B",
+      "TOP-D"
+     ]
+    },
+    "stirrups_per_m": {
+     "grammar": "COUNT_DIA",
+     "count": 10,
+     "dia_mm": 8,
+     "per_m": false,
+     "raw": [
+      "10",
+      "8"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "STI-B",
+      "D"
+     ],
+     "semantics": "STIRRUPS_PER_METRE (schedule header)"
+    },
+    "remarks_side_bars": {
+     "raw": "2%%C12/30cm",
+     "normalised": "2Ø12/30cm",
+     "grammar": "COUNT_DIA_AT_SPACING",
+     "count": 2,
+     "dia_mm": 12,
+     "per_m": false,
+     "spacing_cm": 30,
+     "position": [
+      116233.2,
+      7805.8
+     ],
+     "each_way": false,
+     "interpretation_state": "TOKENS_PARSED_SEMANTICS_CANDIDATE",
+     "text_handle": "1FCE",
+     "interpretation": "CANDIDATE: side bars, count per level at the printed vertical spacing - the count / face semantics need the typical detail"
+    }
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "SIMPLE_BEAM",
+   "type": "B16",
+   "block": "SBT",
+   "insert_handle": "1F12",
+   "page": 10,
+   "interpretation_state": "INTERPRETED",
+   "fields": {
+    "B_cm": 30.0,
+    "H_cm": 75.0,
+    "bottom": {
+     "grammar": "COUNT_DIA",
+     "count": 5,
+     "dia_mm": 18,
+     "per_m": false,
+     "raw": [
+      "5",
+      "18"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "BOT-B",
+      "BOT-D"
+     ]
+    },
+    "top": {
+     "grammar": "COUNT_DIA",
+     "count": 3,
+     "dia_mm": 14,
+     "per_m": false,
+     "raw": [
+      "3",
+      "14"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "TOP-B",
+      "TOP-D"
+     ]
+    },
+    "stirrups_per_m": {
+     "grammar": "COUNT_DIA",
+     "count": 10,
+     "dia_mm": 10,
+     "per_m": false,
+     "raw": [
+      "10",
+      "10"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "STI-B",
+      "D"
+     ],
+     "semantics": "STIRRUPS_PER_METRE (schedule header)"
+    },
+    "remarks_side_bars": {
+     "raw": "2%%C16/20cm",
+     "normalised": "2Ø16/20cm",
+     "grammar": "COUNT_DIA_AT_SPACING",
+     "count": 2,
+     "dia_mm": 16,
+     "per_m": false,
+     "spacing_cm": 20,
+     "position": [
+      116233.2,
+      7133.8
+     ],
+     "each_way": false,
+     "interpretation_state": "TOKENS_PARSED_SEMANTICS_CANDIDATE",
+     "text_handle": "1FCF",
+     "interpretation": "CANDIDATE: side bars, count per level at the printed vertical spacing - the count / face semantics need the typical detail"
+    }
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "SIMPLE_BEAM",
+   "type": "B17",
+   "block": "SBT",
+   "insert_handle": "1F1D",
+   "page": 10,
+   "interpretation_state": "INTERPRETED",
+   "fields": {
+    "B_cm": 45.0,
+    "H_cm": 75.0,
+    "bottom": {
+     "grammar": "COUNT_DIA",
+     "count": 10,
+     "dia_mm": 18,
+     "per_m": false,
+     "raw": [
+      "10",
+      "18"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "BOT-B",
+      "BOT-D"
+     ]
+    },
+    "top": {
+     "grammar": "COUNT_DIA",
+     "count": 4,
+     "dia_mm": 14,
+     "per_m": false,
+     "raw": [
+      "4",
+      "14"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "TOP-B",
+      "TOP-D"
+     ]
+    },
+    "stirrups_per_m": {
+     "grammar": "COUNT_DIA",
+     "count": 6,
+     "dia_mm": 8,
+     "per_m": false,
+     "raw": [
+      "6",
+      "8"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "STI-B",
+      "D"
+     ],
+     "semantics": "STIRRUPS_PER_METRE (schedule header)"
+    },
+    "remarks_side_bars": {
+     "raw": "2%%C12/30cm",
+     "normalised": "2Ø12/30cm",
+     "grammar": "COUNT_DIA_AT_SPACING",
+     "count": 2,
+     "dia_mm": 12,
+     "per_m": false,
+     "spacing_cm": 30,
+     "position": [
+      116233.2,
+      6461.8
+     ],
+     "each_way": false,
+     "interpretation_state": "TOKENS_PARSED_SEMANTICS_CANDIDATE",
+     "text_handle": "1FD0",
+     "interpretation": "CANDIDATE: side bars, count per level at the printed vertical spacing - the count / face semantics need the typical detail"
+    }
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "SIMPLE_BEAM",
+   "type": "B18",
+   "block": "SBT",
+   "insert_handle": "1F28",
+   "page": 10,
+   "interpretation_state": "INTERPRETED",
+   "fields": {
+    "B_cm": 35.0,
+    "H_cm": 75.0,
+    "bottom": {
+     "grammar": "COUNT_DIA",
+     "count": 10,
+     "dia_mm": 18,
+     "per_m": false,
+     "raw": [
+      "10",
+      "18"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "BOT-B",
+      "BOT-D"
+     ]
+    },
+    "top": {
+     "grammar": "COUNT_DIA",
+     "count": 3,
+     "dia_mm": 14,
+     "per_m": false,
+     "raw": [
+      "3",
+      "14"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "TOP-B",
+      "TOP-D"
+     ]
+    },
+    "stirrups_per_m": {
+     "grammar": "COUNT_DIA",
+     "count": 5,
+     "dia_mm": 8,
+     "per_m": false,
+     "raw": [
+      "5",
+      "8"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "STI-B",
+      "D"
+     ],
+     "semantics": "STIRRUPS_PER_METRE (schedule header)"
+    },
+    "remarks_side_bars": {
+     "raw": "2%%C12/30cm",
+     "normalised": "2Ø12/30cm",
+     "grammar": "COUNT_DIA_AT_SPACING",
+     "count": 2,
+     "dia_mm": 12,
+     "per_m": false,
+     "spacing_cm": 30,
+     "position": [
+      116233.2,
+      5789.8
+     ],
+     "each_way": false,
+     "interpretation_state": "TOKENS_PARSED_SEMANTICS_CANDIDATE",
+     "text_handle": "1FD1",
+     "interpretation": "CANDIDATE: side bars, count per level at the printed vertical spacing - the count / face semantics need the typical detail"
+    }
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "SIMPLE_BEAM",
+   "type": "B19",
+   "block": "SBT",
+   "insert_handle": "1F33",
+   "page": 10,
+   "interpretation_state": "INTERPRETED",
+   "fields": {
+    "B_cm": 40.0,
+    "H_cm": 75.0,
+    "bottom": {
+     "grammar": "COUNT_DIA",
+     "count": 11,
+     "dia_mm": 18,
+     "per_m": false,
+     "raw": [
+      "11",
+      "18"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "BOT-B",
+      "BOT-D"
+     ]
+    },
+    "top": {
+     "grammar": "COUNT_DIA",
+     "count": 4,
+     "dia_mm": 14,
+     "per_m": false,
+     "raw": [
+      "4",
+      "14"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "TOP-B",
+      "TOP-D"
+     ]
+    },
+    "stirrups_per_m": {
+     "grammar": "COUNT_DIA",
+     "count": 10,
+     "dia_mm": 10,
+     "per_m": false,
+     "raw": [
+      "10",
+      "10"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "STI-B",
+      "D"
+     ],
+     "semantics": "STIRRUPS_PER_METRE (schedule header)"
+    },
+    "remarks_side_bars": {
+     "raw": "2%%C14/20cm",
+     "normalised": "2Ø14/20cm",
+     "grammar": "COUNT_DIA_AT_SPACING",
+     "count": 2,
+     "dia_mm": 14,
+     "per_m": false,
+     "spacing_cm": 20,
+     "position": [
+      116233.2,
+      5117.8
+     ],
+     "each_way": false,
+     "interpretation_state": "TOKENS_PARSED_SEMANTICS_CANDIDATE",
+     "text_handle": "2700",
+     "interpretation": "CANDIDATE: side bars, count per level at the printed vertical spacing - the count / face semantics need the typical detail"
+    }
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "SIMPLE_BEAM",
+   "type": "B20",
+   "block": "SBT",
+   "insert_handle": "1F3E",
+   "page": 10,
+   "interpretation_state": "INTERPRETED",
+   "fields": {
+    "B_cm": 40.0,
+    "H_cm": 75.0,
+    "bottom": {
+     "grammar": "COUNT_DIA",
+     "count": 11,
+     "dia_mm": 18,
+     "per_m": false,
+     "raw": [
+      "11",
+      "18"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "BOT-B",
+      "BOT-D"
+     ]
+    },
+    "top": {
+     "grammar": "COUNT_DIA",
+     "count": 11,
+     "dia_mm": 18,
+     "per_m": false,
+     "raw": [
+      "11",
+      "18"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "TOP-B",
+      "TOP-D"
+     ]
+    },
+    "stirrups_per_m": {
+     "grammar": "COUNT_DIA",
+     "count": 10,
+     "dia_mm": 8,
+     "per_m": false,
+     "raw": [
+      "10",
+      "8"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "STI-B",
+      "D"
+     ],
+     "semantics": "STIRRUPS_PER_METRE (schedule header)"
+    },
+    "remarks_side_bars": {
+     "raw": "2%%C12/30cm",
+     "normalised": "2Ø12/30cm",
+     "grammar": "COUNT_DIA_AT_SPACING",
+     "count": 2,
+     "dia_mm": 12,
+     "per_m": false,
+     "spacing_cm": 30,
+     "position": [
+      116233.2,
+      4445.8
+     ],
+     "each_way": false,
+     "interpretation_state": "TOKENS_PARSED_SEMANTICS_CANDIDATE",
+     "text_handle": "1FD2",
+     "interpretation": "CANDIDATE: side bars, count per level at the printed vertical spacing - the count / face semantics need the typical detail"
+    }
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "SIMPLE_BEAM",
+   "type": "B21",
+   "block": "SBT",
+   "insert_handle": "1F49",
+   "page": 10,
+   "interpretation_state": "INTERPRETED",
+   "fields": {
+    "B_cm": 45.0,
+    "H_cm": 75.0,
+    "bottom": {
+     "grammar": "COUNT_DIA",
+     "count": 12,
+     "dia_mm": 18,
+     "per_m": false,
+     "raw": [
+      "12",
+      "18"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "BOT-B",
+      "BOT-D"
+     ]
+    },
+    "top": {
+     "grammar": "COUNT_DIA",
+     "count": 4,
+     "dia_mm": 14,
+     "per_m": false,
+     "raw": [
+      "4",
+      "14"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "TOP-B",
+      "TOP-D"
+     ]
+    },
+    "stirrups_per_m": {
+     "grammar": "COUNT_DIA",
+     "count": 10,
+     "dia_mm": 10,
+     "per_m": false,
+     "raw": [
+      "10",
+      "10"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "STI-B",
+      "D"
+     ],
+     "semantics": "STIRRUPS_PER_METRE (schedule header)"
+    },
+    "remarks_side_bars": {
+     "raw": "2%%C12/30cm",
+     "normalised": "2Ø12/30cm",
+     "grammar": "COUNT_DIA_AT_SPACING",
+     "count": 2,
+     "dia_mm": 12,
+     "per_m": false,
+     "spacing_cm": 30,
+     "position": [
+      116233.2,
+      3773.8
+     ],
+     "each_way": false,
+     "interpretation_state": "TOKENS_PARSED_SEMANTICS_CANDIDATE",
+     "text_handle": "1FD3",
+     "interpretation": "CANDIDATE: side bars, count per level at the printed vertical spacing - the count / face semantics need the typical detail"
+    }
+   },
+   "feeds_quantity": false
+  },
+  {
+   "element": "SIMPLE_BEAM",
+   "type": "B22",
+   "block": "SBT",
+   "insert_handle": "1F54",
+   "page": 10,
+   "interpretation_state": "INTERPRETED",
+   "fields": {
+    "B_cm": 50.0,
+    "H_cm": 75.0,
+    "bottom": {
+     "grammar": "COUNT_DIA",
+     "count": 14,
+     "dia_mm": 18,
+     "per_m": false,
+     "raw": [
+      "14",
+      "18"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "BOT-B",
+      "BOT-D"
+     ]
+    },
+    "top": {
+     "grammar": "COUNT_DIA",
+     "count": 5,
+     "dia_mm": 14,
+     "per_m": false,
+     "raw": [
+      "5",
+      "14"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "TOP-B",
+      "TOP-D"
+     ]
+    },
+    "stirrups_per_m": {
+     "grammar": "COUNT_DIA",
+     "count": 5,
+     "dia_mm": 8,
+     "per_m": false,
+     "raw": [
+      "5",
+      "8"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "STI-B",
+      "D"
+     ],
+     "semantics": "STIRRUPS_PER_METRE (schedule header)"
+    },
+    "remarks_side_bars": {
+     "raw": "2%%C12/30cm",
+     "normalised": "2Ø12/30cm",
+     "grammar": "COUNT_DIA_AT_SPACING",
+     "count": 2,
+     "dia_mm": 12,
+     "per_m": false,
+     "spacing_cm": 30,
+     "position": [
+      116233.2,
+      3101.8
+     ],
+     "each_way": false,
+     "interpretation_state": "TOKENS_PARSED_SEMANTICS_CANDIDATE",
+     "text_handle": "1FD4",
+     "interpretation": "CANDIDATE: side bars, count per level at the printed vertical spacing - the count / face semantics need the typical detail"
+    }
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "SIMPLE_BEAM",
+   "type": "B23",
+   "block": "SBT",
+   "insert_handle": "1F5F",
+   "page": 10,
+   "interpretation_state": "INTERPRETED",
+   "fields": {
+    "B_cm": 45.0,
+    "H_cm": 75.0,
+    "bottom": {
+     "grammar": "COUNT_DIA",
+     "count": 11,
+     "dia_mm": 18,
+     "per_m": false,
+     "raw": [
+      "11",
+      "18"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "BOT-B",
+      "BOT-D"
+     ]
+    },
+    "top": {
+     "grammar": "COUNT_DIA",
+     "count": 11,
+     "dia_mm": 18,
+     "per_m": false,
+     "raw": [
+      "11",
+      "18"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "TOP-B",
+      "TOP-D"
+     ]
+    },
+    "stirrups_per_m": {
+     "grammar": "COUNT_DIA",
+     "count": 10,
+     "dia_mm": 8,
+     "per_m": false,
+     "raw": [
+      "10",
+      "8"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "STI-B",
+      "D"
+     ],
+     "semantics": "STIRRUPS_PER_METRE (schedule header)"
+    },
+    "remarks_side_bars": {
+     "raw": "2%%C12/30cm",
+     "normalised": "2Ø12/30cm",
+     "grammar": "COUNT_DIA_AT_SPACING",
+     "count": 2,
+     "dia_mm": 12,
+     "per_m": false,
+     "spacing_cm": 30,
+     "position": [
+      116233.2,
+      2429.8
+     ],
+     "each_way": false,
+     "interpretation_state": "TOKENS_PARSED_SEMANTICS_CANDIDATE",
+     "text_handle": "1FD5",
+     "interpretation": "CANDIDATE: side bars, count per level at the printed vertical spacing - the count / face semantics need the typical detail"
+    }
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "SIMPLE_BEAM",
+   "type": "B24",
+   "block": "SBT",
+   "insert_handle": "1F6A",
+   "page": 10,
+   "interpretation_state": "INTERPRETED",
+   "fields": {
+    "B_cm": 50.0,
+    "H_cm": 75.0,
+    "bottom": {
+     "grammar": "COUNT_DIA",
+     "count": 5,
+     "dia_mm": 16,
+     "per_m": false,
+     "raw": [
+      "5",
+      "16"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "BOT-B",
+      "BOT-D"
+     ]
+    },
+    "top": {
+     "grammar": "COUNT_DIA",
+     "count": 10,
+     "dia_mm": 18,
+     "per_m": false,
+     "raw": [
+      "10",
+      "18"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "TOP-B",
+      "TOP-D"
+     ]
+    },
+    "stirrups_per_m": {
+     "grammar": "COUNT_DIA",
+     "count": 5,
+     "dia_mm": 8,
+     "per_m": false,
+     "raw": [
+      "5",
+      "8"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "STI-B",
+      "D"
+     ],
+     "semantics": "STIRRUPS_PER_METRE (schedule header)"
+    },
+    "remarks_side_bars": {
+     "raw": "2%%C12/30cm",
+     "normalised": "2Ø12/30cm",
+     "grammar": "COUNT_DIA_AT_SPACING",
+     "count": 2,
+     "dia_mm": 12,
+     "per_m": false,
+     "spacing_cm": 30,
+     "position": [
+      116233.2,
+      1757.8
+     ],
+     "each_way": false,
+     "interpretation_state": "TOKENS_PARSED_SEMANTICS_CANDIDATE",
+     "text_handle": "1FD6",
+     "interpretation": "CANDIDATE: side bars, count per level at the printed vertical spacing - the count / face semantics need the typical detail"
+    }
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "SIMPLE_BEAM",
+   "type": "B25",
+   "block": "SBT",
+   "insert_handle": "1F75",
+   "page": 10,
+   "interpretation_state": "INTERPRETED",
+   "fields": {
+    "B_cm": 55.0,
+    "H_cm": 75.0,
+    "bottom": {
+     "grammar": "COUNT_DIA",
+     "count": 15,
+     "dia_mm": 18,
+     "per_m": false,
+     "raw": [
+      "15",
+      "18"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "BOT-B",
+      "BOT-D"
+     ]
+    },
+    "top": {
+     "grammar": "COUNT_DIA",
+     "count": 5,
+     "dia_mm": 14,
+     "per_m": false,
+     "raw": [
+      "5",
+      "14"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "TOP-B",
+      "TOP-D"
+     ]
+    },
+    "stirrups_per_m": {
+     "grammar": "COUNT_DIA",
+     "count": 6,
+     "dia_mm": 8,
+     "per_m": false,
+     "raw": [
+      "6",
+      "8"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "STI-B",
+      "D"
+     ],
+     "semantics": "STIRRUPS_PER_METRE (schedule header)"
+    },
+    "remarks_side_bars": {
+     "raw": "2%%C12/30cm",
+     "normalised": "2Ø12/30cm",
+     "grammar": "COUNT_DIA_AT_SPACING",
+     "count": 2,
+     "dia_mm": 12,
+     "per_m": false,
+     "spacing_cm": 30,
+     "position": [
+      116233.2,
+      1085.8
+     ],
+     "each_way": false,
+     "interpretation_state": "TOKENS_PARSED_SEMANTICS_CANDIDATE",
+     "text_handle": "1FD7",
+     "interpretation": "CANDIDATE: side bars, count per level at the printed vertical spacing - the count / face semantics need the typical detail"
+    }
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "SIMPLE_BEAM",
+   "type": "B26",
+   "block": "SBT",
+   "insert_handle": "1F80",
+   "page": 10,
+   "interpretation_state": "INTERPRETED",
+   "fields": {
+    "B_cm": 65.0,
+    "H_cm": 85.0,
+    "bottom": {
+     "grammar": "COUNT_DIA",
+     "count": 19,
+     "dia_mm": 18,
+     "per_m": false,
+     "raw": [
+      "19",
+      "18"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "BOT-B",
+      "BOT-D"
+     ]
+    },
+    "top": {
+     "grammar": "COUNT_DIA",
+     "count": 6,
+     "dia_mm": 14,
+     "per_m": false,
+     "raw": [
+      "6",
+      "14"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "TOP-B",
+      "TOP-D"
+     ]
+    },
+    "stirrups_per_m": {
+     "grammar": "COUNT_DIA",
+     "count": 10,
+     "dia_mm": 10,
+     "per_m": false,
+     "raw": [
+      "10",
+      "10"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "STI-B",
+      "D"
+     ],
+     "semantics": "STIRRUPS_PER_METRE (schedule header)"
+    },
+    "remarks_side_bars": {
+     "raw": "2%%C16/20cm",
+     "normalised": "2Ø16/20cm",
+     "grammar": "COUNT_DIA_AT_SPACING",
+     "count": 2,
+     "dia_mm": 16,
+     "per_m": false,
+     "spacing_cm": 20,
+     "position": [
+      116233.2,
+      413.8
+     ],
+     "each_way": false,
+     "interpretation_state": "TOKENS_PARSED_SEMANTICS_CANDIDATE",
+     "text_handle": "2708",
+     "interpretation": "CANDIDATE: side bars, count per level at the printed vertical spacing - the count / face semantics need the typical detail"
+    }
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "SIMPLE_BEAM",
+   "type": "B27",
+   "block": "SBT",
+   "insert_handle": "1F8B",
+   "page": 10,
+   "interpretation_state": "INTERPRETED",
+   "fields": {
+    "B_cm": 90.0,
+    "H_cm": 85.0,
+    "bottom": {
+     "grammar": "COUNT_DIA",
+     "count": 22,
+     "dia_mm": 20,
+     "per_m": false,
+     "raw": [
+      "22",
+      "20"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "BOT-B",
+      "BOT-D"
+     ]
+    },
+    "top": {
+     "grammar": "COUNT_DIA",
+     "count": 9,
+     "dia_mm": 16,
+     "per_m": false,
+     "raw": [
+      "9",
+      "16"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "TOP-B",
+      "TOP-D"
+     ]
+    },
+    "stirrups_per_m": {
+     "grammar": "COUNT_DIA",
+     "count": 10,
+     "dia_mm": 10,
+     "per_m": false,
+     "raw": [
+      "10",
+      "10"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "STI-B",
+      "D"
+     ],
+     "semantics": "STIRRUPS_PER_METRE (schedule header)"
+    },
+    "remarks_side_bars": {
+     "raw": "2%%C16/20cm",
+     "normalised": "2Ø16/20cm",
+     "grammar": "COUNT_DIA_AT_SPACING",
+     "count": 2,
+     "dia_mm": 16,
+     "per_m": false,
+     "spacing_cm": 20,
+     "position": [
+      116233.2,
+      -258.2
+     ],
+     "each_way": false,
+     "interpretation_state": "TOKENS_PARSED_SEMANTICS_CANDIDATE",
+     "text_handle": "1FD8",
+     "interpretation": "CANDIDATE: side bars, count per level at the printed vertical spacing - the count / face semantics need the typical detail"
+    }
+   },
+   "feeds_quantity": false
+  },
+  {
+   "element": "SIMPLE_BEAM",
+   "type": "B28",
+   "block": "SBT",
+   "insert_handle": "1F96",
+   "page": 10,
+   "interpretation_state": "INTERPRETED",
+   "fields": {
+    "B_cm": 25.0,
+    "H_cm": 75.0,
+    "bottom": {
+     "grammar": "COUNT_DIA",
+     "count": 3,
+     "dia_mm": 16,
+     "per_m": false,
+     "raw": [
+      "3",
+      "16"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "BOT-B",
+      "BOT-D"
+     ]
+    },
+    "top": {
+     "grammar": "COUNT_DIA",
+     "count": 2,
+     "dia_mm": 14,
+     "per_m": false,
+     "raw": [
+      "2",
+      "14"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "TOP-B",
+      "TOP-D"
+     ]
+    },
+    "stirrups_per_m": {
+     "grammar": "COUNT_DIA",
+     "count": 10,
+     "dia_mm": 10,
+     "per_m": false,
+     "raw": [
+      "10",
+      "10"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "STI-B",
+      "D"
+     ],
+     "semantics": "STIRRUPS_PER_METRE (schedule header)"
+    },
+    "remarks_side_bars": {
+     "raw": "2%%C12/30cm",
+     "normalised": "2Ø12/30cm",
+     "grammar": "COUNT_DIA_AT_SPACING",
+     "count": 2,
+     "dia_mm": 12,
+     "per_m": false,
+     "spacing_cm": 30,
+     "position": [
+      116233.2,
+      -930.2
+     ],
+     "each_way": false,
+     "interpretation_state": "TOKENS_PARSED_SEMANTICS_CANDIDATE",
+     "text_handle": "1FD9",
+     "interpretation": "CANDIDATE: side bars, count per level at the printed vertical spacing - the count / face semantics need the typical detail"
+    }
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "SIMPLE_BEAM",
+   "type": "B29",
+   "block": "SBT",
+   "insert_handle": "2A47",
+   "page": 10,
+   "interpretation_state": "INTERPRETED",
+   "fields": {
+    "B_cm": 25.0,
+    "H_cm": 75.0,
+    "bottom": {
+     "grammar": "COUNT_DIA",
+     "count": 7,
+     "dia_mm": 18,
+     "per_m": false,
+     "raw": [
+      "7",
+      "18"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "BOT-B",
+      "BOT-D"
+     ]
+    },
+    "top": {
+     "grammar": "COUNT_DIA",
+     "count": 2,
+     "dia_mm": 14,
+     "per_m": false,
+     "raw": [
+      "2",
+      "14"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "TOP-B",
+      "TOP-D"
+     ]
+    },
+    "stirrups_per_m": {
+     "grammar": "COUNT_DIA",
+     "count": 5,
+     "dia_mm": 8,
+     "per_m": false,
+     "raw": [
+      "5",
+      "8"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "STI-B",
+      "D"
+     ],
+     "semantics": "STIRRUPS_PER_METRE (schedule header)"
+    },
+    "remarks_side_bars": {
+     "raw": "2%%C12/30cm",
+     "normalised": "2Ø12/30cm",
+     "grammar": "COUNT_DIA_AT_SPACING",
+     "count": 2,
+     "dia_mm": 12,
+     "per_m": false,
+     "spacing_cm": 30,
+     "position": [
+      116233.2,
+      -1602.2
+     ],
+     "each_way": false,
+     "interpretation_state": "TOKENS_PARSED_SEMANTICS_CANDIDATE",
+     "text_handle": "2A52",
+     "interpretation": "CANDIDATE: side bars, count per level at the printed vertical spacing - the count / face semantics need the typical detail"
+    }
+   },
+   "feeds_quantity": false
+  },
+  {
+   "element": "SIMPLE_BEAM",
+   "type": "CA",
+   "block": "SBT",
+   "insert_handle": "2A53",
+   "page": 10,
+   "interpretation_state": "INTERPRETED",
+   "fields": {
+    "B_cm": 30.0,
+    "H_cm": 50.0,
+    "bottom": {
+     "grammar": "COUNT_DIA",
+     "count": 5,
+     "dia_mm": 18,
+     "per_m": false,
+     "raw": [
+      "5",
+      "18"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "BOT-B",
+      "BOT-D"
+     ]
+    },
+    "top": {
+     "grammar": "COUNT_DIA",
+     "count": 5,
+     "dia_mm": 18,
+     "per_m": false,
+     "raw": [
+      "5",
+      "18"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "TOP-B",
+      "TOP-D"
+     ]
+    },
+    "stirrups_per_m": {
+     "grammar": "COUNT_DIA",
+     "count": 8,
+     "dia_mm": 8,
+     "per_m": false,
+     "raw": [
+      "8",
+      "8"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "STI-B",
+      "D"
+     ],
+     "semantics": "STIRRUPS_PER_METRE (schedule header)"
+    }
+   },
+   "feeds_quantity": false
+  },
+  {
+   "element": "SIMPLE_BEAM",
+   "type": "B.W",
+   "block": "SBT",
+   "insert_handle": "1FA5",
+   "page": 10,
+   "interpretation_state": "INTERPRETED",
+   "fields": {
+    "B_cm": 20.0,
+    "H_cm": 60.0,
+    "bottom": {
+     "grammar": "COUNT_DIA",
+     "count": 4,
+     "dia_mm": 16,
+     "per_m": false,
+     "raw": [
+      "4",
+      "16"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "BOT-B",
+      "BOT-D"
+     ]
+    },
+    "top": {
+     "grammar": "COUNT_DIA",
+     "count": 2,
+     "dia_mm": 14,
+     "per_m": false,
+     "raw": [
+      "2",
+      "14"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "TOP-B",
+      "TOP-D"
+     ]
+    },
+    "stirrups_per_m": {
+     "grammar": "COUNT_DIA",
+     "count": 7,
+     "dia_mm": 8,
+     "per_m": false,
+     "raw": [
+      "7",
+      "8"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "STI-B",
+      "D"
+     ],
+     "semantics": "STIRRUPS_PER_METRE (schedule header)"
+    }
+   },
+   "feeds_quantity": false
+  },
+  {
+   "element": "STRAP_BEAM",
+   "type": "SB1",
+   "block": "SBT",
+   "insert_handle": "1FB0",
+   "page": 10,
+   "interpretation_state": "INTERPRETED",
+   "fields": {
+    "B_cm": 70.0,
+    "H_cm": 50.0,
+    "bottom": {
+     "grammar": "COUNT_DIA",
+     "count": 7,
+     "dia_mm": 16,
+     "per_m": false,
+     "raw": [
+      "7",
+      "16"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "BOT-B",
+      "BOT-D"
+     ]
+    },
+    "top": {
+     "grammar": "COUNT_DIA",
+     "count": 13,
+     "dia_mm": 18,
+     "per_m": false,
+     "raw": [
+      "13",
+      "18"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "TOP-B",
+      "TOP-D"
+     ]
+    },
+    "stirrups_per_m": {
+     "grammar": "COUNT_DIA",
+     "count": 8,
+     "dia_mm": 8,
+     "per_m": false,
+     "raw": [
+      "8",
+      "8"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "STI-B",
+      "D"
+     ],
+     "semantics": "STIRRUPS_PER_METRE (schedule header)"
+    }
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "STRAP_BEAM",
+   "type": "SB2",
+   "block": "SBT",
+   "insert_handle": "2ABA",
+   "page": 10,
+   "interpretation_state": "CONFLICT",
+   "fields": {
+    "B_cm": 100.0,
+    "H_cm": 50.0,
+    "bottom": {
+     "grammar": "COUNT_DIA",
+     "count": 10,
+     "dia_mm": 16,
+     "per_m": false,
+     "raw": [
+      "10",
+      "16"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "BOT-B",
+      "BOT-D"
+     ]
+    },
+    "top": {
+     "grammar": "COUNT_DIA",
+     "count": 20,
+     "dia_mm": 18,
+     "per_m": false,
+     "raw": [
+      "20",
+      "18"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "TOP-B",
+      "TOP-D"
+     ]
+    },
+    "stirrups_per_m": {
+     "grammar": "COUNT_DIA",
+     "count": 10,
+     "dia_mm": 8,
+     "per_m": false,
+     "raw": [
+      "10",
+      "8"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "STI-B",
+      "D"
+     ],
+     "semantics": "STIRRUPS_PER_METRE (schedule header)"
+    }
+   },
+   "feeds_quantity": false
+  },
+  {
+   "element": "STRAP_BEAM",
+   "type": "SB3",
+   "block": "SBT",
+   "insert_handle": "2B06",
+   "page": 10,
+   "interpretation_state": "INTERPRETED",
+   "fields": {
+    "B_cm": 50.0,
+    "H_cm": 40.0,
+    "bottom": {
+     "grammar": "COUNT_DIA",
+     "count": 5,
+     "dia_mm": 16,
+     "per_m": false,
+     "raw": [
+      "5",
+      "16"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "BOT-B",
+      "BOT-D"
+     ]
+    },
+    "top": {
+     "grammar": "COUNT_DIA",
+     "count": 5,
+     "dia_mm": 18,
+     "per_m": false,
+     "raw": [
+      "5",
+      "18"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "TOP-B",
+      "TOP-D"
+     ]
+    },
+    "stirrups_per_m": {
+     "grammar": "COUNT_DIA",
+     "count": 7,
+     "dia_mm": 8,
+     "per_m": false,
+     "raw": [
+      "7",
+      "8"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "STI-B",
+      "D"
+     ],
+     "semantics": "STIRRUPS_PER_METRE (schedule header)"
+    }
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "STRAP_BEAM",
+   "type": "SB2",
+   "block": "SBT",
+   "insert_handle": "1FBB",
+   "page": 10,
+   "interpretation_state": "CONFLICT",
+   "fields": {
+    "B_cm": 80.0,
+    "H_cm": 50.0,
+    "bottom": {
+     "grammar": "COUNT_DIA",
+     "count": 10,
+     "dia_mm": 18,
+     "per_m": false,
+     "raw": [
+      "10",
+      "18"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "BOT-B",
+      "BOT-D"
+     ]
+    },
+    "top": {
+     "grammar": "COUNT_DIA",
+     "count": 10,
+     "dia_mm": 18,
+     "per_m": false,
+     "raw": [
+      "10",
+      "18"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "TOP-B",
+      "TOP-D"
+     ]
+    },
+    "stirrups_per_m": {
+     "grammar": "COUNT_DIA",
+     "count": 10,
+     "dia_mm": 8,
+     "per_m": false,
+     "raw": [
+      "10",
+      "8"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "STI-B",
+      "D"
+     ],
+     "semantics": "STIRRUPS_PER_METRE (schedule header)"
+    }
+   },
+   "feeds_quantity": false
+  },
+  {
+   "element": "FOOTING",
+   "type": "F",
+   "block": "FT",
+   "insert_handle": "1C79",
+   "page": 9,
+   "interpretation_state": "PARTIALLY_INTERPRETED",
+   "fields": {
+    "L_cm": 90.0,
+    "W_cm": 80.0,
+    "D_cm": 30.0,
+    "short_bars": {
+     "grammar": "COUNT_DIA",
+     "count": 8,
+     "dia_mm": 12,
+     "per_m": false,
+     "raw": [
+      "8",
+      "12"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "SH-B",
+      "SH-D"
+     ]
+    },
+    "long_bars": {
+     "grammar": "COUNT_DIA",
+     "count": 7,
+     "dia_mm": 12,
+     "per_m": false,
+     "raw": [
+      "7",
+      "12"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "LO-B",
+      "LO-D"
+     ]
+    },
+    "boxed": {
+     "raw_boxed_value": "3+4",
+     "interpretation": "BLOCKED_SEMANTICS"
+    }
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "FOOTING",
+   "type": "F2",
+   "block": "FT",
+   "insert_handle": "1C95",
+   "page": 9,
+   "interpretation_state": "PARTIALLY_INTERPRETED",
+   "fields": {
+    "L_cm": 190.0,
+    "W_cm": 170.0,
+    "D_cm": 35.0,
+    "short_bars": {
+     "grammar": "COUNT_DIA",
+     "count": 13,
+     "dia_mm": 12,
+     "per_m": false,
+     "raw": [
+      "13",
+      "12"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "SH-B",
+      "SH-D"
+     ]
+    },
+    "long_bars": {
+     "grammar": "COUNT_DIA",
+     "count": 13,
+     "dia_mm": 12,
+     "per_m": false,
+     "raw": [
+      "13",
+      "12"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "LO-B",
+      "LO-D"
+     ]
+    },
+    "boxed": {
+     "raw_boxed_value": "3+4",
+     "interpretation": "BLOCKED_SEMANTICS"
+    }
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "FOOTING",
+   "type": "F3",
+   "block": "FT",
+   "insert_handle": "1CA0",
+   "page": 9,
+   "interpretation_state": "PARTIALLY_INTERPRETED",
+   "fields": {
+    "L_cm": 160.0,
+    "W_cm": 140.0,
+    "D_cm": 30.0,
+    "short_bars": {
+     "grammar": "COUNT_DIA",
+     "count": 8,
+     "dia_mm": 12,
+     "per_m": false,
+     "raw": [
+      "8",
+      "12"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "SH-B",
+      "SH-D"
+     ]
+    },
+    "long_bars": {
+     "grammar": "COUNT_DIA",
+     "count": 8,
+     "dia_mm": 12,
+     "per_m": false,
+     "raw": [
+      "8",
+      "12"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "LO-B",
+      "LO-D"
+     ]
+    },
+    "boxed": {
+     "raw_boxed_value": "3+4",
+     "interpretation": "BLOCKED_SEMANTICS"
+    }
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "FOOTING",
+   "type": "F4",
+   "block": "FT",
+   "insert_handle": "1CAB",
+   "page": 9,
+   "interpretation_state": "PARTIALLY_INTERPRETED",
+   "fields": {
+    "L_cm": 220.0,
+    "W_cm": 200.0,
+    "D_cm": 40.0,
+    "short_bars": {
+     "grammar": "COUNT_DIA",
+     "count": 18,
+     "dia_mm": 12,
+     "per_m": false,
+     "raw": [
+      "18",
+      "12"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "SH-B",
+      "SH-D"
+     ]
+    },
+    "long_bars": {
+     "grammar": "COUNT_DIA",
+     "count": 17,
+     "dia_mm": 12,
+     "per_m": false,
+     "raw": [
+      "17",
+      "12"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "LO-B",
+      "LO-D"
+     ]
+    },
+    "boxed": {
+     "raw_boxed_value": "3+4",
+     "interpretation": "BLOCKED_SEMANTICS"
+    }
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "FOOTING",
+   "type": "F5",
+   "block": "FT",
+   "insert_handle": "1CB6",
+   "page": 9,
+   "interpretation_state": "PARTIALLY_INTERPRETED",
+   "fields": {
+    "L_cm": 240.0,
+    "W_cm": 210.0,
+    "D_cm": 40.0,
+    "short_bars": {
+     "grammar": "COUNT_DIA",
+     "count": 22,
+     "dia_mm": 12,
+     "per_m": false,
+     "raw": [
+      "22",
+      "12"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "SH-B",
+      "SH-D"
+     ]
+    },
+    "long_bars": {
+     "grammar": "COUNT_DIA",
+     "count": 20,
+     "dia_mm": 12,
+     "per_m": false,
+     "raw": [
+      "20",
+      "12"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "LO-B",
+      "LO-D"
+     ]
+    },
+    "boxed": {
+     "raw_boxed_value": "3+4",
+     "interpretation": "BLOCKED_SEMANTICS"
+    }
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "FOOTING",
+   "type": "F6",
+   "block": "FT",
+   "insert_handle": "1CC1",
+   "page": 9,
+   "interpretation_state": "PARTIALLY_INTERPRETED",
+   "fields": {
+    "L_cm": 260.0,
+    "W_cm": 220.0,
+    "D_cm": 50.0,
+    "short_bars": {
+     "grammar": "COUNT_DIA",
+     "count": 24,
+     "dia_mm": 12,
+     "per_m": false,
+     "raw": [
+      "24",
+      "12"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "SH-B",
+      "SH-D"
+     ]
+    },
+    "long_bars": {
+     "grammar": "COUNT_DIA",
+     "count": 22,
+     "dia_mm": 12,
+     "per_m": false,
+     "raw": [
+      "22",
+      "12"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "LO-B",
+      "LO-D"
+     ]
+    },
+    "boxed": {
+     "raw_boxed_value": "3+5",
+     "interpretation": "BLOCKED_SEMANTICS"
+    }
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "FOOTING",
+   "type": "F7",
+   "block": "FT",
+   "insert_handle": "1CCC",
+   "page": 9,
+   "interpretation_state": "PARTIALLY_INTERPRETED",
+   "fields": {
+    "L_cm": 300.0,
+    "W_cm": 250.0,
+    "D_cm": 50.0,
+    "short_bars": {
+     "grammar": "COUNT_DIA",
+     "count": 24,
+     "dia_mm": 14,
+     "per_m": false,
+     "raw": [
+      "24",
+      "14"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "SH-B",
+      "SH-D"
+     ]
+    },
+    "long_bars": {
+     "grammar": "COUNT_DIA",
+     "count": 21,
+     "dia_mm": 14,
+     "per_m": false,
+     "raw": [
+      "21",
+      "14"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "LO-B",
+      "LO-D"
+     ]
+    },
+    "boxed": {
+     "raw_boxed_value": "3+6",
+     "interpretation": "BLOCKED_SEMANTICS"
+    }
+   },
+   "feeds_quantity": false
+  },
+  {
+   "element": "FOOTING",
+   "type": "F9",
+   "block": "FT",
+   "insert_handle": "1CD7",
+   "page": 9,
+   "interpretation_state": "PARTIALLY_INTERPRETED",
+   "fields": {
+    "L_cm": 340.0,
+    "W_cm": 270.0,
+    "D_cm": 55.0,
+    "short_bars": {
+     "grammar": "COUNT_DIA",
+     "count": 28,
+     "dia_mm": 14,
+     "per_m": false,
+     "raw": [
+      "28",
+      "14"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "SH-B",
+      "SH-D"
+     ]
+    },
+    "long_bars": {
+     "grammar": "COUNT_DIA",
+     "count": 24,
+     "dia_mm": 14,
+     "per_m": false,
+     "raw": [
+      "24",
+      "14"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "LO-B",
+      "LO-D"
+     ]
+    },
+    "boxed": {
+     "raw_boxed_value": "3+8",
+     "interpretation": "BLOCKED_SEMANTICS"
+    }
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "FOOTING",
+   "type": "F10",
+   "block": "FT",
+   "insert_handle": "1CE2",
+   "page": 9,
+   "interpretation_state": "PARTIALLY_INTERPRETED",
+   "fields": {
+    "L_cm": 280.0,
+    "W_cm": 140.0,
+    "D_cm": 50.0,
+    "short_bars": {
+     "grammar": "COUNT_DIA",
+     "count": 20,
+     "dia_mm": 14,
+     "per_m": false,
+     "raw": [
+      "20",
+      "14"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "SH-B",
+      "SH-D"
+     ]
+    },
+    "long_bars": {
+     "grammar": "COUNT_DIA",
+     "count": 10,
+     "dia_mm": 14,
+     "per_m": false,
+     "raw": [
+      "10",
+      "14"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "LO-B",
+      "LO-D"
+     ]
+    },
+    "boxed": {
+     "raw_boxed_value": "3+5",
+     "interpretation": "BLOCKED_SEMANTICS"
+    }
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "FOOTING",
+   "type": "F11",
+   "block": "FT",
+   "insert_handle": "1CED",
+   "page": 9,
+   "interpretation_state": "PARTIALLY_INTERPRETED",
+   "fields": {
+    "L_cm": 350.0,
+    "W_cm": 150.0,
+    "D_cm": 50.0,
+    "short_bars": {
+     "grammar": "COUNT_DIA",
+     "count": 32,
+     "dia_mm": 14,
+     "per_m": false,
+     "raw": [
+      "32",
+      "14"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "SH-B",
+      "SH-D"
+     ]
+    },
+    "long_bars": {
+     "grammar": "COUNT_DIA",
+     "count": 14,
+     "dia_mm": 14,
+     "per_m": false,
+     "raw": [
+      "14",
+      "14"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "LO-B",
+      "LO-D"
+     ]
+    },
+    "boxed": {
+     "raw_boxed_value": "3+8",
+     "interpretation": "BLOCKED_SEMANTICS"
+    }
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "FOOTING",
+   "type": "F15",
+   "block": "FT",
+   "insert_handle": "2B13",
+   "page": 9,
+   "interpretation_state": "PARTIALLY_INTERPRETED",
+   "fields": {
+    "L_cm": 180.0,
+    "W_cm": 100.0,
+    "D_cm": 40.0,
+    "short_bars": {
+     "grammar": "COUNT_DIA",
+     "count": 15,
+     "dia_mm": 12,
+     "per_m": false,
+     "raw": [
+      "15",
+      "12"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "SH-B",
+      "SH-D"
+     ]
+    },
+    "long_bars": {
+     "grammar": "COUNT_DIA",
+     "count": 8,
+     "dia_mm": 12,
+     "per_m": false,
+     "raw": [
+      "8",
+      "12"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "LO-B",
+      "LO-D"
+     ]
+    },
+    "boxed": {
+     "raw_boxed_value": "3+4",
+     "interpretation": "BLOCKED_SEMANTICS"
+    }
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "FOOTING",
+   "type": "FN",
+   "block": "FT",
+   "insert_handle": "1CF8",
+   "page": 9,
+   "interpretation_state": "INTERPRETED",
+   "fields": {
+    "L_cm": 100.0,
+    "W_cm": 100.0,
+    "D_cm": 30.0,
+    "short_bars": {
+     "grammar": "COUNT_DIA",
+     "count": 8,
+     "dia_mm": 12,
+     "per_m": false,
+     "raw": [
+      "8",
+      "12"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "SH-B",
+      "SH-D"
+     ]
+    },
+    "long_bars": {
+     "grammar": "COUNT_DIA",
+     "count": 8,
+     "dia_mm": 12,
+     "per_m": false,
+     "raw": [
+      "8",
+      "12"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "LO-B",
+      "LO-D"
+     ]
+    },
+    "boxed": {
+     "raw_boxed_value": "",
+     "interpretation": "NOT_PRINTED"
+    }
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "FOOTING_2_LAYER",
+   "type": "F8",
+   "block": "FTB",
+   "insert_handle": "2AF6",
+   "page": 9,
+   "interpretation_state": "INTERPRETED",
+   "fields": {
+    "L_cm": 400.0,
+    "W_cm": 360.0,
+    "D_cm": 50.0,
+    "TOP_short": {
+     "grammar": "COUNT_DIA_PER_M",
+     "count": 6,
+     "dia_mm": 14,
+     "per_m": true,
+     "raw": [
+      "6",
+      "14/m"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "SH-T-B",
+      "SH-T-D"
+     ]
+    },
+    "TOP_long": {
+     "grammar": "COUNT_DIA_PER_M",
+     "count": 6,
+     "dia_mm": 14,
+     "per_m": true,
+     "raw": [
+      "6",
+      "14/m"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "LO-T-B",
+      "LO-T-D"
+     ]
+    },
+    "BOTTOM_short": {
+     "grammar": "COUNT_DIA_PER_M",
+     "count": 9,
+     "dia_mm": 14,
+     "per_m": true,
+     "raw": [
+      "9",
+      "14/m"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "SH-B-B",
+      "SH-B-D"
+     ]
+    },
+    "BOTTOM_long": {
+     "grammar": "COUNT_DIA_PER_M",
+     "count": 9,
+     "dia_mm": 14,
+     "per_m": true,
+     "raw": [
+      "9",
+      "14/m"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "LO-B-B",
+      "LO-B-D"
+     ]
+    },
+    "layer_labels": {
+     "BOXED-T": "TOP",
+     "BOXED-B": "BOT"
+    }
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "FOOTING_2_LAYER",
+   "type": "F12",
+   "block": "FTB",
+   "insert_handle": "2A5E",
+   "page": 9,
+   "interpretation_state": "INTERPRETED",
+   "fields": {
+    "L_cm": 440.0,
+    "W_cm": 320.0,
+    "D_cm": 70.0,
+    "TOP_short": {
+     "grammar": "COUNT_DIA_PER_M",
+     "count": 10,
+     "dia_mm": 14,
+     "per_m": true,
+     "raw": [
+      "10",
+      "14/m"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "SH-T-B",
+      "SH-T-D"
+     ]
+    },
+    "TOP_long": {
+     "grammar": "COUNT_DIA_PER_M",
+     "count": 10,
+     "dia_mm": 14,
+     "per_m": true,
+     "raw": [
+      "10",
+      "14/m"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "LO-T-B",
+      "LO-T-D"
+     ]
+    },
+    "BOTTOM_short": {
+     "grammar": "COUNT_DIA_PER_M",
+     "count": 9,
+     "dia_mm": 16,
+     "per_m": true,
+     "raw": [
+      "9",
+      "16/m"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "SH-B-B",
+      "SH-B-D"
+     ]
+    },
+    "BOTTOM_long": {
+     "grammar": "COUNT_DIA_PER_M",
+     "count": 9,
+     "dia_mm": 16,
+     "per_m": true,
+     "raw": [
+      "9",
+      "16/m"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "LO-B-B",
+      "LO-B-D"
+     ]
+    },
+    "layer_labels": {
+     "BOXED-T": "TOP",
+     "BOXED-B": "BOT"
+    }
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "FOOTING_2_LAYER",
+   "type": "F13",
+   "block": "FTB",
+   "insert_handle": "2A98",
+   "page": 9,
+   "interpretation_state": "INTERPRETED",
+   "fields": {
+    "L_cm": 430.0,
+    "W_cm": 240.0,
+    "D_cm": 50.0,
+    "TOP_short": {
+     "grammar": "COUNT_DIA_PER_M",
+     "count": 7,
+     "dia_mm": 14,
+     "per_m": true,
+     "raw": [
+      "7",
+      "14/m"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "SH-T-B",
+      "SH-T-D"
+     ]
+    },
+    "TOP_long": {
+     "grammar": "COUNT_DIA_PER_M",
+     "count": 7,
+     "dia_mm": 14,
+     "per_m": true,
+     "raw": [
+      "7",
+      "14/m"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "LO-T-B",
+      "LO-T-D"
+     ]
+    },
+    "BOTTOM_short": {
+     "grammar": "COUNT_DIA_PER_M",
+     "count": 8,
+     "dia_mm": 16,
+     "per_m": true,
+     "raw": [
+      "8",
+      "16/m"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "SH-B-B",
+      "SH-B-D"
+     ]
+    },
+    "BOTTOM_long": {
+     "grammar": "COUNT_DIA_PER_M",
+     "count": 8,
+     "dia_mm": 16,
+     "per_m": true,
+     "raw": [
+      "8",
+      "16/m"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "LO-B-B",
+      "LO-B-D"
+     ]
+    },
+    "layer_labels": {
+     "BOXED-T": "TOP",
+     "BOXED-B": "BOT"
+    }
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "FOOTING_2_LAYER",
+   "type": "F14",
+   "block": "FTB",
+   "insert_handle": "2AD5",
+   "page": 9,
+   "interpretation_state": "INTERPRETED",
+   "fields": {
+    "L_cm": 380.0,
+    "W_cm": 330.0,
+    "D_cm": 50.0,
+    "TOP_short": {
+     "grammar": "COUNT_DIA_PER_M",
+     "count": 6,
+     "dia_mm": 14,
+     "per_m": true,
+     "raw": [
+      "6",
+      "14/m"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "SH-T-B",
+      "SH-T-D"
+     ]
+    },
+    "TOP_long": {
+     "grammar": "COUNT_DIA_PER_M",
+     "count": 6,
+     "dia_mm": 14,
+     "per_m": true,
+     "raw": [
+      "6",
+      "14/m"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "LO-T-B",
+      "LO-T-D"
+     ]
+    },
+    "BOTTOM_short": {
+     "grammar": "COUNT_DIA_PER_M",
+     "count": 9,
+     "dia_mm": 14,
+     "per_m": true,
+     "raw": [
+      "9",
+      "14/m"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "SH-B-B",
+      "SH-B-D"
+     ]
+    },
+    "BOTTOM_long": {
+     "grammar": "COUNT_DIA_PER_M",
+     "count": 9,
+     "dia_mm": 14,
+     "per_m": true,
+     "raw": [
+      "9",
+      "14/m"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "LO-B-B",
+      "LO-B-D"
+     ]
+    },
+    "layer_labels": {
+     "BOXED-T": "TOP",
+     "BOXED-B": "BOT"
+    }
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "FOOTING_2_LAYER",
+   "type": "FF",
+   "block": "FTB",
+   "insert_handle": "2B1E",
+   "page": 9,
+   "interpretation_state": "INTERPRETED",
+   "fields": {
+    "L_cm": 460.0,
+    "W_cm": 450.0,
+    "D_cm": 55.0,
+    "TOP_short": {
+     "grammar": "COUNT_DIA_PER_M",
+     "count": 6,
+     "dia_mm": 14,
+     "per_m": true,
+     "raw": [
+      "6",
+      "14/m"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "SH-T-B",
+      "SH-T-D"
+     ]
+    },
+    "TOP_long": {
+     "grammar": "COUNT_DIA_PER_M",
+     "count": 6,
+     "dia_mm": 14,
+     "per_m": true,
+     "raw": [
+      "6",
+      "14/m"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "LO-T-B",
+      "LO-T-D"
+     ]
+    },
+    "BOTTOM_short": {
+     "grammar": "COUNT_DIA_PER_M",
+     "count": 9,
+     "dia_mm": 14,
+     "per_m": true,
+     "raw": [
+      "9",
+      "14/m"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "SH-B-B",
+      "SH-B-D"
+     ]
+    },
+    "BOTTOM_long": {
+     "grammar": "COUNT_DIA_PER_M",
+     "count": 9,
+     "dia_mm": 14,
+     "per_m": true,
+     "raw": [
+      "9",
+      "14/m"
+     ],
+     "interpretation_state": "TOKENS_PARSED",
+     "tags": [
+      "LO-B-B",
+      "LO-B-D"
+     ]
+    },
+    "layer_labels": {
+     "BOXED-T": "TOP",
+     "BOXED-B": "BOT"
+    }
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "COLUMN",
+   "type": "C",
+   "block": "CGT",
+   "insert_handle": "1D03",
+   "page": 9,
+   "interpretation_state": "INTERPRETED",
+   "fields": {
+    "bands": {
+     "FOU": {
+      "B_cm": 30.0,
+      "H_cm": 50.0,
+      "bars": {
+       "grammar": "COUNT_DIA",
+       "count": 8,
+       "dia_mm": 16,
+       "per_m": false,
+       "raw": [
+        "8",
+        "16"
+       ],
+       "interpretation_state": "TOKENS_PARSED",
+       "tags": [
+        "FOU.R",
+        "FOU.D"
+       ]
+      }
+     },
+     "GR": {
+      "B_cm": 20.0,
+      "H_cm": 50.0,
+      "bars": {
+       "grammar": "COUNT_DIA",
+       "count": 8,
+       "dia_mm": 16,
+       "per_m": false,
+       "raw": [
+        "8",
+        "16"
+       ],
+       "interpretation_state": "TOKENS_PARSED",
+       "tags": [
+        "GR.R",
+        "GR.D"
+       ]
+      }
+     }
+    },
+    "design_load": ""
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "COLUMN",
+   "type": "C1",
+   "block": "CGT",
+   "insert_handle": "1D32",
+   "page": 9,
+   "interpretation_state": "INTERPRETED",
+   "fields": {
+    "bands": {
+     "FOU": {
+      "B_cm": 30.0,
+      "H_cm": 50.0,
+      "bars": {
+       "grammar": "COUNT_DIA",
+       "count": 8,
+       "dia_mm": 16,
+       "per_m": false,
+       "raw": [
+        "8",
+        "16"
+       ],
+       "interpretation_state": "TOKENS_PARSED",
+       "tags": [
+        "FOU.R",
+        "FOU.D"
+       ]
+      }
+     },
+     "GR": {
+      "B_cm": 20.0,
+      "H_cm": 50.0,
+      "bars": {
+       "grammar": "COUNT_DIA",
+       "count": 8,
+       "dia_mm": 16,
+       "per_m": false,
+       "raw": [
+        "8",
+        "16"
+       ],
+       "interpretation_state": "TOKENS_PARSED",
+       "tags": [
+        "GR.R",
+        "GR.D"
+       ]
+      }
+     },
+     "1ST": {
+      "B_cm": 20.0,
+      "H_cm": 50.0,
+      "bars": {
+       "grammar": "COUNT_DIA",
+       "count": 6,
+       "dia_mm": 16,
+       "per_m": false,
+       "raw": [
+        "6",
+        "16"
+       ],
+       "interpretation_state": "TOKENS_PARSED",
+       "tags": [
+        "1ST.R",
+        "1ST.D"
+       ]
+      }
+     },
+     "2ND": {
+      "B_cm": 20.0,
+      "H_cm": 50.0,
+      "bars": {
+       "grammar": "COUNT_DIA",
+       "count": 6,
+       "dia_mm": 16,
+       "per_m": false,
+       "raw": [
+        "6",
+        "16"
+       ],
+       "interpretation_state": "TOKENS_PARSED",
+       "tags": [
+        "2ND.R",
+        "2ND.D"
+       ]
+      }
+     }
+    },
+    "design_load": "50"
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "COLUMN",
+   "type": "C2",
+   "block": "CGT",
+   "insert_handle": "1D46",
+   "page": 9,
+   "interpretation_state": "INTERPRETED",
+   "fields": {
+    "bands": {
+     "FOU": {
+      "B_cm": 30.0,
+      "H_cm": 50.0,
+      "bars": {
+       "grammar": "COUNT_DIA",
+       "count": 8,
+       "dia_mm": 16,
+       "per_m": false,
+       "raw": [
+        "8",
+        "16"
+       ],
+       "interpretation_state": "TOKENS_PARSED",
+       "tags": [
+        "FOU.R",
+        "FOU.D"
+       ]
+      }
+     },
+     "GR": {
+      "B_cm": 20.0,
+      "H_cm": 50.0,
+      "bars": {
+       "grammar": "COUNT_DIA",
+       "count": 8,
+       "dia_mm": 16,
+       "per_m": false,
+       "raw": [
+        "8",
+        "16"
+       ],
+       "interpretation_state": "TOKENS_PARSED",
+       "tags": [
+        "GR.R",
+        "GR.D"
+       ]
+      }
+     },
+     "1ST": {
+      "B_cm": 20.0,
+      "H_cm": 50.0,
+      "bars": {
+       "grammar": "COUNT_DIA",
+       "count": 8,
+       "dia_mm": 16,
+       "per_m": false,
+       "raw": [
+        "8",
+        "16"
+       ],
+       "interpretation_state": "TOKENS_PARSED",
+       "tags": [
+        "1ST.R",
+        "1ST.D"
+       ]
+      }
+     },
+     "2ND": {
+      "B_cm": 20.0,
+      "H_cm": 50.0,
+      "bars": {
+       "grammar": "COUNT_DIA",
+       "count": 6,
+       "dia_mm": 16,
+       "per_m": false,
+       "raw": [
+        "6",
+        "16"
+       ],
+       "interpretation_state": "TOKENS_PARSED",
+       "tags": [
+        "2ND.R",
+        "2ND.D"
+       ]
+      }
+     }
+    },
+    "design_load": "90"
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "COLUMN",
+   "type": "C3",
+   "block": "CGT",
+   "insert_handle": "1D5A",
+   "page": 9,
+   "interpretation_state": "INTERPRETED",
+   "fields": {
+    "bands": {
+     "FOU": {
+      "B_cm": 30.0,
+      "H_cm": 50.0,
+      "bars": {
+       "grammar": "COUNT_DIA",
+       "count": 8,
+       "dia_mm": 16,
+       "per_m": false,
+       "raw": [
+        "8",
+        "16"
+       ],
+       "interpretation_state": "TOKENS_PARSED",
+       "tags": [
+        "FOU.R",
+        "FOU.D"
+       ]
+      }
+     },
+     "GR": {
+      "B_cm": 25.0,
+      "H_cm": 50.0,
+      "bars": {
+       "grammar": "COUNT_DIA",
+       "count": 8,
+       "dia_mm": 16,
+       "per_m": false,
+       "raw": [
+        "8",
+        "16"
+       ],
+       "interpretation_state": "TOKENS_PARSED",
+       "tags": [
+        "GR.R",
+        "GR.D"
+       ]
+      }
+     },
+     "1ST": {
+      "B_cm": 20.0,
+      "H_cm": 50.0,
+      "bars": {
+       "grammar": "COUNT_DIA",
+       "count": 6,
+       "dia_mm": 16,
+       "per_m": false,
+       "raw": [
+        "6",
+        "16"
+       ],
+       "interpretation_state": "TOKENS_PARSED",
+       "tags": [
+        "1ST.R",
+        "1ST.D"
+       ]
+      }
+     },
+     "2ND": {
+      "B_cm": 20.0,
+      "H_cm": 50.0,
+      "bars": {
+       "grammar": "COUNT_DIA",
+       "count": 6,
+       "dia_mm": 16,
+       "per_m": false,
+       "raw": [
+        "6",
+        "16"
+       ],
+       "interpretation_state": "TOKENS_PARSED",
+       "tags": [
+        "2ND.R",
+        "2ND.D"
+       ]
+      }
+     }
+    },
+    "design_load": "70"
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "COLUMN",
+   "type": "C4",
+   "block": "CGT",
+   "insert_handle": "1D6E",
+   "page": 9,
+   "interpretation_state": "INTERPRETED",
+   "fields": {
+    "bands": {
+     "FOU": {
+      "B_cm": 30.0,
+      "H_cm": 50.0,
+      "bars": {
+       "grammar": "COUNT_DIA",
+       "count": 8,
+       "dia_mm": 16,
+       "per_m": false,
+       "raw": [
+        "8",
+        "16"
+       ],
+       "interpretation_state": "TOKENS_PARSED",
+       "tags": [
+        "FOU.R",
+        "FOU.D"
+       ]
+      }
+     },
+     "GR": {
+      "B_cm": 25.0,
+      "H_cm": 50.0,
+      "bars": {
+       "grammar": "COUNT_DIA",
+       "count": 8,
+       "dia_mm": 16,
+       "per_m": false,
+       "raw": [
+        "8",
+        "16"
+       ],
+       "interpretation_state": "TOKENS_PARSED",
+       "tags": [
+        "GR.R",
+        "GR.D"
+       ]
+      }
+     },
+     "1ST": {
+      "B_cm": 20.0,
+      "H_cm": 50.0,
+      "bars": {
+       "grammar": "COUNT_DIA",
+       "count": 8,
+       "dia_mm": 16,
+       "per_m": false,
+       "raw": [
+        "8",
+        "16"
+       ],
+       "interpretation_state": "TOKENS_PARSED",
+       "tags": [
+        "1ST.R",
+        "1ST.D"
+       ]
+      }
+     },
+     "2ND": {
+      "B_cm": 20.0,
+      "H_cm": 50.0,
+      "bars": {
+       "grammar": "COUNT_DIA",
+       "count": 6,
+       "dia_mm": 16,
+       "per_m": false,
+       "raw": [
+        "6",
+        "16"
+       ],
+       "interpretation_state": "TOKENS_PARSED",
+       "tags": [
+        "2ND.R",
+        "2ND.D"
+       ]
+      }
+     }
+    },
+    "design_load": "120"
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "COLUMN",
+   "type": "C5",
+   "block": "CGT",
+   "insert_handle": "1D82",
+   "page": 9,
+   "interpretation_state": "INTERPRETED",
+   "fields": {
+    "bands": {
+     "FOU": {
+      "B_cm": 30.0,
+      "H_cm": 60.0,
+      "bars": {
+       "grammar": "COUNT_DIA",
+       "count": 10,
+       "dia_mm": 16,
+       "per_m": false,
+       "raw": [
+        "10",
+        "16"
+       ],
+       "interpretation_state": "TOKENS_PARSED",
+       "tags": [
+        "FOU.R",
+        "FOU.D"
+       ]
+      }
+     },
+     "GR": {
+      "B_cm": 25.0,
+      "H_cm": 60.0,
+      "bars": {
+       "grammar": "COUNT_DIA",
+       "count": 10,
+       "dia_mm": 16,
+       "per_m": false,
+       "raw": [
+        "10",
+        "16"
+       ],
+       "interpretation_state": "TOKENS_PARSED",
+       "tags": [
+        "GR.R",
+        "GR.D"
+       ]
+      }
+     },
+     "1ST": {
+      "B_cm": 20.0,
+      "H_cm": 50.0,
+      "bars": {
+       "grammar": "COUNT_DIA",
+       "count": 8,
+       "dia_mm": 16,
+       "per_m": false,
+       "raw": [
+        "8",
+        "16"
+       ],
+       "interpretation_state": "TOKENS_PARSED",
+       "tags": [
+        "1ST.R",
+        "1ST.D"
+       ]
+      }
+     },
+     "2ND": {
+      "B_cm": 20.0,
+      "H_cm": 50.0,
+      "bars": {
+       "grammar": "COUNT_DIA",
+       "count": 6,
+       "dia_mm": 16,
+       "per_m": false,
+       "raw": [
+        "6",
+        "16"
+       ],
+       "interpretation_state": "TOKENS_PARSED",
+       "tags": [
+        "2ND.R",
+        "2ND.D"
+       ]
+      }
+     }
+    },
+    "design_load": "160"
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "COLUMN",
+   "type": "C6",
+   "block": "CGT",
+   "insert_handle": "1D96",
+   "page": 9,
+   "interpretation_state": "INTERPRETED",
+   "fields": {
+    "bands": {
+     "FOU": {
+      "B_cm": 30.0,
+      "H_cm": 70.0,
+      "bars": {
+       "grammar": "COUNT_DIA",
+       "count": 10,
+       "dia_mm": 16,
+       "per_m": false,
+       "raw": [
+        "10",
+        "16"
+       ],
+       "interpretation_state": "TOKENS_PARSED",
+       "tags": [
+        "FOU.R",
+        "FOU.D"
+       ]
+      }
+     },
+     "GR": {
+      "B_cm": 25.0,
+      "H_cm": 70.0,
+      "bars": {
+       "grammar": "COUNT_DIA",
+       "count": 10,
+       "dia_mm": 16,
+       "per_m": false,
+       "raw": [
+        "10",
+        "16"
+       ],
+       "interpretation_state": "TOKENS_PARSED",
+       "tags": [
+        "GR.R",
+        "GR.D"
+       ]
+      }
+     },
+     "1ST": {
+      "B_cm": 20.0,
+      "H_cm": 60.0,
+      "bars": {
+       "grammar": "COUNT_DIA",
+       "count": 8,
+       "dia_mm": 16,
+       "per_m": false,
+       "raw": [
+        "8",
+        "16"
+       ],
+       "interpretation_state": "TOKENS_PARSED",
+       "tags": [
+        "1ST.R",
+        "1ST.D"
+       ]
+      }
+     },
+     "2ND": {
+      "B_cm": 20.0,
+      "H_cm": 50.0,
+      "bars": {
+       "grammar": "COUNT_DIA",
+       "count": 8,
+       "dia_mm": 16,
+       "per_m": false,
+       "raw": [
+        "8",
+        "16"
+       ],
+       "interpretation_state": "TOKENS_PARSED",
+       "tags": [
+        "2ND.R",
+        "2ND.D"
+       ]
+      }
+     }
+    },
+    "design_load": "170"
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "COLUMN",
+   "type": "C7",
+   "block": "CGT",
+   "insert_handle": "1DAA",
+   "page": 9,
+   "interpretation_state": "INTERPRETED",
+   "fields": {
+    "bands": {
+     "FOU": {
+      "B_cm": 30.0,
+      "H_cm": 80.0,
+      "bars": {
+       "grammar": "COUNT_DIA",
+       "count": 12,
+       "dia_mm": 16,
+       "per_m": false,
+       "raw": [
+        "12",
+        "16"
+       ],
+       "interpretation_state": "TOKENS_PARSED",
+       "tags": [
+        "FOU.R",
+        "FOU.D"
+       ]
+      }
+     },
+     "GR": {
+      "B_cm": 25.0,
+      "H_cm": 80.0,
+      "bars": {
+       "grammar": "COUNT_DIA",
+       "count": 12,
+       "dia_mm": 16,
+       "per_m": false,
+       "raw": [
+        "12",
+        "16"
+       ],
+       "interpretation_state": "TOKENS_PARSED",
+       "tags": [
+        "GR.R",
+        "GR.D"
+       ]
+      }
+     },
+     "1ST": {
+      "B_cm": 20.0,
+      "H_cm": 80.0,
+      "bars": {
+       "grammar": "COUNT_DIA",
+       "count": 10,
+       "dia_mm": 16,
+       "per_m": false,
+       "raw": [
+        "10",
+        "16"
+       ],
+       "interpretation_state": "TOKENS_PARSED",
+       "tags": [
+        "1ST.R",
+        "1ST.D"
+       ]
+      }
+     },
+     "2ND": {
+      "B_cm": 20.0,
+      "H_cm": 60.0,
+      "bars": {
+       "grammar": "COUNT_DIA",
+       "count": 8,
+       "dia_mm": 16,
+       "per_m": false,
+       "raw": [
+        "8",
+        "16"
+       ],
+       "interpretation_state": "TOKENS_PARSED",
+       "tags": [
+        "2ND.R",
+        "2ND.D"
+       ]
+      }
+     }
+    },
+    "design_load": "220"
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "COLUMN",
+   "type": "C8",
+   "block": "CGT",
+   "insert_handle": "1DBE",
+   "page": 9,
+   "interpretation_state": "INTERPRETED",
+   "fields": {
+    "bands": {
+     "FOU": {
+      "B_cm": 30.0,
+      "H_cm": 90.0,
+      "bars": {
+       "grammar": "COUNT_DIA",
+       "count": 12,
+       "dia_mm": 16,
+       "per_m": false,
+       "raw": [
+        "12",
+        "16"
+       ],
+       "interpretation_state": "TOKENS_PARSED",
+       "tags": [
+        "FOU.R",
+        "FOU.D"
+       ]
+      }
+     },
+     "GR": {
+      "B_cm": 25.0,
+      "H_cm": 90.0,
+      "bars": {
+       "grammar": "COUNT_DIA",
+       "count": 12,
+       "dia_mm": 16,
+       "per_m": false,
+       "raw": [
+        "12",
+        "16"
+       ],
+       "interpretation_state": "TOKENS_PARSED",
+       "tags": [
+        "GR.R",
+        "GR.D"
+       ]
+      }
+     },
+     "1ST": {
+      "B_cm": 20.0,
+      "H_cm": 90.0,
+      "bars": {
+       "grammar": "COUNT_DIA",
+       "count": 12,
+       "dia_mm": 16,
+       "per_m": false,
+       "raw": [
+        "12",
+        "16"
+       ],
+       "interpretation_state": "TOKENS_PARSED",
+       "tags": [
+        "1ST.R",
+        "1ST.D"
+       ]
+      }
+     },
+     "2ND": {
+      "B_cm": 20.0,
+      "H_cm": 70.0,
+      "bars": {
+       "grammar": "COUNT_DIA",
+       "count": 10,
+       "dia_mm": 16,
+       "per_m": false,
+       "raw": [
+        "10",
+        "16"
+       ],
+       "interpretation_state": "TOKENS_PARSED",
+       "tags": [
+        "2ND.R",
+        "2ND.D"
+       ]
+      }
+     }
+    },
+    "design_load": "240"
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "COLUMN",
+   "type": "C9",
+   "block": "CGT",
+   "insert_handle": "1DD2",
+   "page": 9,
+   "interpretation_state": "INTERPRETED",
+   "fields": {
+    "bands": {
+     "FOU": {
+      "B_cm": 30.0,
+      "H_cm": 100.0,
+      "bars": {
+       "grammar": "COUNT_DIA",
+       "count": 14,
+       "dia_mm": 16,
+       "per_m": false,
+       "raw": [
+        "14",
+        "16"
+       ],
+       "interpretation_state": "TOKENS_PARSED",
+       "tags": [
+        "FOU.R",
+        "FOU.D"
+       ]
+      }
+     },
+     "GR": {
+      "B_cm": 25.0,
+      "H_cm": 100.0,
+      "bars": {
+       "grammar": "COUNT_DIA",
+       "count": 14,
+       "dia_mm": 16,
+       "per_m": false,
+       "raw": [
+        "14",
+        "16"
+       ],
+       "interpretation_state": "TOKENS_PARSED",
+       "tags": [
+        "GR.R",
+        "GR.D"
+       ]
+      }
+     },
+     "1ST": {
+      "B_cm": 20.0,
+      "H_cm": 90.0,
+      "bars": {
+       "grammar": "COUNT_DIA",
+       "count": 12,
+       "dia_mm": 16,
+       "per_m": false,
+       "raw": [
+        "12",
+        "16"
+       ],
+       "interpretation_state": "TOKENS_PARSED",
+       "tags": [
+        "1ST.R",
+        "1ST.D"
+       ]
+      }
+     },
+     "2ND": {
+      "B_cm": 20.0,
+      "H_cm": 70.0,
+      "bars": {
+       "grammar": "COUNT_DIA",
+       "count": 10,
+       "dia_mm": 16,
+       "per_m": false,
+       "raw": [
+        "10",
+        "16"
+       ],
+       "interpretation_state": "TOKENS_PARSED",
+       "tags": [
+        "2ND.R",
+        "2ND.D"
+       ]
+      }
+     }
+    },
+    "design_load": "270"
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "COLUMN",
+   "type": "C10",
+   "block": "CGT",
+   "insert_handle": "1DE6",
+   "page": 9,
+   "interpretation_state": "INTERPRETED",
+   "fields": {
+    "bands": {
+     "FOU": {
+      "B_cm": 30.0,
+      "H_cm": 70.0,
+      "bars": {
+       "grammar": "COUNT_DIA",
+       "count": 10,
+       "dia_mm": 16,
+       "per_m": false,
+       "raw": [
+        "10",
+        "16"
+       ],
+       "interpretation_state": "TOKENS_PARSED",
+       "tags": [
+        "FOU.R",
+        "FOU.D"
+       ]
+      }
+     },
+     "GR": {
+      "B_cm": 25.0,
+      "H_cm": 70.0,
+      "bars": {
+       "grammar": "COUNT_DIA",
+       "count": 10,
+       "dia_mm": 16,
+       "per_m": false,
+       "raw": [
+        "10",
+        "16"
+       ],
+       "interpretation_state": "TOKENS_PARSED",
+       "tags": [
+        "GR.R",
+        "GR.D"
+       ]
+      }
+     }
+    },
+    "design_load": "100"
+   },
+   "feeds_quantity": true
+  },
+  {
+   "element": "COLUMN",
+   "type": "C11",
+   "block": "CGT",
+   "insert_handle": "1DFA",
+   "page": 9,
+   "interpretation_state": "INTERPRETED",
+   "fields": {
+    "bands": {
+     "FOU": {
+      "B_cm": 30.0,
+      "H_cm": 110.0,
+      "bars": {
+       "grammar": "COUNT_DIA",
+       "count": 14,
+       "dia_mm": 16,
+       "per_m": false,
+       "raw": [
+        "14",
+        "16"
+       ],
+       "interpretation_state": "TOKENS_PARSED",
+       "tags": [
+        "FOU.R",
+        "FOU.D"
+       ]
+      }
+     },
+     "GR": {
+      "B_cm": 25.0,
+      "H_cm": 110.0,
+      "bars": {
+       "grammar": "COUNT_DIA",
+       "count": 14,
+       "dia_mm": 16,
+       "per_m": false,
+       "raw": [
+        "14",
+        "16"
+       ],
+       "interpretation_state": "TOKENS_PARSED",
+       "tags": [
+        "GR.R",
+        "GR.D"
+       ]
+      }
+     }
+    },
+    "design_load": "150"
+   },
+   "feeds_quantity": true
+  }
+ ],
+ "conflicts": [
+  {
+   "key": "SB2",
+   "state": "SOURCE_CONFLICT_DUPLICATE_SCHEDULE_KEY",
+   "rows": [
+    "2ABA",
+    "1FBB"
+   ],
+   "variants": [
+    {
+     "BEAM": "SB2",
+     "W": "100",
+     "H": "50",
+     "BOT-B": "10",
+     "BOT-D": "16",
+     "TOP-B": "20",
+     "TOP-D": "18",
+     "STI-B": "10",
+     "D": "8"
+    },
+    {
+     "BEAM": "SB2",
+     "W": "80",
+     "H": "50",
+     "BOT-B": "10",
+     "BOT-D": "18",
+     "TOP-B": "10",
+     "TOP-D": "18",
+     "STI-B": "10",
+     "D": "8"
+    }
+   ],
+   "element": "STRAP_BEAM",
+   "consequence": "every quantity depending on this key's dimensions or bars is BLOCKED; no row is selected (not by geometry, not by order)"
+  }
+ ],
+ "definition_consumption_pct": 84.415584,
+ "rule": "every quantity traces to one of these definitions (or a carried V3b set); T/M and LOAD are loads"
+}

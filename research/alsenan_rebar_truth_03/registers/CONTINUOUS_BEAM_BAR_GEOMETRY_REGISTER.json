@@ -1,0 +1,5075 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_CB_BAR_GEOMETRY_V1",
+ "snap_fraction": 0.025,
+ "template_variants": [
+  [
+   "CB1",
+   "CB2",
+   "CB4",
+   "CB5",
+   "CB6",
+   "CB7",
+   "CB10",
+   "CB12",
+   "CB13"
+  ],
+  [
+   "CB3"
+  ],
+  [
+   "CB8"
+  ],
+  [
+   "CB9",
+   "CB11"
+  ]
+ ],
+ "finding": "spans are drawn equal in every frame (N.T.S. template, scaled here per real span); most frames of one block share one graphic, edited frames (bars moved / added, loose callouts) are bound frame by frame",
+ "geometry": [
+  {
+   "type": "CB1",
+   "block": "C-BEAM2",
+   "insert_handle": "2851",
+   "support_lines_drawn": [
+    2999.4,
+    8537.9,
+    14076.3
+   ],
+   "spans_drawn": [
+    5538.5,
+    5538.4
+   ],
+   "spans_m": [
+    7.5,
+    5.7
+   ],
+   "bars": [
+    {
+     "handle": "2719",
+     "role": "BOTTOM",
+     "row": "BOTTOM",
+     "straddles_supports": [
+      1
+     ],
+     "label_tag": "BOT1",
+     "label_kind": "ATTRIBUTE",
+     "count": "4",
+     "dia": "18",
+     "u_start": 0.0,
+     "u_end": 1.057437,
+     "start_at_support": true,
+     "end_at_support": false,
+     "legs": [],
+     "pieces": [
+      {
+       "span": 1,
+       "fraction": 1.0,
+       "kind": "CORE",
+       "m": 7.5
+      },
+      {
+       "span": 2,
+       "fraction": 0.057437,
+       "kind": "EXTENSION",
+       "m": 0.327388
+      }
+     ],
+     "core_m": 7.5,
+     "extension_m": 0.327388,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": null
+    },
+    {
+     "handle": "2751",
+     "role": "BOTTOM",
+     "row": "BOTTOM",
+     "straddles_supports": [
+      1
+     ],
+     "label_tag": "BOT2",
+     "label_kind": "ATTRIBUTE",
+     "count": "5",
+     "dia": "18",
+     "u_start": 0.933252,
+     "u_end": 2.0,
+     "start_at_support": false,
+     "end_at_support": true,
+     "legs": [],
+     "pieces": [
+      {
+       "span": 1,
+       "fraction": 0.066748,
+       "kind": "EXTENSION",
+       "m": 0.500607
+      },
+      {
+       "span": 2,
+       "fraction": 1.0,
+       "kind": "CORE",
+       "m": 5.7
+      }
+     ],
+     "core_m": 5.7,
+     "extension_m": 0.500607,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": null
+    },
+    {
+     "handle": "2752",
+     "role": "CONTINUOUS_TOP",
+     "row": "TOP_ROW",
+     "straddles_supports": [],
+     "label_tag": "CALLOUT@10454",
+     "label_kind": "LOOSE_CALLOUT",
+     "count": "3",
+     "dia": "14",
+     "u_start": 1.057437,
+     "u_end": 2.0,
+     "start_at_support": false,
+     "end_at_support": true,
+     "legs": [
+      {
+       "x": 14076.3,
+       "drawn_length": 608.1
+      }
+     ],
+     "pieces": [
+      {
+       "span": 2,
+       "fraction": 0.942563,
+       "kind": "EXTENSION",
+       "m": 5.372612
+      }
+     ],
+     "core_m": 0.0,
+     "extension_m": 5.372612,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": [
+      "2829",
+      "2828",
+      "282A"
+     ]
+    },
+    {
+     "handle": "2763",
+     "role": "SUPPORT_TOP",
+     "row": "SUPPORT_ROW",
+     "straddles_supports": [
+      1
+     ],
+     "label_tag": "MID",
+     "label_kind": "ATTRIBUTE",
+     "count": "8",
+     "dia": "18",
+     "u_start": 0.699043,
+     "u_end": 1.305754,
+     "start_at_support": false,
+     "end_at_support": false,
+     "legs": [],
+     "pieces": [
+      {
+       "span": 1,
+       "fraction": 0.300957,
+       "kind": "EXTENSION",
+       "m": 2.257175
+      },
+      {
+       "span": 2,
+       "fraction": 0.305754,
+       "kind": "EXTENSION",
+       "m": 1.742796
+      }
+     ],
+     "core_m": 0.0,
+     "extension_m": 3.999971,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": null
+    },
+    {
+     "handle": "2764",
+     "role": "CONTINUOUS_TOP",
+     "row": "TOP_ROW",
+     "straddles_supports": [],
+     "label_tag": "CALLOUT@4885",
+     "label_kind": "LOOSE_CALLOUT",
+     "count": "3",
+     "dia": "14",
+     "u_start": 0.0,
+     "u_end": 0.942554,
+     "start_at_support": true,
+     "end_at_support": false,
+     "legs": [
+      {
+       "x": 2999.4,
+       "drawn_length": 608.1
+      }
+     ],
+     "pieces": [
+      {
+       "span": 1,
+       "fraction": 0.942554,
+       "kind": "EXTENSION",
+       "m": 7.069158
+      }
+     ],
+     "core_m": 0.0,
+     "extension_m": 7.069158,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": [
+      "2825",
+      "2824",
+      "2826"
+     ]
+    }
+   ],
+   "stirrup_zones": [
+    {
+     "handle": "271A",
+     "u": [
+      0.0,
+      1.0
+     ]
+    },
+    {
+     "handle": "282B",
+     "u": [
+      1.0,
+      2.0
+     ]
+    }
+   ],
+   "unbound_printed_labels": []
+  },
+  {
+   "type": "CB2",
+   "block": "C-BEAM2",
+   "insert_handle": "28C7",
+   "support_lines_drawn": [
+    2999.4,
+    8537.9,
+    14076.3
+   ],
+   "spans_drawn": [
+    5538.5,
+    5538.4
+   ],
+   "spans_m": [
+    4.0,
+    4.0
+   ],
+   "bars": [
+    {
+     "handle": "2871",
+     "role": "BOTTOM",
+     "row": "BOTTOM",
+     "straddles_supports": [
+      1
+     ],
+     "label_tag": "BOT1",
+     "label_kind": "ATTRIBUTE",
+     "count": "3",
+     "dia": "16",
+     "u_start": 0.0,
+     "u_end": 1.057437,
+     "start_at_support": true,
+     "end_at_support": false,
+     "legs": [],
+     "pieces": [
+      {
+       "span": 1,
+       "fraction": 1.0,
+       "kind": "CORE",
+       "m": 4.0
+      },
+      {
+       "span": 2,
+       "fraction": 0.057437,
+       "kind": "EXTENSION",
+       "m": 0.229746
+      }
+     ],
+     "core_m": 4.0,
+     "extension_m": 0.229746,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": null
+    },
+    {
+     "handle": "2890",
+     "role": "BOTTOM",
+     "row": "BOTTOM",
+     "straddles_supports": [
+      1
+     ],
+     "label_tag": "BOT2",
+     "label_kind": "ATTRIBUTE",
+     "count": "3",
+     "dia": "14",
+     "u_start": 0.933252,
+     "u_end": 2.0,
+     "start_at_support": false,
+     "end_at_support": true,
+     "legs": [],
+     "pieces": [
+      {
+       "span": 1,
+       "fraction": 0.066748,
+       "kind": "EXTENSION",
+       "m": 0.266991
+      },
+      {
+       "span": 2,
+       "fraction": 1.0,
+       "kind": "CORE",
+       "m": 4.0
+      }
+     ],
+     "core_m": 4.0,
+     "extension_m": 0.266991,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": null
+    },
+    {
+     "handle": "2891",
+     "role": "CONTINUOUS_TOP",
+     "row": "TOP_ROW",
+     "straddles_supports": [],
+     "label_tag": "CALLOUT@10454",
+     "label_kind": "LOOSE_CALLOUT",
+     "count": "2",
+     "dia": "12",
+     "u_start": 1.057437,
+     "u_end": 2.0,
+     "start_at_support": false,
+     "end_at_support": true,
+     "legs": [
+      {
+       "x": 14076.3,
+       "drawn_length": 608.1
+      }
+     ],
+     "pieces": [
+      {
+       "span": 2,
+       "fraction": 0.942563,
+       "kind": "EXTENSION",
+       "m": 3.770254
+      }
+     ],
+     "core_m": 0.0,
+     "extension_m": 3.770254,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": [
+      "289F",
+      "289E",
+      "28A0"
+     ]
+    },
+    {
+     "handle": "2894",
+     "role": "SUPPORT_TOP",
+     "row": "SUPPORT_ROW",
+     "straddles_supports": [
+      1
+     ],
+     "label_tag": "MID",
+     "label_kind": "ATTRIBUTE",
+     "count": "4",
+     "dia": "16",
+     "u_start": 0.699043,
+     "u_end": 1.305754,
+     "start_at_support": false,
+     "end_at_support": false,
+     "legs": [],
+     "pieces": [
+      {
+       "span": 1,
+       "fraction": 0.300957,
+       "kind": "EXTENSION",
+       "m": 1.203827
+      },
+      {
+       "span": 2,
+       "fraction": 0.305754,
+       "kind": "EXTENSION",
+       "m": 1.223015
+      }
+     ],
+     "core_m": 0.0,
+     "extension_m": 2.426842,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": null
+    },
+    {
+     "handle": "2895",
+     "role": "CONTINUOUS_TOP",
+     "row": "TOP_ROW",
+     "straddles_supports": [],
+     "label_tag": "CALLOUT@4885",
+     "label_kind": "LOOSE_CALLOUT",
+     "count": "2",
+     "dia": "12",
+     "u_start": 0.0,
+     "u_end": 0.942554,
+     "start_at_support": true,
+     "end_at_support": false,
+     "legs": [
+      {
+       "x": 2999.4,
+       "drawn_length": 608.1
+      }
+     ],
+     "pieces": [
+      {
+       "span": 1,
+       "fraction": 0.942554,
+       "kind": "EXTENSION",
+       "m": 3.770217
+      }
+     ],
+     "core_m": 0.0,
+     "extension_m": 3.770217,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": [
+      "289B",
+      "289A",
+      "289C"
+     ]
+    }
+   ],
+   "stirrup_zones": [
+    {
+     "handle": "2872",
+     "u": [
+      0.0,
+      1.0
+     ]
+    },
+    {
+     "handle": "28A1",
+     "u": [
+      1.0,
+      2.0
+     ]
+    }
+   ],
+   "unbound_printed_labels": []
+  },
+  {
+   "type": "CB3",
+   "block": "C-BEAM3",
+   "insert_handle": "2344",
+   "support_lines_drawn": [
+    3109.2,
+    8647.6,
+    14186.1,
+    19724.5
+   ],
+   "spans_drawn": [
+    5538.4,
+    5538.5,
+    5538.4
+   ],
+   "spans_m": [
+    3.4,
+    3.3,
+    3.8
+   ],
+   "bars": [
+    {
+     "handle": "203C",
+     "role": "CONTINUOUS_TOP",
+     "row": "TOP_ROW",
+     "straddles_supports": [],
+     "label_tag": "CALLOUT@16353",
+     "label_kind": "LOOSE_CALLOUT",
+     "count": "2",
+     "dia": "12",
+     "u_start": 2.044182,
+     "u_end": 3.0,
+     "start_at_support": false,
+     "end_at_support": true,
+     "legs": [
+      {
+       "x": 19724.5,
+       "drawn_length": 276.0
+      }
+     ],
+     "pieces": [
+      {
+       "span": 3,
+       "fraction": 0.955818,
+       "kind": "EXTENSION",
+       "m": 3.63211
+      }
+     ],
+     "core_m": 0.0,
+     "extension_m": 3.63211,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": [
+      "2256",
+      "2255",
+      "2254"
+     ]
+    },
+    {
+     "handle": "203D",
+     "role": "BOTTOM",
+     "row": "BOTTOM",
+     "straddles_supports": [
+      2
+     ],
+     "label_tag": "BOT3",
+     "label_kind": "ATTRIBUTE",
+     "count": "3",
+     "dia": "16",
+     "u_start": 1.955813,
+     "u_end": 3.0,
+     "start_at_support": false,
+     "end_at_support": true,
+     "legs": [],
+     "pieces": [
+      {
+       "span": 2,
+       "fraction": 0.044187,
+       "kind": "EXTENSION",
+       "m": 0.145816
+      },
+      {
+       "span": 3,
+       "fraction": 1.0,
+       "kind": "CORE",
+       "m": 3.8
+      }
+     ],
+     "core_m": 3.8,
+     "extension_m": 0.145816,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": null
+    },
+    {
+     "handle": "203E",
+     "role": "SUPPORT_TOP",
+     "row": "SUPPORT_ROW",
+     "straddles_supports": [
+      2
+     ],
+     "label_tag": "MID2",
+     "label_kind": "ATTRIBUTE",
+     "count": "",
+     "dia": "",
+     "u_start": 1.697346,
+     "u_end": 2.302654,
+     "start_at_support": false,
+     "end_at_support": false,
+     "legs": [],
+     "pieces": [
+      {
+       "span": 2,
+       "fraction": 0.302654,
+       "kind": "EXTENSION",
+       "m": 0.998759
+      },
+      {
+       "span": 3,
+       "fraction": 0.302654,
+       "kind": "EXTENSION",
+       "m": 1.150084
+      }
+     ],
+     "core_m": 0.0,
+     "extension_m": 2.148843,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "EMPTY_SCHEDULE_CELL",
+     "label_handles": null
+    },
+    {
+     "handle": "2059",
+     "role": "BOTTOM",
+     "row": "BOTTOM",
+     "straddles_supports": [
+      1
+     ],
+     "label_tag": "BOT1",
+     "label_kind": "ATTRIBUTE",
+     "count": "3",
+     "dia": "16",
+     "u_start": 0.0,
+     "u_end": 1.057445,
+     "start_at_support": true,
+     "end_at_support": false,
+     "legs": [],
+     "pieces": [
+      {
+       "span": 1,
+       "fraction": 1.0,
+       "kind": "CORE",
+       "m": 3.4
+      },
+      {
+       "span": 2,
+       "fraction": 0.057445,
+       "kind": "EXTENSION",
+       "m": 0.189567
+      }
+     ],
+     "core_m": 3.4,
+     "extension_m": 0.189567,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": null
+    },
+    {
+     "handle": "2196",
+     "role": "CONTINUOUS_TOP",
+     "row": "TOP_ROW",
+     "straddles_supports": [],
+     "label_tag": "CALLOUT@4995",
+     "label_kind": "LOOSE_CALLOUT",
+     "count": "2",
+     "dia": "12",
+     "u_start": 0.0,
+     "u_end": 0.942562,
+     "start_at_support": true,
+     "end_at_support": false,
+     "legs": [
+      {
+       "x": 3109.2,
+       "drawn_length": 276.0
+      }
+     ],
+     "pieces": [
+      {
+       "span": 1,
+       "fraction": 0.942562,
+       "kind": "EXTENSION",
+       "m": 3.204712
+      }
+     ],
+     "core_m": 0.0,
+     "extension_m": 3.204712,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": [
+      "224F",
+      "2250",
+      "2251"
+     ]
+    },
+    {
+     "handle": "219B",
+     "role": "BOTTOM",
+     "row": "BOTTOM",
+     "straddles_supports": [
+      1,
+      2
+     ],
+     "label_tag": "BOT2",
+     "label_kind": "ATTRIBUTE",
+     "count": "3",
+     "dia": "16",
+     "u_start": 0.93326,
+     "u_end": 2.195278,
+     "start_at_support": false,
+     "end_at_support": false,
+     "legs": [],
+     "pieces": [
+      {
+       "span": 1,
+       "fraction": 0.06674,
+       "kind": "EXTENSION",
+       "m": 0.226915
+      },
+      {
+       "span": 2,
+       "fraction": 1.0,
+       "kind": "CORE",
+       "m": 3.3
+      },
+      {
+       "span": 3,
+       "fraction": 0.195278,
+       "kind": "EXTENSION",
+       "m": 0.742056
+      }
+     ],
+     "core_m": 3.3,
+     "extension_m": 0.968972,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": null
+    },
+    {
+     "handle": "219C",
+     "role": "SUPPORT_TOP",
+     "row": "SUPPORT_ROW",
+     "straddles_supports": [
+      1
+     ],
+     "label_tag": "CALLOUT@10729",
+     "label_kind": "LOOSE_CALLOUT",
+     "count": "3",
+     "dia": "16",
+     "u_start": 0.699047,
+     "u_end": 1.754553,
+     "start_at_support": false,
+     "end_at_support": false,
+     "legs": [],
+     "pieces": [
+      {
+       "span": 1,
+       "fraction": 0.300953,
+       "kind": "EXTENSION",
+       "m": 1.02324
+      },
+      {
+       "span": 2,
+       "fraction": 0.754553,
+       "kind": "EXTENSION",
+       "m": 2.490026
+      }
+     ],
+     "core_m": 0.0,
+     "extension_m": 3.513266,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": [
+      "2253",
+      "2252",
+      "224E"
+     ]
+    }
+   ],
+   "stirrup_zones": [
+    {
+     "handle": "205A",
+     "u": [
+      0.0,
+      1.0
+     ]
+    },
+    {
+     "handle": "22B8",
+     "u": [
+      1.0,
+      2.0
+     ]
+    },
+    {
+     "handle": "22C6",
+     "u": [
+      2.0,
+      3.0
+     ]
+    }
+   ],
+   "unbound_printed_labels": []
+  },
+  {
+   "type": "CB4",
+   "block": "C-BEAM2",
+   "insert_handle": "2933",
+   "support_lines_drawn": [
+    2999.4,
+    8537.9,
+    14076.3
+   ],
+   "spans_drawn": [
+    5538.5,
+    5538.4
+   ],
+   "spans_m": [
+    3.3,
+    3.7
+   ],
+   "bars": [
+    {
+     "handle": "28E7",
+     "role": "BOTTOM",
+     "row": "BOTTOM",
+     "straddles_supports": [
+      1
+     ],
+     "label_tag": "BOT1",
+     "label_kind": "ATTRIBUTE",
+     "count": "3",
+     "dia": "14",
+     "u_start": 0.0,
+     "u_end": 1.057437,
+     "start_at_support": true,
+     "end_at_support": false,
+     "legs": [],
+     "pieces": [
+      {
+       "span": 1,
+       "fraction": 1.0,
+       "kind": "CORE",
+       "m": 3.3
+      },
+      {
+       "span": 2,
+       "fraction": 0.057437,
+       "kind": "EXTENSION",
+       "m": 0.212515
+      }
+     ],
+     "core_m": 3.3,
+     "extension_m": 0.212515,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": null
+    },
+    {
+     "handle": "2906",
+     "role": "BOTTOM",
+     "row": "BOTTOM",
+     "straddles_supports": [
+      1
+     ],
+     "label_tag": "BOT2",
+     "label_kind": "ATTRIBUTE",
+     "count": "3",
+     "dia": "16",
+     "u_start": 0.933252,
+     "u_end": 2.0,
+     "start_at_support": false,
+     "end_at_support": true,
+     "legs": [],
+     "pieces": [
+      {
+       "span": 1,
+       "fraction": 0.066748,
+       "kind": "EXTENSION",
+       "m": 0.220267
+      },
+      {
+       "span": 2,
+       "fraction": 1.0,
+       "kind": "CORE",
+       "m": 3.7
+      }
+     ],
+     "core_m": 3.7,
+     "extension_m": 0.220267,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": null
+    },
+    {
+     "handle": "2907",
+     "role": "CONTINUOUS_TOP",
+     "row": "TOP_ROW",
+     "straddles_supports": [],
+     "label_tag": "CALLOUT@10454",
+     "label_kind": "LOOSE_CALLOUT",
+     "count": "2",
+     "dia": "12",
+     "u_start": 1.057437,
+     "u_end": 2.0,
+     "start_at_support": false,
+     "end_at_support": true,
+     "legs": [
+      {
+       "x": 14076.3,
+       "drawn_length": 608.1
+      }
+     ],
+     "pieces": [
+      {
+       "span": 2,
+       "fraction": 0.942563,
+       "kind": "EXTENSION",
+       "m": 3.487485
+      }
+     ],
+     "core_m": 0.0,
+     "extension_m": 3.487485,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": [
+      "2915",
+      "2914",
+      "2916"
+     ]
+    },
+    {
+     "handle": "290A",
+     "role": "SUPPORT_TOP",
+     "row": "SUPPORT_ROW",
+     "straddles_supports": [
+      1
+     ],
+     "label_tag": "MID",
+     "label_kind": "ATTRIBUTE",
+     "count": "4",
+     "dia": "16",
+     "u_start": 0.699043,
+     "u_end": 1.305754,
+     "start_at_support": false,
+     "end_at_support": false,
+     "legs": [],
+     "pieces": [
+      {
+       "span": 1,
+       "fraction": 0.300957,
+       "kind": "EXTENSION",
+       "m": 0.993157
+      },
+      {
+       "span": 2,
+       "fraction": 0.305754,
+       "kind": "EXTENSION",
+       "m": 1.131289
+      }
+     ],
+     "core_m": 0.0,
+     "extension_m": 2.124446,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": null
+    },
+    {
+     "handle": "290B",
+     "role": "CONTINUOUS_TOP",
+     "row": "TOP_ROW",
+     "straddles_supports": [],
+     "label_tag": "CALLOUT@4885",
+     "label_kind": "LOOSE_CALLOUT",
+     "count": "2",
+     "dia": "12",
+     "u_start": 0.0,
+     "u_end": 0.942554,
+     "start_at_support": true,
+     "end_at_support": false,
+     "legs": [
+      {
+       "x": 2999.4,
+       "drawn_length": 608.1
+      }
+     ],
+     "pieces": [
+      {
+       "span": 1,
+       "fraction": 0.942554,
+       "kind": "EXTENSION",
+       "m": 3.110429
+      }
+     ],
+     "core_m": 0.0,
+     "extension_m": 3.110429,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": [
+      "2911",
+      "2910",
+      "2912"
+     ]
+    }
+   ],
+   "stirrup_zones": [
+    {
+     "handle": "28E8",
+     "u": [
+      0.0,
+      1.0
+     ]
+    },
+    {
+     "handle": "2917",
+     "u": [
+      1.0,
+      2.0
+     ]
+    }
+   ],
+   "unbound_printed_labels": []
+  },
+  {
+   "type": "CB5",
+   "block": "C-BEAM2",
+   "insert_handle": "299F",
+   "support_lines_drawn": [
+    2999.4,
+    8537.9,
+    14076.3
+   ],
+   "spans_drawn": [
+    5538.5,
+    5538.4
+   ],
+   "spans_m": [
+    2.5,
+    4.5
+   ],
+   "bars": [
+    {
+     "handle": "2953",
+     "role": "BOTTOM",
+     "row": "BOTTOM",
+     "straddles_supports": [
+      1
+     ],
+     "label_tag": "BOT1",
+     "label_kind": "ATTRIBUTE",
+     "count": "3",
+     "dia": "14",
+     "u_start": 0.0,
+     "u_end": 1.057437,
+     "start_at_support": true,
+     "end_at_support": false,
+     "legs": [],
+     "pieces": [
+      {
+       "span": 1,
+       "fraction": 1.0,
+       "kind": "CORE",
+       "m": 2.5
+      },
+      {
+       "span": 2,
+       "fraction": 0.057437,
+       "kind": "EXTENSION",
+       "m": 0.258464
+      }
+     ],
+     "core_m": 2.5,
+     "extension_m": 0.258464,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": null
+    },
+    {
+     "handle": "2972",
+     "role": "BOTTOM",
+     "row": "BOTTOM",
+     "straddles_supports": [
+      1
+     ],
+     "label_tag": "BOT2",
+     "label_kind": "ATTRIBUTE",
+     "count": "4",
+     "dia": "16",
+     "u_start": 0.933252,
+     "u_end": 2.0,
+     "start_at_support": false,
+     "end_at_support": true,
+     "legs": [],
+     "pieces": [
+      {
+       "span": 1,
+       "fraction": 0.066748,
+       "kind": "EXTENSION",
+       "m": 0.166869
+      },
+      {
+       "span": 2,
+       "fraction": 1.0,
+       "kind": "CORE",
+       "m": 4.5
+      }
+     ],
+     "core_m": 4.5,
+     "extension_m": 0.166869,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": null
+    },
+    {
+     "handle": "2973",
+     "role": "CONTINUOUS_TOP",
+     "row": "TOP_ROW",
+     "straddles_supports": [],
+     "label_tag": "CALLOUT@10454",
+     "label_kind": "LOOSE_CALLOUT",
+     "count": "2",
+     "dia": "12",
+     "u_start": 1.057437,
+     "u_end": 2.0,
+     "start_at_support": false,
+     "end_at_support": true,
+     "legs": [
+      {
+       "x": 14076.3,
+       "drawn_length": 608.1
+      }
+     ],
+     "pieces": [
+      {
+       "span": 2,
+       "fraction": 0.942563,
+       "kind": "EXTENSION",
+       "m": 4.241536
+      }
+     ],
+     "core_m": 0.0,
+     "extension_m": 4.241536,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": [
+      "2981",
+      "2980",
+      "2982"
+     ]
+    },
+    {
+     "handle": "2976",
+     "role": "SUPPORT_TOP",
+     "row": "SUPPORT_ROW",
+     "straddles_supports": [
+      1
+     ],
+     "label_tag": "MID",
+     "label_kind": "ATTRIBUTE",
+     "count": "4",
+     "dia": "16",
+     "u_start": 0.699043,
+     "u_end": 1.305754,
+     "start_at_support": false,
+     "end_at_support": false,
+     "legs": [],
+     "pieces": [
+      {
+       "span": 1,
+       "fraction": 0.300957,
+       "kind": "EXTENSION",
+       "m": 0.752392
+      },
+      {
+       "span": 2,
+       "fraction": 0.305754,
+       "kind": "EXTENSION",
+       "m": 1.375892
+      }
+     ],
+     "core_m": 0.0,
+     "extension_m": 2.128284,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": null
+    },
+    {
+     "handle": "2977",
+     "role": "CONTINUOUS_TOP",
+     "row": "TOP_ROW",
+     "straddles_supports": [],
+     "label_tag": "CALLOUT@4885",
+     "label_kind": "LOOSE_CALLOUT",
+     "count": "2",
+     "dia": "12",
+     "u_start": 0.0,
+     "u_end": 0.942554,
+     "start_at_support": true,
+     "end_at_support": false,
+     "legs": [
+      {
+       "x": 2999.4,
+       "drawn_length": 608.1
+      }
+     ],
+     "pieces": [
+      {
+       "span": 1,
+       "fraction": 0.942554,
+       "kind": "EXTENSION",
+       "m": 2.356386
+      }
+     ],
+     "core_m": 0.0,
+     "extension_m": 2.356386,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": [
+      "297D",
+      "297C",
+      "297E"
+     ]
+    }
+   ],
+   "stirrup_zones": [
+    {
+     "handle": "2954",
+     "u": [
+      0.0,
+      1.0
+     ]
+    },
+    {
+     "handle": "2983",
+     "u": [
+      1.0,
+      2.0
+     ]
+    }
+   ],
+   "unbound_printed_labels": []
+  },
+  {
+   "type": "CB6",
+   "block": "C-BEAM2",
+   "insert_handle": "2A04",
+   "support_lines_drawn": [
+    2999.4,
+    8537.9,
+    14076.3
+   ],
+   "spans_drawn": [
+    5538.5,
+    5538.4
+   ],
+   "spans_m": [
+    4.4,
+    6.3
+   ],
+   "bars": [
+    {
+     "handle": "29B5",
+     "role": "BOTTOM",
+     "row": "BOTTOM",
+     "straddles_supports": [
+      1
+     ],
+     "label_tag": "BOT1",
+     "label_kind": "ATTRIBUTE",
+     "count": "3",
+     "dia": "16",
+     "u_start": 0.0,
+     "u_end": 1.057437,
+     "start_at_support": true,
+     "end_at_support": false,
+     "legs": [],
+     "pieces": [
+      {
+       "span": 1,
+       "fraction": 1.0,
+       "kind": "CORE",
+       "m": 4.4
+      },
+      {
+       "span": 2,
+       "fraction": 0.057437,
+       "kind": "EXTENSION",
+       "m": 0.36185
+      }
+     ],
+     "core_m": 4.4,
+     "extension_m": 0.36185,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": null
+    },
+    {
+     "handle": "29D4",
+     "role": "BOTTOM",
+     "row": "BOTTOM",
+     "straddles_supports": [
+      1
+     ],
+     "label_tag": "BOT2",
+     "label_kind": "ATTRIBUTE",
+     "count": "4",
+     "dia": "18",
+     "u_start": 0.933252,
+     "u_end": 2.0,
+     "start_at_support": false,
+     "end_at_support": true,
+     "legs": [],
+     "pieces": [
+      {
+       "span": 1,
+       "fraction": 0.066748,
+       "kind": "EXTENSION",
+       "m": 0.29369
+      },
+      {
+       "span": 2,
+       "fraction": 1.0,
+       "kind": "CORE",
+       "m": 6.3
+      }
+     ],
+     "core_m": 6.3,
+     "extension_m": 0.29369,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": null
+    },
+    {
+     "handle": "29D5",
+     "role": "CONTINUOUS_TOP",
+     "row": "TOP_ROW",
+     "straddles_supports": [],
+     "label_tag": "CALLOUT@10454",
+     "label_kind": "LOOSE_CALLOUT",
+     "count": "2",
+     "dia": "12",
+     "u_start": 1.057437,
+     "u_end": 2.0,
+     "start_at_support": false,
+     "end_at_support": true,
+     "legs": [
+      {
+       "x": 14076.3,
+       "drawn_length": 608.1
+      }
+     ],
+     "pieces": [
+      {
+       "span": 2,
+       "fraction": 0.942563,
+       "kind": "EXTENSION",
+       "m": 5.93815
+      }
+     ],
+     "core_m": 0.0,
+     "extension_m": 5.93815,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": [
+      "29E6",
+      "29E5",
+      "29E7"
+     ]
+    },
+    {
+     "handle": "29D8",
+     "role": "SUPPORT_TOP",
+     "row": "SUPPORT_ROW",
+     "straddles_supports": [
+      1
+     ],
+     "label_tag": "MID",
+     "label_kind": "ATTRIBUTE",
+     "count": "4",
+     "dia": "18",
+     "u_start": 0.699043,
+     "u_end": 1.305754,
+     "start_at_support": false,
+     "end_at_support": false,
+     "legs": [],
+     "pieces": [
+      {
+       "span": 1,
+       "fraction": 0.300957,
+       "kind": "EXTENSION",
+       "m": 1.324209
+      },
+      {
+       "span": 2,
+       "fraction": 0.305754,
+       "kind": "EXTENSION",
+       "m": 1.926249
+      }
+     ],
+     "core_m": 0.0,
+     "extension_m": 3.250458,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": null
+    },
+    {
+     "handle": "29D9",
+     "role": "CONTINUOUS_TOP",
+     "row": "TOP_ROW",
+     "straddles_supports": [],
+     "label_tag": "CALLOUT@4885",
+     "label_kind": "LOOSE_CALLOUT",
+     "count": "2",
+     "dia": "12",
+     "u_start": 0.0,
+     "u_end": 0.942554,
+     "start_at_support": true,
+     "end_at_support": false,
+     "legs": [
+      {
+       "x": 2999.4,
+       "drawn_length": 608.1
+      }
+     ],
+     "pieces": [
+      {
+       "span": 1,
+       "fraction": 0.942554,
+       "kind": "EXTENSION",
+       "m": 4.147239
+      }
+     ],
+     "core_m": 0.0,
+     "extension_m": 4.147239,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": [
+      "29E2",
+      "29E1",
+      "29E3"
+     ]
+    }
+   ],
+   "stirrup_zones": [
+    {
+     "handle": "29B6",
+     "u": [
+      0.0,
+      1.0
+     ]
+    },
+    {
+     "handle": "29E8",
+     "u": [
+      1.0,
+      2.0
+     ]
+    }
+   ],
+   "unbound_printed_labels": []
+  },
+  {
+   "type": "CB7",
+   "block": "C-BEAM2",
+   "insert_handle": "22EC",
+   "support_lines_drawn": [
+    2999.4,
+    8537.9,
+    14076.3
+   ],
+   "spans_drawn": [
+    5538.5,
+    5538.4
+   ],
+   "spans_m": [
+    6.0,
+    6.1
+   ],
+   "bars": [
+    {
+     "handle": "2049",
+     "role": "BOTTOM",
+     "row": "BOTTOM",
+     "straddles_supports": [
+      1
+     ],
+     "label_tag": "BOT1",
+     "label_kind": "ATTRIBUTE",
+     "count": "3",
+     "dia": "16",
+     "u_start": 0.0,
+     "u_end": 1.057437,
+     "start_at_support": true,
+     "end_at_support": false,
+     "legs": [],
+     "pieces": [
+      {
+       "span": 1,
+       "fraction": 1.0,
+       "kind": "CORE",
+       "m": 6.0
+      },
+      {
+       "span": 2,
+       "fraction": 0.057437,
+       "kind": "EXTENSION",
+       "m": 0.350363
+      }
+     ],
+     "core_m": 6.0,
+     "extension_m": 0.350363,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": null
+    },
+    {
+     "handle": "2092",
+     "role": "BOTTOM",
+     "row": "BOTTOM",
+     "straddles_supports": [
+      1
+     ],
+     "label_tag": "BOT2",
+     "label_kind": "ATTRIBUTE",
+     "count": "3",
+     "dia": "16",
+     "u_start": 0.933252,
+     "u_end": 2.0,
+     "start_at_support": false,
+     "end_at_support": true,
+     "legs": [],
+     "pieces": [
+      {
+       "span": 1,
+       "fraction": 0.066748,
+       "kind": "EXTENSION",
+       "m": 0.400486
+      },
+      {
+       "span": 2,
+       "fraction": 1.0,
+       "kind": "CORE",
+       "m": 6.1
+      }
+     ],
+     "core_m": 6.1,
+     "extension_m": 0.400486,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": null
+    },
+    {
+     "handle": "2093",
+     "role": "CONTINUOUS_TOP",
+     "row": "TOP_ROW",
+     "straddles_supports": [],
+     "label_tag": "CALLOUT@10454",
+     "label_kind": "LOOSE_CALLOUT",
+     "count": "2",
+     "dia": "12",
+     "u_start": 1.057437,
+     "u_end": 2.0,
+     "start_at_support": false,
+     "end_at_support": true,
+     "legs": [
+      {
+       "x": 14076.3,
+       "drawn_length": 608.1
+      }
+     ],
+     "pieces": [
+      {
+       "span": 2,
+       "fraction": 0.942563,
+       "kind": "EXTENSION",
+       "m": 5.749637
+      }
+     ],
+     "core_m": 0.0,
+     "extension_m": 5.749637,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": [
+      "224C",
+      "224B",
+      "224D"
+     ]
+    },
+    {
+     "handle": "20A4",
+     "role": "SUPPORT_TOP",
+     "row": "SUPPORT_ROW",
+     "straddles_supports": [
+      1
+     ],
+     "label_tag": "MID",
+     "label_kind": "ATTRIBUTE",
+     "count": "5",
+     "dia": "18",
+     "u_start": 0.699043,
+     "u_end": 1.305754,
+     "start_at_support": false,
+     "end_at_support": false,
+     "legs": [],
+     "pieces": [
+      {
+       "span": 1,
+       "fraction": 0.300957,
+       "kind": "EXTENSION",
+       "m": 1.80574
+      },
+      {
+       "span": 2,
+       "fraction": 0.305754,
+       "kind": "EXTENSION",
+       "m": 1.865098
+      }
+     ],
+     "core_m": 0.0,
+     "extension_m": 3.670838,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": null
+    },
+    {
+     "handle": "20A5",
+     "role": "CONTINUOUS_TOP",
+     "row": "TOP_ROW",
+     "straddles_supports": [],
+     "label_tag": "CALLOUT@4885",
+     "label_kind": "LOOSE_CALLOUT",
+     "count": "2",
+     "dia": "12",
+     "u_start": 0.0,
+     "u_end": 0.942554,
+     "start_at_support": true,
+     "end_at_support": false,
+     "legs": [
+      {
+       "x": 2999.4,
+       "drawn_length": 608.1
+      }
+     ],
+     "pieces": [
+      {
+       "span": 1,
+       "fraction": 0.942554,
+       "kind": "EXTENSION",
+       "m": 5.655326
+      }
+     ],
+     "core_m": 0.0,
+     "extension_m": 5.655326,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": [
+      "2248",
+      "2247",
+      "2249"
+     ]
+    }
+   ],
+   "stirrup_zones": [
+    {
+     "handle": "204A",
+     "u": [
+      0.0,
+      1.0
+     ]
+    },
+    {
+     "handle": "22AA",
+     "u": [
+      1.0,
+      2.0
+     ]
+    }
+   ],
+   "unbound_printed_labels": []
+  },
+  {
+   "type": "CB8",
+   "block": "C-BEAM3",
+   "insert_handle": "2574",
+   "support_lines_drawn": [
+    3109.2,
+    8647.6,
+    14186.1,
+    19724.5
+   ],
+   "spans_drawn": [
+    5538.4,
+    5538.5,
+    5538.4
+   ],
+   "spans_m": [
+    3.7,
+    6.4,
+    6.8
+   ],
+   "bars": [
+    {
+     "handle": "24FD",
+     "role": "CONTINUOUS_TOP",
+     "row": "TOP_ROW",
+     "straddles_supports": [],
+     "label_tag": "CALLOUT@16353",
+     "label_kind": "LOOSE_CALLOUT",
+     "count": "3",
+     "dia": "12",
+     "u_start": 2.044182,
+     "u_end": 3.0,
+     "start_at_support": false,
+     "end_at_support": true,
+     "legs": [
+      {
+       "x": 19724.5,
+       "drawn_length": 276.0
+      }
+     ],
+     "pieces": [
+      {
+       "span": 3,
+       "fraction": 0.955818,
+       "kind": "EXTENSION",
+       "m": 6.499565
+      }
+     ],
+     "core_m": 0.0,
+     "extension_m": 6.499565,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": [
+      "2529",
+      "2528",
+      "2527"
+     ]
+    },
+    {
+     "handle": "24FE",
+     "role": "BOTTOM",
+     "row": "BOTTOM",
+     "straddles_supports": [
+      2
+     ],
+     "label_tag": "BOT3",
+     "label_kind": "ATTRIBUTE",
+     "count": "4",
+     "dia": "16",
+     "u_start": 1.955813,
+     "u_end": 3.0,
+     "start_at_support": false,
+     "end_at_support": true,
+     "legs": [],
+     "pieces": [
+      {
+       "span": 2,
+       "fraction": 0.044187,
+       "kind": "EXTENSION",
+       "m": 0.282795
+      },
+      {
+       "span": 3,
+       "fraction": 1.0,
+       "kind": "CORE",
+       "m": 6.8
+      }
+     ],
+     "core_m": 6.8,
+     "extension_m": 0.282795,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": null
+    },
+    {
+     "handle": "24FF",
+     "role": "SUPPORT_TOP",
+     "row": "SUPPORT_ROW",
+     "straddles_supports": [
+      2
+     ],
+     "label_tag": "MID2",
+     "label_kind": "ATTRIBUTE",
+     "count": "6",
+     "dia": "18",
+     "u_start": 1.697346,
+     "u_end": 2.302654,
+     "start_at_support": false,
+     "end_at_support": false,
+     "legs": [],
+     "pieces": [
+      {
+       "span": 2,
+       "fraction": 0.302654,
+       "kind": "EXTENSION",
+       "m": 1.936987
+      },
+      {
+       "span": 3,
+       "fraction": 0.302654,
+       "kind": "EXTENSION",
+       "m": 2.058045
+      }
+     ],
+     "core_m": 0.0,
+     "extension_m": 3.995032,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": null
+    },
+    {
+     "handle": "2503",
+     "role": "BOTTOM",
+     "row": "BOTTOM",
+     "straddles_supports": [
+      1
+     ],
+     "label_tag": "BOT1",
+     "label_kind": "ATTRIBUTE",
+     "count": "3",
+     "dia": "14",
+     "u_start": 0.0,
+     "u_end": 1.057445,
+     "start_at_support": true,
+     "end_at_support": false,
+     "legs": [],
+     "pieces": [
+      {
+       "span": 1,
+       "fraction": 1.0,
+       "kind": "CORE",
+       "m": 3.7
+      },
+      {
+       "span": 2,
+       "fraction": 0.057445,
+       "kind": "EXTENSION",
+       "m": 0.367645
+      }
+     ],
+     "core_m": 3.7,
+     "extension_m": 0.367645,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": null
+    },
+    {
+     "handle": "2514",
+     "role": "SPAN_TOP",
+     "row": "SUPPORT_ROW",
+     "straddles_supports": [],
+     "label_tag": "CALLOUT@4995",
+     "label_kind": "LOOSE_CALLOUT",
+     "count": "5",
+     "dia": "18",
+     "u_start": 0.0,
+     "u_end": 0.942562,
+     "start_at_support": true,
+     "end_at_support": false,
+     "legs": [
+      {
+       "x": 3109.2,
+       "drawn_length": 276.0
+      }
+     ],
+     "pieces": [
+      {
+       "span": 1,
+       "fraction": 0.942562,
+       "kind": "EXTENSION",
+       "m": 3.487481
+      }
+     ],
+     "core_m": 0.0,
+     "extension_m": 3.487481,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": [
+      "2522",
+      "2523",
+      "2524"
+     ]
+    },
+    {
+     "handle": "2518",
+     "role": "BOTTOM",
+     "row": "BOTTOM",
+     "straddles_supports": [
+      1,
+      2
+     ],
+     "label_tag": "BOT2",
+     "label_kind": "ATTRIBUTE",
+     "count": "7",
+     "dia": "18",
+     "u_start": 0.93326,
+     "u_end": 2.195278,
+     "start_at_support": false,
+     "end_at_support": false,
+     "legs": [],
+     "pieces": [
+      {
+       "span": 1,
+       "fraction": 0.06674,
+       "kind": "EXTENSION",
+       "m": 0.246937
+      },
+      {
+       "span": 2,
+       "fraction": 1.0,
+       "kind": "CORE",
+       "m": 6.4
+      },
+      {
+       "span": 3,
+       "fraction": 0.195278,
+       "kind": "EXTENSION",
+       "m": 1.32789
+      }
+     ],
+     "core_m": 6.4,
+     "extension_m": 1.574828,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": null
+    },
+    {
+     "handle": "2519",
+     "role": "CONTINUOUS_TOP",
+     "row": "TOP_ROW",
+     "straddles_supports": [],
+     "label_tag": "CALLOUT@10729",
+     "label_kind": "LOOSE_CALLOUT",
+     "count": "3",
+     "dia": "12",
+     "u_start": 1.057445,
+     "u_end": 1.955813,
+     "start_at_support": false,
+     "end_at_support": false,
+     "legs": [],
+     "pieces": [
+      {
+       "span": 2,
+       "fraction": 0.898369,
+       "kind": "EXTENSION",
+       "m": 5.74956
+      }
+     ],
+     "core_m": 0.0,
+     "extension_m": 5.74956,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": [
+      "2526",
+      "2525",
+      "2521"
+     ]
+    },
+    {
+     "handle": "251A",
+     "role": "SUPPORT_TOP",
+     "row": "SUPPORT_ROW",
+     "straddles_supports": [
+      1
+     ],
+     "label_tag": "MID1",
+     "label_kind": "ATTRIBUTE",
+     "count": "",
+     "dia": "",
+     "u_start": 0.699047,
+     "u_end": 1.297801,
+     "start_at_support": false,
+     "end_at_support": false,
+     "legs": [],
+     "pieces": [
+      {
+       "span": 1,
+       "fraction": 0.300953,
+       "kind": "EXTENSION",
+       "m": 1.113526
+      },
+      {
+       "span": 2,
+       "fraction": 0.297801,
+       "kind": "EXTENSION",
+       "m": 1.905928
+      }
+     ],
+     "core_m": 0.0,
+     "extension_m": 3.019454,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "EMPTY_SCHEDULE_CELL",
+     "label_handles": null
+    }
+   ],
+   "stirrup_zones": [
+    {
+     "handle": "2504",
+     "u": [
+      0.0,
+      1.0
+     ]
+    },
+    {
+     "handle": "252E",
+     "u": [
+      1.0,
+      2.0
+     ]
+    },
+    {
+     "handle": "253C",
+     "u": [
+      2.0,
+      3.0
+     ]
+    }
+   ],
+   "unbound_printed_labels": []
+  },
+  {
+   "type": "CB9",
+   "block": "C-BEAM3",
+   "insert_handle": "2619",
+   "support_lines_drawn": [
+    3109.2,
+    8647.6,
+    14186.1,
+    19724.5
+   ],
+   "spans_drawn": [
+    5538.4,
+    5538.5,
+    5538.4
+   ],
+   "spans_m": [
+    4.1,
+    4.0,
+    3.7
+   ],
+   "bars": [
+    {
+     "handle": "25A4",
+     "role": "CONTINUOUS_TOP",
+     "row": "TOP_ROW",
+     "straddles_supports": [],
+     "label_tag": "CALLOUT@16353",
+     "label_kind": "LOOSE_CALLOUT",
+     "count": "2",
+     "dia": "12",
+     "u_start": 2.044182,
+     "u_end": 3.0,
+     "start_at_support": false,
+     "end_at_support": true,
+     "legs": [
+      {
+       "x": 19724.5,
+       "drawn_length": 276.0
+      }
+     ],
+     "pieces": [
+      {
+       "span": 3,
+       "fraction": 0.955818,
+       "kind": "EXTENSION",
+       "m": 3.536528
+      }
+     ],
+     "core_m": 0.0,
+     "extension_m": 3.536528,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": [
+      "25CD",
+      "25CC",
+      "25CB"
+     ]
+    },
+    {
+     "handle": "25A5",
+     "role": "BOTTOM",
+     "row": "BOTTOM",
+     "straddles_supports": [
+      2
+     ],
+     "label_tag": "BOT3",
+     "label_kind": "ATTRIBUTE",
+     "count": "3",
+     "dia": "14",
+     "u_start": 1.955813,
+     "u_end": 3.0,
+     "start_at_support": false,
+     "end_at_support": true,
+     "legs": [],
+     "pieces": [
+      {
+       "span": 2,
+       "fraction": 0.044187,
+       "kind": "EXTENSION",
+       "m": 0.176747
+      },
+      {
+       "span": 3,
+       "fraction": 1.0,
+       "kind": "CORE",
+       "m": 3.7
+      }
+     ],
+     "core_m": 3.7,
+     "extension_m": 0.176747,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": null
+    },
+    {
+     "handle": "25A6",
+     "role": "SUPPORT_TOP",
+     "row": "SUPPORT_ROW",
+     "straddles_supports": [
+      2
+     ],
+     "label_tag": "MID2",
+     "label_kind": "ATTRIBUTE",
+     "count": "3",
+     "dia": "16",
+     "u_start": 1.697346,
+     "u_end": 2.302654,
+     "start_at_support": false,
+     "end_at_support": false,
+     "legs": [],
+     "pieces": [
+      {
+       "span": 2,
+       "fraction": 0.302654,
+       "kind": "EXTENSION",
+       "m": 1.210617
+      },
+      {
+       "span": 3,
+       "fraction": 0.302654,
+       "kind": "EXTENSION",
+       "m": 1.119819
+      }
+     ],
+     "core_m": 0.0,
+     "extension_m": 2.330435,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": null
+    },
+    {
+     "handle": "25AA",
+     "role": "BOTTOM",
+     "row": "BOTTOM",
+     "straddles_supports": [
+      1
+     ],
+     "label_tag": "BOT1",
+     "label_kind": "ATTRIBUTE",
+     "count": "4",
+     "dia": "16",
+     "u_start": 0.0,
+     "u_end": 1.057445,
+     "start_at_support": true,
+     "end_at_support": false,
+     "legs": [],
+     "pieces": [
+      {
+       "span": 1,
+       "fraction": 1.0,
+       "kind": "CORE",
+       "m": 4.1
+      },
+      {
+       "span": 2,
+       "fraction": 0.057445,
+       "kind": "EXTENSION",
+       "m": 0.229778
+      }
+     ],
+     "core_m": 4.1,
+     "extension_m": 0.229778,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": null
+    },
+    {
+     "handle": "25BB",
+     "role": "CONTINUOUS_TOP",
+     "row": "TOP_ROW",
+     "straddles_supports": [],
+     "label_tag": "CALLOUT@4995",
+     "label_kind": "LOOSE_CALLOUT",
+     "count": "2",
+     "dia": "12",
+     "u_start": 0.0,
+     "u_end": 0.942562,
+     "start_at_support": true,
+     "end_at_support": false,
+     "legs": [
+      {
+       "x": 3109.2,
+       "drawn_length": 276.0
+      }
+     ],
+     "pieces": [
+      {
+       "span": 1,
+       "fraction": 0.942562,
+       "kind": "EXTENSION",
+       "m": 3.864506
+      }
+     ],
+     "core_m": 0.0,
+     "extension_m": 3.864506,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": [
+      "25C6",
+      "25C7",
+      "25C8"
+     ]
+    },
+    {
+     "handle": "25BF",
+     "role": "BOTTOM",
+     "row": "BOTTOM",
+     "straddles_supports": [
+      1,
+      2
+     ],
+     "label_tag": "BOT2",
+     "label_kind": "ATTRIBUTE",
+     "count": "3",
+     "dia": "14",
+     "u_start": 0.93326,
+     "u_end": 2.195278,
+     "start_at_support": false,
+     "end_at_support": false,
+     "legs": [],
+     "pieces": [
+      {
+       "span": 1,
+       "fraction": 0.06674,
+       "kind": "EXTENSION",
+       "m": 0.273633
+      },
+      {
+       "span": 2,
+       "fraction": 1.0,
+       "kind": "CORE",
+       "m": 4.0
+      },
+      {
+       "span": 3,
+       "fraction": 0.195278,
+       "kind": "EXTENSION",
+       "m": 0.722529
+      }
+     ],
+     "core_m": 4.0,
+     "extension_m": 0.996162,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": null
+    },
+    {
+     "handle": "25C0",
+     "role": "CONTINUOUS_TOP",
+     "row": "TOP_ROW",
+     "straddles_supports": [],
+     "label_tag": "CALLOUT@10729",
+     "label_kind": "LOOSE_CALLOUT",
+     "count": "2",
+     "dia": "12",
+     "u_start": 1.057445,
+     "u_end": 1.955813,
+     "start_at_support": false,
+     "end_at_support": false,
+     "legs": [],
+     "pieces": [
+      {
+       "span": 2,
+       "fraction": 0.898369,
+       "kind": "EXTENSION",
+       "m": 3.593475
+      }
+     ],
+     "core_m": 0.0,
+     "extension_m": 3.593475,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": [
+      "25CA",
+      "25C9",
+      "25C5"
+     ]
+    },
+    {
+     "handle": "25C1",
+     "role": "SUPPORT_TOP",
+     "row": "SUPPORT_ROW",
+     "straddles_supports": [
+      1
+     ],
+     "label_tag": "MID1",
+     "label_kind": "ATTRIBUTE",
+     "count": "4",
+     "dia": "18",
+     "u_start": 0.699047,
+     "u_end": 1.297801,
+     "start_at_support": false,
+     "end_at_support": false,
+     "legs": [],
+     "pieces": [
+      {
+       "span": 1,
+       "fraction": 0.300953,
+       "kind": "EXTENSION",
+       "m": 1.233907
+      },
+      {
+       "span": 2,
+       "fraction": 0.297801,
+       "kind": "EXTENSION",
+       "m": 1.191205
+      }
+     ],
+     "core_m": 0.0,
+     "extension_m": 2.425112,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": null
+    }
+   ],
+   "stirrup_zones": [
+    {
+     "handle": "25AB",
+     "u": [
+      0.0,
+      1.0
+     ]
+    },
+    {
+     "handle": "25D3",
+     "u": [
+      1.0,
+      2.0
+     ]
+    },
+    {
+     "handle": "25E1",
+     "u": [
+      2.0,
+      3.0
+     ]
+    }
+   ],
+   "unbound_printed_labels": []
+  },
+  {
+   "type": "CB10",
+   "block": "C-BEAM2",
+   "insert_handle": "23F0",
+   "support_lines_drawn": [
+    2999.4,
+    8537.9,
+    14076.3
+   ],
+   "spans_drawn": [
+    5538.5,
+    5538.4
+   ],
+   "spans_m": [
+    3.0,
+    4.1
+   ],
+   "bars": [
+    {
+     "handle": "239A",
+     "role": "BOTTOM",
+     "row": "BOTTOM",
+     "straddles_supports": [
+      1
+     ],
+     "label_tag": "BOT1",
+     "label_kind": "ATTRIBUTE",
+     "count": "3",
+     "dia": "16",
+     "u_start": 0.0,
+     "u_end": 1.057437,
+     "start_at_support": true,
+     "end_at_support": false,
+     "legs": [],
+     "pieces": [
+      {
+       "span": 1,
+       "fraction": 1.0,
+       "kind": "CORE",
+       "m": 3.0
+      },
+      {
+       "span": 2,
+       "fraction": 0.057437,
+       "kind": "EXTENSION",
+       "m": 0.23549
+      }
+     ],
+     "core_m": 3.0,
+     "extension_m": 0.23549,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": null
+    },
+    {
+     "handle": "23B9",
+     "role": "BOTTOM",
+     "row": "BOTTOM",
+     "straddles_supports": [
+      1
+     ],
+     "label_tag": "BOT2",
+     "label_kind": "ATTRIBUTE",
+     "count": "4",
+     "dia": "18",
+     "u_start": 0.933252,
+     "u_end": 2.0,
+     "start_at_support": false,
+     "end_at_support": true,
+     "legs": [],
+     "pieces": [
+      {
+       "span": 1,
+       "fraction": 0.066748,
+       "kind": "EXTENSION",
+       "m": 0.200243
+      },
+      {
+       "span": 2,
+       "fraction": 1.0,
+       "kind": "CORE",
+       "m": 4.1
+      }
+     ],
+     "core_m": 4.1,
+     "extension_m": 0.200243,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": null
+    },
+    {
+     "handle": "23BA",
+     "role": "CONTINUOUS_TOP",
+     "row": "TOP_ROW",
+     "straddles_supports": [],
+     "label_tag": "CALLOUT@10454",
+     "label_kind": "LOOSE_CALLOUT",
+     "count": "2",
+     "dia": "12",
+     "u_start": 1.057437,
+     "u_end": 2.0,
+     "start_at_support": false,
+     "end_at_support": true,
+     "legs": [
+      {
+       "x": 14076.3,
+       "drawn_length": 608.1
+      }
+     ],
+     "pieces": [
+      {
+       "span": 2,
+       "fraction": 0.942563,
+       "kind": "EXTENSION",
+       "m": 3.86451
+      }
+     ],
+     "core_m": 0.0,
+     "extension_m": 3.86451,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": [
+      "23C8",
+      "23C7",
+      "23C9"
+     ]
+    },
+    {
+     "handle": "23BD",
+     "role": "SUPPORT_TOP",
+     "row": "SUPPORT_ROW",
+     "straddles_supports": [
+      1
+     ],
+     "label_tag": "MID",
+     "label_kind": "ATTRIBUTE",
+     "count": "4",
+     "dia": "18",
+     "u_start": 0.699043,
+     "u_end": 1.305754,
+     "start_at_support": false,
+     "end_at_support": false,
+     "legs": [],
+     "pieces": [
+      {
+       "span": 1,
+       "fraction": 0.300957,
+       "kind": "EXTENSION",
+       "m": 0.90287
+      },
+      {
+       "span": 2,
+       "fraction": 0.305754,
+       "kind": "EXTENSION",
+       "m": 1.25359
+      }
+     ],
+     "core_m": 0.0,
+     "extension_m": 2.15646,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": null
+    },
+    {
+     "handle": "23BE",
+     "role": "CONTINUOUS_TOP",
+     "row": "TOP_ROW",
+     "straddles_supports": [],
+     "label_tag": "CALLOUT@4885",
+     "label_kind": "LOOSE_CALLOUT",
+     "count": "2",
+     "dia": "12",
+     "u_start": 0.0,
+     "u_end": 0.942554,
+     "start_at_support": true,
+     "end_at_support": false,
+     "legs": [
+      {
+       "x": 2999.4,
+       "drawn_length": 608.1
+      }
+     ],
+     "pieces": [
+      {
+       "span": 1,
+       "fraction": 0.942554,
+       "kind": "EXTENSION",
+       "m": 2.827663
+      }
+     ],
+     "core_m": 0.0,
+     "extension_m": 2.827663,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": [
+      "23C4",
+      "23C3",
+      "23C5"
+     ]
+    }
+   ],
+   "stirrup_zones": [
+    {
+     "handle": "239B",
+     "u": [
+      0.0,
+      1.0
+     ]
+    },
+    {
+     "handle": "23CA",
+     "u": [
+      1.0,
+      2.0
+     ]
+    }
+   ],
+   "unbound_printed_labels": []
+  },
+  {
+   "type": "CB11",
+   "block": "C-BEAM3",
+   "insert_handle": "26C1",
+   "support_lines_drawn": [
+    3109.2,
+    8647.6,
+    14186.1,
+    19724.5
+   ],
+   "spans_drawn": [
+    5538.4,
+    5538.5,
+    5538.4
+   ],
+   "spans_m": [
+    7.1,
+    3.2,
+    3.7
+   ],
+   "bars": [
+    {
+     "handle": "2649",
+     "role": "CONTINUOUS_TOP",
+     "row": "TOP_ROW",
+     "straddles_supports": [],
+     "label_tag": "CALLOUT@16353",
+     "label_kind": "LOOSE_CALLOUT",
+     "count": "2",
+     "dia": "12",
+     "u_start": 2.044182,
+     "u_end": 3.0,
+     "start_at_support": false,
+     "end_at_support": true,
+     "legs": [
+      {
+       "x": 19724.5,
+       "drawn_length": 276.0
+      }
+     ],
+     "pieces": [
+      {
+       "span": 3,
+       "fraction": 0.955818,
+       "kind": "EXTENSION",
+       "m": 3.536528
+      }
+     ],
+     "core_m": 0.0,
+     "extension_m": 3.536528,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": [
+      "2675",
+      "2674",
+      "2673"
+     ]
+    },
+    {
+     "handle": "264A",
+     "role": "BOTTOM",
+     "row": "BOTTOM",
+     "straddles_supports": [
+      2
+     ],
+     "label_tag": "BOT3",
+     "label_kind": "ATTRIBUTE",
+     "count": "4",
+     "dia": "16",
+     "u_start": 1.955813,
+     "u_end": 3.0,
+     "start_at_support": false,
+     "end_at_support": true,
+     "legs": [],
+     "pieces": [
+      {
+       "span": 2,
+       "fraction": 0.044187,
+       "kind": "EXTENSION",
+       "m": 0.141397
+      },
+      {
+       "span": 3,
+       "fraction": 1.0,
+       "kind": "CORE",
+       "m": 3.7
+      }
+     ],
+     "core_m": 3.7,
+     "extension_m": 0.141397,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": null
+    },
+    {
+     "handle": "264B",
+     "role": "SUPPORT_TOP",
+     "row": "SUPPORT_ROW",
+     "straddles_supports": [
+      2
+     ],
+     "label_tag": "MID2",
+     "label_kind": "ATTRIBUTE",
+     "count": "4",
+     "dia": "16",
+     "u_start": 1.697346,
+     "u_end": 2.302654,
+     "start_at_support": false,
+     "end_at_support": false,
+     "legs": [],
+     "pieces": [
+      {
+       "span": 2,
+       "fraction": 0.302654,
+       "kind": "EXTENSION",
+       "m": 0.968493
+      },
+      {
+       "span": 3,
+       "fraction": 0.302654,
+       "kind": "EXTENSION",
+       "m": 1.119819
+      }
+     ],
+     "core_m": 0.0,
+     "extension_m": 2.088312,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": null
+    },
+    {
+     "handle": "264F",
+     "role": "BOTTOM",
+     "row": "BOTTOM",
+     "straddles_supports": [
+      1
+     ],
+     "label_tag": "BOT1",
+     "label_kind": "ATTRIBUTE",
+     "count": "6",
+     "dia": "18",
+     "u_start": 0.0,
+     "u_end": 1.057445,
+     "start_at_support": true,
+     "end_at_support": false,
+     "legs": [],
+     "pieces": [
+      {
+       "span": 1,
+       "fraction": 1.0,
+       "kind": "CORE",
+       "m": 7.1
+      },
+      {
+       "span": 2,
+       "fraction": 0.057445,
+       "kind": "EXTENSION",
+       "m": 0.183823
+      }
+     ],
+     "core_m": 7.1,
+     "extension_m": 0.183823,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": null
+    },
+    {
+     "handle": "2660",
+     "role": "CONTINUOUS_TOP",
+     "row": "TOP_ROW",
+     "straddles_supports": [],
+     "label_tag": "CALLOUT@4995",
+     "label_kind": "LOOSE_CALLOUT",
+     "count": "2",
+     "dia": "12",
+     "u_start": 0.0,
+     "u_end": 0.942562,
+     "start_at_support": true,
+     "end_at_support": false,
+     "legs": [
+      {
+       "x": 3109.2,
+       "drawn_length": 276.0
+      }
+     ],
+     "pieces": [
+      {
+       "span": 1,
+       "fraction": 0.942562,
+       "kind": "EXTENSION",
+       "m": 6.692193
+      }
+     ],
+     "core_m": 0.0,
+     "extension_m": 6.692193,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": [
+      "266E",
+      "266F",
+      "2670"
+     ]
+    },
+    {
+     "handle": "2664",
+     "role": "BOTTOM",
+     "row": "BOTTOM",
+     "straddles_supports": [
+      1,
+      2
+     ],
+     "label_tag": "BOT2",
+     "label_kind": "ATTRIBUTE",
+     "count": "4",
+     "dia": "16",
+     "u_start": 0.93326,
+     "u_end": 2.195278,
+     "start_at_support": false,
+     "end_at_support": false,
+     "legs": [],
+     "pieces": [
+      {
+       "span": 1,
+       "fraction": 0.06674,
+       "kind": "EXTENSION",
+       "m": 0.473853
+      },
+      {
+       "span": 2,
+       "fraction": 1.0,
+       "kind": "CORE",
+       "m": 3.2
+      },
+      {
+       "span": 3,
+       "fraction": 0.195278,
+       "kind": "EXTENSION",
+       "m": 0.722529
+      }
+     ],
+     "core_m": 3.2,
+     "extension_m": 1.196381,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": null
+    },
+    {
+     "handle": "2665",
+     "role": "CONTINUOUS_TOP",
+     "row": "TOP_ROW",
+     "straddles_supports": [],
+     "label_tag": "CALLOUT@10729",
+     "label_kind": "LOOSE_CALLOUT",
+     "count": "2",
+     "dia": "12",
+     "u_start": 1.057445,
+     "u_end": 1.955813,
+     "start_at_support": false,
+     "end_at_support": false,
+     "legs": [],
+     "pieces": [
+      {
+       "span": 2,
+       "fraction": 0.898369,
+       "kind": "EXTENSION",
+       "m": 2.87478
+      }
+     ],
+     "core_m": 0.0,
+     "extension_m": 2.87478,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": [
+      "2672",
+      "2671",
+      "266D"
+     ]
+    },
+    {
+     "handle": "2666",
+     "role": "SUPPORT_TOP",
+     "row": "SUPPORT_ROW",
+     "straddles_supports": [
+      1
+     ],
+     "label_tag": "MID1",
+     "label_kind": "ATTRIBUTE",
+     "count": "8",
+     "dia": "18",
+     "u_start": 0.699047,
+     "u_end": 1.297801,
+     "start_at_support": false,
+     "end_at_support": false,
+     "legs": [],
+     "pieces": [
+      {
+       "span": 1,
+       "fraction": 0.300953,
+       "kind": "EXTENSION",
+       "m": 2.136767
+      },
+      {
+       "span": 2,
+       "fraction": 0.297801,
+       "kind": "EXTENSION",
+       "m": 0.952964
+      }
+     ],
+     "core_m": 0.0,
+     "extension_m": 3.089731,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": null
+    }
+   ],
+   "stirrup_zones": [
+    {
+     "handle": "2650",
+     "u": [
+      0.0,
+      1.0
+     ]
+    },
+    {
+     "handle": "267B",
+     "u": [
+      1.0,
+      2.0
+     ]
+    },
+    {
+     "handle": "2689",
+     "u": [
+      2.0,
+      3.0
+     ]
+    }
+   ],
+   "unbound_printed_labels": []
+  },
+  {
+   "type": "CB12",
+   "block": "C-BEAM2",
+   "insert_handle": "2469",
+   "support_lines_drawn": [
+    2999.4,
+    8537.9,
+    14076.3
+   ],
+   "spans_drawn": [
+    5538.5,
+    5538.4
+   ],
+   "spans_m": [
+    6.1,
+    5.5
+   ],
+   "bars": [
+    {
+     "handle": "2410",
+     "role": "BOTTOM",
+     "row": "BOTTOM",
+     "straddles_supports": [
+      1
+     ],
+     "label_tag": "BOT1",
+     "label_kind": "ATTRIBUTE",
+     "count": "5",
+     "dia": "18",
+     "u_start": 0.0,
+     "u_end": 1.057437,
+     "start_at_support": true,
+     "end_at_support": false,
+     "legs": [],
+     "pieces": [
+      {
+       "span": 1,
+       "fraction": 1.0,
+       "kind": "CORE",
+       "m": 6.1
+      },
+      {
+       "span": 2,
+       "fraction": 0.057437,
+       "kind": "EXTENSION",
+       "m": 0.315901
+      }
+     ],
+     "core_m": 6.1,
+     "extension_m": 0.315901,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": null
+    },
+    {
+     "handle": "242F",
+     "role": "BOTTOM",
+     "row": "BOTTOM",
+     "straddles_supports": [
+      1
+     ],
+     "label_tag": "BOT2",
+     "label_kind": "ATTRIBUTE",
+     "count": "3",
+     "dia": "16",
+     "u_start": 0.933252,
+     "u_end": 2.0,
+     "start_at_support": false,
+     "end_at_support": true,
+     "legs": [],
+     "pieces": [
+      {
+       "span": 1,
+       "fraction": 0.066748,
+       "kind": "EXTENSION",
+       "m": 0.407161
+      },
+      {
+       "span": 2,
+       "fraction": 1.0,
+       "kind": "CORE",
+       "m": 5.5
+      }
+     ],
+     "core_m": 5.5,
+     "extension_m": 0.407161,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": null
+    },
+    {
+     "handle": "2430",
+     "role": "CONTINUOUS_TOP",
+     "row": "TOP_ROW",
+     "straddles_supports": [],
+     "label_tag": "CALLOUT@10454",
+     "label_kind": "LOOSE_CALLOUT",
+     "count": "2",
+     "dia": "12",
+     "u_start": 1.057437,
+     "u_end": 2.0,
+     "start_at_support": false,
+     "end_at_support": true,
+     "legs": [
+      {
+       "x": 14076.3,
+       "drawn_length": 608.1
+      }
+     ],
+     "pieces": [
+      {
+       "span": 2,
+       "fraction": 0.942563,
+       "kind": "EXTENSION",
+       "m": 5.184099
+      }
+     ],
+     "core_m": 0.0,
+     "extension_m": 5.184099,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": [
+      "2441",
+      "2440",
+      "2442"
+     ]
+    },
+    {
+     "handle": "2433",
+     "role": "SUPPORT_TOP",
+     "row": "SUPPORT_ROW",
+     "straddles_supports": [
+      1
+     ],
+     "label_tag": "MID",
+     "label_kind": "ATTRIBUTE",
+     "count": "6",
+     "dia": "18",
+     "u_start": 0.699043,
+     "u_end": 1.305754,
+     "start_at_support": false,
+     "end_at_support": false,
+     "legs": [],
+     "pieces": [
+      {
+       "span": 1,
+       "fraction": 0.300957,
+       "kind": "EXTENSION",
+       "m": 1.835836
+      },
+      {
+       "span": 2,
+       "fraction": 0.305754,
+       "kind": "EXTENSION",
+       "m": 1.681646
+      }
+     ],
+     "core_m": 0.0,
+     "extension_m": 3.517481,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": null
+    },
+    {
+     "handle": "2434",
+     "role": "CONTINUOUS_TOP",
+     "row": "TOP_ROW",
+     "straddles_supports": [],
+     "label_tag": "CALLOUT@4885",
+     "label_kind": "LOOSE_CALLOUT",
+     "count": "2",
+     "dia": "12",
+     "u_start": 0.0,
+     "u_end": 0.942554,
+     "start_at_support": true,
+     "end_at_support": false,
+     "legs": [
+      {
+       "x": 2999.4,
+       "drawn_length": 608.1
+      }
+     ],
+     "pieces": [
+      {
+       "span": 1,
+       "fraction": 0.942554,
+       "kind": "EXTENSION",
+       "m": 5.749582
+      }
+     ],
+     "core_m": 0.0,
+     "extension_m": 5.749582,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": [
+      "243D",
+      "243C",
+      "243E"
+     ]
+    }
+   ],
+   "stirrup_zones": [
+    {
+     "handle": "2411",
+     "u": [
+      0.0,
+      1.0
+     ]
+    },
+    {
+     "handle": "2443",
+     "u": [
+      1.0,
+      2.0
+     ]
+    }
+   ],
+   "unbound_printed_labels": []
+  },
+  {
+   "type": "CB13",
+   "block": "C-BEAM2",
+   "insert_handle": "24DF",
+   "support_lines_drawn": [
+    2999.4,
+    8537.9,
+    14076.3
+   ],
+   "spans_drawn": [
+    5538.5,
+    5538.4
+   ],
+   "spans_m": [
+    3.7,
+    3.6
+   ],
+   "bars": [
+    {
+     "handle": "2489",
+     "role": "BOTTOM",
+     "row": "BOTTOM",
+     "straddles_supports": [
+      1
+     ],
+     "label_tag": "BOT1",
+     "label_kind": "ATTRIBUTE",
+     "count": "4",
+     "dia": "16",
+     "u_start": 0.0,
+     "u_end": 1.057437,
+     "start_at_support": true,
+     "end_at_support": false,
+     "legs": [],
+     "pieces": [
+      {
+       "span": 1,
+       "fraction": 1.0,
+       "kind": "CORE",
+       "m": 3.7
+      },
+      {
+       "span": 2,
+       "fraction": 0.057437,
+       "kind": "EXTENSION",
+       "m": 0.206772
+      }
+     ],
+     "core_m": 3.7,
+     "extension_m": 0.206772,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": null
+    },
+    {
+     "handle": "24A8",
+     "role": "BOTTOM",
+     "row": "BOTTOM",
+     "straddles_supports": [
+      1
+     ],
+     "label_tag": "BOT2",
+     "label_kind": "ATTRIBUTE",
+     "count": "4",
+     "dia": "18",
+     "u_start": 0.933252,
+     "u_end": 2.0,
+     "start_at_support": false,
+     "end_at_support": true,
+     "legs": [],
+     "pieces": [
+      {
+       "span": 1,
+       "fraction": 0.066748,
+       "kind": "EXTENSION",
+       "m": 0.246966
+      },
+      {
+       "span": 2,
+       "fraction": 1.0,
+       "kind": "CORE",
+       "m": 3.6
+      }
+     ],
+     "core_m": 3.6,
+     "extension_m": 0.246966,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": null
+    },
+    {
+     "handle": "24A9",
+     "role": "CONTINUOUS_TOP",
+     "row": "TOP_ROW",
+     "straddles_supports": [],
+     "label_tag": "CALLOUT@10454",
+     "label_kind": "LOOSE_CALLOUT",
+     "count": "3",
+     "dia": "12",
+     "u_start": 1.057437,
+     "u_end": 2.0,
+     "start_at_support": false,
+     "end_at_support": true,
+     "legs": [
+      {
+       "x": 14076.3,
+       "drawn_length": 608.1
+      }
+     ],
+     "pieces": [
+      {
+       "span": 2,
+       "fraction": 0.942563,
+       "kind": "EXTENSION",
+       "m": 3.393228
+      }
+     ],
+     "core_m": 0.0,
+     "extension_m": 3.393228,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": [
+      "24B7",
+      "24B6",
+      "24B8"
+     ]
+    },
+    {
+     "handle": "24AC",
+     "role": "SUPPORT_TOP",
+     "row": "SUPPORT_ROW",
+     "straddles_supports": [
+      1
+     ],
+     "label_tag": "MID",
+     "label_kind": "ATTRIBUTE",
+     "count": "5",
+     "dia": "18",
+     "u_start": 0.699043,
+     "u_end": 1.305754,
+     "start_at_support": false,
+     "end_at_support": false,
+     "legs": [],
+     "pieces": [
+      {
+       "span": 1,
+       "fraction": 0.300957,
+       "kind": "EXTENSION",
+       "m": 1.11354
+      },
+      {
+       "span": 2,
+       "fraction": 0.305754,
+       "kind": "EXTENSION",
+       "m": 1.100713
+      }
+     ],
+     "core_m": 0.0,
+     "extension_m": 2.214253,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": null
+    },
+    {
+     "handle": "24AD",
+     "role": "CONTINUOUS_TOP",
+     "row": "TOP_ROW",
+     "straddles_supports": [],
+     "label_tag": "CALLOUT@4885",
+     "label_kind": "LOOSE_CALLOUT",
+     "count": "3",
+     "dia": "12",
+     "u_start": 0.0,
+     "u_end": 0.942554,
+     "start_at_support": true,
+     "end_at_support": false,
+     "legs": [
+      {
+       "x": 2999.4,
+       "drawn_length": 608.1
+      }
+     ],
+     "pieces": [
+      {
+       "span": 1,
+       "fraction": 0.942554,
+       "kind": "EXTENSION",
+       "m": 3.487451
+      }
+     ],
+     "core_m": 0.0,
+     "extension_m": 3.487451,
+     "rule": "whole spans between support lines = source span attributes (CORE); fractional template pieces x real span (EXTENSION, schematic)",
+     "confidence": "HIGH (core) / MEDIUM (extension: N.T.S. template, spans drawn equal)",
+     "label_binding": "ONE_TO_ONE_PRINTED",
+     "label_handles": [
+      "24B3",
+      "24B2",
+      "24B4"
+     ]
+    }
+   ],
+   "stirrup_zones": [
+    {
+     "handle": "248A",
+     "u": [
+      0.0,
+      1.0
+     ]
+    },
+    {
+     "handle": "24B9",
+     "u": [
+      1.0,
+      2.0
+     ]
+    }
+   ],
+   "unbound_printed_labels": []
+  }
+ ],
+ "occurrences": [
+  {
+   "occurrence": "CB:GF:CB1:H1249",
+   "occurrence_state": "ESTABLISHED",
+   "why": "plan centreline 13.050 m vs schedule spans 13.20 m (<= 5 %)",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "component_matrix": [
+    {
+     "component": "BOTTOM 1",
+     "state": "PARTIAL",
+     "count": 4,
+     "dia_mm": 18,
+     "core_m": 7.5,
+     "template_m": 0.327388,
+     "blocked_parts": [
+      "ANCHORAGE:drawn to the support line only; anchorage not detailed"
+     ],
+     "verified_kg": 60.0,
+     "provisional_kg": 2.619106,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "BOTTOM 2",
+     "state": "PARTIAL",
+     "count": 5,
+     "dia_mm": 18,
+     "core_m": 5.7,
+     "template_m": 0.500607,
+     "blocked_parts": [
+      "ANCHORAGE:drawn to the support line only; anchorage not detailed"
+     ],
+     "verified_kg": 57.0,
+     "provisional_kg": 5.006075,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "SUPPORT_TOP S1",
+     "state": "PROVISIONAL",
+     "count": 8,
+     "dia_mm": 18,
+     "core_m": 0,
+     "template_m": 3.999971,
+     "blocked_parts": [],
+     "verified_kg": 0.0,
+     "provisional_kg": 63.999543,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "CONTINUOUS_TOP 1",
+     "state": "PROVISIONAL",
+     "count": 3,
+     "dia_mm": 14,
+     "core_m": 0,
+     "template_m": 7.069158,
+     "blocked_parts": [
+      "HOOK:1 leg(s) drawn, length not dimensioned"
+     ],
+     "verified_kg": 0.0,
+     "provisional_kg": 25.658424,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "CONTINUOUS_TOP 2",
+     "state": "PROVISIONAL",
+     "count": 3,
+     "dia_mm": 14,
+     "core_m": 0,
+     "template_m": 5.372612,
+     "blocked_parts": [
+      "HOOK:1 leg(s) drawn, length not dimensioned"
+     ],
+     "verified_kg": 0.0,
+     "provisional_kg": 19.500591,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "STIRRUPS 1",
+     "state": "PARTIAL",
+     "count": 33,
+     "dia_mm": 8,
+     "core_m": 2.0,
+     "template_m": 0.196248,
+     "blocked_parts": [],
+     "verified_kg": 26.074074,
+     "provisional_kg": 7.764414,
+     "audit_kg": 0.0,
+     "laps": null,
+     "why": null
+    },
+    {
+     "component": "STIRRUPS 2",
+     "state": "PARTIAL",
+     "count": 43,
+     "dia_mm": 10,
+     "core_m": 2.0,
+     "template_m": 0.20781,
+     "blocked_parts": [],
+     "verified_kg": 53.08642,
+     "provisional_kg": 19.144401,
+     "audit_kg": 0.0,
+     "laps": null,
+     "why": null
+    },
+    {
+     "component": "SIDE_BARS",
+     "state": "BLOCKED",
+     "count": null,
+     "dia_mm": null,
+     "core_m": 0,
+     "template_m": 0,
+     "blocked_parts": [],
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "audit_kg": 0.0,
+     "laps": null,
+     "why": "note 21 (depth > 60): 2/3/4 Ø12 by width - mapping not printed"
+    }
+   ],
+   "lower_bound_kg": 196.160494,
+   "provisional_kg": 143.692553,
+   "audit_kg": 0.0
+  },
+  {
+   "occurrence": "CB:GF:CB3:H1171",
+   "occurrence_state": "BLOCKED",
+   "why": "REBAR_BLOCKED_OCCURRENCE_CONFLICT (BAND_TYPE_CONFLICT: None)",
+   "release_state": "BLOCKED",
+   "component_matrix": [
+    {
+     "component": "BOTTOM 1",
+     "state": "PARTIAL",
+     "count": 3,
+     "dia_mm": 16,
+     "core_m": 3.4,
+     "template_m": 0.189567,
+     "blocked_parts": [
+      "ANCHORAGE:drawn to the support line only; anchorage not detailed"
+     ],
+     "verified_kg": 16.118519,
+     "provisional_kg": 0.898688,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "BOTTOM 2",
+     "state": "PARTIAL",
+     "count": 3,
+     "dia_mm": 16,
+     "core_m": 3.3,
+     "template_m": 0.968972,
+     "blocked_parts": [],
+     "verified_kg": 15.644444,
+     "provisional_kg": 4.593644,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "BOTTOM 3",
+     "state": "PARTIAL",
+     "count": 3,
+     "dia_mm": 16,
+     "core_m": 3.8,
+     "template_m": 0.145816,
+     "blocked_parts": [
+      "ANCHORAGE:drawn to the support line only; anchorage not detailed"
+     ],
+     "verified_kg": 18.014815,
+     "provisional_kg": 0.691276,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "SUPPORT_TOP S1",
+     "state": "PROVISIONAL",
+     "count": 3,
+     "dia_mm": 16,
+     "core_m": 0,
+     "template_m": 3.513266,
+     "blocked_parts": [],
+     "verified_kg": 0.0,
+     "provisional_kg": 16.655485,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "SUPPORT_TOP S2",
+     "state": "BLOCKED",
+     "count": null,
+     "dia_mm": null,
+     "core_m": 0,
+     "template_m": 0,
+     "blocked_parts": [],
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "audit_kg": 0.0,
+     "laps": null,
+     "why": "bar drawn (SUPPORT_TOP); count / diameter not printed (EMPTY_SCHEDULE_CELL: MID2)"
+    },
+    {
+     "component": "CONTINUOUS_TOP 1",
+     "state": "PROVISIONAL",
+     "count": 2,
+     "dia_mm": 12,
+     "core_m": 0,
+     "template_m": 3.204712,
+     "blocked_parts": [
+      "HOOK:1 leg(s) drawn, length not dimensioned"
+     ],
+     "verified_kg": 0.0,
+     "provisional_kg": 5.697266,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "CONTINUOUS_TOP 3",
+     "state": "PROVISIONAL",
+     "count": 2,
+     "dia_mm": 12,
+     "core_m": 0,
+     "template_m": 3.63211,
+     "blocked_parts": [
+      "HOOK:1 leg(s) drawn, length not dimensioned"
+     ],
+     "verified_kg": 0.0,
+     "provisional_kg": 6.457084,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "STIRRUPS 1",
+     "state": "PARTIAL",
+     "count": 17,
+     "dia_mm": 8,
+     "core_m": 1.7,
+     "template_m": 0.196248,
+     "blocked_parts": [],
+     "verified_kg": 11.417284,
+     "provisional_kg": 2.067146,
+     "audit_kg": 0.0,
+     "laps": null,
+     "why": null
+    },
+    {
+     "component": "STIRRUPS 2",
+     "state": "PARTIAL",
+     "count": 17,
+     "dia_mm": 8,
+     "core_m": 1.7,
+     "template_m": 0.196248,
+     "blocked_parts": [],
+     "verified_kg": 11.417284,
+     "provisional_kg": 2.067146,
+     "audit_kg": 0.0,
+     "laps": null,
+     "why": null
+    },
+    {
+     "component": "STIRRUPS 3",
+     "state": "PARTIAL",
+     "count": 35,
+     "dia_mm": 8,
+     "core_m": 1.7,
+     "template_m": 0.196248,
+     "blocked_parts": [],
+     "verified_kg": 23.506173,
+     "provisional_kg": 3.462688,
+     "audit_kg": 0.0,
+     "laps": null,
+     "why": null
+    },
+    {
+     "component": "SIDE_BARS",
+     "state": "BLOCKED",
+     "count": null,
+     "dia_mm": null,
+     "core_m": 0,
+     "template_m": 0,
+     "blocked_parts": [],
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "audit_kg": 0.0,
+     "laps": null,
+     "why": "note 21 (depth > 60): 2/3/4 Ø12 by width - mapping not printed"
+    }
+   ],
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "audit_kg": 138.708942
+  },
+  {
+   "occurrence": "CB:GF:CB4:H1116",
+   "occurrence_state": "PROVISIONAL",
+   "why": "plan length does not confirm the schedule spans (centreline None, clear 5.709877, schedule 7.00)",
+   "release_state": "PROVISIONAL",
+   "component_matrix": [
+    {
+     "component": "BOTTOM 1",
+     "state": "PARTIAL",
+     "count": 3,
+     "dia_mm": 14,
+     "core_m": 3.3,
+     "template_m": 0.212515,
+     "blocked_parts": [
+      "ANCHORAGE:drawn to the support line only; anchorage not detailed"
+     ],
+     "verified_kg": 11.977778,
+     "provisional_kg": 0.771351,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "BOTTOM 2",
+     "state": "PARTIAL",
+     "count": 3,
+     "dia_mm": 16,
+     "core_m": 3.7,
+     "template_m": 0.220267,
+     "blocked_parts": [
+      "ANCHORAGE:drawn to the support line only; anchorage not detailed"
+     ],
+     "verified_kg": 17.540741,
+     "provisional_kg": 1.04423,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "SUPPORT_TOP S1",
+     "state": "PROVISIONAL",
+     "count": 4,
+     "dia_mm": 16,
+     "core_m": 0,
+     "template_m": 2.124446,
+     "blocked_parts": [],
+     "verified_kg": 0.0,
+     "provisional_kg": 13.428596,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "CONTINUOUS_TOP 1",
+     "state": "PROVISIONAL",
+     "count": 2,
+     "dia_mm": 12,
+     "core_m": 0,
+     "template_m": 3.110429,
+     "blocked_parts": [
+      "HOOK:1 leg(s) drawn, length not dimensioned"
+     ],
+     "verified_kg": 0.0,
+     "provisional_kg": 5.529652,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "CONTINUOUS_TOP 2",
+     "state": "PROVISIONAL",
+     "count": 2,
+     "dia_mm": 12,
+     "core_m": 0,
+     "template_m": 3.487485,
+     "blocked_parts": [
+      "HOOK:1 leg(s) drawn, length not dimensioned"
+     ],
+     "verified_kg": 0.0,
+     "provisional_kg": 6.199973,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "STIRRUPS 1",
+     "state": "PARTIAL",
+     "count": 20,
+     "dia_mm": 8,
+     "core_m": 1.2,
+     "template_m": 0.196248,
+     "blocked_parts": [],
+     "verified_kg": 9.481481,
+     "provisional_kg": 2.102206,
+     "audit_kg": 0.0,
+     "laps": null,
+     "why": null
+    },
+    {
+     "component": "STIRRUPS 2",
+     "state": "PARTIAL",
+     "count": 30,
+     "dia_mm": 8,
+     "core_m": 1.2,
+     "template_m": 0.196248,
+     "blocked_parts": [],
+     "verified_kg": 14.222222,
+     "provisional_kg": 2.877506,
+     "audit_kg": 0.0,
+     "laps": null,
+     "why": null
+    },
+    {
+     "component": "SIDE_BARS",
+     "state": "NOT_REQUIRED",
+     "count": null,
+     "dia_mm": null,
+     "core_m": 0,
+     "template_m": 0,
+     "blocked_parts": [],
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "audit_kg": 0.0,
+     "laps": null,
+     "why": "depth 50 cm <= 60"
+    }
+   ],
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 85.175737,
+   "audit_kg": 0.0
+  },
+  {
+   "occurrence": "CB:GF:CB5:H1140",
+   "occurrence_state": "BLOCKED",
+   "why": "REBAR_BLOCKED_OCCURRENCE_CONFLICT (SPAN_COUNT_MISMATCH: 1 tag(s) / 2 span(s))",
+   "release_state": "BLOCKED",
+   "component_matrix": [
+    {
+     "component": "BOTTOM 1",
+     "state": "PARTIAL",
+     "count": 3,
+     "dia_mm": 14,
+     "core_m": 2.5,
+     "template_m": 0.258464,
+     "blocked_parts": [
+      "ANCHORAGE:drawn to the support line only; anchorage not detailed"
+     ],
+     "verified_kg": 9.074074,
+     "provisional_kg": 0.93813,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "BOTTOM 2",
+     "state": "PARTIAL",
+     "count": 4,
+     "dia_mm": 16,
+     "core_m": 4.5,
+     "template_m": 0.166869,
+     "blocked_parts": [
+      "ANCHORAGE:drawn to the support line only; anchorage not detailed"
+     ],
+     "verified_kg": 28.444444,
+     "provisional_kg": 1.054778,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "SUPPORT_TOP S1",
+     "state": "PROVISIONAL",
+     "count": 4,
+     "dia_mm": 16,
+     "core_m": 0,
+     "template_m": 2.128284,
+     "blocked_parts": [],
+     "verified_kg": 0.0,
+     "provisional_kg": 13.452854,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "CONTINUOUS_TOP 1",
+     "state": "PROVISIONAL",
+     "count": 2,
+     "dia_mm": 12,
+     "core_m": 0,
+     "template_m": 2.356386,
+     "blocked_parts": [
+      "HOOK:1 leg(s) drawn, length not dimensioned"
+     ],
+     "verified_kg": 0.0,
+     "provisional_kg": 4.18913,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "CONTINUOUS_TOP 2",
+     "state": "PROVISIONAL",
+     "count": 2,
+     "dia_mm": 12,
+     "core_m": 0,
+     "template_m": 4.241536,
+     "blocked_parts": [
+      "HOOK:1 leg(s) drawn, length not dimensioned"
+     ],
+     "verified_kg": 0.0,
+     "provisional_kg": 7.540508,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "STIRRUPS 1",
+     "state": "PARTIAL",
+     "count": 18,
+     "dia_mm": 8,
+     "core_m": 1.0,
+     "template_m": 0.196248,
+     "blocked_parts": [],
+     "verified_kg": 7.111111,
+     "provisional_kg": 1.868133,
+     "audit_kg": 0.0,
+     "laps": null,
+     "why": null
+    },
+    {
+     "component": "STIRRUPS 2",
+     "state": "PARTIAL",
+     "count": 32,
+     "dia_mm": 8,
+     "core_m": 1.0,
+     "template_m": 0.196248,
+     "blocked_parts": [],
+     "verified_kg": 12.641975,
+     "provisional_kg": 2.953554,
+     "audit_kg": 0.0,
+     "laps": null,
+     "why": null
+    },
+    {
+     "component": "SIDE_BARS",
+     "state": "NOT_REQUIRED",
+     "count": null,
+     "dia_mm": null,
+     "core_m": 0,
+     "template_m": 0,
+     "blocked_parts": [],
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "audit_kg": 0.0,
+     "laps": null,
+     "why": "depth 40 cm <= 60"
+    }
+   ],
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "audit_kg": 89.268692
+  },
+  {
+   "occurrence": "CB:GF:CB6:H1148",
+   "occurrence_state": "BLOCKED",
+   "why": "REBAR_BLOCKED_OCCURRENCE_CONFLICT (SPAN_COUNT_MISMATCH: 2 tag(s) / 2 span(s))",
+   "release_state": "BLOCKED",
+   "component_matrix": [
+    {
+     "component": "BOTTOM 1",
+     "state": "PARTIAL",
+     "count": 3,
+     "dia_mm": 16,
+     "core_m": 4.4,
+     "template_m": 0.36185,
+     "blocked_parts": [
+      "ANCHORAGE:drawn to the support line only; anchorage not detailed"
+     ],
+     "verified_kg": 20.859259,
+     "provisional_kg": 1.715438,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "BOTTOM 2",
+     "state": "PARTIAL",
+     "count": 4,
+     "dia_mm": 18,
+     "core_m": 6.3,
+     "template_m": 0.29369,
+     "blocked_parts": [
+      "ANCHORAGE:drawn to the support line only; anchorage not detailed"
+     ],
+     "verified_kg": 50.4,
+     "provisional_kg": 2.349518,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "SUPPORT_TOP S1",
+     "state": "PROVISIONAL",
+     "count": 4,
+     "dia_mm": 18,
+     "core_m": 0,
+     "template_m": 3.250458,
+     "blocked_parts": [],
+     "verified_kg": 0.0,
+     "provisional_kg": 26.003663,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "CONTINUOUS_TOP 1",
+     "state": "PROVISIONAL",
+     "count": 2,
+     "dia_mm": 12,
+     "core_m": 0,
+     "template_m": 4.147239,
+     "blocked_parts": [
+      "HOOK:1 leg(s) drawn, length not dimensioned"
+     ],
+     "verified_kg": 0.0,
+     "provisional_kg": 7.37287,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "CONTINUOUS_TOP 2",
+     "state": "PROVISIONAL",
+     "count": 2,
+     "dia_mm": 12,
+     "core_m": 0,
+     "template_m": 5.93815,
+     "blocked_parts": [
+      "HOOK:1 leg(s) drawn, length not dimensioned"
+     ],
+     "verified_kg": 0.0,
+     "provisional_kg": 10.556711,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "STIRRUPS 1",
+     "state": "PARTIAL",
+     "count": 20,
+     "dia_mm": 8,
+     "core_m": 1.7,
+     "template_m": 0.196248,
+     "blocked_parts": [],
+     "verified_kg": 13.432099,
+     "provisional_kg": 3.798007,
+     "audit_kg": 0.0,
+     "laps": null,
+     "why": null
+    },
+    {
+     "component": "STIRRUPS 2",
+     "state": "PARTIAL",
+     "count": 35,
+     "dia_mm": 8,
+     "core_m": 1.7,
+     "template_m": 0.196248,
+     "blocked_parts": [],
+     "verified_kg": 23.506173,
+     "provisional_kg": 5.710093,
+     "audit_kg": 0.0,
+     "laps": null,
+     "why": null
+    },
+    {
+     "component": "SIDE_BARS",
+     "state": "BLOCKED",
+     "count": null,
+     "dia_mm": null,
+     "core_m": 0,
+     "template_m": 0,
+     "blocked_parts": [],
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "audit_kg": 0.0,
+     "laps": null,
+     "why": "note 21 (depth > 60): 2/3/4 Ø12 by width - mapping not printed"
+    }
+   ],
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "audit_kg": 165.703829
+  },
+  {
+   "occurrence": "CB:GF:CB7:H1145",
+   "occurrence_state": "ESTABLISHED",
+   "why": "plan centreline 12.000 m vs schedule spans 12.10 m (<= 5 %)",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "component_matrix": [
+    {
+     "component": "BOTTOM 1",
+     "state": "PARTIAL",
+     "count": 3,
+     "dia_mm": 16,
+     "core_m": 6.0,
+     "template_m": 0.350363,
+     "blocked_parts": [
+      "ANCHORAGE:drawn to the support line only; anchorage not detailed"
+     ],
+     "verified_kg": 28.444444,
+     "provisional_kg": 1.660979,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "BOTTOM 2",
+     "state": "PARTIAL",
+     "count": 3,
+     "dia_mm": 16,
+     "core_m": 6.1,
+     "template_m": 0.400486,
+     "blocked_parts": [
+      "ANCHORAGE:drawn to the support line only; anchorage not detailed"
+     ],
+     "verified_kg": 28.918519,
+     "provisional_kg": 1.8986,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "SUPPORT_TOP S1",
+     "state": "PROVISIONAL",
+     "count": 5,
+     "dia_mm": 18,
+     "core_m": 0,
+     "template_m": 3.670838,
+     "blocked_parts": [],
+     "verified_kg": 0.0,
+     "provisional_kg": 36.708379,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "CONTINUOUS_TOP 1",
+     "state": "PROVISIONAL",
+     "count": 2,
+     "dia_mm": 12,
+     "core_m": 0,
+     "template_m": 5.655326,
+     "blocked_parts": [
+      "HOOK:1 leg(s) drawn, length not dimensioned"
+     ],
+     "verified_kg": 0.0,
+     "provisional_kg": 10.053913,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "CONTINUOUS_TOP 2",
+     "state": "PROVISIONAL",
+     "count": 2,
+     "dia_mm": 12,
+     "core_m": 0,
+     "template_m": 5.749637,
+     "blocked_parts": [
+      "HOOK:1 leg(s) drawn, length not dimensioned"
+     ],
+     "verified_kg": 0.0,
+     "provisional_kg": 10.221577,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "STIRRUPS 1",
+     "state": "PARTIAL",
+     "count": 40,
+     "dia_mm": 8,
+     "core_m": 1.7,
+     "template_m": 0.196248,
+     "blocked_parts": [],
+     "verified_kg": 26.864198,
+     "provisional_kg": 5.348608,
+     "audit_kg": 0.0,
+     "laps": null,
+     "why": null
+    },
+    {
+     "component": "STIRRUPS 2",
+     "state": "PARTIAL",
+     "count": 40,
+     "dia_mm": 8,
+     "core_m": 1.7,
+     "template_m": 0.196248,
+     "blocked_parts": [],
+     "verified_kg": 26.864198,
+     "provisional_kg": 6.097743,
+     "audit_kg": 0.0,
+     "laps": null,
+     "why": null
+    },
+    {
+     "component": "SIDE_BARS",
+     "state": "BLOCKED",
+     "count": null,
+     "dia_mm": null,
+     "core_m": 0,
+     "template_m": 0,
+     "blocked_parts": [],
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "audit_kg": 0.0,
+     "laps": null,
+     "why": "note 21 (depth > 60): 2/3/4 Ø12 by width - mapping not printed"
+    }
+   ],
+   "lower_bound_kg": 111.091358,
+   "provisional_kg": 71.9898,
+   "audit_kg": 0.0
+  },
+  {
+   "occurrence": "CB:GF:CB8:H1695",
+   "occurrence_state": "BLOCKED",
+   "why": "REBAR_BLOCKED_OCCURRENCE_CONFLICT (SPAN_COUNT_MISMATCH: 2 tag(s) / 3 span(s))",
+   "release_state": "BLOCKED",
+   "component_matrix": [
+    {
+     "component": "BOTTOM 1",
+     "state": "PARTIAL",
+     "count": 3,
+     "dia_mm": 14,
+     "core_m": 3.7,
+     "template_m": 0.367645,
+     "blocked_parts": [
+      "ANCHORAGE:drawn to the support line only; anchorage not detailed"
+     ],
+     "verified_kg": 13.42963,
+     "provisional_kg": 1.334416,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "BOTTOM 2",
+     "state": "PARTIAL",
+     "count": 7,
+     "dia_mm": 18,
+     "core_m": 6.4,
+     "template_m": 1.574828,
+     "blocked_parts": [],
+     "verified_kg": 89.6,
+     "provisional_kg": 22.047588,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "BOTTOM 3",
+     "state": "PARTIAL",
+     "count": 4,
+     "dia_mm": 16,
+     "core_m": 6.8,
+     "template_m": 0.282795,
+     "blocked_parts": [
+      "ANCHORAGE:drawn to the support line only; anchorage not detailed"
+     ],
+     "verified_kg": 42.982716,
+     "provisional_kg": 1.787543,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "SUPPORT_TOP S1",
+     "state": "BLOCKED",
+     "count": null,
+     "dia_mm": null,
+     "core_m": 0,
+     "template_m": 0,
+     "blocked_parts": [],
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "audit_kg": 0.0,
+     "laps": null,
+     "why": "bar drawn (SUPPORT_TOP); count / diameter not printed (EMPTY_SCHEDULE_CELL: MID1)"
+    },
+    {
+     "component": "SUPPORT_TOP S2",
+     "state": "PROVISIONAL",
+     "count": 6,
+     "dia_mm": 18,
+     "core_m": 0,
+     "template_m": 3.995032,
+     "blocked_parts": [],
+     "verified_kg": 0.0,
+     "provisional_kg": 47.940382,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "CONTINUOUS_TOP 2",
+     "state": "PROVISIONAL",
+     "count": 3,
+     "dia_mm": 12,
+     "core_m": 0,
+     "template_m": 5.74956,
+     "blocked_parts": [],
+     "verified_kg": 0.0,
+     "provisional_kg": 15.33216,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "CONTINUOUS_TOP 3",
+     "state": "PROVISIONAL",
+     "count": 3,
+     "dia_mm": 12,
+     "core_m": 0,
+     "template_m": 6.499565,
+     "blocked_parts": [
+      "HOOK:1 leg(s) drawn, length not dimensioned"
+     ],
+     "verified_kg": 0.0,
+     "provisional_kg": 17.332174,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "SPAN_TOP 1",
+     "state": "PROVISIONAL",
+     "count": 5,
+     "dia_mm": 18,
+     "core_m": 0,
+     "template_m": 3.487481,
+     "blocked_parts": [
+      "HOOK:1 leg(s) drawn, length not dimensioned"
+     ],
+     "verified_kg": 0.0,
+     "provisional_kg": 34.874808,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "STIRRUPS 1",
+     "state": "PARTIAL",
+     "count": 16,
+     "dia_mm": 8,
+     "core_m": 1.9,
+     "template_m": 0.196248,
+     "blocked_parts": [],
+     "verified_kg": 12.009877,
+     "provisional_kg": 4.553071,
+     "audit_kg": 0.0,
+     "laps": null,
+     "why": null
+    },
+    {
+     "component": "STIRRUPS 2",
+     "state": "PARTIAL",
+     "count": 48,
+     "dia_mm": 8,
+     "core_m": 1.9,
+     "template_m": 0.196248,
+     "blocked_parts": [],
+     "verified_kg": 36.02963,
+     "provisional_kg": 7.86218,
+     "audit_kg": 0.0,
+     "laps": null,
+     "why": null
+    },
+    {
+     "component": "STIRRUPS 3",
+     "state": "PARTIAL",
+     "count": 32,
+     "dia_mm": 8,
+     "core_m": 1.9,
+     "template_m": 0.196248,
+     "blocked_parts": [],
+     "verified_kg": 24.019753,
+     "provisional_kg": 4.965404,
+     "audit_kg": 0.0,
+     "laps": null,
+     "why": null
+    },
+    {
+     "component": "SIDE_BARS",
+     "state": "BLOCKED",
+     "count": null,
+     "dia_mm": null,
+     "core_m": 0,
+     "template_m": 0,
+     "blocked_parts": [],
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "audit_kg": 0.0,
+     "laps": null,
+     "why": "note 21 (depth > 60): 2/3/4 Ø12 by width - mapping not printed"
+    }
+   ],
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "audit_kg": 376.101331
+  },
+  {
+   "occurrence": "CB:1F:CB9:H1734",
+   "occurrence_state": "ESTABLISHED",
+   "why": "plan centreline 11.820 m vs schedule spans 11.80 m (<= 5 %)",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "component_matrix": [
+    {
+     "component": "BOTTOM 1",
+     "state": "PARTIAL",
+     "count": 4,
+     "dia_mm": 16,
+     "core_m": 4.1,
+     "template_m": 0.229778,
+     "blocked_parts": [
+      "ANCHORAGE:drawn to the support line only; anchorage not detailed"
+     ],
+     "verified_kg": 25.916049,
+     "provisional_kg": 1.452426,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "BOTTOM 2",
+     "state": "PARTIAL",
+     "count": 3,
+     "dia_mm": 14,
+     "core_m": 4.0,
+     "template_m": 0.996162,
+     "blocked_parts": [],
+     "verified_kg": 14.518519,
+     "provisional_kg": 3.615698,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "BOTTOM 3",
+     "state": "PARTIAL",
+     "count": 3,
+     "dia_mm": 14,
+     "core_m": 3.7,
+     "template_m": 0.176747,
+     "blocked_parts": [
+      "ANCHORAGE:drawn to the support line only; anchorage not detailed"
+     ],
+     "verified_kg": 13.42963,
+     "provisional_kg": 0.641525,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "SUPPORT_TOP S1",
+     "state": "PROVISIONAL",
+     "count": 4,
+     "dia_mm": 18,
+     "core_m": 0,
+     "template_m": 2.425112,
+     "blocked_parts": [],
+     "verified_kg": 0.0,
+     "provisional_kg": 19.4009,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "SUPPORT_TOP S2",
+     "state": "PROVISIONAL",
+     "count": 3,
+     "dia_mm": 16,
+     "core_m": 0,
+     "template_m": 2.330435,
+     "blocked_parts": [],
+     "verified_kg": 0.0,
+     "provisional_kg": 11.04799,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "CONTINUOUS_TOP 1",
+     "state": "PROVISIONAL",
+     "count": 2,
+     "dia_mm": 12,
+     "core_m": 0,
+     "template_m": 3.864506,
+     "blocked_parts": [
+      "HOOK:1 leg(s) drawn, length not dimensioned"
+     ],
+     "verified_kg": 0.0,
+     "provisional_kg": 6.870233,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "CONTINUOUS_TOP 2",
+     "state": "PROVISIONAL",
+     "count": 2,
+     "dia_mm": 12,
+     "core_m": 0,
+     "template_m": 3.593475,
+     "blocked_parts": [],
+     "verified_kg": 0.0,
+     "provisional_kg": 6.3884,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "CONTINUOUS_TOP 3",
+     "state": "PROVISIONAL",
+     "count": 2,
+     "dia_mm": 12,
+     "core_m": 0,
+     "template_m": 3.536528,
+     "blocked_parts": [
+      "HOOK:1 leg(s) drawn, length not dimensioned"
+     ],
+     "verified_kg": 0.0,
+     "provisional_kg": 6.287161,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "STIRRUPS 1",
+     "state": "PARTIAL",
+     "count": 24,
+     "dia_mm": 8,
+     "core_m": 1.2,
+     "template_m": 0.196248,
+     "blocked_parts": [],
+     "verified_kg": 11.377778,
+     "provisional_kg": 5.170347,
+     "audit_kg": 0.0,
+     "laps": null,
+     "why": null
+    },
+    {
+     "component": "STIRRUPS 2",
+     "state": "PARTIAL",
+     "count": 33,
+     "dia_mm": 8,
+     "core_m": 1.2,
+     "template_m": 0.196248,
+     "blocked_parts": [],
+     "verified_kg": 15.644444,
+     "provisional_kg": 6.971326,
+     "audit_kg": 0.0,
+     "laps": null,
+     "why": null
+    },
+    {
+     "component": "STIRRUPS 3",
+     "state": "PARTIAL",
+     "count": 18,
+     "dia_mm": 8,
+     "core_m": 1.2,
+     "template_m": 0.196248,
+     "blocked_parts": [],
+     "verified_kg": 8.533333,
+     "provisional_kg": 4.705166,
+     "audit_kg": 0.0,
+     "laps": null,
+     "why": null
+    },
+    {
+     "component": "SIDE_BARS",
+     "state": "NOT_REQUIRED",
+     "count": null,
+     "dia_mm": null,
+     "core_m": 0,
+     "template_m": 0,
+     "blocked_parts": [],
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "audit_kg": 0.0,
+     "laps": null,
+     "why": "depth 50 cm <= 60"
+    }
+   ],
+   "lower_bound_kg": 89.419753,
+   "provisional_kg": 72.551171,
+   "audit_kg": 0.0
+  },
+  {
+   "occurrence": "CB:1F:CB11:H1754",
+   "occurrence_state": "ESTABLISHED",
+   "why": "plan centreline 14.658 m vs schedule spans 14.00 m (<= 5 %)",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "component_matrix": [
+    {
+     "component": "BOTTOM 1",
+     "state": "PARTIAL",
+     "count": 6,
+     "dia_mm": 18,
+     "core_m": 7.1,
+     "template_m": 0.183823,
+     "blocked_parts": [
+      "ANCHORAGE:drawn to the support line only; anchorage not detailed"
+     ],
+     "verified_kg": 85.2,
+     "provisional_kg": 2.205871,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "BOTTOM 2",
+     "state": "PARTIAL",
+     "count": 4,
+     "dia_mm": 16,
+     "core_m": 3.2,
+     "template_m": 1.196381,
+     "blocked_parts": [],
+     "verified_kg": 20.22716,
+     "provisional_kg": 7.562311,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "BOTTOM 3",
+     "state": "PARTIAL",
+     "count": 4,
+     "dia_mm": 16,
+     "core_m": 3.7,
+     "template_m": 0.141397,
+     "blocked_parts": [
+      "ANCHORAGE:drawn to the support line only; anchorage not detailed"
+     ],
+     "verified_kg": 23.387654,
+     "provisional_kg": 0.893771,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "SUPPORT_TOP S1",
+     "state": "PROVISIONAL",
+     "count": 8,
+     "dia_mm": 18,
+     "core_m": 0,
+     "template_m": 3.089731,
+     "blocked_parts": [],
+     "verified_kg": 0.0,
+     "provisional_kg": 49.43569,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "SUPPORT_TOP S2",
+     "state": "PROVISIONAL",
+     "count": 4,
+     "dia_mm": 16,
+     "core_m": 0,
+     "template_m": 2.088312,
+     "blocked_parts": [],
+     "verified_kg": 0.0,
+     "provisional_kg": 13.200195,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "CONTINUOUS_TOP 1",
+     "state": "PROVISIONAL",
+     "count": 2,
+     "dia_mm": 12,
+     "core_m": 0,
+     "template_m": 6.692193,
+     "blocked_parts": [
+      "HOOK:1 leg(s) drawn, length not dimensioned"
+     ],
+     "verified_kg": 0.0,
+     "provisional_kg": 11.897232,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "CONTINUOUS_TOP 2",
+     "state": "PROVISIONAL",
+     "count": 2,
+     "dia_mm": 12,
+     "core_m": 0,
+     "template_m": 2.87478,
+     "blocked_parts": [],
+     "verified_kg": 0.0,
+     "provisional_kg": 5.11072,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "CONTINUOUS_TOP 3",
+     "state": "PROVISIONAL",
+     "count": 2,
+     "dia_mm": 12,
+     "core_m": 0,
+     "template_m": 3.536528,
+     "blocked_parts": [
+      "HOOK:1 leg(s) drawn, length not dimensioned"
+     ],
+     "verified_kg": 0.0,
+     "provisional_kg": 6.287161,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "STIRRUPS 1",
+     "state": "PARTIAL",
+     "count": 64,
+     "dia_mm": 8,
+     "core_m": 1.9,
+     "template_m": 0.196248,
+     "blocked_parts": [],
+     "verified_kg": 48.039506,
+     "provisional_kg": 11.587104,
+     "audit_kg": 0.0,
+     "laps": null,
+     "why": null
+    },
+    {
+     "component": "STIRRUPS 2",
+     "state": "PARTIAL",
+     "count": 15,
+     "dia_mm": 8,
+     "core_m": 1.9,
+     "template_m": 0.196248,
+     "blocked_parts": [],
+     "verified_kg": 11.259259,
+     "provisional_kg": 6.131835,
+     "audit_kg": 0.0,
+     "laps": null,
+     "why": null
+    },
+    {
+     "component": "STIRRUPS 3",
+     "state": "PARTIAL",
+     "count": 15,
+     "dia_mm": 8,
+     "core_m": 1.9,
+     "template_m": 0.196248,
+     "blocked_parts": [],
+     "verified_kg": 11.259259,
+     "provisional_kg": 5.303688,
+     "audit_kg": 0.0,
+     "laps": null,
+     "why": null
+    },
+    {
+     "component": "SIDE_BARS",
+     "state": "BLOCKED",
+     "count": null,
+     "dia_mm": null,
+     "core_m": 0,
+     "template_m": 0,
+     "blocked_parts": [],
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "audit_kg": 0.0,
+     "laps": null,
+     "why": "note 21 (depth > 60): 2/3/4 Ø12 by width - mapping not printed"
+    }
+   ],
+   "lower_bound_kg": 199.37284,
+   "provisional_kg": 119.615578,
+   "audit_kg": 0.0
+  },
+  {
+   "occurrence": "CB:1F:CB12:H1758",
+   "occurrence_state": "BLOCKED",
+   "why": "REBAR_BLOCKED_OCCURRENCE_CONFLICT (SPAN_COUNT_MISMATCH: 1 tag(s) / 2 span(s))",
+   "release_state": "BLOCKED",
+   "component_matrix": [
+    {
+     "component": "BOTTOM 1",
+     "state": "PARTIAL",
+     "count": 5,
+     "dia_mm": 18,
+     "core_m": 6.1,
+     "template_m": 0.315901,
+     "blocked_parts": [
+      "ANCHORAGE:drawn to the support line only; anchorage not detailed"
+     ],
+     "verified_kg": 61.0,
+     "provisional_kg": 3.159009,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "BOTTOM 2",
+     "state": "PARTIAL",
+     "count": 3,
+     "dia_mm": 16,
+     "core_m": 5.5,
+     "template_m": 0.407161,
+     "blocked_parts": [
+      "ANCHORAGE:drawn to the support line only; anchorage not detailed"
+     ],
+     "verified_kg": 26.074074,
+     "provisional_kg": 1.930243,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "SUPPORT_TOP S1",
+     "state": "PROVISIONAL",
+     "count": 6,
+     "dia_mm": 18,
+     "core_m": 0,
+     "template_m": 3.517481,
+     "blocked_parts": [],
+     "verified_kg": 0.0,
+     "provisional_kg": 42.209776,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "CONTINUOUS_TOP 1",
+     "state": "PROVISIONAL",
+     "count": 2,
+     "dia_mm": 12,
+     "core_m": 0,
+     "template_m": 5.749582,
+     "blocked_parts": [
+      "HOOK:1 leg(s) drawn, length not dimensioned"
+     ],
+     "verified_kg": 0.0,
+     "provisional_kg": 10.221478,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "CONTINUOUS_TOP 2",
+     "state": "PROVISIONAL",
+     "count": 2,
+     "dia_mm": 12,
+     "core_m": 0,
+     "template_m": 5.184099,
+     "blocked_parts": [
+      "HOOK:1 leg(s) drawn, length not dimensioned"
+     ],
+     "verified_kg": 0.0,
+     "provisional_kg": 9.216176,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "STIRRUPS 1",
+     "state": "PARTIAL",
+     "count": 55,
+     "dia_mm": 8,
+     "core_m": 1.8,
+     "template_m": 0.196248,
+     "blocked_parts": [],
+     "verified_kg": 39.111111,
+     "provisional_kg": 5.052795,
+     "audit_kg": 0.0,
+     "laps": null,
+     "why": null
+    },
+    {
+     "component": "STIRRUPS 2",
+     "state": "PARTIAL",
+     "count": 39,
+     "dia_mm": 8,
+     "core_m": 1.8,
+     "template_m": 0.196248,
+     "blocked_parts": [],
+     "verified_kg": 27.733333,
+     "provisional_kg": 3.812314,
+     "audit_kg": 0.0,
+     "laps": null,
+     "why": null
+    },
+    {
+     "component": "SIDE_BARS",
+     "state": "BLOCKED",
+     "count": null,
+     "dia_mm": null,
+     "core_m": 0,
+     "template_m": 0,
+     "blocked_parts": [],
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "audit_kg": 0.0,
+     "laps": null,
+     "why": "note 21 (depth > 60): 2/3/4 Ø12 by width - mapping not printed"
+    }
+   ],
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "audit_kg": 229.520311
+  },
+  {
+   "occurrence": "CB:1F:CB13:H1898",
+   "occurrence_state": "ESTABLISHED",
+   "why": "plan centreline 7.175 m vs schedule spans 7.30 m (<= 5 %)",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "component_matrix": [
+    {
+     "component": "BOTTOM 1",
+     "state": "PARTIAL",
+     "count": 4,
+     "dia_mm": 16,
+     "core_m": 3.7,
+     "template_m": 0.206772,
+     "blocked_parts": [
+      "ANCHORAGE:drawn to the support line only; anchorage not detailed"
+     ],
+     "verified_kg": 23.387654,
+     "provisional_kg": 1.307,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "BOTTOM 2",
+     "state": "PARTIAL",
+     "count": 4,
+     "dia_mm": 18,
+     "core_m": 3.6,
+     "template_m": 0.246966,
+     "blocked_parts": [
+      "ANCHORAGE:drawn to the support line only; anchorage not detailed"
+     ],
+     "verified_kg": 28.8,
+     "provisional_kg": 1.975731,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "SUPPORT_TOP S1",
+     "state": "PROVISIONAL",
+     "count": 5,
+     "dia_mm": 18,
+     "core_m": 0,
+     "template_m": 2.214253,
+     "blocked_parts": [],
+     "verified_kg": 0.0,
+     "provisional_kg": 22.142532,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "CONTINUOUS_TOP 1",
+     "state": "PROVISIONAL",
+     "count": 3,
+     "dia_mm": 12,
+     "core_m": 0,
+     "template_m": 3.487451,
+     "blocked_parts": [
+      "HOOK:1 leg(s) drawn, length not dimensioned"
+     ],
+     "verified_kg": 0.0,
+     "provisional_kg": 9.29987,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "CONTINUOUS_TOP 2",
+     "state": "PROVISIONAL",
+     "count": 3,
+     "dia_mm": 12,
+     "core_m": 0,
+     "template_m": 3.393228,
+     "blocked_parts": [
+      "HOOK:1 leg(s) drawn, length not dimensioned"
+     ],
+     "verified_kg": 0.0,
+     "provisional_kg": 9.048609,
+     "audit_kg": 0.0,
+     "laps": "NOT_REQUIRED",
+     "why": null
+    },
+    {
+     "component": "STIRRUPS 1",
+     "state": "PARTIAL",
+     "count": 19,
+     "dia_mm": 8,
+     "core_m": 1.4,
+     "template_m": 0.196248,
+     "blocked_parts": [],
+     "verified_kg": 10.508642,
+     "provisional_kg": 6.518003,
+     "audit_kg": 0.0,
+     "laps": null,
+     "why": null
+    },
+    {
+     "component": "STIRRUPS 2",
+     "state": "PARTIAL",
+     "count": 19,
+     "dia_mm": 10,
+     "core_m": 1.4,
+     "template_m": 0.20781,
+     "blocked_parts": [],
+     "verified_kg": 16.419753,
+     "provisional_kg": 10.37708,
+     "audit_kg": 0.0,
+     "laps": null,
+     "why": null
+    },
+    {
+     "component": "SIDE_BARS",
+     "state": "NOT_REQUIRED",
+     "count": null,
+     "dia_mm": null,
+     "core_m": 0,
+     "template_m": 0,
+     "blocked_parts": [],
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0,
+     "audit_kg": 0.0,
+     "laps": null,
+     "why": "depth 50 cm <= 60"
+    }
+   ],
+   "lower_bound_kg": 79.116049,
+   "provisional_kg": 60.668825,
+   "audit_kg": 0.0
+  }
+ ],
+ "definitions_without_occurrence": [
+  {
+   "type": "CB2",
+   "state": "NO_PLAN_OCCURRENCE",
+   "why": "definition read; no tag of this type on the GF / 1F / 2F beam plans"
+  },
+  {
+   "type": "CB10",
+   "state": "NO_PLAN_OCCURRENCE",
+   "why": "definition read; no tag of this type on the GF / 1F / 2F beam plans"
+  }
+ ],
+ "rule": "bar role from geometry (row, support straddle, hooks); count / diameter from a one-to-one bound label (attribute or split TEXT callout); length = whole spans (schedule attributes, verified) + template fractions x real span (provisional); hooks / anchorage not dimensioned = BLOCKED; T/M = design load"
+}
