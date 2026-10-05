@@ -1,0 +1,283 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_QUESTION_TRIAGE_V1",
+ "rows": [
+  {
+   "id": "Q-R3-13a",
+   "question": "concrete cover (members / soil)",
+   "category": "SOURCE_RESOLVABLE",
+   "status": "RESOLVED_FROM_SOURCE",
+   "evidence": "p.8 note 22: >= 25 mm columns / slabs / beams, >= 70 mm against soil - CROSS_VERIFIED (OCR + independent review)",
+   "promotes": "cover rules COVER_GENERAL_25MM / COVER_AGAINST_SOIL_70MM"
+  },
+  {
+   "id": "Q-R3-14",
+   "question": "ground beam '3Ø16 + 3Ø16' lower rows",
+   "category": "SOURCE_RESOLVABLE",
+   "status": "RESOLVED_FROM_SOURCE",
+   "evidence": "p.13 > 5 m section: two lower rows of 3Ø16 (dot rows 3/3/3, section 300 x 600, OCR, independent review) - both rows are real, never de-duplicated",
+   "promotes": "GROUND_BEAM LOWER_1 / LOWER_2"
+  },
+  {
+   "id": "Q-R3-8a",
+   "question": "lift pit reinforcement values and pit plan",
+   "category": "SOURCE_RESOLVABLE",
+   "status": "RESOLVED_FROM_SOURCE",
+   "evidence": "p.14: walls 200, 6Ø12/m, 6Ø16/m, 2Ø16 base bars (CROSS_VERIFIED); pit 1.80 x 1.80 inside / 2.20 x 2.20 outside from ST7757.dxf S-BW",
+   "promotes": "LIFT_PIT_BASE_2D16, pit perimeters"
+  },
+  {
+   "id": "Q-R3-11a",
+   "question": "D5 columns - off-storey / real",
+   "category": "SOURCE_RESOLVABLE",
+   "status": "RESOLVED_FROM_SOURCE",
+   "evidence": "17 OFF_STOREY_COLUMN (not drawn on the storey sheet nor above, drawn below), 4 REAL (one outline, upper member unbound), 2 REAL several outlines (provisional)",
+   "promotes": "column populations"
+  },
+  {
+   "id": "Q-R3-3a",
+   "question": "CB6 occurrence",
+   "category": "SOURCE_RESOLVABLE",
+   "status": "RESOLVED_FROM_SOURCE",
+   "evidence": "centreline 10.575 m vs schedule 10.70 m; column-supported spans 2 = schedule 2",
+   "promotes": "CB6 component matrix"
+  },
+  {
+   "id": "Q-R3-10",
+   "question": "stair p.16 typical",
+   "category": "STRUCTURAL_ENGINEER_REQUIRED",
+   "status": "SOURCE_READ_APPLICABILITY_OPEN",
+   "evidence": "p.16 read and structured (TYPICAL_STAIR_DETAIL_SOURCE); applicability to 4.50 m two-turn / 4.20 m stairs is an engineering decision",
+   "promotes": "stair population (G23)"
+  },
+  {
+   "id": "Q-R3-7a",
+   "question": "per-metre count convention (ceil(rate x w) vs ceil(w / s) + 1)",
+   "category": "METHOD_DECISION",
+   "status": "OPEN",
+   "evidence": "measurement convention, not design: Urban method proposal in PROJECT_REBAR_RULE_REGISTER.count_method_proposal",
+   "promotes": "every per-metre convention bar (provisional today)"
+  },
+  {
+   "id": "Q-R3-7b",
+   "question": "two-layer footing top-mesh end shape",
+   "category": "STRUCTURAL_ENGINEER_REQUIRED",
+   "status": "OPEN",
+   "evidence": "no detail prints the FTB top-mesh ends",
+   "promotes": "FTB TOP_LAYER_END_DETAIL"
+  },
+  {
+   "id": "Q-R3-8b",
+   "question": "lift pit depth / wall height",
+   "category": "OWNER_OR_MANUFACTURER_REQUIRED",
+   "status": "OPEN",
+   "evidence": "p.14 prints 'As Per Lift Manufactures recommendations'",
+   "promotes": "LIFT_PIT_WALL_12MM / 16MM"
+  },
+  {
+   "id": "Q-R3-8c",
+   "question": "lift pit wall bars per face",
+   "category": "STRUCTURAL_ENGINEER_REQUIRED",
+   "status": "OPEN",
+   "evidence": "bars are drawn on both faces; whether 6Ø12/m and 6Ø16/m apply per face is not printed",
+   "promotes": "lift walls"
+  },
+  {
+   "id": "Q-R3-1",
+   "question": "CB support-bar / hanger cut-offs",
+   "category": "STRUCTURAL_ENGINEER_REQUIRED",
+   "status": "OPEN",
+   "evidence": "CB schedule graphics are N.T.S. templates; p.15 rules are for slabs, not beams - PROVISIONAL_NTS_GEOMETRY kept",
+   "promotes": "CB EXTENSION parts"
+  },
+  {
+   "id": "Q-R3-2",
+   "question": "CB3 MID1/MID2, CB8 MID1 empty cells",
+   "category": "STRUCTURAL_ENGINEER_REQUIRED",
+   "status": "OPEN",
+   "evidence": "cells are empty",
+   "promotes": "CB3 / CB8 support components"
+  },
+  {
+   "id": "Q-R3-3b",
+   "question": "CB3 / CB4 / CB5 / CB8 / CB12 occurrences, CB2 / CB10 tags",
+   "category": "STRUCTURAL_ENGINEER_REQUIRED",
+   "status": "NARROWED",
+   "evidence": "candidate search in CB_OCCURRENCE_CANDIDATE_REGISTER: each has a stated contradiction",
+   "promotes": "6 CB populations"
+  },
+  {
+   "id": "Q-R3-4",
+   "question": "hook / bend / beam-end anchorage lengths",
+   "category": "STRUCTURAL_ENGINEER_REQUIRED",
+   "status": "OPEN",
+   "evidence": "no project source; p.8 note 9 is the starter-bar development length, not a hook rule; METHOD option: adopt the code hook table as an Urban method",
+   "promotes": "every HOOK / ANCHORAGE part"
+  },
+  {
+   "id": "Q-R3-13b",
+   "question": "135° hook allowance",
+   "category": "STRUCTURAL_ENGINEER_REQUIRED",
+   "status": "OPEN",
+   "evidence": "code / engineer decision",
+   "promotes": "PROVISIONAL_HOOK_ALLOWANCE parts"
+  },
+  {
+   "id": "Q-R3-5",
+   "question": "note 21 side bars: width -> 2/3/4 Ø12, per face?",
+   "category": "STRUCTURAL_ENGINEER_REQUIRED",
+   "status": "OPEN",
+   "evidence": "mapping not printed",
+   "promotes": "SIDE_BARS on simple beams and CB > 60 cm"
+  },
+  {
+   "id": "Q-R3-6",
+   "question": "footing BOXED '3+4 ... 3+8' meaning / diameter",
+   "category": "STRUCTURAL_ENGINEER_REQUIRED",
+   "status": "NARROWED",
+   "evidence": "p.13 confirms a separate boxed-bar cage exists; values unexplained",
+   "promotes": "16 BOXED components"
+  },
+  {
+   "id": "Q-R3-9",
+   "question": "SB2 duplicate row; SB1 F / F10 footing",
+   "category": "STRUCTURAL_ENGINEER_REQUIRED",
+   "status": "OPEN",
+   "evidence": "source conflicts",
+   "promotes": "SB2, SB1, F / F10"
+  },
+  {
+   "id": "Q-R3-11b",
+   "question": "D5: C4 tag H4199 without an outline (3 storeys)",
+   "category": "STRUCTURAL_ENGINEER_REQUIRED",
+   "status": "NARROWED",
+   "evidence": "no outline of the printed size beside the tag",
+   "promotes": "3 column populations"
+  },
+  {
+   "id": "Q-R3-12",
+   "question": "column ties in the beam-column joint / over the storey",
+   "category": "STRUCTURAL_ENGINEER_REQUIRED",
+   "status": "OPEN",
+   "evidence": "no detail prints joint ties; R3 ties over the clear height kept",
+   "promotes": "column TIES"
+  },
+  {
+   "id": "Q-S4",
+   "question": "ground-slab scope (T=10cm, 5Ø10/m E.W.)",
+   "category": "STRUCTURAL_ENGINEER_REQUIRED",
+   "status": "NARROWED",
+   "evidence": "GROUND_SLAB_SCOPE_REGISTER_V2: note cell vs all cells of FP-1 - candidates and contradictions listed",
+   "promotes": "G15"
+  },
+  {
+   "id": "Q-R4-1",
+   "question": "lift tie beams (note 19) - section, bars, position",
+   "category": "STRUCTURAL_ENGINEER_REQUIRED",
+   "status": "NEW",
+   "evidence": "GF storey 4.50 m > 4.30 m: note 19 requires them; nothing detailed",
+   "promotes": "LIFT_TIE_BEAMS:GF"
+  },
+  {
+   "id": "Q-R4-2",
+   "question": "planted columns (P.C 20x70, 2 x P.C 20x50) bars and beam extras",
+   "category": "STRUCTURAL_ENGINEER_REQUIRED",
+   "status": "NEW",
+   "evidence": "not in the column schedule; p.15 detail lengths 'DEPTH'",
+   "promotes": "3 PLANTED_COLUMN populations"
+  },
+  {
+   "id": "Q-R4-3",
+   "question": "parapet detail applicability",
+   "category": "STRUCTURAL_ENGINEER_REQUIRED",
+   "status": "NEW",
+   "evidence": "three p.14 details, none bound to a roof edge",
+   "promotes": "PARAPET_RC"
+  },
+  {
+   "id": "Q-R4-4",
+   "question": "temperature steel for 160 / 180 mm slabs (not table rows)",
+   "category": "STRUCTURAL_ENGINEER_REQUIRED",
+   "status": "NEW",
+   "evidence": "no rounding: SOURCE_RULE_NOT_EXACT_MATCH; METHOD option: use the next thicker row",
+   "promotes": "3 TEMPERATURE populations"
+  },
+  {
+   "id": "Q-R4-5",
+   "question": "boundary wall: schedule B.W vs p.14 typical",
+   "category": "STRUCTURAL_ENGINEER_REQUIRED",
+   "status": "NEW",
+   "evidence": "source conflict",
+   "promotes": "BOUNDARY_WALL"
+  },
+  {
+   "id": "Q-R4-6",
+   "question": "ground beams under exterior walls (27 spans disagree)",
+   "category": "SOURCE_RESOLVABLE",
+   "status": "NEW",
+   "evidence": "overlay the architectural exterior walls on the GBP sheet (next round)",
+   "promotes": "governing GB detail per span"
+  },
+  {
+   "id": "Q-R4-7",
+   "question": "ground beam < 2.5 m stirrups (drawn, no callout)",
+   "category": "STRUCTURAL_ENGINEER_REQUIRED",
+   "status": "NEW",
+   "evidence": "stirrup not printed",
+   "promotes": "GB < 2.5 m STIRRUPS"
+  },
+  {
+   "id": "Q-R4-8",
+   "question": "AI-only readings: lintel MIN.40cm bearing, starter foot Min. 30cm, note 9 wording",
+   "category": "SOURCE_RESOLVABLE",
+   "status": "NEW",
+   "evidence": "a QS opens the crop (page / bbox / hash in the claim) and records a human verification - promotes the claim to HUMAN_VERIFIED_SOURCE",
+   "promotes": "lintel / starter parts"
+  },
+  {
+   "id": "Q-R4-9",
+   "question": "slab support continuity per panel",
+   "category": "SOURCE_RESOLVABLE",
+   "status": "NEW",
+   "evidence": "panel adjacency on the slab sheets decides which supports are continuous",
+   "promotes": "slab STOP50 extensions"
+  },
+  {
+   "id": "Q-R4-10",
+   "question": "founding level (necks, deep-footing lower ground beam)",
+   "category": "OWNER_OR_MANUFACTURER_REQUIRED",
+   "status": "NEW",
+   "evidence": "p.8 note 12: by site / soil investigation",
+   "promotes": "NECK_VERTICALS, conditional lower GB"
+  },
+  {
+   "id": "Q-R4-11",
+   "question": "pool detail zones vs the 1.55 x 3.10 plan",
+   "category": "STRUCTURAL_ENGINEER_REQUIRED",
+   "status": "NEW",
+   "evidence": "detail shows a sloped floor not on the plan",
+   "promotes": "POOL"
+  },
+  {
+   "id": "Q-R4-12",
+   "question": "dome rise: elevations 1.72 / 2.15 vs detail 190",
+   "category": "OWNER_OR_MANUFACTURER_REQUIRED",
+   "status": "NEW",
+   "evidence": "architecture to confirm",
+   "promotes": "dome shell extensions"
+  }
+ ],
+ "by_category": {
+  "SOURCE_RESOLVABLE": 8,
+  "STRUCTURAL_ENGINEER_REQUIRED": 21,
+  "METHOD_DECISION": 1,
+  "OWNER_OR_MANUFACTURER_REQUIRED": 3
+ },
+ "by_status": {
+  "RESOLVED_FROM_SOURCE": 5,
+  "SOURCE_READ_APPLICABILITY_OPEN": 1,
+  "OPEN": 11,
+  "NARROWED": 4,
+  "NEW": 12
+ },
+ "rule": "ask humans only what the drawings / code cannot answer; SOURCE_RESOLVABLE items are next-round work"
+}

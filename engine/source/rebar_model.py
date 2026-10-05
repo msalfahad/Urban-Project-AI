@@ -411,3 +411,59 @@ def bbs(components, pop_state, *, stock_m=BB.STOCK_M, lap_factor=None, lap_rule_
             "excluded": excluded, "ineligible_included": [],
             "rule": "only COMPLETE / PARTIAL components of VERIFIED_COMPLETE / LOWER_BOUND populations, verified "
                     "length and verified count; laps only where a run exceeds the stock and a lap authority exists"}
+
+
+# ---------------------------------------------------------------------------------------------------- project gate
+PROJECT_STATES = ("FINAL_ESTABLISHED", "LOWER_BOUND_ONLY", "PROVISIONAL", "BLOCKED")
+
+
+def project_status(populations, components, *, checks_pass, source_conflicts=0) -> dict:
+    """PROJECT_REBAR_STATUS. FINAL_ESTABLISHED only when every required population is terminal AND VERIFIED_COMPLETE
+    (or NOT_IN_SCOPE), no source conflict, no blocked required component, mass conservation and provenance pass.
+    Otherwise LOWER_BOUND_ONLY when a verified lower bound exists, PROVISIONAL when only provisional weight exists,
+    BLOCKED when nothing is released. A single 'total rebar' figure may only be shown when FINAL_ESTABLISHED."""
+    req = [p for p in populations if p["release_state"] != NIS]
+    terminal = all(p["release_state"] in (VC, LB, PROV, BUDGET, BLK) for p in req)
+    blocked_req = [c["comp_id"] for c in components if c["required"] and c["state"] == BLOCKED
+                   and next((p for p in populations if p["pop_id"] == c["population_id"]), {}).get("release_state") != NIS]
+    not_complete = [p["pop_id"] for p in req if p["release_state"] != VC]
+    reasons = []
+    if not terminal:
+        reasons.append("non-terminal population state")
+    if not_complete:
+        reasons.append(f"{len(not_complete)} of {len(req)} required populations are not VERIFIED_COMPLETE")
+    if blocked_req:
+        reasons.append(f"{len(blocked_req)} required components BLOCKED")
+    if source_conflicts:
+        reasons.append(f"{source_conflicts} source conflicts open")
+    if not checks_pass:
+        reasons.append("an invariant check (mass / provenance / completeness) fails")
+    final = bool(req) and not reasons
+    ver = sum(p["verified_complete_kg"] + p["lower_bound_kg"] for p in populations)
+    prov = sum(p["provisional_kg"] for p in populations)
+    state = ("FINAL_ESTABLISHED" if final else "LOWER_BOUND_ONLY" if ver > EPS else "PROVISIONAL" if prov > EPS
+             else "BLOCKED")
+    return {"PROJECT_REBAR_STATUS": state, "PROJECT_REBAR_FINAL_ESTABLISHED": final,
+            "PROJECT_REBAR_PROCUREMENT_READY": final, "required_populations": len(req),
+            "verified_complete_populations": len(req) - len(not_complete),
+            "population_completeness_pct": 100.0 * (len(req) - len(not_complete)) / len(req) if req else 0.0,
+            "blocked_required_components": len(blocked_req), "source_conflicts": source_conflicts,
+            "checks_pass": checks_pass, "reasons_not_final": reasons,
+            "single_total_allowed": final,
+            "rule": "FINAL_ESTABLISHED = 100 % required populations terminal AND VERIFIED_COMPLETE / NOT_REQUIRED AND no "
+                    "source conflict AND no blocked required component AND mass + provenance pass"}
+
+
+def known_components_bbs(bbs_result, status) -> dict:
+    """The BBS of the KNOWN (eligible) components, named so that it can never be read as the project's purchase
+    quantity while the project gate is not FINAL_ESTABLISHED."""
+    t = bbs_result["total"]
+    final = status["PROJECT_REBAR_FINAL_ESTABLISHED"]
+    return {"KNOWN_COMPONENTS_NET_KG": t["net_kg"], "KNOWN_COMPONENTS_BBS_USED_KG": t["used_kg"],
+            "KNOWN_COMPONENTS_BBS_PURCHASED_KG": t["purchased_kg"], "KNOWN_COMPONENTS_BBS_WASTE_KG": t["waste_kg"],
+            "KNOWN_COMPONENTS_BBS_WASTE_PCT": t["waste_pct"],
+            "PROJECT_REBAR_FINAL_ESTABLISHED": final, "PROJECT_REBAR_PROCUREMENT_READY": final,
+            "is_project_procurement_quantity": final,
+            "label": ("project procurement quantity" if final else
+                      "audit BBS of the known components only - NOT the villa's reinforcement procurement requirement "
+                      f"(project status {status['PROJECT_REBAR_STATUS']})")}

@@ -1,0 +1,526 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_D5_RECONCILIATION_V1",
+ "rows": [
+  {
+   "occurrence": "COLUMN:GF:C8:H4122",
+   "floor": "GF",
+   "type": "C8",
+   "r3_state": "BLOCKED_UPPER_MEMBER_UNBOUND",
+   "tag_binding": "BOUND",
+   "storeys": {
+    "GF": "BLOCKED_UPPER_MEMBER_UNBOUND",
+    "1F": "PROVEN",
+    "2F": "NOT_DRAWN_ON_STOREY_SHEET"
+   },
+   "storey_interval_m": 4.5,
+   "classification": "REAL_COLUMN_UPPER_MEMBER_UNBOUND",
+   "evidence": "tag bound; one outline [250.0, 800.0] at [64513.395, 37972.956] on the GF sheet; only the framing member above is unbound (clear height lower bound = storey - deepest beam)",
+   "kg_restored": true,
+   "r4_release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "r4_verified_kg": 101.925926,
+   "r4_provisional_kg": 8.807879,
+   "r4_audit_kg": 0.0
+  },
+  {
+   "occurrence": "COLUMN:GF:C5:H4124",
+   "floor": "GF",
+   "type": "C5",
+   "r3_state": "BLOCKED_UPPER_MEMBER_UNBOUND",
+   "tag_binding": "BOUND",
+   "storeys": {
+    "GF": "BLOCKED_UPPER_MEMBER_UNBOUND",
+    "1F": "PROVEN",
+    "2F": "NOT_DRAWN_ON_STOREY_SHEET"
+   },
+   "storey_interval_m": 4.5,
+   "classification": "REAL_COLUMN_UPPER_MEMBER_UNBOUND",
+   "evidence": "tag bound; one outline [250.0, 600.0] at [67863.395, 37972.956] on the GF sheet; only the framing member above is unbound (clear height lower bound = storey - deepest beam)",
+   "kg_restored": true,
+   "r4_release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "r4_verified_kg": 82.962963,
+   "r4_provisional_kg": 6.911583,
+   "r4_audit_kg": 0.0
+  },
+  {
+   "occurrence": "COLUMN:GF:C4:H4199",
+   "floor": "GF",
+   "type": "C4",
+   "r3_state": "BLOCKED_TAG_NOT_BOUND",
+   "tag_binding": "NO_OUTLINE_OF_PRINTED_SIZE_ADJACENT",
+   "storeys": {
+    "GF": "BLOCKED_TAG_NOT_BOUND",
+    "1F": "BLOCKED_TAG_NOT_BOUND",
+    "2F": "BLOCKED_TAG_NOT_BOUND"
+   },
+   "storey_interval_m": 4.5,
+   "classification": "UNRESOLVED",
+   "evidence": "BLOCKED_TAG_NOT_BOUND (NO_OUTLINE_OF_PRINTED_SIZE_ADJACENT): no outline of the printed size beside the tag",
+   "kg_restored": false
+  },
+  {
+   "occurrence": "COLUMN:GF:C9:H4203",
+   "floor": "GF",
+   "type": "C9",
+   "r3_state": "BLOCKED_SEVERAL_OUTLINES_ON_STOREY_SHEET",
+   "tag_binding": "BOUND",
+   "storeys": {
+    "GF": "BLOCKED_SEVERAL_OUTLINES_ON_STOREY_SHEET",
+    "1F": "PROVEN",
+    "2F": "NOT_DRAWN_ON_STOREY_SHEET"
+   },
+   "storey_interval_m": 4.5,
+   "classification": "REAL_COLUMN_SEVERAL_OUTLINES",
+   "evidence": "tag bound; several outlines at the location on the GF sheet - which outline carries it is ambiguous",
+   "kg_restored": true,
+   "r4_release_state": "PROVISIONAL",
+   "r4_verified_kg": 0.0,
+   "r4_provisional_kg": 127.168373,
+   "r4_audit_kg": 0.0
+  },
+  {
+   "occurrence": "COLUMN:GF:C8:H4205",
+   "floor": "GF",
+   "type": "C8",
+   "r3_state": "BLOCKED_SEVERAL_OUTLINES_ON_STOREY_SHEET",
+   "tag_binding": "BOUND",
+   "storeys": {
+    "GF": "BLOCKED_SEVERAL_OUTLINES_ON_STOREY_SHEET",
+    "1F": "PROVEN_UNBOUND_DOMINATED",
+    "2F": "NOT_DRAWN_ON_STOREY_SHEET"
+   },
+   "storey_interval_m": 4.5,
+   "classification": "REAL_COLUMN_SEVERAL_OUTLINES",
+   "evidence": "tag bound; several outlines at the location on the GF sheet - which outline carries it is ambiguous",
+   "kg_restored": true,
+   "r4_release_state": "PROVISIONAL",
+   "r4_verified_kg": 0.0,
+   "r4_provisional_kg": 110.733805,
+   "r4_audit_kg": 0.0
+  },
+  {
+   "occurrence": "COLUMN:1F:C3:H4102",
+   "floor": "1F",
+   "type": "C3",
+   "r3_state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "tag_binding": "BOUND",
+   "storeys": {
+    "GF": "PROVEN",
+    "1F": "NOT_DRAWN_ON_STOREY_SHEET",
+    "2F": "NOT_DRAWN_ON_STOREY_SHEET"
+   },
+   "storey_interval_m": 4.2,
+   "classification": "OFF_STOREY_COLUMN",
+   "evidence": "no outline on the 1F framing sheet nor above (['NOT_DRAWN_ON_STOREY_SHEET']); drawn and measured below (['GF'])",
+   "kg_restored": false,
+   "r4_release_state": "NOT_IN_SCOPE",
+   "r4_verified_kg": 0.0,
+   "r4_provisional_kg": 0.0,
+   "r4_audit_kg": 54.715534
+  },
+  {
+   "occurrence": "COLUMN:1F:C3:H4106",
+   "floor": "1F",
+   "type": "C3",
+   "r3_state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "tag_binding": "BOUND",
+   "storeys": {
+    "GF": "PROVEN",
+    "1F": "NOT_DRAWN_ON_STOREY_SHEET",
+    "2F": "NOT_DRAWN_ON_STOREY_SHEET"
+   },
+   "storey_interval_m": 4.2,
+   "classification": "OFF_STOREY_COLUMN",
+   "evidence": "no outline on the 1F framing sheet nor above (['NOT_DRAWN_ON_STOREY_SHEET']); drawn and measured below (['GF'])",
+   "kg_restored": false,
+   "r4_release_state": "NOT_IN_SCOPE",
+   "r4_verified_kg": 0.0,
+   "r4_provisional_kg": 0.0,
+   "r4_audit_kg": 54.715534
+  },
+  {
+   "occurrence": "COLUMN:1F:C3:H4110",
+   "floor": "1F",
+   "type": "C3",
+   "r3_state": "BLOCKED_UPPER_MEMBER_UNBOUND",
+   "tag_binding": "BOUND",
+   "storeys": {
+    "GF": "PROVEN",
+    "1F": "BLOCKED_UPPER_MEMBER_UNBOUND",
+    "2F": "NOT_DRAWN_ON_STOREY_SHEET"
+   },
+   "storey_interval_m": 4.2,
+   "classification": "REAL_COLUMN_UPPER_MEMBER_UNBOUND",
+   "evidence": "tag bound; one outline [200.0, 500.0] at [14068.989, 38097.956] on the 1F sheet; only the framing member above is unbound (clear height lower bound = storey - deepest beam)",
+   "kg_restored": true,
+   "r4_release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "r4_verified_kg": 48.355556,
+   "r4_provisional_kg": 6.359979,
+   "r4_audit_kg": 0.0
+  },
+  {
+   "occurrence": "COLUMN:1F:C5:H4112",
+   "floor": "1F",
+   "type": "C5",
+   "r3_state": "BLOCKED_UPPER_MEMBER_UNBOUND",
+   "tag_binding": "BOUND",
+   "storeys": {
+    "GF": "PROVEN",
+    "1F": "BLOCKED_UPPER_MEMBER_UNBOUND",
+    "2F": "NOT_DRAWN_ON_STOREY_SHEET"
+   },
+   "storey_interval_m": 4.2,
+   "classification": "REAL_COLUMN_UPPER_MEMBER_UNBOUND",
+   "evidence": "tag bound; one outline [200.0, 600.0] at [14068.989, 40947.956] on the 1F sheet; only the framing member above is unbound (clear height lower bound = storey - deepest beam)",
+   "kg_restored": true,
+   "r4_release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "r4_verified_kg": 61.62963,
+   "r4_provisional_kg": 6.359979,
+   "r4_audit_kg": 0.0
+  },
+  {
+   "occurrence": "COLUMN:1F:C3:H4120",
+   "floor": "1F",
+   "type": "C3",
+   "r3_state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "tag_binding": "BOUND",
+   "storeys": {
+    "GF": "PROVEN",
+    "1F": "NOT_DRAWN_ON_STOREY_SHEET",
+    "2F": "NOT_DRAWN_ON_STOREY_SHEET"
+   },
+   "storey_interval_m": 4.2,
+   "classification": "OFF_STOREY_COLUMN",
+   "evidence": "no outline on the 1F framing sheet nor above (['NOT_DRAWN_ON_STOREY_SHEET']); drawn and measured below (['GF'])",
+   "kg_restored": false,
+   "r4_release_state": "NOT_IN_SCOPE",
+   "r4_verified_kg": 0.0,
+   "r4_provisional_kg": 0.0,
+   "r4_audit_kg": 54.715534
+  },
+  {
+   "occurrence": "COLUMN:1F:C4:H4199",
+   "floor": "1F",
+   "type": "C4",
+   "r3_state": "BLOCKED_TAG_NOT_BOUND",
+   "tag_binding": "NO_OUTLINE_OF_PRINTED_SIZE_ADJACENT",
+   "storeys": {
+    "GF": "BLOCKED_TAG_NOT_BOUND",
+    "1F": "BLOCKED_TAG_NOT_BOUND",
+    "2F": "BLOCKED_TAG_NOT_BOUND"
+   },
+   "storey_interval_m": 4.2,
+   "classification": "UNRESOLVED",
+   "evidence": "BLOCKED_TAG_NOT_BOUND (NO_OUTLINE_OF_PRINTED_SIZE_ADJACENT): no outline of the printed size beside the tag",
+   "kg_restored": false
+  },
+  {
+   "occurrence": "COLUMN:1F:C3:H4207",
+   "floor": "1F",
+   "type": "C3",
+   "r3_state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "tag_binding": "BOUND",
+   "storeys": {
+    "GF": "PROVEN",
+    "1F": "NOT_DRAWN_ON_STOREY_SHEET",
+    "2F": "NOT_DRAWN_ON_STOREY_SHEET"
+   },
+   "storey_interval_m": 4.2,
+   "classification": "OFF_STOREY_COLUMN",
+   "evidence": "no outline on the 1F framing sheet nor above (['NOT_DRAWN_ON_STOREY_SHEET']); drawn and measured below (['GF'])",
+   "kg_restored": false,
+   "r4_release_state": "NOT_IN_SCOPE",
+   "r4_verified_kg": 0.0,
+   "r4_provisional_kg": 0.0,
+   "r4_audit_kg": 54.715534
+  },
+  {
+   "occurrence": "COLUMN:2F:C3:H4102",
+   "floor": "2F",
+   "type": "C3",
+   "r3_state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "tag_binding": "BOUND",
+   "storeys": {
+    "GF": "PROVEN",
+    "1F": "NOT_DRAWN_ON_STOREY_SHEET",
+    "2F": "NOT_DRAWN_ON_STOREY_SHEET"
+   },
+   "storey_interval_m": 4.2,
+   "classification": "OFF_STOREY_COLUMN",
+   "evidence": "no outline on the 2F framing sheet nor above (top storey); drawn and measured below (['GF'])",
+   "kg_restored": false,
+   "r4_release_state": "NOT_IN_SCOPE",
+   "r4_verified_kg": 0.0,
+   "r4_provisional_kg": 0.0,
+   "r4_audit_kg": 54.715534
+  },
+  {
+   "occurrence": "COLUMN:2F:C3:H4106",
+   "floor": "2F",
+   "type": "C3",
+   "r3_state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "tag_binding": "BOUND",
+   "storeys": {
+    "GF": "PROVEN",
+    "1F": "NOT_DRAWN_ON_STOREY_SHEET",
+    "2F": "NOT_DRAWN_ON_STOREY_SHEET"
+   },
+   "storey_interval_m": 4.2,
+   "classification": "OFF_STOREY_COLUMN",
+   "evidence": "no outline on the 2F framing sheet nor above (top storey); drawn and measured below (['GF'])",
+   "kg_restored": false,
+   "r4_release_state": "NOT_IN_SCOPE",
+   "r4_verified_kg": 0.0,
+   "r4_provisional_kg": 0.0,
+   "r4_audit_kg": 54.715534
+  },
+  {
+   "occurrence": "COLUMN:2F:C3:H4110",
+   "floor": "2F",
+   "type": "C3",
+   "r3_state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "tag_binding": "BOUND",
+   "storeys": {
+    "GF": "PROVEN",
+    "1F": "BLOCKED_UPPER_MEMBER_UNBOUND",
+    "2F": "NOT_DRAWN_ON_STOREY_SHEET"
+   },
+   "storey_interval_m": 4.2,
+   "classification": "OFF_STOREY_COLUMN",
+   "evidence": "no outline on the 2F framing sheet nor above (top storey); drawn and measured below (['GF'])",
+   "kg_restored": false,
+   "r4_release_state": "NOT_IN_SCOPE",
+   "r4_verified_kg": 0.0,
+   "r4_provisional_kg": 0.0,
+   "r4_audit_kg": 54.715534
+  },
+  {
+   "occurrence": "COLUMN:2F:C5:H4112",
+   "floor": "2F",
+   "type": "C5",
+   "r3_state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "tag_binding": "BOUND",
+   "storeys": {
+    "GF": "PROVEN",
+    "1F": "BLOCKED_UPPER_MEMBER_UNBOUND",
+    "2F": "NOT_DRAWN_ON_STOREY_SHEET"
+   },
+   "storey_interval_m": 4.2,
+   "classification": "OFF_STOREY_COLUMN",
+   "evidence": "no outline on the 2F framing sheet nor above (top storey); drawn and measured below (['GF'])",
+   "kg_restored": false,
+   "r4_release_state": "NOT_IN_SCOPE",
+   "r4_verified_kg": 0.0,
+   "r4_provisional_kg": 0.0,
+   "r4_audit_kg": 54.715534
+  },
+  {
+   "occurrence": "COLUMN:2F:C6:H4116",
+   "floor": "2F",
+   "type": "C6",
+   "r3_state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "tag_binding": "BOUND",
+   "storeys": {
+    "GF": "PROVEN",
+    "1F": "PROVEN",
+    "2F": "NOT_DRAWN_ON_STOREY_SHEET"
+   },
+   "storey_interval_m": 4.2,
+   "classification": "OFF_STOREY_COLUMN",
+   "evidence": "no outline on the 2F framing sheet nor above (top storey); drawn and measured below (['GF', '1F'])",
+   "kg_restored": false,
+   "r4_release_state": "NOT_IN_SCOPE",
+   "r4_verified_kg": 0.0,
+   "r4_provisional_kg": 0.0,
+   "r4_audit_kg": 67.989608
+  },
+  {
+   "occurrence": "COLUMN:2F:C3:H4120",
+   "floor": "2F",
+   "type": "C3",
+   "r3_state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "tag_binding": "BOUND",
+   "storeys": {
+    "GF": "PROVEN",
+    "1F": "NOT_DRAWN_ON_STOREY_SHEET",
+    "2F": "NOT_DRAWN_ON_STOREY_SHEET"
+   },
+   "storey_interval_m": 4.2,
+   "classification": "OFF_STOREY_COLUMN",
+   "evidence": "no outline on the 2F framing sheet nor above (top storey); drawn and measured below (['GF'])",
+   "kg_restored": false,
+   "r4_release_state": "NOT_IN_SCOPE",
+   "r4_verified_kg": 0.0,
+   "r4_provisional_kg": 0.0,
+   "r4_audit_kg": 54.715534
+  },
+  {
+   "occurrence": "COLUMN:2F:C8:H4122",
+   "floor": "2F",
+   "type": "C8",
+   "r3_state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "tag_binding": "BOUND",
+   "storeys": {
+    "GF": "BLOCKED_UPPER_MEMBER_UNBOUND",
+    "1F": "PROVEN",
+    "2F": "NOT_DRAWN_ON_STOREY_SHEET"
+   },
+   "storey_interval_m": 4.2,
+   "classification": "OFF_STOREY_COLUMN",
+   "evidence": "no outline on the 2F framing sheet nor above (top storey); drawn and measured below (['1F'])",
+   "kg_restored": false,
+   "r4_release_state": "NOT_IN_SCOPE",
+   "r4_verified_kg": 0.0,
+   "r4_provisional_kg": 0.0,
+   "r4_audit_kg": 85.530349
+  },
+  {
+   "occurrence": "COLUMN:2F:C5:H4124",
+   "floor": "2F",
+   "type": "C5",
+   "r3_state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "tag_binding": "BOUND",
+   "storeys": {
+    "GF": "BLOCKED_UPPER_MEMBER_UNBOUND",
+    "1F": "PROVEN",
+    "2F": "NOT_DRAWN_ON_STOREY_SHEET"
+   },
+   "storey_interval_m": 4.2,
+   "classification": "OFF_STOREY_COLUMN",
+   "evidence": "no outline on the 2F framing sheet nor above (top storey); drawn and measured below (['1F'])",
+   "kg_restored": false,
+   "r4_release_state": "NOT_IN_SCOPE",
+   "r4_verified_kg": 0.0,
+   "r4_provisional_kg": 0.0,
+   "r4_audit_kg": 54.715534
+  },
+  {
+   "occurrence": "COLUMN:2F:C7:H4189",
+   "floor": "2F",
+   "type": "C7",
+   "r3_state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "tag_binding": "BOUND",
+   "storeys": {
+    "GF": "PROVEN",
+    "1F": "PROVEN",
+    "2F": "NOT_DRAWN_ON_STOREY_SHEET"
+   },
+   "storey_interval_m": 4.2,
+   "classification": "OFF_STOREY_COLUMN",
+   "evidence": "no outline on the 2F framing sheet nor above (top storey); drawn and measured below (['GF', '1F'])",
+   "kg_restored": false,
+   "r4_release_state": "NOT_IN_SCOPE",
+   "r4_verified_kg": 0.0,
+   "r4_provisional_kg": 0.0,
+   "r4_audit_kg": 70.122942
+  },
+  {
+   "occurrence": "COLUMN:2F:C4:H4197",
+   "floor": "2F",
+   "type": "C4",
+   "r3_state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "tag_binding": "BOUND",
+   "storeys": {
+    "GF": "PROVEN",
+    "1F": "PROVEN",
+    "2F": "NOT_DRAWN_ON_STOREY_SHEET"
+   },
+   "storey_interval_m": 4.2,
+   "classification": "OFF_STOREY_COLUMN",
+   "evidence": "no outline on the 2F framing sheet nor above (top storey); drawn and measured below (['GF', '1F'])",
+   "kg_restored": false,
+   "r4_release_state": "NOT_IN_SCOPE",
+   "r4_verified_kg": 0.0,
+   "r4_provisional_kg": 0.0,
+   "r4_audit_kg": 54.715534
+  },
+  {
+   "occurrence": "COLUMN:2F:C4:H4199",
+   "floor": "2F",
+   "type": "C4",
+   "r3_state": "BLOCKED_TAG_NOT_BOUND",
+   "tag_binding": "NO_OUTLINE_OF_PRINTED_SIZE_ADJACENT",
+   "storeys": {
+    "GF": "BLOCKED_TAG_NOT_BOUND",
+    "1F": "BLOCKED_TAG_NOT_BOUND",
+    "2F": "BLOCKED_TAG_NOT_BOUND"
+   },
+   "storey_interval_m": 4.2,
+   "classification": "UNRESOLVED",
+   "evidence": "BLOCKED_TAG_NOT_BOUND (NO_OUTLINE_OF_PRINTED_SIZE_ADJACENT): no outline of the printed size beside the tag",
+   "kg_restored": false
+  },
+  {
+   "occurrence": "COLUMN:2F:C9:H4203",
+   "floor": "2F",
+   "type": "C9",
+   "r3_state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "tag_binding": "BOUND",
+   "storeys": {
+    "GF": "BLOCKED_SEVERAL_OUTLINES_ON_STOREY_SHEET",
+    "1F": "PROVEN",
+    "2F": "NOT_DRAWN_ON_STOREY_SHEET"
+   },
+   "storey_interval_m": 4.2,
+   "classification": "OFF_STOREY_COLUMN",
+   "evidence": "no outline on the 2F framing sheet nor above (top storey); drawn and measured below (['1F'])",
+   "kg_restored": false,
+   "r4_release_state": "NOT_IN_SCOPE",
+   "r4_verified_kg": 0.0,
+   "r4_provisional_kg": 0.0,
+   "r4_audit_kg": 85.530349
+  },
+  {
+   "occurrence": "COLUMN:2F:C8:H4205",
+   "floor": "2F",
+   "type": "C8",
+   "r3_state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "tag_binding": "BOUND",
+   "storeys": {
+    "GF": "BLOCKED_SEVERAL_OUTLINES_ON_STOREY_SHEET",
+    "1F": "PROVEN_UNBOUND_DOMINATED",
+    "2F": "NOT_DRAWN_ON_STOREY_SHEET"
+   },
+   "storey_interval_m": 4.2,
+   "classification": "OFF_STOREY_COLUMN",
+   "evidence": "no outline on the 2F framing sheet nor above (top storey); drawn and measured below (['1F'])",
+   "kg_restored": false,
+   "r4_release_state": "NOT_IN_SCOPE",
+   "r4_verified_kg": 0.0,
+   "r4_provisional_kg": 0.0,
+   "r4_audit_kg": 85.530349
+  },
+  {
+   "occurrence": "COLUMN:2F:C3:H4207",
+   "floor": "2F",
+   "type": "C3",
+   "r3_state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "tag_binding": "BOUND",
+   "storeys": {
+    "GF": "PROVEN",
+    "1F": "NOT_DRAWN_ON_STOREY_SHEET",
+    "2F": "NOT_DRAWN_ON_STOREY_SHEET"
+   },
+   "storey_interval_m": 4.2,
+   "classification": "OFF_STOREY_COLUMN",
+   "evidence": "no outline on the 2F framing sheet nor above (top storey); drawn and measured below (['GF'])",
+   "kg_restored": false,
+   "r4_release_state": "NOT_IN_SCOPE",
+   "r4_verified_kg": 0.0,
+   "r4_provisional_kg": 0.0,
+   "r4_audit_kg": 54.715534
+  }
+ ],
+ "summary": {
+  "REAL_COLUMN_UPPER_MEMBER_UNBOUND": 4,
+  "UNRESOLVED": 3,
+  "REAL_COLUMN_SEVERAL_OUTLINES": 2,
+  "OFF_STOREY_COLUMN": 17
+ },
+ "r3_audit_kg": {
+  "occurrences": 26,
+  "audit_kg_total": 1808.650799,
+  "audit_kg_verified_equivalent": 1739.654321,
+  "state": "BLOCKED_OCCURRENCE_NOT_ESTABLISHED"
+ },
+ "rule": "kg re-enters only where the physical occurrence is established (one outline, bound tag); a candidate classification never restores kg; OFF_STOREY occurrences keep their weight as audit"
+}

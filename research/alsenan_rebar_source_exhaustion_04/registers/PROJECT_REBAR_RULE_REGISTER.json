@@ -1,0 +1,223 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_PROJECT_REBAR_RULES_V1",
+ "rules": [
+  {
+   "rule_id": "COVER_GENERAL_25MM",
+   "alias": "COVER-MEMBER-25",
+   "value": 25,
+   "applies_to": [
+    "COLUMN",
+    "BEAM",
+    "CONTINUOUS_BEAM",
+    "SLAB",
+    "LINTEL",
+    "DOME"
+   ],
+   "scope": "minimum cover",
+   "claim_id": "P8-N22-COVER-GENERAL",
+   "source_state": "CROSS_VERIFIED_SOURCE",
+   "quantity_authority": "VERIFIED",
+   "note": null
+  },
+  {
+   "rule_id": "COVER_AGAINST_SOIL_70MM",
+   "alias": "COVER-SOIL-70",
+   "value": 70,
+   "applies_to": [
+    "FOOTING",
+    "FOOTING_2_LAYER",
+    "FOOTING_LIFT",
+    "STRAP_BEAM",
+    "GROUND_BEAM",
+    "GROUND_SLAB",
+    "COLUMN_STARTERS",
+    "POOL"
+   ],
+   "scope": "minimum cover",
+   "claim_id": "P8-N22-COVER-SOIL",
+   "source_state": "CROSS_VERIFIED_SOURCE",
+   "quantity_authority": "VERIFIED",
+   "note": null
+  },
+  {
+   "rule_id": "DEVELOPMENT_STARTER_70D_40D",
+   "alias": null,
+   "value": {
+    "tension": 70,
+    "compression": 40
+   },
+   "applies_to": [
+    "STARTER_BARS"
+   ],
+   "scope": "development / tie length of starter bars only",
+   "claim_id": "P8-N09-STARTER-DEVELOPMENT",
+   "source_state": "AI_VISUAL_TRANSCRIPTION",
+   "quantity_authority": "PROVISIONAL",
+   "note": "NOT a hook, bend or beam-end anchorage rule; used for BBS laps of long runs only as a labelled procurement assumption (LAP-70D-NOTE9-EXTENDED)"
+  },
+  {
+   "rule_id": "STARTER_PROJECTION_40D",
+   "alias": null,
+   "value": 40,
+   "applies_to": [
+    "COLUMN_STARTERS"
+   ],
+   "scope": "starter projection above the footing top",
+   "claim_id": "P13-STARTER-PROJECTION-40D",
+   "source_state": "CROSS_VERIFIED_SOURCE",
+   "quantity_authority": "VERIFIED",
+   "note": null
+  },
+  {
+   "rule_id": "STARTER_FOOT_MIN_300",
+   "alias": null,
+   "value": 300,
+   "applies_to": [
+    "COLUMN_STARTERS"
+   ],
+   "scope": "horizontal foot",
+   "claim_id": "P13-STARTER-FOOT-MIN30",
+   "source_state": "AI_VISUAL_TRANSCRIPTION",
+   "quantity_authority": "PROVISIONAL",
+   "note": null
+  },
+  {
+   "rule_id": "LINTEL_BEARING_MIN_400",
+   "alias": null,
+   "value": 400,
+   "applies_to": [
+    "LINTEL"
+   ],
+   "scope": "bearing each side",
+   "claim_id": "P13-LINTEL-BEARING",
+   "source_state": "AI_VISUAL_TRANSCRIPTION",
+   "quantity_authority": "PROVISIONAL",
+   "note": null
+  },
+  {
+   "rule_id": "SLAB_THICKNESS_DEFAULT_160",
+   "alias": null,
+   "value": 160,
+   "applies_to": [
+    "SLAB"
+   ],
+   "scope": "unless stated otherwise",
+   "claim_id": "P8-N18-SLAB-THICKNESS",
+   "source_state": "CROSS_VERIFIED_SOURCE",
+   "quantity_authority": "VERIFIED",
+   "note": null
+  },
+  {
+   "rule_id": "SLAB_TOP_ANCHOR_0_25L",
+   "alias": null,
+   "value": 0.25,
+   "applies_to": [
+    "SLAB"
+   ],
+   "scope": "non-continuous support",
+   "claim_id": "P15-SLAB-TOP-NONCONTINUOUS",
+   "source_state": "CROSS_VERIFIED_SOURCE",
+   "quantity_authority": "VERIFIED",
+   "note": null
+  },
+  {
+   "rule_id": "SLAB_TOP_0_30L_MAX",
+   "alias": null,
+   "value": 0.3,
+   "applies_to": [
+    "SLAB"
+   ],
+   "scope": "continuous support, larger span",
+   "claim_id": "P15-SLAB-TOP-CONTINUOUS",
+   "source_state": "CROSS_VERIFIED_SOURCE",
+   "quantity_authority": "VERIFIED",
+   "note": null
+  },
+  {
+   "rule_id": "SLAB_BOTTOM_STOP_50PCT_0_125L",
+   "alias": null,
+   "value": {
+    "fraction": 0.5,
+    "stop": 0.125
+   },
+   "applies_to": [
+    "SLAB"
+   ],
+   "scope": "continuous support",
+   "claim_id": "P15-SLAB-BOTTOM-STOP",
+   "source_state": "CROSS_VERIFIED_SOURCE",
+   "quantity_authority": "VERIFIED",
+   "note": null
+  },
+  {
+   "rule_id": "TEMPERATURE_LAP_40D",
+   "alias": null,
+   "value": 40,
+   "applies_to": [
+    "TEMPERATURE_REINFORCEMENT"
+   ],
+   "scope": "temperature bars",
+   "claim_id": "P15-TEMPERATURE-NOTES",
+   "source_state": "CROSS_VERIFIED_SOURCE",
+   "quantity_authority": "VERIFIED",
+   "note": null
+  },
+  {
+   "rule_id": "SIDE_BARS_NOTE_21",
+   "alias": null,
+   "value": "2/3/4 Ø12 by width",
+   "applies_to": [
+    "BEAM",
+    "CONTINUOUS_BEAM"
+   ],
+   "scope": "depth > 60 cm",
+   "claim_id": "P8-N21-SIDE-BARS",
+   "source_state": "AI_VISUAL_TRANSCRIPTION",
+   "quantity_authority": "PROVISIONAL",
+   "note": "width -> count mapping NOT printed: BLOCKED"
+  },
+  {
+   "rule_id": "LIFT_TIE_BEAMS_NOTE_19",
+   "alias": null,
+   "value": {
+    "height_m": 3.0,
+    "storey_gt_m": 4.3
+   },
+   "applies_to": [
+    "LIFT_TIE_BEAM"
+   ],
+   "scope": "storeys > 4.30 m",
+   "claim_id": "P8-N19-LIFT-TIE-BEAMS",
+   "source_state": "AI_VISUAL_TRANSCRIPTION",
+   "quantity_authority": "PROVISIONAL",
+   "note": null
+  },
+  {
+   "rule_id": "HOOKS_AND_BENDS",
+   "alias": null,
+   "value": "PROVISIONAL_HOOK_ALLOWANCE (ACI 318-19 tables, edition unverified)",
+   "applies_to": [
+    "ALL"
+   ],
+   "scope": "no project source",
+   "claim_id": null,
+   "source_state": "NO_PROJECT_SOURCE",
+   "quantity_authority": "NONE",
+   "note": "engineer / code decision; never verified"
+  }
+ ],
+ "count_method_proposal": {
+  "id": "URBAN_FINITE_SPACING_METHOD_V1 (PROPOSAL - pending owner / engineer approval)",
+  "inputs": [
+   "printed rate n/m or spacing s",
+   "clear distribution width = side - 2 x cover",
+   "edge cover at both ends"
+  ],
+  "strict_source_lower_bound": "n = ceil(rate x clear_distribution)  (current VERIFIED count)",
+  "geometric_end_bar_convention": "n_spaces = ceil(clear_distribution / max_spacing); n_bars = n_spaces + 1 (where the instruction means a MAXIMUM spacing)",
+  "current_state": "convention bars PROVISIONAL until the meaning of 'n Ø d / m' in this schedule is approved",
+  "difference_bars": 698,
+  "difference_kg": 544.037,
+  "components_affected": 550
+ }
+}

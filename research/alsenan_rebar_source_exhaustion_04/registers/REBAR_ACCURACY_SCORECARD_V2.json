@@ -1,0 +1,31 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_REBAR_SCORECARD_V2",
+ "metrics": {
+  "source_accounting_pct": 100.0,
+  "schedule_definitions_feeding_quantity_pct": null,
+  "source_interpretation_pct": 53.333333,
+  "occurrence_binding_pct": 88.983051,
+  "required_component_completeness_pct": 14.360902,
+  "population_completeness_pct": 1.129944,
+  "verified_kg_share_pct": 70.381523,
+  "provisional_kg_share_pct": 24.668739,
+  "blocked_population_count": 42,
+  "mass_conservation": "PASS",
+  "provenance": "PASS",
+  "human_claim_dependency_pct": 0.111464,
+  "human_claim_dependency_note": "share of verified kg whose claim would fall back to AI-only without the owner-relayed independent review; HUMAN_VERIFIED claims: 0"
+ },
+ "rule": "metrics are reported separately; they are never combined into one accuracy number",
+ "pdf_regions_accounted": [
+  "PDF:p8:RECOMMENDATIONS",
+  "PDF:p13:LINTEL_SCHEDULE",
+  "PDF:p13:GROUND_BEAM_SECTIONS",
+  "PDF:p14:LIFT_FOOTING",
+  "PDF:p14:BOUNDARY_WALL_PARAPETS",
+  "PDF:p15:TEMPERATURE_REINFORCEMENT",
+  "PDF:p15:PLANTED_COLUMN_DETAIL",
+  "PDF:p15:TYPICAL_DETAILS",
+  "PDF:p16:STAIR_STEEL_LAYOUT",
+  "PDF:p16:OPENING_IN_BEAM_RIBS"
+ ]
+}
