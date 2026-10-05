@@ -1412,17 +1412,27 @@ Most dangerous first.
 
 **Minimum set (send all of these):**
 
-* [ ] `URBAN_PROJECTS_BOQ_CURRENT_FULL.zip`: the whole tracked repository at `1c331c5` + this report + `HANDOFF_EXTRAS/` (R8 spec files, round package MD / JSON, Qortuba PA08 sealed takeoff + owner rules V1, 23010 sealed benchmark JSON, test JUnit XML + non-pass list, rules dump, engine inventory). See `ZIP_MANIFEST.txt` inside.
+* [ ] `URBAN_PROJECTS_BOQ_CURRENT_FULL.zip` (about 15 MB, 3,565 files): every tracked file + this report + `HANDOFF_EXTRAS/`. The extras are the R8 spec files, round package MD / JSON (incl. RC1 final, Alsenan V3 / V3b), the Qortuba PA08 sealed takeoff + owner rules V1, the 23010 sealed benchmark, the Al Rashed R5–R7 registers, the test JUnit XML + non-pass list, the rules dump and the engine inventory. See `ZIP_MANIFEST.txt` inside.
 * [ ] `URBAN_PROJECTS_CLAUDE_HANDOFF.md`: this report (it is also inside the ZIP and in the repository root).
 * [ ] `research/external_engine_lab/V3C_FORENSIC_ACCURACY_DONOR_AUDIT.md`: the latest accuracy audit (inside the ZIP; worth attaching separately).
 
-**Real project files (not in the ZIP; upload separately):**
+**Real project files (not in the ZIP; upload separately).** The on-disk paths below are on this container; the sha prefixes let you match your own copies.
 
-* [ ] **Alsenan / P7757:** architectural `P7757.dwg` and/or `P7757.dxf` (INSUNITS 4 mm) + structural **`ST7757.pdf`** (pages 3, 7, 8, 11–14, 16 matter most for D1–D6). Optional: the freelancer B1 workbooks (concrete / rebar / finishes) for §B.
-* [ ] **Qortuba:** REV_NEW DXF (sha `df0e1d69…`, the authoritative one) and REV_OLD DWG (sha `2ec3a9c8…`) + the contractor comparison sheet.
-* [ ] **Al Rashed:** the DWG (sha `299c61b1…`, revision 16-11-2025-R3) + the matching PDF set + the historical workbook "الراشد صباح الاحمد" (the only ground truth: insulation 950.22 m², balustrade 57 lm).
-* [ ] **23010:** `AR-00` PDF (rev MAR.2023) + the sealed site benchmark (the JSON is in the ZIP under `HANDOFF_EXTRAS/data/golden/23010/`; the PDF is not).
+* [ ] **Alsenan / P7757:** this is the priority, because the V3b BOQ and the V3c defects come from it.
+  * Structural: **`ST7757.pdf`** (sha `74da1523…`, `data/inputs/by_sha256/74da1523….pdf`). Pages 3, 7, 8, 11–14 and 16 matter most for D1–D6; p.11–12 carry the continuous-beam schedule.
+  * Architectural: `P7757.dxf` (sha `ab54dd55…`) or `P7757.dwg` (sha `7f61f3ac…`, also `data/golden/7757/source_c/P7757_ARCHITECTURAL.dwg`).
+  * Optional: `ST7757.dxf` (sha `9f9d1179…`); the architectural plan PDFs (pages 01–06 `80b6a804…`, 07–12 `281a0c3f…`); the freelancer B1 workbooks (concrete / rebar / finishes) for V3c §B.
+* [ ] **Qortuba:**
+  * REV_NEW DXF (sha `df0e1d69…`, 205 MB, `data/inputs/by_sha256/df0e1d69….dxf`; the owner-declared authoritative revision used by RC1). If it is too big to upload, send the REV_OLD DWG plus the RC1 registers in the ZIP.
+  * REV_OLD DWG (sha `2ec3a9c8…`; the seal's source; a copy is in this session's scratchpad as `r86a/QORTUBA.dwg`).
+  * The contractor comparison sheet.
+* [ ] **Al Rashed:**
+  * The DWG (sha `299c61b1…`, revision 16-11-2025-R3). **It is not on this container**; only its decode is, so upload your own copy.
+  * The matching PDF set.
+  * The historical workbook "الراشد صباح الاحمد" (the only ground truth: insulation 950.22 m², balustrade 57 lm).
+  * The R5–R7 result registers (JSON < 2 MB) are in the ZIP under `HANDOFF_EXTRAS/data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa09_alrashed/`.
+* [ ] **23010:** `data/golden/23010/inputs/AR-00_MAR2023.pdf` (484 KB). The sealed site benchmark JSON is already in the ZIP (`HANDOFF_EXTRAS/data/golden/23010/site_benchmark.json`).
 
-All of these live on this container under `data/inputs/by_sha256/` and `data/golden/`. They are client drawings, so they were deliberately left out of the ZIP.
+These are client drawings, so they were deliberately left out of the ZIP.
 
 **Do not send:** `.secrets/`, rate cards / rate library (pricing), `data/experiments` bulk, `data/runs` decodes (1 GB; regenerable).
