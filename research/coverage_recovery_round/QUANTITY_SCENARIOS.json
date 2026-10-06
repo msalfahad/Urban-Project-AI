@@ -1,0 +1,5545 @@
+{
+ "beams": {
+  "conservation": {
+   "by_state": {
+    "CANDIDATE_QUANTIFIED": 16,
+    "UNQUANTIFIED": 8
+   },
+   "duplicates_in": [],
+   "duplicates_out": [],
+   "missing": [],
+   "occurrences_in": 24,
+   "ok": true,
+   "orphans": [],
+   "terminal_records": 24,
+   "unquantified_without_identity": []
+  },
+  "duplicates_removed": [
+   {
+    "duplicate_of": "CB3:ALSENAN_ST7757_DXF|H1171||TEXT|0",
+    "occurrence_id": "RES-GF-02-B3",
+    "why": "BAND_TYPE_CONFLICT"
+   }
+  ],
+  "residue_objects": [
+   {
+    "binding_attempts": [
+     {
+      "level": "NEARBY_TAG",
+      "rank": 1,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "PAIRED_FACES",
+      "rank": 2,
+      "ref": null,
+      "result": "FOUND"
+     }
+    ],
+    "binding_level": "PAIRED_FACES",
+    "floor": "GF",
+    "length_m": 1.15,
+    "occurrence_id": "RES-GF-00-CA",
+    "part": {
+     "best": 0.1173,
+     "high": 0.1173,
+     "low": 0.0997,
+     "origin": "CANDIDATE",
+     "part_id": "RES-GF-00-CA",
+     "state": "CANDIDATE",
+     "unit": null,
+     "why": "TAG_INSIDE_SUPPORT: drawn band length x scheduled section (B x (D - t))"
+    },
+    "terminal": "CANDIDATE_QUANTIFIED",
+    "type": "CA",
+    "why_v3a": "TAG_INSIDE_SUPPORT"
+   },
+   {
+    "binding_attempts": [
+     {
+      "level": "NEARBY_TAG",
+      "rank": 1,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "PAIRED_FACES",
+      "rank": 2,
+      "ref": null,
+      "result": "FOUND"
+     }
+    ],
+    "binding_level": "PAIRED_FACES",
+    "floor": "GF",
+    "length_m": 12.995,
+    "occurrence_id": "RES-GF-01-CB8",
+    "part": {
+     "best": 2.3001,
+     "high": 2.3001,
+     "low": 1.9551,
+     "origin": "CANDIDATE",
+     "part_id": "RES-GF-01-CB8",
+     "state": "CANDIDATE",
+     "unit": null,
+     "why": "SPAN_COUNT_MISMATCH: drawn band length x scheduled section (B x (D - t))"
+    },
+    "terminal": "CANDIDATE_QUANTIFIED",
+    "type": "CB8",
+    "why_v3a": "SPAN_COUNT_MISMATCH"
+   },
+   {
+    "binding_attempts": [
+     {
+      "level": "NEARBY_TAG",
+      "rank": 1,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "PAIRED_FACES",
+      "rank": 2,
+      "ref": null,
+      "result": "FOUND"
+     }
+    ],
+    "binding_level": "PAIRED_FACES",
+    "floor": "GF",
+    "length_m": 10.259,
+    "occurrence_id": "RES-GF-03-CB3",
+    "part": {
+     "best": 1.2105,
+     "high": 1.2105,
+     "low": 0.4924,
+     "origin": "CANDIDATE",
+     "part_id": "RES-GF-03-CB3",
+     "state": "CANDIDATE",
+     "unit": null,
+     "why": "BAND_TYPE_CONFLICT: band x scheduled section of this tag (two tags claim one band)"
+    },
+    "terminal": "CANDIDATE_QUANTIFIED",
+    "type": "CB3",
+    "why_v3a": "BAND_TYPE_CONFLICT"
+   },
+   {
+    "binding_attempts": [
+     {
+      "level": "NEARBY_TAG",
+      "rank": 1,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "PAIRED_FACES",
+      "rank": 2,
+      "ref": null,
+      "result": "FOUND"
+     }
+    ],
+    "binding_level": "PAIRED_FACES",
+    "floor": "GF",
+    "length_m": 10.1,
+    "occurrence_id": "RES-GF-04-CB6",
+    "part": {
+     "best": 1.1918,
+     "high": 1.1918,
+     "low": 1.013,
+     "origin": "CANDIDATE",
+     "part_id": "RES-GF-04-CB6",
+     "state": "CANDIDATE",
+     "unit": null,
+     "why": "SPAN_COUNT_MISMATCH: drawn band length x scheduled section (B x (D - t))"
+    },
+    "terminal": "CANDIDATE_QUANTIFIED",
+    "type": "CB6",
+    "why_v3a": "SPAN_COUNT_MISMATCH"
+   },
+   {
+    "binding_attempts": [
+     {
+      "level": "NEARBY_TAG",
+      "rank": 1,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "PAIRED_FACES",
+      "rank": 2,
+      "ref": null,
+      "result": "FOUND"
+     }
+    ],
+    "binding_level": "PAIRED_FACES",
+    "floor": "GF",
+    "length_m": 2.45,
+    "occurrence_id": "RES-GF-05-CB5",
+    "part": {
+     "best": 0.1176,
+     "high": 0.1176,
+     "low": 0.1,
+     "origin": "CANDIDATE",
+     "part_id": "RES-GF-05-CB5",
+     "state": "CANDIDATE",
+     "unit": null,
+     "why": "SPAN_COUNT_MISMATCH: drawn band length x scheduled section (B x (D - t))"
+    },
+    "terminal": "CANDIDATE_QUANTIFIED",
+    "type": "CB5",
+    "why_v3a": "SPAN_COUNT_MISMATCH"
+   },
+   {
+    "binding_attempts": [
+     {
+      "level": "NEARBY_TAG",
+      "rank": 1,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "PAIRED_FACES",
+      "rank": 2,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "COLUMN_ENDPOINTS",
+      "rank": 3,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "CONTINUITY_WITH_ADJACENT_SPAN",
+      "rank": 4,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "SCHEDULE_WIDTH_MATCH",
+      "rank": 5,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "SAME_TYPE_MEDIAN_LENGTH",
+      "rank": 6,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "UNKNOWN",
+      "rank": 7,
+      "result": "TERMINAL_UNKNOWN"
+     }
+    ],
+    "binding_level": "UNKNOWN",
+    "floor": "GF",
+    "length_m": null,
+    "occurrence_id": "RES-GF-06-CB2",
+    "part": {
+     "best": null,
+     "high": null,
+     "low": null,
+     "origin": null,
+     "part_id": "RES-GF-06-CB2",
+     "state": "UNQUANTIFIED",
+     "unit": null,
+     "why": "NO_BAND_ADJACENT_TO_TAG: tag without a measurable band"
+    },
+    "terminal": "UNQUANTIFIED",
+    "type": "CB2",
+    "why_v3a": "NO_BAND_ADJACENT_TO_TAG"
+   },
+   {
+    "binding_attempts": [
+     {
+      "level": "NEARBY_TAG",
+      "rank": 1,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "PAIRED_FACES",
+      "rank": 2,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "COLUMN_ENDPOINTS",
+      "rank": 3,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "CONTINUITY_WITH_ADJACENT_SPAN",
+      "rank": 4,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "SCHEDULE_WIDTH_MATCH",
+      "rank": 5,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "SAME_TYPE_MEDIAN_LENGTH",
+      "rank": 6,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "UNKNOWN",
+      "rank": 7,
+      "result": "TERMINAL_UNKNOWN"
+     }
+    ],
+    "binding_level": "UNKNOWN",
+    "floor": "GF",
+    "length_m": null,
+    "occurrence_id": "RES-GF-07-CB2",
+    "part": {
+     "best": null,
+     "high": null,
+     "low": null,
+     "origin": null,
+     "part_id": "RES-GF-07-CB2",
+     "state": "UNQUANTIFIED",
+     "unit": null,
+     "why": "NO_BAND_ADJACENT_TO_TAG: tag without a measurable band"
+    },
+    "terminal": "UNQUANTIFIED",
+    "type": "CB2",
+    "why_v3a": "NO_BAND_ADJACENT_TO_TAG"
+   },
+   {
+    "binding_attempts": [
+     {
+      "level": "NEARBY_TAG",
+      "rank": 1,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "PAIRED_FACES",
+      "rank": 2,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "COLUMN_ENDPOINTS",
+      "rank": 3,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "CONTINUITY_WITH_ADJACENT_SPAN",
+      "rank": 4,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "SCHEDULE_WIDTH_MATCH",
+      "rank": 5,
+      "ref": null,
+      "result": "FOUND"
+     }
+    ],
+    "binding_level": "SCHEDULE_WIDTH_MATCH",
+    "floor": "GF",
+    "length_m": 1.545,
+    "occurrence_id": "RES-GF-08-B1",
+    "part": {
+     "best": 0.0742,
+     "high": 0.1233,
+     "low": 0.0,
+     "origin": "CANDIDATE",
+     "part_id": "RES-GF-08-B1",
+     "state": "CANDIDATE",
+     "unit": null,
+     "why": "NO_BAND_ADJACENT_TO_TAG: unbound tag: same-type median clear length x section"
+    },
+    "terminal": "CANDIDATE_QUANTIFIED",
+    "type": "B1",
+    "why_v3a": "NO_BAND_ADJACENT_TO_TAG"
+   },
+   {
+    "binding_attempts": [
+     {
+      "level": "NEARBY_TAG",
+      "rank": 1,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "PAIRED_FACES",
+      "rank": 2,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "COLUMN_ENDPOINTS",
+      "rank": 3,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "CONTINUITY_WITH_ADJACENT_SPAN",
+      "rank": 4,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "SCHEDULE_WIDTH_MATCH",
+      "rank": 5,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "SAME_TYPE_MEDIAN_LENGTH",
+      "rank": 6,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "UNKNOWN",
+      "rank": 7,
+      "result": "TERMINAL_UNKNOWN"
+     }
+    ],
+    "binding_level": "UNKNOWN",
+    "floor": "GF",
+    "length_m": null,
+    "occurrence_id": "RES-GF-09-B29",
+    "part": {
+     "best": null,
+     "high": null,
+     "low": null,
+     "origin": null,
+     "part_id": "RES-GF-09-B29",
+     "state": "UNQUANTIFIED",
+     "unit": null,
+     "why": "NO_BAND_ADJACENT_TO_TAG: tag without a measurable band"
+    },
+    "terminal": "UNQUANTIFIED",
+    "type": "B29",
+    "why_v3a": "NO_BAND_ADJACENT_TO_TAG"
+   },
+   {
+    "binding_attempts": [
+     {
+      "level": "NEARBY_TAG",
+      "rank": 1,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "PAIRED_FACES",
+      "rank": 2,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "COLUMN_ENDPOINTS",
+      "rank": 3,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "CONTINUITY_WITH_ADJACENT_SPAN",
+      "rank": 4,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "SCHEDULE_WIDTH_MATCH",
+      "rank": 5,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "SAME_TYPE_MEDIAN_LENGTH",
+      "rank": 6,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "UNKNOWN",
+      "rank": 7,
+      "result": "TERMINAL_UNKNOWN"
+     }
+    ],
+    "binding_level": "UNKNOWN",
+    "floor": "GF",
+    "length_m": null,
+    "occurrence_id": "RES-GF-10-B21",
+    "part": {
+     "best": null,
+     "high": null,
+     "low": null,
+     "origin": null,
+     "part_id": "RES-GF-10-B21",
+     "state": "UNQUANTIFIED",
+     "unit": null,
+     "why": "NO_BAND_AT_SCHEDULED_BREADTH: tag without a measurable band"
+    },
+    "terminal": "UNQUANTIFIED",
+    "type": "B21",
+    "why_v3a": "NO_BAND_AT_SCHEDULED_BREADTH"
+   },
+   {
+    "binding_attempts": [
+     {
+      "level": "NEARBY_TAG",
+      "rank": 1,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "PAIRED_FACES",
+      "rank": 2,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "COLUMN_ENDPOINTS",
+      "rank": 3,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "CONTINUITY_WITH_ADJACENT_SPAN",
+      "rank": 4,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "SCHEDULE_WIDTH_MATCH",
+      "rank": 5,
+      "ref": null,
+      "result": "FOUND"
+     }
+    ],
+    "binding_level": "SCHEDULE_WIDTH_MATCH",
+    "floor": "GF",
+    "length_m": 1.7,
+    "occurrence_id": "RES-GF-11-B7",
+    "part": {
+     "best": 0.2006,
+     "high": 0.5214,
+     "low": 0.0,
+     "origin": "CANDIDATE",
+     "part_id": "RES-GF-11-B7",
+     "state": "CANDIDATE",
+     "unit": null,
+     "why": "NO_BAND_AT_SCHEDULED_BREADTH: unbound tag: same-type median clear length x section"
+    },
+    "terminal": "CANDIDATE_QUANTIFIED",
+    "type": "B7",
+    "why_v3a": "NO_BAND_AT_SCHEDULED_BREADTH"
+   },
+   {
+    "binding_attempts": [
+     {
+      "level": "NEARBY_TAG",
+      "rank": 1,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "PAIRED_FACES",
+      "rank": 2,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "COLUMN_ENDPOINTS",
+      "rank": 3,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "CONTINUITY_WITH_ADJACENT_SPAN",
+      "rank": 4,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "SCHEDULE_WIDTH_MATCH",
+      "rank": 5,
+      "ref": null,
+      "result": "FOUND"
+     }
+    ],
+    "binding_level": "SCHEDULE_WIDTH_MATCH",
+    "floor": "GF",
+    "length_m": 1.7,
+    "occurrence_id": "RES-GF-12-B7",
+    "part": {
+     "best": 0.2006,
+     "high": 0.5214,
+     "low": 0.0,
+     "origin": "CANDIDATE",
+     "part_id": "RES-GF-12-B7",
+     "state": "CANDIDATE",
+     "unit": null,
+     "why": "NO_BAND_PARALLEL_TO_TAG: unbound tag: same-type median clear length x section"
+    },
+    "terminal": "CANDIDATE_QUANTIFIED",
+    "type": "B7",
+    "why_v3a": "NO_BAND_PARALLEL_TO_TAG"
+   },
+   {
+    "binding_attempts": [
+     {
+      "level": "NEARBY_TAG",
+      "rank": 1,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "PAIRED_FACES",
+      "rank": 2,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "COLUMN_ENDPOINTS",
+      "rank": 3,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "CONTINUITY_WITH_ADJACENT_SPAN",
+      "rank": 4,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "SCHEDULE_WIDTH_MATCH",
+      "rank": 5,
+      "ref": null,
+      "result": "FOUND"
+     }
+    ],
+    "binding_level": "SCHEDULE_WIDTH_MATCH",
+    "floor": "GF",
+    "length_m": 1.7,
+    "occurrence_id": "RES-GF-13-B7",
+    "part": {
+     "best": 0.2006,
+     "high": 0.5214,
+     "low": 0.0,
+     "origin": "CANDIDATE",
+     "part_id": "RES-GF-13-B7",
+     "state": "CANDIDATE",
+     "unit": null,
+     "why": "NO_BAND_PARALLEL_TO_TAG: unbound tag: same-type median clear length x section"
+    },
+    "terminal": "CANDIDATE_QUANTIFIED",
+    "type": "B7",
+    "why_v3a": "NO_BAND_PARALLEL_TO_TAG"
+   },
+   {
+    "binding_attempts": [
+     {
+      "level": "NEARBY_TAG",
+      "rank": 1,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "PAIRED_FACES",
+      "rank": 2,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "COLUMN_ENDPOINTS",
+      "rank": 3,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "CONTINUITY_WITH_ADJACENT_SPAN",
+      "rank": 4,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "SCHEDULE_WIDTH_MATCH",
+      "rank": 5,
+      "ref": null,
+      "result": "FOUND"
+     }
+    ],
+    "binding_level": "SCHEDULE_WIDTH_MATCH",
+    "floor": "GF",
+    "length_m": 1.7,
+    "occurrence_id": "RES-GF-14-B7",
+    "part": {
+     "best": 0.2006,
+     "high": 0.5214,
+     "low": 0.0,
+     "origin": "CANDIDATE",
+     "part_id": "RES-GF-14-B7",
+     "state": "CANDIDATE",
+     "unit": null,
+     "why": "NO_BAND_PARALLEL_TO_TAG: unbound tag: same-type median clear length x section"
+    },
+    "terminal": "CANDIDATE_QUANTIFIED",
+    "type": "B7",
+    "why_v3a": "NO_BAND_PARALLEL_TO_TAG"
+   },
+   {
+    "binding_attempts": [
+     {
+      "level": "NEARBY_TAG",
+      "rank": 1,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "PAIRED_FACES",
+      "rank": 2,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "COLUMN_ENDPOINTS",
+      "rank": 3,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "CONTINUITY_WITH_ADJACENT_SPAN",
+      "rank": 4,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "SCHEDULE_WIDTH_MATCH",
+      "rank": 5,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "SAME_TYPE_MEDIAN_LENGTH",
+      "rank": 6,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "UNKNOWN",
+      "rank": 7,
+      "result": "TERMINAL_UNKNOWN"
+     }
+    ],
+    "binding_level": "UNKNOWN",
+    "floor": "GF",
+    "length_m": null,
+    "occurrence_id": "RES-GF-15-CB5",
+    "part": {
+     "best": null,
+     "high": null,
+     "low": null,
+     "origin": null,
+     "part_id": "RES-GF-15-CB5",
+     "state": "UNQUANTIFIED",
+     "unit": null,
+     "why": "NO_BAND_ADJACENT_TO_TAG: tag without a measurable band"
+    },
+    "terminal": "UNQUANTIFIED",
+    "type": "CB5",
+    "why_v3a": "NO_BAND_ADJACENT_TO_TAG"
+   },
+   {
+    "binding_attempts": [
+     {
+      "level": "NEARBY_TAG",
+      "rank": 1,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "PAIRED_FACES",
+      "rank": 2,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "COLUMN_ENDPOINTS",
+      "rank": 3,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "CONTINUITY_WITH_ADJACENT_SPAN",
+      "rank": 4,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "SCHEDULE_WIDTH_MATCH",
+      "rank": 5,
+      "ref": null,
+      "result": "FOUND"
+     }
+    ],
+    "binding_level": "SCHEDULE_WIDTH_MATCH",
+    "floor": "GF",
+    "length_m": 1.7,
+    "occurrence_id": "RES-GF-16-B7",
+    "part": {
+     "best": 0.2006,
+     "high": 0.5214,
+     "low": 0.0,
+     "origin": "CANDIDATE",
+     "part_id": "RES-GF-16-B7",
+     "state": "CANDIDATE",
+     "unit": null,
+     "why": "NO_BAND_ADJACENT_TO_TAG: unbound tag: same-type median clear length x section"
+    },
+    "terminal": "CANDIDATE_QUANTIFIED",
+    "type": "B7",
+    "why_v3a": "NO_BAND_ADJACENT_TO_TAG"
+   },
+   {
+    "binding_attempts": [
+     {
+      "level": "NEARBY_TAG",
+      "rank": 1,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "PAIRED_FACES",
+      "rank": 2,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "COLUMN_ENDPOINTS",
+      "rank": 3,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "CONTINUITY_WITH_ADJACENT_SPAN",
+      "rank": 4,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "SCHEDULE_WIDTH_MATCH",
+      "rank": 5,
+      "ref": null,
+      "result": "FOUND"
+     }
+    ],
+    "binding_level": "SCHEDULE_WIDTH_MATCH",
+    "floor": "GF",
+    "length_m": 3.906,
+    "occurrence_id": "RES-GF-17-B4",
+    "part": {
+     "best": 0.2656,
+     "high": 0.306,
+     "low": 0.0,
+     "origin": "CANDIDATE",
+     "part_id": "RES-GF-17-B4",
+     "state": "CANDIDATE",
+     "unit": null,
+     "why": "NO_BAND_ADJACENT_TO_TAG: unbound tag: same-type median clear length x section"
+    },
+    "terminal": "CANDIDATE_QUANTIFIED",
+    "type": "B4",
+    "why_v3a": "NO_BAND_ADJACENT_TO_TAG"
+   },
+   {
+    "binding_attempts": [
+     {
+      "level": "NEARBY_TAG",
+      "rank": 1,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "PAIRED_FACES",
+      "rank": 2,
+      "ref": null,
+      "result": "FOUND"
+     }
+    ],
+    "binding_level": "PAIRED_FACES",
+    "floor": "1F",
+    "length_m": 5.275,
+    "occurrence_id": "RES-1F-18-CB12",
+    "part": {
+     "best": 0.7781,
+     "high": 0.7781,
+     "low": 0.6614,
+     "origin": "CANDIDATE",
+     "part_id": "RES-1F-18-CB12",
+     "state": "CANDIDATE",
+     "unit": null,
+     "why": "SPAN_COUNT_MISMATCH: drawn band length x scheduled section (B x (D - t))"
+    },
+    "terminal": "CANDIDATE_QUANTIFIED",
+    "type": "CB12",
+    "why_v3a": "SPAN_COUNT_MISMATCH"
+   },
+   {
+    "binding_attempts": [
+     {
+      "level": "NEARBY_TAG",
+      "rank": 1,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "PAIRED_FACES",
+      "rank": 2,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "COLUMN_ENDPOINTS",
+      "rank": 3,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "CONTINUITY_WITH_ADJACENT_SPAN",
+      "rank": 4,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "SCHEDULE_WIDTH_MATCH",
+      "rank": 5,
+      "ref": null,
+      "result": "FOUND"
+     }
+    ],
+    "binding_level": "SCHEDULE_WIDTH_MATCH",
+    "floor": "1F",
+    "length_m": 4.236,
+    "occurrence_id": "RES-1F-19-B6",
+    "part": {
+     "best": 0.3601,
+     "high": 0.3716,
+     "low": 0.0,
+     "origin": "CANDIDATE",
+     "part_id": "RES-1F-19-B6",
+     "state": "CANDIDATE",
+     "unit": null,
+     "why": "NO_BAND_ADJACENT_TO_TAG: unbound tag: same-type median clear length x section"
+    },
+    "terminal": "CANDIDATE_QUANTIFIED",
+    "type": "B6",
+    "why_v3a": "NO_BAND_ADJACENT_TO_TAG"
+   },
+   {
+    "binding_attempts": [
+     {
+      "level": "NEARBY_TAG",
+      "rank": 1,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "PAIRED_FACES",
+      "rank": 2,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "COLUMN_ENDPOINTS",
+      "rank": 3,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "CONTINUITY_WITH_ADJACENT_SPAN",
+      "rank": 4,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "SCHEDULE_WIDTH_MATCH",
+      "rank": 5,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "SAME_TYPE_MEDIAN_LENGTH",
+      "rank": 6,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "UNKNOWN",
+      "rank": 7,
+      "result": "TERMINAL_UNKNOWN"
+     }
+    ],
+    "binding_level": "UNKNOWN",
+    "floor": "1F",
+    "length_m": null,
+    "occurrence_id": "RES-1F-20-CB12",
+    "part": {
+     "best": null,
+     "high": null,
+     "low": null,
+     "origin": null,
+     "part_id": "RES-1F-20-CB12",
+     "state": "UNQUANTIFIED",
+     "unit": null,
+     "why": "NO_BAND_ADJACENT_TO_TAG: tag without a measurable band"
+    },
+    "terminal": "UNQUANTIFIED",
+    "type": "CB12",
+    "why_v3a": "NO_BAND_ADJACENT_TO_TAG"
+   },
+   {
+    "binding_attempts": [
+     {
+      "level": "NEARBY_TAG",
+      "rank": 1,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "PAIRED_FACES",
+      "rank": 2,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "COLUMN_ENDPOINTS",
+      "rank": 3,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "CONTINUITY_WITH_ADJACENT_SPAN",
+      "rank": 4,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "SCHEDULE_WIDTH_MATCH",
+      "rank": 5,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "SAME_TYPE_MEDIAN_LENGTH",
+      "rank": 6,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "UNKNOWN",
+      "rank": 7,
+      "result": "TERMINAL_UNKNOWN"
+     }
+    ],
+    "binding_level": "UNKNOWN",
+    "floor": "1F",
+    "length_m": null,
+    "occurrence_id": "RES-1F-21-CB10",
+    "part": {
+     "best": null,
+     "high": null,
+     "low": null,
+     "origin": null,
+     "part_id": "RES-1F-21-CB10",
+     "state": "UNQUANTIFIED",
+     "unit": null,
+     "why": "NO_BAND_ADJACENT_TO_TAG: tag without a measurable band"
+    },
+    "terminal": "UNQUANTIFIED",
+    "type": "CB10",
+    "why_v3a": "NO_BAND_ADJACENT_TO_TAG"
+   },
+   {
+    "binding_attempts": [
+     {
+      "level": "NEARBY_TAG",
+      "rank": 1,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "PAIRED_FACES",
+      "rank": 2,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "COLUMN_ENDPOINTS",
+      "rank": 3,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "CONTINUITY_WITH_ADJACENT_SPAN",
+      "rank": 4,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "SCHEDULE_WIDTH_MATCH",
+      "rank": 5,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "SAME_TYPE_MEDIAN_LENGTH",
+      "rank": 6,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "UNKNOWN",
+      "rank": 7,
+      "result": "TERMINAL_UNKNOWN"
+     }
+    ],
+    "binding_level": "UNKNOWN",
+    "floor": "1F",
+    "length_m": null,
+    "occurrence_id": "RES-1F-22-CB10",
+    "part": {
+     "best": null,
+     "high": null,
+     "low": null,
+     "origin": null,
+     "part_id": "RES-1F-22-CB10",
+     "state": "UNQUANTIFIED",
+     "unit": null,
+     "why": "NO_BAND_ADJACENT_TO_TAG: tag without a measurable band"
+    },
+    "terminal": "UNQUANTIFIED",
+    "type": "CB10",
+    "why_v3a": "NO_BAND_ADJACENT_TO_TAG"
+   },
+   {
+    "binding_attempts": [
+     {
+      "level": "NEARBY_TAG",
+      "rank": 1,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "PAIRED_FACES",
+      "rank": 2,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "COLUMN_ENDPOINTS",
+      "rank": 3,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "CONTINUITY_WITH_ADJACENT_SPAN",
+      "rank": 4,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "SCHEDULE_WIDTH_MATCH",
+      "rank": 5,
+      "ref": null,
+      "result": "FOUND"
+     }
+    ],
+    "binding_level": "SCHEDULE_WIDTH_MATCH",
+    "floor": "1F",
+    "length_m": 3.906,
+    "occurrence_id": "RES-1F-23-B4",
+    "part": {
+     "best": 0.2656,
+     "high": 0.306,
+     "low": 0.0,
+     "origin": "CANDIDATE",
+     "part_id": "RES-1F-23-B4",
+     "state": "CANDIDATE",
+     "unit": null,
+     "why": "NO_BAND_PARALLEL_TO_TAG: unbound tag: same-type median clear length x section"
+    },
+    "terminal": "CANDIDATE_QUANTIFIED",
+    "type": "B4",
+    "why_v3a": "NO_BAND_PARALLEL_TO_TAG"
+   },
+   {
+    "binding_attempts": [
+     {
+      "level": "NEARBY_TAG",
+      "rank": 1,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "PAIRED_FACES",
+      "rank": 2,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "COLUMN_ENDPOINTS",
+      "rank": 3,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "CONTINUITY_WITH_ADJACENT_SPAN",
+      "rank": 4,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "SCHEDULE_WIDTH_MATCH",
+      "rank": 5,
+      "ref": null,
+      "result": "FOUND"
+     }
+    ],
+    "binding_level": "SCHEDULE_WIDTH_MATCH",
+    "floor": "1F",
+    "length_m": 3.906,
+    "occurrence_id": "RES-1F-24-B4",
+    "part": {
+     "best": 0.2656,
+     "high": 0.306,
+     "low": 0.0,
+     "origin": "CANDIDATE",
+     "part_id": "RES-1F-24-B4",
+     "state": "CANDIDATE",
+     "unit": null,
+     "why": "NO_BAND_PARALLEL_TO_TAG: unbound tag: same-type median clear length x section"
+    },
+    "terminal": "CANDIDATE_QUANTIFIED",
+    "type": "B4",
+    "why_v3a": "NO_BAND_PARALLEL_TO_TAG"
+   }
+  ],
+  "s1_tag_census": {
+   "1F_ROOF|COUNTED_AND_DEFINED": 31,
+   "1F_ROOF|COUNTED_BLOCKED": 17,
+   "1F_ROOF|COUNTED_DEFINITION_PARTIAL": 9,
+   "2F_ROOF|COUNTED_AND_DEFINED": 15,
+   "2F_ROOF|COUNTED_BLOCKED": 1,
+   "ALL|COUNTED_BLOCKED": 1,
+   "FOUNDATION|COUNTED_AND_DEFINED": 2,
+   "FOUNDATION|COUNTED_DEFINITION_PARTIAL": 1,
+   "GF_ROOF|COUNTED_AND_DEFINED": 52,
+   "GF_ROOF|COUNTED_BLOCKED": 7,
+   "GF_ROOF|COUNTED_DEFINITION_PARTIAL": 12,
+   "GF|COUNTED_BLOCKED": 1,
+   "GROUND_BEAMS|COUNTED_DEFINITION_PARTIAL": 62
+  },
+  "v3b_counts": {
+   "1F": {
+    "blocked": 7,
+    "computed": 26
+   },
+   "2F_ROOF": {
+    "blocked": 0,
+    "computed": 15
+   },
+   "GF": {
+    "blocked": 18,
+    "computed": 41
+   }
+  },
+  "volume": {
+   "BEST_PROVISIONAL_QUANTITY": 45.537,
+   "HIGH_SCENARIO": null,
+   "LOWER_BOUND_QUANTITY": 37.587,
+   "LOW_SCENARIO": 41.909,
+   "UNQUANTIFIED_COMPONENTS": [
+    {
+     "part_id": "RES-GF-06-CB2",
+     "why": "NO_BAND_ADJACENT_TO_TAG: tag without a measurable band"
+    },
+    {
+     "part_id": "RES-GF-07-CB2",
+     "why": "NO_BAND_ADJACENT_TO_TAG: tag without a measurable band"
+    },
+    {
+     "part_id": "RES-GF-09-B29",
+     "why": "NO_BAND_ADJACENT_TO_TAG: tag without a measurable band"
+    },
+    {
+     "part_id": "RES-GF-10-B21",
+     "why": "NO_BAND_AT_SCHEDULED_BREADTH: tag without a measurable band"
+    },
+    {
+     "part_id": "RES-GF-15-CB5",
+     "why": "NO_BAND_ADJACENT_TO_TAG: tag without a measurable band"
+    },
+    {
+     "part_id": "RES-1F-20-CB12",
+     "why": "NO_BAND_ADJACENT_TO_TAG: tag without a measurable band"
+    },
+    {
+     "part_id": "RES-1F-21-CB10",
+     "why": "NO_BAND_ADJACENT_TO_TAG: tag without a measurable band"
+    },
+    {
+     "part_id": "RES-1F-22-CB10",
+     "why": "NO_BAND_ADJACENT_TO_TAG: tag without a measurable band"
+    }
+   ],
+   "VERIFIED_QUANTITY": 2.65,
+   "parts": 27,
+   "unit": "m3"
+  }
+ },
+ "columns": {
+  "basis": "B x D x (storey interval - slab thickness above); joints included; FOUNDATION storey from footing top to GF FFL (ground beams and ground slab exclude the column footprint - no double count)",
+  "conservation": {
+   "by_state": {
+    "BOUNDED_QUANTIFIED": 36,
+    "MEASURED_COMPLETE": 59
+   },
+   "duplicates_in": [],
+   "duplicates_out": [],
+   "missing": [],
+   "occurrences_in": 95,
+   "ok": true,
+   "orphans": [],
+   "terminal_records": 95,
+   "unquantified_without_identity": []
+  },
+  "per_floor": {
+   "1F": {
+    "column_plus_joint": {
+     "BEST_PROVISIONAL_QUANTITY": 9.858,
+     "HIGH_SCENARIO": 9.858,
+     "LOWER_BOUND_QUANTITY": 9.858,
+     "LOW_SCENARIO": 9.858,
+     "UNQUANTIFIED_COMPONENTS": [],
+     "VERIFIED_QUANTITY": 9.858,
+     "parts": 20,
+     "unit": "m3"
+    },
+    "gross_interval_m3": 10.248,
+    "occurrences": 20,
+    "terminal_states": {
+     "MEASURED_COMPLETE": 20
+    }
+   },
+   "2F": {
+    "column_plus_joint": {
+     "BEST_PROVISIONAL_QUANTITY": 3.779,
+     "HIGH_SCENARIO": 3.779,
+     "LOWER_BOUND_QUANTITY": 3.779,
+     "LOW_SCENARIO": 3.779,
+     "UNQUANTIFIED_COMPONENTS": [],
+     "VERIFIED_QUANTITY": 3.779,
+     "parts": 9,
+     "unit": "m3"
+    },
+    "gross_interval_m3": 3.948,
+    "occurrences": 9,
+    "terminal_states": {
+     "MEASURED_COMPLETE": 9
+    }
+   },
+   "FOUNDATION": {
+    "column_plus_joint": {
+     "BEST_PROVISIONAL_QUANTITY": 12.628,
+     "HIGH_SCENARIO": 15.748,
+     "LOWER_BOUND_QUANTITY": 0.0,
+     "LOW_SCENARIO": 12.628,
+     "UNQUANTIFIED_COMPONENTS": [],
+     "VERIFIED_QUANTITY": 0.0,
+     "parts": 36,
+     "unit": "m3"
+    },
+    "gross_interval_m3": 12.628,
+    "occurrences": 36,
+    "terminal_states": {
+     "BOUNDED_QUANTIFIED": 36
+    }
+   },
+   "GF": {
+    "column_plus_joint": {
+     "BEST_PROVISIONAL_QUANTITY": 19.53,
+     "HIGH_SCENARIO": 19.53,
+     "LOWER_BOUND_QUANTITY": 19.53,
+     "LOW_SCENARIO": 19.53,
+     "UNQUANTIFIED_COMPONENTS": [],
+     "VERIFIED_QUANTITY": 19.53,
+     "parts": 30,
+     "unit": "m3"
+    },
+    "gross_interval_m3": 20.25,
+    "occurrences": 30,
+    "terminal_states": {
+     "MEASURED_COMPLETE": 30
+    }
+   }
+  },
+  "records": [
+   {
+    "A_m2": 0.21,
+    "clear_below_beams_m3": null,
+    "floor": "FOUNDATION",
+    "gross_m3": 0.42,
+    "interval_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 500.0 mm (bound footing)",
+    "interval_state": "LOWER_BOUND",
+    "net_of_slab_m3": 0.42,
+    "occurrence_id": "COL-C10-X15-Y01-FOUNDATION",
+    "part": {
+     "best": 0.42,
+     "high": 0.525,
+     "low": 0.42,
+     "origin": "DERIVED",
+     "part_id": "COL-C10-X15-Y01-FOUNDATION",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "interval LOWER_BOUND"
+    },
+    "terminal_state": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "A_m2": 0.175,
+    "clear_below_beams_m3": null,
+    "floor": "GF",
+    "gross_m3": 0.787,
+    "interval_basis": "printed floor-to-floor 4.5 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 0.759,
+    "occurrence_id": "COL-C10-X15-Y01-GF",
+    "part": {
+     "best": 0.7595,
+     "high": 0.7595,
+     "low": 0.7595,
+     "origin": "DERIVED",
+     "part_id": "COL-C10-X15-Y01-GF",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   },
+   {
+    "A_m2": 0.15,
+    "clear_below_beams_m3": null,
+    "floor": "FOUNDATION",
+    "gross_m3": 0.33,
+    "interval_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 300.0 mm (bound footing)",
+    "interval_state": "LOWER_BOUND",
+    "net_of_slab_m3": 0.33,
+    "occurrence_id": "COL-C-X01-Y01-FOUNDATION",
+    "part": {
+     "best": 0.33,
+     "high": 0.405,
+     "low": 0.33,
+     "origin": "DERIVED",
+     "part_id": "COL-C-X01-Y01-FOUNDATION",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "interval LOWER_BOUND"
+    },
+    "terminal_state": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "A_m2": 0.1,
+    "clear_below_beams_m3": null,
+    "floor": "GF",
+    "gross_m3": 0.45,
+    "interval_basis": "printed floor-to-floor 4.5 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 0.434,
+    "occurrence_id": "COL-C-X01-Y01-GF",
+    "part": {
+     "best": 0.434,
+     "high": 0.434,
+     "low": 0.434,
+     "origin": "DERIVED",
+     "part_id": "COL-C-X01-Y01-GF",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   },
+   {
+    "A_m2": 0.15,
+    "clear_below_beams_m3": null,
+    "floor": "FOUNDATION",
+    "gross_m3": 0.315,
+    "interval_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 400.0 mm (bound footing)",
+    "interval_state": "LOWER_BOUND",
+    "net_of_slab_m3": 0.315,
+    "occurrence_id": "COL-C3-X04-Y01-FOUNDATION",
+    "part": {
+     "best": 0.315,
+     "high": 0.39,
+     "low": 0.315,
+     "origin": "DERIVED",
+     "part_id": "COL-C3-X04-Y01-FOUNDATION",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "interval LOWER_BOUND"
+    },
+    "terminal_state": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "A_m2": 0.125,
+    "clear_below_beams_m3": null,
+    "floor": "GF",
+    "gross_m3": 0.562,
+    "interval_basis": "printed floor-to-floor 4.5 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 0.542,
+    "occurrence_id": "COL-C3-X04-Y01-GF",
+    "part": {
+     "best": 0.5425,
+     "high": 0.5425,
+     "low": 0.5425,
+     "origin": "DERIVED",
+     "part_id": "COL-C3-X04-Y01-GF",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   },
+   {
+    "A_m2": 0.15,
+    "clear_below_beams_m3": null,
+    "floor": "FOUNDATION",
+    "gross_m3": 0.33,
+    "interval_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 300.0 mm (bound footing)",
+    "interval_state": "LOWER_BOUND",
+    "net_of_slab_m3": 0.33,
+    "occurrence_id": "COL-C-X06-Y01-FOUNDATION",
+    "part": {
+     "best": 0.33,
+     "high": 0.405,
+     "low": 0.33,
+     "origin": "DERIVED",
+     "part_id": "COL-C-X06-Y01-FOUNDATION",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "interval LOWER_BOUND"
+    },
+    "terminal_state": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "A_m2": 0.1,
+    "clear_below_beams_m3": null,
+    "floor": "GF",
+    "gross_m3": 0.45,
+    "interval_basis": "printed floor-to-floor 4.5 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 0.434,
+    "occurrence_id": "COL-C-X06-Y01-GF",
+    "part": {
+     "best": 0.434,
+     "high": 0.434,
+     "low": 0.434,
+     "origin": "DERIVED",
+     "part_id": "COL-C-X06-Y01-GF",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   },
+   {
+    "A_m2": 0.33,
+    "clear_below_beams_m3": null,
+    "floor": "FOUNDATION",
+    "gross_m3": 0.66,
+    "interval_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 500.0 mm (bound footing)",
+    "interval_state": "LOWER_BOUND",
+    "net_of_slab_m3": 0.66,
+    "occurrence_id": "COL-C11-X?-Y01@17913-7462-FOUNDATION",
+    "part": {
+     "best": 0.66,
+     "high": 0.8250000000000001,
+     "low": 0.66,
+     "origin": "DERIVED",
+     "part_id": "COL-C11-X?-Y01@17913-7462-FOUNDATION",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "interval LOWER_BOUND"
+    },
+    "terminal_state": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "A_m2": 0.275,
+    "clear_below_beams_m3": null,
+    "floor": "GF",
+    "gross_m3": 1.238,
+    "interval_basis": "printed floor-to-floor 4.5 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 1.194,
+    "occurrence_id": "COL-C11-X?-Y01@17913-7462-GF",
+    "part": {
+     "best": 1.1935,
+     "high": 1.1935,
+     "low": 1.1935,
+     "origin": "DERIVED",
+     "part_id": "COL-C11-X?-Y01@17913-7462-GF",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   },
+   {
+    "A_m2": 0.15,
+    "clear_below_beams_m3": null,
+    "floor": "FOUNDATION",
+    "gross_m3": 0.3,
+    "interval_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 500.0 mm (bound footing)",
+    "interval_state": "LOWER_BOUND",
+    "net_of_slab_m3": 0.3,
+    "occurrence_id": "COL-C3-X12-Y01-FOUNDATION",
+    "part": {
+     "best": 0.3,
+     "high": 0.375,
+     "low": 0.3,
+     "origin": "DERIVED",
+     "part_id": "COL-C3-X12-Y01-FOUNDATION",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "interval LOWER_BOUND"
+    },
+    "terminal_state": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "A_m2": 0.125,
+    "clear_below_beams_m3": null,
+    "floor": "GF",
+    "gross_m3": 0.562,
+    "interval_basis": "printed floor-to-floor 4.5 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 0.542,
+    "occurrence_id": "COL-C3-X12-Y01-GF",
+    "part": {
+     "best": 0.5425,
+     "high": 0.5425,
+     "low": 0.5425,
+     "origin": "DERIVED",
+     "part_id": "COL-C3-X12-Y01-GF",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   },
+   {
+    "A_m2": 0.15,
+    "clear_below_beams_m3": null,
+    "floor": "FOUNDATION",
+    "gross_m3": 0.3,
+    "interval_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 500.0 mm (bound footing)",
+    "interval_state": "LOWER_BOUND",
+    "net_of_slab_m3": 0.3,
+    "occurrence_id": "COL-C-X16-Y01-FOUNDATION",
+    "part": {
+     "best": 0.3,
+     "high": 0.375,
+     "low": 0.3,
+     "origin": "DERIVED",
+     "part_id": "COL-C-X16-Y01-FOUNDATION",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "interval LOWER_BOUND"
+    },
+    "terminal_state": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "A_m2": 0.1,
+    "clear_below_beams_m3": null,
+    "floor": "GF",
+    "gross_m3": 0.45,
+    "interval_basis": "printed floor-to-floor 4.5 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 0.434,
+    "occurrence_id": "COL-C-X16-Y01-GF",
+    "part": {
+     "best": 0.434,
+     "high": 0.434,
+     "low": 0.434,
+     "origin": "DERIVED",
+     "part_id": "COL-C-X16-Y01-GF",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   },
+   {
+    "A_m2": 0.14,
+    "clear_below_beams_m3": null,
+    "floor": "1F",
+    "gross_m3": 0.588,
+    "interval_basis": "printed floor-to-floor 4.2 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 0.566,
+    "occurrence_id": "COL-P.C-X08-Y02-1F",
+    "part": {
+     "best": 0.5656,
+     "high": 0.5656,
+     "low": 0.5656,
+     "origin": "DERIVED",
+     "part_id": "COL-P.C-X08-Y02-1F",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   },
+   {
+    "A_m2": 0.27,
+    "clear_below_beams_m3": null,
+    "floor": "FOUNDATION",
+    "gross_m3": 0.54,
+    "interval_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 500.0 mm (bound footing)",
+    "interval_state": "LOWER_BOUND",
+    "net_of_slab_m3": 0.54,
+    "occurrence_id": "COL-C8-X12-Y02-FOUNDATION",
+    "part": {
+     "best": 0.54,
+     "high": 0.675,
+     "low": 0.54,
+     "origin": "DERIVED",
+     "part_id": "COL-C8-X12-Y02-FOUNDATION",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "interval LOWER_BOUND"
+    },
+    "terminal_state": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "A_m2": 0.225,
+    "clear_below_beams_m3": null,
+    "floor": "GF",
+    "gross_m3": 1.012,
+    "interval_basis": "printed floor-to-floor 4.5 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 0.977,
+    "occurrence_id": "COL-C8-X12-Y02-GF",
+    "part": {
+     "best": 0.9765,
+     "high": 0.9765,
+     "low": 0.9765,
+     "origin": "DERIVED",
+     "part_id": "COL-C8-X12-Y02-GF",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   },
+   {
+    "A_m2": 0.18,
+    "clear_below_beams_m3": null,
+    "floor": "1F",
+    "gross_m3": 0.756,
+    "interval_basis": "printed floor-to-floor 4.2 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 0.727,
+    "occurrence_id": "COL-C8-X12-Y02-1F",
+    "part": {
+     "best": 0.7272000000000001,
+     "high": 0.7272000000000001,
+     "low": 0.7272000000000001,
+     "origin": "DERIVED",
+     "part_id": "COL-C8-X12-Y02-1F",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   },
+   {
+    "A_m2": 0.1,
+    "clear_below_beams_m3": null,
+    "floor": "1F",
+    "gross_m3": 0.42,
+    "interval_basis": "printed floor-to-floor 4.2 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 0.404,
+    "occurrence_id": "COL-P.C-X15-Y02-1F",
+    "part": {
+     "best": 0.404,
+     "high": 0.404,
+     "low": 0.404,
+     "origin": "DERIVED",
+     "part_id": "COL-P.C-X15-Y02-1F",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   },
+   {
+    "A_m2": 0.18,
+    "clear_below_beams_m3": null,
+    "floor": "FOUNDATION",
+    "gross_m3": 0.378,
+    "interval_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 400.0 mm (bound footing)",
+    "interval_state": "LOWER_BOUND",
+    "net_of_slab_m3": 0.378,
+    "occurrence_id": "COL-C5-X14-Y02-FOUNDATION",
+    "part": {
+     "best": 0.378,
+     "high": 0.46799999999999997,
+     "low": 0.378,
+     "origin": "DERIVED",
+     "part_id": "COL-C5-X14-Y02-FOUNDATION",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "interval LOWER_BOUND"
+    },
+    "terminal_state": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "A_m2": 0.15,
+    "clear_below_beams_m3": null,
+    "floor": "GF",
+    "gross_m3": 0.675,
+    "interval_basis": "printed floor-to-floor 4.5 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 0.651,
+    "occurrence_id": "COL-C5-X14-Y02-GF",
+    "part": {
+     "best": 0.6509999999999999,
+     "high": 0.6509999999999999,
+     "low": 0.6509999999999999,
+     "origin": "DERIVED",
+     "part_id": "COL-C5-X14-Y02-GF",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   },
+   {
+    "A_m2": 0.1,
+    "clear_below_beams_m3": null,
+    "floor": "1F",
+    "gross_m3": 0.42,
+    "interval_basis": "printed floor-to-floor 4.2 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 0.404,
+    "occurrence_id": "COL-C5-X14-Y02-1F",
+    "part": {
+     "best": 0.404,
+     "high": 0.404,
+     "low": 0.404,
+     "origin": "DERIVED",
+     "part_id": "COL-C5-X14-Y02-1F",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   },
+   {
+    "A_m2": 0.15,
+    "clear_below_beams_m3": null,
+    "floor": "FOUNDATION",
+    "gross_m3": 0.33,
+    "interval_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 300.0 mm (bound footing)",
+    "interval_state": "LOWER_BOUND",
+    "net_of_slab_m3": 0.33,
+    "occurrence_id": "COL-C3-X05-Y02-FOUNDATION",
+    "part": {
+     "best": 0.33,
+     "high": 0.405,
+     "low": 0.33,
+     "origin": "DERIVED",
+     "part_id": "COL-C3-X05-Y02-FOUNDATION",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "interval LOWER_BOUND"
+    },
+    "terminal_state": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "A_m2": 0.125,
+    "clear_below_beams_m3": null,
+    "floor": "GF",
+    "gross_m3": 0.562,
+    "interval_basis": "printed floor-to-floor 4.5 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 0.542,
+    "occurrence_id": "COL-C3-X05-Y02-GF",
+    "part": {
+     "best": 0.5425,
+     "high": 0.5425,
+     "low": 0.5425,
+     "origin": "DERIVED",
+     "part_id": "COL-C3-X05-Y02-GF",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   },
+   {
+    "A_m2": 0.1,
+    "clear_below_beams_m3": null,
+    "floor": "1F",
+    "gross_m3": 0.42,
+    "interval_basis": "printed floor-to-floor 4.2 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 0.404,
+    "occurrence_id": "COL-C3-X05-Y02-1F",
+    "part": {
+     "best": 0.404,
+     "high": 0.404,
+     "low": 0.404,
+     "origin": "DERIVED",
+     "part_id": "COL-C3-X05-Y02-1F",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   },
+   {
+    "A_m2": 0.09,
+    "clear_below_beams_m3": null,
+    "floor": "FOUNDATION",
+    "gross_m3": 0.162,
+    "interval_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 700.0 mm (deepest scheduled footing - unbound)",
+    "interval_state": "BOUNDED",
+    "net_of_slab_m3": 0.162,
+    "occurrence_id": "COL-CN-X16-Y03-FOUNDATION",
+    "part": {
+     "best": 0.162,
+     "high": 0.207,
+     "low": 0.162,
+     "origin": "DERIVED",
+     "part_id": "COL-CN-X16-Y03-FOUNDATION",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "interval LOWER_BOUND"
+    },
+    "terminal_state": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "A_m2": 0.18,
+    "clear_below_beams_m3": null,
+    "floor": "FOUNDATION",
+    "gross_m3": 0.36,
+    "interval_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 500.0 mm (bound footing)",
+    "interval_state": "LOWER_BOUND",
+    "net_of_slab_m3": 0.36,
+    "occurrence_id": "COL-C5-X05-Y04-FOUNDATION",
+    "part": {
+     "best": 0.36,
+     "high": 0.44999999999999996,
+     "low": 0.36,
+     "origin": "DERIVED",
+     "part_id": "COL-C5-X05-Y04-FOUNDATION",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "interval LOWER_BOUND"
+    },
+    "terminal_state": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "A_m2": 0.15,
+    "clear_below_beams_m3": null,
+    "floor": "GF",
+    "gross_m3": 0.675,
+    "interval_basis": "printed floor-to-floor 4.5 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 0.651,
+    "occurrence_id": "COL-C5-X05-Y04-GF",
+    "part": {
+     "best": 0.6509999999999999,
+     "high": 0.6509999999999999,
+     "low": 0.6509999999999999,
+     "origin": "DERIVED",
+     "part_id": "COL-C5-X05-Y04-GF",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   },
+   {
+    "A_m2": 0.1,
+    "clear_below_beams_m3": null,
+    "floor": "1F",
+    "gross_m3": 0.42,
+    "interval_basis": "printed floor-to-floor 4.2 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 0.404,
+    "occurrence_id": "COL-C5-X05-Y04-1F",
+    "part": {
+     "best": 0.404,
+     "high": 0.404,
+     "low": 0.404,
+     "origin": "DERIVED",
+     "part_id": "COL-C5-X05-Y04-1F",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   },
+   {
+    "A_m2": 0.15,
+    "clear_below_beams_m3": null,
+    "floor": "FOUNDATION",
+    "gross_m3": 0.33,
+    "interval_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 300.0 mm (bound footing)",
+    "interval_state": "LOWER_BOUND",
+    "net_of_slab_m3": 0.33,
+    "occurrence_id": "COL-C3-X03-Y04-FOUNDATION",
+    "part": {
+     "best": 0.33,
+     "high": 0.405,
+     "low": 0.33,
+     "origin": "DERIVED",
+     "part_id": "COL-C3-X03-Y04-FOUNDATION",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "interval LOWER_BOUND"
+    },
+    "terminal_state": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "A_m2": 0.125,
+    "clear_below_beams_m3": null,
+    "floor": "GF",
+    "gross_m3": 0.562,
+    "interval_basis": "printed floor-to-floor 4.5 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 0.542,
+    "occurrence_id": "COL-C3-X03-Y04-GF",
+    "part": {
+     "best": 0.5425,
+     "high": 0.5425,
+     "low": 0.5425,
+     "origin": "DERIVED",
+     "part_id": "COL-C3-X03-Y04-GF",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   },
+   {
+    "A_m2": 0.33,
+    "clear_below_beams_m3": null,
+    "floor": "FOUNDATION",
+    "gross_m3": 0.66,
+    "interval_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 500.0 mm (bound footing)",
+    "interval_state": "LOWER_BOUND",
+    "net_of_slab_m3": 0.66,
+    "occurrence_id": "COL-C11-X06-Y04-FOUNDATION",
+    "part": {
+     "best": 0.66,
+     "high": 0.8250000000000001,
+     "low": 0.66,
+     "origin": "DERIVED",
+     "part_id": "COL-C11-X06-Y04-FOUNDATION",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "interval LOWER_BOUND"
+    },
+    "terminal_state": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "A_m2": 0.275,
+    "clear_below_beams_m3": null,
+    "floor": "GF",
+    "gross_m3": 1.238,
+    "interval_basis": "printed floor-to-floor 4.5 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 1.194,
+    "occurrence_id": "COL-C11-X06-Y04-GF",
+    "part": {
+     "best": 1.1935,
+     "high": 1.1935,
+     "low": 1.1935,
+     "origin": "DERIVED",
+     "part_id": "COL-C11-X06-Y04-GF",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   },
+   {
+    "A_m2": 0.21,
+    "clear_below_beams_m3": null,
+    "floor": "FOUNDATION",
+    "gross_m3": 0.42,
+    "interval_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 500.0 mm (bound footing)",
+    "interval_state": "LOWER_BOUND",
+    "net_of_slab_m3": 0.42,
+    "occurrence_id": "COL-C6-X08-Y04-FOUNDATION",
+    "part": {
+     "best": 0.42,
+     "high": 0.525,
+     "low": 0.42,
+     "origin": "DERIVED",
+     "part_id": "COL-C6-X08-Y04-FOUNDATION",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "interval LOWER_BOUND"
+    },
+    "terminal_state": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "A_m2": 0.175,
+    "clear_below_beams_m3": null,
+    "floor": "GF",
+    "gross_m3": 0.787,
+    "interval_basis": "printed floor-to-floor 4.5 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 0.759,
+    "occurrence_id": "COL-C6-X08-Y04-GF",
+    "part": {
+     "best": 0.7595,
+     "high": 0.7595,
+     "low": 0.7595,
+     "origin": "DERIVED",
+     "part_id": "COL-C6-X08-Y04-GF",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   },
+   {
+    "A_m2": 0.12,
+    "clear_below_beams_m3": null,
+    "floor": "1F",
+    "gross_m3": 0.504,
+    "interval_basis": "printed floor-to-floor 4.2 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 0.485,
+    "occurrence_id": "COL-C6-X08-Y04-1F",
+    "part": {
+     "best": 0.4848,
+     "high": 0.4848,
+     "low": 0.4848,
+     "origin": "DERIVED",
+     "part_id": "COL-C6-X08-Y04-1F",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   },
+   {
+    "A_m2": 0.09,
+    "clear_below_beams_m3": null,
+    "floor": "FOUNDATION",
+    "gross_m3": 0.162,
+    "interval_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 700.0 mm (deepest scheduled footing - unbound)",
+    "interval_state": "BOUNDED",
+    "net_of_slab_m3": 0.162,
+    "occurrence_id": "COL-CN-X?-Y?@24058-12787-FOUNDATION",
+    "part": {
+     "best": 0.162,
+     "high": 0.207,
+     "low": 0.162,
+     "origin": "DERIVED",
+     "part_id": "COL-CN-X?-Y?@24058-12787-FOUNDATION",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "interval LOWER_BOUND"
+    },
+    "terminal_state": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "A_m2": 0.09,
+    "clear_below_beams_m3": null,
+    "floor": "FOUNDATION",
+    "gross_m3": 0.162,
+    "interval_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 700.0 mm (deepest scheduled footing - unbound)",
+    "interval_state": "BOUNDED",
+    "net_of_slab_m3": 0.162,
+    "occurrence_id": "COL-CN-X?-Y?@28583-12787-FOUNDATION",
+    "part": {
+     "best": 0.162,
+     "high": 0.207,
+     "low": 0.162,
+     "origin": "DERIVED",
+     "part_id": "COL-CN-X?-Y?@28583-12787-FOUNDATION",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "interval LOWER_BOUND"
+    },
+    "terminal_state": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "A_m2": 0.15,
+    "clear_below_beams_m3": null,
+    "floor": "FOUNDATION",
+    "gross_m3": 0.33,
+    "interval_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 300.0 mm (bound footing)",
+    "interval_state": "LOWER_BOUND",
+    "net_of_slab_m3": 0.33,
+    "occurrence_id": "COL-C-X01-Y05-FOUNDATION",
+    "part": {
+     "best": 0.33,
+     "high": 0.405,
+     "low": 0.33,
+     "origin": "DERIVED",
+     "part_id": "COL-C-X01-Y05-FOUNDATION",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "interval LOWER_BOUND"
+    },
+    "terminal_state": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "A_m2": 0.1,
+    "clear_below_beams_m3": null,
+    "floor": "GF",
+    "gross_m3": 0.45,
+    "interval_basis": "printed floor-to-floor 4.5 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 0.434,
+    "occurrence_id": "COL-C-X01-Y05-GF",
+    "part": {
+     "best": 0.434,
+     "high": 0.434,
+     "low": 0.434,
+     "origin": "DERIVED",
+     "part_id": "COL-C-X01-Y05-GF",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   },
+   {
+    "A_m2": 0.15,
+    "clear_below_beams_m3": null,
+    "floor": "FOUNDATION",
+    "gross_m3": 0.33,
+    "interval_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 300.0 mm (bound footing)",
+    "interval_state": "LOWER_BOUND",
+    "net_of_slab_m3": 0.33,
+    "occurrence_id": "COL-C-X02-Y05-FOUNDATION",
+    "part": {
+     "best": 0.33,
+     "high": 0.405,
+     "low": 0.33,
+     "origin": "DERIVED",
+     "part_id": "COL-C-X02-Y05-FOUNDATION",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "interval LOWER_BOUND"
+    },
+    "terminal_state": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "A_m2": 0.1,
+    "clear_below_beams_m3": null,
+    "floor": "GF",
+    "gross_m3": 0.45,
+    "interval_basis": "printed floor-to-floor 4.5 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 0.434,
+    "occurrence_id": "COL-C-X02-Y05-GF",
+    "part": {
+     "best": 0.434,
+     "high": 0.434,
+     "low": 0.434,
+     "origin": "DERIVED",
+     "part_id": "COL-C-X02-Y05-GF",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   },
+   {
+    "A_m2": 0.15,
+    "clear_below_beams_m3": null,
+    "floor": "FOUNDATION",
+    "gross_m3": 0.3,
+    "interval_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 500.0 mm (bound footing)",
+    "interval_state": "LOWER_BOUND",
+    "net_of_slab_m3": 0.3,
+    "occurrence_id": "COL-C3-X16-Y06-FOUNDATION",
+    "part": {
+     "best": 0.3,
+     "high": 0.375,
+     "low": 0.3,
+     "origin": "DERIVED",
+     "part_id": "COL-C3-X16-Y06-FOUNDATION",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "interval LOWER_BOUND"
+    },
+    "terminal_state": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "A_m2": 0.125,
+    "clear_below_beams_m3": null,
+    "floor": "GF",
+    "gross_m3": 0.562,
+    "interval_basis": "printed floor-to-floor 4.5 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 0.542,
+    "occurrence_id": "COL-C3-X16-Y06-GF",
+    "part": {
+     "best": 0.5425,
+     "high": 0.5425,
+     "low": 0.5425,
+     "origin": "DERIVED",
+     "part_id": "COL-C3-X16-Y06-GF",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   },
+   {
+    "A_m2": 0.27,
+    "clear_below_beams_m3": null,
+    "floor": "FOUNDATION",
+    "gross_m3": 0.54,
+    "interval_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 500.0 mm (bound footing)",
+    "interval_state": "LOWER_BOUND",
+    "net_of_slab_m3": 0.54,
+    "occurrence_id": "COL-C8-X15-Y06-FOUNDATION",
+    "part": {
+     "best": 0.54,
+     "high": 0.675,
+     "low": 0.54,
+     "origin": "DERIVED",
+     "part_id": "COL-C8-X15-Y06-FOUNDATION",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "interval LOWER_BOUND"
+    },
+    "terminal_state": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "A_m2": 0.225,
+    "clear_below_beams_m3": null,
+    "floor": "GF",
+    "gross_m3": 1.012,
+    "interval_basis": "printed floor-to-floor 4.5 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 0.977,
+    "occurrence_id": "COL-C8-X15-Y06-GF",
+    "part": {
+     "best": 0.9765,
+     "high": 0.9765,
+     "low": 0.9765,
+     "origin": "DERIVED",
+     "part_id": "COL-C8-X15-Y06-GF",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   },
+   {
+    "A_m2": 0.18,
+    "clear_below_beams_m3": null,
+    "floor": "1F",
+    "gross_m3": 0.756,
+    "interval_basis": "printed floor-to-floor 4.2 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 0.727,
+    "occurrence_id": "COL-C8-X15-Y06-1F",
+    "part": {
+     "best": 0.7272000000000001,
+     "high": 0.7272000000000001,
+     "low": 0.7272000000000001,
+     "origin": "DERIVED",
+     "part_id": "COL-C8-X15-Y06-1F",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   },
+   {
+    "A_m2": 0.15,
+    "clear_below_beams_m3": null,
+    "floor": "FOUNDATION",
+    "gross_m3": 0.292,
+    "interval_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 550.0 mm (bound footing)",
+    "interval_state": "LOWER_BOUND",
+    "net_of_slab_m3": 0.292,
+    "occurrence_id": "COL-C2-X09-Y07-FOUNDATION",
+    "part": {
+     "best": 0.2925,
+     "high": 0.3675,
+     "low": 0.2925,
+     "origin": "DERIVED",
+     "part_id": "COL-C2-X09-Y07-FOUNDATION",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "interval LOWER_BOUND"
+    },
+    "terminal_state": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "A_m2": 0.1,
+    "clear_below_beams_m3": null,
+    "floor": "GF",
+    "gross_m3": 0.45,
+    "interval_basis": "printed floor-to-floor 4.5 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 0.434,
+    "occurrence_id": "COL-C2-X09-Y07-GF",
+    "part": {
+     "best": 0.434,
+     "high": 0.434,
+     "low": 0.434,
+     "origin": "DERIVED",
+     "part_id": "COL-C2-X09-Y07-GF",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   },
+   {
+    "A_m2": 0.1,
+    "clear_below_beams_m3": null,
+    "floor": "1F",
+    "gross_m3": 0.42,
+    "interval_basis": "printed floor-to-floor 4.2 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 0.404,
+    "occurrence_id": "COL-C2-X09-Y07-1F",
+    "part": {
+     "best": 0.404,
+     "high": 0.404,
+     "low": 0.404,
+     "origin": "DERIVED",
+     "part_id": "COL-C2-X09-Y07-1F",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   },
+   {
+    "A_m2": 0.1,
+    "clear_below_beams_m3": null,
+    "floor": "2F",
+    "gross_m3": 0.42,
+    "interval_basis": "printed floor-to-floor 4.2 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 0.402,
+    "occurrence_id": "COL-C2-X09-Y07-2F",
+    "part": {
+     "best": 0.4020000000000001,
+     "high": 0.4020000000000001,
+     "low": 0.4020000000000001,
+     "origin": "DERIVED",
+     "part_id": "COL-C2-X09-Y07-2F",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   },
+   {
+    "A_m2": 0.09,
+    "clear_below_beams_m3": null,
+    "floor": "FOUNDATION",
+    "gross_m3": 0.18,
+    "interval_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 500.0 mm (bound footing)",
+    "interval_state": "LOWER_BOUND",
+    "net_of_slab_m3": 0.18,
+    "occurrence_id": "COL-CN-X15-Y?@31208-15726-FOUNDATION",
+    "part": {
+     "best": 0.18,
+     "high": 0.22499999999999998,
+     "low": 0.18,
+     "origin": "DERIVED",
+     "part_id": "COL-CN-X15-Y?@31208-15726-FOUNDATION",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "interval LOWER_BOUND"
+    },
+    "terminal_state": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "A_m2": 0.3,
+    "clear_below_beams_m3": null,
+    "floor": "FOUNDATION",
+    "gross_m3": 0.585,
+    "interval_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 550.0 mm (bound footing)",
+    "interval_state": "LOWER_BOUND",
+    "net_of_slab_m3": 0.585,
+    "occurrence_id": "COL-C9-X10-Y07-FOUNDATION",
+    "part": {
+     "best": 0.585,
+     "high": 0.735,
+     "low": 0.585,
+     "origin": "DERIVED",
+     "part_id": "COL-C9-X10-Y07-FOUNDATION",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "interval LOWER_BOUND"
+    },
+    "terminal_state": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "A_m2": 0.25,
+    "clear_below_beams_m3": null,
+    "floor": "GF",
+    "gross_m3": 1.125,
+    "interval_basis": "printed floor-to-floor 4.5 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 1.085,
+    "occurrence_id": "COL-C9-X10-Y07-GF",
+    "part": {
+     "best": 1.085,
+     "high": 1.085,
+     "low": 1.085,
+     "origin": "DERIVED",
+     "part_id": "COL-C9-X10-Y07-GF",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   },
+   {
+    "A_m2": 0.18,
+    "clear_below_beams_m3": null,
+    "floor": "1F",
+    "gross_m3": 0.756,
+    "interval_basis": "printed floor-to-floor 4.2 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 0.727,
+    "occurrence_id": "COL-C9-X10-Y07-1F",
+    "part": {
+     "best": 0.7272000000000001,
+     "high": 0.7272000000000001,
+     "low": 0.7272000000000001,
+     "origin": "DERIVED",
+     "part_id": "COL-C9-X10-Y07-1F",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   },
+   {
+    "A_m2": 0.14,
+    "clear_below_beams_m3": null,
+    "floor": "2F",
+    "gross_m3": 0.588,
+    "interval_basis": "printed floor-to-floor 4.2 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 0.563,
+    "occurrence_id": "COL-C9-X10-Y07-2F",
+    "part": {
+     "best": 0.5628,
+     "high": 0.5628,
+     "low": 0.5628,
+     "origin": "DERIVED",
+     "part_id": "COL-C9-X10-Y07-2F",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   },
+   {
+    "A_m2": 0.1,
+    "clear_below_beams_m3": null,
+    "floor": "2F",
+    "gross_m3": 0.42,
+    "interval_basis": "printed floor-to-floor 4.2 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 0.402,
+    "occurrence_id": "COL-P.C-X?-Y?@24888-15994-2F",
+    "part": {
+     "best": 0.4020000000000001,
+     "high": 0.4020000000000001,
+     "low": 0.4020000000000001,
+     "origin": "DERIVED",
+     "part_id": "COL-P.C-X?-Y?@24888-15994-2F",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   },
+   {
+    "A_m2": 0.24,
+    "clear_below_beams_m3": null,
+    "floor": "FOUNDATION",
+    "gross_m3": 0.432,
+    "interval_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 700.0 mm (bound footing)",
+    "interval_state": "LOWER_BOUND",
+    "net_of_slab_m3": 0.432,
+    "occurrence_id": "COL-C7-X07-Y?@15888-16162-FOUNDATION",
+    "part": {
+     "best": 0.432,
+     "high": 0.5519999999999999,
+     "low": 0.432,
+     "origin": "DERIVED",
+     "part_id": "COL-C7-X07-Y?@15888-16162-FOUNDATION",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "interval LOWER_BOUND"
+    },
+    "terminal_state": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "A_m2": 0.2,
+    "clear_below_beams_m3": null,
+    "floor": "GF",
+    "gross_m3": 0.9,
+    "interval_basis": "printed floor-to-floor 4.5 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 0.868,
+    "occurrence_id": "COL-C7-X07-Y?@15888-16162-GF",
+    "part": {
+     "best": 0.868,
+     "high": 0.868,
+     "low": 0.868,
+     "origin": "DERIVED",
+     "part_id": "COL-C7-X07-Y?@15888-16162-GF",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   },
+   {
+    "A_m2": 0.16,
+    "clear_below_beams_m3": null,
+    "floor": "1F",
+    "gross_m3": 0.672,
+    "interval_basis": "printed floor-to-floor 4.2 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 0.646,
+    "occurrence_id": "COL-C7-X07-Y?@15888-16162-1F",
+    "part": {
+     "best": 0.6464000000000001,
+     "high": 0.6464000000000001,
+     "low": 0.6464000000000001,
+     "origin": "DERIVED",
+     "part_id": "COL-C7-X07-Y?@15888-16162-1F",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   },
+   {
+    "A_m2": 0.3,
+    "clear_below_beams_m3": null,
+    "floor": "FOUNDATION",
+    "gross_m3": 0.585,
+    "interval_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 550.0 mm (bound footing)",
+    "interval_state": "LOWER_BOUND",
+    "net_of_slab_m3": 0.585,
+    "occurrence_id": "COL-C9-X13-Y08-FOUNDATION",
+    "part": {
+     "best": 0.585,
+     "high": 0.735,
+     "low": 0.585,
+     "origin": "DERIVED",
+     "part_id": "COL-C9-X13-Y08-FOUNDATION",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "interval LOWER_BOUND"
+    },
+    "terminal_state": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "A_m2": 0.25,
+    "clear_below_beams_m3": null,
+    "floor": "GF",
+    "gross_m3": 1.125,
+    "interval_basis": "printed floor-to-floor 4.5 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 1.085,
+    "occurrence_id": "COL-C9-X13-Y08-GF",
+    "part": {
+     "best": 1.085,
+     "high": 1.085,
+     "low": 1.085,
+     "origin": "DERIVED",
+     "part_id": "COL-C9-X13-Y08-GF",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   },
+   {
+    "A_m2": 0.18,
+    "clear_below_beams_m3": null,
+    "floor": "1F",
+    "gross_m3": 0.756,
+    "interval_basis": "printed floor-to-floor 4.2 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 0.727,
+    "occurrence_id": "COL-C9-X13-Y08-1F",
+    "part": {
+     "best": 0.7272000000000001,
+     "high": 0.7272000000000001,
+     "low": 0.7272000000000001,
+     "origin": "DERIVED",
+     "part_id": "COL-C9-X13-Y08-1F",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   },
+   {
+    "A_m2": 0.15,
+    "clear_below_beams_m3": null,
+    "floor": "FOUNDATION",
+    "gross_m3": 0.27,
+    "interval_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 700.0 mm (bound footing)",
+    "interval_state": "LOWER_BOUND",
+    "net_of_slab_m3": 0.27,
+    "occurrence_id": "COL-C3-X08-Y09-FOUNDATION",
+    "part": {
+     "best": 0.27,
+     "high": 0.345,
+     "low": 0.27,
+     "origin": "DERIVED",
+     "part_id": "COL-C3-X08-Y09-FOUNDATION",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "interval LOWER_BOUND"
+    },
+    "terminal_state": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "A_m2": 0.125,
+    "clear_below_beams_m3": null,
+    "floor": "GF",
+    "gross_m3": 0.562,
+    "interval_basis": "printed floor-to-floor 4.5 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 0.542,
+    "occurrence_id": "COL-C3-X08-Y09-GF",
+    "part": {
+     "best": 0.5425,
+     "high": 0.5425,
+     "low": 0.5425,
+     "origin": "DERIVED",
+     "part_id": "COL-C3-X08-Y09-GF",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   },
+   {
+    "A_m2": 0.1,
+    "clear_below_beams_m3": null,
+    "floor": "1F",
+    "gross_m3": 0.42,
+    "interval_basis": "printed floor-to-floor 4.2 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 0.404,
+    "occurrence_id": "COL-C3-X08-Y09-1F",
+    "part": {
+     "best": 0.404,
+     "high": 0.404,
+     "low": 0.404,
+     "origin": "DERIVED",
+     "part_id": "COL-C3-X08-Y09-1F",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   },
+   {
+    "A_m2": 0.1,
+    "clear_below_beams_m3": null,
+    "floor": "2F",
+    "gross_m3": 0.42,
+    "interval_basis": "printed floor-to-floor 4.2 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 0.402,
+    "occurrence_id": "COL-C3-X08-Y09-2F",
+    "part": {
+     "best": 0.4020000000000001,
+     "high": 0.4020000000000001,
+     "low": 0.4020000000000001,
+     "origin": "DERIVED",
+     "part_id": "COL-C3-X08-Y09-2F",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   },
+   {
+    "A_m2": 0.15,
+    "clear_below_beams_m3": null,
+    "floor": "FOUNDATION",
+    "gross_m3": 0.292,
+    "interval_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 550.0 mm (bound footing)",
+    "interval_state": "LOWER_BOUND",
+    "net_of_slab_m3": 0.292,
+    "occurrence_id": "COL-C1-X09-Y09-FOUNDATION",
+    "part": {
+     "best": 0.2925,
+     "high": 0.3675,
+     "low": 0.2925,
+     "origin": "DERIVED",
+     "part_id": "COL-C1-X09-Y09-FOUNDATION",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "interval LOWER_BOUND"
+    },
+    "terminal_state": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "A_m2": 0.1,
+    "clear_below_beams_m3": null,
+    "floor": "GF",
+    "gross_m3": 0.45,
+    "interval_basis": "printed floor-to-floor 4.5 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 0.434,
+    "occurrence_id": "COL-C1-X09-Y09-GF",
+    "part": {
+     "best": 0.434,
+     "high": 0.434,
+     "low": 0.434,
+     "origin": "DERIVED",
+     "part_id": "COL-C1-X09-Y09-GF",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   },
+   {
+    "A_m2": 0.1,
+    "clear_below_beams_m3": null,
+    "floor": "1F",
+    "gross_m3": 0.42,
+    "interval_basis": "printed floor-to-floor 4.2 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 0.404,
+    "occurrence_id": "COL-C1-X09-Y09-1F",
+    "part": {
+     "best": 0.404,
+     "high": 0.404,
+     "low": 0.404,
+     "origin": "DERIVED",
+     "part_id": "COL-C1-X09-Y09-1F",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   },
+   {
+    "A_m2": 0.1,
+    "clear_below_beams_m3": null,
+    "floor": "2F",
+    "gross_m3": 0.42,
+    "interval_basis": "printed floor-to-floor 4.2 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 0.402,
+    "occurrence_id": "COL-C1-X09-Y09-2F",
+    "part": {
+     "best": 0.4020000000000001,
+     "high": 0.4020000000000001,
+     "low": 0.4020000000000001,
+     "origin": "DERIVED",
+     "part_id": "COL-C1-X09-Y09-2F",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   },
+   {
+    "A_m2": 0.15,
+    "clear_below_beams_m3": null,
+    "floor": "FOUNDATION",
+    "gross_m3": 0.292,
+    "interval_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 550.0 mm (bound footing)",
+    "interval_state": "LOWER_BOUND",
+    "net_of_slab_m3": 0.292,
+    "occurrence_id": "COL-C2-X10-Y09-FOUNDATION",
+    "part": {
+     "best": 0.2925,
+     "high": 0.3675,
+     "low": 0.2925,
+     "origin": "DERIVED",
+     "part_id": "COL-C2-X10-Y09-FOUNDATION",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "interval LOWER_BOUND"
+    },
+    "terminal_state": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "A_m2": 0.1,
+    "clear_below_beams_m3": null,
+    "floor": "GF",
+    "gross_m3": 0.45,
+    "interval_basis": "printed floor-to-floor 4.5 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 0.434,
+    "occurrence_id": "COL-C2-X10-Y09-GF",
+    "part": {
+     "best": 0.434,
+     "high": 0.434,
+     "low": 0.434,
+     "origin": "DERIVED",
+     "part_id": "COL-C2-X10-Y09-GF",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   },
+   {
+    "A_m2": 0.1,
+    "clear_below_beams_m3": null,
+    "floor": "1F",
+    "gross_m3": 0.42,
+    "interval_basis": "printed floor-to-floor 4.2 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 0.404,
+    "occurrence_id": "COL-C2-X10-Y09-1F",
+    "part": {
+     "best": 0.404,
+     "high": 0.404,
+     "low": 0.404,
+     "origin": "DERIVED",
+     "part_id": "COL-C2-X10-Y09-1F",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   },
+   {
+    "A_m2": 0.1,
+    "clear_below_beams_m3": null,
+    "floor": "2F",
+    "gross_m3": 0.42,
+    "interval_basis": "printed floor-to-floor 4.2 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 0.402,
+    "occurrence_id": "COL-C2-X10-Y09-2F",
+    "part": {
+     "best": 0.4020000000000001,
+     "high": 0.4020000000000001,
+     "low": 0.4020000000000001,
+     "origin": "DERIVED",
+     "part_id": "COL-C2-X10-Y09-2F",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   },
+   {
+    "A_m2": 0.09,
+    "clear_below_beams_m3": null,
+    "floor": "FOUNDATION",
+    "gross_m3": 0.198,
+    "interval_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 300.0 mm (bound footing)",
+    "interval_state": "LOWER_BOUND",
+    "net_of_slab_m3": 0.198,
+    "occurrence_id": "COL-CN-X?-Y?@29108-18112-FOUNDATION",
+    "part": {
+     "best": 0.198,
+     "high": 0.243,
+     "low": 0.198,
+     "origin": "DERIVED",
+     "part_id": "COL-CN-X?-Y?@29108-18112-FOUNDATION",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "interval LOWER_BOUND"
+    },
+    "terminal_state": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "A_m2": 0.09,
+    "clear_below_beams_m3": null,
+    "floor": "FOUNDATION",
+    "gross_m3": 0.189,
+    "interval_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 400.0 mm (bound footing)",
+    "interval_state": "LOWER_BOUND",
+    "net_of_slab_m3": 0.189,
+    "occurrence_id": "COL-CN-X?-Y10@31108-20498-FOUNDATION",
+    "part": {
+     "best": 0.189,
+     "high": 0.23399999999999999,
+     "low": 0.189,
+     "origin": "DERIVED",
+     "part_id": "COL-CN-X?-Y10@31108-20498-FOUNDATION",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "interval LOWER_BOUND"
+    },
+    "terminal_state": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "A_m2": 0.15,
+    "clear_below_beams_m3": null,
+    "floor": "FOUNDATION",
+    "gross_m3": 0.322,
+    "interval_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 350.0 mm (bound footing)",
+    "interval_state": "LOWER_BOUND",
+    "net_of_slab_m3": 0.322,
+    "occurrence_id": "COL-C2-X08-Y10-FOUNDATION",
+    "part": {
+     "best": 0.32249999999999995,
+     "high": 0.39749999999999996,
+     "low": 0.32249999999999995,
+     "origin": "DERIVED",
+     "part_id": "COL-C2-X08-Y10-FOUNDATION",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "interval LOWER_BOUND"
+    },
+    "terminal_state": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "A_m2": 0.1,
+    "clear_below_beams_m3": null,
+    "floor": "GF",
+    "gross_m3": 0.45,
+    "interval_basis": "printed floor-to-floor 4.5 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 0.434,
+    "occurrence_id": "COL-C2-X08-Y10-GF",
+    "part": {
+     "best": 0.434,
+     "high": 0.434,
+     "low": 0.434,
+     "origin": "DERIVED",
+     "part_id": "COL-C2-X08-Y10-GF",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   },
+   {
+    "A_m2": 0.1,
+    "clear_below_beams_m3": null,
+    "floor": "1F",
+    "gross_m3": 0.42,
+    "interval_basis": "printed floor-to-floor 4.2 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 0.404,
+    "occurrence_id": "COL-C2-X08-Y10-1F",
+    "part": {
+     "best": 0.404,
+     "high": 0.404,
+     "low": 0.404,
+     "origin": "DERIVED",
+     "part_id": "COL-C2-X08-Y10-1F",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   },
+   {
+    "A_m2": 0.1,
+    "clear_below_beams_m3": null,
+    "floor": "2F",
+    "gross_m3": 0.42,
+    "interval_basis": "printed floor-to-floor 4.2 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 0.402,
+    "occurrence_id": "COL-C2-X08-Y10-2F",
+    "part": {
+     "best": 0.4020000000000001,
+     "high": 0.4020000000000001,
+     "low": 0.4020000000000001,
+     "origin": "DERIVED",
+     "part_id": "COL-C2-X08-Y10-2F",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   },
+   {
+    "A_m2": 0.15,
+    "clear_below_beams_m3": null,
+    "floor": "FOUNDATION",
+    "gross_m3": 0.322,
+    "interval_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 350.0 mm (bound footing)",
+    "interval_state": "LOWER_BOUND",
+    "net_of_slab_m3": 0.322,
+    "occurrence_id": "COL-C2-X09-Y10-FOUNDATION",
+    "part": {
+     "best": 0.32249999999999995,
+     "high": 0.39749999999999996,
+     "low": 0.32249999999999995,
+     "origin": "DERIVED",
+     "part_id": "COL-C2-X09-Y10-FOUNDATION",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "interval LOWER_BOUND"
+    },
+    "terminal_state": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "A_m2": 0.1,
+    "clear_below_beams_m3": null,
+    "floor": "GF",
+    "gross_m3": 0.45,
+    "interval_basis": "printed floor-to-floor 4.5 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 0.434,
+    "occurrence_id": "COL-C2-X09-Y10-GF",
+    "part": {
+     "best": 0.434,
+     "high": 0.434,
+     "low": 0.434,
+     "origin": "DERIVED",
+     "part_id": "COL-C2-X09-Y10-GF",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   },
+   {
+    "A_m2": 0.1,
+    "clear_below_beams_m3": null,
+    "floor": "1F",
+    "gross_m3": 0.42,
+    "interval_basis": "printed floor-to-floor 4.2 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 0.404,
+    "occurrence_id": "COL-C2-X09-Y10-1F",
+    "part": {
+     "best": 0.404,
+     "high": 0.404,
+     "low": 0.404,
+     "origin": "DERIVED",
+     "part_id": "COL-C2-X09-Y10-1F",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   },
+   {
+    "A_m2": 0.1,
+    "clear_below_beams_m3": null,
+    "floor": "2F",
+    "gross_m3": 0.42,
+    "interval_basis": "printed floor-to-floor 4.2 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 0.402,
+    "occurrence_id": "COL-C2-X09-Y10-2F",
+    "part": {
+     "best": 0.4020000000000001,
+     "high": 0.4020000000000001,
+     "low": 0.4020000000000001,
+     "origin": "DERIVED",
+     "part_id": "COL-C2-X09-Y10-2F",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   },
+   {
+    "A_m2": 0.18,
+    "clear_below_beams_m3": null,
+    "floor": "FOUNDATION",
+    "gross_m3": 0.378,
+    "interval_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 400.0 mm (bound footing)",
+    "interval_state": "LOWER_BOUND",
+    "net_of_slab_m3": 0.378,
+    "occurrence_id": "COL-C5-X11-Y10-FOUNDATION",
+    "part": {
+     "best": 0.378,
+     "high": 0.46799999999999997,
+     "low": 0.378,
+     "origin": "DERIVED",
+     "part_id": "COL-C5-X11-Y10-FOUNDATION",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "interval LOWER_BOUND"
+    },
+    "terminal_state": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "A_m2": 0.15,
+    "clear_below_beams_m3": null,
+    "floor": "GF",
+    "gross_m3": 0.675,
+    "interval_basis": "printed floor-to-floor 4.5 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 0.651,
+    "occurrence_id": "COL-C5-X11-Y10-GF",
+    "part": {
+     "best": 0.6509999999999999,
+     "high": 0.6509999999999999,
+     "low": 0.6509999999999999,
+     "origin": "DERIVED",
+     "part_id": "COL-C5-X11-Y10-GF",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   },
+   {
+    "A_m2": 0.1,
+    "clear_below_beams_m3": null,
+    "floor": "1F",
+    "gross_m3": 0.42,
+    "interval_basis": "printed floor-to-floor 4.2 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 0.404,
+    "occurrence_id": "COL-C5-X11-Y10-1F",
+    "part": {
+     "best": 0.404,
+     "high": 0.404,
+     "low": 0.404,
+     "origin": "DERIVED",
+     "part_id": "COL-C5-X11-Y10-1F",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   },
+   {
+    "A_m2": 0.1,
+    "clear_below_beams_m3": null,
+    "floor": "2F",
+    "gross_m3": 0.42,
+    "interval_basis": "printed floor-to-floor 4.2 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 0.402,
+    "occurrence_id": "COL-C5-X11-Y10-2F",
+    "part": {
+     "best": 0.4020000000000001,
+     "high": 0.4020000000000001,
+     "low": 0.4020000000000001,
+     "origin": "DERIVED",
+     "part_id": "COL-C5-X11-Y10-2F",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   },
+   {
+    "A_m2": 0.15,
+    "clear_below_beams_m3": null,
+    "floor": "FOUNDATION",
+    "gross_m3": 0.315,
+    "interval_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 400.0 mm (bound footing)",
+    "interval_state": "LOWER_BOUND",
+    "net_of_slab_m3": 0.315,
+    "occurrence_id": "COL-C4-X13-Y10-FOUNDATION",
+    "part": {
+     "best": 0.315,
+     "high": 0.39,
+     "low": 0.315,
+     "origin": "DERIVED",
+     "part_id": "COL-C4-X13-Y10-FOUNDATION",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "interval LOWER_BOUND"
+    },
+    "terminal_state": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "A_m2": 0.125,
+    "clear_below_beams_m3": null,
+    "floor": "GF",
+    "gross_m3": 0.562,
+    "interval_basis": "printed floor-to-floor 4.5 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 0.542,
+    "occurrence_id": "COL-C4-X13-Y10-GF",
+    "part": {
+     "best": 0.5425,
+     "high": 0.5425,
+     "low": 0.5425,
+     "origin": "DERIVED",
+     "part_id": "COL-C4-X13-Y10-GF",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   },
+   {
+    "A_m2": 0.1,
+    "clear_below_beams_m3": null,
+    "floor": "1F",
+    "gross_m3": 0.42,
+    "interval_basis": "printed floor-to-floor 4.2 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 0.404,
+    "occurrence_id": "COL-C4-X13-Y10-1F",
+    "part": {
+     "best": 0.404,
+     "high": 0.404,
+     "low": 0.404,
+     "origin": "DERIVED",
+     "part_id": "COL-C4-X13-Y10-1F",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   },
+   {
+    "A_m2": 0.15,
+    "clear_below_beams_m3": null,
+    "floor": "FOUNDATION",
+    "gross_m3": 0.315,
+    "interval_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 400.0 mm (bound footing)",
+    "interval_state": "LOWER_BOUND",
+    "net_of_slab_m3": 0.315,
+    "occurrence_id": "COL-C4-X15-Y10-FOUNDATION",
+    "part": {
+     "best": 0.315,
+     "high": 0.39,
+     "low": 0.315,
+     "origin": "DERIVED",
+     "part_id": "COL-C4-X15-Y10-FOUNDATION",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "interval LOWER_BOUND"
+    },
+    "terminal_state": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "A_m2": 0.125,
+    "clear_below_beams_m3": null,
+    "floor": "GF",
+    "gross_m3": 0.562,
+    "interval_basis": "printed floor-to-floor 4.5 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 0.542,
+    "occurrence_id": "COL-C4-X15-Y10-GF",
+    "part": {
+     "best": 0.5425,
+     "high": 0.5425,
+     "low": 0.5425,
+     "origin": "DERIVED",
+     "part_id": "COL-C4-X15-Y10-GF",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   },
+   {
+    "A_m2": 0.1,
+    "clear_below_beams_m3": null,
+    "floor": "1F",
+    "gross_m3": 0.42,
+    "interval_basis": "printed floor-to-floor 4.2 m (FFL basis)",
+    "interval_state": "ESTABLISHED",
+    "net_of_slab_m3": 0.404,
+    "occurrence_id": "COL-C4-X15-Y10-1F",
+    "part": {
+     "best": 0.404,
+     "high": 0.404,
+     "low": 0.404,
+     "origin": "DERIVED",
+     "part_id": "COL-C4-X15-Y10-1F",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "terminal_state": "MEASURED_COMPLETE"
+   }
+  ],
+  "volume": {
+   "BEST_PROVISIONAL_QUANTITY": 45.795,
+   "HIGH_SCENARIO": 48.915,
+   "LOWER_BOUND_QUANTITY": 33.166,
+   "LOW_SCENARIO": 45.795,
+   "UNQUANTIFIED_COMPONENTS": [],
+   "VERIFIED_QUANTITY": 33.166,
+   "parts": 95,
+   "unit": "m3"
+  }
+ },
+ "ground_beams": {
+  "boundary_beam_line": "C-BWALL",
+  "conservation": {
+   "by_state": {
+    "BOUNDED_QUANTIFIED": 28,
+    "MEASURED_COMPLETE": 31
+   },
+   "duplicates_in": [],
+   "duplicates_out": [],
+   "missing": [],
+   "occurrences_in": 59,
+   "ok": true,
+   "orphans": [],
+   "terminal_records": 59,
+   "unquantified_without_identity": []
+  },
+  "length_m": 198.796,
+  "remediation": [
+   {
+    "attempts": [
+     {
+      "level": "LOCAL_DIMENSION",
+      "rank": 1,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "SCHEDULE",
+      "rank": 2,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "DETAIL",
+      "rank": 3,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "SAME_MARK_ELSEWHERE",
+      "rank": 4,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "PAIRED_FACES_SECTION_GEOMETRY",
+      "rank": 5,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "PROJECT_TYPICAL",
+      "rank": 6,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "BOUNDED_CANDIDATE",
+      "rank": 7,
+      "ref": null,
+      "result": "FOUND"
+     }
+    ],
+    "authority": "PROVISIONAL",
+    "consultant_question": "Please confirm the exterior ground-beam depth (and embedment below natural ground) for the spans marked 'FOLLOW ARCH.'",
+    "current_quantity": 0.0,
+    "element": "28 exterior ground-beam spans",
+    "fact_origin": "DERIVED",
+    "flag_id": "GB-EXT-DEPTH",
+    "high_scenario": 43.01673363,
+    "kind": "MISSING_DEPTH",
+    "known_facts": {
+     "B_m": 0.3,
+     "length_m": 110.299,
+     "spans": 28
+    },
+    "low_scenario": 29.780815589999996,
+    "needs_consultant": true,
+    "next_automated_method": "UNKNOWN",
+    "provisional_quantity": 33.089795099999996,
+    "quantity_impact": 33.089795099999996,
+    "result": "RESOLVED_PROVISIONAL",
+    "search_text": "FOLLOW ARCH / GROUND BEAM / G.B",
+    "successful_method": "BOUNDED_CANDIDATE",
+    "unknown_fact": "exterior ground-beam depth ('FOLLOW ARCH.' - outer ground to GF slab level, not printed)",
+    "where_to_look": "ST7757 p.13 typical ground-beam sections; architectural elevations (ground +-0.00, GF +1.00)",
+    "why_blocked": "depth not dimensioned on the plan or in the schedule"
+   }
+  ],
+  "spans": [
+   {
+    "B_m": 0.3,
+    "depth_authority": "PROVISIONAL",
+    "depth_level": "BOUNDED_CANDIDATE",
+    "depth_m": 1.0,
+    "kind": "EXTERIOR",
+    "length_m": 3.375,
+    "part": {
+     "best": 1.0125,
+     "high": 1.31625,
+     "low": 0.91125,
+     "origin": "DERIVED",
+     "part_id": "GB-022",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "depth from BOUNDED_CANDIDATE"
+    },
+    "span": "GB-022",
+    "terminal": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "B_m": 0.3,
+    "depth_authority": "PROVISIONAL",
+    "depth_level": "BOUNDED_CANDIDATE",
+    "depth_m": 1.0,
+    "kind": "EXTERIOR",
+    "length_m": 6.245,
+    "part": {
+     "best": 1.8735,
+     "high": 2.43555,
+     "low": 1.68615,
+     "origin": "DERIVED",
+     "part_id": "GB-021",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "depth from BOUNDED_CANDIDATE"
+    },
+    "span": "GB-021",
+    "terminal": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "B_m": 0.3,
+    "depth_authority": "PROVISIONAL",
+    "depth_level": "BOUNDED_CANDIDATE",
+    "depth_m": 1.0,
+    "kind": "EXTERIOR",
+    "length_m": 6.65,
+    "part": {
+     "best": 1.995,
+     "high": 2.5935,
+     "low": 1.7955,
+     "origin": "DERIVED",
+     "part_id": "GB-020",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "depth from BOUNDED_CANDIDATE"
+    },
+    "span": "GB-020",
+    "terminal": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "B_m": 0.3,
+    "depth_authority": "PROVISIONAL",
+    "depth_level": "BOUNDED_CANDIDATE",
+    "depth_m": 1.0,
+    "kind": "EXTERIOR",
+    "length_m": 1.4,
+    "part": {
+     "best": 0.42,
+     "high": 0.546,
+     "low": 0.378,
+     "origin": "DERIVED",
+     "part_id": "GB-023",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "depth from BOUNDED_CANDIDATE"
+    },
+    "span": "GB-023",
+    "terminal": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "B_m": 0.3,
+    "depth_authority": "PROVISIONAL",
+    "depth_level": "BOUNDED_CANDIDATE",
+    "depth_m": 1.0,
+    "kind": "EXTERIOR",
+    "length_m": 6.22,
+    "part": {
+     "best": 1.8659999999999999,
+     "high": 2.4257999999999997,
+     "low": 1.6794,
+     "origin": "DERIVED",
+     "part_id": "GB-003",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "depth from BOUNDED_CANDIDATE"
+    },
+    "span": "GB-003",
+    "terminal": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "B_m": 0.3,
+    "depth_authority": "VERIFIED",
+    "depth_level": "DETAIL",
+    "depth_m": 0.4,
+    "kind": "INTERIOR",
+    "length_m": 3.6,
+    "part": {
+     "best": 0.43200000000000005,
+     "high": 0.43200000000000005,
+     "low": 0.43200000000000005,
+     "origin": "SOURCE_FACT",
+     "part_id": "GB-004",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "span": "GB-004",
+    "terminal": "MEASURED_COMPLETE"
+   },
+   {
+    "B_m": 0.3,
+    "depth_authority": "VERIFIED",
+    "depth_level": "DETAIL",
+    "depth_m": 0.4,
+    "kind": "INTERIOR",
+    "length_m": 3.35,
+    "part": {
+     "best": 0.40199999999999997,
+     "high": 0.40199999999999997,
+     "low": 0.40199999999999997,
+     "origin": "SOURCE_FACT",
+     "part_id": "GB-005",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "span": "GB-005",
+    "terminal": "MEASURED_COMPLETE"
+   },
+   {
+    "B_m": 0.3,
+    "depth_authority": "PROVISIONAL",
+    "depth_level": "BOUNDED_CANDIDATE",
+    "depth_m": 1.0,
+    "kind": "EXTERIOR",
+    "length_m": 2.7,
+    "part": {
+     "best": 0.81,
+     "high": 1.0530000000000002,
+     "low": 0.7290000000000001,
+     "origin": "DERIVED",
+     "part_id": "GB-012",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "depth from BOUNDED_CANDIDATE"
+    },
+    "span": "GB-012",
+    "terminal": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "B_m": 0.3,
+    "depth_authority": "PROVISIONAL",
+    "depth_level": "BOUNDED_CANDIDATE",
+    "depth_m": 1.0,
+    "kind": "EXTERIOR",
+    "length_m": 9.5,
+    "part": {
+     "best": 2.85,
+     "high": 3.705,
+     "low": 2.565,
+     "origin": "DERIVED",
+     "part_id": "GB-011",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "depth from BOUNDED_CANDIDATE"
+    },
+    "span": "GB-011",
+    "terminal": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "B_m": 0.3,
+    "depth_authority": "VERIFIED",
+    "depth_level": "DETAIL",
+    "depth_m": 0.4,
+    "kind": "INTERIOR",
+    "length_m": 3.27,
+    "part": {
+     "best": 0.3924,
+     "high": 0.3924,
+     "low": 0.3924,
+     "origin": "SOURCE_FACT",
+     "part_id": "GB-018",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "span": "GB-018",
+    "terminal": "MEASURED_COMPLETE"
+   },
+   {
+    "B_m": 0.3,
+    "depth_authority": "VERIFIED",
+    "depth_level": "DETAIL",
+    "depth_m": 0.4,
+    "kind": "INTERIOR",
+    "length_m": 3.05,
+    "part": {
+     "best": 0.366,
+     "high": 0.366,
+     "low": 0.366,
+     "origin": "SOURCE_FACT",
+     "part_id": "GB-019",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "span": "GB-019",
+    "terminal": "MEASURED_COMPLETE"
+   },
+   {
+    "B_m": 0.3,
+    "depth_authority": "PROVISIONAL",
+    "depth_level": "BOUNDED_CANDIDATE",
+    "depth_m": 1.0,
+    "kind": "EXTERIOR",
+    "length_m": 5.15,
+    "part": {
+     "best": 1.5450000000000002,
+     "high": 2.0085,
+     "low": 1.3905,
+     "origin": "DERIVED",
+     "part_id": "GB-017",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "depth from BOUNDED_CANDIDATE"
+    },
+    "span": "GB-017",
+    "terminal": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "B_m": 0.3,
+    "depth_authority": "VERIFIED",
+    "depth_level": "DETAIL",
+    "depth_m": 0.6,
+    "kind": "INTERIOR",
+    "length_m": 5.53,
+    "part": {
+     "best": 0.9954,
+     "high": 0.9954,
+     "low": 0.9954,
+     "origin": "SOURCE_FACT",
+     "part_id": "GB-028",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "span": "GB-028",
+    "terminal": "MEASURED_COMPLETE"
+   },
+   {
+    "B_m": 0.3,
+    "depth_authority": "VERIFIED",
+    "depth_level": "DETAIL",
+    "depth_m": 0.4,
+    "kind": "INTERIOR",
+    "length_m": 4.3,
+    "part": {
+     "best": 0.5159999999999999,
+     "high": 0.5159999999999999,
+     "low": 0.5159999999999999,
+     "origin": "SOURCE_FACT",
+     "part_id": "GB-029",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "span": "GB-029",
+    "terminal": "MEASURED_COMPLETE"
+   },
+   {
+    "B_m": 0.3,
+    "depth_authority": "PROVISIONAL",
+    "depth_level": "BOUNDED_CANDIDATE",
+    "depth_m": 1.0,
+    "kind": "EXTERIOR",
+    "length_m": 3.85,
+    "part": {
+     "best": 1.155,
+     "high": 1.5015,
+     "low": 1.0395,
+     "origin": "DERIVED",
+     "part_id": "GB-042",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "depth from BOUNDED_CANDIDATE"
+    },
+    "span": "GB-042",
+    "terminal": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "B_m": 0.3,
+    "depth_authority": "PROVISIONAL",
+    "depth_level": "BOUNDED_CANDIDATE",
+    "depth_m": 1.0,
+    "kind": "EXTERIOR",
+    "length_m": 3.25,
+    "part": {
+     "best": 0.975,
+     "high": 1.2675,
+     "low": 0.8775,
+     "origin": "DERIVED",
+     "part_id": "GB-043",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "depth from BOUNDED_CANDIDATE"
+    },
+    "span": "GB-043",
+    "terminal": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "B_m": 0.3,
+    "depth_authority": "PROVISIONAL",
+    "depth_level": "BOUNDED_CANDIDATE",
+    "depth_m": 1.0,
+    "kind": "EXTERIOR",
+    "length_m": 5.37,
+    "part": {
+     "best": 1.611,
+     "high": 2.0943,
+     "low": 1.4499,
+     "origin": "DERIVED",
+     "part_id": "GB-014",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "depth from BOUNDED_CANDIDATE"
+    },
+    "span": "GB-014",
+    "terminal": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "B_m": 0.3,
+    "depth_authority": "PROVISIONAL",
+    "depth_level": "BOUNDED_CANDIDATE",
+    "depth_m": 1.0,
+    "kind": "EXTERIOR",
+    "length_m": 1.887,
+    "part": {
+     "best": 0.5660006999999999,
+     "high": 0.7358009099999999,
+     "low": 0.5094006299999999,
+     "origin": "DERIVED",
+     "part_id": "GB-015",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "depth from BOUNDED_CANDIDATE"
+    },
+    "span": "GB-015",
+    "terminal": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "B_m": 0.3,
+    "depth_authority": "PROVISIONAL",
+    "depth_level": "BOUNDED_CANDIDATE",
+    "depth_m": 1.0,
+    "kind": "EXTERIOR",
+    "length_m": 3.525,
+    "part": {
+     "best": 1.0574999999999999,
+     "high": 1.37475,
+     "low": 0.9517499999999999,
+     "origin": "DERIVED",
+     "part_id": "GB-049",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "depth from BOUNDED_CANDIDATE"
+    },
+    "span": "GB-049",
+    "terminal": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "B_m": 0.3,
+    "depth_authority": "PROVISIONAL",
+    "depth_level": "BOUNDED_CANDIDATE",
+    "depth_m": 1.0,
+    "kind": "EXTERIOR",
+    "length_m": 3.525,
+    "part": {
+     "best": 1.0574999999999999,
+     "high": 1.37475,
+     "low": 0.9517499999999999,
+     "origin": "DERIVED",
+     "part_id": "GB-050",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "depth from BOUNDED_CANDIDATE"
+    },
+    "span": "GB-050",
+    "terminal": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "B_m": 0.3,
+    "depth_authority": "PROVISIONAL",
+    "depth_level": "BOUNDED_CANDIDATE",
+    "depth_m": 1.0,
+    "kind": "EXTERIOR",
+    "length_m": 3.525,
+    "part": {
+     "best": 1.0574999999999999,
+     "high": 1.37475,
+     "low": 0.9517499999999999,
+     "origin": "DERIVED",
+     "part_id": "GB-037",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "depth from BOUNDED_CANDIDATE"
+    },
+    "span": "GB-037",
+    "terminal": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "B_m": 0.3,
+    "depth_authority": "PROVISIONAL",
+    "depth_level": "BOUNDED_CANDIDATE",
+    "depth_m": 1.0,
+    "kind": "EXTERIOR",
+    "length_m": 3.525,
+    "part": {
+     "best": 1.0574999999999999,
+     "high": 1.37475,
+     "low": 0.9517499999999999,
+     "origin": "DERIVED",
+     "part_id": "GB-038",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "depth from BOUNDED_CANDIDATE"
+    },
+    "span": "GB-038",
+    "terminal": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "B_m": 0.3,
+    "depth_authority": "PROVISIONAL",
+    "depth_level": "BOUNDED_CANDIDATE",
+    "depth_m": 1.0,
+    "kind": "EXTERIOR",
+    "length_m": 6.72,
+    "part": {
+     "best": 2.016,
+     "high": 2.6208,
+     "low": 1.8144,
+     "origin": "DERIVED",
+     "part_id": "GB-044",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "depth from BOUNDED_CANDIDATE"
+    },
+    "span": "GB-044",
+    "terminal": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "B_m": 0.3,
+    "depth_authority": "VERIFIED",
+    "depth_level": "DETAIL",
+    "depth_m": 0.6,
+    "kind": "INTERIOR",
+    "length_m": 6.4,
+    "part": {
+     "best": 1.152,
+     "high": 1.152,
+     "low": 1.152,
+     "origin": "SOURCE_FACT",
+     "part_id": "GB-030",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "span": "GB-030",
+    "terminal": "MEASURED_COMPLETE"
+   },
+   {
+    "B_m": 0.3,
+    "depth_authority": "VERIFIED",
+    "depth_level": "DETAIL",
+    "depth_m": 0.6,
+    "kind": "INTERIOR",
+    "length_m": 5.9,
+    "part": {
+     "best": 1.062,
+     "high": 1.062,
+     "low": 1.062,
+     "origin": "SOURCE_FACT",
+     "part_id": "GB-026",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "span": "GB-026",
+    "terminal": "MEASURED_COMPLETE"
+   },
+   {
+    "B_m": 0.3,
+    "depth_authority": "VERIFIED",
+    "depth_level": "DETAIL",
+    "depth_m": 0.6,
+    "kind": "INTERIOR",
+    "length_m": 5.1,
+    "part": {
+     "best": 0.9179999999999998,
+     "high": 0.9179999999999998,
+     "low": 0.9179999999999998,
+     "origin": "SOURCE_FACT",
+     "part_id": "GB-031",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "span": "GB-031",
+    "terminal": "MEASURED_COMPLETE"
+   },
+   {
+    "B_m": 0.3,
+    "depth_authority": "PROVISIONAL",
+    "depth_level": "BOUNDED_CANDIDATE",
+    "depth_m": 1.0,
+    "kind": "EXTERIOR",
+    "length_m": 4.6,
+    "part": {
+     "best": 1.38,
+     "high": 1.7939999999999998,
+     "low": 1.242,
+     "origin": "DERIVED",
+     "part_id": "GB-008",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "depth from BOUNDED_CANDIDATE"
+    },
+    "span": "GB-008",
+    "terminal": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "B_m": 0.3,
+    "depth_authority": "VERIFIED",
+    "depth_level": "DETAIL",
+    "depth_m": 0.3,
+    "kind": "INTERIOR",
+    "length_m": 2.3,
+    "part": {
+     "best": 0.207,
+     "high": 0.207,
+     "low": 0.207,
+     "origin": "SOURCE_FACT",
+     "part_id": "GB-024",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "span": "GB-024",
+    "terminal": "MEASURED_COMPLETE"
+   },
+   {
+    "B_m": 0.3,
+    "depth_authority": "VERIFIED",
+    "depth_level": "DETAIL",
+    "depth_m": 0.3,
+    "kind": "INTERIOR",
+    "length_m": 1.5,
+    "part": {
+     "best": 0.13499999999999998,
+     "high": 0.13499999999999998,
+     "low": 0.13499999999999998,
+     "origin": "SOURCE_FACT",
+     "part_id": "GB-025",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "span": "GB-025",
+    "terminal": "MEASURED_COMPLETE"
+   },
+   {
+    "B_m": 0.3,
+    "depth_authority": "VERIFIED",
+    "depth_level": "DETAIL",
+    "depth_m": 0.4,
+    "kind": "INTERIOR",
+    "length_m": 4.3,
+    "part": {
+     "best": 0.5159999999999999,
+     "high": 0.5159999999999999,
+     "low": 0.5159999999999999,
+     "origin": "SOURCE_FACT",
+     "part_id": "GB-032",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "span": "GB-032",
+    "terminal": "MEASURED_COMPLETE"
+   },
+   {
+    "B_m": 0.3,
+    "depth_authority": "VERIFIED",
+    "depth_level": "DETAIL",
+    "depth_m": 0.4,
+    "kind": "INTERIOR",
+    "length_m": 4.3,
+    "part": {
+     "best": 0.5159999999999999,
+     "high": 0.5159999999999999,
+     "low": 0.5159999999999999,
+     "origin": "SOURCE_FACT",
+     "part_id": "GB-027",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "span": "GB-027",
+    "terminal": "MEASURED_COMPLETE"
+   },
+   {
+    "B_m": 0.3,
+    "depth_authority": "VERIFIED",
+    "depth_level": "DETAIL",
+    "depth_m": 0.4,
+    "kind": "INTERIOR",
+    "length_m": 4.272,
+    "part": {
+     "best": 0.51267516,
+     "high": 0.51267516,
+     "low": 0.51267516,
+     "origin": "SOURCE_FACT",
+     "part_id": "GB-046",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "span": "GB-046",
+    "terminal": "MEASURED_COMPLETE"
+   },
+   {
+    "B_m": 0.3,
+    "depth_authority": "VERIFIED",
+    "depth_level": "DETAIL",
+    "depth_m": 0.4,
+    "kind": "INTERIOR",
+    "length_m": 4.225,
+    "part": {
+     "best": 0.507,
+     "high": 0.507,
+     "low": 0.507,
+     "origin": "SOURCE_FACT",
+     "part_id": "GB-051",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "span": "GB-051",
+    "terminal": "MEASURED_COMPLETE"
+   },
+   {
+    "B_m": 0.3,
+    "depth_authority": "PROVISIONAL",
+    "depth_level": "BOUNDED_CANDIDATE",
+    "depth_m": 1.0,
+    "kind": "EXTERIOR",
+    "length_m": 3.8,
+    "part": {
+     "best": 1.14,
+     "high": 1.482,
+     "low": 1.026,
+     "origin": "DERIVED",
+     "part_id": "GB-036",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "depth from BOUNDED_CANDIDATE"
+    },
+    "span": "GB-036",
+    "terminal": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "B_m": 0.3,
+    "depth_authority": "PROVISIONAL",
+    "depth_level": "BOUNDED_CANDIDATE",
+    "depth_m": 1.0,
+    "kind": "EXTERIOR",
+    "length_m": 3.75,
+    "part": {
+     "best": 1.125,
+     "high": 1.4625000000000001,
+     "low": 1.0125,
+     "origin": "DERIVED",
+     "part_id": "GB-048",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "depth from BOUNDED_CANDIDATE"
+    },
+    "span": "GB-048",
+    "terminal": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "B_m": 0.3,
+    "depth_authority": "PROVISIONAL",
+    "depth_level": "BOUNDED_CANDIDATE",
+    "depth_m": 1.0,
+    "kind": "EXTERIOR",
+    "length_m": 3.75,
+    "part": {
+     "best": 1.125,
+     "high": 1.4625000000000001,
+     "low": 1.0125,
+     "origin": "DERIVED",
+     "part_id": "GB-039",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "depth from BOUNDED_CANDIDATE"
+    },
+    "span": "GB-039",
+    "terminal": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "B_m": 0.3,
+    "depth_authority": "PROVISIONAL",
+    "depth_level": "BOUNDED_CANDIDATE",
+    "depth_m": 1.0,
+    "kind": "EXTERIOR",
+    "length_m": 3.228,
+    "part": {
+     "best": 0.9683121,
+     "high": 1.25880573,
+     "low": 0.8714808900000001,
+     "origin": "DERIVED",
+     "part_id": "GB-045",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "depth from BOUNDED_CANDIDATE"
+    },
+    "span": "GB-045",
+    "terminal": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "B_m": 0.3,
+    "depth_authority": "VERIFIED",
+    "depth_level": "DETAIL",
+    "depth_m": 0.3,
+    "kind": "INTERIOR",
+    "length_m": 0.3,
+    "part": {
+     "best": 0.027,
+     "high": 0.027,
+     "low": 0.027,
+     "origin": "SOURCE_FACT",
+     "part_id": "GB-041",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "span": "GB-041",
+    "terminal": "MEASURED_COMPLETE"
+   },
+   {
+    "B_m": 0.3,
+    "depth_authority": "PROVISIONAL",
+    "depth_level": "BOUNDED_CANDIDATE",
+    "depth_m": 1.0,
+    "kind": "EXTERIOR",
+    "length_m": 2.625,
+    "part": {
+     "best": 0.7875,
+     "high": 1.02375,
+     "low": 0.70875,
+     "origin": "DERIVED",
+     "part_id": "GB-040",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "depth from BOUNDED_CANDIDATE"
+    },
+    "span": "GB-040",
+    "terminal": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "B_m": 0.3,
+    "depth_authority": "VERIFIED",
+    "depth_level": "DETAIL",
+    "depth_m": 0.3,
+    "kind": "INTERIOR",
+    "length_m": 2.45,
+    "part": {
+     "best": 0.2205,
+     "high": 0.2205,
+     "low": 0.2205,
+     "origin": "SOURCE_FACT",
+     "part_id": "GB-053",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "span": "GB-053",
+    "terminal": "MEASURED_COMPLETE"
+   },
+   {
+    "B_m": 0.3,
+    "depth_authority": "PROVISIONAL",
+    "depth_level": "BOUNDED_CANDIDATE",
+    "depth_m": 1.0,
+    "kind": "EXTERIOR",
+    "length_m": 0.4,
+    "part": {
+     "best": 0.12,
+     "high": 0.156,
+     "low": 0.108,
+     "origin": "DERIVED",
+     "part_id": "GB-010",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "depth from BOUNDED_CANDIDATE"
+    },
+    "span": "GB-010",
+    "terminal": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "B_m": 0.3,
+    "depth_authority": "PROVISIONAL",
+    "depth_level": "BOUNDED_CANDIDATE",
+    "depth_m": 1.0,
+    "kind": "EXTERIOR",
+    "length_m": 2.3,
+    "part": {
+     "best": 0.69,
+     "high": 0.8969999999999999,
+     "low": 0.621,
+     "origin": "DERIVED",
+     "part_id": "GB-009",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "depth from BOUNDED_CANDIDATE"
+    },
+    "span": "GB-009",
+    "terminal": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "B_m": 0.3,
+    "depth_authority": "VERIFIED",
+    "depth_level": "DETAIL",
+    "depth_m": 0.4,
+    "kind": "INTERIOR",
+    "length_m": 3.0,
+    "part": {
+     "best": 0.36,
+     "high": 0.36,
+     "low": 0.36,
+     "origin": "SOURCE_FACT",
+     "part_id": "GB-054",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "span": "GB-054",
+    "terminal": "MEASURED_COMPLETE"
+   },
+   {
+    "B_m": 0.3,
+    "depth_authority": "VERIFIED",
+    "depth_level": "DETAIL",
+    "depth_m": 0.4,
+    "kind": "INTERIOR",
+    "length_m": 2.9,
+    "part": {
+     "best": 0.34800000000000003,
+     "high": 0.34800000000000003,
+     "low": 0.34800000000000003,
+     "origin": "SOURCE_FACT",
+     "part_id": "GB-007",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "span": "GB-007",
+    "terminal": "MEASURED_COMPLETE"
+   },
+   {
+    "B_m": 0.3,
+    "depth_authority": "VERIFIED",
+    "depth_level": "DETAIL",
+    "depth_m": 0.3,
+    "kind": "INTERIOR",
+    "length_m": 2.467,
+    "part": {
+     "best": 0.22201586999999998,
+     "high": 0.22201586999999998,
+     "low": 0.22201586999999998,
+     "origin": "SOURCE_FACT",
+     "part_id": "GB-055",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "span": "GB-055",
+    "terminal": "MEASURED_COMPLETE"
+   },
+   {
+    "B_m": 0.3,
+    "depth_authority": "VERIFIED",
+    "depth_level": "DETAIL",
+    "depth_m": 0.3,
+    "kind": "INTERIOR",
+    "length_m": 2.45,
+    "part": {
+     "best": 0.2205,
+     "high": 0.2205,
+     "low": 0.2205,
+     "origin": "SOURCE_FACT",
+     "part_id": "GB-033",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "span": "GB-033",
+    "terminal": "MEASURED_COMPLETE"
+   },
+   {
+    "B_m": 0.3,
+    "depth_authority": "PROVISIONAL",
+    "depth_level": "BOUNDED_CANDIDATE",
+    "depth_m": 1.0,
+    "kind": "EXTERIOR",
+    "length_m": 2.4,
+    "part": {
+     "best": 0.72,
+     "high": 0.9359999999999999,
+     "low": 0.648,
+     "origin": "DERIVED",
+     "part_id": "GB-013",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "depth from BOUNDED_CANDIDATE"
+    },
+    "span": "GB-013",
+    "terminal": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "B_m": 0.3,
+    "depth_authority": "VERIFIED",
+    "depth_level": "DETAIL",
+    "depth_m": 0.3,
+    "kind": "INTERIOR",
+    "length_m": 2.1,
+    "part": {
+     "best": 0.189,
+     "high": 0.189,
+     "low": 0.189,
+     "origin": "SOURCE_FACT",
+     "part_id": "GB-058",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "span": "GB-058",
+    "terminal": "MEASURED_COMPLETE"
+   },
+   {
+    "B_m": 0.3,
+    "depth_authority": "VERIFIED",
+    "depth_level": "DETAIL",
+    "depth_m": 0.3,
+    "kind": "INTERIOR",
+    "length_m": 2.073,
+    "part": {
+     "best": 0.18659195999999997,
+     "high": 0.18659195999999997,
+     "low": 0.18659195999999997,
+     "origin": "SOURCE_FACT",
+     "part_id": "GB-057",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "span": "GB-057",
+    "terminal": "MEASURED_COMPLETE"
+   },
+   {
+    "B_m": 0.3,
+    "depth_authority": "VERIFIED",
+    "depth_level": "DETAIL",
+    "depth_m": 0.3,
+    "kind": "INTERIOR",
+    "length_m": 1.45,
+    "part": {
+     "best": 0.1305,
+     "high": 0.1305,
+     "low": 0.1305,
+     "origin": "SOURCE_FACT",
+     "part_id": "GB-034",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "span": "GB-034",
+    "terminal": "MEASURED_COMPLETE"
+   },
+   {
+    "B_m": 0.3,
+    "depth_authority": "PROVISIONAL",
+    "depth_level": "BOUNDED_CANDIDATE",
+    "depth_m": 1.0,
+    "kind": "EXTERIOR",
+    "length_m": 0.85,
+    "part": {
+     "best": 0.255,
+     "high": 0.3315,
+     "low": 0.2295,
+     "origin": "DERIVED",
+     "part_id": "GB-006",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "depth from BOUNDED_CANDIDATE"
+    },
+    "span": "GB-006",
+    "terminal": "BOUNDED_QUANTIFIED"
+   },
+   {
+    "B_m": 0.3,
+    "depth_authority": "VERIFIED",
+    "depth_level": "DETAIL",
+    "depth_m": 0.3,
+    "kind": "INTERIOR",
+    "length_m": 1.3,
+    "part": {
+     "best": 0.11699999999999999,
+     "high": 0.11699999999999999,
+     "low": 0.11699999999999999,
+     "origin": "SOURCE_FACT",
+     "part_id": "GB-059",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "span": "GB-059",
+    "terminal": "MEASURED_COMPLETE"
+   },
+   {
+    "B_m": 0.3,
+    "depth_authority": "VERIFIED",
+    "depth_level": "DETAIL",
+    "depth_m": 0.3,
+    "kind": "INTERIOR",
+    "length_m": 1.25,
+    "part": {
+     "best": 0.11249999999999999,
+     "high": 0.11249999999999999,
+     "low": 0.11249999999999999,
+     "origin": "SOURCE_FACT",
+     "part_id": "GB-052",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "span": "GB-052",
+    "terminal": "MEASURED_COMPLETE"
+   },
+   {
+    "B_m": 0.3,
+    "depth_authority": "VERIFIED",
+    "depth_level": "DETAIL",
+    "depth_m": 0.3,
+    "kind": "INTERIOR",
+    "length_m": 1.2,
+    "part": {
+     "best": 0.108,
+     "high": 0.108,
+     "low": 0.108,
+     "origin": "SOURCE_FACT",
+     "part_id": "GB-047",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "span": "GB-047",
+    "terminal": "MEASURED_COMPLETE"
+   },
+   {
+    "B_m": 0.3,
+    "depth_authority": "VERIFIED",
+    "depth_level": "DETAIL",
+    "depth_m": 0.3,
+    "kind": "INTERIOR",
+    "length_m": 1.2,
+    "part": {
+     "best": 0.108,
+     "high": 0.108,
+     "low": 0.108,
+     "origin": "SOURCE_FACT",
+     "part_id": "GB-035",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "span": "GB-035",
+    "terminal": "MEASURED_COMPLETE"
+   },
+   {
+    "B_m": 0.3,
+    "depth_authority": "VERIFIED",
+    "depth_level": "DETAIL",
+    "depth_m": 0.3,
+    "kind": "INTERIOR",
+    "length_m": 0.789,
+    "part": {
+     "best": 0.07100829,
+     "high": 0.07100829,
+     "low": 0.07100829,
+     "origin": "SOURCE_FACT",
+     "part_id": "GB-056",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "span": "GB-056",
+    "terminal": "MEASURED_COMPLETE"
+   },
+   {
+    "B_m": 0.3,
+    "depth_authority": "VERIFIED",
+    "depth_level": "DETAIL",
+    "depth_m": 0.3,
+    "kind": "INTERIOR",
+    "length_m": 0.364,
+    "part": {
+     "best": 0.03275387999999999,
+     "high": 0.03275387999999999,
+     "low": 0.03275387999999999,
+     "origin": "SOURCE_FACT",
+     "part_id": "GB-016",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "span": "GB-016",
+    "terminal": "MEASURED_COMPLETE"
+   },
+   {
+    "B_m": 0.3,
+    "depth_authority": "VERIFIED",
+    "depth_level": "DETAIL",
+    "depth_m": 0.3,
+    "kind": "INTERIOR",
+    "length_m": 1.806,
+    "part": {
+     "best": 0.16257744,
+     "high": 0.16257744,
+     "low": 0.16257744,
+     "origin": "SOURCE_FACT",
+     "part_id": "GB-001",
+     "state": "VERIFIED",
+     "unit": null,
+     "why": null
+    },
+    "span": "GB-001",
+    "terminal": "MEASURED_COMPLETE"
+   },
+   {
+    "B_m": 0.3,
+    "depth_authority": "PROVISIONAL",
+    "depth_level": "BOUNDED_CANDIDATE",
+    "depth_m": 1.0,
+    "kind": "EXTERIOR",
+    "length_m": 6.18,
+    "part": {
+     "best": 1.8539823,
+     "high": 2.41017699,
+     "low": 1.66858407,
+     "origin": "DERIVED",
+     "part_id": "GB-002",
+     "state": "PROVISIONAL",
+     "unit": null,
+     "why": "depth from BOUNDED_CANDIDATE"
+    },
+    "span": "GB-002",
+    "terminal": "BOUNDED_QUANTIFIED"
+   }
+  ],
+  "volume": {
+   "BEST_PROVISIONAL_QUANTITY": 49.624,
+   "HIGH_SCENARIO": 61.401,
+   "LOWER_BOUND_QUANTITY": 11.245,
+   "LOW_SCENARIO": 45.786,
+   "UNQUANTIFIED_COMPONENTS": [],
+   "VERIFIED_QUANTITY": 11.245,
+   "parts": 60,
+   "unit": "m3"
+  }
+ },
+ "ground_slab": {
+  "area": {
+   "BEST_PROVISIONAL_QUANTITY": 217.012,
+   "HIGH_SCENARIO": 217.012,
+   "LOWER_BOUND_QUANTITY": 115.275,
+   "LOW_SCENARIO": 115.275,
+   "UNQUANTIFIED_COMPONENTS": [],
+   "VERIFIED_QUANTITY": 115.275,
+   "parts": 23,
+   "unit": "m2"
+  },
+  "cells": [
+   {
+    "area_m2": 11.4665,
+    "cell_id": "FP1-C94480_38779:X",
+    "eff_width_mm": 1550.6,
+    "footprint_id": "FP-1",
+    "labels": [
+     "+1.00",
+     "C",
+     "C11"
+    ],
+    "part": "EXTENSION",
+    "role": "UNLABELLED_CANDIDATE",
+    "why": "no thickness label inside the cell"
+   },
+   {
+    "area_m2": 4.1082,
+    "cell_id": "FP1-C95274_43121:R",
+    "eff_width_mm": 839.1,
+    "footprint_id": "FP-1",
+    "labels": [],
+    "part": "RELEASED_ZONE_PART",
+    "role": "LABELLED_OFFICIAL",
+    "why": "thickness printed in the cell / released zone"
+   },
+   {
+    "area_m2": 14.3908,
+    "cell_id": "FP1-C97826_38800:R",
+    "eff_width_mm": 1783.8,
+    "footprint_id": "FP-1",
+    "labels": [
+     "C11"
+    ],
+    "part": "RELEASED_ZONE_PART",
+    "role": "LABELLED_OFFICIAL",
+    "why": "thickness printed in the cell / released zone"
+   },
+   {
+    "area_m2": 42.5596,
+    "cell_id": "FP1-C99368_44772:X",
+    "eff_width_mm": 1142.0,
+    "footprint_id": "FP-1",
+    "labels": [
+     "+1.00",
+     "+1.00",
+     "+0.30",
+     "C9",
+     "C2",
+     "C1",
+     "C6",
+     "******"
+    ],
+    "part": "EXTENSION",
+    "role": "UNLABELLED_CANDIDATE",
+    "why": "no thickness label inside the cell"
+   },
+   {
+    "area_m2": 2.0567,
+    "cell_id": "FP1-C99443_48723:X",
+    "eff_width_mm": 710.2,
+    "footprint_id": "FP-1",
+    "labels": [
+     "C2"
+    ],
+    "part": "EXTENSION",
+    "role": "UNLABELLED_CANDIDATE",
+    "why": "no thickness label inside the cell"
+   },
+   {
+    "area_m2": 0.0313,
+    "cell_id": "FP1-C100461_49470:X",
+    "eff_width_mm": 79.4,
+    "footprint_id": "FP-1",
+    "labels": [],
+    "part": "EXTENSION",
+    "role": "EXCLUDED_SLIVER",
+    "why": "effective width 79 < 450 mm"
+   },
+   {
+    "area_m2": 0.024,
+    "cell_id": "FP1-C100769_46437:X",
+    "eff_width_mm": 64.2,
+    "footprint_id": "FP-1",
+    "labels": [],
+    "part": "EXTENSION",
+    "role": "EXCLUDED_SLIVER",
+    "why": "effective width 64 < 450 mm"
+   },
+   {
+    "area_m2": 8.3401,
+    "cell_id": "FP1-C101329_39533:R",
+    "eff_width_mm": 516.9,
+    "footprint_id": "FP-1",
+    "labels": [
+     "C7"
+    ],
+    "part": "RELEASED_ZONE_PART",
+    "role": "LABELLED_OFFICIAL",
+    "why": "thickness printed in the cell / released zone"
+   },
+   {
+    "area_m2": 1.6567,
+    "cell_id": "FP1-C101862_49002:X",
+    "eff_width_mm": 577.8,
+    "footprint_id": "FP-1",
+    "labels": [
+     "C5"
+    ],
+    "part": "EXTENSION",
+    "role": "UNLABELLED_CANDIDATE",
+    "why": "no thickness label inside the cell"
+   },
+   {
+    "area_m2": 0.0443,
+    "cell_id": "FP1-C102547_48392:X",
+    "eff_width_mm": 87.2,
+    "footprint_id": "FP-1",
+    "labels": [],
+    "part": "EXTENSION",
+    "role": "EXCLUDED_SLIVER",
+    "why": "effective width 87 < 450 mm"
+   },
+   {
+    "area_m2": 0.0443,
+    "cell_id": "FP1-C102989_48417:X",
+    "eff_width_mm": 87.2,
+    "footprint_id": "FP-1",
+    "labels": [],
+    "part": "EXTENSION",
+    "role": "EXCLUDED_SLIVER",
+    "why": "effective width 87 < 450 mm"
+   },
+   {
+    "area_m2": 0.1537,
+    "cell_id": "FP1-C103104_47834:X",
+    "eff_width_mm": 162.4,
+    "footprint_id": "FP-1",
+    "labels": [],
+    "part": "EXTENSION",
+    "role": "EXCLUDED_SLIVER",
+    "why": "effective width 162 < 450 mm"
+   },
+   {
+    "area_m2": 7.9815,
+    "cell_id": "FP1-C103193_37244:R",
+    "eff_width_mm": 960.0,
+    "footprint_id": "FP-1",
+    "labels": [
+     "C3"
+    ],
+    "part": "RELEASED_ZONE_PART",
+    "role": "LABELLED_OFFICIAL",
+    "why": "thickness printed in the cell / released zone"
+   },
+   {
+    "area_m2": 3.2477,
+    "cell_id": "FP1-C103968_46573:X",
+    "eff_width_mm": 890.8,
+    "footprint_id": "FP-1",
+    "labels": [],
+    "part": "EXTENSION",
+    "role": "UNLABELLED_CANDIDATE",
+    "why": "no thickness label inside the cell"
+   },
+   {
+    "area_m2": 3.5448,
+    "cell_id": "FP1-C104062_48671:X",
+    "eff_width_mm": 862.4,
+    "footprint_id": "FP-1",
+    "labels": [],
+    "part": "EXTENSION",
+    "role": "UNLABELLED_CANDIDATE",
+    "why": "no thickness label inside the cell"
+   },
+   {
+    "area_m2": 14.7729,
+    "cell_id": "FP1-C105243_43724:R",
+    "eff_width_mm": 1824.9,
+    "footprint_id": "FP-1",
+    "labels": [
+     "T=10cm",
+     "5%%c10/m E.W."
+    ],
+    "part": "RELEASED_ZONE_PART",
+    "role": "LABELLED_OFFICIAL",
+    "why": "thickness printed in the cell / released zone"
+   },
+   {
+    "area_m2": 14.7709,
+    "cell_id": "FP1-C105255_39922:R",
+    "eff_width_mm": 1870.9,
+    "footprint_id": "FP-1",
+    "labels": [
+     "CN/FN",
+     "C5"
+    ],
+    "part": "RELEASED_ZONE_PART",
+    "role": "LABELLED_OFFICIAL",
+    "why": "thickness printed in the cell / released zone"
+   },
+   {
+    "area_m2": 10.7626,
+    "cell_id": "FP1-C106807_47795:X",
+    "eff_width_mm": 1311.4,
+    "footprint_id": "FP-1",
+    "labels": [
+     "C4",
+     "C9",
+     "CN"
+    ],
+    "part": "EXTENSION",
+    "role": "UNLABELLED_CANDIDATE",
+    "why": "no thickness label inside the cell"
+   },
+   {
+    "area_m2": 0.0312,
+    "cell_id": "FP1-C108346_45596:X",
+    "eff_width_mm": 70.3,
+    "footprint_id": "FP-1",
+    "labels": [],
+    "part": "EXTENSION",
+    "role": "EXCLUDED_SLIVER",
+    "why": "effective width 70 < 450 mm"
+   },
+   {
+    "area_m2": 2.0466,
+    "cell_id": "FP1-C108563_44764:X",
+    "eff_width_mm": 642.8,
+    "footprint_id": "FP-1",
+    "labels": [
+     "CN"
+    ],
+    "part": "EXTENSION",
+    "role": "UNLABELLED_CANDIDATE",
+    "why": "no thickness label inside the cell"
+   },
+   {
+    "area_m2": 5.9279,
+    "cell_id": "FP1-C109378_37253:R",
+    "eff_width_mm": 927.0,
+    "footprint_id": "FP-1",
+    "labels": [
+     "C10"
+    ],
+    "part": "RELEASED_ZONE_PART",
+    "role": "LABELLED_OFFICIAL",
+    "why": "thickness printed in the cell / released zone"
+   },
+   {
+    "area_m2": 24.3953,
+    "cell_id": "FP1-C109773_41038:X",
+    "eff_width_mm": 2363.9,
+    "footprint_id": "FP-1",
+    "labels": [
+     "CN/FN",
+     "CN/FN",
+     "+1.00",
+     "C3",
+     "C8"
+    ],
+    "part": "EXTENSION",
+    "role": "UNLABELLED_CANDIDATE",
+    "why": "no thickness label inside the cell"
+   },
+   {
+    "area_m2": 0.0487,
+    "cell_id": "FP1-C110037_49765:X",
+    "eff_width_mm": 105.5,
+    "footprint_id": "FP-1",
+    "labels": [],
+    "part": "EXTENSION",
+    "role": "EXCLUDED_SLIVER",
+    "why": "effective width 106 < 450 mm"
+   },
+   {
+    "area_m2": 0.2977,
+    "cell_id": "FP1-C111387_44098:X",
+    "eff_width_mm": 229.5,
+    "footprint_id": "FP-1",
+    "labels": [],
+    "part": "EXTENSION",
+    "role": "EXCLUDED_SLIVER",
+    "why": "effective width 230 < 450 mm"
+   },
+   {
+    "area_m2": 22.9301,
+    "cell_id": "FP2-C83002_39670:R",
+    "eff_width_mm": 2356.2,
+    "footprint_id": "FP-2",
+    "labels": [
+     "+0.30",
+     "C",
+     "C",
+     "T=10cm",
+     "5%%c10/m E.W."
+    ],
+    "part": "RELEASED_ZONE_PART",
+    "role": "LABELLED_OFFICIAL",
+    "why": "thickness printed in the cell / released zone"
+   },
+   {
+    "area_m2": 3.1103,
+    "cell_id": "FP2-C85943_37723:R",
+    "eff_width_mm": 864.9,
+    "footprint_id": "FP-2",
+    "labels": [],
+    "part": "RELEASED_ZONE_PART",
+    "role": "LABELLED_OFFICIAL",
+    "why": "thickness printed in the cell / released zone"
+   },
+   {
+    "area_m2": 2.6562,
+    "cell_id": "FP2-C85947_40016:R",
+    "eff_width_mm": 805.9,
+    "footprint_id": "FP-2",
+    "labels": [],
+    "part": "RELEASED_ZONE_PART",
+    "role": "LABELLED_OFFICIAL",
+    "why": "thickness printed in the cell / released zone"
+   },
+   {
+    "area_m2": 6.8658,
+    "cell_id": "FP2-C87768_38799:R",
+    "eff_width_mm": 1164.5,
+    "footprint_id": "FP-2",
+    "labels": [
+     "+0.30",
+     "C"
+    ],
+    "part": "RELEASED_ZONE_PART",
+    "role": "LABELLED_OFFICIAL",
+    "why": "thickness printed in the cell / released zone"
+   },
+   {
+    "area_m2": 1.4352,
+    "cell_id": "FP2-C89468_37248:R",
+    "eff_width_mm": 599.0,
+    "footprint_id": "FP-2",
+    "labels": [],
+    "part": "RELEASED_ZONE_PART",
+    "role": "LABELLED_OFFICIAL",
+    "why": "thickness printed in the cell / released zone"
+   },
+   {
+    "area_m2": 6.8495,
+    "cell_id": "FP2-C90093_39548:R",
+    "eff_width_mm": 1305.7,
+    "footprint_id": "FP-2",
+    "labels": [
+     "C5"
+    ],
+    "part": "RELEASED_ZONE_PART",
+    "role": "LABELLED_OFFICIAL",
+    "why": "thickness printed in the cell / released zone"
+   },
+   {
+    "area_m2": 1.1357,
+    "cell_id": "FP2-C90843_37248:R",
+    "eff_width_mm": 529.2,
+    "footprint_id": "FP-2",
+    "labels": [
+     "+0.30"
+    ],
+    "part": "RELEASED_ZONE_PART",
+    "role": "LABELLED_OFFICIAL",
+    "why": "thickness printed in the cell / released zone"
+   }
+  ],
+  "excluded": [
+   {
+    "area_m2": 0.0313,
+    "cell_id": "FP1-C100461_49470:X",
+    "role": "EXCLUDED_SLIVER",
+    "why": "effective width 79 < 450 mm"
+   },
+   {
+    "area_m2": 0.024,
+    "cell_id": "FP1-C100769_46437:X",
+    "role": "EXCLUDED_SLIVER",
+    "why": "effective width 64 < 450 mm"
+   },
+   {
+    "area_m2": 0.0443,
+    "cell_id": "FP1-C102547_48392:X",
+    "role": "EXCLUDED_SLIVER",
+    "why": "effective width 87 < 450 mm"
+   },
+   {
+    "area_m2": 0.0443,
+    "cell_id": "FP1-C102989_48417:X",
+    "role": "EXCLUDED_SLIVER",
+    "why": "effective width 87 < 450 mm"
+   },
+   {
+    "area_m2": 0.1537,
+    "cell_id": "FP1-C103104_47834:X",
+    "role": "EXCLUDED_SLIVER",
+    "why": "effective width 162 < 450 mm"
+   },
+   {
+    "area_m2": 0.0312,
+    "cell_id": "FP1-C108346_45596:X",
+    "role": "EXCLUDED_SLIVER",
+    "why": "effective width 70 < 450 mm"
+   },
+   {
+    "area_m2": 0.0487,
+    "cell_id": "FP1-C110037_49765:X",
+    "role": "EXCLUDED_SLIVER",
+    "why": "effective width 106 < 450 mm"
+   },
+   {
+    "area_m2": 0.2977,
+    "cell_id": "FP1-C111387_44098:X",
+    "role": "EXCLUDED_SLIVER",
+    "why": "effective width 230 < 450 mm"
+   }
+  ],
+  "footprint_cells_m2": 217.012,
+  "released_zones": [
+   {
+    "area_m2": 70.4059,
+    "kind": "V3A_ZONE"
+   },
+   {
+    "area_m2": 44.9829,
+    "kind": "V3B_ZONE"
+   }
+  ],
+  "remediation": [
+   {
+    "attempts": [
+     {
+      "level": "PRINTED_IN_REGION",
+      "rank": 1,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "SECTION_OR_DETAIL",
+      "rank": 2,
+      "result": "NOT_FOUND"
+     },
+     {
+      "level": "SAME_SHEET_TYPICAL_LABEL",
+      "rank": 3,
+      "ref": null,
+      "result": "FOUND"
+     }
+    ],
+    "authority": "PROVISIONAL",
+    "consultant_question": "Does 'T=10cm, 5Ø10/m E.W.' apply to every ground-floor slab panel between the ground beams, or only to the two labelled zones?",
+    "current_quantity": 11.528,
+    "element": "ground-slab cells without a T= label",
+    "fact_origin": "SOURCE_FACT",
+    "flag_id": "GSLAB-LABEL-SCOPE",
+    "high_scenario": 21.701160000000005,
+    "kind": "LABEL_SCOPE",
+    "known_facts": {
+     "candidate_area_m2": 101.737,
+     "candidate_cells": 9,
+     "labels_on_sheet": [
+      "T=10cm"
+     ]
+    },
+    "low_scenario": 21.701160000000005,
+    "needs_consultant": true,
+    "next_automated_method": "PROJECT_GENERAL_RULE",
+    "provisional_quantity": 21.701160000000005,
+    "quantity_impact": 10.173160000000005,
+    "result": "RESOLVED_PROVISIONAL",
+    "search_text": "T=10cm / E.W. / GROUND SLAB / SLAB ON GRADE",
+    "successful_method": "SAME_SHEET_TYPICAL_LABEL",
+    "unknown_fact": "whether the printed slab note applies to every cell between ground beams",
+    "where_to_look": "ST7757 GROUND BEAMS PLAN (zone notes), general notes, GF architectural plan (floor build-up)",
+    "why_blocked": "the thickness / mesh note is printed inside two zones only"
+   }
+  ],
+  "thickness": {
+   "authority": "PROVISIONAL",
+   "fact_origin": "SOURCE_FACT",
+   "high": 0.1,
+   "level": "SAME_SHEET_TYPICAL_LABEL",
+   "low": 0.1,
+   "value": 0.1
+  },
+  "volume": {
+   "BEST_PROVISIONAL_QUANTITY": 21.701,
+   "HIGH_SCENARIO": 21.701,
+   "LOWER_BOUND_QUANTITY": 11.528,
+   "LOW_SCENARIO": 11.528,
+   "UNQUANTIFIED_COMPONENTS": [],
+   "VERIFIED_QUANTITY": 11.528,
+   "parts": 23,
+   "unit": "m3"
+  }
+ },
+ "slabs": {
+  "area": {
+   "BEST_PROVISIONAL_QUANTITY": 502.017,
+   "HIGH_SCENARIO": 529.093,
+   "LOWER_BOUND_QUANTITY": 502.017,
+   "LOW_SCENARIO": 502.017,
+   "UNQUANTIFIED_COMPONENTS": [],
+   "VERIFIED_QUANTITY": 502.017,
+   "parts": 4,
+   "unit": "m2"
+  },
+  "sheets": {
+   "1F": {
+    "conflict_openings_m2": 0,
+    "gross_m2": 217.201,
+    "net_area": {
+     "BEST_PROVISIONAL_QUANTITY": 169.751,
+     "HIGH_SCENARIO": 169.751,
+     "LOWER_BOUND_QUANTITY": 169.751,
+     "LOW_SCENARIO": 169.751,
+     "UNQUANTIFIED_COMPONENTS": [],
+     "VERIFIED_QUANTITY": 169.751,
+     "parts": 1,
+     "unit": "m2"
+    },
+    "openings": [
+     {
+      "area_m2": 3.24,
+      "evidence": "opening-layer cross over the face",
+      "face": "SITE-2d061106628608ac",
+      "opening_id": "1F:SITE-2d061106628608ac",
+      "role": "OPENING_VOID",
+      "state": "OPENING",
+      "thickness_tags_cm": [],
+      "why_conflict": null
+     },
+     {
+      "area_m2": 17.127,
+      "evidence": "opening-layer cross over the face",
+      "face": "SITE-5d2a1fe57fbc0bb4",
+      "opening_id": "1F:SITE-5d2a1fe57fbc0bb4",
+      "role": "OPENING_VOID",
+      "state": "OPENING",
+      "thickness_tags_cm": [],
+      "why_conflict": null
+     },
+     {
+      "area_m2": 16.357,
+      "evidence": "opening-layer cross over the face",
+      "face": "SITE-8902158ef73bc89b",
+      "opening_id": "1F:SITE-8902158ef73bc89b",
+      "role": "OPENING_VOID",
+      "state": "OPENING",
+      "thickness_tags_cm": [],
+      "why_conflict": null
+     },
+     {
+      "area_m2": 10.725,
+      "evidence": "stair line work inside the face",
+      "face": "SITE-b45f28b90e787c61",
+      "opening_id": "1F:SITE-b45f28b90e787c61",
+      "role": "OPENING_STAIR",
+      "state": "OPENING",
+      "thickness_tags_cm": [
+       16
+      ],
+      "why_conflict": null
+     }
+    ],
+    "openings_m2": 47.449,
+    "plate_m2": 169.751,
+    "t_m": 0.16
+   },
+   "2F": {
+    "conflict_openings_m2": 0,
+    "gross_m2": 55.478,
+    "net_area": {
+     "BEST_PROVISIONAL_QUANTITY": 55.478,
+     "HIGH_SCENARIO": 55.478,
+     "LOWER_BOUND_QUANTITY": 55.478,
+     "LOW_SCENARIO": 55.478,
+     "UNQUANTIFIED_COMPONENTS": [],
+     "VERIFIED_QUANTITY": 55.478,
+     "parts": 1,
+     "unit": "m2"
+    },
+    "openings": [],
+    "openings_m2": 0,
+    "plate_m2": 55.478,
+    "t_m": 0.18
+   },
+   "GF": {
+    "conflict_openings_m2": 27.076,
+    "gross_m2": 322.413,
+    "net_area": {
+     "BEST_PROVISIONAL_QUANTITY": 276.788,
+     "HIGH_SCENARIO": 303.864,
+     "LOWER_BOUND_QUANTITY": 276.788,
+     "LOW_SCENARIO": 276.788,
+     "UNQUANTIFIED_COMPONENTS": [],
+     "VERIFIED_QUANTITY": 276.788,
+     "parts": 2,
+     "unit": "m2"
+    },
+    "openings": [
+     {
+      "area_m2": 4.584,
+      "evidence": "VOID label inside the face",
+      "face": "SITE-14d5b223af3265f8",
+      "opening_id": "GF:SITE-14d5b223af3265f8",
+      "role": "OPENING_VOID",
+      "state": "OPENING",
+      "thickness_tags_cm": [],
+      "why_conflict": null
+     },
+     {
+      "area_m2": 27.076,
+      "evidence": "VOID label inside the face",
+      "face": "SITE-4e71d36d91b40e50",
+      "opening_id": "GF:SITE-4e71d36d91b40e50",
+      "role": "OPENING_VOID",
+      "state": "OPENING_CONFLICT",
+      "thickness_tags_cm": [
+       16
+      ],
+      "why_conflict": "VOID label and a printed slab thickness tag in the same face"
+     },
+     {
+      "area_m2": 10.725,
+      "evidence": "stair line work inside the face",
+      "face": "SITE-71996b11cee5f1c7",
+      "opening_id": "GF:SITE-71996b11cee5f1c7",
+      "role": "OPENING_STAIR",
+      "state": "OPENING",
+      "thickness_tags_cm": [
+       16
+      ],
+      "why_conflict": null
+     },
+     {
+      "area_m2": 3.24,
+      "evidence": "opening-layer cross over the face",
+      "face": "SITE-c2f739343397f0f0",
+      "opening_id": "GF:SITE-c2f739343397f0f0",
+      "role": "OPENING_VOID",
+      "state": "OPENING",
+      "thickness_tags_cm": [],
+      "why_conflict": null
+     }
+    ],
+    "openings_m2": 45.625,
+    "plate_m2": 276.788,
+    "t_m": 0.16
+   }
+  },
+  "volume": {
+   "BEST_PROVISIONAL_QUANTITY": 81.432,
+   "HIGH_SCENARIO": 85.765,
+   "LOWER_BOUND_QUANTITY": 81.432,
+   "LOW_SCENARIO": 81.432,
+   "UNQUANTIFIED_COMPONENTS": [],
+   "VERIFIED_QUANTITY": 81.432,
+   "parts": 4,
+   "unit": "m3"
+  }
+ },
+ "walls": {
+  "length_by_thickness": {
+   "150": {
+    "BEST_PROVISIONAL_QUANTITY": 78.401,
+    "HIGH_SCENARIO": 78.401,
+    "LOWER_BOUND_QUANTITY": 77.507,
+    "LOW_SCENARIO": 77.507,
+    "UNQUANTIFIED_COMPONENTS": [],
+    "VERIFIED_QUANTITY": 77.507,
+    "parts": 4,
+    "unit": "m"
+   },
+   "200": {
+    "BEST_PROVISIONAL_QUANTITY": 134.076,
+    "HIGH_SCENARIO": 134.076,
+    "LOWER_BOUND_QUANTITY": 89.74,
+    "LOW_SCENARIO": 89.74,
+    "UNQUANTIFIED_COMPONENTS": [],
+    "VERIFIED_QUANTITY": 89.74,
+    "parts": 5,
+    "unit": "m"
+   }
+  },
+  "length_floor_thickness": {
+   "1F|150": {
+    "BEST_PROVISIONAL_QUANTITY": 42.713,
+    "HIGH_SCENARIO": 42.713,
+    "LOWER_BOUND_QUANTITY": 42.713,
+    "LOW_SCENARIO": 42.713,
+    "UNQUANTIFIED_COMPONENTS": [],
+    "VERIFIED_QUANTITY": 42.713,
+    "parts": 24,
+    "unit": "m"
+   },
+   "1F|200": {
+    "BEST_PROVISIONAL_QUANTITY": 43.448,
+    "HIGH_SCENARIO": 43.448,
+    "LOWER_BOUND_QUANTITY": 28.881,
+    "LOW_SCENARIO": 28.881,
+    "UNQUANTIFIED_COMPONENTS": [],
+    "VERIFIED_QUANTITY": 28.881,
+    "parts": 29,
+    "unit": "m"
+   },
+   "2F|150": {
+    "BEST_PROVISIONAL_QUANTITY": 8.7,
+    "HIGH_SCENARIO": 8.7,
+    "LOWER_BOUND_QUANTITY": 8.7,
+    "LOW_SCENARIO": 8.7,
+    "UNQUANTIFIED_COMPONENTS": [],
+    "VERIFIED_QUANTITY": 8.7,
+    "parts": 5,
+    "unit": "m"
+   },
+   "2F|200": {
+    "BEST_PROVISIONAL_QUANTITY": 21.998,
+    "HIGH_SCENARIO": 21.998,
+    "LOWER_BOUND_QUANTITY": 21.998,
+    "LOW_SCENARIO": 21.998,
+    "UNQUANTIFIED_COMPONENTS": [],
+    "VERIFIED_QUANTITY": 21.998,
+    "parts": 13,
+    "unit": "m"
+   },
+   "GF|150": {
+    "BEST_PROVISIONAL_QUANTITY": 26.988,
+    "HIGH_SCENARIO": 26.988,
+    "LOWER_BOUND_QUANTITY": 26.094,
+    "LOW_SCENARIO": 26.094,
+    "UNQUANTIFIED_COMPONENTS": [],
+    "VERIFIED_QUANTITY": 26.094,
+    "parts": 21,
+    "unit": "m"
+   },
+   "GF|200": {
+    "BEST_PROVISIONAL_QUANTITY": 68.629,
+    "HIGH_SCENARIO": 68.629,
+    "LOWER_BOUND_QUANTITY": 38.861,
+    "LOW_SCENARIO": 38.861,
+    "UNQUANTIFIED_COMPONENTS": [],
+    "VERIFIED_QUANTITY": 38.861,
+    "parts": 41,
+    "unit": "m"
+   }
+  },
+  "physical_faces": {
+   "basis": "two faces per masonry band; height = structural interval - terminating member (DERIVED) or, for ambiguous bands, a floor-median provisional scenario; bands are net of openings",
+   "by_floor_role": {
+    "1F|EXTERIOR_FACE": 102.725,
+    "1F|INTERIOR_FACE": 506.308,
+    "2F|EXTERIOR_FACE": 78.361,
+    "2F|INTERIOR_FACE": 139.529,
+    "GF|EXTERIOR_FACE": 150.4,
+    "GF|INTERIOR_FACE": 640.858
+   },
+   "faces": 266,
+   "finish_unassigned_faces": 266,
+   "physical_area": {
+    "BEST_PROVISIONAL_QUANTITY": 1618.18,
+    "HIGH_SCENARIO": 1638.96,
+    "LOWER_BOUND_QUANTITY": 1220.508,
+    "LOW_SCENARIO": 1564.987,
+    "UNQUANTIFIED_COMPONENTS": [],
+    "VERIFIED_QUANTITY": 1220.508,
+    "parts": 266,
+    "unit": "m2"
+   }
+  },
+  "reconciliation": {
+   "1F|150": {
+    "explain": {
+     "COLUMN_OVERLAP_POLICY": 1.739,
+     "DUPLICATE_FACE": 0.0,
+     "OPENING_SPAN": 10.562,
+     "URBAN_AMBIGUOUS_NOT_MEASURED": 0.0,
+     "URBAN_MISSED_OR_UNRESOLVED": -9.548,
+     "difference_m": -9.548,
+     "method_a_ambiguous_m": 0,
+     "method_a_established_m": 42.713,
+     "method_b_paired_wall_m": 33.165
+    },
+    "method_a": {
+     "ambiguous_m": 0,
+     "bands_ambiguous": 0,
+     "bands_established": 24,
+     "column_overlap_m": 1.7,
+     "established_m": 42.713
+    },
+    "method_b": {
+     "COLUMN_OVERLAP_POLICY": 1.739,
+     "OPENING_SPAN": 10.562,
+     "PAIRED_WALL": 33.165
+    },
+    "method_b_pairs": 26,
+    "method_c": "NOT_RUN (room-adjacency reconstruction needs the V3 space graph, not in the frozen registers)",
+    "method_d_widths": {
+     "150": 26
+    }
+   },
+   "1F|200": {
+    "explain": {
+     "COLUMN_OVERLAP_POLICY": 9.371,
+     "DUPLICATE_FACE": 1.845,
+     "OPENING_SPAN": 17.029,
+     "URBAN_AMBIGUOUS_NOT_MEASURED": 1.472,
+     "URBAN_MISSED_OR_UNRESOLVED": 0.0,
+     "difference_m": 1.472,
+     "method_a_ambiguous_m": 14.568,
+     "method_a_established_m": 28.881,
+     "method_b_paired_wall_m": 30.353
+    },
+    "method_a": {
+     "ambiguous_m": 14.568,
+     "bands_ambiguous": 4,
+     "bands_established": 25,
+     "column_overlap_m": 5.817,
+     "established_m": 28.881
+    },
+    "method_b": {
+     "COLUMN_OVERLAP_POLICY": 9.371,
+     "DUPLICATE_FACE": 1.845,
+     "OPENING_SPAN": 17.029,
+     "PAIRED_WALL": 30.353
+    },
+    "method_b_pairs": 41,
+    "method_c": "NOT_RUN (room-adjacency reconstruction needs the V3 space graph, not in the frozen registers)",
+    "method_d_widths": {
+     "200": 41
+    }
+   },
+   "2F|150": {
+    "explain": {
+     "COLUMN_OVERLAP_POLICY": 0.033,
+     "DUPLICATE_FACE": 0.0,
+     "OPENING_SPAN": 2.112,
+     "URBAN_AMBIGUOUS_NOT_MEASURED": 0.0,
+     "URBAN_MISSED_OR_UNRESOLVED": -2.145,
+     "difference_m": -2.145,
+     "method_a_ambiguous_m": 0,
+     "method_a_established_m": 8.7,
+     "method_b_paired_wall_m": 6.555
+    },
+    "method_a": {
+     "ambiguous_m": 0,
+     "bands_ambiguous": 0,
+     "bands_established": 5,
+     "column_overlap_m": 0,
+     "established_m": 8.7
+    },
+    "method_b": {
+     "COLUMN_OVERLAP_POLICY": 0.033,
+     "OPENING_SPAN": 2.112,
+     "PAIRED_WALL": 6.555
+    },
+    "method_b_pairs": 5,
+    "method_c": "NOT_RUN (room-adjacency reconstruction needs the V3 space graph, not in the frozen registers)",
+    "method_d_widths": {
+     "150": 5
+    }
+   },
+   "2F|200": {
+    "explain": {
+     "COLUMN_OVERLAP_POLICY": 4.275,
+     "DUPLICATE_FACE": 0.0,
+     "OPENING_SPAN": 5.002,
+     "URBAN_AMBIGUOUS_NOT_MEASURED": 0.0,
+     "URBAN_MISSED_OR_UNRESOLVED": -5.333,
+     "difference_m": -5.333,
+     "method_a_ambiguous_m": 0,
+     "method_a_established_m": 21.998,
+     "method_b_paired_wall_m": 16.665
+    },
+    "method_a": {
+     "ambiguous_m": 0,
+     "bands_ambiguous": 0,
+     "bands_established": 13,
+     "column_overlap_m": 2.1,
+     "established_m": 21.998
+    },
+    "method_b": {
+     "COLUMN_OVERLAP_POLICY": 4.275,
+     "OPENING_SPAN": 5.002,
+     "PAIRED_WALL": 16.665
+    },
+    "method_b_pairs": 16,
+    "method_c": "NOT_RUN (room-adjacency reconstruction needs the V3 space graph, not in the frozen registers)",
+    "method_d_widths": {
+     "200": 16
+    }
+   },
+   "GF|150": {
+    "explain": {
+     "COLUMN_OVERLAP_POLICY": 1.128,
+     "DUPLICATE_FACE": 0.0,
+     "OPENING_SPAN": 6.715,
+     "URBAN_AMBIGUOUS_NOT_MEASURED": 0.0,
+     "URBAN_MISSED_OR_UNRESOLVED": -2.375,
+     "difference_m": -2.375,
+     "method_a_ambiguous_m": 0.894,
+     "method_a_established_m": 26.094,
+     "method_b_paired_wall_m": 23.719
+    },
+    "method_a": {
+     "ambiguous_m": 0.894,
+     "bands_ambiguous": 1,
+     "bands_established": 20,
+     "column_overlap_m": 0.04,
+     "established_m": 26.094
+    },
+    "method_b": {
+     "COLUMN_OVERLAP_POLICY": 1.128,
+     "OPENING_SPAN": 6.715,
+     "PAIRED_WALL": 23.719
+    },
+    "method_b_pairs": 23,
+    "method_c": "NOT_RUN (room-adjacency reconstruction needs the V3 space graph, not in the frozen registers)",
+    "method_d_widths": {
+     "150": 23
+    }
+   },
+   "GF|200": {
+    "explain": {
+     "COLUMN_OVERLAP_POLICY": 15.173,
+     "DUPLICATE_FACE": 8.048,
+     "OPENING_SPAN": 12.54,
+     "URBAN_AMBIGUOUS_NOT_MEASURED": 25.737,
+     "URBAN_MISSED_OR_UNRESOLVED": 0.0,
+     "difference_m": 25.737,
+     "method_a_ambiguous_m": 29.768,
+     "method_a_established_m": 38.861,
+     "method_b_paired_wall_m": 64.598
+    },
+    "method_a": {
+     "ambiguous_m": 29.768,
+     "bands_ambiguous": 7,
+     "bands_established": 34,
+     "column_overlap_m": 4.979,
+     "established_m": 38.861
+    },
+    "method_b": {
+     "COLUMN_OVERLAP_POLICY": 15.173,
+     "DUPLICATE_FACE": 8.048,
+     "OPENING_SPAN": 12.54,
+     "PAIRED_WALL": 64.598
+    },
+    "method_b_pairs": 55,
+    "method_c": "NOT_RUN (room-adjacency reconstruction needs the V3 space graph, not in the frozen registers)",
+    "method_d_widths": {
+     "200": 55
+    }
+   }
+  }
+ }
+}

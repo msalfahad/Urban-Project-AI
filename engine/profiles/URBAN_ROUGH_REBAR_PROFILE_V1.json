@@ -14,6 +14,10 @@
   "STAIRS_AND_DOME": 179,
   "SWIMMING_POOL": 121
  },
+ "mapping_overrides": {
+  "FOUNDATION_NECK": "WALLS_AND_COLUMNS"
+ },
+ "mapping_overrides_basis": "owner decision: the calibration behind WALLS_AND_COLUMNS = 200 counted necks with columns; this mapping belongs to this rough profile only - engineering taxonomy keeps FOUNDATION_NECK as a distinct element",
  "ratio_rounding": "integer kg/m3",
  "not": [
   "structural-code values",

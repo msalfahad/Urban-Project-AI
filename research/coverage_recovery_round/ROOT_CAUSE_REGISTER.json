@@ -1,0 +1,88 @@
+{
+ "rows": [
+  {
+   "difference": "GROUND_BEAMS",
+   "q1_urban_rule": "technical release requires a printed depth; 'FOLLOW ARCH.' -> BLOCKED -> technical 0 for 28 exterior spans (the commercial layer already held 33.09 m3)",
+   "q2_objects_excluded": "28 exterior spans (110.299 m) + the boundary-wall beam run",
+   "q3_handles": "V3 GROUND_STRUCTURE spans GB-* (bands H2000+H252 ...), C-BWALL S-BOUN run",
+   "q4_donor_included_real_objects": "yes - the same spans",
+   "q5_donor_overcount": "no; donors appear to assume a shallower exterior section (implied depth below Urban's elevation-derived low)",
+   "q6_generic_fix": "yes - ground_beam_recovery: depth ladder, measured length / width always kept, BOUNDED scenario",
+   "q7_code": "engine/source/ground_beam_recovery.py + evidence_ladder GROUND_BEAM_DEPTH; publish scenario layers",
+   "q8_regression": "tests/coverage_recovery_engine::test_beam_with_missing_depth_survives, ::test_remediation_records_every_attempted_method",
+   "q9_project_specific": "the exterior depth bracket 0.90-1.30 m (from the elevations) is project data, not code"
+  },
+  {
+   "difference": "GROUND_SLAB",
+   "q1_urban_rule": "a ground-slab region was released only where a 'T=' label sat inside it; unlabelled cells between ground beams were never measured",
+   "q2_objects_excluded": "9 cells, about 101.7 m2 in footprint FP-1",
+   "q3_handles": "ST7757 GROUND BEAMS PLAN texts H5782|5776 / H5782|5789 (T=10cm), layers 1 + 2 bands",
+   "q4_donor_included_real_objects": "yes - the unlabelled cells",
+   "q5_donor_overcount": "likely - the oracle figures equal the GF gross slab outline x 0.10, i.e. they also include the ground-beam footprint and openings",
+   "q6_generic_fix": "yes - ground_slab_recovery: footprint - bands - columns = cells; label scope as a scenario",
+   "q7_code": "engine/source/ground_slab_recovery.py; coverage_anomaly.ground_slab_vs_footprint",
+   "q8_regression": "::test_unlabelled_slab_cell_contributes_candidate_area, ::test_ground_slab_decomposition_recovers_cells_between_beams",
+   "q9_project_specific": "the 10 cm thickness and which cells are slab-on-grade"
+  },
+  {
+   "difference": "COLUMNS",
+   "q1_urban_rule": "column concrete waited for clear height below beams (beam depth per face) and the foundation storey waited for the founding level",
+   "q2_objects_excluded": "47 of 95 occurrences had no technical concrete (36 foundation + 11 blocked residue)",
+   "q3_handles": "S1 COLUMN_OCCURRENCE_REGISTER column_id / plan_source handles",
+   "q4_donor_included_real_objects": "yes",
+   "q5_donor_overcount": "no - convention split only",
+   "q6_generic_fix": "yes - column_concrete_geometry: B x D x (interval - slab t), independent of rebar",
+   "q7_code": "engine/source/column_concrete_geometry.py",
+   "q8_regression": "::test_column_rebar_blocker_does_not_block_concrete, ::test_c4n_cn_propagation_error_does_not_happen",
+   "q9_project_specific": "storey intervals, slab tags, founding-level range"
+  },
+  {
+   "difference": "BEAMS",
+   "q1_urban_rule": "V3a binding rules (NO_BAND_ADJACENT_TO_TAG, SPAN_COUNT_MISMATCH, BAND_TYPE_CONFLICT ...) blocked residue; GF / 1F residue only reached a BUDGET line outside the total",
+   "q2_objects_excluded": "24 residue objects (+1 duplicate); 8 tags have no band at all",
+   "q3_handles": "V3b residue ids (ALSENAN_ST7757_DXF|H... TEXT)",
+   "q4_donor_included_real_objects": "partly",
+   "q5_donor_overcount": "possible for U-C4N (tags may repeat measured beams)",
+   "q6_generic_fix": "yes - beam_occurrence_recovery: every tag / band terminates; continuity + width routes",
+   "q7_code": "engine/source/beam_occurrence_recovery.py; evidence_ladder MEMBER_BINDING",
+   "q8_regression": "::test_unbound_beam_recovered_from_faces_and_continuity, ::test_source_conflict_emits_both_scenarios",
+   "q9_project_specific": "which residue tags duplicate a measured beam"
+  },
+  {
+   "difference": "SLABS / NET_SLAB_AREA",
+   "q1_urban_rule": "openings deducted from evidence; one GF void face carries a T16 tag (conflict) and was deducted silently",
+   "q2_objects_excluded": "GF:SITE-4e71d36d91b40e50 27.08 m2 (conflict); thickness differences are donor assumptions",
+   "q3_handles": "B2A1 SLAB_REGION faces",
+   "q4_donor_included_real_objects": "possibly the conflict face",
+   "q5_donor_overcount": "volume: yes (0.20 m assumed thickness)",
+   "q6_generic_fix": "yes - slab_opening_reconciliation: opening ids + conflict scenario",
+   "q7_code": "engine/source/slab_opening_reconciliation.py",
+   "q8_regression": "::test_every_slab_deduction_has_opening_provenance, ::test_c4n_slab_thickness_assumption_never_overrides_project_rule",
+   "q9_project_specific": "whether that GF face is a void"
+  },
+  {
+   "difference": "BLOCKWORK_200",
+   "q1_urban_rule": "WALL_BAND_POLICY reports ambiguous bands but never measures them; column overlap is excluded",
+   "q2_objects_excluded": "12 ambiguous bands (44.3 m of 200 mm)",
+   "q3_handles": "A3 WALL_BAND_REGISTER band ids (WB-...)",
+   "q4_donor_included_real_objects": "yes",
+   "q5_donor_overcount": "christiannp - yes: through openings / columns / duplicate faces (Method B shows the split)",
+   "q6_generic_fix": "yes - ambiguous bands become CANDIDATE length; wall_band_reconciliation explains every metre",
+   "q7_code": "engine/source/wall_band_reconciliation.py",
+   "q8_regression": "::test_wall_pair_false_positives_are_classified",
+   "q9_project_specific": "which ambiguous bands are walls (vs kerbs / parapets)"
+  },
+  {
+   "difference": "WALL_FACES / PLASTER",
+   "q1_urban_rule": "faces were released only after room certification and finish assignment",
+   "q2_objects_excluded": "all uncertified faces",
+   "q3_handles": "V3 BLOCKWORK bands",
+   "q4_donor_included_real_objects": "yes",
+   "q5_donor_overcount": "gross basis (openings, column faces)",
+   "q6_generic_fix": "yes - physical_wall_faces: face area first, finish after",
+   "q7_code": "engine/source/physical_wall_faces.py",
+   "q8_regression": "::test_material_and_paint_uncertainty_keep_physical_and_plaster_area",
+   "q9_project_specific": "finish schedule"
+  }
+ ]
+}

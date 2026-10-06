@@ -16,7 +16,8 @@ from .cooling import floor_load, tons_for_area, select_units
 from .preliminaries import preliminaries, PrelimRate
 from .finance import FinanceReport, CostLine
 from .estimate_actual import OutturnReport, TradeOutturn
-from .bbs_steel import Bar, steel_from_bars, ratio_check
+from .bbs_steel import Bar, steel_from_bars
+from .source.rebar_sanity_qa import ratio_band_check as ratio_check   # QA layer (moved from bbs_steel)
 from .calculator import QtyRecord, calculate, priced_total
 from .funnel import Lead, analyse
 from .revision_delta import BoqSnapshotLine, diff

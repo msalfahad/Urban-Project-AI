@@ -42,6 +42,9 @@ ROUGH_MODULES = (
 ROUGH_PROFILES = (
     "engine/profiles/URBAN_ROUGH_REBAR_PROFILE_V1.json",
 )
+SANITY_QA_MODULES = (                    # kg/m3 QA helpers moved out of the accurate code (deprecated wrappers remain)
+    "engine/source/rebar_sanity_qa.py",
+)
 REPORT_MODULES = (                       # may read both products, writes neither
     "engine/source/rebar_sanity_variance.py",
     "engine/source/rebar_boq_sections.py",
@@ -66,4 +69,7 @@ OTHER_REBAR_AWARE = (
     "engine/source/flag_detectors.py", "engine/source/schedule_grammar.py", "engine/source/structural_authority.py",
     "engine/source/structural_census.py", "engine/source/structural_qto.py", "engine/source/structural_schedule.py",
     "engine/source/structural_population_discovery.py",
+    # coverage-recovery round: concrete / geometry modules that mention reinforcement only to exclude it
+    "engine/source/column_concrete_geometry.py", "engine/source/physical_measurement_state.py",
+    "engine/source/coverage_metrics.py",
 )

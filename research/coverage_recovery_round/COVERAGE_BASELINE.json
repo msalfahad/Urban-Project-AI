@@ -1,0 +1,310 @@
+{
+ "concrete_by_trade": {
+  "BEAMS": {
+   "dual_layer": {
+    "BEST_PROVISIONAL_QUANTITY": 45.537,
+    "HIGH_SCENARIO": null,
+    "LOWER_BOUND_QUANTITY": 37.587,
+    "LOW_SCENARIO": 41.909,
+    "UNQUANTIFIED_COMPONENTS": [],
+    "VERIFIED_QUANTITY": 2.65,
+    "parts": 5,
+    "unit": "m3"
+   },
+   "lines": [
+    "C-BEAM-GF",
+    "C-BEAM-GF-RES",
+    "C-BEAM-1F",
+    "C-BEAM-1F-RES",
+    "C-BEAM-2F"
+   ],
+   "technical_blocked_lines": [
+    "C-BEAM-GF-RES",
+    "C-BEAM-1F-RES"
+   ],
+   "technical_m3": 37.587
+  },
+  "BLINDING_PLAIN": {
+   "dual_layer": {
+    "BEST_PROVISIONAL_QUANTITY": 29.623,
+    "HIGH_SCENARIO": 29.623,
+    "LOWER_BOUND_QUANTITY": 29.623,
+    "LOW_SCENARIO": 29.623,
+    "UNQUANTIFIED_COMPONENTS": [
+     {
+      "part_id": "C-BLD-F:U",
+      "why": "technical REVIEW, no commercial value"
+     },
+     {
+      "part_id": "C-BLD-GB:U",
+      "why": "technical REVIEW, no commercial value"
+     }
+    ],
+    "VERIFIED_QUANTITY": 29.623,
+    "parts": 4,
+    "unit": "m3"
+   },
+   "lines": [
+    "C-BLD-F",
+    "C-BLD-GB",
+    "C-POOL-BLD",
+    "C-BLD-FULL"
+   ],
+   "technical_blocked_lines": [
+    "C-BLD-F",
+    "C-BLD-GB"
+   ],
+   "technical_m3": 29.623
+  },
+  "COLUMNS": {
+   "dual_layer": {
+    "BEST_PROVISIONAL_QUANTITY": 31.405,
+    "HIGH_SCENARIO": null,
+    "LOWER_BOUND_QUANTITY": 26.351,
+    "LOW_SCENARIO": 31.245,
+    "UNQUANTIFIED_COMPONENTS": [],
+    "VERIFIED_QUANTITY": 3.214,
+    "parts": 9,
+    "unit": "m3"
+   },
+   "lines": [
+    "C-COL-GF",
+    "C-COL-GF-RES",
+    "C-JNT-GF",
+    "C-COL-1F",
+    "C-COL-1F-RES",
+    "C-JNT-1F",
+    "C-COL-2F",
+    "C-COL-2F-RES",
+    "C-JNT-2F"
+   ],
+   "technical_blocked_lines": [
+    "C-COL-GF-RES",
+    "C-COL-1F-RES",
+    "C-COL-2F-RES"
+   ],
+   "technical_m3": 26.351
+  },
+  "DOMES": {
+   "dual_layer": {
+    "BEST_PROVISIONAL_QUANTITY": 13.49,
+    "HIGH_SCENARIO": 14.683,
+    "LOWER_BOUND_QUANTITY": 7.523,
+    "LOW_SCENARIO": 11.103,
+    "UNQUANTIFIED_COMPONENTS": [],
+    "VERIFIED_QUANTITY": 7.523,
+    "parts": 6,
+    "unit": "m3"
+   },
+   "lines": [
+    "C-DOME-SHELL-12EB",
+    "C-DOME-RING-12EB",
+    "C-DOME-SHELL-1300",
+    "C-DOME-RING-1300",
+    "C-DOME-SHELL-2F33",
+    "C-DOME-RING-2F33"
+   ],
+   "technical_blocked_lines": [
+    "C-DOME-RING-12EB",
+    "C-DOME-RING-1300",
+    "C-DOME-RING-2F33"
+   ],
+   "technical_m3": 7.523
+  },
+  "FOOTINGS": {
+   "dual_layer": {
+    "BEST_PROVISIONAL_QUANTITY": 66.306,
+    "HIGH_SCENARIO": null,
+    "LOWER_BOUND_QUANTITY": 64.346,
+    "LOW_SCENARIO": 64.778,
+    "UNQUANTIFIED_COMPONENTS": [],
+    "VERIFIED_QUANTITY": 0.0,
+    "parts": 2,
+    "unit": "m3"
+   },
+   "lines": [
+    "C-FTG",
+    "C-FTG-FF10"
+   ],
+   "technical_blocked_lines": [
+    "C-FTG-FF10"
+   ],
+   "technical_m3": 64.346
+  },
+  "GROUND_BEAMS": {
+   "dual_layer": {
+    "BEST_PROVISIONAL_QUANTITY": 49.623,
+    "HIGH_SCENARIO": 61.401,
+    "LOWER_BOUND_QUANTITY": 11.245,
+    "LOW_SCENARIO": 45.785,
+    "UNQUANTIFIED_COMPONENTS": [],
+    "VERIFIED_QUANTITY": 11.245,
+    "parts": 3,
+    "unit": "m3"
+   },
+   "lines": [
+    "C-GB-INT",
+    "C-GB-EXT",
+    "C-BWALL"
+   ],
+   "technical_blocked_lines": [
+    "C-GB-EXT",
+    "C-BWALL"
+   ],
+   "technical_m3": 11.245
+  },
+  "GROUND_SLAB": {
+   "dual_layer": {
+    "BEST_PROVISIONAL_QUANTITY": 11.539,
+    "HIGH_SCENARIO": 11.539,
+    "LOWER_BOUND_QUANTITY": 11.539,
+    "LOW_SCENARIO": 11.539,
+    "UNQUANTIFIED_COMPONENTS": [],
+    "VERIFIED_QUANTITY": 11.539,
+    "parts": 2,
+    "unit": "m3"
+   },
+   "lines": [
+    "C-GSLAB-ZONE-1",
+    "C-GSLAB-ZONE-2"
+   ],
+   "technical_blocked_lines": [],
+   "technical_m3": 11.539
+  },
+  "LINTELS": {
+   "dual_layer": {
+    "BEST_PROVISIONAL_QUANTITY": 4.749,
+    "HIGH_SCENARIO": 4.749,
+    "LOWER_BOUND_QUANTITY": 4.749,
+    "LOW_SCENARIO": 4.749,
+    "UNQUANTIFIED_COMPONENTS": [],
+    "VERIFIED_QUANTITY": 4.749,
+    "parts": 3,
+    "unit": "m3"
+   },
+   "lines": [
+    "C-LINT-GF",
+    "C-LINT-1F",
+    "C-LINT-2F"
+   ],
+   "technical_blocked_lines": [],
+   "technical_m3": 4.749
+  },
+  "NECKS": {
+   "dual_layer": {
+    "BEST_PROVISIONAL_QUANTITY": 6.25,
+    "HIGH_SCENARIO": 7.812,
+    "LOWER_BOUND_QUANTITY": 0.0,
+    "LOW_SCENARIO": 4.688,
+    "UNQUANTIFIED_COMPONENTS": [],
+    "VERIFIED_QUANTITY": 0.0,
+    "parts": 1,
+    "unit": "m3"
+   },
+   "lines": [
+    "C-NECK"
+   ],
+   "technical_blocked_lines": [
+    "C-NECK"
+   ],
+   "technical_m3": 0
+  },
+  "POOL": {
+   "dual_layer": {
+    "BEST_PROVISIONAL_QUANTITY": 5.053,
+    "HIGH_SCENARIO": 5.053,
+    "LOWER_BOUND_QUANTITY": 5.053,
+    "LOW_SCENARIO": 5.053,
+    "UNQUANTIFIED_COMPONENTS": [],
+    "VERIFIED_QUANTITY": 5.053,
+    "parts": 1,
+    "unit": "m3"
+   },
+   "lines": [
+    "C-POOL"
+   ],
+   "technical_blocked_lines": [],
+   "technical_m3": 5.053
+  },
+  "SLABS": {
+   "dual_layer": {
+    "BEST_PROVISIONAL_QUANTITY": 81.432,
+    "HIGH_SCENARIO": 81.432,
+    "LOWER_BOUND_QUANTITY": 81.432,
+    "LOW_SCENARIO": 81.432,
+    "UNQUANTIFIED_COMPONENTS": [],
+    "VERIFIED_QUANTITY": 81.432,
+    "parts": 3,
+    "unit": "m3"
+   },
+   "lines": [
+    "C-SLAB-GF",
+    "C-SLAB-1F",
+    "C-SLAB-2F"
+   ],
+   "technical_blocked_lines": [],
+   "technical_m3": 81.432
+  },
+  "SPECIAL_RC": {
+   "dual_layer": {
+    "BEST_PROVISIONAL_QUANTITY": 0.0,
+    "HIGH_SCENARIO": 0.0,
+    "LOWER_BOUND_QUANTITY": 0.0,
+    "LOW_SCENARIO": 0.0,
+    "UNQUANTIFIED_COMPONENTS": [
+     {
+      "part_id": "C-SWALL:U",
+      "why": "technical BLOCKED, no commercial value"
+     }
+    ],
+    "VERIFIED_QUANTITY": 0.0,
+    "parts": 1,
+    "unit": "m3"
+   },
+   "lines": [
+    "C-SWALL"
+   ],
+   "technical_blocked_lines": [
+    "C-SWALL"
+   ],
+   "technical_m3": 0
+  },
+  "STAIRS": {
+   "dual_layer": {
+    "BEST_PROVISIONAL_QUANTITY": 5.231,
+    "HIGH_SCENARIO": 6.178,
+    "LOWER_BOUND_QUANTITY": 0.0,
+    "LOW_SCENARIO": 4.708,
+    "UNQUANTIFIED_COMPONENTS": [],
+    "VERIFIED_QUANTITY": 0.0,
+    "parts": 1,
+    "unit": "m3"
+   },
+   "lines": [
+    "C-STAIR"
+   ],
+   "technical_blocked_lines": [
+    "C-STAIR"
+   ],
+   "technical_m3": 0
+  },
+  "STRAPS": {
+   "dual_layer": {
+    "BEST_PROVISIONAL_QUANTITY": 3.392,
+    "HIGH_SCENARIO": 3.392,
+    "LOWER_BOUND_QUANTITY": 3.392,
+    "LOW_SCENARIO": 3.392,
+    "UNQUANTIFIED_COMPONENTS": [],
+    "VERIFIED_QUANTITY": 3.392,
+    "parts": 1,
+    "unit": "m3"
+   },
+   "lines": [
+    "C-STR"
+   ],
+   "technical_blocked_lines": [],
+   "technical_m3": 3.392
+  }
+ },
+ "rule": "technical = what was published as Urban; dual_layer = the same lines read through quantity_scenarios.parts_from_release"
+}

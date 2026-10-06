@@ -11,7 +11,7 @@ length parts -> D^2/162 -> net kg -> completeness -> BBS eligibility -> mass con
 
 Quantity rules (no exceptions):
   * unit weight kg/m = D^2 / 162 (D in mm), no early rounding; pi D^2 / 4 x 7850 is reported for QA only;
-  * kg/m3, kg/m2 or kg/element ratios never create a quantity (`ratio_qa` only reports them);
+  * kg/m3, kg/m2 or kg/element ratios never create a quantity (QA helpers live in rebar_sanity_qa);
   * a per-metre count gives a VERIFIED lower bound ceil(rate x distribution) and a CONVENTION count (+1 end bar,
     spacing <= 1000 / rate with a bar at both edges); the convention part is PROVISIONAL until the project states it;
   * a population is VERIFIED_COMPLETE only when every required component is COMPLETE or NOT_REQUIRED and its
@@ -229,10 +229,15 @@ def totals(populations) -> dict:
     return res
 
 
-def ratio_qa(kg, *, volume_m3=None, area_m2=None, n_elements=None) -> dict:
-    """Reasonableness diagnostics only - the output never feeds a quantity."""
-    return {"use": "QA_ONLY", "kg_per_m3": kg / volume_m3 if volume_m3 else None,
-            "kg_per_m2": kg / area_m2 if area_m2 else None, "kg_per_element": kg / n_elements if n_elements else None}
+def __getattr__(name):
+    """ratio_qa moved to engine/source/rebar_sanity_qa.py (QA layer); deprecated wrapper resolved lazily."""
+    if name == "ratio_qa":
+        import warnings
+        from engine.source import rebar_sanity_qa as _qa
+        warnings.warn("rebar_model.ratio_qa moved to rebar_sanity_qa.intensity_qa (QA only)", DeprecationWarning,
+                      stacklevel=2)
+        return _qa.intensity_qa
+    raise AttributeError(name)
 
 
 # ---------------------------------------------------------------------------------------------------- invariants

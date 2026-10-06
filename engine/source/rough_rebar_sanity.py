@@ -123,7 +123,12 @@ def validate_profile(profile):
     for cat, v in (profile.get("ratios_kg_per_m3") or {}).items():
         if not isinstance(v, int) or isinstance(v, bool) or v <= 0:
             raise RoughRebarError(f"ratio for {cat} must be a positive integer kg/m3")
-    mapping = profile.get("mapping") or DEFAULT_MAPPING
+    for ec, cat in (profile.get("mapping_overrides") or {}).items():
+        if ec not in ELEMENT_CLASSES or ec in EXCLUDED_CLASSES:
+            raise RoughRebarError(f"mapping override for unknown / excluded element class {ec}")
+        if cat not in ROUGH_CATEGORIES:
+            raise RoughRebarError(f"mapping override {ec} -> {cat}: not a rough category")
+    mapping = effective_mapping(profile)
     for ec, cat in mapping.items():
         if ec not in ELEMENT_CLASSES:
             raise RoughRebarError(f"mapping uses unknown element class {ec}")
@@ -134,6 +139,15 @@ def validate_profile(profile):
     return profile
 
 
+def effective_mapping(profile):
+    """The profile's own `mapping` (full replacement) or DEFAULT_MAPPING, then its `mapping_overrides` on top. An
+    override belongs to that profile only (e.g. a profile calibrated with necks counted with columns maps
+    FOUNDATION_NECK to WALLS_AND_COLUMNS; another profile may not)."""
+    m = dict(profile.get("mapping") or DEFAULT_MAPPING)
+    m.update(profile.get("mapping_overrides") or {})
+    return m
+
+
 def ratio_for(category, profile):
     r = (profile.get("ratios_kg_per_m3") or {}).get(category)
     return (r, "CONFIGURED") if r else (None, NOT_CONFIGURED)
@@ -141,7 +155,7 @@ def ratio_for(category, profile):
 
 def category_of(element_class, profile=None):
     """The rough category of an element class, or None (NOT_CONFIGURED / excluded)."""
-    mapping = (profile or {}).get("mapping") or DEFAULT_MAPPING
+    mapping = effective_mapping(profile or {})
     return None if element_class in EXCLUDED_CLASSES else mapping.get(element_class)
 
 
@@ -149,9 +163,9 @@ def rough_summary(occurrences, profile):
     """occurrences: [{occurrence_id, element_class? | description, concrete_m3, concrete_state}] from the concrete
     register. Returns the ROUGH_REBAR_SUMMARY {categories, not_configured, excluded, note}."""
     validate_profile(profile)
-    mapping = profile.get("mapping") or DEFAULT_MAPPING
+    mapping = effective_mapping(profile)
     seen = set()
-    cats = defaultdict(lambda: {s: 0.0 for s in CONCRETE_STATES} | {"occurrences": []})
+    cats = defaultdict(lambda: {s: 0.0 for s in CONCRETE_STATES} | {"occurrences": [], "classes": set()})
     not_configured, excluded = [], []
     for o in occurrences:
         oid = o["occurrence_id"]
@@ -179,6 +193,7 @@ def rough_summary(occurrences, profile):
         if o.get("concrete_m3") is not None:
             cats[cat][st] += o["concrete_m3"]
         cats[cat]["occurrences"].append(oid)
+        cats[cat]["classes"].add(ec)
     out = {}
     for cat, c in sorted(cats.items()):
         r, rs = ratio_for(cat, profile)
@@ -190,7 +205,7 @@ def rough_summary(occurrences, profile):
                     "released_concrete_m3": rel, "modelled_concrete_m3": mod,
                     "rough_kg_released_basis": None if r is None else rel * r,
                     "rough_kg_modelled_basis": None if r is None else mod * r,
-                    "occurrences": len(c["occurrences"]), "use": USE}
+                    "occurrences": len(c["occurrences"]), "element_classes": sorted(c["classes"]), "use": USE}
     return {"product": PRODUCT, "policy_id": POLICY_ID, "profile_id": profile.get("profile_id"),
             "authority": AUTHORITY, "use": USE, "categories": out, "not_configured": not_configured,
             "excluded": excluded, "note": MANDATORY_NOTE}

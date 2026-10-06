@@ -1,7 +1,7 @@
 """E2 — BBS Steel Engine.
 
-Steel weight from the bar schedules on the drawing (the real quantity), with the
-kg/m³ ratios currently in use kept only as a sanity check — never as the official
+Steel weight from the bar schedules on the drawing (the real quantity). The kg/m³
+sanity check now lives in engine/source/rebar_sanity_qa.py — never as the official
 quantity. Deterministic; the bar data comes from the drawing's schedules (e.g.
 ST7757 p9 footing reinforcement).
 
@@ -45,21 +45,16 @@ def steel_from_bars(bars: list[Bar]) -> SteelResult:
     return SteelResult(total_kg=sum(by_dia.values()), by_diameter=by_dia)
 
 
-# kg/m3 sanity band (a check, not the quantity).
-RATIO_YELLOW = (70.0, 200.0)
-RATIO_RED = (40.0, 300.0)
+# The kg/m3 sanity band moved to engine/source/rebar_sanity_qa.py (QA layer). The old names stay as deprecated
+# wrappers resolved lazily, so the bar-schedule code above never depends on them.
+_MOVED = {"ratio_check": "ratio_band_check", "RATIO_YELLOW": "RATIO_YELLOW", "RATIO_RED": "RATIO_RED"}
 
 
-def ratio_check(steel_kg: float, concrete_m3: float) -> dict:
-    """Compare steel/concrete against the sanity band."""
-    if concrete_m3 <= 0:
-        return {"ratio": None, "status": "n/a"}
-    ratio = steel_kg / concrete_m3
-    if ratio < RATIO_RED[0] or ratio > RATIO_RED[1]:
-        status = "RED"
-    elif ratio < RATIO_YELLOW[0] or ratio > RATIO_YELLOW[1]:
-        status = "YELLOW"
-    else:
-        status = "OK"
-    return {"ratio": ratio, "status": status,
-            "band": {"yellow": RATIO_YELLOW, "red": RATIO_RED}}
+def __getattr__(name):
+    if name in _MOVED:
+        import warnings
+        from engine.source import rebar_sanity_qa as _qa
+        warnings.warn(f"engine.bbs_steel.{name} moved to engine.source.rebar_sanity_qa.{_MOVED[name]} (QA only)",
+                      DeprecationWarning, stacklevel=2)
+        return getattr(_qa, _MOVED[name])
+    raise AttributeError(name)

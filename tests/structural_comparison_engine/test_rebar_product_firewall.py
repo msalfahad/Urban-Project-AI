@@ -168,12 +168,31 @@ def test_no_arrow_between_the_engines_only_the_report_layer_reads_both():
 
 
 def test_every_rebar_module_in_engine_is_declared():
-    declared = set(RP.ACCURATE_MODULES) | set(RP.ROUGH_MODULES) | set(RP.REPORT_MODULES) | \
+    declared = set(RP.ACCURATE_MODULES) | set(RP.ROUGH_MODULES) | set(RP.REPORT_MODULES) | set(RP.SANITY_QA_MODULES) | \
         set(RP.COMPARISON_MODULES) | set(RP.OTHER_REBAR_AWARE)
     words = ("rebar", "bbs", "reinforc")
     found = {str(p.relative_to(ROOT)) for p in (ROOT / "engine").rglob("*.py")
              if any(w in p.read_text(encoding="utf-8", errors="ignore").lower() for w in words)}
     assert found <= declared, sorted(found - declared)
+
+
+def test_accurate_modules_reach_sanity_qa_only_through_deprecated_shims():
+    """bbs_steel.ratio_check / rebar_model.ratio_qa moved to the QA layer; the accurate code keeps only a lazy
+    module __getattr__ wrapper (no top-level import, no call from accurate logic)."""
+    for m in RP.ACCURATE_MODULES:
+        tree = ast.parse((ROOT / m).read_text(encoding="utf-8"))
+        shims = [n for n in tree.body if isinstance(n, ast.FunctionDef) and n.name == "__getattr__"]
+        inside = {id(x) for f in shims for x in ast.walk(f)}
+        for n in ast.walk(tree):
+            if isinstance(n, (ast.Import, ast.ImportFrom)) and id(n) not in inside:
+                names = [a.name for a in n.names] + [n.module or ""] if isinstance(n, ast.ImportFrom) else \
+                    [a.name for a in n.names]
+                assert not any("rebar_sanity_qa" in x for x in names), m
+        src = (ROOT / m).read_text(encoding="utf-8")
+        assert "def ratio_check(" not in src and "def ratio_qa(" not in src, m
+    from engine.source import rebar_sanity_qa as QA
+    assert QA.ratio_band_check(30000, 240.0)["status"] == "OK"
+    assert QA.intensity_qa(100.0, volume_m3=2.0)["use"] == "QA_ONLY"
 
 
 def test_runtime_import_of_accurate_engines_loads_no_rough_module():
