@@ -30,3 +30,6 @@ serviceAccountKey.json
 # OS
 .DS_Store
 .secrets/
+
+# S1 human-review drawings embed client drawing content (xlsx already ignored above)
+research/alsenan_structural_census_s1/review/*.pdf

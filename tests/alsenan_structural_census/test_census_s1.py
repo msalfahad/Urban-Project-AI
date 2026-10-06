@@ -283,3 +283,17 @@ def test_rebar_untouched():
         for n, h in files.items():
             h = h if isinstance(h, str) else h.get("sha256")
             assert hashlib.sha256((ROOT / d / f"{n}.json").read_bytes()).hexdigest() == h, (d, n)
+
+
+# ============================================================================================ 4. human-review deliverables
+def test_review_manifest_matches_frozen_census():
+    man_p = S1 / "review" / "REVIEW_MANIFEST.json"
+    if not man_p.exists():
+        pytest.skip("review deliverables not generated")
+    man = json.loads(man_p.read_text(encoding="utf-8"))
+    idx = json.loads((S1 / "INDEX.json").read_text())
+    assert man["registers_consumed"] == {k: v["sha256"] for k, v in idx["registers"].items()}
+    assert man["no_rebar_kg"] is True
+    for k, v in man["id_cross_check"].items():
+        assert v["missing_on_drawing"] == [] and v["label_not_in_workbook"] == [], k
+        assert v["workbook_ids"] == v["drawing_labels"], k
