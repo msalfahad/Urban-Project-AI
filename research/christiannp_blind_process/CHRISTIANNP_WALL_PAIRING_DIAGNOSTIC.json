@@ -1,5 +1,5 @@
 {
- "christiannp_pairs": "NOT_PRESERVED_IN_THIS_ENVIRONMENT - the sealed run's pair list (handles, widths, overlaps, acceptance reasons) was never delivered to Urban; no row below is a donor row",
+ "christiannp_pairs": "NOT_PRESERVED_IN_THIS_ENVIRONMENT - the sealed run's raw pair list is not in the report as quoted and no raw output was delivered; no row below is a donor row",
  "christiannp_parameters": {
   "columns": "NOT_HELD",
   "curved_walls": "NOT_HELD",
@@ -17,20 +17,14 @@
   "t_junctions": "NOT_HELD",
   "width_buckets": "NOT_HELD"
  },
- "donor_minus_method_b_gross_m": {
-  "150": -5.757,
-  "200": -1.4
- },
- "inputs_sha256": {
-  "research/coverage_recovery_round/QUANTITY_COVERAGE_DASHBOARD.json": "818f4b8643e7b456cb13814cd49583ca650560a78da3bda92f200da1d605e174",
-  "research/coverage_recovery_round/QUANTITY_SCENARIOS.json": "d6a32b862f1f6bf3d5cc69cb092f5a3dd4aa403a34c7bbd819b9f1b55cf80707",
-  "research/coverage_recovery_round/WALL_FACE_PAIR_EXTRACT.json": "2639799cb9d6bc75307bf9e8dd9f3a8e622cd2c38d7a7ce1a242b80d08c2ffd9",
-  "tests/alsenan/registers_v3b/BOQ_LINES_V3B.json": "b241c38b543b4abf48ea9bd3a912193f867cb9be3917b947e67651d5129d23e4"
- },
- "reading": "christiannp's 200 mm length sits within 1.4 m of Urban's UNCLASSIFIED Method-B gross (paired + openings + column overlap + duplicate faces). INFERENCE: the donor total is raw parallel pairing before classification.",
- "relayed_donor_m": {
+ "reading": "the report's 200 mm length sits within 1.4 m of Urban's UNCLASSIFIED Method-B gross: ARITHMETIC_INFERENCE that the donor total is raw pairing before classification",
+ "report_m": {
   "150": 79.971,
   "200": 183.497
+ },
+ "report_minus_method_b_gross_m": {
+  "150": -5.757,
+  "200": -1.4
  },
  "rows": [
   {
@@ -2242,5 +2236,14 @@
    "OPENING_SPAN": 12.54,
    "PAIRED_WALL": 64.598
   }
+ },
+ "urban_version": {
+  "CALCULATION_ROUND": "COVERAGE_RECOVERY (CR.3)",
+  "DRAWING_SHA": {
+   "P7757.dxf": "ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4",
+   "ST7757.dxf": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079"
+  },
+  "ENGINE_COMMIT": "680264d",
+  "REGISTER_VERSION": "research/coverage_recovery_round/WALL_FACE_PAIR_EXTRACT.json@2639799cb9d6bc75"
  }
 }

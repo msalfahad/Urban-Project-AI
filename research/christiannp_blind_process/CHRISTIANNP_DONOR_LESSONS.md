@@ -1,64 +1,62 @@
-# christiannp donor lessons
+# christiannp donor lessons (v2)
 
-These lessons are about extraction methods, not quantities. No christiannp total enters any Urban engine or test. The evidence classes are explained in `CHRISTIANNP_BLIND_PROCESS_HANDOFF.md` §0.
+Evidence classes are REPORT_EXPLICIT / URBAN_FROZEN / ARITHMETIC_INFERENCE / NOT_HELD; see the handoff §0. REPORT_EXPLICIT items are imported from your quotation of the sealed report; the file check is pending. No christiannp total enters any Urban engine or test.
 
-## What christiannp genuinely extracted (corroborated by Urban's independent geometry)
+## What christiannp genuinely extracted
 
-| Population | christiannp (RELAYED) | Urban (URBAN_FROZEN) | Agreement |
+These are raw geometry results, each confirmed by an Urban route that shares nothing with the donor (INDEPENDENT_EXTRACTION_AGREEMENT):
+
+| Population | Report | Urban (versioned) | Agreement |
 |---|---|---|---|
-| Ground-beam length | 200.036 m, 42 strips | 198.796 m, 59 spans | +0.62 % |
-| GF gross slab outline | 324.038 m² (raster) | 322.413 m² (vector) | +0.50 % |
+| Ground-beam network | 85 raw lines → 42 paired strips, 200.036 m, 300 mm | 43 paired bands → 59 spans, 198.796 m | +0.62 % length; 42 vs 43 bands |
 | Built-up area | 598.708 m² | 595.092 m² | +0.61 % |
-| 200 mm raw face pairs | 183.497 m | Method B gross 184.897 m | −1.40 m |
-| Columns FOU + GF | 32.385 m³ | 32.153 m³ | +0.72 % |
-| Footings (schedule L × W × H) | 65.669 m³ | 64.346 released + F/F10 conflict | +1.323 m³, non-unique |
+| GF gross slab outline | 324.038 m² (raster) | 322.413 m² (vector) | +0.50 % |
+| Columns FOU + GF | 32.385 m³ | 32.153 m³ | +0.72 % (split differs by A2 / A3) |
+| 200 mm raw face pairs | 183.497 m | Method-B gross 184.897 m | −1.4 m |
 | Slab thickness tags 1F / 2F | 0.16 / 0.18 (implied) | 0.16 / 0.18 | equal |
 
-Where the donor measured raw geometry, it lands within about 1 % of Urban. The large differences all come from what was *done* with that geometry: sections, scopes, heights and classification.
+## What was assumed (REPORT_EXPLICIT A1–A15)
 
-## What was manual reasoning
+The assumptions fall into four groups by what they decide:
 
-These are judgement points the method required. Their exact content is NOT_HELD.
+- **Sections and levels:** A1, A2, A3, A4, A5, A12.
+- **Scopes:** A7, A11, A14, A15.
+- **Heights and openings:** A10, A13.
+- **Element models:** A6, A8, A9.
 
-- Allocating beam length between labels: sharing remaining length, capping spans, merging repeated marks.
-- Continuing CN columns through storeys (A8).
-- Splitting column volume between the FOU and GF storeys.
-- Classifying raster regions as opening, stair or slab.
-- Choosing wall heights.
+Only A4 (a level derived from printed intervals) and A6 (blinding, matching a source detail Urban reads) survive Urban review. Every large donor-over-Urban difference traces to one of them:
 
-## What was assumed
+- A1: +11.6 m³ on slabs;
+- A5: +4.7 m³ on interior ground beams;
+- A7: about +10.7 m³ on the ground slab;
+- A10 / A13: plaster;
+- A14 / A15: finishes and waterproofing scope.
 
-- **A1:** GF slab thickness 0.20. This adds +11.622 m³.
-- **A5:** ground-beam depth 0.60 on all 42 strips.
-- **A7:** ground slab area = GF gross outline.
-- **A8:** CN columns continue FOU + GR.
+## What was manual reasoning or rule-based allocation
 
-Inferred, but not on the relayed list:
+- The beam rules R1–R5 are REPORT_EXPLICIT. R5 (leftover length shared equally) is arithmetic allocation, not measurement.
+- Who applied the rules, and where judgement entered beyond them, is NOT_HELD.
 
-- one wall height of about 4.49 m everywhere;
-- stair wells kept in the slab (hypothesis H-SLAB-1);
-- 1F / 2F columns measured clear of beams.
+## Absorb (independent Urban implementations only)
 
-A2–A4, A6 and A9–A15 are NOT_HELD.
-
-## Absorb (generic, Urban-native)
-
-1. **Raw primitive reading with handles:** every LINE / ARC / POLYLINE is kept, and a band is a pair of handles. Urban already does this through K2.
-2. **Face pairing as an independent geometry route** for beams and walls. Its value is as a *population census*; it is not a quantity.
-3. **Raster area as an oracle:** outline, openings and enclosed regions, checked for convergence across resolutions.
-4. **Schedule-width vs drawn-width gate** on every beam binding.
-5. **Keep measurable geometry when semantics are LOW:** strips, cells and faces survive a missing label or depth. Urban adopted this in the coverage round.
-6. **Area and thickness as separate authorities**, each with its own evidence.
+1. Face pairing as a population census for beams and walls, followed by per-metre classification.
+2. The width check from R4, recorded as a gate rather than a silent re-assignment.
+3. Continuous-beam occurrence-once per plan from R1, with any span excess as a conflict, never a truncation.
+4. Collinear continuation from R2, as CANDIDATE evidence with a width check and a support stop.
+5. A raster area oracle with the report's five output classes, rebuilt independently, run to convergence, oracle-only.
+6. Separate thickness and area authorities; a declared storey-boundary convention on every column record.
+7. Treating donor-donor agreement as correlated by default, with an explicit agreement class.
 
 ## Reject
 
-See `CHRISTIANNP_RECOMMENDATIONS.md` → "What not to learn".
+- R5.
+- R3's fixed 2 m merge distance.
+- A1, A5, A7, A8, A14, A15 as values.
+- A2, A3, A9, A10, A11, A12, A13 as production defaults.
+- Comparing 22.916 t (KNOWN_INCOMPLETE_NET_DRAWING_REBAR) with Urban's accurate rebar.
 
-## The single most useful finding
+## The most useful finding
 
-christiannp and Urban see the same physical populations to within about 1 %.
+christiannp and Urban reconstruct the same physical networks: ground beams, slab outlines, built-up area and face pairs. Every large quantity difference is decided by a named, report-explicit assumption or rule.
 
-- Urban's historic low numbers came from **publication rules**: technical-only release, label-scoped cells, unmeasured ambiguous bands and finish-gated faces. They did not come from missing extraction.
-- The donor's high numbers come from **assumed sections, scopes and heights**.
-
-The coverage round already moved Urban to scenario-layer publication. The donor offers no geometry capability Urban lacks. It offers routes to cross-check that Urban should run as oracles.
+Urban's lesson is about publication and classification, not extraction: keep measuring when semantics are missing, classify every metre, and never let an assumption become a section. The coverage round already carries the first part.

@@ -1,67 +1,58 @@
-# christiannp forensic: recommendations
+# christiannp forensic: recommendations (v2)
 
-Rule: no idea is recommended because it brings a total closer to the freelancer, U-C4N or christiannp. Each idea is ranked by the generic problem it solves. Nothing here is implemented in this round.
+Rule: nothing is recommended because it brings a total closer to the freelancer or a donor. Nothing is implemented in this round.
 
-## Ranked reusable ideas
+## Production later
 
-| Rank | Idea | Donor source | Problem solved | Generic implementation | Risk | False-positive risk | Required tests | Production / oracle | Trades |
-|---|---|---|---|---|---|---|---|---|---|
-| P0 | **Candidate geometry when semantic authority is missing** | both donors (kept LOW-confidence measurable quantities) | a missing depth, label or finish erases a measured population | already in `physical_measurement_state` / `quantity_scenarios`; extend to every trade's publication | low | none (layers stay separate) | blocked object with measured geometry publishes best > 0, official unchanged | PRODUCTION | all |
-| P0 | **Schedule-width vs drawn-width gate** | beam rules (relayed behaviour) | wrong label binds to a strip | when the drawn band width differs from the schedule B beyond tolerance, record WIDTH_MISMATCH on the binding; never force | low | low | B=0.30 tag on a 0.20 band is flagged, not bound | PRODUCTION | beams, GB |
-| P0 | **Wall-face pairing + classification as a required cross-route** | wall pairing | unexplained wall-length gaps between routes | `wall_band_reconciliation` per project; every metre gets a class (PAIRED_WALL / OPENING_SPAN / COLUMN_OVERLAP / DUPLICATE) | low | medium (finish lines at wall width) | door gap → OPENING_SPAN; column face → COLUMN_OVERLAP; duplicate face → DUPLICATE; finish line pair at 15 mm → rejected | PRODUCTION cross-check (never a quantity source) | blockwork, plaster |
-| P0 | **Physical wall-face preservation** | plaster lesson (as a counter-example) | finish gating hides face area | `physical_wall_faces` feeds plaster / paint; finish is an attribute, not a gate | low | low | face area = length × (interval − member) − openings, per face; no assumed storey height | PRODUCTION | finishes |
-| P1 | **Beam edge pairing as an occurrence census** | GB / beam strips | unbound tags and missed beams | pair faces on the beam layer, then compare strips with tag-bound occurrences: STRIP_WITHOUT_TAG → CANDIDATE, TAG_WITHOUT_STRIP → UNQUANTIFIED with identity | medium | medium (slab-edge lines, kerbs) | strip with no tag survives as CANDIDATE; tag with no strip stays UNQUANTIFIED; curved strips use arc length | PRODUCTION census, quantity via the normal section ladder | beams, GB |
-| P1 | **Unlabelled-member recovery** | GB strips, slab cells | label scope drops real members | already for GB / slab cells; extend to beams with the width gate | medium | medium | unlabelled strip between two supports quantified as CANDIDATE with B from geometry, D from ladder | PRODUCTION | beams, slabs |
-| P1 | **Schedule ATTRIB-first reading** | both donors | text-matching errors on schedules | read INSERT ATTRIB values before TEXT; paginate; record handles | low | low | ATTRIB value wins over a nearby TEXT; missing ATTRIB falls back with a record | PRODUCTION | footings, columns, beams |
-| P1 | **Outline / tag dual route for footings** | footing extraction | F3 count, F/F10, FN irregular outlines | route 1: closed outlines; route 2: tags; reconcile each outline to one tag, or to a conflict record (`multi_route_evidence`) | low | low | outline without tag → CANDIDATE; two tags in one outline → SOURCE_CONFLICT; irregular FN → polygon area, not bbox | PRODUCTION cross-check | footings |
-| P1 | **Multi-route agreement confidence** | both donors vs Urban | single-route false confidence | CONFIDENCE_UP only when routes are independent (different primitives / algorithms); identical outputs from two routes must be checked for shared inputs | low | n/a | two routes reading the same helper do not raise confidence; FOU / GF identical in both donors flagged | PRODUCTION metadata | all |
-| P2 | **Raster / flood-fill slab reconstruction** | 50 mm raster | an independent area check of the vector topology | layer-filtered raster at 100 / 50 / 25 / 10 mm, two origins; classes outside / slab / opening / unresolved; compare with vector per region | medium | high at coarse cells (gap closure, leaks) | convergence < 0.5 % from 25 to 10 mm; component count stable; leak test (1-cell gap at a door); thin-void test (< 1 cell) | **ORACLE ONLY** | slabs, ground slab, BUA |
-| P2 | **Coordinate alignment between sheets** | column floor membership | wrong floor or plan assignment | per-sheet frame from grid lines / sheet frames (Urban FLOOR_PLAN_REGISTER); transform recorded per object | medium | low | same grid bubble maps to the same world point on every plan | PRODUCTION (already partly in K2 region frames) | columns, beams |
+| Rank | Idea | Report basis | Problem solved | Generic implementation | Risk / false positives | Required tests | Trades |
+|---|---|---|---|---|---|---|---|
+| P0 | Candidate geometry when semantic authority is missing | the report keeps measurable strips, cells and faces | lost populations | scenario layers on every trade (coverage round) | low | blocked object with measured geometry publishes best > 0, official unchanged | all |
+| P0 | Width gate (from R4) | R4 | wrong label binding | WIDTH_MISMATCH on the binding; re-assign only to an *adjacent* label; tolerance from drawing units | finish lines at beam width | `test_width_mismatch_flags_binding`, `test_reassignment_requires_adjacency`, `test_width_tolerance_scales_with_units` | beams, GB |
+| P0 | Wall-face pairing with per-metre classification | wall pairing | unexplained wall gaps | `wall_band_reconciliation` as a required cross-route | finish-line pairs | door / column / duplicate / finish-line classification tests | blockwork, plaster |
+| P0 | Physical wall faces before finishes | A10 / A13 counter-example | finish gating; storey-height faces | `physical_wall_faces`: interval − terminating member, per face, openings by evidence ladder | low | `test_wall_face_height_is_interval_minus_member` | finishes |
+| P0 | Agreement class on every cross-route comparison | the donor-donor identities | false double confirmation | DONOR_AGREEMENT_CLASS on comparison rows; CONFIDENCE_UP only for INDEPENDENT_EXTRACTION_AGREEMENT | none | `test_identical_routes_do_not_raise_confidence`, `test_shared_assumption_agreement_never_confirms` | all |
+| P0 | Version stamp on every comparison value | the 79 m vs 89.74 m confusion | old and new values mixed | ENGINE_COMMIT / REGISTER_VERSION / DRAWING_SHA / CALCULATION_ROUND required fields | none | `test_comparison_rows_carry_version_stamp` | all |
+| P1 | CB occurrence-once per plan (from R1) | R1 | double-counted continuous beams | one occurrence per CB per plan; span excess = SPAN_LENGTH_CONFLICT, never truncation | hidden supports | `test_cb_allocated_once_per_plan`, `test_cb_span_excess_is_conflict_not_truncation`, `test_cb_width_match_ranks_before_length` | beams |
+| P1 | Collinear continuation (from R2) | R2 | unlabelled continuations | CANDIDATE continuity: same width, stops at a support carrying a new tag | lintels, edge beams | `test_collinear_continuation_requires_same_width`, `test_continuation_stops_at_support_with_new_tag`, `test_continuation_is_candidate_not_verified` | beams |
+| P1 | Ground-beam network comparison | GBP 85 / 42 / 200.036 | count-based comparisons | compare total length, node types (end / T / L / X), components and segmentation (bands vs spans) | none | `test_ground_beam_network_length_connectivity_segmentation` | GB |
+| P1 | Footing outline / tag dual route | footing extraction | F3 / F-F10 / FN | reconcile each outline to one tag or a conflict record | low | `test_footing_outline_two_tags_is_source_conflict`, `test_irregular_footing_uses_polygon_area` | footings |
+| P1 | Declared storey-boundary convention on column records | A2 / A3 | split disagreements read as errors | each record states its base and top levels and their authority | none | `test_column_storey_split_declared_and_total_conserved` | columns |
+| P2 | ATTRIB-first schedule reading | report (schedule extraction) | text-matching errors | INSERT ATTRIB before TEXT, with pagination | low | ATTRIB wins over nearby TEXT | footings, columns, beams |
 
-## What not to learn
+## Oracle-only
 
-| Technique | Why rejected |
+- **Independent Urban raster oracle** (`CHRISTIANNP_RASTER_METHOD_SPEC.json`). It uses the report's five classes plus OUTSIDE:
+  - 100 / 50 / 25 / 10 mm resolutions, at two grid origins;
+  - EDGE_LINE_CELLS reported, never allocated;
+  - tests for convergence, origin shift, one-cell leaks, sub-cell voids and edge cells.
+- **R3-style distance de-duplication**, for diagnostics only.
+- **Donor totals and per-floor values**, only as post-freeze comparison rows carrying an agreement class.
+
+## Reject completely
+
+| Technique | Why |
 |---|---|
-| Hard-coding a 0.60 m ground-beam depth (A5) | It contradicts the printed details on 27 of 31 interior spans and has no source on the exterior. Urban keeps a BOUNDED scenario and asks the consultant. |
-| GF slab 0.20 m (A1) | The project rule is 0.16 m unless locally noted. A general note outranks an assumed value (+11.6 m³ error). |
-| Carrying CN columns upward automatically (A8) | Continuation must come from each storey's own plan occurrence. It conflicts with the human review. |
-| Ground slab = whole GF outline as verified truth (A7) | A suspended-slab outline is not slab-on-grade evidence. It includes beam and column footprints. At most it is a HIGH scenario. |
-| Uniform default wall height (≈ 4.49 m inferred) | A height is a per-face fact (interval − member), and a storey height is not a wall height. |
-| Raw face pairs as wall length | Openings, column faces and duplicate faces are not wall (≈ 73 m of the 200 mm figure). |
-| Keeping stair wells in the slab plate (H-SLAB-1, if confirmed) | It double-counts with stair concrete. |
-| Sharing remaining beam length among labels by arithmetic | Allocation must follow geometry. Arithmetic sharing hides binding errors. |
-| Gross stirrup perimeter as final BBS | It ignores tie topology (multi-link). ACCURATE_BOQ_REBAR keeps such components BLOCKED. |
-| Interpreting unreadable source as absent | Unreadable is a TEXT_READING-ladder state, never "no note". |
-| Manual value passing between tools | Every value needs a ladder level and a handle. |
+| R5: equal sharing of leftover strip length | Arithmetic allocation without geometry. It hides missing strips and gives members the wrong lengths (and rebar). |
+| R3 as production de-duplication | A fixed 2 m distance depends on drawing scale and merges distinct short beams. |
+| A1 0.20 GF slab | The project default is 0.16 unless locally noted. |
+| A5 0.60 ground-beam depth | Contradicts the printed interior sections; unsourced on the exterior. |
+| A7 outline as slab-on-grade | Includes beam and column footprints; at most a HIGH scenario. |
+| A8 CN continuation | Contradicts S1 chains and the human review. |
+| A14 floor / ceiling = slab net area | Includes wall footprints and non-room area. |
+| A15 roof WP without upturns | Incomplete. |
+| A2 / A3 / A9 / A10 / A11 / A12 / A13 as defaults | Conventions or assumptions, not evidence. Urban uses ladders and declared conventions. |
+| 22.916 t as a rebar comparison basis | KNOWN_INCOMPLETE_NET_DRAWING_REBAR (unresolved list in the report). |
+| Copying unseen donor code (raster, pairing) | Not held, not licensed; rebuild independently. |
 
 ## Top 10 generic Urban improvements
 
-1. Scenario-layer publication in every BOQ / dashboard view (P0, carried from the coverage round).
-2. Schedule-width vs drawn-width gate on bindings.
-3. Wall-band reconciliation as a mandatory cross-route with per-metre classes.
+1. Scenario-layer publication everywhere.
+2. The width gate.
+3. Wall-band reconciliation as a required cross-route.
 4. Physical wall faces feeding finishes.
-5. Beam face-pair census vs tag census (STRIP_WITHOUT_TAG / TAG_WITHOUT_STRIP).
-6. Footing outline / tag dual route.
-7. ATTRIB-first schedule reading with pagination completeness.
-8. Route-independence check before CONFIDENCE_UP.
-9. Raster area oracle with a convergence protocol (oracle only).
-10. A per-object donor intake format (handles, section, rule id), so future blind runs can be compared object by object and not by totals.
-
-## Exact tests required (when implemented)
-
-- `test_uniform_depth_never_overrides_detail_depth`: a span with a DETAIL depth keeps it when a project-wide fallback exists.
-- `test_width_gate_flags_mismatched_binding`
-- `test_strip_without_tag_is_candidate` / `test_tag_without_strip_keeps_identity`
-- `test_ground_slab_area_excludes_beam_and_column_footprints`
-- `test_floor_outline_never_verified_as_slab_on_grade`
-- `test_pairs_across_door_classify_as_opening_span`, `test_pairs_along_column_face_classify_as_column_overlap`, `test_duplicate_face_pairs_counted_once`, `test_finish_line_pair_rejected`
-- `test_wall_face_height_is_interval_minus_member` (no storey constant)
-- `test_stair_well_deducted_from_slab_plate`
-- `test_footing_outline_two_tags_is_source_conflict`, `test_irregular_footing_uses_polygon_area`
-- `test_identical_routes_do_not_raise_confidence`
-- Raster oracle:
-  - `test_raster_convergence_25_to_10mm`
-  - `test_raster_origin_shift_within_edge_band`
-  - `test_flood_fill_leak_through_one_cell_gap_detected`
-  - `test_thin_void_below_cell_size_reported_unresolved`
-- Package: `tests/christiannp_blind_process/test_package.py` (added in this round): evidence classes present, A–E classification on every gap row, donor pairs declared NOT_PRESERVED, builder reproduces the outputs byte for byte.
+5. Agreement class plus version stamp on every comparison row.
+6. CB occurrence-once with conflicts instead of caps.
+7. Collinear continuation as a candidate.
+8. Ground-beam network comparison: length, connectivity, segmentation.
+9. Footing dual route.
+10. The independent raster oracle (oracle only).

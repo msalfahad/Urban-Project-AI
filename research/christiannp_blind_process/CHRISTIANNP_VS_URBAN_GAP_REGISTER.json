@@ -8,30 +8,35 @@
  },
  "rows": [
   {
-   "classification": "B",
-   "donor": {
+   "agreement": "INDEPENDENT_EXTRACTION_AGREEMENT (length) / SHARED_ASSUMPTION_AGREEMENT (volume, vs U-C4N)",
+   "christiannp": {
+    "depth": "0.60 ASSUMPTION A5",
+    "evidence": "REPORT_EXPLICIT",
     "length_m": 200.036,
     "m3": 36.006,
-    "strips": 42
+    "paired_strips": 42,
+    "raw_lines": 85,
+    "report_file_check": "PENDING",
+    "width_mm": 300
    },
-   "donor_assumptions": [
+   "christiannp_assumptions": [
     "A5"
    ],
-   "donor_likely_correct": "NO for section (0.60 contradicts the p.13 details on 27 of 31 interior spans)",
-   "donor_method": "paired band strips x one uniform section 0.30 x 0.60",
-   "donor_objects": "42 strips, 200.036 m",
+   "christiannp_method": "85 raw lines -> 42 paired strips; volume = drawn width x 0.60 (A5) x length",
+   "classification": "B",
+   "donor_likely_correct": "geometry yes; depth no (27 of 31 interior spans printed 0.30 / 0.40)",
    "element": "interior + exterior ground beams",
-   "generic_lesson": "a measured population must survive a missing depth",
+   "generic_lesson": "a measured network survives a missing depth; compare network length, connectivity and segmentation, not span counts",
    "must_not_hardcode": [
-    "0.60 m depth",
-    "0.30 m width",
+    "0.60 m",
     "200.036 m",
-    "42 strips"
+    "42 strips",
+    "85 lines"
    ],
-   "production_change": "none new (ground_beam_recovery already does this); publish scenario layers",
-   "regression_test": "test: uniform-depth fill never overrides a DETAIL depth on the same span",
-   "root_cause": "publication (technical-only) + unsourced exterior depth; NOT extraction",
-   "same_basis": "NO - same population (length within 0.62%), different section",
+   "production_change": "none new (ground_beam_recovery); add the network comparison test",
+   "regression_test": "test_ground_beam_network_length_connectivity_segmentation",
+   "root_cause": "section assumption + Urban technical-only release; NOT extraction",
+   "same_basis": "geometry YES (length +0.62 %, 42 strips vs 43 Urban bands); volume NO (A5 section)",
    "trade": "GROUND_BEAMS",
    "urban": {
     "best": 49.624,
@@ -39,35 +44,47 @@
     "low": 45.786,
     "official_before": 11.245,
     "release": "PARTIAL_WITH_PROVISIONAL",
-    "verified": 11.245
+    "verified": 11.245,
+    "version": {
+     "CALCULATION_ROUND": "COVERAGE_RECOVERY (CR.3)",
+     "DRAWING_SHA": {
+      "P7757.dxf": "ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4",
+      "ST7757.dxf": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079"
+     },
+     "ENGINE_COMMIT": "680264d",
+     "REGISTER_VERSION": "research/coverage_recovery_round/QUANTITY_COVERAGE_DASHBOARD.json@818f4b8643e7b456"
+    }
    },
-   "urban_blocker": "exterior depth 'FOLLOW ARCH.' unprinted -> technical BLOCKED (now a BOUNDED scenario)",
-   "urban_likely_correct": "YES on population and interior sections; exterior depth needs the consultant",
-   "urban_objects": "59 spans, 198.796 m"
+   "urban_blocker": "exterior depth unprinted -> BOUNDED scenario",
+   "urban_likely_correct": "geometry and interior sections yes; exterior depth needs the consultant"
   },
   {
-   "classification": "B",
-   "donor": {
+   "agreement": "SHARED_SOURCE_AGREEMENT (thickness: the T=10 cm text) + SHARED_ASSUMPTION_AGREEMENT (area: GF gross outline, A7)",
+   "christiannp": {
+    "area_authority": "A7 GF gross outline",
     "area_m2": 324.038,
+    "evidence": "REPORT_EXPLICIT",
     "m3": 32.404,
-    "t_m": 0.1
+    "report_file_check": "PENDING",
+    "t_m": 0.1,
+    "thickness_authority": "T=10 cm text"
    },
-   "donor_assumptions": [
+   "christiannp_assumptions": [
     "A7"
    ],
-   "donor_likely_correct": "NO as verified scope; YES that unlabelled cells exist",
-   "donor_method": "raster gross outline x T=10 cm",
-   "donor_objects": "one outline",
+   "christiannp_method": "GF gross outline x 0.10",
+   "classification": "B",
+   "donor_likely_correct": "thickness source yes; area no as verified scope",
    "element": "slab on grade",
    "generic_lesson": "thickness authority and area authority are separate facts",
    "must_not_hardcode": [
     "324.038 m2",
-    "0.10 m for all panels"
+    "0.10 m for every panel"
    ],
-   "production_change": "keep ground_slab_recovery; never substitute a floor outline for slab-on-grade",
-   "regression_test": "test: ground-slab area excludes ground-beam footprint and column footprints",
-   "root_cause": "area authority: donor uses the suspended GF slab outline, which includes ground-beam and column footprints and openings; Urban measures cells net of beams",
-   "same_basis": "NO - donor area = GF gross slab outline (A7); Urban = founded cells between ground beams",
+   "production_change": "none",
+   "regression_test": "test_floor_outline_never_verified_as_slab_on_grade",
+   "root_cause": "AREA_AUTHORITY: the outline includes ground-beam and column footprints",
+   "same_basis": "NO - area authority differs (A7 outline vs cells between ground beams)",
    "trade": "GROUND_SLAB",
    "urban": {
     "best": 21.701,
@@ -75,35 +92,51 @@
     "low": 11.528,
     "official_before": 11.539,
     "release": "PARTIAL_WITH_PROVISIONAL",
-    "verified": 11.528
+    "verified": 11.528,
+    "version": {
+     "CALCULATION_ROUND": "COVERAGE_RECOVERY (CR.3)",
+     "DRAWING_SHA": {
+      "P7757.dxf": "ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4",
+      "ST7757.dxf": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079"
+     },
+     "ENGINE_COMMIT": "680264d",
+     "REGISTER_VERSION": "research/coverage_recovery_round/QUANTITY_COVERAGE_DASHBOARD.json@818f4b8643e7b456"
+    }
    },
-   "urban_blocker": "label-scoped release (fixed in the coverage round: 9 cells, 101.7 m2 as CANDIDATE)",
-   "urban_likely_correct": "cells are the physical slab; scope of T=10 note still a consultant question",
-   "urban_objects": "23 cells (14 labelled zones + 9 recovered unlabelled)"
+   "urban_blocker": "label scope (recovered as CANDIDATE cells in the coverage round)",
+   "urban_likely_correct": "cells are the physical slab; T=10 scope is a consultant question"
   },
   {
-   "classification": "C",
-   "donor": {
+   "agreement": "SHARED_ASSUMPTION_AGREEMENT (vs U-C4N) / INDEPENDENT_EXTRACTION_AGREEMENT (FOU+GF vs Urban)",
+   "christiannp": {
     "COL_1F_m3": 8.888,
     "COL_2F_m3": 3.377,
     "COL_FOU_m3": 6.15,
-    "COL_GF_m3": 26.235
+    "COL_GF_m3": 26.235,
+    "evidence": "REPORT_EXPLICIT",
+    "height_model": "A2 GF base +/-0.00; A3 neck 1.00; A4 roof +13.90; A12 levels = FFL; A8 CN continued",
+    "report_file_check": "PENDING"
    },
-   "donor_assumptions": [
-    "A8"
+   "christiannp_assumptions": [
+    "A2",
+    "A3",
+    "A4",
+    "A8",
+    "A12"
    ],
-   "donor_likely_correct": "UNKNOWN per floor; A8 conflicts with Urban/human review",
-   "donor_method": "outline + nearest label per floor; continuation logic not held",
-   "donor_objects": "NOT_HELD",
+   "christiannp_method": "outlines + labels per floor (logic NOT_HELD) x the report's level model",
+   "classification": "C",
+   "donor_likely_correct": "total FOU+GF yes; split no; A8 no",
    "element": "columns + joints per storey",
-   "generic_lesson": "column concrete never waits for rebar or clear height",
+   "generic_lesson": "storey boundaries are a declared convention on every column record",
    "must_not_hardcode": [
-    "per-floor donor volumes"
+    "1.00 m neck",
+    "+/-0.00 base"
    ],
    "production_change": "none",
-   "regression_test": "existing: CN propagation does not happen",
-   "root_cause": "convention (FOU/GF split, joints) + CN continuation assumption",
-   "same_basis": "NO - storey split and joint convention differ (FOU+GF agree within 0.232 m3)",
+   "regression_test": "test_column_storey_split_declared_and_total_conserved",
+   "root_cause": "FOU/GF: convention (A2, A3); 1F/2F: implied section sums smaller than Urban's - population or section difference, not height; GF: A8 adds sections",
+   "same_basis": "NO - storey split by A2/A3; FOU+GF totals agree (32.385 vs 32.153 m3)",
    "trade": "COLUMN_CONCRETE",
    "urban": {
     "best": 45.795,
@@ -111,34 +144,49 @@
     "low": 45.795,
     "official_before": 26.351,
     "release": "PARTIAL_WITH_PROVISIONAL",
-    "verified": 33.166
+    "verified": 33.166,
+    "version": {
+     "CALCULATION_ROUND": "COVERAGE_RECOVERY (CR.3)",
+     "DRAWING_SHA": {
+      "P7757.dxf": "ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4",
+      "ST7757.dxf": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079"
+     },
+     "ENGINE_COMMIT": "680264d",
+     "REGISTER_VERSION": "research/coverage_recovery_round/QUANTITY_COVERAGE_DASHBOARD.json@818f4b8643e7b456"
+    }
    },
-   "urban_blocker": "none after the coverage round (95/95 quantified)",
-   "urban_likely_correct": "YES on census; founding level still a range",
-   "urban_objects": "95 occurrences (S1 chains)"
+   "urban_blocker": "none (95/95)",
+   "urban_likely_correct": "census yes"
   },
   {
-   "classification": "E",
-   "donor": {
+   "agreement": "UNDETERMINED",
+   "christiannp": {
     "1F": 18.562,
     "2F": 2.823,
-    "GF": 25.206
+    "GF": 25.206,
+    "allocation_rules": "R1-R5",
+    "evidence": "REPORT_EXPLICIT",
+    "report_file_check": "PENDING"
    },
-   "donor_assumptions": [
-    "NOT_HELD"
+   "christiannp_assumptions": [
+    "R3 2 m",
+    "R4 60 mm",
+    "R5"
    ],
-   "donor_likely_correct": "UNKNOWN",
-   "donor_method": "parallel-face strips + label matching + schedule-span capping (R1-R5, texts not held)",
-   "donor_objects": "NOT_HELD (rules R1-R5)",
+   "christiannp_method": "strips + labels + R1-R5",
+   "classification": "B",
+   "donor_likely_correct": "UNKNOWN per floor; R5 allocations are not geometry",
    "element": "downstands per floor",
-   "generic_lesson": "unbound tags become candidate occurrences, never drops",
+   "generic_lesson": "unallocated length stays a residue with identity; never shared",
    "must_not_hardcode": [
-    "per-floor donor volumes"
+    "per-floor volumes",
+    "2 m",
+    "60 mm"
    ],
-   "production_change": "beam binding ladder (already P1)",
-   "regression_test": "tag without band stays UNQUANTIFIED with identity",
-   "root_cause": "occurrence binding + residue release",
-   "same_basis": "PARTLY - downstand convention stated as Urban's; allocation of residue and dome rings unknown",
+   "production_change": "width gate (R4 idea) as a recorded check",
+   "regression_test": "see R1-R5 tests",
+   "root_cause": "occurrence binding",
+   "same_basis": "PARTLY - allocation by R1-R5 (R5 shares leftover length arithmetically)",
    "trade": "BEAMS",
    "urban": {
     "best": 45.537,
@@ -146,99 +194,131 @@
     "low": 41.909,
     "official_before": 37.587,
     "release": "PARTIAL_WITH_PROVISIONAL",
-    "verified": 2.65
+    "verified": 2.65,
+    "version": {
+     "CALCULATION_ROUND": "COVERAGE_RECOVERY (CR.3)",
+     "DRAWING_SHA": {
+      "P7757.dxf": "ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4",
+      "ST7757.dxf": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079"
+     },
+     "ENGINE_COMMIT": "680264d",
+     "REGISTER_VERSION": "research/coverage_recovery_round/QUANTITY_COVERAGE_DASHBOARD.json@818f4b8643e7b456"
+    }
    },
-   "urban_blocker": "8 tags without a measurable band; CB8 span count",
-   "urban_likely_correct": "lower bound is safe; best 45.537 m3",
-   "urban_objects": "tagged occurrences + 16 recovered residues + 8 unquantified tags"
+   "urban_blocker": "8 tags without a band; CB8 span count",
+   "urban_likely_correct": "lower bound safe; best 45.537 m3"
   },
   {
-   "classification": "C",
-   "donor": {
+   "agreement": "INDEPENDENT_EXTRACTION_AGREEMENT on GF / 2F donor-donor (raster vs vector); UNDETERMINED on 1F (8.1 m2 apart) and on Urban vs donors (opening classification)",
+   "christiannp": {
     "1F": 179.325,
     "2F": 55.275,
-    "GF": 290.555
+    "GF": 290.555,
+    "evidence": "REPORT_EXPLICIT",
+    "method": "50 mm raster, 5 classes",
+    "report_file_check": "PENDING"
    },
-   "donor_assumptions": [
-    "opening classification - NOT_HELD"
+   "christiannp_assumptions": [
+    "A1 (volume)"
    ],
-   "donor_likely_correct": "NO if stair wells are open (Urban shows stair line work inside)",
-   "donor_method": "raster + exterior flood fill",
-   "donor_objects": "raster regions (map not held)",
+   "christiannp_method": "raster (see CHRISTIANNP_RASTER_METHOD_SPEC)",
+   "classification": "C",
+   "donor_likely_correct": "UNKNOWN until class areas are imported",
    "element": "net slab plate per floor",
-   "generic_lesson": "every deduction carries an opening id and a role",
+   "generic_lesson": "every deduction has an id and a role; raster is an oracle",
    "must_not_hardcode": [
     "290.555",
     "179.325",
     "55.275"
    ],
    "production_change": "none",
-   "regression_test": "existing: every deduction has an opening id",
-   "root_cause": "opening classification: best hypothesis = donor keeps stair wells in the slab",
-   "same_basis": "MOSTLY - both gross outline minus openings; donor via 50 mm raster",
+   "regression_test": "test_stair_well_deducted_from_slab_plate",
+   "root_cause": "opening classification; hypothesis H-SLAB-1 (stair wells kept) pending the report's class areas",
+   "same_basis": "MOSTLY - gross minus openings; class allocation of edge / unresolved cells differs",
    "trade": "SLAB_NET_AREA",
    "urban": {
     "net_m2": {
      "1F": 169.752,
      "2F": 55.478,
      "GF": 276.788
+    },
+    "version": {
+     "CALCULATION_ROUND": "COVERAGE_RECOVERY (CR.3)",
+     "DRAWING_SHA": {
+      "P7757.dxf": "ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4",
+      "ST7757.dxf": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079"
+     },
+     "ENGINE_COMMIT": "680264d",
+     "REGISTER_VERSION": "research/coverage_recovery_round/QUANTITY_SCENARIOS.json@d6a32b862f1f6bf3"
     }
    },
-   "urban_blocker": "none (GF conflict void carried as SOURCE_CONFLICT)",
-   "urban_likely_correct": "YES for VOID/STAIR deductions; GF T16 void open/closed is a consultant question",
-   "urban_objects": "vector outline + per-id openings"
+   "urban_blocker": "GF conflict void carried as SOURCE_CONFLICT",
+   "urban_likely_correct": "vector deductions with ids"
   },
   {
-   "classification": "E",
-   "donor": {
-    "1F": 37.876,
-    "2F": 0.203,
-    "GF": 33.483
+   "agreement": "UNDETERMINED",
+   "christiannp": {
+    "areas": "in the report, not imported",
+    "classes": [
+     "OPENING",
+     "UNRESOLVED_ENCLOSED",
+     "EDGE_LINE_CELLS"
+    ],
+    "evidence": "REPORT_EXPLICIT",
+    "report_file_check": "PENDING"
    },
-   "donor_assumptions": [
-    "NOT_HELD"
-   ],
+   "christiannp_assumptions": [],
+   "christiannp_method": "raster classes",
+   "classification": "E",
    "donor_likely_correct": "UNKNOWN",
-   "donor_method": "raster classes (opening / unresolved-enclosed) - parameters not held",
-   "donor_objects": "NOT_HELD",
    "element": "voids / stair wells / conflict voids",
-   "generic_lesson": "a tagged face inside an opening is a conflict, not a silent deduction",
+   "generic_lesson": "a tagged face inside an opening is a conflict",
    "must_not_hardcode": [
     "opening areas"
    ],
    "production_change": "none",
    "regression_test": "existing OPENING_CONFLICT test",
-   "root_cause": "see SLAB_NET_AREA hypotheses",
-   "same_basis": "NO (inferred)",
+   "root_cause": "awaiting the report's class areas",
+   "same_basis": "UNKNOWN",
    "trade": "SLAB_OPENINGS",
    "urban": {
-    "1F": 47.449,
-    "2F": 0,
-    "GF": 45.625
+    "openings_m2": {
+     "1F": 47.449,
+     "2F": 0,
+     "GF": 45.625
+    },
+    "version": {
+     "CALCULATION_ROUND": "COVERAGE_RECOVERY (CR.3)",
+     "DRAWING_SHA": {
+      "P7757.dxf": "ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4",
+      "ST7757.dxf": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079"
+     },
+     "ENGINE_COMMIT": "680264d",
+     "REGISTER_VERSION": "research/coverage_recovery_round/QUANTITY_SCENARIOS.json@d6a32b862f1f6bf3"
+    }
    },
-   "urban_blocker": "GF void carries a T16 tag (conflict)",
-   "urban_likely_correct": "UNKNOWN for the GF conflict void",
-   "urban_objects": "8 openings with ids"
+   "urban_blocker": "GF void with a T16 tag",
+   "urban_likely_correct": "UNKNOWN for the GF conflict void"
   },
   {
-   "classification": "C",
-   "donor": {
-    "m": 79.971
+   "agreement": "UNDETERMINED (vs U-C4N 71.589)",
+   "christiannp": {
+    "evidence": "REPORT_EXPLICIT",
+    "m": 79.971,
+    "report_file_check": "PENDING"
    },
-   "donor_assumptions": [
-    "NOT_HELD"
-   ],
+   "christiannp_assumptions": [],
+   "christiannp_method": "parallel-face pairing (parameters NOT_HELD)",
+   "classification": "C",
    "donor_likely_correct": "close",
-   "donor_method": "parallel-face pairing",
-   "donor_objects": "NOT_HELD",
    "element": "150 mm blockwork length",
    "generic_lesson": "positive control for any pairing route",
    "must_not_hardcode": [
     "79.971 m"
    ],
    "production_change": "none",
-   "regression_test": "150 mm Method B vs Method A within the explained classes",
-   "root_cause": "donor gross pairing vs Urban classified bands (see wall diagnostic)",
+   "regression_test": "150 mm Method B vs Method A within explained classes",
+   "root_cause": "pairing vs classified bands",
    "same_basis": "CLOSE",
    "trade": "WALLS_150",
    "urban": {
@@ -247,32 +327,40 @@
     "low": 77.507,
     "official_before": 77.507,
     "release": "PARTIAL_WITH_PROVISIONAL",
-    "verified": 77.507
+    "verified": 77.507,
+    "version": {
+     "CALCULATION_ROUND": "COVERAGE_RECOVERY (CR.3)",
+     "DRAWING_SHA": {
+      "P7757.dxf": "ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4",
+      "ST7757.dxf": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079"
+     },
+     "ENGINE_COMMIT": "680264d",
+     "REGISTER_VERSION": "research/coverage_recovery_round/QUANTITY_COVERAGE_DASHBOARD.json@818f4b8643e7b456"
+    }
    },
    "urban_blocker": "none material",
-   "urban_likely_correct": "close",
-   "urban_objects": "established bands"
+   "urban_likely_correct": "close"
   },
   {
-   "classification": "D",
-   "donor": {
-    "m": 183.497
+   "agreement": "UNDETERMINED (vs U-C4N 148.095: different classification)",
+   "christiannp": {
+    "evidence": "REPORT_EXPLICIT",
+    "m": 183.497,
+    "report_file_check": "PENDING"
    },
-   "donor_assumptions": [
-    "NOT_HELD"
-   ],
-   "donor_likely_correct": "NO - includes non-wall length",
-   "donor_method": "parallel-face pairing",
-   "donor_objects": "NOT_HELD",
+   "christiannp_assumptions": [],
+   "christiannp_method": "parallel-face pairing (parameters NOT_HELD)",
+   "classification": "D",
+   "donor_likely_correct": "NO",
    "element": "200 mm blockwork length",
-   "generic_lesson": "pair, then classify every metre before calling it wall",
+   "generic_lesson": "pair, then classify every metre",
    "must_not_hardcode": [
     "183.497 m"
    ],
    "production_change": "wall_band_reconciliation as a required cross-route",
-   "regression_test": "pairs across a door opening classify as OPENING_SPAN",
-   "root_cause": "Urban: ambiguous bands + column-overlap convention; donor: openings, column faces and duplicate faces counted as wall",
-   "same_basis": "NO - donor = raw pairs before classification (inferred)",
+   "regression_test": "test_pairs_across_door_classify_as_opening_span",
+   "root_cause": "donor counts opening spans, column faces and duplicate faces as wall",
+   "same_basis": "NO - report total = raw pairs before classification (ARITHMETIC_INFERENCE)",
    "trade": "WALLS_200",
    "urban": {
     "best": 134.076,
@@ -280,62 +368,86 @@
     "low": 89.74,
     "official_before": 89.74,
     "release": "PARTIAL_WITH_PROVISIONAL",
-    "verified": 89.74
+    "verified": 89.74,
+    "version": {
+     "CALCULATION_ROUND": "COVERAGE_RECOVERY (CR.3)",
+     "DRAWING_SHA": {
+      "P7757.dxf": "ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4",
+      "ST7757.dxf": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079"
+     },
+     "ENGINE_COMMIT": "680264d",
+     "REGISTER_VERSION": "research/coverage_recovery_round/QUANTITY_COVERAGE_DASHBOARD.json@818f4b8643e7b456"
+    }
    },
-   "urban_blocker": "12 ambiguous bands were never measured (now CANDIDATE)",
-   "urban_likely_correct": "best 134.076 m is physical; exact split pending",
-   "urban_objects": "established + 12 ambiguous bands; Method B pairs with handles"
+   "urban_blocker": "12 ambiguous bands (now CANDIDATE)",
+   "urban_likely_correct": "best 134.076 m physical",
+   "version_note": "the earlier ~79 m Urban figure came from an older Urban snapshot; current frozen value 89.74 m (see version)"
   },
   {
-   "classification": "B",
-   "donor": {
-    "gross_faces_m2": 2364.7
+   "agreement": "UNDETERMINED",
+   "christiannp": {
+    "door_height": "A13 2.10",
+    "evidence": "REPORT_EXPLICIT",
+    "gross_faces_m2": 2364.7,
+    "height_rule": "A10",
+    "report_file_check": "PENDING"
    },
-   "donor_assumptions": [
-    "wall heights assumed (relayed weakness)"
+   "christiannp_assumptions": [
+    "A10",
+    "A13",
+    "A1 (via A10)"
    ],
+   "christiannp_method": "length x faces x A10 height (composition in the report, not imported)",
+   "classification": "B",
    "donor_likely_correct": "NO as a finish quantity",
-   "donor_method": "length x 2 x height",
-   "donor_objects": "NOT_HELD",
    "element": "wall face area",
    "generic_lesson": "PHYSICAL_WALL_FACE_AREA before finish semantics",
    "must_not_hardcode": [
-    "2364.7 m2",
-    "4.49 m"
+    "2364.7 m2"
    ],
-   "production_change": "physical_wall_faces feeding plaster/paint (P1)",
-   "regression_test": "face area = length x (interval - member) - openings, per face",
-   "root_cause": "Urban released only certified room faces; donor used gross length x assumed height",
-   "same_basis": "NO - donor gross (both faces, ~4.49 m inferred height, no deductions)",
+   "production_change": "physical_wall_faces feeding plaster / paint",
+   "regression_test": "test_wall_face_height_is_interval_minus_member",
+   "root_cause": "finish-gated Urban release vs donor gross faces",
+   "same_basis": "NO - gross faces with A10 heights; composition includes faces beyond the wall pairs",
    "trade": "PLASTER",
    "urban": {
     "physical_faces_best_m2": 1618.18,
-    "physical_faces_verified_m2": 1220.508
+    "physical_faces_verified_m2": 1220.508,
+    "version": {
+     "CALCULATION_ROUND": "COVERAGE_RECOVERY (CR.3)",
+     "DRAWING_SHA": {
+      "P7757.dxf": "ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4",
+      "ST7757.dxf": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079"
+     },
+     "ENGINE_COMMIT": "680264d",
+     "REGISTER_VERSION": "research/coverage_recovery_round/QUANTITY_SCENARIOS.json@d6a32b862f1f6bf3"
+    }
    },
-   "urban_blocker": "finish certification (fixed: physical faces now measured)",
-   "urban_likely_correct": "physical faces yes; finishes pending",
-   "urban_objects": "266 faces with handles"
+   "urban_blocker": "finish certification (physical faces now measured)",
+   "urban_likely_correct": "physical faces yes"
   },
   {
-   "classification": "E",
-   "donor": {
-    "m3": 65.669
+   "agreement": "SHARED_SOURCE_AGREEMENT",
+   "christiannp": {
+    "evidence": "REPORT_EXPLICIT",
+    "m3": 65.669,
+    "report_file_check": "PENDING"
    },
-   "donor_assumptions": [
-    "NOT_HELD"
+   "christiannp_assumptions": [
+    "A6 (blinding)"
    ],
+   "christiannp_method": "closed outlines + tags + schedule ATTRIB",
+   "classification": "E",
    "donor_likely_correct": "UNKNOWN",
-   "donor_method": "closed outlines + nearest tag + schedule ATTRIB (relayed)",
-   "donor_objects": "NOT_HELD",
    "element": "isolated / combined footings",
-   "generic_lesson": "outline route and tag route must agree occurrence by occurrence",
+   "generic_lesson": "outline route and tag route agree occurrence by occurrence",
    "must_not_hardcode": [
     "65.669 m3"
    ],
-   "production_change": "footing dual route (P2)",
-   "regression_test": "every outline has exactly one tag or a conflict record",
-   "root_cause": "F3 count / F-F10 / FN classification (owner); decomposition NON_UNIQUE",
-   "same_basis": "YES (L x W x H per schedule)",
+   "production_change": "footing dual route",
+   "regression_test": "test_footing_outline_two_tags_is_source_conflict",
+   "root_cause": "occurrence counts (F3, F/F10, FN) - NON_UNIQUE",
+   "same_basis": "YES (schedule L x W x H)",
    "trade": "FOOTINGS",
    "urban": {
     "blocked": [
@@ -343,40 +455,113 @@
      "H5771"
     ],
     "occurrences": 25,
-    "released_m3": 64.346
+    "released_m3": 64.346,
+    "version": {
+     "CALCULATION_ROUND": "V3b",
+     "DRAWING_SHA": {
+      "ST7757.dxf": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079"
+     },
+     "ENGINE_COMMIT": "66dd3fb",
+     "REGISTER_VERSION": "tests/alsenan/registers_v3b/BOQ_LINES_V3B.json@b241c38b543b4abf"
+    }
    },
    "urban_blocker": "F / F10 source conflict",
-   "urban_likely_correct": "YES for 25 released occurrences",
-   "urban_objects": "25 occurrences + 1 F/F10 outline (2 handles) blocked"
+   "urban_likely_correct": "25 released occurrences"
   },
   {
-   "classification": "E",
-   "donor": {
-    "m3": 5.048
+   "agreement": "UNDETERMINED",
+   "christiannp": {
+    "assumptions": "A9 waist / landing",
+    "evidence": "REPORT_EXPLICIT",
+    "m3": 5.048,
+    "report_file_check": "PENDING"
    },
-   "donor_assumptions": [
-    "NOT_HELD"
+   "christiannp_assumptions": [
+    "A9"
    ],
+   "christiannp_method": "breakdown in the report, not imported",
+   "classification": "B",
    "donor_likely_correct": "UNKNOWN",
-   "donor_method": "NOT_HELD",
-   "donor_objects": "NOT_HELD",
    "element": "stair concrete",
-   "generic_lesson": "stair flights, landings and waists need separate records",
+   "generic_lesson": "flights, landings and waists as separate records",
    "must_not_hardcode": [
     "5.048 m3"
    ],
    "production_change": "none",
-   "regression_test": "none until the donor breakdown is held",
-   "root_cause": "not investigable without the donor stair breakdown",
+   "regression_test": "none until the breakdown is imported",
+   "root_cause": "A9 values",
    "same_basis": "UNKNOWN",
    "trade": "STAIRS",
    "urban": {
-    "status": "see V3b stair lines"
+    "status": "V3b stair lines (not compared here)",
+    "version": {
+     "CALCULATION_ROUND": "V3b",
+     "DRAWING_SHA": {
+      "ST7757.dxf": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079"
+     },
+     "ENGINE_COMMIT": "66dd3fb",
+     "REGISTER_VERSION": "tests/alsenan/registers_v3b/BOQ_LINES_V3B.json@b241c38b543b4abf"
+    }
    },
    "urban_blocker": "see V3b",
-   "urban_likely_correct": "UNKNOWN",
-   "urban_objects": "V3b stair register"
+   "urban_likely_correct": "UNKNOWN"
+  },
+  {
+   "agreement": "UNDETERMINED",
+   "christiannp": {
+    "basis": "A11 ceiling = net slab above; A14 floor / ceiling = slab net area",
+    "evidence": "REPORT_EXPLICIT",
+    "report_file_check": "PENDING"
+   },
+   "christiannp_assumptions": [
+    "A11",
+    "A14"
+   ],
+   "christiannp_method": "slab net area",
+   "classification": "D",
+   "donor_likely_correct": "NO",
+   "element": "floor / ceiling finish areas",
+   "generic_lesson": "finish areas come from rooms, not slabs",
+   "must_not_hardcode": [],
+   "production_change": "none",
+   "regression_test": "test_floor_finish_area_excludes_wall_footprint",
+   "root_cause": "slab net area includes wall footprints and non-room area",
+   "same_basis": "NO",
+   "trade": "FLOOR_CEILING",
+   "urban": {
+    "status": "room-based (not compared here)"
+   },
+   "urban_blocker": "n/a",
+   "urban_likely_correct": "room polygons"
+  },
+  {
+   "agreement": "UNDETERMINED",
+   "christiannp": {
+    "basis": "A15 SFRS slab only, no upturns",
+    "evidence": "REPORT_EXPLICIT",
+    "report_file_check": "PENDING"
+   },
+   "christiannp_assumptions": [
+    "A15"
+   ],
+   "christiannp_method": "SFRS slab area",
+   "classification": "D",
+   "donor_likely_correct": "NO (incomplete)",
+   "element": "roof waterproofing",
+   "generic_lesson": "waterproofing includes upturns and every exposed roof",
+   "must_not_hardcode": [],
+   "production_change": "none",
+   "regression_test": "test_roof_waterproofing_includes_upturns",
+   "root_cause": "upturns and other exposed roofs omitted",
+   "same_basis": "NO",
+   "trade": "ROOF_WATERPROOFING",
+   "urban": {
+    "status": "V3b WP split (not compared here)"
+   },
+   "urban_blocker": "n/a",
+   "urban_likely_correct": "UNKNOWN"
   }
  ],
- "rule": "donor values are RELAYED by the owner; every donor per-object field is NOT_HELD; Urban values from the frozen coverage-recovery round"
+ "rule": "christiannp values are REPORT_EXPLICIT (imported from the owner's quotation; file check PENDING); per-object donor lists are NOT_HELD",
+ "versioning": "every Urban value carries ENGINE_COMMIT / REGISTER_VERSION / DRAWING_SHA / CALCULATION_ROUND"
 }

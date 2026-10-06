@@ -1,145 +1,208 @@
 {
+ "classification_values": [
+  "SOURCE_SUPPORTED",
+  "DERIVED",
+  "ASSUMPTION",
+  "KNOWN_WRONG_AFTER_URBAN_REVIEW",
+  "PLAUSIBLE_BUT_UNVERIFIED",
+  "REJECT_FOR_PRODUCTION"
+ ],
+ "fields": "nature = what the report did; urban_review = status after Urban's source reading; production = Urban decision",
  "rows": [
   {
-   "adopt": "NO",
-   "alternatives": "0.16 (project default unless noted - later Urban reading)",
-   "assumption": "GF slab thickness 0.20 m",
-   "categories": [
-    "SLABS"
-   ],
-   "generic_fallback": "NO",
+   "assumption": "GF slab t = 0.20",
+   "evidence": "REPORT_EXPLICIT",
+   "generic_fallback_candidate": false,
    "id": "A1",
-   "later_review": "INCORRECT as a default: Urban source reading = 0.16 unless locally noted",
-   "physical": "GF slab volume",
-   "search": "NOT_HELD",
-   "semantic": "slab thickness tag scope",
-   "sensitivity_m3": 11.622,
-   "text_status": "RELAYED",
-   "why": "NOT_HELD",
-   "why_not": "a general note outranks an assumed value; the evidence ladder takes PROJECT_GENERAL_RULE"
+   "nature": "ASSUMPTION",
+   "production": "REJECT_FOR_PRODUCTION",
+   "report_file_check": "PENDING (report file not yet delivered; imported from the owner's quotation)",
+   "sensitivity": "+11.622 m3 on GF slabs",
+   "should_urban_adopt": false,
+   "urban_basis": "project default 0.16 unless locally noted (S1 STRUCTURAL_LEVEL_REGISTER: PROJECT_DEFAULT p.8 n.18)",
+   "urban_review": "KNOWN_WRONG_AFTER_URBAN_REVIEW"
   },
   {
-   "assumption": null,
+   "assumption": "GF column base +/-0.00",
+   "evidence": "REPORT_EXPLICIT",
+   "generic_fallback_candidate": false,
    "id": "A2",
-   "note": "the A1-A15 list exists in the sealed report; only A1, A5, A7 and A8 were relayed",
-   "text_status": "NOT_HELD"
+   "nature": "ASSUMPTION",
+   "production": "REJECT_FOR_PRODUCTION",
+   "report_file_check": "PENDING (report file not yet delivered; imported from the owner's quotation)",
+   "sensitivity": "moves volume between FOU and GF; total neutral",
+   "should_urban_adopt": false,
+   "urban_basis": "a storey-boundary convention: printed GF FFL is +1.00; moving the base to +/-0.00 shifts ~1 m of column into GF without changing the FOU+GF total",
+   "urban_review": "PLAUSIBLE_BUT_UNVERIFIED"
   },
   {
-   "assumption": null,
+   "assumption": "foundation neck height 1.00",
+   "evidence": "REPORT_EXPLICIT",
+   "generic_fallback_candidate": false,
    "id": "A3",
-   "note": "the A1-A15 list exists in the sealed report; only A1, A5, A7 and A8 were relayed",
-   "text_status": "NOT_HELD"
+   "nature": "ASSUMPTION",
+   "production": "REJECT_FOR_PRODUCTION",
+   "report_file_check": "PENDING (report file not yet delivered; imported from the owner's quotation)",
+   "sensitivity": "FOU = section sum x 1.00",
+   "should_urban_adopt": false,
+   "urban_basis": "founding level not printed (>= 1.5 m below plot level); a constant 1.00 m neck under-reaches shallow footings (0.30 m deep footings would found at -1.30)",
+   "urban_review": "PLAUSIBLE_BUT_UNVERIFIED"
   },
   {
-   "assumption": null,
+   "assumption": "2F roof top +13.90",
+   "evidence": "REPORT_EXPLICIT",
+   "generic_fallback_candidate": true,
    "id": "A4",
-   "note": "the A1-A15 list exists in the sealed report; only A1, A5, A7 and A8 were relayed",
-   "text_status": "NOT_HELD"
+   "nature": "DERIVED",
+   "production": "ACCEPT_AS_DERIVED_LEVEL",
+   "report_file_check": "PENDING (report file not yet delivered; imported from the owner's quotation)",
+   "sensitivity": "none against Urban",
+   "should_urban_adopt": true,
+   "urban_basis": "+9.70 + 4.20 printed floor-to-floor = +13.90; Urban also reads +13.90 at the tower-roof dome ring",
+   "urban_review": "SOURCE_SUPPORTED"
   },
   {
-   "adopt": "NO",
-   "alternatives": "NOT_HELD",
-   "assumption": "ground-beam depth 0.60 m",
-   "categories": [
-    "GROUND_BEAMS",
-    "GB rebar",
-    "waterproofing"
-   ],
-   "generic_fallback": "NO",
+   "assumption": "ground-beam depth 0.60",
+   "evidence": "REPORT_EXPLICIT",
+   "generic_fallback_candidate": false,
    "id": "A5",
-   "later_review": "NOT ESTABLISHED: contradicts p.13 interior details on 27 of 31 interior spans; exterior bracket from elevations 0.90-1.30 m",
-   "physical": "all 42 strips",
-   "search": "NOT_HELD",
-   "semantic": "exterior 'FOLLOW ARCH.' depth",
-   "sensitivity_m3": 6.001,
-   "text_status": "RELAYED",
-   "why": "exterior depth unprinted",
-   "why_not": "an assumed depth over-rides measured details; Urban keeps a BOUNDED scenario instead"
+   "nature": "ASSUMPTION",
+   "production": "REJECT_FOR_PRODUCTION",
+   "report_file_check": "PENDING (report file not yet delivered; imported from the owner's quotation)",
+   "sensitivity": "about 6.0 m3 per 0.10 m of depth over 200 m",
+   "should_urban_adopt": false,
+   "urban_basis": "p.13 details give 0.30 / 0.40 m on 27 of 31 interior spans; exterior depth unprinted (elevation bracket 0.90-1.30 m)",
+   "urban_review": "KNOWN_WRONG_AFTER_URBAN_REVIEW"
   },
   {
-   "assumption": null,
+   "assumption": "blinding 0.10 + 0.10 projection",
+   "evidence": "REPORT_EXPLICIT",
+   "generic_fallback_candidate": true,
    "id": "A6",
-   "note": "the A1-A15 list exists in the sealed report; only A1, A5, A7 and A8 were relayed",
-   "text_status": "NOT_HELD"
+   "nature": "ASSUMPTION",
+   "production": "ACCEPT_WHERE_DETAIL_APPLIES",
+   "report_file_check": "PENDING (report file not yet delivered; imported from the owner's quotation)",
+   "sensitivity": "none against Urban",
+   "should_urban_adopt": true,
+   "urban_basis": "Urban V3b reads the local blinding detail (10 cm, 10 cm beyond) - SOURCE_DETAIL_LOCAL_BLINDING",
+   "urban_review": "SOURCE_SUPPORTED"
   },
   {
-   "adopt": "NO as verified",
-   "alternatives": "cells between ground beams (Urban)",
-   "assumption": "ground slab area = GF gross outline",
-   "categories": [
-    "GROUND_SLAB"
-   ],
-   "generic_fallback": "as a HIGH scenario only",
+   "assumption": "ground slab = GF gross outline",
+   "evidence": "REPORT_EXPLICIT",
+   "generic_fallback_candidate": false,
    "id": "A7",
-   "later_review": "CANDIDATE physical scope, not verified: includes beam/column footprints",
-   "physical": "slab-on-grade extent",
-   "search": "NOT_HELD",
-   "semantic": "which panels are slab-on-grade",
-   "sensitivity_m3": 0.163,
-   "text_status": "RELAYED",
-   "why": "NOT_HELD",
-   "why_not": "a suspended-slab outline is not slab-on-grade evidence"
+   "nature": "ASSUMPTION",
+   "production": "REJECT_FOR_PRODUCTION",
+   "report_file_check": "PENDING (report file not yet delivered; imported from the owner's quotation)",
+   "sensitivity": "about 10.7 m3 above Urban's best cells",
+   "should_urban_adopt": false,
+   "urban_basis": "candidate physical scope only: the suspended GF outline includes ground-beam and column footprints",
+   "urban_review": "PLAUSIBLE_BUT_UNVERIFIED"
   },
   {
-   "adopt": "NO",
-   "alternatives": "CN per S1 chains",
-   "assumption": "CN columns continue FOU + GR",
-   "categories": [
-    "COLUMN_CONCRETE",
-    "column rebar"
-   ],
-   "generic_fallback": "NO",
+   "assumption": "CN continued through FOU + GR",
+   "evidence": "REPORT_EXPLICIT",
+   "generic_fallback_candidate": false,
    "id": "A8",
-   "later_review": "CONFLICTS with later Urban / human review",
-   "physical": "CN occurrences",
-   "search": "NOT_HELD",
-   "semantic": "column continuation",
-   "sensitivity_m3": "NOT_DERIVABLE (CN list not held)",
-   "text_status": "RELAYED",
-   "why": "NOT_HELD",
-   "why_not": "continuation must come from each storey's own plan occurrence"
+   "nature": "ASSUMPTION",
+   "production": "REJECT_FOR_PRODUCTION",
+   "report_file_check": "PENDING (report file not yet delivered; imported from the owner's quotation)",
+   "sensitivity": "adds GF section (implied +0.27-0.45 m2)",
+   "should_urban_adopt": false,
+   "urban_basis": "conflicts with S1 chains and the human review",
+   "urban_review": "KNOWN_WRONG_AFTER_URBAN_REVIEW"
   },
   {
-   "assumption": null,
+   "assumption": "stair waist / landing assumptions",
+   "evidence": "REPORT_EXPLICIT",
+   "generic_fallback_candidate": false,
    "id": "A9",
-   "note": "the A1-A15 list exists in the sealed report; only A1, A5, A7 and A8 were relayed",
-   "text_status": "NOT_HELD"
+   "nature": "ASSUMPTION",
+   "production": "REJECT_FOR_PRODUCTION",
+   "report_file_check": "PENDING (report file not yet delivered; imported from the owner's quotation)",
+   "sensitivity": "stairs 5.048 m3 depends on it",
+   "should_urban_adopt": false,
+   "urban_basis": "stair waist / landing values not cross-checked here",
+   "urban_review": "PLAUSIBLE_BUT_UNVERIFIED"
   },
   {
-   "assumption": null,
+   "assumption": "wall height = floor-to-floor - slab thickness",
+   "evidence": "REPORT_EXPLICIT",
+   "generic_fallback_candidate": false,
    "id": "A10",
-   "note": "the A1-A15 list exists in the sealed report; only A1, A5, A7 and A8 were relayed",
-   "text_status": "NOT_HELD"
+   "nature": "DERIVED",
+   "production": "REJECT_FOR_PRODUCTION",
+   "report_file_check": "PENDING (report file not yet delivered; imported from the owner's quotation)",
+   "sensitivity": "overstates every wall that stops under a beam",
+   "should_urban_adopt": false,
+   "urban_basis": "ignores beams over walls (Urban: interval - terminating member) and uses A1 0.20 on GF",
+   "urban_review": "PLAUSIBLE_BUT_UNVERIFIED"
   },
   {
-   "assumption": null,
+   "assumption": "ceiling = net slab above",
+   "evidence": "REPORT_EXPLICIT",
+   "generic_fallback_candidate": false,
    "id": "A11",
-   "note": "the A1-A15 list exists in the sealed report; only A1, A5, A7 and A8 were relayed",
-   "text_status": "NOT_HELD"
+   "nature": "DERIVED",
+   "production": "REJECT_FOR_PRODUCTION",
+   "report_file_check": "PENDING (report file not yet delivered; imported from the owner's quotation)",
+   "sensitivity": "ceiling area",
+   "should_urban_adopt": false,
+   "urban_basis": "slab net area is not a room ceiling: beam soffits and sides and room boundaries differ",
+   "urban_review": "PLAUSIBLE_BUT_UNVERIFIED"
   },
   {
-   "assumption": null,
+   "assumption": "structural levels = architectural FFL",
+   "evidence": "REPORT_EXPLICIT",
+   "generic_fallback_candidate": false,
    "id": "A12",
-   "note": "the A1-A15 list exists in the sealed report; only A1, A5, A7 and A8 were relayed",
-   "text_status": "NOT_HELD"
+   "nature": "ASSUMPTION",
+   "production": "REJECT_FOR_PRODUCTION",
+   "report_file_check": "PENDING (report file not yet delivered; imported from the owner's quotation)",
+   "sensitivity": "every vertical interval",
+   "should_urban_adopt": false,
+   "urban_basis": "Urban: structural slab top = FFL - floor build-up, build-up not printed",
+   "urban_review": "PLAUSIBLE_BUT_UNVERIFIED"
   },
   {
-   "assumption": null,
+   "assumption": "door leaf height 2.10",
+   "evidence": "REPORT_EXPLICIT",
+   "generic_fallback_candidate": false,
    "id": "A13",
-   "note": "the A1-A15 list exists in the sealed report; only A1, A5, A7 and A8 were relayed",
-   "text_status": "NOT_HELD"
+   "nature": "ASSUMPTION",
+   "production": "REJECT_FOR_PRODUCTION",
+   "report_file_check": "PENDING (report file not yet delivered; imported from the owner's quotation)",
+   "sensitivity": "door deductions on walls / plaster",
+   "should_urban_adopt": false,
+   "urban_basis": "Urban opening evidence: most internal doors 2.117 m (cross-verified) - close; but repeated 2.607 m types and one 3.65 m glazed door exist: {(2.137, 'SCALED_SOURCE_SINGLE'): 5, (2.607, 'CROSS_VERIFIED_REPEATED_TYPE'): 5, (2.117, 'CROSS_VERIFIED_REPEATED_TYPE'): 5, (2.123, 'SCALED_SOURCE_SINGLE'): 4, (2.117, 'SCALED_SOURCE_SINGLE'): 3}",
+   "urban_review": "PLAUSIBLE_BUT_UNVERIFIED"
   },
   {
-   "assumption": null,
+   "assumption": "floor / ceiling area from slab net area",
+   "evidence": "REPORT_EXPLICIT",
+   "generic_fallback_candidate": false,
    "id": "A14",
-   "note": "the A1-A15 list exists in the sealed report; only A1, A5, A7 and A8 were relayed",
-   "text_status": "NOT_HELD"
+   "nature": "ASSUMPTION",
+   "production": "REJECT_FOR_PRODUCTION",
+   "report_file_check": "PENDING (report file not yet delivered; imported from the owner's quotation)",
+   "sensitivity": "floor and ceiling finishes",
+   "should_urban_adopt": false,
+   "urban_basis": "slab net area includes wall footprints and non-room areas; Urban measures floors and ceilings per room",
+   "urban_review": "KNOWN_WRONG_AFTER_URBAN_REVIEW"
   },
   {
-   "assumption": null,
+   "assumption": "roof waterproofing = SFRS slab only, no upturns",
+   "evidence": "REPORT_EXPLICIT",
+   "generic_fallback_candidate": false,
    "id": "A15",
-   "note": "the A1-A15 list exists in the sealed report; only A1, A5, A7 and A8 were relayed",
-   "text_status": "NOT_HELD"
+   "nature": "ASSUMPTION",
+   "production": "REJECT_FOR_PRODUCTION",
+   "report_file_check": "PENDING (report file not yet delivered; imported from the owner's quotation)",
+   "sensitivity": "roof waterproofing under-measured",
+   "should_urban_adopt": false,
+   "urban_basis": "omits waterproofing upturns and any other exposed roof / terrace than SFRS",
+   "urban_review": "KNOWN_WRONG_AFTER_URBAN_REVIEW"
   }
  ]
 }

@@ -2,85 +2,129 @@
  "beams": {
   "floors": {
    "1F": {
-    "donor_minus_urban_technical_m3": 5.039,
-    "donor_minus_urban_technical_plus_residue_m3": 3.37,
-    "relayed_donor_m3": 18.562,
+    "report_m3": 18.562,
+    "report_minus_urban_technical_m3": 5.039,
+    "report_minus_urban_technical_plus_residue_m3": 3.37,
     "urban_dome_ring_commercial_m3": 3.978,
     "urban_residue_commercial_m3": 1.669,
     "urban_technical_m3": 13.523
    },
    "2F": {
-    "donor_minus_urban_technical_m3": 0.173,
-    "donor_minus_urban_technical_plus_residue_m3": 0.173,
-    "relayed_donor_m3": 2.823,
+    "report_m3": 2.823,
+    "report_minus_urban_technical_m3": 0.173,
+    "report_minus_urban_technical_plus_residue_m3": 0.173,
     "urban_dome_ring_commercial_m3": 1.989,
     "urban_residue_commercial_m3": 0.0,
     "urban_technical_m3": 2.65
    },
    "GF": {
-    "donor_minus_urban_technical_m3": 3.792,
-    "donor_minus_urban_technical_plus_residue_m3": -2.488,
-    "relayed_donor_m3": 25.206,
+    "report_m3": 25.206,
+    "report_minus_urban_technical_m3": 3.792,
+    "report_minus_urban_technical_plus_residue_m3": -2.488,
     "urban_dome_ring_commercial_m3": 0,
     "urban_residue_commercial_m3": 6.28,
     "urban_technical_m3": 21.414
    }
   },
-  "note": "dome ring beams are listed separately because their inclusion in the donor beam rows is unknown; donor per-strip lists are not held"
+  "rules": "R1-R5 (REPORT_EXPLICIT); per-strip allocations NOT_HELD"
  },
  "columns": {
   "FOU_plus_GF": {
-   "difference_m3": 0.232,
-   "donor_m3": 32.385,
+   "report_m3": 32.385,
    "urban_m3": 32.153
   },
   "floors": {
    "1F": {
-    "donor_minus_urban_net_m3": -0.969,
-    "inferred_donor_height_if_same_population_m": 3.643,
-    "relayed_donor_m3": 8.888,
-    "urban_gross_m3": 10.248,
-    "urban_mean_height_m": 4.2,
-    "urban_net_of_slab_m3": 9.857,
+    "implied_minus_urban_section_m2": {
+     "full": -0.324,
+     "to_soffit": -0.24
+    },
+    "implied_report_section_sum_m2": {
+     "full": 2.116,
+     "to_soffit": 2.2
+    },
+    "report_m3": 8.888,
+    "report_model_height_m": {
+     "full": 4.2,
+     "to_soffit": 4.04
+    },
+    "uc4n_reported_m3": 8.888,
+    "urban_net_m3": 9.857,
     "urban_occurrences": 20,
     "urban_section_sum_m2": 2.44
    },
    "2F": {
-    "donor_minus_urban_net_m3": -0.402,
-    "inferred_donor_height_if_same_population_m": 3.593,
-    "relayed_donor_m3": 3.377,
-    "urban_gross_m3": 3.948,
-    "urban_mean_height_m": 4.2,
-    "urban_net_of_slab_m3": 3.779,
+    "implied_minus_urban_section_m2": {
+     "full": -0.136,
+     "to_soffit": -0.1
+    },
+    "implied_report_section_sum_m2": {
+     "full": 0.804,
+     "to_soffit": 0.84
+    },
+    "report_m3": 3.377,
+    "report_model_height_m": {
+     "full": 4.2,
+     "to_soffit": 4.02
+    },
+    "uc4n_reported_m3": 3.797,
+    "urban_net_m3": 3.779,
     "urban_occurrences": 9,
     "urban_section_sum_m2": 0.94
    },
    "FOUNDATION": {
-    "donor_minus_urban_net_m3": -6.476,
-    "inferred_donor_height_if_same_population_m": 0.986,
-    "relayed_donor_m3": 6.15,
-    "urban_gross_m3": 12.626,
-    "urban_mean_height_m": 2.023,
-    "urban_net_of_slab_m3": 12.626,
+    "implied_minus_urban_section_m2": {
+     "full": -0.09,
+     "to_soffit": -0.09
+    },
+    "implied_report_section_sum_m2": {
+     "full": 6.15,
+     "to_soffit": 6.15
+    },
+    "report_m3": 6.15,
+    "report_model_height_m": {
+     "full": 1.0,
+     "to_soffit": 1.0
+    },
+    "uc4n_reported_m3": 6.15,
+    "urban_net_m3": 12.626,
     "urban_occurrences": 36,
     "urban_section_sum_m2": 6.24
    },
    "GF": {
-    "donor_minus_urban_net_m3": 6.708,
-    "inferred_donor_height_if_same_population_m": 5.83,
-    "relayed_donor_m3": 26.235,
-    "urban_gross_m3": 20.245,
-    "urban_mean_height_m": 4.499,
-    "urban_net_of_slab_m3": 19.527,
+    "implied_minus_urban_section_m2": {
+     "full": 0.27,
+     "to_soffit": 0.45
+    },
+    "implied_report_section_sum_m2": {
+     "full": 4.77,
+     "to_soffit": 4.95
+    },
+    "report_m3": 26.235,
+    "report_model_height_m": {
+     "full": 5.5,
+     "to_soffit": 5.3
+    },
+    "uc4n_reported_m3": 26.235,
+    "urban_net_m3": 19.527,
     "urban_occurrences": 30,
     "urban_section_sum_m2": 4.5
    }
   },
   "readings": [
-   "GF donor 26.235 m3 over Urban's GF section sum 4.50 m2 implies 5.83 m - above the 4.50 m storey, so the donor GF row carries column volume Urban books under FOUNDATION (FOU+GF agree within 0.23 m3).",
-   "1F and 2F donor values imply ~3.6 m on Urban's sections (storey 4.20 m): consistent with columns measured clear of beam depth, i.e. the joint volume is not in the donor column rows.",
-   "FOU 6.150 / GF 26.235 / 1F 8.888 are identical in both blind runs (U-C4N and christiannp); only 2F differs (3.797 vs 3.377). Identity across two 'independent' runs needs explaining before either is used as corroboration."
-  ]
+   "FOU/GF split explained by A2 + A3: the report's FOU is the 1.00 m neck only (6.150 / 1.00 = 6.15 m2 of section vs Urban 6.24 m2); its GF starts at +/-0.00, 1.00 m below the printed GF FFL +1.00 where Urban's GF starts. FOU + GF totals agree within 0.23 m3.",
+   "1F / 2F: under the report's own level model the implied section sums are 0.24-0.33 m2 (1F) and 0.10-0.14 m2 (2F) smaller than Urban's, whichever column top is used - a population or section difference, not a height convention. (The earlier package's 'clear of beams' hypothesis is withdrawn.)",
+   "GF: implied 4.77-4.95 m2 vs Urban 4.50 m2 - consistent with A8 (CN carried through GR) adding sections."
+  ],
+  "urban_levels": {
+   "1F_FFL_m": 5.5,
+   "2F_FFL_m": 9.7,
+   "GF_FFL_m": 1.0,
+   "floor_to_floor_status": "PRINTED (P7757 VE-AA-09)",
+   "founding_level": "not printed (>= 1.5 m below plot level)",
+   "slab_top_vs_ffl": "structural slab top = FFL - build-up (build-up not printed)",
+   "version": "see stamps"
+  }
  },
  "footings": {
   "candidate_decompositions_ranked": [
@@ -159,8 +203,8 @@
   ],
   "difference_m3": 1.323,
   "f_f10_scenarios": "F_SCENARIO 2 x F = 0.432; F10_SCENARIO 1 x F10 = 1.960; DIFFERENCE 1.528",
-  "relayed_donor_m3": 65.669,
-  "status": "NON_UNIQUE - the donor occurrence list is not held, so the 1.323 m3 cannot be assigned occurrence by occurrence; the ranked decompositions are arithmetic candidates only.",
+  "report_m3": 65.669,
+  "status": "NON_UNIQUE until the report's footing occurrence table is imported",
   "urban_blocked_outlines": [
    "H4261",
    "H5771"
@@ -168,216 +212,216 @@
   "urban_occurrences": 25,
   "urban_occurrences_table": [
    {
-    "donor_m3": "NOT_HELD",
     "formula": "1.00 x 1.00 x 0.30",
+    "report_m3": "NOT_HELD (per-occurrence list not imported)",
     "seq": 1,
     "status": "COMPUTED",
     "type": "FN",
     "urban_m3": 0.3
    },
    {
-    "donor_m3": "NOT_HELD",
     "formula": "1.00 x 1.00 x 0.30",
+    "report_m3": "NOT_HELD (per-occurrence list not imported)",
     "seq": 2,
     "status": "COMPUTED",
     "type": "FN",
     "urban_m3": 0.3
    },
    {
-    "donor_m3": "NOT_HELD",
     "formula": "2.40 x 2.10 x 0.40",
+    "report_m3": "NOT_HELD (per-occurrence list not imported)",
     "seq": 3,
     "status": "COMPUTED",
     "type": "F5",
     "urban_m3": 2.016
    },
    {
-    "donor_m3": "NOT_HELD",
     "formula": "2.20 x 2.00 x 0.40",
+    "report_m3": "NOT_HELD (per-occurrence list not imported)",
     "seq": 4,
     "status": "COMPUTED",
     "type": "F4",
     "urban_m3": 1.76
    },
    {
-    "donor_m3": "NOT_HELD",
     "formula": "2.20 x 2.00 x 0.40",
+    "report_m3": "NOT_HELD (per-occurrence list not imported)",
     "seq": 5,
     "status": "COMPUTED",
     "type": "F4",
     "urban_m3": 1.76
    },
    {
-    "donor_m3": "NOT_HELD",
     "formula": "2.40 x 2.10 x 0.40",
+    "report_m3": "NOT_HELD (per-occurrence list not imported)",
     "seq": 6,
     "status": "COMPUTED",
     "type": "F5",
     "urban_m3": 2.016
    },
    {
-    "donor_m3": "NOT_HELD",
     "formula": "1.90 x 1.70 x 0.35",
+    "report_m3": "NOT_HELD (per-occurrence list not imported)",
     "seq": 7,
     "status": "COMPUTED",
     "type": "F2",
     "urban_m3": 1.131
    },
    {
-    "donor_m3": "NOT_HELD",
     "formula": "1.90 x 1.70 x 0.35",
+    "report_m3": "NOT_HELD (per-occurrence list not imported)",
     "seq": 8,
     "status": "COMPUTED",
     "type": "F2",
     "urban_m3": 1.131
    },
    {
-    "donor_m3": "NOT_HELD",
     "formula": "4.60 x 4.50 x 0.55",
+    "report_m3": "NOT_HELD (per-occurrence list not imported)",
     "seq": 9,
     "status": "COMPUTED",
     "type": "FF",
     "urban_m3": 11.385
    },
    {
-    "donor_m3": "NOT_HELD",
     "formula": "3.40 x 2.70 x 0.55",
+    "report_m3": "NOT_HELD (per-occurrence list not imported)",
     "seq": 10,
     "status": "COMPUTED",
     "type": "F9",
     "urban_m3": 5.049
    },
    {
-    "donor_m3": "NOT_HELD",
     "formula": "0.90 x 0.80 x 0.30",
+    "report_m3": "NOT_HELD (per-occurrence list not imported)",
     "seq": 11,
     "status": "COMPUTED",
     "type": "F",
     "urban_m3": 0.216
    },
    {
-    "donor_m3": "NOT_HELD",
     "formula": "0.90 x 0.80 x 0.30",
+    "report_m3": "NOT_HELD (per-occurrence list not imported)",
     "seq": 12,
     "status": "COMPUTED",
     "type": "F",
     "urban_m3": 0.216
    },
    {
-    "donor_m3": "NOT_HELD",
     "formula": "0.90 x 0.80 x 0.30",
+    "report_m3": "NOT_HELD (per-occurrence list not imported)",
     "seq": 13,
     "status": "COMPUTED",
     "type": "F",
     "urban_m3": 0.216
    },
    {
-    "donor_m3": "NOT_HELD",
     "formula": "0.90 x 0.80 x 0.30",
+    "report_m3": "NOT_HELD (per-occurrence list not imported)",
     "seq": 14,
     "status": "COMPUTED",
     "type": "F",
     "urban_m3": 0.216
    },
    {
-    "donor_m3": "NOT_HELD",
     "formula": "3.80 x 3.30 x 0.50",
+    "report_m3": "NOT_HELD (per-occurrence list not imported)",
     "seq": 15,
     "status": "COMPUTED",
     "type": "F14",
     "urban_m3": 6.27
    },
    {
-    "donor_m3": "NOT_HELD",
     "formula": "3.50 x 1.50 x 0.50",
+    "report_m3": "NOT_HELD (per-occurrence list not imported)",
     "seq": 16,
     "status": "COMPUTED",
     "type": "F11",
     "urban_m3": 2.625
    },
    {
-    "donor_m3": "NOT_HELD",
     "formula": "1.00 x 1.00 x 0.30",
+    "report_m3": "NOT_HELD (per-occurrence list not imported)",
     "seq": 17,
     "status": "COMPUTED",
     "type": "FN",
     "urban_m3": 0.3
    },
    {
-    "donor_m3": "NOT_HELD",
     "formula": "2.60 x 2.20 x 0.50",
+    "report_m3": "NOT_HELD (per-occurrence list not imported)",
     "seq": 18,
     "status": "COMPUTED",
     "type": "F6",
     "urban_m3": 2.86
    },
    {
-    "donor_m3": "NOT_HELD",
     "formula": "1.60 x 1.40 x 0.30",
+    "report_m3": "NOT_HELD (per-occurrence list not imported)",
     "seq": 19,
     "status": "COMPUTED",
     "type": "F3",
     "urban_m3": 0.672
    },
    {
-    "donor_m3": "NOT_HELD",
     "formula": "1.60 x 1.40 x 0.30",
+    "report_m3": "NOT_HELD (per-occurrence list not imported)",
     "seq": 20,
     "status": "COMPUTED",
     "type": "F3",
     "urban_m3": 0.672
    },
    {
-    "donor_m3": "NOT_HELD",
     "formula": "1.00 x 1.00 x 0.30",
+    "report_m3": "NOT_HELD (per-occurrence list not imported)",
     "seq": 21,
     "status": "COMPUTED",
     "type": "FN",
     "urban_m3": 0.3
    },
    {
-    "donor_m3": "NOT_HELD",
     "formula": "4.40 x 3.20 x 0.70",
+    "report_m3": "NOT_HELD (per-occurrence list not imported)",
     "seq": 22,
     "status": "COMPUTED",
     "type": "F12",
     "urban_m3": 9.856
    },
    {
-    "donor_m3": "NOT_HELD",
     "formula": "4.30 x 2.40 x 0.50",
+    "report_m3": "NOT_HELD (per-occurrence list not imported)",
     "seq": 23,
     "status": "COMPUTED",
     "type": "F13",
     "urban_m3": 5.16
    },
    {
-    "donor_m3": "NOT_HELD",
     "formula": "4.00 x 3.60 x 0.50",
+    "report_m3": "NOT_HELD (per-occurrence list not imported)",
     "seq": 24,
     "status": "COMPUTED",
     "type": "F8",
     "urban_m3": 7.2
    },
    {
-    "donor_m3": "NOT_HELD",
     "formula": "1.80 x 1.00 x 0.40",
+    "report_m3": "NOT_HELD (per-occurrence list not imported)",
     "seq": 25,
     "status": "COMPUTED",
     "type": "F15",
     "urban_m3": 0.72
    },
    {
-    "donor_m3": "NOT_HELD",
     "formula": "F / F10 source conflict (OQ3-S1)",
+    "report_m3": "NOT_HELD (per-occurrence list not imported)",
     "seq": 26,
     "status": "BLOCKED",
     "type": "H4261",
     "urban_m3": null
    },
    {
-    "donor_m3": "NOT_HELD",
     "formula": "F / F10 source conflict (OQ3-S1)",
+    "report_m3": "NOT_HELD (per-occurrence list not imported)",
     "seq": 27,
     "status": "BLOCKED",
     "type": "H5771",
@@ -404,86 +448,833 @@
   }
  },
  "ground_beams": {
-  "by_section_class": [
-   {
-    "B_m": 0.3,
-    "at_donor_section_0.30x0.60_m3": 19.854,
-    "donor_minus_urban_m3": -13.236,
-    "kind": "EXTERIOR",
-    "length_m": 110.3,
-    "spans": 28,
-    "urban_best_m3": 33.09,
-    "urban_depth_level": "BOUNDED_CANDIDATE",
-    "urban_depth_m": 1.0
+  "ARITHMETIC_INFERENCE": {
+   "check": "200.036 x 0.30 x 0.60 = 36.0065",
+   "matches_report": true,
+   "raw_lines_vs_strips": "85 raw lines for 42 pairs: 1 line(s) left unpaired or one face shared/split (which, NOT_HELD)"
+  },
+  "REPORT_EXPLICIT": {
+   "depth": {
+    "status": "ASSUMPTION A5",
+    "value_m": 0.6
    },
-   {
-    "B_m": 0.3,
-    "at_donor_section_0.30x0.60_m3": 4.5,
-    "donor_minus_urban_m3": 2.25,
-    "kind": "INTERIOR",
-    "length_m": 24.999,
-    "spans": 16,
-    "urban_best_m3": 2.25,
-    "urban_depth_level": "DETAIL",
-    "urban_depth_m": 0.3
+   "geometry": {
+    "length_m": 200.036,
+    "paired_strips": 42,
+    "raw_lines": 85,
+    "strip_width_mm": 300
    },
-   {
-    "B_m": 0.3,
-    "at_donor_section_0.30x0.60_m3": 7.302,
-    "donor_minus_urban_m3": 2.434,
-    "kind": "INTERIOR",
-    "length_m": 40.567,
-    "spans": 11,
-    "urban_best_m3": 4.868,
-    "urban_depth_level": "DETAIL",
-    "urban_depth_m": 0.4
-   },
-   {
-    "B_m": 0.3,
-    "at_donor_section_0.30x0.60_m3": 4.127,
-    "donor_minus_urban_m3": 0.0,
-    "kind": "INTERIOR",
-    "length_m": 22.93,
-    "spans": 4,
-    "urban_best_m3": 4.127,
-    "urban_depth_level": "DETAIL",
-    "urban_depth_m": 0.6
+   "report_file_check": "PENDING (report file not yet delivered; imported from the owner's quotation)",
+   "volume": {
+    "basis": "drawn width x 0.60 assumed depth (A5) x total length",
+    "status": "ASSUMPTION-DEPENDENT - not a source-measured volume",
+    "value_m3": 36.006
    }
-  ],
-  "finding": "POPULATION_EQUIVALENT: the donor found no ground-beam length Urban lacks (+1.240 m, 0.62%). The volume gap is section, not population: donor applies 0.60 m to all strips; Urban's p.13 details give 0.30/0.40/0.60 m on interior spans and the exterior depth is unprinted ('FOLLOW ARCH.').",
-  "inferred_reproduction": {
-   "formula": "200.036 m x 0.30 m x 0.60 m",
-   "matches_relayed": true,
-   "reading": "one uniform 0.30 x 0.60 section over every strip; width 0.30 is the drawn band width, depth 0.60 is assumption A5",
-   "value_m3": 36.0065
   },
-  "inferred_section_m2": 0.18,
-  "length_difference_m": 1.24,
-  "length_difference_pct": 0.62,
-  "relayed": {
-   "depth_m_A5": 0.6,
-   "length_m": 200.036,
-   "strips": 42,
-   "volume_m3": 36.006
-  },
-  "urban_population": {
+  "URBAN_FROZEN": {
+   "band_source": "ST7757 GROUND BEAMS PLAN (layer 1 double lines, 300 mm), p.13 typical ground-beam sections",
+   "bands": 43,
    "boundary_beam_line": "C-BWALL",
+   "by_section_class": [
+    {
+     "B_m": 0.3,
+     "at_report_section_m3": 19.854,
+     "kind": "EXTERIOR",
+     "length_m": 110.3,
+     "report_section_minus_urban_m3": -13.236,
+     "spans": 28,
+     "urban_best_m3": 33.09,
+     "urban_depth_level": "BOUNDED_CANDIDATE",
+     "urban_depth_m": 1.0
+    },
+    {
+     "B_m": 0.3,
+     "at_report_section_m3": 4.5,
+     "kind": "INTERIOR",
+     "length_m": 24.999,
+     "report_section_minus_urban_m3": 2.25,
+     "spans": 16,
+     "urban_best_m3": 2.25,
+     "urban_depth_level": "DETAIL",
+     "urban_depth_m": 0.3
+    },
+    {
+     "B_m": 0.3,
+     "at_report_section_m3": 7.302,
+     "kind": "INTERIOR",
+     "length_m": 40.567,
+     "report_section_minus_urban_m3": 2.434,
+     "spans": 11,
+     "urban_best_m3": 4.868,
+     "urban_depth_level": "DETAIL",
+     "urban_depth_m": 0.4
+    },
+    {
+     "B_m": 0.3,
+     "at_report_section_m3": 4.127,
+     "kind": "INTERIOR",
+     "length_m": 22.93,
+     "report_section_minus_urban_m3": 0.0,
+     "spans": 4,
+     "urban_best_m3": 4.127,
+     "urban_depth_level": "DETAIL",
+     "urban_depth_m": 0.6
+    }
+   ],
+   "columns_on_sheet": 36,
    "conservation_ok": true,
    "length_m": 198.796,
-   "spans": 59
+   "spans": [
+    {
+     "band": "H2000+H252",
+     "exterior": true,
+     "id": "GB-022",
+     "length_m": 3.375
+    },
+    {
+     "band": "H2000+H252",
+     "exterior": true,
+     "id": "GB-021",
+     "length_m": 6.245
+    },
+    {
+     "band": "H2000+H252",
+     "exterior": true,
+     "id": "GB-020",
+     "length_m": 6.65
+    },
+    {
+     "band": "H2000+H252",
+     "exterior": true,
+     "id": "GB-023",
+     "length_m": 1.4
+    },
+    {
+     "band": "H1987+H368",
+     "exterior": true,
+     "id": "GB-003",
+     "length_m": 6.22
+    },
+    {
+     "band": "H1987+H368",
+     "exterior": false,
+     "id": "GB-004",
+     "length_m": 3.6
+    },
+    {
+     "band": "H1987+H368",
+     "exterior": false,
+     "id": "GB-005",
+     "length_m": 3.35
+    },
+    {
+     "band": "H1995+H265",
+     "exterior": true,
+     "id": "GB-012",
+     "length_m": 2.7
+    },
+    {
+     "band": "H1995+H265",
+     "exterior": true,
+     "id": "GB-011",
+     "length_m": 9.5
+    },
+    {
+     "band": "H1999+H388",
+     "exterior": false,
+     "id": "GB-018",
+     "length_m": 3.27
+    },
+    {
+     "band": "H1999+H388",
+     "exterior": false,
+     "id": "GB-019",
+     "length_m": 3.05
+    },
+    {
+     "band": "H1999+H388",
+     "exterior": true,
+     "id": "GB-017",
+     "length_m": 5.15
+    },
+    {
+     "band": "H2004+H248",
+     "exterior": false,
+     "id": "GB-028",
+     "length_m": 5.53
+    },
+    {
+     "band": "H2004+H248",
+     "exterior": false,
+     "id": "GB-029",
+     "length_m": 4.3
+    },
+    {
+     "band": "H2016+H253",
+     "exterior": true,
+     "id": "GB-042",
+     "length_m": 3.85
+    },
+    {
+     "band": "H2016+H253",
+     "exterior": true,
+     "id": "GB-043",
+     "length_m": 3.25
+    },
+    {
+     "band": "H1997+H375",
+     "exterior": true,
+     "id": "GB-014",
+     "length_m": 5.37
+    },
+    {
+     "band": "H1997+H375",
+     "exterior": true,
+     "id": "GB-015",
+     "length_m": 1.886669
+    },
+    {
+     "band": "H2023+H2024",
+     "exterior": true,
+     "id": "GB-049",
+     "length_m": 3.525
+    },
+    {
+     "band": "H2023+H2024",
+     "exterior": true,
+     "id": "GB-050",
+     "length_m": 3.525
+    },
+    {
+     "band": "H2012+H2013",
+     "exterior": true,
+     "id": "GB-037",
+     "length_m": 3.525
+    },
+    {
+     "band": "H2012+H2013",
+     "exterior": true,
+     "id": "GB-038",
+     "length_m": 3.525
+    },
+    {
+     "band": "H2017+H2018",
+     "exterior": true,
+     "id": "GB-044",
+     "length_m": 6.72
+    },
+    {
+     "band": "H2005+H310",
+     "exterior": false,
+     "id": "GB-030",
+     "length_m": 6.4
+    },
+    {
+     "band": "H2002+H317",
+     "exterior": false,
+     "id": "GB-026",
+     "length_m": 5.9
+    },
+    {
+     "band": "H2006+H318",
+     "exterior": false,
+     "id": "GB-031",
+     "length_m": 5.1
+    },
+    {
+     "band": "H1993+H266",
+     "exterior": true,
+     "id": "GB-008",
+     "length_m": 4.6
+    },
+    {
+     "band": "H2001+H267",
+     "exterior": false,
+     "id": "GB-024",
+     "length_m": 2.3
+    },
+    {
+     "band": "H2001+H267",
+     "exterior": false,
+     "id": "GB-025",
+     "length_m": 1.5
+    },
+    {
+     "band": "H2007+H320",
+     "exterior": false,
+     "id": "GB-032",
+     "length_m": 4.3
+    },
+    {
+     "band": "H2003+H319",
+     "exterior": false,
+     "id": "GB-027",
+     "length_m": 4.3
+    },
+    {
+     "band": "H2020+H381",
+     "exterior": false,
+     "id": "GB-046",
+     "length_m": 4.272293
+    },
+    {
+     "band": "H2025+H2026",
+     "exterior": false,
+     "id": "GB-051",
+     "length_m": 4.225
+    },
+    {
+     "band": "H2011+H376",
+     "exterior": true,
+     "id": "GB-036",
+     "length_m": 3.8
+    },
+    {
+     "band": "H2022+H374",
+     "exterior": true,
+     "id": "GB-048",
+     "length_m": 3.75
+    },
+    {
+     "band": "H2014+H373",
+     "exterior": true,
+     "id": "GB-039",
+     "length_m": 3.75
+    },
+    {
+     "band": "H2019+H380",
+     "exterior": true,
+     "id": "GB-045",
+     "length_m": 3.227707
+    },
+    {
+     "band": "H2015+H276",
+     "exterior": false,
+     "id": "GB-041",
+     "length_m": 0.3
+    },
+    {
+     "band": "H2015+H276",
+     "exterior": true,
+     "id": "GB-040",
+     "length_m": 2.625
+    },
+    {
+     "band": "H311+H312",
+     "exterior": false,
+     "id": "GB-053",
+     "length_m": 2.45
+    },
+    {
+     "band": "H1994+H325",
+     "exterior": true,
+     "id": "GB-010",
+     "length_m": 0.4
+    },
+    {
+     "band": "H1994+H325",
+     "exterior": true,
+     "id": "GB-009",
+     "length_m": 2.3
+    },
+    {
+     "band": "H350+H351",
+     "exterior": false,
+     "id": "GB-054",
+     "length_m": 3.0
+    },
+    {
+     "band": "H1992+H349",
+     "exterior": false,
+     "id": "GB-007",
+     "length_m": 2.9
+    },
+    {
+     "band": "H382+H383",
+     "exterior": false,
+     "id": "GB-055",
+     "length_m": 2.466843
+    },
+    {
+     "band": "H2008+H322",
+     "exterior": false,
+     "id": "GB-033",
+     "length_m": 2.45
+    },
+    {
+     "band": "H1996+H348",
+     "exterior": true,
+     "id": "GB-013",
+     "length_m": 2.4
+    },
+    {
+     "band": "H6157+H6158",
+     "exterior": false,
+     "id": "GB-058",
+     "length_m": 2.1
+    },
+    {
+     "band": "H386+H387",
+     "exterior": false,
+     "id": "GB-057",
+     "length_m": 2.073244
+    },
+    {
+     "band": "H2009+H316",
+     "exterior": false,
+     "id": "GB-034",
+     "length_m": 1.45
+    },
+    {
+     "band": "H1991+H389",
+     "exterior": true,
+     "id": "GB-006",
+     "length_m": 0.85
+    },
+    {
+     "band": "H6161+H6162",
+     "exterior": false,
+     "id": "GB-059",
+     "length_m": 1.3
+    },
+    {
+     "band": "H2047+H367",
+     "exterior": false,
+     "id": "GB-052",
+     "length_m": 1.25
+    },
+    {
+     "band": "H2021+H379",
+     "exterior": false,
+     "id": "GB-047",
+     "length_m": 1.2
+    },
+    {
+     "band": "H2010+H321",
+     "exterior": false,
+     "id": "GB-035",
+     "length_m": 1.2
+    },
+    {
+     "band": "H384+H385",
+     "exterior": false,
+     "id": "GB-056",
+     "length_m": 0.788981
+    },
+    {
+     "band": "H1998+H263",
+     "exterior": false,
+     "id": "GB-016",
+     "length_m": 0.363932
+    },
+    {
+     "band": "ARC:H313+H314",
+     "exterior": false,
+     "id": "GB-001",
+     "length_m": 1.806416
+    },
+    {
+     "band": "ARC:H343+H344",
+     "exterior": true,
+     "id": "GB-002",
+     "length_m": 6.179941
+    }
+   ],
+   "version": {
+    "bands": {
+     "CALCULATION_ROUND": "V3",
+     "DRAWING_SHA": {
+      "ST7757.dxf": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079"
+     },
+     "ENGINE_COMMIT": "1381aa6",
+     "REGISTER_VERSION": "tests/alsenan/registers_v3/GROUND_STRUCTURE_REGISTER.json@c3e87460a6924115"
+    },
+    "spans_and_sections": {
+     "CALCULATION_ROUND": "COVERAGE_RECOVERY (CR.3)",
+     "DRAWING_SHA": {
+      "P7757.dxf": "ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4",
+      "ST7757.dxf": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079"
+     },
+     "ENGINE_COMMIT": "680264d",
+     "REGISTER_VERSION": "research/coverage_recovery_round/QUANTITY_SCENARIOS.json@d6a32b862f1f6bf3"
+    }
+   }
+  },
+  "finding": "INDEPENDENT_EXTRACTION_AGREEMENT on length (+1.240 m, 0.62%); the volume difference is section (A5) and release, not population",
+  "length_difference_m": 1.24,
+  "length_difference_pct": 0.62,
+  "segmentation": {
+   "future_test": "compare TOTAL NETWORK LENGTH, NODE CONNECTIVITY (end / T / L / X nodes, components) and SEGMENTATION (bands vs spans) - never span counts alone",
+   "reading": "at the band level the two reconstructions nearly coincide (42 vs 43 paired bands); Urban's 59 is the same network split at supports (36 columns on the sheet). Node connectivity cannot be compared: the report's strip end points are NOT_HELD and Urban's frozen register keeps lengths, not band coordinates.",
+   "report_paired_strips": 42,
+   "urban_paired_bands": 43,
+   "urban_spans": [
+    {
+     "band": "H2000+H252",
+     "exterior": true,
+     "id": "GB-022",
+     "length_m": 3.375
+    },
+    {
+     "band": "H2000+H252",
+     "exterior": true,
+     "id": "GB-021",
+     "length_m": 6.245
+    },
+    {
+     "band": "H2000+H252",
+     "exterior": true,
+     "id": "GB-020",
+     "length_m": 6.65
+    },
+    {
+     "band": "H2000+H252",
+     "exterior": true,
+     "id": "GB-023",
+     "length_m": 1.4
+    },
+    {
+     "band": "H1987+H368",
+     "exterior": true,
+     "id": "GB-003",
+     "length_m": 6.22
+    },
+    {
+     "band": "H1987+H368",
+     "exterior": false,
+     "id": "GB-004",
+     "length_m": 3.6
+    },
+    {
+     "band": "H1987+H368",
+     "exterior": false,
+     "id": "GB-005",
+     "length_m": 3.35
+    },
+    {
+     "band": "H1995+H265",
+     "exterior": true,
+     "id": "GB-012",
+     "length_m": 2.7
+    },
+    {
+     "band": "H1995+H265",
+     "exterior": true,
+     "id": "GB-011",
+     "length_m": 9.5
+    },
+    {
+     "band": "H1999+H388",
+     "exterior": false,
+     "id": "GB-018",
+     "length_m": 3.27
+    },
+    {
+     "band": "H1999+H388",
+     "exterior": false,
+     "id": "GB-019",
+     "length_m": 3.05
+    },
+    {
+     "band": "H1999+H388",
+     "exterior": true,
+     "id": "GB-017",
+     "length_m": 5.15
+    },
+    {
+     "band": "H2004+H248",
+     "exterior": false,
+     "id": "GB-028",
+     "length_m": 5.53
+    },
+    {
+     "band": "H2004+H248",
+     "exterior": false,
+     "id": "GB-029",
+     "length_m": 4.3
+    },
+    {
+     "band": "H2016+H253",
+     "exterior": true,
+     "id": "GB-042",
+     "length_m": 3.85
+    },
+    {
+     "band": "H2016+H253",
+     "exterior": true,
+     "id": "GB-043",
+     "length_m": 3.25
+    },
+    {
+     "band": "H1997+H375",
+     "exterior": true,
+     "id": "GB-014",
+     "length_m": 5.37
+    },
+    {
+     "band": "H1997+H375",
+     "exterior": true,
+     "id": "GB-015",
+     "length_m": 1.886669
+    },
+    {
+     "band": "H2023+H2024",
+     "exterior": true,
+     "id": "GB-049",
+     "length_m": 3.525
+    },
+    {
+     "band": "H2023+H2024",
+     "exterior": true,
+     "id": "GB-050",
+     "length_m": 3.525
+    },
+    {
+     "band": "H2012+H2013",
+     "exterior": true,
+     "id": "GB-037",
+     "length_m": 3.525
+    },
+    {
+     "band": "H2012+H2013",
+     "exterior": true,
+     "id": "GB-038",
+     "length_m": 3.525
+    },
+    {
+     "band": "H2017+H2018",
+     "exterior": true,
+     "id": "GB-044",
+     "length_m": 6.72
+    },
+    {
+     "band": "H2005+H310",
+     "exterior": false,
+     "id": "GB-030",
+     "length_m": 6.4
+    },
+    {
+     "band": "H2002+H317",
+     "exterior": false,
+     "id": "GB-026",
+     "length_m": 5.9
+    },
+    {
+     "band": "H2006+H318",
+     "exterior": false,
+     "id": "GB-031",
+     "length_m": 5.1
+    },
+    {
+     "band": "H1993+H266",
+     "exterior": true,
+     "id": "GB-008",
+     "length_m": 4.6
+    },
+    {
+     "band": "H2001+H267",
+     "exterior": false,
+     "id": "GB-024",
+     "length_m": 2.3
+    },
+    {
+     "band": "H2001+H267",
+     "exterior": false,
+     "id": "GB-025",
+     "length_m": 1.5
+    },
+    {
+     "band": "H2007+H320",
+     "exterior": false,
+     "id": "GB-032",
+     "length_m": 4.3
+    },
+    {
+     "band": "H2003+H319",
+     "exterior": false,
+     "id": "GB-027",
+     "length_m": 4.3
+    },
+    {
+     "band": "H2020+H381",
+     "exterior": false,
+     "id": "GB-046",
+     "length_m": 4.272293
+    },
+    {
+     "band": "H2025+H2026",
+     "exterior": false,
+     "id": "GB-051",
+     "length_m": 4.225
+    },
+    {
+     "band": "H2011+H376",
+     "exterior": true,
+     "id": "GB-036",
+     "length_m": 3.8
+    },
+    {
+     "band": "H2022+H374",
+     "exterior": true,
+     "id": "GB-048",
+     "length_m": 3.75
+    },
+    {
+     "band": "H2014+H373",
+     "exterior": true,
+     "id": "GB-039",
+     "length_m": 3.75
+    },
+    {
+     "band": "H2019+H380",
+     "exterior": true,
+     "id": "GB-045",
+     "length_m": 3.227707
+    },
+    {
+     "band": "H2015+H276",
+     "exterior": false,
+     "id": "GB-041",
+     "length_m": 0.3
+    },
+    {
+     "band": "H2015+H276",
+     "exterior": true,
+     "id": "GB-040",
+     "length_m": 2.625
+    },
+    {
+     "band": "H311+H312",
+     "exterior": false,
+     "id": "GB-053",
+     "length_m": 2.45
+    },
+    {
+     "band": "H1994+H325",
+     "exterior": true,
+     "id": "GB-010",
+     "length_m": 0.4
+    },
+    {
+     "band": "H1994+H325",
+     "exterior": true,
+     "id": "GB-009",
+     "length_m": 2.3
+    },
+    {
+     "band": "H350+H351",
+     "exterior": false,
+     "id": "GB-054",
+     "length_m": 3.0
+    },
+    {
+     "band": "H1992+H349",
+     "exterior": false,
+     "id": "GB-007",
+     "length_m": 2.9
+    },
+    {
+     "band": "H382+H383",
+     "exterior": false,
+     "id": "GB-055",
+     "length_m": 2.466843
+    },
+    {
+     "band": "H2008+H322",
+     "exterior": false,
+     "id": "GB-033",
+     "length_m": 2.45
+    },
+    {
+     "band": "H1996+H348",
+     "exterior": true,
+     "id": "GB-013",
+     "length_m": 2.4
+    },
+    {
+     "band": "H6157+H6158",
+     "exterior": false,
+     "id": "GB-058",
+     "length_m": 2.1
+    },
+    {
+     "band": "H386+H387",
+     "exterior": false,
+     "id": "GB-057",
+     "length_m": 2.073244
+    },
+    {
+     "band": "H2009+H316",
+     "exterior": false,
+     "id": "GB-034",
+     "length_m": 1.45
+    },
+    {
+     "band": "H1991+H389",
+     "exterior": true,
+     "id": "GB-006",
+     "length_m": 0.85
+    },
+    {
+     "band": "H6161+H6162",
+     "exterior": false,
+     "id": "GB-059",
+     "length_m": 1.3
+    },
+    {
+     "band": "H2047+H367",
+     "exterior": false,
+     "id": "GB-052",
+     "length_m": 1.25
+    },
+    {
+     "band": "H2021+H379",
+     "exterior": false,
+     "id": "GB-047",
+     "length_m": 1.2
+    },
+    {
+     "band": "H2010+H321",
+     "exterior": false,
+     "id": "GB-035",
+     "length_m": 1.2
+    },
+    {
+     "band": "H384+H385",
+     "exterior": false,
+     "id": "GB-056",
+     "length_m": 0.788981
+    },
+    {
+     "band": "H1998+H263",
+     "exterior": false,
+     "id": "GB-016",
+     "length_m": 0.363932
+    },
+    {
+     "band": "ARC:H313+H314",
+     "exterior": false,
+     "id": "GB-001",
+     "length_m": 1.806416
+    },
+    {
+     "band": "ARC:H343+H344",
+     "exterior": true,
+     "id": "GB-002",
+     "length_m": 6.179941
+    }
+   ]
   }
  },
- "inputs_sha256": {
-  "research/coverage_recovery_round/QUANTITY_COVERAGE_DASHBOARD.json": "818f4b8643e7b456cb13814cd49583ca650560a78da3bda92f200da1d605e174",
-  "research/coverage_recovery_round/QUANTITY_SCENARIOS.json": "d6a32b862f1f6bf3d5cc69cb092f5a3dd4aa403a34c7bbd819b9f1b55cf80707",
-  "research/coverage_recovery_round/WALL_FACE_PAIR_EXTRACT.json": "2639799cb9d6bc75307bf9e8dd9f3a8e622cd2c38d7a7ce1a242b80d08c2ffd9",
-  "tests/alsenan/registers_v3b/BOQ_LINES_V3B.json": "b241c38b543b4abf48ea9bd3a912193f867cb9be3917b947e67651d5129d23e4"
- },
  "plaster": {
-  "donor_wall_length_m": 263.468,
-  "inferred_height_if_two_faces_no_deductions_m": 4.488,
-  "reading": "2364.7 / (2 x 263.468 m) = 4.488 m: equal to the GF storey height applied to every wall on every floor, both faces, no opening deduction - INFERRED, not a donor record",
-  "relayed_donor_gross_faces_m2": 2364.7,
+  "ARITHMETIC_INFERENCE": {
+   "excess_over_that_bound_m2": 98.875,
+   "max_two_faces_at_A10_GF_height_m2": 2265.825,
+   "reading": "even with every wall at the GF A10 height (4.30 m), both faces and no deduction, the wall-pair lengths give at most 2265.8 m2 < 2364.7 m2: the plaster figure contains faces beyond the paired wall lengths (columns, exterior / parapet faces or other surfaces). The earlier package's 'uniform 4.49 m, no deductions' reading is WITHDRAWN; the composition is in the report and is imported when the file is delivered."
+  },
+  "report_gross_faces_m2": 2364.7,
+  "report_height_rule": "A10 wall height = floor-to-floor - slab thickness; A13 door leaf 2.10",
+  "report_wall_pair_length_m": 263.468,
   "urban_physical_faces": {
    "basis": "two faces per masonry band; height = structural interval - terminating member (DERIVED) or, for ambiguous bands, a floor-median provisional scenario; bands are net of openings",
    "best_m2": 1618.18,
@@ -554,13 +1345,13 @@
       "sum_m2": 31.092
      }
     ],
-    "donor_gross_basis": "Urban gross (donor gross for this floor not relayed)",
-    "donor_gross_used_m2": 217.201,
-    "hypothesis_status": "NON_UNIQUE (raster edge allocation of +/- 1-2 m2 cannot be separated without the donor cell map)",
-    "inferred_donor_deductions_m2": 37.876,
+    "gross_basis": "Urban gross (report gross for this floor not imported)",
+    "gross_used_m2": 217.201,
+    "hypothesis_status": "NON_UNIQUE until the report's per-class raster areas (OPENING / UNRESOLVED_ENCLOSED / EDGE_LINE_CELLS) are imported",
+    "inferred_report_deductions_m2": 37.876,
     "inferred_thickness_m": 0.16,
-    "relayed_net_m2": 179.325,
-    "relayed_volume_m3": 28.692,
+    "report_net_m2": 179.325,
+    "report_volume_m3": 28.692,
     "urban_gross_m2": 217.201,
     "urban_net_m2": 169.752,
     "urban_openings": [
@@ -600,13 +1391,13 @@
       "sum_m2": 0
      }
     ],
-    "donor_gross_basis": "Urban gross (donor gross for this floor not relayed)",
-    "donor_gross_used_m2": 55.478,
+    "gross_basis": "Urban gross (report gross for this floor not imported)",
+    "gross_used_m2": 55.478,
     "hypothesis_status": "UNIQUE",
-    "inferred_donor_deductions_m2": 0.203,
+    "inferred_report_deductions_m2": 0.203,
     "inferred_thickness_m": 0.18,
-    "relayed_net_m2": 55.275,
-    "relayed_volume_m3": 9.95,
+    "report_net_m2": 55.275,
+    "report_volume_m3": 9.95,
     "urban_gross_m2": 55.478,
     "urban_net_m2": 55.478,
     "urban_openings": [],
@@ -661,13 +1452,13 @@
       "sum_m2": 37.801
      }
     ],
-    "donor_gross_basis": "donor ground-slab area = donor GF gross outline (A7)",
-    "donor_gross_used_m2": 324.038,
-    "hypothesis_status": "NON_UNIQUE (raster edge allocation of +/- 1-2 m2 cannot be separated without the donor cell map)",
-    "inferred_donor_deductions_m2": 33.483,
+    "gross_basis": "report ground-slab area = report GF gross outline (A7)",
+    "gross_used_m2": 324.038,
+    "hypothesis_status": "NON_UNIQUE until the report's per-class raster areas (OPENING / UNRESOLVED_ENCLOSED / EDGE_LINE_CELLS) are imported",
+    "inferred_report_deductions_m2": 33.483,
     "inferred_thickness_m": 0.2,
-    "relayed_net_m2": 290.555,
-    "relayed_volume_m3": 58.111,
+    "report_net_m2": 290.555,
+    "report_volume_m3": 58.111,
     "urban_gross_m2": 322.413,
     "urban_net_m2": 276.788,
     "urban_openings": [
@@ -704,6 +1495,68 @@
    "2F": 0.18,
    "GF": 0.2
   },
-  "pattern": "best-ranked hypotheses on GF and 1F both deduct the VOID openings and keep the STAIR well (10.725 m2 each floor) in the slab; residuals are within raster edge tolerance. HYPOTHESIS ONLY - confirm against the donor cell map."
+  "pattern": "best fits on GF and 1F deduct the VOID openings and keep the 10.725 m2 stair well; the report's own OPENING / UNRESOLVED_ENCLOSED class areas will confirm or refute this"
+ },
+ "versions": {
+  "CR": {
+   "CALCULATION_ROUND": "COVERAGE_RECOVERY (CR.3)",
+   "DRAWING_SHA": {
+    "P7757.dxf": "ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4",
+    "ST7757.dxf": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079"
+   },
+   "ENGINE_COMMIT": "680264d",
+   "REGISTER_VERSION": "research/coverage_recovery_round/QUANTITY_SCENARIOS.json@d6a32b862f1f6bf3"
+  },
+  "CR_DASH": {
+   "CALCULATION_ROUND": "COVERAGE_RECOVERY (CR.3)",
+   "DRAWING_SHA": {
+    "P7757.dxf": "ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4",
+    "ST7757.dxf": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079"
+   },
+   "ENGINE_COMMIT": "680264d",
+   "REGISTER_VERSION": "research/coverage_recovery_round/QUANTITY_COVERAGE_DASHBOARD.json@818f4b8643e7b456"
+  },
+  "CR_WALLS": {
+   "CALCULATION_ROUND": "COVERAGE_RECOVERY (CR.3)",
+   "DRAWING_SHA": {
+    "P7757.dxf": "ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4",
+    "ST7757.dxf": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079"
+   },
+   "ENGINE_COMMIT": "680264d",
+   "REGISTER_VERSION": "research/coverage_recovery_round/WALL_FACE_PAIR_EXTRACT.json@2639799cb9d6bc75"
+  },
+  "OPN": {
+   "CALCULATION_ROUND": "R5 (arch truth 05)",
+   "DRAWING_SHA": {
+    "P7757.dxf": "ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4"
+   },
+   "ENGINE_COMMIT": "8f44252",
+   "REGISTER_VERSION": "research/alsenan_arch_truth_05/registers/OPENING_EVIDENCE_REGISTER_V3.json@073422a7a53e7316"
+  },
+  "S1L": {
+   "CALCULATION_ROUND": "S1",
+   "DRAWING_SHA": {
+    "P7757.dxf": "ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4",
+    "ST7757.dxf": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079"
+   },
+   "ENGINE_COMMIT": "606efec",
+   "REGISTER_VERSION": "research/alsenan_structural_census_s1/STRUCTURAL_LEVEL_REGISTER.json@53d54f501f0fcab6"
+  },
+  "V3B": {
+   "CALCULATION_ROUND": "V3b",
+   "DRAWING_SHA": {
+    "ST7757.dxf": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079"
+   },
+   "ENGINE_COMMIT": "66dd3fb",
+   "REGISTER_VERSION": "tests/alsenan/registers_v3b/BOQ_LINES_V3B.json@b241c38b543b4abf"
+  },
+  "V3G": {
+   "CALCULATION_ROUND": "V3",
+   "DRAWING_SHA": {
+    "ST7757.dxf": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079"
+   },
+   "ENGINE_COMMIT": "1381aa6",
+   "REGISTER_VERSION": "tests/alsenan/registers_v3/GROUND_STRUCTURE_REGISTER.json@c3e87460a6924115"
+  }
  }
 }
