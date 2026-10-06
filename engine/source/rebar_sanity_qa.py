@@ -2,7 +2,8 @@
 
 Moved here from engine/bbs_steel.py (ratio_check) and engine/source/rebar_model.py (ratio_qa). The accurate BBS code
 does not depend on them; the old names remain as deprecated wrappers (module __getattr__) that call this module and
-warn. Nothing here produces, completes or changes a reinforcement quantity. Stdlib only.
+warn. Production modules use the mirror engine/rebar_sanity_qa.py (production may not import engine.source);
+a parity test keeps the two identical. Nothing here produces, completes or changes a reinforcement quantity. Stdlib only.
 """
 
 from __future__ import annotations

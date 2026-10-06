@@ -44,6 +44,7 @@ ROUGH_PROFILES = (
 )
 SANITY_QA_MODULES = (                    # kg/m3 QA helpers moved out of the accurate code (deprecated wrappers remain)
     "engine/source/rebar_sanity_qa.py",
+    "engine/rebar_sanity_qa.py",            # production-layer mirror (production may not import engine.source)
 )
 REPORT_MODULES = (                       # may read both products, writes neither
     "engine/source/rebar_sanity_variance.py",

@@ -195,6 +195,17 @@ def test_accurate_modules_reach_sanity_qa_only_through_deprecated_shims():
     assert QA.intensity_qa(100.0, volume_m3=2.0)["use"] == "QA_ONLY"
 
 
+def test_production_and_source_sanity_qa_copies_agree():
+    """Production may not import engine.source, so the QA band exists once per layer; the two must never drift."""
+    from engine import rebar_sanity_qa as P
+    from engine.source import rebar_sanity_qa as S
+    assert (P.RATIO_YELLOW, P.RATIO_RED) == (S.RATIO_YELLOW, S.RATIO_RED)
+    for kg, m3 in ((30000, 240.0), (500, 100), (0, 1), (1, 0), (69.9, 1), (200.1, 1), (39.9, 1), (300.1, 1)):
+        assert P.ratio_band_check(kg, m3) == S.ratio_band_check(kg, m3), (kg, m3)
+    import engine
+    assert engine.ratio_check is P.ratio_band_check
+
+
 def test_runtime_import_of_accurate_engines_loads_no_rough_module():
     mods = [m[:-3].replace("/", ".") for m in RP.ACCURATE_MODULES]
     code = ("import json, sys; sys.path.insert(0, %r)\n" % str(ROOT) +
