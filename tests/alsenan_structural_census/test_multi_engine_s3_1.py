@@ -127,19 +127,26 @@ def test_no_percentage_on_not_comparable_rows(name):
                 assert v["difference"] is None and v["difference_percent"] is None, (r["category"], who)
 
 
-def test_rough_profile_is_the_engine_profile_and_calibration_rounds_to_it():
+def test_rough_profile_snapshot_and_engine_profile_share_the_ratios():
+    """The S3.1 package is frozen with the profile as approved then (snapshot); the engine profile has since been
+    re-labelled URBAN_OWNER_ESTIMATING_RULE (architecture correction before S4) with the same ratios."""
     pkg = J(CMP, "URBAN_ROUGH_REBAR_PROFILE_V1.json")
+    snap = J(CMP, "s3_1_rough_profile_snapshot.json")
     eng = json.loads((ROOT / pkg["engine_profile_path"]).read_text(encoding="utf-8"))
     RR.validate_profile(eng)
-    assert pkg["profile"] == eng
+    assert pkg["profile"] == snap and snap["authority"] == "URBAN_OWNER_RULE"
+    assert eng["authority"] == "URBAN_OWNER_ESTIMATING_RULE"
+    assert eng["ratios_kg_per_m3"] == snap["ratios_kg_per_m3"]
     for r in pkg["calibration_sample"]["rows"]:
         exact = 1000.0 * r["steel_t"] / r["concrete_m3"]
         assert round(exact) == eng["ratios_kg_per_m3"][r["category"]], r["category"]
 
 
 def test_rebar_comparison_rough_never_replaces_actual():
+    sys.path.insert(0, str(CMP))
+    import s3_1_rough_rebar_snapshot as SNAP
     reb = J(CMP, "MULTI_ENGINE_REBAR_COMPARISON.json")
-    assert reb["footer"] == RR.FOOTER
+    assert reb["footer"] == SNAP.FOOTER
     for r in reb["rows"]:
         assert r["rough_reference_kg_modelled"] is not None
         if not r["actual_complete"]:

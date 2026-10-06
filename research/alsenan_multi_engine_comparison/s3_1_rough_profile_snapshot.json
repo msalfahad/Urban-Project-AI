@@ -1,7 +1,6 @@
 {
  "profile_id": "URBAN_ROUGH_REBAR_PROFILE_V1",
- "product": "ROUGH_REBAR_SUMMARY",
- "authority": "URBAN_OWNER_ESTIMATING_RULE",
+ "authority": "URBAN_OWNER_RULE",
  "use": "SANITY_CHECK_ONLY",
  "approved_by": "Mohammad (Urban Projects)",
  "approved_on": "2026-10-06",
@@ -15,24 +14,7 @@
   "SWIMMING_POOL": 121
  },
  "ratio_rounding": "integer kg/m3",
- "not": [
-  "structural-code values",
-  "consultant-design values",
-  "BBS rules",
-  "BBS values",
-  "final procurement values"
- ],
+ "not": ["structural-code values", "consultant-design values", "BBS values", "final procurement values"],
  "provenance": "integer-rounded category intensities calibrated from one FREELANCER_QS_REFERENCE sample and approved by the owner as Urban rough-check values; the calibration sample is held only in the project comparison package, never in production",
- "footer": "ROUGH REBAR SUMMARY is an estimating and sanity-check tool only. It is not a reinforcement takeoff and must not replace the ACCURATE BOQ REBAR / BBS quantity.",
- "authority_history": [
-  {
-   "authority": "URBAN_OWNER_RULE",
-   "until": "S3.1 (commit 96978ef)"
-  },
-  {
-   "authority": "URBAN_OWNER_ESTIMATING_RULE",
-   "from": "architecture correction before S4",
-   "ratios_changed": false
-  }
- ]
+ "footer": "Rough kg/m3 values are Urban estimating/sanity heuristics and are not a substitute for bar-by-bar reinforcement takeoff."
 }

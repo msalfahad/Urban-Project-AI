@@ -34,9 +34,9 @@ def test_margin_erosion_alert():
 
 # ---- E20 Estimate vs Actual ----
 def test_qty_and_cost_variance():
-    t = TradeOutturn("concrete", estimated_qty=352.44, actual_qty=380,
+    t = TradeOutturn("concrete", estimated_qty=350.0, actual_qty=380,      # neutral synthetic quantities
                      estimated_cost=9868, actual_cost=10450)
-    assert round(t.qty_variance_pct(), 1) == 7.8
+    assert round(t.qty_variance_pct(), 1) == 8.6
     assert t.cost_variance_pct() > 0
 
 
@@ -61,8 +61,8 @@ def test_steel_totals_by_diameter():
 
 
 def test_ratio_check_healthy():
-    # Alsenan: 44,190 kg / 352.44 m3 ≈ 125 kg/m3 → OK
-    r = ratio_check(44190, 352.44)
+    # neutral synthetic case: 30,000 kg / 240 m3 = 125 kg/m3 -> OK (no project or reference-QS figure is used here)
+    r = ratio_check(30000, 240.0)
     assert r["status"] == "OK"
     assert 120 < r["ratio"] < 130
 

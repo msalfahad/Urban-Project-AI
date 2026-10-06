@@ -13,10 +13,12 @@ from pathlib import Path
 
 import pytest
 
+from engine.source import accurate_boq_rebar as AB
 from engine.source import cad_guards as G
 from engine.source import cad_oracle as CO
 from engine.source import column_rebar as CR
 from engine.source import comparison_scope as CS
+from engine.source import rebar_sanity_variance as SV
 from engine.source import rebar_unit_mass as UM
 from engine.source import rough_rebar_sanity as RR
 from engine.source import source_oracle_comparison as SOC
@@ -24,7 +26,7 @@ from engine.source import source_roles as SR
 from engine.source import structural_population_discovery as SP
 
 ROOT = Path(__file__).resolve().parents[2]
-PROFILE = {"profile_id": "TEST", "authority": "URBAN_OWNER_RULE", "use": "SANITY_CHECK_ONLY",
+PROFILE = {"profile_id": "TEST", "authority": "URBAN_OWNER_ESTIMATING_RULE", "use": "SANITY_CHECK_ONLY",
            "ratios_kg_per_m3": {"WALLS_AND_COLUMNS": 200, "SLABS": 90, "BEAMS": 150}}
 
 
@@ -34,37 +36,38 @@ def occ(i, ec, m3, st="VERIFIED"):
 
 # 1
 def test_category_specific_rough_rebar():
-    r = RR.rough_check([occ("c1", "COLUMN", 2.0), occ("s1", "SOLID_SLAB", 10.0)], PROFILE)["categories"]
-    assert r["WALLS_AND_COLUMNS"]["rough_reference_kg_released_basis"] == 400.0           # 2 x 200
-    assert r["SLABS"]["rough_reference_kg_released_basis"] == 900.0                        # 10 x 90
+    r = RR.rough_summary([occ("c1", "COLUMN", 2.0), occ("s1", "SOLID_SLAB", 10.0)], PROFILE)["categories"]
+    assert r["WALLS_AND_COLUMNS"]["rough_kg_released_basis"] == 400.0                     # 2 x 200
+    assert r["SLABS"]["rough_kg_released_basis"] == 900.0                                  # 10 x 90
 
 
 # 2
 def test_wrong_ratio_or_authority_rejected():
     for bad in (dict(PROFILE, ratios_kg_per_m3={"SLABS": 90.5}), dict(PROFILE, ratios_kg_per_m3={"SLABS": -1}),
-                dict(PROFILE, authority="STRUCTURAL_CODE"), dict(PROFILE, use="PRODUCTION"),
+                dict(PROFILE, authority="STRUCTURAL_CODE"), dict(PROFILE, authority="URBAN_OWNER_RULE"),
+                dict(PROFILE, use="PRODUCTION"),
                 dict(PROFILE, mapping={"PLAIN_CONCRETE": "SLABS"}), dict(PROFILE, mapping={"NOT_A_CLASS": "SLABS"})):
         with pytest.raises(RR.RoughRebarError):
-            RR.rough_check([occ("s", "SOLID_SLAB", 1.0)], bad)
-    r = RR.rough_check([occ("s", "SOLID_SLAB", 1.0)], PROFILE)["categories"]
+            RR.rough_summary([occ("s", "SOLID_SLAB", 1.0)], bad)
+    r = RR.rough_summary([occ("s", "SOLID_SLAB", 1.0)], PROFILE)["categories"]
     assert r["SLABS"]["ratio_kg_per_m3"] == 90                                          # a slab never takes 200
 
 
 # 3
 def test_unknown_category_gets_no_guessed_ratio():
-    res = RR.rough_check([occ("l1", "LINTEL", 1.0), {"occurrence_id": "x", "description": "mystery element",
-                                                     "concrete_m3": 3.0, "concrete_state": "VERIFIED"},
-                          occ("g", "GROUND_BEAM", 4.0)], PROFILE)
-    assert {u["occurrence_id"] for u in res["unassigned"]} == {"l1", "x"}
-    assert all(u["state"] == RR.NOT_CONFIGURED for u in res["unassigned"])
+    res = RR.rough_summary([occ("l1", "LINTEL", 1.0), {"occurrence_id": "x", "description": "mystery element",
+                                                       "concrete_m3": 3.0, "concrete_state": "VERIFIED"},
+                            occ("g", "GROUND_BEAM", 4.0)], PROFILE)
+    assert {u["occurrence_id"] for u in res["not_configured"]} == {"l1", "x"}
+    assert all(u["state"] == RR.NOT_CONFIGURED for u in res["not_configured"])
     g = res["categories"]["GROUND_BEAMS_AND_GROUND_SLAB"]
-    assert g["ratio_state"] == RR.NOT_CONFIGURED and g["rough_reference_kg_released_basis"] is None
+    assert g["ratio_state"] == RR.NOT_CONFIGURED and g["rough_kg_released_basis"] is None
 
 
 # 4
 def test_same_occurrence_cannot_enter_two_categories():
     with pytest.raises(RR.RoughRebarError):
-        RR.rough_check([occ("a", "COLUMN", 1.0), occ("a", "BEAM", 1.0)], PROFILE)
+        RR.rough_summary([occ("a", "COLUMN", 1.0), occ("a", "BEAM", 1.0)], PROFILE)
     with pytest.raises(CS.ScopeError):
         CS.make_view("V", [{"category": "A", "measurement_basis": "X", "included_components": ["SLAB"],
                             "overlap_policy": "p"},
@@ -74,15 +77,21 @@ def test_same_occurrence_cannot_enter_two_categories():
 
 # 5
 def test_rough_result_never_modifies_actual_bbs():
-    actual = {"WALLS_AND_COLUMNS": {"released_kg": 350.0, "provisional_kg": 20.0, "blocked_components": ["x"],
-                                    "complete": False}}
+    parts = [{"part_id": "m", "category": "COLUMNS", "component": "COLUMN_MAIN_BAR", "state": "VERIFIED",
+              "kg": 350.0, "basis": ["SCHEDULE"]},
+             {"part_id": "t", "category": "COLUMNS", "component": "COLUMN_TIE", "state": "PROVISIONAL",
+              "kg": 20.0, "basis": ["STRUCTURAL_DETAIL"]},
+             {"part_id": "x", "category": "COLUMNS", "component": "COLUMN_OTHER_DETAIL",
+              "state": "BLOCKED_UNQUANTIFIED", "kg": None, "basis": ["STRUCTURAL_DETAIL"]}]
+    actual = AB.summarise(parts)
     before = copy.deepcopy(actual)
-    res = RR.rough_check([occ("c1", "COLUMN", 2.0, "VERIFIED"), occ("c2", "COLUMN", 1.0, "BLOCKED")], PROFILE,
-                         actual)
+    rough = RR.rough_summary([occ("c1", "COLUMN", 2.0, "VERIFIED"), occ("c2", "COLUMN", 1.0, "BLOCKED")], PROFILE)
+    res = SV.compare(actual, rough)
     assert actual == before
-    row = res["categories"]["WALLS_AND_COLUMNS"]
-    assert row["comparison_state"] == "BBS_INCOMPLETE_SIDE_BY_SIDE" and "delta_kg" not in row
-    assert row["blocked_concrete_m3"] == 1.0 and row["rough_reference_kg_modelled_basis"] == 400.0  # blocked out
+    rr = rough["categories"]["WALLS_AND_COLUMNS"]
+    assert rr["blocked_concrete_m3"] == 1.0 and rr["rough_kg_modelled_basis"] == 400.0      # blocked concrete out
+    row = res["rows"][0]
+    assert row["state"] == SV.SIDE_BY_SIDE and row["SANITY_VARIANCE_KG"] is None
     assert "missing" not in json.dumps(res).lower()
 
 
@@ -281,7 +290,8 @@ def test_benchmark_values_cannot_enter_production_modules():
 def test_new_generic_modules_hold_no_project_marks():
     names = re.compile(r"alsenan|st7757|p7757|qortuba|rashed", re.I)
     marks = re.compile(r"\b(?:C|F|SB|CB|GB|B|CN)\d{1,2}\b|\bX\d{2}-Y\d{2}\b")
-    for m in ("rough_rebar_sanity.py", "comparison_scope.py", "cad_oracle.py", "source_oracle_comparison.py",
+    for m in ("rough_rebar_sanity.py", "accurate_boq_rebar.py", "rebar_sanity_variance.py", "rebar_boq_sections.py",
+              "comparison_scope.py", "cad_oracle.py", "source_oracle_comparison.py",
               "structural_population_discovery.py", "cad_guards.py", "source_roles.py", "rebar_unit_mass.py"):
         src = (ROOT / "engine" / "source" / m).read_text(encoding="utf-8")
         assert not names.findall(src) + marks.findall(src), m

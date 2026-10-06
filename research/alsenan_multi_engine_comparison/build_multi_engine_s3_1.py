@@ -23,10 +23,11 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
 sys.path.insert(0, str(ROOT))
+sys.path.insert(0, str(HERE))
 
 from engine.source import cad_oracle as CO  # noqa: E402
 from engine.source import comparison_scope as CS  # noqa: E402
-from engine.source import rough_rebar_sanity as RR  # noqa: E402
+import s3_1_rough_rebar_snapshot as RR  # noqa: E402  (frozen S3.1 rough logic; production moved on)
 from engine.source import source_oracle_comparison as SOC  # noqa: E402
 from engine.source import source_roles as SR  # noqa: E402
 from engine.source import structural_population_discovery as SP  # noqa: E402
@@ -37,7 +38,7 @@ V3B = ROOT / "tests" / "alsenan" / "registers_v3b" / "BOQ_LINES_V3B.json"
 S31 = ROOT / "research" / "alsenan_column_rebar_s3_1"
 SLAB_REG = ROOT / "data" / "reports" / "URBAN_QTO_ALSENAN_PHASE_B2A1_GENERIC_QA_PATCH" / "registers" / \
     "SLAB_REGION_REGISTER.json"
-PROFILE = ROOT / "engine" / "profiles" / "URBAN_ROUGH_REBAR_PROFILE_V1.json"
+PROFILE = HERE / "s3_1_rough_profile_snapshot.json"          # the profile as approved at S3.1
 
 
 def sha(b):
