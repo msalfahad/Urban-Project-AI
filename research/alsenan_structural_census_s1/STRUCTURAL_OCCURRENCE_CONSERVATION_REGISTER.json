@@ -1,0 +1,5842 @@
+{
+ "frozen_before_benchmark": true,
+ "policy": {
+  "cb_states": [
+   "MATCH_CONFIRMED",
+   "SPAN_LENGTH_CONFLICT",
+   "SPAN_COUNT_CONFLICT",
+   "TAG_WITH_NO_MEMBER",
+   "MEMBER_WITH_NO_TAG",
+   "BLOCKED"
+  ],
+  "policy_id": "STRUCTURAL_CENSUS_V1",
+  "precedence": [
+   "LOCAL_PANEL_NOTE",
+   "FLOOR_SPECIFIC_NOTE",
+   "PROJECT_DEFAULT"
+  ],
+  "principles": [
+   "plan decides occurrence; schedule only defines",
+   "no default overrides a local note",
+   "a value is never rounded into a table row it does not match",
+   "every plan object ends in one terminal state"
+  ],
+  "rule_states": [
+   "EXACT_RULE",
+   "RULE_NOT_EXACT_MATCH",
+   "BLOCKED_METHOD"
+  ],
+  "terminal_states": [
+   "COUNTED_AND_DEFINED",
+   "COUNTED_DEFINITION_PARTIAL",
+   "COUNTED_BLOCKED",
+   "NOT_IN_SCOPE"
+  ]
+ },
+ "register": "STRUCTURAL_OCCURRENCE_CONSERVATION_REGISTER",
+ "round": "S1",
+ "rows": [
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-1F_ROOF-B4-BA002-1828",
+   "source_id": "BEAMTAG:FFRS:1828",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-1F_ROOF-B4-BA001-1829",
+   "source_id": "BEAMTAG:FFRS:1829",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-1F_ROOF-B4-BL032-6B5",
+   "source_id": "BEAMTAG:FFRS:6B5",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-1F_ROOF-B3-BL023-6B9",
+   "source_id": "BEAMTAG:FFRS:6B9",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-1F_ROOF-B2-BL019-6BA",
+   "source_id": "BEAMTAG:FFRS:6BA",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-1F_ROOF-B6-UNBOUND-6BD",
+   "source_id": "BEAMTAG:FFRS:6BD",
+   "terminal_state": "COUNTED_BLOCKED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-1F_ROOF-B5-BL022-6C4",
+   "source_id": "BEAMTAG:FFRS:6C4",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-1F_ROOF-B6-BL014-6C5",
+   "source_id": "BEAMTAG:FFRS:6C5",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-1F_ROOF-CB9-BL023-6C6",
+   "source_id": "BEAMTAG:FFRS:6C6",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-1F_ROOF-CB9-BL023-6C7",
+   "source_id": "BEAMTAG:FFRS:6C7",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-1F_ROOF-CB9-BL023-6C8",
+   "source_id": "BEAMTAG:FFRS:6C8",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-1F_ROOF-B2-BL016-6C9",
+   "source_id": "BEAMTAG:FFRS:6C9",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-1F_ROOF-B2-BL017-6CA",
+   "source_id": "BEAMTAG:FFRS:6CA",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-1F_ROOF-B1-BL028-6CB",
+   "source_id": "BEAMTAG:FFRS:6CB",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-1F_ROOF-B7-BL027-6CC",
+   "source_id": "BEAMTAG:FFRS:6CC",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-1F_ROOF-B7-BL017-6CD",
+   "source_id": "BEAMTAG:FFRS:6CD",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-1F_ROOF-B1-BL016-6CE",
+   "source_id": "BEAMTAG:FFRS:6CE",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-1F_ROOF-B19-BL029-6CF",
+   "source_id": "BEAMTAG:FFRS:6CF",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-1F_ROOF-B1-BL014-6D0",
+   "source_id": "BEAMTAG:FFRS:6D0",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-1F_ROOF-B25-BL006-6D1",
+   "source_id": "BEAMTAG:FFRS:6D1",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-1F_ROOF-B6-UNBOUND-6D4",
+   "source_id": "BEAMTAG:FFRS:6D4",
+   "terminal_state": "COUNTED_BLOCKED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-1F_ROOF-B6-UNBOUND-6D7",
+   "source_id": "BEAMTAG:FFRS:6D7",
+   "terminal_state": "COUNTED_BLOCKED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-1F_ROOF-B11-BL025-6D8",
+   "source_id": "BEAMTAG:FFRS:6D8",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-1F_ROOF-B4-BL025-6D9",
+   "source_id": "BEAMTAG:FFRS:6D9",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-1F_ROOF-CB11-BL024-6DA",
+   "source_id": "BEAMTAG:FFRS:6DA",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-1F_ROOF-CB11-BL024-6DB",
+   "source_id": "BEAMTAG:FFRS:6DB",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-1F_ROOF-CB11-BL024-6DC",
+   "source_id": "BEAMTAG:FFRS:6DC",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-1F_ROOF-CB12-BL003-6DD",
+   "source_id": "BEAMTAG:FFRS:6DD",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-1F_ROOF-CB12-BL003-6DE",
+   "source_id": "BEAMTAG:FFRS:6DE",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-1F_ROOF-B5-BL007-6EC",
+   "source_id": "BEAMTAG:FFRS:6EC",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-1F_ROOF-B18-BL008-6ED",
+   "source_id": "BEAMTAG:FFRS:6ED",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-1F_ROOF-B4-BL011-711",
+   "source_id": "BEAMTAG:FFRS:711",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-1F_ROOF-CB10-BL001-717",
+   "source_id": "BEAMTAG:FFRS:717",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-1F_ROOF-CB10-BL001-718",
+   "source_id": "BEAMTAG:FFRS:718",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-1F_ROOF-B23-BL009-74B",
+   "source_id": "BEAMTAG:FFRS:74B",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-1F_ROOF-CB13-BL004-76A",
+   "source_id": "BEAMTAG:FFRS:76A",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-1F_ROOF-CB13-BL004-76B",
+   "source_id": "BEAMTAG:FFRS:76B",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-1F_ROOF-B6-UNBOUND-76C",
+   "source_id": "BEAMTAG:FFRS:76C",
+   "terminal_state": "COUNTED_BLOCKED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-B24-BL043-1814:B24>v",
+   "source_id": "BEAMTAG:GFRS:1814:B24>v",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-B3-BL022-1827",
+   "source_id": "BEAMTAG:GFRS:1827",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-CB2-BL038-42A",
+   "source_id": "BEAMTAG:GFRS:42A",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-CB2-BL038-42B",
+   "source_id": "BEAMTAG:GFRS:42B",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-B1-BL048-430",
+   "source_id": "BEAMTAG:GFRS:430",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-B17-BL044-432",
+   "source_id": "BEAMTAG:GFRS:432",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-B11-BL023-444",
+   "source_id": "BEAMTAG:GFRS:444",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-B1-BL040-445",
+   "source_id": "BEAMTAG:GFRS:445",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-B4-BL040-446",
+   "source_id": "BEAMTAG:GFRS:446",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-B1-BL034-447",
+   "source_id": "BEAMTAG:GFRS:447",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-B3-BL027-448",
+   "source_id": "BEAMTAG:GFRS:448",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-B2-BL028-449",
+   "source_id": "BEAMTAG:GFRS:449",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-B20-BL020-453:b20>v",
+   "source_id": "BEAMTAG:GFRS:453:b20>v",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-CB4-BL016-45B",
+   "source_id": "BEAMTAG:GFRS:45B",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-CB4-BL016-45C",
+   "source_id": "BEAMTAG:GFRS:45C",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-B1-UNBOUND-45D",
+   "source_id": "BEAMTAG:GFRS:45D",
+   "terminal_state": "COUNTED_BLOCKED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-B1-BL037-45E",
+   "source_id": "BEAMTAG:GFRS:45E",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-B14-BL036-45F",
+   "source_id": "BEAMTAG:GFRS:45F",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-B3-BL032-462",
+   "source_id": "BEAMTAG:GFRS:462",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-B29-BL039-465",
+   "source_id": "BEAMTAG:GFRS:465",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-B1-BL023-466",
+   "source_id": "BEAMTAG:GFRS:466",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-B13-BL042-467",
+   "source_id": "BEAMTAG:GFRS:467",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-B21-BL001-468",
+   "source_id": "BEAMTAG:GFRS:468",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-B4-BL025-46B",
+   "source_id": "BEAMTAG:GFRS:46B",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-B28-BL026-46C",
+   "source_id": "BEAMTAG:GFRS:46C",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-B7-BA002-46E",
+   "source_id": "BEAMTAG:GFRS:46E",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-B7-BA004-46F",
+   "source_id": "BEAMTAG:GFRS:46F",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-B7-BA003-470",
+   "source_id": "BEAMTAG:GFRS:470",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-B7-BA005-471",
+   "source_id": "BEAMTAG:GFRS:471",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-B8-UNBOUND-472",
+   "source_id": "BEAMTAG:GFRS:472",
+   "terminal_state": "COUNTED_BLOCKED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-B16-BL030-473",
+   "source_id": "BEAMTAG:GFRS:473",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-CB5-BL017-474",
+   "source_id": "BEAMTAG:GFRS:474",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-CB5-BL008-475",
+   "source_id": "BEAMTAG:GFRS:475",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-B1-BL004-476",
+   "source_id": "BEAMTAG:GFRS:476",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-B1-BL004-477",
+   "source_id": "BEAMTAG:GFRS:477",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-B1-BL008-478",
+   "source_id": "BEAMTAG:GFRS:478",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-CB7-BL003-479",
+   "source_id": "BEAMTAG:GFRS:479",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-CB7-BL003-47A",
+   "source_id": "BEAMTAG:GFRS:47A",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-CB6-BL004-47B",
+   "source_id": "BEAMTAG:GFRS:47B",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-CB6-BL004-47C",
+   "source_id": "BEAMTAG:GFRS:47C",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-B7-BA001-47D:b7>v",
+   "source_id": "BEAMTAG:GFRS:47D:b7>v",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-B2-BL005-485",
+   "source_id": "BEAMTAG:GFRS:485",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-B2-BL016-492",
+   "source_id": "BEAMTAG:GFRS:492",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-CB3-BL022-493",
+   "source_id": "BEAMTAG:GFRS:493",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-CB3-BL022-494",
+   "source_id": "BEAMTAG:GFRS:494",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-CB3-BL022-495",
+   "source_id": "BEAMTAG:GFRS:495",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-B22-BL013-496",
+   "source_id": "BEAMTAG:GFRS:496",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-B4-BL022-497",
+   "source_id": "BEAMTAG:GFRS:497",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-B5-BL022-498",
+   "source_id": "BEAMTAG:GFRS:498",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-B4-BL009-49B:b4>v",
+   "source_id": "BEAMTAG:GFRS:49B:b4>v",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-B7-BL028-4B6",
+   "source_id": "BEAMTAG:GFRS:4B6",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-B1-BL027-4B7",
+   "source_id": "BEAMTAG:GFRS:4B7",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-B26-BL014-4CC",
+   "source_id": "BEAMTAG:GFRS:4CC",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-B7-BA004-4D2",
+   "source_id": "BEAMTAG:GFRS:4D2",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-B4-BL045-4DB",
+   "source_id": "BEAMTAG:GFRS:4DB",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-CB1-BL007-4E1",
+   "source_id": "BEAMTAG:GFRS:4E1",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-CB1-BL007-4E2",
+   "source_id": "BEAMTAG:GFRS:4E2",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-B4-BL010-508",
+   "source_id": "BEAMTAG:GFRS:508",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-B1-BL012-50E",
+   "source_id": "BEAMTAG:GFRS:50E",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-B27-BL002-532",
+   "source_id": "BEAMTAG:GFRS:532",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-B9-BL011-5BD",
+   "source_id": "BEAMTAG:GFRS:5BD",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-CA-BL015-69E",
+   "source_id": "BEAMTAG:GFRS:69E",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-CB8-BL024-69F",
+   "source_id": "BEAMTAG:GFRS:69F",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-CB8-BL024-6A0",
+   "source_id": "BEAMTAG:GFRS:6A0",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-B1-BL047-6A1",
+   "source_id": "BEAMTAG:GFRS:6A1",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-B3-BL033-6B7",
+   "source_id": "BEAMTAG:GFRS:6B7",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-2F_ROOF-B3-BL008-774",
+   "source_id": "BEAMTAG:SFRS:774",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-2F_ROOF-B2-BL010-775",
+   "source_id": "BEAMTAG:SFRS:775",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-2F_ROOF-B2-BL010-78A",
+   "source_id": "BEAMTAG:SFRS:78A",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-2F_ROOF-B1-BL002-78B",
+   "source_id": "BEAMTAG:SFRS:78B",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-2F_ROOF-B1-BL003-78C",
+   "source_id": "BEAMTAG:SFRS:78C",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-2F_ROOF-B1-BL011-78D",
+   "source_id": "BEAMTAG:SFRS:78D",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-2F_ROOF-B2-BL006-78E",
+   "source_id": "BEAMTAG:SFRS:78E",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-2F_ROOF-B1-BL006-78F",
+   "source_id": "BEAMTAG:SFRS:78F",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-2F_ROOF-B2-BL006-790",
+   "source_id": "BEAMTAG:SFRS:790",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-2F_ROOF-B3-BL002-79B",
+   "source_id": "BEAMTAG:SFRS:79B",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-2F_ROOF-B3-BL003-79C",
+   "source_id": "BEAMTAG:SFRS:79C",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-2F_ROOF-B3-BL007-79D",
+   "source_id": "BEAMTAG:SFRS:79D",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-2F_ROOF-B8-BL007-79E",
+   "source_id": "BEAMTAG:SFRS:79E",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-2F_ROOF-B7-BL001-7A1",
+   "source_id": "BEAMTAG:SFRS:7A1",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-2F_ROOF-B15-BL004-7A9",
+   "source_id": "BEAMTAG:SFRS:7A9",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X15-Y?-31208-15726",
+   "source_id": "COLOUTLINE:CAP:17CC",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X?-Y10-31108-20498",
+   "source_id": "COLOUTLINE:CAP:17CF",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X08-Y10-17038-20562",
+   "source_id": "COLOUTLINE:CAP:817",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X09-Y10-19738-20562",
+   "source_id": "COLOUTLINE:CAP:821",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X11-Y10-23558-20662",
+   "source_id": "COLOUTLINE:CAP:826",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X15-Y10-31508-20687",
+   "source_id": "COLOUTLINE:CAP:82A",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X10-Y07-21713-15912",
+   "source_id": "COLOUTLINE:CAP:82E",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X10-Y09-21688-17362",
+   "source_id": "COLOUTLINE:CAP:831",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X09-Y07-19688-15662",
+   "source_id": "COLOUTLINE:CAP:834",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X09-Y09-19688-17362",
+   "source_id": "COLOUTLINE:CAP:837",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X16-Y06-33108-14962",
+   "source_id": "COLOUTLINE:CAP:83C",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X16-Y01-33108-7562",
+   "source_id": "COLOUTLINE:CAP:840",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X01-Y05-2038-13762",
+   "source_id": "COLOUTLINE:CAP:844",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X01-Y01-2138-7462",
+   "source_id": "COLOUTLINE:CAP:849",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X04-Y01-7988-7462",
+   "source_id": "COLOUTLINE:CAP:84C",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X03-Y04-6338-12062",
+   "source_id": "COLOUTLINE:CAP:853",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X02-Y05-4738-13862",
+   "source_id": "COLOUTLINE:CAP:856",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X06-Y01-14088-7462",
+   "source_id": "COLOUTLINE:CAP:85B",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X06-Y04-14438-12062",
+   "source_id": "COLOUTLINE:CAP:85E",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X05-Y04-12538-11912",
+   "source_id": "COLOUTLINE:CAP:862",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X08-Y04-17038-12362",
+   "source_id": "COLOUTLINE:CAP:865",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X05-Y02-12538-9062",
+   "source_id": "COLOUTLINE:CAP:868",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X07-Y?-15888-16162",
+   "source_id": "COLOUTLINE:CAP:86C",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X08-Y09-17038-17362",
+   "source_id": "COLOUTLINE:CAP:870",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X15-Y06-31508-15062",
+   "source_id": "COLOUTLINE:CAP:873",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X14-Y02-27658-8962",
+   "source_id": "COLOUTLINE:CAP:878",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X13-Y10-27458-20662",
+   "source_id": "COLOUTLINE:CAP:87C",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X13-Y08-27308-16612",
+   "source_id": "COLOUTLINE:CAP:880",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X?-Y01-17913-7462",
+   "source_id": "COLOUTLINE:CAP:883",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X12-Y02-24308-8912",
+   "source_id": "COLOUTLINE:CAP:886",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X12-Y01-24458-7462",
+   "source_id": "COLOUTLINE:CAP:88A",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X15-Y01-31408-7462",
+   "source_id": "COLOUTLINE:CAP:88D",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X?-Y?-28583-12787",
+   "source_id": "COLOUTLINE:CAP:88F",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X?-Y?-24058-12787",
+   "source_id": "COLOUTLINE:CAP:892",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X16-Y03-33108-11312",
+   "source_id": "COLOUTLINE:CAP:895",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X15-Y06-31508-15062",
+   "source_id": "COLOUTLINE:FFRS:664",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X13-Y08-27308-16612",
+   "source_id": "COLOUTLINE:FFRS:667",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X08-Y02-16850-8912",
+   "source_id": "COLOUTLINE:FFRS:66A",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X08-Y10-17038-20562",
+   "source_id": "COLOUTLINE:FFRS:66D",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X09-Y10-19738-20562",
+   "source_id": "COLOUTLINE:FFRS:670",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X11-Y10-23558-20662",
+   "source_id": "COLOUTLINE:FFRS:673",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X15-Y10-31508-20687",
+   "source_id": "COLOUTLINE:FFRS:676",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X10-Y07-21713-15912",
+   "source_id": "COLOUTLINE:FFRS:679",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X10-Y09-21688-17362",
+   "source_id": "COLOUTLINE:FFRS:67C",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X09-Y07-19688-15662",
+   "source_id": "COLOUTLINE:FFRS:67F",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X09-Y09-19688-17362",
+   "source_id": "COLOUTLINE:FFRS:682",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X05-Y04-12538-11912",
+   "source_id": "COLOUTLINE:FFRS:685",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X08-Y04-17038-12362",
+   "source_id": "COLOUTLINE:FFRS:688",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X05-Y02-12538-9062",
+   "source_id": "COLOUTLINE:FFRS:68B",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X07-Y?-15888-16162",
+   "source_id": "COLOUTLINE:FFRS:68E",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X08-Y09-17038-17362",
+   "source_id": "COLOUTLINE:FFRS:691",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X14-Y02-27658-8962",
+   "source_id": "COLOUTLINE:FFRS:694",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X13-Y10-27458-20662",
+   "source_id": "COLOUTLINE:FFRS:697",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X12-Y02-24308-8912",
+   "source_id": "COLOUTLINE:FFRS:69A",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X15-Y02-31508-8912",
+   "source_id": "COLOUTLINE:FFRS:69D",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X?-Y?-24888-15994",
+   "source_id": "COLOUTLINE:FFRS:77B",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X08-Y10-17038-20562",
+   "source_id": "COLOUTLINE:FP:1084",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X09-Y10-19738-20562",
+   "source_id": "COLOUTLINE:FP:1087",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X11-Y10-23558-20662",
+   "source_id": "COLOUTLINE:FP:108A",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X15-Y10-31508-20687",
+   "source_id": "COLOUTLINE:FP:108D",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X10-Y07-21713-15912",
+   "source_id": "COLOUTLINE:FP:1090",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X10-Y09-21688-17362",
+   "source_id": "COLOUTLINE:FP:1093",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X09-Y07-19688-15662",
+   "source_id": "COLOUTLINE:FP:1096",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X09-Y09-19688-17362",
+   "source_id": "COLOUTLINE:FP:1099",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X16-Y06-33108-14962",
+   "source_id": "COLOUTLINE:FP:10A0",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X16-Y01-33108-7562",
+   "source_id": "COLOUTLINE:FP:10A4",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X01-Y05-2038-13762",
+   "source_id": "COLOUTLINE:FP:10A8",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X01-Y01-2138-7462",
+   "source_id": "COLOUTLINE:FP:10AB",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X04-Y01-7988-7462",
+   "source_id": "COLOUTLINE:FP:10AE",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X03-Y04-6338-12062",
+   "source_id": "COLOUTLINE:FP:10B1",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X02-Y05-4738-13862",
+   "source_id": "COLOUTLINE:FP:10B4",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X06-Y01-14088-7462",
+   "source_id": "COLOUTLINE:FP:10B7",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X06-Y04-14438-12062",
+   "source_id": "COLOUTLINE:FP:10BA",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X05-Y04-12538-11912",
+   "source_id": "COLOUTLINE:FP:10BD",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X08-Y04-17038-12362",
+   "source_id": "COLOUTLINE:FP:10C2",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X05-Y02-12538-9062",
+   "source_id": "COLOUTLINE:FP:10C5",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X07-Y?-15888-16162",
+   "source_id": "COLOUTLINE:FP:10C8",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X08-Y09-17038-17362",
+   "source_id": "COLOUTLINE:FP:10CC",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X15-Y06-31508-15062",
+   "source_id": "COLOUTLINE:FP:10D0",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X14-Y02-27658-8962",
+   "source_id": "COLOUTLINE:FP:10D3",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X13-Y10-27458-20662",
+   "source_id": "COLOUTLINE:FP:10D7",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X13-Y08-27308-16612",
+   "source_id": "COLOUTLINE:FP:10DA",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X?-Y01-17913-7462",
+   "source_id": "COLOUTLINE:FP:10DD",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X12-Y02-24308-8912",
+   "source_id": "COLOUTLINE:FP:10E0",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X12-Y01-24458-7462",
+   "source_id": "COLOUTLINE:FP:10E4",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X15-Y01-31408-7462",
+   "source_id": "COLOUTLINE:FP:10E8",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X?-Y?-28583-12787",
+   "source_id": "COLOUTLINE:FP:10EE",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X?-Y?-24058-12787",
+   "source_id": "COLOUTLINE:FP:10F6",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X16-Y03-33108-11312",
+   "source_id": "COLOUTLINE:FP:10FE",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X15-Y?-31208-15726",
+   "source_id": "COLOUTLINE:FP:17C5",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X?-Y10-31108-20498",
+   "source_id": "COLOUTLINE:FP:17C8",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X?-Y?-29108-18112",
+   "source_id": "COLOUTLINE:FP:180A",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X?-Y?-29108-18112",
+   "source_id": "COLOUTLINE:GBP:17BA",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X15-Y?-31208-15726",
+   "source_id": "COLOUTLINE:GBP:17BD",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X?-Y10-31108-20498",
+   "source_id": "COLOUTLINE:GBP:17C0",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X08-Y10-17038-20562",
+   "source_id": "COLOUTLINE:GBP:1DC",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X09-Y10-19738-20562",
+   "source_id": "COLOUTLINE:GBP:1E0",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X11-Y10-23558-20662",
+   "source_id": "COLOUTLINE:GBP:1E4",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X15-Y10-31508-20687",
+   "source_id": "COLOUTLINE:GBP:1E8",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X10-Y07-21713-15912",
+   "source_id": "COLOUTLINE:GBP:1EC",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X10-Y09-21688-17362",
+   "source_id": "COLOUTLINE:GBP:1EF",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X09-Y07-19688-15662",
+   "source_id": "COLOUTLINE:GBP:1F2",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X09-Y09-19688-17362",
+   "source_id": "COLOUTLINE:GBP:1F5",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X16-Y06-33108-14962",
+   "source_id": "COLOUTLINE:GBP:1FC",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X16-Y01-33108-7562",
+   "source_id": "COLOUTLINE:GBP:200",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X01-Y05-2038-13762",
+   "source_id": "COLOUTLINE:GBP:204",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X01-Y01-2138-7462",
+   "source_id": "COLOUTLINE:GBP:207",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X04-Y01-7988-7462",
+   "source_id": "COLOUTLINE:GBP:20B",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X03-Y04-6338-12062",
+   "source_id": "COLOUTLINE:GBP:211",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X02-Y05-4738-13862",
+   "source_id": "COLOUTLINE:GBP:214",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X06-Y01-14088-7462",
+   "source_id": "COLOUTLINE:GBP:218",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X06-Y04-14438-12062",
+   "source_id": "COLOUTLINE:GBP:220",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X05-Y04-12538-11912",
+   "source_id": "COLOUTLINE:GBP:223",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X08-Y04-17038-12362",
+   "source_id": "COLOUTLINE:GBP:228",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X05-Y02-12538-9062",
+   "source_id": "COLOUTLINE:GBP:22C",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X07-Y?-15888-16162",
+   "source_id": "COLOUTLINE:GBP:230",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X08-Y09-17038-17362",
+   "source_id": "COLOUTLINE:GBP:234",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X15-Y06-31508-15062",
+   "source_id": "COLOUTLINE:GBP:238",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X14-Y02-27658-8962",
+   "source_id": "COLOUTLINE:GBP:23C",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X13-Y10-27458-20662",
+   "source_id": "COLOUTLINE:GBP:241",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X13-Y08-27308-16612",
+   "source_id": "COLOUTLINE:GBP:245",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X?-Y01-17913-7462",
+   "source_id": "COLOUTLINE:GBP:249",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X12-Y02-24308-8912",
+   "source_id": "COLOUTLINE:GBP:24D",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X12-Y01-24458-7462",
+   "source_id": "COLOUTLINE:GBP:251",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X15-Y01-31408-7462",
+   "source_id": "COLOUTLINE:GBP:255",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X?-Y?-28583-12787",
+   "source_id": "COLOUTLINE:GBP:7ED",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X?-Y?-24058-12787",
+   "source_id": "COLOUTLINE:GBP:7F5",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X16-Y03-33108-11312",
+   "source_id": "COLOUTLINE:GBP:809",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X15-Y06-31508-15062",
+   "source_id": "COLOUTLINE:GFRS:31B",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X13-Y08-27308-16612",
+   "source_id": "COLOUTLINE:GFRS:322",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X08-Y02-16850-8912",
+   "source_id": "COLOUTLINE:GFRS:329",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X08-Y10-17038-20562",
+   "source_id": "COLOUTLINE:GFRS:32C",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X09-Y10-19738-20562",
+   "source_id": "COLOUTLINE:GFRS:32F",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X11-Y10-23558-20662",
+   "source_id": "COLOUTLINE:GFRS:332",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X15-Y10-31508-20687",
+   "source_id": "COLOUTLINE:GFRS:335",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X10-Y07-21713-15912",
+   "source_id": "COLOUTLINE:GFRS:338",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X10-Y09-21688-17362",
+   "source_id": "COLOUTLINE:GFRS:33B",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X09-Y07-19688-15662",
+   "source_id": "COLOUTLINE:GFRS:33E",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X09-Y09-19688-17362",
+   "source_id": "COLOUTLINE:GFRS:341",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X16-Y06-33108-14962",
+   "source_id": "COLOUTLINE:GFRS:344",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X16-Y01-33108-7562",
+   "source_id": "COLOUTLINE:GFRS:347",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X01-Y05-2038-13762",
+   "source_id": "COLOUTLINE:GFRS:34A",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X01-Y01-2138-7462",
+   "source_id": "COLOUTLINE:GFRS:34D",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X04-Y01-7988-7462",
+   "source_id": "COLOUTLINE:GFRS:350",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X03-Y04-6338-12062",
+   "source_id": "COLOUTLINE:GFRS:353",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X02-Y05-4738-13862",
+   "source_id": "COLOUTLINE:GFRS:356",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X06-Y01-14088-7462",
+   "source_id": "COLOUTLINE:GFRS:359",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X06-Y04-14438-12062",
+   "source_id": "COLOUTLINE:GFRS:35C",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X05-Y04-12538-11912",
+   "source_id": "COLOUTLINE:GFRS:35F",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X08-Y04-17038-12362",
+   "source_id": "COLOUTLINE:GFRS:362",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X05-Y02-12538-9062",
+   "source_id": "COLOUTLINE:GFRS:365",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X07-Y?-15888-16162",
+   "source_id": "COLOUTLINE:GFRS:368",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X08-Y09-17038-17362",
+   "source_id": "COLOUTLINE:GFRS:36B",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X15-Y06-31508-15062",
+   "source_id": "COLOUTLINE:GFRS:36E",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X15-Y01-31408-7462",
+   "source_id": "COLOUTLINE:GFRS:371",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X14-Y02-27658-8962",
+   "source_id": "COLOUTLINE:GFRS:374",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X13-Y10-27458-20662",
+   "source_id": "COLOUTLINE:GFRS:377",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X13-Y08-27308-16612",
+   "source_id": "COLOUTLINE:GFRS:37A",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X?-Y01-17913-7462",
+   "source_id": "COLOUTLINE:GFRS:37D",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X12-Y02-24308-8912",
+   "source_id": "COLOUTLINE:GFRS:380",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X12-Y01-24458-7462",
+   "source_id": "COLOUTLINE:GFRS:383",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X15-Y02-31508-8912",
+   "source_id": "COLOUTLINE:GFRS:386",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X08-Y10-17038-20562",
+   "source_id": "COLOUTLINE:SFRS:40F",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X09-Y10-19738-20562",
+   "source_id": "COLOUTLINE:SFRS:412",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X11-Y10-23558-20662",
+   "source_id": "COLOUTLINE:SFRS:415",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X10-Y07-21713-15912",
+   "source_id": "COLOUTLINE:SFRS:418",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X10-Y09-21688-17362",
+   "source_id": "COLOUTLINE:SFRS:41B",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X09-Y07-19688-15662",
+   "source_id": "COLOUTLINE:SFRS:41E",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X09-Y09-19688-17362",
+   "source_id": "COLOUTLINE:SFRS:421",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X08-Y09-17038-17362",
+   "source_id": "COLOUTLINE:SFRS:424",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X?-Y?-24888-15994",
+   "source_id": "COLOUTLINE:SFRS:778",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X02-Y05-4738-13862",
+   "source_id": "COLTAG:CAP:1004",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X03-Y04-6338-12062",
+   "source_id": "COLTAG:CAP:1006",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X01-Y01-2138-7462",
+   "source_id": "COLTAG:CAP:1008",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X04-Y01-7988-7462",
+   "source_id": "COLTAG:CAP:100A",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X06-Y01-14088-7462",
+   "source_id": "COLTAG:CAP:100C",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X05-Y02-12538-9062",
+   "source_id": "COLTAG:CAP:100E",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X05-Y04-12538-11912",
+   "source_id": "COLTAG:CAP:1010",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X06-Y04-14438-12062",
+   "source_id": "COLTAG:CAP:1012",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X08-Y04-17038-12362",
+   "source_id": "COLTAG:CAP:1014",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X?-Y01-17913-7462",
+   "source_id": "COLTAG:CAP:1016",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X12-Y01-24458-7462",
+   "source_id": "COLTAG:CAP:1018",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X12-Y02-24308-8912",
+   "source_id": "COLTAG:CAP:101A",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X14-Y02-27658-8962",
+   "source_id": "COLTAG:CAP:101C",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X15-Y01-31408-7462",
+   "source_id": "COLTAG:CAP:1059",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X16-Y01-33108-7562",
+   "source_id": "COLTAG:CAP:105B",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X07-Y?-15888-16162",
+   "source_id": "COLTAG:CAP:105D",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X08-Y09-17038-17362",
+   "source_id": "COLTAG:CAP:105F",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X08-Y10-17038-20562",
+   "source_id": "COLTAG:CAP:1061",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X09-Y10-19738-20562",
+   "source_id": "COLTAG:CAP:1063",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X13-Y10-27458-20662",
+   "source_id": "COLTAG:CAP:1065",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X15-Y10-31508-20687",
+   "source_id": "COLTAG:CAP:1067",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X11-Y10-23558-20662",
+   "source_id": "COLTAG:CAP:1069",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X13-Y08-27308-16612",
+   "source_id": "COLTAG:CAP:106B",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X15-Y06-31508-15062",
+   "source_id": "COLTAG:CAP:106D",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X16-Y06-33108-14962",
+   "source_id": "COLTAG:CAP:106F",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X16-Y03-33108-11312",
+   "source_id": "COLTAG:CAP:1071",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X?-Y?-28583-12787",
+   "source_id": "COLTAG:CAP:1073",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X10-Y07-21713-15912",
+   "source_id": "COLTAG:CAP:1075",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X10-Y09-21688-17362",
+   "source_id": "COLTAG:CAP:1077",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X09-Y09-19688-17362",
+   "source_id": "COLTAG:CAP:1079",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X09-Y07-19688-15662",
+   "source_id": "COLTAG:CAP:107B",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X?-Y?-24058-12787",
+   "source_id": "COLTAG:CAP:17B6",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X?-Y10-31108-20498",
+   "source_id": "COLTAG:CAP:17D0",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X15-Y?-31208-15726",
+   "source_id": "COLTAG:CAP:17D2",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X01-Y05-2038-13762",
+   "source_id": "COLTAG:CAP:84D",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X10-Y07-21713-15912",
+   "source_id": "COLTAG:FP:109A",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X09-Y07-19688-15662",
+   "source_id": "COLTAG:FP:109B",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X10-Y09-21688-17362",
+   "source_id": "COLTAG:FP:109C",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X09-Y09-19688-17362",
+   "source_id": "COLTAG:FP:109D",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X16-Y06-33108-14962",
+   "source_id": "COLTAG:FP:10A1",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X05-Y04-12538-11912",
+   "source_id": "COLTAG:FP:10BE",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X06-Y04-14438-12062",
+   "source_id": "COLTAG:FP:10BF",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X07-Y?-15888-16162",
+   "source_id": "COLTAG:FP:10C9",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X08-Y09-17038-17362",
+   "source_id": "COLTAG:FP:10CD",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X15-Y01-31408-7462",
+   "source_id": "COLTAG:FP:10D4",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X12-Y02-24308-8912",
+   "source_id": "COLTAG:FP:10E1",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X12-Y01-24458-7462",
+   "source_id": "COLTAG:FP:10E5",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X?-Y?-28583-12787",
+   "source_id": "COLTAG:FP:10ED",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X?-Y?-24058-12787",
+   "source_id": "COLTAG:FP:10F5",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X16-Y03-33108-11312",
+   "source_id": "COLTAG:FP:10FD",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X16-Y01-33108-7562",
+   "source_id": "COLTAG:FP:166E",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X14-Y02-27658-8962",
+   "source_id": "COLTAG:FP:166F",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X15-Y06-31508-15062",
+   "source_id": "COLTAG:FP:1670",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X15-Y10-31508-20687",
+   "source_id": "COLTAG:FP:1671",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X13-Y10-27458-20662",
+   "source_id": "COLTAG:FP:1672",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X11-Y10-23558-20662",
+   "source_id": "COLTAG:FP:1673",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X09-Y10-19738-20562",
+   "source_id": "COLTAG:FP:1674",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X08-Y10-17038-20562",
+   "source_id": "COLTAG:FP:1675",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X13-Y08-27308-16612",
+   "source_id": "COLTAG:FP:1677",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X02-Y05-4738-13862",
+   "source_id": "COLTAG:FP:1678:CF>v",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X01-Y05-2038-13762",
+   "source_id": "COLTAG:FP:167F:CF>v",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X01-Y01-2138-7462",
+   "source_id": "COLTAG:FP:1680:CF>v",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X04-Y01-7988-7462",
+   "source_id": "COLTAG:FP:1681",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X06-Y01-14088-7462",
+   "source_id": "COLTAG:FP:1682:CF>v",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X?-Y01-17913-7462",
+   "source_id": "COLTAG:FP:1684:F11>v",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X08-Y04-17038-12362",
+   "source_id": "COLTAG:FP:168D",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X05-Y02-12538-9062",
+   "source_id": "COLTAG:FP:168E",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X03-Y04-6338-12062",
+   "source_id": "COLTAG:FP:168F",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X15-Y?-31208-15726",
+   "source_id": "COLTAG:FP:17C9",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X?-Y10-31108-20498",
+   "source_id": "COLTAG:FP:17CA",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X?-Y?-29108-18112",
+   "source_id": "COLTAG:FP:1810",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X?-Y?-29108-18112",
+   "source_id": "COLTAG:GBP:17B9",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X15-Y?-31208-15726",
+   "source_id": "COLTAG:GBP:17C2",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X?-Y10-31108-20498",
+   "source_id": "COLTAG:GBP:17C3",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X08-Y10-17038-20562",
+   "source_id": "COLTAG:GBP:1DD",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X09-Y10-19738-20562",
+   "source_id": "COLTAG:GBP:1E1",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X11-Y10-23558-20662",
+   "source_id": "COLTAG:GBP:1E5",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X15-Y10-31508-20687",
+   "source_id": "COLTAG:GBP:1E9",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X10-Y07-21713-15912",
+   "source_id": "COLTAG:GBP:1F6",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X09-Y07-19688-15662",
+   "source_id": "COLTAG:GBP:1F7",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X10-Y09-21688-17362",
+   "source_id": "COLTAG:GBP:1F8",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X09-Y09-19688-17362",
+   "source_id": "COLTAG:GBP:1F9",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X16-Y06-33108-14962",
+   "source_id": "COLTAG:GBP:1FD",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X16-Y01-33108-7562",
+   "source_id": "COLTAG:GBP:201",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X01-Y01-2138-7462",
+   "source_id": "COLTAG:GBP:208",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X01-Y05-2038-13762",
+   "source_id": "COLTAG:GBP:20C",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X04-Y01-7988-7462",
+   "source_id": "COLTAG:GBP:20D",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X03-Y04-6338-12062",
+   "source_id": "COLTAG:GBP:20E",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X02-Y05-4738-13862",
+   "source_id": "COLTAG:GBP:215",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X06-Y01-14088-7462",
+   "source_id": "COLTAG:GBP:219:c>v",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X05-Y04-12538-11912",
+   "source_id": "COLTAG:GBP:224",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X06-Y04-14438-12062",
+   "source_id": "COLTAG:GBP:225",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X08-Y04-17038-12362",
+   "source_id": "COLTAG:GBP:229",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X05-Y02-12538-9062",
+   "source_id": "COLTAG:GBP:22D",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X07-Y?-15888-16162",
+   "source_id": "COLTAG:GBP:231",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X08-Y09-17038-17362",
+   "source_id": "COLTAG:GBP:235",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X15-Y06-31508-15062",
+   "source_id": "COLTAG:GBP:239",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X14-Y02-27658-8962",
+   "source_id": "COLTAG:GBP:23D",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X15-Y01-31408-7462",
+   "source_id": "COLTAG:GBP:23E",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X13-Y10-27458-20662",
+   "source_id": "COLTAG:GBP:242",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X13-Y08-27308-16612",
+   "source_id": "COLTAG:GBP:246",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X?-Y01-17913-7462",
+   "source_id": "COLTAG:GBP:24A",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X12-Y02-24308-8912",
+   "source_id": "COLTAG:GBP:24E",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X12-Y01-24458-7462",
+   "source_id": "COLTAG:GBP:252",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X?-Y?-28583-12787",
+   "source_id": "COLTAG:GBP:7EC",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X?-Y?-24058-12787",
+   "source_id": "COLTAG:GBP:7F4",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "row_id": "COLPOS-X16-Y03-33108-11312",
+   "source_id": "COLTAG:GBP:808",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "POOL_STRUCTURAL_REGISTER",
+   "row_id": "POOL-CORNER_DETAIL_SLOPE-1860",
+   "source_id": "DETTXT:DET:1860",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "POOL_STRUCTURAL_REGISTER",
+   "row_id": null,
+   "source_id": "DETTXT:DET:1864",
+   "terminal_state": "NOT_IN_SCOPE"
+  },
+  {
+   "register": "POOL_STRUCTURAL_REGISTER",
+   "row_id": "POOL-CORNER_DETAIL_SLOPE-1869",
+   "source_id": "DETTXT:DET:1869",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "POOL_STRUCTURAL_REGISTER",
+   "row_id": null,
+   "source_id": "DETTXT:DET:186A",
+   "terminal_state": "NOT_IN_SCOPE"
+  },
+  {
+   "register": "POOL_STRUCTURAL_REGISTER",
+   "row_id": null,
+   "source_id": "DETTXT:DET:1874",
+   "terminal_state": "NOT_IN_SCOPE"
+  },
+  {
+   "register": "POOL_STRUCTURAL_REGISTER",
+   "row_id": null,
+   "source_id": "DETTXT:DET:1876",
+   "terminal_state": "NOT_IN_SCOPE"
+  },
+  {
+   "register": "POOL_STRUCTURAL_REGISTER",
+   "row_id": null,
+   "source_id": "DETTXT:DET:1877",
+   "terminal_state": "NOT_IN_SCOPE"
+  },
+  {
+   "register": "POOL_STRUCTURAL_REGISTER",
+   "row_id": "POOL-CORNER_DETAIL_DEEP-187C",
+   "source_id": "DETTXT:DET:187C",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "POOL_STRUCTURAL_REGISTER",
+   "row_id": "POOL-DEEP_END_BASE-1881",
+   "source_id": "DETTXT:DET:1881",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "POOL_STRUCTURAL_REGISTER",
+   "row_id": "POOL-DEEP_WALL-188D",
+   "source_id": "DETTXT:DET:188D",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "POOL_STRUCTURAL_REGISTER",
+   "row_id": "POOL-DEEP_WALL-1893",
+   "source_id": "DETTXT:DET:1893",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "POOL_STRUCTURAL_REGISTER",
+   "row_id": "POOL-DEEP_WALL-1896",
+   "source_id": "DETTXT:DET:1896",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "POOL_STRUCTURAL_REGISTER",
+   "row_id": "POOL-CORNER_DETAIL_DEEP-18A8",
+   "source_id": "DETTXT:DET:18A8",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "POOL_STRUCTURAL_REGISTER",
+   "row_id": "POOL-DEEP_END_BASE-18AA",
+   "source_id": "DETTXT:DET:18AA",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "POOL_STRUCTURAL_REGISTER",
+   "row_id": "POOL-SLOPED_BASE-18AD",
+   "source_id": "DETTXT:DET:18AD",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "POOL_STRUCTURAL_REGISTER",
+   "row_id": "POOL-DEEP_END_BASE-18B0",
+   "source_id": "DETTXT:DET:18B0",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "POOL_STRUCTURAL_REGISTER",
+   "row_id": "POOL-SLOPED_BASE-18D3",
+   "source_id": "DETTXT:DET:18D3",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "POOL_STRUCTURAL_REGISTER",
+   "row_id": "POOL-CORNER_DETAIL_SLOPE_SHALLOW-18D7",
+   "source_id": "DETTXT:DET:18D7",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "POOL_STRUCTURAL_REGISTER",
+   "row_id": "POOL-CORNER_DETAIL_SLOPE_SHALLOW-18DB",
+   "source_id": "DETTXT:DET:18DB",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "POOL_STRUCTURAL_REGISTER",
+   "row_id": "POOL-CORNER_DETAIL_SHALLOW-18DD",
+   "source_id": "DETTXT:DET:18DD",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "POOL_STRUCTURAL_REGISTER",
+   "row_id": "POOL-SHALLOW_BASE-18F0",
+   "source_id": "DETTXT:DET:18F0",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "POOL_STRUCTURAL_REGISTER",
+   "row_id": "POOL-SHALLOW_BASE-18F8",
+   "source_id": "DETTXT:DET:18F8",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "POOL_STRUCTURAL_REGISTER",
+   "row_id": "POOL-DEEP_WALL-18FC",
+   "source_id": "DETTXT:DET:18FC",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "POOL_STRUCTURAL_REGISTER",
+   "row_id": "POOL-DEEP_WALL-1906",
+   "source_id": "DETTXT:DET:1906",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "POOL_STRUCTURAL_REGISTER",
+   "row_id": "POOL-SHALLOW_BASE-1907",
+   "source_id": "DETTXT:DET:1907",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "POOL_STRUCTURAL_REGISTER",
+   "row_id": "POOL-SHALLOW_WALL-191F",
+   "source_id": "DETTXT:DET:191F",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "POOL_STRUCTURAL_REGISTER",
+   "row_id": "POOL-CORNER_DETAIL_SHALLOW-1929",
+   "source_id": "DETTXT:DET:1929",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "POOL_STRUCTURAL_REGISTER",
+   "row_id": "POOL-SHALLOW_END_BASE-192B",
+   "source_id": "DETTXT:DET:192B",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "POOL_STRUCTURAL_REGISTER",
+   "row_id": "POOL-SHALLOW_WALL-192E",
+   "source_id": "DETTXT:DET:192E",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "POOL_STRUCTURAL_REGISTER",
+   "row_id": "POOL-SHALLOW_WALL-192F",
+   "source_id": "DETTXT:DET:192F",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "POOL_STRUCTURAL_REGISTER",
+   "row_id": "POOL-DEEP_END_BASE-19B0",
+   "source_id": "DETTXT:DET:19B0",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "SPECIAL_STRUCTURAL_OCCURRENCE_REGISTER",
+   "row_id": "DOME-SHELL-1A0E",
+   "source_id": "DETTXT:DET:1A0E",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "SPECIAL_STRUCTURAL_OCCURRENCE_REGISTER",
+   "row_id": "DOME-SHELL-1A15",
+   "source_id": "DETTXT:DET:1A15",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "POOL_STRUCTURAL_REGISTER",
+   "row_id": null,
+   "source_id": "DETTXT:DET:1A18",
+   "terminal_state": "NOT_IN_SCOPE"
+  },
+  {
+   "register": "POOL_STRUCTURAL_REGISTER",
+   "row_id": null,
+   "source_id": "DETTXT:DET:1A19",
+   "terminal_state": "NOT_IN_SCOPE"
+  },
+  {
+   "register": "SPECIAL_STRUCTURAL_OCCURRENCE_REGISTER",
+   "row_id": "DOME-RING_BEAM-1A29",
+   "source_id": "DETTXT:DET:1A29",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "SPECIAL_STRUCTURAL_OCCURRENCE_REGISTER",
+   "row_id": "DOME-RING_BEAM-1A37",
+   "source_id": "DETTXT:DET:1A37",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "SPECIAL_STRUCTURAL_OCCURRENCE_REGISTER",
+   "row_id": "DOME-RING_BEAM-1A47",
+   "source_id": "DETTXT:DET:1A47",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "SPECIAL_STRUCTURAL_OCCURRENCE_REGISTER",
+   "row_id": "DOME-RING_BEAM-1A4B",
+   "source_id": "DETTXT:DET:1A4B",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "SPECIAL_STRUCTURAL_OCCURRENCE_REGISTER",
+   "row_id": "DOME-RING_BEAM-1A58",
+   "source_id": "DETTXT:DET:1A58",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "SPECIAL_STRUCTURAL_OCCURRENCE_REGISTER",
+   "row_id": "DOME-RING_BEAM-1A66",
+   "source_id": "DETTXT:DET:1A66",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "SPECIAL_STRUCTURAL_OCCURRENCE_REGISTER",
+   "row_id": "DOME-RING_BEAM-1A68",
+   "source_id": "DETTXT:DET:1A68",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "SPECIAL_STRUCTURAL_OCCURRENCE_REGISTER",
+   "row_id": "DOME-RING_BEAM-1A6C",
+   "source_id": "DETTXT:DET:1A6C",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "FOOTING_OCCURRENCE_REGISTER",
+   "row_id": "FTG-FN-28083-12287",
+   "source_id": "FTGOUTLINE:FP:10F0+10F1+10F2+10F3",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_OCCURRENCE_REGISTER",
+   "row_id": "FTG-FN-23558-12287",
+   "source_id": "FTGOUTLINE:FP:10F8+10F9+10FA+10FB",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_OCCURRENCE_REGISTER",
+   "row_id": "FTG-FN-32258-10812",
+   "source_id": "FTGOUTLINE:FP:1100+1101+1102+1103",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_OCCURRENCE_REGISTER",
+   "row_id": "FTG-F2-16188-19612",
+   "source_id": "FTGOUTLINE:FP:165C:F>v",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_OCCURRENCE_REGISTER",
+   "row_id": "FTG-F2-18888-19612",
+   "source_id": "FTGOUTLINE:FP:1663:F>v",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_OCCURRENCE_REGISTER",
+   "row_id": "FTG-F5-22358-19612",
+   "source_id": "FTGOUTLINE:FP:1664:F>v",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_OCCURRENCE_REGISTER",
+   "row_id": "FTG-F4-26358-19662",
+   "source_id": "FTGOUTLINE:FP:1665:F>v",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_OCCURRENCE_REGISTER",
+   "row_id": "FTG-F4-30408-19687",
+   "source_id": "FTGOUTLINE:FP:1666:F>v",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_OCCURRENCE_REGISTER",
+   "row_id": "FTG-F-4288-13462",
+   "source_id": "FTGOUTLINE:FP:1667:F>v",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_OCCURRENCE_REGISTER",
+   "row_id": "FTG-F-1888-13312",
+   "source_id": "FTGOUTLINE:FP:1668:F>v",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_OCCURRENCE_REGISTER",
+   "row_id": "FTG-F-1888-7312",
+   "source_id": "FTGOUTLINE:FP:1669:F>v",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_OCCURRENCE_REGISTER",
+   "row_id": "FTG-F-13638-7312",
+   "source_id": "FTGOUTLINE:FP:166A:F>v",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_OCCURRENCE_REGISTER",
+   "row_id": "FTG-F3-5538-11362",
+   "source_id": "FTGOUTLINE:FP:166B:F>v",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_OCCURRENCE_REGISTER",
+   "row_id": "FTG-F3-11838-8262",
+   "source_id": "FTGOUTLINE:FP:166C:F>v",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_OCCURRENCE_REGISTER",
+   "row_id": "FTG-F5-26458-7912",
+   "source_id": "FTGOUTLINE:FP:166D:F>v",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_OCCURRENCE_REGISTER",
+   "row_id": "FTG-FN-28608-17612",
+   "source_id": "FTGOUTLINE:FP:180C",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_OCCURRENCE_REGISTER",
+   "row_id": "FTG-F9-25608-15262",
+   "source_id": "FTGOUTLINE:FP:180F",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_OCCURRENCE_REGISTER",
+   "row_id": "FTG-F12-13688-14562",
+   "source_id": "FTGOUTLINE:FP:1ABF",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_OCCURRENCE_REGISTER",
+   "row_id": "FTG-F13-11188-10712",
+   "source_id": "FTGOUTLINE:FP:1ADB",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_OCCURRENCE_REGISTER",
+   "row_id": "FTG-F11-16163-7312",
+   "source_id": "FTGOUTLINE:FP:1B07",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_OCCURRENCE_REGISTER",
+   "row_id": "FTG-F6-15938-11062",
+   "source_id": "FTGOUTLINE:FP:1B19",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_OCCURRENCE_REGISTER",
+   "row_id": "FTG-F14-22408-7312",
+   "source_id": "FTGOUTLINE:FP:1B1A",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_OCCURRENCE_REGISTER",
+   "row_id": "FTG-CONFLICT_F_F10-30008-7312",
+   "source_id": "FTGOUTLINE:FP:1B1B",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "FOOTING_OCCURRENCE_REGISTER",
+   "row_id": "FTG-F8-29258-13262",
+   "source_id": "FTGOUTLINE:FP:1B24",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_OCCURRENCE_REGISTER",
+   "row_id": "FTG-F15-7088-7312",
+   "source_id": "FTGOUTLINE:FP:1B2A",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_OCCURRENCE_REGISTER",
+   "row_id": "FTG-FF-18688-14112",
+   "source_id": "FTGOUTLINE:FP:1B2B",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_OCCURRENCE_REGISTER",
+   "row_id": "FTG-CONFLICT_F_F10-30008-7312",
+   "source_id": "FTGTAG:FP:10A5",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "FOOTING_OCCURRENCE_REGISTER",
+   "row_id": "FTG-FN-28083-12287",
+   "source_id": "FTGTAG:FP:10ED",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_OCCURRENCE_REGISTER",
+   "row_id": "FTG-FN-23558-12287",
+   "source_id": "FTGTAG:FP:10F5",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_OCCURRENCE_REGISTER",
+   "row_id": "FTG-F5-26458-7912",
+   "source_id": "FTGTAG:FP:166F",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_OCCURRENCE_REGISTER",
+   "row_id": "FTG-F4-30408-19687",
+   "source_id": "FTGTAG:FP:1671",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_OCCURRENCE_REGISTER",
+   "row_id": "FTG-F4-26358-19662",
+   "source_id": "FTGTAG:FP:1672",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_OCCURRENCE_REGISTER",
+   "row_id": "FTG-F5-22358-19612",
+   "source_id": "FTGTAG:FP:1673",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_OCCURRENCE_REGISTER",
+   "row_id": "FTG-F2-18888-19612",
+   "source_id": "FTGTAG:FP:1674",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_OCCURRENCE_REGISTER",
+   "row_id": "FTG-F2-16188-19612",
+   "source_id": "FTGTAG:FP:1675",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_OCCURRENCE_REGISTER",
+   "row_id": "FTG-FF-18688-14112",
+   "source_id": "FTGTAG:FP:1676",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_OCCURRENCE_REGISTER",
+   "row_id": "FTG-F9-25608-15262",
+   "source_id": "FTGTAG:FP:1677",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_OCCURRENCE_REGISTER",
+   "row_id": "FTG-F-4288-13462",
+   "source_id": "FTGTAG:FP:1678:CF>v",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_OCCURRENCE_REGISTER",
+   "row_id": "FTG-F-1888-13312",
+   "source_id": "FTGTAG:FP:167F:CF>v",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_OCCURRENCE_REGISTER",
+   "row_id": "FTG-F-1888-7312",
+   "source_id": "FTGTAG:FP:1680:CF>v",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_OCCURRENCE_REGISTER",
+   "row_id": "FTG-F-13638-7312",
+   "source_id": "FTGTAG:FP:1682:CF>v",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_OCCURRENCE_REGISTER",
+   "row_id": "FTG-F14-22408-7312",
+   "source_id": "FTGTAG:FP:1683",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_OCCURRENCE_REGISTER",
+   "row_id": "FTG-F11-16163-7312",
+   "source_id": "FTGTAG:FP:1684:F11>v",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_OCCURRENCE_REGISTER",
+   "row_id": "FTG-FN-32258-10812",
+   "source_id": "FTGTAG:FP:168A",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_OCCURRENCE_REGISTER",
+   "row_id": "FTG-CONFLICT_F_F10-30008-7312",
+   "source_id": "FTGTAG:FP:168B",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "FOOTING_OCCURRENCE_REGISTER",
+   "row_id": "FTG-F6-15938-11062",
+   "source_id": "FTGTAG:FP:168D",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_OCCURRENCE_REGISTER",
+   "row_id": "FTG-F3-11838-8262",
+   "source_id": "FTGTAG:FP:168E",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_OCCURRENCE_REGISTER",
+   "row_id": "FTG-F3-5538-11362",
+   "source_id": "FTGTAG:FP:168F",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_OCCURRENCE_REGISTER",
+   "row_id": "FTG-FN-28608-17612",
+   "source_id": "FTGTAG:FP:1810",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_OCCURRENCE_REGISTER",
+   "row_id": "FTG-F12-13688-14562",
+   "source_id": "FTGTAG:FP:1ADA",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_OCCURRENCE_REGISTER",
+   "row_id": "FTG-F13-11188-10712",
+   "source_id": "FTGTAG:FP:1ADC",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_OCCURRENCE_REGISTER",
+   "row_id": "FTG-F8-29258-13262",
+   "source_id": "FTGTAG:FP:1B25",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_OCCURRENCE_REGISTER",
+   "row_id": "FTG-F15-7088-7312",
+   "source_id": "FTGTAG:FP:1B29",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BA001",
+   "source_id": "GBSPAN:GBP:GB-BA001",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BA002",
+   "source_id": "GBSPAN:GBP:GB-BA002",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL001-840",
+   "source_id": "GBSPAN:GBP:GB-BL001-840",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL002-2038",
+   "source_id": "GBSPAN:GBP:GB-BL002-2038",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL003-2088",
+   "source_id": "GBSPAN:GBP:GB-BL003-2088",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL003-7938",
+   "source_id": "GBSPAN:GBP:GB-BL003-7938",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL004-3407",
+   "source_id": "GBSPAN:GBP:GB-BL004-3407",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL005-12538",
+   "source_id": "GBSPAN:GBP:GB-BL005-12538",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL005-14438",
+   "source_id": "GBSPAN:GBP:GB-BL005-14438",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL005-17038",
+   "source_id": "GBSPAN:GBP:GB-BL005-17038",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL005-20738",
+   "source_id": "GBSPAN:GBP:GB-BL005-20738",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL005-6338",
+   "source_id": "GBSPAN:GBP:GB-BL005-6338",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL006-6138",
+   "source_id": "GBSPAN:GBP:GB-BL006-6138",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL007-11312",
+   "source_id": "GBSPAN:GBP:GB-BL007-11312",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL007-7562",
+   "source_id": "GBSPAN:GBP:GB-BL007-7562",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL008-7462",
+   "source_id": "GBSPAN:GBP:GB-BL008-7462",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL008-9062",
+   "source_id": "GBSPAN:GBP:GB-BL008-9062",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL009-7462",
+   "source_id": "GBSPAN:GBP:GB-BL009-7462",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL010-12053",
+   "source_id": "GBSPAN:GBP:GB-BL010-12053",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL010-7462",
+   "source_id": "GBSPAN:GBP:GB-BL010-7462",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL011-12362",
+   "source_id": "GBSPAN:GBP:GB-BL011-12362",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL011-17362",
+   "source_id": "GBSPAN:GBP:GB-BL011-17362",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL011-7462",
+   "source_id": "GBSPAN:GBP:GB-BL011-7462",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL012-7462",
+   "source_id": "GBSPAN:GBP:GB-BL012-7462",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL013-7462",
+   "source_id": "GBSPAN:GBP:GB-BL013-7462",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL014-7462",
+   "source_id": "GBSPAN:GBP:GB-BL014-7462",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL015-7462",
+   "source_id": "GBSPAN:GBP:GB-BL015-7462",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL016-12062",
+   "source_id": "GBSPAN:GBP:GB-BL016-12062",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL016-7462",
+   "source_id": "GBSPAN:GBP:GB-BL016-7462",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL017-7462",
+   "source_id": "GBSPAN:GBP:GB-BL017-7462",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL018-12787",
+   "source_id": "GBSPAN:GBP:GB-BL018-12787",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL018-8962",
+   "source_id": "GBSPAN:GBP:GB-BL018-8962",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL019-12787",
+   "source_id": "GBSPAN:GBP:GB-BL019-12787",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL019-8962",
+   "source_id": "GBSPAN:GBP:GB-BL019-8962",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL020-9788",
+   "source_id": "GBSPAN:GBP:GB-BL020-9788",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL021-12053",
+   "source_id": "GBSPAN:GBP:GB-BL021-12053",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL022-14138",
+   "source_id": "GBSPAN:GBP:GB-BL022-14138",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL022-17913",
+   "source_id": "GBSPAN:GBP:GB-BL022-17913",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL022-24458",
+   "source_id": "GBSPAN:GBP:GB-BL022-24458",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL022-31408",
+   "source_id": "GBSPAN:GBP:GB-BL022-31408",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL024-15888",
+   "source_id": "GBSPAN:GBP:GB-BL024-15888",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL025-16612",
+   "source_id": "GBSPAN:GBP:GB-BL025-16612",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL026-16612",
+   "source_id": "GBSPAN:GBP:GB-BL026-16612",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL027-17038",
+   "source_id": "GBSPAN:GBP:GB-BL027-17038",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL028-17038",
+   "source_id": "GBSPAN:GBP:GB-BL028-17038",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL028-19738",
+   "source_id": "GBSPAN:GBP:GB-BL028-19738",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL028-23558",
+   "source_id": "GBSPAN:GBP:GB-BL028-23558",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL028-27458",
+   "source_id": "GBSPAN:GBP:GB-BL028-27458",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL028-31108",
+   "source_id": "GBSPAN:GBP:GB-BL028-31108",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL029-17612",
+   "source_id": "GBSPAN:GBP:GB-BL029-17612",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL030-17362",
+   "source_id": "GBSPAN:GBP:GB-BL030-17362",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL031-19738",
+   "source_id": "GBSPAN:GBP:GB-BL031-19738",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL032-20738",
+   "source_id": "GBSPAN:GBP:GB-BL032-20738",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL032-24308",
+   "source_id": "GBSPAN:GBP:GB-BL032-24308",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL032-27658",
+   "source_id": "GBSPAN:GBP:GB-BL032-27658",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL033-21788",
+   "source_id": "GBSPAN:GBP:GB-BL033-21788",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL033-27308",
+   "source_id": "GBSPAN:GBP:GB-BL033-27308",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL034-23838",
+   "source_id": "GBSPAN:GBP:GB-BL034-23838",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL035-24058",
+   "source_id": "GBSPAN:GBP:GB-BL035-24058",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL036-27612",
+   "source_id": "GBSPAN:GBP:GB-BL036-27612",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL037-28583",
+   "source_id": "GBSPAN:GBP:GB-BL037-28583",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GROUND_BEAMS-GB-BL037-31508",
+   "source_id": "GBSPAN:GBP:GB-BL037-31508",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-1F_ROOF-UNTAGGED-BA003",
+   "source_id": "MEMBER:FFRS:BA003",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-1F_ROOF-UNTAGGED-BA004",
+   "source_id": "MEMBER:FFRS:BA004",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-1F_ROOF-UNTAGGED-BA005",
+   "source_id": "MEMBER:FFRS:BA005",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-1F_ROOF-UNTAGGED-BA006",
+   "source_id": "MEMBER:FFRS:BA006",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-1F_ROOF-UNTAGGED-BA007",
+   "source_id": "MEMBER:FFRS:BA007",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-1F_ROOF-UNTAGGED-BA008",
+   "source_id": "MEMBER:FFRS:BA008",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-1F_ROOF-UNTAGGED-BL002-8912",
+   "source_id": "MEMBER:FFRS:BL002-8912",
+   "terminal_state": "COUNTED_BLOCKED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-1F_ROOF-UNTAGGED-BL005-11912",
+   "source_id": "MEMBER:FFRS:BL005-11912",
+   "terminal_state": "COUNTED_BLOCKED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-1F_ROOF-UNTAGGED-BL005-9062",
+   "source_id": "MEMBER:FFRS:BL005-9062",
+   "terminal_state": "COUNTED_BLOCKED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-1F_ROOF-UNTAGGED-BL010-12388",
+   "source_id": "MEMBER:FFRS:BL010-12388",
+   "terminal_state": "COUNTED_BLOCKED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-1F_ROOF-UNTAGGED-BL010-15888",
+   "source_id": "MEMBER:FFRS:BL010-15888",
+   "terminal_state": "COUNTED_BLOCKED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-1F_ROOF-UNTAGGED-BL012-12638",
+   "source_id": "MEMBER:FFRS:BL012-12638",
+   "terminal_state": "COUNTED_BLOCKED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-1F_ROOF-UNTAGGED-BL013-12638",
+   "source_id": "MEMBER:FFRS:BL013-12638",
+   "terminal_state": "COUNTED_BLOCKED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-1F_ROOF-UNTAGGED-BL018-16004",
+   "source_id": "MEMBER:FFRS:BL018-16004",
+   "terminal_state": "COUNTED_BLOCKED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-1F_ROOF-UNTAGGED-BL020-16087",
+   "source_id": "MEMBER:FFRS:BL020-16087",
+   "terminal_state": "COUNTED_BLOCKED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-1F_ROOF-UNTAGGED-BL021-16482",
+   "source_id": "MEMBER:FFRS:BL021-16482",
+   "terminal_state": "COUNTED_BLOCKED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-1F_ROOF-UNTAGGED-BL030-26861",
+   "source_id": "MEMBER:FFRS:BL030-26861",
+   "terminal_state": "COUNTED_BLOCKED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-1F_ROOF-UNTAGGED-BL031-26861",
+   "source_id": "MEMBER:FFRS:BL031-26861",
+   "terminal_state": "COUNTED_BLOCKED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-1F_ROOF-UNTAGGED-BL033-30758",
+   "source_id": "MEMBER:FFRS:BL033-30758",
+   "terminal_state": "COUNTED_BLOCKED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-UNTAGGED-BL021-12388",
+   "source_id": "MEMBER:GFRS:BL021-12388",
+   "terminal_state": "COUNTED_BLOCKED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-UNTAGGED-BL021-15888",
+   "source_id": "MEMBER:GFRS:BL021-15888",
+   "terminal_state": "COUNTED_BLOCKED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-UNTAGGED-BL029-16412",
+   "source_id": "MEMBER:GFRS:BL029-16412",
+   "terminal_state": "COUNTED_BLOCKED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-UNTAGGED-BL031-16567",
+   "source_id": "MEMBER:GFRS:BL031-16567",
+   "terminal_state": "COUNTED_BLOCKED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-GF_ROOF-UNTAGGED-BL046-31108",
+   "source_id": "MEMBER:GFRS:BL046-31108",
+   "terminal_state": "COUNTED_BLOCKED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-2F_ROOF-UNTAGGED-BL005-14112",
+   "source_id": "MEMBER:SFRS:BL005-14112",
+   "terminal_state": "COUNTED_BLOCKED"
+  },
+  {
+   "register": "SPECIAL_STRUCTURAL_OCCURRENCE_REGISTER",
+   "row_id": "SPC-SECTION-FFRS-1730",
+   "source_id": "NOTE:FFRS:1730",
+   "terminal_state": "NOT_IN_SCOPE"
+  },
+  {
+   "register": "SPECIAL_STRUCTURAL_OCCURRENCE_REGISTER",
+   "row_id": "SPC-PARAPET-FFRS",
+   "source_id": "NOTE:FFRS:DD",
+   "terminal_state": "COUNTED_BLOCKED"
+  },
+  {
+   "register": "SPECIAL_STRUCTURAL_OCCURRENCE_REGISTER",
+   "row_id": "SPC-SECTION-GFRS-1727",
+   "source_id": "NOTE:GFRS:1727",
+   "terminal_state": "NOT_IN_SCOPE"
+  },
+  {
+   "register": "SPECIAL_STRUCTURAL_OCCURRENCE_REGISTER",
+   "row_id": "SPC-SECTION-GFRS-176C",
+   "source_id": "NOTE:GFRS:176C",
+   "terminal_state": "NOT_IN_SCOPE"
+  },
+  {
+   "register": "SPECIAL_STRUCTURAL_OCCURRENCE_REGISTER",
+   "row_id": "SPC-SECTION-GFRS-17A2",
+   "source_id": "NOTE:GFRS:17A2",
+   "terminal_state": "NOT_IN_SCOPE"
+  },
+  {
+   "register": "SPECIAL_STRUCTURAL_OCCURRENCE_REGISTER",
+   "row_id": "SPC-PARAPET-GFRS",
+   "source_id": "NOTE:GFRS:D3",
+   "terminal_state": "COUNTED_BLOCKED"
+  },
+  {
+   "register": "SPECIAL_STRUCTURAL_OCCURRENCE_REGISTER",
+   "row_id": "SPC-WATER_TANK-SFRS",
+   "source_id": "NOTE:SFRS:1A85",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SPECIAL_STRUCTURAL_OCCURRENCE_REGISTER",
+   "row_id": "SPC-PARAPET-SFRS",
+   "source_id": "NOTE:SFRS:E6",
+   "terminal_state": "COUNTED_BLOCKED"
+  },
+  {
+   "register": "BEAM_DEFINITION_REGISTER",
+   "row_id": "BDEF-B.W-1FA5",
+   "source_id": "SCHEDROW:BDEF-B.W-1FA5",
+   "terminal_state": "COUNTED_BLOCKED"
+  },
+  {
+   "register": "BEAM_DEFINITION_REGISTER",
+   "row_id": "BDEF-B1-1E5C",
+   "source_id": "SCHEDROW:BDEF-B1-1E5C",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_DEFINITION_REGISTER",
+   "row_id": "BDEF-B10-1ED0",
+   "source_id": "SCHEDROW:BDEF-B10-1ED0",
+   "terminal_state": "COUNTED_BLOCKED"
+  },
+  {
+   "register": "BEAM_DEFINITION_REGISTER",
+   "row_id": "BDEF-B11-1EDB",
+   "source_id": "SCHEDROW:BDEF-B11-1EDB",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_DEFINITION_REGISTER",
+   "row_id": "BDEF-B12-1EE6",
+   "source_id": "SCHEDROW:BDEF-B12-1EE6",
+   "terminal_state": "COUNTED_BLOCKED"
+  },
+  {
+   "register": "BEAM_DEFINITION_REGISTER",
+   "row_id": "BDEF-B13-1EF1",
+   "source_id": "SCHEDROW:BDEF-B13-1EF1",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_DEFINITION_REGISTER",
+   "row_id": "BDEF-B14-1EFC",
+   "source_id": "SCHEDROW:BDEF-B14-1EFC",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_DEFINITION_REGISTER",
+   "row_id": "BDEF-B15-1F07",
+   "source_id": "SCHEDROW:BDEF-B15-1F07",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_DEFINITION_REGISTER",
+   "row_id": "BDEF-B16-1F12",
+   "source_id": "SCHEDROW:BDEF-B16-1F12",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_DEFINITION_REGISTER",
+   "row_id": "BDEF-B17-1F1D",
+   "source_id": "SCHEDROW:BDEF-B17-1F1D",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_DEFINITION_REGISTER",
+   "row_id": "BDEF-B18-1F28",
+   "source_id": "SCHEDROW:BDEF-B18-1F28",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_DEFINITION_REGISTER",
+   "row_id": "BDEF-B19-1F33",
+   "source_id": "SCHEDROW:BDEF-B19-1F33",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_DEFINITION_REGISTER",
+   "row_id": "BDEF-B2-1E78",
+   "source_id": "SCHEDROW:BDEF-B2-1E78",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_DEFINITION_REGISTER",
+   "row_id": "BDEF-B20-1F3E",
+   "source_id": "SCHEDROW:BDEF-B20-1F3E",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_DEFINITION_REGISTER",
+   "row_id": "BDEF-B21-1F49",
+   "source_id": "SCHEDROW:BDEF-B21-1F49",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_DEFINITION_REGISTER",
+   "row_id": "BDEF-B22-1F54",
+   "source_id": "SCHEDROW:BDEF-B22-1F54",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_DEFINITION_REGISTER",
+   "row_id": "BDEF-B23-1F5F",
+   "source_id": "SCHEDROW:BDEF-B23-1F5F",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_DEFINITION_REGISTER",
+   "row_id": "BDEF-B24-1F6A",
+   "source_id": "SCHEDROW:BDEF-B24-1F6A",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_DEFINITION_REGISTER",
+   "row_id": "BDEF-B25-1F75",
+   "source_id": "SCHEDROW:BDEF-B25-1F75",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_DEFINITION_REGISTER",
+   "row_id": "BDEF-B26-1F80",
+   "source_id": "SCHEDROW:BDEF-B26-1F80",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_DEFINITION_REGISTER",
+   "row_id": "BDEF-B27-1F8B",
+   "source_id": "SCHEDROW:BDEF-B27-1F8B",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_DEFINITION_REGISTER",
+   "row_id": "BDEF-B28-1F96",
+   "source_id": "SCHEDROW:BDEF-B28-1F96",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_DEFINITION_REGISTER",
+   "row_id": "BDEF-B29-2A47",
+   "source_id": "SCHEDROW:BDEF-B29-2A47",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_DEFINITION_REGISTER",
+   "row_id": "BDEF-B3-1E83",
+   "source_id": "SCHEDROW:BDEF-B3-1E83",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_DEFINITION_REGISTER",
+   "row_id": "BDEF-B4-1E8E",
+   "source_id": "SCHEDROW:BDEF-B4-1E8E",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_DEFINITION_REGISTER",
+   "row_id": "BDEF-B5-1E99",
+   "source_id": "SCHEDROW:BDEF-B5-1E99",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_DEFINITION_REGISTER",
+   "row_id": "BDEF-B6-1EA4",
+   "source_id": "SCHEDROW:BDEF-B6-1EA4",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_DEFINITION_REGISTER",
+   "row_id": "BDEF-B7-1EAF",
+   "source_id": "SCHEDROW:BDEF-B7-1EAF",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_DEFINITION_REGISTER",
+   "row_id": "BDEF-B8-1EBA",
+   "source_id": "SCHEDROW:BDEF-B8-1EBA",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_DEFINITION_REGISTER",
+   "row_id": "BDEF-B9-1EC5",
+   "source_id": "SCHEDROW:BDEF-B9-1EC5",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_DEFINITION_REGISTER",
+   "row_id": "BDEF-CA-2A53",
+   "source_id": "SCHEDROW:BDEF-CA-2A53",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_DEFINITION_REGISTER",
+   "row_id": "BDEF-CB1-2851",
+   "source_id": "SCHEDROW:BDEF-CB1-2851",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_DEFINITION_REGISTER",
+   "row_id": "BDEF-CB10-23F0",
+   "source_id": "SCHEDROW:BDEF-CB10-23F0",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_DEFINITION_REGISTER",
+   "row_id": "BDEF-CB11-26C1",
+   "source_id": "SCHEDROW:BDEF-CB11-26C1",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_DEFINITION_REGISTER",
+   "row_id": "BDEF-CB12-2469",
+   "source_id": "SCHEDROW:BDEF-CB12-2469",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_DEFINITION_REGISTER",
+   "row_id": "BDEF-CB13-24DF",
+   "source_id": "SCHEDROW:BDEF-CB13-24DF",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_DEFINITION_REGISTER",
+   "row_id": "BDEF-CB2-28C7",
+   "source_id": "SCHEDROW:BDEF-CB2-28C7",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_DEFINITION_REGISTER",
+   "row_id": "BDEF-CB3-2344",
+   "source_id": "SCHEDROW:BDEF-CB3-2344",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_DEFINITION_REGISTER",
+   "row_id": "BDEF-CB4-2933",
+   "source_id": "SCHEDROW:BDEF-CB4-2933",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_DEFINITION_REGISTER",
+   "row_id": "BDEF-CB5-299F",
+   "source_id": "SCHEDROW:BDEF-CB5-299F",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_DEFINITION_REGISTER",
+   "row_id": "BDEF-CB6-2A04",
+   "source_id": "SCHEDROW:BDEF-CB6-2A04",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_DEFINITION_REGISTER",
+   "row_id": "BDEF-CB7-22EC",
+   "source_id": "SCHEDROW:BDEF-CB7-22EC",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_DEFINITION_REGISTER",
+   "row_id": "BDEF-CB8-2574",
+   "source_id": "SCHEDROW:BDEF-CB8-2574",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_DEFINITION_REGISTER",
+   "row_id": "BDEF-CB9-2619",
+   "source_id": "SCHEDROW:BDEF-CB9-2619",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_DEFINITION_REGISTER",
+   "row_id": "BDEF-GB_EXTERIOR",
+   "source_id": "SCHEDROW:BDEF-GB_EXTERIOR",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_DEFINITION_REGISTER",
+   "row_id": "BDEF-GB_GT_5M",
+   "source_id": "SCHEDROW:BDEF-GB_GT_5M",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_DEFINITION_REGISTER",
+   "row_id": "BDEF-GB_LT_2_5M",
+   "source_id": "SCHEDROW:BDEF-GB_LT_2_5M",
+   "terminal_state": "COUNTED_BLOCKED"
+  },
+  {
+   "register": "BEAM_DEFINITION_REGISTER",
+   "row_id": "BDEF-GB_LT_5M",
+   "source_id": "SCHEDROW:BDEF-GB_LT_5M",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_DEFINITION_REGISTER",
+   "row_id": "BDEF-LINTEL",
+   "source_id": "SCHEDROW:BDEF-LINTEL",
+   "terminal_state": "COUNTED_BLOCKED"
+  },
+  {
+   "register": "BEAM_DEFINITION_REGISTER",
+   "row_id": "BDEF-SB1-1FB0",
+   "source_id": "SCHEDROW:BDEF-SB1-1FB0",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_DEFINITION_REGISTER",
+   "row_id": "BDEF-SB2-1FBB",
+   "source_id": "SCHEDROW:BDEF-SB2-1FBB",
+   "terminal_state": "COUNTED_BLOCKED"
+  },
+  {
+   "register": "BEAM_DEFINITION_REGISTER",
+   "row_id": "BDEF-SB2-2ABA",
+   "source_id": "SCHEDROW:BDEF-SB2-2ABA",
+   "terminal_state": "COUNTED_BLOCKED"
+  },
+  {
+   "register": "BEAM_DEFINITION_REGISTER",
+   "row_id": "BDEF-SB3-2B06",
+   "source_id": "SCHEDROW:BDEF-SB3-2B06",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_DEFINITION_REGISTER",
+   "row_id": "CDEF-C-1F",
+   "source_id": "SCHEDROW:CDEF-C-1F",
+   "terminal_state": "NOT_IN_SCOPE"
+  },
+  {
+   "register": "COLUMN_DEFINITION_REGISTER",
+   "row_id": "CDEF-C-2F",
+   "source_id": "SCHEDROW:CDEF-C-2F",
+   "terminal_state": "NOT_IN_SCOPE"
+  },
+  {
+   "register": "COLUMN_DEFINITION_REGISTER",
+   "row_id": "CDEF-C-FOUNDATION",
+   "source_id": "SCHEDROW:CDEF-C-FOUNDATION",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_DEFINITION_REGISTER",
+   "row_id": "CDEF-C-GF",
+   "source_id": "SCHEDROW:CDEF-C-GF",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_DEFINITION_REGISTER",
+   "row_id": "CDEF-C1-1F",
+   "source_id": "SCHEDROW:CDEF-C1-1F",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_DEFINITION_REGISTER",
+   "row_id": "CDEF-C1-2F",
+   "source_id": "SCHEDROW:CDEF-C1-2F",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_DEFINITION_REGISTER",
+   "row_id": "CDEF-C1-FOUNDATION",
+   "source_id": "SCHEDROW:CDEF-C1-FOUNDATION",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_DEFINITION_REGISTER",
+   "row_id": "CDEF-C1-GF",
+   "source_id": "SCHEDROW:CDEF-C1-GF",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_DEFINITION_REGISTER",
+   "row_id": "CDEF-C10-1F",
+   "source_id": "SCHEDROW:CDEF-C10-1F",
+   "terminal_state": "NOT_IN_SCOPE"
+  },
+  {
+   "register": "COLUMN_DEFINITION_REGISTER",
+   "row_id": "CDEF-C10-2F",
+   "source_id": "SCHEDROW:CDEF-C10-2F",
+   "terminal_state": "NOT_IN_SCOPE"
+  },
+  {
+   "register": "COLUMN_DEFINITION_REGISTER",
+   "row_id": "CDEF-C10-FOUNDATION",
+   "source_id": "SCHEDROW:CDEF-C10-FOUNDATION",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_DEFINITION_REGISTER",
+   "row_id": "CDEF-C10-GF",
+   "source_id": "SCHEDROW:CDEF-C10-GF",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_DEFINITION_REGISTER",
+   "row_id": "CDEF-C11-1F",
+   "source_id": "SCHEDROW:CDEF-C11-1F",
+   "terminal_state": "NOT_IN_SCOPE"
+  },
+  {
+   "register": "COLUMN_DEFINITION_REGISTER",
+   "row_id": "CDEF-C11-2F",
+   "source_id": "SCHEDROW:CDEF-C11-2F",
+   "terminal_state": "NOT_IN_SCOPE"
+  },
+  {
+   "register": "COLUMN_DEFINITION_REGISTER",
+   "row_id": "CDEF-C11-FOUNDATION",
+   "source_id": "SCHEDROW:CDEF-C11-FOUNDATION",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_DEFINITION_REGISTER",
+   "row_id": "CDEF-C11-GF",
+   "source_id": "SCHEDROW:CDEF-C11-GF",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_DEFINITION_REGISTER",
+   "row_id": "CDEF-C2-1F",
+   "source_id": "SCHEDROW:CDEF-C2-1F",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_DEFINITION_REGISTER",
+   "row_id": "CDEF-C2-2F",
+   "source_id": "SCHEDROW:CDEF-C2-2F",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_DEFINITION_REGISTER",
+   "row_id": "CDEF-C2-FOUNDATION",
+   "source_id": "SCHEDROW:CDEF-C2-FOUNDATION",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_DEFINITION_REGISTER",
+   "row_id": "CDEF-C2-GF",
+   "source_id": "SCHEDROW:CDEF-C2-GF",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_DEFINITION_REGISTER",
+   "row_id": "CDEF-C3-1F",
+   "source_id": "SCHEDROW:CDEF-C3-1F",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_DEFINITION_REGISTER",
+   "row_id": "CDEF-C3-2F",
+   "source_id": "SCHEDROW:CDEF-C3-2F",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_DEFINITION_REGISTER",
+   "row_id": "CDEF-C3-FOUNDATION",
+   "source_id": "SCHEDROW:CDEF-C3-FOUNDATION",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_DEFINITION_REGISTER",
+   "row_id": "CDEF-C3-GF",
+   "source_id": "SCHEDROW:CDEF-C3-GF",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_DEFINITION_REGISTER",
+   "row_id": "CDEF-C4-1F",
+   "source_id": "SCHEDROW:CDEF-C4-1F",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_DEFINITION_REGISTER",
+   "row_id": "CDEF-C4-2F",
+   "source_id": "SCHEDROW:CDEF-C4-2F",
+   "terminal_state": "COUNTED_BLOCKED"
+  },
+  {
+   "register": "COLUMN_DEFINITION_REGISTER",
+   "row_id": "CDEF-C4-FOUNDATION",
+   "source_id": "SCHEDROW:CDEF-C4-FOUNDATION",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_DEFINITION_REGISTER",
+   "row_id": "CDEF-C4-GF",
+   "source_id": "SCHEDROW:CDEF-C4-GF",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_DEFINITION_REGISTER",
+   "row_id": "CDEF-C5-1F",
+   "source_id": "SCHEDROW:CDEF-C5-1F",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_DEFINITION_REGISTER",
+   "row_id": "CDEF-C5-2F",
+   "source_id": "SCHEDROW:CDEF-C5-2F",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_DEFINITION_REGISTER",
+   "row_id": "CDEF-C5-FOUNDATION",
+   "source_id": "SCHEDROW:CDEF-C5-FOUNDATION",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_DEFINITION_REGISTER",
+   "row_id": "CDEF-C5-GF",
+   "source_id": "SCHEDROW:CDEF-C5-GF",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_DEFINITION_REGISTER",
+   "row_id": "CDEF-C6-1F",
+   "source_id": "SCHEDROW:CDEF-C6-1F",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_DEFINITION_REGISTER",
+   "row_id": "CDEF-C6-2F",
+   "source_id": "SCHEDROW:CDEF-C6-2F",
+   "terminal_state": "COUNTED_BLOCKED"
+  },
+  {
+   "register": "COLUMN_DEFINITION_REGISTER",
+   "row_id": "CDEF-C6-FOUNDATION",
+   "source_id": "SCHEDROW:CDEF-C6-FOUNDATION",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_DEFINITION_REGISTER",
+   "row_id": "CDEF-C6-GF",
+   "source_id": "SCHEDROW:CDEF-C6-GF",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_DEFINITION_REGISTER",
+   "row_id": "CDEF-C7-1F",
+   "source_id": "SCHEDROW:CDEF-C7-1F",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_DEFINITION_REGISTER",
+   "row_id": "CDEF-C7-2F",
+   "source_id": "SCHEDROW:CDEF-C7-2F",
+   "terminal_state": "COUNTED_BLOCKED"
+  },
+  {
+   "register": "COLUMN_DEFINITION_REGISTER",
+   "row_id": "CDEF-C7-FOUNDATION",
+   "source_id": "SCHEDROW:CDEF-C7-FOUNDATION",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_DEFINITION_REGISTER",
+   "row_id": "CDEF-C7-GF",
+   "source_id": "SCHEDROW:CDEF-C7-GF",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_DEFINITION_REGISTER",
+   "row_id": "CDEF-C8-1F",
+   "source_id": "SCHEDROW:CDEF-C8-1F",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_DEFINITION_REGISTER",
+   "row_id": "CDEF-C8-2F",
+   "source_id": "SCHEDROW:CDEF-C8-2F",
+   "terminal_state": "COUNTED_BLOCKED"
+  },
+  {
+   "register": "COLUMN_DEFINITION_REGISTER",
+   "row_id": "CDEF-C8-FOUNDATION",
+   "source_id": "SCHEDROW:CDEF-C8-FOUNDATION",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_DEFINITION_REGISTER",
+   "row_id": "CDEF-C8-GF",
+   "source_id": "SCHEDROW:CDEF-C8-GF",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_DEFINITION_REGISTER",
+   "row_id": "CDEF-C9-1F",
+   "source_id": "SCHEDROW:CDEF-C9-1F",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_DEFINITION_REGISTER",
+   "row_id": "CDEF-C9-2F",
+   "source_id": "SCHEDROW:CDEF-C9-2F",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_DEFINITION_REGISTER",
+   "row_id": "CDEF-C9-FOUNDATION",
+   "source_id": "SCHEDROW:CDEF-C9-FOUNDATION",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_DEFINITION_REGISTER",
+   "row_id": "CDEF-C9-GF",
+   "source_id": "SCHEDROW:CDEF-C9-GF",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_DEFINITION_REGISTER",
+   "row_id": "CDEF-CN-FOUNDATION",
+   "source_id": "SCHEDROW:CDEF-CN-FOUNDATION",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_DEFINITION_REGISTER",
+   "row_id": "CDEF-P.C-COLPOS-X08-Y02-16850-8912-1F",
+   "source_id": "SCHEDROW:CDEF-P.C-COLPOS-X08-Y02-16850-8912-1F",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_DEFINITION_REGISTER",
+   "row_id": "CDEF-P.C-COLPOS-X15-Y02-31508-8912-1F",
+   "source_id": "SCHEDROW:CDEF-P.C-COLPOS-X15-Y02-31508-8912-1F",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "COLUMN_DEFINITION_REGISTER",
+   "row_id": "CDEF-P.C-COLPOS-X?-Y?-24888-15994-2F",
+   "source_id": "SCHEDROW:CDEF-P.C-COLPOS-X?-Y?-24888-15994-2F",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_DEFINITION_REGISTER",
+   "row_id": "FDEF-F",
+   "source_id": "SCHEDROW:FDEF-F",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_DEFINITION_REGISTER",
+   "row_id": "FDEF-F10",
+   "source_id": "SCHEDROW:FDEF-F10",
+   "terminal_state": "COUNTED_BLOCKED"
+  },
+  {
+   "register": "FOOTING_DEFINITION_REGISTER",
+   "row_id": "FDEF-F11",
+   "source_id": "SCHEDROW:FDEF-F11",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_DEFINITION_REGISTER",
+   "row_id": "FDEF-F12",
+   "source_id": "SCHEDROW:FDEF-F12",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_DEFINITION_REGISTER",
+   "row_id": "FDEF-F13",
+   "source_id": "SCHEDROW:FDEF-F13",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_DEFINITION_REGISTER",
+   "row_id": "FDEF-F14",
+   "source_id": "SCHEDROW:FDEF-F14",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_DEFINITION_REGISTER",
+   "row_id": "FDEF-F15",
+   "source_id": "SCHEDROW:FDEF-F15",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_DEFINITION_REGISTER",
+   "row_id": "FDEF-F2",
+   "source_id": "SCHEDROW:FDEF-F2",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_DEFINITION_REGISTER",
+   "row_id": "FDEF-F3",
+   "source_id": "SCHEDROW:FDEF-F3",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_DEFINITION_REGISTER",
+   "row_id": "FDEF-F4",
+   "source_id": "SCHEDROW:FDEF-F4",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_DEFINITION_REGISTER",
+   "row_id": "FDEF-F5",
+   "source_id": "SCHEDROW:FDEF-F5",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_DEFINITION_REGISTER",
+   "row_id": "FDEF-F6",
+   "source_id": "SCHEDROW:FDEF-F6",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_DEFINITION_REGISTER",
+   "row_id": "FDEF-F7",
+   "source_id": "SCHEDROW:FDEF-F7",
+   "terminal_state": "COUNTED_BLOCKED"
+  },
+  {
+   "register": "FOOTING_DEFINITION_REGISTER",
+   "row_id": "FDEF-F8",
+   "source_id": "SCHEDROW:FDEF-F8",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_DEFINITION_REGISTER",
+   "row_id": "FDEF-F9",
+   "source_id": "SCHEDROW:FDEF-F9",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_DEFINITION_REGISTER",
+   "row_id": "FDEF-FF",
+   "source_id": "SCHEDROW:FDEF-FF",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "FOOTING_DEFINITION_REGISTER",
+   "row_id": "FDEF-FN",
+   "source_id": "SCHEDROW:FDEF-FN",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-1F_ROOF_SLAB-22",
+   "source_id": "SLABFACE:FFRS:RB-16279570d7aab82d",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-1F_ROOF_SLAB-13",
+   "source_id": "SLABFACE:FFRS:RB-1b02865dce13740b",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-1F_ROOF_SLAB-04",
+   "source_id": "SLABFACE:FFRS:RB-481b3aa57ae26998",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-1F_ROOF_SLAB-16",
+   "source_id": "SLABFACE:FFRS:RB-4be993b8c346a972",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-1F_ROOF_SLAB-09",
+   "source_id": "SLABFACE:FFRS:RB-638c09b02ec70a47",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-1F_ROOF_SLAB-18",
+   "source_id": "SLABFACE:FFRS:RB-65080bf84af19dbb",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-1F_ROOF_SLAB-19",
+   "source_id": "SLABFACE:FFRS:RB-66debf23d5f5ee03",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-1F_ROOF_SLAB-21",
+   "source_id": "SLABFACE:FFRS:RB-7b7aa90dda1e189c",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-1F_ROOF_SLAB-11",
+   "source_id": "SLABFACE:FFRS:RB-7c8b8f5a3001c0ba",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-1F_ROOF_SLAB-24",
+   "source_id": "SLABFACE:FFRS:RB-7f5c1376a64234d2",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-1F_ROOF_SLAB-12",
+   "source_id": "SLABFACE:FFRS:RB-875084cb85a88315",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-1F_ROOF_SLAB-23",
+   "source_id": "SLABFACE:FFRS:RB-883f8d4e1b91ba02",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-1F_ROOF_SLAB-06",
+   "source_id": "SLABFACE:FFRS:RB-8964693cf75d1d62",
+   "terminal_state": "NOT_IN_SCOPE"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-1F_ROOF_SLAB-08",
+   "source_id": "SLABFACE:FFRS:RB-b4bbef6a8fcf292e",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-1F_ROOF_SLAB-25",
+   "source_id": "SLABFACE:FFRS:RB-c507222a99cdc93e",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-1F_ROOF_SLAB-20",
+   "source_id": "SLABFACE:FFRS:RB-c6163fb0d459e836",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-1F_ROOF_SLAB-07",
+   "source_id": "SLABFACE:FFRS:RB-c694d8f6fbcf9c39",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-1F_ROOF_SLAB-14",
+   "source_id": "SLABFACE:FFRS:RB-c938a61c415c25b6",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-1F_ROOF_SLAB-05",
+   "source_id": "SLABFACE:FFRS:RB-ca285bed62cbe3e8",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-1F_ROOF_SLAB-02",
+   "source_id": "SLABFACE:FFRS:RB-ce3d6131a9f7fd50",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-1F_ROOF_SLAB-17",
+   "source_id": "SLABFACE:FFRS:RB-d0536d24e6d2962e",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-1F_ROOF_SLAB-03",
+   "source_id": "SLABFACE:FFRS:RB-d253267d6f8fc196",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-1F_ROOF_SLAB-10",
+   "source_id": "SLABFACE:FFRS:RB-d2641f30b37f5144",
+   "terminal_state": "NOT_IN_SCOPE"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-1F_ROOF_SLAB-15",
+   "source_id": "SLABFACE:FFRS:RB-e1beb45dcef7130a",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-1F_ROOF_SLAB-01",
+   "source_id": "SLABFACE:FFRS:RB-eb044e3e68b1d88b",
+   "terminal_state": "COUNTED_BLOCKED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GBP-07",
+   "source_id": "SLABFACE:GBP:RB-1255af52f3aa374b",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GBP-02",
+   "source_id": "SLABFACE:GBP:RB-164c60db32636761",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GBP-18",
+   "source_id": "SLABFACE:GBP:RB-1bb509e2983f772e",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GBP-01",
+   "source_id": "SLABFACE:GBP:RB-22e83b57df23051c",
+   "terminal_state": "NOT_IN_SCOPE"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GBP-23",
+   "source_id": "SLABFACE:GBP:RB-2389a2464166a47e",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GBP-21",
+   "source_id": "SLABFACE:GBP:RB-352d519a931e2c5c",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GBP-16",
+   "source_id": "SLABFACE:GBP:RB-39d6e863e70f98c4",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GBP-05",
+   "source_id": "SLABFACE:GBP:RB-437b2b5f21fbe8f2",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GBP-20",
+   "source_id": "SLABFACE:GBP:RB-47793bedcf5d0138",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GBP-22",
+   "source_id": "SLABFACE:GBP:RB-477fa18219b3a5ee",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GBP-13",
+   "source_id": "SLABFACE:GBP:RB-47a72fac643109b4",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GBP-15",
+   "source_id": "SLABFACE:GBP:RB-5abc9ada35d80b7c",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GBP-19",
+   "source_id": "SLABFACE:GBP:RB-6a84103bfafe0b35",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GBP-04",
+   "source_id": "SLABFACE:GBP:RB-6adc3ea835b0e982",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GBP-14",
+   "source_id": "SLABFACE:GBP:RB-737be5e35599529f",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GBP-17",
+   "source_id": "SLABFACE:GBP:RB-790891af7cd21dad",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GBP-11",
+   "source_id": "SLABFACE:GBP:RB-796692e368e6e518",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GBP-09",
+   "source_id": "SLABFACE:GBP:RB-844c983386116547",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GBP-12",
+   "source_id": "SLABFACE:GBP:RB-bb0099152bddfcfc",
+   "terminal_state": "COUNTED_BLOCKED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GBP-06",
+   "source_id": "SLABFACE:GBP:RB-c841a4196a53c504",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GBP-03",
+   "source_id": "SLABFACE:GBP:RB-cb3056ca15647806",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GBP-08",
+   "source_id": "SLABFACE:GBP:RB-d307dca1f17ae7be",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GBP-10",
+   "source_id": "SLABFACE:GBP:RB-fe502ff8fab2cc0e",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GF_ROOF_SLAB-16",
+   "source_id": "SLABFACE:GFRS:RB-03a6983233cb2383",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GF_ROOF_SLAB-32",
+   "source_id": "SLABFACE:GFRS:RB-0bbab6f9f870aa24",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GF_ROOF_SLAB-09",
+   "source_id": "SLABFACE:GFRS:RB-0e2a2269b9d06378",
+   "terminal_state": "NOT_IN_SCOPE"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GF_ROOF_SLAB-02",
+   "source_id": "SLABFACE:GFRS:RB-13f2da45747640e9",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GF_ROOF_SLAB-24",
+   "source_id": "SLABFACE:GFRS:RB-26941412ef18d4b8",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GF_ROOF_SLAB-33",
+   "source_id": "SLABFACE:GFRS:RB-2a28791fc27d65bd",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GF_ROOF_SLAB-30",
+   "source_id": "SLABFACE:GFRS:RB-2c33c2a9438cc601",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GF_ROOF_SLAB-08",
+   "source_id": "SLABFACE:GFRS:RB-2c356c2f58d6d674",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GF_ROOF_SLAB-18",
+   "source_id": "SLABFACE:GFRS:RB-2fcd9489dc32f8e9",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GF_ROOF_SLAB-11",
+   "source_id": "SLABFACE:GFRS:RB-39e87de047ebaa58",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GF_ROOF_SLAB-29",
+   "source_id": "SLABFACE:GFRS:RB-5016d3cbd643afaa",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GF_ROOF_SLAB-15",
+   "source_id": "SLABFACE:GFRS:RB-58eb19dcf85b895e",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GF_ROOF_SLAB-14",
+   "source_id": "SLABFACE:GFRS:RB-6cd4044260647dab",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GF_ROOF_SLAB-20",
+   "source_id": "SLABFACE:GFRS:RB-7072481c90185d42",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GF_ROOF_SLAB-17",
+   "source_id": "SLABFACE:GFRS:RB-70e5b308c88875be",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GF_ROOF_SLAB-07",
+   "source_id": "SLABFACE:GFRS:RB-7435dd8c486cf985",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GF_ROOF_SLAB-10",
+   "source_id": "SLABFACE:GFRS:RB-77862cfd094c8969",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GF_ROOF_SLAB-31",
+   "source_id": "SLABFACE:GFRS:RB-811ce586283c5ff3",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GF_ROOF_SLAB-04",
+   "source_id": "SLABFACE:GFRS:RB-8407dfa27f13c1a4",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GF_ROOF_SLAB-28",
+   "source_id": "SLABFACE:GFRS:RB-8709dabfc8150bff",
+   "terminal_state": "COUNTED_BLOCKED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GF_ROOF_SLAB-13",
+   "source_id": "SLABFACE:GFRS:RB-8964693cf75d1d62",
+   "terminal_state": "NOT_IN_SCOPE"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GF_ROOF_SLAB-12",
+   "source_id": "SLABFACE:GFRS:RB-977d56e0e46dbf14",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GF_ROOF_SLAB-05",
+   "source_id": "SLABFACE:GFRS:RB-9f7566bab6d9a47c",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GF_ROOF_SLAB-34",
+   "source_id": "SLABFACE:GFRS:RB-a3c677eb990eb8a0",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GF_ROOF_SLAB-22",
+   "source_id": "SLABFACE:GFRS:RB-aea326b6afeb39e9",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GF_ROOF_SLAB-01",
+   "source_id": "SLABFACE:GFRS:RB-b6c4680a699d5e39",
+   "terminal_state": "NOT_IN_SCOPE"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GF_ROOF_SLAB-25",
+   "source_id": "SLABFACE:GFRS:RB-bbde6ef372a143f3",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GF_ROOF_SLAB-23",
+   "source_id": "SLABFACE:GFRS:RB-c8de5b32c2737825",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GF_ROOF_SLAB-19",
+   "source_id": "SLABFACE:GFRS:RB-c926c0a1dd6241ab",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GF_ROOF_SLAB-26",
+   "source_id": "SLABFACE:GFRS:RB-d2dfb67fb2bca40c",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GF_ROOF_SLAB-21",
+   "source_id": "SLABFACE:GFRS:RB-e35a61f938c93869",
+   "terminal_state": "COUNTED_BLOCKED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GF_ROOF_SLAB-06",
+   "source_id": "SLABFACE:GFRS:RB-e8b6a284d9272a6a",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GF_ROOF_SLAB-03",
+   "source_id": "SLABFACE:GFRS:RB-eb044e3e68b1d88b",
+   "terminal_state": "COUNTED_BLOCKED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GF_ROOF_SLAB-27",
+   "source_id": "SLABFACE:GFRS:RB-fe6ab4927754c652",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-2F_ROOF_SLAB-09",
+   "source_id": "SLABFACE:SFRS:RB-0853be186bd8ac53",
+   "terminal_state": "NOT_IN_SCOPE"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-2F_ROOF_SLAB-07",
+   "source_id": "SLABFACE:SFRS:RB-13593c15e90502fc",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-2F_ROOF_SLAB-06",
+   "source_id": "SLABFACE:SFRS:RB-506d1196b6eba373",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-2F_ROOF_SLAB-03",
+   "source_id": "SLABFACE:SFRS:RB-5655d29d28f841bf",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-2F_ROOF_SLAB-04",
+   "source_id": "SLABFACE:SFRS:RB-97c6a37adc26ce81",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-2F_ROOF_SLAB-02",
+   "source_id": "SLABFACE:SFRS:RB-ce3d6131a9f7fd50",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-2F_ROOF_SLAB-05",
+   "source_id": "SLABFACE:SFRS:RB-d2641f30b37f5144",
+   "terminal_state": "NOT_IN_SCOPE"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-2F_ROOF_SLAB-01",
+   "source_id": "SLABFACE:SFRS:RB-e790709b45b2cab3",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-2F_ROOF_SLAB-08",
+   "source_id": "SLABFACE:SFRS:RB-f92a13d654de1be4",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SPECIAL_STRUCTURAL_OCCURRENCE_REGISTER",
+   "row_id": "SPC-PLANTED_COLUMN-FFRS-77C",
+   "source_id": "SLABLABEL:FFRS:77C",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "SPECIAL_STRUCTURAL_OCCURRENCE_REGISTER",
+   "row_id": "SPC-TURN_COLUMN-GFRS-31F",
+   "source_id": "SLABLABEL:GFRS:31F",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "SPECIAL_STRUCTURAL_OCCURRENCE_REGISTER",
+   "row_id": "SPC-TURN_COLUMN-GFRS-324",
+   "source_id": "SLABLABEL:GFRS:324",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "SPECIAL_STRUCTURAL_OCCURRENCE_REGISTER",
+   "row_id": "SPC-DEAD_COLUMN-GFRS-38A",
+   "source_id": "SLABLABEL:GFRS:38A",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "SPECIAL_STRUCTURAL_OCCURRENCE_REGISTER",
+   "row_id": "SPC-PLANTED_COLUMN-GFRS-544",
+   "source_id": "SLABLABEL:GFRS:544",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "SPECIAL_STRUCTURAL_OCCURRENCE_REGISTER",
+   "row_id": "SPC-PLANTED_COLUMN-GFRS-548",
+   "source_id": "SLABLABEL:GFRS:548",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-FFRS-1734",
+   "source_id": "SLABTXT:FFRS:1734",
+   "terminal_state": "NOT_IN_SCOPE"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-FFRS-1735",
+   "source_id": "SLABTXT:FFRS:1735",
+   "terminal_state": "NOT_IN_SCOPE"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-FFRS-1736",
+   "source_id": "SLABTXT:FFRS:1736",
+   "terminal_state": "NOT_IN_SCOPE"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-FFRS-6F1",
+   "source_id": "SLABTXT:FFRS:6F1",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-FFRS-6F2",
+   "source_id": "SLABTXT:FFRS:6F2",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-FFRS-6F6",
+   "source_id": "SLABTXT:FFRS:6F6",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-FFRS-6F7",
+   "source_id": "SLABTXT:FFRS:6F7",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-FFRS-6FB",
+   "source_id": "SLABTXT:FFRS:6FB",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-FFRS-6FC",
+   "source_id": "SLABTXT:FFRS:6FC",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-FFRS-700",
+   "source_id": "SLABTXT:FFRS:700",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-FFRS-701",
+   "source_id": "SLABTXT:FFRS:701",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-FFRS-705",
+   "source_id": "SLABTXT:FFRS:705",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-FFRS-706",
+   "source_id": "SLABTXT:FFRS:706",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-FFRS-707",
+   "source_id": "SLABTXT:FFRS:707",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-FFRS-709",
+   "source_id": "SLABTXT:FFRS:709",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-FFRS-70F",
+   "source_id": "SLABTXT:FFRS:70F",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-FFRS-710",
+   "source_id": "SLABTXT:FFRS:710",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-FFRS-715",
+   "source_id": "SLABTXT:FFRS:715",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-FFRS-716",
+   "source_id": "SLABTXT:FFRS:716",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-FFRS-71C",
+   "source_id": "SLABTXT:FFRS:71C",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-FFRS-71D",
+   "source_id": "SLABTXT:FFRS:71D",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-FFRS-71E",
+   "source_id": "SLABTXT:FFRS:71E",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-FFRS-725",
+   "source_id": "SLABTXT:FFRS:725",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-FFRS-72E",
+   "source_id": "SLABTXT:FFRS:72E",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-FFRS-72F",
+   "source_id": "SLABTXT:FFRS:72F",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-FFRS-730",
+   "source_id": "SLABTXT:FFRS:730",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-FFRS-732",
+   "source_id": "SLABTXT:FFRS:732",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-FFRS-735",
+   "source_id": "SLABTXT:FFRS:735",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-FFRS-737",
+   "source_id": "SLABTXT:FFRS:737",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-FFRS-73A",
+   "source_id": "SLABTXT:FFRS:73A",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-FFRS-73C",
+   "source_id": "SLABTXT:FFRS:73C",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-FFRS-747",
+   "source_id": "SLABTXT:FFRS:747",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-FFRS-748",
+   "source_id": "SLABTXT:FFRS:748",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-FFRS-749",
+   "source_id": "SLABTXT:FFRS:749",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-FFRS-74F",
+   "source_id": "SLABTXT:FFRS:74F",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-FFRS-750",
+   "source_id": "SLABTXT:FFRS:750",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-FFRS-754",
+   "source_id": "SLABTXT:FFRS:754",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-FFRS-755",
+   "source_id": "SLABTXT:FFRS:755",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-FFRS-77D",
+   "source_id": "SLABTXT:FFRS:77D",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-FFRS-E2",
+   "source_id": "SLABTXT:FFRS:E2",
+   "terminal_state": "NOT_IN_SCOPE"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GBP-1690:TT1>v",
+   "source_id": "SLABTXT:GBP:1690:TT1>v",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GBP-169D:TT1>v",
+   "source_id": "SLABTXT:GBP:169D:TT1>v",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-172D",
+   "source_id": "SLABTXT:GFRS:172D",
+   "terminal_state": "NOT_IN_SCOPE"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-172E",
+   "source_id": "SLABTXT:GFRS:172E",
+   "terminal_state": "NOT_IN_SCOPE"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-172F",
+   "source_id": "SLABTXT:GFRS:172F",
+   "terminal_state": "NOT_IN_SCOPE"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-1824",
+   "source_id": "SLABTXT:GFRS:1824",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-48F",
+   "source_id": "SLABTXT:GFRS:48F",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-490",
+   "source_id": "SLABTXT:GFRS:490",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-491",
+   "source_id": "SLABTXT:GFRS:491",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-4A2",
+   "source_id": "SLABTXT:GFRS:4A2",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-4A4",
+   "source_id": "SLABTXT:GFRS:4A4",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-4A7",
+   "source_id": "SLABTXT:GFRS:4A7",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-4A9",
+   "source_id": "SLABTXT:GFRS:4A9",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-4AC",
+   "source_id": "SLABTXT:GFRS:4AC",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-4AE",
+   "source_id": "SLABTXT:GFRS:4AE",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-4B4",
+   "source_id": "SLABTXT:GFRS:4B4",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-4B5",
+   "source_id": "SLABTXT:GFRS:4B5",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-4BB",
+   "source_id": "SLABTXT:GFRS:4BB",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-4BC",
+   "source_id": "SLABTXT:GFRS:4BC",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-4C0",
+   "source_id": "SLABTXT:GFRS:4C0",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-4C1",
+   "source_id": "SLABTXT:GFRS:4C1",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-4C5",
+   "source_id": "SLABTXT:GFRS:4C5",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-4C6",
+   "source_id": "SLABTXT:GFRS:4C6",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-4CA",
+   "source_id": "SLABTXT:GFRS:4CA",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-4CB",
+   "source_id": "SLABTXT:GFRS:4CB",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-4D0",
+   "source_id": "SLABTXT:GFRS:4D0",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-4D1",
+   "source_id": "SLABTXT:GFRS:4D1",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-4D6",
+   "source_id": "SLABTXT:GFRS:4D6",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-4D8",
+   "source_id": "SLABTXT:GFRS:4D8",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-4DC",
+   "source_id": "SLABTXT:GFRS:4DC",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-4DE",
+   "source_id": "SLABTXT:GFRS:4DE",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-4EB",
+   "source_id": "SLABTXT:GFRS:4EB",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-4EC",
+   "source_id": "SLABTXT:GFRS:4EC",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-4F0",
+   "source_id": "SLABTXT:GFRS:4F0",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-4F1",
+   "source_id": "SLABTXT:GFRS:4F1",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-4F5",
+   "source_id": "SLABTXT:GFRS:4F5",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-4F6",
+   "source_id": "SLABTXT:GFRS:4F6",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-4FC",
+   "source_id": "SLABTXT:GFRS:4FC",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-4FD",
+   "source_id": "SLABTXT:GFRS:4FD",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-501",
+   "source_id": "SLABTXT:GFRS:501",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-502",
+   "source_id": "SLABTXT:GFRS:502",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-506",
+   "source_id": "SLABTXT:GFRS:506",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-507",
+   "source_id": "SLABTXT:GFRS:507",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-50C",
+   "source_id": "SLABTXT:GFRS:50C",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-50D",
+   "source_id": "SLABTXT:GFRS:50D",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-512",
+   "source_id": "SLABTXT:GFRS:512",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-513",
+   "source_id": "SLABTXT:GFRS:513",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-517",
+   "source_id": "SLABTXT:GFRS:517",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-518",
+   "source_id": "SLABTXT:GFRS:518",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-519",
+   "source_id": "SLABTXT:GFRS:519",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-51B",
+   "source_id": "SLABTXT:GFRS:51B",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-521",
+   "source_id": "SLABTXT:GFRS:521",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-522",
+   "source_id": "SLABTXT:GFRS:522",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-526",
+   "source_id": "SLABTXT:GFRS:526",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-527",
+   "source_id": "SLABTXT:GFRS:527",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-528",
+   "source_id": "SLABTXT:GFRS:528",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-52A",
+   "source_id": "SLABTXT:GFRS:52A",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-530",
+   "source_id": "SLABTXT:GFRS:530",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-531",
+   "source_id": "SLABTXT:GFRS:531",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-533",
+   "source_id": "SLABTXT:GFRS:533",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-537:816>v",
+   "source_id": "SLABTXT:GFRS:537:816>v",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-53D",
+   "source_id": "SLABTXT:GFRS:53D",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-541",
+   "source_id": "SLABTXT:GFRS:541",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-542",
+   "source_id": "SLABTXT:GFRS:542",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-543",
+   "source_id": "SLABTXT:GFRS:543",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-547",
+   "source_id": "SLABTXT:GFRS:547",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-551",
+   "source_id": "SLABTXT:GFRS:551",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-552",
+   "source_id": "SLABTXT:GFRS:552",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-5B7",
+   "source_id": "SLABTXT:GFRS:5B7",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-5B9",
+   "source_id": "SLABTXT:GFRS:5B9",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-5BC",
+   "source_id": "SLABTXT:GFRS:5BC",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-GFRS-D9",
+   "source_id": "SLABTXT:GFRS:D9",
+   "terminal_state": "NOT_IN_SCOPE"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-SFRS-783",
+   "source_id": "SLABTXT:SFRS:783",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-SFRS-784",
+   "source_id": "SLABTXT:SFRS:784",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-SFRS-788",
+   "source_id": "SLABTXT:SFRS:788",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-SFRS-789",
+   "source_id": "SLABTXT:SFRS:789",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-SFRS-791",
+   "source_id": "SLABTXT:SFRS:791",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-SFRS-793",
+   "source_id": "SLABTXT:SFRS:793",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-SFRS-796",
+   "source_id": "SLABTXT:SFRS:796",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-SFRS-798",
+   "source_id": "SLABTXT:SFRS:798",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-SFRS-79F",
+   "source_id": "SLABTXT:SFRS:79F",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-SFRS-7A2",
+   "source_id": "SLABTXT:SFRS:7A2",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-SFRS-7A7",
+   "source_id": "SLABTXT:SFRS:7A7",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-SFRS-7A8",
+   "source_id": "SLABTXT:SFRS:7A8",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-SFRS-7AD",
+   "source_id": "SLABTXT:SFRS:7AD",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-SFRS-7AE",
+   "source_id": "SLABTXT:SFRS:7AE",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-SFRS-7B8",
+   "source_id": "SLABTXT:SFRS:7B8",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-SFRS-7B9",
+   "source_id": "SLABTXT:SFRS:7B9",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_REBAR_SOURCE_REGISTER",
+   "row_id": "SRB-SFRS-EB",
+   "source_id": "SLABTXT:SFRS:EB",
+   "terminal_state": "NOT_IN_SCOPE"
+  },
+  {
+   "register": "SPECIAL_STRUCTURAL_OCCURRENCE_REGISTER",
+   "row_id": "SPC-STAIR_BEAM-FFRS-6B8",
+   "source_id": "STAIRQUAL:FFRS:6B8",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SPECIAL_STRUCTURAL_OCCURRENCE_REGISTER",
+   "row_id": "SPC-STAIR_BEAM-GFRS-1826",
+   "source_id": "STAIRQUAL:GFRS:1826",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SPECIAL_STRUCTURAL_OCCURRENCE_REGISTER",
+   "row_id": "SPC-STAIR_BEAM-GFRS-6B6",
+   "source_id": "STAIRQUAL:GFRS:6B6",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-FOUNDATION-SB1-BD001",
+   "source_id": "STRAP:FP:BD001",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-FOUNDATION-SB3-BD002",
+   "source_id": "STRAP:FP:BD002",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "BEAM_OCCURRENCE_REGISTER",
+   "row_id": "BM-FOUNDATION-SB2-BD003",
+   "source_id": "STRAP:FP:BD003",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-1F_ROOF_SLAB-01",
+   "source_id": "TMARK:FFRS:74A:t>v",
+   "terminal_state": "COUNTED_BLOCKED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-1F_ROOF_SLAB-21",
+   "source_id": "TMARK:FFRS:768",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GF_ROOF_SLAB-03",
+   "source_id": "TMARK:GFRS:580:t>v",
+   "terminal_state": "COUNTED_BLOCKED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GF_ROOF_SLAB-28",
+   "source_id": "TMARK:GFRS:5B6:t>v",
+   "terminal_state": "COUNTED_BLOCKED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GF_ROOF_SLAB-17",
+   "source_id": "TMARK:GFRS:6AD:t>v",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-GF_ROOF_SLAB-29",
+   "source_id": "TMARK:GFRS:6AE:t>v",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-2F_ROOF_SLAB-02",
+   "source_id": "TMARK:SFRS:1A7D",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "register": "SLAB_PANEL_REGISTER",
+   "row_id": "SP-2F_ROOF_SLAB-01",
+   "source_id": "TMARK:SFRS:7B3",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  }
+ ],
+ "source": {
+  "drawing": "ST7757.dxf",
+  "dxf_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+  "pdf": "ST7757.pdf",
+  "pdf_sha256": "74da1523f05eb3c6a4fe3ddebaef2c3d841891f003efc03bc32a3fb4553337e3"
+ },
+ "summary": {
+  "by_family": {
+   "BEAM_TAG": {
+    "COUNTED_AND_DEFINED": 98,
+    "COUNTED_BLOCKED": 6,
+    "COUNTED_DEFINITION_PARTIAL": 15
+   },
+   "COLUMN_OUTLINE": {
+    "COUNTED_AND_DEFINED": 162,
+    "COUNTED_DEFINITION_PARTIAL": 9
+   },
+   "COLUMN_TAG": {
+    "COUNTED_AND_DEFINED": 101,
+    "COUNTED_DEFINITION_PARTIAL": 6
+   },
+   "DETAIL_SHEET_OTHER_TEXT": {
+    "NOT_IN_SCOPE": 7
+   },
+   "DOME_DETAIL_TEXT": {
+    "COUNTED_DEFINITION_PARTIAL": 10
+   },
+   "FOOTING_OUTLINE": {
+    "COUNTED_AND_DEFINED": 25,
+    "COUNTED_DEFINITION_PARTIAL": 1
+   },
+   "FOOTING_TAG": {
+    "COUNTED_AND_DEFINED": 25,
+    "COUNTED_DEFINITION_PARTIAL": 2
+   },
+   "GROUND_BEAM_SPAN": {
+    "COUNTED_DEFINITION_PARTIAL": 62
+   },
+   "POOL_DETAIL_TEXT": {
+    "COUNTED_DEFINITION_PARTIAL": 26
+   },
+   "SCHEDULE_DEFINITION": {
+    "COUNTED_AND_DEFINED": 103,
+    "COUNTED_BLOCKED": 13,
+    "NOT_IN_SCOPE": 6
+   },
+   "SLAB_BAR_TEXT": {
+    "COUNTED_AND_DEFINED": 109,
+    "COUNTED_DEFINITION_PARTIAL": 11,
+    "NOT_IN_SCOPE": 9
+   },
+   "SLAB_FACE": {
+    "COUNTED_AND_DEFINED": 49,
+    "COUNTED_BLOCKED": 5,
+    "COUNTED_DEFINITION_PARTIAL": 29,
+    "NOT_IN_SCOPE": 8
+   },
+   "SLAB_THICKNESS_MARK": {
+    "COUNTED_AND_DEFINED": 5,
+    "COUNTED_BLOCKED": 3
+   },
+   "SPECIAL_DEAD_COLUMN": {
+    "COUNTED_DEFINITION_PARTIAL": 1
+   },
+   "SPECIAL_PARAPET": {
+    "COUNTED_BLOCKED": 3
+   },
+   "SPECIAL_PLANTED_COLUMN": {
+    "COUNTED_DEFINITION_PARTIAL": 3
+   },
+   "SPECIAL_SECTION_DETAIL_CALLOUT": {
+    "NOT_IN_SCOPE": 4
+   },
+   "SPECIAL_STAIR_BEAM": {
+    "COUNTED_AND_DEFINED": 3
+   },
+   "SPECIAL_TURN_COLUMN": {
+    "COUNTED_DEFINITION_PARTIAL": 2
+   },
+   "SPECIAL_WATER_TANK_SLAB": {
+    "COUNTED_AND_DEFINED": 1
+   },
+   "STRAP_BEAM_BAND": {
+    "COUNTED_AND_DEFINED": 2,
+    "COUNTED_DEFINITION_PARTIAL": 1
+   },
+   "UNTAGGED_BEAM_MEMBER": {
+    "COUNTED_BLOCKED": 19,
+    "COUNTED_DEFINITION_PARTIAL": 6
+   }
+  },
+  "by_state": {
+   "COUNTED_AND_DEFINED": 683,
+   "COUNTED_BLOCKED": 49,
+   "COUNTED_DEFINITION_PARTIAL": 184,
+   "NOT_IN_SCOPE": 34
+  },
+  "register_rows": 950,
+  "silent_disappearances": 0,
+  "source_objects": 950,
+  "violations": []
+ }
+}

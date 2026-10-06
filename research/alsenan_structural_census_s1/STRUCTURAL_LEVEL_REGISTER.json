@@ -1,0 +1,411 @@
+{
+ "frozen_before_benchmark": true,
+ "intervals": [
+  {
+   "bound_m": {
+    "min_height_m": 2.5
+   },
+   "floor_to_floor_m": null,
+   "lower_level": "FOUNDATION",
+   "status": "BLOCKED",
+   "storey": "FOUNDATION",
+   "upper_level": "GF",
+   "why": "founding level not printed (>= 1.5 m below plot level); GF FFL +1.00"
+  },
+  {
+   "closing_slab_sheet": "GFRS",
+   "column_clear_height_m": null,
+   "column_clear_height_status": "BLOCKED - needs beam depths per column face (member geometry round)",
+   "floor_to_floor_m": 4.5,
+   "floor_to_floor_status": "PRINTED (P7757 VE-AA-09: 450 / 420 / 420 cm)",
+   "lower_ffl_m": 1.0,
+   "lower_level": "GF",
+   "main_bar_length_m": null,
+   "main_bar_length_status": "NOT_IN_THIS_ROUND (lap / starter rules)",
+   "slab_thickness_authority": "PROJECT_DEFAULT (p.8 n.18 + p.1 note)",
+   "slab_thickness_default_mm": 160,
+   "slab_thickness_local_notes": "see SLAB_PANEL_REGISTER (T 16 / T 18 marks)",
+   "status": "ESTABLISHED",
+   "storey": "GF",
+   "structural_level_basis": "FFL interval; structural slab top = FFL - floor build-up (build-up not printed)",
+   "tie_zone_length_m": null,
+   "tie_zone_status": "NOT_IN_THIS_ROUND",
+   "upper_ffl_m": 5.5,
+   "upper_level": "1F"
+  },
+  {
+   "closing_slab_sheet": "FFRS",
+   "column_clear_height_m": null,
+   "column_clear_height_status": "BLOCKED - needs beam depths per column face (member geometry round)",
+   "floor_to_floor_m": 4.2,
+   "floor_to_floor_status": "PRINTED (P7757 VE-AA-09: 450 / 420 / 420 cm)",
+   "lower_ffl_m": 5.5,
+   "lower_level": "1F",
+   "main_bar_length_m": null,
+   "main_bar_length_status": "NOT_IN_THIS_ROUND (lap / starter rules)",
+   "slab_thickness_authority": "PROJECT_DEFAULT (p.8 n.18 + p.1 note)",
+   "slab_thickness_default_mm": 160,
+   "slab_thickness_local_notes": "see SLAB_PANEL_REGISTER (T 16 / T 18 marks)",
+   "status": "ESTABLISHED",
+   "storey": "1F",
+   "structural_level_basis": "FFL interval; structural slab top = FFL - floor build-up (build-up not printed)",
+   "tie_zone_length_m": null,
+   "tie_zone_status": "NOT_IN_THIS_ROUND",
+   "upper_ffl_m": 9.7,
+   "upper_level": "2F"
+  },
+  {
+   "closing_slab_sheet": "SFRS",
+   "column_clear_height_m": null,
+   "column_clear_height_status": "BLOCKED - needs beam depths per column face (member geometry round)",
+   "floor_to_floor_m": 4.2,
+   "floor_to_floor_status": "PRINTED (P7757 VE-AA-09: 450 / 420 / 420 cm)",
+   "lower_ffl_m": 9.7,
+   "lower_level": "2F",
+   "main_bar_length_m": null,
+   "main_bar_length_status": "NOT_IN_THIS_ROUND (lap / starter rules)",
+   "slab_thickness_authority": "PROJECT_DEFAULT (p.8 n.18 + p.1 note)",
+   "slab_thickness_default_mm": 160,
+   "slab_thickness_local_notes": "see SLAB_PANEL_REGISTER (T 16 / T 18 marks)",
+   "status": "ESTABLISHED",
+   "storey": "2F",
+   "structural_level_basis": "FFL interval; structural slab top = FFL - floor build-up (build-up not printed)",
+   "tie_zone_length_m": null,
+   "tie_zone_status": "NOT_IN_THIS_ROUND",
+   "upper_ffl_m": 13.9,
+   "upper_level": "ROOF"
+  }
+ ],
+ "lift_tie_beam_rule_check": [
+  {
+   "floor_to_floor_m": 4.5,
+   "required": true,
+   "rule": "P8-N19 (> 4.30 m -> tie beams at +3.00 m around the lift)",
+   "storey": "GF"
+  },
+  {
+   "floor_to_floor_m": 4.2,
+   "required": false,
+   "rule": "P8-N19 (> 4.30 m -> tie beams at +3.00 m around the lift)",
+   "storey": "1F"
+  },
+  {
+   "floor_to_floor_m": 4.2,
+   "required": false,
+   "rule": "P8-N19 (> 4.30 m -> tie beams at +3.00 m around the lift)",
+   "storey": "2F"
+  }
+ ],
+ "policy": {
+  "cb_states": [
+   "MATCH_CONFIRMED",
+   "SPAN_LENGTH_CONFLICT",
+   "SPAN_COUNT_CONFLICT",
+   "TAG_WITH_NO_MEMBER",
+   "MEMBER_WITH_NO_TAG",
+   "BLOCKED"
+  ],
+  "policy_id": "STRUCTURAL_CENSUS_V1",
+  "precedence": [
+   "LOCAL_PANEL_NOTE",
+   "FLOOR_SPECIFIC_NOTE",
+   "PROJECT_DEFAULT"
+  ],
+  "principles": [
+   "plan decides occurrence; schedule only defines",
+   "no default overrides a local note",
+   "a value is never rounded into a table row it does not match",
+   "every plan object ends in one terminal state"
+  ],
+  "rule_states": [
+   "EXACT_RULE",
+   "RULE_NOT_EXACT_MATCH",
+   "BLOCKED_METHOD"
+  ],
+  "terminal_states": [
+   "COUNTED_AND_DEFINED",
+   "COUNTED_DEFINITION_PARTIAL",
+   "COUNTED_BLOCKED",
+   "NOT_IN_SCOPE"
+  ]
+ },
+ "printed_marks": [
+  {
+   "handle": "18B:LEL>v",
+   "position_mm": [
+    840.032,
+    7469.784
+   ],
+   "raw": "%%p0.00",
+   "sheet": "GBP"
+  },
+  {
+   "handle": "1A9",
+   "position_mm": [
+    4306.325,
+    15138.956
+   ],
+   "raw": "+0.15",
+   "sheet": "GBP"
+  },
+  {
+   "handle": "1B0",
+   "position_mm": [
+    3447.966,
+    12834.122
+   ],
+   "raw": "+0.30",
+   "sheet": "GBP"
+  },
+  {
+   "handle": "1B2",
+   "position_mm": [
+    8544.705,
+    11207.524
+   ],
+   "raw": "+0.30",
+   "sheet": "GBP"
+  },
+  {
+   "handle": "1B4",
+   "position_mm": [
+    11897.491,
+    8071.322
+   ],
+   "raw": "+0.30",
+   "sheet": "GBP"
+  },
+  {
+   "handle": "1B6",
+   "position_mm": [
+    13078.584,
+    8587.693
+   ],
+   "raw": "+0.15",
+   "sheet": "GBP"
+  },
+  {
+   "handle": "1B8",
+   "position_mm": [
+    13225.171,
+    14005.307
+   ],
+   "raw": "+0.15",
+   "sheet": "GBP"
+  },
+  {
+   "handle": "1BA",
+   "position_mm": [
+    29551.751,
+    21547.561
+   ],
+   "raw": "+0.15",
+   "sheet": "GBP"
+  },
+  {
+   "handle": "1BC",
+   "position_mm": [
+    31916.49,
+    15964.398
+   ],
+   "raw": "+0.15",
+   "sheet": "GBP"
+  },
+  {
+   "handle": "1BE",
+   "position_mm": [
+    19682.825,
+    14175.413
+   ],
+   "raw": "+1.00",
+   "sheet": "GBP"
+  },
+  {
+   "handle": "1C0",
+   "position_mm": [
+    15427.186,
+    10955.376
+   ],
+   "raw": "+1.00",
+   "sheet": "GBP"
+  },
+  {
+   "handle": "1C2",
+   "position_mm": [
+    18836.725,
+    16940.923
+   ],
+   "raw": "+1.00",
+   "sheet": "GBP"
+  },
+  {
+   "handle": "1C9",
+   "position_mm": [
+    18550.595,
+    20011.779
+   ],
+   "raw": "+0.30",
+   "sheet": "GBP"
+  },
+  {
+   "handle": "1CB",
+   "position_mm": [
+    14837.507,
+    18864.825
+   ],
+   "raw": "+0.15",
+   "sheet": "GBP"
+  },
+  {
+   "handle": "1CD",
+   "position_mm": [
+    30547.452,
+    9537.038
+   ],
+   "raw": "+1.00",
+   "sheet": "GBP"
+  },
+  {
+   "handle": "1CE:LEL>v",
+   "position_mm": [
+    840.032,
+    16946.904
+   ],
+   "raw": "%%p0.00",
+   "sheet": "GBP"
+  },
+  {
+   "handle": "1CF:LEL>v",
+   "position_mm": [
+    840.032,
+    22051.862
+   ],
+   "raw": "%%p0.00",
+   "sheet": "GBP"
+  },
+  {
+   "handle": "1D0:LEL>v",
+   "position_mm": [
+    34305.011,
+    7469.784
+   ],
+   "raw": "%%p0.00",
+   "sheet": "GBP"
+  },
+  {
+   "handle": "1D1:LEL>v",
+   "position_mm": [
+    34082.567,
+    21950.821
+   ],
+   "raw": "%%p0.00",
+   "sheet": "GBP"
+  },
+  {
+   "handle": "1D2:LEL>v",
+   "position_mm": [
+    34305.011,
+    12636.643
+   ],
+   "raw": "%%p0.00",
+   "sheet": "GBP"
+  },
+  {
+   "handle": "3F4",
+   "position_mm": [
+    29225.143,
+    17929.033
+   ],
+   "raw": "+9.70",
+   "sheet": "SFRS"
+  },
+  {
+   "handle": "3F6",
+   "position_mm": [
+    20021.21,
+    10900.496
+   ],
+   "raw": "+9.70",
+   "sheet": "SFRS"
+  }
+ ],
+ "register": "STRUCTURAL_LEVEL_REGISTER",
+ "round": "S1",
+ "rows": [
+  {
+   "bound_m": {
+    "max": -1.5
+   },
+   "kind": "FOUNDATION_LEVEL",
+   "level": "FOUNDATION",
+   "source": "ST7757.pdf p.9 note 1: excavation >= 1.5 m below the existing plot level; plot level ±0.00 (P7757 SECTION A-A VE-AA-01) -> founding level <= -1.50 (minimum, not a printed level)",
+   "status": "BLOCKED",
+   "value_m": null,
+   "why": "no printed founding level; footing depths (H) from the schedule"
+  },
+  {
+   "kind": "LEVEL_MARK",
+   "level": "GROUND_BEAMS / NATURAL GROUND",
+   "printed_marks": [
+    "%%p0.00",
+    "+0.15",
+    "+0.30",
+    "+1.00"
+   ],
+   "source": "ST7757 p.3 level marks ±0.00 / +0.15 / +0.30 (court, landings) + VE-AA-01..03",
+   "status": "PRINTED",
+   "value_m": 0.0
+  },
+  {
+   "kind": "FFL",
+   "level": "GF",
+   "source": "ST7757 p.3 '+1.00' marks inside the building + VE-AA-04",
+   "status": "PRINTED",
+   "value_m": 1.0
+  },
+  {
+   "kind": "FFL",
+   "level": "1F",
+   "source": "P7757 SECTION A-A VE-AA-05",
+   "status": "PRINTED_ARCH",
+   "value_m": 5.5
+  },
+  {
+   "kind": "FFL / ROOF",
+   "level": "2F / 1F ROOF",
+   "source": "ST7757 p.6 '+9.70' roof marks (3F4, 3F6) + VE-AA-06",
+   "status": "PRINTED",
+   "value_m": 9.7
+  },
+  {
+   "kind": "ROOF_LEVEL",
+   "level": "ROOF (2F roof)",
+   "source": "P7757 SECTION A-A VE-AA-07",
+   "status": "PRINTED_ARCH",
+   "value_m": 13.9
+  }
+ ],
+ "source": {
+  "drawing": "ST7757.dxf",
+  "dxf_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+  "pdf": "ST7757.pdf",
+  "pdf_sha256": "74da1523f05eb3c6a4fe3ddebaef2c3d841891f003efc03bc32a3fb4553337e3"
+ },
+ "summary": {
+  "kept_separate": [
+   "floor_to_floor_m",
+   "column_clear_height_m",
+   "main_bar_length_m",
+   "tie_zone_length_m"
+  ],
+  "lift_tie_beam_required_at": [
+   "GF"
+  ],
+  "storey_intervals": {
+   "1F": 4.2,
+   "2F": 4.2,
+   "FOUNDATION": null,
+   "GF": 4.5
+  }
+ }
+}

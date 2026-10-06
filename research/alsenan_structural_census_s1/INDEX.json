@@ -1,0 +1,116 @@
+{
+ "built_twice_identical": true,
+ "drawing": "ST7757.dxf",
+ "frozen_before_benchmark": true,
+ "no_rebar_kg_calculated": true,
+ "registers": {
+  "BEAM_DEFINITION_REGISTER": {
+   "file": "BEAM_DEFINITION_REGISTER.json",
+   "rows": 53,
+   "sha256": "6b490b8a17aab326a3233d7090c219d35f61e60c83ee290391cfa0f0a69df249"
+  },
+  "BEAM_OCCURRENCE_REGISTER": {
+   "file": "BEAM_OCCURRENCE_REGISTER.json",
+   "rows": 211,
+   "sha256": "4af4ca569a3cda4c7fb7c30729db818e27f9727b6fe061aaa1436b9e3a5f4bc0"
+  },
+  "BEAM_TYPE_FLOOR_MATRIX": {
+   "file": "BEAM_TYPE_FLOOR_MATRIX.json",
+   "rows": 53,
+   "sha256": "226d0061d7cf371fb0be3ce7a9cf39dfc8c0d3409c79369f93b0047516f0d4be"
+  },
+  "COLUMN_DEFINITION_REGISTER": {
+   "file": "COLUMN_DEFINITION_REGISTER.json",
+   "rows": 52,
+   "sha256": "e74aeaf2957d7ad9d9c80025f694b869ccfe435c00b436a2c2926b57613677fa"
+  },
+  "COLUMN_OCCURRENCE_REGISTER": {
+   "file": "COLUMN_OCCURRENCE_REGISTER.json",
+   "rows": 95,
+   "sha256": "fb3f2d0c45bc1fbee9f04709d9e06040fbeb7eb5e80f8038a76f8840da048f88"
+  },
+  "COLUMN_TIE_TOPOLOGY_RULES": {
+   "file": "COLUMN_TIE_TOPOLOGY_RULES.json",
+   "rows": 3,
+   "sha256": "c82f9559e65e1fc05f31171857815e49c4c9563766a0cce038b69e72ed846548"
+  },
+  "COLUMN_TYPE_FLOOR_MATRIX": {
+   "file": "COLUMN_TYPE_FLOOR_MATRIX.json",
+   "rows": 14,
+   "sha256": "bd4f4fcca6dd9bb7b4606da6a77a2a0bc577b3f077a2649e1cd59fa926e807d0"
+  },
+  "COLUMN_VERTICAL_CHAIN_REGISTER": {
+   "file": "COLUMN_VERTICAL_CHAIN_REGISTER.json",
+   "rows": 39,
+   "sha256": "0397e1981a5a439ade43edc39b1902cdc192571e5273f6302c9c363f20ca6e1d"
+  },
+  "CONTINUOUS_BEAM_OCCURRENCE_REGISTER": {
+   "file": "CONTINUOUS_BEAM_OCCURRENCE_REGISTER.json",
+   "rows": 14,
+   "sha256": "45639780e85ee870d2c0941d79d71033d39825efa82c930bc8d6a44487030edc"
+  },
+  "FOOTING_DEFINITION_REGISTER": {
+   "file": "FOOTING_DEFINITION_REGISTER.json",
+   "rows": 17,
+   "sha256": "197e122719ca1e5d68033720c5e9cba333813d67bc9484b74864b29c845b7ae7"
+  },
+  "FOOTING_OCCURRENCE_REGISTER": {
+   "file": "FOOTING_OCCURRENCE_REGISTER.json",
+   "rows": 26,
+   "sha256": "96341bd2c7bc159f695c3a552e1df3763db6baf693cca9b2bedaf1b031106ea8"
+  },
+  "FOOTING_REQUIRED_COMPONENT_REGISTER": {
+   "file": "FOOTING_REQUIRED_COMPONENT_REGISTER.json",
+   "rows": 76,
+   "sha256": "e856b67791d846bd21a8f7a8c2f26810429b3f4b209c77a3e720a4054dd00b19"
+  },
+  "POOL_STRUCTURAL_REGISTER": {
+   "file": "POOL_STRUCTURAL_REGISTER.json",
+   "rows": 26,
+   "sha256": "c5d6a847ad70f2ae71f181755e462a026441c77b6911c972a8809c46fdf6e53f"
+  },
+  "SLAB_PANEL_REGISTER": {
+   "file": "SLAB_PANEL_REGISTER.json",
+   "rows": 91,
+   "sha256": "ea0cbe1b5e8d6f6b94eae60fd5c55a708886095a0cda3101d0acbe06229c9c4c"
+  },
+  "SLAB_REBAR_SOURCE_REGISTER": {
+   "file": "SLAB_REBAR_SOURCE_REGISTER.json",
+   "rows": 129,
+   "sha256": "44ae9ed13c31fac539f6283b88bdc1d56ba286663841a147452a8f5fc9339dda"
+  },
+  "SLAB_RULE_APPLICATION_MAP": {
+   "file": "SLAB_RULE_APPLICATION_MAP.json",
+   "rows": 49,
+   "sha256": "73d6395c7cf57836561c72d8605e91c145171899fcb81c2e97c00e2e4a67a260"
+  },
+  "SPECIAL_STRUCTURAL_OCCURRENCE_REGISTER": {
+   "file": "SPECIAL_STRUCTURAL_OCCURRENCE_REGISTER.json",
+   "rows": 34,
+   "sha256": "870800ec87b1ea39eb95636bfeae124a6e47c1779d926b8427c1e997e85ee8a5"
+  },
+  "STRUCTURAL_LEVEL_REGISTER": {
+   "file": "STRUCTURAL_LEVEL_REGISTER.json",
+   "rows": 6,
+   "sha256": "53d54f501f0fcab6f3825d16a4c1a939c9fc5e094d410eb8e9f3875f6fc3ca6b"
+  },
+  "STRUCTURAL_OCCURRENCE_CONSERVATION_REGISTER": {
+   "file": "STRUCTURAL_OCCURRENCE_CONSERVATION_REGISTER.json",
+   "rows": 950,
+   "sha256": "b9d209aa82c679f67b7c94516220f403534e59ca22c02c40ab854d198d3d2221"
+  },
+  "STRUCTURAL_PROJECT_RULE_REGISTER": {
+   "file": "STRUCTURAL_PROJECT_RULE_REGISTER.json",
+   "rows": 61,
+   "sha256": "3268bce3ef31c21ee93b0d7f9ab9b50195e0d0ae659699422c6927abcdf528d2"
+  },
+  "STRUCTURAL_REVIEW_QUEUE": {
+   "file": "STRUCTURAL_REVIEW_QUEUE.json",
+   "rows": 22,
+   "sha256": "b4b1e54071849bd37053405863552bcdeae94255032a461ed2eaa35fd235dbca"
+  }
+ },
+ "report": "ALSENAN_STRUCTURAL_CENSUS_S1.md",
+ "round": "S1",
+ "title": "Alsenan structural census S1 - source rules + occurrence census"
+}
