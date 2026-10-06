@@ -161,6 +161,7 @@ def project_inputs(regs, r4, claims):
     proj_d = int(re.search(r"(\d+)Ø", ftg["raw_text"]).group(1))
     return {
         "context": dict(CONTEXT), "steel_density_kg_m3": 7850,
+        "check_section_transitions": False,          # frozen S3 behaviour; S3.1 enables the transition check
         "tie_rule": {"rule_id": ties["rule_id"], "dia_mm": ties["values"]["dia_mm"],
                      "rate_per_m": ties["values"]["per_m"], "per_metre_semantics": CR.UNRESOLVED,
                      "raw": ties["raw_text"], "source_ref": {"page": ties["page"], "handles": ties["dxf_handles"]},

@@ -29,6 +29,7 @@ from fractions import Fraction
 
 from . import engineering_flags as EF
 from . import project_claims as PC
+from . import rebar_unit_mass as UM
 
 POLICY_ID = "COLUMN_REBAR_V1"
 
@@ -108,7 +109,13 @@ FACTS = {
     "TIE_HOOK": ("member_type", "transverse_count", "transverse_zone", "transverse_level_count",
                  "transverse_arrangement", "tie_hook", "occurrence", "boq_item"),
     "EXTRA": ("special_detail", "detailing", "occurrence", "boq_item"),
+    "TRANSITION": ("section_transition", "occurrence", "boq_item"),
 }
+
+# transverse notation -> level-count method (an explicit project / owner policy may override)
+RATE_PER_M = "RATE_PER_M"           # "n ties/m", "nØd/m": a count per metre
+SPACING = "SPACING"                 # "Ød @ s": a spacing
+DEFAULT_LEVEL_METHOD = {RATE_PER_M: RATE_COUNT, SPACING: SPACING_WITH_ENDS}
 
 
 # ================================================================================================ basic quantities
@@ -117,8 +124,37 @@ def unit_mass_kg_per_m(dia_mm, density_kg_m3):
     return math.pi / 4.0 * (dia_mm / 1000.0) ** 2 * density_kg_m3
 
 
-def _kg(count, length_mm, dia_mm, density):
-    return count * length_mm / 1000.0 * unit_mass_kg_per_m(dia_mm, density)
+def _mass_cfg(P):
+    """The project's ONE unit-mass method (rebar_unit_mass). Legacy inputs carrying only a density are read as
+    EXACT_DENSITY so earlier frozen rounds reproduce."""
+    if P.get("unit_mass"):
+        return UM.validate(P["unit_mass"])
+    return {"method": UM.EXACT_DENSITY, "density_kg_m3": P["steel_density_kg_m3"]}
+
+
+def _kg(count, length_mm, dia_mm, mass_cfg):
+    return count * length_mm / 1000.0 * UM.kg_per_m(dia_mm, mass_cfg)
+
+
+def parse_transverse_notation(text):
+    """'nØd/m', 'n ties/m' -> RATE_PER_M; 'Ød @ s', 'Ød@s mm' -> SPACING. Anything else -> None (no guess)."""
+    import re
+    t = (text or "").replace("%%c", "\u00d8").replace(" ", "")
+    m = re.search(r"(\d+(?:\.\d+)?)(?:\u00d8\d+|ties?|links?|stirrups?)?/m\b", t, re.I)
+    if m and "@" not in t:
+        return {"notation": RATE_PER_M, "rate_per_m": float(m.group(1))}
+    m = re.search(r"@(\d+(?:\.\d+)?)(mm|cm)?", t, re.I)
+    if m:
+        v = float(m.group(1)) * (10 if (m.group(2) or "").lower() == "cm" else 1)
+        return {"notation": SPACING, "spacing_mm": v}
+    return None
+
+
+def level_method(P):
+    """Released level-count method from the tie rule's notation and the (owner / project) policy."""
+    note = P["tie_rule"].get("notation", RATE_PER_M)
+    pol = P.get("level_method_policy") or {}
+    return pol.get(note, DEFAULT_LEVEL_METHOD[note])
 
 
 def _worst(states):
@@ -269,7 +305,8 @@ def tie_levels(zone_mm, rate_zones):
     detail = []
     for z in rate_zones:
         ln = Fraction(z["length_mm"]) if z.get("length_mm") is not None else rem
-        r = Fraction(z["rate_per_m"])
+        r = Fraction(z["rate_per_m"]) if z.get("rate_per_m") is not None else \
+            Fraction(1000) / Fraction(z["spacing_mm"])
         n = math.ceil(r * ln / 1000)
         rc += n
         swe += n
@@ -345,7 +382,7 @@ def _ties(seg, cand, P, zone_mm, *, section=None):
 
 
 def _tie_parts(seg, cand, P, t, zone_name, zone_state):
-    dens = P["steel_density_kg_m3"]
+    dens = _mass_cfg(P)
     tr = P["tie_rule"]
     parts = []
     if t["state"] == BLOCKED or not t["by_method"]:
@@ -353,20 +390,21 @@ def _tie_parts(seg, cand, P, t, zone_name, zone_state):
         parts.append(_part(seg, cand, "TIE_PERIMETER", C_TIES, TIE_CORE, "TIE_PERIMETER", None, None, tr["dia_mm"],
                            BLOCKED, dens, why=why, zone=zone_name))
         return parts
-    levels = t["by_method"][RATE_COUNT]["levels"]
+    base_m = level_method(P)
+    levels = t["by_method"][base_m]["levels"]
     basis_lb = LOWER_BOUND if zone_state in (ESTABLISHED, BOUNDED, BOUND_LOWER) else BLOCKED
     parts.append(_part(seg, cand, "TIE_PERIMETER", C_TIES, TIE_CORE, "TIE_PERIMETER", levels, t["perimeter_mm"],
-                       tr["dia_mm"], basis_lb, dens, zone=zone_name, level_method=RATE_COUNT,
+                       tr["dia_mm"], basis_lb, dens, zone=zone_name, level_method=base_m,
                        why="outer perimeter path x tie levels: a lower bound of any closed-link set that encloses "
                            "every bar, over the shorter tie zone and the smaller level count"))
     excess = t["sum_link_paths_mm"] - t["perimeter_mm"]
     if t["links_per_level"] > 1 or excess > 1e-9:
         st = PROVISIONAL if basis_lb != BLOCKED else BLOCKED
         parts.append(_part(seg, cand, "TIE_INTERNAL", C_TIES, TIE_CORE, "TIE_INTERNAL", levels, excess, tr["dia_mm"],
-                           st, dens, zone=zone_name, level_method=RATE_COUNT,
+                           st, dens, zone=zone_name, level_method=base_m,
                            why="sum of the link paths minus the perimeter: depends on internal bar positions "
                                f"({t['internal_state']}, ranges {t['ranges_state']})"))
-    pieces = t["by_method"][RATE_COUNT]["links"]
+    pieces = t["by_method"][base_m]["links"]
     n_hooks = (P.get("hook_method") or {}).get("hooks_per_link", 2)
     for hk in (HOOK_1, HOOK_2)[:n_hooks]:
         if t["hook_mm"] is None:
@@ -381,7 +419,7 @@ def _tie_parts(seg, cand, P, t, zone_name, zone_state):
 
 
 def _main_parts(seg, cand, P):
-    dens = P["steel_density_kg_m3"]
+    dens = _mass_cfg(P)
     d = cand["definition"]
     n, db = d["bars"]["count"], d["bars"]["dia_mm"]
     iv = seg["interval"]
@@ -412,6 +450,10 @@ def _main_parts(seg, cand, P):
         if na > n:
             parts.append(_part(seg, cand, "ADDITIONAL_DOWELS", C_EXTRA, EXTRA, "EXTRA", na - n, None, da, BLOCKED,
                                dens, why="the storey above has more bars - dowel detail not established"))
+        tr_ = section_transition(seg, cand, above) if P.get("check_section_transitions", True) else None
+        if tr_ and tr_["state"] == BLOCKED:
+            parts.append(_part(seg, cand, "SECTION_TRANSITION", C_EXTRA, EXTRA, "TRANSITION", None, None, db, BLOCKED,
+                               dens, transition=tr_, why=tr_["why"]))
     else:
         L2 = None if anc_r.get("current_D") is None else anc_r["current_D"] * db
         parts.append(_part(seg, cand, "ANCHORAGE_TOP", C_ANCH, ANCHORAGE, "ANCHORAGE", n, L2, db,
@@ -442,6 +484,31 @@ def _main_parts(seg, cand, P):
                            x.get("length_mm"), x.get("dia_mm"), x["state"], dens, rule_id=x.get("rule_id"),
                            why=x.get("why")))
     return parts
+
+
+def section_transition(seg, cand, above):
+    """COLUMN_SECTION_TRANSITION between this storey and the one above. Where the section changes, the bars are not
+    assumed straight: an explicit transition detail (straight / offset-crank / stopped bars + new starters / dowels)
+    is required, else the transition is BLOCKED_TRANSITION_DETAIL. Returns None when the section does not change."""
+    d = cand["definition"]
+    here = (min(d["B_mm"], d["D_mm"]), max(d["B_mm"], d["D_mm"]))
+    sec = (above.get("section_by_candidate") or {}).get(cand["type"], above.get("section_mm"))
+    if not sec:
+        return {"state": BLOCKED, "kind": "UNKNOWN_SECTION_ABOVE", "below_mm": list(here), "above_mm": None,
+                "why": "BLOCKED_TRANSITION_DETAIL: section above not supplied"}
+    up = (min(sec), max(sec))
+    turned = bool(above.get("orientation_change"))
+    if up == here and not turned:
+        return None
+    det = above.get("transition_detail")
+    if det and det.get("kind") in ("STRAIGHT", "OFFSET_CRANK", "STOPPED_AND_NEW_STARTERS", "DOWELS"):
+        return {"state": "DETAILED", "kind": det["kind"], "below_mm": list(here), "above_mm": list(up),
+                "source_ref": det.get("source_ref"), "why": "transition detailed in the source"}
+    return {"state": BLOCKED, "kind": "BLOCKED_TRANSITION_DETAIL", "below_mm": list(here), "above_mm": list(up),
+            "orientation_change": turned,
+            "why": f"BLOCKED_TRANSITION_DETAIL: section {here[0]}x{here[1]} -> {up[0]}x{up[1]}"
+                   f"{' with a turn' if turned else ''}; straight continuation / offset-crank / stopped bars / new "
+                   "starters / dowels not detailed - bars are not assumed straight"}
 
 
 def _zones(seg):
@@ -653,8 +720,8 @@ def tie_scenarios(r, P):
     seg = r["segment"]
     t = _released_type(r)
     ev = r["evals"][t]
-    dens = P["steel_density_kg_m3"]
-    m = unit_mass_kg_per_m(P["tie_rule"]["dia_mm"], dens)
+    dens = _mass_cfg(P)
+    m = UM.kg_per_m(P["tie_rule"]["dia_mm"], dens)
     out = {"segment_id": seg["segment_id"], "candidate_type": t}
     for z in ZONES:
         tz = ev["ties"][z]
@@ -680,7 +747,7 @@ def alt_section_tie_kg(r, P, label):
     tz = r["evals"][t]["alt_sections"].get(label)
     if not tz or tz.get("state") != ESTABLISHED or not tz.get("by_method"):
         return None
-    m = unit_mass_kg_per_m(P["tie_rule"]["dia_mm"], P["steel_density_kg_m3"])
+    m = UM.kg_per_m(P["tie_rule"]["dia_mm"], _mass_cfg(P))
     bm = tz["by_method"][RATE_COUNT]
     nh = (P.get("hook_method") or {}).get("hooks_per_link", 2)
     hook = 0.0 if tz["hook_mm"] is None else bm["links"] * nh * tz["hook_mm"]
@@ -700,6 +767,7 @@ METHOD_FLAG_KINDS = {
     "HOOK_METHOD_REQUIRED": ("tie_hook", EF.PROVISIONAL_VALUE, "ENGINEERING_METHOD_REQUIRED"),
     "LAP_METHOD_REQUIRED": ("lap_method", EF.PROVISIONAL_VALUE, "ENGINEERING_METHOD_REQUIRED"),
     "TIE_TOPOLOGY_RULE_GAP": ("transverse_arrangement", EF.BLOCKED, "RULE_GAP"),
+    "COLUMN_SECTION_TRANSITION_DETAIL_REQUIRED": ("section_transition", EF.BLOCKED, "MISSING_DETAIL"),
 }
 
 
@@ -767,9 +835,23 @@ def method_flags(result, P, existing_flags=(), *, where=None):
             "current": "ties blocked (long side on a limit no band includes)",
             "alternative": "one of the adjacent bands",
             "question": "The long side sits on a band limit no band includes - which link arrangement applies?"}
+    tparts = [p for p in result["parts"] if p.get("transition")]
+    if tparts:
+        q["COLUMN_SECTION_TRANSITION_DETAIL_REQUIRED"] = {
+            "elements": sorted({p["occurrence_id"] for p in tparts}), "current_kg": 0.0, "alternative_kg": None,
+            "quantity_affected_kg": None, "transitions": len({p["segment_id"] for p in tparts}),
+            "current": "transition blocked (crank / stopped bars / new starters / dowels not detailed)",
+            "alternative": "a transition detail from the consultant",
+            "question": "Where a column section changes between storeys, are the bars cranked, stopped with new "
+                        "starters, or continued with dowels? Please give the detail."}
+    pol = P.get("level_method_policy") or {}
+    note = P["tie_rule"].get("notation", RATE_PER_M)
+    if pol.get("authority") and note in pol and "END_LEVEL_COUNT_METHOD_REQUIRED" in q:
+        q["END_LEVEL_COUNT_METHOD_REQUIRED"]["resolved_by_policy"] = {
+            "notation": note, "method": pol[note], "authority": pol["authority"]}
     new, superseded = [], []
     for kind, v in q.items():
-        if not v["elements"]:
+        if not v["elements"] or v.get("resolved_by_policy"):
             continue
         fact, effect, issue = METHOD_FLAG_KINDS[kind]
         els = set(v["elements"])

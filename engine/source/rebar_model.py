@@ -26,6 +26,7 @@ import math
 from collections import Counter, defaultdict
 
 from engine.source import bbs_optimiser as BB
+from engine.source import rebar_unit_mass as UM
 
 POLICY_ID = "REBAR_MODEL_V1"
 KG_FORMULA = "kg/m = D^2 / 162 (D in mm)"
@@ -40,8 +41,11 @@ PROVENANCE_FIELDS = ("drawing_sha256", "drawing", "locator", "raw", "normalised"
 EPS = 1e-9
 
 
+UNIT_MASS = {"method": UM.D2_OVER_162, "authority": "Urban project default (R3)"}
+
+
 def kgm(d_mm) -> float:
-    return d_mm * d_mm / 162.0
+    return UM.kg_per_m(d_mm, UNIT_MASS)
 
 
 def kgm_density_qa(d_mm) -> float:

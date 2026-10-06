@@ -1,0 +1,3742 @@
+{
+ "claim_application_log": [
+  {
+   "claim_id": "ALS-S3-CLAIM-001",
+   "flag_key": "2e23673c1966908b",
+   "result": "RESOLVED"
+  },
+  {
+   "claim_id": "ALS-S3-CLAIM-002",
+   "flag_key": "647c4db1d77bc7d9",
+   "result": "RESOLVED"
+  }
+ ],
+ "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+ "flags": [
+  {
+   "affected_facts": [
+    "boq_item"
+   ],
+   "answer_options": [
+    {
+     "answer": "column stopping at FOUNDATION",
+     "effect": "stays in the column count"
+    },
+    {
+     "answer": "foundation stub / pedestal",
+     "effect": "moves to the foundation item"
+    }
+   ],
+   "context": {},
+   "current_interpretation": "counted as column occurrences at FOUNDATION only",
+   "detector": "single_level_members",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "CN:FOUNDATION",
+   "element_ids": [
+    "COL-CN-X16-Y03-FOUNDATION",
+    "COL-CN-X?-Y?@24058-12787-FOUNDATION",
+    "COL-CN-X?-Y?@28583-12787-FOUNDATION",
+    "COL-CN-X15-Y?@31208-15726-FOUNDATION",
+    "COL-CN-X?-Y?@29108-18112-FOUNDATION",
+    "COL-CN-X?-Y10@31108-20498-FOUNDATION"
+   ],
+   "element_type": "COLUMN",
+   "flag_id": "STR-COL-001",
+   "flag_key": "27de4e7a2881df97",
+   "floor": "FOUNDATION",
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by single_level_members",
+     "to": "PROVISIONAL_INTERPRETATION"
+    }
+   ],
+   "interpretation_authority": "PLAN_MEMBER_TAG",
+   "issue_summary": "Type CN occurs only at FOUNDATION (6 occurrence(s)) while other columns continue upward.",
+   "issue_type": "AMBIGUOUS_APPLICABILITY",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 6,
+   "question_for_engineer": "Is CN a column that stops at FOUNDATION, or a short stub / pedestal that belongs to the foundation item?",
+   "release_effect": "PROVISIONAL",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "s3_kind": "AMBIGUOUS_APPLICABILITY",
+   "s3_quantification_kg": {
+    "alternative": "not quantified - depends on the answer (see answer options)",
+    "alternative_kg": null,
+    "current_basis": "kg of the parts this flag touches",
+    "current_kg": 118.427,
+    "current_released_kg": 106.944,
+    "kg_in_flagged_parts": 118.427,
+    "parts": 36,
+    "quantity_affected_kg": 11.484
+   },
+   "severity": "LOW",
+   "source_a": null,
+   "source_b": null,
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "page": 2,
+     "sheet_title": "FOUNDATION PLAN",
+     "text": "CN"
+    },
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 9,
+     "sheet_title": "schedule (column)",
+     "text": "CN"
+    }
+   ],
+   "status": "PROVISIONAL_INTERPRETATION",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences",
+   "where_to_check": "ST7757.dxf / ST7757.pdf, schedule (column), p.9; ST7757.dxf, FOUNDATION PLAN, p.2"
+  },
+  {
+   "affected_facts": [
+    "transverse_count"
+   ],
+   "answer_options": [
+    {
+     "answer": "tie sets per metre",
+     "effect": "each level has all ties of the band"
+    },
+    {
+     "answer": "single ties per metre",
+     "effect": "the count is shared between the ties of a level"
+    }
+   ],
+   "context": {},
+   "current_interpretation": null,
+   "detector": "transverse_rules",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "P9-COL-TIES:per_metre",
+   "element_ids": [
+    "COL-C10-X15-Y01-FOUNDATION",
+    "COL-C10-X15-Y01-GF",
+    "COL-C11-X06-Y04-FOUNDATION",
+    "COL-C11-X06-Y04-GF",
+    "COL-C11-X?-Y01@17913-7462-FOUNDATION",
+    "COL-C11-X?-Y01@17913-7462-GF",
+    "COL-C5-X05-Y04-FOUNDATION",
+    "COL-C5-X05-Y04-GF",
+    "COL-C5-X11-Y10-FOUNDATION",
+    "COL-C5-X11-Y10-GF",
+    "COL-C5-X14-Y02-FOUNDATION",
+    "COL-C5-X14-Y02-GF",
+    "COL-C6-X08-Y04-1F",
+    "COL-C6-X08-Y04-FOUNDATION",
+    "COL-C6-X08-Y04-GF",
+    "COL-C8-X12-Y02-1F",
+    "COL-C8-X12-Y02-FOUNDATION",
+    "COL-C8-X12-Y02-GF",
+    "COL-C8-X15-Y06-1F",
+    "COL-C8-X15-Y06-FOUNDATION",
+    "COL-C8-X15-Y06-GF",
+    "COL-C9-X10-Y07-1F",
+    "COL-C9-X10-Y07-2F",
+    "COL-C9-X10-Y07-FOUNDATION",
+    "COL-C9-X10-Y07-GF",
+    "COL-C9-X13-Y08-1F",
+    "COL-C9-X13-Y08-FOUNDATION",
+    "COL-C9-X13-Y08-GF",
+    "COL-P.C-X08-Y02-1F"
+   ],
+   "element_type": "COLUMN",
+   "flag_id": "STR-COL-002",
+   "flag_key": "2e23673c1966908b",
+   "floor": null,
+   "generic_rule_candidate": "Per-metre transverse counts on multi-tie arrangements: the consultant's reading may become a generic convention after review.",
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by transverse_rules",
+     "to": "OPEN"
+    },
+    {
+     "at": "2026-10-06",
+     "by": "Mohammad (Urban Projects)",
+     "from": "OPEN",
+     "note": "ALS-S3-CLAIM-001",
+     "to": "ANSWERED"
+    },
+    {
+     "at": "2026-10-06",
+     "by": "Mohammad (Urban Projects)",
+     "from": "ANSWERED",
+     "note": "ALS-S3-CLAIM-001",
+     "to": "RESOLVED"
+    }
+   ],
+   "interpretation_authority": null,
+   "issue_summary": "ST. OF COLUMN- 6Ø8/m (column ties) gives a count per metre, but 2 band(s) use more than one closed tie per level; whether the count is of tie SETS or of single ties is not stated.",
+   "issue_type": "AMBIGUOUS_APPLICABILITY",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 29,
+   "question_for_engineer": "ST. OF COLUMN- 6Ø8/m (column ties): is the per-metre count the number of tie sets (all closed ties at one level) or the number of single ties?",
+   "release_effect": "BLOCKED",
+   "resolution": "SETS_PER_M",
+   "resolution_source": "ALS-S3-CLAIM-001",
+   "resolved_at": "2026-10-06",
+   "resolved_by": "Mohammad (Urban Projects)",
+   "s3_kind": "TIE_RATE_SEMANTICS",
+   "s3_quantification_kg": {
+    "alternative": "not quantified - depends on the answer (see answer options)",
+    "alternative_kg": null,
+    "current_basis": "kg of the parts this flag touches",
+    "current_kg": 0,
+    "current_released_kg": 0,
+    "kg_in_flagged_parts": 0,
+    "parts": 0,
+    "quantity_affected_kg": 0
+   },
+   "severity": "HIGH",
+   "source_a": {
+    "description": "rule",
+    "value": "ST. OF COLUMN- 6Ø8/m (column ties)"
+   },
+   "source_b": {
+    "description": "ties per level in the multi-tie bands",
+    "value": {
+     "TIE_50_LT_L_LT_80": 2,
+     "TIE_80_LT_L_LT_120": 3
+    }
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BAA",
+     "page": 9,
+     "sheet_title": "DETAILS OF COLUMN REINFORCEMENT (schedule sheet)",
+     "text": "ST. OF COLUMN- 6%%c8/m"
+    }
+   ],
+   "status": "RESOLVED",
+   "trade": [
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences",
+   "where_to_check": "ST7757.pdf, DETAILS OF COLUMN REINFORCEMENT (schedule sheet), p.9"
+  },
+  {
+   "affected_facts": [
+    "tie_size"
+   ],
+   "answer_options": [
+    {
+     "answer": "scale the sketch",
+     "effect": "tie sizes from the sketch fractions"
+    },
+    {
+     "answer": "specific bar grouping",
+     "effect": "tie sizes from the stated grouping"
+    }
+   ],
+   "context": {},
+   "current_interpretation": null,
+   "detector": "detail_count_mismatches",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "TIE_50_LT_L_LT_80:10:8",
+   "element_ids": [
+    "COL-C5-X14-Y02-FOUNDATION",
+    "COL-C5-X05-Y04-FOUNDATION",
+    "COL-C5-X11-Y10-FOUNDATION",
+    "COL-C5-X14-Y02-GF",
+    "COL-C5-X05-Y04-GF",
+    "COL-C5-X11-Y10-GF",
+    "COL-C6-X08-Y04-FOUNDATION",
+    "COL-C6-X08-Y04-GF",
+    "COL-C9-X10-Y07-2F",
+    "COL-C10-X15-Y01-FOUNDATION",
+    "COL-C10-X15-Y01-GF"
+   ],
+   "element_type": "COLUMN",
+   "flag_id": "STR-COL-003",
+   "flag_key": "d36751d764ff7264",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by detail_count_mismatches",
+     "to": "OPEN"
+    }
+   ],
+   "interpretation_authority": null,
+   "issue_summary": "Type C10 (FOUNDATION), C10 (GF), C5 (FOUNDATION), C5 (GF), C6 (FOUNDATION), C6 (GF), C9 (2F) has 10 main bars but the detail sketch for its band shows 8; which bars each tie encloses is not shown.",
+   "issue_type": "AMBIGUOUS_APPLICABILITY",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 11,
+   "question_for_engineer": "For C10 (FOUNDATION), C10 (GF), C5 (FOUNDATION), C5 (GF), C6 (FOUNDATION), C6 (GF), C9 (2F) (10 bars): which bars does each overlapping tie enclose?",
+   "release_effect": "BLOCKED",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "s3_kind": "AMBIGUOUS_APPLICABILITY",
+   "s3_quantification_kg": {
+    "alternative": "not quantified - depends on the answer (see answer options)",
+    "alternative_kg": null,
+    "current_basis": "kg of the parts this flag touches",
+    "current_kg": 74.193,
+    "current_released_kg": 0,
+    "kg_in_flagged_parts": 74.193,
+    "parts": 11,
+    "quantity_affected_kg": 74.193
+   },
+   "severity": "LOW",
+   "source_a": {
+    "description": "schedule bars",
+    "value": 10
+   },
+   "source_b": {
+    "description": "bars in band sketch",
+    "value": 8
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BAA",
+     "page": 9,
+     "sheet_title": "DETAILS OF COLUMN REINFORCEMENT (schedule sheet)",
+     "text": "ST. OF COLUMN- 6%%c8/m"
+    }
+   ],
+   "status": "OPEN",
+   "trade": [
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences",
+   "where_to_check": "ST7757.pdf, DETAILS OF COLUMN REINFORCEMENT (schedule sheet), p.9"
+  },
+  {
+   "affected_facts": [
+    "tie_size"
+   ],
+   "answer_options": [
+    {
+     "answer": "scale the sketch",
+     "effect": "tie sizes from the sketch fractions"
+    },
+    {
+     "answer": "specific bar grouping",
+     "effect": "tie sizes from the stated grouping"
+    }
+   ],
+   "context": {},
+   "current_interpretation": null,
+   "detector": "detail_count_mismatches",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "TIE_80_LT_L_LT_120:14:12",
+   "element_ids": [
+    "COL-C9-X10-Y07-FOUNDATION",
+    "COL-C9-X13-Y08-FOUNDATION",
+    "COL-C9-X10-Y07-GF",
+    "COL-C9-X13-Y08-GF",
+    "COL-C11-X?-Y01@17913-7462-FOUNDATION",
+    "COL-C11-X06-Y04-FOUNDATION",
+    "COL-C11-X?-Y01@17913-7462-GF",
+    "COL-C11-X06-Y04-GF"
+   ],
+   "element_type": "COLUMN",
+   "flag_id": "STR-COL-004",
+   "flag_key": "42c6b2ed898daffb",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by detail_count_mismatches",
+     "to": "OPEN"
+    }
+   ],
+   "interpretation_authority": null,
+   "issue_summary": "Type C11 (FOUNDATION), C11 (GF), C9 (FOUNDATION), C9 (GF) has 14 main bars but the detail sketch for its band shows 12; which bars each tie encloses is not shown.",
+   "issue_type": "AMBIGUOUS_APPLICABILITY",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 8,
+   "question_for_engineer": "For C11 (FOUNDATION), C11 (GF), C9 (FOUNDATION), C9 (GF) (14 bars): which bars does each overlapping tie enclose?",
+   "release_effect": "BLOCKED",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "s3_kind": "AMBIGUOUS_APPLICABILITY",
+   "s3_quantification_kg": {
+    "alternative": "not quantified - depends on the answer (see answer options)",
+    "alternative_kg": null,
+    "current_basis": "kg of the parts this flag touches",
+    "current_kg": 147.951,
+    "current_released_kg": 0,
+    "kg_in_flagged_parts": 147.951,
+    "parts": 8,
+    "quantity_affected_kg": 147.951
+   },
+   "severity": "LOW",
+   "source_a": {
+    "description": "schedule bars",
+    "value": 14
+   },
+   "source_b": {
+    "description": "bars in band sketch",
+    "value": 12
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BAA",
+     "page": 9,
+     "sheet_title": "DETAILS OF COLUMN REINFORCEMENT (schedule sheet)",
+     "text": "ST. OF COLUMN- 6%%c8/m"
+    }
+   ],
+   "status": "OPEN",
+   "trade": [
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences",
+   "where_to_check": "ST7757.pdf, DETAILS OF COLUMN REINFORCEMENT (schedule sheet), p.9"
+  },
+  {
+   "affected_facts": [
+    "tie_size"
+   ],
+   "answer_options": [
+    {
+     "answer": "scale the sketch",
+     "effect": "tie sizes from the sketch fractions"
+    },
+    {
+     "answer": "specific bar grouping",
+     "effect": "tie sizes from the stated grouping"
+    }
+   ],
+   "context": {},
+   "current_interpretation": null,
+   "detector": "detail_count_mismatches",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "TIE_L_LE_50:6:4",
+   "element_ids": [
+    "COL-C1-X09-Y09-1F",
+    "COL-C1-X09-Y09-2F",
+    "COL-C2-X09-Y07-2F",
+    "COL-C2-X10-Y09-2F",
+    "COL-C2-X08-Y10-2F",
+    "COL-C2-X09-Y10-2F",
+    "COL-C3-X05-Y02-1F",
+    "COL-C3-X08-Y09-1F",
+    "COL-C3-X08-Y09-2F",
+    "COL-C5-X11-Y10-2F"
+   ],
+   "element_type": "COLUMN",
+   "flag_id": "STR-COL-005",
+   "flag_key": "b8c903ac066763f7",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by detail_count_mismatches",
+     "to": "OPEN"
+    }
+   ],
+   "interpretation_authority": null,
+   "issue_summary": "Type C1 (1F), C1 (2F), C2 (2F), C3 (1F), C3 (2F), C5 (2F) has 6 main bars but the detail sketch for its band shows 4; which bars each tie encloses is not shown.",
+   "issue_type": "AMBIGUOUS_APPLICABILITY",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 10,
+   "question_for_engineer": "For C1 (1F), C1 (2F), C2 (2F), C3 (1F), C3 (2F), C5 (2F) (6 bars): which bars does each overlapping tie enclose?",
+   "release_effect": "BLOCKED",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "s3_kind": "AMBIGUOUS_APPLICABILITY",
+   "s3_quantification_kg": {
+    "alternative": "not quantified - depends on the answer (see answer options)",
+    "alternative_kg": null,
+    "current_basis": "kg of the parts this flag touches",
+    "current_kg": 0,
+    "current_released_kg": 0,
+    "kg_in_flagged_parts": 0,
+    "parts": 0,
+    "quantity_affected_kg": 0
+   },
+   "severity": "LOW",
+   "source_a": {
+    "description": "schedule bars",
+    "value": 6
+   },
+   "source_b": {
+    "description": "bars in band sketch",
+    "value": 4
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BAA",
+     "page": 9,
+     "sheet_title": "DETAILS OF COLUMN REINFORCEMENT (schedule sheet)",
+     "text": "ST. OF COLUMN- 6%%c8/m"
+    }
+   ],
+   "status": "OPEN",
+   "trade": [
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences",
+   "where_to_check": "ST7757.pdf, DETAILS OF COLUMN REINFORCEMENT (schedule sheet), p.9"
+  },
+  {
+   "affected_facts": [
+    "tie_size"
+   ],
+   "answer_options": [
+    {
+     "answer": "scale the sketch",
+     "effect": "tie sizes from the sketch fractions"
+    },
+    {
+     "answer": "specific bar grouping",
+     "effect": "tie sizes from the stated grouping"
+    }
+   ],
+   "context": {},
+   "current_interpretation": null,
+   "detector": "detail_count_mismatches",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "TIE_L_LE_50:8:4",
+   "element_ids": [
+    "COL-C-X01-Y01-FOUNDATION",
+    "COL-C-X06-Y01-FOUNDATION",
+    "COL-C-X16-Y01-FOUNDATION",
+    "COL-C-X01-Y05-FOUNDATION",
+    "COL-C-X02-Y05-FOUNDATION",
+    "COL-C-X01-Y01-GF",
+    "COL-C-X06-Y01-GF",
+    "COL-C-X16-Y01-GF",
+    "COL-C-X01-Y05-GF",
+    "COL-C-X02-Y05-GF",
+    "COL-C1-X09-Y09-FOUNDATION",
+    "COL-C1-X09-Y09-GF",
+    "COL-C2-X09-Y07-FOUNDATION",
+    "COL-C2-X10-Y09-FOUNDATION",
+    "COL-C2-X08-Y10-FOUNDATION",
+    "COL-C2-X09-Y10-FOUNDATION",
+    "COL-C2-X09-Y07-GF",
+    "COL-C2-X10-Y09-GF",
+    "COL-C2-X08-Y10-GF",
+    "COL-C2-X09-Y10-GF",
+    "COL-C2-X09-Y07-1F",
+    "COL-C2-X10-Y09-1F",
+    "COL-C2-X08-Y10-1F",
+    "COL-C2-X09-Y10-1F",
+    "COL-C3-X04-Y01-FOUNDATION",
+    "COL-C3-X12-Y01-FOUNDATION",
+    "COL-C3-X05-Y02-FOUNDATION",
+    "COL-C3-X03-Y04-FOUNDATION",
+    "COL-C3-X16-Y06-FOUNDATION",
+    "COL-C3-X08-Y09-FOUNDATION",
+    "COL-C3-X04-Y01-GF",
+    "COL-C3-X12-Y01-GF",
+    "COL-C3-X05-Y02-GF",
+    "COL-C3-X03-Y04-GF",
+    "COL-C3-X16-Y06-GF",
+    "COL-C3-X08-Y09-GF",
+    "COL-C4-X13-Y10-FOUNDATION",
+    "COL-C4-X15-Y10-FOUNDATION",
+    "COL-C4-X13-Y10-GF",
+    "COL-C4-X15-Y10-GF",
+    "COL-C4-X13-Y10-1F",
+    "COL-C4-X15-Y10-1F",
+    "COL-C5-X14-Y02-1F",
+    "COL-C5-X05-Y04-1F",
+    "COL-C5-X11-Y10-1F"
+   ],
+   "element_type": "COLUMN",
+   "flag_id": "STR-COL-006",
+   "flag_key": "467b2591ed2a06e1",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by detail_count_mismatches",
+     "to": "OPEN"
+    }
+   ],
+   "interpretation_authority": null,
+   "issue_summary": "Type C (FOUNDATION), C (GF), C1 (FOUNDATION), C1 (GF), C2 (1F), C2 (FOUNDATION), C2 (GF), C3 (FOUNDATION), C3 (GF), C4 (1F), C4 (FOUNDATION), C4 (GF), C5 (1F) has 8 main bars but the detail sketch for its band shows 4; which bars each tie encloses is not shown.",
+   "issue_type": "AMBIGUOUS_APPLICABILITY",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 45,
+   "question_for_engineer": "For C (FOUNDATION), C (GF), C1 (FOUNDATION), C1 (GF), C2 (1F), C2 (FOUNDATION), C2 (GF), C3 (FOUNDATION), C3 (GF), C4 (1F), C4 (FOUNDATION), C4 (GF), C5 (1F) (8 bars): which bars does each overlapping tie enclose?",
+   "release_effect": "BLOCKED",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "s3_kind": "AMBIGUOUS_APPLICABILITY",
+   "s3_quantification_kg": {
+    "alternative": "not quantified - depends on the answer (see answer options)",
+    "alternative_kg": null,
+    "current_basis": "kg of the parts this flag touches",
+    "current_kg": 0,
+    "current_released_kg": 0,
+    "kg_in_flagged_parts": 0,
+    "parts": 0,
+    "quantity_affected_kg": 0
+   },
+   "severity": "LOW",
+   "source_a": {
+    "description": "schedule bars",
+    "value": 8
+   },
+   "source_b": {
+    "description": "bars in band sketch",
+    "value": 4
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BAA",
+     "page": 9,
+     "sheet_title": "DETAILS OF COLUMN REINFORCEMENT (schedule sheet)",
+     "text": "ST. OF COLUMN- 6%%c8/m"
+    }
+   ],
+   "status": "OPEN",
+   "trade": [
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences",
+   "where_to_check": "ST7757.pdf, DETAILS OF COLUMN REINFORCEMENT (schedule sheet), p.9"
+  },
+  {
+   "affected_facts": [
+    "transverse_zone"
+   ],
+   "answer_options": [
+    {
+     "answer": "floor-to-floor",
+     "effect": "largest tie count"
+    },
+    {
+     "answer": "clear height",
+     "effect": "fewer ties; needs beam depths per face"
+    },
+    {
+     "answer": "clear height + joint",
+     "effect": "between the two"
+    }
+   ],
+   "context": {},
+   "current_interpretation": null,
+   "detector": "transverse_rules",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "P9-COL-TIES:zone",
+   "element_ids": [
+    "COL-C10-X15-Y01-FOUNDATION",
+    "COL-C10-X15-Y01-GF",
+    "COL-C-X01-Y01-FOUNDATION",
+    "COL-C-X01-Y01-GF",
+    "COL-C3-X04-Y01-FOUNDATION",
+    "COL-C3-X04-Y01-GF",
+    "COL-C-X06-Y01-FOUNDATION",
+    "COL-C-X06-Y01-GF",
+    "COL-C11-X?-Y01@17913-7462-FOUNDATION",
+    "COL-C11-X?-Y01@17913-7462-GF",
+    "COL-C3-X12-Y01-FOUNDATION",
+    "COL-C3-X12-Y01-GF",
+    "COL-C-X16-Y01-FOUNDATION",
+    "COL-C-X16-Y01-GF",
+    "COL-P.C-X08-Y02-1F",
+    "COL-C8-X12-Y02-FOUNDATION",
+    "COL-C8-X12-Y02-GF",
+    "COL-C8-X12-Y02-1F",
+    "COL-P.C-X15-Y02-1F",
+    "COL-C5-X14-Y02-FOUNDATION",
+    "COL-C5-X14-Y02-GF",
+    "COL-C5-X14-Y02-1F",
+    "COL-C3-X05-Y02-FOUNDATION",
+    "COL-C3-X05-Y02-GF",
+    "COL-C3-X05-Y02-1F",
+    "COL-CN-X16-Y03-FOUNDATION",
+    "COL-C5-X05-Y04-FOUNDATION",
+    "COL-C5-X05-Y04-GF",
+    "COL-C5-X05-Y04-1F",
+    "COL-C3-X03-Y04-FOUNDATION",
+    "COL-C3-X03-Y04-GF",
+    "COL-C11-X06-Y04-FOUNDATION",
+    "COL-C11-X06-Y04-GF",
+    "COL-C6-X08-Y04-FOUNDATION",
+    "COL-C6-X08-Y04-GF",
+    "COL-C6-X08-Y04-1F",
+    "COL-CN-X?-Y?@24058-12787-FOUNDATION",
+    "COL-CN-X?-Y?@28583-12787-FOUNDATION",
+    "COL-C-X01-Y05-FOUNDATION",
+    "COL-C-X01-Y05-GF",
+    "COL-C-X02-Y05-FOUNDATION",
+    "COL-C-X02-Y05-GF",
+    "COL-C3-X16-Y06-FOUNDATION",
+    "COL-C3-X16-Y06-GF",
+    "COL-C8-X15-Y06-FOUNDATION",
+    "COL-C8-X15-Y06-GF",
+    "COL-C8-X15-Y06-1F",
+    "COL-C2-X09-Y07-FOUNDATION",
+    "COL-C2-X09-Y07-GF",
+    "COL-C2-X09-Y07-1F",
+    "COL-C2-X09-Y07-2F",
+    "COL-CN-X15-Y?@31208-15726-FOUNDATION",
+    "COL-C9-X10-Y07-FOUNDATION",
+    "COL-C9-X10-Y07-GF",
+    "COL-C9-X10-Y07-1F",
+    "COL-C9-X10-Y07-2F",
+    "COL-P.C-X?-Y?@24888-15994-2F",
+    "COL-C7-X07-Y?@15888-16162-FOUNDATION",
+    "COL-C7-X07-Y?@15888-16162-GF",
+    "COL-C7-X07-Y?@15888-16162-1F",
+    "COL-C9-X13-Y08-FOUNDATION",
+    "COL-C9-X13-Y08-GF",
+    "COL-C9-X13-Y08-1F",
+    "COL-C3-X08-Y09-FOUNDATION",
+    "COL-C3-X08-Y09-GF",
+    "COL-C3-X08-Y09-1F",
+    "COL-C3-X08-Y09-2F",
+    "COL-C1-X09-Y09-FOUNDATION",
+    "COL-C1-X09-Y09-GF",
+    "COL-C1-X09-Y09-1F",
+    "COL-C1-X09-Y09-2F",
+    "COL-C2-X10-Y09-FOUNDATION",
+    "COL-C2-X10-Y09-GF",
+    "COL-C2-X10-Y09-1F",
+    "COL-C2-X10-Y09-2F",
+    "COL-CN-X?-Y?@29108-18112-FOUNDATION",
+    "COL-CN-X?-Y10@31108-20498-FOUNDATION",
+    "COL-C2-X08-Y10-FOUNDATION",
+    "COL-C2-X08-Y10-GF",
+    "COL-C2-X08-Y10-1F",
+    "COL-C2-X08-Y10-2F",
+    "COL-C2-X09-Y10-FOUNDATION",
+    "COL-C2-X09-Y10-GF",
+    "COL-C2-X09-Y10-1F",
+    "COL-C2-X09-Y10-2F",
+    "COL-C5-X11-Y10-FOUNDATION",
+    "COL-C5-X11-Y10-GF",
+    "COL-C5-X11-Y10-1F",
+    "COL-C5-X11-Y10-2F",
+    "COL-C4-X13-Y10-FOUNDATION",
+    "COL-C4-X13-Y10-GF",
+    "COL-C4-X13-Y10-1F",
+    "COL-C4-X15-Y10-FOUNDATION",
+    "COL-C4-X15-Y10-GF",
+    "COL-C4-X15-Y10-1F"
+   ],
+   "element_type": "COLUMN",
+   "flag_id": "STR-COL-007",
+   "flag_key": "db724c886670c21a",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by transverse_rules",
+     "to": "OPEN"
+    },
+    {
+     "at": null,
+     "by": "ENGINE",
+     "from": "OPEN",
+     "note": "quantified by 294ff0b99a26cd4b",
+     "to": "SUPERSEDED"
+    }
+   ],
+   "interpretation_authority": null,
+   "issue_summary": "ST. OF COLUMN- 6Ø8/m (column ties) gives ties per metre but not over which height: full storey height, clear height below the beams, or including the joint.",
+   "issue_type": "ENGINEERING_METHOD_REQUIRED",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 95,
+   "question_for_engineer": "Over which vertical length are the column ties counted: floor-to-floor, clear height between slab and beam soffit, or clear height plus the beam-column joint?",
+   "release_effect": "BLOCKED",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "s3_kind": "TIE_ZONE_METHOD_REQUIRED",
+   "s3_quantification_kg": {
+    "alternative": "not quantified - depends on the answer (see answer options)",
+    "alternative_kg": null,
+    "current_basis": "kg of the parts this flag touches",
+    "current_kg": 0,
+    "current_released_kg": 0,
+    "kg_in_flagged_parts": 0,
+    "parts": 0,
+    "quantity_affected_kg": 0
+   },
+   "severity": "HIGH",
+   "source_a": {
+    "description": "rule",
+    "value": "ST. OF COLUMN- 6Ø8/m (column ties)"
+   },
+   "source_b": null,
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BAA",
+     "page": 9,
+     "sheet_title": "DETAILS OF COLUMN REINFORCEMENT (schedule sheet)",
+     "text": "ST. OF COLUMN- 6%%c8/m"
+    }
+   ],
+   "status": "SUPERSEDED",
+   "trade": [
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences",
+   "where_to_check": "ST7757.pdf, DETAILS OF COLUMN REINFORCEMENT (schedule sheet), p.9"
+  },
+  {
+   "affected_facts": [
+    "transverse_arrangement"
+   ],
+   "answer_options": [
+    {
+     "answer": "50cm < L < 80cm",
+     "effect": "use band TIE_50_LT_L_LT_80"
+    },
+    {
+     "answer": "80cm < L < 120cm",
+     "effect": "use band TIE_80_LT_L_LT_120"
+    }
+   ],
+   "context": {},
+   "current_interpretation": null,
+   "detector": "band_gaps",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "P9-COL-BAND:80.0",
+   "element_ids": [
+    "COL-C7-X07-Y?@15888-16162-FOUNDATION",
+    "COL-C7-X07-Y?@15888-16162-GF",
+    "COL-C7-X07-Y?@15888-16162-1F"
+   ],
+   "element_type": "COLUMN",
+   "flag_id": "STR-COL-008",
+   "flag_key": "647c4db1d77bc7d9",
+   "floor": null,
+   "generic_rule_candidate": "At an exact band limit that no printed band includes, the consultant's answer may be proposed as a generic boundary convention (review required).",
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by band_gaps",
+     "to": "OPEN"
+    },
+    {
+     "at": "2026-10-06",
+     "by": "Mohammad (Urban Projects)",
+     "from": "OPEN",
+     "note": "ALS-S3-CLAIM-002",
+     "to": "ANSWERED"
+    },
+    {
+     "at": "2026-10-06",
+     "by": "Mohammad (Urban Projects)",
+     "from": "ANSWERED",
+     "note": "ALS-S3-CLAIM-002",
+     "to": "RESOLVED"
+    }
+   ],
+   "interpretation_authority": null,
+   "issue_summary": "column tie rule (arrangement by long side L): value 80.0 cm (C7) is on a limit no band includes.",
+   "issue_type": "RULE_GAP",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 3,
+   "question_for_engineer": "column tie rule (arrangement by long side L): which band applies where the value is exactly 80.0 cm?",
+   "release_effect": "BLOCKED",
+   "resolution": {
+    "band_id": "TIE_80_LT_L_LT_120",
+    "long_side_mm": 800
+   },
+   "resolution_source": "ALS-S3-CLAIM-002",
+   "resolved_at": "2026-10-06",
+   "resolved_by": "Mohammad (Urban Projects)",
+   "s3_kind": "TIE_TOPOLOGY_RULE_GAP",
+   "s3_quantification_kg": {
+    "alternative": "not quantified - depends on the answer (see answer options)",
+    "alternative_kg": null,
+    "current_basis": "kg of the parts this flag touches",
+    "current_kg": 0,
+    "current_released_kg": 0,
+    "kg_in_flagged_parts": 0,
+    "parts": 0,
+    "quantity_affected_kg": 0
+   },
+   "severity": "HIGH",
+   "source_a": {
+    "description": "rule bands",
+    "value": [
+     "L ≤ 50cm",
+     "50cm < L < 80cm",
+     "80cm < L < 120cm"
+    ]
+   },
+   "source_b": {
+    "description": "member value",
+    "value": "80.0 cm"
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BAA",
+     "page": 9,
+     "sheet_title": "DETAILS OF COLUMN REINFORCEMENT (schedule sheet)",
+     "text": "ST. OF COLUMN- 6%%c8/m"
+    }
+   ],
+   "status": "RESOLVED",
+   "trade": [
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences",
+   "where_to_check": "ST7757.pdf, DETAILS OF COLUMN REINFORCEMENT (schedule sheet), p.9"
+  },
+  {
+   "affected_facts": [
+    "member_type"
+   ],
+   "answer_options": [
+    {
+     "answer": "type C3",
+     "effect": "section and bars from the C3 schedule row"
+    },
+    {
+     "answer": "type C",
+     "effect": "section and bars from the C schedule row"
+    }
+   ],
+   "context": {
+    "shared_definition_fields": [
+     "reinforcement",
+     "section"
+    ],
+    "supporting_evidence": []
+   },
+   "current_interpretation": "type C3 used provisionally",
+   "detector": "type_conflicts",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "COLPOS-X04-Y01-7988-7462",
+   "element_ids": [
+    "COL-C3-X04-Y01-FOUNDATION",
+    "COL-C3-X04-Y01-GF"
+   ],
+   "element_type": "COLUMN",
+   "flag_id": "STR-COL-009",
+   "flag_key": "f7f8ae2918e238b6",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by type_conflicts",
+     "to": "OPEN"
+    }
+   ],
+   "interpretation_authority": "TAG_CONFLICT",
+   "issue_summary": "column at grid X04/Y01: equal-authority sources give different types (C3 vs C).",
+   "issue_type": "SOURCE_CONFLICT",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 2,
+   "question_for_engineer": "Which type is correct for this column (at grid X04/Y01): C3 or C?",
+   "release_effect": "BLOCKED",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "s3_kind": "SOURCE_CONFLICT",
+   "s3_quantification_kg": {
+    "alternative": "candidate C",
+    "alternative_kg": 133.047,
+    "current_basis": "candidate C3 (census reading)",
+    "current_kg": 133.956,
+    "current_released_kg": 122.434,
+    "differing_kg_by_candidate": {
+     "C": 10.613,
+     "C3": 11.522
+    },
+    "kg_by_candidate": {
+     "C": 133.047,
+     "C3": 133.956
+    },
+    "kg_in_flagged_parts": 133.956,
+    "likely_candidate": null,
+    "parts": 12,
+    "quantity_affected_kg": 11.522,
+    "shared_lower_bound_kg": 122.434
+   },
+   "severity": "HIGH",
+   "source_a": {
+    "description": "COLUMN & AXIS PLAN tag",
+    "source_ref": {
+     "drawing": "ST7757.dxf",
+     "handle": "100A",
+     "layer": "S-TEXT",
+     "page": 1,
+     "sheet_title": "COLUMN & AXIS PLAN",
+     "text": "C3"
+    },
+    "value": "C3"
+   },
+   "source_b": {
+    "description": "GROUND BEAMS PLAN tag",
+    "source_ref": {
+     "drawing": "ST7757.dxf",
+     "handle": "20D",
+     "layer": "S-TEXT",
+     "page": 3,
+     "sheet_title": "GROUND BEAMS PLAN",
+     "text": "C"
+    },
+    "value": "C"
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "100A",
+     "layer": "S-TEXT",
+     "page": 1,
+     "sheet_title": "COLUMN & AXIS PLAN",
+     "text": "C3"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "1681",
+     "layer": "S-TEXT",
+     "page": 2,
+     "sheet_title": "FOUNDATION PLAN",
+     "text": "C3"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "20D",
+     "layer": "S-TEXT",
+     "page": 3,
+     "sheet_title": "GROUND BEAMS PLAN",
+     "text": "C"
+    }
+   ],
+   "status": "OPEN",
+   "trade": [
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences",
+   "where_to_check": "ST7757.dxf, COLUMN & AXIS PLAN, p.1; ST7757.dxf, FOUNDATION PLAN, p.2; ST7757.dxf, GROUND BEAMS PLAN, p.3"
+  },
+  {
+   "affected_facts": [
+    "member_type",
+    "section"
+   ],
+   "answer_options": [
+    {
+     "answer": "type C8",
+     "effect": "section and bars from the C8 schedule row"
+    },
+    {
+     "answer": "type C7",
+     "effect": "section and bars from the C7 schedule row; the corroborating evidence agrees"
+    }
+   ],
+   "context": {
+    "shared_definition_fields": [
+     "reinforcement"
+    ],
+    "supporting_evidence": [
+     {
+      "authority": "DRAWN_GEOMETRY",
+      "description": "axis-plan size label 30X80 matches the C7 schedule section",
+      "source_ref": {
+       "drawing": "ST7757.dxf",
+       "layer": "S-TEXT",
+       "page": 1,
+       "sheet_title": "COLUMN & AXIS PLAN",
+       "text": "30X80"
+      },
+      "value": "C7"
+     }
+    ]
+   },
+   "current_interpretation": "type C8 used provisionally",
+   "detector": "type_conflicts",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "COLPOS-X12-Y02-24308-8912",
+   "element_ids": [
+    "COL-C8-X12-Y02-FOUNDATION",
+    "COL-C8-X12-Y02-GF",
+    "COL-C8-X12-Y02-1F"
+   ],
+   "element_type": "COLUMN",
+   "flag_id": "STR-COL-010",
+   "flag_key": "e3be1b4bfeb1d55c",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by type_conflicts",
+     "to": "OPEN"
+    }
+   ],
+   "interpretation_authority": "TAG_CONFLICT",
+   "issue_summary": "column at grid X12/Y02: equal-authority sources give different types (C8 vs C7).",
+   "issue_type": "SOURCE_CONFLICT",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 3,
+   "question_for_engineer": "Which type is correct for this column (at grid X12/Y02): C8 or C7?",
+   "release_effect": "BLOCKED",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "s3_kind": "SOURCE_CONFLICT",
+   "s3_quantification_kg": {
+    "alternative": "candidate C8",
+    "alternative_kg": 364.059,
+    "current_basis": "candidate C7 (likely - corroborated)",
+    "current_kg": 337.508,
+    "current_released_kg": 337.508,
+    "differing_kg_by_candidate": {
+     "C7": 166.533,
+     "C8": 193.084
+    },
+    "kg_by_candidate": {
+     "C7": 337.508,
+     "C8": 364.059
+    },
+    "kg_in_flagged_parts": 337.508,
+    "likely_candidate": "C7",
+    "parts": 22,
+    "quantity_affected_kg": 166.533,
+    "shared_lower_bound_kg": 170.975
+   },
+   "severity": "HIGH",
+   "source_a": {
+    "description": "COLUMN & AXIS PLAN tag",
+    "source_ref": {
+     "drawing": "ST7757.dxf",
+     "handle": "101A",
+     "layer": "S-TEXT",
+     "page": 1,
+     "sheet_title": "COLUMN & AXIS PLAN",
+     "text": "C8"
+    },
+    "value": "C8"
+   },
+   "source_b": {
+    "description": "GROUND BEAMS PLAN tag",
+    "source_ref": {
+     "drawing": "ST7757.dxf",
+     "handle": "24E",
+     "layer": "S-TEXT",
+     "page": 3,
+     "sheet_title": "GROUND BEAMS PLAN",
+     "text": "C7"
+    },
+    "value": "C7"
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "101A",
+     "layer": "S-TEXT",
+     "page": 1,
+     "sheet_title": "COLUMN & AXIS PLAN",
+     "text": "C8"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "10E1",
+     "layer": "S-TEXT",
+     "page": 2,
+     "sheet_title": "FOUNDATION PLAN",
+     "text": "C8"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "24E",
+     "layer": "S-TEXT",
+     "page": 3,
+     "sheet_title": "GROUND BEAMS PLAN",
+     "text": "C7"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "layer": "S-TEXT",
+     "page": 1,
+     "sheet_title": "COLUMN & AXIS PLAN",
+     "text": "30X80"
+    }
+   ],
+   "status": "OPEN",
+   "trade": [
+    "REINFORCEMENT",
+    "CONCRETE",
+    "FORMWORK"
+   ],
+   "unit": "nr occurrences",
+   "where_to_check": "ST7757.dxf, COLUMN & AXIS PLAN, p.1; ST7757.dxf, FOUNDATION PLAN, p.2; ST7757.dxf, GROUND BEAMS PLAN, p.3"
+  },
+  {
+   "affected_facts": [
+    "occurrence"
+   ],
+   "answer_options": [
+    {
+     "answer": "exists",
+     "effect": "keep"
+    },
+    {
+     "answer": "does not exist",
+     "effect": "remove from the count"
+    }
+   ],
+   "context": {},
+   "current_interpretation": "counted (present on the other plans)",
+   "detector": "presence_gaps",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "COLPOS-X?-Y?-29108-18112",
+   "element_ids": [
+    "COLPOS-X?-Y?-29108-18112"
+   ],
+   "element_type": "COLUMN",
+   "flag_id": "STR-COL-011",
+   "flag_key": "5f49f5bc706c6d18",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by presence_gaps",
+     "to": "PROVISIONAL_INTERPRETATION"
+    }
+   ],
+   "interpretation_authority": "DRAWN_GEOMETRY",
+   "issue_summary": "column CN is drawn on FOUNDATION PLAN, GROUND BEAMS PLAN but not on COLUMN & AXIS PLAN.",
+   "issue_type": "SOURCE_CONFLICT",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 1,
+   "question_for_engineer": "Does this column exist (it is missing on COLUMN & AXIS PLAN)?",
+   "release_effect": "PROVISIONAL",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "s3_kind": "SOURCE_CONFLICT",
+   "s3_quantification_kg": {
+    "alternative": "not quantified - depends on the answer (see answer options)",
+    "alternative_kg": null,
+    "current_basis": "kg of the parts this flag touches",
+    "current_kg": 24.816,
+    "current_released_kg": 18.632,
+    "kg_in_flagged_parts": 24.816,
+    "parts": 6,
+    "quantity_affected_kg": 6.184
+   },
+   "severity": "LOW",
+   "source_a": {
+    "description": "drawn on",
+    "value": [
+     "FOUNDATION PLAN",
+     "GROUND BEAMS PLAN"
+    ]
+   },
+   "source_b": {
+    "description": "missing on",
+    "value": [
+     "COLUMN & AXIS PLAN"
+    ]
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "180A",
+     "page": 2,
+     "sheet_title": "FOUNDATION PLAN"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "17BA",
+     "page": 3,
+     "sheet_title": "GROUND BEAMS PLAN"
+    }
+   ],
+   "status": "PROVISIONAL_INTERPRETATION",
+   "trade": [
+    "CONCRETE"
+   ],
+   "unit": "nr occurrences",
+   "where_to_check": "ST7757.dxf, FOUNDATION PLAN, p.2; ST7757.dxf, GROUND BEAMS PLAN, p.3"
+  },
+  {
+   "affected_facts": [
+    "section"
+   ],
+   "answer_options": [
+    {
+     "answer": "schedule section (storey band)",
+     "effect": "current quantity stands"
+    },
+    {
+     "answer": "drawn outline",
+     "effect": "concrete / formwork / bars follow it; the other source needs revision"
+    }
+   ],
+   "context": {
+    "value_pairs": [
+     [
+      "[30.0, 50.0]",
+      "[20.0, 50.0]"
+     ]
+    ]
+   },
+   "current_interpretation": "[30.0, 50.0] (MEMBER_SCHEDULE) used",
+   "detector": "section_overrides",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "COLUMN:C1:OVERRIDE",
+   "element_ids": [
+    "COL-C1-X09-Y09-FOUNDATION"
+   ],
+   "element_type": "COLUMN",
+   "flag_id": "STR-COL-012",
+   "flag_key": "b4adc58ed35e8d09",
+   "floor": "FOUNDATION",
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by section_overrides",
+     "to": "PROVISIONAL_INTERPRETATION"
+    }
+   ],
+   "interpretation_authority": "MEMBER_SCHEDULE",
+   "issue_summary": "1 column occurrence(s) of type C1: schedule section (storey band) differs from drawn outline ([30.0, 50.0] vs [20.0, 50.0]).",
+   "issue_type": "SOURCE_CONFLICT",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 1,
+   "question_for_engineer": "For column type C1: does the schedule section (storey band) govern, or the drawn outline ([30.0, 50.0] vs [20.0, 50.0])?",
+   "release_effect": "PROVISIONAL",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "s3_kind": "SOURCE_CONFLICT",
+   "s3_quantification_kg": {
+    "alternative": "ties on the drawn section",
+    "alternative_kg": 5.207,
+    "current_basis": "ties on the schedule section",
+    "current_kg": 5.997,
+    "current_released_kg": 5.404,
+    "kg_in_flagged_parts": 5.404,
+    "parts": 1,
+    "quantity_affected_kg": -0.79,
+    "ties_kg_drawn_section": 5.207,
+    "ties_kg_schedule_section": 5.997
+   },
+   "severity": "MEDIUM",
+   "source_a": {
+    "authority": "MEMBER_SCHEDULE",
+    "description": "schedule section (storey band)",
+    "source_ref": {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 9,
+     "sheet_title": "schedule (column)",
+     "text": "C1"
+    },
+    "value": [
+     30.0,
+     50.0
+    ]
+   },
+   "source_b": {
+    "authority": "DRAWN_GEOMETRY",
+    "description": "drawn outline",
+    "source_ref": {
+     "drawing": "ST7757.dxf",
+     "handle": "1099",
+     "layer": "S-COL.BON",
+     "page": 2,
+     "sheet_title": "FOUNDATION PLAN",
+     "xy_mm": [
+      19688,
+      17362
+     ]
+    },
+    "value": [
+     20.0,
+     50.0
+    ]
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 9,
+     "sheet_title": "schedule (column)",
+     "text": "C1"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "1099",
+     "layer": "S-COL.BON",
+     "page": 2,
+     "sheet_title": "FOUNDATION PLAN",
+     "xy_mm": [
+      19688,
+      17362
+     ]
+    }
+   ],
+   "status": "PROVISIONAL_INTERPRETATION",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences",
+   "where_to_check": "ST7757.dxf / ST7757.pdf, schedule (column), p.9; ST7757.dxf, FOUNDATION PLAN, p.2"
+  },
+  {
+   "affected_facts": [
+    "section"
+   ],
+   "answer_options": [
+    {
+     "answer": "schedule section (storey band)",
+     "effect": "current quantity stands"
+    },
+    {
+     "answer": "drawn outline",
+     "effect": "concrete / formwork / bars follow it; the other source needs revision"
+    }
+   ],
+   "context": {
+    "value_pairs": [
+     [
+      "[30.0, 50.0]",
+      "[20.0, 50.0]"
+     ]
+    ]
+   },
+   "current_interpretation": "[30.0, 50.0] (MEMBER_SCHEDULE) used",
+   "detector": "section_overrides",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "COLUMN:C2:OVERRIDE",
+   "element_ids": [
+    "COL-C2-X09-Y07-FOUNDATION",
+    "COL-C2-X10-Y09-FOUNDATION"
+   ],
+   "element_type": "COLUMN",
+   "flag_id": "STR-COL-013",
+   "flag_key": "af638353ff477a4c",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by section_overrides",
+     "to": "PROVISIONAL_INTERPRETATION"
+    }
+   ],
+   "interpretation_authority": "MEMBER_SCHEDULE",
+   "issue_summary": "2 column occurrence(s) of type C2: schedule section (storey band) differs from drawn outline ([30.0, 50.0] vs [20.0, 50.0]).",
+   "issue_type": "SOURCE_CONFLICT",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 2,
+   "question_for_engineer": "For column type C2: does the schedule section (storey band) govern, or the drawn outline ([30.0, 50.0] vs [20.0, 50.0])?",
+   "release_effect": "PROVISIONAL",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "s3_kind": "SOURCE_CONFLICT",
+   "s3_quantification_kg": {
+    "alternative": "ties on the drawn section",
+    "alternative_kg": 10.414,
+    "current_basis": "ties on the schedule section",
+    "current_kg": 11.994,
+    "current_released_kg": 10.809,
+    "kg_in_flagged_parts": 10.809,
+    "parts": 2,
+    "quantity_affected_kg": -1.58,
+    "ties_kg_drawn_section": 10.414,
+    "ties_kg_schedule_section": 11.994
+   },
+   "severity": "MEDIUM",
+   "source_a": {
+    "authority": "MEMBER_SCHEDULE",
+    "description": "schedule section (storey band)",
+    "source_ref": {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 9,
+     "sheet_title": "schedule (column)",
+     "text": "C2"
+    },
+    "value": [
+     30.0,
+     50.0
+    ]
+   },
+   "source_b": {
+    "authority": "DRAWN_GEOMETRY",
+    "description": "drawn outline",
+    "source_ref": {
+     "drawing": "ST7757.dxf",
+     "handle": "1096",
+     "layer": "S-COL.BON",
+     "page": 2,
+     "sheet_title": "FOUNDATION PLAN",
+     "xy_mm": [
+      19688,
+      15662
+     ]
+    },
+    "value": [
+     20.0,
+     50.0
+    ]
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 9,
+     "sheet_title": "schedule (column)",
+     "text": "C2"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "1096",
+     "layer": "S-COL.BON",
+     "page": 2,
+     "sheet_title": "FOUNDATION PLAN",
+     "xy_mm": [
+      19688,
+      15662
+     ]
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "1093",
+     "layer": "S-COL.BON",
+     "page": 2,
+     "sheet_title": "FOUNDATION PLAN",
+     "xy_mm": [
+      21688,
+      17362
+     ]
+    }
+   ],
+   "status": "PROVISIONAL_INTERPRETATION",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences",
+   "where_to_check": "ST7757.dxf / ST7757.pdf, schedule (column), p.9; ST7757.dxf, FOUNDATION PLAN, p.2"
+  },
+  {
+   "affected_facts": [
+    "section"
+   ],
+   "answer_options": [
+    {
+     "answer": "schedule section (storey band)",
+     "effect": "current quantity stands"
+    },
+    {
+     "answer": "drawn outline",
+     "effect": "concrete / formwork / bars follow it; the other source needs revision"
+    }
+   ],
+   "context": {
+    "value_pairs": [
+     [
+      "[20.0, 50.0]",
+      "[25.0, 50.0]"
+     ],
+     [
+      "[25.0, 50.0]",
+      "[20.0, 40.0]"
+     ],
+     [
+      "[25.0, 50.0]",
+      "[20.0, 50.0]"
+     ]
+    ]
+   },
+   "current_interpretation": "[25.0, 50.0] (MEMBER_SCHEDULE) used",
+   "detector": "section_overrides",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "COLUMN:C3:OVERRIDE",
+   "element_ids": [
+    "COL-C3-X04-Y01-GF",
+    "COL-C3-X16-Y06-GF",
+    "COL-C3-X08-Y09-1F",
+    "COL-C3-X08-Y09-2F"
+   ],
+   "element_type": "COLUMN",
+   "flag_id": "STR-COL-014",
+   "flag_key": "9959b2794f775d09",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by section_overrides",
+     "to": "PROVISIONAL_INTERPRETATION"
+    }
+   ],
+   "interpretation_authority": "MEMBER_SCHEDULE",
+   "issue_summary": "4 column occurrence(s) of type C3: schedule section (storey band) differs from drawn outline ([20.0, 50.0] vs [25.0, 50.0]; [25.0, 50.0] vs [20.0, 40.0]; [25.0, 50.0] vs [20.0, 50.0]).",
+   "issue_type": "SOURCE_CONFLICT",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 4,
+   "question_for_engineer": "For column type C3: does the schedule section (storey band) govern, or the drawn outline ([20.0, 50.0] vs [25.0, 50.0]; [25.0, 50.0] vs [20.0, 40.0]; [25.0, 50.0] vs [20.0, 50.0])?",
+   "release_effect": "PROVISIONAL",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "s3_kind": "SOURCE_CONFLICT",
+   "s3_quantification_kg": {
+    "alternative": "ties on the drawn section",
+    "alternative_kg": 42.302,
+    "current_basis": "ties on the schedule section",
+    "current_kg": 44.514,
+    "current_released_kg": 28.133,
+    "kg_in_flagged_parts": 39.655,
+    "parts": 4,
+    "quantity_affected_kg": -2.212,
+    "ties_kg_drawn_section": 42.302,
+    "ties_kg_schedule_section": 44.514
+   },
+   "severity": "MEDIUM",
+   "source_a": {
+    "authority": "MEMBER_SCHEDULE",
+    "description": "schedule section (storey band)",
+    "source_ref": {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 9,
+     "sheet_title": "schedule (column)",
+     "text": "C3"
+    },
+    "value": [
+     25.0,
+     50.0
+    ]
+   },
+   "source_b": {
+    "authority": "DRAWN_GEOMETRY",
+    "description": "drawn outline",
+    "source_ref": {
+     "drawing": "ST7757.dxf",
+     "handle": "350",
+     "layer": "S-COL.BON",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "xy_mm": [
+      7938,
+      7412
+     ]
+    },
+    "value": [
+     20.0,
+     40.0
+    ]
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 9,
+     "sheet_title": "schedule (column)",
+     "text": "C3"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "350",
+     "layer": "S-COL.BON",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "xy_mm": [
+      7938,
+      7412
+     ]
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "344",
+     "layer": "S-COL.BON",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "xy_mm": [
+      33158,
+      14962
+     ]
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "691",
+     "layer": "S-COL.BON",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "xy_mm": [
+      17013,
+      17362
+     ]
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "424",
+     "layer": "S-COL.BON",
+     "page": 6,
+     "sheet_title": "SECOND FLOOR ROOF SLAB",
+     "xy_mm": [
+      17013,
+      17362
+     ]
+    }
+   ],
+   "status": "PROVISIONAL_INTERPRETATION",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences",
+   "where_to_check": "ST7757.dxf / ST7757.pdf, schedule (column), p.9; ST7757.dxf, GROUND FLOOR ROOF SLAB, p.4"
+  },
+  {
+   "affected_facts": [
+    "section"
+   ],
+   "answer_options": [
+    {
+     "answer": "schedule section (storey band)",
+     "effect": "current quantity stands"
+    },
+    {
+     "answer": "drawn outline",
+     "effect": "concrete / formwork / bars follow it; the other source needs revision"
+    }
+   ],
+   "context": {
+    "value_pairs": [
+     [
+      "[20.0, 50.0]",
+      "[25.0, 50.0]"
+     ],
+     [
+      "[30.0, 50.0]",
+      "[25.0, 50.0]"
+     ]
+    ]
+   },
+   "current_interpretation": "[20.0, 50.0] (MEMBER_SCHEDULE) used",
+   "detector": "section_overrides",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "COLUMN:C4:OVERRIDE",
+   "element_ids": [
+    "COL-C4-X13-Y10-1F",
+    "COL-C4-X15-Y10-FOUNDATION",
+    "COL-C4-X15-Y10-1F"
+   ],
+   "element_type": "COLUMN",
+   "flag_id": "STR-COL-015",
+   "flag_key": "43aec3f474f6b35f",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by section_overrides",
+     "to": "PROVISIONAL_INTERPRETATION"
+    }
+   ],
+   "interpretation_authority": "MEMBER_SCHEDULE",
+   "issue_summary": "3 column occurrence(s) of type C4: schedule section (storey band) differs from drawn outline ([20.0, 50.0] vs [25.0, 50.0]; [30.0, 50.0] vs [25.0, 50.0]).",
+   "issue_type": "SOURCE_CONFLICT",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 3,
+   "question_for_engineer": "For column type C4: does the schedule section (storey band) govern, or the drawn outline ([20.0, 50.0] vs [25.0, 50.0]; [30.0, 50.0] vs [25.0, 50.0])?",
+   "release_effect": "PROVISIONAL",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "s3_kind": "SOURCE_CONFLICT",
+   "s3_quantification_kg": {
+    "alternative": "ties on the drawn section",
+    "alternative_kg": 30.811,
+    "current_basis": "ties on the schedule section",
+    "current_kg": 29.507,
+    "current_released_kg": 26.248,
+    "kg_in_flagged_parts": 26.248,
+    "parts": 3,
+    "quantity_affected_kg": 1.304,
+    "ties_kg_drawn_section": 30.811,
+    "ties_kg_schedule_section": 29.507
+   },
+   "severity": "MEDIUM",
+   "source_a": {
+    "authority": "MEMBER_SCHEDULE",
+    "description": "schedule section (storey band)",
+    "source_ref": {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 9,
+     "sheet_title": "schedule (column)",
+     "text": "C4"
+    },
+    "value": [
+     20.0,
+     50.0
+    ]
+   },
+   "source_b": {
+    "authority": "DRAWN_GEOMETRY",
+    "description": "drawn outline",
+    "source_ref": {
+     "drawing": "ST7757.dxf",
+     "handle": "697",
+     "layer": "S-COL.BON",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "xy_mm": [
+      27458,
+      20687
+     ]
+    },
+    "value": [
+     25.0,
+     50.0
+    ]
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 9,
+     "sheet_title": "schedule (column)",
+     "text": "C4"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "697",
+     "layer": "S-COL.BON",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "xy_mm": [
+      27458,
+      20687
+     ]
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "108D",
+     "layer": "S-COL.BON",
+     "page": 2,
+     "sheet_title": "FOUNDATION PLAN",
+     "xy_mm": [
+      31508,
+      20687
+     ]
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "676",
+     "layer": "S-COL.BON",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "xy_mm": [
+      31508,
+      20687
+     ]
+    }
+   ],
+   "status": "PROVISIONAL_INTERPRETATION",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences",
+   "where_to_check": "ST7757.dxf / ST7757.pdf, schedule (column), p.9; ST7757.dxf, FIRST FLOOR ROOF SLAB, p.5"
+  },
+  {
+   "affected_facts": [
+    "section"
+   ],
+   "answer_options": [
+    {
+     "answer": "schedule section (storey band)",
+     "effect": "current quantity stands"
+    },
+    {
+     "answer": "drawn outline",
+     "effect": "concrete / formwork / bars follow it; the other source needs revision"
+    }
+   ],
+   "context": {
+    "value_pairs": [
+     [
+      "[20.0, 50.0]",
+      "[20.0, 60.0]"
+     ],
+     [
+      "[20.0, 50.0]",
+      "[25.0, 60.0]"
+     ]
+    ]
+   },
+   "current_interpretation": "[20.0, 50.0] (MEMBER_SCHEDULE) used",
+   "detector": "section_overrides",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "COLUMN:C5:OVERRIDE",
+   "element_ids": [
+    "COL-C5-X14-Y02-1F",
+    "COL-C5-X05-Y04-1F",
+    "COL-C5-X11-Y10-1F",
+    "COL-C5-X11-Y10-2F"
+   ],
+   "element_type": "COLUMN",
+   "flag_id": "STR-COL-016",
+   "flag_key": "d03616d862033e55",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by section_overrides",
+     "to": "PROVISIONAL_INTERPRETATION"
+    }
+   ],
+   "interpretation_authority": "MEMBER_SCHEDULE",
+   "issue_summary": "4 column occurrence(s) of type C5: schedule section (storey band) differs from drawn outline ([20.0, 50.0] vs [20.0, 60.0]; [20.0, 50.0] vs [25.0, 60.0]).",
+   "issue_type": "SOURCE_CONFLICT",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 4,
+   "question_for_engineer": "For column type C5: does the schedule section (storey band) govern, or the drawn outline ([20.0, 50.0] vs [20.0, 60.0]; [20.0, 50.0] vs [25.0, 60.0])?",
+   "release_effect": "PROVISIONAL",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "s3_kind": "SOURCE_CONFLICT",
+   "s3_quantification_kg": {
+    "alternative": "ties on the drawn section",
+    "alternative_kg": 77.515,
+    "current_basis": "ties on the schedule section",
+    "current_kg": 43.217,
+    "current_released_kg": 38.299,
+    "kg_in_flagged_parts": 38.299,
+    "parts": 4,
+    "quantity_affected_kg": 34.298,
+    "ties_kg_drawn_section": 77.515,
+    "ties_kg_schedule_section": 43.217
+   },
+   "severity": "MEDIUM",
+   "source_a": {
+    "authority": "MEMBER_SCHEDULE",
+    "description": "schedule section (storey band)",
+    "source_ref": {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 9,
+     "sheet_title": "schedule (column)",
+     "text": "C5"
+    },
+    "value": [
+     20.0,
+     50.0
+    ]
+   },
+   "source_b": {
+    "authority": "DRAWN_GEOMETRY",
+    "description": "drawn outline",
+    "source_ref": {
+     "drawing": "ST7757.dxf",
+     "handle": "694",
+     "layer": "S-COL.BON",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "xy_mm": [
+      27658,
+      8937
+     ]
+    },
+    "value": [
+     25.0,
+     60.0
+    ]
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 9,
+     "sheet_title": "schedule (column)",
+     "text": "C5"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "694",
+     "layer": "S-COL.BON",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "xy_mm": [
+      27658,
+      8937
+     ]
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "685",
+     "layer": "S-COL.BON",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "xy_mm": [
+      12588,
+      11912
+     ]
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "673",
+     "layer": "S-COL.BON",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "xy_mm": [
+      23558,
+      20687
+     ]
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "415",
+     "layer": "S-COL.BON",
+     "page": 6,
+     "sheet_title": "SECOND FLOOR ROOF SLAB",
+     "xy_mm": [
+      23558,
+      20712
+     ]
+    }
+   ],
+   "status": "PROVISIONAL_INTERPRETATION",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences",
+   "where_to_check": "ST7757.dxf / ST7757.pdf, schedule (column), p.9; ST7757.dxf, FIRST FLOOR ROOF SLAB, p.5"
+  },
+  {
+   "affected_facts": [
+    "section"
+   ],
+   "answer_options": [
+    {
+     "answer": "schedule section (storey band)",
+     "effect": "current quantity stands"
+    },
+    {
+     "answer": "drawn outline",
+     "effect": "concrete / formwork / bars follow it; the other source needs revision"
+    }
+   ],
+   "context": {
+    "value_pairs": [
+     [
+      "[20.0, 60.0]",
+      "[25.0, 70.0]"
+     ]
+    ]
+   },
+   "current_interpretation": "[20.0, 60.0] (MEMBER_SCHEDULE) used",
+   "detector": "section_overrides",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "COLUMN:C6:OVERRIDE",
+   "element_ids": [
+    "COL-C6-X08-Y04-1F"
+   ],
+   "element_type": "COLUMN",
+   "flag_id": "STR-COL-017",
+   "flag_key": "717770985d307b9f",
+   "floor": "1F",
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by section_overrides",
+     "to": "PROVISIONAL_INTERPRETATION"
+    }
+   ],
+   "interpretation_authority": "MEMBER_SCHEDULE",
+   "issue_summary": "1 column occurrence(s) of type C6: schedule section (storey band) differs from drawn outline ([20.0, 60.0] vs [25.0, 70.0]).",
+   "issue_type": "SOURCE_CONFLICT",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 1,
+   "question_for_engineer": "For column type C6: does the schedule section (storey band) govern, or the drawn outline ([20.0, 60.0] vs [25.0, 70.0])?",
+   "release_effect": "PROVISIONAL",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "s3_kind": "SOURCE_CONFLICT",
+   "s3_quantification_kg": {
+    "alternative": "ties on the drawn section",
+    "alternative_kg": 25.551,
+    "current_basis": "ties on the schedule section",
+    "current_kg": 21.311,
+    "current_released_kg": 18.585,
+    "kg_in_flagged_parts": 18.585,
+    "parts": 2,
+    "quantity_affected_kg": 4.24,
+    "ties_kg_drawn_section": 25.551,
+    "ties_kg_schedule_section": 21.311
+   },
+   "severity": "MEDIUM",
+   "source_a": {
+    "authority": "MEMBER_SCHEDULE",
+    "description": "schedule section (storey band)",
+    "source_ref": {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 9,
+     "sheet_title": "schedule (column)",
+     "text": "C6"
+    },
+    "value": [
+     20.0,
+     60.0
+    ]
+   },
+   "source_b": {
+    "authority": "DRAWN_GEOMETRY",
+    "description": "drawn outline",
+    "source_ref": {
+     "drawing": "ST7757.dxf",
+     "handle": "688",
+     "layer": "S-COL.BON",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "xy_mm": [
+      17013,
+      12362
+     ]
+    },
+    "value": [
+     25.0,
+     70.0
+    ]
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 9,
+     "sheet_title": "schedule (column)",
+     "text": "C6"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "688",
+     "layer": "S-COL.BON",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "xy_mm": [
+      17013,
+      12362
+     ]
+    }
+   ],
+   "status": "PROVISIONAL_INTERPRETATION",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences",
+   "where_to_check": "ST7757.dxf / ST7757.pdf, schedule (column), p.9; ST7757.dxf, FIRST FLOOR ROOF SLAB, p.5"
+  },
+  {
+   "affected_facts": [
+    "section"
+   ],
+   "answer_options": [
+    {
+     "answer": "schedule section (storey band)",
+     "effect": "current quantity stands"
+    },
+    {
+     "answer": "drawn outline",
+     "effect": "concrete / formwork / bars follow it; the other source needs revision"
+    }
+   ],
+   "context": {
+    "value_pairs": [
+     [
+      "[20.0, 80.0]",
+      "[25.0, 80.0]"
+     ]
+    ]
+   },
+   "current_interpretation": "[20.0, 80.0] (MEMBER_SCHEDULE) used",
+   "detector": "section_overrides",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "COLUMN:C7:OVERRIDE",
+   "element_ids": [
+    "COL-C7-X07-Y?@15888-16162-1F"
+   ],
+   "element_type": "COLUMN",
+   "flag_id": "STR-COL-018",
+   "flag_key": "66e7e7b066d378bc",
+   "floor": "1F",
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by section_overrides",
+     "to": "PROVISIONAL_INTERPRETATION"
+    }
+   ],
+   "interpretation_authority": "MEMBER_SCHEDULE",
+   "issue_summary": "1 column occurrence(s) of type C7: schedule section (storey band) differs from drawn outline ([20.0, 80.0] vs [25.0, 80.0]).",
+   "issue_type": "SOURCE_CONFLICT",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 1,
+   "question_for_engineer": "For column type C7: does the schedule section (storey band) govern, or the drawn outline ([20.0, 80.0] vs [25.0, 80.0])?",
+   "release_effect": "PROVISIONAL",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "s3_kind": "SOURCE_CONFLICT",
+   "s3_quantification_kg": {
+    "alternative": "ties on the drawn section",
+    "alternative_kg": 27.733,
+    "current_basis": "ties on the schedule section",
+    "current_kg": 25.6,
+    "current_released_kg": 22.4,
+    "kg_in_flagged_parts": 22.4,
+    "parts": 2,
+    "quantity_affected_kg": 2.133,
+    "ties_kg_drawn_section": 27.733,
+    "ties_kg_schedule_section": 25.6
+   },
+   "severity": "MEDIUM",
+   "source_a": {
+    "authority": "MEMBER_SCHEDULE",
+    "description": "schedule section (storey band)",
+    "source_ref": {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 9,
+     "sheet_title": "schedule (column)",
+     "text": "C7"
+    },
+    "value": [
+     20.0,
+     80.0
+    ]
+   },
+   "source_b": {
+    "authority": "DRAWN_GEOMETRY",
+    "description": "drawn outline",
+    "source_ref": {
+     "drawing": "ST7757.dxf",
+     "handle": "68E",
+     "layer": "S-COL.BON",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "xy_mm": [
+      15888,
+      16187
+     ]
+    },
+    "value": [
+     25.0,
+     80.0
+    ]
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 9,
+     "sheet_title": "schedule (column)",
+     "text": "C7"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "68E",
+     "layer": "S-COL.BON",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "xy_mm": [
+      15888,
+      16187
+     ]
+    }
+   ],
+   "status": "PROVISIONAL_INTERPRETATION",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences",
+   "where_to_check": "ST7757.dxf / ST7757.pdf, schedule (column), p.9; ST7757.dxf, FIRST FLOOR ROOF SLAB, p.5"
+  },
+  {
+   "affected_facts": [
+    "section"
+   ],
+   "answer_options": [
+    {
+     "answer": "schedule section (storey band)",
+     "effect": "current quantity stands"
+    },
+    {
+     "answer": "drawn outline",
+     "effect": "concrete / formwork / bars follow it; the other source needs revision"
+    }
+   ],
+   "context": {
+    "value_pairs": [
+     [
+      "[20.0, 90.0]",
+      "[25.0, 80.0]"
+     ],
+     [
+      "[25.0, 90.0]",
+      "[25.0, 80.0]"
+     ],
+     [
+      "[30.0, 90.0]",
+      "[30.0, 80.0]"
+     ]
+    ]
+   },
+   "current_interpretation": "[30.0, 90.0] (MEMBER_SCHEDULE) used",
+   "detector": "section_overrides",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "COLUMN:C8:OVERRIDE",
+   "element_ids": [
+    "COL-C8-X12-Y02-FOUNDATION",
+    "COL-C8-X12-Y02-GF",
+    "COL-C8-X12-Y02-1F"
+   ],
+   "element_type": "COLUMN",
+   "flag_id": "STR-COL-019",
+   "flag_key": "ce59876118cdbe17",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by section_overrides",
+     "to": "PROVISIONAL_INTERPRETATION"
+    }
+   ],
+   "interpretation_authority": "MEMBER_SCHEDULE",
+   "issue_summary": "3 column occurrence(s) of type C8: schedule section (storey band) differs from drawn outline ([20.0, 90.0] vs [25.0, 80.0]; [25.0, 90.0] vs [25.0, 80.0]; [30.0, 90.0] vs [30.0, 80.0]).",
+   "issue_type": "SOURCE_CONFLICT",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 3,
+   "question_for_engineer": "For column type C8: does the schedule section (storey band) govern, or the drawn outline ([20.0, 90.0] vs [25.0, 80.0]; [25.0, 90.0] vs [25.0, 80.0]; [30.0, 90.0] vs [30.0, 80.0])?",
+   "release_effect": "PROVISIONAL",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "s3_kind": "SOURCE_CONFLICT",
+   "s3_quantification_kg": {
+    "alternative": "ties on the drawn section",
+    "alternative_kg": 90.002,
+    "current_basis": "ties on the schedule section",
+    "current_kg": 87.513,
+    "current_released_kg": 77.913,
+    "kg_in_flagged_parts": 77.913,
+    "parts": 6,
+    "quantity_affected_kg": 2.489,
+    "ties_kg_drawn_section": 90.002,
+    "ties_kg_schedule_section": 87.513
+   },
+   "severity": "MEDIUM",
+   "source_a": {
+    "authority": "MEMBER_SCHEDULE",
+    "description": "schedule section (storey band)",
+    "source_ref": {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 9,
+     "sheet_title": "schedule (column)",
+     "text": "C8"
+    },
+    "value": [
+     30.0,
+     90.0
+    ]
+   },
+   "source_b": {
+    "authority": "DRAWN_GEOMETRY",
+    "description": "drawn outline",
+    "source_ref": {
+     "drawing": "ST7757.dxf",
+     "handle": "10E0",
+     "layer": "S-COL.BON",
+     "page": 2,
+     "sheet_title": "FOUNDATION PLAN",
+     "xy_mm": [
+      24308,
+      8912
+     ]
+    },
+    "value": [
+     30.0,
+     80.0
+    ]
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 9,
+     "sheet_title": "schedule (column)",
+     "text": "C8"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "10E0",
+     "layer": "S-COL.BON",
+     "page": 2,
+     "sheet_title": "FOUNDATION PLAN",
+     "xy_mm": [
+      24308,
+      8912
+     ]
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "380",
+     "layer": "S-COL.BON",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "xy_mm": [
+      24308,
+      8937
+     ]
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "69A",
+     "layer": "S-COL.BON",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "xy_mm": [
+      24308,
+      8937
+     ]
+    }
+   ],
+   "status": "PROVISIONAL_INTERPRETATION",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences",
+   "where_to_check": "ST7757.dxf / ST7757.pdf, schedule (column), p.9; ST7757.dxf, FOUNDATION PLAN, p.2"
+  },
+  {
+   "affected_facts": [
+    "section"
+   ],
+   "answer_options": [
+    {
+     "answer": "schedule section (storey band)",
+     "effect": "current quantity stands"
+    },
+    {
+     "answer": "drawn outline",
+     "effect": "concrete / formwork / bars follow it; the other source needs revision"
+    }
+   ],
+   "context": {
+    "value_pairs": [
+     [
+      "[20.0, 90.0]",
+      "[20.0, 100.0]"
+     ],
+     [
+      "[20.0, 90.0]",
+      "[25.0, 100.0]"
+     ],
+     [
+      "[30.0, 100.0]",
+      "[25.0, 100.0]"
+     ]
+    ]
+   },
+   "current_interpretation": "[30.0, 100.0] (MEMBER_SCHEDULE) used",
+   "detector": "section_overrides",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "COLUMN:C9:OVERRIDE",
+   "element_ids": [
+    "COL-C9-X10-Y07-FOUNDATION",
+    "COL-C9-X10-Y07-1F",
+    "COL-C9-X13-Y08-1F"
+   ],
+   "element_type": "COLUMN",
+   "flag_id": "STR-COL-020",
+   "flag_key": "af7c64702ffc823c",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by section_overrides",
+     "to": "PROVISIONAL_INTERPRETATION"
+    }
+   ],
+   "interpretation_authority": "MEMBER_SCHEDULE",
+   "issue_summary": "3 column occurrence(s) of type C9: schedule section (storey band) differs from drawn outline ([20.0, 90.0] vs [20.0, 100.0]; [20.0, 90.0] vs [25.0, 100.0]; [30.0, 100.0] vs [25.0, 100.0]).",
+   "issue_type": "SOURCE_CONFLICT",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 3,
+   "question_for_engineer": "For column type C9: does the schedule section (storey band) govern, or the drawn outline ([20.0, 90.0] vs [20.0, 100.0]; [20.0, 90.0] vs [25.0, 100.0]; [30.0, 100.0] vs [25.0, 100.0])?",
+   "release_effect": "PROVISIONAL",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "s3_kind": "SOURCE_CONFLICT",
+   "s3_quantification_kg": {
+    "alternative": "ties on the drawn section",
+    "alternative_kg": 110.756,
+    "current_basis": "ties on the schedule section",
+    "current_kg": 103.432,
+    "current_released_kg": 68.502,
+    "kg_in_flagged_parts": 93.476,
+    "parts": 6,
+    "quantity_affected_kg": 7.324,
+    "ties_kg_drawn_section": 110.756,
+    "ties_kg_schedule_section": 103.432
+   },
+   "severity": "MEDIUM",
+   "source_a": {
+    "authority": "MEMBER_SCHEDULE",
+    "description": "schedule section (storey band)",
+    "source_ref": {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 9,
+     "sheet_title": "schedule (column)",
+     "text": "C9"
+    },
+    "value": [
+     30.0,
+     100.0
+    ]
+   },
+   "source_b": {
+    "authority": "DRAWN_GEOMETRY",
+    "description": "drawn outline",
+    "source_ref": {
+     "drawing": "ST7757.dxf",
+     "handle": "1090",
+     "layer": "S-COL.BON",
+     "page": 2,
+     "sheet_title": "FOUNDATION PLAN",
+     "xy_mm": [
+      21713,
+      15912
+     ]
+    },
+    "value": [
+     25.0,
+     100.0
+    ]
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 9,
+     "sheet_title": "schedule (column)",
+     "text": "C9"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "1090",
+     "layer": "S-COL.BON",
+     "page": 2,
+     "sheet_title": "FOUNDATION PLAN",
+     "xy_mm": [
+      21713,
+      15912
+     ]
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "679",
+     "layer": "S-COL.BON",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "xy_mm": [
+      21713,
+      15912
+     ]
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "667",
+     "layer": "S-COL.BON",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "xy_mm": [
+      27308,
+      16587
+     ]
+    }
+   ],
+   "status": "PROVISIONAL_INTERPRETATION",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences",
+   "where_to_check": "ST7757.dxf / ST7757.pdf, schedule (column), p.9; ST7757.dxf, FOUNDATION PLAN, p.2"
+  },
+  {
+   "affected_facts": [
+    "section"
+   ],
+   "answer_options": [
+    {
+     "answer": "schedule section (storey band)",
+     "effect": "current quantity stands"
+    },
+    {
+     "answer": "drawn outline",
+     "effect": "concrete / formwork / bars follow it; the other source needs revision"
+    }
+   ],
+   "context": {
+    "value_pairs": [
+     [
+      "[20.0, 50.0]",
+      "[20.0, 40.0]"
+     ]
+    ]
+   },
+   "current_interpretation": "[20.0, 50.0] (MEMBER_SCHEDULE) used",
+   "detector": "section_overrides",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "COLUMN:C:OVERRIDE",
+   "element_ids": [
+    "COL-C-X01-Y01-GF",
+    "COL-C-X06-Y01-GF",
+    "COL-C-X16-Y01-GF",
+    "COL-C-X01-Y05-GF",
+    "COL-C-X02-Y05-GF"
+   ],
+   "element_type": "COLUMN",
+   "flag_id": "STR-COL-021",
+   "flag_key": "7a6e886ffef87d2e",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by section_overrides",
+     "to": "PROVISIONAL_INTERPRETATION"
+    }
+   ],
+   "interpretation_authority": "MEMBER_SCHEDULE",
+   "issue_summary": "5 column occurrence(s) of type C: schedule section (storey band) differs from drawn outline ([20.0, 50.0] vs [20.0, 40.0]).",
+   "issue_type": "SOURCE_CONFLICT",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 5,
+   "question_for_engineer": "For column type C: does the schedule section (storey band) govern, or the drawn outline ([20.0, 50.0] vs [20.0, 40.0])?",
+   "release_effect": "PROVISIONAL",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "s3_kind": "SOURCE_CONFLICT",
+   "s3_quantification_kg": {
+    "alternative": "ties on the drawn section",
+    "alternative_kg": 51.676,
+    "current_basis": "ties on the schedule section",
+    "current_kg": 60.921,
+    "current_released_kg": 53.988,
+    "kg_in_flagged_parts": 53.988,
+    "parts": 5,
+    "quantity_affected_kg": -9.244,
+    "ties_kg_drawn_section": 51.676,
+    "ties_kg_schedule_section": 60.921
+   },
+   "severity": "MEDIUM",
+   "source_a": {
+    "authority": "MEMBER_SCHEDULE",
+    "description": "schedule section (storey band)",
+    "source_ref": {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 9,
+     "sheet_title": "schedule (column)",
+     "text": "C"
+    },
+    "value": [
+     20.0,
+     50.0
+    ]
+   },
+   "source_b": {
+    "authority": "DRAWN_GEOMETRY",
+    "description": "drawn outline",
+    "source_ref": {
+     "drawing": "ST7757.dxf",
+     "handle": "34D",
+     "layer": "S-COL.BON",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "xy_mm": [
+      2088,
+      7412
+     ]
+    },
+    "value": [
+     20.0,
+     40.0
+    ]
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 9,
+     "sheet_title": "schedule (column)",
+     "text": "C"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "34D",
+     "layer": "S-COL.BON",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "xy_mm": [
+      2088,
+      7412
+     ]
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "359",
+     "layer": "S-COL.BON",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "xy_mm": [
+      14088,
+      7412
+     ]
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "347",
+     "layer": "S-COL.BON",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "xy_mm": [
+      33158,
+      7512
+     ]
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "34A",
+     "layer": "S-COL.BON",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "xy_mm": [
+      1988,
+      13812
+     ]
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "356",
+     "layer": "S-COL.BON",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "xy_mm": [
+      4788,
+      13912
+     ]
+    }
+   ],
+   "status": "PROVISIONAL_INTERPRETATION",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences",
+   "where_to_check": "ST7757.dxf / ST7757.pdf, schedule (column), p.9; ST7757.dxf, GROUND FLOOR ROOF SLAB, p.4"
+  },
+  {
+   "affected_facts": [
+    "section"
+   ],
+   "answer_options": [
+    {
+     "answer": "schedule section (storey band)",
+     "effect": "current quantity stands"
+    },
+    {
+     "answer": "drawn outline",
+     "effect": "concrete / formwork / bars follow it; the other source needs revision"
+    }
+   ],
+   "context": {
+    "value_pairs": [
+     [
+      "[20, 50]",
+      "[20.0, 40.0]"
+     ]
+    ]
+   },
+   "current_interpretation": "[20, 50] (MEMBER_SCHEDULE) used",
+   "detector": "section_overrides",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "COLUMN:P.C:OVERRIDE",
+   "element_ids": [
+    "COL-P.C-X?-Y?@24888-15994-2F"
+   ],
+   "element_type": "COLUMN",
+   "flag_id": "STR-COL-022",
+   "flag_key": "449179aaaf9557b4",
+   "floor": "2F",
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by section_overrides",
+     "to": "PROVISIONAL_INTERPRETATION"
+    }
+   ],
+   "interpretation_authority": "MEMBER_SCHEDULE",
+   "issue_summary": "1 column occurrence(s) of type P.C: schedule section (storey band) differs from drawn outline ([20, 50] vs [20.0, 40.0]).",
+   "issue_type": "SOURCE_CONFLICT",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 1,
+   "question_for_engineer": "For column type P.C: does the schedule section (storey band) govern, or the drawn outline ([20, 50] vs [20.0, 40.0])?",
+   "release_effect": "PROVISIONAL",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "s3_kind": "SOURCE_CONFLICT",
+   "s3_quantification_kg": {
+    "alternative": "ties on the drawn section",
+    "alternative_kg": 9.275,
+    "current_basis": "ties on the schedule section",
+    "current_kg": 10.935,
+    "current_released_kg": 9.69,
+    "kg_in_flagged_parts": 9.69,
+    "parts": 1,
+    "quantity_affected_kg": -1.659,
+    "ties_kg_drawn_section": 9.275,
+    "ties_kg_schedule_section": 10.935
+   },
+   "severity": "MEDIUM",
+   "source_a": {
+    "authority": "MEMBER_SCHEDULE",
+    "description": "schedule section (storey band)",
+    "source_ref": {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 9,
+     "sheet_title": "schedule (column)",
+     "text": "P.C"
+    },
+    "value": [
+     20,
+     50
+    ]
+   },
+   "source_b": {
+    "authority": "DRAWN_GEOMETRY",
+    "description": "drawn outline",
+    "source_ref": {
+     "drawing": "ST7757.dxf",
+     "handle": "778",
+     "layer": "S-COL.BON",
+     "page": 6,
+     "sheet_title": "SECOND FLOOR ROOF SLAB",
+     "xy_mm": [
+      24888,
+      15994
+     ]
+    },
+    "value": [
+     20.0,
+     40.0
+    ]
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 9,
+     "sheet_title": "schedule (column)",
+     "text": "P.C"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "778",
+     "layer": "S-COL.BON",
+     "page": 6,
+     "sheet_title": "SECOND FLOOR ROOF SLAB",
+     "xy_mm": [
+      24888,
+      15994
+     ]
+    }
+   ],
+   "status": "PROVISIONAL_INTERPRETATION",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences",
+   "where_to_check": "ST7757.dxf / ST7757.pdf, schedule (column), p.9; ST7757.dxf, SECOND FLOOR ROOF SLAB, p.6"
+  },
+  {
+   "affected_facts": [
+    "section"
+   ],
+   "answer_options": [
+    {
+     "answer": "schedule is correct",
+     "effect": "no quantity change"
+    },
+    {
+     "answer": "increase to 25",
+     "effect": "concrete, formwork and ties increase"
+    }
+   ],
+   "context": {},
+   "current_interpretation": "schedule value kept (member-specific design)",
+   "detector": "minimum_shortfalls",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "P9-COL-TMIN:GF:20.0",
+   "element_ids": [
+    "COL-C-X01-Y01-GF",
+    "COL-C-X06-Y01-GF",
+    "COL-C-X16-Y01-GF",
+    "COL-C-X01-Y05-GF",
+    "COL-C-X02-Y05-GF",
+    "COL-C2-X09-Y07-GF",
+    "COL-C1-X09-Y09-GF",
+    "COL-C2-X10-Y09-GF",
+    "COL-C2-X08-Y10-GF",
+    "COL-C2-X09-Y10-GF"
+   ],
+   "element_type": "COLUMN",
+   "flag_id": "STR-COL-023",
+   "flag_key": "a3a97eb1eb84ffeb",
+   "floor": "GF",
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by minimum_shortfalls",
+     "to": "PROVISIONAL_INTERPRETATION"
+    }
+   ],
+   "interpretation_authority": "MEMBER_SCHEDULE",
+   "issue_summary": "10 column occurrence(s) (C, C1, C2) at GF: schedule gives 20.0 cm but minimum column thickness for the storey height (p.9) requires at least 25.",
+   "issue_type": "SOURCE_CONFLICT",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 10,
+   "question_for_engineer": "The schedule gives 20.0 where the general rule asks for at least 25. Is the schedule correct, or must the section increase?",
+   "release_effect": "PROVISIONAL",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "s3_kind": "SOURCE_CONFLICT",
+   "s3_quantification_kg": {
+    "alternative": "ties on the drawn section",
+    "alternative_kg": 114.159,
+    "current_basis": "ties on the schedule section",
+    "current_kg": 123.404,
+    "current_released_kg": 109.359,
+    "kg_in_flagged_parts": 109.359,
+    "parts": 10,
+    "quantity_affected_kg": -9.244,
+    "ties_kg_drawn_section": 114.159,
+    "ties_kg_schedule_section": 123.404
+   },
+   "severity": "MEDIUM",
+   "source_a": {
+    "description": "minimum column thickness for the storey height (p.9)",
+    "value": 25
+   },
+   "source_b": {
+    "description": "schedule value",
+    "value": 20.0
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BEF",
+     "page": 9,
+     "sheet_title": "rule P9-COL-TMIN"
+    }
+   ],
+   "status": "PROVISIONAL_INTERPRETATION",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences",
+   "where_to_check": "ST7757.pdf, rule P9-COL-TMIN, p.9"
+  },
+  {
+   "affected_facts": [
+    "section_transition"
+   ],
+   "answer_options": [
+    {
+     "answer": "transition blocked (crank / stopped bars / new starters / dowels not detailed)",
+     "effect": "current released basis"
+    },
+    {
+     "answer": "a transition detail from the consultant",
+     "effect": "alternative quantity"
+    }
+   ],
+   "context": {
+    "quantification": {
+     "alternative_kg": null,
+     "current_kg": 0.0,
+     "quantity_affected_kg": null
+    },
+    "s3_kind": "COLUMN_SECTION_TRANSITION_DETAIL_REQUIRED",
+    "supersedes": []
+   },
+   "current_interpretation": "transition blocked (crank / stopped bars / new starters / dowels not detailed)",
+   "detector": "column_rebar.column_section_transition_detail_required",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "COLUMN_SECTION_TRANSITION_DETAIL_REQUIRED",
+   "element_ids": [
+    "COL-C-X01-Y01-FOUNDATION",
+    "COL-C-X01-Y05-FOUNDATION",
+    "COL-C-X02-Y05-FOUNDATION",
+    "COL-C-X06-Y01-FOUNDATION",
+    "COL-C-X16-Y01-FOUNDATION",
+    "COL-C1-X09-Y09-FOUNDATION",
+    "COL-C10-X15-Y01-FOUNDATION",
+    "COL-C11-X06-Y04-FOUNDATION",
+    "COL-C11-X?-Y01@17913-7462-FOUNDATION",
+    "COL-C2-X08-Y10-FOUNDATION",
+    "COL-C2-X09-Y07-FOUNDATION",
+    "COL-C2-X09-Y10-FOUNDATION",
+    "COL-C2-X10-Y09-FOUNDATION",
+    "COL-C3-X03-Y04-FOUNDATION",
+    "COL-C3-X04-Y01-FOUNDATION",
+    "COL-C3-X05-Y02-FOUNDATION",
+    "COL-C3-X05-Y02-GF",
+    "COL-C3-X08-Y09-FOUNDATION",
+    "COL-C3-X08-Y09-GF",
+    "COL-C3-X12-Y01-FOUNDATION",
+    "COL-C3-X16-Y06-FOUNDATION",
+    "COL-C4-X13-Y10-FOUNDATION",
+    "COL-C4-X13-Y10-GF",
+    "COL-C4-X15-Y10-FOUNDATION",
+    "COL-C4-X15-Y10-GF",
+    "COL-C5-X05-Y04-FOUNDATION",
+    "COL-C5-X05-Y04-GF",
+    "COL-C5-X11-Y10-FOUNDATION",
+    "COL-C5-X11-Y10-GF",
+    "COL-C5-X14-Y02-FOUNDATION",
+    "COL-C5-X14-Y02-GF",
+    "COL-C6-X08-Y04-FOUNDATION",
+    "COL-C6-X08-Y04-GF",
+    "COL-C7-X07-Y?@15888-16162-FOUNDATION",
+    "COL-C7-X07-Y?@15888-16162-GF",
+    "COL-C8-X12-Y02-FOUNDATION",
+    "COL-C8-X12-Y02-GF",
+    "COL-C8-X15-Y06-FOUNDATION",
+    "COL-C8-X15-Y06-GF",
+    "COL-C9-X10-Y07-1F",
+    "COL-C9-X10-Y07-FOUNDATION",
+    "COL-C9-X10-Y07-GF",
+    "COL-C9-X13-Y08-FOUNDATION",
+    "COL-C9-X13-Y08-GF"
+   ],
+   "element_type": "COLUMN",
+   "flag_id": "STR-COL-024",
+   "flag_key": "2307a4c8f18e2816",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by column_rebar.column_section_transition_detail_required",
+     "to": "OPEN"
+    }
+   ],
+   "interpretation_authority": "ENGINEERING_METHOD",
+   "issue_summary": "COLUMN_SECTION_TRANSITION_DETAIL_REQUIRED: transition blocked (crank / stopped bars / new starters / dowels not detailed) vs a transition detail from the consultant",
+   "issue_type": "MISSING_DETAIL",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": null,
+   "question_for_engineer": "Where a column section changes between storeys, are the bars cranked, stopped with new starters, or continued with dowels? Please give the detail.",
+   "release_effect": "BLOCKED",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "s3_kind": "COLUMN_SECTION_TRANSITION_DETAIL_REQUIRED",
+   "s3_quantification_kg": {
+    "alternative": "a transition detail from the consultant",
+    "alternative_kg": null,
+    "current": "transition blocked (crank / stopped bars / new starters / dowels not detailed)",
+    "current_basis": "kg of the parts this flag touches",
+    "current_kg": 0.0,
+    "current_released_kg": 0,
+    "kg_in_flagged_parts": 0,
+    "parts": 44,
+    "quantity_affected_kg": null,
+    "question": "Where a column section changes between storeys, are the bars cranked, stopped with new starters, or continued with dowels? Please give the detail.",
+    "transitions": 44
+   },
+   "severity": "MEDIUM",
+   "source_a": null,
+   "source_b": null,
+   "source_refs": [],
+   "status": "OPEN",
+   "trade": [
+    "REINFORCEMENT"
+   ],
+   "unit": "kg",
+   "where_to_check": null
+  },
+  {
+   "affected_facts": [
+    "tie_hook"
+   ],
+   "answer_options": [
+    {
+     "answer": "hook method URBAN-PROV-HOOK135-6D-75 (provisional)",
+     "effect": "current released basis"
+    },
+    {
+     "answer": "core path only (no hook allowance)",
+     "effect": "alternative quantity"
+    }
+   ],
+   "context": {
+    "quantification": {
+     "alternative_kg": 0.0,
+     "current_kg": 150.69629629629642,
+     "quantity_affected_kg": 150.69629629629642
+    },
+    "s3_kind": "HOOK_METHOD_REQUIRED",
+    "supersedes": []
+   },
+   "current_interpretation": "hook method URBAN-PROV-HOOK135-6D-75 (provisional)",
+   "detector": "column_rebar.hook_method_required",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "HOOK_METHOD_REQUIRED",
+   "element_ids": [
+    "COL-C-X01-Y01-FOUNDATION",
+    "COL-C-X01-Y01-GF",
+    "COL-C-X01-Y05-FOUNDATION",
+    "COL-C-X01-Y05-GF",
+    "COL-C-X02-Y05-FOUNDATION",
+    "COL-C-X02-Y05-GF",
+    "COL-C-X06-Y01-FOUNDATION",
+    "COL-C-X06-Y01-GF",
+    "COL-C-X16-Y01-FOUNDATION",
+    "COL-C-X16-Y01-GF",
+    "COL-C1-X09-Y09-1F",
+    "COL-C1-X09-Y09-2F",
+    "COL-C1-X09-Y09-FOUNDATION",
+    "COL-C1-X09-Y09-GF",
+    "COL-C10-X15-Y01-FOUNDATION",
+    "COL-C10-X15-Y01-GF",
+    "COL-C11-X06-Y04-FOUNDATION",
+    "COL-C11-X06-Y04-GF",
+    "COL-C11-X?-Y01@17913-7462-FOUNDATION",
+    "COL-C11-X?-Y01@17913-7462-GF",
+    "COL-C2-X08-Y10-1F",
+    "COL-C2-X08-Y10-2F",
+    "COL-C2-X08-Y10-FOUNDATION",
+    "COL-C2-X08-Y10-GF",
+    "COL-C2-X09-Y07-1F",
+    "COL-C2-X09-Y07-2F",
+    "COL-C2-X09-Y07-FOUNDATION",
+    "COL-C2-X09-Y07-GF",
+    "COL-C2-X09-Y10-1F",
+    "COL-C2-X09-Y10-2F",
+    "COL-C2-X09-Y10-FOUNDATION",
+    "COL-C2-X09-Y10-GF",
+    "COL-C2-X10-Y09-1F",
+    "COL-C2-X10-Y09-2F",
+    "COL-C2-X10-Y09-FOUNDATION",
+    "COL-C2-X10-Y09-GF",
+    "COL-C3-X03-Y04-FOUNDATION",
+    "COL-C3-X03-Y04-GF",
+    "COL-C3-X04-Y01-FOUNDATION",
+    "COL-C3-X04-Y01-GF",
+    "COL-C3-X05-Y02-1F",
+    "COL-C3-X05-Y02-FOUNDATION",
+    "COL-C3-X05-Y02-GF",
+    "COL-C3-X08-Y09-1F",
+    "COL-C3-X08-Y09-2F",
+    "COL-C3-X08-Y09-FOUNDATION",
+    "COL-C3-X08-Y09-GF",
+    "COL-C3-X12-Y01-FOUNDATION",
+    "COL-C3-X12-Y01-GF",
+    "COL-C3-X16-Y06-FOUNDATION",
+    "COL-C3-X16-Y06-GF",
+    "COL-C4-X13-Y10-1F",
+    "COL-C4-X13-Y10-FOUNDATION",
+    "COL-C4-X13-Y10-GF",
+    "COL-C4-X15-Y10-1F",
+    "COL-C4-X15-Y10-FOUNDATION",
+    "COL-C4-X15-Y10-GF",
+    "COL-C5-X05-Y04-1F",
+    "COL-C5-X05-Y04-FOUNDATION",
+    "COL-C5-X05-Y04-GF",
+    "COL-C5-X11-Y10-1F",
+    "COL-C5-X11-Y10-2F",
+    "COL-C5-X11-Y10-FOUNDATION",
+    "COL-C5-X11-Y10-GF",
+    "COL-C5-X14-Y02-1F",
+    "COL-C5-X14-Y02-FOUNDATION",
+    "COL-C5-X14-Y02-GF",
+    "COL-C6-X08-Y04-1F",
+    "COL-C6-X08-Y04-FOUNDATION",
+    "COL-C6-X08-Y04-GF",
+    "COL-C7-X07-Y?@15888-16162-1F",
+    "COL-C7-X07-Y?@15888-16162-FOUNDATION",
+    "COL-C7-X07-Y?@15888-16162-GF",
+    "COL-C8-X12-Y02-1F",
+    "COL-C8-X12-Y02-FOUNDATION",
+    "COL-C8-X12-Y02-GF",
+    "COL-C8-X15-Y06-1F",
+    "COL-C8-X15-Y06-FOUNDATION",
+    "COL-C8-X15-Y06-GF",
+    "COL-C9-X10-Y07-1F",
+    "COL-C9-X10-Y07-2F",
+    "COL-C9-X10-Y07-FOUNDATION",
+    "COL-C9-X10-Y07-GF",
+    "COL-C9-X13-Y08-1F",
+    "COL-C9-X13-Y08-FOUNDATION",
+    "COL-C9-X13-Y08-GF",
+    "COL-CN-X15-Y?@31208-15726-FOUNDATION",
+    "COL-CN-X16-Y03-FOUNDATION",
+    "COL-CN-X?-Y10@31108-20498-FOUNDATION",
+    "COL-CN-X?-Y?@24058-12787-FOUNDATION",
+    "COL-CN-X?-Y?@28583-12787-FOUNDATION",
+    "COL-CN-X?-Y?@29108-18112-FOUNDATION",
+    "COL-P.C-X08-Y02-1F",
+    "COL-P.C-X15-Y02-1F",
+    "COL-P.C-X?-Y?@24888-15994-2F"
+   ],
+   "element_type": "COLUMN",
+   "flag_id": "STR-COL-025",
+   "flag_key": "e24292c62b32c724",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by column_rebar.hook_method_required",
+     "to": "OPEN"
+    }
+   ],
+   "interpretation_authority": "ENGINEERING_METHOD",
+   "issue_summary": "HOOK_METHOD_REQUIRED: hook method URBAN-PROV-HOOK135-6D-75 (provisional) vs core path only (no hook allowance)",
+   "issue_type": "ENGINEERING_METHOD_REQUIRED",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 150.696,
+   "question_for_engineer": "Which hook (angle and extension) do the column ties use?",
+   "release_effect": "PROVISIONAL",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "s3_kind": "HOOK_METHOD_REQUIRED",
+   "s3_quantification_kg": {
+    "alternative": "core path only (no hook allowance)",
+    "alternative_kg": 0.0,
+    "current": "hook method URBAN-PROV-HOOK135-6D-75 (provisional)",
+    "current_basis": "kg of the parts this flag touches",
+    "current_kg": 150.696,
+    "current_released_kg": 147.022,
+    "kg_in_flagged_parts": 150.696,
+    "parts": 190,
+    "quantity_affected_kg": 150.696,
+    "question": "Which hook (angle and extension) do the column ties use?"
+   },
+   "severity": "MEDIUM",
+   "source_a": null,
+   "source_b": null,
+   "source_refs": [],
+   "status": "OPEN",
+   "trade": [
+    "REINFORCEMENT"
+   ],
+   "unit": "kg",
+   "where_to_check": "ST7757 p.9 column tie details (handles 1BAB, 1BBA, 1BBF, 1BB6, 1BD3, 1BDA)"
+  },
+  {
+   "affected_facts": [
+    "lap_method"
+   ],
+   "answer_options": [
+    {
+     "answer": "40 x bar diameter (P8-N09)",
+     "effect": "current released basis"
+    },
+    {
+     "answer": "70 x bar diameter",
+     "effect": "alternative quantity"
+    }
+   ],
+   "context": {
+    "quantification": {
+     "alternative_kg": 1497.453827160493,
+     "current_kg": 855.6879012345677,
+     "quantity_affected_kg": 641.7659259259252
+    },
+    "s3_kind": "LAP_METHOD_REQUIRED",
+    "supersedes": []
+   },
+   "current_interpretation": "40 x bar diameter (P8-N09)",
+   "detector": "column_rebar.lap_method_required",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "LAP_METHOD_REQUIRED",
+   "element_ids": [
+    "COL-C-X01-Y01-FOUNDATION",
+    "COL-C-X01-Y01-GF",
+    "COL-C-X01-Y05-FOUNDATION",
+    "COL-C-X01-Y05-GF",
+    "COL-C-X02-Y05-FOUNDATION",
+    "COL-C-X02-Y05-GF",
+    "COL-C-X06-Y01-FOUNDATION",
+    "COL-C-X06-Y01-GF",
+    "COL-C-X16-Y01-FOUNDATION",
+    "COL-C-X16-Y01-GF",
+    "COL-C1-X09-Y09-1F",
+    "COL-C1-X09-Y09-2F",
+    "COL-C1-X09-Y09-FOUNDATION",
+    "COL-C1-X09-Y09-GF",
+    "COL-C10-X15-Y01-FOUNDATION",
+    "COL-C10-X15-Y01-GF",
+    "COL-C11-X06-Y04-FOUNDATION",
+    "COL-C11-X06-Y04-GF",
+    "COL-C11-X?-Y01@17913-7462-FOUNDATION",
+    "COL-C11-X?-Y01@17913-7462-GF",
+    "COL-C2-X08-Y10-1F",
+    "COL-C2-X08-Y10-2F",
+    "COL-C2-X08-Y10-FOUNDATION",
+    "COL-C2-X08-Y10-GF",
+    "COL-C2-X09-Y07-1F",
+    "COL-C2-X09-Y07-2F",
+    "COL-C2-X09-Y07-FOUNDATION",
+    "COL-C2-X09-Y07-GF",
+    "COL-C2-X09-Y10-1F",
+    "COL-C2-X09-Y10-2F",
+    "COL-C2-X09-Y10-FOUNDATION",
+    "COL-C2-X09-Y10-GF",
+    "COL-C2-X10-Y09-1F",
+    "COL-C2-X10-Y09-2F",
+    "COL-C2-X10-Y09-FOUNDATION",
+    "COL-C2-X10-Y09-GF",
+    "COL-C3-X03-Y04-FOUNDATION",
+    "COL-C3-X03-Y04-GF",
+    "COL-C3-X04-Y01-FOUNDATION",
+    "COL-C3-X04-Y01-GF",
+    "COL-C3-X05-Y02-1F",
+    "COL-C3-X05-Y02-FOUNDATION",
+    "COL-C3-X05-Y02-GF",
+    "COL-C3-X08-Y09-1F",
+    "COL-C3-X08-Y09-2F",
+    "COL-C3-X08-Y09-FOUNDATION",
+    "COL-C3-X08-Y09-GF",
+    "COL-C3-X12-Y01-FOUNDATION",
+    "COL-C3-X12-Y01-GF",
+    "COL-C3-X16-Y06-FOUNDATION",
+    "COL-C3-X16-Y06-GF",
+    "COL-C4-X13-Y10-1F",
+    "COL-C4-X13-Y10-FOUNDATION",
+    "COL-C4-X13-Y10-GF",
+    "COL-C4-X15-Y10-1F",
+    "COL-C4-X15-Y10-FOUNDATION",
+    "COL-C4-X15-Y10-GF",
+    "COL-C5-X05-Y04-1F",
+    "COL-C5-X05-Y04-FOUNDATION",
+    "COL-C5-X05-Y04-GF",
+    "COL-C5-X11-Y10-1F",
+    "COL-C5-X11-Y10-2F",
+    "COL-C5-X11-Y10-FOUNDATION",
+    "COL-C5-X11-Y10-GF",
+    "COL-C5-X14-Y02-1F",
+    "COL-C5-X14-Y02-FOUNDATION",
+    "COL-C5-X14-Y02-GF",
+    "COL-C6-X08-Y04-1F",
+    "COL-C6-X08-Y04-FOUNDATION",
+    "COL-C6-X08-Y04-GF",
+    "COL-C7-X07-Y?@15888-16162-1F",
+    "COL-C7-X07-Y?@15888-16162-FOUNDATION",
+    "COL-C7-X07-Y?@15888-16162-GF",
+    "COL-C8-X12-Y02-1F",
+    "COL-C8-X12-Y02-FOUNDATION",
+    "COL-C8-X12-Y02-GF",
+    "COL-C8-X15-Y06-1F",
+    "COL-C8-X15-Y06-FOUNDATION",
+    "COL-C8-X15-Y06-GF",
+    "COL-C9-X10-Y07-1F",
+    "COL-C9-X10-Y07-2F",
+    "COL-C9-X10-Y07-FOUNDATION",
+    "COL-C9-X10-Y07-GF",
+    "COL-C9-X13-Y08-1F",
+    "COL-C9-X13-Y08-FOUNDATION",
+    "COL-C9-X13-Y08-GF",
+    "COL-CN-X15-Y?@31208-15726-FOUNDATION",
+    "COL-CN-X16-Y03-FOUNDATION",
+    "COL-CN-X?-Y10@31108-20498-FOUNDATION",
+    "COL-CN-X?-Y?@24058-12787-FOUNDATION",
+    "COL-CN-X?-Y?@28583-12787-FOUNDATION",
+    "COL-CN-X?-Y?@29108-18112-FOUNDATION",
+    "COL-P.C-X08-Y02-1F",
+    "COL-P.C-X15-Y02-1F",
+    "COL-P.C-X?-Y?@24888-15994-2F"
+   ],
+   "element_type": "COLUMN",
+   "flag_id": "STR-COL-026",
+   "flag_key": "4d1bd3c01a260fa0",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by column_rebar.lap_method_required",
+     "to": "OPEN"
+    }
+   ],
+   "interpretation_authority": "ENGINEERING_METHOD",
+   "issue_summary": "LAP_METHOD_REQUIRED: 40 x bar diameter (P8-N09) vs 70 x bar diameter",
+   "issue_type": "ENGINEERING_METHOD_REQUIRED",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 641.766,
+   "question_for_engineer": "Which lap / development length applies to column bar splices and to bars stopped at a floor or anchored into a supporting beam?",
+   "release_effect": "PROVISIONAL",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "s3_kind": "LAP_METHOD_REQUIRED",
+   "s3_quantification_kg": {
+    "alternative": "70 x bar diameter",
+    "alternative_kg": 1497.454,
+    "current": "40 x bar diameter (P8-N09)",
+    "current_basis": "kg of the parts this flag touches",
+    "current_kg": 855.688,
+    "current_released_kg": 855.688,
+    "kg_in_flagged_parts": 855.688,
+    "parts": 115,
+    "quantity_affected_kg": 641.766,
+    "question": "Which lap / development length applies to column bar splices and to bars stopped at a floor or anchored into a supporting beam?"
+   },
+   "severity": "MEDIUM",
+   "source_a": null,
+   "source_b": null,
+   "source_refs": [],
+   "status": "OPEN",
+   "trade": [
+    "REINFORCEMENT"
+   ],
+   "unit": "kg",
+   "where_to_check": "ST7757 p.8 general note 9 (development length 70D / 40D); p.13 footing detail (40Ø); p.15 planted-column detail"
+  },
+  {
+   "affected_facts": [
+    "transverse_zone"
+   ],
+   "answer_options": [
+    {
+     "answer": "ties over the clear column zone (to the soffit of the deepest framing member)",
+     "effect": "current released basis"
+    },
+    {
+     "answer": "ties over the full storey interval (continuous through the joint)",
+     "effect": "alternative quantity"
+    }
+   ],
+   "context": {
+    "quantification": {
+     "alternative_kg": 1575.6752065843614,
+     "current_kg": 1290.0454189300413,
+     "quantity_affected_kg": 285.6297876543201
+    },
+    "s3_kind": "TIE_ZONE_METHOD_REQUIRED",
+    "supersedes": [
+     "db724c886670c21a"
+    ]
+   },
+   "current_interpretation": "ties over the clear column zone (to the soffit of the deepest framing member)",
+   "detector": "column_rebar.tie_zone_method_required",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "TIE_ZONE_METHOD_REQUIRED",
+   "element_ids": [
+    "COL-C-X01-Y01-FOUNDATION",
+    "COL-C-X01-Y01-GF",
+    "COL-C-X01-Y05-FOUNDATION",
+    "COL-C-X01-Y05-GF",
+    "COL-C-X02-Y05-FOUNDATION",
+    "COL-C-X02-Y05-GF",
+    "COL-C-X06-Y01-FOUNDATION",
+    "COL-C-X06-Y01-GF",
+    "COL-C-X16-Y01-FOUNDATION",
+    "COL-C-X16-Y01-GF",
+    "COL-C1-X09-Y09-1F",
+    "COL-C1-X09-Y09-2F",
+    "COL-C1-X09-Y09-FOUNDATION",
+    "COL-C1-X09-Y09-GF",
+    "COL-C10-X15-Y01-FOUNDATION",
+    "COL-C10-X15-Y01-GF",
+    "COL-C11-X06-Y04-FOUNDATION",
+    "COL-C11-X06-Y04-GF",
+    "COL-C11-X?-Y01@17913-7462-FOUNDATION",
+    "COL-C11-X?-Y01@17913-7462-GF",
+    "COL-C2-X08-Y10-1F",
+    "COL-C2-X08-Y10-2F",
+    "COL-C2-X08-Y10-FOUNDATION",
+    "COL-C2-X08-Y10-GF",
+    "COL-C2-X09-Y07-1F",
+    "COL-C2-X09-Y07-2F",
+    "COL-C2-X09-Y07-FOUNDATION",
+    "COL-C2-X09-Y07-GF",
+    "COL-C2-X09-Y10-1F",
+    "COL-C2-X09-Y10-2F",
+    "COL-C2-X09-Y10-FOUNDATION",
+    "COL-C2-X09-Y10-GF",
+    "COL-C2-X10-Y09-1F",
+    "COL-C2-X10-Y09-2F",
+    "COL-C2-X10-Y09-FOUNDATION",
+    "COL-C2-X10-Y09-GF",
+    "COL-C3-X03-Y04-FOUNDATION",
+    "COL-C3-X03-Y04-GF",
+    "COL-C3-X04-Y01-FOUNDATION",
+    "COL-C3-X04-Y01-GF",
+    "COL-C3-X05-Y02-1F",
+    "COL-C3-X05-Y02-FOUNDATION",
+    "COL-C3-X05-Y02-GF",
+    "COL-C3-X08-Y09-1F",
+    "COL-C3-X08-Y09-2F",
+    "COL-C3-X08-Y09-FOUNDATION",
+    "COL-C3-X08-Y09-GF",
+    "COL-C3-X12-Y01-FOUNDATION",
+    "COL-C3-X12-Y01-GF",
+    "COL-C3-X16-Y06-FOUNDATION",
+    "COL-C3-X16-Y06-GF",
+    "COL-C4-X13-Y10-1F",
+    "COL-C4-X13-Y10-FOUNDATION",
+    "COL-C4-X13-Y10-GF",
+    "COL-C4-X15-Y10-1F",
+    "COL-C4-X15-Y10-FOUNDATION",
+    "COL-C4-X15-Y10-GF",
+    "COL-C5-X05-Y04-1F",
+    "COL-C5-X05-Y04-FOUNDATION",
+    "COL-C5-X05-Y04-GF",
+    "COL-C5-X11-Y10-1F",
+    "COL-C5-X11-Y10-2F",
+    "COL-C5-X11-Y10-FOUNDATION",
+    "COL-C5-X11-Y10-GF",
+    "COL-C5-X14-Y02-1F",
+    "COL-C5-X14-Y02-FOUNDATION",
+    "COL-C5-X14-Y02-GF",
+    "COL-C6-X08-Y04-1F",
+    "COL-C6-X08-Y04-FOUNDATION",
+    "COL-C6-X08-Y04-GF",
+    "COL-C7-X07-Y?@15888-16162-1F",
+    "COL-C7-X07-Y?@15888-16162-FOUNDATION",
+    "COL-C7-X07-Y?@15888-16162-GF",
+    "COL-C8-X12-Y02-1F",
+    "COL-C8-X12-Y02-FOUNDATION",
+    "COL-C8-X12-Y02-GF",
+    "COL-C8-X15-Y06-1F",
+    "COL-C8-X15-Y06-FOUNDATION",
+    "COL-C8-X15-Y06-GF",
+    "COL-C9-X10-Y07-1F",
+    "COL-C9-X10-Y07-2F",
+    "COL-C9-X10-Y07-FOUNDATION",
+    "COL-C9-X10-Y07-GF",
+    "COL-C9-X13-Y08-1F",
+    "COL-C9-X13-Y08-FOUNDATION",
+    "COL-C9-X13-Y08-GF",
+    "COL-CN-X15-Y?@31208-15726-FOUNDATION",
+    "COL-CN-X16-Y03-FOUNDATION",
+    "COL-CN-X?-Y10@31108-20498-FOUNDATION",
+    "COL-CN-X?-Y?@24058-12787-FOUNDATION",
+    "COL-CN-X?-Y?@28583-12787-FOUNDATION",
+    "COL-CN-X?-Y?@29108-18112-FOUNDATION",
+    "COL-P.C-X08-Y02-1F",
+    "COL-P.C-X15-Y02-1F",
+    "COL-P.C-X?-Y?@24888-15994-2F"
+   ],
+   "element_type": "COLUMN",
+   "flag_id": "STR-COL-027",
+   "flag_key": "294ff0b99a26cd4b",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by column_rebar.tie_zone_method_required",
+     "to": "OPEN"
+    }
+   ],
+   "interpretation_authority": "ENGINEERING_METHOD",
+   "issue_summary": "TIE_ZONE_METHOD_REQUIRED: ties over the clear column zone (to the soffit of the deepest framing member) vs ties over the full storey interval (continuous through the joint)",
+   "issue_type": "ENGINEERING_METHOD_REQUIRED",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 285.63,
+   "question_for_engineer": "Do the column ties stop at the soffit of the deepest beam, or continue through the beam-column joint over the full storey height?",
+   "release_effect": "LOWER_BOUND",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "s3_kind": "TIE_ZONE_METHOD_REQUIRED",
+   "s3_quantification_kg": {
+    "alternative": "ties over the full storey interval (continuous through the joint)",
+    "alternative_kg": 1575.675,
+    "current": "ties over the clear column zone (to the soffit of the deepest framing member)",
+    "current_basis": "kg of the parts this flag touches",
+    "current_kg": 1290.045,
+    "current_released_kg": 1217.151,
+    "kg_in_flagged_parts": 1475.659,
+    "parts": 317,
+    "quantity_affected_kg": 285.63,
+    "question": "Do the column ties stop at the soffit of the deepest beam, or continue through the beam-column joint over the full storey height?",
+    "segments_clear_zone_not_established": [
+     "COL-C9-X10-Y07-FOUNDATION",
+     "COL-CN-X15-Y?@31208-15726-FOUNDATION",
+     "COL-CN-X?-Y?@29108-18112-FOUNDATION"
+    ],
+    "segments_compared": 92
+   },
+   "severity": "HIGH",
+   "source_a": null,
+   "source_b": null,
+   "source_refs": [],
+   "status": "OPEN",
+   "trade": [
+    "REINFORCEMENT"
+   ],
+   "unit": "kg",
+   "where_to_check": "ST7757 p.9 'ST. OF COLUMN- 6Ø8/m' (handle 1BAA) and the column details; beam schedules p.10-12 for beam depths"
+  }
+ ],
+ "front_summary": {
+  "de_duplicated_kg_in_parts_with_open_flags": 2745.631,
+  "note": "kg per flag overlaps between flags; the front figure counts every part once",
+  "open_column_flags": 24
+ },
+ "project_id": "ALSENAN-ST7757"
+}

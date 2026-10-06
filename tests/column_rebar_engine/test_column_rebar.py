@@ -19,7 +19,7 @@ from engine.source import project_claims as PC
 
 ROOT = Path(__file__).resolve().parents[2]
 M8 = math.pi / 4 * 0.008 ** 2 * 7850      # 0.39478 kg/m
-M16 = math.pi / 4 * 0.016 ** 2 * 7850     # 1.57914 kg/m
+M16 = math.pi / 4 * 0.016 ** 2 * 7850     # 1.57834 kg/m
 CTX = {"project_id": "SYN-1", "drawing_revision": "R1"}
 GAP_FLAG = "gapflagkey000001"
 RATE_FLAG = "rateflagkey00001"

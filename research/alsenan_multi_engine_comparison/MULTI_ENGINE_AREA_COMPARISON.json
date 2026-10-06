@@ -1,0 +1,163 @@
+{
+ "freelancer_beam_plan_area_m2": {
+  "1F": 27.342,
+  "2F": 10.32,
+  "GF": 62.922
+ },
+ "rows": [
+  {
+   "CHRISTIANNP": 598.708,
+   "FREELANCER_QS": null,
+   "UC4N": 590.362,
+   "URBAN": 595.092,
+   "URBAN_STATUS": "VERIFIED (B2A.1)",
+   "category": "GROSS_STRUCTURAL_FOOTPRINT",
+   "likely_cause": "oracle built-up taken as gross slab outline (declared basis); freelancer workbook has no built-up figure",
+   "measurement_basis": "GROSS_SLAB_OUTLINE_SUM",
+   "normalized": {},
+   "review_required": true,
+   "section": "A",
+   "source_references": [
+    "B2A1 SLAB_REGION_REGISTER gross_outline_area_m2"
+   ],
+   "subcategory": "built-up (sum of storeys)",
+   "vs": {
+    "CHRISTIANNP": {
+     "difference": -3.616,
+     "difference_percent": -0.604,
+     "status": "DIRECTLY_COMPARABLE"
+    },
+    "FREELANCER": {
+     "difference": null,
+     "difference_percent": null,
+     "status": "NOT_COMPARABLE"
+    },
+    "UC4N": {
+     "difference": 4.73,
+     "difference_percent": 0.801,
+     "status": "DIRECTLY_COMPARABLE"
+    }
+   }
+  },
+  {
+   "CHRISTIANNP": 290.555,
+   "FREELANCER_QS": 207.0,
+   "UC4N": 291.425,
+   "URBAN": 276.788,
+   "URBAN_STATUS": "VERIFIED (B2A.1)",
+   "category": "NET_SLAB_AREA",
+   "likely_cause": "freelancer slab area is between beams (beam footprint allocated to gross beams); normalised = slab + beam plan area; Urban subtracts stair / void openings - check oracle opening treatment",
+   "measurement_basis": "NET_PLATE_AREA (openings out)",
+   "normalized": {
+    "FREELANCER_SLAB_PLUS_BEAM_PLAN_m2": 269.923,
+    "difference_percent": 2.544,
+    "difference_vs_urban": 6.866,
+    "status": "COMPARABLE_AFTER_NORMALIZATION"
+   },
+   "review_required": true,
+   "section": "B",
+   "source_references": [
+    "B2A1 net_plate_area_m2 GF",
+    "freelancer 'بلاطات ' GF"
+   ],
+   "subcategory": "GF",
+   "vs": {
+    "CHRISTIANNP": {
+     "difference": -13.767,
+     "difference_percent": -4.738,
+     "status": "DIRECTLY_COMPARABLE"
+    },
+    "FREELANCER": {
+     "difference": null,
+     "difference_percent": null,
+     "status": "NOT_COMPARABLE"
+    },
+    "UC4N": {
+     "difference": -14.637,
+     "difference_percent": -5.022,
+     "status": "DIRECTLY_COMPARABLE"
+    }
+   }
+  },
+  {
+   "CHRISTIANNP": 179.325,
+   "FREELANCER_QS": 120.0,
+   "UC4N": 171.235,
+   "URBAN": 169.751,
+   "URBAN_STATUS": "VERIFIED (B2A.1)",
+   "category": "NET_SLAB_AREA",
+   "likely_cause": "freelancer slab area is between beams (beam footprint allocated to gross beams); normalised = slab + beam plan area; Urban subtracts stair / void openings - check oracle opening treatment",
+   "measurement_basis": "NET_PLATE_AREA (openings out)",
+   "normalized": {
+    "FREELANCER_SLAB_PLUS_BEAM_PLAN_m2": 147.341,
+    "difference_percent": 15.21,
+    "difference_vs_urban": 22.41,
+    "status": "COMPARABLE_AFTER_NORMALIZATION"
+   },
+   "review_required": true,
+   "section": "B",
+   "source_references": [
+    "B2A1 net_plate_area_m2 1F",
+    "freelancer 'بلاطات ' 1F"
+   ],
+   "subcategory": "1F",
+   "vs": {
+    "CHRISTIANNP": {
+     "difference": -9.574,
+     "difference_percent": -5.339,
+     "status": "DIRECTLY_COMPARABLE"
+    },
+    "FREELANCER": {
+     "difference": null,
+     "difference_percent": null,
+     "status": "NOT_COMPARABLE"
+    },
+    "UC4N": {
+     "difference": -1.484,
+     "difference_percent": -0.866,
+     "status": "DIRECTLY_COMPARABLE"
+    }
+   }
+  },
+  {
+   "CHRISTIANNP": 55.275,
+   "FREELANCER_QS": 45.19,
+   "UC4N": 55.59,
+   "URBAN": 55.478,
+   "URBAN_STATUS": "VERIFIED (B2A.1)",
+   "category": "NET_SLAB_AREA",
+   "likely_cause": "freelancer slab area is between beams (beam footprint allocated to gross beams); normalised = slab + beam plan area; Urban subtracts stair / void openings - check oracle opening treatment",
+   "measurement_basis": "NET_PLATE_AREA (openings out)",
+   "normalized": {
+    "FREELANCER_SLAB_PLUS_BEAM_PLAN_m2": 55.51,
+    "difference_percent": -0.057,
+    "difference_vs_urban": -0.032,
+    "status": "COMPARABLE_AFTER_NORMALIZATION"
+   },
+   "review_required": true,
+   "section": "B",
+   "source_references": [
+    "B2A1 net_plate_area_m2 2F",
+    "freelancer 'بلاطات ' 2F"
+   ],
+   "subcategory": "2F",
+   "vs": {
+    "CHRISTIANNP": {
+     "difference": 0.203,
+     "difference_percent": 0.368,
+     "status": "DIRECTLY_COMPARABLE"
+    },
+    "FREELANCER": {
+     "difference": null,
+     "difference_percent": null,
+     "status": "NOT_COMPARABLE"
+    },
+    "UC4N": {
+     "difference": -0.112,
+     "difference_percent": -0.201,
+     "status": "DIRECTLY_COMPARABLE"
+    }
+   }
+  }
+ ]
+}
