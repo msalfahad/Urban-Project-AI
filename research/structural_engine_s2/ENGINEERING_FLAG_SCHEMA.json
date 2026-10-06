@@ -1,0 +1,123 @@
+{
+ "disciplines": {
+  "ARCHITECTURAL": "ARC",
+  "MEP": "MEP",
+  "STRUCTURAL": "STR"
+ },
+ "fields": [
+  "flag_id",
+  "flag_key",
+  "discipline",
+  "trade",
+  "element_type",
+  "element_id",
+  "element_ids",
+  "floor",
+  "source_refs",
+  "issue_type",
+  "issue_summary",
+  "source_a",
+  "source_b",
+  "current_interpretation",
+  "interpretation_authority",
+  "affected_facts",
+  "release_effect",
+  "quantity_affected",
+  "unit",
+  "severity",
+  "question_for_engineer",
+  "where_to_check",
+  "answer_options",
+  "status",
+  "resolution",
+  "resolved_by",
+  "resolution_source",
+  "resolved_at",
+  "project_specific",
+  "generic_rule_candidate",
+  "detector",
+  "history",
+  "project_id",
+  "drawing_revision",
+  "context"
+ ],
+ "issue_types": [
+  "SOURCE_CONFLICT",
+  "RULE_GAP",
+  "MISSING_DIMENSION",
+  "MISSING_SCHEDULE",
+  "UNBOUND_OCCURRENCE",
+  "AMBIGUOUS_APPLICABILITY",
+  "MISSING_DETAIL",
+  "UNIT_CONFLICT",
+  "REVISION_CONFLICT",
+  "ENGINEERING_METHOD_REQUIRED"
+ ],
+ "policy_id": "ENGINEERING_FLAG_V1",
+ "release_effects": [
+  "VERIFIED",
+  "PROVISIONAL",
+  "LOWER_BOUND",
+  "AUDIT_ONLY",
+  "BLOCKED",
+  "NO_QUANTITY_IMPACT"
+ ],
+ "rules": [
+  "flag_key is a content hash (project, detector, element, subject); flag_id is a display number",
+  "history is append-only; resolving keeps every earlier state",
+  "an open flag changes the release state of the components depending on its affected_facts only",
+  "independently known components stay VERIFIED / LOWER_BOUND; nothing is forced to zero",
+  "flags are project_specific; a generic rule only via the rule-promotion workflow"
+ ],
+ "schema": "ENGINEERING_FLAG_SCHEMA",
+ "severities": [
+  "HIGH",
+  "MEDIUM",
+  "LOW"
+ ],
+ "statuses": [
+  "OPEN",
+  "PROVISIONAL_INTERPRETATION",
+  "SENT_TO_CONSULTANT",
+  "ANSWERED",
+  "RESOLVED",
+  "SUPERSEDED"
+ ],
+ "trades": [
+  "CONCRETE",
+  "REINFORCEMENT",
+  "FORMWORK",
+  "MASONRY",
+  "FINISHES",
+  "OTHER"
+ ],
+ "transitions": {
+  "ANSWERED": [
+   "RESOLVED",
+   "SENT_TO_CONSULTANT",
+   "SUPERSEDED"
+  ],
+  "OPEN": [
+   "ANSWERED",
+   "PROVISIONAL_INTERPRETATION",
+   "RESOLVED",
+   "SENT_TO_CONSULTANT",
+   "SUPERSEDED"
+  ],
+  "PROVISIONAL_INTERPRETATION": [
+   "ANSWERED",
+   "OPEN",
+   "RESOLVED",
+   "SENT_TO_CONSULTANT",
+   "SUPERSEDED"
+  ],
+  "RESOLVED": [
+   "SUPERSEDED"
+  ],
+  "SENT_TO_CONSULTANT": [
+   "ANSWERED",
+   "SUPERSEDED"
+  ],
+  "SUPERSEDED": []
+ }
+}

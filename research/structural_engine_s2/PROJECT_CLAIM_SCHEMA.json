@@ -1,0 +1,42 @@
+{
+ "applicability_results": [
+  "APPLIES",
+  "PROJECT_MISMATCH",
+  "REVISION_MISMATCH",
+  "SCOPE_MISMATCH",
+  "FACT_MISMATCH",
+  "SUPERSEDED_CLAIM"
+ ],
+ "fields": [
+  "project_id",
+  "claim_id",
+  "kind",
+  "element_filter",
+  "flag_keys",
+  "fact",
+  "value",
+  "source_person",
+  "source_office",
+  "date",
+  "drawing_revision",
+  "supersedes",
+  "evidence_attachment",
+  "scope_note",
+  "promotion_state"
+ ],
+ "kinds": [
+  "ASSERTION",
+  "ADJUDICATION"
+ ],
+ "policy_id": "PROJECT_CLAIM_V1",
+ "rules": [
+  "bound to project_id + drawing_revision + member scope (element_filter or flag_keys)",
+  "never transferred to another project or revision",
+  "ASSERTION fills a fact the sources do not give (authority PROJECT_HUMAN_CLAIM)",
+  "ADJUDICATION answers named flags; the conflicting sources stay on record",
+  "superseded claims stay stored but stop applying",
+  "promotion_state is PROJECT_ONLY at birth; only rule_promotion can change the lesson's state",
+  "two live adjudications for one flag are not applied (CONFLICTING_CLAIMS_NOT_APPLIED)"
+ ],
+ "schema": "PROJECT_CLAIM_SCHEMA"
+}

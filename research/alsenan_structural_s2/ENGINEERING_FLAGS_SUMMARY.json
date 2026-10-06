@@ -1,0 +1,70 @@
+{
+ "affected_measured_quantity_sum_over_flags": {
+  "m beam": 650.97,
+  "m2 plan": 995.383,
+  "nr": 44.0,
+  "nr occurrences": 251.0
+ },
+ "by_discipline": {
+  "ARCHITECTURAL": {
+   "by_status": {},
+   "open_by_effect": {},
+   "total": 0
+  },
+  "MEP": {
+   "by_status": {},
+   "open_by_effect": {},
+   "total": 0
+  },
+  "STRUCTURAL": {
+   "by_status": {
+    "OPEN": 47,
+    "PROVISIONAL": 24
+   },
+   "open_by_effect": {
+    "BLOCKED_QUANTITY": 41,
+    "LOWER_BOUND_QUANTITY": 4,
+    "NO_QUANTITY_IMPACT": 5,
+    "QUANTITY_AFFECTED": 21
+   },
+   "total": 71
+  }
+ },
+ "final_quantity_pending_consultant": true,
+ "flags": 71,
+ "front_summary_lines": [
+  "71 structural flags open",
+  "53 affect concrete",
+  "50 affect formwork",
+  "1 affect other",
+  "67 affect reinforcement",
+  "affected measured quantity = 650.97 m beam (summed per flag; an element in several flags counts once per flag - use component_release for de-duplicated totals)",
+  "affected measured quantity = 995.383 m2 plan (summed per flag; an element in several flags counts once per flag - use component_release for de-duplicated totals)",
+  "affected measured quantity = 44.0 nr (summed per flag; an element in several flags counts once per flag - use component_release for de-duplicated totals)",
+  "affected measured quantity = 251.0 nr occurrences (summed per flag; an element in several flags counts once per flag - use component_release for de-duplicated totals)",
+  "final quantity pending consultant = yes"
+ ],
+ "open": 71,
+ "open_by_issue_type": {
+  "AMBIGUOUS_APPLICABILITY": 17,
+  "ENGINEERING_METHOD_REQUIRED": 2,
+  "MISSING_DETAIL": 2,
+  "MISSING_DIMENSION": 7,
+  "MISSING_SCHEDULE": 4,
+  "RULE_GAP": 3,
+  "SOURCE_CONFLICT": 30,
+  "UNBOUND_OCCURRENCE": 6
+ },
+ "open_by_severity": {
+  "HIGH": 8,
+  "LOW": 16,
+  "MEDIUM": 47
+ },
+ "open_by_trade": {
+  "CONCRETE": 53,
+  "FORMWORK": 50,
+  "OTHER": 1,
+  "REINFORCEMENT": 67
+ },
+ "pricing_integrated": false
+}

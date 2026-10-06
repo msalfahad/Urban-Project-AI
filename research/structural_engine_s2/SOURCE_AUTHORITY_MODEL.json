@@ -1,0 +1,208 @@
+{
+ "authority_levels": [
+  "LOCAL_ELEMENT_NOTE",
+  "LOCAL_DETAIL",
+  "MEMBER_SCHEDULE",
+  "PLAN_MEMBER_TAG",
+  "DRAWN_GEOMETRY",
+  "FLOOR_SPECIFIC_NOTE",
+  "PROJECT_GENERAL_NOTE",
+  "PROJECT_HUMAN_CLAIM",
+  "APPROVED_ENGINEERING_METHOD",
+  "URBAN_FALLBACK",
+  "BLOCKED"
+ ],
+ "decision_states": [
+  "RESOLVED",
+  "RESOLVED_WITH_OVERRIDE",
+  "RESOLVED_BY_CLAIM",
+  "SOURCE_CONFLICT",
+  "BLOCKED"
+ ],
+ "default_orders_by_fact_type": {
+  "DEFAULT": [
+   [
+    "LOCAL_ELEMENT_NOTE"
+   ],
+   [
+    "LOCAL_DETAIL"
+   ],
+   [
+    "MEMBER_SCHEDULE"
+   ],
+   [
+    "PLAN_MEMBER_TAG"
+   ],
+   [
+    "DRAWN_GEOMETRY"
+   ],
+   [
+    "FLOOR_SPECIFIC_NOTE"
+   ],
+   [
+    "PROJECT_GENERAL_NOTE"
+   ],
+   [
+    "PROJECT_HUMAN_CLAIM"
+   ],
+   [
+    "APPROVED_ENGINEERING_METHOD"
+   ],
+   [
+    "URBAN_FALLBACK"
+   ]
+  ],
+  "DETAILING_METHOD": [
+   [
+    "LOCAL_ELEMENT_NOTE"
+   ],
+   [
+    "LOCAL_DETAIL"
+   ],
+   [
+    "PROJECT_GENERAL_NOTE"
+   ],
+   [
+    "PROJECT_HUMAN_CLAIM"
+   ],
+   [
+    "APPROVED_ENGINEERING_METHOD"
+   ],
+   [
+    "URBAN_FALLBACK"
+   ]
+  ],
+  "MEMBER_SECTION": [
+   [
+    "LOCAL_ELEMENT_NOTE"
+   ],
+   [
+    "LOCAL_DETAIL",
+    "MEMBER_SCHEDULE"
+   ],
+   [
+    "DRAWN_GEOMETRY"
+   ],
+   [
+    "FLOOR_SPECIFIC_NOTE"
+   ],
+   [
+    "PROJECT_GENERAL_NOTE"
+   ],
+   [
+    "PROJECT_HUMAN_CLAIM"
+   ],
+   [
+    "APPROVED_ENGINEERING_METHOD"
+   ],
+   [
+    "URBAN_FALLBACK"
+   ]
+  ],
+  "MEMBER_TYPE": [
+   [
+    "LOCAL_ELEMENT_NOTE"
+   ],
+   [
+    "PLAN_MEMBER_TAG"
+   ],
+   [
+    "DRAWN_GEOMETRY"
+   ],
+   [
+    "PROJECT_HUMAN_CLAIM"
+   ]
+  ],
+  "OCCURRENCE": [
+   [
+    "LOCAL_ELEMENT_NOTE"
+   ],
+   [
+    "PLAN_MEMBER_TAG",
+    "DRAWN_GEOMETRY"
+   ],
+   [
+    "PROJECT_HUMAN_CLAIM"
+   ]
+  ],
+  "REINFORCEMENT": [
+   [
+    "LOCAL_ELEMENT_NOTE"
+   ],
+   [
+    "LOCAL_DETAIL",
+    "MEMBER_SCHEDULE"
+   ],
+   [
+    "FLOOR_SPECIFIC_NOTE"
+   ],
+   [
+    "PROJECT_GENERAL_NOTE"
+   ],
+   [
+    "PROJECT_HUMAN_CLAIM"
+   ],
+   [
+    "APPROVED_ENGINEERING_METHOD"
+   ],
+   [
+    "URBAN_FALLBACK"
+   ]
+  ],
+  "SLAB_THICKNESS": [
+   [
+    "LOCAL_ELEMENT_NOTE"
+   ],
+   [
+    "LOCAL_DETAIL"
+   ],
+   [
+    "FLOOR_SPECIFIC_NOTE"
+   ],
+   [
+    "PROJECT_GENERAL_NOTE"
+   ],
+   [
+    "PROJECT_HUMAN_CLAIM"
+   ],
+   [
+    "URBAN_FALLBACK"
+   ]
+  ]
+ },
+ "fact_classes": [
+  "SOURCE_FACT",
+  "DERIVED_GEOMETRY",
+  "PROJECT_RULE",
+  "ENGINEERING_METHOD",
+  "PROJECT_HUMAN_CLAIM",
+  "GENERIC_ENGINE_RULE"
+ ],
+ "level_fact_class": {
+  "APPROVED_ENGINEERING_METHOD": "ENGINEERING_METHOD",
+  "BLOCKED": null,
+  "DRAWN_GEOMETRY": "DERIVED_GEOMETRY",
+  "FLOOR_SPECIFIC_NOTE": "PROJECT_RULE",
+  "LOCAL_DETAIL": "SOURCE_FACT",
+  "LOCAL_ELEMENT_NOTE": "SOURCE_FACT",
+  "MEMBER_SCHEDULE": "SOURCE_FACT",
+  "PLAN_MEMBER_TAG": "SOURCE_FACT",
+  "PROJECT_GENERAL_NOTE": "PROJECT_RULE",
+  "PROJECT_HUMAN_CLAIM": "PROJECT_HUMAN_CLAIM",
+  "URBAN_FALLBACK": "GENERIC_ENGINE_RULE"
+ },
+ "policy_id": "SOURCE_AUTHORITY_V1",
+ "review_overrides": [
+  "MEMBER_SECTION",
+  "MEMBER_TYPE"
+ ],
+ "rules": [
+  "levels in one tier are comparable: disagreement = SOURCE_CONFLICT, never a pick",
+  "a higher tier overrides a lower one; every override is recorded",
+  "the order is configured per fact type and may be replaced per project",
+  "an ADJUDICATION claim settles one recorded conflict; the conflicting sources stay on record",
+  "an ASSERTION claim is an ordinary candidate at PROJECT_HUMAN_CLAIM",
+  "no candidates and no claim = BLOCKED (no fallback value is invented)"
+ ],
+ "schema": "SOURCE_AUTHORITY_MODEL"
+}
