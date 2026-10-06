@@ -1,0 +1,29 @@
+{
+ "id_cross_check": {
+  "drawing_labels": 95,
+  "label_not_in_workbook": [],
+  "missing_on_drawing": [],
+  "workbook_ids": 95
+ },
+ "outputs": {
+  "ALSENAN_COLUMN_REBAR_REVIEW.xlsx": "7a65882ca17d63f3aee69f838fdbc6e5761600f6188e9d9b9e34a81fd92e086c",
+  "ALSENAN_COLUMN_REBAR_VISUAL_REVIEW.pdf": "6b3460e09f0afd4a4f4bbd4d128708dfd143ce6b9dde55ca3665c81662fe7da9"
+ },
+ "purpose": "human review of the column reinforcement before the next structural trade",
+ "quantity_authority": "ALSENAN_COLUMN_REBAR_REVIEW.xlsx",
+ "round": "S3",
+ "s3_registers_consumed": {
+  "ALSENAN_COLUMN_PROJECT_CLAIMS.json": "fdee8610bc9d3e263c8d6ece10e372ba17087d99f2b21c277ffd14c390430f03",
+  "COLUMN_ENGINEERING_FLAGS.json": "41b101291a585a225667058198447e484e12afb22b6f8f7ffc9acbe71797bfc9",
+  "COLUMN_LAP_STARTER_REGISTER.json": "4c9966a3b866a1d76a88f5f7ce91eea17709a9b7458752b42d06b299c34bd450",
+  "COLUMN_LINK_GEOMETRY_REGISTER.json": "58c724956c37ce69b53778a05d3a5b644ecd366ed9751baf6cead5a7095440d8",
+  "COLUMN_MAIN_BAR_REGISTER.json": "fc17955354e2d60e6f14b61010f6e8eccea020ff799cf147caceab486cbe2eb2",
+  "COLUMN_MASS_CONSERVATION.json": "f154d6be842f05fcca2ba027999859176f2f059d3786cde2c5608cffb291d623",
+  "COLUMN_REBAR_REGISTER.json": "8db6da070149627af97c50314b49701118460d5fa5a0615505cde0a0b4f9aae8",
+  "COLUMN_REBAR_SUMMARY.json": "2b2dd8869c8ef49efb3d4dec3bb9066161841dcc491dc1507da7b92696385253",
+  "COLUMN_RELEASE_REGISTER.json": "0d474c9b88e0070b32074ffbf98b9c6a4855de92a72eb27f864df1d19507c412",
+  "COLUMN_SENSITIVITY_REGISTER.json": "af4ec499cb18f3ebce2794f3e56a80961717de5ce288b883f6ed2382d11ea7ad",
+  "COLUMN_TIE_REGISTER.json": "1d5b377dd77e654538fdeba006b9060ff595d193eec3809669c2d030ed6582c1"
+ },
+ "workbook_formulas": "RECALCULATED (1248 formulas, 0 errors)"
+}
