@@ -1,0 +1,188 @@
+{
+ "held": {
+  "relayed_text": {
+   "A1": {
+    "source": "OWNER_BRIEF_CHRISTIANNP_FORENSIC_HANDOFF",
+    "text": "GF slab thickness 0.20"
+   },
+   "A5": {
+    "source": "OWNER_BRIEF_CHRISTIANNP_FORENSIC_HANDOFF",
+    "text": "ground-beam depth 0.60"
+   },
+   "A7": {
+    "source": "OWNER_BRIEF_CHRISTIANNP_FORENSIC_HANDOFF",
+    "text": "ground slab area = GF gross outline"
+   },
+   "A8": {
+    "source": "OWNER_BRIEF_CHRISTIANNP_FORENSIC_HANDOFF",
+    "text": "CN columns continue FOU + GR"
+   },
+   "BEAM_RULES": {
+    "source": "OWNER_BRIEF_CHRISTIANNP_FORENSIC_HANDOFF",
+    "text": "rules R1-R5 exist in the report; the rule texts are not held"
+   },
+   "MISSING_REBAR": {
+    "source": "OWNER_BRIEF_COVERAGE_RECOVERY_SECTION_5_6",
+    "text": "CB support/MID bars, top hangers, slab top bars, slab diagonal bars, unlabelled slab directions, ground-beam steel, stair steel, BOXED footing bars, CN steel, laps, starters, hooks"
+   },
+   "RASTER_METHOD": {
+    "source": "OWNER_BRIEF_CHRISTIANNP_FORENSIC_HANDOFF",
+    "text": "50 mm raster; layer-1 lines + arcs; exterior flood fill"
+   },
+   "WEAK": {
+    "source": "OWNER_BRIEF_COVERAGE_RECOVERY_SECTION_5_6",
+    "text": "manual engineering allocation; not fully automatic; assumed wall/finish heights; windows and room areas unresolved; structural assumptions in concrete"
+   },
+   "WELL": {
+    "source": "OWNER_BRIEF_COVERAGE_RECOVERY_SECTION_5_6",
+    "text": "direct AutoCAD/LISP entity extraction; raw LINE/ARC/POLYLINE reading; schedule/member extraction; independent area calculation; wall-face pairing; kept LOW-confidence measurable quantities"
+   }
+  },
+  "relayed_values": {
+   "BEAMS_1F_m3": {
+    "source": "OWNER_BRIEF_S3.1_SECTION_16",
+    "value": 18.562
+   },
+   "BEAMS_2F_m3": {
+    "source": "OWNER_BRIEF_S3.1_SECTION_16",
+    "value": 2.823
+   },
+   "BEAMS_GF_m3": {
+    "source": "OWNER_BRIEF_S3.1_SECTION_16",
+    "value": 25.206
+   },
+   "BLOCK_150_m": {
+    "source": "OWNER_BRIEF_COVERAGE_RECOVERY_SECTION_5_6",
+    "value": 79.971
+   },
+   "BLOCK_200_m": {
+    "source": "OWNER_BRIEF_COVERAGE_RECOVERY_SECTION_5_6",
+    "value": 183.497
+   },
+   "BUA_m2": {
+    "source": "OWNER_BRIEF_S3.1_SECTION_16",
+    "value": 598.708
+   },
+   "COL_1F_m3": {
+    "source": "OWNER_BRIEF_S3.1_SECTION_16",
+    "value": 8.888
+   },
+   "COL_2F_m3": {
+    "source": "OWNER_BRIEF_S3.1_SECTION_16",
+    "value": 3.377
+   },
+   "COL_FOU_m3": {
+    "source": "OWNER_BRIEF_S3.1_SECTION_16",
+    "value": 6.15
+   },
+   "COL_GF_m3": {
+    "source": "OWNER_BRIEF_S3.1_SECTION_16",
+    "value": 26.235
+   },
+   "FOOTINGS_m3": {
+    "source": "OWNER_BRIEF_S3.1_SECTION_16",
+    "value": 65.669
+   },
+   "GROUND_BEAMS_m3": {
+    "source": "OWNER_BRIEF_S3.1_SECTION_16",
+    "value": 36.006
+   },
+   "GROUND_BEAM_DEPTH_A5_m": {
+    "source": "OWNER_BRIEF_CHRISTIANNP_FORENSIC_HANDOFF",
+    "value": 0.6
+   },
+   "GROUND_BEAM_LENGTH_m": {
+    "source": "OWNER_BRIEF_CHRISTIANNP_FORENSIC_HANDOFF",
+    "value": 200.036
+   },
+   "GROUND_BEAM_STRIPS": {
+    "source": "OWNER_BRIEF_CHRISTIANNP_FORENSIC_HANDOFF",
+    "value": 42
+   },
+   "GROUND_SLAB_AREA_m2": {
+    "source": "OWNER_BRIEF_CHRISTIANNP_FORENSIC_HANDOFF",
+    "value": 324.038
+   },
+   "GROUND_SLAB_T_m": {
+    "source": "OWNER_BRIEF_CHRISTIANNP_FORENSIC_HANDOFF",
+    "value": 0.1
+   },
+   "GROUND_SLAB_m3": {
+    "source": "OWNER_BRIEF_S3.1_SECTION_16",
+    "value": 32.404
+   },
+   "NET_REBAR_t_KNOWN_INCOMPLETE": {
+    "source": "OWNER_BRIEF_S3.1_SECTION_16",
+    "value": 22.916
+   },
+   "NET_SLAB_1F_m2": {
+    "source": "OWNER_BRIEF_S3.1_SECTION_16",
+    "value": 179.325
+   },
+   "NET_SLAB_2F_m2": {
+    "source": "OWNER_BRIEF_S3.1_SECTION_16",
+    "value": 55.275
+   },
+   "NET_SLAB_GF_m2": {
+    "source": "OWNER_BRIEF_S3.1_SECTION_16",
+    "value": 290.555
+   },
+   "NET_SLAB_TOTAL_m2": {
+    "source": "OWNER_BRIEF_COVERAGE_RECOVERY_SECTION_5_6",
+    "value": 525.155
+   },
+   "RASTER_CELL_mm": {
+    "source": "OWNER_BRIEF_CHRISTIANNP_FORENSIC_HANDOFF",
+    "value": 50
+   },
+   "SLABS_1F_m3": {
+    "source": "OWNER_BRIEF_S3.1_SECTION_16",
+    "value": 28.692
+   },
+   "SLABS_2F_m3": {
+    "source": "OWNER_BRIEF_S3.1_SECTION_16",
+    "value": 9.95
+   },
+   "SLABS_GF_m3": {
+    "source": "OWNER_BRIEF_S3.1_SECTION_16",
+    "value": 58.111
+   },
+   "STAIRS_m3": {
+    "source": "OWNER_BRIEF_S3.1_SECTION_16",
+    "value": 5.048
+   },
+   "STRAPS_m3": {
+    "source": "OWNER_BRIEF_S3.1_SECTION_16",
+    "value": 6.053
+   },
+   "TOTAL_RC_m3": {
+    "source": "OWNER_BRIEF_S3.1_SECTION_16",
+    "value": 333.173
+   },
+   "WALL_FACES_GROSS_m2": {
+    "source": "OWNER_BRIEF_COVERAGE_RECOVERY_SECTION_5_6",
+    "value": 2364.7
+   }
+  }
+ },
+ "not_held": [
+  "tool-call log",
+  "MCP tool names and arguments",
+  "active AutoCAD document per step",
+  "AutoLISP expressions / scripts",
+  "PowerShell / local scripts",
+  "raw extraction dumps",
+  "intermediate geometry (strips, raster cells, pairs)",
+  "assumption texts A2-A4, A6, A9-A15",
+  "beam rule texts R1-R5",
+  "per-object handle lists",
+  "failed attempts / retries"
+ ],
+ "repository_record": "research/external_engine_lab/DONORS.lock: christiannp/autocad = UNRESOLVED_EXTERNAL_REPOSITORY",
+ "searched": [
+  "this repository (all tracked files)",
+  "the session upload folder (file names only; credential and do-not-open files were not opened)",
+  "this session's own transcript",
+  "the account's cloud sessions (list only)"
+ ]
+}

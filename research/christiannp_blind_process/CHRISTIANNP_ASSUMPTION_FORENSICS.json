@@ -1,0 +1,145 @@
+{
+ "rows": [
+  {
+   "adopt": "NO",
+   "alternatives": "0.16 (project default unless noted - later Urban reading)",
+   "assumption": "GF slab thickness 0.20 m",
+   "categories": [
+    "SLABS"
+   ],
+   "generic_fallback": "NO",
+   "id": "A1",
+   "later_review": "INCORRECT as a default: Urban source reading = 0.16 unless locally noted",
+   "physical": "GF slab volume",
+   "search": "NOT_HELD",
+   "semantic": "slab thickness tag scope",
+   "sensitivity_m3": 11.622,
+   "text_status": "RELAYED",
+   "why": "NOT_HELD",
+   "why_not": "a general note outranks an assumed value; the evidence ladder takes PROJECT_GENERAL_RULE"
+  },
+  {
+   "assumption": null,
+   "id": "A2",
+   "note": "the A1-A15 list exists in the sealed report; only A1, A5, A7 and A8 were relayed",
+   "text_status": "NOT_HELD"
+  },
+  {
+   "assumption": null,
+   "id": "A3",
+   "note": "the A1-A15 list exists in the sealed report; only A1, A5, A7 and A8 were relayed",
+   "text_status": "NOT_HELD"
+  },
+  {
+   "assumption": null,
+   "id": "A4",
+   "note": "the A1-A15 list exists in the sealed report; only A1, A5, A7 and A8 were relayed",
+   "text_status": "NOT_HELD"
+  },
+  {
+   "adopt": "NO",
+   "alternatives": "NOT_HELD",
+   "assumption": "ground-beam depth 0.60 m",
+   "categories": [
+    "GROUND_BEAMS",
+    "GB rebar",
+    "waterproofing"
+   ],
+   "generic_fallback": "NO",
+   "id": "A5",
+   "later_review": "NOT ESTABLISHED: contradicts p.13 interior details on 27 of 31 interior spans; exterior bracket from elevations 0.90-1.30 m",
+   "physical": "all 42 strips",
+   "search": "NOT_HELD",
+   "semantic": "exterior 'FOLLOW ARCH.' depth",
+   "sensitivity_m3": 6.001,
+   "text_status": "RELAYED",
+   "why": "exterior depth unprinted",
+   "why_not": "an assumed depth over-rides measured details; Urban keeps a BOUNDED scenario instead"
+  },
+  {
+   "assumption": null,
+   "id": "A6",
+   "note": "the A1-A15 list exists in the sealed report; only A1, A5, A7 and A8 were relayed",
+   "text_status": "NOT_HELD"
+  },
+  {
+   "adopt": "NO as verified",
+   "alternatives": "cells between ground beams (Urban)",
+   "assumption": "ground slab area = GF gross outline",
+   "categories": [
+    "GROUND_SLAB"
+   ],
+   "generic_fallback": "as a HIGH scenario only",
+   "id": "A7",
+   "later_review": "CANDIDATE physical scope, not verified: includes beam/column footprints",
+   "physical": "slab-on-grade extent",
+   "search": "NOT_HELD",
+   "semantic": "which panels are slab-on-grade",
+   "sensitivity_m3": 0.163,
+   "text_status": "RELAYED",
+   "why": "NOT_HELD",
+   "why_not": "a suspended-slab outline is not slab-on-grade evidence"
+  },
+  {
+   "adopt": "NO",
+   "alternatives": "CN per S1 chains",
+   "assumption": "CN columns continue FOU + GR",
+   "categories": [
+    "COLUMN_CONCRETE",
+    "column rebar"
+   ],
+   "generic_fallback": "NO",
+   "id": "A8",
+   "later_review": "CONFLICTS with later Urban / human review",
+   "physical": "CN occurrences",
+   "search": "NOT_HELD",
+   "semantic": "column continuation",
+   "sensitivity_m3": "NOT_DERIVABLE (CN list not held)",
+   "text_status": "RELAYED",
+   "why": "NOT_HELD",
+   "why_not": "continuation must come from each storey's own plan occurrence"
+  },
+  {
+   "assumption": null,
+   "id": "A9",
+   "note": "the A1-A15 list exists in the sealed report; only A1, A5, A7 and A8 were relayed",
+   "text_status": "NOT_HELD"
+  },
+  {
+   "assumption": null,
+   "id": "A10",
+   "note": "the A1-A15 list exists in the sealed report; only A1, A5, A7 and A8 were relayed",
+   "text_status": "NOT_HELD"
+  },
+  {
+   "assumption": null,
+   "id": "A11",
+   "note": "the A1-A15 list exists in the sealed report; only A1, A5, A7 and A8 were relayed",
+   "text_status": "NOT_HELD"
+  },
+  {
+   "assumption": null,
+   "id": "A12",
+   "note": "the A1-A15 list exists in the sealed report; only A1, A5, A7 and A8 were relayed",
+   "text_status": "NOT_HELD"
+  },
+  {
+   "assumption": null,
+   "id": "A13",
+   "note": "the A1-A15 list exists in the sealed report; only A1, A5, A7 and A8 were relayed",
+   "text_status": "NOT_HELD"
+  },
+  {
+   "assumption": null,
+   "id": "A14",
+   "note": "the A1-A15 list exists in the sealed report; only A1, A5, A7 and A8 were relayed",
+   "text_status": "NOT_HELD"
+  },
+  {
+   "assumption": null,
+   "id": "A15",
+   "note": "the A1-A15 list exists in the sealed report; only A1, A5, A7 and A8 were relayed",
+   "text_status": "NOT_HELD"
+  }
+ ]
+}
