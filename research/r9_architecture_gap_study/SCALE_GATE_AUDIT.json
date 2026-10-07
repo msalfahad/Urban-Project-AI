@@ -1,7 +1,15 @@
 {
- "basis": "R9 brief ideas + Urban HEAD code + local donors at DONORS.lock commits (U-C4N cdb10638, OpenTakeoff e6d2251c) + christiannp forensic package",
+ "basis": "pack + Urban HEAD code + local donors at DONORS.lock commits (U-C4N cdb10638, OpenTakeoff e6d2251c) + RoomGraph / aec-qto / Rebar-Takeoff verified at pinned commits (LICENSE, README, docs, manifests read; no code copied) + christiannp forensic package",
  "pack": "Urban_BOQ_Research_Pack_2026-10-07.zip",
- "pack_status": "NOT DELIVERED to this environment",
+ "pack_scale_states_mapping": {
+  "auto_verified": "VERIFIED (Urban needs >= 2 independent evidence kinds)",
+  "candidate": "UNCONFIRMED or PROVISIONAL",
+  "conflicted": "CONFLICT",
+  "human_verified": "CONFIRMED_BY_HUMAN (bound to the source hash)",
+  "unknown": "BLOCKED / no frame"
+ },
+ "pack_sha256": "166a7341ebd9dc2d258d1c97e422ec67880782d86303c89cf76111d82d9e5331",
+ "pack_status": "DELIVERED and read in full (23 files)",
  "sources": {
   "DXF_DWG": {
    "dimlfac_unit_conflicts": "act_measurement / defpoint ratio families (unit_evidence); CONFLICT on > 0.5 % disagreement",
@@ -44,5 +52,5 @@
    "verification_status": "calibration object state; NOT an enforced UNIT_CONTEXT at quantity time"
   }
  },
- "urban_head_at_build": "886bf1e"
+ "v1_commit": "a75b845"
 }

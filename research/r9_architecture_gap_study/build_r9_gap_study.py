@@ -1,10 +1,9 @@
 """R9 READ-ONLY ARCHITECTURE GAP STUDY - current Urban engine (HEAD) vs the research-pack ideas.
 
-The research pack (Urban_BOQ_Research_Pack_2026-10-07.zip) was NOT delivered to this environment. Every row below is
-built from the ideas the owner's R9 brief names, mapped against the Urban code at HEAD (files / functions / tests that
+v1 (a75b845): built before the pack arrived, from the ideas the owner's R9 brief names, mapped against the Urban code at HEAD (files / functions / tests that
 exist and were read), and against the two donors held locally at their DONORS.lock commits (U-C4N, OpenTakeoff) and
-the christiannp forensic package. Columns that need the pack itself (its recommendation ids, RoomGraph / Rebar-Takeoff /
-aec-qto code, licences) say PACK_NOT_HELD. Nothing here changes production code; nothing is installed or copied.
+the christiannp forensic package. v2: pack_v2.py overlays the delivered pack and the pinned-commit verification of
+RoomGraph / aec-qto / Rebar-Takeoff; no PACK_NOT_HELD value survives (apply_pack refuses one). Nothing here changes production code; nothing is installed or copied.
 
     python research/r9_architecture_gap_study/build_r9_gap_study.py
 """
@@ -419,26 +418,115 @@ def dumps(o):
     return json.dumps(o, indent=1, sort_keys=True, ensure_ascii=False) + "\n"
 
 
+def apply_pack():
+    """v2: overlay the pack evidence on the v1 rows (v1 text kept where the pack changed nothing)."""
+    import pack_v2 as PV
+    rows = []
+    for r in ROWS:
+        r = dict(r)
+        ov = PV.OVERRIDES.get(r["RECOMMENDATION_ID"], {})
+        changed = sorted(k for k, v in ov.items() if r.get(k) != v)
+        r.update(ov)
+        for k, v in list(r.items()):
+            if isinstance(v, str) and PACK in v:
+                raise ValueError(f"{r['RECOMMENDATION_ID']}.{k} still says {PACK}")
+        r["CHANGED_BY_PACK"] = changed
+        rows.append(r)
+    rows += PV.PACK_ROWS
+    donors = []
+    for d in DONORS:
+        d = dict(d, **PV.MATRIX_DONOR_UPDATES.get(d["TECHNIQUE"], {}))
+        d[PV.DONOR_NEW_COLUMN] = PV.DONOR_NEW_COLUMN_VALUES.get(d["TECHNIQUE"], "-")
+        for k, v in list(d.items()):
+            if v == NH:
+                d[k] = "not applicable to this donor" if k in ("ROOMGRAPH", "REBAR_TAKEOFF") else v
+        donors.append(d)
+    donors += PV.NEW_DONOR_ROWS
+    return PV, rows, donors
+
+
 def main():
-    meta = {"pack": "Urban_BOQ_Research_Pack_2026-10-07.zip", "pack_status": "NOT DELIVERED to this environment",
-            "basis": "R9 brief ideas + Urban HEAD code + local donors at DONORS.lock commits (U-C4N cdb10638, "
-                     "OpenTakeoff e6d2251c) + christiannp forensic package", "urban_head_at_build": head()}
+    PV, rows, donors = apply_pack()
+    meta = {"pack": "Urban_BOQ_Research_Pack_2026-10-07.zip", "pack_sha256": PV.PACK_SHA256,
+            "pack_status": f"DELIVERED and read in full ({PV.PACK_FILES} files)",
+            "basis": "pack + Urban HEAD code + local donors at DONORS.lock commits (U-C4N cdb10638, OpenTakeoff "
+                     "e6d2251c) + RoomGraph / aec-qto / Rebar-Takeoff verified at pinned commits (LICENSE, README, "
+                     "docs, manifests read; no code copied) + christiannp forensic package",
+            "v1_commit": "a75b845"}
+    cols = COLS + ["CHANGED_BY_PACK", "DECISION"]
+    dcols = DONOR_COLS[:7] + [PV.DONOR_NEW_COLUMN] + DONOR_COLS[7:]
+    for r in rows:
+        r.setdefault("DECISION", "-")
     prov_rows = [dict(FIELD=f, **dict(zip(FAM, PROV[f]))) for f in PROV_FIELDS]
+    flat = lambda rs: [{k: ("; ".join(v) if isinstance(v, list) else v) for k, v in r.items()} for r in rs]  # noqa
     out = {
-        "R9_ARCHITECTURE_GAP_MATRIX.json": dict(meta, columns=COLS, rows=ROWS),
-        "R9_ARCHITECTURE_GAP_MATRIX.csv": csv_text(ROWS, COLS),
-        "DONOR_TECHNIQUE_MATRIX.json": dict(meta, columns=DONOR_COLS, rows=DONORS),
-        "DONOR_TECHNIQUE_MATRIX.csv": csv_text(DONORS, DONOR_COLS),
+        "R9_ARCHITECTURE_GAP_MATRIX.json": dict(meta, columns=cols, rows=rows),
+        "R9_ARCHITECTURE_GAP_MATRIX.csv": csv_text(flat(rows), cols),
+        "DONOR_TECHNIQUE_MATRIX.json": dict(meta, columns=dcols, rows=donors),
+        "DONOR_TECHNIQUE_MATRIX.csv": csv_text(donors, dcols),
         "PROVENANCE_FIELD_COVERAGE.csv": csv_text(prov_rows, ["FIELD", *FAM]),
-        "SCALE_GATE_AUDIT.json": dict(meta, sources=SCALE),
+        "SCALE_GATE_AUDIT.json": dict(meta, sources=SCALE, pack_scale_states_mapping={
+            "unknown": "BLOCKED / no frame", "candidate": "UNCONFIRMED or PROVISIONAL",
+            "auto_verified": "VERIFIED (Urban needs >= 2 independent evidence kinds)",
+            "human_verified": "CONFIRMED_BY_HUMAN (bound to the source hash)", "conflicted": "CONFLICT"}),
+        "R9_LICENCE_DEPENDENCY_REGISTER.json": dict(meta, verified_donors=PV.VERIFIED, pack_claim_only=PV.PACK_ONLY,
+                                                    urban_runtime_imports=URBAN_IMPORTS),
+        "PACK_RECOMMENDATION_MAP.json": dict(meta, rows=PACK_MAP),
     }
     for name, obj in out.items():
         (HERE / name).write_text(obj if isinstance(obj, str) else dumps(obj), encoding="utf-8")
-    return out
+    return out, rows
+
+
+URBAN_IMPORTS = {   # third-party imports found in engine/ (grep at HEAD), with licence
+    "shapely": "BSD-3-Clause; ~45 engine/ modules + 2 declared engine/source exceptions",
+    "ezdxf": "MIT; K2 route (engine/source/cad/kernel_ezdxf.py)",
+    "openpyxl": "MIT; workbook IO", "numpy": "BSD-3-Clause", "PIL (Pillow)": "HPND (permissive)",
+    "scipy": "BSD-3-Clause (research / tests)",
+    "pymupdf (fitz)": "AGPL-3.0 or commercial - 6 production engine/ modules; NOT in DONORS.lock / "
+                      "THIRD_PARTY_PROVENANCE; requirements.txt only as an optional comment -> R9-LIC-01",
+    "LibreDWG dwgread": "GPL-3.0, external binary producing JSON (not linked)",
+    "tesseract": "Apache-2.0, optional external binary",
+}
+
+PACK_MAP = [   # every pack recommendation -> R9 row(s)
+    {"pack_ref": "01 #1 facts vs rules", "rows": ["R9-QF-01", "R9-QF-02"]},
+    {"pack_ref": "01 #2 provenance receipt", "rows": ["R9-PR-01", "R9-PR-07", "R9-EX-01"]},
+    {"pack_ref": "01 #3 scale gate", "rows": ["R9-SC-01", "R9-SC-02", "R9-SC-03"]},
+    {"pack_ref": "01 #4 Shapely / Clipper2 topology layer", "rows": ["R9-GB-01", "R9-GB-02"]},
+    {"pack_ref": "01 #5 RoomGraph", "rows": ["R9-RG-01", "R9-RG-02", "R9-RG-03", "R9-RG-04", "R9-RG-05",
+                                             "R9-RG-06", "R9-RG-07", "R9-RG-08", "R9-RG-09"]},
+    {"pack_ref": "01 #6 rebar evidence ladder", "rows": ["R9-RB-01", "R9-RT-02", "R9-RT-05"]},
+    {"pack_ref": "01 #7 ambiguity reduces totals", "rows": ["R9-ST-01"]},
+    {"pack_ref": "01 #8 declarative profiles + golden", "rows": ["R9-RE-01", "R9-RE-02", "R9-RE-03"]},
+    {"pack_ref": "01 #9 permissive PDF stack / PyMuPDF", "rows": ["R9-LIC-01", "R9-PDF-01"]},
+    {"pack_ref": "01 #10 IFC adapter", "rows": ["R9-SC-04"]},
+    {"pack_ref": "01 #11 revision / cross-sheet identity", "rows": ["R9-REV-01"]},
+    {"pack_ref": "01 #12 one math library", "rows": ["R9-OT-01"]},
+    {"pack_ref": "01 #13 rebar layers / OR-Tools", "rows": ["R9-RB-02", "R9-RB-03", "R9-QF-03"]},
+    {"pack_ref": "01 #14 formwork contact", "rows": ["R9-FW-01"]},
+    {"pack_ref": "01 #15 native AutoCAD challenger", "rows": ["(existing cad_oracle; no row)"]},
+    {"pack_ref": "01 #16 explain quantity", "rows": ["R9-EX-01"]},
+    {"pack_ref": "01 #17 multi-standard recomputation", "rows": ["R9-QF-02", "R9-RE-01"]},
+    {"pack_ref": "01 #18 benchmark product", "rows": ["R9-BM-01"]},
+    {"pack_ref": "03 F factorised confidence / statuses", "rows": ["R9-ST-01", "R9-PR-02"]},
+    {"pack_ref": "04 R9.1-R9.8, R10.0-R10.3", "rows": ["R9-PR-01", "R9-SC-02", "R9-GB-01", "R9-RG-09", "R9-RE-01",
+                                                      "R9-RT-05", "R9-RB-02", "R9-REV-01", "R9-PDF-01", "R9-SC-04",
+                                                      "R9-FW-01", "R9-RB-03", "R9-MCP-01"]},
+    {"pack_ref": "05 donors cad-ai-agent / ConMCP / tianzheng / Plansight", "rows": ["R9-AG-01", "R9-SV-01",
+                                                                                      "R9-PDF-01"]},
+    {"pack_ref": "06 licence gate", "rows": ["R9-LIC-01", "R9-LIC-02"]},
+    {"pack_ref": "07 metrics / taxonomy / blind protocol", "rows": ["R9-BM-01"]},
+    {"pack_ref": "14 F review priority", "rows": ["R9-RV-01"]},
+    {"pack_ref": "14 G correction corpus", "rows": ["R9-PR-03"]},
+]
 
 
 if __name__ == "__main__":
-    o = main()
+    import sys
+    sys.path.insert(0, str(HERE))
+    o, rows = main()
     from collections import Counter
-    print(Counter(r["STATUS"] for r in ROWS), Counter(r["RECOMMENDATION"] for r in ROWS),
-          Counter(r["PRIORITY"] for r in ROWS))
+    print(len(rows), Counter(r["STATUS"] for r in rows), Counter(r["RECOMMENDATION"] for r in rows),
+          Counter(r["PRIORITY"] for r in rows))
+    print([r["RECOMMENDATION_ID"] for r in rows if r["CHANGED_BY_PACK"] and r["CHANGED_BY_PACK"] != ["NEW_ROW"]])

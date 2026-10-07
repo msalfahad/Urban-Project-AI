@@ -2,46 +2,42 @@
 
 This study is read-only. No production code was changed, nothing was installed, no donor code was copied, and S4 has not been started.
 
-## 0. Evidence basis
+## 0. Evidence basis (v2)
 
-**`Urban_BOQ_Research_Pack_2026-10-07.zip` was not delivered to this environment.** It is not in the upload folder, not anywhere on disk and not on either branch.
+**v1 (a75b845)** was written before the pack arrived. It used the ideas the R9 brief named, Urban's code at HEAD, and the donors held locally at their `DONORS.lock` commits (U-C4N `cdb10638`, OpenTakeoff `e6d2251c`, the christiannp forensic package).
 
-This study is therefore built from three sources:
+**v2 (this revision)** adds three things:
 
-1. **The ideas your R9 brief names explicitly:**
-   - Quantity Fact Core;
-   - provenance receipt;
-   - scale gate;
-   - RoomGraph features;
-   - Rebar-Takeoff features;
-   - OpenTakeoff contracts;
-   - the aec-qto declarative rules;
-   - GeometryBackend.
-2. **The Urban code at HEAD**, read module by module. Every row names files, functions and tests that exist.
-3. **The donors held locally at their `DONORS.lock` commits:**
-   - U-C4N `cdb10638`;
-   - OpenTakeoff `e6d2251c` (protocol, `confidence.ts`, `arrangement.ts`, scale handling);
-   - the christiannp forensic package.
+1. **The delivered pack**, `Urban_BOQ_Research_Pack_2026-10-07.zip` (sha256 `166a7341…5331`). All 23 files were read: 15 docs, the clean-room reference files and the machine-readable files.
+2. **A pinned-commit check of the three donors the pack asks to verify.** A blob-less, no-checkout git fetch was used. LICENSE, README, docs and dependency manifests were read; no source file was copied or run, and nothing was installed.
 
-Anything that needs the pack itself is marked `PACK_NOT_HELD`:
+   | Donor | Commit | Licence (from the LICENSE file) | Dependencies |
+   |---|---|---|---|
+   | RoomGraph | `aec-platform/roomgraph@772f0954` | MIT | none |
+   | aec-qto | `aec-platform/qto@82c10016` | MIT | `ifc-spf` (licence not checked) |
+   | Rebar-Takeoff | `tolga-ileri/Rebar-Takeoff@54641dd8` | MIT | ezdxf, scipy, pandas, openpyxl, nicegui, pywebview |
 
-- its recommendation ids and any recommendation the brief does not name;
-- RoomGraph / Rebar-Takeoff / aec-qto code and licences.
+   The full register, with confirmed features and limitations, is in `R9_LICENCE_DEPENDENCY_REGISTER.json`.
+3. **A licence check of Urban's own runtime imports**, prompted by pack doc 06. This found R9-LIC-01 (PyMuPDF).
 
-When the ZIP arrives, the matrix gains the pack's own rows. The Urban-side mapping below does not change.
+Every v1 `PACK_NOT_HELD` field is now filled; the builder refuses to emit one. Donors that the pack names but which were not fetched (cad-ai-agent, ConMCP, tianzheng-dwg-parse, FreeCAD-Reinforcement, Plansight, and the libraries) are marked `PACK_CLAIM_ONLY`.
+
+`PACK_RECOMMENDATION_MAP.json` maps every pack recommendation (doc 01 #1–#18, backlog R9.1–R10.3, docs 05/06/07/14) to its gap-matrix rows. Rows that v2 changed carry a `CHANGED_BY_PACK` list.
 
 Outputs (`build_r9_gap_study.py` regenerates them):
 
 | File | Content |
 |---|---|
-| `R9_ARCHITECTURE_GAP_MATRIX.json` / `.csv` | 36 rows, all columns of brief §2 plus PRIORITY |
+| `R9_ARCHITECTURE_GAP_MATRIX.json` / `.csv` | 52 rows (36 v1, 26 of them updated by the pack, + 16 new), all brief §2 columns plus PRIORITY, CHANGED_BY_PACK, DECISION |
 | `PROVENANCE_FIELD_COVERAGE.csv` | 22 fields × 4 record families |
 | `SCALE_GATE_AUDIT.json` | DXF/DWG, vector PDF, raster PDF, IFC |
-| `DONOR_TECHNIQUE_MATRIX.json` / `.csv` | 24 techniques × Urban / U-C4N / christiannp / RoomGraph / OpenTakeoff / Rebar-Takeoff |
+| `DONOR_TECHNIQUE_MATRIX.json` / `.csv` | 27 techniques × Urban / U-C4N / christiannp / RoomGraph / OpenTakeoff / Rebar-Takeoff / aec-qto |
+| `R9_LICENCE_DEPENDENCY_REGISTER.json` | verified donors, pack-claim-only donors, Urban runtime imports |
+| `PACK_RECOMMENDATION_MAP.json` | pack recommendation → gap-matrix rows |
 
-Status counts: 17 PARTIAL, 8 ALREADY_PRESENT, 8 URBAN_STRONGER, 1 CONFLICT, 2 NOT_APPLICABLE.
+Status counts (v2): 23 PARTIAL, 12 ALREADY_PRESENT, 9 URBAN_STRONGER, 3 CONFLICT, 2 MISSING, 3 NOT_APPLICABLE.
 
-Recommendation counts: 14 KEEP_URBAN, 9 ADAPT, 2 ADOPT, 5 CHALLENGER_ONLY, 6 DEFER.
+Recommendation counts (v2): 17 KEEP_URBAN, 14 ADAPT, 3 ADOPT, 4 CHALLENGER_ONLY, 3 REJECT, 11 DEFER.
 
 ## 1. State model (brief §3)
 
@@ -184,7 +180,11 @@ What it genuinely adds before S4 is two things, both Urban-native, neither a por
 **Decision:**
 
 - the annotation evidence path becomes **PRODUCTION_EVIDENCE_PATH, Urban-native**;
-- Rebar-Takeoff itself is **TEST_FIXTURE_DONOR / CHALLENGER only**, and only after its licence (PACK_NOT_HELD) is checked.
+- Rebar-Takeoff itself: licence verified MIT at `54641dd8`, but **rejected as a code or fixture donor (v2)**.
+  - Its grammar is Turkish-convention (`16[16/20`, `L=400`, `BOY=`), not ST7757's (`5Ø10/m`, `8 Ø 12`, schedule ATTRIBs).
+  - It binds lengths to the *nearest* length label, which Urban's beam binding forbids (R9-RT-04 is now CONFLICT / REJECT).
+  - It describes itself as approximate.
+  - The only parts kept are two metrics for the annotation census: automatic match rate and included-in-totals rate. Its "unresolved rows stay out of the total" rule is something Urban already does.
 
 S4 footing bars mostly come from schedule ATTRIBs, which S1 already reads with handles and raw values. The real S4 blocker is BOXED semantics, and that needs a source or a claim, not a parser.
 
@@ -242,13 +242,17 @@ It is a contract, not a port. Porting the legacy modules is deferred (R9-GB-02).
 | U-C4N | MIT |
 | christiannp | UNKNOWN; repo unresolved |
 | OpenConstructionERP | AGPL: ideas only |
-| RoomGraph / Rebar-Takeoff / aec-qto | licences PACK_NOT_HELD; no use beyond ideas until checked |
+| RoomGraph | MIT, verified at 772f0954; no dependencies; ideas only |
+| aec-qto | MIT, verified at 82c10016; depends on `ifc-spf` (licence not checked); pattern only |
+| Rebar-Takeoff | MIT, verified at 54641dd8; heavy UI/build dependencies; nothing reused |
+| **PyMuPDF (in Urban today)** | **AGPL-3.0 or commercial. Imported by 6 production `engine/` modules** (`pdf_vector_evidence`, `vector_source`, `geometry`, `glyph_text`, `sanitary_source`, `ingest/harness`). Not in DONORS.lock or THIRD_PARTY_PROVENANCE; `requirements.txt` lists it only as an optional comment. **R9-LIC-01: owner licence decision needed** |
+| LibreDWG | GPL-3.0, used as an external binary producing JSON (not linked) |
 | shapely | BSD-3; already present |
 | ezdxf | MIT; K2 only |
 | Clipper2 (pyclipper) | BSL-1.0 / MIT; not installed |
 | ifcopenshell | LGPL-3.0; not installed; only for an IFC project |
 
-No new dependency is recommended before S4.
+No new dependency is recommended before S4. S4 reads DXF only, so R9-LIC-01 does not block it; the licence decision is still needed now.
 
 ## 11. Priority plan (genuine gaps only)
 
@@ -263,9 +267,12 @@ No new dependency is recommended before S4.
 | P1 | GeometryBackend register (R9-GB-01) | Declared imports, recorded backend | after S4 |
 | P1 | URBAN_KW_V1 golden fixture (R9-RE-02) | Prerequisite for any rule migration | after S4 |
 | P1 | Actor / method fields on receipts (R9-PR-04) | Audit | after S4 |
-| P1 | Rebar-Takeoff as test-fixture donor (R9-RT-08) | Token corpora | after its licence check |
-| P2 | RoomGraph vector-PDF challenger (R9-RG-09); declarative profile migration (R9-RE-01) | Only with a benchmark project | after S4 |
-| DEFER | Human-correction lineage; numeric confidence; marked-up export; IFC; legacy shapely port; nearby-dimension matching | No current consumer | — |
+| P1 | **PyMuPDF licence decision + third-party manifest gate (R9-LIC-01, R9-LIC-02)** | AGPL in production `engine/` | decision now; migration or licence after S4 |
+| P1 | explain_quantity over the receipt (R9-EX-01); per-family metrics registry (R9-BM-01) | Audit; S4 must emit bar-level records | after S4 |
+| P2 | Permissive PDF stack (R9-PDF-01); rule lint (R9-RE-03); provenance-schema export view (R9-PR-07); match-line identity (R9-REV-01) | — | after S4 |
+| P2 | RoomGraph vector-PDF challenger (R9-RG-09; a non-curved benchmark project is required); declarative profile migration (R9-RE-01) | Only with a benchmark project | after S4 |
+| DEFER | Human-correction lineage; numeric confidence; marked-up export; IFC; legacy shapely port; formwork contact surfaces; MCP surface; impact-ordered review queue | No current consumer | — |
+| REJECT | Rebar-Takeoff as a donor; nearest-label length matching; OR-Tools (native optimiser exists); RoomGraph door-width scale fallback; AUTO_PASS status | — | — |
 
 Answers to brief §13:
 
@@ -276,3 +283,36 @@ Answers to brief §13:
   - vector-PDF scale gate: after S4.
 - **D. Formal geometry backend:** NO; after S4.
 - **E. Declarative profile migration:** NO; golden fixture first, after S4.
+
+
+## 12. What changed from a75b845 (v2 summary)
+
+1. **New conflict, PyMuPDF (R9-LIC-01).**
+   - AGPL-3.0 (or commercial) PyMuPDF is a runtime import of 6 production `engine/` modules, and it is undeclared.
+   - v1 missed this because it audited functions, not licences.
+   - It needs an owner decision: buy a commercial licence, or replace the PDF lane with pypdfium2 + pdfplumber (R9-PDF-01).
+   - It does not block S4, which reads DXF only.
+   - A third-party manifest gate (R9-LIC-02) stops a recurrence.
+2. **Rebar-Takeoff downgraded.** v1 had it as challenger / test-fixture donor; v2 rejects it as a code or fixture donor.
+   - Turkish label grammar.
+   - Nearest-label length binding, which conflicts with Urban.
+   - Approximate by design.
+   - Its MIT licence is verified.
+   - The pre-S4 P0 work (one grammar plus an annotation census) is unchanged and stays Urban-native. Only Rebar-Takeoff's two match-rate metrics are adopted.
+3. **RoomGraph verified, decision unchanged (CHALLENGER_ONLY, P2, after S4).**
+   - MIT, with no dependencies.
+   - Its own LIMITATIONS rule out curved walls, single-line walls, walls over 420 mm and scans, so Alsenan's arches are out of scope and the benchmark needs a non-curved project.
+   - Its door-width scale fallback is rejected as evidence.
+   - Its room-adjacency concept supports R9-RG-06 (P1), which Urban builds on its own TS01 sites.
+4. **aec-qto verified, decision unchanged (DEFER migration; golden fixture P1).**
+   - MIT; it is IFC classification, not measurement.
+   - New P2 row R9-RE-03: a rule lint for dead or shadowed methods.
+5. **Pack proposals Urban already covers.**
+   - Shapely as a dependency: Urban already uses it.
+   - Rebar evidence ladder.
+   - BarLengthBreakdown and laps.
+   - Ambiguity excluded from totals.
+   - Drawing survey.
+   - The pack's verified / auto_pass / review_required states: Urban's three axes are kept, and AUTO_PASS is rejected.
+6. **New deferred or P2 rows:** revision / match-line identity, explain_quantity, the per-family metrics registry, the permissive PDF stack, formwork, the MCP surface, typed agent operations, review-queue ordering and a provenance-schema export view.
+7. **Before S4 is unchanged:** unified bar grammar plus annotation census; receipt fields on S4 outputs; version stamps in comparison engines. The one addition is that the PyMuPDF licence decision should be taken now, though the work comes after S4.
