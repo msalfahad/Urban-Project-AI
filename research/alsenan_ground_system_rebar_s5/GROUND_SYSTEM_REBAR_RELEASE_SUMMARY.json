@@ -1,0 +1,388 @@
+{
+ "accurate_summary": {
+  "categories": {
+   "FOUNDATIONS": {
+    "blocked_modelled_kg": 0.0,
+    "blocked_modelled_parts": 0,
+    "blocked_unquantified_parts": 23,
+    "category": "FOUNDATIONS",
+    "components": {
+     "ANCHORAGE": {
+      "BLOCKED_UNQUANTIFIED": 12.0
+     },
+     "STRAP_BEAM_BAR": {
+      "BLOCKED_UNQUANTIFIED": 2.0,
+      "LOWER_BOUND": 219.43456790123454
+     },
+     "STRAP_BEAM_STIRRUP": {
+      "BLOCKED_UNQUANTIFIED": 9.0
+     }
+    },
+    "lower_bound_kg": 219.43456790123454,
+    "lower_bound_parts": 4,
+    "official_status": "PARTIAL",
+    "projected_kg": 219.43456790123454,
+    "provisional_kg": 0.0,
+    "provisional_parts": 0,
+    "released_kg": 219.43456790123454,
+    "released_parts": 4,
+    "verified_kg": 0.0
+   },
+   "GROUND_BEAMS": {
+    "blocked_modelled_kg": 0.0,
+    "blocked_modelled_parts": 0,
+    "blocked_unquantified_parts": 620,
+    "category": "GROUND_BEAMS",
+    "components": {
+     "ANCHORAGE": {
+      "BLOCKED_UNQUANTIFIED": 236.0
+     },
+     "BEAM_BOTTOM_BAR": {
+      "BLOCKED_UNQUANTIFIED": 56.0,
+      "LOWER_BOUND": 825.7091851851853
+     },
+     "BEAM_EXTRA_BAR": {
+      "BLOCKED_UNQUANTIFIED": 32.0
+     },
+     "BEAM_SIDE_BAR": {
+      "BLOCKED_UNQUANTIFIED": 44.0
+     },
+     "BEAM_STIRRUP": {
+      "BLOCKED_UNQUANTIFIED": 208.0
+     },
+     "BEAM_TOP_BAR": {
+      "BLOCKED_UNQUANTIFIED": 28.0,
+      "LOWER_BOUND": 412.85459259259255
+     },
+     "SPECIAL_DETAIL_BAR": {
+      "BLOCKED_UNQUANTIFIED": 16.0
+     }
+    },
+    "lower_bound_kg": 1238.563777777778,
+    "lower_bound_parts": 93,
+    "official_status": "PARTIAL",
+    "projected_kg": 1238.563777777778,
+    "provisional_kg": 0.0,
+    "provisional_parts": 0,
+    "released_kg": 1238.563777777778,
+    "released_parts": 93,
+    "verified_kg": 0.0
+   }
+  },
+  "product": "ACCURATE_BOQ_REBAR",
+  "project": {
+   "blocked_modelled_kg": 0.0,
+   "blocked_unquantified_parts": 643,
+   "final_rebar": "FINAL_REBAR_NOT_ESTABLISHED",
+   "final_rebar_kg": null,
+   "lower_bound_kg": 1457.9983456790123,
+   "projected_kg": 1457.9983456790123,
+   "provisional_kg": 0.0,
+   "released_kg": 1457.9983456790123,
+   "verified_kg": 0.0
+  },
+  "rule": "states are never merged; an incomplete quantity is never completed by an estimate",
+  "states": [
+   "VERIFIED",
+   "LOWER_BOUND",
+   "PROVISIONAL",
+   "BLOCKED_MODELLED",
+   "BLOCKED_UNQUANTIFIED"
+  ]
+ },
+ "component_population": {
+  "GROUND_BEAM:BOTTOM_ROW_1:BLOCKED_UNQUANTIFIED": 28,
+  "GROUND_BEAM:BOTTOM_ROW_1:LOWER_BOUND": 31,
+  "GROUND_BEAM:BOTTOM_ROW_2:BLOCKED_UNQUANTIFIED": 28,
+  "GROUND_BEAM:BOTTOM_ROW_2:LOWER_BOUND": 31,
+  "GROUND_BEAM:DEVELOPMENT_SUPPORT_1:BLOCKED_UNQUANTIFIED": 59,
+  "GROUND_BEAM:DEVELOPMENT_SUPPORT_2:BLOCKED_UNQUANTIFIED": 59,
+  "GROUND_BEAM:EXTRA_SUPPORT:BLOCKED_UNQUANTIFIED": 16,
+  "GROUND_BEAM:EXTRA_SUPPORT:NOT_APPLICABLE": 43,
+  "GROUND_BEAM:HOOK_1:BLOCKED_UNQUANTIFIED": 59,
+  "GROUND_BEAM:HOOK_2:BLOCKED_UNQUANTIFIED": 59,
+  "GROUND_BEAM:MID:BLOCKED_UNQUANTIFIED": 16,
+  "GROUND_BEAM:MID:NOT_APPLICABLE": 43,
+  "GROUND_BEAM:OTHER_EXPLICIT_EXTRA:BLOCKED_UNQUANTIFIED": 16,
+  "GROUND_BEAM:OTHER_EXPLICIT_EXTRA:NOT_APPLICABLE": 43,
+  "GROUND_BEAM:SIDE_REBAR:BLOCKED_UNQUANTIFIED": 44,
+  "GROUND_BEAM:SIDE_REBAR:NOT_APPLICABLE": 15,
+  "GROUND_BEAM:STIRRUP_CORE_PATH:BLOCKED_UNQUANTIFIED": 59,
+  "GROUND_BEAM:STIRRUP_COUNT:BLOCKED_UNQUANTIFIED": 34,
+  "GROUND_BEAM:STIRRUP_COUNT:LOWER_BOUND": 25,
+  "GROUND_BEAM:STIRRUP_DIAMETER:BLOCKED_UNQUANTIFIED": 31,
+  "GROUND_BEAM:STIRRUP_DIAMETER:VERIFIED": 28,
+  "GROUND_BEAM:STIRRUP_END_ZONE_EXTRA:BLOCKED_UNQUANTIFIED": 31,
+  "GROUND_BEAM:STIRRUP_END_ZONE_EXTRA:NOT_APPLICABLE": 28,
+  "GROUND_BEAM:STIRRUP_HOOK_1:BLOCKED_UNQUANTIFIED": 59,
+  "GROUND_BEAM:STIRRUP_HOOK_2:BLOCKED_UNQUANTIFIED": 59,
+  "GROUND_BEAM:STIRRUP_SPACING:BLOCKED_UNQUANTIFIED": 31,
+  "GROUND_BEAM:STIRRUP_SPACING:VERIFIED": 28,
+  "GROUND_BEAM:TOP_MAIN:BLOCKED_UNQUANTIFIED": 28,
+  "GROUND_BEAM:TOP_MAIN:LOWER_BOUND": 31,
+  "STRAP_BEAM:BOTTOM_MAIN:BLOCKED_UNQUANTIFIED": 1,
+  "STRAP_BEAM:BOTTOM_MAIN:LOWER_BOUND": 2,
+  "STRAP_BEAM:DEVELOPMENT_FOOTING_1:BLOCKED_UNQUANTIFIED": 3,
+  "STRAP_BEAM:DEVELOPMENT_FOOTING_2:BLOCKED_UNQUANTIFIED": 3,
+  "STRAP_BEAM:HOOK_1:BLOCKED_UNQUANTIFIED": 3,
+  "STRAP_BEAM:HOOK_2:BLOCKED_UNQUANTIFIED": 3,
+  "STRAP_BEAM:OTHER_EXPLICIT_EXTRA:NOT_APPLICABLE": 3,
+  "STRAP_BEAM:STIRRUP_CORE_PATH:BLOCKED_UNQUANTIFIED": 3,
+  "STRAP_BEAM:STIRRUP_COUNT:LOWER_BOUND": 3,
+  "STRAP_BEAM:STIRRUP_DIAMETER:VERIFIED": 3,
+  "STRAP_BEAM:STIRRUP_END_ZONE_EXTRA:NOT_APPLICABLE": 3,
+  "STRAP_BEAM:STIRRUP_HOOK_1:BLOCKED_UNQUANTIFIED": 3,
+  "STRAP_BEAM:STIRRUP_HOOK_2:BLOCKED_UNQUANTIFIED": 3,
+  "STRAP_BEAM:STIRRUP_SPACING:VERIFIED": 3,
+  "STRAP_BEAM:TOP_MAIN:BLOCKED_UNQUANTIFIED": 1,
+  "STRAP_BEAM:TOP_MAIN:LOWER_BOUND": 2
+ },
+ "components_by_state": {
+  "BLOCKED_UNQUANTIFIED": 739,
+  "LOWER_BOUND": 125,
+  "NOT_APPLICABLE": 178,
+  "VERIFIED": 62
+ },
+ "conservation": {
+  "all_pass": true,
+  "checks": {
+   "accurate_summary_reconciles": true,
+   "bbs_net_kg_equals_known_parts_kg": true,
+   "blocked_and_non_mass_components_carry_no_kg": true,
+   "component_kg_equals_occurrence_known_kg": true,
+   "component_length_equals_occurrence_known_length": true,
+   "every_component_passes_the_generic_contract": true,
+   "every_component_terminates_once_per_occurrence": true,
+   "every_mass_component_is_one_accurate_part": true,
+   "occurrence_kg_equals_project_known_kg": true,
+   "population_reconciles": true
+  },
+  "population_by_component_state": {
+   "BOTTOM_MAIN": {
+    "BLOCKED_UNQUANTIFIED": 1,
+    "LOWER_BOUND": 2
+   },
+   "BOTTOM_ROW_1": {
+    "BLOCKED_UNQUANTIFIED": 28,
+    "LOWER_BOUND": 31
+   },
+   "BOTTOM_ROW_2": {
+    "BLOCKED_UNQUANTIFIED": 28,
+    "LOWER_BOUND": 31
+   },
+   "DEVELOPMENT_FOOTING_1": {
+    "BLOCKED_UNQUANTIFIED": 3
+   },
+   "DEVELOPMENT_FOOTING_2": {
+    "BLOCKED_UNQUANTIFIED": 3
+   },
+   "DEVELOPMENT_SUPPORT_1": {
+    "BLOCKED_UNQUANTIFIED": 59
+   },
+   "DEVELOPMENT_SUPPORT_2": {
+    "BLOCKED_UNQUANTIFIED": 59
+   },
+   "EXTRA_SUPPORT": {
+    "BLOCKED_UNQUANTIFIED": 16,
+    "NOT_APPLICABLE": 43
+   },
+   "HOOK_1": {
+    "BLOCKED_UNQUANTIFIED": 62
+   },
+   "HOOK_2": {
+    "BLOCKED_UNQUANTIFIED": 62
+   },
+   "MID": {
+    "BLOCKED_UNQUANTIFIED": 16,
+    "NOT_APPLICABLE": 43
+   },
+   "OTHER_EXPLICIT_EXTRA": {
+    "BLOCKED_UNQUANTIFIED": 16,
+    "NOT_APPLICABLE": 46
+   },
+   "SIDE_REBAR": {
+    "BLOCKED_UNQUANTIFIED": 44,
+    "NOT_APPLICABLE": 15
+   },
+   "STIRRUP_CORE_PATH": {
+    "BLOCKED_UNQUANTIFIED": 62
+   },
+   "STIRRUP_COUNT": {
+    "BLOCKED_UNQUANTIFIED": 34,
+    "LOWER_BOUND": 28
+   },
+   "STIRRUP_DIAMETER": {
+    "BLOCKED_UNQUANTIFIED": 31,
+    "VERIFIED": 31
+   },
+   "STIRRUP_END_ZONE_EXTRA": {
+    "BLOCKED_UNQUANTIFIED": 31,
+    "NOT_APPLICABLE": 31
+   },
+   "STIRRUP_HOOK_1": {
+    "BLOCKED_UNQUANTIFIED": 62
+   },
+   "STIRRUP_HOOK_2": {
+    "BLOCKED_UNQUANTIFIED": 62
+   },
+   "STIRRUP_SPACING": {
+    "BLOCKED_UNQUANTIFIED": 31,
+    "VERIFIED": 31
+   },
+   "TOP_MAIN": {
+    "BLOCKED_UNQUANTIFIED": 29,
+    "LOWER_BOUND": 33
+   }
+  },
+  "population_by_state": {
+   "BLOCKED_UNQUANTIFIED": 739,
+   "LOWER_BOUND": 125,
+   "NOT_APPLICABLE": 178,
+   "VERIFIED": 62
+  },
+  "project_known_kg": 1457.9983456790123
+ },
+ "context": {
+  "CALCULATION_ROUND": "S5",
+  "DRAWING_ID": "ST7757.dxf",
+  "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+  "ENGINE_COMMIT": "cab778a+code:2dc78fc0ff285ba2",
+  "PROJECT_ID": "ALSENAN-ST7757",
+  "REGISTER_VERSION": "GROUND_SYSTEM_REBAR_REGISTER_V1",
+  "REVISION": "ALSENAN_ST7757_DXF",
+  "unit_mass": {
+   "authority": "Urban project default (R3)",
+   "method": "D2_OVER_162"
+  }
+ },
+ "diameter_distribution": {
+  "14": {
+   "kg": 304.37711111111116,
+   "length_m": 251.57700000000003
+  },
+  "16": {
+   "kg": 1006.9412345679011,
+   "length_m": 637.205
+  },
+  "18": {
+   "kg": 146.68,
+   "length_m": 73.34
+  }
+ },
+ "families": {
+  "GROUND_BEAM": {
+   "BLOCKED_MODELLED_KG": 0.0,
+   "BLOCKED_UNQUANTIFIED_COMPONENTS": 716,
+   "LOWER_BOUND_KNOWN_KG": 1238.563777777778,
+   "PROVISIONAL_KG": 0.0,
+   "VERIFIED_KG": 0.0,
+   "blocked_unquantified_by_component": {
+    "BOTTOM_ROW_1": 28,
+    "BOTTOM_ROW_2": 28,
+    "DEVELOPMENT_SUPPORT_1": 59,
+    "DEVELOPMENT_SUPPORT_2": 59,
+    "EXTRA_SUPPORT": 16,
+    "HOOK_1": 59,
+    "HOOK_2": 59,
+    "MID": 16,
+    "OTHER_EXPLICIT_EXTRA": 16,
+    "SIDE_REBAR": 44,
+    "STIRRUP_CORE_PATH": 59,
+    "STIRRUP_COUNT": 34,
+    "STIRRUP_DIAMETER": 31,
+    "STIRRUP_END_ZONE_EXTRA": 31,
+    "STIRRUP_HOOK_1": 59,
+    "STIRRUP_HOOK_2": 59,
+    "STIRRUP_SPACING": 31,
+    "TOP_MAIN": 28
+   },
+   "family": "GROUND_BEAM",
+   "final": "FINAL NOT ESTABLISHED",
+   "kg_by_diameter": {
+    "14": 304.37711111111116,
+    "16": 934.1866666666665
+   },
+   "known_straight_length_m": 842.7420000000002,
+   "occurrences": 59,
+   "occurrences_by_state": {
+    "BLOCKED": 28,
+    "LOWER_BOUND": 31
+   },
+   "stirrup_count_lower_bound_total": 587,
+   "stirrup_counts_quantified": 25,
+   "stirrup_masses_quantified": 0
+  },
+  "STRAP_BEAM": {
+   "BLOCKED_MODELLED_KG": 0.0,
+   "BLOCKED_UNQUANTIFIED_COMPONENTS": 23,
+   "LOWER_BOUND_KNOWN_KG": 219.43456790123454,
+   "PROVISIONAL_KG": 0.0,
+   "VERIFIED_KG": 0.0,
+   "blocked_unquantified_by_component": {
+    "BOTTOM_MAIN": 1,
+    "DEVELOPMENT_FOOTING_1": 3,
+    "DEVELOPMENT_FOOTING_2": 3,
+    "HOOK_1": 3,
+    "HOOK_2": 3,
+    "STIRRUP_CORE_PATH": 3,
+    "STIRRUP_HOOK_1": 3,
+    "STIRRUP_HOOK_2": 3,
+    "TOP_MAIN": 1
+   },
+   "family": "STRAP_BEAM",
+   "final": "FINAL NOT ESTABLISHED",
+   "kg_by_diameter": {
+    "16": 72.75456790123457,
+    "18": 146.68
+   },
+   "known_straight_length_m": 119.38,
+   "occurrences": 3,
+   "occurrences_by_state": {
+    "BLOCKED": 1,
+    "LOWER_BOUND": 2
+   },
+   "stirrup_count_lower_bound_total": 76,
+   "stirrup_counts_quantified": 3,
+   "stirrup_masses_quantified": 0
+  }
+ },
+ "final_ground_system_rebar": "FINAL GROUND-SYSTEM REBAR NOT ESTABLISHED",
+ "headline": "KNOWN SOURCE-DERIVED GROUND-SYSTEM REBAR",
+ "headline_lines": [
+  "KNOWN SOURCE-DERIVED GROUND-SYSTEM REBAR",
+  "FINAL GROUND-SYSTEM REBAR NOT ESTABLISHED"
+ ],
+ "known_source_derived_ground_system_rebar_kg": 1457.9983456790123,
+ "occurrences": 62,
+ "policy": "GROUND_SYSTEM_REBAR_S5_V1",
+ "provenance": {
+  "accurate_parts": 740,
+  "contract": "rebar_provenance generic identity + ground_system_provenance S5 fields; mass parts also validate_s5_part",
+  "records": 1104,
+  "validated": 1104
+ },
+ "questions_open": [
+  "Q1",
+  "Q10",
+  "Q2",
+  "Q3",
+  "Q3B",
+  "Q4",
+  "Q5",
+  "Q6",
+  "Q7",
+  "Q8",
+  "Q9"
+ ],
+ "scope_check": {
+  "narrower_than_pre_s5_1": [],
+  "widened": 0
+ },
+ "stamp": {
+  "CALCULATION_ROUND": "S5",
+  "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+  "ENGINE_COMMIT": "cab778a+code:2dc78fc0ff285ba2",
+  "REGISTER_VERSION": "GROUND_SYSTEM_REBAR_REGISTER_V1"
+ },
+ "total_source_derived_straight_length_m": 962.1220000000001
+}

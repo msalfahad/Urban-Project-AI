@@ -29,6 +29,7 @@ ACCURATE_MODULES = (
     "engine/source/ground_system_provenance.py",  # S5 provenance = generic contract + member fields
     "engine/source/rebar_provenance.py",        # generic accurate-rebar provenance (ELEMENT_* identity)
     "engine/source/ground_system_resolution.py",  # pre-S5.1 source-resolution decisions (no geometry, no kg)
+    "engine/source/ground_system_rebar.py",     # S5 accurate ground-beam + strap-beam rebar engine
     "engine/bbs_steel.py",
 )
 # project builders that produce accurate reinforcement registers
@@ -44,6 +45,7 @@ ACCURATE_BUILDERS = (
     "research/alsenan_footing_rebar_s4/build_footing_rebar_s4.py",
     "research/pre_s5_ground_system_readiness/build_pre_s5.py",
     "research/pre_s5_1_source_resolution/build_pre_s5_1.py",
+    "research/alsenan_ground_system_rebar_s5/build_ground_system_rebar_s5.py",
 )
 ROUGH_MODULES = (
     "engine/source/rough_rebar_sanity.py",
@@ -67,6 +69,7 @@ COMPARISON_MODULES = (                   # reference-QS / oracle comparison: nev
     "research/alsenan_rebar_truth_03/post_freeze_rebar_compare.py",
     "research/alsenan_rebar_source_exhaustion_04/post_freeze_rebar_comparison.py",
     "research/alsenan_footing_rebar_s4/post_freeze_comparison.py",
+    "research/alsenan_ground_system_rebar_s5/post_freeze_comparison.py",
 )
 COMPARISON_DIRS = (
     "research/alsenan_multi_engine_comparison",

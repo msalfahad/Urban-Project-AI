@@ -1,0 +1,6680 @@
+{
+ "context": {
+  "CALCULATION_ROUND": "S5",
+  "DRAWING_ID": "ST7757.dxf",
+  "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+  "ENGINE_COMMIT": "cab778a+code:2dc78fc0ff285ba2",
+  "PROJECT_ID": "ALSENAN-ST7757",
+  "REGISTER_VERSION": "GROUND_SYSTEM_REBAR_REGISTER_V1",
+  "REVISION": "ALSENAN_ST7757_DXF",
+  "unit_mass": {
+   "authority": "Urban project default (R3)",
+   "method": "D2_OVER_162"
+  }
+ },
+ "definitions": {
+  "P13-GB-EXTERIOR": {
+   "authority": {
+    "longitudinal": "SOURCE_EXPLICIT",
+    "section": "SOURCE_EXPLICIT",
+    "stirrup": "SOURCE_EXPLICIT"
+   },
+   "detail_id": "P13-GB-EXTERIOR",
+   "end_zone": null,
+   "extras": [],
+   "family": "GROUND_BEAM",
+   "longitudinal": {
+    "BOTTOM_ROW_1": [
+     3,
+     16
+    ],
+    "BOTTOM_ROW_2": [
+     3,
+     16
+    ],
+    "TOP_MAIN": [
+     3,
+     16
+    ]
+   },
+   "section": {
+    "B_mm": 300,
+    "D_mm": null,
+    "D_state": "CROSS_VERIFIED_SOURCE"
+   },
+   "sheet_region": "ST7757.pdf p.13 ground-beam sections",
+   "side": "2Ø12/30cm",
+   "source_handles": [
+    "R4-CLAIM:P13-GB-EXTERIOR"
+   ],
+   "source_text": "Ground Beams. for exterior walls (1:20): width 30, depth FOLLOW ARCH. (Ground Floor slab level to below Outer Normal ground level); 3Ø16 top; 2Ø12/30cm; Ø8/15cm; 6Ø16",
+   "stirrup": {
+    "dia_mm": 8,
+    "mode": "SPACING_MM",
+    "value": 150
+   }
+  },
+  "P13-GB-GT5M": {
+   "authority": {
+    "longitudinal": "SOURCE_EXPLICIT",
+    "section": "SOURCE_EXPLICIT",
+    "stirrup": "SOURCE_EXPLICIT"
+   },
+   "detail_id": "P13-GB-GT5M",
+   "end_zone": null,
+   "extras": [],
+   "family": "GROUND_BEAM",
+   "longitudinal": {
+    "BOTTOM_ROW_1": [
+     3,
+     16
+    ],
+    "BOTTOM_ROW_2": [
+     3,
+     16
+    ],
+    "TOP_MAIN": [
+     3,
+     16
+    ]
+   },
+   "section": {
+    "B_mm": 300,
+    "D_mm": 600,
+    "D_state": "CROSS_VERIFIED_SOURCE"
+   },
+   "sheet_region": "ST7757.pdf p.13 ground-beam sections",
+   "side": null,
+   "source_handles": [
+    "R4-CLAIM:P13-GB-GT5M"
+   ],
+   "source_text": "Ground Beams. More than 5m length (1:20) without concentrated load: 30 x 60; 3Ø16 top; Ø8/15cm; 3Ø16; 3Ø16",
+   "stirrup": {
+    "dia_mm": 8,
+    "mode": "SPACING_MM",
+    "value": 150
+   }
+  },
+  "P13-GB-LT2_5M": {
+   "authority": {
+    "longitudinal": "SOURCE_EXPLICIT",
+    "section": "UNAPPROVED_METHOD",
+    "stirrup": "SOURCE_EXPLICIT"
+   },
+   "detail_id": "P13-GB-LT2_5M",
+   "end_zone": null,
+   "extras": [],
+   "family": "GROUND_BEAM",
+   "longitudinal": {
+    "BOTTOM_ROW_1": [
+     3,
+     14
+    ],
+    "BOTTOM_ROW_2": [
+     3,
+     14
+    ],
+    "TOP_MAIN": [
+     3,
+     14
+    ]
+   },
+   "section": {
+    "B_mm": 300,
+    "D_mm": 300,
+    "D_state": "AI_VISUAL_TRANSCRIPTION"
+   },
+   "sheet_region": "ST7757.pdf p.13 ground-beam sections",
+   "side": null,
+   "source_handles": [
+    "R4-CLAIM:P13-GB-LT2_5M-BARS",
+    "R4-CLAIM:P13-GB-LT2_5M-SECTION"
+   ],
+   "source_text": "Ground Beams. Less than 2.5m length (1:20): 3Ø14; 3Ø14; 3Ø14 (no stirrup callout printed)",
+   "stirrup": null
+  },
+  "P13-GB-LT5M": {
+   "authority": {
+    "longitudinal": "SOURCE_EXPLICIT",
+    "section": "SOURCE_EXPLICIT",
+    "stirrup": "SOURCE_EXPLICIT"
+   },
+   "detail_id": "P13-GB-LT5M",
+   "end_zone": null,
+   "extras": [],
+   "family": "GROUND_BEAM",
+   "longitudinal": {
+    "BOTTOM_ROW_1": [
+     3,
+     14
+    ],
+    "BOTTOM_ROW_2": [
+     3,
+     14
+    ],
+    "TOP_MAIN": [
+     3,
+     14
+    ]
+   },
+   "section": {
+    "B_mm": 300,
+    "D_mm": 400,
+    "D_state": "CROSS_VERIFIED_SOURCE"
+   },
+   "sheet_region": "ST7757.pdf p.13 ground-beam sections",
+   "side": null,
+   "source_handles": [
+    "R4-CLAIM:P13-GB-LT5M"
+   ],
+   "source_text": "Ground Beams. Less than 5m length (1:20) without concentrated load: 30 x 40; 3Ø14; Ø8/15cm; 3Ø14; 3Ø14",
+   "stirrup": {
+    "dia_mm": 8,
+    "mode": "SPACING_MM",
+    "value": 150
+   }
+  },
+  "SBT:1FB0": {
+   "authority": {
+    "longitudinal": "SOURCE_EXPLICIT",
+    "section": "SOURCE_EXPLICIT",
+    "stirrup": "SOURCE_EXPLICIT"
+   },
+   "detail_id": "SBT:1FB0",
+   "end_zone": null,
+   "extras": [],
+   "family": "STRAP_BEAM",
+   "longitudinal": {
+    "BOTTOM_ROW_1": [
+     7,
+     16
+    ],
+    "BOTTOM_ROW_2": null,
+    "TOP_MAIN": [
+     13,
+     18
+    ]
+   },
+   "section": {
+    "B_mm": 700,
+    "D_mm": 500,
+    "D_state": "SOURCE_EXPLICIT"
+   },
+   "sheet_region": "Schedule of beams (ST7757.dxf model space, PDF p.10)",
+   "side": null,
+   "source_handles": [
+    "1FB0"
+   ],
+   "source_text": "SBT SB1: W 70 H 50 TOP 13Ø18 BOT 7Ø16 STIRRUPS 8Ø8/m",
+   "stirrup": {
+    "dia_mm": 8,
+    "mode": "BARS_PER_METRE",
+    "value": 8
+   }
+  },
+  "SBT:1FBB": {
+   "authority": {
+    "longitudinal": "SOURCE_EXPLICIT",
+    "section": "SOURCE_EXPLICIT",
+    "stirrup": "SOURCE_EXPLICIT"
+   },
+   "detail_id": "SBT:1FBB",
+   "end_zone": null,
+   "extras": [],
+   "family": "STRAP_BEAM",
+   "longitudinal": {
+    "BOTTOM_ROW_1": [
+     10,
+     18
+    ],
+    "BOTTOM_ROW_2": null,
+    "TOP_MAIN": [
+     10,
+     18
+    ]
+   },
+   "section": {
+    "B_mm": 800,
+    "D_mm": 500,
+    "D_state": "SOURCE_EXPLICIT"
+   },
+   "sheet_region": "Schedule of beams (ST7757.dxf model space, PDF p.10)",
+   "side": null,
+   "source_handles": [
+    "1FBB"
+   ],
+   "source_text": "SBT SB2: W 80 H 50 TOP 10Ø18 BOT 10Ø18 STIRRUPS 10Ø8/m",
+   "stirrup": {
+    "dia_mm": 8,
+    "mode": "BARS_PER_METRE",
+    "value": 10
+   }
+  },
+  "SBT:2ABA": {
+   "authority": {
+    "longitudinal": "SOURCE_EXPLICIT",
+    "section": "SOURCE_EXPLICIT",
+    "stirrup": "SOURCE_EXPLICIT"
+   },
+   "detail_id": "SBT:2ABA",
+   "end_zone": null,
+   "extras": [],
+   "family": "STRAP_BEAM",
+   "longitudinal": {
+    "BOTTOM_ROW_1": [
+     10,
+     16
+    ],
+    "BOTTOM_ROW_2": null,
+    "TOP_MAIN": [
+     20,
+     18
+    ]
+   },
+   "section": {
+    "B_mm": 1000,
+    "D_mm": 500,
+    "D_state": "SOURCE_EXPLICIT"
+   },
+   "sheet_region": "Schedule of beams (ST7757.dxf model space, PDF p.10)",
+   "side": null,
+   "source_handles": [
+    "2ABA"
+   ],
+   "source_text": "SBT SB2: W 100 H 50 TOP 20Ø18 BOT 10Ø16 STIRRUPS 10Ø8/m",
+   "stirrup": {
+    "dia_mm": 8,
+    "mode": "BARS_PER_METRE",
+    "value": 10
+   }
+  },
+  "SBT:2B06": {
+   "authority": {
+    "longitudinal": "SOURCE_EXPLICIT",
+    "section": "SOURCE_EXPLICIT",
+    "stirrup": "SOURCE_EXPLICIT"
+   },
+   "detail_id": "SBT:2B06",
+   "end_zone": null,
+   "extras": [],
+   "family": "STRAP_BEAM",
+   "longitudinal": {
+    "BOTTOM_ROW_1": [
+     5,
+     16
+    ],
+    "BOTTOM_ROW_2": null,
+    "TOP_MAIN": [
+     5,
+     18
+    ]
+   },
+   "section": {
+    "B_mm": 500,
+    "D_mm": 400,
+    "D_state": "SOURCE_EXPLICIT"
+   },
+   "sheet_region": "Schedule of beams (ST7757.dxf model space, PDF p.10)",
+   "side": null,
+   "source_handles": [
+    "2B06"
+   ],
+   "source_text": "SBT SB3: W 50 H 40 TOP 5Ø18 BOT 5Ø16 STIRRUPS 7Ø8/m",
+   "stirrup": {
+    "dia_mm": 8,
+    "mode": "BARS_PER_METRE",
+    "value": 7
+   }
+  }
+ },
+ "occurrences": [
+  {
+   "bar_straight_run_lower_bound_m": 0.364,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 8,
+    "LOWER_BOUND": 4,
+    "NOT_APPLICABLE": 4,
+    "VERIFIED": 2
+   },
+   "depth": {
+    "bound_max_m": 1.0,
+    "candidates": {
+     "P13-GB-EXTERIOR": "FOLLOW_ARCH"
+    },
+    "state": "BOUNDED_ABOVE",
+    "value_mm": null,
+    "why": "D = (+1.00 - b) - NGL, b = floor build-up (not printed, >= 0), NGL in [+0.00, +0.00] -> D <= 1.00 m; no lower bound"
+   },
+   "depth_bound_max_m": 1.0,
+   "depth_mm": null,
+   "depth_state": "BOUNDED_ABOVE",
+   "detail_applicability_state": "PROJECT_GENERAL_DETAIL",
+   "detail_ids": [
+    "P13-GB-EXTERIOR"
+   ],
+   "end_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:17BD+17BD"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [],
+   "geometry_handles": [
+    "107",
+    "7CE"
+   ],
+   "known_kg": 5.176888888888889,
+   "known_straight_length_m": 3.2760000000000002,
+   "length_state": "CONSISTENT",
+   "lengths": {
+    "bar_run_lb_m": 0.364,
+    "bar_run_state": "LOWER_BOUND",
+    "centreline_m": 0.664,
+    "clear_concrete_m": 0.364,
+    "face_to_face_m": 0.364,
+    "issues": [],
+    "length_state": "CONSISTENT",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": 0.364
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": 0.664,
+   "member_clear_concrete_length_m": 0.364,
+   "node_issues": {},
+   "occurrence_id": "GSO-107-7CE-1",
+   "occurrence_state": "LOWER_BOUND",
+   "pre_s5_1": {
+    "exterior": "EXTERIOR_SOURCE_VERIFIED",
+    "load": "NO_CONCENTRATED_LOAD_EVIDENCE",
+    "pre_s5_1_status": "READY_LOWER_BOUND"
+   },
+   "questions": {
+    "applicability": null,
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": null
+   },
+   "start_node": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "114+115+7DF"
+    ]
+   },
+   "stirrup_count_lower_bound": 3,
+   "support_face_to_face_run_m": 0.364,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_SIDE_BAR",
+    "BEAM_STIRRUP"
+   ],
+   "why_candidate": "exterior authority EXTERIOR_SOURCE_VERIFIED (architectural exterior wall above the span); load NO_CONCENTRATED_LOAD_EVIDENCE; length details [\"P13-GB-LT2_5M\", \"P13-GB-LT5M\"]",
+   "why_not_resolved": "",
+   "width": {
+    "candidates": {
+     "P13-GB-EXTERIOR": 300
+    },
+    "state": "SOURCE_EXPLICIT",
+    "value_mm": 300
+   },
+   "width_mm": 300,
+   "width_state": "SOURCE_EXPLICIT"
+  },
+  {
+   "bar_straight_run_lower_bound_m": 9.5,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 18
+   },
+   "depth": {
+    "bound_max_m": null,
+    "candidates": {
+     "NO_PROJECT_DETAIL_FOR_CONCENTRATED_LOAD": "UNKNOWN",
+     "P13-GB-EXTERIOR": null,
+     "P13-GB-GT5M": 600
+    },
+    "state": "UNRESOLVED",
+    "value_mm": null,
+    "why": "an undefined candidate detail"
+   },
+   "depth_bound_max_m": null,
+   "depth_mm": null,
+   "depth_state": "UNRESOLVED",
+   "detail_applicability_state": "CANDIDATE_DETAIL",
+   "detail_ids": [
+    "NO_PROJECT_DETAIL_FOR_CONCENTRATED_LOAD",
+    "P13-GB-EXTERIOR",
+    "P13-GB-GT5M"
+   ],
+   "end_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:234+234"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [
+    "CONCENTRATED_LOAD_UNKNOWN: evidence {'BEAM_END_REACTION': 4, 'UNIDENTIFIED_SYMBOL': 1}; not auto-classified as PRESENT"
+   ],
+   "geometry_handles": [
+    "109",
+    "7CB"
+   ],
+   "known_kg": 0,
+   "known_straight_length_m": 0,
+   "length_state": "CONSISTENT",
+   "lengths": {
+    "bar_run_lb_m": 9.5,
+    "bar_run_state": "LOWER_BOUND",
+    "centreline_m": 9.9,
+    "clear_concrete_m": 9.5,
+    "face_to_face_m": 9.5,
+    "issues": [],
+    "length_state": "CONSISTENT",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": 9.5
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": 9.9,
+   "member_clear_concrete_length_m": 9.5,
+   "node_issues": {},
+   "occurrence_id": "GSO-109-7CB-1",
+   "occurrence_state": "BLOCKED",
+   "pre_s5_1": {
+    "exterior": "UNRESOLVED",
+    "load": "UNKNOWN",
+    "pre_s5_1_status": "BLOCKED_COMPONENT"
+   },
+   "questions": {
+    "applicability": "Q1+Q9+Q8",
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": "Q1+Q9+Q8"
+   },
+   "start_node": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "7D0+FC"
+    ]
+   },
+   "stirrup_count_lower_bound": null,
+   "support_face_to_face_run_m": 9.5,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_BOTTOM_BAR",
+    "BEAM_EXTRA_BAR",
+    "BEAM_SIDE_BAR",
+    "BEAM_STIRRUP",
+    "BEAM_TOP_BAR",
+    "SPECIAL_DETAIL_BAR"
+   ],
+   "why_candidate": "exterior authority UNRESOLVED (partial / mixed wall relation); load UNKNOWN; length details [\"P13-GB-GT5M\"]",
+   "why_not_resolved": "3 candidates: concentrated-load case has no project detail; exterior / interior not resolved;",
+   "width": {
+    "candidates": {
+     "NO_PROJECT_DETAIL_FOR_CONCENTRATED_LOAD": "UNKNOWN",
+     "P13-GB-EXTERIOR": 300,
+     "P13-GB-GT5M": 300
+    },
+    "state": "UNRESOLVED",
+    "value_mm": null
+   },
+   "width_mm": null,
+   "width_state": "UNRESOLVED"
+  },
+  {
+   "bar_straight_run_lower_bound_m": 2.7,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 8,
+    "LOWER_BOUND": 4,
+    "NOT_APPLICABLE": 4,
+    "VERIFIED": 2
+   },
+   "depth": {
+    "bound_max_m": 1.0,
+    "candidates": {
+     "P13-GB-EXTERIOR": "FOLLOW_ARCH"
+    },
+    "state": "BOUNDED_ABOVE",
+    "value_mm": null,
+    "why": "D = (+1.00 - b) - NGL, b = floor build-up (not printed, >= 0), NGL in [+0.00, +0.15] -> D <= 1.00 m; no lower bound"
+   },
+   "depth_bound_max_m": 1.0,
+   "depth_mm": null,
+   "depth_state": "BOUNDED_ABOVE",
+   "detail_applicability_state": "PROJECT_GENERAL_DETAIL",
+   "detail_ids": [
+    "P13-GB-EXTERIOR"
+   ],
+   "end_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:1DC+1DC"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [],
+   "geometry_handles": [
+    "109",
+    "7CB"
+   ],
+   "known_kg": 38.400000000000006,
+   "known_straight_length_m": 24.300000000000004,
+   "length_state": "CONSISTENT",
+   "lengths": {
+    "bar_run_lb_m": 2.7,
+    "bar_run_state": "LOWER_BOUND",
+    "centreline_m": 3.2,
+    "clear_concrete_m": 2.7,
+    "face_to_face_m": 2.7,
+    "issues": [],
+    "length_state": "CONSISTENT",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": 2.7
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": 3.2,
+   "member_clear_concrete_length_m": 2.7,
+   "node_issues": {},
+   "occurrence_id": "GSO-109-7CB-2",
+   "occurrence_state": "LOWER_BOUND",
+   "pre_s5_1": {
+    "exterior": "EXTERIOR_SOURCE_VERIFIED",
+    "load": "NO_CONCENTRATED_LOAD_EVIDENCE",
+    "pre_s5_1_status": "READY_LOWER_BOUND"
+   },
+   "questions": {
+    "applicability": null,
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": null
+   },
+   "start_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:234+234"
+    ]
+   },
+   "stirrup_count_lower_bound": 18,
+   "support_face_to_face_run_m": 2.7,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_SIDE_BAR",
+    "BEAM_STIRRUP"
+   ],
+   "why_candidate": "exterior authority EXTERIOR_SOURCE_VERIFIED (architectural exterior wall above the span); load NO_CONCENTRATED_LOAD_EVIDENCE; length details [\"P13-GB-LT5M\"]",
+   "why_not_resolved": "",
+   "width": {
+    "candidates": {
+     "P13-GB-EXTERIOR": 300
+    },
+    "state": "SOURCE_EXPLICIT",
+    "value_mm": 300
+   },
+   "width_mm": 300,
+   "width_state": "SOURCE_EXPLICIT"
+  },
+  {
+   "bar_straight_run_lower_bound_m": 4.2,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 8,
+    "LOWER_BOUND": 4,
+    "NOT_APPLICABLE": 4,
+    "VERIFIED": 2
+   },
+   "depth": {
+    "bound_max_m": 1.0,
+    "candidates": {
+     "P13-GB-EXTERIOR": "FOLLOW_ARCH"
+    },
+    "state": "BOUNDED_ABOVE",
+    "value_mm": null,
+    "why": "D = (+1.00 - b) - NGL, b = floor build-up (not printed, >= 0), NGL in [+0.00, +0.15] -> D <= 1.00 m; no lower bound"
+   },
+   "depth_bound_max_m": 1.0,
+   "depth_mm": null,
+   "depth_state": "BOUNDED_ABOVE",
+   "detail_applicability_state": "PROJECT_GENERAL_DETAIL",
+   "detail_ids": [
+    "P13-GB-EXTERIOR"
+   ],
+   "end_node": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "145+7CA"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [],
+   "geometry_handles": [
+    "10A",
+    "7C9"
+   ],
+   "known_kg": 59.733333333333334,
+   "known_straight_length_m": 37.800000000000004,
+   "length_state": "CONSISTENT",
+   "lengths": {
+    "bar_run_lb_m": 4.2,
+    "bar_run_state": "LOWER_BOUND",
+    "centreline_m": 4.6,
+    "clear_concrete_m": 4.6,
+    "face_to_face_m": 4.2,
+    "issues": [],
+    "length_state": "CONSISTENT",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": 4.2
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": 4.6,
+   "member_clear_concrete_length_m": 4.6,
+   "node_issues": {},
+   "occurrence_id": "GSO-10A-7C9-1",
+   "occurrence_state": "LOWER_BOUND",
+   "pre_s5_1": {
+    "exterior": "EXTERIOR_SOURCE_VERIFIED",
+    "load": "NO_CONCENTRATED_LOAD_EVIDENCE",
+    "pre_s5_1_status": "READY_LOWER_BOUND"
+   },
+   "questions": {
+    "applicability": null,
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": null
+   },
+   "start_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:218+218"
+    ]
+   },
+   "stirrup_count_lower_bound": 28,
+   "support_face_to_face_run_m": 4.2,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_SIDE_BAR",
+    "BEAM_STIRRUP"
+   ],
+   "why_candidate": "exterior authority EXTERIOR_SOURCE_VERIFIED (architectural exterior wall above the span); load NO_CONCENTRATED_LOAD_EVIDENCE; length details [\"P13-GB-LT5M\"]",
+   "why_not_resolved": "",
+   "width": {
+    "candidates": {
+     "P13-GB-EXTERIOR": 300
+    },
+    "state": "SOURCE_EXPLICIT",
+    "value_mm": 300
+   },
+   "width_mm": 300,
+   "width_state": "SOURCE_EXPLICIT"
+  },
+  {
+   "bar_straight_run_lower_bound_m": 1.2,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 15,
+    "NOT_APPLICABLE": 3
+   },
+   "depth": {
+    "bound_max_m": null,
+    "candidates": {
+     "P13-GB-EXTERIOR": "FOLLOW_ARCH",
+     "P13-GB-LT2_5M": "300 (AI only)",
+     "P13-GB-LT5M": 400
+    },
+    "state": "CANDIDATE_CONFLICT",
+    "value_mm": null,
+    "why": "candidate sections differ in depth"
+   },
+   "depth_bound_max_m": null,
+   "depth_mm": null,
+   "depth_state": "CANDIDATE_CONFLICT",
+   "detail_applicability_state": "CANDIDATE_DETAIL",
+   "detail_ids": [
+    "P13-GB-EXTERIOR",
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "end_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:22C+22C"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [
+    "LENGTH_BASIS_CHANGES_DETAIL: clear / centreline / clear-concrete give [\"P13-GB-LT2_5M\", \"P13-GB-LT5M\"] /  / [\"P13-GB-LT2_5M\", \"P13-GB-LT5M\"]"
+   ],
+   "geometry_handles": [
+    "10B",
+    "7D1"
+   ],
+   "known_kg": 0,
+   "known_straight_length_m": 0,
+   "length_state": "CONSISTENT",
+   "lengths": {
+    "bar_run_lb_m": 1.2,
+    "bar_run_state": "LOWER_BOUND",
+    "centreline_m": null,
+    "clear_concrete_m": 1.5,
+    "face_to_face_m": 1.2,
+    "issues": [],
+    "length_state": "CONSISTENT",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": 1.2
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": null,
+   "member_clear_concrete_length_m": 1.5,
+   "node_issues": {},
+   "occurrence_id": "GSO-10B-7D1-1",
+   "occurrence_state": "BLOCKED",
+   "pre_s5_1": {
+    "exterior": "CANDIDATE_EXTERIOR",
+    "load": "NO_CONCENTRATED_LOAD_EVIDENCE",
+    "pre_s5_1_status": "BLOCKED_COMPONENT"
+   },
+   "questions": {
+    "applicability": "Q8+Q3+Q4",
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": "Q4"
+   },
+   "start_node": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "7D4+F8"
+    ]
+   },
+   "stirrup_count_lower_bound": null,
+   "support_face_to_face_run_m": 1.2,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_BOTTOM_BAR",
+    "BEAM_SIDE_BAR",
+    "BEAM_STIRRUP",
+    "BEAM_TOP_BAR"
+   ],
+   "why_candidate": "exterior authority CANDIDATE_EXTERIOR (partial / mixed wall relation on the slab edge); load NO_CONCENTRATED_LOAD_EVIDENCE; length details [\"P13-GB-LT2_5M\", \"P13-GB-LT5M\"]",
+   "why_not_resolved": "3 candidates: exterior / interior not resolved; <2.5 m and <5 m titles both hold",
+   "width": {
+    "candidates": {
+     "P13-GB-EXTERIOR": 300,
+     "P13-GB-LT2_5M": 300,
+     "P13-GB-LT5M": 300
+    },
+    "state": "CANDIDATE_INVARIANT",
+    "value_mm": 300
+   },
+   "width_mm": 300,
+   "width_state": "CANDIDATE_INVARIANT"
+  },
+  {
+   "bar_straight_run_lower_bound_m": 2.3,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 8,
+    "LOWER_BOUND": 4,
+    "NOT_APPLICABLE": 4,
+    "VERIFIED": 2
+   },
+   "depth": {
+    "bound_max_m": 0.3,
+    "candidates": {
+     "P13-GB-EXTERIOR": "FOLLOW_ARCH"
+    },
+    "state": "SOURCE_CONFLICT",
+    "value_mm": null,
+    "why": "annex +0.30: the level bound (D <= 0.30 m) cannot hold the drawn three-level section; no 300 mm depth is adopted"
+   },
+   "depth_bound_max_m": 0.3,
+   "depth_mm": null,
+   "depth_state": "SOURCE_CONFLICT",
+   "detail_applicability_state": "PROJECT_GENERAL_DETAIL",
+   "detail_ids": [
+    "P13-GB-EXTERIOR"
+   ],
+   "end_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:223+223"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [
+    "LENGTH_BASIS_CHANGES_DETAIL: clear / centreline / clear-concrete give [\"P13-GB-LT2_5M\", \"P13-GB-LT5M\"] / [\"P13-GB-LT5M\"] / [\"P13-GB-LT2_5M\", \"P13-GB-LT5M\"]",
+    "ANNEX_DEPTH_SOURCE_CONFLICT: annex +0.30: the level bound (D <= 0.30 m) cannot hold the drawn three-level section; no 300 mm depth is adopted"
+   ],
+   "geometry_handles": [
+    "10B",
+    "7D1"
+   ],
+   "known_kg": 32.71111111111111,
+   "known_straight_length_m": 20.7,
+   "length_state": "CONSISTENT",
+   "lengths": {
+    "bar_run_lb_m": 2.3,
+    "bar_run_state": "LOWER_BOUND",
+    "centreline_m": 2.85,
+    "clear_concrete_m": 2.3,
+    "face_to_face_m": 2.3,
+    "issues": [],
+    "length_state": "CONSISTENT",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": 2.3
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": 2.85,
+   "member_clear_concrete_length_m": 2.3,
+   "node_issues": {},
+   "occurrence_id": "GSO-10B-7D1-2",
+   "occurrence_state": "LOWER_BOUND",
+   "pre_s5_1": {
+    "exterior": "EXTERIOR_SOURCE_VERIFIED",
+    "load": "NO_CONCENTRATED_LOAD_EVIDENCE",
+    "pre_s5_1_status": "READY_LOWER_BOUND"
+   },
+   "questions": {
+    "applicability": "Q3",
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": "Q3"
+   },
+   "start_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:22C+22C"
+    ]
+   },
+   "stirrup_count_lower_bound": 16,
+   "support_face_to_face_run_m": 2.3,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_SIDE_BAR",
+    "BEAM_STIRRUP"
+   ],
+   "why_candidate": "exterior authority EXTERIOR_SOURCE_VERIFIED (architectural exterior wall above the span); load NO_CONCENTRATED_LOAD_EVIDENCE; length details [\"P13-GB-LT2_5M\", \"P13-GB-LT5M\"]",
+   "why_not_resolved": "",
+   "width": {
+    "candidates": {
+     "P13-GB-EXTERIOR": 300
+    },
+    "state": "SOURCE_EXPLICIT",
+    "value_mm": 300
+   },
+   "width_mm": 300,
+   "width_state": "SOURCE_EXPLICIT"
+  },
+  {
+   "bar_straight_run_lower_bound_m": 2.625,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 11,
+    "LOWER_BOUND": 1,
+    "NOT_APPLICABLE": 4,
+    "VERIFIED": 2
+   },
+   "depth": {
+    "bound_max_m": null,
+    "candidates": {
+     "P13-GB-EXTERIOR": "FOLLOW_ARCH",
+     "P13-GB-LT5M": 400
+    },
+    "state": "CANDIDATE_CONFLICT",
+    "value_mm": null,
+    "why": "candidate sections differ in depth"
+   },
+   "depth_bound_max_m": null,
+   "depth_mm": null,
+   "depth_state": "CANDIDATE_CONFLICT",
+   "detail_applicability_state": "CANDIDATE_DETAIL",
+   "detail_ids": [
+    "P13-GB-EXTERIOR",
+    "P13-GB-LT5M"
+   ],
+   "end_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:238+238"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [],
+   "geometry_handles": [
+    "114",
+    "115",
+    "7DF"
+   ],
+   "known_kg": 0,
+   "known_straight_length_m": 0,
+   "length_state": "CONSISTENT",
+   "lengths": {
+    "bar_run_lb_m": 2.625,
+    "bar_run_state": "LOWER_BOUND",
+    "centreline_m": 2.925,
+    "clear_concrete_m": 2.625,
+    "face_to_face_m": 2.625,
+    "issues": [],
+    "length_state": "CONSISTENT",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": 2.625
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": 2.925,
+   "member_clear_concrete_length_m": 2.625,
+   "node_issues": {},
+   "occurrence_id": "GSO-114-115-7DF-1",
+   "occurrence_state": "BLOCKED",
+   "pre_s5_1": {
+    "exterior": "UNRESOLVED",
+    "load": "NO_CONCENTRATED_LOAD_EVIDENCE",
+    "pre_s5_1_status": "BLOCKED_COMPONENT"
+   },
+   "questions": {
+    "applicability": "Q8",
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": "Q8"
+   },
+   "start_node": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "7E7+7E8"
+    ]
+   },
+   "stirrup_count_lower_bound": 18,
+   "support_face_to_face_run_m": 2.625,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_BOTTOM_BAR",
+    "BEAM_SIDE_BAR",
+    "BEAM_STIRRUP",
+    "BEAM_TOP_BAR"
+   ],
+   "why_candidate": "exterior authority UNRESOLVED (partial / mixed wall relation); load NO_CONCENTRATED_LOAD_EVIDENCE; length details [\"P13-GB-LT5M\"]",
+   "why_not_resolved": "2 candidates: exterior / interior not resolved;",
+   "width": {
+    "candidates": {
+     "P13-GB-EXTERIOR": 300,
+     "P13-GB-LT5M": 300
+    },
+    "state": "CANDIDATE_INVARIANT",
+    "value_mm": 300
+   },
+   "width_mm": 300,
+   "width_state": "CANDIDATE_INVARIANT"
+  },
+  {
+   "bar_straight_run_lower_bound_m": 1.3,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 8,
+    "LOWER_BOUND": 4,
+    "NOT_APPLICABLE": 4,
+    "VERIFIED": 2
+   },
+   "depth": {
+    "bound_max_m": 1.0,
+    "candidates": {
+     "P13-GB-EXTERIOR": "FOLLOW_ARCH"
+    },
+    "state": "BOUNDED_ABOVE",
+    "value_mm": null,
+    "why": "D = (+1.00 - b) - NGL, b = floor build-up (not printed, >= 0), NGL in [+0.00, +0.00] -> D <= 1.00 m; no lower bound"
+   },
+   "depth_bound_max_m": 1.0,
+   "depth_mm": null,
+   "depth_state": "BOUNDED_ABOVE",
+   "detail_applicability_state": "PROJECT_GENERAL_DETAIL",
+   "detail_ids": [
+    "P13-GB-EXTERIOR"
+   ],
+   "end_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:1FC+1FC"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [],
+   "geometry_handles": [
+    "114",
+    "115",
+    "7DF"
+   ],
+   "known_kg": 18.488888888888887,
+   "known_straight_length_m": 11.700000000000001,
+   "length_state": "CONSISTENT",
+   "lengths": {
+    "bar_run_lb_m": 1.3,
+    "bar_run_state": "LOWER_BOUND",
+    "centreline_m": 1.6,
+    "clear_concrete_m": 1.3,
+    "face_to_face_m": 1.3,
+    "issues": [],
+    "length_state": "CONSISTENT",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": 1.3
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": 1.6,
+   "member_clear_concrete_length_m": 1.3,
+   "node_issues": {},
+   "occurrence_id": "GSO-114-115-7DF-2",
+   "occurrence_state": "LOWER_BOUND",
+   "pre_s5_1": {
+    "exterior": "EXTERIOR_SOURCE_VERIFIED",
+    "load": "NO_CONCENTRATED_LOAD_EVIDENCE",
+    "pre_s5_1_status": "READY_LOWER_BOUND"
+   },
+   "questions": {
+    "applicability": null,
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": null
+   },
+   "start_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:238+238"
+    ]
+   },
+   "stirrup_count_lower_bound": 9,
+   "support_face_to_face_run_m": 1.3,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_SIDE_BAR",
+    "BEAM_STIRRUP"
+   ],
+   "why_candidate": "exterior authority EXTERIOR_SOURCE_VERIFIED (architectural exterior wall above the span); load NO_CONCENTRATED_LOAD_EVIDENCE; length details [\"P13-GB-LT2_5M\", \"P13-GB-LT5M\"]",
+   "why_not_resolved": "",
+   "width": {
+    "candidates": {
+     "P13-GB-EXTERIOR": 300
+    },
+    "state": "SOURCE_EXPLICIT",
+    "value_mm": 300
+   },
+   "width_mm": 300,
+   "width_state": "SOURCE_EXPLICIT"
+  },
+  {
+   "bar_straight_run_lower_bound_m": null,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 12,
+    "NOT_APPLICABLE": 4,
+    "VERIFIED": 2
+   },
+   "depth": {
+    "bound_max_m": 0.3,
+    "candidates": {
+     "P13-GB-EXTERIOR": "FOLLOW_ARCH"
+    },
+    "state": "SOURCE_CONFLICT",
+    "value_mm": null,
+    "why": "annex +0.30: the level bound (D <= 0.30 m) cannot hold the drawn three-level section; no 300 mm depth is adopted"
+   },
+   "depth_bound_max_m": 0.3,
+   "depth_mm": null,
+   "depth_state": "SOURCE_CONFLICT",
+   "detail_applicability_state": "PROJECT_GENERAL_DETAIL",
+   "detail_ids": [
+    "P13-GB-EXTERIOR"
+   ],
+   "end_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:204+204"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [
+    "LENGTH_GEOMETRY_CONFLICT: clear concrete 6400.0 > centreline 6350.0 mm (the concrete piece runs past a support centre: the support does not cut the full width)",
+    "ANNEX_DEPTH_SOURCE_CONFLICT: annex +0.30: the level bound (D <= 0.30 m) cannot hold the drawn three-level section; no 300 mm depth is adopted"
+   ],
+   "geometry_handles": [
+    "136",
+    "7D5"
+   ],
+   "known_kg": 0,
+   "known_straight_length_m": 0,
+   "length_state": "LENGTH_GEOMETRY_CONFLICT",
+   "lengths": {
+    "bar_run_lb_m": null,
+    "bar_run_state": "LENGTH_GEOMETRY_CONFLICT",
+    "centreline_m": 6.35,
+    "clear_concrete_m": 6.4,
+    "face_to_face_m": 5.95,
+    "issues": [
+     "clear concrete 6400.0 > centreline 6350.0 mm (the concrete piece runs past a support centre: the support does not cut the full width)"
+    ],
+    "length_state": "LENGTH_GEOMETRY_CONFLICT",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": null
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": 6.35,
+   "member_clear_concrete_length_m": 6.4,
+   "node_issues": {},
+   "occurrence_id": "GSO-136-7D5-1",
+   "occurrence_state": "BLOCKED",
+   "pre_s5_1": {
+    "exterior": "EXTERIOR_SOURCE_VERIFIED",
+    "load": "NO_CONCENTRATED_LOAD_EVIDENCE",
+    "pre_s5_1_status": "BLOCKED_COMPONENT"
+   },
+   "questions": {
+    "applicability": null,
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": null
+   },
+   "start_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:207+207"
+    ]
+   },
+   "stirrup_count_lower_bound": null,
+   "support_face_to_face_run_m": 5.95,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_BOTTOM_BAR",
+    "BEAM_SIDE_BAR",
+    "BEAM_STIRRUP",
+    "BEAM_TOP_BAR"
+   ],
+   "why_candidate": "exterior authority EXTERIOR_SOURCE_VERIFIED (architectural exterior wall above the span); load NO_CONCENTRATED_LOAD_EVIDENCE; length details [\"P13-GB-GT5M\"]",
+   "why_not_resolved": "",
+   "width": {
+    "candidates": {
+     "P13-GB-EXTERIOR": 300
+    },
+    "state": "SOURCE_EXPLICIT",
+    "value_mm": 300
+   },
+   "width_mm": 300,
+   "width_state": "SOURCE_EXPLICIT"
+  },
+  {
+   "bar_straight_run_lower_bound_m": 2.45,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 8,
+    "LOWER_BOUND": 4,
+    "NOT_APPLICABLE": 4,
+    "VERIFIED": 2
+   },
+   "depth": {
+    "bound_max_m": 0.3,
+    "candidates": {
+     "P13-GB-EXTERIOR": "FOLLOW_ARCH"
+    },
+    "state": "SOURCE_CONFLICT",
+    "value_mm": null,
+    "why": "annex +0.30: the level bound (D <= 0.30 m) cannot hold the drawn three-level section; no 300 mm depth is adopted"
+   },
+   "depth_bound_max_m": 0.3,
+   "depth_mm": null,
+   "depth_state": "SOURCE_CONFLICT",
+   "detail_applicability_state": "PROJECT_GENERAL_DETAIL",
+   "detail_ids": [
+    "P13-GB-EXTERIOR"
+   ],
+   "end_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:214+214"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [
+    "LENGTH_BASIS_CHANGES_DETAIL: clear / centreline / clear-concrete give [\"P13-GB-LT2_5M\", \"P13-GB-LT5M\"] / [\"P13-GB-LT5M\"] / [\"P13-GB-LT2_5M\", \"P13-GB-LT5M\"]",
+    "ANNEX_DEPTH_SOURCE_CONFLICT: annex +0.30: the level bound (D <= 0.30 m) cannot hold the drawn three-level section; no 300 mm depth is adopted"
+   ],
+   "geometry_handles": [
+    "137",
+    "138"
+   ],
+   "known_kg": 34.84444444444445,
+   "known_straight_length_m": 22.05,
+   "length_state": "CONSISTENT",
+   "lengths": {
+    "bar_run_lb_m": 2.45,
+    "bar_run_state": "LOWER_BOUND",
+    "centreline_m": 2.75,
+    "clear_concrete_m": 2.45,
+    "face_to_face_m": 2.45,
+    "issues": [],
+    "length_state": "CONSISTENT",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": 2.45
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": 2.75,
+   "member_clear_concrete_length_m": 2.45,
+   "node_issues": {},
+   "occurrence_id": "GSO-137-138-1",
+   "occurrence_state": "LOWER_BOUND",
+   "pre_s5_1": {
+    "exterior": "EXTERIOR_SOURCE_VERIFIED",
+    "load": "NO_CONCENTRATED_LOAD_EVIDENCE",
+    "pre_s5_1_status": "READY_LOWER_BOUND"
+   },
+   "questions": {
+    "applicability": "Q3",
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": "Q3"
+   },
+   "start_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:204+204"
+    ]
+   },
+   "stirrup_count_lower_bound": 17,
+   "support_face_to_face_run_m": 2.45,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_SIDE_BAR",
+    "BEAM_STIRRUP"
+   ],
+   "why_candidate": "exterior authority EXTERIOR_SOURCE_VERIFIED (architectural exterior wall above the span); load NO_CONCENTRATED_LOAD_EVIDENCE; length details [\"P13-GB-LT2_5M\", \"P13-GB-LT5M\"]",
+   "why_not_resolved": "",
+   "width": {
+    "candidates": {
+     "P13-GB-EXTERIOR": 300
+    },
+    "state": "SOURCE_EXPLICIT",
+    "value_mm": 300
+   },
+   "width_mm": 300,
+   "width_state": "SOURCE_EXPLICIT"
+  },
+  {
+   "bar_straight_run_lower_bound_m": 1.45,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 11,
+    "LOWER_BOUND": 3,
+    "NOT_APPLICABLE": 4
+   },
+   "depth": {
+    "bound_max_m": null,
+    "candidates": {
+     "P13-GB-LT2_5M": "300 (AI only)",
+     "P13-GB-LT5M": 400
+    },
+    "state": "CANDIDATE_CONFLICT",
+    "value_mm": null,
+    "why": "candidate sections differ in depth"
+   },
+   "depth_bound_max_m": null,
+   "depth_mm": null,
+   "depth_state": "CANDIDATE_CONFLICT",
+   "detail_applicability_state": "CANDIDATE_DETAIL",
+   "detail_ids": [
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "end_node": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "13F+7D3"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [],
+   "geometry_handles": [
+    "13C",
+    "7D9"
+   ],
+   "known_kg": 15.788888888888888,
+   "known_straight_length_m": 13.049999999999999,
+   "length_state": "CONSISTENT",
+   "lengths": {
+    "bar_run_lb_m": 1.45,
+    "bar_run_state": "LOWER_BOUND",
+    "centreline_m": 1.75,
+    "clear_concrete_m": 1.45,
+    "face_to_face_m": 1.45,
+    "issues": [],
+    "length_state": "CONSISTENT",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": 1.45
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": 1.75,
+   "member_clear_concrete_length_m": 1.45,
+   "node_issues": {},
+   "occurrence_id": "GSO-13C-7D9-1",
+   "occurrence_state": "LOWER_BOUND",
+   "pre_s5_1": {
+    "exterior": "INTERIOR_SOURCE_VERIFIED",
+    "load": "NO_CONCENTRATED_LOAD_EVIDENCE",
+    "pre_s5_1_status": "READY_LOWER_BOUND"
+   },
+   "questions": {
+    "applicability": "Q4",
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": "Q4"
+   },
+   "start_node": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "13E+7D6"
+    ]
+   },
+   "stirrup_count_lower_bound": null,
+   "support_face_to_face_run_m": 1.45,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_STIRRUP"
+   ],
+   "why_candidate": "exterior authority INTERIOR_SOURCE_VERIFIED (architectural interior wall above the span); load NO_CONCENTRATED_LOAD_EVIDENCE; length details [\"P13-GB-LT2_5M\", \"P13-GB-LT5M\"]",
+   "why_not_resolved": "2 candidates: <2.5 m and <5 m titles both hold",
+   "width": {
+    "candidates": {
+     "P13-GB-LT2_5M": 300,
+     "P13-GB-LT5M": 300
+    },
+    "state": "CANDIDATE_INVARIANT",
+    "value_mm": 300
+   },
+   "width_mm": 300,
+   "width_state": "CANDIDATE_INVARIANT"
+  },
+  {
+   "bar_straight_run_lower_bound_m": 5.9,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 8,
+    "LOWER_BOUND": 4,
+    "NOT_APPLICABLE": 4,
+    "VERIFIED": 2
+   },
+   "depth": {
+    "bound_max_m": 0.3,
+    "candidates": {
+     "P13-GB-EXTERIOR": "FOLLOW_ARCH"
+    },
+    "state": "SOURCE_CONFLICT",
+    "value_mm": null,
+    "why": "annex +0.30: the level bound (D <= 0.30 m) cannot hold the drawn three-level section; no 300 mm depth is adopted"
+   },
+   "depth_bound_max_m": 0.3,
+   "depth_mm": null,
+   "depth_state": "SOURCE_CONFLICT",
+   "detail_applicability_state": "PROJECT_GENERAL_DETAIL",
+   "detail_ids": [
+    "P13-GB-EXTERIOR"
+   ],
+   "end_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:223+223"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [
+    "ANNEX_DEPTH_SOURCE_CONFLICT: annex +0.30: the level bound (D <= 0.30 m) cannot hold the drawn three-level section; no 300 mm depth is adopted",
+    "CONCENTRATED_LOAD_UNKNOWN: evidence {'BEAM_END_REACTION': 2}; not auto-classified as PRESENT"
+   ],
+   "geometry_handles": [
+    "13D",
+    "7D2"
+   ],
+   "known_kg": 83.91111111111111,
+   "known_straight_length_m": 53.10000000000001,
+   "length_state": "CONSISTENT",
+   "lengths": {
+    "bar_run_lb_m": 5.9,
+    "bar_run_state": "LOWER_BOUND",
+    "centreline_m": 6.2,
+    "clear_concrete_m": 5.9,
+    "face_to_face_m": 5.9,
+    "issues": [],
+    "length_state": "CONSISTENT",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": 5.9
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": 6.2,
+   "member_clear_concrete_length_m": 5.9,
+   "node_issues": {},
+   "occurrence_id": "GSO-13D-7D2-1",
+   "occurrence_state": "LOWER_BOUND",
+   "pre_s5_1": {
+    "exterior": "EXTERIOR_SOURCE_VERIFIED",
+    "load": "UNKNOWN",
+    "pre_s5_1_status": "READY_LOWER_BOUND"
+   },
+   "questions": {
+    "applicability": null,
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": null
+   },
+   "start_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:211+211"
+    ]
+   },
+   "stirrup_count_lower_bound": 40,
+   "support_face_to_face_run_m": 5.9,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_SIDE_BAR",
+    "BEAM_STIRRUP"
+   ],
+   "why_candidate": "exterior authority EXTERIOR_SOURCE_VERIFIED (architectural exterior wall above the span); load UNKNOWN; length details [\"P13-GB-GT5M\"]",
+   "why_not_resolved": "",
+   "width": {
+    "candidates": {
+     "P13-GB-EXTERIOR": 300
+    },
+    "state": "SOURCE_EXPLICIT",
+    "value_mm": 300
+   },
+   "width_mm": 300,
+   "width_state": "SOURCE_EXPLICIT"
+  },
+  {
+   "bar_straight_run_lower_bound_m": 5.1,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 18
+   },
+   "depth": {
+    "bound_max_m": null,
+    "candidates": {
+     "NO_PROJECT_DETAIL_FOR_CONCENTRATED_LOAD": "UNKNOWN",
+     "P13-GB-GT5M": 600
+    },
+    "state": "UNRESOLVED",
+    "value_mm": null,
+    "why": "an undefined candidate detail"
+   },
+   "depth_bound_max_m": null,
+   "depth_mm": null,
+   "depth_state": "UNRESOLVED",
+   "detail_applicability_state": "CANDIDATE_DETAIL",
+   "detail_ids": [
+    "NO_PROJECT_DETAIL_FOR_CONCENTRATED_LOAD",
+    "P13-GB-GT5M"
+   ],
+   "end_node": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "ARC:139+13A"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [
+    "CONCENTRATED_LOAD_UNKNOWN: evidence {'BEAM_END_REACTION': 2}; not auto-classified as PRESENT"
+   ],
+   "geometry_handles": [
+    "13E",
+    "7D6"
+   ],
+   "known_kg": 0,
+   "known_straight_length_m": 0,
+   "length_state": "CONSISTENT",
+   "lengths": {
+    "bar_run_lb_m": 5.1,
+    "bar_run_state": "LOWER_BOUND",
+    "centreline_m": 5.553,
+    "clear_concrete_m": 5.1,
+    "face_to_face_m": 5.1,
+    "issues": [],
+    "length_state": "CONSISTENT",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": 5.1
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": 5.553,
+   "member_clear_concrete_length_m": 5.1,
+   "node_issues": {},
+   "occurrence_id": "GSO-13E-7D6-1",
+   "occurrence_state": "BLOCKED",
+   "pre_s5_1": {
+    "exterior": "INTERIOR_SOURCE_VERIFIED",
+    "load": "UNKNOWN",
+    "pre_s5_1_status": "BLOCKED_COMPONENT"
+   },
+   "questions": {
+    "applicability": "Q1",
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": "Q1"
+   },
+   "start_node": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "7D4+F8"
+    ]
+   },
+   "stirrup_count_lower_bound": null,
+   "support_face_to_face_run_m": 5.1,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_BOTTOM_BAR",
+    "BEAM_EXTRA_BAR",
+    "BEAM_SIDE_BAR",
+    "BEAM_STIRRUP",
+    "BEAM_TOP_BAR",
+    "SPECIAL_DETAIL_BAR"
+   ],
+   "why_candidate": "exterior authority INTERIOR_SOURCE_VERIFIED (architectural interior wall above the span); load UNKNOWN; length details [\"P13-GB-GT5M\"]",
+   "why_not_resolved": "2 candidates: concentrated-load case has no project detail;",
+   "width": {
+    "candidates": {
+     "NO_PROJECT_DETAIL_FOR_CONCENTRATED_LOAD": "UNKNOWN",
+     "P13-GB-GT5M": 300
+    },
+    "state": "UNRESOLVED",
+    "value_mm": null
+   },
+   "width_mm": null,
+   "width_state": "UNRESOLVED"
+  },
+  {
+   "bar_straight_run_lower_bound_m": 4.25,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 18
+   },
+   "depth": {
+    "bound_max_m": null,
+    "candidates": {
+     "NO_PROJECT_DETAIL_FOR_CONCENTRATED_LOAD": "UNKNOWN",
+     "P13-GB-LT5M": 400
+    },
+    "state": "UNRESOLVED",
+    "value_mm": null,
+    "why": "an undefined candidate detail"
+   },
+   "depth_bound_max_m": null,
+   "depth_mm": null,
+   "depth_state": "UNRESOLVED",
+   "detail_applicability_state": "CANDIDATE_DETAIL",
+   "detail_ids": [
+    "NO_PROJECT_DETAIL_FOR_CONCENTRATED_LOAD",
+    "P13-GB-LT5M"
+   ],
+   "end_node": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "13D+7D2"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [
+    "CONCENTRATED_LOAD_UNKNOWN: evidence {'BEAM_END_REACTION': 1}; not auto-classified as PRESENT"
+   ],
+   "geometry_handles": [
+    "13F",
+    "7D3"
+   ],
+   "known_kg": 0,
+   "known_straight_length_m": 0,
+   "length_state": "CONSISTENT",
+   "lengths": {
+    "bar_run_lb_m": 4.25,
+    "bar_run_state": "LOWER_BOUND",
+    "centreline_m": 4.6,
+    "clear_concrete_m": 4.3,
+    "face_to_face_m": 4.25,
+    "issues": [],
+    "length_state": "CONSISTENT",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": 4.25
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": 4.6,
+   "member_clear_concrete_length_m": 4.3,
+   "node_issues": {},
+   "occurrence_id": "GSO-13F-7D3-1",
+   "occurrence_state": "BLOCKED",
+   "pre_s5_1": {
+    "exterior": "INTERIOR_SOURCE_VERIFIED",
+    "load": "UNKNOWN",
+    "pre_s5_1_status": "BLOCKED_COMPONENT"
+   },
+   "questions": {
+    "applicability": "Q1",
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": "Q1"
+   },
+   "start_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:20B+20B"
+    ]
+   },
+   "stirrup_count_lower_bound": null,
+   "support_face_to_face_run_m": 4.25,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_BOTTOM_BAR",
+    "BEAM_EXTRA_BAR",
+    "BEAM_SIDE_BAR",
+    "BEAM_STIRRUP",
+    "BEAM_TOP_BAR",
+    "SPECIAL_DETAIL_BAR"
+   ],
+   "why_candidate": "exterior authority INTERIOR_SOURCE_VERIFIED (architectural interior wall above the span); load UNKNOWN; length details [\"P13-GB-LT5M\"]",
+   "why_not_resolved": "2 candidates: concentrated-load case has no project detail;",
+   "width": {
+    "candidates": {
+     "NO_PROJECT_DETAIL_FOR_CONCENTRATED_LOAD": "UNKNOWN",
+     "P13-GB-LT5M": 300
+    },
+    "state": "UNRESOLVED",
+    "value_mm": null
+   },
+   "width_mm": null,
+   "width_state": "UNRESOLVED"
+  },
+  {
+   "bar_straight_run_lower_bound_m": 4.3,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 18
+   },
+   "depth": {
+    "bound_max_m": null,
+    "candidates": {
+     "NO_PROJECT_DETAIL_FOR_CONCENTRATED_LOAD": "UNKNOWN",
+     "P13-GB-LT5M": 400
+    },
+    "state": "UNRESOLVED",
+    "value_mm": null,
+    "why": "an undefined candidate detail"
+   },
+   "depth_bound_max_m": null,
+   "depth_mm": null,
+   "depth_state": "UNRESOLVED",
+   "detail_applicability_state": "CANDIDATE_DETAIL",
+   "detail_ids": [
+    "NO_PROJECT_DETAIL_FOR_CONCENTRATED_LOAD",
+    "P13-GB-LT5M"
+   ],
+   "end_node": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "13D+7D2"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [
+    "CONCENTRATED_LOAD_UNKNOWN: evidence {'BEAM_END_REACTION': 1}; not auto-classified as PRESENT"
+   ],
+   "geometry_handles": [
+    "140",
+    "7D7"
+   ],
+   "known_kg": 0,
+   "known_straight_length_m": 0,
+   "length_state": "CONSISTENT",
+   "lengths": {
+    "bar_run_lb_m": 4.3,
+    "bar_run_state": "LOWER_BOUND",
+    "centreline_m": 4.6,
+    "clear_concrete_m": 4.3,
+    "face_to_face_m": 4.3,
+    "issues": [],
+    "length_state": "CONSISTENT",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": 4.3
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": 4.6,
+   "member_clear_concrete_length_m": 4.3,
+   "node_issues": {},
+   "occurrence_id": "GSO-140-7D7-1",
+   "occurrence_state": "BLOCKED",
+   "pre_s5_1": {
+    "exterior": "INTERIOR_SOURCE_VERIFIED",
+    "load": "UNKNOWN",
+    "pre_s5_1_status": "BLOCKED_COMPONENT"
+   },
+   "questions": {
+    "applicability": "Q1",
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": "Q1"
+   },
+   "start_node": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "7D4+F8"
+    ]
+   },
+   "stirrup_count_lower_bound": null,
+   "support_face_to_face_run_m": 4.3,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_BOTTOM_BAR",
+    "BEAM_EXTRA_BAR",
+    "BEAM_SIDE_BAR",
+    "BEAM_STIRRUP",
+    "BEAM_TOP_BAR",
+    "SPECIAL_DETAIL_BAR"
+   ],
+   "why_candidate": "exterior authority INTERIOR_SOURCE_VERIFIED (architectural interior wall above the span); load UNKNOWN; length details [\"P13-GB-LT5M\"]",
+   "why_not_resolved": "2 candidates: concentrated-load case has no project detail;",
+   "width": {
+    "candidates": {
+     "NO_PROJECT_DETAIL_FOR_CONCENTRATED_LOAD": "UNKNOWN",
+     "P13-GB-LT5M": 300
+    },
+    "state": "UNRESOLVED",
+    "value_mm": null
+   },
+   "width_mm": null,
+   "width_state": "UNRESOLVED"
+  },
+  {
+   "bar_straight_run_lower_bound_m": 1.2,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 11,
+    "LOWER_BOUND": 3,
+    "NOT_APPLICABLE": 4
+   },
+   "depth": {
+    "bound_max_m": null,
+    "candidates": {
+     "P13-GB-LT2_5M": "300 (AI only)",
+     "P13-GB-LT5M": 400
+    },
+    "state": "CANDIDATE_CONFLICT",
+    "value_mm": null,
+    "why": "candidate sections differ in depth"
+   },
+   "depth_bound_max_m": null,
+   "depth_mm": null,
+   "depth_state": "CANDIDATE_CONFLICT",
+   "detail_applicability_state": "CANDIDATE_DETAIL",
+   "detail_ids": [
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "end_node": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "142+7D8"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [],
+   "geometry_handles": [
+    "141",
+    "7DA"
+   ],
+   "known_kg": 13.066666666666666,
+   "known_straight_length_m": 10.799999999999999,
+   "length_state": "CONSISTENT",
+   "lengths": {
+    "bar_run_lb_m": 1.2,
+    "bar_run_state": "LOWER_BOUND",
+    "centreline_m": 1.5,
+    "clear_concrete_m": 1.2,
+    "face_to_face_m": 1.2,
+    "issues": [],
+    "length_state": "CONSISTENT",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": 1.2
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": 1.5,
+   "member_clear_concrete_length_m": 1.2,
+   "node_issues": {},
+   "occurrence_id": "GSO-141-7DA-1",
+   "occurrence_state": "LOWER_BOUND",
+   "pre_s5_1": {
+    "exterior": "INTERIOR_SOURCE_VERIFIED",
+    "load": "NO_CONCENTRATED_LOAD_EVIDENCE",
+    "pre_s5_1_status": "READY_LOWER_BOUND"
+   },
+   "questions": {
+    "applicability": "Q4",
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": "Q4"
+   },
+   "start_node": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "7D4+F8"
+    ]
+   },
+   "stirrup_count_lower_bound": null,
+   "support_face_to_face_run_m": 1.2,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_STIRRUP"
+   ],
+   "why_candidate": "exterior authority INTERIOR_SOURCE_VERIFIED (architectural interior wall above the span); load NO_CONCENTRATED_LOAD_EVIDENCE; length details [\"P13-GB-LT2_5M\", \"P13-GB-LT5M\"]",
+   "why_not_resolved": "2 candidates: <2.5 m and <5 m titles both hold",
+   "width": {
+    "candidates": {
+     "P13-GB-LT2_5M": 300,
+     "P13-GB-LT5M": 300
+    },
+    "state": "CANDIDATE_INVARIANT",
+    "value_mm": 300
+   },
+   "width_mm": 300,
+   "width_state": "CANDIDATE_INVARIANT"
+  },
+  {
+   "bar_straight_run_lower_bound_m": 2.45,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 11,
+    "LOWER_BOUND": 3,
+    "NOT_APPLICABLE": 4
+   },
+   "depth": {
+    "bound_max_m": null,
+    "candidates": {
+     "P13-GB-LT2_5M": "300 (AI only)",
+     "P13-GB-LT5M": 400
+    },
+    "state": "CANDIDATE_CONFLICT",
+    "value_mm": null,
+    "why": "candidate sections differ in depth"
+   },
+   "depth_bound_max_m": null,
+   "depth_mm": null,
+   "depth_state": "CANDIDATE_CONFLICT",
+   "detail_applicability_state": "CANDIDATE_DETAIL",
+   "detail_ids": [
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "end_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:22C+22C"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [
+    "LENGTH_BASIS_CHANGES_DETAIL: clear / centreline / clear-concrete give [\"P13-GB-LT2_5M\", \"P13-GB-LT5M\"] / [\"P13-GB-LT5M\"] / [\"P13-GB-LT2_5M\", \"P13-GB-LT5M\"]",
+    "CONCENTRATED_LOAD_UNKNOWN: evidence {'BEAM_END_REACTION': 1}; not auto-classified as PRESENT"
+   ],
+   "geometry_handles": [
+    "142",
+    "7D8"
+   ],
+   "known_kg": 26.677777777777784,
+   "known_straight_length_m": 22.05,
+   "length_state": "CONSISTENT",
+   "lengths": {
+    "bar_run_lb_m": 2.45,
+    "bar_run_state": "LOWER_BOUND",
+    "centreline_m": 2.75,
+    "clear_concrete_m": 2.45,
+    "face_to_face_m": 2.45,
+    "issues": [],
+    "length_state": "CONSISTENT",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": 2.45
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": 2.75,
+   "member_clear_concrete_length_m": 2.45,
+   "node_issues": {},
+   "occurrence_id": "GSO-142-7D8-1",
+   "occurrence_state": "LOWER_BOUND",
+   "pre_s5_1": {
+    "exterior": "INTERIOR_SOURCE_VERIFIED",
+    "load": "UNKNOWN",
+    "pre_s5_1_status": "READY_LOWER_BOUND"
+   },
+   "questions": {
+    "applicability": "Q3+Q4",
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": "Q4"
+   },
+   "start_node": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "140+7D7"
+    ]
+   },
+   "stirrup_count_lower_bound": null,
+   "support_face_to_face_run_m": 2.45,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_STIRRUP"
+   ],
+   "why_candidate": "exterior authority INTERIOR_SOURCE_VERIFIED (architectural interior wall above the span); load UNKNOWN; length details [\"P13-GB-LT2_5M\", \"P13-GB-LT5M\"]",
+   "why_not_resolved": "2 candidates: <2.5 m and <5 m titles both hold",
+   "width": {
+    "candidates": {
+     "P13-GB-LT2_5M": 300,
+     "P13-GB-LT5M": 300
+    },
+    "state": "CANDIDATE_INVARIANT",
+    "value_mm": 300
+   },
+   "width_mm": 300,
+   "width_state": "CANDIDATE_INVARIANT"
+  },
+  {
+   "bar_straight_run_lower_bound_m": 0.4,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 15,
+    "NOT_APPLICABLE": 3
+   },
+   "depth": {
+    "bound_max_m": null,
+    "candidates": {
+     "P13-GB-EXTERIOR": "FOLLOW_ARCH",
+     "P13-GB-LT2_5M": "300 (AI only)",
+     "P13-GB-LT5M": 400
+    },
+    "state": "CANDIDATE_CONFLICT",
+    "value_mm": null,
+    "why": "candidate sections differ in depth"
+   },
+   "depth_bound_max_m": null,
+   "depth_mm": null,
+   "depth_state": "CANDIDATE_CONFLICT",
+   "detail_applicability_state": "CANDIDATE_DETAIL",
+   "detail_ids": [
+    "P13-GB-EXTERIOR",
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "end_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:220+220"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [],
+   "geometry_handles": [
+    "145",
+    "7CA"
+   ],
+   "known_kg": 0,
+   "known_straight_length_m": 0,
+   "length_state": "CONSISTENT",
+   "lengths": {
+    "bar_run_lb_m": 0.4,
+    "bar_run_state": "LOWER_BOUND",
+    "centreline_m": 0.4,
+    "clear_concrete_m": 0.4,
+    "face_to_face_m": 0.4,
+    "issues": [],
+    "length_state": "CONSISTENT",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": 0.4
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": 0.4,
+   "member_clear_concrete_length_m": 0.4,
+   "node_issues": {},
+   "occurrence_id": "GSO-145-7CA-1",
+   "occurrence_state": "BLOCKED",
+   "pre_s5_1": {
+    "exterior": "UNRESOLVED",
+    "load": "NO_CONCENTRATED_LOAD_EVIDENCE",
+    "pre_s5_1_status": "BLOCKED_COMPONENT"
+   },
+   "questions": {
+    "applicability": "Q8+Q4",
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": "Q4"
+   },
+   "start_node": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "10A+7C9"
+    ]
+   },
+   "stirrup_count_lower_bound": null,
+   "support_face_to_face_run_m": 0.4,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_BOTTOM_BAR",
+    "BEAM_SIDE_BAR",
+    "BEAM_STIRRUP",
+    "BEAM_TOP_BAR"
+   ],
+   "why_candidate": "exterior authority UNRESOLVED (partial / mixed wall relation); load NO_CONCENTRATED_LOAD_EVIDENCE; length details [\"P13-GB-LT2_5M\", \"P13-GB-LT5M\"]",
+   "why_not_resolved": "3 candidates: exterior / interior not resolved; <2.5 m and <5 m titles both hold",
+   "width": {
+    "candidates": {
+     "P13-GB-EXTERIOR": 300,
+     "P13-GB-LT2_5M": 300,
+     "P13-GB-LT5M": 300
+    },
+    "state": "CANDIDATE_INVARIANT",
+    "value_mm": 300
+   },
+   "width_mm": 300,
+   "width_state": "CANDIDATE_INVARIANT"
+  },
+  {
+   "bar_straight_run_lower_bound_m": 2.3,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 18
+   },
+   "depth": {
+    "bound_max_m": null,
+    "candidates": {
+     "P13-GB-EXTERIOR": "FOLLOW_ARCH",
+     "P13-GB-LT2_5M": "300 (AI only)",
+     "P13-GB-LT5M": 400
+    },
+    "state": "CANDIDATE_CONFLICT",
+    "value_mm": null,
+    "why": "candidate sections differ in depth"
+   },
+   "depth_bound_max_m": null,
+   "depth_mm": null,
+   "depth_state": "CANDIDATE_CONFLICT",
+   "detail_applicability_state": "SOURCE_CONFLICT",
+   "detail_ids": [
+    "P13-GB-EXTERIOR",
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "end_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:228+228"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [
+    "LENGTH_BASIS_CHANGES_DETAIL: clear / centreline / clear-concrete give [\"P13-GB-LT2_5M\", \"P13-GB-LT5M\"] / [\"P13-GB-LT5M\"] / [\"P13-GB-LT2_5M\", \"P13-GB-LT5M\"]",
+    "CONCENTRATED_LOAD_UNKNOWN: evidence {'BEAM_END_REACTION': 1}; not auto-classified as PRESENT"
+   ],
+   "geometry_handles": [
+    "145",
+    "7CA"
+   ],
+   "known_kg": 0,
+   "known_straight_length_m": 0,
+   "length_state": "CONSISTENT",
+   "lengths": {
+    "bar_run_lb_m": 2.3,
+    "bar_run_state": "LOWER_BOUND",
+    "centreline_m": 2.6,
+    "clear_concrete_m": 2.3,
+    "face_to_face_m": 2.3,
+    "issues": [],
+    "length_state": "CONSISTENT",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": 2.3
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": 2.6,
+   "member_clear_concrete_length_m": 2.3,
+   "node_issues": {},
+   "occurrence_id": "GSO-145-7CA-2",
+   "occurrence_state": "BLOCKED",
+   "pre_s5_1": {
+    "exterior": "SOURCE_CONFLICT",
+    "load": "UNKNOWN",
+    "pre_s5_1_status": "BLOCKED_COMPONENT"
+   },
+   "questions": {
+    "applicability": "Q8+Q3+Q4",
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": "Q4"
+   },
+   "start_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:220+220"
+    ]
+   },
+   "stirrup_count_lower_bound": null,
+   "support_face_to_face_run_m": 2.3,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_BOTTOM_BAR",
+    "BEAM_EXTRA_BAR",
+    "BEAM_SIDE_BAR",
+    "BEAM_STIRRUP",
+    "BEAM_TOP_BAR",
+    "SPECIAL_DETAIL_BAR"
+   ],
+   "why_candidate": "exterior authority SOURCE_CONFLICT (exterior wall above but the ground slab continues on both sides); load UNKNOWN; length details [\"P13-GB-LT2_5M\", \"P13-GB-LT5M\"]",
+   "why_not_resolved": "3 candidates: exterior / interior not resolved; <2.5 m and <5 m titles both hold",
+   "width": {
+    "candidates": {
+     "P13-GB-EXTERIOR": 300,
+     "P13-GB-LT2_5M": 300,
+     "P13-GB-LT5M": 300
+    },
+    "state": "CANDIDATE_INVARIANT",
+    "value_mm": 300
+   },
+   "width_mm": 300,
+   "width_state": "CANDIDATE_INVARIANT"
+  },
+  {
+   "bar_straight_run_lower_bound_m": 2.4,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 11,
+    "LOWER_BOUND": 3,
+    "NOT_APPLICABLE": 4
+   },
+   "depth": {
+    "bound_max_m": null,
+    "candidates": {
+     "P13-GB-LT2_5M": "300 (AI only)",
+     "P13-GB-LT5M": 400
+    },
+    "state": "CANDIDATE_CONFLICT",
+    "value_mm": null,
+    "why": "candidate sections differ in depth"
+   },
+   "depth_bound_max_m": null,
+   "depth_mm": null,
+   "depth_state": "CANDIDATE_CONFLICT",
+   "detail_applicability_state": "CANDIDATE_DETAIL",
+   "detail_ids": [
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "end_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:1F2+1F2"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [
+    "LENGTH_BASIS_CHANGES_DETAIL: clear / centreline / clear-concrete give [\"P13-GB-LT2_5M\", \"P13-GB-LT5M\"] / [\"P13-GB-LT5M\"] / [\"P13-GB-LT2_5M\", \"P13-GB-LT5M\"]",
+    "CONCENTRATED_LOAD_UNKNOWN: evidence {'UNIDENTIFIED_SYMBOL': 1}; not auto-classified as PRESENT"
+   ],
+   "geometry_handles": [
+    "15C",
+    "7CC"
+   ],
+   "known_kg": 26.133333333333333,
+   "known_straight_length_m": 21.599999999999998,
+   "length_state": "CONSISTENT",
+   "lengths": {
+    "bar_run_lb_m": 2.4,
+    "bar_run_state": "LOWER_BOUND",
+    "centreline_m": 2.65,
+    "clear_concrete_m": 2.4,
+    "face_to_face_m": 2.4,
+    "issues": [],
+    "length_state": "CONSISTENT",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": 2.4
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": 2.65,
+   "member_clear_concrete_length_m": 2.4,
+   "node_issues": {},
+   "occurrence_id": "GSO-15C-7CC-1",
+   "occurrence_state": "LOWER_BOUND",
+   "pre_s5_1": {
+    "exterior": "INTERIOR_SOURCE_VERIFIED",
+    "load": "UNKNOWN",
+    "pre_s5_1_status": "READY_LOWER_BOUND"
+   },
+   "questions": {
+    "applicability": "Q3+Q4",
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": "Q4"
+   },
+   "start_node": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "109+7CB"
+    ]
+   },
+   "stirrup_count_lower_bound": null,
+   "support_face_to_face_run_m": 2.4,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_STIRRUP"
+   ],
+   "why_candidate": "exterior authority INTERIOR_SOURCE_VERIFIED (architectural interior wall above the span); load UNKNOWN; length details [\"P13-GB-LT2_5M\", \"P13-GB-LT5M\"]",
+   "why_not_resolved": "2 candidates: <2.5 m and <5 m titles both hold",
+   "width": {
+    "candidates": {
+     "P13-GB-LT2_5M": 300,
+     "P13-GB-LT5M": 300
+    },
+    "state": "CANDIDATE_INVARIANT",
+    "value_mm": 300
+   },
+   "width_mm": 300,
+   "width_state": "CANDIDATE_INVARIANT"
+  },
+  {
+   "bar_straight_run_lower_bound_m": 1.9,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 11,
+    "LOWER_BOUND": 3,
+    "NOT_APPLICABLE": 4
+   },
+   "depth": {
+    "bound_max_m": null,
+    "candidates": {
+     "P13-GB-LT2_5M": "300 (AI only)",
+     "P13-GB-LT5M": 400
+    },
+    "state": "CANDIDATE_CONFLICT",
+    "value_mm": null,
+    "why": "candidate sections differ in depth"
+   },
+   "depth_bound_max_m": null,
+   "depth_mm": null,
+   "depth_state": "CANDIDATE_CONFLICT",
+   "detail_applicability_state": "CANDIDATE_DETAIL",
+   "detail_ids": [
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "end_node": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "170+7C3"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [
+    "FREE_END_CLASSIFIED end 1: FOOTING FOCC-1B2B (the end lies inside footing outline FOCC-1B2B)",
+    "LENGTH_BASIS_CHANGES_DETAIL: clear / centreline / clear-concrete give [\"P13-GB-LT2_5M\", \"P13-GB-LT5M\"] / [\"P13-GB-LT5M\"] / [\"P13-GB-LT5M\"]",
+    "CONCENTRATED_LOAD_UNKNOWN: evidence {'BEAM_END_REACTION': 1}; not auto-classified as PRESENT"
+   ],
+   "geometry_handles": [
+    "15D",
+    "7C8"
+   ],
+   "known_kg": 20.688888888888886,
+   "known_straight_length_m": 17.099999999999998,
+   "length_state": "CONSISTENT",
+   "lengths": {
+    "bar_run_lb_m": 1.9,
+    "bar_run_state": "LOWER_BOUND",
+    "centreline_m": 4.3,
+    "clear_concrete_m": 2.9,
+    "face_to_face_m": 1.9,
+    "issues": [],
+    "length_state": "CONSISTENT",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": 1.9
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": 4.3,
+   "member_clear_concrete_length_m": 2.9,
+   "node_issues": {},
+   "occurrence_id": "GSO-15D-7C8-1",
+   "occurrence_state": "LOWER_BOUND",
+   "pre_s5_1": {
+    "exterior": "INTERIOR_SOURCE_VERIFIED",
+    "load": "UNKNOWN",
+    "pre_s5_1_status": "READY_LOWER_BOUND"
+   },
+   "questions": {
+    "applicability": "Q3+Q4",
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": "Q4"
+   },
+   "start_node": {
+    "kind": "FOOTING",
+    "refs": [
+     "FOCC-1B2B"
+    ]
+   },
+   "stirrup_count_lower_bound": null,
+   "support_face_to_face_run_m": 1.9,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_STIRRUP"
+   ],
+   "why_candidate": "exterior authority INTERIOR_SOURCE_VERIFIED (architectural interior wall above the span); load UNKNOWN; length details [\"P13-GB-LT2_5M\", \"P13-GB-LT5M\"]",
+   "why_not_resolved": "2 candidates: <2.5 m and <5 m titles both hold",
+   "width": {
+    "candidates": {
+     "P13-GB-LT2_5M": 300,
+     "P13-GB-LT5M": 300
+    },
+    "state": "CANDIDATE_INVARIANT",
+    "value_mm": 300
+   },
+   "width_mm": 300,
+   "width_state": "CANDIDATE_INVARIANT"
+  },
+  {
+   "bar_straight_run_lower_bound_m": 2.7,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 18
+   },
+   "depth": {
+    "bound_max_m": null,
+    "candidates": {
+     "NO_PROJECT_DETAIL_FOR_CONCENTRATED_LOAD": "UNKNOWN",
+     "P13-GB-LT5M": 400
+    },
+    "state": "UNRESOLVED",
+    "value_mm": null,
+    "why": "an undefined candidate detail"
+   },
+   "depth_bound_max_m": null,
+   "depth_mm": null,
+   "depth_state": "UNRESOLVED",
+   "detail_applicability_state": "CANDIDATE_DETAIL",
+   "detail_ids": [
+    "NO_PROJECT_DETAIL_FOR_CONCENTRATED_LOAD",
+    "P13-GB-LT5M"
+   ],
+   "end_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:1E0+1E0"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [
+    "CONCENTRATED_LOAD_UNKNOWN: evidence {'BEAM_END_REACTION': 1, 'JUNCTION_AT_SUPPORT': 1}; not auto-classified as PRESENT"
+   ],
+   "geometry_handles": [
+    "15E",
+    "15F"
+   ],
+   "known_kg": 0,
+   "known_straight_length_m": 0,
+   "length_state": "CONSISTENT",
+   "lengths": {
+    "bar_run_lb_m": 2.7,
+    "bar_run_state": "LOWER_BOUND",
+    "centreline_m": 3.2,
+    "clear_concrete_m": 3.0,
+    "face_to_face_m": 2.7,
+    "issues": [],
+    "length_state": "CONSISTENT",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": 2.7
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": 3.2,
+   "member_clear_concrete_length_m": 3.0,
+   "node_issues": {},
+   "occurrence_id": "GSO-15E-15F-1",
+   "occurrence_state": "BLOCKED",
+   "pre_s5_1": {
+    "exterior": "INTERIOR_SOURCE_VERIFIED",
+    "load": "UNKNOWN",
+    "pre_s5_1_status": "BLOCKED_COMPONENT"
+   },
+   "questions": {
+    "applicability": "Q1",
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": "Q1"
+   },
+   "start_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:1F5+1F5"
+    ]
+   },
+   "stirrup_count_lower_bound": null,
+   "support_face_to_face_run_m": 2.7,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_BOTTOM_BAR",
+    "BEAM_EXTRA_BAR",
+    "BEAM_SIDE_BAR",
+    "BEAM_STIRRUP",
+    "BEAM_TOP_BAR",
+    "SPECIAL_DETAIL_BAR"
+   ],
+   "why_candidate": "exterior authority INTERIOR_SOURCE_VERIFIED (architectural interior wall above the span); load UNKNOWN; length details [\"P13-GB-LT5M\"]",
+   "why_not_resolved": "2 candidates: concentrated-load case has no project detail;",
+   "width": {
+    "candidates": {
+     "NO_PROJECT_DETAIL_FOR_CONCENTRATED_LOAD": "UNKNOWN",
+     "P13-GB-LT5M": 300
+    },
+    "state": "UNRESOLVED",
+    "value_mm": null
+   },
+   "width_mm": null,
+   "width_state": "UNRESOLVED"
+  },
+  {
+   "bar_straight_run_lower_bound_m": 1.25,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 11,
+    "LOWER_BOUND": 3,
+    "NOT_APPLICABLE": 4
+   },
+   "depth": {
+    "bound_max_m": null,
+    "candidates": {
+     "P13-GB-LT2_5M": "300 (AI only)",
+     "P13-GB-LT5M": 400
+    },
+    "state": "CANDIDATE_CONFLICT",
+    "value_mm": null,
+    "why": "candidate sections differ in depth"
+   },
+   "depth_bound_max_m": null,
+   "depth_mm": null,
+   "depth_state": "CANDIDATE_CONFLICT",
+   "detail_applicability_state": "CANDIDATE_DETAIL",
+   "detail_ids": [
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "end_node": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "15D+7C8"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [],
+   "geometry_handles": [
+    "16F",
+    "7FF"
+   ],
+   "known_kg": 13.61111111111111,
+   "known_straight_length_m": 11.25,
+   "length_state": "CONSISTENT",
+   "lengths": {
+    "bar_run_lb_m": 1.25,
+    "bar_run_state": "LOWER_BOUND",
+    "centreline_m": 1.55,
+    "clear_concrete_m": 1.25,
+    "face_to_face_m": 1.25,
+    "issues": [],
+    "length_state": "CONSISTENT",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": 1.25
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": 1.55,
+   "member_clear_concrete_length_m": 1.25,
+   "node_issues": {},
+   "occurrence_id": "GSO-16F-7FF-1",
+   "occurrence_state": "LOWER_BOUND",
+   "pre_s5_1": {
+    "exterior": "INTERIOR_SOURCE_VERIFIED",
+    "load": "NO_CONCENTRATED_LOAD_EVIDENCE",
+    "pre_s5_1_status": "READY_LOWER_BOUND"
+   },
+   "questions": {
+    "applicability": "Q4",
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": "Q4"
+   },
+   "start_node": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "15E+15F"
+    ]
+   },
+   "stirrup_count_lower_bound": null,
+   "support_face_to_face_run_m": 1.25,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_STIRRUP"
+   ],
+   "why_candidate": "exterior authority INTERIOR_SOURCE_VERIFIED (architectural interior wall above the span); load NO_CONCENTRATED_LOAD_EVIDENCE; length details [\"P13-GB-LT2_5M\", \"P13-GB-LT5M\"]",
+   "why_not_resolved": "2 candidates: <2.5 m and <5 m titles both hold",
+   "width": {
+    "candidates": {
+     "P13-GB-LT2_5M": 300,
+     "P13-GB-LT5M": 300
+    },
+    "state": "CANDIDATE_INVARIANT",
+    "value_mm": 300
+   },
+   "width_mm": 300,
+   "width_state": "CANDIDATE_INVARIANT"
+  },
+  {
+   "bar_straight_run_lower_bound_m": 6.22,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 8,
+    "LOWER_BOUND": 4,
+    "NOT_APPLICABLE": 4,
+    "VERIFIED": 2
+   },
+   "depth": {
+    "bound_max_m": 1.0,
+    "candidates": {
+     "P13-GB-EXTERIOR": "FOLLOW_ARCH"
+    },
+    "state": "BOUNDED_ABOVE",
+    "value_mm": null,
+    "why": "D = (+1.00 - b) - NGL, b = floor build-up (not printed, >= 0), NGL in [+0.00, +0.15] -> D <= 1.00 m; no lower bound"
+   },
+   "depth_bound_max_m": 1.0,
+   "depth_mm": null,
+   "depth_state": "BOUNDED_ABOVE",
+   "detail_applicability_state": "PROJECT_GENERAL_DETAIL",
+   "detail_ids": [
+    "P13-GB-EXTERIOR"
+   ],
+   "end_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:1E4+1E4"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [
+    "CONCENTRATED_LOAD_UNKNOWN: evidence {'BEAM_END_REACTION': 3}; not auto-classified as PRESENT"
+   ],
+   "geometry_handles": [
+    "170",
+    "7C3"
+   ],
+   "known_kg": 88.46222222222222,
+   "known_straight_length_m": 55.980000000000004,
+   "length_state": "CONSISTENT",
+   "lengths": {
+    "bar_run_lb_m": 6.22,
+    "bar_run_state": "LOWER_BOUND",
+    "centreline_m": 6.52,
+    "clear_concrete_m": 6.22,
+    "face_to_face_m": 6.22,
+    "issues": [],
+    "length_state": "CONSISTENT",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": 6.22
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": 6.52,
+   "member_clear_concrete_length_m": 6.22,
+   "node_issues": {},
+   "occurrence_id": "GSO-170-7C3-1",
+   "occurrence_state": "LOWER_BOUND",
+   "pre_s5_1": {
+    "exterior": "EXTERIOR_SOURCE_VERIFIED",
+    "load": "UNKNOWN",
+    "pre_s5_1_status": "READY_LOWER_BOUND"
+   },
+   "questions": {
+    "applicability": null,
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": null
+   },
+   "start_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:1DC+1DC"
+    ]
+   },
+   "stirrup_count_lower_bound": 42,
+   "support_face_to_face_run_m": 6.22,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_SIDE_BAR",
+    "BEAM_STIRRUP"
+   ],
+   "why_candidate": "exterior authority EXTERIOR_SOURCE_VERIFIED (architectural exterior wall above the span); load UNKNOWN; length details [\"P13-GB-GT5M\"]",
+   "why_not_resolved": "",
+   "width": {
+    "candidates": {
+     "P13-GB-EXTERIOR": 300
+    },
+    "state": "SOURCE_EXPLICIT",
+    "value_mm": 300
+   },
+   "width_mm": 300,
+   "width_state": "SOURCE_EXPLICIT"
+  },
+  {
+   "bar_straight_run_lower_bound_m": 3.6,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 8,
+    "LOWER_BOUND": 4,
+    "NOT_APPLICABLE": 4,
+    "VERIFIED": 2
+   },
+   "depth": {
+    "bound_max_m": 1.0,
+    "candidates": {
+     "P13-GB-EXTERIOR": "FOLLOW_ARCH"
+    },
+    "state": "BOUNDED_ABOVE",
+    "value_mm": null,
+    "why": "D = (+1.00 - b) - NGL, b = floor build-up (not printed, >= 0), NGL in [+0.00, +0.15] -> D <= 1.00 m; no lower bound"
+   },
+   "depth_bound_max_m": 1.0,
+   "depth_mm": null,
+   "depth_state": "BOUNDED_ABOVE",
+   "detail_applicability_state": "PROJECT_GENERAL_DETAIL",
+   "detail_ids": [
+    "P13-GB-EXTERIOR"
+   ],
+   "end_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:241+241"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [
+    "CONCENTRATED_LOAD_UNKNOWN: evidence {'BEAM_END_REACTION': 1, 'JUNCTION_AT_SUPPORT': 1}; not auto-classified as PRESENT"
+   ],
+   "geometry_handles": [
+    "170",
+    "7C3"
+   ],
+   "known_kg": 51.2,
+   "known_straight_length_m": 32.400000000000006,
+   "length_state": "CONSISTENT",
+   "lengths": {
+    "bar_run_lb_m": 3.6,
+    "bar_run_state": "LOWER_BOUND",
+    "centreline_m": 3.9,
+    "clear_concrete_m": 3.6,
+    "face_to_face_m": 3.6,
+    "issues": [],
+    "length_state": "CONSISTENT",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": 3.6
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": 3.9,
+   "member_clear_concrete_length_m": 3.6,
+   "node_issues": {},
+   "occurrence_id": "GSO-170-7C3-2",
+   "occurrence_state": "LOWER_BOUND",
+   "pre_s5_1": {
+    "exterior": "EXTERIOR_SOURCE_VERIFIED",
+    "load": "UNKNOWN",
+    "pre_s5_1_status": "READY_LOWER_BOUND"
+   },
+   "questions": {
+    "applicability": null,
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": null
+   },
+   "start_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:1E4+1E4"
+    ]
+   },
+   "stirrup_count_lower_bound": 24,
+   "support_face_to_face_run_m": 3.6,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_SIDE_BAR",
+    "BEAM_STIRRUP"
+   ],
+   "why_candidate": "exterior authority EXTERIOR_SOURCE_VERIFIED (architectural exterior wall above the span); load UNKNOWN; length details [\"P13-GB-LT5M\"]",
+   "why_not_resolved": "",
+   "width": {
+    "candidates": {
+     "P13-GB-EXTERIOR": 300
+    },
+    "state": "SOURCE_EXPLICIT",
+    "value_mm": 300
+   },
+   "width_mm": 300,
+   "width_state": "SOURCE_EXPLICIT"
+  },
+  {
+   "bar_straight_run_lower_bound_m": 3.35,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 8,
+    "LOWER_BOUND": 4,
+    "NOT_APPLICABLE": 4,
+    "VERIFIED": 2
+   },
+   "depth": {
+    "bound_max_m": 1.0,
+    "candidates": {
+     "P13-GB-EXTERIOR": "FOLLOW_ARCH"
+    },
+    "state": "BOUNDED_ABOVE",
+    "value_mm": null,
+    "why": "D = (+1.00 - b) - NGL, b = floor build-up (not printed, >= 0), NGL in [+0.00, +0.15] -> D <= 1.00 m; no lower bound"
+   },
+   "depth_bound_max_m": 1.0,
+   "depth_mm": null,
+   "depth_state": "BOUNDED_ABOVE",
+   "detail_applicability_state": "PROJECT_GENERAL_DETAIL",
+   "detail_ids": [
+    "P13-GB-EXTERIOR"
+   ],
+   "end_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:17C0+17C0"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [],
+   "geometry_handles": [
+    "170",
+    "7C3"
+   ],
+   "known_kg": 47.644444444444446,
+   "known_straight_length_m": 30.150000000000002,
+   "length_state": "CONSISTENT",
+   "lengths": {
+    "bar_run_lb_m": 3.35,
+    "bar_run_state": "LOWER_BOUND",
+    "centreline_m": 3.65,
+    "clear_concrete_m": 3.35,
+    "face_to_face_m": 3.35,
+    "issues": [],
+    "length_state": "CONSISTENT",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": 3.35
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": 3.65,
+   "member_clear_concrete_length_m": 3.35,
+   "node_issues": {},
+   "occurrence_id": "GSO-170-7C3-3",
+   "occurrence_state": "LOWER_BOUND",
+   "pre_s5_1": {
+    "exterior": "EXTERIOR_SOURCE_VERIFIED",
+    "load": "NO_CONCENTRATED_LOAD_EVIDENCE",
+    "pre_s5_1_status": "READY_LOWER_BOUND"
+   },
+   "questions": {
+    "applicability": null,
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": null
+   },
+   "start_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:241+241"
+    ]
+   },
+   "stirrup_count_lower_bound": 23,
+   "support_face_to_face_run_m": 3.35,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_SIDE_BAR",
+    "BEAM_STIRRUP"
+   ],
+   "why_candidate": "exterior authority EXTERIOR_SOURCE_VERIFIED (architectural exterior wall above the span); load NO_CONCENTRATED_LOAD_EVIDENCE; length details [\"P13-GB-LT5M\"]",
+   "why_not_resolved": "",
+   "width": {
+    "candidates": {
+     "P13-GB-EXTERIOR": 300
+    },
+    "state": "SOURCE_EXPLICIT",
+    "value_mm": 300
+   },
+   "width_mm": 300,
+   "width_state": "SOURCE_EXPLICIT"
+  },
+  {
+   "bar_straight_run_lower_bound_m": 3.75,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 18
+   },
+   "depth": {
+    "bound_max_m": null,
+    "candidates": {
+     "NO_PROJECT_DETAIL_FOR_CONCENTRATED_LOAD": "UNKNOWN",
+     "P13-GB-LT5M": 400
+    },
+    "state": "UNRESOLVED",
+    "value_mm": null,
+    "why": "an undefined candidate detail"
+   },
+   "depth_bound_max_m": null,
+   "depth_mm": null,
+   "depth_state": "UNRESOLVED",
+   "detail_applicability_state": "CANDIDATE_DETAIL",
+   "detail_ids": [
+    "NO_PROJECT_DETAIL_FOR_CONCENTRATED_LOAD",
+    "P13-GB-LT5M"
+   ],
+   "end_node": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "170+7C3"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [
+    "CONCENTRATED_LOAD_UNKNOWN: evidence {'BEAM_END_REACTION': 1}; not auto-classified as PRESENT"
+   ],
+   "geometry_handles": [
+    "175",
+    "7DE"
+   ],
+   "known_kg": 0,
+   "known_straight_length_m": 0,
+   "length_state": "CONSISTENT",
+   "lengths": {
+    "bar_run_lb_m": 3.75,
+    "bar_run_state": "LOWER_BOUND",
+    "centreline_m": 4.05,
+    "clear_concrete_m": 3.75,
+    "face_to_face_m": 3.75,
+    "issues": [],
+    "length_state": "CONSISTENT",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": 3.75
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": 4.05,
+   "member_clear_concrete_length_m": 3.75,
+   "node_issues": {},
+   "occurrence_id": "GSO-175-7DE-1",
+   "occurrence_state": "BLOCKED",
+   "pre_s5_1": {
+    "exterior": "INTERIOR_SOURCE_VERIFIED",
+    "load": "UNKNOWN",
+    "pre_s5_1_status": "BLOCKED_COMPONENT"
+   },
+   "questions": {
+    "applicability": "Q1",
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": "Q1"
+   },
+   "start_node": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "177+7CD"
+    ]
+   },
+   "stirrup_count_lower_bound": null,
+   "support_face_to_face_run_m": 3.75,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_BOTTOM_BAR",
+    "BEAM_EXTRA_BAR",
+    "BEAM_SIDE_BAR",
+    "BEAM_STIRRUP",
+    "BEAM_TOP_BAR",
+    "SPECIAL_DETAIL_BAR"
+   ],
+   "why_candidate": "exterior authority INTERIOR_SOURCE_VERIFIED (architectural interior wall above the span); load UNKNOWN; length details [\"P13-GB-LT5M\"]",
+   "why_not_resolved": "2 candidates: concentrated-load case has no project detail;",
+   "width": {
+    "candidates": {
+     "NO_PROJECT_DETAIL_FOR_CONCENTRATED_LOAD": "UNKNOWN",
+     "P13-GB-LT5M": 300
+    },
+    "state": "UNRESOLVED",
+    "value_mm": null
+   },
+   "width_mm": null,
+   "width_state": "UNRESOLVED"
+  },
+  {
+   "bar_straight_run_lower_bound_m": 3.6,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 18
+   },
+   "depth": {
+    "bound_max_m": null,
+    "candidates": {
+     "NO_PROJECT_DETAIL_FOR_CONCENTRATED_LOAD": "UNKNOWN",
+     "P13-GB-LT5M": 400
+    },
+    "state": "UNRESOLVED",
+    "value_mm": null,
+    "why": "an undefined candidate detail"
+   },
+   "depth_bound_max_m": null,
+   "depth_mm": null,
+   "depth_state": "UNRESOLVED",
+   "detail_applicability_state": "CANDIDATE_DETAIL",
+   "detail_ids": [
+    "NO_PROJECT_DETAIL_FOR_CONCENTRATED_LOAD",
+    "P13-GB-LT5M"
+   ],
+   "end_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:1E4+1E4"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [
+    "CONCENTRATED_LOAD_UNKNOWN: evidence {'BEAM_END_REACTION': 3}; not auto-classified as PRESENT"
+   ],
+   "geometry_handles": [
+    "176",
+    "7E6"
+   ],
+   "known_kg": 0,
+   "known_straight_length_m": 0,
+   "length_state": "CONSISTENT",
+   "lengths": {
+    "bar_run_lb_m": 3.6,
+    "bar_run_state": "LOWER_BOUND",
+    "centreline_m": 4.05,
+    "clear_concrete_m": 3.75,
+    "face_to_face_m": 3.6,
+    "issues": [],
+    "length_state": "CONSISTENT",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": 3.6
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": 4.05,
+   "member_clear_concrete_length_m": 3.75,
+   "node_issues": {},
+   "occurrence_id": "GSO-176-7E6-1",
+   "occurrence_state": "BLOCKED",
+   "pre_s5_1": {
+    "exterior": "INTERIOR_SOURCE_VERIFIED",
+    "load": "UNKNOWN",
+    "pre_s5_1_status": "BLOCKED_COMPONENT"
+   },
+   "questions": {
+    "applicability": "Q1",
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": "Q1"
+   },
+   "start_node": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "177+7CD"
+    ]
+   },
+   "stirrup_count_lower_bound": null,
+   "support_face_to_face_run_m": 3.6,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_BOTTOM_BAR",
+    "BEAM_EXTRA_BAR",
+    "BEAM_SIDE_BAR",
+    "BEAM_STIRRUP",
+    "BEAM_TOP_BAR",
+    "SPECIAL_DETAIL_BAR"
+   ],
+   "why_candidate": "exterior authority INTERIOR_SOURCE_VERIFIED (architectural interior wall above the span); load UNKNOWN; length details [\"P13-GB-LT5M\"]",
+   "why_not_resolved": "2 candidates: concentrated-load case has no project detail;",
+   "width": {
+    "candidates": {
+     "NO_PROJECT_DETAIL_FOR_CONCENTRATED_LOAD": "UNKNOWN",
+     "P13-GB-LT5M": 300
+    },
+    "state": "UNRESOLVED",
+    "value_mm": null
+   },
+   "width_mm": null,
+   "width_state": "UNRESOLVED"
+  },
+  {
+   "bar_straight_run_lower_bound_m": 5.32,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 18
+   },
+   "depth": {
+    "bound_max_m": null,
+    "candidates": {
+     "NO_PROJECT_DETAIL_FOR_CONCENTRATED_LOAD": "UNKNOWN",
+     "P13-GB-GT5M": 600
+    },
+    "state": "UNRESOLVED",
+    "value_mm": null,
+    "why": "an undefined candidate detail"
+   },
+   "depth_bound_max_m": null,
+   "depth_mm": null,
+   "depth_state": "UNRESOLVED",
+   "detail_applicability_state": "CANDIDATE_DETAIL",
+   "detail_ids": [
+    "NO_PROJECT_DETAIL_FOR_CONCENTRATED_LOAD",
+    "P13-GB-GT5M"
+   ],
+   "end_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:245+245"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [
+    "FREE_END_CLASSIFIED end 1: COLUMN COL:1EC+1EC (column outline 50 mm from the end (drawing gap))",
+    "CONCENTRATED_LOAD_UNKNOWN: evidence {'BEAM_END_REACTION': 3}; not auto-classified as PRESENT"
+   ],
+   "geometry_handles": [
+    "177",
+    "7CD"
+   ],
+   "known_kg": 0,
+   "known_straight_length_m": 0,
+   "length_state": "CONSISTENT",
+   "lengths": {
+    "bar_run_lb_m": 5.32,
+    "bar_run_state": "LOWER_BOUND",
+    "centreline_m": 5.595,
+    "clear_concrete_m": 5.37,
+    "face_to_face_m": 5.32,
+    "issues": [],
+    "length_state": "CONSISTENT",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": 5.32
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": 5.595,
+   "member_clear_concrete_length_m": 5.37,
+   "node_issues": {},
+   "occurrence_id": "GSO-177-7CD-1",
+   "occurrence_state": "BLOCKED",
+   "pre_s5_1": {
+    "exterior": "INTERIOR_SOURCE_VERIFIED",
+    "load": "UNKNOWN",
+    "pre_s5_1_status": "BLOCKED_COMPONENT"
+   },
+   "questions": {
+    "applicability": "Q1",
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": "Q1"
+   },
+   "start_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:1EC+1EC"
+    ]
+   },
+   "stirrup_count_lower_bound": null,
+   "support_face_to_face_run_m": 5.32,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_BOTTOM_BAR",
+    "BEAM_EXTRA_BAR",
+    "BEAM_SIDE_BAR",
+    "BEAM_STIRRUP",
+    "BEAM_TOP_BAR",
+    "SPECIAL_DETAIL_BAR"
+   ],
+   "why_candidate": "exterior authority INTERIOR_SOURCE_VERIFIED (architectural interior wall above the span); load UNKNOWN; length details [\"P13-GB-GT5M\"]",
+   "why_not_resolved": "2 candidates: concentrated-load case has no project detail;",
+   "width": {
+    "candidates": {
+     "NO_PROJECT_DETAIL_FOR_CONCENTRATED_LOAD": "UNKNOWN",
+     "P13-GB-GT5M": 300
+    },
+    "state": "UNRESOLVED",
+    "value_mm": null
+   },
+   "width_mm": null,
+   "width_state": "UNRESOLVED"
+  },
+  {
+   "bar_straight_run_lower_bound_m": null,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 14,
+    "NOT_APPLICABLE": 4
+   },
+   "depth": {
+    "bound_max_m": null,
+    "candidates": {
+     "P13-GB-LT2_5M": "300 (AI only)",
+     "P13-GB-LT5M": 400
+    },
+    "state": "CANDIDATE_CONFLICT",
+    "value_mm": null,
+    "why": "candidate sections differ in depth"
+   },
+   "depth_bound_max_m": null,
+   "depth_mm": null,
+   "depth_state": "CANDIDATE_CONFLICT",
+   "detail_applicability_state": "CANDIDATE_DETAIL",
+   "detail_ids": [
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "end_node": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "ARC:157+158"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [
+    "LENGTH_GEOMETRY_CONFLICT: shortest bar line 1933.0 > clear concrete 1886.7 mm",
+    "CONCENTRATED_LOAD_UNKNOWN: evidence {'BEAM_END_REACTION': 1}; not auto-classified as PRESENT"
+   ],
+   "geometry_handles": [
+    "177",
+    "7CD"
+   ],
+   "known_kg": 0,
+   "known_straight_length_m": 0,
+   "length_state": "LENGTH_GEOMETRY_CONFLICT",
+   "lengths": {
+    "bar_run_lb_m": null,
+    "bar_run_state": "LENGTH_GEOMETRY_CONFLICT",
+    "centreline_m": 2.331,
+    "clear_concrete_m": 1.887,
+    "face_to_face_m": 1.989,
+    "issues": [
+     "shortest bar line 1933.0 > clear concrete 1886.7 mm"
+    ],
+    "length_state": "LENGTH_GEOMETRY_CONFLICT",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": null
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": 2.331,
+   "member_clear_concrete_length_m": 1.887,
+   "node_issues": {},
+   "occurrence_id": "GSO-177-7CD-2",
+   "occurrence_state": "BLOCKED",
+   "pre_s5_1": {
+    "exterior": "INTERIOR_SOURCE_VERIFIED",
+    "load": "UNKNOWN",
+    "pre_s5_1_status": "BLOCKED_COMPONENT"
+   },
+   "questions": {
+    "applicability": "Q4",
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": "Q4"
+   },
+   "start_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:245+245"
+    ]
+   },
+   "stirrup_count_lower_bound": null,
+   "support_face_to_face_run_m": 1.989,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_BOTTOM_BAR",
+    "BEAM_STIRRUP",
+    "BEAM_TOP_BAR"
+   ],
+   "why_candidate": "exterior authority INTERIOR_SOURCE_VERIFIED (architectural interior wall above the span); load UNKNOWN; length details [\"P13-GB-LT2_5M\", \"P13-GB-LT5M\"]",
+   "why_not_resolved": "2 candidates: <2.5 m and <5 m titles both hold",
+   "width": {
+    "candidates": {
+     "P13-GB-LT2_5M": 300,
+     "P13-GB-LT5M": 300
+    },
+    "state": "CANDIDATE_INVARIANT",
+    "value_mm": 300
+   },
+   "width_mm": 300,
+   "width_state": "CANDIDATE_INVARIANT"
+  },
+  {
+   "bar_straight_run_lower_bound_m": 3.55,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 11,
+    "LOWER_BOUND": 1,
+    "NOT_APPLICABLE": 4,
+    "VERIFIED": 2
+   },
+   "depth": {
+    "bound_max_m": null,
+    "candidates": {
+     "P13-GB-EXTERIOR": "FOLLOW_ARCH",
+     "P13-GB-LT5M": 400
+    },
+    "state": "CANDIDATE_CONFLICT",
+    "value_mm": null,
+    "why": "candidate sections differ in depth"
+   },
+   "depth_bound_max_m": null,
+   "depth_mm": null,
+   "depth_state": "CANDIDATE_CONFLICT",
+   "detail_applicability_state": "CANDIDATE_DETAIL",
+   "detail_ids": [
+    "P13-GB-EXTERIOR",
+    "P13-GB-LT5M"
+   ],
+   "end_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:230+230"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [],
+   "geometry_handles": [
+    "178",
+    "7DB"
+   ],
+   "known_kg": 0,
+   "known_straight_length_m": 0,
+   "length_state": "CONSISTENT",
+   "lengths": {
+    "bar_run_lb_m": 3.55,
+    "bar_run_state": "LOWER_BOUND",
+    "centreline_m": 4.1,
+    "clear_concrete_m": 3.8,
+    "face_to_face_m": 3.55,
+    "issues": [],
+    "length_state": "CONSISTENT",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": 3.55
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": 4.1,
+   "member_clear_concrete_length_m": 3.8,
+   "node_issues": {},
+   "occurrence_id": "GSO-178-7DB-1",
+   "occurrence_state": "BLOCKED",
+   "pre_s5_1": {
+    "exterior": "CANDIDATE_EXTERIOR",
+    "load": "NO_CONCENTRATED_LOAD_EVIDENCE",
+    "pre_s5_1_status": "BLOCKED_COMPONENT"
+   },
+   "questions": {
+    "applicability": "Q8",
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": "Q8"
+   },
+   "start_node": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "145+7CA"
+    ]
+   },
+   "stirrup_count_lower_bound": 24,
+   "support_face_to_face_run_m": 3.55,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_BOTTOM_BAR",
+    "BEAM_SIDE_BAR",
+    "BEAM_STIRRUP",
+    "BEAM_TOP_BAR"
+   ],
+   "why_candidate": "exterior authority CANDIDATE_EXTERIOR (beam on the ground-slab edge with no wall above: the 'for exterior walls' title is not literally met, the interior titles assume a wall-free inside); load NO_CONCENTRATED_LOAD_EVIDENCE; length details [\"P13-GB-LT5M\"]",
+   "why_not_resolved": "2 candidates: exterior / interior not resolved;",
+   "width": {
+    "candidates": {
+     "P13-GB-EXTERIOR": 300,
+     "P13-GB-LT5M": 300
+    },
+    "state": "CANDIDATE_INVARIANT",
+    "value_mm": 300
+   },
+   "width_mm": 300,
+   "width_state": "CANDIDATE_INVARIANT"
+  },
+  {
+   "bar_straight_run_lower_bound_m": 1.05,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 11,
+    "LOWER_BOUND": 3,
+    "NOT_APPLICABLE": 4
+   },
+   "depth": {
+    "bound_max_m": null,
+    "candidates": {
+     "P13-GB-LT2_5M": "300 (AI only)",
+     "P13-GB-LT5M": 400
+    },
+    "state": "CANDIDATE_CONFLICT",
+    "value_mm": null,
+    "why": "candidate sections differ in depth"
+   },
+   "depth_bound_max_m": null,
+   "depth_mm": null,
+   "depth_state": "CANDIDATE_CONFLICT",
+   "detail_applicability_state": "CANDIDATE_DETAIL",
+   "detail_ids": [
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "end_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:23C+23C"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [],
+   "geometry_handles": [
+    "17B",
+    "7E5"
+   ],
+   "known_kg": 11.433333333333335,
+   "known_straight_length_m": 9.450000000000001,
+   "length_state": "CONSISTENT",
+   "lengths": {
+    "bar_run_lb_m": 1.05,
+    "bar_run_state": "LOWER_BOUND",
+    "centreline_m": 1.5,
+    "clear_concrete_m": 1.2,
+    "face_to_face_m": 1.05,
+    "issues": [],
+    "length_state": "CONSISTENT",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": 1.05
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": 1.5,
+   "member_clear_concrete_length_m": 1.2,
+   "node_issues": {},
+   "occurrence_id": "GSO-17B-7E5-1",
+   "occurrence_state": "LOWER_BOUND",
+   "pre_s5_1": {
+    "exterior": "INTERIOR_SOURCE_VERIFIED",
+    "load": "NO_CONCENTRATED_LOAD_EVIDENCE",
+    "pre_s5_1_status": "READY_LOWER_BOUND"
+   },
+   "questions": {
+    "applicability": "Q4",
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": "Q4"
+   },
+   "start_node": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "7D0+FC"
+    ]
+   },
+   "stirrup_count_lower_bound": null,
+   "support_face_to_face_run_m": 1.05,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_STIRRUP"
+   ],
+   "why_candidate": "exterior authority INTERIOR_SOURCE_VERIFIED (no wall above and ground slab on both sides: not under an exterior wall); load NO_CONCENTRATED_LOAD_EVIDENCE; length details [\"P13-GB-LT2_5M\", \"P13-GB-LT5M\"]",
+   "why_not_resolved": "2 candidates: <2.5 m and <5 m titles both hold",
+   "width": {
+    "candidates": {
+     "P13-GB-LT2_5M": 300,
+     "P13-GB-LT5M": 300
+    },
+    "state": "CANDIDATE_INVARIANT",
+    "value_mm": 300
+   },
+   "width_mm": 300,
+   "width_state": "CANDIDATE_INVARIANT"
+  },
+  {
+   "bar_straight_run_lower_bound_m": 1.928,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 11,
+    "LOWER_BOUND": 3,
+    "NOT_APPLICABLE": 4
+   },
+   "depth": {
+    "bound_max_m": null,
+    "candidates": {
+     "P13-GB-LT2_5M": "300 (AI only)",
+     "P13-GB-LT5M": 400
+    },
+    "state": "CANDIDATE_CONFLICT",
+    "value_mm": null,
+    "why": "candidate sections differ in depth"
+   },
+   "depth_bound_max_m": null,
+   "depth_mm": null,
+   "depth_state": "CANDIDATE_CONFLICT",
+   "detail_applicability_state": "CANDIDATE_DETAIL",
+   "detail_ids": [
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "end_node": {
+    "kind": "FOOTING",
+    "refs": [
+     "FOCC-1B2B"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [
+    "FREE_END_CLASSIFIED end 2: FOOTING FOCC-1B2B (the end lies inside footing outline FOCC-1B2B)",
+    "LENGTH_BASIS_CHANGES_DETAIL: clear / centreline / clear-concrete give [\"P13-GB-LT2_5M\", \"P13-GB-LT5M\"] / [\"P13-GB-LT5M\"] / [\"P13-GB-LT5M\"]",
+    "CONCENTRATED_LOAD_UNKNOWN: evidence {'STAIR_BEARING_CANDIDATE': 1, 'UNIDENTIFIED_SYMBOL': 1}; not auto-classified as PRESENT"
+   ],
+   "geometry_handles": [
+    "17C",
+    "7E3"
+   ],
+   "known_kg": 20.993777777777776,
+   "known_straight_length_m": 17.352,
+   "length_state": "CONSISTENT",
+   "lengths": {
+    "bar_run_lb_m": 1.928,
+    "bar_run_state": "LOWER_BOUND",
+    "centreline_m": 4.328,
+    "clear_concrete_m": 3.228,
+    "face_to_face_m": 1.928,
+    "issues": [],
+    "length_state": "CONSISTENT",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": 1.928
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": 4.328,
+   "member_clear_concrete_length_m": 3.228,
+   "node_issues": {},
+   "occurrence_id": "GSO-17C-7E3-1",
+   "occurrence_state": "LOWER_BOUND",
+   "pre_s5_1": {
+    "exterior": "INTERIOR_SOURCE_VERIFIED",
+    "load": "UNKNOWN",
+    "pre_s5_1_status": "READY_LOWER_BOUND"
+   },
+   "questions": {
+    "applicability": "Q3+Q4",
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": "Q4"
+   },
+   "start_node": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "7E1+7E2"
+    ]
+   },
+   "stirrup_count_lower_bound": null,
+   "support_face_to_face_run_m": 1.928,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_STIRRUP"
+   ],
+   "why_candidate": "exterior authority INTERIOR_SOURCE_VERIFIED (no wall above and ground slab on both sides: not under an exterior wall); load UNKNOWN; length details [\"P13-GB-LT2_5M\", \"P13-GB-LT5M\"]",
+   "why_not_resolved": "2 candidates: <2.5 m and <5 m titles both hold",
+   "width": {
+    "candidates": {
+     "P13-GB-LT2_5M": 300,
+     "P13-GB-LT5M": 300
+    },
+    "state": "CANDIDATE_INVARIANT",
+    "value_mm": 300
+   },
+   "width_mm": 300,
+   "width_state": "CANDIDATE_INVARIANT"
+  },
+  {
+   "bar_straight_run_lower_bound_m": 4.272,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 18
+   },
+   "depth": {
+    "bound_max_m": null,
+    "candidates": {
+     "NO_PROJECT_DETAIL_FOR_CONCENTRATED_LOAD": "UNKNOWN",
+     "P13-GB-LT5M": 400
+    },
+    "state": "UNRESOLVED",
+    "value_mm": null,
+    "why": "an undefined candidate detail"
+   },
+   "depth_bound_max_m": null,
+   "depth_mm": null,
+   "depth_state": "UNRESOLVED",
+   "detail_applicability_state": "CANDIDATE_DETAIL",
+   "detail_ids": [
+    "NO_PROJECT_DETAIL_FOR_CONCENTRATED_LOAD",
+    "P13-GB-LT5M"
+   ],
+   "end_node": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "7E1+7E2"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [
+    "CONCENTRATED_LOAD_UNKNOWN: evidence {'BEAM_END_REACTION': 1, 'STAIR_BEARING_CANDIDATE': 1, 'UNIDENTIFIED_SYMBOL': 1}; not auto-classified as PRESENT"
+   ],
+   "geometry_handles": [
+    "17D",
+    "7E4"
+   ],
+   "known_kg": 0,
+   "known_straight_length_m": 0,
+   "length_state": "CONSISTENT",
+   "lengths": {
+    "bar_run_lb_m": 4.272,
+    "bar_run_state": "LOWER_BOUND",
+    "centreline_m": 4.572,
+    "clear_concrete_m": 4.272,
+    "face_to_face_m": 4.272,
+    "issues": [],
+    "length_state": "CONSISTENT",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": 4.272
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": 4.572,
+   "member_clear_concrete_length_m": 4.272,
+   "node_issues": {},
+   "occurrence_id": "GSO-17D-7E4-1",
+   "occurrence_state": "BLOCKED",
+   "pre_s5_1": {
+    "exterior": "INTERIOR_SOURCE_VERIFIED",
+    "load": "UNKNOWN",
+    "pre_s5_1_status": "BLOCKED_COMPONENT"
+   },
+   "questions": {
+    "applicability": "Q1+Q9",
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": "Q1+Q9"
+   },
+   "start_node": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "7D0+FC"
+    ]
+   },
+   "stirrup_count_lower_bound": null,
+   "support_face_to_face_run_m": 4.272,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_BOTTOM_BAR",
+    "BEAM_EXTRA_BAR",
+    "BEAM_SIDE_BAR",
+    "BEAM_STIRRUP",
+    "BEAM_TOP_BAR",
+    "SPECIAL_DETAIL_BAR"
+   ],
+   "why_candidate": "exterior authority INTERIOR_SOURCE_VERIFIED (no wall above and ground slab on both sides: not under an exterior wall); load UNKNOWN; length details [\"P13-GB-LT5M\"]",
+   "why_not_resolved": "2 candidates: concentrated-load case has no project detail;",
+   "width": {
+    "candidates": {
+     "NO_PROJECT_DETAIL_FOR_CONCENTRATED_LOAD": "UNKNOWN",
+     "P13-GB-LT5M": 300
+    },
+    "state": "UNRESOLVED",
+    "value_mm": null
+   },
+   "width_mm": null,
+   "width_state": "UNRESOLVED"
+  },
+  {
+   "bar_straight_run_lower_bound_m": null,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 18
+   },
+   "depth": {
+    "bound_max_m": null,
+    "candidates": {
+     "NO_PROJECT_DETAIL_FOR_CONCENTRATED_LOAD": "UNKNOWN",
+     "P13-GB-LT5M": 400
+    },
+    "state": "UNRESOLVED",
+    "value_mm": null,
+    "why": "an undefined candidate detail"
+   },
+   "depth_bound_max_m": null,
+   "depth_mm": null,
+   "depth_state": "UNRESOLVED",
+   "detail_applicability_state": "CANDIDATE_DETAIL",
+   "detail_ids": [
+    "NO_PROJECT_DETAIL_FOR_CONCENTRATED_LOAD",
+    "P13-GB-LT5M"
+   ],
+   "end_node": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "176+7E6"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [
+    "LENGTH_GEOMETRY_CONFLICT: shortest bar line 2687.0 > clear concrete 2466.8 mm",
+    "CONCENTRATED_LOAD_UNKNOWN: evidence {'BEAM_END_REACTION': 1}; not auto-classified as PRESENT"
+   ],
+   "geometry_handles": [
+    "17E",
+    "17F"
+   ],
+   "known_kg": 0,
+   "known_straight_length_m": 0,
+   "length_state": "LENGTH_GEOMETRY_CONFLICT",
+   "lengths": {
+    "bar_run_lb_m": null,
+    "bar_run_state": "LENGTH_GEOMETRY_CONFLICT",
+    "centreline_m": 3.037,
+    "clear_concrete_m": 2.467,
+    "face_to_face_m": 2.687,
+    "issues": [
+     "shortest bar line 2687.0 > clear concrete 2466.8 mm"
+    ],
+    "length_state": "LENGTH_GEOMETRY_CONFLICT",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": null
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": 3.037,
+   "member_clear_concrete_length_m": 2.467,
+   "node_issues": {},
+   "occurrence_id": "GSO-17E-17F-1",
+   "occurrence_state": "BLOCKED",
+   "pre_s5_1": {
+    "exterior": "INTERIOR_SOURCE_VERIFIED",
+    "load": "UNKNOWN",
+    "pre_s5_1_status": "BLOCKED_COMPONENT"
+   },
+   "questions": {
+    "applicability": "Q1",
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": "Q1"
+   },
+   "start_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:1EF+1EF"
+    ]
+   },
+   "stirrup_count_lower_bound": null,
+   "support_face_to_face_run_m": 2.687,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_BOTTOM_BAR",
+    "BEAM_EXTRA_BAR",
+    "BEAM_SIDE_BAR",
+    "BEAM_STIRRUP",
+    "BEAM_TOP_BAR",
+    "SPECIAL_DETAIL_BAR"
+   ],
+   "why_candidate": "exterior authority INTERIOR_SOURCE_VERIFIED (architectural interior wall above the span); load UNKNOWN; length details [\"P13-GB-LT5M\"]",
+   "why_not_resolved": "2 candidates: concentrated-load case has no project detail;",
+   "width": {
+    "candidates": {
+     "NO_PROJECT_DETAIL_FOR_CONCENTRATED_LOAD": "UNKNOWN",
+     "P13-GB-LT5M": 300
+    },
+    "state": "UNRESOLVED",
+    "value_mm": null
+   },
+   "width_mm": null,
+   "width_state": "UNRESOLVED"
+  },
+  {
+   "bar_straight_run_lower_bound_m": null,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 14,
+    "NOT_APPLICABLE": 4
+   },
+   "depth": {
+    "bound_max_m": null,
+    "candidates": {
+     "P13-GB-LT2_5M": "300 (AI only)",
+     "P13-GB-LT5M": 400
+    },
+    "state": "CANDIDATE_CONFLICT",
+    "value_mm": null,
+    "why": "candidate sections differ in depth"
+   },
+   "depth_bound_max_m": null,
+   "depth_mm": null,
+   "depth_state": "CANDIDATE_CONFLICT",
+   "detail_applicability_state": "CANDIDATE_DETAIL",
+   "detail_ids": [
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "end_node": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "180D+180E"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [
+    "LENGTH_GEOMETRY_CONFLICT: shortest bar line 929.0 > clear concrete 789.0 mm"
+   ],
+   "geometry_handles": [
+    "180",
+    "181"
+   ],
+   "known_kg": 0,
+   "known_straight_length_m": 0,
+   "length_state": "LENGTH_GEOMETRY_CONFLICT",
+   "lengths": {
+    "bar_run_lb_m": null,
+    "bar_run_state": "LENGTH_GEOMETRY_CONFLICT",
+    "centreline_m": 1.513,
+    "clear_concrete_m": 0.789,
+    "face_to_face_m": 1.089,
+    "issues": [
+     "shortest bar line 929.0 > clear concrete 789.0 mm"
+    ],
+    "length_state": "LENGTH_GEOMETRY_CONFLICT",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": null
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": 1.513,
+   "member_clear_concrete_length_m": 0.789,
+   "node_issues": {},
+   "occurrence_id": "GSO-180-181-1",
+   "occurrence_state": "BLOCKED",
+   "pre_s5_1": {
+    "exterior": "INTERIOR_SOURCE_VERIFIED",
+    "load": "NO_CONCENTRATED_LOAD_EVIDENCE",
+    "pre_s5_1_status": "BLOCKED_COMPONENT"
+   },
+   "questions": {
+    "applicability": "Q4",
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": "Q4"
+   },
+   "start_node": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "176+7E6"
+    ]
+   },
+   "stirrup_count_lower_bound": null,
+   "support_face_to_face_run_m": 1.089,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_BOTTOM_BAR",
+    "BEAM_STIRRUP",
+    "BEAM_TOP_BAR"
+   ],
+   "why_candidate": "exterior authority INTERIOR_SOURCE_VERIFIED (architectural interior wall above the span); load NO_CONCENTRATED_LOAD_EVIDENCE; length details [\"P13-GB-LT2_5M\", \"P13-GB-LT5M\"]",
+   "why_not_resolved": "2 candidates: <2.5 m and <5 m titles both hold",
+   "width": {
+    "candidates": {
+     "P13-GB-LT2_5M": 300,
+     "P13-GB-LT5M": 300
+    },
+    "state": "CANDIDATE_INVARIANT",
+    "value_mm": 300
+   },
+   "width_mm": 300,
+   "width_state": "CANDIDATE_INVARIANT"
+  },
+  {
+   "bar_straight_run_lower_bound_m": 2.1,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 15,
+    "NOT_APPLICABLE": 3
+   },
+   "depth": {
+    "bound_max_m": null,
+    "candidates": {
+     "P13-GB-EXTERIOR": "FOLLOW_ARCH",
+     "P13-GB-LT2_5M": "300 (AI only)",
+     "P13-GB-LT5M": 400
+    },
+    "state": "CANDIDATE_CONFLICT",
+    "value_mm": null,
+    "why": "candidate sections differ in depth"
+   },
+   "depth_bound_max_m": null,
+   "depth_mm": null,
+   "depth_state": "CANDIDATE_CONFLICT",
+   "detail_applicability_state": "CANDIDATE_DETAIL",
+   "detail_ids": [
+    "P13-GB-EXTERIOR",
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "end_node": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "175+7DE"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [
+    "CONCENTRATED_LOAD_UNKNOWN: evidence {'BEAM_END_REACTION': 1}; not auto-classified as PRESENT"
+   ],
+   "geometry_handles": [
+    "180D",
+    "180E"
+   ],
+   "known_kg": 0,
+   "known_straight_length_m": 0,
+   "length_state": "CONSISTENT",
+   "lengths": {
+    "bar_run_lb_m": 2.1,
+    "bar_run_state": "LOWER_BOUND",
+    "centreline_m": 2.4,
+    "clear_concrete_m": 2.1,
+    "face_to_face_m": 2.1,
+    "issues": [],
+    "length_state": "CONSISTENT",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": 2.1
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": 2.4,
+   "member_clear_concrete_length_m": 2.1,
+   "node_issues": {},
+   "occurrence_id": "GSO-180D-180E-1",
+   "occurrence_state": "BLOCKED",
+   "pre_s5_1": {
+    "exterior": "UNRESOLVED",
+    "load": "UNKNOWN",
+    "pre_s5_1_status": "BLOCKED_COMPONENT"
+   },
+   "questions": {
+    "applicability": "Q8+Q4",
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": "Q4"
+   },
+   "start_node": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "176+7E6"
+    ]
+   },
+   "stirrup_count_lower_bound": null,
+   "support_face_to_face_run_m": 2.1,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_BOTTOM_BAR",
+    "BEAM_SIDE_BAR",
+    "BEAM_STIRRUP",
+    "BEAM_TOP_BAR"
+   ],
+   "why_candidate": "exterior authority UNRESOLVED (partial / mixed wall relation); load UNKNOWN; length details [\"P13-GB-LT2_5M\", \"P13-GB-LT5M\"]",
+   "why_not_resolved": "3 candidates: exterior / interior not resolved; <2.5 m and <5 m titles both hold",
+   "width": {
+    "candidates": {
+     "P13-GB-EXTERIOR": 300,
+     "P13-GB-LT2_5M": 300,
+     "P13-GB-LT5M": 300
+    },
+    "state": "CANDIDATE_INVARIANT",
+    "value_mm": 300
+   },
+   "width_mm": 300,
+   "width_state": "CANDIDATE_INVARIANT"
+  },
+  {
+   "bar_straight_run_lower_bound_m": null,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 15,
+    "NOT_APPLICABLE": 3
+   },
+   "depth": {
+    "bound_max_m": null,
+    "candidates": {
+     "P13-GB-EXTERIOR": "FOLLOW_ARCH",
+     "P13-GB-LT2_5M": "300 (AI only)",
+     "P13-GB-LT5M": 400
+    },
+    "state": "CANDIDATE_CONFLICT",
+    "value_mm": null,
+    "why": "candidate sections differ in depth"
+   },
+   "depth_bound_max_m": null,
+   "depth_mm": null,
+   "depth_state": "CANDIDATE_CONFLICT",
+   "detail_applicability_state": "CANDIDATE_DETAIL",
+   "detail_ids": [
+    "P13-GB-EXTERIOR",
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "end_node": {
+    "kind": "BOUNDARY",
+    "refs": [
+     "7FE"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [
+    "FREE_END_CLASSIFIED end 1: COLUMN OUTLINE:1E6+1E8 (column outline lines 0 mm from the end (an outline the rectangle detector did not return, or closer than it))",
+    "FREE_END_UNRESOLVED end 2: BOUNDARY 7FE: the end lies on the plot boundary line (0 mm)",
+    "BAR_RUN_GEOMETRY_UNRESOLVED: end: no support polygon (BOUNDARY)",
+    "LENGTH_BASIS_CHANGES_DETAIL: clear / centreline / clear-concrete give [\"P13-GB-LT2_5M\", \"P13-GB-LT5M\"] /  / [\"P13-GB-LT2_5M\", \"P13-GB-LT5M\"]"
+   ],
+   "geometry_handles": [
+    "1811",
+    "1812"
+   ],
+   "known_kg": 0,
+   "known_straight_length_m": 0,
+   "length_state": "BAR_RUN_GEOMETRY_UNRESOLVED",
+   "lengths": {
+    "bar_run_lb_m": null,
+    "bar_run_state": "BAR_RUN_GEOMETRY_UNRESOLVED",
+    "centreline_m": null,
+    "clear_concrete_m": 1.3,
+    "face_to_face_m": null,
+    "issues": [
+     "end: no support polygon (BOUNDARY)"
+    ],
+    "length_state": "BAR_RUN_GEOMETRY_UNRESOLVED",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": null
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": null,
+   "member_clear_concrete_length_m": 1.3,
+   "node_issues": {
+    "2": "BOUNDARY 7FE: the end lies on the plot boundary line (0 mm)"
+   },
+   "occurrence_id": "GSO-1811-1812-1",
+   "occurrence_state": "BLOCKED",
+   "pre_s5_1": {
+    "exterior": "UNRESOLVED",
+    "load": "NO_CONCENTRATED_LOAD_EVIDENCE",
+    "pre_s5_1_status": "BLOCKED_COMPONENT"
+   },
+   "questions": {
+    "applicability": "Q8+Q3+Q4",
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": "Q4"
+   },
+   "start_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "OUTLINE:1E6+1E8"
+    ]
+   },
+   "stirrup_count_lower_bound": null,
+   "support_face_to_face_run_m": null,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_BOTTOM_BAR",
+    "BEAM_SIDE_BAR",
+    "BEAM_STIRRUP",
+    "BEAM_TOP_BAR"
+   ],
+   "why_candidate": "exterior authority UNRESOLVED (partial / mixed wall relation); load NO_CONCENTRATED_LOAD_EVIDENCE; length details [\"P13-GB-LT2_5M\", \"P13-GB-LT5M\"]",
+   "why_not_resolved": "3 candidates: exterior / interior not resolved; <2.5 m and <5 m titles both hold",
+   "width": {
+    "candidates": {
+     "P13-GB-EXTERIOR": 300,
+     "P13-GB-LT2_5M": 300,
+     "P13-GB-LT5M": 300
+    },
+    "state": "CANDIDATE_INVARIANT",
+    "value_mm": 300
+   },
+   "width_mm": 300,
+   "width_state": "CANDIDATE_INVARIANT"
+  },
+  {
+   "bar_straight_run_lower_bound_m": null,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 14,
+    "NOT_APPLICABLE": 4
+   },
+   "depth": {
+    "bound_max_m": null,
+    "candidates": {
+     "P13-GB-LT2_5M": "300 (AI only)",
+     "P13-GB-LT5M": 400
+    },
+    "state": "CANDIDATE_CONFLICT",
+    "value_mm": null,
+    "why": "candidate sections differ in depth"
+   },
+   "depth_bound_max_m": null,
+   "depth_mm": null,
+   "depth_state": "CANDIDATE_CONFLICT",
+   "detail_applicability_state": "CANDIDATE_DETAIL",
+   "detail_ids": [
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "end_node": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "17E+17F"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [
+    "LENGTH_GEOMETRY_CONFLICT: shortest bar line 2143.2 > clear concrete 2073.2 mm",
+    "LENGTH_BASIS_CHANGES_DETAIL: clear / centreline / clear-concrete give [\"P13-GB-LT2_5M\", \"P13-GB-LT5M\"] / [\"P13-GB-LT5M\"] / [\"P13-GB-LT2_5M\", \"P13-GB-LT5M\"]"
+   ],
+   "geometry_handles": [
+    "182",
+    "183"
+   ],
+   "known_kg": 0,
+   "known_straight_length_m": 0,
+   "length_state": "LENGTH_GEOMETRY_CONFLICT",
+   "lengths": {
+    "bar_run_lb_m": null,
+    "bar_run_state": "LENGTH_GEOMETRY_CONFLICT",
+    "centreline_m": 2.585,
+    "clear_concrete_m": 2.073,
+    "face_to_face_m": 2.223,
+    "issues": [
+     "shortest bar line 2143.2 > clear concrete 2073.2 mm"
+    ],
+    "length_state": "LENGTH_GEOMETRY_CONFLICT",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": null
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": 2.585,
+   "member_clear_concrete_length_m": 2.073,
+   "node_issues": {},
+   "occurrence_id": "GSO-182-183-1",
+   "occurrence_state": "BLOCKED",
+   "pre_s5_1": {
+    "exterior": "INTERIOR_SOURCE_VERIFIED",
+    "load": "NO_CONCENTRATED_LOAD_EVIDENCE",
+    "pre_s5_1_status": "BLOCKED_COMPONENT"
+   },
+   "questions": {
+    "applicability": "Q3+Q4",
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": "Q4"
+   },
+   "start_node": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "170+7C3"
+    ]
+   },
+   "stirrup_count_lower_bound": null,
+   "support_face_to_face_run_m": 2.223,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_BOTTOM_BAR",
+    "BEAM_STIRRUP",
+    "BEAM_TOP_BAR"
+   ],
+   "why_candidate": "exterior authority INTERIOR_SOURCE_VERIFIED (architectural interior wall above the span); load NO_CONCENTRATED_LOAD_EVIDENCE; length details [\"P13-GB-LT2_5M\", \"P13-GB-LT5M\"]",
+   "why_not_resolved": "2 candidates: <2.5 m and <5 m titles both hold",
+   "width": {
+    "candidates": {
+     "P13-GB-LT2_5M": 300,
+     "P13-GB-LT5M": 300
+    },
+    "state": "CANDIDATE_INVARIANT",
+    "value_mm": 300
+   },
+   "width_mm": 300,
+   "width_state": "CANDIDATE_INVARIANT"
+  },
+  {
+   "bar_straight_run_lower_bound_m": 3.27,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 18
+   },
+   "depth": {
+    "bound_max_m": null,
+    "candidates": {
+     "NO_PROJECT_DETAIL_FOR_CONCENTRATED_LOAD": "UNKNOWN",
+     "P13-GB-LT5M": 400
+    },
+    "state": "UNRESOLVED",
+    "value_mm": null,
+    "why": "an undefined candidate detail"
+   },
+   "depth_bound_max_m": null,
+   "depth_mm": null,
+   "depth_state": "UNRESOLVED",
+   "detail_applicability_state": "CANDIDATE_DETAIL",
+   "detail_ids": [
+    "NO_PROJECT_DETAIL_FOR_CONCENTRATED_LOAD",
+    "P13-GB-LT5M"
+   ],
+   "end_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:24D+24D"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [
+    "CONCENTRATED_LOAD_UNKNOWN: evidence {'JUNCTION_AT_SUPPORT': 1, 'STAIR_BEARING_CANDIDATE': 1}; not auto-classified as PRESENT"
+   ],
+   "geometry_handles": [
+    "184",
+    "7CF"
+   ],
+   "known_kg": 0,
+   "known_straight_length_m": 0,
+   "length_state": "CONSISTENT",
+   "lengths": {
+    "bar_run_lb_m": 3.27,
+    "bar_run_state": "LOWER_BOUND",
+    "centreline_m": 3.57,
+    "clear_concrete_m": 3.27,
+    "face_to_face_m": 3.27,
+    "issues": [],
+    "length_state": "CONSISTENT",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": 3.27
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": 3.57,
+   "member_clear_concrete_length_m": 3.27,
+   "node_issues": {},
+   "occurrence_id": "GSO-184-7CF-1",
+   "occurrence_state": "BLOCKED",
+   "pre_s5_1": {
+    "exterior": "INTERIOR_SOURCE_VERIFIED",
+    "load": "UNKNOWN",
+    "pre_s5_1_status": "BLOCKED_COMPONENT"
+   },
+   "questions": {
+    "applicability": "Q1",
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": "Q1"
+   },
+   "start_node": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "17D+7E4"
+    ]
+   },
+   "stirrup_count_lower_bound": null,
+   "support_face_to_face_run_m": 3.27,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_BOTTOM_BAR",
+    "BEAM_EXTRA_BAR",
+    "BEAM_SIDE_BAR",
+    "BEAM_STIRRUP",
+    "BEAM_TOP_BAR",
+    "SPECIAL_DETAIL_BAR"
+   ],
+   "why_candidate": "exterior authority INTERIOR_SOURCE_VERIFIED (no wall above and ground slab on both sides: not under an exterior wall); load UNKNOWN; length details [\"P13-GB-LT5M\"]",
+   "why_not_resolved": "2 candidates: concentrated-load case has no project detail;",
+   "width": {
+    "candidates": {
+     "NO_PROJECT_DETAIL_FOR_CONCENTRATED_LOAD": "UNKNOWN",
+     "P13-GB-LT5M": 300
+    },
+    "state": "UNRESOLVED",
+    "value_mm": null
+   },
+   "width_mm": null,
+   "width_state": "UNRESOLVED"
+  },
+  {
+   "bar_straight_run_lower_bound_m": 3.05,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 7,
+    "LOWER_BOUND": 4,
+    "NOT_APPLICABLE": 5,
+    "VERIFIED": 2
+   },
+   "depth": {
+    "bound_max_m": null,
+    "candidates": {
+     "P13-GB-LT5M": 400
+    },
+    "state": "SOURCE_EXPLICIT",
+    "value_mm": 400,
+    "why": "cross-verified section depth"
+   },
+   "depth_bound_max_m": null,
+   "depth_mm": 400,
+   "depth_state": "SOURCE_EXPLICIT",
+   "detail_applicability_state": "EXPLICIT_LENGTH_CONDITION",
+   "detail_ids": [
+    "P13-GB-LT5M"
+   ],
+   "end_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:23C+23C"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [],
+   "geometry_handles": [
+    "184",
+    "7CF"
+   ],
+   "known_kg": 33.21111111111111,
+   "known_straight_length_m": 27.449999999999996,
+   "length_state": "CONSISTENT",
+   "lengths": {
+    "bar_run_lb_m": 3.05,
+    "bar_run_state": "LOWER_BOUND",
+    "centreline_m": 3.35,
+    "clear_concrete_m": 3.05,
+    "face_to_face_m": 3.05,
+    "issues": [],
+    "length_state": "CONSISTENT",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": 3.05
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": 3.35,
+   "member_clear_concrete_length_m": 3.05,
+   "node_issues": {},
+   "occurrence_id": "GSO-184-7CF-2",
+   "occurrence_state": "LOWER_BOUND",
+   "pre_s5_1": {
+    "exterior": "INTERIOR_SOURCE_VERIFIED",
+    "load": "NO_CONCENTRATED_LOAD_EVIDENCE",
+    "pre_s5_1_status": "READY_LOWER_BOUND"
+   },
+   "questions": {
+    "applicability": null,
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": null
+   },
+   "start_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:24D+24D"
+    ]
+   },
+   "stirrup_count_lower_bound": 21,
+   "support_face_to_face_run_m": 3.05,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_STIRRUP"
+   ],
+   "why_candidate": "exterior authority INTERIOR_SOURCE_VERIFIED (architectural interior wall above the span); load NO_CONCENTRATED_LOAD_EVIDENCE; length details [\"P13-GB-LT5M\"]",
+   "why_not_resolved": "",
+   "width": {
+    "candidates": {
+     "P13-GB-LT5M": 300
+    },
+    "state": "SOURCE_EXPLICIT",
+    "value_mm": 300
+   },
+   "width_mm": 300,
+   "width_state": "SOURCE_EXPLICIT"
+  },
+  {
+   "bar_straight_run_lower_bound_m": 5.15,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 18
+   },
+   "depth": {
+    "bound_max_m": null,
+    "candidates": {
+     "NO_PROJECT_DETAIL_FOR_CONCENTRATED_LOAD": "UNKNOWN",
+     "P13-GB-GT5M": 600
+    },
+    "state": "UNRESOLVED",
+    "value_mm": null,
+    "why": "an undefined candidate detail"
+   },
+   "depth_bound_max_m": null,
+   "depth_mm": null,
+   "depth_state": "UNRESOLVED",
+   "detail_applicability_state": "CANDIDATE_DETAIL",
+   "detail_ids": [
+    "NO_PROJECT_DETAIL_FOR_CONCENTRATED_LOAD",
+    "P13-GB-GT5M"
+   ],
+   "end_node": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "7E0+FD"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [
+    "CONCENTRATED_LOAD_UNKNOWN: evidence {'BEAM_END_REACTION': 1, 'JUNCTION_AT_SUPPORT': 1}; not auto-classified as PRESENT"
+   ],
+   "geometry_handles": [
+    "184",
+    "7CF"
+   ],
+   "known_kg": 0,
+   "known_straight_length_m": 0,
+   "length_state": "CONSISTENT",
+   "lengths": {
+    "bar_run_lb_m": 5.15,
+    "bar_run_state": "LOWER_BOUND",
+    "centreline_m": 5.45,
+    "clear_concrete_m": 5.15,
+    "face_to_face_m": 5.15,
+    "issues": [],
+    "length_state": "CONSISTENT",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": 5.15
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": 5.45,
+   "member_clear_concrete_length_m": 5.15,
+   "node_issues": {},
+   "occurrence_id": "GSO-184-7CF-3",
+   "occurrence_state": "BLOCKED",
+   "pre_s5_1": {
+    "exterior": "INTERIOR_SOURCE_VERIFIED",
+    "load": "UNKNOWN",
+    "pre_s5_1_status": "BLOCKED_COMPONENT"
+   },
+   "questions": {
+    "applicability": "Q1",
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": "Q1"
+   },
+   "start_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:23C+23C"
+    ]
+   },
+   "stirrup_count_lower_bound": null,
+   "support_face_to_face_run_m": 5.15,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_BOTTOM_BAR",
+    "BEAM_EXTRA_BAR",
+    "BEAM_SIDE_BAR",
+    "BEAM_STIRRUP",
+    "BEAM_TOP_BAR",
+    "SPECIAL_DETAIL_BAR"
+   ],
+   "why_candidate": "exterior authority INTERIOR_SOURCE_VERIFIED (no wall above and ground slab on both sides: not under an exterior wall); load UNKNOWN; length details [\"P13-GB-GT5M\"]",
+   "why_not_resolved": "2 candidates: concentrated-load case has no project detail;",
+   "width": {
+    "candidates": {
+     "NO_PROJECT_DETAIL_FOR_CONCENTRATED_LOAD": "UNKNOWN",
+     "P13-GB-GT5M": 300
+    },
+    "state": "UNRESOLVED",
+    "value_mm": null
+   },
+   "width_mm": null,
+   "width_state": "UNRESOLVED"
+  },
+  {
+   "bar_straight_run_lower_bound_m": 0.85,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 8,
+    "LOWER_BOUND": 4,
+    "NOT_APPLICABLE": 4,
+    "VERIFIED": 2
+   },
+   "depth": {
+    "bound_max_m": 1.0,
+    "candidates": {
+     "P13-GB-EXTERIOR": "FOLLOW_ARCH"
+    },
+    "state": "BOUNDED_ABOVE",
+    "value_mm": null,
+    "why": "D = (+1.00 - b) - NGL, b = floor build-up (not printed, >= 0), NGL in [+0.00, +0.15] -> D <= 1.00 m; no lower bound"
+   },
+   "depth_bound_max_m": 1.0,
+   "depth_mm": null,
+   "depth_state": "BOUNDED_ABOVE",
+   "detail_applicability_state": "PROJECT_GENERAL_DETAIL",
+   "detail_ids": [
+    "P13-GB-EXTERIOR"
+   ],
+   "end_node": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "109+7CB"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [],
+   "geometry_handles": [
+    "185",
+    "7C7"
+   ],
+   "known_kg": 12.088888888888889,
+   "known_straight_length_m": 7.6499999999999995,
+   "length_state": "CONSISTENT",
+   "lengths": {
+    "bar_run_lb_m": 0.85,
+    "bar_run_state": "LOWER_BOUND",
+    "centreline_m": 1.15,
+    "clear_concrete_m": 0.85,
+    "face_to_face_m": 0.85,
+    "issues": [],
+    "length_state": "CONSISTENT",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": 0.85
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": 1.15,
+   "member_clear_concrete_length_m": 0.85,
+   "node_issues": {},
+   "occurrence_id": "GSO-185-7C7-1",
+   "occurrence_state": "LOWER_BOUND",
+   "pre_s5_1": {
+    "exterior": "EXTERIOR_SOURCE_VERIFIED",
+    "load": "NO_CONCENTRATED_LOAD_EVIDENCE",
+    "pre_s5_1_status": "READY_LOWER_BOUND"
+   },
+   "questions": {
+    "applicability": null,
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": null
+   },
+   "start_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:230+230"
+    ]
+   },
+   "stirrup_count_lower_bound": 6,
+   "support_face_to_face_run_m": 0.85,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_SIDE_BAR",
+    "BEAM_STIRRUP"
+   ],
+   "why_candidate": "exterior authority EXTERIOR_SOURCE_VERIFIED (architectural exterior wall above the span); load NO_CONCENTRATED_LOAD_EVIDENCE; length details [\"P13-GB-LT2_5M\", \"P13-GB-LT5M\"]",
+   "why_not_resolved": "",
+   "width": {
+    "candidates": {
+     "P13-GB-EXTERIOR": 300
+    },
+    "state": "SOURCE_EXPLICIT",
+    "value_mm": 300
+   },
+   "width_mm": 300,
+   "width_state": "SOURCE_EXPLICIT"
+  },
+  {
+   "bar_straight_run_lower_bound_m": 3.375,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 8,
+    "LOWER_BOUND": 4,
+    "NOT_APPLICABLE": 4,
+    "VERIFIED": 2
+   },
+   "depth": {
+    "bound_max_m": 1.0,
+    "candidates": {
+     "P13-GB-EXTERIOR": "FOLLOW_ARCH"
+    },
+    "state": "BOUNDED_ABOVE",
+    "value_mm": null,
+    "why": "D = (+1.00 - b) - NGL, b = floor build-up (not printed, >= 0), NGL in [+0.00, +0.00] -> D <= 1.00 m; no lower bound"
+   },
+   "depth_bound_max_m": 1.0,
+   "depth_mm": null,
+   "depth_state": "BOUNDED_ABOVE",
+   "detail_applicability_state": "PROJECT_GENERAL_DETAIL",
+   "detail_ids": [
+    "P13-GB-EXTERIOR"
+   ],
+   "end_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:249+249"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [
+    "FREE_END_CLASSIFIED end 1: COLUMN OUTLINE:216+218 (column outline lines 0 mm from the end (an outline the rectangle detector did not return, or closer than it))",
+    "CONCENTRATED_LOAD_UNKNOWN: evidence {'BEAM_END_REACTION': 1}; not auto-classified as PRESENT"
+   ],
+   "geometry_handles": [
+    "7D0",
+    "FC"
+   ],
+   "known_kg": 48.0,
+   "known_straight_length_m": 30.375,
+   "length_state": "CONSISTENT",
+   "lengths": {
+    "bar_run_lb_m": 3.375,
+    "bar_run_state": "LOWER_BOUND",
+    "centreline_m": 3.775,
+    "clear_concrete_m": 3.375,
+    "face_to_face_m": 3.375,
+    "issues": [],
+    "length_state": "CONSISTENT",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": 3.375
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": 3.775,
+   "member_clear_concrete_length_m": 3.375,
+   "node_issues": {},
+   "occurrence_id": "GSO-7D0-FC-1",
+   "occurrence_state": "LOWER_BOUND",
+   "pre_s5_1": {
+    "exterior": "EXTERIOR_SOURCE_VERIFIED",
+    "load": "UNKNOWN",
+    "pre_s5_1_status": "READY_LOWER_BOUND"
+   },
+   "questions": {
+    "applicability": null,
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": null
+   },
+   "start_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "OUTLINE:216+218"
+    ]
+   },
+   "stirrup_count_lower_bound": 23,
+   "support_face_to_face_run_m": 3.375,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_SIDE_BAR",
+    "BEAM_STIRRUP"
+   ],
+   "why_candidate": "exterior authority EXTERIOR_SOURCE_VERIFIED (architectural exterior wall above the span); load UNKNOWN; length details [\"P13-GB-LT5M\"]",
+   "why_not_resolved": "",
+   "width": {
+    "candidates": {
+     "P13-GB-EXTERIOR": 300
+    },
+    "state": "SOURCE_EXPLICIT",
+    "value_mm": 300
+   },
+   "width_mm": 300,
+   "width_state": "SOURCE_EXPLICIT"
+  },
+  {
+   "bar_straight_run_lower_bound_m": 6.245,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 8,
+    "LOWER_BOUND": 4,
+    "NOT_APPLICABLE": 4,
+    "VERIFIED": 2
+   },
+   "depth": {
+    "bound_max_m": 1.0,
+    "candidates": {
+     "P13-GB-EXTERIOR": "FOLLOW_ARCH"
+    },
+    "state": "BOUNDED_ABOVE",
+    "value_mm": null,
+    "why": "D = (+1.00 - b) - NGL, b = floor build-up (not printed, >= 0), NGL in [+0.00, +0.00] -> D <= 1.00 m; no lower bound"
+   },
+   "depth_bound_max_m": 1.0,
+   "depth_mm": null,
+   "depth_state": "BOUNDED_ABOVE",
+   "detail_applicability_state": "PROJECT_GENERAL_DETAIL",
+   "detail_ids": [
+    "P13-GB-EXTERIOR"
+   ],
+   "end_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:251+251"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [
+    "CONCENTRATED_LOAD_UNKNOWN: evidence {'BEAM_END_REACTION': 1}; not auto-classified as PRESENT"
+   ],
+   "geometry_handles": [
+    "7D0",
+    "FC"
+   ],
+   "known_kg": 88.81777777777776,
+   "known_straight_length_m": 56.205,
+   "length_state": "CONSISTENT",
+   "lengths": {
+    "bar_run_lb_m": 6.245,
+    "bar_run_state": "LOWER_BOUND",
+    "centreline_m": 6.545,
+    "clear_concrete_m": 6.245,
+    "face_to_face_m": 6.245,
+    "issues": [],
+    "length_state": "CONSISTENT",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": 6.245
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": 6.545,
+   "member_clear_concrete_length_m": 6.245,
+   "node_issues": {},
+   "occurrence_id": "GSO-7D0-FC-2",
+   "occurrence_state": "LOWER_BOUND",
+   "pre_s5_1": {
+    "exterior": "EXTERIOR_SOURCE_VERIFIED",
+    "load": "UNKNOWN",
+    "pre_s5_1_status": "READY_LOWER_BOUND"
+   },
+   "questions": {
+    "applicability": null,
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": null
+   },
+   "start_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:249+249"
+    ]
+   },
+   "stirrup_count_lower_bound": 42,
+   "support_face_to_face_run_m": 6.245,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_SIDE_BAR",
+    "BEAM_STIRRUP"
+   ],
+   "why_candidate": "exterior authority EXTERIOR_SOURCE_VERIFIED (architectural exterior wall above the span); load UNKNOWN; length details [\"P13-GB-GT5M\"]",
+   "why_not_resolved": "",
+   "width": {
+    "candidates": {
+     "P13-GB-EXTERIOR": 300
+    },
+    "state": "SOURCE_EXPLICIT",
+    "value_mm": 300
+   },
+   "width_mm": 300,
+   "width_state": "SOURCE_EXPLICIT"
+  },
+  {
+   "bar_straight_run_lower_bound_m": 6.65,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 8,
+    "LOWER_BOUND": 4,
+    "NOT_APPLICABLE": 4,
+    "VERIFIED": 2
+   },
+   "depth": {
+    "bound_max_m": 1.0,
+    "candidates": {
+     "P13-GB-EXTERIOR": "FOLLOW_ARCH"
+    },
+    "state": "BOUNDED_ABOVE",
+    "value_mm": null,
+    "why": "D = (+1.00 - b) - NGL, b = floor build-up (not printed, >= 0), NGL in [+0.00, +0.00] -> D <= 1.00 m; no lower bound"
+   },
+   "depth_bound_max_m": 1.0,
+   "depth_mm": null,
+   "depth_state": "BOUNDED_ABOVE",
+   "detail_applicability_state": "PROJECT_GENERAL_DETAIL",
+   "detail_ids": [
+    "P13-GB-EXTERIOR"
+   ],
+   "end_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:255+255"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [
+    "CONCENTRATED_LOAD_UNKNOWN: evidence {'BEAM_END_REACTION': 1}; not auto-classified as PRESENT"
+   ],
+   "geometry_handles": [
+    "7D0",
+    "FC"
+   ],
+   "known_kg": 94.57777777777778,
+   "known_straight_length_m": 59.85000000000001,
+   "length_state": "CONSISTENT",
+   "lengths": {
+    "bar_run_lb_m": 6.65,
+    "bar_run_state": "LOWER_BOUND",
+    "centreline_m": 6.95,
+    "clear_concrete_m": 6.65,
+    "face_to_face_m": 6.65,
+    "issues": [],
+    "length_state": "CONSISTENT",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": 6.65
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": 6.95,
+   "member_clear_concrete_length_m": 6.65,
+   "node_issues": {},
+   "occurrence_id": "GSO-7D0-FC-3",
+   "occurrence_state": "LOWER_BOUND",
+   "pre_s5_1": {
+    "exterior": "EXTERIOR_SOURCE_VERIFIED",
+    "load": "UNKNOWN",
+    "pre_s5_1_status": "READY_LOWER_BOUND"
+   },
+   "questions": {
+    "applicability": null,
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": null
+   },
+   "start_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:251+251"
+    ]
+   },
+   "stirrup_count_lower_bound": 45,
+   "support_face_to_face_run_m": 6.65,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_SIDE_BAR",
+    "BEAM_STIRRUP"
+   ],
+   "why_candidate": "exterior authority EXTERIOR_SOURCE_VERIFIED (architectural exterior wall above the span); load UNKNOWN; length details [\"P13-GB-GT5M\"]",
+   "why_not_resolved": "",
+   "width": {
+    "candidates": {
+     "P13-GB-EXTERIOR": 300
+    },
+    "state": "SOURCE_EXPLICIT",
+    "value_mm": 300
+   },
+   "width_mm": 300,
+   "width_state": "SOURCE_EXPLICIT"
+  },
+  {
+   "bar_straight_run_lower_bound_m": 1.4,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 8,
+    "LOWER_BOUND": 4,
+    "NOT_APPLICABLE": 4,
+    "VERIFIED": 2
+   },
+   "depth": {
+    "bound_max_m": 1.0,
+    "candidates": {
+     "P13-GB-EXTERIOR": "FOLLOW_ARCH"
+    },
+    "state": "BOUNDED_ABOVE",
+    "value_mm": null,
+    "why": "D = (+1.00 - b) - NGL, b = floor build-up (not printed, >= 0), NGL in [+0.00, +0.00] -> D <= 1.00 m; no lower bound"
+   },
+   "depth_bound_max_m": 1.0,
+   "depth_mm": null,
+   "depth_state": "BOUNDED_ABOVE",
+   "detail_applicability_state": "PROJECT_GENERAL_DETAIL",
+   "detail_ids": [
+    "P13-GB-EXTERIOR"
+   ],
+   "end_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:200+200"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [],
+   "geometry_handles": [
+    "7D0",
+    "FC"
+   ],
+   "known_kg": 19.911111111111108,
+   "known_straight_length_m": 12.599999999999998,
+   "length_state": "CONSISTENT",
+   "lengths": {
+    "bar_run_lb_m": 1.4,
+    "bar_run_state": "LOWER_BOUND",
+    "centreline_m": 1.7,
+    "clear_concrete_m": 1.4,
+    "face_to_face_m": 1.4,
+    "issues": [],
+    "length_state": "CONSISTENT",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": 1.4
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": 1.7,
+   "member_clear_concrete_length_m": 1.4,
+   "node_issues": {},
+   "occurrence_id": "GSO-7D0-FC-4",
+   "occurrence_state": "LOWER_BOUND",
+   "pre_s5_1": {
+    "exterior": "EXTERIOR_SOURCE_VERIFIED",
+    "load": "NO_CONCENTRATED_LOAD_EVIDENCE",
+    "pre_s5_1_status": "READY_LOWER_BOUND"
+   },
+   "questions": {
+    "applicability": null,
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": null
+   },
+   "start_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:255+255"
+    ]
+   },
+   "stirrup_count_lower_bound": 10,
+   "support_face_to_face_run_m": 1.4,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_SIDE_BAR",
+    "BEAM_STIRRUP"
+   ],
+   "why_candidate": "exterior authority EXTERIOR_SOURCE_VERIFIED (architectural exterior wall above the span); load NO_CONCENTRATED_LOAD_EVIDENCE; length details [\"P13-GB-LT2_5M\", \"P13-GB-LT5M\"]",
+   "why_not_resolved": "",
+   "width": {
+    "candidates": {
+     "P13-GB-EXTERIOR": 300
+    },
+    "state": "SOURCE_EXPLICIT",
+    "value_mm": 300
+   },
+   "width_mm": 300,
+   "width_state": "SOURCE_EXPLICIT"
+  },
+  {
+   "bar_straight_run_lower_bound_m": 5.5,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 8,
+    "LOWER_BOUND": 4,
+    "NOT_APPLICABLE": 4,
+    "VERIFIED": 2
+   },
+   "depth": {
+    "bound_max_m": 0.3,
+    "candidates": {
+     "P13-GB-EXTERIOR": "FOLLOW_ARCH"
+    },
+    "state": "SOURCE_CONFLICT",
+    "value_mm": null,
+    "why": "annex +0.30: the level bound (D <= 0.30 m) cannot hold the drawn three-level section; no 300 mm depth is adopted"
+   },
+   "depth_bound_max_m": 0.3,
+   "depth_mm": null,
+   "depth_state": "SOURCE_CONFLICT",
+   "detail_applicability_state": "PROJECT_GENERAL_DETAIL",
+   "detail_ids": [
+    "P13-GB-EXTERIOR"
+   ],
+   "end_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:20B+20B"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [
+    "FREE_END_CLASSIFIED end 1: COLUMN OUTLINE:205+207 (column outline lines 0 mm from the end (an outline the rectangle detector did not return, or closer than it))",
+    "ANNEX_DEPTH_SOURCE_CONFLICT: annex +0.30: the level bound (D <= 0.30 m) cannot hold the drawn three-level section; no 300 mm depth is adopted",
+    "CONCENTRATED_LOAD_UNKNOWN: evidence {'BEAM_END_REACTION': 1, 'JUNCTION_AT_SUPPORT': 1}; not auto-classified as PRESENT"
+   ],
+   "geometry_handles": [
+    "7D4",
+    "F8"
+   ],
+   "known_kg": 78.22222222222221,
+   "known_straight_length_m": 49.5,
+   "length_state": "CONSISTENT",
+   "lengths": {
+    "bar_run_lb_m": 5.5,
+    "bar_run_state": "LOWER_BOUND",
+    "centreline_m": 5.85,
+    "clear_concrete_m": 5.53,
+    "face_to_face_m": 5.5,
+    "issues": [],
+    "length_state": "CONSISTENT",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": 5.5
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": 5.85,
+   "member_clear_concrete_length_m": 5.53,
+   "node_issues": {},
+   "occurrence_id": "GSO-7D4-F8-1",
+   "occurrence_state": "LOWER_BOUND",
+   "pre_s5_1": {
+    "exterior": "EXTERIOR_SOURCE_VERIFIED",
+    "load": "UNKNOWN",
+    "pre_s5_1_status": "READY_LOWER_BOUND"
+   },
+   "questions": {
+    "applicability": null,
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": null
+   },
+   "start_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "OUTLINE:205+207"
+    ]
+   },
+   "stirrup_count_lower_bound": 37,
+   "support_face_to_face_run_m": 5.5,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_SIDE_BAR",
+    "BEAM_STIRRUP"
+   ],
+   "why_candidate": "exterior authority EXTERIOR_SOURCE_VERIFIED (architectural exterior wall above the span); load UNKNOWN; length details [\"P13-GB-GT5M\"]",
+   "why_not_resolved": "",
+   "width": {
+    "candidates": {
+     "P13-GB-EXTERIOR": 300
+    },
+    "state": "SOURCE_EXPLICIT",
+    "value_mm": 300
+   },
+   "width_mm": 300,
+   "width_state": "SOURCE_EXPLICIT"
+  },
+  {
+   "bar_straight_run_lower_bound_m": 4.3,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 8,
+    "LOWER_BOUND": 4,
+    "NOT_APPLICABLE": 4,
+    "VERIFIED": 2
+   },
+   "depth": {
+    "bound_max_m": 0.3,
+    "candidates": {
+     "P13-GB-EXTERIOR": "FOLLOW_ARCH"
+    },
+    "state": "SOURCE_CONFLICT",
+    "value_mm": null,
+    "why": "annex +0.30: the level bound (D <= 0.30 m) cannot hold the drawn three-level section; no 300 mm depth is adopted"
+   },
+   "depth_bound_max_m": 0.3,
+   "depth_mm": null,
+   "depth_state": "SOURCE_CONFLICT",
+   "detail_applicability_state": "PROJECT_GENERAL_DETAIL",
+   "detail_ids": [
+    "P13-GB-EXTERIOR"
+   ],
+   "end_node": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "10B+7D1"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [
+    "ANNEX_DEPTH_SOURCE_CONFLICT: annex +0.30: the level bound (D <= 0.30 m) cannot hold the drawn three-level section; no 300 mm depth is adopted",
+    "CONCENTRATED_LOAD_UNKNOWN: evidence {'BEAM_END_REACTION': 2}; not auto-classified as PRESENT"
+   ],
+   "geometry_handles": [
+    "7D4",
+    "F8"
+   ],
+   "known_kg": 61.15555555555555,
+   "known_straight_length_m": 38.699999999999996,
+   "length_state": "CONSISTENT",
+   "lengths": {
+    "bar_run_lb_m": 4.3,
+    "bar_run_state": "LOWER_BOUND",
+    "centreline_m": 4.6,
+    "clear_concrete_m": 4.3,
+    "face_to_face_m": 4.3,
+    "issues": [],
+    "length_state": "CONSISTENT",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": 4.3
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": 4.6,
+   "member_clear_concrete_length_m": 4.3,
+   "node_issues": {},
+   "occurrence_id": "GSO-7D4-F8-2",
+   "occurrence_state": "LOWER_BOUND",
+   "pre_s5_1": {
+    "exterior": "EXTERIOR_SOURCE_VERIFIED",
+    "load": "UNKNOWN",
+    "pre_s5_1_status": "READY_LOWER_BOUND"
+   },
+   "questions": {
+    "applicability": null,
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": null
+   },
+   "start_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:20B+20B"
+    ]
+   },
+   "stirrup_count_lower_bound": 29,
+   "support_face_to_face_run_m": 4.3,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_SIDE_BAR",
+    "BEAM_STIRRUP"
+   ],
+   "why_candidate": "exterior authority EXTERIOR_SOURCE_VERIFIED (architectural exterior wall above the span); load UNKNOWN; length details [\"P13-GB-LT5M\"]",
+   "why_not_resolved": "",
+   "width": {
+    "candidates": {
+     "P13-GB-EXTERIOR": 300
+    },
+    "state": "SOURCE_EXPLICIT",
+    "value_mm": 300
+   },
+   "width_mm": 300,
+   "width_state": "SOURCE_EXPLICIT"
+  },
+  {
+   "bar_straight_run_lower_bound_m": 3.275,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 18
+   },
+   "depth": {
+    "bound_max_m": null,
+    "candidates": {
+     "NO_PROJECT_DETAIL_FOR_CONCENTRATED_LOAD": "UNKNOWN",
+     "P13-GB-LT5M": 400
+    },
+    "state": "UNRESOLVED",
+    "value_mm": null,
+    "why": "an undefined candidate detail"
+   },
+   "depth_bound_max_m": null,
+   "depth_mm": null,
+   "depth_state": "UNRESOLVED",
+   "detail_applicability_state": "CANDIDATE_DETAIL",
+   "detail_ids": [
+    "NO_PROJECT_DETAIL_FOR_CONCENTRATED_LOAD",
+    "P13-GB-LT5M"
+   ],
+   "end_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:7F5+7F5"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [
+    "CONCENTRATED_LOAD_UNKNOWN: evidence {'BEAM_END_REACTION': 1, 'STAIR_BEARING_CANDIDATE': 1}; not auto-classified as PRESENT"
+   ],
+   "geometry_handles": [
+    "7DC",
+    "7DD"
+   ],
+   "known_kg": 0,
+   "known_straight_length_m": 0,
+   "length_state": "CONSISTENT",
+   "lengths": {
+    "bar_run_lb_m": 3.275,
+    "bar_run_state": "LOWER_BOUND",
+    "centreline_m": 3.825,
+    "clear_concrete_m": 3.525,
+    "face_to_face_m": 3.275,
+    "issues": [],
+    "length_state": "CONSISTENT",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": 3.275
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": 3.825,
+   "member_clear_concrete_length_m": 3.525,
+   "node_issues": {},
+   "occurrence_id": "GSO-7DC-7DD-1",
+   "occurrence_state": "BLOCKED",
+   "pre_s5_1": {
+    "exterior": "INTERIOR_SOURCE_VERIFIED",
+    "load": "UNKNOWN",
+    "pre_s5_1_status": "BLOCKED_COMPONENT"
+   },
+   "questions": {
+    "applicability": "Q1",
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": "Q1"
+   },
+   "start_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:24D+24D"
+    ]
+   },
+   "stirrup_count_lower_bound": null,
+   "support_face_to_face_run_m": 3.275,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_BOTTOM_BAR",
+    "BEAM_EXTRA_BAR",
+    "BEAM_SIDE_BAR",
+    "BEAM_STIRRUP",
+    "BEAM_TOP_BAR",
+    "SPECIAL_DETAIL_BAR"
+   ],
+   "why_candidate": "exterior authority INTERIOR_SOURCE_VERIFIED (no wall above and ground slab on both sides: not under an exterior wall); load UNKNOWN; length details [\"P13-GB-LT5M\"]",
+   "why_not_resolved": "2 candidates: concentrated-load case has no project detail;",
+   "width": {
+    "candidates": {
+     "NO_PROJECT_DETAIL_FOR_CONCENTRATED_LOAD": "UNKNOWN",
+     "P13-GB-LT5M": 300
+    },
+    "state": "UNRESOLVED",
+    "value_mm": null
+   },
+   "width_mm": null,
+   "width_state": "UNRESOLVED"
+  },
+  {
+   "bar_straight_run_lower_bound_m": 3.525,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 7,
+    "LOWER_BOUND": 4,
+    "NOT_APPLICABLE": 5,
+    "VERIFIED": 2
+   },
+   "depth": {
+    "bound_max_m": null,
+    "candidates": {
+     "P13-GB-LT5M": 400
+    },
+    "state": "SOURCE_EXPLICIT",
+    "value_mm": 400,
+    "why": "cross-verified section depth"
+   },
+   "depth_bound_max_m": null,
+   "depth_mm": 400,
+   "depth_state": "SOURCE_EXPLICIT",
+   "detail_applicability_state": "EXPLICIT_LENGTH_CONDITION",
+   "detail_ids": [
+    "P13-GB-LT5M"
+   ],
+   "end_node": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "177+7CD"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [],
+   "geometry_handles": [
+    "7DC",
+    "7DD"
+   ],
+   "known_kg": 38.38333333333333,
+   "known_straight_length_m": 31.724999999999998,
+   "length_state": "CONSISTENT",
+   "lengths": {
+    "bar_run_lb_m": 3.525,
+    "bar_run_state": "LOWER_BOUND",
+    "centreline_m": 3.825,
+    "clear_concrete_m": 3.525,
+    "face_to_face_m": 3.525,
+    "issues": [],
+    "length_state": "CONSISTENT",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": 3.525
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": 3.825,
+   "member_clear_concrete_length_m": 3.525,
+   "node_issues": {},
+   "occurrence_id": "GSO-7DC-7DD-2",
+   "occurrence_state": "LOWER_BOUND",
+   "pre_s5_1": {
+    "exterior": "INTERIOR_SOURCE_VERIFIED",
+    "load": "NO_CONCENTRATED_LOAD_EVIDENCE",
+    "pre_s5_1_status": "READY_LOWER_BOUND"
+   },
+   "questions": {
+    "applicability": null,
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": null
+   },
+   "start_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:7F5+7F5"
+    ]
+   },
+   "stirrup_count_lower_bound": 24,
+   "support_face_to_face_run_m": 3.525,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_STIRRUP"
+   ],
+   "why_candidate": "exterior authority INTERIOR_SOURCE_VERIFIED (no wall above and ground slab on both sides: not under an exterior wall); load NO_CONCENTRATED_LOAD_EVIDENCE; length details [\"P13-GB-LT5M\"]",
+   "why_not_resolved": "",
+   "width": {
+    "candidates": {
+     "P13-GB-LT5M": 300
+    },
+    "state": "SOURCE_EXPLICIT",
+    "value_mm": 300
+   },
+   "width_mm": 300,
+   "width_state": "SOURCE_EXPLICIT"
+  },
+  {
+   "bar_straight_run_lower_bound_m": null,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 12,
+    "NOT_APPLICABLE": 4,
+    "VERIFIED": 2
+   },
+   "depth": {
+    "bound_max_m": 1.0,
+    "candidates": {
+     "P13-GB-EXTERIOR": "FOLLOW_ARCH"
+    },
+    "state": "BOUNDED_ABOVE",
+    "value_mm": null,
+    "why": "D = (+1.00 - b) - NGL, b = floor build-up (not printed, >= 0), NGL in [+0.00, +0.00] -> D <= 1.00 m; no lower bound"
+   },
+   "depth_bound_max_m": 1.0,
+   "depth_mm": null,
+   "depth_state": "BOUNDED_ABOVE",
+   "detail_applicability_state": "PROJECT_GENERAL_DETAIL",
+   "detail_ids": [
+    "P13-GB-EXTERIOR"
+   ],
+   "end_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:809+809"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [
+    "LENGTH_GEOMETRY_CONFLICT: clear concrete 3850.0 > centreline 3750.0 mm (the concrete piece runs past a support centre: the support does not cut the full width)",
+    "CONCENTRATED_LOAD_UNKNOWN: evidence {'BEAM_END_REACTION': 1, 'JUNCTION_AT_SUPPORT': 1}; not auto-classified as PRESENT"
+   ],
+   "geometry_handles": [
+    "7E0",
+    "FD"
+   ],
+   "known_kg": 0,
+   "known_straight_length_m": 0,
+   "length_state": "LENGTH_GEOMETRY_CONFLICT",
+   "lengths": {
+    "bar_run_lb_m": null,
+    "bar_run_state": "LENGTH_GEOMETRY_CONFLICT",
+    "centreline_m": 3.75,
+    "clear_concrete_m": 3.85,
+    "face_to_face_m": 3.35,
+    "issues": [
+     "clear concrete 3850.0 > centreline 3750.0 mm (the concrete piece runs past a support centre: the support does not cut the full width)"
+    ],
+    "length_state": "LENGTH_GEOMETRY_CONFLICT",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": null
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": 3.75,
+   "member_clear_concrete_length_m": 3.85,
+   "node_issues": {},
+   "occurrence_id": "GSO-7E0-FD-1",
+   "occurrence_state": "BLOCKED",
+   "pre_s5_1": {
+    "exterior": "EXTERIOR_SOURCE_VERIFIED",
+    "load": "UNKNOWN",
+    "pre_s5_1_status": "BLOCKED_COMPONENT"
+   },
+   "questions": {
+    "applicability": null,
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": null
+   },
+   "start_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:200+200"
+    ]
+   },
+   "stirrup_count_lower_bound": null,
+   "support_face_to_face_run_m": 3.35,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_BOTTOM_BAR",
+    "BEAM_SIDE_BAR",
+    "BEAM_STIRRUP",
+    "BEAM_TOP_BAR"
+   ],
+   "why_candidate": "exterior authority EXTERIOR_SOURCE_VERIFIED (architectural exterior wall above the span); load UNKNOWN; length details [\"P13-GB-LT5M\"]",
+   "why_not_resolved": "",
+   "width": {
+    "candidates": {
+     "P13-GB-EXTERIOR": 300
+    },
+    "state": "SOURCE_EXPLICIT",
+    "value_mm": 300
+   },
+   "width_mm": 300,
+   "width_state": "SOURCE_EXPLICIT"
+  },
+  {
+   "bar_straight_run_lower_bound_m": 3.25,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 8,
+    "LOWER_BOUND": 4,
+    "NOT_APPLICABLE": 4,
+    "VERIFIED": 2
+   },
+   "depth": {
+    "bound_max_m": 1.0,
+    "candidates": {
+     "P13-GB-EXTERIOR": "FOLLOW_ARCH"
+    },
+    "state": "BOUNDED_ABOVE",
+    "value_mm": null,
+    "why": "D = (+1.00 - b) - NGL, b = floor build-up (not printed, >= 0), NGL in [+0.00, +0.00] -> D <= 1.00 m; no lower bound"
+   },
+   "depth_bound_max_m": 1.0,
+   "depth_mm": null,
+   "depth_state": "BOUNDED_ABOVE",
+   "detail_applicability_state": "PROJECT_GENERAL_DETAIL",
+   "detail_ids": [
+    "P13-GB-EXTERIOR"
+   ],
+   "end_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:1FC+1FC"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [],
+   "geometry_handles": [
+    "7E0",
+    "FD"
+   ],
+   "known_kg": 46.22222222222222,
+   "known_straight_length_m": 29.25,
+   "length_state": "CONSISTENT",
+   "lengths": {
+    "bar_run_lb_m": 3.25,
+    "bar_run_state": "LOWER_BOUND",
+    "centreline_m": 3.65,
+    "clear_concrete_m": 3.25,
+    "face_to_face_m": 3.25,
+    "issues": [],
+    "length_state": "CONSISTENT",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": 3.25
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": 3.65,
+   "member_clear_concrete_length_m": 3.25,
+   "node_issues": {},
+   "occurrence_id": "GSO-7E0-FD-2",
+   "occurrence_state": "LOWER_BOUND",
+   "pre_s5_1": {
+    "exterior": "EXTERIOR_SOURCE_VERIFIED",
+    "load": "NO_CONCENTRATED_LOAD_EVIDENCE",
+    "pre_s5_1_status": "READY_LOWER_BOUND"
+   },
+   "questions": {
+    "applicability": null,
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": null
+   },
+   "start_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:809+809"
+    ]
+   },
+   "stirrup_count_lower_bound": 22,
+   "support_face_to_face_run_m": 3.25,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_SIDE_BAR",
+    "BEAM_STIRRUP"
+   ],
+   "why_candidate": "exterior authority EXTERIOR_SOURCE_VERIFIED (architectural exterior wall above the span); load NO_CONCENTRATED_LOAD_EVIDENCE; length details [\"P13-GB-LT5M\"]",
+   "why_not_resolved": "",
+   "width": {
+    "candidates": {
+     "P13-GB-EXTERIOR": 300
+    },
+    "state": "SOURCE_EXPLICIT",
+    "value_mm": 300
+   },
+   "width_mm": 300,
+   "width_state": "SOURCE_EXPLICIT"
+  },
+  {
+   "bar_straight_run_lower_bound_m": 6.72,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 18
+   },
+   "depth": {
+    "bound_max_m": null,
+    "candidates": {
+     "NO_PROJECT_DETAIL_FOR_CONCENTRATED_LOAD": "UNKNOWN",
+     "P13-GB-GT5M": 600
+    },
+    "state": "UNRESOLVED",
+    "value_mm": null,
+    "why": "an undefined candidate detail"
+   },
+   "depth_bound_max_m": null,
+   "depth_mm": null,
+   "depth_state": "UNRESOLVED",
+   "detail_applicability_state": "CANDIDATE_DETAIL",
+   "detail_ids": [
+    "NO_PROJECT_DETAIL_FOR_CONCENTRATED_LOAD",
+    "P13-GB-GT5M"
+   ],
+   "end_node": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "7DC+7DD"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [
+    "CONCENTRATED_LOAD_UNKNOWN: evidence {'BEAM_END_REACTION': 2, 'STAIR_BEARING_CANDIDATE': 1, 'UNIDENTIFIED_SYMBOL': 1}; not auto-classified as PRESENT"
+   ],
+   "geometry_handles": [
+    "7E1",
+    "7E2"
+   ],
+   "known_kg": 0,
+   "known_straight_length_m": 0,
+   "length_state": "CONSISTENT",
+   "lengths": {
+    "bar_run_lb_m": 6.72,
+    "bar_run_state": "LOWER_BOUND",
+    "centreline_m": 7.02,
+    "clear_concrete_m": 6.72,
+    "face_to_face_m": 6.72,
+    "issues": [],
+    "length_state": "CONSISTENT",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": 6.72
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": 7.02,
+   "member_clear_concrete_length_m": 6.72,
+   "node_issues": {},
+   "occurrence_id": "GSO-7E1-7E2-1",
+   "occurrence_state": "BLOCKED",
+   "pre_s5_1": {
+    "exterior": "INTERIOR_SOURCE_VERIFIED",
+    "load": "UNKNOWN",
+    "pre_s5_1_status": "BLOCKED_COMPONENT"
+   },
+   "questions": {
+    "applicability": "Q1+Q9",
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": "Q1+Q9"
+   },
+   "start_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:228+228"
+    ]
+   },
+   "stirrup_count_lower_bound": null,
+   "support_face_to_face_run_m": 6.72,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_BOTTOM_BAR",
+    "BEAM_EXTRA_BAR",
+    "BEAM_SIDE_BAR",
+    "BEAM_STIRRUP",
+    "BEAM_TOP_BAR",
+    "SPECIAL_DETAIL_BAR"
+   ],
+   "why_candidate": "exterior authority INTERIOR_SOURCE_VERIFIED (no wall above and ground slab on both sides: not under an exterior wall); load UNKNOWN; length details [\"P13-GB-GT5M\"]",
+   "why_not_resolved": "2 candidates: concentrated-load case has no project detail;",
+   "width": {
+    "candidates": {
+     "NO_PROJECT_DETAIL_FOR_CONCENTRATED_LOAD": "UNKNOWN",
+     "P13-GB-GT5M": 300
+    },
+    "state": "UNRESOLVED",
+    "value_mm": null
+   },
+   "width_mm": null,
+   "width_state": "UNRESOLVED"
+  },
+  {
+   "bar_straight_run_lower_bound_m": 3.525,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 7,
+    "LOWER_BOUND": 4,
+    "NOT_APPLICABLE": 5,
+    "VERIFIED": 2
+   },
+   "depth": {
+    "bound_max_m": null,
+    "candidates": {
+     "P13-GB-LT5M": 400
+    },
+    "state": "SOURCE_EXPLICIT",
+    "value_mm": 400,
+    "why": "cross-verified section depth"
+   },
+   "depth_bound_max_m": null,
+   "depth_mm": 400,
+   "depth_state": "SOURCE_EXPLICIT",
+   "detail_applicability_state": "EXPLICIT_LENGTH_CONDITION",
+   "detail_ids": [
+    "P13-GB-LT5M"
+   ],
+   "end_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:7ED+7ED"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [],
+   "geometry_handles": [
+    "7E7",
+    "7E8"
+   ],
+   "known_kg": 38.38333333333333,
+   "known_straight_length_m": 31.724999999999998,
+   "length_state": "CONSISTENT",
+   "lengths": {
+    "bar_run_lb_m": 3.525,
+    "bar_run_state": "LOWER_BOUND",
+    "centreline_m": 3.825,
+    "clear_concrete_m": 3.525,
+    "face_to_face_m": 3.525,
+    "issues": [],
+    "length_state": "CONSISTENT",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": 3.525
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": 3.825,
+   "member_clear_concrete_length_m": 3.525,
+   "node_issues": {},
+   "occurrence_id": "GSO-7E7-7E8-1",
+   "occurrence_state": "LOWER_BOUND",
+   "pre_s5_1": {
+    "exterior": "INTERIOR_SOURCE_VERIFIED",
+    "load": "NO_CONCENTRATED_LOAD_EVIDENCE",
+    "pre_s5_1_status": "READY_LOWER_BOUND"
+   },
+   "questions": {
+    "applicability": null,
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": null
+   },
+   "start_node": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "184+7CF"
+    ]
+   },
+   "stirrup_count_lower_bound": 24,
+   "support_face_to_face_run_m": 3.525,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_STIRRUP"
+   ],
+   "why_candidate": "exterior authority INTERIOR_SOURCE_VERIFIED (no wall above and ground slab on both sides: not under an exterior wall); load NO_CONCENTRATED_LOAD_EVIDENCE; length details [\"P13-GB-LT5M\"]",
+   "why_not_resolved": "",
+   "width": {
+    "candidates": {
+     "P13-GB-LT5M": 300
+    },
+    "state": "SOURCE_EXPLICIT",
+    "value_mm": 300
+   },
+   "width_mm": 300,
+   "width_state": "SOURCE_EXPLICIT"
+  },
+  {
+   "bar_straight_run_lower_bound_m": 3.525,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 18
+   },
+   "depth": {
+    "bound_max_m": null,
+    "candidates": {
+     "NO_PROJECT_DETAIL_FOR_CONCENTRATED_LOAD": "UNKNOWN",
+     "P13-GB-LT5M": 400
+    },
+    "state": "UNRESOLVED",
+    "value_mm": null,
+    "why": "an undefined candidate detail"
+   },
+   "depth_bound_max_m": null,
+   "depth_mm": null,
+   "depth_state": "UNRESOLVED",
+   "detail_applicability_state": "CANDIDATE_DETAIL",
+   "detail_ids": [
+    "NO_PROJECT_DETAIL_FOR_CONCENTRATED_LOAD",
+    "P13-GB-LT5M"
+   ],
+   "end_node": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "177+7CD"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [
+    "CONCENTRATED_LOAD_UNKNOWN: evidence {'BEAM_END_REACTION': 1}; not auto-classified as PRESENT"
+   ],
+   "geometry_handles": [
+    "7E7",
+    "7E8"
+   ],
+   "known_kg": 0,
+   "known_straight_length_m": 0,
+   "length_state": "CONSISTENT",
+   "lengths": {
+    "bar_run_lb_m": 3.525,
+    "bar_run_state": "LOWER_BOUND",
+    "centreline_m": 3.825,
+    "clear_concrete_m": 3.525,
+    "face_to_face_m": 3.525,
+    "issues": [],
+    "length_state": "CONSISTENT",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": 3.525
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": 3.825,
+   "member_clear_concrete_length_m": 3.525,
+   "node_issues": {},
+   "occurrence_id": "GSO-7E7-7E8-2",
+   "occurrence_state": "BLOCKED",
+   "pre_s5_1": {
+    "exterior": "INTERIOR_SOURCE_VERIFIED",
+    "load": "UNKNOWN",
+    "pre_s5_1_status": "BLOCKED_COMPONENT"
+   },
+   "questions": {
+    "applicability": "Q1",
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": "Q1"
+   },
+   "start_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:7ED+7ED"
+    ]
+   },
+   "stirrup_count_lower_bound": null,
+   "support_face_to_face_run_m": 3.525,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_BOTTOM_BAR",
+    "BEAM_EXTRA_BAR",
+    "BEAM_SIDE_BAR",
+    "BEAM_STIRRUP",
+    "BEAM_TOP_BAR",
+    "SPECIAL_DETAIL_BAR"
+   ],
+   "why_candidate": "exterior authority INTERIOR_SOURCE_VERIFIED (no wall above and ground slab on both sides: not under an exterior wall); load UNKNOWN; length details [\"P13-GB-LT5M\"]",
+   "why_not_resolved": "2 candidates: concentrated-load case has no project detail;",
+   "width": {
+    "candidates": {
+     "NO_PROJECT_DETAIL_FOR_CONCENTRATED_LOAD": "UNKNOWN",
+     "P13-GB-LT5M": 300
+    },
+    "state": "UNRESOLVED",
+    "value_mm": null
+   },
+   "width_mm": null,
+   "width_state": "UNRESOLVED"
+  },
+  {
+   "bar_straight_run_lower_bound_m": 4.225,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 7,
+    "LOWER_BOUND": 4,
+    "NOT_APPLICABLE": 5,
+    "VERIFIED": 2
+   },
+   "depth": {
+    "bound_max_m": null,
+    "candidates": {
+     "P13-GB-LT5M": 400
+    },
+    "state": "SOURCE_EXPLICIT",
+    "value_mm": 400,
+    "why": "cross-verified section depth"
+   },
+   "depth_bound_max_m": null,
+   "depth_mm": 400,
+   "depth_state": "SOURCE_EXPLICIT",
+   "detail_applicability_state": "EXPLICIT_LENGTH_CONDITION",
+   "detail_ids": [
+    "P13-GB-LT5M"
+   ],
+   "end_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:7ED+7ED"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [],
+   "geometry_handles": [
+    "7E9",
+    "7EA"
+   ],
+   "known_kg": 46.00555555555555,
+   "known_straight_length_m": 38.025,
+   "length_state": "CONSISTENT",
+   "lengths": {
+    "bar_run_lb_m": 4.225,
+    "bar_run_state": "LOWER_BOUND",
+    "centreline_m": 4.525,
+    "clear_concrete_m": 4.225,
+    "face_to_face_m": 4.225,
+    "issues": [],
+    "length_state": "CONSISTENT",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": 4.225
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": 4.525,
+   "member_clear_concrete_length_m": 4.225,
+   "node_issues": {},
+   "occurrence_id": "GSO-7E9-7EA-1",
+   "occurrence_state": "LOWER_BOUND",
+   "pre_s5_1": {
+    "exterior": "INTERIOR_SOURCE_VERIFIED",
+    "load": "NO_CONCENTRATED_LOAD_EVIDENCE",
+    "pre_s5_1_status": "READY_LOWER_BOUND"
+   },
+   "questions": {
+    "applicability": null,
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": null
+   },
+   "start_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:7F5+7F5"
+    ]
+   },
+   "stirrup_count_lower_bound": 29,
+   "support_face_to_face_run_m": 4.225,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_STIRRUP"
+   ],
+   "why_candidate": "exterior authority INTERIOR_SOURCE_VERIFIED (no wall above and ground slab on both sides: not under an exterior wall); load NO_CONCENTRATED_LOAD_EVIDENCE; length details [\"P13-GB-LT5M\"]",
+   "why_not_resolved": "",
+   "width": {
+    "candidates": {
+     "P13-GB-LT5M": 300
+    },
+    "state": "SOURCE_EXPLICIT",
+    "value_mm": 300
+   },
+   "width_mm": 300,
+   "width_state": "SOURCE_EXPLICIT"
+  },
+  {
+   "bar_straight_run_lower_bound_m": 1.731,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 8,
+    "LOWER_BOUND": 4,
+    "NOT_APPLICABLE": 4,
+    "VERIFIED": 2
+   },
+   "depth": {
+    "bound_max_m": 0.3,
+    "candidates": {
+     "P13-GB-EXTERIOR": "FOLLOW_ARCH"
+    },
+    "state": "SOURCE_CONFLICT",
+    "value_mm": null,
+    "why": "annex +0.30: the level bound (D <= 0.30 m) cannot hold the drawn three-level section; no 300 mm depth is adopted"
+   },
+   "depth_bound_max_m": 0.3,
+   "depth_mm": null,
+   "depth_state": "SOURCE_CONFLICT",
+   "detail_applicability_state": "PROJECT_GENERAL_DETAIL",
+   "detail_ids": [
+    "P13-GB-EXTERIOR"
+   ],
+   "end_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:214+214"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [
+    "ANNEX_DEPTH_SOURCE_CONFLICT: annex +0.30: the level bound (D <= 0.30 m) cannot hold the drawn three-level section; no 300 mm depth is adopted"
+   ],
+   "geometry_handles": [
+    "139",
+    "13A"
+   ],
+   "known_kg": 24.61866666666667,
+   "known_straight_length_m": 15.579,
+   "length_state": "CONSISTENT",
+   "lengths": {
+    "bar_run_lb_m": 1.731,
+    "bar_run_state": "LOWER_BOUND",
+    "centreline_m": 2.301,
+    "clear_concrete_m": 1.806,
+    "face_to_face_m": 1.856,
+    "issues": [],
+    "length_state": "CONSISTENT",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": 1.856
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": 2.301,
+   "member_clear_concrete_length_m": 1.806,
+   "node_issues": {},
+   "occurrence_id": "GSO-A-139-13A-1",
+   "occurrence_state": "LOWER_BOUND",
+   "pre_s5_1": {
+    "exterior": "EXTERIOR_SOURCE_VERIFIED",
+    "load": "NO_CONCENTRATED_LOAD_EVIDENCE",
+    "pre_s5_1_status": "READY_LOWER_BOUND"
+   },
+   "questions": {
+    "applicability": null,
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": null
+   },
+   "start_node": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "13E+7D6"
+    ]
+   },
+   "stirrup_count_lower_bound": 13,
+   "support_face_to_face_run_m": 1.856,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_SIDE_BAR",
+    "BEAM_STIRRUP"
+   ],
+   "why_candidate": "exterior authority EXTERIOR_SOURCE_VERIFIED (architectural exterior wall above the span); load NO_CONCENTRATED_LOAD_EVIDENCE; length details [\"P13-GB-LT2_5M\", \"P13-GB-LT5M\"]",
+   "why_not_resolved": "",
+   "width": {
+    "candidates": {
+     "P13-GB-EXTERIOR": 300
+    },
+    "state": "SOURCE_EXPLICIT",
+    "value_mm": 300
+   },
+   "width_mm": 300,
+   "width_state": "SOURCE_EXPLICIT"
+  },
+  {
+   "bar_straight_run_lower_bound_m": null,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 12,
+    "NOT_APPLICABLE": 4,
+    "VERIFIED": 2
+   },
+   "depth": {
+    "bound_max_m": 1.0,
+    "candidates": {
+     "P13-GB-EXTERIOR": "FOLLOW_ARCH"
+    },
+    "state": "BOUNDED_ABOVE",
+    "value_mm": null,
+    "why": "D = (+1.00 - b) - NGL, b = floor build-up (not printed, >= 0), NGL in [+0.00, +0.00] -> D <= 1.00 m; no lower bound"
+   },
+   "depth_bound_max_m": 1.0,
+   "depth_mm": null,
+   "depth_state": "BOUNDED_ABOVE",
+   "detail_applicability_state": "PROJECT_GENERAL_DETAIL",
+   "detail_ids": [
+    "P13-GB-EXTERIOR"
+   ],
+   "end_node": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:17BD+17BD"
+    ]
+   },
+   "family": "GROUND_BEAM",
+   "flags": [
+    "LENGTH_GEOMETRY_CONFLICT: shortest bar line 6177.7 > clear concrete 5878.4 mm",
+    "LENGTH_BASIS_CHANGES_DETAIL: clear / centreline / clear-concrete give [\"P13-GB-GT5M\"] /  / [\"P13-GB-GT5M\"]"
+   ],
+   "geometry_handles": [
+    "157",
+    "158"
+   ],
+   "known_kg": 0,
+   "known_straight_length_m": 0,
+   "length_state": "LENGTH_GEOMETRY_CONFLICT",
+   "lengths": {
+    "bar_run_lb_m": null,
+    "bar_run_state": "LENGTH_GEOMETRY_CONFLICT",
+    "centreline_m": null,
+    "clear_concrete_m": 5.878,
+    "face_to_face_m": 6.43,
+    "issues": [
+     "shortest bar line 6177.7 > clear concrete 5878.4 mm"
+    ],
+    "length_state": "LENGTH_GEOMETRY_CONFLICT",
+    "stirrup_distribution_basis": "SUPPORT_FACE_TO_FACE_RUN",
+    "stirrup_distribution_m": null
+   },
+   "mark": "GB (typical p.13)",
+   "member_centerline_length_m": null,
+   "member_clear_concrete_length_m": 5.878,
+   "node_issues": {},
+   "occurrence_id": "GSO-A-157-158-1",
+   "occurrence_state": "BLOCKED",
+   "pre_s5_1": {
+    "exterior": "EXTERIOR_SOURCE_VERIFIED",
+    "load": "NO_CONCENTRATED_LOAD_EVIDENCE",
+    "pre_s5_1_status": "BLOCKED_COMPONENT"
+   },
+   "questions": {
+    "applicability": "Q3",
+    "bar_run": "Q3B",
+    "depth": "Q2",
+    "development": "Q7",
+    "end": "Q10",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": "Q3"
+   },
+   "start_node": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "170+7C3"
+    ]
+   },
+   "stirrup_count_lower_bound": null,
+   "support_face_to_face_run_m": 6.43,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "BEAM_BOTTOM_BAR",
+    "BEAM_SIDE_BAR",
+    "BEAM_STIRRUP",
+    "BEAM_TOP_BAR"
+   ],
+   "why_candidate": "exterior authority EXTERIOR_SOURCE_VERIFIED (architectural exterior wall above the span); load NO_CONCENTRATED_LOAD_EVIDENCE; length details [\"P13-GB-GT5M\"]",
+   "why_not_resolved": "",
+   "width": {
+    "candidates": {
+     "P13-GB-EXTERIOR": 300
+    },
+    "state": "SOURCE_EXPLICIT",
+    "value_mm": 300
+   },
+   "width_mm": 300,
+   "width_state": "SOURCE_EXPLICIT"
+  },
+  {
+   "bar_straight_run_lower_bound_m": 4.55,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 7,
+    "LOWER_BOUND": 3,
+    "NOT_APPLICABLE": 2,
+    "VERIFIED": 2
+   },
+   "depth": {
+    "bound_max_m": null,
+    "candidates": {
+     "SBT:1FB0": 500
+    },
+    "state": "SOURCE_EXPLICIT",
+    "value_mm": 500,
+    "why": "SBT schedule H"
+   },
+   "depth_bound_max_m": null,
+   "depth_mm": 500,
+   "depth_state": "SOURCE_EXPLICIT",
+   "detail_applicability_state": "EXPLICIT_MARK_MATCH",
+   "detail_ids": [
+    "SBT:1FB0"
+   ],
+   "end_node": {
+    "kind": "FOOTING",
+    "refs": [
+     "FOCC-1B24"
+    ]
+   },
+   "family": "STRAP_BEAM",
+   "flags": [
+    "START_SUPPORT_OUTLINE_SOURCE_CONFLICT (F|F10): the clear length is measured to the drawn face; every candidate footing is smaller than the drawn outline, so the measured clear length is a lower bound",
+    "START_SUPPORT_FOOTING_TYPE_CONFLICT F|F10 at FOCC-1B1B: preserved in provenance; the development into this footing stays blocked"
+   ],
+   "geometry_handles": [
+    "1689",
+    "1B1C",
+    "1B1D:SB1>v"
+   ],
+   "known_kg": 168.63086419753085,
+   "known_straight_length_m": 91.0,
+   "length_state": "CONSISTENT",
+   "lengths": {
+    "bar_run_lb_m": 4.55,
+    "bar_run_state": "LOWER_BOUND",
+    "centreline_m": 7.6,
+    "clear_concrete_m": 4.55,
+    "face_to_face_m": 4.55,
+    "issues": [],
+    "length_state": "CONSISTENT",
+    "stirrup_distribution_basis": "CLEAR_CONCRETE_LENGTH between footing faces",
+    "stirrup_distribution_m": 4.55
+   },
+   "mark": "SB1",
+   "member_centerline_length_m": 7.6,
+   "member_clear_concrete_length_m": 4.55,
+   "node_issues": {},
+   "occurrence_id": "SOCC-1689-1B1C",
+   "occurrence_state": "LOWER_BOUND",
+   "pre_s5_1": {
+    "exterior": "NOT_APPLICABLE",
+    "load": "NOT_ASSESSED (straps: schedule-defined)",
+    "pre_s5_1_status": "READY_LOWER_BOUND"
+   },
+   "questions": {
+    "applicability": null,
+    "bar_run": null,
+    "depth": null,
+    "development": "Q7",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": "Q5"
+   },
+   "start_node": {
+    "kind": "FOOTING",
+    "refs": [
+     "FOCC-1B1B"
+    ]
+   },
+   "stirrup_count_lower_bound": 37,
+   "support_face_to_face_run_m": 4.55,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "STRAP_BEAM_STIRRUP"
+   ],
+   "why_candidate": "SBT schedule key SB1: rows ['SBT:1FB0']",
+   "why_not_resolved": "",
+   "width": {
+    "candidates": {
+     "SBT:1FB0": 700
+    },
+    "state": "SOURCE_EXPLICIT",
+    "value_mm": 700
+   },
+   "width_mm": 700,
+   "width_state": "SOURCE_EXPLICIT"
+  },
+  {
+   "bar_straight_run_lower_bound_m": 1.829,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 9,
+    "LOWER_BOUND": 1,
+    "NOT_APPLICABLE": 2,
+    "VERIFIED": 2
+   },
+   "depth": {
+    "bound_max_m": null,
+    "candidates": {
+     "SBT:1FBB": 500,
+     "SBT:2ABA": 500
+    },
+    "state": "CANDIDATE_INVARIANT",
+    "value_mm": 500,
+    "why": "SBT schedule H"
+   },
+   "depth_bound_max_m": null,
+   "depth_mm": 500,
+   "depth_state": "CANDIDATE_INVARIANT",
+   "detail_applicability_state": "CANDIDATE_DETAIL",
+   "detail_ids": [
+    "SBT:1FBB",
+    "SBT:2ABA"
+   ],
+   "end_node": {
+    "kind": "FOOTING",
+    "refs": [
+     "FOCC-1B07"
+    ]
+   },
+   "family": "STRAP_BEAM",
+   "flags": [
+    "SCHEDULE_KEY_CONFLICT: 2 SBT rows for SB2 (80x50, 100x50)",
+    "SB2_SECTION_CONFLICT: rows ['SBT:1FBB', 'SBT:2ABA'] give widths {'SBT:1FBB': 800, 'SBT:2ABA': 1000} mm; drawn width 987.1 mm is recorded and NOT used to choose"
+   ],
+   "geometry_handles": [
+    "1B08",
+    "1B09",
+    "1B12:sb2>v"
+   ],
+   "known_kg": 0,
+   "known_straight_length_m": 0,
+   "length_state": "CONSISTENT",
+   "lengths": {
+    "bar_run_lb_m": 1.829,
+    "bar_run_state": "LOWER_BOUND",
+    "centreline_m": 4.977,
+    "clear_concrete_m": 1.829,
+    "face_to_face_m": 1.829,
+    "issues": [],
+    "length_state": "CONSISTENT",
+    "stirrup_distribution_basis": "CLEAR_CONCRETE_LENGTH between footing faces",
+    "stirrup_distribution_m": 1.829
+   },
+   "mark": "SB2",
+   "member_centerline_length_m": 4.977,
+   "member_clear_concrete_length_m": 1.829,
+   "node_issues": {},
+   "occurrence_id": "SOCC-1B08-1B09",
+   "occurrence_state": "BLOCKED",
+   "pre_s5_1": {
+    "exterior": "NOT_APPLICABLE",
+    "load": "NOT_ASSESSED (straps: schedule-defined)",
+    "pre_s5_1_status": "BLOCKED_COMPONENT"
+   },
+   "questions": {
+    "applicability": "Q5",
+    "bar_run": null,
+    "depth": null,
+    "development": "Q7",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": "Q5"
+   },
+   "start_node": {
+    "kind": "FOOTING",
+    "refs": [
+     "FOCC-1B19"
+    ]
+   },
+   "stirrup_count_lower_bound": 19,
+   "support_face_to_face_run_m": 1.829,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "STRAP_BEAM_BAR",
+    "STRAP_BEAM_STIRRUP"
+   ],
+   "why_candidate": "SBT schedule key SB2: rows ['SBT:1FBB', 'SBT:2ABA']",
+   "why_not_resolved": "duplicated SBT schedule key: two rows, different bars and widths; the drawn width does not choose",
+   "width": {
+    "candidates": {
+     "SBT:1FBB": 800,
+     "SBT:2ABA": 1000
+    },
+    "state": "CANDIDATE_CONFLICT",
+    "value_mm": null
+   },
+   "width_mm": null,
+   "width_state": "CANDIDATE_CONFLICT"
+  },
+  {
+   "bar_straight_run_lower_bound_m": 2.838,
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 7,
+    "LOWER_BOUND": 3,
+    "NOT_APPLICABLE": 2,
+    "VERIFIED": 2
+   },
+   "depth": {
+    "bound_max_m": null,
+    "candidates": {
+     "SBT:2B06": 400
+    },
+    "state": "SOURCE_EXPLICIT",
+    "value_mm": 400,
+    "why": "SBT schedule H"
+   },
+   "depth_bound_max_m": null,
+   "depth_mm": 400,
+   "depth_state": "SOURCE_EXPLICIT",
+   "detail_applicability_state": "EXPLICIT_MARK_MATCH",
+   "detail_ids": [
+    "SBT:2B06"
+   ],
+   "end_node": {
+    "kind": "FOOTING",
+    "refs": [
+     "FOCC-1B2A"
+    ]
+   },
+   "family": "STRAP_BEAM",
+   "flags": [],
+   "geometry_handles": [
+    "1B26",
+    "1B27",
+    "1B28"
+   ],
+   "known_kg": 50.803703703703704,
+   "known_straight_length_m": 28.380000000000003,
+   "length_state": "CONSISTENT",
+   "lengths": {
+    "bar_run_lb_m": 2.838,
+    "bar_run_state": "LOWER_BOUND",
+    "centreline_m": 4.886,
+    "clear_concrete_m": 2.838,
+    "face_to_face_m": 2.838,
+    "issues": [],
+    "length_state": "CONSISTENT",
+    "stirrup_distribution_basis": "CLEAR_CONCRETE_LENGTH between footing faces",
+    "stirrup_distribution_m": 2.838
+   },
+   "mark": "SB3",
+   "member_centerline_length_m": 4.886,
+   "member_clear_concrete_length_m": 2.838,
+   "node_issues": {},
+   "occurrence_id": "SOCC-1B26-1B27",
+   "occurrence_state": "LOWER_BOUND",
+   "pre_s5_1": {
+    "exterior": "NOT_APPLICABLE",
+    "load": "NOT_ASSESSED (straps: schedule-defined)",
+    "pre_s5_1_status": "READY_LOWER_BOUND"
+   },
+   "questions": {
+    "applicability": null,
+    "bar_run": null,
+    "depth": null,
+    "development": "Q7",
+    "stirrup_geometry": "Q6",
+    "stirrup_supersession": "Q5"
+   },
+   "start_node": {
+    "kind": "FOOTING",
+    "refs": [
+     "FOCC-166B"
+    ]
+   },
+   "stirrup_count_lower_bound": 20,
+   "support_face_to_face_run_m": 2.838,
+   "unquantified_components": [
+    "ANCHORAGE",
+    "STRAP_BEAM_STIRRUP"
+   ],
+   "why_candidate": "SBT schedule key SB3: rows ['SBT:2B06']",
+   "why_not_resolved": "",
+   "width": {
+    "candidates": {
+     "SBT:2B06": 500
+    },
+    "state": "SOURCE_EXPLICIT",
+    "value_mm": 500
+   },
+   "width_mm": 500,
+   "width_state": "SOURCE_EXPLICIT"
+  }
+ ],
+ "policy": {
+  "accurate_component": {
+   "GROUND_BEAM": {
+    "BOTTOM_ROW_1": "BEAM_BOTTOM_BAR",
+    "BOTTOM_ROW_2": "BEAM_BOTTOM_BAR",
+    "DEVELOPMENT_SUPPORT_1": "ANCHORAGE",
+    "DEVELOPMENT_SUPPORT_2": "ANCHORAGE",
+    "EXTRA_SUPPORT": "BEAM_EXTRA_BAR",
+    "HOOK_1": "ANCHORAGE",
+    "HOOK_2": "ANCHORAGE",
+    "MID": "BEAM_EXTRA_BAR",
+    "OTHER_EXPLICIT_EXTRA": "SPECIAL_DETAIL_BAR",
+    "SIDE_REBAR": "BEAM_SIDE_BAR",
+    "STIRRUP_CORE_PATH": "BEAM_STIRRUP",
+    "STIRRUP_COUNT": "BEAM_STIRRUP",
+    "STIRRUP_DIAMETER": "BEAM_STIRRUP",
+    "STIRRUP_END_ZONE_EXTRA": "BEAM_STIRRUP",
+    "STIRRUP_HOOK_1": "BEAM_STIRRUP",
+    "STIRRUP_HOOK_2": "BEAM_STIRRUP",
+    "STIRRUP_SPACING": "BEAM_STIRRUP",
+    "TOP_MAIN": "BEAM_TOP_BAR"
+   },
+   "STRAP_BEAM": {
+    "BOTTOM_MAIN": "STRAP_BEAM_BAR",
+    "DEVELOPMENT_FOOTING_1": "ANCHORAGE",
+    "DEVELOPMENT_FOOTING_2": "ANCHORAGE",
+    "HOOK_1": "ANCHORAGE",
+    "HOOK_2": "ANCHORAGE",
+    "OTHER_EXPLICIT_EXTRA": "SPECIAL_DETAIL_BAR",
+    "STIRRUP_CORE_PATH": "STRAP_BEAM_STIRRUP",
+    "STIRRUP_COUNT": "STRAP_BEAM_STIRRUP",
+    "STIRRUP_DIAMETER": "STRAP_BEAM_STIRRUP",
+    "STIRRUP_END_ZONE_EXTRA": "STRAP_BEAM_STIRRUP",
+    "STIRRUP_HOOK_1": "STRAP_BEAM_STIRRUP",
+    "STIRRUP_HOOK_2": "STRAP_BEAM_STIRRUP",
+    "STIRRUP_SPACING": "STRAP_BEAM_STIRRUP",
+    "TOP_MAIN": "STRAP_BEAM_BAR"
+   }
+  },
+  "component_states": [
+   "VERIFIED",
+   "LOWER_BOUND",
+   "PROVISIONAL",
+   "BLOCKED_MODELLED",
+   "BLOCKED_UNQUANTIFIED",
+   "NOT_REQUIRED",
+   "NOT_APPLICABLE"
+  ],
+  "components": {
+   "GROUND_BEAM": [
+    "TOP_MAIN",
+    "BOTTOM_ROW_1",
+    "BOTTOM_ROW_2",
+    "SIDE_REBAR",
+    "STIRRUP_DIAMETER",
+    "STIRRUP_SPACING",
+    "STIRRUP_COUNT",
+    "STIRRUP_CORE_PATH",
+    "STIRRUP_HOOK_1",
+    "STIRRUP_HOOK_2",
+    "STIRRUP_END_ZONE_EXTRA",
+    "HOOK_1",
+    "HOOK_2",
+    "DEVELOPMENT_SUPPORT_1",
+    "DEVELOPMENT_SUPPORT_2",
+    "EXTRA_SUPPORT",
+    "MID",
+    "OTHER_EXPLICIT_EXTRA"
+   ],
+   "STRAP_BEAM": [
+    "TOP_MAIN",
+    "BOTTOM_MAIN",
+    "STIRRUP_DIAMETER",
+    "STIRRUP_SPACING",
+    "STIRRUP_COUNT",
+    "STIRRUP_CORE_PATH",
+    "STIRRUP_HOOK_1",
+    "STIRRUP_HOOK_2",
+    "STIRRUP_END_ZONE_EXTRA",
+    "HOOK_1",
+    "HOOK_2",
+    "DEVELOPMENT_FOOTING_1",
+    "DEVELOPMENT_FOOTING_2",
+    "OTHER_EXPLICIT_EXTRA"
+   ]
+  },
+  "depth_states": [
+   "SOURCE_EXPLICIT",
+   "CANDIDATE_INVARIANT",
+   "BOUNDED_ABOVE",
+   "UNRESOLVED",
+   "SOURCE_CONFLICT",
+   "CANDIDATE_CONFLICT",
+   "AI_TRANSCRIPTION_ONLY"
+  ],
+  "families": [
+   "GROUND_BEAM",
+   "STRAP_BEAM"
+  ],
+  "policy_id": "GROUND_SYSTEM_REBAR_S5_V1",
+  "quantity_kind": {
+   "BOTTOM_MAIN": "MASS",
+   "BOTTOM_ROW_1": "MASS",
+   "BOTTOM_ROW_2": "MASS",
+   "DEVELOPMENT_FOOTING_1": "MASS",
+   "DEVELOPMENT_FOOTING_2": "MASS",
+   "DEVELOPMENT_SUPPORT_1": "MASS",
+   "DEVELOPMENT_SUPPORT_2": "MASS",
+   "EXTRA_SUPPORT": "MASS",
+   "HOOK_1": "MASS",
+   "HOOK_2": "MASS",
+   "MID": "MASS",
+   "OTHER_EXPLICIT_EXTRA": "MASS",
+   "SIDE_REBAR": "MASS",
+   "STIRRUP_CORE_PATH": "MASS",
+   "STIRRUP_COUNT": "COUNT",
+   "STIRRUP_DIAMETER": "ATTRIBUTE",
+   "STIRRUP_END_ZONE_EXTRA": "MASS",
+   "STIRRUP_HOOK_1": "MASS",
+   "STIRRUP_HOOK_2": "MASS",
+   "STIRRUP_SPACING": "ATTRIBUTE",
+   "TOP_MAIN": "MASS"
+  },
+  "rules": [
+   "one record per physical occurrence; generic ELEMENT_* identity, never FOOTING_*",
+   "detail applicability taken as given; candidates are never chosen",
+   "candidate detail: a component releases only when identical in every candidate",
+   "longitudinal kg = n x BAR_STRAIGHT_RUN_LOWER_BOUND x D^2/162 (no centreline / clear / min)",
+   "two lower rows kept separate",
+   "development, bar-end hooks, stirrup hooks BLOCKED_UNQUANTIFIED (no code / note default)",
+   "stirrup count = ceil(rate x distribution) lower bound; +1 end bar not adopted",
+   "stirrup mass only when width, depth, cover, legs, path and hooks are all source-supported",
+   "side bars per depth blocked while depth is not source-explicit",
+   "blocked components stay listed and carry no kg",
+   "net only; procurement not computed"
+  ]
+ },
+ "register": "GROUND_SYSTEM_REBAR_OCCURRENCE_REGISTER",
+ "rules": {
+  "bar_end_hooks": {
+   "state": "NOT_ESTABLISHED",
+   "why": "bar ends at the supports are not detailed (R4 HOOKS_AND_BENDS = NO_PROJECT_SOURCE); no column-hook rule is borrowed"
+  },
+  "cover": {
+   "authority": "SOURCE_EXPLICIT",
+   "claim_id": "P8-N22-COVER-SOIL",
+   "rule_id": "COVER_AGAINST_SOIL_70MM",
+   "value_mm": 70
+  },
+  "development": {
+   "state": "NOT_ESTABLISHED",
+   "why": "no beam-end anchorage rule in the project source; DEVELOPMENT_STARTER_70D_40D ('development / tie length of starter bars only', AI_VISUAL_TRANSCRIPTION) is not generalised; no 40D / 70D / ACI / BS / EC2 / Kuwait-practice / Urban default is applied"
+  },
+  "source_records": {
+   "cover": {
+    "alias": "COVER-SOIL-70",
+    "applies_to": [
+     "FOOTING",
+     "FOOTING_2_LAYER",
+     "FOOTING_LIFT",
+     "STRAP_BEAM",
+     "GROUND_BEAM",
+     "GROUND_SLAB",
+     "COLUMN_STARTERS",
+     "POOL"
+    ],
+    "claim_id": "P8-N22-COVER-SOIL",
+    "note": null,
+    "quantity_authority": "VERIFIED",
+    "rule_id": "COVER_AGAINST_SOIL_70MM",
+    "scope": "minimum cover",
+    "source_state": "CROSS_VERIFIED_SOURCE",
+    "value": 70
+   },
+   "development_starter_note": {
+    "alias": null,
+    "applies_to": [
+     "STARTER_BARS"
+    ],
+    "claim_id": "P8-N09-STARTER-DEVELOPMENT",
+    "note": "NOT a hook, bend or beam-end anchorage rule; used for BBS laps of long runs only as a labelled procurement assumption (LAP-70D-NOTE9-EXTENDED)",
+    "quantity_authority": "PROVISIONAL",
+    "rule_id": "DEVELOPMENT_STARTER_70D_40D",
+    "scope": "development / tie length of starter bars only",
+    "source_state": "AI_VISUAL_TRANSCRIPTION",
+    "value": {
+     "compression": 40,
+     "tension": 70
+    }
+   }
+  },
+  "stirrup_hooks": {
+   "state": "NOT_ESTABLISHED",
+   "why": "hook angle / extension NO_PROJECT_SOURCE (engineer / code decision; never verified)"
+  },
+  "stirrup_topology": {
+   "GROUND_BEAM": {
+    "state": "NOT_VERIFIED",
+    "why": "the p.13 sections draw a closed link but leg count / topology is not a verified facet"
+   },
+   "STRAP_BEAM": {
+    "state": "NOT_STATED",
+    "why": "the SBT schedule gives Ø and count per metre only; no strap section sketch exists (pp.8, 13-16 searched)"
+   }
+  }
+ },
+ "scope_check": {
+  "narrower_than_pre_s5_1": [],
+  "widened": []
+ }
+}

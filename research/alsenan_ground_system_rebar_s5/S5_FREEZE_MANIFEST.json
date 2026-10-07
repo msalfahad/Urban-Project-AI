@@ -1,0 +1,45 @@
+{
+ "baseline": "cab778a",
+ "code": {
+  "engine/source/accurate_boq_rebar.py": "0f919bed502dab3b232a75f913ec7832dd530d4607e9bfacce6c9592b0bcdacb",
+  "engine/source/ground_system_provenance.py": "d6a17f393036537a91aea0eba01bb03953c4efa83d57186d192ed71feef919c5",
+  "engine/source/ground_system_rebar.py": "66e6e2289cde7844c258e79fa2fdd1fb6c5f95026f51becf895efac626059685",
+  "engine/source/rebar_model.py": "5a67349f8feeffe18096534a16556f1967b66f4e3e4ce50e995c5df57bc5838c",
+  "engine/source/rebar_provenance.py": "8336f53f2882d751a1e7676336f2be8c4884d4c75f4e8175fd2dea56ba2387ca",
+  "engine/source/rebar_unit_mass.py": "81d63a85da8e64600d0c49a6662bcc49655f46dc71603654b3e1438c5b146eb8",
+  "research/alsenan_ground_system_rebar_s5/build_ground_system_rebar_s5.py": "2b521b6eeec936f0c31e3938d4a952409b529ee46c8ee4d1fe58d08d10176c57"
+ },
+ "engine_commit_stamp": "cab778a+code:2dc78fc0ff285ba2",
+ "inputs": {
+  "research/alsenan_rebar_source_exhaustion_04/registers/PROJECT_REBAR_RULE_REGISTER.json": "5536777ab000e65bd8bb61fabae04f0a09cfe58e75e9547c65c1b04e8633d6b8",
+  "research/alsenan_rebar_source_exhaustion_04/registers/VISUAL_SOURCE_CLAIM_REGISTER.json": "de12e1d73eeb57017d6af600d11becef521e573e150c9c5e715d34d4db02668d",
+  "research/pre_s5_1_source_resolution/03_EXTERIOR_AUTHORITY_REGISTER.csv": "eea3b3f8b35482803057a56df64f65aea52657a68fa87383db3a109c88a1b881",
+  "research/pre_s5_1_source_resolution/04_FOLLOW_ARCH_DEPTH_REGISTER.csv": "e69fc7d034b401be6225b01c5a5a1c759d135ee45ad8fcdaffbcbd24e1edae17",
+  "research/pre_s5_1_source_resolution/05_LENGTH_BASIS_ANALYSIS.csv": "2b32379c54788a22a45f0fe73d620efb1305aa6a90a0d25ea93a5329cefc2d18",
+  "research/pre_s5_1_source_resolution/06_CONCENTRATED_LOAD_REGISTER.csv": "6b74ca3ba9ebb2dd3d93ce3c066f94b338f6d531c11dacf1ebc539e4eb6a69f7",
+  "research/pre_s5_1_source_resolution/09_GROUND_BEAM_FREE_END_REGISTER.csv": "bf521460815c69580c97383bad28ce29ffe8f013be87a09235098477da6bf955",
+  "research/pre_s5_1_source_resolution/10_GROUND_SYSTEM_REBAR_READINESS_MATRIX.csv": "fa2caff3318aa1c92d63f9fc849158ed2cd7e5a157bc1fe0bf44c1281b9df812",
+  "research/pre_s5_1_source_resolution/INDEX.json": "f865d2a5140b296d93c9f338bfbc0e9a5ca886b804b1772e842107bf9ecd5d2d",
+  "research/pre_s5_1_source_resolution/PRE_S5_1_SUMMARY.json": "a424687a0fcd6efb26246a76efffa2bc3cde18cd511b53ccbe699bca983ca020",
+  "research/pre_s5_1_source_resolution/S5_1_PROVENANCE_TEMPLATES.json": "57ffffbe7ec3bedca7929a5c08dd6e235462a8df84440ef21d7c946a653d8777",
+  "research/pre_s5_ground_system_readiness/03_STRAP_OCCURRENCE_REGISTER.csv": "6f4d6f13f91f6abb6e4a1a348e6de2f6028bdd3ccb9ef13ba71b818d68d70dc0",
+  "research/pre_s5_ground_system_readiness/05_STRAP_REBAR_SOURCE_REGISTER.csv": "892f0447002c56da5e58b441317b6e85ec1e1c8cdeea37c8f9b8149047b7bf8d"
+ },
+ "outputs": {
+  "GROUND_BEAM_REBAR_SUMMARY.csv": "a8a9a247d368bb9dbcc8c0ba14e03102b7c374d4764908feb602c413fa49a5b3",
+  "GROUND_SYSTEM_BBS_NET.csv": "58694fb2d4f1447fb6e9335e39f33ba4c22f938e2449b1f67e40e0b62e6c6233",
+  "GROUND_SYSTEM_ENGINEERING_FLAGS.csv": "700bbff5efbbbb322b894513cdae54847946ad30025d4796e763efa675fa5bd0",
+  "GROUND_SYSTEM_ENGINEERING_QUESTIONS.csv": "01a6653b2b94852aa42ab5b01e473a2161382ef71ac8f0b3410b94e4124cbf63",
+  "GROUND_SYSTEM_REBAR_COMPONENTS.csv": "1a84cfb4bdbb7d08b34c446c29f587dea003ed58eee917826db97908750f1def",
+  "GROUND_SYSTEM_REBAR_OCCURRENCES.csv": "da5296bc21fb8936603fd8a69bb28ff44f2b77149f0105820818dc045b40f37d",
+  "GROUND_SYSTEM_REBAR_OCCURRENCE_REGISTER.json": "03b87f8b8e5cc41bc44191733a592e07fdd9c82ba326d18ce447a6e88ec0bf33",
+  "GROUND_SYSTEM_REBAR_PROVENANCE.jsonl": "4b0edd8d1f06ee0939893bbe5dd2c6f1fced5a62ca81130c275d1632392ac2c9",
+  "GROUND_SYSTEM_REBAR_RELEASE_SUMMARY.json": "ce1ce76ad7c64601afb060d310d79e0e694153d76580a32c0af9ea7e6682a4ef",
+  "GROUND_SYSTEM_REBAR_UNRESOLVED.csv": "ba813ea9b71937adcb6e3d65706ce3ca0677da1ea8c6abb9011928f19b052e42",
+  "STRAP_BEAM_REBAR_SUMMARY.csv": "e801d6c72e7c5df1763cff8f9e3e7e95a46f5d4f7b99b0e15fed814aaa67b845"
+ },
+ "references_read_before_freeze": [],
+ "round": "S5",
+ "rule": "the post-freeze comparison script refuses to run unless every hash above still matches; a correction found by the comparison needs a new issue, new evidence, a new regression and a new version - never an edit of these outputs and never a tuning to a reference",
+ "state": "FROZEN_BEFORE_REFERENCE_COMPARISON"
+}
