@@ -181,3 +181,25 @@ def test_every_part_in_the_provenance_log_validates():
     s = J(PKG / "FOOTING_REBAR_RELEASE_SUMMARY.json")
     assert n == s["provenance"]["parts"] == sum(v for k, v in s["components_by_state"].items()
                                                if k in AR.STATES)
+
+
+# ------------------------------------------------------------------ post-freeze comparison (read-only record)
+def test_post_freeze_comparison_is_downstream_and_explained():
+    pf = PKG / "post_freeze"
+    s = J(pf / "S4_POST_FREEZE_SUMMARY.json")
+    assert s["freeze_manifest_verified"] is True
+    assert s["frozen_engine_stamp"] == J(PKG / "S4_FREEZE_MANIFEST.json")["engine_commit_stamp"]
+    rel = J(PKG / "FOOTING_REBAR_RELEASE_SUMMARY.json")
+    t = s["totals"]
+    assert t["S4_KNOWN_KG"] == pytest.approx(rel["conservation"]["project_known_kg"], abs=1e-3)
+    d = t["CHRIS_DECOMPOSITION_KG"]
+    assert abs(d["residual_rounding"]) < 0.05
+    assert t["S4_KNOWN_KG"] + d["cover_convention"] + d["count_convention"] + d["residual_rounding"] == \
+        pytest.approx(t["CHRIS_FOOTING_KG"])
+    assert "UNKNOWN" not in s["class_counts_chris"] and "UNKNOWN" not in s["class_counts_old_urban"]
+    assert t["OLD_URBAN_R3_VERIFIED_KG"] == pytest.approx(t["S4_KNOWN_KG"], abs=1e-3)
+    assert t["OLD_URBAN_R3_PROVISIONAL_SPLIT_KG"]["edge_bar_convention"] == \
+        pytest.approx(t["S4_BEST_MINUS_KNOWN_KG"], abs=1e-3)
+    # the comparison layer is never upstream of the frozen outputs
+    for k in J(PKG / "S4_FREEZE_MANIFEST.json")["outputs"]:
+        assert "post_freeze" not in k

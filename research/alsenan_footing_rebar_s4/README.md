@@ -81,4 +81,11 @@ There is no "total footing rebar". The known kg are a lower bound of the footing
 
 ## Freeze
 
-`S4_FREEZE_MANIFEST.json` hashes the code, inputs and outputs. It was committed before any reference was read. The post-freeze comparison is in `post_freeze/` and refuses to run if any hash has changed.
+`S4_FREEZE_MANIFEST.json` hashes the code, inputs and outputs. It was committed before any reference was read. The post-freeze comparison is in `post_freeze/` (see `post_freeze/S4_POST_FREEZE_COMPARISON.md`) and refuses to run if any hash has changed.
+
+**Post-freeze result:**
+- christiannp 3863.41 kg = S4 3629.60 + cover convention 176.39 + count convention 57.42 (residual −0.006 kg).
+- Old Urban R3 verified = S4 known exactly; its 93.89 kg provisional = S4 BEST − LOW.
+- The freelancer and U-C4N figures are scope-different or incomplete references.
+
+S4 was not tuned.
