@@ -1,0 +1,25 @@
+TECHNIQUE,URBAN,U_C4N,CHRISTIANNP,ROOMGRAPH,OPENTAKEOFF,REBAR_TAKEOFF,BEST_CURRENT_METHOD,WHY,KNOWN_DEFECT,DECISION,NEXT_TEST
+ATTRIB schedule extraction,"S1 schedule_table + schedule_grammar (handles, raw ATTRIBs)",direct ATTRIB,schedule ATTRIB (report),NOT_HELD (pack),scheduleParse.ts (silent row drop rejected),NOT_HELD (pack),URBAN,drawn column wins over tag; raw kept; conflicts recorded,BOXED semantics unresolved,PRODUCTION,BOXED interpretation stays BLOCKED until a source/claim
+source handles,"on census, bands, faces, pairs",yes,not delivered,NOT_HELD (pack),shape ids,NOT_HELD (pack),URBAN,handle + block path identity,V3b BOQ lines carry no handles,PRODUCTION,receipt test on V3b lines
+physical occurrence census,S1 + population_conservation,independent census,yes,NOT_HELD (pack),-,NOT_HELD (pack),URBAN,terminal state per object,-,PRODUCTION,-
+footing outline / tag dual route,structural_schedule.footing_occurrences (marks + candidates),partial,outlines + tags,NOT_HELD (pack),-,NOT_HELD (pack),URBAN (needs explicit dual-route reconcile),-,F3 / F-F10 / FN,PRODUCTION,test_footing_outline_two_tags_is_source_conflict
+beam face pairing,"structural_schedule.beam_bands, wall_band_reconciliation",beam-face pairing,parallel strips (R1-R5),NOT_HELD (pack),-,NOT_HELD (pack),URBAN,positive constraints,8 unbound tags,PRODUCTION,-
+beam tag binding,"beam_binding (namespaces, never nearest-text)",yes,R1-R5 (R5 rejected),NOT_HELD (pack),-,NOT_HELD (pack),URBAN,-,-,PRODUCTION,width gate test (R4 idea)
+collinear continuation,beam_occurrence_recovery continuity route,-,R2,NOT_HELD (pack),-,NOT_HELD (pack),URBAN + R2 idea as CANDIDATE,-,-,PRODUCTION (candidate only),test_continuation_stops_at_support_with_new_tag
+width-to-schedule validation,drawn_vs_schedule on columns; partial on beams,-,R4 (60 mm),NOT_HELD (pack),-,NOT_HELD (pack),URBAN + R4 as gate,-,-,PRODUCTION,test_width_mismatch_flags_binding
+region intersection,cad_guards.segment_intersects_region,start-point clipping (defect),-,NOT_HELD (pack),-,NOT_HELD (pack),URBAN,true intersection,-,PRODUCTION,-
+slab polygon extraction,B2A1 slab regions + slab_opening_reconciliation,-,raster,NOT_HELD (pack),-,NOT_HELD (pack),URBAN,vector + ids per opening,GF conflict void,PRODUCTION,-
+raster / flood-fill slab oracle,"raster_topology (arch, research-era)",-,"50 mm, 5 classes",NOT_HELD (pack),rastermask.ts / oneclick,NOT_HELD (pack),independent Urban rebuild,independent route,"edge cells, leaks",CHALLENGER,convergence 100/50/25/10 mm
+opening reconstruction,opening_evidence V3 / completion / reveals,-,-,NOT_HELD (pack),doorseal.ts,NOT_HELD (pack),URBAN,-,-,PRODUCTION,-
+wall-face pairing,wall_band_reconciliation Method B,face pairing,raw pairs,NOT_HELD (pack),-,NOT_HELD (pack),URBAN,per-metre classes,finish-line pairs,PRODUCTION (cross-route),finish-line rejection fixture
+room-cycle extraction,TS01 + Route B + GEOS cross-check,hand-rolled planar kernel (rejected),-,NOT_HELD (pack),arrangement.ts (weld/split/faces),NOT_HELD (pack),URBAN,two independent routes,-,PRODUCTION,-
+room adjacency,room_matrix view; no graph object,-,-,NOT_HELD (pack),-,NOT_HELD (pack),MISSING graph,needed for wall Method C,-,PRODUCTION (P1),every face -> 0/1/2 rooms
+physical wall-face extraction,"physical_wall_faces (coverage round), wall_faces_v2",-,gross faces (A10),NOT_HELD (pack),-,NOT_HELD (pack),URBAN,"interval - member, per face",-,PRODUCTION,-
+scale calibration,"frame UNIT_CONTEXT, raster calibration, calibration_v2",unit_of default mm (rejected),-,NOT_HELD (pack),scaleConfirmed warn-not-block (rejected),NOT_HELD (pack),URBAN,frozen rule,PDF page gate soft,PRODUCTION,PDF quantity without verified frame -> BLOCKED
+provenance receipt,run_manifest + boq_report TRACE (arch),handles,-,NOT_HELD (pack),provenance.schema.json,NOT_HELD (pack),URBAN arch path,digest-bound,structural lines weak,PRODUCTION,receipt coverage test
+human correction lineage,"claims, never edits",-,-,NOT_HELD (pack),proposed_verts_norm + edits,NOT_HELD (pack),OpenTakeoff idea (for a future UI),-,-,DEFER,-
+rule profiles,method registers + profiles JSON,-,-,NOT_HELD (pack),rules.ts,NOT_HELD (pack),URBAN for now,-,conventions inside modules,DEFER (golden first),URBAN_KW_V1 golden
+rebar annotation parsing,"3 parsers (schedule_grammar, bar_spec, slab_rebar_binding.parse)",partial,partial (unresolved list),NOT_HELD (pack),-,NOT_HELD (pack),"URBAN, unified",-,parser duplication,PRODUCTION (P0),single-grammar token corpus
+BBS model,rebar_model + accurate_boq_rebar + bbs_optimiser,simplified ties (rejected),incomplete (22.916 t),NOT_HELD (pack),-,NOT_HELD (pack),URBAN,RF.1 firewall,-,PRODUCTION,S4
+revision diff,"source revisions, revision delta, source_anchor",snapshot diff,-,NOT_HELD (pack),snapshotDiff.js,NOT_HELD (pack),URBAN,-,-,PRODUCTION,-
+scenario quantities,quantity_scenarios,-,-,NOT_HELD (pack),-,NOT_HELD (pack),URBAN,unique to Urban,-,PRODUCTION,-
