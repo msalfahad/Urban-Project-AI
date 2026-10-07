@@ -216,3 +216,16 @@ def test_split_views_match(occs):
     sb = rows(PKG / "STRAP_BEAM_REBAR_SUMMARY.csv")
     assert len(gb) == 59 and len(sb) == 3
     assert sum(float(r["known_kg"]) for r in gb + sb) == pytest.approx(sum(float(o["known_kg"]) for o in occs.values()))
+
+
+def test_post_freeze_comparison_is_downstream_only():
+    src = (PKG / "post_freeze_comparison.py").read_text(encoding="utf-8")
+    main = src[src.index("def main("):]
+    assert main.index("verify_freeze()") < main.index("chris(") < main.index("old_urban(")
+    s = J(PKG / "post_freeze" / "S5_POST_FREEZE_SUMMARY.json")
+    assert s["freeze_manifest_verified"] is True
+    assert set(s["class_counts_old_urban_components"]) <= set(s["classes"])
+    assert "UNKNOWN" not in s["class_counts_old_urban_components"]
+    for p in PKG.glob("*.py"):
+        if p.name != "post_freeze_comparison.py":
+            assert "post_freeze_comparison" not in p.read_text(encoding="utf-8"), p.name
