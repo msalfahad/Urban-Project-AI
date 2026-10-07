@@ -1,0 +1,45 @@
+occurrence_id,mark,component,state,what_is_missing,question_id,raw_value,candidates,known_kg
+FOCC-10F0,FN,BOXED,BLOCKED_UNQUANTIFIED,BOXED cell EMPTY (template default '3+-' cleared); whether the footing has boxed bars is not stated (pre-S4: UNRESOLVED (EMPTY CELL)),Q-R3-6,,,
+FOCC-10F8,FN,BOXED,BLOCKED_UNQUANTIFIED,BOXED cell EMPTY (template default '3+-' cleared); whether the footing has boxed bars is not stated (pre-S4: UNRESOLVED (EMPTY CELL)),Q-R3-6,,,
+FOCC-1100,FN,BOXED,BLOCKED_UNQUANTIFIED,BOXED cell EMPTY (template default '3+-' cleared); whether the footing has boxed bars is not stated (pre-S4: UNRESOLVED (EMPTY CELL)),Q-R3-6,,,
+FOCC-165C,F2,BOXED,BLOCKED_UNQUANTIFIED,BOXED '3+4': component exists (p.13 'Boxed bars.'); count / diameter / shape / length not stated anywhere (pre-S4 source exhaustion: UNRESOLVED),Q-R3-6,3+4,,
+FOCC-1663,F2,BOXED,BLOCKED_UNQUANTIFIED,BOXED '3+4': component exists (p.13 'Boxed bars.'); count / diameter / shape / length not stated anywhere (pre-S4 source exhaustion: UNRESOLVED),Q-R3-6,3+4,,
+FOCC-1664,F5,BOXED,BLOCKED_UNQUANTIFIED,BOXED '3+4': component exists (p.13 'Boxed bars.'); count / diameter / shape / length not stated anywhere (pre-S4 source exhaustion: UNRESOLVED),Q-R3-6,3+4,,
+FOCC-1665,F4,BOXED,BLOCKED_UNQUANTIFIED,BOXED '3+4': component exists (p.13 'Boxed bars.'); count / diameter / shape / length not stated anywhere (pre-S4 source exhaustion: UNRESOLVED),Q-R3-6,3+4,,
+FOCC-1666,F4,BOXED,BLOCKED_UNQUANTIFIED,BOXED '3+4': component exists (p.13 'Boxed bars.'); count / diameter / shape / length not stated anywhere (pre-S4 source exhaustion: UNRESOLVED),Q-R3-6,3+4,,
+FOCC-1667,F,BOXED,BLOCKED_UNQUANTIFIED,BOXED '3+4': component exists (p.13 'Boxed bars.'); count / diameter / shape / length not stated anywhere (pre-S4 source exhaustion: UNRESOLVED),Q-R3-6,3+4,,
+FOCC-1668,F,BOXED,BLOCKED_UNQUANTIFIED,BOXED '3+4': component exists (p.13 'Boxed bars.'); count / diameter / shape / length not stated anywhere (pre-S4 source exhaustion: UNRESOLVED),Q-R3-6,3+4,,
+FOCC-1669,F,BOXED,BLOCKED_UNQUANTIFIED,BOXED '3+4': component exists (p.13 'Boxed bars.'); count / diameter / shape / length not stated anywhere (pre-S4 source exhaustion: UNRESOLVED),Q-R3-6,3+4,,
+FOCC-166A,F,BOXED,BLOCKED_UNQUANTIFIED,BOXED '3+4': component exists (p.13 'Boxed bars.'); count / diameter / shape / length not stated anywhere (pre-S4 source exhaustion: UNRESOLVED),Q-R3-6,3+4,,
+FOCC-166B,F3,BOXED,BLOCKED_UNQUANTIFIED,BOXED '3+4': component exists (p.13 'Boxed bars.'); count / diameter / shape / length not stated anywhere (pre-S4 source exhaustion: UNRESOLVED),Q-R3-6,3+4,,
+FOCC-166C,F3,BOXED,BLOCKED_UNQUANTIFIED,BOXED '3+4': component exists (p.13 'Boxed bars.'); count / diameter / shape / length not stated anywhere (pre-S4 source exhaustion: UNRESOLVED),Q-R3-6,3+4,,
+FOCC-166D,F5,BOXED,BLOCKED_UNQUANTIFIED,BOXED '3+4': component exists (p.13 'Boxed bars.'); count / diameter / shape / length not stated anywhere (pre-S4 source exhaustion: UNRESOLVED),Q-R3-6,3+4,,
+FOCC-180C,FN,BOXED,BLOCKED_UNQUANTIFIED,BOXED cell EMPTY (template default '3+-' cleared); whether the footing has boxed bars is not stated (pre-S4: UNRESOLVED (EMPTY CELL)),Q-R3-6,,,
+FOCC-180F,F9,BOXED,BLOCKED_UNQUANTIFIED,BOXED '3+8': component exists (p.13 'Boxed bars.'); count / diameter / shape / length not stated anywhere (pre-S4 source exhaustion: UNRESOLVED),Q-R3-6,3+8,,
+FOCC-1ABF,F12,BOTTOM_SHORT,LOWER_BOUND,"[""EDGE_BAR_CONVENTION (count = ceil(rate x distribution); +1 edge bar not established)""]",,,,188.586667
+FOCC-1ABF,F12,BOTTOM_LONG,LOWER_BOUND,"[""EDGE_BAR_CONVENTION (count = ceil(rate x distribution); +1 edge bar not established)""]",,,,188.491852
+FOCC-1ABF,F12,TOP_SHORT,LOWER_BOUND,"[""EDGE_BAR_CONVENTION (count = ceil(rate x distribution); +1 edge bar not established)"", ""END_TREATMENT (straight core only; hook / bend / end leg not drawn or dimensioned)""]",,,,159.195556
+FOCC-1ABF,F12,TOP_LONG,LOWER_BOUND,"[""EDGE_BAR_CONVENTION (count = ceil(rate x distribution); +1 edge bar not established)"", ""END_TREATMENT (straight core only; hook / bend / end leg not drawn or dimensioned)""]",,,,159.776296
+FOCC-1ADB,F13,BOTTOM_SHORT,LOWER_BOUND,"[""EDGE_BAR_CONVENTION (count = ceil(rate x distribution); +1 edge bar not established)""]",,,,121.426173
+FOCC-1ADB,F13,BOTTOM_LONG,LOWER_BOUND,"[""EDGE_BAR_CONVENTION (count = ceil(rate x distribution); +1 edge bar not established)""]",,,,124.902716
+FOCC-1ADB,F13,TOP_SHORT,LOWER_BOUND,"[""EDGE_BAR_CONVENTION (count = ceil(rate x distribution); +1 edge bar not established)"", ""END_TREATMENT (straight core only; hook / bend / end leg not drawn or dimensioned)""]",,,,82.02963
+FOCC-1ADB,F13,TOP_LONG,LOWER_BOUND,"[""EDGE_BAR_CONVENTION (count = ceil(rate x distribution); +1 edge bar not established)"", ""END_TREATMENT (straight core only; hook / bend / end leg not drawn or dimensioned)""]",,,,80.529383
+FOCC-1B07,F11,BOXED,BLOCKED_UNQUANTIFIED,BOXED '3+8': component exists (p.13 'Boxed bars.'); count / diameter / shape / length not stated anywhere (pre-S4 source exhaustion: UNRESOLVED),Q-R3-6,3+8,,
+FOCC-1B19,F6,BOXED,BLOCKED_UNQUANTIFIED,BOXED '3+5': component exists (p.13 'Boxed bars.'); count / diameter / shape / length not stated anywhere (pre-S4 source exhaustion: UNRESOLVED),Q-R3-6,3+5,,
+FOCC-1B1A,F14,BOTTOM_SHORT,LOWER_BOUND,"[""EDGE_BAR_CONVENTION (count = ceil(rate x distribution); +1 edge bar not established)""]",,,,126.165926
+FOCC-1B1A,F14,BOTTOM_LONG,LOWER_BOUND,"[""EDGE_BAR_CONVENTION (count = ceil(rate x distribution); +1 edge bar not established)""]",,,,128.416296
+FOCC-1B1A,F14,TOP_SHORT,LOWER_BOUND,"[""EDGE_BAR_CONVENTION (count = ceil(rate x distribution); +1 edge bar not established)"", ""END_TREATMENT (straight core only; hook / bend / end leg not drawn or dimensioned)""]",,,,84.110617
+FOCC-1B1A,F14,TOP_LONG,LOWER_BOUND,"[""EDGE_BAR_CONVENTION (count = ceil(rate x distribution); +1 edge bar not established)"", ""END_TREATMENT (straight core only; hook / bend / end leg not drawn or dimensioned)""]",,,,84.134815
+FOCC-1B1B,F|F10,BOTTOM_SHORT,BLOCKED_UNQUANTIFIED,"occurrence SOURCE_CONFLICT: candidates ['F', 'F10'] - none is chosen",,,"[""F"", ""F10""]",
+FOCC-1B1B,F|F10,BOTTOM_LONG,BLOCKED_UNQUANTIFIED,"occurrence SOURCE_CONFLICT: candidates ['F', 'F10'] - none is chosen",,,"[""F"", ""F10""]",
+FOCC-1B1B,F|F10,BOXED,BLOCKED_UNQUANTIFIED,"occurrence SOURCE_CONFLICT: candidates ['F', 'F10'] - none is chosen",Q-R3-6,,"[""F"", ""F10""]",
+FOCC-1B24,F8,BOTTOM_SHORT,LOWER_BOUND,"[""EDGE_BAR_CONVENTION (count = ceil(rate x distribution); +1 edge bar not established)""]",,,,146.516049
+FOCC-1B24,F8,BOTTOM_LONG,LOWER_BOUND,"[""EDGE_BAR_CONVENTION (count = ceil(rate x distribution); +1 edge bar not established)""]",,,,149.443951
+FOCC-1B24,F8,TOP_SHORT,LOWER_BOUND,"[""EDGE_BAR_CONVENTION (count = ceil(rate x distribution); +1 edge bar not established)"", ""END_TREATMENT (straight core only; hook / bend / end leg not drawn or dimensioned)""]",,,,100.468148
+FOCC-1B24,F8,TOP_LONG,LOWER_BOUND,"[""EDGE_BAR_CONVENTION (count = ceil(rate x distribution); +1 edge bar not established)"", ""END_TREATMENT (straight core only; hook / bend / end leg not drawn or dimensioned)""]",,,,98.072593
+FOCC-1B2A,F15,BOXED,BLOCKED_UNQUANTIFIED,BOXED '3+4': component exists (p.13 'Boxed bars.'); count / diameter / shape / length not stated anywhere (pre-S4 source exhaustion: UNRESOLVED),Q-R3-6,3+4,,
+FOCC-1B2B,FF,BOTTOM_SHORT,LOWER_BOUND,"[""EDGE_BAR_CONVENTION (count = ceil(rate x distribution); +1 edge bar not established)""]",,,,216.277531
+FOCC-1B2B,FF,BOTTOM_LONG,LOWER_BOUND,"[""EDGE_BAR_CONVENTION (count = ceil(rate x distribution); +1 edge bar not established)""]",,,,215.841975
+FOCC-1B2B,FF,TOP_SHORT,LOWER_BOUND,"[""EDGE_BAR_CONVENTION (count = ceil(rate x distribution); +1 edge bar not established)"", ""END_TREATMENT (straight core only; hook / bend / end leg not drawn or dimensioned)""]",,,,142.426667
+FOCC-1B2B,FF,TOP_LONG,LOWER_BOUND,"[""EDGE_BAR_CONVENTION (count = ceil(rate x distribution); +1 edge bar not established)"", ""END_TREATMENT (straight core only; hook / bend / end leg not drawn or dimensioned)""]",,,,145.693333
+FOCC-1B2B,FF,OTHER_EXPLICIT_EXTRA,BLOCKED_UNQUANTIFIED,p.14 lift-footing detail: '2 Ø16' labels at the footing side / wall base - applicability (footing side bar or wall-base bar) and length not stated,S4-Q1,,,

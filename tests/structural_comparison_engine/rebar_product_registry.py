@@ -24,6 +24,7 @@ ACCURATE_MODULES = (
     "engine/source/waste_procurement.py",
     "engine/source/urban_methods_v3.py",
     "engine/source/footing_rebar_guard.py",     # pre-S4 input guard (token parity, census, BOXED); no kg
+    "engine/source/footing_rebar.py",           # S4 accurate footing rebar engine
     "engine/bbs_steel.py",
 )
 # project builders that produce accurate reinforcement registers
@@ -36,6 +37,7 @@ ACCURATE_BUILDERS = (
     "research/external_engine_lab/alsenan_v3b_struct.py",
     "research/alsenan_column_rebar_s3/build_column_rebar_s3.py",
     "research/alsenan_column_rebar_s3_1/build_column_rebar_s3_1.py",
+    "research/alsenan_footing_rebar_s4/build_footing_rebar_s4.py",
 )
 ROUGH_MODULES = (
     "engine/source/rough_rebar_sanity.py",
@@ -58,6 +60,7 @@ COMPARISON_MODULES = (                   # reference-QS / oracle comparison: nev
     "research/external_engine_lab/alsenan_b1_benchmark.py",
     "research/alsenan_rebar_truth_03/post_freeze_rebar_compare.py",
     "research/alsenan_rebar_source_exhaustion_04/post_freeze_rebar_comparison.py",
+    "research/alsenan_footing_rebar_s4/post_freeze_comparison.py",
 )
 COMPARISON_DIRS = (
     "research/alsenan_multi_engine_comparison",

@@ -1,0 +1,183 @@
+{
+ "accurate_summary": {
+  "categories": {
+   "FOUNDATIONS": {
+    "blocked_modelled_kg": 0.0,
+    "blocked_modelled_parts": 0,
+    "blocked_unquantified_parts": 24,
+    "category": "FOUNDATIONS",
+    "components": {
+     "BOXED_REBAR": {
+      "BLOCKED_UNQUANTIFIED": 21.0
+     },
+     "FOOTING_BOTTOM_LONG": {
+      "BLOCKED_UNQUANTIFIED": 1.0,
+      "LOWER_BOUND": 807.0967901234568,
+      "VERIFIED": 458.9155555555556
+     },
+     "FOOTING_BOTTOM_SHORT": {
+      "BLOCKED_UNQUANTIFIED": 1.0,
+      "LOWER_BOUND": 798.9723456790123,
+      "VERIFIED": 428.17777777777775
+     },
+     "FOOTING_TOP_LONG": {
+      "LOWER_BOUND": 568.2064197530865
+     },
+     "FOOTING_TOP_SHORT": {
+      "LOWER_BOUND": 568.2306172839507
+     },
+     "SPECIAL_DETAIL_BAR": {
+      "BLOCKED_UNQUANTIFIED": 1.0
+     }
+    },
+    "lower_bound_kg": 2742.5061728395062,
+    "lower_bound_parts": 20,
+    "official_status": "PARTIAL",
+    "projected_kg": 3629.5995061728395,
+    "provisional_kg": 0.0,
+    "provisional_parts": 0,
+    "released_kg": 3629.5995061728395,
+    "released_parts": 60,
+    "verified_kg": 887.0933333333332
+   }
+  },
+  "product": "ACCURATE_BOQ_REBAR",
+  "project": {
+   "blocked_modelled_kg": 0.0,
+   "blocked_unquantified_parts": 24,
+   "final_rebar": "FINAL_REBAR_NOT_ESTABLISHED",
+   "final_rebar_kg": null,
+   "lower_bound_kg": 2742.5061728395062,
+   "projected_kg": 3629.5995061728395,
+   "provisional_kg": 0.0,
+   "released_kg": 3629.5995061728395,
+   "verified_kg": 887.0933333333332
+  },
+  "rule": "states are never merged; an incomplete quantity is never completed by an estimate",
+  "states": [
+   "VERIFIED",
+   "LOWER_BOUND",
+   "PROVISIONAL",
+   "BLOCKED_MODELLED",
+   "BLOCKED_UNQUANTIFIED"
+  ]
+ },
+ "blocked_modelled_kg": 0.0,
+ "blocked_unquantified_component_count": 24,
+ "components_by_state": {
+  "BLOCKED_UNQUANTIFIED": 24,
+  "LOWER_BOUND": 20,
+  "NOT_APPLICABLE": 73,
+  "VERIFIED": 40
+ },
+ "conservation": {
+  "all_pass": true,
+  "checks": {
+   "accurate_summary_reconciles": true,
+   "bbs_net_kg_equals_known_parts_kg": true,
+   "blocked_components_carry_no_kg": true,
+   "component_kg_equals_occurrence_known_kg": true,
+   "component_length_equals_occurrence_known_length": true,
+   "every_required_component_once_per_occurrence": true,
+   "occurrence_kg_equals_project_known_kg": true,
+   "population_reconciles": true
+  },
+  "population_by_component_state": {
+   "BOTTOM_LONG": {
+    "BLOCKED_UNQUANTIFIED": 1,
+    "LOWER_BOUND": 5,
+    "VERIFIED": 20
+   },
+   "BOTTOM_SHORT": {
+    "BLOCKED_UNQUANTIFIED": 1,
+    "LOWER_BOUND": 5,
+    "VERIFIED": 20
+   },
+   "BOXED": {
+    "BLOCKED_UNQUANTIFIED": 21,
+    "NOT_APPLICABLE": 5
+   },
+   "OTHER_EXPLICIT_EXTRA": {
+    "BLOCKED_UNQUANTIFIED": 1
+   },
+   "STARTER_DOWEL_REFERENCE": {
+    "NOT_APPLICABLE": 26
+   },
+   "TOP_LONG": {
+    "LOWER_BOUND": 5,
+    "NOT_APPLICABLE": 21
+   },
+   "TOP_SHORT": {
+    "LOWER_BOUND": 5,
+    "NOT_APPLICABLE": 21
+   }
+  },
+  "population_by_state": {
+   "BLOCKED_UNQUANTIFIED": 24,
+   "LOWER_BOUND": 20,
+   "NOT_APPLICABLE": 73,
+   "VERIFIED": 40
+  },
+  "project_known_kg": 3629.59950617284
+ },
+ "context": {
+  "CALCULATION_ROUND": "S4",
+  "DRAWING_ID": "ST7757.dxf",
+  "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+  "ENGINE_COMMIT": "e3633af+code:0d11810b780ae8f8",
+  "PROJECT_ID": "ALSENAN-ST7757",
+  "REGISTER_VERSION": "FOOTING_REBAR_REGISTER_V1",
+  "REVISION": "ALSENAN_ST7757_DXF",
+  "unit_mass": {
+   "authority": "Urban project default (R3)",
+   "method": "D2_OVER_162"
+  }
+ },
+ "diameter_distribution": {
+  "12": {
+   "kg": 596.1422222222221,
+   "length_m": 670.6599999999999
+  },
+  "14": {
+   "kg": 2410.04987654321,
+   "length_m": 1991.98
+  },
+  "16": {
+   "kg": 623.4074074074074,
+   "length_m": 394.5
+  }
+ },
+ "f3_authority": "F3 occurrence count = 2, SOURCE_VERIFIED; the reference disagreement is a comparison / engineering flag and never changes the project-source release state",
+ "final_footing_rebar": "FINAL FOOTING REBAR NOT ESTABLISHED",
+ "headline": "KNOWN SOURCE-DERIVED FOOTING REBAR",
+ "lower_bound_known_kg": 2742.5061728395062,
+ "occurrences": 26,
+ "occurrences_by_release": {
+  "REBAR_BLOCKED": 1,
+  "REBAR_LOWER_BOUND": 25
+ },
+ "policy": "FOOTING_REBAR_S4_V1",
+ "provenance": {
+  "fields": "accurate_boq_rebar.S4_PROVENANCE_FIELDS (+ bounds on lower-bound parts)",
+  "parts": 84,
+  "validated": 84
+ },
+ "provisional_kg": 0.0,
+ "questions_open": [
+  "Q-R3-6",
+  "S4-Q1",
+  "OQ-4"
+ ],
+ "schedule_rows_without_occurrence": [
+  "F10",
+  "F7"
+ ],
+ "stamp": {
+  "CALCULATION_ROUND": "S4",
+  "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+  "ENGINE_COMMIT": "e3633af+code:0d11810b780ae8f8",
+  "REGISTER_VERSION": "FOOTING_REBAR_REGISTER_V1"
+ },
+ "total_source_derived_length_m": 3057.14,
+ "verified_kg": 887.0933333333332
+}
