@@ -29,6 +29,7 @@ There is no "total footing rebar". The known kg are a lower bound of the footing
 - **What it is not:** not an owner or consultant instruction, not a project claim, and not a conflict inside the project documents.
 - **Decision:** **F3 = 2 occurrences, SOURCE_VERIFIED**. The drawing shows outlines 166B / 166C with tags 168F / 168E, both at the scheduled 160 × 140.
 - The reference disagreement is an engineering / comparison flag. This supersedes the pre-S4 `COUNT_QUERIES`; the pre-S4 package itself is unchanged.
+- **Provenance errata (pre-S5):** the record's `project_source` sentence also cites the R9.1 donor crosswalk. The authority is the project drawing alone; see `research/pre_s5_ground_system_readiness/F3_PROVENANCE_CHECK.json`. The frozen record and quantities are unchanged.
 
 ## Occurrences and components
 

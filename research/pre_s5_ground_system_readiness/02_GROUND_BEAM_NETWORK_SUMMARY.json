@@ -1,0 +1,416 @@
+{
+ "baseline": "6b2b41b",
+ "changes": {
+  "by_cause": {
+   "ARC_OVERLAP": 2,
+   "MULTI_PARTNER_PAIRING": 13
+  },
+  "by_object": {
+   "BAND:CHANGED": 2,
+   "SPAN:CHANGED": 13
+  }
+ },
+ "conservation": {
+  "all_pass": true,
+  "every_layer1_arc_accounted": true,
+  "every_layer1_face_covered_plus_unpaired_equals_length": true,
+  "every_sheet_line_accounted": true,
+  "every_span_has_two_nodes": true,
+  "no_unexplained_change": true,
+  "old_footprint_test_reproduces_r4": true,
+  "old_reproduces_frozen_v3": true
+ },
+ "drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+ "engine_stamp": "6b2b41b+code:d4765fefe22e9c9b",
+ "network": {
+  "accepted_bands": 43,
+  "band_length_split_m": {
+   "bands": 208.129,
+   "inside_columns_or_dropped": 8.634,
+   "spans": 199.494
+  },
+  "column_intersections": 34,
+  "columns_on_sheet": 36,
+  "conflicts": [],
+  "curved_spans": 2,
+  "footing_intersections": [
+   "FOCC-165C",
+   "FOCC-1663",
+   "FOCC-1664",
+   "FOCC-1665",
+   "FOCC-1666",
+   "FOCC-1667",
+   "FOCC-1668",
+   "FOCC-1669",
+   "FOCC-166A",
+   "FOCC-166B",
+   "FOCC-166C",
+   "FOCC-166D",
+   "FOCC-180C",
+   "FOCC-180F",
+   "FOCC-1ABF",
+   "FOCC-1ADB",
+   "FOCC-1B07",
+   "FOCC-1B19",
+   "FOCC-1B1A",
+   "FOCC-1B1B",
+   "FOCC-1B24",
+   "FOCC-1B2A",
+   "FOCC-1B2B"
+  ],
+  "free_end_nodes": [
+   {
+    "end": "start",
+    "occurrence": "GSO-15D-7C8-1"
+   },
+   {
+    "end": "start",
+    "occurrence": "GSO-177-7CD-1"
+   },
+   {
+    "end": "end",
+    "occurrence": "GSO-17C-7E3-1"
+   },
+   {
+    "end": "start",
+    "occurrence": "GSO-1811-1812-1"
+   },
+   {
+    "end": "end",
+    "occurrence": "GSO-1811-1812-1"
+   },
+   {
+    "end": "start",
+    "occurrence": "GSO-7D0-FC-1"
+   },
+   {
+    "end": "start",
+    "occurrence": "GSO-7D4-F8-1"
+   }
+  ],
+  "nodes_by_kind": {
+   "BEAM_JUNCTION": 46,
+   "COLUMN": 65,
+   "FREE_END": 7
+  },
+  "physical_faces": {
+   "layer1_arcs": 4,
+   "layer1_faces_admitted": 83,
+   "rejected_by_reason": {
+    "LAYER_NOT_ADMITTED": 341,
+    "SHORT_FACE": 2
+   },
+   "sheet_lines": 253
+  },
+  "sheet_alignment_fp_gbp": {
+   "fp_columns": 36,
+   "gbp_columns": 36,
+   "max_residual_mm": 100.0,
+   "median_residual_mm": 0.0,
+   "rule": "FP and GBP sheet frames share their local origin; footing outlines are placed on the GBP sheet by that shared frame (columns agree within 5 mm except where a column is drawn at another size)",
+   "within_5mm": 29
+  },
+  "spans_touching_footings": 51,
+  "support_to_support_spans": 59,
+  "unpaired_physical_candidates": {
+   "by_reason": {
+    "NO_PARTNER": 18,
+    "UNPAIRED_SWEEP": 2
+   },
+   "count": 20,
+   "length_m": 5.407,
+   "rows": [
+    {
+     "handle": "107",
+     "kind": "LINE",
+     "length_mm": 265.0,
+     "reason": "NO_PARTNER"
+    },
+    {
+     "handle": "109",
+     "kind": "LINE",
+     "length_mm": 300.0,
+     "reason": "NO_PARTNER"
+    },
+    {
+     "handle": "10A",
+     "kind": "LINE",
+     "length_mm": 300.0,
+     "reason": "NO_PARTNER"
+    },
+    {
+     "handle": "10B",
+     "kind": "LINE",
+     "length_mm": 300.0,
+     "reason": "NO_PARTNER"
+    },
+    {
+     "handle": "136",
+     "kind": "LINE",
+     "length_mm": 300.0,
+     "reason": "NO_PARTNER"
+    },
+    {
+     "handle": "13D",
+     "kind": "LINE",
+     "length_mm": 300.0,
+     "reason": "NO_PARTNER"
+    },
+    {
+     "handle": "170",
+     "kind": "LINE",
+     "length_mm": 300.0,
+     "reason": "NO_PARTNER"
+    },
+    {
+     "handle": "170",
+     "kind": "LINE",
+     "length_mm": 300.0,
+     "reason": "NO_PARTNER"
+    },
+    {
+     "handle": "177",
+     "kind": "LINE",
+     "length_mm": 219.1,
+     "reason": "NO_PARTNER"
+    },
+    {
+     "handle": "17E",
+     "kind": "LINE",
+     "length_mm": 300.0,
+     "reason": "NO_PARTNER"
+    },
+    {
+     "handle": "17F",
+     "kind": "LINE",
+     "length_mm": 220.2,
+     "reason": "NO_PARTNER"
+    },
+    {
+     "handle": "181",
+     "kind": "LINE",
+     "length_mm": 300.0,
+     "reason": "NO_PARTNER"
+    },
+    {
+     "handle": "181",
+     "kind": "LINE",
+     "length_mm": 189.6,
+     "reason": "NO_PARTNER"
+    },
+    {
+     "handle": "1812",
+     "kind": "LINE",
+     "length_mm": 500.0,
+     "reason": "NO_PARTNER"
+    },
+    {
+     "handle": "182",
+     "kind": "LINE",
+     "length_mm": 69.9,
+     "reason": "NO_PARTNER"
+    },
+    {
+     "handle": "7D0",
+     "kind": "LINE",
+     "length_mm": 200.0,
+     "reason": "NO_PARTNER"
+    },
+    {
+     "handle": "7D4",
+     "kind": "LINE",
+     "length_mm": 70.0,
+     "reason": "NO_PARTNER"
+    },
+    {
+     "handle": "F8",
+     "kind": "LINE",
+     "length_mm": 300.0,
+     "reason": "NO_PARTNER"
+    },
+    {
+     "handle": "157",
+     "kind": "ARC",
+     "length_mm": 525.0,
+     "range_deg": [
+      96.382,
+      109.7499
+     ],
+     "reason": "UNPAIRED_SWEEP"
+    },
+    {
+     "handle": "157",
+     "kind": "ARC",
+     "length_mm": 148.5,
+     "range_deg": [
+      259.8358,
+      263.618
+     ],
+     "reason": "UNPAIRED_SWEEP"
+    }
+   ]
+  }
+ },
+ "new": {
+  "arc_bands": 2,
+  "band_length_m": 208.129,
+  "bands": 43,
+  "curved_spans": 2,
+  "exterior_spans_footprint_test": 30,
+  "exterior_spans_zone_test": 29,
+  "exterior_tests_agree": 40,
+  "multi_partner_bands": 1,
+  "span_length_m": 199.494,
+  "spans": 59,
+  "straight_bands": 41
+ },
+ "old": {
+  "arc_bands": 2,
+  "band_length_m": 207.847,
+  "bands": 43,
+  "exterior_spans": 28,
+  "reproduces_frozen_v3_register": true,
+  "span_length_m": 198.796,
+  "spans": 59,
+  "straight_bands": 41
+ },
+ "policy": {
+  "policy_id": "GROUND_BEAM_NETWORK_V1",
+  "reasons": [
+   "LAYER_NOT_ADMITTED",
+   "SHORT_FACE",
+   "NO_PARTNER",
+   "PARTNER_GAP",
+   "INTERVENING_FACE",
+   "SHARED_FACE_AMBIGUOUS",
+   "BAND_TOO_SHORT",
+   "NO_ANGULAR_OVERLAP",
+   "DUPLICATE_PARTNER"
+  ],
+  "rules": [
+   "MULTI_PARTNER_PAIRING",
+   "ARC_OVERLAP"
+  ],
+  "statement": "two faces at the beam width pair over their common extent; a face may pair with several contiguous collinear partners; arcs pair over their common angular range; every face ends covered or in the unpaired ledger with a reason"
+ },
+ "readiness": {
+  "gb_applicability": {
+   "CANDIDATE_DETAIL": 23,
+   "EXPLICIT_LENGTH_CONDITION": 16,
+   "PROJECT_GENERAL_DETAIL": 20
+  },
+  "gb_component_status": {
+   "BOTTOM_ROW_1": {
+    "BLOCKED_COMPONENT": 13,
+    "READY_LOWER_BOUND": 46
+   },
+   "BOTTOM_ROW_2": {
+    "BLOCKED_COMPONENT": 13,
+    "READY_LOWER_BOUND": 46
+   },
+   "DEVELOPMENT_INTO_SUPPORT_1": {
+    "BLOCKED_COMPONENT": 59
+   },
+   "DEVELOPMENT_INTO_SUPPORT_2": {
+    "BLOCKED_COMPONENT": 59
+   },
+   "END_TREATMENT": {
+    "BLOCKED_COMPONENT": 59
+   },
+   "END_ZONE_EXTRA": {
+    "NOT_APPLICABLE": 59
+   },
+   "HOOK_1": {
+    "BLOCKED_COMPONENT": 59
+   },
+   "HOOK_2": {
+    "BLOCKED_COMPONENT": 59
+   },
+   "LAP": {
+    "NOT_APPLICABLE": 59
+   },
+   "SIDE_BARS": {
+    "BLOCKED_COMPONENT": 39,
+    "NOT_APPLICABLE": 20
+   },
+   "STIRRUP_CORE_PATH": {
+    "BLOCKED_COMPONENT": 47,
+    "PROVISIONAL_ONLY": 12
+   },
+   "STIRRUP_COUNT": {
+    "BLOCKED_COMPONENT": 16,
+    "READY_LOWER_BOUND": 43
+   },
+   "STIRRUP_DIAMETER": {
+    "BLOCKED_COMPONENT": 16,
+    "READY": 43
+   },
+   "STIRRUP_RATE": {
+    "BLOCKED_COMPONENT": 16,
+    "READY": 43
+   },
+   "TOP_MAIN": {
+    "BLOCKED_COMPONENT": 13,
+    "READY_LOWER_BOUND": 46
+   }
+  },
+  "ground_beams": {
+   "BLOCKED_COMPONENT": 13,
+   "READY_LOWER_BOUND": 46
+  },
+  "strap_component_status": {
+   "BOTTOM_ROW_1": {
+    "BLOCKED_COMPONENT": 1,
+    "READY_LOWER_BOUND": 2
+   },
+   "BOTTOM_ROW_2": {
+    "NOT_APPLICABLE": 3
+   },
+   "DEVELOPMENT_INTO_SUPPORT_1": {
+    "BLOCKED_COMPONENT": 3
+   },
+   "DEVELOPMENT_INTO_SUPPORT_2": {
+    "BLOCKED_COMPONENT": 3
+   },
+   "END_TREATMENT": {
+    "BLOCKED_COMPONENT": 3
+   },
+   "END_ZONE_EXTRA": {
+    "NOT_APPLICABLE": 3
+   },
+   "HOOK_1": {
+    "BLOCKED_COMPONENT": 3
+   },
+   "HOOK_2": {
+    "BLOCKED_COMPONENT": 3
+   },
+   "LAP": {
+    "NOT_APPLICABLE": 3
+   },
+   "SIDE_BARS": {
+    "NOT_APPLICABLE": 3
+   },
+   "STIRRUP_CORE_PATH": {
+    "BLOCKED_COMPONENT": 3
+   },
+   "STIRRUP_COUNT": {
+    "READY_LOWER_BOUND": 3
+   },
+   "STIRRUP_DIAMETER": {
+    "READY": 3
+   },
+   "STIRRUP_RATE": {
+    "READY": 3
+   },
+   "TOP_MAIN": {
+    "BLOCKED_COMPONENT": 1,
+    "READY_LOWER_BOUND": 2
+   }
+  },
+  "straps": {
+   "BLOCKED_COMPONENT": 1,
+   "READY_LOWER_BOUND": 2
+  }
+ },
+ "rule": "segmentation counts may differ; physical conservation (every face accounted, length = covered + unpaired) is the invariant"
+}
