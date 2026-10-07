@@ -15,7 +15,7 @@ S5 must consume this round's registers and never re-parse the drawing.
 
 | Scope | Members | State S5 may give |
 |---|---|---|
-| Ground-beam longitudinal bars (TOP_MAIN, BOTTOM_ROW_1, BOTTOM_ROW_2 as separate components), straight run = `BAR_RUN_LOWER_BOUND_M` | 46 spans with `MAY_RELEASE = True`: 20 PROJECT_GENERAL_DETAIL, 16 EXPLICIT_LENGTH_CONDITION, 10 CANDIDATE_DETAIL that are candidate-invariant | LOWER_BOUND (development blocked) |
+| Ground-beam longitudinal bars (TOP_MAIN, BOTTOM_ROW_1, BOTTOM_ROW_2 as separate components), straight run = support face-to-face (superseded by PRE-S5.1 05 / 10) | 46 spans with `MAY_RELEASE = True`: 20 PROJECT_GENERAL_DETAIL, 16 EXPLICIT_LENGTH_CONDITION, 10 CANDIDATE_DETAIL that are candidate-invariant | LOWER_BOUND (development blocked) |
 | Ground-beam stirrup count | 43 spans with a single Ø8 / 150 callout | count LOWER_BOUND; mass needs the core path, so a kg is released only where the core path is established (none yet) |
 | Strap longitudinal bars (TOP, BOTTOM as one schedule total), straight run ≥ clear length between footing faces | SB1, SB3 | LOWER_BOUND |
 | Strap stirrup count | SB1, SB3 | count LOWER_BOUND (rate × clear length); mass blocked (no topology) |

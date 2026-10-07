@@ -1,27 +1,28 @@
-"""S5 ground-system rebar provenance: the S4 contract plus member-specific fields (no second system).
+"""S5 ground-system rebar provenance: the generic accurate-rebar contract plus member-specific fields (no second system).
 
-Every future S5 strap-beam / ground-beam reinforcement part carries all ``accurate_boq_rebar.S4_PROVENANCE_FIELDS``
-(drawing hash, engine / version stamp, rule, formula, state ...) and, in addition, the occurrence's physical identity:
+Every future S5 strap-beam / ground-beam reinforcement part carries the generic contract of
+``rebar_provenance`` (the S4 fields with a GENERIC identity: ELEMENT_OCCURRENCE_ID, ELEMENT_MARK, ELEMENT_FAMILY;
+drawing hash, engine / version stamp, rule, formula, states and bounds are the S4 ones) and, in addition, the
+member's physical topology:
 
-    GROUND_SYSTEM_OCCURRENCE_ID  the strap / ground-beam occurrence the part belongs to
-    START_NODE / END_NODE        the support (column / footing / beam junction / free end) at each end
+    START_NODE / END_NODE        the support (column / footing / beam junction / boundary / free end) at each end
     GEOMETRY_HANDLES             the drawn face handles the occurrence was measured from
     DETAIL_ID                    the reinforcement detail(s) applied (schedule row or typical detail claim)
     DETAIL_APPLICABILITY_STATE   how that detail was found to apply (one of DETAIL_APPLICABILITY_STATES)
 
-``validate_s5_part`` runs the S4 validator unchanged and then checks the extra fields. A part whose detail
-applicability is only a candidate / conflict / absent can never carry a released quantity.
+A ground beam / strap is never identified through the S4 footing slots: ``validate_s5_part`` runs
+``rebar_provenance.validate_part`` (which rejects any FOOTING_* key on a non-footing family) and then checks the
+member fields. A part whose detail applicability is only a candidate / conflict / absent can never carry a released
+quantity.
 """
 
 from __future__ import annotations
 
-from engine.source import accurate_boq_rebar as AR
+from engine.source import rebar_provenance as RP
 
-S5_EXTRA_FIELDS = ("GROUND_SYSTEM_OCCURRENCE_ID", "MEMBER_MARK", "START_NODE", "END_NODE", "GEOMETRY_HANDLES",
-                   "DETAIL_ID", "DETAIL_APPLICABILITY_STATE")
-# the S4 contract names its member identity after footings; an S5 part fills those two slots from its own identity
-IDENTITY_SLOTS = {"FOOTING_OCCURRENCE_ID": "GROUND_SYSTEM_OCCURRENCE_ID", "FOOTING_MARK": "MEMBER_MARK"}
-S5_PROVENANCE_FIELDS = tuple(f for f in AR.S4_PROVENANCE_FIELDS if f not in IDENTITY_SLOTS) + S5_EXTRA_FIELDS
+S5_FAMILIES = ("GROUND_BEAM", "STRAP_BEAM")
+S5_EXTRA_FIELDS = ("START_NODE", "END_NODE", "GEOMETRY_HANDLES", "DETAIL_ID", "DETAIL_APPLICABILITY_STATE")
+S5_PROVENANCE_FIELDS = RP.BASE_FIELDS + S5_EXTRA_FIELDS
 # S5 component -> registered accurate component
 ACCURATE_COMPONENT = {
     ("GROUND_BEAM", "TOP_MAIN"): "BEAM_TOP_BAR", ("GROUND_BEAM", "BOTTOM_ROW_1"): "BEAM_BOTTOM_BAR",
@@ -39,20 +40,18 @@ DETAIL_APPLICABILITY_STATES = ("EXPLICIT_MARK_MATCH", "EXPLICIT_LOCAL_DETAIL", "
 # applicability states under which a component may carry a released (verified / lower-bound) quantity
 RELEASING_APPLICABILITY = ("EXPLICIT_MARK_MATCH", "EXPLICIT_LOCAL_DETAIL", "EXPLICIT_LENGTH_CONDITION",
                            "EXPLICIT_SECTION_MATCH", "PROJECT_GENERAL_DETAIL")
-NODE_KINDS = ("COLUMN", "FOOTING", "BEAM_JUNCTION", "CONTINUATION", "FREE_END")
+NODE_KINDS = ("COLUMN", "FOOTING", "BEAM_JUNCTION", "CONTINUATION", "BOUNDARY", "FREE_END")
 READINESS = ("READY", "READY_LOWER_BOUND", "PROVISIONAL_ONLY", "BLOCKED_COMPONENT", "NO_APPLICABLE_DETAIL",
              "NOT_APPLICABLE")
 
 
 def validate_s5_part(part: dict) -> dict:
-    """S4 contract + S5 member fields. Raises ValueError on any gap."""
+    """Generic contract (rebar_provenance) + S5 member fields. Raises ValueError on any gap."""
     prov = part.get("provenance") or {}
-    view = dict(prov)
-    for slot, own in IDENTITY_SLOTS.items():
-        if slot in prov and prov[slot] != prov.get(own):
-            raise ValueError(f"{part.get('part_id')}: {slot} must equal {own} on an S5 part")
-        view[slot] = prov.get(own)
-    AR.validate_s4_part(dict(part, provenance=view))
+    RP.validate_part(part)
+    fam = RP.element_identity(prov)["ELEMENT_FAMILY"]
+    if fam not in S5_FAMILIES:
+        raise ValueError(f"{part.get('part_id')}: an S5 part is a {S5_FAMILIES} element, not {fam}")
     missing = [f for f in S5_EXTRA_FIELDS if prov.get(f) in (None, "", [])]
     if missing:
         raise ValueError(f"{part.get('part_id')}: S5 provenance fields missing {missing}")
@@ -76,21 +75,28 @@ def may_release(applicability: str, *, candidate_invariant: bool = False) -> boo
     return applicability == "CANDIDATE_DETAIL" and candidate_invariant
 
 
-def template(*, occurrence_id, mark, start_node, end_node, handles, detail_id, applicability, context) -> dict:
+def template(*, family, occurrence_id, mark, start_node, end_node, handles, detail_id, applicability,
+             context) -> dict:
     """The provenance fields an S5 part can carry before any calculation (context = drawing / engine / register
-    stamp shared with S4)."""
+    stamp shared with S4). The identity is generic (ELEMENT_*); no FOOTING_* key is ever written for a beam."""
+    if family not in S5_FAMILIES:
+        raise ValueError(f"an S5 template is a {S5_FAMILIES} element, not {family!r}")
     t = {k: context.get(k) for k in ("PROJECT_ID", "REVISION", "DRAWING_ID", "DRAWING_SHA", "ENGINE_COMMIT",
                                      "REGISTER_VERSION", "CALCULATION_ROUND")}
-    t.update(GROUND_SYSTEM_OCCURRENCE_ID=occurrence_id, MEMBER_MARK=mark, START_NODE=start_node, END_NODE=end_node,
-             GEOMETRY_HANDLES=list(handles), DETAIL_ID=detail_id, DETAIL_APPLICABILITY_STATE=applicability)
+    t.update(RP.identity_fields(family=family, occurrence_id=occurrence_id, mark=mark))
+    t.update(START_NODE=start_node, END_NODE=end_node, GEOMETRY_HANDLES=list(handles), DETAIL_ID=detail_id,
+             DETAIL_APPLICABILITY_STATE=applicability)
     return t
 
 
 def provenance_ready(t: dict) -> bool:
-    """True when every pre-calculation provenance field is known (drawing / engine stamp, occurrence, both nodes,
-    geometry handles, detail id(s) and applicability state). Whether the part may RELEASE is may_release()."""
-    need = ("DRAWING_SHA", "ENGINE_COMMIT", "REGISTER_VERSION", "GROUND_SYSTEM_OCCURRENCE_ID", "MEMBER_MARK",
-            "GEOMETRY_HANDLES", "DETAIL_ID", "DETAIL_APPLICABILITY_STATE")
+    """True when every pre-calculation provenance field is known (drawing / engine stamp, generic identity, both
+    nodes, geometry handles, detail id(s) and applicability state) and no footing slot is used for the member.
+    Whether the part may RELEASE is may_release()."""
+    need = ("DRAWING_SHA", "ENGINE_COMMIT", "REGISTER_VERSION", "ELEMENT_OCCURRENCE_ID", "ELEMENT_MARK",
+            "ELEMENT_FAMILY", "GEOMETRY_HANDLES", "DETAIL_ID", "DETAIL_APPLICABILITY_STATE")
+    if any(k in t for k in RP.FOOTING_ALIASES) or t.get("ELEMENT_FAMILY") not in S5_FAMILIES:
+        return False
     return all(t.get(k) not in (None, "", []) for k in need) and \
         t["DETAIL_APPLICABILITY_STATE"] in DETAIL_APPLICABILITY_STATES and \
         all(isinstance(t.get(k), dict) and t[k].get("kind") in NODE_KINDS for k in ("START_NODE", "END_NODE"))

@@ -201,7 +201,7 @@ def test_f3_provenance_is_the_drawing_not_a_donor():
 
 # ------------------------------------------------------------------ provenance contract
 def _part(**kw):
-    prov = GP.template(occurrence_id="GSO-X", mark="GB", start_node={"kind": "COLUMN", "refs": ["C1"]},
+    prov = GP.template(family="GROUND_BEAM", occurrence_id="GSO-X", mark="GB", start_node={"kind": "COLUMN", "refs": ["C1"]},
                        end_node={"kind": "BEAM_JUNCTION", "refs": ["B2"]}, handles=["A", "B"],
                        detail_id=["P13-GB-LT5M"], applicability=kw.pop("app", "EXPLICIT_LENGTH_CONDITION"),
                        context={"PROJECT_ID": "P", "REVISION": "R", "DRAWING_ID": "D.dxf", "DRAWING_SHA": "a" * 64,
@@ -218,6 +218,7 @@ def _part(**kw):
 
 def test_s5_provenance_reuses_the_s4_contract():
     GP.validate_s5_part(_part())
+    assert not any(k.startswith("FOOTING_") for k in _part()["provenance"])   # generic identity (PRE-S5.1)
     with pytest.raises(ValueError):
         GP.validate_s5_part(_part(prov={"DRAWING_SHA": "nope"}))                 # S4 rule still applies
     with pytest.raises(ValueError):
@@ -234,7 +235,8 @@ def test_every_occurrence_has_a_complete_provenance_template():
     t = J("S5_PROVENANCE_TEMPLATES.json")
     assert t["context"]["DRAWING_SHA"] == DXF_SHA
     ids = {r["OCCURRENCE_ID"] for r in rows("06_GROUND_SYSTEM_REBAR_READINESS_MATRIX.csv")}
-    assert {x["GROUND_SYSTEM_OCCURRENCE_ID"] for x in t["templates"]} == ids
+    assert {x["ELEMENT_OCCURRENCE_ID"] for x in t["templates"]} == ids
+    assert not any(k.startswith("FOOTING_") for x in t["templates"] for k in x)
     assert all(GP.provenance_ready(x) for x in t["templates"])
 
 

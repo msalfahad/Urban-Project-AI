@@ -26,7 +26,9 @@ ACCURATE_MODULES = (
     "engine/source/footing_rebar_guard.py",     # pre-S4 input guard (token parity, census, BOXED); no kg
     "engine/source/footing_rebar.py",           # S4 accurate footing rebar engine
     "engine/source/ground_beam_network.py",     # pre-S5 ground-beam physical network (geometry only, no kg)
-    "engine/source/ground_system_provenance.py",  # S5 provenance = S4 contract + member fields
+    "engine/source/ground_system_provenance.py",  # S5 provenance = generic contract + member fields
+    "engine/source/rebar_provenance.py",        # generic accurate-rebar provenance (ELEMENT_* identity)
+    "engine/source/ground_system_resolution.py",  # pre-S5.1 source-resolution decisions (no geometry, no kg)
     "engine/bbs_steel.py",
 )
 # project builders that produce accurate reinforcement registers
@@ -41,6 +43,7 @@ ACCURATE_BUILDERS = (
     "research/alsenan_column_rebar_s3_1/build_column_rebar_s3_1.py",
     "research/alsenan_footing_rebar_s4/build_footing_rebar_s4.py",
     "research/pre_s5_ground_system_readiness/build_pre_s5.py",
+    "research/pre_s5_1_source_resolution/build_pre_s5_1.py",
 )
 ROUGH_MODULES = (
     "engine/source/rough_rebar_sanity.py",

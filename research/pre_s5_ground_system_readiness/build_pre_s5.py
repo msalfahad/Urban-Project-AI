@@ -573,8 +573,8 @@ def readiness_gb(occ, app, lib, rules):
                   "DEVELOPMENT_INTO_SUPPORT_1", "DEVELOPMENT_INTO_SUPPORT_2", "LAP"):
             comp[k] = ("NO_APPLICABLE_DETAIL", None, "no applicable detail")
         return comp
-    straight = (f"straight run >= {occ['bar_run_lb_m']:.3f} m (the shorter of clear span / support centreline, "
-                "source geometry); development / end anchorage not source-established")
+    straight = ("straight run: support face-to-face, derived per span in PRE-S5.1 (research/pre_s5_1_source_resolution, "
+                "no numerical-minimum shortcut); development / end anchorage not source-established")
     for k, f in (("TOP_MAIN", lambda d: d["top"]), ("BOTTOM_ROW_1", lambda d: d["rows"][0]),
                  ("BOTTOM_ROW_2", lambda d: d["rows"][1])):
         vals = [f(d) for d in C]
@@ -916,10 +916,9 @@ def _main(dxf, work, V3S):
                "cc_m": topo["cc_mm"] / 1000 if topo["cc_mm"] is not None else None,
                "exterior_zone_test": bool(sp["exterior"]), "exterior_footprint_test": bool(ext_b), "topo": topo,
                "width_mm": (sp["b"]["gn"]["width"] if "gn" in sp["b"] else WIDTH)}
-        occ["bar_run_lb_m"] = min(v for v in (occ["clear_m"], occ["cc_m"]) if v is not None)
         occ["length_flags"] = (["CLEAR_EXCEEDS_SUPPORT_CENTRELINE: a support column does not cut the full band width "
-                                "(narrower / offset column, V3 piece-extent convention); the bar-run lower bound uses "
-                                "the shorter basis"] if occ["cc_m"] is not None and occ["cc_m"] < occ["clear_m"] - 1e-6
+                                "(narrower / offset column, V3 piece-extent convention); not resolved by a numerical "
+                                "minimum - see PRE-S5.1 LENGTH_GEOMETRY_CONFLICT"] if occ["cc_m"] is not None and occ["cc_m"] < occ["clear_m"] - 1e-6
                                else [])
         occ["app"] = applicability(occ, lib)
         occ["app"]["flags"] += occ["length_flags"]
@@ -1032,7 +1031,6 @@ def _main(dxf, work, V3S):
         det_rows.append({
             "OCCURRENCE_ID": o["occ_id"], "BAND_HANDLES": o["handles"], "KIND": o["kind"], "PAIRING_RULE": o["rule"],
             "CLEAR_LENGTH_M": r3(o["clear_m"]), "SUPPORT_CENTRELINE_LENGTH_M": r3(o["cc_m"]),
-            "BAR_RUN_LOWER_BOUND_M": r3(o["bar_run_lb_m"]),
             "START_SUPPORT": {k: o["topo"]["start"][k] for k in ("kind", "refs")},
             "END_SUPPORT": {k: o["topo"]["end"][k] for k in ("kind", "refs")},
             "INTERMEDIATE_JUNCTIONS": o["topo"]["intermediate"], "FOOTINGS_TOUCHED": o["topo"]["footings"],
@@ -1104,7 +1102,7 @@ def _main(dxf, work, V3S):
 
     for o in occs:
         a = o["app"]
-        t = GP.template(occurrence_id=o["occ_id"], mark="GB (typical p.13)", start_node=node(o["topo"]["start"]),
+        t = GP.template(family="GROUND_BEAM", occurrence_id=o["occ_id"], mark="GB (typical p.13)", start_node=node(o["topo"]["start"]),
                         end_node=node(o["topo"]["end"]), handles=o["handles"], detail_id=a["candidates"],
                         applicability=a["state"], context=context)
         ready = GP.provenance_ready(t)
@@ -1115,7 +1113,7 @@ def _main(dxf, work, V3S):
                 "MARK": "untagged (p.13 typical sections)",
                 "LENGTH_SOURCE": f"DXF GBP layer-1 face pair, clear between supports {o['clear_m']:.3f} m"
                                  + (f"; support centreline {o['cc_m']:.3f} m" if o["cc_m"] is not None else "")
-                                 + f"; bar-run lower bound {o['bar_run_lb_m']:.3f} m",
+                                 + "; bar run: PRE-S5.1 support face-to-face",
                 "WIDTH_SOURCE": f"DXF face separation {o['width_mm']:.0f} mm = section B 300",
                 "DEPTH_SOURCE": ("FOLLOW ARCH. (not printed)" if exterior and len(a["candidates"]) == 1 else
                                  f"p.13 section D candidates: {depth}" if a["candidates"] else "none"),
@@ -1135,7 +1133,7 @@ def _main(dxf, work, V3S):
                             GP.may_release(a["state"], candidate_invariant=inv)))
     for st in straps:
         rows_def = st["_rows"]
-        t = GP.template(occurrence_id=st["STRAP_OCCURRENCE_ID"], mark=st["MARK"], start_node=node(st["START_SUPPORT"]),
+        t = GP.template(family="STRAP_BEAM", occurrence_id=st["STRAP_OCCURRENCE_ID"], mark=st["MARK"], start_node=node(st["START_SUPPORT"]),
                         end_node=node(st["END_SUPPORT"]),
                         handles=st["SOURCE_HANDLES"], detail_id=[f"SBT:{r['insert']}" for r in rows_def],
                         applicability=st["app_state"], context=context)

@@ -21,7 +21,7 @@
   "old_reproduces_frozen_v3": true
  },
  "drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
- "engine_stamp": "6b2b41b+code:d4765fefe22e9c9b",
+ "engine_stamp": "6b2b41b+code:9b2e5732c1c2bb3a",
  "network": {
   "accepted_bands": 43,
   "band_length_split_m": {

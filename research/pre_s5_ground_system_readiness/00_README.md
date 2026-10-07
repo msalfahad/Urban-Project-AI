@@ -125,7 +125,7 @@ The p.8 starter-development note (70Ø / 40Ø) applies to starters only. Note 21
 
 - **Occurrence status:** 46 READY_LOWER_BOUND, 13 BLOCKED_COMPONENT. No occurrence is READY or NO_DETAIL.
 - **Why 13 are blocked:** the candidate details disagree on the bars, 3Ø14 versus 3Ø16, so exterior-versus-interior must be resolved first.
-- **Bar-run lower bound:** the shorter of clear span and support centreline. Two spans whose column does not cut the full band are flagged.
+- **Bar-run lower bound:** withdrawn (see Errata: PRE-S5.1 support face-to-face run).
 
 ### Straps (3 occurrences)
 
@@ -166,3 +166,14 @@ Every occurrence has a complete S5 provenance template (`S5_PROVENANCE_TEMPLATES
 | 06_GROUND_SYSTEM_REBAR_READINESS_MATRIX.csv | occurrence × component readiness (S5_STATUS, MAY_RELEASE) |
 | 07_PRE_S5_ENGINEERING_QUESTIONS.md / 08_S5_SCOPE_RECOMMENDATION.md | questions / safe S5 scope |
 | F3_PROVENANCE_CHECK.json, S5_PROVENANCE_TEMPLATES.json, INDEX.json | F3 check, templates, hashes |
+
+## Errata (PRE-S5.1, `research/pre_s5_1_source_resolution`)
+
+- **Bar-run lower bound.** The "shorter of clear span and support centreline" bar run (§5) is withdrawn. It was a
+  numerical minimum of two different bases. PRE-S5.1 stores the member centreline, the clear concrete length and the
+  support face-to-face run separately. The straight-bar lower bound is the face-to-face run on the bar lines;
+  contradictions are LENGTH_GEOMETRY_CONFLICT.
+- **Provenance identity.** The S5 templates here now carry the generic `ELEMENT_OCCURRENCE_ID / ELEMENT_MARK /
+  ELEMENT_FAMILY` (`engine/source/rebar_provenance.py`). The beam id is no longer placed in the S4 `FOOTING_*` slots,
+  and a `FOOTING_*` key on a beam is rejected.
+- No status in this package changed. The PRE-S5.1 readiness matrix supersedes 06 for S5.
