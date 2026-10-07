@@ -12,4 +12,11 @@ Baseline `445dd1d`.
 
 ## Full suite
 
-See the section below (added once the run completes).
+`python3 -m pytest -rs` from the tree built on `445dd1d`, with every change of this round present:
+
+**6353 passed, 4 skipped, 100 xfailed, 0 failed, 0 errors (308 s).**
+
+The 4 skips were already skipped before this round:
+- `r8_4` real-source row (URBAN_R8_REAL_SOURCE unset);
+- the R9.1 rebuild (needs the Chris dataset);
+- 2 × QS_MEASUREMENT_REGION_BUILDER placeholders.
