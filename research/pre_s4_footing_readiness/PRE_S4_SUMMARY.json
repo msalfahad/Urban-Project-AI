@@ -1,0 +1,1404 @@
+{
+ "baseline": "445dd1d",
+ "block_templates": {
+  "FT": {
+   "attdefs": [
+    {
+     "default": "F",
+     "tag": "FO-TY",
+     "x": 221.0,
+     "y": -378.4
+    },
+    {
+     "default": "-",
+     "tag": "W",
+     "x": 1485.6,
+     "y": -344.1
+    },
+    {
+     "default": "-",
+     "tag": "H",
+     "x": 2922.1,
+     "y": -344.1
+    },
+    {
+     "default": "-",
+     "tag": "DEPHT",
+     "x": 4392.9,
+     "y": -344.1
+    },
+    {
+     "default": "-",
+     "tag": "SH-B",
+     "x": 5876.5,
+     "y": -344.1
+    },
+    {
+     "default": "12",
+     "tag": "SH-D",
+     "x": 6517.0,
+     "y": -344.1
+    },
+    {
+     "default": "-",
+     "tag": "LO-B",
+     "x": 8136.4,
+     "y": -344.1
+    },
+    {
+     "default": "12",
+     "tag": "LO-D",
+     "x": 8776.3,
+     "y": -344.1
+    },
+    {
+     "default": "3+-",
+     "tag": "BOXED",
+     "x": 10378.7,
+     "y": -344.1
+    }
+   ],
+   "glyphs": [
+    {
+     "text": "%%C",
+     "x": 6221.0,
+     "y": -330.9
+    },
+    {
+     "text": "%%C",
+     "x": 8483.4,
+     "y": -330.9
+    }
+   ]
+  },
+  "FTB": {
+   "attdefs": [
+    {
+     "default": "-",
+     "tag": "FO-TY",
+     "x": 221.0,
+     "y": -636.7
+    },
+    {
+     "default": "-",
+     "tag": "W",
+     "x": 1485.6,
+     "y": -602.4
+    },
+    {
+     "default": "-",
+     "tag": "H",
+     "x": 2922.1,
+     "y": -602.4
+    },
+    {
+     "default": "-",
+     "tag": "DEPHT",
+     "x": 4392.9,
+     "y": -602.4
+    },
+    {
+     "default": "-",
+     "tag": "SH-T-B",
+     "x": 5756.3,
+     "y": -344.1
+    },
+    {
+     "default": "16/m",
+     "tag": "SH-T-D",
+     "x": 6396.9,
+     "y": -344.1
+    },
+    {
+     "default": "-",
+     "tag": "LO-T-B",
+     "x": 8016.2,
+     "y": -344.1
+    },
+    {
+     "default": "16/m",
+     "tag": "LO-T-D",
+     "x": 8656.1,
+     "y": -344.1
+    },
+    {
+     "default": "-",
+     "tag": "SH-B-B",
+     "x": 5756.3,
+     "y": -882.9
+    },
+    {
+     "default": "16/m",
+     "tag": "SH-B-D",
+     "x": 6396.9,
+     "y": -882.9
+    },
+    {
+     "default": "-",
+     "tag": "LO-B-B",
+     "x": 8016.2,
+     "y": -882.9
+    },
+    {
+     "default": "16/m",
+     "tag": "LO-B-D",
+     "x": 8656.1,
+     "y": -882.9
+    },
+    {
+     "default": "TOP",
+     "tag": "BOXED-T",
+     "x": 10378.7,
+     "y": -344.1
+    },
+    {
+     "default": "BOT",
+     "tag": "BOXED-B",
+     "x": 10378.7,
+     "y": -841.0
+    }
+   ],
+   "glyphs": [
+    {
+     "text": "%%C",
+     "x": 6100.9,
+     "y": -330.9
+    },
+    {
+     "text": "%%C",
+     "x": 8363.3,
+     "y": -330.9
+    },
+    {
+     "text": "%%C",
+     "x": 6100.9,
+     "y": -916.7
+    },
+    {
+     "text": "%%C",
+     "x": 8363.3,
+     "y": -916.7
+    }
+   ]
+  }
+ },
+ "boxed": {
+  "component_existence": "SOURCE_EXPLICIT",
+  "diagnostics": {
+   "L_range_by_n2": {
+    "4": [
+     90.0,
+     240.0
+    ],
+    "5": [
+     260.0,
+     280.0
+    ],
+    "6": [
+     300.0,
+     300.0
+    ],
+    "8": [
+     340.0,
+     350.0
+    ]
+   },
+   "bar_direction_check": {
+    "F": [
+     10.9,
+     11.0
+    ],
+    "F10": [
+     14.0,
+     14.0
+    ],
+    "F11": [
+     10.8,
+     10.5
+    ],
+    "F15": [
+     11.9,
+     12.3
+    ],
+    "F2": [
+     14.7,
+     13.0
+    ],
+    "F3": [
+     20.9,
+     18.0
+    ],
+    "F4": [
+     12.1,
+     11.6
+    ],
+    "F5": [
+     10.8,
+     10.3
+    ],
+    "F6": [
+     10.7,
+     9.8
+    ],
+    "F7": [
+     12.4,
+     11.8
+    ],
+    "F9": [
+     12.1,
+     11.1
+    ]
+   },
+   "bar_direction_check_if_reversed": {
+    "F": [
+     9.4,
+     12.7
+    ],
+    "F10": [
+     6.6,
+     29.6
+    ],
+    "F11": [
+     4.4,
+     25.8
+    ],
+    "F15": [
+     6.1,
+     23.7
+    ],
+    "F2": [
+     13.0,
+     14.7
+    ],
+    "F3": [
+     18.0,
+     20.9
+    ],
+    "F4": [
+     10.9,
+     12.9
+    ],
+    "F5": [
+     9.3,
+     11.9
+    ],
+    "F6": [
+     9.0,
+     11.7
+    ],
+    "F7": [
+     10.3,
+     14.3
+    ],
+    "F9": [
+     9.5,
+     14.2
+    ]
+   },
+   "bar_direction_note": "spacing (cm) = (distribution length - 2 x 7 cm cover) / (count - 1); SHORT bars distributed along L and LONG bars along W give near-equal spacing both ways on every FT type; the reversed reading does not",
+   "monotone_non_decreasing_in": {
+    "D_cm": false,
+    "L_cm": true,
+    "W_cm": false
+   },
+   "n1_values": [
+    3
+   ],
+   "rows": [
+    {
+     "D_cm": 30.0,
+     "L_cm": 90.0,
+     "W_cm": 80.0,
+     "area_m2": 0.72,
+     "boxed": "3+4",
+     "columns": "C",
+     "columns_per_footing": 1,
+     "dia_mm": 12,
+     "element": "FOOTING",
+     "long": "7Ø12",
+     "long_count": 7,
+     "mark": "F",
+     "n1": 3,
+     "n2": 4,
+     "occurrences": 4,
+     "position": "CORNER/EDGE/INTERNAL",
+     "s_long_cm": 11.0,
+     "s_long_if_reversed_cm": 12.7,
+     "s_short_cm": 10.9,
+     "s_short_if_reversed_cm": 9.4,
+     "short": "8Ø12",
+     "short_count": 8
+    },
+    {
+     "D_cm": 35.0,
+     "L_cm": 190.0,
+     "W_cm": 170.0,
+     "area_m2": 3.23,
+     "boxed": "3+4",
+     "columns": "C2",
+     "columns_per_footing": 1,
+     "dia_mm": 12,
+     "element": "FOOTING",
+     "long": "13Ø12",
+     "long_count": 13,
+     "mark": "F2",
+     "n1": 3,
+     "n2": 4,
+     "occurrences": 2,
+     "position": "EDGE",
+     "s_long_cm": 13.0,
+     "s_long_if_reversed_cm": 14.7,
+     "s_short_cm": 14.7,
+     "s_short_if_reversed_cm": 13.0,
+     "short": "13Ø12",
+     "short_count": 13
+    },
+    {
+     "D_cm": 30.0,
+     "L_cm": 160.0,
+     "W_cm": 140.0,
+     "area_m2": 2.24,
+     "boxed": "3+4",
+     "columns": "C3",
+     "columns_per_footing": 1,
+     "dia_mm": 12,
+     "element": "FOOTING",
+     "long": "8Ø12",
+     "long_count": 8,
+     "mark": "F3",
+     "n1": 3,
+     "n2": 4,
+     "occurrences": 2,
+     "position": "EDGE/INTERNAL",
+     "s_long_cm": 18.0,
+     "s_long_if_reversed_cm": 20.9,
+     "s_short_cm": 20.9,
+     "s_short_if_reversed_cm": 18.0,
+     "short": "8Ø12",
+     "short_count": 8
+    },
+    {
+     "D_cm": 40.0,
+     "L_cm": 220.0,
+     "W_cm": 200.0,
+     "area_m2": 4.4,
+     "boxed": "3+4",
+     "columns": "C4/CN",
+     "columns_per_footing": 2,
+     "dia_mm": 12,
+     "element": "FOOTING",
+     "long": "17Ø12",
+     "long_count": 17,
+     "mark": "F4",
+     "n1": 3,
+     "n2": 4,
+     "occurrences": 2,
+     "position": "CORNER/EDGE",
+     "s_long_cm": 11.6,
+     "s_long_if_reversed_cm": 12.9,
+     "s_short_cm": 12.1,
+     "s_short_if_reversed_cm": 10.9,
+     "short": "18Ø12",
+     "short_count": 18
+    },
+    {
+     "D_cm": 40.0,
+     "L_cm": 240.0,
+     "W_cm": 210.0,
+     "area_m2": 5.04,
+     "boxed": "3+4",
+     "columns": "C5",
+     "columns_per_footing": 1,
+     "dia_mm": 12,
+     "element": "FOOTING",
+     "long": "20Ø12",
+     "long_count": 20,
+     "mark": "F5",
+     "n1": 3,
+     "n2": 4,
+     "occurrences": 2,
+     "position": "EDGE",
+     "s_long_cm": 10.3,
+     "s_long_if_reversed_cm": 11.9,
+     "s_short_cm": 10.8,
+     "s_short_if_reversed_cm": 9.3,
+     "short": "22Ø12",
+     "short_count": 22
+    },
+    {
+     "D_cm": 50.0,
+     "L_cm": 260.0,
+     "W_cm": 220.0,
+     "area_m2": 5.72,
+     "boxed": "3+5",
+     "columns": "C6",
+     "columns_per_footing": 1,
+     "dia_mm": 12,
+     "element": "FOOTING",
+     "long": "22Ø12",
+     "long_count": 22,
+     "mark": "F6",
+     "n1": 3,
+     "n2": 5,
+     "occurrences": 1,
+     "position": "INTERNAL",
+     "s_long_cm": 9.8,
+     "s_long_if_reversed_cm": 11.7,
+     "s_short_cm": 10.7,
+     "s_short_if_reversed_cm": 9.0,
+     "short": "24Ø12",
+     "short_count": 24
+    },
+    {
+     "D_cm": 50.0,
+     "L_cm": 300.0,
+     "W_cm": 250.0,
+     "area_m2": 7.5,
+     "boxed": "3+6",
+     "columns": "-",
+     "columns_per_footing": 0,
+     "dia_mm": 14,
+     "element": "FOOTING",
+     "long": "21Ø14",
+     "long_count": 21,
+     "mark": "F7",
+     "n1": 3,
+     "n2": 6,
+     "occurrences": 0,
+     "position": "-",
+     "s_long_cm": 11.8,
+     "s_long_if_reversed_cm": 14.3,
+     "s_short_cm": 12.4,
+     "s_short_if_reversed_cm": 10.3,
+     "short": "24Ø14",
+     "short_count": 24
+    },
+    {
+     "D_cm": 55.0,
+     "L_cm": 340.0,
+     "W_cm": 270.0,
+     "area_m2": 9.18,
+     "boxed": "3+8",
+     "columns": "C9",
+     "columns_per_footing": 1,
+     "dia_mm": 14,
+     "element": "FOOTING",
+     "long": "24Ø14",
+     "long_count": 24,
+     "mark": "F9",
+     "n1": 3,
+     "n2": 8,
+     "occurrences": 1,
+     "position": "INTERNAL",
+     "s_long_cm": 11.1,
+     "s_long_if_reversed_cm": 14.2,
+     "s_short_cm": 12.1,
+     "s_short_if_reversed_cm": 9.5,
+     "short": "28Ø14",
+     "short_count": 28
+    },
+    {
+     "D_cm": 50.0,
+     "L_cm": 280.0,
+     "W_cm": 140.0,
+     "area_m2": 3.92,
+     "boxed": "3+5",
+     "columns": "-",
+     "columns_per_footing": 0,
+     "dia_mm": 14,
+     "element": "FOOTING",
+     "long": "10Ø14",
+     "long_count": 10,
+     "mark": "F10",
+     "n1": 3,
+     "n2": 5,
+     "occurrences": 0,
+     "position": "-",
+     "s_long_cm": 14.0,
+     "s_long_if_reversed_cm": 29.6,
+     "s_short_cm": 14.0,
+     "s_short_if_reversed_cm": 6.6,
+     "short": "20Ø14",
+     "short_count": 20
+    },
+    {
+     "D_cm": 50.0,
+     "L_cm": 350.0,
+     "W_cm": 150.0,
+     "area_m2": 5.25,
+     "boxed": "3+8",
+     "columns": "C11",
+     "columns_per_footing": 1,
+     "dia_mm": 14,
+     "element": "FOOTING",
+     "long": "14Ø14",
+     "long_count": 14,
+     "mark": "F11",
+     "n1": 3,
+     "n2": 8,
+     "occurrences": 1,
+     "position": "EDGE",
+     "s_long_cm": 10.5,
+     "s_long_if_reversed_cm": 25.8,
+     "s_short_cm": 10.8,
+     "s_short_if_reversed_cm": 4.4,
+     "short": "32Ø14",
+     "short_count": 32
+    },
+    {
+     "D_cm": 40.0,
+     "L_cm": 180.0,
+     "W_cm": 100.0,
+     "area_m2": 1.8,
+     "boxed": "3+4",
+     "columns": "C3",
+     "columns_per_footing": 1,
+     "dia_mm": 12,
+     "element": "FOOTING",
+     "long": "8Ø12",
+     "long_count": 8,
+     "mark": "F15",
+     "n1": 3,
+     "n2": 4,
+     "occurrences": 1,
+     "position": "EDGE",
+     "s_long_cm": 12.3,
+     "s_long_if_reversed_cm": 23.7,
+     "s_short_cm": 11.9,
+     "s_short_if_reversed_cm": 6.1,
+     "short": "15Ø12",
+     "short_count": 15
+    }
+   ],
+   "spearman_n2_vs": {
+    "D_cm": 0.891,
+    "L_cm": 0.912,
+    "W_cm": 0.52,
+    "area_m2": 0.787,
+    "dia_mm": 0.885,
+    "long_count": 0.594,
+    "short_count": 0.869
+   },
+   "status": "DIAGNOSTIC_ONLY - correlation is not authority; no rule is promoted"
+  },
+  "hypotheses": {
+   "H1": "'3+n' = 3 bars in one plan direction + n bars in the other (a two-direction box cage)",
+   "H2": "'3+n' = 3 boxed bars + n of something else (e.g. side / face bars) on the same cage",
+   "H3": "'3+n' = 3 bars of diameter n mm",
+   "H4": "'n' is a spacing / count per metre",
+   "H5": "'3+n' = 3 top bars + n side bars per face"
+  },
+  "occurrences": 22,
+  "terminal_classification": "UNRESOLVED",
+  "values": {
+   "(empty)": 1,
+   "3+4": 6,
+   "3+5": 2,
+   "3+6": 1,
+   "3+8": 2
+  }
+ },
+ "boxed_text_hits": [
+  {
+   "handle": "1C53",
+   "layout": "Model",
+   "tag": null,
+   "text": "BOXED"
+  },
+  {
+   "handle": "1C93",
+   "layout": "Model",
+   "tag": "BOXED",
+   "text": "3+4"
+  },
+  {
+   "handle": "1C9E",
+   "layout": "Model",
+   "tag": "BOXED",
+   "text": "3+4"
+  },
+  {
+   "handle": "1CA9",
+   "layout": "Model",
+   "tag": "BOXED",
+   "text": "3+4"
+  },
+  {
+   "handle": "1CB4",
+   "layout": "Model",
+   "tag": "BOXED",
+   "text": "3+4"
+  },
+  {
+   "handle": "1CBF",
+   "layout": "Model",
+   "tag": "BOXED",
+   "text": "3+4"
+  },
+  {
+   "handle": "1CCA",
+   "layout": "Model",
+   "tag": "BOXED",
+   "text": "3+5"
+  },
+  {
+   "handle": "1CD5",
+   "layout": "Model",
+   "tag": "BOXED",
+   "text": "3+6"
+  },
+  {
+   "handle": "1CE0",
+   "layout": "Model",
+   "tag": "BOXED",
+   "text": "3+8"
+  },
+  {
+   "handle": "1CEB",
+   "layout": "Model",
+   "tag": "BOXED",
+   "text": "3+5"
+  },
+  {
+   "handle": "1CF6",
+   "layout": "Model",
+   "tag": "BOXED",
+   "text": "3+8"
+  },
+  {
+   "handle": "2B1C",
+   "layout": "Model",
+   "tag": "BOXED",
+   "text": "3+4"
+  }
+ ],
+ "census": {
+  "blocked_with_quantity": [],
+  "by_terminal_state": {
+   "BLOCKED_SEMANTICS": 14,
+   "DUPLICATE_SOURCE": 2,
+   "NOT_REBAR": 74,
+   "PARSED_AMBIGUOUS": 5,
+   "PARSED_BOUND": 226,
+   "PARSED_SOURCE_CONFLICT": 12
+  },
+  "by_type": {
+   "DETAIL_DIMENSION": 4,
+   "DETAIL_LABEL": 10,
+   "DETAIL_SHEET": 1,
+   "DETAIL_TITLE": 3,
+   "GENERAL_NOTE": 3,
+   "PLAN_OUTLINE": 26,
+   "PLAN_TAG": 27,
+   "SCHEDULE_CELL": 178,
+   "SCHEDULE_GLYPH": 44,
+   "SCHEDULE_HEADER": 14,
+   "SCHEDULE_PRINT": 1,
+   "SCHEDULE_REMARK": 1,
+   "SCHEDULE_REMARK_SYMBOL": 4,
+   "SCHEDULE_ROW": 17
+  },
+  "conserved": true,
+  "double_terminations": [],
+  "source_items": 333,
+  "terminal_items": 333,
+  "unknown_terminations": [],
+  "unterminated": []
+ },
+ "count_queries": {
+  "F3": "OQ-11"
+ },
+ "drawing": {
+  "ST7757.dxf": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+  "ST7757.pdf": "74da1523f05eb3c6a4fe3ddebaef2c3d841891f003efc03bc32a3fb4553337e3"
+ },
+ "guard_policy": {
+  "applicable_parsers": {
+   "BAR_IN_SENTENCE": [
+    "schedule_grammar.parse_bar",
+    "structural_schedule.bar_spec",
+    "slab_rebar_binding.parse"
+   ],
+   "COUNT_DIA": [
+    "schedule_grammar.parse_bar",
+    "structural_schedule.bar_spec",
+    "slab_rebar_binding.parse"
+   ],
+   "COUNT_DIA_AT_SPACING": [
+    "schedule_grammar.parse_bar",
+    "structural_schedule.bar_spec",
+    "slab_rebar_binding.parse"
+   ],
+   "COUNT_DIA_PER_M": [
+    "schedule_grammar.parse_bar",
+    "structural_schedule.bar_spec",
+    "slab_rebar_binding.parse"
+   ],
+   "COUNT_DIA_POSITION": [
+    "schedule_grammar.parse_bar",
+    "slab_rebar_binding.parse"
+   ],
+   "COUNT_DIA_SPLIT_CELLS": [
+    "schedule_grammar.bar_from_cells"
+   ],
+   "COUNT_DIA_SPLIT_CELLS_PER_M": [
+    "schedule_grammar.bar_from_cells"
+   ],
+   "DIA_AT_SPACING": [
+    "schedule_grammar.parse_bar",
+    "structural_schedule.bar_spec",
+    "slab_rebar_binding.parse"
+   ]
+  },
+  "blocked_terminals": [
+   "PARSED_SOURCE_CONFLICT",
+   "PARSED_AMBIGUOUS",
+   "BLOCKED_SEMANTICS",
+   "BLOCKED_GEOMETRY",
+   "UNREADABLE",
+   "UNSUPPORTED_TOKEN"
+  ],
+  "footing_release_states": [
+   "REBAR_VERIFIED",
+   "REBAR_LOWER_BOUND",
+   "REBAR_PROVISIONAL",
+   "REBAR_BLOCKED"
+  ],
+  "known_disagreement_classes": {
+   "BAR_IN_SENTENCE": "a bar inside a note / sentence: bar_spec finds it, parse_bar and slab parse reject it",
+   "COUNT_DIA_AT_SPACING": "bar_spec drops the spacing; slab parse rejects the token",
+   "DIA_AT_SPACING": "only parse_bar reads a diameter at a spacing; bar_spec and slab parse reject it"
+  },
+  "never": [
+   "a boxed pair parsed as a bar",
+   "a known-disagreement class consumed",
+   "a blocked item carrying a quantity",
+   "an outline or tag dropped",
+   "a count taken from outside the source",
+   "nearest-wins between two tags in one outline",
+   "a column bound by attribute tag against the drawn header"
+  ],
+  "policy_id": "FOOTING_REBAR_GUARD_V1",
+  "quantifiable_semantics": [
+   "SOURCE_EXPLICIT",
+   "SOURCE_DERIVED_HIGH_CONFIDENCE"
+  ],
+  "routes": {
+   "BAR_IN_SENTENCE": null,
+   "BOXED_PAIR": null,
+   "COUNT_DIA": "schedule_grammar.parse_bar",
+   "COUNT_DIA_AT_SPACING": "schedule_grammar.parse_bar",
+   "COUNT_DIA_PER_M": "schedule_grammar.parse_bar",
+   "COUNT_DIA_POSITION": "schedule_grammar.parse_bar",
+   "COUNT_DIA_SPLIT_CELLS": "schedule_grammar.bar_from_cells",
+   "COUNT_DIA_SPLIT_CELLS_PER_M": "schedule_grammar.bar_from_cells",
+   "DIA_AT_SPACING": "schedule_grammar.parse_bar",
+   "EMPTY": null,
+   "LAYER_LABEL": null,
+   "UNSUPPORTED": null
+  },
+  "semantic_classes": [
+   "SOURCE_EXPLICIT",
+   "SOURCE_DERIVED_HIGH_CONFIDENCE",
+   "PROJECT_PATTERN_ONLY",
+   "GENERIC_HYPOTHESIS",
+   "UNRESOLVED"
+  ],
+  "terminals": [
+   "PARSED_BOUND",
+   "PARSED_SOURCE_CONFLICT",
+   "PARSED_AMBIGUOUS",
+   "NOT_REBAR",
+   "DUPLICATE_SOURCE",
+   "BLOCKED_SEMANTICS",
+   "BLOCKED_GEOMETRY",
+   "UNREADABLE",
+   "UNSUPPORTED_TOKEN"
+  ],
+  "token_classes": [
+   "EMPTY",
+   "BOXED_PAIR",
+   "COUNT_DIA_SPLIT_CELLS",
+   "COUNT_DIA_SPLIT_CELLS_PER_M",
+   "COUNT_DIA",
+   "COUNT_DIA_PER_M",
+   "COUNT_DIA_POSITION",
+   "DIA_AT_SPACING",
+   "COUNT_DIA_AT_SPACING",
+   "BAR_IN_SENTENCE",
+   "LAYER_LABEL",
+   "UNSUPPORTED"
+  ]
+ },
+ "header_binding": {
+  "bound": 22,
+  "rows": [
+   {
+    "band": 4,
+    "conflicts": [],
+    "derived": {
+     "BOXED": "BOXED",
+     "DEPHT": "H",
+     "FO-TY": "TYPE OF FOOT.",
+     "H": "W",
+     "LO-B": "LONG BARS",
+     "LO-D": "LONG BARS",
+     "SH-B": "SHORT BARS",
+     "SH-D": "SHORT BARS",
+     "W": "L"
+    },
+    "insert": "1C79",
+    "layer_alignment": null,
+    "mark": "F",
+    "state": "BOUND_BY_HEADER",
+    "sub_row": "ROW"
+   },
+   {
+    "band": 5,
+    "conflicts": [],
+    "derived": {
+     "BOXED": "BOXED",
+     "DEPHT": "H",
+     "FO-TY": "TYPE OF FOOT.",
+     "H": "W",
+     "LO-B": "LONG BARS",
+     "LO-D": "LONG BARS",
+     "SH-B": "SHORT BARS",
+     "SH-D": "SHORT BARS",
+     "W": "L"
+    },
+    "insert": "1C95",
+    "layer_alignment": null,
+    "mark": "F2",
+    "state": "BOUND_BY_HEADER",
+    "sub_row": "ROW"
+   },
+   {
+    "band": 6,
+    "conflicts": [],
+    "derived": {
+     "BOXED": "BOXED",
+     "DEPHT": "H",
+     "FO-TY": "TYPE OF FOOT.",
+     "H": "W",
+     "LO-B": "LONG BARS",
+     "LO-D": "LONG BARS",
+     "SH-B": "SHORT BARS",
+     "SH-D": "SHORT BARS",
+     "W": "L"
+    },
+    "insert": "1CA0",
+    "layer_alignment": null,
+    "mark": "F3",
+    "state": "BOUND_BY_HEADER",
+    "sub_row": "ROW"
+   },
+   {
+    "band": 7,
+    "conflicts": [],
+    "derived": {
+     "BOXED": "BOXED",
+     "DEPHT": "H",
+     "FO-TY": "TYPE OF FOOT.",
+     "H": "W",
+     "LO-B": "LONG BARS",
+     "LO-D": "LONG BARS",
+     "SH-B": "SHORT BARS",
+     "SH-D": "SHORT BARS",
+     "W": "L"
+    },
+    "insert": "1CAB",
+    "layer_alignment": null,
+    "mark": "F4",
+    "state": "BOUND_BY_HEADER",
+    "sub_row": "ROW"
+   },
+   {
+    "band": 8,
+    "conflicts": [],
+    "derived": {
+     "BOXED": "BOXED",
+     "DEPHT": "H",
+     "FO-TY": "TYPE OF FOOT.",
+     "H": "W",
+     "LO-B": "LONG BARS",
+     "LO-D": "LONG BARS",
+     "SH-B": "SHORT BARS",
+     "SH-D": "SHORT BARS",
+     "W": "L"
+    },
+    "insert": "1CB6",
+    "layer_alignment": null,
+    "mark": "F5",
+    "state": "BOUND_BY_HEADER",
+    "sub_row": "ROW"
+   },
+   {
+    "band": 9,
+    "conflicts": [],
+    "derived": {
+     "BOXED": "BOXED",
+     "DEPHT": "H",
+     "FO-TY": "TYPE OF FOOT.",
+     "H": "W",
+     "LO-B": "LONG BARS",
+     "LO-D": "LONG BARS",
+     "SH-B": "SHORT BARS",
+     "SH-D": "SHORT BARS",
+     "W": "L"
+    },
+    "insert": "1CC1",
+    "layer_alignment": null,
+    "mark": "F6",
+    "state": "BOUND_BY_HEADER",
+    "sub_row": "ROW"
+   },
+   {
+    "band": 10,
+    "conflicts": [],
+    "derived": {
+     "BOXED": "BOXED",
+     "DEPHT": "H",
+     "FO-TY": "TYPE OF FOOT.",
+     "H": "W",
+     "LO-B": "LONG BARS",
+     "LO-D": "LONG BARS",
+     "SH-B": "SHORT BARS",
+     "SH-D": "SHORT BARS",
+     "W": "L"
+    },
+    "insert": "1CCC",
+    "layer_alignment": null,
+    "mark": "F7",
+    "state": "BOUND_BY_HEADER",
+    "sub_row": "ROW"
+   },
+   {
+    "band": 11,
+    "conflicts": [],
+    "derived": {
+     "BOXED-T": "BOXED",
+     "DEPHT": "H",
+     "FO-TY": "TYPE OF FOOT.",
+     "H": "W",
+     "LO-T-B": "LONG BARS",
+     "LO-T-D": "LONG BARS",
+     "SH-T-B": "SHORT BARS",
+     "SH-T-D": "SHORT BARS",
+     "W": "L"
+    },
+    "insert": "2AF6",
+    "layer_alignment": {
+     "aligned": true,
+     "binding": "GRID_SUB_ROW",
+     "bot_label_to_bot_cells_mm": 41.9,
+     "sub_row_rule_drawn": true,
+     "top_label_to_top_cells_mm": 0.0
+    },
+    "mark": "F8",
+    "state": "BOUND_BY_HEADER",
+    "sub_row": "TOP"
+   },
+   {
+    "band": 12,
+    "conflicts": [],
+    "derived": {
+     "BOXED-B": "BOXED",
+     "DEPHT": "H",
+     "FO-TY": "TYPE OF FOOT.",
+     "H": "W",
+     "LO-B-B": "LONG BARS",
+     "LO-B-D": "LONG BARS",
+     "SH-B-B": "SHORT BARS",
+     "SH-B-D": "SHORT BARS",
+     "W": "L"
+    },
+    "insert": "2AF6",
+    "layer_alignment": {
+     "aligned": true,
+     "binding": "GRID_SUB_ROW",
+     "bot_label_to_bot_cells_mm": 41.9,
+     "sub_row_rule_drawn": true,
+     "top_label_to_top_cells_mm": 0.0
+    },
+    "mark": "F8",
+    "state": "BOUND_BY_HEADER",
+    "sub_row": "BOT"
+   },
+   {
+    "band": 13,
+    "conflicts": [],
+    "derived": {
+     "BOXED": "BOXED",
+     "DEPHT": "H",
+     "FO-TY": "TYPE OF FOOT.",
+     "H": "W",
+     "LO-B": "LONG BARS",
+     "LO-D": "LONG BARS",
+     "SH-B": "SHORT BARS",
+     "SH-D": "SHORT BARS",
+     "W": "L"
+    },
+    "insert": "1CD7",
+    "layer_alignment": null,
+    "mark": "F9",
+    "state": "BOUND_BY_HEADER",
+    "sub_row": "ROW"
+   },
+   {
+    "band": 14,
+    "conflicts": [],
+    "derived": {
+     "BOXED": "BOXED",
+     "DEPHT": "H",
+     "FO-TY": "TYPE OF FOOT.",
+     "H": "W",
+     "LO-B": "LONG BARS",
+     "LO-D": "LONG BARS",
+     "SH-B": "SHORT BARS",
+     "SH-D": "SHORT BARS",
+     "W": "L"
+    },
+    "insert": "1CE2",
+    "layer_alignment": null,
+    "mark": "F10",
+    "state": "BOUND_BY_HEADER",
+    "sub_row": "ROW"
+   },
+   {
+    "band": 15,
+    "conflicts": [],
+    "derived": {
+     "BOXED": "BOXED",
+     "DEPHT": "H",
+     "FO-TY": "TYPE OF FOOT.",
+     "H": "W",
+     "LO-B": "LONG BARS",
+     "LO-D": "LONG BARS",
+     "SH-B": "SHORT BARS",
+     "SH-D": "SHORT BARS",
+     "W": "L"
+    },
+    "insert": "1CED",
+    "layer_alignment": null,
+    "mark": "F11",
+    "state": "BOUND_BY_HEADER",
+    "sub_row": "ROW"
+   },
+   {
+    "band": 16,
+    "conflicts": [],
+    "derived": {
+     "BOXED-T": "BOXED",
+     "DEPHT": "H",
+     "FO-TY": "TYPE OF FOOT.",
+     "H": "W",
+     "LO-T-B": "LONG BARS",
+     "LO-T-D": "LONG BARS",
+     "SH-T-B": "SHORT BARS",
+     "SH-T-D": "SHORT BARS",
+     "W": "L"
+    },
+    "insert": "2A5E",
+    "layer_alignment": {
+     "aligned": true,
+     "binding": "GRID_SUB_ROW",
+     "bot_label_to_bot_cells_mm": 41.9,
+     "sub_row_rule_drawn": true,
+     "top_label_to_top_cells_mm": 0.0
+    },
+    "mark": "F12",
+    "state": "BOUND_BY_HEADER",
+    "sub_row": "TOP"
+   },
+   {
+    "band": 17,
+    "conflicts": [],
+    "derived": {
+     "BOXED-B": "BOXED",
+     "DEPHT": "H",
+     "FO-TY": "TYPE OF FOOT.",
+     "H": "W",
+     "LO-B-B": "LONG BARS",
+     "LO-B-D": "LONG BARS",
+     "SH-B-B": "SHORT BARS",
+     "SH-B-D": "SHORT BARS",
+     "W": "L"
+    },
+    "insert": "2A5E",
+    "layer_alignment": {
+     "aligned": true,
+     "binding": "GRID_SUB_ROW",
+     "bot_label_to_bot_cells_mm": 41.9,
+     "sub_row_rule_drawn": true,
+     "top_label_to_top_cells_mm": 0.0
+    },
+    "mark": "F12",
+    "state": "BOUND_BY_HEADER",
+    "sub_row": "BOT"
+   },
+   {
+    "band": 18,
+    "conflicts": [],
+    "derived": {
+     "BOXED-T": "BOXED",
+     "DEPHT": "H",
+     "FO-TY": "TYPE OF FOOT.",
+     "H": "W",
+     "LO-T-B": "LONG BARS",
+     "LO-T-D": "LONG BARS",
+     "SH-T-B": "SHORT BARS",
+     "SH-T-D": "SHORT BARS",
+     "W": "L"
+    },
+    "insert": "2A98",
+    "layer_alignment": {
+     "aligned": true,
+     "binding": "GRID_SUB_ROW",
+     "bot_label_to_bot_cells_mm": 41.9,
+     "sub_row_rule_drawn": true,
+     "top_label_to_top_cells_mm": 0.0
+    },
+    "mark": "F13",
+    "state": "BOUND_BY_HEADER",
+    "sub_row": "TOP"
+   },
+   {
+    "band": 19,
+    "conflicts": [],
+    "derived": {
+     "BOXED-B": "BOXED",
+     "DEPHT": "H",
+     "FO-TY": "TYPE OF FOOT.",
+     "H": "W",
+     "LO-B-B": "LONG BARS",
+     "LO-B-D": "LONG BARS",
+     "SH-B-B": "SHORT BARS",
+     "SH-B-D": "SHORT BARS",
+     "W": "L"
+    },
+    "insert": "2A98",
+    "layer_alignment": {
+     "aligned": true,
+     "binding": "GRID_SUB_ROW",
+     "bot_label_to_bot_cells_mm": 41.9,
+     "sub_row_rule_drawn": true,
+     "top_label_to_top_cells_mm": 0.0
+    },
+    "mark": "F13",
+    "state": "BOUND_BY_HEADER",
+    "sub_row": "BOT"
+   },
+   {
+    "band": 20,
+    "conflicts": [],
+    "derived": {
+     "BOXED-T": "BOXED",
+     "DEPHT": "H",
+     "FO-TY": "TYPE OF FOOT.",
+     "H": "W",
+     "LO-T-B": "LONG BARS",
+     "LO-T-D": "LONG BARS",
+     "SH-T-B": "SHORT BARS",
+     "SH-T-D": "SHORT BARS",
+     "W": "L"
+    },
+    "insert": "2AD5",
+    "layer_alignment": {
+     "aligned": true,
+     "binding": "GRID_SUB_ROW",
+     "bot_label_to_bot_cells_mm": 41.9,
+     "sub_row_rule_drawn": true,
+     "top_label_to_top_cells_mm": 0.0
+    },
+    "mark": "F14",
+    "state": "BOUND_BY_HEADER",
+    "sub_row": "TOP"
+   },
+   {
+    "band": 21,
+    "conflicts": [],
+    "derived": {
+     "BOXED-B": "BOXED",
+     "DEPHT": "H",
+     "FO-TY": "TYPE OF FOOT.",
+     "H": "W",
+     "LO-B-B": "LONG BARS",
+     "LO-B-D": "LONG BARS",
+     "SH-B-B": "SHORT BARS",
+     "SH-B-D": "SHORT BARS",
+     "W": "L"
+    },
+    "insert": "2AD5",
+    "layer_alignment": {
+     "aligned": true,
+     "binding": "GRID_SUB_ROW",
+     "bot_label_to_bot_cells_mm": 41.9,
+     "sub_row_rule_drawn": true,
+     "top_label_to_top_cells_mm": 0.0
+    },
+    "mark": "F14",
+    "state": "BOUND_BY_HEADER",
+    "sub_row": "BOT"
+   },
+   {
+    "band": 22,
+    "conflicts": [],
+    "derived": {
+     "BOXED": "BOXED",
+     "DEPHT": "H",
+     "FO-TY": "TYPE OF FOOT.",
+     "H": "W",
+     "LO-B": "LONG BARS",
+     "LO-D": "LONG BARS",
+     "SH-B": "SHORT BARS",
+     "SH-D": "SHORT BARS",
+     "W": "L"
+    },
+    "insert": "2B13",
+    "layer_alignment": null,
+    "mark": "F15",
+    "state": "BOUND_BY_HEADER",
+    "sub_row": "ROW"
+   },
+   {
+    "band": 23,
+    "conflicts": [],
+    "derived": {
+     "BOXED-B": "BOXED",
+     "BOXED-T": "BOXED",
+     "DEPHT": "H",
+     "FO-TY": "TYPE OF FOOT.",
+     "H": "W",
+     "LO-B-B": "LONG BARS",
+     "LO-B-D": "LONG BARS",
+     "LO-T-B": "LONG BARS",
+     "LO-T-D": "LONG BARS",
+     "SH-B-B": "SHORT BARS",
+     "SH-B-D": "SHORT BARS",
+     "SH-T-B": "SHORT BARS",
+     "SH-T-D": "SHORT BARS",
+     "W": "L"
+    },
+    "insert": "2B1E",
+    "layer_alignment": {
+     "aligned": true,
+     "binding": "TEXT_LINE_ALIGNMENT (no sub-row rule in the DXF)",
+     "bot_label_to_bot_cells_mm": 41.9,
+     "sub_row_rule_drawn": false,
+     "top_label_to_top_cells_mm": 0.0
+    },
+    "mark": "FF",
+    "state": "BOUND_BY_HEADER",
+    "sub_row": "TOP"
+   },
+   {
+    "band": 23,
+    "conflicts": [],
+    "derived": {
+     "BOXED-B": "BOXED",
+     "BOXED-T": "BOXED",
+     "DEPHT": "H",
+     "FO-TY": "TYPE OF FOOT.",
+     "H": "W",
+     "LO-B-B": "LONG BARS",
+     "LO-B-D": "LONG BARS",
+     "LO-T-B": "LONG BARS",
+     "LO-T-D": "LONG BARS",
+     "SH-B-B": "SHORT BARS",
+     "SH-B-D": "SHORT BARS",
+     "SH-T-B": "SHORT BARS",
+     "SH-T-D": "SHORT BARS",
+     "W": "L"
+    },
+    "insert": "2B1E",
+    "layer_alignment": {
+     "aligned": true,
+     "binding": "TEXT_LINE_ALIGNMENT (no sub-row rule in the DXF)",
+     "bot_label_to_bot_cells_mm": 41.9,
+     "sub_row_rule_drawn": false,
+     "top_label_to_top_cells_mm": 0.0
+    },
+    "mark": "FF",
+    "state": "BOUND_BY_HEADER",
+    "sub_row": "BOT"
+   },
+   {
+    "band": 24,
+    "conflicts": [],
+    "derived": {
+     "BOXED": "BOXED",
+     "DEPHT": "H",
+     "FO-TY": "TYPE OF FOOT.",
+     "H": "W",
+     "LO-B": "LONG BARS",
+     "LO-D": "LONG BARS",
+     "SH-B": "SHORT BARS",
+     "SH-D": "SHORT BARS",
+     "W": "L"
+    },
+    "insert": "1CF8",
+    "layer_alignment": null,
+    "mark": "FN",
+    "state": "BOUND_BY_HEADER",
+    "sub_row": "ROW"
+   }
+  ],
+  "total": 22
+ },
+ "readiness": {
+  "BLOCKED_COMPONENT": 1,
+  "NOT_APPLICABLE": 3,
+  "PROVISIONAL_ONLY": 2,
+  "READY": 10,
+  "READY_LOWER_BOUND": 2
+ },
+ "round": "PRE_S4_HARDENING",
+ "schedule_table": {
+  "bands": 26,
+  "digest": "96808064d43c8af2e18ff8cce541e6c646fa04798364514a74bde85e6566659d",
+  "grid": {
+   "h_lines": 27,
+   "h_lines_raw": 28,
+   "v_lines": 11,
+   "v_lines_raw": 16
+  },
+  "header_leaves": [
+   "",
+   "TYPE OF FOOT.",
+   "L",
+   "W",
+   "H",
+   "SHORT BARS",
+   "LONG BARS",
+   "BOXED",
+   "R E M A R K S",
+   ""
+  ],
+  "state": "COMPLETE"
+ },
+ "token_parity": {
+  "bar_tokens_admitted": 45,
+  "by_class": {
+   "BOXED_PAIR": 11,
+   "COUNT_DIA": 1,
+   "COUNT_DIA_SPLIT_CELLS": 24,
+   "COUNT_DIA_SPLIT_CELLS_PER_M": 20,
+   "EMPTY": 1,
+   "LAYER_LABEL": 10
+  },
+  "by_decision": {
+   "ADMITTED": 45,
+   "FAIL_CLOSED": 22
+  },
+  "by_parity": {
+   "NOT_A_BAR_TOKEN (all parsers reject)": 22,
+   "PARITY_OK": 45
+  },
+  "joined_form_parity": {
+   "AGREE": 44,
+   "N/A": 23
+  },
+  "tokens": 67
+ }
+}

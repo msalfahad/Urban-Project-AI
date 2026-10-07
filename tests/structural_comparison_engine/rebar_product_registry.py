@@ -23,6 +23,7 @@ ACCURATE_MODULES = (
     "engine/source/rebar_unit_mass.py",
     "engine/source/waste_procurement.py",
     "engine/source/urban_methods_v3.py",
+    "engine/source/footing_rebar_guard.py",     # pre-S4 input guard (token parity, census, BOXED); no kg
     "engine/bbs_steel.py",
 )
 # project builders that produce accurate reinforcement registers

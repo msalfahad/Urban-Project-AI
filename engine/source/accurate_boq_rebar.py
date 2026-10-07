@@ -158,6 +158,88 @@ def summarise(parts):
             "rule": "states are never merged; an incomplete quantity is never completed by an estimate"}
 
 
+# ------------------------------------------------------------------ S4 provenance contract (pre-S4 hardening)
+# Every Accurate Footing Rebar (S4) part carries part["provenance"] with these fields from its first
+# implementation. This extends the accurate part; it is not a second receipt system: the run-manifest digests stay
+# where they are, and ENGINE_COMMIT / REGISTER_VERSION / CALCULATION_ROUND are the same stamp the comparison
+# layer checks (comparison_scope.STAMP_FIELDS).
+S4_PROVENANCE_FIELDS = (
+    "PROJECT_ID", "DRAWING_ID", "DRAWING_SHA", "REVISION", "SHEET_REGION", "SOURCE_HANDLES", "SOURCE_TEXT",
+    "FOOTING_OCCURRENCE_ID", "FOOTING_MARK", "COMPONENT", "RULE_ID", "CONVENTION_ID", "MEASUREMENT_STATE",
+    "AUTHORITY_STATE", "RELEASE_STATE", "FORMULA", "INPUTS", "ENGINE_COMMIT", "REGISTER_VERSION",
+    "CALCULATION_ROUND",
+)
+S4_BOUND_FIELDS = ("LOW", "BEST", "HIGH", "UNQUANTIFIED_COMPONENTS")
+MEASUREMENT_STATES = ("MEASURED", "SCHEDULE_DERIVED", "CONVENTION_DERIVED", "NOT_MEASURED")
+# authority of the semantics behind a part; only the first four may stand behind a released (or modelled) kg
+RELEASING_AUTHORITIES = ("SOURCE_EXPLICIT", "SOURCE_DERIVED_HIGH_CONFIDENCE", "APPROVED_PROJECT_CLAIM",
+                         "APPROVED_ENGINEERING_METHOD")
+PROVISIONAL_AUTHORITIES = ("UNAPPROVED_METHOD",)
+NON_QUANTIFYING_AUTHORITIES = ("PROJECT_PATTERN_ONLY", "GENERIC_HYPOTHESIS", "UNRESOLVED", "SOURCE_CONFLICT")
+AUTHORITY_STATES = RELEASING_AUTHORITIES + PROVISIONAL_AUTHORITIES + NON_QUANTIFYING_AUTHORITIES
+_SHA = __import__("re").compile(r"^[0-9a-f]{64}$")
+
+
+def validate_s4_part(p):
+    """validate_part + the S4 provenance contract. Raises AccurateRebarError naming the first defect."""
+    validate_part(p)
+    pid = p["part_id"]
+    pv = p.get("provenance")
+    if not isinstance(pv, dict):
+        raise AccurateRebarError(f"{pid}: an S4 part carries a provenance record")
+    # INPUTS may be an empty mapping on a blocked part (nothing was computed); every other field is non-empty
+    missing = [f for f in S4_PROVENANCE_FIELDS if f not in pv or pv[f] is None or (pv[f] in ("", [], ())
+                                                                                    and f != "INPUTS")]
+    if missing:
+        raise AccurateRebarError(f"{pid}: S4 provenance missing {missing}")
+    if not _SHA.match(str(pv["DRAWING_SHA"])):
+        raise AccurateRebarError(f"{pid}: DRAWING_SHA must be a sha256 hex digest")
+    if not isinstance(pv["SOURCE_HANDLES"], (list, tuple)) or not all(isinstance(h, str) and h
+                                                                       for h in pv["SOURCE_HANDLES"]):
+        raise AccurateRebarError(f"{pid}: SOURCE_HANDLES is a non-empty list of handles")
+    if not isinstance(pv["INPUTS"], dict):
+        raise AccurateRebarError(f"{pid}: INPUTS is a mapping of named inputs")
+    if pv["COMPONENT"] != p["component"]:
+        raise AccurateRebarError(f"{pid}: provenance COMPONENT {pv['COMPONENT']} != part component {p['component']}")
+    if pv["RELEASE_STATE"] != p["state"]:
+        raise AccurateRebarError(f"{pid}: provenance RELEASE_STATE {pv['RELEASE_STATE']} != part state {p['state']}")
+    if pv["MEASUREMENT_STATE"] not in MEASUREMENT_STATES:
+        raise AccurateRebarError(f"{pid}: MEASUREMENT_STATE must be one of {MEASUREMENT_STATES}")
+    auth = pv["AUTHORITY_STATE"]
+    if auth not in AUTHORITY_STATES:
+        raise AccurateRebarError(f"{pid}: AUTHORITY_STATE must be one of {AUTHORITY_STATES}")
+    if auth in NON_QUANTIFYING_AUTHORITIES and p["state"] != BLOCKED_UNQUANTIFIED:
+        raise AccurateRebarError(f"{pid}: authority {auth} never carries a quantity - the part is "
+                                 f"BLOCKED_UNQUANTIFIED, not {p['state']}")
+    if auth in PROVISIONAL_AUTHORITIES and p["state"] in RELEASED_STATES:
+        raise AccurateRebarError(f"{pid}: authority {auth} cannot release a quantity ({p['state']})")
+    if p["state"] == BLOCKED_UNQUANTIFIED and not pv.get("BLOCKING_REASON"):
+        raise AccurateRebarError(f"{pid}: a BLOCKED_UNQUANTIFIED part names its BLOCKING_REASON")
+    bounds = [f for f in S4_BOUND_FIELDS if f in pv]
+    if bounds:
+        if len(bounds) != len(S4_BOUND_FIELDS):
+            raise AccurateRebarError(f"{pid}: bounds come as the set {S4_BOUND_FIELDS}, got {bounds}")
+        lo, best, hi = pv["LOW"], pv["BEST"], pv["HIGH"]
+        if lo is None or best is None:
+            raise AccurateRebarError(f"{pid}: LOW and BEST are numbers (HIGH may be None = unbounded above)")
+        if not (lo <= best and (hi is None or best <= hi)):
+            raise AccurateRebarError(f"{pid}: bounds must satisfy LOW <= BEST <= HIGH")
+        unq = pv["UNQUANTIFIED_COMPONENTS"]
+        if not isinstance(unq, (list, tuple)) or any(c not in COMPONENTS for c in unq):
+            raise AccurateRebarError(f"{pid}: UNQUANTIFIED_COMPONENTS lists registered components")
+    elif p["state"] == LOWER_BOUND:
+        raise AccurateRebarError(f"{pid}: a LOWER_BOUND part states its bounds {S4_BOUND_FIELDS}")
+    return p
+
+
+def summarise_s4(parts):
+    """summarise() for S4 parts: every part must satisfy the provenance contract first."""
+    parts = list(parts)
+    for p in parts:
+        validate_s4_part(p)
+    return summarise(parts)
+
+
 def from_column_rebar(parts):
     """Accurate parts from column_rebar parts ({part_id, component, release_state, kg}); data only, no import."""
     out = []

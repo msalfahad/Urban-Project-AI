@@ -104,6 +104,51 @@ def compare_values(a, b, status):
     return {"difference": d, "difference_percent": None if not b else 100.0 * d / b, "status": status}
 
 
+# ------------------------------------------------------------------ version stamps (pre-S4)
+# Every footing-rebar comparison record names the engine state that produced each side. Two Urban values from
+# different engine states are never compared as if they were one: the caller must declare a cross-state
+# (regression) comparison, and a different drawing is never comparable.
+STAMP_FIELDS = ("ENGINE_COMMIT", "REGISTER_VERSION", "DRAWING_SHA", "CALCULATION_ROUND")
+SAME_ENGINE_STATE = "SAME_ENGINE_STATE"
+CROSS_ENGINE_STATE = "CROSS_ENGINE_STATE"
+DIFFERENT_DRAWING = "DIFFERENT_DRAWING"
+
+
+def stamp(**fields) -> dict:
+    """A comparison stamp; every field in STAMP_FIELDS is required and non-empty."""
+    miss = [f for f in STAMP_FIELDS if not fields.get(f)]
+    extra = sorted(set(fields) - set(STAMP_FIELDS))
+    if miss or extra:
+        raise ScopeError(f"stamp: missing {miss}, unknown {extra}")
+    return {f: str(fields[f]) for f in STAMP_FIELDS}
+
+
+def stamp_relation(a, b) -> str:
+    a, b = stamp(**a), stamp(**b)
+    if a["DRAWING_SHA"] != b["DRAWING_SHA"]:
+        return DIFFERENT_DRAWING
+    if any(a[f] != b[f] for f in ("ENGINE_COMMIT", "REGISTER_VERSION", "CALCULATION_ROUND")):
+        return CROSS_ENGINE_STATE
+    return SAME_ENGINE_STATE
+
+
+def compare_stamped(a, b, status, *, stamp_a, stamp_b, cross_state=False):
+    """compare_values() with both sides' stamps. A different drawing -> NOT_COMPARABLE. A cross-state pair (old
+    Urban vs new Urban) is refused unless the caller declares cross_state=True, and then it is labelled."""
+    rel = stamp_relation(stamp_a, stamp_b)
+    if rel == DIFFERENT_DRAWING:
+        out = {"difference": None, "difference_percent": None, "status": NOT_COMPARABLE,
+               "why": "the two sides measured different drawings"}
+    else:
+        if rel == CROSS_ENGINE_STATE and not cross_state:
+            raise ScopeError("the two sides come from different engine states "
+                             f"({stamp_a.get('ENGINE_COMMIT')} / {stamp_b.get('ENGINE_COMMIT')}); declare "
+                             "cross_state=True for a regression comparison")
+        out = compare_values(a, b, status)
+    out.update(engine_relation=rel, stamp_a=stamp(**stamp_a), stamp_b=stamp(**stamp_b))
+    return out
+
+
 def normalized_group(rows_by_category, group):
     """Sum a normalisation group's categories (e.g. BEAMS + SLABS) on one side; None if any member has no value."""
     vals = [rows_by_category.get(c) for c in group["categories"]]
@@ -114,11 +159,14 @@ def normalized_group(rows_by_category, group):
 
 def schema():
     return {"schema": "COMPARISON_SCOPE_SCHEMA", "policy_id": POLICY_ID, "views": list(VIEWS),
-            "results": list(RESULTS),
+            "results": list(RESULTS), "stamp_fields": list(STAMP_FIELDS),
+            "engine_relations": [SAME_ENGINE_STATE, CROSS_ENGINE_STATE, DIFFERENT_DRAWING],
             "rules": ["production quantities are physical and granular; views never change them",
                       "every view category carries measurement basis, included / excluded components and overlap "
                       "policy",
                       "a component kind belongs to one category of a view",
                       "a percentage is reported only for a matching basis",
                       "allocation conventions that differ (beam gross vs downstand) are compared only through a "
-                      "declared normalisation group"]}
+                      "declared normalisation group",
+                      "every stamped comparison names both engine states; a cross-state pair must be declared and a "
+                      "different drawing is never comparable"]}
