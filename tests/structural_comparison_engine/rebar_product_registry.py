@@ -35,6 +35,7 @@ ACCURATE_MODULES = (
     "engine/source/graphic_evidence.py",        # D1 graphic evidence policy (which drawn portion may carry length)
     "engine/source/delta_release.py",           # D1 frozen baseline + delta records, conservation (no kg rewrite)
     "engine/source/link_geometry.py",           # D1 link topology + envelope core path / end leg / count bounds
+    "engine/source/delta_correction.py",        # D1.1 errata records over a frozen delta (never adds steel)
     "engine/bbs_steel.py",
 )
 # project builders that produce accurate reinforcement registers
@@ -57,6 +58,7 @@ ACCURATE_BUILDERS = (
     "research/alsenan_footing_rebar_s4_1/build_footing_rebar_s4_1.py",  # S4.1 delta over frozen S4
     "research/alsenan_superstructure_beam_rebar_s6_1/build_superstructure_beam_rebar_s6_1.py",  # S6.1 delta over S6
     "research/alsenan_ground_system_rebar_s5_1/build_ground_system_rebar_s5_1.py",  # S5.1 delta over S5
+    "research/d1_1_stirrup_authority_audit/build_d1_1_stirrup_audit.py",  # D1.1 link-authority errata over S6.1 / S5.1
 )
 ROUGH_MODULES = (
     "engine/source/rough_rebar_sanity.py",

@@ -18,7 +18,7 @@ def test_single_str2_str3_topologies():
 def test_core_path_is_the_sharp_centreline_rectangle():
     # 200 x 400, c 25, d 8 -> 2 x 142 + 2 x 342 = 968 mm
     assert LG.core_path_mm(200, 400, 25, 8) == 968.0
-    # a larger cover, a thicker link or a smaller section only shortens it (monotone lower bound)
+    # a larger cover, a thicker link or a smaller section only shortens it (monotone in the envelope)
     assert LG.core_path_mm(200, 400, 30, 8) < 968.0 < LG.core_path_mm(220, 400, 25, 8)
     assert LG.core_path_mm(200, 400, 25, 10) < 968.0
     with pytest.raises(LG.LinkGeometryError):
@@ -27,17 +27,22 @@ def test_core_path_is_the_sharp_centreline_rectangle():
         LG.core_path_mm(200, 400, 0, 8)
 
 
-def test_core_path_stays_below_a_rounded_link_with_its_closing_hooks():
-    """Premise check: corners of centreline radius R shorten the loop by (8 - 2 pi) R, while two 135° closing hooks
-    add at least 2 x (pi/4) R of arc before any extension -> the hooked link is never shorter than the core path
-    once the hook extensions exceed (8 - 2 pi - pi/2) R / 2."""
+def test_rounded_link_is_shorter_than_the_core_path_and_hooks_are_no_proof():
+    """D1.1 withdrew the D1 premise. A loop with four 90-degree bends of centreline radius R is (8 - 2 pi) R
+    shorter than the sharp core path, for every R > 0. Covering that deficit with closing hooks would need a
+    hook length, and no project source gives one: the sharp path is a modelled polygonal equivalent, not a
+    lower bound (engine.source.delta_correction)."""
+    from engine.source import delta_correction as DC
     b, h, c, d = 300, 600, 25, 10
     core = LG.core_path_mm(b, h, c, d)
-    for R in (2.5 * d, 4 * d):
-        loop = core - (8 - 2 * math.pi) * R
-        ext_needed = max(0.0, ((8 - 2 * math.pi) * R - 2 * (math.pi / 4) * R) / 2)
-        assert loop + 2 * (math.pi / 4) * R + 2 * ext_needed >= core - 1e-9
-        assert ext_needed < 6 * d                                 # any drawn hook extension exceeds this
+    W, T = b - 2 * c - d, h - 2 * c - d
+    assert core == DC.sharp_loop_mm(W, T)
+    for R in (0.5 * d, 2.5 * d, 4 * d):
+        assert DC.rounded_loop_mm(W, T, R) < core
+        assert core - DC.rounded_loop_mm(W, T, R) == pytest.approx((8 - 2 * math.pi) * R)
+    # a hook whose extension is unknown cannot promote the path, whatever its drawn angle
+    assert DC.classify_link_path(hook_length_known=False) == DC.MODELLED_POLYGONAL_EQUIVALENT
+    assert DC.classify_link_path(hook_length_known=True, closure_known=True) == DC.MODELLED_POLYGONAL_EQUIVALENT
 
 
 def test_cb_end_leg_reaches_the_bottom_bar_level():

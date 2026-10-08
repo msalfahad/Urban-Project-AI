@@ -1,0 +1,83 @@
+{
+ "code": {
+  "engine/source/delta_correction.py": "924c518a55a297af47d239891aa06d64bb40f6439ed7046c3c8219778518f211",
+  "engine/source/delta_release.py": "7b0f72a6f5138b3e0f8515c80a42a38a2cfc035c8fb4c138aa64a4fd5c9708b9",
+  "engine/source/legacy_text.py": "2508b0f6c3c7bad751edb40009f009ef0ee24beb8c5c3516a0e5e400aa102f6a",
+  "research/d1_1_stirrup_authority_audit/build_d1_1_stirrup_audit.py": "9f16605a156b8dea84d18f09356c1ca0a19a3b03b4864245e867c5db59239701",
+  "research/source_recovery_delta/vector_pdf.py": "5f79e57915514c8b2eb621800efd0265e315856e853a08f38224df7a6bd610d9"
+ },
+ "drawing_sha256": {
+  "ST7757.dxf": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+  "ST7757.pdf": "74da1523f05eb3c6a4fe3ddebaef2c3d841891f003efc03bc32a3fb4553337e3"
+ },
+ "frozen_baselines": {
+  "S4": {
+   "engine_commit_stamp": "e3633af+code:0d11810b780ae8f8",
+   "files_checked": 25,
+   "manifest": "research/alsenan_footing_rebar_s4/S4_FREEZE_MANIFEST.json",
+   "manifest_sha256": "0d63015a19953f295e331aab2d7e49e8facb277e1465fbdd1b6b5a40d1a2362b",
+   "round": "S4"
+  },
+  "S4.1": {
+   "engine_commit_stamp": "e3633af+code:0d11810b780ae8f8+delta:06346dac56faa12d",
+   "files_checked": 13,
+   "manifest": "research/alsenan_footing_rebar_s4_1/S4_1_FREEZE_MANIFEST.json",
+   "manifest_sha256": "468e90d9657548a7e9124b67ce0a55b63560f030e2f98b414c46ad4e970e030b",
+   "round": "S4.1"
+  },
+  "S5": {
+   "engine_commit_stamp": "cab778a+code:2dc78fc0ff285ba2",
+   "files_checked": 31,
+   "manifest": "research/alsenan_ground_system_rebar_s5/S5_FREEZE_MANIFEST.json",
+   "manifest_sha256": "ff488a92f3eaff80e84fca2d7e0b8e36cc40ddb84232cd315acfd1ce50b4b3d8",
+   "round": "S5"
+  },
+  "S5.1": {
+   "engine_commit_stamp": "cab778a+code:2dc78fc0ff285ba2+delta:42f0849057343fb6",
+   "files_checked": 17,
+   "manifest": "research/alsenan_ground_system_rebar_s5_1/S5_1_FREEZE_MANIFEST.json",
+   "manifest_sha256": "595d64b1bf5c8e0ef7b5bebfaf3ea4063dd884356390c84b4c8aac77cddb5a88",
+   "round": "S5.1"
+  },
+  "S6": {
+   "engine_commit_stamp": "d39f5f6+code:add76dd5f5e9c59a",
+   "files_checked": 33,
+   "manifest": "research/alsenan_superstructure_beam_rebar_s6/S6_FREEZE_MANIFEST.json",
+   "manifest_sha256": "c29a28bc66334d5294d71b0d5feb0dd5eae36baf91a04ef6e0105b2ca43be63e",
+   "round": "S6"
+  },
+  "S6.1": {
+   "engine_commit_stamp": "d39f5f6+code:add76dd5f5e9c59a+delta:d7ce0d2d09810083",
+   "files_checked": 18,
+   "manifest": "research/alsenan_superstructure_beam_rebar_s6_1/S6_1_FREEZE_MANIFEST.json",
+   "manifest_sha256": "c4744888ed2207ebff47c0a895e706d7e381b5f905b694eb92e3d1cdc411c0b2",
+   "round": "S6.1"
+  }
+ },
+ "inputs": {
+  "research/alsenan_footing_rebar_s4/S4_FREEZE_MANIFEST.json": "0d63015a19953f295e331aab2d7e49e8facb277e1465fbdd1b6b5a40d1a2362b",
+  "research/alsenan_footing_rebar_s4_1/S4_1_FREEZE_MANIFEST.json": "468e90d9657548a7e9124b67ce0a55b63560f030e2f98b414c46ad4e970e030b",
+  "research/alsenan_ground_system_rebar_s5/S5_FREEZE_MANIFEST.json": "ff488a92f3eaff80e84fca2d7e0b8e36cc40ddb84232cd315acfd1ce50b4b3d8",
+  "research/alsenan_ground_system_rebar_s5_1/S5_1_FREEZE_MANIFEST.json": "595d64b1bf5c8e0ef7b5bebfaf3ea4063dd884356390c84b4c8aac77cddb5a88",
+  "research/alsenan_rebar_source_exhaustion_04/registers/PROJECT_REBAR_RULE_REGISTER.json": "5536777ab000e65bd8bb61fabae04f0a09cfe58e75e9547c65c1b04e8633d6b8",
+  "research/alsenan_structural_census_s1/STRUCTURAL_PROJECT_RULE_REGISTER.json": "3268bce3ef31c21ee93b0d7f9ab9b50195e0d0ae659699422c6927abcdf528d2",
+  "research/alsenan_superstructure_beam_rebar_s6/S6_FREEZE_MANIFEST.json": "c29a28bc66334d5294d71b0d5feb0dd5eae36baf91a04ef6e0105b2ca43be63e",
+  "research/alsenan_superstructure_beam_rebar_s6_1/S6_1_FREEZE_MANIFEST.json": "c4744888ed2207ebff47c0a895e706d7e381b5f905b694eb92e3d1cdc411c0b2",
+  "research/d1_1_stirrup_authority_audit/source_search_inputs/PDF_TEXT_OCR_PP9_16.json": "e30d8645f7b7da7f13c291e23ffa065f1a69a15129007ff5732caf4b2d5f2a5e",
+  "research/source_recovery_delta/13_GRAPHIC_EVIDENCE.json": "2a8a307b3a3084cc537edaccd753b9865b5a33aa80e9137ae1383b0f0380a13b"
+ },
+ "outputs": {
+  "00_README.md": "9bb75912dfc1f7de04f76d0a56e383cf47fc93026f9f2be0fc1eab5dc50688b1",
+  "01_SOURCE_SEARCH.md": "477597d9268b52e767dfb1dfb8b000742a6011d218dc5af860b0fdbc3f4ab1e8",
+  "02_STIRRUP_PATH_AUDIT.csv": "be125d63862368a8ccb2ef8d76c37013d22e6e08af73173f2bfdf79b44fc72c7",
+  "03_S6_1A_CORRECTIONS.csv": "850964fd068b0761e41945bab4d9772837dfd68971a4bfc01a1dfa0d1bcda85f",
+  "04_S5_1A_CORRECTIONS.csv": "c63b6bf4cd940dcb01f6e7041be77a3b2c597c96840e8487fec74c177a29ffc0",
+  "05_TOPOLOGY_COUNT_DIAMETER_REGISTER.csv": "a8f6376773e36c332b6ee6bff44c1f9dcac21b7580e68f272d3a30af18f9f2b5",
+  "06_CORRECTED_RELEASE_SUMMARY.json": "fd5b1b3f1404937fd94d7724b24c0b6c9c7992b6427236978247bbfc5e72dcb7",
+  "07_PROVENANCE.jsonl": "ff31b57fcad3fb9099161084e7255d1fd103d799b425a1fda3d414e2e8b304d3"
+ },
+ "references_read_before_freeze": [],
+ "round": "D1.1",
+ "rule": "an errata layer over frozen S6.1 / S5.1; S4, S5, S6, S4.1, S6.1 and S5.1 are never edited",
+ "state": "FROZEN"
+}
