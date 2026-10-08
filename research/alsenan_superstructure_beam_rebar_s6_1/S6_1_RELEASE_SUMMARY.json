@@ -1,0 +1,370 @@
+{
+ "b26": {
+  "base_kg": 458.18651851851854,
+  "blocked": [
+   "CRANK_DIAGONAL_EXCESS",
+   "END_HOOK_1/2",
+   "INNER_LINK",
+   "SIDE_REBAR",
+   "HOOK / DEV"
+  ],
+  "occurrence": "BM-GF_ROOF-B26-BL014-4CC",
+  "planted_column": {
+   "column_id": "COL-P.C-X15-Y02-1F",
+   "section_cm": [
+    20,
+    50
+   ],
+   "type": "P.C",
+   "why": "the smaller column side is used: a lower bound whichever way the column is oriented on the beam",
+   "width_along_beam_lower_bound_mm": 200.0
+  },
+  "planted_column_extra": {
+   "COLUMN_WIDTH_LB_MM": 200.0,
+   "COUNT_TOTAL": 4,
+   "DEPTH_MM": 850.0,
+   "DIA_MM": 16,
+   "EXTRA_STIRRUPS": "10 cm under the column = B26's own 10/m: no extra count",
+   "ROW_ALLOCATION": "NOT_ESTABLISHED (one '4Ø16' leader touches both bars; not 2 + 2 by inference) - does not change the projection"
+  },
+  "planted_column_extra_kg": 12.009876543209876
+ },
+ "b3_with_stair": {
+  "blocked": [
+   "CRANK_EXCESS",
+   "END_BENDS",
+   "HOOK_1/2",
+   "DEVELOPMENT_1/2"
+  ],
+  "occurrences": [
+   "BM-1F_ROOF-B3-BL023-6B9",
+   "BM-GF_ROOF-B3-BL033-6B7"
+  ],
+  "released_kg_by_component": {
+   "BM-1F_ROOF-B3-BL023-6B9": {
+    "BOTTOM_MAIN": 15.802469135802468,
+    "BOTTOM_MAIN:CRANK_EXCESS": 0.0,
+    "BOTTOM_MAIN:END_BENDS": 0.0,
+    "OTHER_EXPLICIT_EXTRA": 0.0,
+    "STIRRUP_CORE_PATH": 5.736296296296296,
+    "STIRRUP_CORE_PATH:HOOK_EXTENSION": 0.0,
+    "STIRRUP_COUNT": 0.0,
+    "TOP_MAIN": 4.444444444444445,
+    "TOP_MAIN:CRANK_EXCESS": 0.0,
+    "TOP_MAIN:END_BENDS": 0.0
+   },
+   "BM-GF_ROOF-B3-BL033-6B7": {
+    "BOTTOM_MAIN": 15.802469135802468,
+    "BOTTOM_MAIN:CRANK_EXCESS": 0.0,
+    "BOTTOM_MAIN:END_BENDS": 0.0,
+    "OTHER_EXPLICIT_EXTRA": 0.0,
+    "STIRRUP_CORE_PATH": 5.736296296296296,
+    "STIRRUP_CORE_PATH:HOOK_EXTENSION": 0.0,
+    "STIRRUP_COUNT": 0.0,
+    "TOP_MAIN": 4.444444444444445,
+    "TOP_MAIN:CRANK_EXCESS": 0.0,
+    "TOP_MAIN:END_BENDS": 0.0
+   }
+  },
+  "stair_extra": "NOT_APPLICABLE (detail adds no bars)"
+ },
+ "cb_end_legs": {
+  "recorded": 14,
+  "released": 0,
+  "why": "bar role conflict Q2: count / diameter of the leg bar not candidate-invariant"
+ },
+ "cb_invariance_tested": [
+  {
+   "forward": [
+    7,
+    8
+   ],
+   "invariant": false,
+   "occurrence_id": "CBO-FFRS-CB13-BL004",
+   "reversed": [
+    7,
+    10
+   ],
+   "span_index": 1
+  },
+  {
+   "forward": [
+    7,
+    10
+   ],
+   "invariant": false,
+   "occurrence_id": "CBO-FFRS-CB13-BL004",
+   "reversed": [
+    7,
+    8
+   ],
+   "span_index": 2
+  },
+  {
+   "forward": [
+    7,
+    8
+   ],
+   "invariant": true,
+   "occurrence_id": "CBO-GFRS-CB7-BL003",
+   "reversed": [
+    7,
+    8
+   ],
+   "span_index": 1
+  },
+  {
+   "forward": [
+    7,
+    8
+   ],
+   "invariant": true,
+   "occurrence_id": "CBO-GFRS-CB7-BL003",
+   "reversed": [
+    7,
+    8
+   ],
+   "span_index": 2
+  }
+ ],
+ "components_by_state": {
+  "BLOCKED_UNQUANTIFIED": 611,
+  "LOWER_BOUND": 348,
+  "NOT_APPLICABLE": 1043
+ },
+ "conservation": {
+  "all_pass": true,
+  "baseline_known": 3630.1493012345695,
+  "carried_known": 3630.1493012345695,
+  "checks": {
+   "baseline_plus_delta_is_new": true,
+   "frozen_known_carried": true,
+   "no_negative_delta": true
+  },
+  "delta_known": 1716.880444444445,
+  "new_known": 5347.029745679014
+ },
+ "context": {
+  "COVER": {
+   "cover_mm": 25.0,
+   "cover_rule": "COVER_GENERAL_25MM (P8-N22-COVER-GENERAL, CROSS_VERIFIED_SOURCE)"
+  },
+  "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+  "ENGINE_COMMIT": "d39f5f6+code:add76dd5f5e9c59a+delta:d7ce0d2d09810083",
+  "FROZEN_BASELINE": {
+   "engine_commit_stamp": "d39f5f6+code:add76dd5f5e9c59a",
+   "files_checked": 33,
+   "manifest": "research/alsenan_superstructure_beam_rebar_s6/S6_FREEZE_MANIFEST.json",
+   "manifest_sha256": "c29a28bc66334d5294d71b0d5feb0dd5eae36baf91a04ef6e0105b2ca43be63e",
+   "round": "S6"
+  },
+  "POLICY": "SUPERSTRUCTURE_BEAM_REBAR_S6_1_DELTA_V1",
+  "PRECEDING_FREEZE_S4_1": {
+   "engine_commit_stamp": "e3633af+code:0d11810b780ae8f8+delta:06346dac56faa12d",
+   "files_checked": 13,
+   "manifest": "research/alsenan_footing_rebar_s4_1/S4_1_FREEZE_MANIFEST.json",
+   "manifest_sha256": "468e90d9657548a7e9124b67ce0a55b63560f030e2f98b414c46ad4e970e030b",
+   "round": "S4.1"
+  },
+  "ROUND": "S6.1",
+  "UNIT_MASS": "D2_OVER_162"
+ },
+ "delta_by_kind_kg": {
+  "longitudinal_base_bars": 372.6062716049383,
+  "planted_column_extra": 12.009876543209876,
+  "stirrup_core_path": 1332.2642962962966
+ },
+ "delta_known_kg": 1716.880444444445,
+ "delta_rows": 2111,
+ "flags": {
+  "equal_inner_link_subdivision": false,
+  "frozen_outputs_changed": false,
+  "kg_from_shape_only_graphic": false,
+  "plotted_scale_used": false,
+  "pre_s7_started": false,
+  "references_read": [],
+  "verified_created": false
+ },
+ "frozen_components": 2002,
+ "frozen_s6": {
+  "cb_lower_bound_kg": 805.6851037037036,
+  "known_kg": 3630.1493012345695,
+  "simple_lower_bound_kg": 2824.464197530866,
+  "stirrup_count_known": {
+   "records": 83,
+   "stirrups_lower_bound": 1756
+  },
+  "stirrup_mass_known": {
+   "kg": 0.0,
+   "records": 0
+  }
+ },
+ "graphic_evidence_policy": {
+  "classes": [
+   "GRAPHIC_EXPLICIT_DIMENSIONED",
+   "GRAPHIC_DERIVED_FROM_SOURCE_GEOMETRY",
+   "GRAPHIC_EXPLICIT_SHAPE_ONLY",
+   "GRAPHIC_NTS_OR_UNDIMENSIONED"
+  ],
+  "derivation_conditions": [
+   "ENDPOINTS_DETERMINISTIC",
+   "DIMENSIONS_FROM_PROJECT_SOURCE",
+   "DERIVATION_REPRODUCIBLE",
+   "NO_CONTRADICTING_PROJECT_SOURCE"
+  ],
+  "length_bases_allowed": [
+   "PRINTED_DIMENSION",
+   "PROJECT_SOURCE_GEOMETRY"
+  ],
+  "length_bases_refused": [
+   "PLOTTED_SCALE"
+  ],
+  "no_graphic": "NO_GRAPHIC_EVIDENCE",
+  "policy": "GRAPHIC_EVIDENCE_POLICY_V1",
+  "portion_states": [
+   "KNOWN_STRAIGHT_SEGMENT",
+   "DERIVED_LOWER_BOUND",
+   "SHAPE_FOUND_LENGTH_BLOCKED",
+   "BLOCKED_UNQUANTIFIED"
+  ],
+  "rules": {
+   "A": "GRAPHIC_EXPLICIT_DIMENSIONED may produce quantity (from the printed dimension)",
+   "B": "GRAPHIC_DERIVED_FROM_SOURCE_GEOMETRY may produce quantity only if the endpoints are deterministic, the dimensions come from project-source geometry, the derivation is reproducible and no project source contradicts it",
+   "C": "GRAPHIC_EXPLICIT_SHAPE_ONLY may establish shape, connectivity, topology, component identity and applicability, but may NOT create an undimensioned bar length or kg",
+   "D": "GRAPHIC_NTS_OR_UNDIMENSIONED is interpretation / QA evidence only",
+   "SCALE": "a plotted-scale reading is never a length basis; an N.T.S. typical detail is never measured by its plot"
+  }
+ },
+ "headline": "S6.1 KNOWN SUPERSTRUCTURE BEAM REBAR = FROZEN S6 KNOWN + LOWER-BOUND DELTA",
+ "new_stirrup_count_total": 184,
+ "new_stirrup_counts": {
+  "BM-1F_ROOF-B3-BL023-6B9:SPAN1": 15,
+  "BM-GF_ROOF-B26-BL014-4CC:SPAN1": 74,
+  "BM-GF_ROOF-B3-BL033-6B7:SPAN1": 15,
+  "CBO-GFRS-CB7-BL003:SPAN1": 39,
+  "CBO-GFRS-CB7-BL003:SPAN2": 41
+ },
+ "not_resolved_brief_20": [
+  "CB3 vs B3 WITH STAIR (S6-19)",
+  "B6 / B21 / B29 / CB2 / CB10 widths (S6-17)",
+  "CB4 / CB5 / CB8 spans (S6-18)"
+ ],
+ "occurrences_by_state": {
+  "BLOCKED": 21,
+  "LOWER_BOUND": 81
+ },
+ "occurrences_released_in_s6_1": [
+  "BM-1F_ROOF-B3-BL023-6B9",
+  "BM-GF_ROOF-B26-BL014-4CC",
+  "BM-GF_ROOF-B3-BL033-6B7"
+ ],
+ "policy": "SUPERSTRUCTURE_BEAM_REBAR_S6_1_DELTA_V1",
+ "remaining_blocked_portions": {
+  "CB_END_LEG_MASS": 14,
+  "CRANK_DIAGONAL_EXCESS": 1,
+  "CRANK_EXCESS": 4,
+  "END_BENDS": 4,
+  "END_HOOK_1": 1,
+  "END_HOOK_2": 1,
+  "HOOK_EXTENSION": 90,
+  "INNER_LINK": 8
+ },
+ "round": "S6.1",
+ "s6_1_known_kg": 5347.029745679014,
+ "s6_1_verified_kg": 0.0,
+ "state_transitions": {
+  "BLOCKED_UNQUANTIFIED -> LOWER_BOUND": 100,
+  "BLOCKED_UNQUANTIFIED -> NOT_APPLICABLE": 2
+ },
+ "stirrup_core_path_sets_released": {
+  "single_link": 80,
+  "str2_outer_link": 8,
+  "total": 88
+ },
+ "stirrup_core_path_sets_topology_only": 2,
+ "str2_icon": {
+  "inner": [
+   {
+    "x": [
+     -143.1,
+     123.6
+    ],
+    "y": [
+     -333.0,
+     467.0
+    ]
+   }
+  ],
+  "inner_level_offsets": [
+   114.7
+  ],
+  "inner_levels_shared": false,
+  "legs": 4,
+  "links": 2,
+  "outer": {
+   "x": [
+    -409.7,
+    390.3
+   ],
+   "y": [
+    -447.7,
+    352.3
+   ]
+  },
+  "topology": "STR2_OUTER_PLUS_ONE_INNER_4_LEG"
+ },
+ "str3_icon": {
+  "inner": [
+   {
+    "x": [
+     82.7,
+     262.7
+    ],
+    "y": [
+     -407.5,
+     492.5
+    ]
+   },
+   {
+    "x": [
+     -277.3,
+     -97.3
+    ],
+    "y": [
+     -407.5,
+     492.5
+    ]
+   }
+  ],
+  "inner_level_offsets": [
+   114.7,
+   114.7
+  ],
+  "inner_levels_shared": false,
+  "legs": 6,
+  "links": 3,
+  "outer": {
+   "x": [
+    -457.3,
+    442.7
+   ],
+   "y": [
+    -522.2,
+    377.8
+   ]
+  },
+  "topology": "STR3_OUTER_PLUS_TWO_INNER_6_LEG"
+ },
+ "unresolved": {
+  "by_status": {
+   "CLOSED (not applicable)": 2,
+   "NARROWED (lower bound released; named facets still open)": 100,
+   "OPEN (facet recorded)": 16,
+   "OPEN (new named portion)": 109,
+   "OPEN (unchanged)": 881
+  },
+  "carried_from_s6": 999,
+  "new_portion_rows": 109,
+  "rows": 1108
+ }
+}

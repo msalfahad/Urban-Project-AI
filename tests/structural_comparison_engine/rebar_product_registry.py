@@ -34,6 +34,7 @@ ACCURATE_MODULES = (
     "engine/source/superstructure_beam_rebar.py",  # S6 accurate simple-beam + continuous-beam rebar engine
     "engine/source/graphic_evidence.py",        # D1 graphic evidence policy (which drawn portion may carry length)
     "engine/source/delta_release.py",           # D1 frozen baseline + delta records, conservation (no kg rewrite)
+    "engine/source/link_geometry.py",           # D1 link topology + envelope core path / end leg / count bounds
     "engine/bbs_steel.py",
 )
 # project builders that produce accurate reinforcement registers
@@ -54,6 +55,7 @@ ACCURATE_BUILDERS = (
     "research/alsenan_superstructure_beam_rebar_s6/build_superstructure_beam_rebar_s6.py",
     "research/source_recovery_delta/build_source_recovery_delta.py",   # source-recovery register (no kg)
     "research/alsenan_footing_rebar_s4_1/build_footing_rebar_s4_1.py",  # S4.1 delta over frozen S4
+    "research/alsenan_superstructure_beam_rebar_s6_1/build_superstructure_beam_rebar_s6_1.py",  # S6.1 delta over S6
 )
 ROUGH_MODULES = (
     "engine/source/rough_rebar_sanity.py",
