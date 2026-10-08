@@ -49,4 +49,8 @@ None of them is checked against a reference total.
 
 ## Full suite
 
-Recorded after the commit, on the clean committed tree.
+`python3 -m pytest -o addopts="" -q -p no:cacheprovider` at `d0d2ad9` gave
+**6801 passed, 4 skipped, 100 xfailed, 2 warnings in 432.95 s, exit 0**.
+- That is the 6767 from AD1 / D1.1 revision 2 plus the 34 D1.2 tests.
+- The run used the clean committed tree. No file was edited during it, and the tree was still clean afterwards.
+- Every frozen-manifest test still matches: S4, S5, S6, S4.1, S6.1, S5.1, AD1, D1.1 and D1.2.
