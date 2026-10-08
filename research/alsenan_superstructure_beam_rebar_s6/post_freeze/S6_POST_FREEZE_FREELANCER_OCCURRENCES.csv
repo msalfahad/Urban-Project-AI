@@ -1,0 +1,42 @@
+MARK,FREELANCER_LABEL,FREELANCER_CONCRETE_PIECES,S6_OCCURRENCES,CLASS,WHY
+B1,B1,8,19,OCCURRENCE_DIFFERENCE,concrete pieces per label (row count x count) vs S6 occurrences per mark; freelancer steel is one lump
+B11,B11,2,2,SAME,concrete pieces per label (row count x count) vs S6 occurrences per mark; freelancer steel is one lump
+B13,B13,1,1,SAME,concrete pieces per label (row count x count) vs S6 occurrences per mark; freelancer steel is one lump
+B14,B14,1,1,SAME,concrete pieces per label (row count x count) vs S6 occurrences per mark; freelancer steel is one lump
+B15,B15,1,1,SAME,concrete pieces per label (row count x count) vs S6 occurrences per mark; freelancer steel is one lump
+B16,B16,1,1,SAME,concrete pieces per label (row count x count) vs S6 occurrences per mark; freelancer steel is one lump
+B17,B17,1,1,SAME,concrete pieces per label (row count x count) vs S6 occurrences per mark; freelancer steel is one lump
+B18,B18,1,1,SAME,concrete pieces per label (row count x count) vs S6 occurrences per mark; freelancer steel is one lump
+B19,,0,1,OCCURRENCE_DIFFERENCE,concrete pieces per label (row count x count) vs S6 occurrences per mark; freelancer steel is one lump
+B2,B2,11,10,OCCURRENCE_DIFFERENCE,concrete pieces per label (row count x count) vs S6 occurrences per mark; freelancer steel is one lump
+B20,B20,1,1,SAME,concrete pieces per label (row count x count) vs S6 occurrences per mark; freelancer steel is one lump
+B21,B21,1,1,SAME,concrete pieces per label (row count x count) vs S6 occurrences per mark; freelancer steel is one lump
+B22,B22,1,1,SAME,concrete pieces per label (row count x count) vs S6 occurrences per mark; freelancer steel is one lump
+B23,B23,1,1,SAME,concrete pieces per label (row count x count) vs S6 occurrences per mark; freelancer steel is one lump
+B24,B24,1,1,SAME,concrete pieces per label (row count x count) vs S6 occurrences per mark; freelancer steel is one lump
+B25,,0,1,OCCURRENCE_DIFFERENCE,concrete pieces per label (row count x count) vs S6 occurrences per mark; freelancer steel is one lump
+B26,B26,1,1,SAME,concrete pieces per label (row count x count) vs S6 occurrences per mark; freelancer steel is one lump
+B27,,0,1,OCCURRENCE_DIFFERENCE,concrete pieces per label (row count x count) vs S6 occurrences per mark; freelancer steel is one lump
+B28,,0,1,OCCURRENCE_DIFFERENCE,concrete pieces per label (row count x count) vs S6 occurrences per mark; freelancer steel is one lump
+B29,B29,1,1,SAME,concrete pieces per label (row count x count) vs S6 occurrences per mark; freelancer steel is one lump
+B3,B3,7,8,OCCURRENCE_DIFFERENCE,concrete pieces per label (row count x count) vs S6 occurrences per mark; freelancer steel is one lump
+B4,B4,7,11,OCCURRENCE_DIFFERENCE,concrete pieces per label (row count x count) vs S6 occurrences per mark; freelancer steel is one lump
+B5,B5,1,3,OCCURRENCE_DIFFERENCE,concrete pieces per label (row count x count) vs S6 occurrences per mark; freelancer steel is one lump
+B6,B6,1,5,OCCURRENCE_DIFFERENCE,concrete pieces per label (row count x count) vs S6 occurrences per mark; freelancer steel is one lump
+B7,B7,7,10,OCCURRENCE_DIFFERENCE,concrete pieces per label (row count x count) vs S6 occurrences per mark; freelancer steel is one lump
+B8,B8,2,2,SAME,concrete pieces per label (row count x count) vs S6 occurrences per mark; freelancer steel is one lump
+B9,B9,1,1,SAME,concrete pieces per label (row count x count) vs S6 occurrences per mark; freelancer steel is one lump
+CA,,0,1,OCCURRENCE_DIFFERENCE,concrete pieces per label (row count x count) vs S6 occurrences per mark; freelancer steel is one lump
+CB1,BCB1,1,1,SAME,concrete pieces per label (row count x count) vs S6 occurrences per mark; freelancer steel is one lump; label BCB1 read as CB1
+CB2,BCB2,1,1,SAME,concrete pieces per label (row count x count) vs S6 occurrences per mark; freelancer steel is one lump; label BCB2 read as CB2
+CB3,BCB3,1,1,SAME,concrete pieces per label (row count x count) vs S6 occurrences per mark; freelancer steel is one lump; label BCB3 read as CB3
+CB4,BCB4,1,1,SAME,concrete pieces per label (row count x count) vs S6 occurrences per mark; freelancer steel is one lump; label BCB4 read as CB4
+CB5,BCB5,1,1,SAME,concrete pieces per label (row count x count) vs S6 occurrences per mark; freelancer steel is one lump; label BCB5 read as CB5
+CB6,BCB6,1,1,SAME,concrete pieces per label (row count x count) vs S6 occurrences per mark; freelancer steel is one lump; label BCB6 read as CB6
+CB7,BCB7,1,1,SAME,concrete pieces per label (row count x count) vs S6 occurrences per mark; freelancer steel is one lump; label BCB7 read as CB7
+CB8,BCB8,1,1,SAME,concrete pieces per label (row count x count) vs S6 occurrences per mark; freelancer steel is one lump; label BCB8 read as CB8
+CB9,GCB9,1,1,SAME,concrete pieces per label (row count x count) vs S6 occurrences per mark; freelancer steel is one lump; label GCB9 read as CB9
+CB10,GCB10,1,1,SAME,concrete pieces per label (row count x count) vs S6 occurrences per mark; freelancer steel is one lump; label GCB10 read as CB10
+CB11,GCB11,1,1,SAME,concrete pieces per label (row count x count) vs S6 occurrences per mark; freelancer steel is one lump; label GCB11 read as CB11
+CB12,GCB12,1,1,SAME,concrete pieces per label (row count x count) vs S6 occurrences per mark; freelancer steel is one lump; label GCB12 read as CB12
+CB13,GCB13,1,1,SAME,concrete pieces per label (row count x count) vs S6 occurrences per mark; freelancer steel is one lump; label GCB13 read as CB13
