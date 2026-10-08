@@ -49,7 +49,8 @@ Previously omitted, unregistered or newly bound occurrences:
 ## Coverage (03, 04, 05)
 
 - Concrete comes from the V3b BOQ lines and the coverage-recovery dashboard. Lines are copied with their own labels and never re-summed.
-- Rebar comes from the S3.1, S4.1, S5.1, S6.1 and S7 component states.
+- Concrete counts physical elements only; faces of an element are counted in their own column.
+- Rebar comes from the S3.1 and S7 component states and, for footings, ground beams and beams, from the latest dated layer of each component: the S4.1 / S5.1 / S6.1 delta, then the AD1, D1.1 and D1.2 errata. The pre-delta S4 / S5 / S6 states are never used where a delta row exists.
 - Stage totals (copied, not combined):
   - S3.1: 7,488.205 kg
   - S4.1 (+D1.2): 3,629.600 kg

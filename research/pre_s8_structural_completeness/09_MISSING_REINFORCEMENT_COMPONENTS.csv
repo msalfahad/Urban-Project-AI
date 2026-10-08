@@ -1,4 +1,24 @@
 FAMILY,COMPONENT,OCCURRENCES,OWNER_STATE,EXAMPLES,QUANTITY,WHY
+BEAM,BOTTOM_MAIN,21,"[""S6.1""]","[""BM-1F_ROOF-B4-BA001-1829"", ""BM-1F_ROOF-B4-BA002-1828"", ""BM-1F_ROOF-B6-BL014-6C5""]",NONE (unquantified),source does not establish a length / count / shape for this component
+BEAM,DEVELOPMENT_1,101,"[""S6.1""]","[""BM-1F_ROOF-B1-BL014-6D0"", ""BM-1F_ROOF-B1-BL016-6CE"", ""BM-1F_ROOF-B1-BL028-6CB""]",NONE (unquantified),source does not establish a length / count / shape for this component
+BEAM,DEVELOPMENT_2,101,"[""S6.1""]","[""BM-1F_ROOF-B1-BL014-6D0"", ""BM-1F_ROOF-B1-BL016-6CE"", ""BM-1F_ROOF-B1-BL028-6CB""]",NONE (unquantified),source does not establish a length / count / shape for this component
+BEAM,HANGER,13,"[""S6.1""]","[""CBO-FFRS-CB10-BL001"", ""CBO-FFRS-CB11-BL024"", ""CBO-FFRS-CB12-BL003""]",NONE (unquantified),source does not establish a length / count / shape for this component
+BEAM,HOOK_1,101,"[""S6.1""]","[""BM-1F_ROOF-B1-BL014-6D0"", ""BM-1F_ROOF-B1-BL016-6CE"", ""BM-1F_ROOF-B1-BL028-6CB""]",NONE (unquantified),source does not establish a length / count / shape for this component
+BEAM,HOOK_2,101,"[""S6.1""]","[""BM-1F_ROOF-B1-BL014-6D0"", ""BM-1F_ROOF-B1-BL016-6CE"", ""BM-1F_ROOF-B1-BL028-6CB""]",NONE (unquantified),source does not establish a length / count / shape for this component
+BEAM,MID_TOP,6,"[""S6.1""]","[""CBO-FFRS-CB10-BL001"", ""CBO-GFRS-CB2-BL038"", ""CBO-GFRS-CB3-BL022""]",NONE (unquantified),source does not establish a length / count / shape for this component
+BEAM,SIDE_REBAR,39,"[""S6.1""]","[""BM-1F_ROOF-B11-BL025-6D8"", ""BM-1F_ROOF-B18-BL008-6ED"", ""BM-1F_ROOF-B19-BL029-6CF""]",NONE (unquantified),source does not establish a length / count / shape for this component
+BEAM,STIRRUP_CORE_PATH,101,"[""S6.1""]","[""BM-1F_ROOF-B1-BL014-6D0"", ""BM-1F_ROOF-B1-BL016-6CE"", ""BM-1F_ROOF-B1-BL028-6CB""]",NONE (unquantified),source does not establish a length / count / shape for this component
+BEAM,STIRRUP_COUNT,21,"[""S6.1""]","[""BM-1F_ROOF-B4-BA001-1829"", ""BM-1F_ROOF-B4-BA002-1828"", ""BM-1F_ROOF-B6-BL014-6C5""]",NONE (unquantified),source does not establish a length / count / shape for this component
+BEAM,TOP_MAIN,27,"[""S6.1""]","[""BM-1F_ROOF-B4-BA001-1829"", ""BM-1F_ROOF-B4-BA002-1828"", ""BM-1F_ROOF-B6-BL014-6C5""]",NONE (unquantified),source does not establish a length / count / shape for this component
+BEAM,TOP_SUPPORT,13,"[""S6.1""]","[""CBO-FFRS-CB10-BL001"", ""CBO-FFRS-CB11-BL024"", ""CBO-FFRS-CB12-BL003""]",NONE (unquantified),source does not establish a length / count / shape for this component
+CANTILEVER_OR_BEARING_WALL,BOTTOM_MAIN,1,"[""S6.1""]","[""BM-GF_ROOF-CA-BL015-69E""]",NONE (unquantified),source does not establish a length / count / shape for this component
+CANTILEVER_OR_BEARING_WALL,DEVELOPMENT_1,1,"[""S6.1""]","[""BM-GF_ROOF-CA-BL015-69E""]",NONE (unquantified),source does not establish a length / count / shape for this component
+CANTILEVER_OR_BEARING_WALL,DEVELOPMENT_2,1,"[""S6.1""]","[""BM-GF_ROOF-CA-BL015-69E""]",NONE (unquantified),source does not establish a length / count / shape for this component
+CANTILEVER_OR_BEARING_WALL,HOOK_1,1,"[""S6.1""]","[""BM-GF_ROOF-CA-BL015-69E""]",NONE (unquantified),source does not establish a length / count / shape for this component
+CANTILEVER_OR_BEARING_WALL,HOOK_2,1,"[""S6.1""]","[""BM-GF_ROOF-CA-BL015-69E""]",NONE (unquantified),source does not establish a length / count / shape for this component
+CANTILEVER_OR_BEARING_WALL,STIRRUP_CORE_PATH,1,"[""S6.1""]","[""BM-GF_ROOF-CA-BL015-69E""]",NONE (unquantified),source does not establish a length / count / shape for this component
+CANTILEVER_OR_BEARING_WALL,STIRRUP_COUNT,1,"[""S6.1""]","[""BM-GF_ROOF-CA-BL015-69E""]",NONE (unquantified),source does not establish a length / count / shape for this component
+CANTILEVER_OR_BEARING_WALL,TOP_MAIN,1,"[""S6.1""]","[""BM-GF_ROOF-CA-BL015-69E""]",NONE (unquantified),source does not establish a length / count / shape for this component
 COLUMN,OTHER_EXTRA,14,"[""S3.1""]","[""COL-C8-X12-Y02-GF"", ""COL-C5-X14-Y02-GF"", ""COL-C3-X05-Y02-GF""]",NONE (unquantified),source does not establish a length / count / shape for this component
 COLUMN,TIES,11,"[""S3.1""]","[""COL-C10-X15-Y01-GF"", ""COL-C3-X04-Y01-GF"", ""COL-C11-X?-Y01@17913-7462-GF""]",NONE (unquantified),source does not establish a length / count / shape for this component
 DOME,DETAIL OF DOME (if it applies),1,"[""S7 releases the flat panel SP-2F_ROOF_SLAB-04 at that place""]","[""PS8-DOME-TOWER-ARCH-ONLY""]",NONE (unquantified),source does not establish a length / count / shape for this component
@@ -26,11 +46,37 @@ ELEVATED_SLAB,TRANSFERRED_FAMILY,8,"[""S7 (blocked)""]","[""S7B-0096"", ""S7B-00
 FOOTING,BOTTOM_LONG,1,"[""S4.1""]","[""FTG-CONFLICT_F_F10-30008-7312""]",NONE (unquantified),source does not establish a length / count / shape for this component
 FOOTING,BOTTOM_SHORT,1,"[""S4.1""]","[""FTG-CONFLICT_F_F10-30008-7312""]",NONE (unquantified),source does not establish a length / count / shape for this component
 FOOTING,BOXED,21,"[""S4.1""]","[""FTG-F-1888-7312"", ""FTG-F15-7088-7312"", ""FTG-F-13638-7312""]",NONE (unquantified),source does not establish a length / count / shape for this component
+GROUND_BEAM,BOTTOM_ROW_1,30,"[""S5.1""]","[""GSO-109-7CB-1"", ""GSO-10B-7D1-1"", ""GSO-114-115-7DF-1""]",NONE (unquantified),source does not establish a length / count / shape for this component
+GROUND_BEAM,BOTTOM_ROW_2,30,"[""S5.1""]","[""GSO-109-7CB-1"", ""GSO-10B-7D1-1"", ""GSO-114-115-7DF-1""]",NONE (unquantified),source does not establish a length / count / shape for this component
+GROUND_BEAM,DEVELOPMENT_SUPPORT_1,53,"[""S5.1""]","[""GSO-107-7CE-1"", ""GSO-109-7CB-1"", ""GSO-109-7CB-2""]",NONE (unquantified),source does not establish a length / count / shape for this component
+GROUND_BEAM,DEVELOPMENT_SUPPORT_2,53,"[""S5.1""]","[""GSO-107-7CE-1"", ""GSO-109-7CB-1"", ""GSO-109-7CB-2""]",NONE (unquantified),source does not establish a length / count / shape for this component
+GROUND_BEAM,EXTRA_SUPPORT,16,"[""S5.1""]","[""GSO-109-7CB-1"", ""GSO-13E-7D6-1"", ""GSO-13F-7D3-1""]",NONE (unquantified),source does not establish a length / count / shape for this component
+GROUND_BEAM,HOOK_1,53,"[""S5.1""]","[""GSO-107-7CE-1"", ""GSO-109-7CB-1"", ""GSO-109-7CB-2""]",NONE (unquantified),source does not establish a length / count / shape for this component
+GROUND_BEAM,HOOK_2,53,"[""S5.1""]","[""GSO-107-7CE-1"", ""GSO-109-7CB-1"", ""GSO-109-7CB-2""]",NONE (unquantified),source does not establish a length / count / shape for this component
+GROUND_BEAM,MID,16,"[""S5.1""]","[""GSO-109-7CB-1"", ""GSO-13E-7D6-1"", ""GSO-13F-7D3-1""]",NONE (unquantified),source does not establish a length / count / shape for this component
+GROUND_BEAM,OTHER_EXPLICIT_EXTRA,16,"[""S5.1""]","[""GSO-109-7CB-1"", ""GSO-13E-7D6-1"", ""GSO-13F-7D3-1""]",NONE (unquantified),source does not establish a length / count / shape for this component
+GROUND_BEAM,SIDE_REBAR,44,"[""S5.1""]","[""GSO-107-7CE-1"", ""GSO-109-7CB-1"", ""GSO-109-7CB-2""]",NONE (unquantified),source does not establish a length / count / shape for this component
+GROUND_BEAM,STIRRUP_CORE_PATH,59,"[""S5.1""]","[""GSO-107-7CE-1"", ""GSO-109-7CB-1"", ""GSO-109-7CB-2""]",NONE (unquantified),source does not establish a length / count / shape for this component
+GROUND_BEAM,STIRRUP_COUNT,34,"[""S5.1""]","[""GSO-109-7CB-1"", ""GSO-10B-7D1-1"", ""GSO-136-7D5-1""]",NONE (unquantified),source does not establish a length / count / shape for this component
+GROUND_BEAM,STIRRUP_DIAMETER,31,"[""S5.1""]","[""GSO-109-7CB-1"", ""GSO-10B-7D1-1"", ""GSO-13C-7D9-1""]",NONE (unquantified),source does not establish a length / count / shape for this component
+GROUND_BEAM,STIRRUP_END_ZONE_EXTRA,31,"[""S5.1""]","[""GSO-109-7CB-1"", ""GSO-10B-7D1-1"", ""GSO-13C-7D9-1""]",NONE (unquantified),source does not establish a length / count / shape for this component
+GROUND_BEAM,STIRRUP_HOOK_1,59,"[""S5.1""]","[""GSO-107-7CE-1"", ""GSO-109-7CB-1"", ""GSO-109-7CB-2""]",NONE (unquantified),source does not establish a length / count / shape for this component
+GROUND_BEAM,STIRRUP_HOOK_2,59,"[""S5.1""]","[""GSO-107-7CE-1"", ""GSO-109-7CB-1"", ""GSO-109-7CB-2""]",NONE (unquantified),source does not establish a length / count / shape for this component
+GROUND_BEAM,STIRRUP_SPACING,31,"[""S5.1""]","[""GSO-109-7CB-1"", ""GSO-10B-7D1-1"", ""GSO-13C-7D9-1""]",NONE (unquantified),source does not establish a length / count / shape for this component
+GROUND_BEAM,TOP_MAIN,30,"[""S5.1""]","[""GSO-109-7CB-1"", ""GSO-10B-7D1-1"", ""GSO-114-115-7DF-1""]",NONE (unquantified),source does not establish a length / count / shape for this component
 GROUND_SLAB,"MESH 5Ø10/m E.W. (P3-GROUND-SLAB, two printed zones)",21,"[""none""]","[""SP-GBP-02"", ""SP-GBP-03"", ""SP-GBP-04""]",NONE (unquantified),source does not establish a length / count / shape for this component
-LIFT,OTHER_EXPLICIT_EXTRA,1,"[""S4.1""]","[""FTG-FF-18688-14112""]",NONE (unquantified),source does not establish a length / count / shape for this component
 LIFT,"P14 walls 6Ø12/m + 6Ø16/m, 2Ø16, 2Ø12",1,"[""none""]","[""PS8-LIFT-WALLS""]",NONE (unquantified),source does not establish a length / count / shape for this component
 NECK_PEDESTAL,OTHER_EXTRA,30,"[""S3.1""]","[""COL-C10-X15-Y01-FOUNDATION"", ""COL-C-X01-Y01-FOUNDATION"", ""COL-C3-X04-Y01-FOUNDATION""]",NONE (unquantified),source does not establish a length / count / shape for this component
 NECK_PEDESTAL,STARTER,5,"[""S3.1""]","[""COL-C10-X15-Y01-FOUNDATION"", ""COL-C-X16-Y01-FOUNDATION"", ""COL-CN-X16-Y03-FOUNDATION""]",NONE (unquantified),source does not establish a length / count / shape for this component
 NECK_PEDESTAL,TIES,11,"[""S3.1""]","[""COL-C10-X15-Y01-FOUNDATION"", ""COL-C11-X?-Y01@17913-7462-FOUNDATION"", ""COL-C5-X14-Y02-FOUNDATION""]",NONE (unquantified),source does not establish a length / count / shape for this component
 RC_PARAPET,"P14 parapet sections (TYPICAL DETAIL OF PARAPET SECTION / DETAIL OF PARAPET SECTION (5Ø12/m, 5Ø10/m, 6Ø10/m, 6Ø12/m; 30 x 130; 15/15)",3,"[""none""]","[""SPC-PARAPET-GFRS"", ""SPC-PARAPET-FFRS"", ""SPC-PARAPET-SFRS""]",NONE (unquantified),source does not establish a length / count / shape for this component
 STAIR_AND_LANDING,P16 stair bars,1,"[""none""]","[""SP-GBP-12""]",NONE (unquantified),source does not establish a length / count / shape for this component
+STRAP_BEAM,BOTTOM_MAIN,1,"[""S5.1""]","[""SOCC-1B08-1B09""]",NONE (unquantified),source does not establish a length / count / shape for this component
+STRAP_BEAM,DEVELOPMENT_FOOTING_1,3,"[""S5.1""]","[""SOCC-1689-1B1C"", ""SOCC-1B08-1B09"", ""SOCC-1B26-1B27""]",NONE (unquantified),source does not establish a length / count / shape for this component
+STRAP_BEAM,DEVELOPMENT_FOOTING_2,3,"[""S5.1""]","[""SOCC-1689-1B1C"", ""SOCC-1B08-1B09"", ""SOCC-1B26-1B27""]",NONE (unquantified),source does not establish a length / count / shape for this component
+STRAP_BEAM,HOOK_1,3,"[""S5.1""]","[""SOCC-1689-1B1C"", ""SOCC-1B08-1B09"", ""SOCC-1B26-1B27""]",NONE (unquantified),source does not establish a length / count / shape for this component
+STRAP_BEAM,HOOK_2,3,"[""S5.1""]","[""SOCC-1689-1B1C"", ""SOCC-1B08-1B09"", ""SOCC-1B26-1B27""]",NONE (unquantified),source does not establish a length / count / shape for this component
+STRAP_BEAM,STIRRUP_CORE_PATH,3,"[""S5.1""]","[""SOCC-1689-1B1C"", ""SOCC-1B08-1B09"", ""SOCC-1B26-1B27""]",NONE (unquantified),source does not establish a length / count / shape for this component
+STRAP_BEAM,STIRRUP_HOOK_1,3,"[""S5.1""]","[""SOCC-1689-1B1C"", ""SOCC-1B08-1B09"", ""SOCC-1B26-1B27""]",NONE (unquantified),source does not establish a length / count / shape for this component
+STRAP_BEAM,STIRRUP_HOOK_2,3,"[""S5.1""]","[""SOCC-1689-1B1C"", ""SOCC-1B08-1B09"", ""SOCC-1B26-1B27""]",NONE (unquantified),source does not establish a length / count / shape for this component
+STRAP_BEAM,TOP_MAIN,1,"[""S5.1""]","[""SOCC-1B08-1B09""]",NONE (unquantified),source does not establish a length / count / shape for this component

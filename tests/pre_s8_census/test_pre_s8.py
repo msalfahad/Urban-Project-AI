@@ -200,7 +200,8 @@ def test_dome_ring_arcs_need_an_ownership_transfer(census):
     assert len(arcs) == 6
     for r in arcs:
         assert r["S8_SCOPE"] == "COMPONENT_OF_OWNED_ELEMENT" and r["QA_STATE"] == "COUNTED_OWNED_TRANSFER_PENDING"
-        assert r["EXISTING_STAGE_OWNER"].startswith("S6.1 (BLOCKED_TYPE")
+        assert r["EXISTING_STAGE_OWNER"].startswith("S6.1 (S6 occurrence BLOCKED_TYPE")
+        assert json.loads(r["REBAR_COMPONENTS"]) == []      # S6 holds the arc with no component and 0 kg
 
 
 # ------------------------------------------------------------------ coverage, interfaces, readiness
@@ -214,6 +215,79 @@ def test_concrete_lines_are_real_urban_lines_never_re_summed():
             exp = sum(lines[u]["release"]["technical"]["qty"] or 0.0 for u in used)
             assert abs(float(r["V3B_LINE_TECHNICAL_M3_SHARED"]) - exp) < 1e-6
         assert "never re-summed" in r["NOTE"]
+
+
+def test_concrete_matrix_counts_elements_and_faces_apart(census):
+    mat = rows(PKG / "03_CONCRETE_COVERAGE_MATRIX.csv")
+    kinds = Counter(r["ROW_KIND"] for r in census)
+    counted = kinds["ELEMENT"] + kinds["POPULATION_RECORD"] + kinds["CONFLICT_CANDIDATE"]
+    assert sum(int(r["ELEMENTS"]) for r in mat) == counted == 400
+    assert sum(int(r["FACES_OF_ELEMENTS"]) for r in mat) == kinds["FACE_OF_ELEMENT"] == 36
+    for r in mat:
+        assert sum(json.loads(r["ELEMENT_STATES"]).values()) == int(r["ELEMENTS"])
+        assert sum(json.loads(r["FACE_STATES"]).values()) == int(r["FACES_OF_ELEMENTS"])
+
+
+LAYERS = {  # stage delta, then the errata layers in date order (keyed by ORIGINAL_DELTA_ID)
+    "S4.1": ("alsenan_footing_rebar_s4_1/S4_1_DELTA_COMPONENTS.csv",
+             ["d1_2_footing_cover_audit/04_S4_1A_COVER_AUTHORITY_CORRECTION.csv"]),
+    "S5.1": ("alsenan_ground_system_rebar_s5_1/S5_1_DELTA_COMPONENTS.csv",
+             ["ad1_authority_decisions/05_S5_AD1_CORRECTIONS.csv", "d1_1_stirrup_authority_audit/04_S5_1A_CORRECTIONS.csv"]),
+    "S6.1": ("alsenan_superstructure_beam_rebar_s6_1/S6_1_DELTA_COMPONENTS.csv",
+             ["d1_1_stirrup_authority_audit/03_S6_1A_CORRECTIONS.csv"]),
+}
+
+
+def test_rebar_components_are_the_latest_dated_layer_never_the_pre_delta_state(census):
+    by_id = {r["ELEMENT_ID"]: r for r in census}
+    R = ROOT / "research"
+    for stage, (delta, errata) in LAYERS.items():
+        d = rows(R / delta)
+        state = {x["DELTA_ID"]: x["NEW_RELEASE_STATE"] for x in d}
+        for e in errata:
+            for c in rows(R / e):
+                assert c["ORIGINAL_DELTA_ID"] in state
+                state[c["ORIGINAL_DELTA_ID"]] = ("PROJECT_BASIS" if c.get("NEW_MASS_STATE") == "PROJECT_BASIS_NUMERIC"
+                                                 else c["NEW_RELEASE_STATE"])
+        exp = {}
+        for x in d:
+            exp.setdefault(x["OCCURRENCE_ID"], set()).add(f"{x['COMPONENT']}:{state[x['DELTA_ID']]}")
+        rows_by_occ = {}
+        for r in census:   # footings carry the S1 footing id; their S4 occurrence id is in the owner text
+            occ = r["EXISTING_STAGE_OWNER"].split("(", 1)[-1].split(";")[0] if stage == "S4.1" else r["ELEMENT_ID"]
+            rows_by_occ[occ] = r
+        for occ, comps in exp.items():
+            r = by_id.get(occ) or rows_by_occ.get(occ)
+            assert r is not None, (stage, occ)
+            assert set(json.loads(r["REBAR_COMPONENTS"])) == comps, (stage, occ)
+    # D1.1 took every corrected stirrup core path out of the release: none of them may read as released
+    for c in rows(R / "d1_1_stirrup_authority_audit/03_S6_1A_CORRECTIONS.csv"):
+        assert "STIRRUP_CORE_PATH:BLOCKED_UNQUANTIFIED" in json.loads(by_id[c["OCCURRENCE_ID"]]["REBAR_COMPONENTS"])
+
+
+def test_rebar_matrix_grades_every_component_by_its_state(mod, census):
+    mat = rows(PKG / "04_REBAR_COVERAGE_MATRIX.csv")
+    assert not [r for r in mat if r["COVERAGE"] in ("OTHER", "OWNED_ELSEWHERE_OR_OTHER")]
+    fam_n = Counter(mod.family_group(r["ELEMENT_FAMILY"]) for r in census if r["ROW_KIND"] in mod.COUNTED_KINDS)
+    for r in mat:
+        assert int(r["ELEMENTS"]) <= fam_n[r["FAMILY"]], r      # an element counts once per component
+        st = set(json.loads(r["STATES"]))
+        assert not any(s.isdigit() for s in st), r                # a tally count is never read as a state
+    # "STATE:n" tallies and S7 face records are graded by what they say, never parked as "other"
+    assert mod.rebar_parts(["LOWER_BOUND:3", "BLOCKED_UNQUANTIFIED:0"]) == [
+        ("LOWER_BOUND (component tally)", "LOWER_BOUND", 3)]
+    assert mod.rebar_parts({"released_items": 4, "blocked_categories": '["TEMPERATURE"]'}) == [
+        ("S7_RELEASED_ITEMS", "PROJECT_BASIS", 4), ("S7_BLOCKED_CATEGORIES", "BLOCKED", 1)]
+    assert mod.rebar_parts({"released_items": 0, "blocked_categories": "[]"})[0][1] == "NOT_IN_S3_S7"
+    assert mod.rebar_parts(["rule P7-POOL: see rule register"])[0][1].startswith("RULE_REFERENCE")
+
+
+def test_missing_register_holds_the_beam_and_ground_beam_blockers():
+    miss = {(r["FAMILY"], r["COMPONENT"]) for r in rows(PKG / "09_MISSING_REINFORCEMENT_COMPONENTS.csv")}
+    for fam, comp in (("BEAM", "DEVELOPMENT_1"), ("BEAM", "HOOK_1"), ("BEAM", "STIRRUP_CORE_PATH"),
+                      ("GROUND_BEAM", "DEVELOPMENT_SUPPORT_1"), ("GROUND_BEAM", "STIRRUP_HOOK_1"),
+                      ("STRAP_BEAM", "DEVELOPMENT_FOOTING_1"), ("FOOTING", "BOXED")):
+        assert (fam, comp) in miss, (fam, comp)
 
 
 def test_all_brief_interfaces_are_audited():

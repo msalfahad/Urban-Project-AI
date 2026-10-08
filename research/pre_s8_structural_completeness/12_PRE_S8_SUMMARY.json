@@ -35,7 +35,7 @@
   "WATER_TANK": 1
  },
  "elements_total": 400,
- "engine_commit": "aeb8798+code:427e653954129d5c",
+ "engine_commit": "aeb8798+code:c5097b5608d42715",
  "families_searched": 33,
  "family_states": {
   "ABSENT_IN_ISSUED_DOCUMENTS": 7,
@@ -76,7 +76,7 @@
   "WALL -> FOUNDATION": "NOT_OWNED"
  },
  "kg_calculated_here": 0,
- "missing_component_kinds": 35,
+ "missing_component_kinds": 81,
  "not_structural_faces_skipped": [
   "SP-GF_ROOF_SLAB-01",
   "SP-1F_ROOF_SLAB-10",
@@ -106,11 +106,13 @@
   "WATER_TANK": "READY_PARTIAL"
  },
  "rebar_coverage": {
-  "NOT_APPLICABLE_OR_NOT_REQUIRED": 3,
-  "OWNED_ELSEWHERE_OR_OTHER": 46,
-  "PARTIAL": 6,
-  "RELEASED": 12,
-  "UNQUANTIFIED": 8
+  "NOT_APPLICABLE_OR_NOT_REQUIRED": 23,
+  "PARTIAL": 21,
+  "PRE_S_STAGE_ONLY": 1,
+  "RELEASED": 18,
+  "RULE_REFERENCE_ONLY": 17,
+  "TRANSFERRED_OUT": 1,
+  "UNQUANTIFIED": 46
  },
  "references_read": [],
  "round": "PRE_S8",

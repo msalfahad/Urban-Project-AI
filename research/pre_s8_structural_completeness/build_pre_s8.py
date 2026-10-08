@@ -75,6 +75,13 @@ P = {"s31_release": R / "alsenan_column_rebar_s3_1/COLUMN_RELEASE_REGISTER.json"
      "s5_occ": R / "alsenan_ground_system_rebar_s5/GROUND_SYSTEM_REBAR_OCCURRENCES.csv",
      "s6_occ": R / "alsenan_superstructure_beam_rebar_s6/SUPERSTRUCTURE_BEAM_OCCURRENCES.csv",
      "s6_cons": R / "alsenan_superstructure_beam_rebar_s6/SUPERSTRUCTURE_BEAM_OBJECT_CONSERVATION.csv",
+     "s41_delta": R / "alsenan_footing_rebar_s4_1/S4_1_DELTA_COMPONENTS.csv",
+     "s51_delta": R / "alsenan_ground_system_rebar_s5_1/S5_1_DELTA_COMPONENTS.csv",
+     "s61_delta": R / "alsenan_superstructure_beam_rebar_s6_1/S6_1_DELTA_COMPONENTS.csv",
+     "d12_corr": R / "d1_2_footing_cover_audit/04_S4_1A_COVER_AUTHORITY_CORRECTION.csv",
+     "ad1_s5_corr": R / "ad1_authority_decisions/05_S5_AD1_CORRECTIONS.csv",
+     "d11_s5_corr": R / "d1_1_stirrup_authority_audit/04_S5_1A_CORRECTIONS.csv",
+     "d11_s6_corr": R / "d1_1_stirrup_authority_audit/03_S6_1A_CORRECTIONS.csv",
      "pre7_census": R / "alsenan_slab_rebar_pre_s7/01_SLAB_PANEL_CENSUS.csv",
      "pre7_openings": R / "alsenan_slab_rebar_pre_s7/08_OPENING_REGISTER.csv",
      "pre7_conflicts": R / "alsenan_slab_rebar_pre_s7/11_SOURCE_CONFLICTS.csv",
@@ -189,6 +196,13 @@ def verify_inputs():
                              ("s5_occ", "S5", "GROUND_SYSTEM_REBAR_OCCURRENCES.csv"),
                              ("s6_occ", "S6", "SUPERSTRUCTURE_BEAM_OCCURRENCES.csv"),
                              ("s6_cons", "S6", "SUPERSTRUCTURE_BEAM_OBJECT_CONSERVATION.csv"),
+                             ("s41_delta", "S4.1", "S4_1_DELTA_COMPONENTS.csv"),
+                             ("s51_delta", "S5.1", "S5_1_DELTA_COMPONENTS.csv"),
+                             ("s61_delta", "S6.1", "S6_1_DELTA_COMPONENTS.csv"),
+                             ("d12_corr", "D1.2", "04_S4_1A_COVER_AUTHORITY_CORRECTION.csv"),
+                             ("ad1_s5_corr", "AD1", "05_S5_AD1_CORRECTIONS.csv"),
+                             ("d11_s5_corr", "D1.1", "04_S5_1A_CORRECTIONS.csv"),
+                             ("d11_s6_corr", "D1.1", "03_S6_1A_CORRECTIONS.csv"),
                              ("pre7_census", "PRE-S7", "01_SLAB_PANEL_CENSUS.csv"),
                              ("pre7_openings", "PRE-S7", "08_OPENING_REGISTER.csv"),
                              ("pre7_conflicts", "PRE-S7", "11_SOURCE_CONFLICTS.csv"),
@@ -351,7 +365,26 @@ def _conc(v3, *codes):
 
 
 # ------------------------------------------------------------------ census builders per source
-def footing_rows(S1d, s4occ, s4comp, v3):
+def current_component_states(delta, *corrections):
+    """Occurrence id -> sorted "COMPONENT:STATE" after every dated layer, never the pre-delta baseline.
+
+    The stage delta (S4.1 / S5.1 / S6.1) restates every component portion of the occurrences it covers; each errata
+    layer (AD1, D1.1, D1.2) then overrides the portions it names by ORIGINAL_DELTA_ID. D1.2 makes a footing straight
+    run PROJECT_BASIS (a value at minimum cover, not a lower bound). A component whose portions differ keeps one entry
+    per state, so a partial release stays visible."""
+    state = {d["DELTA_ID"]: d["NEW_RELEASE_STATE"] for d in delta}
+    for rows in corrections:
+        for c in rows:
+            check(c["ORIGINAL_DELTA_ID"] in state, f"errata {c.get('CORRECTION_ID')} names a delta row")
+            state[c["ORIGINAL_DELTA_ID"]] = ("PROJECT_BASIS" if c.get("NEW_MASS_STATE") == "PROJECT_BASIS_NUMERIC"
+                                            else c["NEW_RELEASE_STATE"])
+    out = defaultdict(set)
+    for d in delta:
+        out[d["OCCURRENCE_ID"]].add(f"{d['COMPONENT']}:{state[d['DELTA_ID']]}")
+    return {k: sorted(v) for k, v in out.items()}
+
+
+def footing_rows(S1d, s4occ, s4comp, v3, current=None):
     defs = {r["definition_id"]: r for r in S1d["FOOTING_DEFINITION_REGISTER"]}
     by_outline = {r["outline"]: r for r in s4occ}
     comps = defaultdict(list)
@@ -373,14 +406,14 @@ def footing_rows(S1d, s4occ, s4comp, v3):
                if d else "outline drawn; two schedule definitions (F / F10)")
         conflict = "F / F10: one drawn outline, two schedule definitions" if not f["type"] else ""
         cstate = (_conc(v3, "C-FTG") if f["type"] else _conc(v3, "C-FTG-FF10"))
-        comp = sorted({f"{c['component']}:{c['state']}" for c in cs})
+        comp = (current or {}).get(o["occurrence_id"]) or sorted({f"{c['component']}:{c['state']}" for c in cs})
         rows.append({
             "ELEMENT_ID": f["footing_id"], "ELEMENT_FAMILY": fam, "FLOOR": "FOUNDATION",
             "SOURCE_PAGE": "2 (plan); 9 (schedule); 13 (typical detail)",
             "DXF_HANDLES": [f["outline"]["handle"], (f.get("tag") or {}).get("handle")],
             "PHYSICAL_GEOMETRY": geo + f"; supports {ncol} column(s)",
             "CONCRETE_QUANTITY_STATE": cstate, "REBAR_COMPONENTS": comp,
-            "EXISTING_STAGE_OWNER": f"S4.1 ({o['occurrence_id']} {o['release_state']}; D1.2 cover authority)",
+            "EXISTING_STAGE_OWNER": f"S4.1 ({o['occurrence_id']}; component states after S4.1 + D1.2)",
             "NEW_S8_OWNER": NO_S8,
             "SOURCE_AUTHORITY": "PROJECT_SOURCE (plan outline + schedule row)",
             "MISSING_INFORMATION": ("BOXED bar meaning; founding level" if any(c["component"] == "BOXED" and
@@ -431,7 +464,7 @@ def column_rows(S1d, s31, v3, special):
     return rows
 
 
-def ground_rows(s5occ, v3):
+def ground_rows(s5occ, v3, current=None):
     rows = []
     for g in s5occ:
         strap = g["family"] == "STRAP_BEAM"
@@ -452,8 +485,10 @@ def ground_rows(s5occ, v3):
                                  f"{g['width_mm']} x {g['depth_mm'] or '?'} mm ({g['depth_state']})",
             "CONCRETE_QUANTITY_STATE": _conc(v3, "C-STR") if strap else _conc(
                 v3, *(("C-GB-EXT",) if ext else ("C-GB-INT", "C-GB-EXT") if has_ext else ("C-GB-INT",))),
-            "REBAR_COMPONENTS": sorted(f"{k}:{v}" for k, v in json.loads(g["components_by_state"]).items()),
-            "EXISTING_STAGE_OWNER": f"S5.1 ({g['occurrence_state']}; AD1 + D1.1 corrections)",
+            "REBAR_COMPONENTS": (current or {}).get(g["occurrence_id"]) or
+            sorted(f"{k}:{v}" for k, v in json.loads(g["components_by_state"]).items()),
+            "EXISTING_STAGE_OWNER": f"S5.1 (S5 occurrence {g['occurrence_state']}; component states after S5.1 + "
+                                    f"AD1 + D1.1)",
             "NEW_S8_OWNER": NO_S8, "SOURCE_AUTHORITY": "PROJECT_SOURCE (plan linework + p.13 section by length)",
             "MISSING_INFORMATION": g["why_not_resolved"] or "",
             "CONFLICT": f"detail candidates {det}" if (has_ext and has_int) or g["depth_state"] in (
@@ -465,7 +500,7 @@ def ground_rows(s5occ, v3):
 DOME_RING_ARCS = {f"ARC:FFRS:BA00{i}" for i in range(3, 9)}
 
 
-def beam_rows(s6occ, v3):
+def beam_rows(s6occ, v3, current=None):
     line = {"GF_ROOF": ("C-BEAM-GF", "C-BEAM-GF-RES"), "1F_ROOF": ("C-BEAM-1F", "C-BEAM-1F-RES"),
             "2F_ROOF": ("C-BEAM-2F",)}
     rows = []
@@ -483,8 +518,10 @@ def beam_rows(s6occ, v3):
             "CONCRETE_QUANTITY_STATE": (_conc(v3, "C-DOME-RING-12EB", "C-DOME-RING-2F33") if ring else
                                         _conc(v3, *line.get(b["floor"], ())[:1]) if b["occurrence_state"] ==
                                         "LOWER_BOUND" else _conc(v3, *line.get(b["floor"], ())[-1:])),
-            "REBAR_COMPONENTS": sorted(f"{k}:{v}" for k, v in json.loads(b["components_by_state"]).items()),
-            "EXISTING_STAGE_OWNER": f"S6.1 ({b['occurrence_state']}; D1.1 corrections)",
+            "REBAR_COMPONENTS": (current or {}).get(b["occurrence_id"]) or
+            sorted(f"{k}:{v}" for k, v in json.loads(b["components_by_state"]).items()),
+            "EXISTING_STAGE_OWNER": f"S6.1 (S6 occurrence {b['occurrence_state']}; component states after S6.1 + "
+                                    f"D1.1)",
             "NEW_S8_OWNER": "S8 DOME (ring beam per DETAIL OF DOME) - ownership transfer from S6 required"
             if ring else NO_S8,
             "SOURCE_AUTHORITY": "PROJECT_SOURCE (plan band + tag + schedule)" if b["mark"] else
@@ -757,13 +794,14 @@ def family_group(fam):
 
 def concrete_matrix(census, v3, cr):
     cr_by = {r["trade"]: r for r in cr["rows"]}
-    agg = defaultdict(lambda: {"n": 0, "states": Counter(), "lines": set()})
+    agg = defaultdict(lambda: {"n": 0, "faces": 0, "states": Counter(), "face_states": Counter(), "lines": set()})
     for r in census:
         if r["ROW_KIND"] in ("COMPONENT_EVIDENCE", "TYPICAL_DETAIL_ONLY"):
             continue
         g = family_group(r["ELEMENT_FAMILY"])
         a = agg[(g, r["FLOOR"])]
-        a["n"] += 1
+        face = r["ROW_KIND"] == "FACE_OF_ELEMENT"     # a face is counted apart, never as a second element
+        a["faces" if face else "n"] += 1
         st = r["CONCRETE_QUANTITY_STATE"]
         cls = set(re.findall(r"technical (\w+)", st))
         good, part = cls & {"DERIVED", "OWNER_PROJECT_FACT"}, cls & {"PARTIAL"}
@@ -773,7 +811,7 @@ def concrete_matrix(census, v3, cr):
                "MEASURED" if good and not part and not bad else
                "MEASURED_PARTIAL_LINE" if part and not bad else
                "MIXED_LINES (measured + blocked)" if (good or part) and bad else "BLOCKED")
-        a["states"][key] += 1
+        a["face_states" if face else "states"][key] += 1
         a["lines"].update(re.findall(r"V3b (B\d{4}) (\S+?):", st))
     cr_map = {"GROUND_BEAM": "GROUND_BEAMS", "GROUND_SLAB": "GROUND_SLAB", "COLUMN": "COLUMNS_AND_JOINTS",
               "NECK_PEDESTAL": "COLUMNS_AND_JOINTS", "BEAM": "BEAMS", "ELEVATED_SLAB": "SLABS",
@@ -783,7 +821,9 @@ def concrete_matrix(census, v3, cr):
         lines = sorted(a["lines"])
         tech = [v3[c] for _, c in lines if c in v3]
         crr = cr_by.get(cr_map.get(g, ""))
+        all_states = set(a["states"]) | set(a["face_states"])
         rows.append({"FAMILY": g, "FLOOR": fl, "ELEMENTS": a["n"], "ELEMENT_STATES": dict(a["states"]),
+                     "FACES_OF_ELEMENTS": a["faces"], "FACE_STATES": dict(a["face_states"]),
                      "URBAN_LINES": [f"{lid} {c}" for lid, c in lines],
                      "V3B_LINE_TECHNICAL_M3_SHARED": sum(x["technical_m3"] or 0.0 for x in tech) if tech else None,
                      "V3B_TECHNICAL_CLASSES": sorted({x["technical_class"] for x in tech}),
@@ -792,40 +832,80 @@ def concrete_matrix(census, v3, cr):
                      "CR_TRADE": crr["trade"] if crr else None,
                      "CR_VERIFIED_LOWER_BEST_M3": [crr["verified"], crr["lower_bound"], crr["best_provisional"]]
                      if crr else None,
-                     "COVERAGE_STATE": "DEDUCTION_ONLY" if set(a["states"]) <= {"DEDUCTION"} else
-                     "MEASURED" if set(a["states"]) <= {"MEASURED"} else
-                     "MEASURED_PARTIAL" if set(a["states"]) <= {"MEASURED", "MEASURED_PARTIAL_LINE", "DEDUCTION"} else
-                     "NOT_MEASURED" if set(a["states"]) <= {"NOT_MEASURED", "NOT_ITEMISED"} else
-                     "BLOCKED" if set(a["states"]) <= {"BLOCKED"} else "PARTIAL_OR_BLOCKED",
+                     "COVERAGE_STATE": "DEDUCTION_ONLY" if all_states <= {"DEDUCTION"} else
+                     "MEASURED" if all_states <= {"MEASURED"} else
+                     "MEASURED_PARTIAL" if all_states <= {"MEASURED", "MEASURED_PARTIAL_LINE", "DEDUCTION"} else
+                     "NOT_MEASURED" if all_states <= {"NOT_MEASURED", "NOT_ITEMISED"} else
+                     "BLOCKED" if all_states <= {"BLOCKED"} else "PARTIAL_OR_BLOCKED",
                      "NOTE": "V3b line quantities are per family / floor (several rows can share one line); they are "
-                             "copied, never re-summed across overlapping lines"})
+                             "copied, never re-summed across overlapping lines. ELEMENTS counts physical elements only; "
+                             "faces of an element are counted apart (FACES_OF_ELEMENTS) and the coverage state reads "
+                             "both"})
     return rows
 
 
+TALLY_STATES = ("VERIFIED", "LOWER_BOUND", "PROVISIONAL", "BLOCKED_MODELLED", "BLOCKED_UNQUANTIFIED", "BLOCKED",
+                "NOT_APPLICABLE", "NOT_REQUIRED", "NOT_QUANTIFIED")
+RELEASED_STATES = {"VERIFIED", "LOWER_BOUND", "PROVISIONAL", "BLOCKED_MODELLED", "PROJECT_BASIS"}
+UNQUANTIFIED_STATES = {"BLOCKED_UNQUANTIFIED", "BLOCKED", "NOT_QUANTIFIED", "NOT_ESTABLISHED", "NOT_IN_S3_S7"}
+
+
+def rebar_parts(comps):
+    """(component, grading state, count) for one census REBAR_COMPONENTS value.
+
+    Three shapes occur: "COMPONENT:STATE" (S3.1, S4.1, special rows); "STATE:n" tallies, which are the S5.1 / S6.1
+    components_by_state of one element (graded by the STATE, n kept as the count); and the S7 slab-face record
+    (released items + blocked categories). A "rule X: status" entry is a rule reference, never a quantity."""
+    if isinstance(comps, dict):
+        rel = int(comps.get("released_items") or 0)
+        bl = comps.get("blocked_categories") or []
+        bl = json.loads(bl) if isinstance(bl, str) else bl
+        out = [("S7_RELEASED_ITEMS", "PROJECT_BASIS", rel)] if rel else []
+        out += [("S7_BLOCKED_CATEGORIES", "BLOCKED", len(bl))] if bl else []
+        return out or [("S7_NO_ITEMS (outside the S7 release)", "NOT_IN_S3_S7", 0)]
+    out = []
+    for c in comps or []:
+        c = str(c)
+        name, _, state = c.rpartition(":")
+        state = state.strip()
+        if name in TALLY_STATES and state.isdigit():
+            if int(state):
+                out.append((f"{name} (component tally)", name, int(state)))
+        elif c.startswith("rule "):
+            out.append((name, f"RULE_REFERENCE ({state})", 0))
+        elif not name:
+            out.append((c, "PRE_S_STAGE_ONLY" if c.startswith("V3b ") else
+                        "NOT_REQUIRED" if c.startswith("NONE") else c, 0))
+        else:
+            out.append((name, state, 0))
+    return out
+
+
 def rebar_matrix(census, s31, s7sum, d12, s7a):
-    by_comp = defaultdict(lambda: {"elements": 0, "states": Counter(), "owner": set()})
-    for r in census:
+    by_comp = defaultdict(lambda: {"elements": set(), "other_rows": set(), "count": 0, "states": Counter(),
+                                   "owner": set()})
+    for i, r in enumerate(census):
         g = family_group(r["ELEMENT_FAMILY"])
-        comps = r["REBAR_COMPONENTS"]
-        if isinstance(comps, dict):
-            comps = [f"S7_RELEASED_ITEMS:{comps.get('released_items') or 0}",
-                     f"S7_BLOCKED:{comps.get('blocked_categories') or ''}"]
-        for c in comps or []:
-            name, _, state = str(c).rpartition(":")
-            k = (g, name or c)
-            by_comp[k]["elements"] += 1
-            by_comp[k]["states"][state or "?"] += 1
-            by_comp[k]["owner"].add(r["EXISTING_STAGE_OWNER"].split(" ")[0])
+        counted = r["ROW_KIND"] in COUNTED_KINDS     # faces / component evidence are counted apart
+        for comp, state, n in rebar_parts(r["REBAR_COMPONENTS"]):
+            a = by_comp[(g, comp)]
+            a["elements" if counted else "other_rows"].add(i)     # an element counts once per component
+            a["count"] += n
+            a["states"][state] += 1                               # STATES counts element-state pairs
+            a["owner"].add(r["EXISTING_STAGE_OWNER"].split(" ")[0])
     rows = []
     for (g, comp), a in sorted(by_comp.items()):
         st = set(a["states"])
-        released = st & {"VERIFIED", "LOWER_BOUND", "PROVISIONAL", "BLOCKED_MODELLED"}
-        blocked = st & {"BLOCKED_UNQUANTIFIED", "BLOCKED", "NOT_QUANTIFIED", "NOT_ESTABLISHED", "NOT_IN_S3_S7"}
-        rows.append({"FAMILY": g, "COMPONENT": comp, "ELEMENTS": a["elements"], "STATES": dict(a["states"]),
-                     "OWNERS": sorted(a["owner"]),
+        released, blocked = st & RELEASED_STATES, st & UNQUANTIFIED_STATES
+        rows.append({"FAMILY": g, "COMPONENT": comp, "ELEMENTS": len(a["elements"]),
+                     "FACE_OR_COMPONENT_ROWS": len(a["other_rows"]), "STATES": dict(a["states"]),
+                     "TALLY_OR_ITEM_COUNT": a["count"], "OWNERS": sorted(a["owner"]),
                      "COVERAGE": "RELEASED" if released and not blocked else "PARTIAL" if released and blocked else
                      "UNQUANTIFIED" if blocked else "NOT_APPLICABLE_OR_NOT_REQUIRED" if st <= {
-                         "NOT_APPLICABLE", "NOT_REQUIRED"} else "OWNED_ELSEWHERE_OR_OTHER"})
+                         "NOT_APPLICABLE", "NOT_REQUIRED"} else
+                     "TRANSFERRED_OUT" if st <= {"TRANSFERRED_OUT"} else
+                     "RULE_REFERENCE_ONLY" if all(x.startswith("RULE_REFERENCE") for x in st) else
+                     "PRE_S_STAGE_ONLY" if st <= {"PRE_S_STAGE_ONLY"} else "OTHER"})
     t31 = s31["totals_kg"]
     stage = [{"STAGE": "S3.1", "SCOPE": "columns, all storeys incl. foundation storey (necks)",
               "KG": t31["total"], "KG_BY_STATE": {k: t31[k] for k in ("verified", "lower_bound", "provisional",
@@ -966,9 +1046,8 @@ def missing_components(census, s7blocked):
         comps = r["REBAR_COMPONENTS"]
         if isinstance(comps, dict):
             continue
-        for c in comps or []:
-            name, _, st = str(c).rpartition(":")
-            if st in ("BLOCKED_UNQUANTIFIED", "BLOCKED", "NOT_QUANTIFIED", "NOT_ESTABLISHED", "NOT_IN_S3_S7"):
+        for name, st, _n in rebar_parts(comps):
+            if st in UNQUANTIFIED_STATES:
                 k = (family_group(r["ELEMENT_FAMILY"]), name)
                 agg[k]["n"] += 1
                 agg[k]["owners"].add(r["EXISTING_STAGE_OWNER"].split(" (")[0])
@@ -1176,10 +1255,13 @@ def build():
     check(len(arch) == 3 and len([c for c in circles if c["sheet"] == "FFRS"]) >= 2, "dome circles found")
     v3 = v3b_concrete(_j(P["v3b_boq"]))
     s31 = _j(P["s31_release"])
-    fr = footing_rows(S1d, _rows(P["s4_occ"]), _rows(P["s4_comp"]), v3)
+    cur4 = current_component_states(_rows(P["s41_delta"]), _rows(P["d12_corr"]))
+    cur5 = current_component_states(_rows(P["s51_delta"]), _rows(P["ad1_s5_corr"]), _rows(P["d11_s5_corr"]))
+    cur6 = current_component_states(_rows(P["s61_delta"]), _rows(P["d11_s6_corr"]))
+    fr = footing_rows(S1d, _rows(P["s4_occ"]), _rows(P["s4_comp"]), v3, cur4)
     cr_ = column_rows(S1d, s31, v3, S1d["SPECIAL_STRUCTURAL_OCCURRENCE_REGISTER"])
-    gr = ground_rows(_rows(P["s5_occ"]), v3)
-    br = beam_rows(_rows(P["s6_occ"]), v3)
+    gr = ground_rows(_rows(P["s5_occ"]), v3, cur5)
+    br = beam_rows(_rows(P["s6_occ"]), v3, cur6)
     parents = {}
     for x in S1d["SPECIAL_STRUCTURAL_OCCURRENCE_REGISTER"]:
         if x["kind"] == "DOME":
@@ -1346,7 +1428,10 @@ def readme(B, s):
           "## Coverage (03, 04, 05)", "",
           "- Concrete comes from the V3b BOQ lines and the coverage-recovery dashboard. Lines are copied with their own "
           "labels and never re-summed.",
-          "- Rebar comes from the S3.1, S4.1, S5.1, S6.1 and S7 component states.",
+          "- Concrete counts physical elements only; faces of an element are counted in their own column.",
+          "- Rebar comes from the S3.1 and S7 component states and, for footings, ground beams and beams, from the "
+          "latest dated layer of each component: the S4.1 / S5.1 / S6.1 delta, then the AD1, D1.1 and D1.2 errata. "
+          "The pre-delta S4 / S5 / S6 states are never used where a delta row exists.",
           "- Stage totals (copied, not combined):"]
     for k, v in s["stage_kg"].items():
         L.append(f"  - {k}: {v:,.3f} kg")
