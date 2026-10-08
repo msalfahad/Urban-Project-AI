@@ -31,6 +31,7 @@ ACCURATE_MODULES = (
     "engine/source/ground_system_resolution.py",  # pre-S5.1 source-resolution decisions (no geometry, no kg)
     "engine/source/ground_system_rebar.py",     # S5 accurate ground-beam + strap-beam rebar engine
     "engine/source/beam_rebar_readiness.py",    # pre-S6 superstructure beam readiness (occurrence / detail state, no kg)
+    "engine/source/superstructure_beam_rebar.py",  # S6 accurate simple-beam + continuous-beam rebar engine
     "engine/bbs_steel.py",
 )
 # project builders that produce accurate reinforcement registers
@@ -48,6 +49,7 @@ ACCURATE_BUILDERS = (
     "research/pre_s5_1_source_resolution/build_pre_s5_1.py",
     "research/alsenan_ground_system_rebar_s5/build_ground_system_rebar_s5.py",
     "research/pre_s6_superstructure_beam_readiness/build_pre_s6.py",
+    "research/alsenan_superstructure_beam_rebar_s6/build_superstructure_beam_rebar_s6.py",
 )
 ROUGH_MODULES = (
     "engine/source/rough_rebar_sanity.py",
