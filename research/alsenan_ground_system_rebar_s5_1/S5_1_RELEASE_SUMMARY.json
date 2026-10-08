@@ -1,0 +1,294 @@
+{
+ "components_by_state": {
+  "BLOCKED_UNQUANTIFIED": 709,
+  "LOWER_BOUND": 131,
+  "NOT_APPLICABLE": 202,
+  "VERIFIED": 62
+ },
+ "conservation": {
+  "all_pass": true,
+  "baseline_known": 1457.9983456790123,
+  "carried_known": 1457.9983456790126,
+  "checks": {
+   "baseline_plus_delta_is_new": true,
+   "frozen_known_carried": true,
+   "no_negative_delta": true
+  },
+  "delta_known": 92.85530864197531,
+  "new_known": 1550.8536543209882
+ },
+ "context": {
+  "COVER": {
+   "cover_mm": 70.0,
+   "cover_rule": "COVER_AGAINST_SOIL_70MM (P8-N22-COVER-SOIL, CROSS_VERIFIED_SOURCE)",
+   "why": "70 mm is the larger note-22 cover; a 25 mm face elsewhere only enlarges the link, so the core path stays a lower bound under either cover"
+  },
+  "ENGINE_COMMIT": "cab778a+code:2dc78fc0ff285ba2+delta:42f0849057343fb6",
+  "FROZEN_BASELINE": {
+   "engine_commit_stamp": "cab778a+code:2dc78fc0ff285ba2",
+   "files_checked": 31,
+   "manifest": "research/alsenan_ground_system_rebar_s5/S5_FREEZE_MANIFEST.json",
+   "manifest_sha256": "ff488a92f3eaff80e84fca2d7e0b8e36cc40ddb84232cd315acfd1ce50b4b3d8",
+   "round": "S5"
+  },
+  "POLICY": "GROUND_SYSTEM_REBAR_S5_1_DELTA_V1",
+  "PRECEDING_FREEZES": {
+   "S4.1": {
+    "engine_commit_stamp": "e3633af+code:0d11810b780ae8f8+delta:06346dac56faa12d",
+    "files_checked": 13,
+    "manifest": "research/alsenan_footing_rebar_s4_1/S4_1_FREEZE_MANIFEST.json",
+    "manifest_sha256": "468e90d9657548a7e9124b67ce0a55b63560f030e2f98b414c46ad4e970e030b",
+    "round": "S4.1"
+   },
+   "S6.1": {
+    "engine_commit_stamp": "d39f5f6+code:add76dd5f5e9c59a+delta:d7ce0d2d09810083",
+    "files_checked": 18,
+    "manifest": "research/alsenan_superstructure_beam_rebar_s6_1/S6_1_FREEZE_MANIFEST.json",
+    "manifest_sha256": "c4744888ed2207ebff47c0a895e706d7e381b5f905b694eb92e3d1cdc411c0b2",
+    "round": "S6.1"
+   }
+  },
+  "ROUND": "S5.1",
+  "UNIT_MASS": "D2_OVER_162"
+ },
+ "continuous_bar_runs": [
+  {
+   "BAND_HANDLES": [
+    "170",
+    "7C3"
+   ],
+   "BARS": {
+    "BOTTOM_ROW_1": [
+     "3",
+     "16"
+    ],
+    "BOTTOM_ROW_2": [
+     "3",
+     "16"
+    ],
+    "TOP_MAIN": [
+     "3",
+     "16"
+    ]
+   },
+   "BAR_RUN_ID": "THROUGH:170+7C3",
+   "CONTINUOUS_RUN_LOWER_BOUND_M": 13.77,
+   "END_SUPPORTS": "development / anchorage unresolved (S5-02)",
+   "INTERIOR_SUPPORTS": [
+    [
+     "COL:1E4+1E4"
+    ],
+    [
+     "COL:241+241"
+    ]
+   ],
+   "SPANS": [
+    "GSO-170-7C3-1",
+    "GSO-170-7C3-2",
+    "GSO-170-7C3-3"
+   ]
+  },
+  {
+   "BAND_HANDLES": [
+    "7D0",
+    "FC"
+   ],
+   "BARS": {
+    "BOTTOM_ROW_1": [
+     "3",
+     "16"
+    ],
+    "BOTTOM_ROW_2": [
+     "3",
+     "16"
+    ],
+    "TOP_MAIN": [
+     "3",
+     "16"
+    ]
+   },
+   "BAR_RUN_ID": "THROUGH:7D0+FC",
+   "CONTINUOUS_RUN_LOWER_BOUND_M": 18.57,
+   "END_SUPPORTS": "development / anchorage unresolved (S5-02)",
+   "INTERIOR_SUPPORTS": [
+    [
+     "COL:249+249"
+    ],
+    [
+     "COL:251+251"
+    ],
+    [
+     "COL:255+255"
+    ]
+   ],
+   "SPANS": [
+    "GSO-7D0-FC-1",
+    "GSO-7D0-FC-2",
+    "GSO-7D0-FC-3",
+    "GSO-7D0-FC-4"
+   ]
+  },
+  {
+   "BAND_HANDLES": [
+    "7D4",
+    "F8"
+   ],
+   "BARS": {
+    "BOTTOM_ROW_1": [
+     "3",
+     "16"
+    ],
+    "BOTTOM_ROW_2": [
+     "3",
+     "16"
+    ],
+    "TOP_MAIN": [
+     "3",
+     "16"
+    ]
+   },
+   "BAR_RUN_ID": "THROUGH:7D4+F8",
+   "CONTINUOUS_RUN_LOWER_BOUND_M": 10.100000000000001,
+   "END_SUPPORTS": "development / anchorage unresolved (S5-02)",
+   "INTERIOR_SUPPORTS": [
+    [
+     "COL:20B+20B"
+    ]
+   ],
+   "SPANS": [
+    "GSO-7D4-F8-1",
+    "GSO-7D4-F8-2"
+   ]
+  }
+ ],
+ "delta_by_kind_kg": {
+  "longitudinal_through_support": 25.600000000000005,
+  "stirrup_core_path": 67.2553086419753
+ },
+ "delta_known_kg": 92.85530864197531,
+ "delta_rows": 1148,
+ "flags": {
+  "equal_inner_link_subdivision": false,
+  "frozen_outputs_changed": false,
+  "kg_from_shape_only_graphic": false,
+  "plotted_scale_used": false,
+  "pre_s7_started": false,
+  "references_read": [],
+  "verified_created": false
+ },
+ "frozen_components": 1104,
+ "frozen_s5": {
+  "components_by_state": {
+   "BLOCKED_UNQUANTIFIED": 739,
+   "LOWER_BOUND": 125,
+   "NOT_APPLICABLE": 178,
+   "VERIFIED": 62
+  },
+  "known_kg": 1457.9983456790123
+ },
+ "gb_link_sections": {
+  "GB_EXTERIOR (30 x FOLLOW ARCH)": {
+   "label_leaders_on_link": 1,
+   "links": 1
+  },
+  "GB_GT_5M (30x60)": {
+   "label_leaders_on_link": 1,
+   "links": 1
+  },
+  "GB_LT_2_5M (30x30)": {
+   "label_leaders_on_link": 0,
+   "links": 1
+  },
+  "GB_LT_5M (30x40)": {
+   "label_leaders_on_link": 1,
+   "links": 1
+  }
+ },
+ "graphic_evidence_policy": {
+  "classes": [
+   "GRAPHIC_EXPLICIT_DIMENSIONED",
+   "GRAPHIC_DERIVED_FROM_SOURCE_GEOMETRY",
+   "GRAPHIC_EXPLICIT_SHAPE_ONLY",
+   "GRAPHIC_NTS_OR_UNDIMENSIONED"
+  ],
+  "derivation_conditions": [
+   "ENDPOINTS_DETERMINISTIC",
+   "DIMENSIONS_FROM_PROJECT_SOURCE",
+   "DERIVATION_REPRODUCIBLE",
+   "NO_CONTRADICTING_PROJECT_SOURCE"
+  ],
+  "length_bases_allowed": [
+   "PRINTED_DIMENSION",
+   "PROJECT_SOURCE_GEOMETRY"
+  ],
+  "length_bases_refused": [
+   "PLOTTED_SCALE"
+  ],
+  "no_graphic": "NO_GRAPHIC_EVIDENCE",
+  "policy": "GRAPHIC_EVIDENCE_POLICY_V1",
+  "portion_states": [
+   "KNOWN_STRAIGHT_SEGMENT",
+   "DERIVED_LOWER_BOUND",
+   "SHAPE_FOUND_LENGTH_BLOCKED",
+   "BLOCKED_UNQUANTIFIED"
+  ],
+  "rules": {
+   "A": "GRAPHIC_EXPLICIT_DIMENSIONED may produce quantity (from the printed dimension)",
+   "B": "GRAPHIC_DERIVED_FROM_SOURCE_GEOMETRY may produce quantity only if the endpoints are deterministic, the dimensions come from project-source geometry, the derivation is reproducible and no project source contradicts it",
+   "C": "GRAPHIC_EXPLICIT_SHAPE_ONLY may establish shape, connectivity, topology, component identity and applicability, but may NOT create an undimensioned bar length or kg",
+   "D": "GRAPHIC_NTS_OR_UNDIMENSIONED is interpretation / QA evidence only",
+   "SCALE": "a plotted-scale reading is never a length basis; an N.T.S. typical detail is never measured by its plot"
+  }
+ },
+ "headline": "S5.1 KNOWN GROUND-SYSTEM REBAR = FROZEN S5 KNOWN + LOWER-BOUND DELTA",
+ "not_resolved_brief_20": [
+  "SB2 (S5-11)",
+  "annex exterior-GB depth (S5-07)",
+  "GB band vs support face (S5-16)"
+ ],
+ "policy": "GROUND_SYSTEM_REBAR_S5_1_DELTA_V1",
+ "round": "S5.1",
+ "s5_1_known_kg": 1550.8536543209882,
+ "s5_1_verified_kg": 0.0,
+ "sb2": "SOURCE_CONFLICT (unchanged; brief §18 / §20)",
+ "state_transitions": {
+  "BLOCKED_UNQUANTIFIED -> LOWER_BOUND": 6,
+  "BLOCKED_UNQUANTIFIED -> NOT_APPLICABLE": 24
+ },
+ "stirrup_core_path_released": {
+  "by_occurrence": {
+   "GSO-184-7CF-2": 6.703407407407407,
+   "GSO-7DC-7DD-2": 7.661037037037036,
+   "GSO-7E7-7E8-1": 7.661037037037036,
+   "GSO-7E9-7EA-1": 9.257086419753085,
+   "SOCC-1689-1B1C": 26.428049382716047,
+   "SOCC-1B26-1B27": 9.544691358024691
+  },
+  "ground_beam": 4,
+  "strap_str2_outer_link": 2
+ },
+ "stirrup_topology_only": {
+  "follow_arch_depth": 19,
+  "lt_2_5m_candidate": 8,
+  "total": 27
+ },
+ "support_end_classes": {
+  "BEAM_JUNCTION_END": 46,
+  "END_SUPPORT": 40,
+  "INTERIOR_CONTINUING_UNVERIFIED": 20,
+  "THROUGH_SUPPORT": 12
+ },
+ "through_support_interior_nodes": 6,
+ "unresolved": {
+  "by_status": {
+   "CLOSED (not applicable: through-support)": 24,
+   "NARROWED (lower bound released; named facets still open)": 33,
+   "OPEN (facet recorded)": 305,
+   "OPEN (new named portion)": 8,
+   "OPEN (unchanged)": 502
+  },
+  "carried_from_s5": 864,
+  "new_portion_rows": 8,
+  "rows": 872
+ }
+}

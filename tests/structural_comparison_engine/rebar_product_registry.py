@@ -56,6 +56,7 @@ ACCURATE_BUILDERS = (
     "research/source_recovery_delta/build_source_recovery_delta.py",   # source-recovery register (no kg)
     "research/alsenan_footing_rebar_s4_1/build_footing_rebar_s4_1.py",  # S4.1 delta over frozen S4
     "research/alsenan_superstructure_beam_rebar_s6_1/build_superstructure_beam_rebar_s6_1.py",  # S6.1 delta over S6
+    "research/alsenan_ground_system_rebar_s5_1/build_ground_system_rebar_s5_1.py",  # S5.1 delta over S5
 )
 ROUGH_MODULES = (
     "engine/source/rough_rebar_sanity.py",
