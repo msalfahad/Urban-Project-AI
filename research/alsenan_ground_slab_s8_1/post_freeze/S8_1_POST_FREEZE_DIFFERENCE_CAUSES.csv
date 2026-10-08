@@ -1,0 +1,45 @@
+REFERENCE,QUANTITY,CLASS,VALUE_REFERENCE_MINUS_S8_1,BASIS
+OLD_URBAN_CR_LOWER_BOUND,CONCRETE_M3,ZONE_EXTENT_SCOPE,6.9232,the reference quantifies cells with no TT1 marker; S8.1 binds each marker to the cell that holds it and keeps the other cells BLOCKED (unknown is not zero)
+OLD_URBAN_CR_LOWER_BOUND,CONCRETE_M3,OTHER_OWNER_CELL,0.83401,the reference counts the stair-flight cell SP-GBP-12 as ground slab; PRE-S8 gives it to the S8 stair family
+OLD_URBAN_CR_LOWER_BOUND,CONCRETE_M3,MARKER_CELL_GEOMETRY,-0.015552316,"same marker cell, different boundary: S8.1 measures the drawn ground-beam inner faces with the arc as an arc; old Urban subtracts 300 mm bands and single lines from a founded footprint; christiannp samples vector faces"
+OLD_URBAN_CR_LOWER_BOUND,CONCRETE_M3,REFERENCE_ROUNDING,0.00049,the reference's printed rounding of its own area / kg
+OLD_URBAN_CR_BEST,CONCRETE_M3,ZONE_EXTENT_SCOPE,12.84089,the reference quantifies cells with no TT1 marker; S8.1 binds each marker to the cell that holds it and keeps the other cells BLOCKED (unknown is not zero)
+OLD_URBAN_CR_BEST,CONCRETE_M3,POPULATION_GAP,4.25596,reference area at points no S1 / PRE-S8 / S8.1 face covers: the lift-pit core round S-BW 7BE (old Urban counted the pit inside one cell) and slivers / beam-band remnants
+OLD_URBAN_CR_BEST,CONCRETE_M3,OTHER_OWNER_CELL,0.83401,the reference counts the stair-flight cell SP-GBP-12 as ground slab; PRE-S8 gives it to the S8 stair family
+OLD_URBAN_CR_BEST,CONCRETE_M3,MARKER_CELL_GEOMETRY,-0.015552316,"same marker cell, different boundary: S8.1 measures the drawn ground-beam inner faces with the arc as an arc; old Urban subtracts 300 mm bands and single lines from a founded footprint; christiannp samples vector faces"
+OLD_URBAN_CR_BEST,CONCRETE_M3,REFERENCE_ROUNDING,-0.00016,the reference's printed rounding of its own area / kg
+OLD_URBAN_R4,REBAR_KG,ZONE_EXTENT_SCOPE,427.358024691,the reference quantifies cells with no TT1 marker; S8.1 binds each marker to the cell that holds it and keeps the other cells BLOCKED (unknown is not zero)
+OLD_URBAN_R4,REBAR_KG,OTHER_OWNER_CELL,51.482098765,the reference counts the stair-flight cell SP-GBP-12 as ground slab; PRE-S8 gives it to the S8 stair family
+OLD_URBAN_R4,REBAR_KG,MARKER_CELL_GEOMETRY,-0.960019527,"same marker cell, different boundary: S8.1 measures the drawn ground-beam inner faces with the arc as an arc; old Urban subtracts 300 mm bands and single lines from a founded footprint; christiannp samples vector faces"
+OLD_URBAN_R4,REBAR_KG,ZONE_POLYGON_RESIDUAL,0.702407407,the old zone polygon (V3a ZONE-1 / V3b ZONE-2) against its own coverage-round cell split
+OLD_URBAN_R4,REBAR_KG,REFERENCE_ROUNDING,0.000000235,the reference's printed rounding of its own area / kg
+OLD_URBAN_R3,REBAR_KG,ZONE_EXTENT_SCOPE,427.358024691,the reference quantifies cells with no TT1 marker; S8.1 binds each marker to the cell that holds it and keeps the other cells BLOCKED (unknown is not zero)
+OLD_URBAN_R3,REBAR_KG,OTHER_OWNER_CELL,51.482098765,the reference counts the stair-flight cell SP-GBP-12 as ground slab; PRE-S8 gives it to the S8 stair family
+OLD_URBAN_R3,REBAR_KG,MARKER_CELL_GEOMETRY,-0.960019527,"same marker cell, different boundary: S8.1 measures the drawn ground-beam inner faces with the arc as an arc; old Urban subtracts 300 mm bands and single lines from a founded footprint; christiannp samples vector faces"
+OLD_URBAN_R3,REBAR_KG,ZONE_POLYGON_RESIDUAL,0.702407407,the old zone polygon (V3a ZONE-1 / V3b ZONE-2) against its own coverage-round cell split
+OLD_URBAN_R3,REBAR_KG,REFERENCE_ROUNDING,0.000000235,the reference's printed rounding of its own area / kg
+OLD_URBAN_V3B,REBAR_KG,ZONE_EXTENT_SCOPE,427.358024691,the reference quantifies cells with no TT1 marker; S8.1 binds each marker to the cell that holds it and keeps the other cells BLOCKED (unknown is not zero)
+OLD_URBAN_V3B,REBAR_KG,OTHER_OWNER_CELL,51.482098765,the reference counts the stair-flight cell SP-GBP-12 as ground slab; PRE-S8 gives it to the S8 stair family
+OLD_URBAN_V3B,REBAR_KG,MARKER_CELL_GEOMETRY,-0.960019527,"same marker cell, different boundary: S8.1 measures the drawn ground-beam inner faces with the arc as an arc; old Urban subtracts 300 mm bands and single lines from a founded footprint; christiannp samples vector faces"
+OLD_URBAN_V3B,REBAR_KG,ZONE_POLYGON_RESIDUAL,0.702404938,the old zone polygon (V3a ZONE-1 / V3b ZONE-2) against its own coverage-round cell split
+OLD_URBAN_V3B,REBAR_KG,COUNT_CONVENTION,8.41433049,"V3b ZONE-2: n = floor(sqrt(A)/0.2) + 1 bars of A / ((n - 1) x 0.2) m; S8.1 = rate x area, never +1"
+OLD_URBAN_V3B,REBAR_KG,REFERENCE_ROUNDING,0.000001214,the reference's printed rounding of its own area / kg
+OLD_URBAN_V3B,CONCRETE_M3,ZONE_EXTENT_SCOPE,6.9232,the reference quantifies cells with no TT1 marker; S8.1 binds each marker to the cell that holds it and keeps the other cells BLOCKED (unknown is not zero)
+OLD_URBAN_V3B,CONCRETE_M3,OTHER_OWNER_CELL,0.83401,the reference counts the stair-flight cell SP-GBP-12 as ground slab; PRE-S8 gives it to the S8 stair family
+OLD_URBAN_V3B,CONCRETE_M3,MARKER_CELL_GEOMETRY,-0.015552316,"same marker cell, different boundary: S8.1 measures the drawn ground-beam inner faces with the arc as an arc; old Urban subtracts 300 mm bands and single lines from a founded footprint; christiannp samples vector faces"
+OLD_URBAN_V3B,CONCRETE_M3,ZONE_POLYGON_RESIDUAL,0.01137896,the old zone polygon (V3a ZONE-1 / V3b ZONE-2) against its own coverage-round cell split
+OLD_URBAN_V3B,CONCRETE_M3,REFERENCE_ROUNDING,0.00011104,the reference's printed rounding of its own area / kg
+CHRISTIANNP_FORENSIC,CONCRETE_M3,ZONE_EXTENT_SCOPE,12.93822,the reference quantifies cells with no TT1 marker; S8.1 binds each marker to the cell that holds it and keeps the other cells BLOCKED (unknown is not zero)
+CHRISTIANNP_FORENSIC,CONCRETE_M3,POPULATION_GAP,4.207,reference area at points no S1 / PRE-S8 / S8.1 face covers: the lift-pit core round S-BW 7BE (old Urban counted the pit inside one cell) and slivers / beam-band remnants
+CHRISTIANNP_FORENSIC,CONCRETE_M3,MARKER_CELL_GEOMETRY,-0.000042316,"same marker cell, different boundary: S8.1 measures the drawn ground-beam inner faces with the arc as an arc; old Urban subtracts 300 mm bands and single lines from a founded footprint; christiannp samples vector faces"
+CHRISTIANNP_FORENSIC,CONCRETE_M3,OTHER_OWNER_CELL,0.83723,the reference counts the stair-flight cell SP-GBP-12 as ground slab; PRE-S8 gives it to the S8 stair family
+CHRISTIANNP_FORENSIC,REBAR_KG,ZONE_EXTENT_SCOPE,798.655555556,the reference quantifies cells with no TT1 marker; S8.1 binds each marker to the cell that holds it and keeps the other cells BLOCKED (unknown is not zero)
+CHRISTIANNP_FORENSIC,REBAR_KG,POPULATION_GAP,259.691358025,reference area at points no S1 / PRE-S8 / S8.1 face covers: the lift-pit core round S-BW 7BE (old Urban counted the pit inside one cell) and slivers / beam-band remnants
+CHRISTIANNP_FORENSIC,REBAR_KG,MARKER_CELL_GEOMETRY,-0.00261212,"same marker cell, different boundary: S8.1 measures the drawn ground-beam inner faces with the arc as an arc; old Urban subtracts 300 mm bands and single lines from a founded footprint; christiannp samples vector faces"
+CHRISTIANNP_FORENSIC,REBAR_KG,OTHER_OWNER_CELL,51.680864198,the reference counts the stair-flight cell SP-GBP-12 as ground slab; PRE-S8 gives it to the S8 stair family
+CHRISTIANNP_FORENSIC,REBAR_KG,REFERENCE_ROUNDING,0.000246914,the reference's printed rounding of its own area / kg
+FREELANCER,CONCRETE_M3,ZONE_EXTENT_SCOPE,12.977058449,the reference quantifies cells with no TT1 marker; S8.1 binds each marker to the cell that holds it and keeps the other cells BLOCKED (unknown is not zero)
+FREELANCER,CONCRETE_M3,GROSS_AREA_UNSEPARATED,12.787089235,"one gross area row: beam / column footprints, the stair cell and the unfaced core are not separable"
+UC4N,CONCRETE_M3,SCOPE_UNSEPARATED,28.397147684,one ground-slab figure with no cell list: whole-slab scope against two marker cells
+CHRISTIANNP_ORIGINAL,CONCRETE_M3,SCOPE_UNSEPARATED,28.618147684,one ground-slab figure with no cell list: whole-slab scope against two marker cells
+ROUGH_130_KG_PER_M3,REBAR_KG,SANITY_RATIO,258.466213696,a category kg/m3 heuristic (ground beams + slab together) against a restricted rate x area QTO
