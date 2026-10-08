@@ -32,6 +32,8 @@ ACCURATE_MODULES = (
     "engine/source/ground_system_rebar.py",     # S5 accurate ground-beam + strap-beam rebar engine
     "engine/source/beam_rebar_readiness.py",    # pre-S6 superstructure beam readiness (occurrence / detail state, no kg)
     "engine/source/superstructure_beam_rebar.py",  # S6 accurate simple-beam + continuous-beam rebar engine
+    "engine/source/graphic_evidence.py",        # D1 graphic evidence policy (which drawn portion may carry length)
+    "engine/source/delta_release.py",           # D1 frozen baseline + delta records, conservation (no kg rewrite)
     "engine/bbs_steel.py",
 )
 # project builders that produce accurate reinforcement registers
@@ -51,6 +53,7 @@ ACCURATE_BUILDERS = (
     "research/pre_s6_superstructure_beam_readiness/build_pre_s6.py",
     "research/alsenan_superstructure_beam_rebar_s6/build_superstructure_beam_rebar_s6.py",
     "research/source_recovery_delta/build_source_recovery_delta.py",   # source-recovery register (no kg)
+    "research/alsenan_footing_rebar_s4_1/build_footing_rebar_s4_1.py",  # S4.1 delta over frozen S4
 )
 ROUGH_MODULES = (
     "engine/source/rough_rebar_sanity.py",
