@@ -46,6 +46,10 @@ What `tests/source_recovery_delta/test_source_recovery_delta.py` (20 tests) cove
   - registered as an accurate-side builder;
   - the rebuild is byte-identical.
 
-## Full suite
+## Full suite at `5184c63`
 
-Pending: to be recorded after the run on the committed tree.
+`python3 -m pytest -o addopts="" -q -p no:cacheprovider` gave
+**6621 passed, 4 skipped, 100 xfailed, 2 warnings in 386.96 s, exit 0**.
+- That is S6's 6601 plus the 20 new source-recovery tests.
+- The run used the clean committed tree, and no file was edited during it.
+- The S4, S5 and S6 freeze-manifest tests all still match.
