@@ -1,9 +1,21 @@
 # D1.1 stirrup / link core-path authority audit
 
-**Round:** `D1.1` · **Policy:** `STIRRUP_AUTHORITY_AUDIT_V1` · **Baseline:** HEAD `59f2083` · **Built by** `build_d1_1_stirrup_audit.py` (blind, byte-identical rebuild)
+**Round:** `D1.1` revision 2 · **Policy:** `STIRRUP_AUTHORITY_AUDIT_V1` · **Baseline:** HEAD `59f2083` · **Built by** `build_d1_1_stirrup_audit.py` (blind, byte-identical rebuild)
 
-S4, S5, S6, S4.1, S6.1 and S5.1 are unchanged. All six freeze manifests were hash-checked before anything was read.
-Every change below is an explicit CORRECTION_ERRATA record. No frozen file was edited, and PRE-S7 was not started.
+S4, S5, S6, S4.1, S6.1 and S5.1 are unchanged. Every change below is an explicit CORRECTION_ERRATA record. No
+frozen file was edited, and PRE-S7 was not started.
+
+**Order of authority.**
+- Revision 1 (`35567e2`) was built before the owner's authority decisions were recorded.
+- Revision 2 is built on top of the frozen AD1 record (`research/ad1_authority_decisions/`). AD1's manifest is
+  hash-checked together with the six stage manifests before anything is read.
+- The earlier Q2 answers are recorded in AD1 as the assistant's own engineering analysis. They are not promoted to
+  engineer or source authority, and no confidence value is carried.
+- AD1 applies here through four decisions:
+  - AD-4: hook shape only, extension blocked;
+  - AD-5: no inherited GB < 2.5 m diameter;
+  - AD-6: concentrated-reaction applicability;
+  - AD-8: 5Ø8/m is rate / count only.
 
 ## Conclusion
 
@@ -20,12 +32,16 @@ Every other D1 release is kept, because none of them depends on bend geometry:
   5 new stirrup counts.
 - S5.1: through-support portions 25.60 kg.
 
-| | D1 known | Corrected known |
-|---|---|---|
-| S4.1 | 3629.60 | 3629.60 |
-| S6.1 | 5347.03 | 4014.77 |
-| S5.1 | 1550.85 | 1483.60 |
-| **Combined** | **10527.48** | **9127.96** |
+AD-6 then retracts 47.37 kg of frozen S5 bars carried into S5.1. These are spans GSO-142-7D8-1 and
+GSO-15D-7C8-1, where a beam frames in between the supports and one length basis leaves no project detail
+(`research/ad1_authority_decisions/05_S5_AD1_CORRECTIONS.csv`).
+
+| | D1 known | After the link errata | After the AD-6 errata (corrected known) |
+|---|---|---|---|
+| S4.1 | 3629.60 | 3629.60 | 3629.60 |
+| S6.1 | 5347.03 | 4014.77 | 4014.77 |
+| S5.1 | 1550.85 | 1483.60 | 1436.23 |
+| **Combined** | **10527.48** | **9127.96** | **9080.60** |
 
 ## The mathematics
 
@@ -68,7 +84,13 @@ See `01_SOURCE_SEARCH.md`.
 For every stirrup set, A topology, B count and C diameter keep their own states, and only D cut length is blocked:
 - **Topology:** 180 sets in total: 168 single closed links, 11 STR2 (4 legs) and 1 STR3
   (6 legs, SB2, still a source conflict).
-- **Counts:** 116 sets carry a released count.
+  - Topology is established on 162 sets.
+  - On 18 ground-beam sets it is CANDIDATE_ONLY: the span's loaded case has no project detail (AD-6), so the
+    p.13 single link holds only for the unloaded candidates.
+- **Hooks:** 151 sets carry a drawn hook shape (SOURCE_EXPLICIT_SHAPE_ONLY). The hook extension is
+  BLOCKED_UNQUANTIFIED on all 180 (AD-4).
+- **Counts:** 116 sets carry a released count. Each is a rate x run count only; it never gives a cut length
+  (AD-8).
 - **Diameters:** 149 sets carry a source diameter.
 
 ## Files

@@ -1,7 +1,31 @@
 {
+ "authority_decisions": {
+  "applied_here": [
+   "AD-4",
+   "AD-5",
+   "AD-6",
+   "AD-8"
+  ],
+  "decisions": [
+   "AD-1",
+   "AD-2",
+   "AD-3",
+   "AD-4",
+   "AD-5",
+   "AD-6",
+   "AD-7",
+   "AD-8",
+   "AD-9"
+  ],
+  "manifest_sha256": "e2497cc75181393000187b7e657fa8485a4c0f365b4614bed983d0bc6c0ca5b4",
+  "q2_analysis_promoted": false,
+  "q2_prior_analysis": "CLAUDE_ENGINEERING_ANALYSIS",
+  "round": "AD1"
+ },
  "baseline_head": "59f2083",
  "combined": {
-  "corrected_kg": 9127.96330123457,
+  "corrected_kg": 9080.59663423457,
+  "corrected_kg_link_only": 9127.96330123457,
   "d1_kg": 10527.482906172841,
   "frozen_s4_s5_s6_kg": 8717.74715308642,
   "scope": "footings (S4.1) + superstructure beams (S6.1A) + ground system (S5.1A)"
@@ -41,7 +65,7 @@
    "original known + corrections == corrected known"
   ]
  },
- "engine_commit": "d39f5f6+code:add76dd5f5e9c59a+delta:d7ce0d2d09810083+audit:ffae4cdaf08dd725",
+ "engine_commit": "d39f5f6+code:add76dd5f5e9c59a+delta:d7ce0d2d09810083+audit:29e444219c8a17de",
  "flags": {
   "external_code_used": false,
   "frozen_outputs_changed": false,
@@ -49,9 +73,17 @@
   "normal_delta_rule_changed": false,
   "plotted_scale_used": false,
   "pre_s7_started": false,
+  "q2_analysis_promoted": false,
   "references_read": []
  },
  "frozen": {
+  "AD1": {
+   "engine_commit_stamp": null,
+   "files_checked": 26,
+   "manifest": "research/ad1_authority_decisions/AD1_FREEZE_MANIFEST.json",
+   "manifest_sha256": "e2497cc75181393000187b7e657fa8485a4c0f365b4614bed983d0bc6c0ca5b4",
+   "round": "AD1"
+  },
   "S4": {
    "engine_commit_stamp": "e3633af+code:0d11810b780ae8f8",
    "files_checked": 25,
@@ -109,13 +141,32 @@
  },
  "owner_question": "the issued set gives no bend radius / hook / closure and prints a minimum cover; link mass needs these as a versioned project claim. The same minimum-cover reading bears on the cover-reduced footing lengths of frozen S4 (not changed here).",
  "policy": "STIRRUP_AUTHORITY_AUDIT_V1",
+ "revision": 2,
+ "revision_1_commit": "35567e2",
  "round": "D1.1",
  "s4_1": {
   "known_kg": 3629.599506172839,
   "link_paths": 0
  },
  "s5_1": {
+  "ad1_correction_kg": -47.366667,
+  "ad1_corrections": 6,
+  "ad1_spans": [
+   "GSO-142-7D8-1",
+   "GSO-15D-7C8-1"
+  ],
   "conservation": {
+   "all_pass": true,
+   "checks": {
+    "no_positive_correction": true,
+    "original_plus_correction_is_corrected": true,
+    "retained_plus_removed_is_original": true
+   },
+   "corrected_known": 1436.231678679013,
+   "correction_kg": -114.62197564197534,
+   "original_known": 1550.8536543209882
+  },
+  "conservation_link_only": {
    "all_pass": true,
    "checks": {
     "no_positive_correction": true,
@@ -126,7 +177,8 @@
    "correction_kg": -67.2553086419753,
    "original_known": 1550.8536543209882
   },
-  "corrected_known_kg": 1483.598345679013,
+  "corrected_known_kg": 1436.231678679013,
+  "corrected_known_kg_link_only": 1483.598345679013,
   "corrections": 6,
   "d1_known_kg": 1550.8536543209882,
   "frozen_s5_known_kg": 1457.9983456790123,
@@ -200,7 +252,16 @@
    "STR3_OUTER_PLUS_TWO_INNER_6_LEG": 1
   },
   "cut_length_blocked": 180,
+  "hook_extension_blocked": 180,
+  "hook_shape": {
+   "NOT_ESTABLISHED": 29,
+   "SOURCE_EXPLICIT_SHAPE_ONLY": 151
+  },
   "stirrup_sets": 180,
+  "topology_state": {
+   "CANDIDATE_ONLY": 18,
+   "ESTABLISHED": 162
+  },
   "with_count": 116,
   "with_diameter": 149
  }

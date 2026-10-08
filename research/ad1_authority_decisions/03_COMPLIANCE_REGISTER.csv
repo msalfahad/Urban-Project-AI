@@ -1,0 +1,25 @@
+CHECK_ID,DECISION_ID,STAGE,CHECK,RESULT,ROWS,KG,EVIDENCE
+AD1-K01,AD-1,S4 / S4.1,"BOXED existence, inverted-U shape, diameter, kg",COMPLIANT,20,0.0,16 printed '3+n' cells SOURCE_FOUND_EXPLICIT; inverted U from p.13 S-REIN.D vectors (E-PDF-01); diameter SOURCE_EXPECTED_NOT_LOCATED; kg 0
+AD1-K02,AD-1,S4.1,BOXED hooks,STATE_ERRATUM,20,0.0,the SHAPE facet said 'no hooks'; hooks are NOT_ESTABLISHED (neither present nor absent)
+AD1-K03,AD-1,S4.1,BOXED 3+n meaning,STATE_ERRATUM,20,0.0,SOURCE_EXPECTED_NOT_LOCATED -> PROJECT_PATTERN_ONLY
+AD1-K04,AD-1,S4.1,BOXED existence where the FN cell is blank,STATE_ERRATUM,4,0.0,SOURCE_EXPECTED_NOT_LOCATED -> UNRESOLVED (never NOT_REQUIRED)
+AD1-K05,AD-2,S5 / S6 / S5.1 / S6.1,note 9 kept to its starter context,COMPLIANT,0,0.0,development rule NOT_ESTABLISHED in S5 and S6; anchorage kg 0; the S5.1 through-support runs use no anchorage length
+AD1-K06,AD-2,R4 (superseded lineage),LAP-70D-NOTE9-EXTENDED procurement label,LINEAGE_NOTE,0,0.0,the old R4 register used the note for BBS laps as a labelled procurement assumption; it is not in the accurate S-series product and may not be revived
+AD1-K07,AD-3,S6.1,CB end-support legs,STATE_ERRATUM,14,0.0,"recorded as 'derivable' from the beam depth; now LEG_LENGTH NOT_ESTABLISHED, LEG_SHAPE SOURCE_EXPLICIT_SHAPE_ONLY; 0 kg before and after"
+AD1-K08,AD-3,S6.1,"B3 end bends, B26 crank diagonal and end hooks",COMPLIANT,11,0.0,"shape found, length blocked; 0 kg"
+AD1-K09,AD-3,S6.1,B26 planted-column extra,COMPLIANT,1,12.009877,"the p.15 detail dimensions the extension with its own 'DEPTH' label bound to the schedule depth: a printed dimension, released over the horizontal projection only (crank excess and hooks blocked)"
+AD1-K10,AD-4,S6.1,link hooks,COMPLIANT,90,0.0,drawn hooks recorded as shape; extension not printed -> blocked
+AD1-K11,AD-4,S5 / S5.1,ground-beam and strap stirrup hooks,COMPLIANT,124,0.0,BLOCKED_UNQUANTIFIED; no code / note default
+AD1-K12,AD-4,D1 -> D1.1,sharp-corner link path that relied on the hooks,KG_ERRATUM,94,1399.519605,retracted by the D1.1 S6_1A / S5_1A errata (rebuilt on top of AD1)
+AD1-K13,AD-5,S5 / S5.1,GB < 2.5 m stirrup diameter and rate,COMPLIANT,16,0.0,"16 spans carry the <2.5 m candidate; diameter and spacing BLOCKED_UNQUANTIFIED, no Ø8/15"
+AD1-K14,AD-6,pre-S5.1 / S5,ground-beam load state,STATE_ERRATUM,28,0.0,"UNKNOWN -> ENGINEERING_DERIVED_CONCENTRATED_REACTION where a beam frames into the span between its supports (a junction at a support, an unidentified symbol or a stair candidate change nothing)"
+AD1-K15,AD-6,S5 (carried into S5.1),kg on spans whose loaded case has no project detail,KG_ERRATUM,6,47.366667,"GSO-142-7D8-1 and GSO-15D-7C8-1: the bars agreed between the <2.5 m and <5 m sections, but the <5 m section is 'without concentrated load' and one length basis gives only that section"
+AD1-K16,AD-6,S5.1,through-support runs and link releases,COMPLIANT,0,0.0,every through-support run lies on exterior-verified spans (no load clause); the S5.1 link spans are not reclassified
+AD1-K17,AD-6,S6 / S6.1,planted-column load on superstructure beams,COMPLIANT,0,0.0,no superstructure beam detail carries a 'without concentrated load' clause; B26 base and planted extra come from its own schedule row and the p.15 planted-column detail
+AD1-K18,AD-7,pre-S5.1 / S5,FOLLOW ARCH depth,COMPLIANT,29,0.0,"depth_mm empty on all 29 spans; architectural levels give an upper bound only ({1.0: 15, None: 7, 0.3: 7}), a bound on the full height above natural ground that may include any plain-concrete layer and is never an RC depth; no 0.9-1.0 m depth; the known kg on these spans is straight bar run, independent of depth"
+AD1-K19,AD-8,S6,0.22 Ln MID top bars,COMPLIANT,9,265.209104,retained: the CB typical prints 0.22 Ln on these bars
+AD1-K20,AD-8,S6,0.3 Ln2 / 0.15L / NTS scale / top-hanger roles,COMPLIANT,13,0.0,0.3 Ln2 and 0.15L add no length; no graphic scale is read; frame top bars and hangers stay blocked where the bar association is ambiguous
+AD1-K21,AD-8,S6.1,CB7 5Ø8/m,COMPLIANT,2,0.0,39 / 41 stirrups are a rate x run count; the cut length was retracted by D1.1
+AD1-K22,AD-9,S6,side-bar role where the MIDDLE REINT. field carries the token,STATE_ERRATUM,7,0.0,"classified as side / skin reinforcement; count, edge spacing and kg BLOCKED_UNQUANTIFIED; ceil(h/s) - 1 not adopted"
+AD1-K23,AD-9,S6,side-bar tokens in the REMARKS column,COMPLIANT,32,0.0,not the MIDDLE REINF. field: role stays NOT_ESTABLISHED; kg blocked
+AD1-K24,AD-9,S5,ground-beam side rebar,COMPLIANT,59,0.0,BLOCKED_UNQUANTIFIED or NOT_APPLICABLE; no count rule

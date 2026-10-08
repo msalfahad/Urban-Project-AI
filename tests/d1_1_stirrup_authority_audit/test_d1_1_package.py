@@ -27,10 +27,13 @@ FROZEN = {"S4": R / "alsenan_footing_rebar_s4" / "S4_FREEZE_MANIFEST.json",
           "S6": R / "alsenan_superstructure_beam_rebar_s6" / "S6_FREEZE_MANIFEST.json",
           "S4.1": R / "alsenan_footing_rebar_s4_1" / "S4_1_FREEZE_MANIFEST.json",
           "S6.1": S61 / "S6_1_FREEZE_MANIFEST.json",
-          "S5.1": S51 / "S5_1_FREEZE_MANIFEST.json"}
+          "S5.1": S51 / "S5_1_FREEZE_MANIFEST.json",
+          "AD1": R / "ad1_authority_decisions" / "AD1_FREEZE_MANIFEST.json"}
+AD1 = R / "ad1_authority_decisions"
 STR2 = "STR2_OUTER_PLUS_ONE_INNER_4_LEG"
 STR3 = "STR3_OUTER_PLUS_TWO_INNER_6_LEG"
 BLOCKED = "BLOCKED_UNQUANTIFIED"
+DC_CANDIDATE = "CANDIDATE_ONLY"
 
 
 def J(p):
@@ -98,7 +101,7 @@ def test_d1_1_freeze_manifest_still_matches():
             assert sha(base / k) == h, (group, k)
 
 
-def test_frozen_s4_s5_s6_s4_1_s6_1_s5_1_are_immutable(summary):
+def test_frozen_s4_s5_s6_s4_1_s6_1_s5_1_and_ad1_are_immutable(summary):
     for name, man in FROZEN.items():
         m = J(man)
         base = man.parent
@@ -239,19 +242,27 @@ def test_s5_1_through_support_release_unaffected(audit, summary):
 
 
 def test_correction_conservation(summary, c6, c5):
-    for key, cs in (("s6_1", c6), ("s5_1", c5)):
-        s = summary[key]
-        assert s["conservation"]["all_pass"]
-        assert s["d1_known_kg"] + sum(f(c["CORRECTION_KG"]) for c in cs) == pytest.approx(s["corrected_known_kg"],
-                                                                                          abs=1e-4)
-        assert s["link_kg_retained"] == 0.0 and s["link_kg_retracted"] == pytest.approx(s["link_core_path_kg_released"])
+    ad1 = rows(AD1 / "05_S5_AD1_CORRECTIONS.csv")
     s6, s5 = summary["s6_1"], summary["s5_1"]
+    assert s6["conservation"]["all_pass"] and s5["conservation"]["all_pass"]
+    assert s5["conservation_link_only"]["all_pass"]
+    assert s6["d1_known_kg"] + sum(f(c["CORRECTION_KG"]) for c in c6) == pytest.approx(s6["corrected_known_kg"],
+                                                                                        abs=1e-4)
+    link5 = s5["d1_known_kg"] + sum(f(c["CORRECTION_KG"]) for c in c5)
+    assert link5 == pytest.approx(s5["corrected_known_kg_link_only"], abs=1e-4)
+    assert link5 + sum(f(c["CORRECTION_KG"]) for c in ad1) == pytest.approx(s5["corrected_known_kg"], abs=1e-4)
+    assert s5["ad1_correction_kg"] == pytest.approx(-47.366667, abs=1e-5) and s5["ad1_corrections"] == len(ad1) == 6
+    for s in (s6, s5):
+        assert s["link_kg_retained"] == 0.0 and s["link_kg_retracted"] == pytest.approx(s["link_core_path_kg_released"])
     assert s6["corrected_known_kg"] == pytest.approx(s6["frozen_s6_known_kg"] + sum(s6["other_retained_kg"].values()))
-    assert s5["corrected_known_kg"] == pytest.approx(s5["frozen_s5_known_kg"] + sum(s5["other_retained_kg"].values()))
+    assert s5["corrected_known_kg"] == pytest.approx(s5["frozen_s5_known_kg"] + sum(s5["other_retained_kg"].values())
+                                                     + s5["ad1_correction_kg"])
     cb = summary["combined"]
     assert cb["corrected_kg"] == pytest.approx(summary["s4_1"]["known_kg"] + s6["corrected_known_kg"] +
                                                s5["corrected_known_kg"])
-    assert cb["d1_kg"] - cb["corrected_kg"] == pytest.approx(s6["link_kg_retracted"] + s5["link_kg_retracted"])
+    assert cb["d1_kg"] - cb["corrected_kg_link_only"] == pytest.approx(s6["link_kg_retracted"] +
+                                                                       s5["link_kg_retracted"])
+    assert cb["corrected_kg_link_only"] - cb["corrected_kg"] == pytest.approx(-s5["ad1_correction_kg"])
     assert cb["frozen_s4_s5_s6_kg"] <= cb["corrected_kg"] <= cb["d1_kg"]
 
 
@@ -260,10 +271,20 @@ def test_register_keeps_four_facts_separate(reg):
     assert len(reg) == 180
     s61_sets = rows(S61 / "S6_1_STIRRUP_TOPOLOGY.csv")
     assert sum(1 for r in reg if r["STAGE"] == "S6.1") == len(s61_sets)
+    no_detail = {r["GB_SPAN_ID"] for r in rows(AD1 / "06_GB_CONCENTRATED_REACTION_REGISTER.csv")
+                 if r["NO_DETAIL_CASE"] == "True"}
     for r in reg:
-        assert r["A_LINK_TOPOLOGY"] and r["TOPOLOGY_STATE"].startswith("SOURCE_FOUND_DERIVED")
+        assert r["A_LINK_TOPOLOGY"]
+        if r["OCCURRENCE_ID"] in no_detail:
+            assert r["STAGE"] == "S5.1" and r["TOPOLOGY_STATE"].startswith(DC_CANDIDATE)
+            assert not r["B_LINK_COUNT"] and not r["C_LINK_DIAMETER_MM"]
+        else:
+            assert r["TOPOLOGY_STATE"].startswith("SOURCE_FOUND_DERIVED")
         assert r["D_LINK_CUT_LENGTH"] == BLOCKED and r["LINK_MASS"] == BLOCKED
+        assert r["HOOK_EXTENSION"] == BLOCKED
+        assert r["HOOK_SHAPE"] in ("SOURCE_EXPLICIT_SHAPE_ONLY", "NOT_ESTABLISHED")
         assert int(r["LEGS"]) == 2 * int(r["LINKS"])
+    assert sum(1 for r in reg if r["TOPOLOGY_STATE"].startswith(DC_CANDIDATE)) == len(no_detail) == 18
 
 
 def test_str2_topology_survives_the_mass_block(reg):
@@ -304,6 +325,9 @@ def test_topology_register_summary(summary, reg):
     assert t["stirrup_sets"] == len(reg) == t["cut_length_blocked"]
     assert t["by_topology"] == dict(Counter(r["A_LINK_TOPOLOGY"] for r in reg))
     assert t["with_count"] == 116 and t["with_diameter"] == sum(1 for r in reg if r["C_LINK_DIAMETER_MM"])
+    assert t["topology_state"] == {"CANDIDATE_ONLY": 18, "ESTABLISHED": 162}
+    assert t["hook_extension_blocked"] == 180 and sum(t["hook_shape"].values()) == 180
+    assert all(r["COUNT_BASIS"].startswith("RATE x") for r in reg if r["B_LINK_COUNT"])
 
 
 # ------------------------------------------------------------------ provenance / flags
@@ -320,5 +344,9 @@ def test_summary_flags(summary):
     fl = summary["flags"]
     assert fl == {"external_code_used": False, "frozen_outputs_changed": False, "hook_length_used_as_proof": False,
                   "normal_delta_rule_changed": False, "plotted_scale_used": False, "pre_s7_started": False,
-                  "references_read": []}
-    assert summary["baseline_head"] == "59f2083"
+                  "q2_analysis_promoted": False, "references_read": []}
+    assert summary["baseline_head"] == "59f2083" and summary["revision"] == 2
+    ad = summary["authority_decisions"]
+    assert ad["decisions"] == [f"AD-{i}" for i in range(1, 10)] and ad["q2_analysis_promoted"] is False
+    assert ad["q2_prior_analysis"] == "CLAUDE_ENGINEERING_ANALYSIS"
+    assert ad["manifest_sha256"] == sha(AD1 / "AD1_FREEZE_MANIFEST.json")

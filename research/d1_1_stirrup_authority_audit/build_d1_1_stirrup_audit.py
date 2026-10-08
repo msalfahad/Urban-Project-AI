@@ -16,6 +16,10 @@ the closing hooks add back what the rounded bends take away. This audit:
   3. writes explicit CORRECTION_ERRATA records (engine.source.delta_correction) over S6.1 and S5.1. S6.1 / S5.1
      stay frozen and are never edited. Every non-link release is kept and its independence from bend geometry stated;
   4. keeps link topology, count and diameter separate from the (blocked) cut length.
+Revision 2 is built on top of the frozen AD1 owner authority decisions (research/ad1_authority_decisions). Their
+manifest is verified with the six stage manifests. The register gains hook shape / extension and count-basis facets
+(AD-4, AD-8). Ground-beam topology is CANDIDATE_ONLY where the loaded case has no project detail (AD-6). The AD-6
+kg errata are folded into the corrected S5.1 total.
 Blind: issued drawing + frozen Urban registers only. No design code, external example, donor or other engine is
 read. Deterministic.
 """
@@ -40,17 +44,20 @@ for p in (ROOT, ROOT / "research/source_recovery_delta"):
 import ezdxf  # noqa: E402
 
 import vector_pdf as V  # noqa: E402
+from engine.source import authority_decisions as AD  # noqa: E402
 from engine.source import delta_correction as DC  # noqa: E402
 from engine.source import delta_release as DR  # noqa: E402
 from engine.source import legacy_text as LT  # noqa: E402
 
 ROUND = "D1.1"
 POLICY = "STIRRUP_AUTHORITY_AUDIT_V1"
+REVISION = 2                    # rev 1 (35567e2) was built before the owner's AD1 authority decisions were recorded
 R = ROOT / "research"
 S4, S5, S6 = R / "alsenan_footing_rebar_s4", R / "alsenan_ground_system_rebar_s5", R / "alsenan_superstructure_beam_rebar_s6"
 S41, S51, S61 = (R / "alsenan_footing_rebar_s4_1", R / "alsenan_ground_system_rebar_s5_1",
                  R / "alsenan_superstructure_beam_rebar_s6_1")
 SRD = R / "source_recovery_delta"
+AD1 = R / "ad1_authority_decisions"
 S1 = R / "alsenan_structural_census_s1"
 R4 = R / "alsenan_rebar_source_exhaustion_04/registers/PROJECT_REBAR_RULE_REGISTER.json"
 OCR = HERE / "source_search_inputs/PDF_TEXT_OCR_PP9_16.json"
@@ -60,15 +67,19 @@ DXF = ROOT / "data/inputs/by_sha256" / f"{DXF_SHA}.dxf"
 PDF = ROOT / "data/inputs/by_sha256" / f"{PDF_SHA}.pdf"
 MANIFESTS = {"S4": S4 / "S4_FREEZE_MANIFEST.json", "S5": S5 / "S5_FREEZE_MANIFEST.json",
              "S6": S6 / "S6_FREEZE_MANIFEST.json", "S4.1": S41 / "S4_1_FREEZE_MANIFEST.json",
-             "S6.1": S61 / "S6_1_FREEZE_MANIFEST.json", "S5.1": S51 / "S5_1_FREEZE_MANIFEST.json"}
-CODE = ["engine/source/delta_correction.py", "engine/source/delta_release.py", "engine/source/legacy_text.py",
+             "S6.1": S61 / "S6_1_FREEZE_MANIFEST.json", "S5.1": S51 / "S5_1_FREEZE_MANIFEST.json",
+             "AD1": AD1 / "AD1_FREEZE_MANIFEST.json"}
+CODE = ["engine/source/authority_decisions.py", "engine/source/delta_correction.py", "engine/source/delta_release.py", "engine/source/legacy_text.py",
         "research/source_recovery_delta/vector_pdf.py",
         "research/d1_1_stirrup_authority_audit/build_d1_1_stirrup_audit.py"]
 INPUTS = [str(p.relative_to(ROOT)) for p in MANIFESTS.values()] + [
     "research/alsenan_structural_census_s1/STRUCTURAL_PROJECT_RULE_REGISTER.json",
     "research/alsenan_rebar_source_exhaustion_04/registers/PROJECT_REBAR_RULE_REGISTER.json",
     "research/source_recovery_delta/13_GRAPHIC_EVIDENCE.json",
-    "research/d1_1_stirrup_authority_audit/source_search_inputs/PDF_TEXT_OCR_PP9_16.json"]
+    "research/d1_1_stirrup_authority_audit/source_search_inputs/PDF_TEXT_OCR_PP9_16.json",
+    "research/ad1_authority_decisions/01_AUTHORITY_DECISIONS.json",
+    "research/ad1_authority_decisions/05_S5_AD1_CORRECTIONS.csv",
+    "research/ad1_authority_decisions/06_GB_CONCENTRATED_REACTION_REGISTER.csv"]
 OUTPUTS = ["00_README.md", "01_SOURCE_SEARCH.md", "02_STIRRUP_PATH_AUDIT.csv", "03_S6_1A_CORRECTIONS.csv",
            "04_S5_1A_CORRECTIONS.csv", "05_TOPOLOGY_COUNT_DIAMETER_REGISTER.csv", "06_CORRECTED_RELEASE_SUMMARY.json",
            "07_PROVENANCE.jsonl"]
@@ -77,6 +88,7 @@ EN_TERMS = ("BEND", "BENT", "RADIUS", "RAD.", "MANDREL", "FORMER", "HOOK", "135"
             "X DIA", "R=")
 AR_TERMS = ("ثني", "تثني", "خطاف", "كانة", "كانات", "رباط", "وصلة", "وصلات", "تراكب", "نصف قطر", "تكسيح")
 LINK_PORTIONS = ("CORE_PATH",)
+LT_2_5M = "P13-GB-LT2_5M"
 
 
 class Stop(SystemExit):
@@ -390,7 +402,11 @@ def tcd_register():
                     "D_LINK_CUT_LENGTH": "BLOCKED_UNQUANTIFIED",
                     "MODELLED_SHARP_PATH_MM_QA_ONLY": float(t["OUTER_LINK_CORE_PATH_MM"]) if t.get(
                         "OUTER_LINK_CORE_PATH_MM") else None,
-                    "LINK_MASS": "BLOCKED_UNQUANTIFIED", "INNER_LINK": t.get("INNER_LINK") or ""})
+                    "LINK_MASS": "BLOCKED_UNQUANTIFIED", "INNER_LINK": t.get("INNER_LINK") or "",
+                    "HOOK_SHAPE": (AD.SOURCE_EXPLICIT_SHAPE_ONLY if t["HOOKS"] == "SHAPE_FOUND_LENGTH_BLOCKED" else
+                                   AD.NOT_ESTABLISHED),
+                    "HOOK_EXTENSION": AD.BLOCKED_UNQUANTIFIED,
+                    "COUNT_BASIS": ("RATE x CLEAR RUN (rate / count only, AD-8)" if count is not None else "")})
     s5c = defaultdict(dict)
     for r in _rows(S5 / "GROUND_SYSTEM_REBAR_COMPONENTS.csv"):
         s5c[r["occurrence_id"]][r["component"]] = r
@@ -398,6 +414,9 @@ def tcd_register():
     icons = {p["row"]: p["icon"] for p in _j(SRD / "13_GRAPHIC_EVIDENCE.json")["evidence"]["E-DXF-03"]["facts"][
         "placements"]}
     s51 = {r["OCCURRENCE_ID"]: r for r in _rows(S51 / "S5_1_DELTA_COMPONENTS.csv") if r["PORTION"] == "CORE_PATH"}
+    hook_shape = {r["OCCURRENCE_ID"] for r in _rows(S51 / "S5_1_DELTA_COMPONENTS.csv")
+                  if r["COMPONENT"] == "STIRRUP_HOOK_1" and r["PORTION_STATE"] == "SHAPE_FOUND_LENGTH_BLOCKED"}
+    loads = {r["GB_SPAN_ID"]: r for r in _rows(AD1 / "06_GB_CONCENTRATED_REACTION_REGISTER.csv")}
     for o in sorted(reg):
         rr, cm = reg[o], s5c[o]
         if rr["family"] == "STRAP_BEAM":
@@ -409,11 +428,18 @@ def tcd_register():
             topo, links, tsrc = "SINGLE_CLOSED_LINK_2_LEG", 1, "p.13 sections: one closed link each (E-PDF-02)"
         sc, sd = cm["STIRRUP_COUNT"], cm["STIRRUP_DIAMETER"]
         conflict = rr["mark"] == "SB2"
+        no_detail = o in loads and loads[o]["NO_DETAIL_CASE"] == "True"
+        if no_detail:
+            check(sc["state"] != "LOWER_BOUND" and sd["state"] != "VERIFIED", f"{o}: no count / diameter (AD-6)")
+        if LT_2_5M in rr["detail_ids"]:
+            check(sd["state"] != "VERIFIED", f"{o}: GB < 2.5 m diameter not inherited (AD-5)")
+        tstate = ("SOURCE_FOUND_DERIVED" + (" (occurrence SOURCE_CONFLICT)" if conflict else "")
+                  if not no_detail else f"{AD.CANDIDATE_ONLY} (the loaded case has no project detail, AD-6: the p.13 "
+                                        "single link holds only for the unloaded candidates)")
         f = json.loads(s51[o]["FACETS"]) if o in s51 and s51[o]["CHANGE_KIND"] == DR.QUANTITY_RELEASED else {}
         out.append({"STIRRUP_SET_ID": f"{o}:LINKS", "STAGE": "S5.1", "OCCURRENCE_ID": o, "MARK": rr["mark"],
                     "SPAN_INDEX": "1", "A_LINK_TOPOLOGY": topo, "LINKS": links, "LEGS": 2 * links,
-                    "TOPOLOGY_STATE": "SOURCE_FOUND_DERIVED" + (" (occurrence SOURCE_CONFLICT)" if conflict else ""),
-                    "TOPOLOGY_SOURCE": tsrc,
+                    "TOPOLOGY_STATE": tstate, "TOPOLOGY_SOURCE": tsrc,
                     "B_LINK_COUNT": int(sc["count"]) if sc["state"] == "LOWER_BOUND" else None,
                     "COUNT_STATE": ("SOURCE_DERIVED_LOWER_BOUND (S5)" if sc["state"] == "LOWER_BOUND" else
                                     "BLOCKED_UNQUANTIFIED") + (" - SB2 row conflict" if conflict else ""),
@@ -422,17 +448,33 @@ def tcd_register():
                                        "SOURCE_EXPECTED_NOT_LOCATED"),
                     "D_LINK_CUT_LENGTH": "BLOCKED_UNQUANTIFIED",
                     "MODELLED_SHARP_PATH_MM_QA_ONLY": f.get("CORE_PATH_MM"), "LINK_MASS": "BLOCKED_UNQUANTIFIED",
-                    "INNER_LINK": ("BLOCKED_UNQUANTIFIED" if links > 1 else "NONE")})
+                    "INNER_LINK": ("BLOCKED_UNQUANTIFIED" if links > 1 else "NONE"),
+                    "HOOK_SHAPE": AD.SOURCE_EXPLICIT_SHAPE_ONLY if o in hook_shape else AD.NOT_ESTABLISHED,
+                    "HOOK_EXTENSION": AD.BLOCKED_UNQUANTIFIED,
+                    "COUNT_BASIS": ("RATE x SUPPORT FACE-TO-FACE RUN (rate / count only)" if sc["state"] ==
+                                    "LOWER_BOUND" else "")})
     return out
 
 
 # ------------------------------------------------------------------ docs
 README = """# D1.1 stirrup / link core-path authority audit
 
-**Round:** `D1.1` · **Policy:** `{policy}` · **Baseline:** HEAD `59f2083` · **Built by** `build_d1_1_stirrup_audit.py` (blind, byte-identical rebuild)
+**Round:** `D1.1` revision 2 · **Policy:** `{policy}` · **Baseline:** HEAD `59f2083` · **Built by** `build_d1_1_stirrup_audit.py` (blind, byte-identical rebuild)
 
-S4, S5, S6, S4.1, S6.1 and S5.1 are unchanged. All six freeze manifests were hash-checked before anything was read.
-Every change below is an explicit CORRECTION_ERRATA record. No frozen file was edited, and PRE-S7 was not started.
+S4, S5, S6, S4.1, S6.1 and S5.1 are unchanged. Every change below is an explicit CORRECTION_ERRATA record. No
+frozen file was edited, and PRE-S7 was not started.
+
+**Order of authority.**
+- Revision 1 (`35567e2`) was built before the owner's authority decisions were recorded.
+- Revision 2 is built on top of the frozen AD1 record (`research/ad1_authority_decisions/`). AD1's manifest is
+  hash-checked together with the six stage manifests before anything is read.
+- The earlier Q2 answers are recorded in AD1 as the assistant's own engineering analysis. They are not promoted to
+  engineer or source authority, and no confidence value is carried.
+- AD1 applies here through four decisions:
+  - AD-4: hook shape only, extension blocked;
+  - AD-5: no inherited GB < 2.5 m diameter;
+  - AD-6: concentrated-reaction applicability;
+  - AD-8: 5Ø8/m is rate / count only.
 
 ## Conclusion
 
@@ -449,12 +491,16 @@ Every other D1 release is kept, because none of them depends on bend geometry:
   {n_counts} new stirrup counts.
 - S5.1: through-support portions {s5_through:.2f} kg.
 
-| | D1 known | Corrected known |
-|---|---|---|
-| S4.1 | {s41:.2f} | {s41:.2f} |
-| S6.1 | {s61:.2f} | {s61c:.2f} |
-| S5.1 | {s51:.2f} | {s51c:.2f} |
-| **Combined** | **{tot:.2f}** | **{totc:.2f}** |
+AD-6 then retracts {ad1_kg:.2f} kg of frozen S5 bars carried into S5.1. These are spans GSO-142-7D8-1 and
+GSO-15D-7C8-1, where a beam frames in between the supports and one length basis leaves no project detail
+(`research/ad1_authority_decisions/05_S5_AD1_CORRECTIONS.csv`).
+
+| | D1 known | After the link errata | After the AD-6 errata (corrected known) |
+|---|---|---|---|
+| S4.1 | {s41:.2f} | {s41:.2f} | {s41:.2f} |
+| S6.1 | {s61:.2f} | {s61c:.2f} | {s61c:.2f} |
+| S5.1 | {s51:.2f} | {s51c:.2f} | {s51f:.2f} |
+| **Combined** | **{tot:.2f}** | **{totc:.2f}** | **{totf:.2f}** |
 
 ## The mathematics
 
@@ -497,7 +543,13 @@ See `01_SOURCE_SEARCH.md`.
 For every stirrup set, A topology, B count and C diameter keep their own states, and only D cut length is blocked:
 - **Topology:** {n_sets} sets in total: {n_single} single closed links, {n_str2} STR2 (4 legs) and {n_str3} STR3
   (6 legs, SB2, still a source conflict).
-- **Counts:** {n_cnt} sets carry a released count.
+  - Topology is established on {n_est} sets.
+  - On {n_cand} ground-beam sets it is CANDIDATE_ONLY: the span's loaded case has no project detail (AD-6), so the
+    p.13 single link holds only for the unloaded candidates.
+- **Hooks:** {n_hook} sets carry a drawn hook shape (SOURCE_EXPLICIT_SHAPE_ONLY). The hook extension is
+  BLOCKED_UNQUANTIFIED on all {n_sets} (AD-4).
+- **Counts:** {n_cnt} sets carry a released count. Each is a rate x run count only; it never gives a cut length
+  (AD-8).
 - **Diameters:** {n_dia} sets carry a source diameter.
 
 ## Files
@@ -601,12 +653,30 @@ def main():
     check(abs(s61c - (s61["frozen_s6"]["known_kg"] + s6_long + s6_extra)) < 1e-6, "S6.1A = S6 + kept deltas")
     check(abs(s51c - (s51["frozen_s5"]["known_kg"] + s5_through)) < 1e-6, "S5.1A = S5 + kept deltas")
     counts_kept = [a for a in kept6 if a["OBJECT_KIND"] == "STIRRUP_COUNT"]
+    ad1 = _j(AD1 / "07_AD1_SUMMARY.json")
+    ad1_c = [dict(r, ORIGINAL_KG=float(r["ORIGINAL_KG"]), CORRECTION_KG=float(r["CORRECTION_KG"]),
+                  RETAINED_KG=float(r["RETAINED_KG"])) for r in _rows(AD1 / "05_S5_AD1_CORRECTIONS.csv")]
+    ad1_kg = sum(c["CORRECTION_KG"] for c in ad1_c)
+    check(abs(-ad1_kg - ad1["kg_corrections"]["kg"]) < 1e-5, "AD1 corrections = AD1 summary")
+    check(not ({c["ORIGINAL_DELTA_COMPONENT_ID"] for c in ad1_c} & {c["ORIGINAL_DELTA_COMPONENT_ID"] for c in c5}),
+          "AD1 and D1.1 errata touch different components")
+    s51f = s51c + ad1_kg
+    cons5f = DC.conservation(s51["s5_1_known_kg"], c5 + ad1_c, s51f, tol=1e-5)
+    check(cons5f["all_pass"], "S5.1 conservation over the link and AD-6 errata")
     reg = tcd_register()
     tot = s41["s4_1_known_kg"] + s61["s6_1_known_kg"] + s51["s5_1_known_kg"]
     totc = s41["s4_1_known_kg"] + s61c + s51c
+    totf = s41["s4_1_known_kg"] + s61c + s51f
     topo_counts = Counter(r["A_LINK_TOPOLOGY"] for r in reg)
+    topo_states = Counter("CANDIDATE_ONLY" if r["TOPOLOGY_STATE"].startswith(AD.CANDIDATE_ONLY) else "ESTABLISHED"
+                          for r in reg)
     summary = {
-        "round": ROUND, "policy": POLICY, "baseline_head": "59f2083",
+        "round": ROUND, "policy": POLICY, "baseline_head": "59f2083", "revision": REVISION,
+        "revision_1_commit": "35567e2",
+        "authority_decisions": {"round": "AD1", "manifest_sha256": frozen["AD1"]["manifest_sha256"],
+                                "decisions": ad1["decisions"], "applied_here": ["AD-4", "AD-5", "AD-6", "AD-8"],
+                                "q2_prior_analysis": ad1["q2_prior_analysis"]["PROVENANCE"],
+                                "q2_analysis_promoted": False},
         "engine_commit": f"{frozen['S6.1']['engine_commit_stamp']}+audit:{code_digest()[:16]}",
         "frozen": frozen, "correction_policy": DC.policy_record(),
         "mathematics": {"sharp_loop": "2W + 2T", "rounded_loop": "2W + 2T - (8 - 2 pi) R",
@@ -631,18 +701,25 @@ def main():
         "s5_1": {"d1_known_kg": s51["s5_1_known_kg"], "link_core_path_kg_released": s5_link,
                  "link_kg_retained": 0.0, "link_kg_retracted": s5_link, "corrections": len(c5),
                  "other_retained_kg": {"through_support": s5_through},
-                 "corrected_known_kg": s51c, "frozen_s5_known_kg": s51["frozen_s5"]["known_kg"],
-                 "conservation": cons5},
+                 "corrected_known_kg_link_only": s51c, "ad1_correction_kg": ad1_kg, "ad1_corrections": len(ad1_c),
+                 "ad1_spans": sorted({c["OCCURRENCE_ID"] for c in ad1_c}),
+                 "corrected_known_kg": s51f, "frozen_s5_known_kg": s51["frozen_s5"]["known_kg"],
+                 "conservation_link_only": cons5, "conservation": cons5f},
         "s4_1": {"known_kg": s41["s4_1_known_kg"], "link_paths": 0},
         "combined": {"frozen_s4_s5_s6_kg": s41["frozen_s4"]["known_kg"] + s61["frozen_s6"]["known_kg"] +
-                     s51["frozen_s5"]["known_kg"], "d1_kg": tot, "corrected_kg": totc,
+                     s51["frozen_s5"]["known_kg"], "d1_kg": tot, "corrected_kg_link_only": totc,
+                     "corrected_kg": totf,
                      "scope": "footings (S4.1) + superstructure beams (S6.1A) + ground system (S5.1A)"},
         "topology_count_diameter": {"stirrup_sets": len(reg), "by_topology": dict(sorted(topo_counts.items())),
+                                    "topology_state": dict(sorted(topo_states.items())),
+                                    "hook_shape": dict(sorted(Counter(r["HOOK_SHAPE"] for r in reg).items())),
+                                    "hook_extension_blocked": sum(1 for r in reg if r["HOOK_EXTENSION"] ==
+                                                                  AD.BLOCKED_UNQUANTIFIED),
                                     "with_count": sum(1 for r in reg if r["B_LINK_COUNT"] is not None),
                                     "with_diameter": sum(1 for r in reg if r["C_LINK_DIAMETER_MM"] is not None),
                                     "cut_length_blocked": sum(1 for r in reg if r["D_LINK_CUT_LENGTH"] ==
                                                               "BLOCKED_UNQUANTIFIED")},
-        "flags": {"frozen_outputs_changed": False, "normal_delta_rule_changed": False,
+        "flags": {"frozen_outputs_changed": False, "normal_delta_rule_changed": False, "q2_analysis_promoted": False,
                   "hook_length_used_as_proof": False, "external_code_used": False, "plotted_scale_used": False,
                   "pre_s7_started": False, "references_read": []},
         "owner_question": "the issued set gives no bend radius / hook / closure and prints a minimum cover; link "
@@ -663,7 +740,8 @@ def main():
     _csv(HERE / "04_S5_1A_CORRECTIONS.csv", c5, corr_fields)
     reg_fields = ["STIRRUP_SET_ID", "STAGE", "OCCURRENCE_ID", "MARK", "SPAN_INDEX", "A_LINK_TOPOLOGY", "LINKS", "LEGS",
                   "TOPOLOGY_STATE", "TOPOLOGY_SOURCE", "B_LINK_COUNT", "COUNT_STATE", "C_LINK_DIAMETER_MM",
-                  "DIAMETER_STATE", "D_LINK_CUT_LENGTH", "MODELLED_SHARP_PATH_MM_QA_ONLY", "LINK_MASS", "INNER_LINK"]
+                  "DIAMETER_STATE", "D_LINK_CUT_LENGTH", "MODELLED_SHARP_PATH_MM_QA_ONLY", "LINK_MASS", "INNER_LINK",
+                  "HOOK_SHAPE", "HOOK_EXTENSION", "COUNT_BASIS"]
     _csv(HERE / "05_TOPOLOGY_COUNT_DIAMETER_REGISTER.csv", reg, reg_fields)
     _json(HERE / "06_CORRECTED_RELEASE_SUMMARY.json", summary)
     with open(HERE / "07_PROVENANCE.jsonl", "w", encoding="utf-8") as f:
@@ -687,8 +765,11 @@ def main():
         n_single=topo_counts.get("SINGLE_CLOSED_LINK_2_LEG", 0), n_str2=topo_counts.get(
             "STR2_OUTER_PLUS_ONE_INNER_4_LEG", 0), n_str3=topo_counts.get("STR3_OUTER_PLUS_TWO_INNER_6_LEG", 0),
         n_cnt=summary["topology_count_diameter"]["with_count"],
-        n_dia=summary["topology_count_diameter"]["with_diameter"], n6=len(c6), n5=len(c5)), encoding="utf-8")
-    manifest = {"round": ROUND, "state": "FROZEN", "frozen_baselines": frozen,
+        n_dia=summary["topology_count_diameter"]["with_diameter"], n6=len(c6), n5=len(c5), ad1_kg=-ad1_kg,
+        s51f=s51f, totf=totf, n_est=topo_states.get("ESTABLISHED", 0), n_cand=topo_states.get("CANDIDATE_ONLY", 0),
+        n_hook=sum(1 for r in reg if r["HOOK_SHAPE"] == AD.SOURCE_EXPLICIT_SHAPE_ONLY)), encoding="utf-8")
+    manifest = {"round": ROUND, "revision": REVISION, "revision_1_commit": "35567e2", "state": "FROZEN",
+                "frozen_baselines": frozen,
                 "code": {c: _sha(ROOT / c) for c in CODE}, "inputs": {i: _sha(ROOT / i) for i in INPUTS},
                 "drawing_sha256": {"ST7757.dxf": DXF_SHA, "ST7757.pdf": PDF_SHA},
                 "outputs": {o: _sha(HERE / o) for o in OUTPUTS}, "references_read_before_freeze": [],
