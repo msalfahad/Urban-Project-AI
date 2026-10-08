@@ -77,4 +77,8 @@ All paths are under `tests/ad1_authority_decisions/`.
 
 ## Full suite
 
-(recorded below after the run on the committed tree)
+`python3 -m pytest -o addopts="" -q -p no:cacheprovider` at `4f7cacc` gave
+**6767 passed, 4 skipped, 100 xfailed, 2 warnings in 412.75 s, exit 0**.
+- That is the 6736 from D1.1 revision 1 plus the 31 AD1 tests.
+- The run used the clean committed tree. No file was edited during it, and the tree was still clean afterwards.
+- Every frozen-manifest test still matches: S4, S5, S6, S4.1, S6.1, S5.1, AD1 and D1.1.
