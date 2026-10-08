@@ -40,6 +40,7 @@ ACCURATE_MODULES = (
     "engine/source/cover_authority.py",         # D1.2 cover basis, straight-run / count directions, cover errata
     "engine/source/slab_rebar_readiness.py",    # PRE-S7 slab readiness (no kg)
     "engine/source/slab_qto_authority.py",      # AD2 / PRE-S7.1 slab QTO authority lanes (no kg)
+    "engine/source/slab_rebar_qto.py",          # S7 restricted project-basis slab rebar QTO (rate density, D^2/162)
     "engine/bbs_steel.py",
 )
 # project builders that produce accurate reinforcement registers
@@ -67,6 +68,7 @@ ACCURATE_BUILDERS = (
     "research/d1_2_footing_cover_audit/build_d1_2_footing_cover_audit.py",  # D1.2 footing cover-authority errata
     "research/alsenan_slab_rebar_pre_s7/build_pre_s7.py",  # PRE-S7 slab readiness (no kg)
     "research/alsenan_slab_rebar_pre_s7_1/build_pre_s7_1.py",  # AD2 / PRE-S7.1 slab QTO authority delta (no kg)
+    "research/alsenan_slab_rebar_s7/build_s7.py",  # S7 restricted elevated slab rebar QTO (476 candidates only)
 )
 ROUGH_MODULES = (
     "engine/source/rough_rebar_sanity.py",

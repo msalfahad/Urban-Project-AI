@@ -1,0 +1,341 @@
+{
+ "BLOCKED_ANCHORAGE_COMPONENTS": 160,
+ "BLOCKED_SUNKEN_EXTRA_COMPONENTS": 18,
+ "BLOCKED_TEMPERATURE_COMPONENTS": 94,
+ "BLOCKED_TRANSITION_COMPONENTS": 54,
+ "authority_corrections": [
+  {
+   "correction": "EXTENT_RATIO 1/3 = PROJECT_SOURCE (P4-6-NOTE-2: 'length one third of the span'); only the convention measuring it from the support face into each side's clear span (note 2 states no origin, no span and not total-vs-each-side) is URBAN_OWNER_MEASUREMENT_RULE URBAN_QTO_TOP_OVER_SUPPORT_EXTENT_V1. Kept in separate fields on every S7 item.",
+   "id": "S7-AC01",
+   "pre_s7_1_record": "TOP_EXTENSION EXTENT_BASES [URBAN_OWNER_MEASUREMENT_RULE]; the whole extent was labelled an Urban rule",
+   "quantity_effect": "none (authority labels only; PRE-S7.1 extents unchanged)",
+   "subject": "top extent over supports (plan note 2)"
+  },
+  {
+   "correction": "CURTAILMENT_RATIO 0.125 and DENSITY_FRACTION 0.5 / 0.5 = PROJECT_SOURCE (P15-BOT-STOP-0.125L); its span basis (CLEAR_SPAN) and origin (FACE_OF_SUPPORT) are also PROJECT_SOURCE (p.15 detail). Recorded separately: the local L along each bar line on an irregular panel (URBAN_QTO_LOCAL_BAR_LINE_V1) and the AD2-D15 treatment of a continuity-unresolved end.",
+   "id": "S7-AC02",
+   "pre_s7_1_record": "EXTENT_BASES [PROJECT_GEOMETRY, PROJECT_SOURCE_RULE] (+ URBAN local bar line on irregular panels) in one field",
+   "quantity_effect": "none (authority labels only)",
+   "subject": "0.125 L / 50 % bottom curtailment (p.15)"
+  }
+ ],
+ "baseline_head": "ac7a477",
+ "blocked_candidates": 0,
+ "blocked_items": 688,
+ "blocked_items_by_category": {
+  "ANCHORAGE_END_COVER": 174,
+  "BEARING_WALL_CANDIDATE_SUPPORT": 7,
+  "CONTINUITY_UNRESOLVED": 152,
+  "EDGE_WITHOUT_SUPPORT_RECORD": 24,
+  "EXPLICIT_COUNT_LENGTH_BLOCKED": 5,
+  "OBLIQUE_SUPPORT": 44,
+  "OPENING_TRIM": 6,
+  "S8_SPECIAL_STRUCTURE": 47,
+  "SOURCE_CONFLICT_FAMILY": 5,
+  "SUNKEN_EXTRA": 18,
+  "SUNKEN_LEVEL_CHANGE_CONTINUITY": 90,
+  "TEMPERATURE": 94,
+  "TRANSITION_LAP_SPLICE": 74
+ },
+ "blocked_register_rows": 740,
+ "by_diameter": {
+  "10": {
+   "equivalent_length_m": 6056.070949273398,
+   "kg": 3738.3154007860476,
+   "pct": 98.32457374185691
+  },
+  "12": {
+   "equivalent_length_m": 71.6624592256974,
+   "kg": 63.699963756175464,
+   "pct": 1.675426258143099
+  }
+ },
+ "by_floor_kg": {
+  "1F_ROOF_SLAB": 1321.202240261993,
+  "2F_ROOF_SLAB": 318.04121529063787,
+  "GF_ROOF_SLAB": 2162.7719089895922,
+  "TOTAL": 3802.0153645422233
+ },
+ "candidate_components": 309,
+ "candidate_population": 476,
+ "components_by_s7_lane": {
+  "BLOCKED_UNQUANTIFIED": 156,
+  "EXCLUDED_SPECIAL_STRUCTURE": 18,
+  "PROJECT_BASIS_QTO": 309,
+  "SOURCE_CONFLICT": 5
+ },
+ "components_by_s7_state": {
+  "BLOCKED": 156,
+  "EXCLUDED_S8": 18,
+  "RELEASED_ALL": 38,
+  "RELEASED_PARTIAL": 271,
+  "SOURCE_CONFLICT": 5
+ },
+ "components_fully_without_kg_by_category": {
+  "ANCHORAGE_END_COVER": 7,
+  "BEARING_WALL_CANDIDATE_SUPPORT": 7,
+  "CONTINUITY_UNRESOLVED": 0,
+  "EDGE_WITHOUT_SUPPORT_RECORD": 24,
+  "EXPLICIT_COUNT_LENGTH_BLOCKED": 5,
+  "OBLIQUE_SUPPORT": 2,
+  "OPENING_TRIM": 6,
+  "S8_SPECIAL_STRUCTURE": 18,
+  "SOURCE_CONFLICT_FAMILY": 5,
+  "SUNKEN_EXTRA": 18,
+  "SUNKEN_LEVEL_CHANGE_CONTINUITY": 0,
+  "TEMPERATURE": 94,
+  "TRANSITION_LAP_SPLICE": 0
+ },
+ "components_with_blocked_portion_by_category": {
+  "ANCHORAGE_END_COVER": 160,
+  "BEARING_WALL_CANDIDATE_SUPPORT": 7,
+  "CONTINUITY_UNRESOLVED": 116,
+  "EDGE_WITHOUT_SUPPORT_RECORD": 24,
+  "EXPLICIT_COUNT_LENGTH_BLOCKED": 5,
+  "OBLIQUE_SUPPORT": 38,
+  "OPENING_TRIM": 6,
+  "S8_SPECIAL_STRUCTURE": 39,
+  "SOURCE_CONFLICT_FAMILY": 5,
+  "SUNKEN_EXTRA": 18,
+  "SUNKEN_LEVEL_CHANGE_CONTINUITY": 54,
+  "TEMPERATURE": 94,
+  "TRANSITION_LAP_SPLICE": 54
+ },
+ "definitions": {
+  "BOTTOM_MAIN_PROJECT_BASIS_KG": "BOTTOM_IN_PANEL_FULL_DENSITY + CONTINUING_BOTTOM + CURTAILED_BOTTOM + BOTTOM_SUPPORT_CROSSING",
+  "LOCAL_TOP_EXPLICIT_KG": "3Ø16/Top at SUP-GF_ROOF_SLAB-037: count released, length blocked -> no kg",
+  "RESTRICTED_S7_PROJECT_BASIS_KG": "BOTTOM_MAIN + TOP_SUPPORT + LOCAL_TOP_EXPLICIT; the 476 candidates only; every blocked / excluded portion is outside it (excluded, not zero)",
+  "SUPPORT_CROSSING_KG": "BOTTOM_SUPPORT_CROSSING + TOP_SUPPORT_CROSSING (a cross-cut: already inside the bottom and top subtotals)",
+  "TOP_SUPPORT_PROJECT_BASIS_KG": "TOP_EXTENSION + TOP_SUPPORT_CROSSING (plan note 2, owned by supports)"
+ },
+ "engine_commit": "ac7a477+code:963a379b6a4a7e25",
+ "excluded_s8_items": 47,
+ "flags": {
+  "donor_or_code_used": false,
+  "final_total_claimed": false,
+  "kg_calculated": true,
+  "kg_per_m2_or_m3_factor_used": false,
+  "pre_s7_1_edited": false,
+  "references_read_before_freeze": [],
+  "rounded_counts": false,
+  "s7_1_started": false,
+  "s8_started": false,
+  "scope_widened": false
+ },
+ "frozen": {
+  "AD1": {
+   "files_checked": 26,
+   "manifest": "research/ad1_authority_decisions/AD1_FREEZE_MANIFEST.json",
+   "manifest_sha256": "e2497cc75181393000187b7e657fa8485a4c0f365b4614bed983d0bc6c0ca5b4",
+   "round": "AD1"
+  },
+  "D1.1": {
+   "files_checked": 28,
+   "manifest": "research/d1_1_stirrup_authority_audit/D1_1_FREEZE_MANIFEST.json",
+   "manifest_sha256": "3ecb642e2141f5a9af11453870696b104a11cfb519d65a9e3f505cbff7c73a74",
+   "round": "D1.1"
+  },
+  "D1.2": {
+   "files_checked": 23,
+   "manifest": "research/d1_2_footing_cover_audit/D1_2_FREEZE_MANIFEST.json",
+   "manifest_sha256": "f256d6a25edf93029c6ba1c8cf9bc336790fd8d9cf7a5045e8395942986a9554",
+   "round": "D1.2"
+  },
+  "PRE-S7": {
+   "files_checked": 45,
+   "manifest": "research/alsenan_slab_rebar_pre_s7/PRE_S7_FREEZE_MANIFEST.json",
+   "manifest_sha256": "fb3a1c62a8e525b663853d03d43e067f1839026aea149399491bd4cf98f0ad09",
+   "round": "PRE-S7"
+  },
+  "PRE-S7.1": {
+   "files_checked": 41,
+   "manifest": "research/alsenan_slab_rebar_pre_s7_1/PRE_S7_1_FREEZE_MANIFEST.json",
+   "manifest_sha256": "3a67a8641ce4ea836334e02532af82b9a3bb01be8efdba4f093eee44d92c1ef6",
+   "round": "PRE-S7.1"
+  },
+  "S4": {
+   "files_checked": 25,
+   "manifest": "research/alsenan_footing_rebar_s4/S4_FREEZE_MANIFEST.json",
+   "manifest_sha256": "0d63015a19953f295e331aab2d7e49e8facb277e1465fbdd1b6b5a40d1a2362b",
+   "round": "S4"
+  },
+  "S4.1": {
+   "files_checked": 13,
+   "manifest": "research/alsenan_footing_rebar_s4_1/S4_1_FREEZE_MANIFEST.json",
+   "manifest_sha256": "468e90d9657548a7e9124b67ce0a55b63560f030e2f98b414c46ad4e970e030b",
+   "round": "S4.1"
+  },
+  "S5": {
+   "files_checked": 31,
+   "manifest": "research/alsenan_ground_system_rebar_s5/S5_FREEZE_MANIFEST.json",
+   "manifest_sha256": "ff488a92f3eaff80e84fca2d7e0b8e36cc40ddb84232cd315acfd1ce50b4b3d8",
+   "round": "S5"
+  },
+  "S5.1": {
+   "files_checked": 17,
+   "manifest": "research/alsenan_ground_system_rebar_s5_1/S5_1_FREEZE_MANIFEST.json",
+   "manifest_sha256": "595d64b1bf5c8e0ef7b5bebfaf3ea4063dd884356390c84b4c8aac77cddb5a88",
+   "round": "S5.1"
+  },
+  "S6": {
+   "files_checked": 33,
+   "manifest": "research/alsenan_superstructure_beam_rebar_s6/S6_FREEZE_MANIFEST.json",
+   "manifest_sha256": "c29a28bc66334d5294d71b0d5feb0dd5eae36baf91a04ef6e0105b2ca43be63e",
+   "round": "S6"
+  },
+  "S6.1": {
+   "files_checked": 18,
+   "manifest": "research/alsenan_superstructure_beam_rebar_s6_1/S6_1_FREEZE_MANIFEST.json",
+   "manifest_sha256": "c4744888ed2207ebff47c0a895e706d7e381b5f905b694eb92e3d1cdc411c0b2",
+   "round": "S6.1"
+  }
+ },
+ "gates": {
+  "NO_SUPPORT_TOP_BAR_DOUBLE_COUNT": true,
+  "candidates_terminate_exactly_once": true,
+  "equivalent_counts_unrounded": true,
+  "fifty_plus_fifty_density_is_one_hundred": true,
+  "irregular_strip_integration_reconciles": true,
+  "mass_reconciles_item_component_owner_floor_diameter_project": true,
+  "mismatch_left_right_portions_do_not_overlap": true,
+  "no_blocked_item_carries_kg": true,
+  "no_forbidden_label": true,
+  "no_local_top_override_coexists_with_the_overridden_general_bar": true,
+  "no_non_candidate_produces_kg": true,
+  "no_overridden_same_role_top_bar_double_counted": true,
+  "no_released_item_uses_minimum_cover_or_40cl": true,
+  "no_s8_transfer_carries_s7_kg": true,
+  "no_temperature_component_carries_kg": true,
+  "unit_mass_is_d_squared_over_162": true
+ },
+ "lengths_m": {
+  "BOTTOM_EQUIVALENT_LENGTH_M": 3756.5739654491035,
+  "TOP_EQUIVALENT_LENGTH_M": 2371.1594430499913,
+  "TOTAL_EQUIVALENT_BAR_LENGTH_M": 6127.733408499094
+ },
+ "open_source_conflicts": [
+  "C-01 PANEL_VOID_CONFLICT (GF-21, preserved in S8)",
+  "C-03 MULTIPLE_CANDIDATE_BINDINGS (GF-22 X: two callouts)",
+  "C-04 COUNT_NOTATION_CONFLICT (552 / 5B9 / 750)",
+  "C-06 COVER_DIMENSION_BINDING ('40 CL.', no quantity depends on it)",
+  "C-09 TOP_BAR_BINDING (79F / 7A2)"
+ ],
+ "opening_trim_blocked_rows": 6,
+ "overlap_checks": {
+  "1F_ROOF_SLAB:X:BOTTOM": 0,
+  "1F_ROOF_SLAB:X:TOP": 0,
+  "1F_ROOF_SLAB:Y:BOTTOM": 0,
+  "1F_ROOF_SLAB:Y:TOP": 0,
+  "2F_ROOF_SLAB:X:BOTTOM": 0,
+  "2F_ROOF_SLAB:X:TOP": 0,
+  "2F_ROOF_SLAB:Y:BOTTOM": 0,
+  "2F_ROOF_SLAB:Y:TOP": 0,
+  "GF_ROOF_SLAB:X:BOTTOM": 0,
+  "GF_ROOF_SLAB:X:TOP": 0,
+  "GF_ROOF_SLAB:Y:BOTTOM": 0,
+  "GF_ROOF_SLAB:Y:TOP": 0
+ },
+ "policy": "S7_RESTRICTED_SLAB_REBAR_QTO_V1",
+ "pre_s7_1_registers_reproduced_in_memory": [
+  "02_OWNERSHIP_TRANSFERS.csv",
+  "03_RATE_QTO_REGISTER.csv",
+  "06_SUPPORT_MISMATCH_SPLITS.csv",
+  "07_LOCAL_BAR_STRIPS.csv",
+  "08_UPDATED_COMPONENT_READINESS.csv",
+  "10_REMAINING_BLOCKERS.csv",
+  "11_S7_RELEASE_CANDIDATES.csv"
+ ],
+ "project_basis_numeric_items": 0,
+ "reconciliation": {
+  "comp": {
+   "groups": 309,
+   "ok": true
+  },
+  "dia": {
+   "groups": 2,
+   "ok": true
+  },
+  "floor": {
+   "groups": 3,
+   "ok": true
+  },
+  "item": {
+   "groups": 476,
+   "ok": true
+  },
+  "owner": {
+   "groups": 197,
+   "ok": true
+  },
+  "role": {
+   "groups": 6,
+   "ok": true
+  }
+ },
+ "released_components": 309,
+ "released_components_all": 38,
+ "released_components_partial": 271,
+ "released_items": 476,
+ "released_items_by_lane": {
+  "PROJECT_BASIS_QTO": 476
+ },
+ "released_items_by_role": {
+  "BOTTOM_CONTINUING_50": 87,
+  "BOTTOM_CURTAILED_50": 87,
+  "BOTTOM_IN_PANEL": 7,
+  "BOTTOM_SUPPORT_CROSSING": 25,
+  "TOP_OVER_SUPPORT_EXTENSION": 215,
+  "TOP_SUPPORT_CROSSING": 55
+ },
+ "round": "S7",
+ "s7_1_candidates": 106,
+ "s7_1_candidates_kg": 0.0,
+ "s8_excluded": {
+  "by_region": {
+   "SPECIAL_STRUCTURE (DOME_ZONE, excluded in PRE-S7)": 12,
+   "SPECIAL_STRUCTURE (STAIR_FLIGHT_ZONE, excluded in PRE-S7)": 8,
+   "STAIR_LIGHTWELL_REGION": 5,
+   "WATER_TANK_SUPPORT_REGION": 22
+  },
+  "components": 18,
+  "items": 47
+ },
+ "share_of_total_pct": {
+  "BOTTOM_IN_PANEL_FULL_DENSITY_KG": 4.09415030181042,
+  "BOTTOM_MAIN_PROJECT_BASIS_KG": 61.502557769762994,
+  "BOTTOM_SUPPORT_CROSSING_KG": 0.5443035826321242,
+  "CONTINUING_BOTTOM_KG": 31.339295915288307,
+  "CURTAILED_BOTTOM_KG": 25.524807970032143,
+  "LOCAL_TOP_EXPLICIT_KG": 0.0,
+  "SUPPORT_CROSSING_KG": 3.3245530846555567,
+  "TOP_EXTENSION_KG": 35.717192728213575,
+  "TOP_SUPPORT_CROSSING_KG": 2.7802495020234326,
+  "TOP_SUPPORT_PROJECT_BASIS_KG": 38.497442230237006
+ },
+ "source_conflict_items": 5,
+ "source_derived_physical_items": 0,
+ "sunken_panels_base_mesh_kg": {
+  "SP-1F_ROOF_SLAB-02": 31.249999999999996,
+  "SP-GF_ROOF_SLAB-04": 14.390914351851851,
+  "SP-GF_ROOF_SLAB-05": 18.600501543209877,
+  "SP-GF_ROOF_SLAB-12": 22.40579479166668,
+  "SP-GF_ROOF_SLAB-24": 11.236858083413564,
+  "SP-GF_ROOF_SLAB-29": 43.3773156114969
+ },
+ "total_is_final": false,
+ "total_name": "RESTRICTED_S7_PROJECT_BASIS_KG",
+ "totals_kg": {
+  "BOTTOM_IN_PANEL_FULL_DENSITY_KG": 155.66022352228399,
+  "BOTTOM_MAIN_PROJECT_BASIS_KG": 2338.3366959928458,
+  "BOTTOM_SUPPORT_CROSSING_KG": 20.694505841427134,
+  "CONTINUING_BOTTOM_KG": 1191.5248458386147,
+  "CURTAILED_BOTTOM_KG": 970.45712079052,
+  "LOCAL_TOP_EXPLICIT_KG": 0.0,
+  "RESTRICTED_S7_PROJECT_BASIS_KG": 3802.015364542223,
+  "SUPPORT_CROSSING_KG": 126.40001908096669,
+  "TOP_EXTENSION_KG": 1357.9731553098377,
+  "TOP_SUPPORT_CROSSING_KG": 105.70551323953954,
+  "TOP_SUPPORT_PROJECT_BASIS_KG": 1463.678668549377,
+  "TOTAL_RESTRICTED_S7_PROJECT_BASIS_KG": 3802.015364542223
+ }
+}
