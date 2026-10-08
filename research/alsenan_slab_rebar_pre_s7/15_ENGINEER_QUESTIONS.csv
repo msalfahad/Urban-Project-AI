@@ -1,0 +1,22 @@
+QUESTION_ID,QUESTION,LINKED_TO,ASKED_OF,COMPONENTS_AFFECTED,AFFECTS,STATE
+Q-COUNT,"How is a slab rate callout (e.g. 5Ø10/m) turned into a bar count across a panel: first bar at cover or at half a spacing from the face, and is there a bar at both edges?",SENL-03,PROJECT_ENGINEER,432,432 components (blocker),OPEN
+Q-LAYER,Are the plan callouts without '/Top' or '(T&B)' the bottom bars?,SENL-04,PROJECT_ENGINEER,0,165 bottom components (non-blocking: layer recorded as ENGINEERING_DERIVED),OPEN
+Q-TOPEXT,"Top bars over beams: does plan note 2 ('5Ø10/m ... length one third of the span, both directions') replace the p.15 extents (0.25 L1 / 0.30 max(L1, L2))? Is 'one third of the span' the total bar length or the extension each side, and of which span?",C-02,PROJECT_ENGINEER,263,263 components (blocker),OPEN
+Q-TOPOVR,"Where a '/Top' callout is drawn at a support, does it replace plan note 2's 5Ø10/m there or add to it?",P4-6-NOTE-2,PROJECT_ENGINEER,1,1 components (blocker),OPEN
+Q-TEMP,Which temperature reinforcement applies to the 160 mm and 180 mm slabs? The p.15 table has no 160 or 180 row.,SENL-01,PROJECT_ENGINEER,98,98 components (blocker),OPEN
+Q-TEMPREG,Temperature note 2 ('where beams are parallel to the main slab reinforcement'): which direction is 'main' in a two-way panel?,P15-TEMP-NOTE-2-STRIP,PROJECT_ENGINEER,0,98 temperature components,OPEN
+Q-GFVOID,"B29 light well (GF roof slab): the open-to-below X spans the stair flights, a T 16 mark and 8Ø16/m bars. Which part is void, which is stair slab?",C-01,PROJECT_ENGINEER,0,1 face (SP-GF_ROOF_SLAB-21) and its tokens,OPEN
+Q-TANK,WATER TANK PLACE (2F roof): are the two T 18 panels normal roof slab (S7) or part of a water-tank structure (S8)?,C-tank,PROJECT_ENGINEER,0,"2 panels, 12 components",OPEN
+Q-SUNKEN,Sunken slabs: drop depth and the step detail; do the bottom bars continue across the step?,SENL-07,PROJECT_ENGINEER,0,6 panels; 18 supports,OPEN
+Q-HATCH,The dense-hatch strips: cantilever portions or bearing walls?,C-hatch,PROJECT_ENGINEER,0,8 dense-hatch strips,OPEN
+Q-ENDCOVER,p.15 '40 CL.' at the non-continuous support: which bar does it dimension?,C-cover,PROJECT_ENGINEER,0,103 components with end portions at non-continuous supports,OPEN
+Q-ANCHOR,Length of the top anchor leg and of the bottom bar end at a non-continuous support?,SENL-06,PROJECT_ENGINEER,0,179 components with end portions,OPEN
+Q-50PCT,"Which half of the bottom bars stops at 0.125 L (alternate bars?), and how is an odd count split?",SENL-09,PROJECT_ENGINEER,142,142 components (blocker),OPEN
+Q-ABSCOUNT,Callouts printed without '/m' (e.g. 5Ø10): absolute counts or rates?,C-count,PROJECT_ENGINEER,3,3 components (blocker),OPEN
+Q-TWOCALL,Panels with two callouts in one direction: which governs?,C-two,PROJECT_ENGINEER,0,2 components,OPEN
+Q-MISMATCH,"At a continuous support between panels with different bottom callouts, which bars run through ('balance continuous'): each span's own bars lapped at the support, or the larger?",C-mismatch,PROJECT_ENGINEER,90,90 components (blocker),OPEN
+Q-LAP,Lap length and lap positions for main slab bars?,SENL-05,PROJECT_ENGINEER,0,71 continuous-run components,OPEN
+Q-T1T4,"Where are the 'main details for T1, T2, T3 & T4' (p.6 legend)?",SENL-10,PROJECT_ENGINEER,0,not linked to a component (legend reference only),OPEN
+Q-OPENING,Trim / diagonal bars at slab openings and shafts?,SENL-08,PROJECT_ENGINEER,0,5 openings,OPEN
+Q-CORNER,Corner reinforcement (3Ø14): bar length and layer?,SENL-11,PROJECT_ENGINEER,0,4 corner components,OPEN
+Q-TOPBESIDE,"The '/Top' bars drawn beside beam lines outside the 2F panels (4Ø16/Top, 5Ø18/Top): beam top bars, edge / cantilever bars, or slab top bars?",C-topbar,PROJECT_ENGINEER,0,2 tokens,OPEN

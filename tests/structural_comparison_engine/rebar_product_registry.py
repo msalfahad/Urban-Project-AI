@@ -38,6 +38,7 @@ ACCURATE_MODULES = (
     "engine/source/delta_correction.py",        # D1.1 errata records over a frozen delta (never adds steel)
     "engine/source/authority_decisions.py",     # AD1 owner authority decisions, provenance classes, facet errata
     "engine/source/cover_authority.py",         # D1.2 cover basis, straight-run / count directions, cover errata
+    "engine/source/slab_rebar_readiness.py",    # PRE-S7 slab readiness (no kg)
     "engine/bbs_steel.py",
 )
 # project builders that produce accurate reinforcement registers
@@ -63,6 +64,7 @@ ACCURATE_BUILDERS = (
     "research/d1_1_stirrup_authority_audit/build_d1_1_stirrup_audit.py",  # D1.1 link-authority errata over S6.1 / S5.1
     "research/ad1_authority_decisions/build_ad1_authority_decisions.py",  # AD1 authority decisions + errata
     "research/d1_2_footing_cover_audit/build_d1_2_footing_cover_audit.py",  # D1.2 footing cover-authority errata
+    "research/alsenan_slab_rebar_pre_s7/build_pre_s7.py",  # PRE-S7 slab readiness (no kg)
 )
 ROUGH_MODULES = (
     "engine/source/rough_rebar_sanity.py",

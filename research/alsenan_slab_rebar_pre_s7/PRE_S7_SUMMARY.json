@@ -1,0 +1,350 @@
+{
+ "bar_runs": {
+  "bottom": 70,
+  "bottom_multi_panel": 15,
+  "top_support": 165
+ },
+ "baseline_head": "44f693e",
+ "blocked_from_s7": 198,
+ "bottom_families": {
+  "CLASSIFICATION_BLOCKED": 4,
+  "IN_SCOPE_S7": 94
+ },
+ "bottom_populations": 169,
+ "classification_blocked": [
+  "SP-GF_ROOF_SLAB-21",
+  "SP-2F_ROOF_SLAB-01",
+  "SP-2F_ROOF_SLAB-02",
+  "HZ-GFRS-273",
+  "HZ-GFRS-2B1",
+  "HZ-GFRS-2B4",
+  "HZ-SFRS-38C",
+  "HZ-SFRS-390",
+  "HZ-SFRS-391",
+  "HZ-GFRS-54D",
+  "HZ-FFRS-5E0"
+ ],
+ "component_type_instantiation": {
+  "BEND": {
+   "state": "NOT_INSTANTIATED",
+   "why": "carried as a blocked portion of TOP_SUPPORT at non-continuous supports (leg shape only)"
+  },
+  "BOTTOM_X": {
+   "rows": 7,
+   "state": "INSTANTIATED"
+  },
+  "BOTTOM_Y": {
+   "rows": 20,
+   "state": "INSTANTIATED"
+  },
+  "COLUMN_STRIP_TOP": {
+   "state": "NOT_INSTANTIATED",
+   "why": "beam-supported slabs: no strip definition in the source"
+  },
+  "CONTINUOUS_BAR_RUN": {
+   "rows": 71,
+   "state": "INSTANTIATED"
+  },
+  "CORNER_BAR": {
+   "rows": 4,
+   "state": "INSTANTIATED"
+  },
+  "CURTAILMENT_SEGMENT": {
+   "rows": 71,
+   "state": "INSTANTIATED"
+  },
+  "DEVELOPMENT": {
+   "state": "NOT_INSTANTIATED",
+   "why": "not located"
+  },
+  "DIAGONAL_BAR": {
+   "state": "NOT_INSTANTIATED",
+   "why": "only the corner reinforcement is diagonal (CORNER_BAR)"
+  },
+  "EDGE_BAR": {
+   "state": "NOT_INSTANTIATED",
+   "why": "no edge-bar callout or note"
+  },
+  "HOOK": {
+   "state": "NOT_INSTANTIATED",
+   "why": "no hook drawn on the slab detail"
+  },
+  "LAP": {
+   "state": "NOT_INSTANTIATED",
+   "why": "temperature lap 40 D is carried on the TEMPERATURE rows; main-bar lap not located (SENL-05)"
+  },
+  "MID_STRIP_TOP": {
+   "state": "NOT_INSTANTIATED",
+   "why": "beam-supported slabs: no strip definition in the source"
+  },
+  "OPENING_EXTRA_BOTTOM": {
+   "state": "NOT_INSTANTIATED",
+   "why": "no extra / trim callout at any opening (SENL-08)"
+  },
+  "OPENING_EXTRA_TOP": {
+   "state": "NOT_INSTANTIATED",
+   "why": "no extra / trim callout at any opening (SENL-08)"
+  },
+  "OPENING_TRIM": {
+   "state": "NOT_INSTANTIATED",
+   "why": "no trim callout (SENL-08)"
+  },
+  "TEMPERATURE_X": {
+   "rows": 49,
+   "state": "INSTANTIATED"
+  },
+  "TEMPERATURE_Y": {
+   "rows": 49,
+   "state": "INSTANTIATED"
+  },
+  "TOP_SUPPORT_X": {
+   "rows": 80,
+   "state": "INSTANTIATED"
+  },
+  "TOP_SUPPORT_Y": {
+   "rows": 85,
+   "state": "INSTANTIATED"
+  },
+  "TOP_X": {
+   "rows": 2,
+   "state": "INSTANTIATED"
+  },
+  "TOP_Y": {
+   "rows": 2,
+   "state": "INSTANTIATED"
+  }
+ },
+ "components_by_readiness": {
+  "BLOCKED_FROM_S7": 440
+ },
+ "components_by_type": {
+  "BOTTOM_X": 7,
+  "BOTTOM_Y": 20,
+  "CONTINUOUS_BAR_RUN": 71,
+  "CORNER_BAR": 4,
+  "CURTAILMENT_SEGMENT": 71,
+  "TEMPERATURE_X": 49,
+  "TEMPERATURE_Y": 49,
+  "TOP_SUPPORT_X": 80,
+  "TOP_SUPPORT_Y": 85,
+  "TOP_X": 2,
+  "TOP_Y": 2
+ },
+ "conditional_candidates": 242,
+ "cover_basis": {
+  "basis": "MINIMUM_PROJECT_COVER",
+  "label": "MINIMUM_PROJECT_COVER_25",
+  "source": "GENERAL_RULE",
+  "value_mm": 25.0
+ },
+ "engine_commit": "44f693e+code:a7e8ab56d5f2e316",
+ "excluded_special": [
+  "SP-GF_ROOF_SLAB-03",
+  "SP-GF_ROOF_SLAB-28",
+  "SP-1F_ROOF_SLAB-01",
+  "SP-1F_ROOF_SLAB-13",
+  "SP-1F_ROOF_SLAB-14",
+  "SP-1F_ROOF_SLAB-15",
+  "SP-1F_ROOF_SLAB-16",
+  "SP-1F_ROOF_SLAB-17",
+  "SP-1F_ROOF_SLAB-18",
+  "SP-1F_ROOF_SLAB-19",
+  "SP-1F_ROOF_SLAB-20"
+ ],
+ "flags": {
+  "donor_or_code_used": false,
+  "interpolated_temperature": false,
+  "kg_calculated": false,
+  "nts_measured": false,
+  "references_read": [],
+  "s7_started": false
+ },
+ "floors_included": [
+  "1F_ROOF_SLAB",
+  "2F_ROOF_SLAB",
+  "GF_ROOF_SLAB"
+ ],
+ "frozen": {
+  "AD1": {
+   "files_checked": 26,
+   "manifest": "research/ad1_authority_decisions/AD1_FREEZE_MANIFEST.json",
+   "manifest_sha256": "e2497cc75181393000187b7e657fa8485a4c0f365b4614bed983d0bc6c0ca5b4",
+   "round": "AD1"
+  },
+  "D1.1": {
+   "files_checked": 28,
+   "manifest": "research/d1_1_stirrup_authority_audit/D1_1_FREEZE_MANIFEST.json",
+   "manifest_sha256": "3ecb642e2141f5a9af11453870696b104a11cfb519d65a9e3f505cbff7c73a74",
+   "round": "D1.1"
+  },
+  "D1.2": {
+   "files_checked": 23,
+   "manifest": "research/d1_2_footing_cover_audit/D1_2_FREEZE_MANIFEST.json",
+   "manifest_sha256": "f256d6a25edf93029c6ba1c8cf9bc336790fd8d9cf7a5045e8395942986a9554",
+   "round": "D1.2"
+  },
+  "S4": {
+   "files_checked": 25,
+   "manifest": "research/alsenan_footing_rebar_s4/S4_FREEZE_MANIFEST.json",
+   "manifest_sha256": "0d63015a19953f295e331aab2d7e49e8facb277e1465fbdd1b6b5a40d1a2362b",
+   "round": "S4"
+  },
+  "S4.1": {
+   "files_checked": 13,
+   "manifest": "research/alsenan_footing_rebar_s4_1/S4_1_FREEZE_MANIFEST.json",
+   "manifest_sha256": "468e90d9657548a7e9124b67ce0a55b63560f030e2f98b414c46ad4e970e030b",
+   "round": "S4.1"
+  },
+  "S5": {
+   "files_checked": 31,
+   "manifest": "research/alsenan_ground_system_rebar_s5/S5_FREEZE_MANIFEST.json",
+   "manifest_sha256": "ff488a92f3eaff80e84fca2d7e0b8e36cc40ddb84232cd315acfd1ce50b4b3d8",
+   "round": "S5"
+  },
+  "S5.1": {
+   "files_checked": 17,
+   "manifest": "research/alsenan_ground_system_rebar_s5_1/S5_1_FREEZE_MANIFEST.json",
+   "manifest_sha256": "595d64b1bf5c8e0ef7b5bebfaf3ea4063dd884356390c84b4c8aac77cddb5a88",
+   "round": "S5.1"
+  },
+  "S6": {
+   "files_checked": 33,
+   "manifest": "research/alsenan_superstructure_beam_rebar_s6/S6_FREEZE_MANIFEST.json",
+   "manifest_sha256": "c29a28bc66334d5294d71b0d5feb0dd5eae36baf91a04ef6e0105b2ca43be63e",
+   "round": "S6"
+  },
+  "S6.1": {
+   "files_checked": 18,
+   "manifest": "research/alsenan_superstructure_beam_rebar_s6_1/S6_1_FREEZE_MANIFEST.json",
+   "manifest_sha256": "c4744888ed2207ebff47c0a895e706d7e381b5f905b694eb92e3d1cdc411c0b2",
+   "round": "S6.1"
+  }
+ },
+ "gates": {
+  "all_bar_runs_terminate": true,
+  "all_openings_terminate": true,
+  "all_panel_labels_terminate": true,
+  "all_reinforcement_tokens_terminate": true,
+  "all_slab_geometries_terminate": true,
+  "all_supports_terminate": true,
+  "no_blocked_component_carries_kg": true,
+  "no_kg_in_pre_s7": true,
+  "no_special_structure_in_s7": true,
+  "no_support_bar_counted_from_both_panels": true,
+  "no_token_produces_two_physical_bars": true
+ },
+ "geometries": 76,
+ "geometries_by_scope": {
+  "CLASSIFICATION_BLOCKED": 11,
+  "EXCLUDED_SPECIAL_STRUCTURE": 11,
+  "IN_SCOPE_S7": 47,
+  "NOT_SLAB": 4,
+  "VOID_OR_OPENING": 3
+ },
+ "local_marks_confirming_default": [
+  "SP-GF_ROOF_SLAB-17",
+  "SP-GF_ROOF_SLAB-29",
+  "SP-1F_ROOF_SLAB-21"
+ ],
+ "local_thickness_overrides": [
+  "SP-2F_ROOF_SLAB-01",
+  "SP-2F_ROOF_SLAB-02"
+ ],
+ "local_thickness_panels": [
+  "SP-GF_ROOF_SLAB-17",
+  "SP-GF_ROOF_SLAB-29",
+  "SP-1F_ROOF_SLAB-21",
+  "SP-2F_ROOF_SLAB-01",
+  "SP-2F_ROOF_SLAB-02"
+ ],
+ "no_kg": true,
+ "note2_decoded": {
+  "FFRS": "? ? علي المقاول مطابقة تفاصيل الدروة و البرو?ات المعمارية قبل تنفيذها ? ? يجب وضع حديد علوي للبلاطات فوق الجسور بطول ثلث البحر في الاتجاهين",
+  "GFRS": "? ? علي المقاول مطابقة تفاصيل الدروة و البرو?ات المعمارية قبل تنفيذها ? ? يجب وضع حديد علوي للبلاطات فوق الجسور بطول ثلث البحر في الاتجاهين",
+  "SFRS": "? ? علي المقاول مطابقة تفاصيل الدروة و البرو?ات المعمارية قبل تنفيذها ? ? يجب وضع حديد علوي للبلاطات فوق الجسور بطول ثلث البحر في الاتجاهين"
+ },
+ "openings": 16,
+ "openings_by_type": {
+  "DOME_RADIALS": 2,
+  "LINES_IN_A_SECTION_DETAIL": 2,
+  "OPENING_STRIP": 2,
+  "OPEN_TO_BELOW_FACE": 3,
+  "VOID_LABEL": 2,
+  "VOID_OUTLINE": 4,
+  "VOID_WITH_STAIR_AND_SLAB_EVIDENCE": 1
+ },
+ "panels_in_scope": 47,
+ "panels_in_scope_by_class": {
+  "NORMAL_SLAB": 41,
+  "SUNKEN_SLAB": 6
+ },
+ "panels_in_scope_by_floor": {
+  "1F_ROOF_SLAB": 14,
+  "2F_ROOF_SLAB": 5,
+  "GF_ROOF_SLAB": 28
+ },
+ "policy": "ELEVATED_SLAB_REBAR_READINESS_V1",
+ "questions": 21,
+ "round": "PRE-S7",
+ "s7_candidates": {
+  "CONDITIONAL_ON_OWNER_DECISIONS": 242
+ },
+ "s7_release_candidates": 0,
+ "senl": 12,
+ "slab_area_in_scope_m2": 356.866,
+ "slab_area_in_scope_m2_by_floor": {
+  "1F_ROOF_SLAB": 119.63,
+  "2F_ROOF_SLAB": 31.25,
+  "GF_ROOF_SLAB": 205.986
+ },
+ "source_conflicts": 11,
+ "support_populations": 165,
+ "support_rules": {
+  "P15-BOT-STOP-0.125L": "PROVEN_PROJECT_RULE",
+  "P15-COVER-25CL": "RECORDED_NOT_RELEASABLE",
+  "P15-END-40CL": "RECORDED_NOT_RELEASABLE",
+  "P15-TEMP-NOTE-1-LAP-40D": "RECORDED_NOT_RELEASABLE",
+  "P15-TEMP-NOTE-2-STRIP": "RECORDED_NOT_RELEASABLE",
+  "P15-TEMP-NOTE-3-LARGER": "RECORDED_NOT_RELEASABLE",
+  "P15-TOP-CONT-0.30Lmax": "PROVEN_PROJECT_RULE",
+  "P15-TOP-EXTEND-50PCT": "RECORDED_NOT_RELEASABLE",
+  "P15-TOP-NONCONT-0.25L1": "PROVEN_PROJECT_RULE",
+  "P4-6-NOTE-2-TOP-OVER-BEAMS": "RECORDED_NOT_RELEASABLE"
+ },
+ "supports": 172,
+ "supports_by_type": {
+  "CONTINUITY_UNRESOLVED": 43,
+  "CONTINUOUS": 53,
+  "NON_CONTINUOUS": 76
+ },
+ "temperature_160_180_unresolved": 49,
+ "temperature_populations": 98,
+ "temperature_unresolved_by_thickness": {
+  "160:IN_SCOPE_S7": 47,
+  "180:CLASSIFICATION_BLOCKED": 2
+ },
+ "thickness_classification_blocked": {
+  "180 mm (LOCAL_PANEL)": 2
+ },
+ "thickness_distribution": {
+  "160 mm (LOCAL_PANEL)": 3,
+  "160 mm (PROJECT_DEFAULT)": 44
+ },
+ "token_conservation": {
+  "every_token_terminates_once": true,
+  "no_bar_family_from_two_tokens": true,
+  "no_unknown_token": true,
+  "only_bound_tokens_produce_bars": true
+ },
+ "tokens_bound": 106,
+ "tokens_by_state": {
+  "BOUND_TO_PANEL": 105,
+  "BOUND_TO_SUPPORT": 1,
+  "DESIGN_NOTE": 3,
+  "EXCLUDED_SPECIAL_STRUCTURE": 8,
+  "REFERENCE_ONLY": 13,
+  "SOURCE_CONFLICT": 5
+ },
+ "tokens_found": 135,
+ "top_populations": 4
+}
