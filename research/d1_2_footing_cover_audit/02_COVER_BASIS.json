@@ -1,0 +1,109 @@
+{
+ "basis": {
+  "basis": "MINIMUM_PROJECT_COVER",
+  "label": "MINIMUM_PROJECT_COVER_70",
+  "source": "GENERAL_RULE",
+  "value_mm": 70.0
+ },
+ "dxf": {
+  "arabic_cover_hits": 0,
+  "cover_text_hits": 0,
+  "note_22_in_dxf": false,
+  "seven_point_five_cm": {
+   "count": 16,
+   "handles": [
+    "20F8",
+    "20FF",
+    "2115",
+    "211B",
+    "2267",
+    "226E",
+    "2275",
+    "227B",
+    "228F",
+    "2296",
+    "229D",
+    "22A3",
+    "27B7",
+    "27BE",
+    "27D4",
+    "27DA"
+   ],
+   "layers": [
+    "S-DIM.SCH"
+   ],
+   "reading": "continuous-beam typical figures (pp.11-12): the 7.5 cm dimension that binds the CB bottom bar; not a footing cover"
+  },
+  "texts_scanned": 2780
+ },
+ "footing_details": {
+  "DEEP": {
+   "bottom_bar_level_pt": 450.8,
+   "dimension_segments": 598,
+   "dimension_ticks": 473,
+   "reading": "no dimension is bound to a footing bar line: the bar position inside the footing is drawn, not dimensioned",
+   "ticks_on_bar_leg_lines": 0,
+   "ticks_on_bottom_bar_line": 0
+  },
+  "SHALLOW": {
+   "bottom_bar_level_pt": 422.4,
+   "dimension_segments": 214,
+   "dimension_ticks": 132,
+   "reading": "no dimension is bound to a footing bar line: the bar position inside the footing is drawn, not dimensioned",
+   "ticks_on_bar_leg_lines": 0,
+   "ticks_on_bottom_bar_line": 0
+  }
+ },
+ "outcomes_considered": [
+  "EXACT_PROJECT_COVER_70",
+  "MINIMUM_PROJECT_COVER_70",
+  "DERIVED_EXACT_COVER",
+  "BOUNDED_COVER",
+  "UNRESOLVED"
+ ],
+ "round": "D1.2",
+ "rules": {
+  "note": {
+   "channels": [
+    "PDF_RASTER",
+    "OCR(R4)"
+   ],
+   "english": "22. The concrete cover thickness shall not be less than 2.5 cm in columns, slabs and beams, and 7 cm in concrete in contact with the soil.",
+   "page": 8,
+   "raw_text": "22. يجب أن لا يقل سمك الغطاء الخرساني عن 2.5 سم في الأعمدة والبلاطات والجسور وعن 7سم في الخرسانة الملاصقة للتربة.",
+   "rule_id": "P8-N22",
+   "s1_english_interpretation": "Cover >= 2.5 cm columns / slabs / beams; >= 7 cm in contact with soil.",
+   "source_file": "ST7757.pdf",
+   "values": {
+    "member_mm": 25,
+    "soil_mm": 70
+   }
+  },
+  "r4": {
+   "applies_to": [
+    "FOOTING",
+    "FOOTING_2_LAYER",
+    "FOOTING_LIFT",
+    "STRAP_BEAM",
+    "GROUND_BEAM",
+    "GROUND_SLAB",
+    "COLUMN_STARTERS",
+    "POOL"
+   ],
+   "claim_id": "P8-N22-COVER-SOIL",
+   "rule_id": "COVER_AGAINST_SOIL_70MM",
+   "scope": "minimum cover",
+   "value": 70
+  },
+  "s4_use": {
+   "convention_id_example": "COVER_AGAINST_SOIL_70MM|PRE-S4-SHORT-SPANS-W-ALONG-L|P13-FOOTING-TYP-STRAIGHT-BOTTOM",
+   "rule": "COVER_AGAINST_SOIL_70MM taken as the cover value with authority SOURCE_EXPLICIT; net straight = span - 70 - 70; rate count = ceil(rate x (dimension - 2 x 70))"
+  },
+  "wording_kind": {
+   "p8_raster_reread": "MINIMUM",
+   "r4_register_scope": "MINIMUM",
+   "s1_transcription": "MINIMUM"
+  }
+ },
+ "why": "the only cover rule is worded as a minimum; no footing detail binds a bar line to a dimensioned face; no upper bound is printed"
+}

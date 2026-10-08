@@ -1,0 +1,186 @@
+{
+ "baseline_head": "1384bf3",
+ "combined": {
+  "as_built_lower_bound_known_kg": 5450.99712806173,
+  "parts": {
+   "S4.1": {
+    "as_built_lower_bound_kg": null,
+    "project_basis_kg": 3629.599506172839
+   },
+   "S5.1": {
+    "as_built_lower_bound_kg": 1436.231678679013,
+    "project_basis_kg": 1436.231678679013
+   },
+   "S6.1": {
+    "as_built_lower_bound_kg": 4014.7654493827176,
+    "project_basis_kg": 4014.7654493827176
+   }
+  },
+  "project_drawing_basis_kg": 9080.59663423457,
+  "s5_s6_cover_independent": {
+   "s5_components_checked": 97,
+   "s6_components_checked": 165
+  }
+ },
+ "cover_basis": {
+  "basis": "MINIMUM_PROJECT_COVER",
+  "label": "MINIMUM_PROJECT_COVER_70",
+  "source": "GENERAL_RULE",
+  "value_mm": 70.0
+ },
+ "cover_policy": {
+  "cover_bases": [
+   "EXACT_PROJECT_COVER",
+   "MINIMUM_PROJECT_COVER",
+   "DERIVED_EXACT_COVER",
+   "BOUNDED_COVER",
+   "UNRESOLVED"
+  ],
+  "directions": [
+   "EXACT",
+   "UPPER",
+   "LOWER",
+   "NONE"
+  ],
+  "mass_states": [
+   "SOURCE_DERIVED_EXACT",
+   "LOWER_BOUND",
+   "UPPER_BOUND_KNOWN",
+   "PROJECT_BASIS_NUMERIC"
+  ],
+  "record_type": "COVER_AUTHORITY_CORRECTION",
+  "rules": [
+   "a minimum cover makes the straight run at that cover a maximum, never a lower bound",
+   "a detail dimension or derived exact cover outranks a general minimum rule",
+   "rate counts inside the cover move with the cover; the +1 edge bar is a separate uncertainty",
+   "opposite-direction uncertainties give no bound: the number stays a project-basis value",
+   "no cover is invented and no actual cover is assumed; a correction never adds steel"
+  ]
+ },
+ "engine_commit": "e3633af+code:0d11810b780ae8f8+delta:06346dac56faa12d+cover:c1b0336a75f9dfae",
+ "flags": {
+  "actual_cover_assumed": false,
+  "cover_invented": false,
+  "frozen_outputs_changed": false,
+  "plotted_scale_used": false,
+  "pre_s7_started": false,
+  "references_read": [],
+  "silent_lower_bound": false
+ },
+ "frozen": {
+  "AD1": {
+   "engine_commit_stamp": null,
+   "files_checked": 26,
+   "manifest": "research/ad1_authority_decisions/AD1_FREEZE_MANIFEST.json",
+   "manifest_sha256": "e2497cc75181393000187b7e657fa8485a4c0f365b4614bed983d0bc6c0ca5b4",
+   "round": "AD1"
+  },
+  "D1.1": {
+   "engine_commit_stamp": null,
+   "files_checked": 28,
+   "manifest": "research/d1_1_stirrup_authority_audit/D1_1_FREEZE_MANIFEST.json",
+   "manifest_sha256": "3ecb642e2141f5a9af11453870696b104a11cfb519d65a9e3f505cbff7c73a74",
+   "round": "D1.1"
+  },
+  "S4": {
+   "engine_commit_stamp": "e3633af+code:0d11810b780ae8f8",
+   "files_checked": 25,
+   "manifest": "research/alsenan_footing_rebar_s4/S4_FREEZE_MANIFEST.json",
+   "manifest_sha256": "0d63015a19953f295e331aab2d7e49e8facb277e1465fbdd1b6b5a40d1a2362b",
+   "round": "S4"
+  },
+  "S4.1": {
+   "engine_commit_stamp": "e3633af+code:0d11810b780ae8f8+delta:06346dac56faa12d",
+   "files_checked": 13,
+   "manifest": "research/alsenan_footing_rebar_s4_1/S4_1_FREEZE_MANIFEST.json",
+   "manifest_sha256": "468e90d9657548a7e9124b67ce0a55b63560f030e2f98b414c46ad4e970e030b",
+   "round": "S4.1"
+  },
+  "S5": {
+   "engine_commit_stamp": "cab778a+code:2dc78fc0ff285ba2",
+   "files_checked": 31,
+   "manifest": "research/alsenan_ground_system_rebar_s5/S5_FREEZE_MANIFEST.json",
+   "manifest_sha256": "ff488a92f3eaff80e84fca2d7e0b8e36cc40ddb84232cd315acfd1ce50b4b3d8",
+   "round": "S5"
+  },
+  "S5.1": {
+   "engine_commit_stamp": "cab778a+code:2dc78fc0ff285ba2+delta:42f0849057343fb6",
+   "files_checked": 17,
+   "manifest": "research/alsenan_ground_system_rebar_s5_1/S5_1_FREEZE_MANIFEST.json",
+   "manifest_sha256": "595d64b1bf5c8e0ef7b5bebfaf3ea4063dd884356390c84b4c8aac77cddb5a88",
+   "round": "S5.1"
+  },
+  "S6": {
+   "engine_commit_stamp": "d39f5f6+code:add76dd5f5e9c59a",
+   "files_checked": 33,
+   "manifest": "research/alsenan_superstructure_beam_rebar_s6/S6_FREEZE_MANIFEST.json",
+   "manifest_sha256": "c29a28bc66334d5294d71b0d5feb0dd5eae36baf91a04ef6e0105b2ca43be63e",
+   "round": "S6"
+  },
+  "S6.1": {
+   "engine_commit_stamp": "d39f5f6+code:add76dd5f5e9c59a+delta:d7ce0d2d09810083",
+   "files_checked": 18,
+   "manifest": "research/alsenan_superstructure_beam_rebar_s6_1/S6_1_FREEZE_MANIFEST.json",
+   "manifest_sha256": "c4744888ed2207ebff47c0a895e706d7e381b5f905b694eb92e3d1cdc411c0b2",
+   "round": "S6.1"
+  }
+ },
+ "policy": "FOOTING_COVER_AUTHORITY_AUDIT_V1",
+ "round": "D1.2",
+ "rule": {
+  "english": "22. The concrete cover thickness shall not be less than 2.5 cm in columns, slabs and beams, and 7 cm in concrete in contact with the soil.",
+  "exact_in_any_footing_detail": false,
+  "kind": "MINIMUM",
+  "wording": "22. يجب أن لا يقل سمك الغطاء الخرساني عن 2.5 سم في الأعمدة والبلاطات والجسور وعن 7سم في الخرسانة الملاصقة للتربة."
+ },
+ "s4_1": {
+  "as_built_state": "NOT_ESTABLISHED (no source lower bound: the cover may exceed 70 mm; no upper bound: legs / hooks / end treatment and the edge bar are unquantified)",
+  "by_component": {
+   "SINGLE_LAYER:BOTTOM_LONG": 20,
+   "SINGLE_LAYER:BOTTOM_SHORT": 20,
+   "TWO_LAYER:BOTTOM_LONG": 5,
+   "TWO_LAYER:BOTTOM_SHORT": 5,
+   "TWO_LAYER:TOP_LONG": 5,
+   "TWO_LAYER:TOP_SHORT": 5
+  },
+  "by_layering": {
+   "SINGLE_LAYER": {
+    "kg": 887.0933333333332,
+    "parts": 40
+   },
+   "TWO_LAYER": {
+    "kg": 2742.5061728395062,
+    "parts": 20
+   }
+  },
+  "conservation": {
+   "all_pass": true,
+   "checks": {
+    "no_positive_correction": true,
+    "original_plus_correction_is_corrected": true,
+    "retained_plus_removed_is_original": true
+   },
+   "corrected_known": 3629.599506172839,
+   "correction_kg": 0.0,
+   "original_known": 3629.599506172839
+  },
+  "kg_affected": 3629.599506172839,
+  "known_actual_as_built_kg": null,
+  "known_numerical_kg_at_min_cover": 3629.599506172839,
+  "parts_affected": 60,
+  "parts_audited": 60,
+  "quantity_change_kg": 0.0,
+  "state_change": {
+   "from": "LOWER_BOUND",
+   "parts": 60,
+   "to": "PROJECT_BASIS_NUMERIC"
+  },
+  "straight_segment_state": "SOURCE_MAXIMUM_STRAIGHT_RUN"
+ },
+ "source_search": {
+  "dxf_cover_hits": 0,
+  "dxf_texts_scanned": 2780,
+  "ocr_footing_cover_hits": 0,
+  "p13_ticks_on_bar_lines": 0
+ }
+}
