@@ -1,0 +1,854 @@
+{
+ "baseline_commit": "3b36f2b",
+ "binding_fixed_point_passes": {
+  "FFRS": 1,
+  "GFRS": 2,
+  "SFRS": 1
+ },
+ "candidate_tags": [
+  "TAG:GFRS:445",
+  "TAG:GFRS:45D",
+  "TAG:GFRS:474",
+  "TAG:GFRS:476",
+  "TAG:SFRS:78F"
+ ],
+ "cb_occurrence_status": {
+  "BLOCKED": 6,
+  "LOWER_BOUND": 7
+ },
+ "cb_occurrences": 13,
+ "cb_sequence_states": {
+  "CBO-FFRS-CB10-BL001": "MATCH",
+  "CBO-FFRS-CB11-BL024": "MATCH",
+  "CBO-FFRS-CB12-BL003": "MATCH",
+  "CBO-FFRS-CB13-BL004": "MATCH",
+  "CBO-FFRS-CB9-BL023": "MATCH",
+  "CBO-GFRS-CB1-BL007": "MATCH",
+  "CBO-GFRS-CB2-BL038": "MATCH",
+  "CBO-GFRS-CB3-BL022": "MATCH",
+  "CBO-GFRS-CB4-BL016": "SPAN_LENGTH_SOURCE_CONFLICT",
+  "CBO-GFRS-CB5-BL008": "SPAN_LENGTH_SOURCE_CONFLICT",
+  "CBO-GFRS-CB6-BL004": "MATCH",
+  "CBO-GFRS-CB7-BL003": "MATCH",
+  "CBO-GFRS-CB8-BL024": "SPAN_COUNT_CONFLICT"
+ },
+ "cb_tag_handles": 29,
+ "component_status": {
+  "CONTINUOUS_BEAM|BOTTOM": {
+   "BLOCKED_COMPONENT": 2,
+   "READY_LOWER_BOUND": 14,
+   "SOURCE_CONFLICT": 11
+  },
+  "CONTINUOUS_BEAM|DEVELOPMENT_ANCHORAGE": {
+   "BLOCKED_COMPONENT": 13
+  },
+  "CONTINUOUS_BEAM|HANGER": {
+   "BLOCKED_COMPONENT": 13
+  },
+  "CONTINUOUS_BEAM|HOOKS": {
+   "BLOCKED_COMPONENT": 13
+  },
+  "CONTINUOUS_BEAM|LONGITUDINAL": {
+   "BLOCKED_COMPONENT": 1
+  },
+  "CONTINUOUS_BEAM|MID_SUPPORT_TOP": {
+   "READY": 9,
+   "SOURCE_CONFLICT": 6
+  },
+  "CONTINUOUS_BEAM|OPENING_EXTRA": {
+   "NOT_APPLICABLE": 13
+  },
+  "CONTINUOUS_BEAM|SIDE_REBAR": {
+   "BLOCKED_COMPONENT": 7,
+   "NOT_APPLICABLE": 6
+  },
+  "CONTINUOUS_BEAM|STIRRUP_COUNT": {
+   "BLOCKED_COMPONENT": 6,
+   "READY_LOWER_BOUND": 12,
+   "SOURCE_CONFLICT": 11
+  },
+  "CONTINUOUS_BEAM|STIRRUP_MASS": {
+   "BLOCKED_COMPONENT": 29
+  },
+  "CONTINUOUS_BEAM|TOP": {
+   "BLOCKED_COMPONENT": 16,
+   "SOURCE_CONFLICT": 10
+  },
+  "SIMPLE_BEAM|BOTTOM_EXTRA": {
+   "NOT_APPLICABLE": 89
+  },
+  "SIMPLE_BEAM|BOTTOM_MAIN": {
+   "BLOCKED_COMPONENT": 11,
+   "PROVISIONAL_ONLY": 4,
+   "READY_LOWER_BOUND": 71,
+   "SOURCE_CONFLICT": 3
+  },
+  "SIMPLE_BEAM|DEVELOPMENT_ANCHORAGE": {
+   "BLOCKED_COMPONENT": 89
+  },
+  "SIMPLE_BEAM|HANGER": {
+   "NOT_APPLICABLE": 89
+  },
+  "SIMPLE_BEAM|HOOKS": {
+   "BLOCKED_COMPONENT": 89
+  },
+  "SIMPLE_BEAM|OPENING_EXTRA": {
+   "NOT_APPLICABLE": 89
+  },
+  "SIMPLE_BEAM|PLANTED_COLUMN_EXTRA": {
+   "BLOCKED_COMPONENT": 1
+  },
+  "SIMPLE_BEAM|SIDE_REBAR": {
+   "BLOCKED_COMPONENT": 32,
+   "NOT_APPLICABLE": 57
+  },
+  "SIMPLE_BEAM|STAIR_EXTRA": {
+   "BLOCKED_COMPONENT": 2
+  },
+  "SIMPLE_BEAM|STIRRUP_COUNT": {
+   "BLOCKED_COMPONENT": 11,
+   "PROVISIONAL_ONLY": 4,
+   "READY_LOWER_BOUND": 71,
+   "SOURCE_CONFLICT": 3
+  },
+  "SIMPLE_BEAM|STIRRUP_MASS": {
+   "BLOCKED_COMPONENT": 89
+  },
+  "SIMPLE_BEAM|TOP_MAIN": {
+   "BLOCKED_COMPONENT": 11,
+   "PROVISIONAL_ONLY": 4,
+   "READY_LOWER_BOUND": 71,
+   "SOURCE_CONFLICT": 3
+  },
+  "SIMPLE_BEAM|TOP_SUPPORT_EXTRA": {
+   "NOT_APPLICABLE": 89
+  },
+  "UNTAGGED_GEOMETRY|ALL": {
+   "NO_APPLICABLE_DETAIL": 38
+  }
+ },
+ "conflict_tags": [
+  "TAG:FFRS:6C5",
+  "TAG:FFRS:717",
+  "TAG:FFRS:718",
+  "TAG:GFRS:1827",
+  "TAG:GFRS:42A",
+  "TAG:GFRS:42B",
+  "TAG:GFRS:465",
+  "TAG:GFRS:468",
+  "TAG:GFRS:494"
+ ],
+ "conservation": {
+  "all_terminate_once": true,
+  "by_kind_terminal": {
+   "ARC_BAND": {
+    "BOUND_VERIFIED": 7,
+    "GEOMETRY_WITHOUT_TAG": 6
+   },
+   "BAND_FRAGMENT": {
+    "NOT_BEAM": 9
+   },
+   "MEMBER_SPAN": {
+    "BOUND_CANDIDATE": 5,
+    "BOUND_SOURCE_CONFLICT": 8,
+    "BOUND_VERIFIED": 98,
+    "GEOMETRY_WITHOUT_TAG": 32
+   },
+   "RULE_POPULATION": {
+    "OUT_OF_SCOPE_FAMILY": 2
+   },
+   "TAG": {
+    "BOUND_CANDIDATE": 5,
+    "BOUND_SOURCE_CONFLICT": 9,
+    "BOUND_VERIFIED": 105
+   }
+  },
+  "duplicates": [],
+  "invalid_terminals": [],
+  "objects": 286,
+  "unique": 286
+ },
+ "context": {
+  "CALCULATION_ROUND": "PRE_S6",
+  "DRAWING_ID": "ST7757",
+  "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+  "ENGINE_COMMIT": "3b36f2b+code:8c957ff1e9bcf4a4",
+  "PROJECT_ID": "ALSENAN",
+  "REGISTER_VERSION": "SUPERSTRUCTURE_BEAM_READINESS_V1"
+ },
+ "drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+ "duplicate_tags": [],
+ "geometry": {
+  "ARC_BAND": {
+   "BOUND_VERIFIED": 7,
+   "GEOMETRY_WITHOUT_TAG": 6
+  },
+  "BAND_FRAGMENT": {
+   "NOT_BEAM": 9
+  },
+  "MEMBER_SPAN": {
+   "BOUND_CANDIDATE": 5,
+   "BOUND_SOURCE_CONFLICT": 8,
+   "BOUND_VERIFIED": 98,
+   "GEOMETRY_WITHOUT_TAG": 32
+  }
+ },
+ "geometry_not_in_s1": [
+  "SPAN:FFRS:BL008:14062-15912",
+  "SPAN:FFRS:BL009:12388-15888",
+  "SPAN:FFRS:BL019:16087-17362",
+  "SPAN:FFRS:BL029:26630-29105",
+  "SPAN:GFRS:BL002:2844-4653",
+  "SPAN:GFRS:BL010:12087-12712",
+  "SPAN:GFRS:BL013:7462-8912",
+  "SPAN:GFRS:BL020:12388-15888",
+  "SPAN:GFRS:BL020:15888-16988",
+  "SPAN:GFRS:BL023:18712-20687",
+  "SPAN:GFRS:BL024:14088-17913",
+  "SPAN:GFRS:BL042:24521-26120",
+  "SPAN:GFRS:BL043:31508-33083",
+  "SPAN:SFRS:BL001:14112-15994",
+  "SPAN:SFRS:BL002:14112-15762",
+  "SPAN:SFRS:BL003:14112-15662",
+  "SPAN:SFRS:BL004:14112-17362",
+  "SPAN:SFRS:BL007:23558-24888"
+ ],
+ "no_kg": true,
+ "openings": {
+  "NOT_APPLICABLE": 26
+ },
+ "planted_column_spans": {
+  "SPAN:GFRS:BL014:8250-15900": [
+   "COLPOS-X15-Y02-31508-8912"
+  ]
+ },
+ "policy": {
+  "feeds_s6": [
+   "SOURCE_EXPLICIT",
+   "SOURCE_DERIVED_HIGH_CONFIDENCE"
+  ],
+  "geometry_terminals": [
+   "BOUND_VERIFIED",
+   "BOUND_SOURCE_CONFLICT",
+   "BOUND_CANDIDATE",
+   "GEOMETRY_WITHOUT_TAG",
+   "BLOCKED_BINDING",
+   "NOT_BEAM",
+   "OUT_OF_SCOPE_FAMILY"
+  ],
+  "policy_id": "BEAM_REBAR_READINESS_PRE_S6_V1",
+  "rule_authorities": [
+   "SOURCE_EXPLICIT",
+   "SOURCE_DERIVED_HIGH_CONFIDENCE",
+   "PROJECT_PATTERN_ONLY",
+   "UNRESOLVED"
+  ],
+  "rules": [
+   "no kg in this round",
+   "a width mismatch is evidence; it never changes geometry or mark",
+   "binding by hard gates on every candidate; distance is a gate, never a tie-break",
+   "every member span and every tag terminates exactly once",
+   "CB schedule spans are never shared out; plan geometry is never capped",
+   "a parametric typical dimension binds only when its defpoints hit a bar end and a face / axis",
+   "a continuous bar crossing a support is ONE bar run",
+   "slab 0.25L / 0.30L rules are never borrowed for beams",
+   "side-bar '/xx cm' is not interpreted without a source naming its direction",
+   "a stirrup count may release while the mass stays blocked",
+   "a straight run keeps its own state; the complete bar is LOWER_BOUND while development is blocked"
+  ],
+  "statuses": [
+   "READY",
+   "READY_LOWER_BOUND",
+   "PROVISIONAL_ONLY",
+   "BLOCKED_COMPONENT",
+   "NO_APPLICABLE_DETAIL",
+   "SOURCE_CONFLICT",
+   "NOT_APPLICABLE"
+  ],
+  "tag_terminals": [
+   "BOUND_VERIFIED",
+   "BOUND_SOURCE_CONFLICT",
+   "BOUND_CANDIDATE",
+   "DUPLICATE_TAG",
+   "TAG_WITHOUT_GEOMETRY",
+   "BLOCKED_BINDING",
+   "NOT_BEAM",
+   "OUT_OF_SCOPE_FAMILY"
+  ],
+  "width_states": [
+   "MATCH",
+   "MINOR_DRAFTING_DIFFERENCE",
+   "SOURCE_CONFLICT",
+   "UNRESOLVED"
+  ]
+ },
+ "provenance_templates": 165,
+ "s1_binding_changes": [
+  [
+   "45D",
+   "AMBIGUOUS",
+   null,
+   "BOUND_CANDIDATE",
+   "BL016"
+  ],
+  [
+   "472",
+   "AMBIGUOUS",
+   null,
+   "BOUND_VERIFIED",
+   "BL031"
+  ],
+  [
+   "474",
+   "BOUND",
+   "BL017",
+   "BOUND_CANDIDATE",
+   "BL008"
+  ],
+  [
+   "4D2",
+   "BOUND",
+   "BA004",
+   "BOUND_VERIFIED",
+   "BL046"
+  ],
+  [
+   "6BD",
+   "AMBIGUOUS",
+   null,
+   "BOUND_VERIFIED",
+   "BL013"
+  ],
+  [
+   "6D4",
+   "AMBIGUOUS",
+   null,
+   "BOUND_VERIFIED",
+   "BL031"
+  ],
+  [
+   "6D7",
+   "AMBIGUOUS",
+   null,
+   "BOUND_VERIFIED",
+   "BL030"
+  ],
+  [
+   "76C",
+   "AMBIGUOUS",
+   null,
+   "BOUND_VERIFIED",
+   "BL012"
+  ]
+ ],
+ "s1_frozen_registers": {
+  "BEAM_DEFINITION_REGISTER": "6b490b8a17aab326a3233d7090c219d35f61e60c83ee290391cfa0f0a69df249",
+  "BEAM_OCCURRENCE_REGISTER": "4af4ca569a3cda4c7fb7c30729db818e27f9727b6fe061aaa1436b9e3a5f4bc0",
+  "COLUMN_VERTICAL_CHAIN_REGISTER": "0397e1981a5a439ade43edc39b1902cdc192571e5273f6302c9c363f20ca6e1d",
+  "CONTINUOUS_BEAM_OCCURRENCE_REGISTER": "45639780e85ee870d2c0941d79d71033d39825efa82c930bc8d6a44487030edc"
+ },
+ "s1_rows_mapped": 146,
+ "s1_rows_unmapped": [],
+ "simple_occurrence_status": {
+  "BLOCKED": 18,
+  "LOWER_BOUND": 71
+ },
+ "simple_occurrences": 89,
+ "tag_count": 119,
+ "tags": {
+  "BOUND_CANDIDATE": 5,
+  "BOUND_SOURCE_CONFLICT": 9,
+  "BOUND_VERIFIED": 105
+ },
+ "typical_rules": [
+  {
+   "header": "TYP-272B",
+   "rules": [
+    {
+     "bar": "2796",
+     "bar_row": "TOP",
+     "bar_straddles": [],
+     "bound": true,
+     "dim": "2785",
+     "factor": 0.3,
+     "kind": "FACTOR",
+     "side": "LEFT",
+     "state": "UNRESOLVED",
+     "support": 2,
+     "symbol": "Ln2",
+     "text": "0.3 Ln2",
+     "why": "'Ln2' names no span of this 2-span typical"
+    },
+    {
+     "bar": null,
+     "bound": false,
+     "dim": "2798",
+     "state": "UNRESOLVED",
+     "text": "0.15L",
+     "why": "a defpoint hits no bar end of the typical (the dimension is not bound)"
+    },
+    {
+     "bar": "2795",
+     "bar_row": "TOP",
+     "bar_straddles": [
+      1
+     ],
+     "bound": true,
+     "dim": "27B7",
+     "kind": "LENGTH",
+     "side": "LEFT",
+     "span": 1,
+     "state": "SOURCE_DERIVED_HIGH_CONFIDENCE",
+     "support": 1,
+     "text": "7.5cm",
+     "value_m": 0.075,
+     "why": null
+    },
+    {
+     "bar": "27A7",
+     "bar_row": "BOTTOM",
+     "bar_straddles": [
+      1
+     ],
+     "bound": true,
+     "dim": "27D4",
+     "kind": "LENGTH",
+     "side": "RIGHT",
+     "span": 2,
+     "state": "SOURCE_DERIVED_HIGH_CONFIDENCE",
+     "support": 1,
+     "text": "7.5cm",
+     "value_m": 0.075,
+     "why": null
+    },
+    {
+     "bar": "27A8",
+     "bar_row": "TOP",
+     "bar_straddles": [
+      1
+     ],
+     "basis": "AXIS_TO_AXIS",
+     "bound": true,
+     "dim": "27F4",
+     "factor": 0.22,
+     "kind": "FACTOR",
+     "side": "LEFT",
+     "span": 1,
+     "state": "SOURCE_DERIVED_HIGH_CONFIDENCE",
+     "support": 1,
+     "symbol": "Ln",
+     "text": "0.22 Ln",
+     "why": null
+    },
+    {
+     "bar": "27A8",
+     "bar_row": "TOP",
+     "bar_straddles": [
+      1
+     ],
+     "basis": "AXIS_TO_AXIS",
+     "bound": true,
+     "dim": "2805",
+     "factor": 0.22,
+     "kind": "FACTOR",
+     "side": "RIGHT",
+     "span": 2,
+     "state": "SOURCE_DERIVED_HIGH_CONFIDENCE",
+     "support": 1,
+     "symbol": "Ln1",
+     "text": "0.22 Ln1",
+     "why": null
+    }
+   ],
+   "span_symbols": {
+    "L": {
+     "basis": "FACE_TO_FACE",
+     "handle": "27A9",
+     "span": 1
+    },
+    "L1": {
+     "basis": "FACE_TO_FACE",
+     "handle": "2777",
+     "span": 2
+    },
+    "Ln": {
+     "basis": "AXIS_TO_AXIS",
+     "handle": "2766",
+     "span": 1
+    },
+    "Ln1": {
+     "basis": "AXIS_TO_AXIS",
+     "handle": "2753",
+     "span": 2
+    }
+   },
+   "spans": 2
+  },
+  {
+   "header": "TYP-206B",
+   "rules": [
+    {
+     "bar": "20D7",
+     "bar_row": "TOP",
+     "bar_straddles": [],
+     "bound": true,
+     "dim": "20C6",
+     "factor": 0.3,
+     "kind": "FACTOR",
+     "side": "LEFT",
+     "state": "UNRESOLVED",
+     "support": 2,
+     "symbol": "Ln2",
+     "text": "0.3 Ln2",
+     "why": "'Ln2' names no span of this 2-span typical"
+    },
+    {
+     "bar": null,
+     "bound": false,
+     "dim": "20D9",
+     "state": "UNRESOLVED",
+     "text": "0.15L",
+     "why": "a defpoint hits no bar end of the typical (the dimension is not bound)"
+    },
+    {
+     "bar": "20D6",
+     "bar_row": "TOP",
+     "bar_straddles": [
+      1
+     ],
+     "bound": true,
+     "dim": "20F8",
+     "kind": "LENGTH",
+     "side": "LEFT",
+     "span": 1,
+     "state": "SOURCE_DERIVED_HIGH_CONFIDENCE",
+     "support": 1,
+     "text": "7.5cm",
+     "value_m": 0.075,
+     "why": null
+    },
+    {
+     "bar": "20E8",
+     "bar_row": "BOTTOM",
+     "bar_straddles": [
+      1
+     ],
+     "bound": true,
+     "dim": "2115",
+     "kind": "LENGTH",
+     "side": "RIGHT",
+     "span": 2,
+     "state": "SOURCE_DERIVED_HIGH_CONFIDENCE",
+     "support": 1,
+     "text": "7.5cm",
+     "value_m": 0.075,
+     "why": null
+    },
+    {
+     "bar": "20E9",
+     "bar_row": "TOP",
+     "bar_straddles": [
+      1
+     ],
+     "basis": "AXIS_TO_AXIS",
+     "bound": true,
+     "dim": "2135",
+     "factor": 0.22,
+     "kind": "FACTOR",
+     "side": "LEFT",
+     "span": 1,
+     "state": "SOURCE_DERIVED_HIGH_CONFIDENCE",
+     "support": 1,
+     "symbol": "Ln",
+     "text": "0.22 Ln",
+     "why": null
+    },
+    {
+     "bar": "20E9",
+     "bar_row": "TOP",
+     "bar_straddles": [
+      1
+     ],
+     "basis": "AXIS_TO_AXIS",
+     "bound": true,
+     "dim": "2146",
+     "factor": 0.22,
+     "kind": "FACTOR",
+     "side": "RIGHT",
+     "span": 2,
+     "state": "SOURCE_DERIVED_HIGH_CONFIDENCE",
+     "support": 1,
+     "symbol": "Ln1",
+     "text": "0.22 Ln1",
+     "why": null
+    }
+   ],
+   "span_symbols": {
+    "L": {
+     "basis": "FACE_TO_FACE",
+     "handle": "20EA",
+     "span": 1
+    },
+    "L1": {
+     "basis": "FACE_TO_FACE",
+     "handle": "20B8",
+     "span": 2
+    },
+    "Ln": {
+     "basis": "AXIS_TO_AXIS",
+     "handle": "20A7",
+     "span": 1
+    },
+    "Ln1": {
+     "basis": "AXIS_TO_AXIS",
+     "handle": "2094",
+     "span": 2
+    }
+   },
+   "spans": 2
+  },
+  {
+   "header": "TYP-2035",
+   "rules": [
+    {
+     "bar": "2018",
+     "bar_row": "TOP",
+     "bar_straddles": [
+      2
+     ],
+     "basis": "AXIS_TO_AXIS",
+     "bound": true,
+     "dim": "2002",
+     "factor": 0.22,
+     "kind": "FACTOR",
+     "side": "RIGHT",
+     "span": 3,
+     "state": "SOURCE_DERIVED_HIGH_CONFIDENCE",
+     "support": 2,
+     "symbol": "Ln2",
+     "text": "0.22 Ln2",
+     "why": null
+    },
+    {
+     "bar": "21E8",
+     "bar_row": "TOP",
+     "bar_straddles": [
+      1
+     ],
+     "basis": "AXIS_TO_AXIS",
+     "bound": true,
+     "dim": "21BE",
+     "factor": 0.22,
+     "kind": "FACTOR",
+     "side": "RIGHT",
+     "span": 2,
+     "state": "SOURCE_DERIVED_HIGH_CONFIDENCE",
+     "support": 1,
+     "symbol": "Ln1",
+     "text": "0.22 Ln1",
+     "why": null
+    },
+    {
+     "bar": "21E8",
+     "bar_row": "TOP",
+     "bar_straddles": [
+      1
+     ],
+     "basis": "AXIS_TO_AXIS",
+     "bound": true,
+     "dim": "21CC",
+     "factor": 0.22,
+     "kind": "FACTOR",
+     "side": "LEFT",
+     "span": 1,
+     "state": "SOURCE_DERIVED_HIGH_CONFIDENCE",
+     "support": 1,
+     "symbol": "Ln",
+     "text": "0.22 Ln",
+     "why": null
+    },
+    {
+     "bar": "2018",
+     "bar_row": "TOP",
+     "bar_straddles": [
+      2
+     ],
+     "basis": "AXIS_TO_AXIS",
+     "bound": true,
+     "dim": "21DA",
+     "factor": 0.22,
+     "kind": "FACTOR",
+     "side": "LEFT",
+     "span": 2,
+     "state": "SOURCE_DERIVED_HIGH_CONFIDENCE",
+     "support": 2,
+     "symbol": "Ln1",
+     "text": "0.22 Ln1",
+     "why": null
+    },
+    {
+     "bar": "221D",
+     "bar_row": "TOP",
+     "bar_straddles": [],
+     "basis": "AXIS_TO_AXIS",
+     "bound": true,
+     "dim": "222D",
+     "factor": 0.3,
+     "kind": "FACTOR",
+     "side": "LEFT",
+     "span": 3,
+     "state": "SOURCE_DERIVED_HIGH_CONFIDENCE",
+     "support": 3,
+     "symbol": "Ln2",
+     "text": "0.3 Ln2",
+     "why": null
+    },
+    {
+     "bar": "21E9",
+     "bar_row": "TOP",
+     "bar_straddles": [
+      1,
+      2
+     ],
+     "basis": "FACE_TO_FACE",
+     "bound": true,
+     "dim": "225A",
+     "factor": 0.15,
+     "kind": "FACTOR",
+     "side": "LEFT",
+     "span": 1,
+     "state": "SOURCE_DERIVED_HIGH_CONFIDENCE",
+     "support": 1,
+     "symbol": "L",
+     "text": "0.15L",
+     "why": null
+    },
+    {
+     "bar": null,
+     "bound": false,
+     "dim": "2267",
+     "state": "UNRESOLVED",
+     "text": "7.5cm",
+     "why": "a defpoint hits no bar end of the typical (the dimension is not bound)"
+    },
+    {
+     "bar": "21AF",
+     "bar_row": "BOTTOM",
+     "bar_straddles": [
+      1
+     ],
+     "bound": true,
+     "dim": "2275",
+     "kind": "LENGTH",
+     "side": "RIGHT",
+     "span": 2,
+     "state": "SOURCE_DERIVED_HIGH_CONFIDENCE",
+     "support": 1,
+     "text": "7.5cm",
+     "value_m": 0.075,
+     "why": null
+    },
+    {
+     "bar": "21E9",
+     "bar_row": "TOP",
+     "bar_straddles": [
+      1,
+      2
+     ],
+     "bound": true,
+     "dim": "2282",
+     "factor": 0.15,
+     "kind": "FACTOR",
+     "side": "RIGHT",
+     "state": "UNRESOLVED",
+     "support": 2,
+     "symbol": "L",
+     "text": "0.15L",
+     "why": "'L' is span 1 in the typical, but the bar end lies in span 3"
+    },
+    {
+     "bar": null,
+     "bound": false,
+     "dim": "228F",
+     "state": "UNRESOLVED",
+     "text": "7.5cm",
+     "why": "a defpoint hits no bar end of the typical (the dimension is not bound)"
+    },
+    {
+     "bar": "2017",
+     "bar_row": "BOTTOM",
+     "bar_straddles": [
+      2
+     ],
+     "bound": true,
+     "dim": "229D",
+     "kind": "LENGTH",
+     "side": "LEFT",
+     "span": 2,
+     "state": "SOURCE_DERIVED_HIGH_CONFIDENCE",
+     "support": 2,
+     "text": "7.5cm",
+     "value_m": 0.075,
+     "why": null
+    }
+   ],
+   "span_symbols": {
+    "L": {
+     "basis": "FACE_TO_FACE",
+     "handle": "2162",
+     "span": 1
+    },
+    "L1": {
+     "basis": "FACE_TO_FACE",
+     "handle": "2170",
+     "span": 2
+    },
+    "L3": {
+     "basis": "FACE_TO_FACE",
+     "handle": "2019",
+     "span": 3
+    },
+    "Ln": {
+     "basis": "AXIS_TO_AXIS",
+     "handle": "2187",
+     "span": 1
+    },
+    "Ln1": {
+     "basis": "AXIS_TO_AXIS",
+     "handle": "219D",
+     "span": 2
+    },
+    "Ln2": {
+     "basis": "AXIS_TO_AXIS",
+     "handle": "2027",
+     "span": 3
+    }
+   },
+   "spans": 3
+  }
+ ],
+ "unbound_tags": [],
+ "untagged_geometry": 38,
+ "width_conflicts": [
+  [
+   "FFRS",
+   "B6"
+  ],
+  [
+   "FFRS",
+   "CB10"
+  ],
+  [
+   "GFRS",
+   "B21"
+  ],
+  [
+   "GFRS",
+   "B29"
+  ],
+  [
+   "GFRS",
+   "CB2"
+  ]
+ ]
+}
