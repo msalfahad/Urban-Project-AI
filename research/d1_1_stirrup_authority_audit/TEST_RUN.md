@@ -57,4 +57,8 @@ Also tested:
 
 ## Full suite
 
-(recorded below after the run on the committed tree)
+`python3 -m pytest -o addopts="" -q -p no:cacheprovider` at `35567e2` gave
+**6736 passed, 4 skipped, 100 xfailed, 2 warnings in 413.95 s, exit 0**.
+- That is the 6698 from D1 plus the 38 new D1.1 tests.
+- The run used the clean committed tree. No file was edited during it, and the tree was still clean afterwards.
+- All frozen-manifest tests still match: S4, S5, S6, S4.1, S6.1, S5.1 and D1.1.
