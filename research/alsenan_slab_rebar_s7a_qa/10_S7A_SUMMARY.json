@@ -1,0 +1,134 @@
+{
+ "baseline": "aeb8798",
+ "blocked_top_items_unchanged": {
+  "TOP_AT_UNRECORDED_EDGE": 24,
+  "TOP_END_ANCHORAGE": 68,
+  "TOP_EXTENSION": 44,
+  "TOP_LOCAL_OVERRIDE_GROUP": 1,
+  "TOP_OVER_SUPPORT_UNRESOLVED": 54,
+  "TOP_SUPPORT_CROSSING": 24
+ },
+ "by_end_class": {
+  "END_CONTINUOUS_RUN": {
+   "opposite_matched_share": 0.9824,
+   "strip_ends": 253
+  },
+  "END_CONTINUOUS_SPLIT": {
+   "opposite_matched_share": 0.9779,
+   "strip_ends": 606
+  },
+  "END_NON_CONTINUOUS": {
+   "opposite_matched_share": 0.0,
+   "strip_ends": 557
+  },
+  "END_UNRESOLVED": {
+   "opposite_matched_share": 0.4687,
+   "strip_ends": 418
+  }
+ },
+ "date": "2026-10-08",
+ "end_condition_grades": {
+  "ESTABLISHED_BY_GEOMETRY": 1242,
+  "INFERRED_FROM_S1_EDGE_ONLY": 378,
+  "INFERRED_GEOMETRY_OVERRIDES_S1": 56,
+  "NOT_ESTABLISHED": 614
+ },
+ "end_condition_kg": {
+  "ESTABLISHED_BY_GEOMETRY": {
+   "s7_bottom_stop_deduction_kg": 146.861,
+   "s7_top_extension_kg": 869.276
+  },
+  "INFERRED_FROM_S1_EDGE_ONLY": {
+   "s7_bottom_stop_deduction_kg": 2.643,
+   "s7_top_extension_kg": 187.095
+  },
+  "INFERRED_GEOMETRY_OVERRIDES_S1": {
+   "s7_bottom_stop_deduction_kg": 4.14,
+   "s7_top_extension_kg": 23.564
+  },
+  "NOT_ESTABLISHED": {
+   "s7_bottom_stop_deduction_kg": 67.424,
+   "s7_top_extension_kg": 278.039
+  }
+ },
+ "engine_commit": "aeb8798+code:56d0c2921b8d86c7",
+ "errata": {
+  "id": "S7A-E01",
+  "kg_change": 0.0,
+  "rows": 476
+ },
+ "finding": {
+  "one_third_extent": "NOT_ESTABLISHED_BY_SOURCE",
+  "origin": "NOT_STATED in note 2 (p.15 measures from the support face)",
+  "ratio_one_third": "PROJECT_SOURCE (note 2)",
+  "s7_reading": "A - URBAN_OWNER_MEASUREMENT_RULE (AD2-D06), retained for the frozen S7 baseline; not re-selected here and not replaced",
+  "same_family_as_p15": "SUPPORTED_NOT_PROVEN (p.15 defers size / spacing to the plan; lengths conflict)",
+  "span_basis": "NOT_STATED in note 2 (p.15 states CLEAR SPAN for its own extents)",
+  "total_vs_per_side": "NOT_STATED in note 2; literal wording ('with a length of') favours a TOTAL length; p.15 geometry and the beam-schedule convention favour PER SIDE",
+  "unequal_spans": "NOT_STATED in note 2 (p.15 uses the larger span at a continuous support)"
+ },
+ "frozen_baselines": {
+  "PRE-S7": "fb3a1c62a8e525b663853d03d43e067f1839026aea149399491bd4cf98f0ad09",
+  "PRE-S7.1": "3a67a8641ce4ea836334e02532af82b9a3bb01be8efdba4f093eee44d92c1ef6",
+  "S7": "b23f97b6db334e641c38c498bf23b46236d68f4fcc26a6eafde1f3bfc156d175"
+ },
+ "interpretation_selected_by_reference": false,
+ "opposite_ambiguous_pieces": 0,
+ "policy": "S7A_SOURCE_INTERPRETATION_QA_V1",
+ "references_read": [],
+ "released": false,
+ "round": "S7A_QA",
+ "s7_files_edited": false,
+ "s7_frozen_total_kg": 3802.015364542223,
+ "s7_total_unchanged": true,
+ "scenario_range_top_extension_kg": [
+  678.987,
+  1609.081
+ ],
+ "scenarios": {
+  "A": {
+   "delta_top_vs_s7_kg": 0.0,
+   "delta_top_vs_s7_pct": 0.0,
+   "s7_scope_total_under_scenario_kg": 3802.015,
+   "top_extension_kg": 1357.973,
+   "top_support_kg": 1463.679
+  },
+  "B": {
+   "delta_top_vs_s7_kg": -678.987,
+   "delta_top_vs_s7_pct": -50.0,
+   "s7_scope_total_under_scenario_kg": 3123.029,
+   "top_extension_kg": 678.987,
+   "top_support_kg": 784.692
+  },
+  "C": {
+   "delta_top_vs_s7_kg": -269.515,
+   "delta_top_vs_s7_pct": -19.85,
+   "s7_scope_total_under_scenario_kg": 3532.5,
+   "top_extension_kg": 1088.458,
+   "top_support_kg": 1194.163
+  },
+  "D1": {
+   "delta_top_vs_s7_kg": -44.846,
+   "delta_top_vs_s7_pct": -3.3,
+   "s7_scope_total_under_scenario_kg": 3757.169,
+   "top_extension_kg": 1313.127,
+   "top_support_kg": 1418.833
+  },
+  "D2": {
+   "delta_top_vs_s7_kg": 30.577,
+   "delta_top_vs_s7_pct": 2.25,
+   "s7_scope_total_under_scenario_kg": 3832.592,
+   "top_extension_kg": 1388.55,
+   "top_support_kg": 1494.255
+  },
+  "E": {
+   "delta_top_vs_s7_kg": 251.107,
+   "delta_top_vs_s7_pct": 18.49,
+   "s7_scope_total_under_scenario_kg": 4053.123,
+   "top_extension_kg": 1609.081,
+   "top_support_kg": 1714.786
+  }
+ },
+ "state": "SENSITIVITY_ONLY_NO_RELEASE",
+ "top_extension_strip_ends": 1834
+}

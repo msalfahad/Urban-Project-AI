@@ -1,0 +1,557 @@
+{
+ "beam_schedule": {
+  "dimensions": [
+   {
+    "handle": "2187",
+    "layer": "S-DIM.SCH",
+    "row_y": 12376.0,
+    "text": "Ln",
+    "x0": 62079.8,
+    "x1": 67618.3
+   },
+   {
+    "handle": "219D",
+    "layer": "S-DIM.SCH",
+    "row_y": 12376.0,
+    "text": "Ln1",
+    "x0": 67618.3,
+    "x1": 73156.7
+   },
+   {
+    "handle": "2027",
+    "layer": "S-DIM.SCH",
+    "row_y": 12376.0,
+    "text": "Ln2",
+    "x0": 73156.7,
+    "x1": 78695.2
+   },
+   {
+    "handle": "2766",
+    "layer": "S-DIM.SCH",
+    "row_y": 12491.0,
+    "text": "Ln",
+    "x0": 1979.3,
+    "x1": 7517.8
+   },
+   {
+    "handle": "2753",
+    "layer": "S-DIM.SCH",
+    "row_y": 12491.0,
+    "text": "Ln1",
+    "x0": 7517.8,
+    "x1": 13056.2
+   },
+   {
+    "handle": "20A7",
+    "layer": "S-DIM.SCH",
+    "row_y": 12491.0,
+    "text": "Ln",
+    "x0": 23736.4,
+    "x1": 29274.8
+   },
+   {
+    "handle": "2094",
+    "layer": "S-DIM.SCH",
+    "row_y": 12491.0,
+    "text": "Ln1",
+    "x0": 29274.8,
+    "x1": 34813.3
+   },
+   {
+    "handle": "27F4",
+    "layer": "S-DIM.SCH",
+    "nearest_span_joint_x": 7517.8,
+    "offset_from_joint": 484.6,
+    "row_y": 15990.0,
+    "side_of_joint": "LEFT",
+    "text": "0.22 Ln",
+    "x0": 5596.8,
+    "x1": 7033.2
+   },
+   {
+    "handle": "2805",
+    "layer": "S-DIM.SCH",
+    "nearest_span_joint_x": 7517.8,
+    "offset_from_joint": 484.6,
+    "row_y": 15990.0,
+    "side_of_joint": "RIGHT",
+    "text": "0.22 Ln1",
+    "x0": 8002.4,
+    "x1": 9438.7
+   },
+   {
+    "handle": "2785",
+    "layer": "S-DIM.SCH",
+    "nearest_span_joint_x": 13056.2,
+    "offset_from_joint": 484.6,
+    "row_y": 15990.0,
+    "side_of_joint": "LEFT",
+    "text": "0.3 Ln2",
+    "x0": 10767.6,
+    "x1": 12571.6
+   },
+   {
+    "handle": "2135",
+    "layer": "S-DIM.SCH",
+    "nearest_span_joint_x": 29274.8,
+    "offset_from_joint": 484.6,
+    "row_y": 15990.0,
+    "side_of_joint": "LEFT",
+    "text": "0.22 Ln",
+    "x0": 27353.9,
+    "x1": 28790.2
+   },
+   {
+    "handle": "2146",
+    "layer": "S-DIM.SCH",
+    "nearest_span_joint_x": 29274.8,
+    "offset_from_joint": 484.7,
+    "row_y": 15990.0,
+    "side_of_joint": "RIGHT",
+    "text": "0.22 Ln1",
+    "x0": 29759.5,
+    "x1": 31195.8
+   },
+   {
+    "handle": "20C6",
+    "layer": "S-DIM.SCH",
+    "nearest_span_joint_x": 34813.3,
+    "offset_from_joint": 484.6,
+    "row_y": 15990.0,
+    "side_of_joint": "LEFT",
+    "text": "0.3 Ln2",
+    "x0": 32524.7,
+    "x1": 34328.7
+   },
+   {
+    "handle": "21CC",
+    "layer": "S-DIM.SCH",
+    "nearest_span_joint_x": 67618.3,
+    "offset_from_joint": 484.6,
+    "row_y": 16121.0,
+    "side_of_joint": "LEFT",
+    "text": "0.22 Ln",
+    "x0": 65697.4,
+    "x1": 67133.7
+   },
+   {
+    "handle": "21BE",
+    "layer": "S-DIM.SCH",
+    "nearest_span_joint_x": 67618.3,
+    "offset_from_joint": 484.6,
+    "row_y": 16121.0,
+    "side_of_joint": "RIGHT",
+    "text": "0.22 Ln1",
+    "x0": 68102.9,
+    "x1": 69539.2
+   },
+   {
+    "handle": "21DA",
+    "layer": "S-DIM.SCH",
+    "nearest_span_joint_x": 73156.7,
+    "offset_from_joint": 484.6,
+    "row_y": 16121.0,
+    "side_of_joint": "LEFT",
+    "text": "0.22 Ln1",
+    "x0": 71235.8,
+    "x1": 72672.1
+   },
+   {
+    "handle": "2002",
+    "layer": "S-DIM.SCH",
+    "nearest_span_joint_x": 73156.7,
+    "offset_from_joint": 484.6,
+    "row_y": 16121.0,
+    "side_of_joint": "RIGHT",
+    "text": "0.22 Ln2",
+    "x0": 73641.3,
+    "x1": 75077.7
+   },
+   {
+    "handle": "222D",
+    "layer": "S-DIM.SCH",
+    "nearest_span_joint_x": 78695.2,
+    "offset_from_joint": 484.6,
+    "row_y": 16121.0,
+    "side_of_joint": "LEFT",
+    "text": "0.3 Ln2",
+    "x0": 76406.6,
+    "x1": 78210.6
+   }
+  ],
+  "per_side_pairs": [
+   {
+    "joint_x": 73156.7,
+    "left": "0.22 Ln1",
+    "offsets_from_joint": [
+     484.6,
+     484.6
+    ],
+    "right": "0.22 Ln2"
+   },
+   {
+    "joint_x": 29274.8,
+    "left": "0.22 Ln",
+    "offsets_from_joint": [
+     484.6,
+     484.7
+    ],
+    "right": "0.22 Ln1"
+   },
+   {
+    "joint_x": 67618.3,
+    "left": "0.22 Ln",
+    "offsets_from_joint": [
+     484.6,
+     484.6
+    ],
+    "right": "0.22 Ln1"
+   },
+   {
+    "joint_x": 7517.8,
+    "left": "0.22 Ln",
+    "offsets_from_joint": [
+     484.6,
+     484.6
+    ],
+    "right": "0.22 Ln1"
+   }
+  ]
+ },
+ "finding": {
+  "one_third_extent": "NOT_ESTABLISHED_BY_SOURCE",
+  "origin": "NOT_STATED in note 2 (p.15 measures from the support face)",
+  "ratio_one_third": "PROJECT_SOURCE (note 2)",
+  "s7_reading": "A - URBAN_OWNER_MEASUREMENT_RULE (AD2-D06), retained for the frozen S7 baseline; not re-selected here and not replaced",
+  "same_family_as_p15": "SUPPORTED_NOT_PROVEN (p.15 defers size / spacing to the plan; lengths conflict)",
+  "span_basis": "NOT_STATED in note 2 (p.15 states CLEAR SPAN for its own extents)",
+  "total_vs_per_side": "NOT_STATED in note 2; literal wording ('with a length of') favours a TOTAL length; p.15 geometry and the beam-schedule convention favour PER SIDE",
+  "unequal_spans": "NOT_STATED in note 2 (p.15 uses the larger span at a continuous support)"
+ },
+ "note2": {
+  "FFRS": {
+   "head": {
+    "decode_state": "PARTIAL_DECODE",
+    "decoded": "? ? يجب وضع حديد علوي للبلاطات فوق",
+    "font_family": "ARABIC_KEYBOARD_101",
+    "handle": "E1",
+    "height": 180.0,
+    "insert_mm": [
+     36184.1,
+     54603.5
+    ],
+    "layer": "S-TITLE TEXT",
+    "raw": "2   -   d{F ,qU p]d] ug,D           ggfb'hJ t,R ",
+    "style": "S-ARAB",
+    "unknown_codes": [
+     "-",
+     "2"
+    ]
+   },
+   "spec": {
+    "decode_state": "NOT_A_LEGACY_ARABIC_FONT",
+    "decoded": "5%%C10/m",
+    "font_family": null,
+    "handle": "E2",
+    "height": 180.0,
+    "insert_mm": [
+     31232.8,
+     54571.8
+    ],
+    "layer": "S-TITLE TEXT",
+    "raw": "5%%C10/m",
+    "style": "S-ROMANC",
+    "unknown_codes": []
+   },
+   "tail": {
+    "decode_state": "DECODED",
+    "decoded": "الجسور بطول ثلث البحر في الاتجاهين",
+    "font_family": "ARABIC_KEYBOARD_101",
+    "handle": "E3",
+    "height": 180.0,
+    "insert_mm": [
+     36289.1,
+     54088.1
+    ],
+    "layer": "S-TITLE TEXT",
+    "raw": " Hg{s,V f',G egE Hgfpv tD HBj{hidK",
+    "style": "S-ARAB",
+    "unknown_codes": []
+   }
+  },
+  "GFRS": {
+   "head": {
+    "decode_state": "PARTIAL_DECODE",
+    "decoded": "? ? يجب وضع حديد علوي للبلاطات فوق",
+    "font_family": "ARABIC_KEYBOARD_101",
+    "handle": "D8",
+    "height": 180.0,
+    "insert_mm": [
+     74908.5,
+     54603.5
+    ],
+    "layer": "S-TITLE TEXT",
+    "raw": "2   -   d{F ,qU p]d] ug,D           ggfb'hJ t,R ",
+    "style": "S-ARAB",
+    "unknown_codes": [
+     "-",
+     "2"
+    ]
+   },
+   "spec": {
+    "decode_state": "NOT_A_LEGACY_ARABIC_FONT",
+    "decoded": "5%%C10/m",
+    "font_family": null,
+    "handle": "D9",
+    "height": 180.0,
+    "insert_mm": [
+     69957.2,
+     54571.8
+    ],
+    "layer": "S-TITLE TEXT",
+    "raw": "5%%C10/m",
+    "style": "S-ROMANC",
+    "unknown_codes": []
+   },
+   "tail": {
+    "decode_state": "DECODED",
+    "decoded": "الجسور بطول ثلث البحر في الاتجاهين",
+    "font_family": "ARABIC_KEYBOARD_101",
+    "handle": "DA",
+    "height": 180.0,
+    "insert_mm": [
+     75013.5,
+     54088.1
+    ],
+    "layer": "S-TITLE TEXT",
+    "raw": " Hg{s,V f',G egE Hgfpv tD HBj{hidK",
+    "style": "S-ARAB",
+    "unknown_codes": []
+   }
+  },
+  "SFRS": {
+   "head": {
+    "decode_state": "PARTIAL_DECODE",
+    "decoded": "? ? يجب وضع حديد علوي للبلاطات فوق",
+    "font_family": "ARABIC_KEYBOARD_101",
+    "handle": "EA",
+    "height": 180.0,
+    "insert_mm": [
+     -2540.3,
+     54603.5
+    ],
+    "layer": "S-TITLE TEXT",
+    "raw": "2   -   d{F ,qU p]d] ug,D           ggfb'hJ t,R ",
+    "style": "S-ARAB",
+    "unknown_codes": [
+     "-",
+     "2"
+    ]
+   },
+   "spec": {
+    "decode_state": "NOT_A_LEGACY_ARABIC_FONT",
+    "decoded": "5%%C10/m",
+    "font_family": null,
+    "handle": "EB",
+    "height": 180.0,
+    "insert_mm": [
+     -7491.6,
+     54571.8
+    ],
+    "layer": "S-TITLE TEXT",
+    "raw": "5%%C10/m",
+    "style": "S-ROMANC",
+    "unknown_codes": []
+   },
+   "tail": {
+    "decode_state": "DECODED",
+    "decoded": "الجسور بطول ثلث البحر في الاتجاهين",
+    "font_family": "ARABIC_KEYBOARD_101",
+    "handle": "EC",
+    "height": 180.0,
+    "insert_mm": [
+     -2435.4,
+     54088.1
+    ],
+    "layer": "S-TITLE TEXT",
+    "raw": " Hg{s,V f',G egE Hgfpv tD HBj{hidK",
+    "style": "S-ARAB",
+    "unknown_codes": []
+   }
+  }
+ },
+ "p15_strokes": {
+  "bottom_bar_strokes_pt": [
+   {
+    "from_pt": 520.8,
+    "to_pt": 661.4,
+    "x_pt": 150.3
+   },
+   {
+    "from_pt": 667.2,
+    "to_pt": 988.8,
+    "x_pt": 150.3
+   },
+   {
+    "from_pt": 520.8,
+    "to_pt": 611.3,
+    "x_pt": 151.7
+   },
+   {
+    "from_pt": 705.9,
+    "to_pt": 988.5,
+    "x_pt": 153.2
+   }
+  ],
+  "box_pdf_pt": [
+   110.0,
+   500.0,
+   240.0,
+   1100.0
+  ],
+  "continuous_beam_faces_y_pt": [
+   636.0,
+   678.5
+  ],
+  "drawn_L1_clear_pt": 283.6,
+  "drawn_extent_from_face_pt": {
+   "continuous_L1_side": 93.6,
+   "continuous_L2_side": 85.6,
+   "non_continuous_anchor": 70.7
+  },
+  "drawn_ratio_to_L1": {
+   "continuous_L1_side": 0.33,
+   "non_continuous_anchor": 0.249
+  },
+  "non_continuous_inner_face_y_pt": 962.1,
+  "nts": true,
+  "page": 15,
+  "reading": "at the continuous support the top bar is one stroke that crosses the beam and runs into BOTH spans, measured from the two faces (drawn ~93.6 pt on the L1 side, ~85.6 pt on the L2 side); at the non-continuous support the top anchor bar runs from the support into L1 only and turns down into the support. The p.15 extents are therefore PER SIDE, FROM THE FACE. The drawn ratios (0.33 L1 continuous, 0.25 L1 anchor) are not used: the sheet is not to scale and the printed labels are 0.30 max(L1, L2) and 0.25 L1.",
+  "rotation": 270,
+  "slab_top_x_pt": 165.9,
+  "top_bar_strokes_pt": {
+   "L1_side_at_continuous": [
+    673.2,
+    772.1
+   ],
+   "L2_side": [
+    550.4,
+    641.3
+   ],
+   "non_continuous_anchor": [
+    891.4,
+    990.6
+   ]
+  },
+  "top_stroke_over_continuous_beam": true
+ },
+ "p15_visual_reading_frozen": {
+  "covers": {
+   "25 CL": "vertical: slab soffit to the bottom bars",
+   "40 CL.": "horizontal: at the outer face of the non-continuous support (binding unclear)"
+  },
+  "dimension_attachment": {
+   "BOTTOM_50PCT_STOP": "0.125 L1 / 0.125 L2: from each face of the continuous beam to the end of the stopped bottom bars; the balance bottom bars run continuous through the beam",
+   "TOP_ANCHOR_NON_CONTINUOUS": "0.25 L1: from the inner face of the non-continuous support to the end of the top anchor bar",
+   "TOP_CONTINUOUS_WHICHEVER_LARGER": "0.30 max(L1, L2): from the end of the top bar to the face of the continuous beam; drawn on the L1 side only - the extent on the L2 side is drawn (the bar continues across the beam) but not dimensioned"
+  },
+  "non_continuous_support": "the top anchor bar turns down into the support (leg drawn, not dimensioned); a bottom bar runs into the support; '40 CL.' is dimensioned from the outer face of the support but the bar it binds is not legible at the drawn scale",
+  "nts_status": "TYPICAL_DETAIL - values only from the printed text; no length is scaled from the figure",
+  "printed_labels": [
+   "TOP ANCHOR BARS. FOR SIZE & SPACING SEE SCHEDULE OR PLAN",
+   "BOTTOM BARS. FOR SIZE & SPACING SEE SCHDULE OR PLAN",
+   "EXTEND 50% OF TOP REINF. INTO ADJACENT SLAB WHERE POSSIBLE",
+   "TEMP. REINFORCING",
+   ".25\"L1\"",
+   ".30\"L1\" OR .30\"L2\" WHICHEVER LARGER",
+   "STOP 50% OF BOT. REINF. BALANCE CONTINUOUS",
+   ".125\"L1\"",
+   ".125\"L2\"",
+   "\"L1\" CLEAR SPAN",
+   "\"L2\" CLEAR SPAN",
+   "NON CONTINUOUS SUPPORT",
+   "CONTINUOUS SUPPORT",
+   "40 CL.",
+   "25 CL",
+   "150",
+   "BEAM SIZE & REINF. SEE SHEDULE",
+   "FOR SIZE THICKNESS SEE PLAN",
+   "CL BEAM",
+   "D"
+  ],
+  "renders_sha256": {
+   "p15_full": "250e8cd0f0de1ddb996c5d44a544409fe2d891cbc69a945ea2ade22c16537f5c",
+   "p15_non_continuous_support_zoom": "f2e830c61225e9ce973e756dda1a5a01aee36374c931a405e9dfb0e96b623cca",
+   "p15_slab_on_beams_left": "8ca037418f52e1170d4df8d30dc683c1d648becfe089bd86f53b052be41f00ec",
+   "p15_slab_on_beams_right": "886c1b908aa7b1a54520ba54df18308bae1dbbb763d924c152390236539a9fcf"
+  },
+  "source": "PRE-S7 PRE_S7_VISUAL_READING.json (renders kept as hashes)",
+  "span_basis": {
+   "L1": "CLEAR_SPAN - the L1 dimension line runs from the inner face of the non-continuous support to the face of the continuous beam and is labelled CLEAR SPAN",
+   "L2": "CLEAR_SPAN - the L2 dimension line starts at the far face of the continuous beam and is labelled CLEAR SPAN"
+  },
+  "title": "TYP.SLAB ON BEAMS DETAIL",
+  "which_50_percent": "NOT_STATED"
+ },
+ "rule_records": {
+  "P15-SLAB-ON-BEAMS": {
+   "normalized_rule": "TOP_NONCONT=0.25L1; TOP_CONT=0.30max(L1,L2); BOT 50% stop 0.125L at continuous supports",
+   "page": 15,
+   "raw_text": "TYP. SLAB ON BEAMS DETAIL: TOP ANCHOR BARS .25'L1' (non-continuous support); .30'L1' OR .30'L2' WHICHEVER LARGER (continuous support); EXTEND 50% OF TOP REINF. INTO ADJACENT SLAB WHERE POSSIBLE; STOP 50% OF BOT. REINF. BALANCE CONTINUOUS .125'L1' / .125'L2'; 40 CL; 150; BOTTOM BARS FOR SIZE & SPACING SEE SCHEDULE OR PLAN",
+   "status": "EXACT_RULE"
+  },
+  "P15-TEMP-NOTES": {
+   "normalized_rule": "TEMP lap 40D; 2000 mm top strip over beams parallel to main bars (1000 spandrel); max(top) at shared supports",
+   "page": 15,
+   "raw_text": "1. LAP LENGHT FOR ALL TEMPERATURE BARS SHALL BE 40xDIA. 2. WHERE BEAMS ARE PARALLEL TO MAIN SLAB REINFORCEMENT PROVIDE TEMP. REINF. X 2000 TOP OF SLAB AT RIGHT ANGLES TO BEAMS. 1000 Ø SPANDREL 3. WHERE TOP REINF. DIFFERS BETWEEN ADJACENT SPANS USE LAGER REINF.",
+   "status": "CANDIDATE"
+  },
+  "P4-6-NOTE-2": {
+   "normalized_rule": "SLAB_TOP_OVER_BEAM = 5Ø10/m, extending L/3 (span) each side? / total? - 'بطول ثلث البحر' = length one third of the span; both directions",
+   "page": 4,
+   "raw_text": "2- يجب وضع حديد علوى 5Ø10/m للبلاطات فوق الجسور بطول ثلث البحر في الاتجاهين",
+   "status": "CANDIDATE"
+  }
+ },
+ "span_word": [
+  {
+   "block_inserts_in_model": [],
+   "decoded": "الجسور بطول ثلث البحر في الاتجاهين",
+   "handle": "DA",
+   "siblings_in_block": [],
+   "space": "MODEL"
+  },
+  {
+   "block_inserts_in_model": [],
+   "decoded": "الجسور بطول ثلث البحر في الاتجاهين",
+   "handle": "E3",
+   "siblings_in_block": [],
+   "space": "MODEL"
+  },
+  {
+   "block_inserts_in_model": [],
+   "decoded": "الجسور بطول ثلث البحر في الاتجاهين",
+   "handle": "EC",
+   "siblings_in_block": [],
+   "space": "MODEL"
+  },
+  {
+   "block_inserts_in_model": [
+    "12D",
+    "29D",
+    "3A6",
+    "5D9",
+    "814",
+    "1080"
+   ],
+   "decoded": "البحر",
+   "handle": "134",
+   "siblings_in_block": [
+    "15.00",
+    "SEA VIEW"
+   ],
+   "space": "A$C60883738"
+  }
+ ],
+ "span_word_homonym": true
+}

@@ -1,0 +1,143 @@
+{
+ "candidates": {
+  "BOUNDARY_WALL": {
+   "dimensioned": "typical section sizes",
+   "missing": "column / pad spacing; which runs are RC",
+   "readiness": "BLOCKED_NEEDS_AUTHORITY",
+   "schematic_nts": ""
+  },
+  "CANTILEVER_OR_BEARING_WALL_BAND": {
+   "dimensioned": "band geometry",
+   "missing": "cantilever vs bearing wall (the legend hatch is the same)",
+   "readiness": "BLOCKED_NEEDS_AUTHORITY",
+   "schematic_nts": ""
+  },
+  "DOME_OR_SPECIAL_ROOF": {
+   "dimensioned": "plan circle 4422; shell 10 cm; span 442 / rise 190 printed",
+   "missing": "ring-beam depth 'AS PER ARCH'; tower dome status",
+   "readiness": "READY_PARTIAL",
+   "schematic_nts": "N.I.S. detail"
+  },
+  "DOME_RING_BEAM": {
+   "dimensioned": "arc geometry; B 20",
+   "missing": "ring depth",
+   "readiness": "READY_PARTIAL",
+   "schematic_nts": "N.I.S. depth (drawn 0.75)"
+  },
+  "GROUND_SLAB": {
+   "dimensioned": "two zones with T = 10 cm and 5Ø10/m E.W.",
+   "missing": "thickness / mesh for the cells outside the two zones",
+   "readiness": "READY_PARTIAL",
+   "schematic_nts": ""
+  },
+  "LIFT_PIT_AND_WALLS": {
+   "dimensioned": "FF footing dimensions; wall thickness 20 cm",
+   "missing": "pit depth, wall height, shaft outline",
+   "readiness": "BLOCKED_NEEDS_AUTHORITY",
+   "schematic_nts": "p.14 detail"
+  },
+  "LINTEL": {
+   "dimensioned": "schedule rows by width",
+   "missing": "binding of each architectural opening to a wall thickness and a schedule row",
+   "readiness": "READY_PARTIAL",
+   "schematic_nts": ""
+  },
+  "OPENING_TRIM": {
+   "dimensioned": "void outlines",
+   "missing": "trim and diagonal bars (NONE_DRAWN)",
+   "readiness": "BLOCKED_NEEDS_AUTHORITY",
+   "schematic_nts": ""
+  },
+  "RC_PARAPET": {
+   "dimensioned": "section dimensions on p.14",
+   "missing": "which run takes which section; RC vs block per run",
+   "readiness": "BLOCKED_NEEDS_AUTHORITY",
+   "schematic_nts": ""
+  },
+  "SPECIAL_COLUMN": {
+   "dimensioned": "1 m above / below; P.C sections",
+   "missing": "planted column heights / bars; dead-column termination",
+   "readiness": "READY_PARTIAL",
+   "schematic_nts": "p.15 detail"
+  },
+  "STAIR_AND_LANDING": {
+   "dimensioned": "plan geometry of flights; landing levels +2.00 / +4.00 (p.16)",
+   "missing": "waist thickness, riser height, bar lengths per flight; which p.16 bar is which",
+   "readiness": "BLOCKED_NEEDS_AUTHORITY",
+   "schematic_nts": "p.16 section (N.I.S.)"
+  },
+  "SUNKEN_EXTRAS_AND_STEPS": {
+   "dimensioned": "",
+   "missing": "step depth and step / edge bars (no detail)",
+   "readiness": "BLOCKED_NEEDS_AUTHORITY",
+   "schematic_nts": ""
+  },
+  "SWIMMING_POOL": {
+   "dimensioned": "plan outline; wall 20 / base 40 thickness",
+   "missing": "bar lengths from the N.I.S. section; deep / shallow extents on plan",
+   "readiness": "READY_PARTIAL",
+   "schematic_nts": "N.I.S. section (bar shapes, two depths)"
+  },
+  "WATER_TANK": {
+   "dimensioned": "T 18 thickness; T&B callouts",
+   "missing": "whether the region is a slab (mesh T&B) or supports a separate tank; no tank walls",
+   "readiness": "READY_PARTIAL",
+   "schematic_nts": ""
+  }
+ },
+ "decision": "PRE-S8 COMPLETE - S8 NOT STARTED. S8 may open only for the READY / READY_PARTIAL families, each as its own frozen round; the BLOCKED families need the listed authority first.",
+ "pre_conditions": [
+  "transfer ARC:FFRS:BA003-BA008 from S6 to S8 DOME before any ring-beam quantity",
+  "S8 stair / cantilever / tank / dome quantities exclude S7's released top extensions at their shared supports (07_INTERFACE_DOUBLE_COUNT_AUDIT.csv)",
+  "blinding concrete: one register only (never V3b per-element + full footprint)",
+  "PS8-C01 tower dome: structural confirmation before any quantity"
+ ],
+ "recommended_s8_order": [
+  {
+   "family": "GROUND_SLAB",
+   "step": "1",
+   "why": "two printed zones are dimensioned (T 10, 5Ø10/m E.W.); the rest needs a thickness authority"
+  },
+  {
+   "family": "SWIMMING_POOL",
+   "step": "2",
+   "why": "plan outline + N.I.S. section; bar lengths from the section labels only"
+  },
+  {
+   "family": "DOME_OR_SPECIAL_ROOF + DOME_RING_BEAM",
+   "step": "3",
+   "why": "after the S6 -> S8 arc transfer; ring depth stays blocked"
+  },
+  {
+   "family": "LINTEL",
+   "step": "4",
+   "why": "schedule by width once the architectural openings are bound"
+  },
+  {
+   "family": "WATER_TANK",
+   "step": "5",
+   "why": "slab region T18 T&B (no walls)"
+  },
+  {
+   "family": "SPECIAL_COLUMN extras",
+   "step": "6",
+   "why": "twisted / planted printed extras"
+  },
+  {
+   "family": "STAIR_AND_LANDING",
+   "step": "7",
+   "why": "needs waist / riser / bar mapping authority"
+  },
+  {
+   "family": "LIFT_PIT_AND_WALLS",
+   "step": "8",
+   "why": "needs pit depth / shaft outline"
+  },
+  {
+   "family": "RC_PARAPET, BOUNDARY_WALL, CANTILEVER bands, OPENING_TRIM, SUNKEN extras",
+   "step": "9",
+   "why": "need run / identity / detail authority"
+  }
+ ],
+ "rule": "no S8 kg in this round; S7 total unchanged; no steel-per-volume ratio converted to a BOQ quantity"
+}

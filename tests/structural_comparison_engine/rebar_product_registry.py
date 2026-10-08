@@ -69,6 +69,8 @@ ACCURATE_BUILDERS = (
     "research/alsenan_slab_rebar_pre_s7/build_pre_s7.py",  # PRE-S7 slab readiness (no kg)
     "research/alsenan_slab_rebar_pre_s7_1/build_pre_s7_1.py",  # AD2 / PRE-S7.1 slab QTO authority delta (no kg)
     "research/alsenan_slab_rebar_s7/build_s7.py",  # S7 restricted elevated slab rebar QTO (476 candidates only)
+    "research/alsenan_slab_rebar_s7a_qa/build_s7a_qa.py",  # S7A dated QA: top-extent readings (sensitivity), errata
+    "research/pre_s8_structural_completeness/build_pre_s8.py",  # PRE-S8 census, coverage, readiness (no kg)
 )
 ROUGH_MODULES = (
     "engine/source/rough_rebar_sanity.py",
