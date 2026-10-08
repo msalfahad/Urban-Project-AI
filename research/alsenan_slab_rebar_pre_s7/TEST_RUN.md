@@ -89,4 +89,8 @@ minimum-cover phrase.
 
 ## Full suite
 
-Pending: it will be run on the clean committed tree.
+`python3 -m pytest -o addopts="" -q -p no:cacheprovider` at `7e0c03b` gave
+**6849 passed, 4 skipped, 100 xfailed, 2 warnings in 447.34 s, exit 0**.
+- That is the 6801 from D1.2 plus the 48 PRE-S7 tests.
+- The run used the clean committed tree. No file was edited during it, and the tree was still clean afterwards.
+- Every frozen-manifest test still matches: S4, S5, S6, S4.1, S6.1, S5.1, AD1, D1.1, D1.2 and PRE-S7.
