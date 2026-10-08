@@ -1,0 +1,69 @@
+{
+ "code": {
+  "engine/source/delta_release.py": "7b0f72a6f5138b3e0f8515c80a42a38a2cfc035c8fb4c138aa64a4fd5c9708b9",
+  "engine/source/slab_qto_authority.py": "afe1ff8b34576e26753a9b1617ca5c8a0e154f6bb1bf0a798f3a5a162f6b4b31",
+  "engine/source/slab_rebar_readiness.py": "d91f0132856e78987e73294d01e647fce2129167499c738ec125a04b0201eae4",
+  "engine/source/structural_census.py": "3aa4fd5f519f455cf7c51265eee6f60fc9c3635ea9f1b08ecddcf354dd6d1501",
+  "research/alsenan_slab_rebar_pre_s7_1/build_pre_s7_1.py": "4789fa92c4673386cea76a6c17a7e5ccca9bcbe3a2f56bdceb0d2d52677d637c",
+  "research/external_engine_lab/alsenan_structural_s1.py": "e3ecd25490cd433540e317454ffdbaadf17c19799f49eb1df9afcb928aa494cb"
+ },
+ "drawing_sha256": {
+  "ST7757.dxf": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079"
+ },
+ "engine_commit_stamp": "9f89ab6+code:594955c15b09ae66",
+ "frozen_baselines": {
+  "AD1": "e2497cc75181393000187b7e657fa8485a4c0f365b4614bed983d0bc6c0ca5b4",
+  "D1.1": "3ecb642e2141f5a9af11453870696b104a11cfb519d65a9e3f505cbff7c73a74",
+  "D1.2": "f256d6a25edf93029c6ba1c8cf9bc336790fd8d9cf7a5045e8395942986a9554",
+  "PRE-S7": "fb3a1c62a8e525b663853d03d43e067f1839026aea149399491bd4cf98f0ad09",
+  "S4": "0d63015a19953f295e331aab2d7e49e8facb277e1465fbdd1b6b5a40d1a2362b",
+  "S4.1": "468e90d9657548a7e9124b67ce0a55b63560f030e2f98b414c46ad4e970e030b",
+  "S5": "ff488a92f3eaff80e84fca2d7e0b8e36cc40ddb84232cd315acfd1ce50b4b3d8",
+  "S5.1": "595d64b1bf5c8e0ef7b5bebfaf3ea4063dd884356390c84b4c8aac77cddb5a88",
+  "S6": "c29a28bc66334d5294d71b0d5feb0dd5eae36baf91a04ef6e0105b2ca43be63e",
+  "S6.1": "c4744888ed2207ebff47c0a895e706d7e381b5f905b694eb92e3d1cdc411c0b2"
+ },
+ "inputs": {
+  "research/ad1_authority_decisions/AD1_FREEZE_MANIFEST.json": "e2497cc75181393000187b7e657fa8485a4c0f365b4614bed983d0bc6c0ca5b4",
+  "research/alsenan_footing_rebar_s4/S4_FREEZE_MANIFEST.json": "0d63015a19953f295e331aab2d7e49e8facb277e1465fbdd1b6b5a40d1a2362b",
+  "research/alsenan_footing_rebar_s4_1/S4_1_FREEZE_MANIFEST.json": "468e90d9657548a7e9124b67ce0a55b63560f030e2f98b414c46ad4e970e030b",
+  "research/alsenan_ground_system_rebar_s5/S5_FREEZE_MANIFEST.json": "ff488a92f3eaff80e84fca2d7e0b8e36cc40ddb84232cd315acfd1ce50b4b3d8",
+  "research/alsenan_ground_system_rebar_s5_1/S5_1_FREEZE_MANIFEST.json": "595d64b1bf5c8e0ef7b5bebfaf3ea4063dd884356390c84b4c8aac77cddb5a88",
+  "research/alsenan_slab_rebar_pre_s7/01_SLAB_PANEL_CENSUS.csv": "d72756283423595e03971d607d0c863b2336287084b3f0bb2f6dfd8daf650665",
+  "research/alsenan_slab_rebar_pre_s7/03_SLAB_REBAR_TOKENS.csv": "74ed3cc1385cadc0450752dbfcbb425973ce3b43272bed82ba1e20deb0f1edb2",
+  "research/alsenan_slab_rebar_pre_s7/04_COMPONENT_READINESS.csv": "d5a1cc2a1520257f4d783bfbb452780f50793f51fc477ccf0d0fb4276c91c3e5",
+  "research/alsenan_slab_rebar_pre_s7/05_SUPPORT_REGISTER.csv": "03fe5e2cb59157f6f4be29b3b78b929705fee61cf81b34845c929dceaea190ff",
+  "research/alsenan_slab_rebar_pre_s7/06_SUPPORT_RULES.csv": "57ad9829fef7b149bdeed0976372098d240f2b2105db63019101f78c55b0e182",
+  "research/alsenan_slab_rebar_pre_s7/07_BAR_RUN_REGISTER.csv": "f488d38fa84b6ccacc0e05b94b5862bf5f9c73cc2fbec29d9a4cc946ef31fad6",
+  "research/alsenan_slab_rebar_pre_s7/11_SOURCE_CONFLICTS.csv": "9e64d698e34cd1ef841cfa70350b3ed39521021477a437ea1366120c89117b47",
+  "research/alsenan_slab_rebar_pre_s7/PRE_S7_FREEZE_MANIFEST.json": "fb3a1c62a8e525b663853d03d43e067f1839026aea149399491bd4cf98f0ad09",
+  "research/alsenan_slab_rebar_pre_s7/PRE_S7_SUMMARY.json": "910ae3f68501751bb8c16ccfde44c7e97083520664979525dfa4b98d297b3bb0",
+  "research/alsenan_structural_census_s1/INDEX.json": "bff6694f05762498c897e2e8da95f70747af133ba652eb47470a03241aa7cc51",
+  "research/alsenan_structural_census_s1/SLAB_PANEL_REGISTER.json": "ea0cbe1b5e8d6f6b94eae60fd5c55a708886095a0cda3101d0acbe06229c9c4c",
+  "research/alsenan_structural_census_s1/STRUCTURAL_PROJECT_RULE_REGISTER.json": "3268bce3ef31c21ee93b0d7f9ab9b50195e0d0ae659699422c6927abcdf528d2",
+  "research/alsenan_superstructure_beam_rebar_s6/S6_FREEZE_MANIFEST.json": "c29a28bc66334d5294d71b0d5feb0dd5eae36baf91a04ef6e0105b2ca43be63e",
+  "research/alsenan_superstructure_beam_rebar_s6_1/S6_1_FREEZE_MANIFEST.json": "c4744888ed2207ebff47c0a895e706d7e381b5f905b694eb92e3d1cdc411c0b2",
+  "research/d1_1_stirrup_authority_audit/D1_1_FREEZE_MANIFEST.json": "3ecb642e2141f5a9af11453870696b104a11cfb519d65a9e3f505cbff7c73a74",
+  "research/d1_2_footing_cover_audit/D1_2_FREEZE_MANIFEST.json": "f256d6a25edf93029c6ba1c8cf9bc336790fd8d9cf7a5045e8395942986a9554"
+ },
+ "outputs": {
+  "00_README.md": "3821ce57b98c03feb95640e783ced34ccdfcbbf94af75d221242a315be56da39",
+  "01_AD2_DECISIONS.json": "6e30b0792e2a78ee4dde4881e0471579e61fc6af4e3e5b459d26777c7d4e4e36",
+  "02_OWNERSHIP_TRANSFERS.csv": "67ed724d98496291217c3fa79d66f71c36eb3e8c2f82276c54a9383d4e5bd158",
+  "03_RATE_QTO_REGISTER.csv": "377a77dd0b2ec8c12079ae5c492594dc0f2fc1040c2c4077717d2c6fd8e316a0",
+  "04_50_PERCENT_CURTAILMENT_REGISTER.csv": "73edd19dff452aeeb216203f31f47cc0b711827b30cd19293de43a9ee58828dc",
+  "05_TOP_RULE_IDENTITY.csv": "459df74ac06dc7a9c9c3f19416be63e96b211335c244229bdc044d3bffe5b990",
+  "06_SUPPORT_MISMATCH_SPLITS.csv": "e8530760609288f4cb8e614a56ab8b03ab5e5b112e510a2f1f25eb433a1efff3",
+  "07_LOCAL_BAR_STRIPS.csv": "1492677cca3ae65fe7f19820762b3d6ae6931bb2f5f86825a8604bc817814c8c",
+  "08_UPDATED_COMPONENT_READINESS.csv": "1ead87f6b0631748936787c28d3479368af3c356441ca6acdda2323bda56b3b9",
+  "09_REMAINING_CONFLICTS.csv": "0c0b39f01488ca22256206bfbaf6266dd084fd4efe45417940c51b80f14613e4",
+  "10_REMAINING_BLOCKERS.csv": "f2a3fbd716367fc8a6333c1bdff36f0ca31588795a0f5f9afa4a8c5ed2806c40",
+  "11_S7_RELEASE_CANDIDATES.csv": "412f26dfcf5c17e11b191f74996352bbdd3fb6819b8bf8f4103d99aa98861e2c",
+  "12_PROVENANCE.jsonl": "ab66e8d0ddfbaebbb1979d0a69310b30289004285b637514ad2fbf1f44fa8a59",
+  "PRE_S7_1_SUMMARY.json": "e7dc02aa278115efdf71943a1742b24bc350b49fb7dcd2abab718543789594ae"
+ },
+ "references_read_before_freeze": [],
+ "round": "PRE-S7.1",
+ "rule": "a readiness delta over frozen PRE-S7: no kg; frozen stages are never edited",
+ "state": "FROZEN"
+}
