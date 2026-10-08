@@ -82,4 +82,10 @@ The package tests re-derive the package's own claims rather than checking them a
 
 ## Full suite
 
-Pending: it will be run on the clean committed tree.
+`python3 -m pytest -o addopts="" -q -p no:cacheprovider` at `787890c` gave
+**6905 passed, 4 skipped, 100 xfailed, 2 warnings in 440.09 s, exit 0**.
+- That is the 6849 from PRE-S7 plus the 56 PRE-S7.1 tests.
+- The run used the clean committed tree. No file was edited during it, and the tree was still clean afterwards.
+- The 2 warnings are the existing deprecation shims (`ratio_check`, `ratio_qa`), the same ones as in PRE-S7.
+- Every frozen-manifest test still matches: S4, S5, S6, S4.1, S6.1, S5.1, AD1, D1.1, D1.2 and PRE-S7, plus the new PRE-S7.1
+  manifest.
