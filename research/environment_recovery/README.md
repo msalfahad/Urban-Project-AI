@@ -47,6 +47,12 @@ Five of the nine registered files are present:
   - It is registered as additional evidence, not as a replacement.
   - Each part is byte-identical to one earlier file after removing 134 bytes of added /Title and /Subject.
   - No build output depends on keeping the two reconstructed copies.
+  - **Owner decision (2026-10-09): KEEP them** in private, git-ignored storage.
+    - Each is marked `BYTE_IDENTICAL_RECONSTRUCTION_FROM_VERIFIED_UPLOAD`, with the uploaded set as its independent
+      parent evidence.
+    - The marking appears in three places: `RECOVERY_MANIFEST.json` (`acquisition`), the lock's `note`, and a private
+      sidecar `<sha>.pdf.provenance.json` next to each copy.
+    - A reconstruction is never presented as a separately obtained original.
 
 These four are still missing:
 

@@ -38,7 +38,8 @@
    "bytes": 19015776,
    "store": "SOURCE",
    "role": "PDF_PLOT",
-   "discipline": "ARCHITECTURAL"
+   "discipline": "ARCHITECTURAL",
+   "note": "BYTE_IDENTICAL_RECONSTRUCTION_FROM_VERIFIED_UPLOAD from P7757_ARCH_PDF_SET_01-12 ARCH_PART_1_PAGES_01-06 (sheets 01-06) (cd3b8669d55998cb638bd8e2b572da4992ed64babcecacd73753d6a2f0c68b97); not a separately obtained original"
   },
   {
    "path": "data/inputs/by_sha256/281a0c3f8c1cdd8f2a78528513b66d14ba4793e981e2d8059423faf6e6162f99.pdf",
@@ -46,7 +47,8 @@
    "bytes": 18512718,
    "store": "SOURCE",
    "role": "PDF_PLOT",
-   "discipline": "ARCHITECTURAL"
+   "discipline": "ARCHITECTURAL",
+   "note": "BYTE_IDENTICAL_RECONSTRUCTION_FROM_VERIFIED_UPLOAD from P7757_ARCH_PDF_SET_01-12 ARCH_PART_2_PAGES_07-12 (sheets 07-12) (1e7087d3e61bbb682c9107193c97550a2837e5198bde0ee311319bf7f4a08459); not a separately obtained original"
   },
   {
    "path": "data/inputs/by_sha256/3f7a556c69786834c16c355504437b5abcd1f5aa3a9625b33a2c5b14213f0227.dwg",

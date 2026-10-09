@@ -30,6 +30,30 @@ BENCHMARK = re.compile(r"(BENCHMARK|SEAL|CONTRACTOR|KIYAL|HISTORICAL|sealed/|sit
 FIXTURE_MANIFESTS = ["tests/r8_6/FIXTURE_MANIFEST.json", "tests/r8_7/FIXTURE_MANIFEST.json"]
 GOLDEN = {"runs/golden/23010_MANIFEST.json": "data/golden/23010/"}
 SOURCE_MANIFEST = "tests/alsenan/registers/SOURCE_MANIFEST.json"
+# owner decision 2026-10-09: keep the two earlier architectural PDFs, which were rebuilt byte for byte from the uploaded
+# 12-sheet set; mark them as reconstructions, with the uploaded set as the independent parent evidence
+RECONSTRUCTED = "BYTE_IDENTICAL_RECONSTRUCTION_FROM_VERIFIED_UPLOAD"
+SET_KEY = "P7757_ARCH_PDF_SET_01-12"
+RECONSTRUCTIONS = {
+    "80b6a80428990db4dfa86aa343ed2c7cb429709459d564f0dac92362480a9b00":
+        {"parent_part": "ARCH_PART_1_PAGES_01-06", "set_sheets": "01-06",
+         "parent_sha256": "cd3b8669d55998cb638bd8e2b572da4992ed64babcecacd73753d6a2f0c68b97"},
+    "281a0c3f8c1cdd8f2a78528513b66d14ba4793e981e2d8059423faf6e6162f99":
+        {"parent_part": "ARCH_PART_2_PAGES_07-12", "set_sheets": "07-12",
+         "parent_sha256": "1e7087d3e61bbb682c9107193c97550a2837e5198bde0ee311319bf7f4a08459"}}
+RECON_METHOD = ("the 134 bytes of /Title and /Subject added to the uploaded part were removed and the cross-reference "
+                "offsets restored (engine/source/source_identity.py); the result's SHA-256 equals the registered one")
+
+
+def acquisition(sha):
+    """How a registered input on disk was obtained. A reconstruction is never a separately obtained original."""
+    r = RECONSTRUCTIONS.get(sha)
+    if not r:
+        return None
+    return {"acquisition": RECONSTRUCTED, "parent_evidence": f"{SET_KEY} {r['parent_part']} (sheets {r['set_sheets']})",
+            "parent_sha256": r["parent_sha256"], "method": RECON_METHOD,
+            "owner_decision": "2026-10-09: keep in private, git-ignored storage",
+            "not": "a separately obtained original"}
 
 
 def _git_files():
@@ -163,6 +187,8 @@ def main(xml=None):
     src = source_inputs()
     for s in src:
         s["present"] = (ROOT / s["path"]).exists()
+        if acquisition(s["sha256"]):
+            s["acquisition"] = acquisition(s["sha256"])
     by_cat = defaultdict(int)
     for e in entries:
         by_cat[e["category"]] += 1
@@ -186,7 +212,10 @@ def main(xml=None):
                        "DERIVED": "regenerable outputs (experiments, runs); restore or regenerate, then verify",
                        "BENCHMARK": "sealed store, separate key; never mounted for a blind run"},
             "entries": [{"path": s["path"], "sha256": s["sha256"], "bytes": s["bytes"], "store": "SOURCE",
-                         "role": s["role"], "discipline": s["discipline"]} for s in src]
+                         "role": s["role"], "discipline": s["discipline"]}
+                        | ({"note": f"{RECONSTRUCTED} from {acquisition(s['sha256'])['parent_evidence']} "
+                                    f"({acquisition(s['sha256'])['parent_sha256']}); not a separately obtained "
+                                    "original"} if acquisition(s["sha256"]) else {}) for s in src]
                        + [{"path": p, "sha256": v["sha256"], "bytes": None,
                            "store": "BENCHMARK" if BENCHMARK.search(p) else
                            ("SOURCE" if "/inputs/" in p else "DERIVED"), "pinned_by": v["pinned_by"]}

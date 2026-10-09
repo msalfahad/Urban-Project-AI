@@ -53,3 +53,17 @@ def test_checker_reports_and_flags_drift(tmp_path, monkeypatch):
     assert m.main(["x", str(lock)]) == 0
     f.write_bytes(b"abd")
     assert m.check(lock)[0]["state"] == "DRIFTED" and m.main(["x", str(lock)]) == 1
+
+
+def test_reconstructed_inputs_are_marked_and_never_presented_as_originals():
+    recon = "BYTE_IDENTICAL_RECONSTRUCTION_FROM_VERIFIED_UPLOAD"
+    m = J("RECOVERY_MANIFEST.json")
+    marked = {s["sha256"]: s["acquisition"] for s in m["registered_source_inputs"] if s.get("acquisition")}
+    assert set(marked) == {"80b6a80428990db4dfa86aa343ed2c7cb429709459d564f0dac92362480a9b00",
+                           "281a0c3f8c1cdd8f2a78528513b66d14ba4793e981e2d8059423faf6e6162f99"}
+    for a in marked.values():
+        assert a["acquisition"] == recon and a["not"] == "a separately obtained original"
+        assert a["parent_evidence"].startswith("P7757_ARCH_PDF_SET_01-12") and re.fullmatch(r"[0-9a-f]{64}",
+                                                                                            a["parent_sha256"])
+    lock = {e["sha256"]: e for e in J("INPUTS.lock.proposed.json")["entries"] if e["sha256"] in marked}
+    assert all(e["note"].startswith(recon) and "not a separately obtained original" in e["note"] for e in lock.values())
