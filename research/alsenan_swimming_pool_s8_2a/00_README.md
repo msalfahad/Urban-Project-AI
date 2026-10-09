@@ -9,10 +9,31 @@ Baseline `3286056`. A dated correction layer on the frozen S8.2. No S8.2 file ch
 - **'+0.15'** is the deck round the pool. The walls rise 0.15 above it.
 - **Released:** concrete 0 m3, reinforcement 0 kg. The floor profile is a **PROFILE_CONFLICT**: the architectural elevation draws one flat floor, the structural detail a deep end, a slope and a shallow end. So no single depth applies to the whole pool.
 
-## Source identity
+## Source identity: one 12-sheet drawing set
 
-- `ARCH_PART_1_PAGES_01-06` `cd3b8669d559…` against the earlier `80b6a8042899…`: **WRAPPER_METADATA_ONLY**. The new file is 134 bytes longer, entirely from an added /Title and /Subject. Removing them reproduces the earlier file's SHA-256 exactly.
-- `ARCH_PART_2_PAGES_07-12` `1e7087d3e61b…` against the earlier `281a0c3f8c1c…`: **WRAPPER_METADATA_ONLY**. The new file is 134 bytes longer, entirely from an added /Title and /Subject. Removing them reproduces the earlier file's SHA-256 exactly.
+`P7757_ARCH_PDF_SET_01-12` is one architectural drawing set of 12 sheets. It was uploaded as two lossless parts only to meet an upload size limit. It is registered as **additional architectural evidence**, not as a replacement for the earlier registered PDFs.
+
+- Sheets 01-06: part `ARCH_PART_1_PAGES_01-06` `cd3b8669d559…`. Finding (**WRAPPER_METADATA_ONLY**): byte-identical to the earlier registered P7757_Architectural_Plan_Pages_01-06.pdf (80b6a8042899…) after removing 134 bytes of added /Title and /Subject metadata.
+- Sheets 07-12: part `ARCH_PART_2_PAGES_07-12` `1e7087d3e61b…`. Finding (**WRAPPER_METADATA_ONLY**): byte-identical to the earlier registered P7757_Architectural_Plan_Pages_07-12.pdf (281a0c3f8c1c…) after removing 134 bytes of added /Title and /Subject metadata.
+
+The finding is evidence about the bytes. It does not change any registration.
+
+| set sheet | registered title | upload part, page | visual record |
+|---|---|---|---|
+| 01 | AREA PLANS - GROUND FLOOR + 1st FLOOR (municipal area calculation) | ARCH_PART_1_PAGES_01-06 p.1 | - |
+| 02 | AREA PLAN - 2nd FLOOR + TOTAL FLOORS AREA | ARCH_PART_1_PAGES_01-06 p.2 | - |
+| 03 | GROUND FLOOR PLAN 1:100 | ARCH_PART_1_PAGES_01-06 p.3 | VR-02, VR-03 |
+| 04 | 1st FLOOR PLAN 1:100 | ARCH_PART_1_PAGES_01-06 p.4 | - |
+| 05 | 2nd FLOOR PLAN 1:100 | ARCH_PART_1_PAGES_01-06 p.5 | - |
+| 06 | SOUTH EAST ELEVATION 1:100 | ARCH_PART_1_PAGES_01-06 p.6 | - |
+| 07 | SOUTH WEST ELEVATION 1:100 | ARCH_PART_2_PAGES_07-12 p.1 | VR-04 |
+| 08 | NORTH WEST ELEVATION 1:100 | ARCH_PART_2_PAGES_07-12 p.2 | VR-01 |
+| 09 | NORTH EAST ELEVATION 1:100 | ARCH_PART_2_PAGES_07-12 p.3 | VR-05 |
+| 10 | SECTION 1:100 | ARCH_PART_2_PAGES_07-12 p.4 | VR-06 |
+| 11 | SECTION 1:100 | ARCH_PART_2_PAGES_07-12 p.5 | VR-07 |
+| 12 | FENCE ELEVATION + FENCE SECTION | ARCH_PART_2_PAGES_07-12 p.6 | VR-08 |
+
+Title blocks of all 12 sheets: VR-09.
 
 ## Binding criteria (vector DXF)
 

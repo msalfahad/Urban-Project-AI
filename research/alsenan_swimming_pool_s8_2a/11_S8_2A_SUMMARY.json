@@ -44,10 +44,11 @@
   "A-09": "PASS",
   "A-10": "PASS",
   "A-11": "PASS",
-  "A-12": "PASS"
+  "A-12": "PASS",
+  "A-13": "PASS"
  },
  "date": "2026-10-09",
- "engine_commit": "3286056+code:c3b131ffd88eadb3",
+ "engine_commit": "3286056+code:bd954f4a02047736",
  "floor_profile": "PROFILE_CONFLICT",
  "frozen_baselines": {
   "AD1": "e2497cc75181393000187b7e657fa8485a4c0f365b4614bed983d0bc6c0ca5b4",
@@ -84,12 +85,24 @@
  "pdf_identity": {
   "ARCH_PART_1_PAGES_01-06": {
    "earlier_sha256": "80b6a80428990db4dfa86aa343ed2c7cb429709459d564f0dac92362480a9b00",
-   "relation": "WRAPPER_METADATA_ONLY"
+   "relation": "WRAPPER_METADATA_ONLY",
+   "set_sheets": "01-06"
   },
   "ARCH_PART_2_PAGES_07-12": {
    "earlier_sha256": "281a0c3f8c1cdd8f2a78528513b66d14ba4793e981e2d8059423faf6e6162f99",
-   "relation": "WRAPPER_METADATA_ONLY"
+   "relation": "WRAPPER_METADATA_ONLY",
+   "set_sheets": "07-12"
   }
+ },
+ "pdf_set": {
+  "finding": "one drawing set of 12 sheets; sheets 01-06: byte-identical to the earlier registered P7757_Architectural_Plan_Pages_01-06.pdf (80b6a8042899…) after removing 134 bytes of added /Title and /Subject metadata; sheets 07-12: byte-identical to the earlier registered P7757_Architectural_Plan_Pages_07-12.pdf (281a0c3f8c1c…) after removing 134 bytes of added /Title and /Subject metadata",
+  "key": "P7757_ARCH_PDF_SET_01-12",
+  "parts": {
+   "ARCH_PART_1_PAGES_01-06": "01-06",
+   "ARCH_PART_2_PAGES_07-12": "07-12"
+  },
+  "registered_as": "ADDITIONAL_SOURCE (additional architectural evidence; not a replacement for the earlier registered PDFs)",
+  "sheets": 12
  },
  "policy": "S8_2A_ARCH_ELEVATION_DEPTH_AUTHORITY_V1",
  "questions_new": [

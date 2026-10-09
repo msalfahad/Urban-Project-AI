@@ -3,7 +3,8 @@
 A dated correction layer on the frozen S8.2. The checks re-derive it from its own outputs and the frozen stages:
 
 - S8.2 and every earlier stage still verify, and S8.2 is not written;
-- the re-supplied architectural PDFs are the earlier registered sources apart from wrapper metadata;
+- the re-supplied architectural PDF is one 12-sheet set in two upload parts, registered as additional evidence (not
+  a replacement); each part matches its earlier registered part apart from wrapper metadata;
 - the elevation's '115' binds to the swimming pool on label, dimension and feature criteria; '70' is the building;
 - the depth holds at one drawn plane only: the floor profile conflicts across sources, so nothing is released;
 - every S8.2 concrete row and bar family is carried with its lane; conflicts and questions are carried and extended;
@@ -80,17 +81,63 @@ def test_s8_2_and_every_earlier_stage_still_verify(s):
     assert s82["reinforcement"]["families"] == 21 and len(rows("13_REBAR_EVIDENCE_BINDING.csv", S82)) == 26
 
 
-# ------------------------------------------------------------------ source identity
-def test_the_new_pdfs_are_the_earlier_sources_apart_from_metadata(s):
-    ident = {r["NEW_SHA256"]: r for r in rows("01_ARCH_PDF_IDENTITY_COMPARISON.csv") if r["RELATION"] != "PAGE_IMAGE"}
+# ------------------------------------------------------------------ source identity: one 12-sheet set
+SHEETS = [f"{i:02d}" for i in range(1, 13)]
+
+
+def test_the_set_is_additional_evidence_and_each_part_matches_its_earlier_part(s):
+    r01 = rows("01_ARCH_PDF_IDENTITY_COMPARISON.csv")
+    sets = [r for r in r01 if r["RELATION"] == "DRAWING_SET"]
+    assert len(sets) == 1 and sets[0]["SOURCE_KEY"] == "P7757_ARCH_PDF_SET_01-12" and sets[0]["SET_SHEET"] == "01-12"
+    assert sets[0]["PAGES"] == "12" and sets[0]["NEW_SHA256"] == "" and sets[0]["EARLIER_SHA256"] == ""
+    ident = {r["NEW_SHA256"]: r for r in r01 if r["RELATION"] not in ("PAGE_IMAGE", "DRAWING_SET")}
     assert set(ident) == set(NEW)
-    for new, old in NEW.items():
+    for (new, old), sheets in zip(NEW.items(), ("01-06", "07-12")):
         r = ident[new]
-        assert r["RELATION"] == SI.WRAPPER_METADATA_ONLY and r["EARLIER_SHA256"] == old
+        assert r["RELATION"] == SI.WRAPPER_METADATA_ONLY and r["EARLIER_SHA256"] == old and r["SET_SHEET"] == sheets
         assert r["RECONSTRUCTED_SHA256"] == old and r["REMOVED_INFO_BYTES"] == r["BYTE_DELTA"] == "134"
-        assert r["PAGE_CENSUS_MATCHES_EARLIER"] == "True" and r["REGISTERED_AS"].startswith("ADDITIONAL_SOURCE")
-    pages = [r for r in rows("01_ARCH_PDF_IDENTITY_COMPARISON.csv") if r["RELATION"] == "PAGE_IMAGE"]
-    assert len(pages) == 12 and all(json.loads(p["NEW_METADATA"])["image_px"] == [[4672, 6624]] for p in pages)
+        assert r["PAGE_CENSUS_MATCHES_EARLIER"] == "True"
+        assert r["FINDING"].startswith("byte-identical to the earlier registered") and old[:12] in r["FINDING"]
+    for r in sets + list(ident.values()):                     # registered as additional evidence, never a replacement
+        assert r["REGISTERED_AS"].startswith("ADDITIONAL_SOURCE") and "not a replacement" in r["REGISTERED_AS"]
+    assert "EARLIER_RESTORED_ON_DISK" not in r01[0]           # the outputs never depend on keeping the earlier copies
+    assert s["pdf_set"]["sheets"] == 12 and s["pdf_set"]["parts"] == {"ARCH_PART_1_PAGES_01-06": "01-06",
+                                                                       "ARCH_PART_2_PAGES_07-12": "07-12"}
+    pages = [r for r in r01 if r["RELATION"] == "PAGE_IMAGE"]
+    assert [p["SET_SHEET"] for p in pages] == SHEETS
+    assert all(json.loads(p["NEW_METADATA"])["image_px"] == [[4672, 6624]] for p in pages)
+
+
+def test_every_visual_record_and_dimension_row_names_its_set_sheet():
+    d = {r["DIM_ID"]: r for r in rows("03_DIMENSION_SOURCE_REGISTER.csv")}
+    assert all(r["SET_SHEET"] in SHEETS + ["01-12"] for r in d.values())
+    vis = {k: r for k, r in d.items() if r["HANDLE"] == "raster"}
+    assert {k: r["SET_SHEET"] for k, r in vis.items()} == {
+        "VR-01": "08", "VR-02": "03", "VR-03": "03", "VR-04": "07", "VR-05": "09", "VR-06": "10", "VR-07": "11",
+        "VR-08": "12", "VR-09": "01-12"}
+    assert "ARCH_PART_2_PAGES_07-12 p.2" in vis["VR-01"]["SOURCE"] and "ARCH_PART_1_PAGES_01-06 p.3" in vis["VR-02"]["SOURCE"]
+    assert d["D-02"]["SET_SHEET"] == "08" and d["D-P-WIDTH_350"]["SET_SHEET"] == "03"
+    prov = [json.loads(x) for x in (PKG / "10_PROVENANCE.jsonl").read_text(encoding="utf-8").splitlines()]
+    by = {p["record"]: p for p in prov if p["output"] == "03_DIMENSION_SOURCE_REGISTER.csv"}
+    assert by["VR-01"]["drawing_sha256"] == "1e7087d3e61bbb682c9107193c97550a2837e5198bde0ee311319bf7f4a08459"
+    assert by["VR-02"]["drawing_sha256"] == "cd3b8669d55998cb638bd8e2b572da4992ed64babcecacd73753d6a2f0c68b97"
+    assert sorted(by["VR-09"]["drawing_sha256"]) == sorted(NEW)
+
+
+def test_the_re_freeze_names_the_first_freeze_and_changes_no_finding():
+    m = J(MANIFEST)
+    a = m["amends_s8_2a_freeze"]
+    assert a["freeze_commit"] == "1900650" and re.fullmatch(r"[0-9a-f]{64}", a["manifest_sha256"])
+    first = subprocess.run(["git", "show", f"{a['freeze_commit']}:{MANIFEST.relative_to(ROOT)}"], cwd=ROOT,
+                           capture_output=True)
+    if first.returncode != 0:
+        pytest.skip("first S8.2A freeze commit not in this clone's history")
+    assert hashlib.sha256(first.stdout).hexdigest() == a["manifest_sha256"]
+    old = json.loads(first.stdout)["outputs"]
+    for o in ("02_ELEVATION_TO_PLAN_BINDING_AUDIT.csv", "04_POOL_DEPTH_AND_ZONE_INTERPRETATION.csv",
+              "05_QUANTITY_READINESS_DELTA.csv", "06_BLOCKED_REGISTER_DELTA.csv",
+              "07_CONFLICT_AND_QUESTION_REGISTER_DELTA.csv", "08_SENSITIVITY_CASES.csv"):
+        assert m["outputs"][o] == old[o], o
 
 
 @needs_inputs
@@ -153,7 +200,7 @@ def test_sensitivity_never_enters_a_total():
 
 def test_every_conservation_check_passes():
     c = rows("09_CONSERVATION_CHECKS.csv")
-    assert [r["CHECK_ID"] for r in c] == [f"A-{i:02d}" for i in range(1, 13)] and all(r["RESULT"] == "PASS" for r in c)
+    assert [r["CHECK_ID"] for r in c] == [f"A-{i:02d}" for i in range(1, 14)] and all(r["RESULT"] == "PASS" for r in c)
 
 
 # ------------------------------------------------------------------ hygiene

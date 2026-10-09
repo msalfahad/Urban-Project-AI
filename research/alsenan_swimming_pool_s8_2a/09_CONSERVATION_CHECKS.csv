@@ -1,7 +1,7 @@
 CHECK_ID,CHECK,RESULT,DETAIL
 A-01,S8.2 is untouched: its manifest and every frozen output verify,PASS,18 outputs; S8.2 files checked 37
 A-02,every earlier frozen stage verifies,PASS,17 manifests
-A-03,both architectural PDFs are the earlier sources apart from wrapper metadata,PASS,"{'ARCH_PART_1_PAGES_01-06': 'WRAPPER_METADATA_ONLY', 'ARCH_PART_2_PAGES_07-12': 'WRAPPER_METADATA_ONLY'}"
+A-03,"the set's two upload parts match the earlier registered parts apart from wrapper metadata; the set is registered as additional evidence, not as a replacement",PASS,"{'ARCH_PART_1_PAGES_01-06': 'WRAPPER_METADATA_ONLY', 'ARCH_PART_2_PAGES_07-12': 'WRAPPER_METADATA_ONLY'}"
 A-04,"the depth dimension binds to the pool on label, dimension and feature criteria",PASS,"{""state"": ""BOUND"", ""missing"": [], ""failed"": [], ""contradictions"": [], ""satisfied"": 8}"
 A-05,"'115' spans +0.30 to -0.85; '70' spans +0.30 to +1.00 (building, not pool)",PASS,"{""2E5E"": {""low_m"": -0.85, ""high_m"": 0.3, ""span_m"": 1.15}, ""2E6C"": {""low_m"": 0.3, ""high_m"": 1.0, ""span_m"": 0.7}}"
 A-06,the depth is not applied uniformly while the floor profile conflicts,PASS,floor profile PROFILE_CONFLICT
@@ -11,3 +11,4 @@ A-09,the plan's horizontal 115 is never used as a depth,PASS,
 A-10,the 26 records and 5 source conflicts of S8.2 stay authoritative,PASS,
 A-11,sensitivity never enters a total,PASS,4 cases
 A-12,"no client drawing, scan or crop in the package",PASS,[]
+A-13,"one 12-sheet set: every page is one set sheet, every visual record and dimension row names its sheet",PASS,"12 pages; 19 dimension rows, 9 visual records"

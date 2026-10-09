@@ -13,6 +13,9 @@ The full test suite is **not green** in the replacement container. At `52fa35f`:
 
 Every one of the 376 failures and errors comes from a missing private file. None comes from code.
 
+A re-run at `74d033d` gave 6687 passed, 344 failed, 32 errors and 138 skipped. The 376 non-passing tests are the
+same ones, and the 28 extra passes are the new S8.2A and environment-recovery tests.
+
 `RECOVERY_MANIFEST.json` lists the exact paths. There are 107 missing prerequisites. For each one it records:
 
 - category;
@@ -38,8 +41,12 @@ Five of the nine registered files are present:
 - `P7757.dxf`
 - `ST7757.dxf`
 - `ST7757.pdf`
-- both architectural PDFs, `80b6a804…` and `281a0c3f…` (re-supplied in S8.2A as `cd3b8669…` and `1e7087d3…`, with
-  134 bytes of added metadata)
+- both earlier architectural PDFs, `80b6a804…` and `281a0c3f…`. These two copies were reconstructed byte for byte
+  from the S8.2A drawing set and verified against their registered SHA-256, not restored from an original store.
+  - The set is `P7757_ARCH_PDF_SET_01-12`: one 12-sheet PDF in two upload parts, `cd3b8669…` and `1e7087d3…`.
+  - It is registered as additional evidence, not as a replacement.
+  - Each part is byte-identical to one earlier file after removing 134 bytes of added /Title and /Subject.
+  - No build output depends on keeping the two reconstructed copies.
 
 These four are still missing:
 

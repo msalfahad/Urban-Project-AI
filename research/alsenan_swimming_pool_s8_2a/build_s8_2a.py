@@ -3,8 +3,9 @@
     python3 -I research/alsenan_swimming_pool_s8_2a/build_s8_2a.py
 
 S8.2 is frozen and never written. This layer adds the architectural evidence S8.2 did not hold:
-  * the re-supplied architectural PDFs (pages 01-06 and 07-12), registered as additional sources and compared with
-    the earlier registered PDFs byte for byte;
+  * the re-supplied architectural PDF set: one drawing set of 12 sheets, uploaded as two lossless parts (sheets
+    01-06 and 07-12) only to meet an upload size limit. It is registered as additional architectural evidence, not
+    as a replacement for the earlier registered PDFs, and each part is compared with them byte for byte;
   * the NORTH WEST ELEVATION, read as vector geometry from the registered architectural DXF (P7757.dxf), with the
     scanned sheet 08 as the same drawing;
   * the plan dimensions and labels round the pool in the same DXF.
@@ -50,6 +51,12 @@ NEW_PDFS = {"ARCH_PART_1_PAGES_01-06": "cd3b8669d55998cb638bd8e2b572da4992ed64ba
             "ARCH_PART_2_PAGES_07-12": "1e7087d3e61bbb682c9107193c97550a2837e5198bde0ee311319bf7f4a08459"}
 EARLIER_NAME = {"ARCH_PART_1_PAGES_01-06": "P7757_Architectural_Plan_Pages_01-06.pdf",
                 "ARCH_PART_2_PAGES_07-12": "P7757_Architectural_Plan_Pages_07-12.pdf"}
+# the two parts are one drawing set: set sheet = the part's offset + its page number
+SET_KEY = "P7757_ARCH_PDF_SET_01-12"
+SET_PARTS = {"ARCH_PART_1_PAGES_01-06": 0, "ARCH_PART_2_PAGES_07-12": 6}
+SET_PART_PAGES = 6
+ALL_SHEETS = "01-12"
+REGISTERED_AS = "ADDITIONAL_SOURCE (additional architectural evidence; not a replacement for the earlier registered PDFs)"
 SOURCE_MANIFEST = ROOT / "tests/alsenan/registers/SOURCE_MANIFEST.json"
 MANIFESTS = {"S4": R / "alsenan_footing_rebar_s4/S4_FREEZE_MANIFEST.json",
              "S4.1": R / "alsenan_footing_rebar_s4_1/S4_1_FREEZE_MANIFEST.json",
@@ -82,9 +89,19 @@ OUTPUTS = ["00_README.md", "01_ARCH_PDF_IDENTITY_COMPARISON.csv", "02_ELEVATION_
            "07_CONFLICT_AND_QUESTION_REGISTER_DELTA.csv", "08_SENSITIVITY_CASES.csv", "09_CONSERVATION_CHECKS.csv",
            "10_PROVENANCE.jsonl", "11_S8_2A_SUMMARY.json"]
 MANIFEST_NAME = "12_S8_2A_FREEZE_MANIFEST.json"
+# the first S8.2A freeze, re-frozen once on the user's clarification that the two parts are one 12-sheet set
+AMENDS = {"freeze_commit": "1900650",
+          "manifest_sha256": "b7e11bb0b977984547dd5a7eb4b3d8ac5a9c4fa1d39a49b48ab32c377992e91c",
+          "reason": "user clarification (2026-10-09): the two PDF parts are lossless parts of one architectural PDF, "
+                    "split only to meet an upload limit; treat sheets 01-12 as one drawing set; additional evidence, "
+                    "not a verified replacement for the earlier registered PDF",
+          "changed": "set identity row, set sheet numbers on every visual record and dimension-register row, identity "
+                     "worded as evidence, one added conservation check; no binding, level, zone, readiness, conflict "
+                     "or sensitivity output changed"}
 
 # ------------------------------------------------------------------ the NW elevation in P7757.dxf (arch model space)
 ELEV_TITLE = "NORTH WEST ELEVATION"
+ELEV_SHEET, PLAN_SHEET = "08", "03"     # the set sheets that print the DXF's NW elevation and GF plan (VR-01, VR-02)
 ELEV_WINDOW = 16000.0                   # half width of the elevation's dimension window about its title (mm)
 DATUM_DIM = "29EE"                      # '100': ±0.00 -> +1.00 (the house ground-floor level)
 TOTAL_DIM = "2A26"                      # '1440' from ±0.00
@@ -93,32 +110,33 @@ PIT_WINDOW = (-367500.0, -361000.0, -806600.0, -804000.0)     # x0, x1, y0, y1 r
 PLAN_DIMS = {"LENGTH_350": "6A1", "WIDTH_350": "4C4", "PLAN_115": "4D0", "GAP_50": "696", "CURVED_WALL_20": "689"}
 POOL_LABEL = "swimming pool"
 OTHER_PIT_WORDS = re.compile(r"\b(lift|elevator|pit|tank|sump|manhole)\b", re.I)
-# scanned sheets: what was read on the upright page image in this session (crops are client drawing, kept out of git)
+# scanned sheets of the set: what was read on the upright page image in this session (crops are client drawing, kept
+# out of git). SET_SHEET is the sheet of the 12-sheet set; its upload part and page follow from SET_PARTS.
 VISUAL = [
-    {"ID": "VR-01", "PDF": "ARCH_PART_2_PAGES_07-12", "PAGE": 2, "SHEET": "NORTH WEST ELEVATION 1:100",
+    {"ID": "VR-01", "SET_SHEET": "08", "TITLE": "NORTH WEST ELEVATION 1:100",
      "BOX_UPRIGHT_PX": [3700, 3300, 4300, 3800], "READ": "sunken box below the hatched ground; vertical chain "
      "'115' (box top to inner floor) then '70' (box top to the base of the curved element) then '430'; '+0.15' "
      "level tip on the deck surface right of the box, the box walls rising above it",
      "SCALE_CHECK": "the '115' witnesses ~181 px apart = 1.574 px/cm, the nominal 1:100 of a 4672 px A3 scan"},
-    {"ID": "VR-02", "PDF": "ARCH_PART_1_PAGES_01-06", "PAGE": 3, "SHEET": "GROUND FLOOR PLAN 1:100",
+    {"ID": "VR-02", "SET_SHEET": "03", "TITLE": "GROUND FLOOR PLAN 1:100",
      "BOX_UPRIGHT_PX": [4700, 1050, 6000, 2400], "READ": "D-shaped 'swimming pool / حمام سباحة' 350 x 350 at the sea-view "
      "end beside the MASTER BED ROOM, inside a curved wall (gap 50, wall 20); '+0.15' level marks round it; a "
      "horizontal '115' from the pool face to a return wall (plan dimension, not a depth)",
      "SCALE_CHECK": ""},
-    {"ID": "VR-03", "PDF": "ARCH_PART_1_PAGES_01-06", "PAGE": 3, "SHEET": "GROUND FLOOR PLAN 1:100",
+    {"ID": "VR-03", "SET_SHEET": "03", "TITLE": "GROUND FLOOR PLAN 1:100",
      "BOX_UPRIGHT_PX": [900, 150, 1500, 700], "READ": "north arrow pointing to the page's lower right: street side = "
      "south-east (sheet 06 SOUTH EAST ELEVATION), sea-view side = north-west (sheet 08)", "SCALE_CHECK": ""},
-    {"ID": "VR-04", "PDF": "ARCH_PART_2_PAGES_07-12", "PAGE": 1, "SHEET": "SOUTH WEST ELEVATION 1:100",
+    {"ID": "VR-04", "SET_SHEET": "07", "TITLE": "SOUTH WEST ELEVATION 1:100",
      "BOX_UPRIGHT_PX": None, "READ": "no sunken element drawn", "SCALE_CHECK": ""},
-    {"ID": "VR-05", "PDF": "ARCH_PART_2_PAGES_07-12", "PAGE": 3, "SHEET": "NORTH EAST ELEVATION 1:100",
+    {"ID": "VR-05", "SET_SHEET": "09", "TITLE": "NORTH EAST ELEVATION 1:100",
      "BOX_UPRIGHT_PX": None, "READ": "no sunken element drawn (the pool is on the far side)", "SCALE_CHECK": ""},
-    {"ID": "VR-06", "PDF": "ARCH_PART_2_PAGES_07-12", "PAGE": 4, "SHEET": "SECTION A-A 1:100",
+    {"ID": "VR-06", "SET_SHEET": "10", "TITLE": "SECTION A-A 1:100",
      "BOX_UPRIGHT_PX": None, "READ": "cuts the stair core; no pool", "SCALE_CHECK": ""},
-    {"ID": "VR-07", "PDF": "ARCH_PART_2_PAGES_07-12", "PAGE": 5, "SHEET": "SECTION B-B 1:100",
+    {"ID": "VR-07", "SET_SHEET": "11", "TITLE": "SECTION B-B 1:100",
      "BOX_UPRIGHT_PX": None, "READ": "cuts the middle of the plot, clear of the pool; no pool", "SCALE_CHECK": ""},
-    {"ID": "VR-08", "PDF": "ARCH_PART_2_PAGES_07-12", "PAGE": 6, "SHEET": "FENCE PLAN / ELEVATION / SECTION",
+    {"ID": "VR-08", "SET_SHEET": "12", "TITLE": "FENCE PLAN / ELEVATION / SECTION",
      "BOX_UPRIGHT_PX": None, "READ": "no pool", "SCALE_CHECK": ""},
-    {"ID": "VR-09", "PDF": "ALL", "PAGE": None, "SHEET": "title blocks",
+    {"ID": "VR-09", "SET_SHEET": ALL_SHEETS, "TITLE": "title blocks",
      "BOX_UPRIGHT_PX": None, "READ": "owner, plot number, parcel and area fields only; no consultant name, no "
      "revision, no issue date on any sheet; the only date is the plot stamp on sheet 03 (May 06, 2026 11:21, "
      "P7757.dwg, A008-PC; its folder path carries a personal name, not reproduced)", "SCALE_CHECK": ""}]
@@ -126,6 +144,19 @@ VISUAL = [
 
 class Stop(Exception):
     pass
+
+
+def set_sheet(part, page):
+    return f"{SET_PARTS[part] + page:02d}"
+
+
+def sheet_location(sheet):
+    """(upload part, page in that part) of a set sheet '01'..'12'."""
+    n = int(sheet)
+    for part, off in SET_PARTS.items():
+        if off < n <= off + SET_PART_PAGES:
+            return part, n - off
+    raise Stop(f"sheet {sheet} is outside the {len(SET_PARTS) * SET_PART_PAGES}-sheet set")
 
 
 def check(cond, msg):
@@ -235,32 +266,60 @@ def pdf_identity():
         man = {o["file"]: o for o in objs(_j(SOURCE_MANIFEST)) if isinstance(o.get("file"), str) and "sha256" in o}
     rows, pages, ident = [], [], {}
     from pypdf import PdfReader
+    lane = "RASTER (one 4672 x 6624 JPEG per page; no text or vector layer)"
     for key, sha in NEW_PDFS.items():
         b = (BY_SHA / f"{sha}.pdf").read_bytes()
         earlier = man[EARLIER_NAME[key]]
         rel = SI.relation(b, earlier["sha256"])
         meta = {k: str(v) for k, v in (PdfReader(io.BytesIO(b)).metadata or {}).items()}
         imgs = _page_images(b)
-        restored = BY_SHA / f"{earlier['sha256']}.pdf"
-        restored_ok = restored.exists() and _sha(restored) == earlier["sha256"]
+        check(len(imgs) == SET_PART_PAGES, f"{key} holds {SET_PART_PAGES} sheets of the set")
         same_census = (len(imgs) == earlier["pages"] and all(
             [list(im[:2]) for im in pg["images"]] == c["image_px"] and pg["text_chars"] == c["text_chars"] == 0
             for pg, c in zip(imgs, earlier["page_census"])))
-        ident[key] = {"relation": rel["relation"], "earlier_sha256": earlier["sha256"]}
-        rows.append({"SOURCE_KEY": key, "NEW_SHA256": sha, "NEW_BYTES": len(b), "EARLIER_FILE": EARLIER_NAME[key],
-                     "EARLIER_SHA256": earlier["sha256"], "EARLIER_BYTES": earlier["bytes"],
-                     "BYTE_DELTA": len(b) - earlier["bytes"], "RELATION": rel["relation"],
-                     "REMOVED_INFO_BYTES": rel["removed_bytes"], "RECONSTRUCTED_SHA256": rel["reconstructed_sha256"],
-                     "NEW_METADATA": meta, "PAGES": len(imgs), "PAGE_CENSUS_MATCHES_EARLIER": same_census,
-                     "EARLIER_RESTORED_ON_DISK": restored_ok, "EARLIER_SHEETS": earlier.get("pdf_sheets"),
-                     "LANE": "RASTER (one 4672 x 6624 JPEG per page; no text or vector layer)",
-                     "REGISTERED_AS": "ADDITIONAL_SOURCE (not a replacement): same drawing content as the earlier file"})
+        sheets = f"{set_sheet(key, 1)}-{set_sheet(key, len(imgs))}"
+        ident[key] = {"relation": rel["relation"], "earlier_sha256": earlier["sha256"], "set_sheets": sheets}
+        rows.append({"SOURCE_KEY": key, "SET_SHEET": sheets, "NEW_SHA256": sha, "NEW_BYTES": len(b),
+                     "EARLIER_FILE": EARLIER_NAME[key], "EARLIER_SHA256": earlier["sha256"],
+                     "EARLIER_BYTES": earlier["bytes"], "BYTE_DELTA": len(b) - earlier["bytes"],
+                     "RELATION": rel["relation"], "REMOVED_INFO_BYTES": rel["removed_bytes"],
+                     "RECONSTRUCTED_SHA256": rel["reconstructed_sha256"], "NEW_METADATA": meta, "PAGES": len(imgs),
+                     "PAGE_CENSUS_MATCHES_EARLIER": same_census, "EARLIER_SHEETS": earlier.get("pdf_sheets"),
+                     "LANE": lane, "REGISTERED_AS": REGISTERED_AS, "FINDING": _finding(rel, earlier)})
         for pg in imgs:
-            pages.append({"SOURCE_KEY": key, "PAGE": pg["page"], "SHEET": (earlier.get("pdf_sheets") or [None] * 6)[pg["page"] - 1],
+            pages.append({"SOURCE_KEY": key, "PAGE": pg["page"], "SET_SHEET": set_sheet(key, pg["page"]),
+                          "SHEET": (earlier.get("pdf_sheets") or [None] * SET_PART_PAGES)[pg["page"] - 1],
                           "SIZE_PT": pg["size_pt"], "IMAGE_PX": [im[:2] for im in pg["images"]],
                           "IMAGE_FILTER": [im[2] for im in pg["images"]],
                           "IMAGE_SHA256": [im[3] for im in pg["images"]], "TEXT_CHARS": pg["text_chars"]})
+    parts = list(rows)
+    check([p["SET_SHEET"] for p in pages] == [f"{i:02d}" for i in range(1, len(SET_PARTS) * SET_PART_PAGES + 1)],
+          "the parts' pages are sheets 01-12 of one set, each once")
+    rows.insert(0, {
+        "SOURCE_KEY": SET_KEY, "SET_SHEET": ALL_SHEETS, "NEW_SHA256": None,
+        "NEW_BYTES": sum(r["NEW_BYTES"] for r in parts), "EARLIER_FILE": " + ".join(EARLIER_NAME[k] for k in NEW_PDFS),
+        "EARLIER_SHA256": None, "EARLIER_BYTES": sum(r["EARLIER_BYTES"] for r in parts),
+        "BYTE_DELTA": sum(r["BYTE_DELTA"] for r in parts), "RELATION": "DRAWING_SET",
+        "REMOVED_INFO_BYTES": sum(r["REMOVED_INFO_BYTES"] for r in parts), "RECONSTRUCTED_SHA256": None,
+        "NEW_METADATA": {"parts": {k: {"sha256": NEW_PDFS[k], "set_sheets": ident[k]["set_sheets"]} for k in NEW_PDFS},
+                         "split": "two lossless parts of one PDF, split only to meet an upload size limit"},
+        "PAGES": len(pages), "PAGE_CENSUS_MATCHES_EARLIER": all(r["PAGE_CENSUS_MATCHES_EARLIER"] for r in parts),
+        "EARLIER_SHEETS": [s for r in parts for s in (r["EARLIER_SHEETS"] or [])], "LANE": lane,
+        "REGISTERED_AS": REGISTERED_AS,
+        "FINDING": f"one drawing set of {len(pages)} sheets; " + "; ".join(
+            f"sheets {r['SET_SHEET']}: {r['FINDING']}" for r in parts)})
     return rows, pages, ident
+
+
+def _finding(rel, earlier):
+    """What the byte comparison shows. Evidence only: the earlier registration stands and is not replaced."""
+    ref = f"the earlier registered {earlier['file']} ({earlier['sha256'][:12]}…)"
+    if rel["relation"] == SI.IDENTICAL:
+        return f"byte-identical to {ref}"
+    if rel["relation"] == SI.WRAPPER_METADATA_ONLY:
+        return (f"byte-identical to {ref} after removing {rel['removed_bytes']} bytes of added /Title and /Subject "
+                "metadata")
+    return f"differs from {ref} beyond wrapper metadata"
 
 
 # ------------------------------------------------------------------ 02/03 the elevation and the plan (vector)
@@ -417,15 +476,16 @@ def dimension_register(el, pl):
     rows = []
 
     def add(i, src, handle, text, mm, levels, binds, authority, use, note=""):
-        rows.append({"DIM_ID": i, "SOURCE": src, "HANDLE": handle, "PRINTED": text, "MEASUREMENT_MM": mm,
-                     "WITNESS_LEVELS_M": levels, "BINDS_TO": binds, "AUTHORITY": authority, "USE": use, "NOTE": note})
+        sheet = ELEV_SHEET if "NW elevation" in src else PLAN_SHEET if "GF plan" in src else None
+        rows.append({"DIM_ID": i, "SET_SHEET": sheet, "SOURCE": src, "HANDLE": handle, "PRINTED": text,
+                     "MEASUREMENT_MM": mm, "WITNESS_LEVELS_M": levels, "BINDS_TO": binds, "AUTHORITY": authority, "USE": use, "NOTE": note})
     add("D-01", "P7757.dxf NW elevation", DATUM_DIM, E(DATUM_DIM)["text"], E(DATUM_DIM)["measurement_mm"],
         [sp[DATUM_DIM]["low_m"], sp[DATUM_DIM]["high_m"]], "DATUM: ±0.00 to the house ground floor +1.00",
         "STATED_DIMENSION", "level datum of every witness point below")
     add("D-02", "P7757.dxf NW elevation", DEPTH_DIM, E(DEPTH_DIM)["text"], E(DEPTH_DIM)["measurement_mm"],
         [sp[DEPTH_DIM]["low_m"], sp[DEPTH_DIM]["high_m"]], "SWIMMING POOL: inner depth, wall top to inner floor, at "
         "the drawn plane", "STATED_DIMENSION", "pool wall top +0.30 and inner floor -0.85 at that plane",
-        "the scanned sheet 08 prints the same '115' (VR-01)")
+        f"set sheet {ELEV_SHEET} prints the same '115' (VR-01)")
     add("D-03", "P7757.dxf NW elevation", STEP_DIM, E(STEP_DIM)["text"], E(STEP_DIM)["measurement_mm"],
         [sp[STEP_DIM]["low_m"], sp[STEP_DIM]["high_m"]], "BUILDING: pool wall top +0.30 to the house ground floor "
         "+1.00 under the curved glazing", "STATED_DIMENSION", "none for the pool (not a pool depth, not a step below "
@@ -445,9 +505,15 @@ def dimension_register(el, pl):
         add(f"D-P-{k}", "P7757.dxf GF plan", h, d["text"], d["measurement_mm"], None, binds, "STATED_DIMENSION",
             "corroborates the binding" if k != "PLAN_115" else "none: a plan distance, never a depth")
     for v in VISUAL:
-        add(v["ID"], f"scan {v['PDF']} p.{v['PAGE']}" if v["PAGE"] else "scans (all sheets)", "raster",
-            v["SHEET"], None, None, v["READ"], "VISUAL_RECORD (same drawing as the DXF; crops kept out of git)",
+        if v["SET_SHEET"] == ALL_SHEETS:
+            src = f"scan {SET_KEY} sheets {ALL_SHEETS} (every title block)"
+        else:
+            part, page = sheet_location(v["SET_SHEET"])
+            src = f"scan {SET_KEY} sheet {v['SET_SHEET']} ({part} p.{page})"
+        add(v["ID"], src, "raster", v["TITLE"], None, None, v["READ"],
+            "VISUAL_RECORD (same drawing as the DXF; crops kept out of git)",
             v["SCALE_CHECK"] or "identity / orientation", f"box {v['BOX_UPRIGHT_PX']}" if v["BOX_UPRIGHT_PX"] else "")
+        rows[-1]["SET_SHEET"] = v["SET_SHEET"]
     return rows
 
 
@@ -611,10 +677,15 @@ def conservation(ctx):
         f"{len(m82['outputs'])} outputs; S8.2 files checked {ctx['frozen']['S8.2']['files_checked']}")
     add("A-02", "every earlier frozen stage verifies", len(ctx["frozen"]) == len(MANIFESTS),
         f"{len(ctx['frozen'])} manifests")
-    rel = {r["SOURCE_KEY"]: r["RELATION"] for r in ctx["identity"]}
-    add("A-03", "both architectural PDFs are the earlier sources apart from wrapper metadata",
-        all(v == SI.WRAPPER_METADATA_ONLY for v in rel.values()) and all(r["PAGE_CENSUS_MATCHES_EARLIER"]
-                                                                          for r in ctx["identity"]), str(rel))
+    parts = [r for r in ctx["identity"] if r["SOURCE_KEY"] in NEW_PDFS]
+    sets = [r for r in ctx["identity"] if r["SOURCE_KEY"] == SET_KEY]
+    rel = {r["SOURCE_KEY"]: r["RELATION"] for r in parts}
+    add("A-03", "the set's two upload parts match the earlier registered parts apart from wrapper metadata; the set "
+        "is registered as additional evidence, not as a replacement",
+        len(sets) == 1 and sets[0]["PAGES"] == 12 and len(parts) == len(NEW_PDFS)
+        and all(v == SI.WRAPPER_METADATA_ONLY for v in rel.values())
+        and all(r["PAGE_CENSUS_MATCHES_EARLIER"] for r in parts)
+        and all(r["REGISTERED_AS"] == REGISTERED_AS for r in sets + parts), str(rel))
     add("A-04", "the depth dimension binds to the pool on label, dimension and feature criteria",
         ctx["verdict"]["state"] == EB.BOUND and not ctx["verdict"]["failed"], json.dumps(ctx["verdict"]))
     sp = ctx["el"]["span"]
@@ -643,6 +714,13 @@ def conservation(ctx):
                                                         for r in ctx["sens"]), f"{len(ctx['sens'])} cases")
     pkg = [p.name for p in HERE.iterdir() if p.suffix.lower() in (".png", ".jpg", ".jpeg", ".pdf", ".dxf", ".dwg")]
     add("A-12", "no client drawing, scan or crop in the package", not pkg, f"{pkg}")
+    sheets = [f"{i:02d}" for i in range(1, 13)]
+    vis = [r for r in ctx["dims"] if r["HANDLE"] == "raster"]
+    add("A-13", "one 12-sheet set: every page is one set sheet, every visual record and dimension row names its sheet",
+        [p["SET_SHEET"] for p in ctx["pages"]] == sheets and len(vis) == len(VISUAL)
+        and all(r["SET_SHEET"] in sheets + [ALL_SHEETS] for r in ctx["dims"])
+        and all(sheet_location(r["SET_SHEET"])[0] in r["SOURCE"] for r in vis if r["SET_SHEET"] != ALL_SHEETS),
+        f"{len(ctx['pages'])} pages; {len(ctx['dims'])} dimension rows, {len(vis)} visual records")
     return out
 
 
@@ -679,7 +757,8 @@ def build():
     bind_rows.append({"CRITERION": "VERDICT", "KIND": "BINDING", "SATISFIED": verdict["state"] == EB.BOUND,
                       "EVIDENCE": f"{verdict['state']}: '115' ({DEPTH_DIM}) measures the swimming pool; '70' "
                                   f"({STEP_DIM}) measures the building (pool wall top to the house floor)"})
-    _csv(OUTPUTS[1], identity + [{"SOURCE_KEY": p["SOURCE_KEY"], "NEW_SHA256": f"page {p['PAGE']}",
+    _csv(OUTPUTS[1], identity + [{"SOURCE_KEY": p["SOURCE_KEY"], "SET_SHEET": p["SET_SHEET"],
+                                  "NEW_SHA256": f"page {p['PAGE']}",
                                   "EARLIER_FILE": p["SHEET"], "RELATION": "PAGE_IMAGE",
                                   "NEW_METADATA": {"size_pt": p["SIZE_PT"], "image_px": p["IMAGE_PX"],
                                                    "filter": p["IMAGE_FILTER"], "text_chars": p["TEXT_CHARS"],
@@ -692,26 +771,30 @@ def build():
     _csv(OUTPUTS[6], blocked, list(blocked[0]))
     _csv(OUTPUTS[7], cq, list(cq[0]))
     _csv(OUTPUTS[8], sens, list(sens[0]))
-    ctx = {"frozen": frozen, "identity": identity, "verdict": verdict, "el": el, "interp": interp, "ready": ready,
+    ctx = {"frozen": frozen, "identity": identity, "pages": pages, "verdict": verdict, "el": el, "interp": interp, "ready": ready,
            "dims": dims, "sens": sens}
     cons = conservation(ctx)
     _csv(OUTPUTS[9], cons, list(cons[0]))
     check(all(c["RESULT"] == "PASS" for c in cons), "; ".join(f"{c['CHECK_ID']} {c['DETAIL']}" for c in cons
                                                              if c["RESULT"] != "PASS"))
     prov = [{"record": r["DIM_ID"], "output": OUTPUTS[3], "source": r["SOURCE"], "handle": r["HANDLE"],
-             "drawing_sha256": ARCH_SHA if r["HANDLE"] != "raster" else
-             NEW_PDFS["ARCH_PART_2_PAGES_07-12" if "07-12" in r["SOURCE"] else "ARCH_PART_1_PAGES_01-06"],
+             "set_sheet": r["SET_SHEET"], "drawing_sha256": ARCH_SHA if r["HANDLE"] != "raster" else
+             list(NEW_PDFS.values()) if r["SET_SHEET"] == ALL_SHEETS else NEW_PDFS[sheet_location(r["SET_SHEET"])[0]],
              "authority": r["AUTHORITY"]} for r in dims]
     prov += [{"record": c["CRITERION"], "output": OUTPUTS[2], "kind": c["KIND"], "satisfied": c["SATISFIED"],
               "drawing_sha256": ARCH_SHA} for c in bind_rows]
-    prov += [{"record": r["SOURCE_KEY"], "output": OUTPUTS[1], "relation": r["RELATION"], "sha256": r["NEW_SHA256"],
-              "earlier_sha256": r["EARLIER_SHA256"]} for r in identity]
+    prov += [{"record": r["SOURCE_KEY"], "output": OUTPUTS[1], "relation": r["RELATION"], "set_sheet": r["SET_SHEET"],
+              "sha256": r["NEW_SHA256"] or list(NEW_PDFS.values()), "earlier_sha256": r["EARLIER_SHA256"],
+              "registered_as": r["REGISTERED_AS"]} for r in identity]
     (HERE / OUTPUTS[10]).write_text("".join(json.dumps(x, sort_keys=True, ensure_ascii=False) + "\n" for x in prov),
                                     encoding="utf-8")
     sp = el["span"]
     summary = {
         "round": ROUND, "date": DATE, "baseline": BASELINE_HEAD, "policy": POLICY,
         "engine_commit": f"{BASELINE_HEAD}+code:{code_digest()}",
+        "pdf_set": {"key": SET_KEY, "sheets": len(pages), "registered_as": REGISTERED_AS,
+                    "parts": {k: v["set_sheets"] for k, v in ident.items()},
+                    "finding": next(r["FINDING"] for r in identity if r["SOURCE_KEY"] == SET_KEY)},
         "pdf_identity": ident,
         "binding": {"115": {"handle": DEPTH_DIM, "state": verdict["state"], "object": "SWIMMING_POOL",
                             "measures": "inner depth, wall top to inner floor, at the drawn plane",
@@ -736,7 +819,7 @@ def build():
     _json(OUTPUTS[11], summary)
     (HERE / OUTPUTS[0]).write_text(readme(summary, identity, crit, interp), encoding="utf-8")
     manifest = {"round": ROUND, "date": DATE, "baseline": BASELINE_HEAD, "state": "FROZEN_CORRECTION_LAYER",
-                "corrects": "S8.2 (frozen, unchanged)", "engine_commit_stamp": summary["engine_commit"],
+                "corrects": "S8.2 (frozen, unchanged)", "amends_s8_2a_freeze": AMENDS, "engine_commit_stamp": summary["engine_commit"],
                 "references_read": [], "code": {c: _sha(ROOT / c) for c in CODE},
                 "inputs": {str(SOURCE_MANIFEST.relative_to(ROOT)): _sha(SOURCE_MANIFEST),
                            "research/pre_s5_1_source_resolution/PRE_S5_1_SUMMARY.json":
@@ -769,11 +852,24 @@ def readme(s, identity, crit, interp):
          f"{s['released']['reinforcement_kg']:g} kg. The floor profile is a **{s['floor_profile']}**: the "
          "architectural elevation draws one flat floor, the structural detail a deep end, a slope and a shallow end. "
          "So no single depth applies to the whole pool.", "",
-         "## Source identity", ""]
-    for r in identity:
-        L.append(f"- `{r['SOURCE_KEY']}` `{r['NEW_SHA256'][:12]}…` against the earlier `{r['EARLIER_SHA256'][:12]}…`: "
-                 f"**{r['RELATION']}**. The new file is {r['BYTE_DELTA']} bytes longer, entirely from an added "
-                 "/Title and /Subject. Removing them reproduces the earlier file's SHA-256 exactly.")
+         "## Source identity: one 12-sheet drawing set", "",
+         f"`{SET_KEY}` is one architectural drawing set of {s['pdf_set']['sheets']} sheets. It was uploaded as two "
+         "lossless parts only to meet an upload size limit. It is registered as **additional architectural "
+         "evidence**, not as a replacement for the earlier registered PDFs.", ""]
+    parts = [r for r in identity if r["SOURCE_KEY"] in NEW_PDFS]
+    for r in parts:
+        L.append(f"- Sheets {r['SET_SHEET']}: part `{r['SOURCE_KEY']}` `{r['NEW_SHA256'][:12]}…`. Finding "
+                 f"(**{r['RELATION']}**): {r['FINDING']}.")
+    L += ["", "The finding is evidence about the bytes. It does not change any registration.", "",
+          "| set sheet | registered title | upload part, page | visual record |", "|---|---|---|---|"]
+    vr = {}
+    for v in VISUAL:
+        vr.setdefault(v["SET_SHEET"], []).append(v["ID"])
+    for r in parts:
+        for i, title in enumerate(r["EARLIER_SHEETS"] or [], 1):
+            sh = set_sheet(r["SOURCE_KEY"], i)
+            L.append(f"| {sh} | {title} | {r['SOURCE_KEY']} p.{i} | {', '.join(vr.get(sh, [])) or '-'} |")
+    L += ["", f"Title blocks of all 12 sheets: {', '.join(vr.get(ALL_SHEETS, []))}."]
     L += ["", "## Binding criteria (vector DXF)", ""] + [f"- [{'x' if c['ok'] else ' '}] {c['kind']}: {c['detail']}"
                                                           for c in crit]
     L += ["", "## Pool levels and zones", "", "| item | value | state |", "|---|---|---|"]
@@ -787,7 +883,7 @@ def main():
         s = build()
     except Stop as e:
         raise SystemExit(f"STOP: {e}")
-    print(json.dumps({k: s[k] for k in ("pdf_identity", "binding", "newly_established", "floor_profile", "released",
+    print(json.dumps({k: s[k] for k in ("pdf_set", "pdf_identity", "binding", "newly_established", "floor_profile", "released",
                                         "conservation")}, indent=1, sort_keys=True, ensure_ascii=False))
 
 
