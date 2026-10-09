@@ -9,7 +9,9 @@ Baseline HEAD `104c9d6`. Commits of the round:
 | `3df638b` | **The blind freeze**: 16 outputs + `16_S8_3_FREEZE_MANIFEST.json` (`FROZEN_BEFORE_COMPARISON`, `references_read: []`) and the package tests |
 | `5087db8` | The post-freeze comparison and its tests (COMPARISON_MODULES) |
 | `0fc1a9e` | The test-gate classifier (`research/environment_recovery/classify_test_run.py`) |
-| this commit | This record and the gate report `TEST_GATE_0fc1a9e.json` |
+| `fd6a857` | This record and the gate report `TEST_GATE_0fc1a9e.json` |
+| `ac788a5` | **Errata** (`errata/`): a dated layer over the frozen package; no quantity moved (see below) |
+| this commit | Run 8 on the errata commit and `TEST_GATE_ac788a5.json` |
 
 S8.3 releases **5.081361 m3** of concrete and **602.111304 kg** of reinforcement, both PROJECT_BASIS_QTO:
 
@@ -88,11 +90,14 @@ aside.
 | Run | Commit | Passed | Failed | Errors | Skipped | xfailed | Time | Exit |
 |---|---|---|---|---|---|---|---|---|
 | 7 | `0fc1a9e` | 6744 | 344 | 32 | 138 | 100 | 320.0 s | 1 |
+| 8 | `ac788a5` | **6748** | 344 | 32 | 138 | 100 | 353.0 s | 1 |
 
 Run 6 (`0aa0642`, S8.2A) had 6689 passed. The 55 extra passes are this round's 52 S8.3 tests and 3 environment tests.
 The set of failing test IDs is identical in runs 4 to 7.
 
-### Every test, classified (`classify_test_run.py`)
+Run 8 adds the 4 errata tests. Its failing set is identical to run 7's, and its classification is the same apart from 6748 executed and passed (`TEST_GATE_ac788a5.json`).
+
+### Every test, classified (`classify_test_run.py`, run 7)
 
 | Class | Tests | Meaning |
 |---|---|---|
@@ -121,6 +126,20 @@ The 376 blocked tests, by missing path:
 The gate stays INCOMPLETE until the private fixtures and the sealed benchmark evidence are restored. The blind builders
 never read benchmark truth. Test IDs and missing paths are in `TEST_GATE_0fc1a9e.json`; it holds no content and no
 benchmark value.
+
+## Errata (after the post-freeze comparison)
+
+A re-audit against the brief's "anchorage and junction bars" item found two defects in the frozen notation register.
+They are recorded in `errata/` without editing the frozen package; the manifest verifies before and after.
+
+- **S8.3-E01:** a wrong note. Both ring cuts draw all labelled bars.
+- **S8.3-E02:** a missing object. One unlabelled small bar per cut sits against the bend of the shell bar. It is added
+  as `UNLABELLED_JUNCTION_BAR`, one blocked family per dome.
+- **S8.3-E03:** evidence for the mirrored-block test on the real drawings.
+  - No dome entity has a -Z extrusion or sits in a mirrored insert.
+  - The architectural DXF's 13 mirrored inserts are door and window blocks, none within 3 m of a dome.
+
+Released quantities are unchanged.
 
 ## Limitations
 
