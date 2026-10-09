@@ -1,0 +1,293 @@
+VIEW,LINTEL_ID,FLOOR,ROW,ROLE,DIA_MM,COUNT,EACH_MM,TOTAL_MM,KG,LANE,COUNT_BASIS,LENGTH_BASIS
+PROJECT_BASIS_QTO,LT-OP-GF-005,GF,L1,BOTTOM,12,2,1374.11489,2748.22978,2.442870915,PROJECT_BASIS_QTO,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+PROJECT_BASIS_QTO,LT-OP-GF-005,GF,L1,TOP,10,2,1374.11489,2748.22978,1.696438136,PROJECT_BASIS_QTO,schedule '2Ø10',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+PROJECT_BASIS_QTO,LT-OP-GF-005,GF,L1,STIRRUP,8,8,468,3744,1.479111111,PROJECT_BASIS_QTO,"ceil(5/m x 1.4241 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+PHYSICAL_BBS,LT-OP-GF-005,GF,L1,BOTTOM,12,2,1374.1,,,BLOCKED_UNQUANTIFIED,fabrication count = bars per lintel,"straight portion only: shape code / bends / hooks blocked (not dimensioned), so no cut length is issued"
+PHYSICAL_BBS,LT-OP-GF-005,GF,L1,TOP,10,2,1374.1,,,BLOCKED_UNQUANTIFIED,fabrication count = bars per lintel,"straight portion only: shape code / bends / hooks blocked (not dimensioned), so no cut length is issued"
+PHYSICAL_BBS,LT-OP-GF-005,GF,L1,STIRRUP,8,8,468,,,BLOCKED_UNQUANTIFIED,fabrication count = bars per lintel,"straight portion only: shape code / bends / hooks blocked (not dimensioned), so no cut length is issued"
+BLOCKED_ROLE,LT-OP-GF-005,GF,L1,BOTTOM_END_BENDS,,,,,,BLOCKED_UNQUANTIFIED,,drawn bent into the bearing on the LINTEL DETAIL; no length printed
+BLOCKED_ROLE,LT-OP-GF-005,GF,L1,TOP_END_BENDS,,,,,,BLOCKED_UNQUANTIFIED,,drawn bent into the bearing on the LINTEL DETAIL; no length printed
+BLOCKED_ROLE,LT-OP-GF-005,GF,L1,STIRRUP_HOOKS,,,,,,BLOCKED_UNQUANTIFIED,,SECT (2-2) draws hooks; no hook length printed
+BLOCKED_ROLE,LT-OP-GF-005,GF,L1,LAPS,,,,,,BLOCKED_UNQUANTIFIED,,none drawn: the LINTEL DETAIL shows each bar continuous over the lintel; none measured
+PROJECT_BASIS_QTO,LT-OP-GF-008,GF,L1,BOTTOM,12,2,1550,3100,2.755555556,PROJECT_BASIS_QTO,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+PROJECT_BASIS_QTO,LT-OP-GF-008,GF,L1,TOP,10,2,1550,3100,1.913580247,PROJECT_BASIS_QTO,schedule '2Ø10',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+PROJECT_BASIS_QTO,LT-OP-GF-008,GF,L1,STIRRUP,8,8,468,3744,1.479111111,PROJECT_BASIS_QTO,"ceil(5/m x 1.6 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+PHYSICAL_BBS,LT-OP-GF-008,GF,L1,BOTTOM,12,2,1550,,,BLOCKED_UNQUANTIFIED,fabrication count = bars per lintel,"straight portion only: shape code / bends / hooks blocked (not dimensioned), so no cut length is issued"
+PHYSICAL_BBS,LT-OP-GF-008,GF,L1,TOP,10,2,1550,,,BLOCKED_UNQUANTIFIED,fabrication count = bars per lintel,"straight portion only: shape code / bends / hooks blocked (not dimensioned), so no cut length is issued"
+PHYSICAL_BBS,LT-OP-GF-008,GF,L1,STIRRUP,8,8,468,,,BLOCKED_UNQUANTIFIED,fabrication count = bars per lintel,"straight portion only: shape code / bends / hooks blocked (not dimensioned), so no cut length is issued"
+BLOCKED_ROLE,LT-OP-GF-008,GF,L1,BOTTOM_END_BENDS,,,,,,BLOCKED_UNQUANTIFIED,,drawn bent into the bearing on the LINTEL DETAIL; no length printed
+BLOCKED_ROLE,LT-OP-GF-008,GF,L1,TOP_END_BENDS,,,,,,BLOCKED_UNQUANTIFIED,,drawn bent into the bearing on the LINTEL DETAIL; no length printed
+BLOCKED_ROLE,LT-OP-GF-008,GF,L1,STIRRUP_HOOKS,,,,,,BLOCKED_UNQUANTIFIED,,SECT (2-2) draws hooks; no hook length printed
+BLOCKED_ROLE,LT-OP-GF-008,GF,L1,LAPS,,,,,,BLOCKED_UNQUANTIFIED,,none drawn: the LINTEL DETAIL shows each bar continuous over the lintel; none measured
+PROJECT_BASIS_QTO,LT-OP-GF-013,GF,L1,BOTTOM,12,2,1450.5,2901,2.578666667,PROJECT_BASIS_QTO,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+PROJECT_BASIS_QTO,LT-OP-GF-013,GF,L1,TOP,10,2,1450.5,2901,1.790740741,PROJECT_BASIS_QTO,schedule '2Ø10',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+PROJECT_BASIS_QTO,LT-OP-GF-013,GF,L1,STIRRUP,8,8,568,4544,1.795160494,PROJECT_BASIS_QTO,"ceil(5/m x 1.5005 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+PHYSICAL_BBS,LT-OP-GF-013,GF,L1,BOTTOM,12,2,1450.5,,,BLOCKED_UNQUANTIFIED,fabrication count = bars per lintel,"straight portion only: shape code / bends / hooks blocked (not dimensioned), so no cut length is issued"
+PHYSICAL_BBS,LT-OP-GF-013,GF,L1,TOP,10,2,1450.5,,,BLOCKED_UNQUANTIFIED,fabrication count = bars per lintel,"straight portion only: shape code / bends / hooks blocked (not dimensioned), so no cut length is issued"
+PHYSICAL_BBS,LT-OP-GF-013,GF,L1,STIRRUP,8,8,568,,,BLOCKED_UNQUANTIFIED,fabrication count = bars per lintel,"straight portion only: shape code / bends / hooks blocked (not dimensioned), so no cut length is issued"
+BLOCKED_ROLE,LT-OP-GF-013,GF,L1,BOTTOM_END_BENDS,,,,,,BLOCKED_UNQUANTIFIED,,drawn bent into the bearing on the LINTEL DETAIL; no length printed
+BLOCKED_ROLE,LT-OP-GF-013,GF,L1,TOP_END_BENDS,,,,,,BLOCKED_UNQUANTIFIED,,drawn bent into the bearing on the LINTEL DETAIL; no length printed
+BLOCKED_ROLE,LT-OP-GF-013,GF,L1,STIRRUP_HOOKS,,,,,,BLOCKED_UNQUANTIFIED,,SECT (2-2) draws hooks; no hook length printed
+BLOCKED_ROLE,LT-OP-GF-013,GF,L1,ANCHORAGE_INTO_COLUMN_START,,,,,,BLOCKED_UNQUANTIFIED,,the lintel frames into a column face; no anchorage or dowel detail is printed (P8-N09 40D/70D is for starters)
+BLOCKED_ROLE,LT-OP-GF-013,GF,L1,LAPS,,,,,,BLOCKED_UNQUANTIFIED,,none drawn: the LINTEL DETAIL shows each bar continuous over the lintel; none measured
+PROJECT_BASIS_QTO,LT-OP-GF-014,GF,L2,BOTTOM,14,2,2250,4500,5.444444444,PROJECT_BASIS_QTO,schedule '2Ø14',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+PROJECT_BASIS_QTO,LT-OP-GF-014,GF,L2,TOP,12,2,2250,4500,4,PROJECT_BASIS_QTO,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+PROJECT_BASIS_QTO,LT-OP-GF-014,GF,L2,STIRRUP,8,12,568,6816,2.692740741,PROJECT_BASIS_QTO,"ceil(5/m x 2.3 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+PHYSICAL_BBS,LT-OP-GF-014,GF,L2,BOTTOM,14,2,2250,,,BLOCKED_UNQUANTIFIED,fabrication count = bars per lintel,"straight portion only: shape code / bends / hooks blocked (not dimensioned), so no cut length is issued"
+PHYSICAL_BBS,LT-OP-GF-014,GF,L2,TOP,12,2,2250,,,BLOCKED_UNQUANTIFIED,fabrication count = bars per lintel,"straight portion only: shape code / bends / hooks blocked (not dimensioned), so no cut length is issued"
+PHYSICAL_BBS,LT-OP-GF-014,GF,L2,STIRRUP,8,12,568,,,BLOCKED_UNQUANTIFIED,fabrication count = bars per lintel,"straight portion only: shape code / bends / hooks blocked (not dimensioned), so no cut length is issued"
+BLOCKED_ROLE,LT-OP-GF-014,GF,L2,BOTTOM_END_BENDS,,,,,,BLOCKED_UNQUANTIFIED,,drawn bent into the bearing on the LINTEL DETAIL; no length printed
+BLOCKED_ROLE,LT-OP-GF-014,GF,L2,TOP_END_BENDS,,,,,,BLOCKED_UNQUANTIFIED,,drawn bent into the bearing on the LINTEL DETAIL; no length printed
+BLOCKED_ROLE,LT-OP-GF-014,GF,L2,STIRRUP_HOOKS,,,,,,BLOCKED_UNQUANTIFIED,,SECT (2-2) draws hooks; no hook length printed
+BLOCKED_ROLE,LT-OP-GF-014,GF,L2,LAPS,,,,,,BLOCKED_UNQUANTIFIED,,none drawn: the LINTEL DETAIL shows each bar continuous over the lintel; none measured
+PROJECT_BASIS_QTO,LT-OP-GF-018,GF,L1,BOTTOM,12,2,1450.5,2901,2.578666667,PROJECT_BASIS_QTO,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+PROJECT_BASIS_QTO,LT-OP-GF-018,GF,L1,TOP,10,2,1450.5,2901,1.790740741,PROJECT_BASIS_QTO,schedule '2Ø10',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+PROJECT_BASIS_QTO,LT-OP-GF-018,GF,L1,STIRRUP,8,8,568,4544,1.795160494,PROJECT_BASIS_QTO,"ceil(5/m x 1.5005 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+PHYSICAL_BBS,LT-OP-GF-018,GF,L1,BOTTOM,12,2,1450.5,,,BLOCKED_UNQUANTIFIED,fabrication count = bars per lintel,"straight portion only: shape code / bends / hooks blocked (not dimensioned), so no cut length is issued"
+PHYSICAL_BBS,LT-OP-GF-018,GF,L1,TOP,10,2,1450.5,,,BLOCKED_UNQUANTIFIED,fabrication count = bars per lintel,"straight portion only: shape code / bends / hooks blocked (not dimensioned), so no cut length is issued"
+PHYSICAL_BBS,LT-OP-GF-018,GF,L1,STIRRUP,8,8,568,,,BLOCKED_UNQUANTIFIED,fabrication count = bars per lintel,"straight portion only: shape code / bends / hooks blocked (not dimensioned), so no cut length is issued"
+BLOCKED_ROLE,LT-OP-GF-018,GF,L1,BOTTOM_END_BENDS,,,,,,BLOCKED_UNQUANTIFIED,,drawn bent into the bearing on the LINTEL DETAIL; no length printed
+BLOCKED_ROLE,LT-OP-GF-018,GF,L1,TOP_END_BENDS,,,,,,BLOCKED_UNQUANTIFIED,,drawn bent into the bearing on the LINTEL DETAIL; no length printed
+BLOCKED_ROLE,LT-OP-GF-018,GF,L1,STIRRUP_HOOKS,,,,,,BLOCKED_UNQUANTIFIED,,SECT (2-2) draws hooks; no hook length printed
+BLOCKED_ROLE,LT-OP-GF-018,GF,L1,ANCHORAGE_INTO_COLUMN_END,,,,,,BLOCKED_UNQUANTIFIED,,the lintel frames into a column face; no anchorage or dowel detail is printed (P8-N09 40D/70D is for starters)
+BLOCKED_ROLE,LT-OP-GF-018,GF,L1,LAPS,,,,,,BLOCKED_UNQUANTIFIED,,none drawn: the LINTEL DETAIL shows each bar continuous over the lintel; none measured
+PROJECT_BASIS_QTO,LT-OP-GF-021,GF,L1,BOTTOM,12,2,1400.5,2801,2.489777778,PROJECT_BASIS_QTO,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+PROJECT_BASIS_QTO,LT-OP-GF-021,GF,L1,TOP,10,2,1400.5,2801,1.729012346,PROJECT_BASIS_QTO,schedule '2Ø10',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+PROJECT_BASIS_QTO,LT-OP-GF-021,GF,L1,STIRRUP,8,8,468,3744,1.479111111,PROJECT_BASIS_QTO,"ceil(5/m x 1.4505 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+PHYSICAL_BBS,LT-OP-GF-021,GF,L1,BOTTOM,12,2,1400.5,,,BLOCKED_UNQUANTIFIED,fabrication count = bars per lintel,"straight portion only: shape code / bends / hooks blocked (not dimensioned), so no cut length is issued"
+PHYSICAL_BBS,LT-OP-GF-021,GF,L1,TOP,10,2,1400.5,,,BLOCKED_UNQUANTIFIED,fabrication count = bars per lintel,"straight portion only: shape code / bends / hooks blocked (not dimensioned), so no cut length is issued"
+PHYSICAL_BBS,LT-OP-GF-021,GF,L1,STIRRUP,8,8,468,,,BLOCKED_UNQUANTIFIED,fabrication count = bars per lintel,"straight portion only: shape code / bends / hooks blocked (not dimensioned), so no cut length is issued"
+BLOCKED_ROLE,LT-OP-GF-021,GF,L1,BOTTOM_END_BENDS,,,,,,BLOCKED_UNQUANTIFIED,,drawn bent into the bearing on the LINTEL DETAIL; no length printed
+BLOCKED_ROLE,LT-OP-GF-021,GF,L1,TOP_END_BENDS,,,,,,BLOCKED_UNQUANTIFIED,,drawn bent into the bearing on the LINTEL DETAIL; no length printed
+BLOCKED_ROLE,LT-OP-GF-021,GF,L1,STIRRUP_HOOKS,,,,,,BLOCKED_UNQUANTIFIED,,SECT (2-2) draws hooks; no hook length printed
+BLOCKED_ROLE,LT-OP-GF-021,GF,L1,LAPS,,,,,,BLOCKED_UNQUANTIFIED,,none drawn: the LINTEL DETAIL shows each bar continuous over the lintel; none measured
+PROJECT_BASIS_QTO,LT-OP-GF-028,GF,L1,BOTTOM,12,2,1750,3500,3.111111111,PROJECT_BASIS_QTO,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+PROJECT_BASIS_QTO,LT-OP-GF-028,GF,L1,TOP,10,2,1750,3500,2.160493827,PROJECT_BASIS_QTO,schedule '2Ø10',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+PROJECT_BASIS_QTO,LT-OP-GF-028,GF,L1,STIRRUP,8,9,468,4212,1.664,PROJECT_BASIS_QTO,"ceil(5/m x 1.8 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+PHYSICAL_BBS,LT-OP-GF-028,GF,L1,BOTTOM,12,2,1750,,,BLOCKED_UNQUANTIFIED,fabrication count = bars per lintel,"straight portion only: shape code / bends / hooks blocked (not dimensioned), so no cut length is issued"
+PHYSICAL_BBS,LT-OP-GF-028,GF,L1,TOP,10,2,1750,,,BLOCKED_UNQUANTIFIED,fabrication count = bars per lintel,"straight portion only: shape code / bends / hooks blocked (not dimensioned), so no cut length is issued"
+PHYSICAL_BBS,LT-OP-GF-028,GF,L1,STIRRUP,8,9,468,,,BLOCKED_UNQUANTIFIED,fabrication count = bars per lintel,"straight portion only: shape code / bends / hooks blocked (not dimensioned), so no cut length is issued"
+BLOCKED_ROLE,LT-OP-GF-028,GF,L1,BOTTOM_END_BENDS,,,,,,BLOCKED_UNQUANTIFIED,,drawn bent into the bearing on the LINTEL DETAIL; no length printed
+BLOCKED_ROLE,LT-OP-GF-028,GF,L1,TOP_END_BENDS,,,,,,BLOCKED_UNQUANTIFIED,,drawn bent into the bearing on the LINTEL DETAIL; no length printed
+BLOCKED_ROLE,LT-OP-GF-028,GF,L1,STIRRUP_HOOKS,,,,,,BLOCKED_UNQUANTIFIED,,SECT (2-2) draws hooks; no hook length printed
+BLOCKED_ROLE,LT-OP-GF-028,GF,L1,LAPS,,,,,,BLOCKED_UNQUANTIFIED,,none drawn: the LINTEL DETAIL shows each bar continuous over the lintel; none measured
+PROJECT_BASIS_QTO,LT-OP-GF-029,GF,L1,BOTTOM,12,2,1339.681073,2679.362146,2.381655241,PROJECT_BASIS_QTO,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+PROJECT_BASIS_QTO,LT-OP-GF-029,GF,L1,TOP,10,2,1339.681073,2679.362146,1.653927251,PROJECT_BASIS_QTO,schedule '2Ø10',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+PROJECT_BASIS_QTO,LT-OP-GF-029,GF,L1,STIRRUP,8,7,468,3276,1.294222222,PROJECT_BASIS_QTO,"ceil(5/m x 1.3897 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+PHYSICAL_BBS,LT-OP-GF-029,GF,L1,BOTTOM,12,2,1339.7,,,BLOCKED_UNQUANTIFIED,fabrication count = bars per lintel,"straight portion only: shape code / bends / hooks blocked (not dimensioned), so no cut length is issued"
+PHYSICAL_BBS,LT-OP-GF-029,GF,L1,TOP,10,2,1339.7,,,BLOCKED_UNQUANTIFIED,fabrication count = bars per lintel,"straight portion only: shape code / bends / hooks blocked (not dimensioned), so no cut length is issued"
+PHYSICAL_BBS,LT-OP-GF-029,GF,L1,STIRRUP,8,7,468,,,BLOCKED_UNQUANTIFIED,fabrication count = bars per lintel,"straight portion only: shape code / bends / hooks blocked (not dimensioned), so no cut length is issued"
+BLOCKED_ROLE,LT-OP-GF-029,GF,L1,BOTTOM_END_BENDS,,,,,,BLOCKED_UNQUANTIFIED,,drawn bent into the bearing on the LINTEL DETAIL; no length printed
+BLOCKED_ROLE,LT-OP-GF-029,GF,L1,TOP_END_BENDS,,,,,,BLOCKED_UNQUANTIFIED,,drawn bent into the bearing on the LINTEL DETAIL; no length printed
+BLOCKED_ROLE,LT-OP-GF-029,GF,L1,STIRRUP_HOOKS,,,,,,BLOCKED_UNQUANTIFIED,,SECT (2-2) draws hooks; no hook length printed
+BLOCKED_ROLE,LT-OP-GF-029,GF,L1,LAPS,,,,,,BLOCKED_UNQUANTIFIED,,none drawn: the LINTEL DETAIL shows each bar continuous over the lintel; none measured
+PROJECT_BASIS_QTO,LT-OP-1F-003,1F,L1,BOTTOM,12,2,1550,3100,2.755555556,PROJECT_BASIS_QTO,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+PROJECT_BASIS_QTO,LT-OP-1F-003,1F,L1,TOP,10,2,1550,3100,1.913580247,PROJECT_BASIS_QTO,schedule '2Ø10',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+PROJECT_BASIS_QTO,LT-OP-1F-003,1F,L1,STIRRUP,8,8,468,3744,1.479111111,PROJECT_BASIS_QTO,"ceil(5/m x 1.6 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+PHYSICAL_BBS,LT-OP-1F-003,1F,L1,BOTTOM,12,2,1550,,,BLOCKED_UNQUANTIFIED,fabrication count = bars per lintel,"straight portion only: shape code / bends / hooks blocked (not dimensioned), so no cut length is issued"
+PHYSICAL_BBS,LT-OP-1F-003,1F,L1,TOP,10,2,1550,,,BLOCKED_UNQUANTIFIED,fabrication count = bars per lintel,"straight portion only: shape code / bends / hooks blocked (not dimensioned), so no cut length is issued"
+PHYSICAL_BBS,LT-OP-1F-003,1F,L1,STIRRUP,8,8,468,,,BLOCKED_UNQUANTIFIED,fabrication count = bars per lintel,"straight portion only: shape code / bends / hooks blocked (not dimensioned), so no cut length is issued"
+BLOCKED_ROLE,LT-OP-1F-003,1F,L1,BOTTOM_END_BENDS,,,,,,BLOCKED_UNQUANTIFIED,,drawn bent into the bearing on the LINTEL DETAIL; no length printed
+BLOCKED_ROLE,LT-OP-1F-003,1F,L1,TOP_END_BENDS,,,,,,BLOCKED_UNQUANTIFIED,,drawn bent into the bearing on the LINTEL DETAIL; no length printed
+BLOCKED_ROLE,LT-OP-1F-003,1F,L1,STIRRUP_HOOKS,,,,,,BLOCKED_UNQUANTIFIED,,SECT (2-2) draws hooks; no hook length printed
+BLOCKED_ROLE,LT-OP-1F-003,1F,L1,LAPS,,,,,,BLOCKED_UNQUANTIFIED,,none drawn: the LINTEL DETAIL shows each bar continuous over the lintel; none measured
+PROJECT_BASIS_QTO,LT-OP-1F-014,1F,L1,BOTTOM,12,2,1550,3100,2.755555556,PROJECT_BASIS_QTO,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+PROJECT_BASIS_QTO,LT-OP-1F-014,1F,L1,TOP,10,2,1550,3100,1.913580247,PROJECT_BASIS_QTO,schedule '2Ø10',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+PROJECT_BASIS_QTO,LT-OP-1F-014,1F,L1,STIRRUP,8,8,468,3744,1.479111111,PROJECT_BASIS_QTO,"ceil(5/m x 1.6 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+PHYSICAL_BBS,LT-OP-1F-014,1F,L1,BOTTOM,12,2,1550,,,BLOCKED_UNQUANTIFIED,fabrication count = bars per lintel,"straight portion only: shape code / bends / hooks blocked (not dimensioned), so no cut length is issued"
+PHYSICAL_BBS,LT-OP-1F-014,1F,L1,TOP,10,2,1550,,,BLOCKED_UNQUANTIFIED,fabrication count = bars per lintel,"straight portion only: shape code / bends / hooks blocked (not dimensioned), so no cut length is issued"
+PHYSICAL_BBS,LT-OP-1F-014,1F,L1,STIRRUP,8,8,468,,,BLOCKED_UNQUANTIFIED,fabrication count = bars per lintel,"straight portion only: shape code / bends / hooks blocked (not dimensioned), so no cut length is issued"
+BLOCKED_ROLE,LT-OP-1F-014,1F,L1,BOTTOM_END_BENDS,,,,,,BLOCKED_UNQUANTIFIED,,drawn bent into the bearing on the LINTEL DETAIL; no length printed
+BLOCKED_ROLE,LT-OP-1F-014,1F,L1,TOP_END_BENDS,,,,,,BLOCKED_UNQUANTIFIED,,drawn bent into the bearing on the LINTEL DETAIL; no length printed
+BLOCKED_ROLE,LT-OP-1F-014,1F,L1,STIRRUP_HOOKS,,,,,,BLOCKED_UNQUANTIFIED,,SECT (2-2) draws hooks; no hook length printed
+BLOCKED_ROLE,LT-OP-1F-014,1F,L1,LAPS,,,,,,BLOCKED_UNQUANTIFIED,,none drawn: the LINTEL DETAIL shows each bar continuous over the lintel; none measured
+PROJECT_BASIS_QTO,LT-OP-1F-017,1F,L1,BOTTOM,12,2,1409.760055,2819.520111,2.506240098,PROJECT_BASIS_QTO,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+PROJECT_BASIS_QTO,LT-OP-1F-017,1F,L1,TOP,10,2,1409.760055,2819.520111,1.740444513,PROJECT_BASIS_QTO,schedule '2Ø10',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+PROJECT_BASIS_QTO,LT-OP-1F-017,1F,L1,STIRRUP,8,8,468,3744,1.479111111,PROJECT_BASIS_QTO,"ceil(5/m x 1.4598 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+PHYSICAL_BBS,LT-OP-1F-017,1F,L1,BOTTOM,12,2,1409.8,,,BLOCKED_UNQUANTIFIED,fabrication count = bars per lintel,"straight portion only: shape code / bends / hooks blocked (not dimensioned), so no cut length is issued"
+PHYSICAL_BBS,LT-OP-1F-017,1F,L1,TOP,10,2,1409.8,,,BLOCKED_UNQUANTIFIED,fabrication count = bars per lintel,"straight portion only: shape code / bends / hooks blocked (not dimensioned), so no cut length is issued"
+PHYSICAL_BBS,LT-OP-1F-017,1F,L1,STIRRUP,8,8,468,,,BLOCKED_UNQUANTIFIED,fabrication count = bars per lintel,"straight portion only: shape code / bends / hooks blocked (not dimensioned), so no cut length is issued"
+BLOCKED_ROLE,LT-OP-1F-017,1F,L1,BOTTOM_END_BENDS,,,,,,BLOCKED_UNQUANTIFIED,,drawn bent into the bearing on the LINTEL DETAIL; no length printed
+BLOCKED_ROLE,LT-OP-1F-017,1F,L1,TOP_END_BENDS,,,,,,BLOCKED_UNQUANTIFIED,,drawn bent into the bearing on the LINTEL DETAIL; no length printed
+BLOCKED_ROLE,LT-OP-1F-017,1F,L1,STIRRUP_HOOKS,,,,,,BLOCKED_UNQUANTIFIED,,SECT (2-2) draws hooks; no hook length printed
+BLOCKED_ROLE,LT-OP-1F-017,1F,L1,LAPS,,,,,,BLOCKED_UNQUANTIFIED,,none drawn: the LINTEL DETAIL shows each bar continuous over the lintel; none measured
+PROJECT_BASIS_QTO,LT-OP-1F-018,1F,L1,BOTTOM,12,2,1750,3500,3.111111111,PROJECT_BASIS_QTO,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+PROJECT_BASIS_QTO,LT-OP-1F-018,1F,L1,TOP,10,2,1750,3500,2.160493827,PROJECT_BASIS_QTO,schedule '2Ø10',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+PROJECT_BASIS_QTO,LT-OP-1F-018,1F,L1,STIRRUP,8,9,468,4212,1.664,PROJECT_BASIS_QTO,"ceil(5/m x 1.8 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+PHYSICAL_BBS,LT-OP-1F-018,1F,L1,BOTTOM,12,2,1750,,,BLOCKED_UNQUANTIFIED,fabrication count = bars per lintel,"straight portion only: shape code / bends / hooks blocked (not dimensioned), so no cut length is issued"
+PHYSICAL_BBS,LT-OP-1F-018,1F,L1,TOP,10,2,1750,,,BLOCKED_UNQUANTIFIED,fabrication count = bars per lintel,"straight portion only: shape code / bends / hooks blocked (not dimensioned), so no cut length is issued"
+PHYSICAL_BBS,LT-OP-1F-018,1F,L1,STIRRUP,8,9,468,,,BLOCKED_UNQUANTIFIED,fabrication count = bars per lintel,"straight portion only: shape code / bends / hooks blocked (not dimensioned), so no cut length is issued"
+BLOCKED_ROLE,LT-OP-1F-018,1F,L1,BOTTOM_END_BENDS,,,,,,BLOCKED_UNQUANTIFIED,,drawn bent into the bearing on the LINTEL DETAIL; no length printed
+BLOCKED_ROLE,LT-OP-1F-018,1F,L1,TOP_END_BENDS,,,,,,BLOCKED_UNQUANTIFIED,,drawn bent into the bearing on the LINTEL DETAIL; no length printed
+BLOCKED_ROLE,LT-OP-1F-018,1F,L1,STIRRUP_HOOKS,,,,,,BLOCKED_UNQUANTIFIED,,SECT (2-2) draws hooks; no hook length printed
+BLOCKED_ROLE,LT-OP-1F-018,1F,L1,LAPS,,,,,,BLOCKED_UNQUANTIFIED,,none drawn: the LINTEL DETAIL shows each bar continuous over the lintel; none measured
+PROJECT_BASIS_QTO,LT-OP-1F-020,1F,L1,BOTTOM,12,2,1650,3300,2.933333333,PROJECT_BASIS_QTO,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+PROJECT_BASIS_QTO,LT-OP-1F-020,1F,L1,TOP,10,2,1650,3300,2.037037037,PROJECT_BASIS_QTO,schedule '2Ø10',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+PROJECT_BASIS_QTO,LT-OP-1F-020,1F,L1,STIRRUP,8,9,468,4212,1.664,PROJECT_BASIS_QTO,"ceil(5/m x 1.7 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+PHYSICAL_BBS,LT-OP-1F-020,1F,L1,BOTTOM,12,2,1650,,,BLOCKED_UNQUANTIFIED,fabrication count = bars per lintel,"straight portion only: shape code / bends / hooks blocked (not dimensioned), so no cut length is issued"
+PHYSICAL_BBS,LT-OP-1F-020,1F,L1,TOP,10,2,1650,,,BLOCKED_UNQUANTIFIED,fabrication count = bars per lintel,"straight portion only: shape code / bends / hooks blocked (not dimensioned), so no cut length is issued"
+PHYSICAL_BBS,LT-OP-1F-020,1F,L1,STIRRUP,8,9,468,,,BLOCKED_UNQUANTIFIED,fabrication count = bars per lintel,"straight portion only: shape code / bends / hooks blocked (not dimensioned), so no cut length is issued"
+BLOCKED_ROLE,LT-OP-1F-020,1F,L1,BOTTOM_END_BENDS,,,,,,BLOCKED_UNQUANTIFIED,,drawn bent into the bearing on the LINTEL DETAIL; no length printed
+BLOCKED_ROLE,LT-OP-1F-020,1F,L1,TOP_END_BENDS,,,,,,BLOCKED_UNQUANTIFIED,,drawn bent into the bearing on the LINTEL DETAIL; no length printed
+BLOCKED_ROLE,LT-OP-1F-020,1F,L1,STIRRUP_HOOKS,,,,,,BLOCKED_UNQUANTIFIED,,SECT (2-2) draws hooks; no hook length printed
+BLOCKED_ROLE,LT-OP-1F-020,1F,L1,LAPS,,,,,,BLOCKED_UNQUANTIFIED,,none drawn: the LINTEL DETAIL shows each bar continuous over the lintel; none measured
+PROJECT_BASIS_QTO,LT-OP-1F-021,1F,L2,BOTTOM,14,2,2050,4100,4.960493827,PROJECT_BASIS_QTO,schedule '2Ø14',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+PROJECT_BASIS_QTO,LT-OP-1F-021,1F,L2,TOP,12,2,2050,4100,3.644444444,PROJECT_BASIS_QTO,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+PROJECT_BASIS_QTO,LT-OP-1F-021,1F,L2,STIRRUP,8,11,468,5148,2.033777778,PROJECT_BASIS_QTO,"ceil(5/m x 2.1 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+PHYSICAL_BBS,LT-OP-1F-021,1F,L2,BOTTOM,14,2,2050,,,BLOCKED_UNQUANTIFIED,fabrication count = bars per lintel,"straight portion only: shape code / bends / hooks blocked (not dimensioned), so no cut length is issued"
+PHYSICAL_BBS,LT-OP-1F-021,1F,L2,TOP,12,2,2050,,,BLOCKED_UNQUANTIFIED,fabrication count = bars per lintel,"straight portion only: shape code / bends / hooks blocked (not dimensioned), so no cut length is issued"
+PHYSICAL_BBS,LT-OP-1F-021,1F,L2,STIRRUP,8,11,468,,,BLOCKED_UNQUANTIFIED,fabrication count = bars per lintel,"straight portion only: shape code / bends / hooks blocked (not dimensioned), so no cut length is issued"
+BLOCKED_ROLE,LT-OP-1F-021,1F,L2,BOTTOM_END_BENDS,,,,,,BLOCKED_UNQUANTIFIED,,drawn bent into the bearing on the LINTEL DETAIL; no length printed
+BLOCKED_ROLE,LT-OP-1F-021,1F,L2,TOP_END_BENDS,,,,,,BLOCKED_UNQUANTIFIED,,drawn bent into the bearing on the LINTEL DETAIL; no length printed
+BLOCKED_ROLE,LT-OP-1F-021,1F,L2,STIRRUP_HOOKS,,,,,,BLOCKED_UNQUANTIFIED,,SECT (2-2) draws hooks; no hook length printed
+BLOCKED_ROLE,LT-OP-1F-021,1F,L2,LAPS,,,,,,BLOCKED_UNQUANTIFIED,,none drawn: the LINTEL DETAIL shows each bar continuous over the lintel; none measured
+SENSITIVITY_ONLY,LT-OP-GF-001,GF,L2,BOTTOM,14,2,2704.919716,5409.839432,6.545237831,SENSITIVITY_ONLY,schedule '2Ø14',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-GF-001,GF,L2,TOP,12,2,2704.919716,5409.839432,4.808746161,SENSITIVITY_ONLY,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-GF-001,GF,L2,STIRRUP,8,14,568,7952,3.141530864,SENSITIVITY_ONLY,"ceil(5/m x 2.7549 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+SENSITIVITY_ONLY,LT-OP-GF-002,GF,L2,BOTTOM,14,2,2704.919716,5409.839432,6.545237831,SENSITIVITY_ONLY,schedule '2Ø14',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-GF-002,GF,L2,TOP,12,2,2704.919716,5409.839432,4.808746161,SENSITIVITY_ONLY,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-GF-002,GF,L2,STIRRUP,8,14,568,7952,3.141530864,SENSITIVITY_ONLY,"ceil(5/m x 2.7549 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+SENSITIVITY_ONLY,LT-OP-GF-003,GF,L1,BOTTOM,12,2,1618.373886,3236.747773,2.877109131,SENSITIVITY_ONLY,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-GF-003,GF,L1,TOP,10,2,1618.373886,3236.747773,1.997992452,SENSITIVITY_ONLY,schedule '2Ø10',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-GF-003,GF,L1,STIRRUP,8,9,568,5112,2.019555556,SENSITIVITY_ONLY,"ceil(5/m x 1.6684 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+SENSITIVITY_ONLY,LT-OP-GF-004,GF,L1,BOTTOM,12,2,1750,3500,3.111111111,SENSITIVITY_ONLY,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-GF-004,GF,L1,TOP,10,2,1750,3500,2.160493827,SENSITIVITY_ONLY,schedule '2Ø10',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-GF-004,GF,L1,STIRRUP,8,9,468,4212,1.664,SENSITIVITY_ONLY,"ceil(5/m x 1.8 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+SENSITIVITY_ONLY,LT-OP-GF-006,GF,L1,BOTTOM,12,2,1100.5,2201,1.956444444,SENSITIVITY_ONLY,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-GF-006,GF,L1,TOP,10,2,1100.5,2201,1.358641975,SENSITIVITY_ONLY,schedule '2Ø10',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-GF-006,GF,L1,STIRRUP,8,6,568,3408,1.34637037,SENSITIVITY_ONLY,"ceil(5/m x 1.1505 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+SENSITIVITY_ONLY,LT-OP-GF-007,GF,L1,BOTTOM,12,2,1400.5,2801,2.489777778,SENSITIVITY_ONLY,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-GF-007,GF,L1,TOP,10,2,1400.5,2801,1.729012346,SENSITIVITY_ONLY,schedule '2Ø10',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-GF-007,GF,L1,STIRRUP,8,8,568,4544,1.795160494,SENSITIVITY_ONLY,"ceil(5/m x 1.4505 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+SENSITIVITY_ONLY,LT-OP-GF-009,GF,L2,BOTTOM,14,2,2250,4500,5.444444444,SENSITIVITY_ONLY,schedule '2Ø14',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-GF-009,GF,L2,TOP,12,2,2250,4500,4,SENSITIVITY_ONLY,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-GF-009,GF,L2,STIRRUP,8,12,568,6816,2.692740741,SENSITIVITY_ONLY,"ceil(5/m x 2.3 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+SENSITIVITY_ONLY,LT-OP-GF-010,GF,L1,BOTTOM,12,2,1451,2902,2.579555556,SENSITIVITY_ONLY,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-GF-010,GF,L1,TOP,10,2,1451,2902,1.791358025,SENSITIVITY_ONLY,schedule '2Ø10',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-GF-010,GF,L1,STIRRUP,8,8,568,4544,1.795160494,SENSITIVITY_ONLY,"ceil(5/m x 1.501 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+SENSITIVITY_ONLY,LT-OP-GF-011,GF,L2,BOTTOM,14,2,1750,3500,4.234567901,SENSITIVITY_ONLY,schedule '2Ø14',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-GF-011,GF,L2,TOP,12,2,1750,3500,3.111111111,SENSITIVITY_ONLY,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-GF-011,GF,L2,STIRRUP,8,9,568,5112,2.019555556,SENSITIVITY_ONLY,"ceil(5/m x 1.8 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+SENSITIVITY_ONLY,LT-OP-GF-012,GF,L2,BOTTOM,14,2,1150,2300,2.782716049,SENSITIVITY_ONLY,schedule '2Ø14',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-GF-012,GF,L2,TOP,12,2,1150,2300,2.044444444,SENSITIVITY_ONLY,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-GF-012,GF,L2,STIRRUP,8,6,568,3408,1.34637037,SENSITIVITY_ONLY,"ceil(5/m x 1.2 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+SENSITIVITY_ONLY,LT-OP-GF-015,GF,L1,BOTTOM,12,2,1491.38954,2982.779081,2.651359183,SENSITIVITY_ONLY,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-GF-015,GF,L1,TOP,10,2,1491.38954,2982.779081,1.841221655,SENSITIVITY_ONLY,schedule '2Ø10',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-GF-015,GF,L1,STIRRUP,8,8,568,4544,1.795160494,SENSITIVITY_ONLY,"ceil(5/m x 1.5414 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+SENSITIVITY_ONLY,LT-OP-GF-016,GF,L2,BOTTOM,14,2,2650.5,5301,6.413555556,SENSITIVITY_ONLY,schedule '2Ø14',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-GF-016,GF,L2,TOP,12,2,2650.5,5301,4.712,SENSITIVITY_ONLY,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-GF-016,GF,L2,STIRRUP,8,14,568,7952,3.141530864,SENSITIVITY_ONLY,"ceil(5/m x 2.7005 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+SENSITIVITY_ONLY,LT-OP-GF-017,GF,L2,BOTTOM,14,2,1950,3900,4.718518519,SENSITIVITY_ONLY,schedule '2Ø14',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-GF-017,GF,L2,TOP,12,2,1950,3900,3.466666667,SENSITIVITY_ONLY,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-GF-017,GF,L2,STIRRUP,8,10,568,5680,2.243950617,SENSITIVITY_ONLY,"ceil(5/m x 2 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+SENSITIVITY_ONLY,LT-OP-GF-019,GF,L1,BOTTOM,12,2,1397.37403,2794.748061,2.484220499,SENSITIVITY_ONLY,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-GF-019,GF,L1,TOP,10,2,1397.37403,2794.748061,1.725153124,SENSITIVITY_ONLY,schedule '2Ø10',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-GF-019,GF,L1,STIRRUP,8,8,568,4544,1.795160494,SENSITIVITY_ONLY,"ceil(5/m x 1.4474 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+SENSITIVITY_ONLY,LT-OP-GF-020,GF,L1,BOTTOM,12,2,1250,2500,2.222222222,SENSITIVITY_ONLY,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-GF-020,GF,L1,TOP,10,2,1250,2500,1.543209877,SENSITIVITY_ONLY,schedule '2Ø10',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-GF-020,GF,L1,STIRRUP,8,7,568,3976,1.570765432,SENSITIVITY_ONLY,"ceil(5/m x 1.3 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+SENSITIVITY_ONLY,LT-OP-GF-022,GF,L1,BOTTOM,12,2,1325.5,2651,2.356444444,SENSITIVITY_ONLY,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-GF-022,GF,L1,TOP,10,2,1325.5,2651,1.636419753,SENSITIVITY_ONLY,schedule '2Ø10',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-GF-022,GF,L1,STIRRUP,8,7,568,3976,1.570765432,SENSITIVITY_ONLY,"ceil(5/m x 1.3755 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+SENSITIVITY_ONLY,LT-OP-GF-023,GF,L1,BOTTOM,12,2,1750,3500,3.111111111,SENSITIVITY_ONLY,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-GF-023,GF,L1,TOP,10,2,1750,3500,2.160493827,SENSITIVITY_ONLY,schedule '2Ø10',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-GF-023,GF,L1,STIRRUP,8,9,568,5112,2.019555556,SENSITIVITY_ONLY,"ceil(5/m x 1.8 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+SENSITIVITY_ONLY,LT-OP-GF-024,GF,L1,BOTTOM,12,2,1388.832155,2777.664309,2.469034941,SENSITIVITY_ONLY,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-GF-024,GF,L1,TOP,10,2,1388.832155,2777.664309,1.714607598,SENSITIVITY_ONLY,schedule '2Ø10',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-GF-024,GF,L1,STIRRUP,8,8,468,3744,1.479111111,SENSITIVITY_ONLY,"ceil(5/m x 1.4388 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+SENSITIVITY_ONLY,LT-OP-GF-025,GF,L1,BOTTOM,12,2,950,1900,1.688888889,SENSITIVITY_ONLY,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-GF-025,GF,L1,TOP,10,2,950,1900,1.172839506,SENSITIVITY_ONLY,schedule '2Ø10',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-GF-025,GF,L1,STIRRUP,8,5,568,2840,1.121975309,SENSITIVITY_ONLY,"ceil(5/m x 1 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+SENSITIVITY_ONLY,LT-OP-GF-026,GF,L1,BOTTOM,12,2,1388.832155,2777.664309,2.469034941,SENSITIVITY_ONLY,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-GF-026,GF,L1,TOP,10,2,1388.832155,2777.664309,1.714607598,SENSITIVITY_ONLY,schedule '2Ø10',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-GF-026,GF,L1,STIRRUP,8,8,468,3744,1.479111111,SENSITIVITY_ONLY,"ceil(5/m x 1.4388 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+SENSITIVITY_ONLY,LT-OP-GF-027,GF,L1,BOTTOM,12,2,1350,2700,2.4,SENSITIVITY_ONLY,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-GF-027,GF,L1,TOP,10,2,1350,2700,1.666666667,SENSITIVITY_ONLY,schedule '2Ø10',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-GF-027,GF,L1,STIRRUP,8,7,568,3976,1.570765432,SENSITIVITY_ONLY,"ceil(5/m x 1.4 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+SENSITIVITY_ONLY,LT-OP-GF-031,GF,L5,BOTTOM,18,4,6850.5,27402,54.804,SENSITIVITY_ONLY,schedule '4Ø18',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-GF-031,GF,L5,TOP,14,3,6850.5,20551.5,24.864777778,SENSITIVITY_ONLY,schedule '3Ø14',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-GF-031,GF,L5,STIRRUP,8,35,1268,44380,17.532839506,SENSITIVITY_ONLY,"ceil(5/m x 6.9005 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+SENSITIVITY_ONLY,LT-OP-1F-001,1F,L3,BOTTOM,16,3,3199.77408,9599.32224,15.169299342,SENSITIVITY_ONLY,schedule '3Ø16',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-1F-001,1F,L3,TOP,14,3,3199.77408,9599.32224,11.613994809,SENSITIVITY_ONLY,schedule '3Ø14',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-1F-001,1F,L3,STIRRUP,8,17,768,13056,5.157925926,SENSITIVITY_ONLY,"ceil(5/m x 3.2498 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+SENSITIVITY_ONLY,LT-OP-1F-002,1F,L1,BOTTOM,12,2,1350,2700,2.4,SENSITIVITY_ONLY,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-1F-002,1F,L1,TOP,10,2,1350,2700,1.666666667,SENSITIVITY_ONLY,schedule '2Ø10',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-1F-002,1F,L1,STIRRUP,8,7,568,3976,1.570765432,SENSITIVITY_ONLY,"ceil(5/m x 1.4 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+SENSITIVITY_ONLY,LT-OP-1F-004,1F,L1,BOTTOM,12,2,1350,2700,2.4,SENSITIVITY_ONLY,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-1F-004,1F,L1,TOP,10,2,1350,2700,1.666666667,SENSITIVITY_ONLY,schedule '2Ø10',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-1F-004,1F,L1,STIRRUP,8,7,568,3976,1.570765432,SENSITIVITY_ONLY,"ceil(5/m x 1.4 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+SENSITIVITY_ONLY,LT-OP-1F-005,1F,L2,BOTTOM,14,2,1950,3900,4.718518519,SENSITIVITY_ONLY,schedule '2Ø14',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-1F-005,1F,L2,TOP,12,2,1950,3900,3.466666667,SENSITIVITY_ONLY,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-1F-005,1F,L2,STIRRUP,8,10,568,5680,2.243950617,SENSITIVITY_ONLY,"ceil(5/m x 2 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+SENSITIVITY_ONLY,LT-OP-1F-006,1F,L1,BOTTOM,12,2,1230.344662,2460.689324,2.187279399,SENSITIVITY_ONLY,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-1F-006,1F,L1,TOP,10,2,1230.344662,2460.689324,1.518944027,SENSITIVITY_ONLY,schedule '2Ø10',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-1F-006,1F,L1,STIRRUP,8,7,468,3276,1.294222222,SENSITIVITY_ONLY,"ceil(5/m x 1.2803 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+SENSITIVITY_ONLY,LT-OP-1F-007,1F,L1,BOTTOM,12,2,1750,3500,3.111111111,SENSITIVITY_ONLY,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-1F-007,1F,L1,TOP,10,2,1750,3500,2.160493827,SENSITIVITY_ONLY,schedule '2Ø10',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-1F-007,1F,L1,STIRRUP,8,9,468,4212,1.664,SENSITIVITY_ONLY,"ceil(5/m x 1.8 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+SENSITIVITY_ONLY,LT-OP-1F-008,1F,L1,BOTTOM,12,2,1589.019835,3178.03967,2.824924152,SENSITIVITY_ONLY,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-1F-008,1F,L1,TOP,10,2,1589.019835,3178.03967,1.961752883,SENSITIVITY_ONLY,schedule '2Ø10',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-1F-008,1F,L1,STIRRUP,8,9,468,4212,1.664,SENSITIVITY_ONLY,"ceil(5/m x 1.639 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+SENSITIVITY_ONLY,LT-OP-1F-009,1F,L2,BOTTOM,14,2,2302.32,4604.64,5.571045926,SENSITIVITY_ONLY,schedule '2Ø14',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-1F-009,1F,L2,TOP,12,2,2302.32,4604.64,4.093013333,SENSITIVITY_ONLY,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-1F-009,1F,L2,STIRRUP,8,12,568,6816,2.692740741,SENSITIVITY_ONLY,"ceil(5/m x 2.3523 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+SENSITIVITY_ONLY,LT-OP-1F-010,1F,L1,BOTTOM,12,2,1450.5,2901,2.578666667,SENSITIVITY_ONLY,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-1F-010,1F,L1,TOP,10,2,1450.5,2901,1.790740741,SENSITIVITY_ONLY,schedule '2Ø10',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-1F-010,1F,L1,STIRRUP,8,8,568,4544,1.795160494,SENSITIVITY_ONLY,"ceil(5/m x 1.5005 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+SENSITIVITY_ONLY,LT-OP-1F-011,1F,L1,BOTTOM,12,2,1325.5,2651,2.356444444,SENSITIVITY_ONLY,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-1F-011,1F,L1,TOP,10,2,1325.5,2651,1.636419753,SENSITIVITY_ONLY,schedule '2Ø10',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-1F-011,1F,L1,STIRRUP,8,7,568,3976,1.570765432,SENSITIVITY_ONLY,"ceil(5/m x 1.3755 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+SENSITIVITY_ONLY,LT-OP-1F-012,1F,L1,BOTTOM,12,2,1750,3500,3.111111111,SENSITIVITY_ONLY,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-1F-012,1F,L1,TOP,10,2,1750,3500,2.160493827,SENSITIVITY_ONLY,schedule '2Ø10',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-1F-012,1F,L1,STIRRUP,8,9,568,5112,2.019555556,SENSITIVITY_ONLY,"ceil(5/m x 1.8 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+SENSITIVITY_ONLY,LT-OP-1F-013,1F,L1,BOTTOM,12,2,1521,3042,2.704,SENSITIVITY_ONLY,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-1F-013,1F,L1,TOP,10,2,1521,3042,1.877777778,SENSITIVITY_ONLY,schedule '2Ø10',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-1F-013,1F,L1,STIRRUP,8,8,568,4544,1.795160494,SENSITIVITY_ONLY,"ceil(5/m x 1.571 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+SENSITIVITY_ONLY,LT-OP-1F-015,1F,L1,BOTTOM,12,2,950,1900,1.688888889,SENSITIVITY_ONLY,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-1F-015,1F,L1,TOP,10,2,950,1900,1.172839506,SENSITIVITY_ONLY,schedule '2Ø10',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-1F-015,1F,L1,STIRRUP,8,5,568,2840,1.121975309,SENSITIVITY_ONLY,"ceil(5/m x 1 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+SENSITIVITY_ONLY,LT-OP-1F-016,1F,L1,BOTTOM,12,2,1350,2700,2.4,SENSITIVITY_ONLY,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-1F-016,1F,L1,TOP,10,2,1350,2700,1.666666667,SENSITIVITY_ONLY,schedule '2Ø10',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-1F-016,1F,L1,STIRRUP,8,7,568,3976,1.570765432,SENSITIVITY_ONLY,"ceil(5/m x 1.4 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+SENSITIVITY_ONLY,LT-OP-1F-019,1F,L1,BOTTOM,12,2,1650,3300,2.933333333,SENSITIVITY_ONLY,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-1F-019,1F,L1,TOP,10,2,1650,3300,2.037037037,SENSITIVITY_ONLY,schedule '2Ø10',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-1F-019,1F,L1,STIRRUP,8,9,468,4212,1.664,SENSITIVITY_ONLY,"ceil(5/m x 1.7 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+SENSITIVITY_ONLY,LT-OP-1F-022,1F,L1,BOTTOM,12,2,1409.760055,2819.520111,2.506240098,SENSITIVITY_ONLY,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-1F-022,1F,L1,TOP,10,2,1409.760055,2819.520111,1.740444513,SENSITIVITY_ONLY,schedule '2Ø10',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-1F-022,1F,L1,STIRRUP,8,8,468,3744,1.479111111,SENSITIVITY_ONLY,"ceil(5/m x 1.4598 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+SENSITIVITY_ONLY,LT-OP-1F-024,1F,L2,BOTTOM,14,2,2302.32,4604.64,5.571045926,SENSITIVITY_ONLY,schedule '2Ø14',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-1F-024,1F,L2,TOP,12,2,2302.32,4604.64,4.093013333,SENSITIVITY_ONLY,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-1F-024,1F,L2,STIRRUP,8,12,568,6816,2.692740741,SENSITIVITY_ONLY,"ceil(5/m x 2.3523 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+SENSITIVITY_ONLY,LT-OP-1F-025,1F,L2,BOTTOM,14,2,2302.32,4604.64,5.571045926,SENSITIVITY_ONLY,schedule '2Ø14',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-1F-025,1F,L2,TOP,12,2,2302.32,4604.64,4.093013333,SENSITIVITY_ONLY,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-1F-025,1F,L2,STIRRUP,8,12,568,6816,2.692740741,SENSITIVITY_ONLY,"ceil(5/m x 2.3523 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+SENSITIVITY_ONLY,LT-OP-1F-026,1F,L1,BOTTOM,12,2,850,1700,1.511111111,SENSITIVITY_ONLY,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-1F-026,1F,L1,TOP,10,2,850,1700,1.049382716,SENSITIVITY_ONLY,schedule '2Ø10',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-1F-026,1F,L1,STIRRUP,8,5,568,2840,1.121975309,SENSITIVITY_ONLY,"ceil(5/m x 0.9 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+SENSITIVITY_ONLY,LT-OP-2F-001,2F,L2,BOTTOM,14,2,1950,3900,4.718518519,SENSITIVITY_ONLY,schedule '2Ø14',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-2F-001,2F,L2,TOP,12,2,1950,3900,3.466666667,SENSITIVITY_ONLY,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-2F-001,2F,L2,STIRRUP,8,10,568,5680,2.243950617,SENSITIVITY_ONLY,"ceil(5/m x 2 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+SENSITIVITY_ONLY,LT-OP-2F-002,2F,L1,BOTTOM,12,2,1750,3500,3.111111111,SENSITIVITY_ONLY,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-2F-002,2F,L1,TOP,10,2,1750,3500,2.160493827,SENSITIVITY_ONLY,schedule '2Ø10',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-2F-002,2F,L1,STIRRUP,8,9,468,4212,1.664,SENSITIVITY_ONLY,"ceil(5/m x 1.8 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+SENSITIVITY_ONLY,LT-OP-2F-003,2F,L1,BOTTOM,12,2,1450.5,2901,2.578666667,SENSITIVITY_ONLY,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-2F-003,2F,L1,TOP,10,2,1450.5,2901,1.790740741,SENSITIVITY_ONLY,schedule '2Ø10',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-2F-003,2F,L1,STIRRUP,8,8,568,4544,1.795160494,SENSITIVITY_ONLY,"ceil(5/m x 1.5005 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+SENSITIVITY_ONLY,LT-OP-2F-004,2F,L1,BOTTOM,12,2,1325.5,2651,2.356444444,SENSITIVITY_ONLY,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-2F-004,2F,L1,TOP,10,2,1325.5,2651,1.636419753,SENSITIVITY_ONLY,schedule '2Ø10',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-2F-004,2F,L1,STIRRUP,8,7,568,3976,1.570765432,SENSITIVITY_ONLY,"ceil(5/m x 1.3755 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+SENSITIVITY_ONLY,LT-OP-2F-005,2F,L1,BOTTOM,12,2,1750,3500,3.111111111,SENSITIVITY_ONLY,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-2F-005,2F,L1,TOP,10,2,1750,3500,2.160493827,SENSITIVITY_ONLY,schedule '2Ø10',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-2F-005,2F,L1,STIRRUP,8,9,568,5112,2.019555556,SENSITIVITY_ONLY,"ceil(5/m x 1.8 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+SENSITIVITY_ONLY,LT-OP-2F-006,2F,L1,BOTTOM,12,2,1351,2702,2.401777778,SENSITIVITY_ONLY,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-2F-006,2F,L1,TOP,10,2,1351,2702,1.667901235,SENSITIVITY_ONLY,schedule '2Ø10',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-2F-006,2F,L1,STIRRUP,8,8,568,4544,1.795160494,SENSITIVITY_ONLY,"ceil(5/m x 1.401 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+SENSITIVITY_ONLY,LT-OP-2F-007,2F,L1,BOTTOM,12,2,1399.798491,2799.596982,2.488530651,SENSITIVITY_ONLY,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-2F-007,2F,L1,TOP,10,2,1399.798491,2799.596982,1.728146285,SENSITIVITY_ONLY,schedule '2Ø10',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-2F-007,2F,L1,STIRRUP,8,8,468,3744,1.479111111,SENSITIVITY_ONLY,"ceil(5/m x 1.4498 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+SENSITIVITY_ONLY,LT-OP-2F-008,2F,L2,BOTTOM,14,2,1550,3100,3.750617284,SENSITIVITY_ONLY,schedule '2Ø14',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-2F-008,2F,L2,TOP,12,2,1550,3100,2.755555556,SENSITIVITY_ONLY,schedule '2Ø12',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-2F-008,2F,L2,STIRRUP,8,8,568,4544,1.795160494,SENSITIVITY_ONLY,"ceil(5/m x 1.6 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"
+SENSITIVITY_ONLY,LT-OP-1F-023,1F,L4,BOTTOM,18,3,3880.5,11641.5,23.283,SENSITIVITY_ONLY,schedule '3Ø18',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-1F-023,1F,L4,TOP,14,3,3880.5,11641.5,14.084777778,SENSITIVITY_ONLY,schedule '3Ø14',"lintel length - 2 x 25 mm cover; end bends excluded (drawn, not dimensioned)"
+SENSITIVITY_ONLY,LT-OP-1F-023,1F,L4,STIRRUP,8,20,968,19360,7.648395062,SENSITIVITY_ONLY,"ceil(5/m x 3.9305 m) (RATE_COUNT, S3.1 policy)","core path 2(B-2c-d) + 2(D-2c-d), sharp corners; hooks excluded (drawn, no length)"

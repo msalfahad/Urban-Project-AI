@@ -1,0 +1,19 @@
+CHECK_ID,TEXT,RESULT,DETAIL
+C01,every opening has a unique id and exactly one of the six decisions,PASS,74 openings
+C02,every door insert is bound to one opening (or is the boundary-wall opening); every arch insert is bound,PASS,"27 door inserts, 2 arch inserts"
+C03,every glazing element in a plan frame is held by exactly one opening,PASS,240 glazing elements
+C04,schedule bands ordered and never overlapping; each census width meets at most one row,PASS,"gaps [(100, 101), (200, 201), (300, 301), (500, 501)]"
+C05,"boundary widths bind as printed (100 -> L1, 100.05 cm -> gap, 101 -> L2, 750 -> L5, > 750 -> none)",PASS,"{""1000"": ""L1"", ""1000.5"": ""BOUNDARY_GAP"", ""1010"": ""L2"", ""2000"": ""L2"", ""2005"": ""BOUNDARY_GAP"", ""7500"": ""L5"", ""7500.1"": ""ABOVE_SCHEDULE"", ""0"": ""NOT_POSITIVE""}"
+C06,no released lintel lies under a beam band over its opening span,PASS,14 released
+C07,"every released lintel has valid geometry (B, D > 0, length > opening, no column overlap; a corner shared with another lintel is counted once)",PASS,max column overlap 100 mm2
+C08,"unsupported openings stay blocked: nothing under a beam, without a wall, curved, lift or boundary is released",PASS,
+C09,"elevations add evidence only: every elevation binding names an existing plan opening, one each",PASS,3 bound
+C10,R5 rows map to one opening each; its door + glazed-door pairs collapse to one opening,PASS,"60 of 60 R5 rows matched; duplicates ['OP-GF-003', 'OP-GF-007', 'OP-GF-010', 'OP-GF-019']"
+C11,no two openings occupy the same plan area (no opening counted twice),PASS,[]
+C12,every arch column registers onto a structural outline; GF = PS5.1,PASS,
+C13,every S1 slab-opening panel is a type-8 census row,PASS,8 panels
+C14,kg by floor and diameter sum to the released total; m3 likewise,PASS,96.42728 kg
+C15,"all 22 earlier freeze manifests, the S8.3 errata and the S1 / S2 / S3 / S3.1 register indexes verify",PASS,
+C16,"no earlier lintel figure read: PRE-S8 and R5 through whitelists, S2 through id / component / state",PASS,
+C17,"no Arabic run, owner or title-block text in the outputs",PASS,[]
+C18,every released lintel registers its blocked bends and hooks (and anchorage at column ends),PASS,

@@ -47,6 +47,8 @@ ACCURATE_MODULES = (
     "engine/source/shell_line_distribution.py",  # S8.3A line layouts on a spherical cap (density / meridians)
     "engine/source/slab_layered_mesh.py",       # S8.4 callouts, thickness tags, (T&B) layers, stop zones per edge
     "engine/source/special_column_components.py",  # S8.5 turned / dead / planted column components, ownership
+    "engine/source/lintel_qto.py",              # S8.6 lintel schedule binding, extent, straight bars, stirrup count
+    "engine/source/opening_census.py",          # S8.6 wall openings from plan faces (geometry only, no kg)
     "engine/bbs_steel.py",
 )
 # project builders that produce accurate reinforcement registers
@@ -86,6 +88,7 @@ ACCURATE_BUILDERS = (
     "research/alsenan_dome_mesh_s8_3a/build_s8_3a.py",  # S8.3A mesh distribution audit (no quantity moved)
     "research/alsenan_water_tank_s8_4/build_s8_4.py",   # S8.4 water-tank roof region (blind, frozen)
     "research/alsenan_special_columns_s8_5/build_s8_5.py",  # S8.5 special columns (blind, frozen)
+    "research/alsenan_lintels_s8_6/build_s8_6.py",  # S8.6 lintels (blind, frozen)
 )
 ROUGH_MODULES = (
     "engine/source/rough_rebar_sanity.py",
@@ -117,6 +120,7 @@ COMPARISON_MODULES = (                   # reference-QS / oracle comparison: nev
     "research/alsenan_dome_ring_s8_3/post_freeze/post_freeze_comparison.py",
     "research/alsenan_water_tank_s8_4/post_freeze/post_freeze_comparison.py",
     "research/alsenan_special_columns_s8_5/post_freeze/post_freeze_comparison.py",
+    "research/alsenan_lintels_s8_6/post_freeze/post_freeze_comparison.py",
 )
 COMPARISON_DIRS = (
     "research/alsenan_multi_engine_comparison",

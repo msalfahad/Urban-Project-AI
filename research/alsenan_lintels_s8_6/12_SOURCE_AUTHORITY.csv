@@ -1,0 +1,18 @@
+ATTRIBUTE,SOURCE,AUTHORITY,NOTE
+OPENING_EXISTENCE,P7757.dxf plan wall faces (layer 1) + door / glazing / arch symbols,SOURCE_GEOMETRY,a gap is an opening only with a jamb at each end; a corner closure needs a symbol
+OPENING_WIDTH,P7757.dxf true-size model space; printed plan / elevation dimension where one spans the jambs,"PRINTED where available, else DRAWN_CAD_GEOMETRY",11 plan + 3 elevation printed widths; every printed width equals the drawn one
+WALL_THICKNESS,P7757.dxf face-line separation,DRAWN_CAD_GEOMETRY,150 / 200 mm bands
+TYPE,"symbols, room labels, elevation sills",SOURCE_GEOMETRY,material never inferred
+INTERNAL_EXTERNAL,spaces from the plan (doors and glazing close a space; passages do not),SOURCE_GEOMETRY,exterior = reaches the plan boundary or holds a garden / court / roof / pool label
+HEIGHT_SILL_HEAD,"elevation dimension chains (P7757 frames 83, 84)",PRINTED only where a printed chain from the ground reaches the drawn outline,DIMENSION entities in P7757: 388; no door / window schedule
+LINTEL_SCHEDULE,ST7757.pdf p.13,EXACT (visual record),transcribed in 02
+BEARING,p.13 LINTEL DETAIL 'MIN.40cm',EXACT,limited by the drawn wall; deficits are conflicts
+LINTEL_WIDTH_B,p.13 note 'B-WIDTH OF THE BLOCK WALL',EXACT,= wall band thickness
+COVER,P8-N22 (beams 2.5 cm),PROJECT_BASIS,no lintel cover printed
+STIRRUP_COUNT,'5Ø8/M' + S3.1 RATE_COUNT,PROJECT_BASIS,ceil(rate x lintel length)
+UNIT_MASS,D2/162,PROJECT_BASIS,D2/162
+REGISTRATION,column outline voting (arch -> GFRS / FFRS / SFRS),SOURCE_GEOMETRY,unique translations
+BEAMS_ABOVE,S1 beam linework + S6 occurrences on the slab sheet above,SOURCE_GEOMETRY,plan overlap only; head vs soffit needs a printed head
+LIFT_SHAFT,S1 FF lift footing outline + a small unlabelled space on every floor,SOURCE_GEOMETRY,lift family
+SLAB_OPENINGS,S1 SLAB_PANEL_REGISTER,FROZEN_STAGE,type 8
+ROOM_LABELS,P7757 room-label blocks (their English text),SOURCE_TEXT,Arabic text never copied
