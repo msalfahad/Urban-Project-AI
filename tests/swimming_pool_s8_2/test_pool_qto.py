@@ -229,3 +229,23 @@ def test_a_wall_bar_stopping_above_the_base_is_unresolved():
     r["shape"] = PQ.STRAIGHT
     rows = PQ.classify_interface({"W": r}, REGIONS, "WALL", "BASE", eps_units=1, parallel_tol_units=40)
     assert rows[0]["class"] == PQ.UNRESOLVED and rows[0]["component_owner_id"] == "WALL"
+
+
+# ------------------------------------------------------------------ arc conventions (found on the real drawing)
+def test_an_arc_distance_is_to_the_drawn_sweep_not_the_circle():
+    quarter = ("ARC", (0.0, 0.0), 100.0, 0.0, math.pi / 2)              # CCW from (100, 0) to (0, 100)
+    assert PQ.target_distance((110, 0), quarter) == pytest.approx(10)    # off the arc, foot on the sweep
+    assert PQ.target_distance((-100, 0), quarter) == pytest.approx(math.dist((-100, 0), (0, 100)))   # opposite side
+    cw = ("ARC", (0.0, 0.0), 100.0, math.pi / 2, 0.0)                    # the same arc traversed clockwise
+    assert PQ.target_distance((-100, 0), cw) == pytest.approx(PQ.target_distance((-100, 0), quarter))
+    assert PQ.target_distance((70.0, 70.0), quarter) == pytest.approx(abs(math.hypot(70, 70) - 100))
+
+
+def test_a_zero_or_oversized_sweep_is_rejected_and_an_unwrapped_arc_measures_its_sweep():
+    unwrapped = ("ARC", "a", (0.0, 0.0), 10.0, 3 * math.pi / 2, 2 * math.pi)
+    assert PQ._seg_len(unwrapped) == pytest.approx(10 * math.pi / 2)
+    with pytest.raises(PQ.PoolQtoError):
+        PQ.chain_runs([("ARC", "z", (0.0, 0.0), 10.0, 1.0, 1.0)])
+    with pytest.raises(PQ.PoolQtoError):
+        PQ.chain_runs([("ARC", "w", (0.0, 0.0), 10.0, 0.0, 7.0)])
+    assert len(PQ.chain_runs([unwrapped])["runs"]) == 1

@@ -4,7 +4,7 @@
 
 Sources: ST7757.dxf (GBP plan outline, DET p.7 'DETAIL OF SWIMMING POOL (N.I.S)'), ST7757.pdf p.7 (notes, legend),
 the registered architectural GF plan (P7757), S1's 26 pool bar labels, the PRE-S8 census and the S8.1A pool build-up
-finding. No earlier pool quantity, contractor estimate or donor figure is read.
+finding. No earlier pool quantity, contractor estimate or third-party figure is read.
 
 What the source establishes and what it does not:
   * plan: the pool's structural and water outlines are drawn true size on GBP (S-BW, the legend's bearing wall) and
@@ -564,7 +564,10 @@ def det_bars(det, regions):
         elif e["type"] == "LINE":
             segs = [("LINE", e["handle"], tuple(e["a"]), tuple(e["b"]))]
         elif e["type"] == "ARC":
-            segs = [("ARC", e["handle"], tuple(e["c"]), e["r"], e["a0"], e["a1"])]
+            a0, a1 = e["a0"], e["a1"]
+            while a1 <= a0:                                # S1 gives CCW angles; a sweep across 0 is unwrapped
+                a1 += 2 * math.pi
+            segs = [("ARC", e["handle"], tuple(e["c"]), e["r"], a0, a1)]
         else:
             other.append(e["handle"])
             continue
@@ -682,7 +685,7 @@ def bind_all(labels, runs, corner_runs, dots, rows):
     for rid, r in runs.items():
         for s in r["_segs"]:
             seg_run[s[1]] = rid
-            g = ("SEG", s[2], s[3]) if s[0] == "LINE" else ("ARC", s[2], s[3])
+            g = ("SEG", s[2], s[3]) if s[0] == "LINE" else ("ARC", s[2], s[3], s[4], s[5])
             targets.append((s[1], g))
     for d in dots:
         targets.append((d["handle"], ("DOT", d["c"], d["r"])))
@@ -694,7 +697,7 @@ def bind_all(labels, runs, corner_runs, dots, rows):
     for rid, r in corner_runs.items():
         for s in r["_segs"]:
             cseg_run[s[1]] = rid
-            ctargets.append((s[1], ("SEG", s[2], s[3]) if s[0] == "LINE" else ("ARC", s[2], s[3])))
+            ctargets.append((s[1], ("SEG", s[2], s[3]) if s[0] == "LINE" else ("ARC", s[2], s[3], s[4], s[5])))
     anchors = []
     for l in sub:
         x, y = l["p"]
@@ -1563,7 +1566,10 @@ def conflicts_questions(fams, views, marks, rows, binding, regions, dims):
           ("Q-S8.2-09", "architect / MEP", "Openings and penetrations (skimmers, drains, inlets, lights) - none are "
                                            "drawn."),
           ("Q-S8.2-10", "architect / engineer", "The east pool wall lies on the site boundary-wall line: where the "
-                                                "pool wall ends and the boundary wall starts above court level.")]
+                                                "pool wall ends and the boundary wall starts above court level."),
+          ("Q-S8.2-11", "structural engineer", "Confirm that '(N.I.S)' under DETAIL OF SWIMMING POOL means not to scale, "
+                                               "as this round reads it. S1 recorded it as 'not in scope'; either way "
+                                               "no drawn length is measured and nothing is released.")]
     for i, to, text in qs:
         add(i, "QUESTION", to, text, [], "OPEN (revisit only on new source evidence or a consultant clarification)")
     return out
@@ -1827,9 +1833,10 @@ def conservation_checks(ctx):
         len(plain) == 1 and plain[0]["VOLUME_M3"] is None and "1877" in ctx["census"]["blinding"]["DXF_HANDLES"]
         and BLINDING_RECORD in plain[0]["INTERFACE"], f"{len(plain)} plain-concrete layer; {BLINDING_RECORD} cites "
                                                       "1877 and holds no pool quantity here")
-    ratio = [r["SCENARIO_ID"] for r in ctx["sensitivity"] if "kg/m3" in r["UNIT"] or r["IN_OFFICIAL_TOTAL"]]
+    ratio = [r["SCENARIO_ID"] for r in ctx["sensitivity"]
+             if r["UNIT"].replace(" ", "").split("/") == ["kg", "m3"] or r["IN_OFFICIAL_TOTAL"]]
     off = [r for r in ctx["sensitivity"] if r["LANE"] != PQ.SENSITIVITY_ONLY]
-    add("C-10", "no rough ratio: no kg/m3; sensitivity rows never enter a total", not ratio and not off,
+    add("C-10", "no rough ratio: no mass-per-volume unit; sensitivity rows never enter a total", not ratio and not off,
         f"{len(ctx['sensitivity'])} sensitivity rows, all SENSITIVITY_ONLY and IN_OFFICIAL_TOTAL False")
     bad = []
     for trade, _ in TRADES:
@@ -2008,7 +2015,7 @@ def build():
                 "outputs": {o: _sha(HERE / o) for o in OUTPUTS},
                 "released": {"concrete_m3": summary["concrete"]["released_m3"],
                              "reinforcement_kg": summary["reinforcement"]["released_kg"]},
-                "rule": "S8.2 is built blind and frozen before any earlier pool quantity, contractor estimate or donor "
+                "rule": "S8.2 is built blind and frozen before any earlier pool quantity, contractor estimate or third-party "
                         "figure is opened; only stated or CAD-established dimensions measure"}
     _json(MANIFEST_NAME, manifest)
     return summary

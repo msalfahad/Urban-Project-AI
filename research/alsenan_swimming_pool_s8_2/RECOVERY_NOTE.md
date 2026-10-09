@@ -1,79 +1,95 @@
-# S8.2 work in progress: recovery note (not frozen, no outputs)
+# S8.2 recovery note: container loss, input restoration and verification
 
-This commit is **not** the S8.2 freeze. It holds no outputs and no freeze manifest. No reference, donor or earlier pool
-quantity has been opened (`references_read` stays `[]`).
+## What was lost
 
-## What happened
+The cloud container was reclaimed while S8.2 was still uncommitted. The new container got a fresh clone at `763a00e`,
+without the client drawings in `data/inputs/by_sha256/`, which are never committed.
 
-The cloud container was reclaimed while S8.2 was still uncommitted. The new container got a fresh clone of the branch
-at `763a00e`. It does **not** have the client drawings in `data/inputs/by_sha256/`, which are never committed:
+The work in progress was recovered from the session transcript and committed as `b83dc9d`:
 
-- `9f9d1179…dxf` (ST7757)
-- `ab54dd55…dxf` (P7757)
-- `74da1523…pdf` (ST7757)
-
-The S8.2 work was recovered from the session transcript as follows.
-
-| File | Recovery |
+| File | How it was recovered |
 |---|---|
-| `research/alsenan_swimming_pool_s8_2/build_s8_2.py` | **Exact.** The full text was rebuilt from three complete reads, then every later edit was replayed. One addition: a clear STOP when the drawings are absent. |
-| `engine/source/pool_qto.py` | **About 80% verbatim** (the printed line ranges). The gaps were small helpers and were rewritten to the documented behaviour: the error class, `established`, the `parse_notation` branches, area / band / ring length, segment end / length / key / reverse / direction, point-to-segment distance and target distance. |
-| `tests/swimming_pool_s8_2/test_pool_qto.py` | **Rewritten.** The originals were not in the transcript. There are 28 synthetic known-answer tests and they pass. |
+| `build_s8_2.py` | Exactly, from three complete reads plus a replay of every later edit. |
+| `engine/source/pool_qto.py` | About 80% verbatim. The small helpers in the gaps were rewritten. |
+| `tests/swimming_pool_s8_2/test_pool_qto.py` | Rewritten. |
 
-## Pre-loss blind run: a regression fingerprint, not a reference
+## Inputs restored
 
-When the drawings return, the first rebuild must reproduce these values from the last run before the loss. Any
-difference is a reconstruction defect in `pool_qto.py` and must be fixed before the freeze.
+The user supplied `Urban_Alsenan_S8_2_Source_Restore.zip`. It was extracted into an empty scratch directory and read
+as data only.
 
-**Plan areas (m2)**
-
-| Item | m2 |
-|---|---|
-| Structural footprint | 10.935563750809475 |
-| Water | 8.578838175124607 |
-| Wall band | 2.3567255756848677 |
-| Run E | 0.7 |
-| Run N | 0.31 |
-| Run S | 0.3100000000000596 |
-| Run W | 1.0367255756845697 |
-
-**Bar runs and families**
-
-- Main runs: R1 COMPOUND, R2 CRANKED, R3 CRANKED, R4 COMPOUND, R5 CRANKED, R6 CRANKED.
-- One end mark, M1, on R5.
-- 16 dot rows.
-- Sub-detail shapes CR1 to CR10:
-  - CR5 and CR9 are L.
-  - CR1 and CR2 are COMPOUND.
-  - The other six are CRANKED.
-- 21 bar families: 11 base and 10 wall. 16 are BLOCKED_UNQUANTIFIED and 5 are SOURCE_CONFLICT.
-
-**Terminal states of the 26 records**
-
-| State | Count | Records |
+| File | SHA-256 | Match |
 |---|---|---|
-| FAMILY_PRIMARY_LABEL | 17 | |
-| SAME_FAMILY_SECOND_LABEL | 1 | |
-| SECOND_VIEW_OF_FAMILY | 5 | 1860 → BF-R5, 187C → BF-R1-D14, 18D7 → BF-R6, 18DB → BF-R2, 1929 → BF-R4 |
-| SECOND_VIEW_DIAMETER_CONFLICT | 1 | 18A8 |
-| SECOND_VIEW_TOPOLOGY_DIFFERS | 1 | 18DD |
-| SUB_DETAIL_BINDING_AMBIGUOUS | 1 | 1869 |
+| ST7757.dxf | `9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079` | MATCH |
+| P7757.dxf | `ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4` | MATCH |
+| ST7757.pdf | `74da1523f05eb3c6a4fe3ddebaef2c3d841891f003efc03bc32a3fb4553337e3` | MATCH |
 
-**Released quantities and checks**
+Each full hash was checked against `SHA256SUMS.txt` and against the hashes the builder pins. The files are restored
+under `data/inputs/by_sha256/<sha256>.<ext>`, which `.gitignore` excludes through `/data/*`. They are not in git.
 
-- Released concrete: 0 m3. Released steel: 0 kg. Totals are unknown, not 0.
-- Conservation checks C-01 to C-16: all PASS.
+## Step 1: the pre-loss fingerprint is reproduced exactly
 
-**Not yet run:** the last edit, which keeps only the bars that cross a level-change junction, was never executed.
-Before it, the interface verdicts were BASE_ONLY 5, SINGLE_BENT_BAR 5 and UNRESOLVED 8. After it, expect fewer rows at
-J-DEEP-SLOPE and J-SLOPE-SHALLOW.
+The reconstructed code reproduces every value of the last pre-loss blind run, compared row by row with the printouts
+of that session:
 
-## Remaining S8.2 steps
+- **Plan areas (m2)**, bit for bit:
 
-1. Restore the three drawings.
-2. Rebuild twice and check the output is byte-identical.
-3. Check the build against the fingerprint above.
-4. Write the package tests.
-5. Make the freeze commit.
-6. Do the post-freeze comparison.
-7. Run the full suite and write TEST_RUN.md.
+  | Item | m2 |
+  |---|---|
+  | Structural footprint | 10.935563750809475 |
+  | Water | 8.578838175124607 |
+  | Wall band | 2.3567255756848677 |
+  | Run E | 0.7 |
+  | Run N | 0.31 |
+  | Run S | 0.3100000000000596 |
+  | Run W | 1.0367255756845697 |
+
+- **Dot rows:** all 16, with every member handle.
+- **Main runs:** R1 to R6, segment by segment, including the rounded coordinates and drawn lengths.
+- **End mark:** M1 on R5.
+- **Bar families:** all 21 IDs in order, with their segments and their leg lengths per region to 1e-6 drawing units.
+- **Sub-detail shapes:** CR1 to CR10, with their shapes, junctions and segment lengths, and their correspondence with
+  the main-section families.
+- **The 26 records:** binding method, binding state, bound runs, dot rows and shapes, derived role, S1 role check,
+  family and terminal state.
+- **Dot bindings, the 27 conflict and question IDs, and the interface rows.**
+- **Conservation checks C-01 to C-16:** all PASS.
+
+## Step 2: independent checks of the helpers on the real geometry
+
+The helpers were not trusted because the synthetic tests pass. Each one was checked against references taken from
+the raw DXF through ezdxf (not the S1 reader) and from shapely. These checks now run as
+`tests/swimming_pool_s8_2/test_s8_2_real_geometry.py`. All 17 checks pass after the two corrections below.
+
+| Helper | Reference | Result |
+|---|---|---|
+| `region_area_m2`, `band_area_m2`, `ring_length_m` | Raw LWPOLYLINE, bulges sampled on the true circle (`bulge_to_arc`); shapely; closed form | Agree to 1e-9 m2 / 1e-13 (closed form) |
+| `_seg_end`, `_seg_len` | ezdxf LINE / ARC entities | Ends within 0.0007 units (S1 rounds to 1e-3); lengths within 0.001 units after correction 1 |
+| `_reverse`, `_dir` | Numerical tangents | Within 5e-7 |
+| `_geom_key` | Brute-force duplicate search on ezdxf entities | The same single pair, 1922 / 1924 |
+| `_pt_seg`, `target_distance` | shapely distances, 6,498 pairs | Within 4e-12; arcs within 2e-8 after correction 2 |
+| `leg_lengths_in` | shapely clipping | Within 3e-12 |
+| `parse_notation` | An independent reading of all 26 labels | 19 RATE, 4 SPACING, 3 FINITE_GROUP |
+
+ezdxf's `make_path` flattening was rejected as a reference. It draws bulges as Bézier curves, which lie about 0.5 mm
+outside the true arc at R1750.
+
+## Two latent defects, shared with the pre-loss code, corrected before the freeze
+
+1. **The wrap-around arc 1849** is drawn from 270° to 0°. The S1 reader gives CCW angles with a1 < a0. The old code
+   read that as a 270° clockwise sweep instead of 90° CCW, so its length was 104.27 units (r·π) too long. The builder
+   now unwraps CCW sweeps, and `chain_runs` rejects a zero or over-full sweep.
+   - Effect: BF-R4's leg length in SHALLOW_BASE drops from 5718.781385 to 5614.513008 drawing units, and R4's turns
+     now read 90 / 90 / 90 / 45, symmetric with R1.
+   - Unchanged: owner, shape, lane, terminal states, quantities and checks.
+2. **`target_distance` measured to the full circle** of an arc. It now measures to the drawn sweep.
+   - Effect: two false incidental contacts disappear, 1881 on arc 1886 (61.26 units from the drawn arc) and 1896 on
+     arc 189A (54.90 units).
+   - Unchanged: bindings, because the dot contacts already governed them.
+
+## Two changes before the freeze
+
+- One question was added, Q-S8.2-11: confirm that "(N.I.S)" means not to scale. S1 had recorded it as "not in
+  scope".
+- The interface audit now lists only the bars that cross a level-change junction. That gives 14 rows, down from 18
+  before the loss.

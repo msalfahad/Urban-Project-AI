@@ -1,0 +1,17 @@
+CHECK_ID,CHECK,RESULT,DETAIL
+C-01,one parent; every component hangs from the pool parent,PASS,parents 1; orphans []; ids unique True
+C-02,"one owner per component, per bar family and per drawn bar run",PASS,components without owner []; families with no population owner []; runs []
+C-03,plan footprints: water + wall band = outline; wall runs tile the band; no overlap with neighbours,PASS,"runs sum 2.356725576 vs band 2.356725576 (gap 2.38e-13); water + band - outline 0.00e+00 m2; boundary-wall overlap [0.0, 0.0]; curved ground beam clear 499.9 mm"
+C-04,all 26 S1 pool records bound and terminated,PASS,"26 rows; states {'SECOND_VIEW_OF_FAMILY': 5, 'SUB_DETAIL_BINDING_AMBIGUOUS': 1, 'FAMILY_PRIMARY_LABEL': 17, 'SECOND_VIEW_DIAMETER_CONFLICT': 1, 'SAME_FAMILY_SECOND_LABEL (counted once)': 1, 'SECOND_VIEW_TOPOLOGY_DIFFERS': 1}"
+C-05,no double bar: each drawn segment in one run and one family; one interface row per run per junction,PASS,segments in families 32 (max multiplicity 1); interface rows 14; sub-detail views counted 0 times
+C-06,no NTS drawn length becomes a measurement,PASS,"every drawn length stays in drawing units (_UNITS_NTS columns); cut length, bar run, width and length are empty on every bar row; offenders []"
+C-07,"no blocked or conflicting component carries an official m3, m2 or kg",PASS,offenders []
+C-08,no S7 / S8.1 leak: pool handles are not ground-slab boundaries; frozen stages verify,PASS,"shared handles []; S7 / S8.1 / S8.1A files verified [48, 33, 34]"
+C-09,"no double plain concrete: one pool plain-concrete layer, no volume, the PRE-S8 blinding record guarded",PASS,1 plain-concrete layer; PS8-BLINDING-UNDER-FOOTINGS cites 1877 and holds no pool quantity here
+C-10,no rough ratio: no mass-per-volume unit; sensitivity rows never enter a total,PASS,"23 sensitivity rows, all SENSITIVITY_ONLY and IN_OFFICIAL_TOTAL False"
+C-11,"totals reconcile: component = pool trade = floor, for every trade",PASS,mismatches []
+C-12,"unknown stays unknown: a total with an unresolved row is empty, never 0",PASS,offenders []; released rows 0
+C-13,"all frozen stages verify (code, inputs, outputs)",PASS,16 manifests: 500 files
+C-14,a finite group is never a rate; the drawn dots of its row match its count,PASS,BF-1881 3%%c16: 3 dots in ['DOTROW-DEEP_BASE-UNDER_WALL_BOTTOM']; BF-1896 3%%c16: 3 dots in ['DOTROW-DEEP_WALL-TOP']; BF-192B 4%%c16: 4 dots in ['DOTROW-SHALLOW_BASE-UNDER_WALL_BOTTOM']
+C-15,no forbidden release label in any output,PASS,found []
+C-16,sub-detail labels are second views: never a family of their own,PASS,8 sub-detail labels; offenders []

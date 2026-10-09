@@ -259,12 +259,16 @@ def _geom_key(s, nd=3):
 
 
 def chain_runs(segments, *, tol=0.5):
-    """Join drawn bar segments end to end. segments: ("LINE", id, a, b) or ("ARC", id, centre, r, t0, t1).
+    """Join drawn bar segments end to end. segments: ("LINE", id, a, b) or ("ARC", id, centre, r, t0, t1), an arc
+    traversed from t0 to t1 (radians; t1 > t0 counter-clockwise, t1 < t0 clockwise, |t1 - t0| in (0, 2 pi]; a CCW arc
+    crossing angle 0 must carry t1 = t0 + sweep, never a wrapped t1 < t0).
     Two segments continue each other only when an END of one meets an END of the other within tol; an end touching
     the middle of another bar (a T contact) is not continuity. A node where three or more ends meet is a branch: the
     run stops there. Segments with identical geometry collapse into the first (reported as duplicates)."""
     seen, segs, dups = {}, [], []
     for s in segments:
+        if s[0] == "ARC" and not (TOL < abs(s[5] - s[4]) <= 2 * math.pi + TOL):
+            raise PoolQtoError(f"arc {s[1]}: sweep must be in (0, 2 pi], got {s[5] - s[4]!r}")
         k = _geom_key(s)
         if k in seen:
             dups.append((s[1], seen[k]))
@@ -410,11 +414,21 @@ def _pt_seg(p, a, b):
 
 
 def target_distance(p, geom):
-    """Distance from a point to a target: SEG (a, b), ARC (centre, r, t0, t1) or DOT (centre, r)."""
+    """Distance from a point to a target: SEG (a, b), ARC (centre, r, t0, t1: the drawn sweep only, not the full
+    circle) or DOT (centre, r: the dot's rim; 0 inside it)."""
     if geom[0] == "SEG":
         return _pt_seg(p, geom[1], geom[2])
     if geom[0] == "ARC":
-        return abs(math.dist(p, geom[1]) - geom[2])
+        c, r, t0, t1 = geom[1], geom[2], geom[3], geom[4]
+        lo, hi = min(t0, t1), max(t0, t1)
+        phi = math.atan2(p[1] - c[1], p[0] - c[0])
+        while phi < lo:
+            phi += 2 * math.pi
+        while phi >= lo + 2 * math.pi:
+            phi -= 2 * math.pi
+        if phi <= hi:                                   # the foot of the perpendicular lies on the drawn sweep
+            return abs(math.dist(p, c) - r)
+        return min(math.dist(p, (c[0] + r * math.cos(t), c[1] + r * math.sin(t))) for t in (t0, t1))
     if geom[0] == "DOT":
         return max(0.0, math.dist(p, geom[1]) - geom[2])
     raise PoolQtoError(f"unknown target geometry {geom[0]!r}")
