@@ -117,7 +117,33 @@ The fresh container lacked four of them, and each one stopped work until it was 
   fixed the same way.
 - Run the checker in the environment setup script, before tests, so a missing store shows up as one clear line.
 
-### 6. Work in progress
+### 6. Test gate: what was proven, what could not run, what broke
+
+`classify_test_run.py` puts every test of a full-suite run into exactly one class:
+
+| Class | Meaning |
+|---|---|
+| `EXECUTED_PASSED` | Ran and passed. The only class that proves anything. |
+| `SKIPPED_PREREQUISITE_UNAVAILABLE` | Skipped because a private input or fixture is absent. Never counted as a pass. |
+| `SKIPPED_OTHER` | Skipped for another stated reason |
+| `EXPECTED_FAILURE` | pytest xfail |
+| `MANDATORY_BLOCKED_BY_MISSING_DATA` | Failed or errored because a required file is missing. The report names the path. |
+| `CODE_FAILURE` | Failed or errored for any other reason |
+
+The **complete-project regression gate** has three states:
+
+- **COMPLETE** only when all of these hold:
+  - no test is blocked by missing data;
+  - no prerequisite skip remains;
+  - every locked prerequisite is present;
+  - there is no code failure.
+- **FAILED** on any code failure.
+- **INCOMPLETE** otherwise.
+
+Benchmark truth counts among the locked prerequisites, so the gate stays INCOMPLETE until the sealed store is restored.
+The blind builders never read it.
+
+### 7. Work in progress
 
 Commit and push after every module that passes its tests. The S8.2 interruption happened because work was
 uncommitted when the container was reclaimed.
@@ -131,3 +157,4 @@ uncommitted when the container was reclaimed.
 | `INPUTS.lock.proposed.json` | Draft lock |
 | `check_prerequisites.py` | Checker |
 | `requirements-lock.proposed.txt` | Pinned dependencies |
+| `classify_test_run.py` | Sorts every test of a full-suite JUnit run into one class and derives the project regression gate |
