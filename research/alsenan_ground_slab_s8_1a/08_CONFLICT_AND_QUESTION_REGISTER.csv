@@ -1,0 +1,7 @@
+ID,KIND,TO,QUESTION,BLOCKS_AREA_M2,STATUS
+Q-S8.1A-01,ANNOTATION_SCOPE,structural engineer,"Do the two 'T=10cm / 5Ø10/m E.W.' callouts on the ground-beams plan apply only to the cells that hold them, or to other ground-slab cells?",158.830499417136,OPEN (revisit only on new source evidence or a consultant clarification)
+Q-S8.1A-02,CONTACT_CONDITION,structural engineer,"What is the ground slab cast on (soil, compacted fill, blinding, membrane), and which cover in note 22 governs its underside?",37.858523163397,OPEN (no quantity effect on the face-to-face mesh run)
+Q-S8.1A-03,POPULATION,S8 stair family,"The recovered stair bay (+0.30 / +1.00 marks, two tread sets) is a second ground-level stair not in the PRE-S8 census; its flight and landing extents are not drawn as closed outlines.",11.52,"OPEN (stair family, not ground slab)"
+Q-S8.1A-04,ANNOTATION,drawing review,"The two '******' S-TEXT marks (165A, 165B) beside the stair zones carry no stated meaning.",0,OPEN (no quantity effect)
+Q-S8.1A-05,LIFT_PIT,lift supplier / engineer,"Pit depth is 'by the lift manufacturer' (P14-LIFT): needed by the lift-pit family, not by the ground slab.",0,OPEN (lift-pit family)
+CF-S8.1A-01,SOURCE_CONFLICT_RECLASSIFIED,this round,S8.1 recorded the cover note as a SOURCE_CONFLICT; it is a conditional dimensional conflict that holds only for a slab cast against soil (06).,0,CORRECTED to COVER_APPLICABILITY_UNRESOLVED

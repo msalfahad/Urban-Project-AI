@@ -42,6 +42,7 @@ ACCURATE_MODULES = (
     "engine/source/slab_qto_authority.py",      # AD2 / PRE-S7.1 slab QTO authority lanes (no kg)
     "engine/source/slab_rebar_qto.py",          # S7 restricted project-basis slab rebar QTO (rate density, D^2/162)
     "engine/source/ground_slab_qto.py",         # S8.1 source-zoned ground-slab concrete + mesh (exact line / arc strips)
+    "engine/source/region_recovery.py",         # S8.1A unfaced-region partition, evidence lanes, mesh cover fit (no kg)
     "engine/bbs_steel.py",
 )
 # project builders that produce accurate reinforcement registers
@@ -73,6 +74,7 @@ ACCURATE_BUILDERS = (
     "research/alsenan_slab_rebar_s7a_qa/build_s7a_qa.py",  # S7A dated QA: top-extent readings (sensitivity), errata
     "research/pre_s8_structural_completeness/build_pre_s8.py",  # PRE-S8 census, coverage, readiness (no kg)
     "research/alsenan_ground_slab_s8_1/build_s8_1.py",  # S8.1 ground slab, two source-zoned cells (project basis)
+    "research/alsenan_ground_slab_s8_1a/build_s8_1a.py",  # S8.1A population recovery + cover audit (no kg, no m3)
 )
 ROUGH_MODULES = (
     "engine/source/rough_rebar_sanity.py",
