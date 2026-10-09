@@ -1,0 +1,69 @@
+{
+ "bar_object_states": {
+  "ALREADY_RECORDED": 86,
+  "REPEAT_OF_RECORDED_FAMILY": 1
+ },
+ "baseline": "6ddd988",
+ "bbs": "NOT_VALIDATED",
+ "corrects": "S8.3 (frozen, unchanged)",
+ "date": "2026-10-09",
+ "drawing": {
+  "bar_crosses_crown": true,
+  "bar_sweep": 161.510875,
+  "dot_spacing_mm_at_detail_proportion": 100.276709,
+  "dot_step_deg": 2.642352,
+  "dot_step_spread": 1.1e-05,
+  "dots": 62,
+  "plan_radial_lines_per_dome": [
+   20,
+   20
+  ]
+ },
+ "engine_commit": "6ddd988+code:da1deb2a2a6d18e5",
+ "fabrication_grade": "UNRESOLVED",
+ "frozen_quantity_changed": false,
+ "frozen_reinforcement_kg": 602.111303562,
+ "lower_bound_claim": "NONE",
+ "meridian_count_unrounded": 90.453343734,
+ "mid_surface": {
+  "R_m": 2.185289474,
+  "area_m2": 25.401570619,
+  "centre_below_springing_m": 0.335289474,
+  "meridian_m": 3.096025571,
+  "psi0_rad": 1.416757646,
+  "rim_circumference_m": 13.56800156,
+  "rim_radius_m": 2.159414516
+ },
+ "new_bar_objects": 0,
+ "physical_distribution": "NOT_ESTABLISHED",
+ "quantity_confidence": "IDEALIZED_SURFACE_DENSITY_QTO",
+ "references_read": [],
+ "round": "S8_3A",
+ "scenarios": {
+  "A": {
+   "hoop_m_per_dome": 169.343804127,
+   "kg_two_domes": 602.111303562,
+   "lane": "PROJECT_BASIS_QTO (frozen, unchanged)",
+   "meridional_m_per_dome": 169.343804127
+  },
+  "B": {
+   "hoop_m_per_dome": 169.343804127,
+   "kg_two_domes": 798.914967729,
+   "lane": "SENSITIVITY_ONLY",
+   "meridional_m_per_dome": 280.045865221
+  },
+  "B-FAB": {
+   "hoop_m_per_dome": 176.169871005,
+   "kg_two_domes": 814.059018673,
+   "lane": "SENSITIVITY_ONLY",
+   "meridional_m_per_dome": 281.738326999
+  },
+  "C": {
+   "hoop_m_per_dome": 169.343804127,
+   "kg_two_domes": 678.936390426,
+   "lane": "SENSITIVITY_ONLY",
+   "meridional_m_per_dome": 212.557915488
+  }
+ },
+ "suitable_for_project_basis_boq": "YES_WITH_LABEL"
+}

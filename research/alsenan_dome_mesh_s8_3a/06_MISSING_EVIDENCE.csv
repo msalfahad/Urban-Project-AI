@@ -1,0 +1,8 @@
+ID,MISSING,WHY_IT_MATTERS,WHO
+ME-01,"where the meridional 150 mm applies (at the springing, as a maximum, or as an average)",decides between A-type and B-type quantities,Engineer
+ME-02,"the meridional arrangement: number of radial bars, which stop and where, or a crown detail (crown ring, cap mesh, cut-off radius)",the drawn continuous meridians cannot all pass the crown,Engineer
+ME-03,laps / splices of both families: positions and lengths,hoops reach 13.6 m on the mid-surface,Engineer
+ME-04,anchorage of the meridians into the ring: leg length and hook,follows the ring depth 'AS PER ARCH' (S8.3 CF-S8.3-03),Engineer / architect
+ME-05,bar layer position and cover (mid-surface used),intrados / extrados change the area by -5 / +5 %,Engineer
+ME-06,one mesh or two (S8.3 CF-S8.3-07 read one from the drawing),doubles the quantity,Engineer
+ME-07,role and size of the unlabelled junction bar (S8.3-E02),already blocked; listed so it is not lost,Engineer
