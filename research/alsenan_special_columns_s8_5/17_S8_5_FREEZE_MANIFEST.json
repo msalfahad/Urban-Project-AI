@@ -1,0 +1,115 @@
+{
+ "baseline": "9a82950",
+ "code": {
+  "engine/source/delta_release.py": "7b0f72a6f5138b3e0f8515c80a42a38a2cfc035c8fb4c138aa64a4fd5c9708b9",
+  "engine/source/rebar_unit_mass.py": "81d63a85da8e64600d0c49a6662bcc49655f46dc71603654b3e1438c5b146eb8",
+  "engine/source/special_column_components.py": "562e58417e397dcf12c3ad53af850dd276d9dda381bb7c9affa017c65ddf3612",
+  "research/alsenan_special_columns_s8_5/build_s8_5.py": "e1e04ee911a726e853ede23aa0ab62e9d869e0e17a2659ec32d2c596426f4495",
+  "research/external_engine_lab/alsenan_structural_s1.py": "e3ecd25490cd433540e317454ffdbaadf17c19799f49eb1df9afcb928aa494cb"
+ },
+ "date": "2026-10-09",
+ "drawing_sha256": {
+  "ST7757.dxf": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+  "ST7757.pdf": "74da1523f05eb3c6a4fe3ddebaef2c3d841891f003efc03bc32a3fb4553337e3"
+ },
+ "engine_commit_stamp": "9a82950+code:0c87cb2cf3181769",
+ "frozen_baselines": {
+  "AD1": "e2497cc75181393000187b7e657fa8485a4c0f365b4614bed983d0bc6c0ca5b4",
+  "D1.1": "3ecb642e2141f5a9af11453870696b104a11cfb519d65a9e3f505cbff7c73a74",
+  "D1.2": "f256d6a25edf93029c6ba1c8cf9bc336790fd8d9cf7a5045e8395942986a9554",
+  "PRE-S7": "fb3a1c62a8e525b663853d03d43e067f1839026aea149399491bd4cf98f0ad09",
+  "PRE-S7.1": "3a67a8641ce4ea836334e02532af82b9a3bb01be8efdba4f093eee44d92c1ef6",
+  "PRE-S8": "1c8daf59926540941efbf5f749e8e175fe64b7efeb6d7acff0bfbefbb034849d",
+  "S4": "0d63015a19953f295e331aab2d7e49e8facb277e1465fbdd1b6b5a40d1a2362b",
+  "S4.1": "468e90d9657548a7e9124b67ce0a55b63560f030e2f98b414c46ad4e970e030b",
+  "S5": "ff488a92f3eaff80e84fca2d7e0b8e36cc40ddb84232cd315acfd1ce50b4b3d8",
+  "S5.1": "595d64b1bf5c8e0ef7b5bebfaf3ea4063dd884356390c84b4c8aac77cddb5a88",
+  "S6": "c29a28bc66334d5294d71b0d5feb0dd5eae36baf91a04ef6e0105b2ca43be63e",
+  "S6.1": "c4744888ed2207ebff47c0a895e706d7e381b5f905b694eb92e3d1cdc411c0b2",
+  "S7": "b23f97b6db334e641c38c498bf23b46236d68f4fcc26a6eafde1f3bfc156d175",
+  "S7A": "5b256cef99dc57934c76249c28814d5ce07c74caf308aabdbf90e0e8f0adcee1",
+  "S8.1": "e99d83a750b64541f5b3174b853d24209f30e46574fafafe56cfa3fd0d88e354",
+  "S8.1A": "890c1c42f03715b6b26d88744852fe388ca419fd7c6e3f0214e137dc5c1a473e",
+  "S8.2": "749affe72ec80083715f01b790b96bb5fca31685a93f952369ec7d4469f3494d",
+  "S8.2A": "76fda44b41695a2a79c7e030388ba2282a93f09552bcd67e06c32aee09551f9d",
+  "S8.3": "92bfe9c0b2b7fea189bb37759f93759ea4a6cf5108738af1390468bda6ee92da",
+  "S8.3A": "cf83c809495496f421f2c85d46c4f497757a66dbbea607a77208555695e73505",
+  "S8.4": "45fd614f0c22adceec27ac0657ae1135f59f4c40dde811c56c2d7121527d85f1"
+ },
+ "inputs": {
+  "research/alsenan_column_rebar_s3_1/COLUMN_REBAR_S3_1_SUMMARY.json": "40891cf515c2cd74954505768bb870684072d00b8f2678b7a7b209fa0216dc12",
+  "research/alsenan_column_rebar_s3_1/COLUMN_RELEASE_REGISTER.json": "c3bf53516ba97622039bccf706ebaa6fa3f9c511cfc29e88b38d8d138d06d412",
+  "research/alsenan_footing_rebar_s4/FOOTING_REBAR_COMPONENTS.csv": "d646bb1e6c868b9a0c9f9830b435299a99b1d3ecd5b2a5e9c0b8fd7fec9e1148",
+  "research/alsenan_footing_rebar_s4/FOOTING_REBAR_OCCURRENCES.csv": "2d0f8d8ae85247f4caddc86bb2a6f5ef631106c0d5df2729875983b1e854ba4f",
+  "research/alsenan_footing_rebar_s4_1/S4_1_DELTA_COMPONENTS.csv": "b78aed8688d6b75093734e6e864b288debed2f17153b7db4650f420a421f0738",
+  "research/alsenan_ground_system_rebar_s5/GROUND_SYSTEM_REBAR_OCCURRENCES.csv": "da5296bc21fb8936603fd8a69bb28ff44f2b77149f0105820818dc045b40f37d",
+  "research/alsenan_structural_census_s1/BEAM_DEFINITION_REGISTER.json": "6b490b8a17aab326a3233d7090c219d35f61e60c83ee290391cfa0f0a69df249",
+  "research/alsenan_structural_census_s1/COLUMN_OCCURRENCE_REGISTER.json": "fb3f2d0c45bc1fbee9f04709d9e06040fbeb7eb5e80f8038a76f8840da048f88",
+  "research/alsenan_structural_census_s1/COLUMN_VERTICAL_CHAIN_REGISTER.json": "0397e1981a5a439ade43edc39b1902cdc192571e5273f6302c9c363f20ca6e1d",
+  "research/alsenan_structural_census_s1/SPECIAL_STRUCTURAL_OCCURRENCE_REGISTER.json": "870800ec87b1ea39eb95636bfeae124a6e47c1779d926b8427c1e997e85ee8a5",
+  "research/alsenan_structural_census_s1/STRUCTURAL_LEVEL_REGISTER.json": "53d54f501f0fcab6f3825d16a4c1a939c9fc5e094d410eb8e9f3875f6fc3ca6b",
+  "research/alsenan_structural_census_s1/STRUCTURAL_PROJECT_RULE_REGISTER.json": "3268bce3ef31c21ee93b0d7f9ab9b50195e0d0ae659699422c6927abcdf528d2",
+  "research/alsenan_structural_s2/ALSENAN_COMPONENT_RELEASE.json": "b824296984462ac6e5a71d186b956b13e15a08834718e9447a63142ad54f5bfb",
+  "research/alsenan_structural_s2/ALSENAN_ENGINEERING_FLAGS.json": "ecab57cd3e7ec2861950dc77a6686eb545bda42323265a2dffd665d6756b8886",
+  "research/alsenan_superstructure_beam_rebar_s6/SUPERSTRUCTURE_BEAM_OCCURRENCES.csv": "613fa422d310192c7729dc073ffbd23016d1346969567b6a94b1e64720181690",
+  "research/alsenan_superstructure_beam_rebar_s6_1/S6_1_DELTA_COMPONENTS.csv": "1005dc712e16c2a18e99b0d03ab7fb9b2fdd7d06d2b3b09a8352a8e56d0d69cb",
+  "research/alsenan_superstructure_beam_rebar_s6_1/S6_1_RELEASE_SUMMARY.json": "5454ad9c4f0d9c31e47bef6164ed1440d3b089b280fa19ac4254d25ee053198f",
+  "research/pre_s8_structural_completeness/02_STRUCTURAL_ELEMENT_CENSUS.csv": "a24db6efc7855c2a1f2eaff5e9739397b03f3f62d79ffaa7376a8609ead51e12",
+  "tests/alsenan/registers/SOURCE_MANIFEST.json": "1b2ededf808bdc793024897f6dd8b76461ffa1885f7009848ff6d4b339360327"
+ },
+ "outputs": {
+  "00_README.md": "a151757aab4e1c1c48725a6cea2db7a2fae03eb8ee0a7008c029ae1ee822e483",
+  "01_SOURCE_AND_ANNOTATION_REGISTER.csv": "2957bb6c1f3fad9e020530c52351a871e847dfc0844a2f9c0d7f2ebb46f3055e",
+  "02_SIX_OCCURRENCE_POPULATION.csv": "522a6d23ac85679b1324b73e47434ea9c9d62a441cd3c8b6d2f9e6a5fbba70b6",
+  "03_COLUMN_PARENT_CROSSWALK.csv": "0c74090dcc01815bfdc9817a966008673b7671dae2f3f2c803468a2b024a4a5a",
+  "04_TWISTED_COLUMN_REINFORCEMENT.csv": "b310735b42cb43089cea5abbbd73dbc521d9a0566f96c5d71d1f8eba44eb6b98",
+  "05_PLANTED_COLUMN_REINFORCEMENT.csv": "a6fbbf7c0b927c096cbf000fa03e6ec135c317af05e208e7705bf96938c26d31",
+  "06_DEAD_COLUMN_TERMINATION_AUDIT.csv": "755f0e31a232c7bbcdb7185499dfdd197daed56ff57bcdcad3b95687fd130ebe",
+  "07_CONCRETE_QTO.csv": "0a69f9ebc8329d0ede0c216d327543aca4b22487e8dc1538c575b7c6b51a4f8d",
+  "08_INCREMENTAL_REBAR_QTO.csv": "2f75e792222db4e8ee1db42ed7ed728d620e3606cb60b67dda2eb5795b907b64",
+  "09_INTERFACE_RECONCILIATION.csv": "c11ced9949060b3f7286e057a43196e09ca7692dcfb237ea0ca9e3ee1aba750b",
+  "10_BLOCKED_COMPONENTS.csv": "67730cf2dbb089ec2d6a75107abdc04df466bb781340c871e5507b9cc5ef8bad",
+  "11_SOURCE_CONFLICTS_AND_QUESTIONS.csv": "437d9a6b9fd952ef4ffba7b5f7d4e4f40f1ba9dc77841f5269f736c74d26e2fc",
+  "12_OWNERSHIP_DELTAS.csv": "5ca81f6a8bf42386f60b92a40d00d1c8f3195d4abea3d3b1d5b9a5f07f8f9630",
+  "13_SENSITIVITY_CASES.csv": "e3fea913cacf3c558ec27d69fd6fb4ae93d38b77a7fab0983b77e4d8b25323c4",
+  "14_CONSERVATION_CHECKS.csv": "82bf586c24a40a40df2fd489a0f3d053c8395a03b0ae8c9d8f579dfe79fedb52",
+  "15_PROVENANCE.jsonl": "dc12ced6d058235390d585b76c2692fe84452c54217abdace48da41468b3e772",
+  "16_S8_5_SUMMARY.json": "180cbf5f73e97f28f7fe4a80931373abfd204c56aa007fe9f6483a7fe912a88d"
+ },
+ "pre_s8_columns_read": [
+  "ELEMENT_ID",
+  "PARENT_ELEMENT",
+  "ELEMENT_FAMILY",
+  "FLOOR",
+  "EXISTING_STAGE_OWNER",
+  "NEW_S8_OWNER",
+  "MISSING_INFORMATION"
+ ],
+ "references_read": [],
+ "register_indexes": {
+  "S1": {
+   "index_sha256": "bff6694f05762498c897e2e8da95f70747af133ba652eb47470a03241aa7cc51",
+   "registers_verified": 21
+  },
+  "S2": {
+   "index_sha256": "a966dec798dfc4dbb1beaf16ed8a52d41d90eaad0a072c38d56b4dc53f395b01",
+   "registers_verified": 12
+  },
+  "S3": {
+   "index_sha256": "50fd1ec80048424df7feddd7477a1473db1d9bf7fabf152fd6a837e3366f98cb",
+   "registers_verified": 11
+  },
+  "S3.1": {
+   "index_sha256": "8a771cb688b04128c351aab7880afd5dc353c4df98e3f62910fcd18c06763661",
+   "registers_verified": 12
+  }
+ },
+ "released": {
+  "concrete_m3": 0.0,
+  "reinforcement_items": [],
+  "reinforcement_kg": 0.0
+ },
+ "round": "S8_5",
+ "rule": "frozen before any earlier Urban, contractor or third-party figure is read; the comparison after it explains differences and never changes a frozen quantity",
+ "state": "FROZEN_BEFORE_COMPARISON"
+}

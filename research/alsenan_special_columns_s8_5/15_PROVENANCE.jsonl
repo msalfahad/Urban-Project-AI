@@ -1,0 +1,112 @@
+{"file": "ST7757.dxf", "handles": [], "output": "01_SOURCE_AND_ANNOTATION_REGISTER.csv", "page": "1-7", "record": "SRC-01"}
+{"file": "ST7757.pdf", "handles": [], "output": "01_SOURCE_AND_ANNOTATION_REGISTER.csv", "page": "1-15", "record": "SRC-02"}
+{"file": "ST7757 p.4 GFRS", "handles": ["31F", "31C", "31B", "36E"], "output": "01_SOURCE_AND_ANNOTATION_REGISTER.csv", "page": 4, "record": "A-31F"}
+{"file": "ST7757 p.4 GFRS", "handles": ["324", "323", "322", "37A"], "output": "01_SOURCE_AND_ANNOTATION_REGISTER.csv", "page": 4, "record": "A-324"}
+{"file": "ST7757 p.4 GFRS", "handles": ["38A", "389", "35C"], "output": "01_SOURCE_AND_ANNOTATION_REGISTER.csv", "page": 4, "record": "A-38A"}
+{"file": "ST7757 p.4 GFRS", "handles": ["544", "545", "546", "329", "543"], "output": "01_SOURCE_AND_ANNOTATION_REGISTER.csv", "page": 4, "record": "A-544"}
+{"file": "ST7757 p.4 GFRS", "handles": ["548", "549", "54A", "386", "547"], "output": "01_SOURCE_AND_ANNOTATION_REGISTER.csv", "page": 4, "record": "A-548"}
+{"file": "ST7757 p.5 FFRS", "handles": ["77C", "77F", "77E", "77B", "77D"], "output": "01_SOURCE_AND_ANNOTATION_REGISTER.csv", "page": 5, "record": "A-77C"}
+{"file": "ST7757 p.15", "handles": [], "output": "01_SOURCE_AND_ANNOTATION_REGISTER.csv", "page": 15, "record": "RULE-P15-TWISTED"}
+{"file": "ST7757 p.15", "handles": [], "output": "01_SOURCE_AND_ANNOTATION_REGISTER.csv", "page": 15, "record": "RULE-P15-PLANTED"}
+{"file": "ST7757 p.3", "handles": [], "output": "01_SOURCE_AND_ANNOTATION_REGISTER.csv", "page": 3, "record": "RULE-P3-LEGEND"}
+{"file": "ST7757 p.9", "handles": ["1BAA"], "output": "01_SOURCE_AND_ANNOTATION_REGISTER.csv", "page": 9, "record": "RULE-P9-COL-TIES"}
+{"file": "ST7757 p.8", "handles": [], "output": "01_SOURCE_AND_ANNOTATION_REGISTER.csv", "page": 8, "record": "RULE-P8-N09"}
+{"file": "ST7757 p.8", "handles": [], "output": "01_SOURCE_AND_ANNOTATION_REGISTER.csv", "page": 8, "record": "RULE-P8-N22"}
+{"file": "ST7757.pdf", "handles": [], "output": "01_SOURCE_AND_ANNOTATION_REGISTER.csv", "page": 15, "record": "VR-S8.5-01"}
+{"file": "ST7757.pdf", "handles": [], "output": "01_SOURCE_AND_ANNOTATION_REGISTER.csv", "page": 15, "record": "VR-S8.5-02"}
+{"file": "ST7757.pdf", "handles": [], "output": "01_SOURCE_AND_ANNOTATION_REGISTER.csv", "page": 15, "record": "VR-S8.5-03"}
+{"file": "ST7757.pdf", "handles": [], "output": "01_SOURCE_AND_ANNOTATION_REGISTER.csv", "page": 15, "record": "VR-S8.5-04"}
+{"file": "ST7757.pdf", "handles": [], "output": "01_SOURCE_AND_ANNOTATION_REGISTER.csv", "page": "13-15", "record": "VR-S8.5-05"}
+{"file": "ST7757.pdf", "handles": [], "output": "01_SOURCE_AND_ANNOTATION_REGISTER.csv", "page": 3, "record": "VR-S8.5-06"}
+{"file": "research/alsenan_structural_census_s1/SPECIAL_STRUCTURAL_OCCURRENCE_REGISTER.json", "handles": [], "output": "01_SOURCE_AND_ANNOTATION_REGISTER.csv", "page": "", "record": "REG-S1_SPECIAL"}
+{"file": "research/alsenan_structural_census_s1/COLUMN_OCCURRENCE_REGISTER.json", "handles": [], "output": "01_SOURCE_AND_ANNOTATION_REGISTER.csv", "page": "", "record": "REG-S1_COLUMNS"}
+{"file": "research/alsenan_structural_census_s1/COLUMN_VERTICAL_CHAIN_REGISTER.json", "handles": [], "output": "01_SOURCE_AND_ANNOTATION_REGISTER.csv", "page": "", "record": "REG-S1_CHAINS"}
+{"file": "research/alsenan_structural_census_s1/STRUCTURAL_PROJECT_RULE_REGISTER.json", "handles": [], "output": "01_SOURCE_AND_ANNOTATION_REGISTER.csv", "page": "", "record": "REG-S1_RULES"}
+{"file": "research/alsenan_structural_census_s1/STRUCTURAL_LEVEL_REGISTER.json", "handles": [], "output": "01_SOURCE_AND_ANNOTATION_REGISTER.csv", "page": "", "record": "REG-S1_LEVELS"}
+{"file": "research/alsenan_structural_census_s1/BEAM_DEFINITION_REGISTER.json", "handles": [], "output": "01_SOURCE_AND_ANNOTATION_REGISTER.csv", "page": "", "record": "REG-S1_BEAM_DEFS"}
+{"file": "research/alsenan_structural_s2/ALSENAN_ENGINEERING_FLAGS.json", "handles": [], "output": "01_SOURCE_AND_ANNOTATION_REGISTER.csv", "page": "", "record": "REG-S2_FLAGS"}
+{"file": "research/alsenan_structural_s2/ALSENAN_COMPONENT_RELEASE.json", "handles": [], "output": "01_SOURCE_AND_ANNOTATION_REGISTER.csv", "page": "", "record": "REG-S2_COMPONENTS"}
+{"file": "research/alsenan_column_rebar_s3_1/COLUMN_RELEASE_REGISTER.json", "handles": [], "output": "01_SOURCE_AND_ANNOTATION_REGISTER.csv", "page": "", "record": "REG-S31_RELEASE"}
+{"file": "research/alsenan_column_rebar_s3_1/COLUMN_REBAR_S3_1_SUMMARY.json", "handles": [], "output": "01_SOURCE_AND_ANNOTATION_REGISTER.csv", "page": "", "record": "REG-S31_SUMMARY"}
+{"file": "research/alsenan_footing_rebar_s4/FOOTING_REBAR_COMPONENTS.csv", "handles": [], "output": "01_SOURCE_AND_ANNOTATION_REGISTER.csv", "page": "", "record": "REG-S4_COMPONENTS"}
+{"file": "research/alsenan_footing_rebar_s4/FOOTING_REBAR_OCCURRENCES.csv", "handles": [], "output": "01_SOURCE_AND_ANNOTATION_REGISTER.csv", "page": "", "record": "REG-S4_OCC"}
+{"file": "research/alsenan_footing_rebar_s4_1/S4_1_DELTA_COMPONENTS.csv", "handles": [], "output": "01_SOURCE_AND_ANNOTATION_REGISTER.csv", "page": "", "record": "REG-S41_DELTA"}
+{"file": "research/alsenan_ground_system_rebar_s5/GROUND_SYSTEM_REBAR_OCCURRENCES.csv", "handles": [], "output": "01_SOURCE_AND_ANNOTATION_REGISTER.csv", "page": "", "record": "REG-S5_OCC"}
+{"file": "research/alsenan_superstructure_beam_rebar_s6/SUPERSTRUCTURE_BEAM_OCCURRENCES.csv", "handles": [], "output": "01_SOURCE_AND_ANNOTATION_REGISTER.csv", "page": "", "record": "REG-S6_OCC"}
+{"file": "research/alsenan_superstructure_beam_rebar_s6_1/S6_1_DELTA_COMPONENTS.csv", "handles": [], "output": "01_SOURCE_AND_ANNOTATION_REGISTER.csv", "page": "", "record": "REG-S61_DELTA"}
+{"file": "research/alsenan_superstructure_beam_rebar_s6_1/S6_1_RELEASE_SUMMARY.json", "handles": [], "output": "01_SOURCE_AND_ANNOTATION_REGISTER.csv", "page": "", "record": "REG-S61_SUMMARY"}
+{"file": "research/pre_s8_structural_completeness/02_STRUCTURAL_ELEMENT_CENSUS.csv", "handles": [], "output": "01_SOURCE_AND_ANNOTATION_REGISTER.csv", "page": "", "record": "REG-PRE_S8_CENSUS"}
+{"file": "tests/alsenan/registers/SOURCE_MANIFEST.json", "handles": [], "output": "01_SOURCE_AND_ANNOTATION_REGISTER.csv", "page": "", "record": "REG-SOURCE_MANIFEST"}
+{"drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079", "handles": ["31F", "36E", "31B", "664"], "output": "02_SIX_OCCURRENCE_POPULATION.csv", "record": "SPC-TURN_COLUMN-GFRS-31F", "sheet": "GFRS"}
+{"drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079", "handles": ["324", "37A", "322", "667"], "output": "02_SIX_OCCURRENCE_POPULATION.csv", "record": "SPC-TURN_COLUMN-GFRS-324", "sheet": "GFRS"}
+{"drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079", "handles": ["38A", "35C"], "output": "02_SIX_OCCURRENCE_POPULATION.csv", "record": "SPC-DEAD_COLUMN-GFRS-38A", "sheet": "GFRS"}
+{"drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079", "handles": ["544", "329", "66A"], "output": "02_SIX_OCCURRENCE_POPULATION.csv", "record": "SPC-PLANTED_COLUMN-GFRS-544", "sheet": "GFRS"}
+{"drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079", "handles": ["548", "386", "69D"], "output": "02_SIX_OCCURRENCE_POPULATION.csv", "record": "SPC-PLANTED_COLUMN-GFRS-548", "sheet": "GFRS"}
+{"drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079", "handles": ["77C", "77B", "778"], "output": "02_SIX_OCCURRENCE_POPULATION.csv", "record": "SPC-PLANTED_COLUMN-FFRS-77C", "sheet": "FFRS"}
+{"authority": ["S1 schedule", "S3.1"], "existing_owner": ["S3.1:COL-C8-X15-Y06-GF|MAIN_CORE"], "output": "04_TWISTED_COLUMN_REINFORCEMENT.csv", "record": "TC-31F-01"}
+{"authority": ["S1 schedule", "S3.1"], "existing_owner": ["S3.1:COL-C8-X15-Y06-1F|MAIN_CORE"], "output": "04_TWISTED_COLUMN_REINFORCEMENT.csv", "record": "TC-31F-02"}
+{"authority": ["P8-N09", "S3.1", "VR-S8.5-03"], "existing_owner": ["S3.1:COL-C8-X15-Y06-GF|LAP_TOP"], "output": "04_TWISTED_COLUMN_REINFORCEMENT.csv", "record": "TC-31F-03"}
+{"authority": ["S3.1 STR-COL-024", "VR-S8.5-03"], "existing_owner": ["S3.1:COL-C8-X15-Y06-GF|SECTION_TRANSITION"], "output": "04_TWISTED_COLUMN_REINFORCEMENT.csv", "record": "TC-31F-04"}
+{"authority": ["P15-TWISTED", "VR-S8.5-01", "VR-S8.5-02", "VR-S8.5-03"], "existing_owner": ["S3.1:COL-C8-X15-Y06-GF|EXTRA:TURN_EXTRA_BARS"], "output": "04_TWISTED_COLUMN_REINFORCEMENT.csv", "record": "TC-31F-05"}
+{"authority": ["VR-S8.5-03"], "existing_owner": [], "output": "04_TWISTED_COLUMN_REINFORCEMENT.csv", "record": "TC-31F-06"}
+{"authority": ["VR-S8.5-03"], "existing_owner": [], "output": "04_TWISTED_COLUMN_REINFORCEMENT.csv", "record": "TC-31F-07"}
+{"authority": ["P9-COL-TIES", "S3.1", "VR-S8.5-01"], "existing_owner": ["S3.1:COL-C8-X15-Y06-GF|HOOK_1", "S3.1:COL-C8-X15-Y06-GF|HOOK_2", "S3.1:COL-C8-X15-Y06-GF|TIE_INTERNAL", "S3.1:COL-C8-X15-Y06-GF|TIE_PERIMETER"], "output": "04_TWISTED_COLUMN_REINFORCEMENT.csv", "record": "TC-31F-08"}
+{"authority": ["P9-COL-TIES", "S3.1", "VR-S8.5-01"], "existing_owner": ["S3.1:COL-C8-X15-Y06-1F|HOOK_1", "S3.1:COL-C8-X15-Y06-1F|HOOK_2", "S3.1:COL-C8-X15-Y06-1F|TIE_INTERNAL", "S3.1:COL-C8-X15-Y06-1F|TIE_PERIMETER"], "output": "04_TWISTED_COLUMN_REINFORCEMENT.csv", "record": "TC-31F-09"}
+{"authority": ["P15-TWISTED", "VR-S8.5-01", "VR-S8.5-02", "VR-S8.5-03"], "existing_owner": ["S3.1:COL-C8-X15-Y06-GF|EXTRA:TURN_SPIRAL"], "output": "04_TWISTED_COLUMN_REINFORCEMENT.csv", "record": "TC-31F-10"}
+{"authority": ["S3.1"], "existing_owner": ["S3.1:COL-C8-X15-Y06-1F|ANCHORAGE_TOP"], "output": "04_TWISTED_COLUMN_REINFORCEMENT.csv", "record": "TC-31F-11"}
+{"authority": ["S1 schedule", "S3.1"], "existing_owner": ["S3.1:COL-C9-X13-Y08-GF|MAIN_CORE"], "output": "04_TWISTED_COLUMN_REINFORCEMENT.csv", "record": "TC-324-01"}
+{"authority": ["S1 schedule", "S3.1"], "existing_owner": ["S3.1:COL-C9-X13-Y08-1F|MAIN_CORE"], "output": "04_TWISTED_COLUMN_REINFORCEMENT.csv", "record": "TC-324-02"}
+{"authority": ["P8-N09", "S3.1", "VR-S8.5-03"], "existing_owner": ["S3.1:COL-C9-X13-Y08-GF|LAP_TOP", "S3.1:COL-C9-X13-Y08-GF|ANCHORAGE_TOP_STOPPED"], "output": "04_TWISTED_COLUMN_REINFORCEMENT.csv", "record": "TC-324-03"}
+{"authority": ["S3.1 STR-COL-024", "VR-S8.5-03"], "existing_owner": ["S3.1:COL-C9-X13-Y08-GF|SECTION_TRANSITION"], "output": "04_TWISTED_COLUMN_REINFORCEMENT.csv", "record": "TC-324-04"}
+{"authority": ["P15-TWISTED", "VR-S8.5-01", "VR-S8.5-02", "VR-S8.5-03"], "existing_owner": ["S3.1:COL-C9-X13-Y08-GF|EXTRA:TURN_EXTRA_BARS"], "output": "04_TWISTED_COLUMN_REINFORCEMENT.csv", "record": "TC-324-05"}
+{"authority": ["VR-S8.5-03"], "existing_owner": [], "output": "04_TWISTED_COLUMN_REINFORCEMENT.csv", "record": "TC-324-06"}
+{"authority": ["VR-S8.5-03"], "existing_owner": [], "output": "04_TWISTED_COLUMN_REINFORCEMENT.csv", "record": "TC-324-07"}
+{"authority": ["P9-COL-TIES", "S3.1", "VR-S8.5-01"], "existing_owner": ["S3.1:COL-C9-X13-Y08-GF|HOOK_1", "S3.1:COL-C9-X13-Y08-GF|HOOK_2", "S3.1:COL-C9-X13-Y08-GF|TIE_INTERNAL", "S3.1:COL-C9-X13-Y08-GF|TIE_PERIMETER"], "output": "04_TWISTED_COLUMN_REINFORCEMENT.csv", "record": "TC-324-08"}
+{"authority": ["P9-COL-TIES", "S3.1", "VR-S8.5-01"], "existing_owner": ["S3.1:COL-C9-X13-Y08-1F|HOOK_1", "S3.1:COL-C9-X13-Y08-1F|HOOK_2", "S3.1:COL-C9-X13-Y08-1F|TIE_INTERNAL", "S3.1:COL-C9-X13-Y08-1F|TIE_PERIMETER"], "output": "04_TWISTED_COLUMN_REINFORCEMENT.csv", "record": "TC-324-09"}
+{"authority": ["P15-TWISTED", "VR-S8.5-01", "VR-S8.5-02", "VR-S8.5-03"], "existing_owner": ["S3.1:COL-C9-X13-Y08-GF|EXTRA:TURN_SPIRAL"], "output": "04_TWISTED_COLUMN_REINFORCEMENT.csv", "record": "TC-324-10"}
+{"authority": ["S3.1"], "existing_owner": ["S3.1:COL-C9-X13-Y08-1F|ANCHORAGE_TOP"], "output": "04_TWISTED_COLUMN_REINFORCEMENT.csv", "record": "TC-324-11"}
+{"authority": ["S1 schedule", "S3.1"], "existing_owner": ["S3.1:COL-C11-X06-Y04-GF|MAIN_CORE"], "output": "06_DEAD_COLUMN_TERMINATION_AUDIT.csv", "record": "DC-01"}
+{"authority": ["P8-N09", "S3.1"], "existing_owner": ["S3.1:COL-C11-X06-Y04-GF|ANCHORAGE_TOP"], "output": "06_DEAD_COLUMN_TERMINATION_AUDIT.csv", "record": "DC-02"}
+{"authority": ["P3-LEGEND", "VR-S8.5-05"], "existing_owner": [], "output": "06_DEAD_COLUMN_TERMINATION_AUDIT.csv", "record": "DC-03"}
+{"authority": ["P3-LEGEND", "VR-S8.5-05"], "existing_owner": [], "output": "06_DEAD_COLUMN_TERMINATION_AUDIT.csv", "record": "DC-04"}
+{"authority": ["P9-COL-TIES", "S3.1"], "existing_owner": ["S3.1:COL-C11-X06-Y04-GF|HOOK_1", "S3.1:COL-C11-X06-Y04-GF|HOOK_2", "S3.1:COL-C11-X06-Y04-GF|TIE_INTERNAL", "S3.1:COL-C11-X06-Y04-GF|TIE_PERIMETER"], "output": "06_DEAD_COLUMN_TERMINATION_AUDIT.csv", "record": "DC-05"}
+{"authority": ["P3-LEGEND", "S1 chain"], "existing_owner": [], "output": "06_DEAD_COLUMN_TERMINATION_AUDIT.csv", "record": "DC-06"}
+{"authority": ["S1", "S3.1"], "existing_owner": ["S3.1:COL-P.C-X08-Y02-1F|MAIN_CORE"], "output": "05_PLANTED_COLUMN_REINFORCEMENT.csv", "record": "PC-544-01"}
+{"authority": ["P8-N09", "S3.1 STR-PLA-001"], "existing_owner": ["S3.1:COL-P.C-X08-Y02-1F|ANCHORAGE_BASE"], "output": "05_PLANTED_COLUMN_REINFORCEMENT.csv", "record": "PC-544-02"}
+{"authority": ["S3.1"], "existing_owner": ["S3.1:COL-P.C-X08-Y02-1F|ANCHORAGE_TOP"], "output": "05_PLANTED_COLUMN_REINFORCEMENT.csv", "record": "PC-544-03"}
+{"authority": ["P9-COL-TIES", "S3.1"], "existing_owner": ["S3.1:COL-P.C-X08-Y02-1F|HOOK_1", "S3.1:COL-P.C-X08-Y02-1F|HOOK_2", "S3.1:COL-P.C-X08-Y02-1F|TIE_INTERNAL", "S3.1:COL-P.C-X08-Y02-1F|TIE_PERIMETER"], "output": "05_PLANTED_COLUMN_REINFORCEMENT.csv", "record": "PC-544-04"}
+{"authority": ["P15-PLANTED", "VR-S8.5-04", "S2 STR-PLA-001"], "existing_owner": [], "output": "05_PLANTED_COLUMN_REINFORCEMENT.csv", "record": "PC-544-05"}
+{"authority": ["P15-PLANTED", "VR-S8.5-04", "S2 STR-PLA-001"], "existing_owner": [], "output": "05_PLANTED_COLUMN_REINFORCEMENT.csv", "record": "PC-544-06"}
+{"authority": ["P15-PLANTED", "VR-S8.5-04", "S2 STR-PLA-001"], "existing_owner": [], "output": "05_PLANTED_COLUMN_REINFORCEMENT.csv", "record": "PC-544-07"}
+{"authority": ["P15-PLANTED", "VR-S8.5-04", "S2 STR-PLA-001", "S6.1 NOT_APPLICABLE"], "existing_owner": [], "output": "05_PLANTED_COLUMN_REINFORCEMENT.csv", "record": "PC-544-08"}
+{"authority": ["P15-PLANTED", "VR-S8.5-04", "S2 STR-PLA-001"], "existing_owner": [], "output": "05_PLANTED_COLUMN_REINFORCEMENT.csv", "record": "PC-544-09"}
+{"authority": ["P15-PLANTED", "VR-S8.5-04", "S2 STR-PLA-001", "S1 schedule"], "existing_owner": [], "output": "05_PLANTED_COLUMN_REINFORCEMENT.csv", "record": "PC-544-10"}
+{"authority": ["S6"], "existing_owner": ["S6:BM-GF_ROOF-B27-BL002-532", "S6:BM-GF_ROOF-B4-BL022-497", "S6:BM-GF_ROOF-B5-BL022-498", "S6:SPAN:GFRS:BL002:2844-4653"], "output": "05_PLANTED_COLUMN_REINFORCEMENT.csv", "record": "PC-544-11"}
+{"authority": ["S1", "S3.1"], "existing_owner": ["S3.1:COL-P.C-X15-Y02-1F|MAIN_CORE"], "output": "05_PLANTED_COLUMN_REINFORCEMENT.csv", "record": "PC-548-01"}
+{"authority": ["P8-N09", "S3.1 STR-PLA-001"], "existing_owner": ["S3.1:COL-P.C-X15-Y02-1F|ANCHORAGE_BASE"], "output": "05_PLANTED_COLUMN_REINFORCEMENT.csv", "record": "PC-548-02"}
+{"authority": ["S3.1"], "existing_owner": ["S3.1:COL-P.C-X15-Y02-1F|ANCHORAGE_TOP"], "output": "05_PLANTED_COLUMN_REINFORCEMENT.csv", "record": "PC-548-03"}
+{"authority": ["P9-COL-TIES", "S3.1"], "existing_owner": ["S3.1:COL-P.C-X15-Y02-1F|HOOK_1", "S3.1:COL-P.C-X15-Y02-1F|HOOK_2", "S3.1:COL-P.C-X15-Y02-1F|TIE_PERIMETER"], "output": "05_PLANTED_COLUMN_REINFORCEMENT.csv", "record": "PC-548-04"}
+{"authority": ["P15-PLANTED", "VR-S8.5-04", "S2 STR-PLA-001"], "existing_owner": [], "output": "05_PLANTED_COLUMN_REINFORCEMENT.csv", "record": "PC-548-05"}
+{"authority": ["P15-PLANTED", "VR-S8.5-04", "S2 STR-PLA-001"], "existing_owner": [], "output": "05_PLANTED_COLUMN_REINFORCEMENT.csv", "record": "PC-548-06"}
+{"authority": ["P15-PLANTED", "VR-S8.5-04", "S2 STR-PLA-001"], "existing_owner": [], "output": "05_PLANTED_COLUMN_REINFORCEMENT.csv", "record": "PC-548-07"}
+{"authority": ["P15-PLANTED", "VR-S8.5-04", "S2 STR-PLA-001"], "existing_owner": ["S6.1:S6.1-D1324"], "output": "05_PLANTED_COLUMN_REINFORCEMENT.csv", "record": "PC-548-08"}
+{"authority": ["P15-PLANTED", "VR-S8.5-04", "S2 STR-PLA-001", "S6.1"], "existing_owner": ["S6.1:S6.1-D1325", "S6.1:S6.1-D1326", "S6.1:S6.1-D1327"], "output": "05_PLANTED_COLUMN_REINFORCEMENT.csv", "record": "PC-548-09"}
+{"authority": ["P15-PLANTED", "VR-S8.5-04", "S2 STR-PLA-001", "S1 schedule"], "existing_owner": [], "output": "05_PLANTED_COLUMN_REINFORCEMENT.csv", "record": "PC-548-10"}
+{"authority": ["S6 / S6.1"], "existing_owner": ["S6.1:S6.1-D1304", "S6.1:S6.1-D1305"], "output": "05_PLANTED_COLUMN_REINFORCEMENT.csv", "record": "PC-548-11"}
+{"authority": ["S1", "S3.1"], "existing_owner": ["S3.1:COL-P.C-X?-Y?@24888-15994-2F|MAIN_CORE"], "output": "05_PLANTED_COLUMN_REINFORCEMENT.csv", "record": "PC-77C-01"}
+{"authority": ["P8-N09", "S3.1 STR-PLA-001"], "existing_owner": ["S3.1:COL-P.C-X?-Y?@24888-15994-2F|ANCHORAGE_BASE"], "output": "05_PLANTED_COLUMN_REINFORCEMENT.csv", "record": "PC-77C-02"}
+{"authority": ["S3.1"], "existing_owner": ["S3.1:COL-P.C-X?-Y?@24888-15994-2F|ANCHORAGE_TOP"], "output": "05_PLANTED_COLUMN_REINFORCEMENT.csv", "record": "PC-77C-03"}
+{"authority": ["P9-COL-TIES", "S3.1"], "existing_owner": ["S3.1:COL-P.C-X?-Y?@24888-15994-2F|HOOK_1", "S3.1:COL-P.C-X?-Y?@24888-15994-2F|HOOK_2", "S3.1:COL-P.C-X?-Y?@24888-15994-2F|TIE_PERIMETER"], "output": "05_PLANTED_COLUMN_REINFORCEMENT.csv", "record": "PC-77C-04"}
+{"authority": ["P15-PLANTED", "VR-S8.5-04", "S2 STR-PLA-001"], "existing_owner": [], "output": "05_PLANTED_COLUMN_REINFORCEMENT.csv", "record": "PC-77C-05"}
+{"authority": ["P15-PLANTED", "VR-S8.5-04", "S2 STR-PLA-001"], "existing_owner": [], "output": "05_PLANTED_COLUMN_REINFORCEMENT.csv", "record": "PC-77C-06"}
+{"authority": ["P15-PLANTED", "VR-S8.5-04", "S2 STR-PLA-001"], "existing_owner": [], "output": "05_PLANTED_COLUMN_REINFORCEMENT.csv", "record": "PC-77C-07"}
+{"authority": ["P15-PLANTED", "VR-S8.5-04", "S2 STR-PLA-001", "S6.1 NOT_APPLICABLE"], "existing_owner": [], "output": "05_PLANTED_COLUMN_REINFORCEMENT.csv", "record": "PC-77C-08"}
+{"authority": ["P15-PLANTED", "VR-S8.5-04", "S2 STR-PLA-001"], "existing_owner": [], "output": "05_PLANTED_COLUMN_REINFORCEMENT.csv", "record": "PC-77C-09"}
+{"authority": ["P15-PLANTED", "VR-S8.5-04", "S2 STR-PLA-001", "S1 schedule"], "existing_owner": [], "output": "05_PLANTED_COLUMN_REINFORCEMENT.csv", "record": "PC-77C-10"}
+{"authority": ["S6"], "existing_owner": ["S6:BM-1F_ROOF-B1-BL014-6D0", "S6:BM-1F_ROOF-B19-BL029-6CF", "S6:BM-1F_ROOF-B6-BL014-6C5", "S6:SPAN:FFRS:BL029:26630-29105"], "output": "05_PLANTED_COLUMN_REINFORCEMENT.csv", "record": "PC-77C-11"}
+{"box_px": [290, 130, 965, 790], "dpi": 300, "file": "ST7757.pdf", "kept_in_git": false, "output": "01_SOURCE_AND_ANNOTATION_REGISTER.csv", "page": 15, "record": "VR-S8.5-01"}
+{"box_px": [1020, 130, 1930, 790], "dpi": 300, "file": "ST7757.pdf", "kept_in_git": false, "output": "01_SOURCE_AND_ANNOTATION_REGISTER.csv", "page": 15, "record": "VR-S8.5-02"}
+{"box_px": [[400, 1700, 1500, 4600], [2300, 1700, 3400, 4600]], "dpi": 600, "file": "ST7757.pdf", "kept_in_git": false, "output": "01_SOURCE_AND_ANNOTATION_REGISTER.csv", "page": 15, "record": "VR-S8.5-03"}
+{"box_px": [3210, 1895, 4175, 3215], "dpi": 300, "file": "ST7757.pdf", "kept_in_git": false, "output": "01_SOURCE_AND_ANNOTATION_REGISTER.csv", "page": 15, "record": "VR-S8.5-04"}
+{"box_px": null, "dpi": 60, "file": "ST7757.pdf", "kept_in_git": false, "output": "01_SOURCE_AND_ANNOTATION_REGISTER.csv", "page": "13-15", "record": "VR-S8.5-05"}
+{"box_px": null, "dpi": null, "file": "ST7757.pdf", "kept_in_git": false, "output": "01_SOURCE_AND_ANNOTATION_REGISTER.csv", "page": 3, "record": "VR-S8.5-06"}

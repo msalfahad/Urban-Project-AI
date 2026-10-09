@@ -1,0 +1,15 @@
+ITEM_ID,SPECIAL_ID,COLUMN_ID,EXISTING_OWNER,EXISTING_STATE,EXISTING_QUANTITY,FLAGS,S8_5_M3,LANE,WHY
+CON-31F-GF,SPC-TURN_COLUMN-GFRS-31F,COL-C8-X15-Y06-GF,S2:COL-C8-X15-Y06-GF:CONCRETE,VERIFIED,1 nr occurrences,[],0,NOT_ADDED,the column occurrence owns its concrete; S8.5 never measures a whole column again
+CON-31F-1F,SPC-TURN_COLUMN-GFRS-31F,COL-C8-X15-Y06-1F,S2:COL-C8-X15-Y06-1F:CONCRETE,VERIFIED,1 nr occurrences,[],0,NOT_ADDED,the column occurrence owns its concrete; S8.5 never measures a whole column again
+CON-324-GF,SPC-TURN_COLUMN-GFRS-324,COL-C9-X13-Y08-GF,S2:COL-C9-X13-Y08-GF:CONCRETE,VERIFIED,1 nr occurrences,[],0,NOT_ADDED,the column occurrence owns its concrete; S8.5 never measures a whole column again
+CON-324-1F,SPC-TURN_COLUMN-GFRS-324,COL-C9-X13-Y08-1F,S2:COL-C9-X13-Y08-1F:CONCRETE,PROVISIONAL,1 nr occurrences,"[""af7c64702ffc823c""]",0,NOT_ADDED,the column occurrence owns its concrete; S8.5 never measures a whole column again
+CON-38A-GF,SPC-DEAD_COLUMN-GFRS-38A,COL-C11-X06-Y04-GF,S2:COL-C11-X06-Y04-GF:CONCRETE,VERIFIED,1 nr occurrences,[],0,NOT_ADDED,the column occurrence owns its concrete; S8.5 never measures a whole column again
+CON-544-1F,SPC-PLANTED_COLUMN-GFRS-544,COL-P.C-X08-Y02-1F,S2:COL-P.C-X08-Y02-1F:CONCRETE,VERIFIED,1 nr occurrences,[],0,NOT_ADDED,the column occurrence owns its concrete; S8.5 never measures a whole column again
+CON-548-1F,SPC-PLANTED_COLUMN-GFRS-548,COL-P.C-X15-Y02-1F,S2:COL-P.C-X15-Y02-1F:CONCRETE,VERIFIED,1 nr occurrences,[],0,NOT_ADDED,the column occurrence owns its concrete; S8.5 never measures a whole column again
+CON-77C-2F,SPC-PLANTED_COLUMN-FFRS-77C,COL-P.C-X?-Y?@24888-15994-2F,S2:COL-P.C-X?-Y?@24888-15994-2F:CONCRETE,PROVISIONAL,1 nr occurrences,"[""449179aaaf9557b4""]",0,NOT_ADDED,the column occurrence owns its concrete; S8.5 never measures a whole column again
+CON-31F-TURN_OVERLAP_ZONE,SPC-TURN_COLUMN-GFRS-31F,,,,,[],,NOT_IN_SOURCE,"the 1 m zones lie inside the GF and 1F occurrences, whose storey intervals meet at +5.50 without overlap"
+CON-324-TURN_OVERLAP_ZONE,SPC-TURN_COLUMN-GFRS-324,,,,,[],,NOT_IN_SOURCE,as for 31F
+CON-38A-DEAD_COLUMN_HEAD,SPC-DEAD_COLUMN-GFRS-38A,,,,,[],,NOT_IN_SOURCE,"no capital, head or thickening is drawn; the members above own their concrete"
+CON-544-PLANTED_BASE,SPC-PLANTED_COLUMN-GFRS-544,,,,,[],,NOT_IN_SOURCE,the column bears on the beam; no plinth or thickening is drawn
+CON-548-PLANTED_BASE,SPC-PLANTED_COLUMN-GFRS-548,,,,,[],,NOT_IN_SOURCE,as for 544
+CON-77C-PLANTED_BASE,SPC-PLANTED_COLUMN-FFRS-77C,,,,,[],,NOT_IN_SOURCE,as for 544
