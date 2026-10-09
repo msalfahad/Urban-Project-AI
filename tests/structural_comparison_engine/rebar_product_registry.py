@@ -78,6 +78,7 @@ ACCURATE_BUILDERS = (
     "research/alsenan_ground_slab_s8_1a/build_s8_1a.py",  # S8.1A population recovery + cover audit (no kg, no m3)
     "research/alsenan_swimming_pool_s8_2/build_s8_2.py",  # S8.2 swimming pool source-controlled QTO
     "research/alsenan_swimming_pool_s8_2a/build_s8_2a.py",  # S8.2A elevation depth authority (correction layer)
+    "research/alsenan_dome_ring_s8_3/build_s8_3.py",      # S8.3 dome shells + ring beams (blind, frozen)
 )
 ROUGH_MODULES = (
     "engine/source/rough_rebar_sanity.py",
