@@ -1,0 +1,16 @@
+ITEM_ID,ITEM,VALUE,UNIT,STATE,AUTHORITY,BASIS
+Z-01,pool wall top level,0.3,m,ESTABLISHED,STATED_DIMENSION,2E6C '70' down from the +1.00 floor and 2E5E '115' upper witness; drawn top line at +0.30
+Z-02,deck level round the pool,0.15,m,ESTABLISHED,STATED_LEVEL,elevation and plan '+0.15'
+Z-03,wall upstand above the deck,0.15,m,DERIVED_FROM_STATED_LEVELS,STATED_LEVEL,+0.30 - +0.15; whether the RC wall or a coping forms it is not stated
+Z-04,inner depth at the drawn plane,1.15,m,STATED_AT_DRAWN_PLANE_ONLY,STATED_DIMENSION,the elevation cuts the pool at one plane parallel to the sea-view facade; which zone that plane lies in is not stated
+Z-05,inner floor level at the drawn plane,-0.85,m,DERIVED_AT_DRAWN_PLANE_ONLY,STATED_DIMENSION,+0.30 - 1.15; the inner faces stop at -0.90 and two floor lines sit at -0.85: finish or base top not shown
+Z-06,deep-end depth,,m,NOT_ESTABLISHED,NOT_ESTABLISHED,the architectural elevation draws one flat floor; the structural detail draws deep / slope / shallow
+Z-07,shallow-end depth,,m,NOT_ESTABLISHED,NOT_ESTABLISHED,as Z-06
+Z-08,wall heights by wall run,,m,NOT_ESTABLISHED,NOT_ESTABLISHED,wall top known (+0.30); the base top under each run is not
+Z-09,floor slope,,,PROFILE_CONFLICT,SOURCE_CONFLICT,"{'P7757 NW elevation (architectural)': [-0.85], 'ST7757 p.7 DETAIL OF SWIMMING POOL (structural)': ['DEEP', 'SLOPE', 'SHALLOW']}: one dimension cannot be applied to the whole pool"
+Z-10,deep / shallow zone boundaries in plan,,m,NOT_ESTABLISHED,NOT_ESTABLISHED,no level-change line on plan or elevation
+Z-11,direction of any deep / shallow profile,,,INFERENCE_ONLY,INFERENCE,the elevation views the pool along plan x and shows one flat floor across its full 3.10 m: a profile across plan y would have shown; if the structural profile exists it runs along x (straight sea-side end to curved end) or the architect drew the floor flat. Not used for any quantity
+Z-12,base thickness by zone,"{""deep"": 0.4, ""shallow"": null, ""slope"": null}",m,UNCHANGED_FROM_S8_2,STATED_DIMENSION (deep only),the architectural elevation draws the base from the inner floor to -1.05 (not a structural dimension; conflicts with the stated 40 cm)
+Z-13,structural concrete ownership,base owns footprint x thickness incl. wall footprint; walls own band x height above base top,,UNCHANGED_FROM_S8_2,S8.2 CO-01,
+Z-14,pool wall / base interfaces,"{""BASE_ONLY"": 3, ""SINGLE_BENT_BAR"": 5, ""UNRESOLVED"": 6}",,UNCHANGED_FROM_S8_2,S8.2 08,no new bar evidence
+Z-15,floor profile across sources,PROFILE_CONFLICT,,PROFILE_CONFLICT,elevation_binding.floor_profile,uniform application of '115' allowed: False
