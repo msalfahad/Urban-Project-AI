@@ -60,9 +60,12 @@ def test_k1_is_stdlib_only_in_r8_1():
     only shapely - by design; it is not K1, never an authority, and is covered by B-5's register.
     Coverage-recovery addendum: ground_slab_recovery.decompose() polygonises ground-slab cells with shapely, imported
     lazily inside that one function; classify() / quantities() stay stdlib. It is a geometry route, never an authority.
+    S8.1A addendum: region_recovery.py partitions, tiles and classifies an unfaced plan region with shapely, imported
+    lazily through _geom(); mesh_cover_fit() stays stdlib. It is a geometry route and computes no quantity.
     Every other engine/source module, the TS01 topology authority included, stays stdlib-only.)"""
     std = set(sys.stdlib_module_names) | {"__future__"}
-    by_design = {"kernel_ezdxf.py": None, "topology_crosscheck.py": {"shapely"}, "ground_slab_recovery.py": {"shapely"}}
+    by_design = {"kernel_ezdxf.py": None, "topology_crosscheck.py": {"shapely"}, "ground_slab_recovery.py": {"shapely"},
+                 "region_recovery.py": {"shapely"}}
     for p in _files(SOURCE):
         if p.name in by_design and by_design[p.name] is None:
             continue
