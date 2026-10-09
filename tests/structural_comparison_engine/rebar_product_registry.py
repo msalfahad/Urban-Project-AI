@@ -45,6 +45,7 @@ ACCURATE_MODULES = (
     "engine/source/region_recovery.py",         # S8.1A unfaced-region partition, evidence lanes, mesh cover fit (no kg)
     "engine/source/pool_qto.py",                # S8.2 pool shell concrete + rate / finite bars, bar runs, interfaces
     "engine/source/shell_line_distribution.py",  # S8.3A line layouts on a spherical cap (density / meridians)
+    "engine/source/slab_layered_mesh.py",       # S8.4 callouts, thickness tags, (T&B) layers, stop zones per edge
     "engine/bbs_steel.py",
 )
 # project builders that produce accurate reinforcement registers
@@ -82,6 +83,7 @@ ACCURATE_BUILDERS = (
     "research/alsenan_dome_ring_s8_3/build_s8_3.py",      # S8.3 dome shells + ring beams (blind, frozen)
     "research/alsenan_dome_ring_s8_3/errata/build_errata.py",  # S8.3 errata (dated, moves no quantity)
     "research/alsenan_dome_mesh_s8_3a/build_s8_3a.py",  # S8.3A mesh distribution audit (no quantity moved)
+    "research/alsenan_water_tank_s8_4/build_s8_4.py",   # S8.4 water-tank roof region (blind, frozen)
 )
 ROUGH_MODULES = (
     "engine/source/rough_rebar_sanity.py",

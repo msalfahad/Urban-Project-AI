@@ -1,0 +1,182 @@
+{
+ "baseline": "cce41a2",
+ "blocked_stop_zone_kg": 13.038101852,
+ "by_diameter_kg": {
+  "12": 109.8,
+  "14": 251.408564815
+ },
+ "by_direction_layer_kg": {
+  "X_BOTTOM": 90.973425926,
+  "X_TOP": 98.543333333,
+  "Y_BOTTOM": 83.111805556,
+  "Y_TOP": 88.58
+ },
+ "by_family_kg": {
+  "S8.4-R-01-X-B": 65.773425926,
+  "S8.4-R-01-X-T": 69.743333333,
+  "S8.4-R-01-Y-B": 56.111805556,
+  "S8.4-R-01-Y-T": 59.78,
+  "S8.4-R-02-X-B": 25.2,
+  "S8.4-R-02-X-T": 28.8,
+  "S8.4-R-02-Y-B": 27.0,
+  "S8.4-R-02-Y-T": 28.8
+ },
+ "by_panel": {
+  "SP-2F_ROOF_SLAB-01": {
+   "concrete_m3": 1.4823,
+   "reinforcement_kg": 251.408564815
+  },
+  "SP-2F_ROOF_SLAB-02": {
+   "concrete_m3": 0.972,
+   "reinforcement_kg": 109.8
+  }
+ },
+ "confirmed_physical_elements": {
+  "class": "ROOF_SLAB_DESIGNATED_FOR_A_TANK",
+  "slab_panels": [
+   "SP-2F_ROOF_SLAB-01",
+   "SP-2F_ROOF_SLAB-02"
+  ],
+  "tank_base": "NOT_IN_SOURCE",
+  "tank_walls": "NOT_IN_SOURCE",
+  "use_zone_parent": "SPC-WATER_TANK-SFRS"
+ },
+ "conflicts": [
+  "CF-S8.4-01",
+  "CF-S8.4-02",
+  "CF-S8.4-03",
+  "CF-S8.4-04",
+  "CF-S8.4-05",
+  "CF-S8.4-06",
+  "CF-S8.4-07"
+ ],
+ "conservation": {
+  "K-01": "PASS",
+  "K-02": "PASS",
+  "K-03": "PASS",
+  "K-04": "PASS",
+  "K-05": "PASS",
+  "K-06": "PASS",
+  "K-07": "PASS",
+  "K-08": "PASS",
+  "K-09": "PASS",
+  "K-10": "PASS",
+  "K-11": "PASS",
+  "K-12": "PASS",
+  "K-13": "PASS",
+  "K-14": "PASS",
+  "K-15": "PASS",
+  "K-16": "PASS",
+  "K-17": "PASS"
+ },
+ "date": "2026-10-09",
+ "engine_commit": "cce41a2+code:c0a83177a3908cf7",
+ "frozen_baselines": {
+  "AD1": "e2497cc75181393000187b7e657fa8485a4c0f365b4614bed983d0bc6c0ca5b4",
+  "D1.1": "3ecb642e2141f5a9af11453870696b104a11cfb519d65a9e3f505cbff7c73a74",
+  "D1.2": "f256d6a25edf93029c6ba1c8cf9bc336790fd8d9cf7a5045e8395942986a9554",
+  "PRE-S7": "fb3a1c62a8e525b663853d03d43e067f1839026aea149399491bd4cf98f0ad09",
+  "PRE-S7.1": "3a67a8641ce4ea836334e02532af82b9a3bb01be8efdba4f093eee44d92c1ef6",
+  "PRE-S8": "1c8daf59926540941efbf5f749e8e175fe64b7efeb6d7acff0bfbefbb034849d",
+  "S4": "0d63015a19953f295e331aab2d7e49e8facb277e1465fbdd1b6b5a40d1a2362b",
+  "S4.1": "468e90d9657548a7e9124b67ce0a55b63560f030e2f98b414c46ad4e970e030b",
+  "S5": "ff488a92f3eaff80e84fca2d7e0b8e36cc40ddb84232cd315acfd1ce50b4b3d8",
+  "S5.1": "595d64b1bf5c8e0ef7b5bebfaf3ea4063dd884356390c84b4c8aac77cddb5a88",
+  "S6": "c29a28bc66334d5294d71b0d5feb0dd5eae36baf91a04ef6e0105b2ca43be63e",
+  "S6.1": "c4744888ed2207ebff47c0a895e706d7e381b5f905b694eb92e3d1cdc411c0b2",
+  "S7": "b23f97b6db334e641c38c498bf23b46236d68f4fcc26a6eafde1f3bfc156d175",
+  "S7A": "5b256cef99dc57934c76249c28814d5ce07c74caf308aabdbf90e0e8f0adcee1",
+  "S8.1": "e99d83a750b64541f5b3174b853d24209f30e46574fafafe56cfa3fd0d88e354",
+  "S8.1A": "890c1c42f03715b6b26d88744852fe388ca419fd7c6e3f0214e137dc5c1a473e",
+  "S8.2": "749affe72ec80083715f01b790b96bb5fca31685a93f952369ec7d4469f3494d",
+  "S8.2A": "76fda44b41695a2a79c7e030388ba2282a93f09552bcd67e06c32aee09551f9d",
+  "S8.3": "92bfe9c0b2b7fea189bb37759f93759ea4a6cf5108738af1390468bda6ee92da",
+  "S8.3A": "cf83c809495496f421f2c85d46c4f497757a66dbbea607a77208555695e73505"
+ },
+ "full_mesh_kg": 374.246666636,
+ "lanes": {
+  "blocked": {
+   "BLOCKED_UNQUANTIFIED": 31,
+   "NOT_ADDED": 4,
+   "NOT_IN_SOURCE": 4
+  },
+  "concrete": {
+   "NOT_IN_SOURCE": 2,
+   "PROJECT_BASIS_QTO": 2
+  },
+  "reinforcement": {
+   "PROJECT_BASIS_QTO": 8
+  }
+ },
+ "note2_tank_side_sensitivity_kg": 55.185185185,
+ "panel_area_m2": {
+  "SP-2F_ROOF_SLAB-01": 8.235,
+  "SP-2F_ROOF_SLAB-02": 5.4
+ },
+ "policy": "S8_4_WATER_TANK_ROOF_REGION_V1",
+ "questions": [
+  "Q-S8.4-01",
+  "Q-S8.4-02",
+  "Q-S8.4-03",
+  "Q-S8.4-04",
+  "Q-S8.4-05",
+  "Q-S8.4-06",
+  "Q-S8.4-07",
+  "Q-S8.4-08"
+ ],
+ "references_read": [],
+ "released": {
+  "concrete_items": [
+   "S8.4-C-01",
+   "S8.4-C-02"
+  ],
+  "concrete_m3": 2.4543,
+  "lane": "PROJECT_BASIS_QTO",
+  "reinforcement_items": [
+   "S8.4-R-01-X-B",
+   "S8.4-R-01-X-T",
+   "S8.4-R-01-Y-B",
+   "S8.4-R-01-Y-T",
+   "S8.4-R-02-X-B",
+   "S8.4-R-02-X-T",
+   "S8.4-R-02-Y-B",
+   "S8.4-R-02-Y-T"
+  ],
+  "reinforcement_kg": 361.208564815
+ },
+ "round": "S8_4",
+ "s7": {
+  "excluded_items_terminated": 22,
+  "restricted_kg": 3802.015364542223,
+  "state": "UNCHANGED; adjacent steel stays S7",
+  "tank_adjacent_items": [
+   "S7-0217",
+   "S7-0228",
+   "S7-0284",
+   "S7-0307"
+  ],
+  "tank_adjacent_released_kg": 20.087448558,
+  "transfers_terminated": 33
+ },
+ "s8_3_errata_sha256": {
+  "00_ERRATA_README.md": "3fb030efd570782c783e9c784ffe46604444e5bea70f3981dbb5b7512c634b8a",
+  "01_S8_3_ERRATA.csv": "221eeb55b63b2a6621c501cf59045f6b0c00fcb5a6d1da0bd97bb68f857d15e2",
+  "02_ERRATA_SUMMARY.json": "e743aca0105fe7306b0f51ac8fa63191e18c7002491bf2e5cddaa9b6589d7744"
+ },
+ "sensitivity": {
+  "SA-01": 374.246666667,
+  "SA-02": 368.476759259,
+  "SA-03": 416.39375,
+  "SA-04": 380.74787873
+ },
+ "starting_population": [
+  "SP-2F_ROOF_SLAB-01",
+  "SP-2F_ROOF_SLAB-02",
+  "SPC-WATER_TANK-SFRS"
+ ],
+ "thickness_mm": {
+  "SP-2F_ROOF_SLAB-01": 180,
+  "SP-2F_ROOF_SLAB-02": 180
+ },
+ "unit_mass": "kg/m = d^2 / 162"
+}
