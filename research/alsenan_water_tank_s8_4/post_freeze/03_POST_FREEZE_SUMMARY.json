@@ -1,0 +1,47 @@
+{
+ "equal_scope": {
+  "bridge": [
+   {
+    "kg": 222.479013,
+    "step": "V3B four tank sets (one face each)"
+   },
+   {
+    "kg": -26.271606,
+    "step": "RUN_BASIS: less V3b's 2 x 175 mm embedment beyond the faces (S8.4 blocks anchorage)"
+   },
+   {
+    "kg": -9.084074,
+    "step": "COUNT_BASIS: whole bars floor(n W) + 1 on the rectangle -> unrounded rate x area (panel 01's notch)"
+   },
+   {
+    "kg": 187.123333,
+    "step": "LAYER: add the second face each callout's (T&B) states"
+   },
+   {
+    "kg": -13.038102,
+    "step": "STOP_ZONE: less the bottom stop zones S8.4 blocks"
+   }
+  ],
+  "concrete_v3b_rule_on_tank_faces_m3": 2.4543,
+  "s8_4_concrete_m3": 2.4543,
+  "s8_4_released_kg": 361.208565,
+  "v3b_tank_sets_kg": 222.479013
+ },
+ "finding": "the earlier Urban steel for the tank panels counts each (T&B) callout once: the top faces are missing; its concrete applies 180 mm to the whole 2F plate where the source says 160 outside the two tank panels",
+ "frozen_manifest_sha256": "45fd614f0c22adceec27ac0657ae1135f59f4c40dde811c56c2d7121527d85f1",
+ "frozen_unchanged": true,
+ "round": "S8_4_POST_FREEZE",
+ "rows": {
+  "PF-01": "LAYER + RUN_BASIS + COUNT_BASIS + STOP_ZONE",
+  "PF-02": "SCOPE",
+  "PF-03": "SCOPE + PLATE_BASIS + THICKNESS_BASIS",
+  "PF-04": "NO_DIFFERENCE",
+  "PF-05": "SCOPE",
+  "PF-06": "NOT_COMPARABLE",
+  "PF-07": "NOT_COMPARABLE",
+  "PF-08": "NOT_COMPARABLE",
+  "PF-09": "NOT_COMPARABLE",
+  "PF-10": "NOT_COMPARABLE"
+ },
+ "rule": "explains, never changes a frozen quantity or chooses an interpretation"
+}
