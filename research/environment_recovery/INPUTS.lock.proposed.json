@@ -1,0 +1,812 @@
+{
+ "schema": "URBAN_INPUTS_LOCK_V1 (PROPOSED)",
+ "date": "2026-10-09",
+ "rule": "metadata and sha256 only. A missing entry SKIPS the tests that need it, with this file's reason; a present file whose sha256 differs FAILS. No content, no credential, no client name.",
+ "stores": {
+  "SOURCE": "private source store (client drawings, content-addressed)",
+  "DERIVED": "regenerable outputs (experiments, runs); restore or regenerate, then verify",
+  "BENCHMARK": "sealed store, separate key; never mounted for a blind run"
+ },
+ "entries": [
+  {
+   "path": "data/inputs/by_sha256/7f61f3acdd62d62dc745f8b522f8136cb41c575df36ec6d9f27c2fe48fea41e3.dwg",
+   "sha256": "7f61f3acdd62d62dc745f8b522f8136cb41c575df36ec6d9f27c2fe48fea41e3",
+   "bytes": 2655476,
+   "store": "SOURCE",
+   "role": "CAD_NATIVE",
+   "discipline": "ARCHITECTURAL"
+  },
+  {
+   "path": "data/inputs/by_sha256/ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4.dxf",
+   "sha256": "ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4",
+   "bytes": 17227946,
+   "store": "SOURCE",
+   "role": "CAD_EXCHANGE",
+   "discipline": "ARCHITECTURAL"
+  },
+  {
+   "path": "data/inputs/by_sha256/7d440a57aa8930566a4028ff5e91ee819df1007fad3bd986d4db743f100d735f.dwf",
+   "sha256": "7d440a57aa8930566a4028ff5e91ee819df1007fad3bd986d4db743f100d735f",
+   "bytes": 2655253,
+   "store": "SOURCE",
+   "role": "DWF_PUBLISH",
+   "discipline": "ARCHITECTURAL"
+  },
+  {
+   "path": "data/inputs/by_sha256/80b6a80428990db4dfa86aa343ed2c7cb429709459d564f0dac92362480a9b00.pdf",
+   "sha256": "80b6a80428990db4dfa86aa343ed2c7cb429709459d564f0dac92362480a9b00",
+   "bytes": 19015776,
+   "store": "SOURCE",
+   "role": "PDF_PLOT",
+   "discipline": "ARCHITECTURAL"
+  },
+  {
+   "path": "data/inputs/by_sha256/281a0c3f8c1cdd8f2a78528513b66d14ba4793e981e2d8059423faf6e6162f99.pdf",
+   "sha256": "281a0c3f8c1cdd8f2a78528513b66d14ba4793e981e2d8059423faf6e6162f99",
+   "bytes": 18512718,
+   "store": "SOURCE",
+   "role": "PDF_PLOT",
+   "discipline": "ARCHITECTURAL"
+  },
+  {
+   "path": "data/inputs/by_sha256/3f7a556c69786834c16c355504437b5abcd1f5aa3a9625b33a2c5b14213f0227.dwg",
+   "sha256": "3f7a556c69786834c16c355504437b5abcd1f5aa3a9625b33a2c5b14213f0227",
+   "bytes": 491151,
+   "store": "SOURCE",
+   "role": "CAD_NATIVE",
+   "discipline": "STRUCTURAL"
+  },
+  {
+   "path": "data/inputs/by_sha256/9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079.dxf",
+   "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "bytes": 3153037,
+   "store": "SOURCE",
+   "role": "CAD_EXCHANGE",
+   "discipline": "STRUCTURAL"
+  },
+  {
+   "path": "data/inputs/by_sha256/74da1523f05eb3c6a4fe3ddebaef2c3d841891f003efc03bc32a3fb4553337e3.pdf",
+   "sha256": "74da1523f05eb3c6a4fe3ddebaef2c3d841891f003efc03bc32a3fb4553337e3",
+   "bytes": 2219156,
+   "store": "SOURCE",
+   "role": "PDF_PLOT",
+   "discipline": "STRUCTURAL"
+  },
+  {
+   "path": "data/inputs/by_sha256/116736870983e63a9bf80e778fe2fc098e333148cce5337190a1ac3398d82596.pdf",
+   "sha256": "116736870983e63a9bf80e778fe2fc098e333148cce5337190a1ac3398d82596",
+   "bytes": 674366,
+   "store": "SOURCE",
+   "role": "PDF_PLOT",
+   "discipline": "SANITARY_SUPPORTING"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba/PA08_BLIND_CONFIG.json",
+   "sha256": "04c4838fab1c41ba2769954c4b86fd9408c672c39304071a9aefe41f57002b32",
+   "bytes": null,
+   "store": "DERIVED",
+   "pinned_by": "tests/r8_7/FIXTURE_MANIFEST.json"
+  },
+  {
+   "path": "data/golden/23010/inputs/AR-00_MAR2023.pdf",
+   "sha256": "bddb175c39834594def9178995b37df78e78df0d8d62ac731be44464a47bfa74",
+   "bytes": null,
+   "store": "SOURCE",
+   "pinned_by": "runs/golden/23010_MANIFEST.json"
+  },
+  {
+   "path": "data/golden/23010/inputs/space_map_23010_2f.json",
+   "sha256": "09921ad6eb9e5c1a3286624adedbf4ae8f503b02705347f125f4c876c865c32b",
+   "bytes": null,
+   "store": "SOURCE",
+   "pinned_by": "runs/golden/23010_MANIFEST.json"
+  },
+  {
+   "path": "data/golden/23010/site_benchmark.json",
+   "sha256": "e8d43f65eece9ab24f53012e922a252cf4bb1bff00cd673d96260612b26fdd0d",
+   "bytes": null,
+   "store": "BENCHMARK",
+   "pinned_by": "runs/golden/23010_MANIFEST.json"
+  },
+  {
+   "path": "data/runs/cad_convert/QORTUBA_ARCHITECTURAL.json",
+   "sha256": "7dbafb3ddd59076664f05c2f3c539d3133b295002c90e3f6f26ffd01737d5e36",
+   "bytes": null,
+   "store": "DERIVED",
+   "pinned_by": "tests/r8_7/FIXTURE_MANIFEST.json"
+  },
+  {
+   "path": "data/experiments/A21_TRACE_SUFFICIENCY_01",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/BENCHMARK_LEAKAGE_GUARD.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "BENCHMARK",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/OWNER_EVIDENCE_RECONCILIATION.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/PLASTER_QUANTITY_TRACE.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/REVISION_SUPERSESSION_LEDGER.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/SE_ELEVATION_SOURCE_AUDIT.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/STRUCTURAL_SOURCE_CHECK.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/TRADES_WET_OPENINGS_FLOORS_COVERAGE.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_boq/APPROVED_QUANTITIES.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_boq/FREEZE_QORTUBA_VERSUS_HOUSE_BOQ_SCHEMA.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_boq/FREEZE_URBAN_OWNER_RULES_V1.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_boq/QORTUBA_BENCHMARK_SEAL.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "BENCHMARK",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_boq/QORTUBA_BLOCKWORK_RECALC.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_boq/QORTUBA_BOQ_CONVERSION_MAP.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_boq/QORTUBA_BOQ_CONVERSION_WORKBOOK.xlsx",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_boq/QORTUBA_CANDIDATE_BOQ_ITEMS.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_boq/QORTUBA_FINAL_BOQ_READINESS.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_boq/QORTUBA_FINAL_PRE_PRICING_TAKEOFF.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_boq/QORTUBA_GLAZED_ELEMENT_HOSTS.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_boq/QORTUBA_OPENING_REGISTER.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_boq/QORTUBA_OPENING_REGISTER_COMPLETED.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_boq/QORTUBA_OWNER_DECISIONS_REQUIRED.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_boq/QORTUBA_OWNER_QUESTIONS.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_boq/QORTUBA_OWNER_QUESTION_CROPS.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_boq/QORTUBA_OWNER_RULE_APPLICATION_AUDIT.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_boq/QORTUBA_QUESTION_LEDGER.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_boq/QORTUBA_RECALCULATED_QUANTITIES_V1.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_boq/QORTUBA_ROOM_FINISH_AND_SKIRTING_RECALC.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_boq/QORTUBA_RULE_SAFETY_REGISTER.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_boq/QORTUBA_VERSUS_HOUSE_BOQ_SCHEMA.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_boq/QORTUBA_WALL_OBJECT_IDENTITY.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_boq/URBAN_BOQ_RULE_REGISTRY.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_boq/URBAN_OWNER_RULES_V1.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_boq/URBAN_PROJECTS_BOQ_SCHEMA_LIBRARY.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_ext01/A22_QORTUBA_EXTERNAL_RECONCILIATION.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "BENCHMARK",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_ext01/CONTRACTOR_TRANSCRIPTION_FREEZE.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "BENCHMARK",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_ext01/FREEZE_PA08_QORTUBA_EXTERNAL_RECONCILIATION_01.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "BENCHMARK",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_ext01/QORTUBA_CONTRACTOR_COMMERCIAL_REGISTER.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "BENCHMARK",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_ext01/QORTUBA_CONTRACTOR_KIYAL_REGISTER.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "BENCHMARK",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_ext01/QORTUBA_EXT01_CERAMIC_FLOORING_RECONCILIATION.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_ext01/QORTUBA_EXT01_EXTERNAL_VALIDATION_METRICS.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "BENCHMARK",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_ext01/QORTUBA_EXT01_PROFILE_RECONCILIATION.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_ext01/QORTUBA_EXT01_WET_ROOM_RECONCILIATION.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_pricing/FREEZE_QORTUBA_FINAL_PRICING_AUDIT.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_pricing/QORTUBA_BLOCKED_FINAL_QUANTITIES.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_pricing/QORTUBA_CORRECTED_READINESS.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_pricing/QORTUBA_EXCEL_TRADE_STRUCTURE.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_pricing/QORTUBA_FINAL_PRICING_AUDIT.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_pricing/QORTUBA_MINIMUM_INPUTS_TO_UNLOCK.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_pricing/QORTUBA_PRICING_INPUT_MATRIX.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_pricing/QORTUBA_PRICING_INPUT_MATRIX.xlsx",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_pricing/QORTUBA_PRICING_READINESS_SUMMARY.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_qs01/FREEZE_PA08_QORTUBA_ROOM_BY_ROOM_QS_01.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_qs01/QORTUBA_QS01_AGGREGATE_CONTRACTOR_COMPARISON.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "BENCHMARK",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_qs01/QORTUBA_QS01_BLOCK_WALL_TAKEOFF.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_qs01/QORTUBA_QS01_BLUE_ELEMENT_SCHEDULE.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_qs01/QORTUBA_QS01_DUAL_METHOD_CHECK.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_qs01/QORTUBA_QS01_FLOOR_CALCULATIONS.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_qs01/QORTUBA_QS01_PLASTER_AND_PAINT_TAKEOFF.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_qs01/QORTUBA_QS01_ROOM_CALCULATION_PROVENANCE.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_qs01/QORTUBA_QS01_SKIRTING_TAKEOFF.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_qs01/QORTUBA_QS01_SUMMARY_TOTALS.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_qs01/QORTUBA_QS01_WALL_TILE_TAKEOFF.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_qs01/QORTUBA_ROOM_REGISTER.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_r1/PA08_QORTUBA_R1_OPENING_REGISTER.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_r3/FREEZE_PA08_QORTUBA_R3.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa09_alrashed/ALRASHED_BLIND_CONFIG.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa09_alrashed/ALRASHED_BLIND_RESULT.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa09_alrashed/ALRASHED_DETAILED_QUANTITY_EXPORT.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa09_alrashed/ALRASHED_DETAILED_QUANTITY_TAKEOFF.xlsx",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa09_alrashed/ALRASHED_FINISHING_TAKEOFF.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa09_alrashed/ALRASHED_FIRST_PLAN_AREA_TAKEOFF.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa09_alrashed/ALRASHED_HISTORICAL_EVIDENCE_IDENTIFICATION.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "BENCHMARK",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa09_alrashed/ALRASHED_HISTORICAL_VALIDATION.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "BENCHMARK",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa09_alrashed/ALRASHED_OWNER_QUESTIONS_BATCH_01.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa09_alrashed/ALRASHED_PROJECT_IDENTITY_AND_FLOOR_INVENTORY.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa09_alrashed/ALRASHED_QUANTITY_RECONCILIATION.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa09_alrashed/ALRASHED_STRUCTURED_DRAFT_EXPORT.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa09_alrashed/ALRASHED_VALIDATION_AMENDMENT_01.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa09_alrashed/FULL_VILLA_BLIND_PRE_PRICING_TAKEOFF.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa09_alrashed/blind/PA06_SOURCE_UNIT_REGISTER.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa09_villa_blind/FULL_VILLA_BLIND_ATTRIBUTED_SOURCES.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa09_villa_blind/FULL_VILLA_BLIND_OWNER_QUESTIONS_BATCH_01.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa09_villa_blind/FULL_VILLA_BLIND_PROTOCOL.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa09_villa_blind/FULL_VILLA_BLIND_SOURCE_INVENTORY.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/experiments/QS_MEASUREMENT_REGION_EXPERIMENT_01",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/golden/23010",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/golden/23010/topology_overlay.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/golden/7757/inputs/P7757_DRAWINGS.pdf",
+   "sha256": null,
+   "bytes": null,
+   "store": "SOURCE",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/golden/7757/sealed/",
+   "sha256": null,
+   "bytes": null,
+   "store": "BENCHMARK",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/golden/7757/sealed/P7757_area_takeoff_benchmark.pdf",
+   "sha256": null,
+   "bytes": null,
+   "store": "BENCHMARK",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/reports/ALRASHED_6_GENERIC_ENGINE_VALIDATION.zip",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/runs/7757/blind/A18-GF-001/images/page-01.jpeg",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/runs/7757/reconciliation/",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/runs/7757/reconciliation/P7757_GROUND_OPEN_ZONE_RECONCILIATION.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/runs/7757/reconciliation/P7757_OPEN_ZONE.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/runs/7757/round6e_export/REPORT.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/runs/7757/round6e_export/sheet.png",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  },
+  {
+   "path": "data/runs/cad_convert/ALRASHED_ARCHITECTURAL.json",
+   "sha256": null,
+   "bytes": null,
+   "store": "DERIVED",
+   "note": "identity not recorded in git: record its sha256 on the next restore"
+  }
+ ]
+}

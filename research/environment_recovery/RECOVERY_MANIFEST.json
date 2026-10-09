@@ -1,0 +1,2172 @@
+{
+ "schema": "URBAN_ENVIRONMENT_RECOVERY_MANIFEST_V1",
+ "date": "2026-10-09",
+ "derived_from": {
+  "full_suite_run": "JUnit XML of the run at 52fa35f (6659 passed, 344 failed, 32 errors, 138 skipped)",
+  "static_scan": "tests/**/*.py data/ path literals",
+  "identity_records": [
+   "tests/r8_6/FIXTURE_MANIFEST.json",
+   "tests/r8_7/FIXTURE_MANIFEST.json",
+   "runs/golden/23010_MANIFEST.json",
+   "tests/alsenan/registers/SOURCE_MANIFEST.json"
+  ]
+ },
+ "rule": "paths, hashes and producers only; no file content, no client drawing, no credential",
+ "missing_prerequisites": [
+  {
+   "path": "/root/.claude/uploads/93607c01-16a4-590f-af7c-1c2701c3b240/0449714f-_________________1.xlsx",
+   "kind": "FILE",
+   "category": "SESSION_UPLOAD",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa08_qortuba_boq_schema"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_wall_treatment_01/pa08/qortuba/boq/rule_registry.py",
+    "research/qs_wall_treatment_01/pa08/qortuba/boq/schema_library.py"
+   ],
+   "restore_route": "NOT_A_FIXTURE (a test reads a session upload: should skip, not fail)"
+  },
+  {
+   "path": "data/experiments/A21_TRACE_SUFFICIENCY_01",
+   "kind": "DIRECTORY",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_a21_trace_invariants"
+   ],
+   "evidence": [
+    "STATIC_TEST_REFERENCE"
+   ],
+   "named_in_tracked_code": [
+    "engine/trace_to_region.py",
+    "research/a21_trace_sufficiency_01/document_graph.py",
+    "research/a21_trace_sufficiency_01/e14_influence_audit.py",
+    "research/a21_trace_sufficiency_01/merge_requirements.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (engine/trace_to_region.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/BENCHMARK_LEAKAGE_GUARD.json",
+   "kind": "FILE",
+   "category": "BENCHMARK_TRUTH",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_measurement_architecture_v4"
+   ],
+   "evidence": [
+    "STATIC_TEST_REFERENCE"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_wall_treatment_01/decision_queue_v4.py",
+    "research/qs_wall_treatment_01/freeze.py"
+   ],
+   "restore_route": "RESTORE_FROM_SEALED_STORE (separate key; never into a blind run)"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/OWNER_EVIDENCE_RECONCILIATION.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_measurement_architecture_v4"
+   ],
+   "evidence": [
+    "STATIC_TEST_REFERENCE"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_wall_treatment_01/freeze.py",
+    "research/qs_wall_treatment_01/owner_plan_verification.py",
+    "research/qs_wall_treatment_01/owner_review_v3.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (research/qs_wall_treatment_01/freeze.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/PLASTER_QUANTITY_TRACE.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_measurement_architecture_v4"
+   ],
+   "evidence": [
+    "STATIC_TEST_REFERENCE"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_wall_treatment_01/a22_v4.py",
+    "research/qs_wall_treatment_01/decision_queue_v4.py",
+    "research/qs_wall_treatment_01/freeze.py",
+    "research/qs_wall_treatment_01/owner_report_v5.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (research/qs_wall_treatment_01/a22_v4.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/REVISION_SUPERSESSION_LEDGER.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_measurement_architecture_v4"
+   ],
+   "evidence": [
+    "STATIC_TEST_REFERENCE"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_wall_treatment_01/decision_queue_v4.py",
+    "research/qs_wall_treatment_01/freeze.py",
+    "research/qs_wall_treatment_01/owner_report_v5.py",
+    "research/qs_wall_treatment_01/owner_report_v6.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (research/qs_wall_treatment_01/decision_queue_v4.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/SE_ELEVATION_SOURCE_AUDIT.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_measurement_architecture_v4"
+   ],
+   "evidence": [
+    "STATIC_TEST_REFERENCE"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_wall_treatment_01/decision_queue_v4.py",
+    "research/qs_wall_treatment_01/freeze.py",
+    "research/qs_wall_treatment_01/owner_review_v4.py",
+    "research/qs_wall_treatment_01/parapet_assembly_p7757.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (research/qs_wall_treatment_01/decision_queue_v4.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/STRUCTURAL_SOURCE_CHECK.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_measurement_architecture_v4"
+   ],
+   "evidence": [
+    "STATIC_TEST_REFERENCE"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_wall_treatment_01/decision_queue_v4.py",
+    "research/qs_wall_treatment_01/freeze.py",
+    "research/qs_wall_treatment_01/measurement_regions_v4.py",
+    "research/qs_wall_treatment_01/owner_report_v5.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (research/qs_wall_treatment_01/decision_queue_v4.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/TRADES_WET_OPENINGS_FLOORS_COVERAGE.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa02_modules"
+   ],
+   "evidence": [
+    "STATIC_TEST_REFERENCE"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_wall_treatment_01/freeze.py",
+    "research/qs_wall_treatment_01/owner_report_v6.py",
+    "research/qs_wall_treatment_01/owner_report_v7.py",
+    "research/qs_wall_treatment_01/pa02_gate.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (research/qs_wall_treatment_01/freeze.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba/PA08_BLIND_CONFIG.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": "04c4838fab1c41ba2769954c4b86fd9408c672c39304071a9aefe41f57002b32",
+   "identity_source": "tests/r8_7/FIXTURE_MANIFEST.json",
+   "needed_by": [],
+   "evidence": [
+    "PINNED_FIXTURE"
+   ],
+   "named_in_tracked_code": [
+    "research/external_engine_lab/r8_6_canonical_rebuild.py",
+    "research/external_engine_lab/r8_7_canonical.py",
+    "research/qs_wall_treatment_01/pa08/qortuba/blind.py",
+    "research/qs_wall_treatment_01/pa08/qortuba/qs01/takeoff.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (research/external_engine_lab/r8_6_canonical_rebuild.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_boq/APPROVED_QUANTITIES.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa08_qortuba_final_takeoff",
+    "test_pa08_qortuba_workflow_v1"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [
+    "research/external_engine_lab/r8_18_registers.py",
+    "research/external_engine_lab/r8_4_shadow_diff.py",
+    "research/external_engine_lab/r8_5_value_shadow.py",
+    "research/external_engine_lab/r8_6_canonical_rebuild.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (research/external_engine_lab/r8_18_registers.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_boq/FREEZE_QORTUBA_VERSUS_HOUSE_BOQ_SCHEMA.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa08_qortuba_boq_schema"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [],
+   "restore_route": "REGENERATE_FROM_SOURCES (producer not identified) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_boq/FREEZE_URBAN_OWNER_RULES_V1.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa08_qortuba_owner_inputs_v2"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_wall_treatment_01/pa08/qortuba/boq/workbook_boq.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (research/qs_wall_treatment_01/pa08/qortuba/boq/workbook_boq.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_boq/QORTUBA_BENCHMARK_SEAL.json",
+   "kind": "FILE",
+   "category": "BENCHMARK_TRUTH",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa09_villa_attribution",
+    "test_pa09_villa_blind_protocol"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_wall_treatment_01/pa08/qortuba/boq/benchmark_seal.py",
+    "research/qs_wall_treatment_01/pa09/villa_blind_protocol.py"
+   ],
+   "restore_route": "RESTORE_FROM_SEALED_STORE (separate key; never into a blind run)"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_boq/QORTUBA_BLOCKWORK_RECALC.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa08_qortuba_owner_rules",
+    "test_pa08_qortuba_workflow_v1"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_wall_treatment_01/pa08/qortuba/boq/workbook_boq.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (research/qs_wall_treatment_01/pa08/qortuba/boq/workbook_boq.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_boq/QORTUBA_BOQ_CONVERSION_MAP.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa08_qortuba_boq_rules"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_wall_treatment_01/pa08/qortuba/boq/workbook_boq.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (research/qs_wall_treatment_01/pa08/qortuba/boq/workbook_boq.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_boq/QORTUBA_BOQ_CONVERSION_WORKBOOK.xlsx",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa08_qortuba_boq_rules",
+    "test_pa08_qortuba_owner_rule_audit",
+    "test_pa08_qortuba_owner_rules"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_wall_treatment_01/pa08/qortuba/boq/benchmark_seal.py",
+    "research/qs_wall_treatment_01/pa08/qortuba/boq/workbook_boq.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (research/qs_wall_treatment_01/pa08/qortuba/boq/benchmark_seal.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_boq/QORTUBA_CANDIDATE_BOQ_ITEMS.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa08_qortuba_boq_rules"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [],
+   "restore_route": "REGENERATE_FROM_SOURCES (producer not identified) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_boq/QORTUBA_FINAL_BOQ_READINESS.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa08_qortuba_boq_rules"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [],
+   "restore_route": "REGENERATE_FROM_SOURCES (producer not identified) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_boq/QORTUBA_FINAL_PRE_PRICING_TAKEOFF.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa08_qortuba_final_takeoff"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_wall_treatment_01/pa08/qortuba/boq/final_takeoff.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (research/qs_wall_treatment_01/pa08/qortuba/boq/final_takeoff.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_boq/QORTUBA_GLAZED_ELEMENT_HOSTS.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa08_qortuba_owner_rule_audit"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [],
+   "restore_route": "REGENERATE_FROM_SOURCES (producer not identified) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_boq/QORTUBA_OPENING_REGISTER.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa08_qortuba_opening_completion",
+    "test_pa08_qortuba_owner_rules"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_wall_treatment_01/pa08/qortuba/boq/workbook_boq.py",
+    "research/qs_wall_treatment_01/pa08/qortuba/consistency.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (research/qs_wall_treatment_01/pa08/qortuba/boq/workbook_boq.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_boq/QORTUBA_OPENING_REGISTER_COMPLETED.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa08_qortuba_final_takeoff",
+    "test_pa08_qortuba_open_passage",
+    "test_pa08_qortuba_opening_completion",
+    "test_pa08_qortuba_owner_inputs_v2",
+    "test_pa08_qortuba_workflow_v1"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [],
+   "restore_route": "REGENERATE_FROM_SOURCES (producer not identified) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_boq/QORTUBA_OWNER_DECISIONS_REQUIRED.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa08_qortuba_boq_rules"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [],
+   "restore_route": "REGENERATE_FROM_SOURCES (producer not identified) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_boq/QORTUBA_OWNER_QUESTIONS.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa08_qortuba_owner_inputs_v2",
+    "test_pa08_qortuba_question_crops",
+    "test_pa08_qortuba_workflow_v1"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_wall_treatment_01/pa08/qortuba/boq/owner_questions.py",
+    "research/qs_wall_treatment_01/pa08/qortuba/boq/workbook_boq.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (research/qs_wall_treatment_01/pa08/qortuba/boq/owner_questions.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_boq/QORTUBA_OWNER_QUESTION_CROPS.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa08_qortuba_question_crops"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_wall_treatment_01/pa08/qortuba/boq/owner_question_crops.py",
+    "research/qs_wall_treatment_01/pa08/qortuba/boq/workbook_boq.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (research/qs_wall_treatment_01/pa08/qortuba/boq/owner_question_crops.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_boq/QORTUBA_OWNER_RULE_APPLICATION_AUDIT.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa08_qortuba_owner_rule_audit"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_wall_treatment_01/pa08/qortuba/boq/audit_owner_rules.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (research/qs_wall_treatment_01/pa08/qortuba/boq/audit_owner_rules.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_boq/QORTUBA_QUESTION_LEDGER.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa08_qortuba_owner_inputs_v2",
+    "test_pa08_qortuba_owner_rules",
+    "test_pa08_qortuba_question_crops"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_wall_treatment_01/pa08/qortuba/boq/workbook_boq.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (research/qs_wall_treatment_01/pa08/qortuba/boq/workbook_boq.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_boq/QORTUBA_RECALCULATED_QUANTITIES_V1.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa08_qortuba_final_takeoff",
+    "test_pa08_qortuba_open_passage",
+    "test_pa08_qortuba_opening_completion",
+    "test_pa08_qortuba_owner_inputs_v2",
+    "test_pa08_qortuba_owner_rule_audit",
+    "test_pa08_qortuba_owner_rules",
+    "test_pa08_qortuba_question_crops",
+    "test_pa08_qortuba_workflow_v1"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_wall_treatment_01/pa08/qortuba/boq/workbook_boq.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (research/qs_wall_treatment_01/pa08/qortuba/boq/workbook_boq.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_boq/QORTUBA_ROOM_FINISH_AND_SKIRTING_RECALC.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa08_qortuba_open_passage",
+    "test_pa08_qortuba_owner_inputs_v2",
+    "test_pa08_qortuba_owner_rules",
+    "test_pa08_qortuba_workflow_v1"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_wall_treatment_01/pa08/qortuba/boq/workbook_boq.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (research/qs_wall_treatment_01/pa08/qortuba/boq/workbook_boq.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_boq/QORTUBA_RULE_SAFETY_REGISTER.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa08_qortuba_boq_rules"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [],
+   "restore_route": "REGENERATE_FROM_SOURCES (producer not identified) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_boq/QORTUBA_VERSUS_HOUSE_BOQ_SCHEMA.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa08_qortuba_boq_schema"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [],
+   "restore_route": "REGENERATE_FROM_SOURCES (producer not identified) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_boq/QORTUBA_WALL_OBJECT_IDENTITY.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa08_qortuba_owner_rule_audit"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_wall_treatment_01/pa08/qortuba/boq/workbook_boq.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (research/qs_wall_treatment_01/pa08/qortuba/boq/workbook_boq.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_boq/URBAN_BOQ_RULE_REGISTRY.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa08_qortuba_boq_rules"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_wall_treatment_01/pa08/qortuba/boq/workbook_boq.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (research/qs_wall_treatment_01/pa08/qortuba/boq/workbook_boq.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_boq/URBAN_OWNER_RULES_V1.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa08_qortuba_final_takeoff",
+    "test_pa08_qortuba_open_passage",
+    "test_pa08_qortuba_owner_inputs_v2",
+    "test_pa08_qortuba_owner_rules",
+    "test_pa08_qortuba_workflow_v1"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_wall_treatment_01/pa08/qortuba/boq/workbook_boq.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (research/qs_wall_treatment_01/pa08/qortuba/boq/workbook_boq.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_boq/URBAN_PROJECTS_BOQ_SCHEMA_LIBRARY.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa08_qortuba_boq_schema"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_wall_treatment_01/pa08/qortuba/boq/compare_schema.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (research/qs_wall_treatment_01/pa08/qortuba/boq/compare_schema.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_ext01/A22_QORTUBA_EXTERNAL_RECONCILIATION.json",
+   "kind": "FILE",
+   "category": "BENCHMARK_TRUTH",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa08_qortuba_ext01"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [],
+   "restore_route": "RESTORE_FROM_SEALED_STORE (separate key; never into a blind run)"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_ext01/CONTRACTOR_TRANSCRIPTION_FREEZE.json",
+   "kind": "FILE",
+   "category": "BENCHMARK_TRUTH",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa08_qortuba_ext01"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_wall_treatment_01/pa08/qortuba/ext01/reconcile.py",
+    "research/qs_wall_treatment_01/pa08/qortuba/qs01/compare.py"
+   ],
+   "restore_route": "RESTORE_FROM_SEALED_STORE (separate key; never into a blind run)"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_ext01/FREEZE_PA08_QORTUBA_EXTERNAL_RECONCILIATION_01.json",
+   "kind": "FILE",
+   "category": "BENCHMARK_TRUTH",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa08_qortuba_ext01"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [],
+   "restore_route": "RESTORE_FROM_SEALED_STORE (separate key; never into a blind run)"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_ext01/QORTUBA_CONTRACTOR_COMMERCIAL_REGISTER.json",
+   "kind": "FILE",
+   "category": "BENCHMARK_TRUTH",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa08_qortuba_ext01"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_wall_treatment_01/pa08/qortuba/ext01/reconcile.py",
+    "research/qs_wall_treatment_01/pa08/qortuba/qs01/compare.py"
+   ],
+   "restore_route": "RESTORE_FROM_SEALED_STORE (separate key; never into a blind run)"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_ext01/QORTUBA_CONTRACTOR_KIYAL_REGISTER.json",
+   "kind": "FILE",
+   "category": "BENCHMARK_TRUTH",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa08_qortuba_ext01"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_wall_treatment_01/pa08/qortuba/ext01/reconcile.py"
+   ],
+   "restore_route": "RESTORE_FROM_SEALED_STORE (separate key; never into a blind run)"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_ext01/QORTUBA_EXT01_CERAMIC_FLOORING_RECONCILIATION.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa08_qortuba_ext01"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [],
+   "restore_route": "REGENERATE_FROM_SOURCES (producer not identified) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_ext01/QORTUBA_EXT01_EXTERNAL_VALIDATION_METRICS.json",
+   "kind": "FILE",
+   "category": "BENCHMARK_TRUTH",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa08_qortuba_ext01"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [],
+   "restore_route": "RESTORE_FROM_SEALED_STORE (separate key; never into a blind run)"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_ext01/QORTUBA_EXT01_PROFILE_RECONCILIATION.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa08_qortuba_ext01"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [],
+   "restore_route": "REGENERATE_FROM_SOURCES (producer not identified) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_ext01/QORTUBA_EXT01_WET_ROOM_RECONCILIATION.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa08_qortuba_ext01"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [],
+   "restore_route": "REGENERATE_FROM_SOURCES (producer not identified) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_pricing/FREEZE_QORTUBA_FINAL_PRICING_AUDIT.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa08_qortuba_pricing_audit"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [],
+   "restore_route": "REGENERATE_FROM_SOURCES (producer not identified) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_pricing/QORTUBA_BLOCKED_FINAL_QUANTITIES.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa08_qortuba_pricing_audit"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_wall_treatment_01/pa08/qortuba/pricing/workbook.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (research/qs_wall_treatment_01/pa08/qortuba/pricing/workbook.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_pricing/QORTUBA_CORRECTED_READINESS.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa08_qortuba_pricing_audit"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_wall_treatment_01/pa08/qortuba/pricing/workbook.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (research/qs_wall_treatment_01/pa08/qortuba/pricing/workbook.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_pricing/QORTUBA_EXCEL_TRADE_STRUCTURE.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa08_qortuba_pricing"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [],
+   "restore_route": "REGENERATE_FROM_SOURCES (producer not identified) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_pricing/QORTUBA_FINAL_PRICING_AUDIT.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa08_qortuba_pricing_audit"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_wall_treatment_01/pa08/qortuba/boq/compare_schema.py",
+    "research/qs_wall_treatment_01/pa08/qortuba/pricing/workbook.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (research/qs_wall_treatment_01/pa08/qortuba/boq/compare_schema.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_pricing/QORTUBA_MINIMUM_INPUTS_TO_UNLOCK.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa08_qortuba_pricing"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [],
+   "restore_route": "REGENERATE_FROM_SOURCES (producer not identified) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_pricing/QORTUBA_PRICING_INPUT_MATRIX.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa08_qortuba_pricing"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_wall_treatment_01/pa08/qortuba/pricing/audit.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (research/qs_wall_treatment_01/pa08/qortuba/pricing/audit.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_pricing/QORTUBA_PRICING_INPUT_MATRIX.xlsx",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa08_qortuba_pricing_audit"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_wall_treatment_01/pa08/qortuba/pricing/workbook.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (research/qs_wall_treatment_01/pa08/qortuba/pricing/workbook.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_pricing/QORTUBA_PRICING_READINESS_SUMMARY.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa08_qortuba_pricing"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [],
+   "restore_route": "REGENERATE_FROM_SOURCES (producer not identified) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_qs01/FREEZE_PA08_QORTUBA_ROOM_BY_ROOM_QS_01.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa08_qortuba_boq_rules",
+    "test_pa08_qortuba_owner_rules",
+    "test_pa08_qortuba_pricing",
+    "test_pa08_qortuba_pricing_audit",
+    "test_pa08_qortuba_qs01"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_wall_treatment_01/pa08/qortuba/boq/workbook_boq.py",
+    "research/qs_wall_treatment_01/pa08/qortuba/pricing/audit.py",
+    "research/qs_wall_treatment_01/pa08/qortuba/pricing/workbook.py",
+    "research/qs_wall_treatment_01/pa08/qortuba/qs01/compare.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (research/qs_wall_treatment_01/pa08/qortuba/boq/workbook_boq.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_qs01/QORTUBA_QS01_AGGREGATE_CONTRACTOR_COMPARISON.json",
+   "kind": "FILE",
+   "category": "BENCHMARK_TRUTH",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa08_qortuba_qs01"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_wall_treatment_01/pa08/qortuba/qs01/compare.py"
+   ],
+   "restore_route": "RESTORE_FROM_SEALED_STORE (separate key; never into a blind run)"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_qs01/QORTUBA_QS01_BLOCK_WALL_TAKEOFF.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa08_qortuba_owner_rule_audit"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [],
+   "restore_route": "REGENERATE_FROM_SOURCES (producer not identified) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_qs01/QORTUBA_QS01_BLUE_ELEMENT_SCHEDULE.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa08_qortuba_boq_rules",
+    "test_pa08_qortuba_qs01"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [],
+   "restore_route": "REGENERATE_FROM_SOURCES (producer not identified) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_qs01/QORTUBA_QS01_DUAL_METHOD_CHECK.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa08_qortuba_qs01"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [],
+   "restore_route": "REGENERATE_FROM_SOURCES (producer not identified) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_qs01/QORTUBA_QS01_FLOOR_CALCULATIONS.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa08_qortuba_qs01"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [
+    "research/external_engine_lab/r8_5_value_shadow.py",
+    "research/qs_wall_treatment_01/pa08/qortuba/boq/workbook_boq.py",
+    "research/qs_wall_treatment_01/pa08/qortuba/pricing/workbook.py",
+    "research/qs_wall_treatment_01/pa08/qortuba/qs01/compare.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (research/external_engine_lab/r8_5_value_shadow.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_qs01/QORTUBA_QS01_PLASTER_AND_PAINT_TAKEOFF.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa08_qortuba_qs01"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [],
+   "restore_route": "REGENERATE_FROM_SOURCES (producer not identified) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_qs01/QORTUBA_QS01_ROOM_CALCULATION_PROVENANCE.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa08_qortuba_qs01"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [],
+   "restore_route": "REGENERATE_FROM_SOURCES (producer not identified) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_qs01/QORTUBA_QS01_SKIRTING_TAKEOFF.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa08_qortuba_boq_rules",
+    "test_pa08_qortuba_owner_rules",
+    "test_pa08_qortuba_qs01"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_wall_treatment_01/pa08/qortuba/pricing/workbook.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (research/qs_wall_treatment_01/pa08/qortuba/pricing/workbook.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_qs01/QORTUBA_QS01_SUMMARY_TOTALS.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa08_qortuba_boq_rules",
+    "test_pa08_qortuba_owner_rules",
+    "test_pa08_qortuba_pricing",
+    "test_pa08_qortuba_pricing_audit",
+    "test_pa08_qortuba_qs01"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_wall_treatment_01/pa08/qortuba/qs01/compare.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (research/qs_wall_treatment_01/pa08/qortuba/qs01/compare.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_qs01/QORTUBA_QS01_WALL_TILE_TAKEOFF.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa08_qortuba_qs01"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_wall_treatment_01/pa08/qortuba/qs01/compare.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (research/qs_wall_treatment_01/pa08/qortuba/qs01/compare.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_qs01/QORTUBA_ROOM_REGISTER.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa08_qortuba_qs01"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [],
+   "restore_route": "REGENERATE_FROM_SOURCES (producer not identified) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_r1/PA08_QORTUBA_R1_OPENING_REGISTER.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa08_qortuba_opening_completion",
+    "test_pa08_qortuba_workflow_v1"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [],
+   "restore_route": "REGENERATE_FROM_SOURCES (producer not identified) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba_r3/FREEZE_PA08_QORTUBA_R3.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa08_qortuba_ext01"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_wall_treatment_01/pa08/qortuba/ext01/reconcile.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (research/qs_wall_treatment_01/pa08/qortuba/ext01/reconcile.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa09_alrashed/ALRASHED_BLIND_CONFIG.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa09_alrashed"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_wall_treatment_01/pa09/alrashed/blind.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (research/qs_wall_treatment_01/pa09/alrashed/blind.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa09_alrashed/ALRASHED_BLIND_RESULT.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa09_alrashed"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_wall_treatment_01/pa09/alrashed/blind.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (research/qs_wall_treatment_01/pa09/alrashed/blind.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa09_alrashed/ALRASHED_DETAILED_QUANTITY_EXPORT.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa09_alrashed_detailed"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [
+    "research/external_engine_lab/r8_4_shadow_diff.py",
+    "research/external_engine_lab/r8_5_value_shadow.py",
+    "research/qs_wall_treatment_01/pa09/alrashed/detailed_takeoff.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (research/external_engine_lab/r8_4_shadow_diff.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa09_alrashed/ALRASHED_DETAILED_QUANTITY_TAKEOFF.xlsx",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa09_alrashed_detailed"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_wall_treatment_01/pa09/alrashed/detailed_takeoff.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (research/qs_wall_treatment_01/pa09/alrashed/detailed_takeoff.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa09_alrashed/ALRASHED_FINISHING_TAKEOFF.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa09_alrashed_quantities"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_wall_treatment_01/pa09/alrashed/quantities.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (research/qs_wall_treatment_01/pa09/alrashed/quantities.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa09_alrashed/ALRASHED_FIRST_PLAN_AREA_TAKEOFF.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa09_alrashed"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [
+    "research/external_engine_lab/r8_5_value_shadow.py",
+    "research/qs_wall_treatment_01/pa09/alrashed/takeoff.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (research/external_engine_lab/r8_5_value_shadow.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa09_alrashed/ALRASHED_HISTORICAL_EVIDENCE_IDENTIFICATION.json",
+   "kind": "FILE",
+   "category": "BENCHMARK_TRUTH",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa09_alrashed_unseal"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_wall_treatment_01/pa09/alrashed/historical_identification.py"
+   ],
+   "restore_route": "RESTORE_FROM_SEALED_STORE (separate key; never into a blind run)"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa09_alrashed/ALRASHED_HISTORICAL_VALIDATION.json",
+   "kind": "FILE",
+   "category": "BENCHMARK_TRUTH",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa09_alrashed_historical"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_wall_treatment_01/pa09/alrashed/historical_audit.py"
+   ],
+   "restore_route": "RESTORE_FROM_SEALED_STORE (separate key; never into a blind run)"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa09_alrashed/ALRASHED_OWNER_QUESTIONS_BATCH_01.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa09_alrashed"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_wall_treatment_01/pa09/alrashed/questions.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (research/qs_wall_treatment_01/pa09/alrashed/questions.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa09_alrashed/ALRASHED_PROJECT_IDENTITY_AND_FLOOR_INVENTORY.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa09_alrashed"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_wall_treatment_01/pa09/alrashed/identity.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (research/qs_wall_treatment_01/pa09/alrashed/identity.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa09_alrashed/ALRASHED_QUANTITY_RECONCILIATION.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa09_alrashed_detailed"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_wall_treatment_01/pa09/alrashed/detailed_takeoff.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (research/qs_wall_treatment_01/pa09/alrashed/detailed_takeoff.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa09_alrashed/ALRASHED_STRUCTURED_DRAFT_EXPORT.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa09_alrashed_final"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_wall_treatment_01/pa09/alrashed/final_takeoff.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (research/qs_wall_treatment_01/pa09/alrashed/final_takeoff.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa09_alrashed/ALRASHED_VALIDATION_AMENDMENT_01.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa09_alrashed_amendment"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_wall_treatment_01/pa09/alrashed/validation_amendment.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (research/qs_wall_treatment_01/pa09/alrashed/validation_amendment.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa09_alrashed/FULL_VILLA_BLIND_PRE_PRICING_TAKEOFF.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa09_alrashed_detailed",
+    "test_pa09_alrashed_final",
+    "test_pa09_alrashed_historical",
+    "test_pa09_alrashed_unseal"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_wall_treatment_01/pa09/alrashed/detailed_takeoff.py",
+    "research/qs_wall_treatment_01/pa09/alrashed/final_takeoff.py",
+    "research/qs_wall_treatment_01/pa09/alrashed/regression_r5.py",
+    "research/qs_wall_treatment_01/pa09/alrashed/regression_r6.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (research/qs_wall_treatment_01/pa09/alrashed/detailed_takeoff.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa09_alrashed/blind/PA06_SOURCE_UNIT_REGISTER.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa09_alrashed"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_wall_treatment_01/freeze.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (research/qs_wall_treatment_01/freeze.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa09_villa_blind/FULL_VILLA_BLIND_ATTRIBUTED_SOURCES.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa09_villa_attribution"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_wall_treatment_01/pa09/villa_attribution.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (research/qs_wall_treatment_01/pa09/villa_attribution.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa09_villa_blind/FULL_VILLA_BLIND_OWNER_QUESTIONS_BATCH_01.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa09_villa_attribution"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_wall_treatment_01/pa09/villa_attribution.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (research/qs_wall_treatment_01/pa09/villa_attribution.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa09_villa_blind/FULL_VILLA_BLIND_PROTOCOL.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa09_villa_blind_protocol"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_wall_treatment_01/pa09/villa_blind_protocol.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (research/qs_wall_treatment_01/pa09/villa_blind_protocol.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa09_villa_blind/FULL_VILLA_BLIND_SOURCE_INVENTORY.json",
+   "kind": "FILE",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa09_villa_blind_inventory"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [
+    "research/external_engine_lab/r8_6_upload_drift.py",
+    "research/qs_wall_treatment_01/pa09/source_inventory.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (research/external_engine_lab/r8_6_upload_drift.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/experiments/QS_MEASUREMENT_REGION_EXPERIMENT_01",
+   "kind": "DIRECTORY",
+   "category": "DERIVED_EXPERIMENT",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_measurement_region_invariants"
+   ],
+   "evidence": [
+    "STATIC_TEST_REFERENCE"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_measurement_region_experiment_01/build.py",
+    "research/qs_measurement_region_experiment_01/freeze.py",
+    "research/qs_measurement_region_experiment_01/protocol.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (research/qs_measurement_region_experiment_01/build.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/golden/23010",
+   "kind": "DIRECTORY",
+   "category": "GOLDEN_FIXTURE",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_golden_fixture"
+   ],
+   "evidence": [
+    "STATIC_TEST_REFERENCE"
+   ],
+   "named_in_tracked_code": [
+    "engine/area_accuracy.py",
+    "engine/face_eligibility.py",
+    "engine/group_registry.py",
+    "engine/heights.py"
+   ],
+   "restore_route": "RESTORE_FROM_PRIVATE_STORE (verify sha256)"
+  },
+  {
+   "path": "data/golden/23010/inputs/AR-00_MAR2023.pdf",
+   "kind": "FILE",
+   "category": "SOURCE_DRAWING",
+   "present": false,
+   "expected_sha256": "bddb175c39834594def9178995b37df78e78df0d8d62ac731be44464a47bfa74",
+   "identity_source": "runs/golden/23010_MANIFEST.json",
+   "needed_by": [
+    "test_connectivity",
+    "test_vector_source"
+   ],
+   "evidence": [
+    "PINNED_FIXTURE",
+    "STATIC_TEST_REFERENCE"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_wall_treatment_01/pa07/validation.py",
+    "research/qs_wall_treatment_01/pa08/config.py",
+    "tools/e31a_diagnostic.py",
+    "tools/export_qa_workbook.py"
+   ],
+   "restore_route": "RESTORE_FROM_PRIVATE_STORE (verify sha256)"
+  },
+  {
+   "path": "data/golden/23010/inputs/space_map_23010_2f.json",
+   "kind": "FILE",
+   "category": "SOURCE_DRAWING",
+   "present": false,
+   "expected_sha256": "09921ad6eb9e5c1a3286624adedbf4ae8f503b02705347f125f4c876c865c32b",
+   "identity_source": "runs/golden/23010_MANIFEST.json",
+   "needed_by": [],
+   "evidence": [
+    "PINNED_FIXTURE"
+   ],
+   "named_in_tracked_code": [
+    "tools/e31a_diagnostic.py",
+    "tools/export_qa_workbook.py",
+    "tools/graph_diagnostic.py",
+    "tools/run_pipeline.py"
+   ],
+   "restore_route": "RESTORE_FROM_PRIVATE_STORE (verify sha256)"
+  },
+  {
+   "path": "data/golden/23010/site_benchmark.json",
+   "kind": "FILE",
+   "category": "BENCHMARK_TRUTH",
+   "present": false,
+   "expected_sha256": "e8d43f65eece9ab24f53012e922a252cf4bb1bff00cd673d96260612b26fdd0d",
+   "identity_source": "runs/golden/23010_MANIFEST.json",
+   "needed_by": [
+    "test_new_source_intake",
+    "test_reference_mapping"
+   ],
+   "evidence": [
+    "PINNED_FIXTURE",
+    "STATIC_TEST_REFERENCE"
+   ],
+   "named_in_tracked_code": [
+    "engine/reference_mapping.py"
+   ],
+   "restore_route": "RESTORE_FROM_SEALED_STORE (separate key; never into a blind run)"
+  },
+  {
+   "path": "data/golden/23010/topology_overlay.json",
+   "kind": "FILE",
+   "category": "GOLDEN_FIXTURE",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_reference_mapping"
+   ],
+   "evidence": [
+    "STATIC_TEST_REFERENCE"
+   ],
+   "named_in_tracked_code": [
+    "tools/e31a_diagnostic.py",
+    "tools/export_qa_workbook.py",
+    "tools/run_pipeline.py"
+   ],
+   "restore_route": "RESTORE_FROM_PRIVATE_STORE (verify sha256)"
+  },
+  {
+   "path": "data/golden/7757/inputs/P7757_DRAWINGS.pdf",
+   "kind": "FILE",
+   "category": "SOURCE_DRAWING",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_blind_input_contract",
+    "test_source_representation_gate"
+   ],
+   "evidence": [
+    "STATIC_TEST_REFERENCE"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_wall_treatment_01/pa02_visual_qa.py",
+    "research/qs_wall_treatment_01/pa03_source_review.py",
+    "research/qs_wall_treatment_01/pa03_visual_qa.py",
+    "research/qs_wall_treatment_01/pa05/config_p7757.py"
+   ],
+   "restore_route": "RESTORE_FROM_PRIVATE_STORE (verify sha256)"
+  },
+  {
+   "path": "data/golden/7757/sealed/",
+   "kind": "DIRECTORY",
+   "category": "BENCHMARK_TRUTH",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_source_representation_gate"
+   ],
+   "evidence": [
+    "STATIC_TEST_REFERENCE"
+   ],
+   "named_in_tracked_code": [
+    "engine/benchmark_protection.py",
+    "engine/blind_input_contract.py",
+    "engine/disagreement_map.py",
+    "engine/e1_inputs.py"
+   ],
+   "restore_route": "RESTORE_FROM_SEALED_STORE (separate key; never into a blind run)"
+  },
+  {
+   "path": "data/golden/7757/sealed/P7757_area_takeoff_benchmark.pdf",
+   "kind": "FILE",
+   "category": "BENCHMARK_TRUTH",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_blind_input_contract"
+   ],
+   "evidence": [
+    "STATIC_TEST_REFERENCE"
+   ],
+   "named_in_tracked_code": [
+    "engine/reference_mapping.py",
+    "research/qs_wall_treatment_01/source_inventory.py",
+    "tools/a18_input_set.py",
+    "tools/split_submission_set.py"
+   ],
+   "restore_route": "RESTORE_FROM_SEALED_STORE (separate key; never into a blind run)"
+  },
+  {
+   "path": "data/inputs/by_sha256/df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315.dxf",
+   "kind": "FILE",
+   "category": "SOURCE_DRAWING",
+   "present": false,
+   "expected_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+   "identity_source": "content-addressed name",
+   "needed_by": [],
+   "evidence": [
+    "SKIP_REASON"
+   ],
+   "named_in_tracked_code": [],
+   "restore_route": "RESTORE_FROM_PRIVATE_STORE (verify sha256)"
+  },
+  {
+   "path": "data/inputs/by_sha256/e4babbc2ded14d8b01d64fbfd4b373e6a09ba60c4490a56e6305a82c9e47171f.dwg",
+   "kind": "FILE",
+   "category": "SOURCE_DRAWING",
+   "present": false,
+   "expected_sha256": "e4babbc2ded14d8b01d64fbfd4b373e6a09ba60c4490a56e6305a82c9e47171f",
+   "identity_source": "content-addressed name",
+   "needed_by": [],
+   "evidence": [
+    "SKIP_REASON"
+   ],
+   "named_in_tracked_code": [],
+   "restore_route": "RESTORE_FROM_PRIVATE_STORE (verify sha256)"
+  },
+  {
+   "path": "data/reports/ALRASHED_6_GENERIC_ENGINE_VALIDATION.zip",
+   "kind": "FILE",
+   "category": "DELIVERED_PACKAGE",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_pa09_alrashed_regression_r6"
+   ],
+   "evidence": [
+    "STATIC_TEST_REFERENCE"
+   ],
+   "named_in_tracked_code": [
+    "research/qs_wall_treatment_01/pa09/alrashed/regression_r7.py"
+   ],
+   "restore_route": "RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/runs/7757/blind/A18-GF-001/images/page-01.jpeg",
+   "kind": "FILE",
+   "category": "DERIVED_RUN",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_blind_input_contract"
+   ],
+   "evidence": [
+    "STATIC_TEST_REFERENCE"
+   ],
+   "named_in_tracked_code": [
+    "research/a21_visual_qs_pilot_01/sandbox.py",
+    "research/arrangement_experiment_01/edge_set_diagnostic.py",
+    "research/arrangement_experiment_01/run_arrangement.py",
+    "research/arrangement_experiment_01/run_method1b.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (research/a21_visual_qs_pilot_01/sandbox.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/runs/7757/reconciliation/",
+   "kind": "DIRECTORY",
+   "category": "DERIVED_RUN",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_benchmark_protection"
+   ],
+   "evidence": [
+    "STATIC_TEST_REFERENCE"
+   ],
+   "named_in_tracked_code": [
+    "engine/benchmark_protection.py",
+    "engine/blind_input_contract.py",
+    "engine/cad_measure.py",
+    "engine/cold_challenge.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (engine/benchmark_protection.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/runs/7757/reconciliation/P7757_GROUND_OPEN_ZONE_RECONCILIATION.json",
+   "kind": "FILE",
+   "category": "DERIVED_RUN",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_benchmark_protection"
+   ],
+   "evidence": [
+    "RUNTIME_FILE_NOT_FOUND"
+   ],
+   "named_in_tracked_code": [
+    "tools/a18_input_set.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (tools/a18_input_set.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/runs/7757/reconciliation/P7757_OPEN_ZONE.json",
+   "kind": "FILE",
+   "category": "DERIVED_RUN",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_blind_input_contract"
+   ],
+   "evidence": [
+    "STATIC_TEST_REFERENCE"
+   ],
+   "named_in_tracked_code": [],
+   "restore_route": "REGENERATE_FROM_SOURCES (producer not identified) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/runs/7757/round6e_export/REPORT.json",
+   "kind": "FILE",
+   "category": "DERIVED_RUN",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_blind_input_contract"
+   ],
+   "evidence": [
+    "STATIC_TEST_REFERENCE"
+   ],
+   "named_in_tracked_code": [
+    "engine/freeze_manifest.py",
+    "research/a21_trace_sufficiency_01/phase_registry.py",
+    "research/a21_trace_sufficiency_01/pilot_report.py",
+    "research/arrangement_experiment_01/freeze_method1b.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (engine/freeze_manifest.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/runs/7757/round6e_export/sheet.png",
+   "kind": "FILE",
+   "category": "DERIVED_RUN",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_blind_input_contract"
+   ],
+   "evidence": [
+    "STATIC_TEST_REFERENCE"
+   ],
+   "named_in_tracked_code": [],
+   "restore_route": "REGENERATE_FROM_SOURCES (producer not identified) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/runs/cad_convert/ALRASHED_ARCHITECTURAL.json",
+   "kind": "FILE",
+   "category": "DERIVED_RUN",
+   "present": false,
+   "expected_sha256": null,
+   "identity_source": null,
+   "needed_by": [
+    "test_r8_5_adapter_defect"
+   ],
+   "evidence": [
+    "STATIC_TEST_REFERENCE"
+   ],
+   "named_in_tracked_code": [
+    "engine/source/cad/libredwg_map.py",
+    "research/external_engine_lab/r8_2_path_and_independence.py",
+    "research/external_engine_lab/r8_2_shadow_impact.py",
+    "research/external_engine_lab/r8_3_pinned_redecode.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (engine/source/cad/libredwg_map.py) or RESTORE_FROM_PRIVATE_STORE"
+  },
+  {
+   "path": "data/runs/cad_convert/QORTUBA_ARCHITECTURAL.json",
+   "kind": "FILE",
+   "category": "DERIVED_RUN",
+   "present": false,
+   "expected_sha256": "7dbafb3ddd59076664f05c2f3c539d3133b295002c90e3f6f26ffd01737d5e36",
+   "identity_source": "tests/r8_7/FIXTURE_MANIFEST.json",
+   "needed_by": [],
+   "evidence": [
+    "PINNED_FIXTURE",
+    "SKIP_REASON"
+   ],
+   "named_in_tracked_code": [
+    "research/external_engine_lab/r8_2_path_and_independence.py",
+    "research/external_engine_lab/r8_2_shadow_impact.py",
+    "research/external_engine_lab/r8_3_pinned_redecode.py",
+    "research/external_engine_lab/r8_3_real_status.py"
+   ],
+   "restore_route": "REGENERATE_FROM_SOURCES (research/external_engine_lab/r8_2_path_and_independence.py) or RESTORE_FROM_PRIVATE_STORE"
+  }
+ ],
+ "missing_by_category": {
+  "BENCHMARK_TRUTH": 14,
+  "DELIVERED_PACKAGE": 1,
+  "DERIVED_EXPERIMENT": 76,
+  "DERIVED_RUN": 8,
+  "GOLDEN_FIXTURE": 2,
+  "SESSION_UPLOAD": 1,
+  "SOURCE_DRAWING": 5
+ },
+ "skip_reasons": {
+  "declared fixture not present in this checkout: data/runs/cad_convert/QORTUBA_ARCHITECTURAL.json": 39,
+  "run research.qs_wall_treatment_01.pa09.alrashed.regression_r7 first": 39,
+  "golden data for 23010 is not mounted (client drawing, gitignored) — see runs/golden/23010_MANIFEST.json for what it should contain": 19,
+  "TARGET_NOT_IMPLEMENTED: FACT_POLICY_RESOLVE — R8 module not written in R8.0 (tests first)": 13,
+  "audited input not present": 8,
+  "KNOWN_DEFECT: MIRRORED_ARC_SWEEP — cad_adapter L688-695 adds the composed rotation to ARC angles; a reflection is applied as a rotation": 7,
+  "KNOWN_DEFECT: MIRRORED_BULGE_SIDE — cad_adapter L662-680 builds the arc on the WORLD chord with the LOCAL bulge sign; under det<0 it bows to the wrong side": 7,
+  "KNOWN_DEFECT: BLOCK_BASE_POINT_IGNORED — Transform2D.from_insert has no -base_pt term": 5,
+  "KNOWN_DEFECT: MINSERT_NOT_EXPANDED — type 8 MINSERT is counted UNHANDLED and never expanded (0 of 6 cells realised; visible, not silent)": 5,
+  "KNOWN_DEFECT: FRAME_FAIL_OPEN — extrusion never read: a tilted or unreadable frame is silently realised as WCS (fail-open)": 5,
+  "TARGET_NOT_IMPLEMENTED: SCOPE_APPLIES — R8 module not written in R8.0 (tests first)": 5,
+  "KNOWN_DEFECT: XREF_SILENT — xref block placed as an empty instance; no flag read, no finding": 5,
+  "P7757 sources not on disk": 5,
+  "TARGET_NOT_IMPLEMENTED: TRANSCRIPTION_PROMOTE — R8 module not written in R8.0 (tests first)": 4,
+  "TARGET_NOT_IMPLEMENTED: SOURCE_DELTA — R8 module not written in R8.0 (tests first)": 4,
+  "AR-00 sheet not present": 4,
+  "the frozen experiment is not present in this checkout": 4,
+  "TARGET_NOT_IMPLEMENTED: CLAIM_FROM — R8 module not written in R8.0 (tests first)": 3,
+  "TARGET_NOT_IMPLEMENTED: SCOPE_VALIDATE — R8 module not written in R8.0 (tests first)": 3,
+  "client data not present": 3,
+  "KNOWN_DEFECT: OCS_EXTRUSION_IGNORED — cad_adapter ignores extrusion: ARC centre/angles read as WCS": 2,
+  "KNOWN_DEFECT: OCS_EXTRUSION_IGNORED — cad_adapter ignores extrusion: LWPOLYLINE vertices/bulge read as WCS": 2,
+  "CONTRACT_SUPERSEDED: UNIT_CONTEXT — R8.0 expects PROVISIONAL when only GEOMETRY_PLAUSIBILITY contradicts INSUNITS. R8.3 computes UNCONFIRMED: the frozen spec's own table makes plausibility support-onl": 2,
+  "TARGET_NOT_IMPLEMENTED: TRANSCRIPTION_RECORD — R8 module not written in R8.0 (tests first)": 2,
+  "QS_MEASUREMENT_REGION_BUILDER does not exist yet; §121 applies the moment it does": 2,
+  "GF-Z04 basin lobby (Wash) has no source boundary inside SALOON / RECEPTION / DINING - owner decision (review queue #3)": 1,
+  "1F W.C shares an unclosed opening with the corridor in both routes - no wall is invented": 1,
+  "D6 ground-zone binding needs engineer answer Q-S4; unchanged this round": 1,
+  "SD-17 page-16 stair layout is vector glyphs; applicability unproved": 1,
+  "p.16 stair detail READ, applicability to the villa stairs not proved": 1,
+  "Q-S4 ground-slab scope unresolved after the second pass": 1,
+  "Q-S4 ground-slab scope still open (nested candidate cells)": 1,
+  "p.16 stair detail applicability not proved": 1,
+  "freelancer reference workbook is client data (not in git)": 1,
+  "local data/ inputs not present (gitignored)": 1,
+  "KNOWN_DEFECT: NON_UNIFORM_SCALE_ARC_AS_CIRCLE — ARC radius * scale_x under scale(2,1): an elliptical arc realised as a circle through the wrong end point": 1,
+  "KNOWN_DEFECT: OCS_EXTRUSION_IGNORED — INSERT insertion point is in the INSERT's OCS; cad_adapter Transform2D.from_insert ignores extrusion": 1,
+  "KNOWN_DEFECT: MIRRORED_ARC_SWEEP — the mirrored-curve defect seen through the realised digest": 1,
+  "BOUNDARY_DEBT: ENGINE_IMPORTS_RESEARCH — engine/plaster_trade_engine.py and engine/wall_treatment_engine.py import research.a21_trace_sufficiency_01.parameters (pre-existing, frozen by B-7)": 1,
+  "TARGET_NOT_IMPLEMENTED: PUBLISH_WITH_FRAME — R8 module not written in R8.0 (tests first)": 1,
+  "CONTRACT_SUPERSEDED: FRAME_EVIDENCE — real-source row: needs URBAN_R8_REAL_SOURCE (unset); R8.3 real evaluation (lab) gives Al Rashed UNIT_CONTEXT CONFLICT with 0 admitted physical evidence, not the R": 1,
+  "TARGET_NOT_IMPLEMENTED: FACT_POLICY_LOAD — R8 module not written in R8.0 (tests first)": 1,
+  "TARGET_NOT_IMPLEMENTED: K1_REALISE:flattened (R8.3) — R8.1: K1 realises the exact elliptical arc; FLATTENING with a declared chord tolerance in mm needs an established MEASUREMENT_FRAME (R8.3). The K1": 1,
+  "KNOWN_DEFECT: ROTATED_DIMENSION_PROJECTION — DimensionObservation.geometry_mm = distance between extension origins, not their projection on the dimension line (QBD-04)": 1,
+  "TARGET_NOT_IMPLEMENTED: DIMENSION_MEASURE — R8 module not written in R8.0 (tests first)": 1,
+  "KNOWN_DEFECT: MTEXT_CODES_UNDECODED — MTEXT value kept with raw inline format codes (\\A, {\\f..;}, \\P, %%c)": 1,
+  "TARGET_NOT_IMPLEMENTED: CAD_TEXT_PLAIN — R8 module not written in R8.0 (tests first)": 1,
+  "LIBRARY_KNOWN_FAILURE: EZDXF_NESTED_MINSERT_UNDER_REFLECTION — ezdxf 1.4.4 realises a MINSERT nested under a reflecting parent with its rows on the wrong side; hand truth is authoritative": 1,
+  "KNOWN_DEFECT CAD_ADAPTER_REALISES_INVISIBLE_GEOMETRY: entities with the source invisibility flag are emitted as primitives (flag kept in provenance, read by no engine module)": 1,
+  "KNOWN_DEFECT CAD_ADAPTER_NAMELESS_BLOCK_TOP_LEVEL: content of a BLOCK_HEADER with an empty name is emitted at its block-local coordinates instead of through its INSERT": 1,
+  "KNOWN_DEFECT CAD_ADAPTER_OLE2FRAME_TYPE2_DROP: an OLE2FRAME the decoder labels with type code 2 disappears without any count (type 74 is counted)": 1,
+  "KNOWN_DEFECT OWNER_UNRESOLVED_MODELSPACE_GUESS: an entity whose owner cannot be established is realised as model-space geometry (R8.1 K1 shared this; fixed in R8.2 Phase 0)": 1,
+  "KNOWN_DEFECT CAD_ADAPTER_HANDLE_IDENTITY_COLLISION: identity is keyed on the printed handle value; LibreDWG 0.13.3 prints 3-byte handles with 16 bits, so two entities can share one object_id": 1,
+  "real-source row: URBAN_R8_REAL_SOURCE unset": 1,
+  "Al Rashed decode not present in this checkout": 1,
+  "hash-addressed input not present in this checkout: data/inputs/by_sha256/df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315.dxf": 1,
+  "hash-addressed input not present in this checkout: data/inputs/by_sha256/e4babbc2ded14d8b01d64fbfd4b373e6a09ba60c4490a56e6305a82c9e47171f.dwg": 1,
+  "frozen christiannp dataset not present": 1,
+  "owner evidence artifact not present": 1,
+  "structural check artifact not present": 1,
+  "leakage guard artifact not present": 1,
+  "SE audit artifact not present": 1,
+  "artifact not present": 1,
+  "Qortuba blind outputs not present in this checkout": 1,
+  "run research.qs_wall_treatment_01.pa09.alrashed.regression_r6 first": 1,
+  "the delivered R6 package is not on this machine": 1
+ },
+ "registered_source_inputs": [
+  {
+   "name": "P7757.dwg",
+   "sha256": "7f61f3acdd62d62dc745f8b522f8136cb41c575df36ec6d9f27c2fe48fea41e3",
+   "bytes": 2655476,
+   "path": "data/inputs/by_sha256/7f61f3acdd62d62dc745f8b522f8136cb41c575df36ec6d9f27c2fe48fea41e3.dwg",
+   "role": "CAD_NATIVE",
+   "discipline": "ARCHITECTURAL",
+   "present": false
+  },
+  {
+   "name": "P7757.dxf",
+   "sha256": "ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4",
+   "bytes": 17227946,
+   "path": "data/inputs/by_sha256/ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4.dxf",
+   "role": "CAD_EXCHANGE",
+   "discipline": "ARCHITECTURAL",
+   "present": true
+  },
+  {
+   "name": "P7757_Architectural.dwf",
+   "sha256": "7d440a57aa8930566a4028ff5e91ee819df1007fad3bd986d4db743f100d735f",
+   "bytes": 2655253,
+   "path": "data/inputs/by_sha256/7d440a57aa8930566a4028ff5e91ee819df1007fad3bd986d4db743f100d735f.dwf",
+   "role": "DWF_PUBLISH",
+   "discipline": "ARCHITECTURAL",
+   "present": false
+  },
+  {
+   "name": "P7757_Architectural_Plan_Pages_01-06.pdf",
+   "sha256": "80b6a80428990db4dfa86aa343ed2c7cb429709459d564f0dac92362480a9b00",
+   "bytes": 19015776,
+   "path": "data/inputs/by_sha256/80b6a80428990db4dfa86aa343ed2c7cb429709459d564f0dac92362480a9b00.pdf",
+   "role": "PDF_PLOT",
+   "discipline": "ARCHITECTURAL",
+   "present": true
+  },
+  {
+   "name": "P7757_Architectural_Plan_Pages_07-12.pdf",
+   "sha256": "281a0c3f8c1cdd8f2a78528513b66d14ba4793e981e2d8059423faf6e6162f99",
+   "bytes": 18512718,
+   "path": "data/inputs/by_sha256/281a0c3f8c1cdd8f2a78528513b66d14ba4793e981e2d8059423faf6e6162f99.pdf",
+   "role": "PDF_PLOT",
+   "discipline": "ARCHITECTURAL",
+   "present": true
+  },
+  {
+   "name": "ST7757.dwg",
+   "sha256": "3f7a556c69786834c16c355504437b5abcd1f5aa3a9625b33a2c5b14213f0227",
+   "bytes": 491151,
+   "path": "data/inputs/by_sha256/3f7a556c69786834c16c355504437b5abcd1f5aa3a9625b33a2c5b14213f0227.dwg",
+   "role": "CAD_NATIVE",
+   "discipline": "STRUCTURAL",
+   "present": false
+  },
+  {
+   "name": "ST7757.dxf",
+   "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "bytes": 3153037,
+   "path": "data/inputs/by_sha256/9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079.dxf",
+   "role": "CAD_EXCHANGE",
+   "discipline": "STRUCTURAL",
+   "present": true
+  },
+  {
+   "name": "ST7757.pdf",
+   "sha256": "74da1523f05eb3c6a4fe3ddebaef2c3d841891f003efc03bc32a3fb4553337e3",
+   "bytes": 2219156,
+   "path": "data/inputs/by_sha256/74da1523f05eb3c6a4fe3ddebaef2c3d841891f003efc03bc32a3fb4553337e3.pdf",
+   "role": "PDF_PLOT",
+   "discipline": "STRUCTURAL",
+   "present": true
+  },
+  {
+   "name": "sanitary-7757.pdf",
+   "sha256": "116736870983e63a9bf80e778fe2fc098e333148cce5337190a1ac3398d82596",
+   "bytes": 674366,
+   "path": "data/inputs/by_sha256/116736870983e63a9bf80e778fe2fc098e333148cce5337190a1ac3398d82596.pdf",
+   "role": "PDF_PLOT",
+   "discipline": "SANITARY_SUPPORTING",
+   "present": false
+  }
+ ],
+ "registered_source_inputs_present": 5,
+ "registered_source_inputs_total": 9
+}
