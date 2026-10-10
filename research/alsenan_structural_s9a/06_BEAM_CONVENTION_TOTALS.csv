@@ -1,0 +1,21 @@
+GROUP,SET,BEAMS,TOTAL_DEPTH_M3,BELOW_SLAB_M3,SENSITIVITY_M3,SENSITIVITY_PCT,DOWNSTAND_IF_TOTAL_DEPTH_M3
+ALL,conditional (schedule section + clear length),103,56.766582,70.931534,14.164952,24.95,42.60163
+ALL,source conflict,8,6.148613,7.671436,1.522824,24.77,4.625789
+ALL,curved bands (centre length: upper bounds),5,0.56445,0.684866,,,
+ALL,missing a dimension (no value under either reading),27,,,,,
+ALL,re-owned by S9A as cantilever portions,7,,,,,
+STOREY GF,conditional (schedule section + clear length),55,33.41457,41.305226,7.890656,23.61,25.523914
+STOREY GF,source conflict,5,4.851363,5.959066,1.107704,22.83,3.743659
+STOREY GF,curved bands (centre length: upper bounds),5,0.56445,0.684866,,,
+STOREY GF,missing a dimension (no value under either reading),12,,,,,
+STOREY GF,re-owned by S9A as cantilever portions,3,,,,,
+STOREY 1F,conditional (schedule section + clear length),33,19.380813,24.391012,5.0102,25.85,14.370613
+STOREY 1F,source conflict,3,1.29725,1.71237,0.41512,32,0.88213
+STOREY 1F,curved bands (centre length: upper bounds),0,0,0,,,
+STOREY 1F,missing a dimension (no value under either reading),12,,,,,
+STOREY 1F,re-owned by S9A as cantilever portions,1,,,,,
+STOREY 2F,conditional (schedule section + clear length),15,3.9712,5.235296,1.264096,31.83,2.707104
+STOREY 2F,source conflict,0,0,0,0,,0
+STOREY 2F,curved bands (centre length: upper bounds),0,0,0,,,
+STOREY 2F,missing a dimension (no value under either reading),3,,,,,
+STOREY 2F,re-owned by S9A as cantilever portions,3,,,,,

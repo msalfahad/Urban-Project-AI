@@ -1,0 +1,18 @@
+CHECK_ID,CHECK,RESULT,DETAIL
+C01,S9 and the 29 stage manifests verify before and after,PASS,30 manifests
+C02,every released S9 family agrees with its independent recompute (rounding only),PASS,[]
+C03,"S9A releases nothing: the released totals stay 158.070 m3 / 18,845.961 kg",PASS,158.070256 m3 / 18845.961347 kg
+C04,"exactly 8 dense-hatch (100 mm) bands on the slab sheets, 4.947 m2, each with a unique id and handle",PASS,4.9473 m2
+C05,"every band matches the legend's cantilever-portion symbol, not the bearing-wall symbol",PASS,"{""S9A-CP-01"": 98.78, ""S9A-CP-02"": 98.78, ""S9A-CP-03"": 98.78, ""S9A-CP-04"": 100.28, ""S9A-CP-05"": 100.28, ""S9A-CP-06"": 101.78, ""S9A-CP-07"": 98.78, ""S9A-CP-08"": 98.78}"
+C06,no band overlaps a slab panel or a column; each has one owner,PASS,
+C07,"each band coincides with exactly one S9 beam row, which held no released value (no double count)",PASS,
+C08,band thickness is UNKNOWN and nothing is released for a band,PASS,
+C09,150 superstructure beams compared; no beam concrete released,PASS,
+C10,"per beam: BELOW_SLAB - TOTAL_DEPTH = B x t x L (the strip), and TOTAL_DEPTH = downstand + strip",PASS,
+C11,"a missing dimension is never zero: no volume where B, H or L is missing",PASS,
+C12,"slab panels stop at drawn beam faces and never overlap a column (BO-01, BO-02)",PASS,[]
+C13,every ground beam and every mismatched column has a problem kind and a need,PASS,
+C14,the 28 column section mismatches S9 reported are all audited,PASS,"{""GF"": 8, ""FOUNDATION"": 6, ""1F"": 11, ""2F"": 3}"
+C15,the conditional values never enter a released total,PASS,
+C16,every RFI names what it would unlock; the ranking covers every RFI,PASS,
+C17,"the builder reads no old-BOQ, R5, R9_1, PRE-S8 data or post-freeze input",PASS,

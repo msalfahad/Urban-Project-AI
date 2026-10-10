@@ -1,0 +1,79 @@
+{
+ "bands": {
+  "already_in_s9_as": {
+   "BLOCKED_UNQUANTIFIED": 7,
+   "CONDITIONAL_NOT_RELEASED": 1
+  },
+  "area_m2": 4.947346,
+  "bound_to_ca": 1,
+  "count": 8,
+  "legend_match": {
+   "CANTILEVER_PORTION": 8
+  },
+  "registered_blocked": 7
+ },
+ "baseline": "5f317d2",
+ "beams": {
+  "below_slab_m3": 70.931534,
+  "compared": 150,
+  "conditional": 103,
+  "conflict_beams": 8,
+  "conflict_below_slab_m3": 7.671436,
+  "conflict_total_depth_m3": 6.148613,
+  "missing_dimension": 27,
+  "re_owned": 7,
+  "sensitivity_m3": 14.164952,
+  "total_depth_m3": 56.766582
+ },
+ "columns": {
+  "GENUINE_CONFLICT": 2,
+  "GENUINE_CONFLICT_ONE_DIMENSION": 7,
+  "INTERPRETATION_SCHEDULE_STOREY_ROW": 11,
+  "INTERPRETATION_SCHEDULE_STOREY_ROW + LIFT_PIT_CONFLICT": 4,
+  "INTERPRETATION_TYPE_TAG": 4
+ },
+ "corrects": "research/alsenan_structural_s9 (frozen; unchanged)",
+ "date": "2026-10-10",
+ "gate_note": "partial structural BOQ; the project gate stays INCOMPLETE",
+ "ground_beams": {
+  "INTERPRETATION_EXTERIOR_OR_INTERIOR": 2,
+  "INTERPRETATION_TITLE_OVERLAP": 8,
+  "INTERPRETATION_TITLE_OVERLAP_AND_EXTERIOR_OR_INTERIOR": 4,
+  "INTERPRETATION_TITLE_OVERLAP_AND_LENGTH_BASIS": 3,
+  "INTERPRETATION_TITLE_OVERLAP_AND_LENGTH_BASIS_AND_EXTERIOR_OR_INTERIOR": 1,
+  "MISSING_SOURCE_INFORMATION": 30,
+  "RELEASED_IN_S9": 6,
+  "SOURCE_CONFLICT": 8
+ },
+ "policy": "S9A_STRUCTURAL_COMPLETENESS_CORRECTION_LAYER_V1",
+ "references_read": [],
+ "release_delta": {
+  "concrete_m3": 0.0,
+  "kg": 0.0
+ },
+ "released_unchanged": {
+  "concrete_m3": 158.070256,
+  "reinforcement_kg": 18845.961347
+ },
+ "rfis": 10,
+ "round": "S9A",
+ "rule": "a dated correction layer: owners and lanes only, each with a reason; nothing released, nothing selected to match an old estimate",
+ "ties": "MISSING_SOURCE_INFORMATION",
+ "unlock_steel_top": [
+  "RFI-A02",
+  "RFI-A07"
+ ],
+ "unlock_top3": [
+  "RFI-A01",
+  "RFI-A05",
+  "RFI-A03"
+ ],
+ "verification": {
+  "families_agree": 21,
+  "independent_concrete_m3": 158.070256426,
+  "independent_kg": 18845.961346647,
+  "readme_table_rounding_kg": 0.001,
+  "s9_c01_kg": 1217.128,
+  "s9_c01_parts": 288
+ }
+}

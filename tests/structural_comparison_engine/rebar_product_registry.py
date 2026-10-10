@@ -56,6 +56,7 @@ ACCURATE_MODULES = (
     "engine/source/stair_scenario_checks.py",   # S8.7B landing reach, setting out, finish datums, exact flight integral
     "engine/source/stair_fit_checks.py",        # S8.7C run ends, beam-band clearance, riser capacity, transition levels
     "engine/source/structural_reconciliation.py",  # S9 version precedence, single owner, lane-safe totals, polygon area
+    "engine/source/structural_completeness.py",    # S9A plan overlap, hatch spacing, beam depth readings, length class
     "engine/bbs_steel.py",
 )
 # project builders that produce accurate reinforcement registers
@@ -103,6 +104,8 @@ ACCURATE_BUILDERS = (
     "research/alsenan_stairs_s8_7b/build_s8_7b.py",  # S8.7B owner stair scenario / engineering reconciliation (no release)
     "research/alsenan_stairs_s8_7c/build_s8_7c.py",  # S8.7C stair design resolution study (no release)
     "research/alsenan_structural_s9/build_s9.py",  # S9 whole-building structural BOQ reconciliation (blind, frozen)
+    "research/alsenan_structural_s9a/build_s9a.py",  # S9A completeness correction layer over S9 (no release)
+    "research/alsenan_structural_s9a/visual_s9a.py",  # S9A report and figures (loaded by build_s9a; reads L only)
 )
 ROUGH_MODULES = (
     "engine/source/rough_rebar_sanity.py",
@@ -141,6 +144,7 @@ COMPARISON_MODULES = (                   # reference-QS / oracle comparison: nev
     "research/alsenan_stairs_s8_7b/post_freeze/post_freeze_comparison.py",
     "research/alsenan_stairs_s8_7c/post_freeze/post_freeze_comparison.py",
     "research/alsenan_structural_s9/post_freeze/post_freeze_comparison.py",
+    "research/alsenan_structural_s9a/post_freeze/post_freeze_comparison.py",
 )
 COMPARISON_DIRS = (
     "research/alsenan_multi_engine_comparison",

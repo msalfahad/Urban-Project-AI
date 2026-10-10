@@ -34,3 +34,5 @@ serviceAccountKey.json
 # S1 human-review drawings embed client drawing content (xlsx already ignored above)
 research/alsenan_structural_census_s1/review/*.pdf
 research/alsenan_column_rebar_s3/review/*.pdf
+# S9A visual QA PDF: printed from the frozen HTML, embeds client plan geometry (like the review PDFs)
+research/alsenan_structural_s9a/visual/*.pdf
