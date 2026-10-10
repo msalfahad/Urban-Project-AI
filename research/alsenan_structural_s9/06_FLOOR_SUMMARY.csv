@@ -1,0 +1,36 @@
+STOREY,FAMILY,COMPONENTS,RELEASED_FROZEN_M3,RELEASED_S9_M3,RELEASED_M3,CONDITIONAL_POINT_M3,INDICATIVE_M3,NOT_QUANTIFIED_COMPONENTS,RELEASED_KG,NOT_RELEASED_MODELLED_KG,LANES,NOTE
+FOUNDATION,FOOTINGS,26,0,64.304,64.304,0.216,0,0,3629.599513,0,"{""RELEASED_S9_DELTA"": 25, ""SOURCE_CONFLICT"": 1}",footings and the foundation-storey column necks
+FOUNDATION,COLUMNS,36,0,0,0,1.4625,10.554,2,1038.269,1167.406,"{""BLOCKED_UNQUANTIFIED"": 32, ""SOURCE_CONFLICT"": 4}",footings and the foundation-storey column necks
+FOUNDATION,GROUND_BEAMS,1,0,0,0,0,0,1,0,0,"{""BLOCKED_UNQUANTIFIED"": 1}",footings and the foundation-storey column necks
+FOUNDATION,LIFT,2,0,0,0,0,0,0,0,0,"{""EXCLUDED_OWNED_BY_OTHER_FAMILY"": 1, ""NOT_APPLICABLE"": 1}",footings and the foundation-storey column necks
+FOUNDATION,PLAIN_CONCRETE,1,0,0,0,0,0,1,0,0,"{""BLOCKED_UNQUANTIFIED"": 1}",footings and the foundation-storey column necks
+GROUND,GROUND_BEAMS,62,0,3.8791,3.8791,3.32943,0,38,1436.23167,114.621974,"{""BLOCKED_UNQUANTIFIED"": 22, ""CONDITIONAL_NOT_RELEASED"": 33, ""RELEASED_S9_DELTA"": 6, ""SOURCE_CONFLICT"": 1}","ground / strap beams, the slab on grade, the pool, the lift pit, entrance steps"
+GROUND,SLABS,2,0,0,0,0,0,0,0,0,"{""EXCLUDED_OWNED_BY_OTHER_FAMILY"": 1, ""NOT_APPLICABLE"": 1}","ground / strap beams, the slab on grade, the pool, the lift pit, entrance steps"
+GROUND,GROUND_SLAB,23,3.785852316,0,3.785852316,12.977875686,0,0,233.694587428,0,"{""CONDITIONAL_NOT_RELEASED"": 19, ""EXCLUDED_OWNED_BY_OTHER_FAMILY"": 2, ""RELEASED_FROZEN_STAGE"": 2}","ground / strap beams, the slab on grade, the pool, the lift pit, entrance steps"
+GROUND,STAIRS,2,0,0,0,0,0,2,0,0,"{""BLOCKED_UNQUANTIFIED"": 2}","ground / strap beams, the slab on grade, the pool, the lift pit, entrance steps"
+GROUND,LIFT,4,0,0,0,0,2.145,0,0,0,"{""INDICATIVE_ONLY_NOT_RELEASED"": 4}","ground / strap beams, the slab on grade, the pool, the lift pit, entrance steps"
+GROUND,POOL,7,0,0,0,0,0,7,0,0,"{""BLOCKED_UNQUANTIFIED"": 7}","ground / strap beams, the slab on grade, the pool, the lift pit, entrance steps"
+GROUND,PLAIN_CONCRETE,1,0,0,0,0,0,1,0,0,"{""BLOCKED_UNQUANTIFIED"": 1}","ground / strap beams, the slab on grade, the pool, the lift pit, entrance steps"
+GF,COLUMNS,30,0,13.6125,13.6125,6.6375,0,0,2069.178,950.734,"{""CONDITIONAL_NOT_RELEASED"": 11, ""RELEASED_S9_DELTA"": 17, ""SOURCE_CONFLICT"": 2}","GF columns, GF-roof beams and slab (the +5.50 floor), GF lintels, the GF -> 1F stairs"
+GF,BEAMS,80,0,0,0,38.2659325,0,20,2145.785208,742.754865,"{""BLOCKED_UNQUANTIFIED"": 14, ""CONDITIONAL_NOT_RELEASED"": 60, ""SOURCE_CONFLICT"": 6}","GF columns, GF-roof beams and slab (the +5.50 floor), GF lintels, the GF -> 1F stairs"
+GF,SLABS,39,0,32.95776,32.95776,0,0,5,2162.77190899,0,"{""BLOCKED_UNQUANTIFIED"": 5, ""EXCLUDED_OWNED_BY_OTHER_FAMILY"": 3, ""NOT_APPLICABLE"": 3, ""RELEASED_S9_DELTA"": 28}","GF columns, GF-roof beams and slab (the +5.50 floor), GF lintels, the GF -> 1F stairs"
+GF,STAIRS,8,0.497382788,0,0.497382788,0,0,6,57.503825224,0,"{""BLOCKED_UNQUANTIFIED"": 4, ""RELEASED_FROZEN_STAGE"": 2, ""SOURCE_CONFLICT"": 2}","GF columns, GF-roof beams and slab (the +5.50 floor), GF lintels, the GF -> 1F stairs"
+GF,LIFT,2,0,0,0,0,0,1,0,0,"{""BLOCKED_UNQUANTIFIED"": 1, ""NOT_APPLICABLE"": 1}","GF columns, GF-roof beams and slab (the +5.50 floor), GF lintels, the GF -> 1F stairs"
+GF,LINTELS,30,0.102,0,0.102,2.145184006,0.339968879,0,13.083851852,301.7789167,"{""BLOCKED_UNQUANTIFIED"": 6, ""CONDITIONAL_NOT_RELEASED"": 22, ""RELEASED_FROZEN_STAGE"": 2}","GF columns, GF-roof beams and slab (the +5.50 floor), GF lintels, the GF -> 1F stairs"
+GF,OTHER,3,0,0,0,0,0,0,0,0,"{""NOT_IN_SOURCE"": 3}","GF columns, GF-roof beams and slab (the +5.50 floor), GF lintels, the GF -> 1F stairs"
+1F,COLUMNS,20,0,4.284,4.284,5.964,0,0,1135.876,546.652,"{""CONDITIONAL_NOT_RELEASED"": 10, ""RELEASED_S9_DELTA"": 9, ""SOURCE_CONFLICT"": 1}","1F columns, 1F-roof beams and slab (+9.70), the domes, 1F lintels, the 1F -> 2F stair"
+1F,BEAMS,57,0,0,0,20.6780625,0,13,1592.429323,472.359407,"{""BLOCKED_UNQUANTIFIED"": 13, ""CONDITIONAL_NOT_RELEASED"": 33, ""EXCLUDED_OWNED_BY_OTHER_FAMILY"": 8, ""SOURCE_CONFLICT"": 3}","1F columns, 1F-roof beams and slab (+9.70), the domes, 1F lintels, the 1F -> 2F stair"
+1F,SLABS,26,0,19.1408,19.1408,0,0,1,1321.202240262,0,"{""BLOCKED_UNQUANTIFIED"": 1, ""EXCLUDED_OWNED_BY_OTHER_FAMILY"": 9, ""NOT_APPLICABLE"": 2, ""RELEASED_S9_DELTA"": 14}","1F columns, 1F-roof beams and slab (+9.70), the domes, 1F lintels, the 1F -> 2F stair"
+1F,STAIRS,5,0.0192,0,0.0192,0,0,4,1.517037037,0,"{""BLOCKED_UNQUANTIFIED"": 3, ""RELEASED_FROZEN_STAGE"": 1, ""SOURCE_CONFLICT"": 1}","1F columns, 1F-roof beams and slab (+9.70), the domes, 1F lintels, the 1F -> 2F stair"
+1F,LIFT,1,0,0,0,0,0,0,0,0,"{""NOT_APPLICABLE"": 1}","1F columns, 1F-roof beams and slab (+9.70), the domes, 1F lintels, the 1F -> 2F stair"
+1F,DOMES,9,5.081361322,0,5.081361322,0,0,5,602.111303564,0,"{""BLOCKED_UNQUANTIFIED"": 2, ""NOT_APPLICABLE"": 2, ""RELEASED_FROZEN_STAGE"": 2, ""SOURCE_CONFLICT"": 3}","1F columns, 1F-roof beams and slab (+9.70), the domes, 1F lintels, the 1F -> 2F stair"
+1F,LINTELS,26,0.264,0,0.264,1.601958582,0.039292802,0,36.505185185,210.904383589,"{""BLOCKED_UNQUANTIFIED"": 1, ""CONDITIONAL_NOT_RELEASED"": 20, ""RELEASED_FROZEN_STAGE"": 5}","1F columns, 1F-roof beams and slab (+9.70), the domes, 1F lintels, the 1F -> 2F stair"
+2F,COLUMNS,9,0,2.688,2.688,1.26,0,0,414.402,165.667,"{""CONDITIONAL_NOT_RELEASED"": 3, ""RELEASED_S9_DELTA"": 6}","2F columns, 2F-roof beams and slab (+13.90), the water-tank roof, 2F lintels"
+2F,BEAMS,21,0,0,0,3.9712,0,6,276.550913,117.150025,"{""BLOCKED_UNQUANTIFIED"": 6, ""CONDITIONAL_NOT_RELEASED"": 15}","2F columns, 2F-roof beams and slab (+13.90), the water-tank roof, 2F lintels"
+2F,SLABS,9,0,5,5,0,0,0,318.04121529,0,"{""EXCLUDED_OWNED_BY_OTHER_FAMILY"": 2, ""NOT_APPLICABLE"": 2, ""RELEASED_S9_DELTA"": 5}","2F columns, 2F-roof beams and slab (+13.90), the water-tank roof, 2F lintels"
+2F,LIFT,1,0,0,0,0,0,0,0,0,"{""NOT_APPLICABLE"": 1}","2F columns, 2F-roof beams and slab (+13.90), the water-tank roof, 2F lintels"
+2F,WATER_TANK_ROOF,4,2.4543,0,2.4543,0,0,0,361.208564815,0,"{""NOT_IN_SOURCE"": 2, ""RELEASED_FROZEN_STAGE"": 2}","2F columns, 2F-roof beams and slab (+13.90), the water-tank roof, 2F lintels"
+2F,LINTELS,8,0,0,0,0.484573955,0,0,0,56.246059654,"{""CONDITIONAL_NOT_RELEASED"": 8}","2F columns, 2F-roof beams and slab (+13.90), the water-tank roof, 2F lintels"
+ROOF,LIFT,1,0,0,0,0,0,0,0,0,"{""NOT_IN_SOURCE"": 1}",parapets above the roof slabs
+ROOF,PARAPETS,3,0,0,0,0,0,3,0,0,"{""BLOCKED_UNQUANTIFIED"": 3}",parapets above the roof slabs
+SITE,BOUNDARY_WALL,1,0,0,0,0,0,1,0,0,"{""SOURCE_CONFLICT"": 1}",boundary wall
