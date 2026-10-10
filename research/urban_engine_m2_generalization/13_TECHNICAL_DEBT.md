@@ -1,0 +1,17 @@
+# Remaining technical debt, ranked by impact on a new villa
+
+| id | debt | impact | where | next step |
+|---|---|---|---|---|
+| TD-01 | **No second real villa.** Every accuracy figure on real drawings is a comparison with our own frozen replay. | We cannot state real-world accuracy, and the 95 % target is untested. | evaluation | Obtain one more villa (DXF + PDF) with an independently checked QTO; run route G once, frozen, and report per family. |
+| TD-02 | **Vector-glyph PDFs are unreadable** (no text layer, no OCR installed). The typical ground-beam bars, some notes and some details are only there. | Ground-beam steel is 0 on Alsenan (MISSING_DATA); notes may be missed elsewhere. | `tools/urban_intake.read_pdf` | Pinned offline OCR (tesseract or an equivalent) behind a separate, reported lane; never as VERIFIED. |
+| TD-03 | **Families with no generic detector:** stairs (geometry), lifts, pools, domes, tanks, lintels, blinding, cantilevers, necks, walls. | 43 m³ and 1.9 t on Alsenan are only in BOQ section C. | `generic_route` | Blinding (footing outline + offset convention) and lintels (architectural openings) first; both are rule-based. |
+| TD-04 | **Ground-beam width modes** admit any recurring spacing up to 1.0 m. | A slab strip became a beam (06, SP-GBP-21). | `generic_route.width_modes` | Admit only scheduled widths and the drawn widths of marked bands. |
+| TD-05 | **A footing mark without an outline gives no quantity.** | −16 m³ on Alsenan. | `member_detection.footings`, `generic_route` | PROVISIONAL at schedule size with COUNT_FROM_MARK and a coverage-risk flag. |
+| TD-06 | **No exterior ground-beam rule.** | Ground-beam concrete −25 % against the frozen replay. | `generic_route._gb_class` | An outermost-band class with a depth range from a profile convention. |
+| TD-07 | **Continuous-beam per-span bars** are MISSING_DATA (span order not established). | 10 of the 89 and more on other villas. | `generic_route._beam_bars` | Order spans along the line from support to support; bind schedule span columns. |
+| TD-08 | **Untagged-span inheritance** is conservative (collinear neighbour only). | 17 of the 89 not matched. | `member_detection.inherit_sections` | Inheritance through crossing supports when the line carries one mark and the width matches. |
+| TD-09 | **The synthetic generator models one drafting style.** | Robustness beyond the listed defects is unknown. | `tools/synthetic_villa.py` | Add centreline-only beams, exploded-line schedules, xrefs, polyline-width walls and beam depths printed on plan. |
+| TD-10 | **Room slice and stair calculator are not in the BOQ yet.** | Architectural quantities are not produced by the one command. | `room_slice`, `stair_generic` | An architectural route with the rule library; wall finishes, openings and reveals next. |
+| TD-11 | **DWG is refused** (no pinned adapter). | DWG-only sets need a manual conversion. | intake | A pinned, offline converter (ODA File Converter or LibreDWG) behind an adapter that records its version. |
+| TD-12 | **Scope scan is label-based.** | A family with no label and no detector shows only as "no label found – confirm absent". | `generic_route.scope_scan` | Geometry cues: stair tread series, pit outlines, circular domes. |
+| TD-13 | **The schedule-row-not-on-plan risk is a heuristic** (39 on Alsenan; may over-count). | Noise in the risk register. | `generic_route` | Match on the member register, not on source-string marks. |
