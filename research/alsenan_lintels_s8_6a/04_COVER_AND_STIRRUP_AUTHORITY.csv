@@ -1,0 +1,20 @@
+RECORD,COMPONENT,AUTHORITY,SOURCE,NOTE,COUNT,KG
+COMPONENT,BAR_COUNT_AND_DIAMETER,EXPLICIT_PROJECT_DETAIL,"p.13 LINTEL SCHEDULE rows (2Ø12 / 2Ø10, 2Ø14 / 2Ø12 ...)",exact,,
+COMPONENT,SECTION_B_X_D,EXPLICIT_PROJECT_DETAIL,p.13: 'B x 20' etc.; 'B-WIDTH OF THE BLOCK WALL',exact,,
+COMPONENT,MIN_BEARING,EXPLICIT_PROJECT_DETAIL,p.13 LINTEL DETAIL 'MIN.40cm' each side,a minimum: the measured lintel uses exactly 400 (Urban convention: measure at the stated minimum),,
+COMPONENT,COVER,PROJECT_WIDE_RULE_SCOPE_NOT_CONFIRMED,P8-N22 'Cover >= 2.5 cm columns / slabs / beams',a minimum for beams; lintels are not named. 25 mm is used as the NOMINAL measurement cover (Urban convention); the physical lintel cover is UNRESOLVED,,
+COMPONENT,LONGITUDINAL_LENGTH,URBAN_MEASUREMENT_CONVENTION,LINTEL DETAIL draws continuous bars bent at the ends,straight portion = lintel length - 2 x nominal cover; the bent ends are UNRESOLVED (no length printed),,
+COMPONENT,STIRRUP_RATE,EXPLICIT_PROJECT_DETAIL,'5Ø8/M' (schedule),"a rate: 5 per metre, equivalent spacing 200 mm; NO count, start / end position or zone is stated",,
+COMPONENT,STIRRUP_COUNT,URBAN_MEASUREMENT_CONVENTION,S3.1 RATE_COUNT policy: ceil(rate x length),over the full lintel length; the LINTEL DETAIL draws stirrups near the ends only (schematic),,
+COMPONENT,STIRRUP_SHAPE,URBAN_MEASUREMENT_CONVENTION,S6.1 core-path convention,"closed rectangle on the bar centreline, sharp corners; hooks UNRESOLVED",,
+COMPONENT,UNIT_MASS,URBAN_PROJECT_METHOD,D2/162 (S3.1 / S6.1 / S7 / S8),"method, not a source value",,
+COMPONENT,HOOKS_BENDS_LAPS_ANCHORAGE,UNRESOLVED_FABRICATION_DETAIL,LINTEL DETAIL / SECT (2-2) drawn only,"none measured, none fabricated",,
+COVER_SENSITIVITY,cover 20 mm,SENSITIVITY_ONLY,,,,50.791506
+COVER_SENSITIVITY,cover 25 mm,NOMINAL (as released),,,,49.589037
+COVER_SENSITIVITY,cover 30 mm,SENSITIVITY_ONLY,,,,48.386568
+COVER_SENSITIVITY,cover 40 mm,SENSITIVITY_ONLY,,,,45.98163
+COVER_SENSITIVITY,cover 50 mm,SENSITIVITY_ONLY,,,,43.576691
+STIRRUP_COUNT_READING,EQUIVALENT_RATE,SENSITIVITY_ONLY,,,61,11.278222
+STIRRUP_COUNT_READING,RATE_COUNT,AS_RELEASED,,,62,11.463111
+STIRRUP_COUNT_READING,SPACING_WITH_ENDS,SENSITIVITY_ONLY,,,69,12.757333
+STIRRUP_COUNT_READING,CLEAR_SPAN_RATE,SENSITIVITY_ONLY,,,34,6.286222

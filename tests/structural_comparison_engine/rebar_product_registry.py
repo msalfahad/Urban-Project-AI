@@ -49,6 +49,7 @@ ACCURATE_MODULES = (
     "engine/source/special_column_components.py",  # S8.5 turned / dead / planted column components, ownership
     "engine/source/lintel_qto.py",              # S8.6 lintel schedule binding, extent, straight bars, stirrup count
     "engine/source/opening_census.py",          # S8.6 wall openings from plan faces (geometry only, no kg)
+    "engine/source/lintel_release_audit.py",    # S8.6A bearing reach, end classification, stirrup readings
     "engine/bbs_steel.py",
 )
 # project builders that produce accurate reinforcement registers
@@ -89,6 +90,7 @@ ACCURATE_BUILDERS = (
     "research/alsenan_water_tank_s8_4/build_s8_4.py",   # S8.4 water-tank roof region (blind, frozen)
     "research/alsenan_special_columns_s8_5/build_s8_5.py",  # S8.5 special columns (blind, frozen)
     "research/alsenan_lintels_s8_6/build_s8_6.py",  # S8.6 lintels (blind, frozen)
+    "research/alsenan_lintels_s8_6a/build_s8_6a.py",  # S8.6A dated correction layer over S8.6 (lanes only)
 )
 ROUGH_MODULES = (
     "engine/source/rough_rebar_sanity.py",
