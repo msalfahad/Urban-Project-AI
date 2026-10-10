@@ -303,6 +303,65 @@ def ground_slab_audit(D):
     return rows
 
 
+# ------------------------------------------------------------------ 3b external benchmark positions (post-freeze)
+def benchmark_positions(items):
+    """Route G's planning range per M1 comparison group, and where each external estimate sits relative to it
+    (BELOW / INSIDE / ABOVE) - beside M1's own position. Positions only: no external value and no difference is
+    written (the benchmark firewall). Run after route G was committed (frozen); nothing is tuned to it."""
+    import importlib.util
+    from engine.source import provisional_estimate as PE
+    spec = importlib.util.spec_from_file_location(
+        "m1pf", ROOT / "research/alsenan_m1_usable_boq/post_freeze/post_freeze_comparison.py")
+    pf = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(pf)
+    me = json.loads((pf.ME / "MULTI_ENGINE_CONCRETE_COMPARISON.json").read_text(encoding="utf-8"))["rows"]
+    gfloor = [dict(r, storey=r["storey"]) for r in PE.rollup(items, ("trade", "storey", "family"))]
+    m1floor = _rows(M1 / "FLOOR_SUMMARY.csv")
+    out = []
+    for group, fams, storeys, ext, same in pf.GROUPS:
+        glo, gb, ghi = pf._m1_range(gfloor, fams, storeys)
+        mlo, mb, mhi = pf._m1_range(m1floor, fams, storeys)
+        sel = [r for r in me if any(r["category"] == c and (s_ is None or r["subcategory"].startswith(s_))
+                                    for c, s_ in ext)]
+        for eng, label in pf.ENGINES:
+            vals = [r.get(eng) for r in sel]
+            x = None if (not sel or any(v is None for v in vals)) else sum(vals)
+            out.append({"GROUP": group, "ENGINE": label,
+                        "GENERIC_PLANNING_LOW_M3": glo, "GENERIC_PLANNING_BASE_M3": gb,
+                        "GENERIC_PLANNING_HIGH_M3": ghi,
+                        "EXTERNAL_POSITION_VS_GENERIC": pf._position(x, glo, ghi).replace("M1", "GENERIC"),
+                        "EXTERNAL_POSITION_VS_M1": pf._position(x, mlo, mhi),
+                        "GENERIC_SCOPE": "IN_SCOPE" if fams and set(fams) & set(GENERIC_SCOPE) else
+                                         ("ALL" if fams is None else "NOT_IN_GENERIC_SCOPE")})
+    return out
+
+
+def stair_scenarios(conv):
+    """Owner-preference stair scenarios (tread 0.30, marble 30 / 20 mm, bedding 20-30 mm), per metre of width, side
+    by side; the waist is not established, so the concrete is an exposure range. Nothing is chosen."""
+    from engine.source import stair_generic as ST
+    h = GR.storey_heights(conv)
+    rows = []
+    for run, rise_key, counts in (("GF_TO_1F", "GF", (27, 28)), ("1F_TO_2F", "1F", (27,))):
+        for f in ST.scenarios(h[rise_key], counts, 0.30):
+            rows.append({"RUN": run, "RISE_M": f["rise_m"], "RISE_SOURCE": f"STOREY_HEIGHT_{rise_key} (profile)",
+                         "N_RISERS": f["n_risers"], "SCENARIO": "OWNER_ALTERNATIVE" if run == "GF_TO_1F" and
+                         f["n_risers"] == 27 else ("OWNER_PREFERENCE" if run == "1F_TO_2F" else "RECORDED_ALTERNATIVE"),
+                         "RISER_M": f["riser_m"], "SANITY_UP_STAIR_009": f["sanity"], "TREADS": f["treads"],
+                         "RUN_M": f["run_m"], "PITCH_DEG": f["pitch_deg"],
+                         "TREAD_MARBLE_M2_PER_M": f["marble"]["tread_m2"],
+                         "VISIBLE_RISER_M": f["marble"]["visible_riser_m"],
+                         "RISER_MARBLE_M2_PER_M": f["marble"]["riser_m2"],
+                         "STEP_COMMERCIAL_LM_PER_M": f["marble"]["step_commercial_lm"],
+                         "CONCRETE_EXPOSURE_LOW_M3_PER_M": f["concrete_exposure_m3"]["low"],
+                         "CONCRETE_EXPOSURE_HIGH_M3_PER_M": f["concrete_exposure_m3"]["high"],
+                         "STATE": f["concrete_exposure_m3"]["state"]})
+    rows.append({"RUN": "ROUND_STAIR", "N_RISERS": 28, "SCENARIO": "OWNER_PREFERENCE",
+                 "STATE": "NOT_COMPUTED: a round stair is not a straight flight; the generic calculator does not "
+                          "model winders (see the frozen S8.7C stage)"})
+    return rows
+
+
 # ------------------------------------------------------------------ 4 metrics
 def metrics():
     out = {}
@@ -335,8 +394,12 @@ def main(argv):
                                               3),
               "generic_panel_area_m2": round(sum(r["GENERIC_AREA_M2"] or 0 for r in gs if r["GENERIC_CLASS"] ==
                                                  "PANEL"), 3)}
+    bench = benchmark_positions(items)
+    stairs = stair_scenarios(conv)
     files = {
         "04_ALSENAN_GENERIC_VS_FROZEN.csv": _csv(comp),
+        "09_BENCHMARK_POSITIONS.csv": _csv(bench),
+        "10_STAIR_SCENARIOS.csv": _csv(stairs, list(dict.fromkeys(k for r in stairs for k in r))),
         "05_REINFORCEMENT_COMPLETENESS_89.csv": _csv(rc),
         "06_GROUND_SLAB_GAP_AUDIT.csv": _csv(gs, ["S8_1_ROW", "S8_1_KIND", "S8_1_CLASS", "S8_1_AREA_M2",
                                                   "M1_COUNTS_AS_GROUND_SLAB", "GENERIC_FACE", "GENERIC_CLASS",
@@ -352,10 +415,18 @@ def main(argv):
                                 "reinforcement_completeness_89": rc_sum, "ground_slab_audit": gs_sum}},
             indent=1, ensure_ascii=True, default=str),
     }
+    import importlib.util
+    spec = importlib.util.spec_from_file_location(
+        "m1pf2", ROOT / "research/alsenan_m1_usable_boq/post_freeze/post_freeze_comparison.py")
+    pf = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(pf)
     for name, text in files.items():
         bad = HYGIENE.findall(text)
         if bad:
             raise SystemExit(f"hygiene: {name} carries forbidden text ({len(bad)} matches)")
+        leak = [b for b in pf.BENCH if b in text]
+        if leak:
+            raise SystemExit(f"benchmark firewall: {name} carries an external value")
         (PKG / name).write_text(text, encoding="utf-8")
     print(json.dumps({"written": sorted(files), "reinforcement_89": rc_sum, "ground_slab": gs_sum}, indent=1))
 
