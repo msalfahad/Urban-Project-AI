@@ -125,6 +125,7 @@ COMPARISON_MODULES = (                   # reference-QS / oracle comparison: nev
     "research/alsenan_water_tank_s8_4/post_freeze/post_freeze_comparison.py",
     "research/alsenan_special_columns_s8_5/post_freeze/post_freeze_comparison.py",
     "research/alsenan_lintels_s8_6/post_freeze/post_freeze_comparison.py",
+    "research/alsenan_stairs_s8_7/post_freeze/post_freeze_comparison.py",
 )
 COMPARISON_DIRS = (
     "research/alsenan_multi_engine_comparison",
