@@ -38,13 +38,20 @@ def sha256(path):
     return h.hexdigest()
 
 
+def _dec(handle):
+    """the kernel's observation id form: the DXF handle (hex) as a decimal string (K2 _hid)."""
+    return str(int(handle, 16))
+
+
 def _insert_layers(doc):
+    """{K2 instance-path id: insert layer}. Keys are DECIMAL like the kernel's lineage ids - a hex key would look up
+    an unrelated entity whenever a hex handle reads as another entity's decimal id (M2 defect-set finding)."""
     out = {}
     for e in doc.modelspace().query("INSERT"):
-        out[f"D2:{e.dxf.handle}"] = e.dxf.layer
+        out[f"D2:{_dec(e.dxf.handle)}"] = e.dxf.layer
     for b in doc.blocks:
         for e in b.query("INSERT"):
-            out[f"D2:{e.dxf.handle}"] = e.dxf.layer
+            out[f"D2:{_dec(e.dxf.handle)}"] = e.dxf.layer
     return out
 
 
@@ -107,7 +114,7 @@ def read_dxf(path):
         if t == "TEXT" and (e.dxf.get("halign", 0) or e.dxf.get("valign", 0)) and e.dxf.hasattr("align_point"):
             p = e.dxf.align_point
         src = getattr(e, "source_block_reference", None)
-        owner = f"D2:{src.dxf.handle}" if src is not None else None
+        owner = f"D2:{_dec(src.dxf.handle)}" if src is not None and src.dxf.handle else None
         lay = e.dxf.layer
         if lay == "0" and src is not None:
             lay = src.dxf.layer
@@ -120,7 +127,7 @@ def read_dxf(path):
               "y": a.insertion[1]} for a in g.attributes]
     inserts = []
     for e in doc.modelspace().query("INSERT"):
-        inserts.append({"id": e.dxf.handle, "name": e.dxf.name, "x": float(e.dxf.insert.x),
+        inserts.append({"id": f"D2:{_dec(e.dxf.handle)}", "handle_hex": e.dxf.handle, "name": e.dxf.name, "x": float(e.dxf.insert.x),
                         "y": float(e.dxf.insert.y), "layer": e.dxf.layer,
                         "attribs": {a.dxf.tag: a.dxf.text for a in e.attribs}})
     hatches = []

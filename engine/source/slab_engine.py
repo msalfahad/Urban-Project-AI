@@ -11,6 +11,9 @@ classified from SOURCE EVIDENCE only, never from its size or position:
                   crossed corner to corner by two lines (the drawn X of a void)
     PANEL         bounded by at least one beam band face (so it belongs to the slab plate) and none of the above
     DETAIL        a face whose boundary touches no band face: a detail / section drawn on the sheet, excluded
+    OPEN_BOUNDARY a beam-strip face much larger than its band with a dangling edge-layer stub inside it: a panel
+                  leaked into the strip through an unclosed end (a gap wider than CAD heal closes). Not counted as
+                  slab or beam; its area is a COVERAGE_RISK. A PANEL with such a stub keeps its class but is flagged.
 
 Thickness, per panel: a printed tag inside it (T=16, T 16, S=160, THK 200, سمك 16) -> PRINTED; when every tag on the
 sheet prints the same value the untagged panels take it as SHEET_UNIFORM (provisional); otherwise the convention's
@@ -147,12 +150,19 @@ def panels(ents, edge_layers, band_pieces, column_boxes, unit_m, *, default_t_m=
                 cls = "PANEL"
             else:
                 cls = "DETAIL"
+        stub_edge = [x for x in st.get("interior_stub_source_ids", []) if not str(x).startswith("COLBOX")]
+        open_b = bool(stub_edge) and st.get("interior_stub_length", 0.0) > 4 * eps
+        if open_b and cls == "BEAM":
+            host = [b for b in band_pieces if MD.point_in_poly(pt[0], pt[1], b["polygon"])]
+            if host and st["area"] > 1.5 * abs(MD.poly_area(host[0]["polygon"])):
+                cls = "OPEN_BOUNDARY"              # a panel leaked into the beam strip through an unclosed end
         tg = [t for t in tags if MD.point_in_poly(t["x"], t["y"], poly)] if cls == "PANEL" else []
         faces.append({"face_id": st["site_id"], "class": cls, "area_m2": st["area"] * unit_m ** 2,
                       "perimeter_m": st["perimeter"] * unit_m, "point": pt, "polygon": poly,
                       "thickness_tags": sorted({t["t_m"] for t in tg}), "tag_ids": [t["text_id"] for t in tg],
                       "opening_labels": [DM.normalize(t["value"]) for t in inside_txt][:3],
-                      "holes": st["holes"], "touches_band": touches_band})
+                      "holes": st["holes"], "touches_band": touches_band, "open_boundary": open_b,
+                      "stub_source_ids": stub_edge[:6]})
     sheet_vals = sorted({t["t_m"] for t in tags if any(f["class"] == "PANEL" and
                                                        MD.point_in_poly(t["x"], t["y"], f["polygon"]) for f in faces)})
     uniform = sheet_vals[0] if len(sheet_vals) == 1 else None
@@ -170,17 +180,20 @@ def panels(ents, edge_layers, band_pieces, column_boxes, unit_m, *, default_t_m=
         else:
             f["t_m"], f["t_basis"] = None, "NO_THICKNESS"
         f["volume_m3"] = f["area_m2"] * f["t_m"] if f["t_m"] else None
-        f["coverage_risk"] = f["t_basis"] in ("CONVENTION_DEFAULT", "NO_THICKNESS", "CONFLICTING_TAGS")
+        f["coverage_risk"] = f["t_basis"] in ("CONVENTION_DEFAULT", "NO_THICKNESS", "CONFLICTING_TAGS") or \
+            f["open_boundary"]
     summ = Counter(f["class"] for f in faces)
     area = {c: sum(f["area_m2"] for f in faces if f["class"] == c) for c in summ}
     return {"policy": POLICY_ID, "faces": faces, "counts": dict(summ), "area_m2": area,
             "sheet_thickness_values": sheet_vals, "uniform_t_m": uniform,
             "panel_volume_m3": sum(f.get("volume_m3") or 0 for f in faces if f["class"] == "PANEL"),
-            "risk_area_m2": sum(f["area_m2"] for f in faces if f["class"] == "PANEL" and f.get("coverage_risk")),
+            "risk_area_m2": sum(f["area_m2"] for f in faces if (f["class"] == "PANEL" and f.get("coverage_risk"))
+                                or f["class"] == "OPEN_BOUNDARY"),
+            "open_boundary_area_m2": sum(f["area_m2"] for f in faces if f["class"] == "OPEN_BOUNDARY"),
             "arrangement": {"nodes": len(arr.nodes), "edges": len(arr.edges), "sites": len(sites)}}
 
 
 def policy_record():
-    return {"policy": POLICY_ID, "classes": ["BEAM", "COLUMN", "OPENING", "PANEL", "DETAIL"],
+    return {"policy": POLICY_ID, "classes": ["BEAM", "COLUMN", "OPENING", "PANEL", "DETAIL", "OPEN_BOUNDARY"],
             "rule": "a face is slab only with band adjacency and no opening evidence; thickness printed > sheet "
                     "uniform > convention default; a cell with weak evidence is a coverage risk, never hidden"}

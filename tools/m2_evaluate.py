@@ -1,6 +1,8 @@
 """M2 EVALUATION - the generic route on synthetic villas against spec-derived truth (tools/synthetic_villa.py).
 
-    python3 -I tools/m2_evaluate.py OUT.json SEED [SEED ...]       (drawings are generated into a temporary folder)
+    python3 -I tools/m2_evaluate.py OUT.json SEED [SEED ...] [--defects]   (drawings go to a temporary folder)
+
+--defects draws the same designs with drafting noise (tools/synthetic_villa.py DEFECTS); the truth is unchanged.
 
 Per drawing: runtime, components detected, detection precision / recall by position (footings, beams, slab panels),
 quantity error by family (concrete and steel), unresolved / exception counts, end-to-end success. The truth never
@@ -63,12 +65,13 @@ def err(eng, tru):
     return None if not tru else (eng - tru) / tru
 
 
-def evaluate(seed, work):
+def evaluate(seed, work, defects=False):
     t0 = time.perf_counter()
-    dxf = SV.generate(work, seed)
+    dxf = SV.generate(work, seed, defects=defects)
     truth = json.loads((Path(work) / f"villa_{seed}.truth.json").read_text())
     prof = json.loads((Path(work) / f"villa_{seed}.profile.json").read_text())
-    rec = {"seed": seed, "variant": {k: v for k, v in truth["variant"].items() if k != "layers"}}
+    rec = {"seed": seed, "variant": {k: v for k, v in truth["variant"].items() if k != "layers"},
+           "defects_applied": truth.get("defects_applied", {})}
     try:
         I = UI.read(dxf)
         D = GR.detect(I)
@@ -156,11 +159,13 @@ def summarize(recs):
 
 
 def main(argv):
+    defects = "--defects" in argv
+    argv = [a for a in argv if a != "--defects"]
     out = Path(argv[0])
     seeds = [int(s) for s in argv[1:]]
     with tempfile.TemporaryDirectory() as td:
-        recs = [evaluate(s, td) for s in seeds]
-    res = {"seeds": seeds, "per_drawing": recs, "summary": summarize(recs)}
+        recs = [evaluate(s, td, defects) for s in seeds]
+    res = {"seeds": seeds, "defects": defects, "per_drawing": recs, "summary": summarize(recs)}
     out.write_text(json.dumps(res, indent=1, ensure_ascii=False))
     print(json.dumps(res["summary"], indent=1, ensure_ascii=False))
 

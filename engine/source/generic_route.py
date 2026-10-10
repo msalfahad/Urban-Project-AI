@@ -28,6 +28,7 @@ from engine.source import member_detection as MD
 from engine.source import provisional_estimate as PE
 from engine.source import schedule_grammar as SG
 from engine.source import schedule_reader as SR
+from engine.source import cad_heal as CH
 from engine.source import slab_engine as SE
 
 POLICY_ID = "GENERIC_ROUTE_V1"
@@ -152,6 +153,15 @@ def detect(intake):
                 sc = {k: v for k, v in cnt.items() if v >= 5}
             lays = {l for l, v in sc.items() if v >= max(2, 0.2 * max(sc.values()))} if sc else set()
             cols = column_boxes(E, lib, u)
+            heal = []
+            if lays:                                   # drafting noise: duplicates, broken faces, ends short of a face
+                segs, h1 = CH.merge_collinear(E["segments"], lays, gap=CH.GAP_M / u, off_tol=0.5e-3 / u)
+                tgt = [(p[j], p[(j + 1) % 4]) for c in cols for p in [MD.box_poly(c)] for j in range(4)]
+                segs, h2 = CH.extend_dangling(segs, lays, tgt, snap=CH.SNAP_M / u, eps=0.5e-3 / u)
+                E = dict(E, segments=segs)
+                heal = h1 + h2
+            rec["heal"] = {"merged": sum(1 for h in heal if h["code"] == "HEAL_MERGE"),
+                           "extended": sum(1 for h in heal if h["code"] == "HEAL_EXTEND"), "log": heal[:200]}
             bands, conf = MD.beam_bands(E, lays, widths, tol, 0.3 / u) if lays else ([], [])
             bands = MD.split_at_supports(bands, cols, 0.05 / u)
             widths_of = {(r["family"], r["mark"]): r["dims_m"].get("W") for r in S["rows"]}

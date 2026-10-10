@@ -10,6 +10,12 @@ in English or Arabic, units in mm or m, varied layer and tag spellings. Variants
 span on a tagged line, a beam drawn at another width than its schedule, a beam type missing from the schedule, a
 curved beam, an opening bay.
 
+DEFECTS (generate(..., defects=True)): the same design drawn the way real drawings arrive - beam faces broken into
+collinear pieces, duplicated lines, face ends stopping short of (gap <= 2 mm) or running into (<= 20 mm) the column,
+footing outlines as loose lines, grid axes with bubbles and labels, linear dimensions, MTEXT tags with formatting
+codes, tags pushed further off the face, solid hatches in the columns. The truth is unchanged: the defects are
+drafting noise, not design changes (a face that stops 2 mm short still means a beam from face to face).
+
 Conventions the truth uses are the generic convention set's BASE values (cover, anchorage, lap, hook table), stated
 in the truth file, so the comparison isolates detection, geometry and parsing.
 """
@@ -237,6 +243,12 @@ def truth(D):
                 t["STEEL_BEAMS"] += n * (L + 2 * BASE["anch_d"] * d / 1000) * kgm(d)
             n, d = sb["sti"]
             t["STEEL_BEAMS"] += (n * L + 1) * link_len(sb["B"], sb["H"], BASE["cover_beam"], d) * kgm(d)
+            # annular-sector centroid: rho = 2 sin(a) / (3 a) x (R^3 - r^3) / (R^2 - r^2), a = half angle, on 45 deg
+            cx, cy = D["xs"][-1] + 5.0, D["ys"][-1] / 2.0
+            ro, ri, a = Rc + sb["B"] / 2, Rc - sb["B"] / 2, th / 2
+            rho = 2 * math.sin(a) / (3 * a) * (ro ** 3 - ri ** 3) / (ro ** 2 - ri ** 2)
+            comp["beams"].append({"storey": st, "axis": "arc", "type": "B9", "in_schedule": True, "tagged": True,
+                                  "at": to_drawing(D, st, cx + rho * math.cos(a), cy + rho * math.sin(a))})
         # slab panels: each bay between beam faces, minus column corners beyond the beam faces; opening bay excluded
         xs, ys = D["xs"], D["ys"]
         col = {(c["i"], c["j"]): c for c in D["cols"]}
@@ -312,7 +324,13 @@ def write_dxf(D, path):
     fr = {r["mark"]: r for r in rows["FOOTING"]}
     for c in D["cols"]:
         f = fr[c["ftg"]]
-        rect("FOUNDATION", c["x"], c["y"], f["L"], f["W"], L["ftg"])
+        if v.get("defects") and (c["i"] + c["j"]) % 2 == 0:
+            x0, y0 = c["x"] - f["L"] / 2, c["y"] - f["W"] / 2
+            x1, y1 = c["x"] + f["L"] / 2, c["y"] + f["W"] / 2
+            for p0, p1 in (((x0, y0), (x1, y0)), ((x1, y0), (x1, y1)), ((x1, y1), (x0, y1)), ((x0, y1), (x0, y0))):
+                msp.add_line(P("FOUNDATION", *p0), P("FOUNDATION", *p1), dxfattribs={"layer": L["ftg"]})
+        else:
+            rect("FOUNDATION", c["x"], c["y"], f["L"], f["W"], L["ftg"])
         text("FOUNDATION", f"{c['type']}/{c['ftg']}", c["x"] - f["L"] / 2 + 0.08, c["y"] - f["W"] / 2 + 0.1)
         for k in ("FOUNDATION", "GF", "1F"):
             B, H = c["sec"]
@@ -324,26 +342,81 @@ def write_dxf(D, path):
             else:
                 w, d = (B, H) if c["rot"] == 0 else (H, B)
                 rect(k, c["x"], c["y"], w, d, L["col"])
+            if v.get("defects") and k != "FOUNDATION":
+                w, d = (B, H) if c["rot"] == 0 else (H, B)
+                ht = msp.add_hatch(color=7, dxfattribs={"layer": L["col"]})
+                x0, y0 = P(k, c["x"] - w / 2, c["y"] - d / 2)
+                x1, y1 = P(k, c["x"] + w / 2, c["y"] + d / 2)
+                ht.paths.add_polyline_path([(x0, y0), (x1, y0), (x1, y1), (x0, y1)], is_closed=True)
             if k != "FOUNDATION":
                 w, d = (B, H) if c["rot"] == 0 else (H, B)
                 text(k, c["type"], c["x"] + w / 2 + 0.05, c["y"] + d / 2 + 0.05, h=0.15 * s)
     beams = beams_of(D)
+    DF = v.get("defects")
+    RD = random.Random(D["seed"] * 7919 + 13)                    # defect noise only - never touches the design
+    applied = {}
+
+    def note(code):
+        applied[code] = applied.get(code, 0) + 1
+
+    def face(k, p0, p1, layer):
+        """one beam face from p0 to p1 (design metres); with defects: end gap / overshoot, break, duplicate."""
+        (x0, y0), (x1, y1) = p0, p1
+        if DF:
+            ln = math.hypot(x1 - x0, y1 - y0)
+            ux, uy = (x1 - x0) / ln, (y1 - y0) / ln
+            e0 = RD.choice([0.0, -RD.uniform(0.0005, 0.002), RD.uniform(0.002, 0.02)])
+            e1 = RD.choice([0.0, -RD.uniform(0.0005, 0.002), RD.uniform(0.002, 0.02)])
+            for e in (e0, e1):
+                if e < 0:
+                    note("END_GAP")
+                elif e > 0:
+                    note("END_OVERSHOOT")
+            x0, y0, x1, y1 = x0 - ux * e0, y0 - uy * e0, x1 + ux * e1, y1 + uy * e1
+            if RD.random() < 0.4:
+                t = RD.uniform(0.3, 0.7)
+                xm, ym = x0 + (x1 - x0) * t, y0 + (y1 - y0) * t
+                msp.add_line(P(k, x0, y0), P(k, xm, ym), dxfattribs={"layer": layer})
+                msp.add_line(P(k, xm, ym), P(k, x1, y1), dxfattribs={"layer": layer})
+                note("BROKEN_FACE")
+            else:
+                msp.add_line(P(k, x0, y0), P(k, x1, y1), dxfattribs={"layer": layer})
+            if RD.random() < 0.15:
+                msp.add_line(P(k, x0, y0), P(k, x1, y1), dxfattribs={"layer": layer})
+                note("DUPLICATE_LINE")
+            return
+        msp.add_line(P(k, x0, y0), P(k, x1, y1), dxfattribs={"layer": layer})
+
+    def tag(k, val, x, y, rot, h):
+        if DF and RD.random() < 0.5:
+            mt = msp.add_mtext("{\\fArial|b0|i0|c0|p34;" + val + "}", dxfattribs={"layer": L["text"],
+                                                                                  "char_height": h, "rotation": rot})
+            mt.set_location(P(k, x, y))
+            note("MTEXT_TAG")
+            return
+        text(k, val, x, y, rot, h=h)
+
     for k in ("GF", "1F"):
         for bm in beams:
             a, b = bm["a"], bm["b"]
             hw = bm["drawn_B"] / 2
+            push = RD.uniform(0.05, 0.15) if DF else 0.0              # a tag further off the face
+            if push:
+                note("TAG_PUSHED")
             if bm["axis"] == "x":
                 x0, x1 = a["x"] + _dim(a, "x") / 2, b["x"] - _dim(b, "x") / 2
                 for off in (-hw, hw):
-                    msp.add_line(P(k, x0, a["y"] + off), P(k, x1, a["y"] + off), dxfattribs={"layer": L["beam"]})
+                    face(k, (x0, a["y"] + off), (x1, a["y"] + off), L["beam"])
                 if bm["tagged"]:
-                    text(k, bm["type"], (x0 + x1) / 2 - 0.2, a["y"] + hw + 0.06, 0.0, h=0.15 * s)
+                    tag(k, bm["type"], (x0 + x1) / 2 - 0.2, a["y"] + hw + 0.06 + push, 0.0, 0.15 * s)
             else:
                 y0, y1 = a["y"] + _dim(a, "y") / 2, b["y"] - _dim(b, "y") / 2
                 for off in (-hw, hw):
-                    msp.add_line(P(k, a["x"] + off, y0), P(k, a["x"] + off, y1), dxfattribs={"layer": L["beam"]})
+                    face(k, (a["x"] + off, y0), (a["x"] + off, y1), L["beam"])
                 if bm["tagged"]:
-                    text(k, bm["type"], a["x"] - hw - 0.06, (y0 + y1) / 2 - 0.2, 90.0, h=0.15 * s)
+                    tag(k, bm["type"], a["x"] - hw - 0.06 - push, (y0 + y1) / 2 - 0.2, 90.0, 0.15 * s)
+        if DF:
+            _grid_and_dims(D, k, msp, P, s, doc, note)
         if D["var"]["curved"]:
             cx, cy = D["xs"][-1] + 5.0, D["ys"][-1] / 2.0
             for r in (2.0 - 0.1, 2.0 + 0.1):
@@ -388,7 +461,33 @@ def write_dxf(D, path):
                               r["top"][1], r["sti"][0], r["sti"][1]], y)
         y -= 0.6
     doc.saveas(path)
+    D["defects_applied"] = applied
     return path
+
+
+def _grid_and_dims(D, k, msp, P, s, doc, note):
+    """grid axes (beyond the plan, through every column line) with bubbles and labels, and linear span dimensions."""
+    if "S-GRID" not in doc.layers:
+        doc.layers.add("S-GRID")
+        doc.layers.add("S-DIM")
+    xs, ys = D["xs"], D["ys"]
+    for n, x in enumerate(xs):
+        msp.add_line(P(k, x, ys[0] - 2.0), P(k, x, ys[-1] + 2.0), dxfattribs={"layer": "S-GRID"})
+        msp.add_circle(P(k, x, ys[-1] + 2.5), 0.4 * s, dxfattribs={"layer": "S-GRID"})
+        t = msp.add_text(str(n + 1), dxfattribs={"layer": "S-GRID", "height": 0.3 * s})
+        t.set_placement(P(k, x - 0.1, ys[-1] + 2.4))
+        note("GRID_AXIS")
+    for n, y in enumerate(ys):
+        msp.add_line(P(k, xs[0] - 2.0, y), P(k, xs[-1] + 2.0, y), dxfattribs={"layer": "S-GRID"})
+        msp.add_circle(P(k, xs[0] - 2.5, y), 0.4 * s, dxfattribs={"layer": "S-GRID"})
+        t = msp.add_text("ABCDEFG"[n], dxfattribs={"layer": "S-GRID", "height": 0.3 * s})
+        t.set_placement(P(k, xs[0] - 2.6, y - 0.1))
+        note("GRID_AXIS")
+    for a, b in zip(xs, xs[1:]):
+        dim = msp.add_linear_dim(base=P(k, a, ys[0] - 1.2), p1=P(k, a, ys[0]), p2=P(k, b, ys[0]),
+                                 dxfattribs={"layer": "S-DIM"})
+        dim.render()
+        note("DIMENSION")
 
 
 def profile(D):
@@ -401,16 +500,20 @@ def profile(D):
                             for k, h in D["heights"].items()]}
 
 
-def generate(out_dir, seed):
+def generate(out_dir, seed, defects=False):
     out = Path(out_dir)
     out.mkdir(parents=True, exist_ok=True)
     D = design(seed)
+    D["var"]["defects"] = bool(defects)
     dxf = write_dxf(D, out / f"villa_{seed}.dxf")
-    (out / f"villa_{seed}.truth.json").write_text(json.dumps(truth(D), indent=1, ensure_ascii=False, default=str))
+    T = truth(D)
+    T["defects_applied"] = D.get("defects_applied", {})
+    (out / f"villa_{seed}.truth.json").write_text(json.dumps(T, indent=1, ensure_ascii=False, default=str))
     (out / f"villa_{seed}.profile.json").write_text(json.dumps(profile(D), indent=1))
     return dxf
 
 
 if __name__ == "__main__":
-    for sd in sys.argv[2:]:
-        print(generate(sys.argv[1], int(sd)))
+    args = [a for a in sys.argv[1:] if a != "--defects"]
+    for sd in args[1:]:
+        print(generate(args[0], int(sd), defects="--defects" in sys.argv))
