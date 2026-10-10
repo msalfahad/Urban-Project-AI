@@ -51,6 +51,7 @@ ACCURATE_MODULES = (
     "engine/source/opening_census.py",          # S8.6 wall openings from plan faces (geometry only, no kg)
     "engine/source/lintel_release_audit.py",    # S8.6A bearing reach, end classification, stirrup readings
     "engine/source/stair_geometry.py",          # S8.7 tread runs, flight / landing outlines, rate density (no project data)
+    "engine/source/shaft_geometry.py",          # S8.8 shaft rings, wall pieces, openings, storeys, tie-beam triggers
     "engine/bbs_steel.py",
 )
 # project builders that produce accurate reinforcement registers
@@ -93,6 +94,7 @@ ACCURATE_BUILDERS = (
     "research/alsenan_lintels_s8_6/build_s8_6.py",  # S8.6 lintels (blind, frozen)
     "research/alsenan_lintels_s8_6a/build_s8_6a.py",  # S8.6A dated correction layer over S8.6 (lanes only)
     "research/alsenan_stairs_s8_7/build_s8_7.py",  # S8.7 staircases and landings (blind, frozen)
+    "research/alsenan_lift_s8_8/build_s8_8.py",  # S8.8 lift pit, shaft walls, tie beam (blind, frozen)
 )
 ROUGH_MODULES = (
     "engine/source/rough_rebar_sanity.py",
